@@ -1,12 +1,9 @@
 ---
-title: "Diziler için Varsayılan Sıralama"
-ms.custom: 
+title: Diziler için Varsayılan Sıralama
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.technology:
+- dotnet-clr
 ms.topic: article
 dev_langs:
 - csharp
@@ -15,21 +12,22 @@ helpviewer_keywords:
 - interop marshaling, arrays
 - arrays, interop marshaling
 ms.assetid: 8a3cca8b-dd94-4e3d-ad9a-9ee7590654bc
-caps.latest.revision: "19"
+caps.latest.revision: 19
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 91df17448a57f7495dc95fb2b4ab1fa63dd8a27f
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.workload:
+- dotnet
+ms.openlocfilehash: 84f4015fd9bc5eb2de11b71530115d20c583d21d
+ms.sourcegitcommit: 9a4fe1a1c37b26532654b4bbe22d702237950009
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="default-marshaling-for-arrays"></a>Diziler için Varsayılan Hazırlama
 Tamamen yönetilen kod oluşan bir uygulamada, ortak dil çalışma zamanı dizi türleri olarak In/Out parametreleri geçirir. Buna karşılık, birlikte çalışabilirlik Sıralayıcı parametreleri olduğu gibi bir dizi varsayılan olarak geçirir.  
   
- İle [sabitleme iyileştirme](../../../docs/framework/interop/copying-and-pinning.md), blittable dizi olarak bir giriş/çıkış parametresi aynı grup nesneleri ile kullanılırken çalışması için yer alabilir. Ancak, makineler arası proxy oluşturmak için kullanılan bir tür kitaplığı daha sonra kodu verme ve bu kitaplık aramalarınız grupların hazırlamak için kullanılır, çağrı parametresi davranış true için geri dönebilirsiniz.  
+ İle [sabitleme iyileştirme](copying-and-pinning.md), blittable dizi olarak bir giriş/çıkış parametresi aynı grup nesneleri ile kullanılırken çalışması için yer alabilir. Ancak, makineler arası proxy oluşturmak için kullanılan bir tür kitaplığı daha sonra kodu verme ve bu kitaplık aramalarınız grupların hazırlamak için kullanılır, çağrı parametresi davranış true için geri dönebilirsiniz.  
   
  Diziler doğası gereği karmaşık ve diğer kopyalanamaz türler daha fazla bilgi yönetilen ve yönetilmeyen diziler arasındaki farklılıklar garanti. Bu konu, dizileri sıralama hakkında aşağıdaki bilgileri sağlar:  
   
@@ -51,9 +49,9 @@ Tamamen yönetilen kod oluşan bir uygulamada, ortak dil çalışma zamanı dizi
   
 |Yönetilen dizi türü|Öğe türü|RANK|Alt sınır|İmza gösterimi|  
 |------------------------|------------------|----------|-----------------|------------------------|  
-|**ELEMENT_TYPE_ARRAY**|Türü tarafından belirtilen.|RANK tarafından belirtilen.|İsteğe bağlı olarak sınırları tarafından belirtilen.|*tür* **[**  *n* ,*m* **]**|  
+|**ELEMENT_TYPE_ARRAY**|Türü tarafından belirtilen.|RANK tarafından belirtilen.|İsteğe bağlı olarak sınırları tarafından belirtilen.|*tür* **[** *n*,*m* **]**|  
 |**ELEMENT_TYPE_CLASS**|Bilinmiyor|Bilinmiyor|Bilinmiyor|**System.Array**|  
-|**ELEMENT_TYPE_SZARRAY**|Türü tarafından belirtilen.|1.|0|*tür* **[**  *n*  **]**|  
+|**ELEMENT_TYPE_SZARRAY**|Türü tarafından belirtilen.|1.|0|*tür* **[** *n* **]**|  
   
 <a name="cpcondefaultmarshalingforarraysanchor2"></a>   
 ## <a name="unmanaged-arrays"></a>Yönetilmeyen diziler  
@@ -65,13 +63,13 @@ Tamamen yönetilen kod oluşan bir uygulamada, ortak dil çalışma zamanı dizi
   
 |Yönetilmeyen tür|İçeri aktarılan türü|  
 |--------------------|-------------------|  
-|**SafeArray (** *türü* **)**|**ELEMENT_TYPE_SZARRAY**  **\<**  *ConvertedType***>**<br /><br /> RANK = 1, alt sınır = 0. Boyutu, yalnızca yönetilen imzada sağladıysanız denir. Rank olmayan güvenli diziler = 1 ya da alt sınır = 0 olamaz sıralanmış olarak **SZARRAY**.|  
-|*Type*  **[]**|**ELEMENT_TYPE_SZARRAY**  **\<**  *ConvertedType***>**<br /><br /> RANK = 1, alt sınır = 0. Boyutu, yalnızca yönetilen imzada sağladıysanız denir.|  
+|**SafeArray (** *türü* **)**|**ELEMENT_TYPE_SZARRAY** **\<** *ConvertedType* **>**<br /><br /> RANK = 1, alt sınır = 0. Boyutu, yalnızca yönetilen imzada sağladıysanız denir. Rank olmayan güvenli diziler = 1 ya da alt sınır = 0 olamaz sıralanmış olarak **SZARRAY**.|  
+|*Tür***]** |**ELEMENT_TYPE_SZARRAY** **\<** *ConvertedType* **>**<br /><br /> RANK = 1, alt sınır = 0. Boyutu, yalnızca yönetilen imzada sağladıysanız denir.|  
   
 ### <a name="safe-arrays"></a>Güvenli diziler  
  Bir .NET derlemesi için güvenli diziye bir tür kitaplığından içeri aktarıldığında dizi bilinen bir türde tek boyutlu bir diziye dönüştürülür (gibi **int**). Parametreleri uygulamak aynı tür dönüştürme kurallarını dizi öğeleri için de geçerlidir. Örneğin, güvenli bir dizi **BSTR** türleri yönetilen dizisini olur ve bir yönetilen nesneler dizisi güvenli dizisi olur. **SAFEARRAY** öğe türü tür kitaplığından yakalanan ve kaydedilen **SAFEARRAY** değerini <xref:System.Runtime.InteropServices.UnmanagedType> numaralandırması.  
   
- Rank ve güvenli dizinin sınırları tür kitaplığından belirlenemediğinden, derecesini eşit 1 olarak kabul edilir ve alt sınırı eşit 0 olarak varsayılır. Rank ve sınırları tarafından üretilen yönetilen imza tanımlanmalıdır [tür kitaplığı içeri Aktarıcı (Tlbimp.exe)](../../../docs/framework/tools/tlbimp-exe-type-library-importer.md). Çalışma zamanında yönteme geçirilen derece farklıysa, bir <xref:System.Runtime.InteropServices.SafeArrayRankMismatchException> oluşturulur. Dizi türü çalışma zamanında aktarılırsa farklıdır, bir <xref:System.Runtime.InteropServices.SafeArrayTypeMismatchException> oluşturulur. Aşağıdaki örnek, yönetilen ve yönetilmeyen kodunda güvenli diziler gösterir.  
+ Rank ve güvenli dizinin sınırları tür kitaplığından belirlenemediğinden, derecesini eşit 1 olarak kabul edilir ve alt sınırı eşit 0 olarak varsayılır. Rank ve sınırları tarafından üretilen yönetilen imza tanımlanmalıdır [tür kitaplığı içeri Aktarıcı (Tlbimp.exe)](../tools/tlbimp-exe-type-library-importer.md). Çalışma zamanında yönteme geçirilen derece farklıysa, bir <xref:System.Runtime.InteropServices.SafeArrayRankMismatchException> oluşturulur. Dizi türü çalışma zamanında aktarılırsa farklıdır, bir <xref:System.Runtime.InteropServices.SafeArrayTypeMismatchException> oluşturulur. Aşağıdaki örnek, yönetilen ve yönetilmeyen kodunda güvenli diziler gösterir.  
   
  **Yönetilmeyen imza**  
   
@@ -100,7 +98,7 @@ void New3([MarshalAs(UnmanagedType.SafeArray, SafeArraySubType=VT_BSTR)]
    ref String[] ar);  
 ```  
   
- Çok boyutlu veya sınırı sıfır olmayan güvenli diziler sıralanmış yönetilen koda Tlbimp.exe tarafından üretilen yöntem imzası bir öğe türünü belirtmek için değiştirilirse **ELEMENT_TYPE_ARRAY** yerine **ELEMENT_ TYPE_SZARRAY**. Alternatif olarak, kullanabileceğiniz **/sysarray** tüm dizileri olarak almak için Tlbimp.exe anahtarı <xref:System.Array?displayProperty=nameWithType> nesneleri. Çok boyutlu geçirilen dizi olduğu bilinen durumlarda Ara dili (MSIL) kod üretilen Microsoft Tlbimp.exe tarafından düzenleyin ve yeniden derleyin. MSIL kodu değiştirme hakkında daha fazla bilgi için bkz [çalışma zamanı aranabilir sarmalayıcıları özelleştirme](http://msdn.microsoft.com/library/4652beaf-77d0-4f37-9687-ca193288c0be).  
+ Çok boyutlu veya sınırı sıfır olmayan güvenli diziler sıralanmış yönetilen koda Tlbimp.exe tarafından üretilen yöntem imzası bir öğe türünü belirtmek için değiştirilirse **ELEMENT_TYPE_ARRAY** yerine **ELEMENT_ TYPE_SZARRAY**. Alternatif olarak, kullanabileceğiniz **/sysarray** tüm dizileri olarak almak için Tlbimp.exe anahtarı <xref:System.Array?displayProperty=nameWithType> nesneleri. Çok boyutlu geçirilen dizi olduğu bilinen durumlarda Ara dili (MSIL) kod üretilen Microsoft Tlbimp.exe tarafından düzenleyin ve yeniden derleyin. MSIL kodu değiştirme hakkında daha fazla bilgi için bkz [çalışma zamanı aranabilir sarmalayıcıları özelleştirme](https://msdn.microsoft.com/library/4652beaf-77d0-4f37-9687-ca193288c0be(v=vs.100)).  
   
 ### <a name="c-style-arrays"></a>C türü diziler  
  C türü dizi bir .NET derlemesi bir tür kitaplığından içeri aktarıldığında dizi dönüştürülür **ELEMENT_TYPE_SZARRAY**.  
@@ -164,7 +162,7 @@ void New2(ref double ar);
 void New3(ref String ar);   
 ```  
   
- Ara dil (MSIL) kodu üretilen Microsoft Tlbimp.exe tarafından düzenleme ve daha sonra yeniden derlenmesi dizi boyutuyla Sıralayıcı sağlayabilir. MSIL kodu değiştirme hakkında daha fazla bilgi için bkz [çalışma zamanı aranabilir sarmalayıcıları özelleştirme](http://msdn.microsoft.com/library/4652beaf-77d0-4f37-9687-ca193288c0be). Dizideki öğelerin sayısını belirtmek için uygulamanız <xref:System.Runtime.InteropServices.MarshalAsAttribute> Yönetilen yöntemi tanımı'nda aşağıdaki yollardan biriyle dizi parametre türü:  
+ Ara dil (MSIL) kodu üretilen Microsoft Tlbimp.exe tarafından düzenleme ve daha sonra yeniden derlenmesi dizi boyutuyla Sıralayıcı sağlayabilir. MSIL kodu değiştirme hakkında daha fazla bilgi için bkz [çalışma zamanı aranabilir sarmalayıcıları özelleştirme](https://msdn.microsoft.com/library/4652beaf-77d0-4f37-9687-ca193288c0be(v=vs.100)). Dizideki öğelerin sayısını belirtmek için uygulamanız <xref:System.Runtime.InteropServices.MarshalAsAttribute> Yönetilen yöntemi tanımı'nda aşağıdaki yollardan biriyle dizi parametre türü:  
   
 -   Dizideki öğelerin sayısını içeren başka bir parametre tanımlayın. Parametreler, birinci parametreyle başlangıç numarası 0 konuma göre tanımlanır.     
   
@@ -205,9 +203,9 @@ void New3(ref String ar);
   
 |Yönetilen dizi türü|Olarak dışarı aktarıldı|  
 |------------------------|-----------------|  
-|**ELEMENT_TYPE_SZARRAY**  **\<**  *türü***>**|<xref:System.Runtime.InteropServices.UnmanagedType> **.SafeArray(** *type* **)**<br /><br /> **UnmanagedType.LPArray**<br /><br /> Türü imzada sağlanır. RANK her zaman 1, alt sınır her zaman 0. Boyut her zaman çalışma zamanında denir.|  
-|**ELEMENT_TYPE_ARRAY**  **\<**  *türü*  **>**   **\<**  *derece*  **>** [ **\<**  *sınırları*  **>** ]|**UnmanagedType.SafeArray(** *type* **)**<br /><br /> **UnmanagedType.LPArray**<br /><br /> Türü, sıralama, sınırların imzada sağlanır. Boyut her zaman çalışma zamanında denir.|  
-|**ELEMENT_TYPE_CLASS** **\<**<xref:System.Array?displayProperty=nameWithType>**>**|**UT_Interface**<br /><br /> **UnmanagedType.SafeArray(** *type* **)**<br /><br /> Türü, derece, sınırları ve boyutu her zaman çalışma zamanında bilinir.|  
+|**ELEMENT_TYPE_SZARRAY** **\<** *türü* **>**|<xref:System.Runtime.InteropServices.UnmanagedType> **. SafeArray (** *türü* **)**<br /><br /> **UnmanagedType.LPArray**<br /><br /> Türü imzada sağlanır. RANK her zaman 1, alt sınır her zaman 0. Boyut her zaman çalışma zamanında denir.|  
+|**ELEMENT_TYPE_ARRAY** **\<** *türü* **>** **\<** *derece* **>**[**\<** *sınırları* **>**]|**UnmanagedType.SafeArray (** *türü* **)**<br /><br /> **UnmanagedType.LPArray**<br /><br /> Türü, sıralama, sınırların imzada sağlanır. Boyut her zaman çalışma zamanında denir.|  
+|**ELEMENT_TYPE_CLASS** **\<**<xref:System.Array?displayProperty=nameWithType>**>**|**UT_Interface**<br /><br /> **UnmanagedType.SafeArray (** *türü* **)**<br /><br /> Türü, derece, sınırları ve boyutu her zaman çalışma zamanında bilinir.|  
   
  OLE Otomasyonu'ndaki LPSTR veya LPWSTR içeren yapılarını diziler için ilgili bir sınırlama yoktur.  Bu nedenle, **dize** alanları olarak sıralanması zorunda **UnmanagedType.BSTR**. Aksi halde, bir özel durum oluşturulur.  
   
@@ -320,7 +318,7 @@ HRESULT New(long ar[]);
 HRESULT New(LPStr ar[]);  
 ```  
   
- İç içe diziler sıralanamaz. Örneğin, aşağıdaki imzası ile verildiğinde bir hata oluşturur [tür kitaplığı dışarı Aktarıcı (Tlbexp.exe)](../../../docs/framework/tools/tlbexp-exe-type-library-exporter.md).  
+ İç içe diziler sıralanamaz. Örneğin, aşağıdaki imzası ile verildiğinde bir hata oluşturur [tür kitaplığı dışarı Aktarıcı (Tlbexp.exe)](../tools/tlbexp-exe-type-library-exporter.md).  
   
 #### <a name="managed-signature"></a>Yönetilen imza  
   
@@ -332,7 +330,7 @@ Sub [New](ar()()() As Long)
 void New(long [][][] ar );  
 ```  
   
-### <a name="elementtypeclass-systemarray"></a>ELEMENT_TYPE_CLASS \<System.Array>  
+### <a name="elementtypeclass-systemarray"></a>ELEMENT_TYPE_CLASS \<System.Array >  
  İçeren bir yöntemi, bir <xref:System.Array?displayProperty=nameWithType> parametresi için bir tür kitaplığı .NET derlemesinden dışarı, dizi parametresi dönüştürülür bir **_Array** arabirimi. Yönetilen dizinin içeriğini yalnızca yöntemleri ve özellikleri erişilebilir **_Array** arabirimi. **System.Array** olarak sıralanabilir bir **SAFEARRAY** kullanarak <xref:System.Runtime.InteropServices.MarshalAsAttribute> özniteliği. Güvenli bir dizi olarak sıralanmış, dizi öğeleri çeşitleri hazırlanırlar. Örneğin:  
   
 #### <a name="managed-signature"></a>Yönetilen imza  
@@ -381,8 +379,8 @@ public struct MyStruct {
 }  
 ```  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- [Varsayılan Hazırlama Davranışı](../../../docs/framework/interop/default-marshaling-behavior.md)  
- [Blok Halinde Kopyalanabilir ve Kopyalanamaz Türler](../../../docs/framework/interop/blittable-and-non-blittable-types.md)  
- [Tek yönlü öznitelikleri](http://msdn.microsoft.com/library/241ac5b5-928e-4969-8f58-1dbc048f9ea2)  
- [Kopyalama ve Sabitleme](../../../docs/framework/interop/copying-and-pinning.md)
+## <a name="see-also"></a>Ayrıca bkz.  
+ [Varsayılan Hazırlama Davranışı](default-marshaling-behavior.md)  
+ [Blok Halinde Kopyalanabilir ve Kopyalanamaz Türler](blittable-and-non-blittable-types.md)  
+ [Tek yönlü öznitelikleri](https://msdn.microsoft.com/library/241ac5b5-928e-4969-8f58-1dbc048f9ea2(v=vs.100))  
+ [Kopyalama ve Sabitleme](copying-and-pinning.md)

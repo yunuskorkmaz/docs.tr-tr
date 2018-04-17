@@ -1,13 +1,13 @@
 ---
-title: "Tür Kitaplığını Derleme Olarak İçeri Aktarma"
-ms.custom: 
+title: Tür Kitaplığını Derleme Olarak İçeri Aktarma
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - dotnet-clr
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - importing type library
@@ -23,17 +23,17 @@ helpviewer_keywords:
 - COM interop, importing type library
 - COM interop, exposing COM components
 ms.assetid: d1898229-cd40-426e-a275-f3eb65fbc79f
-caps.latest.revision: 
+caps.latest.revision: 14
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: 625bbce6dca8d57d7870dbe13e086c9a34954c9b
-ms.sourcegitcommit: d95a91d685565f4d95c8773b558752864a6a3d7e
+ms.openlocfilehash: 0299ef58d58318714b8f0eb8082928f8da565d2f
+ms.sourcegitcommit: 9a4fe1a1c37b26532654b4bbe22d702237950009
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/12/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="importing-a-type-library-as-an-assembly"></a>Tür Kitaplığını Derleme Olarak İçeri Aktarma
 COM tür tanımları genellikle bir tür kitaplığı'nda bulunur. Buna karşılık, CLS uyumlu derleyicileri derlemedeki türü meta veriler üretir. İki kaynak türü bilgilerinin oldukça farklıdır. Bu konu, bir tür kitaplığından meta veri oluşturma teknikleri açıklar. Elde edilen derlemeyi birlikte çalışma derleme adı verilir ve COM türlerini kullanmak .NET Framework uygulamaları içerdiği türü bilgileri sağlar.  
@@ -55,7 +55,7 @@ COM tür tanımları genellikle bir tür kitaplığı'nda bulunur. Buna karşıl
   
 -   Visual Studio  
   
-     Visual Studio derleme meta verilerini otomatik olarak bir tür kitaplığı COM türlerinde dönüştürür. Yönergeler için bkz: [nasıl yapılır: tür kitaplıklarına Başvuru Ekle](../../../docs/framework/interop/how-to-add-references-to-type-libraries.md) ve [izlenecek yol: Microsoft Office derlemelerinden tür bilgilerini katıştırma](http://msdn.microsoft.com/library/85b55e05-bc5e-4665-b6ae-e1ada9299fd3).  
+     Visual Studio derleme meta verilerini otomatik olarak bir tür kitaplığı COM türlerinde dönüştürür. Yönergeler için bkz: [nasıl yapılır: tür kitaplıklarına Başvuru Ekle](../../../docs/framework/interop/how-to-add-references-to-type-libraries.md) ve [izlenecek yol: Microsoft Office derlemelerinden tür bilgilerini katıştırma](https://msdn.microsoft.com/library/85b55e05-bc5e-4665-b6ae-e1ada9299fd3(v=vs.100)).  
   
 -   [Tür kitaplığı içeri Aktarıcı (Tlbimp.exe)](../../../docs/framework/tools/tlbimp-exe-type-library-importer.md)  
   
@@ -81,7 +81,7 @@ COM tür tanımları genellikle bir tür kitaplığı'nda bulunur. Buna karşıl
   
  COM birlikte çalışma alma işlemi hakkında daha fazla bilgi için bkz: [derleme dönüştürme özeti için tür kitaplığı](https://msdn.microsoft.com/library/bf3f90c5-4770-4ab8-895c-3ba1055cc958(v=vs.100)).  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
+## <a name="see-also"></a>Ayrıca bkz.  
  <xref:System.Runtime.InteropServices.TypeLibConverter>  
  [COM Bileşenlerini .NET Framework'te Gösterme](../../../docs/framework/interop/exposing-com-components.md)  
  [Derleme dönüştürme özeti için tür kitaplığı](https://msdn.microsoft.com/library/bf3f90c5-4770-4ab8-895c-3ba1055cc958(v=vs.100))  
@@ -92,4 +92,4 @@ COM tür tanımları genellikle bir tür kitaplığı'nda bulunur. Buna karşıl
  [Birlikte Çalışma Uygulamasını Dağıtma](../../../docs/framework/interop/deploying-an-interop-application.md)  
  [Nasıl yapılır: Tür Kitaplıklarına Başvurular Ekleme](../../../docs/framework/interop/how-to-add-references-to-type-libraries.md)  
  [Nasıl yapılır: Tür Kitaplıklarından Birlikte Çalışma Bütünleştirilmiş Kodları Oluşturma](../../../docs/framework/interop/how-to-generate-interop-assemblies-from-type-libraries.md)  
- [İzlenecek yol: Microsoft Office Bütünleştirilmiş Kodlarından Tür Bilgilerini Katıştırma](http://msdn.microsoft.com/library/85b55e05-bc5e-4665-b6ae-e1ada9299fd3)
+ [İzlenecek yol: Microsoft Office Bütünleştirilmiş Kodlarından Tür Bilgilerini Katıştırma](https://msdn.microsoft.com/library/85b55e05-bc5e-4665-b6ae-e1ada9299fd3(v=vs.100))

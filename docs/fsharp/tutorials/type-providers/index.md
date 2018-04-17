@@ -1,53 +1,51 @@
 ---
 title: Tür Sağlayıcıları
 description: 'Nasıl bir F # tür sağlayıcısı türleri, özellikleri ve yöntemleri programlarınızı kullanmak için sağlayan bir bileşendir öğrenin.'
-keywords: 'Visual f #, f # işlevsel programlama'
 author: cartermp
 ms.author: phcart
-ms.date: 05/16/2016
+ms.date: 04/02/2018
 ms.topic: language-reference
 ms.prod: .net
 ms.technology: devlang-fsharp
 ms.devlang: fsharp
 ms.assetid: 25697ef6-465e-4248-9de5-1d199d4a8b59
-ms.openlocfilehash: f721b5b378bf70fb594cad66bd90bd96a0320ee2
-ms.sourcegitcommit: 655fd4f78741967f80c409cef98347fdcf77857d
+ms.openlocfilehash: 248fb2db2364cdad53e701603fd2cada33498701
+ms.sourcegitcommit: 9a4fe1a1c37b26532654b4bbe22d702237950009
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/28/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="type-providers"></a>Tür Sağlayıcıları
 
-> [!NOTE]
-Bu kılavuz, F # 3.0 uygulamasından yazılmıştır ve güncelleştirilir.  Bkz: [FSharp.Data](https://fsharp.github.io/FSharp.Data/) güncel, platformlar arası tür sağlayıcıları için.
+Bir F# tür sağlayıcısı programınız içinde kullanmanız için türler, özellikler ve yöntemler sağlayan bir bileşendir. Tür sağlayıcıları oluşturmak ne olarak da bilinir **sağlanan türleri**, F # derleyici tarafından oluşturulan ve bir dış veri kaynağına göre.
 
-Bir F# tür sağlayıcısı programınız içinde kullanmanız için türler, özellikler ve yöntemler sağlayan bir bileşendir. Tür sağlayıcıları F# 3.0 bilgi zengin programlama desteğinin önemli bir parçasıdır. Bilgi zengin programlamanın anahtarı internette ve modern kurumsal ortamlarda bulunan çok çeşitli bilgi kaynakları ile çalışmadaki engelleri ortadan kaldırmaktır. Bir program içine bir bilgi kaynağını eklemekteki önemli engellerden biri bilgiyi programlama dili ortamında kullanmak için türler, özellikler ve yöntemler olarak temsil etme gereksinimidir. Bu türleri el ile yazmak çok zaman alıcıdır ve bakımı zordur. Yaygın bir alternatif projenize dosyalar ekleyen bir kod üretici kullanmaktır, ancak, kod üretiminin geleneksel türleri F# tarafından desteklenen keşifçi programlama modlarıyla iyi bir şekilde birleşemez çünkü üretilen kod her bir hizmet başvurusu değiştirildiğinde yenisiyle değiştirilmelidir.
+Örneğin, bir SQL için F # tür sağlayıcısı tablolar ve sütunlar ilişkisel bir veritabanındaki temsil eden türleri oluşturabilir. Aslında, bu nedir [SQLProvider](https://fsprojects.github.io/SQLProvider/) türü sağlayıcısı.
 
-F# tür sağlayıcıları tarafından sağlanan türler genellikle dış bilgi kaynaklarını temel alır. Örneğin, SQL için bir F# tür sağlayıcısı erişiminiz olan herhangi bir SQL veritabanı ile doğrudan çalışabilmeniz için gereken türleri, özellikleri ve yöntemleri sağlar. Benzer şekilde, WSDL web hizmetleri için bir tür sağlayıcısı herhangi bir WSDL web hizmeti ile doğrudan çalışmanız için gerekli türleri, özellikleri ve yöntemleri sağlar.
+Sağlanan tür sağlayıcısı giriş parametreleri türlerine bağlıdır. Bu tür giriş (örneğin, JSON şema dosyası gibi) bir örnek veri kaynağı olabilir doğrudan bir dış hizmet ya da bir veri kaynağı için bir bağlantı dizesi işaret eden bir URL. Tür sağlayıcısı türlerinin grupları isteğe bağlı olarak yalnızca genişletilir de sağlayabilirsiniz; türleri gerçekte programınız tarafından başvurulduğundan, diğer bir deyişle, bunlar genişletilir. Bu çevrimiçi veri marketleri gibi büyük ölçekli bilgi uzaylarının doğrudan, istek anında bütünleştirmesini türü kesin belirlenmiş olarak sağlar.
 
-Bir F# tür sağlayıcısı tarafından sağlanan türler, özellikler ve yöntemler program kodu içinde verilen parametrelere bağlı olabilir. Örneğin, bir tür sağlayıcısı bir bağlantı dizesi ya da hizmet URL'sine bağlı olarak farklı türler sağlayabilir. Bu şekilde, bir bağlantı dizesi ya da URL aracılığıyla kullanılabilir olan bilgi uzayı doğrudan programınız içine dahil edilir. Bir tür sağlayıcısı ayrıca tür gruplarının yalnızca istek anında genişletilmesini sağlayabilir, yani, türler programınız tarafından başvurulduğunda genişletilirler. Bu çevrimiçi veri marketleri gibi büyük ölçekli bilgi uzaylarının doğrudan, istek anında bütünleştirmesini türü kesin belirlenmiş olarak sağlar.
+## <a name="generative-and-erased-type-providers"></a>Generative ve Silinen tür sağlayıcıları
 
-F# Internet ve kurumsal veri hizmetlerinde yaygın olarak kullanılan birkaç yerleşik tür sağlayıcısı içerir. Bu tür sağlayıcıları SQL ilişkisel veritabanlarına ve ağ tabanlı OData ve WSDL hizmetlerine basit ve olağan erişim verir ve bu veri kaynaklarına karşı F# LINQ sorguları kullanımını destekler.
+Tür sağlayıcıları gelen iki biçimde: Generative ve silinebilir.
 
-Gerekten yerlerde, kendi özel tür sağlayıcılarınızı oluşturabilir, ya da başkaları tarafından oluşturulan tür sağlayıcılarına başvurabilirsiniz. Örneğin, kuruluşunuz her biri kendi kararlı veri şemasına sahip çok ve artan sayıda adlandırılmış veri kümeleri sağlayan bir veri hizmetine sahip olduğunu varsayın. Şemaları okuyan ve en son kullanılabilir veri kümelerini programcıya türü kesin belirlenmiş bir biçimde sunan bir tür sağlayıcısı oluşturmayı seçebilirsiniz.
+Generative tür sağlayıcıları .NET türleri olarak üretilen derlemeye yazılabilir türleri oluşturur. Bu diğer derlemelerden koddan tüketilmesi sağlar. Bu veri kaynağı türü belirtilmiş gösterimini genellikle .NET türleri ile temsil etmek için uygun olan bir olması gerektiği anlamına gelir.
 
+Silme tür sağlayıcıları yalnızca derleme ya da bunlar oluşturulan proje tüketilebilir türleri oluşturur. Kısa ömürlü türleridir; diğer bir deyişle, bir derlemeye yazılmaz ve diğer derlemelerde kod tarafından kullanılamaz. İçerebilirler *Gecikmeli* üyeleri, büyük olasılıkla sonsuz bilgi alanından kullanım sağlanan türleri için izin verme. Bunlar, küçük bir alt büyük ve birbirine bağlı veri kaynağı kullanmak için kullanışlıdır.
 
-## <a name="related-topics"></a>İlgili Konular
+## <a name="commonly-used-type-providers"></a>Tür sağlayıcıları yaygın olarak kullanılan
 
+Aşağıdaki yaygın kullanılan kitaplıklar farklı amaçlarla tür sağlayıcıları içerir:
 
-|Başlık|Açıklama|
-|-----|-----------|
-|[İzlenecek yol: tür sağlayıcılarını kullanarak SQL veritabanına erişme](accessing-a-sql-database.md)|Bir SQL veritabanının tablolarına ve depolanmış yordamlarına erişim için, bir veritabanına doğrudan bağlanmak için bir bağlantı dizesini temel alan SqlDataConnection tür sağlayıcısının nasıl kullanıldığını açıklar. Erişim bir LINQ to SQL eşleştirmesi kullanır.|
-|[İzlenecek yol: tür sağlayıcılarını ve varlıkları kullanarak SQL veritabanına erişme](accessing-a-sql-database-entities.md)|Bir SQL veritabanının tablolarına ve depolanmış yordamlarına erişim için, bir veritabanına doğrudan bağlanmak için bir bağlantı dizesini temel alan SqlEntityConnection tür sağlayıcısının nasıl kullanıldığını açıklar. Erişim bir LINQ to Entities eşlemesi kullanır. Bu yöntem herhangi bir veritabanı ile çalışabilir ancak gösterilen örnek SQL Server'dır.|
-|[İzlenecek yol: tür sağlayıcılarını kullanarak OData hizmetine erişim](accessing-an-odata-service.md)|Bir hizmet URL'sini temel alarak bir OData hizmetine türü kesin belirlenmiş olarak erişmek için ODataService türü sağlayıcının nasıl kullanıldığını açıklar.|
-|[İzlenecek yol: tür sağlayıcılarını kullanarak Web hizmetine erişim](accessing-a-web-service.md)|Bir hizmet URL'sini temel alarak bir WSDL web hizmetine türü kesin belirlenmiş olarak erişmek için WsdlService türü sağlayıcının nasıl kullanıldığını açıklar.|
-|[İzlenecek yol: F &#35;oluşturma; DBML dosyasından türleri](generating-fsharp-types-from-dbml.md)|Bir DBML dosyasının Linq to SQL veritabanı şema belirtimi vermesini temel alarak bir SQL veritabanının tablolarına ve depolanmış yordamlarına erişim için DbmlFile türü sağlayıcının nasıl kullanıldığını açıklar.|
-|[İzlenecek yol: F &#35;oluşturma; EDMX şema dosyasından türleri](generating-fsharp-types-from-edmx.md)|Bir EDMX dosyasının Varlık Çerçevesi şema belirtimi vermesini temel alarak bir SQL veritabanının tablolarına ve depolanmış yordamlarına erişim için EdmxFile tür sağlayıcısının nasıl kullanıldığını anlatır.|
-|[Eğitmen: tür sağlayıcısı oluşturma](creating-a-type-provider.md)|Kendi özel tür sağlayıcılarınızı yazma konusu hakkında bilgi sağlar.|
-|[Tür sağlayıcısı güvenliği](type-provider-security.md)|Tür sağlayıcıları geliştirirken dikkat edilmesi gereken güvenlik konuları hakkında bilgi sağlar.|
-|[Tür Sağlayıcıları Sorunlarını Giderme](troubleshooting-type-providers.md)|Tür sağlayıcıları ile çalışırken ortaya çıkabilen yaygın sorunlar ve çözümler için öneriler hakkında bilgi sağlar.|
+- [FSharp.Data](https://fsharp.github.io/FSharp.Data/) JSON, XML, CSV ve HTML Belge biçimleri ve kaynaklar için tür sağlayıcıları içerir.
+- [SQLProvider](https://fsprojects.github.io/SQLProvider/) bu veri kaynaklarının sorguları nesne eşleme ve F # LINQ üzerinden ilişkisi veritabanlarını kesin türü belirtilmiş erişmenizi sağlar.
+- [FSharp.Data.SqlClient](https://fsprojects.github.io/FSharp.Data.SqlClient/) sahip bir derleme zamanı tür sağlayıcıları işaretli T-SQL F # katıştırma.
+- [Azure depolama türü sağlayıcısı](https://fsprojects.github.io/AzureStorageTypeProvider/) Azure BLOB'ları, tabloları ve Kuyruklar, programınızı boyunca dizeleri olarak kaynak adları belirtmek zorunda kalmadan bu kaynaklara erişmeyi sağlayan türler sağlar.
+- [FSharp.Data.GraphQL](https://fsprojects.github.io/FSharp.Data.GraphQL/index.html) içeren **GraphQLProvider**, URL tarafından belirtilen bir GraphQL sunucusu temel türü sunar.
 
-## <a name="see-also"></a>Ayrıca Bkz.
+Gerektiğinde yapabilecekleriniz [kendi özel tür sağlayıcıları oluşturmak](creating-a-type-provider.md), veya başkaları tarafından oluşturulan tür sağlayıcıları başvuru. Örneğin, kuruluşunuz her biri kendi kararlı veri şemasına sahip çok ve artan sayıda adlandırılmış veri kümeleri sağlayan bir veri hizmetine sahip olduğunu varsayın. Şemaları okuyan ve en son kullanılabilir veri kümelerini programcıya türü kesin belirlenmiş bir biçimde sunan bir tür sağlayıcısı oluşturmayı seçebilirsiniz.
+
+## <a name="see-also"></a>Ayrıca bkz.
+[Eğitmen: tür sağlayıcısı oluşturma](creating-a-type-provider.md)
+
 [F# Dili Başvurusu](../../language-reference/index.md)
 
 [Visual F#](../../index.md)

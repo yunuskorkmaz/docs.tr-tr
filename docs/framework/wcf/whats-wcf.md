@@ -1,30 +1,30 @@
 ---
 title: Windows Communication Foundation nedir?
-ms.custom: 
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - dotnet-clr
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - Windows Communication Foundation [WCF], technology overview
 - technology overview [WCF]
 - WCF [WCF], technology overview
 ms.assetid: 40e1009d-ef15-450b-9848-62eabe5e5738
-caps.latest.revision: 
+caps.latest.revision: 51
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: 7aecddc617afcaf197aa212e8eea7e1342c029fa
-ms.sourcegitcommit: 08684dd61444c2f072b89b926370f750e456fca1
+ms.openlocfilehash: 1e194a0784eb27043bbd0c127cde6883b4fafb2e
+ms.sourcegitcommit: 9a4fe1a1c37b26532654b4bbe22d702237950009
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="what-is-windows-communication-foundation"></a>Windows Communication Foundation nedir?
 [!INCLUDE[indigo1](../../../includes/indigo1-md.md)] Hizmet odaklı uygulamalar oluşturmaya yönelik bir çerçevedir. Kullanarak [!INCLUDE[indigo2](../../../includes/indigo2-md.md)], verileri zaman uyumsuz ileti bir hizmet uç noktasından diğerine gönderebilirsiniz. Hizmet uç noktası, IIS tarafından barındırılan sürekli olarak kullanılabilir bir hizmetin parçası veya bir uygulamada barındırılan bir hizmete olabilir. Bir uç nokta veri Hizmeti uç noktasından ister bir hizmetin istemci olabilir. İletileri tek karakter veya XML olarak gönderilen sözcük kadar basit ya da bir ikili veri akışı kadar karmaşık olabilir. Bazı örnek senaryolar şunlardır:  
@@ -58,7 +58,7 @@ ms.lasthandoff: 02/14/2018
   
      İletiler birkaç desenleri birinde değiştirilir. En yaygın düzeni, burada bir uç nokta verileri ikinci uç noktasından ister istek/yanıt Düzen yöneliktir. İkinci uç nokta yanıtlar. Tek bir uç nokta herhangi bir yanıt beklentisi olmadan bir ileti gönderir tek yönlü bir ileti gibi diğer düzenleri vardır. Daha karmaşık bir desen burada iki uç nokta bağlantı kurmak ve veri geri ve ileri bir anlık ileti programı benzer göndermek çift yönlü değişim deseni ' dir. [!INCLUDE[crabout](../../../includes/crabout-md.md)] farklı ileti exchange uygulama düzenleri kullanarak [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] bkz [sözleşmeleri](../../../docs/framework/wcf/feature-details/contracts.md).  
   
--   **Service Metadata**  
+-   **Hizmet meta verileri**  
   
      [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] Hizmet meta verilerini WSDL, XML şeması ve WS-Policy gibi endüstri standartları belirtilen biçimlerini kullanarak yayımlamayı destekler. Bu meta veriler otomatik olarak oluşturmak ve erişmek için istemcileri yapılandırmak için kullanılan [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] Hizmetleri. Meta veriler, HTTP ve HTTPS yayımlanabilir veya Web hizmeti meta veri değişimi standart kullanma. [!INCLUDE[crdefault](../../../includes/crdefault-md.md)] [Meta veri](../../../docs/framework/wcf/feature-details/metadata.md).  
   
@@ -72,7 +72,7 @@ ms.lasthandoff: 02/14/2018
   
 -   **Birden çok aktarımları ve kodlamaları**  
   
-     İletiler hiçbirinde birkaç yerleşik aktarım protokolleri ve Kodlamalar gönderilebilir. En yaygın protokolü ve kodlama kullanarak kodlanmış metin SOAP iletileri göndermesini Köprü Metni Aktarım Protokolü (HTTP) World Wide Web üzerinde kullanılmak üzere etmektir. Alternatif olarak, [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] kanallar veya MSMQ adlı TCP üzerinden iletileri göndermenize izin verir. Bu iletiler olarak kodlanmış metin ya da bir en iyi duruma getirilmiş ikili biçimini kullanarak olarak.  İkili veriler MTOM standart verimli şekilde kullanma gönderilebilir. Sağlanan taşımaları veya Kodlamalar hiçbiri gereksinimlerinize uygun değilse, kendi özel oluşturabilirsiniz taşıma veya kodlama. [!INCLUDE[crabout](../../../includes/crabout-md.md)] taşımalar ve tarafından desteklenen Kodlamalar [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] bkz [taşımaları](../../../docs/framework/wcf/feature-details/transports.md).  
+     İletiler hiçbirinde birkaç yerleşik aktarım protokolleri ve Kodlamalar gönderilebilir. En sık kullanılan protokol ve kodlama olan metin kodlanmış World Wide Web üzerinde kullanım için Köprü Metni Aktarım Protokolü (HTTP) kullanarak SOAP iletileri göndermek için. Alternatif olarak, [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] kanallar veya MSMQ adlı TCP üzerinden iletileri göndermenize izin verir. Bu iletiler olarak kodlanmış metin ya da bir en iyi duruma getirilmiş ikili biçimini kullanarak olarak.  İkili veriler MTOM standart verimli şekilde kullanma gönderilebilir. Sağlanan taşımaları veya Kodlamalar hiçbiri gereksinimlerinize uygun değilse, kendi özel oluşturabilirsiniz taşıma veya kodlama. [!INCLUDE[crabout](../../../includes/crabout-md.md)] taşımalar ve tarafından desteklenen Kodlamalar [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] bkz [taşımaları](../../../docs/framework/wcf/feature-details/transports.md).  
   
 -   **Güvenilir ve sıraya alınan iletileri**  
   
@@ -105,7 +105,7 @@ ms.lasthandoff: 02/14/2018
   
  [!INCLUDE[dublin](../../../includes/dublin-md.md)] Uygulama sunucusu dağıtma ve kullanan uygulamaları yönetmek için özel olarak oluşturulmuş [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] iletişimi için. [!INCLUDE[dublin2](../../../includes/dublin2-md.md)] İçin özellikle tasarlanmış zengin araçları ve yapılandırma seçeneklerini içeren [!INCLUDE[indigo2](../../../includes/indigo2-md.md)]-etkin olan uygulamalar.  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
+## <a name="see-also"></a>Ayrıca bkz.  
  <xref:System.ServiceModel>  
  [Temel Windows Communication Foundation Kavramları](../../../docs/framework/wcf/fundamental-concepts.md)  
  [Windows Communication Foundation Mimarisi](../../../docs/framework/wcf/architecture.md)  

@@ -1,13 +1,9 @@
 ---
 title: Nesneler için Varsayılan Sıralama
-ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - dotnet-clr
-ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - csharp
@@ -16,17 +12,16 @@ helpviewer_keywords:
 - objects, interop marshaling
 - interop marshaling, objects
 ms.assetid: c2ef0284-b061-4e12-b6d3-6a502b9cc558
-caps.latest.revision: ''
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: b49575bb7f16b942a56a48e9ad3f5a44edfb373a
-ms.sourcegitcommit: c883637b41ee028786edceece4fa872939d2e64c
+ms.openlocfilehash: 6980db381322d354cace38709586e50681ae0a7e
+ms.sourcegitcommit: 9a4fe1a1c37b26532654b4bbe22d702237950009
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/26/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="default-marshaling-for-objects"></a>Nesneler için Varsayılan Hazırlama
 Parametreler ve alanlar olarak yazılan <xref:System.Object?displayProperty=nameWithType> yönetilmeyen kod için şu türlerden biri olarak gösterilebilir:  
@@ -257,12 +252,12 @@ mo.SetVariant(new CurrencyWrapper(new Decimal(5.25)));
 |**TypeCode.Decimal**|**VT_DECIMAL**|  
 |**TypeCode.DateTime**|**VT_DATE**|  
 |**TypeCode.String**|**VT_BSTR**|  
-|Desteklenmez.|**VT_INT**|  
-|Desteklenmez.|**VT_UINT**|  
-|Desteklenmez.|**VT_ARRAY**|  
-|Desteklenmez.|**VT_RECORD**|  
-|Desteklenmez.|**VT_CY**|  
-|Desteklenmez.|**VT_VARIANT**|  
+|Desteklenmiyor.|**VT_INT**|  
+|Desteklenmiyor.|**VT_UINT**|  
+|Desteklenmiyor.|**VT_ARRAY**|  
+|Desteklenmiyor.|**VT_RECORD**|  
+|Desteklenmiyor.|**VT_CY**|  
+|Desteklenmiyor.|**VT_VARIANT**|  
   
  COM değişken değerini çağrılarak belirlenen **IConvertible.To** *türü* arabirimi, burada **için** *türü* dönüştürme döndürüldü türüne karşılık gelen yordamı **IConvertible.GetTypeCode**. Örneğin, döndüren bir nesne **TypeCode.Double** gelen **IConvertible.GetTypeCode** türünde COM değişken sıralanmış **VT_R8**. Değişken değeri elde edebilirsiniz (depolanan **dblVal** COM variant alanını) çevrim tarafından **IConvertible** arabirimi ve arama <xref:System.IConvertible.ToDouble%2A> yöntemi.  
   
@@ -274,7 +269,7 @@ mo.SetVariant(new CurrencyWrapper(new Decimal(5.25)));
 |----------------------|-----------------|  
 |**VT_EMPTY**|Null Nesne başvurusu (**hiçbir şey** Visual Basic'te).|  
 |**VT_NULL**|<xref:System.DBNull?displayProperty=nameWithType>|  
-|**VT_DISPATCH**|**System.__ComObject** or null if (pdispVal == null)|  
+|**VT_DISPATCH**|**System.__ComObject** ya da null ise (pdispVal null ==)|  
 |**VT_UNKNOWN**|**System.__ComObject** ya da null ise (punkVal null ==)|  
 |**VT_ERROR**|<xref:System.UInt32?displayProperty=nameWithType>|  
 |**VT_BOOL**|<xref:System.Boolean?displayProperty=nameWithType>|  
@@ -296,7 +291,7 @@ mo.SetVariant(new CurrencyWrapper(new Decimal(5.25)));
 |**VT_ARRAY** &#124; **VT_\***|<xref:System.Array?displayProperty=nameWithType>|  
 |**VT_CY**|<xref:System.Decimal?displayProperty=nameWithType>|  
 |**VT_RECORD**|Paketlenmiş değer türüne karşılık gelen.|  
-|**VT_VARIANT**|Desteklenmez.|  
+|**VT_VARIANT**|Desteklenmiyor.|  
   
  VARIANT türleri COM gelen geçirilen yönetilen kodu ve ardından geri COM aynı değişken türü çağrı süresince korumak değil. Türünde bir değişken olduğunda ne olacağını düşünün **VT_DISPATCH** COM .NET Framework geçirilir. Hazırlama sırasında değişken dönüştürülür bir <xref:System.Object?displayProperty=nameWithType>. Varsa **nesne** sonra geçirilen geri COM için geri türünde bir değişken için sıralanmış olduğundan **VT_UNKNOWN**. Başlangıçta nesne üretmek için kullanılan değişken aynı türde bir nesne COM yönetilen koddan sıralanmış zaman üretilen değişken olacaktır garantisi yoktur.  
   
@@ -304,7 +299,7 @@ mo.SetVariant(new CurrencyWrapper(new Decimal(5.25)));
 ## <a name="marshaling-byref-variants"></a>ByRef çeşitleri hazırlama  
  Türevleri kendilerini değere veya başvuruya göre geçirilen rağmen **VT_BYREF** bayrağı de kullanılabilir ile herhangi bir değişken türü değişken içeriğini yerine başvuruya geçirilen göstermek için değeri. Çeşitleri başvuruya göre sıralama ve bir türevi hazırlama arasındaki farkı **VT_BYREF** bayrağı ayarlanmış kafa karıştırıcı olabilir. Aşağıdaki çizimde farklılıkları açıklar.  
   
- ![Değişken geçilen yığınındaki](../../../docs/framework/interop/media/interopvariant.gif "interopvariant")  
+ ![Değişken geçilen yığınındaki](./media/interopvariant.gif "interopvariant")  
 Değer ve başvuru tarafından geçirilen çeşitleri  
   
  **Nesneleri ve değişkenleri değere göre sıralama için varsayılan davranış**  
@@ -332,17 +327,17 @@ Değer ve başvuru tarafından geçirilen çeşitleri
   
  Aşağıdaki tabloda çeşitleri ve nesneler için yayma kuralları özetler.  
   
-|Başlangıç|Bitiş|Geri yayılma değişiklikleri|  
+|From|Amaç|Geri yayılma değişiklikleri|  
 |----------|--------|-----------------------------|  
-|**Değişken***v* |**Object**  *o*|Hiçbir zaman|  
-|**Object**  *o*|**Değişken***v* |Hiçbir zaman|  
-|**Değişken*****\*****pv* |**Ref Object**  *o*|Her zaman|  
-|**Ref object**  *o*|**Değişken*****\*****pv* |Her zaman|  
-|**Variant**  *v* **(VT_BYREF** *&#124;* **VT_\*)**|**Object**  *o*|Hiçbir zaman|  
-|**Variant**  *v* **(VT_BYREF** *&#124;* **VT_)**|**Ref Object**  *o*|Yalnızca türü değişmemişse.|  
+|**Değişken***v*|**Nesne***o* |Hiçbir zaman|  
+|**Nesne***o* |**Değişken***v*|Hiçbir zaman|  
+|**Değişken*****\*****pv*|**Ref nesne***o* |Her zaman|  
+|**Ref nesne***o* |**Değişken*****\*****pv*|Her zaman|  
+|**Değişken***v* **(VT_BYREF** *&#124;* **VT_\*)** |**Nesne***o* |Hiçbir zaman|  
+|**Değişken***v* **(VT_BYREF** *&#124;* **VT_)** |**Ref nesne***o* |Yalnızca türü değişmemişse.|  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- [Varsayılan Hazırlama Davranışı](../../../docs/framework/interop/default-marshaling-behavior.md)  
- [Blok Halinde Kopyalanabilir ve Kopyalanamaz Türler](../../../docs/framework/interop/blittable-and-non-blittable-types.md)  
- [Tek yönlü öznitelikleri](http://msdn.microsoft.com/library/241ac5b5-928e-4969-8f58-1dbc048f9ea2)  
- [Kopyalama ve Sabitleme](../../../docs/framework/interop/copying-and-pinning.md)
+## <a name="see-also"></a>Ayrıca bkz.  
+ [Varsayılan Hazırlama Davranışı](default-marshaling-behavior.md)  
+ [Blok Halinde Kopyalanabilir ve Kopyalanamaz Türler](blittable-and-non-blittable-types.md)  
+ [Tek yönlü öznitelikleri](https://msdn.microsoft.com/library/241ac5b5-928e-4969-8f58-1dbc048f9ea2(v=vs.100))  
+ [Kopyalama ve Sabitleme](copying-and-pinning.md)

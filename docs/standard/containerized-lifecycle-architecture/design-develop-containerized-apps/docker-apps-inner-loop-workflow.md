@@ -1,18 +1,18 @@
 ---
-title: "Docker uygulamaları için iç döngü geliştirme iş akışı"
-description: "Microsoft Platformu ve araçları ile kapsayıcılı Docker uygulama yaşam döngüsü"
-keywords: Docker, Microservices, ASP.NET, Container
+title: Docker uygulamaları için iç döngü geliştirme iş akışı
+description: Microsoft Platformu ve araçları ile kapsayıcılı Docker uygulama yaşam döngüsü
+ms.prod: .net
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 09/22/2017
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: 632c04507c1478238a5dc2573542f8c88bae2a51
-ms.sourcegitcommit: c3957fdb990060559d73cca44ab3e2c7b4d049c0
+ms.openlocfilehash: 7f49b19b0836636bf7656dc618ef2f181a0d7fff
+ms.sourcegitcommit: 9a4fe1a1c37b26532654b4bbe22d702237950009
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/05/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="inner-loop-development-workflow-for-docker-apps"></a>Docker uygulamaları için iç döngü geliştirme iş akışı
 
@@ -52,7 +52,7 @@ Uygulamanızı geliştirme oldukça benzer Docker yapmak şekilde yoludur. Geli�
 
 Mac ve Windows için Docker en son sürümleri, Docker uygulamaları geliştirmek için her zamankinden daha kolay ve Kurulum basittir.
 
-**Daha fazla bilgi** Docker Windows için ayarlama hakkında yönergeler için Git [https://docs.docker.com/docker-for-windows/](https://docs.docker.com/docker-for-windows/).
+**Daha fazla bilgi** Docker Windows için ayarlama hakkında yönergeler için Git [ https://docs.docker.com/docker-for-windows/ ](https://docs.docker.com/docker-for-windows/).
 
 Mac için Docker ayarlama hakkında yönergeler için Git <https://docs.docker.com/docker-for-mac/>.
 
@@ -60,7 +60,7 @@ Ayrıca, Docker CLI kullanırken, uygulamanızın gerçekte geliştirebilirsiniz
 
 Microsoft, Mac, Windows ve Linux desteklenir ve IntelliSense ile sağlayan bir basit bir kod düzenleyicisidir Visual Studio Code sağlar [desteklemek için çok sayıda dilleri](https://code.visualstudio.com/docs/languages/overview) (JavaScript, .NET, Git, Java, Ruby, Python ve çoğu Modern dilleri), [hata ayıklama](https://code.visualstudio.com/Docs/editor/debugging), [Git ile tümleştirme](https://code.visualstudio.com/Docs/editor/versioncontrol) ve [Uzantıları desteği](https://code.visualstudio.com/docs/extensions/overview). Mac ve Linux geliştiricileri için harika bir sığdırma düzenleyicisidir. Windows, tam Visual Studio uygulama de kullanabilirsiniz.
 
-**Daha fazla bilgi** Windows için Visual Studio, Mac veya Linux yükleme ile ilgili yönergeler için Git [http://code.visualstudio.com/docs/setup/setup-overview/https://docs.docker.com/docker-for-mac/](http://code.visualstudio.com/docs/setup/setup-overview/https:/docs.docker.com/docker-for-mac/).
+**Daha fazla bilgi** Windows için Visual Studio, Mac veya Linux yükleme ile ilgili yönergeler için Git [ http://code.visualstudio.com/docs/setup/setup-overview/https://docs.docker.com/docker-for-mac/ ](http://code.visualstudio.com/docs/setup/setup-overview/https:/docs.docker.com/docker-for-mac/).
 
 Docker CLI ile çalışır ve herhangi bir kod düzenleyicisini kullanarak kodunuzu yazma, ancak Visual Studio Code kullanırsanız, yazar Dockerfile kolay ve docker-compose.yml dosyaları çalışma alanınızda kolaylaştırır. Ayrıca, Docker CLI altında kullanarak ayrıntılandırılmış işlemleri çalıştıran komut dosyaları ister IDE gelen Visual Studio Code görevleri çalıştırabilir.
 
@@ -125,7 +125,7 @@ Uygulamayı çalıştırmak nasıl Docker bilmesi için kullanmakta olduğunuz d
 
 **Daha fazla bilgi** .NET Core uygulamaları için Docker görüntülerinizi oluşturmak hakkında daha fazla bilgi için Git <https://docs.microsoft.com/dotnet/core/docker/building-net-docker-images>.
 
-Kendi görüntüleri oluşturma hakkında daha fazla bilgi için şuraya gidin [https://docs.docker.com/engine/ \öğreticileri/dockerimages/](https://docs.docker.com/engine/tutorials/dockerimages/).
+Kendi görüntüleri oluşturma hakkında daha fazla bilgi için şuraya gidin [ https://docs.docker.com/engine/\öğreticileri/dockerimages/](https://docs.docker.com/engine/tutorials/dockerimages/).
 
 **Birden çok platform görüntüsü depoları**
 
@@ -258,7 +258,7 @@ Node.js ve .NET Core kapsayıcıları gibi diğer platformlarda kullanıyorsanı
 
 Ayrıca Docker .NET Core kapsayıcılarında Visual Studio kullanırken bir sonraki bölümde açıklandığı gibi ayıklayabilirsiniz.
 
-**Daha fazla bilgi:** Node.js Docker kapsayıcılarında hata ayıklama hakkında daha fazla bilgi için şuraya gidin <https://blog.docker.com/2016/07/live-debugging-docker/> ve [https://blogs.msdn.microsoft.com/ \ kullanıcı\_ed/2016/02/27 / Visual-Studio-Code-New-Features-13-Big-Debugging-Updates-Rich-Object-hover-Conditional-Breakpoints-node-js-Mono-More/](https://blogs.msdn.microsoft.com/user_ed/2016/02/27/visual-studio-code-new-features-13-big-debugging-updates-rich-object-hover-conditional-breakpoints-node-js-mono-more/).
+**Daha fazla bilgi:** Node.js Docker kapsayıcılarında hata ayıklama hakkında daha fazla bilgi için şuraya gidin <https://blog.docker.com/2016/07/live-debugging-docker/> ve [ https://blogs.msdn.microsoft.com/\ kullanıcı\_ed/2016/02/27 / Visual-Studio-Code-New-Features-13-Big-Debugging-Updates-Rich-Object-hover-Conditional-Breakpoints-node-js-Mono-More/](https://blogs.msdn.microsoft.com/user_ed/2016/02/27/visual-studio-code-new-features-13-big-debugging-updates-rich-object-hover-conditional-breakpoints-node-js-mono-more/).
 
 
 >[!div class="step-by-step"]

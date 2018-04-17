@@ -1,18 +1,18 @@
 ---
-title: "Docker (Windows için Visual Studio) için Visual Studio araçlarını kullanma"
-description: "Microsoft Platformu ve araçları ile kapsayıcılı Docker uygulama yaşam döngüsü"
-keywords: Docker, Microservices, ASP.NET, Container
+title: Docker (Windows için Visual Studio) için Visual Studio araçlarını kullanma
+description: Microsoft Platformu ve araçları ile kapsayıcılı Docker uygulama yaşam döngüsü
+ms.prod: .net
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 09/22/2017
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: 0525633b23625d915fd447d438c6281fb14b3b46
-ms.sourcegitcommit: c3957fdb990060559d73cca44ab3e2c7b4d049c0
+ms.openlocfilehash: cbd4dea32b98e79e85302aa5d4a5c97b1b0fa556
+ms.sourcegitcommit: 9a4fe1a1c37b26532654b4bbe22d702237950009
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/05/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="using-visual-studio-tools-for-docker-visual-studio-on-windows"></a>Docker (Windows için Visual Studio) için Visual Studio araçlarını kullanma
 
@@ -26,7 +26,7 @@ Windows için Docker en son sürümleri ile Kurulum sonucunun aşağıdaki başv
 
 Visual Studio 2015 kullanıyorsanız, güncelleştirme 3 veya sonraki bir sürümünü artı Docker için Visual Studio Araçları olması gerekir.
 
-**Daha fazla bilgi:** Visual Studio'yu yükleme ile ilgili yönergeler için Git [https://www.visualstudio.com/ \ ürünler/vs-2015-ürün-sürümleri](https://www.visualstudio.com/products/vs-2015-product-editions).
+**Daha fazla bilgi:** Visual Studio'yu yükleme ile ilgili yönergeler için Git [ https://www.visualstudio.com/\ ürünler/vs-2015-ürün-sürümleri](https://www.visualstudio.com/products/vs-2015-product-editions).
 
 Docker için Visual Studio araçlarını yükleme hakkında daha fazla bilgi görmek için Git <http://aka.ms/vstoolsfordocker> ve <https://docs.microsoft.com/aspnet/core/host-and-deploy/docker/visual-studio-tools-for-docker>.
 
@@ -68,7 +68,7 @@ Bir multicontainer dağıtabilirsiniz çalıştırdığınızda tek docker-compo
 
 **Daha fazla bilgi:** Hizmetleri uygulaması ve Docker için Visual Studio Araçları kullanımı hakkında daha fazla ayrıntı için aşağıdaki makaleleri okuyun:
 
-Yapı, hata ayıklama, güncelleştirme ve yenileme yerel bir Docker kapsayıcısı uygulamalarında: [https://docs.microsoft.com/azure/vs-azure-tools-docker-edit-and-refresh/](https://docs.microsoft.com/azure/vs-azure-tools-docker-edit-and-refresh)
+Yapı, hata ayıklama, güncelleştirme ve yerel bir Docker kapsayıcısı uygulamalarında yenileyin: [https://docs.microsoft.com/azure/vs-azure-tools-docker-edit-and-refresh/](https://docs.microsoft.com/azure/vs-azure-tools-docker-edit-and-refresh)
 
 Bir ASP.NET kapsayıcısı uzak bir Docker konağına dağıtın: [https://docs.microsoft.com/azure/vs-azure-tools-docker-hosting-web-apps-in-docker/](https://docs.microsoft.com/azure/vs-azure-tools-docker-hosting-web-apps-in-docker)
 

@@ -10,11 +10,11 @@ dev_langs:
 ms.prod: .net-core
 ms.workload:
 - dotnetcore
-ms.openlocfilehash: 9681ad0d9e0c788b1aacc436cf0c98d7180f3bee
-ms.sourcegitcommit: b750a8e3979749b214e7e10c82efb0a0524dfcb1
+ms.openlocfilehash: 552e61fae243b627eb51abac0f885ce399f37331
+ms.sourcegitcommit: 9a4fe1a1c37b26532654b4bbe22d702237950009
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/09/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="unit-testing-f-libraries-in-net-core-using-dotnet-test-and-mstest"></a>Birim F # kitaplığı .NET dotnet test ve mstest'i kullanarak çekirdek testi
 
@@ -36,7 +36,7 @@ Olun *MathService* geçerli dizin ve çalışma [ `dotnet new classlib -lang F#`
 
 ```fsharp
 module MyMath =
-    let sumOfSquares xs = raise (System.NotImplementedException("You haven't written a test yet!"))
+    let squaresOfOdds xs = raise (System.NotImplementedException("You haven't written a test yet!"))
 ```
 
 Dizin geri değişiklik *birim-test etme-ile-fsharp* dizini. Çalıştırma [ `dotnet sln add .\MathService\MathService.fsproj` ](../tools/dotnet-sln.md) sınıf kitaplığı proje çözüme eklemek için.
@@ -111,15 +111,15 @@ type TestClass () =
 
 `[<TestClass>]` Özniteliği testleri içeren bir sınıfı gösterir. `[<TestMethod>]` Özniteliği test Çalıştırıcısı tarafından çalıştırılan test yöntemini gösterir. Gelen *birim-test etme-ile-fsharp* dizin, yürütme [ `dotnet test` ](../tools/dotnet-test.md) testleri ve sınıf kitaplığı oluşturmak ve ardından testleri çalıştırın. Mstest'i test Çalıştırıcısı testleri çalıştırmak için program giriş noktası içerir. `dotnet test` oluşturduğunuz birim testi projesi kullanarak test Çalıştırıcısı başlatır.
 
-Bu iki testleri en temel geçirme ve testleri başarısız gösterir. `My test` geçirir, ve `Fail every time` başarısız olur. Şimdi, test için oluşturma `sumOfSquares` yöntemi. `sumOfSquares` Yöntemi Giriş dizisinin bir parçası olan tüm tek sayılı tamsayı değerleri kareleri toplamını döndürür. Bu işlevlerin tümüne tek seferde yazmaya çalışırken yerine işlevselliğini doğrulama testleri tekrarlayarak oluşturabilirsiniz. Yöntemi için gerekli işlevselliği oluşturma anlamına gelir geçirmek her test yapma.
+Bu iki testleri en temel geçirme ve testleri başarısız gösterir. `My test` geçirir, ve `Fail every time` başarısız olur. Şimdi, test için oluşturma `squaresOfOdds` yöntemi. `squaresOfOdds` Yöntemi Giriş dizisinin bir parçası olan tüm tek sayılı tamsayı değerleri kareleri listesini döndürür. Bu işlevlerin tümüne tek seferde yazmaya çalışırken yerine işlevselliğini doğrulama testleri tekrarlayarak oluşturabilirsiniz. Yöntemi için gerekli işlevselliği oluşturma anlamına gelir geçirmek her test yapma.
 
-Biz yazabilirler basit test çağırmaktır `sumOfSquares` tüm çift numaraları, burada sonucu olmalıdır boş bir tam sayı dizisidir.  Bu test şöyledir:
+Biz yazabilirler basit test çağırmaktır `squaresOfOdds` tüm çift numaraları, burada sonucu olmalıdır boş bir tam sayı dizisidir.  Bu test şöyledir:
 
 ```fsharp
 [<TestMethod>]
 member this.TestEvenSequence() =
     let expected = Seq.empty<int> |> Seq.toList
-    let actual = MyMath.sumOfSquares [2; 4; 6; 8; 10]
+    let actual = MyMath.squaresOfOdds [2; 4; 6; 8; 10]
     Assert.AreEqual(expected, actual)
 ```
 
@@ -128,7 +128,7 @@ Dikkat `expected` sıralı liste dönüştürülmüş. Mstest'i kitaplığı bir
 Testi çalıştırdığınızda, testiniz başarısız olduğunu görürsünüz. Uygulama henüz oluşturmadınız. Bu test basit kod yazarken yapmasına `Mathservice` çalışır sınıfı:
 
 ```csharp
-let sumOfSquares xs =
+let squaresOfOdds xs =
     Seq.empty<int> |> Seq.toList
 ```
 
@@ -140,18 +140,18 @@ Bir test geçirmek yapmış olduğunuz, daha fazla yazma zamanı geldi. Sonraki 
 
 ```fsharp
 [<TestMethod>]
-member public this.SumOnesAndEvens() =
+member public this.TestOnesAndEvens() =
     let expected = [1; 1; 1; 1]
-    let actual = MyMath.sumOfSquares [2; 1; 4; 1; 6; 1; 8; 1; 10]
+    let actual = MyMath.squaresOfOdds [2; 1; 4; 1; 6; 1; 8; 1; 10]
     Assert.AreEqual(expected, actual)
 ```
 
-Yürütme `dotnet test` yeni sınama başarısız olur. Güncelleştirmeniz gerekir `sumOfSquares` bu yeni test işlemek için yöntem. Geçirmek bu testi yapmak için sıra dışında tüm çift sayıları filtre gerekir. Küçük filtre işlevi yazma ve kullanarak bunu, `Seq.filter`:
+Yürütme `dotnet test` yeni sınama başarısız olur. Güncelleştirmeniz gerekir `squaresOfOdds` bu yeni test işlemek için yöntem. Geçirmek bu testi yapmak için sıra dışında tüm çift sayıları filtre gerekir. Küçük filtre işlevi yazma ve kullanarak bunu, `Seq.filter`:
 
 ```fsharp
 let private isOdd x = x % 2 <> 0
 
-let sumOfSquares xs =
+let squaresOfOdds xs =
     xs
     |> Seq.filter isOdd |> Seq.toList
 ```
@@ -164,7 +164,7 @@ Gitmek için bir adım daha vardır: her tek sayıların karesini. Yeni bir test
 [<TestMethod>]
 member public this.TestSquaresOfOdds() =
     let expected = [1; 9; 25; 49; 81]
-    let actual = MyMath.sumOfSquares [1; 2; 3; 4; 5; 6; 7; 8; 9; 10]
+    let actual = MyMath.squaresOfOdds [1; 2; 3; 4; 5; 6; 7; 8; 9; 10]
     Assert.AreEqual(expected, actual)
 ```
 
@@ -174,7 +174,7 @@ Her tek sayı kare hesaplamak için eşleme işlemi aracılığıyla filtrelenmi
 let private square x = x * x
 let private isOdd x = x % 2 <> 0
 
-let sumOfSquares xs =
+let squaresOfOdds xs =
     xs
     |> Seq.filter isOdd
     |> Seq.map square

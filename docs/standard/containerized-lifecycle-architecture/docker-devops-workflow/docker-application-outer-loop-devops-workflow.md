@@ -1,18 +1,18 @@
 ---
-title: "Docker uygulama için dış döngü DevOps iş akışı adımları"
-description: "Microsoft Platformu ve araçları ile kapsayıcılı Docker uygulama yaşam döngüsü"
-keywords: Docker, Microservices, ASP.NET, Container
+title: Docker uygulama için dış döngü DevOps iş akışı adımları
+description: Microsoft Platformu ve araçları ile kapsayıcılı Docker uygulama yaşam döngüsü
+ms.prod: .net
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 09/22/2017
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: fe51fc4b5026d17f0f9b93e7fd0dedde93ef4a3c
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: a03a9d153793b30ca9276b64a0a33e3de26f8f6e
+ms.sourcegitcommit: 9a4fe1a1c37b26532654b4bbe22d702237950009
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="steps-in-the-outer-loop-devops-workflow-for-a-docker-application"></a>Docker uygulama için dış döngü DevOps iş akışı adımları
 
@@ -110,13 +110,13 @@ Bunlardan birini oluşturmak için kolay bir yol, Visual Studio Team Services Ar
 
 **Daha fazla bilgi** okuyan bir Visual Studio Team Services Docker CI birleştirme hakkında daha fazla kanal ve incelemeleri görüntülemek için aşağıdaki siteleri ziyaret edin:
 
-Docker kapsayıcısı Visual Studio Team Services aracısını çalıştıran: [https://hub.docker.com/r/ \ vsts/microsoft-agent /](https://hub.docker.com/r/microsoft/vsts-agent/)
+Docker kapsayıcısı Visual Studio Team Services aracısını çalıştıran: [ https://hub.docker.com/r/\ vsts/microsoft-agent /](https://hub.docker.com/r/microsoft/vsts-agent/)
 
 VSTS Docker uzantısı: <https://aka.ms/vstsdockerextension>
 
 Visual Studio Team Services ile .NET Core Linux Docker görüntülerinizi oluşturmak: <https://blogs.msdn.microsoft.com/stevelasker/2016/06/13/building-net-core-linux-docker-images-with-visual-studio-team-services/>
 
-Linux tabanlı bir Visual Studio Team hizmet oluşturma yapı makine Docker desteğiyle: <http://donovanbrown.com/post/2016/06/03/Building-a-Linux-Based-Visual-Studio-Team-Service-Build-Machine-with-Docker-Support>
+Linux tabanlı Visual Studio Team hizmeti yapı makinesi Docker desteğiyle oluşturma: <http://donovanbrown.com/post/2016/06/03/Building-a-Linux-Based-Visual-Studio-Team-Service-Build-Machine-with-Docker-Support>
 
 ### <a name="integrate-test-and-validate-multicontainer-docker-applications"></a>Tümleştirme, test ve multicontainer Docker uygulamaları doğrula
 
@@ -220,7 +220,7 @@ Başlangıçta, belirli kümeleri veya orchestrators dağıtırken, geleneksel b
 
 **Daha fazla bilgi** daha fazla bilgi için Visual Studio Team Services ve Docker CD kanalı hakkında aşağıdaki siteleri ziyaret edin:
 
-Docker ve Azure kapsayıcı hizmeti için Visual Studio Team Services uzantısı: [https://aka.ms/ \ vstsdockerextension](https://aka.ms/vstsdockerextension)
+Docker ve Azure kapsayıcı hizmeti için Visual Studio Team Services uzantısı: [ https://aka.ms/\ vstsdockerextension](https://aka.ms/vstsdockerextension)
 
 Azure kapsayıcı hizmeti: <https://aka.ms/azurecontainerservice>
 

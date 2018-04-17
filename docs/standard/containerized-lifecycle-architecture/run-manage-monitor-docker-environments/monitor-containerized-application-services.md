@@ -1,18 +1,18 @@
 ---
-title: "Kapsayıcılı İzleyici uygulama hizmetleri"
-description: "Microsoft Platformu ve araçları ile kapsayıcılı Docker uygulama yaşam döngüsü"
-keywords: Docker, Microservices, ASP.NET, Container
+title: Kapsayıcılı İzleyici uygulama hizmetleri
+description: Microsoft Platformu ve araçları ile kapsayıcılı Docker uygulama yaşam döngüsü
+ms.prod: .net
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 09/22/2017
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: 58bf96dfa06a78892563698200e6f4df5f371346
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: b3ffa6c230176e1de6269ed0b30d05711ff78704
+ms.sourcegitcommit: 9a4fe1a1c37b26532654b4bbe22d702237950009
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="monitor-containerized-application-services"></a>Kapsayıcılı İzleyici uygulama hizmetleri
 
@@ -42,10 +42,10 @@ Docker için ilgili olarak yaşam döngüsü olayları ve performans sayaçları
 
 Application Insights kaynağı oluşturmak için aşağıdaki listeden sunulan makaleleri'ndaki yönergeleri izleyin. Azure Portal sizin için gerekli komut dosyası oluşturur.
 
--   **Application ınsights'ta Docker uygulamaları izleme:**[https://docs.microsoft.com/azure/application-insights/app-insights-docker  ](https://docs.microsoft.com/azure/application-insights/app-insights-docker)
+-   **Application Insights Docker uygulamaları izleyin:**  [https://docs.microsoft.com/azure/application-insights/app-insights-docker](https://docs.microsoft.com/azure/application-insights/app-insights-docker)
 
 -   **Uygulama Öngörüler Docker görüntüsü Docker hub'a ve Github:**  
-[https://hub.docker.com/r/microsoft/applicationinsights/](https://hub.docker.com/r/microsoft/applicationinsights/) and <https://github.com/Microsoft/ApplicationInsights-Docker>
+[https://hub.docker.com/r/microsoft/applicationinsights/](https://hub.docker.com/r/microsoft/applicationinsights/) Ve <https://github.com/Microsoft/ApplicationInsights-Docker>
 
 -   **ASP.NET için Application Insights'ı ayarlayın:**  
 [https://docs.microsoft.com/azure/application-insights/app-insights-asp-net](https://docs.microsoft.com/azure/application-insights/app-insights-asp-net)
@@ -91,13 +91,13 @@ Operations Management Suite kapsayıcı çözümünü kullanarak, aşağıdakile
 
 Sorgu türü gibi çalıştırarak performans bilgileri görebilirsiniz Perf, Şekil 6-3'te gösterildiği gibi =.
 
-![DockerPerfMetricsView](./media/image3.png){width="5.78625in" height="3.25in"}
+![DockerPerfMetricsView](./media/image3.png){width = "5.78625 in" yükseklik = "3,25 inç"}
 
 Şekil 6-3: performans ölçümleri Operations Management Suite tarafından gösterilen Docker ana bilgisayarları
 
 Ayrıca bir standart Operations Management Suite özelliğidir ve yardımcı olabilir sorguları kaydetme yararlı buldunuz ve sisteminizdeki eğilimleri bulmak sorguları tutun.
 
-**Daha fazla bilgi** kapsayıcı çözümde yükleme ve Docker yapılandırma hakkında bilgi bulmak için [Operations Management Suite](http://microsoft.com/oms)gidin <https://docs.microsoft.com/azure/log-analytics /log-Analytics-Containers>.
+**Daha fazla bilgi** kapsayıcı çözümde yükleme ve Docker yapılandırma hakkında bilgi bulmak için [Operations Management Suite](http://microsoft.com/oms)gidin <https://docs.microsoft.com/azure/log-analytics/log-analytics-containers>.
 
 >[!div class="step-by-step"]
 [Önceki] (yönetme-üretim-docker-environments.md) [sonraki] (.. /Key-takeaways/index.MD)

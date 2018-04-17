@@ -1,13 +1,13 @@
 ---
-title: "Nasıl yapılır: Uygulama Etki Alanı Oluşturma"
-ms.custom: 
+title: 'Nasıl yapılır: Uygulama Etki Alanı Oluşturma'
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - dotnet-bcl
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - csharp
@@ -16,17 +16,17 @@ dev_langs:
 helpviewer_keywords:
 - application domains, creating
 ms.assetid: ba1fa43e-49f5-47d9-bd7f-3024af16f4ba
-caps.latest.revision: 
+caps.latest.revision: 9
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: cdbab5e43d2af7608c4d8322eb071baf591e18d5
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.openlocfilehash: 366dbea0f9559cdeccd2e126e4a3e913fb5ba23d
+ms.sourcegitcommit: 9a4fe1a1c37b26532654b4bbe22d702237950009
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="how-to-create-an-application-domain"></a>Nasıl yapılır: Uygulama Etki Alanı Oluşturma
 Gerektiğinde bir ortak dil çalışma zamanı ana uygulama etki alanları otomatik olarak oluşturur. Ancak, kendi uygulama etki alanları oluşturmak ve bunlara kişisel yönetmek istediğiniz bu derlemeler yüklenemiyor. Uygulama etki alanları kod yürütmek de oluşturabilirsiniz.  
@@ -40,6 +40,6 @@ Gerektiğinde bir ortak dil çalışma zamanı ana uygulama etki alanları otoma
  [!code-csharp[ADCreateDomain#2](../../../samples/snippets/csharp/VS_Snippets_CLR/ADCreateDomain/CS/source2.cs#2)]
  [!code-vb[ADCreateDomain#2](../../../samples/snippets/visualbasic/VS_Snippets_CLR/ADCreateDomain/VB/source2.vb#2)]  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- [Uygulama etki alanları ile programlama](http://msdn.microsoft.com/library/bd36055b-56bd-43eb-b4d8-820c37172131)  
+## <a name="see-also"></a>Ayrıca bkz.  
+ [Uygulama etki alanları ile programlama](application-domains.md#programming-with-application-domains)  
  [Uygulama Etki Alanlarını Kullanma](../../../docs/framework/app-domains/use.md)

@@ -1,12 +1,13 @@
 ---
-title: "İzlenecek yol: İlk WPF Masaüstü Uygulamam"
-ms.custom: 
+title: 'İzlenecek yol: İlk WPF Masaüstü Uygulamam'
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-wpf
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-wpf
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - csharp
@@ -15,21 +16,22 @@ helpviewer_keywords:
 - getting started [WPF], WPF
 - WPF [WPF], getting started
 ms.assetid: b96bed40-8946-4285-8fe4-88045ab854ed
-caps.latest.revision: "71"
+caps.latest.revision: 71
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 16ed99181f8462e805638b5d3881464b16f21177
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.workload:
+- dotnet
+ms.openlocfilehash: 3725e96b514b0204f10f6b5c45ed2bbec1d892de
+ms.sourcegitcommit: 9a4fe1a1c37b26532654b4bbe22d702237950009
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="walkthrough-my-first-wpf-desktop-application"></a>İzlenecek yol: İlk WPF Masaüstü Uygulamam
 Bu kılavuzda geliştirilmesini tanıtılmaktadır bir [!INCLUDE[TLA#tla_wpf](../../../../includes/tlasharptla-wpf-md.md)] en yaygın olan öğeleri içeren uygulama [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] uygulamalar: [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)] biçimlendirme, arka plan kodu, uygulama tanımları, denetimleri, düzeni veri bağlama ve stiller. 
   
- Bu kılavuz, basit bir geliştirme size rehberlik eder [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] aşağıdaki adımları kullanarak uygulama. 
+Bu kılavuz, basit bir geliştirme size rehberlik eder [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] aşağıdaki adımları kullanarak uygulama. 
   
 -   Tanımlama [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] uygulamanın görünümünü tasarlamak için [!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)]. 
   
@@ -43,23 +45,23 @@ Bu kılavuzda geliştirilmesini tanıtılmaktadır bir [!INCLUDE[TLA#tla_wpf](..
   
 -   Bağlama [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] her ikisine de verilere doldurmak [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] veri ve canlı verileri ve [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] eşitlenir. 
   
- İzlenecek yol ucu tarafından bir tek başına oluşturacaksınız [!INCLUDE[TLA#tla_mswin](../../../../includes/tlasharptla-mswin-md.md)] kullanıcıların seçilen kişiler için harcama raporlarını görüntülemesine olanak sağlayan uygulama. Uygulamayı birkaç oluşacaktır [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] tarayıcı stili pencerede barındırılan sayfaları. 
+İzlenecek yol ucu tarafından bir tek başına oluşturacaksınız [!INCLUDE[TLA#tla_mswin](../../../../includes/tlasharptla-mswin-md.md)] kullanıcıların seçilen kişiler için harcama raporlarını görüntülemesine olanak sağlayan uygulama. Uygulamayı birkaç oluşacaktır [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] tarayıcı stili pencerede barındırılan sayfaları. 
   
- Bu izlenecek yolu oluşturmak için kullanılan örnek kod için kullanılabilir [!INCLUDE[TLA#tla_visualb](../../../../includes/tlasharptla-visualb-md.md)] ve [!INCLUDE[TLA#tla_cshrp](../../../../includes/tlasharptla-cshrp-md.md)] adresindeki [WPF uygulamalarını giriş](http://go.microsoft.com/fwlink/?LinkID=160008). 
+Bu izlenecek yolu oluşturmak için kullanılan örnek kod için kullanılabilir [!INCLUDE[TLA#tla_visualb](../../../../includes/tlasharptla-visualb-md.md)] ve [!INCLUDE[TLA#tla_cshrp](../../../../includes/tlasharptla-cshrp-md.md)] adresindeki [WPF uygulamalarını giriş](http://go.microsoft.com/fwlink/?LinkID=160008). 
 
 ## <a name="prerequisites"></a>Önkoşullar  
 
-- [!INCLUDE[vs_dev11_long](../../../../includes/vs-dev11-long-md.md)]veya üzeri
+- [!INCLUDE[vs_dev11_long](../../../../includes/vs-dev11-long-md.md)] veya üzeri
 
 Visual Studio en son sürümünü yükleme hakkında daha fazla bilgi için bkz: [Visual Studio yükleme](/visualstudio/install/install-visual-studio).
   
 ## <a name="creating-the-application-project"></a>Uygulama projesi oluşturma  
- Bu bölümde, uygulama tanımı, iki sayfaları ve görüntü içeren uygulama altyapısı oluşturun. 
+Bu bölümde, uygulama tanımı, iki sayfaları ve görüntü içeren uygulama altyapısı oluşturun. 
   
 1. Visual Basic veya Visual C# adlı yeni bir WPF uygulaması projesi oluşturduğunuzda `ExpenseIt`. Daha fazla bilgi için bkz: [nasıl yapılır: yeni bir WPF uygulaması projesi oluşturduğunuzda](http://msdn.microsoft.com/library/1f6aea7a-33e1-4d3f-8555-1daa42e95d82). 
   
     > [!NOTE]
-    >  Bu kılavuzda kullanılır <xref:System.Windows.Controls.DataGrid> .NET Framework 4'te kullanılabilir denetim. Sonraki veya projeniz .NET Framework 4 hedefleyen emin olun. Daha fazla bilgi için bkz:[nasıl yapılır: .NET Framework sürümü hedef](/visualstudio/ide/how-to-target-a-version-of-the-dotnet-framework). 
+    >  Bu kılavuzda kullanılır <xref:System.Windows.Controls.DataGrid> .NET Framework 4'te kullanılabilir denetim. Sonraki veya projeniz .NET Framework 4 hedefleyen emin olun. Daha fazla bilgi için bkz: [nasıl yapılır: .NET Framework sürümü hedef](/visualstudio/ide/how-to-target-a-version-of-the-dotnet-framework). 
   
 2. Application.xaml (Visual Basic) veya App.xaml (C#) açın. 
   
@@ -79,7 +81,7 @@ Visual Studio en son sürümünü yükleme hakkında daha fazla bilgi için bkz:
   
 4. Değişiklik <xref:System.Windows.Window> öğesine bir <xref:System.Windows.Navigation.NavigationWindow>. 
   
-     Bu uygulama kullanıcı etkileşimi bağlı olarak farklı içerik gider. Bu nedenle, ana <xref:System.Windows.Window> için değiştirilmesi gereken bir <xref:System.Windows.Navigation.NavigationWindow>. <xref:System.Windows.Navigation.NavigationWindow>tüm özelliklerini devralır <xref:System.Windows.Window>. <xref:System.Windows.Navigation.NavigationWindow> XAML dosyası öğesinde bir örneğini oluşturur <xref:System.Windows.Navigation.NavigationWindow> sınıfı. Daha fazla bilgi için bkz: [Gezinti genel bakış](../../../../docs/framework/wpf/app-development/navigation-overview.md). 
+     Bu uygulama kullanıcı etkileşimi bağlı olarak farklı içerik gider. Bu nedenle, ana <xref:System.Windows.Window> için değiştirilmesi gereken bir <xref:System.Windows.Navigation.NavigationWindow>. <xref:System.Windows.Navigation.NavigationWindow> tüm özelliklerini devralır <xref:System.Windows.Window>. <xref:System.Windows.Navigation.NavigationWindow> XAML dosyası öğesinde bir örneğini oluşturur <xref:System.Windows.Navigation.NavigationWindow> sınıfı. Daha fazla bilgi için bkz: [Gezinti genel bakış](../../../../docs/framework/wpf/app-development/navigation-overview.md). 
   
 5. Aşağıdaki özellikleri değiştirin <xref:System.Windows.Navigation.NavigationWindow> öğe:  
   
@@ -113,7 +115,7 @@ Visual Studio en son sürümünü yükleme hakkında daha fazla bilgi için bkz:
     [!code-vb[ExpenseIt#3](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/ExpenseIt/VB/ExpenseIt1_A/MainWindow.xaml.vb#3)]  
   
 ## <a name="adding-files-to-the-application"></a>Dosyalar için uygulama ekleme  
- Bu bölümde, uygulamaya iki sayfaları ve görüntü ekleyin. 
+Bu bölümde, uygulamaya iki sayfaları ve görüntü ekleyin. 
   
 1. Yeni sayfa (WPF) adlı projeye eklemek `ExpenseItHome.xaml`. Daha fazla bilgi için bkz: [nasıl yapılır: bir WPF projesi için yeni öğeler eklemek](http://msdn.microsoft.com/library/17e6b238-fc32-4385-98ef-2f66ca09d9ad). 
   
@@ -171,12 +173,12 @@ Visual Studio en son sürümünü yükleme hakkında daha fazla bilgi için bkz:
     [!code-csharp[ExpenseIt#5](../../../../samples/snippets/csharp/VS_Snippets_Wpf/ExpenseIt/CSharp/ExpenseIt/ExpenseReportPage.xaml.cs#5)]
     [!code-vb[ExpenseIt#5](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/ExpenseIt/VB/ExpenseIt1_A/ExpenseReportPage.xaml.vb#5)]  
   
-10. Projeye watermark.png adlı bir resim ekleyin. Kendi görüntünüzü oluşturabilir veya örnek koddan dosyasını kopyalayın. Daha fazla bilgi için bkz: [NIB: nasıl yapılır: varolan bir proje öğeleri Ekle](http://msdn.microsoft.com/library/15f4cfb7-78ab-457f-9f14-099a25a6a2d3). 
+10. Adlı bir resim ekleyin *watermark.png* projeye. Kendi görüntünüzü oluşturabilir veya örnek koddan dosyasını kopyalayın. Daha fazla bilgi için bkz: [nasıl yapılır: varolan bir proje öğeleri Ekle](/previous-versions/visualstudio/visual-studio-2008/9f4t9t92(v=vs.90)). 
 
 ## <a name="building-and-running-the-application"></a>Oluşturma ve uygulama çalıştırma  
- Bu bölümde, derleme ve uygulamayı çalıştırın. 
+Bu bölümde, derleme ve uygulamayı çalıştırın. 
   
-1. Derleme ve seçin veya F5 tuşuna basarak uygulamayı çalıştırma **hata ayıklamayı Başlat** gelen **hata ayıklama** menüsü. 
+1. Derleme ve F5 tuşuna basarak veya seçerek uygulamayı çalıştırma **hata ayıklamayı Başlat** gelen **hata ayıklama** menüsü. 
   
      Uygulamayla birlikte aşağıda gösterilmiştir <xref:System.Windows.Navigation.NavigationWindow> düğmeler. 
   
@@ -185,7 +187,7 @@ Visual Studio en son sürümünü yükleme hakkında daha fazla bilgi için bkz:
 2. Geri dönmek için uygulamayı kapatmak [!INCLUDE[vsprvs](../../../../includes/vsprvs-md.md)]. 
   
 ## <a name="creating-the-layout"></a>Düzen oluşturma  
- Düzen yerleştirmek için sıralı bir yol sağlar [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] öğeleri ve boyutunu ve konumunu bu öğelerin da yönetir, bir [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] boyutlandırılır. Genellikle bir düzen aşağıdaki düzen denetimlerinden biri ile oluşturursunuz:  
+Düzen yerleştirmek için sıralı bir yol sağlar [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] öğeleri ve boyutunu ve konumunu bu öğelerin da yönetir, bir [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] boyutlandırılır. Genellikle bir düzen aşağıdaki düzen denetimlerinden biri ile oluşturursunuz:  
   
 -   <xref:System.Windows.Controls.Canvas>  
   
@@ -199,12 +201,12 @@ Visual Studio en son sürümünü yükleme hakkında daha fazla bilgi için bkz:
   
 -   <xref:System.Windows.Controls.WrapPanel>  
   
- Bu düzen denetimlerinin her biri kendi alt öğeleri için özel türde bir düzen destekler. ExpenseIt sayfaları yeniden boyutlandırılabilir ve her sayfanın diğer öğeleri yatay ve dikey olarak düzenlenmiş öğesine sahip. Sonuç olarak, <xref:System.Windows.Controls.Grid> uygulama için ideal Düzen öğesidir. 
+Bu düzen denetimlerinin her biri kendi alt öğeleri için özel türde bir düzen destekler. ExpenseIt sayfaları yeniden boyutlandırılabilir ve her sayfanın diğer öğeleri yatay ve dikey olarak düzenlenmiş öğesine sahip. Sonuç olarak, <xref:System.Windows.Controls.Grid> uygulama için ideal Düzen öğesidir. 
   
 > [!NOTE]
 >  Hakkında daha fazla bilgi için <xref:System.Windows.Controls.Panel> öğeler, bkz [paneller genel bakış](../../../../docs/framework/wpf/controls/panels-overview.md). Düzen hakkında daha fazla bilgi için bkz: [düzeni](../../../../docs/framework/wpf/advanced/layout.md). 
   
- Bölümünde, tek sütunlu bir tablo üç satır ve 10 piksel kenar boşluğu ile sütun ve satır tanımları ekleyerek oluşturduğunuz <xref:System.Windows.Controls.Grid> ExpenseItHome.XAML içinde. 
+Bölümünde, tek sütunlu bir tablo üç satır ve 10 piksel kenar boşluğu ile sütun ve satır tanımları ekleyerek oluşturduğunuz <xref:System.Windows.Controls.Grid> ExpenseItHome.XAML içinde. 
   
 1. ExpenseItHome.xaml açın. 
   
@@ -221,17 +223,17 @@ Visual Studio en son sürümünü yükleme hakkında daha fazla bilgi için bkz:
     [!code-xaml[ExpenseIt#9](../../../../samples/snippets/csharp/VS_Snippets_Wpf/ExpenseIt/CSharp/ExpenseIt3/ExpenseItHome.xaml#9)]  
   
 ## <a name="adding-controls"></a>Denetimler ekleme  
- Bu bölümde, giriş sayfası [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] kişilerin listesi kullanıcıların seçili kişiler için harcama raporunu göstermek için gösterebileceği olduğunu göstermek üzere güncelleştirilir. Denetimler uygulamanız ile etkileşime girmesine izin veren UI nesneleridir. Daha fazla bilgi için bkz: [denetimleri](../../../../docs/framework/wpf/controls/index.md). 
+Bu bölümde, giriş sayfası [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] kişilerin listesi kullanıcıların seçili kişiler için harcama raporunu göstermek için gösterebileceği olduğunu göstermek üzere güncelleştirilir. Denetimler uygulamanız ile etkileşime girmesine izin veren UI nesneleridir. Daha fazla bilgi için bkz: [denetimleri](../../../../docs/framework/wpf/controls/index.md). 
   
- Bu oluşturmak için [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)], aşağıdaki öğeleri ExpenseItHome.xaml'e eklenir:  
+Bu oluşturmak için [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)], aşağıdaki öğeleri ExpenseItHome.xaml'e eklenir:  
   
--   <xref:System.Windows.Controls.ListBox>(listesi kişiler için). 
+-   <xref:System.Windows.Controls.ListBox> (listesi kişiler için). 
   
--   <xref:System.Windows.Controls.Label>(Liste üstbilgisi için). 
+-   <xref:System.Windows.Controls.Label> (Liste üstbilgisi için). 
   
--   <xref:System.Windows.Controls.Button>(listede seçilen kişi için harcama raporunu görüntülemek için tıklatın için). 
+-   <xref:System.Windows.Controls.Button> (listede seçilen kişi için harcama raporunu görüntülemek için tıklatın için). 
   
- Her denetim bir satırda yerleştirilir <xref:System.Windows.Controls.Grid> ayarlayarak <xref:System.Windows.Controls.Grid.Row%2A?displayProperty=nameWithType> özelliği eklenmiş. Ekli özellikler hakkında daha fazla bilgi için bkz: [bağlı özelliklerine genel bakış](../../../../docs/framework/wpf/advanced/attached-properties-overview.md). 
+Her denetim bir satırda yerleştirilir <xref:System.Windows.Controls.Grid> ayarlayarak <xref:System.Windows.Controls.Grid.Row%2A?displayProperty=nameWithType> özelliği eklenmiş. Ekli özellikler hakkında daha fazla bilgi için bkz: [bağlı özelliklerine genel bakış](../../../../docs/framework/wpf/advanced/attached-properties-overview.md). 
   
 1. ExpenseItHome.xaml açın. 
   
@@ -241,12 +243,12 @@ Visual Studio en son sürümünü yükleme hakkında daha fazla bilgi için bkz:
   
 3. Derleme ve uygulamayı çalıştırın. 
   
- Aşağıdaki çizim, bu bölümdeki XAML tarafından oluşturulan denetimleri göstermektedir. 
+Aşağıdaki çizim, bu bölümdeki XAML tarafından oluşturulan denetimleri göstermektedir. 
   
- ![ExpenseIt örnek ekran görüntüsü](../../../../docs/framework/wpf/getting-started/media/gettingstartedfigure2.png "GettingStartedFigure2")  
+![ExpenseIt örnek ekran görüntüsü](../../../../docs/framework/wpf/getting-started/media/gettingstartedfigure2.png "GettingStartedFigure2")  
   
 ## <a name="adding-an-image-and-a-title"></a>Görüntüyü ve başlık ekleme  
- Bu bölümde, giriş sayfası [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] resim ve sayfa başlığı ile güncelleştirilir. 
+Bu bölümde, giriş sayfası [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] resim ve sayfa başlığı ile güncelleştirilir. 
   
 1. ExpenseItHome.xaml açın. 
   
@@ -272,9 +274,9 @@ Visual Studio en son sürümünü yükleme hakkında daha fazla bilgi için bkz:
   
 7. Derleme ve uygulamayı çalıştırın. 
   
- Aşağıdaki çizimde, bu bölümde sonuçlarını gösterir. 
+Aşağıdaki çizimde, bu bölümde sonuçlarını gösterir. 
   
- ![ExpenseIt örnek ekran görüntüsü](../../../../docs/framework/wpf/getting-started/media/gettingstartedfigure3.png "GettingStartedFigure3")  
+![ExpenseIt örnek ekran görüntüsü](../../../../docs/framework/wpf/getting-started/media/gettingstartedfigure3.png "GettingStartedFigure3")  
   
 ## <a name="adding-code-to-handle-events"></a>Olayları işlemek için kod ekleme  
   
@@ -292,7 +294,7 @@ Visual Studio en son sürümünü yükleme hakkında daha fazla bilgi için bkz:
     [!code-vb[ExpenseIt#16](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/ExpenseIt/VB/ExpenseIt6/ExpenseItHome.xaml.vb#16)]  
   
 ## <a name="creating-the-ui-for-expensereportpage"></a>ExpenseReportPage için kullanıcı Arabirimi oluşturma  
- ExpenseReportPage.xaml, ExpenseItHome.XAML üzerinde seçili kişi için harcama raporunu görüntüler. Bu bölümde denetimleri ekler ve oluşturur [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] ExpenseReportPage.xaml için. Bu bölümde Ayrıca arka plan ve dolgu renklerini çeşitli ekler [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] öğeleri. 
+ExpenseReportPage.xaml, ExpenseItHome.XAML üzerinde seçili kişi için harcama raporunu görüntüler. Bu bölümde denetimleri ekler ve oluşturur [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] ExpenseReportPage.xaml için. Bu bölümde Ayrıca arka plan ve dolgu renklerini çeşitli ekler [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] öğeleri. 
   
 1. ExpenseReportPage.xaml açın. 
   
@@ -311,12 +313,12 @@ Visual Studio en son sürümünü yükleme hakkında daha fazla bilgi için bkz:
   
      Harcama Raporu sayfası görüntülenir. 
   
- Aşağıdaki çizimde gösterildiği [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] ExpenseReportPage.xaml'e eklenen öğeleri. Geri gezinti düğmesi etkinleştirilir dikkat edin. 
+Aşağıdaki çizimde gösterildiği [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] ExpenseReportPage.xaml'e eklenen öğeleri. Geri gezinti düğmesi etkinleştirilir dikkat edin. 
   
- ![ExpenseIt örnek ekran görüntüsü](../../../../docs/framework/wpf/getting-started/media/gettingstartedfigure4.png "GettingStartedFigure4")  
+![ExpenseIt örnek ekran görüntüsü](../../../../docs/framework/wpf/getting-started/media/gettingstartedfigure4.png "GettingStartedFigure4")  
   
 ## <a name="styling-controls"></a>Stil denetimleri  
- Çeşitli öğelerin görünümü genellikle içindeki aynı türden tüm öğeler için aynı olabilir bir [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)]. [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)]görünümlerin çoklu öğeler arasında yeniden kullanılabilir olması için stilleri kullanır. Kullanılırlığı yardımcı basitleştirmek için [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] oluşturma ve yönetme. Stilleri hakkında daha fazla bilgi için bkz: [stil ve şablon](../../../../docs/framework/wpf/controls/styling-and-templating.md). Bu bölümde stilleri önceki adımlarda tanımlanan öğesi başına özniteliklerini değiştirir. 
+Çeşitli öğelerin görünümü genellikle içindeki aynı türden tüm öğeler için aynı olabilir bir [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)]. [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] görünümlerin çoklu öğeler arasında yeniden kullanılabilir olması için stilleri kullanır. Kullanılırlığı yardımcı basitleştirmek için [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] oluşturma ve yönetme. Stilleri hakkında daha fazla bilgi için bkz: [stil ve şablon](../../../../docs/framework/wpf/controls/styling-and-templating.md). Bu bölümde stilleri önceki adımlarda tanımlanan öğesi başına özniteliklerini değiştirir. 
   
 1. Application.XAML veya App.xaml açın. 
   
@@ -361,7 +363,7 @@ Visual Studio en son sürümünü yükleme hakkında daha fazla bilgi için bkz:
      Ekledikten sonra [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] stilleri ile güncelleştirilmiş önce yaptığınız gibi bu bölümde, uygulama aynı arar. 
   
 ## <a name="binding-data-to-a-control"></a>Denetimine veri bağlama  
- Bu bölümde, oluşturduğunuz [!INCLUDE[TLA#tla_xml](../../../../includes/tlasharptla-xml-md.md)] çeşitli denetimlere bağlı veri. 
+Bu bölümde, oluşturduğunuz [!INCLUDE[TLA#tla_xml](../../../../includes/tlasharptla-xml-md.md)] çeşitli denetimlere bağlı veri. 
   
 1. ExpenseItHome.xaml açın. 
   
@@ -386,7 +388,7 @@ Visual Studio en son sürümünü yükleme hakkında daha fazla bilgi için bkz:
      Bu XAML bağlar <xref:System.Windows.Controls.ItemsControl.ItemsSource%2A> özelliği <xref:System.Windows.Controls.ListBox> veri kaynağı ve veri şablon olarak geçerlidir <xref:System.Windows.Controls.ItemsControl.ItemTemplate%2A>. 
   
 ## <a name="connecting-data-to-controls"></a>Verileri denetimlere bağlama  
- Bu bölümde, ExpenseItHome.xaml sayfası üzerindeki kişiler listesinde seçili ve onun oluşturucusunun referansı aktaran güncel öğeyi alan kodu yazma `ExpenseReportPage` örnek oluşturma sırasında. `ExpenseReportPage`hangi denetimlerin ExpenseReportPage.xaml içinde tanımlı olan geçirilen öğe ile veri bağlamını ayarlar bağlayacaksınız. 
+Bu bölümde, ExpenseItHome.xaml sayfası üzerindeki kişiler listesinde seçili ve onun oluşturucusunun referansı aktaran güncel öğeyi alan kodu yazma `ExpenseReportPage` örnek oluşturma sırasında. `ExpenseReportPage` hangi denetimlerin ExpenseReportPage.xaml içinde tanımlı olan geçirilen öğe ile veri bağlamını ayarlar bağlayacaksınız. 
   
 1. ExpenseReportPage.xaml.vb veya ExpenseReportPage.xaml.cs açın. 
   
@@ -403,7 +405,7 @@ Visual Studio en son sürümünü yükleme hakkında daha fazla bilgi için bkz:
     [!code-vb[ExpenseIt#27](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/ExpenseIt/VB/ExpenseIt8/ExpenseItHome.xaml.vb#27)]  
   
 ## <a name="styling-data-with-data-templates"></a>Veri şablonları ile stil verileri  
- Bu bölümde, güncelleştirme [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] veri şablonlarını kullanarak verileri her öğe listelerini bağlı için. 
+Bu bölümde, güncelleştirme [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] veri şablonlarını kullanarak verileri her öğe listelerini bağlı için. 
   
 1. ExpenseReportPage.xaml açın. 
   
@@ -426,8 +428,8 @@ Visual Studio en son sürümünü yükleme hakkında daha fazla bilgi için bkz:
   
  ![ExpenseIt örnek ekran görüntüleri](../../../../docs/framework/wpf/getting-started/media/gettingstartedfigure5.png "GettingStartedFigure5")  
   
-## <a name="best-practices"></a>Önerilen uygulamalar  
- Bu örnek, belirli bir WPF özelliğini gösterir ve sonuç olarak, uygulama geliştirme en iyi yöntemler izlemez. Kapsamlı için [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] ve [!INCLUDE[TLA2#tla_winfx](../../../../includes/tla2sharptla-winfx-md.md)] uygulama geliştirme en iyi yöntemler, aşağıdaki konulara uygun şekilde bakın:  
+## <a name="best-practices"></a>En iyi yöntemler  
+Bu örnek, belirli bir WPF özelliğini gösterir ve sonuç olarak, uygulama geliştirme en iyi yöntemler izlemez. Kapsamlı için [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] ve [!INCLUDE[TLA2#tla_winfx](../../../../includes/tla2sharptla-winfx-md.md)] uygulama geliştirme en iyi yöntemler, aşağıdaki konulara uygun şekilde bakın:  
   
 -   Erişilebilirlik - [en iyi erişilebilirlik uygulamaları](../../../../docs/framework/ui-automation/accessibility-best-practices.md)  
   
@@ -438,7 +440,7 @@ Visual Studio en son sürümünü yükleme hakkında daha fazla bilgi için bkz:
 -   Performans - [WPF Uygulama performansı en iyi duruma getirme](../../../../docs/framework/wpf/advanced/optimizing-wpf-application-performance.md)  
   
 ## <a name="whats-next"></a>Sırada ne var?  
- Şimdi oluşturmak için elden en çeşitli teknikler sahip bir [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] kullanarak [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]. Veri bağlama temel yapı taşlarını geniş bir anlayış şimdi olmalıdır [!INCLUDE[TLA2#tla_winfx](../../../../includes/tla2sharptla-winfx-md.md)] uygulama. Bu konuda halinde kapsamlı, ancak ayrıca artık umarız bazı bu konudaki teknikleri ötesinde kendi keşfedebilirsiniz olasılıklar duygusu vardır. 
+Şimdi oluşturmak için elden en çeşitli teknikler sahip bir [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] kullanarak [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]. Veri bağlama temel yapı taşlarını geniş bir anlayış şimdi olmalıdır [!INCLUDE[TLA2#tla_winfx](../../../../includes/tla2sharptla-winfx-md.md)] uygulama. Bu konuda halinde kapsamlı, ancak ayrıca artık umarız bazı bu konudaki teknikleri ötesinde kendi keşfedebilirsiniz olasılıklar duygusu vardır. 
   
  WPF mimarisi ve programlama modelleri hakkında daha fazla bilgi için aşağıdaki konulara bakın:  
   

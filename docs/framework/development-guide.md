@@ -1,28 +1,28 @@
 ---
-title: ".NET Framework Geliştirme Kılavuzu"
-ms.custom: 
+title: .NET Framework Geliştirme Kılavuzu
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - dotnet-clr
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - .NET Framework, development guide
 ms.assetid: 26e3d285-24c3-435c-a797-9fe5affb8525
-caps.latest.revision: 
+caps.latest.revision: 13
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: 5d7950ae39ada3e1e0e070967f8d578fc3371126
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.openlocfilehash: 3432ac629a6c754cf7f863b6444dc81b6f9919ef
+ms.sourcegitcommit: 9a4fe1a1c37b26532654b4bbe22d702237950009
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="net-framework-development-guide"></a>.NET Framework Geliştirme Kılavuzu
 Bu bölümde, oluşturmak, yapılandırmak, hata ayıklama, güvenli ve .NET Framework uygulamalarınızı dağıtma açıklanmaktadır. Ayrıca bu bölüm dinamik programlama, birlikte çalışabilirlik, genişletilebilirlik, bellek yönetimi ve iş parçacığı oluşturma gibi teknoloji alanları hakkında bilgi sağlar.  
@@ -49,7 +49,7 @@ Bu bölümde, oluşturmak, yapılandırmak, hata ayıklama, güvenli ve .NET Fra
  [Windows Hizmeti Uygulamaları](../../docs/framework/windows-services/index.md)  
  Bir hizmet ve başlangıç, durdurmak ve aksi takdirde davranışını denetlemek yüklediğiniz bir uygulama oluşturmak için Visual Studio ve .NET Framework nasıl kullanabileceğini açıklar.  
   
- [Paralel İşleme ve Eşzamanlılık](../../docs/standard/parallel-processing-and-concurrency.md)  
+ [Paralel işlem, eşzamanlılık ve .NET içinde zaman uyumsuz programlama](../../docs/standard/parallel-processing-and-concurrency.md)  
  Yönetilen iş parçacığı oluşturma, paralel programlama ve zaman uyumsuz programlama tasarım desenleri hakkında bilgi sağlar.  
   
  [.NET Framework'te Ağ Programlaması](../../docs/framework/network-programming/index.md)  
@@ -59,7 +59,7 @@ Bu bölümde, oluşturmak, yapılandırmak, hata ayıklama, güvenli ve .NET Fra
  .NET Framework uygulamalarınızı yeniden derlemenize gerek kalmadan ayarlarını değiştirmek için yapılandırma dosyalarını nasıl kullanabileceğiniz açıklanır.  
   
  [.NET Native ile Uygulama Derleme](../../docs/framework/net-native/index.md)  
- Nasıl kullanabileceğinizi açıklar [!INCLUDE[net_native](../../includes/net-native-md.md)] geliştirmek ve Windows mağazası uygulamaları dağıtmak için ön derleme teknolojisi. [!INCLUDE[net_native](../../includes/net-native-md.md)]Yönetilen kodda (C#) yazılmıştır ve .NET Framework yerel koda hedef uygulamaları derler.  
+ Nasıl kullanabileceğinizi açıklar [!INCLUDE[net_native](../../includes/net-native-md.md)] geliştirmek ve Windows mağazası uygulamaları dağıtmak için ön derleme teknolojisi. [!INCLUDE[net_native](../../includes/net-native-md.md)] Yönetilen kodda (C#) yazılmıştır ve .NET Framework yerel koda hedef uygulamaları derler.  
   
  [Güvenlik](../../docs/standard/security/index.md)  
  Sınıfları ve .NET Framework'teki güvenli uygulama geliştirmeyi kolaylaştıran hizmetler hakkında bilgi sağlar.  

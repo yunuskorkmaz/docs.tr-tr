@@ -1,7 +1,7 @@
 ---
-title: "Eğitmen: Tür Sağlayıcısı Oluşturma (F#)"
+title: 'Eğitmen: tür sağlayıcısı (F #) oluşturma'
 description: "Temel kavramları göstermek için birkaç basit tür sağlayıcıları inceleyerek F # 3. 0'da kendi F # tür sağlayıcıları oluşturmayı öğrenin."
-keywords: "Visual f #, f # işlevsel programlama"
+keywords: 'Visual f #, f # işlevsel programlama'
 author: cartermp
 ms.author: phcart
 ms.date: 05/16/2016
@@ -10,13 +10,13 @@ ms.prod: .net
 ms.technology: devlang-fsharp
 ms.devlang: fsharp
 ms.assetid: 82bec076-19d4-470c-979f-6c3a14b7c70a
-ms.openlocfilehash: 30d1c20d66fd0a193c05c97ee726a886f98356ad
-ms.sourcegitcommit: 1c0b0f082b3f300e54b4d069b317ac724c88ddc3
+ms.openlocfilehash: b2e83218184bd1aef8258378485b99697cc8cf8d
+ms.sourcegitcommit: 9a4fe1a1c37b26532654b4bbe22d702237950009
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/16/2018
+ms.lasthandoff: 04/16/2018
 ---
-# <a name="tutorial-creating-a-type-provider"></a>Eğitmen: tür sağlayıcısı oluşturma
+# <a name="tutorial-create-a-type-provider"></a>Eğitmen: tür sağlayıcısı oluşturma
 
 Türü sağlayıcısı F # kendi bilgi zengin programlama desteği için önemli bir bölümü mekanizmadır. Bu öğretici, temel kavramları göstermek için birkaç basit tür sağlayıcıları geliştirme adım adım ilerlemenizi sağlayarak kendi tür sağlayıcıları oluşturma açıklanmaktadır. F # tür sağlayıcısı mekanizması hakkında daha fazla bilgi için bkz: [tür sağlayıcıları](index.md).
 
@@ -1147,7 +1147,7 @@ Tür sağlayıcıları aşağıdaki araçları kullanarak çağırabilirsiniz:
 
 - fsi.exe (F # Etkileşimli derleyicisi)
 
-- devenv.exe (Visual Studio)
+- Devenv.exe (Visual Studio)
 
 Tür sağlayıcıları test betiği (örneğin, script.fsx) üzerinde fsc.exe kullanarak, en kolay genellikle ayıklayabilirsiniz. Hata ayıklayıcı komut isteminden başlatabilirsiniz.
 
@@ -1158,7 +1158,7 @@ Tür sağlayıcıları test betiği (örneğin, script.fsx) üzerinde fsc.exe ku
   Yazdırma stdout günlüğünü kullanabilirsiniz.
 
 
-## <a name="see-also"></a>Ayrıca Bkz.
+## <a name="see-also"></a>Ayrıca bkz.
 
 * [Tür Sağlayıcıları](index.md)
 

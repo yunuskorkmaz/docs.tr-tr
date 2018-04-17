@@ -1,6 +1,6 @@
 ---
-title: "ASP.NET Core MVC uygulamaları geliştirme"
-description: "ASP.NET Core ve Azure ile modern Web uygulamaları mimari | ASP.NET Core MVC uygulamaları geliştirme"
+title: ASP.NET Core MVC uygulamaları geliştirme
+description: ASP.NET Core ve Azure ile modern Web uygulamaları mimari | ASP.NET Core MVC uygulamaları geliştirme
 author: ardalis
 ms.author: wiwagn
 ms.date: 10/07/2017
@@ -9,11 +9,11 @@ ms.technology: dotnet-docker
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: c10bf66dd37f0d99c038db7f95999d84986152fa
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: 230deb3869887fbcdd07e748d30601f19ec2be2a
+ms.sourcegitcommit: 9a4fe1a1c37b26532654b4bbe22d702237950009
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="develop-aspnet-core-mvc-apps"></a>ASP.NET Core MVC uygulamaları geliştirme
 
@@ -77,7 +77,7 @@ ASP.NET Core MVC Web API'leri destekleyen [ *içerik anlaşması*](https://docs.
 > - **Model bağlama** https://docs.microsoft.com/aspnet/core/mvc/models/model-binding
 > - **Model doğrulama**
 > <https://docs.microsoft.com/aspnet/core/mvc/models/validation>
-> - **Filtreler** https://docs.microsoft.com/aspnet/core/mvc/controllers/filters
+> - **filtreleri** https://docs.microsoft.com/aspnet/core/mvc/controllers/filters
 
 ## <a name="working-with-dependencies"></a>Bağımlılıkları ile çalışma
 
@@ -294,7 +294,7 @@ Daha fazla bilgiyi filtreleri uygulama ve çalışma örnek MSDN makalesinden in
 
 Web uygulamalarının güvenliğini sağlama birçok göz önünde büyük bir konu ile ilgilidir. En temel düzeyde, belirtilen bir isteğin geldiği ve bu isteği yalnızca gerektiği kaynaklara erişimi olduğundan emin olduktan bildiğiniz sağlayarak güvenlik içerir. Kimlik doğrulama isteği bilinen bir varlıktan geliyormuş gibi değerlendirilip değerlendirilmeyeceğini görmek için bir istek bu güvenilir veri deposunda ile sağlanan kimlik bilgileri karşılaştırma işlemidir. Yetkilendirme kullanıcı kimliğine göre belirli kaynaklara erişimi kısıtlama işlemidir. Üçüncü güvenlik sorunu istekleri için size gereken en az üçüncü taraflar tarafından gizli dinleme koruma [SSL, uygulamanız tarafından kullanıldığından emin olun](https://docs.microsoft.com/aspnet/core/security/enforcing-ssl).
 
-### <a name="authentication"></a>Kimlik doğrulaması
+### <a name="authentication"></a>Kimlik Doğrulama
 
 ASP.NET Core, uygulamanız için oturum açma işlevleri desteklemek için kullanabileceğiniz bir üyelik sistemi kimliğidir. Yerel kullanıcı hesapları için destek ve aynı zamanda Microsoft Account, Twitter, Facebook, Google ve daha fazlası gibi sağlayıcılarından dış oturum açma sağlayıcısı destek vardır. ASP.NET Core kimliği ek olarak, windows kimlik doğrulaması, uygulamanızın kullanabilir veya bir üçüncü taraf kimlik sağlayıcısı ister [kimlik sunucusunu](https://github.com/IdentityServer/IdentityServer4).
 
@@ -400,7 +400,7 @@ Bu ilke ile sonra kullanılabilir \[Authorize\] herhangi bir denetleyici ve/veya
 
 ## <a name="client-communication"></a>İstemci iletişimi
 
-Sayfalarını sunmadan ve web API'leri aracılığıyla veri isteklerine yanıt ek olarak, ASP.NET Core uygulamaları doğrudan bağlı istemcileri ile iletişim kurabilir. Bu giden iletişim çeşitli aktarım teknolojiler, en yaygın olma WebSockets kullanabilirsiniz. ASP.NET Core SignalR, uygulamalarınıza gerçek zamanlı sunucu istemci iletişimi işlevselliği türdeki basit sağlayan bir kitaplıktır. SignalR WebSockets, aktarım teknolojilerini çeşitli destekler ve geliştirici uygulama ayrıntılarından, dışarıda çok soyutlar.
+Sayfalarını sunmadan ve web API'leri aracılığıyla veri isteklerine yanıt ek olarak, ASP.NET Core uygulamaları doğrudan bağlı istemcileri ile iletişim kurabilir. Bu giden iletişim çeşitli aktarım teknolojiler, en yaygın olma WebSockets kullanabilirsiniz. ASP.NET Core SignalR, uygulamalarınıza gerçek zamanlı sunucu istemci iletişimi işlevselliği eklemek kolaylaştırır bir kitaplıktır. SignalR WebSockets, aktarım teknolojilerini çeşitli destekler ve geliştirici uygulama ayrıntılarından, dışarıda çok soyutlar.
 
 ASP.NET Core SignalR şu anda geliştirilmekte ve ASP.NET Core sonraki sürümde kullanılabilir olacaktır. Ancak, diğer [kaynak WebSockets kitaplıkları açmak](https://github.com/radu-matei/websocket-manager) şu anda kullanılabilir.
 

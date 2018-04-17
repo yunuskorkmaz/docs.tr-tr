@@ -1,18 +1,18 @@
 ---
 title: Üretim ortamlarında oluşan ve mikro tabanlı uygulamaları çalıştırma
 description: Microsoft Platformu ve araçları ile kapsayıcılı Docker uygulama yaşam döngüsü
-keywords: Docker, Microservices, ASP.NET, Container
+ms.prod: .net
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 09/22/2017
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: 0d7611d07c9995984269e3f7b071154d9b861367
-ms.sourcegitcommit: c883637b41ee028786edceece4fa872939d2e64c
+ms.openlocfilehash: 596ca1557d67de1f91e9431fa9b31b31ae162266
+ms.sourcegitcommit: 9a4fe1a1c37b26532654b4bbe22d702237950009
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/26/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="run-composed-and-microservices-based-applications-in-production-environments"></a>Üretim ortamlarında oluşan ve mikro tabanlı uygulamaları çalıştırma
 

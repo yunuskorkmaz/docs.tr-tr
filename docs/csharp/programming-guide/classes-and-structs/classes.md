@@ -1,57 +1,88 @@
 ---
-title: "Sınıflar (C# Programlama Kılavuzu)"
-ms.date: 07/20/2015
+title: Sınıflar (C# Programlama Kılavuzu)
+description: Sınıf türleri ve bunların nasıl oluşturulacağı hakkında bilgi edinin
+ms.date: 04/05/2018
 ms.prod: .net
-ms.technology: devlang-csharp
+ms.technology:
+- devlang-csharp
 ms.topic: article
 helpviewer_keywords:
 - classes [C#]
 - C# language, classes
 ms.assetid: e8848524-7273-429f-8aba-c658d5eff5ad
-caps.latest.revision: "40"
+caps.latest.revision: 40
 author: BillWagner
 ms.author: wiwagn
-ms.openlocfilehash: 37e810fc5a5397a6b9240346ac28505b11b1e817
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 1909623d3d8f6110a5fb466575bdab2d45495c2a
+ms.sourcegitcommit: 9a4fe1a1c37b26532654b4bbe22d702237950009
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="classes-c-programming-guide"></a>Sınıflar (C# Programlama Kılavuzu)
-A *sınıfı* değişkenleri diğer türleri, yöntemleri ve olayları bir arada gruplandırma tarafından kendi özel türler oluşturmanızı sağlayan bir yapıdır. Şeması gibi bir sınıftır. Veri ve türü davranışını tanımlar. Sınıf static olarak bildirilmedi, istemci kodu oluşturarak kullanabilmesi *nesneleri* veya *örnekleri* bir değişkene atanır. Değişken kapsamı dışında tüm başvuruları oluncaya kadar bellekte kalır. O anda CLR, atık toplama için uygun olarak işaretler. Sınıf olarak bildirilirse [statik](../../../csharp/language-reference/keywords/static.md), ardından bellekte yalnızca bir kopya var ve istemci kodu yalnızca erişebileceği sınıfın kendisi değil bir *örnek değişkeni*. Daha fazla bilgi için bkz: [statik sınıflar ve statik sınıf üyeleri](../../../csharp/programming-guide/classes-and-structs/static-classes-and-static-class-members.md).  
-  
- Yapılar, destek sınıfları *devralma*, nesne odaklı programlama temel bir özelliğidir. Daha fazla bilgi için bkz: [devralma](../../../csharp/programming-guide/classes-and-structs/inheritance.md).  
+A *sınıfı* değişkenleri diğer türleri, yöntemleri ve olayları bir arada gruplandırma tarafından kendi özel türler oluşturmanızı sağlayan bir yapıdır. Şeması gibi bir sınıftır. Veri ve türü davranışını tanımlar. Sınıf static olarak bildirilmedi, istemci kodu oluşturabilirsiniz *örnekleri* bunu. Bu örnekleri *nesneleri* bir değişkene atanır. Bir sınıf örneği kapsamının dışında tüm başvuruları oluncaya kadar bellekte kalır. O anda CLR, atık toplama için uygun olarak işaretler. Sınıf olarak bildirilirse [statik](../../../csharp/language-reference/keywords/static.md)örnekleri oluşturulamıyor ve istemci kodu yalnızca erişebileceği sınıfı aracılığıyla. Daha fazla bilgi için bkz: [statik sınıflar ve statik sınıf üyeleri](../../../csharp/programming-guide/classes-and-structs/static-classes-and-static-class-members.md).  
+
+## <a name="reference-types"></a>Başvuru türleri  
+Olarak tanımlanan bir tür bir [sınıfı](../../../csharp/language-reference/keywords/class.md) olan bir *başvuru türüne*. Ne zaman bildirdiğiniz başvuru türünde bir değişken, çalışma zamanında değişken değeri içeren [null](../../../csharp/language-reference/keywords/null.md) açıkça sınıfının bir örneğini kullanarak oluşturduğunuz kadar [yeni](../../../csharp/language-reference/keywords/new.md) işleci, veya bir nesne atama, başka bir yerde, aşağıdaki örnekte gösterildiği gibi oluşturuldu:
+
+```csharp
+MyClass mc = new MyClass();
+MyClass mc2 = mc;
+```
+
+Nesne oluşturulduğunda, bellek yönetilen yığında ayrılan ve yalnızca bir nesnenin konumunu başvuru değişkeni içerir. Yönetilen yığın türlerinde gerektiren ek yükü bunlar ayırırken hem olarak adlandırılıyor CLR otomatik bellek yönetimi işlevselliğini tarafından talep edilen zaman *çöp toplama*. Ancak, atık toplama ayrıca getirilmiş ve çoğu senaryoda, bir performans sorunu oluşturmaz. Çöp toplama hakkında daha fazla bilgi için bkz: [otomatik bellek yönetimi ve çöp toplama](../../../standard/garbage-collection/gc.md).  
   
 ## <a name="declaring-classes"></a>Sınıfları Bildirme  
- Sınıfları kullanarak bildirildiğinde [sınıfı](../../../csharp/language-reference/keywords/class.md) anahtar sözcüğü, aşağıdaki örnekte gösterildiği gibi:  
-  
- [!code-csharp[csProgGuideObjects#79](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/classes_1.cs)]  
-  
- `class` Anahtar sözcüğü erişim düzeyi tarafından öncesinde. Çünkü [ortak](../../../csharp/language-reference/keywords/public.md) kullanılan herkes bu sınıftan nesneleri bu durumda, oluşturabilirsiniz. Sınıf adı `class` anahtar sözcüğü. Davranış ve veri tanımlandığı sınıf gövdesi tanımı kalanı var. Alanlar, özellikleri, yöntemleri ve bir sınıf olaylarına topluca denir *sınıfı üyeleri*.  
+ Sınıfları kullanarak bildirildiğinde [sınıfı](../../../csharp/language-reference/keywords/class.md) anahtar sözcüğü, aşağıdaki örnekte gösterildiği gibi:
+
+ ```csharp
+ public class Customer
+ {
+    // Fields, properties, methods and events go here...
+ }
+```
+
+ `class` Anahtar sözcüğü erişim düzeyi tarafından öncesinde. Çünkü [ortak](../../../csharp/language-reference/keywords/public.md) kullanılan herkes bu sınıfın örnekleri, bu durumda, oluşturabilirsiniz. Sınıf adı `class` anahtar sözcüğü. Davranış ve veri tanımlandığı sınıf gövdesi tanımı kalanı var. Alanlar, özellikleri, yöntemleri ve bir sınıf olaylarına topluca denir *sınıfı üyeleri*.  
   
 ## <a name="creating-objects"></a>Nesne Oluşturma  
  Bazen birbirinin yerine kullanıldığı rağmen sınıf ve nesne farklı noktalardır. Bir sınıf nesne türünü tanımlar, ancak bir nesne değil. Bir nesne sınıfına göre somut bir varlık ve bazen sınıfının bir örneği da adlandırılır.  
   
  Nesneleri kullanarak oluşturulabilir [yeni](../../../csharp/language-reference/keywords/new.md) nesne, temel sınıfın adını ve ardından anahtar sözcüğü şöyle:  
-  
- [!code-csharp[csProgGuideObjects#80](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/classes_2.cs)]  
+
+ ```csharp
+ Customer object1 = new Customer();
+ ```
   
  Sınıfının bir örneği oluşturulduğunda, nesneye bir başvurusu Programcı geri gönderilir. Önceki örnekte, `object1` temel alan bir nesneye bir başvurusu olan `Customer`. Bu başvuru, yeni bir nesneye başvuruyor ancak nesne verileri içermiyor. Aslında, bir nesne başvurusu bir nesnenin oluşturmadan oluşturabilirsiniz:  
   
- [!code-csharp[csProgGuideObjects#81](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/classes_3.cs)]  
+  ```csharp
+  Customer object2;
+  ```
   
  Böyle bir başvuru bir nesneye erişilmeye çalışılırken çalışma zamanında başarısız olacağı için bir nesneye başvuran yok nesne başvuruları bunun gibi oluşturmanızı öneririz yok. Ancak, böyle bir başvuru bir nesne, yeni bir nesne oluşturma veya bu gibi varolan bir nesne atama başvurmak için yapılabilir:  
-  
- [!code-csharp[csProgGuideObjects#82](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/classes_4.cs)]  
+
+ ```csharp
+ Customer object3 = new Customer();
+ Customer object4 = object3;
+ ```
   
  Bu kod iki nesne başvuruları oluşturan her ikisi de aynı nesneye başvuruyor. Bu nedenle, herhangi bir değişiklik üzerinden yapılan nesne `object3` içinde sonraki kullanımlarını yansıtılır `object4`. Sınıflara göre nesneleri başvuruya göre adlandırılır çünkü sınıfları başvuru türleri olarak bilinir.  
   
 ## <a name="class-inheritance"></a>Sınıf Devralma  
+
+ Sınıfları tam destek *devralma*, nesne odaklı programlama temel bir özelliğidir. Bir sınıf oluşturduğunuzda, herhangi bir arabirim veya olarak tanımlanmamış sınıfı devralabilirsiniz [korumalı](../../../csharp/language-reference/keywords/sealed.md), ve diğer sınıflar, sınıfından devralınır ve sınıf sanal yöntemlerini geçersiz kılar.
+
  Devralma kullanarak gerçekleştirilir bir *türetme*, bir sınıfın başka bir deyişle, kullanarak bildirilmiş bir *temel sınıfı* aldığı veri ve davranış devralır. Bir taban sınıf, bir iki nokta üst üste ve bu gibi türetilmiş sınıf adı şu temel sınıfın adını ekleyerek belirtilmiştir:  
+
+ ```csharp
+ public class Manager : Employee
+ {
+     // Employee fields, properties, methods and events are inherited
+     // New Manager fields, properties, methods and events go here...
+ }
+ ```
   
- [!code-csharp[csProgGuideObjects#83](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/classes_5.cs)]  
-  
- Bir sınıf bir taban sınıf bildirir, Oluşturucular dışında temel sınıfın tüm üyeleri devralır.  
+ Bir sınıf bir taban sınıf bildirir, Oluşturucular dışında temel sınıfın tüm üyeleri devralır. Daha fazla bilgi için bkz: [devralma](../../../csharp/programming-guide/classes-and-structs/inheritance.md).
   
  C++ C# sınıfı yalnızca doğrudan bir temel sınıfı devralabilirsiniz. Ancak, bir temel sınıf kendisini başka bir sınıftan çünkü bir sınıfın birden çok taban sınıfı devralır dolaylı olarak. Ayrıca, bir sınıfın doğrudan birden fazla arabirimi uygulayabilirsiniz. Daha fazla bilgi için bkz: [arabirimleri](../../../csharp/programming-guide/interfaces/index.md).  
   
@@ -63,17 +94,17 @@ A *sınıfı* değişkenleri diğer türleri, yöntemleri ve olayları bir arada
  Aşağıdaki örnekte, tek bir alan, bir yöntem ve bir oluşturucu adlı özel bir yöntem içeren ortak bir sınıf tanımlanır. Daha fazla bilgi için bkz: [oluşturucular](../../../csharp/programming-guide/classes-and-structs/constructors.md). Sınıfının sonra ile örneği `new` anahtar sözcüğü.  
   
 ## <a name="example"></a>Örnek  
- [!code-csharp[csProgGuideObjects#84](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/classes_6.cs)]  
+ [!code-csharp[Class Example](~/samples/snippets/csharp/programming-guide/classes-and-structs/class-example.cs)] 
   
 ## <a name="c-language-specification"></a>C# Dil Belirtimi  
  [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- [C# programlama kılavuzu](../../../csharp/programming-guide/index.md)  
- [Nesne odaklı programlama](../concepts/object-oriented-programming.md)  
+## <a name="see-also"></a>Ayrıca bkz.  
+ [C# Programlama Kılavuzu](../../../csharp/programming-guide/index.md)  
+ [Nesne Odaklı Programlama](../concepts/object-oriented-programming.md)  
  [Çok biçimlilik](../../../csharp/programming-guide/classes-and-structs/polymorphism.md)  
- [Üyeleri](../../../csharp/programming-guide/classes-and-structs/members.md)  
- [Yöntemleri](../../../csharp/programming-guide/classes-and-structs/methods.md)  
+ [Üyeler](../../../csharp/programming-guide/classes-and-structs/members.md)  
+ [Yöntemler](../../../csharp/programming-guide/classes-and-structs/methods.md)  
  [Oluşturucular](../../../csharp/programming-guide/classes-and-structs/constructors.md)  
  [Sonlandırıcılar](../../../csharp/programming-guide/classes-and-structs/destructors.md)  
- [Nesneleri](../../../csharp/programming-guide/classes-and-structs/objects.md)
+ [Nesneler](../../../csharp/programming-guide/classes-and-structs/objects.md)

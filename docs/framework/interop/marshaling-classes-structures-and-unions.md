@@ -1,12 +1,9 @@
 ---
-title: "Sınıflar, Yapılar ve Birleşimleri Hazırlama"
-ms.custom: 
+title: Sınıflar, Yapılar ve Birleşimleri Hazırlama
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.technology:
+- dotnet-clr
 ms.topic: article
 dev_langs:
 - csharp
@@ -25,16 +22,16 @@ helpviewer_keywords:
 - data marshaling, platform invoke
 - marshaling, platform invoke
 ms.assetid: 027832a2-9b43-4fd9-9b45-7f4196261a4e
-caps.latest.revision: "10"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 6fb682d898de8cb6bc166426c3a1accbda452c83
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.workload:
+- dotnet
+ms.openlocfilehash: cc7141bb8fce5d5e1c2420a48d6081fa89aa0d53
+ms.sourcegitcommit: 9a4fe1a1c37b26532654b4bbe22d702237950009
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="marshaling-classes-structures-and-unions"></a>Sınıflar, Yapılar ve Birleşimleri Hazırlama
 .NET Framework sınıfları ve yapıları benzerdir. Her ikisi de alanları, özellikleri ve olayları olabilir. Ayrıca statik ve statik olmayan yöntemleri sahip olabilir. Bir dikkat çekici fark yapıları değer türleri ve başvuru türleri sınıflardır olduğundan ' dir.  
@@ -77,7 +74,7 @@ ms.lasthandoff: 01/19/2018
     void TestArrayInStruct( MYARRAYSTRUCT* pStruct );  
     ```  
   
- [PinvokeLib.dll](http://msdn.microsoft.com/library/5d1438d7-9946-489d-8ede-6c694a08f614) uygulamalar için daha önce listelenen işlevleri ve dört yapıları içeren özel bir yönetilmeyen kitaplığıdır: **MYPERSON**, **MYPERSON2**,  **MYPERSON3**, ve **MYARRAYSTRUCT**. Bu yapıları aşağıdaki öğeleri içerir:  
+ [PinvokeLib.dll](https://msdn.microsoft.com/library/5d1438d7-9946-489d-8ede-6c694a08f614(v=vs.100)) uygulamalar için daha önce listelenen işlevleri ve dört yapıları içeren özel bir yönetilmeyen kitaplığıdır: **MYPERSON**, **MYPERSON2**,  **MYPERSON3**, ve **MYARRAYSTRUCT**. Bu yapıları aşağıdaki öğeleri içerir:  
   
 ```  
 typedef struct _MYPERSON  
@@ -107,23 +104,23 @@ typedef struct _MYARRAYSTRUCT
   
  Yönetilen `MyPerson`, `MyPerson2`, `MyPerson3`, ve `MyArrayStruct` yapılarına aşağıdaki özelliğe sahiptir:  
   
--   `MyPerson`yalnızca dize üyeler içerir. [CharSet](../../../docs/framework/interop/specifying-a-character-set.md) alan yönetilmeyen işleve geçirildiğinde ANSI biçimine dizeleri ayarlar.  
+-   `MyPerson` yalnızca dize üyeler içerir. [CharSet](specifying-a-character-set.md) alan yönetilmeyen işleve geçirildiğinde ANSI biçimine dizeleri ayarlar.  
   
--   `MyPerson2`içeren bir **IntPtr** için `MyPerson` yapısı. **IntPtr** türü değiştirir özgün işaretçiyi yönetilmeyen yapısı için .NET Framework uygulamaları kodu işaretlenmemişse işaretçileri kullanmadığından **güvensiz**.  
+-   `MyPerson2` içeren bir **IntPtr** için `MyPerson` yapısı. **IntPtr** türü değiştirir özgün işaretçiyi yönetilmeyen yapısı için .NET Framework uygulamaları kodu işaretlenmemişse işaretçileri kullanmadığından **güvensiz**.  
   
--   `MyPerson3`içeren `MyPerson` katıştırılmış yapısı olarak. Başka bir yapı içinde katıştırılmış bir yapı doğrudan ana yapısına katıştırılmış yapısı öğelerini koyarak düzleştirilmiş veya katıştırılmış bir yapısı olarak, bu örnekte gibi bırakılabilir.  
+-   `MyPerson3` içeren `MyPerson` katıştırılmış yapısı olarak. Başka bir yapı içinde katıştırılmış bir yapı doğrudan ana yapısına katıştırılmış yapısı öğelerini koyarak düzleştirilmiş veya katıştırılmış bir yapısı olarak, bu örnekte gibi bırakılabilir.  
   
--   `MyArrayStruct`dizisi içerir. <xref:System.Runtime.InteropServices.MarshalAsAttribute> Öznitelik kümelerini <xref:System.Runtime.InteropServices.UnmanagedType> numaralandırma değeri **ByValArray**, dizideki öğelerin sayısını belirtmek için kullanılır.  
+-   `MyArrayStruct` dizisi içerir. <xref:System.Runtime.InteropServices.MarshalAsAttribute> Öznitelik kümelerini <xref:System.Runtime.InteropServices.UnmanagedType> numaralandırma değeri **ByValArray**, dizideki öğelerin sayısını belirtmek için kullanılır.  
   
  Bu örnekteki tüm yapıları için <xref:System.Runtime.InteropServices.StructLayoutAttribute> öznitelik üyeleri bellekte ardışık olarak göründükleri sırada düzenlenmiş emin olmak için uygulanır.  
   
  `LibWrap` Sınıfı için yönetilen prototipleri içerir `TestStructInStruct`, `TestStructInStruct3`, ve `TestArrayInStruct` yöntemleri tarafından çağrılır `App` sınıfı. Her prototip gibi tek bir parametre bildirir:  
   
--   `TestStructInStruct`türü için bir başvuru bildirir `MyPerson2` , parametre olarak.  
+-   `TestStructInStruct` türü için bir başvuru bildirir `MyPerson2` , parametre olarak.  
   
--   `TestStructInStruct3`tür bildirir `MyPerson3` , parametre olarak ve parametre değerine göre geçirir.  
+-   `TestStructInStruct3` tür bildirir `MyPerson3` , parametre olarak ve parametre değerine göre geçirir.  
   
--   `TestArrayInStruct`türü için bir başvuru bildirir `MyArrayStruct` , parametre olarak.  
+-   `TestArrayInStruct` türü için bir başvuru bildirir `MyArrayStruct` , parametre olarak.  
   
  Yapıları parametresi içermedikçe yöntemleri bağımsız değişkenleri değere göre geçirilen **ref** (**ByRef** Visual Basic'te) anahtar sözcüğü. Örneğin, `TestStructInStruct` yöntemi geçirir türünde bir nesneye başvuru (bir adresi değeri) `MyPerson2` yönetilmeyen kod için. Yapısını işlemek için `MyPerson2` noktaları için örnek belirtilen boyutta bir arabellek oluşturur ve birleştirerek adresini döndürür <xref:System.Runtime.InteropServices.Marshal.AllocCoTaskMem%2A?displayProperty=nameWithType> ve <xref:System.Runtime.InteropServices.Marshal.SizeOf%2A?displayProperty=nameWithType> yöntemleri. Ardından, örnek yönetilmeyen arabellek yönetilen yapısı içeriği kopyalar. Son olarak, örnek kullanır <xref:System.Runtime.InteropServices.Marshal.PtrToStructure%2A?displayProperty=nameWithType> yönetilen bir nesne için yönetilmeyen arabellek sıralama verilere yönteminden ve <xref:System.Runtime.InteropServices.Marshal.FreeCoTaskMem%2A?displayProperty=nameWithType> yöntemi yönetilmeyen bellek bloğu boş.  
   
@@ -138,7 +135,7 @@ typedef struct _MYARRAYSTRUCT
  [!code-vb[Conceptual.Interop.Marshaling#24](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.interop.marshaling/vb/structures.vb#24)]  
   
 ## <a name="findfile-sample"></a>FindFile örneği  
- Bu örnek, yönetilmeyen bir işleve ikinci, katıştırılmış bir yapı içeren bir yapısı geçirmek gösterilmiştir. Ayrıca nasıl kullanılacağı ortaya <xref:System.Runtime.InteropServices.MarshalAsAttribute> yapısı içinde bir sabit uzunluk dizisi bildirmek için öznitelik. Bu örnekte, katıştırılmış yapı öğeleri üst yapısına eklenir. Katıştırılmış yapısının değil düzleştirilmiş bir örnek için bkz: [yapıları örnek](http://msdn.microsoft.com/library/96a62265-dcf9-4608-bc0a-1f762ab9f48e).  
+ Bu örnek, yönetilmeyen bir işleve ikinci, katıştırılmış bir yapı içeren bir yapısı geçirmek gösterilmiştir. Ayrıca nasıl kullanılacağı ortaya <xref:System.Runtime.InteropServices.MarshalAsAttribute> yapısı içinde bir sabit uzunluk dizisi bildirmek için öznitelik. Bu örnekte, katıştırılmış yapı öğeleri üst yapısına eklenir. Katıştırılmış yapısının değil düzleştirilmiş bir örnek için bkz: [yapıları örnek](https://msdn.microsoft.com/library/96a62265-dcf9-4608-bc0a-1f762ab9f48e(v=vs.100)).  
   
  FindFile örnek özgün işlevi bildiriminden gösterilen aşağıdaki yönetilmeyen işlevi kullanır:  
   
@@ -191,7 +188,7 @@ typedef struct _WIN32_FIND_DATA
     void TestUnion(MYUNION u, int type);  
     ```  
   
- [PinvokeLib.dll](http://msdn.microsoft.com/library/5d1438d7-9946-489d-8ede-6c694a08f614) daha önce listelenen işlevi ve iki birleşimler için bir uygulama içeren özel bir yönetilmeyen kitaplık **MYUNION** ve **MYUNION2**. Birleşimler aşağıdaki öğeleri içerir:  
+ [PinvokeLib.dll](https://msdn.microsoft.com/library/5d1438d7-9946-489d-8ede-6c694a08f614(v=vs.100)) daha önce listelenen işlevi ve iki birleşimler için bir uygulama içeren özel bir yönetilmeyen kitaplık **MYUNION** ve **MYUNION2**. Birleşimler aşağıdaki öğeleri içerir:  
   
 ```  
 union MYUNION  
@@ -209,9 +206,9 @@ union MYUNION2
   
  Yönetilen kodda birleşimler yapıları olarak tanımlanır. `MyUnion` Yapısı üye olarak iki değer türleri içerir: bir tamsayı ve bir double. <xref:System.Runtime.InteropServices.StructLayoutAttribute> Özniteliği, her veri üyesi kesin konumunu denetlemek için ayarlanır. <xref:System.Runtime.InteropServices.FieldOffsetAttribute> Özniteliği, UNION yönetilmeyen gösterimini alanlarını fiziksel konumunu sağlar. Üyeleri aynı parça bellek tanımlayabilirsiniz böylece her iki üye aynı uzaklık değerleri sahip dikkat edin.  
   
- `MyUnion2_1`ve `MyUnion2_2` sırasıyla bir değer türü (tamsayı) ve bir dize içermelidir. Yönetilen kodda değer türleri ve başvuru türleri çakışmasına izin verilmez. Bu örnek aynı yönetilmeyen işlevi çağrılırken hem türlerini kullanmak arayan etkinleştirmek için aşırı yükleme yöntemini kullanır. Düzenini `MyUnion2_1` açık olup kesin bir uzaklık değeri içerir. Buna karşılık, `MyUnion2_2` bir ardışık düzen sahip olduğundan açık düzenleri başvuru türleriyle izin verilmez. <xref:System.Runtime.InteropServices.MarshalAsAttribute> Öznitelik kümelerini <xref:System.Runtime.InteropServices.UnmanagedType> numaralandırma **ByValTStr**, satır içi tanımlamak için kullanılan, sabit uzunlukta karakter diziler UNION yönetilmeyen gösterimini içinde görüntülenir.  
+ `MyUnion2_1` ve `MyUnion2_2` sırasıyla bir değer türü (tamsayı) ve bir dize içermelidir. Yönetilen kodda değer türleri ve başvuru türleri çakışmasına izin verilmez. Bu örnek aynı yönetilmeyen işlevi çağrılırken hem türlerini kullanmak arayan etkinleştirmek için aşırı yükleme yöntemini kullanır. Düzenini `MyUnion2_1` açık olup kesin bir uzaklık değeri içerir. Buna karşılık, `MyUnion2_2` bir ardışık düzen sahip olduğundan açık düzenleri başvuru türleriyle izin verilmez. <xref:System.Runtime.InteropServices.MarshalAsAttribute> Öznitelik kümelerini <xref:System.Runtime.InteropServices.UnmanagedType> numaralandırma **ByValTStr**, satır içi tanımlamak için kullanılan, sabit uzunlukta karakter diziler UNION yönetilmeyen gösterimini içinde görüntülenir.  
   
- `LibWrap` Sınıfı için prototipleri içerir `TestUnion` ve `TestUnion2` yöntemleri. `TestUnion2`bildirmek için aşırı `MyUnion2_1` veya `MyUnion2_2` parametre olarak.  
+ `LibWrap` Sınıfı için prototipleri içerir `TestUnion` ve `TestUnion2` yöntemleri. `TestUnion2` bildirmek için aşırı `MyUnion2_1` veya `MyUnion2_2` parametre olarak.  
   
 ### <a name="declaring-prototypes"></a>Prototipleri Bildirme  
  [!code-cpp[Conceptual.Interop.Marshaling#28](../../../samples/snippets/cpp/VS_Snippets_CLR/conceptual.interop.marshaling/cpp/unions.cpp#28)]
@@ -228,7 +225,7 @@ union MYUNION2
   
  SysTime örnek özgün işlevi bildiriminden gösterilen aşağıdaki yönetilmeyen işlevi kullanır:  
   
--   **GetSystemTime** exported from Kernel32.dll.  
+-   **GetSystemTime** Kernel32.dll dışarı.  
   
     ```  
     VOID GetSystemTime(LPSYSTEMTIME lpSystemTime);  
@@ -251,7 +248,7 @@ typedef struct _SYSTEMTIME {
   
  Bu örnekte `SystemTime` sınıfı sınıf üyeleri gösterilen özgün yapısı öğelerini içerir. <xref:System.Runtime.InteropServices.StructLayoutAttribute> Özniteliği ayarlanmış üyeleri bellekte ardışık olarak göründükleri sırada düzenlenmiş emin olun.  
   
- `LibWrap` Sınıfı içeren yönetilen prototipi `GetSystemTime` geçirir yöntemi `SystemTime` sınıfı olarak bir giriş/çıkış parametresi varsayılan olarak. Parametresi ile bildirilmelidir <xref:System.Runtime.InteropServices.InAttribute> ve <xref:System.Runtime.InteropServices.OutAttribute> başvuru türleri olan sınıfları, varsayılan olarak olduğu gibi parametreleri geçirildiğinden öznitelikleri. Çağıran sonuçlarını almak için bu [yön öznitelikleri](http://msdn.microsoft.com/library/241ac5b5-928e-4969-8f58-1dbc048f9ea2) açıkça uygulanmış olması gerekir. `App` Sınıfının yeni bir örneğini oluşturur `SystemTime` sınıfı ve kendi veri alanları erişir.  
+ `LibWrap` Sınıfı içeren yönetilen prototipi `GetSystemTime` geçirir yöntemi `SystemTime` sınıfı olarak bir giriş/çıkış parametresi varsayılan olarak. Parametresi ile bildirilmelidir <xref:System.Runtime.InteropServices.InAttribute> ve <xref:System.Runtime.InteropServices.OutAttribute> başvuru türleri olan sınıfları, varsayılan olarak olduğu gibi parametreleri geçirildiğinden öznitelikleri. Çağıran sonuçlarını almak için bu [yön öznitelikleri](https://msdn.microsoft.com/library/241ac5b5-928e-4969-8f58-1dbc048f9ea2(v=vs.100)) açıkça uygulanmış olması gerekir. `App` Sınıfının yeni bir örneğini oluşturur `SystemTime` sınıfı ve kendi veri alanları erişir.  
   
 ### <a name="code-samples"></a>Kod Örnekleri  
  [!code-cpp[Conceptual.Interop.Marshaling#25](../../../samples/snippets/cpp/VS_Snippets_CLR/conceptual.interop.marshaling/cpp/systime.cpp#25)]
@@ -263,7 +260,7 @@ typedef struct _SYSTEMTIME {
   
  Bu örnek kullanarak yerel bir işleve nasıl çağırılacağını <xref:System.Runtime.InteropServices.Marshal> sınıfı ve güvenli olmayan kod kullanarak.  
   
- Bu örnek bir sarmalayıcı işlevleri kullanır ve platform çağırır tanımlanan [PinvokeLib.dll](http://msdn.microsoft.com/library/5d1438d7-9946-489d-8ede-6c694a08f614), aynı zamanda sağlanan kaynak dosyalarında. Kullandığı `TestOutArrayOfStructs` işlevi ve `MYSTRSTRUCT2` yapısı. Yapısı aşağıdaki öğeleri içerir:  
+ Bu örnek bir sarmalayıcı işlevleri kullanır ve platform çağırır tanımlanan [PinvokeLib.dll](https://msdn.microsoft.com/library/5d1438d7-9946-489d-8ede-6c694a08f614(v=vs.100)), aynı zamanda sağlanan kaynak dosyalarında. Kullandığı `TestOutArrayOfStructs` işlevi ve `MYSTRSTRUCT2` yapısı. Yapısı aşağıdaki öğeleri içerir:  
   
 ```  
 typedef struct _MYSTRSTRUCT2  
@@ -279,11 +276,11 @@ typedef struct _MYSTRSTRUCT2
   
  `App` Uygulayan sınıf `UsingMarshaling` dizi geçirmek için gerekli görevleri gerçekleştiren yöntemi. Dizi işaretlenmiş `out` (`ByRef` Visual Basic'te) verileri belirtmek için anahtar sözcüğü Aranan çağırana iletir. Aşağıdaki uygulama kullanan <xref:System.Runtime.InteropServices.Marshal> sınıfı yöntemlerinin:  
   
--   <xref:System.Runtime.InteropServices.Marshal.PtrToStructure%2A>yönetilen bir nesnenin yönetilmeyen arabellek verilerini sıralamakta.  
+-   <xref:System.Runtime.InteropServices.Marshal.PtrToStructure%2A> yönetilen bir nesnenin yönetilmeyen arabellek verilerini sıralamakta.  
   
--   <xref:System.Runtime.InteropServices.Marshal.DestroyStructure%2A>yapısında dizeler için ayrılan bellek serbest bırakmak için.  
+-   <xref:System.Runtime.InteropServices.Marshal.DestroyStructure%2A> yapısında dizeler için ayrılan bellek serbest bırakmak için.  
   
--   <xref:System.Runtime.InteropServices.Marshal.FreeCoTaskMem%2A>dizi için ayrılan bellek serbest bırakmak için.  
+-   <xref:System.Runtime.InteropServices.Marshal.FreeCoTaskMem%2A> dizi için ayrılan bellek serbest bırakmak için.  
   
  Daha önce belirtildiği gibi C# güvenli olmayan kod verir ve [!INCLUDE[vbprvblong](../../../includes/vbprvblong-md.md)] desteklemez. C# örneğinde, `UsingUnsafePointer` yerine işaretçileri kullanan alternatif bir yöntem uygulamasıdır <xref:System.Runtime.InteropServices.Marshal> geçirmek için sınıf geri dizi içeren `MyUnsafeStruct` yapısı.  
   
@@ -297,8 +294,8 @@ typedef struct _MYSTRSTRUCT2
  [!code-csharp[Conceptual.Interop.Marshaling#21](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.interop.marshaling/cs/outarrayofstructs.cs#21)]
  [!code-vb[Conceptual.Interop.Marshaling#21](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.interop.marshaling/vb/outarrayofstructs.vb#21)]  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- [Platform Çağırma ile Veri Hazırlama](../../../docs/framework/interop/marshaling-data-with-platform-invoke.md)  
- [Platform çağırma veri türleri](http://msdn.microsoft.com/library/16014d9f-d6bd-481e-83f0-df11377c550f)  
- [Dizeleri Hazırlama](../../../docs/framework/interop/marshaling-strings.md)  
- [Türlerin dizileri sıralama](http://msdn.microsoft.com/library/049b1c1b-228f-4445-88ec-91bc7fd4b1e8)
+## <a name="see-also"></a>Ayrıca bkz.  
+ [Platform Çağırma ile Veri Hazırlama](marshaling-data-with-platform-invoke.md)  
+ [Platform çağırma veri türleri](https://msdn.microsoft.com/library/16014d9f-d6bd-481e-83f0-df11377c550f(v=vs.100))  
+ [Dizeleri Hazırlama](marshaling-strings.md)  
+ [Türlerin dizileri sıralama](https://msdn.microsoft.com/library/049b1c1b-228f-4445-88ec-91bc7fd4b1e8(v=vs.100))

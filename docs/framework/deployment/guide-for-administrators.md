@@ -1,7 +1,7 @@
 ---
 title: Yöneticiler için .NET Framework Dağıtım Kılavuzu
 ms.custom: ''
-ms.date: 03/30/2017
+ms.date: 04/10/2018
 ms.prod: .net-framework
 ms.reviewer: ''
 ms.suite: ''
@@ -13,17 +13,17 @@ helpviewer_keywords:
 - administrator's guide, deploying .NET Framework
 - deployment [.NET Framework], administrator's guide
 ms.assetid: bee14036-0436-44e8-89f5-4bc61317977a
-caps.latest.revision: ''
+caps.latest.revision: 40
 author: mairaw
 ms.author: mairaw
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: f57b5db5c03030d8cb930355586d0253cae13319
-ms.sourcegitcommit: 6f967c86dde55472440f0c8669b0e910ee3c53ba
+ms.openlocfilehash: 67efb04fc0d86a20fdf10c0e84bb00ae57383bb1
+ms.sourcegitcommit: 9a4fe1a1c37b26532654b4bbe22d702237950009
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/22/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="net-framework-deployment-guide-for-administrators"></a>Yöneticiler için .NET Framework Dağıtım Kılavuzu
 Bu adım adım makalede bir sistem yöneticisi nasıl dağıtabileceğini açıklar [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] ve Microsoft System Center Configuration Manager kullanarak ağ üzerinden sistem bağımlılıklarını. Bu makalede tüm istemci bilgisayarların .NET Framework için gerekli olan minimum sistem gereksinimlerini karşıladığı varsayılmıştır. Yüklemek için yazılım ve donanım gereksinimlerinin listesi için [!INCLUDE[net_v45](../../../includes/net-v45-md.md)], bkz: [sistem gereksinimleri](../../../docs/framework/get-started/system-requirements.md).  
@@ -33,7 +33,7 @@ Bu adım adım makalede bir sistem yöneticisi nasıl dağıtabileceğini açık
 >   
 >  .NET Framework desteği hakkında daha fazla bilgi için bkz: [Microsoft .NET Framework destek yaşam döngüsü ilkesi](http://go.microsoft.com/fwlink/?LinkId=196607) Microsoft Support Web sitesinde.  
   
- Bu konu aşağıdaki bölümleri içermektedir:  
+ Bu konu aşağıdaki bölümleri içerir:  
   
  [Dağıtım işlemi](#the_deployment_process)  
  [.NET Framework'ü dağıtma](#deploying_in_a_test_environment)  
@@ -165,7 +165,7 @@ Bu adım adım makalede bir sistem yöneticisi nasıl dağıtabileceğini açık
   
 8.  Sihirbazı tamamlayın.  
   
- Packagenow .NET Framework 4.5 sessiz bir şekilde dağıtmak gereken tüm bilgileri içerir. Paket ve program dağıtmadan önce dağıtım noktasına yüklendiğini doğrulayın; "İzleme içerik" bölümüne bakın [Configuration Manager'da içerik yönetimine yönelik işlemler ve Bakım](http://technet.microsoft.com/library/gg712694.aspx#BKMK_MonitorContent) Configuration Manager Belge Kitaplığı'nda.  
+ Paket şimdi, .NET Framework 4.5'i sessizce dağıtmak gereksinim duyduğunuz tüm bilgileri içerir. Paket ve program dağıtmadan önce dağıtım noktasına yüklendiğini doğrulayın; "İzleme içerik" bölümüne bakın [Configuration Manager'da içerik yönetimine yönelik işlemler ve Bakım](http://technet.microsoft.com/library/gg712694.aspx#BKMK_MonitorContent) Configuration Manager Belge Kitaplığı'nda.  
   
 <a name="deploying_package"></a>   
 ### <a name="deploy-the-package"></a>Paketi dağıtma  
@@ -208,7 +208,7 @@ Bu adım adım makalede bir sistem yöneticisi nasıl dağıtabileceğini açık
   
 -   [DNS sunucusu](http://technet.microsoft.com/library/cc732997.aspx)  
   
--   [DHCP Server](http://technet.microsoft.com/library/cc896553.aspx)  
+-   [DHCP sunucusu](http://technet.microsoft.com/library/cc896553.aspx)  
   
  **SQL Server 2008:**  
   
@@ -227,14 +227,19 @@ Bu adım adım makalede bir sistem yöneticisi nasıl dağıtabileceğini açık
 -   [System Center 2012 Configuration Manager için istemci dağıtma](http://technet.microsoft.com/library/gg699391.aspx)  
   
 <a name="troubleshooting"></a>   
-## <a name="troubleshooting"></a>Sorun giderme  
+## <a name="troubleshooting"></a>Sorun Giderme  
   
 ### <a name="log-file-locations"></a>Günlük dosyası konumları  
- Aşağıdaki günlük dosyalarına sırasında oluşturulan [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] Kurulum:  
+ Aşağıdaki günlük dosyalarına .NET Framework Kurulum sırasında oluşturulur:  
   
- %Temp%\Microsoft .NET framework 4.5*.txt %temp%\Microsoft .NET Framework 4.5*.html  
+ .NET framework %Temp%\Microsoft *sürüm*\*.txt  
+ .NET framework %Temp%\Microsoft *sürüm*\*.html  
   
- Kullanabileceğiniz [günlük koleksiyonu aracı](http://www.microsoft.com/download/details.aspx?id=12493) toplamak için [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] günlük dosyaları ve dosyaların boyutunu azaltır Sıkıştırılmış dolap (.cab) dosya oluşturulamadı.  
+ Burada *sürüm* 4.5 veya 4.7.2 gibi yüklüyorsanız .NET Framework sürümü.  
+ 
+ Hangi günlük dosyaları yazılır kullanarak dizini de belirleyebilirsiniz `/log` komut satırı seçeneği, .NET Framework yükleme komutu. Daha fazla bilgi için bkz: [geliştiriciler için .NET Framework Dağıtım Kılavuzu](deployment-guide-for-developers.md#command-line-options). 
+ 
+ Kullanabileceğiniz [günlük koleksiyonu aracı](https://www.microsoft.com/download/details.aspx?id=12493) .NET Framework günlük dosyaları toplamak için ve dosyaların boyutu azaltan Sıkıştırılmış dolap (.cab) dosya oluşturulamadı.  
   
 <a name="return_codes"></a>   
 ### <a name="return-codes"></a>Dönüş kodları  
@@ -266,6 +271,6 @@ Bu adım adım makalede bir sistem yöneticisi nasıl dağıtabileceğini açık
   
 -   [Windows Update Aracısı sonuç kodları](http://technet.microsoft.com/library/cc720442.aspx)  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
+## <a name="see-also"></a>Ayrıca bkz.  
  [Geliştiriciler için Dağıtım Kılavuzu](../../../docs/framework/deployment/deployment-guide-for-developers.md)  
  [Sistem Gereksinimleri](../../../docs/framework/get-started/system-requirements.md)

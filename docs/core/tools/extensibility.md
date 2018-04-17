@@ -1,7 +1,7 @@
 ---
-title: ".NET core CLI genişletilebilirlik modeli"
-description: "Komut satırı arabirimi (CLI) araçları nasıl genişletebileceğini öğrenin."
-keywords: "CLI, genişletilebilirlik, özel komutlar, .NET Core"
+title: .NET core CLI genişletilebilirlik modeli
+description: Komut satırı arabirimi (CLI) araçları nasıl genişletebileceğini öğrenin.
+keywords: CLI, genişletilebilirlik, özel komutlar, .NET Core
 author: blackdwarf
 ms.author: mairaw
 ms.date: 04/12/2017
@@ -10,12 +10,13 @@ ms.prod: .net-core
 ms.technology: dotnet-cli
 ms.devlang: dotnet
 ms.assetid: fffc3400-aeb9-4c07-9fea-83bc8dbdcbf3
-ms.workload: dotnetcore
-ms.openlocfilehash: 0d273510903c888f3212a57f4c28b118b73cab5c
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.workload:
+- dotnetcore
+ms.openlocfilehash: 53329c302066891c240a234156c2572acc66e7ab
+ms.sourcegitcommit: 9a4fe1a1c37b26532654b4bbe22d702237950009
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="net-core-cli-tools-extensibility-model"></a>.NET core CLI araçlarını genişletilebilirlik modeli
 
@@ -82,8 +83,8 @@ Araçları taşınabilir uygulamaları olduğundan, aracı kullanma kullanıcı 
 
 Bu tür araçların, bunları kullanan proje bağımlılık grafikten tamamen ayrı bir bağımlılık grafiğinin vardır. Geri yükleme işlemi ilk proje bağımlılıkları yükler ve ardından her araçları ve bağımlılıklarını geri yükler.
 
-Daha zengin örnekler ve bu konuda farklı birleşimlerini bulabilirsiniz [.NET Core CLI depodaki](https://github.com/dotnet/cli/tree/rel/1.0.1/TestAssets/TestProjects).
-Ayrıca bkz [kullanılan araçlar uyarlamasını](https://github.com/dotnet/cli/tree/rel/1.0.1/TestAssets/TestPackages) aynı depodaki.
+Daha zengin örnekler ve bu konuda farklı birleşimlerini bulabilirsiniz [.NET Core CLI depodaki](https://github.com/dotnet/cli/tree/release/2.1/TestAssets/TestProjects).
+Ayrıca bkz [kullanılan araçlar uyarlamasını](https://github.com/dotnet/cli/tree/release/2.1/TestAssets/TestPackages) aynı depodaki.
 
 ### <a name="custom-targets"></a>Özel hedefleri
 NuGet yeteneğine sahip [özel MSBuild hedefleri ve özellik dosyalarını paketini](/nuget/create-packages/creating-a-package#including-msbuild-props-and-targets-in-a-package). .NET Core CLI araçlarını MSBuild kullanmak için taşıma ile aynı mekanizması genişletilebilirlik şimdi .NET Core projeler için geçerlidir. Bu tür genişletilebilirliği derleme işlemini genişletme istediğinizde ya da herhangi bir derleme işlemindeki oluşturulan dosyaları gibi yapılarının erişmek istediğiniz veya altında yapı çağrılır yapılandırmayı incelemek istediğinizde kullanırsınız , vs.

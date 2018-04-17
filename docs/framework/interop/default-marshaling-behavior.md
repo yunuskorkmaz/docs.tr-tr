@@ -1,13 +1,9 @@
 ---
 title: Varsayılan Hazırlama Davranışı
-ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - dotnet-clr
-ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - csharp
@@ -17,17 +13,16 @@ helpviewer_keywords:
 - interoperation with unmanaged code, marshaling
 - marshaling behavior
 ms.assetid: c0a9bcdf-3df8-4db3-b1b6-abbdb2af809a
-caps.latest.revision: 15
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: f0a8fcba31ddfa09ca60f8ba6cf08d20b270c3da
-ms.sourcegitcommit: b750a8e3979749b214e7e10c82efb0a0524dfcb1
+ms.openlocfilehash: 7d653e6bd82a897d1fe8591f263a12f4c3a67abf
+ms.sourcegitcommit: 9a4fe1a1c37b26532654b4bbe22d702237950009
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/10/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="default-marshaling-behavior"></a>Varsayılan Hazırlama Davranışı
 Birlikte çalışma hazırlama kurallarında yönetilen ve yönetilmeyen bellek arasında geçerken yöntem parametreleri ile ilişkili verileri nasıl davranacağını bu dikte çalışır. Bu yerleşik kurallar bir Aranan kendisine geçirilen verileri değiştirebilir ve bu değişiklikleri çağırana dönün ve altında Sıralayıcı koşulda performans iyileştirmelerini sağlar hazırlama gibi etkinlikler veri türü dönüşümleri olarak denetler.  
@@ -52,10 +47,10 @@ BSTR MethodOne (BSTR b) {
   
  Bununla birlikte, her bir platform çağırma olarak prototip yöntemi tanımlayın, yerini **BSTR** ile yazın bir <xref:System.String> yazın ve arama `MethodOne`, ortak dil çalışma zamanı serbest girişimlerini `b` iki kez. Kullanarak hazırlama davranışı değiştirebilirsiniz <xref:System.IntPtr> türleri yerine **dize** türleri.  
   
- Çalışma zamanı her zaman kullanır **CoTaskMemFree** belleği boşaltmak için yöntem. Çalıştığınız bellek ile ayrılmamış varsa **CoTaskMemAlloc** yöntemini kullanmalıdır bir **IntPtr** ve uygun yöntem kullanılarak el ile bellek boş. Otomatik bellek boşaltma burada bellek hiçbir zaman serbest durumlarda, bu tür benzer şekilde, önleyebilirsiniz olarak kullanırken **GetCommandLine** çekirdek bellek için bir işaretçi döndürür Kernel32.dll işlevinden. El ile bellek boşaltma hakkında daha fazla bilgi için bkz [arabellekleri örnek](http://msdn.microsoft.com/library/e30d36e8-d7c4-4936-916a-8fdbe4d9ffd5).  
+ Çalışma zamanı her zaman kullanır **CoTaskMemFree** belleği boşaltmak için yöntem. Çalıştığınız bellek ile ayrılmamış varsa **CoTaskMemAlloc** yöntemini kullanmalıdır bir **IntPtr** ve uygun yöntem kullanılarak el ile bellek boş. Otomatik bellek boşaltma burada bellek hiçbir zaman serbest durumlarda, bu tür benzer şekilde, önleyebilirsiniz olarak kullanırken **GetCommandLine** çekirdek bellek için bir işaretçi döndürür Kernel32.dll işlevinden. El ile bellek boşaltma hakkında daha fazla bilgi için bkz [arabellekleri örnek](http://msdn.microsoft.com/library/e30d36e8-d7c4-4936-916a-8fdbe4d9ffd5(v=vs.100)).  
   
 ## <a name="default-marshaling-for-classes"></a>Varsayılan sınıflar için hazırlama  
- Sınıflar yalnızca COM birlikte çalışma tarafından sıralanabilir ve arabirimleri olarak her zaman hazırlanırlar. Bazı durumlarda sınıfı sıralama için kullanılan arabirim sınıf arabirimi olarak bilinir. Tercih ettiğiniz bir arabirim ile sınıf arabirimi geçersiz kılma hakkında daha fazla bilgi için bkz: [sınıf arabirimi Tanıtımı](http://msdn.microsoft.com/library/733c0dd2-12e5-46e6-8de1-39d5b25df024).  
+ Sınıflar yalnızca COM birlikte çalışma tarafından sıralanabilir ve arabirimleri olarak her zaman hazırlanırlar. Bazı durumlarda sınıfı sıralama için kullanılan arabirim sınıf arabirimi olarak bilinir. Tercih ettiğiniz bir arabirim ile sınıf arabirimi geçersiz kılma hakkında daha fazla bilgi için bkz: [sınıf arabirimi Tanıtımı](com-callable-wrapper.md#introducing-the-class-interface).  
   
 ### <a name="passing-classes-to-com"></a>COM sınıflarına geçirme  
  Yönetilen bir sınıfın COM geçirildiğinde, birlikte çalışabilirlik Sıralayıcı otomatik olarak bir COM proxy ile sınıfı sarmalar ve COM yöntem çağrısı proxy'sine tarafından üretilen sınıf arabirimi geçirir. Proxy sınıfı arabirimde tüm çağrıları yönetilen nesneye sonra atar. Proxy sınıfı tarafından açıkça uygulanmadı diğer arabirimleri de sunar. Proxy otomatik olarak arabirimlerini gibi uygular **IUnknown** ve **IDispatch** sınıfı adına.  
@@ -171,7 +166,7 @@ internal class DelegateTest {
 ```  
   
 ## <a name="default-marshaling-for-value-types"></a>Varsayılan değer türleri için hazırlama  
- Tamsayı ve kayan nokta sayıları gibi çoğu değer türleri [blittable](../../../docs/framework/interop/blittable-and-non-blittable-types.md) ve hazırlama gerektirmez. Diğer [blittable olmayan](../../../docs/framework/interop/blittable-and-non-blittable-types.md) türleri farklı Beyanları yönetilen ve yönetilmeyen bellekte ve hazırlama gerektirir. Hala diğer türleri arasında birlikte çalışabilirlik sınır açık biçimlendirme gerektirir.  
+ Tamsayı ve kayan nokta sayıları gibi çoğu değer türleri [blittable](blittable-and-non-blittable-types.md) ve hazırlama gerektirmez. Diğer [blittable olmayan](blittable-and-non-blittable-types.md) türleri farklı Beyanları yönetilen ve yönetilmeyen bellekte ve hazırlama gerektirir. Hala diğer türleri arasında birlikte çalışabilirlik sınır açık biçimlendirme gerektirir.  
   
  Bu konuda biçimlendirilmiş değer türleri üzerinde izleme bilgileri sağlar:  
   
@@ -389,7 +384,7 @@ interface _Graphics {
 |Sistem değer türü|IDL türü|  
 |-----------------------|--------------|  
 |<xref:System.DateTime?displayProperty=nameWithType>|**TARİH**|  
-|<xref:System.Decimal?displayProperty=nameWithType>|**DECIMAL**|  
+|<xref:System.Decimal?displayProperty=nameWithType>|**ONDALIK**|  
 |<xref:System.Guid?displayProperty=nameWithType>|**GUID**|  
 |<xref:System.Drawing.Color?displayProperty=nameWithType>|**OLE_COLOR**|  
   
@@ -449,9 +444,9 @@ interface IValueTypes : IDispatch {
 };  
 ```  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- [Blok Halinde Kopyalanabilir ve Kopyalanamaz Türler](../../../docs/framework/interop/blittable-and-non-blittable-types.md)  
- [Kopyalama ve Sabitleme](../../../docs/framework/interop/copying-and-pinning.md)  
- [Diziler için Varsayılan Hazırlama](../../../docs/framework/interop/default-marshaling-for-arrays.md)  
- [Nesneler için Varsayılan Hazırlama](../../../docs/framework/interop/default-marshaling-for-objects.md)  
- [Dizeler için Varsayılan Hazırlama](../../../docs/framework/interop/default-marshaling-for-strings.md)
+## <a name="see-also"></a>Ayrıca bkz.  
+ [Blok Halinde Kopyalanabilir ve Kopyalanamaz Türler](blittable-and-non-blittable-types.md)  
+ [Kopyalama ve Sabitleme](copying-and-pinning.md)  
+ [Diziler için Varsayılan Hazırlama](default-marshaling-for-arrays.md)  
+ [Nesneler için Varsayılan Hazırlama](default-marshaling-for-objects.md)  
+ [Dizeler için Varsayılan Hazırlama](default-marshaling-for-strings.md)

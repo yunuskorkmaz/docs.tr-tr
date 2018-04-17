@@ -1,21 +1,21 @@
 ---
-title: ".NET Core Linux önkoşulları"
-description: "Desteklenen Linux sürümleri ve geliştirmek, dağıtmak ve Linux makinelerde .NET Core uygulamaları çalıştırmak için .NET Core bağımlılıkları."
-keywords: .NET, .NET Core, Linux, debian, ubuntu, RHEL, centOS,
+title: .NET Core Linux önkoşulları
+description: Desteklenen Linux sürümleri ve geliştirmek, dağıtmak ve Linux makinelerde .NET Core uygulamaları çalıştırmak için .NET Core bağımlılıkları.
+keywords: .NET, .NET core, Linux, debian, ubuntu, RHEL, centOS,
 author: jralexander
 ms.author: johalex
-ms.date: 12/06/2017
-ms.topic: article
+ms.date: 04/12/2018
+ms.topic: conceptual
 ms.prod: .net-core
 ms.devlang: dotnet
 ms.assetid: c33b1241-ab66-4583-9eba-52cf51146f5a
 ms.workload:
 - dotnetcore
-ms.openlocfilehash: 913d3869559b10af508e695a06d06021f8f90175
-ms.sourcegitcommit: adcf9bdafeaa6bc243af7bf70b45f3df954f256a
+ms.openlocfilehash: 37dc4f25b6c4915971bc79931a105474fcd43670
+ms.sourcegitcommit: 9a4fe1a1c37b26532654b4bbe22d702237950009
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="prerequisites-for-net-core-on-linux"></a>.NET Core Linux önkoşulları
 
@@ -24,39 +24,41 @@ Bu makalede Linux'ta .NET Core uygulamaları geliştirmek için gerekli bağıml
 * [Tercih ettiğiniz Düzenleyicisi ile komut satırı](tutorials/using-with-xplat-cli.md)
 * [Visual Studio Code](https://code.visualstudio.com/)
 
+> [!NOTE]
+> .NET Core SDK'sı paketinin üretim sunucuları/ortamları için gerekli değildir. Yalnızca .NET çekirdeği çalışma zamanı paketi üretim ortamlarına dağıtılan uygulamalar için gereklidir. .NET çekirdeği çalışma zamanı müstakil dağıtımının bir parçası uygulamaları ile dağıtılır, Framework bağımlı uygulamaları ayrı olarak dağıtılan için Bununla birlikte, dağıtılması gerekir. Framework bağımlı ve kendi başına dağıtım türleri hakkında daha fazla bilgi için bkz: [.NET Core uygulama dağıtımı](./deploying/index.md). Ayrıca bkz. [Self-contained Linux uygulamaları](https://github.com/dotnet/core/blob/master/Documentation/self-contained-linux-apps.md) belirli yönergeler.
+
 ## <a name="supported-linux-versions"></a>Desteklenen Linux sürümleri
 
 # <a name="net-core-2xtabnetcore2x"></a>[.NET core 2.x](#tab/netcore2x)
 
-.NET core 2.0 tek bir işletim sistemi Linux değerlendirir. Bir tek desteklenen Linux distro'lar Linux yapı (her yonga Mimarisi) yoktur.
+.NET core 2.x davranır tek bir işletim sistemi olarak Linux. Bir tek desteklenen Linux dağıtımları Linux yapı (her yonga Mimarisi) yoktur.
 
 NET çekirdek 2.x, aşağıdaki Linux 64-bit desteklenir (`x86_64` veya `amd64`) dağıtımları/sürümleri:
 
- * Red Hat Enterprise Linux 7
- * CentOS 7
- * Oracle Linux 7
- * Fedora 25, Fedora 26
- * Debian 8,7 veya sonraki sürümleri 
- * Ubuntu 17.04, Ubuntu 16.04, Ubuntu 14.04
- * Linux Mint 18, Linux Mint 17
- * openSUSE 42,2 veya sonraki sürümler
- * SUSE Enterprise Linux (SLES) 12 SP2 veya sonraki sürümler
+* Red Hat Enterprise Linux 7
+* CentOS 7
+* Oracle Linux 7
+* Fedora 27, 26
+* Debian 9 8,7 veya sonraki sürümleri
+* Ubuntu 17.10, 16.04, 14.04
+* Linux Naneli 18, 17
+* openSUSE 42.3 veya sonraki sürümler
+* SUSE Enterprise Linux (SLES) 12 Service Pack 2 veya sonraki sürümü
 
-Bkz: [.NET Core 2.x desteklenen işletim sistemi sürümleri](https://github.com/dotnet/core/blob/master/release-notes/2.0/2.0-supported-os.md) .NET Core tam listesi için 2.x desteklenen işletim sistemleri, destek işletim sistemi sürümleri ve yaşam döngüsü ilkesi bağlantıları dışında.
+Bkz: [.NET Core 2.x desteklenen işletim sistemi sürümleri](https://github.com/dotnet/core/blob/master/release-notes/2.0/2.0-supported-os.md) .NET Core tam listesi için 2.x desteklenen işletim sistemleri, dağıtımlar ve Destek işletim sistemi sürümleri ve yaşam döngüsü ilkesi bağlantıları dışında sürümleri.
 
-# <a name="net-core-1xtabnetcore1x"></a>[.NET Core 1.x](#tab/netcore1x)
+# <a name="net-core-1xtabnetcore1x"></a>[.NET core 1.x](#tab/netcore1x)
 
 .NET core 1.x aşağıdaki Linux 64-bit desteklenir (`x86_64` veya `amd64`) dağıtımları/sürümleri:
 
 * Red Hat Enterprise Linux 7
 * CentOS 7
 * Oracle Linux 7
-* Fedora 24
+* Fedora 26
 * Debian 8.2 veya sonraki sürümler
-* Ubuntu 14.04, Ubuntu 16.04, Ubuntu 16.10\*
- * Ubuntu 16.10 .NET Core 1.1 en son düzeltme eki sürümü tarafından desteklenen
-* Linux Mint 17
-* openSUSE 42,1 veya sonraki sürümleri (.NET Core 1.1)
+* Ubuntu 16.04, 14.04
+* Linux Naneli 18, 17
+* openSUSE 42.3 veya sonraki sürümleri (.NET Core 1.1)
 
 Bkz: [.NET Core 1.x desteklenen işletim sistemi sürümleri](https://github.com/dotnet/core/blob/master/release-notes/1.0/1.0-supported-os.md) .NET Core tam listesi için 1.x desteklenen işletim sistemleri, destek işletim sistemi sürümleri ve yaşam döngüsü ilkesi bağlantıları dışında.
 
@@ -71,28 +73,28 @@ Aşağıdaki örnekler olacak şekilde tasarlanmıştır. Tam sürümünü ve ad
 Ubuntu dağıtımları yüklü aşağıdaki kitaplıkları gerektirir:
 
 * libunwind8
-* liblttng-ust0
+* liblttng ust0
 * libcurl3
 * libssl1.0.0
 * libuuid1
 * libkrb5-3
 * zlib1g
-* libicu52 (için 14.X)
-* libicu55 (için 16.X)
-* libicu57 (için 17.X)
+* libicu52 (için 14.x)
+* libicu55 (için 16.x)
+* libicu57 (için 17.x)
 
 ### <a name="centos"></a>CentOS
 
 CentOS dağıtımları yüklü aşağıdaki kitaplıkları gerektirir:
 
 * libunwind
-* lttng-ust
+* lttng hakkınızın
 * libcurl
 * openssl kitaplıklar
 * libuuid
 * krb5 kitaplıklar
 * libicu
-* zlib
+* Zlib
 
 Bağımlılıklar hakkında daha fazla bilgi için bkz: [Self-contained Linux uygulamaları](https://github.com/dotnet/core/blob/master/Documentation/self-contained-linux-apps.md).
 
@@ -107,537 +109,277 @@ Linux üzerinde iki yükleyici paketi seçeneğiniz vardır:
 
 ### <a name="scripting-installs-with-the-net-core-installer-script"></a>.NET Core Yükleyici komut dosyasıyla yükler komut dosyası oluşturma
 
-`dotnet-install` Komut dosyaları, CLI zincirinin ve paylaşılan çalışma zamanı yönetici olmayan yüklemesini gerçekleştirmek için kullanılır. Komut dosyasını indirebilirsiniz: https://dot.net/v1/dotnet-install.sh
+[Dotnet yükleme betikleri](./tools/dotnet-install-script.md) CLI zincirinin ve paylaşılan çalışma zamanı yönetici olmayan yüklemesini gerçekleştirmek için kullanılır. Komut dosyasını karşıdan [ https://dot.net/v1/dotnet-install.sh ](https://dot.net/v1/dotnet-install.sh).
 
 Yükleyici bash betik Otomasyon senaryoları ve yönetici olmayan yüklemeleri kullanılır. Linux/OS X sistemleri komut ile kullanılabilmesi için bu komut dosyası ayrıca PowerShell anahtarları okur.
 
-> [!IMPORTANT]
-> Komut dosyasını çalıştırmadan önce gerekli yükleme [bağımlılıkları](https://github.com/dotnet/core/blob/master/Documentation/prereqs.md).
+## <a name="install-net-core-for-supported-red-hat-enterprise-linux-rhel-versions"></a>Desteklenen Red Hat Enterprise Linux (RHEL) sürümleri için .NET Core yükleyin
 
-## <a name="install-net-core-for-red-hat-enterprise-linux-rhel-7"></a>Red Hat Enterprise Linux (RHEL) 7 .NET Core yükleyin
-
-.NET Core üzerinde RHEL 7 yüklemek için:
-
-1. RHEL 7 abonelik altında kullanılabilir Red Hat .NET kanal etkinleştirin.
-    * Red Hat Enterprise 7 Server için kullanın:
-    
-         ```bash
-         subscription-manager repos --enable=rhel-7-server-dotnet-rpms
-         ```
-    
-    * Red Hat Enterprise 7 için iş istasyonu, kullanın:
-    
-        ```bash
-        subscription-manager repos --enable=rhel-7-workstation-dotnet-rpms
-         ```
-    
-    * Red Hat Enterprise 7 HPC işlem düğümü için kullanın:
-    
-        ```bash
-        subscription-manager repos --enable=rhel-7-hpc-node-dotnet-rpms
-        ```
-
-2. Scl aracını yükleyin.
-
-    ```bash
-    yum install scl-utils
-    ```
-    
-3. .NET Core yükleyin
+.NET Core yüklemek için RHEL sürümleri desteklenir:
 
 # <a name="net-core-2xtabnetcore2x"></a>[.NET core 2.x](#tab/netcore2x)
 
-.NET Core 2.0 yükleme SDK ve çalışma zamanı:
+En son yükleme bilgileri sahip olmak için izleyin [.NET Core 2.x SDK ve çalışma zamanı yükleyicisi yönergeleri](https://www.microsoft.com/net/download/linux-package-manager/rhel/sdk-current) için RHEL sürümlerinde desteklenir.
 
-   ```bash
-   yum install rh-dotnet20
-   ```
-
-.NET Core 2.0 SDK/Runtime ortamınız için etkinleştir:
-
-   ```bash
-   scl enable rh-dotnet20 bash
-   ```
-
-# <a name="net-core-1xtabnetcore1x"></a>[.NET Core 1.x](#tab/netcore1x)
+# <a name="net-core-1xtabnetcore1x"></a>[.NET core 1.x](#tab/netcore1x)
 
 **.NET core 1.1**
 
-.NET Core 1.1 yüklemek SDK ve çalışma zamanı:
+1. Herhangi bir kaldırma **önceki Önizleme** sisteminizi .NET Core sürümlerinden.
 
-   ```bash
-   yum install rh-dotnetcore11
-   ```
-
-.NET Core 1.1 SDK ve çalışma zamanı, ortamınız için etkinleştir:
-
-   ```bash
-   scl enable rh-dotnetcore11 bash
-   ```
-
+2.  Red Hat Enterprise Linux yükleme bilgileri en son .NET Core 1.1 için bkz: [.NET Core 1.1 Başlarken Kılavuzu](https://access.redhat.com/documentation/en-us/net_core/1.1/html/getting_started_guide/)
+     
 **.NET core 1.0**
 
-.NET yüklemek çekirdek 1.0 SDK ve çalışma zamanı:
+1. Herhangi bir kaldırma **önceki Önizleme** sisteminizi .NET Core sürümlerinden.
 
-   ```bash
-   yum install rh-dotnetcore10
-   ```
-
-.NET Core 1.0 SDK ve çalışma zamanı, ortamınız için etkinleştir:
-
-   ```bash
-   scl enable rh-dotnetcore10 bash
-   ```
-
----
-4. Çalıştırma `dotnet --version` başarılı yükleme kanıtlamak için komutu.
-
-     ```bash
-     dotnet --version
-     ```
+2.  Red Hat Enterprise Linux yükleme bilgileri en son .NET Core 1.0 için bkz: [.NET Core 1.0 Başlarken Kılavuzu](https://access.redhat.com/documentation/en-us/net_core/1.0/html/getting_started_guide/)
 
 Red Hat .NET kanal erişim kayıt Yardım için bkz: [.NET Core 1.1 Başlarken Kılavuzu, bölüm 1](https://access.redhat.com/documentation/en/net-core/1.1/paged/getting-started-guide/) Red Hat hızında.
 
-## <a name="install-net-core-for-ubuntu-1404-ubuntu-1604-ubuntu-1610--linux-mint-17-linux-mint-18-64-bit"></a>.NET Core Ubuntu 14.04, Ubuntu 16.04, Ubuntu 16.10 ve Linux Naneli 17, Linux Naneli 18 (64 bit) için yükleme
+---
 
-1. Herhangi bir kaldırma **önceki Önizleme** sisteminizi .NET Core sürümlerinden.
+## <a name="install-net-core-for-supported-ubuntu-and-linux-mint-distributionsversions-64-bit"></a>.NET Core Ubuntu ve Linux Naneli dağıtımları/için desteklenen sürümleri (64 bit) yükleyin
 
 # <a name="net-core-2xtabnetcore2x"></a>[.NET core 2.x](#tab/netcore2x)
 
-2. Microsoft Product anahtarı güvenilir olarak kaydedin.
+1. Herhangi bir kaldırma **önceki Önizleme** sisteminizi .NET Core sürümlerinden.
 
-   ```bash
-   curl https://packages.microsoft.com/keys/microsoft.asc | gpg --dearmor > microsoft.gpg
-   sudo mv microsoft.gpg /etc/apt/trusted.gpg.d/microsoft.gpg
-   ```
+2. .NET Core üzerinde 2.x desteklenen Ubuntu ve Linux Naneli dağıtımları/sürümleri (64 bit) yükleyin:
 
-3. Akış istediğiniz sürümü konak paketini ayarlayın.
+**.NET core 2.0**
 
-   **Ubuntu 17.10**
+|Çalışma zamanları / SDK'ları          |Ubuntu 17.10  |Ubuntu 16.04 / Linux Naneli 18|Ubuntu 14.04 / Linux Naneli 17|
+|-------------------------|--------------|----------------------------|----------------------------|
+|.NET çekirdeği çalışma zamanı 2.0.6  |[Bağlantı yükleyin](https://www.microsoft.com/net/download/linux-package-manager/ubuntu17-10/runtime-2.0.6)|[Bağlantı yükleyin](https://www.microsoft.com/net/download/linux-package-manager/ubuntu16-04/runtime-2.0.6)          |[Bağlantı yükleyin](https://www.microsoft.com/net/download/linux-package-manager/ubuntu14-04/runtime-2.0.6)            |
+|.NET çekirdeği çalışma zamanı 2.0.5  |[Bağlantı yükleyin](https://www.microsoft.com/net/download/linux-package-manager/ubuntu17-10/runtime-2.0.5)|[Bağlantı yükleyin](https://www.microsoft.com/net/download/linux-package-manager/ubuntu16-04/runtime-2.0.5)          |[Bağlantı yükleyin](https://www.microsoft.com/net/download/linux-package-manager/ubuntu14-04/runtime-2.0.5)            |
+|.NET core SDK 2.1.103    |[Bağlantı yükleyin](https://www.microsoft.com/net/download/linux-package-manager/ubuntu17-10/sdk-2.1.103)|[Bağlantı yükleyin](https://www.microsoft.com/net/download/linux-package-manager/ubuntu16-04/sdk-2.1.103)            |[Bağlantı yükleyin](https://www.microsoft.com/net/download/linux-package-manager/ubuntu14-04/sdk-2.1.103)            |
+|.NET core SDK 2.0.3      |[Bağlantı yükleyin](https://www.microsoft.com/net/download/linux-package-manager/ubuntu17-10/sdk-2.0.3)|[Bağlantı yükleyin](https://www.microsoft.com/net/download/linux-package-manager/ubuntu16-04/sdk-2.0.3)          |[Bağlantı yükleyin](https://www.microsoft.com/net/download/linux-package-manager/ubuntu14-04/sdk-2.0.3)            |
 
-   ```bash
-   sudo sh -c 'echo "deb [arch=amd64] https://packages.microsoft.com/repos/microsoft-ubuntu-artful-prod artful main" > /etc/apt/sources.list.d/dotnetdev.list'
-   sudo apt-get update
-   ```
-   **Ubuntu 17.04**
+**.NET core 2.1**
 
-   ```bash
-   sudo sh -c 'echo "deb [arch=amd64] https://packages.microsoft.com/repos/microsoft-ubuntu-zesty-prod zesty main" > /etc/apt/sources.list.d/dotnetdev.list'
-   sudo apt-get update
-   ```
+>[!IMPORTANT]
+> .NET Core 2.1 Visual Studio ile kullanmak için yapmanız [Visual Studio 2017 15.7 Preview 1 yüklemek ya da daha yeni](https://www.visualstudio.com/vs/preview).
 
-   **Ubuntu 16.04 / Linux Mint 18**
+|Çalışma zamanları / SDK'ları                  |Ubuntu 17.10    |Ubuntu 16.04 / Linux Naneli 18|Ubuntu 14.04 / Linux Naneli 17|
+|---------------------------------|----------------|----------------------------|----------------------------|
+|.NET çalışma zamanı 2.1.0-preview1 çekirdek |[Bağlantı yükleyin](https://www.microsoft.com/net/download/linux-package-manager/ubuntu17-10/runtime-2.1.0-preview1)|[Bağlantı yükleyin](https://www.microsoft.com/net/download/linux-package-manager/ubuntu16-04/runtime-2.1.0-preview1)            |[Bağlantı yükleyin](https://www.microsoft.com/net/download/linux-package-manager/ubuntu14-04/runtime-2.1.0-preview1)            |
+|.NET SDK 2.1.300-preview1 çekirdek   |[Bağlantı yükleyin](https://www.microsoft.com/net/download/linux-package-manager/ubuntu17-10/sdk-2.1.300-preview1)|[Bağlantı yükleyin](https://www.microsoft.com/net/download/linux-package-manager/ubuntu16-04/sdk-2.1.300-preview1)            |[Bağlantı yükleyin](https://www.microsoft.com/net/download/linux-package-manager/ubuntu14-04/sdk-2.1.300-preview1)            |
 
-   ```bash
-   sudo sh -c 'echo "deb [arch=amd64] https://packages.microsoft.com/repos/microsoft-ubuntu-xenial-prod xenial main" > /etc/apt/sources.list.d/dotnetdev.list'
-   sudo apt-get update
-   ```
+# <a name="net-core-1xtabnetcore1x"></a>[.NET core 1.x](#tab/netcore1x)
 
-   **Ubuntu 14.04 / Linux Mint 17**
+1. Herhangi bir kaldırma **önceki Önizleme** sisteminizi .NET Core sürümlerinden.
 
-   ```bash
-   sudo sh -c 'echo "deb [arch=amd64] https://packages.microsoft.com/repos/microsoft-ubuntu-trusty-prod trusty main" > /etc/apt/sources.list.d/dotnetdev.list'
-   sudo apt-get update
-   ```
+2. .NET Core üzerinde 1.x desteklenen Ubuntu ve Linux Naneli dağıtımları/sürümleri (64 bit) yükleyin:
 
-4. .NET Core yükleyin.
-
-   ```bash
-   sudo apt-get install dotnet-sdk-2.1.4
-   ```
-
-4. Çalıştırma `dotnet --version` başarılı yükleme kanıtlamak için komutu.
-
-   ```bash
-   dotnet --version
-   ```
-
-# <a name="net-core-1xtabnetcore1x"></a>[.NET Core 1.x](#tab/netcore1x)
-
-2. Akış istediğiniz sürümü konak paketini ayarlayın.
-
-   **Ubuntu 16.10**
-   
-   ```bash
-   sudo sh -c 'echo "deb [arch=amd64] https://apt-mo.trafficmanager.net/repos/dotnet-release/ yakkety main" > /etc/apt/sources.list.d/dotnetdev.list'
-   sudo apt-key adv --keyserver hkp://keyserver.ubuntu.com:80 --recv-keys B02C46DF417A0893
-   sudo apt-get update
-   ```
-
-  **Ubuntu 16.04 / Linux Mint 18**
-
-   ```bash
-   sudo sh -c 'echo "deb [arch=amd64] https://apt-mo.trafficmanager.net/repos/dotnet-release/ xenial main" > /etc/apt/sources.list.d/dotnetdev.list'
-   sudo apt-key adv --keyserver hkp://keyserver.ubuntu.com:80 --recv-keys B02C46DF417A0893
-   sudo apt-get update
-   ```
-    
-   **Ubuntu 14.04 / Linux Mint 17**
-
-   ```bash
-   sudo sh -c 'echo "deb [arch=amd64] https://apt-mo.trafficmanager.net/repos/dotnet-release/ trusty main" > /etc/apt/sources.list.d/dotnetdev.list'
-   sudo apt-key adv --keyserver hkp://keyserver.ubuntu.com:80 --recv-keys B02C46DF417A0893
-   sudo apt-get update
-   ```
-
-3. .NET yüklemek Ubuntu ya da Linux Naneli 1.x Çekirdek:
-
-   ```bash
-   sudo apt-get install dotnet-dev-1.0.4
-   ```
-
-4. Çalıştırma `dotnet --version` başarılı yükleme kanıtlamak için komutu.
-
-   ```bash
-   dotnet --version
-   ```
+| Çalışma zamanları / SDK'ları         |Ubuntu 16.04 / Linux Naneli 18|Ubuntu 14.04 / Linux Naneli 17|
+|-------------------------|----------------------------|----------------------------|
+|.NET çekirdeği çalışma zamanı 1.1.7  |[Bağlantı yükleyin](https://www.microsoft.com/net/download/thank-you/dotnet-runtime-1.1.7-linux-ubuntu-16.04-x64-binaries)            |[Bağlantı yükleyin](https://www.microsoft.com/net/download/thank-you/dotnet-runtime-1.1.7-linux-ubuntu-14.04-x64-binaries)            |
+|.NET çekirdeği çalışma zamanı 1.1.6  |[Bağlantı yükleyin](https://www.microsoft.com/net/download/thank-you/dotnet-runtime-1.1.6-linux-ubuntu-16.04-x64-binaries)            |[Bağlantı yükleyin](https://www.microsoft.com/net/download/thank-you/dotnet-runtime-1.1.6-linux-ubuntu-14.04-x64-binaries)            |
+|.NET çekirdeği çalışma zamanı 1.0.10 |[Bağlantı yükleyin](https://www.microsoft.com/net/download/thank-you/dotnet-runtime-1.0.10-linux-ubuntu-16.04-x64-binaries)            |[Bağlantı yükleyin](https://www.microsoft.com/net/download/thank-you/dotnet-runtime-1.0.10-linux-ubuntu-14.04-x64-binaries)            |
+|.NET çekirdeği çalışma zamanı 1.0.9  |[Bağlantı yükleyin](https://www.microsoft.com/net/download/thank-you/dotnet-runtime-1.0.9-linux-ubuntu-16.04-x64-binaries)            |[Bağlantı yükleyin](https://www.microsoft.com/net/download/thank-you/dotnet-runtime-1.0.9-linux-ubuntu-14.04-x64-binaries)            |
+|.NET core SDK 1.1.8      |[Bağlantı yükleyin](https://www.microsoft.com/net/download/thank-you/dotnet-sdk-1.1.8-linux-ubuntu-16.04-x64-binaries)            |[Bağlantı yükleyin](https://www.microsoft.com/net/download/thank-you/dotnet-sdk-1.1.8-linux-ubuntu-14.04-x64-binaries)            |
+|.NET core SDK 1.1.7      |[Bağlantı yükleyin](https://www.microsoft.com/net/download/thank-you/dotnet-sdk-1.1.7-linux-ubuntu-16.04-x64-binaries)            |[Bağlantı yükleyin](https://www.microsoft.com/net/download/thank-you/dotnet-sdk-1.1.7-linux-ubuntu-14.04-x64-binaries)            |
+|.NET core SDK 1.0.4      |[Bağlantı yükleyin](https://www.microsoft.com/net/download/thank-you/dotnet-sdk-1.0.4-linux-ubuntu-16.04-x64-binaries)            |[Bağlantı yükleyin](https://www.microsoft.com/net/download/thank-you/dotnet-sdk-1.0.4-linux-ubuntu-14.04-x64-binaries)            |
+|.NET core SDK 1.0.1      |[Bağlantı yükleyin](https://www.microsoft.com/net/download/thank-you/dotnet-sdk-1.0.1-linux-ubuntu-16.04-x64-binaries)            |[Bağlantı yükleyin](https://www.microsoft.com/net/download/thank-you/dotnet-sdk-1.0.1-linux-ubuntu-14.04-x64-binaries)            |
 
 ---
 
- ## <a name="install-net-core-for-debian-8-or-debian-9-64-bit"></a>.NET Core Debian 8 veya Debian 9 (64 bit) için yükleme
+## <a name="install-net-core-for-supported-debian-versions-64-bit"></a>.NET Core Debian için desteklenen sürümleri (64 bit) yükleyin
 
-.NET Core Debian 8 veya Debian 9 (64 bit) yüklemek için:
-
-1. Herhangi bir kaldırma **önceki Önizleme** sisteminizi .NET Core sürümlerinden.
+.NET Core desteklenen Debian sürümlerinde (64 bit) yüklemek için:
 
 > [!NOTE]
 > Bir kullanıcı tarafından denetlenen dizin sistemi tar.gz yükler Linux için gereklidir.
 
 # <a name="net-core-2xtabnetcore2x"></a>[.NET core 2.x](#tab/netcore2x)
 
-2. Sistem bileşenlerini yükleyin.
+1. Herhangi bir kaldırma **önceki Önizleme** sisteminizi .NET Core sürümlerinden.
 
-   ```bash
-   sudo apt-get update
-   sudo apt-get install curl libunwind8 gettext apt-transport-https
-   ```
-   
-3. Güvenilen Microsoft Product anahtarını kaydedin.
+2. .NET Core üzerinde 2.x desteklenen Debian sürümleri (64 bit) yükleyin:
 
-   ```bash
-   curl https://packages.microsoft.com/keys/microsoft.asc | gpg --dearmor > microsoft.gpg
-   sudo mv microsoft.gpg /etc/apt/trusted.gpg.d/microsoft.gpg
-   ```
-   
-4. Microsoft Product akışı kaydedin.
+**.NET core 2.0**
 
-   Debian 9 (Esnetme)
+|Çalışma zamanları / SDK'ları          |Debian 9       |Debian 8       |
+|-------------------------|---------------|---------------|
+|.NET çekirdeği çalışma zamanı 2.0.6  |[Bağlantı yükleyin](https://www.microsoft.com/net/download/linux-package-manager/debian9/runtime-2.0.6)   |[Bağlantı yükleyin](https://www.microsoft.com/net/download/linux-package-manager/debian8/runtime-2.0.6)   |
+|.NET çekirdeği çalışma zamanı 2.0.5  |[Bağlantı yükleyin](https://www.microsoft.com/net/download/linux-package-manager/debian9/runtime-2.0.5)   |[Bağlantı yükleyin](https://www.microsoft.com/net/download/linux-package-manager/debian8/runtime-2.0.5)   |
+|.NET core SDK 2.1.103    |[Bağlantı yükleyin](https://www.microsoft.com/net/download/linux-package-manager/debian9/sdk-2.1.103)   |[Bağlantı yükleyin](https://www.microsoft.com/net/download/linux-package-manager/debian8/sdk-2.1.103)   |
+|.NET core SDK 2.0.3      |[Bağlantı yükleyin](https://www.microsoft.com/net/download/linux-package-manager/debian9/sdk-2.0.3)   |[Bağlantı yükleyin](https://www.microsoft.com/net/download/linux-package-manager/debian8/sdk-2.0.3)   |
 
-   ```bash
-   sudo sh -c 'echo "deb [arch=amd64] https://packages.microsoft.com/repos/microsoft-debian-stretch-prod stretch main" > /etc/apt/sources.list.d/dotnetdev.list'
-   ```
-   
-   **Debian 8 (Jessie)**
-   
-   ```bash
-   sudo sh -c 'echo "deb [arch=amd64] https://packages.microsoft.com/repos/microsoft-debian-jessie-prod jessie main" > /etc/apt/sources.list.d/dotnetdev.list'
-   ```
-   
-5. .NET Core SDK yükleyin.
+**.NET core 2.1**
 
-   ```bash
-   sudo apt-get update
-   sudo apt-get install dotnet-sdk-2.0.0
-   ```
+>[!IMPORTANT]
+> .NET Core 2.1 Visual Studio ile kullanmak için yapmanız [Visual Studio 2017 15.7 Preview 1 yüklemek ya da daha yeni](https://www.visualstudio.com/vs/preview).
 
-6. DotNet YOLUNU ekleyin.
+|Çalışma zamanları / SDK'ları                  |Debian 9       |Debian 8       |
+|---------------------------------|---------------|---------------|
+|.NET çalışma zamanı 2.1.0-preview1 çekirdek |[Bağlantı yükleyin](https://www.microsoft.com/net/download/linux-package-manager/debian9/runtime-2.1.0-preview1)   |[Bağlantı yükleyin](https://www.microsoft.com/net/download/linux-package-manager/debian8/runtime-2.1.0-preview1)   |
+|.NET SDK 2.1.300-preview1 çekirdek   |[Bağlantı yükleyin](https://www.microsoft.com/net/download/linux-package-manager/debian9/sdk-2.1.300-preview1)   |[Bağlantı yükleyin](https://www.microsoft.com/net/download/linux-package-manager/debian8/sdk-2.1.300-preview1)   |
 
-   ```bash
-   export PATH=$PATH:$HOME/dotnet
-   ```
-   
-7. Çalıştırma `dotnet --version` başarılı yükleme kanıtlamak için komutu.
+# <a name="net-core-1xtabnetcore1x"></a>[.NET core 1.x](#tab/netcore1x)
 
-   ```bash
-   dotnet --version
-   ```   
-  
+1. Herhangi bir kaldırma **önceki Önizleme** sisteminizi .NET Core sürümlerinden.
 
-# <a name="net-core-1xtabnetcore1x"></a>[.NET Core 1.x](#tab/netcore1x)
+2. .NET yüklemek 1.x Debian 9 veya Debian 8 Çekirdek:
 
-2. Önkoşullar alın.
-
-   ```bash
-   sudo apt-get install curl libunwind8 gettext
-   ```
-
-3. .NET Core SDK ikili dosyaları (tarball) indirin.
-
-   ```bash
-   curl -sSL -o dotnet.tar.gz https://go.microsoft.com/fwlink/?linkid=848826
-   ```
-
-4. .NET Core SDK ikili dosyaları ayıklayın.
-
-   ```bash
-   sudo mkdir -p /opt/dotnet && sudo tar zxf dotnet.tar.gz -C /opt/dotnet
-   ```
-
-5. DotNet YOLUNU ekleyin.
-
-   ```bash
-   sudo ln -s /opt/dotnet/dotnet /usr/local/bin
-   ```
-
-6. Çalıştırma `dotnet --version` başarılı yükleme kanıtlamak için komutu.
-
-   ```bash
-   dotnet --version
-   ```
+* .NET çekirdeği çalışma zamanı 1.1.7 [bağlantı yükleyin](https://www.microsoft.com/net/download/thank-you/dotnet-runtime-1.1.7-linux-debian-x64-binaries)
+* .NET çekirdeği çalışma zamanı 1.1.6 [bağlantı yükleyin](https://www.microsoft.com/net/download/thank-you/dotnet-runtime-1.1.6-linux-debian-x64-binaries)
+* .NET çekirdeği çalışma zamanı 1.0.10 [bağlantı yükleyin](https://www.microsoft.com/net/download/thank-you/dotnet-runtime-1.0.10-linux-debian-x64-binaries)
+* .NET çekirdeği çalışma zamanı 1.0.9 [bağlantı yükleyin](https://www.microsoft.com/net/download/thank-you/dotnet-runtime-1.0.9-linux-debian-x64-binaries)
+* .NET core SDK 1.1.8 [bağlantı yükleyin](https://www.microsoft.com/net/download/thank-you/dotnet-sdk-1.1.8-linux-debian-x64-binaries)
+* .NET core SDK 1.1.7 [bağlantı yükleyin](https://www.microsoft.com/net/download/thank-you/dotnet-sdk-1.1.7-linux-debian-x64-binaries)
+* .NET core SDK 1.0.4 [bağlantı yükleyin](https://www.microsoft.com/net/download/thank-you/dotnet-sdk-1.0.4-linux-debian-x64-binaries)
+* .NET core SDK 1.0.1 [bağlantı yükleyin](https://www.microsoft.com/net/download/thank-you/dotnet-sdk-1.0.1-linux-debian-x64-binaries)
 
 ---
 
-## <a name="install-net-core-for-fedora-24-fedora-25-or-fedora-26-64-bit"></a>.NET Core Fedora 24, Fedora 25 veya Fedora 26 (64 bit) için yükleme
+## <a name="install-net-core-for-supported-fedora-versions-64-bit"></a>.NET Core Fedora için desteklenen sürümleri (64 bit) yükleyin
 
-.NET Core yüklemek için Fedora 26 veya Fedora 25 veya .NET Core 2.x 1.x Fedora 24 üzerinde:
-
-1. Herhangi bir kaldırma **önceki Önizleme** sisteminizi .NET Core sürümlerinden.
+.NET Core üzerinde desteklenen Fedora sürümlerini yüklemek için:
 
 > [!NOTE]
 > Bir kullanıcı tarafından denetlenen dizin sistemi tar.gz yükler Linux için gereklidir.
 
 # <a name="net-core-2xtabnetcore2x"></a>[.NET core 2.x](#tab/netcore2x)
 
-**Fedora 26 veya Fedora 25**
+1. Herhangi bir kaldırma **önceki Önizleme** sisteminizi .NET Core sürümlerinden.
 
-2. Microsoft imza anahtarı kaydedin.
+2. .NET Core üzerinde 2.x desteklenen Fedora sürümleri (64 bit) yükleyin:
 
-   ```bash
-   sudo rpm --import https://packages.microsoft.com/keys/microsoft.asc
-   ```
+**.NET core 2.0**
 
-3. Dotnet ürün akışı ekleyin.
+|Çalışma zamanları / SDK'ları          |Fedora 26 veya üzeri |Fedora 25 veya önceki |
+|-------------------------|-------------------|----------------------|
+|.NET çekirdeği çalışma zamanı 2.0.6  |[Bağlantı yükleyin](https://www.microsoft.com/net/download/linux-package-manager/fedora26/runtime-2.0.6)       |[Bağlantı yükleyin](https://www.microsoft.com/net/download/linux-package-manager/fedora25/runtime-2.0.6)           |
+|.NET çekirdeği çalışma zamanı 2.0.5  |[Bağlantı yükleyin](https://www.microsoft.com/net/download/linux-package-manager/fedora26/runtime-2.0.5)       |[Bağlantı yükleyin](https://www.microsoft.com/net/download/linux-package-manager/fedora25/runtime-2.0.5)           |
+|.NET core SDK 2.1.103    |[Bağlantı yükleyin](https://www.microsoft.com/net/download/linux-package-manager/fedora26/sdk-2.1.103)       |[Bağlantı yükleyin](https://www.microsoft.com/net/download/linux-package-manager/fedora25/sdk-2.1.103)           |
+|.NET core SDK 2.0.3      |[Bağlantı yükleyin](https://www.microsoft.com/net/download/linux-package-manager/fedora26/sdk-2.0.3)       |[Bağlantı yükleyin](https://www.microsoft.com/net/download/linux-package-manager/fedora25/sdk-2.0.3)           |
 
-   ```bash
-   sudo sh -c 'echo -e "[packages-microsoft-com-prod]\nname=packages-microsoft-com-prod \nbaseurl=https://packages.microsoft.com/yumrepos/microsoft-rhel7.3-prod\nenabled=1\ngpgcheck=1\ngpgkey=https://packages.microsoft.com/keys/microsoft.asc" > /etc/yum.repos.d/dotnetdev.repo'
-   ```
+**.NET core 2.1**
 
-4. .NET Core SDK yükleyin.
+>[!IMPORTANT]
+> .NET Core 2.1 Visual Studio ile kullanmak için yapmanız [Visual Studio 2017 15.7 Preview 1 yüklemek ya da daha yeni](https://www.visualstudio.com/vs/preview).
 
-   ```bash
-   sudo dnf update
-   sudo dnf install libunwind libicu
-   sudo dnf install dotnet-sdk-2.0.0
-   ```
+|Çalışma zamanları / SDK'ları                  |Fedora 26 veya üzeri |Fedora 25 veya önceki |
+|---------------------------------|-------------------|----------------------|
+|.NET çalışma zamanı 2.1.0-preview1 çekirdek |[Bağlantı yükleyin](https://www.microsoft.com/net/download/linux-package-manager/fedora26/runtime-2.1.0-preview1)       |[Bağlantı yükleyin](https://www.microsoft.com/net/download/linux-package-manager/fedora25/runtime-2.1.0-preview1)           |        |
+|.NET SDK 2.1.300-preview1 çekirdek   |[Bağlantı yükleyin](https://www.microsoft.com/net/download/linux-package-manager/fedora26/sdk-2.1.300-preview1)       |[Bağlantı yükleyin](https://www.microsoft.com/net/download/linux-package-manager/fedora25/sdk-2.1.300-preview1)           |
 
-5. DotNet YOLUNU ekleyin.
+# <a name="net-core-1xtabnetcore1x"></a>[.NET core 1.x](#tab/netcore1x)
 
-   ```bash
-   export PATH=$PATH:$HOME/dotnet
-   ```
+1. Herhangi bir kaldırma **önceki Önizleme** sisteminizi .NET Core sürümlerinden.
 
-# <a name="net-core-1xtabnetcore1x"></a>[.NET Core 1.x](#tab/netcore1x)
+2. .NET Core desteklenen 1.x Fedora sürümleri (64 bit) yükleyin:
 
 **Fedora 24**
 
-2. Önkoşullar alın.
+* .NET çekirdeği çalışma zamanı 1.1.7 [bağlantı yükleyin](https://www.microsoft.com/net/download/thank-you/dotnet-runtime-1.1.7-linux-fedora-24-x64-binaries)
+* .NET çekirdeği çalışma zamanı 1.1.6 [bağlantı yükleyin](https://www.microsoft.com/net/download/thank-you/dotnet-runtime-1.1.6-linux-fedora-24-x64-binaries)
+* .NET core SDK 1.1.8 [bağlantı yükleyin](https://www.microsoft.com/net/download/thank-you/dotnet-sdk-1.1.8-linux-fedora-24-x64-binaries)
+* .NET core SDK 1.1.7 [bağlantı yükleyin](https://www.microsoft.com/net/download/thank-you/dotnet-sdk-1.1.7-linux-fedora-24-x64-binaries)
+* .NET core SDK 1.0.1 [bağlantı yükleyin](https://www.microsoft.com/net/download/thank-you/dotnet-sdk-1.0.1-linux-debian-x64-binaries)
 
-   ```bash
-   sudo dnf install libunwind libicu
-   ```
+**Fedora 23**
 
-3. .NET Core SDK ikili (tarball) indirin.
+* .NET çekirdeği çalışma zamanı 1.0.9 [bağlantı yükleyin](https://www.microsoft.com/net/download/thank-you/dotnet-runtime-1.0.9-linux-fedora-23-x64-binaries)
+* .NET core SDK 1.0.4 [bağlantı yükleyin](https://www.microsoft.com/net/download/thank-you/dotnet-sdk-1.0.4-linux-fedora-23-x64-binaries)
+* .NET core SDK 1.0.1 [bağlantı yükleyin](https://www.microsoft.com/net/download/thank-you/dotnet-sdk-1.0.1-linux-fedora-23-x64-binaries)
 
-   ```bash
-   curl -sSL -o dotnet.tar.gz https://go.microsoft.com/fwlink/?linkid=848833
-   ```
-
-4. .NET Core SDK ikili dosyaları ayıklayın.
-
-   ```bash
-   sudo mkdir -p /opt/dotnet && sudo tar zxf dotnet.tar.gz -C /opt/dotnet
-   ```
-
-5. DotNet YOLUNU ekleyin.
-
-   ```bash
-   sudo ln -s /opt/dotnet/dotnet /usr/local/bin
-   ```
-   
 ---
 
-6. Çalıştırma `dotnet --version` başarılı yükleme kanıtlamak için komutu.
+## <a name="install-net-core-for-supported-centos-and-oracle-linux-distributionsversions-64-bit"></a>.NET Core desteklenen CentOS ve Oracle Linux için yükleme dağıtımları/sürümleri (64 bit)
 
-   ```bash
-   dotnet --version
-   ```
-
-## <a name="install-net-core-for-centos-71-64-bit--oracle-linux-71-64-bit"></a>.NET Core CentOS 7.1 (64 bit) ve Oracle Linux 7.1 (64 bit) için yükleme
-
-.NET Core CentOS 7.1 (64 bit) ve Oracle Linux 7.1 (64 bit) için yüklemek için:
-
-1. Herhangi bir kaldırma **önceki Önizleme** sisteminizi .NET Core sürümlerinden.
+Yüklemek için .NET Core desteklenen CentOS ve Oracle Linux dağıtımları/sürümleri (64 bit):
 
 > [!NOTE]
 > Bir kullanıcı tarafından denetlenen dizin sistemi tar.gz yükler Linux için gereklidir.
 
 # <a name="net-core-2xtabnetcore2x"></a>[.NET core 2.x](#tab/netcore2x)
 
-2. Microsoft imza anahtarı kaydedin.
+1. Herhangi bir kaldırma **önceki Önizleme** sisteminizi .NET Core sürümlerinden.
 
-   ```bash
-   sudo rpm --import https://packages.microsoft.com/keys/microsoft.asc
-   ```
+2. .NET Core yükleme 2.x desteklenen CentOS ve Oracle Linux dağıtımları/sürümleri (64 bit):
 
-3. Microsoft Product akışı ekleyin.
+**.NET core 2.0**
 
-   ```bash
-   sudo sh -c 'echo -e "[packages-microsoft-com-prod]\nname=packages-microsoft-com-prod \nbaseurl=https://packages.microsoft.com/yumrepos/microsoft-rhel7.3-prod\nenabled=1\ngpgcheck=1\ngpgkey=https://packages.microsoft.com/keys/microsoft.asc" > /etc/yum.repos.d/dotnetdev.repo'
-   ```
+* .NET çekirdeği çalışma zamanı 2.0.6 [bağlantı yükleyin](https://www.microsoft.com/net/download/linux-package-manager/centos/runtime-2.0.6)
+* .NET çekirdeği çalışma zamanı 2.0.5 [bağlantı yükleyin](https://www.microsoft.com/net/download/linux-package-manager/centos/runtime-2.0.5)
+* .NET core SDK 2.1.103 [bağlantı yükleyin](https://www.microsoft.com/net/download/linux-package-manager/centos/sdk-2.1.103)
+* .NET core SDK 2.0.3 [bağlantı yükleyin](https://www.microsoft.com/net/download/linux-package-manager/centos/sdk-2.0.3)
+ 
+**.NET core 2.1**
 
-4. .NET Core SDK yükleyin.
+>[!IMPORTANT]
+> .NET Core 2.1 Visual Studio ile kullanmak için yapmanız [Visual Studio 2017 15.7 Preview 1 yüklemek ya da daha yeni](https://www.visualstudio.com/vs/preview/).
 
-   ```bash
-   sudo yum update
-   sudo yum install libunwind libicu
-   sudo yum install dotnet-sdk-2.0.0
-   ```
+* .NET çekirdeği çalışma zamanı 2.1.0-preview1 [bağlantı yükleyin](https://www.microsoft.com/net/download/linux-package-manager/centos/runtime-2.1.0-preview1)
+* .NET core SDK 2.1.300-preview1 [bağlantı yükleyin](https://www.microsoft.com/net/download/linux-package-manager/centos/sdk-2.1.300-preview1)
 
-5. DotNet YOLUNUZU ekleme
+# <a name="net-core-1xtabnetcore1x"></a>[.NET core 1.x](#tab/netcore1x)
 
-   ```bash
-   export PATH=$PATH:$HOME/dotnet
-   ```
+1. Herhangi bir kaldırma **önceki Önizleme** sisteminizi .NET Core sürümlerinden.
 
-# <a name="net-core-1xtabnetcore1x"></a>[.NET Core 1.x](#tab/netcore1x)
+2. .NET Core yükleme 1.x desteklenen CentOS ve Oracle Linux dağıtımları/sürümleri (64 bit):
 
-2. Önkoşullar alın.
-
-   ```bash
-   sudo yum install libunwind libicu
-   ```
-   
-3. .NET Core SDK ikili (tarball) indirin.
-
-   ```bash
-   curl -sSL -o dotnet.tar.gz https://go.microsoft.com/fwlink/?linkid=848821
-   ```
-
-4. .NET Core SDK ikili dosyaları ayıklayın.
-
-   ```bash
-   sudo mkdir -p /opt/dotnet && sudo tar zxf dotnet.tar.gz -C /opt/dotnet
-   ```
-
-5. DotNet YOLUNU ekleyin.
-
-   ```bash
-   sudo ln -s /opt/dotnet/dotnet /usr/local/bin
-   ```
+* .NET çekirdeği çalışma zamanı 1.1.7 [bağlantı yükleyin](https://www.microsoft.com/net/download/thank-you/dotnet-runtime-1.1.7-linux-centos-x64-binaries)
+* .NET çekirdeği çalışma zamanı 1.1.6 [bağlantı yükleyin](https://www.microsoft.com/net/download/thank-you/dotnet-runtime-1.1.6-linux-centos-x64-binaries)
+* .NET çekirdeği çalışma zamanı 1.0.10 [bağlantı yükleyin](https://www.microsoft.com/net/download/thank-you/dotnet-runtime-1.0.10-linux-centos-x64-binaries)
+* .NET çekirdeği çalışma zamanı 1.0.9 [bağlantı yükleyin](https://www.microsoft.com/net/download/thank-you/dotnet-runtime-1.0.9-linux-centos-x64-binaries)
+* .NET core SDK 1.1.8 [bağlantı yükleyin](https://www.microsoft.com/net/download/thank-you/dotnet-sdk-1.1.8-linux-centos-x64-binaries)
+* .NET core SDK 1.1.7 [bağlantı yükleyin](https://www.microsoft.com/net/download/thank-you/dotnet-sdk-1.1.7-linux-centos-x64-binaries)
+* .NET core SDK 1.0.4 [bağlantı yükleyin](https://www.microsoft.com/net/download/thank-you/dotnet-sdk-1.0.4-linux-centos-x64-binaries)
+* .NET core SDK 1.0.1 [bağlantı yükleyin](https://www.microsoft.com/net/download/thank-you/dotnet-sdk-1.0.1-linux-centos-x64-binaries)
 
 ---
 
-6. Çalıştırma `dotnet --version` başarılı yükleme kanıtlamak için komutu.
+## <a name="install-net-core-for-supported-suse-linux-enterprise-server-and-opensuse-distributionsversions-64-bit"></a>.NET Core SUSE Linux Enterprise Server ve OpenSUSE dağıtımları/için desteklenen sürümleri (64 bit) yükleyin
 
-   ```bash
-   dotnet --version
-   ```
-
-## <a name="install-net-core-for-suse-linux-enterprise-server-64-bit"></a>.NET Core SUSE Linux Enterprise Server (64 bit) için yükleme
-
-.NET Core yüklemek için 2.x için SUSE Linux Enterprise Server (SLES) 12 SP2 (64 bit):
-
-1. Herhangi bir kaldırma **önceki Önizleme** sisteminizi .NET Core sürümlerinden.
-
-2. Dotnet ürün akışı ekleyin.
-
-   ```bash
-   sudo rpm --import https://packages.microsoft.com/keys/microsoft.asc
-   sudo sh -c 'echo -e "[packages-microsoft-com-prod]\nname=packages-microsoft-com-prod \nbaseurl=https://packages.microsoft.com/yumrepos/microsoft-rhel7.3-prod\nenabled=1\ngpgcheck=1\ngpgkey=https://packages.microsoft.com/keys/microsoft.asc" > /etc/zypp/repos.d/dotnetdev.repo'
-   ```
-
-3. .NET Core SDK yükleyin.
-
-   ```bash
-   sudo zypper update
-   sudo zypper install libunwind libicu
-   sudo zypper install dotnet-sdk-2.0.0
-   ```
-
-4. DotNet YOLUNU ekleyin.
-
-   ```bash
-   export PATH=$PATH:$HOME/dotnet
-   ```
-
-5. Çalıştırma `dotnet --version` başarılı yükleme kanıtlamak için komutu.
-
-   ```bash
-   dotnet --version
-   ```
-   
-## <a name="install-net-core-for-opensuse-64-bit"></a>.NET Core (64 bit) openSUSE için yükleyin
-
-.NET Core yüklemek için openSUSE veya .NET Core 2.x 1.x openSUSE (64 bit) için:
-
-1. Herhangi bir kaldırma **önceki Önizleme** sisteminizi .NET Core sürümlerinden.
-
-> [!NOTE]
-> Bir kullanıcı tarafından denetlenen dizin sistemi tar.gz yükler Linux için gereklidir.
+.NET Core yüklemek için desteklenen SUSE Linux Enterprise Server ve OpenSUSE dağıtımları/sürümleri (64 bit) 2.x için:
 
 # <a name="net-core-2xtabnetcore2x"></a>[.NET core 2.x](#tab/netcore2x)
 
-2. Microsoft imza anahtarı kaydedin.
+1. Herhangi bir kaldırma **önceki Önizleme** sisteminizi .NET Core sürümlerinden.
 
-   ```bash
-   sudo rpm --import https://packages.microsoft.com/keys/microsoft.asc
-   ```
+2. .NET Core üzerinde 2.x desteklenen SUSE Linux Enterprise Server ve OpenSUSE dağıtımları/sürümleri (64 bit) yükleyin:
 
-3. Dotnet ürün akışı ekleyin.
+**.NET core 2.0**
 
-   ```bash
-   sudo sh -c 'echo -e "[packages-microsoft-com-prod]\nname=packages-microsoft-com-prod \nbaseurl=https://packages.microsoft.com/yumrepos/microsoft-rhel7.3-prod\nenabled=1\ngpgcheck=1\ngpgkey=https://packages.microsoft.com/keys/microsoft.asc" > /etc/zypp/repos.d/dotnetdev.repo'
-   ``` 
+* .NET çekirdeği çalışma zamanı 2.0.6 [bağlantı yükleyin](https://www.microsoft.com/net/download/linux-package-manager/opensuse/runtime-2.0.6)
+* .NET çekirdeği çalışma zamanı 2.0.5 [bağlantı yükleyin](https://www.microsoft.com/net/download/linux-package-manager/opensuse/runtime-2.0.5)
+* .NET core SDK 2.1.103 [bağlantı yükleyin](https://www.microsoft.com/net/download/linux-package-manager/opensuse/sdk-2.1.103)
+* .NET core SDK 2.0.3 [bağlantı yükleyin](https://www.microsoft.com/net/download/linux-package-manager/opensuse/sdk-2.0.3)
+ 
+**.NET core 2.1**
 
-4. .NET Core SDK yükleyin.
+>[!IMPORTANT]
+> .NET Core 2.1 Visual Studio ile kullanmak için yapmanız [Visual Studio 2017 15.7 Preview 1 yüklemek ya da daha yeni](https://www.visualstudio.com/vs/preview).
 
-   ```bash
-   sudo zypper update
-   sudo zypper install libunwind libicu
-   sudo zypper install dotnet-sdk-2.0.0
-   ```
+* .NET çekirdeği çalışma zamanı 2.1.0-preview1 [bağlantı yükleyin](https://www.microsoft.com/net/download/linux-package-manager/opensuse/runtime-2.1.0-preview1)
+* .NET core SDK 2.1.300-preview1 [bağlantı yükleyin](https://www.microsoft.com/net/download/linux-package-manager/opensuse/sdk-2.1.300-preview1)
 
-5. DotNet YOLUNU ekleyin.
+# <a name="net-core-1xtabnetcore1x"></a>[.NET core 1.x](#tab/netcore1x)
 
-   ```bash
-   export PATH=$PATH:$HOME/dotnet
-   ```
+1. Herhangi bir kaldırma **önceki Önizleme** sisteminizi .NET Core sürümlerinden.
 
-# <a name="net-core-1xtabnetcore1x"></a>[.NET Core 1.x](#tab/netcore1x)
+2. .NET Core üzerinde 1.x desteklenen SUSE Linux Enterprise Server ve OpenSUSE dağıtımları/sürümleri (64 bit) yükleyin:
 
-2. Önkoşullar alın.
+**SUSE Linux Enterprise Server 13.2**
 
-   ```bash
-   sudo zypper install libunwind libicu
-   ```
+* .NET çekirdeği çalışma zamanı 1.1.7 [bağlantı yükleyin](https://www.microsoft.com/net/download/thank-you/dotnet-runtime-1.1.7-linux-opensuse-13.2-x64-binaries)
+* .NET çekirdeği çalışma zamanı 1.1.6 [bağlantı yükleyin](https://www.microsoft.com/net/download/thank-you/dotnet-runtime-1.1.6-linux-opensuse-13.2-x64-binaries)
+* .NET core SDK 1.1.7 [bağlantı yükleyin](https://www.microsoft.com/net/download/thank-you/dotnet-sdk-1.1.7-linux-opensuse-13.2-x64-binaries)
 
-3. .NET Core SDK ikili (tarball) indirin.
+**openSUSE 24**
 
-   ```bash
-   curl -sSL -o dotnet.tar.gz https://go.microsoft.com/fwlink/?linkid=848824
-   ```
+* .NET core SDK 1.0.4 [bağlantı yükleyin](https://www.microsoft.com/net/download/thank-you/dotnet-sdk-1.0.4-linux-opensuse-24-x64-binaries)
+* .NET core SDK 1.0.1 [bağlantı yükleyin](https://www.microsoft.com/net/download/thank-you/dotnet-sdk-1.0.1-linux-opensuse-24-x64-binaries)
 
-4. .NET Core SDK ikili dosyaları ayıklayın.
-   
-   ```bash
-   sudo mkdir -p /opt/dotnet && sudo tar zxf dotnet.tar.gz -C /opt/dotnet
-   ```
-
-5. DotNet YOLUNU ekleyin.
-
-   ```bash
-   sudo ln -s /opt/dotnet/dotnet /usr/local/bin
-   ```
-   
 ---
-
-6. Çalıştırma `dotnet --version` başarılı yükleme kanıtlamak için komutu.
-
-   ```bash
-   dotnet --version
-   ```
 
 > [!IMPORTANT]
-> Desteklenen bir Linux dağıtım/sürümünde .NET Core 2.x yükleme sorunları varsa başvurun [2.0 bilinen sorunlar](https://github.com/dotnet/core/tree/master/release-notes/2.0) yüklü dağıtımları/sürümü için konu. 
->
-> Desteklenen bir Linux dağıtım/sürümünde .NET Core 1.x yükleme sorunları varsa başvurun [1.0.0 bilinen sorunlar](https://github.com/dotnet/core/blob/master/release-notes/1.0/1.0.0-known-issues.md) ve [1.0.1 bilinen sorunlar](https://github.com/dotnet/core/blob/master/release-notes/1.0/1.0.1-known-issues.md) yüklü dağıtımları konuları / sürümleri.
+> Desteklenen bir Linux dağıtım/sürümünde .NET Core yükleme sorunları varsa, yüklü dağıtımları/sürümü için aşağıdaki konulara bakın:
+> * [.NET core 2.1 bilinen sorunlar](https://github.com/dotnet/core/tree/master/release-notes/2.1)
+> * [.NET core 2.0 bilinen sorunlar](https://github.com/dotnet/core/tree/master/release-notes/2.0)
+> * [.NET core 1.1 bilinen sorunlar](https://github.com/dotnet/core/blob/master/release-notes/1.1)
+> * [.NET core 1.0 bilinen sorunlar](https://github.com/dotnet/core/blob/master/release-notes/1.0)

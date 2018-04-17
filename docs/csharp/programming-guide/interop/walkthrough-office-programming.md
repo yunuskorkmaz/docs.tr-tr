@@ -1,5 +1,5 @@
 ---
-title: "İzlenecek yol: Office Programlama (C# ve Visual Basic)"
+title: 'İzlenecek yol: Office Programlama (C# ve Visual Basic)'
 ms.date: 07/20/2015
 ms.prod: .net
 ms.technology:
@@ -13,19 +13,18 @@ helpviewer_keywords:
 - Office programming [C#]
 - Office programming [Visual Basic]
 ms.assetid: 519cff31-f80b-4f0e-a56b-26358d0f8c51
-caps.latest.revision: 
 author: BillWagner
 ms.author: wiwagn
-ms.openlocfilehash: 684fe023d46d3522aecd3cbd4d89e7f9ee92140f
-ms.sourcegitcommit: d2da0142247ef42a219a5d2907f153e62dc6ea0d
+ms.openlocfilehash: 7108ef10333b2ec7aded1b8f768c2953283ac625
+ms.sourcegitcommit: 9a4fe1a1c37b26532654b4bbe22d702237950009
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/01/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="walkthrough-office-programming-c-and-visual-basic"></a>İzlenecek yol: Office Programlama (C# ve Visual Basic)
 Visual Studio, Microsoft Office programlama artıran C# ve Visual Basic özellikleri sunar. Yararlı C# özelliklerini adlandırılmış ve isteğe bağlı bağımsız değişkenler içerir ve dönüş türü değerleri `dynamic`. COM programlamada, atlayabilirsiniz `ref` Dizinli Özellikler anahtar sözcüğü ve kazanç erişim. Visual Basic'de özellikler lambda ifadeleri ve koleksiyon başlatıcıları deyimlerinde otomatik uygulanan özellikler içerir.
 
-Her iki dilde kullanıcının bilgisayarına birincil birlikte çalışma derlemeleri (PIA) dağıtmadan COM bileşenleri ile etkileşim derlemeleri dağıtımını sağlar türü bilgilerinin katıştırma etkinleştirin. Daha fazla bilgi için bkz: [izlenecek yol: yönetilen derlemelerden türler katıştırma](http://msdn.microsoft.com/library/b28ec92c-1867-4847-95c0-61adfe095e21).  
+Her iki dilde kullanıcının bilgisayarına birincil birlikte çalışma derlemeleri (PIA) dağıtmadan COM bileşenleri ile etkileşim derlemeleri dağıtımını sağlar türü bilgilerinin katıştırma etkinleştirin. Daha fazla bilgi için bkz: [izlenecek yol: yönetilen derlemelerden türler katıştırma](https://msdn.microsoft.com/library/b28ec92c-1867-4847-95c0-61adfe095e21).  
   
 Bu yönergeler, bu özellikler Office programlama bağlamındaki gösterir, ancak bu özelliklerin de genel programlama yararlıdır. Bu kılavuzda, bir Excel çalışma kitabı oluşturmak için Excel eklenti uygulama kullanın. Ardından, çalışma kitabı bağlantısını içeren bir Word belgesi oluşturun. Son olarak, etkinleştirme ve devre dışı PIA bağımlılık konusuna bakın.  
   
@@ -169,7 +168,7 @@ Bu kılavuzu tamamlamak için Microsoft Office Excel ve Microsoft Office Word'ü
   
      Daha fazla bilgi için bkz: [nasıl yapılır: derleme içeriği görüntüle](../../../framework/app-domains/how-to-view-assembly-contents.md).  
   
-5.  Çift **bildirim** simgesi. Proje tarafından başvurulan öğeleri içeren bir derleme listesi içeren bir pencere görüntülenir. `Microsoft.Office.Interop.Excel`ve `Microsoft.Office.Interop.Word` listesinde dahil edilmez. Projenizi derlemenizi aktarılan türleri, bir PIA başvuruları olmadığından gereklidir. Bu dağıtım kolaylaştırır. PIA kullanıcının bilgisayarda mevcut olması gerekmez ve uygulamanın bir PIA belirli bir sürümünü dağıtımı gerektirmediğinden koşuluyla gerekli API'leri tüm sürümlerinde mevcut uygulamaları birden çok Office sürümü ile çalışmak için tasarlanabilir .  
+5.  Çift **bildirim** simgesi. Proje tarafından başvurulan öğeleri içeren bir derleme listesi içeren bir pencere görüntülenir. `Microsoft.Office.Interop.Excel` ve `Microsoft.Office.Interop.Word` listesinde dahil edilmez. Projenizi derlemenizi aktarılan türleri, bir PIA başvuruları olmadığından gereklidir. Bu dağıtım kolaylaştırır. PIA kullanıcının bilgisayarda mevcut olması gerekmez ve uygulamanın bir PIA belirli bir sürümünü dağıtımı gerektirmediğinden koşuluyla gerekli API'leri tüm sürümlerinde mevcut uygulamaları birden çok Office sürümü ile çalışmak için tasarlanabilir .  
   
      PIA dağıtımını artık gerekli olmadığından, Office, önceki sürümleri de dahil olmak üzere birden çok sürümü ile çalışır, Gelişmiş senaryolarda bir uygulama oluşturabilirsiniz. Ancak, yalnızca kodunuzu çalıştığınız Office sürümünde kullanılamaz API'leri kullanmıyorsa bu çalışır. Her zaman belirli bir API'yi Office'in önceki sürümleriyle birlikte çalışmaya neden önerilmez kullanılabilir önceki bir sürümünü ve için olup açık değildir.  
   
@@ -196,7 +195,7 @@ Bu kılavuzu tamamlamak için Microsoft Office Excel ve Microsoft Office Word'ü
   
 8.  Visual Studio'da sırasıyla **temiz çözüm** üzerinde **yapı** tamamlanmış projeyi temizlemek için menüsü.  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
+## <a name="see-also"></a>Ayrıca bkz.  
  [Otomatik uygulanan özellikler (Visual Basic)](../../../visual-basic/programming-guide/language-features/procedures/auto-implemented-properties.md)  
  [Otomatik uygulanan özellikler (C#)](../../../csharp/programming-guide/classes-and-structs/auto-implemented-properties.md)  
  [Öğe Başlatıcıları](../../../visual-basic/programming-guide/language-features/collection-initializers/index.md)  
@@ -210,8 +209,8 @@ Bu kılavuzu tamamlamak için Microsoft Office Excel ve Microsoft Office Word'ü
  [Lambda ifadeleri (Visual Basic)](../../../visual-basic/programming-guide/language-features/procedures/lambda-expressions.md)  
  [Lambda ifadeleri (C#)](../../../csharp/programming-guide/statements-expressions-operators/lambda-expressions.md)  
  [Nasıl yapılır: COM Birlikte Çalışma Programlamada Dizin Oluşturulmuş Özellikleri Kullanma](../../../csharp/programming-guide/interop/how-to-use-indexed-properties-in-com-interop-rogramming.md)  
- [İzlenecek yol: Microsoft Office Bütünleştirilmiş Kodlarından Tür Bilgilerini Katıştırma](http://msdn.microsoft.com/library/85b55e05-bc5e-4665-b6ae-e1ada9299fd3)  
- [İzlenecek yol: Yönetilen Bütünleştirilmiş Kodlardan Türler Katıştırma](http://msdn.microsoft.com/library/b28ec92c-1867-4847-95c0-61adfe095e21)  
- [İnceleme: Excel için İlk VSTO Eklentinizi Oluşturma](http://msdn.microsoft.com/library/a855e2be-3ecf-4112-a7f5-ec0f7fad3b5f)  
+ [İzlenecek yol: Microsoft Office Bütünleştirilmiş Kodlarından Tür Bilgilerini Katıştırma](https://msdn.microsoft.com/library/85b55e05-bc5e-4665-b6ae-e1ada9299fd3(v=vs.100))  
+ [İzlenecek yol: Yönetilen Bütünleştirilmiş Kodlardan Türler Katıştırma](https://msdn.microsoft.com/library/b28ec92c-1867-4847-95c0-61adfe095e21)  
+ [İnceleme: Excel için İlk VSTO Eklentinizi Oluşturma](https://msdn.microsoft.com/library/a855e2be-3ecf-4112-a7f5-ec0f7fad3b5f)  
  [COM Birlikte Çalışma](../../../visual-basic/programming-guide/com-interop/index.md)  
  [Birlikte çalışabilirlik](../../../csharp/programming-guide/interop/index.md)

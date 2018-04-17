@@ -11,11 +11,11 @@ ms.devlang: dotnet
 ms.assetid: 8b49079c-6ede-429a-92d7-ecd2fda1ab0e
 ms.workload:
 - dotnetcore
-ms.openlocfilehash: 6aa5abd071355b1c1a367b35e9521e6b1af9c945
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: a14e8dbf3f9be9910a2c50cfbcb3f52f4e7385e1
+ms.sourcegitcommit: 9a4fe1a1c37b26532654b4bbe22d702237950009
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="build-net-core-from-source"></a>.NET Core kaynağından derleme
 
@@ -24,7 +24,7 @@ Bu makalede oluşturmak ve kendi sürümlerini .NET Core dağıtmak isteyen geli
 
 ## <a name="build-the-clr-from-source"></a>Kaynağından CLR derleme
 
-.NET CoreCLR için kaynak kodunu bulunabilir [ `dotnet/coreclr` github'daki](https://github.com/dotnet/coreclr/).
+.NET CoreCLR için kaynak kodunu bulunabilir [dotnet/coreclr](https://github.com/dotnet/coreclr/) github'daki.
 
 Yapı şu anda üzerinde aşağıdaki önkoşullar bağlıdır:
 * [Git](https://git-scm.com/)
@@ -32,7 +32,7 @@ Yapı şu anda üzerinde aşağıdaki önkoşullar bağlıdır:
 * [Python](https://www.python.org/)
 * C++ derleyicisi.
 
-Yükledikten sonra bu Önkoşullar yüklendi, derleme betiğindeki çağırarak CLR oluşturabilirsiniz (`build.cmd` , Windows'da veya `build.sh` Linux ve macOS) temeline [CoreCLR depo](https://github.com/dotnet/coreclr/).
+Yükledikten sonra bu Önkoşullar yüklendi, derleme betiğindeki çağırarak CLR oluşturabilirsiniz (`build.cmd` , Windows'da veya `build.sh` Linux ve macOS) temeline [dotnet/coreclr](https://github.com/dotnet/coreclr/) deposu.
 
 Bileşenlerini yükleme (OS) işletim sistemine bağlı olarak farklılık gösterir. Belirli işletim sisteminizi yapı yönergelerine bakın:
 
@@ -82,12 +82,12 @@ Yeni, çalışma zamanı kullanmak için iki temel teknikler şunlardır:
  2. **Corerun.exe paketlenmemiş taleplere DLL'leri kullanarak bir uygulamayı çalıştırmak için kullandığınız**.
     Bu depo, ayrıca herhangi bir bağımlılığı NuGet üzerinde almaz corerun.exe adlı basit bir ana bilgisayar tanımlar.
     Ana bilgisayar gerçekten gerekli DLL'leri alınacağı bildirmeniz gerekir ve el ile araya toplamak zorunda.
-    Bu teknik tüm testler tarafından kullanılan [CoreCLR depoyu](https://github.com/dotnet/coreclr)ve ön birim testi gibi hızlı yerel 'düzenleme-derleme-debug' döngü için kullanışlıdır.
+    Bu teknik tüm testler tarafından kullanılan [dotnet/coreclr](https://github.com/dotnet/coreclr) depodaki ve ön birim testi gibi hızlı yerel 'düzenleme-derleme-debug' döngü için kullanışlıdır.
     Bkz: [yürütme .NET Core uygulamalarla CoreRun.exe](https://github.com/dotnet/coreclr/blob/master/Documentation/workflow/UsingCoreRun.md) Bu teknik kullanımıyla ilgili ayrıntılar için.
 
 ## <a name="build-the-cli-from-source"></a>CLI kaynağından derleme
 
-.NET Core CLI için kaynak kodunu bulunabilir [ `dotnet/cli` github'daki](https://github.com/dotnet/cli/).
+.NET Core CLI için kaynak kodunu bulunabilir [dotnet/CLI](https://github.com/dotnet/cli/) github'daki.
 
 .NET Core CLI oluşturmak için aşağıdaki makinenize yüklü gerekir.
 

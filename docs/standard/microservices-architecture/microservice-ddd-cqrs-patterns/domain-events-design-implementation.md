@@ -1,7 +1,7 @@
 ---
 title: Etki alanı olaylar. Tasarım ve uygulama
 description: Kapsayıcılı .NET uygulamaları için .NET mikro mimarisi | Etki alanı olayları, tasarım ve uygulama
-keywords: Docker, Microservices, ASP.NET, Container
+keywords: Docker, mikro, ASP.NET, kapsayıcı
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 12/11/2017
@@ -11,11 +11,11 @@ ms.topic: article
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: af6a6b73c790577cebf301075f2ff7e90960ea62
-ms.sourcegitcommit: 935d5267c44f9bce801468ef95f44572f1417e8c
+ms.openlocfilehash: c770ae0286842241288c39c003456c52879c8706
+ms.sourcegitcommit: 9a4fe1a1c37b26532654b4bbe22d702237950009
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/28/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="domain-events-design-and-implementation"></a>Etki alanı olayları: tasarım ve uygulama
 
@@ -76,7 +76,7 @@ Diğer taraftan, etki alanı olayları kullanırsanız, bu yaklaşımı kullanar
 
 **Şekil 9-15**. Etki alanı başına birden çok eylem işleme
 
-Mikro hizmet'in davranışını depoları veya bir uygulama API gibi altyapı nesnelerinden kullanacağından olay işleyicileri genellikle uygulama katmanında yayımlanır. Bu anlamda olay işleyicileri hem de uygulama katmanı parçası olacak şekilde, komut işleyicilerine benzer. Bir komutu yalnızca bir kez işlenmesi önemli farktır. Bir etki alanı olay olabileceğinden sıfır işlenen veya *n* , çünkü zaman, birden çok alıcıya veya farklı bir amaç için her işleyici ile olay işleyicileri tarafından alınan.
+Mikro hizmet'in davranışını depoları veya bir uygulama API gibi altyapı nesnelerinden kullanacağından olay işleyicileri genellikle uygulama katmanında yayımlanır. Bu anlamda olay işleyicileri hem de uygulama katmanı parçası olacak şekilde, komut işleyicilerine benzer. Bir komutu yalnızca bir kez işlenmesi önemli farktır. Bir etki alanı olay olabileceğinden sıfır işlenen veya *n* zaman birden çok alıcıya veya farklı bir amaç için her işleyici ile olay işleyicileri tarafından alınabilmesi için.
 
 Açık bir etki alanı olay başına işleyici sayısı olasılığını geçerli kodunuzu etkilemeden pek çok daha fazla etki alanı kural eklemenize olanak sağlar. Örneğin, bir olaydan sonra sağ gerçekleştirileceğini aşağıdaki iş kuralı uygulama birkaç olay işleyicileri (veya tek bile) ekleme olarak kadar kolay olabilir:
 
@@ -340,7 +340,7 @@ Belirtildiği gibi açıkça yan etkileri etki alanınızda değişiklikleri uyg
 -   **Greg Young. Bir etki alanı olay nedir?**
     [*http://codebetter.com/gregyoung/2010/04/11/what-is-a-domain-event/*](http://codebetter.com/gregyoung/2010/04/11/what-is-a-domain-event/)
 
--   **Jan Stenberg. Etki alanı olayları ve nihai tutarlılık**
+-   **Oca Stenberg. Etki alanı olayları ve nihai tutarlılık**
     [*https://www.infoq.com/news/2015/09/domain-events-consistency*](https://www.infoq.com/news/2015/09/domain-events-consistency)
 
 -   **Jimmy Bogard. Daha iyi bir etki alanı olayları düzeni**
@@ -355,16 +355,16 @@ Belirtildiği gibi açıkça yan etkileri etki alanınızda değişiklikleri uyg
 -   **Tony Truong. Etki alanı olayları desen örneği**
     [*http://www.tonytruong.net/domain-events-pattern-example/*](http://www.tonytruong.net/domain-events-pattern-example/)
 
--   **Udi Dahan. Etki alanı modelleri tam oluşturma kapsüllenmiş**
+-   **UDI Dahan. Etki alanı modelleri tam oluşturma kapsüllenmiş**
     [*http://udidahan.com/2008/02/29/how-to-create-fully-encapsulated-domain-models/*](http://udidahan.com/2008/02/29/how-to-create-fully-encapsulated-domain-models/)
 
--   **Udi Dahan. Etki alanı olayları – alın 2**
+-   **UDI Dahan. Etki alanı olayları – alın 2**
     [*http://udidahan.com/2008/08/25/domain-events-take-2/*](http://udidahan.com/2008/08/25/domain-events-take-2/%20)
 
--   **Udi Dahan. Etki alanı olayları – Salvation**
+-   **UDI Dahan. Etki alanı olayları – Salvation**
     [*http://udidahan.com/2009/06/14/domain-events-salvation/*](http://udidahan.com/2009/06/14/domain-events-salvation/)
 
--   **Jan Kronquist. Olmayan etki alanı olayları yayınlamak için bunları döndüren!**
+-   **Oca Kronquist. Olmayan etki alanı olayları yayınlamak için bunları döndüren!**
     [*https://blog.jayway.com/2013/06/20/dont-publish-domain-events-return-them/*](https://blog.jayway.com/2013/06/20/dont-publish-domain-events-return-them/)
 
 -   **Cesar de la Torre. Etki alanı olayları vs. DDD ve mikro mimarileri tümleştirme olayları**

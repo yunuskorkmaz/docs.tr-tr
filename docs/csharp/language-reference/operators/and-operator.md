@@ -39,7 +39,7 @@ ms.lasthandoff: 04/09/2018
 ## <a name="example"></a>Örnek  
  [!code-csharp[csRefOperators#38](../../../csharp/language-reference/operators/codesnippet/CSharp/and-operator_2.cs)]  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
+## <a name="see-also"></a>Ayrıca bkz.  
  [C# başvurusu](../../../csharp/language-reference/index.md)  
  [C# Programlama Kılavuzu](../../../csharp/programming-guide/index.md)  
  [C# İşleçleri](../../../csharp/language-reference/operators/index.md)

@@ -1,7 +1,7 @@
 ---
-title: "Paketler, metapackages ve çerçeveleri"
-description: "Paketler, metapackages ve çerçeveleri terminolojisi öğrenin."
-keywords: .NET, .NET Core
+title: Paketler, metapackages ve çerçeveleri
+description: Paketler, metapackages ve çerçeveleri terminolojisi öğrenin.
+keywords: .NET, .NET core
 author: richlander
 ms.author: mairaw
 ms.date: 06/20/2016
@@ -11,11 +11,11 @@ ms.devlang: dotnet
 ms.assetid: 609b0845-49e7-4864-957b-21ffe1b93bf2
 ms.workload:
 - dotnetcore
-ms.openlocfilehash: 85f20594844025655bbfb590364324631bd8e695
-ms.sourcegitcommit: 1c0b0f082b3f300e54b4d069b317ac724c88ddc3
+ms.openlocfilehash: f9b98fb38390e91c7a144ff5585c0a26824303dc
+ms.sourcegitcommit: 9a4fe1a1c37b26532654b4bbe22d702237950009
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/16/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="packages-metapackages-and-frameworks"></a>Paketler, metapackages ve çerçeveleri
 
@@ -78,6 +78,7 @@ Metapackages kullanmanın avantajları şunlardır:
 Anahtar .NET Core metapackages şunlardır:
 
 - [Microsoft.NETCore.App](https://www.nuget.org/packages/Microsoft.NETCore.App) -.NET Core dağıtım parçası olan kitaplıkları açıklar. Kurar [ `.NETCoreApp` framework](https://github.com/dotnet/core-setup/blob/release/1.1.0/pkg/projects/Microsoft.NETCore.App/Microsoft.NETCore.App.pkgproj). Bağımlı küçük üzerinde `NETStandard.Library`.
+- [Microsoft.AspNetCore.All](https://www.nuget.org/packages/Microsoft.AspNetCore.All) -ASP.NET Core, Entity Framework Core ve ASP.NET Core ve Entity Framework Çekirdek tarafından kullanılan iç ve üçüncü taraf bağımlılıkları desteklenen tüm paketleri içerir. Bkz: [ASP.NET Core Microsoft.AspNetCore.All metapackage 2.x](/aspnet/core/fundamentals/metapackage) daha fazla bilgi için.
 - [Microsoft.NETCore.Portable.Compatibility](https://www.nuget.org/packages/Microsoft.NETCore.Portable.Compatibility) -mscorlib tabanlı taşınabilir sınıf kitaplıkları (.NET Core üzerinde çalıştırmak için PCLs) etkinleştirmek uyumluluk cepheleri kümesi.
 
 ## <a name="frameworks"></a>çerçeveler
@@ -86,7 +87,7 @@ Anahtar .NET Core metapackages şunlardır:
 
 Örneğin, [System.IO.FileSystem](https://www.nuget.org/packages/System.IO.FileSystem) aşağıdaki çerçevelerini destekler:
 
-- .NETFramework,Version=4.6
+- . NETFramework, sürüm 4.6 =
 - . NETStandard, sürüm = 1,3
 - 6 Xamarin platformları (örneğin, xamarinios10)
 
@@ -111,7 +112,7 @@ Yukarıdaki resimde bu ilişkiyi görebilirsiniz. *API* hedefler ve tanımlar *f
 - `netstandard`
 - `netcoreapp`
 
-### <a name="net-standard"></a>.NET Standard
+### <a name="net-standard"></a>.NET standart
 
 .NET standart (hedef framework ad: `netstandard`) framework tarafından tanımlanan ve üstünde oluşturulmuş API'leri temsil eden [.NET standart](../standard/net-standard.md). Birden çok çalışma zamanları üzerinde çalıştırmak için tasarlanmıştır kitaplıkları bu framework hedeflemelidir. Üzerindeki tüm .NET standart uyumlu çalışma zamanı, .NET Core, .NET Framework ve Mono/Xamarin gibi desteklenecektir. Bu çalışma zamanları her bağlı olarak hangi API'leri uyguladıkları .NET standart sürümlerinin bir kümesini destekler.
 

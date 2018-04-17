@@ -1,12 +1,9 @@
 ---
 title: Kopyalama ve Sabitleme
-ms.custom: 
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.technology:
+- dotnet-clr
 ms.topic: article
 helpviewer_keywords:
 - pinning, interop marshaling
@@ -14,38 +11,38 @@ helpviewer_keywords:
 - interop marshaling, copying
 - interop marshaling, pinning
 ms.assetid: 0059f576-e460-4e70-b257-668870e420b8
-caps.latest.revision: "8"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 11739d35d3a6d845feb1f6d9544f6ea347a9942d
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.workload:
+- dotnet
+ms.openlocfilehash: c785c7bc9160cb252aad61fea00cce0d9a7eacdf
+ms.sourcegitcommit: 9a4fe1a1c37b26532654b4bbe22d702237950009
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="copying-and-pinning"></a>Kopyalama ve Sabitleme
 Verileri hazırlama, birlikte çalışabilirlik Sıralayıcı kopyalayabilir veya sıralanmış veri sabitleyin. Veri kopyalama verilerin bir kopyasını tek bir yerden bellek başka bir bellek konuma yerleştirir. Bir değer türü kopyalama arasındaki farklar aşağıda gösterilmiştir ve bir tür kopyalama başvuruya göre yönetilmeyen bellek yönetilen geçirildi.  
   
- ![Değer türleri değer ve başvuru tarafından geçirilen](../../../docs/framework/interop/media/interopmarshalcopy.gif "interopmarshalcopy")  
+ ![Değer türleri değer ve başvuru tarafından geçirilen](./media/interopmarshalcopy.gif "interopmarshalcopy")  
 Değer ve başvuru tarafından geçirilen değer türleri  
   
  Yöntem bağımsız değişkenleri değere göre geçirilen yönetilmeyen koda yığında değerleri olarak hazırlanırlar. Kopyalama doğrudan bir işlemdir. Başvuruya göre geçirilen bağımsız değişkenler işaretçileri yığında geçirilir. Başvuru türleri de değer ve başvuru tarafından geçirilir. Aşağıdaki çizimde gösterildiği gibi değeri tarafından geçirilen başvuru türleri kopyalanan sabitlenmiş ya.  
   
- ![COM interop](../../../docs/framework/interop/media/interopmarshalpin.gif "interopmarshalpin")  
+ ![COM birlikte çalışma](./media/interopmarshalpin.gif "interopmarshalpin")  
 Değer ve başvuru tarafından geçirilen başvuru türleri  
   
  Bu nedenle ortak dil çalışma zamanındaki atık toplayıcısı tarafından yeniden konumlandırılmasını tutma geçerli bellek konumuna verileri geçici olarak sabitleme kilitler. Sıralayıcı kopyalama yükünü azaltmak ve performansı geliştirmek için veri sabitler. Veri türü kopyaladığınız veya Hazırlama işlemi sırasında sabitlenmiş olup olmadığını belirler.  Sabitleme otomatik olarak gerçekleştirilir gibi nesneler için sıralama sırasında <xref:System.String>, bellek kullanarak el ile de sabitleyebilirsiniz ancak <xref:System.Runtime.InteropServices.GCHandle> sınıfı.  
   
 ## <a name="formatted-blittable-classes"></a>Biçimlendirilmiş Blittable sınıfları  
- Biçimlendirilmiş [blittable](../../../docs/framework/interop/blittable-and-non-blittable-types.md) sınıfları (biçimlendirilmiş) düzeni sabit ve hem de genel veri temsili yönetilen ve yönetilmeyen bellek. Bu tür hazırlama gerektirdiğinde, öbek nesnesinde bir işaretçi Aranan doğrudan geçirilir. Aranan işaretçiyi tarafından başvurulan bellek konumuna içeriğini değiştirebilirsiniz.  
+ Biçimlendirilmiş [blittable](blittable-and-non-blittable-types.md) sınıfları (biçimlendirilmiş) düzeni sabit ve hem de genel veri temsili yönetilen ve yönetilmeyen bellek. Bu tür hazırlama gerektirdiğinde, öbek nesnesinde bir işaretçi Aranan doğrudan geçirilir. Aranan işaretçiyi tarafından başvurulan bellek konumuna içeriğini değiştirebilirsiniz.  
   
 > [!NOTE]
 >  Çıkış veya giriş/çıkış parametresi işaretlenmişse Aranan bellek içeriğini değiştirebilirsiniz. Buna karşılık, aranan gibi sıralamakta parametresi ayarlandığında içeriğini değiştirme biçimlendirilmiş blittable türleri için varsayılan değer olan kaçınmalısınız. In nesneyi değiştirme aynı sınıf için bir tür kitaplığı dışarı aktardığınızda sorunları oluşturur ve arası grup çağrı yapmak için kullanılır.  
   
 ## <a name="formatted-non-blittable-classes"></a>Biçimlendirilmiş Blittable olmayan sınıfları  
- Biçimlendirilmiş [blittable olmayan](../../../docs/framework/interop/blittable-and-non-blittable-types.md) sınıfları (biçimlendirilmiş) düzeni sabit ancak veri temsili yönetilen ve yönetilmeyen bellekte farklıdır. Veri dönüştürme aşağıdaki koşullarda gerektirebilir:  
+ Biçimlendirilmiş [blittable olmayan](blittable-and-non-blittable-types.md) sınıfları (biçimlendirilmiş) düzeni sabit ancak veri temsili yönetilen ve yönetilmeyen bellekte farklıdır. Veri dönüştürme aşağıdaki koşullarda gerektirebilir:  
   
 -   Blittable olmayan sınıf değerine göre sıralanmış, aranan veri yapısının bir işaretçi alır.  
   
@@ -86,8 +83,8 @@ Değer ve başvuru tarafından geçirilen başvuru türleri
   
  Zaman bir <xref:System.Text.StringBuilder?displayProperty=nameWithType> değeri, iç arabellek başvuru Sıralayıcı geçişleri tarafından geçirilen **StringBuilder** doğrudan çağırana. Çağıran ve çağrılan arabellek boyutunu kabul etmeniz gerekir. Arayan oluşturmaktan sorumlu bir **StringBuilder** yeterli uzunluğu. Aranan arabellek değil taşması emin olmak için gerekli önlemleri almalıdır. **StringBuilder** olduğu değeri tarafından geçirilen türler başvuru kural için bir özel parametreler olduğu gibi varsayılan olarak geçirilir. Bu her zaman geçirilen olarak giriş/çıkış.  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- [Varsayılan Hazırlama Davranışı](../../../docs/framework/interop/default-marshaling-behavior.md)  
- [Bellek yönetimi ile birlikte çalışma Sıralayıcı](http://msdn.microsoft.com/library/417206ce-ee3e-4619-9529-0c0b686c7bee)  
- [Tek yönlü öznitelikleri](http://msdn.microsoft.com/library/241ac5b5-928e-4969-8f58-1dbc048f9ea2)  
- [Birlikte Çalışma için Hazırlama](../../../docs/framework/interop/interop-marshaling.md)
+## <a name="see-also"></a>Ayrıca bkz.  
+ [Varsayılan Hazırlama Davranışı](default-marshaling-behavior.md)  
+ [Bellek yönetimi ile birlikte çalışma Sıralayıcı](https://msdn.microsoft.com/library/417206ce-ee3e-4619-9529-0c0b686c7bee(v=vs.100))  
+ [Tek yönlü öznitelikleri](https://msdn.microsoft.com/library/241ac5b5-928e-4969-8f58-1dbc048f9ea2(v=vs.100))  
+ [Birlikte Çalışma için Hazırlama](interop-marshaling.md)
