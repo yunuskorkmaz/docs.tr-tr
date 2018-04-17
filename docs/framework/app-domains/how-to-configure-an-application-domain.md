@@ -1,12 +1,13 @@
 ---
-title: "Nasıl yapılır: Uygulama Etki Alanını Yapılandırma"
-ms.custom: 
+title: 'Nasıl yapılır: Uygulama Etki Alanını Yapılandırma'
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-bcl
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-bcl
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - csharp
@@ -16,16 +17,17 @@ helpviewer_keywords:
 - application domains, configuring
 - ApplicationBase property
 ms.assetid: 07ea8438-7a34-49f0-a7e8-3d6ff7e4a482
-caps.latest.revision: "9"
+caps.latest.revision: 9
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 1024d41d99b9752fbbf8ef9458a8396d91c68fd0
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.workload:
+- dotnet
+ms.openlocfilehash: d8db75edec8e80e0e137593a424f12575cfc747b
+ms.sourcegitcommit: 9a4fe1a1c37b26532654b4bbe22d702237950009
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="how-to-configure-an-application-domain"></a>Nasıl yapılır: Uygulama Etki Alanını Yapılandırma
 Ortak dil çalışma zamanı kullanarak yeni bir uygulama etki alanı için yapılandırma bilgilerini sağlayabilir <xref:System.AppDomainSetup> sınıfı. Kendi uygulama etki alanları oluştururken en önemli özelliktir <xref:System.AppDomainSetup.ApplicationBase%2A>. Diğer **AppDomainSetup** özellikleri, belirli bir uygulama etki yapılandırmak için çoğunlukla çalışma zamanı ana bilgisayarı tarafından kullanılır.  
@@ -42,6 +44,6 @@ Ortak dil çalışma zamanı kullanarak yeni bir uygulama etki alanı için yap�
  [!code-csharp[ADApplicationBase#2](../../../samples/snippets/csharp/VS_Snippets_CLR/ADApplicationBase/CS/source2.cs#2)]
  [!code-vb[ADApplicationBase#2](../../../samples/snippets/visualbasic/VS_Snippets_CLR/ADApplicationBase/VB/source2.vb#2)]  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- [Uygulama etki alanları ile programlama](http://msdn.microsoft.com/library/bd36055b-56bd-43eb-b4d8-820c37172131)  
+## <a name="see-also"></a>Ayrıca bkz.  
+ [Uygulama etki alanları ile programlama](application-domains.md#programming-with-application-domains)  
  [Uygulama Etki Alanlarını Kullanma](../../../docs/framework/app-domains/use.md)

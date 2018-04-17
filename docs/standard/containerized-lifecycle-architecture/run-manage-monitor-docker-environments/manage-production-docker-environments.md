@@ -1,18 +1,18 @@
 ---
-title: "Üretim Docker ortamlarını yönetebilir"
-description: "Microsoft Platformu ve araçları ile kapsayıcılı Docker uygulama yaşam döngüsü"
-keywords: Docker, Microservices, ASP.NET, Container
+title: Üretim Docker ortamlarını yönetebilir
+description: Microsoft Platformu ve araçları ile kapsayıcılı Docker uygulama yaşam döngüsü
+ms.prod: .net
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 09/22/2017
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: c962543004c88b0a6413cc22d8bdddf954af66f8
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: 72ae92c89ed9b51815016205e20b09fc4dced1e1
+ms.sourcegitcommit: 9a4fe1a1c37b26532654b4bbe22d702237950009
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="manage-production-docker-environments"></a>Üretim Docker ortamlarını yönetebilir
 

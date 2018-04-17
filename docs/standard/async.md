@@ -13,11 +13,11 @@ ms.assetid: 1e38e9d9-8284-46ee-a15f-199adc4f26f4
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: f2dddc21dfb124fe97c397a156743981a67e4037
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: 85e30292fdc0e0e529eacdd328d4515bba5ee3e8
+ms.sourcegitcommit: 9a4fe1a1c37b26532654b4bbe22d702237950009
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="async-overview"></a>Zaman uyumsuz genel bakış
 
@@ -41,4 +41,14 @@ Zaman uyumsuz kod aşağıdaki özelliklere sahiptir:
 
 ## <a name="whats-next"></a>Sonraki adım nedir?
 
-Zaman uyumsuz kavramları ve programlama derinlemesine bir bakış için bkz: [zaman uyumsuz derinlemesine](async-in-depth.md) ve [görev tabanlı zaman uyumsuz programlama](~/docs/standard/parallel-programming/task-based-asynchronous-programming.md).
+Daha fazla bilgi için bkz: [zaman uyumsuz derinlemesine](async-in-depth.md) konu.
+
+[Zaman uyumsuz programlama desenleri](/asynchronous-programming-patterns/index.md) konu .NET içinde desteklenen üç zaman uyumsuz programlama desenleri genel bir bakış sağlar:  
+  
+-   [Zaman uyumsuz programlama modeli (APM)](asynchronous-programming-patterns/asynchronous-programming-model-apm.md) (eski)  
+  
+-   [Olay tabanlı zaman uyumsuz desen (EAP)](asynchronous-programming-patterns/event-based-asynchronous-pattern-eap.md) (eski)  
+  
+-   [Görev tabanlı zaman uyumsuz desen (TAP)](asynchronous-programming-patterns/task-based-asynchronous-pattern-tap.md) (yeni geliştirme projeleri için önerilir)  
+
+Görev tabanlı önerilen programlama modeli hakkında daha fazla bilgi için bkz: [görev tabanlı zaman uyumsuz programlama](parallel-programming/task-based-asynchronous-programming.md) konu.
