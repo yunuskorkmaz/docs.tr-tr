@@ -1,1 +1,0 @@
-.NET Framework öznitelikleri
