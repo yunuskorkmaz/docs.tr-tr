@@ -1,0 +1,1 @@
+Güvenli Karma Algoritması sürüm 1.0 (SHA1)

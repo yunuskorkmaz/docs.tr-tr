@@ -1,0 +1,1 @@
+Denetlenen sıradaki öğenin türü.

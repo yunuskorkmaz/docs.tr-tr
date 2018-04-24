@@ -1,0 +1,1 @@
+Matris dönüşümleri için <xref:System.Numerics.Vector2>, <xref:System.Numerics.Vector3>, ve <xref:System.Numerics.Vector4> örnekleri satırlar olarak temsil: vektör *v* tarafından bir matris dönüştürülmüş *M* ile *vM*  çarpma.

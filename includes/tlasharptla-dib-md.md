@@ -1,0 +1,1 @@
+cihazdan bağımsız bit eşlem (DIB)

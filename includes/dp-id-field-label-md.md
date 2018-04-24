@@ -1,0 +1,1 @@
+Bağımlılık özelliği tanımlayıcı alanı:

@@ -1,0 +1,1 @@
+Karşılık gelen bir bağımlılık özelliğinin çözümlemesiyle bu türe ilişkin her bir genel özelliğe ve olaya dolaylı olarak erişebilirsiniz. Bu bağımlılık özelliği adlı genel statik alandır **XProperty** veya **XEvent**, burada X karşılık gelen bir özelliktir.

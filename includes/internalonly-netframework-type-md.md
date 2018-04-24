@@ -1,0 +1,1 @@
+Bu tür, .NET Framework altyapısını destekler ve doğrudan kodunuzdan kullanılmaya yönelik değildir.

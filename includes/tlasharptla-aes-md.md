@@ -1,0 +1,1 @@
+Gelişmiş Şifreleme Standardı (AES)
