@@ -1,24 +1,26 @@
 ---
-title: "LINQ-SQL güvenlik"
-ms.custom: 
+title: LINQ-SQL güvenlik
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-ado
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-ado
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: d49787f7-414e-4c71-aa33-80a5895536b1
-caps.latest.revision: "2"
+caps.latest.revision: 2
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.workload: dotnet
-ms.openlocfilehash: 0ee361c27bd14f0266b2b86f315f9c091e049c12
-ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
+ms.workload:
+- dotnet
+ms.openlocfilehash: 96951b3b3c8a6ee93a83ba24f6c6a19c3e36381c
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="security-in-linq-to-sql"></a>LINQ-SQL güvenlik
 Güvenlik riskleri, her zaman bir veritabanına bağlandığında yok. LINQ-SQL SQL Server'daki verilerle çalışmak için bazı yeni yollarını içerebilir ancak herhangi bir ek güvenlik mekanizması sağlamaz.  
@@ -32,7 +34,7 @@ Güvenlik riskleri, her zaman bir veritabanına bağlandığında yok. LINQ-SQL 
 ## <a name="connection-strings"></a>Bağlantı dizeleri  
  Bağlantı dizeleri parolaları kullanmanızı mümkün olduğunca kaçınılmalıdır. Yalnızca bir bağlantı dizesi, kendi içinde bir güvenlik riski oluşturur, ancak bağlantı dizesini de düz metin olarak nesne modeli ya da dış eşleme dosyası Nesne İlişkisel Tasarımcısı veya SQLMetal komut satırı aracını kullanırken eklenebilir. (Bu bağlantı dizesinde varsa) nesne modeli veya dış eşleme dosyası dosya sistemi üzerinden erişimi olan herkes bağlantı parolası görebilir.  
   
- Bu tür riskleri en aza indirmek için güvenilen bir bağlantıyla yapmak için tümleşik güvenliğini kullan [!INCLUDE[ssNoVersion](../../../../../../includes/ssnoversion-md.md)]. Bu yaklaşımı kullanarak, bir parola bağlantı dizesinde depolamak gerekmez. Daha fazla bilgi için bkz: [SQL Server Güvenlik](../../../../../../docs/framework/data/adonet/sql/sql-server-security.md).  
+ Bu tür riskleri en aza indirmek için tümleşik güvenlik SQL Server ile güvenilir bağlantı yapmak için kullanın. Bu yaklaşımı kullanarak, bir parola bağlantı dizesinde depolamak gerekmez. Daha fazla bilgi için bkz: [SQL Server Güvenlik](../../../../../../docs/framework/data/adonet/sql/sql-server-security.md).  
   
  Tümleşik güvenlik olmaması durumunda bir düz metin parola bağlantı dizesinde gerekir. Artan düzende risk, bağlantı dizenizi güvenli hale getirmek için en iyi yolu aşağıdaki gibidir:  
   

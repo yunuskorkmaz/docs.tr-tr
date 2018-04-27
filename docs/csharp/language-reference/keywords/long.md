@@ -1,5 +1,5 @@
 ---
-title: "long (C# Başvurusu)"
+title: long (C# Başvurusu)
 ms.date: 03/14/2017
 ms.prod: .net
 ms.technology:
@@ -11,18 +11,18 @@ f1_keywords:
 helpviewer_keywords:
 - long keyword [C#]
 ms.assetid: f9b24319-1f39-48be-a42b-d528ee28a7fd
-caps.latest.revision: 
+caps.latest.revision: 17
 author: BillWagner
 ms.author: wiwagn
-ms.openlocfilehash: 7f18bed80550b293195961fd9d42491dd571cbaf
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 4f11c904aadc5cd27482072e9f6f97236c0cdce2
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="long-c-reference"></a>long (C# Başvurusu)
 
-`long`Aşağıdaki tabloda gösterilen aralığı ve boyutu göre değerleri depolayan tamsayı türü gösterir.  
+`long` Aşağıdaki tabloda gösterilen aralığı ve boyutu göre değerleri depolayan tamsayı türü gösterir.  
   
 |Tür|Aralık|Boyut|.NET Framework türü|  
 |----------|-----------|----------|-------------------------|  
@@ -30,7 +30,7 @@ ms.lasthandoff: 11/21/2017
   
 ## <a name="literals"></a>Sabit değerler 
 
-Bildirme ve başlatma bir `long` değişken ondalık değişmez değer, onaltılık bir hazır değer atama veya (C# 7 için değişmez değer bir ikili başlayarak). 
+Bildirme ve başlatma bir `long` değişken ondalık değişmez değer, onaltılık bir hazır değer atama veya (C# ile 7.0 için değişmez değer bir ikili başlayarak). 
 
 Aşağıdaki örnekte, ondalık sayı olarak, onaltılık temsil 4,294,967,296 tamsayılar eşit ve ikili değişmez değerler atanır `long` değerleri.  
   
@@ -39,7 +39,7 @@ Aşağıdaki örnekte, ondalık sayı olarak, onaltılık temsil 4,294,967,296 t
 > [!NOTE] 
 > Önek kullanması `0x` veya `0X` onaltılık değişmez değeri ve öneki belirtmek için `0b` veya `0B` ikili bir hazır değer belirtmek için. Ondalık değişmez değerler, önek vardır. 
 
-C# 7 ile okunabilirliği artırmak birkaç özellik eklenmiştir başlatılıyor. 
+C# 7.0 ile okunabilirliği artırmak birkaç özellik eklenmiştir başlatılıyor. 
  - C# 7.0 sağlar alt çizgi karakteri kullanımını `_`, basamak ayırıcı olarak.
  - C# 7.2 verir `_` önekten sonra bir ikili ya da onaltılık değişmez değeri basamak ayırıcısı olarak kullanılacak. Ondalık bir hazır değer önde gelen bir alt çizgi olan izin verilen değil.
 
@@ -111,9 +111,9 @@ long y = (long)3.0;   // OK: explicit conversion
 ## <a name="see-also"></a>Ayrıca Bkz.  
  <xref:System.Int64>  
  [C# başvurusu](../../../csharp/language-reference/index.md)  
- [C# programlama kılavuzu](../../../csharp/programming-guide/index.md)  
- [C# anahtar sözcükleri](../../../csharp/language-reference/keywords/index.md)  
- [Tam sayı türleri tablosu](../../../csharp/language-reference/keywords/integral-types-table.md)  
- [Yerleşik türler tablosu](../../../csharp/language-reference/keywords/built-in-types-table.md)  
- [Örtük sayısal dönüşümler tablosu](../../../csharp/language-reference/keywords/implicit-numeric-conversions-table.md)  
- [Açık sayısal dönüşümler tablosu](../../../csharp/language-reference/keywords/explicit-numeric-conversions-table.md)
+ [C# Programlama Kılavuzu](../../../csharp/programming-guide/index.md)  
+ [C# Anahtar Sözcükleri](../../../csharp/language-reference/keywords/index.md)  
+ [Tam Sayı Türleri Tablosu](../../../csharp/language-reference/keywords/integral-types-table.md)  
+ [Yerleşik Türler Tablosu](../../../csharp/language-reference/keywords/built-in-types-table.md)  
+ [Örtük Sayısal Dönüştürmeler Tablosu](../../../csharp/language-reference/keywords/implicit-numeric-conversions-table.md)  
+ [Açık Sayısal Dönüştürmeler Tablosu](../../../csharp/language-reference/keywords/explicit-numeric-conversions-table.md)

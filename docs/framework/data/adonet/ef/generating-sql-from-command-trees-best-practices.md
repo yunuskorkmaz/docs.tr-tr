@@ -1,24 +1,26 @@
 ---
-title: "SQL komut ağaçlarını - en iyi uygulamaları oluşturma"
-ms.custom: 
+title: SQL komut ağaçlarını - en iyi uygulamaları oluşturma
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-ado
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-ado
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 71ef6a24-4c4f-4254-af3a-ffc0d855b0a8
-caps.latest.revision: "3"
+caps.latest.revision: 3
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.workload: dotnet
-ms.openlocfilehash: d68194ab83a6606337a33668470411ed8b1c6957
-ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
+ms.workload:
+- dotnet
+ms.openlocfilehash: 037d1eaa8d781d012cde7a1bd3b08aa7003edd77
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="generating-sql-from-command-trees---best-practices"></a>SQL komut ağaçlarını - en iyi uygulamaları oluşturma
 Çıktı sorgu komut ağaçlarını yakından sorguları SQL'de ifade model. Ancak, SQL bir çıkış komut ağacından oluştururken sağlayıcısı yazıcılarına ilişkin ortak bazı zorluklar mevcuttur. Bu konuda bu zorluklar anlatılmaktadır. Sonraki konusundaki örnek sağlayıcısı bu güçlükleri gösterilmektedir.  
@@ -147,7 +149,7 @@ ON b.y = d.z
  İfadeler yeniden kullanılabilir geçirilen sorgu komut ağacındaki [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)]. Her bir ifadenin yalnızca bir kez sorgu komutu ağacında görünür varsayalım değil.  
   
 ## <a name="mapping-primitive-types"></a>İlkel türler eşleme  
- Tüm olası değerler uyacak şekilde, kavramsal (EDM) türleri sağlayıcısı türlerinin eşlerken, geniş türü (Int32) eşlenmesi gerekir. Ayrıca, BLOB türleri gibi birçok işlem için kullanılamaz türler için eşleme kaçının (örneğin, `ntext` içinde [!INCLUDE[ssNoVersion](../../../../../includes/ssnoversion-md.md)]).  
+ Tüm olası değerler uyacak şekilde, kavramsal (EDM) türleri sağlayıcısı türlerinin eşlerken, geniş türü (Int32) eşlenmesi gerekir. Ayrıca, BLOB türleri gibi birçok işlem için kullanılamaz türler için eşleme kaçının (örneğin, `ntext` SQL Server'daki).  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
  [SQL Üretimi](../../../../../docs/framework/data/adonet/ef/sql-generation.md)

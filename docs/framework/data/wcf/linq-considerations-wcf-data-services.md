@@ -1,12 +1,13 @@
 ---
-title: "LINQ konuları (WCF Veri Hizmetleri)"
-ms.custom: 
+title: LINQ konuları (WCF Veri Hizmetleri)
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework-oob
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - csharp
@@ -16,25 +17,26 @@ helpviewer_keywords:
 - querying the data service [WCF Data Services]
 - WCF Data Services, querying
 ms.assetid: cc4ec9e9-348f-42a6-a78e-1cd40e370656
-caps.latest.revision: "5"
+caps.latest.revision: 5
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 4f6742294c570501b20646c89455c7856f393f7d
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: df596093333aa35b89f8d7ed36f817a457e48fda
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="linq-considerations-wcf-data-services"></a>LINQ konuları (WCF Veri Hizmetleri)
-Bu konuda hangi LINQ sorgularını oluşur ve kullanırken yürütülen yolu hakkında bilgi verilmektedir [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] istemci ve uygulayan bir veri hizmeti sorgulamak için LINQ kullanma sınırlamaları [!INCLUDE[ssODataFull](../../../../includes/ssodatafull-md.md)]. [!INCLUDE[crabout](../../../../includes/crabout-md.md)]oluşturma ve sorguları yürütme bir [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)]-veri hizmeti temel bkz [veri hizmeti sorgulanırken](../../../../docs/framework/data/wcf/querying-the-data-service-wcf-data-services.md).  
+Bu konuda hangi LINQ sorgularını oluşur ve kullanırken yürütülen yolu hakkında bilgi verilmektedir [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] istemci ve uygulayan bir veri hizmeti sorgulamak için LINQ kullanma sınırlamaları [!INCLUDE[ssODataFull](../../../../includes/ssodatafull-md.md)]. [!INCLUDE[crabout](../../../../includes/crabout-md.md)] oluşturma ve sorguları yürütme bir [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)]-veri hizmeti temel bkz [veri hizmeti sorgulanırken](../../../../docs/framework/data/wcf/querying-the-data-service-wcf-data-services.md).  
   
 ## <a name="composing-linq-queries"></a>Çıktısından LINQ sorguları  
- LINQ sorguları uygulayan nesneler koleksiyonunu oluşturan olanak tanır <xref:System.Collections.Generic.IEnumerable%601>. Her iki **hizmet Başvurusu Ekle** iletişim kutusunda [!INCLUDE[vs_current_short](../../../../includes/vs-current-short-md.md)] ve DataSvcUtil.exe aracı bir gösterimini üretmek için kullanılan bir [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] öğesinden devralınan bir varlık kapsayıcı sınıfı olarak hizmet <xref:System.Data.Services.Client.DataServiceContext>, yanı akışlarında döndürülen varlıklar temsil eden nesneler. Bu araçları ayrıca akışları hizmet tarafından sunulan koleksiyonlar için varlık kapsayıcı sınıfındaki özellikleri oluşturur. Dönüş veri hizmeti yalıtan sınıfının bu özelliklerin her biri bir <xref:System.Data.Services.Client.DataServiceQuery%601>. Çünkü <xref:System.Data.Services.Client.DataServiceQuery%601> uygulayan sınıf <xref:System.Linq.IQueryable%601> LINQ tarafından tanımlanan arabirimi istemci kitaplığı tarafından bir sorgu isteği veri hizmetine gönderilen URI içine çevrilen veri hizmeti tarafından sunulan akışları bir LINQ Sorgu oluşturma yürütme.  
+ LINQ sorguları uygulayan nesneler koleksiyonunu oluşturan olanak tanır <xref:System.Collections.Generic.IEnumerable%601>. Her iki **hizmet Başvurusu Ekle** Visual Studio iletişim kutusunda ve DataSvcUtil.exe aracı bir gösterimini üretmek için kullanılan bir [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] öğesinden devralınan bir varlık kapsayıcı sınıfı olarak hizmet <xref:System.Data.Services.Client.DataServiceContext>, yanı akışlarında döndürülen varlıklar temsil eden nesneler. Bu araçları ayrıca akışları hizmet tarafından sunulan koleksiyonlar için varlık kapsayıcı sınıfındaki özellikleri oluşturur. Dönüş veri hizmeti yalıtan sınıfının bu özelliklerin her biri bir <xref:System.Data.Services.Client.DataServiceQuery%601>. Çünkü <xref:System.Data.Services.Client.DataServiceQuery%601> uygulayan sınıf <xref:System.Linq.IQueryable%601> LINQ tarafından tanımlanan arabirimi istemci kitaplığı tarafından bir sorgu isteği veri hizmetine gönderilen URI içine çevrilen veri hizmeti tarafından sunulan akışları bir LINQ Sorgu oluşturma yürütme.  
   
 > [!IMPORTANT]
->  LINQ sözdiziminde ifade sorguları kümesi tarafından kullanılan URI sözdizimi etkin olandan daha geniş [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] Veri Hizmetleri. A <xref:System.NotSupportedException> hedef veri hizmetindeki bir URI sorgu eşlenemiyor tetiklenir. [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)][desteklenmeyen LINQ yöntemleri](../../../../docs/framework/data/wcf/linq-considerations-wcf-data-services.md#unsupportedMethods) bu konuda.  
+>  LINQ sözdiziminde ifade sorguları kümesi tarafından kullanılan URI sözdizimi etkin olandan daha geniş [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] Veri Hizmetleri. A <xref:System.NotSupportedException> hedef veri hizmetindeki bir URI sorgu eşlenemiyor tetiklenir. [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)] [desteklenmeyen LINQ yöntemleri](../../../../docs/framework/data/wcf/linq-considerations-wcf-data-services.md#unsupportedMethods) bu konuda.  
   
  Aşağıdaki örnek döndüren bir LINQ Sorgu olduğu `Orders` birden fazla $30 bir nakliye maliyeti ve en son sevk tarihten başlayarak sonuçları sevkiyat tarihine göre sıralar:  
   
@@ -176,14 +178,14 @@ http://localhost:12345/Northwind.svc/Orders?Orderby=ShippedDate&?filter=Freight 
 |Projeksiyon ve işleçler filtreleme|Konumsal bir bağımsız değişken kabul filtreleme işleçler ve aşağıdaki projeksiyon karşı desteklenmeyen bir <xref:System.Data.Services.Client.DataServiceQuery%601>:<br /><br /> -   <xref:System.Linq.Enumerable.Join%60%604%28System.Collections.Generic.IEnumerable%7B%60%600%7D%2CSystem.Collections.Generic.IEnumerable%7B%60%601%7D%2CSystem.Func%7B%60%600%2C%60%602%7D%2CSystem.Func%7B%60%601%2C%60%602%7D%2CSystem.Func%7B%60%600%2C%60%601%2C%60%603%7D%2CSystem.Collections.Generic.IEqualityComparer%7B%60%602%7D%29><br />-   <xref:System.Linq.Enumerable.Select%60%602%28System.Collections.Generic.IEnumerable%7B%60%600%7D%2CSystem.Func%7B%60%600%2CSystem.Int32%2C%60%601%7D%29><br />-   <xref:System.Linq.Enumerable.SelectMany%60%602%28System.Collections.Generic.IEnumerable%7B%60%600%7D%2CSystem.Func%7B%60%600%2CSystem.Collections.Generic.IEnumerable%7B%60%601%7D%7D%29><br />-   <xref:System.Linq.Enumerable.SelectMany%60%602%28System.Collections.Generic.IEnumerable%7B%60%600%7D%2CSystem.Func%7B%60%600%2CSystem.Int32%2CSystem.Collections.Generic.IEnumerable%7B%60%601%7D%7D%29><br />-   <xref:System.Linq.Enumerable.SelectMany%60%603%28System.Collections.Generic.IEnumerable%7B%60%600%7D%2CSystem.Func%7B%60%600%2CSystem.Collections.Generic.IEnumerable%7B%60%601%7D%7D%2CSystem.Func%7B%60%600%2C%60%601%2C%60%602%7D%29><br />-   <xref:System.Linq.Enumerable.SelectMany%60%603%28System.Collections.Generic.IEnumerable%7B%60%600%7D%2CSystem.Func%7B%60%600%2CSystem.Int32%2CSystem.Collections.Generic.IEnumerable%7B%60%601%7D%7D%2CSystem.Func%7B%60%600%2C%60%601%2C%60%602%7D%29><br />-   <xref:System.Linq.Enumerable.Where%60%601%28System.Collections.Generic.IEnumerable%7B%60%600%7D%2CSystem.Func%7B%60%600%2CSystem.Int32%2CSystem.Boolean%7D%29>|  
 |Gruplandırma işleçleri|Tüm gruplandırma işleçleri karşı desteklenmeyen bir <xref:System.Data.Services.Client.DataServiceQuery%601>, aşağıdakiler dahil:<br /><br /> -   <xref:System.Linq.Enumerable.GroupBy%2A><br />-   <xref:System.Linq.Enumerable.GroupJoin%2A><br /><br /> Gruplandırma işlemleri istemcide gerçekleştirilmesi gerekir.|  
 |Toplama işleçleri|Tüm toplama işlemleri karşı desteklenmeyen bir <xref:System.Data.Services.Client.DataServiceQuery%601>, aşağıdakiler dahil:<br /><br /> -   <xref:System.Linq.Enumerable.Aggregate%2A><br />-   <xref:System.Linq.Enumerable.Average%2A><br />-   <xref:System.Linq.Enumerable.Count%2A><br />-   <xref:System.Linq.Enumerable.LongCount%2A><br />-   <xref:System.Linq.Enumerable.Max%2A><br />-   <xref:System.Linq.Enumerable.Min%2A><br />-   <xref:System.Linq.Enumerable.Sum%2A><br /><br /> Toplama işlemleri istemcide ya da gerçekleştirilmesi gerekir veya bir hizmet işlemi tarafından kapsüllenir.|  
-|Disk belleği işleçleri|Aşağıdaki disk belleği işleçleri karşı desteklenmiyor bir <xref:System.Data.Services.Client.DataServiceQuery%601>:<br /><br /> -   <xref:System.Linq.Enumerable.ElementAt%2A><br />-   <xref:System.Linq.Enumerable.Last%2A><br />-   <xref:System.Linq.Enumerable.LastOrDefault%2A><br />-   <xref:System.Linq.Enumerable.SkipWhile%2A><br />-   <xref:System.Linq.Enumerable.TakeWhile%2A>**Not:** üzerinde boş bir dizi yürütülen disk belleği işleçleri null döndürür.|  
+|Disk belleği işleçleri|Aşağıdaki disk belleği işleçleri karşı desteklenmiyor bir <xref:System.Data.Services.Client.DataServiceQuery%601>:<br /><br /> -   <xref:System.Linq.Enumerable.ElementAt%2A><br />-   <xref:System.Linq.Enumerable.Last%2A><br />-   <xref:System.Linq.Enumerable.LastOrDefault%2A><br />-   <xref:System.Linq.Enumerable.SkipWhile%2A><br />-   <xref:System.Linq.Enumerable.TakeWhile%2A> **Not:** üzerinde boş bir dizi yürütülen disk belleği işleçleri null döndürür.|  
 |Diğer işleçleri|Aşağıdaki diğer işleçler karşı desteklenmiyor bir <xref:System.Data.Services.Client.DataServiceQuery%601>:<br /><br /> 1.  <xref:System.Linq.Enumerable.Empty%2A><br />2.  <xref:System.Linq.Enumerable.Range%2A><br />3.  <xref:System.Linq.Enumerable.Repeat%2A><br />4.  <xref:System.Linq.Enumerable.ToDictionary%2A><br />5.  <xref:System.Linq.Enumerable.ToLookup%2A>|  
   
 <a name="supportedExpressions"></a>   
 ## <a name="supported-expression-functions"></a>Desteklenen ifade işlevleri  
  İstek URI'si eklenmek üzere bir sorgu ifadesinde çevrilebilir çünkü aşağıdaki ortak dil çalışma zamanı (CLR) yöntemleri ve özellikleri desteklenen için bir [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] hizmeti:  
   
-|<xref:System.String>Üye|Desteklenen [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] işlevi|  
+|<xref:System.String> Üye|Desteklenen [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] işlevi|  
 |-----------------------------------------------------------------------------------------------------------------------------------|-------------------------------------------------------------------------------------|  
 |<xref:System.String.Concat%28System.String%2CSystem.String%29>|`string concat(string p0, string p1)`|  
 |<xref:System.String.Contains%28System.String%29>|`bool substringof(string p0, string p1)`|  
@@ -197,7 +199,7 @@ http://localhost:12345/Northwind.svc/Orders?Orderby=ShippedDate&?filter=Freight 
 |<xref:System.String.ToUpper>|`string toupper(string p0)`|  
 |<xref:System.String.Trim>|`string trim(string p0)`|  
   
-|<xref:System.DateTime>Üye<sup>1</sup>|Desteklenen [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] işlevi|  
+|<xref:System.DateTime> Üye<sup>1</sup>|Desteklenen [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] işlevi|  
 |-------------------------------------------------------------------------------------------------------------------------------------------------|-------------------------------------------------------------------------------------|  
 |<xref:System.DateTime.Day>|`int day(DateTime p0)`|  
 |<xref:System.DateTime.Hour>|`int hour(DateTime p0)`|  
@@ -208,7 +210,7 @@ http://localhost:12345/Northwind.svc/Orders?Orderby=ShippedDate&?filter=Freight 
   
  <sup>1</sup>eşdeğer tarih ve saat özellikleri <xref:Microsoft.VisualBasic.DateAndTime?displayProperty=nameWithType>, yanı sıra <xref:Microsoft.VisualBasic.DateAndTime.DatePart%2A> Visual Basic'te yöntemi de desteklenir.  
   
-|<xref:System.Math>Üye|Desteklenen [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] işlevi|  
+|<xref:System.Math> Üye|Desteklenen [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] işlevi|  
 |---------------------------------------------------------------------------------------------------------------------------------|-------------------------------------------------------------------------------------|  
 |<xref:System.Math.Ceiling%28System.Decimal%29>|`decimal ceiling(decimal p0)`|  
 |<xref:System.Math.Ceiling%28System.Double%29>|`double ceiling(double p0)`|  
@@ -217,7 +219,7 @@ http://localhost:12345/Northwind.svc/Orders?Orderby=ShippedDate&?filter=Freight 
 |<xref:System.Math.Round%28System.Decimal%29>|`decimal round(decimal p0)`|  
 |<xref:System.Math.Round%28System.Double%29>|`double round(double p0)`|  
   
-|<xref:System.Linq.Expressions.Expression>Üye|Desteklenen [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] işlevi|  
+|<xref:System.Linq.Expressions.Expression> Üye|Desteklenen [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] işlevi|  
 |---------------------------------------------------------------------------------------------------------------------------------------------------------|-------------------------------------------------------------------------------------|  
 |<xref:System.Linq.Expressions.Expression.TypeIs%28System.Linq.Expressions.Expression%2CSystem.Type%29>|`bool isof(type p0)`|  
   

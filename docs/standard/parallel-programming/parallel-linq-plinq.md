@@ -1,28 +1,28 @@
 ---
 title: Paralel LINQ (PLINQ)
-ms.custom: 
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology: dotnet-standard
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - PLINQ, overview
 ms.assetid: 3d4d0cd3-bde4-490b-99e7-f4e41be96455
-caps.latest.revision: 
+caps.latest.revision: 17
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: 94eeeda4666a4e6c1cb8729d6563ffcc4aa479c4
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: 5c24f51401b1e493864409ddafe580cea7ac435e
+ms.sourcegitcommit: 2e8acae16ae802f2d6d04e3ce0a6dbf04e476513
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="parallel-linq-plinq"></a>Paralel LINQ (PLINQ)
 Paralel LINQ (PLINQ) nesnelere LINQ paralel bir uygulamasıdır. PLINQ için genişletme yöntemleri olarak LINQ standart sorgu işleçleri tam kümesi uygulayan <xref:System.Linq> ad alanı ve paralel işlemleri için ek işleçler sahiptir. PLINQ Basitlik ve LINQ sözdizimi okunabilirliğini paralel programlama güç ile birleştirir. Yalnızca kod gibi ana bilgisayar özelliklerine göre eşzamanlılık ölçüde PLINQ sorguları hedefleyen görev paralel kitaplığı ölçeklendirin.  
@@ -63,4 +63,4 @@ Paralel LINQ (PLINQ) nesnelere LINQ paralel bir uygulamasıdır. PLINQ için gen
 ## <a name="see-also"></a>Ayrıca Bkz.  
  <xref:System.Linq.ParallelEnumerable>  
  [Paralel Programlama](../../../docs/standard/parallel-programming/index.md)  
- [LINQ (dil ile tümleşik sorgu)](http://msdn.microsoft.com/library/a73c4aec-5d15-4e98-b962-1274021ea93d)
+ [LINQ (dil ile tümleşik sorgu)](https://msdn.microsoft.com/library/a73c4aec-5d15-4e98-b962-1274021ea93d)

@@ -1,5 +1,5 @@
 ---
-title: "out parametresi değiştiricisi (C# Başvurusu)"
+title: out parametresi değiştiricisi (C# Başvurusu)
 ms.date: 03/06/2018
 ms.prod: .net
 ms.technology:
@@ -10,11 +10,11 @@ helpviewer_keywords:
 - out parameters [C#]
 author: BillWagner
 ms.author: wiwagn
-ms.openlocfilehash: c0686d8bb0dec2a5ea6dd92491e58c93b7ee53a8
-ms.sourcegitcommit: 83dd5ec003e788ccb3e33f3412a7af39ae347646
+ms.openlocfilehash: 052416f97c1fe9ed3aa1a3bafa7410e602096991
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/15/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="out-parameter-modifier-c-reference"></a>out parametresi değiştiricisi (C# Başvurusu)
 `out` Anahtar sözcüğü başvuruya göre geçirilecek bağımsız değişkenler neden olur. Benzer; [ref](ref.md) hariç anahtar sözcüğü `ref` değişkenin kendisine geçirilen önce başlatılması gerekir. Aynı zamanda gibi olan [içinde](in-parameter-modifier.md) hariç anahtar sözcüğü `in` bağımsız değişken değeri değiştirmek çağrılan yöntemine izin vermiyor. Kullanılacak bir `out` parametresi, yöntem tanımı ve arama yöntemi açıkça kullanmalıdır `out` anahtar sözcüğü. Örneğin:  
@@ -68,7 +68,7 @@ Olarak geçirmeden önce C# 6 ve önceki sürümlerinde, ayrı bir deyimi bir de
 
 [!code-csharp-interactive[cs-out-keyword](../../../../samples/snippets/csharp/language-reference/keywords/in-ref-out-modifier/OutParameterModifier.cs#4)]  
 
-C# 7 ile başlayan, bildirebilirsiniz `out` değişkeni yöntem çağrısı bağımsız değişken listesi yerine ayrı bir değişken bildirimi. Bu daha küçük, okunabilir kodunu üretir ve ayrıca yanlışlıkla bir değer değişken yöntemi çağırmadan önce atanmasını engeller. Tanımladığı aşağıdaki örnek önceki örnek gibi olmasıdır `number` çağrısında değişken [Int32.TryParse](xref:System.Int32.TryParse(System.String,System.Int32@)) yöntemi.
+C# 7. 0'dan başlayarak, bildirebilirsiniz `out` değişkeni yöntem çağrısı bağımsız değişken listesi yerine ayrı bir değişken bildirimi. Bu daha küçük, okunabilir kodunu üretir ve ayrıca yanlışlıkla bir değer değişken yöntemi çağırmadan önce atanmasını engeller. Tanımladığı aşağıdaki örnek önceki örnek gibi olmasıdır `number` çağrısında değişken [Int32.TryParse](xref:System.Int32.TryParse(System.String,System.Int32@)) yöntemi.
 
 [!code-csharp-interactive[cs-out-keyword](../../../../samples/snippets/csharp/language-reference/keywords/in-ref-out-modifier/OutParameterModifier.cs#5)]  
    

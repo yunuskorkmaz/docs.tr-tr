@@ -1,33 +1,35 @@
 ---
 title: LINQ ve ADO.NET
-ms.custom: 
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-ado
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-ado
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: bf0c8f93-3ff7-49f3-8aed-f2b7ac938dec
-caps.latest.revision: "8"
+caps.latest.revision: 8
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.workload: dotnet
-ms.openlocfilehash: b020b3df627fcb220f4227d76fdf8eb3d60e80e4
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.workload:
+- dotnet
+ms.openlocfilehash: be91650c7c06a3bdb5410166cc560ffc9a65d542
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="linq-and-adonet"></a>LINQ ve ADO.NET
-Bugün, birçok iş geliştiriciler iki (veya daha fazla) programlama dilleri kullanmanız gerekir: iş mantığı ve sunu katmanı için yüksek düzey bir dil (gibi [!INCLUDE[csprcs](../../../../includes/csprcs-md.md)] veya [!INCLUDE[vbprvb](../../../../includes/vbprvb-md.md)]) ve veritabanıyla etkileşim için bir sorgu dili ( gibi[!INCLUDE[tsql](../../../../includes/tsql-md.md)]). Bu Geliştirici etkili olması için çeşitli dillerde bilgisi olmasını gerektirir ve aynı zamanda dil uyuşmazlıkları geliştirme ortamında neden olur. Örneğin, bir veritabanında bir sorgu yürütmek için veri erişim API'sini kullanan bir uygulamayı tırnak işaretleri kullanarak sorgu bir dize belirtir. Bu sorgu dizesi derleyiciye beklemediğiniz okunabilir durumdadır ve geçersiz sözdizimi veya olup sütunlara veya satırlara başvurduğu gerçekten var gibi hataları kontrol edilmez. Sorgu parametrelerini ve Hayır denetimi türü yok `IntelliSense` ya da destekler.  
+Bugün, birçok iş geliştiriciler iki (veya daha fazla) programlama dilleri kullanmanız gerekir: (örneğin, Visual C# veya Visual Basic) iş mantığı ve sunu katmanı için yüksek düzey bir dil ve veritabanıyla etkileşim için bir sorgu dili (gibi [!INCLUDE[tsql](../../../../includes/tsql-md.md)]). Bu Geliştirici etkili olması için çeşitli dillerde bilgisi olmasını gerektirir ve aynı zamanda dil uyuşmazlıkları geliştirme ortamında neden olur. Örneğin, bir veritabanında bir sorgu yürütmek için veri erişim API'sini kullanan bir uygulamayı tırnak işaretleri kullanarak sorgu bir dize belirtir. Bu sorgu dizesi derleyiciye beklemediğiniz okunabilir durumdadır ve geçersiz sözdizimi veya olup sütunlara veya satırlara başvurduğu gerçekten var gibi hataları kontrol edilmez. Sorgu parametrelerini ve Hayır denetimi türü yok `IntelliSense` ya da destekler.  
   
- [!INCLUDE[vbteclinqext](../../../../includes/vbteclinqext-md.md)]ayrı bir sorgu dili kullanmak zorunda kalmadan kendi uygulama kodunda kümesini temel alan sorgular oluşturmak geliştiriciler sağlar. Yazabileceğiniz [!INCLUDE[vbteclinq](../../../../includes/vbteclinq-md.md)] sorguları çeşitli numaralandırılabilir veri kaynakları (diğer bir deyişle, uygulayan bir veri kaynağı <xref:System.Collections.IEnumerable> arabirimi), bellek içi veri yapılarını, XML belgeleri, SQL veritabanları gibi ve <xref:System.Data.DataSet> nesneleri. Bu numaralandırılabilir veri kaynaklarının çeşitli şekillerde uygulanan karşın, bunların tümü aynı sözdizimi ve dil yapıları kullanıma sunar. Sorguları programlama dilinde kendisini oluşturulmuş olması nedeniyle dize değişmez değerleri anladım veya derleyici tarafından doğrulanmış olarak katıştırılır başka bir sorgu dili kullanmak zorunda değil. Programlama diline sorguları tümleştirme ayrıca sağlar [!INCLUDE[vsprvs](../../../../includes/vsprvs-md.md)] derleme zamanı tür ve sözdizimi denetimi, sağlayarak daha üretken olmak için programcıları ve `IntelliSense`. Bu özellikler sorgu hata ayıklama ve hata düzeltme gereksinimini azaltır.  
+ [!INCLUDE[vbteclinqext](../../../../includes/vbteclinqext-md.md)] ayrı bir sorgu dili kullanmak zorunda kalmadan kendi uygulama kodunda kümesini temel alan sorgular oluşturmak geliştiriciler sağlar. Yazabileceğiniz [!INCLUDE[vbteclinq](../../../../includes/vbteclinq-md.md)] sorguları çeşitli numaralandırılabilir veri kaynakları (diğer bir deyişle, uygulayan bir veri kaynağı <xref:System.Collections.IEnumerable> arabirimi), bellek içi veri yapılarını, XML belgeleri, SQL veritabanları gibi ve <xref:System.Data.DataSet> nesneleri. Bu numaralandırılabilir veri kaynaklarının çeşitli şekillerde uygulanan karşın, bunların tümü aynı sözdizimi ve dil yapıları kullanıma sunar. Sorguları programlama dilinde kendisini oluşturulmuş olması nedeniyle dize değişmez değerleri anladım veya derleyici tarafından doğrulanmış olarak katıştırılır başka bir sorgu dili kullanmak zorunda değil. Programlama diline sorguları tümleştirme ayrıca sağlar [!INCLUDE[vsprvs](../../../../includes/vsprvs-md.md)] derleme zamanı tür ve sözdizimi denetimi, sağlayarak daha üretken olmak için programcıları ve `IntelliSense`. Bu özellikler sorgu hata ayıklama ve hata düzeltme gereksinimini azaltır.  
   
  Bellekte nesneleri içine SQL tablolarından veri aktarma yorucu ve hataya yatkın görülür. [!INCLUDE[vbteclinq](../../../../includes/vbteclinq-md.md)] Sağlayıcı tarafından uygulanan [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)] ve [!INCLUDE[vbtecdlinq](../../../../includes/vbtecdlinq-md.md)] kaynak verisine dönüştürür <xref:System.Collections.IEnumerable>-nesne koleksiyonları tabanlı. Programcı her zaman olarak veri görünümleri bir <xref:System.Collections.IEnumerable> koleksiyonu sorguladığınızda hem güncelleştirdiğinizde. Tam `IntelliSense` desteği, bu koleksiyonlarla sorguları yazmak için sağlanır.  
   
- Üç ayrı ADO.NET vardır [!INCLUDE[vbteclinqext](../../../../includes/vbteclinqext-md.md)] teknolojileri: [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)], [!INCLUDE[vbtecdlinq](../../../../includes/vbtecdlinq-md.md)], ve [!INCLUDE[linq_entities](../../../../includes/linq-entities-md.md)]. [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)]daha zengin, en iyi duruma getirilmiş üzerinden sorgulama sağlar <xref:System.Data.DataSet> ve [!INCLUDE[vbtecdlinq](../../../../includes/vbtecdlinq-md.md)] doğrudan sorgu olanak tanır [!INCLUDE[ssNoVersion](../../../../includes/ssnoversion-md.md)] veritabanı şemalarını ve [!INCLUDE[linq_entities](../../../../includes/linq-entities-md.md)] sorgu sayesinde bir [!INCLUDE[adonet_edm](../../../../includes/adonet-edm-md.md)].  
+ Üç ayrı ADO.NET vardır [!INCLUDE[vbteclinqext](../../../../includes/vbteclinqext-md.md)] teknolojileri: [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)], [!INCLUDE[vbtecdlinq](../../../../includes/vbtecdlinq-md.md)], ve [!INCLUDE[linq_entities](../../../../includes/linq-entities-md.md)]. [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)] daha zengin, en iyi duruma getirilmiş üzerinden sorgulama sağlar <xref:System.Data.DataSet> ve [!INCLUDE[vbtecdlinq](../../../../includes/vbtecdlinq-md.md)] doğrudan SQL Server veritabanı şemalarını sorgu olanak tanır ve [!INCLUDE[linq_entities](../../../../includes/linq-entities-md.md)] sorgu sayesinde bir [!INCLUDE[adonet_edm](../../../../includes/adonet-edm-md.md)].  
   
  Aşağıdaki diyagramda, nasıl ADO.NET LINQ teknolojileri üst düzey programlama dilleri ve LINQ özellikli veri kaynakları ile ilgili genel bir bakış sağlar.  
   
@@ -38,10 +40,10 @@ Bugün, birçok iş geliştiriciler iki (veya daha fazla) programlama dilleri ku
  Aşağıdaki bölümler, hakkında daha fazla bilgi sağlar. [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)], [!INCLUDE[vbtecdlinq](../../../../includes/vbtecdlinq-md.md)], ve [!INCLUDE[linq_entities](../../../../includes/linq-entities-md.md)].  
   
 ## <a name="linq-to-dataset"></a>LINQ - DataSet  
- <xref:System.Data.DataSet> Olan bağlantısı kesilmiş programlama anahtar öğesi modeli [!INCLUDE[vstecado](../../../../includes/vstecado-md.md)] üzerine kurulmuştur ve yaygın olarak kullanılır. [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)]içine daha zengin sorgu özellikleri geliştiricilerin oluşturmalarını sağlar <xref:System.Data.DataSet> diğer birçok veri kaynakları için kullanılabilir sorgu formülasyonu mekanizmasını kullanarak. Daha fazla bilgi için bkz: [LINQ-DataSet](../../../../docs/framework/data/adonet/linq-to-dataset.md).  
+ <xref:System.Data.DataSet> Olan bağlantısı kesilmiş programlama anahtar öğesi modeli [!INCLUDE[vstecado](../../../../includes/vstecado-md.md)] üzerine kurulmuştur ve yaygın olarak kullanılır. [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)] içine daha zengin sorgu özellikleri geliştiricilerin oluşturmalarını sağlar <xref:System.Data.DataSet> diğer birçok veri kaynakları için kullanılabilir sorgu formülasyonu mekanizmasını kullanarak. Daha fazla bilgi için bkz: [LINQ-DataSet](../../../../docs/framework/data/adonet/linq-to-dataset.md).  
   
 ## <a name="linq-to-sql"></a>LINQ - SQL  
- [!INCLUDE[vbtecdlinq](../../../../includes/vbtecdlinq-md.md)]eşleme için kavramsal model gerektirmeyen geliştiriciler için kullanışlı bir aracı değil. Kullanarak [!INCLUDE[vbtecdlinq](../../../../includes/vbtecdlinq-md.md)], kullanabileceğiniz [!INCLUDE[vbteclinq](../../../../includes/vbteclinq-md.md)] varolan veritabanı şeması üzerinden doğrudan programlama modeli. [!INCLUDE[vbtecdlinq](../../../../includes/vbtecdlinq-md.md)]Oluşturulacak geliştiricilerinin [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] verilerini temsil eden sınıf. Kavramsal veri modeli eşleme yerine, bu veritabanı tabloları, görünümleri, saklı yordamları ve kullanıcı tanımlı işlevler doğrudan sınıfları eşlemesine oluşturulur.  
+ [!INCLUDE[vbtecdlinq](../../../../includes/vbtecdlinq-md.md)] eşleme için kavramsal model gerektirmeyen geliştiriciler için kullanışlı bir aracı değil. Kullanarak [!INCLUDE[vbtecdlinq](../../../../includes/vbtecdlinq-md.md)], kullanabileceğiniz [!INCLUDE[vbteclinq](../../../../includes/vbteclinq-md.md)] varolan veritabanı şeması üzerinden doğrudan programlama modeli. [!INCLUDE[vbtecdlinq](../../../../includes/vbtecdlinq-md.md)] Oluşturulacak geliştiricilerinin [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] verilerini temsil eden sınıf. Kavramsal veri modeli eşleme yerine, bu veritabanı tabloları, görünümleri, saklı yordamları ve kullanıcı tanımlı işlevler doğrudan sınıfları eşlemesine oluşturulur.  
   
  İle [!INCLUDE[vbtecdlinq](../../../../includes/vbtecdlinq-md.md)], geliştiricilerin şemaya aynı kullanarak doğrudan depolama kod yazma [!INCLUDE[vbteclinq](../../../../includes/vbteclinq-md.md)] programlama deseni bellek içi koleksiyonları olarak ve <xref:System.Data.DataSet>, XML gibi diğer veri kaynaklarına ek olarak. Daha fazla bilgi için bkz: [LINQ-SQL](../../../../docs/framework/data/adonet/sql/linq/index.md).  
   

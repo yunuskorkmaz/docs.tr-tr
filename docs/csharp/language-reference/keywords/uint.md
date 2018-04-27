@@ -1,5 +1,5 @@
 ---
-title: "uint (C# Başvurusu)"
+title: uint (C# Başvurusu)
 ms.date: 03/14/2017
 ms.prod: .net
 ms.technology:
@@ -11,14 +11,14 @@ f1_keywords:
 helpviewer_keywords:
 - uint keyword [C#]
 ms.assetid: e93e42c6-ec72-4b0b-89df-2fd8d36f7a7b
-caps.latest.revision: 
+caps.latest.revision: 18
 author: BillWagner
 ms.author: wiwagn
-ms.openlocfilehash: d32f7146d1f9e13d8cf0f275f4fd78b693b09d31
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 4a4f3439888ad3744be1633bb39e1c241343343a
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="uint-c-reference"></a>uint (C# Başvurusu)
 
@@ -32,7 +32,7 @@ ms.lasthandoff: 11/21/2017
   
 ## <a name="literals"></a>Sabit değerler  
 
-Bildirme ve başlatma bir `uint` değişken ondalık değişmez değer, onaltılık bir hazır değer atama veya (C# 7 için değişmez değer bir ikili başlayarak). Değişmez değer tamsayı aralığı dışında ise `uint` (diğer bir deyişle, bu ise değerinden <xref:System.UInt32.MinValue?displayProperty=nameWithType> veya daha büyük <xref:System.UInt32.MaxValue?displayProperty=nameWithType>), bir derleme hatası oluşur.
+Bildirme ve başlatma bir `uint` değişken ondalık değişmez değer, onaltılık bir hazır değer atama veya (C# ile 7.0 için değişmez değer bir ikili başlayarak). Değişmez değer tamsayı aralığı dışında ise `uint` (diğer bir deyişle, bu ise değerinden <xref:System.UInt32.MinValue?displayProperty=nameWithType> veya daha büyük <xref:System.UInt32.MaxValue?displayProperty=nameWithType>), bir derleme hatası oluşur.
 
 Aşağıdaki örnekte, ondalık sayı olarak, onaltılık temsil 3,000,000,000 tamsayılar eşit ve ikili değişmez değerler atanır `uint` değerleri.  
   
@@ -41,7 +41,7 @@ Aşağıdaki örnekte, ondalık sayı olarak, onaltılık temsil 3,000,000,000 t
 > [!NOTE] 
 > Önek kullanması `0x` veya `0X` onaltılık değişmez değeri ve öneki belirtmek için `0b` veya `0B` ikili bir hazır değer belirtmek için. Ondalık değişmez değerler, önek vardır. 
 
-C# 7 ile okunabilirliği artırmak birkaç özellik eklenmiştir başlatılıyor. 
+C# 7.0 ile okunabilirliği artırmak birkaç özellik eklenmiştir başlatılıyor. 
  - C# 7.0 sağlar alt çizgi karakteri kullanımını `_`, basamak ayırıcı olarak.
  - C# 7.2 verir `_` önekten sonra bir ikili ya da onaltılık değişmez değeri basamak ayırıcısı olarak kullanılacak. Ondalık bir hazır değer önde gelen bir alt çizgi olan izin verilen değil.
 
@@ -57,7 +57,7 @@ Değişmez değer bir tamsayı sonek türünü ilk değerini gösterilebilir aş
 
 1. [int](int.md)
 2. `uint`
-3. [uzun](../../../csharp/language-reference/keywords/long.md)
+3. [long](../../../csharp/language-reference/keywords/long.md)
 4. [ulong](../../../csharp/language-reference/keywords/ulong.md) 
   
 ## <a name="conversions"></a>Dönüşümler  
@@ -96,9 +96,9 @@ uint y = (uint)3.0;
 ## <a name="see-also"></a>Ayrıca Bkz.  
  <xref:System.UInt32>  
  [C# başvurusu](../../../csharp/language-reference/index.md)  
- [C# programlama kılavuzu](../../../csharp/programming-guide/index.md)  
- [C# anahtar sözcükleri](../../../csharp/language-reference/keywords/index.md)  
- [Tam sayı türleri tablosu](../../../csharp/language-reference/keywords/integral-types-table.md)  
- [Yerleşik türler tablosu](../../../csharp/language-reference/keywords/built-in-types-table.md)  
- [Örtük sayısal dönüşümler tablosu](../../../csharp/language-reference/keywords/implicit-numeric-conversions-table.md)  
- [Açık sayısal dönüşümler tablosu](../../../csharp/language-reference/keywords/explicit-numeric-conversions-table.md)
+ [C# Programlama Kılavuzu](../../../csharp/programming-guide/index.md)  
+ [C# Anahtar Sözcükleri](../../../csharp/language-reference/keywords/index.md)  
+ [Tam Sayı Türleri Tablosu](../../../csharp/language-reference/keywords/integral-types-table.md)  
+ [Yerleşik Türler Tablosu](../../../csharp/language-reference/keywords/built-in-types-table.md)  
+ [Örtük Sayısal Dönüştürmeler Tablosu](../../../csharp/language-reference/keywords/implicit-numeric-conversions-table.md)  
+ [Açık Sayısal Dönüştürmeler Tablosu](../../../csharp/language-reference/keywords/explicit-numeric-conversions-table.md)

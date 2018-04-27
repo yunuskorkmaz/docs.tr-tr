@@ -1,11 +1,12 @@
 ---
-title: "Değer Türleri ve Başvuru Türleri"
-ms.custom: 
+title: Değer Türleri ve Başvuru Türleri
+ms.custom: ''
 ms.date: 07/20/2015
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- devlang-visual-basic
 ms.topic: article
 helpviewer_keywords:
 - reference data types [Visual Basic]
@@ -16,28 +17,28 @@ helpviewer_keywords:
 - data types [Visual Basic], value types
 - data types [Visual Basic], reference types
 ms.assetid: fc82ce15-5a40-4c5c-a1e1-a556830e7391
-caps.latest.revision: "14"
+caps.latest.revision: 14
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: 2b54945d27d186771e8b5353e753afd74c56d71b
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 9cbab25e4af6b96ae22fe18d0b8a8fdbc7a7c7a7
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="value-types-and-reference-types"></a>Değer Türleri ve Başvuru Türleri
-Visual Basic veri türleri sınıflandırmalarına göre uygulanır. [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] Veri türleri sınıflandırılmış belirli türde bir değişken kendi veri veya veri için bir işaretçi depolar göre. Kendi verilerini depolayan ise bir *değer türü*; başka bir yerde bu bellek verileri için bir işaretçi barındırıyorsa bir *başvuru türüne*.  
+Visual Basic veri türleri sınıflandırmalarına göre uygulanır. Visual Basic veri türleri, belirli türde bir değişken kendi veri veya veri için bir işaretçi depolar göre sınıflandırılabilir. Kendi verilerini depolayan ise bir *değer türü*; başka bir yerde bu bellek verileri için bir işaretçi barındırıyorsa bir *başvuru türüne*.  
   
 ## <a name="value-types"></a>Değer Türleri  
  Bir veri türü olan bir *değer türü* kendi bellek ayırma içindeki verilere tutuyorsa. Değer türleri şunlardır:  
   
 -   Tüm sayısal veri türleri  
   
--   `Boolean`, `Char`, ve`Date`  
+-   `Boolean`, `Char`, ve `Date`  
   
 -   Başvuru türleri üyeleri olan olsa bile tüm yapıları  
   
--   Kendi temel alınan türü her zaman olduğundan numaralandırmalar `SByte`, `Short`, `Integer`, `Long`, `Byte`, `UShort`, `UInteger`, veya`ULong`  
+-   Kendi temel alınan türü her zaman olduğundan numaralandırmalar `SByte`, `Short`, `Integer`, `Long`, `Byte`, `UShort`, `UInteger`, veya `ULong`  
   
  Başvuru türü üyeleri içerse bile, her bir değer türü yapısıdır. Bu nedenle, değer türleri gibi `Char` ve `Integer` .NET Framework yapıları tarafından uygulanır.  
   
@@ -50,7 +51,7 @@ Visual Basic veri türleri sınıflandırmalarına göre uygulanır. [!INCLUDE[v
   
 -   Değer türleri kendi öğeleridir olsa bile tüm diziler  
   
--   Sınıf türleri, gibi<xref:System.Windows.Forms.Form>  
+-   Sınıf türleri, gibi <xref:System.Windows.Forms.Form>  
   
 -   Temsilciler  
   
@@ -78,12 +79,12 @@ Dim totals() As Single = New Single(8) {}
 ## <a name="working-with-the-object-data-type"></a>Nesne veri türü ile çalışma  
  Bir değişken için bir başvuru türü veya bir değer türü atayabilirsiniz `Object` veri türü. Bir `Object` değişkeni verileri verilerin kendisini hiçbir zaman, her zaman bir işaretçi tutar. Ancak, bir değer türü atarsanız bir `Object` kendi verilerini varmış gibi değişken, davranır. Daha fazla bilgi için bkz: [nesne veri türü](../../../../visual-basic/language-reference/data-types/object-data-type.md).  
   
- Tanımlanmadığını bulabileceğiniz bir `Object` değişken işlevi gören bir başvuru türü veya bir değer türü olarak geçirerek <xref:Microsoft.VisualBasic.Information.IsReference%2A> yönteminde <xref:Microsoft.VisualBasic.Information> sınıfının <xref:Microsoft.VisualBasic?displayProperty=nameWithType> ad alanı. <xref:Microsoft.VisualBasic.Information.IsReference%2A?displayProperty=nameWithType>döndürür `True` varsa içeriğini `Object` değişkeni bir başvuru türü temsil eder.  
+ Tanımlanmadığını bulabileceğiniz bir `Object` değişken işlevi gören bir başvuru türü veya bir değer türü olarak geçirerek <xref:Microsoft.VisualBasic.Information.IsReference%2A> yönteminde <xref:Microsoft.VisualBasic.Information> sınıfının <xref:Microsoft.VisualBasic?displayProperty=nameWithType> ad alanı. <xref:Microsoft.VisualBasic.Information.IsReference%2A?displayProperty=nameWithType> döndürür `True` varsa içeriğini `Object` değişkeni bir başvuru türü temsil eder.  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [Boş değer atanabilen değer türleri](../../../../visual-basic/programming-guide/language-features/data-types/nullable-value-types.md)  
+ [Boş Değer Atanabilen Değer Türleri](../../../../visual-basic/programming-guide/language-features/data-types/nullable-value-types.md)  
  [Visual Basic'de tür dönüştürmeleri](../../../../visual-basic/programming-guide/language-features/data-types/type-conversions.md)  
- [Structure deyimi](../../../../visual-basic/language-reference/statements/structure-statement.md)  
- [Veri türlerinin etkili kullanımı](../../../../visual-basic/programming-guide/language-features/data-types/efficient-use-of-data-types.md)  
- [Nesne veri türü](../../../../visual-basic/language-reference/data-types/object-data-type.md)  
- [Veri türleri](../../../../visual-basic/programming-guide/language-features/data-types/index.md)
+ [Structure Deyimi](../../../../visual-basic/language-reference/statements/structure-statement.md)  
+ [Veri Türlerinin Etkili Kullanımı](../../../../visual-basic/programming-guide/language-features/data-types/efficient-use-of-data-types.md)  
+ [Object Veri Türü](../../../../visual-basic/language-reference/data-types/object-data-type.md)  
+ [Veri Türleri](../../../../visual-basic/programming-guide/language-features/data-types/index.md)

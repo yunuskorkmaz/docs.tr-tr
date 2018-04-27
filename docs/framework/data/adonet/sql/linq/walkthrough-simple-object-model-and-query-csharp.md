@@ -1,24 +1,26 @@
 ---
-title: "İzlenecek yol: Basit bir nesne modeli ve sorgu (C#)"
-ms.custom: 
+title: 'İzlenecek yol: Basit bir nesne modeli ve sorgu (C#)'
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-ado
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-ado
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 419961cc-92d6-45f5-ae8a-d485bdde3a37
-caps.latest.revision: "3"
+caps.latest.revision: 3
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.workload: dotnet
-ms.openlocfilehash: 444692cb035d97b0fe57c1ea9ba7802491ca2160
-ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
+ms.workload:
+- dotnet
+ms.openlocfilehash: 8d30ef93fc6af4eaf49cfe84ebf78cf79f0f4900
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="walkthrough-simple-object-model-and-query-c"></a>İzlenecek yol: Basit bir nesne modeli ve sorgu (C#)
 Bu kılavuz bir temel uçtan uca sağlar [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] en düşük karmaşıklık senaryoyla. Örnek Northwind veritabanı Müşteriler tablosunda modeller bir varlık sınıfı oluşturur. Ardından, Londra'da buluna listesi müşteriler için basit bir sorgu oluşturur.  
@@ -38,7 +40,7 @@ Bu kılavuz bir temel uçtan uca sağlar [!INCLUDE[vbtecdlinq](../../../../../..
 ## <a name="overview"></a>Genel Bakış  
  Bu kılavuz altı ana görevden oluşur:  
   
--   Oluşturma bir [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] çözümde [!INCLUDE[vs_current_short](../../../../../../includes/vs-current-short-md.md)].  
+-   Oluşturma bir [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] Visual Studio'da çözüm.  
   
 -   Bir sınıf bir veritabanı tablosuna eşleme.  
   
@@ -51,11 +53,11 @@ Bu kılavuz bir temel uçtan uca sağlar [!INCLUDE[vbtecdlinq](../../../../../..
 -   Sorgu yürütülürken ve sonuçları gözlemleyebilirsiniz.  
   
 ## <a name="creating-a-linq-to-sql-solution"></a>Bir LINQ to SQL çözümü oluşturma  
- Bu ilk görevde oluşturduğunuz bir [!INCLUDE[vs_current_short](../../../../../../includes/vs-current-short-md.md)] derlemek ve çalıştırmak için gerekli başvuruları içeren çözüm bir [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] projesi.  
+ Bu ilk görevde oluşturduğunuz derlemek ve çalıştırmak için gerekli başvuruları içeren bir Visual Studio çözümü bir [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] projesi.  
   
 #### <a name="to-create-a-linq-to-sql-solution"></a>Bir LINQ to SQL çözümü oluşturmak için  
   
-1.  Üzerinde [!INCLUDE[vs_current_short](../../../../../../includes/vs-current-short-md.md)] **dosya** menüsündeki **yeni**ve ardından **proje**.  
+1.  Visual Studio üzerinde **dosya** menüsündeki **yeni**ve ardından **proje**.  
   
 2.  İçinde **proje türleri** bölmesinde **yeni proje** iletişim kutusu, tıklatın **Visual C#**.  
   
@@ -98,7 +100,7 @@ Bu kılavuz bir temel uçtan uca sağlar [!INCLUDE[vbtecdlinq](../../../../../..
   
 -   Belirttiğiniz `CustomerID` veritabanının birincil anahtar sütunu temsil eden olarak özelliği.  
   
--   Belirttiğiniz `_CustomerID` ve `_City` özel depolama alanları. [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]ardından depolayabilir ve iş mantığı içerebilecek ortak erişimciler kullanmak yerine doğrudan değerleri alabilirsiniz.  
+-   Belirttiğiniz `_CustomerID` ve `_City` özel depolama alanları. [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] ardından depolayabilir ve iş mantığı içerebilecek ortak erişimciler kullanmak yerine doğrudan değerleri alabilirsiniz.  
   
 #### <a name="to-represent-characteristics-of-two-database-columns"></a>İki veritabanı sütun özelliklerini göstermek için  
   

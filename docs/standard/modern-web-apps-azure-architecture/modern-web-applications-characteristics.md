@@ -1,19 +1,20 @@
 ---
-title: "Modern web uygulamalarının özellikleri"
-description: "ASP.NET Core ve Azure ile modern Web uygulamaları mimari | modern web uygulamalarının özellikleri"
+title: Modern web uygulamalarının özellikleri
+description: ASP.NET Core ve Azure ile modern Web uygulamaları mimari | modern web uygulamalarının özellikleri
 author: ardalis
 ms.author: wiwagn
 ms.date: 10/06/2017
 ms.prod: .net-core
 ms.technology: dotnet-docker
+ms.topic: article
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: ecef23870ac547f4b4066628da71f8af98c91b27
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: 4f12b6860f1c4efe0f55cae4fefd8cd5f4539095
+ms.sourcegitcommit: 2e8acae16ae802f2d6d04e3ce0a6dbf04e476513
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="characteristics-of-modern-web-applications"></a>Modern Web uygulamalarının özellikleri
 
@@ -26,7 +27,7 @@ Modern web uygulamaları daha yüksek kullanıcı beklentilerini ve büyük tale
 
 ASP.NET Core modern web uygulamaları ve bulut tabanlı barındırma senaryoları için optimize edilmiştir. Modüler tasarımı uygulamaların yalnızca gerçekten, uygulama güvenliği ve barındırma kaynak gereksinimlerini azaltırken performansı artırma kullandıkları özelliklerine bağlıdır olanak sağlar.
 
-## <a name="reference-application-eshoponweb"></a>Reference Application: eShopOnWeb
+## <a name="reference-application-eshoponweb"></a>Başvuru uygulama: eShopOnWeb
 
 Bu kılavuz bir başvuru uygulaması içeren *eShopOnWeb*, bazı prensipler ve öneriler gösterir. Gömlekler, kahve bardaklar ve pazarlama diğer öğeler bir katalog tarama destekleyen basit bir çevrimiçi mağaza uygulamasıdır. Başvuru uygulaması anlaşılması kolay hale getirmek için kasıtlı olarak basit bir işlemdir.
 

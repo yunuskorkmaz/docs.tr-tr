@@ -1,24 +1,26 @@
 ---
-title: "Alma ve ADO.NET veri değiştirme"
-ms.custom: 
+title: Alma ve ADO.NET veri değiştirme
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-ado
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-ado
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 722e7f87-3691-46c6-87e8-7d159722d675
-caps.latest.revision: "5"
+caps.latest.revision: 5
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.workload: dotnet
-ms.openlocfilehash: ff937e619d449fbfbedb234749292b6acc4bdf50
-ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
+ms.workload:
+- dotnet
+ms.openlocfilehash: 05760e7295606f700f72e5a3af14e395bcc5d820
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="retrieving-and-modifying-data-in-adonet"></a>Alma ve ADO.NET veri değiştirme
 Birincil işlev herhangi bir veritabanı uygulamasını bir veri kaynağına bağlanma ve içerdiği veriler alınıyor. Kullanarak veri almak için de komutları yürütün olanak tanıyan bir uygulama ile bir veri kaynağı arasında bir köprü olarak ADO .NET Framework veri sağlayıcıları hizmet bir **DataReader** veya **DataAdapter** . Bir anahtar herhangi bir veritabanı uygulamasını veritabanında depolanan veri güncelleştirme becerisini işlevdir. ADO.NET, verileri güncelleştirme kullanılmasına **DataAdapter** ve <xref:System.Data.DataSet>, ve **komutu** nesneleri; ve bu da gerektirebilir işlemleri kullanma.  
@@ -43,7 +45,7 @@ Birincil işlev herhangi bir veritabanı uygulamasını bir veri kaynağına ba�
  Yerel işlemler, dağıtılmış işlemler gerçekleştirmek ve iyimser eşzamanlılık ile çalışmak nasıl açıklayan konuları içerir.  
   
  [Kimliği veya Otomatik Sayı Değerlerini Alma](../../../../docs/framework/data/adonet/retrieving-identity-or-autonumber-values.md)  
- İçin oluşturulan değerler eşleme örneğidir bir **kimlik** sütununda bir [!INCLUDE[ssNoVersion](../../../../includes/ssnoversion-md.md)] tablo veya bir **sayı** eklenen bir satırın bir tablodaki bir sütun için bir Microsoft Access tablosundaki. Birleştirme kimlik değerleri açıklanır bir `DataTable`.  
+ İçin oluşturulan değerler eşleme örneğidir bir **kimlik** sütun için veya bir SQL Server tablosundaki bir **sayı** eklenen bir satırın bir tablodaki bir sütun için bir Microsoft Access tablosundaki. Birleştirme kimlik değerleri açıklanır bir `DataTable`.  
   
  [İkili Verileri Alma](../../../../docs/framework/data/adonet/retrieving-binary-data.md)  
  İkili veriler veya kullanarak büyük veri yapıları almak açıklar `CommandBehavior`.`SequentialAccess` varsayılan davranışını değiştirmek için bir `DataReader`.  
@@ -67,7 +69,7 @@ Birincil işlev herhangi bir veritabanı uygulamasını bir veri kaynağına ba�
  Açıklar [!INCLUDE[vstecado](../../../../includes/vstecado-md.md)] zaman uyumsuz programlama desteği.  
   
  [SqlClient Akış Desteği](../../../../docs/framework/data/adonet/sqlclient-streaming-support.md)  
- Veri akış uygulamaları nasıl yazılacağından [!INCLUDE[ssNoVersion](../../../../includes/ssnoversion-md.md)] gerek kalmadan tam olarak bellekte yüklenir.  
+ Uygulamaların veri akışı SQL Server'dan onu tam olarak belleğe yüklenen gerek kalmadan nasıl yazılacağını açıklar.  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
  [ADO.NET’te Veri Türü Eşlemeleri](../../../../docs/framework/data/adonet/data-type-mappings-in-ado-net.md)  

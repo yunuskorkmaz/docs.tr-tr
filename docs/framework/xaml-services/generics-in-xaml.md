@@ -1,34 +1,34 @@
 ---
-title: "XAML'deki Genel Türler"
-ms.custom: 
+title: XAML'deki Genel Türler
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - dotnet-wpf
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - generics [XAML Services]
 ms.assetid: 835bfed7-585c-4216-ae67-b674edab8b92
-caps.latest.revision: 
+caps.latest.revision: 8
 author: wadepickett
 ms.author: wpickett
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: c0e5bfb4f327028f09e8c898cf07e5fec9a5f789
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: e64224edcb49d5040332b7cef9649c98cf26798b
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="generics-in-xaml"></a>XAML'deki Genel Türler
 .NET Framework XAML System.Xaml içinde uygulandığı şekilde hizmetleri genel CLR Türleri kullanma için destek sağlar. Bu destek tür bağımsız değişkeni olarak genel türler kısıtlamaları belirtme ve uygun çağırarak kısıtlaması uygulayan içerir `Add` genel koleksiyon durumlarda yöntemi. Bu konuda kullanarak ve XAML'deki genel türler başvuran yönleri açıklanmaktadır.  
   
 ## <a name="xtypearguments"></a>x: TypeArguments  
- `x:TypeArguments`bir yönerge XAML dili tarafından tanımlanır. Genel bir tür tarafından yedeklenen bir XAML türünün bir üyesi olarak kullanıldığında `x:TypeArguments` sınırlama geçişleri genel yedekleme oluşturucuya bağımsız değişkenlerini yazın. .NET Framework XAML Hizmetleri için ilgili başvuru sözdizimi kullanımı `x:TypeArguments`sözdizimi örneklerini içerir, bkz: [x: TypeArguments yönergesi](../../../docs/framework/xaml-services/x-typearguments-directive.md).  
+ `x:TypeArguments` bir yönerge XAML dili tarafından tanımlanır. Genel bir tür tarafından yedeklenen bir XAML türünün bir üyesi olarak kullanıldığında `x:TypeArguments` sınırlama geçişleri genel yedekleme oluşturucuya bağımsız değişkenlerini yazın. .NET Framework XAML Hizmetleri için ilgili başvuru sözdizimi kullanımı `x:TypeArguments`sözdizimi örneklerini içerir, bkz: [x: TypeArguments yönergesi](../../../docs/framework/xaml-services/x-typearguments-directive.md).  
   
  Çünkü `x:TypeArguments` bir dize alır ve türü dönüştürücü yedekleme sahip bir öznitelik olarak XAML kullanımı genellikle bildirilmedi.  
   
@@ -53,7 +53,7 @@ ms.lasthandoff: 12/22/2017
   
  WPF ve hedefleme [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)], XAML 2009 özellikleri ile birlikte kullanabileceğiniz `x:TypeArguments`, ancak yalnızca gevşek XAML (işaretleme-derlenmemiş XAML). XAML biçimlendirme derlenmiş WPF ve XAML BAML form için şu anda desteklemediği XAML 2009 anahtar sözcükleri ve özellikler.  
   
- Özel iş akışlarında [!INCLUDE[TLA#tla_workflow](../../../includes/tlasharptla-workflow-md.md)] için [!INCLUDE[net_v35_short](../../../includes/net-v35-short-md.md)] genel XAML kullanımı desteklemez.  
+ Özel iş akışları için Windows Workflow Foundation'ın [!INCLUDE[net_v35_short](../../../includes/net-v35-short-md.md)] genel XAML kullanımı desteklemez.  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
  [x:TypeArguments Yönergesi](../../../docs/framework/xaml-services/x-typearguments-directive.md)  

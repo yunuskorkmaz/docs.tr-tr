@@ -1,6 +1,6 @@
 ---
-title: "Yerel birlikte çalışabilirliği"
-description: ".NET yerel bileşenleriyle arabirim öğrenin."
+title: Yerel birlikte çalışabilirliği
+description: .NET yerel bileşenleriyle arabirim öğrenin.
 keywords: .NET, .NET core
 author: blackdwarf
 ms.author: ronpet
@@ -13,11 +13,11 @@ ms.assetid: 3c357112-35fb-44ba-a07b-6a1c140370ac
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: 11a93f4014734130f7c4e33cf215c6d49d2554c5
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: d9b0fa5ebe37e51c45a8a5d8a42ce9b9688cc7c1
+ms.sourcegitcommit: 2e8acae16ae802f2d6d04e3ce0a6dbf04e476513
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="native-interoperability"></a>Yerel birlikte çalışabilirliği
 
@@ -26,7 +26,7 @@ Bu belgede, biz biraz daha derin "yerel birlikte çalışabilirliği" bulunurken
 Birkaç neden yerel kod içine çağırmak için istersiniz nedenleri şunlardır:
 
 *   İşletim sistemleri, yüksek hacimli bir yönetilen sınıf kitaplıkları mevcut olmayan API'leri ile gelir. Bu prime örneğin donanım veya işletim sistemi yönetim işlevlerini erişimi olacaktır.
-*   C türü ABIs (yerel ABIs) oluşturabilir veya diğer bileşenlerle iletişim kurarak. Bu, örneğin, aracılığıyla sunulan Java kod kapsar [Java yerel arabirimi (JNI)](http://docs.oracle.com/javase/8/docs/technotes/guides/jni/) veya yerel bir bileşeni üretebilir herhangi bir yönetilen dili.
+*   C türü ABIs (yerel ABIs) oluşturabilir veya diğer bileşenlerle iletişim kurarak. Bu, örneğin, aracılığıyla sunulan Java kod kapsar [Java yerel arabirimi (JNI)](https://docs.oracle.com/javase/8/docs/technotes/guides/jni/) veya yerel bir bileşeni üretebilir herhangi bir yönetilen dili.
 *   Windows, Microsoft Office suite gibi yüklendiğini yazılım çoğunu programlarını temsil eder ve bunları otomatikleştirmek veya bunları kullanmayı geliştiriciler izin veren COM bileşenleri kaydeder. Bu da yerel birlikte çalışabilirliği gerektirir.
 
 Elbette, yukarıdaki listeye tüm olası durumlar ve geliştirici gibi/istediğiniz/gerek yerel bileşenleriyle arabirim için misiniz senaryoları kapsamaz. .NET sınıf kitaplığı, yerel birlikte çalışabilirliği destek Orta API'lerini Konsolu desteği ve işleme, dosya sistemi erişimi ve diğerleri gibi çeşitli uygulamak için örneği için kullanır. Ancak, önemli bir seçenek olduğuna dikkat edin, bir da gerekir.
@@ -145,9 +145,9 @@ namespace ConsoleApplication1 {
 }
 ```
 
-Biz örneğimizde yol önce çalışmak üzere ihtiyacımız yönetilmeyen işlevleri imzalarını üzerinden gitmek uygundur. Tüm windows numaralandırmak için aranacak istiyoruz işlevi aşağıdaki imzası vardır:`BOOL EnumWindows (WNDENUMPROC lpEnumFunc, LPARAM lParam);`
+Biz örneğimizde yol önce çalışmak üzere ihtiyacımız yönetilmeyen işlevleri imzalarını üzerinden gitmek uygundur. Tüm windows numaralandırmak için aranacak istiyoruz işlevi aşağıdaki imzası vardır: `BOOL EnumWindows (WNDENUMPROC lpEnumFunc, LPARAM lParam);`
 
-İlk parametresi, bir geri çağırma olduğu. Konusu geri çağırma aşağıdaki imzası vardır:`BOOL CALLBACK EnumWindowsProc (HWND hwnd, LPARAM lParam);`
+İlk parametresi, bir geri çağırma olduğu. Konusu geri çağırma aşağıdaki imzası vardır: `BOOL CALLBACK EnumWindowsProc (HWND hwnd, LPARAM lParam);`
 
 Bu durum dikkate alınarak, şimdi örnek yol:
 
@@ -340,6 +340,6 @@ public class StatClass {
 
 ## <a name="more-resources"></a>Daha fazla kaynak
 
-*   [PInvoke.net wiki](http://www.pinvoke.net) mükemmel bir Wiki ortak Win32 API'ları ve bunları nasıl bilgi.
+*   [PInvoke.net wiki](https://www.pinvoke.net/) mükemmel bir Wiki ortak Win32 API'ları ve bunları nasıl bilgi.
 *   [P/Invoke MSDN'de](https://msdn.microsoft.com/library/zbz07712.aspx)
-*   [P/Invoke Mono belgeler](http://www.mono-project.com/docs/advanced/pinvoke/)
+*   [P/Invoke Mono belgeler](https://www.mono-project.com/docs/advanced/pinvoke/)

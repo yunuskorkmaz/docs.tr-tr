@@ -15,11 +15,11 @@ ms.assetid: 8fb0353a-e41b-4e23-b78f-da65db832f70
 caps.latest.revision: 12
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: 5a1edd7976f1e22117e1f4f31354388d5257ffc1
-ms.sourcegitcommit: 34ec7753acf76f90a0fa845235ef06663dc9e36e
+ms.openlocfilehash: c18c1ea645c9f144e2c2043af5460d6fb03f13a1
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="events-visual-basic"></a>Olaylar (Visual Basic)
 Görselleştirme ancak bir [!INCLUDE[vsprvs](~/includes/vsprvs-md.md)] proje gerçekte bir sırayla yürütmek yordamları bir dizi olarak çoğu olay yönelimli programlardır — akışını anlamı adlı dış oluşumu tarafından belirlenir *olayları*.  
@@ -27,7 +27,7 @@ Görselleştirme ancak bir [!INCLUDE[vsprvs](~/includes/vsprvs-md.md)] proje ger
  Önemli bir şey oluştu uygulamanın bildiren bir sinyal bir olaydır. Örneğin, bir kullanıcı bir form üzerinde denetim tıkladığında formun yükseltebilirsiniz bir `Click` olay ve arama olayını işler bir yordam. Olaylar, iletişim kurmak ayrı görevleri de olanak sağlar. Örneğin, uygulamanızın sıralama görev ayrı ayrı ana uygulamadaki yaptığı söyleyin. Bir kullanıcı sıralama iptal ederse, uygulamanızın durdurmak için sıralama işlemi söyleyen bir iptal olayı gönderebilirsiniz.  
   
 ## <a name="event-terms-and-concepts"></a>Olay terimleri ve kavramları  
- Bu bölümde hüküm ve olayları ile kullanılan kavramlar açıklanmaktadır [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)].  
+ Bu bölümde, hüküm ve Visual Basic'te olaylarla kullanılan kavramlar açıklanmaktadır.  
   
 ### <a name="declaring-events"></a>Olayları Bildirme  
  Sınıflar, yapılar, modüller ve arabirimleri kullanarak olayları bildirme `Event` aşağıdaki örnekteki gibi anahtar sözcüğü:  
@@ -35,7 +35,7 @@ Görselleştirme ancak bir [!INCLUDE[vsprvs](~/includes/vsprvs-md.md)] proje ger
  [!code-vb[VbVbalrEvents#24](../../../../visual-basic/language-reference/statements/codesnippet/VisualBasic/events_1.vb)]  
   
 ### <a name="raising-events"></a>Olaylar oluşturma  
- Önemli oluştuğunu bildiren bir ileti gibi bir olaydır. İleti yayın eylemi adlı *oluşturma* olay. İçinde [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)], olaylarla Yükselt `RaiseEvent` aşağıdaki örnekteki gibi deyimi:  
+ Önemli oluştuğunu bildiren bir ileti gibi bir olaydır. İleti yayın eylemi adlı *oluşturma* olay. Visual Basic'te olaylarla Yükselt `RaiseEvent` aşağıdaki örnekteki gibi deyimi:  
   
  [!code-vb[VbVbalrEvents#25](../../../../visual-basic/language-reference/statements/codesnippet/VisualBasic/events_2.vb)]  
   
@@ -47,7 +47,7 @@ Görselleştirme ancak bir [!INCLUDE[vsprvs](~/includes/vsprvs-md.md)] proje ger
 ### <a name="event-handlers"></a>Olay İşleyicileri  
  *Olay işleyicileri* karşılık gelen bir olay gerçekleştiğinde, çağrılan yordamlar. Olay işleyici eşleşen bir imza ile geçerli bir alt yordama kullanabilirsiniz. Olay kaynağı için bir değer döndüremiyor olduğundan işlevi ancak, bir olay işleyicisi kullanamazsınız.  
   
- [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]Standart bir adlandırma kuralının adını olay gönderen, alt çizgi ve olayın adı birleştirir olay işleyicileri için kullanır. Örneğin, `Click` adlı bir düğmeye olay `button1` sayfadayken `Sub button1_Click`.  
+ Visual Basic standart bir adlandırma kuralının adını olay gönderen, alt çizgi ve olayın adı birleştirir olay işleyicileri için kullanır. Örneğin, `Click` adlı bir düğmeye olay `button1` sayfadayken `Sub button1_Click`.  
   
 > [!NOTE]
 >  Kendi olayları için olay işleyicileri tanımlarken bu adlandırma kuralını kullanın, ancak gerekli değildir öneririz; herhangi bir geçerli alt yordama adı kullanabilirsiniz.  
@@ -68,18 +68,18 @@ Görselleştirme ancak bir [!INCLUDE[vsprvs](~/includes/vsprvs-md.md)] proje ger
   
 -   Dizileri oluşturulamıyor `WithEvents` değişkenleri.  
   
- `WithEvents`değişkenleri, bir veya daha fazla türde bir olayın ya da aynı türde bir olayın işlemek için bir veya daha fazla olay işleyicileri işlemek için tek bir olay işleyicisi izin verir.  
+ `WithEvents` değişkenleri, bir veya daha fazla türde bir olayın ya da aynı türde bir olayın işlemek için bir veya daha fazla olay işleyicileri işlemek için tek bir olay işleyicisi izin verir.  
   
  Ancak `Handles` yan tümcesi bir olayın olay işleyicisi ile ilişkilendirme standart yolu, olayları olay işleyicileri ile derleme zamanında ilişkilendirme ile sınırlıdır.  
   
- Bazı durumlarda, formlar veya denetimleri olaylarıyla ilişkili gibi [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] otomatik olarak bir boş olay işleyicisini yerleştirir ve bir olay ile ilişkilendirir. Örneğin, çift tıkladığınızda Tasarım modunda, bir formda bir komut düğmesi [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] boş olay işleyicisi oluşturur ve bir `WithEvents` komut düğmesi için aşağıdaki kod olduğu gibi değişken:  
+ Bazı durumlarda, gibi formlar veya denetimleri ile ilişkili olaylar ile Visual Basic otomatik olarak bir boş olay işleyicisini yerleştirir ve bir olay ile ilişkilendirir. Örneğin, bir form Tasarım modunda bir komut düğmesine çift tıkladığınızda, Visual Basic boş olay işleyicisi oluşturur ve bir `WithEvents` komut düğmesi için aşağıdaki kod olduğu gibi değişken:  
   
  [!code-vb[VbVbalrEvents#26](../../../../visual-basic/language-reference/statements/codesnippet/VisualBasic/events_4.vb)]  
   
 ### <a name="addhandler-and-removehandler"></a>AddHandler ve RemoveHandler  
  `AddHandler` Deyimi benzer `Handles` hem de bir olay işleyicisi belirtmenize olanak veren, yan tümcesinde. Ancak, `AddHandler`ile kullanılan `RemoveHandler`, daha büyük esneklik sağlar `Handles` yan tümcesi, dinamik olarak eklemenize olanak sağlayan kaldırın ve olayla ilişkili olay işleyicisini değiştirin. Paylaşılan olayları veya bir yapı olayları işlemek istiyorsanız, kullanmalısınız `AddHandler`.  
   
- `AddHandler`iki bağımsız değişkeni alır: bir denetim ve temsilciye sonucunu veren bir ifade gibi bir olay gönderenden olayın adı. Temsilci sınıfı kullanırken açıkça belirtmeniz gerekmez `AddHandler`, bu yana `AddressOf` ifadesi her zaman temsilci bir başvuru döndürür. Aşağıdaki örnekte bir nesne tarafından gerçekleşen bir olay olay işleyicisi ilişkilendirir:  
+ `AddHandler` iki bağımsız değişkeni alır: bir denetim ve temsilciye sonucunu veren bir ifade gibi bir olay gönderenden olayın adı. Temsilci sınıfı kullanırken açıkça belirtmeniz gerekmez `AddHandler`, bu yana `AddressOf` ifadesi her zaman temsilci bir başvuru döndürür. Aşağıdaki örnekte bir nesne tarafından gerçekleşen bir olay olay işleyicisi ilişkilendirir:  
   
  [!code-vb[VbVbalrEvents#28](../../../../visual-basic/language-reference/statements/codesnippet/VisualBasic/events_5.vb)]  
   

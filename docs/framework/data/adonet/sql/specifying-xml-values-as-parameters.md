@@ -1,36 +1,38 @@
 ---
-title: "Parametre olarak XML değerleri belirtme"
-ms.custom: 
+title: Parametre olarak XML değerleri belirtme
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-ado
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-ado
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - csharp
 - vb
 ms.assetid: 2c4d08b8-fc29-4614-97fa-29c8ff7ca5b3
-caps.latest.revision: "5"
+caps.latest.revision: 5
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.workload: dotnet
-ms.openlocfilehash: 7514d2d19b6691fc5a25e17e7ad483d108fe4aa2
-ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
+ms.workload:
+- dotnet
+ms.openlocfilehash: dace7c3adc1b7a55c8c945e82399828ce16f1bb0
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="specifying-xml-values-as-parameters"></a>Parametre olarak XML değerleri belirtme
-Bir sorgu, değeri olan bir XML dizesi parametre gerektiriyorsa, geliştiricilerin bir örneği kullanılarak bu değeri sağlayabilir **SqlXml** veri türü. Gerçekten hiçbir püf noktaları; yok XML sütunları [!INCLUDE[ssNoVersion](../../../../../includes/ssnoversion-md.md)] parametre diğer veri türleri tam olarak aynı şekilde değerleri kabul edin.  
+Bir sorgu, değeri olan bir XML dizesi parametre gerektiriyorsa, geliştiricilerin bir örneği kullanılarak bu değeri sağlayabilir **SqlXml** veri türü. Gerçekten hiçbir püf noktaları; yok SQL Server'da XML sütunları parametre değerlerini diğer veri türleri ile aynı şekilde kabul edin.  
   
 ## <a name="example"></a>Örnek  
  Yeni bir tabloda aşağıdaki konsol uygulaması oluşturur **AdventureWorks** veritabanı. Yeni Tablo adlı bir sütun içeren **SalesId** ve adlı bir XML sütunu **SalesInfo**.  
   
 > [!NOTE]
->  **AdventureWorks** örnek veritabanı yüklediğinizde varsayılan olarak yüklenmedi [!INCLUDE[ssNoVersion](../../../../../includes/ssnoversion-md.md)]. SQL Server Kurulumu çalıştırarak yükleyebilirsiniz.  
+>  **AdventureWorks** örnek veritabanını SQL Server'ı yüklediğinizde varsayılan olarak yüklenmedi. SQL Server Kurulumu çalıştırarak yükleyebilirsiniz.  
   
  Örnek hazırlayan bir <xref:System.Data.SqlClient.SqlCommand> yeni tabloya satır eklemek için nesne. Kaydedilen bir dosya için gereken XML verileri sağlayan **SalesInfo** sütun.  
   

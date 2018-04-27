@@ -1,12 +1,12 @@
 ---
-title: "Standart Tarih ve Saat Biçim Dizeleri"
-ms.custom: 
+title: Standart Tarih ve Saat Biçim Dizeleri
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology: dotnet-standard
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - csharp
@@ -20,18 +20,18 @@ helpviewer_keywords:
 - formatting [.NET Framework], time
 - date and time strings
 ms.assetid: bb79761a-ca08-44ee-b142-b06b3e2fc22b
-caps.latest.revision: "92"
+caps.latest.revision: 92
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: 55f8f6b544a3ade0ad9423e8253cc44e0fb5fec1
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: 5de7da12867e11fcde00089e13c98396ed279a5e
+ms.sourcegitcommit: 2e8acae16ae802f2d6d04e3ce0a6dbf04e476513
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="standard-date-and-time-format-strings"></a>Standart Tarih ve Saat Biçim Dizeleri
 Standart tarih ve saat biçimi dizesi tek biçim belirleyici bir tarih ve saat değerinin metin gösterimini tanımlamak için kullanır. Beyaz alan dahil, birden fazla karakteri içeren tüm tarih ve saat biçim dizesi, özel bir tarih ve saat biçim dizesi yorumlanır; Daha fazla bilgi için bkz: [özel tarih ve saat biçim dizeleri](../../../docs/standard/base-types/custom-date-and-time-format-strings.md). Standart veya özel bir biçim dizesi iki şekilde kullanılabilir:  
@@ -43,9 +43,9 @@ Standart tarih ve saat biçimi dizesi tek biçim belirleyici bir tarih ve saat d
  Standart tarih ve saat biçim dizeleri ikisi ile kullanılabilecek <xref:System.DateTime> ve <xref:System.DateTimeOffset> değerleri.  
   
 > [!TIP]
->  İndirebilirsiniz [biçimlendirme yardımcı programı](http://code.msdn.microsoft.com/NET-Framework-4-Formatting-9c4dae8d), biçimi uygulamanıza olanak sağlayan bir uygulama dizeleri sayısal veya tarih ve saat değerleri ve sonuç dizesini görüntüler.  
+>  İndirebilirsiniz [biçimlendirme yardımcı programı](https://code.msdn.microsoft.com/NET-Framework-4-Formatting-9c4dae8d), biçimi uygulamanıza olanak sağlayan bir uygulama dizeleri sayısal veya tarih ve saat değerleri ve sonuç dizesini görüntüler.  
   
-<a name="table"></a>Aşağıdaki tabloda standart tarih ve saat biçim belirticileri açıklanmaktadır. Aksi belirtilmediği sürece, belirli bir standart tarih ve saat biçimi belirleyici ile mi kullanılacağını bakılmaksızın bir aynı dize gösterimini üreten bir <xref:System.DateTime> veya <xref:System.DateTimeOffset> değeri. Bkz: [notları](#Notes) standart tarih ve saat biçim dizeleri kullanma hakkında ek bilgi bölümü.  
+<a name="table"></a> Aşağıdaki tabloda standart tarih ve saat biçim belirticileri açıklanmaktadır. Aksi belirtilmediği sürece, belirli bir standart tarih ve saat biçimi belirleyici ile mi kullanılacağını bakılmaksızın bir aynı dize gösterimini üreten bir <xref:System.DateTime> veya <xref:System.DateTimeOffset> değeri. Bkz: [notları](#Notes) standart tarih ve saat biçim dizeleri kullanma hakkında ek bilgi bölümü.  
   
 |Biçim belirteci|Açıklama|Örnekler|  
 |----------------------|-----------------|--------------|  
@@ -55,8 +55,8 @@ Standart tarih ve saat biçimi dizesi tek biçim belirleyici bir tarih ve saat d
 |"F"|Tam tarih veya saat deseni (uzun süre).<br /><br /> Daha fazla bilgi: [tam tarih uzun süre ("F") biçim belirticisi](#FullDateLongTime).|2009-06-15T13:45:30 15 Haziran 2009, Pazartesi -> 1:45:30 PM (en-US)<br /><br /> 2009-06-15T13:45:30 -> bey 15 juni 2009 13:45:30 (sv-SE)<br /><br /> 2009-06-15T13:45:30 -> Δευτέρα, 15 Ιουνίου 2009 1:45:30 μμ (el-GR)|  
 |"g"|Genel tarih veya saat deseni (süre).<br /><br /> Daha fazla bilgi: [genel kısa tarih ("g") biçim belirticisi](#GeneralDateShortTime).|2009-06-15T13:45:30 15/6/2009-> 13: 45'te (en-US)<br /><br /> 2009-06-15T13:45:30 -> 06/15/2009 13:45 (es-ES)<br /><br /> 2009-06-15T13:45:30 -> 2009/6/15 13:45 (zh-CN)|  
 |"G"|Genel tarih veya saat deseni (uzun süre).<br /><br /> Daha fazla bilgi: [genel uzun tarih ("G") biçim belirticisi](#GeneralDateLongTime).|2009-06-15T13:45:30 15/6/2009-> 1:45:30 PM (en-US)<br /><br /> 2009-06-15T13:45:30 06/15/2009-> 13:45:30 (es-ES)<br /><br /> 2009-06-15T13:45:30 -> 2009/6/15 13:45:30 (zh-CN)|  
-|"M", "m"|Ay/gün deseni.<br /><br /> Daha fazla bilgi: [("M", "m") ayın biçimi belirleyici](#MonthDay).|2009-06-15T13:45:30 -> 15 Haziran (en-US)<br /><br /> 2009-06-15T13:45:30 15 ->. juni (da-DK)<br /><br /> 2009-06-15T13:45:30 -> 15 Juni (ID)|  
-|"O", "o"|Gidiş tarihi/saati desen.<br /><br /> Daha fazla bilgi: [gidiş ("O", "o") biçim belirticisi](#Roundtrip).|<xref:System.DateTime>değerler:<br /><br /> 2009-06-15T13:45:30 (DateTimeKind.Local)--> 2009-06-15T13:45:30.0000000-07:00<br /><br /> 2009-06-15T13:45:30 (değeri DateTimeKind.Utc)--> 2009-06-15T13:45:30.0000000Z<br /><br /> 2009-06-15T13:45:30 (DateTimeKind.Unspecified)--> 2009-06-15T13:45:30.0000000<br /><br /> <xref:System.DateTimeOffset>değerler:<br /><br /> 2009-06-15T13:45:30-07:00--> 2009-06-15T13:45:30.0000000-07:00|  
+|"M", "m"|Ay/gün deseni.<br /><br /> Daha fazla bilgi: [("M", "m") ayın biçimi belirleyici](#MonthDay).|2009-06-15T13:45:30 -> 15 Haziran (en-US)<br /><br /> 2009-06-15T13:45:30 15 -&GT;. juni (da-DK)<br /><br /> 2009-06-15T13:45:30 -> 15 Juni (ID)|  
+|"O", "o"|Gidiş tarihi/saati desen.<br /><br /> Daha fazla bilgi: [gidiş ("O", "o") biçim belirticisi](#Roundtrip).|<xref:System.DateTime> Değerler:<br /><br /> 2009-06-15T13:45:30 (DateTimeKind.Local)--> 2009-06-15T13:45:30.0000000-07:00<br /><br /> 2009-06-15T13:45:30 (değeri DateTimeKind.Utc)--> 2009-06-15T13:45:30.0000000Z<br /><br /> 2009-06-15T13:45:30 (DateTimeKind.Unspecified)--> 2009-06-15T13:45:30.0000000<br /><br /> <xref:System.DateTimeOffset> Değerler:<br /><br /> 2009-06-15T13:45:30-07:00--&GT; 2009-06-15T13:45:30.0000000-07:00|  
 |"R", "r"|Desen: RFC1123<br /><br /> Daha fazla bilgi: [RFC1123 ("R", "r") biçim belirticisi](#RFC1123).|2009-06-15T13:45:30 -> Mon, 15 Haz 2009 20:45:30 GMT|  
 |"s"|Sıralanabilir tarih veya saat deseni.<br /><br /> Daha fazla bilgi: [sıralanabilir ("s") biçim belirticisi](#Sortable).|2009-06-15T13:45:30 (DateTimeKind.Local) -> 2009-06-15T13:45:30<br /><br /> 2009-06-15T13:45:30 (değeri DateTimeKind.Utc) -> 2009-06-15T13:45:30|  
 |"t"|Kısa bir süre deseni.<br /><br /> Daha fazla bilgi: [kısa bir süre ("t") biçim belirticisi](#ShortTime).|2009-06-15T13:45:30 -> 13: 45'te (en-US)<br /><br /> 2009-06-15T13:45:30 -> 13:45 (hr-HR)<br /><br /> 2009-06-15T13:45:30 -> 01:45 م (ar-ÖR)|  
@@ -261,7 +261,7 @@ Standart tarih ve saat biçimi dizesi tek biçim belirleyici bir tarih ve saat d
   
 -   Saat dilimi bileşenini <xref:System.DateTimeKind.Utc?displayProperty=nameWithType> tarih ve saat değerleri UTC temsil etmek için "(uzaklığı sıfır hangi anlamına gelir) Z" kullanır.  
   
--   <xref:System.DateTimeKind.Unspecified?displayProperty=nameWithType>Tarih ve saat değerleri, saat dilimi bilgisi yok vardır.  
+-   <xref:System.DateTimeKind.Unspecified?displayProperty=nameWithType> Tarih ve saat değerleri, saat dilimi bilgisi yok vardır.  
   
  Çünkü O "veya"o"standart biçim belirticisi uyan bir uluslararası standardı, biçimlendirme veya belirleyici her zaman kullanır işlemi ayrıştırma sabit kültür ve Gregoryen takvim kullanır.  
   
@@ -426,4 +426,4 @@ Standart tarih ve saat biçimi dizesi tek biçim belirleyici bir tarih ve saat d
  <xref:System.DateTimeOffset?displayProperty=nameWithType>  
  [Biçimlendirme Türleri](../../../docs/standard/base-types/formatting-types.md)  
  [Özel Tarih ve Saat Biçim Dizeleri](../../../docs/standard/base-types/custom-date-and-time-format-strings.md)  
- [Örnek: .NET Framework 4 yardımcı biçimlendirme](http://code.msdn.microsoft.com/NET-Framework-4-Formatting-9c4dae8d)
+ [Örnek: .NET Framework 4 yardımcı biçimlendirme](https://code.msdn.microsoft.com/NET-Framework-4-Formatting-9c4dae8d)

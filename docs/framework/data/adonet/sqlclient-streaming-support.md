@@ -1,29 +1,31 @@
 ---
-title: "SqlClient akış desteği"
-ms.custom: 
+title: SqlClient akış desteği
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-ado
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-ado
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: c449365b-470b-4edb-9d61-8353149f5531
-caps.latest.revision: "14"
+caps.latest.revision: 14
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.workload: dotnet
-ms.openlocfilehash: f870bab357db7a425378afcfb0bedd19b0359ce1
-ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
+ms.workload:
+- dotnet
+ms.openlocfilehash: cfa672908248afa951ab3a429e437e0e2c0607c5
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="sqlclient-streaming-support"></a>SqlClient akış desteği
-Akış desteği arasında [!INCLUDE[ssNoVersion](../../../../includes/ssnoversion-md.md)] ve bir uygulama (yeni [!INCLUDE[net_v45](../../../../includes/net-v45-md.md)]) (belgeler, görüntüler ve medya dosyaları) sunucuda yapılandırılmamış verileri destekler. A [!INCLUDE[ssNoVersion](../../../../includes/ssnoversion-md.md)] veritabanı ikili büyük nesneler (BLOB) saklayabilir, ancak BLOB'ları alma çok miktarda bellek kullanabilir.  
+Akış desteği SQL Server ile bir uygulama arasındaki (yeni [!INCLUDE[net_v45](../../../../includes/net-v45-md.md)]) (belgeler, görüntüler ve medya dosyaları) sunucuda yapılandırılmamış verileri destekler. Bir SQL Server veritabanı ikili büyük nesneler (BLOB) depolayabilirsiniz ancak BLOB'ları alma çok miktarda bellek kullanabilir.  
   
- Destek ve bu sunucudan giden akış [!INCLUDE[ssNoVersion](../../../../includes/ssnoversion-md.md)] tam olarak daha az bellek taşması özel durumları kaynaklanan belleğe verileri yüklemek zorunda kalmadan veri akış uygulamaları yazma basitleştirir.  
+ Akış desteği için ve SQL Server uygulamaları yazma Bu akış verileri tam olarak daha az bellek taşması özel durumları kaynaklanan belleğe verileri yüklemek zorunda kalmadan basitleştirir.  
   
  Akış desteği de özellikle iş nesneleri göndermek, almak ve büyük BLOB'ları değiştirmek için SQL Azure eriştikleri senaryolarında daha iyi ölçeklendirme orta katman uygulamaları etkinleştirir.  
   
@@ -32,10 +34,10 @@ Akış desteği arasında [!INCLUDE[ssNoVersion](../../../../includes/ssnoversio
 >   
 >  Akış desteklemek için eklenen üyeler sorgularından veri almaya ve sorguları ve saklı yordamlar parametreleri geçirmek için kullanılır. Akış özelliği temel OLTP ve veri geçişi senaryoları yer almaktadır ve şirket içi ve şirket içi veri migrations.environments kapatmak için geçerlidir.  
   
-## <a name="streaming-support-from-includessnoversionincludesssnoversion-mdmd"></a>Akış Destek'ten[!INCLUDE[ssNoVersion](../../../../includes/ssnoversion-md.md)]  
- Destek'ten akış [!INCLUDE[ssNoVersion](../../../../includes/ssnoversion-md.md)] yeni işlevselliği sunar <xref:System.Data.Common.DbDataReader> ve <xref:System.Data.SqlClient.SqlDataReader> alabilmek için sınıflar <xref:System.IO.Stream>, <xref:System.Xml.XmlReader>, ve <xref:System.IO.TextReader> nesneleri ve tepki.  Bu sınıfların sorgularından verileri almak için kullanılır. Sonuç olarak, Destek'ten akış [!INCLUDE[ssNoVersion](../../../../includes/ssnoversion-md.md)] OLTP senaryoları yer almaktadır ve şirket içi ve şirket dışı ortamlar için geçerlidir.  
+## <a name="streaming-support-from-sql-server"></a>SQL Server'dan akış desteği  
+ Akış desteği SQL Server'dan yeni işlevselliği sunar <xref:System.Data.Common.DbDataReader> ve <xref:System.Data.SqlClient.SqlDataReader> alabilmek için sınıflar <xref:System.IO.Stream>, <xref:System.Xml.XmlReader>, ve <xref:System.IO.TextReader> nesneleri ve tepki.  Bu sınıfların sorgularından verileri almak için kullanılır. Sonuç olarak, SQL Server'dan akış desteği OLTP senaryoları yer almaktadır ve şirket içi ve şirket dışı ortamlar için geçerlidir.  
   
- Aşağıdaki üyeleri eklenme <xref:System.Data.SqlClient.SqlDataReader> akış desteğini etkinleştirmek için [!INCLUDE[ssNoVersion](../../../../includes/ssnoversion-md.md)]:  
+ Aşağıdaki üyeleri eklenme <xref:System.Data.SqlClient.SqlDataReader> SQL Server'dan akış desteğini etkinleştirmek için:  
   
 1.  <xref:System.Data.SqlClient.SqlDataReader.IsDBNullAsync%2A>  
   
@@ -49,7 +51,7 @@ Akış desteği arasında [!INCLUDE[ssNoVersion](../../../../includes/ssnoversio
   
 6.  <xref:System.Data.SqlClient.SqlDataReader.GetXmlReader%2A>  
   
- Aşağıdaki üyeleri eklenme <xref:System.Data.Common.DbDataReader> akış desteğini etkinleştirmek için [!INCLUDE[ssNoVersion](../../../../includes/ssnoversion-md.md)]:  
+ Aşağıdaki üyeleri eklenme <xref:System.Data.Common.DbDataReader> SQL Server'dan akış desteğini etkinleştirmek için:  
   
 1.  <xref:System.Data.Common.DbDataReader.GetFieldValue%2A>  
   
@@ -57,8 +59,8 @@ Akış desteği arasında [!INCLUDE[ssNoVersion](../../../../includes/ssnoversio
   
 3.  <xref:System.Data.Common.DbDataReader.GetTextReader%2A>  
   
-## <a name="streaming-support-to-includessnoversionincludesssnoversion-mdmd"></a>Akış desteği[!INCLUDE[ssNoVersion](../../../../includes/ssnoversion-md.md)]  
- Akış desteği için [!INCLUDE[ssNoVersion](../../../../includes/ssnoversion-md.md)] yeni işlevselliği sunar <xref:System.Data.SqlClient.SqlParameter> kabul edebilir ve tepki şekilde sınıf <xref:System.Xml.XmlReader>, <xref:System.IO.Stream>, ve <xref:System.IO.TextReader> nesneleri. <xref:System.Data.SqlClient.SqlParameter>Parametre sorguları ve saklı yordamlar geçirmek için kullanılır.  
+## <a name="streaming-support-to-sql-server"></a>SQL Server akış desteği  
+ Akış desteği SQL Server yeni işlevselliği sunar <xref:System.Data.SqlClient.SqlParameter> kabul edebilir ve tepki şekilde sınıf <xref:System.Xml.XmlReader>, <xref:System.IO.Stream>, ve <xref:System.IO.TextReader> nesneleri. <xref:System.Data.SqlClient.SqlParameter> Parametre sorguları ve saklı yordamlar geçirmek için kullanılır.  
   
  Atma bir <xref:System.Data.SqlClient.SqlCommand> nesne veya arama <xref:System.Data.SqlClient.SqlCommand.Cancel%2A> herhangi bir akış işlemi iptal etmeniz gerekir. Bir uygulama gönderirse <xref:System.Threading.CancellationToken>, iptal garanti edilmez.  
   
@@ -70,7 +72,7 @@ Akış desteği arasında [!INCLUDE[ssNoVersion](../../../../includes/ssnoversio
   
  Aşağıdaki <xref:System.Data.SqlClient.SqlParameter.SqlDbType%2A> türlerini kabul edeceği bir <xref:System.Data.SqlClient.SqlParameter.Value%2A> , <xref:System.IO.TextReader>:  
   
--   **Char**  
+-   **char**  
   
 -   **NChar**  
   
@@ -80,11 +82,11 @@ Akış desteği arasında [!INCLUDE[ssNoVersion](../../../../includes/ssnoversio
   
  **Xml** <xref:System.Data.SqlClient.SqlParameter.SqlDbType%2A> türü kabul edeceği bir <xref:System.Data.SqlClient.SqlParameter.Value%2A> , <xref:System.Xml.XmlReader>.  
   
- <xref:System.Data.SqlClient.SqlParameter.SqlValue%2A>türündeki değerleri kabul edebilir <xref:System.Xml.XmlReader>, <xref:System.IO.TextReader>, ve <xref:System.IO.Stream>.  
+ <xref:System.Data.SqlClient.SqlParameter.SqlValue%2A> türündeki değerleri kabul edebilir <xref:System.Xml.XmlReader>, <xref:System.IO.TextReader>, ve <xref:System.IO.Stream>.  
   
  <xref:System.Xml.XmlReader>, <xref:System.IO.TextReader>, Ve <xref:System.IO.Stream> nesnesi aktarılmayacak kadar tarafından tanımlanan değer <xref:System.Data.SqlClient.SqlParameter.Size%2A>.  
   
-## <a name="sample----streaming-from-includessnoversionincludesssnoversion-mdmd"></a>Örnek--gelen akış[!INCLUDE[ssNoVersion](../../../../includes/ssnoversion-md.md)]  
+## <a name="sample----streaming-from-sql-server"></a>Örnek--SQL Server'dan akış  
  Aşağıdaki [!INCLUDE[tsql](../../../../includes/tsql-md.md)] örnek veritabanı oluşturmak için:  
   
 ```  
@@ -108,13 +110,13 @@ GO
   
 -   Büyük dosyaları almak için zaman uyumsuz bir yol sağlayarak bir kullanıcı arabirimi iş parçacığı engelleme kaçının.  
   
--   Büyük metin dosyasından aktarım [!INCLUDE[ssNoVersion](../../../../includes/ssnoversion-md.md)] içinde [!INCLUDE[net_v45](../../../../includes/net-v45-md.md)].  
+-   SQL Server'da büyük metin dosyası aktarmaya [!INCLUDE[net_v45](../../../../includes/net-v45-md.md)].  
   
--   Büyük bir XML dosyasından aktarım [!INCLUDE[ssNoVersion](../../../../includes/ssnoversion-md.md)] içinde [!INCLUDE[net_v45](../../../../includes/net-v45-md.md)].  
+-   SQL Server'da büyük bir XML dosya aktarımı [!INCLUDE[net_v45](../../../../includes/net-v45-md.md)].  
   
--   Verilerin alınacağı [!INCLUDE[ssNoVersion](../../../../includes/ssnoversion-md.md)].  
+-   SQL Server'dan veri alın.  
   
--   Büyük dosyaları (BLOB) birinden aktarmak [!INCLUDE[ssNoVersion](../../../../includes/ssnoversion-md.md)] bellek yetersiz çalıştırılmadan başka bir veritabanı.  
+-   Büyük dosyaları (BLOB) yetersiz bellek çalıştırılmadan başka bir SQL Server veritabanından aktarın.  
   
 ```  
 using System;  
@@ -305,7 +307,7 @@ namespace StreamingFromServer {
 }  
 ```  
   
-## <a name="sample----streaming-to-includessnoversionincludesssnoversion-mdmd"></a>Örnek--akış[!INCLUDE[ssNoVersion](../../../../includes/ssnoversion-md.md)]  
+## <a name="sample----streaming-to-sql-server"></a>Örnek--SQL Server akış  
  Aşağıdaki [!INCLUDE[tsql](../../../../includes/tsql-md.md)] örnek veritabanı oluşturmak için:  
   
 ```  
@@ -329,9 +331,9 @@ GO
   
  Örnek aşağıdakilerin nasıl yapılacağını gösterir:  
   
--   Büyük bir BLOB aktarma [!INCLUDE[ssNoVersion](../../../../includes/ssnoversion-md.md)] içinde [!INCLUDE[net_v45](../../../../includes/net-v45-md.md)].  
+-   SQL Server'da büyük BLOB aktarılıyor [!INCLUDE[net_v45](../../../../includes/net-v45-md.md)].  
   
--   Bir uzun metin dosyasına aktarılıyor [!INCLUDE[ssNoVersion](../../../../includes/ssnoversion-md.md)] içinde [!INCLUDE[net_v45](../../../../includes/net-v45-md.md)].  
+-   SQL Server'da büyük metin dosyasına aktarılıyor [!INCLUDE[net_v45](../../../../includes/net-v45-md.md)].  
   
 -   Büyük bir BLOB aktarmak için yeni zaman uyumsuz özelliğini kullanarak.  
   
@@ -339,7 +341,7 @@ GO
   
 -   Büyük bir BLOB aktarımını iptal ediliyor...  
   
--   Bir akış [!INCLUDE[ssNoVersion](../../../../includes/ssnoversion-md.md)] başka bir yeni zaman uyumsuz özelliğini kullanarak.  
+-   Başka bir yeni zaman uyumsuz özelliğini kullanarak bir SQL Server'dan akış.  
   
 ```  
 using System;  
@@ -461,8 +463,8 @@ namespace StreamingToServer {
 }  
 ```  
   
-## <a name="sample----streaming-from-one-includessnoversionincludesssnoversion-mdmd-to-another-includessnoversionincludesssnoversion-mdmd"></a>Örnek--Birinden akış [!INCLUDE[ssNoVersion](../../../../includes/ssnoversion-md.md)] diğerine[!INCLUDE[ssNoVersion](../../../../includes/ssnoversion-md.md)]  
- Bu örnek, zaman uyumsuz olarak birinden büyük BLOB akışı gösterilmiştir [!INCLUDE[ssNoVersion](../../../../includes/ssnoversion-md.md)] diğerine iptal desteği.  
+## <a name="sample----streaming-from-one-sql-server-to-another-sql-server"></a>Örnek--Başka bir SQL Server için bir SQL Server'dan akış  
+ Bu örnek, bir SQL Server'ten büyük BLOB iptal desteği ile başka bir zaman uyumsuz olarak akışı gösterilmiştir.  
   
 ```  
 using System;  

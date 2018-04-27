@@ -1,37 +1,52 @@
 ---
-title: "Varsayılan değer ifadeleri (C# programlama Kılavuzu)"
-description: "Varsayılan değer ifadeleri herhangi bir başvuru türü veya değer türü için varsayılan değer üretmek"
-ms.date: 08/23/2017
+title: Varsayılan değer ifadeleri (C# programlama Kılavuzu)
+description: Varsayılan değer ifadeleri herhangi bir başvuru türü veya değer türü için varsayılan değer üretmek
+ms.date: 04/25/2018
 ms.prod: .net
-ms.technology: devlang-csharp
+ms.technology:
+- devlang-csharp
 ms.topic: article
 helpviewer_keywords:
 - generics [C#], default keyword
 - default keyword [C#], generic programming
-ms.assetid: b9daf449-4e64-496e-8592-6ed2c8875a98
-caps.latest.revision: "22"
 author: BillWagner
 ms.author: wiwagn
-ms.openlocfilehash: c2bb1c269e5347d615c47ab828506aef538c4761
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 174ac79c9e2c4a4e628816b1178d420ec7cfc809
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="default-value-expressions-c-programming-guide"></a>Varsayılan değer ifadeleri (C# programlama Kılavuzu)
 
-Varsayılan değer ifadesi bir tür için varsayılan değer oluşturur. Varsayılan değer ifadeleri Genel sınıflar ve yöntemler özellikle yararlı olur. Genel türler kullanma ortaya bir sorundur parametreli türü için varsayılan bir değer atamak nasıl `T` değil bildiğinizde aşağıdaki önceden:
+Varsayılan değer ifadesi `default(T)` türünün varsayılan değeri üretir `T`. Aşağıdaki tabloda, çeşitli türleri için hangi değerlerin üretilen gösterilmektedir:
+
+|Tür|Varsayılan değer|
+|---------|---------|
+|herhangi bir başvuru türü|`null`|
+|Sayısal değer türü|Sıfır|
+|[bool](../../language-reference/keywords/bool.md)|`false`|
+|[char](../../language-reference/keywords/char.md)|`'\0'`|
+|[enum](../../language-reference/keywords/enum.md)|Değeri ifade tarafından üretilen `(E)0`, burada `E` enum tanımlayıcısıdır.|
+|[struct](../../language-reference/keywords/struct.md)|Tüm değer tür alanları ayarlayarak üretilen değeri varsayılan değerlerine ve tüm tür alanları için başvuru `null`.|
+|Boş değer atanabilir tür|Kendisi için bir örnek <xref:System.Nullable%601.HasValue%2A> özelliği `false` ve <xref:System.Nullable%601.Value%2A> özelliği tanımlanmadı.|
+
+Varsayılan değer ifadeleri Genel sınıflar ve yöntemler özellikle yararlı olur. Genel türler kullanma ortaya bir sorundur parametreli türünde bir varsayılan değer atama `T` zaman bilmediğiniz aşağıdaki önceden:
 
 - Olup olmadığını `T` bir başvuru türü ya da bir değer türü.
-- Varsa `T` bir değer türü sayısal bir değer veya kullanıcı tanımlı bir yapı olup olmadığı.
+- Varsa `T` sayısal bir değer veya yapı olup bir değer türü değil.
 
- Bir değişken verilen `t` parametreli bir türde `T`, deyim `t = null` yalnızca geçerlidir, `T` bir başvuru türüdür. Atama `t = 0` yalnızca sayısal değer türleri için ancak yapılar için çalışır. Çözüm döndüren bir varsayılan değer ifadesi kullanmaktır `null` başvuru türleri (sınıf ve arabirim türlerini) ve sıfır sayısal değer türleri için. İsteğe bağlı olarak kullanıcı tanımlı yapılar için 0 üreten sıfır bit düzeni için başlatılan yapısı döndürür veya `null` bu üye bir değer veya başvuru türünde olup olmamasına bağlı olarak her üye için. Boş değer atanabilen değer türleri için `default` döndüren bir <xref:System.Nullable%601?displayProperty=nameWithType>, gibi herhangi bir yapı başlatıldı.
+ Bir değişken verilen `t` parametreli bir türde `T`, deyim `t = null` yalnızca geçerlidir, `T` bir başvuru türüdür. Atama `t = 0` yalnızca sayısal değer türleri için ancak yapılar için çalışır. Çözmek için varsayılan değer ifadesi kullanın:
+
+```csharp
+T t = default(T);
+```
 
 `default(T)` İfade Genel sınıflar ve yöntemler için sınırlı değildir. Varsayılan değer ifadeleri ile herhangi bir yönetilen türü kullanılabilir. Bu ifadelerden herhangi biri geçerlidir:
 
  [!code-csharp[csProgGuideGenerics#1](../../../../samples/snippets/csharp/programming-guide/statements-expressions-operators/default-value-expressions.cs)]
 
- Aşağıdaki örnekte `GenericList<T>` sınıfının nasıl kullanılacağını gösterir `default(T)` genel bir sınıf içinde işleci. Daha fazla bilgi için bkz: [genel türler genel bakış](../generics/introduction-to-generics.md).
+ Aşağıdaki örnekte `GenericList<T>` sınıfının nasıl kullanılacağını gösterir `default(T)` genel bir sınıf içinde işleci. Daha fazla bilgi için bkz: [genel türlere giriş](../generics/introduction-to-generics.md).
 
  [!code-csharp[csProgGuideGenerics#2](../../../../samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideGenerics/CS/Generics.cs#Snippet41)]
 
@@ -51,7 +66,9 @@ Aşağıdaki örnek, birçok kullanım gösterir `default` varsayılan değer if
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
- <xref:System.Collections.Generic>[C# programlama kılavuzu](../index.md)  
- [Genel türler](../generics/index.md)  
- [Genel yöntemler](../generics/generic-methods.md)  
- [Genel türler](~/docs/standard/generics/index.md)  
+ <xref:System.Collections.Generic>  
+ [C# Programlama Kılavuzu](../index.md)  
+ [Genel türler (C# programlama Kılavuzu)](../generics/index.md)  
+ [Genel Yöntemler](../generics/generic-methods.md)  
+ [.NET'nda genel türler](~/docs/standard/generics/index.md)  
+ [Varsayılan değerler tablosu](../../language-reference/keywords/default-values-table.md)

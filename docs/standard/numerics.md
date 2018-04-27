@@ -1,12 +1,12 @@
 ---
-title: ".NET Framework'te sayısal türler"
-ms.custom: 
+title: .NET Framework'te sayısal türler
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology: dotnet-standard
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - SIMD
@@ -17,18 +17,18 @@ helpviewer_keywords:
 - numerics
 - BigInteger
 ms.assetid: dfebc18e-acde-4510-9fa7-9a0f4aa3bd11
-caps.latest.revision: "11"
+caps.latest.revision: 11
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: bd55b127f73fe1cefce9724f3a74400b5fe7488f
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: 074ed60a3cbc1949eea4a8d866cdb3bba7c0f196
+ms.sourcegitcommit: 2e8acae16ae802f2d6d04e3ce0a6dbf04e476513
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="numerics-in-the-net-framework"></a>.NET Framework'te sayısal türler
 Standart sayısal Entegral ve kayan nokta temelleri, .NET Framework destekler yanı <xref:System.Numerics.BigInteger>, bir tam sayı türü hiçbir teorik üst veya alt sınırı ile <xref:System.Numerics.Complex>, bir karmaşık numaralar temsil eden tür ve bir SIMD etkin kümesi vektör türlerinde <xref:System.Numerics> ad alanı.  
@@ -67,7 +67,7 @@ Standart sayısal Entegral ve kayan nokta temelleri, .NET Framework destekler ya
  <xref:System.Double> Ve <xref:System.Single> türleri yapılarına göre (örneğin, iki yıldız güneş sistemi arasındaki uzaklığı) kesin değerler için ve içinde duyarlık ve küçük hata yuvarlama yüksek derecede olmayan uygulamalar için kullanılacak yöneliktir Gerekli. Kullanmanız gereken <xref:System.Decimal?displayProperty=nameWithType> büyük olduğu durumlarda türü Duyarlığı gereklidir ve hata yuvarlama istenmeyen,  
   
 ## <a name="biginteger"></a>BigInteger  
- <xref:System.Numerics.BigInteger?displayProperty=nameWithType>hiçbir üst veya alt sınır değeri teorik sahip büyük bir tamsayı temsil eden bir değişmez türüdür. Yöntemlerinin <xref:System.Numerics.BigInteger> türü yakından paralel bir tam sayı türleri olanlar.  
+ <xref:System.Numerics.BigInteger?displayProperty=nameWithType> hiçbir üst veya alt sınır değeri teorik sahip büyük bir tamsayı temsil eden bir değişmez türüdür. Yöntemlerinin <xref:System.Numerics.BigInteger> türü yakından paralel bir tam sayı türleri olanlar.  
   
 ## <a name="complex"></a>Complex  
  <xref:System.Numerics.Complex> Türü bir karmaşık numarası, diğer bir deyişle, bir gerçek sayı bölüm ve bir sanal numarası bölümü ile temsil eder. Aritmetik, karşılaştırma, eşitlik, açık Dönüşüm ve örtük dönüşüm işleçleri yanı matematiksel, cebirsel ve trigonometrik yöntemleri standart bir kümesini destekler.  
@@ -85,7 +85,7 @@ Standart sayısal Entegral ve kayan nokta temelleri, .NET Framework destekler ya
   
  Vektör SIMD etkin türleri SIMD etkin olmayan donanım ve JIT derleyicileri kullanılacak veren IL uygulanır. SIMD yönergeleri yararlanmak için 64-bit uygulamaları ile .NET Framework 4.6 bulunan yönetilen kod için yeni 64-bit JIT derleyicisi tarafından derlenmelidir; x64 hedeflerken SIMD desteği ekler işlemci.  
   
- SIMD ayrıca indirilebilir olarak bir [NuGet paketi](http://www.nuget.org/packages/System.Numerics.Vectors).  NuGET paketini de genel içerir <xref:System.Numerics.Vector%601> herhangi bir ilkel sayısal türde bir vektör oluşturmanıza olanak tanıyan yapısı. (İçindeki tüm sayısal türler basit sayısal türler dahil <xref:System> ad alanı dışında <xref:System.Decimal>.) Ayrıca, <xref:System.Numerics.Vector%601> yapısı bir kitaplık vektörlerinin ile çalışırken çağırabilirsiniz kullanışlı yöntemler sağlar.  
+ SIMD ayrıca indirilebilir olarak bir [NuGet paketi](https://www.nuget.org/packages/System.Numerics.Vectors).  NuGET paketini de genel içerir <xref:System.Numerics.Vector%601> herhangi bir ilkel sayısal türde bir vektör oluşturmanıza olanak tanıyan yapısı. (İçindeki tüm sayısal türler basit sayısal türler dahil <xref:System> ad alanı dışında <xref:System.Decimal>.) Ayrıca, <xref:System.Numerics.Vector%601> yapısı bir kitaplık vektörlerinin ile çalışırken çağırabilirsiniz kullanışlı yöntemler sağlar.  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
  [Uygulama Temelleri](../../docs/standard/application-essentials.md)

@@ -1,12 +1,12 @@
 ---
-title: "Genel Türlerde Kovaryans ve Kontravaryans"
-ms.custom: 
+title: Genel Türlerde Kovaryans ve Kontravaryans
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology: dotnet-standard
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - csharp
@@ -17,18 +17,18 @@ helpviewer_keywords:
 - covariance and contravariance in generics
 - generic type parameters
 ms.assetid: 2678dc63-c7f9-4590-9ddc-0a4df684d42e
-caps.latest.revision: 
+caps.latest.revision: 24
 author: mairaw
 ms.author: mairaw
 manager: wpickett
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: 7536d06c971251fb857fabefc95a50ae4389f785
-ms.sourcegitcommit: d95a91d685565f4d95c8773b558752864a6a3d7e
+ms.openlocfilehash: 595b637ac12b6ecd8633bb8f48a54d722bc84f49
+ms.sourcegitcommit: 2e8acae16ae802f2d6d04e3ce0a6dbf04e476513
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/12/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="covariance-and-contravariance-in-generics"></a>Genel Türlerde Kovaryans ve Kontravaryans
 <a name="top"></a> Kovaryans ve kontravaryans (ayrıntılı) fazla türetilmiş bir tür veya başlangıçta belirtilenden daha az türetilmiş bir tür (daha az belirli) kullanacak şekilde özelliği başvuran terimler. Genel tür parametreleri, genel türleri atamakta ve kullanmakta daha fazla esneklik sağlamak için birlikte değişme ve değişken karşıtlığını destekler. Bir tür sisteminden söz ederken, birlikte değişme, değişken karşıtlığı ve değişmezlik terimlerinin tanımları aşağıdaki gibidir. Adlı bir temel sınıf örnekleri varsayın `Base` ve adlı türetilmiş bir sınıf `Derived`.  
@@ -145,7 +145,7 @@ ms.lasthandoff: 03/12/2018
 ### <a name="variance-in-generic-and-non-generic-delegates"></a>Genel ve Genel Olmayan Temsilcilerde Değişken  
  Önceki kodda, imzası `MyMethod` oluşturulan genel temsilcisi imzası tam olarak eşleşir: `Func<Base, Derived>` (`Func(Of Base, Derived)` Visual Basic'te). Tüm temsilci türleri genel temsilcisi türünden oluşturulan sürece bu genel temsilcisi değişkenleri veya daha fazla parametre türleri türetilmiş yöntem parametreleri depolanabilir ve daha az dönüş türleri türetilmiş örnek gösterir <xref:System.Func%602>.  
   
- Bu önemli bir noktadır. Kovaryans ve kontravaryans genel temsilciler tür parametrelerini etkilerini sıradan temsilci bağlama Kovaryans ve kontravaryans etkilerini benzerdir (bkz [Temsilcilerde varyans](http://msdn.microsoft.com/library/e3b98197-6c5b-4e55-9c6e-9739b60645ca)). Ancak, temsilci bağlamadaki değişken, yalnızca değişken türde parametreleri olan genel temsilci türleriyle değil, tüm temsilci türleriyle birlikte çalışır. Ayrıca, temsilci bağlamada değişken, bir yöntemin daha kısıtlayıcı parametre türleri ve daha az kısıtlayıcı dönüş türü olan herhangi bir temsilciye bağlanmasına olanak tanırken, genel temsilcilerin atanması yalnızca her iki temsilci türünün de aynı genel tür tanımından oluşturulması durumunda çalışır.  
+ Bu önemli bir noktadır. Kovaryans ve kontravaryans genel temsilciler tür parametrelerini etkilerini sıradan temsilci bağlama Kovaryans ve kontravaryans etkilerini benzerdir (bkz [Temsilcilerde varyans](https://msdn.microsoft.com/library/e3b98197-6c5b-4e55-9c6e-9739b60645ca)). Ancak, temsilci bağlamadaki değişken, yalnızca değişken türde parametreleri olan genel temsilci türleriyle değil, tüm temsilci türleriyle birlikte çalışır. Ayrıca, temsilci bağlamada değişken, bir yöntemin daha kısıtlayıcı parametre türleri ve daha az kısıtlayıcı dönüş türü olan herhangi bir temsilciye bağlanmasına olanak tanırken, genel temsilcilerin atanması yalnızca her iki temsilci türünün de aynı genel tür tanımından oluşturulması durumunda çalışır.  
   
  Aşağıdaki örnekte, temsilci bağlamadaki değişkenin ve genel tür parametrelerindeki değişkenin birleşik etkisi gösterilmektedir. Örnek gelen en az üç tür içeren bir türü hiyerarşi tanımlar türetilmiş (`Type1`) en türetilen (`Type3`). Sıradan temsilci bağlama varyans parametre türüyle bir yöntem bağlamak için kullanılan `Type1` ve dönüş türü `Type3` parametre türüne sahip genel bir temsilci `Type2` ve dönüş türü `Type2`. Sonuçta elde edilen genel temsilcisi daha sonra genel temsilci türü türünde bir parametreye sahip başka bir değişkene atanır `Type3` ve dönüş türü `Type1`, Kovaryans ve kontravaryans genel tür parametreleri olarak kullanma. Değişken türü ve temsilci türü aynı genel tür tanımı, bu durumda, oluşturulması ikinci ataması gerektiriyorsa <xref:System.Func%602>.  
   
@@ -172,7 +172,7 @@ ms.lasthandoff: 03/12/2018
   
  Visual Basic ve C#, birlikte değişken veya değişken karşıtı türde parametrelerin kullanılmasına ilişkin kuralların ihlal edilmesine veya arabirimlerden ve temsilcilerden başka türde tür parametrelerine birlikte değişken veya değişken karşıtı ek açıklamalar eklenmesine izin vermez. [MSIL derleyici](../../../docs/framework/tools/ilasm-exe-il-assembler.md) bu tür denetimler gerçekleştirmez, ancak bir <xref:System.TypeLoadException> kurallarını ihlal eden bir tür yüklemeye çalışırsanız atılır.  
   
- Bilgi ve örnek kod için bkz: [genel arabirimlerde varyans](http://msdn.microsoft.com/library/e14322da-1db3-42f2-9a67-397daddd6b6a).  
+ Bilgi ve örnek kod için bkz: [genel arabirimlerde varyans](https://msdn.microsoft.com/library/e14322da-1db3-42f2-9a67-397daddd6b6a).  
   
  [Başa dön](#top)  
   
@@ -201,4 +201,4 @@ ms.lasthandoff: 03/12/2018
 ## <a name="see-also"></a>Ayrıca Bkz.  
  [Kovaryans ve kontravaryans (C#)](../../csharp/programming-guide/concepts/covariance-contravariance/index.md)  
  [Kovaryans ve kontravaryans (Visual Basic)](../../visual-basic/programming-guide/concepts/covariance-contravariance/index.md)    
- [Temsilcilerde Varyans](http://msdn.microsoft.com/library/e3b98197-6c5b-4e55-9c6e-9739b60645ca)
+ [Temsilcilerde Varyans](https://msdn.microsoft.com/library/e3b98197-6c5b-4e55-9c6e-9739b60645ca)

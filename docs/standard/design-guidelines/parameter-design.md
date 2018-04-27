@@ -1,12 +1,12 @@
 ---
-title: "Parametre tasarım"
-ms.custom: 
+title: Parametre tasarım
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology: dotnet-standard
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - member design guidelines [.NET Framework], parameters
@@ -15,18 +15,18 @@ helpviewer_keywords:
 - parameters, design guidelines
 - reserved parameters
 ms.assetid: 3f33bf46-4a7b-43b3-bb78-1ffebe0dcfa6
-caps.latest.revision: "11"
+caps.latest.revision: 11
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: f95301bab57e8bdb6b22c54140a4c02ed208b8d3
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: 0d89ed81c06558a6bc101864a7fef3173f019fd0
+ms.sourcegitcommit: 2e8acae16ae802f2d6d04e3ce0a6dbf04e476513
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="parameter-design"></a>Parametre tasarım
 Bu bölümde parametre tasarım bağımsız değişkenleri denetleme yönergeleri bölümlerle dahil olmak üzere, geniş açıklamalar sağlar. Ayrıca, açıklanan yönergeleri için başvurmalıdır [adlandırma parametrelerini](../../../docs/standard/design-guidelines/naming-parameters.md).  
@@ -82,9 +82,9 @@ Bu bölümde parametre tasarım bağımsız değişkenleri denetleme yönergeler
   
  Bağımsız değişken değeri tarafından parametresi üzerinden geçirildiğinde üye geçirilen gerçek bağımsız değişken bir kopyasını alır. Bağımsız değişken bir değer türü ise, bağımsız değişkeni bir kopyasını yığında yerleştirilir. Bağımsız değişkeni bir başvuru türü ise, başvuru kopyası yığında konur. Parametreleri değere göre geçirme için C#, VB.NET ve C++, varsayılan gibi en popüler CLR dilleri.  
   
- Ne zaman bir bağımsız değişken geçirilir aracılığıyla bir `ref` parametresi, üye geçirilen gerçek bağımsız değişkeni bir başvuru alır. Bağımsız değişken bir değer türü ise, bağımsız değişkeni bir başvuru yığında yerleştirilir. Bağımsız değişkeni bir başvuru türü ise, başvuru başvuru yığında yerleştirilir. `Ref`Parametreler, çağıran tarafından geçirilen bağımsız değişken değiştirmek üye izin vermek için kullanılabilir.  
+ Ne zaman bir bağımsız değişken geçirilir aracılığıyla bir `ref` parametresi, üye geçirilen gerçek bağımsız değişkeni bir başvuru alır. Bağımsız değişken bir değer türü ise, bağımsız değişkeni bir başvuru yığında yerleştirilir. Bağımsız değişkeni bir başvuru türü ise, başvuru başvuru yığında yerleştirilir. `Ref` Parametreler, çağıran tarafından geçirilen bağımsız değişken değiştirmek üye izin vermek için kullanılabilir.  
   
- `Out`parametreleri benzer `ref` parametrelerle bazı küçük farklar. Parametre başlangıçta kabul atanmamış ve bazı değer atanmadan önce üye gövdesinde okunamıyor. Ayrıca, parametre üye döndürmeden önce bir değer atanması gerekir.  
+ `Out` parametreleri benzer `ref` parametrelerle bazı küçük farklar. Parametre başlangıçta kabul atanmamış ve bazı değer atanmadan önce üye gövdesinde okunamıyor. Ayrıca, parametre üye döndürmeden önce bir değer atanması gerekir.  
   
  **KAÇININ x** kullanarak `out` veya `ref` parametreleri.  
   
@@ -164,7 +164,7 @@ public class String {
   
  *Bölümleri © 2005, 2009 Microsoft Corporation. Tüm hakları saklıdır.*  
   
- *Pearson eğitim, Inc. şirketinin izni tarafından yeniden yazdırılmaları [Framework tasarım yönergeleri: kuralları, deyimleri ve yeniden kullanılabilir .NET kitaplıkları, 2 sürümü için desenleri](http://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619) Krzysztof Cwalina ve Brad Abrams tarafından 22 Eki 2008 tarafından yayımlanan Microsoft Windows geliştirme serisi bir parçası olarak Addison-Wesley Professional.*  
+ *Pearson eğitim, Inc. şirketinin izni tarafından yeniden yazdırılmaları [Framework tasarım yönergeleri: kuralları, deyimleri ve yeniden kullanılabilir .NET kitaplıkları, 2 sürümü için desenleri](https://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619) Krzysztof Cwalina ve Brad Abrams tarafından 22 Eki 2008 tarafından yayımlanan Microsoft Windows geliştirme serisi bir parçası olarak Addison-Wesley Professional.*  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
  [Üye Tasarımı Yönergeleri](../../../docs/standard/design-guidelines/member.md)  

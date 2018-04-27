@@ -1,12 +1,12 @@
 ---
-title: "BlockingCollection Genel Bakışı"
-ms.custom: 
+title: BlockingCollection Genel Bakışı
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology: dotnet-standard
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - csharp
@@ -14,21 +14,21 @@ dev_langs:
 helpviewer_keywords:
 - BlockingCollection, overview
 ms.assetid: 987ea3d7-0ad5-4238-8b64-331ce4eb3f0b
-caps.latest.revision: 
+caps.latest.revision: 12
 author: mairaw
 ms.author: mairaw
 manager: wpickett
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: 5e2235c1a5bbe4a39cf029059290268faa5be154
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: 74303f07134401193d07d3b5d584c9498f023d90
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="blockingcollection-overview"></a>BlockingCollection Genel Bakışı
-<xref:System.Collections.Concurrent.BlockingCollection%601>Aşağıdaki özellikleri sağlayan bir iş parçacığı koleksiyonunun sınıfı şöyledir:  
+<xref:System.Collections.Concurrent.BlockingCollection%601> Aşağıdaki özellikleri sağlayan bir iş parçacığı koleksiyonunun sınıfı şöyledir:  
   
 -   Üretici-tüketici düzeni uygulaması.  
   
@@ -40,7 +40,7 @@ ms.lasthandoff: 12/23/2017
   
 -   Ekleme ve kaldırma ", değil engelleyebilir veya belirli bir süre kadar engelleyebilir işlemleri deneyin".  
   
--   Uygulayan herhangi bir koleksiyon türü yalıtır<xref:System.Collections.Concurrent.IProducerConsumerCollection%601>  
+-   Uygulayan herhangi bir koleksiyon türü yalıtır <xref:System.Collections.Concurrent.IProducerConsumerCollection%601>  
   
 -   İptal belirteçleri iptalini.  
   
@@ -51,7 +51,7 @@ ms.lasthandoff: 12/23/2017
     2.  Bunlar numaralandırılır gibi öğeleri kaldırır numaralandırması.  
   
 ## <a name="bounding-and-blocking-support"></a>Sınırlama ve engelleme desteği  
- <xref:System.Collections.Concurrent.BlockingCollection%601>sınırlama ve engelleme destekler. Anlamına gelir sınırlayıcı koleksiyon maksimum kapasitesini ayarlayabilirsiniz. Sınırlayıcı bellek koleksiyonunda en büyük boyutunu denetlemek sağlar ve öncesinde Süren iş parçacığı çok taşıma üretmeye iş parçacığı engeller belirli senaryolarda önemlidir.  
+ <xref:System.Collections.Concurrent.BlockingCollection%601> sınırlama ve engelleme destekler. Anlamına gelir sınırlayıcı koleksiyon maksimum kapasitesini ayarlayabilirsiniz. Sınırlayıcı bellek koleksiyonunda en büyük boyutunu denetlemek sağlar ve öncesinde Süren iş parçacığı çok taşıma üretmeye iş parçacığı engeller belirli senaryolarda önemlidir.  
   
  Birden çok iş parçacığı veya görevleri öğeler koleksiyonuna eşzamanlı olarak ekleyebilirsiniz ve koleksiyon belirtilen kapasitesinin üst sınırına ulaşırsa, öğeyi kaldırılana kadar üretmeye iş parçacığı engeller. Birden çok tüketiciye öğeleri aynı anda kaldırabilirsiniz ve koleksiyonu boş olursa, bir üretici bir öğe ekler kadar süren iş parçacığı engeller. Oluşturmayan bir iş parçacığı çağırabilir <xref:System.Collections.Concurrent.BlockingCollection%601.CompleteAdding%2A> başka öğe yok eklenmesi belirtmek için. Tüketiciler İzleyici <xref:System.Collections.Concurrent.BlockingCollection%601.IsCompleted%2A> zaman koleksiyonu boş olan ve daha fazla öğe eklenecek bilmeniz özelliği. Aşağıdaki örnek, 100 sınırlanmış kapasitesine sahip basit bir BlockingCollection gösterir. Bazı dış koşul true olduğunda ve daha sonra çağırır sürece üretici görev öğeler koleksiyonuna ekler. <xref:System.Collections.Concurrent.BlockingCollection%601.CompleteAdding%2A>. Tüketici Görev öğeleri kadar geçen <xref:System.Collections.Concurrent.BlockingCollection%601.IsCompleted%2A> özelliği true ise.  
   
@@ -85,7 +85,7 @@ BlockingCollection<string> bc = new BlockingCollection<string>(new ConcurrentBag
  Daha fazla bilgi için bkz: [nasıl yapılır: ekleme sınırlama ve engelleme işlevi bir koleksiyona](../../../../docs/standard/collections/thread-safe/how-to-add-bounding-and-blocking.md).  
   
 ## <a name="ienumerable-support"></a>IEnumerable desteği  
- <xref:System.Collections.Concurrent.BlockingCollection%601>sağlayan bir <xref:System.Collections.Concurrent.BlockingCollection%601.GetConsumingEnumerable%2A> kullanmasına olanak sağlayan yöntemi `foreach` (`For Each` içinde [!INCLUDE[vbprvb](../../../../includes/vbprvb-md.md)]) koleksiyon tamamlanana kadar öğeleri kaldırmak için yani boştur ve daha fazla öğe eklenir. Daha fazla bilgi için bkz: [nasıl yapılır: bir BlockingCollection öğeleri kaldırmak için kullanım ForEach](../../../../docs/standard/collections/thread-safe/how-to-use-foreach-to-remove.md).  
+ <xref:System.Collections.Concurrent.BlockingCollection%601> sağlayan bir <xref:System.Collections.Concurrent.BlockingCollection%601.GetConsumingEnumerable%2A> kullanmasına olanak sağlayan yöntemi `foreach` (`For Each` Visual Basic'te) koleksiyon tamamlanana kadar öğeleri kaldırmak için yani boştur ve daha fazla öğe eklenir. Daha fazla bilgi için bkz: [nasıl yapılır: bir BlockingCollection öğeleri kaldırmak için kullanım ForEach](../../../../docs/standard/collections/thread-safe/how-to-use-foreach-to-remove.md).  
   
 ## <a name="using-many-blockingcollections-as-one"></a>Birçok BlockingCollections olarak kullanma  
  İçinde bir tüketici gereken aynı anda birden fazla koleksiyonun öğelerinden yapılacak senaryoları için dizileri oluşturabilirsiniz <xref:System.Collections.Concurrent.BlockingCollection%601> ve statik yöntemler gibi kullandığınız <xref:System.Collections.Concurrent.BlockingCollection%601.TakeFromAny%2A> ve <xref:System.Collections.Concurrent.BlockingCollection%601.AddToAny%2A> , ekleme veya herhangi birinden koleksiyonlardaki alın dizi. Bir koleksiyon engelleme varsa, işlemi gerçekleştiren bir tane bulana kadar yöntemi hemen başka çalışır. Daha fazla bilgi için bkz: [nasıl yapılır: ardışık düzende engelleme koleksiyonları kullanım diziler](../../../../docs/standard/collections/thread-safe/how-to-use-arrays-of-blockingcollections.md).  

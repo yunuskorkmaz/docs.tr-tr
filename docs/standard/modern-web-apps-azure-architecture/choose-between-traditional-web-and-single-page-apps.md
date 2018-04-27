@@ -1,19 +1,20 @@
 ---
-title: "Geleneksel web uygulamaları ve tek sayfa uygulamaları arasında seçim yapma"
-description: "ASP.NET Core ve Microsoft Azure ile Mimarı modern web uygulamaları"
+title: Geleneksel web uygulamaları ve tek sayfa uygulamaları arasında seçim yapma
+description: ASP.NET Core ve Microsoft Azure ile Mimarı modern web uygulamaları
 author: ardalis
 ms.author: wiwagn
 ms.date: 10/06/2017
 ms.prod: .net-core
 ms.technology: dotnet-docker
+ms.topic: article
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: eb830ede1b644700a80f0e9fac2f3608deb88276
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: b1472f8107d57eff8faca1b4c7de7ba43f4271c0
+ms.sourcegitcommit: 2e8acae16ae802f2d6d04e3ce0a6dbf04e476513
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="choose-between-traditional-web-apps-and-single-page-apps-spas"></a>Geleneksel Web uygulamaları ve tek sayfa uygulamaları (SPAs) arasında seçim yapma
 
@@ -92,8 +93,8 @@ Aşağıdaki karar tablo bazı geleneksel web uygulaması arasında bir SPA seç
   |---|---|---|
   | JavaScript/TypeScript gerekli takım aşina | **en az** | **Gerekli** |
   | Komut dosyası olmadan tarayıcılar destekler | **Desteklenen** | **Desteklenmiyor** |
-  | En düşük istemci tarafı uygulama davranışı | **Oldukça uygun** | **Overkill** |
-  | Zengin ve karmaşık bir kullanıcı arabirimi gereksinimleri | **Limited** | **Oldukça uygun** |
+  | En düşük istemci tarafı uygulama davranışı | **Oldukça uygun** | **Gereğinden fazla** |
+  | Zengin ve karmaşık bir kullanıcı arabirimi gereksinimleri | **Sınırlı** | **Oldukça uygun** |
 
 >[!div class="step-by-step"]
 [Önceki] (modern-web-uygulamalar-characteristics.md) [sonraki](architectural-principles.md)

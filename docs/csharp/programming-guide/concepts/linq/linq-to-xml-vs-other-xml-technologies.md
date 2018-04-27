@@ -1,21 +1,22 @@
 ---
-title: "LINQ-XML vs. Diğer XML Technologies3"
-ms.custom: 
+title: LINQ-XML vs. Diğer XML Technologies3
+ms.custom: ''
 ms.date: 07/20/2015
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-csharp
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- devlang-csharp
 ms.topic: article
 ms.assetid: 01b8e746-12d3-471d-b811-7539e4547784
-caps.latest.revision: "3"
+caps.latest.revision: 3
 author: BillWagner
 ms.author: wiwagn
-ms.openlocfilehash: 4a159c906799a61372c1a40e7464d885339b9256
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.openlocfilehash: f13e2d64db9265f03aec3fa5da9f171fcb366f72
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="linq-to-xml-vs-other-xml-technologies"></a>LINQ-XML vs. Diğer XML teknolojileri
 Bu konuda karşılaştırır [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] aşağıdaki XML teknolojiler: <xref:System.Xml.XmlReader>, XSLT, MSXML ve XmlLite. Bu bilgiler kullanmak için hangi teknoloji karar vermenize yardımcı olabilir.  
@@ -23,9 +24,9 @@ Bu konuda karşılaştırır [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md
  Bir karşılaştırması [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] belge nesne modeli (DOM) için bkz: [LINQ-XML vs. DOM (C#)](../../../../csharp/programming-guide/concepts/linq/linq-to-xml-vs-dom.md).  
   
 ## <a name="linq-to-xml-vs-xmlreader"></a>LINQ-XML vs. XmlReader  
- <xref:System.Xml.XmlReader>Hızlı, yalnızca iletme, önbelleğe alma olmayan ayrıştırıcı ' dir.  
+ <xref:System.Xml.XmlReader> Hızlı, yalnızca iletme, önbelleğe alma olmayan ayrıştırıcı ' dir.  
   
- [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)]üstünde uygulanan <xref:System.Xml.XmlReader>, ve sıkı bir şekilde tümleştirilmiştir. Ancak, aynı zamanda kullanabileceğiniz <xref:System.Xml.XmlReader> kendisi tarafından.  
+ [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] üstünde uygulanan <xref:System.Xml.XmlReader>, ve sıkı bir şekilde tümleştirilmiştir. Ancak, aynı zamanda kullanabileceğiniz <xref:System.Xml.XmlReader> kendisi tarafından.  
   
  Örneğin, bir Web hizmeti, oluşturduğunuz varsayalım ayrıştırma yüzlerce saniyede XML belgeleri ve belge, yalnızca bir uygulama XML ayrıştırmak için kod yazma olmanız, yani aynı yapısı sahip olur. Bu durumda, muhtemelen kullanmak istediğiniz <xref:System.Xml.XmlReader> kendisi tarafından.  
   
@@ -40,7 +41,7 @@ Bu konuda karşılaştırır [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md
   
  Uzmanlaştıktan sonra [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] sorgu ifadeleri, [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] dönüştürmeleri olan kullanımı kolay güçlü bir teknoloji. Temel olarak, XML belgeniz işlevsel yapım kullanarak oluşturma çeşitli kaynaklardan veri çekmek form <xref:System.Xml.Linq.XElement> dinamik olarak nesne ve tüm yeni bir XML ağacına birleştirme. Dönüştürme, tamamen yeni bir belgeyle oluşturabilir. Dönüşümler oluşturma [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] görece kolay ve sezgisel ve ortaya çıkan kodu okunabilir durumdadır. Bu, geliştirme ve bakım maliyetlerini azaltır.  
   
- [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)]XSLT değiştirmek üzere tasarlanmamıştır. Özellikle belgenin yapısını iyi tanımlanmazsa, XSLT hala karmaşık ve belge merkezli XML dönüştürmeleri için tercih ettiğiniz bir araçtır.  
+ [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] XSLT değiştirmek üzere tasarlanmamıştır. Özellikle belgenin yapısını iyi tanımlanmazsa, XSLT hala karmaşık ve belge merkezli XML dönüştürmeleri için tercih ettiğiniz bir araçtır.  
   
  XSLT World Wide Web Konsorsiyumu (W3C) standart olma avantajına sahiptir. Yalnızca standartları teknolojileri kullanan bir gereksinimi varsa XSLT daha uygun olabilir.  
   
@@ -49,7 +50,7 @@ Bu konuda karşılaştırır [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md
 ## <a name="linq-to-xml-vs-msxml"></a>LINQ-XML vs. MSXML  
  MSXML Microsoft Windows ile birlikte gelen XML işlemek için COM tabanlı teknolojidir. MSXML DOM XPath ve XSLT desteği ile yerel bir uygulama sağlar. Ayrıca, SAX2 olmayan önbelleğe alma, olay tabanlı ayrıştırıcı içerir.  
   
- MSXML iyi gerçekleştirir, çoğu senaryoda varsayılan olarak güvenlidir ve istemci tarafı XML AJAX stili uygulamalarda işlemleri gerçekleştirmek için Internet Explorer'da erişilebilir. MSXML COM, C++, JavaScript, dahil olmak üzere destekleyen herhangi bir programlama dili kullanılabilir ve [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] 6.0.  
+ MSXML iyi gerçekleştirir, çoğu senaryoda varsayılan olarak güvenlidir ve istemci tarafı XML AJAX stili uygulamalarda işlemleri gerçekleştirmek için Internet Explorer'da erişilebilir. MSXML COM, C++, JavaScript ve Visual Basic 6.0 dahil destekleyen herhangi bir programlama dili kullanılabilir.  
   
  MSXML (CLR) ortak dil çalışma zamanı tabanlı yönetilen kodda kullanım için önerilmez.  
   
@@ -61,4 +62,4 @@ Bu konuda karşılaştırır [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md
  XmlLite ile tümleşik değildir [!INCLUDE[vbteclinqext](~/includes/vbteclinqext-md.md)]. Programcı seçimini artıran zorla arkasında olan üretkenlik iyileştirmeleri vermez [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)].  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [Başlarken (LINQ-XML)](../../../../csharp/programming-guide/concepts/linq/getting-started-linq-to-xml.md)
+ [Başlarken (LINQ to XML)](../../../../csharp/programming-guide/concepts/linq/getting-started-linq-to-xml.md)

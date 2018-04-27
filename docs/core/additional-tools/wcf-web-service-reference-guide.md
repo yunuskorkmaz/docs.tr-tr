@@ -1,18 +1,18 @@
 ---
-title: "Microsoft WCF Web hizmeti başvuru sağlayıcısı aracı"
-description: "Microsoft WCF Web hizmeti başvuru sağlayıcısı .NET Core ve ASP.NET Core projeleri, .NET Framework projeleri için hizmet Başvurusu Ekle benzer işlevsellik ekleyen aracı genel bakış."
+title: Microsoft WCF Web hizmeti başvuru sağlayıcısı aracı
+description: Microsoft WCF Web hizmeti başvuru sağlayıcısı .NET Core ve ASP.NET Core projeleri, .NET Framework projeleri için hizmet Başvurusu Ekle benzer işlevsellik ekleyen aracı genel bakış.
 author: mlacouture
 manager: wpickett
 ms.author: johalex
-ms.date: 01/19/2018
+ms.date: 04/19/2018
 ms.topic: article
 ms.prod: .net-core
 ms.custom: mvc
-ms.openlocfilehash: e445361f9f4a858f4b34ca1008670fadc62b8b3c
-ms.sourcegitcommit: dd6ea7f0e581ac84e0a90d9b23c463fcf1ec3ce7
+ms.openlocfilehash: acf9e97c05dabc46da26ed2ea580e7d341b0f2dc
+ms.sourcegitcommit: 68b60d38043e50104ccc90c76f8599b1ffe18346
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2018
+ms.lasthandoff: 04/20/2018
 ---
 # <a name="microsoft-wcf-web-service-reference-provider-tool"></a>Microsoft WCF Web hizmeti başvuru sağlayıcısı aracı
 
@@ -21,13 +21,17 @@ Yıllar içinde birçok Visual Studio Geliştirici üretkenliği keyif aldığı
 > [!IMPORTANT]
 > Yalnızca güvenilir bir kaynaktan Hizmetleri başvuruda bulunmalıdır. Güvenilmeyen bir kaynaktan başvuruları ekleme, güvenliği tehlikeye atabilir. 
 
+## <a name="prerequisites"></a>Önkoşullar
+
+* [Visual Studio 2017 15,5](https://aka.ms/vsdownload?utm_source=mscom&utm_campaign=msdocs) veya sonraki sürümler
+
 ## <a name="how-to-use-the-extension"></a>Uzantı kullanma
 
 > [!NOTE]
 > **WCF Web hizmeti başvuru** seçenektir aşağıdaki proje şablonları kullanılarak oluşturulmuş projeler için geçerlidir:
 > * **Visual C#** > **.NET Core**
-> * **Visual C#** > **.NET Standard**
-> * **Visual C#** > **Web** > **ASP.NET Core Web Application**
+> * **Visual C#** > **.NET standart**
+> * **Visual C#** > **Web** > **ASP.NET Core Web uygulaması**
 
 Kullanarak **ASP.NET çekirdek Web uygulaması** proje şablonu bir örnek olarak, bu makalede anlatılmaktadır, projeye bir WCF Hizmeti başvuru eklerken size:
 

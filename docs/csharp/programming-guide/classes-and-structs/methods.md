@@ -1,5 +1,5 @@
 ---
-title: "Yöntemler (C# Programlama Kılavuzu)"
+title: Yöntemler (C# Programlama Kılavuzu)
 ms.date: 07/20/2015
 ms.prod: .net
 ms.technology:
@@ -9,14 +9,14 @@ helpviewer_keywords:
 - methods [C#]
 - C# language, methods
 ms.assetid: cc738f07-e8cd-4683-9585-9f40c0667c37
-caps.latest.revision: 
+caps.latest.revision: 41
 author: BillWagner
 ms.author: wiwagn
-ms.openlocfilehash: 5390ee08ddd0f4725bb42bbdf7240bb99bd25301
-ms.sourcegitcommit: 83dd5ec003e788ccb3e33f3412a7af39ae347646
+ms.openlocfilehash: dad1be88e39b708d34f454875e2cfb3ec100c430
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/15/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="methods-c-programming-guide"></a>Yöntemler (C# Programlama Kılavuzu)
 Bir dizi deyimi içeren kod bloğu bir yöntemdir. Bir program yöntemini çağırarak ve tüm gerekli yöntemi bağımsız değişkenleri belirtme yürütülecek deyimleri neden olur. C# ' ta yürütülen her yönerge bir yöntem bağlamında gerçekleştirilir. Main yöntemi her C# uygulaması için giriş noktasıdır ve program başlatıldığında, ortak dil çalışma zamanı tarafından (CLR) adı verilir.  
@@ -64,7 +64,7 @@ Bir dizi deyimi içeren kod bloğu bir yöntemdir. Bir program yöntemini çağ�
 ## <a name="return-values"></a>Dönüş Değerleri  
 Yöntemleri bir değer çağırana geri dönebilirsiniz. Dönüş türü, yöntem adı önce listelenen türü değil `void`, yöntem kullanarak değeri döndürebilir `return` anahtar sözcüğü. With deyimi `return` anahtar sözcüğünü dönüş türüyle eşleşen bir değeri tarafından yöntemi çağırana bu değeri döndürür. 
 
-Değeri veya, C# 7 ile başlayan çağırana döndürülebilecek değeri [başvuruya göre](ref-returns.md). Değerleri çağırana döndürülen başvuruya göre `ref` anahtar sözcüğü yöntemi imzada kullanılır ve her izleyen `return` anahtar sözcüğü. Örneğin, aşağıdaki yöntemi imza ve return deyimi belirtmek yöntemi bir değişken adlarını döndürür `estDistance` çağırana başvuruya.
+Değeri veya, C# 7.0 ile başlayan çağırana döndürülebilecek değeri [başvuruya göre](ref-returns.md). Değerleri çağırana döndürülen başvuruya göre `ref` anahtar sözcüğü yöntemi imzada kullanılır ve her izleyen `return` anahtar sözcüğü. Örneğin, aşağıdaki yöntemi imza ve return deyimi belirtmek yöntemi bir değişken adlarını döndürür `estDistance` çağırana başvuruya.
 
 ```csharp
 public ref double GetEstimatedDistance()

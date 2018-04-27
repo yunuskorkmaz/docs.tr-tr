@@ -1,24 +1,26 @@
 ---
-title: "Nesne Başvuruları"
-ms.custom: 
+title: Nesne Başvuruları
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 7a93d260-91c3-4448-8f7a-a66fb562fc23
-caps.latest.revision: "10"
+caps.latest.revision: 10
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: a86b442ffeeeb77a0c124b9b3e3441ba24d68e4a
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: fcb34efeb7eed28f85774dc5489b3e56aeac4e6c
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="object-references"></a>Nesne Başvuruları
 Bu örnek, sunucu ve istemci arasında başvurular nesneleri geçirmek gösterilmiştir. Örnek kullandığı benzetimli *sosyal ağlar*. Sosyal ağ oluşan bir `Person` her arkadaş örneği olan arkadaş listesi içeren sınıf `Person` sınıfıyla arkadaş kendi listesi. Bu nesne bir grafik oluşturur. Hizmet bu sosyal ağlarda işlemini kullanıma sunar.  
@@ -103,7 +105,7 @@ public List<Person> GetCommonFriends(List<Person> people)
 ```  
   
 ## <a name="client"></a>İstemci  
- İstemci proxy kullanılarak oluşturulan **hizmet Başvurusu Ekle** özelliği [!INCLUDE[vs_current_short](../../../../includes/vs-current-short-md.md)].  
+ İstemci proxy kullanılarak oluşturulan **hizmet Başvurusu Ekle** Visual Studio özelliğidir.  
   
  Beş oluşan bir sosyal ağda `Person` nesneleri oluşturulur. İstemci hizmeti her üç yöntemi çağırır.  
   

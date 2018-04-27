@@ -1,25 +1,26 @@
 ---
-title: "Windows Forms Uygulaması Temelleri (Visual Basic)"
+title: Windows Forms Uygulaması Temelleri (Visual Basic)
 ms.date: 07/20/2015
 ms.prod: .net
-ms.suite: 
-ms.technology: devlang-visual-basic
+ms.suite: ''
+ms.technology:
+- devlang-visual-basic
 ms.topic: article
 helpviewer_keywords:
 - Windows applications
 - Windows Forms, Visual Basic
 ms.assetid: 0b919d30-7fd6-42db-85c8-543d15312441
-caps.latest.revision: "20"
+caps.latest.revision: 20
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: 7872d3c7b19ec9cd7059cccf41e5fab50d85123b
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.openlocfilehash: aaa7fbd679eceea53a673646173dc14dc4f209bc
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="windows-forms-application-basics-visual-basic"></a>Windows Forms Uygulaması Temelleri (Visual Basic)
-Önemli bir kısmını [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] kullanıcıların bilgisayarlarına yerel olarak çalışan Windows Forms uygulamaları oluşturma yeteneği. Windows Forms kullanan uygulama ve kullanıcı arabirimini oluşturmak için Visual Studio'yu kullanabilirsiniz. Bir Windows Forms uygulaması sınıflardan üzerine inşa edilmiştir <xref:System.Windows.Forms> ad alanı.  
+Önemli Visual Basic kullanıcıların bilgisayarlarına yerel olarak çalışan Windows Forms uygulamaları oluşturma olanağı bir parçasıdır. Windows Forms kullanan uygulama ve kullanıcı arabirimini oluşturmak için Visual Studio'yu kullanabilirsiniz. Bir Windows Forms uygulaması sınıflardan üzerine inşa edilmiştir <xref:System.Windows.Forms> ad alanı.  
   
 ## <a name="designing-windows-forms-applications"></a>Forms uygulamaları Windows tasarlama  
  Windows Forms ve Windows hizmet uygulamaları ile oluşturabileceğiniz [!INCLUDE[vsprvs](~/includes/vsprvs-md.md)]. Daha fazla bilgi için aşağıdaki konulara bakın:  
@@ -52,9 +53,9 @@ ms.lasthandoff: 01/19/2018
   
 |Bitiş|Bkz. |  
 |--------|---------|  
-|Yeni bir Windows Forms uygulaması oluşturma[!INCLUDE[vsprvs](~/includes/vsprvs-md.md)]|[İzlenecek yol: basit bir Windows formu oluşturma](http://msdn.microsoft.com/library/2d9daec0-0543-41d0-acb1-964f685bddbb)|  
+|Yeni bir Windows Forms uygulaması oluşturma [!INCLUDE[vsprvs](~/includes/vsprvs-md.md)]|[İzlenecek yol: basit bir Windows formu oluşturma](http://msdn.microsoft.com/library/2d9daec0-0543-41d0-acb1-964f685bddbb)|  
 |Formlarında denetimleri kullanın|[Nasıl yapılır: Windows Forms’a Denetimler Ekleme](../../../framework/winforms/controls/how-to-add-controls-to-windows-forms.md)|   
-|Grafik oluşturma<xref:System.Drawing>|[Grafik Programlamaya Başlarken](../../../framework/winforms/advanced/getting-started-with-graphics-programming.md)|  
+|Grafik oluşturma <xref:System.Drawing>|[Grafik Programlamaya Başlarken](../../../framework/winforms/advanced/getting-started-with-graphics-programming.md)|  
 |Özel denetimler oluşturma|[Nasıl yapılır: UserControl Sınıfından Devralma](../../../framework/winforms/controls/how-to-inherit-from-the-usercontrol-class.md)|  
   
 ## <a name="displaying-and-manipulating-data"></a>Verileri görüntüleme ve düzenleme  
@@ -77,19 +78,19 @@ ms.lasthandoff: 01/19/2018
 |Veri Kaynakları penceresini kullanma|[İzlenecek yol: Bir Windows formunda veri görüntüleme](/visualstudio/data-tools/accessing-data-in-visual-studio)|  
   
 ## <a name="deploying-applications-to-client-computers"></a>İstemci bilgisayarlara uygulamaları dağıtma  
- Uygulamanızı yazıldıktan sonra yükleyebilir ve kendi istemci bilgisayarlarda çalıştırmak için bunu kullanıcılarınıza göndermelidir. Kullanarak [!INCLUDE[ndptecclick](~/includes/ndptecclick-md.md)] teknolojisi, dağıtabileceğiniz uygulamalarınızdan içinde [!INCLUDE[vsprvs](~/includes/vsprvs-md.md)] göre yalnızca birkaç tıklama kullanılması ve Web uygulamanıza işaret eden bir URL ile kullanıcılar sağlar. [!INCLUDE[ndptecclick](~/includes/ndptecclick-md.md)]tüm öğeleri ve bağımlılıklarını, uygulamanızda yönetir ve uygulama istemci bilgisayara düzgün yüklendiğini sağlar.  
+ Uygulamanızı yazıldıktan sonra yükleyebilir ve kendi istemci bilgisayarlarda çalıştırmak için bunu kullanıcılarınıza göndermelidir. Kullanarak [!INCLUDE[ndptecclick](~/includes/ndptecclick-md.md)] teknolojisi, dağıtabileceğiniz uygulamalarınızdan içinde [!INCLUDE[vsprvs](~/includes/vsprvs-md.md)] göre yalnızca birkaç tıklama kullanılması ve Web uygulamanıza işaret eden bir URL ile kullanıcılar sağlar. [!INCLUDE[ndptecclick](~/includes/ndptecclick-md.md)] tüm öğeleri ve bağımlılıklarını, uygulamanızda yönetir ve uygulama istemci bilgisayara düzgün yüklendiğini sağlar.  
   
- [!INCLUDE[ndptecclick](~/includes/ndptecclick-md.md)]uygulamaları yalnızca kullanıcı ağa bağlandığında çalıştırmak için veya her ikisi de çevrimiçi çalıştırmak için yapılandırılmış ve çevrimdışı olabilir. Bir uygulama çevrimdışı işlemi desteklemesi gereken belirttiğinizde [!INCLUDE[ndptecclick](~/includes/ndptecclick-md.md)] kullanıcının uygulamanızda bir bağlantı ekler **Başlat** menüsünde, böylece kullanıcı URL kullanmadan açabilir.  
+ [!INCLUDE[ndptecclick](~/includes/ndptecclick-md.md)] uygulamaları yalnızca kullanıcı ağa bağlandığında çalıştırmak için veya her ikisi de çevrimiçi çalıştırmak için yapılandırılmış ve çevrimdışı olabilir. Bir uygulama çevrimdışı işlemi desteklemesi gereken belirttiğinizde [!INCLUDE[ndptecclick](~/includes/ndptecclick-md.md)] kullanıcının uygulamanızda bir bağlantı ekler **Başlat** menüsünde, böylece kullanıcı URL kullanmadan açabilir.  
   
- Uygulamanızı güncelleştirdiğinizde, yeni bir dağıtım bildirimi ve yeni bir kopya uygulamanızın Web sunucunuza yayımlayın. [!INCLUDE[ndptecclick](~/includes/ndptecclick-md.md)]olmadığını güncelleştirmesi mevcut olduğunu ve kullanıcının yükleme yükseltmeler algılar; özel programlama eski derlemeleri güncelleştirmek için gereklidir.  
+ Uygulamanızı güncelleştirdiğinizde, yeni bir dağıtım bildirimi ve yeni bir kopya uygulamanızın Web sunucunuza yayımlayın. [!INCLUDE[ndptecclick](~/includes/ndptecclick-md.md)] olmadığını güncelleştirmesi mevcut olduğunu ve kullanıcının yükleme yükseltmeler algılar; özel programlama eski derlemeleri güncelleştirmek için gereklidir.  
   
  Bir tam giriş için [!INCLUDE[ndptecclick](~/includes/ndptecclick-md.md)], bkz: [ClickOnce güvenliği ve dağıtımı](/visualstudio/deployment/clickonce-security-and-deployment). Bu özellikleri kullanma hakkında adım adım bilgiler için aşağıdaki Yardım konularına bakın:  
   
 |Bitiş|Bkz. |  
 |--------|---------|  
-|Bir uygulama oluşturup dağıtın[!INCLUDE[ndptecclick](~/includes/ndptecclick-md.md)]|[Nasıl yapılır: Yayımlama Sihirbazını Kullanarak ClickOnce Uygulaması Yayımlama](/visualstudio/deployment/how-to-publish-a-clickonce-application-using-the-publish-wizard)<br /><br /> [İzlenecek yol: ClickOnce Uygulamasını El ile Dağıtma](/visualstudio/deployment/walkthrough-manually-deploying-a-clickonce-application)|  
+|Bir uygulama oluşturup dağıtın [!INCLUDE[ndptecclick](~/includes/ndptecclick-md.md)]|[Nasıl yapılır: Yayımlama Sihirbazını Kullanarak ClickOnce Uygulaması Yayımlama](/visualstudio/deployment/how-to-publish-a-clickonce-application-using-the-publish-wizard)<br /><br /> [İzlenecek yol: ClickOnce Uygulamasını El ile Dağıtma](/visualstudio/deployment/walkthrough-manually-deploying-a-clickonce-application)|  
 |Güncelleştirme bir [!INCLUDE[ndptecclick](~/includes/ndptecclick-md.md)] dağıtımı|[Nasıl yapılır: ClickOnce Uygulaması için Güncelleştirmeleri Yönetme](/visualstudio/deployment/how-to-manage-updates-for-a-clickonce-application)|  
-|Güvenlik ile yönetme[!INCLUDE[ndptecclick](~/includes/ndptecclick-md.md)]|[Nasıl yapılır: ClickOnce Güvenlik Ayarlarını Etkinleştirme](/visualstudio/deployment/how-to-enable-clickonce-security-settings)|  
+|Güvenlik ile yönetme [!INCLUDE[ndptecclick](~/includes/ndptecclick-md.md)]|[Nasıl yapılır: ClickOnce Güvenlik Ayarlarını Etkinleştirme](/visualstudio/deployment/how-to-enable-clickonce-security-settings)|  
   
 ## <a name="other-controls-and-features"></a>Diğer denetimleri ve özellikleri  
  Windows Forms'ta uygulama ortak görevleri hızlı ve kolay iletişim kutuları oluşturma, yazdırma, Yardım ve belgeler ekleme ve uygulamanız birden çok dilde yerelleştirme için destek gibi olun birçok özelliği vardır. Ayrıca, Windows Forms güçlü güvenlik sistemde dayanır [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)], müşterilerinize daha güvenli uygulamalar yayımlamayı etkinleştirme.  

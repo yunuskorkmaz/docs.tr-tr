@@ -1,29 +1,29 @@
 ---
-title: "Soyutlamalar uygulamak için temel sınıflar"
-ms.custom: 
+title: Soyutlamalar uygulamak için temel sınıflar
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology: dotnet-standard
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - abstractions [.NET Framework]
 - base classes, abstractions
 ms.assetid: 37a2d9a4-9721-482a-a40f-eee2c1d97875
-caps.latest.revision: "9"
+caps.latest.revision: 9
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: 96264456ac6afc569c46caf5faed6c37ea22bc8e
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: 70d107d96576b8cafe9e76135c00bd2c635f2d7e
+ms.sourcegitcommit: 2e8acae16ae802f2d6d04e3ce0a6dbf04e476513
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="base-classes-for-implementing-abstractions"></a>Soyutlamalar uygulamak için temel sınıflar
 Kesinlikle olarak bakıldığında, başka bir sınıf ondan türetilmiş bir sınıf bir taban sınıf olur. Bu bölümde amacıyla ancak, bir taban sınıf çoğunlukla ortak bir Özet sağlar veya diğer sınıflar bazı yeniden kullanmak uygulama devralma ancak varsayılan için tasarlanmış bir sınıftır. Temel sınıflar genellikle ortasında bir Özet hiyerarşisinin kökü altındaki çeşitli özel uygulamalar arasındaki devralma hiyerarşileri sit.  
@@ -42,7 +42,7 @@ Kesinlikle olarak bakıldığında, başka bir sınıf ondan türetilmiş bir s�
   
  *Bölümleri © 2005, 2009 Microsoft Corporation. Tüm hakları saklıdır.*  
   
- *Pearson eğitim, Inc. şirketinin izni tarafından yeniden yazdırılmaları [Framework tasarım yönergeleri: kuralları, deyimleri ve yeniden kullanılabilir .NET kitaplıkları, 2 sürümü için desenleri](http://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619) Krzysztof Cwalina ve Brad Abrams tarafından 22 Eki 2008 tarafından yayımlanan Microsoft Windows geliştirme serisi bir parçası olarak Addison-Wesley Professional.*  
+ *Pearson eğitim, Inc. şirketinin izni tarafından yeniden yazdırılmaları [Framework tasarım yönergeleri: kuralları, deyimleri ve yeniden kullanılabilir .NET kitaplıkları, 2 sürümü için desenleri](https://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619) Krzysztof Cwalina ve Brad Abrams tarafından 22 Eki 2008 tarafından yayımlanan Microsoft Windows geliştirme serisi bir parçası olarak Addison-Wesley Professional.*  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
  [Çerçeve Tasarım Yönergeleri](../../../docs/standard/design-guidelines/index.md)  

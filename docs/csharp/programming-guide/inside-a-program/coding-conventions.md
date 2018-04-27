@@ -1,5 +1,5 @@
 ---
-title: "C# Kodlama Kuralları (C# Programlama Kılavuzu)"
+title: C# Kodlama Kuralları (C# Programlama Kılavuzu)
 ms.date: 07/20/2015
 ms.prod: .net
 ms.technology:
@@ -10,14 +10,14 @@ helpviewer_keywords:
 - Visual C#, coding conventions
 - C# language, coding conventions
 ms.assetid: f4f60de9-d49b-4fb6-bab1-20e19ea24710
-caps.latest.revision: 
+caps.latest.revision: 32
 author: BillWagner
 ms.author: wiwagn
-ms.openlocfilehash: 4a8806ddb0a9cc62fe68dc9d558917ee2d532e7f
-ms.sourcegitcommit: 75a180acb5d8a2dbd4a52915ce8e980749fb1d05
+ms.openlocfilehash: 697c3df3d418c57d58c42dc3cfb900de02146c80
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/24/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="c-coding-conventions-c-programming-guide"></a>C# Kodlama Kuralları (C# Programlama Kılavuzu)
  Kodlama kuralları aşağıdaki amaca hizmet eder:  
@@ -76,7 +76,7 @@ ms.lasthandoff: 02/24/2018
   
 ### <a name="string-data-type"></a>Dize Veri Türü  
   
--   Kullanım `+` aşağıdaki kodda gösterildiği gibi kısa dizeyi birleştirmek için işleci.  
+-   Kullanım [dize ilişkilendirme](../../language-reference/tokens/interpolated.md) aşağıdaki kodda gösterildiği gibi kısa dizeyi birleştirmek için.  
   
      [!code-csharp[csProgGuideCodingConventions#6](../../../../samples/snippets/csharp/VS_Snippets_VBCSharp/csprogguidecodingconventions/cs/program.cs#6)]  
   
@@ -138,9 +138,9 @@ ms.lasthandoff: 02/24/2018
   
      [!code-csharp[csProgGuideCodingConventions#17](../../../../samples/snippets/csharp/VS_Snippets_VBCSharp/csprogguidecodingconventions/cs/program.cs#17)]  
   
-### <a name="-and-124124-operators"></a>& & ve &#124; &#124; İşleçler  
+### <a name="-and-124124-operators"></a>& & ve &#124; &#124; işleçleri  
   
--   Özel durumlar önlemek ve gereksiz karşılaştırmaları atlayarak performansı artırmak için kullanmak [ && ](../../../csharp/language-reference/operators/conditional-and-operator.md) yerine [ & ](../../../csharp/language-reference/operators/and-operator.md) ve [&#124; &#124;](../../../csharp/language-reference/operators/conditional-or-operator.md) yerine [&#124;](../../../csharp/language-reference/operators/or-operator.md) gerçekleştirdiğinizde karşılaştırmaları, aşağıdaki örnekte gösterildiği gibi.  
+-   Özel durumlar önlemek ve gereksiz karşılaştırmaları atlayarak performansı artırmak için kullanmak [ && ](../../../csharp/language-reference/operators/conditional-and-operator.md) yerine [ & ](../../../csharp/language-reference/operators/and-operator.md) ve [ &#124; &#124; ](../../../csharp/language-reference/operators/conditional-or-operator.md)yerine [ &#124; ](../../../csharp/language-reference/operators/or-operator.md) gerçekleştirdiğinizde karşılaştırmaları, aşağıdaki örnekte gösterildiği gibi.  
   
      [!code-csharp[csProgGuideCodingConventions#18](../../../../samples/snippets/csharp/VS_Snippets_VBCSharp/csprogguidecodingconventions/cs/program.cs#18)]  
   

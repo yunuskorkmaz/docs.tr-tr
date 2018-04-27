@@ -1,6 +1,6 @@
 ---
-title: "Sunucu uygulamaları için .NET Core ve .NET Framework arasında seçim"
-description: "Hangi .NET uygulaması üzerinde .NET içinde sunucu uygulama oluştururken dikkate almanız gereken kılavuzu."
+title: Sunucu uygulamaları için .NET Core ve .NET Framework arasında seçim
+description: Hangi .NET uygulaması üzerinde .NET içinde sunucu uygulama oluştururken dikkate almanız gereken kılavuzu.
 author: cartermp
 ms.author: mairaw
 ms.date: 03/15/2018
@@ -9,11 +9,11 @@ ms.prod: .net
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: c07b0b760e2a46faea574eef3575409bac773942
-ms.sourcegitcommit: 15316053918995cc1380163a7d7e7edd5c44e6d7
+ms.openlocfilehash: 1fba5ce14b2504ea688bdff35efa959b8a5a86ab
+ms.sourcegitcommit: 2e8acae16ae802f2d6d04e3ce0a6dbf04e476513
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/19/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="choosing-between-net-core-and-net-framework-for-server-apps"></a>Sunucu uygulamaları için .NET Core ve .NET Framework arasında seçim yapma
 
@@ -42,7 +42,7 @@ Aşağıdaki bölümlerde daha ayrıntılı bir açıklaması .NET Core çekme d
 
 Birden çok Platformu (Windows, Linux ve macOS) çalıştırmak için uygulama (web/hizmet) gereksinimlerinizi .NET Core kullanıyorsanız.
 
-.NET core, geliştirme iş istasyonu olarak yukarıda sözü edilen işletim sistemlerini destekler. Visual Studio, Windows ve macOS bir tümleşik geliştirme ortamı (IDE) sağlar. MacOS, Linux ve Windows çalıştıran Visual Studio Code de kullanabilirsiniz. Visual Studio Code .NET hata ayıklama ve IntelliSense dahil çekirdek destekler. Sublime, Emacs ve VI, gibi çoğu üçüncü taraf düzenleyicileri .NET Core'u kullanmaya çalışır. Bu üçüncü taraf düzenleyicileri Düzenleyicisi IntelliSense alma kullanarak [Omnisharp](http://www.omnisharp.net/). Ayrıca herhangi bir kod düzenleyicisini kaçının ve doğrudan kullanmak [.NET Core CLI araçlarını](../core/tools/index.md), desteklenen tüm platformlar için kullanılabilir.
+.NET core, geliştirme iş istasyonu olarak yukarıda sözü edilen işletim sistemlerini destekler. Visual Studio, Windows ve macOS bir tümleşik geliştirme ortamı (IDE) sağlar. MacOS, Linux ve Windows çalıştıran Visual Studio Code de kullanabilirsiniz. Visual Studio Code .NET hata ayıklama ve IntelliSense dahil çekirdek destekler. Sublime, Emacs ve VI, gibi çoğu üçüncü taraf düzenleyicileri .NET Core'u kullanmaya çalışır. Bu üçüncü taraf düzenleyicileri Düzenleyicisi IntelliSense alma kullanarak [Omnisharp](https://www.omnisharp.net/). Ayrıca herhangi bir kod düzenleyicisini kaçının ve doğrudan kullanmak [.NET Core CLI araçlarını](../core/tools/index.md), desteklenen tüm platformlar için kullanılabilir.
 
 ### <a name="microservices-architecture"></a>Mikro mimarisi
 
@@ -115,4 +115,4 @@ Bazı Microsoft veya üçüncü taraf platformları .NET Core desteklemez. Örne
  [.NET Core için .NET Framework'bağlantı noktası oluşturma](../core/porting/index.md)  
  [Docker Üzerinde .NET Framework Kılavuzu](../framework/docker/index.md)  
  [.NET bileşenleri'ne genel bakış](components.md)  
- [.NET Microservices. Kapsayıcılı .NET uygulamaları için mimarisi](microservices-architecture/index.md)
+ [.NET mikro. Kapsayıcılı .NET uygulamaları için mimarisi](microservices-architecture/index.md)

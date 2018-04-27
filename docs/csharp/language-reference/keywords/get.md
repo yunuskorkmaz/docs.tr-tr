@@ -14,11 +14,11 @@ ms.assetid: a52de048-fbe0-41b0-82ec-8e4ac04d3a71
 caps.latest.revision: 11
 author: BillWagner
 ms.author: wiwagn
-ms.openlocfilehash: a2e8426e5c5be16be0114b5ccc66f30793ce7dda
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 3cdf639065ee5bf0cb9e920061557991c0a4b921
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="get-c-reference"></a>get (C# Başvurusu)
 
@@ -28,7 +28,7 @@ Aşağıdaki örnek, her ikisi de tanımlar bir `get` ve `set` adlı bir özelli
  
  [!code-csharp[get#1](../../../../samples/snippets/csharp/language-reference/keywords/get/get-1.cs)]  
   
-Genellikle, `get` erişimci önceki örnekte olduğu gibi bir değer döndüren tek bir deyimde oluşur. C# 7 ile başlayan, uygulayabileceğiniz `get` bir ifade bodied üye olarak erişimcisi. Aşağıdaki örnek hem de uygulayan `get` ve `set` ifade bodied üye olarak erişimcisi.
+Genellikle, `get` erişimci önceki örnekte olduğu gibi bir değer döndüren tek bir deyimde oluşur. C# 7. 0'dan başlayarak, uygulayabileceğiniz `get` bir ifade bodied üye olarak erişimcisi. Aşağıdaki örnek hem de uygulayan `get` ve `set` ifade bodied üye olarak erişimcisi.
 
  [!code-csharp[get#3](../../../../samples/snippets/csharp/language-reference/keywords/get/get-3.cs)]   
  
@@ -42,5 +42,5 @@ Basit durumlarda için bir özelliğin `get` ve `set` erişimciler ayarlama veya
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
  [C# başvurusu](../../../csharp/language-reference/index.md)  
- [C# programlama kılavuzu](../../../csharp/programming-guide/index.md)  
+ [C# Programlama Kılavuzu](../../../csharp/programming-guide/index.md)  
  [C# anahtar sözcükleri](../../../csharp/language-reference/keywords/index.md) [özellikleri](../../../csharp/programming-guide/classes-and-structs/properties.md)

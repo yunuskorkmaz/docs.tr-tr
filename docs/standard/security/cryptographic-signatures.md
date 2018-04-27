@@ -1,12 +1,12 @@
 ---
-title: "Şifreleme İmzası"
-ms.custom: 
+title: Şifreleme İmzası
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology: dotnet-standard
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - csharp
@@ -26,21 +26,21 @@ helpviewer_keywords:
 - digital signatures, verifying
 - signing XML
 ms.assetid: aa87cb7f-e608-4a81-948b-c9b8a1225783
-caps.latest.revision: "17"
+caps.latest.revision: 17
 author: mairaw
 ms.author: mairaw
 manager: wpickett
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: c4e460c11e0e78d56a54da1dd178b3f8e9f381b6
-ms.sourcegitcommit: 91691981897cf8451033cb01071d8f5d94017f97
+ms.openlocfilehash: 596625f229c4031b681755d538bf0a3d7b6674c8
+ms.sourcegitcommit: 2e8acae16ae802f2d6d04e3ce0a6dbf04e476513
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/09/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="cryptographic-signatures"></a>Şifreleme İmzası
-<a name="top"></a>Şifreleme Dijital imzalar, veri bütünlüğünü sağlamak için ortak anahtar algoritmaları kullanır. Veri bir dijital imza ile oturum açtığınızda başka birinin imzasını doğrular ve verileri sizden geldiğini ve siz imzaladıktan sonra değiştirilmiş değil kanıtlayabilirsiniz. Dijital imzalar hakkında daha fazla bilgi için bkz: [Şifreleme Hizmetleri](../../../docs/standard/security/cryptographic-services.md).  
+<a name="top"></a> Şifreleme Dijital imzalar, veri bütünlüğünü sağlamak için ortak anahtar algoritmaları kullanır. Veri bir dijital imza ile oturum açtığınızda başka birinin imzasını doğrular ve verileri sizden geldiğini ve siz imzaladıktan sonra değiştirilmiş değil kanıtlayabilirsiniz. Dijital imzalar hakkında daha fazla bilgi için bkz: [Şifreleme Hizmetleri](../../../docs/standard/security/cryptographic-services.md).  
   
  Bu konuda oluşturmak ve sınıflarda kullanarak dijital imzaları doğrulamak açıklanmaktadır <xref:System.Security.Cryptography?displayProperty=nameWithType> ad alanı.  
   
@@ -115,7 +115,7 @@ class Class1
 ### <a name="signing-xml-files"></a>XML dosyaları imzalama  
  .NET Framework sağlar <xref:System.Security.Cryptography.Xml> oturum XML ad alanı sağlar. XML imzalama XML belirli bir kaynaktan kaynaklandığı doğrulamak istediğinizde önemlidir. Örneğin, XML kullanan bir hisse senedi hizmet kullanıyorsanız, bunu kaydolduysanız XML kaynağını doğrulayabilirsiniz.  
   
- Bu ad alanındaki sınıflar izleyin [XML imzası sözdizimi ve işleme öneri](http://www.w3.org/TR/xmldsig-core/) World Wide Web Konsorsiyumu gelen.  
+ Bu ad alanındaki sınıflar izleyin [XML imzası sözdizimi ve işleme öneri](https://www.w3.org/TR/xmldsig-core/) World Wide Web Konsorsiyumu gelen.  
   
  [Başa dön](#top)  
   
@@ -151,7 +151,7 @@ RSAKeyInfo.Exponent = ExponentData;
   
  Aşağıdaki örnek, bu işlemi gösterilmektedir. Bu örnekte, `HashValue` ve `SignedHashValue` uzak bir şirket tarafından sağlanan bayt dizidir. Uzak tarafı imzaladığı `HashValue` dijital imza oluşturan SHA1 algoritması kullanılarak `SignedHashValue`. Bu  
   
- <xref:System.Security.Cryptography.RSAPKCS1SignatureDeformatter.VerifySignature%2A?displayProperty=nameWithType>dijital imza geçerli olduğundan ve imzalamak için kullanılan yöntem doğrular `HashValue`.  
+ <xref:System.Security.Cryptography.RSAPKCS1SignatureDeformatter.VerifySignature%2A?displayProperty=nameWithType> dijital imza geçerli olduğundan ve imzalamak için kullanılan yöntem doğrular `HashValue`.  
   
 ```vb  
 Dim RSA As New RSACryptoServiceProvider()  

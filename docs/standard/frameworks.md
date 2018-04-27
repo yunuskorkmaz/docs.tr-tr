@@ -1,6 +1,6 @@
 ---
-title: "Hedef Çerçeve"
-description: ".NET Core uygulamaları ve kitaplıklar için bir hedef çerçeveyi hakkında bilgi edinin."
+title: Hedef Çerçeve
+description: .NET Core uygulamaları ve kitaplıklar için bir hedef çerçeveyi hakkında bilgi edinin.
 author: richlander
 ms.author: mairaw
 ms.date: 09/22/2017
@@ -11,11 +11,11 @@ ms.technology: dotnet-standard
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: 838f4f6d78b4544a538e9c4bd6c487bcc731270b
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: e9f47647a1d4dc82b2df2ea8905f8d0a1e705b96
+ms.sourcegitcommit: 2e8acae16ae802f2d6d04e3ce0a6dbf04e476513
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="target-frameworks"></a>Hedef Çerçeve
 
@@ -141,4 +141,4 @@ Aşağıdaki hedef çerçeveyi kullanım dışı bırakılmıştır. Bu bir hede
 [.NET core sürüm oluşturma](~/docs/core/versions/index.md)  
 [DotNet/standart GitHub deposunu](https://github.com/dotnet/standard)  
 [GitHub depo NuGet araçları](https://github.com/joelverhagen/NuGetTools)  
-[.NET Framework profilleri](http://blog.stephencleary.com/2012/05/framework-profiles-in-net.html)
+[.NET Framework profilleri](https://blog.stephencleary.com/2012/05/framework-profiles-in-net.html)

@@ -1,7 +1,7 @@
 ---
 title: LINQ (dil ile tümleşik sorgu)
 description: Nasıl LINQ dil düzeyi sorgulama özellikleri ve bir API C# ve VB etkileyici, bildirim temelli kod yazmak için bir yol olarak sağladığını öğrenin.
-keywords: .NET, .NET Core
+keywords: .NET, .NET core
 author: cartermp
 ms.author: wiwagn
 ms.date: 06/20/2016
@@ -13,11 +13,11 @@ ms.assetid: c00939e1-59e3-4e61-8fe9-08ad6b3f1295
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: 4d85104d016f5f19f6908670125df91f20536d72
-ms.sourcegitcommit: b750a8e3979749b214e7e10c82efb0a0524dfcb1
+ms.openlocfilehash: 5ce6819abee90ceccc52a79f8bda794f2fd345fb
+ms.sourcegitcommit: 2e8acae16ae802f2d6d04e3ce0a6dbf04e476513
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/09/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="linq-language-integrated-query"></a>LINQ (dil ile tümleşik sorgu)
 
@@ -40,7 +40,7 @@ var linqExperts = programmers.Where(p => IsNewToLINQ)
                              .Select(p => new LINQExpert(p));
 ```
 
-## <a name="linq-is-expressive"></a>LINQ is Expressive
+## <a name="linq-is-expressive"></a>LINQ Expressive olduğu
 
 Evcil Hayvanlar listesi sahip, ancak erişebileceğiniz bir evcil hayvan doğrudan göre sözlükteki dönüştürmek istediğiniz düşünün kendi `RFID` değeri.
 
@@ -83,7 +83,7 @@ public static IEnumerable<XElement> FindAllElementsWithAttribute(XElement docume
 
 Bu görevi gerçekleştirmek için XML belgesi el ile geçiş için kod yazma, çok daha zor olurdu.
 
-XML ile etkileşim LINQ sağlayıcıları ile yapabileceğiniz tek şey değil. [LINQ-SQL](../../docs/framework/data/adonet/sql/linq/index.md) bir oldukça tam kemikler nesne ilişkisel Eşleyici (ORM) bir MSSQL sunucu için veritabanıdır. [JSON.NET](http://www.newtonsoft.com/json/help/html/LINQtoJSON.htm) kitaplığı LINQ aracılığıyla verimli JSON belgesi geçişi sağlar. Gerekenler yapan bir kitaplık yoksa, ayrıca, şunları da yapabilirsiniz [kendi LINQ sağlayıcı yazma](https://msdn.microsoft.com/library/Bb546158.aspx)!
+XML ile etkileşim LINQ sağlayıcıları ile yapabileceğiniz tek şey değil. [LINQ-SQL](../../docs/framework/data/adonet/sql/linq/index.md) bir oldukça tam kemikler nesne ilişkisel Eşleyici (ORM) bir MSSQL sunucu için veritabanıdır. [JSON.NET](https://www.newtonsoft.com/json/help/html/LINQtoJSON.htm) kitaplığı LINQ aracılığıyla verimli JSON belgesi geçişi sağlar. Gerekenler yapan bir kitaplık yoksa, ayrıca, şunları da yapabilirsiniz [kendi LINQ sağlayıcı yazma](https://msdn.microsoft.com/library/Bb546158.aspx)!
 
 ## <a name="why-use-the-query-syntax"></a>Sorgu sözdizimi neden kullanılır?
 
@@ -263,4 +263,4 @@ LINQ kolayca ifade edilebilir paralelleştirilebilir CPU bağımlı işleri (di�
 
 *   [101 LINQ örnekleri](https://code.msdn.microsoft.com/101-LINQ-Samples-3fb9811b)
 *   [Linqpad](https://www.linqpad.net/), playground ortamı ve veritabanını sorgulama için C# /F #/VB altyapısı
-*   [EduLinq](http://codeblog.jonskeet.uk/2011/02/23/reimplementing-linq-to-objects-part-45-conclusion-and-list-of-posts/), bir e-LINQ nesneler nasıl uygulandığına öğrenme için kitap
+*   [EduLinq](https://codeblog.jonskeet.uk/2011/02/23/reimplementing-linq-to-objects-part-45-conclusion-and-list-of-posts/), bir e-LINQ nesneler nasıl uygulandığına öğrenme için kitap

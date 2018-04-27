@@ -1,27 +1,29 @@
 ---
-title: "Nasıl yapılır: DBML ve dış eşleme dosyaları doğrula"
-ms.custom: 
+title: 'Nasıl yapılır: DBML ve dış eşleme dosyaları doğrula'
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-ado
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-ado
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: d9ea37f5-0a9e-4401-8fc3-1e6fd44c49f9
-caps.latest.revision: "2"
+caps.latest.revision: 2
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.workload: dotnet
-ms.openlocfilehash: 7724586c33c19654c3657a5a4604a3c74f2c8756
-ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
+ms.workload:
+- dotnet
+ms.openlocfilehash: 4d3fc297078c9f6c1ac8b2d8a498050f294a5437
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="how-to-validate-dbml-and-external-mapping-files"></a>Nasıl yapılır: DBML ve dış eşleme dosyaları doğrula
-Dış eşleme dosyaları ve değiştirmeniz .dbml dosyaları ilgili şema tanımlarını karşı doğrulanmalıdır. Bu konuda verilmektedir [!INCLUDE[vs_current_short](../../../../../../includes/vs-current-short-md.md)] adımları kullanıcılarla doğrulama işlemini uygulamak için.  
+Dış eşleme dosyaları ve değiştirmeniz .dbml dosyaları ilgili şema tanımlarını karşı doğrulanmalıdır. Bu konu, doğrulama işlemini uygulamak için Visual Studio kullanıcılarla adımları sağlar.  
   
  [!INCLUDE[note_settings_general](../../../../../../includes/note-settings-general-md.md)]  
   
@@ -56,7 +58,7 @@ Dış eşleme dosyaları ve değiştirmeniz .dbml dosyaları ilgili şema tanım
      Hataları, uyarıları veya iletileri oluşturulmuş olup olmadığını belirler. Aksi durumda, şema tanımına göre geçerli XML dosyasıdır.  
   
 ## <a name="alternate-method-for-supplying-schema-definition"></a>Şema tanımı sağlama için alternatif yöntemi  
- Bazı nedenlerle uygun .xsd içinde dosya görünmüyorsa **XML şemaları** iletişim kutusu, bir Yardım konusunun .xsd dosyası indirebilirsiniz. Aşağıdaki gerekli Unicode biçiminde indirilen dosya kaydettiğiniz yardım adımları [!INCLUDE[vs_current_short](../../../../../../includes/vs-current-short-md.md)] XML Düzenleyicisi.  
+ Bazı nedenlerle uygun .xsd içinde dosya görünmüyorsa **XML şemaları** iletişim kutusu, bir Yardım konusunun .xsd dosyası indirebilirsiniz. Aşağıdaki adımlar, Visual Studio XML Düzenleyicisi tarafından gerekli Unicode biçiminde indirilen dosya kaydetmenize yardımcı.  
   
 #### <a name="to-copy-a-schema-definition-file-from-a-help-topic"></a>Bir şema tanımı dosyası bir Yardım konusunun kopyalamak için  
   

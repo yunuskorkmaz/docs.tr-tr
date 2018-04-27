@@ -11,11 +11,11 @@ ms.topic: article
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: 6281442f42b511170f83eaeb1c940a35a566e519
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: 0ca69ada16fbb5a6757da96a7ea64d2113c15b6f
+ms.sourcegitcommit: 2e8acae16ae802f2d6d04e3ce0a6dbf04e476513
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="securing-net-microservices-and-web-applications"></a>.NET mikro ve Web uygulamalarının güvenliğini sağlama
 
@@ -124,7 +124,7 @@ else
 
 Seçerseniz **tek tek kullanıcı hesabı** Visual Studio'da oturum dış sağlayıcı imzalamak gerekli tüm kod ASP.NET kodunun web uygulaması projesi oluşturduğunuzda, kimlik doğrulama seçenektir zaten projede gösterildiği gibi Şekil 11-3 '.
 
-![https://msdnshared.BLOB.Core.Windows.NET/Media/2016/10/New-Web-App.PNG](./media/image3.png)
+![https://msdnshared.blob.core.windows.net/media/2016/10/new-web-app.png](./media/image3.png)
 
 **Şekil 11-3**. Bir web uygulaması projesi oluştururken, dış kimlik doğrulama kullanmak için bir seçenek seçme
 
@@ -136,7 +136,7 @@ Ayrıca Elbette, kendi dış kimlik doğrulaması ara yazılımı oluşturmak i�
 
 ASP.NET Core kimliği (veya kimlik ve Dış kimlik doğrulama sağlayıcıları ile) ve kimlik doğrulama kullanıcı bilgileri depolayan bir tanımlama bilgisinde uygundur iyi birçok web uygulama senaryoları için çalışır. Diğer senaryolarda, ancak, tanımlama bilgilerini kalıcı yapma ve veri aktarırken bir doğal değildir.
 
-Örneğin, bir ASP.NET çekirdek Web API yerel istemciler tarafından tek sayfa uygulamaları (SPAs) tarafından erişilebilen RESTful uç noktalarını kullanıma sunan veya hatta diğer Web API'leri tarafından genellikle taşıyıcı belirteci kimlik doğrulaması yerine kullanmak istediğiniz. Bu tür uygulamalar değil tanımlama bilgileriyle çalışır ancak kolayca taşıyıcı belirtecini almak ve sonraki istekleri yetkilendirme üst bilgi içerir. Belirteç kimlik doğrulamasını etkinleştirmek için ASP.NET Core çeşitli seçenekler kullanmak için destekleyen [OAuth 2.0](https://oauth.net/2/) ve [Openıd Connect](http://openid.net/connect/).
+Örneğin, bir ASP.NET çekirdek Web API yerel istemciler tarafından tek sayfa uygulamaları (SPAs) tarafından erişilebilen RESTful uç noktalarını kullanıma sunan veya hatta diğer Web API'leri tarafından genellikle taşıyıcı belirteci kimlik doğrulaması yerine kullanmak istediğiniz. Bu tür uygulamalar değil tanımlama bilgileriyle çalışır ancak kolayca taşıyıcı belirtecini almak ve sonraki istekleri yetkilendirme üst bilgi içerir. Belirteç kimlik doğrulamasını etkinleştirmek için ASP.NET Core çeşitli seçenekler kullanmak için destekleyen [OAuth 2.0](https://oauth.net/2/) ve [Openıd Connect](https://openid.net/connect/).
 
 ## <a name="authenticating-with-an-openid-connect-or-oauth-20-identity-provider"></a>Bir Openıd Connect veya OAuth 2.0 kimlik sağlayıcısı ile kimlik doğrulaması
 
@@ -231,7 +231,7 @@ JWT taşıyıcı kimlik doğrulaması ara yazılımı ayrıca yerel bir sertifik
 ## <a name="additional-resources"></a>Ek kaynaklar
 
 -   **Uygulamalar arasında tanımlama bilgilerini paylaşımı**
-    [*https://docs.microsoft.com/aspnet/core/security/data-protection/compatibility/cookie-sharing\# Paylaşımı kimlik doğrulama-tanımlama bilgileri-arasında-uygulamalar*](https://docs.microsoft.com/aspnet/core/security/data-protection/compatibility/cookie-sharing#sharing-authentication-cookies-between-applications)
+    [*https://docs.microsoft.com/aspnet/core/security/data-protection/compatibility/cookie-sharing\#paylaşımı kimlik doğrulama-tanımlama bilgileri-arasında-uygulamalar*](https://docs.microsoft.com/aspnet/core/security/data-protection/compatibility/cookie-sharing#sharing-authentication-cookies-between-applications)
 
 -   **Kimlik giriş**
     [*https://docs.microsoft.com/aspnet/core/security/authentication/identity*](https://docs.microsoft.com/aspnet/core/security/authentication/identity)
@@ -239,14 +239,14 @@ JWT taşıyıcı kimlik doğrulaması ara yazılımı ayrıca yerel bir sertifik
 -   **Rick Anderson. SMS ile iki öğeli kimlik doğrulama**
     [*https://docs.microsoft.com/aspnet/core/security/authentication/2fa*](https://docs.microsoft.com/aspnet/core/security/authentication/2fa)
 
--   **Facebook, Google ve diğer dış sağlayıcılarını kullanarak etkinleştirme kimlik doğrulaması**
+-   **Facebook, Google ve diğer dış sağlayıcılarını kullanarak kimlik doğrulamasını etkinleştirme**
     [*https://docs.microsoft.com/aspnet/core/security/authentication/social/*](https://docs.microsoft.com/aspnet/core/security/authentication/social/)
 
 -   **Michell Anicas. OAuth 2 giriş**
     [*https://www.digitalocean.com/community/tutorials/an-introduction-to-oauth-2*](https://www.digitalocean.com/community/tutorials/an-introduction-to-oauth-2)
 
 -   **AspNet.Security.OAuth.Providers** (ASP.NET OAuth sağlayıcıları için GitHub depo.
-    [*https://github.com/ASPNET-contrib/AspNet.Security.OAuth.providers/Tree/dev/src*](https://github.com/aspnet-contrib/AspNet.Security.OAuth.Providers/tree/dev/src)
+    [*https://github.com/aspnet-contrib/AspNet.Security.OAuth.Providers/tree/dev/src*](https://github.com/aspnet-contrib/AspNet.Security.OAuth.Providers/tree/dev/src)
 
 -   **Danny Strockis. Bir ASP.NET Core web uygulamasına Azure AD tümleştirme**
     [*https://azure.microsoft.com/resources/samples/active-directory-dotnet-webapp-openidconnect-aspnetcore/*](https://azure.microsoft.com/resources/samples/active-directory-dotnet-webapp-openidconnect-aspnetcore/)

@@ -1,19 +1,20 @@
 ---
 title: Mimari ilkeleri
-description: "ASP.NET Core ve Azure ile modern Web uygulamaları mimari | Mimari ilkeleri"
+description: ASP.NET Core ve Azure ile modern Web uygulamaları mimari | Mimari ilkeleri
 author: ardalis
 ms.author: wiwagn
 ms.date: 10/06/2017
 ms.prod: .net-core
 ms.technology: dotnet-docker
+ms.topic: article
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: bdb215d64253fb7d22ae2c5648030336850006b5
-ms.sourcegitcommit: f28752eab00d2bd97e971542c0f49ce63cfbc239
+ms.openlocfilehash: f4f52bd3438ef9b2e0b74ee91831947a4dd6869d
+ms.sourcegitcommit: 2e8acae16ae802f2d6d04e3ce0a6dbf04e476513
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/29/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="architectural-principles"></a>Mimari ilkeleri
 

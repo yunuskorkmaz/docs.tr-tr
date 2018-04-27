@@ -1,12 +1,12 @@
 ---
-title: "Normal İfade Dili - Hızlı Başvuru"
-ms.custom: 
+title: Normal İfade Dili - Hızlı Başvuru
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology: dotnet-standard
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 f1_keywords:
 - VS.RegularExpressionBuilder
@@ -20,21 +20,21 @@ helpviewer_keywords:
 - cheat sheet
 - .NET Framework regular expressions, language elements
 ms.assetid: 930653a6-95d2-4697-9d5a-52d11bb6fd4c
-caps.latest.revision: 
+caps.latest.revision: 56
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: a0fed14784327c6fe16f083a22471b56032b6b5d
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: b8e43264619158ed9325875d9843e322e08872a4
+ms.sourcegitcommit: 2e8acae16ae802f2d6d04e3ce0a6dbf04e476513
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="regular-expression-language---quick-reference"></a>Normal İfade Dili - Hızlı Başvuru
-<a name="top"></a>Normal bir ifade normal ifade altyapısı giriş metni eşleştirmeyi dener bir desen ' dir. Bir desen, bir veya daha çok karakter sabitinden, işleçlerden veya yapılardan oluşur.  Kısa bir giriş için bkz [.NET normal ifadeler](../../../docs/standard/base-types/regular-expressions.md).  
+<a name="top"></a> Normal bir ifade normal ifade altyapısı giriş metni eşleştirmeyi dener bir desen ' dir. Bir desen, bir veya daha çok karakter sabitinden, işleçlerden veya yapılardan oluşur.  Kısa bir giriş için bkz [.NET normal ifadeler](../../../docs/standard/base-types/regular-expressions.md).  
   
  Bu hızlı başvurudaki her bölüm normal ifadeleri tanımlamak üzere kullanabileceğiniz belirli bir karakter, işleç ve yapı kategorisini listeler:  
   
@@ -51,8 +51,8 @@ ms.lasthandoff: 12/23/2017
   
  Ayrıca kolay başvuru için karşıdan yüklemek ve yazdırma iki biçimlerde bu bilgiler sunulmuştur:  
   
- [Word (.docx) biçiminde indirin](http://download.microsoft.com/download/D/2/4/D240EBF6-A9BA-4E4F-A63F-AEB6DA0B921C/Regular%20expressions%20quick%20reference.docx)  
- [PDF (.pdf) biçiminde indirin](http://download.microsoft.com/download/D/2/4/D240EBF6-A9BA-4E4F-A63F-AEB6DA0B921C/Regular%20expressions%20quick%20reference.pdf)  
+ [Word (.docx) biçiminde indirin](https://download.microsoft.com/download/D/2/4/D240EBF6-A9BA-4E4F-A63F-AEB6DA0B921C/Regular%20expressions%20quick%20reference.docx)  
+ [PDF (.pdf) biçiminde indirin](https://download.microsoft.com/download/D/2/4/D240EBF6-A9BA-4E4F-A63F-AEB6DA0B921C/Regular%20expressions%20quick%20reference.pdf)  
   
 <a name="character_escapes"></a>   
 ## <a name="character-escapes"></a>Karakter Çıkışları  
@@ -68,10 +68,10 @@ ms.lasthandoff: 12/23/2017
 |`\f`|Form besleme ile eşleşir, \u000C.|`[\f]{2,}`|"\f\f\f" içinde "\f\f\f"|  
 |`\n`|Yeni bir satırla eşleşir, \u000A.|`\r\n(\w+)`|"\r\nThese are\ntwo lines" içinde "\r\nThese"|  
 |`\e`|Bir çıkışla eşleşir, \u001B.|`\e`|"\x001B" içinde "\x001B"|  
-|`\` *nnn*|Bir karakter belirtmek için sekizli gösterimini kullanır ( *nnn*  iki veya üç rakamı oluşur).|`\w\040\w`|Şunun içinde "a b", "c d" :<br /><br /> "a bc d"|  
-|`\x` *nn*|Bir karakter belirtmek için onaltılık gösterimini kullanır ( *nn*  tam olarak iki sayılardan oluşur).|`\w\x20\w`|Şunun içinde "a b", "c d" :<br /><br /> "a bc d"|  
-|`\c`*X*<br /><br /> `\c`*x*|Tarafından belirtilen ASCII denetim karakterle eşleşir *X* veya *x*, burada *X* veya *x* denetim karakteri harfi.|`\cC`|"\x0003" içinde "\x0003" (Ctrl-C)|  
-|`\u` *nnnn*|Onaltılık gösterim kullanılarak bir Unicode karakteri ile eşleşir (tarafından belirtildiği şekilde tam olarak dört basamak  *nnnn* ).|`\w\u0020\w`|Şunun içinde "a b", "c d" :<br /><br /> "a bc d"|  
+|`\` *nnn*|Bir karakter belirtmek için sekizli gösterimini kullanır (*nnn* iki veya üç rakamı oluşur).|`\w\040\w`|Şunun içinde "a b", "c d" :<br /><br /> "a bc d"|  
+|`\x` *nn*|Bir karakter belirtmek için onaltılık gösterimini kullanır (*nn* tam olarak iki sayılardan oluşur).|`\w\x20\w`|Şunun içinde "a b", "c d" :<br /><br /> "a bc d"|  
+|`\c` *X*<br /><br /> `\c` *X*|Tarafından belirtilen ASCII denetim karakterle eşleşir *X* veya *x*, burada *X* veya *x* denetim karakteri harfi.|`\cC`|"\x0003" içinde "\x0003" (Ctrl-C)|  
+|`\u` *nnnn*|Onaltılık gösterim kullanılarak bir Unicode karakteri ile eşleşir (tarafından belirtildiği şekilde tam olarak dört basamak *nnnn*).|`\w\u0020\w`|Şunun içinde "a b", "c d" :<br /><br /> "a bc d"|  
 |`\`|Bu konudaki bu ve diğer tablolarda kaçış karakteri olarak tanınmayan bir karakterden önce geldiğinde karakterle eşleşir. Örneğin, `\*` aynı `\x2A`, ve `\.` aynı `\x2E`. Bu dil öğeleri belirsizliğini ortadan kaldırmak normal ifade altyapısı sağlar (gibi \* veya?) ve karakter değişmez değerleri (tarafından temsil edilen `\*` veya `\?`).|`\d+[\+-x\*]\d+`|"2 + 2" ve "3\*9" "(2+2) \* 3\*9"|  
   
  [Başa dön](#top)  
@@ -82,12 +82,12 @@ ms.lasthandoff: 12/23/2017
   
 |Karakter sınıfı|Açıklama|Desen|Eşleşmeler|  
 |---------------------|-----------------|-------------|-------------|  
-|`[`*character_group*`]`|Herhangi bir tek karakterle eşleşir *character_group*. Varsayılan olarak, eşleşme büyük/küçük harf duyarlıdır.|`[ae]`|"gray" içinde "a"<br /><br /> "lane" içinde "a", "e"|  
-|`[^`*character_group*`]`|Değilleme: olmayan herhangi bir tek karakterle eşleşir *character_group*. İçinde varsayılan olarak, karakterleri *character_group* büyük küçük harfe duyarlıdır.|`[^aei]`|"reign" içinde "r", "g", "n"|  
-|`[`*ilk* `-` *son*`]`|Karakter aralığı: aralığında herhangi bir tek karakterle eşleşir *ilk* için *son*.|`[A-Z]`|"AB123" içinde "A", "B"|  
+|`[` *character_group* `]`|Herhangi bir tek karakterle eşleşir *character_group*. Varsayılan olarak, eşleşme büyük/küçük harf duyarlıdır.|`[ae]`|"gray" içinde "a"<br /><br /> "lane" içinde "a", "e"|  
+|`[^` *character_group* `]`|Değilleme: olmayan herhangi bir tek karakterle eşleşir *character_group*. İçinde varsayılan olarak, karakterleri *character_group* büyük küçük harfe duyarlıdır.|`[^aei]`|"reign" içinde "r", "g", "n"|  
+|`[` *İlk* `-` *son* `]`|Karakter aralığı: aralığında herhangi bir tek karakterle eşleşir *ilk* için *son*.|`[A-Z]`|"AB123" içinde "A", "B"|  
 |`.`|Joker karakter: \n dışında herhangi bir tek karakterle eşleşir.<br /><br /> Değişmez değer nokta karakteri eşleştirmek için (. veya `\u002E`), kaçış karakteriyle gelmelidir (`\.`).|`a.e`|"nave" içinde "ave"<br /><br /> "water" içinde "ate"|  
-|`\p{`*adı*`}`|Unicode genel kategorisine veya adlandırılmış blok tarafından belirtilen herhangi bir tek karakterle eşleşir *adı*.|`\p{Lu}`<br /><br /> `\p{IsCyrillic}`|"City Lights" içinde "C", "L"<br /><br /> "ДЖem" içinde "Д", "Ж"|  
-|`\P{`*adı*`}`|Unicode genel kategorisine veya adlandırılmış blok tarafından belirtilen olmayan herhangi bir tek karakterle eşleşir *adı*.|`\P{Lu}`<br /><br /> `\P{IsCyrillic}`|"City" içinde "i", "t", "y"<br /><br /> "ДЖem" içinde "e", "m"|  
+|`\p{` *Adı* `}`|Unicode genel kategorisine veya adlandırılmış blok tarafından belirtilen herhangi bir tek karakterle eşleşir *adı*.|`\p{Lu}`<br /><br /> `\p{IsCyrillic}`|"City Lights" içinde "C", "L"<br /><br /> "ДЖem" içinde "Д", "Ж"|  
+|`\P{` *Adı* `}`|Unicode genel kategorisine veya adlandırılmış blok tarafından belirtilen olmayan herhangi bir tek karakterle eşleşir *adı*.|`\P{Lu}`<br /><br /> `\P{IsCyrillic}`|"City" içinde "i", "t", "y"<br /><br /> "ДЖem" içinde "e", "m"|  
 |`\w`|Sözcük olan herhangi bir karakterle eşleşir.|`\w`|"ID A1.3" içinde "I", "D", "A", "1", "3"|  
 |`\W`|Sözcük olmayan herhangi bir karakterle eşleşir.|`\W`|"ID A1.3" içinde " ", "."|  
 |`\s`|Boşluk olan herhangi bir karakterle eşleşir.|`\w\s`|"ID A1.3" içinde "D "|  
@@ -120,16 +120,16 @@ ms.lasthandoff: 12/23/2017
   
 |Yapıyı gruplandırma|Açıklama|Desen|Eşleşmeler|  
 |------------------------|-----------------|-------------|-------------|  
-|`(`*alt*`)`|Eşleşen alt ifadeyi yakalar ve buna bir tabanlı bir sıra numarası atar.|`(\w)\1`|"deep" içinde "ee"|  
-|`(?<`*adı* `>` *alt*`)`|Eşleşen alt ifadeyi adlandırılmış bir gruba yakalar.|`(?<double>\w)\k<double>`|"deep" içinde "ee"|  
-|`(?<`*Ad1* `-` *ad2* `>` *alt*`)`|Bir dengeleme grubu tanımını tanımlar. Daha fazla bilgi için "Grup tanımı Dengeleme" bölümüne bakın [gruplandırma yapıları](grouping-constructs-in-regular-expressions.md).|`(((?'Open'\()[^\(\)]*)+((?'Close-Open'\))[^\(\)]*)+)*(?(Open)(?!))$`|"((1-3)\*(3-1))" içindeki "3+2^((1-3)\*(3-1))"|  
-|`(?:`*alt*`)`|Yakalama yapmayan grubu tanımlar.|`Write(?:Line)?`|"Console.WriteLine()" içinde "WriteLine"<br /><br /> "Console.Write(value)" içinde "Yaz"|  
-|`(?imnsx-imnsx:`*alt*`)`|İçinde belirtilen seçeneklerini devre dışı bırakır veya uygular *alt*. Daha fazla bilgi için bkz: [normal ifade seçenekleri](regular-expression-options.md).|`A\d{2}(?i:\w+)\b`|"A12xl A12XL a12xl" içinde "A12xl", "A12XL"|  
-|`(?=`*alt*`)`|Sıfır genişlik pozitif ileriye yönelik onaylar.|`\w+(?=\.)`|"He is. içinde "is", "ran" ve "out" Köpek çalıştı. Güneş çıktı."|  
-|`(?!`*alt*`)`|Sıfır genişlik negatif ileriye yönelik onaylar.|`\b(?!un)\w+\b`|"unsure sure unity used" içinde "sure", "used"|  
-|`(?<=`*alt*`)`|Sıfır genişlik pozitif geriye yönelik onaylar.|`(?<=19)\d{2}\b`|"1851 1999 1950 1905 2003" içinde "99", "50", "05"|  
-|`(?<!`*alt*`)`|Sıfır genişlik negatif geriye yönelik onaylar.|`(?<!19)\d{2}\b`|"1851 1999 1950 1905 2003" içinde "51", "03"|  
-|`(?>`*alt*`)`|Geri dönüşlü olmayan (veya "greedy") alt ifade.|`[13579](?>A+B+)`|"1ABB 3ABBC 5AB 5AC" içinde "1ABB", "3ABB" ve "5AB"|  
+|`(` *alt* `)`|Eşleşen alt ifadeyi yakalar ve buna bir tabanlı bir sıra numarası atar.|`(\w)\1`|"deep" içinde "ee"|  
+|`(?<` *ad* `>` *alt* `)`|Eşleşen alt ifadeyi adlandırılmış bir gruba yakalar.|`(?<double>\w)\k<double>`|"deep" içinde "ee"|  
+|`(?<` *Ad1* `-` *ad2* `>` *alt* `)`|Bir dengeleme grubu tanımını tanımlar. Daha fazla bilgi için "Grup tanımı Dengeleme" bölümüne bakın [gruplandırma yapıları](grouping-constructs-in-regular-expressions.md).|`(((?'Open'\()[^\(\)]*)+((?'Close-Open'\))[^\(\)]*)+)*(?(Open)(?!))$`|"((1-3)\*(3-1))" içindeki "3+2^((1-3)\*(3-1))"|  
+|`(?:` *alt* `)`|Yakalama yapmayan grubu tanımlar.|`Write(?:Line)?`|"Console.WriteLine()" içinde "WriteLine"<br /><br /> "Console.Write(value)" içinde "Yaz"|  
+|`(?imnsx-imnsx:` *alt* `)`|İçinde belirtilen seçeneklerini devre dışı bırakır veya uygular *alt*. Daha fazla bilgi için bkz: [normal ifade seçenekleri](regular-expression-options.md).|`A\d{2}(?i:\w+)\b`|"A12xl A12XL a12xl" içinde "A12xl", "A12XL"|  
+|`(?=` *alt* `)`|Sıfır genişlik pozitif ileriye yönelik onaylar.|`\w+(?=\.)`|"He is. içinde "is", "ran" ve "out" Köpek çalıştı. Güneş çıktı."|  
+|`(?!` *alt* `)`|Sıfır genişlik negatif ileriye yönelik onaylar.|`\b(?!un)\w+\b`|"unsure sure unity used" içinde "sure", "used"|  
+|`(?<=` *alt* `)`|Sıfır genişlik pozitif geriye yönelik onaylar.|`(?<=19)\d{2}\b`|"1851 1999 1950 1905 2003" içinde "99", "50", "05"|  
+|`(?<!` *alt* `)`|Sıfır genişlik negatif geriye yönelik onaylar.|`(?<!19)\d{2}\b`|"1851 1999 1950 1905 2003" içinde "51", "03"|  
+|`(?>` *alt* `)`|Geri dönüşlü olmayan (veya "greedy") alt ifade.|`[13579](?>A+B+)`|"1ABB 3ABBC 5AB 5AC" içinde "1ABB", "3ABB" ve "5AB"|  
   
  [Başa dön](#top)  
   
@@ -142,15 +142,15 @@ ms.lasthandoff: 12/23/2017
 |`*`|Önceki öğeyle sıfır kez veya daha fazla eşleşir.|`\d*\.\d`|".0", "19.9", "219.9"|  
 |`+`|Önceki öğeyle bir kez veya daha fazla eşleşir.|`"be+"`|"been" içinde "bee", "bent" içinde "be"|  
 |`?`|Önceki öğeyle sıfır veya bir kez eşleşir.|`"rai?n"`|"ran", "rain"|  
-|`{` *n* `}`|Önceki öğesi tam olarak eşleşen  *n*  kez.|`",\d{3}"`|"1,043.6" içinde ",043", "9,876,543,210" içinde ",876", ",543" ve ",210"|  
-|`{` *n* `,}`|Önceki öğesi en az eşleşen  *n*  kez.|`"\d{2,}"`|"166", "29", "1930"|  
-|`{` *n*  `,` *m*`}`|Önceki öğesi en az eşleşen  *n*  kez ancak hiçbir birden fazla *m* kez.|`"\d{3,5}"`|"166", "17668"<br /><br /> "193024" içinde "19302"|  
+|`{` *N* `}`|Önceki öğesi tam olarak eşleşen *n* kez.|`",\d{3}"`|"1,043.6" içinde ",043", "9,876,543,210" içinde ",876", ",543" ve ",210"|  
+|`{` *N* `,}`|Önceki öğesi en az eşleşen *n* kez.|`"\d{2,}"`|"166", "29", "1930"|  
+|`{` *n* `,` *m* `}`|Önceki öğesi en az eşleşen *n* kez ancak hiçbir birden fazla *m* kez.|`"\d{3,5}"`|"166", "17668"<br /><br /> "193024" içinde "19302"|  
 |`*?`|Önceki öğeyle sıfır kez veya daha fazla ancak mümkün olduğunca az eşleşir.|`\d*?\.\d`|".0", "19.9", "219.9"|  
 |`+?`|Önceki öğeyle bir kez veya daha fazla ancak mümkün olduğunca az eşleşir.|`"be+?"`|"been" içinde "be", "bent" içinde "be"|  
 |`??`|Önceki öğeyle sıfır veya bir kez ancak mümkün olduğunca az eşleşir.|`"rai??n"`|"ran", "rain"|  
-|`{` *n* `}?`|Önceki öğesi tam olarak eşleşen  *n*  kez.|`",\d{3}?"`|"1,043.6" içinde ",043", "9,876,543,210" içinde ",876", ",543" ve ",210"|  
-|`{` *n* `,}?`|Önceki öğesi en az eşleşen  *n*  kez ancak mümkün olduğunca birkaç kez.|`"\d{2,}?"`|"166", "29", "1930"|  
-|`{` *n*  `,` *m*`}?`|Önceki öğesi arasında eşleşen  *n*  ve *m* kez ancak mümkün olduğunca birkaç kez.|`"\d{3,5}?"`|"166", "17668"<br /><br /> "193024" içinde "193", "024"|  
+|`{` *N* `}?`|Önceki öğesi tam olarak eşleşen *n* kez.|`",\d{3}?"`|"1,043.6" içinde ",043", "9,876,543,210" içinde ",876", ",543" ve ",210"|  
+|`{` *N* `,}?`|Önceki öğesi en az eşleşen *n* kez ancak mümkün olduğunca birkaç kez.|`"\d{2,}?"`|"166", "29", "1930"|  
+|`{` *n* `,` *m* `}?`|Önceki öğesi arasında eşleşen *n* ve *m* kez ancak mümkün olduğunca birkaç kez.|`"\d{3,5}?"`|"166", "17668"<br /><br /> "193024" içinde "193", "024"|  
   
  [Başa dön](#top)  
   
@@ -160,8 +160,8 @@ ms.lasthandoff: 12/23/2017
   
 |Yeniden başvuru yapısı|Açıklama|Desen|Eşleşmeler|  
 |-----------------------------|-----------------|-------------|-------------|  
-|`\`*numarası*|Yeniden başvuru. Numaralandırılmış ifadenin değeriyle eşleşir.|`(\w)\1`|"seek" içinde "ee"|  
-|`\k<`*adı*`>`|Adlandırılan yeniden başvuru. Adlandırılmış ifadenin değeriyle eşleşir.|`(?<char>\w)\k<char>`|"seek" içinde "ee"|  
+|`\` *Sayı*|Yeniden başvuru. Numaralandırılmış ifadenin değeriyle eşleşir.|`(\w)\1`|"seek" içinde "ee"|  
+|`\k<` *Adı* `>`|Adlandırılan yeniden başvuru. Adlandırılmış ifadenin değeriyle eşleşir.|`(?<char>\w)\k<char>`|"seek" içinde "ee"|  
   
  [Başa dön](#top)  
   
@@ -171,9 +171,9 @@ ms.lasthandoff: 12/23/2017
   
 |Değişim yapısı|Açıklama|Desen|Eşleşmeler|  
 |---------------------------|-----------------|-------------|-------------|  
-|<code>&#124;</code>|Dikey çubuk (&#124;) ayrılmış herhangi bir öğesiyle eşleştiğinden karakter.|<code>th(e&#124;is&#124;at)</code>|"this is the day" içinde "the", "this" "|  
-|`(?(`*ifade* `)` *Evet* <code>&#124;</code> *hiçbir*`)`|Eşleşen *Evet* normal ifade deseni olarak belirlendiyse *ifade* eşleşen; Aksi halde, isteğe bağlı eşleşen *hiçbir* bölümü. *ifade* Sıfır Genişlik onaylama yorumlanır.|<code>(?(A)A\d{2}\b&#124;\b\d{3}\b)</code>|"A10 C103 910" içinde "A10", "910"|  
-|`(?(`*adı* `)` *Evet* <code>&#124;</code> *hiçbir*`)`|Eşleşen *Evet* varsa *adı*, adlandırılmış ya da numaralı grup, yakalama bir eşleşmeye sahip; Aksi halde, isteğe bağlı eşleşen *hiçbir*.|<code>(?&lt;quoted&gt;&quot;)?(?(quoted).+?&quot;&#124;\S+\s)</code>|"Dogs.jpg "Yiska playing.jpg" içeriğindeki "Dogs.jpg, "Yiska playing.jpg"|  
+|<code>&#124;</code>|Dikey çubukla ayrılan herhangi bir öğesiyle eşleştiğinden (&#124;) karakter.|<code>th(e&#124;is&#124;at)</code>|"this is the day" içinde "the", "this" "|  
+|`(?(` *ifade* `)` *Evet* <code>&#124;</code> *yok* `)`|Eşleşen *Evet* normal ifade deseni olarak belirlendiyse *ifade* eşleşen; Aksi halde, isteğe bağlı eşleşen *hiçbir* bölümü. *ifade* Sıfır Genişlik onaylama yorumlanır.|<code>(?(A)A\d{2}\b&#124;\b\d{3}\b)</code>|"A10 C103 910" içinde "A10", "910"|  
+|`(?(` *ad* `)` *Evet* <code>&#124;</code> *yok* `)`|Eşleşen *Evet* varsa *adı*, adlandırılmış ya da numaralı grup, yakalama bir eşleşmeye sahip; Aksi halde, isteğe bağlı eşleşen *hiçbir*.|<code>(?&lt;quoted&gt;&quot;)?(?(quoted).+?&quot;&#124;\S+\s)</code>|"Dogs.jpg "Yiska playing.jpg" içeriğindeki "Dogs.jpg, "Yiska playing.jpg"|  
   
  [Başa dön](#top)  
   
@@ -183,8 +183,8 @@ ms.lasthandoff: 12/23/2017
   
 |Karakter|Açıklama|Desen|Değiştirme deseni|Giriş dizesi|Sonuç Dizesi|  
 |---------------|-----------------|-------------|-------------------------|------------------|-------------------|  
-|`$`*numarası*|Gruplandırma ölçütü eşleşen alt dizeyi değiştirir *numarası*.|`\b(\w+)(\s)(\w+)\b`|`$3$2$1`|"one two"|"two one"|  
-|`${`*adı*`}`|Adlandırılmış grupla eşleşen alt dizeyi değiştirir *adı*.|`\b(?<word1>\w+)(\s)(?<word2>\w+)\b`|`${word2} ${word1}`|"one two"|"two one"|  
+|`$` *Sayı*|Gruplandırma ölçütü eşleşen alt dizeyi değiştirir *numarası*.|`\b(\w+)(\s)(\w+)\b`|`$3$2$1`|"one two"|"two one"|  
+|`${` *Adı* `}`|Adlandırılmış grupla eşleşen alt dizeyi değiştirir *adı*.|`\b(?<word1>\w+)(\s)(?<word2>\w+)\b`|`${word2} ${word1}`|"one two"|"two one"|  
 |`$$`|Değişmez değerli bir "$" işaretinin yerini alır.|`\b(\d+)\s?USD`|`$$$1`|"103 USD"|"$103"|  
 |`$&`|Tam eşleşmenin bir kopyasının yerini alır.|`\$?\d*\.?\d+`|`**$&**`|"$1.30"|"\*\*$1.30\*\*"|  
 |<code>$`</code>|Eşleşmeden önce giriş dizesi metninin tamamının yerini alır.|`B+`|<code>$`</code>|"AABBCC"|"AAAACC"|  
@@ -209,7 +209,7 @@ ms.lasthandoff: 12/23/2017
 |Seçenek|Açıklama|Desen|Eşleşmeler|  
 |------------|-----------------|-------------|-------------|  
 |`i`|Büyük küçük harf duyarlı eşleme kullanın.|`\b(?i)a(?-i)a\w+\b`|"aardvark AAAuto aaaAuto Adam breakfast" içinde "aardvark", "aaaAuto"|  
-|`m`|Çok satırlı modunu kullanın. `^`ve `$` başlangıcını ve bitişini başlangıcını ve bitişini dizenin yerine bir çizginin eşleşmesi.|Örneğin, "Çok satırlı modu" bölümüne bakın [normal ifade seçenekleri](regular-expression-options.md).||  
+|`m`|Çok satırlı modunu kullanın. `^` ve `$` başlangıcını ve bitişini başlangıcını ve bitişini dizenin yerine bir çizginin eşleşmesi.|Örneğin, "Çok satırlı modu" bölümüne bakın [normal ifade seçenekleri](regular-expression-options.md).||  
 |`n`|Adsız grupları yakalamayın.|Örneğin, "Açık yakalar yalnızca" bölümüne bakın [normal ifade seçenekleri](regular-expression-options.md).||  
 |`s`|Tek satır modunu kullanın.|Örneğin, "tek satırlı moda" bölümüne bakın [normal ifade seçenekleri](regular-expression-options.md).||  
 |`x`|Normal ifade deseninde kaçışsız boşluğu yoksay.|`\b(?x) \d+ \s \w+`|"1 aardvark 2 cats IV centurions" içinde "1 aardvark", "2 cats"|  
@@ -222,9 +222,9 @@ ms.lasthandoff: 12/23/2017
   
 |Oluştur|Tanım|Örnek|  
 |---------------|----------------|-------------|  
-|`(?imnsx-imnsx)`|Büyük/küçük harfe bir desen ortasında gibi seçenekleri devre dışı bırakır veya ayarlar. Daha fazla bilgi için bkz: [normal ifade seçenekleri](regular-expression-options.md).|`\bA(?i)b\w+\b`"ABA", "ABA mümkün Act" "mümkün" ile eşleşir|  
-|`(?#`*açıklama*`)`|Satır içi açıklama. Açıklama ilk kapanış parantezinde sona erer.|`\bA(?#Matches words starting with A)\w+\b`|  
-|`#`[için satır sonu]|X-mode yorumu. Açıklama atlanmayan başlatır `#` ve satırın sonuna kadar devam eder.|`(?x)\bA\w+\b#Matches words starting with A`|  
+|`(?imnsx-imnsx)`|Büyük/küçük harfe bir desen ortasında gibi seçenekleri devre dışı bırakır veya ayarlar. Daha fazla bilgi için bkz: [normal ifade seçenekleri](regular-expression-options.md).|`\bA(?i)b\w+\b` "ABA", "ABA mümkün Act" "mümkün" ile eşleşir|  
+|`(?#` *Açıklama* `)`|Satır içi açıklama. Açıklama ilk kapanış parantezinde sona erer.|`\bA(?#Matches words starting with A)\w+\b`|  
+|`#` [için satır sonu]|X-mode yorumu. Açıklama atlanmayan başlatır `#` ve satırın sonuna kadar devam eder.|`(?x)\bA\w+\b#Matches words starting with A`|  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
  <xref:System.Text.RegularExpressions?displayProperty=nameWithType>  
@@ -232,5 +232,5 @@ ms.lasthandoff: 12/23/2017
  [Normal ifadeler](regular-expressions.md)  
  [Normal ifade sınıfları](the-regular-expression-object-model.md)  
  [Normal İfade Örnekleri](regular-expression-examples.md)  
- [Normal ifadeler - hızlı başvuru (Word biçiminde de indirilebilir)](http://download.microsoft.com/download/D/2/4/D240EBF6-A9BA-4E4F-A63F-AEB6DA0B921C/Regular%20expressions%20quick%20reference.docx)  
- [Normal ifadeler - hızlı başvuru (PDF biçimli indirme)](http://download.microsoft.com/download/D/2/4/D240EBF6-A9BA-4E4F-A63F-AEB6DA0B921C/Regular%20expressions%20quick%20reference.pdf)
+ [Normal ifadeler - hızlı başvuru (Word biçiminde de indirilebilir)](https://download.microsoft.com/download/D/2/4/D240EBF6-A9BA-4E4F-A63F-AEB6DA0B921C/Regular%20expressions%20quick%20reference.docx)  
+ [Normal ifadeler - hızlı başvuru (PDF biçimli indirme)](https://download.microsoft.com/download/D/2/4/D240EBF6-A9BA-4E4F-A63F-AEB6DA0B921C/Regular%20expressions%20quick%20reference.pdf)

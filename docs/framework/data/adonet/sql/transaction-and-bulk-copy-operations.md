@@ -1,27 +1,29 @@
 ---
-title: "İşlem ve toplu kopyalama işlemleri"
-ms.custom: 
+title: İşlem ve toplu kopyalama işlemleri
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-ado
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-ado
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - csharp
 - vb
 ms.assetid: f6f0cbc9-f7bf-4d6e-875f-ad1ba0b4aa62
-caps.latest.revision: "4"
+caps.latest.revision: 4
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.workload: dotnet
-ms.openlocfilehash: d37ea32ef1f73b84050cdd64ca026ac12813bbd2
-ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
+ms.workload:
+- dotnet
+ms.openlocfilehash: 40494c887ffa48c6ebc7f020cb4d42eecbd08e75
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="transaction-and-bulk-copy-operations"></a>İşlem ve toplu kopyalama işlemleri
 Toplu kopyalama işlemleri yalıtılmış operations veya birden çok adım işlemin parçası olarak gerçekleştirilebilir. Bu ikinci seçeneği yanı sıra aynı işlem içinde birden fazla toplu kopyalama işlemi gerçekleştirmek diğer veritabanı (örneğin, ekleme, güncelleştirme ve silme) hala yürütün veya işlemin tamamını geri kullanabilmeye devam ederken işlemleri sağlar.  
@@ -36,7 +38,7 @@ Toplu kopyalama işlemleri yalıtılmış operations veya birden çok adım işl
  Toplu kopyalama işlemi ile yürütülür <xref:System.Data.SqlClient.SqlBulkCopy.BatchSize%2A> özelliği 10 olarak ayarlandı. İşlemi geçersiz satır karşılaştığında, özel durum oluşur. Bu ilk, toplu kopyalama işleminin işlem temelli olmayan örneğidir. Tüm toplu hata noktaya kadar kopyalanan uygulanır; Yinelenen anahtar içeren toplu geri alınır ve başka bir toplu işlemeden önce toplu kopyalama işlemi durdu.  
   
 > [!NOTE]
->  Bölümünde açıklandığı gibi iş tabloları oluşturmadıysanız Bu örnek çalışmaz [toplu kopyalama örnek Kurulum](../../../../../docs/framework/data/adonet/sql/bulk-copy-example-setup.md). Bu kodu kullanarak söz dizimi göstermek için sağlanan **SqlBulkCopy** yalnızca. Kaynak ve hedef tablolar aynı bulunuyorsa [!INCLUDE[ssNoVersion](../../../../../includes/ssnoversion-md.md)] örneği, bunu daha kolay ve hızlı kullanmak için bir [!INCLUDE[tsql](../../../../../includes/tsql-md.md)] `INSERT … SELECT` verileri kopyalamak için deyimi.  
+>  Bölümünde açıklandığı gibi iş tabloları oluşturmadıysanız Bu örnek çalışmaz [toplu kopyalama örnek Kurulum](../../../../../docs/framework/data/adonet/sql/bulk-copy-example-setup.md). Bu kodu kullanarak söz dizimi göstermek için sağlanan **SqlBulkCopy** yalnızca. Kaynak ve hedef tablolar aynı SQL Server örneğinde bulunuyorsa, daha kolay ve hızlı kullanmak için bunu bir [!INCLUDE[tsql](../../../../../includes/tsql-md.md)] `INSERT … SELECT` verileri kopyalamak için deyimi.  
   
  [!code-csharp[DataWorks SqlBulkCopy.DefaultTransaction#1](../../../../../samples/snippets/csharp/VS_Snippets_ADO.NET/DataWorks SqlBulkCopy.DefaultTransaction/CS/source.cs#1)]
  [!code-vb[DataWorks SqlBulkCopy.DefaultTransaction#1](../../../../../samples/snippets/visualbasic/VS_Snippets_ADO.NET/DataWorks SqlBulkCopy.DefaultTransaction/VB/source.vb#1)]  
@@ -52,7 +54,7 @@ Toplu kopyalama işlemleri yalıtılmış operations veya birden çok adım işl
  Aşağıdaki konsol uygulaması, önceki örnekte, bir özel durum dışında benzerdir: Bu örnekte, kendi işlemleri toplu kopyalama işlemi yönetir. Tüm toplu hata noktaya kadar kopyalanan uygulanır; Yinelenen anahtar içeren toplu geri alınır ve başka bir toplu işlemeden önce toplu kopyalama işlemi durdu.  
   
 > [!IMPORTANT]
->  Bölümünde açıklandığı gibi iş tabloları oluşturmadıysanız Bu örnek çalışmaz [toplu kopyalama örnek Kurulum](../../../../../docs/framework/data/adonet/sql/bulk-copy-example-setup.md). Bu kodu kullanarak söz dizimi göstermek için sağlanan **SqlBulkCopy** yalnızca. Kaynak ve hedef tablolar aynı bulunuyorsa [!INCLUDE[ssNoVersion](../../../../../includes/ssnoversion-md.md)] örneği, bunu daha kolay ve hızlı kullanmak için bir [!INCLUDE[tsql](../../../../../includes/tsql-md.md)] `INSERT … SELECT` verileri kopyalamak için deyimi.  
+>  Bölümünde açıklandığı gibi iş tabloları oluşturmadıysanız Bu örnek çalışmaz [toplu kopyalama örnek Kurulum](../../../../../docs/framework/data/adonet/sql/bulk-copy-example-setup.md). Bu kodu kullanarak söz dizimi göstermek için sağlanan **SqlBulkCopy** yalnızca. Kaynak ve hedef tablolar aynı SQL Server örneğinde bulunuyorsa, daha kolay ve hızlı kullanmak için bunu bir [!INCLUDE[tsql](../../../../../includes/tsql-md.md)] `INSERT … SELECT` verileri kopyalamak için deyimi.  
   
  [!code-csharp[DataWorks SqlBulkCopy.InternalTransaction#1](../../../../../samples/snippets/csharp/VS_Snippets_ADO.NET/DataWorks SqlBulkCopy.InternalTransaction/CS/source.cs#1)]
  [!code-vb[DataWorks SqlBulkCopy.InternalTransaction#1](../../../../../samples/snippets/visualbasic/VS_Snippets_ADO.NET/DataWorks SqlBulkCopy.InternalTransaction/VB/source.vb#1)]  
@@ -65,7 +67,7 @@ Toplu kopyalama işlemleri yalıtılmış operations veya birden çok adım işl
  Aşağıdaki konsol uygulaması ilk (işlem temelli olmayan) örnek, bir özel durum dışında benzerdir: Bu örnekte, daha büyük ve dış işlemde toplu kopyalama işlemi eklenmiştir. Birincil anahtar ihlali hata oluştuğunda, tüm işlem geri alındı ve hiçbir satır hedef tabloya eklenir.  
   
 > [!IMPORTANT]
->  Bölümünde açıklandığı gibi iş tabloları oluşturmadıysanız Bu örnek çalışmaz [toplu kopyalama örnek Kurulum](../../../../../docs/framework/data/adonet/sql/bulk-copy-example-setup.md). Bu kodu kullanarak söz dizimi göstermek için sağlanan **SqlBulkCopy** yalnızca. Kaynak ve hedef tablolar aynı bulunuyorsa [!INCLUDE[ssNoVersion](../../../../../includes/ssnoversion-md.md)] örneği, bunu daha kolay ve hızlı kullanmak için bir [!INCLUDE[tsql](../../../../../includes/tsql-md.md)] `INSERT … SELECT` verileri kopyalamak için deyimi.  
+>  Bölümünde açıklandığı gibi iş tabloları oluşturmadıysanız Bu örnek çalışmaz [toplu kopyalama örnek Kurulum](../../../../../docs/framework/data/adonet/sql/bulk-copy-example-setup.md). Bu kodu kullanarak söz dizimi göstermek için sağlanan **SqlBulkCopy** yalnızca. Kaynak ve hedef tablolar aynı SQL Server örneğinde bulunuyorsa, daha kolay ve hızlı kullanmak için bunu bir [!INCLUDE[tsql](../../../../../includes/tsql-md.md)] `INSERT … SELECT` verileri kopyalamak için deyimi.  
   
  [!code-csharp[DataWorks SqlBulkCopy.SqlTransaction#1](../../../../../samples/snippets/csharp/VS_Snippets_ADO.NET/DataWorks SqlBulkCopy.SqlTransaction/CS/source.cs#1)]
  [!code-vb[DataWorks SqlBulkCopy.SqlTransaction#1](../../../../../samples/snippets/visualbasic/VS_Snippets_ADO.NET/DataWorks SqlBulkCopy.SqlTransaction/VB/source.vb#1)]  

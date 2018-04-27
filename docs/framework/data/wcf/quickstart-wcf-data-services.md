@@ -1,40 +1,42 @@
 ---
-title: "Hızlı Başlangıç (WCF Veri Hizmetleri)"
-ms.custom: 
+title: Hızlı Başlangıç (WCF Veri Hizmetleri)
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework-oob
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - WCF Data Services, quick-start example
 - WCF Data Services, Entity Data Model (EDM) service
 ms.assetid: 7b18ca1e-d4d6-4c7a-afb9-ce3cebb98a8d
-caps.latest.revision: "3"
+caps.latest.revision: 3
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: fa6711ef5591110c74a1da95358aac4d8a8da655
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: cf23c6f86900fd94d269e77dcefb05da0ace5ea0
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="quickstart-wcf-data-services"></a>Hızlı Başlangıç (WCF Veri Hizmetleri)
 Bu hızlı başlangıç öğrenmeniz yardımcı olan [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] ve [!INCLUDE[ssODataFull](../../../../includes/ssodatafull-md.md)] konular, destek görevleri bir dizi [Başlarken](../../../../docs/framework/data/wcf/getting-started-with-wcf-data-services.md).  
   
 ## <a name="what-you-will-learn"></a>Ne öğreneceksiniz  
- Bu hızlı başlangıç ilk görevde kullanıma sunmak için veri hizmeti oluşturmayı gösteren bir [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] Northwind örnek veritabanından akış. Sonraki konularda size erişecek [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] bir Web tarayıcısı kullanarak akış ve ayrıca oluşturabilirsiniz bir [!INCLUDE[avalon1](../../../../includes/avalon1-md.md)] tüketir istemci uygulaması [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] istemci kitaplıkları kullanarak akış.  
+ Bu hızlı başlangıç ilk görevde kullanıma sunmak için veri hizmeti oluşturmayı gösteren bir [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] Northwind örnek veritabanından akış. Sonraki konularda size erişecek [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] bir Web tarayıcısı kullanarak akış ve ayrıca tüketen Windows Presentation Foundation (WPF) istemci uygulaması oluşturma [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] istemci kitaplıkları kullanarak akış.  
   
 ## <a name="prerequisites"></a>Önkoşullar  
  Bu hızlı başlangıç tamamlamak için aşağıdaki bileşenleri yüklemeniz gerekir:  
   
 -   [!INCLUDE[vs2010](../../../../includes/vs2010-md.md)].  
   
--   Örneği [!INCLUDE[msCoName](../../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../../includes/ssnoversion-md.md)]. Bu varsayılan yüklemede bulunan SQL Server Express içerir [!INCLUDE[vs_current_short](../../../../includes/vs-current-short-md.md)].  
+-   Örneği [!INCLUDE[msCoName](../../../../includes/msconame-md.md)] SQL Server. Bu, Visual Studio'nun varsayılan yüklemede bulunan SQL Server Express içerir.  
   
 -   Northwind örnek veritabanı. Bu örnek veritabanı karşıdan yüklemek için indirme sayfasına bakın [örnek veritabanları için SQL Server](http://go.microsoft.com/fwlink/?linkid=24758).  
   
@@ -43,7 +45,7 @@ Bu hızlı başlangıç öğrenmeniz yardımcı olan [!INCLUDE[ssAstoria](../../
  Tanımlamak [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] uygulama, veri modelini tanımlar, veri hizmeti oluşturma ve kaynaklarına erişimi etkinleştirme.  
   
  [Web Tarayıcısından Hizmete Erişme](../../../../docs/framework/data/wcf/accessing-the-service-from-a-web-browser-wcf-data-services-quickstart.md)  
- Hizmeti Başlat [!INCLUDE[vs_current_short](../../../../includes/vs-current-short-md.md)] ve HTTP GET isteklerini gösterilen akışa bir Web tarayıcısı aracılığıyla göndererek hizmet erişebilirsiniz.  
+ Visual Studio'dan hizmeti başlatmak ve HTTP GET isteklerini gösterilen akışa bir Web tarayıcısı aracılığıyla göndererek hizmet erişebilirsiniz.  
   
  [.NET Framework İstemci Uygulaması Oluşturma](../../../../docs/framework/data/wcf/creating-the-dotnet-client-application-wcf-data-services-quickstart.md)  
  Oluşturma bir [!INCLUDE[avalon2](../../../../includes/avalon2-md.md)] kullanmak için istemci uygulaması [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] akışı, Windows denetimlere veri bağlama, veri bağlama denetimleri değiştirin ve değişiklikleri veri hizmetine geri gönderin.  

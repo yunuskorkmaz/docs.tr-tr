@@ -1,7 +1,7 @@
 ---
-title: "Her mikro hizmet için etki alanı modeli sınırları tanımlama"
-description: "Kapsayıcılı .NET uygulamaları için .NET mikro mimarisi | Her mikro hizmet için etki alanı modeli sınırları tanımlama"
-keywords: "Docker, mikro, ASP.NET, kapsayıcı"
+title: Her mikro hizmet için etki alanı modeli sınırları tanımlama
+description: Kapsayıcılı .NET uygulamaları için .NET mikro mimarisi | Her mikro hizmet için etki alanı modeli sınırları tanımlama
+keywords: Docker, mikro, ASP.NET, kapsayıcı
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 05/26/2017
@@ -11,17 +11,17 @@ ms.topic: article
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: 830dd48a420a462842de57e436323a5a930c195d
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: 23b5ebafc5ea037568f168426d76b3ec9839040e
+ms.sourcegitcommit: 2e8acae16ae802f2d6d04e3ce0a6dbf04e476513
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="identify-domain-model-boundaries-for-each-microservice"></a>Her mikro hizmet için etki alanı modeli sınırlarını tanımlayın
 
 Doğru küçük mikro mümkünse eğilimindedir rağmen hedef model sınırları ve her mikro hizmet boyutu tanımlarken en ayrıntılı ayrımı mümkün değil almaktır. Bunun yerine, etki alanı bilginiz destekli en anlamlı ayrımı almak için amacınız olmalıdır. Vurgu boyutuna, ancak bunun yerine iş yeteneklerini değil. Varsa yüksek bir bağımlılıkları sayısına göre uygulamanın belirli bir bölgenin cohesion gerekli Temizle, ayrıca, tek bir mikro hizmet gereksinimini çok gösterir. Cohesion nasıl parçalayın veya grup birlikte mikro tanımlamak için bir yoldur. Sonuç olarak, etki alanı hakkında daha fazla bilgi elde ederken, mikro boyutunu tekrarlayarak uyarlamanız gerekir. Doğru boyutta bulma tek adımda bir işlem değildir.
 
-[SAM Newman](http://samnewman.io/), tanınan bir promoter mikro ve kitap yazarı [yapı mikro](http://samnewman.io/books/building_microservices/), (parçası ilişkisindeki bağlam (BC) deseni temel alınarak, mikro tasarlamanız gerekir, önemli noktalar etki alanı Odaklı Tasarım), daha önce sunulduğu şekilde. Bazı durumlarda, bir BC birkaç fiziksel Hizmetleri ancak bunun tersi oluşan.
+[SAM Newman](https://samnewman.io/), tanınan bir promoter mikro ve kitap yazarı [yapı mikro](https://samnewman.io/books/building_microservices/), (parçası ilişkisindeki bağlam (BC) deseni temel alınarak, mikro tasarlamanız gerekir, önemli noktalar etki alanı Odaklı Tasarım), daha önce sunulduğu şekilde. Bazı durumlarda, bir BC birkaç fiziksel Hizmetleri ancak bunun tersi oluşan.
 
 Bir etki alanı modeli belirli bir etki alanı varlıklarla somut BC içinde geçerlidir veya mikro hizmet. Etki alanı modeli uygulanabilirliğini bir BC sınırlandırır ve verir Geliştirici takım üyeleri Temizle ve paylaşılan anlama ne bağlı olması gerekir ve ne bağımsız olarak geliştirilebilir. Mikro hizmetler için aynı hedefleri şunlardır.
 

@@ -19,14 +19,14 @@ manager: wpickett
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: 89e892a379c7540cf67488471ae5281a4c4b86f4
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: c169586091f0e7e094e0231f9e247e8907371ec4
+ms.sourcegitcommit: 2e8acae16ae802f2d6d04e3ce0a6dbf04e476513
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="attributes"></a>Öznitelikler
-<xref:System.Attribute?displayProperty=nameWithType>bir taban sınıf özel öznitelikleri tanımlamak için kullanılır.  
+<xref:System.Attribute?displayProperty=nameWithType> bir taban sınıf özel öznitelikleri tanımlamak için kullanılır.  
   
  Derlemeler, türleri, üyeleri ve parametreler gibi programlama öğeleri ile eklenen ek açıklamaları öznitelikleridir. Bunlar derlemesi meta verilerde depolanır ve yansıma API'lerini kullanarak çalışma zamanında erişilebilir. Örneğin, Framework tanımlar <xref:System.ObsoleteAttribute>, hangi uygulanabilir tür veya üye onaylanmaz belirtmek için bir tür veya üye.  
   
@@ -58,7 +58,7 @@ ms.lasthandoff: 12/23/2017
   
  *Bölümleri © 2005, 2009 Microsoft Corporation. Tüm hakları saklıdır.*  
   
- *Pearson eğitim, Inc. şirketinin izni tarafından yeniden yazdırılmaları [Framework tasarım yönergeleri: kuralları, deyimleri ve yeniden kullanılabilir .NET kitaplıkları, 2 sürümü için desenleri](http://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619) Krzysztof Cwalina ve Brad Abrams tarafından 22 Eki 2008 tarafından yayımlanan Microsoft Windows geliştirme serisi bir parçası olarak Addison-Wesley Professional.*  
+ *Pearson eğitim, Inc. şirketinin izni tarafından yeniden yazdırılmaları [Framework tasarım yönergeleri: kuralları, deyimleri ve yeniden kullanılabilir .NET kitaplıkları, 2 sürümü için desenleri](https://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619) Krzysztof Cwalina ve Brad Abrams tarafından 22 Eki 2008 tarafından yayımlanan Microsoft Windows geliştirme serisi bir parçası olarak Addison-Wesley Professional.*  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
  [Çerçeve Tasarım Yönergeleri](../../../docs/standard/design-guidelines/index.md)  

@@ -13,16 +13,16 @@ ms.assetid: a8e51b22-d294-44fb-9539-0072f06c4cb3
 caps.latest.revision: 43
 author: BillWagner
 ms.author: wiwagn
-ms.openlocfilehash: 72563b9e37c26257a2bf5939f63ece050ec003ab
-ms.sourcegitcommit: 75a180acb5d8a2dbd4a52915ce8e980749fb1d05
+ms.openlocfilehash: c4ac62a38698f0e43c2868e86fa8776e913b715d
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/24/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="events-c-programming-guide"></a>Olaylar (C# Programlama Kılavuzu)
 Olayları etkinleştir bir [sınıfı](../../../csharp/language-reference/keywords/class.md) veya diğer bildirmek için nesne sınıfları nesneleri çeken bir şey olduğunda. Gönderir sınıfı (veya *başlatır*) olay çağrılır *yayımcı* ve alma sınıfları (veya *işlemek*) olay çağrılır *aboneleri* .  
   
- Tipik bir C# Windows Forms veya Web uygulamasında, düğmeler ve liste kutuları gibi denetimler tarafından oluşturulan olaylara abone olun. Kullanabileceğiniz [!INCLUDE[csprcs](~/includes/csprcs-md.md)] tümleşik geliştirme ortamı (IDE) bir denetim yayımlar etkinliklere göz atın ve işlemek için istediğiniz olanları seçebilirsiniz. IDE boş olay işleyicisi yöntemi ve olaya abone için kodu otomatik olarak ekler. Daha fazla bilgi için bkz: [nasıl yapılır: abone olma ve aboneliği olaylarından](../../../csharp/programming-guide/events/how-to-subscribe-to-and-unsubscribe-from-events.md).  
+ Tipik bir C# Windows Forms veya Web uygulamasında, düğmeler ve liste kutuları gibi denetimler tarafından oluşturulan olaylara abone olun. Bir denetim yayımlar etkinliklere göz atın ve işlemek için istediğiniz olanları seçmek için Visual C# tümleşik geliştirme ortamı (IDE) kullanabilirsiniz. IDE boş olay işleyicisi yöntemi ve olaya abone için kodu otomatik olarak ekler. Daha fazla bilgi için bkz: [nasıl yapılır: abone olma ve aboneliği olaylarından](../../../csharp/programming-guide/events/how-to-subscribe-to-and-unsubscribe-from-events.md).  
   
 ## <a name="events-overview"></a>Olaylara Genel Bakış  
  Olayları aşağıdaki özelliklere sahiptir:  

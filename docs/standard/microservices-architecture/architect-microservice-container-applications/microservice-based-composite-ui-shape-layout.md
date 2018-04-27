@@ -1,7 +1,7 @@
 ---
-title: "Mikro visual UI şekli ve birden çok mikro tarafından oluşturulan düzeni dahil olmak üzere, temel bileşik kullanıcı Arabirimi oluşturma"
-description: "Kapsayıcılı .NET uygulamaları için .NET mikro mimarisi | Mikro visual UI şekli ve birden çok mikro tarafından oluşturulan düzeni dahil olmak üzere, temel bileşik kullanıcı Arabirimi oluşturma"
-keywords: "Docker, mikro, ASP.NET, kapsayıcı"
+title: Mikro visual UI şekli ve birden çok mikro tarafından oluşturulan düzeni dahil olmak üzere, temel bileşik kullanıcı Arabirimi oluşturma
+description: Kapsayıcılı .NET uygulamaları için .NET mikro mimarisi | Mikro visual UI şekli ve birden çok mikro tarafından oluşturulan düzeni dahil olmak üzere, temel bileşik kullanıcı Arabirimi oluşturma
+keywords: Docker, mikro, ASP.NET, kapsayıcı
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 05/26/2017
@@ -11,11 +11,11 @@ ms.topic: article
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: 12b170e9d4c46fbb697f988596af6566d33099a4
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: 55b643fa6f87e5e2b1f49ba201032df655195b46
+ms.sourcegitcommit: 2e8acae16ae802f2d6d04e3ce0a6dbf04e476513
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="creating-composite-ui-based-on-microservices-including-visual-ui-shape-and-layout-generated-by-multiple-microservices"></a>Mikro visual UI şekli ve birden çok mikro tarafından oluşturulan düzeni dahil olmak üzere, temel bileşik kullanıcı Arabirimi oluşturma
 
@@ -56,11 +56,11 @@ Ancak, üzerinde mikro UI tabanlı bileşik hakkında daha fazla bilgi için aş
 -   **Mauro Servienti. Daha iyi UI birleşim gizli anahtarı**
     [*https://particular.net/blog/secret-of-better-ui-composition*](https://particular.net/blog/secret-of-better-ui-composition)
 
--   **Viktor Farcic. Ön uç Web Bileşenleri mikro dahil olmak üzere**
+-   **Viktor Farcic. Ön uç Web Bileşenleri mikro dahil**
     [*https://technologyconversations.com/2015/08/09/including-front-end-web-components-into-microservices/*](https://technologyconversations.com/2015/08/09/including-front-end-web-components-into-microservices/)
 
 -   **Ön uç mikro mimarisinde yönetme**\
-    [*http://Allegro.Tech/2016/03/Managing-Frontend-in-the-microservices-Architecture.HTML*](http://allegro.tech/2016/03/Managing-Frontend-in-the-microservices-architecture.html)
+    [*https://allegro.tech/2016/03/Managing-Frontend-in-the-microservices-architecture.html*](https://allegro.tech/2016/03/Managing-Frontend-in-the-microservices-architecture.html)
 
 
 >[!div class="step-by-step"]

@@ -1,26 +1,26 @@
 ---
-title: "XML işleme seçenekleri"
-ms.custom: 
+title: XML işleme seçenekleri
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology: dotnet-standard
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 33ced8ee-1745-4e71-8dee-ebe70ec067c7
-caps.latest.revision: "5"
+caps.latest.revision: 5
 author: mairaw
 ms.author: mairaw
 manager: wpickett
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: 2f270b58d20b3fe9dbc514657def90776bdfe2b5
-ms.sourcegitcommit: 91691981897cf8451033cb01071d8f5d94017f97
+ms.openlocfilehash: cabe640aa555400228acb572315a43b6ca9265bb
+ms.sourcegitcommit: 2e8acae16ae802f2d6d04e3ce0a6dbf04e476513
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/09/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="xml-processing-options"></a>XML işleme seçenekleri
 XML verilerini işlemek için kullanabileceğiniz Microsoft teknolojilerin bir listesi için aşağıdaki tablolara bakın.  
@@ -29,10 +29,10 @@ XML verilerini işlemek için kullanabileceğiniz Microsoft teknolojilerin bir l
   
 |**Seçeneği**|**İşleme türü**|**Açıklama**|  
 |----------------|-------------------------|---------------------|  
-|[LINQ to XML](http://msdn.microsoft.com/library/f0fe21e9-ee43-4a55-b91a-0800e5782c13) <br />(<xref:System.Xml.Linq> ad alanı)|Bellek içi|-.NET Framework Language-Integrated sorgu (LINQ) teknolojisine dayalı.<br />-Nesneleri, ilişkisel veri ve XML verilerini SQL benzer sorgu deneyimi sağlar.<br />-İnituive belge oluşturma ve dönüştürme özellikleri sağlar.<br />-Yeni kod yazıyorsanız, bu seçeneği kullanın.|  
+|[LINQ to XML](https://msdn.microsoft.com/library/f0fe21e9-ee43-4a55-b91a-0800e5782c13) <br />(<xref:System.Xml.Linq> ad alanı)|Bellek içi|-.NET Framework Language-Integrated sorgu (LINQ) teknolojisine dayalı.<br />-Nesneleri, ilişkisel veri ve XML verilerini SQL benzer sorgu deneyimi sağlar.<br />-İnituive belge oluşturma ve dönüştürme özellikleri sağlar.<br />-Yeni kod yazıyorsanız, bu seçeneği kullanın.|  
 |<xref:System.Xml.XmlReader?displayProperty=nameWithType>|Akış tabanlı|-XML verilerine erişmek için hızlı, önbelleğe alınmamış, yalnızca ileri bir yol sağlar.<br />-Nesneleri kullanarak oluşturabileceğiniz <xref:System.Xml.XmlReader.Create%2A?displayProperty=nameWithType> yöntemini ve bir nesne üzerinde kullanarak etkinleştirmek için özellik kümesi belirtin <xref:System.Xml.XmlReaderSettings> sınıfı.|  
 |<xref:System.Xml.XmlWriter?displayProperty=nameWithType>|Akış tabanlı|-XML verileri oluşturmak için hızlı, önbelleğe alınmamış, yalnızca ileri bir yol sağlar.<br />-Nesneleri kullanarak oluşturabileceğiniz <xref:System.Xml.XmlWriter.Create%2A?displayProperty=nameWithType> yöntemini ve bir nesne üzerinde kullanarak etkinleştirmek için özellik kümesi belirtin <xref:System.Xml.XmlWriterSettings> sınıfı.|  
-|<xref:System.Xml.XmlDocument?displayProperty=nameWithType>|Bellek içi|-Uygulayan [W3C belge nesne modeli (DOM) Düzey 1 çekirdek](http://www.w3.org/TR/REC-DOM-Level-1/level-one-core.html) ve [DOM Düzey 2 Çekirdek](http://www.w3.org/TR/DOM-Level-2-Core/) öneriler.<br />-Oluşturabilir, Ekle, Kaldır ve düğümler yöntemleri ve tanıdık DOM modelini temel alan özelliklerini kullanarak değiştirebilirsiniz.<br />-Bu seçenek W3C DOM kullanan var olan kodu değiştiriyorsanız kullanın|  
+|<xref:System.Xml.XmlDocument?displayProperty=nameWithType>|Bellek içi|-Uygulayan [W3C belge nesne modeli (DOM) Düzey 1 çekirdek](https://www.w3.org/TR/REC-DOM-Level-1/level-one-core.html) ve [DOM Düzey 2 Çekirdek](https://www.w3.org/TR/DOM-Level-2-Core/) öneriler.<br />-Oluşturabilir, Ekle, Kaldır ve düğümler yöntemleri ve tanıdık DOM modelini temel alan özelliklerini kullanarak değiştirebilirsiniz.<br />-Bu seçenek W3C DOM kullanan var olan kodu değiştiriyorsanız kullanın|  
 |<xref:System.Xml.XPath.XPathNavigator?displayProperty=nameWithType>|Bellek içi|-Birçok düzenleme seçeneklerini ve bir imleç modeli kullanılarak Gezinti özellikleri sunar.<br />-XML belgelerini içinde barındırılan bir <xref:System.Xml.XPath.XPathDocument> veya <xref:System.Xml.XmlDocument> nesnesi.<br />-XML salt okunur işlenmesi için mükemmel performans sağlar.<br />-XPath sorguları veya XSLT dönüştürmeleri varolan kodla değiştiriyorsanız bu seçeneği kullanın.|  
 |<xref:System.Xml.Xsl.XslCompiledTransform>|Bellek içi|-XSL Dönüşümleri kullanarak XML veri dönüştürme için seçenekler sağlar.<br />- [XSLT derleyici (xsltc.exe)](../../../../docs/standard/data/xml/xslt-compiler-xsltc-exe.md) önceden derlenmiş dönüşümleri, uygulamanızda başvuru sağlar.|  
   

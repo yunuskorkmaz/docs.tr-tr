@@ -1,11 +1,11 @@
 ---
-title: "XML Web Hizmetleri ile XML serileştirme"
-ms.custom: 
+title: XML Web Hizmetleri ile XML serileştirme
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - csharp
@@ -23,24 +23,24 @@ helpviewer_keywords:
 - literal XML serialization
 - serialization, attributes
 ms.assetid: a416192f-8102-458e-bc0a-0b8f3f784da9
-caps.latest.revision: "5"
+caps.latest.revision: 5
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: 12ab7f98036f61b0d9100f99ba3fad2388f62210
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.openlocfilehash: b07d86bbcc646141e067342d5e4340bdc4b39757
+ms.sourcegitcommit: 2e8acae16ae802f2d6d04e3ce0a6dbf04e476513
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="xml-serialization-with-xml-web-services"></a>XML Web Hizmetleri ile XML serileştirme
-XML serileştirme olduğu tarafından gerçekleştirilen XML Web Hizmetleri mimarisi kullanılan temelindeki iletim mekanizması <xref:System.Xml.Serialization.XmlSerializer> sınıfı. XML Web hizmeti tarafından oluşturulan XML denetlemek için ikisi de listelenen öznitelikleri uygulayabilirsiniz [öznitelikleri, Denetim XML serileştirme](../../../docs/standard/serialization/attributes-that-control-xml-serialization.md) ve [öznitelikleri, Denetim kodlanmış SOAP seri hale getirme](../../../docs/standard/serialization/attributes-that-control-encoded-soap-serialization.md) için sınıfları, dönüş değerleri, parametreler ve XML Web Hizmetleri (.asmx) oluşturmak için kullanılan bir dosya alanları. XML Web hizmeti oluşturma hakkında daha fazla bilgi için bkz: [yapı XML Web Hizmetleri kullanarak ASP.NET](http://msdn.microsoft.com/library/01dfc27c-c68e-4910-a0aa-5e4c2a766b0c).  
+XML serileştirme olduğu tarafından gerçekleştirilen XML Web Hizmetleri mimarisi kullanılan temelindeki iletim mekanizması <xref:System.Xml.Serialization.XmlSerializer> sınıfı. XML Web hizmeti tarafından oluşturulan XML denetlemek için ikisi de listelenen öznitelikleri uygulayabilirsiniz [öznitelikleri, Denetim XML serileştirme](../../../docs/standard/serialization/attributes-that-control-xml-serialization.md) ve [öznitelikleri, Denetim kodlanmış SOAP seri hale getirme](../../../docs/standard/serialization/attributes-that-control-encoded-soap-serialization.md) için sınıfları, dönüş değerleri, parametreler ve XML Web Hizmetleri (.asmx) oluşturmak için kullanılan bir dosya alanları. XML Web hizmeti oluşturma hakkında daha fazla bilgi için bkz: [yapı XML Web Hizmetleri kullanarak ASP.NET](https://msdn.microsoft.com/library/01dfc27c-c68e-4910-a0aa-5e4c2a766b0c).  
   
 ## <a name="literal-and-encoded-styles"></a>Değişmez değer ve kodlanmış stilleri  
- XML Web hizmeti tarafından oluşturulan XML ya da sabit değer iki yoldan birini biçimlendirilmiş ya da açıklandığı gibi kodlanmış [özelleştirme SOAP iletilerine](http://msdn.microsoft.com/library/1d777288-c0d9-4e6a-b638-f010da031952). Bu nedenle iki XML serileştirme denetim öznitelikleri kümesi vardır. Listelenen öznitelikleri [öznitelikleri, Denetim XML serileştirme](../../../docs/standard/serialization/attributes-that-control-xml-serialization.md) değişmez değer stili XML denetlemek için tasarlanmıştır. Listelenen öznitelikleri [öznitelikleri, Denetim kodlanmış SOAP seri hale getirme](../../../docs/standard/serialization/attributes-that-control-encoded-soap-serialization.md) kodlanmış stili denetim. Seçime bağlı olarak bu öznitelikler uygulayarak, her ikisi de stilleri döndürmek için bir uygulama uyarlayabilirsiniz. Ayrıca, bu öznitelikler (uygun şekilde) değerleri ve parametreleri döndürmek için uygulanabilir.  
+ XML Web hizmeti tarafından oluşturulan XML ya da sabit değer iki yoldan birini biçimlendirilmiş ya da açıklandığı gibi kodlanmış [özelleştirme SOAP iletilerine](https://msdn.microsoft.com/library/1d777288-c0d9-4e6a-b638-f010da031952). Bu nedenle iki XML serileştirme denetim öznitelikleri kümesi vardır. Listelenen öznitelikleri [öznitelikleri, Denetim XML serileştirme](../../../docs/standard/serialization/attributes-that-control-xml-serialization.md) değişmez değer stili XML denetlemek için tasarlanmıştır. Listelenen öznitelikleri [öznitelikleri, Denetim kodlanmış SOAP seri hale getirme](../../../docs/standard/serialization/attributes-that-control-encoded-soap-serialization.md) kodlanmış stili denetim. Seçime bağlı olarak bu öznitelikler uygulayarak, her ikisi de stilleri döndürmek için bir uygulama uyarlayabilirsiniz. Ayrıca, bu öznitelikler (uygun şekilde) değerleri ve parametreleri döndürmek için uygulanabilir.  
   
 ### <a name="example-of-using-both-styles"></a>Her iki stil kullanarak örneği  
  XML Web Hizmetleri oluştururken, iki özniteliklerin yöntemlerini kullanabilirsiniz. Aşağıdaki kod örneğinde adlı sınıfı `MyService` iki XML Web hizmeti yöntemlerini içeren `MyLiteralMethod` ve `MyEncodedMethod`. Her iki yöntem aynı işlevi gerçekleştirmek: örneği döndüren `Order` sınıfı. İçinde `Order` sınıfı, <xref:System.Xml.Serialization.XmlTypeAttribute> ve <xref:System.Xml.Serialization.SoapTypeAttribute> öznitelikler için her ikisini de uygulanır `OrderID` alan ve her iki öznitelik sahip kendi `ElementName` özelliği farklı bir değere ayarlanmış.  

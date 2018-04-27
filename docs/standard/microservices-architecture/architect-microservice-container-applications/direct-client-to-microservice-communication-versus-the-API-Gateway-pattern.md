@@ -1,7 +1,7 @@
 ---
-title: "API ağ geçidi düzeni karşı doğrudan istemci mikro hizmet iletişim"
-description: "Kapsayıcılı .NET uygulamaları için .NET mikro mimarisi | API ağ geçidi düzeni karşı doğrudan istemci mikro hizmet iletişim"
-keywords: "Docker, mikro, ASP.NET, kapsayıcı, API ağ geçidi"
+title: API ağ geçidi düzeni karşı doğrudan istemci mikro hizmet iletişim
+description: Kapsayıcılı .NET uygulamaları için .NET mikro mimarisi | API ağ geçidi düzeni karşı doğrudan istemci mikro hizmet iletişim
+keywords: Docker, mikro, ASP.NET, kapsayıcı, API ağ geçidi
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 10/18/2017
@@ -11,11 +11,11 @@ ms.topic: article
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: 96a02958ef5750aec7a92ff0dd145edc15a5953a
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: fa3f4bb97cf942ee7698b1efa1dcd09b3f2ca571
+ms.sourcegitcommit: 2e8acae16ae802f2d6d04e3ce0a6dbf04e476513
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="direct-client-to-microservice-communication-versus-the-api-gateway-pattern"></a>API ağ geçidi düzeni karşı doğrudan istemci mikro hizmet iletişim
 
@@ -31,7 +31,7 @@ Bir doğrudan istemci mikro hizmet iletişim mimarisi kullanan olası bir yakla�
 
 Bu yaklaşım. Her mikro hizmet bazen her mikro hizmet için farklı bir TCP bağlantı noktası ile ortak bir uç nokta vardır. Belirli bir hizmet için bir URL örneği Azure aşağıdaki URL'de olabilir:
 
-<http://eshoponcontainers.westus.cloudapp.Azure.com:88 />
+<http://eshoponcontainers.westus.cloudapp.azure.com:88/>
 
 URL kümede kullanılan yük dengeleyiciye eşleyen bir küme, temel bir üretim ortamında hangi sırayla isteklerini mikro arasında dağıtır. Üretim ortamlarında gibi uygulama teslim denetleyici (ADC) olabilir [Azure uygulama ağ geçidi](https://docs.microsoft.com/azure/application-gateway/application-gateway-introduction) , mikro ve Internet arasında. Bu, yalnızca Yük Dengeleme gerçekleştirir, ancak SSL sonlandırma sunarak hizmetlerinizi korur saydam bir katmanı görür. Bu CPU-yoğun SSL sonlandırma ve Azure uygulama ağ geçidi için yönlendirme diğer görevlerini boşaltarak konaklarınızın yükünü artırır. Herhangi bir durumda, bir yük dengeleyici ve ADC bir mantıksal uygulama mimarisi açısından bakıldığında görünmez.
 
@@ -57,7 +57,7 @@ Birden çok mikro API için farklı istemci uygulamalarının ihtiyaçlarını i
 
 ## <a name="using-an-api-gateway"></a>Bir API ağ geçidi kullanma
 
-Tasarım ve büyük veya karmaşık mikro hizmet tabanlı uygulamaları birden çok istemci uygulamaları oluşturmak, dikkate alınması gereken iyi bir yaklaşım olabilir bir [API ağ geçidi](http://microservices.io/patterns/apigateway.html). Bu, tek giriş noktası belirli mikro grupları sağlayan bir hizmettir. Aşağıdakine benzer [cephesi düzeni](https://en.wikipedia.org/wiki/Facade_pattern) object‑oriented tasarımdan ancak bu durumda, dağıtılmış bir sistemde bir parçasıdır. API ağ geçidi düzeni bazen "arka uç ön uç için" olarak bilinen [(BFF)](http://samnewman.io/patterns/architectural/bff/) istemci uygulaması gereksinimlerini düşünmek sırasında oluşturmak için.
+Tasarım ve büyük veya karmaşık mikro hizmet tabanlı uygulamaları birden çok istemci uygulamaları oluşturmak, dikkate alınması gereken iyi bir yaklaşım olabilir bir [API ağ geçidi](https://microservices.io/patterns/apigateway.html). Bu, tek giriş noktası belirli mikro grupları sağlayan bir hizmettir. Aşağıdakine benzer [cephesi düzeni](https://en.wikipedia.org/wiki/Facade_pattern) object‑oriented tasarımdan ancak bu durumda, dağıtılmış bir sistemde bir parçasıdır. API ağ geçidi düzeni bazen "arka uç ön uç için" olarak bilinen [(BFF)](https://samnewman.io/patterns/architectural/bff/) istemci uygulaması gereksinimlerini düşünmek sırasında oluşturmak için.
 
 Şekil 4-13 özel bir API ağ geçidi mikro hizmet tabanlı bir mimariye nasıl sığabilecek gösterir.
 Bu diyagramda vurgulamak önemlidir, birden çok bakan tek özel API ağ geçidi hizmeti kullanarak ve farklı istemci uygulamaları. Olgu API ağ geçidi hizmetinizi büyüyen gelişen ve için önemli bir risk olabilir istemci uygulamalardan birçok farklı gereksinimlerine göre. Sonuç olarak, bu farklı ihtiyaçları bloated olacak ve etkili bir şekilde bir tek yapılı uygulama veya tek yapılı hizmet oldukça benzer olabilir. Çok API ağ geçidi birden çok hizmet ya da birden çok daha küçük API ağ geçidi, form faktörünün türü, her bir örneği için bölmeniz önerilir nedeni budur.
@@ -111,15 +111,15 @@ Bu kılavuz ve başvuru örnek uygulaması (eShopOnContainers), biz mimarisi dah
 ## <a name="additional-resources"></a>Ek kaynaklar
 
 -   **Charles Uludağ. Desen: API ağ geçidi / arka uç için ön uç**
-    [*http://microservices.io/patterns/apigateway.html*](http://microservices.io/patterns/apigateway.html)
+    [*https://microservices.io/patterns/apigateway.html*](https://microservices.io/patterns/apigateway.html)
 
--   **Azure API Management**
+-   **Azure API Yönetimi**
     [*https://azure.microsoft.com/services/api-management/*](https://azure.microsoft.com/services/api-management/)
 
 -   **UDI Dahan. Birleşim hizmet odaklı**\
-    [*http://udidahan.com/2014/07/30/Service-oriented-Composition-With-video/*](http://udidahan.com/2014/07/30/service-oriented-composition-with-video/)
+    [*http://udidahan.com/2014/07/30/service-oriented-composition-with-video/*](http://udidahan.com/2014/07/30/service-oriented-composition-with-video/)
 
--   **Clemens Vasters. Mesajlaşma ve mikro GOTO 2016 adresindeki** (video) [ *https://www.youtube.com/watch?v=rXi5CLjIQ9k*](https://www.youtube.com/watch?v=rXi5CLjIQ9k)
+-   **Clemens Vasters. Mesajlaşma ve mikro GOTO 2016 adresindeki** (video) [*https://www.youtube.com/watch?v=rXi5CLjIQ9k*](https://www.youtube.com/watch?v=rXi5CLjIQ9k)
 
 
 >[!div class="step-by-step"]

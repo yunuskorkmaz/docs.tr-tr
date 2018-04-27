@@ -8,15 +8,15 @@ ms.topic: article
 ms.prod: .net
 ms.technology: devlang-csharp
 ms.devlang: csharp
-ms.openlocfilehash: 57fa8f52320b30a1cb228b41e3f5e6655c235561
-ms.sourcegitcommit: 9a4fe1a1c37b26532654b4bbe22d702237950009
+ms.openlocfilehash: 98c58d083cb806a92e28c1c9d27effa1124fd153
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="ref-returns-and-ref-locals"></a>Ref döndürür ve ref Yereller
 
-C# 7 ile başlayan, C# başvurusu dönüş değerleri (başvuru dönüşleri) destekler. Bir başvuru dönüş değeri bir değer yerine bir değişken başvurusu çağırana geri dönmek tek bir yöntem sağlar. Çağıran, daha sonra döndürülen değişkeni değere veya başvuruya göre döndürülmedi sanki işlemek seçebilirsiniz. Çağıran bir ref yerel olarak adlandırılan döndürülen değer, başvuru kendisi yeni bir değişken oluşturabilirsiniz.
+C# 7. 0'dan başlayarak, C# başvurusu dönüş değerleri (başvuru dönüşleri) destekler. Bir başvuru dönüş değeri bir değer yerine bir değişken başvurusu çağırana geri dönmek tek bir yöntem sağlar. Çağıran, daha sonra döndürülen değişkeni değere veya başvuruya göre döndürülmedi sanki işlemek seçebilirsiniz. Çağıran bir ref yerel olarak adlandırılan döndürülen değer, başvuru kendisi yeni bir değişken oluşturabilirsiniz.
 
 ## <a name="what-is-a-reference-return-value"></a>Bir başvuru dönüş değeri nedir?
 

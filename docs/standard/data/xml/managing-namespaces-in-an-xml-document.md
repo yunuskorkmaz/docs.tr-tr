@@ -1,26 +1,26 @@
 ---
-title: "Bir XML belgesi ad alanlarını yönetme"
-ms.custom: 
+title: Bir XML belgesi ad alanlarını yönetme
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology: dotnet-standard
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 682643fc-b848-4e42-8c0d-50deeaeb5f2a
-caps.latest.revision: "5"
+caps.latest.revision: 5
 author: mairaw
 ms.author: mairaw
 manager: wpickett
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: 7901f4bf88215f84445c1d222e6582e0a063c25a
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: 211d4f2ee3f47e1defdc8a3bd4fc81618fa3fefd
+ms.sourcegitcommit: 2e8acae16ae802f2d6d04e3ce0a6dbf04e476513
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="managing-namespaces-in-an-xml-document"></a>Bir XML belgesi ad alanlarını yönetme
 XML ad alanları, özel ve önceden tanımlanmış URI ile bir XML belgesi öğe ve öznitelik adları ilişkilendirin. Bu ilişkileri oluşturmak için ad alanı URI ön eklerini tanımlayın ve XML verileri öğe ve öznitelik adları nitelemek için ön eklerin kullanın. Ad alanları öğe ve öznitelik ad çakışmaları önlemek ve öğeleri ve özniteliklerinin aynı ada sahip işlenmesini ve farklı bir şekilde doğrulandı etkinleştirin.  
@@ -70,24 +70,24 @@ XML ad alanları, özel ve önceden tanımlanmış URI ile bir XML belgesi öğe
 ## <a name="managing-namespaces"></a>Ad alanlarını yönetme  
  <xref:System.Xml.XmlNamespaceManager> Sınıfı ad alanı URI koleksiyonu depolar ve kendi önekleri ve yukarı, bakmanızı sağlayan ekleyin ve bu koleksiyondan ad alanlarını kaldırma. Bazı bağlamlarda bu sınıfı daha iyi XML işlem performansı için gereklidir. Örneğin, <xref:System.Xml.Xsl.XsltContext> sınıfını kullanan <xref:System.Xml.XmlNamespaceManager> XPath desteği.  
   
- Ad alanı manager ad alanında bulunan tüm doğrulaması gerçekleştirmez, ancak önekleri ve ad alanlarını zaten doğrulandı ve uygun varsayar [W3C ad alanları](http://www.w3.org/TR/REC-xml-names/) belirtimi.  
+ Ad alanı manager ad alanında bulunan tüm doğrulaması gerçekleştirmez, ancak önekleri ve ad alanlarını zaten doğrulandı ve uygun varsayar [W3C ad alanları](https://www.w3.org/TR/REC-xml-names/) belirtimi.  
   
 > [!NOTE]
->  [LINQ-XML](http://msdn.microsoft.com/library/f0fe21e9-ee43-4a55-b91a-0800e5782c13) kullanmayan <xref:System.Xml.XmlNamespaceManager> ad alanlarını yönetmek için. Bkz: [XML ad alanları ile çalışma](http://msdn.microsoft.com/library/e3003209-3234-45be-a832-47feb7927430) LINQ belgelerinde LINQ-XML kullanırken ad alanlarını yönetme hakkında bilgi.  
+>  [LINQ-XML](https://msdn.microsoft.com/library/f0fe21e9-ee43-4a55-b91a-0800e5782c13) kullanmayan <xref:System.Xml.XmlNamespaceManager> ad alanlarını yönetmek için. Bkz: [XML ad alanları ile çalışma](https://msdn.microsoft.com/library/e3003209-3234-45be-a832-47feb7927430) LINQ belgelerinde LINQ-XML kullanırken ad alanlarını yönetme hakkında bilgi.  
   
  Bazı ile gerçekleştirebileceğiniz yönetimi ve arama görevleri <xref:System.Xml.XmlNamespaceManager> sınıfı. Daha fazla bilgi ve örnekler için her bir yöntemi veya özelliği için başvuru sayfası için bağlantıları izleyin.  
   
 |Bitiş|Bir yönetim grubuna bağlanmak veya bağlı bir yönetim grubunun özelliklerini düzenlemek için Yönetim çalışma alanında|  
 |--------|---------|  
-|Bir ad alanı Ekle|<xref:System.Xml.XmlNamespaceManager.AddNamespace%2A>yöntemi|  
-|Bir ad alanı Kaldır|<xref:System.Xml.XmlNamespaceManager.RemoveNamespace%2A>yöntemi|  
-|Varsayılan ad alanı URI Bul|<xref:System.Xml.XmlNamespaceManager.DefaultNamespace%2A>özelliği|  
-|URI bulmak için bir ad alanı öneki|<xref:System.Xml.XmlNamespaceManager.LookupNamespace%2A>yöntemi|  
-|Bir ad alanı için URI öneki Bul|<xref:System.Xml.XmlNamespaceManager.LookupPrefix%2A>yöntemi|  
-|Geçerli düğümdeki ad alanlarının listesini alın|<xref:System.Xml.XmlNamespaceManager.GetNamespacesInScope%2A>yöntemi|  
-|Bir ad alanı kapsam|<xref:System.Xml.XmlNamespaceManager.PushScope%2A>ve <xref:System.Xml.XmlNamespaceManager.PopScope%2A> yöntemleri|  
-|Bir önek geçerli kapsamda tanımlı olup olmadığını denetleyin|<xref:System.Xml.XmlNamespaceManager.HasNamespace%2A>yöntemi|  
-|Ön ekleri ve URI'ler aramak için kullanılan ad tablosunu Al|<xref:System.Xml.XmlNamespaceManager.NameTable%2A>özelliği|  
+|Bir ad alanı Ekle|<xref:System.Xml.XmlNamespaceManager.AddNamespace%2A> Yöntemi|  
+|Bir ad alanı Kaldır|<xref:System.Xml.XmlNamespaceManager.RemoveNamespace%2A> Yöntemi|  
+|Varsayılan ad alanı URI Bul|<xref:System.Xml.XmlNamespaceManager.DefaultNamespace%2A> Özelliği|  
+|URI bulmak için bir ad alanı öneki|<xref:System.Xml.XmlNamespaceManager.LookupNamespace%2A> Yöntemi|  
+|Bir ad alanı için URI öneki Bul|<xref:System.Xml.XmlNamespaceManager.LookupPrefix%2A> Yöntemi|  
+|Geçerli düğümdeki ad alanlarının listesini alın|<xref:System.Xml.XmlNamespaceManager.GetNamespacesInScope%2A> Yöntemi|  
+|Bir ad alanı kapsam|<xref:System.Xml.XmlNamespaceManager.PushScope%2A> ve <xref:System.Xml.XmlNamespaceManager.PopScope%2A> yöntemleri|  
+|Bir önek geçerli kapsamda tanımlı olup olmadığını denetleyin|<xref:System.Xml.XmlNamespaceManager.HasNamespace%2A> Yöntemi|  
+|Ön ekleri ve URI'ler aramak için kullanılan ad tablosunu Al|<xref:System.Xml.XmlNamespaceManager.NameTable%2A> Özelliği|  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
  <xref:System.Xml.XmlNamespaceManager>  

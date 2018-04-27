@@ -1,12 +1,12 @@
 ---
-title: "Olay Tabanlı Zaman Uyumsuz Desenle Çok İş Parçacıklı Programlama"
-ms.custom: 
+title: Olay Tabanlı Zaman Uyumsuz Desenle Çok İş Parçacıklı Programlama
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology: dotnet-standard
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - Event-based Asynchronous Pattern
@@ -19,18 +19,18 @@ helpviewer_keywords:
 - AsyncOperation class
 - AsyncCompletedEventArgs class
 ms.assetid: 958d6617-5e70-4b36-b5db-63c16dc35e43
-caps.latest.revision: "19"
+caps.latest.revision: 19
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: 557d639cc8a4e7ade2cfbd1f5d7264bca226d273
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: 6d93e449877456e415ebd4d3490a7df99280e7e5
+ms.sourcegitcommit: 2e8acae16ae802f2d6d04e3ce0a6dbf04e476513
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="multithreaded-programming-with-the-event-based-asynchronous-pattern"></a>Olay Tabanlı Zaman Uyumsuz Desenle Çok İş Parçacıklı Programlama
 Bir istemci kodu için zaman uyumsuz özellikler kullanıma sunmak için çeşitli yöntemler vardır. Olay tabanlı zaman uyumsuz desen zaman uyumsuz davranışı sunmak sınıflar için önerilen yol önerir.  
@@ -67,5 +67,5 @@ Bir istemci kodu için zaman uyumsuz özellikler kullanıma sunmak için çeşit
 ## <a name="see-also"></a>Ayrıca Bkz.  
  [Yönetilen İş Parçacığı Oluşturma En İyi Yöntemleri](../../../docs/standard/threading/managed-threading-best-practices.md)  
  [Olaylar](../../../docs/standard/events/index.md)  
- [Bileşenleri çoklu iş parçacığı kullanımı](http://msdn.microsoft.com/library/2fc31e68-fb71-4544-b654-0ce720478779)  
+ [Bileşenleri çoklu iş parçacığı kullanımı](https://msdn.microsoft.com/library/2fc31e68-fb71-4544-b654-0ce720478779)  
  [Olay Tabanlı Zaman Uyumsuz Desen (EAP)](../../../docs/standard/asynchronous-programming-patterns/event-based-asynchronous-pattern-eap.md)

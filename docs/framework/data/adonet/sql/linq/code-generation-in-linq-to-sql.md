@@ -1,24 +1,26 @@
 ---
-title: "LINQ-SQL kod oluşturma"
-ms.custom: 
+title: LINQ-SQL kod oluşturma
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-ado
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-ado
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: ddcbdaa1-e7fa-4d85-a379-313b49965c07
-caps.latest.revision: "4"
+caps.latest.revision: 4
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.workload: dotnet
-ms.openlocfilehash: 0d1c80817bb1126d8e9828171c2a2aeee52eb672
-ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
+ms.workload:
+- dotnet
+ms.openlocfilehash: ff543efecb65e61fecef0056650b35735bef83c0
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="code-generation-in-linq-to-sql"></a>LINQ-SQL kod oluşturma
 Kod kullanarak bir veritabanı temsil etmek için oluşturabileceğiniz [!INCLUDE[vs_ordesigner_long](../../../../../../includes/vs-ordesigner-long-md.md)] veya SQLMetal komut satırı aracı. Her iki durumda da, uçtan uca kod oluşturma üç aşamada gerçekleşir:  
@@ -29,13 +31,13 @@ Kod kullanarak bir veritabanı temsil etmek için oluşturabileceğiniz [!INCLUD
   
 3.  Doğrulama hataları görünüyorsa, dosya için kod Oluşturucu geçirilir.  
   
- Daha fazla bilgi için bkz: [SqlMetal.exe (kod üretme aracı)](../../../../../../docs/framework/tools/sqlmetal-exe-code-generation-tool.md). Kullanan geliştiriciler [!INCLUDE[vs_current_short](../../../../../../includes/vs-current-short-md.md)] de kullanabilirsiniz [!INCLUDE[vs_ordesigner_long](../../../../../../includes/vs-ordesigner-long-md.md)] kodu oluşturmak için. Bkz: [LINQ-SQL Visual Studio Araçları](/visualstudio/data-tools/linq-to-sql-tools-in-visual-studio2).  
+ Daha fazla bilgi için bkz: [SqlMetal.exe (kod üretme aracı)](../../../../../../docs/framework/tools/sqlmetal-exe-code-generation-tool.md). Geliştiriciler Visual Studio kullanarak da kullanabilirsiniz [!INCLUDE[vs_ordesigner_long](../../../../../../includes/vs-ordesigner-long-md.md)] kodu oluşturmak için. Bkz: [LINQ-SQL Visual Studio Araçları](/visualstudio/data-tools/linq-to-sql-tools-in-visual-studio2).  
   
 ## <a name="dbml-extractor"></a>DBML Ayıklayıcısı  
  DBML Ayıklayıcısı olan bir [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] bileşenidir veritabanı meta verisi giriş olarak alır ve çıktı olarak DBML dosyası oluşturur.  
   
 ## <a name="code-generator"></a>Kod Oluşturucu  
- Kod oluşturucunun olan bir [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] DBML çevirir bileşen dosyaları [!INCLUDE[vbprvb](../../../../../../includes/vbprvb-md.md)], C# veya XML eşlemesi dosyaları.  
+ Kod oluşturucunun olan bir [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] DBML çevirir bileşen dosyaları Visual Basic, C# veya XML eşlemesi dosyalar.  
   
 ## <a name="xml-schema-definition-file"></a>XML şema tanımı dosyası  
  DBML dosya geçerli bir XSD dosyası olarak aşağıdaki şema tanımı karşı olmalıdır.  
@@ -43,7 +45,7 @@ Kod kullanarak bir veritabanı temsil etmek için oluşturabileceğiniz [!INCLUD
  Bu şema tanımı dosyasındaki bir dış eşleme dosyasını doğrulamak için kullanılan şema tanımı dosyası ayırt etmek. Daha fazla bilgi için bkz: [dış eşleme](../../../../../../docs/framework/data/adonet/sql/linq/external-mapping.md)).  
   
 > [!NOTE]
->  [!INCLUDE[vs_current_short](../../../../../../includes/vs-current-short-md.md)]Kullanıcılar ayrıca bu XSD dosyası XML şemaları iletişim kutusuna "DbmlSchema.xsd" bulur. XSD dosyası doğru olarak DBML dosyasını doğrulamak için kullanmak için bkz: [nasıl yapılır: DBML doğrulamak ve dış eşleme dosyaları](../../../../../../docs/framework/data/adonet/sql/linq/how-to-validate-dbml-and-external-mapping-files.md).  
+>  Visual Studio kullanıcılar da bu XSD dosyası XML şemaları iletişim kutusuna "DbmlSchema.xsd" bulur. XSD dosyası doğru olarak DBML dosyasını doğrulamak için kullanmak için bkz: [nasıl yapılır: DBML doğrulamak ve dış eşleme dosyaları](../../../../../../docs/framework/data/adonet/sql/linq/how-to-validate-dbml-and-external-mapping-files.md).  
   
 ```  
 ?<?xml version="1.0" encoding="utf-16"?>  

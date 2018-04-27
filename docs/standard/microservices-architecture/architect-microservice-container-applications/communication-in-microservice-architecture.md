@@ -1,7 +1,7 @@
 ---
-title: "Mikro hizmet mimarisi iletişimi"
-description: "Kapsayıcılı .NET uygulamaları için .NET mikro mimarisi | Mikro hizmet mimarisi mimarileri iletişimi"
-keywords: Docker, Microservices, ASP.NET, Container
+title: Mikro hizmet mimarisi iletişimi
+description: Kapsayıcılı .NET uygulamaları için .NET mikro mimarisi | Mikro hizmet mimarisi mimarileri iletişimi
+keywords: Docker, mikro, ASP.NET, kapsayıcı
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 10/18/2017
@@ -11,11 +11,11 @@ ms.topic: article
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: 3c80ce8e3c4ccdc7e53634f54dd998581758ab07
-ms.sourcegitcommit: cec0525b2121c36198379525e69aa5388266db5b
+ms.openlocfilehash: 6bf4de57d3431577e6c770a5a83b911f41e5a4fe
+ms.sourcegitcommit: 2e8acae16ae802f2d6d04e3ce0a6dbf04e476513
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="communication-in-a-microservice-architecture"></a>Mikro hizmet mimarisi iletişimi
 
@@ -25,7 +25,7 @@ Bir çözüm değildir, ancak birkaç yoktur. Bir çözüm, mümkün olduğunca 
 
 Mikro tabanlı bir uygulama birden çok işlemler veya hizmetler, birden fazla sunucu veya ana bilgisayarlar arasında genellikle bile çalışan dağıtılmış bir sistemdir. Her hizmet örneği genellikle bir işlemdir. Bu nedenle, hizmetler, örneğin HTTP, AMQP veya TCP gibi ikili olarak iletişim kuralı her hizmetin yapısına bağlı olarak bir işlemler arası iletişim protokolü kullanarak etkileşim kurmalıdır.
 
-Mikro hizmet topluluk, felsefesi yükseltir "[akıllı uç noktaları ve dumb kanallar](http://simplicable.com/new/smart-endpoints-and-dumb-pipes)." Bu sloganı ayrılmış mikro arasındaki olası ve tek bir mikro hizmet içinde mümkün olduğunca bağlı olan bir tasarım önerir. Daha önce açıklandığı gibi her mikro hizmet kendi veri ve kendi etki alanı mantığı sahip olur. Ancak bir uçtan uca uygulama oluşturma mikro genellikle yalnızca WS - gibi karmaşık protokoller yerine REST iletişimleri kullanarak choreographed\* ve esnek olay denetimli iletişimleri yerine Merkezi İş-işlem-orchestrators.
+Mikro hizmet topluluk, felsefesi yükseltir "[akıllı uç noktaları ve dumb kanallar](https://simplicable.com/new/smart-endpoints-and-dumb-pipes)." Bu sloganı ayrılmış mikro arasındaki olası ve tek bir mikro hizmet içinde mümkün olduğunca bağlı olan bir tasarım önerir. Daha önce açıklandığı gibi her mikro hizmet kendi veri ve kendi etki alanı mantığı sahip olur. Ancak bir uçtan uca uygulama oluşturma mikro genellikle yalnızca WS - gibi karmaşık protokoller yerine REST iletişimleri kullanarak choreographed\* ve esnek olay denetimli iletişimleri yerine Merkezi İş-işlem-orchestrators.
 
 İki sık kullanılan HTTP istek/yanıt (tüm çoğunu sorgulanırken) API'leri kaynakla kurallarıdır ve basit zaman uyumsuz iletişim kurarken Mesajlaşma arasında birden çok mikro güncelleştirir. Bunlar aşağıdaki bölümlerde daha ayrıntılı olarak açıklanmıştır.
 
@@ -43,7 +43,7 @@ Tek bir alıcı veya birden çok alıcı iletişimi varsa, ikinci eksen tanımla
 
 -   Tek alıcı. Her istek tam olarak bir alıcı veya hizmeti tarafından işlenmesi gerekir. Bu iletişim örneğidir [komutu düzeni](https://en.wikipedia.org/wiki/Command_pattern).
 
--   Birden çok alıcı. Her isteği, birden çok alıcı sıfıra tarafından işlenebilir. Bu tür iletişim zaman uyumsuz olması gerekir. Örnek [Yayınla/Abone ol](https://en.wikipedia.org/wiki/Publish%E2%80%93subscribe_pattern) gibi düzenleri kullanılan mekanizma [olay denetimli mimarisi](http://microservices.io/patterns/data/event-driven-architecture.html). Bu bir olay-bus arabirimi veya ileti Aracısı olaylar ile birden çok mikro arasında veri güncelleştirmeleri yayılıyor bağlıdır; genellikle bir hizmet veri yolu veya benzer yapıya gibi aracılığıyla uygulanır [Azure Service Bus](https://azure.microsoft.com/services/service-bus/) kullanarak [konuları ve abonelikleri](https://docs.microsoft.com/azure/service-bus-messaging/service-bus-dotnet-how-to-use-topics-subscriptions).
+-   Birden çok alıcı. Her isteği, birden çok alıcı sıfıra tarafından işlenebilir. Bu tür iletişim zaman uyumsuz olması gerekir. Örnek [Yayınla/Abone ol](https://en.wikipedia.org/wiki/Publish%E2%80%93subscribe_pattern) gibi düzenleri kullanılan mekanizma [olay denetimli mimarisi](https://microservices.io/patterns/data/event-driven-architecture.html). Bu bir olay-bus arabirimi veya ileti Aracısı olaylar ile birden çok mikro arasında veri güncelleştirmeleri yayılıyor bağlıdır; genellikle bir hizmet veri yolu veya benzer yapıya gibi aracılığıyla uygulanır [Azure Service Bus](https://azure.microsoft.com/services/service-bus/) kullanarak [konuları ve abonelikleri](https://docs.microsoft.com/azure/service-bus-messaging/service-bus-dotnet-how-to-use-topics-subscriptions).
 
 Mikro hizmet tabanlı bir uygulama, genellikle bu iletişim stilleri bileşimini kullanır. En yaygın tür tek alıcı HTTP/HTTPS gibi zaman uyumlu bir protokolle normal bir Web API HTTP hizmeti başlatılırken iletişimidir. Mikro de genellikle mikro arasında zaman uyumsuz iletişim için Mesajlaşma protokolleri kullanır.
 
@@ -91,15 +91,15 @@ Bir istemci istek/yanıt iletişimi kullanırken, yanıt kısa bir süre içinde
 
 İstek/yanıt iletişimi için popüler bir mimari stili [REST](https://en.wikipedia.org/wiki/Representational_state_transfer). Bu yaklaşım için açık ve sıkı şekilde bağlı dayalı [HTTP](https://en.wikipedia.org/wiki/Hypertext_Transfer_Protocol) protokolü, HTTP fiilleri gibi GET, POST, kucaklamakta ve yerleştirin. REST en yaygın kullanılan mimari iletişim hizmetleri oluştururken bir yaklaşımdır. ASP.NET Core Web API Hizmetleri geliştirirken REST Hizmetleri uygulayabilirsiniz.
 
-HTTP REST Hizmetleri arabirim tanımı diliniz kullanılırken ek değer yoktur. Örneğin, kullanırsanız [Swagger meta verileri](http://swagger.io/) hizmeti API'si açıklamak için doğrudan bulabilir ve hizmetlerinizi tüketen istemci saplamalar oluşturma araçları kullanabilirsiniz.
+HTTP REST Hizmetleri arabirim tanımı diliniz kullanılırken ek değer yoktur. Örneğin, kullanırsanız [Swagger meta verileri](https://swagger.io/) hizmeti API'si açıklamak için doğrudan bulabilir ve hizmetlerinizi tüketen istemci saplamalar oluşturma araçları kullanabilirsiniz.
 
 ### <a name="additional-resources"></a>Ek kaynaklar
 
 -   **Martin Fowler. Uludağ olgunluk modeli.** REST modelin açıklaması.
-    [*http://martinfowler.com/articles/richardsonMaturityModel.html*](http://martinfowler.com/articles/richardsonMaturityModel.html)
+    [*https://martinfowler.com/articles/richardsonMaturityModel.html*](https://martinfowler.com/articles/richardsonMaturityModel.html)
 
 -   **Swagger.** Resmi sitesi.
-    [*http://swagger.io/*](http://swagger.io/)
+    [*https://swagger.io/*](https://swagger.io/)
 
 ### <a name="push-and-real-time-communication-based-on-http"></a>Anında iletme ve HTTP tabanlı gerçek zamanlı iletişim
 

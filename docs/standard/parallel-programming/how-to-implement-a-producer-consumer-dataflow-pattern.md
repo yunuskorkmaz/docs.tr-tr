@@ -1,5 +1,5 @@
 ---
-title: "Nasıl yapılır: Üretici-Tüketici Veri Akışı Düzeni Uygulama"
+title: 'Nasıl yapılır: Üretici-Tüketici Veri Akışı Düzeni Uygulama'
 ms.date: 03/30/2017
 ms.prod: .net
 ms.technology: dotnet-standard
@@ -18,11 +18,11 @@ manager: wpickett
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: 3758ec77a722a66c6faa287d299e5e9c38858be5
-ms.sourcegitcommit: 6a9030eb5bd0f00e1d144f81958adb195cfb1f6f
+ms.openlocfilehash: e47355ceebaa00a8a688dc56bfd9e647da79ded2
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/10/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="how-to-implement-a-producer-consumer-dataflow-pattern"></a>Nasıl yapılır: Üretici-Tüketici Veri Akışı Düzeni Uygulama
 Bu belge TPL veri akışı kitaplığı üretici-tüketici düzeni uygulama için nasıl kullanılacağını açıklar. Bu modelde *üretici* ileti bloğu iletileri gönderir ve *tüketici* bu bloğundan iletileri okur.  
@@ -32,19 +32,19 @@ Bu belge TPL veri akışı kitaplığı üretici-tüketici düzeni uygulama içi
 ## <a name="example"></a>Örnek  
  Aşağıdaki örnek, veri akışı kullanan bir temel üretici-tüketici modeli gösterir. `Produce` Yöntemi Yazar rastgele bayt veri içeren diziler bir <xref:System.Threading.Tasks.Dataflow.ITargetBlock%601?displayProperty=nameWithType> nesne ve `Consume` yöntemi okur bayt, kaynağı bir <xref:System.Threading.Tasks.Dataflow.ISourceBlock%601?displayProperty=nameWithType> nesnesi. Üzerinde davranarak <xref:System.Threading.Tasks.Dataflow.ISourceBlock%601> ve <xref:System.Threading.Tasks.Dataflow.ITargetBlock%601> kendi türetilmiş türler yerine arabirimleri çeşitli veri akışı bloğu türlerini davranamaz yeniden kullanılabilir kod yazabilirsiniz. Bu örnekte <xref:System.Threading.Tasks.Dataflow.BufferBlock%601> sınıfı. Çünkü <xref:System.Threading.Tasks.Dataflow.BufferBlock%601> hem bir kaynak sınıfı görür engelleme ve hedef blok üretici ve tüketici paylaşılan bir nesnenin veri aktarmak için kullanabilirsiniz.  
   
- `Produce` Yöntem çağrılarını <xref:System.Threading.Tasks.Dataflow.DataflowBlock.Post%2A> zaman uyumlu olarak hedef blok veri yazmak için bir döngü yöntemi. Sonra `Produce` yöntemi Yazar tüm verilerin hedef bloğuna çağırır <xref:System.Threading.Tasks.Dataflow.IDataflowBlock.Complete%2A> blok hiçbir zaman ek veriler kullanılabilir olduğunu belirtmek için yöntem. `Consume` Yöntemi kullanan [zaman uyumsuz](~/docs/csharp/language-reference/keywords/async.md) ve [await](~/docs/csharp/language-reference/keywords/await.md) işleçleri ([zaman uyumsuz](~/docs/visual-basic/language-reference/modifiers/async.md) ve [bekleme](~/docs/visual-basic/language-reference/operators/await-operator.md) içinde [!INCLUDE[vbprvb](../../../includes/vbprvb-md.md)]) için Toplam alınan bayt sayısı zaman uyumsuz işlem <xref:System.Threading.Tasks.Dataflow.ISourceBlock%601> nesne. Zaman uyumsuz olarak davranacak şekilde `Consume` yöntem çağrılarını <xref:System.Threading.Tasks.Dataflow.DataflowBlock.OutputAvailableAsync%2A> kaynak blok verileri kullanılabilir ve kaynak blok hiçbir zaman ek veriler kullanılabilir olduğunda olduğunda bir bildirim almak için yöntem.  
+ `Produce` Yöntem çağrılarını <xref:System.Threading.Tasks.Dataflow.DataflowBlock.Post%2A> zaman uyumlu olarak hedef blok veri yazmak için bir döngü yöntemi. Sonra `Produce` yöntemi Yazar tüm verilerin hedef bloğuna çağırır <xref:System.Threading.Tasks.Dataflow.IDataflowBlock.Complete%2A> blok hiçbir zaman ek veriler kullanılabilir olduğunu belirtmek için yöntem. `Consume` Yöntemi kullanan [zaman uyumsuz](~/docs/csharp/language-reference/keywords/async.md) ve [await](~/docs/csharp/language-reference/keywords/await.md) işleçleri ([zaman uyumsuz](~/docs/visual-basic/language-reference/modifiers/async.md) ve [bekleme](~/docs/visual-basic/language-reference/operators/await-operator.md) Visual Basic'te) için zaman uyumsuz olarak Toplam alınan bayt sayısı işlem <xref:System.Threading.Tasks.Dataflow.ISourceBlock%601> nesne. Zaman uyumsuz olarak davranacak şekilde `Consume` yöntem çağrılarını <xref:System.Threading.Tasks.Dataflow.DataflowBlock.OutputAvailableAsync%2A> kaynak blok verileri kullanılabilir ve kaynak blok hiçbir zaman ek veriler kullanılabilir olduğunda olduğunda bir bildirim almak için yöntem.  
   
  [!code-csharp[TPLDataflow_ProducerConsumer#1](../../../samples/snippets/csharp/VS_Snippets_Misc/tpldataflow_producerconsumer/cs/dataflowproducerconsumer.cs#1)]
  [!code-vb[TPLDataflow_ProducerConsumer#1](../../../samples/snippets/visualbasic/VS_Snippets_Misc/tpldataflow_producerconsumer/vb/dataflowproducerconsumer.vb#1)]  
   
 ## <a name="compiling-the-code"></a>Kod Derleniyor  
- Örnek kodu kopyalayın ve bir Visual Studio projesi yapıştırın veya adlı bir dosyaya yapıştırın `DataflowProducerConsumer.cs` (`DataflowProducerConsumer.vb` için [!INCLUDE[vbprvb](../../../includes/vbprvb-md.md)]), ve ardından Visual Studio komut istemi penceresinde aşağıdaki komutu çalıştırın.  
+ Örnek kodu kopyalayın ve bir Visual Studio projesi yapıştırın veya adlı bir dosyaya yapıştırın `DataflowProducerConsumer.cs` (`DataflowProducerConsumer.vb` Visual Basic), ve ardından Visual Studio komut istemi penceresinde aşağıdaki komutu çalıştırın.  
   
- [!INCLUDE[csprcs](../../../includes/csprcs-md.md)]  
+ Visual C#  
   
  **csc.exe /r:System.Threading.Tasks.Dataflow.dll DataflowProducerConsumer.cs**  
   
- [!INCLUDE[vbprvb](../../../includes/vbprvb-md.md)]  
+ Visual Basic  
   
  **Vbc.exe /r:System.Threading.Tasks.Dataflow.dll DataflowProducerConsumer.vb**  
   

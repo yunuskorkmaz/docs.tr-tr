@@ -1,12 +1,12 @@
 ---
-title: "Koleksiyon Sınıfı Seçme"
-ms.custom: 
+title: Koleksiyon Sınıfı Seçme
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology: dotnet-standard
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - last-in-first-out collections
@@ -16,18 +16,18 @@ helpviewer_keywords:
 - Collections classes
 - grouping data in collections, selecting collection class
 ms.assetid: ba049f9a-ce87-4cc4-b319-3f75c8ddac8a
-caps.latest.revision: "20"
+caps.latest.revision: 20
 author: mairaw
 ms.author: mairaw
 manager: wpickett
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: 05339b829262a6b9b3a0265e4fbd444c6d586ea3
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: cede57d398930684a68ad15f3e6426939bba2e08
+ms.sourcegitcommit: 2e8acae16ae802f2d6d04e3ce0a6dbf04e476513
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="selecting-a-collection-class"></a>Koleksiyon Sınıfı Seçme
 Koleksiyon sınıfı dikkatli seçtiğinizden emin olun. Yanlış türde kullanarak koleksiyon kullanımınız kısıtlayabilirsiniz. Genel olarak, türlerinde kullanmaktan kaçının <xref:System.Collections> ad alanı .NET Framework sürüm 1.1 özellikle hedeflediğiniz sürece. Koleksiyonları genel ve eşzamanlı sürümleri kendi büyük tür güvenliği ve diğer geliştirmeler nedeniyle tercih edilen olacak.  
@@ -72,20 +72,20 @@ Koleksiyon sınıfı dikkatli seçtiğinizden emin olun. Yanlış türde kullana
   
     -   <xref:System.Collections.SortedList> Sınıfı ve <xref:System.Collections.Generic.SortedDictionary%602> ve <xref:System.Collections.Generic.SortedList%602> Genel sınıflar anahtarı ile öğeleri sıralama uygulamaları üzerinde temel <xref:System.Collections.IComparer> arabirimi ve <xref:System.Collections.Generic.IComparer%601> genel arabirim.  
   
-    -   <xref:System.Collections.ArrayList>sağlayan bir <xref:System.Collections.ArrayList.Sort%2A> yönteminin alan bir <xref:System.Collections.IComparer> bir parametre olarak uygulama. Genel kendisine karşılık gelen <xref:System.Collections.Generic.List%601> genel bir sınıf sağlayan bir <xref:System.Collections.Generic.List%601.Sort%2A> uygulaması gereken yöntemi <xref:System.Collections.Generic.IComparer%601> bir parametre olarak genel arabirim.  
+    -   <xref:System.Collections.ArrayList> sağlayan bir <xref:System.Collections.ArrayList.Sort%2A> yönteminin alan bir <xref:System.Collections.IComparer> bir parametre olarak uygulama. Genel kendisine karşılık gelen <xref:System.Collections.Generic.List%601> genel bir sınıf sağlayan bir <xref:System.Collections.Generic.List%601.Sort%2A> uygulaması gereken yöntemi <xref:System.Collections.Generic.IComparer%601> bir parametre olarak genel arabirim.  
   
 -   Hızlı arama ve bilgi alınması gerekiyor mu?  
   
-    -   <xref:System.Collections.Specialized.ListDictionary>hızlıdır <xref:System.Collections.Hashtable> küçük koleksiyonları (10 öğe veya daha az). <xref:System.Collections.Generic.Dictionary%602> Genel SAX daha hızlı arama <xref:System.Collections.Generic.SortedDictionary%602> genel bir sınıf. Çok iş parçacıklı uygulamasıdır <xref:System.Collections.Concurrent.ConcurrentDictionary%602>. <xref:System.Collections.Concurrent.ConcurrentBag%601>sırasız veriler için hızlı çok iş parçacıklı ekleme sağlar. İki çok iş parçacıklı türleri hakkında daha fazla bilgi için bkz: [bir iş parçacığı koleksiyonunun ne zaman kullanılacağı](../../../docs/standard/collections/thread-safe/when-to-use-a-thread-safe-collection.md).  
+    -   <xref:System.Collections.Specialized.ListDictionary> hızlıdır <xref:System.Collections.Hashtable> küçük koleksiyonları (10 öğe veya daha az). <xref:System.Collections.Generic.Dictionary%602> Genel SAX daha hızlı arama <xref:System.Collections.Generic.SortedDictionary%602> genel bir sınıf. Çok iş parçacıklı uygulamasıdır <xref:System.Collections.Concurrent.ConcurrentDictionary%602>. <xref:System.Collections.Concurrent.ConcurrentBag%601> sırasız veriler için hızlı çok iş parçacıklı ekleme sağlar. İki çok iş parçacıklı türleri hakkında daha fazla bilgi için bkz: [bir iş parçacığı koleksiyonunun ne zaman kullanılacağı](../../../docs/standard/collections/thread-safe/when-to-use-a-thread-safe-collection.md).  
   
 -   Yalnızca dizelere kabul koleksiyonları gerekiyor mu?  
   
-    -   <xref:System.Collections.Specialized.StringCollection>(temel <xref:System.Collections.IList>) ve <xref:System.Collections.Specialized.StringDictionary> (temel <xref:System.Collections.IDictionary>) bulunan <xref:System.Collections.Specialized> ad alanı.  
+    -   <xref:System.Collections.Specialized.StringCollection> (temel <xref:System.Collections.IList>) ve <xref:System.Collections.Specialized.StringDictionary> (temel <xref:System.Collections.IDictionary>) bulunan <xref:System.Collections.Specialized> ad alanı.  
   
     -   Ayrıca, herhangi bir genel koleksiyon sınıfı kullanabilirsiniz <xref:System.Collections.Generic> ad alanı türü olarak belirterek dize koleksiyonlarını belirlenmiş <xref:System.String> kendi genel tür bağımsız değişkenleri için sınıf.  
   
 ## <a name="linq-to-objects-and-plinq"></a>Nesneleri ve PLINQ LINQ  
- Nesnelere LINQ etkinleştirir LINQ sorgularını nesne türü uygulayan sürece bellek içi nesnelere erişmek için kullanılacak geliştiriciler <xref:System.Collections.IEnumerable> veya <xref:System.Collections.Generic.IEnumerable%601>. LINQ sorgularını verilerine erişmek için genel bir desen sağlamak için genellikle daha kısa ve standart okunabilir `foreach` döngüye girer ve filtreleme, sıralama ve yetenekleri gruplandırma sağlar. Daha fazla bilgi için bkz: [nesnelere LINQ](http://msdn.microsoft.com/library/73cafe73-37cf-46e7-bfa7-97c7eea7ced9).  
+ Nesnelere LINQ etkinleştirir LINQ sorgularını nesne türü uygulayan sürece bellek içi nesnelere erişmek için kullanılacak geliştiriciler <xref:System.Collections.IEnumerable> veya <xref:System.Collections.Generic.IEnumerable%601>. LINQ sorgularını verilerine erişmek için genel bir desen sağlamak için genellikle daha kısa ve standart okunabilir `foreach` döngüye girer ve filtreleme, sıralama ve yetenekleri gruplandırma sağlar. Daha fazla bilgi için bkz: [nesnelere LINQ](https://msdn.microsoft.com/library/73cafe73-37cf-46e7-bfa7-97c7eea7ced9).  
   
  PLINQ çok çekirdekli bilgisayardaki daha verimli şekilde kullanılmasına aracılığıyla Çoğu senaryoda daha hızlı sorgu yürütme sunabileceğiniz nesnelere LINQ paralel bir uygulamasını sağlar. Daha fazla bilgi için bkz: [paralel LINQ (PLINQ)](../../../docs/standard/parallel-programming/parallel-linq-plinq.md).  
   

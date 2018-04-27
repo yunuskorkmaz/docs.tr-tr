@@ -1,5 +1,5 @@
 ---
-title: "short (C# Başvurusu)"
+title: short (C# Başvurusu)
 ms.date: 03/14/2017
 ms.prod: .net
 ms.technology:
@@ -11,18 +11,18 @@ f1_keywords:
 helpviewer_keywords:
 - short keyword [C#]
 ms.assetid: 04c10688-e51a-4a87-bfec-83f7fb42ff11
-caps.latest.revision: 
+caps.latest.revision: 17
 author: BillWagner
 ms.author: wiwagn
-ms.openlocfilehash: 8ca3c5444c4fa7a49b7169be3e2a5b15d1a72207
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 6f73189891ecb52b81cfc1861a19194113ab2c32
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="short-c-reference"></a>short (C# Başvurusu)
 
-`short`değerleri aşağıdaki tabloda gösterilen aralığı ve boyutu göre depolayan bir tam sayı veri türünü gösterir.  
+`short` değerleri aşağıdaki tabloda gösterilen aralığı ve boyutu göre depolayan bir tam sayı veri türünü gösterir.  
   
 |Tür|Aralık|Boyut|.NET Framework türü|  
 |----------|-----------|----------|-------------------------|  
@@ -30,7 +30,7 @@ ms.lasthandoff: 11/21/2017
   
 ## <a name="literals"></a>Sabit değerler  
 
-Bildirme ve başlatma bir `short` değişken ondalık değişmez değer, onaltılık bir hazır değer atama veya (C# 7 için değişmez değer bir ikili başlayarak).  Değişmez değer tamsayı aralığı dışında ise `short` (diğer bir deyişle, bu ise değerinden <xref:System.Int16.MinValue?displayProperty=nameWithType> veya daha büyük <xref:System.Int16.MaxValue?displayProperty=nameWithType>), bir derleme hatası oluşur. 
+Bildirme ve başlatma bir `short` değişken ondalık değişmez değer, onaltılık bir hazır değer atama veya (C# ile 7.0 için değişmez değer bir ikili başlayarak).  Değişmez değer tamsayı aralığı dışında ise `short` (diğer bir deyişle, bu ise değerinden <xref:System.Int16.MinValue?displayProperty=nameWithType> veya daha büyük <xref:System.Int16.MaxValue?displayProperty=nameWithType>), bir derleme hatası oluşur. 
 
 Aşağıdaki örnekte, ondalık sayı olarak, onaltılık temsil 1,034 tamsayılar eşit ve ikili değişmez değerleri gelen örtük olarak dönüştürülür [int](../../../csharp/language-reference/keywords/int.md) için `short` değerleri.  
   
@@ -39,7 +39,7 @@ Aşağıdaki örnekte, ondalık sayı olarak, onaltılık temsil 1,034 tamsayıl
 > [!NOTE] 
 > Önek kullanması `0x` veya `0X` onaltılık değişmez değeri ve öneki belirtmek için `0b` veya `0B` ikili bir hazır değer belirtmek için. Ondalık değişmez değerler, önek vardır.
 
-C# 7 ile okunabilirliği artırmak birkaç özellik eklenmiştir başlatılıyor. 
+C# 7.0 ile okunabilirliği artırmak birkaç özellik eklenmiştir başlatılıyor. 
  - C# 7.0 sağlar alt çizgi karakteri kullanımını `_`, basamak ayırıcı olarak.
  - C# 7.2 verir `_` önekten sonra bir ikili ya da onaltılık değişmez değeri basamak ayırıcısı olarak kullanılacak. Ondalık bir hazır değer önde gelen bir alt çizgi olan izin verilen değil.
 
@@ -109,9 +109,9 @@ short y = (short)3.0;   // OK: explicit conversion
 ## <a name="see-also"></a>Ayrıca Bkz.  
  <xref:System.Int16>  
  [C# başvurusu](../../../csharp/language-reference/index.md)  
- [C# programlama kılavuzu](../../../csharp/programming-guide/index.md)  
- [C# anahtar sözcükleri](../../../csharp/language-reference/keywords/index.md)  
- [Tam sayı türleri tablosu](../../../csharp/language-reference/keywords/integral-types-table.md)  
- [Yerleşik türler tablosu](../../../csharp/language-reference/keywords/built-in-types-table.md)  
- [Örtük sayısal dönüşümler tablosu](../../../csharp/language-reference/keywords/implicit-numeric-conversions-table.md)  
- [Açık sayısal dönüşümler tablosu](../../../csharp/language-reference/keywords/explicit-numeric-conversions-table.md)
+ [C# Programlama Kılavuzu](../../../csharp/programming-guide/index.md)  
+ [C# Anahtar Sözcükleri](../../../csharp/language-reference/keywords/index.md)  
+ [Tam Sayı Türleri Tablosu](../../../csharp/language-reference/keywords/integral-types-table.md)  
+ [Yerleşik Türler Tablosu](../../../csharp/language-reference/keywords/built-in-types-table.md)  
+ [Örtük Sayısal Dönüştürmeler Tablosu](../../../csharp/language-reference/keywords/implicit-numeric-conversions-table.md)  
+ [Açık Sayısal Dönüştürmeler Tablosu](../../../csharp/language-reference/keywords/explicit-numeric-conversions-table.md)

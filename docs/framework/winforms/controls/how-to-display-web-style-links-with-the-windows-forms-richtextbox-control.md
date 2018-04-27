@@ -1,12 +1,13 @@
 ---
-title: "Nasıl yapılır: Windows Forms RichTextBox Denetimi ile Web Stili Bağlantılar Görüntüleme"
-ms.custom: 
+title: 'Nasıl yapılır: Windows Forms RichTextBox Denetimi ile Web Stili Bağlantılar Görüntüleme'
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-winforms
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-winforms
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - csharp
@@ -17,23 +18,24 @@ helpviewer_keywords:
 - examples [Windows Forms], text boxes
 - RichTextBox control [Windows Forms], linking to Web pages
 ms.assetid: 95089a37-a202-4f7a-94ee-6ee312908851
-caps.latest.revision: "13"
+caps.latest.revision: 13
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 80f794be15eae33ca4e28dc0cfe04872f63230b6
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: b82a5251cb5e1f632d126105cfae5cf2b8f62fc0
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="how-to-display-web-style-links-with-the-windows-forms-richtextbox-control"></a>Nasıl yapılır: Windows Forms RichTextBox Denetimi ile Web Stili Bağlantılar Görüntüleme
 Windows Forms <xref:System.Windows.Forms.RichTextBox> denetimi, Web bağlantıları görüntüleyebilir, renkli ve altı çizili olarak. Bağlantıyı tıklattığında bağlantı metinde belirtilen Web sitesi gösteren bir tarayıcı penceresi açılır kod yazabilirsiniz.  
   
 ### <a name="to-link-to-a-web-page-with-the-richtextbox-control"></a>RichTextBox denetimi ile bir Web sayfasına bağlamak için  
   
-1.  Ayarlama <xref:System.Windows.Forms.RichTextBox.Text%2A> özelliği için geçerli bir URL (örneğin, "http://www.microsoft.com/") içeren bir dize.  
+1.  Ayarlama <xref:System.Windows.Forms.RichTextBox.Text%2A> özelliği için geçerli bir URL içeren bir dize (örneğin, "http://www.microsoft.com/").  
   
 2.  Emin olun <xref:System.Windows.Forms.RichTextBox.DetectUrls%2A> özelliği ayarlanmış `true` (varsayılan).  
   
@@ -91,7 +93,7 @@ Windows Forms <xref:System.Windows.Forms.RichTextBox> denetimi, Web bağlantıla
     p = gcnew System::Diagnostics::Process();  
     ```  
   
-     ([!INCLUDE[csprcs](../../../../includes/csprcs-md.md)], [!INCLUDE[vcprvc](../../../../includes/vcprvc-md.md)]) Formun oluşturucuda olay işleyicisi kaydetmek için aşağıdaki kodu yerleştirin.  
+     (Visual C# [!INCLUDE[vcprvc](../../../../includes/vcprvc-md.md)]) formun oluşturucuda olay işleyicisi kaydetmek için aşağıdaki kodu yerleştirin.  
   
     ```csharp  
     this.richTextBox1.LinkClicked += new   

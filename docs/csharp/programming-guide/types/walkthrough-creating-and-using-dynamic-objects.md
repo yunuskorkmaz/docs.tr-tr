@@ -1,5 +1,5 @@
 ---
-title: "İzlenecek yol: Dinamik Nesneler Oluşturma ve Kullanma (C# and Visual Basic)"
+title: 'İzlenecek yol: Dinamik Nesneler Oluşturma ve Kullanma (C# and Visual Basic)'
 ms.date: 07/20/2015
 ms.prod: .net
 ms.technology:
@@ -13,14 +13,14 @@ helpviewer_keywords:
 - dynamic objects
 - dynamic objects [C#]
 ms.assetid: 568f1645-1305-4906-8625-5d77af81e04f
-caps.latest.revision: 
+caps.latest.revision: 22
 author: BillWagner
 ms.author: wiwagn
-ms.openlocfilehash: eca6da96d3bf9c5c25216e442999be77a332b5c9
-ms.sourcegitcommit: 70dcc89737127e4d5f20500242409b687e51b07e
+ms.openlocfilehash: d6b740e78503d0937c9a0f38a573bb7dd778075d
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/11/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="walkthrough-creating-and-using-dynamic-objects-c-and-visual-basic"></a>İzlenecek yol: Dinamik Nesneler Oluşturma ve Kullanma (C# and Visual Basic)
 
@@ -28,7 +28,7 @@ Dinamik nesneler üyeleri özellikleri ve yöntemleri gibi çalışma zamanında
   
  Dinamik nesneler de IronPython ve IronRuby gibi dinamik dilleri kolay erişim sağlar. Çalışma zamanında yorumlanır dinamik bir komut dosyasına başvurmak için dinamik bir nesne kullanabilirsiniz.  
   
- Geç bağlama kullanarak bir dinamik Nesne başvurusu. C# ' ta geç bağlama nesnesi olarak türünü belirtin `dynamic`. İçinde [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)], geç bağlama nesnesi olarak türünü belirtin `Object`. Daha fazla bilgi için bkz: [dinamik](../../../csharp/language-reference/keywords/dynamic.md) ve [erken ve geç bağlama](../../../visual-basic/programming-guide/language-features/early-late-binding/index.md).  
+ Geç bağlama kullanarak bir dinamik Nesne başvurusu. C# ' ta geç bağlama nesnesi olarak türünü belirtin `dynamic`. Visual Basic'te geç bağlama nesnesi olarak türünü belirtin `Object`. Daha fazla bilgi için bkz: [dinamik](../../../csharp/language-reference/keywords/dynamic.md) ve [erken ve geç bağlama](../../../visual-basic/programming-guide/language-features/early-late-binding/index.md).  
   
  Sınıflarda kullanarak özel dinamik nesneler oluşturabilirsiniz <xref:System.Dynamic?displayProperty=nameWithType> ad alanı. Örneğin, oluşturabileceğiniz bir <xref:System.Dynamic.ExpandoObject> ve çalışma zamanında nesne üyeleri belirtin. Ayrıca devralır kendi türü oluşturabilirsiniz <xref:System.Dynamic.DynamicObject> sınıfı. Daha sonra üyelerini geçersiz <xref:System.Dynamic.DynamicObject> çalışma zamanı dinamik işlevselliği sağlamak için sınıf.  
   
@@ -127,7 +127,7 @@ Gereksinim duyduğunuz [IronPython](http://ironpython.net/) bu yönlendirmeyi ta
   
 #### <a name="to-create-a-sample-application-that-uses-the-custom-dynamic-object"></a>Özel dinamik nesnesi kullanan örnek bir uygulama oluşturmak için  
   
-1.  İçinde **Çözüm Gezgini**, kullanıyorsanız Module1.vb dosyasına çift tıklayarak [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] veya Visual C# kullanıyorsanız Program.cs dosyasının.  
+1.  İçinde **Çözüm Gezgini**, Visual C# kullanıyorsanız, Visual Basic veya Program.cs dosyasını kullanıyorsanız, Module1.vb dosyasına çift tıklayın.  
   
 2.  Aşağıdaki kod örneği oluşturmak için ana yordama ekleyin `ReadOnlyFile` TextFile1.txt dosyası için sınıf. Kod geç bağlama dinamik üyeler çağırın ve "Müşteri" dizesini içeren metin satırı almak için kullanır.  
   
@@ -147,11 +147,11 @@ Bu kılavuzda oluşturduğunuz sonraki proje IronPython dinamik dilinde yazılm�
   
 2.  İçinde **yeni proje** iletişim kutusunda **proje türleri** bölmesinde olduğundan emin olun **Windows** seçilir. Seçin **konsol uygulaması** içinde **şablonları** bölmesi. İçinde **adı** kutusuna `DynamicIronPythonSample`ve ardından **Tamam**. Yeni Proje oluşturulur.  
   
-3.  Kullanıyorsanız [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)], DynamicIronPythonSample projesine sağ tıklayın ve ardından **özellikleri**. Tıklatın **başvuruları** sekmesi. Tıklatın **Ekle** düğmesi. Visual C# içinde kullanıyorsanız **Çözüm Gezgini**, sağ **başvuruları** klasörünü ve ardından **Başvuru Ekle**.  
+3.  Visual Basic kullanıyorsanız, DynamicIronPythonSample projesine sağ tıklayın ve ardından **özellikleri**. Tıklatın **başvuruları** sekmesi. Tıklatın **Ekle** düğmesi. Visual C# içinde kullanıyorsanız **Çözüm Gezgini**, sağ **başvuruları** klasörünü ve ardından **Başvuru Ekle**.  
   
 4.  Üzerinde **Gözat** sekmesinde, IronPython kitaplıklarına yüklü olduğu klasöre göz atın. C:\Program Files\IronPython 2.6 .NET 4.0 için örneğin. Seçin **IronPython.dll**, **IronPython.Modules.dll**, **Microsoft.Scripting.dll**, ve **Microsoft.Dynamic.dll** kitaplıkları . **Tamam**'ı tıklatın.  
   
-5.  Kullanıyorsanız [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)], Module1.vb dosyasını düzenleyin. Visual C# kullanıyorsanız Program.cs dosyasını düzenleyin.  
+5.  Visual Basic kullanıyorsanız, Module1.vb dosyasını düzenleyin. Visual C# kullanıyorsanız Program.cs dosyasını düzenleyin.  
   
 6.  Dosyanın üst kısmında, içeri aktarmak için aşağıdaki kodu ekleyin `Microsoft.Scripting.Hosting` ve `IronPython.Hosting` IronPython kitaplıklarından ad alanları.  
   

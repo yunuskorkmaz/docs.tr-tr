@@ -1,6 +1,6 @@
 ---
-title: "Tanımlama grupları ve diğer türleri deconstructing"
-description: "Tanımlama grupları ve diğer türleri deconstruct öğrenin."
+title: Tanımlama grupları ve diğer türleri deconstructing
+description: Tanımlama grupları ve diğer türleri deconstruct öğrenin.
 keywords: .NET, .NET core, C#
 author: rpetrusha
 ms-author: ronpet
@@ -10,11 +10,11 @@ ms.prod: .net
 ms.technology: devlang-csharp
 ms.devlang: csharp
 ms.assetid: 0b0c4b0f-4a47-4f66-9b8e-f5c63b195960
-ms.openlocfilehash: e626eeb1f3de2716e1ffe4fcbec1c16558e5bf0e
-ms.sourcegitcommit: a3ba258f7a8cab5c6d19a3743dd95e904ecebc44
+ms.openlocfilehash: 5a119f935b1cc80fe5cf738f03057c68c7eb5ba5
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/27/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="deconstructing-tuples-and-other-types"></a>Tanımlama grupları ve diğer türleri deconstructing #
 
@@ -24,7 +24,7 @@ Bir tanımlama grubu hafif bir yöntem çağrısının birden çok değer alman�
 
 Bir nesneden birden çok alan ve özellik değerlerini alma eşit sıkıcı olabilir: bir alan veya özellik değeri bir üyesi tarafından üye temelinde bir değişkene atamış olmanız gerekir. 
 
-C# 7 ile başlayan, birden çok öğe tanımlama grubundan almak veya birden çok alan, özellik ve hesaplanan değerler tek bir nesneden almak *deconstruct* işlemi. Bir tanımlama grubu deconstruct bağımsız değişkenlere öğeleri atayın. Bir nesne deconstruct bağımsız değişkenleri için seçilen değerler atayın. 
+C# 7. 0'dan başlayarak, birden çok öğe tanımlama grubundan almak veya birden çok alan, özellik ve hesaplanan değerler tek bir nesneden almak *deconstruct* işlemi. Bir tanımlama grubu deconstruct bağımsız değişkenlere öğeleri atayın. Bir nesne deconstruct bağımsız değişkenleri için seçilen değerler atayın. 
 
 ## <a name="deconstructing-a-tuple"></a>Bir tanımlama grubu deconstructing
 
@@ -62,7 +62,7 @@ Bildirimler ve bir deconstruction sol taraftaki mevcut değişkenler için atama
 
 ## <a name="deconstructing-tuple-elements-with-discards"></a>Tuple öğeleriyle deconstructing atar
 
-Genellikle bir tanımlama grubu deconstructing, yalnızca bazı öğeler değerlerde ilgilendiğiniz. C# 7 ile başlayan, C# ' nin desteğini yararlanabilirsiniz *atar*, değerleri yoksaymak için seçtiğiniz salt yazılır değişkenleri olduğu. Bir atma bir alt çizgi karakteriyle belirlenmiş ("\_") bir atamayı. İstediğiniz kadar çok değerle atabilirsiniz; tüm tek atma tarafından temsil edilen `_`.
+Genellikle bir tanımlama grubu deconstructing, yalnızca bazı öğeler değerlerde ilgilendiğiniz. C# 7. 0'dan başlayarak, C# ' nin desteğini yararlanabilirsiniz *atar*, değerleri yoksaymak için seçtiğiniz salt yazılır değişkenleri olduğu. Bir atma bir alt çizgi karakteriyle belirlenmiş ("\_") bir atamayı. İstediğiniz kadar çok değerle atabilirsiniz; tüm tek atma tarafından temsil edilen `_`.
 
 Aşağıdaki örnek iptali içeren başlık kullanımını göstermektedir. `QueryCityDataForYears` Yöntemi bir şehir, kendi alanı, bir yılın, o yıl, ikinci bir yıl ve bu ikinci yıl Şehir 's popülasyon Şehir 's popülasyon adıyla 6-tanımlama grubu döndürür. Örnek popülasyondaki bu iki yıl arasında değişiklik gösterir. Verileri tanımlama grubu bulunan, biz Şehir alanıyla unconcerned ve şehir adı ve tasarım zamanında iki tarih biliyoruz. Sonuç olarak, biz yalnızca düzeninde depolanan iki popülasyon değerleri ilgileniyor ve onun kalan değerler iptali olarak işleyebilir.  
 
@@ -110,4 +110,4 @@ Aşağıdaki örnekte iki tanımlar `Deconstruct` için genişletme yöntemleri 
  
 ## <a name="see-also"></a>Ayrıca bkz.
 [Atar](discards.md)   
-[Diziler](tuples.md)  
+[Demetler](tuples.md)  

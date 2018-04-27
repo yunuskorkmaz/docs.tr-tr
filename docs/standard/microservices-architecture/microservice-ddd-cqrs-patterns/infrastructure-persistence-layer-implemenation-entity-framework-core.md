@@ -1,7 +1,7 @@
 ---
-title: "Entity Framework Çekirdek altyapı Kalıcılık katmanla uygulama"
-description: "Kapsayıcılı .NET uygulamaları için .NET mikro mimarisi | Entity Framework Çekirdek altyapı Kalıcılık katmanla uygulama"
-keywords: Docker, Microservices, ASP.NET, Container
+title: Entity Framework Çekirdek altyapı Kalıcılık katmanla uygulama
+description: Kapsayıcılı .NET uygulamaları için .NET mikro mimarisi | Entity Framework Çekirdek altyapı Kalıcılık katmanla uygulama
+keywords: Docker, mikro, ASP.NET, kapsayıcı
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 12/12/2017
@@ -11,11 +11,11 @@ ms.topic: article
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: 4acdbde6405af7eb78a8c605562fdb1795fedf4d
-ms.sourcegitcommit: 83dd5ec003e788ccb3e33f3412a7af39ae347646
+ms.openlocfilehash: 49bd528db50397ea896b7251ea60d18b90fea30c
+ms.sourcegitcommit: 2e8acae16ae802f2d6d04e3ce0a6dbf04e476513
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/15/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="implementing-the-infrastructure-persistence-layer-with-entity-framework-core"></a>Entity Framework Çekirdek altyapı Kalıcılık katmanla uygulama
 
@@ -342,7 +342,7 @@ Hi/Lo algoritması veritabanı yerine istemci tarafında güvenli kimlikleri olu
 
 -   GUID'ler kullanımı aksine bir insan okunabilir tanımlayıcı oluşturur.
 
-EF çekirdek destekleyen [HiLo](http://stackoverflow.com/questions/282099/whats-the-hi-lo-algorithm) ForSqlServerUseSequenceHiLo yöntemiyle önceki örnekte gösterildiği gibi.
+EF çekirdek destekleyen [HiLo](https://stackoverflow.com/questions/282099/whats-the-hi-lo-algorithm) ForSqlServerUseSequenceHiLo yöntemiyle önceki örnekte gösterildiği gibi.
 
 ### <a name="mapping-fields-instead-of-properties"></a>Özellikleri yerine alanlarını eşleme
 
@@ -467,7 +467,7 @@ Biz Iqueryable bir depodan dönmek için önerilen yoktur ancak bunları deposu 
     [*https://docs.microsoft.com/ef/core/modeling/backing-field*](https://docs.microsoft.com/ef/core/modeling/backing-field)
 
 -   **Steve Smith. Entity Framework Çekirdek kapsüllenmiş koleksiyonları**
-    [*http://ardalis.com/encapsulated-collections-in-entity-framework-core*](http://ardalis.com/encapsulated-collections-in-entity-framework-core)
+    [*https://ardalis.com/encapsulated-collections-in-entity-framework-core*](https://ardalis.com/encapsulated-collections-in-entity-framework-core)
 
 -   **Gölge Özellikleri**
     [*https://docs.microsoft.com/ef/core/modeling/shadow-properties*](https://docs.microsoft.com/ef/core/modeling/shadow-properties)

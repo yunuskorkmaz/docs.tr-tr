@@ -1,7 +1,7 @@
 ---
-title: "Zaman uyumsuz ileti tabanlı iletişim"
-description: "Kapsayıcılı .NET uygulamaları için .NET mikro mimarisi | Zaman uyumsuz ileti tabanlı iletişim"
-keywords: Docker, Microservices, ASP.NET, Container
+title: Zaman uyumsuz ileti tabanlı iletişim
+description: Kapsayıcılı .NET uygulamaları için .NET mikro mimarisi | Zaman uyumsuz ileti tabanlı iletişim
+keywords: Docker, mikro, ASP.NET, kapsayıcı
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 05/26/2017
@@ -11,11 +11,11 @@ ms.topic: article
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: 7469c41afa16bf96bc81a36c571e3e005c50d904
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.openlocfilehash: 7c216dba3b763c310fe17e6294ae5f2b091f71f9
+ms.sourcegitcommit: 2e8acae16ae802f2d6d04e3ce0a6dbf04e476513
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="asynchronous-message-based-communication"></a>Zaman uyumsuz ileti tabanlı iletişim
 
@@ -59,7 +59,7 @@ Bir sistem tümleştirme olaylar tarafından yönlendirilen nihai tutarlılık k
 
 Daha önce belirtildiği gibi [sorunları ve çözümleri için Dağıtılmış veri yönetimi](#challenges-and-solutions-for-distributed-data-management) bölümünde, birden çok mikro span iş görevlerini uygulamak için tümleştirme olaylarını kullanabilirsiniz. Bu nedenle bu hizmetleri arasında nihai tutarlılık sahip olur. Sonuçta tutarlı bir işlem dağıtılmış işlemlerin koleksiyonu yapılır. Her bir eylemde ilgili mikro hizmet bir etki alanı varlığı güncelleştirir ve aynı uçtan uca iş görevi içinde bir sonraki eylem başlatır başka bir tümleştirme olay yayımlar.
 
-Önemli bir aynı olaya abone olduğunuz birden çok mikro iletişim isteyebilirsiniz noktadır. Yayımla/abone ol kullanabilirsiniz, bunun için ileti üzerinde olay denetimli iletişimi, Şekil 4-19'gösterildiği gibi temel. Bu yayımlama/abonelik mekanizması mikro hizmet mimarisi için özel değildir. Benzer şekilde [ilişkisindeki bağlamları](http://martinfowler.com/bliki/BoundedContext.html) içinde DDD iletişim veya şekilde okunur bir veritabanına yazma veritabanından güncelleştirmeleri yayılması [komut ve sorgu sorumluluk ayrımı (CQRS)](http://martinfowler.com/bliki/CQRS.html)mimarisi düzeni. Dağıtılmış sisteminizi arasında birden çok veri kaynaklarına arasında nihai tutarlılık sağlamak için belirtilir.
+Önemli bir aynı olaya abone olduğunuz birden çok mikro iletişim isteyebilirsiniz noktadır. Yayımla/abone ol kullanabilirsiniz, bunun için ileti üzerinde olay denetimli iletişimi, Şekil 4-19'gösterildiği gibi temel. Bu yayımlama/abonelik mekanizması mikro hizmet mimarisi için özel değildir. Benzer şekilde [ilişkisindeki bağlamları](https://martinfowler.com/bliki/BoundedContext.html) içinde DDD iletişim veya şekilde okunur bir veritabanına yazma veritabanından güncelleştirmeleri yayılması [komut ve sorgu sorumluluk ayrımı (CQRS)](https://martinfowler.com/bliki/CQRS.html)mimarisi düzeni. Dağıtılmış sisteminizi arasında birden çok veri kaynaklarına arasında nihai tutarlılık sağlamak için belirtilir.
 
 ![](./media/image19.png)
 
@@ -81,7 +81,7 @@ Resiliently kendi ilgili tümleştirme olay şekilde göre olay veri yolu içine
 
 -   İşlem (DTC tabanlı) sırası MSMQ gibi kullanma. (Ancak, eski bir yaklaşım budur.)
 
--   Kullanarak [işlem oturum araştırma](http://www.scoop.it/t/sql-server-transaction-log-mining).
+-   Kullanarak [işlem oturum araştırma](https://www.scoop.it/t/sql-server-transaction-log-mining).
 
 -   Tam kullanarak [olay kaynak Hizmeti'nden](https://msdn.microsoft.com/library/dn589792.aspx) düzeni.
 
@@ -94,10 +94,10 @@ Zaman uyumsuz iletişim kullanırken dikkate alınması gereken ek ileti idempot
 -   **Olay tabanlı Mesajlaşma**
     [*http://soapatterns.org/design\_desen/olay\_güdümlü\_Mesajlaşma*](http://soapatterns.org/design_patterns/event_driven_messaging)
 
--   **Kanal yayımlama/abonelik**
+-   **Kanal Yayınla/Abone ol**
     [*http://www.enterpriseintegrationpatterns.com/patterns/messaging/PublishSubscribeChannel.html*](http://www.enterpriseintegrationpatterns.com/patterns/messaging/PublishSubscribeChannel.html)
 
--   **Udi Dahan. Açıklığa kavuşturuldu CQRS**
+-   **UDI Dahan. Açıklanan CQRS**
     [*http://udidahan.com/2009/12/09/clarified-cqrs/*](http://udidahan.com/2009/12/09/clarified-cqrs/)
 
 -   **Komut ve sorgu sorumluluk ayrımı (CQRS)**

@@ -1,5 +1,5 @@
 ---
-title: "int (C# Başvurusu)"
+title: int (C# Başvurusu)
 ms.date: 03/14/2017
 ms.prod: .net
 ms.technology:
@@ -11,18 +11,18 @@ f1_keywords:
 helpviewer_keywords:
 - int keyword [C#]
 ms.assetid: 212447b4-5d2a-41aa-88ab-84fe710bdb52
-caps.latest.revision: 
+caps.latest.revision: 19
 author: BillWagner
 ms.author: wiwagn
-ms.openlocfilehash: e7acb8bb482ebf8f5c2b508e7cfd45b5b64aae3b
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: f3e82dd195252a8c55e4ba7b18b657b341553047
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="int-c-reference"></a>int (C# Başvurusu)
 
-`int`Aşağıdaki tabloda gösterilen aralığı ve boyutu göre değerleri depolayan tamsayı türü gösterir.  
+`int` Aşağıdaki tabloda gösterilen aralığı ve boyutu göre değerleri depolayan tamsayı türü gösterir.  
   
 |Tür|Aralık|Boyut|.NET Framework türü|Varsayılan Değer|  
 |----------|-----------|----------|-------------------------|-------------------|  
@@ -30,7 +30,7 @@ ms.lasthandoff: 11/21/2017
   
 ## <a name="literals"></a>Sabit değerler  
  
-Bildirme ve başlatma bir `int` değişken ondalık değişmez değer, onaltılık bir hazır değer atama veya (C# 7 için değişmez değer bir ikili başlayarak).  Değişmez değer tamsayı aralığı dışında ise `int` (diğer bir deyişle, bu ise değerinden <xref:System.Int32.MinValue?displayProperty=nameWithType> veya daha büyük <xref:System.Int32.MaxValue?displayProperty=nameWithType>), bir derleme hatası oluşur. 
+Bildirme ve başlatma bir `int` değişken ondalık değişmez değer, onaltılık bir hazır değer atama veya (C# ile 7.0 için değişmez değer bir ikili başlayarak).  Değişmez değer tamsayı aralığı dışında ise `int` (diğer bir deyişle, bu ise değerinden <xref:System.Int32.MinValue?displayProperty=nameWithType> veya daha büyük <xref:System.Int32.MaxValue?displayProperty=nameWithType>), bir derleme hatası oluşur. 
 
 Aşağıdaki örnekte, ondalık sayı olarak, onaltılık temsil 90,946 tamsayılar eşit ve ikili değişmez değerler atanır `int` değerleri.  
   
@@ -39,7 +39,7 @@ Aşağıdaki örnekte, ondalık sayı olarak, onaltılık temsil 90,946 tamsayı
 > [!NOTE] 
 > Önek kullanması `0x` veya `0X` onaltılık değişmez değeri ve öneki belirtmek için `0b` veya `0B` ikili bir hazır değer belirtmek için. Ondalık değişmez değerler, önek vardır. 
 
-C# 7 ile okunabilirliği artırmak birkaç özellik eklenmiştir başlatılıyor. 
+C# 7.0 ile okunabilirliği artırmak birkaç özellik eklenmiştir başlatılıyor. 
  - C# 7.0 sağlar alt çizgi karakteri kullanımını `_`, basamak ayırıcı olarak.
  - C# 7.2 verir `_` önekten sonra bir ikili ya da onaltılık değişmez değeri basamak ayırıcısı olarak kullanılacak. Ondalık bir hazır değer önde gelen bir alt çizgi olan izin verilen değil.
 
@@ -51,7 +51,7 @@ Aşağıda bazı örnekler gösterilmektedir.
 
 1. `int`
 2. [uint](../../../csharp/language-reference/keywords/uint.md)
-3. [uzun](../../../csharp/language-reference/keywords/long.md)
+3. [long](../../../csharp/language-reference/keywords/long.md)
 4. [ulong](../../../csharp/language-reference/keywords/ulong.md) 
  
 Bu örneklerde, değişmez değer 90946 türüdür `int`.
@@ -87,9 +87,9 @@ int y = (int)3.0;    // OK: explicit conversion.
 ## <a name="see-also"></a>Ayrıca Bkz.  
  <xref:System.Int32>  
  [C# başvurusu](../../../csharp/language-reference/index.md)  
- [C# programlama kılavuzu](../../../csharp/programming-guide/index.md)  
- [C# anahtar sözcükleri](../../../csharp/language-reference/keywords/index.md)  
- [Tam sayı türleri tablosu](../../../csharp/language-reference/keywords/integral-types-table.md)  
- [Yerleşik türler tablosu](../../../csharp/language-reference/keywords/built-in-types-table.md)  
- [Örtük sayısal dönüşümler tablosu](../../../csharp/language-reference/keywords/implicit-numeric-conversions-table.md)  
- [Açık sayısal dönüşümler tablosu](../../../csharp/language-reference/keywords/explicit-numeric-conversions-table.md)
+ [C# Programlama Kılavuzu](../../../csharp/programming-guide/index.md)  
+ [C# Anahtar Sözcükleri](../../../csharp/language-reference/keywords/index.md)  
+ [Tam Sayı Türleri Tablosu](../../../csharp/language-reference/keywords/integral-types-table.md)  
+ [Yerleşik Türler Tablosu](../../../csharp/language-reference/keywords/built-in-types-table.md)  
+ [Örtük Sayısal Dönüştürmeler Tablosu](../../../csharp/language-reference/keywords/implicit-numeric-conversions-table.md)  
+ [Açık Sayısal Dönüştürmeler Tablosu](../../../csharp/language-reference/keywords/explicit-numeric-conversions-table.md)

@@ -1,7 +1,7 @@
 ---
-title: "Sorunları ve çözümleri Dağıtılmış veri yönetimi"
-description: "Kapsayıcılı .NET uygulamaları için .NET mikro mimarisi | Sorunları ve çözümleri Dağıtılmış veri yönetimi"
-keywords: "Docker, mikro, ASP.NET, kapsayıcı"
+title: Sorunları ve çözümleri Dağıtılmış veri yönetimi
+description: Kapsayıcılı .NET uygulamaları için .NET mikro mimarisi | Sorunları ve çözümleri Dağıtılmış veri yönetimi
+keywords: Docker, mikro, ASP.NET, kapsayıcı
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 05/26/2017
@@ -11,11 +11,11 @@ ms.topic: article
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: b0252586a508c059099885991b87c79346e0d809
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: a26f4243acee52e493a10f13ff18899823fd03ba
+ms.sourcegitcommit: 2e8acae16ae802f2d6d04e3ce0a6dbf04e476513
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="challenges-and-solutions-for-distributed-data-management"></a>Sorunları ve çözümleri Dağıtılmış veri yönetimi
 
@@ -99,9 +99,9 @@ Zaman uyumsuz iletişim kullanımını bölümlerde bu kılavuzda daha sonra ek 
     [*https://msdn.microsoft.com/library/dn589800.aspx*](https://msdn.microsoft.com/library/dn589800.aspx)
 
 -   **Martin Fowler. CQRS (komut ve sorgu sorumluluk ayrımı)**
-    [*http://martinfowler.com/bliki/CQRS.html*](http://martinfowler.com/bliki/CQRS.html)
+    [*https://martinfowler.com/bliki/CQRS.html*](https://martinfowler.com/bliki/CQRS.html)
 
--   **Görünüm gerçekleştirilip**
+-   **Gerçekleştirilmiş Görünüm**
     [*https://docs.microsoft.com/azure/architecture/patterns/materialized-view*](https://docs.microsoft.com/azure/architecture/patterns/materialized-view)
 
 -   **Charles satır. ACID vs. TABAN: Veritabanı işlem işleme Shifting pH**
@@ -110,7 +110,7 @@ Zaman uyumsuz iletişim kullanımını bölümlerde bu kılavuzda daha sonra ek 
 -   **İşlem karşılayan**
     [*https://docs.microsoft.com/azure/architecture/patterns/compensating-transaction*](https://docs.microsoft.com/azure/architecture/patterns/compensating-transaction)
 
--   **UDI Dahan. Hizmet odaklı birleşim**
+-   **UDI Dahan. Birleşim hizmet odaklı**
     [*http://udidahan.com/2014/07/30/service-oriented-composition-with-video/*](http://udidahan.com/2014/07/30/service-oriented-composition-with-video/)
 
 

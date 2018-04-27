@@ -1,23 +1,24 @@
 ---
-title: "Arabelleğe alma"
-ms.custom: 
+title: Arabelleğe alma
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 9d46d9b9-96c9-4531-9695-ab526b4d704a
-caps.latest.revision: "7"
+caps.latest.revision: 7
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: a7a486d3fbfb520ffe3b32c392566e5147c5dfcc
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 9cd4dfcbfc9d417766615c624905f8bce2c10e54
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="buffered-receive"></a>Arabelleğe alma
 Bu örnek ayarlama ve yapılandırma için arabellekli alma özelliği gösterilmektedir [!INCLUDE[wf](../../../../includes/wf-md.md)]. Arabelleğe alma iletilerin alındığını sırası hakkında endişelenmenize gerek olmadan bir iş akışı oluşturmak iş akışı Yazar verir. Arabellekli alma özelliği, yerel olarak iletileri arabelleğe alır ve iş akışı almaya hazır olduğunda bunları sunar.  
@@ -47,7 +48,7 @@ Bu örnek ayarlama ve yapılandırma için arabellekli alma özelliği gösteril
   
  Hizmet ayrıca hizmeti kullandığınız için meta verileri gösterir <xref:System.ServiceModel.Description.ServiceMetadataBehavior>.  
   
- Benzer şekilde, istemci uç noktası kullanılarak yapılandırılmış <xref:System.ServiceModel.NetMsmqBinding>. İstemci kodu ve yapılandırma oluşturulur kullanarak **hizmet Başvurusu Ekle** özelliği [!INCLUDE[vs_current_short](../../../../includes/vs-current-short-md.md)]. Aşağıdaki örnek, App.config dosyasında oluşturulan istemci uç noktadır.  
+ Benzer şekilde, istemci uç noktası kullanılarak yapılandırılmış <xref:System.ServiceModel.NetMsmqBinding>. İstemci kodu ve yapılandırma oluşturulur kullanarak **hizmet Başvurusu Ekle** Visual Studio özelliğidir. Aşağıdaki örnek, App.config dosyasında oluşturulan istemci uç noktadır.  
   
 ```xml  
 <endpoint address="net.msmq://localhost/private/LoanService/Service1.xamlx"  
@@ -59,7 +60,7 @@ Bu örnek ayarlama ve yapılandırma için arabellekli alma özelliği gösteril
   
 1.  [!INCLUDE[iis60](../../../../includes/iis60-md.md)]  
   
-2.  [!INCLUDE[iis60](../../../../includes/iis60-md.md)]Yönetim uyumluluğu, metatabanı ve yapılandırma uyumluluğu  
+2.  [!INCLUDE[iis60](../../../../includes/iis60-md.md)] Yönetim uyumluluğu, metatabanı ve yapılandırma uyumluluğu  
   
 3.  World Wide Web Hizmetleri, uygulama geliştirme özellikleri ve ASP.NET  
   
@@ -95,7 +96,7 @@ Bu örnek ayarlama ve yapılandırma için arabellekli alma özelliği gösteril
   
 #### <a name="to-run-the-sample"></a>Örnek çalıştırmak için  
   
-1.  Hizmetinin çalıştığından emin olmak için http://localhost/private/loanservice/service1.xamlx göz atın.  
+1.  Gözat http://localhost/private/loanservice/service1.xamlx hizmetinin çalıştığından emin olmak için.  
   
 2.  LoanClient uygulamayı çalıştırmak için F5 tuşuna basın. İş akışı tamamlandığında, bir out.txt dosyası ileti değişimi sonucunu içeren C:\Inbox kaydedilmesi gerekir.  
   

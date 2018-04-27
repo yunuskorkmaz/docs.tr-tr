@@ -1,30 +1,30 @@
 ---
-title: "Windows'da Yönetilen ve Yönetilmeyen İş Parçacığı Oluşturma"
-ms.custom: 
+title: Windows'da Yönetilen ve Yönetilmeyen İş Parçacığı Oluşturma
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology: dotnet-standard
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - threading [.NET Framework], unmanaged
 - threading [.NET Framework], managed
 - managed threading
 ms.assetid: 4fb6452f-c071-420d-9e71-da16dee7a1eb
-caps.latest.revision: "17"
+caps.latest.revision: 17
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: 2ce17ef15a5b582a9df0f16d7e0ac82df626579d
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.openlocfilehash: 66bf8458a3f4f9dd622129e82acb659dddf8467a
+ms.sourcegitcommit: 2e8acae16ae802f2d6d04e3ce0a6dbf04e476513
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="managed-and-unmanaged-threading-in-windows"></a>Windows'da Yönetilen ve Yönetilmeyen İş Parçacığı Oluşturma
 Tüm iş parçacıklarının Yönetimi aracılığıyla yapılır <xref:System.Threading.Thread> sınıfı, ortak dil çalışma zamanı tarafından oluşturulan iş parçacığı ve kod yürütmek için yönetilen ortamı girin çalışma zamanı dışında oluşturulanlar gibi. Çalışma zamanı kodu yönetilen yürütme ortamını içinde hiç yürütülen tüm iş parçacıkları, işlemindeki izler. Başka bir iş parçacığı izlemez. İş parçacığı, COM birlikte çalışma aracılığıyla yönetilen yürütme ortamı girebilirsiniz, (çalışma zamanı yönetilen nesneler olarak yönetilmeyen world COM nesnelerine kullanıma sunar nedeniyle), COM [DllGetClassObject](https://msdn.microsoft.com/library/ms680760.aspx) işlevi ve platform çağırma.  
@@ -41,7 +41,7 @@ Tüm iş parçacıklarının Yönetimi aracılığıyla yapılır <xref:System.T
   
 |Win32'deki|Ortak dil çalışma zamanı|  
 |--------------|------------------------------------|  
-|**CreateThread**|Birleşimi **iş parçacığı** ve<xref:System.Threading.ThreadStart>|  
+|**CreateThread**|Birleşimi **iş parçacığı** ve <xref:System.Threading.ThreadStart>|  
 |**TerminateThread**|<xref:System.Threading.Thread.Abort%2A?displayProperty=nameWithType>|  
 |**SuspendThread**|<xref:System.Threading.Thread.Suspend%2A?displayProperty=nameWithType>|  
 |**ResumeThread'i**|<xref:System.Threading.Thread.Resume%2A?displayProperty=nameWithType>|  
@@ -55,7 +55,7 @@ Tüm iş parçacıklarının Yönetimi aracılığıyla yapılır <xref:System.T
 |Kapatmak için **CoInitializeEx** (OLE32. DLL)|<xref:System.Threading.Thread.ApartmentState%2A?displayProperty=nameWithType>|  
   
 ## <a name="managed-threads-and-com-apartments"></a>Yönetilen iş parçacığı ve COM grupların  
- Yönetilen iş parçacığı barındıracak olan belirtmek üzere işaretlenmiş bir [tek iş parçacıklı](http://msdn.microsoft.com/library/windows/desktop/ms680112.aspx) veya [birden çok iş parçacıklı](http://msdn.microsoft.com/library/windows/desktop/ms693421.aspx) grup. (Mimarisi, iş parçacığı oluşturma COM hakkında daha fazla bilgi için bkz [işlemler, iş parçacıkları ve grupların](http://msdn.microsoft.com/library/windows/desktop/ms693344.aspx).) <xref:System.Threading.Thread.GetApartmentState%2A>, <xref:System.Threading.Thread.SetApartmentState%2A>, Ve <xref:System.Threading.Thread.TrySetApartmentState%2A> yöntemlerinin <xref:System.Threading.Thread> sınıfının return ve iş parçacığı Grup durumu atayın. Durum ayarlı değil, <xref:System.Threading.Thread.GetApartmentState%2A> döndürür <xref:System.Threading.ApartmentState.Unknown?displayProperty=nameWithType>.  
+ Yönetilen iş parçacığı barındıracak olan belirtmek üzere işaretlenmiş bir [tek iş parçacıklı](https://msdn.microsoft.com/library/windows/desktop/ms680112.aspx) veya [birden çok iş parçacıklı](https://msdn.microsoft.com/library/windows/desktop/ms693421.aspx) grup. (Mimarisi, iş parçacığı oluşturma COM hakkında daha fazla bilgi için bkz [işlemler, iş parçacıkları ve grupların](https://msdn.microsoft.com/library/windows/desktop/ms693344.aspx).) <xref:System.Threading.Thread.GetApartmentState%2A>, <xref:System.Threading.Thread.SetApartmentState%2A>, Ve <xref:System.Threading.Thread.TrySetApartmentState%2A> yöntemlerinin <xref:System.Threading.Thread> sınıfının return ve iş parçacığı Grup durumu atayın. Durum ayarlı değil, <xref:System.Threading.Thread.GetApartmentState%2A> döndürür <xref:System.Threading.ApartmentState.Unknown?displayProperty=nameWithType>.  
   
  Yalnızca iş parçacığı içinde olduğunda özelliği ayarlanabilir <xref:System.Threading.ThreadState.Unstarted?displayProperty=nameWithType> durum; bir iş parçacığı için yalnızca bir kez ayarlanabilir.  
   

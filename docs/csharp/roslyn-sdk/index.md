@@ -9,11 +9,11 @@ ms.topic: conceptual
 ms.prod: .net
 ms.devlang: devlang-csharp
 ms.custom: mvc
-ms.openlocfilehash: c627903743f8867e05bac9ce835659fc7270b94e
-ms.sourcegitcommit: 935d5267c44f9bce801468ef95f44572f1417e8c
+ms.openlocfilehash: aad6b06748b02e2ea3003ca339d8a5a0b15583f8
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/28/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="the-net-compiler-platform-sdk"></a>.NET derleme Platform SDK'si
 
@@ -40,9 +40,9 @@ Daha küçük bir avantajı Çözümleyicileri ve kod düzeltmeleri daha küçü
 
 ## <a name="enforce-team-coding-standards"></a>Kodlama standartları takım zorla
 
-Birçok ekip kodlama kod incelemeleri diğer takım üyeleri ile aracılığıyla zorlanan standartları vardır. Çözümleyicileri ve kod düzeltmeleri bu işlem çok daha verimli hale getirebilir. Bir geliştirici kendi iş başkalarıyla ekipte paylaşır kod incelemeleri meydana gelir. Daha yeni bir özellik açıklamaları almadan önce tamamlamak için gereken her zaman yatırım yapmış kullanıcılar. Müşterinizle ekibin yöntemler eşleşmeyen alışkanlıklarınıza eklenir ancak hafta gidin.
+Birçok ekip kodlama kod incelemeleri diğer takım üyeleri ile aracılığıyla zorlanan standartları vardır. Çözümleyicileri ve kod düzeltmeleri bu işlem çok daha verimli hale getirebilir. Bir geliştirici işlerine başkalarıyla ekipte paylaşır kod incelemeleri meydana gelir. Geliştirici açıklamaları almadan önce yeni bir özellik tamamlamak için gereken her zaman yatırım. Geliştirici ekibin yöntemler eşleşmeyen alışkanlıklarınıza eklenir ancak hafta gidin.
 
-Bir geliştirici kod yazar gibi çözümleyiciler çalıştırın. Hüseyin, yönergeleri hemen teşvik eden anında geri bildirim alır. Cüneyt, kendisinin prototipi oluşturulurken başlar başlamaz uyumlu kod yazmaya alışkanlıklarınıza oluşturur. Özellik insanlar gözden geçirmek için hazır olduğunda, tüm standart Kılavuzu zorlandı.
+Bir geliştirici kod yazar gibi çözümleyiciler çalıştırın. Geliştirici Kılavuzu hemen teşvik eden anında geri bildirim alır. Geliştirici prototipi oluşturulurken başlar başlamaz uyumlu kod yazmaya alışkanlıklarınıza oluşturur. Özellik insanlar gözden geçirmek için hazır olduğunda, tüm standart Kılavuzu zorlandı.
 
 Takımlar çözümleyiciler oluşturabilirsiniz ve görünüm yöntemler kodlama takım ihlal en sık kullanılan uygulamalar için kod giderir. Bu standartları zorlamak için her geliştiricinin makinesinde yüklenebilir.
 
@@ -67,7 +67,7 @@ Bu çözümleyiciler karşıya yüklenebilir [Visual Studio Market'te](https://m
 
 Aşağıdaki dört konulardaki .NET derleyici Platform SDK'sı kavramları hakkında daha fazla bilgi edinebilirsiniz:
 
- - [Kodu ile sözdizimi Görselleştirici keşfetme](syntax-visualizer.md)
+ - [Söz dizimi görselleştiricisi ile kod bulma](syntax-visualizer.md)
  - [Derleyici API modelini anlama](compiler-api-model.md)
  - [Söz dizimi ile çalışma](work-with-syntax.md)
  - [Semantik ile çalışma](work-with-semantics.md)

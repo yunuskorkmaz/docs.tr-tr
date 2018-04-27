@@ -1,7 +1,7 @@
 ---
 title: Mikro hizmet uygulama katmanı ve Web API tasarlama
 description: Kapsayıcılı .NET uygulamaları için .NET mikro mimarisi | Mikro hizmet uygulama katmanı ve Web API tasarlama
-keywords: Docker, Microservices, ASP.NET, Container
+keywords: Docker, mikro, ASP.NET, kapsayıcı
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 12/12/2017
@@ -11,11 +11,11 @@ ms.topic: article
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: 87b48624fde8c7cdab097289f1cf56ab56e1173f
-ms.sourcegitcommit: 498799639937c89de777361aab74261efe7b79ea
+ms.openlocfilehash: d623a3bc542e0f044d73f405aa639bef0f6d1ec8
+ms.sourcegitcommit: 2e8acae16ae802f2d6d04e3ce0a6dbf04e476513
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/22/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="designing-the-microservice-application-layer-and-web-api"></a>Mikro hizmet uygulama katmanı ve Web API tasarlama
 
@@ -50,7 +50,7 @@ DÜZ ayrıntılı olarak ele için başka bir kılavuz kalırsınız. Bu nedenle
     [*https://martinfowler.com/articles/injection.html*](https://martinfowler.com/articles/injection.html)
 
 -   **Steve Smith. Birleştirici yenilikler**
-    [*http://ardalis.com/new-is-glue*](http://ardalis.com/new-is-glue)
+    [*https://ardalis.com/new-is-glue*](https://ardalis.com/new-is-glue)
 
 
 >[!div class="step-by-step"]

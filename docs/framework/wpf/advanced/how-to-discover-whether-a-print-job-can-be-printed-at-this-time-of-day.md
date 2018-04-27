@@ -1,12 +1,13 @@
 ---
-title: "Nasıl yapılır: Günün Bu Saatinde Yazdırmanın Yapılıp Yapılmayacağını Keşfetme"
-ms.custom: 
+title: 'Nasıl yapılır: Günün Bu Saatinde Yazdırmanın Yapılıp Yapılmayacağını Keşfetme'
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-wpf
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-wpf
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - csharp
@@ -17,23 +18,24 @@ helpviewer_keywords:
 - printers [WPF], availability
 - print jobs [WPF], timing
 ms.assetid: 7e9c8ec1-abf6-4b3d-b1c6-33b35d3c4063
-caps.latest.revision: "9"
+caps.latest.revision: 9
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: ef9da205792823b7069024c5e4a3e9ac80d60a24
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: eef74cfa290614e530fa22a34533c7924d4af1b4
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="how-to-discover-whether-a-print-job-can-be-printed-at-this-time-of-day"></a>Nasıl yapılır: Günün Bu Saatinde Yazdırmanın Yapılıp Yapılmayacağını Keşfetme
 Yazdırma sıralarını her zaman günde 24 saat için kullanılabilir değil. Günün belirli zamanlarında kullanılamaz duruma getirmek için ayarlanabilir başlangıç ve bitiş zamanı özellikleri sahiptirler. Bu özellik, örneğin, belirli bir bölüm 17: 00 sonra özel kullanım için bir yazıcı ayırmak için kullanılabilir. Bu bölüm Kullan yazıcı diğer departmanlardan daha bakım farklı bir sıra gerekir. Diğer bölümler için sıra 17: 00 sonra kullanılamaz hale gelmesine ayarlanması, ayrıcalıklı bölümün sırası olacak şekilde ayarlanması kullanılabilir hiç uğruyor.  
   
  Ayrıca, yazdırma işleri kendilerini yalnızca bir belirtilen zaman dilimi içinde yazdırılabilir olarak ayarlanabilir.  
   
- <xref:System.Printing.PrintQueue> Ve <xref:System.Printing.PrintSystemJobInfo> sınıfları ortaya çıkarılan [!INCLUDE[TLA#tla_api#plural](../../../../includes/tlasharptla-apisharpplural-md.md)] , [!INCLUDE[TLA#tla_winfx](../../../../includes/tlasharptla-winfx-md.md)] uzaktan belirli bir yazdırma işi şu anda üzerinde belirli bir sıradaki yazdırabilir olup olmadığını denetlemek için bir yol sağlar.  
+ <xref:System.Printing.PrintQueue> Ve <xref:System.Printing.PrintSystemJobInfo> sınıfları ortaya çıkarılan [!INCLUDE[TLA#tla_api#plural](../../../../includes/tlasharptla-apisharpplural-md.md)] uzaktan belirli bir yazdırma işi şu anda üzerinde belirli bir sıradaki yazdırabilir olup olmadığını denetlemek için Microsoft .NET Framework'ü bir yol sağlar.  
   
 ## <a name="example"></a>Örnek  
  Aşağıdaki örnek, bir yazdırma işi sorunları tanılayabilirsiniz bir örnektir.  
@@ -79,7 +81,7 @@ Yazdırma sıralarını her zaman günde 24 saat için kullanılabilir değil. G
  [!code-csharp[DiagnoseProblematicPrintJob#PrintQueueStartUntil](../../../../samples/snippets/csharp/VS_Snippets_Wpf/DiagnoseProblematicPrintJob/CSharp/Program.cs#printqueuestartuntil)]
  [!code-vb[DiagnoseProblematicPrintJob#PrintQueueStartUntil](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/DiagnoseProblematicPrintJob/visualbasic/program.vb#printqueuestartuntil)]  
   
- **TimeConverter.ConvertToLocalHumanReadableTime** yöntemi (aşağıdaki kod örneğinde sunulan) ile sunulan herhangi bir yöntem kullanmaz [!INCLUDE[TLA#tla_winfx](../../../../includes/tlasharptla-winfx-md.md)]tartışma kısa gelir. Çift dönüştürme görevi yöntemi vardır: dakika sonra gece yarısı ifade eden bir tamsayı olması gerekir ve okunabilir bir zamana dönüştürmek ve bunu bunu yerel saat dönüştürmeniz gerekir. Bu ilk oluşturarak tamamlanır bir <xref:System.DateTime> ve sonra kullanan gece yarısına ayarlanmış nesne <xref:System.DateTime.AddMinutes%2A> yöntemine iletilmiş dakika ekleme yöntemi. Bu yeni bir döndürür <xref:System.DateTime> yönteme geçirilen özgün zamanı ifade. <xref:System.DateTime.ToLocalTime%2A> Yöntemi sonra yerel saate bu dönüştürür.  
+ **TimeConverter.ConvertToLocalHumanReadableTime** yöntemi (aşağıdaki kod örneğinde sunulan) tartışma kısa olacak şekilde Microsoft .NET Framework ile sunulan tüm yöntemleri kullanmaz. Çift dönüştürme görevi yöntemi vardır: dakika sonra gece yarısı ifade eden bir tamsayı olması gerekir ve okunabilir bir zamana dönüştürmek ve bunu bunu yerel saat dönüştürmeniz gerekir. Bu ilk oluşturarak tamamlanır bir <xref:System.DateTime> ve sonra kullanan gece yarısına ayarlanmış nesne <xref:System.DateTime.AddMinutes%2A> yöntemine iletilmiş dakika ekleme yöntemi. Bu yeni bir döndürür <xref:System.DateTime> yönteme geçirilen özgün zamanı ifade. <xref:System.DateTime.ToLocalTime%2A> Yöntemi sonra yerel saate bu dönüştürür.  
   
  [!code-cpp[DiagnoseProblematicPrintJob#TimeConverter](../../../../samples/snippets/cpp/VS_Snippets_Wpf/DiagnoseProblematicPrintJob/CPP/Program.cpp#timeconverter)]
  [!code-csharp[DiagnoseProblematicPrintJob#TimeConverter](../../../../samples/snippets/csharp/VS_Snippets_Wpf/DiagnoseProblematicPrintJob/CSharp/Program.cs#timeconverter)]

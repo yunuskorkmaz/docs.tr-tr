@@ -1,5 +1,5 @@
 ---
-title: "Birlikte Çalışabilirliğe Genel Bakış (C# Programlama Kılavuzu)"
+title: Birlikte Çalışabilirliğe Genel Bakış (C# Programlama Kılavuzu)
 ms.date: 07/20/2015
 ms.prod: .net
 ms.technology:
@@ -12,14 +12,14 @@ helpviewer_keywords:
 - interoperability, about interoperability
 - platform invoke
 ms.assetid: c025b2e0-2357-4c27-8461-118f0090aeff
-caps.latest.revision: 
+caps.latest.revision: 43
 author: BillWagner
 ms.author: wiwagn
-ms.openlocfilehash: 5ebdd2d58f2fe502dbeb14148c303487774f531b
-ms.sourcegitcommit: 099aa20d9b6450d1b7452d782a55771a6ad8ff35
+ms.openlocfilehash: 58538b690958e11b1590c13e6709cac4109ef49d
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/05/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="interoperability-overview-c-programming-guide"></a>Birlikte Çalışabilirliğe Genel Bakış (C# Programlama Kılavuzu)
 Konu C# yönetilen kodu ve yönetilmeyen kod birlikte çalışabilirliği sağlamak için yöntemleri açıklar.  
@@ -42,7 +42,7 @@ Konu C# yönetilen kodu ve yönetilmeyen kod birlikte çalışabilirliği sağla
   
 2.  Projeye COM bileşeni veya türü kitaplığına bir başvuru ekleyin.  
   
-     Başvuru eklerken [!INCLUDE[vsprvs](~/includes/vsprvs-md.md)] kullanan [Tlbimp.exe (tür kitaplığı içeri Aktarıcı)](../../../../docs/framework/tools/tlbimp-exe-type-library-importer.md), .NET Framework birlikte çalışma derlemesi çıktısını almak için giriş olarak bir tür kitaplığı alır. Ayrıca bir çalışma zamanı aranabilir sarmalayıcısı (RCW) adlı bir derlemeye yönetilen sınıflar ve COM sınıfları sarmalamak arabirimleri ve Tür Kitaplığı'nda bulunan arabirimlerin içerir. [!INCLUDE[vsprvs](~/includes/vsprvs-md.md)]projeye oluşturulan derlemesine başvuru ekler.  
+     Başvuru eklerken [!INCLUDE[vsprvs](~/includes/vsprvs-md.md)] kullanan [Tlbimp.exe (tür kitaplığı içeri Aktarıcı)](../../../../docs/framework/tools/tlbimp-exe-type-library-importer.md), .NET Framework birlikte çalışma derlemesi çıktısını almak için giriş olarak bir tür kitaplığı alır. Ayrıca bir çalışma zamanı aranabilir sarmalayıcısı (RCW) adlı bir derlemeye yönetilen sınıflar ve COM sınıfları sarmalamak arabirimleri ve Tür Kitaplığı'nda bulunan arabirimlerin içerir. [!INCLUDE[vsprvs](~/includes/vsprvs-md.md)] projeye oluşturulan derlemesine başvuru ekler.  
   
 3.  RCW tanımlı bir sınıf örneği oluşturun. Bu, buna karşılık, COM nesnesinin örneği oluşturur.  
   
@@ -55,11 +55,11 @@ Konu C# yönetilen kodu ve yönetilmeyen kod birlikte çalışabilirliği sağla
   
 1.  Birlikte çalışma özniteliklerini C# projesinde ekleyin.  
   
-     Bir derlemeyi COM değiştirerek görünür yapabileceğiniz [!INCLUDE[csprcs](~/includes/csprcs-md.md)] proje özellikleri. Daha fazla bilgi için bkz: [derleme bilgileri iletişim kutusu](/visualstudio/ide/reference/assembly-information-dialog-box).  
+     Visual C# proje özelliklerini değiştirerek bir derlemeyi COM görünür hale getirebilir. Daha fazla bilgi için bkz: [derleme bilgileri iletişim kutusu](/visualstudio/ide/reference/assembly-information-dialog-box).  
   
 2.  Bir COM tür kitaplığı oluşturmak ve COM kullanımı için kaydolun.  
   
-     Değiştirebileceğiniz [!INCLUDE[csprcs](~/includes/csprcs-md.md)] proje C# derleme COM birlikte çalışma için otomatik olarak kaydedilecek özellikleri. [!INCLUDE[vsprvs](~/includes/vsprvs-md.md)]kullanan [Regasm.exe (derleme kayıt aracı)](../../../../docs/framework/tools/regasm-exe-assembly-registration-tool.md)kullanarak `/tlb` komut satırı anahtarı, bir tür kitaplığı oluşturmak için yönetilen bir derleme giriş olarak alır. Bu tür kitaplığını açıklar `public` türleri derlemede ve COM istemcileri yönetilen sınıflar oluşturabilmesi için kayıt defteri girdileri ekler.  
+     C# derleme COM birlikte çalışma için otomatik olarak kaydedilecek şekilde Visual C# proje özelliklerini değiştirebilirsiniz. [!INCLUDE[vsprvs](~/includes/vsprvs-md.md)] kullanan [Regasm.exe (derleme kayıt aracı)](../../../../docs/framework/tools/regasm-exe-assembly-registration-tool.md)kullanarak `/tlb` komut satırı anahtarı, bir tür kitaplığı oluşturmak için yönetilen bir derleme giriş olarak alır. Bu tür kitaplığını açıklar `public` türleri derlemede ve COM istemcileri yönetilen sınıflar oluşturabilmesi için kayıt defteri girdileri ekler.  
   
  Daha fazla bilgi için bkz: [.NET Framework bileşenlerini COM'da gösterme](../../../../docs/framework/interop/exposing-dotnet-components-to-com.md) ve [örnek COM sınıfı](../../../csharp/programming-guide/interop/example-com-class.md).  
   

@@ -1,31 +1,33 @@
 ---
-title: "Başlarken Öğreticisi Sorun Giderme"
-ms.custom: 
+title: Başlarken Öğreticisi Sorun Giderme
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 69a21511-0871-4c41-9a53-93110e84d7fd
-caps.latest.revision: "14"
+caps.latest.revision: 14
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 55288074b35bcb00d6c6b453f1320ad40d26a5f7
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: d8bc077b1ef24ecfcb4d37a9ddb8389dc705f68e
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="troubleshooting-the-getting-started-tutorial"></a>Başlarken Öğreticisi Sorun Giderme
 Bu konuda başlangıç Öğreticisi ve bunların nasıl çözüleceği ile çalışırken en sık karşılaşılan sorunlar listelenmiştir.  
   
 1.  [I sabit Sürücümün proje dosyalarını bulamıyor.](../../../docs/framework/wcf/troubleshooting-the-getting-started-tutorial.md#BKMK_q1)  
   
-2.  [Hizmet uygulaması çalıştırma denemesi: HTTP URL http://+:8000/ServiceModelSamples/Service/ kaydedemedi. İşleminizi bu ad alanına erişim hakları yok.](../../../docs/framework/wcf/troubleshooting-the-getting-started-tutorial.md#BKMK_q2)  
+2.  [Hizmet uygulaması çalıştırma denemesi: HTTP URL kaydedemedi http://+:8000/ServiceModelSamples/Service/. İşleminizi bu ad alanına erişim hakları yok.](../../../docs/framework/wcf/troubleshooting-the-getting-started-tutorial.md#BKMK_q2)  
   
 3.  [Svcutil.exe aracını kullanmaya çalışıyor: 'svcutil' iç ya da dış komut, çalıştırılabilir program ya da toplu iş dosyası tanınmıyor.](../../../docs/framework/wcf/troubleshooting-the-getting-started-tutorial.md#BKMK_q3)  
   
@@ -35,14 +37,14 @@ Bu konuda başlangıç Öğreticisi ve bunların nasıl çözüleceği ile çal�
   
 6.  [İstemci uygulaması derleme: 'CalculatorClient' bulunamadı türü veya ad alanı adı (kullanarak bir eksik yönergesi veya bir derleme başvurusu?)](../../../docs/framework/wcf/troubleshooting-the-getting-started-tutorial.md#BKMK_q6)  
   
-7.  [İstemcisi çalıştıran: işlenmeyen özel durum: System.ServiceModel.EndpointNotFoundException: 8000/ServiceModelSamples/Service/CalculatorService bağlanamadı. TCP hata kodu 10061: hedef makine etkin olarak reddettiğinden bağlantı kurulamadı.](../../../docs/framework/wcf/troubleshooting-the-getting-started-tutorial.md#BKMK_q7)  
+7.  [İstemcisi çalıştıran: işlenmeyen özel durum: System.ServiceModel.EndpointNotFoundException: bağlanılamadı http://localhost:8000/ServiceModelSamples/Service/CalculatorService. TCP hata kodu 10061: hedef makine etkin olarak reddettiğinden bağlantı kurulamadı.](../../../docs/framework/wcf/troubleshooting-the-getting-started-tutorial.md#BKMK_q7)  
   
 <a name="BKMK_q1"></a>   
 ## <a name="i-am-unable-to-find-the-project-files-on-my-hard-drive"></a>I sabit Sürücümün proje dosyalarını bulamıyor.  
- [!INCLUDE[vs_current_short](../../../includes/vs-current-short-md.md)]kaydeder proje c:\users dosyalarında\\< kullanıcı name\Documents\\< Visual Studio sürümü\>içinde \Projects [!INCLUDE[wv](../../../includes/wv-md.md)] ve [!INCLUDE[win7_client_secondref](../../../includes/win7-client-secondref-md.md)], c:\Documents ve ayarlarını\\< kullanıcı adı\>\My belgeleri\\< Visual Studio sürümü\>\Projects önceki Windows sürümlerinde.  
+ Visual Studio proje dosyalarını c:\users içinde kaydeder\\< kullanıcı name\Documents\\< Visual Studio sürümü\>içinde \Projects [!INCLUDE[wv](../../../includes/wv-md.md)] ve [!INCLUDE[win7_client_secondref](../../../includes/win7-client-secondref-md.md)], c:\Documents ve ayarlarını\\< kullanıcı adı \>\My belgeleri\\< Visual Studio sürümü\>\Projects önceki Windows sürümlerinde.  
   
 <a name="BKMK_q2"></a>   
-## <a name="attempting-to-run-the-service-application-http-could-not-register-url-http8000servicemodelsamplesservice-your-process-does-not-have-access-rights-to-this-namespace"></a>Hizmet uygulaması çalıştırma denemesi: HTTP URL http://+:8000/ServiceModelSamples/Service/ kaydedemedi. İşleminizi bu ad alanına erişim hakları yok.  
+## <a name="attempting-to-run-the-service-application-http-could-not-register-url-http8000servicemodelsamplesservice-your-process-does-not-have-access-rights-to-this-namespace"></a>Hizmet uygulaması çalıştırma denemesi: HTTP URL kaydedemedi http://+:8000/ServiceModelSamples/Service/. İşleminizi bu ad alanına erişim hakları yok.  
  Barındıran işlemin bir [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] hizmet yönetici ayrıcalıklarıyla çalıştırmanız gerekir. İçinde hizmetinden çalıştırıyorsanız [!INCLUDE[vs_current_long](../../../includes/vs-current-long-md.md)] çalıştırmalısınız [!INCLUDE[vs_current_long](../../../includes/vs-current-long-md.md)] yönetici olarak. Bunu yapmak için **Başlat**, sağ [!INCLUDE[vs_current_long](../../../includes/vs-current-long-md.md)] seçip **yönetici olarak çalıştır**. Bir komut satırı isteminde Hizmeti çalışıyorsa komut satırı istemi benzer şekilde bir yönetici olarak başlatmanız gerekir. Tıklatın **Başlat**, sağ **komut istemi** seçip **yönetici olarak çalıştır**.  
   
 <a name="BKMK_q3"></a>   
@@ -62,11 +64,11 @@ Bu konuda başlangıç Öğreticisi ve bunların nasıl çözüleceği ile çal�
  İstemci projeniz Proxy.cs veya Proxy.vb dosyası eklemezseniz bu hatayı alırsınız.  
   
 <a name="BKMK_q7"></a>   
-## <a name="running-the-client-unhandled-exception-systemservicemodelendpointnotfoundexception-could-not-connect-to-httplocalhost8000servicemodelsamplesservicecalculatorservice-tcp-error-code-10061-no-connection-could-be-made-because-the-target-machine-actively-refused-it"></a>İstemcisi çalıştıran: işlenmeyen özel durum: System.ServiceModel.EndpointNotFoundException: 8000/ServiceModelSamples/Service/CalculatorService bağlanamadı. TCP hata kodu 10061: hedef makine etkin olarak reddettiğinden bağlantı kurulamadı.  
+## <a name="running-the-client-unhandled-exception-systemservicemodelendpointnotfoundexception-could-not-connect-to-httplocalhost8000servicemodelsamplesservicecalculatorservice-tcp-error-code-10061-no-connection-could-be-made-because-the-target-machine-actively-refused-it"></a>İstemcisi çalıştıran: işlenmeyen özel durum: System.ServiceModel.EndpointNotFoundException: bağlanılamadı http://localhost:8000/ServiceModelSamples/Service/CalculatorService. TCP hata kodu 10061: hedef makine etkin olarak reddettiğinden bağlantı kurulamadı.  
  Hizmet çalıştırmadan istemci uygulaması değilse bu hata oluşur.  
   
 <a name="BKMK_q8"></a>   
-## <a name="unhandled-exception-systemservicemodelsecuritysecuritynegotiationexception-soap-security-negotiation-with-httplocalhost8000servicemodelsamplesservicecalculatorservice-for-target-httplocalhost8000servicemodelsamplesservicecalculatorservice-failed"></a>İşlenmeyen özel durum: System.ServiceModel.Security.SecurityNegotiationException: '8000/ServiceModelSamples/Service/CalculatorService' target ' 8000/ServiceModelSamples/Service/başarısız CalculatorService' için olan SOAP güvenlik anlaşması  
+## <a name="unhandled-exception-systemservicemodelsecuritysecuritynegotiationexception-soap-security-negotiation-with-httplocalhost8000servicemodelsamplesservicecalculatorservice-for-target-httplocalhost8000servicemodelsamplesservicecalculatorservice-failed"></a>İşlenmeyen özel durum: System.ServiceModel.Security.SecurityNegotiationException: SOAP güvenlik anlaşması 'http://localhost:8000/ServiceModelSamples/Service/CalculatorService'için hedef'http://localhost:8000/ServiceModelSamples/Service/CalculatorService' başarısız oldu  
  Bu hata, ağ bağlantısı yok etki alanına katılmış bir bilgisayarda oluşur. Bilgisayarınız ağa bağlanın ya da hem istemci hem de hizmet için güvenlik devre dışı bırakma. Hizmet için şu WSHttpBinding oluşturan kodu değiştirin.  
   
 ```  

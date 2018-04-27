@@ -1,18 +1,19 @@
 ---
-title: "Yükseltme ve bulut DevOps çapında kullanılmaya hazır uygulamalar için .NET uygulamaları varolan shift nedenler"
-description: "Kapsayıcılı .NET uygulamaları için .NET mikro mimarisi | Yükseltme ve bulut DevOps çapında kullanılmaya hazır uygulamalar için .NET uygulamaları varolan shift nedenler"
+title: Yükseltme ve bulut DevOps çapında kullanılmaya hazır uygulamalar için .NET uygulamaları varolan shift nedenler
+description: Kapsayıcılı .NET uygulamaları için .NET mikro mimarisi | Yükseltme ve bulut DevOps çapında kullanılmaya hazır uygulamalar için .NET uygulamaları varolan shift nedenler
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 10/26/2017
 ms.prod: .net
+ms.topic: article
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: 1339264f49a065888a95e6ef6fe8575aa3c75564
-ms.sourcegitcommit: d3cfda0943364aaf6ccd574f55f584576c8a4fee
+ms.openlocfilehash: b6a65dfff45b240e89ab22fd7eba82d6cdbc27b8
+ms.sourcegitcommit: 2e8acae16ae802f2d6d04e3ce0a6dbf04e476513
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/08/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="reasons-to-lift-and-shift-existing-net-apps-to-cloud-devops-ready-applications"></a>Yükseltme ve bulut DevOps çapında kullanılmaya hazır uygulamalar için .NET uygulamaları varolan shift nedenler
 

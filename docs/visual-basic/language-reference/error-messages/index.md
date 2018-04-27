@@ -16,11 +16,11 @@ ms.assetid: f2dda05b-baef-41f5-8bb1-598bd7cf239f
 caps.latest.revision: 19
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: f7f5138d430e6737a4a8a47d4a800905dedff660
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.openlocfilehash: de52d95cfbc8135db1dc9434860f02b8992db0b4
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="error-messages-visual-basic"></a>Hata İletileri (Visual Basic)
 Yazma, derleme veya Visual Basic uygulama çalıştırdığınızda aşağıdaki tür hataları oluşabilir:  
@@ -34,7 +34,7 @@ Yazma, derleme veya Visual Basic uygulama çalıştırdığınızda aşağıdaki
  Belirli bir hata ile ilgili sorunları giderme hakkında daha fazla bilgi için bkz: [Visual Basic programcıları için ek kaynaklar](../../../visual-basic/getting-started/additional-resources.md).  
   
 ## <a name="run-time-errors"></a>Çalıştırma zamanı hataları  
- Sistem yürütülemiyor bir eylem gerçekleştirmek üzere bir Visual Basic uygulama çalışırsa, bir çalışma zamanı hatası oluşur ve [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] oluşturur bir `Exception` nesnesi. [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]tüm verilerin özel hatalara neden olabilir yazın, dahil olmak üzere `Exception` kullanarak nesneleri, `Throw` deyimi. Bir uygulama hatası hata numarası ve yakalanan özel durum iletisi görüntüleyerek belirleyebilirsiniz. Bir hata belirledi değil, uygulama sona erer.  
+ Visual Basic uygulama sistem yürütülemiyor bir eylem gerçekleştirmek üzere çalışırsa, bir çalışma zamanı hatası oluşur ve Visual Basic oluşturur bir `Exception` nesnesi. Visual Basic, özel hatalar tüm verilerin üretebilir yazın, dahil olmak üzere `Exception` kullanarak nesneleri, `Throw` deyimi. Bir uygulama hatası hata numarası ve yakalanan özel durum iletisi görüntüleyerek belirleyebilirsiniz. Bir hata belirledi değil, uygulama sona erer.  
   
  Kod yakalamak ve çalışma zamanı hataları inceleyin. Hatayı üreten kodu alın, bir `Try` bloğu, eşleşen bir içindeki tüm atılmış hata yakalayabilir `Catch` bloğu. Çalışma zamanında hataları yakalar ve bunları kodunuzda yanıt hakkında daha fazla bilgi için bkz: [deneyin... Catch... Finally ifadesi](../../../visual-basic/language-reference/statements/try-catch-finally-statement.md).  
   

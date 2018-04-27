@@ -1,24 +1,26 @@
 ---
 title: Sorun giderme
-ms.custom: 
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-ado
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-ado
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 8cd4401c-b12c-4116-a421-f3dcffa65670
-caps.latest.revision: "3"
+caps.latest.revision: 3
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.workload: dotnet
-ms.openlocfilehash: 56d06fa7adf2690a2cb9194342071c7814a4ec4a
-ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
+ms.workload:
+- dotnet
+ms.openlocfilehash: 5544540c6a27975a885bf4cd8b2e0a26183e192b
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="troubleshooting"></a>Sorun giderme
 Aşağıdaki bilgiler, karşılaşabileceğiniz bazı sorunları gösterir, [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] uygulamaları ve önlemenize veya aksi halde bu sorunların etkisini azaltmak için öneriler sağlar.  
@@ -26,7 +28,7 @@ Aşağıdaki bilgiler, karşılaşabileceğiniz bazı sorunları gösterir, [!IN
  Ek sorunlar ele içinde [ilgili sık sorulan sorular](../../../../../../docs/framework/data/adonet/sql/linq/frequently-asked-questions.md).  
   
 ## <a name="unsupported-standard-query-operators"></a>Desteklenmeyen Standart sorgu işleçleri  
- [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]Tüm standart sorgu işleci yöntemleri desteklemez (örneğin, <xref:System.Linq.Enumerable.ElementAt%2A>). Sonuç olarak derleyin projeleri hala çalışma zamanı hataları üretebilir. Daha fazla bilgi için bkz: [standart sorgu işleci çeviri](../../../../../../docs/framework/data/adonet/sql/linq/standard-query-operator-translation.md).  
+ [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] Tüm standart sorgu işleci yöntemleri desteklemez (örneğin, <xref:System.Linq.Enumerable.ElementAt%2A>). Sonuç olarak derleyin projeleri hala çalışma zamanı hataları üretebilir. Daha fazla bilgi için bkz: [standart sorgu işleci çeviri](../../../../../../docs/framework/data/adonet/sql/linq/standard-query-operator-translation.md).  
   
 ## <a name="memory-issues"></a>Bellek sorunları  
  Bir sorgu bir bellek içi koleksiyonu içeriyorsa ve [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] <xref:System.Data.Linq.Table%601>, iki koleksiyon belirtilen sırada bağlı olarak bellekte sorgu yürütülür. Sorgu bellekte yürütülmelidir, veritabanı tablodan veri alınmaları gerekir.  
@@ -37,10 +39,10 @@ Aşağıdaki bilgiler, karşılaşabileceğiniz bazı sorunları gösterir, [!IN
  Bir giriş dosyası adı belirtmek için, adı komut satırına giriş dosyası olarak ekleyin. Dosya adı bağlantı dizesinde dahil olmak üzere (kullanarak **/conn** seçeneği) desteklenmiyor. Daha fazla bilgi için bkz: [SqlMetal.exe (kod üretme aracı)](../../../../../../docs/framework/tools/sqlmetal-exe-code-generation-tool.md).  
   
 ## <a name="class-library-projects"></a>Sınıf Kitaplığı projelerinde  
- [!INCLUDE[vs_ordesigner_long](../../../../../../includes/vs-ordesigner-long-md.md)] Bir bağlantı dizesi oluşturur `app.config` projenin dosya. Sınıf Kitaplığı projelerinde `app.config` dosya kullanılmaz. [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]Tasarım zamanı dosyalarında sağlanan bağlantı dizesi kullanır. Değer değiştirme `app.config` uygulamanızı bağlandığı veritabanı değiştirmez.  
+ [!INCLUDE[vs_ordesigner_long](../../../../../../includes/vs-ordesigner-long-md.md)] Bir bağlantı dizesi oluşturur `app.config` projenin dosya. Sınıf Kitaplığı projelerinde `app.config` dosya kullanılmaz. [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] Tasarım zamanı dosyalarında sağlanan bağlantı dizesi kullanır. Değer değiştirme `app.config` uygulamanızı bağlandığı veritabanı değiştirmez.  
   
-## <a name="cascade-delete"></a>Cascade Delete  
- [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]desteklemez veya art arda silme işlemleri algılar. Bu karşı kısıtlamalarına sahip bir tablosunda bir satırı silmek istiyorsanız, aşağıdakilerden birini yapmanız gerekir:  
+## <a name="cascade-delete"></a>Art arda silme  
+ [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] desteklemez veya art arda silme işlemleri algılar. Bu karşı kısıtlamalarına sahip bir tablosunda bir satırı silmek istiyorsanız, aşağıdakilerden birini yapmanız gerekir:  
   
 -   Ayarlama `ON DELETE CASCADE` veritabanındaki yabancı anahtar kısıtlaması kuralında.  
   
@@ -57,7 +59,7 @@ Aşağıdaki bilgiler, karşılaşabileceğiniz bazı sorunları gösterir, [!IN
   
 -   Bir başvuru sahip `System.Core.dll` ve `System.Data.Linq.dll`.  
   
--   Sahip olduğunuz bir `Imports` ([!INCLUDE[vbprvb](../../../../../../includes/vbprvb-md.md)]) veya `using` yönergesi (C#) için <xref:System.Linq> ve <xref:System.Data.Linq>.  
+-   Sahip olduğunuz bir `Imports` (Visual Basic) veya `using` yönergesi (C#) için <xref:System.Linq> ve <xref:System.Data.Linq>.  
   
 ## <a name="duplicatekeyexception"></a>DuplicateKeyException  
  Hata ayıklama sırasında bir [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] proje, bir varlığın ilişkileri çapraz. Bunun yapılması, bu öğeler önbelleğine getirir ve [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] kendi varlığını hale. Daha sonra yürütmeyi denerseniz <xref:System.Data.Linq.Table%601.Attach%2A> veya <xref:System.Data.Linq.Table%601.InsertOnSubmit%2A> veya aynı anahtara sahip birden çok satır üreten benzer bir yöntem bir <xref:System.Data.Linq.DuplicateKeyException> oluşturulur.  

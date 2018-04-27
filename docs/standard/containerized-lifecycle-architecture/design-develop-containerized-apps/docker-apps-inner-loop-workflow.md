@@ -5,14 +5,15 @@ ms.prod: .net
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 09/22/2017
+ms.topic: article
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: 7f49b19b0836636bf7656dc618ef2f181a0d7fff
-ms.sourcegitcommit: 9a4fe1a1c37b26532654b4bbe22d702237950009
+ms.openlocfilehash: 8ee1918091fe72e8606be6e7503ecd850084a4ba
+ms.sourcegitcommit: 2e8acae16ae802f2d6d04e3ce0a6dbf04e476513
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="inner-loop-development-workflow-for-docker-apps"></a>Docker uygulamaları için iç döngü geliştirme iş akışı
 
@@ -193,7 +194,7 @@ Bu örnekte, bu dosya, iki hizmet tanımlar: web hizmeti (özel hizmeti) ve redi
 
 -   Web hizmeti redis hizmetine bağlama
 
-Redis hizmet kullandığı [son ortak redis görüntü](https://hub.docker.com/_/redis/) Docker hub'a kayıt defterinden çekilen. [redis](http://redis.io/) sunucu tarafı uygulamalar için çok popüler önbellek sistemidir.
+Redis hizmet kullandığı [son ortak redis görüntü](https://hub.docker.com/_/redis/) Docker hub'a kayıt defterinden çekilen. [redis](https://redis.io/) sunucu tarafı uygulamalar için çok popüler önbellek sistemidir.
 
 ### <a name="step-5-build-and-run-your-docker-app"></a>5. adım: Derleme ve Docker uygulamanızı çalıştırma
 

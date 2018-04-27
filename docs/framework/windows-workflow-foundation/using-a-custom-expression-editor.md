@@ -1,30 +1,31 @@
 ---
-title: "Bir özel ifade Düzenleyicisi'ni kullanarak"
-ms.custom: 
+title: Bir özel ifade Düzenleyicisi'ni kullanarak
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 0901b58b-e037-44a8-8281-f6f54361cfca
-caps.latest.revision: "8"
+caps.latest.revision: 8
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 5ae60b8267e60d880ccdc156566b489163d2e686
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 5388ed3f55d97f3282a710ac59fe36cfb32fa49c
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="using-a-custom-expression-editor"></a>Bir özel ifade Düzenleyicisi'ni kullanarak
 Özel ifade Düzenleyicisi düzenleme deneyimi daha zengin ya da daha basit bir ifade sağlamak üzere uygulanabilir. Özel ifade Düzenleyicisi kullanmak isteyebilirsiniz birkaç senaryo vardır:  
   
 -   İçin IntelliSense ve diğer zengin düzenleme rehosted iş akışı Tasarımcısı'nda özellikleri için destek sağlama. Bu işlev sağlanmalıdır varsayılan [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] ifade Düzenleyicisi rehosted uygulamalarda kullanılamaz.  
   
--   Böylece, örneğin, bilgi edinmek için gerekli değildir, iş analisti kullanıcılar için deneyimi düzenleme ifade basitleştirmek için [!INCLUDE[vbprvb](../../../includes/vbprvb-md.md)] veya uğraşmanız [!INCLUDE[vbprvb](../../../includes/vbprvb-md.md)] ifadeler.  
+-   Böylece, örneğin, Visual Basic öğrenme veya Visual Basic ifadelerle Dağıt gerekli değildir, iş analisti kullanıcılar için deneyimi düzenleme ifade basitleştirmek için.  
   
  Bir özel ifade Düzenleyicisi'ni uygulamak için üç temel adımlar gerekir:  
   

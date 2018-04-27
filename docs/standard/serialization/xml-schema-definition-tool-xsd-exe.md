@@ -1,25 +1,25 @@
 ---
-title: "XML şema tanımı Aracı (XSD.exe'nin)"
-ms.custom: 
+title: XML şema tanımı Aracı (XSD.exe'nin)
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: a6e6e65c-347f-4494-9457-653bf29baac2
-caps.latest.revision: 
+caps.latest.revision: 7
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: 0e6407fc8da8695da47165ae0ea2c2c6d863ec23
-ms.sourcegitcommit: 15316053918995cc1380163a7d7e7edd5c44e6d7
+ms.openlocfilehash: 08e612ccc55cf85929d0b16217259d73510bc15e
+ms.sourcegitcommit: 2e8acae16ae802f2d6d04e3ce0a6dbf04e476513
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/19/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="xml-schema-definition-tool-xsdexe"></a>XML şema tanımı Aracı (XSD.exe'nin)
 XML şema tanımı (XSD.exe'nin) aracı XDR, XML ve XSD dosyalarından veya bir çalışma zamanı derleme sınıflarda XML Şeması veya ortak dil çalışma zamanı sınıflar oluşturur.  
@@ -65,7 +65,7 @@ xsd {file.dll | file.exe} [/outputdir:directory] [/type:typename [...]][/paramet
 |------------|-----------------|  
 |**/e**[**öğesine**] **: *** öğesi*|Öğe için kod oluşturmak için şema belirtir. Varsayılan olarak tüm öğeler yazılmalıdır. Bu bağımsız değişken birden çok kez belirtebilirsiniz.|  
 |**/enableDataBinding**|Uygular <xref:System.ComponentModel.INotifyPropertyChanged> veri bağlama etkinleştirmek için oluşturulan tüm türleri arabirimi. Kısa form `/edb`.|  
-|**/enableLinqDataSet**|(Kısa form: `/eld`.) Oluşturulan veri kümesi LINQ to DataSet kullanarak karşı sorgulanabilir belirtir. Bu seçenek /dataset seçeneği de belirtildiğinde kullanılır. Daha fazla bilgi için bkz: [LINQ veri kümesi'ne genel bakış-](../../../docs/framework/data/adonet/linq-to-dataset-overview.md) ve [yazılan veri kümeleri sorgulama](../../../docs/framework/data/adonet/querying-typed-datasets.md). LINQ kullanma hakkında genel bilgi için bkz: [LINQ (dil ile tümleşik sorgu)](http://msdn.microsoft.com/library/a73c4aec-5d15-4e98-b962-1274021ea93d).|  
+|**/enableLinqDataSet**|(Kısa form: `/eld`.) Oluşturulan veri kümesi LINQ to DataSet kullanarak karşı sorgulanabilir belirtir. Bu seçenek /dataset seçeneği de belirtildiğinde kullanılır. Daha fazla bilgi için bkz: [LINQ veri kümesi'ne genel bakış-](../../../docs/framework/data/adonet/linq-to-dataset-overview.md) ve [yazılan veri kümeleri sorgulama](../../../docs/framework/data/adonet/querying-typed-datasets.md). LINQ kullanma hakkında genel bilgi için bkz: [LINQ (dil ile tümleşik sorgu)](https://msdn.microsoft.com/library/a73c4aec-5d15-4e98-b962-1274021ea93d).|  
 |**/f**[**lanları**]|Alanları özellikleri yerine oluşturur. Varsayılan olarak, özellikleri üretilir.|  
 |**/l**[**dil**] **: *** dili*|Kullanmak için programlama dilini belirtir. Aralarından seçim `CS` (C varsayılan değer olan #), `VB` (Visual Basic) `JS` (JScript) veya `VJS` (Visual J#). Ayrıca bir sınıf uygulamak için tam bir ad belirtin<xref:System.CodeDom.Compiler.CodeDomProvider?displayProperty=nameWithType>|  
 |**/n**[**amespace**] **: *** ad alanı*|Oluşturulan türleri için çalışma zamanı ad alanını belirtir. Varsayılan ad alanı `Schemas`.|  
@@ -154,9 +154,9 @@ xsd {file.dll | file.exe} [/outputdir:directory] [/type:typename [...]][/paramet
   
 |Öğe|Açıklama|  
 |-------------|-----------------|  
-|\<element>|Bir öğe için kod oluşturmak üzere .xsd dosyasını belirtir.|  
-|\<schemaImporterExtensions>|Türetilen bir türü belirtiyor. <xref:System.Xml.Serialization.Advanced.SchemaImporterExtension> sınıfı.|  
-|\<schema>|Kodunu oluşturmak için bir XML şema dosyası belirtir.  Birden çok XML şema dosyaları, birden çok kullanılarak belirtilebilir \<şema > öğeleri.|  
+|\<Öğe >|Bir öğe için kod oluşturmak üzere .xsd dosyasını belirtir.|  
+|\<schemaImporterExtensions >|Türetilen bir türü belirtiyor. <xref:System.Xml.Serialization.Advanced.SchemaImporterExtension> sınıfı.|  
+|\<Şema >|Kodunu oluşturmak için bir XML şema dosyası belirtir.  Birden çok XML şema dosyaları, birden çok kullanılarak belirtilebilir \<şema > öğeleri.|  
   
  Aşağıdaki tablo ile de kullanılabilir öznitelikleri gösterir `<generateClasses\>` öğesi.  
   
@@ -180,7 +180,7 @@ xsd {file.dll | file.exe} [/outputdir:directory] [/type:typename [...]][/paramet
   
 |Öğe|Açıklama|  
 |-------------|-----------------|  
-|\<schema>|Kodunu oluşturmak için bir XML şeması dosyasını belirtir. Birden çok XML şema dosyaları, birden çok kullanılarak belirtilebilir \<şema > öğeleri.|  
+|\<Şema >|Kodunu oluşturmak için bir XML şeması dosyasını belirtir. Birden çok XML şema dosyaları, birden çok kullanılarak belirtilebilir \<şema > öğeleri.|  
   
  Aşağıdaki tabloda kullanılabilir öznitelikleri gösterir `<generateDataSet\>` öğesi.  
   
@@ -240,4 +240,4 @@ xsd myAssembly.dll
  [Komut İstemleri](../../../docs/framework/tools/developer-command-prompt-for-vs.md)  
  [LINQ to DataSet Genel Bakış](../../../docs/framework/data/adonet/linq-to-dataset-overview.md)  
  [Türü Belirtilmiş DataSet’leri Sorgulama](../../../docs/framework/data/adonet/querying-typed-datasets.md)  
- [LINQ (dil ile tümleşik sorgu)](http://msdn.microsoft.com/library/a73c4aec-5d15-4e98-b962-1274021ea93d)
+ [LINQ (dil ile tümleşik sorgu)](https://msdn.microsoft.com/library/a73c4aec-5d15-4e98-b962-1274021ea93d)

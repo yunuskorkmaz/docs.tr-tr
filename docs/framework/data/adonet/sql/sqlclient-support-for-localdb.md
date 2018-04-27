@@ -1,30 +1,32 @@
 ---
-title: "Yerel veritabanı SqlClient desteği"
-ms.custom: 
+title: Yerel veritabanı SqlClient desteği
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-ado
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-ado
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: cf796898-5575-46f2-ae6e-21e5aa8c4123
-caps.latest.revision: "14"
+caps.latest.revision: 14
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.workload: dotnet
-ms.openlocfilehash: a3d643ac386aebf51673f937b3f47e73c749b78f
-ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
+ms.workload:
+- dotnet
+ms.openlocfilehash: e2564e49a90a1c8fd9fe2cc000ebf648cf90b4e7
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="sqlclient-support-for-localdb"></a>Yerel veritabanı SqlClient desteği
-' Den başlayarak [!INCLUDE[ssNoVersion](../../../../../includes/ssnoversion-md.md)] kod adı Denali, hafif bir sürümüdür ve [!INCLUDE[ssNoVersion](../../../../../includes/ssnoversion-md.md)], yerel veritabanı olarak adlandırılan, kullanılabilir olacaktır. Bu konuda bir LocalDB veritabanına bağlanmak nasıl ele alınmıştır.  
+SQL Server kod adı Denali başlayarak, SQL Server yerel veritabanı, olarak adlandırılan, basit bir sürümü kullanılabilir. Bu konuda bir LocalDB veritabanına bağlanmak nasıl ele alınmıştır.  
   
 ## <a name="remarks"></a>Açıklamalar  
- Yerel veritabanı yüklemek ve LocalDB örneğinizi yapılandırmak da dahil olmak üzere yerel veritabanı hakkında daha fazla bilgi için bkz: [!INCLUDE[ssNoVersion](../../../../../includes/ssnoversion-md.md)] Books Online.  
+ Yerel veritabanı yüklemek ve LocalDB örneğinizi yapılandırmak da dahil olmak üzere yerel veritabanı hakkında daha fazla bilgi için SQL Server Books Online'a bakın.  
   
  Yerel veritabanı ile neler yapabileceğiniz özetlemek için:  
   
@@ -40,9 +42,9 @@ ms.lasthandoff: 01/17/2018
     server=(localdb)\\myInstance  
     ```  
   
- `User Instance=True`bir LocalDB veritabanına bağlanırken izin verilmiyor.  
+ `User Instance=True` bir LocalDB veritabanına bağlanırken izin verilmiyor.  
   
- Gelen LocalDB indirebilirsiniz [Microsoft SQL Server 2012 Feature Pack](http://www.microsoft.com/download/en/details.aspx?id=29065). Yerel veritabanı örneğinde veri değiştirmek için sqlcmd.exe kullanacaksa, gelen sqlcmd gerekir [!INCLUDE[ssNoVersion](../../../../../includes/ssnoversion-md.md)] nden de edinebilirsiniz 2012 [!INCLUDE[ssNoVersion](../../../../../includes/ssnoversion-md.md)] 2012 özellik paketi.  
+ Gelen LocalDB indirebilirsiniz [Microsoft SQL Server 2012 Feature Pack](http://www.microsoft.com/download/en/details.aspx?id=29065). Yerel veritabanı örneğinde veri değiştirmek için sqlcmd.exe kullanacaksa, SQL Server 2012 özellik Paketi'nden almak SQL Server 2012 sqlcmd gerekir.  
   
 ## <a name="programmatically-create-a-named-instance"></a>Adlandırılmış bir örnek program aracılığıyla oluşturma  
  Bir uygulama, adlandırılmış bir örnek oluşturun ve bir veritabanı gibi belirtin:  

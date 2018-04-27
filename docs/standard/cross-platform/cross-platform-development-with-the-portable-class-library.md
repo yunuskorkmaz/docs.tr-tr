@@ -1,30 +1,30 @@
 ---
-title: "Taşınabilir Sınıf Kitaplığı ile Platformlar Arası Geliştirme"
-ms.custom: 
+title: Taşınabilir Sınıf Kitaplığı ile Platformlar Arası Geliştirme
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology: dotnet-standard
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - Portable Class Library [.NET Framework]
 - targeting multiple platforms
 - multiple platforms, targeting
 ms.assetid: c31e1663-c164-4e65-b66d-d3aa8750a154
-caps.latest.revision: "95"
+caps.latest.revision: 95
 author: mairaw
 ms.author: mairaw
 manager: wpickett
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: ea0a111727093cb65a98e48255b06b3c4516d258
-ms.sourcegitcommit: 91691981897cf8451033cb01071d8f5d94017f97
+ms.openlocfilehash: 4e6b853c3548f27bbb4056f7d59d51a6964e0d91
+ms.sourcegitcommit: 68b60d38043e50104ccc90c76f8599b1ffe18346
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/09/2018
+ms.lasthandoff: 04/20/2018
 ---
 # <a name="cross-platform-development-with-the-portable-class-library"></a>Taşınabilir Sınıf Kitaplığı ile Platformlar Arası Geliştirme
 Visual Studio'da .NET Framework taşınabilir sınıf kitaplığı proje türü, platformlar arası uygulamalar ve Microsoft platformları için kitaplıkları hızla ve kolayca oluşturmanıza yardımcı olur.  
@@ -38,7 +38,7 @@ Visual Studio'da .NET Framework taşınabilir sınıf kitaplığı proje türü,
  Visual Studio ile taşınabilir sınıf kitaplığı geliştirmenize yardımcı olması için şablonlar sağlar. Visual Studio sürümünü kullanmakta olduğunuz bağlı olarak, kullanılabilir şablonlar ve menüleri bu makalede açıklanan kullanılanlardan farklı olabilir.  
   
 > [!WARNING]
->  [Visual Studio 2013 güncelleştirme 2](http://go.microsoft.com/fwlink/p/?LinkId=393658) taşınabilir sınıf kitaplığı şablonları için güncelleştirmeleri içerir. Visual Studio ve aynı bilgisayarda yüklü Visual Studio 2013 önceki bir sürümü varsa ve ardından güncelleştirme 2, değişiklikleri yükleyin **hedef Framework** seçenekler her iki sürümünün de Visual Studio için uygulanır.  
+>  Visual Studio 2013 güncelleştirme 2 taşınabilir sınıf kitaplığı şablonları için güncelleştirmeleri içerir. Visual Studio ve aynı bilgisayarda yüklü Visual Studio 2013 önceki bir sürümü varsa ve ardından güncelleştirme 2, değişiklikleri yükleyin **hedef Framework** seçenekler her iki sürümünün de Visual Studio için uygulanır.  
   
  Bu konuda:  
   
@@ -59,10 +59,10 @@ Visual Studio'da .NET Framework taşınabilir sınıf kitaplığı proje türü,
 |-----------------------|---------------------------------------------------|  
 |Visual Studio 2010 Professional, Premium veya Ultimate|Evet, yüklediğinizde [taşınabilir kitaplık Araçları](https://marketplace.visualstudio.com/items?itemName=BCLTeam.PortableLibraryTools2).|  
 |Visual Studio Express 2010 sürümleri|Hayır.|  
-|Visual Studio 2012 Professional, Premium veya Ultimate|Evet. Telefon desteği için yükleme [Windows Phone SDK 8.0](http://go.microsoft.com/fwlink/?LinkId=265772).|  
+|Visual Studio 2012 Professional, Premium veya Ultimate|Evet. Windows Phone 8.0 desteği yükleme [Windows Phone SDK 8.0](https://www.microsoft.com/download/details.aspx?id=35471).|  
 |Visual Studio Express 2012 sürümleri|Hayır.|  
-|Visual Studio 2013 Professional, Premium veya Ultimate|Evet. Windows Phone 8.1 desteği yükleme [Visual Studio 2013 güncelleştirme 2](http://go.microsoft.com/fwlink/p/?LinkId=393658).|  
-|Windows için Visual Studio Express 2013|Evet, yüklediğinizde [Visual Studio Express en son sürümünü](http://go.microsoft.com/fwlink/p/?LinkId=394629), güncelleştirme 2 içerir veya ekleyin [Visual Studio 2013 güncelleştirme 2](http://go.microsoft.com/fwlink/p/?LinkId=393658).|  
+|Visual Studio 2013 Professional, Premium veya Ultimate|Evet. Windows Phone 8.1 desteği yükleme [Visual Studio 2013'ün en son sürümünü](https://www.visualstudio.com/vs/older-downloads/).|  
+|Windows için Visual Studio Community 2013|Evet, yüklediğinizde [Visual Studio Community 2013 en son sürümünü](https://www.visualstudio.com/vs/older-downloads/), güncelleştirme 2 içerir.|  
   
 <a name="create_pcl"></a>   
 ## <a name="creating-a-portable-class-library-project"></a>Taşınabilir sınıf kitaplığı proje oluşturma  
@@ -152,10 +152,10 @@ Visual Studio 2012'de değişiklik hedefleri iletişim kutusu
   
  ➊ Gerektirir [Microsoft Async](https://www.nuget.org/packages/Microsoft.Bcl.Async/) paketi  
  ➋ Gerektirir [Microsoft Compression](https://www.nuget.org/packages/Microsoft.Bcl.Compression) paketi  
- ➌ Gerektirir [Microsoft HTTP istemci kitaplıkları](http://www.nuget.org/packages/Microsoft.Net.Http) paketi  
+ ➌ Gerektirir [Microsoft HTTP istemci kitaplıkları](https://www.nuget.org/packages/Microsoft.Net.Http) paketi  
   
 > [!WARNING]
->  Başvuru zaman hatalarla karşılaşabilir [Microsoft Compression](https://www.nuget.org/packages/Microsoft.Bcl.Compression) ve [Microsoft HTTP istemci kitaplıkları](http://www.nuget.org/packages/Microsoft.Net.Http) bir Windows Phone Silverlight 8.1 uygulama tarafından kullanılan bir taşınabilir kitaplıktan paketler. Daha fazla bilgi için bkz: [Platform uyumluluğu ve Windows Phone Silverlight 8.1 uygulamaları için önemli değişiklikler](http://go.microsoft.com/fwlink/p/?LinkId=394744).  
+>  Başvuru zaman hatalarla karşılaşabilir [Microsoft Compression](https://www.nuget.org/packages/Microsoft.Bcl.Compression) ve [Microsoft HTTP istemci kitaplıkları](https://www.nuget.org/packages/Microsoft.Net.Http) bir Windows Phone Silverlight 8.1 uygulama tarafından kullanılan bir taşınabilir kitaplıktan paketler. Daha fazla bilgi için bkz: [Platform uyumluluğu ve Windows Phone Silverlight 8.1 uygulamaları için önemli değişiklikler](/previous-versions/windows/apps/dn642084(v=vs.105)).  
   
 <a name="members"></a>   
 ## <a name="supported-types-and-members"></a>Desteklenen türler ve üyeleri  
@@ -197,7 +197,7 @@ Sürüm bilgileri örneği
  Bir Windows mağazası veya Windows Phone Uygulama oluşturduğunuzda, taşınabilir sınıf kitaplığı bütünleştirilmiş koduna başvuruyor, uygulamayı dağıtmak için gereken her şeyi uygulama paketinde bulunan ve başka bir adım gereklidir.  
   
 ### <a name="deploying-a-net-framework-app"></a>Dağıtımı bir .NET Framework uygulama  
- Taşınabilir sınıf kitaplığı derlemeye başvuran bir .NET Framework uygulama dağıttığınızda, .NET Framework'ün doğru sürümünde bir bağımlılık belirtmeniz gerekir. Bu bağımlılığı belirterek, gerekli sürümün uygulamanızla birlikte yüklü olup olmadığını garantiye almış olursunuz. .NET Framework 4 hedef ya da daha sonra bilgisayarda .NET Framework 4 ile olmalıdır bir [güncelleştirme](http://go.microsoft.com/fwlink/?LinkId=210824), .NET Framework 4 veya .NET Framework 4.5 yüklü 4.0.3 güncelleştirin.  
+ Taşınabilir sınıf kitaplığı derlemeye başvuran bir .NET Framework uygulama dağıttığınızda, .NET Framework'ün doğru sürümünde bir bağımlılık belirtmeniz gerekir. Bu bağımlılığı belirterek, gerekli sürümün uygulamanızla birlikte yüklü olup olmadığını garantiye almış olursunuz. .NET Framework 4 hedef ya da daha sonra bilgisayarda .NET Framework 4 ile olmalıdır bir [güncelleştirme](https://www.microsoft.com/download/details.aspx?id=3556), .NET Framework 4 veya .NET Framework 4.5 yüklü 4.0.3 güncelleştirin.  
   
 -   ClickOnce dağıtımı ile bir bağımlılık oluşturmak için: içinde **Çözüm Gezgini**, yayımlamak istediğiniz proje için proje düğümünü seçin. (Taşınabilir sınıf kitaplığı proje başvuru proje budur.) Menü çubuğunda seçin **proje**, **özellikleri**ve ardından **Yayımla** sekmesi. Üzerinde **Yayımla** sayfasında, **Önkoşullar**. Önkoşul olarak gerekli .NET Framework sürümünü (ya da .NET Framework 4 güncellemesini) seçin.  
   
@@ -217,9 +217,9 @@ Sürüm bilgileri örneği
     <param name="background" value="white" />  
     <param name="minRuntimeVersion" value="4.0.60129.0" />  
     <param name="autoUpgrade" value="true" />  
-    <a href="http://go.microsoft.com/fwlink/?LinkID=149156&v=4.0.50826.0"   
+    <a href="https://www.microsoft.com/getsilverlight/get-started/install/"   
              style="text-decoration:none">  
-      <img src=http://go.microsoft.com/fwlink/?LinkId=161376  
+      <img src=http://download.microsoft.com/download/5/1/6/5165823D-1D79-4871-8AC2-42DDDB94A5C2/PNGs/SLMedallion_ENU.png  
              alt="Get Microsoft Silverlight" style="border-style:none"/>  
     </a>  
   </object>  

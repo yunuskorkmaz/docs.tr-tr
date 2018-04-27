@@ -1,22 +1,23 @@
 ---
-title: "Toplama işlemleri (Visual Basic)"
-ms.custom: 
+title: Toplama işlemleri (Visual Basic)
+ms.custom: ''
 ms.date: 07/20/2015
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- devlang-visual-basic
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 0f47e92c-5dd2-4007-baf4-c5fe5dc3b4a8
-caps.latest.revision: "3"
+caps.latest.revision: 3
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: 9d4b07eeb1d09d7db0f75d96629c816f66dbb128
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: e2f4234b9f56794b9bfe6c56029ccc9c00ae0642
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="aggregation-operations-visual-basic"></a>Toplama işlemleri (Visual Basic)
 Bir toplama işlemi, tek bir değer değerler koleksiyonundan hesaplar. Bir toplama işlemi örneği günlük sıcaklık değerler bir ayın eşitleyeceğini gelen ortalama günlük sıcaklık hesaplıyor.  
@@ -29,7 +30,7 @@ Bir toplama işlemi, tek bir değer değerler koleksiyonundan hesaplar. Bir topl
   
 ## <a name="methods"></a>Yöntemler  
   
-|Yöntem adı|Açıklama|Visual Basic sorgu ifade sözdizimi|Daha Fazla Bilgi|  
+|Yöntem adı|Açıklama|Visual Basic sorgu ifade sözdizimi|Daha fazla bilgi|  
 |-----------------|-----------------|------------------------------------------|----------------------|  
 |Toplama|Değerleri bir koleksiyonun bir özel toplama işlemi gerçekleştirir.|Yok.|<xref:System.Linq.Enumerable.Aggregate%2A?displayProperty=nameWithType><br /><br /> <xref:System.Linq.Queryable.Aggregate%2A?displayProperty=nameWithType>|  
 |Ortalama|Değerler koleksiyonu, ortalama değerini hesaplar.|`Aggregate … In … Into Average()`|<xref:System.Linq.Enumerable.Average%2A?displayProperty=nameWithType><br /><br /> <xref:System.Linq.Queryable.Average%2A?displayProperty=nameWithType>|  
@@ -42,12 +43,12 @@ Bir toplama işlemi, tek bir değer değerler koleksiyonundan hesaplar. Bir topl
 ## <a name="query-expression-syntax-examples"></a>Sorgu ifade sözdizimi örnekleri  
   
 ### <a name="average"></a>Ortalama  
- Aşağıdaki kod örneğinde `Aggregate Into Average` yan tümcesinde [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] etme temsil eden sayı dizisi cinsinden ortalama sıcaklığı hesaplamak için.  
+ Aşağıdaki kod örneğinde `Aggregate Into Average` etme temsil eden sayı dizisi cinsinden ortalama sıcaklığı hesaplamak için Visual Basic'te yan tümcesi.  
   
  [!code-vb[CsLINQAggregating#1](../../../../visual-basic/programming-guide/concepts/linq/codesnippet/VisualBasic/aggregation-operations_1.vb)]  
   
 ### <a name="count"></a>Sayısı  
- Aşağıdaki kod örneğinde `Aggregate Into Count` yan tümcesinde [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] 80 eşit veya daha büyük bir dizi değerlerde sayısını.  
+ Aşağıdaki kod örneğinde `Aggregate Into Count` 80 eşit veya daha büyük bir dizi değerlerde saymak için Visual Basic'te yan tümcesi.  
   
  [!code-vb[CsLINQAggregating#2](../../../../visual-basic/programming-guide/concepts/linq/codesnippet/VisualBasic/aggregation-operations_2.vb)]  
   
@@ -74,7 +75,7 @@ Bir toplama işlemi, tek bir değer değerler koleksiyonundan hesaplar. Bir topl
 ## <a name="see-also"></a>Ayrıca Bkz.  
  <xref:System.Linq>  
  [Standart sorgu işleçlerine genel bakış (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/standard-query-operators-overview.md)  
- [AGGREGATE tümcesi](../../../../visual-basic/language-reference/queries/aggregate-clause.md)  
+ [Aggregate Yan Tümcesi](../../../../visual-basic/language-reference/queries/aggregate-clause.md)  
  [Nasıl yapılır: bir CSV metinde dosyasında (LINQ) (Visual Basic) sütun değerlerini hesaplama](../../../../visual-basic/programming-guide/concepts/linq/how-to-compute-column-values-in-a-csv-text-file-linq.md)  
  [Nasıl yapılır: Count, Sum veya Average verisi](../../../../visual-basic/programming-guide/language-features/linq/how-to-count-sum-or-average-data-by-using-linq.md)  
  [Nasıl yapılır: bir sorgu sonucunda en düşük ve en büyük değeri Bul](../../../../visual-basic/programming-guide/language-features/linq/how-to-find-the-minimum-or-maximum-value-in-a-query-result.md)  

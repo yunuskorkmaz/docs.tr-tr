@@ -1,7 +1,7 @@
 ---
-title: "Dayanıklılık ve yüksek kullanılabilirlik mikro"
-description: "Kapsayıcılı .NET uygulamaları için .NET mikro mimarisi | Dayanıklılık ve yüksek kullanılabilirlik mikro"
-keywords: Docker, Microservices, ASP.NET, Container
+title: Dayanıklılık ve yüksek kullanılabilirlik mikro
+description: Kapsayıcılı .NET uygulamaları için .NET mikro mimarisi | Dayanıklılık ve yüksek kullanılabilirlik mikro
+keywords: Docker, mikro, ASP.NET, kapsayıcı
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 05/26/2017
@@ -11,11 +11,11 @@ ms.topic: article
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: cb78e98a01e413f31e6476dac77acdc4e5d4f78d
-ms.sourcegitcommit: c3957fdb990060559d73cca44ab3e2c7b4d049c0
+ms.openlocfilehash: 3ad3fc88a3e857f49283ff596e0385d0daad64b6
+ms.sourcegitcommit: 2e8acae16ae802f2d6d04e3ce0a6dbf04e476513
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/05/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="resiliency-and-high-availability-in-microservices"></a>Dayanıklılık ve yüksek kullanılabilirlik mikro
 
@@ -43,7 +43,7 @@ Günlükleri nasıl bir uygulama veya hizmet, özel durumlar, uyarıları ve bas
 
 Tek yapılı sunucu tabanlı uygulamalar, yalnızca disk (bir günlük dosyası) bir dosyaya günlüklerini yazma ve herhangi bir aracı olarak analiz edin. Uygulamanın yürütülmesini sabit bir sunucu veya VM ile sınırlı olduğundan, bu genellikle olayları akışını çözümlemek için çok karmaşık değil. Ancak, burada bir orchestrator kümedeki birçok düğümleri arasında birden fazla hizmet yürütülen bir dağıtılmış uygulamada dağıtılmış olayları ilişkilendirmenize yapamamasına bir iştir.
 
-Mikro hizmet tabanlı bir uygulama olayları veya logfiles çıkış akışına tek başına depolamak deneyin değil ve merkezi bir yerde olaylara yönlendirme yönetmek bile deneyin. Altında nerede çalıştığına yürütme ortamı altyapısı tarafından toplanacak bir standart çıktı için olay akışı, her işlem yalnızca yazmalısınız anlamı saydam olmalıdır. Bu olay akışı yönlendiriciler örneğidir [Microsoft.Diagnostic.EventFlow](https://github.com/Azure/diagnostics-eventflow), olay akışları birden fazla kaynaktan toplar ve sistemler çıktı için yayımlar. Bunlar bir geliştirme ortamı için basit standart çıktı içerebilir veya Bulut sistemleri ister [Application Insights](https://azure.microsoft.com/services/application-insights/), [OMS](https://github.com/Azure/diagnostics-eventflow#oms-operations-management-suite) (için şirket içi uygulamalar için) ve [Azure tanılama](https://docs.microsoft.com/azure/monitoring-and-diagnostics/azure-diagnostics). Bile, gerçek zamanlı izleme günlükleri gibi ve ayrıca vardır iyi üçüncü taraf günlük analizi platformları ve uyarı, rapor, arayabilirsiniz Araçları [Splunk](http://www.splunk.com/goto/Splunk_Log_Management?ac=ga_usa_log_analysis_phrase_Mar17&_kk=logs%20analysis&gclid=CNzkzIrex9MCFYGHfgodW5YOtA).
+Mikro hizmet tabanlı bir uygulama olayları veya logfiles çıkış akışına tek başına depolamak deneyin değil ve merkezi bir yerde olaylara yönlendirme yönetmek bile deneyin. Altında nerede çalıştığına yürütme ortamı altyapısı tarafından toplanacak bir standart çıktı için olay akışı, her işlem yalnızca yazmalısınız anlamı saydam olmalıdır. Bu olay akışı yönlendiriciler örneğidir [Microsoft.Diagnostic.EventFlow](https://github.com/Azure/diagnostics-eventflow), olay akışları birden fazla kaynaktan toplar ve sistemler çıktı için yayımlar. Bunlar bir geliştirme ortamı için basit standart çıktı içerebilir veya Bulut sistemleri ister [Application Insights](https://azure.microsoft.com/services/application-insights/), [OMS](https://github.com/Azure/diagnostics-eventflow#oms-operations-management-suite) (için şirket içi uygulamalar için) ve [Azure tanılama](https://docs.microsoft.com/azure/monitoring-and-diagnostics/azure-diagnostics). Bile, gerçek zamanlı izleme günlükleri gibi ve ayrıca vardır iyi üçüncü taraf günlük analizi platformları ve uyarı, rapor, arayabilirsiniz Araçları [Splunk](https://www.splunk.com/goto/Splunk_Log_Management?ac=ga_usa_log_analysis_phrase_Mar17&_kk=logs%20analysis&gclid=CNzkzIrex9MCFYGHfgodW5YOtA).
 
 ### <a name="orchestrators-managing-health-and-diagnostics-information"></a>Orchestrators durum ve tanılama bilgilerini yönetme
 
@@ -59,7 +59,7 @@ Farklı orchestrators benzer gibi görünebilir, ancak tanılama ve bunların he
 
 ## <a name="additional-resources"></a>Ek kaynaklar
 
--   **On iki öğeli uygulama. XI. Günlükleri: Günlükleri Olay akışları olarak kabul**
+-   **On iki öğeli uygulama. XI. Günlükleri: günlükleri Olay akışları olarak ele alın.**
     [*https://12factor.net/logs*](https://12factor.net/logs)
 
 -   **Microsoft tanılama EventFlow kitaplığı.** GitHub depo.
@@ -69,16 +69,16 @@ Farklı orchestrators benzer gibi görünebilir, ancak tanılama ve bunların he
 -   **Azure tanılama nedir**
     [*https://docs.microsoft.com/azure/azure-diagnostics*](https://docs.microsoft.com/azure/azure-diagnostics)
 
--   **Windows bilgisayarları Azure günlük analizi hizmeti bağlanmak**
+-   **Windows bilgisayarları Azure günlük analizi hizmetine bağlanın**
     [*https://docs.microsoft.com/azure/log-analytics/log-analytics-windows-agents*](https://docs.microsoft.com/azure/log-analytics/log-analytics-windows-agents)
 
--   **Hangi, ortalama günlük: semantik günlük uygulama bloğu kullanarak**
-    [*https://msdn.microsoft.com/library/dn440729 (v=pandp.60).aspx*](https://msdn.microsoft.com/library/dn440729(v=pandp.60).aspx)
+-   **Hangi, ortalama oturum: semantik günlük uygulama bloğu kullanarak**
+    [*https://msdn.microsoft.com/library/dn440729(v=pandp.60).aspx*](https://msdn.microsoft.com/library/dn440729(v=pandp.60).aspx)
 
 -   **Splunk.** Resmi sitesi.
-    [*http://www.splunk.com*](http://www.splunk.com)
+    [*https://www.splunk.com/*](https://www.splunk.com/)
 
--   **EventSource sınıfı**. Windows (ETW) için izleme olayları için API [ *https://docs.microsoft.com/dotnet/api/system.diagnostics.tracing.eventsource*](xref:System.Diagnostics.Tracing.EventSource)
+-   **EventSource sınıfı**. Windows (ETW) için izleme olayları için API [*https://docs.microsoft.com/dotnet/api/system.diagnostics.tracing.eventsource*](xref:System.Diagnostics.Tracing.EventSource)
 
 
 

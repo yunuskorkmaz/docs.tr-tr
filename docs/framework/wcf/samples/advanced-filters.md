@@ -1,24 +1,26 @@
 ---
-title: "Gelişmiş Filtreler"
-ms.custom: 
+title: Gelişmiş Filtreler
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 8d81590f-e036-4f96-824a-4a187f462764
-caps.latest.revision: "23"
+caps.latest.revision: 23
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 357b57bb39ca31b48d21cb83209a72d0b3d12a62
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: a374765317751a5adc241941a0c0dc613a3ea2cc
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="advanced-filters"></a>Gelişmiş Filtreler
 Bu örnek gösteren bir [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] yönlendirme hizmeti. Yönlendirme hizmeti bir [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] içerik tabanlı yönlendirici uygulamanıza dahil kolaylaştırır bileşeni. Bu örnek standart uyum [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] yönlendirme hizmeti kullanarak iletişim kurmak için hesap makinesi örnek. Bu örnek ileti filtreleri ve İleti Filtresi tabloları kullanılarak içerik tabanlı yönlendirme mantığını tanımlamak üzere nasıl gösterir.  
@@ -60,7 +62,7 @@ XPathMessageFilter xpathFilter = new XPathMessageFilter("/s12:Envelope/s12:Heade
 EndpointNameMessageFilter endpointNameFilter = new EndpointNameMessageFilter("calculatorEndpoint");  
 ```  
   
- Üçüncü filtresi bir <xref:System.ServiceModel.Dispatcher.PrefixEndpointAddressMessageFilter>. Bu uç noktada sağlanan adres ön eki (veya ön bölümü) eşleşen bir adres ile gösterilen herhangi bir iletisi eşleşir. Bu örnekte adres ön eki "http://localhost/routingservice/router/rounding/" tanımlanır. Başka bir deyişle, bu filtre tarafından gönderilen gelen iletiler için "http://localhost/routingservice/router/rounding/ *" eşleştirilir. Bu durumda, adresi "http://localhost/routingservice/router/rounding/calculator" olan yuvarlama hesaplayıcı noktadaki görünmesini iletileri olur.  
+ Üçüncü filtresi bir <xref:System.ServiceModel.Dispatcher.PrefixEndpointAddressMessageFilter>. Bu uç noktada sağlanan adres ön eki (veya ön bölümü) eşleşen bir adres ile gösterilen herhangi bir iletisi eşleşir. Bu örnekte, adres ön eki olarak tanımlanır "http://localhost/routingservice/router/rounding/". Ele alınan tüm gelen iletileri buna "http://localhost/routingservice/router/rounding/*" Bu filtre ile eşleştirilir. Bu durumda, yuvarlama hesaplayıcı noktadaki görünmesini iletileri olan adresini olan "http://localhost/routingservice/router/rounding/calculator".  
   
 ```  
 PrefixEndpointAddressMessageFilter prefixAddressFilter = new PrefixEndpointAddressMessageFilter(new EndpointAddress("http://localhost/routingservice/router/rounding/"));  
@@ -91,7 +93,7 @@ RoundRobinMessageFilter roundRobinFilter2 = new RoundRobinMessageFilter("group1"
   
 2.  Açmak için **Çözüm Gezgini**seçin **Çözüm Gezgini** gelen **Görünüm** menüsü.  
   
-3.  F5 veya CTRL + SHIFT + B tuşuna basın [!INCLUDE[vs_current_short](../../../../includes/vs-current-short-md.md)].  
+3.  Visual Studio'da F5'e veya CTRL + SHIFT + B tuşuna basın.  
   
     1.  Otomatik gerekli projeleri F5 tuşuna bastığınızda başlatılan istediğiniz varsa, çözüme sağ tıklayın ve seçin **özellikleri**. Seçin **başlangıç projesi** düğümü altında **ortak özellikleri** sol bölmede. Seçin **birden fazla başlangıç projesi** radyo düğmesinin ve tüm projeleri için ayarlanmış **Başlat** eylem.  
   

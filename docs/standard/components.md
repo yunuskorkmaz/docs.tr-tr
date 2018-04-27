@@ -1,6 +1,6 @@
 ---
-title: ".NET Mimari Bileşenleri"
-description: ".NET Mimari bileşenleri gibi .NET standart, .NET uygulamaları, .NET çalışma zamanları ve araçları açıklanmaktadır."
+title: .NET Mimari Bileşenleri
+description: .NET Mimari bileşenleri gibi .NET standart, .NET uygulamaları, .NET çalışma zamanları ve araçları açıklanmaktadır.
 author: cartermp
 ms.author: mairaw
 ms.date: 08/23/2017
@@ -10,17 +10,17 @@ ms.technology: dotnet-standard
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: 8a17d4c36d9c1942166b9ad889103a7942f1813d
-ms.sourcegitcommit: 96cc82cac4650adfb65ba351506d8a8fbcd17b5c
+ms.openlocfilehash: 51e6779d63cdaccc5633c9e81f97471d71099653
+ms.sourcegitcommit: 2e8acae16ae802f2d6d04e3ce0a6dbf04e476513
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/19/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="net-architectural-components"></a>.NET Mimari Bileşenleri
 
 .NET uygulaması için geliştirilen ve bir veya daha fazla çalışan *.NET uygulamalarında*.  .NET uygulamaları, .NET Framework, .NET Core ve Mono içerir. Tüm .NET standardını çağırdı .NET uygulamaları için ortak API belirtimine yoktur. Bu makalede her Bu kavramlar kısa bir giriş sağlar.
 
-## <a name="net-standard"></a>.NET Standard
+## <a name="net-standard"></a>.NET standart
 
 .NET standart bir .NET uygulaması temel sınıf kitaplığı tarafından uygulanan API kümesidir. Daha resmi olarak karşı kodunuzu derleyin sözleşmeleri Tekdüzen kümesini oluşturan .NET API'lerini belirtimi değil. Bu sözleşmeler, her .NET uygulamasında uygulanır. Bu, etkili bir şekilde kodunuzun her yerde çalışmasına izin vererek farklı .NET uygulamaları arasında taşınabilirlik sağlar.
 
@@ -61,7 +61,7 @@ Geçmişte, Mono büyük API'si .NET Framework'ün uygulanan ve bazı UNIX üzer
 
 Mono genellikle tam zamanı derleyicisi ile kullanılır, ancak ayrıca iOS gibi platformlarda kullanılan bir tam statik derleyici (biri zamanında tamamlanan derleme) sahiptir.
 
-Mono hakkında daha fazla bilgi için bkz: [Mono belgelerine](http://www.mono-project.com/docs/).
+Mono hakkında daha fazla bilgi için bkz: [Mono belgelerine](https://www.mono-project.com/docs/).
 
 ### <a name="universal-windows-platform-uwp"></a>Evrensel Windows Platformu (UWP)
 
@@ -86,7 +86,7 @@ Kapsamlı birtakım Araçlar ve .NET her bir uygulama ile iş altyapı bileşenl
 - .NET proje sistemini (temel *.csproj*, *.vbproj*, ve *.fsproj* dosyaları)
 - [MSBuild](/visualstudio/msbuild/msbuild), projeler derlemek için kullanılan yapı altyapısı
 - [NuGet](/nuget/), .NET için Microsoft Paket Yöneticisi
-- Açık kaynak yapı düzenleme araçları, gibi [PASTA](http://cakebuild.net/) ve [sahte](https://fake.build/)
+- Açık kaynak yapı düzenleme araçları, gibi [PASTA](https://cakebuild.net/) ve [sahte](https://fake.build/)
 
 ## <a name="see-also"></a>Ayrıca bkz.
 [Sunucu uygulamaları için .NET Core ve .NET Framework arasında seçim yapma](choosing-core-framework-server.md)   

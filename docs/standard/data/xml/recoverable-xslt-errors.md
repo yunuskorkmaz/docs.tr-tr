@@ -1,26 +1,26 @@
 ---
-title: "Kurtarılabilir XSLT hataları"
-ms.custom: 
+title: Kurtarılabilir XSLT hataları
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology: dotnet-standard
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 484929b0-fefb-4629-87ee-ebdde70ff1f8
-caps.latest.revision: "2"
+caps.latest.revision: 2
 author: mairaw
 ms.author: mairaw
 manager: wpickett
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: 4564530cd173793519471c78105d0394595f6d5c
-ms.sourcegitcommit: 91691981897cf8451033cb01071d8f5d94017f97
+ms.openlocfilehash: 70491e86697356766b64a98201b2969883ab7ee4
+ms.sourcegitcommit: 2e8acae16ae802f2d6d04e3ce0a6dbf04e476513
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/09/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="recoverable-xslt-errors"></a>Kurtarılabilir XSLT hataları
 W3C XSL Dönüşümleri (XSLT) sürüm 1.0 öneri uygulama sağlayıcısı bir durumu işlemek nasıl karar verebilir alanları içerir. Bu alanlar isteğe bağlı davranış olduğu kabul edilir. Örneğin, Bölüm 7.3 oluşturma işleme yönergelerde XSLT 1.0 öneri, bir hata içeriğinin başlatmasını varsa bildiren `xsl:processing-instruction` metin düğümleri dışında düğümleri oluşturur. Hatadan kurtarmak işlemci karar verirse ne karar öneri gösterir XSLT 1.0 bazı sorunlar için yapılması gerekir. 7.3 bölümünde verilen sorun için uygulama bu hatadan düğümleri ve bunların içeriği yoksayılıyor kurtarabilirsiniz W3C söyler.  
@@ -32,7 +32,7 @@ W3C XSL Dönüşümleri (XSLT) sürüm 1.0 öneri uygulama sağlayıcısı bir d
   
 -   Bu koşul için bir özel durum tetiklenir hata gösterir.  
   
--   Bölüm başvurular bulunabilir [W3C XSL Dönüşümleri (XSLT) sürüm 1.0 öneri](http://www.w3.org/TR/xslt) ve [W3C XSL Dönüşümleri (XSLT) sürüm 1.0 belirtimi ayrıntıyla açıklayan hata bilgilerini](http://www.w3.org/1999/11/REC-xslt-19991116-errata/).  
+-   Bölüm başvurular bulunabilir [W3C XSL Dönüşümleri (XSLT) sürüm 1.0 öneri](http://www.w3.org/TR/xslt) ve [W3C XSL Dönüşümleri (XSLT) sürüm 1.0 belirtimi ayrıntıyla açıklayan hata bilgilerini](https://www.w3.org/1999/11/REC-xslt-19991116-errata/).  
   
 |XSLT koşulu|Bölüm|XslCompiledTransform davranışı|  
 |--------------------|-------------|-----------------------------------|  
@@ -62,7 +62,7 @@ W3C XSL Dönüşümleri (XSLT) sürüm 1.0 öneri uygulama sağlayıcısı bir d
 |`value` Özniteliği bir `xsl:number` NAN, sonsuz veya daha az 0,5 olup|ayrıntıyla açıklayan hata bilgilerini 24|Kurtarma|  
 |Düğüm kümesi belge işlevi ikinci bağımsız değişkeni boş ve göreli URI başvurudur.|ayrıntıyla açıklayan hata bilgilerini 14|Kurtarma|  
   
- <sup>*</sup>Bu davranış farklı <xref:System.Xml.Xsl.XslTransform> sınıfı. Daha fazla bilgi için bkz: [uygulama, isteğe bağlı davranışları çok sınıfında](../../../../docs/standard/data/xml/implementation-of-discretionary-behaviors-in-the-xsltransform-class.md).  
+ <sup>*</sup> Bu davranış farklı <xref:System.Xml.Xsl.XslTransform> sınıfı. Daha fazla bilgi için bkz: [uygulama, isteğe bağlı davranışları çok sınıfında](../../../../docs/standard/data/xml/implementation-of-discretionary-behaviors-in-the-xsltransform-class.md).  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
  [XSLT Dönüşümleri](../../../../docs/standard/data/xml/xslt-transformations.md)

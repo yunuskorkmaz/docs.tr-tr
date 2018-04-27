@@ -1,12 +1,12 @@
 ---
 title: Zaman uyumsuz dosya t-O
-ms.custom: 
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology: dotnet-standard
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - csharp
@@ -23,18 +23,18 @@ helpviewer_keywords:
 - multiple I/O requests
 - data streams, synchronous streams
 ms.assetid: dbdd55e7-d6b9-4f9e-8abb-ab0edd4457f7
-caps.latest.revision: "23"
+caps.latest.revision: 23
 author: mairaw
 ms.author: mairaw
 manager: wpickett
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: ff9ae65e47a35f4acfade1d06c703f9e1f5f6bee
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: e0c67c9b397dfcd6f6ba947c2876919693c4f472
+ms.sourcegitcommit: 2e8acae16ae802f2d6d04e3ce0a6dbf04e476513
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="asynchronous-file-io"></a>Zaman Uyumsuz Dosya G/Ç
 Zaman uyumsuz işlemler, yoğun kaynak kullanan I/O işlemlerini ana iş parçacığını engellemeden gerçekleştirmenizi sağlar. Bu performans artışı özellikle bir [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)] veya [!INCLUDE[desktop_appname](../../../includes/desktop-appname-md.md)] uygulamasında önemlidir, çünkü UI iş parçacığını engelleyen zaman alan bir işlem uygulamanızın çalışmıyor gibi gözükmesine sebep olabilir.  
@@ -49,7 +49,7 @@ Zaman uyumsuz işlemler, yoğun kaynak kullanan I/O işlemlerini ana iş parçac
   
  Bir zaman uyumsuz yöntemin sonucuna uygulanan `Await` (Visual Basic) veya `await` (C#) işleci.  
   
- Zaman uyumsuz G/Ç işlemlerini uygulamak için, aşağıdaki örneklerde gösterildiği üzere zaman uyumsuz yöntemlerle bu anahtar sözcükleri kullanın. Daha fazla bilgi için bkz: [uyumsuz ve bekleme ile zaman uyumsuz programlama](http://msdn.microsoft.com/library/db854f91-ccef-4035-ae4d-0911fde808c7).  
+ Zaman uyumsuz G/Ç işlemlerini uygulamak için, aşağıdaki örneklerde gösterildiği üzere zaman uyumsuz yöntemlerle bu anahtar sözcükleri kullanın. Daha fazla bilgi için bkz: [uyumsuz ve bekleme ile zaman uyumsuz programlama](https://msdn.microsoft.com/library/db854f91-ccef-4035-ae4d-0911fde808c7).  
   
  Aşağıdaki örnek, dosyaları zaman uyumsuz olarak bir dizinden başka bir dizine kopyalamak için <xref:System.IO.FileStream> nesnelerini nasıl kullanacağınızı gösterir. <xref:System.Web.UI.WebControls.Button.Click> denetimi için <xref:System.Windows.Controls.Button> olay işleyicisinin, zaman uyumsuz bir yöntem çağırdığı için `async` değiştiricisi ile işaretlendiğine dikkat edin.  
   
@@ -71,4 +71,4 @@ Zaman uyumsuz işlemler, yoğun kaynak kullanan I/O işlemlerini ana iş parçac
 ## <a name="see-also"></a>Ayrıca Bkz.  
  <xref:System.IO.Stream>  
  [Dosya ve Akış G/Ç'si](../../../docs/standard/io/index.md)  
- [Async ve Await ile Zaman Uyumsuz Programlama](http://msdn.microsoft.com/library/db854f91-ccef-4035-ae4d-0911fde808c7)
+ [Async ve Await ile Zaman Uyumsuz Programlama](https://msdn.microsoft.com/library/db854f91-ccef-4035-ae4d-0911fde808c7)

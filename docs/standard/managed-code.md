@@ -1,6 +1,6 @@
 ---
-title: "Hangi yönetilen kodu?"
-description: "Yönetilen kod öğrenin, yürütme bir çalışma zamanı tarafından ortak dil çalışma zamanı (CLR) yönetilen kodudur."
+title: Hangi yönetilen kodu?
+description: Yönetilen kod öğrenin, yürütme bir çalışma zamanı tarafından ortak dil çalışma zamanı (CLR) yönetilen kodudur.
 keywords: .NET, .NET core
 author: blackdwarf
 ms.author: mairaw
@@ -13,17 +13,17 @@ ms.assetid: 20bb7ea8-192e-4a96-8ef3-e10e1950fd3d
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: ca2ae076229a1726d3a25a84e358f9cfb623a297
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: 46bbe30f216ba9b0a3bc7f88267c428ec56de614
+ms.sourcegitcommit: 2e8acae16ae802f2d6d04e3ce0a6dbf04e476513
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="what-is-managed-code"></a>Nedir "yönetilen kod"?
 
 .NET Framework ile çalışırken, terimi genellikle karşılaşır "yönetilen kod". Bu belgede, bu terim ne anlama geldiğini ve ek bilgiler çevresinde anlatılmıştır.
 
-Bu çok basitçe, yönetilen kod yalnızca olan:, yürütme çalışma zamanı tarafından yönetilen kod. Bu durumda, söz konusu çalışma zamanı adlı **ortak dil çalışma zamanı** veya uygulamadan bağımsız olarak CLR ([Mono](http://www.mono-project.com/) veya .NET Framework veya .NET Core). CLR yönetilen kod alma, makine koda derleme ve, yürütülmekte sorumlu içindir. En üstünde, çalışma zamanı birkaç sağlayan otomatik bellek yönetimi, güvenlik sınırları gibi önemli hizmetler güvenliği vb. yazın.
+Bu çok basitçe, yönetilen kod yalnızca olan:, yürütme çalışma zamanı tarafından yönetilen kod. Bu durumda, söz konusu çalışma zamanı adlı **ortak dil çalışma zamanı** veya uygulamadan bağımsız olarak CLR ([Mono](https://www.mono-project.com/) veya .NET Framework veya .NET Core). CLR yönetilen kod alma, makine koda derleme ve, yürütülmekte sorumlu içindir. En üstünde, çalışma zamanı birkaç sağlayan otomatik bellek yönetimi, güvenlik sınırları gibi önemli hizmetler güvenliği vb. yazın.
 
 Bunu, "yönetilmeyen kod" olarak da adlandırılan bir C/C++ programı çalıştırılır şekilde karşılaştırın. Yönetilmeyen dünyada Programcı neredeyse her şeyi sorumlu olur. Gerçek program esas olarak, işletim sistemi (OS) belleğe yükleyen ve başlatan bir ikili dosyadır. Bellek yönetimi için güvenlik konuları başka her şey Programcı yükünü olan.
 

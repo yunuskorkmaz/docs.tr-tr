@@ -1,8 +1,9 @@
 ---
-title: "switch anahtar sözcüğü (C# Başvurusu)"
+title: switch anahtar sözcüğü (C# Başvurusu)
 ms.date: 03/07/2017
 ms.prod: .net
-ms.technology: devlang-csharp
+ms.technology:
+- devlang-csharp
 ms.topic: article
 f1_keywords:
 - switch_CSharpKeyword
@@ -15,17 +16,17 @@ helpviewer_keywords:
 - case statement [C#]
 - default keyword [C#]
 ms.assetid: 44bae8b8-8841-4d85-826b-8a94277daecb
-caps.latest.revision: "47"
+caps.latest.revision: 47
 author: BillWagner
 ms.author: wiwagn
-ms.openlocfilehash: 1c345d0c6c935271600a386752e18c19a25cc389
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 6506278edb782f61b83cecfccba3126282c0ecf8
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="switch-c-reference"></a>switch (C# Başvurusu)
-`switch`tek bir seçtiği seçimi açıklamadır *geçiş bölüm* bir desen eşleştirme ile temel adaylar listesinden yürütmek için *ifade ile eşleşen*. 
+`switch` tek bir seçtiği seçimi açıklamadır *geçiş bölüm* bir desen eşleştirme ile temel adaylar listesinden yürütmek için *ifade ile eşleşen*. 
   
  [!code-csharp[switch#1](../../../../samples/snippets/csharp/language-reference/keywords/switch/switch1.cs#1)]  
 
@@ -53,7 +54,7 @@ C# 6'da, aşağıdaki türlerde bir değer döndüren bir ifadeye eşleşme ifad
 - gibi bir integral değeri bir [int](int.md) veya [uzun](long.md).
 - bir [enum](enum.md) değeri.
 
-C# 7 ile başlayan, eşleşme ifadesi herhangi bir null olmayan ifade olabilir.
+C# 7. 0'dan başlayarak, eşleşme ifadesi herhangi bir null olmayan ifade olabilir.
  
 ## <a name="the-switch-section"></a>Anahtar bölümü
  
@@ -91,7 +92,7 @@ Bu gereksinim, genellikle açıkça kullanarak anahtar bölüm çıkılarak kar�
 
  C# 6 yalnızca sabit düzeni destekler ve sabit değerleri yinelenmesinin izin verme olduğundan, birbirini dışlayan değerleri büyük küçük harf etiketleri tanımlamak ve yalnızca bir desen eşleştirme ifadesi eşleştirebilirsiniz. Sonuç olarak, hangi sırayla `case` deyimleri görünür olan önemli.
 
- C# 7, ancak diğer desenleri desteklenmediğinden durum etiketi birbirini dışlayan değerleri tanımlayın olmayan ve birden çok desen eşleştirme ifadesi eşleştirebilirsiniz. Yalnızca ilk eşleştirme deseni içeren anahtar bölüm deyimlerinde çalıştırıldığı için hangi sırayla `case` deyimleri görünür önemlidir şimdi. C#, case deyimi deyimleri eşit olan veya önceki deyimleri kümeleridir anahtar bölüm algılarsa, "anahtar durumu önceki bir örneği tarafından zaten işlendi." bir derleyici hatası, CS8120, oluşturur 
+ C# 7.0, ancak diğer desenleri desteklenmediğinden durum etiketi birbirini dışlayan değerleri tanımlayın olmayan ve birden çok desen eşleştirme ifadesi eşleştirebilirsiniz. Yalnızca ilk eşleştirme deseni içeren anahtar bölüm deyimlerinde çalıştırıldığı için hangi sırayla `case` deyimleri görünür önemlidir şimdi. C#, case deyimi deyimleri eşit olan veya önceki deyimleri kümeleridir anahtar bölüm algılarsa, "anahtar durumu önceki bir örneği tarafından zaten işlendi." bir derleyici hatası, CS8120, oluşturur 
 
  Aşağıdaki örnek gösterilmektedir bir `switch` olmayan-birbirini dışlayan desenleri çeşitli kullanan deyimi. Taşırsanız `case 0:` böylece artık ilk bölümde değil bölüm geçiş `switch` deyimi, C# Derleyici Hatası değeri sıfır olmayan bir tamsayı tanımlanan örnekle olan bir alt tüm tamsayıların olduğundan oluşturur tarafından `case int val` deyimi.
 
@@ -109,9 +110,9 @@ Bu sorunu düzeltin ve iki yoldan biriyle derleyici uyarısı kaldırın:
 
 `default` Durumda herhangi bir sırada görünebilir `switch` deyimi. Kaynak kodu, sırasıyla bağımsız olarak, her zaman son olarak, tüm değerlendirilir `case` etiketleri değerlendirilir.
 
-## <a name="a-namepattern--pattern-matching-with-the-switch-statement"></a><a name="pattern" />Deseni ile eşleşen `switch` deyimi
+## <a name="a-namepattern--pattern-matching-with-the-switch-statement"></a><a name="pattern" /> Deseni ile eşleşen `switch` deyimi
   
-Her `case` deyimi eşleşme ifadesi eşleşirse, yürütülecek içeren kendi anahtar bölüm neden olan bir desen tanımlar. C# ' in tüm sürümleri sabit düzenini destekler. Kalan desenleri, C# 7'den başlayarak desteklenir. 
+Her `case` deyimi eşleşme ifadesi eşleşirse, yürütülecek içeren kendi anahtar bölüm neden olan bir desen tanımlar. C# ' in tüm sürümleri sabit düzenini destekler. Kalan desenleri, C# 7. 0'den başlayarak desteklenir. 
   
 ### <a name="constant-pattern"></a>Sabit düzeni 
 
@@ -159,7 +160,7 @@ Burada *türü* türün adı sonucu *expr* dönüştürülmekte olan ve *varname
 
 - *Expr* türeyen bir tür örneği *türü*. Diğer bir deyişle, sonucunu *expr* örneğine başvurmanıza olabilir *türü*.
 
-- *Expr* bir taban sınıf, derleme zamanı türüne sahip *türü*, ve *expr* olan bir çalışma zamanı türü *türü* veya türetilmiş *türü* . *Derleme zamanı tür* bir değişken değişkenin türü bildiriminde tanımlandığı gibi türüdür. *Çalışma zamanı tür* bir değişken bu değişkenine atanan örnek türüdür.
+- *Expr* bir taban sınıf, derleme zamanı türüne sahip *türü*, ve *expr* olan bir çalışma zamanı türü *türü* veya türetilmiş *türü*. *Derleme zamanı tür* bir değişken değişkenin türü bildiriminde tanımlandığı gibi türüdür. *Çalışma zamanı tür* bir değişken bu değişkenine atanan örnek türüdür.
 
 - *Expr* uygulayan bir tür örneği *türü* arabirimi.
 
@@ -181,7 +182,7 @@ Desen eşleştirme olmadan, bu kod şu şekilde yazılmış olabilir. Bir dönü
 
 ## <a name="the-case-statement-and-the-when-clause"></a>`case` Deyimi ve `when` yan tümcesi
 
-Case deyimleri birbirini dışlayan olması gerekmez çünkü C# 7 ile başlayarak, kullanabilirsiniz eklemek bir `when` ek bir koşul belirtmek için yan tümcesi memnun, doğru olarak değerlendirilecek case deyimi için. `when` Yan tümcesi bir Boole değeri döndürür herhangi bir ifade olabilir. Daha yaygın kullanımları birini `when` yan tümcesi anahtar bölüm bir eşleşme ifadesi değeri olduğunda yürütülmesini engellemek için kullanılan `null`. 
+Case deyimleri birbirini dışlayan olması gerekmez çünkü C# 7.0 ile başlayarak, kullanabilirsiniz eklemek bir `when` ek bir koşul belirtmek için yan tümcesi memnun, doğru olarak değerlendirilecek case deyimi için. `when` Yan tümcesi bir Boole değeri döndürür herhangi bir ifade olabilir. Daha yaygın kullanımları birini `when` yan tümcesi anahtar bölüm bir eşleşme ifadesi değeri olduğunda yürütülmesini engellemek için kullanılan `null`. 
 
  Aşağıdaki örnek, bir taban tanımlar `Shape` sınıfı, bir `Rectangle` öğesinden türetilen sınıf `Shape`ve bir `Square` öğesinden türetilen sınıf `Rectangle`. Kullandığı `when` emin olmak için yan tümcesi `ShowShapeInfo` değerlendirir bir `Rectangle` eşit uzunlukta ve genişliklerini olarak atanan nesne bir `Square` bile değiştirilmediğinden olarak örneği bir `Square` nesnesi. Yöntem bilgileri görüntülemek denemez herhangi bir nesne hakkında `null` veya bir şekil, alan sıfırsa. 
 
@@ -195,10 +196,10 @@ Unutmayın `when` test girişiminde örnek yan tümcesinde olup bir `Shape` nesn
 ## <a name="see-also"></a>Ayrıca Bkz.  
 
  [C# başvurusu](../index.md)  
- [C# programlama kılavuzu](../../programming-guide/index.md)  
- [C# anahtar sözcükleri](index.md)  
+ [C# Programlama Kılavuzu](../../programming-guide/index.md)  
+ [C# Anahtar Sözcükleri](index.md)  
  [if-else](if-else.md)  
- [Desen eşleştirme](../../pattern-matching.md)  
+ [Desen Eşleştirme](../../pattern-matching.md)  
  
 
  

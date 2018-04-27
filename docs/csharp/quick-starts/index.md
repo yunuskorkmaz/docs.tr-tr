@@ -10,19 +10,19 @@ ms.prod: .net
 ms.technology: devlang-csharp
 ms.devlang: csharp
 ms.custom: mvc
-ms.openlocfilehash: 3a76c28e4cc32ab883488ad84df90e6535b583d9
-ms.sourcegitcommit: d2da0142247ef42a219a5d2907f153e62dc6ea0d
+ms.openlocfilehash: 091a9b5cfca1f7d7c303b3961704b8a3bbdf34e2
+ms.sourcegitcommit: 2e8acae16ae802f2d6d04e3ce0a6dbf04e476513
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/01/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="c-quickstarts"></a>C# Quickstarts #
 
 C# Quickstarts hoşgeldiniz. Bunlar tarayıcınızda çalıştırabilirsiniz etkileşimli dersleri başlayın.
 
-İlk dersleri küçük kod parçacıkları C# Kavramları açıklanmaktadır. C# sözdizimi ve dizeler, sayılar ve Boole değerlerini gibi veri türleriyle çalışmak nasıl temel bilgileri öğreneceksiniz. Tüm etkileşimli ve dakika içinde kod yazacaksınız. Bu ilk dersleri programlama veya C# dili önceki olanağıyla varsayalım.
+İlk dersleri küçük kod parçacıkları C# Kavramları açıklanmaktadır. C# sözdizimi ve dizeler, sayılar ve Boole değerlerini gibi veri türleriyle çalışmak nasıl temel bilgileri öğreneceksiniz. Tüm etkileşimli ve olmaları yazma ve kod dakika içinde çalışan. Bu ilk dersleri programlama veya C# dili önceki olanağıyla varsayalım.
 
-Hello World Ders izleyen tüm quickstarts çevrimiçi tarayıcı deneyimi kullanarak kullanılabilir veya kendi geliştirme ortamı. Her Ders sonunda, sonraki hızlı başlangıç çevrimiçi ya da kendi makinede devam etmek isteyip istemediğinize karar verin. Ortamınızın kurulumu ve sonraki hızlı başlangıç makinenizde devam yardımcı olacak bağlantılar bulunur.
+Hello World Ders izleyen tüm quickstarts çevrimiçi tarayıcı deneyimi kullanarak kullanılabilir veya [kendi yerel geliştirme ortamında](local-environment.md). Her hızlı başlangıç sonunda, sonraki hızlı başlangıç çevrimiçi ya da kendi makinede devam etmek isteyip istemediğinize karar verin. Ortamınızın kurulumu ve sonraki hızlı başlangıç makinenizde devam yardımcı olacak bağlantılar bulunur.
 
 ## <a name="hello-worldhello-worldyml"></a>[Merhaba dünya](hello-world.yml)
 
@@ -32,25 +32,25 @@ Hello World Ders izleyen tüm quickstarts çevrimiçi tarayıcı deneyimi kullan
 
 İçinde [C# numaraları](numbers-in-csharp.yml) hızlı başlangıç, nasıl bilgisayarlar numaraları depolamak ve hesaplamalar farklı sayısal türler ile nasıl öğreneceksiniz. Yuvarlama ve C# kullanarak matematiksel hesaplamalar nasıl temel bilgileri öğreneceksiniz. Bu hızlı başlangıç da kullanılabilir [makinenizde yerel olarak çalıştırmak için](numbers-in-csharp-local.md).
 
-Bu Hızlı Başlangıç, bitirdikten varsayar [Merhaba Dünya](hello-world.yml) Öğreticisi.
+Bu Hızlı Başlangıç, bitirdikten varsayar [Merhaba Dünya](hello-world.yml) Ders.
 
 ## <a name="branches-and-loopsbranches-and-loopsyml"></a>[Dal ve döngüler](branches-and-loops.yml)
 
 [Dallar ve döngüler](branches-and-loops.yml) hızlı başlangıç değişkenleri depolanan değerlere göre kod yürütme farklı yolların seçilmesi temelleri öğretir. Nasıl programlar kararları ve farklı eylemler seçin temelini denetim akışı temel bilgileri öğreneceksiniz. Bu hızlı başlangıç da kullanılabilir [makinenizde yerel olarak çalıştırmak için](branches-and-loops-local.md).
 
-Bu başlangıç Ders tamamladıktan olduğunu varsayar [Hello World](hello-world.yml) ve [C# numaraları](numbers-in-csharp.yml) dersleri.
+Bu Hızlı Başlangıç, bitirdikten varsayar [Merhaba Dünya](hello-world.yml) ve [C# numaraları](numbers-in-csharp.yml) dersleri.
 
-## <a name="interpolated-stringsinterpolated-stringsyml"></a>[Ara değerli dizeler](interpolated-strings.yml)
+## <a name="string-interpolationinterpolated-stringsyml"></a>[Dize ilişkilendirme](interpolated-strings.yml)
 
-[Ara değerli dizeler](interpolated-strings.yml) hızlı başlangıç daha büyük bir dizeye bir ifade eklemek nasıl gösterir. Ara değerli bir ifade tanımlama, bir veya daha fazla ara değerli ifadeleri sahip bir ara değerli dize Sonuç dizesini oluşturma ve biçimlendirmeyi, sütun genişliği ve sonuçta dahil ifadeleri hizalamasını denetlemek nasıl öğreneceksiniz dize. 
+[Dize ilişkilendirme](interpolated-strings.yml) hızlı başlangıç değerleri bir dize olarak eklemek nasıl gösterir. Ara değerli bir dize katıştırılmış C# ifadelerle oluşturma ve sonucu dize ifadesi sonuçlarında metin görünümünü denetlemek nasıl öğreneceksiniz. Bu hızlı başlangıç da kullanılabilir [makinenizde yerel olarak çalıştırmak için](interpolated-strings-local.md).
 
-Bu başlangıç Ders tamamladıktan olduğunu varsayar [Hello World](hello-world.yml), [numaraları C#](numbers-in-csharp.yml), ve [dallar ve döngüler](branches-and-loops.yml) dersleri.
+Bu Hızlı Başlangıç, bitirdikten varsayar [Merhaba Dünya](hello-world.yml), [numaraları C#](numbers-in-csharp.yml), ve [dallar ve döngüler](branches-and-loops.yml) dersleri.
 
 ## <a name="list-collectionlist-collectionyml"></a>[Liste koleksiyonu](list-collection.yml)
 
 [Listesinde koleksiyonu](list-collection.yml) Ders veri dizisini depolar liste koleksiyon türü turu sağlar. Ekleme ve öğeleri kaldırma, öğeleri aramak ve listeleri sıralama öğreneceksiniz. Farklı türde listeleri ele alacağız. Bu hızlı başlangıç da kullanılabilir [makinenizde yerel olarak çalıştırmak için](arrays-and-collections.md).
 
-Bu başlangıç hızlı başlangıç, yukarıda listelenen quickstarts bitirdikten varsayar.
+Bu Hızlı Başlangıç, yukarıda listelenen dersleri bitirdikten varsayar.
 
 ## <a name="introduction-to-classesintroduction-to-classesmd"></a>[Sınıflara giriş](introduction-to-classes.md)
 

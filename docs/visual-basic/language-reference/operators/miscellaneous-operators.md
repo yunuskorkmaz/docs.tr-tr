@@ -1,38 +1,39 @@
 ---
-title: "Çeşitli İşleçler (Visual Basic)"
+title: Çeşitli İşleçler (Visual Basic)
 ms.date: 07/20/2015
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- devlang-visual-basic
 ms.topic: article
 helpviewer_keywords:
 - operators [Visual Basic]
 - operators [Visual Basic], miscellaneous
 ms.assetid: 2423b3c5-fc3f-479c-bcd2-2c6ebe92814f
-caps.latest.revision: "17"
+caps.latest.revision: 17
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: 9f1bb3e03bcf20a3be55991e2b16076e1143806e
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.openlocfilehash: 8334292561dbcaa8725631656683bc05d0b443d3
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="miscellaneous-operators-visual-basic"></a>Çeşitli İşleçler (Visual Basic)
-Tanımlanan çeşitli işleçler şunlardır [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)].  
+Visual Basic'te tanımlanmış çeşitli işleçler şunlardır:  
   
- [AddressOf işleci](../../../visual-basic/language-reference/operators/addressof-operator.md)  
+ [AddressOf İşleci](../../../visual-basic/language-reference/operators/addressof-operator.md)  
   
- [Await işleci](../../../visual-basic/language-reference/operators/await-operator.md)  
+ [Await İşleci](../../../visual-basic/language-reference/operators/await-operator.md)  
   
- [GetType işleci](../../../visual-basic/language-reference/operators/gettype-operator.md)  
+ [GetType İşleci](../../../visual-basic/language-reference/operators/gettype-operator.md)  
   
- [İşlev ifadesi](../../../visual-basic/language-reference/operators/function-expression.md)  
+ [İşlev İfadesi](../../../visual-basic/language-reference/operators/function-expression.md)  
   
- [Varsa işleci](../../../visual-basic/language-reference/operators/if-operator.md)  
+ [If İşleci](../../../visual-basic/language-reference/operators/if-operator.md)  
   
- [TypeOf işleci](../../../visual-basic/language-reference/operators/typeof-operator.md)  
+ [TypeOf İşleci](../../../visual-basic/language-reference/operators/typeof-operator.md)  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [İşlevselliğe göre listelenmiş işleçler](../../../visual-basic/language-reference/operators/operators-listed-by-functionality.md)
+ [İşlevselliğe Göre Listelenmiş İşleçler](../../../visual-basic/language-reference/operators/operators-listed-by-functionality.md)

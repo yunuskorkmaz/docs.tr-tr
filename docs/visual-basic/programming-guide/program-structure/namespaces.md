@@ -1,10 +1,10 @@
 ---
-title: "Visual Basic'de Ad Alanları"
-ms.custom: 
+title: Visual Basic'de Ad Alanları
+ms.custom: ''
 ms.date: 07/20/2015
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - devlang-visual-basic
 ms.topic: article
@@ -23,14 +23,14 @@ helpviewer_keywords:
 - naming conventions [Visual Basic], naming conflicts
 - namespaces
 ms.assetid: cffac744-ab8c-4f1f-ba50-732c22ab4b88
-caps.latest.revision: 
+caps.latest.revision: 27
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: c18d0a9abb1d8b9e3e22f3b81bf605fb8ed75cfa
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 0ec038a17b4a6b10dbe339fe33969c4ade57e2a7
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="namespaces-in-visual-basic"></a>Visual Basic'de Ad Alanları
 Ad alanları, bir derlemede tanımlanan nesneleri düzenleyin. Derlemeleri sırayla diğer ad içeren birden çok ad alanları içerebilir. Ad alanları, Karışıklığı önlemek ve nesneleri oluşan büyük gruplar gibi sınıf kitaplıkları kullanırken başvuruları basitleştirin.  
@@ -40,9 +40,9 @@ Ad alanları, bir derlemede tanımlanan nesneleri düzenleyin. Derlemeleri sıra
  [!code-vb[VbVbalrApplication#6](../../../visual-basic/programming-guide/program-structure/codesnippet/VisualBasic/namespaces_1.vb)]  
   
 ## <a name="avoiding-name-collisions"></a>Ad çakışmaları önleme  
- [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)]ad alanları olarak da adlandırılan bir sorun adres *ad alanı kirliliği*, başka bir kitaplıktaki benzer adlarının kullanımını da bir sınıf kitaplığı Geliştirici hampered içinde. Var olan bileşenleri ile bu çakışmaları adlandırılan *ad çakışması*.  
+ [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] ad alanları olarak da adlandırılan bir sorun adres *ad alanı kirliliği*, başka bir kitaplıktaki benzer adlarının kullanımını da bir sınıf kitaplığı Geliştirici hampered içinde. Var olan bileşenleri ile bu çakışmaları adlandırılan *ad çakışması*.  
   
- Adlı yeni bir sınıf oluşturursanız, örneğin, `ListBox`, projenizin niteliğe olmadan içinde kullanın. Ancak, kullanmak istiyorsanız, [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] <xref:System.Windows.Forms.ListBox> sınıfı aynı projede başvuru benzersiz hale getirmek için tam bir başvuru kullanmanız gerekir. Başvuru benzersiz değilse [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] adı belirsiz olduğunu bildiren bir hata oluşturur. Aşağıdaki kod örneği, bu nesnelerin bildirme gösterilmiştir:  
+ Adlı yeni bir sınıf oluşturursanız, örneğin, `ListBox`, projenizin niteliğe olmadan içinde kullanın. Ancak, kullanmak istiyorsanız, [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] <xref:System.Windows.Forms.ListBox> sınıfı aynı projede başvuru benzersiz hale getirmek için tam bir başvuru kullanmanız gerekir. Visual Basic başvurusu benzersiz değilse, adı belirsiz olduğunu bildiren bir hata oluşturur. Aşağıdaki kod örneği, bu nesnelerin bildirme gösterilmiştir:  
   
  [!code-vb[VbVbalrApplication#7](../../../visual-basic/programming-guide/program-structure/codesnippet/VisualBasic/namespaces_2.vb)]  
   
@@ -50,9 +50,9 @@ Ad alanları, bir derlemede tanımlanan nesneleri düzenleyin. Derlemeleri sıra
   
  ![Namespace hiyerarşi](../../../visual-basic/programming-guide/program-structure/media/vanamespacehierarchy.gif "vaNamespaceHierarchy")  
   
- Varsayılan olarak, her yürütülebilir dosya ile oluşturduğunuz [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] projenizi aynı ada sahip bir ad alanı içerir. Örneğin, bir nesne adlı bir projede tanımlarsanız `ListBoxProject`, yürütülebilir dosya ListBoxProject.exe adlı bir ad alanı içeren `ListBoxProject`.  
+ Varsayılan olarak, Visual Basic ile oluşturduğunuz her yürütülebilir dosyayı projenize aynı ada sahip bir ad alanı içerir. Örneğin, bir nesne adlı bir projede tanımlarsanız `ListBoxProject`, yürütülebilir dosya ListBoxProject.exe adlı bir ad alanı içeren `ListBoxProject`.  
   
- Birden çok derleme aynı ad alanını kullanabilirsiniz. [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]bunları adları tek bir dizi değerlendirir. Örneğin, sınıfları adlı bir ad alanı için tanımlayabilirsiniz `SomeNameSpace` adlı bir bütünleştirilmiş `Assemb1`ve aynı ad alanından adlı bir derleme için ek sınıflarını tanımla `Assemb2`.  
+ Birden çok derleme aynı ad alanını kullanabilirsiniz. Visual Basic bunları adları tek bir dizi değerlendirir. Örneğin, sınıfları adlı bir ad alanı için tanımlayabilirsiniz `SomeNameSpace` adlı bir bütünleştirilmiş `Assemb1`ve aynı ad alanından adlı bir derleme için ek sınıflarını tanımla `Assemb2`.  
   
 ## <a name="fully-qualified-names"></a>Tam olarak nitelenmiş adlar  
  Nesne tanımlandığı ad alanı adı ile önek nesne başvuruları tam adlardır. Sınıfının bir başvurusunu oluşturursanız, diğer projelerinde tanımlanmış nesneleri kullanabilirsiniz (seçerek **Başvuru Ekle** gelen **proje** menüsü) ve sonra kodunuzda nesne için tam ad kullanın. Aşağıdaki kod parçası, başka bir projenin ad alanından bir nesne için tam ad kullanmayı gösterir:  
@@ -69,7 +69,7 @@ Ad alanları, bir derlemede tanımlanan nesneleri düzenleyin. Derlemeleri sıra
   
  [!code-vb[VbVbalrApplication#11](../../../visual-basic/programming-guide/program-structure/codesnippet/VisualBasic/namespaces_6.vb)]  
   
- Kullanmayı denerseniz, `Class1` tam, niteleme olmadan [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] adını belirten bir hata üretir `Class1` belirsiz.  
+ Kullanmayı denerseniz, `Class1` tam niteleme olmadan, Visual Basic, bildiren bir hata adı üretir `Class1` belirsiz.  
   
 ## <a name="namespace-level-statements"></a>Namespace düzeyi deyimleri  
  Ad alanı içinde modüller, arabirimleri, sınıflar, temsilciler, numaralandırmalar, yapılar ve diğer ad alanları gibi öğeleri tanımlayabilirsiniz. Özellikler, yordamlar, değişkenler ve ad alanı düzeyinde olayları gibi öğeleri tanımlayamazsınız. Bu öğeler, modüller, yapıları ve sınıfları gibi kapsayıcılarına içinde bildirilmelidir.  
@@ -132,7 +132,7 @@ End Namespace
  <xref:System.Windows.Forms.ListBox>  
  <xref:System.Windows.Forms?displayProperty=nameWithType>  
  [Derlemeler ve Genel Derleme Önbelleği](../../../visual-basic/programming-guide/concepts/assemblies-gac/index.md)  
- [Nasıl yapılır: komut satırını kullanarak derlemeler oluşturma ve kullanma](http://msdn.microsoft.com/library/70f65026-3687-4e9c-ab79-c18b97dd8be4)  
- [References ve Imports deyimi](../../../visual-basic/programming-guide/program-structure/references-and-the-imports-statement.md)  
- [Imports deyimi (.NET Namespace ve türü)](../../../visual-basic/language-reference/statements/imports-statement-net-namespace-and-type.md)  
- [Office çözümlerinde kod yazma](https://msdn.microsoft.com/library/bb608596)
+ [Nasıl yapılır: Komut Satırını Kullanarak Bütünleştirilmiş Kodlar Oluşturma ve Kullanma](http://msdn.microsoft.com/library/70f65026-3687-4e9c-ab79-c18b97dd8be4)  
+ [References ve Imports Deyimi](../../../visual-basic/programming-guide/program-structure/references-and-the-imports-statement.md)  
+ [Imports Deyimi (.NET Ad Alanı ve Türü)](../../../visual-basic/language-reference/statements/imports-statement-net-namespace-and-type.md)  
+ [Office Çözümlerinde Kod Yazma](https://msdn.microsoft.com/library/bb608596)

@@ -1,24 +1,26 @@
 ---
-title: "Sunucusu ve SQL Server veritabanı rolleri"
-ms.custom: 
+title: Sunucusu ve SQL Server veritabanı rolleri
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-ado
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-ado
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 5482dfdb-e498-4614-8652-b174829eed13
-caps.latest.revision: "9"
+caps.latest.revision: 9
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.workload: dotnet
-ms.openlocfilehash: 1a9d8de6b3302684bd8769b7b1baaebedefb649c
-ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
+ms.workload:
+- dotnet
+ms.openlocfilehash: b650c61a8d3d0b457bc9d5232c613d47f36ccbfc
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="server-and-database-roles-in-sql-server"></a>Sunucusu ve SQL Server veritabanı rolleri
 SQL Server'ın tüm sürümleri için tek tek kullanıcılar yerine bir rol veya grup kullanıcıya izinleri atayın izin veren rol tabanlı güvenlik kullanın. Sabit sunucu ve sabit veritabanı rollerinin atanmış izinleri sabit kümesine sahiptir.  
@@ -27,9 +29,9 @@ SQL Server'ın tüm sürümleri için tek tek kullanıcılar yerine bir rol veya
  Sabit sunucu rolleri, izinler ve sunucu çapında kapsam sabit kümesine sahip. SQL Server yönetiminde kullanılmak için tasarlanmıştır ve atanmış izinleri değiştirilemez. Oturum açma bilgileri bir veritabanında bir kullanıcı hesabı olmadan sabit sunucu rollerine atanabilir.  
   
 > [!IMPORTANT]
->  `sysadmin` Sabit sunucu rolünün diğer tüm rolleri kapsar ve sahip sınırsız kapsam. Yüksek oranda güvenilir olmadığı sürece bu role asıl adlar eklemeyin. `sysadmin`Rol üyeleri tüm server veritabanları ve kaynaklar değiştirilemeyen yönetici ayrıcalıklarına sahip.  
+>  `sysadmin` Sabit sunucu rolünün diğer tüm rolleri kapsar ve sahip sınırsız kapsam. Yüksek oranda güvenilir olmadığı sürece bu role asıl adlar eklemeyin. `sysadmin` Rol üyeleri tüm server veritabanları ve kaynaklar değiştirilemeyen yönetici ayrıcalıklarına sahip.  
   
- Sabit sunucu rolleri için kullanıcılar eklediğinizde seçici olun. Örneğin, `bulkadmin` rol herhangi bir yerel dosya içeriğini veri bütünlüğü tehlikeye bir tabloya eklemek için kullanıcılara izin verir. Bkz: [!INCLUDE[ssNoVersion](../../../../../includes/ssnoversion-md.md)] sabit sunucu rolleri ve izinleri tam listesi için Books Online'a.  
+ Sabit sunucu rolleri için kullanıcılar eklediğinizde seçici olun. Örneğin, `bulkadmin` rol herhangi bir yerel dosya içeriğini veri bütünlüğü tehlikeye bir tabloya eklemek için kullanıcılara izin verir. SQL Server Books Online sabit sunucu rolleri ve izinleri tam listesi için bkz.  
   
 ## <a name="fixed-database-roles"></a>Sabit veritabanı rolleri  
  Sabit veritabanı rollerinin izinlerini grupları kolayca yönetmesine olanak tanımak için tasarlanmıştır izinleri önceden tanımlanmış kümesine sahiptir. Üyeleri `db_owner` rol veritabanı üzerinde tüm yapılandırma ve bakım etkinlikleri gerçekleştirebilir.  
@@ -38,8 +40,8 @@ SQL Server'ın tüm sürümleri için tek tek kullanıcılar yerine bir rol veya
   
 |Kaynak|Açıklama|  
 |--------------|-----------------|  
-|[Sunucu düzeyinde rolleri](http://msdn.microsoft.com/library/ms188659.aspx) ve [sabit sunucu rollerinin izinlerini](http://msdn.microsoft.com/library/ms175892.aspx) içinde [!INCLUDE[ssNoVersion](../../../../../includes/ssnoversion-md.md)] Çevrimiçi Kitapları|Sabit sunucu rolleri ve onlarla ilişkili izinleri açıklar [!INCLUDE[ssNoVersion](../../../../../includes/ssnoversion-md.md)].|  
-|[Veritabanı düzeyi rolleri](http://msdn.microsoft.com/library/ms189121.aspx) ve [sabit veritabanı rollerinin izinlerini](http://msdn.microsoft.com/library/ms189612.aspx) içinde [!INCLUDE[ssNoVersion](../../../../../includes/ssnoversion-md.md)] Çevrimiçi Kitapları|Sabit veritabanı rollerinin ve bunlarla ilişkili izinleri açıklar|  
+|[Sunucu düzeyinde rolleri](http://msdn.microsoft.com/library/ms188659.aspx) ve [sabit sunucu rollerinin izinlerini](http://msdn.microsoft.com/library/ms175892.aspx) SQL Server Çevrimiçi Kitapları'nda|Sabit sunucu rolleri ve SQL Server'da ilişkili izinleri açıklar.|  
+|[Veritabanı düzeyi rolleri](http://msdn.microsoft.com/library/ms189121.aspx) ve [sabit veritabanı rollerinin izinlerini](http://msdn.microsoft.com/library/ms189612.aspx) SQL Server Çevrimiçi Kitapları'nda|Sabit veritabanı rollerinin ve bunlarla ilişkili izinleri açıklar|  
   
 ## <a name="database-roles-and-users"></a>Veritabanı rolleri ve kullanıcılar  
  Veritabanı nesneleri ile çalışması için oturum açma bilgileri veritabanı kullanıcı hesaplarına eşlenmesi gerekir. Veritabanı kullanıcıları, veritabanı rolleri için bu rol ile ilişkili tüm izin kümeleri devralma sonra eklenebilir. Tüm izinler verilebilir.  
@@ -53,7 +55,7 @@ SQL Server'ın tüm sürümleri için tek tek kullanıcılar yerine bir rol veya
  `dbo`, Veya veritabanı sahibi, kapsanan veritabanında tüm etkinlikleri gerçekleştirmek için izinlere bir kullanıcı hesabıdır. Üyeleri `sysadmin` sabit sunucu rolü için otomatik olarak eşlendi `dbo`.  
   
 > [!NOTE]
->  `dbo`Ayrıca bir şema anlatıldığı gibi adıdır [sahipliği ve SQL Server'daki kullanıcı şema ayrımı](../../../../../docs/framework/data/adonet/sql/ownership-and-user-schema-separation-in-sql-server.md).  
+>  `dbo` Ayrıca bir şema anlatıldığı gibi adıdır [sahipliği ve SQL Server'daki kullanıcı şema ayrımı](../../../../../docs/framework/data/adonet/sql/ownership-and-user-schema-separation-in-sql-server.md).  
   
  `dbo` Kullanıcı hesabı ile kafası sık `db_owner` sabit veritabanı rolü. Kapsamı `db_owner` bir veritabanı; kapsamını `sysadmin` tüm sunucusudur. Üyelik `db_owner` rol confer değil `dbo` kullanıcı ayrıcalıkları.  
   
@@ -70,7 +72,7 @@ SQL Server'ın tüm sürümleri için tek tek kullanıcılar yerine bir rol veya
 |Kaynak|Açıklama|  
 |--------------|-----------------|  
 |[Kimlik ve erişim denetimi](http://msdn.microsoft.com/library/bb510418.aspx) SQL Server Çevrimiçi Kitapları'nda|İlkeleri, roller, kimlik bilgileri, güvenliği sağlanabilir öğelerle ve izinleri açıklayan konulara bağlantılar içerir.|  
-|[Asıl adlar](http://msdn.microsoft.com/library/ms181127.aspx) içinde [!INCLUDE[ssNoVersion](../../../../../includes/ssnoversion-md.md)] Çevrimiçi Kitapları|Asıl adlar açıklar ve sunucu ve veritabanı rolleri açıklayan konulara bağlantılar içerir.|  
+|[Asıl adlar](http://msdn.microsoft.com/library/ms181127.aspx) SQL Server Çevrimiçi Kitapları'nda|Asıl adlar açıklar ve sunucu ve veritabanı rolleri açıklayan konulara bağlantılar içerir.|  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
  [ADO.NET Uygulamalarının Güvenliğini Sağlama](../../../../../docs/framework/data/adonet/securing-ado-net-applications.md)  

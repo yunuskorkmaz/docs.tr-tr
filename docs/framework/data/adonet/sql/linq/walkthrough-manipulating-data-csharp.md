@@ -1,24 +1,26 @@
 ---
-title: "İzlenecek yol: Verileri (C#) düzenleme"
-ms.custom: 
+title: 'İzlenecek yol: Verileri (C#) düzenleme'
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-ado
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-ado
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 24adfbe0-0ad6-449f-997d-8808e0770d2e
-caps.latest.revision: "2"
+caps.latest.revision: 2
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.workload: dotnet
-ms.openlocfilehash: 60724967cccd1209aeec1bf53b4e6d4fa5051996
-ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
+ms.workload:
+- dotnet
+ms.openlocfilehash: d1851bd4c358b96cc9b49f274b31f5f69d9b8d7b
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="walkthrough-manipulating-data-c"></a>İzlenecek yol: Verileri (C#) düzenleme
 Bu kılavuz bir temel uçtan uca sağlar [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] senaryosu ekleme, değiştirme ve bir veritabanındaki verileri silme. Bir müşteri ekleyin, bir müşterinin adını değiştirin ve sipariş silmek için örnek Northwind veritabanının bir kopyasını kullanır.  
@@ -47,7 +49,7 @@ Bu kılavuz bir temel uçtan uca sağlar [!INCLUDE[vbtecdlinq](../../../../../..
 ## <a name="overview"></a>Genel Bakış  
  Bu kılavuz altı ana görevden oluşur:  
   
--   Oluşturma [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] çözümde [!INCLUDE[vs_current_short](../../../../../../includes/vs-current-short-md.md)].  
+-   Oluşturma [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] Visual Studio'da çözüm.  
   
 -   Veritabanı kod dosyası projesine ekleniyor.  
   
@@ -60,11 +62,11 @@ Bu kılavuz bir temel uçtan uca sağlar [!INCLUDE[vbtecdlinq](../../../../../..
 -   Bu değişiklikler Northwind veritabanına gönderiliyor.  
   
 ## <a name="creating-a-linq-to-sql-solution"></a>Bir LINQ to SQL çözümü oluşturma  
- Bu ilk görevde oluşturduğunuz bir [!INCLUDE[vs_current_short](../../../../../../includes/vs-current-short-md.md)] derlemek ve çalıştırmak için gerekli başvuruları içeren çözüm bir [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] projesi.  
+ Bu ilk görevde oluşturduğunuz derlemek ve çalıştırmak için gerekli başvuruları içeren bir Visual Studio çözümü bir [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] projesi.  
   
 #### <a name="to-create-a-linq-to-sql-solution"></a>Bir LINQ to SQL çözümü oluşturmak için  
   
-1.  Üzerinde [!INCLUDE[vs_current_short](../../../../../../includes/vs-current-short-md.md)] **dosya** menüsündeki **yeni**ve ardından **proje**.  
+1.  Visual Studio üzerinde **dosya** menüsündeki **yeni**ve ardından **proje**.  
   
 2.  İçinde **proje türleri** bölmesinde **yeni proje** iletişim kutusu, tıklatın **Visual C#**.  
   
@@ -115,7 +117,7 @@ Bu kılavuz bir temel uçtan uca sağlar [!INCLUDE[vbtecdlinq](../../../../../..
   
      A **konsol** penceresi açılır.  
   
-     Enter tuşuna basarak uygulamanın kapatabilirsiniz **konsol** penceresinde veya tıklatarak **durdurma hata ayıklama** üzerinde [!INCLUDE[vs_current_short](../../../../../../includes/vs-current-short-md.md)] **hata ayıklama** menüsü.  
+     Enter tuşuna basarak uygulamanın kapatabilirsiniz **konsol** penceresinde veya tıklatarak **durdurma hata ayıklama** Visual Studio üzerinde **hata ayıklama** menüsü.  
   
 ## <a name="creating-a-new-entity"></a>Yeni bir varlık oluşturma  
  Yeni bir varlık oluşturma basittir. Nesne oluşturma (gibi `Customer`) kullanarak `new` anahtar sözcüğü.  

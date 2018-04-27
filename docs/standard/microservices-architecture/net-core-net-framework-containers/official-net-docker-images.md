@@ -1,7 +1,7 @@
 ---
-title: "Resmi .NET Docker görüntüleri"
-description: "Kapsayıcılı .NET uygulamaları için .NET mikro mimarisi | Resmi .NET Docker görüntüleri"
-keywords: "Docker, mikro, ASP.NET, kapsayıcı"
+title: Resmi .NET Docker görüntüleri
+description: Kapsayıcılı .NET uygulamaları için .NET mikro mimarisi | Resmi .NET Docker görüntüleri
+keywords: Docker, mikro, ASP.NET, kapsayıcı
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 10/18/2017
@@ -11,11 +11,11 @@ ms.topic: article
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: 42872caa1a9306187daeefd35feb9bec3fae60af
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: adbe63a2d2f93819b5b29c6dd8d8089cd35ad2f3
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="official-net-docker-images"></a>Resmi .NET Docker görüntüleri
 
@@ -41,7 +41,7 @@ Neden birden fazla görüntü? Geliştirme, derleme ve kapsayıcılı uygulamala
 
 ### <a name="during-development-and-build"></a>Geliştirme ve derleme sırasında
 
-Geliştirme sırasında ne kadar hızlı değişiklikler ve değişiklikleri hata ayıklama özelliği yineleyebilirsiniz önemli olan ' dir. Görüntü boyutunu kodunuzda değişiklikler yapmak ve değişiklikleri hızlıca görmek yeteneği gibi önemli değildir. Bazı araçlar ve "yapı aracısı kapsayıcıları" geliştirme sırasında ASP.NET Core görüntü (aspnetcore/microsoft-derleme) geliştirme kullanabilir ve işlem oluşturma. Docker kapsayıcısı içindeki oluştururken, önemli yönlerinden uygulamanızı derlemek için gereken öğelerdir. Bu derleyici ve içerir herhangi diğer .NET bağımlılıkları yanı sıra web geliştirme bağımlılıkları gibi npm, Gulp, Bower.
+Geliştirme sırasında ne kadar hızlı değişiklikler ve değişiklikleri hata ayıklama özelliği yineleyebilirsiniz önemli olan ' dir. Görüntü boyutunu kodunuzda değişiklikler yapmak ve değişiklikleri hızlıca görmek yeteneği gibi önemli değildir. Bazı araçlar ve "yapı aracısı kapsayıcıları" geliştirme sırasında ASP.NET Core görüntü (aspnetcore/microsoft-derleme) geliştirme kullanabilir ve derleme işlemi. Docker kapsayıcısı içindeki oluştururken, önemli yönlerinden uygulamanızı derlemek için gereken öğelerdir. Bu derleyici ve içerir herhangi diğer .NET bağımlılıkları yanı sıra web geliştirme bağımlılıkları gibi npm, Gulp, Bower.
 
 Bu tür yapı görüntü neden önemlidir? Bu görüntü üretime dağıtmayın. Bunun yerine, bir üretim görüntüsüne yerleştirdiğiniz içeriği oluşturmak için kullandığınız bir görüntüdür. Bu görüntü, sürekli tümleştirme (CI) ortamında veya yapı ortamında kullanılır. Örneğin, (örneğin, bir VM) tüm uygulama bağımlılıklarını doğrudan bir yapı aracısında el ile yükleme yerine ana bilgisayar, derleme aracısı .NET Core yapı görüntü uygulama oluşturmak için gerekli tüm bağımlılıkları olan örneği. Derleme aracınızı, yalnızca bu Docker görüntü çalıştırma bilmesi gerekir. Bu, CI ortamınızı basitleştirir ve çok daha tahmin edilebilir hale getirir.
 

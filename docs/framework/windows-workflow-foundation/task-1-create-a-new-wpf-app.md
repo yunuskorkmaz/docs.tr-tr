@@ -1,30 +1,31 @@
 ---
-title: "Görev 1: yeni bir Windows Presentation Foundation uygulaması oluşturma"
-ms.custom: 
+title: 'Görev 1: yeni bir Windows Presentation Foundation uygulaması oluşturma'
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 270eaeba-9492-4532-af9f-403ce5c9935b
-caps.latest.revision: "14"
+caps.latest.revision: 14
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: a207b09ff7124bb161678627f365a6fa4021a38d
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: cd21013331e19fa9e18ad7cbee0a7bb07abaf3d2
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="task-1-create-a-new-windows-presentation-foundation-application"></a>Görev 1: yeni bir Windows Presentation Foundation uygulaması oluşturma
-Bu görevde, boş bir oluşturacak [!INCLUDE[avalon1](../../../includes/avalon1-md.md)] WPF uygulaması Visual Studio şablonunu kullanarak uygulama ve uygun başvurular ekleyin [!INCLUDE[netfx_current_short](../../../includes/netfx-current-short-md.md)] iş akışı derlemeler.  
+Bu görevde, WPF uygulaması Visual Studio şablonu kullanarak boş bir Windows Presentation Foundation (WPF) uygulaması oluşturacak ve uygun başvurular ekleyin [!INCLUDE[netfx_current_short](../../../includes/netfx-current-short-md.md)] iş akışı derlemeler.  
   
 ### <a name="to-create-the-wpf-application-project"></a>WPF uygulaması projesi oluşturmak için  
   
-1.  Açık [!INCLUDE[vs_current_short](../../../includes/vs-current-short-md.md)] ve **dosya** menüsündeki **yeni**ve ardından **proje**.  
+1.  Visual Studio'yu açın ve **dosya** menüsündeki **yeni**ve ardından **proje**.  
   
 2.  İçinde **yeni proje** iletişim kutusunda, şunlardan birini seçin **Visual C#** veya **Visual Basic** gelen **yüklü şablonlar** sol tarafındaki bölmesi bir kutu. Tercih ettiğiniz dili görünmüyorsa arayın **diğer diller**.  
   
@@ -36,7 +37,7 @@ Bu görevde, boş bir oluşturacak [!INCLUDE[avalon1](../../../includes/avalon1-
   
 6.  Çözüm adı ayarlamak **RehostingTheDesigner**.  
   
-7.  Tıklatın **Tamam** uygulama projesi oluşturmak için. [!INCLUDE[vs_current_short](../../../includes/vs-current-short-md.md)]Uygulamanız için temel bir WPF UI oluşturur ve uygun XAML ve arka plan kodu dosyalarını içerir.  
+7.  Tıklatın **Tamam** uygulama projesi oluşturmak için. Visual Studio, uygulamanız için temel bir WPF UI oluşturur ve uygun XAML ve arka plan kodu dosyalarını içerir.  
   
 8.  Başvurular ekleyin **WorkflowModel** derlemeler. Bunu yapmak için **Çözüm Gezgini**, sağ **HostingApplication** proje ve seçin **Başvuru Ekle**.  
   

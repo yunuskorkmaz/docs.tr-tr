@@ -1,24 +1,26 @@
 ---
-title: "SQL Server'da güvenli dinamik SQL yazma"
-ms.custom: 
+title: SQL Server'da güvenli dinamik SQL yazma
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-ado
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-ado
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: df5512b0-c249-40d2-82f9-f9a2ce6665bc
-caps.latest.revision: "9"
+caps.latest.revision: 9
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.workload: dotnet
-ms.openlocfilehash: 41c396bf2101e54adb1608f938c702ff7663cb1d
-ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
+ms.workload:
+- dotnet
+ms.openlocfilehash: 5fdf41353e1772eab46e2e6b8f16ad7bfdf7a72f
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="writing-secure-dynamic-sql-in-sql-server"></a>SQL Server'da güvenli dinamik SQL yazma
 SQL ekleme olarak Transact-SQL deyimi geçerli giriş yerine kötü niyetli bir kullanıcının girdiği işlemidir. Giriş doğrulamasından geçmeden doğrudan sunucuya geçirilir ve uygulama yanlışlıkla eklenen kod yürütülürse, saldırı zarar veya verilere zarar olasılığı vardır.  
@@ -68,7 +70,7 @@ SQL ekleme olarak Transact-SQL deyimi geçerli giriş yerine kötü niyetli bir 
  Bir sertifika ile imzalanmış bir saklı yordam yürütüldüğünde, sertifika kullanıcıya verilen izinler bu çağrıyı ile birleştirilir. Yürütme bağlamı aynı kalır; Sertifikayı arayan kullanıcını değil. Saklı yordamlar imzalama uygulamak için birkaç adımı gerektirir. Yordam değiştirildiğinde, her zaman yeniden imzalanmış olmalıdır.  
   
 ### <a name="cross-database-access"></a>Veritabanı erişimi arası  
- Veritabanları arası sahiplik zincirleme dinamik olarak oluşturulan SQL deyimlerini yürütüldüğü durumlarda çalışmaz. Bu geçici çözüm [!INCLUDE[ssNoVersion](../../../../../includes/ssnoversion-md.md)] başka bir veritabanındaki verilere erişen bir saklı yordam oluşturarak ve yordam her iki veritabanlarınızda var olan bir sertifika ile imzalama. Bu kullanıcılar veritabanı erişimi ya da izin vermeden yordamı tarafından kullanılan veritabanı kaynaklarına erişmenizi sağlar.  
+ Veritabanları arası sahiplik zincirleme dinamik olarak oluşturulan SQL deyimlerini yürütüldüğü durumlarda çalışmaz. Başka bir veritabanındaki verilere erişen bir saklı yordam oluşturarak ve her iki veritabanlarınızda var olan bir sertifika ile yordamı imzalama SQL Server'da bu sorunu çalışabilir. Bu kullanıcılar veritabanı erişimi ya da izin vermeden yordamı tarafından kullanılan veritabanı kaynaklarına erişmenizi sağlar.  
   
 ## <a name="external-resources"></a>Dış Kaynaklar  
  Daha fazla bilgi için aşağıdaki kaynaklara bakın.  

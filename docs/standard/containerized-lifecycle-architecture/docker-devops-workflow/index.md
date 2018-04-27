@@ -5,14 +5,15 @@ ms.prod: .net
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 09/22/2017
+ms.topic: article
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: 13f279b371bc5212a4ce9a171d37316c5e6efb77
-ms.sourcegitcommit: 9a4fe1a1c37b26532654b4bbe22d702237950009
+ms.openlocfilehash: bde96fd6348cf651dcca988eb546549fedf4df85
+ms.sourcegitcommit: 2e8acae16ae802f2d6d04e3ce0a6dbf04e476513
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="docker-application-devops-workflow-with-microsoft-tools"></a>Microsoft araçları ile docker uygulama DevOps iş akışı
 
@@ -32,7 +33,7 @@ Kapsayıcılı uygulama geliştirme karmaşıklığını sürekli olarak iş kar
 
 -   Visual Studio Team Services yapı ardışık düzeninize bir parçası olarak otomatikleştirilmiş testleri çalıştırma.
 
--   Visual Studio Team Services sıkılaştırabilirsiniz DevOps yaşam döngüsü üretim ortamları için değil, ancak ayrıca test, birden çok ortamlara teslimin A dahil olmak üzere / B deneme, [yalancı sürümleri](http://martinfowler.com/bliki/CanaryRelease.html)ve benzeri.
+-   Visual Studio Team Services sıkılaştırabilirsiniz DevOps yaşam döngüsü üretim ortamları için değil, ancak ayrıca test, birden çok ortamlara teslimin A dahil olmak üzere / B deneme, [yalancı sürümleri](https://martinfowler.com/bliki/CanaryRelease.html)ve benzeri.
 
 -   Kuruluşlar kolayca hazırlayabilirsiniz Docker kapsayıcıları (veri, PaaS, vb.) Azure bileşenleri bağımlılıkları yanı sıra Azure kapsayıcı kayıt defterinde depolanan özel görüntülerden oldukları zaten araçlarıyla Azure Resource Manager şablonları kullanma rahat çalışma.
 

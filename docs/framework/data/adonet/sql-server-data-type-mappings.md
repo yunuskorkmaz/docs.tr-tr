@@ -1,26 +1,26 @@
 ---
-title: "SQL Server veri türü eşlemeleri"
-ms.custom: 
+title: SQL Server veri türü eşlemeleri
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - dotnet-ado
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: fafdc31a-f435-4cd3-883f-1dfadd971277
-caps.latest.revision: 
+caps.latest.revision: 8
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload:
 - dotnet
-ms.openlocfilehash: 812b953935d17320d83e3752d8c7fd600af15533
-ms.sourcegitcommit: c3957fdb990060559d73cca44ab3e2c7b4d049c0
+ms.openlocfilehash: e1af00ba0a1f631868711f191c028a04c5e0441a
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/05/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="sql-server-data-type-mappings"></a>SQL Server veri türü eşlemeleri
 SQL Server ve .NET Framework farklı tür sistemlerde temel alır. Örneğin, .NET Framework <xref:System.Decimal> yapısının 28, en fazla ölçeğini kullanırken SQL Server ondalık ve sayısal veri türleri 38 maksimum ölçeğini vardır. Veri, okuma ve yazma, veri bütünlüğünü sağlamak için <xref:System.Data.SqlClient.SqlDataReader> çıkarır SQL Server'a özel yazılan nesnelerin dönüş erişimci yöntemleri <xref:System.Data.SqlTypes> .NET Framework dönüş erişimci yöntemleri yanı sıra türleri. SQL Server türleri ve .NET Framework türleri de temsil ettiği numaralandırmalara <xref:System.Data.DbType> ve <xref:System.Data.SqlDbType> belirtirken kullanabileceğiniz sınıfları <xref:System.Data.SqlClient.SqlParameter> veri türleri.  
@@ -60,13 +60,13 @@ SQL Server ve .NET Framework farklı tür sistemlerde temel alır. Örneğin, .N
 |uniqueidentifier|Guid|<xref:System.Data.SqlDbType.UniqueIdentifier>|<xref:System.Data.SqlClient.SqlDataReader.GetSqlGuid%2A>|<xref:System.Data.DbType.Guid>|<xref:System.Data.SqlClient.SqlDataReader.GetGuid%2A>|  
 |varbinary|Byte]|<xref:System.Data.SqlDbType.VarBinary>|<xref:System.Data.SqlClient.SqlDataReader.GetSqlBinary%2A>|<xref:System.Data.DbType.Binary>|<xref:System.Data.SqlClient.SqlDataReader.GetBytes%2A>|  
 |varchar|Dize<br /><br /> Char]|<xref:System.Data.SqlDbType.VarChar>|<xref:System.Data.SqlClient.SqlDataReader.GetSqlString%2A>|<xref:System.Data.DbType.AnsiString>, <xref:System.Data.DbType.String>|<xref:System.Data.SqlClient.SqlDataReader.GetString%2A><br /><br /> <xref:System.Data.SqlClient.SqlDataReader.GetChars%2A>|  
-|xml|Xml|<xref:System.Data.SqlDbType.Xml>|<xref:System.Data.SqlClient.SqlDataReader.GetSqlXml%2A>|<xref:System.Data.DbType.Xml>|yok|  
+|XML|Xml|<xref:System.Data.SqlDbType.Xml>|<xref:System.Data.SqlClient.SqlDataReader.GetSqlXml%2A>|<xref:System.Data.DbType.Xml>|yok|  
   
 <sup>1</sup> , ayarlayamazsınız `DbType` özelliği bir `SqlParameter` için `SqlDbType.Date`.  
 <sup>2</sup> temel alınan türü biliyorsanız, belirli bir yazılı erişimci kullanmak `sql_variant`.  
   
-## <a name="includessnoversionincludesssnoversion-mdmd-books-online-reference"></a>[!INCLUDE[ssNoVersion](../../../../includes/ssnoversion-md.md)] Books Online başvurusu  
- Hakkında daha fazla bilgi için [!INCLUDE[ssNoVersion](../../../../includes/ssnoversion-md.md)] veri türlerini görmek [veri türleri (veritabanı altyapısı)](http://go.microsoft.com/fwlink/?LinkID=107468).  
+## <a name="sql-server-books-online-reference"></a>SQL Server Kitapları Çevrimiçi başvurusu  
+ SQL Server veri türleri hakkında daha fazla bilgi için bkz: [veri türleri (veritabanı altyapısı)](http://go.microsoft.com/fwlink/?LinkID=107468).  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
  [SQL Server Veri Türleri ve ADO.NET](../../../../docs/framework/data/adonet/sql/sql-server-data-types.md)  

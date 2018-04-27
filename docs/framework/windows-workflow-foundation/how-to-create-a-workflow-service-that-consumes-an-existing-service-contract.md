@@ -1,33 +1,34 @@
 ---
-title: "Nasıl yapılır: varolan bir hizmet sözleşmesini tüketen bir iş akışı hizmeti oluşturma"
-ms.custom: 
+title: 'Nasıl yapılır: varolan bir hizmet sözleşmesini tüketen bir iş akışı hizmeti oluşturma'
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 11d11b59-acc4-48bf-8e4b-e97b516aa0a9
-caps.latest.revision: "5"
+caps.latest.revision: 5
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: a754875dc3f7968086f4f92044205b8ebceb01e2
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 09c3f7656284dd73dd5f50c4ef9f77cd5adcbfe7
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="how-to-create-a-workflow-service-that-consumes-an-existing-service-contract"></a>Nasıl yapılır: varolan bir hizmet sözleşmesini tüketen bir iş akışı hizmeti oluşturma
-[!INCLUDE[net_v45](../../../includes/net-v45-md.md)]özellikleri daha iyi web hizmetleri ve iş akışları sözleşme ilk iş akışı geliştirme biçiminde arasında tümleştirme. Sözleşme ilk iş akışı geliştirme aracı kod sözleşmede ilk tasarlamanızı sağlar. Araç ardından otomatik olarak bir etkinlik şablonu sözleşmesindeki işlemleri için araç kutusu oluşturur.  
+[!INCLUDE[net_v45](../../../includes/net-v45-md.md)] özellikleri daha iyi web hizmetleri ve iş akışları sözleşme ilk iş akışı geliştirme biçiminde arasında tümleştirme. Sözleşme ilk iş akışı geliştirme aracı kod sözleşmede ilk tasarlamanızı sağlar. Araç ardından otomatik olarak bir etkinlik şablonu sözleşmesindeki işlemleri için araç kutusu oluşturur.  
   
 > [!NOTE]
->  Bu konu, bir sözleşme ilk iş akışı hizmeti oluşturma ile ilgili adım adım yönergeler sağlar. [!INCLUDE[crabout](../../../includes/crabout-md.md)]önce anlaşma iş akışı hizmeti geliştirme bkz [sözleşme ilk iş akışı hizmeti geliştirme](../../../docs/framework/windows-workflow-foundation/contract-first-workflow-service-development.md).  
+>  Bu konu, bir sözleşme ilk iş akışı hizmeti oluşturma ile ilgili adım adım yönergeler sağlar. [!INCLUDE[crabout](../../../includes/crabout-md.md)] önce anlaşma iş akışı hizmeti geliştirme bkz [sözleşme ilk iş akışı hizmeti geliştirme](../../../docs/framework/windows-workflow-foundation/contract-first-workflow-service-development.md).  
   
 ### <a name="creating-the-workflow-project"></a>İş akışı projesi oluşturma  
   
-1.  İçinde [!INCLUDE[vs_current_short](../../../includes/vs-current-short-md.md)]seçin **dosya**, **yeni proje**. Seçin **WCF** düğümü altında **C#** düğümünde **şablonları** ağacı ve seçin **WCF iş akışı hizmeti uygulaması** şablonu.  
+1.  Visual Studio'da seçin **dosya**, **yeni proje**. Seçin **WCF** düğümü altında **C#** düğümünde **şablonları** ağacı ve seçin **WCF iş akışı hizmeti uygulaması** şablonu.  
   
 2.  Yeni proje adı `ContractFirst` tıklatıp **Tamam**.  
   

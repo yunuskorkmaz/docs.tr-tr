@@ -1,7 +1,7 @@
 ---
 title: İstemci tarafı doğrulama (sunu katmanlarında doğrulama)
 description: Kapsayıcılı .NET uygulamaları için .NET mikro mimarisi | İstemci tarafı doğrulama (sunu katmanlarında doğrulama)
-keywords: Docker, Microservices, ASP.NET, Container
+keywords: Docker, mikro, ASP.NET, kapsayıcı
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 05/26/2017
@@ -11,11 +11,11 @@ ms.topic: article
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: 273aa0a8ceb7f683999f1074faae0a6aa303f9be
-ms.sourcegitcommit: c883637b41ee028786edceece4fa872939d2e64c
+ms.openlocfilehash: 2057609c7f5c26668eac49cecce522135545e7dd
+ms.sourcegitcommit: 2e8acae16ae802f2d6d04e3ce0a6dbf04e476513
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/26/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="client-side-validation-validation-in-the-presentation-layers"></a>İstemci tarafı doğrulama (sunu katmanlarında doğrulama)
 
@@ -48,14 +48,14 @@ Bu nedenle, istemci-tarafı kodu, genellikle ViewModels doğrulayın. İstemci d
 
 ### <a name="validation-in-spa-web-apps-angular-2-typescript-javascript"></a>SPA doğrulama Web uygulamaları (Açısal 2, TypeScript, JavaScript)
 
--   **Ado Kukic. Açısal 2 Form doğrulama** **
+-   **ADO Kukic. Açısal 2 Form doğrulama** **
     **[*https://scotch.io/tutorials/angular-2-form-validation*](https://scotch.io/tutorials/angular-2-form-validation)
 
 -   **Form doğrulama**
     [*https://angular.io/docs/ts/latest/cookbook/form-validation.html*](https://angular.io/docs/ts/latest/cookbook/form-validation.html)
 
 -   **Doğrulama.** Kolay belgeleri.
-    [*http://breeze.github.io/doc-js/validation.html*](http://breeze.github.io/doc-js/validation.html)
+    [*https://breeze.github.io/doc-js/validation.html*](https://breeze.github.io/doc-js/validation.html)
 
 Özet olarak, doğrulama gelince en önemli kavramları şunlardır:
 

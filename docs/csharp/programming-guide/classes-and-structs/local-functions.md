@@ -1,5 +1,5 @@
 ---
-title: "Yerel işlevler (C# programlama Kılavuzu)"
+title: Yerel işlevler (C# programlama Kılavuzu)
 ms.date: 06/14/2017
 ms.prod: .net
 ms.technology:
@@ -9,15 +9,15 @@ helpviewer_keywords:
 - local functions [C#]
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 2b4e95d48e451038f0f7004d0901f329b2c57fe5
-ms.sourcegitcommit: 7e99f66ef09d2903e22c789c67ff5a10aa953b2f
+ms.openlocfilehash: ac18aa57f443f28f55779ff9c92a5349b9b39fd7
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/18/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="local-functions-c-programming-guide"></a>Yerel işlevler (C# programlama Kılavuzu)
 
-C# 7, C# destekler'ile başlayan *yerel işlevler*. Başka bir üye iç içe geçmiş özel bir tür yöntemlerinin yerel işlevlerdir. Kendi içeren üyeden yalnızca çağrılabilir. Yerel işlevler içinde bildirilen ve çağrılır:
+C# 7.0, C# destekler'ile başlayan *yerel işlevler*. Başka bir üye iç içe geçmiş özel bir tür yöntemlerinin yerel işlevlerdir. Kendi içeren üyeden yalnızca çağrılabilir. Yerel işlevler içinde bildirilen ve çağrılır:
 
 - Yöntemleri, özellikle Yineleyici ve zaman uyumsuz yöntemleri
 - Oluşturucular
@@ -82,4 +82,4 @@ Aşağıdaki örnek adlı zaman uyumsuz bir yöntem kullanır `GetMultipleAsync`
 [!code-csharp[LocalFunctionAsync`](../../../../samples/snippets/csharp/programming-guide/classes-and-structs/local-functions-async2.cs)] 
 
 ## <a name="see-also"></a>Ayrıca bkz.
-[Yöntemleri](methods.md)
+[Yöntemler](methods.md)

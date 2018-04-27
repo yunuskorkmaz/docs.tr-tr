@@ -1,12 +1,13 @@
 ---
-title: "SqlMetal.exe (Kod Üretme Aracı)"
-ms.custom: 
+title: SqlMetal.exe (Kod Üretme Aracı)
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - SQLMetal [LINQ to SQL]
@@ -16,16 +17,17 @@ helpviewer_keywords:
 - LINQ to SQL, DBML files
 - LINQ to SQL, SQLMetal
 ms.assetid: 819e5a96-7646-4fdb-b14b-fe31221b0614
-caps.latest.revision: "43"
+caps.latest.revision: 43
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: c14c01c670eccbc7f13210d3c0bb7df7bec07679
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 5c21c08cf76143959d11498594fbc94fb1dac55c
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="sqlmetalexe-code-generation-tool"></a>SqlMetal.exe (Kod Üretme Aracı)
 Kod ve eşleme için SqlMetal komut satırı aracı oluşturur [!INCLUDE[vbtecdlinq](../../../includes/vbtecdlinq-md.md)] bileşenini [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)]. Bu konunun ilerisinde görünen seçenekleri uygulayarak, SqlMetal'den aşağıdakileri içeren çeşitli farklı eylemler gerçekleştirmesini isteyebilirsiniz:  
@@ -103,13 +105,13 @@ sqlmetal [options] [<input file>]
   
 -   Kod çıktı dosyası oluşturma.  
   
-     Komut satırı seçeneklerini kullanarak, üretebilir [!INCLUDE[vbprvb](../../../includes/vbprvb-md.md)] veya C# kaynak kodu veya bir XML eşleme dosyası oluşturabilirsiniz.  
+     Uygun komut satırı seçeneklerini kullanarak, Visual Basic veya C# kaynak kodu oluşturabilir veya bir XML eşleme dosyası üretebilir.  
   
  Meta verileri bir .mdf dosyasından ayıklamak için, .mdf dosyası adını tüm diğer seçeneklerden sonra belirtmeniz gerekir.  
   
  Öyle değilse **/Server** belirtilirse, **localhost/sqlexpress** varsayılır.  
   
- [!INCLUDE[sqprsqext](../../../includes/sqprsqext-md.md)]bir veya daha fazla aşağıdaki koşullar doğruysa, bir özel durum oluşturur:  
+ [!INCLUDE[sqprsqext](../../../includes/sqprsqext-md.md)] bir veya daha fazla aşağıdaki koşullar doğruysa, bir özel durum oluşturur:  
   
 -   SqlMetal, kendi kendini çağıran bir saklı yordam ayıklamaya çalışır.  
   

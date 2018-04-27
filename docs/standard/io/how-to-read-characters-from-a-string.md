@@ -1,12 +1,12 @@
 ---
-title: "Nasıl yapılır: Dizeden Karakterleri Okuma"
-ms.custom: 
+title: 'Nasıl yapılır: Dizeden Karakterleri Okuma'
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology: dotnet-standard
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - csharp
@@ -19,18 +19,18 @@ helpviewer_keywords:
 - reading data, strings
 - streams, reading characters from string
 ms.assetid: 27ea5e52-6db8-42d8-980a-50bcfc7fd270
-caps.latest.revision: "13"
+caps.latest.revision: 13
 author: mairaw
 ms.author: mairaw
 manager: wpickett
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: b8c41350431f49b638c4353e68c9bacded947a1d
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.openlocfilehash: c4023d8e801da542414aac1fddaf7aef5bf1e98f
+ms.sourcegitcommit: 2e8acae16ae802f2d6d04e3ce0a6dbf04e476513
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="how-to-read-characters-from-a-string"></a>Nasıl yapılır: Dizeden Karakterleri Okuma
 Aşağıdaki kod örnekleri, bir dizeden karakterleri zaman uyumlu ve zaman uyumsuz olarak okumak gösterilmektedir.  
@@ -52,7 +52,7 @@ Aşağıdaki kod örnekleri, bir dizeden karakterleri zaman uyumlu ve zaman uyum
  <xref:System.IO.StringReader>  
  <xref:System.IO.StringReader.Read%2A?displayProperty=nameWithType>  
  [Zaman Uyumsuz Dosya G/Ç](../../../docs/standard/io/asynchronous-file-i-o.md)  
- [NIB: Nasıl yapılır: bir dizin listesi oluşturma](http://msdn.microsoft.com/library/4d2772b1-b991-4532-a8a6-6ef733277e69)  
+ [NIB: Nasıl yapılır: bir dizin listesi oluşturma](https://msdn.microsoft.com/library/4d2772b1-b991-4532-a8a6-6ef733277e69)  
  [Nasıl yapılır: Yeni Oluşturulan bir Veri Dosyasını Okuma ve Dosyaya Yazma](../../../docs/standard/io/how-to-read-and-write-to-a-newly-created-data-file.md)  
  [Nasıl yapılır: Günlük Dosyasını Açma ve Sonuna Ekleme](../../../docs/standard/io/how-to-open-and-append-to-a-log-file.md)  
  [Nasıl yapılır: Dosyadan Metin Okuma](../../../docs/standard/io/how-to-read-text-from-a-file.md)  

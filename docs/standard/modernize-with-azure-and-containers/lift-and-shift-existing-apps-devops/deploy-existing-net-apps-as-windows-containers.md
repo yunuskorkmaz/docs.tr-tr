@@ -1,18 +1,19 @@
 ---
-title: "Windows kapsayıcılar olarak var olan .NET uygulamalarını dağıtma"
-description: "Kapsayıcılı .NET uygulamaları için .NET mikro mimarisi | Windows kapsayıcılar olarak var olan .NET uygulamalarını dağıtma"
+title: Windows kapsayıcılar olarak var olan .NET uygulamalarını dağıtma
+description: Kapsayıcılı .NET uygulamaları için .NET mikro mimarisi | Windows kapsayıcılar olarak var olan .NET uygulamalarını dağıtma
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 10/26/2017
 ms.prod: .net
+ms.topic: article
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: bab6e275c93d2cedddf010ab20f98cb8392fa9fa
-ms.sourcegitcommit: d3cfda0943364aaf6ccd574f55f584576c8a4fee
+ms.openlocfilehash: 6c70e30c10674c086e6ad880b97151ae1918ed87
+ms.sourcegitcommit: 2e8acae16ae802f2d6d04e3ce0a6dbf04e476513
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/08/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="deploy-existing-net-apps-as-windows-containers"></a>Windows kapsayıcılar olarak var olan .NET uygulamalarını dağıtma
 
@@ -98,15 +99,15 @@ Görüntü adı Dockerfile dosyanızı eklediğinizde, .NET Framework tabanlı W
 
 > | **Etiket** | **Sistemi ve sürümü** |
 > |---|---|
-> | **microsoft/dotnet-framework:4.x-windowsservercore** | .NET framework 4.x Windows Sunucu Çekirdeği |
-> | **microsoft/aspnet:4.x-windowsservercore** | .NET framework 4.x ile Windows Server Core üzerinde ek ASP.NET özelleştirme |
+> | **Microsoft/dotnet-framework:4.x-windowsservercore** | .NET framework 4.x Windows Sunucu Çekirdeği |
+> | **aspnet:4.x/Microsoft-windowsservercore** | .NET framework 4.x ile Windows Server Core üzerinde ek ASP.NET özelleştirme |
 
 .NET Core (platformlar arası Linux ve Windows için) etiketleri şöyle olabilir:
 
 > | **Etiket** | **Sistemi ve sürümü**
 > |---|---|
-> | **microsoft/dotnet:2.0.0-runtime** | .NET core 2.0 Linux'ta salt çalışma zamanı |
-> | **microsoft/dotnet:2.0.0-runtime-nanoserver** | .NET core 2.0 Windows Nano Server salt çalışma zamanı |
+> | **Microsoft/dotnet:2.0.0-Runtime** | .NET core 2.0 Linux'ta salt çalışma zamanı |
+> | **Microsoft/dotnet:2.0.0-Runtime-nanoserver** | .NET core 2.0 Windows Nano Server salt çalışma zamanı |
 
 ### <a name="multi-arch-images"></a>Birden çok yay görüntüleri
 

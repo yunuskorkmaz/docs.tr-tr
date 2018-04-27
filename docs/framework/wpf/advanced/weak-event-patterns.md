@@ -1,34 +1,36 @@
 ---
-title: "Zayıf Olay Desenleri"
-ms.custom: 
+title: Zayıf Olay Desenleri
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-wpf
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-wpf
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - weak event pattern implementation [WPF]
 - event handlers [WPF], weak event pattern
 - IWeakEventListener interface [WPF]
 ms.assetid: e7c62920-4812-4811-94d8-050a65c856f6
-caps.latest.revision: "18"
+caps.latest.revision: 18
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 21a36797f945f37a641e7002bbb9937a664650fd
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: f96327f8eaad36f3faebf48db083125816589821
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="weak-event-patterns"></a>Zayıf Olay Desenleri
-Uygulamalarda, olay kaynaklarına bağlı işleyicileri işleyici kaynağına eklenen dinleyici nesne birlikte yok edilmeyecek olduğunu mümkündür. Bu durum bellek sızıntıları yol açabilir. [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]belirli olaylar için ayrılmış yönetici sınıfı sağlayarak ve bu olay için dinleyiciler üzerinde arabirimi uygulama bu sorunu gidermek için kullanılan bir tasarım desenini tanıtır. Bu tasarım deseni olarak bilinen *zayıf olay deseni*.  
+Uygulamalarda, olay kaynaklarına bağlı işleyicileri işleyici kaynağına eklenen dinleyici nesne birlikte yok edilmeyecek olduğunu mümkündür. Bu durum bellek sızıntıları yol açabilir. [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] belirli olaylar için ayrılmış yönetici sınıfı sağlayarak ve bu olay için dinleyiciler üzerinde arabirimi uygulama bu sorunu gidermek için kullanılan bir tasarım desenini tanıtır. Bu tasarım deseni olarak bilinen *zayıf olay deseni*.  
   
 ## <a name="why-implement-the-weak-event-pattern"></a>Neden zayıf olay deseni uygulansın mı?  
- Olayları dinleme bellek sızıntıları yol açabilir. Bir olayı dinlemek için tipik teknik kaynak üzerinde bir olay işleyici iliştirir dile özgü sözdizimi kullanmaktır. Örneğin, [!INCLUDE[TLA#tla_cshrp](../../../../includes/tlasharptla-cshrp-md.md)], o sözdizimi şöyledir: `source.SomeEvent += new SomeEventHandler(MyEventHandler)`.  
+ Olayları dinleme bellek sızıntıları yol açabilir. Bir olayı dinlemek için tipik teknik kaynak üzerinde bir olay işleyici iliştirir dile özgü sözdizimi kullanmaktır. Örneğin, C# ' ta o sözdizimi şöyledir: `source.SomeEvent += new SomeEventHandler(MyEventHandler)`.  
   
  Bu teknik güçlü bir başvuru olay kaynağından olay dinleyicisi oluşturur. Normalde, olay işleyicisi için bir dinleyici ekleme (olay işleyicisi açıkça kaldırılmadığı sürece), kaynak nesne ömrü tarafından etkileyen bir nesne ömrü dinleyici neden olur. Ancak bazı durumlarda olup şu anda görsel ağaç uygulamanın ve kaynak ömrü tarafından ait olduğu gibi diğer faktörler tarafından denetlenmesi için dinleyici nesne ömrü isteyebilirsiniz. Kaynak nesne ömrü dinleyici nesne ömrü genişletir olduğunda, normal olay deseni bir bellek sızıntısı müşteri adayları: dinleyici istenenden daha uzun süre Canlı tutulur.  
   

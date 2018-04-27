@@ -1,7 +1,7 @@
 ---
-title: ".NET ve Docker giriş"
+title: .NET ve Docker giriş
 description: Anlama Docker ve .NET Core
-keywords: .NET, .NET Core, Docker
+keywords: .NET, .NET core, Docker
 author: jralexander
 ms.author: johalex
 ms.date: 11/06/2017
@@ -14,11 +14,11 @@ manager: wpickett
 ms.custom: mvc
 ms.workload:
 - dotnetcore
-ms.openlocfilehash: dabc7c0c4a0afab8edf7d2bab410bb9635821936
-ms.sourcegitcommit: 75a180acb5d8a2dbd4a52915ce8e980749fb1d05
+ms.openlocfilehash: 75c631cf0abac543889cb7387f6fc3fdb2624512
+ms.sourcegitcommit: 68b60d38043e50104ccc90c76f8599b1ffe18346
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/24/2018
+ms.lasthandoff: 04/20/2018
 ---
 # <a name="introduction-to-net-and-docker"></a>.NET ve Docker giriş
 
@@ -105,15 +105,15 @@ Bu depodaki çeşitli .NET Framework Docker yapılandırmaları gösteren örnek
 
 **.NET framework 4.7**
 
-[Dotnet-framework: 4.7 örnek](https://github.com/Microsoft/dotnet-framework-docker-samples/tree/master/dotnetapp-4.7) temel "hello world" kullanımını gösteren [.NET Framework 4.7](../../framework/whats-new/index.md#v47). Size nasıl derleme ve güvenmek uygulama dağıtma gösterir [.NET Framework 4.7 docker görüntü](https://github.com/Microsoft/dotnet-framework-docker/blob/master/4.7/Dockerfile).
+[Dotnet-framework: 4.7 örnek](https://github.com/Microsoft/dotnet-framework-docker-samples/tree/master/dotnetapp-4.7) temel "hello world" kullanımını gösteren [.NET Framework 4.7](../../framework/whats-new/index.md#v47). Size nasıl derleme ve güvenmek uygulama dağıtma gösterir [.NET Framework 4.7 docker görüntü](https://github.com/Microsoft/dotnet-framework-docker-samples/blob/master/dotnetapp-4.7/Dockerfile).
 
-**.NET Framework 4.6.2**
+**.NET framework 4.6.2**
 
-[Dotnet-framework: 4.6.2 örnek](https://github.com/Microsoft/dotnet-framework-docker-samples/tree/master/dotnetapp-4.6.2) temel "hello world" kullanımını gösteren [.NET Framework 4.6.2](../../framework/whats-new/index.md#v462). Size nasıl derleme ve güvenmek uygulama dağıtma gösterir [.NET Framework 4.6.2 docker görüntü](https://github.com/Microsoft/dotnet-framework-docker/tree/master/4.6.2).
+[Dotnet-framework: 4.6.2 örnek](https://github.com/Microsoft/dotnet-framework-docker-samples/tree/master/dotnetapp-4.6.2) temel "hello world" kullanımını gösteren [.NET Framework 4.6.2](../../framework/whats-new/index.md#v462). Size nasıl derleme ve güvenmek uygulama dağıtma gösterir [.NET Framework 4.6.2 docker görüntü](https://github.com/Microsoft/dotnet-framework-docker-samples/blob/master/dotnetapp-4.6.2/Dockerfile).
 
-**.NET Framework 3.5**
+**.NET framework 3.5**
 
- [Dotnet-framework: 3.5 örnek](https://github.com/Microsoft/dotnet-framework-docker-samples/tree/master/dotnetapp-3.5) temel "hello world" kullanımını gösteren [.NET Framework 3.5](https://github.com/Microsoft/dotnet-framework-docker/tree/master/3.5). Size nasıl derleme ve .NET Framework 3. 5'Docker ' bağlı olan bir proje dağıtma gösterir.
+ [Dotnet-framework: 3.5 örnek](https://github.com/Microsoft/dotnet-framework-docker-samples/tree/master/dotnetapp-3.5) temel "hello world" kullanımını gösteren [.NET Framework 3.5](https://github.com/Microsoft/dotnet-framework-docker-samples/blob/master/dotnetapp-3.5/dotnetapp-3.5/Dockerfile). Size nasıl derleme ve .NET Framework 3. 5'Docker ' bağlı olan bir proje dağıtma gösterir.
 
 #### <a name="aspnet-core"></a>ASP.NET Core
 
@@ -133,7 +133,7 @@ Bu depodaki çeşitli .NET Framework Docker yapılandırmaları gösteren örnek
 
 * [Windows Communication Framework (WCF) DockerHub görüntülerinde](https://hub.docker.com/r/microsoft/wcf/)
 
-* [Windows Communication Framework (WCF) görüntüleri github'da](https://github.com/microsoft/iis-docker)
+* [Windows Communication Framework (WCF) görüntüleri github'da](https://github.com/microsoft/wcf-docker)
 
 * [Tam .NET Framework 4.6.2 kullanarak Windows Communication Framework (WCF) Docker örnekleri](https://github.com/Microsoft/wcf-docker-samples)
 
@@ -141,7 +141,7 @@ Bu depodaki çeşitli .NET Framework Docker yapılandırmaları gösteren örnek
 
 * [Internet Information Server (IIS) DockerHub görüntülerinde](https://hub.docker.com/r/microsoft/iis/)
 
-* [Github'da Internet Information Server (IIS) görüntüleri](https://github.com/microsoft/wcf-docker)
+* [Github'da Internet Information Server (IIS) görüntüleri](https://github.com/microsoft/iis-docker)
 
 ### <a name="interact-with-other-microsoft-stack-container-images"></a>Diğer Microsoft yığın kapsayıcı görüntüleri ile etkileşim
 
@@ -149,9 +149,7 @@ Bu depodaki çeşitli .NET Framework Docker yapılandırmaları gösteren örnek
 
 * [Linux 2017 kapsayıcı görüntüsü için Microsoft SQL Server ile Docker Quickstart çalıştırın](https://docs.microsoft.com/sql/linux/quickstart-install-connect-docker)
 
-* [Microsoft SQL Server DockerHub Linux görüntülerinde için](https://hub.docker.com/r/microsoft/mssql-server-windows/)
-
-* [DockerHub Windows kapsayıcıları için Microsoft SQL Server görüntülerinde](https://hub.docker.com/r/microsoft/mssql-server-windows/)
+* [Microsoft SQL Server DockerHub Linux görüntülerinde için](https://hub.docker.com/r/microsoft/mssql-server-linux/)
 
 * [Microsoft SQL Server Express Edition görüntüleri DockerHub üzerinde Windows kapsayıcıları için](https://hub.docker.com/r/microsoft/mssql-server-windows-express/)
 
@@ -165,9 +163,9 @@ Bu depodaki çeşitli .NET Framework Docker yapılandırmaları gösteren örnek
 
 #### <a name="operations-management-suite-oms-linux-agent"></a>Operations Management Suite (OMS) Linux Aracısı
 
-* [Operations Management Suite (OMS) Linux Aracısı genel bakış](https://github.com/Microsoft/OMS-Agent-for-Linux/blob/master/docs/Docker-Instructions.md#overview)
+* [Operations Management Suite (OMS) Linux Aracısı genel bakış](https://github.com/Microsoft/OMS-Agent-for-Linux/blob/master/docs/Docker-Instructions.md)
 
-* [Operations Management Suite (OMS) DockerHub görüntülerinde](https://hub.docker.com/r/microsoft/vsts-agent/)
+* [Operations Management Suite (OMS) DockerHub görüntülerinde](https://hub.docker.com/r/microsoft/oms/)
 
 * [Operations Management Suite (OMS) görüntüleri github'da](https://github.com/Microsoft/OMS-docker)
 
@@ -175,7 +173,7 @@ Bu depodaki çeşitli .NET Framework Docker yapılandırmaları gösteren örnek
 
 * [DockerHub görüntülerinde Microsoft Azure komut satırı arabirimi (CLI)](https://hub.docker.com/r/microsoft/azure-cli/) 
 
-* [GitHub görüntülerinde Microsoft Azure komut satırı arabirimi (CLI)](https://github.com/Microsoft/OMS-docker)
+* [GitHub görüntülerinde Microsoft Azure komut satırı arabirimi (CLI)](https://github.com/Azure/azure-cli#Docker)
 
 > [!NOTE]
 > Bir Azure aboneliğiniz yoksa [bugün kaydolun](https://azure.microsoft.com/free/?b=16.48) Ücretsiz 30 günlük hesabı ve Azure Hizmetleri herhangi bir bileşimini denemek için Azure KREDİLERİ 200 ABD Doları alın.

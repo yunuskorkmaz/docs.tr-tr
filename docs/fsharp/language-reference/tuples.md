@@ -1,7 +1,7 @@
 ---
 title: Demetler (F#)
-description: "F # tanımlama hakkında farklı türlerde adlandırılmamış ancak sıralı değerler gruplandırması öğrenin."
-keywords: "Visual f #, f # işlevsel programlama"
+description: 'F # tanımlama hakkında farklı türlerde adlandırılmamış ancak sıralı değerler gruplandırması öğrenin.'
+keywords: 'Visual f #, f # işlevsel programlama'
 author: cartermp
 ms.author: phcart
 ms.date: 05/16/2016
@@ -10,11 +10,11 @@ ms.prod: .net
 ms.technology: devlang-fsharp
 ms.devlang: fsharp
 ms.assetid: 35069073-9a82-410f-8dea-912e2a152e6d
-ms.openlocfilehash: 996566f2baaea8ab01e5c80e53caea82e9684714
-ms.sourcegitcommit: d95a91d685565f4d95c8773b558752864a6a3d7e
+ms.openlocfilehash: e0a5e5eb08e13bd5cbe9f88a47d4cf4bba19ea22
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/12/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="tuples"></a>Demetler
 
@@ -89,7 +89,7 @@ int * float * string
 
 ## <a name="interoperation-with-c-tuples"></a>C# başlıkları ile birlikte çalışma
 
-C# 7 Dil diziler kullanıma sunuldu.  C# diziler yapılar ve F # yapısı diziler eşdeğerdir.  C# ile çalışmanız gerekiyorsa, yapı dizilerini kullanmanız gerekir.
+C# 7.0 diziler diline kullanıma sunuldu.  C# diziler yapılar ve F # yapısı diziler eşdeğerdir.  C# ile çalışmanız gerekiyorsa, yapı dizilerini kullanmanız gerekir.
 
 Bunu yapmak kolaydır.  Örneğin, C# sınıfına bir tanımlama grubu geçirmek ve aynı zamanda bir tanımlama grubu olan sonucunu kullanmak zorunda düşünün:
 
@@ -130,7 +130,7 @@ Diziler birkaç genel türlerden birinde, tüm adlandırılmış nesnelerine der
 
 ### <a name="compiled-form-of-struct-tuples"></a>Yapı başlık derlenmiş formu
 
-Yapı diziler (örneğin, `struct (x, y)`), başvuru diziler temelde farklıdır.  İçine derlenmiş <xref:System.ValueTuple> parametre sayısı veya türü parametre sayısı aşırı türü.  Eşdeğer [C# 7 diziler](../../csharp/tuples.md) ve [Visual Basic 2017 diziler](../../visual-basic/programming-guide/language-features/data-types/tuples.md)ve çift yönlü onunla birlikte çalışamaz.
+Yapı diziler (örneğin, `struct (x, y)`), başvuru diziler temelde farklıdır.  İçine derlenmiş <xref:System.ValueTuple> parametre sayısı veya türü parametre sayısı aşırı türü.  Eşdeğer [C# 7.0 diziler](../../csharp/tuples.md) ve [Visual Basic 2017 diziler](../../visual-basic/programming-guide/language-features/data-types/tuples.md)ve çift yönlü onunla birlikte çalışamaz.
 
 ## <a name="see-also"></a>Ayrıca Bkz.
 [F# Dili Başvurusu](index.md)

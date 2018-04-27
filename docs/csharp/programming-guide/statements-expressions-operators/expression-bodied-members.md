@@ -1,19 +1,20 @@
 ---
-title: "İfade bodied üyeleri (C# programlama Kılavuzu)"
+title: İfade bodied üyeleri (C# programlama Kılavuzu)
 ms.date: 07/20/2015
 ms.prod: .net
-ms.technology: devlang-csharp
+ms.technology:
+- devlang-csharp
 ms.topic: article
 helpviewer_keywords:
 - expression-bodied members[C#]
 - C# language, expresion-bodied members
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: ead1e474fe87bd9fbd0f972bc0f2fc4fefc12ecf
-ms.sourcegitcommit: 7e99f66ef09d2903e22c789c67ff5a10aa953b2f
+ms.openlocfilehash: 5690a2ddb9127bb0c9b06d3607e3d105fca9a2e8
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/18/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="expression-bodied-members-c-programming-guide"></a>İfade bodied üyeleri (C# programlama Kılavuzu)
 İfade gövdesi tanımları çok kısa, okunabilir bir form bir üyenin uygulamasında sağlamanıza olanak tanır. Tek bir ifade yöntemi veya özelliği gibi herhangi bir desteklenen üyesi mantığını oluşur her bir ifade gövdesi tanımı kullanabilirsiniz. Bir ifade gövdesi tanımı genel sözdizimi aşağıdaki gibidir:
@@ -24,16 +25,16 @@ member => expression;
 
 Burada *ifade* geçerli bir ifade değil. 
 
-İfade gövdesi tanımları için destek yöntemleri için sunulmuştur ve özellik get Erişimciler C# 6've C# 7'de genişletildi. İfade gövdesi tanımları, aşağıdaki tabloda listelenen tür üyeleri ile birlikte kullanılabilir: 
+İfade gövdesi tanımları için destek yöntemleri için sunulmuştur ve özellik get Erişimciler C# 6've C# 7. 0'genişletildi. İfade gövdesi tanımları, aşağıdaki tabloda listelenen tür üyeleri ile birlikte kullanılabilir: 
 
 |Üye  |Sürümünden itibaren desteklenen... |
 |---------|---------|
 |[Yöntemi](#methods)  |C# 6 |
-|[Oluşturucusu](#constructors)   |C# 7 |
-|[Sonlandırıcı](#finalizers)     |C# 7 |
+|[Oluşturucusu](#constructors)   |C# 7.0 |
+|[Sonlandırıcı](#finalizers)     |C# 7.0 |
 |[Özellik Get](#property-get-statements)  |C# 6 |
-|[Özellik kümesi](#property-set-statements)  |C# 7 |
-|[Dizin Oluşturucu](#indexers)       |C# 7 |
+|[Özellik kümesi](#property-set-statements)  |C# 7.0 |
+|[Dizin Oluşturucu](#indexers)       |C# 7.0 |
 
 ## <a name="methods"></a>Yöntemler
 

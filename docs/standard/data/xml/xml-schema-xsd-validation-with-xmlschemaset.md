@@ -1,30 +1,30 @@
 ---
-title: "XML Şeması (XSD) doğrulama XmlSchemaSet ile"
-ms.custom: 
+title: XML Şeması (XSD) doğrulama XmlSchemaSet ile
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology: dotnet-standard
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - csharp
 - vb
 - cpp
 ms.assetid: 359b10eb-ec05-4cc6-ac96-c2b060afc4de
-caps.latest.revision: "3"
+caps.latest.revision: 3
 author: mairaw
 ms.author: mairaw
 manager: wpickett
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: 99e2f66a1aedafe316ab65ae302113ea553146ed
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: f18852411d733d12bcbbdba2b64bc2f134ea061c
+ms.sourcegitcommit: 2e8acae16ae802f2d6d04e3ce0a6dbf04e476513
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="xml-schema-xsd-validation-with-xmlschemaset"></a>XML Şeması (XSD) doğrulama XmlSchemaSet ile
 XML belgeleri doğrulanmış bir XML Şeması Tanım Dili (XSD) şemasında karşı bir <xref:System.Xml.Schema.XmlSchemaSet>.  
@@ -33,7 +33,7 @@ XML belgeleri doğrulanmış bir XML Şeması Tanım Dili (XSD) şemasında kar�
  XML belgeleri tarafından doğrulanır <xref:System.Xml.XmlReader.Create%2A> yöntemi <xref:System.Xml.XmlReader> sınıfı. Bir XML belgesi doğrulamak için oluşturmak bir <xref:System.Xml.XmlReaderSettings> bir XML Şeması Tanım Dili (XSD) şemasıyla XML belgesi doğrulamak içeren nesne.  
   
 > [!NOTE]
->  <xref:System.Xml.Schema> Ad alanı, kolaylaştıran kullanırken bir XML ağacı bir XSD dosyası karşı doğrulamak genişletme yöntemleri içerir [LINQ-XML](http://msdn.microsoft.com/library/f0fe21e9-ee43-4a55-b91a-0800e5782c13). LINQ-XML ile XML belgelerini doğrulama ile ilgili daha fazla bilgi için bkz: [nasıl yapılır: kullanarak XSD doğrulama](http://msdn.microsoft.com/library/481a97fa-6e96-46f2-8c9a-415555fac33b).  
+>  <xref:System.Xml.Schema> Ad alanı, kolaylaştıran kullanırken bir XML ağacı bir XSD dosyası karşı doğrulamak genişletme yöntemleri içerir [LINQ-XML](https://msdn.microsoft.com/library/f0fe21e9-ee43-4a55-b91a-0800e5782c13). LINQ-XML ile XML belgelerini doğrulama ile ilgili daha fazla bilgi için bkz: [nasıl yapılır: kullanarak XSD doğrulama](https://msdn.microsoft.com/library/481a97fa-6e96-46f2-8c9a-415555fac33b).  
   
  Tek bir şema veya şema kümesine (olarak bir <xref:System.Xml.Schema.XmlSchemaSet>) eklenebilir bir <xref:System.Xml.Schema.XmlSchemaSet> ya da bir parametre olarak geçirerek <xref:System.Xml.Schema.XmlSchemaSet.Add%2A> yöntemi <xref:System.Xml.Schema.XmlSchemaSet>. Bir belge doğrularken belgenin hedef ad alanı şema kümesini şemada hedef ad alanı eşleşmesi gerektiğini unutmayın.  
   

@@ -1,12 +1,12 @@
 ---
-title: "Nasıl yapılır: Bir Dosyaya Metin Yazma"
-ms.custom: 
+title: 'Nasıl yapılır: Bir Dosyaya Metin Yazma'
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology: dotnet-standard
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - csharp
@@ -17,28 +17,31 @@ helpviewer_keywords:
 - streams, writing text to files
 - data streams, writing text to files
 ms.assetid: 060cbe06-2adf-4337-9e7b-961a5c840208
-caps.latest.revision: "29"
+caps.latest.revision: 29
 author: mairaw
 ms.author: mairaw
 manager: wpickett
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: ea0ff0d79762ba47214217a261a325aad9f5eaf6
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: 926dfe1ea254fdb6460c835f58721f54609ddc90
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="how-to-write-text-to-a-file"></a>Nasıl yapılır: Bir Dosyaya Metin Yazma
 .NET Framework uygulamaları için bir dosyaya metin yazabilirler bu konuda gösterir farklı bir şekilde veya [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)] uygulamalar. Genellikle aşağıdaki sınıflar ve yöntemler metin bir dosyaya yazmak için kullanılır:  
   
--   <xref:System.IO.StreamWriter>-zaman uyumlu bir dosyaya yazmak için yöntemler içerir (<xref:System.IO.StreamWriter.Write%2A> veya <xref:System.IO.TextWriter.WriteLine%2A>) veya zaman uyumsuz olarak (<xref:System.IO.StreamWriter.WriteAsync%2A> ve <xref:System.IO.StreamWriter.WriteLineAsync%2A>).  
+-   <xref:System.IO.StreamWriter> -zaman uyumlu bir dosyaya yazmak için yöntemler içerir (<xref:System.IO.StreamWriter.Write%2A> veya <xref:System.IO.TextWriter.WriteLine%2A>) veya zaman uyumsuz olarak (<xref:System.IO.StreamWriter.WriteAsync%2A> ve <xref:System.IO.StreamWriter.WriteLineAsync%2A>).  
   
--   <xref:System.IO.File>– .NET Framework uygulamaları ile kullanılacak. Metin gibi bir dosyaya yazmak için statik yöntemler sağlar <xref:System.IO.File.WriteAllLines%2A> ve <xref:System.IO.File.WriteAllText%2A>, veya metin dosyasına Ekle (<xref:System.IO.File.AppendAllLines%2A>, <xref:System.IO.File.AppendAllText%2A> veya <xref:System.IO.File.AppendText%2A>).  
+-   <xref:System.IO.File> – .NET Framework uygulamaları ile kullanılacak. Metin gibi bir dosyaya yazmak için statik yöntemler sağlar <xref:System.IO.File.WriteAllLines%2A> ve <xref:System.IO.File.WriteAllText%2A>, veya metin dosyasına Ekle (<xref:System.IO.File.AppendAllLines%2A>, <xref:System.IO.File.AppendAllText%2A> veya <xref:System.IO.File.AppendText%2A>).  
   
 -   [FileIO](https://msdn.microsoft.com/library/windows/apps/windows.storage.fileio.aspx) - ile kullanılmak üzere [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)] uygulamalar. Metin bir dosyaya yazmak için zaman uyumsuz yöntemleri içeren ([WriteLinesAsync](https://msdn.microsoft.com/library/windows/apps/windows.storage.fileio.writelinesasync.aspx) veya [WriteTextAsync](https://msdn.microsoft.com/library/windows/apps/windows.storage.fileio.writetextasync.aspx)) veya metin dosyasına Ekle ([AppendLinesAsync](https://msdn.microsoft.com/library/windows/apps/windows.storage.fileio.appendlinesasync.aspx) veya [ AppendTextAsync](https://msdn.microsoft.com/library/windows/apps/windows.storage.fileio.appendtextasync.aspx)).  
-  
+
+- <xref:System.IO.Path> -Dosya veya dizin yolunu bilgilerini içeren dizeleri kullanılacak. İçerdiği <xref:System.IO.Path.Combine%2A> bir dosya veya dizin yolu oluşturmak için dizeleri birleşimini sağlar yöntemi.
+
+
  Örnekler gerçekleştirilen görevde odaklanmak için basit tutulmuştur. Varsa, en az hata denetimi ve özel durum işleme örnekleri bu nedenle, gerçekleştirin. Gerçek dünya uygulama genellikle daha sağlam hata denetimi ve özel durum işleme sağlar.  
   
 ## <a name="example"></a>Örnek  
@@ -95,6 +98,7 @@ ms.lasthandoff: 12/23/2017
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
  <xref:System.IO.StreamWriter>  
+ <xref:System.IO.Path>  
  <xref:System.IO.File.CreateText%2A?displayProperty=nameWithType>  
  [Nasıl yapılır: Dizinleri ve Dosyaları Numaralandırma](../../../docs/standard/io/how-to-enumerate-directories-and-files.md)  
  [Nasıl yapılır: Yeni Oluşturulan bir Veri Dosyasını Okuma ve Dosyaya Yazma](../../../docs/standard/io/how-to-read-and-write-to-a-newly-created-data-file.md)  

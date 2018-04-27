@@ -1,12 +1,12 @@
 ---
-title: "Enum tasarım"
-ms.custom: 
+title: Enum tasarım
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology: dotnet-standard
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - type design guidelines, enumerations
@@ -15,18 +15,18 @@ helpviewer_keywords:
 - class library design guidelines [.NET Framework], enumerations
 - flags enumerations
 ms.assetid: dd53c952-9d9a-4736-86ff-9540e815d545
-caps.latest.revision: "11"
+caps.latest.revision: 11
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: 3ee73e8677ca3fd48f4bb3c94bd4e15c49a564c7
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: c3e89567761367ddcd67078b138c15b982a0d666
+ms.sourcegitcommit: 2e8acae16ae802f2d6d04e3ce0a6dbf04e476513
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="enum-design"></a>Enum tasarım
 Numaralandırmalar özel türde bir değer türü var. Numaralandırmalar iki tür vardır: Basit numaralandırmaları ve bayrağı numaralandırmaları.  
@@ -77,7 +77,7 @@ Numaralandırmalar özel türde bir değer türü var. Numaralandırmalar iki t�
   
  **X yok** genişletmek <xref:System.Enum?displayProperty=nameWithType> doğrudan.  
   
- <xref:System.Enum?displayProperty=nameWithType>özel bir türü CLR tarafından kullanıcı tanımlı numaralandırmalar oluşturmak için kullanılır. Bu işlevsellik, erişim sağlayan bir programlama öğesi çoğu programlama dilleri belirtin. Örneğin, C# ' ta `enum` anahtar sözcüğü bir numaralandırma tanımlamak için kullanılır.  
+ <xref:System.Enum?displayProperty=nameWithType> özel bir türü CLR tarafından kullanıcı tanımlı numaralandırmalar oluşturmak için kullanılır. Bu işlevsellik, erişim sağlayan bir programlama öğesi çoğu programlama dilleri belirtin. Örneğin, C# ' ta `enum` anahtar sözcüğü bir numaralandırma tanımlamak için kullanılır.  
   
 <a name="design"></a>   
 ### <a name="designing-flag-enums"></a>Tasarlama bayrağı numaralandırmaları  
@@ -87,7 +87,7 @@ Numaralandırmalar özel türde bir değer türü var. Numaralandırmalar iki t�
   
  **✓ DÜŞÜNÜN** özel enum değerleri için yaygın olarak sağlayarak kullanılan bayrakları birleşimlerini.  
   
- Bit düzeyinde işlemler, Gelişmiş bir kavramıdır ve basit görevleri için gerekli olmamalıdır. <xref:System.IO.FileAccess.ReadWrite>özel bir değere örneğidir.  
+ Bit düzeyinde işlemler, Gelişmiş bir kavramıdır ve basit görevleri için gerekli olmamalıdır. <xref:System.IO.FileAccess.ReadWrite> özel bir değere örneğidir.  
   
  **KAÇININ x** burada belirli değerleri birleşimleridir geçersiz bayrak numaralandırmaları oluşturma.  
   
@@ -105,7 +105,7 @@ Numaralandırmalar özel türde bir değer türü var. Numaralandırmalar iki t�
   
  *Bölümleri © 2005, 2009 Microsoft Corporation. Tüm hakları saklıdır.*  
   
- *Pearson eğitim, Inc. şirketinin izni tarafından yeniden yazdırılmaları [Framework tasarım yönergeleri: kuralları, deyimleri ve yeniden kullanılabilir .NET kitaplıkları, 2 sürümü için desenleri](http://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619) Krzysztof Cwalina ve Brad Abrams tarafından 22 Eki 2008 tarafından yayımlanan Microsoft Windows geliştirme serisi bir parçası olarak Addison-Wesley Professional.*  
+ *Pearson eğitim, Inc. şirketinin izni tarafından yeniden yazdırılmaları [Framework tasarım yönergeleri: kuralları, deyimleri ve yeniden kullanılabilir .NET kitaplıkları, 2 sürümü için desenleri](https://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619) Krzysztof Cwalina ve Brad Abrams tarafından 22 Eki 2008 tarafından yayımlanan Microsoft Windows geliştirme serisi bir parçası olarak Addison-Wesley Professional.*  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
  [Tür Tasarımı Yönergeleri](../../../docs/standard/design-guidelines/type.md)  

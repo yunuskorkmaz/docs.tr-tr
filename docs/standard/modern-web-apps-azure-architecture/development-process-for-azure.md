@@ -1,19 +1,20 @@
 ---
-title: "Azure için geliştirme işlemi"
-description: "ASP.NET Core ve Azure ile modern Web uygulamaları mimari | Azure için geliştirme işlemi"
+title: Azure için geliştirme işlemi
+description: ASP.NET Core ve Azure ile modern Web uygulamaları mimari | Azure için geliştirme işlemi
 author: ardalis
 ms.author: wiwagn
 ms.date: 10/08/2017
 ms.prod: .net-core
 ms.technology: dotnet-docker
+ms.topic: article
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: 21826e2c90d234d873cc06bfae3bd22ce89a62d2
-ms.sourcegitcommit: 655fd4f78741967f80c409cef98347fdcf77857d
+ms.openlocfilehash: ea5e699046d603ebb765265be403fd4561aa742e
+ms.sourcegitcommit: 2e8acae16ae802f2d6d04e3ce0a6dbf04e476513
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/28/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="development-process-for-azure"></a>Azure için geliştirme işlemi
 
@@ -102,7 +103,7 @@ Paylaşılan uygulama kodu depoya yeni bir yürütme yapıldığında yeni bir y
 
 Bir kez bir yapı başarılı olarak üretilen derleme yapıları CD işlemi seçer. Bu web içerecektir paketini dağıtabilirsiniz. Yapı sunucunun bu paket Azure App Service, herhangi bir varolan hizmeti ile yeni oluşturulan bir değiştirme dağıtır. Bu adımı hazırlama ortamında genellikle hedefler, ancak doğrudan bir CD işlemle üretim için bazı uygulamaları dağıtın.
 
-#### <a name="step-5-azure-app-service-web-app"></a>5. adım. Azure App Service. Web App.
+#### <a name="step-5-azure-app-service-web-app"></a>5. adım. Azure uygulama hizmeti. Web uygulaması.
 
 ASP.NET Core uygulama dağıtıldığında, Azure App Service Web uygulaması bağlamında çalışır. Bu Web uygulaması izlenebilir ve daha fazla Azure Portalı'nı kullanarak yapılandırılır.
 

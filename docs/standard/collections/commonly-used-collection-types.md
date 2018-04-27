@@ -1,12 +1,12 @@
 ---
-title: "Çok Kullanılan Koleksiyon Türleri"
-ms.custom: 
+title: Çok Kullanılan Koleksiyon Türleri
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology: dotnet-standard
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - collections [.NET Framework], generic
@@ -18,18 +18,18 @@ helpviewer_keywords:
 - Collections classes
 - generic collections
 ms.assetid: f5d4c6a4-0d7b-4944-a9fb-3b12d9ebfd55
-caps.latest.revision: "29"
+caps.latest.revision: 29
 author: mairaw
 ms.author: mairaw
 manager: wpickett
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: cdc4e0660c5eae0a9550cf73d273d394ed71b823
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: 127813e52b6e72f896ebe4f5017651467f748a04
+ms.sourcegitcommit: 2e8acae16ae802f2d6d04e3ce0a6dbf04e476513
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="commonly-used-collection-types"></a>Çok Kullanılan Koleksiyon Türleri
 Koleksiyon, karma tabloları, kuyrukları, yığınları, paketler, sözlükler ve listeler gibi veri koleksiyonları ortak varyasyonları türleridir.  
@@ -40,7 +40,7 @@ Koleksiyon, karma tabloları, kuyrukları, yığınları, paketler, sözlükler 
   
  Koleksiyonları öğeleri nasıl depolandığını sonra nasıl sıralanacağını aramalar nasıl gerçekleştirilir ve karşılaştırmaları nasıl yapılır bağlı olarak değişebilir. <xref:System.Collections.Queue> Sınıfı ve <xref:System.Collections.Generic.Queue%601> genel sınıfı sağlayan ilk olarak ilk çıkar listeleri sırada <xref:System.Collections.Stack> sınıfı ve <xref:System.Collections.Generic.Stack%601> genel sınıfı son-giren ilk çıkar listeler sağlayın. <xref:System.Collections.SortedList> Sınıfı ve <xref:System.Collections.Generic.SortedList%602> genel sınıfı sağlamak sıralanmış sürümlerini <xref:System.Collections.Hashtable> sınıfı ve <xref:System.Collections.Generic.Dictionary%602> genel bir sınıf. Öğelerini bir <xref:System.Collections.Hashtable> veya <xref:System.Collections.Generic.Dictionary%602> yalnızca anahtarı öğesi ancak öğelerini tarafından erişilebilen bir <xref:System.Collections.SortedList> veya <xref:System.Collections.ObjectModel.KeyedCollection%602> anahtar veya öğenin dizini tarafından erişilebilir. Sıfır dışındaki tüm koleksiyonlar dizinlerde <xref:System.Array>, sıfır tabanlı olmayan diziler izin verir.  
   
- LINQ to nesneleri özelliği nesne türü uygulayan sürece bellek içi nesnelere erişmek için LINQ sorgularını kullanmanıza olanak tanır <xref:System.Collections.IEnumerable> veya <xref:System.Collections.Generic.IEnumerable%601>. LINQ sorguları verilerine erişmek için genel bir desen sağlar; genellikle daha kısa ve standart okunabilir olan `foreach` döngü; ve filtreleme, sıralama ve yetenekleri gruplandırma sağlar. LINQ sorguları da performansı artırabilir. Daha fazla bilgi için bkz: [nesnelere LINQ](http://msdn.microsoft.com/library/73cafe73-37cf-46e7-bfa7-97c7eea7ced9) ve [paralel LINQ (PLINQ)](../../../docs/standard/parallel-programming/parallel-linq-plinq.md).  
+ LINQ to nesneleri özelliği nesne türü uygulayan sürece bellek içi nesnelere erişmek için LINQ sorgularını kullanmanıza olanak tanır <xref:System.Collections.IEnumerable> veya <xref:System.Collections.Generic.IEnumerable%601>. LINQ sorguları verilerine erişmek için genel bir desen sağlar; genellikle daha kısa ve standart okunabilir olan `foreach` döngü; ve filtreleme, sıralama ve yetenekleri gruplandırma sağlar. LINQ sorguları da performansı artırabilir. Daha fazla bilgi için bkz: [nesnelere LINQ](https://msdn.microsoft.com/library/73cafe73-37cf-46e7-bfa7-97c7eea7ced9) ve [paralel LINQ (PLINQ)](../../../docs/standard/parallel-programming/parallel-linq-plinq.md).  
   
 ## <a name="related-topics"></a>İlgili Konular  
   

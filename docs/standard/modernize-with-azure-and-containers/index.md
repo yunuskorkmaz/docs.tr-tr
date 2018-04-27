@@ -5,14 +5,15 @@ author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 10/26/2017
 ms.prod: .net
+ms.topic: article
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: ba48579735379bfc857993cd1546f5f7125101f4
-ms.sourcegitcommit: d3cfda0943364aaf6ccd574f55f584576c8a4fee
+ms.openlocfilehash: ac4cd9f14f046a970b6ec41c1b176e9980a960cf
+ms.sourcegitcommit: 2e8acae16ae802f2d6d04e3ce0a6dbf04e476513
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/08/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="modernize-existing-net-applications-with-azure-cloud-and-windows-containers-v10"></a>Azure Bulut ve Windows kapsayıcıları (v1.0) ile varolan .NET uygulamaları modernize
 
@@ -28,7 +29,7 @@ Telif Hakkı © Microsoft Corporation'ın 2017
 
 Tüm hakları saklıdır. Bu kitap içeriğini hiçbir bölümü herhangi bir biçimde veya herhangi bir yöntem publisher'ın yazılı izni olmadan çoğaltılamaz.
 
-Bu kitap, ücretsiz bir elektronik defteri (e-kitap) http://dot.net/architecture gibi Microsoft'taki birden çok kanallar aracılığıyla kullanılabilen biçiminde kullanılabilir.
+Bu kitap gibi ücretsiz bir elektronik defteri (e-kitap) Microsoft'taki birden çok kanallar aracılığıyla kullanılabilen form kullanılabilir http://dot.net/architecture.
 
 Bu kitap, e-posta ile ilgili sorularınız varsa [dotnet-architecture-ebooks-feedback@service.microsoft.com](mailto:dotnet-architecture-ebooks-feedback@service.microsoft.com?subject=Feedback%20for%20.NET%20Container%20&%20Microservices%20Architecture%20book)
 
@@ -36,7 +37,7 @@ Bu kitap sağlanan "olarak-olan" ve yazar görünümler ve görüşlerini ifade 
 
 Burada açıklanan bazı örnekler yalnızca çizim için sağlanmıştır ve kurgusaldır. Gerçek bir ilişki veya bağlantı amaçlanmamıştır veya çıkarılmamalıdır.
 
-Microsoft ve http://www.microsoft.com "Ticari" Web sayfasında listelenen ticari Microsoft şirketler grubunun ticari markalarıdır. Diğer tüm işaretleri, ilgili sahiplerinin özelliği var.
+Microsoft ve adresinde listelenmiş ticari http://www.microsoft.com "Ticari" Web sayfasında Microsoft şirketler grubunun ticari markalarıdır. Diğer tüm işaretleri, ilgili sahiplerinin özelliği var.
 
 Yazar:
 > **Cesar de la Torre**, Sr. PM, .NET ürün ekibi, Microsoft Corp.
@@ -172,11 +173,11 @@ Bu kılavuz, bir mikro mimarisi gelişmesi nasıl gibi bulut yerel uygulamaları
 
 ### <a name="additional-resources"></a>Ek kaynaklar
 
-- **Microsoft Platformu ve araçları ile Docker uygulama yaşam döngüsü kapsayıcılı** (indirilebilir e-kitap): [ *https://aka.ms/dockerlifecycleebook*](https://aka.ms/dockerlifecycleebook)
+- **Microsoft Platformu ve araçları ile Docker uygulama yaşam döngüsü kapsayıcılı** (indirilebilir e-kitap): [*https://aka.ms/dockerlifecycleebook*](https://aka.ms/dockerlifecycleebook)
 
-- **.NET mikro: Kapsayıcılı .NET uygulamaları mimarisi** (indirilebilir e-kitap): [ *https://aka.ms/microservicesebook*](https://aka.ms/microservicesebook)
+- **.NET mikro: Kapsayıcılı .NET uygulamaları mimarisi** (indirilebilir e-kitap): [*https://aka.ms/microservicesebook*](https://aka.ms/microservicesebook)
 
-- **ASP.NET Core ve Azure ile modern web uygulamaları mimariden** (indirilebilir e-kitap): [ *https://aka.ms/webappebook*](https://aka.ms/webappebook)
+- **ASP.NET Core ve Azure ile modern web uygulamaları mimariden** (indirilebilir e-kitap): [*https://aka.ms/webappebook*](https://aka.ms/webappebook)
 
 ## <a name="who-should-use-this-guide"></a>Bu kılavuz kullanan
 

@@ -1,27 +1,29 @@
 ---
-title: "Nasıl yapılır: DBML dosyasını değiştirerek özelleştirilmiş kod oluşturma"
-ms.custom: 
+title: 'Nasıl yapılır: DBML dosyasını değiştirerek özelleştirilmiş kod oluşturma'
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-ado
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-ado
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 50ad597a-8598-42d3-82dd-fc7d702ebc37
-caps.latest.revision: "2"
+caps.latest.revision: 2
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.workload: dotnet
-ms.openlocfilehash: c9a2b382c84548d3226fe68531961e0f53033e7d
-ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
+ms.workload:
+- dotnet
+ms.openlocfilehash: dccef2af3d13099b71d3ea8418242e5a5cc16ae5
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="how-to-generate-customized-code-by-modifying-a-dbml-file"></a>Nasıl yapılır: DBML dosyasını değiştirerek özelleştirilmiş kod oluşturma
-Oluşturabileceğiniz [!INCLUDE[vbprvb](../../../../../../includes/vbprvb-md.md)] veya C# kaynak kodu bir veritabanı işaretleme dili (.dbml) meta veri dosyasından. Bu yaklaşım uygulama eşleme kodu oluşturmadan önce varsayılan .dbml dosyasını özelleştirmek için bir fırsat sunar. Bu gelişmiş bir özelliktir.  
+Bir veritabanı işaretleme dili (.dbml) meta veri dosyasından Visual Basic veya C# kaynak kodu oluşturabilir. Bu yaklaşım uygulama eşleme kodu oluşturmadan önce varsayılan .dbml dosyasını özelleştirmek için bir fırsat sunar. Bu gelişmiş bir özelliktir.  
   
  Bu işlemdeki adımlar aşağıdaki gibidir:  
   
@@ -29,7 +31,7 @@ Oluşturabileceğiniz [!INCLUDE[vbprvb](../../../../../../includes/vbprvb-md.md)
   
 2.  .Dbml dosyasını değiştirmek için bir düzenleyici kullanın. .Dbml dosyanın şema tanımını (.xsd) dosyası için karşı doğrulamalısınız Not [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] .dbml dosyaları. Daha fazla bilgi için bkz: [LINQ-SQL kod oluşturma](../../../../../../docs/framework/data/adonet/sql/linq/code-generation-in-linq-to-sql.md).  
   
-3.  Oluştur [!INCLUDE[vbprvb](../../../../../../includes/vbprvb-md.md)] veya C# kaynak kodu.  
+3.  Visual Basic veya C# kaynak kodu oluşturur.  
   
  Aşağıdaki örnekler SQLMetal komut satırı aracını kullanın. Daha fazla bilgi için bkz: [SqlMetal.exe (kod üretme aracı)](../../../../../../docs/framework/tools/sqlmetal-exe-code-generation-tool.md).  
   
@@ -42,7 +44,7 @@ sqlmetal /dbml:mymeta.dbml mydbfile.mdf
 ```  
   
 ## <a name="example"></a>Örnek  
- Aşağıdaki kod oluşturur [!INCLUDE[vbprvb](../../../../../../includes/vbprvb-md.md)] veya C# kaynak kodu dosyasının .dbml dosyasından.  
+ Aşağıdaki kod, Visual Basic veya C# kaynak kodu dosyasının .dbml dosyasından oluşturur.  
   
 ```  
 sqlmetal /namespace:nwind /code:nwind.vb /language:vb DBMLFile.dbml  

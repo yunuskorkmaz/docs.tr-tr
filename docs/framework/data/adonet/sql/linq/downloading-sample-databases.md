@@ -1,24 +1,26 @@
 ---
-title: "Örnek veritabanları yükleme"
-ms.custom: 
+title: Örnek veritabanları yükleme
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-ado
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-ado
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: ef9d69a1-9461-43fe-94bb-7c836754bcb5
-caps.latest.revision: "2"
+caps.latest.revision: 2
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.workload: dotnet
-ms.openlocfilehash: 3b0dccd831591946684fb0087f33563b87ee6ba7
-ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
+ms.workload:
+- dotnet
+ms.openlocfilehash: dd0b29e97d36d67781c92ee24c56aed43c703261
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="downloading-sample-databases"></a>Örnek veritabanları yükleme
 Bir dizi örnekleri ve izlenecek yollarda [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] Northwind örnek veritabanı ve SQL Server Express Edition belgeleri kullanın. Bu ürünler ücretsiz Microsoft sitesinden indirebilirsiniz.  
@@ -27,7 +29,7 @@ Bir dizi örnekleri ve izlenecek yollarda [!INCLUDE[vbtecdlinq](../../../../../.
   
 #### <a name="to-download-and-install-the-northwind-sample-database-for-sql-server"></a>Northwind örnek veritabanı için SQL Server yükleyip için  
   
-1.  Start Internet Explorer.  
+1.  Internet Explorer'ı başlatın.  
   
 2.  Git [Northwind ve Pubs örnek veritabanları](http://go.microsoft.com/fwlink?linkid=64296) Web sitesi.  
   
@@ -44,7 +46,7 @@ Bir dizi örnekleri ve izlenecek yollarda [!INCLUDE[vbtecdlinq](../../../../../.
   
 #### <a name="to-download-and-install-sql-server-express-edition"></a>SQL Server Express sürümünü karşıdan yükleyip  
   
-1.  Start Internet Explorer.  
+1.  Internet Explorer'ı başlatın.  
   
 2.  Git [Microsoft Download Center](http://go.microsoft.com/fwlink?linkid=74602) Web sitesi.  
   
@@ -57,7 +59,7 @@ Bir dizi örnekleri ve izlenecek yollarda [!INCLUDE[vbtecdlinq](../../../../../.
 6.  Web sitesindeki yükleme yönergeleri izleyin.  
   
 ## <a name="downloading-management-studio-express"></a>Management Studio indiriliyor  
- Yüklediğiniz bir veritabanı değiştirmek istiyorsanız, veritabanından erişebilirsiniz **Sunucu Gezgini** içinde [!INCLUDE[vs_current_short](../../../../../../includes/vs-current-short-md.md)] tümleşik geliştirme ortamı (IDE) ya da Microsoft SQL Server Management Studio Express (kullanın SSMSE).  
+ Yüklediğiniz bir veritabanı değiştirmek istiyorsanız, veritabanından erişebilirsiniz **Sunucu Gezgini** Visual Studio tümleşik geliştirme ortamı (IDE) ya da Microsoft SQL Server Management Studio Express'i (SSMSE) kullanın .  
   
 #### <a name="to-download-management-studio-express"></a>Management Studio Express'i yüklemek için  
   

@@ -1,32 +1,34 @@
 ---
-title: "Nasıl yapılır: bir ADO.NET Entity Framework Veri kaynağı (WCF Veri Hizmetleri) kullanarak bir veri hizmeti oluşturma"
-ms.custom: 
+title: 'Nasıl yapılır: bir ADO.NET Entity Framework Veri kaynağı (WCF Veri Hizmetleri) kullanarak bir veri hizmeti oluşturma'
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework-oob
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - WCF Data Services, providers
 - WCF Data Services, Entity Framework
 ms.assetid: 6d11fec8-0108-42f5-8719-2a7866d04428
-caps.latest.revision: "4"
+caps.latest.revision: 4
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: e90b11800685707460171e5e2d250ef757979c44
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.workload:
+- dotnet
+ms.openlocfilehash: 5993837546b28742756ed4a5ec323e6f1a5ef782
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="how-to-create-a-data-service-using-an-adonet-entity-framework-data-source-wcf-data-services"></a>Nasıl yapılır: bir ADO.NET Entity Framework Veri kaynağı (WCF Veri Hizmetleri) kullanarak bir veri hizmeti oluşturma
-[!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)]varlık verilerini veri hizmet olarak sunar. Bu varlık verilerini tarafından sağlanan [!INCLUDE[vstecado](../../../../includes/vstecado-md.md)] [!INCLUDE[adonet_ef](../../../../includes/adonet-ef-md.md)] veri kaynağı bir ilişkisel veritabanı olduğunda. Bu konuda nasıl oluşturulacağını gösterir bir [!INCLUDE[adonet_ef](../../../../includes/adonet-ef-md.md)]-veri modelinde dayalı bir [!INCLUDE[vs_current_short](../../../../includes/vs-current-short-md.md)] Web uygulaması varolan bir veritabanını temel alan ve yeni bir veri hizmeti oluşturmak için bu veri modelini kullanır.  
+[!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] varlık verilerini veri hizmet olarak sunar. Bu varlık verilerini tarafından sağlanan [!INCLUDE[vstecado](../../../../includes/vstecado-md.md)] [!INCLUDE[adonet_ef](../../../../includes/adonet-ef-md.md)] veri kaynağı bir ilişkisel veritabanı olduğunda. Bu konuda nasıl oluşturulacağını gösterir bir [!INCLUDE[adonet_ef](../../../../includes/adonet-ef-md.md)]-tabanlı varolan bir veritabanını temel alan ve yeni bir veri hizmeti oluşturmak için bu veri modelini kullanan bir Visual Studio Web uygulamasında veri modeli.  
   
- [!INCLUDE[adonet_ef](../../../../includes/adonet-ef-md.md)] Oluşturabilen bir komut satırı aracı da sağlar bir [!INCLUDE[adonet_ef](../../../../includes/adonet-ef-md.md)] model dışında bir [!INCLUDE[vs_current_short](../../../../includes/vs-current-short-md.md)] projesi. Daha fazla bilgi için bkz: [nasıl yapılır: dosya eşleme ve Model oluşturmak için kullanım EdmGen.exe](../../../../docs/framework/data/adonet/ef/how-to-use-edmgen-exe-to-generate-the-model-and-mapping-files.md).  
+ [!INCLUDE[adonet_ef](../../../../includes/adonet-ef-md.md)] Oluşturabilen bir komut satırı aracı da sağlar bir [!INCLUDE[adonet_ef](../../../../includes/adonet-ef-md.md)] Visual Studio Proje dışındaki model. Daha fazla bilgi için bkz: [nasıl yapılır: dosya eşleme ve Model oluşturmak için kullanım EdmGen.exe](../../../../docs/framework/data/adonet/ef/how-to-use-edmgen-exe-to-generate-the-model-and-mapping-files.md).  
   
 ### <a name="to-add-an-entity-framework-model-that-is-based-on-an-existing-database-to-an-existing-web-application"></a>Mevcut bir Web uygulamasını mevcut bir veritabanına dayalı bir Entity Framework modelini eklemek için  
   
@@ -59,7 +61,7 @@ ms.lasthandoff: 01/19/2018
   
 ### <a name="to-create-the-data-service-by-using-the-new-data-model"></a>Yeni veri modelini kullanarak veri hizmeti oluşturmak için  
   
-1.  İçinde [!INCLUDE[vs_current_short](../../../../includes/vs-current-short-md.md)], veri modelini gösteren .edmx dosyasının açın.  
+1.  Visual Studio'da veri modelini gösteren .edmx dosyasının açın.  
   
 2.  İçinde **modeli tarayıcısı**, model sağ tıklayın, **özellikleri**, varlık kapsayıcısının adı not edin.  
   
@@ -69,7 +71,7 @@ ms.lasthandoff: 01/19/2018
   
 5.  Hizmet için bir ad sağlayın ve ardından **Tamam**.  
   
-     [!INCLUDE[vs_current_short](../../../../includes/vs-current-short-md.md)]Yeni hizmet için XML biçimlendirme ve kodun dosyaları oluşturur. Varsayılan olarak Kod Düzenleyicisi penceresini açar.  
+     Visual Studio yeni hizmet için XML biçimlendirme ve kodun dosyaları oluşturur. Varsayılan olarak Kod Düzenleyicisi penceresini açar.  
   
 6.  Veri Hizmeti kodunu açıklamayı değiştirin `/* TODO: put your data source class name here */` devraldığı türü ile veri hizmeti tanımlayan sınıf tanımında <xref:System.Data.Objects.ObjectContext> sınıfı ve bu, 2. adımda not veri modelinin varlık kapsayıcısı.  
   

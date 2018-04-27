@@ -23,11 +23,11 @@ manager: wpickett
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: a07392ba805b5f2a3913b01a15dd0e1668f0ccf7
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: 3d66d4e137c52310710f8b178167ceb3cca042c7
+ms.sourcegitcommit: 2e8acae16ae802f2d6d04e3ce0a6dbf04e476513
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="event-design"></a>Olay tasarım
 Olayları geri aramalar (Framework'te kullanıcı kodu içine çağırmak izin yapıları) en yaygın kullanılan biçimidir. Diğer geri çağırma düzenekler Temsilciler, sanal üyeleri ve arabirim tabanlı eklentiler alma üyeleri içerir. Kullanılabilirlik incelemeleri verilerden geliştiriciler çoğunluğu için bir geri çağırma mekanizmaları kullanan çok olayları kullanarak daha rahat olduğunu gösterir. Olayları sorunsuz şekilde Visual Studio ve birçok dilde ile tümleşiktir.  
@@ -79,7 +79,7 @@ Olayları geri aramalar (Framework'te kullanıcı kodu içine çağırmak izin y
   
  *Bölümleri © 2005, 2009 Microsoft Corporation. Tüm hakları saklıdır.*  
   
- *Pearson eğitim, Inc. şirketinin izni tarafından yeniden yazdırılmaları [Framework tasarım yönergeleri: kuralları, deyimleri ve yeniden kullanılabilir .NET kitaplıkları, 2 sürümü için desenleri](http://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619) Krzysztof Cwalina ve Brad Abrams tarafından 22 Eki 2008 tarafından yayımlanan Microsoft Windows geliştirme serisi bir parçası olarak Addison-Wesley Professional.*  
+ *Pearson eğitim, Inc. şirketinin izni tarafından yeniden yazdırılmaları [Framework tasarım yönergeleri: kuralları, deyimleri ve yeniden kullanılabilir .NET kitaplıkları, 2 sürümü için desenleri](https://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619) Krzysztof Cwalina ve Brad Abrams tarafından 22 Eki 2008 tarafından yayımlanan Microsoft Windows geliştirme serisi bir parçası olarak Addison-Wesley Professional.*  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
  [Üye Tasarımı Yönergeleri](../../../docs/standard/design-guidelines/member.md)  

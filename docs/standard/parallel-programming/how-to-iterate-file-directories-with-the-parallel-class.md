@@ -1,12 +1,12 @@
 ---
-title: "Nasıl yapılır: Paralel Sınıfla Dosya Dizinlerini Yineleme"
-ms.custom: 
+title: 'Nasıl yapılır: Paralel Sınıfla Dosya Dizinlerini Yineleme'
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology: dotnet-standard
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - csharp
@@ -14,18 +14,18 @@ dev_langs:
 helpviewer_keywords:
 - parallel loops, how to iterate directories
 ms.assetid: 555e9f48-f53d-4774-9bcf-3e965c732ec5
-caps.latest.revision: 
+caps.latest.revision: 8
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: 3ac1af7922e1bbd81f4dfcee256f5c8892294003
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.openlocfilehash: 449f7c9e3dfd4c74ad67cea9cbc08104f07bc680
+ms.sourcegitcommit: 2e8acae16ae802f2d6d04e3ce0a6dbf04e476513
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="how-to-iterate-file-directories-with-the-parallel-class"></a>Nasıl yapılır: Paralel Sınıfla Dosya Dizinlerini Yineleme
 Çoğu durumda, dosya yineleme kolayca paralel birkaç ölçeklendirin bir işlemdir. Konu [nasıl yapılır: PLINQ ile dosya dizinlerini yineleme](../../../docs/standard/parallel-programming/how-to-iterate-file-directories-with-plinq.md) birçok senaryoları için bu görevi gerçekleştirmek için en kolay yolu gösterir. Ancak, kodunuzu türlerde dosya sistemi erişirken ortaya çıkabilecek özel durumlar dağıtılacak olduğunda zorluklar ortaya çıkabilir. Aşağıdaki örnek, soruna yönelik bir yaklaşım gösterir. Tüm dosya ve klasörlerin belirtilen dizin altında çapraz geçiş için yığın tabanlı yineleme kullanır ve yakalamak ve çeşitli özel durumları işleme kodunuzu sağlar. Elbette, özel durumları işleme biçimini size bağlıdır.  
@@ -40,7 +40,7 @@ ms.lasthandoff: 01/19/2018
   
  Yerel örnek kullanan `fileCount` işlenen dosya sayısı toplam sayısını korumak için değişkeni. Değişkeni eşzamanlı olarak birden çok görev tarafından erişilen çünkü erişimi çağırarak eşitlenir <xref:System.Threading.Interlocked.Add%2A?displayProperty=nameWithType> yöntemi.  
   
- Ana bir özel durum, iş parçacığı tarafından başlatılan iş parçacığı açtıysanız <xref:System.Threading.Tasks.Parallel.ForEach%2A> yöntemi çalışmaya devam edecek. Bu iş parçacıkları durdurmak için özel durum işleyicileri Boole değişkenini ve değerini her döngü paralel üzerinde denetleyin. Bir özel durum değeri gösterir kullanırsanız <xref:System.Threading.Tasks.ParallelLoopState> durdurmak veya döngüden ayırmak değişkeni. Daha fazla bilgi için bkz: [nasıl yapılır: durdurun ya da bir Parallel.For döngüden bölün](http://msdn.microsoft.com/library/de52e4f1-9346-4ad5-b582-1a4d54dc7f7e).  
+ Ana bir özel durum, iş parçacığı tarafından başlatılan iş parçacığı açtıysanız <xref:System.Threading.Tasks.Parallel.ForEach%2A> yöntemi çalışmaya devam edecek. Bu iş parçacıkları durdurmak için özel durum işleyicileri Boole değişkenini ve değerini her döngü paralel üzerinde denetleyin. Bir özel durum değeri gösterir kullanırsanız <xref:System.Threading.Tasks.ParallelLoopState> durdurmak veya döngüden ayırmak değişkeni. Daha fazla bilgi için bkz: [nasıl yapılır: durdurun ya da bir Parallel.For döngüden bölün](https://msdn.microsoft.com/library/de52e4f1-9346-4ad5-b582-1a4d54dc7f7e).  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
  [Veri Paralelliği](../../../docs/standard/parallel-programming/data-parallelism-task-parallel-library.md)

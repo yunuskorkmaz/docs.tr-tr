@@ -16,18 +16,18 @@ helpviewer_keywords:
 - formatting [.NET Framework], time
 - date and time strings
 ms.assetid: 98b374e3-0cc2-4c78-ab44-efb671d71984
-caps.latest.revision: ''
+caps.latest.revision: 79
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: c54a5ec9cdbfd73bccd8f70befcfcff7cf8aac2d
-ms.sourcegitcommit: 6f967c86dde55472440f0c8669b0e910ee3c53ba
+ms.openlocfilehash: 51c16e8c1cd031e4f2b8a207c8d288b7691e7a84
+ms.sourcegitcommit: 2e8acae16ae802f2d6d04e3ce0a6dbf04e476513
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/22/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="custom-date-and-time-format-strings"></a>Özel Tarih ve Saat Biçim Dizeleri
 Bir tarih ve saat biçim dizesi metin gösterimini tanımlayan bir <xref:System.DateTime> veya <xref:System.DateTimeOffset> bir biçimlendirme işleminin sonuçları değeri. Ayrıca, dizeyi tarih ve saate başarılı bir şekilde dönüştürmek için bir ayrıştırma işleminde gerekli olan tarih ve saat değerinin bildirimini tanımlayabilir. Özel biçim dizesi, bir veya daha fazla özel tarih ve saat biçimi belirleyicisinden oluşur. Değil herhangi bir dize bir [standart tarih ve saat biçim dizesi](../../../docs/standard/base-types/standard-date-and-time-format-strings.md) özel tarih ve saat biçim dizesi yorumlanır.  
@@ -35,7 +35,7 @@ Bir tarih ve saat biçim dizesi metin gösterimini tanımlayan bir <xref:System.
  Özel tarih ve saat biçim dizeleri ikisi ile kullanılabilecek <xref:System.DateTime> ve <xref:System.DateTimeOffset> değerleri.  
   
 > [!TIP]
->  İndirebilirsiniz [biçimlendirme yardımcı programı](http://code.msdn.microsoft.com/NET-Framework-4-Formatting-9c4dae8d), biçimi uygulamanıza olanak sağlayan bir uygulama dizeleri için tarih ve saat veya sayısal değerleri ve sonuç dizesini görüntüler.  
+>  İndirebilirsiniz [biçimlendirme yardımcı programı](https://code.msdn.microsoft.com/NET-Framework-4-Formatting-9c4dae8d), biçimi uygulamanıza olanak sağlayan bir uygulama dizeleri için tarih ve saat veya sayısal değerleri ve sonuç dizesini görüntüler.  
   
 <a name="table"></a> Özel tarih ve saat biçim dizeleri işlemleri biçimlendirmede olabilir ya da ile kullanılan `ToString` yöntemi tarih ve saat örneğinin veya bileşik biçimlendirme destekleyen bir yöntem. Aşağıdaki örnek her iki kullanımı da gösterir.  
   
@@ -54,37 +54,37 @@ Bir tarih ve saat biçim dizesi metin gösterimini tanımlayan bir <xref:System.
 |"d"|1 İle 31 arasında ayın günü.<br /><br /> Daha fazla bilgi: ["D" özel biçim belirticisi](#dSpecifier).|2009-06-01T13:45:30 -> 1<br /><br /> 2009-06-15T13:45:30 -> 15|  
 |"dd"|01 İle 31 arasında ayın günü.<br /><br /> Daha fazla bilgi: ["Aa" özel biçim belirticisi](#ddSpecifier).|2009-06-01T13:45:30 -> 01<br /><br /> 2009-06-15T13:45:30 -> 15|  
 |"ddd"|Haftanın günü, kısaltılmış adı.<br /><br /> Daha fazla bilgi: ["Ggg" özel biçim belirticisi](#dddSpecifier).|2009-06-15T13:45:30 -> Mon (en-US)<br /><br /> 2009-06-15T13:45:30 -> Пн (ru-RU)<br /><br /> 2009-06-15T13:45:30 -> lun. (fr-FR)|  
-|"dddd"|Haftanın gününün tam adı.<br /><br /> Daha fazla bilgi: ["Dddd" özel biçim belirticisi](#ddddSpecifier).|2009-06-15T13:45:30 -> Monday (en-US)<br /><br /> 2009-06-15T13:45:30 -> понедельник (ru-RU)<br /><br /> 2009-06-15T13:45:30 -> lundi (fr-FR)|  
+|"dddd"|Haftanın gününün tam adı.<br /><br /> Daha fazla bilgi: ["Dddd" özel biçim belirticisi](#ddddSpecifier).|2009-06-15T13:45:30 -> Pazartesi (en-US)<br /><br /> 2009-06-15T13:45:30 -> понедельник (ru-RU)<br /><br /> 2009-06-15T13:45:30 -> lundi (fr-FR)|  
 |"f"|Saniyenin onda biri bir tarih ve saat değeri.<br /><br /> Daha fazla bilgi: ["F" özel biçim belirticisi](#fSpecifier).|2009-06-15T13:45:30.6170000 -> 6<br /><br /> 2009-06-15T13:45:30.05 -> 0|  
 |"ff"|Tarih ve saat değerindeki saniyenin yüzde biri.<br /><br /> Daha fazla bilgi: ["Ff" özel biçim belirticisi](#ffSpecifier).|2009-06-15T13:45:30.6170000 -> 61<br /><br /> 2009-06-15T13:45:30.0050000 -> 00|  
 |"fff"|Tarih ve saat değerindeki milisaniye.<br /><br /> Daha fazla bilgi: ["Fff" özel biçim belirticisi](#fffSpecifier).|6/15/2009 13:45:30.617 -> 617<br /><br /> 6/15/2009 13:45:30.0005 -> 000|  
-|"ffff"|Saniyenin on binde birindeki tarih ve saat değeri.<br /><br /> Daha fazla bilgi: ["Ffff" özel biçim belirticisi](#ffffSpecifier).|2009-06-15T13:45:30.6175000 -> 6175<br /><br /> 2009-06-15T13:45:30.0000500  -> 0000|  
+|"ffff"|Saniyenin on binde birindeki tarih ve saat değeri.<br /><br /> Daha fazla bilgi: ["Ffff" özel biçim belirticisi](#ffffSpecifier).|2009-06-15T13:45:30.6175000 6175 -&GT;<br /><br /> 2009-06-15T13:45:30.0000500  -> 0000|  
 |"fffff"|Tarih ve saat değerindeki saniyenin yüz binde biri.<br /><br /> Daha fazla bilgi: ["Fffff" özel biçim belirticisi](#fffffSpecifier).|2009-06-15T13:45:30.6175400 -> 61754<br /><br /> 6/15/2009 13:45:30.000005 -> 00000|  
 |"ffffff"|Tarih ve saat değerindeki saniyenin milyonda biri.<br /><br /> Daha fazla bilgi: ["Ffffff" özel biçim belirticisi](#ffffffSpecifier).|2009-06-15T13:45:30.6175420 -> 617542<br /><br /> 2009-06-15T13:45:30.0000005 -> 000000|  
 |"fffffff"|Saniyenin on milyonda birindeki tarih ve saat değeri.<br /><br /> Daha fazla bilgi: ["Fffffff" özel biçim belirticisi](#fffffffSpecifier).|2009-06-15T13:45:30.6175425 -> 6175425<br /><br /> 2009-06-15T13:45:30.0001150 -> 0001150|  
 |"F"|Sıfır olmayan, saniyenin onda biri cinsinden tarih ve saat değeri.<br /><br /> Daha fazla bilgi: ["F" özel biçim belirticisi](#F_Specifier).|2009-06-15T13:45:30.6170000 -> 6<br /><br /> 2009-06-15T13:45:30.0500000 -> (çıktı)|  
 |"FF"|Sıfır olmayan, saniyenin yüzde biri cinsinden tarih ve saat değeri.<br /><br /> Daha fazla bilgi: ["FF" özel biçim belirticisi](#FF_Specifier).|2009-06-15T13:45:30.6170000 -> 61<br /><br /> 2009-06-15T13:45:30.0050000 -> (çıktı)|  
 |"FFF"|Sıfır olmayan, milisaniye cinsinden tarih ve saat değeri.<br /><br /> Daha fazla bilgi: ["FFF" özel biçim belirticisi](#FFF_Specifier).|2009-06-15T13:45:30.6170000 -> 617<br /><br /> 2009-06-15T13:45:30.0005000 -> (çıktı)|  
-|"FFFF"|Sıfır olmayan, saniyenin on binde biri cinsinden tarih ve saat değeri.<br /><br /> Daha fazla bilgi: ["FFFF" özel biçim belirticisi](#FFFF_Specifier).|2009-06-15T13:45:30.5275000 -> 5275<br /><br /> 2009-06-15T13:45:30.0000500 -> (çıktı)|  
+|"FFFF"|Sıfır olmayan, saniyenin on binde biri cinsinden tarih ve saat değeri.<br /><br /> Daha fazla bilgi: ["FFFF" özel biçim belirticisi](#FFFF_Specifier).|2009-06-15T13:45:30.5275000 5275 -&GT;<br /><br /> 2009-06-15T13:45:30.0000500 -> (çıktı)|  
 |"FFFFF"|Sıfır olmayan, saniyenin yüz binde biri cinsinden tarih ve saat değeri.<br /><br /> Daha fazla bilgi: ["FFFFF" özel biçim belirticisi](#FFFFF_Specifier).|2009-06-15T13:45:30.6175400 -> 61754<br /><br /> 2009-06-15T13:45:30.0000050 -> (çıktı)|  
 |"FFFFFF"|Sıfır olmayan, saniyenin milyonda birinde cinsinden tarih ve saat değeri.<br /><br /> Daha fazla bilgi: ["FFFFFF" özel biçim belirticisi](#FFFFFF_Specifier).|2009-06-15T13:45:30.6175420 -> 617542<br /><br /> 2009-06-15T13:45:30.0000005 -> (çıktı)|  
 |"FFFFFFF"|Sıfır olmayan, saniyenin on milyonda biri cinsinden tarih ve saat değeri.<br /><br /> Daha fazla bilgi: ["FFFFFFF" özel biçim belirticisi](#FFFFFFF_Specifier).|2009-06-15T13:45:30.6175425 -> 6175425<br /><br /> 2009-06-15T13:45:30.0001150 -> 000115|  
-|"g", "gg"|Süre veya dönem.<br /><br /> Daha fazla bilgi: ["g" veya "gg" özel biçim belirticisi](#gSpecifier).|2009-06-15T13:45:30.6170000 -> A.D.|  
+|"g", "gg"|Süre veya dönem.<br /><br /> Daha fazla bilgi: ["g" veya "gg" özel biçim belirticisi](#gSpecifier).|2009-06-15T13:45:30.6170000 M.S. -&GT;|  
 |"h"|Saat, 12 saatlik biçimde, 1 ile 12 arasında.<br /><br /> Daha fazla bilgi: ["H" özel biçim belirticisi](#hSpecifier).|2009-06-15T01:45:30 -> 1<br /><br /> 2009-06-15T13:45:30 -> 1|  
 |"hh"|Saat, 12 saatlik biçimde, 01 ile 12 arasında.<br /><br /> Daha fazla bilgi: ["Hh" özel biçim belirticisi](#hhSpecifier).|2009-06-15T01:45:30 -> 01<br /><br /> 2009-06-15T13:45:30 -> 01|  
 |"H"|Kullanarak bir 24 saatlik 0 ile 23 saat.<br /><br /> Daha fazla bilgi: ["H" özel biçim belirticisi](#H_Specifier).|2009-06-15T01:45:30 -> 1<br /><br /> 2009-06-15T13:45:30 -> 13|  
 |"HH"|Saat, 24 saatlik biçimde, 00 ile 23 arasında.<br /><br /> Daha fazla bilgi: ["HH" özel biçim belirticisi](#HH_Specifier).|2009-06-15T01:45:30 -> 01<br /><br /> 2009-06-15T13:45:30 -> 13|  
 |"K"|Saat dilimi bilgileri.<br /><br /> Daha fazla bilgi: ["K" özel biçim belirticisi](#KSpecifier).|İle <xref:System.DateTime> değerler:<br /><br /> 2009-06-15T13:45:30, belirtilmeyen türü -><br /><br /> 2009-06-15T13:45:30, tür Utc Z -><br /><br /> 2009-06-15T13:45:30, tür yerel ->-07: 00 (yerel bilgisayar ayarlarına bağlıdır)<br /><br /> İle <xref:System.DateTimeOffset> değerler:<br /><br /> 2009-06-15T01:45:30-07:00 --> -07:00<br /><br /> 2009-06-15T08:45:30+00:00 --> +00:00|  
-|"m"|Dakika, 0 ile 59 arasında.<br /><br /> Daha fazla bilgi: ["M" özel biçim belirticisi](#mSpecifier).|2009-06-15T01:09:30 -> 9<br /><br /> 2009-06-15T13:29:30 -> 29|  
+|"m"|Dakika, 0 ile 59 arasında.<br /><br /> Daha fazla bilgi: ["M" özel biçim belirticisi](#mSpecifier).|2009-06-15T01:09:30 9 -&GT;<br /><br /> 2009-06-15T13:29:30 -> 29|  
 |"mm"|Dakika, 00 ile 59 arasında.<br /><br /> Daha fazla bilgi: ["Aa" özel biçim belirticisi](#mmSpecifier).|2009-06-15T01:09:30 -> 09<br /><br /> 2009-06-15T01:45:30 -> 45|  
 |"M"|Ay, 1 ile 12 arasında.<br /><br /> Daha fazla bilgi: ["M" özel biçim belirticisi](#M_Specifier).|2009-06-15T13:45:30 -> 6|  
 |"AA"|Ay, 01 ile 12 arasında.<br /><br /> Daha fazla bilgi: ["Aa" özel biçim belirticisi](#MM_Specifier).|2009-06-15T13:45:30 -> 06|  
-|"AAA"|Ayın kısaltılmış adı.<br /><br /> Daha fazla bilgi: ["Aaa" özel biçim belirticisi](#MMM_Specifier).|2009-06-15T13:45:30 -> Jun (en-US)<br /><br /> 2009-06-15T13:45:30 -> juin (fr-FR)<br /><br /> 2009-06-15T13:45:30 -> Jun (zu-ZA)|  
+|"AAA"|Ayın kısaltılmış adı.<br /><br /> Daha fazla bilgi: ["Aaa" özel biçim belirticisi](#MMM_Specifier).|2009-06-15T13:45:30 -> Haz (en-US)<br /><br /> 2009-06-15T13:45:30 -> juin (fr-FR)<br /><br /> 2009-06-15T13:45:30 -> Haz (zu-ZA)|  
 |"AAAA"|Ayın tam adı.<br /><br /> Daha fazla bilgi: ["Aaaa" özel biçim belirticisi](#MMMM_Specifier).|2009-06-15T13:45:30 -> Haziran (en-US)<br /><br /> 2009-06-15T13:45:30 -> juni (da-DK)<br /><br /> 2009-06-15T13:45:30 -> uJuni (zu-ZA)|  
-|"s"|Saniye, 0'dan 59'a kadardır.<br /><br /> Daha fazla bilgi: ["S" özel biçim belirticisi](#sSpecifier).|2009-06-15T13:45:09 -> 9|  
-|"ss"|Saniye, 00'dan 59'a kadardır.<br /><br /> Daha fazla bilgi: ["Ss" özel biçim belirticisi](#ssSpecifier).|2009-06-15T13:45:09 -> 09|  
-|"t"|AM/PM göstergesinin ilk karakteri.<br /><br /> Daha fazla bilgi: ["T" özel biçim belirticisi](#tSpecifier).|2009-06-15T13:45:30 -> P (en-US)<br /><br /> 2009-06-15T13:45:30 -> 午 (ja-JP)<br /><br /> 2009-06-15T13:45:30 ->  (fr-FR)|  
-|"tt"|AM/PM göstergesi.<br /><br /> Daha fazla bilgi: ["Tt" özel biçim belirticisi](#ttSpecifier).|2009-06-15T13:45:30 -> PM (en-US)<br /><br /> 2009-06-15T13:45:30 -> 午後 (ja-JP)<br /><br /> 2009-06-15T13:45:30 ->  (fr-FR)|  
+|"s"|Saniye, 0'dan 59'a kadardır.<br /><br /> Daha fazla bilgi: ["S" özel biçim belirticisi](#sSpecifier).|2009-06-15T13:45:09 9 -&GT;|  
+|"ss"|Saniye, 00'dan 59'a kadardır.<br /><br /> Daha fazla bilgi: ["Ss" özel biçim belirticisi](#ssSpecifier).|2009-06-15T13:45:09 09 -&GT;|  
+|"t"|AM/PM göstergesinin ilk karakteri.<br /><br /> Daha fazla bilgi: ["T" özel biçim belirticisi](#tSpecifier).|2009-06-15T13:45:30 -> P (en-US)<br /><br /> 2009-06-15T13:45:30 -> 午 (ja-JP)<br /><br /> 2009-06-15T13:45:30 -> (fr-FR)|  
+|"tt"|AM/PM göstergesi.<br /><br /> Daha fazla bilgi: ["Tt" özel biçim belirticisi](#ttSpecifier).|2009-06-15T13:45:30 -> PM (en-US)<br /><br /> 2009-06-15T13:45:30 -> 午後 (ja-JP)<br /><br /> 2009-06-15T13:45:30 -> (fr-FR)|  
 |"y"|0 dan 99 'a kadar yıl.<br /><br /> Daha fazla bilgi: ["Y" özel biçim belirticisi](#ySpecifier).|0001-01-01T00:00:00 -> 1<br /><br /> 0900-01-01T00:00:00 -> 0<br /><br /> 1900-01-01T00:00:00 -> 0<br /><br /> 2009-06-15T13:45:30 -> 9<br /><br /> 2019-06-15T13:45:30 -> 19|  
 |"yy"|00 dan 99 'a kadar yıl.<br /><br /> Daha fazla bilgi: ["Yy" özel biçim belirticisi](#yySpecifier).|0001-01-01T00:00:00 -> 01<br /><br /> 0900-01-01T00:00:00 -> 00<br /><br /> 1900-01-01T00:00:00 -> 00<br /><br /> 2019-06-15T13:45:30 -> 19|  
 |"yyy"|En az üç basamaklı olarak yıl.<br /><br /> Daha fazla bilgi: ["Yyy" özel biçim belirticisi](#yyySpecifier).|0001-01-01T00:00:00 -> 001<br /><br /> 0900-01-01T00:00:00 -> 900<br /><br /> 1900-01-01T00:00:00 -> 1900<br /><br /> 2009-06-15T13:45:30 -> 2009|  
@@ -93,12 +93,12 @@ Bir tarih ve saat biçim dizesi metin gösterimini tanımlayan bir <xref:System.
 |"z"|Önünde sıfır olmadan UTC biçiminden saat uzaklığı.<br /><br /> Daha fazla bilgi: ["Z" özel biçim belirticisi](#zSpecifier).|2009-06-15T13:45:30-07:00 -> -7|  
 |"zz"|Önünde sıfır bulunan tek basamaklı değerden oluşan UTC biçiminden saat uzaklığı.<br /><br /> Daha fazla bilgi: ["Zz" özel biçim belirticisi](#zzSpecifier).|2009-06-15T13:45:30-07:00 -> -07|  
 |"zzz"|UTC biçiminden saat ve dakika uzaklığı.<br /><br /> Daha fazla bilgi: ["Zzz" özel biçim belirticisi](#zzzSpecifier).|2009-06-15T13:45:30-07:00 -> -07:00|  
-|":"|Zaman ayırıcı.<br /><br /> Daha fazla bilgi: [":" özel biçim belirticisi](#timeSeparator).|2009-06-15T13:45:30 -> : (en-US)<br /><br /> 2009-06-15T13:45:30 -> . (it-IT)<br /><br /> 2009-06-15T13:45:30 -> : (ja-JP)|  
-|"/"|Tarih ayırıcı.<br /><br /> Daha fazla bilgi: ["/" özel biçim belirticisi](#dateSeparator).|2009-06-15T13:45:30 -> / (en-US)<br /><br /> 2009-06-15T13:45:30 -> - (ar-DZ)<br /><br /> 2009-06-15T13:45:30 -> . (tr-TR)|  
-|"*dize*"<br /><br /> '*dize*'|Değişmez dize sınırlayıcısı.<br /><br /> Daha fazla bilgi: [karakter değişmez değerleri](#Literals).|2009-06-15T13:45:30 ("arr:" h:m t) arr ->: 1:45 P<br /><br /> 2009-06-15T13:45:30 ('arr:' h:m t) -> arr: 1:45 P|  
+|":"|Zaman ayırıcı.<br /><br /> Daha fazla bilgi: [":" özel biçim belirticisi](#timeSeparator).|2009-06-15T13:45:30 ->: (en-US)<br /><br /> 2009-06-15T13:45:30 -&GT;. (it-IT)<br /><br /> 2009-06-15T13:45:30 ->: (ja-JP)|  
+|"/"|Tarih ayırıcı.<br /><br /> Daha fazla bilgi: ["/" özel biçim belirticisi](#dateSeparator).|2009-06-15T13:45:30 -> / (en-US)<br /><br /> 2009-06-15T13:45:30 -> - (ar-DZ)<br /><br /> 2009-06-15T13:45:30 -&GT;. (tr-TR)|  
+|"*dize*"<br /><br /> '*dize*'|Değişmez dize sınırlayıcısı.<br /><br /> Daha fazla bilgi: [karakter değişmez değerleri](#Literals).|2009-06-15T13:45:30 ("arr:" h:m t) arr ->: 1:45 P<br /><br /> 2009-06-15T13:45:30 ('arr:' h:m t) arr ->: 1:45 P|  
 |%|Aşağıdaki karakteri özel biçim belirticisi olarak tanımlar.<br /><br /> Daha fazla bilgi:[kullanarak tek özel biçim belirticileri](#UsingSingleSpecifiers).|2009-06-15T13:45:30 (%h) -> 1|  
 |\|Kaçış karakteri.<br /><br /> Daha fazla bilgi: [karakter değişmez değerleri](#Literals) ve [kaçış karakteri kullanarak](#escape).|2009-06-15T13:45:30 (h \h) -> 1 h|  
-|Başka bir karakter|Karakter, değişmeyen sonuç dizesine kopyalanır.<br /><br /> Daha fazla bilgi: [karakter değişmez değerleri](#Literals).|2009-06-15T01:45:30 (arr hh:mm t) -> arr 01:45 A|  
+|Başka bir karakter|Karakter, değişmeyen sonuç dizesine kopyalanır.<br /><br /> Daha fazla bilgi: [karakter değişmez değerleri](#Literals).|2009-06-15T01:45:30 (arr ss: dd t) -> arr 01: 45 A|  
   
  Aşağıdaki bölümlerde, her özel tarih ve saat biçim belirticisi hakkında ek bilgi sağlanır. Aksi belirtilmediği sürece, her tanımlayıcısı ile mi kullanılacağını bakılmaksızın bir aynı dize gösterimini üreten bir <xref:System.DateTime> değeri veya <xref:System.DateTimeOffset> değeri.  
   
@@ -634,7 +634,7 @@ Bir tarih ve saat biçim dizesi metin gösterimini tanımlayan bir <xref:System.
 ||||||  
 |-|-|-|-|-|  
 |F|H|K|M|d|  
-|f|g|h|m|s|  
+|F|G|h|m|s|  
 |t|y|z|%|:|  
 |/|"|'|\||  
   
@@ -692,7 +692,7 @@ Bir tarih ve saat biçim dizesi metin gösterimini tanımlayan bir <xref:System.
   
  Kullanırsanız, ayrıca, <xref:System.Globalization.CultureInfo.%23ctor%28System.String%29?displayProperty=nameWithType> yeni bir örneğini oluşturmak için Oluşturucusu <xref:System.Globalization.CultureInfo> aynı kültür geçerli sistem kültürü tarafından oluşturulan tüm özelleştirmeler olarak temsil eden nesnesi **bölge ve Dil Seçenekleri** Denetim Masası uygulanacak yeni <xref:System.Globalization.CultureInfo> nesnesi. Kullanabileceğiniz <xref:System.Globalization.CultureInfo.%23ctor%28System.String%2CSystem.Boolean%29?displayProperty=nameWithType> Oluşturucusu oluşturmak için bir <xref:System.Globalization.CultureInfo> sistemin özelleştirmeleri yansıtmaz nesnesi.  
   
-### <a name="datetimeformatinfo-properties"></a>DateTimeFormatInfo properties  
+### <a name="datetimeformatinfo-properties"></a>DateTimeFormatInfo özellikleri  
  Biçimlendirme geçerli özellikleri tarafından Etkileyenler <xref:System.Globalization.DateTimeFormatInfo> örtük olarak geçerli iş parçacığı kültürünü veya açıkça tarafından sağlanan nesne <xref:System.IFormatProvider> biçimlendirme çağıran yönteminin parametresi. İçin <xref:System.IFormatProvider> parametresini belirtmeniz gerekir bir <xref:System.Globalization.CultureInfo> bir kültür temsil eder, nesne veya <xref:System.Globalization.DateTimeFormatInfo> nesnesi.  
   
  Birçok özel tarih ve saat biçim belirticileri tarafından üretilen Sonuç dizesini de geçerli özelliklerine bağlıdır <xref:System.Globalization.DateTimeFormatInfo> nesnesi. Uygulamanızı karşılık gelen değiştirerek bazı özel tarih ve saat biçim belirticileri tarafından üretilen sonuç değiştirebilirsiniz <xref:System.Globalization.DateTimeFormatInfo> özelliği. Örneğin, "ggg" biçim belirticisi bulunan bir kısaltılmış haftanın günü adı ekler <xref:System.Globalization.DateTimeFormatInfo.AbbreviatedDayNames%2A> sonuç dizesi için dize dizisi. Benzer şekilde, bulunan tam ay adı "Aaaa" biçim belirticisi ekler <xref:System.Globalization.DateTimeFormatInfo.MonthNames%2A> sonuç dizesi için dize dizisi.  
@@ -702,4 +702,4 @@ Bir tarih ve saat biçim dizesi metin gösterimini tanımlayan bir <xref:System.
  <xref:System.IFormatProvider?displayProperty=nameWithType>  
  [Biçimlendirme Türleri](../../../docs/standard/base-types/formatting-types.md)  
  [Standart Tarih ve Saat Biçim Dizeleri](../../../docs/standard/base-types/standard-date-and-time-format-strings.md)  
- [Örnek: .NET Framework 4 yardımcı biçimlendirme](http://code.msdn.microsoft.com/NET-Framework-4-Formatting-9c4dae8d)
+ [Örnek: .NET Framework 4 yardımcı biçimlendirme](https://code.msdn.microsoft.com/NET-Framework-4-Formatting-9c4dae8d)

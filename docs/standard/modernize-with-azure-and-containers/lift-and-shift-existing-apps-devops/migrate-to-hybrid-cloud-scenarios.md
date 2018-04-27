@@ -1,18 +1,19 @@
 ---
-title: "Karma bulut senaryolarında geçirme"
-description: "Kapsayıcılı .NET uygulamaları için .NET mikro mimarisi | Karma bulut senaryolarında geçirme"
+title: Karma bulut senaryolarında geçirme
+description: Kapsayıcılı .NET uygulamaları için .NET mikro mimarisi | Karma bulut senaryolarında geçirme
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 10/2/2017
 ms.prod: .net
+ms.topic: article
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: 6216068786745ac4ebc00263a14b4afe247193f5
-ms.sourcegitcommit: d3cfda0943364aaf6ccd574f55f584576c8a4fee
+ms.openlocfilehash: a2fc5a2118736d3491a5a0731e47c697edd674f1
+ms.sourcegitcommit: 2e8acae16ae802f2d6d04e3ce0a6dbf04e476513
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/08/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="migrate-to-hybrid-cloud-scenarios"></a>Karma bulut senaryolarında geçirme
 
@@ -24,7 +25,7 @@ Güvenlik geldiğinde, yönetim ve güvenlik, karma bulut merkezileştirebilirsi
 
 Son olarak, dağıtmak ve sorunsuz bir şekilde verileri çözümlemek, Bulut ve şirket içi varlıklar için sorgu dillerini kullanın ve analizi ve kaynağına bakılmaksızın, verilerinizi zenginleştirmek için azure'da öğrenme derin uygulanır.
 
-## <a name="azure-stack"></a>Azure Stack
+## <a name="azure-stack"></a>Azure yığını
 
 Azure yığın kuruluşunuzun veri merkezinden Azure Hizmetleri sunmanıza olanak sağlayan bir karma bulut platformudur. Azure yığın kenar ve bağlantısız ortamlarda veya toplantı belirli güvenlik ve uyumluluk gereksinimleri gibi anahtar senaryolarda modern, uygulamalarınız için yeni seçenekler destekleyecek şekilde tasarlanmıştır.
 
@@ -52,9 +53,9 @@ Microsoft Azure yığın Geliştirme Seti değerlendirmek ve Azure yığın hakk
 
 -   **Azure karma bulut**
 
-    [https://www.microsoft.com/cloud-Platform/Hybrid-cloud](https://www.microsoft.com/cloud-platform/hybrid-cloud)
+    [https://www.microsoft.com/cloud-platform/hybrid-cloud](https://www.microsoft.com/cloud-platform/hybrid-cloud)
 
--   **Azure Stack**
+-   **Azure yığını**
 
     [https://azure.microsoft.com/overview/azure-stack/](https://azure.microsoft.com/overview/azure-stack/)
 

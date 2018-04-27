@@ -1,7 +1,7 @@
 ---
-title: ".NET taşınabilirlik Çözümleyicisi - .NET"
-description: ".NET Core, .NET standart, UWP ve Xamarin dahil olmak üzere çeşitli .NET uygulamaları arasında nasıl taşınabilir kodunuz: değerlendirilecek .NET taşınabilirlik Çözümleyicisi aracını kullanmayı öğrenin."
-keywords: .NET, .NET Core
+title: .NET taşınabilirlik Çözümleyicisi - .NET
+description: '.NET Core, .NET standart, UWP ve Xamarin dahil olmak üzere çeşitli .NET uygulamaları arasında nasıl taşınabilir kodunuz: değerlendirilecek .NET taşınabilirlik Çözümleyicisi aracını kullanmayı öğrenin.'
+keywords: .NET, .NET core
 author: blackdwarf
 ms.author: mairaw
 ms.date: 07/26/2017
@@ -13,15 +13,15 @@ ms.assetid: 0375250f-5704-4993-a6d5-e21c499cea1e
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: 7e3d628fe4b4a8f01e692a70892658fceeb87953
-ms.sourcegitcommit: 75a180acb5d8a2dbd4a52915ce8e980749fb1d05
+ms.openlocfilehash: 3d813292a821c2ebfa7b40ee873cf36e71104ebf
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/24/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="the-net-portability-analyzer"></a>.NET taşınabilirlik Çözümleyicisi
 
-Birden çok platform Kitaplıklarınızı olmak istersiniz? Ne kadar işin uygulamanızın diğer .NET uygulamaları ve .NET Core, .NET standart, UWP ve Xamarin iOS, Android ve Mac için dahil olmak üzere profillerini uyumlu hale getirmek için gerekli olduğunu görmek mi istiyorsunuz? [.NET taşınabilirlik Çözümleyicisi](http://go.microsoft.com/fwlink/?LinkID=507467) nasıl programınızı .NET uygulamaları arasında derlemeleri çözümleyerek esnektir üzerinde ayrıntılı bir rapor sağlayan bir araçtır. Taşınabilirlik Çözümleyicisi Visual Studio uzantısı ve bir konsol uygulaması olarak sunulur.
+Birden çok platform Kitaplıklarınızı olmak istersiniz? Ne kadar işin uygulamanızın diğer .NET uygulamaları ve .NET Core, .NET standart, UWP ve Xamarin iOS, Android ve Mac için dahil olmak üzere profillerini uyumlu hale getirmek için gerekli olduğunu görmek mi istiyorsunuz? [.NET taşınabilirlik Çözümleyicisi](https://marketplace.visualstudio.com/items?itemName=ConnieYau.NETPortabilityAnalyzer) nasıl programınızı .NET uygulamaları arasında derlemeleri çözümleyerek esnektir üzerinde ayrıntılı bir rapor sağlayan bir araçtır. Taşınabilirlik Çözümleyicisi Visual Studio uzantısı ve bir konsol uygulaması olarak sunulur.
 
 ## <a name="new-targets"></a>Yeni hedefler
 
@@ -33,7 +33,7 @@ Birden çok platform Kitaplıklarınızı olmak istersiniz? Ne kadar işin uygul
 
 ## <a name="how-to-use-portability-analyzer"></a>Taşınabilirlik Çözümleyicisi'ni kullanma
 
-.NET taşınabilirlik Analyzer'ı kullanmaya başlamak için önce uzantısını yükleyip gerek [Visual Studio Galerisi](http://go.microsoft.com/fwlink/?LinkID=507467). Visual Studio 2015 ve Visual Studio 2017 üzerinde çalışır. Visual Studio yapılandırma **Çözümle** > **taşınabilirlik Çözümleyicisi ayarları** ve hedef platformları seçin.
+.NET taşınabilirlik Analyzer'ı kullanmaya başlamak için önce uzantısını yükleyip gerek [Visual Studio Market'te](https://marketplace.visualstudio.com/items?itemName=ConnieYau.NETPortabilityAnalyzer). Visual Studio 2015 ve Visual Studio 2017 üzerinde çalışır. Visual Studio yapılandırma **Çözümle** > **taşınabilirlik Çözümleyicisi ayarları** ve hedef platformları seçin.
 
 ![Taşınabilirlik ekran görüntüsü](./media/portability-analyzer/portability-screenshot.png)
 

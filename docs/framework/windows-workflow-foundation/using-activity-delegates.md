@@ -1,23 +1,24 @@
 ---
 title: Etkinlik temsilcileri kullanma
-ms.custom: 
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: e33cf876-8979-440b-9b23-4a12d1139960
-caps.latest.revision: "12"
+caps.latest.revision: 12
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 82aafd49528e7ce36f9cf09b7402e65d0844f797
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: efec9885ae804263f7ae4c6d1d5c3bc4f39831c9
+ms.sourcegitcommit: 68b60d38043e50104ccc90c76f8599b1ffe18346
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/20/2018
 ---
 # <a name="using-activity-delegates"></a>Etkinlik temsilcileri kullanma
 Etkinlik temsilciler etkinlik yazarların kullanıcılar etkinliğin etkinlik tabanlı işleyicileri sağlayabilir belirli imzaları ile geri çağırmalar etkinleştirin. İki tür etkinlik temsilciler kullanılabilir: <xref:System.Activities.ActivityAction%601> bir dönüş değeri olmayan etkinlik temsilciler tanımlamak için kullanılır ve <xref:System.Activities.ActivityFunc%601> bir dönüş değerine sahip etkinlik temsilciler tanımlamak için kullanılır.  
@@ -37,7 +38,7 @@ Bu konudaki örnekler nesne başlatma sözdizimini kullanın. Nesne başlatma s�
   
  [!code-csharp[CFX_ActivityExample#7](../../../samples/snippets/csharp/VS_Snippets_CFX/CFX_ActivityExample/cs/Program.cs#7)]  
   
- [!INCLUDE[crabout](../../../includes/crabout-md.md)]Nesne başlatıcılar, bkz: [nasıl yapılır: nesneler Oluşturucusu (C# programlama Kılavuzu) çağırma olmadan başlatmak](http://go.microsoft.com/fwlink/?LinkId=161015) ve [nasıl yapılır: nesne Başlatıcı kullanarak nesne bildirme](http://go.microsoft.com/fwlink/?LinkId=161016).  
+ [!INCLUDE[crabout](../../../includes/crabout-md.md)] Nesne başlatıcılar, bkz: [nasıl yapılır: nesneler Oluşturucusu (C# programlama Kılavuzu) çağırma olmadan başlatmak](http://go.microsoft.com/fwlink/?LinkId=161015) ve [nasıl yapılır: nesne Başlatıcı kullanarak nesne bildirme](http://go.microsoft.com/fwlink/?LinkId=161016).  
   
  Aşağıdaki örnekte, bir <xref:System.Activities.Statements.TryCatch> etkinlik, bir iş akışında kullanılır. Bir <xref:System.ApplicationException> iş akışı tarafından oluşturulan ve tarafından işlenen bir <xref:System.Activities.Statements.Catch%601> etkinlik. İşleyicisi <xref:System.Activities.Statements.Catch%601> etkinliğin etkinlik eylem bir <xref:System.Activities.Statements.WriteLine> etkinliği ve özel durum ayrıntısı aktarılan aracılığıyla kullanarak `ex` <xref:System.Activities.DelegateInArgument%601>.  
   
@@ -54,7 +55,7 @@ Bu konudaki örnekler nesne başlatma sözdizimini kullanın. Nesne başlatma s�
  Birden çok genel sürümü vardır <xref:System.Activities.Statements.InvokeAction%601> ve <xref:System.Activities.ActivityAction%601> bir veya daha fazla bağımsız değişkenleri geçirme sağlanan.  
   
 ## <a name="using-activityfunc"></a>ActivityFunc kullanma  
- <xref:System.Activities.ActivityAction%601>hiçbir sonuç değeri etkinliğinden olduğunda yararlıdır ve <xref:System.Activities.ActivityFunc%601> sonuç değeri döndürdüğünde kullanılır. Ne zaman tanımlayan bir özel etkinlik oluşturma bir <xref:System.Activities.ActivityFunc%601>, kullanan bir <xref:System.Activities.Expressions.InvokeFunc%601> , çağrılmasını modellemek için <xref:System.Activities.ActivityFunc%601>. Aşağıdaki örnekte, bir `WriteFillerText` etkinlik tanımlanır. Dolgu metin sağlamak için bir <xref:System.Activities.Expressions.InvokeFunc%601> bir tamsayı bağımsız değişken ve bir dizi sonuç sahip belirtilir. Dolgu metin alındıktan sonra konsol kullanmaya görüntülenir bir <xref:System.Activities.Statements.WriteLine> etkinlik.  
+ <xref:System.Activities.ActivityAction%601> hiçbir sonuç değeri etkinliğinden olduğunda yararlıdır ve <xref:System.Activities.ActivityFunc%601> sonuç değeri döndürdüğünde kullanılır. Ne zaman tanımlayan bir özel etkinlik oluşturma bir <xref:System.Activities.ActivityFunc%601>, kullanan bir <xref:System.Activities.Expressions.InvokeFunc%601> , çağrılmasını modellemek için <xref:System.Activities.ActivityFunc%601>. Aşağıdaki örnekte, bir `WriteFillerText` etkinlik tanımlanır. Dolgu metin sağlamak için bir <xref:System.Activities.Expressions.InvokeFunc%601> bir tamsayı bağımsız değişken ve bir dizi sonuç sahip belirtilir. Dolgu metin alındıktan sonra konsol kullanmaya görüntülenir bir <xref:System.Activities.Statements.WriteLine> etkinlik.  
   
  [!code-csharp[CFX_ActivityExample#3](../../../samples/snippets/csharp/VS_Snippets_CFX/CFX_ActivityExample/cs/Program.cs#3)]  
   
@@ -62,7 +63,7 @@ Bu konudaki örnekler nesne başlatma sözdizimini kullanın. Nesne başlatma s�
   
  [!code-csharp[CFX_ActivityExample#4](../../../samples/snippets/csharp/VS_Snippets_CFX/CFX_ActivityExample/cs/Program.cs#4)]  
   
- Kullanılacak `TextGenerator` etkinlikle `WriteRandomText` etkinliği olarak belirtmek <xref:System.Activities.ActivityDelegate.Handler%2A>.  
+ Kullanılacak `TextGenerator` etkinlikle `WriteFillerText` etkinliği olarak belirtmek <xref:System.Activities.ActivityDelegate.Handler%2A>.  
   
  [!code-csharp[CFX_ActivityExample#5](../../../samples/snippets/csharp/VS_Snippets_CFX/CFX_ActivityExample/cs/Program.cs#5)]  
   

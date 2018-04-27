@@ -1,23 +1,24 @@
 ---
-title: ".NET Framework 3.5 Ruleset ile değişkenlerini kullanma"
-ms.custom: 
+title: .NET Framework 3.5 Ruleset ile değişkenlerini kullanma
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 27b56249-22fe-4252-840f-74c0d6c7a6b3
-caps.latest.revision: "7"
+caps.latest.revision: 7
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 2656cc5d8add0027d6bf038d5de735ebccd2d96d
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 216136ba084505947b5ab3c985284d704cb5872f
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="using-variables-with-a-net-framework-35-ruleset"></a>.NET Framework 3.5 Ruleset ile değişkenlerini kullanma
 Bu örneği kullanan bir iş akışının nasıl oluşturulacağını gösterir <xref:System.Activities.Statements.Interop> yazılmış özel bir aktivite tümleştirmek için etkinlik [!INCLUDE[netfx35_short](../../../../includes/netfx35-short-md.md)] İlkesi ve kuralları kullanır. İş akışı değişkenleri özel etkinlik tarafından kullanıma sunulan bağımlılık özellikleri bağlayarak verileri özel etkinlik geçirir.  
@@ -26,7 +27,7 @@ Bu örneği kullanan bir iş akışının nasıl oluşturulacağını gösterir 
   
 #### <a name="to-examine-travelrulelibrary"></a>TravelRuleLibrary incelemek için  
   
-1.  Kullanarak [!INCLUDE[vs_current_short](../../../../includes/vs-current-short-md.md)], InteropWith35RuleSet.sln çözüm dosyasını açın.  
+1.  Visual Studio kullanarak InteropWith35RuleSet.sln çözüm dosyasını açın.  
   
 2.  İş Akışı Tasarımcısı'nda TravelRuleSet.cs açın.  
   
@@ -38,7 +39,7 @@ Bu örneği kullanan bir iş akışının nasıl oluşturulacağını gösterir 
   
 4.  Sağ tıklayın `DiscountPolicy` seçip **görünümü kodu** seçeneği C# kodu etkinliğin yanında kodu inceleyin.  
   
-     Bağımlılık özelliği ayarını gözlemlemek `DiscountLevel`. Bu bağımsız değişkenler için eşdeğerdir [!INCLUDE[netfx_current_short](../../../../includes/netfx-current-short-md.md)]. [!INCLUDE[crabout](../../../../includes/crabout-md.md)]bağımsız değişkenleri, görmek [değişkenleri ve bağımsız değişkenler](../../../../docs/framework/windows-workflow-foundation/variables-and-arguments.md).  
+     Bağımlılık özelliği ayarını gözlemlemek `DiscountLevel`. Bu bağımsız değişkenler için eşdeğerdir [!INCLUDE[netfx_current_short](../../../../includes/netfx-current-short-md.md)]. [!INCLUDE[crabout](../../../../includes/crabout-md.md)] bağımsız değişkenleri, görmek [değişkenleri ve bağımsız değişkenler](../../../../docs/framework/windows-workflow-foundation/variables-and-arguments.md).  
   
 ## <a name="interopwith35ruleset"></a>InteropWith35RuleSet  
  Bu kullanan bir sıralı iş akışı projedir <xref:System.Activities.Statements.Interop> oluşturulan özel kural kümesi ile tümleştirmek için etkinlik `TravelRuleLibrary` projesi. Değişkenleri, en üst düzey oluşturulur <xref:System.Activities.Statements.Sequence> etkinlik. <xref:System.Activities.Statements.Interop> Etkinlik ile tümleştirmek için kullanılan `TravelRuleSet` etkinlik. Üzerinde bildirilen değişkenlerin <xref:System.Activities.Statements.Sequence> bağımlılık özelliği bağlamak için kullanılır.  

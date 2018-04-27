@@ -1,30 +1,30 @@
 ---
-title: "Görev Paralel Kitaplığı (TPL)"
-ms.custom: 
+title: Görev Paralel Kitaplığı (TPL)
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology: dotnet-standard
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - .NET, concurrency in
 - .NET, parallel programming in
 - Parallel Programming
 ms.assetid: b8f99f43-9104-45fd-9bff-385a20488a23
-caps.latest.revision: "37"
+caps.latest.revision: 37
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: 2a124d355b4480aebff3c40e2ccece618e1979f6
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: 8f63237e139e4be1d8cbb13e1534c894626fd72d
+ms.sourcegitcommit: 2e8acae16ae802f2d6d04e3ce0a6dbf04e476513
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="task-parallel-library-tpl"></a>Görev Paralel Kitaplığı (TPL)
 Görev paralel kitaplığı (TPL) genel türler ve API'leri kümesidir <xref:System.Threading?displayProperty=nameWithType> ve <xref:System.Threading.Tasks?displayProperty=nameWithType> ad alanları. TPL'nin amacı, uygulamalara paralellik ve eşzamanlılık ekleme işlemini kolaylaştırarak geliştiricilerin daha üretken olmasını sağlamaktır. TPL, kullanılabilen tüm işlemcilerin en verimli şekilde kullanılması için eşzamanlılık derecesini dinamik olarak ölçeklendirir. Ayrıca, TPL üzerinde iş parçacıklarının zamanlama çalışmanın Bölümlendirmeyi işleyen <xref:System.Threading.ThreadPool>, iptal desteği, durum yönetimi ve diğer alt düzey ayrıntıları. TPL'yi kullanarak, bir yandan programınızın gerçekleştirmek üzere tasarlandığı çalışmaya odaklanırken, diğer yandan kodunuzun performansını en üst düzeye çıkarabilirsiniz.  
@@ -44,4 +44,4 @@ Görev paralel kitaplığı (TPL) genel türler ve API'leri kümesidir <xref:Sys
 |[Paralel Programlama](../../../docs/standard/parallel-programming/index.md)|.NET paralel programlama için üst düzey düğüm.|  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [.NET Framework ile paralel programlama için örnek](http://code.msdn.microsoft.com/Samples-for-Parallel-b4b76364)
+ [.NET Framework ile paralel programlama için örnek](https://code.msdn.microsoft.com/Samples-for-Parallel-b4b76364)

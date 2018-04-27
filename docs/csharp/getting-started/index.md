@@ -12,11 +12,11 @@ ms.topic: article
 ms.prod: .net
 ms.technology: devlang-csharp
 ms.devlang: csharp
-ms.openlocfilehash: f335ee1412932043b175aa49b29ecd360d447eb9
-ms.sourcegitcommit: b750a8e3979749b214e7e10c82efb0a0524dfcb1
+ms.openlocfilehash: 630815032925e5dac0477147c6265657face44a5
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/09/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="get-started-with-c"></a>C# ile çalışmaya başlama #
 
@@ -48,7 +48,7 @@ Aşağıdaki konular kullanılabilir:
 
 * [C# için Visual Studio Geliştirme Ortamını Kullanma](/visualstudio/csharp-ide/using-the-visual-studio-development-environment-for-csharp)  
 
-    Kullanarak bir kılavuz sağlar [!INCLUDE[csprcs](~/includes/csprcs-md.md)] tümleşik geliştirme ortamı.
+    Visual C# tümleşik geliştirme ortamını kullanma konusunda yönergeler sağlar.
 
 * [C# Programlama Kılavuzu](../../csharp/programming-guide/index.md)
 

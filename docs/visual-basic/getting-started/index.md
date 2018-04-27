@@ -12,11 +12,11 @@ ms.assetid: 6685467b-28fa-4cde-9516-f0e00ad08911
 caps.latest.revision: 36
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: e53ba3e1134b09edcc87a0421b7699bcf3bb1d39
-ms.sourcegitcommit: d95a91d685565f4d95c8773b558752864a6a3d7e
+ms.openlocfilehash: 58e63d95c2f10329f85d6150b58f196294de38d1
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/12/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="get-started-with-visual-basic"></a>Visual Basic ile çalışmaya başlama
 Belgelerin bu bölümde Visual Basic uygulama geliştirme ile çalışmaya başlamanıza yardımcı olur.  
@@ -45,7 +45,7 @@ Sık karşılaşılan sorunların yanıtlarını bulmanıza yardımcı olabilece
 [Visual Studio 2017’de Visual Basic ve .NET Core ile bir sınıf kitaplığı derleme](../../core/tutorials/vb-library-with-visual-studio.md) 
 
 ## <a name="see-also"></a>Ayrıca bkz.
- [Get Visual Basic](https://aka.ms/vsdownload?utm_source=mscom&utm_campaign=msdocs)  
+ [Visual Basic Al](https://aka.ms/vsdownload?utm_source=mscom&utm_campaign=msdocs)  
  Ücretsiz sürümleri de dahil olmak üzere, Visual Basic desteği içeren Visual Studio sürümleri için indirme bağlantılar sağlar.  
 
  [Yeni başlayanlar için Visual Basic temelleri](https://mva.microsoft.com/en-US/training-courses/visual-basic-fundamentals-for-absolute-beginners-16507)  
@@ -55,10 +55,10 @@ Sık karşılaşılan sorunların yanıtlarını bulmanıza yardımcı olabilece
  Nesne yönelimli programlamaya giriş konularını veren, kendi nesnelerinizi nasıl oluşturacağınızı ve kodlamanızı basitleştirmek için nesneleri nasıl kullanacağınızı açıklayan sayfaların bağlantılarını sağlar.  
   
  [Örnekler](../../visual-basic/sample-applications.md)  
- Örnek kodda bağlantılar sağlar [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)].  
+ Visual Basic örnek kodda bağlantılar sağlar.  
   
  [İzlenecek Yollar](../../visual-basic/walkthroughs.md)  
- Yönlerini göstermek yardım sayfalarına listesini sağlar [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] dili.  
+ Visual Basic Dil yönlerini göstermek yardım sayfalarına listesini sağlar.  
   
  [Bizimle İletişime Geçin](/visualstudio/ide/talk-to-us)  
  Destek alma ve geri bildirimde bulunma konularını ele alır.  
@@ -66,7 +66,7 @@ Sık karşılaşılan sorunların yanıtlarını bulmanıza yardımcı olabilece
  [Visual Studio](/visualstudio/)  
  Uygulamasına ait bağlantılar sağlanmıştır [!INCLUDE[vsprvs](~/includes/vsprvs-md.md)] belgeleri.  
   
- [C#](../../csharp/index.md) ile uygulama geliştirme belgelerine içine bağlantılar sağlar [!INCLUDE[csprcs](~/includes/csprcs-md.md)].  
+ [C#](../../csharp/index.md) uygulama geliştirme Visual C# ile belgelerine içine bağlantılar sağlar.  
   
  [Visual C++](/cpp/)  
  Visual C++ belgelerine ilişkin bağlantıları sağlar.  

@@ -15,11 +15,11 @@ ms.assetid: 16f14f09-b2ce-42c7-a875-e4eca5d50674
 caps.latest.revision: 52
 author: BillWagner
 ms.author: wiwagn
-ms.openlocfilehash: 2ddbd0f7268dd5dae4095d661cf800b5b481cbbd
-ms.sourcegitcommit: 83dd5ec003e788ccb3e33f3412a7af39ae347646
+ms.openlocfilehash: 50b22ea94e8079e29c1e2ba2a595544ce23bd216
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/15/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="async-c-reference"></a>async (C# Başvurusu)
 Kullanım `async` belirtmek için değiştirici yöntemi, bir [lambda ifadesi](../../../csharp/programming-guide/statements-expressions-operators/lambda-expressions.md), veya [anonim yöntemi](../../../csharp/programming-guide/statements-expressions-operators/anonymous-methods.md) zaman uyumsuz olarak çağrılır. Bir yöntem veya ifadesi bu değiştirici kullanıyorsanız, bunu olarak adlandırılır bir *async yöntemi*. Aşağıdaki örnek, adlandırılmış bir zaman uyumsuz yöntem tanımlar `ExampleMethodAsync`: 
@@ -76,7 +76,7 @@ Async yöntemi, dönüş türleri aşağıdakilere sahip olabilir:
 - <xref:System.Threading.Tasks.Task>
 - <xref:System.Threading.Tasks.Task%601>
 - [void](../../../csharp/language-reference/keywords/void.md), hangi yalnızca kullanılmalıdır olay işleyicileri için.
-- C# 7, bir erişilebilir olan herhangi bir tür'ile başlayan `GetAwaiter` yöntemi. `System.Threading.Tasks.ValueTask<TResult>` Bu tür bir uygulama türüdür. NuGet paketi ekleyerek kullanılabilir olur `System.Threading.Tasks.Extensions`. 
+- C# 7.0, bir erişilebilir olan herhangi bir tür'ile başlayan `GetAwaiter` yöntemi. `System.Threading.Tasks.ValueTask<TResult>` Bu tür bir uygulama türüdür. NuGet paketi ekleyerek kullanılabilir olur `System.Threading.Tasks.Extensions`. 
 
 Async yöntemi herhangi bildiremezsiniz [içinde](../../../csharp/language-reference/keywords/in-parameter-modifier.md), [ref](../../../csharp/language-reference/keywords/ref.md) veya [çıkışı](../../../csharp/language-reference/keywords/out-parameter-modifier.md) parametreleri ya da can sahip bir [başvuru dönüş değeri](../../programming-guide/classes-and-structs/ref-returns.md), ancak yöntemleri çağırabilir Bu tür parametreler sahip.  
   
@@ -84,7 +84,7 @@ Belirttiğiniz `Task<TResult>` bir zaman uyumsuz yönteminin dönüş türü ola
   
 Kullandığınız `void` dönüş türü, dönüş türü gerektiren olay işleyicileri öncelikle tanımlayın. Çağıran bir `void`-zaman uyumsuz yöntem döndürme await olamaz ve yöntemi atar özel durumlarını yakalama olamaz.  
 
-C# 7 ile başlayan, başka bir tür, sahip genellikle bir değer türü, dönüş bir `GetAwaiter` performans açısından kritik kod bölümlerini miminize bellek ayırma yöntemi. 
+C# 7. 0'dan başlayarak, başka bir tür, sahip genellikle bir değer türü, dönüş bir `GetAwaiter` performans açısından kritik kod bölümlerini miminize bellek ayırma yöntemi. 
 
 Daha fazla bilgi ve örnekler için bkz: [zaman uyumsuz dönüş türleri](../../../csharp/programming-guide/concepts/async/async-return-types.md).  
   

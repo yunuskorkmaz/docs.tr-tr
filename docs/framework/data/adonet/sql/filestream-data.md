@@ -16,11 +16,11 @@ ms.author: douglasl
 manager: craigg
 ms.workload:
 - dotnet
-ms.openlocfilehash: e25f6dceb6018b719a0a8a07822b20d85a08a012
-ms.sourcegitcommit: b750a8e3979749b214e7e10c82efb0a0524dfcb1
+ms.openlocfilehash: 757c64fdc66d9c564fc151bc78fdbda23d9b6705
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/09/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="filestream-data"></a>FILESTREAM verileri
 FILESTREAM depolama varbinary(max) sütunda depolanan ikili (BLOB) veriler için özniteliğidir. FILESTREAM önce ikili veri depolama özel olarak işlenmesi gerekli. Metin belgeleri, görüntüler ve video gibi yapılandırılmamış veriler genellikle yönetmek zorlaşır veritabanı dışında depolanır.  
@@ -28,13 +28,13 @@ FILESTREAM depolama varbinary(max) sütunda depolanan ikili (BLOB) veriler için
 > [!NOTE]
 >  .NET Framework 3.5 SP1'i yüklemeniz gerekir (veya üstü) SqlClient kullanarak FILESTREAM verilerle çalışmak için.  
   
- Bir varbinary(max) sütunu FILESTREAM özniteliğine belirtme neden [!INCLUDE[ssNoVersion](../../../../../includes/ssnoversion-md.md)] yerel NTFS dosya sistemi yerine veritabanı dosyasında verileri depolamak için. Ayrı olarak depolanır, ancak aynı kullanabilirsiniz [!INCLUDE[tsql](../../../../../includes/tsql-md.md)] deyimleri veritabanında depolanan varbinary(max) verilerle çalışmak için desteklenir.  
+ Bir varbinary(max) sütunu FILESTREAM özniteliğine belirtilmesi, yerel NTFS dosya sistemi yerine veritabanı dosyasında verileri depolamak için SQL Server neden olur. Ayrı olarak depolanır, ancak aynı kullanabilirsiniz [!INCLUDE[tsql](../../../../../includes/tsql-md.md)] deyimleri veritabanında depolanan varbinary(max) verilerle çalışmak için desteklenir.  
   
 ## <a name="sqlclient-support-for-filestream"></a>FILESTREAM SqlClient desteği  
- [!INCLUDE[dnprdnshort](../../../../../includes/dnprdnshort-md.md)] İçin veri sağlayıcı [!INCLUDE[ssNoVersion](../../../../../includes/ssnoversion-md.md)], <xref:System.Data.SqlClient>, okuma ve yazma FILESTREAM verileri kullanarak için destekler <xref:System.Data.SqlTypes.SqlFileStream> tanımlanan sınıfı <xref:System.Data.SqlTypes> ad alanı. `SqlFileStream` öğesinden devralınan <xref:System.IO.Stream> okuma ve verileri akışlara yazma yöntemleri sağlayan sınıf. Bir akışından okuma bayt dizisi gibi bir veri yapıda akıştan veri aktarır. Yazma verileri veri yapısından bir akışa aktarır.  
+ [!INCLUDE[dnprdnshort](../../../../../includes/dnprdnshort-md.md)] Data Provider for SQL Server <xref:System.Data.SqlClient>, okuma ve yazma FILESTREAM verileri kullanarak için destekler <xref:System.Data.SqlTypes.SqlFileStream> tanımlanan sınıfı <xref:System.Data.SqlTypes> ad alanı. `SqlFileStream` öğesinden devralınan <xref:System.IO.Stream> okuma ve verileri akışlara yazma yöntemleri sağlayan sınıf. Bir akışından okuma bayt dizisi gibi bir veri yapıda akıştan veri aktarır. Yazma verileri veri yapısından bir akışa aktarır.  
   
-### <a name="creating-the-includessnoversionincludesssnoversion-mdmd-table"></a>Oluşturma [!INCLUDE[ssNoVersion](../../../../../includes/ssnoversion-md.md)] tablosu  
- Aşağıdaki [!INCLUDE[tsql](../../../../../includes/tsql-md.md)] deyimleri Çalışanlar adlı bir tablo oluşturur ve bir veri satırı ekler. FILESTREAM depolama etkinleştirdikten sonra bu tablo izleyin kod örnekleri ile birlikte kullanabilirsiniz. Kaynaklara bağlantılar [!INCLUDE[ssNoVersion](../../../../../includes/ssnoversion-md.md)] Books Online bu konunun sonunda yer.  
+### <a name="creating-the-sql-server-table"></a>SQL Server tablosu oluşturma  
+ Aşağıdaki [!INCLUDE[tsql](../../../../../includes/tsql-md.md)] deyimleri Çalışanlar adlı bir tablo oluşturur ve bir veri satırı ekler. FILESTREAM depolama etkinleştirdikten sonra bu tablo izleyin kod örnekleri ile birlikte kullanabilirsiniz. SQL Server Books Online kaynaklarına bağlantılar, bu konunun sonunda yer alır.  
   
 ```  
 CREATE TABLE employees  
@@ -182,8 +182,8 @@ namespace FileStreamTest
   
  Başka bir örnek için bkz: [nasıl depolanacağını ve bir dosya akışı sütuna ikili veri getirecek şekilde](http://www.codeproject.com/Articles/32216/How-to-store-and-fetch-binary-data-into-a-file-str).  
   
-## <a name="resources-in-includessnoversionincludesssnoversion-mdmd-books-online"></a>Kaynaklarında [!INCLUDE[ssNoVersion](../../../../../includes/ssnoversion-md.md)] Çevrimiçi Kitapları  
- Tüm belgeler FILESTREAM için aşağıdaki bölümlerde bulunan [!INCLUDE[ssNoVersion](../../../../../includes/ssnoversion-md.md)] Books Online.  
+## <a name="resources-in-sql-server-books-online"></a>SQL Server Çevrimiçi Kitapları kaynakları  
+ Tüm belgeler FILESTREAM için SQL Server Çevrimiçi Kitapları'nda aşağıdaki bölümlerde yer alır.  
   
 |Konu|Açıklama|  
 |-----------|-----------------|  

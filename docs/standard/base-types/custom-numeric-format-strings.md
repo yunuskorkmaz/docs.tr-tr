@@ -22,18 +22,18 @@ helpviewer_keywords:
 - formatting numbers [.NET Framework]
 - format specifiers, custom numeric format strings
 ms.assetid: 6f74fd32-6c6b-48ed-8241-3c2b86dea5f4
-caps.latest.revision: ''
+caps.latest.revision: 54
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: b33acfef1cabd3aa53fbe8947bd7adbe52d3b7a4
-ms.sourcegitcommit: 935d5267c44f9bce801468ef95f44572f1417e8c
+ms.openlocfilehash: 1b0940432d3fd201979b537752b917d60a10d22e
+ms.sourcegitcommit: 2e8acae16ae802f2d6d04e3ce0a6dbf04e476513
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/28/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="custom-numeric-format-strings"></a>Özel Sayısal Biçim Dizeleri
 Sayısal verinin nasıl biçimlendirileceğini tanımlamak için bir veya daha fazla özel sayısal tanımlayıcıdan oluşan özel bir sayısal biçim dizesi oluşturabilirsiniz. Özel sayısal biçim dizesi değil tüm biçim dizesi olan bir [standart sayısal biçim dizesi](../../../docs/standard/base-types/standard-numeric-format-strings.md).  
@@ -41,7 +41,7 @@ Sayısal verinin nasıl biçimlendirileceğini tanımlamak için bir veya daha f
  Özel sayısal biçim dizeleri bazı aşırı tarafından desteklenen `ToString` tüm sayısal türler yöntemi. Örneğin, bir sayısal biçim dizesi belirtebilirsiniz <xref:System.Int32.ToString%28System.String%29> ve <xref:System.Int32.ToString%28System.String%2CSystem.IFormatProvider%29> yöntemlerinin <xref:System.Int32> türü. Özel sayısal biçim dizeleri de .NET tarafından desteklenen [bileşik biçimlendirme özelliği](../../../docs/standard/base-types/composite-formatting.md), kullanılan bazı tarafından `Write` ve `WriteLine` yöntemlerinin <xref:System.Console> ve <xref:System.IO.StreamWriter> sınıfları, <xref:System.String.Format%2A?displayProperty=nameWithType>yöntemi ve <xref:System.Text.StringBuilder.AppendFormat%2A?displayProperty=nameWithType> yöntemi. [Dize ilişkilendirme](../../csharp/language-reference/tokens/interpolated.md) özelliğini de özel sayısal biçim dizeleri destekler.  
   
 > [!TIP]
->  İndirebilirsiniz [biçimlendirme yardımcı programı](http://code.msdn.microsoft.com/NET-Framework-4-Formatting-9c4dae8d), biçimi uygulamanıza olanak sağlayan bir uygulama dizeleri sayısal veya tarih ve saat değerleri ve sonuç dizesini görüntüler.  
+>  İndirebilirsiniz [biçimlendirme yardımcı programı](https://code.msdn.microsoft.com/NET-Framework-4-Formatting-9c4dae8d), biçimi uygulamanıza olanak sağlayan bir uygulama dizeleri sayısal veya tarih ve saat değerleri ve sonuç dizesini görüntüler.  
   
 <a name="table"></a> Aşağıdaki tabloda özel sayısal biçim belirticileri açıklar ve her biçim belirticisi tarafından üretilen örnek çıktı görüntüler. Bkz: [notları](#NotesCustomFormatting) bölüm özel sayısal biçim dizeleri kullanma hakkında ek bilgi için ve [örnek](#example) kullanımlarını kapsamlı bir çizimi için bölüm.  
   
@@ -50,10 +50,10 @@ Sayısal verinin nasıl biçimlendirileceğini tanımlamak için bir veya daha f
 |"0"|Sıfır yer tutucu|Eğer varsa, karşılık gelen rakamı sıfır ile değiştirir; aksi halde sonuç dizesinde sıfır görünür.<br /><br /> Daha fazla bilgi: ["0" özel belirleyici](#Specifier0).|1234.5678 ("00000") -> 01235<br /><br /> 0.45678 ("0,00" en-US) 0.46 -><br /><br /> 0.45678 ("0,00", fr-FR) 0,46 ->|  
 |"#"|Basamak yer tutucusu|Eğer varsa, karşılık gelen rakamı "#" sembolü ile değiştirir; aksi halde sonuç dizesinde hiçbir rakam gözükmez.<br /><br /> Giriş dizisinde karşılık gelen rakam önemli olmayan bir 0 ise hiçbir basamak sonuç dizesinde görünür. Örneğin, 0003 ("###") 3 ->.<br /><br /> Daha fazla bilgi: ["#" özel belirleyici](#SpecifierD).|1234.5678 ("#####") -> 1235<br /><br /> 0.45678 ("#. ##", en-US).46 -><br /><br /> 0.45678 ("#. ##", fr-FR) ->, 46|  
 |"."|Ondalık noktası|Sonuç dizesindeki ondalık ayracının konumunu belirler.<br /><br /> Daha fazla bilgi: ["." Özel belirleyici](#SpecifierPt).|0.45678 ("0,00" en-US) 0.46 -><br /><br /> 0.45678 ("0,00", fr-FR) 0,46 ->|  
-|","|Grup ayırıcısı ve numara ölçekleme|Hem bir grup ayracı, hem de sayı ölçekleme tanımlayıcısı olarak kullanılır. Grup ayracı olarak, her grup arasında yerelleştirilmiş bir grup ayracı karakteri ekler. Sayı ölçekleme tanımlayıcısı olarak, bir sayıyı belirtilen her virgül için 1000'e böler.<br /><br /> Daha fazla bilgi: ["," özel belirleyici](#SpecifierTh).|Grup ayracı tanımlayıcısı:<br /><br /> 2147483647 ("##,#", en-US) -> 2,147,483,647<br /><br /> 2147483647 ("##,#", es-ES) -> 2.147.483.647<br /><br /> Ölçekleme tanımlayıcısı:<br /><br /> 2147483647 ("#, #," en-US) 2,147 -><br /><br /> 2147483647 ("#, #,", es-ES) 2.147 ->|  
+|","|Grup ayırıcısı ve numara ölçekleme|Hem bir grup ayracı, hem de sayı ölçekleme tanımlayıcısı olarak kullanılır. Grup ayracı olarak, her grup arasında yerelleştirilmiş bir grup ayracı karakteri ekler. Sayı ölçekleme tanımlayıcısı olarak, bir sayıyı belirtilen her virgül için 1000'e böler.<br /><br /> Daha fazla bilgi: ["," özel belirleyici](#SpecifierTh).|Grup ayracı tanımlayıcısı:<br /><br /> 2147483647 ("##, #", en-US) 2.147.483.647 -><br /><br /> 2147483647 ("##, #", es-ES) 2.147.483.647 -><br /><br /> Ölçekleme tanımlayıcısı:<br /><br /> 2147483647 ("#, #," en-US) 2,147 -><br /><br /> 2147483647 ("#, #,", es-ES) 2.147 ->|  
 |"%"|Yüzde yer tutucu|Sayıyı 100 ile çarpar ve sonuç dizesine yerelleştirilmiş bir yüzde simgesi ekler.<br /><br /> Daha fazla bilgi: ["%" özel belirleyici](#SpecifierPct).|-> % 36.97 0.3697 ("% #0.00" en-US)<br /><br /> -> % 36,97 0.3697 ("% #0.00" el-GR)<br /><br /> 0.3697 ("##.0%" en-US) -> %37.0<br /><br /> 0.3697 ("##.0%" el-GR) 37,0 -> %|  
 |"‰"|Her mille yer tutucu|Sayıyı 1000 ile çarpar ve sonuç dizesine yerelleştirilmiş bir binde simgesi ekler.<br /><br /> Daha fazla bilgi: ["‰" özel belirleyici](#SpecifierPerMille).|0.03697 ("#0.00‰" en-US) 36.97‰ -><br /><br /> 0.03697 ("#0.00‰" ru-RU) 36, 97‰ ->|  
-|"E0"<br /><br /> "E+0"<br /><br /> "E-0"<br /><br /> "e0"<br /><br /> "e+0"<br /><br /> "e-0"|Üstel simgeleme|Eğer ardından en az bir 0 (sıfır) geliyorsa, sonucu üstel gösterim kullanarak biçimlendirir. "E" veya "e" harfi üs sembolünün sonuç dizesinde büyük veya küçük harf olduğunu belirtir. "E" veya "e" karakterini izleyen sıfır sayısı üsteki en az basamak sayısını belirler. Artı işareti (+) üsten önce her zaman bir işaret karakterinin bulunacağını belirtir. Eksi işareti (-), işaret karakterinin yalnızca negatif üslerin önünde bulunacağını belirtir.<br /><br /> Daha fazla bilgi: ["E" ve "e" özel tanımlayıcıları](#SpecifierExponent).|987654 ("#0.0e0") -> 98.8e4<br /><br /> 1503.92311 ("0.0##e+00") -> 1.504e+03<br /><br /> 1.8901385E-16 ("0.0e + 00") -> 1.9e-16|  
+|"E0"<br /><br /> "E+0"<br /><br /> "E-0"<br /><br /> "e0"<br /><br /> "e+0"<br /><br /> "e-0"|Üstel simgeleme|Eğer ardından en az bir 0 (sıfır) geliyorsa, sonucu üstel gösterim kullanarak biçimlendirir. "E" veya "e" harfi üs sembolünün sonuç dizesinde büyük veya küçük harf olduğunu belirtir. "E" veya "e" karakterini izleyen sıfır sayısı üsteki en az basamak sayısını belirler. Artı işareti (+) üsten önce her zaman bir işaret karakterinin bulunacağını belirtir. Eksi işareti (-), işaret karakterinin yalnızca negatif üslerin önünde bulunacağını belirtir.<br /><br /> Daha fazla bilgi: ["E" ve "e" özel tanımlayıcıları](#SpecifierExponent).|987654 ("#0.0e0") 98.8e4 -><br /><br /> 1503.92311 ("0.0 ##e + 00") -> 1.504e + 03<br /><br /> 1.8901385E-16 ("0.0e + 00") -> 1.9e-16|  
 |"\\"|Atlatma karakteri|Sonraki karakterin özel biçim tanımlayıcısı yerine bir sabit karakter olarak yorumlanmasını sağlar.<br /><br /> Daha fazla bilgi: ["\\" kaçış karakteri](#SpecifierEscape).|987654 ("\\###00\\#") -> #987654#|  
 |'*dize*'<br /><br /> "*dize*"|Değişmez dize sınırlayıcısı|İçinde bulunan karakterlerin sonuç dizesine değiştirilmeden kopyalanacağını belirtir.|68 ("# ' derece'") 68 derece -><br /><br /> 68 ("#' derece") 68 derece ->|  
 |;|Bölüm ayırıcı|Pozitif, negatif ve sıfır değerine sahip sayılar için ayrı biçim dizeleri tanımlar.<br /><br /> Daha fazla bilgi: [";" Bölüm ayırıcı](#SectionSeparator).|12.345 ("#0.0#;(#0.0#);-\0-") -> 12.35<br /><br /> 0 ("#0.0#;(#0.0#);-\0-") -> -0-<br /><br /> -12.345 ("#0.0#;(#0.0#);-\0-") -> (12.35)<br /><br /> 12.345 ("#0.0#;(#0.0#)") -> 12.35<br /><br /> 0 ("#0.0#;(#0.0#)") -> 0.0<br /><br /> -12.345 ("#0.0#;(#0.0#)") -> (12.35)|  
@@ -243,4 +243,4 @@ Sayısal verinin nasıl biçimlendirileceğini tanımlamak için bir veya daha f
  [Biçimlendirme Türleri](../../../docs/standard/base-types/formatting-types.md)  
  [Standart Sayısal Biçim Dizeleri](../../../docs/standard/base-types/standard-numeric-format-strings.md)  
  [Nasıl yapılır: Bir Sayıyı Baştaki Sıfırlarla Doldurma](../../../docs/standard/base-types/how-to-pad-a-number-with-leading-zeros.md)  
- [Örnek: .NET Framework 4 yardımcı biçimlendirme](http://code.msdn.microsoft.com/NET-Framework-4-Formatting-9c4dae8d)
+ [Örnek: .NET Framework 4 yardımcı biçimlendirme](https://code.msdn.microsoft.com/NET-Framework-4-Formatting-9c4dae8d)

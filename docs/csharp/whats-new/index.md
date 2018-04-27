@@ -10,11 +10,11 @@ ms.prod: .net
 ms.technology: devlang-csharp
 ms.devlang: csharp
 ms.assetid: 77deec51-a14d-46d4-9bb3-faf449477149
-ms.openlocfilehash: 719fbe826b0b115b19067dbaf0d04f14e6534890
-ms.sourcegitcommit: a53799f81351ad9afb3007cd68846ce6aeeb10cb
+ms.openlocfilehash: d66f835d57f43d2016d3b20e2205e0052d064acb
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/15/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="whats-new-in-c"></a>C# ' ta yenilikler nelerdir? #
 
@@ -30,8 +30,8 @@ Bu sayfa C# dilinin ana her sürümdeki yeni özelliklerin bir yol haritası sa�
 * [C# 7.1](csharp-7-1.md):
     - Bu sayfa, C# 7.1 özellikleri açıklanmıştır. Bu özellikler eklenmiştir [Visual Studio 2017 sürüm 15.3](https://www.visualstudio.com/vs/whatsnew/)hem de [.NET Core 2.0 SDK](../../core/whats-new/index.md).
 
-* [C# 7](csharp-7.md):
-    - Bu sayfa, C# 7'de eklenen özellikler açıklanmaktadır. Bu özellikler eklenmiştir [Visual Studio 2017](https://www.visualstudio.com/vs/whatsnew/) ve [.NET Core 1.0](../../core/whats-new/index.md) ve sonraki sürümler
+* [C# 7.0](csharp-7.md):
+    - Bu sayfa, C# 7. 0'eklenen özellikler açıklanmaktadır. Bu özellikler eklenmiştir [Visual Studio 2017](https://www.visualstudio.com/vs/whatsnew/) ve [.NET Core 1.0](../../core/whats-new/index.md) ve sonraki sürümler
      
 * [C# 6](csharp-6.md):
     - Bu sayfayı C# 6'eklenen özellikler açıklanmaktadır. Bu özellikler Visual Studio 2015'te .NET Core 1.0 ve Windows geliştiricileri için C# macOS ve Linux keşfetme geliştiriciler için kullanılabilir.
@@ -66,7 +66,7 @@ Aşağıdaki listeler dil C# ve Visual Studio .NET önceki sürümlerinde sunula
      - Anonim yöntemler, genel türler, boş değer atanabilir türler, Yineleyiciler/verim `static` sınıfları ve temsilciler Kovaryans ve karşıt varyansını.
 
  * C# 1.1, Visual Studio .NET 2003: 
-     - `#line`pragma ve xml belge açıklamaları.
+     - `#line` pragma ve xml belge açıklamaları.
 
  * C# 1, Visual Studio .NET 2002: 
      - İlk sürümünü [C#](../csharp.md).   

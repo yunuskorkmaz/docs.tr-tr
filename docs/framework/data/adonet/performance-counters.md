@@ -1,27 +1,29 @@
 ---
-title: "ADO.NET performans sayaçları"
-ms.custom: 
+title: ADO.NET performans sayaçları
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-ado
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-ado
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - csharp
 - vb
 ms.assetid: 0b121b71-78f8-4ae2-9aa1-0b2e15778e57
-caps.latest.revision: "5"
+caps.latest.revision: 5
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.workload: dotnet
-ms.openlocfilehash: 9843d5c5edfc5ea590e4e6d0e5474a7d817e0ba6
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.workload:
+- dotnet
+ms.openlocfilehash: a36e552392f887cd4e0f6dfac822c87f08a90af7
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="performance-counters-in-adonet"></a>ADO.NET performans sayaçları
 ADO.NET 2.0 sunulan her ikisi de desteği içeren performans sayaçları için Genişletilmiş Destek <xref:System.Data.SqlClient> ve <xref:System.Data.OracleClient>. <xref:System.Data.SqlClient> ADO.NET önceki sürümlerinde kullanılabilen performans sayaçlarının kullanım ve bu konuda tartışılan yeni performans sayaçları ile değiştirilir. ADO.NET performans sayaçları, uygulamanız ve kullandığı bağlantı kaynaklarını durumunu izlemek için kullanabilirsiniz. Performans sayaçlarını Windows Performans İzleyicisi'ni kullanarak izlenebilir veya program aracılığıyla kullanılarak erişilebilir <xref:System.Diagnostics.PerformanceCounter> sınıfını <xref:System.Diagnostics> ad alanı.  
@@ -66,7 +68,7 @@ ADO.NET 2.0 sunulan her ikisi de desteği içeren performans sayaçları için G
  Aşağıdaki konsol uygulaması uygulamanızda performans sayacı değerlerini almak nasıl gösterir. Bağlantılar açık ve tüm ADO.NET performans sayaçları için döndürülecek bilgi etkin olması gerekir.  
   
 > [!NOTE]
->  Bu örnek, örnek kullanır **AdventureWorks** ile birlikte gelen veritabanı [!INCLUDE[ssNoVersion](../../../../includes/ssnoversion-md.md)]. Örnek kodda sağlanan bağlantı dizeleri veritabanı yüklenir ve bir örnek adı SqlExpress ile yerel bilgisayardaki kullanılabilir olduğunu ve bağlantı dizeleri sağlanan eşleştiğinden SQL Server oturumları oluşturduğunuzu varsayalım. Yalnızca Windows kimlik doğrulaması izin veren varsayılan güvenlik ayarlarını kullanarak sunucunuzu yapılandırdıysanız, SQL Server oturumları etkinleştirmeniz gerekebilir. Bağlantı dizeleri ortamınıza uygun gerektiği gibi değiştirin.  
+>  Bu örnek, örnek kullanır **AdventureWorks** SQL Server'da bulunan veritabanı. Örnek kodda sağlanan bağlantı dizeleri veritabanı yüklenir ve bir örnek adı SqlExpress ile yerel bilgisayardaki kullanılabilir olduğunu ve bağlantı dizeleri sağlanan eşleştiğinden SQL Server oturumları oluşturduğunuzu varsayalım. Yalnızca Windows kimlik doğrulaması izin veren varsayılan güvenlik ayarlarını kullanarak sunucunuzu yapılandırdıysanız, SQL Server oturumları etkinleştirmeniz gerekebilir. Bağlantı dizeleri ortamınıza uygun gerektiği gibi değiştirin.  
   
 ### <a name="example"></a>Örnek  
   

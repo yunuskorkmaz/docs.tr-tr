@@ -8,20 +8,20 @@ ms.suite: ''
 ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 0a29b138-270d-4846-b78e-2b875e34e501
-caps.latest.revision: ''
+caps.latest.revision: 19
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: 991f3d25a81e90ab779936c993ec7dd09a71b794
-ms.sourcegitcommit: c883637b41ee028786edceece4fa872939d2e64c
+ms.openlocfilehash: 15fa4372f4a110577f055d0e3c22977d0f5417bb
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/26/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="task-2-host-the-workflow-designer"></a>Görev 2: ana bilgisayar iş akışı Tasarımcısı
-Bu konuda bir örneğini barındıran yordamı açıklanmaktadır [!INCLUDE[wfd1](../../../includes/wfd1-md.md)] içinde bir [!INCLUDE[avalon1](../../../includes/avalon1-md.md)] uygulama.  
+Bu konuda bir örneğini barındıran yordamı açıklanmaktadır [!INCLUDE[wfd1](../../../includes/wfd1-md.md)] bir Windows Presentation Foundation (WPF) uygulamasında.  
   
  Yordam yapılandırır **kılavuz** Tasarımcısı içeren denetimi program aracılığıyla bir örneğini oluşturur <xref:System.Activities.Presentation.WorkflowDesigner> varsayılan içeren <xref:System.Activities.Statements.Sequence> etkinliğini kaydeder sağlamak için tasarımcı meta veriler tüm yerleşik etkinlikler ve ana bilgisayarlar için tasarımcı desteği [!INCLUDE[wfd2](../../../includes/wfd2-md.md)] içinde [!INCLUDE[avalon2](../../../includes/avalon2-md.md)] uygulama.  
   

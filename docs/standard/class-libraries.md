@@ -1,7 +1,7 @@
 ---
-title: ".NET sınıf kitaplıkları"
-description: "Nasıl .NET sınıf kitaplıkları, Grup yararlı işlevi için birden çok uygulama tarafından kullanılan modüllere etkinleştirmek öğrenin."
-keywords: .NET, .NET Core
+title: .NET sınıf kitaplıkları
+description: Nasıl .NET sınıf kitaplıkları, Grup yararlı işlevi için birden çok uygulama tarafından kullanılan modüllere etkinleştirmek öğrenin.
+keywords: .NET, .NET core
 author: richlander
 ms.author: mairaw
 ms.date: 06/20/2016
@@ -13,15 +13,15 @@ ms.assetid: a67484c3-fe92-44d8-8fa3-36fa2071d880
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: 8f7c421d2490678f7122e78bc0b83ebf3a1aa9ea
-ms.sourcegitcommit: 15316053918995cc1380163a7d7e7edd5c44e6d7
+ms.openlocfilehash: 44d5745daed8539c5dd48b08f9f73edce4da939f
+ms.sourcegitcommit: 2e8acae16ae802f2d6d04e3ce0a6dbf04e476513
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/19/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="net-class-libraries"></a>.NET sınıf kitaplıkları
 
-Sınıf kitaplıkları olan [paylaşılan kitaplık](http://en.wikipedia.org/wiki/Library_%28computing%29#Shared_libraries) .NET kavramı. Birden çok uygulama tarafından kullanılan modüllere kullanışlı işlevsellik componentize olanak sağlar. Gerekli veya uygulama başlangıcında bilinmiyor işlevselliği yüklenirken olarak de kullanılabilir. Sınıf kitaplıkları kullanarak açıklanmıştır [.NET derleme dosyası biçimi](assembly-format.md).
+Sınıf kitaplıkları olan [paylaşılan kitaplık](https://en.wikipedia.org/wiki/Library_%28computing%29#Shared_libraries) .NET kavramı. Birden çok uygulama tarafından kullanılan modüllere kullanışlı işlevsellik componentize olanak sağlar. Gerekli veya uygulama başlangıcında bilinmiyor işlevselliği yüklenirken olarak de kullanılabilir. Sınıf kitaplıkları kullanarak açıklanmıştır [.NET derleme dosyası biçimi](assembly-format.md).
 
 Kullanabileceğiniz sınıf kitaplıkları üç tür vardır:
 
@@ -43,7 +43,7 @@ Taşınabilir kitaplıklara birden çok .NET uygulamalarında desteklenir. Bunla
 
 Taşınabilir bir kitaplık oluşturduğunuzda bir platform yapılandırması seçin. Bu, (örneğin, .NET Framework 4.5 +, Windows Phone 8.0 +) desteklemesi gereken platformlar kümesidir. Destek, daha az API'leri ve daha az platform varsayımlar opt daha fazla platformlar yapabilirsiniz, en düşük genel payda. Bu özellik ilk başta, kişiler bu yana genellikle düşünme "daha, daha fazla platformlar sonuçlar daha az kullanılabilir API'leri desteklenen Bul ancak iyidir" kafa karıştırıcı olması.
 
-Birçok kitaplığı geliştiricileri birden çok platforma özgü kitaplıklarını (koşullu derleme yönergeleri kullanarak) bir kaynaktan oluşturan taşınabilir kitaplıklara geçtiniz. Vardır [çeşitli yaklaşımlar](http://blog.stephencleary.com/2012/11/portable-class-library-enlightenment.html) taşınabilir kitaplıklara içinde platforma özgü işlevselliği erişmek için [yemi anahtar](http://log.paulbetts.org/the-bait-and-switch-pcl-trick/) en yaygın olan kabul teknik bu noktada.
+Birçok kitaplığı geliştiricileri birden çok platforma özgü kitaplıklarını (koşullu derleme yönergeleri kullanarak) bir kaynaktan oluşturan taşınabilir kitaplıklara geçtiniz. Vardır [çeşitli yaklaşımlar](https://blog.stephencleary.com/2012/11/portable-class-library-enlightenment.html) taşınabilir kitaplıklara içinde platforma özgü işlevselliği erişmek için [yemi anahtar](https://log.paulbetts.org/the-bait-and-switch-pcl-trick/) en yaygın olan kabul teknik bu noktada.
 
 ### <a name="net-standard-class-libraries"></a>.NET standart sınıf kitaplıkları
 

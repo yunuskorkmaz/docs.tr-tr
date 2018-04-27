@@ -1,27 +1,29 @@
 ---
-title: "Dış eşleme"
-ms.custom: 
+title: Dış eşleme
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-ado
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-ado
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 076606b8-d889-4ba0-b5da-ae577b146f23
-caps.latest.revision: "2"
+caps.latest.revision: 2
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.workload: dotnet
-ms.openlocfilehash: ae67c80e4637281a26b15d7faa2dbdbe7171ba1c
-ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
+ms.workload:
+- dotnet
+ms.openlocfilehash: 99b5a37778299f541a59707708edba244ab2f806
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="external-mapping"></a>Dış eşleme
-[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]destekleyen *dış eşleme*, bir işlem olarak, ayrı bir XML dosyası veritabanının veri modeli ve nesne modeli arasında eşleme belirtmek için kullanın. Bir dış eşleme dosyası kullanmanın avantajları şunlardır:  
+[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] destekleyen *dış eşleme*, bir işlem olarak, ayrı bir XML dosyası veritabanının veri modeli ve nesne modeli arasında eşleme belirtmek için kullanın. Bir dış eşleme dosyası kullanmanın avantajları şunlardır:  
   
 -   Eşleme kodunuzu uygulama kodunuz dışında tutabilirsiniz. Bu yaklaşım, uygulama kodunuzda dağınıklığı azaltır.  
   
@@ -38,7 +40,7 @@ ms.lasthandoff: 01/17/2018
   
 -   Dış eşleme öznitelik tabanlı eşleme geçersiz kılar. Diğer bir deyişle, kullandığınızda, bir dış eşleme kaynak oluşturmak için bir <xref:System.Data.Linq.DataContext>, <xref:System.Data.Linq.DataContext> sınıflarında oluşturduğunuz tüm eşleme öznitelikleri yok sayar. Bu davranış sınıfı dış eşleme dosyasında olup olmadığı dahil geçerlidir.  
   
--   [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)](öznitelik tabanlı ve dış) iki eşleme yaklaşım karma kullanımını desteklemez.  
+-   [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] (öznitelik tabanlı ve dış) iki eşleme yaklaşım karma kullanımını desteklemez.  
   
 ## <a name="xml-schema-definition-file"></a>XML şema tanımı dosyası  
  Dış eşlemesindeki [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] karşı aşağıdaki XML şema tanımı geçerli olmalıdır.  
@@ -46,7 +48,7 @@ ms.lasthandoff: 01/17/2018
  DBML dosyasını doğrulamak için kullanılan şema tanımı dosyası bu şema tanımı dosyasındaki ayırt etmek. Daha fazla bilgi için bkz: [LINQ-SQL kod oluşturma](../../../../../../docs/framework/data/adonet/sql/linq/code-generation-in-linq-to-sql.md)).  
   
 > [!NOTE]
->  [!INCLUDE[vs_current_short](../../../../../../includes/vs-current-short-md.md)]Kullanıcılar ayrıca bu XSD dosyası XML şemaları iletişim kutusuna "LinqToSqlMapping.xsd" bulur. Bir dış eşleme dosyasını doğrulamak için bu dosyayı doğru bir şekilde kullanmak için bkz: [nasıl yapılır: DBML doğrulamak ve dış eşleme dosyaları](../../../../../../docs/framework/data/adonet/sql/linq/how-to-validate-dbml-and-external-mapping-files.md).  
+>  Visual Studio kullanıcılar da bu XSD dosyası XML şemaları iletişim kutusuna "LinqToSqlMapping.xsd" bulur. Bir dış eşleme dosyasını doğrulamak için bu dosyayı doğru bir şekilde kullanmak için bkz: [nasıl yapılır: DBML doğrulamak ve dış eşleme dosyaları](../../../../../../docs/framework/data/adonet/sql/linq/how-to-validate-dbml-and-external-mapping-files.md).  
   
 ```  
 ?<?xml version="1.0" encoding="utf-16"?>  

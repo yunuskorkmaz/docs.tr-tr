@@ -1,8 +1,9 @@
 ---
-title: "throw (C# Başvurusu)"
+title: throw (C# Başvurusu)
 ms.date: 03/02/2015
 ms.prod: .net
-ms.technology: devlang-csharp
+ms.technology:
+- devlang-csharp
 ms.topic: article
 f1_keywords:
 - throw
@@ -12,14 +13,14 @@ helpviewer_keywords:
 - throw expression [C#]
 - throw keyword [C#]
 ms.assetid: 5ac4feef-4b1a-4c61-aeb4-61d549e5dd42
-caps.latest.revision: "22"
+caps.latest.revision: 22
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: e56bd8f8b6bfcc7c8f1eb2df6ac157e28adac331
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 088a8e70c5aaaae6f833f12cad1052c30fbb6bfa
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="throw-c-reference"></a>throw (C# Başvurusu)
 Program yürütme sırasında bir özel durum geçişi işaret eder.  
@@ -41,7 +42,7 @@ Yöntemini arayanlar sonra kullanın bir `try-catch` veya `try-catch-finally` ol
 
 ## <a name="re-throwing-an-exception"></a>Bir özel durum yeniden atma
 
-`throw`Ayrıca, kullanılabilir bir `catch` bir özel durum yeniden throw blok işlenmiş bir `catch` bloğu.  Bu durumda, `throw` bir özel durum işlenen almaz. Bir yöntem bir bağımsız değişken bir çağrıyı yapandan diğer bazı kitaplığı yöntemine iletir ve kitaplık yöntemi, geçirilmelidir çağırana aykırı en yararlı olacaktır. Örneğin, aşağıdaki örnekte yeniden oluşturur bir <xref:System.NullReferenceException> başlatılmamış bir dize ilk karakteri almaya çalışırken oluşur. 
+`throw` Ayrıca, kullanılabilir bir `catch` bir özel durum yeniden throw blok işlenmiş bir `catch` bloğu.  Bu durumda, `throw` bir özel durum işlenen almaz. Bir yöntem bir bağımsız değişken bir çağrıyı yapandan diğer bazı kitaplığı yöntemine iletir ve kitaplık yöntemi, geçirilmelidir çağırana aykırı en yararlı olacaktır. Örneğin, aşağıdaki örnekte yeniden oluşturur bir <xref:System.NullReferenceException> başlatılmamış bir dize ilk karakteri almaya çalışırken oluşur. 
 
 [!code-csharp[csrefKeyword#3](../../../../samples/snippets/csharp/language-reference/keywords/throw/throw-3.cs#3)]  
 
@@ -50,9 +51,9 @@ Yöntemini arayanlar sonra kullanın bir `try-catch` veya `try-catch-finally` ol
  
 ## <a name="the-throw-expression"></a>`throw` İfade
 
-C# 7 ile başlayan `throw` bir deyim yanı sıra bir ifade kullanılabilir. Bu, daha önce desteklenmeyen bağlamlarda durum için bir özel durum sağlar. Bu güncelleştirmeler şunlardır:
+C# 7.0 ile başlayan `throw` bir deyim yanı sıra bir ifade kullanılabilir. Bu, daha önce desteklenmeyen bağlamlarda durum için bir özel durum sağlar. Bu güncelleştirmeler şunlardır:
 
-- [koşullu işleç](../operators/conditional-operator.md). Aşağıdaki örnek kullanan bir `throw` throw deyimi bir <xref:System.ArgumentException> bir yöntem boş bir dize dizisi aktarılırsa. C# 7 önce bu mantığı görünmesi gerekir bir `if` / `else` deyimi.
+- [koşullu işleç](../operators/conditional-operator.md). Aşağıdaki örnek kullanan bir `throw` throw deyimi bir <xref:System.ArgumentException> bir yöntem boş bir dize dizisi aktarılırsa. C# 7.0 önce bu mantığı görünmesi gerekir bir `if` / `else` deyimi.
 
    [!code-csharp[csrefKeyword#4](../../../../samples/snippets/csharp/language-reference/keywords/throw/conditional.cs#1)]  
   
@@ -70,9 +71,9 @@ C# 7 ile başlayan `throw` bir deyim yanı sıra bir ifade kullanılabilir. Bu, 
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
  [C# başvurusu](../../../csharp/language-reference/index.md)  
- [C# programlama kılavuzu](../../../csharp/programming-guide/index.md)  
+ [C# Programlama Kılavuzu](../../../csharp/programming-guide/index.md)  
  [try-catch](../../../csharp/language-reference/keywords/try-catch.md)  
  [Try catch ve c++'ta throw deyimleri](../../../csharp/language-reference/keywords/try-catch.md)  
- [C# anahtar sözcükleri](../../../csharp/language-reference/keywords/index.md)  
- [Özel durum işleme deyimleri](../../../csharp/language-reference/keywords/exception-handling-statements.md)  
- [Nasıl yapılır: açıkça özel durumlar oluşturma](../../../standard/exceptions/how-to-explicitly-throw-exceptions.md)
+ [C# Anahtar Sözcükleri](../../../csharp/language-reference/keywords/index.md)  
+ [Özel Durum İşleme Deyimleri](../../../csharp/language-reference/keywords/exception-handling-statements.md)  
+ [Nasıl yapılır: Açıkça Özel Durumlar Oluşturma](../../../standard/exceptions/how-to-explicitly-throw-exceptions.md)

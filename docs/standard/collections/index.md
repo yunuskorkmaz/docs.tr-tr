@@ -19,11 +19,11 @@ manager: wpickett
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: 7760f30e8053b55c2f846c08ccb6a3d026089afb
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: e36d23c6dfd89b54c86d0b6062813aeccb649579
+ms.sourcegitcommit: 2e8acae16ae802f2d6d04e3ce0a6dbf04e476513
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="collections-and-data-structures"></a>Koleksiyonlar ve Veri Yapıları
 Benzer veri genellikle daha verimli bir şekilde depolanır ve bir koleksiyon olarak yönetilebilir işlenebilir. Kullanabileceğiniz <xref:System.Array?displayProperty=nameWithType> sınıf veya sınıflarda <xref:System.Collections>, <xref:System.Collections.Generic>, <xref:System.Collections.Concurrent>, eklemek için System.Collections.Immutable ad alanlarını kaldırın ve ayrı ayrı öğeler veya bir koleksiyondaki öğelerin aralığını değiştirin.  
@@ -39,7 +39,7 @@ Benzer veri genellikle daha verimli bir şekilde depolanır ve bir koleksiyon ol
   
 -   **Toplamasını olanağı**  
   
-     .NET framework koleksiyonları ya da uygulama <xref:System.Collections.IEnumerable?displayProperty=nameWithType> veya <xref:System.Collections.Generic.IEnumerable%601?displayProperty=nameWithType> koleksiyonu aracılığıyla yinelendiğinde etkinleştirilemedi. Bir numaralandırıcı, koleksiyondaki herhangi bir öğeye taşınabilir bir işaretçi olarak düşünülebilir. [Foreach,](~/docs/csharp/language-reference/keywords/foreach-in.md) deyimi ve [For Each... Sonraki deyim](~/docs/visual-basic/language-reference/statements/for-each-next-statement.md) tarafından sunulan Numaralandırıcı kullanmak <xref:System.Collections.IEnumerable.GetEnumerator%2A> yöntemi ve Gizle Numaralandırıcı düzenleme karmaşıklığını. Ayrıca, herhangi bir koleksiyonu uygulayan <xref:System.Collections.Generic.IEnumerable%601?displayProperty=nameWithType> olarak kabul edilir bir *sorgulanabilir türü* ve LINQ ile sorgulanabilir. LINQ sorgularını verilerine erişmek için genel bir desen sağlar. Genellikle daha kısa ve standart okunabilir `foreach` döngüye girer ve filtreleme, sıralama ve yetenekleri gruplandırma sağlar. LINQ sorguları da performansı artırabilir. Daha fazla bilgi için bkz: [nesnelere LINQ](http://msdn.microsoft.com/library/73cafe73-37cf-46e7-bfa7-97c7eea7ced9), [paralel LINQ (PLINQ)](../../../docs/standard/parallel-programming/parallel-linq-plinq.md) ve [LINQ sorgularını (C#) giriş](~/docs/csharp/programming-guide/concepts/linq/introduction-to-linq-queries.md).  
+     .NET framework koleksiyonları ya da uygulama <xref:System.Collections.IEnumerable?displayProperty=nameWithType> veya <xref:System.Collections.Generic.IEnumerable%601?displayProperty=nameWithType> koleksiyonu aracılığıyla yinelendiğinde etkinleştirilemedi. Bir numaralandırıcı, koleksiyondaki herhangi bir öğeye taşınabilir bir işaretçi olarak düşünülebilir. [Foreach,](~/docs/csharp/language-reference/keywords/foreach-in.md) deyimi ve [For Each... Sonraki deyim](~/docs/visual-basic/language-reference/statements/for-each-next-statement.md) tarafından sunulan Numaralandırıcı kullanmak <xref:System.Collections.IEnumerable.GetEnumerator%2A> yöntemi ve Gizle Numaralandırıcı düzenleme karmaşıklığını. Ayrıca, herhangi bir koleksiyonu uygulayan <xref:System.Collections.Generic.IEnumerable%601?displayProperty=nameWithType> olarak kabul edilir bir *sorgulanabilir türü* ve LINQ ile sorgulanabilir. LINQ sorgularını verilerine erişmek için genel bir desen sağlar. Genellikle daha kısa ve standart okunabilir `foreach` döngüye girer ve filtreleme, sıralama ve yetenekleri gruplandırma sağlar. LINQ sorguları da performansı artırabilir. Daha fazla bilgi için bkz: [nesnelere LINQ](https://msdn.microsoft.com/library/73cafe73-37cf-46e7-bfa7-97c7eea7ced9), [paralel LINQ (PLINQ)](../../../docs/standard/parallel-programming/parallel-linq-plinq.md) ve [LINQ sorgularını (C#) giriş](~/docs/csharp/programming-guide/concepts/linq/introduction-to-linq-queries.md).  
   
 -   **Özelliği için bir dizi koleksiyon içeriğini kopyalayın**  
   
@@ -57,7 +57,7 @@ Benzer veri genellikle daha verimli bir şekilde depolanır ve bir koleksiyon ol
   
 -   **Tutarlı bir alt sınırı**  
   
-     İlk alt öğenin dizini koleksiyonunun alt sınırdır. Tüm dizine koleksiyonlarda <xref:System.Collections> ad sahip alt sınırı sıfır, 0 dizinli anlamına gelir. <xref:System.Array>Varsayılan olarak sıfır alt sınırı vardır, ancak farklı bir alt sınır örneği oluşturulurken tanımlanan **dizi** kullanarak sınıfı <xref:System.Array.CreateInstance%2A?displayProperty=nameWithType>.  
+     İlk alt öğenin dizini koleksiyonunun alt sınırdır. Tüm dizine koleksiyonlarda <xref:System.Collections> ad sahip alt sınırı sıfır, 0 dizinli anlamına gelir. <xref:System.Array> Varsayılan olarak sıfır alt sınırı vardır, ancak farklı bir alt sınır örneği oluşturulurken tanımlanan **dizi** kullanarak sınıfı <xref:System.Array.CreateInstance%2A?displayProperty=nameWithType>.  
   
 -   **Birden çok iş parçacığından erişimi için eşitleme** (<xref:System.Collections> yalnızca sınıfları).  
   

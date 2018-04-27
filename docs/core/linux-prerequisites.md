@@ -4,18 +4,18 @@ description: Desteklenen Linux sürümleri ve geliştirmek, dağıtmak ve Linux 
 keywords: .NET, .NET core, Linux, debian, ubuntu, RHEL, centOS,
 author: jralexander
 ms.author: johalex
-ms.date: 04/12/2018
+ms.date: 04/19/2018
 ms.topic: conceptual
 ms.prod: .net-core
 ms.devlang: dotnet
 ms.assetid: c33b1241-ab66-4583-9eba-52cf51146f5a
 ms.workload:
 - dotnetcore
-ms.openlocfilehash: 37dc4f25b6c4915971bc79931a105474fcd43670
-ms.sourcegitcommit: 9a4fe1a1c37b26532654b4bbe22d702237950009
+ms.openlocfilehash: 7ce13af00a43e1ce84f7c8af70155d0c4a5bed4c
+ms.sourcegitcommit: 68b60d38043e50104ccc90c76f8599b1ffe18346
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 04/20/2018
 ---
 # <a name="prerequisites-for-net-core-on-linux"></a>.NET Core Linux önkoşulları
 
@@ -163,8 +163,11 @@ Red Hat .NET kanal erişim kayıt Yardım için bkz: [.NET Core 1.1 Başlarken K
 
 |Çalışma zamanları / SDK'ları                  |Ubuntu 17.10    |Ubuntu 16.04 / Linux Naneli 18|Ubuntu 14.04 / Linux Naneli 17|
 |---------------------------------|----------------|----------------------------|----------------------------|
+|.NET çalışma zamanı 2.1.0-preview2 çekirdek |[Bağlantı yükleyin](https://www.microsoft.com/net/download/linux-package-manager/ubuntu17-10/runtime-2.1.0-preview2)|[Bağlantı yükleyin](https://www.microsoft.com/net/download/linux-package-manager/ubuntu16-04/runtime-2.1.0-preview2)            |[Bağlantı yükleyin](https://www.microsoft.com/net/download/linux-package-manager/ubuntu14-04/runtime-2.1.0-preview2)            |
 |.NET çalışma zamanı 2.1.0-preview1 çekirdek |[Bağlantı yükleyin](https://www.microsoft.com/net/download/linux-package-manager/ubuntu17-10/runtime-2.1.0-preview1)|[Bağlantı yükleyin](https://www.microsoft.com/net/download/linux-package-manager/ubuntu16-04/runtime-2.1.0-preview1)            |[Bağlantı yükleyin](https://www.microsoft.com/net/download/linux-package-manager/ubuntu14-04/runtime-2.1.0-preview1)            |
+|.NET SDK 2.1.300-preview2 çekirdek   |[Bağlantı yükleyin](https://www.microsoft.com/net/download/linux-package-manager/ubuntu17-10/sdk-2.1.300-preview2)|[Bağlantı yükleyin](https://www.microsoft.com/net/download/linux-package-manager/ubuntu16-04/sdk-2.1.300-preview2)            |[Bağlantı yükleyin](https://www.microsoft.com/net/download/linux-package-manager/ubuntu14-04/sdk-2.1.300-preview2)
 |.NET SDK 2.1.300-preview1 çekirdek   |[Bağlantı yükleyin](https://www.microsoft.com/net/download/linux-package-manager/ubuntu17-10/sdk-2.1.300-preview1)|[Bağlantı yükleyin](https://www.microsoft.com/net/download/linux-package-manager/ubuntu16-04/sdk-2.1.300-preview1)            |[Bağlantı yükleyin](https://www.microsoft.com/net/download/linux-package-manager/ubuntu14-04/sdk-2.1.300-preview1)            |
+
 
 # <a name="net-core-1xtabnetcore1x"></a>[.NET core 1.x](#tab/netcore1x)
 
@@ -214,7 +217,9 @@ Red Hat .NET kanal erişim kayıt Yardım için bkz: [.NET Core 1.1 Başlarken K
 
 |Çalışma zamanları / SDK'ları                  |Debian 9       |Debian 8       |
 |---------------------------------|---------------|---------------|
+|.NET çalışma zamanı 2.1.0-preview2 çekirdek |[Bağlantı yükleyin](https://www.microsoft.com/net/download/linux-package-manager/debian9/runtime-2.1.0-preview2)   |[Bağlantı yükleyin](https://www.microsoft.com/net/download/linux-package-manager/debian8/runtime-2.1.0-preview2)   |
 |.NET çalışma zamanı 2.1.0-preview1 çekirdek |[Bağlantı yükleyin](https://www.microsoft.com/net/download/linux-package-manager/debian9/runtime-2.1.0-preview1)   |[Bağlantı yükleyin](https://www.microsoft.com/net/download/linux-package-manager/debian8/runtime-2.1.0-preview1)   |
+|.NET SDK 2.1.300-preview2 çekirdek   |[Bağlantı yükleyin](https://www.microsoft.com/net/download/linux-package-manager/debian9/sdk-2.1.300-preview2)   |[Bağlantı yükleyin](https://www.microsoft.com/net/download/linux-package-manager/debian8/sdk-2.1.300-preview2)   |
 |.NET SDK 2.1.300-preview1 çekirdek   |[Bağlantı yükleyin](https://www.microsoft.com/net/download/linux-package-manager/debian9/sdk-2.1.300-preview1)   |[Bağlantı yükleyin](https://www.microsoft.com/net/download/linux-package-manager/debian8/sdk-2.1.300-preview1)   |
 
 # <a name="net-core-1xtabnetcore1x"></a>[.NET core 1.x](#tab/netcore1x)
@@ -263,7 +268,9 @@ Red Hat .NET kanal erişim kayıt Yardım için bkz: [.NET Core 1.1 Başlarken K
 
 |Çalışma zamanları / SDK'ları                  |Fedora 26 veya üzeri |Fedora 25 veya önceki |
 |---------------------------------|-------------------|----------------------|
-|.NET çalışma zamanı 2.1.0-preview1 çekirdek |[Bağlantı yükleyin](https://www.microsoft.com/net/download/linux-package-manager/fedora26/runtime-2.1.0-preview1)       |[Bağlantı yükleyin](https://www.microsoft.com/net/download/linux-package-manager/fedora25/runtime-2.1.0-preview1)           |        |
+|.NET çalışma zamanı 2.1.0-preview2 çekirdek |[Bağlantı yükleyin](https://www.microsoft.com/net/download/linux-package-manager/fedora26/runtime-2.1.0-preview2)       |[Bağlantı yükleyin](https://www.microsoft.com/net/download/linux-package-manager/fedora25/runtime-2.1.0-preview2)           |
+|.NET çalışma zamanı 2.1.0-preview1 çekirdek |[Bağlantı yükleyin](https://www.microsoft.com/net/download/linux-package-manager/fedora26/runtime-2.1.0-preview1)       |[Bağlantı yükleyin](https://www.microsoft.com/net/download/linux-package-manager/fedora25/runtime-2.1.0-preview1)           |
+|.NET SDK 2.1.300-preview2 çekirdek   |[Bağlantı yükleyin](https://www.microsoft.com/net/download/linux-package-manager/fedora26/sdk-2.1.300-preview2)       |[Bağlantı yükleyin](https://www.microsoft.com/net/download/linux-package-manager/fedora25/sdk-2.1.300-preview2)           |
 |.NET SDK 2.1.300-preview1 çekirdek   |[Bağlantı yükleyin](https://www.microsoft.com/net/download/linux-package-manager/fedora26/sdk-2.1.300-preview1)       |[Bağlantı yükleyin](https://www.microsoft.com/net/download/linux-package-manager/fedora25/sdk-2.1.300-preview1)           |
 
 # <a name="net-core-1xtabnetcore1x"></a>[.NET core 1.x](#tab/netcore1x)
@@ -313,7 +320,9 @@ Yüklemek için .NET Core desteklenen CentOS ve Oracle Linux dağıtımları/sü
 >[!IMPORTANT]
 > .NET Core 2.1 Visual Studio ile kullanmak için yapmanız [Visual Studio 2017 15.7 Preview 1 yüklemek ya da daha yeni](https://www.visualstudio.com/vs/preview/).
 
+* .NET çekirdeği çalışma zamanı 2.1.0-preview2 [bağlantı yükleyin](https://www.microsoft.com/net/download/linux-package-manager/centos/runtime-2.1.0-preview2)
 * .NET çekirdeği çalışma zamanı 2.1.0-preview1 [bağlantı yükleyin](https://www.microsoft.com/net/download/linux-package-manager/centos/runtime-2.1.0-preview1)
+* .NET core SDK 2.1.300-preview2 [bağlantı yükleyin](https://www.microsoft.com/net/download/linux-package-manager/centos/sdk-2.1.300-preview2)
 * .NET core SDK 2.1.300-preview1 [bağlantı yükleyin](https://www.microsoft.com/net/download/linux-package-manager/centos/sdk-2.1.300-preview1)
 
 # <a name="net-core-1xtabnetcore1x"></a>[.NET core 1.x](#tab/netcore1x)
@@ -355,7 +364,9 @@ Yüklemek için .NET Core desteklenen CentOS ve Oracle Linux dağıtımları/sü
 >[!IMPORTANT]
 > .NET Core 2.1 Visual Studio ile kullanmak için yapmanız [Visual Studio 2017 15.7 Preview 1 yüklemek ya da daha yeni](https://www.visualstudio.com/vs/preview).
 
+* .NET çekirdeği çalışma zamanı 2.1.0-preview2 [bağlantı yükleyin](https://www.microsoft.com/net/download/linux-package-manager/opensuse/runtime-2.1.0-preview2)
 * .NET çekirdeği çalışma zamanı 2.1.0-preview1 [bağlantı yükleyin](https://www.microsoft.com/net/download/linux-package-manager/opensuse/runtime-2.1.0-preview1)
+* .NET core SDK 2.1.300-preview2 [bağlantı yükleyin](https://www.microsoft.com/net/download/linux-package-manager/opensuse/sdk-2.1.300-preview2)
 * .NET core SDK 2.1.300-preview1 [bağlantı yükleyin](https://www.microsoft.com/net/download/linux-package-manager/opensuse/sdk-2.1.300-preview1)
 
 # <a name="net-core-1xtabnetcore1x"></a>[.NET core 1.x](#tab/netcore1x)

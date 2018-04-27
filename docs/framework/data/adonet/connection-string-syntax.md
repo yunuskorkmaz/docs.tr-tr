@@ -16,11 +16,11 @@ ms.author: douglasl
 manager: craigg
 ms.workload:
 - dotnet
-ms.openlocfilehash: 76d8765be1dc24f4b8c457644595796680c2f2c3
-ms.sourcegitcommit: b750a8e3979749b214e7e10c82efb0a0524dfcb1
+ms.openlocfilehash: 3939abaf376100e09d244afdb32662729a990ff7
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/09/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="connection-string-syntax"></a>Bağlantı dizesi sözdizimi
 Her .NET Framework veri sağlayıcısı sahip bir `Connection` devraldığı nesne <xref:System.Data.Common.DbConnection> sağlayıcıya özgü yanı sıra <xref:System.Data.Common.DbConnection.ConnectionString%2A> özelliği. Her bir sağlayıcı için belirli bağlantı dizesi sözdizimi belgelenen kendi `ConnectionString` özelliği. .NET Framework dahil dört veri sağlayıcıları aşağıdaki tabloda listelenmektedir.  
@@ -98,7 +98,7 @@ Data Source=MySqlServer\MSSQL1;"
 Ayrıca ayarlayabilirsiniz <xref:System.Data.SqlClient.SqlConnectionStringBuilder.DataSource%2A> özelliği `SqlConnectionStringBuilder` bir bağlantı dizesi oluştururken örnek adı. <xref:System.Data.SqlClient.SqlConnection.DataSource%2A> Özelliği bir <xref:System.Data.SqlClient.SqlConnection> nesne salt okunur.  
   
 ### <a name="type-system-version-changes"></a>Tür sistemi sürüm değişiklikleri  
- `Type System Version` İn anahtar sözcüğü bir <xref:System.Data.SqlClient.SqlConnection.ConnectionString%2A?displayProperty=nameWithType> istemci-tarafı gösterimini belirtir [!INCLUDE[ssNoVersion](../../../../includes/ssnoversion-md.md)] türleri. Bkz: <xref:System.Data.SqlClient.SqlConnection.ConnectionString%2A?displayProperty=nameWithType> hakkında daha fazla bilgi için `Type System Version` anahtar sözcüğü.  
+ `Type System Version` İn anahtar sözcüğü bir <xref:System.Data.SqlClient.SqlConnection.ConnectionString%2A?displayProperty=nameWithType> SQL Server türleri istemci-tarafı gösterimi belirtir. Bkz: <xref:System.Data.SqlClient.SqlConnection.ConnectionString%2A?displayProperty=nameWithType> hakkında daha fazla bilgi için `Type System Version` anahtar sözcüğü.  
   
 ## <a name="connecting-and-attaching-to-sql-server-express-user-instances"></a>Kullanıcı örnekleri Express bağlanma ve SQL Server ekleme  
  Kullanıcı örnekleri, SQL Server Express için kullanılan bir özelliğidir. Ekleme ve bir SQL Server veritabanı yönetici ayrıcalıklarına gerek duymadan çalıştırmak bir en az ayrıcalıklı yerel Windows hesabı üzerinde çalışan bir kullanıcı sağlarlar. Bir kullanıcı örneği bir hizmet olarak değil kullanıcının Windows kimlik bilgileriyle yürütür.  
@@ -106,7 +106,7 @@ Ayrıca ayarlayabilirsiniz <xref:System.Data.SqlClient.SqlConnectionStringBuilde
  Kullanıcı örnekleri ile çalışma hakkında daha fazla bilgi için bkz: [SQL Server Express kullanıcı örnekleri](../../../../docs/framework/data/adonet/sql/sql-server-express-user-instances.md).  
   
 ## <a name="using-trustservercertificate"></a>TrustServerCertificate kullanma  
- `TrustServerCertificate` Anahtar sözcüğü, yalnızca bağlanırken geçerli bir [!INCLUDE[ssNoVersion](../../../../includes/ssnoversion-md.md)] örneği geçerli bir sertifika ile. Zaman `TrustServerCertificate` ayarlanır `true`, Aktarım katmanı kanalını şifrelemek ve güven doğrulamak için sertifika zinciri taramasını atlamak için SSL kullanır.  
+ `TrustServerCertificate` Anahtar sözcüğü, yalnızca geçerli bir sertifika ile SQL Server örneğine bağlanırken geçerlidir. Zaman `TrustServerCertificate` ayarlanır `true`, Aktarım katmanı kanalını şifrelemek ve güven doğrulamak için sertifika zinciri taramasını atlamak için SSL kullanır.  
   
 ```  
 "TrustServerCertificate=true;"   

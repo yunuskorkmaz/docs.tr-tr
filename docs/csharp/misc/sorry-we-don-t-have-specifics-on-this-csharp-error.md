@@ -1,5 +1,5 @@
 ---
-title: "Ne yazık ki tan &#39; bu C# hatasıyla ilgili ayrıntı sahip t"
+title: Ne yazık ki güncelleştireceğinizi&#39;t bu C# hatasıyla ilgili ayrıntı sahip
 ms.date: 07/20/2015
 ms.prod: .net
 ms.technology:
@@ -886,29 +886,29 @@ f1_keywords:
 helpviewer_keywords:
 - errors [C#], additional information
 ms.assetid: 48320e4a-6e17-45a6-9966-88c6ec89bd2f
-caps.latest.revision: 
+caps.latest.revision: 15
 author: BillWagner
 ms.author: wiwagn
-ms.openlocfilehash: 5f6224f661aff817b4314d832fcc2ff3938644c0
-ms.sourcegitcommit: 973a12d1e6962cd9a9c263fbfaad040ec8267fe9
+ms.openlocfilehash: 4aeea86778b44cbe8e71ed64ee5a3a3a1618cccd
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/22/2018
+ms.lasthandoff: 04/26/2018
 ---
-# <a name="sorry-we-don39t-have-specifics-on-this-c-error"></a>Ne yazık ki tan &#39; bu C# hatasıyla ilgili ayrıntı sahip t
+# <a name="sorry-we-don39t-have-specifics-on-this-c-error"></a>Ne yazık ki güncelleştireceğinizi&#39;t bu C# hatasıyla ilgili ayrıntı sahip
 Üzgünüz, ancak bu hatayla ilgili belirli bir bilgi bulunmuyor. Web hakkında bilgi bulmak hata numarası ve ileti metni arayabilirsiniz. Veya bu forumları birini kullanarak diğer geliştiriciler isteyin:  
   
  [Visual C# dili](https://social.msdn.microsoft.com/Forums/en-US/home?forum=csharplanguage)  
- Genel ve hakkında tartışmalar sorular için bir forum sağlar [!INCLUDE[csprcs](~/includes/csprcs-md.md)] dili sözdizimi ve derleyicisi.  
+ Bir forum hakkında sorular ve Visual C# dili sözdizimi ve derleyicisi genel tartışmalara sağlar.  
   
  [Visual C# IDE](https://social.msdn.microsoft.com/Forums/en-US/home?forum=csharpide)  
  Nasıl çalıştığı hakkında sorular için bir forum sağlar [!INCLUDE[vsprvs](~/includes/vsprvs-md.md)] ortamı.  
   
  [Visual C# genel](https://social.msdn.microsoft.com/Forums/vstudio/en-US/home?forum=csharpgeneral)  
- Hakkında sorular için bir forum sağlar ve sorunlar [!INCLUDE[csprcs](~/includes/csprcs-md.md)] , değil tartışılır diğer forumlarda.  
+ Hakkında sorular için bir forum sağlar ve sorunlar ile Visual C, diğer forumlarda açıklanmamaktadır #.  
   
  [StackOverflow](http://stackoverflow.com/questions/tagged/c%23)  
- Hakkında sorular için bir forum sağlar ve sorunlar [!INCLUDE[csprcs](~/includes/csprcs-md.md)].  
+ Hakkında sorular için bir forum sağlar ve Visual C# ile yayımlar.  
   
  Ayrıca bkz.:  
  [Visual C# programcıları için ek kaynaklar](../../csharp/getting-started/additional-resources.md)  

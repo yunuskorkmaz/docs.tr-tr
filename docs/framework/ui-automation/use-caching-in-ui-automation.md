@@ -1,12 +1,13 @@
 ---
-title: "UI Otomasyonda Önbelleğe Almayı Kullanma"
-ms.custom: 
+title: UI Otomasyonda Önbelleğe Almayı Kullanma
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-bcl
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-bcl
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - csharp
@@ -15,16 +16,17 @@ helpviewer_keywords:
 - caching, UI Automation
 - UI Automation, caching
 ms.assetid: ec722dff-6009-4279-b86a-e18d3fa94ebf
-caps.latest.revision: "14"
+caps.latest.revision: 14
 author: Xansky
 ms.author: mhopkins
 manager: markl
-ms.workload: dotnet
-ms.openlocfilehash: 808ba16cbacfad2cc255ae40e2cbad3178350afc
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 2f559153190e4acb3b67acf75954260b31906c0d
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="use-caching-in-ui-automation"></a>UI Otomasyonda Önbelleğe Almayı Kullanma
 > [!NOTE]
@@ -44,9 +46,9 @@ ms.lasthandoff: 12/22/2017
   
 5.  Ayarlama <xref:System.Windows.Automation.CacheRequest.AutomationElementMode%2A> özelliğine <xref:System.Windows.Automation.AutomationElementMode.None> nesneleri için tam bir başvuru almadığınızdan verimliliğini artırmak istiyorsanız. (Bu, geçerli değerleri bu nesnelerden almak mümkün hale getirir.)  
   
-6.  İstek kullanarak etkinleştirme <xref:System.Windows.Automation.CacheRequest.Activate%2A> içinde bir `using` blok (`Using` içinde [!INCLUDE[TLA#tla_visualbnet](../../../includes/tlasharptla-visualbnet-md.md)]).  
+6.  İstek kullanarak etkinleştirme <xref:System.Windows.Automation.CacheRequest.Activate%2A> içinde bir `using` blok (`Using` Microsoft Visual Basic .NET içinde).  
   
- Alma sonra <xref:System.Windows.Automation.AutomationElement> nesneleri veya olaylara abone olma devre dışı bırakma isteği kullanarak <xref:System.Windows.Automation.CacheRequest.Pop%2A> (varsa <xref:System.Windows.Automation.CacheRequest.Push%2A> kullanılan) veya tarafından oluşturulan nesne atma <xref:System.Windows.Automation.CacheRequest.Activate%2A>. (Kullanım <xref:System.Windows.Automation.CacheRequest.Activate%2A> içinde bir `using` blok (`Using` içinde [!INCLUDE[TLA#tla_visualbnet](../../../includes/tlasharptla-visualbnet-md.md)]).  
+ Alma sonra <xref:System.Windows.Automation.AutomationElement> nesneleri veya olaylara abone olma devre dışı bırakma isteği kullanarak <xref:System.Windows.Automation.CacheRequest.Pop%2A> (varsa <xref:System.Windows.Automation.CacheRequest.Push%2A> kullanılan) veya tarafından oluşturulan nesne atma <xref:System.Windows.Automation.CacheRequest.Activate%2A>. (Kullanım <xref:System.Windows.Automation.CacheRequest.Activate%2A> içinde bir `using` blok (`Using` Microsoft Visual Basic .NET içinde).  
   
 ### <a name="cache-automationelement-properties"></a>Önbellek AutomationElement özellikleri  
   

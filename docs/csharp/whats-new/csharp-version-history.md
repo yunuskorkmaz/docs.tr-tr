@@ -9,11 +9,11 @@ ms.topic: article
 ms.prod: .net
 ms.technology: devlang-csharp
 ms.devlang: csharp
-ms.openlocfilehash: d24d190eab5896121231543e6696b6a4861b5bb8
-ms.sourcegitcommit: 935d5267c44f9bce801468ef95f44572f1417e8c
+ms.openlocfilehash: 0a24e8cf22bb8350777879a3adfd2757b89cd305
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/28/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="the-history-of-c"></a>C# geçmişi #
 
@@ -48,12 +48,12 @@ Ve henüz, C# biraz Java ile nım çalınmaya devam eder. Java zaten genel türl
 
 ## <a name="c-version-30"></a>C# 3.0 sürümü
 
-Dil özelliklerinin tam bot gerçekte C# ile sürüm 3.5 gelecektir rağmen C# 3.0 sürümü geç 2007'de, Visual Studio 2008 birlikte geldi. Bu sürüm, C# büyümesini önemli bir değişiklik olarak işaretlenmiş. Bu C# kurdu gerçekten formidable bir programlama dili olarak. Bir önemli özelliklerinden bazıları bu sürümde bakalım:
+Dil özelliklerinin tam bot gerçekte .NET Framework sürüm 3.5 gelecektir rağmen C# 3.0 sürümü geç 2007'de, Visual Studio 2008 birlikte geldi. Bu sürüm, C# büyümesini önemli bir değişiklik olarak işaretlenmiş. Bu C# kurdu gerçekten formidable bir programlama dili olarak. Bir önemli özelliklerinden bazıları bu sürümde bakalım:
 
 - [Otomatik uygulanan özellikler](../programming-guide/classes-and-structs/auto-implemented-properties.md)
 - [Anonim türler](../programming-guide/classes-and-structs/anonymous-types.md)
 - [Sorgu ifadeleri](../linq/query-expression-basics.md)
-- [Lambda expression](https://www.daedtech.com/introduction-to-c-lambda-expressions/)
+- [lambda ifadesi](https://www.daedtech.com/introduction-to-c-lambda-expressions/)
 - [İfade ağaçları](https://blogs.msdn.microsoft.com/charlie/2008/01/31/expression-tree-basics/)
 - [Genişletme yöntemleri](https://www.codeproject.com/Tips/709310/Extension-Method-In-Csharp)
 

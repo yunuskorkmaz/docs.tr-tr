@@ -1,23 +1,25 @@
 ---
-title: "ADO.NET kod örnekleri"
+title: ADO.NET kod örnekleri
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.technology: dotnet-ado
+ms.technology:
+- dotnet-ado
 ms.topic: article
 dev_langs:
 - csharp
 - vb
 ms.assetid: c119657a-9ce6-4940-91e4-ac1d5f0d9584
-caps.latest.revision: "7"
+caps.latest.revision: 7
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.workload: dotnet
-ms.openlocfilehash: ea26b4297f587a449b8484947257081e0d11906c
-ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
+ms.workload:
+- dotnet
+ms.openlocfilehash: 8fec055db7069a213b31b9f4443b2f0e7467dd7b
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="adonet-code-examples"></a>ADO.NET kod örnekleri
 Bu konudaki kod listeleri aşağıdaki ADO.NET teknolojilerini kullanarak bir veritabanından veri almak nasıl ekleyebileceğiniz gösterilmektedir:
@@ -46,7 +48,7 @@ Bu konudaki kod listeleri aşağıdaki ADO.NET teknolojilerini kullanarak bir ve
 Aşağıdaki kod listeleri ADO.NET data Provider kullanarak bir veritabanından veri almak nasıl ekleyebileceğiniz gösterilmektedir. İçinde döndürülen veriler bir `DataReader`. Daha fazla bilgi için bkz: [alma verileri kullanarak bir DataReader](../../../../docs/framework/data/adonet/retrieving-data-using-a-datareader.md).
 
 ### <a name="sqlclient"></a>SqlClient
-Bu örnekteki kod için bağlanabildiğinizi varsayar `Northwind` Microsoft örnek veritabanı [!INCLUDE[ssNoVersion](../../../../includes/ssnoversion-md.md)]. Kod oluşturur bir <xref:System.Data.SqlClient.SqlCommand> Ürünler tablosundan satırları seçmek için ekleme bir <xref:System.Data.SqlClient.SqlParameter> belirtilen parametre, bu durumda 5 değerinden bir UnitPrice satırlarla sonuçları sınırlandırmak için. <xref:System.Data.SqlClient.SqlConnection> İçinde açılmış bir `using` kaynakları kapalı ve kod çıktığında atıldı sağlar bloğu. Kod kullanarak komutu yürütür bir <xref:System.Data.SqlClient.SqlDataReader>ve sonuçları konsol penceresinde görüntüler.
+Bu örnekteki kod için bağlanabildiğinizi varsayar `Northwind` Microsoft SQL Server örnek veritabanı. Kod oluşturur bir <xref:System.Data.SqlClient.SqlCommand> Ürünler tablosundan satırları seçmek için ekleme bir <xref:System.Data.SqlClient.SqlParameter> belirtilen parametre, bu durumda 5 değerinden bir UnitPrice satırlarla sonuçları sınırlandırmak için. <xref:System.Data.SqlClient.SqlConnection> İçinde açılmış bir `using` kaynakları kapalı ve kod çıktığında atıldı sağlar bloğu. Kod kullanarak komutu yürütür bir <xref:System.Data.SqlClient.SqlDataReader>ve sonuçları konsol penceresinde görüntüler.
 
  [!code-csharp[DataWorks SampleApp.SqlClient#1](../../../../samples/snippets/csharp/VS_Snippets_ADO.NET/DataWorks SampleApp.SqlClient/CS/source.cs#1)]
  [!code-vb[DataWorks SampleApp.SqlClient#1](../../../../samples/snippets/visualbasic/VS_Snippets_ADO.NET/DataWorks SampleApp.SqlClient/VB/source.vb#1)]

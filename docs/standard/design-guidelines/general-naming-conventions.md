@@ -1,12 +1,12 @@
 ---
-title: "Genel adlandırma kuralları"
-ms.custom: 
+title: Genel adlandırma kuralları
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology: dotnet-standard
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - names [.NET Framework], conflicts
@@ -20,18 +20,18 @@ helpviewer_keywords:
 - names [.NET Framework], type names
 - names [.NET Framework], acronyms
 ms.assetid: d3a77ea1-75d2-4969-a8c3-3e1e3e1aaedc
-caps.latest.revision: "18"
+caps.latest.revision: 18
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: 5e5c09c4db8e65d836c7afc7cb78c1f9e32bab65
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: 87f866210667905566d75bfed22ba7b9a521abdc
+ms.sourcegitcommit: 2e8acae16ae802f2d6d04e3ce0a6dbf04e476513
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="general-naming-conventions"></a>Genel adlandırma kuralları
 Bu bölümde, sözcük seçimi için ilgili genel adlandırma kuralları kısaltmalar ve kısaltmalar ve öneriler dile özel adlar kullanmaktan kaçının nasıl kullanma hakkında yönergeler açıklanmaktadır.  
@@ -73,16 +73,16 @@ Bu bölümde, sözcük seçimi için ilgili genel adlandırma kuralları kısalt
 |---------|------------------|-----------|---------|  
 |**sbyte**|**SByte**|**char**|**SByte**|  
 |**byte**|**Bayt**|**İmzasız char**|**Bayt**|  
-|**short**|**Kısa**|**short**|**Int16**|  
+|**short**|**kısa**|**short**|**Int16**|  
 |**ushort**|**UInt16**|**İmzasız short**|**UInt16**|  
-|**int**|**Tamsayı**|**int**|**Int32**|  
+|**int**|**tamsayı**|**int**|**Int32**|  
 |**uint**|**UInt32**|**İmzasız int**|**UInt32**|  
-|**long**|**Uzun**|**__int64**|**Int64**|  
+|**long**|**uzun**|**__int64**|**Int64**|  
 |**ulong**|**UInt64**|**İmzasız __int64**|**UInt64**|  
 |**float**|**Tek**|**float**|**Tek**|  
 |**double**|**Çift**|**double**|**Çift**|  
 |**bool**|**Boole değeri**|**bool**|**Boole değeri**|  
-|**char**|**Char**|**wchar_t**|**Char**|  
+|**char**|**char**|**wchar_t**|**char**|  
 |**string**|**Dize**|**Dize**|**Dize**|  
 |**object**|**Nesne**|**Nesne**|**Nesne**|  
   
@@ -107,7 +107,7 @@ Bu bölümde, sözcük seçimi için ilgili genel adlandırma kuralları kısalt
   
  *Bölümleri © 2005, 2009 Microsoft Corporation. Tüm hakları saklıdır.*  
   
- *Pearson eğitim, Inc. şirketinin izni tarafından yeniden yazdırılmaları [Framework tasarım yönergeleri: kuralları, deyimleri ve yeniden kullanılabilir .NET kitaplıkları, 2 sürümü için desenleri](http://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619) Krzysztof Cwalina ve Brad Abrams tarafından 22 Eki 2008 tarafından yayımlanan Microsoft Windows geliştirme serisi bir parçası olarak Addison-Wesley Professional.*  
+ *Pearson eğitim, Inc. şirketinin izni tarafından yeniden yazdırılmaları [Framework tasarım yönergeleri: kuralları, deyimleri ve yeniden kullanılabilir .NET kitaplıkları, 2 sürümü için desenleri](https://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619) Krzysztof Cwalina ve Brad Abrams tarafından 22 Eki 2008 tarafından yayımlanan Microsoft Windows geliştirme serisi bir parçası olarak Addison-Wesley Professional.*  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
  [Çerçeve Tasarım Yönergeleri](../../../docs/standard/design-guidelines/index.md)  

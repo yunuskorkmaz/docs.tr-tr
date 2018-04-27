@@ -1,27 +1,29 @@
 ---
-title: "Tek toplu kopyalama işlemleri"
-ms.custom: 
+title: Tek toplu kopyalama işlemleri
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-ado
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-ado
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - csharp
 - vb
 ms.assetid: 5e7ff0be-3f23-4996-a92c-bd54d65c3836
-caps.latest.revision: "5"
+caps.latest.revision: 5
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.workload: dotnet
-ms.openlocfilehash: 961981fcdf9709a336d76df99c8f65448e76b98a
-ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
+ms.workload:
+- dotnet
+ms.openlocfilehash: 37402672a6df808cb5e1c2424817fd9ce749cc82
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="single-bulk-copy-operations"></a>Tek toplu kopyalama işlemleri
 Bir SQL Server toplu kopyalama işlemi gerçekleştirmenin en kolay yaklaşım, tek bir işlemde bir veritabanında gerçekleştirmektir. Varsayılan olarak, yalıtılmış bir işlem olarak bir toplu kopyalama işlemi gerçekleştirilir: Bu çalışırken için fırsat ile geri işlem temelli olmayan bir şekilde, kopyalama işlemi gerçekleşir.  
@@ -51,7 +53,7 @@ Bir SQL Server toplu kopyalama işlemi gerçekleştirmenin en kolay yaklaşım, 
 >  Kaynak ve hedef sütun veri türleri eşleşmesini öneririz. Veri türleri eşleşmiyorsa **SqlBulkCopy** her kaynak değeri tarafından işe kurallarını kullanarak hedef veri türüne dönüştürmek çalışır <xref:System.Data.SqlClient.SqlParameter.Value%2A>. Dönüşümler performansını etkileyebilir ve ayrıca beklenmeyen hatalara yol açabilir. Örneğin, bir `Double` veri türüne dönüştürülebilir bir `Decimal` veri türü çoğu zaman, ancak her zaman.  
   
 ## <a name="example"></a>Örnek  
- Aşağıdaki konsol uygulaması kullanarak veri yüklemek gösterilmiştir <xref:System.Data.SqlClient.SqlBulkCopy> sınıfı. Bu örnekte, bir <xref:System.Data.SqlClient.SqlDataReader> veri kopyalamak için kullanılan **Production.Product** tablosundaki [!INCLUDE[ssNoVersion](../../../../../includes/ssnoversion-md.md)] **AdventureWorks** benzer bir tabloya aynı veritabanında veritabanı.  
+ Aşağıdaki konsol uygulaması kullanarak veri yüklemek gösterilmiştir <xref:System.Data.SqlClient.SqlBulkCopy> sınıfı. Bu örnekte, bir <xref:System.Data.SqlClient.SqlDataReader> veri kopyalamak için kullanılan **Production.Product** SQL Server tablosunda**AdventureWorks** benzer bir tabloya aynı veritabanında veritabanı.  
   
 > [!IMPORTANT]
 >  Bölümünde açıklandığı gibi iş tabloları oluşturmadıysanız Bu örnek çalışmaz [toplu kopyalama örnek Kurulum](../../../../../docs/framework/data/adonet/sql/bulk-copy-example-setup.md). Bu kodu kullanarak söz dizimi göstermek için sağlanan **SqlBulkCopy** yalnızca. Kaynak ve hedef tablolar aynı SQL Server örneğinde bulunuyorsa, daha kolay ve hızlı bir Transact-SQL kullanmak için bunu `INSERT … SELECT` verileri kopyalamak için deyimi.  

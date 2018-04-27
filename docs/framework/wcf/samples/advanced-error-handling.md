@@ -1,24 +1,26 @@
 ---
-title: "Gelişmiş Hata İşleme"
-ms.custom: 
+title: Gelişmiş Hata İşleme
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: ed54b687-78af-4eda-8507-9fd081bdea1a
-caps.latest.revision: "21"
+caps.latest.revision: 21
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 7771b9a4d5a6c0fb4349894afd348e9dece27fd9
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 35911a80e7686a1023f42115f785fb64d949aeff
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="advanced-error-handling"></a>Gelişmiş Hata İşleme
 Bu örnek gösterilmektedir [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] yönlendirme hizmeti. Yönlendirme hizmeti bir [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] içerik tabanlı yönlendirici uygulamanıza dahil kolaylaştırır bileşeni. Bu örnek nasıl yönlendirme hizmeti akıllıca hataları, işlemleri ve çok noktaya yayın gibi daha karmaşık diğer ileti kavramları kullanarak kurtarır gösterir.  
@@ -44,7 +46,7 @@ Bu örnek gösterilmektedir [!INCLUDE[indigo1](../../../../includes/indigo1-md.m
   
      Kullanarak [!INCLUDE[vs_current_long](../../../../includes/vs-current-long-md.md)], AdvancedErrorHandling.sln açın.  
   
-2.  Tuşuna **F5** veya **CTRL + SHIFT + B** içinde [!INCLUDE[vs_current_short](../../../../includes/vs-current-short-md.md)].  
+2.  Tuşuna **F5** veya **CTRL + SHIFT + B** Visual Studio.  
   
     1.  CTRL + SHIFT + B uygulamasıyla yapılandırdıysanız, uygulamayı başlatmanız gerekir. / RoutingService/bin/debug/RoutingService.exe.  
   

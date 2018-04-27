@@ -1,26 +1,26 @@
 ---
 title: Serialization1
-ms.custom: 
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology: dotnet-standard
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: bebb27ac-9712-4196-9931-de19fc04dbac
-caps.latest.revision: "4"
+caps.latest.revision: 4
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: dd6989e651f09a5e4d3354227a44b823b1b3ddcf
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: 14b2f596245eb7f9cdcb9b3e30eeb100180cd793
+ms.sourcegitcommit: 2e8acae16ae802f2d6d04e3ce0a6dbf04e476513
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="serialization"></a>Serileştirme
 Seri hale getirme nesneyi kullanıma kalıcı veya taşınan bir biçime dönüştürme işlemidir. Örneğin, bir nesneyi serileştirme, HTTP kullanarak ve hedef makinenin seri Internet üzerinden taşıma.  
@@ -59,7 +59,7 @@ Seri hale getirme nesneyi kullanıma kalıcı veya taşınan bir biçime dönü�
   
  Nesneleri seri olduğunda oluşturucular çağrılır değil. (Kuralına özel durumlar vardır. Koleksiyonların oluşturucular işaretlenmiş <xref:System.Runtime.Serialization.CollectionDataContractAttribute> seri kaldırma sırasında çağrılır.) Bu nedenle, normal oluşturma sırasında yürütür herhangi bir mantık seri hale getirme geri çağrıları biri olarak uygulanması gerekir.  
   
- `OnDeserializedAttribute`en yaygın kullanılan geri çağırma özniteliğidir. Ailesindeki diğer öznitelikleri <xref:System.Runtime.Serialization.OnDeserializingAttribute>, <xref:System.Runtime.Serialization.OnSerializingAttribute>, ve <xref:System.Runtime.Serialization.OnSerializedAttribute>. Seri durumundan çıkarma, serileştirme önce ve son olarak seri hale getirme sonra önce sırasıyla yürütülen geri çağırmaları işaretlemek için kullanılabilir.  
+ `OnDeserializedAttribute` en yaygın kullanılan geri çağırma özniteliğidir. Ailesindeki diğer öznitelikleri <xref:System.Runtime.Serialization.OnDeserializingAttribute>, <xref:System.Runtime.Serialization.OnSerializingAttribute>, ve <xref:System.Runtime.Serialization.OnSerializedAttribute>. Seri durumundan çıkarma, serileştirme önce ve son olarak seri hale getirme sonra önce sırasıyla yürütülen geri çağırmaları işaretlemek için kullanılabilir.  
   
  **✓ DÜŞÜNÜN** kullanarak <xref:System.Runtime.Serialization.KnownTypeAttribute> karmaşık nesne grafiğinin seri durumdan çıkarılırken kullanılmalıdır somut türleri belirtmek için.  
   
@@ -110,7 +110,7 @@ public class Person : ISerializable {
   
  *Bölümleri © 2005, 2009 Microsoft Corporation. Tüm hakları saklıdır.*  
   
- *Pearson eğitim, Inc. şirketinin izni tarafından yeniden yazdırılmaları [Framework tasarım yönergeleri: kuralları, deyimleri ve yeniden kullanılabilir .NET kitaplıkları, 2 sürümü için desenleri](http://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619) Krzysztof Cwalina ve Brad Abrams tarafından 22 Eki 2008 tarafından yayımlanan Microsoft Windows geliştirme serisi bir parçası olarak Addison-Wesley Professional.*  
+ *Pearson eğitim, Inc. şirketinin izni tarafından yeniden yazdırılmaları [Framework tasarım yönergeleri: kuralları, deyimleri ve yeniden kullanılabilir .NET kitaplıkları, 2 sürümü için desenleri](https://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619) Krzysztof Cwalina ve Brad Abrams tarafından 22 Eki 2008 tarafından yayımlanan Microsoft Windows geliştirme serisi bir parçası olarak Addison-Wesley Professional.*  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
  [Çerçeve Tasarım Yönergeleri](../../../docs/standard/design-guidelines/index.md)  

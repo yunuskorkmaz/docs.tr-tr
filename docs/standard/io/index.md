@@ -23,11 +23,11 @@ manager: wpickett
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: e9ebd1a11684afaa143d1f016f31e0a29a3478db
-ms.sourcegitcommit: ba765893e3efcece67d99fd6d5ce0074b050d1d9
+ms.openlocfilehash: b420859380d7c3c39a7d85f94df1708d9f26bebc
+ms.sourcegitcommit: 2e8acae16ae802f2d6d04e3ce0a6dbf04e476513
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/02/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="file-and-stream-io"></a>Dosya ve Akış G/Ç
 Dosya ve akış I/O (giriş/çıkış) bir veri aktarımının depolama ortamına mı gittiğini yoksa oradan mı geldiğini belirtir. .NET Framework'teki `System.IO` ad alanları veri akışlarını ve dosyaları okuma ve yazma, zaman uyumlu ve zaman uyumsuz olarak etkinleştirin türleri içerir. Bu ad alanları aynı zamanda dosyaları sıkıştırma ve sıkıştırmayı açma işini gerçekleştiren türleri ve borular ve seri bağlantı noktaları üzerinden iletişim sağlayan türleri içerir.  
@@ -51,7 +51,7 @@ Dosya ve akış I/O (giriş/çıkış) bir veri aktarımının depolama ortamın
   
  Bu sınıfların kullanarak ek olarak, Visual Basic kullanıcılar tarafından sağlanan özellikleri ve yöntemleri kullanabilir <xref:Microsoft.VisualBasic.FileIO.FileSystem?displayProperty=nameWithType> dosya g/ç için sınıf.  
   
- Bkz: [nasıl yapılır: dizinleri kopyalama](../../../docs/standard/io/how-to-copy-directories.md), [nasıl yapılır: bir dizin listesi oluşturma](http://msdn.microsoft.com/library/4d2772b1-b991-4532-a8a6-6ef733277e69), ve [nasıl yapılır: dizinleri ve dosyaları numaralandırma](../../../docs/standard/io/how-to-enumerate-directories-and-files.md).  
+ Bkz: [nasıl yapılır: dizinleri kopyalama](../../../docs/standard/io/how-to-copy-directories.md), [nasıl yapılır: bir dizin listesi oluşturma](https://msdn.microsoft.com/library/4d2772b1-b991-4532-a8a6-6ef733277e69), ve [nasıl yapılır: dizinleri ve dosyaları numaralandırma](../../../docs/standard/io/how-to-enumerate-directories-and-files.md).  
   
 ## <a name="streams"></a>Akışlar  
  Özet temel sınıf <xref:System.IO.Stream> bayt okuma ve yazma destekler. Akışlar temsil eden tüm sınıflar devralınmalıdır <xref:System.IO.Stream> sınıfı. <xref:System.IO.Stream> Sınıfı ve türetilmiş sınıflarının veri kaynakları ve depoları ortak bir görünümünü sağlar ve işletim sistemi ve arka plandaki cihazların belirli ayrıntıları Programcı yalıtır.  

@@ -1,23 +1,23 @@
 ---
-title: "Yol dosya erişim hatası"
+title: Yol dosya erişim hatası
 ms.date: 07/20/2015
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - devlang-visual-basic
 ms.topic: article
 f1_keywords:
 - vbrID75
 ms.assetid: 6ce3a161-7316-46bd-a785-0d50e5414020
-caps.latest.revision: 
+caps.latest.revision: 8
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: 2c86d46c884617be152a5954426e9ddd6ef61651
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.openlocfilehash: bff3ec554a594e99bc65e5cd8df28a056dcc1ebd
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="pathfile-access-error"></a>Yol/Dosya erişim hatası
 Bir dosya erişim veya disk erişimi işlemi sırasında işletim sistemi yolunu ve dosya adı arasında bir bağlantı yapılamıyor.  
@@ -30,7 +30,7 @@ Bir dosya erişim veya disk erişimi işlemi sırasında işletim sistemi yolunu
   
 3.  Değil dener salt okunur bir dosya olarak sıralı açmak emin olun `Output` veya `Append` modu. Bu durumda, dosyayı açma `Input` modu veya değişiklik dosyasının salt okunur özniteliği.  
   
-4.  Değil dener değiştirmek emin olun bir [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] projesi bir veritabanı veya belge içinde.  
+4.  Visual Basic projesinde bir veritabanı veya belge değiştirme girişiminde bulunmadı emin olun.  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [Hata türleri](../../../visual-basic/programming-guide/language-features/error-types.md)
+ [Hata Türleri](../../../visual-basic/programming-guide/language-features/error-types.md)

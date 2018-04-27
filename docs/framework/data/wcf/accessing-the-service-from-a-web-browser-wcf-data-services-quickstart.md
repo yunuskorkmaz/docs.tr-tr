@@ -1,30 +1,32 @@
 ---
-title: "Bir Web tarayıcısından hizmetine erişim (WCF Veri Hizmetleri Hızlı Başlangıç)"
-ms.custom: 
+title: Bir Web tarayıcısından hizmetine erişim (WCF Veri Hizmetleri Hızlı Başlangıç)
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework-oob
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 5a6fa180-3094-4e6e-ba2b-8c80975d18d1
-caps.latest.revision: "4"
+caps.latest.revision: 4
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 71beb254bf258da97207f14afca73cd68c6927ca
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: c9ae96facd79ae3d268c630ff7bf8adf411eb775
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="accessing-the-service-from-a-web-browser-wcf-data-services-quickstart"></a>Bir Web tarayıcısından hizmetine erişim (WCF Veri Hizmetleri Hızlı Başlangıç)
-Bu görevde, başlayacak [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] gelen [!INCLUDE[vs_current_short](../../../../includes/vs-current-short-md.md)] ve isteğe bağlı olarak devre dışı bırak akışı okuma Web tarayıcısında. Sonra hizmet tanımı belge almak yanı sıra HTTP GET isteklerini sunulan kaynakları için bir Web tarayıcısı aracılığıyla göndererek veri hizmeti kaynaklara erişim.  
+Bu görevde, başlayacak [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] Visual Studio ve isteğe bağlı olarak Web tarayıcısında okuma akışı devre dışı bırakın. Sonra hizmet tanımı belge almak yanı sıra HTTP GET isteklerini sunulan kaynakları için bir Web tarayıcısı aracılığıyla göndererek veri hizmeti kaynaklara erişim.  
   
 > [!NOTE]
->  Varsayılan olarak, [!INCLUDE[vs_current_short](../../../../includes/vs-current-short-md.md)] otomatik atar bir bağlantı noktası numarası `localhost` bilgisayarınızda URI. Bu görev bağlantı noktası numarasını kullanır `12345` URI örneklerde. [!INCLUDE[crabout](../../../../includes/crabout-md.md)]belirli bir bağlantı noktası numarasını ayarlama, [!INCLUDE[vs_current_short](../../../../includes/vs-current-short-md.md)] proje bakın [veri hizmeti oluşturma](../../../../docs/framework/data/wcf/creating-the-data-service.md).  
+>  Varsayılan olarak, Visual Studio otomatik-bir bağlantı noktası numarası atar `localhost` bilgisayarınızda URI. Bu görev bağlantı noktası numarasını kullanır `12345` URI örneklerde. [!INCLUDE[crabout](../../../../includes/crabout-md.md)] belirli bir bağlantı noktası numarası, Visual Studio Proje bakın ayarlamak nasıl [veri hizmeti oluşturma](../../../../docs/framework/data/wcf/creating-the-data-service.md).  
   
 ### <a name="to-request-the-default-service-document-by-using-internet-explorer"></a>Internet Explorer kullanarak varsayılan hizmet belgesini istemek için  
   
@@ -35,7 +37,7 @@ Bu görevde, başlayacak [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.
     > [!NOTE]
     >  Tarayıcınız akışa ham XML verileri olarak görüntüleyemiyor, hala sayfası için kaynak kodunu olarak akış görüntüleyebiliyor olmalıdır.  
   
-2.  İçinde [!INCLUDE[vs_current_short](../../../../includes/vs-current-short-md.md)], uygulamanın hata ayıklamayı başlatmak için F5 tuşuna basın.  
+2.  Visual Studio'da uygulama hata ayıklamayı başlatmak için F5 tuşuna basın.  
   
 3.  Yerel bilgisayarda Web tarayıcısını açın. Adres çubuğunda aşağıdaki URI girin:  
   

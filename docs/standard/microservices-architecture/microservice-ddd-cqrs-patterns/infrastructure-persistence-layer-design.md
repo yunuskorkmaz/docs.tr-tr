@@ -1,7 +1,7 @@
 ---
 title: Altyapı saklama katmanını tasarlama
 description: Kapsayıcılı .NET uygulamaları için .NET mikro mimarisi | Altyapı saklama katmanını tasarlama
-keywords: Docker, Microservices, ASP.NET, Container
+keywords: Docker, mikro, ASP.NET, kapsayıcı
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 11/08/2017
@@ -11,15 +11,15 @@ ms.topic: article
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: 76db5388c75d4eb3b5cc23c1e57cc391a15f2934
-ms.sourcegitcommit: c883637b41ee028786edceece4fa872939d2e64c
+ms.openlocfilehash: cab12426308be258134e0385c5a6eb6cdb5d544b
+ms.sourcegitcommit: 2e8acae16ae802f2d6d04e3ce0a6dbf04e476513
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/26/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="designing-the-infrastructure-persistence-layer"></a>Altyapı saklama katmanını tasarlama
 
-Veri kalıcılığı bileşenleri mikro hizmet (diğer bir deyişle, bir mikro 's veritabanı) sınırları içinde barındırılan verilere erişim sağlar. Depoları gibi bileşenlerinin gerçek uygulamayı içerir ve [iş birimi](http://martinfowler.com/eaaCatalog/unitOfWork.html) özel EF DBContexts gibi sınıflara.
+Veri kalıcılığı bileşenleri mikro hizmet (diğer bir deyişle, bir mikro 's veritabanı) sınırları içinde barındırılan verilere erişim sağlar. Depoları gibi bileşenlerinin gerçek uygulamayı içerir ve [iş birimi](https://martinfowler.com/eaaCatalog/unitOfWork.html) özel EF DBContexts gibi sınıflara.
 
 ## <a name="the-repository-pattern"></a>Depo düzeni
 
@@ -90,7 +90,7 @@ Veri erişim nesnesi doğrudan depolama karşı veri erişimi ve sürdürme işl
 
 Bir iş birimine birden çok Ekle içeren tek bir işlem olarak güncelleştirme veya silme işlemleri için denir. Basitçe, belirli bir kullanıcı eylemi (örneğin, bir Web sitesinde kayıt), tüm INSERT, update ve delete işlemleri tek bir işlemde işlenme anlamına gelir. Bu, birden çok veritabanı işlemleri chattier şekilde işleme değerinden daha verimli olur.
 
-Bu uygulama katmanı kodunuzdan komutlarını çalıştırırken bu birden çok Kalıcılık işlemleri daha sonra tek bir eylemle gerçekleştirilir. Asıl veritabanını depolama birimine bellek içi değişiklikleri uygulamadan hakkında karar genellikle dayanır [iş birimi düzeni](http://martinfowler.com/eaaCatalog/unitOfWork.html). EF içinde iş birimi düzeni DBContext uygulanır.
+Bu uygulama katmanı kodunuzdan komutlarını çalıştırırken bu birden çok Kalıcılık işlemleri daha sonra tek bir eylemle gerçekleştirilir. Asıl veritabanını depolama birimine bellek içi değişiklikleri uygulamadan hakkında karar genellikle dayanır [iş birimi düzeni](https://martinfowler.com/eaaCatalog/unitOfWork.html). EF içinde iş birimi düzeni DBContext uygulanır.
 
 Çoğu durumda bu deseni veya depolama karşı işlemleri uygulamanın yolu uygulama performansını artırmak ve tutarsızlıklar olasılığını azaltmak. Ayrıca, tüm hedeflenen işlemleri bir işlemin bir parçası olarak kaydedilmiş olduğundan veritabanı tablolarında engelleme işlem azaltır. Bu veritabanında çok sayıda yalıtılmış işlemleri yürütülürken kıyasla daha verimli olur. Bu nedenle, seçili ORM çok sayıda küçük ve ayrı işlem yürütmeleri aksine aynı işlem içindeki birkaç güncelleştirme eylemleri gruplandırarak veritabanında yürütme iyileştirebilir.
 
@@ -139,7 +139,7 @@ Yaklaşan bölümlerde nasıl Entity Framework Çekirdek 2.0 belirtimi desenle u
 ### <a name="the-repository-pattern"></a>Depo düzeni
 
 -   **Edward Hieatt ve Ramiz bana. Depo düzeni.**
-    [*http://martinfowler.com/eaaCatalog/repository.html*](http://martinfowler.com/eaaCatalog/repository.html)
+    [*https://martinfowler.com/eaaCatalog/repository.html*](https://martinfowler.com/eaaCatalog/repository.html)
 
 -   **Depo düzeni**
     [*https://msdn.microsoft.com/library/ff649690.aspx*](https://msdn.microsoft.com/library/ff649690.aspx)
@@ -152,7 +152,7 @@ Yaklaşan bölümlerde nasıl Entity Framework Çekirdek 2.0 belirtimi desenle u
 ### <a name="unit-of-work-pattern"></a>Çalışma deseni birimi
 
 -   **Martin Fowler. Çalışma deseni birimidir.**
-    [*http://martinfowler.com/eaaCatalog/unitOfWork.html*](http://martinfowler.com/eaaCatalog/unitOfWork.html)
+    [*https://martinfowler.com/eaaCatalog/unitOfWork.html*](https://martinfowler.com/eaaCatalog/unitOfWork.html)
 
 <!-- -->
 

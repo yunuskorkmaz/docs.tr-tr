@@ -1,12 +1,12 @@
 ---
-title: ".NET Framework Normal İfadeleri"
-ms.custom: 
+title: .NET Framework Normal İfadeleri
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology: dotnet-standard
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - csharp
@@ -26,18 +26,18 @@ helpviewer_keywords:
 - .NET Framework regular expressions
 - strings [.NET Framework], regular expressions
 ms.assetid: 521b3f6d-f869-42e1-93e5-158c54a6895d
-caps.latest.revision: 
+caps.latest.revision: 24
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: 145e0c9a722afd9f49216058604936189c003f17
-ms.sourcegitcommit: cf22b29db780e532e1090c6e755aa52d28273fa6
+ms.openlocfilehash: 5d0ec5572776368fa9943a87fa72280a4ebeb03d
+ms.sourcegitcommit: 2e8acae16ae802f2d6d04e3ce0a6dbf04e476513
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/01/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="net-regular-expressions"></a>.NET normal ifadeler
 Normal ifadeler, metin işleme için güçlü, esnek ve verimli bir yöntem sunar. Normal ifadeleri desen eşleştirme kapsamlı gösterimi, hızlı bir şekilde belirli karakter düzenleri bulmak için metin büyük miktarlarda ayrıştırılamıyor sağlar; önceden tanımlanmış bir desen (örneğin, bir e-posta adresi); eşleştiğinden emin olmak için metin doğrulamak için ayıklama, düzenleme, değiştirin veya metin silmek için alt dizeler; Ayıklanan dizelerin bir raporu oluşturmak için bir koleksiyona eklemek için ve. Dizeler üzerinde çalışan veya büyük metin bloklarını ayrıştıran uygulamalar için normal ifadeler vazgeçilmez bir araçtır.  
@@ -63,8 +63,8 @@ Normal ifadeler, metin işleme için güçlü, esnek ve verimli bir yöntem suna
   
  Normal ifade dili hakkında daha fazla bilgi için bkz: [normal ifade dili - hızlı başvuru](../../../docs/standard/base-types/regular-expression-language-quick-reference.md) veya indirin ve bu broşürler biri yazdırma:  
   
- [Word (.docx) biçiminde hızlı başvuru](http://download.microsoft.com/download/D/2/4/D240EBF6-A9BA-4E4F-A63F-AEB6DA0B921C/Regular%20expressions%20quick%20reference.docx)  
- [PDF (.pdf) biçiminde hızlı başvuru](http://download.microsoft.com/download/D/2/4/D240EBF6-A9BA-4E4F-A63F-AEB6DA0B921C/Regular%20expressions%20quick%20reference.pdf)  
+ [Word (.docx) biçiminde hızlı başvuru](https://download.microsoft.com/download/D/2/4/D240EBF6-A9BA-4E4F-A63F-AEB6DA0B921C/Regular%20expressions%20quick%20reference.docx)  
+ [PDF (.pdf) biçiminde hızlı başvuru](https://download.microsoft.com/download/D/2/4/D240EBF6-A9BA-4E4F-A63F-AEB6DA0B921C/Regular%20expressions%20quick%20reference.pdf)  
   
 ## <a name="regular-expression-examples"></a>Normal İfade Örnekleri  
  <xref:System.String> sınıfı, daha büyük bir dizede sabit değer dizelerini bulmak istediğiniz zaman kullanabileceğiniz dize arama ve yerleştirme yöntemlerini içerir. Normal ifadeler en çok, büyük bir dizedeki alt dizelerin birini konumlandırmak istediğinizde veya aşağıdaki örnekte gösterildiği gibi bir dizede desenleri tanımlamak istediğinizde kullanışlıdır.  
@@ -131,5 +131,5 @@ Normal ifadeler, metin işleme için güçlü, esnek ve verimli bir yöntem suna
 ## <a name="reference"></a>Başvuru  
  <xref:System.Text.RegularExpressions?displayProperty=nameWithType>  
  <xref:System.Text.RegularExpressions.Regex?displayProperty=nameWithType>  
- [Normal ifadeler - hızlı başvuru (Word biçiminde de indirilebilir)](http://download.microsoft.com/download/D/2/4/D240EBF6-A9BA-4E4F-A63F-AEB6DA0B921C/Regular%20expressions%20quick%20reference.docx)  
- [Normal ifadeler - hızlı başvuru (PDF biçimli indirme)](http://download.microsoft.com/download/D/2/4/D240EBF6-A9BA-4E4F-A63F-AEB6DA0B921C/Regular%20expressions%20quick%20reference.pdf)
+ [Normal ifadeler - hızlı başvuru (Word biçiminde de indirilebilir)](https://download.microsoft.com/download/D/2/4/D240EBF6-A9BA-4E4F-A63F-AEB6DA0B921C/Regular%20expressions%20quick%20reference.docx)  
+ [Normal ifadeler - hızlı başvuru (PDF biçimli indirme)](https://download.microsoft.com/download/D/2/4/D240EBF6-A9BA-4E4F-A63F-AEB6DA0B921C/Regular%20expressions%20quick%20reference.pdf)

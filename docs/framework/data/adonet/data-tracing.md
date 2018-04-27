@@ -1,27 +1,29 @@
 ---
 title: ADO.NET veri izleme
-ms.custom: 
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-ado
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-ado
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: a6a752a5-d2a9-4335-a382-b58690ccb79f
-caps.latest.revision: "9"
+caps.latest.revision: 9
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.workload: dotnet
-ms.openlocfilehash: df958982739c7ab2fd7aba42918b919c25d86829
-ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
+ms.workload:
+- dotnet
+ms.openlocfilehash: 377c69feda356aee9e11720cf12c9c97158d45a7
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="data-tracing-in-adonet"></a>ADO.NET veri izleme
-ADO.NET için .NET veri sağlayıcıları tarafından desteklenen yerleşik veri izleme işlevselliği özellikleri [!INCLUDE[ssNoVersion](../../../../includes/ssnoversion-md.md)], Oracle, OLE DB ve ODBC yanı sıra ADO.NET <xref:System.Data.DataSet>ve [!INCLUDE[ssNoVersion](../../../../includes/ssnoversion-md.md)] ağ protokolleri.  
+ADO.NET özellikleri SQL Server, Oracle, OLE DB ve ODBC yanı için ADO.NET .NET veri sağlayıcıları tarafından desteklenen yerleşik veri izleme işlevselliği <xref:System.Data.DataSet>ve SQL Server ağ protokolleri.  
   
  Veri izleme erişim API çağrıları aşağıdaki sorunları tanılamanıza yardımcı olabilir:  
   
@@ -40,7 +42,7 @@ ADO.NET için .NET veri sağlayıcıları tarafından desteklenen yerleşik veri
  Ayarlama ve ADO.NET yönetilen izlemeyi yapılandırma hakkında daha fazla bilgi için bkz: [izleme veri erişimi](http://msdn.microsoft.com/library/hh880086.aspx).  
   
 ## <a name="accessing-diagnostic-information-in-the-extended-events-log"></a>Genişletilmiş olay günlüğünde tanılama bilgilerine erişme  
- İçinde [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] için veri sağlayıcı [!INCLUDE[ssNoVersion](../../../../includes/ssnoversion-md.md)], veri erişim izleme ([veri erişim izleme](http://msdn.microsoft.com/library/hh880086.aspx)) daha kolay bağlantı hataları gibi tanılama bilgileriyle istemci olayları ilişkilendirmenize olanak kolaylaştırmak için güncelleştirildi sunucunun bağlantı halka arabelleği ve uygulama performans bilgileri genişletilmiş olaylar günlüğünde. Genişletilmiş olay günlüğünü okuma hakkında daha fazla bilgi için bkz: [görünüm olay oturum verilerini](http://msdn.microsoft.com/library/hh710068\(SQL.110\).aspx).  
+ İçinde [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] için SQL Server veri sağlayıcısı, veri erişim izleme ([veri erişim izleme](http://msdn.microsoft.com/library/hh880086.aspx)) daha kolay gelen bağlantı hataları gibi tanılama bilgileriyle istemci olayları ilişkilendirmenize olanak kolaylaştırmak için güncelleştirildi sunucunun bağlantı halka arabelleği ve uygulama performans genişletilmiş olaylar günlüğünde bilgi. Genişletilmiş olay günlüğünü okuma hakkında daha fazla bilgi için bkz: [görünüm olay oturum verilerini](http://msdn.microsoft.com/library/hh710068\(SQL.110\).aspx).  
   
  Bağlantı işlemleri için bir istemci ADO.NET göndereceğiniz bağlantı kimliği. Bağlantı başarısız olursa, bağlantı halka arabelleği erişebilirsiniz ([bağlantı halka arabelleği ile SQL Server 2008'de bağlantı sorunlarını giderme](http://go.microsoft.com/fwlink/?LinkId=207752)) ve Bul `ClientConnectionID` alan ve tanı bilgilerini almak bağlantı hatası. Yalnızca bir hata oluşursa, istemci bağlantı kimlikleri halka arabelleği günlüğe kaydedilir. (Oturum açma öncesi paket göndermeden önce bir bağlantı başarısız olursa, istemci bağlantı kimliği üretilmez.) İstemci bağlantı kimliği 16 bayt GUID değeridir. İstemci bağlantısı da bulabilirsiniz genişletilmiş olaylar hedef çıkış kimliği `client_connection_id` eylemi bir genişletilmiş olaylar oturumu olayları eklenir. Veri erişim izlemeyi etkinleştirebilir ve bağlantı komutu yeniden çalıştırın ve gözlemlemek `ClientConnectionID` daha fazla istemci sürücüsü tanılama yardıma gereksinim duyarsanız veri erişim izleme alan.  
   

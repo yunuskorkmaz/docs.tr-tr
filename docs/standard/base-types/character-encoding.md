@@ -1,12 +1,12 @@
 ---
-title: Character Encoding in .NET
-ms.custom: 
+title: Karakter .NET kodlama
+ms.custom: ''
 ms.date: 12/22/2017
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology: dotnet-standard
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - csharp
@@ -16,20 +16,20 @@ helpviewer_keywords:
 - encoding, choosing
 - encoding, fallback strategy
 ms.assetid: bf6d9823-4c2d-48af-b280-919c5af66ae9
-caps.latest.revision: 
+caps.latest.revision: 33
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: ac24e3a685c20445c473f0f5222ddba72b6b098c
-ms.sourcegitcommit: cf22b29db780e532e1090c6e755aa52d28273fa6
+ms.openlocfilehash: 1d296920d75af2194323791c4ea571c10f1e3c7d
+ms.sourcegitcommit: 2e8acae16ae802f2d6d04e3ce0a6dbf04e476513
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/01/2018
+ms.lasthandoff: 04/18/2018
 ---
-# <a name="character-encoding-in-net"></a>Character Encoding in .NET
+# <a name="character-encoding-in-net"></a>Karakter .NET kodlama
 Karakterler, birçok farklı şekilde temsil edilebilen soyut varlıklardır. Bir karakter kodlaması, desteklenen bir karakter kümesindeki her karakteri, o karakteri temsil eden değerle eşleştiren bir sistemdir. Örneğin; Morse kodu, Roma alfabesindeki her karakteri telgraf hattı üzerinden iletilmeye uygun olan bir nokta ve çizgi deseniyle eşleştiren bir karakter kodlamasıdır. Bilgisayarlar için bir karakter kodlaması, desteklenen bir karakter kümesindeki her karakteri, o karakteri temsil eden sayısal bir değerle eşleştirir. Bir karakter kodlaması iki farklı bileşene sahiptir:  
   
 -   Bir karakter dizisini sayısal değerler dizisine (baytlara) çeviren bir kodlayıcı.  
@@ -56,7 +56,7 @@ Karakterler, birçok farklı şekilde temsil edilebilen soyut varlıklardır. Bi
 -   [Özel bir geri dönüş stratejisi uygulama](../../../docs/standard/base-types/character-encoding.md#Custom)  
   
 <a name="Encodings"></a>   
-## <a name="encodings-in-net"></a>Encodings in .NET  
+## <a name="encodings-in-net"></a>.NET kodlamaları  
  .NET kodlama sınıflarda devralan tüm karakter <xref:System.Text.Encoding?displayProperty=nameWithType> tüm karakter kodlamaları ortak işlevselliği tanımlayan bir Özet sınıf sınıfı. .NET içinde uygulanan tek tek kodlama nesnelere erişmek için aşağıdakileri yapın:  
   
 -   Statik özelliklerini kullanmak <xref:System.Text.Encoding> nesneler döndürmeye sınıfı (ASCII, UTF-7, UTF-8, UTF-16 ve UTF-32) .NET içinde kullanılabilir standart karakter kodlamaları temsil eder. Örneğin, <xref:System.Text.Encoding.Unicode%2A?displayProperty=nameWithType> özelliği bir <xref:System.Text.UnicodeEncoding> nesnesini döndürür. Her bir nesne, kodlayamadığı dizeleri ve kodunu çözemediği baytları işlemek için değiştirme geri dönüşünü kullanır. (Daha fazla bilgi için bkz: [değiştirme geri dönüş](../../../docs/standard/base-types/character-encoding.md#Replacement) bölümüne.)  
@@ -70,11 +70,11 @@ Karakterler, birçok farklı şekilde temsil edilebilen soyut varlıklardır. Bi
 > [!NOTE]
 >  Unicode Standardı, desteklenen tüm betiklerde her karaktere bir kod noktası (bir sayı) ve bir ad atar. Örneğin "A" karakteri, U+0041 kod noktası ile ve "LATIN BÜYÜK HARF A" adıyla temsil edilir. Unicode Dönüştürme Biçimi (UTF) kodlamaları, bu kod noktasını bir veya daha fazla bayt dizisi olarak kodlamanın yollarını tanımlar. Bir Unicode kodlama düzeni, herhangi bir karakter kümesindeki karakterlerin tek bir kodlama içinde temsil edilmesini sağladığından, dünya çapında kullanılmaya hazır uygulama geliştirmeyi basitleştirir. Uygulama geliştiricilerin artık belirli bir dil veya yazı sistemi için karakter oluşturmakta kullanılan kodlama düzenini takip etmesine gerek yoktur ve veriler bozulmadan sistemler arasında uluslararası olarak paylaşılabilir.  
 >   
->  .NET kodlanması Unicode standardı tarafından tanımlanmış destekler: UTF-8, UTF-16 ve UTF-32. Daha fazla bilgi için Unicode standart adresindeki bkz [Unicode giriş sayfası](http://www.unicode.org/).  
+>  .NET kodlanması Unicode standardı tarafından tanımlanmış destekler: UTF-8, UTF-16 ve UTF-32. Daha fazla bilgi için Unicode standart adresindeki bkz [Unicode giriş sayfası](https://www.unicode.org/).  
   
  Çağırarak .NET içinde kullanılabilir tüm kodlamaları hakkında bilgi alabilir <xref:System.Text.Encoding.GetEncodings%2A?displayProperty=nameWithType> yöntemi. .NET sistemleri aşağıdaki tabloda listelenen kodlama karakter destekler.  
   
-|Encoding|örneği|Açıklama|Avantajlar/dezavantajlar|  
+|Kodlama|örneği|Açıklama|Avantajlar/dezavantajlar|  
 |--------------|-----------|-----------------|-------------------------------|  
 |ASCII|<xref:System.Text.ASCIIEncoding>|Bir baytın alt yedi bitini kullanarak sınırlı bir karakter aralığını kodlar.|Bu kodlama yalnızca U+0000 ile U+007F arasındaki karakter değerlerini desteklediğinden, çoğu zaman uluslararası uygulamalar için yeterli değildir.|  
 |UTF-7|<xref:System.Text.UTF7Encoding>|Karakterleri 7-bitlik ASCII karakter dizileri olarak temsil eder. ASCII olmayan Unicode karakterleri, ASCII karakterlerinin bir kaçış dizisi ile temsil edilir.|UTF-7, e-posta gibi protokoller ve haber protokollerini destekler. Ancak, UTF-7 özellikle güvenli veya sağlam değildir. Bazı durumlarda bir biti değiştirmek, bütün bir UTF-7 dizesinin yorumunu tamamen değiştirebilir. Diğer durumlarda, farklı UTF-7 dizeleri aynı metni kodlayabilir. ASCII olmayan karakterleri içeren diziler için UTF-7, UTF-8'den daha fazla alan gerektirir ve kodlama/kod çözme daha yavaştır. Sonuç olarak, mümkünse UTF-7 yerine UTF-8 kullanmanız gerekir.|  
@@ -86,7 +86,7 @@ Karakterler, birçok farklı şekilde temsil edilebilen soyut varlıklardır. Bi
   
  Bu kodlamalar, hem Unicode karakterleriyle hem de eski uygulamalarda yaygın olarak kullanılan kodlamalarla birlikte çalışmanıza olanak sağlar. Ek olarak, <xref:System.Text.Encoding> sınıfından türetilen bir sınıf tanımlayarak ve üyelerini geçersiz kılarak özel bir kodlama oluşturabilirsiniz.  
   
-### <a name="platform-notes-includenetcoreincludesnet-core-mdmd"></a>Platform Notlar:[!INCLUDE[net_core](../../../includes/net-core-md.md)]  
+### <a name="platform-notes-includenetcoreincludesnet-core-mdmd"></a>Platform Notlar: [!INCLUDE[net_core](../../../includes/net-core-md.md)]  
  Varsayılan olarak, [!INCLUDE[net_core](../../../includes/net-core-md.md)] 28591 kod sayfası dışındaki tüm kod sayfası Kodlamalar ve Unicode kodlamaları UTF-8 ve UTF-16 gibi kullanılabilir yapmaz. Ancak, standart Windows uygulamalarında hedefleyen .NET uygulamanıza bulunan kod sayfası Kodlamalar ekleyebilirsiniz. Tam bilgi için bkz: <xref:System.Text.CodePagesEncodingProvider> konu.  
   
 <a name="Selecting"></a>   
@@ -157,7 +157,7 @@ Karakterler, birçok farklı şekilde temsil edilebilen soyut varlıklardır. Bi
  En uygun stratejileri farklı kod sayfaları için farklılık gösterir. Örneğin, bazı kod sayfalarında tam genişlikteki Latin karakterler, daha yaygın olan yarım genişlikteki Latin karakterlerle eşlenir. Diğer kod sayfaları için bu eşleme yapılmaz. Agresif bir en uygun stratejide bile, bazı kodlamalardaki bazı karakterler için mümkün olan hiçbir uygun karakter yoktur. Örneğin, bir Çince ideogramın kod sayfası 1252 için hiçbir mantıklı eşlemesi yoktur. Bu durumda, bir değiştirme dizesi kullanılır. Varsayılan olarak bu dize, yalnızca tek bir SORU İŞARETİ (U+003F) karakteridir.  
   
 > [!NOTE]
->  En uygun stratejileri ayrıntılı olarak belgelenmemiştir. Ancak, birkaç kod sayfaları adresindeki belgelenen [Unicode Konsorsiyumu'nın](http://www.unicode.org/Public/MAPPINGS/VENDORS/MICSFT/WindowsBestFit/) Web sitesi. Lütfen gözden **readme.txt** o klasördeki bir dosya eşleme dosyaları yorumlama açıklaması.
+>  En uygun stratejileri ayrıntılı olarak belgelenmemiştir. Ancak, birkaç kod sayfaları adresindeki belgelenen [Unicode Konsorsiyumu'nın](https://www.unicode.org/Public/MAPPINGS/VENDORS/MICSFT/WindowsBestFit/) Web sitesi. Lütfen gözden **readme.txt** o klasördeki bir dosya eşleme dosyaları yorumlama açıklaması.
   
  Aşağıdaki örnek, kod sayfası 1252'yi (Batı Avrupa dilleri için Windows kod sayfası) kullanarak en uygun eşlemeyi ve bunun dezavantajlarını gösterir. Kod sayfası 1252 için bir kodlama nesnesi almak üzere <xref:System.Text.Encoding.GetEncoding%28System.Int32%29?displayProperty=nameWithType> yöntemi kullanılır. Varsayılan olarak, desteklemediği Unicode karakterleri için bir en uygun eşleme kullanır. Örnek; boşluklarla ayrılan, ASCII olmayan üç karakteri içeren bir dizeyi örnekler - DAİRELİ LATIN BÜYÜK HARF S (U+24C8), ÜST SİMGE BEŞ (U+2075) ve SONSUZLUK (U+221E). Örneğin çıktısının gösterdiği üzere, dize kodlandığında boşluk olmayan üç orijinal karakter, SORU İŞARETİ (U+003F), BEŞ BASAMAĞI (U+0035) ve SEKİZ BASAMAĞI (U+0038) ile değiştirilir. Özellikle SEKİZ BASAMAĞI, desteklenmeyen SONSUZLUK karakteri için kötü bir değiştirmedir ve SORU İŞARETİ, orijinal karakter için kullanılabilir bir eşleme bulunmadığını gösterir.  
   

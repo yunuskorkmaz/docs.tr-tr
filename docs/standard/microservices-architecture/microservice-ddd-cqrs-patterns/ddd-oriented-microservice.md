@@ -1,7 +1,7 @@
 ---
-title: "DDD odaklı mikro tasarlama"
-description: "Kapsayıcılı .NET uygulamaları için .NET mikro mimarisi | DDD odaklı mikro tasarlama"
-keywords: "Docker, mikro, ASP.NET, kapsayıcı"
+title: DDD odaklı mikro tasarlama
+description: Kapsayıcılı .NET uygulamaları için .NET mikro mimarisi | DDD odaklı mikro tasarlama
+keywords: Docker, mikro, ASP.NET, kapsayıcı
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 11/06/2017
@@ -11,11 +11,11 @@ ms.topic: article
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: 38b65bc6752dd8b6ed4083c0bc5a5eccabcffbcc
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: d2d07abe55f30e0b12a7f0cba937abd1b7e32629
+ms.sourcegitcommit: 2e8acae16ae802f2d6d04e3ce0a6dbf04e476513
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="designing-a-ddd-oriented-microservice"></a>DDD odaklı mikro tasarlama
 
@@ -57,7 +57,7 @@ Her katman yalnızca belirli diğer katmanlar ile iletişim kurar sistemde tasar
 
 ### <a name="the-domain-model-layer"></a>Etki alanı modeli katmanı
 
-Eric Evans'ın mükemmel kitap [etki alanı tabanlı tasarım](http://domainlanguage.com/ddd/) etki alanı modeli katmanı ve uygulama katmanı hakkında aşağıdaki söyler.
+Eric Evans'ın mükemmel kitap [etki alanı tabanlı tasarım](https://domainlanguage.com/ddd/) etki alanı modeli katmanı ve uygulama katmanı hakkında aşağıdaki söyler.
 
 **Etki alanı modeli katmanı**: iş, iş durumu ve iş kuralları hakkında bilgi kavramlarını temsil eden sorumlu. İş durumu yansıtır durumu denetlenen ve onu Depolama Teknik Ayrıntılar için altyapı temsilci olsa bile burada kullanılır. İş yazılım Kalp katmanıdır.
 
@@ -75,7 +75,7 @@ Ayrıca, bu bir ilişkisel veritabanı için tasarlanmış bir modeli alabilir v
 
 ### <a name="the-application-layer"></a>Uygulama katmanı
 
-Taşıma uygulama katmanına biz yeniden alınıyor Eric Evans'ın kitap [etki alanı tabanlı tasarım](http://domainlanguage.com/ddd/):
+Taşıma uygulama katmanına biz yeniden alınıyor Eric Evans'ın kitap [etki alanı tabanlı tasarım](https://domainlanguage.com/ddd/):
 
 **Uygulama katmanı:** yazılım yapmak için olması ve sorunlarını çözmek için açıklayıcı bir etki alanı nesnelerini yönlendirir işleri tanımlar. Bu katman sorumlu olduğu görevleri iş anlamlı veya diğer sistemler uygulama katmanları ile etkileşim için gerekli. Bu katman ince tutulur. İş kurallarını veya bilgi içermiyor, ancak yalnızca koordinatları görevleri ve temsilciler için etki alanı nesnelerinin sonraki katmanı işbirliğini aşağı çalışır. İş durumu yansıtma durumu yok, ancak kullanıcı veya program için bir görev ilerlemesini gösteren durum olabilir.
 
@@ -101,13 +101,13 @@ Bu katman tasarım her mikro hizmet için bağımsız olması gerekir. Daha önc
 
 #### <a name="additional-resources"></a>Ek kaynaklar
 
--   **DevIQ. Kalıcılık kullanmayan ilkesine**
+-   **DevIQ. Kalıcılık kullanmayan İlkesi**
     [*http://deviq.com/persistence-ignorance/*](http://deviq.com/persistence-ignorance/)
 
 -   **Oren Eini. Altyapı kullanmayan**
     [*https://ayende.com/blog/3137/infrastructure-ignorance*](https://ayende.com/blog/3137/infrastructure-ignorance)
 
--   **Melek Lopez. Etki alanı Odaklı Tasarım mimarisinde katmanlı**
+-   **Melek Lopez. Etki alanı tabanlı tasarım katmanlı mimarisi**
     [*https://ajlopez.wordpress.com/2008/09/12/layered-architecture-in-domain-driven-design/*](https://ajlopez.wordpress.com/2008/09/12/layered-architecture-in-domain-driven-design/)
 
 

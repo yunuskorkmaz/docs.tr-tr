@@ -1,27 +1,29 @@
 ---
-title: "Nasıl yapılır: görüntü oluşturulan SQL"
-ms.custom: 
+title: 'Nasıl yapılır: görüntü oluşturulan SQL'
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-ado
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-ado
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - csharp
 - vb
 ms.assetid: 626492c0-5ee3-4675-88e8-8c40379510b6
-caps.latest.revision: "2"
+caps.latest.revision: 2
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.workload: dotnet
-ms.openlocfilehash: 5c75ac8734a92fc76613643c3831d0b767e92feb
-ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
+ms.workload:
+- dotnet
+ms.openlocfilehash: c58e691bdf39e71a756c8b26451c22c769f05c0a
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="how-to-display-generated-sql"></a>Nasıl yapılır: görüntü oluşturulan SQL
 Sorgular ve değişikliği kullanarak işleme için oluşturulan SQL kodu görüntüleyebilirsiniz <xref:System.Data.Linq.DataContext.Log%2A> özelliği. Bu yaklaşımı anlamak için kullanışlıdır [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] işlevselliği ve belirli sorunları hata ayıklama için.  
@@ -29,7 +31,7 @@ Sorgular ve değişikliği kullanarak işleme için oluşturulan SQL kodu görü
 ## <a name="example"></a>Örnek  
  Aşağıdaki örnek kullanır <xref:System.Data.Linq.DataContext.Log%2A> kod yürütülmeden önce SQL kodunu konsol penceresinde görüntülenecek özelliği.  Bu özelliği kullanmak sorgu, Ekle, Güncelleştir ve komutları silin.  
   
- Konsol penceresinde satırlarından yürüttüğünüzde gördüğünüzü olan [!INCLUDE[vbprvb](../../../../../../includes/vbprvb-md.md)] veya aşağıdaki C# kodu.  
+ Konsol penceresinde satırlarından izleyen Visual Basic veya C# kod yürüttüğünüzde gördüğünüzü ' dir.  
   
 ```  
 SELECT [t0].[CustomerID], [t0].[CompanyName], [t0].[ContactName], [t0].[ContactT  

@@ -1,10 +1,10 @@
 ---
-title: "Belge Açıklamaları için Önerilen XML Etiketleri (Visual Basic)"
-ms.custom: 
+title: Belge Açıklamaları için Önerilen XML Etiketleri (Visual Basic)
+ms.custom: ''
 ms.date: 07/20/2015
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - devlang-visual-basic
 ms.topic: article
@@ -15,17 +15,17 @@ helpviewer_keywords:
 - XML comments, recommended tags [Visual Basic]
 - comments, recommended XML tags
 ms.assetid: 294e0736-ff1e-498e-af83-6db71ed41a72
-caps.latest.revision: 
+caps.latest.revision: 14
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: 54712deb8bb2a5ed1e7b1f5fb8aa073dcdaf76d6
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 7815d4c9fddc4e760c7495ef7a2509c55141e96e
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="recommended-xml-tags-for-documentation-comments-visual-basic"></a>Belge Açıklamaları için Önerilen XML Etiketleri (Visual Basic)
-[!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] Derleyici kodunuzda bir XML dosyasına belge açıklamaları işleyebilir. XML dosyası belgeleri işlemek için ek araçlar kullanabilirsiniz.  
+Visual Basic derleyici kodunuzda bir XML dosyasına belge açıklamaları işleyebilir. XML dosyası belgeleri işlemek için ek araçlar kullanabilirsiniz.  
   
  XML açıklamaları kod yapıları türleri gibi izin verilen ve üyeleri yazın. Üyeleri yorum üzerinde herhangi bir kısıtlama olsa kısmi türler için XML açıklamaları türü yalnızca bir parçası olabilir.  
   
@@ -49,6 +49,6 @@ ms.lasthandoff: 11/21/2017
 >  Köşeli belgelerine açıklama metninde görünmesini istiyorsanız kullanın `<` ve `>`. Örneğin, dize `"<text in angle brackets>"` olarak görünür `<text in angle``brackets>`.  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [XML ile kodunuzu belgeleme](../../../visual-basic/programming-guide/program-structure/documenting-your-code-with-xml.md)  
- [/ doc](../../../visual-basic/reference/command-line-compiler/doc.md)  
- [Nasıl yapılır: XML belgesi oluşturma](../../../visual-basic/programming-guide/program-structure/how-to-create-xml-documentation.md)
+ [XML ile Kodunuzu Belgeleme](../../../visual-basic/programming-guide/program-structure/documenting-your-code-with-xml.md)  
+ [/doc](../../../visual-basic/reference/command-line-compiler/doc.md)  
+ [Nasıl yapılır: XML Belgesi Oluşturma](../../../visual-basic/programming-guide/program-structure/how-to-create-xml-documentation.md)

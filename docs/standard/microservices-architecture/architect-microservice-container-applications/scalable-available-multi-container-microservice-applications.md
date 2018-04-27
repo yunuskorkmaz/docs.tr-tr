@@ -1,7 +1,7 @@
 ---
-title: "Mikro ve yüksek ölçeklenebilirlik ve kullanılabilirlik için birden çok kapsayıcı uygulamaları yönetme"
-description: "Kapsayıcılı .NET uygulamaları için .NET mikro mimarisi | Mikro ve yüksek ölçeklenebilirlik ve kullanılabilirlik için birden çok kapsayıcı uygulamaları yönetme"
-keywords: "Docker, mikro, ASP.NET, kapsayıcı"
+title: Mikro ve yüksek ölçeklenebilirlik ve kullanılabilirlik için birden çok kapsayıcı uygulamaları yönetme
+description: Kapsayıcılı .NET uygulamaları için .NET mikro mimarisi | Mikro ve yüksek ölçeklenebilirlik ve kullanılabilirlik için birden çok kapsayıcı uygulamaları yönetme
+keywords: Docker, mikro, ASP.NET, kapsayıcı
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 10/18/2017
@@ -11,11 +11,11 @@ ms.topic: article
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: ff524c6d61c6ce51a1a3e831cd666a3b61ac849e
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: c484372c0b5626fc20c8991a432e62353baa7a4c
+ms.sourcegitcommit: 2e8acae16ae802f2d6d04e3ce0a6dbf04e476513
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="orchestrating-microservices-and-multi-container-applications-for-high-scalability-and-availability"></a>Mikro ve yüksek ölçeklenebilirlik ve kullanılabilirlik için birden çok kapsayıcı uygulamaları yönetme
 
@@ -45,7 +45,7 @@ Genellikle farklı satıcıları tarafından sağlanan ürünleri hem yetenekler
 
 Kubernetes
 
-![https://PBS.twimg.com/Media/BT\_pEfqCAAAiVyz.png](./media/image24.png)
+![https://pbs.twimg.com/media/Bt\_pEfqCAAAiVyz.png](./media/image24.png)
 
 > Kubernetes küme altyapısı ve yönetme olanağı zamanlama kapsayıcı aralıkları işlevselliği sağlayan bir açık kaynaklı üründür. Ana bilgisayar kümelerinde dağıtım, ölçeklendirme ve uygulama kapsayıcıları işlemlerini otomatikleştirmenizi sağlar.
 >
@@ -55,7 +55,7 @@ Kubernetes
 
 Docker Swarm
 
-![http://rancher.com/WP-Content/Themes/rancher-2016/Assets/images/swarm.PNG?v=2016-07-10-AM](./media/image25.png)
+![http://rancher.com/wp-content/themes/rancher-2016/assets/images/swarm.png?v=2016-07-10-am](./media/image25.png)
 
 > Docker Swarm, küme ve Docker kapsayıcıları zamanlama sağlar. Swarm kullanarak, bir tek, sanal Docker ana bilgisayara bir havuzu Docker ana bilgisayarları kapatabilirsiniz. İstemcileri Swarm için birden çok ana ölçeklendirme uygulamaları kolaylaştırır anlamı konaklarına yaparlar aynı şekilde Swarm API isteğinde bulunabilir.
 >
@@ -65,7 +65,7 @@ Docker Swarm
 
 Mesosphere DC/OS
 
-![https://mesosphere.com/WP-Content/uploads/2016/04/logo-Horizontal-styled.PNG](./media/image26.png)
+![https://mesosphere.com/wp-content/uploads/2016/04/logo-horizontal-styled.png](./media/image26.png)
 
 > Kurumsal DC/OS mesosphere (üzerinde Apache Mesos bağlı olarak) kapsayıcıları ve dağıtılmış uygulamaları çalıştırmak için bir üretime hazır platformudur.
 >
@@ -75,7 +75,7 @@ Mesosphere DC/OS
 
 Azure Service Fabric
 
-![https://Azure.microsoft.com/svghandler/Service-fabric?width=600&height=315](./media/image27.png)
+![https://azure.microsoft.com/svghandler/service-fabric?width=600&height=315](./media/image27.png)
 
 > [Service Fabric](https://docs.microsoft.com/azure/service-fabric/service-fabric-overview) uygulamaları oluşturmak için bir Microsoft mikro platformudur. Bu bir [orchestrator](https://docs.microsoft.com/azure/service-fabric/service-fabric-cluster-resource-manager-introduction) , hizmetleri ve makine kümeleri oluşturur. Service Fabric Hizmetleri kapsayıcıları veya düz işlemler olarak dağıtabilirsiniz. Hatta işlemlerde karışımı Hizmetleri aynı uygulama ve küme kapsayıcılara Hizmetleri ile dağıtabilirsiniz.
 >
@@ -130,14 +130,14 @@ ACS standart A, D, DS, G ve GS serisi Linux sanal makineleri azure'da şu anda k
 -   **Docker Swarm genel bakış**
     [*https://docs.docker.com/swarm/overview/*](https://docs.docker.com/swarm/overview/)
 
--   **Moduna genel bakış swarm**
+-   **Swarm moduna genel bakış**
     [*https://docs.docker.com/engine/swarm/*](https://docs.docker.com/engine/swarm/)
 
 -   **Mesosphere DC/OS genel bakış**
     [*https://docs.mesosphere.com/1.7/overview/*](https://docs.mesosphere.com/1.7/overview/)
 
 -   **Kubernetes.** Resmi site. \
-    [*http://kubernetes.io/*](http://kubernetes.io/)
+    [*https://kubernetes.io/*](https://kubernetes.io/)
 
 
 >[!div class="step-by-step"]

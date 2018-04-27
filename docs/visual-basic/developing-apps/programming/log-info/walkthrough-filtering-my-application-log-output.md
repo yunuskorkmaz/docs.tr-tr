@@ -1,25 +1,26 @@
 ---
-title: "Filtreleme My.Application.Log çıktısını (Visual Basic)"
-ms.custom: 
+title: Filtreleme My.Application.Log çıktısını (Visual Basic)
+ms.custom: ''
 ms.date: 07/20/2015
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- devlang-visual-basic
 ms.topic: article
 helpviewer_keywords:
 - My.Log object, filtering output
 - My.Application.Log object, filtering output
 - application event logs, output filtering
 ms.assetid: 2c0a457a-38a4-49e1-934d-a51320b7b4ca
-caps.latest.revision: "22"
+caps.latest.revision: 22
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: 90fd445227e0c8290ad63fccf807d6d7bdf43ccd
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 6c048578b320fedd2153aee7b466b1494551abe0
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="walkthrough-filtering-myapplicationlog-output-visual-basic"></a>İzlenecek Yol: My.Application.Log Çıktısını Filtreleme (Visual Basic)
 Bu anlatımda için filtreleme varsayılan günlük değiştirmek nasıl gösterilir `My.Application.Log` hangi bilgilerin gelen geçirilen denetlemek için nesne `Log` nesne dinleyicileri ve hangi bilgilerin dinleyicileri tarafından yazılır. Yapılandırma bilgileri uygulamanın yapılandırma dosyasında depolandığı için bile uygulama oluşturduktan sonra günlüğe kaydetme davranışını değiştirebilirsiniz.  
@@ -29,7 +30,7 @@ Bu anlatımda için filtreleme varsayılan günlük değiştirmek nasıl göster
   
 #### <a name="to-build-the-sample-application"></a>Örnek uygulama oluşturmak için  
   
-1.  Yeni bir [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] Windows uygulama projesi.  
+1.  Yeni bir Visual Basic Windows uygulama projesi açın.  
   
 2.  Form1 button1 adlı bir düğme ekleyin.  
   
@@ -64,11 +65,11 @@ Bu anlatımda için filtreleme varsayılan günlük değiştirmek nasıl göster
 |DefaultSwitch değeri|Çıktı için gereken ileti önem derecesi|  
 |---|---| 
 |`Critical`|`Critical`|  
-|`Error`|`Critical`veya`Error`|  
-|`Warning`|`Critical`, `Error`, veya`Warning`|  
-|`Information`|`Critical`, `Error`, `Warning`, veya`Information`|  
-|`Verbose`|`Critical`, `Error`, `Warning`, `Information`, veya`Verbose`|  
-|`ActivityTracing`|`Start`, `Stop`, `Suspend`, `Resume`, veya`Transfer`|  
+|`Error`|`Critical` Veya `Error`|  
+|`Warning`|`Critical`, `Error`, veya `Warning`|  
+|`Information`|`Critical`, `Error`, `Warning`, veya `Information`|  
+|`Verbose`|`Critical`, `Error`, `Warning`, `Information`, veya `Verbose`|  
+|`ActivityTracing`|`Start`, `Stop`, `Suspend`, `Resume`, veya `Transfer`|  
 |`All`|Tüm iletileri izin verilir.|  
 |`Off`|Tüm iletileri engellenir.|  
   
@@ -81,7 +82,7 @@ Bu anlatımda için filtreleme varsayılan günlük değiştirmek nasıl göster
   
 1.  App.config dosyasında sağ **Çözüm Gezgini** seçip **açık**.  
   
-     veya  
+     -veya-  
   
      Herhangi bir app.config dosyası ise:  
   
@@ -156,7 +157,7 @@ Bu anlatımda için filtreleme varsayılan günlük değiştirmek nasıl göster
   
 1.  App.config dosyasında sağ **Çözüm Gezgini** ve **açık**.  
   
-     veya  
+     -veya-  
   
      Herhangi bir app.config dosyası ise:  
   
@@ -256,9 +257,9 @@ Bu anlatımda için filtreleme varsayılan günlük değiştirmek nasıl göster
  Dağıtımdan sonra günlük ayarları değiştirme hakkında daha fazla bilgi için bkz: [uygulama günlükleriyle çalışma](../../../../visual-basic/developing-apps/programming/log-info/working-with-application-logs.md).  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [İzlenecek yol: My.Application.log günlüğünün bilgileri nereye yazdığını belirleme](../../../../visual-basic/developing-apps/programming/log-info/walkthrough-determining-where-my-application-log-writes-information.md)  
- [İzlenecek yol: My.Application.Log günlüğünün bilgileri yazdığı değiştirme](../../../../visual-basic/developing-apps/programming/log-info/walkthrough-changing-where-my-application-log-writes-information.md)  
- [İzlenecek yol: Özel günlük dinleyicileri oluşturma](../../../../visual-basic/developing-apps/programming/log-info/walkthrough-creating-custom-log-listeners.md)  
- [Nasıl yapılır: günlük iletileri yazma](../../../../visual-basic/developing-apps/programming/log-info/how-to-write-log-messages.md)  
- [İzleme anahtarları](../../../../framework/debug-trace-profile/trace-switches.md)  
- [Uygulama içinden bilgileri günlüğe kaydetme](../../../../visual-basic/developing-apps/programming/log-info/logging-information-from-the-application.md)
+ [İzlenecek Yol: My.Application.Log Günlüğünün Bilgileri Nereye Yazdığını Belirleme](../../../../visual-basic/developing-apps/programming/log-info/walkthrough-determining-where-my-application-log-writes-information.md)  
+ [İzlenecek Yol: My.Application.Log Günlüğünün Bilgileri Yazdığı Yeri Değiştirme](../../../../visual-basic/developing-apps/programming/log-info/walkthrough-changing-where-my-application-log-writes-information.md)  
+ [İzlenecek Yol: Özel Günlük Dinleyicileri Oluşturma](../../../../visual-basic/developing-apps/programming/log-info/walkthrough-creating-custom-log-listeners.md)  
+ [Nasıl Yapılır: Günlük İletileri Yazma](../../../../visual-basic/developing-apps/programming/log-info/how-to-write-log-messages.md)  
+ [İzleme Anahtarları](../../../../framework/debug-trace-profile/trace-switches.md)  
+ [Uygulamadan Günlüğe Bilgi Kaydetme](../../../../visual-basic/developing-apps/programming/log-info/logging-information-from-the-application.md)

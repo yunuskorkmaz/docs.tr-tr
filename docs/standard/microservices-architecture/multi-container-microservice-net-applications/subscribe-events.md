@@ -1,7 +1,7 @@
 ---
 title: Olaylara abone olma
 description: Kapsayıcılı .NET uygulamaları için .NET mikro mimarisi | Olaylara abone olma
-keywords: Docker, Microservices, ASP.NET, Container
+keywords: Docker, mikro, ASP.NET, kapsayıcı
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 12/11/2017
@@ -11,11 +11,11 @@ ms.topic: article
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: 7538c760d396349fe9b1e93a21839e3e59d7f046
-ms.sourcegitcommit: c883637b41ee028786edceece4fa872939d2e64c
+ms.openlocfilehash: 279dd4ea2ffb36e13a22f366ece145174918b759
+ms.sourcegitcommit: 2e8acae16ae802f2d6d04e3ce0a6dbf04e476513
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/26/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="subscribing-to-events"></a>Olaylara abone olma
 
@@ -112,7 +112,7 @@ Mimari bölümünde daha önce belirtildiği gibi bu sorunla ilgili çeşitli ya
 
 -   Tam kullanarak [olay kaynak Hizmeti'nden düzeni](https://msdn.microsoft.com/library/dn589792.aspx).
 
--   Kullanarak [işlem oturum araştırma](http://www.scoop.it/t/sql-server-transaction-log-mining).
+-   Kullanarak [işlem oturum araştırma](https://www.scoop.it/t/sql-server-transaction-log-mining).
 
 -   Kullanarak [Giden kutusu düzeni](http://gistlabs.com/2014/05/the-outbox/). (Yerel işlem genişletme) tümleştirme olayları depolamak üzere bir işlem tablo budur.
 
@@ -343,11 +343,11 @@ Göre [RabbitMQ belgelerine](https://www.rabbitmq.com/reliability.html#consumer)
 -   **Elmas kahverengi. Tümleştirme stratejileri bağlamları sınırlanmış**
     [*http://culttt.com/2014/11/26/strategies-integrating-bounded-contexts/*](http://culttt.com/2014/11/26/strategies-integrating-bounded-contexts/)
 
--   **Chris Richardson. Toplamalar, olay kaynak belirleme ve CQRS - bölüm 2 kullanarak işlem mikro geliştirme**
+-   **Chris Uludağ. Toplamalar, olay kaynak belirleme ve CQRS - bölüm 2 kullanarak işlem mikro geliştirme**
     [*https://www.infoq.com/articles/microservices-aggregates-events-cqrs-part-2-richardson*](https://www.infoq.com/articles/microservices-aggregates-events-cqrs-part-2-richardson)
 
--   **Chris Richardson. Olay Sourcing düzeni**
-    [*http://microservices.io/patterns/data/event-sourcing.html*](http://microservices.io/patterns/data/event-sourcing.html)
+-   **Chris Uludağ. Olay Sourcing düzeni**
+    [*https://microservices.io/patterns/data/event-sourcing.html*](https://microservices.io/patterns/data/event-sourcing.html)
 
 -   **Olay kaynak Hizmeti'nden Tanıtımı**
     [*https://msdn.microsoft.com/library/jj591559.aspx*](https://msdn.microsoft.com/library/jj591559.aspx)
@@ -375,7 +375,7 @@ Göre [RabbitMQ belgelerine](https://www.rabbitmq.com/reliability.html#consumer)
 
 -   **Dış (DTC) işlemlere katılan** (MSMQ) [  *https://msdn.microsoft.com/library/ms978430.aspx \#bdadotnetasync2\_topic3c*](https://msdn.microsoft.com/library/ms978430.aspx%23bdadotnetasync2_topic3c)
 
--   **Azure Service Bus. Aracılı Mesajlaşma: Yinelenen algılama**
+-   **Azure hizmet veri yolu. Aracılı Mesajlaşma: Yinelenen algılama**
     [*https://code.msdn.microsoft.com/Brokered-Messaging-c0acea25*](https://code.msdn.microsoft.com/Brokered-Messaging-c0acea25)
 
 -   **Güvenilirlik Kılavuzu** (RabbitMQ belge) [  *https://www.rabbitmq.com/reliability.html \#tüketici*](https://www.rabbitmq.com/reliability.html%23consumer)

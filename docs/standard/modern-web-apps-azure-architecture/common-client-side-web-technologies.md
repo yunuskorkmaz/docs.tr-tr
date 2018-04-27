@@ -1,19 +1,20 @@
 ---
-title: "Ortak istemci tarafı web teknolojileri"
-description: "ASP.NET Core ve Azure ile modern Web uygulamaları mimari | Ortak istemci tarafı web teknolojileri"
+title: Ortak istemci tarafı web teknolojileri
+description: ASP.NET Core ve Azure ile modern Web uygulamaları mimari | Ortak istemci tarafı web teknolojileri
 author: ardalis
 ms.author: wiwagn
 ms.date: 10/07/2017
 ms.prod: .net-core
 ms.technology: dotnet-docker
+ms.topic: article
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: e8e156552fd4aa733594c01845fb7ed1643b4aef
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: c77b6fecdea3620a4f807dfa9b3501f78bb247d2
+ms.sourcegitcommit: 2e8acae16ae802f2d6d04e3ce0a6dbf04e476513
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="common-client-side-web-technologies"></a>Ortak istemci tarafı Web teknolojileri
 
@@ -70,7 +71,7 @@ Eski JavaScript framework standartları tarafından rağmen jQuery HTML/CSS ile 
 
 ### <a name="jquery-vs-a-spa-framework"></a>jQuery vs SPA çerçevesi
 
-| **Faktörü** | **jQuery** | **Angular**|
+| **Faktörü** | **jQuery** | **Açısal**|
 |--------------------------|------------|-------------|
 | DOM soyutlar | **Evet** | **Evet** |
 | AJAX desteği | **Evet** | **Evet** |
@@ -159,7 +160,7 @@ JavaScript çerçeveler breakneck hızıyla gelişmeye devam edin. Bağımlı ol
 > <https://jquery.com/>
 > - **jQuery vs AngularJS**  
 > <https://www.airpair.com/angularjs/posts/jquery-angularjs-comparison-migration-walkthrough>
-> - **Angular**  
+> - **Açısal**  
 > <https://angular.io/>
 > - **tepki**  
 > <https://facebook.github.io/react/>

@@ -1,27 +1,29 @@
 ---
-title: "Yerel işlemler"
-ms.custom: 
+title: Yerel işlemler
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-ado
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-ado
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - csharp
 - vb
 ms.assetid: 8ae3712f-ef5e-41a1-9ea9-b3d0399439f1
-caps.latest.revision: "5"
+caps.latest.revision: 5
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.workload: dotnet
-ms.openlocfilehash: 3d7865675871bafb527bb9ee85de1f96e9847402
-ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
+ms.workload:
+- dotnet
+ms.openlocfilehash: d56e2a978c3b9b58eadb946ee053721435c9f2d9
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="local-transactions"></a>Yerel işlemler
 İşlemlerde [!INCLUDE[vstecado](../../../../includes/vstecado-md.md)] iş tek bir birim olarak execute birden çok görev birbirine bağlamak istediğinizde kullanılır. Örneğin, bir uygulama iki görevleri gerçekleştirir düşünün. İlk olarak, bir tablo sipariş bilgilerle güncelleştirir. İkinci olarak, Envanter bilgilerini içeren bir tablo güncelleştirmeleri, öğeleri borçlandırılacağı sıralı. Her iki görev başarısız olursa, güncelleştirmelerinin her ikisini de geri alınır.  
@@ -40,7 +42,7 @@ ms.lasthandoff: 01/17/2018
 > [!NOTE]
 >  `EnlistDistributedTransaction` Yöntemi yerel bir işlem için kullanılmamalıdır.  
   
- İşlem kapsamını bağlantısı sınırlıdır. Aşağıdaki örnekte iki ayrı komutlarda oluşan açık bir işlem gerçekleştirir `try` bloğu. Komutlar Production.ScrapReason tabloya INSERT deyimleri AdventureWorks yürütülürken [!INCLUDE[ssNoVersion](../../../../includes/ssnoversion-md.md)] hiçbir özel durumlar varsa, kaydedilmiş olan örnek veritabanı. Kodda `catch` blok yapar geri işlem bir özel durum varsa. İşlem iptal edildi veya işlem tamamlanmadan önce bağlantı kapatıldığında, onu otomatik olarak geri alınır.  
+ İşlem kapsamını bağlantısı sınırlıdır. Aşağıdaki örnekte iki ayrı komutlarda oluşan açık bir işlem gerçekleştirir `try` bloğu. Komutları Production.ScrapReason tabloya INSERT deyimleri AdventureWorks SQL Server örnek veritabanında hiçbir özel durumlar varsa, kaydedilmiş olan yürütün. Kodda `catch` blok yapar geri işlem bir özel durum varsa. İşlem iptal edildi veya işlem tamamlanmadan önce bağlantı kapatıldığında, onu otomatik olarak geri alınır.  
   
 ## <a name="example"></a>Örnek  
  Bir işlem gerçekleştirmek için aşağıdaki adımları izleyin.  

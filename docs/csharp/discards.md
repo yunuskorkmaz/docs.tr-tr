@@ -1,6 +1,6 @@
 ---
-title: "İptali - C# Kılavuzu"
-description: "C# ' ın atanmamış iptali, discardable değişkenleri ve iptali kullanılabilir yöntemleri için destek açıklanır."
+title: İptali - C# Kılavuzu
+description: C# ' ın atanmamış iptali, discardable değişkenleri ve iptali kullanılabilir yöntemleri için destek açıklanır.
 keywords: .NET, .NET core
 author: rpetrusha
 ms.author: ronpet
@@ -9,15 +9,15 @@ ms.topic: article
 ms.prod: .net
 ms.technology: devlang-csharp
 ms.devlang: csharp
-ms.openlocfilehash: 800a27d2d186c738dceb6838aa669377a0c07b01
-ms.sourcegitcommit: 882e02b086d7cb9c75f748494cf7a8d3377c5874
+ms.openlocfilehash: 94badd78485ee4d3928b170d81a80743bf84102f
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="discards---c-guide"></a>İptali - C# Kılavuzu
 
-C# 7 ile başlayan, C# destekler atar, uygulama kodunda kasıtlı olarak kullanılmayan geçici, sahte değişkenleri olduğu. İptali atanmamış değişkenlere eşdeğer; bir değere sahip değil. Yalnızca bir tek atma değişken yoktur ve bu değişken depolama bile ayrılan değil çünkü iptali bellek ayırmaları azaltabilir. Kodunuzu Temizle amacı olun çünkü bunlar okunabilirlik ve bakımı geliştirin.
+C# 7. 0'dan başlayarak, C# destekler atar, uygulama kodunda kasıtlı olarak kullanılmayan geçici, sahte değişkenleri olduğu. İptali atanmamış değişkenlere eşdeğer; bir değere sahip değil. Yalnızca bir tek atma değişken yoktur ve bu değişken depolama bile ayrılan değil çünkü iptali bellek ayırmaları azaltabilir. Kodunuzu Temizle amacı olun çünkü bunlar okunabilirlik ve bakımı geliştirin.
 
 Alt çizgi atayarak bir değişken bir atma olduğunu gösteriyor (`_`) ad olarak. Örneğin, aşağıdaki yöntem çağrısı birinci ve ikinci değer iptali olacak 3-tanımlama grubu döndürür ve *alanı* tarafından döndürülen ilgili üçüncü bileşen olarak daha önce bildirilen değişkenidir  *GetCityInformation*:
 
@@ -25,7 +25,7 @@ Alt çizgi atayarak bir değişken bir atma olduğunu gösteriyor (`_`) ad olara
 (_, _, area) = city.GetCityInformation(cityName);
 ```
 
-C# 7'de, aşağıdaki bağlamlarında atamaları iptali desteklenir:
+C# 7. 0'iptali aşağıdaki bağlamlarında atamaları desteklenir:
 
 - Dizi ve nesne [deconstruction](deconstruct.md).
 - İle desen eşleştirme [olan](language-reference/keywords/is.md) ve [geçiş](language-reference/keywords/switch.md).
@@ -48,7 +48,7 @@ Zaman `_` olan değerini veya atama işleminde ürettiği derleyici hatası CS03
 
 Kullanıcı tanımlı türler iptali ile deconstructing daha fazla bilgi için bkz: [tanımlama grupları ve diğer türleri Deconstructing](deconstruct.md#deconstructing-a-user-defined-type-with-discards).
 
-## <a name="pattern-matching-with-switch-and-is"></a>Deseni ile eşleşen `switch` ve`is`
+## <a name="pattern-matching-with-switch-and-is"></a>Deseni ile eşleşen `switch` ve `is`
 
 *Düzeni atmak* deseni ile eşleşen kullanılabilir [olan](language-reference/keywords/is.md) ve [geçiş](language-reference/keywords/switch.md) anahtar sözcükler. Her ifadesi her zaman atma eşleştirir.
 
@@ -86,5 +86,5 @@ Unutmayın `_` da geçerli bir tanımlayıcı değil. Desteklenen bir bağlam d�
 
 ## <a name="see-also"></a>Ayrıca bkz.
 [Tanımlama grupları ve diğer türleri deconstructing](deconstruct.md)   
-[`is`anahtar sözcüğü](language-reference/keywords/is.md)   
-[`switch`anahtar sözcüğü](language-reference/keywords/switch.md)   
+[`is` Anahtar sözcüğü](language-reference/keywords/is.md)   
+[`switch` Anahtar sözcüğü](language-reference/keywords/switch.md)   

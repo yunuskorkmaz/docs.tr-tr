@@ -1,12 +1,12 @@
 ---
-title: "Şifreleme Hizmetleri"
-ms.custom: 
+title: Şifreleme Hizmetleri
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology: dotnet-standard
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - cryptography [.NET Framework]
@@ -30,21 +30,21 @@ helpviewer_keywords:
 - cryptography [.NET Framework], about
 - random number generation
 ms.assetid: f96284bc-7b73-44b5-ac59-fac613ad09f8
-caps.latest.revision: 
+caps.latest.revision: 34
 author: mairaw
 ms.author: mairaw
 manager: wpickett
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: 941dd9d130a31c997b634bce8059afef04c178d3
-ms.sourcegitcommit: cf22b29db780e532e1090c6e755aa52d28273fa6
+ms.openlocfilehash: 02d399d85c53cd296fc5f49ca0ec4b51b14ad677
+ms.sourcegitcommit: 2e8acae16ae802f2d6d04e3ce0a6dbf04e476513
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/01/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="cryptographic-services"></a>Şifreleme Hizmetleri
-<a name="top"></a>Internet gibi ortak ağlara varlıklar arasında güvenli iletişim için bir araç sağlamaz. Böyle ağlar üzerinden iletişimi okumak veya hatta yetkisiz üçüncü taraflar tarafından değiştirilebilir açıktır. Şifreleme görüntülenmesini verilerin korunmasına yardımcı olur, veri değiştirildi ve aksi durumda güvenli kanal iletişimi için güvenli bir yol sağlanır olup olmadığını algılamak için yöntemler sağlar. Örneğin, veri bir şifreleme algoritması kullanılarak şifrelenmiş, şifrelenmiş bir duruma gönderilmesini ve daha sonra hedeflenen taraf tarafından şifresi. Bir üçüncü taraf şifrelenmiş veriler kesişirse geçirilirse zor olacaktır.  
+<a name="top"></a> Internet gibi ortak ağlara varlıklar arasında güvenli iletişim için bir araç sağlamaz. Böyle ağlar üzerinden iletişimi okumak veya hatta yetkisiz üçüncü taraflar tarafından değiştirilebilir açıktır. Şifreleme görüntülenmesini verilerin korunmasına yardımcı olur, veri değiştirildi ve aksi durumda güvenli kanal iletişimi için güvenli bir yol sağlanır olup olmadığını algılamak için yöntemler sağlar. Örneğin, veri bir şifreleme algoritması kullanılarak şifrelenmiş, şifrelenmiş bir duruma gönderilmesini ve daha sonra hedeflenen taraf tarafından şifresi. Bir üçüncü taraf şifrelenmiş veriler kesişirse geçirilirse zor olacaktır.  
   
  .NET Framework'teki sınıflarda <xref:System.Security.Cryptography?displayProperty=nameWithType> ad alanı sizin için birçok şifreleme ayrıntılarını yönetme. Başkalarının tamamen yönetilen uygulamaları durumdayken yönetilmeyen Microsoft Şifreleme API (CryptoAPI) için sarmalayıcıları bazılarıdır. Bu sınıfların kullanmak için bir uzman şifreleme olması gerekmez. Yeni bir örneğini bir şifreleme algoritması sınıfları oluşturduğunuzda, kullanım kolaylığı için otomatik olarak oluşturulur anahtarları şunlardır ve varsayılan olarak güvenli ve mümkün olduğunca güvenli özellikleridir.  
   
@@ -52,7 +52,7 @@ ms.lasthandoff: 02/01/2018
   
  Bu genel bakışta aşağıdaki bölümleri içerir:  
   
--   [Cryptographic Primitives](#primitives)  
+-   [Şifreleme temelleri](#primitives)  
   
 -   [Gizli anahtar şifreleme](#secret_key)  
   
@@ -103,7 +103,7 @@ ms.lasthandoff: 02/01/2018
   
  Şifreleme ve şifre çözme için aynı anahtar kullanılır çünkü gizli anahtar şifreleme da simetrik şifreleme bilinir. Gizli anahtar şifreleme algoritmalarını (ortak anahtar algoritmaları ile karşılaştırıldığında) çok hızlı ve büyük veri akışlarını üzerinde şifreleme dönüştürme gerçekleştirmek için uygundur. Asimetrik şifreleme algoritmaları RSA gibi matematiksel olarak birbiriyle ne kadar veri bunlar şifreleyebilirsiniz sınırlıdır. Simetrik şifreleme algoritması bu sorunları genellikle gerekmez.  
   
- Bir blok şifreleme adlı gizli anahtar algoritması türü, aynı anda bir veri bloğu şifrelemek için kullanılır. Veri Şifreleme Standardı (DES gibi), TripleDES, şifreleri engelleme ve Gelişmiş Şifreleme Standardı (AES) şifreleme açısından bir giriş bloğunu dönüştürme  *n*  çıkış bloğuna şifrelenmiş bayt bayt. Şifreleme veya şifrelerini çözme bayt dizisi istiyorsanız, bunu blok blok yapmanın sahip. Çünkü  *n*  küçük (DES ve TripleDES; için 8 bayt 16 bayt [Varsayılan], 24 baytı veya AES için 32 bayt), büyük veri değerleri  *n*  bir blok şifrelenmesi gerekir aynı anda. Daha küçük veri değerleri  *n*  üzere genişletilmesi zorunda  *n*  işlenebilmesi için.  
+ Bir blok şifreleme adlı gizli anahtar algoritması türü, aynı anda bir veri bloğu şifrelemek için kullanılır. Veri Şifreleme Standardı (DES gibi), TripleDES, şifreleri engelleme ve Gelişmiş Şifreleme Standardı (AES) şifreleme açısından bir giriş bloğunu dönüştürme *n* çıkış bloğuna şifrelenmiş bayt bayt. Şifreleme veya şifrelerini çözme bayt dizisi istiyorsanız, bunu blok blok yapmanın sahip. Çünkü *n* küçük (DES ve TripleDES; için 8 bayt 16 bayt [Varsayılan], 24 baytı veya AES için 32 bayt), büyük veri değerleri *n* bir blok aynı anda şifrelenmiş gerekir. Daha küçük veri değerleri *n* üzere genişletilmesi zorunda *n* işlenebilmesi için.  
   
  Blok şifre, bir Basit form elektronik codebook (ECB) modu adı verilir. Bunu bir başlatma vektörü ilk düz metin bloğu başlatmak için kullanmadığından ECB modu güvenli olarak kabul edilmez. Belirli bir gizli anahtar için *k*, bir başlatma vektörü kullanmayan Basit Blok şifre ciphertext aynı çıktı bloğu içine düz metin aynı giriş bloğu şifreler. Bu nedenle giriş düz metin akışınızı yinelenen bloğu varsa, çıktı ciphertext akışınızı yinelenen bloğu olacaktır. Zayıf şifreleme uyarı yetkisiz kullanıcılara işe algoritmaları kullanılan bu yinelenen çıkış blokları ve saldırı olası modlarını. ECB şifreleme modu, bu nedenle analiz için oldukça savunmasızdır ve nihayetinde bulma anahtar.  
   
@@ -119,11 +119,11 @@ ms.lasthandoff: 02/01/2018
   
  [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] Gizli anahtar şifreleme algoritmaları uygulayan aşağıdaki sınıflar sağlar:  
   
--   <xref:System.Security.Cryptography.AesManaged>(sunulan [!INCLUDE[net_v35_long](../../../includes/net-v35-long-md.md)]).  
+-   <xref:System.Security.Cryptography.AesManaged> (sunulan [!INCLUDE[net_v35_long](../../../includes/net-v35-long-md.md)]).  
   
 -   <xref:System.Security.Cryptography.DESCryptoServiceProvider>.  
   
--   <xref:System.Security.Cryptography.HMACSHA1>(Gizli bir anahtar ile birleştirilmiş bir şifreleme karması işlevi kullanılarak hesaplanır ileti kimlik doğrulama kodu temsil eden teknik bir gizli anahtar algoritması olmasıdır. Bkz: [karma değerlerini](#hash_values), bu konunun devamındaki.)  
+-   <xref:System.Security.Cryptography.HMACSHA1> (Gizli bir anahtar ile birleştirilmiş bir şifreleme karması işlevi kullanılarak hesaplanır ileti kimlik doğrulama kodu temsil eden teknik bir gizli anahtar algoritması olmasıdır. Bkz: [karma değerlerini](#hash_values), bu konunun devamındaki.)  
   
 -   <xref:System.Security.Cryptography.RC2CryptoServiceProvider>.  
   
@@ -163,13 +163,13 @@ ms.lasthandoff: 02/01/2018
   
 -   <xref:System.Security.Cryptography.RSACryptoServiceProvider>  
   
--   <xref:System.Security.Cryptography.ECDiffieHellman>(temel sınıfı)  
+-   <xref:System.Security.Cryptography.ECDiffieHellman> (temel sınıfı)  
   
 -   <xref:System.Security.Cryptography.ECDiffieHellmanCng>  
   
--   <xref:System.Security.Cryptography.ECDiffieHellmanCngPublicKey>(temel sınıfı)  
+-   <xref:System.Security.Cryptography.ECDiffieHellmanCngPublicKey> (temel sınıfı)  
   
--   <xref:System.Security.Cryptography.ECDiffieHellmanKeyDerivationFunction>(temel sınıfı)  
+-   <xref:System.Security.Cryptography.ECDiffieHellmanKeyDerivationFunction> (temel sınıfı)  
   
 -   <xref:System.Security.Cryptography.ECDsaCng>  
   
@@ -192,7 +192,7 @@ ms.lasthandoff: 02/01/2018
   
 -   <xref:System.Security.Cryptography.RSACryptoServiceProvider>  
   
--   <xref:System.Security.Cryptography.ECDsa>(temel sınıfı)  
+-   <xref:System.Security.Cryptography.ECDsa> (temel sınıfı)  
   
 -   <xref:System.Security.Cryptography.ECDsaCng>  
   
@@ -206,7 +206,7 @@ ms.lasthandoff: 02/01/2018
   
 -   Alice, Bob için düz metin iletisi ve karma iletisi (dijital imzası) gönderir. Bob alır ve ileti karmaları ve kendisine Alice alınan karma değeri, karma değerini karşılaştırır. Karma değerleri aynıysa, ileti değiştirilmiş değil. Değerler aynı değilse, ileti Alice yazdığı sonra değiştirildi.  
   
-     Ne yazık ki, bu yöntem, Gönderenin özgünlüğünü oluşturmaz. Herkes Alice kimliğine bürünmek ve bir ileti göndermek. Bob belirleyebilirsiniz şey ileti imzası ile eşleşirse ve bunların iletiyi imzalamak için aynı karma algoritmayı kullanabilirsiniz. Bir adam-in--middle saldırı bir form budur. Bkz: [NIB: yeni nesil şifreleme (CNG) güvenli iletişim örnek](http://msdn.microsoft.com/library/8048e94e-054a-417b-87c6-4f5e26710e6e) daha fazla bilgi için.  
+     Ne yazık ki, bu yöntem, Gönderenin özgünlüğünü oluşturmaz. Herkes Alice kimliğine bürünmek ve bir ileti göndermek. Bob belirleyebilirsiniz şey ileti imzası ile eşleşirse ve bunların iletiyi imzalamak için aynı karma algoritmayı kullanabilirsiniz. Bir adam-in--middle saldırı bir form budur. Bkz: [NIB: yeni nesil şifreleme (CNG) güvenli iletişim örnek](https://msdn.microsoft.com/library/8048e94e-054a-417b-87c6-4f5e26710e6e) daha fazla bilgi için.  
   
 -   Alice, güvenli olmayan ortak bir kanal üzerinden Bob için düz metin iletisi gönderir. Aynen karma ileti özel güvenli bir kanal üzerinden gönderir. Bob düz metin iletisi alır, onu karıştırır ve karma özel olarak alışverişi karmayla karşılaştırır. Karmalar eşleşiyorsa Bob iki şey bilir:  
   
@@ -271,13 +271,13 @@ ms.lasthandoff: 02/01/2018
   
  Ayrıca, aşağıdaki sınıflar belirli imza bilgileri sağlayın:  
   
--   <xref:System.Security.Cryptography.StrongNameSignatureInformation>bildirim için tanımlayıcı ad imzası bilgileri tutar.  
+-   <xref:System.Security.Cryptography.StrongNameSignatureInformation> Bildirim için tanımlayıcı ad imzası bilgileri tutar.  
   
--   <xref:System.Security.Cryptography.X509Certificates.AuthenticodeSignatureInformation>bir bildirim Authenticode imza bilgilerini temsil eder.  
+-   <xref:System.Security.Cryptography.X509Certificates.AuthenticodeSignatureInformation> bir bildirim Authenticode imza bilgilerini temsil eder.  
   
--   <xref:System.Security.Cryptography.X509Certificates.TimestampInformation>Authenticode imzası zaman damgasını hakkında bilgi içerir.  
+-   <xref:System.Security.Cryptography.X509Certificates.TimestampInformation> Authenticode imzası zaman damgasını hakkında bilgi içerir.  
   
--   <xref:System.Security.Cryptography.X509Certificates.TrustStatus>Authenticode imzası güvenilir olup olmadığını denetlemek için basit bir yol sağlar.  
+-   <xref:System.Security.Cryptography.X509Certificates.TrustStatus> Authenticode imzası güvenilir olup olmadığını denetlemek için basit bir yol sağlar.  
   
  [Başa dön](#top)  
   
@@ -307,11 +307,11 @@ ms.lasthandoff: 02/01/2018
   
  [!INCLUDE[net_v35_short](../../../includes/net-v35-short-md.md)] Da aşağıdaki gibi CNG sınıfları destekleme çeşitli içerir:  
   
--   <xref:System.Security.Cryptography.CngProvider>bir anahtar depolama sağlayıcısı tutar.  
+-   <xref:System.Security.Cryptography.CngProvider> bir anahtar depolama sağlayıcısı tutar.  
   
--   <xref:System.Security.Cryptography.CngAlgorithm>CNG algoritması tutar.  
+-   <xref:System.Security.Cryptography.CngAlgorithm> CNG algoritması tutar.  
   
--   <xref:System.Security.Cryptography.CngProperty>Sık kullanılan anahtar özellikleri korur.  
+-   <xref:System.Security.Cryptography.CngProperty> Sık kullanılan anahtar özellikleri korur.  
   
  [Başa dön](#top)  
   

@@ -1,26 +1,26 @@
 ---
-title: "WMI Sağlayıcısı"
-ms.custom: 
+title: WMI Sağlayıcısı
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - dotnet-clr
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 462f0db3-f4a4-4a4b-ac26-41fc25c670a4
-caps.latest.revision: 
+caps.latest.revision: 35
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: c1b1f923b6673ead42c7c702bd50d253ea06c765
-ms.sourcegitcommit: 15316053918995cc1380163a7d7e7edd5c44e6d7
+ms.openlocfilehash: c1b90a5231505f7d72d10c0ab9f9f80037d48bd7
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/19/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="wmi-provider"></a>WMI Sağlayıcısı
 Bu örnek veri toplamaya gösterilmiştir [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] Hizmetleri içinde yerleşik Windows Yönetim Araçları (WMI) sağlayıcısını kullanarak çalışma zamanında [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]. Ayrıca, bu örnek bir kullanıcı tanımlı WMI nesnesi için bir hizmet eklemek gösterilmiştir. Örnek için WMI sağlayıcısını etkinleştirir [Başlarken](../../../../docs/framework/wcf/samples/getting-started-sample.md) ve veri toplamaya gösterilmiştir `ICalculator` çalışma zamanında hizmet.  
@@ -45,7 +45,7 @@ Bu örnek veri toplamaya gösterilmiştir [!INCLUDE[indigo1](../../../../include
  Bir hizmet için WMI Nesne ekleme, kullanıcı tarafından tanımlanan bilgileri yerleşik WMI sağlayıcısı bilgilerle birlikte ortaya mümkün kılar. Bu, Installutil.exe uygulamasını kullanarak WMI hizmetinin şema yayımlama tarafından gerçekleştirilir. Bunun yanı sıra daha fazla ayrıntı için yönergeler konunun sonunda kurulum yönergelerini bulunabilir.  
   
 ## <a name="accessing-wmi-information"></a>WMI bilgilerine erişme  
- WMI veri birçok farklı yolu erişilebilir. Microsoft, komut dosyaları için WMI API'lerini sağlar [!INCLUDE[vbprvb](../../../../includes/vbprvb-md.md)] uygulamalar, C++ uygulamaları ve [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] (http://msdn.microsoft.com/library/default.asp?url=/library/wmisdk/wmi/using_wmi.asp).  
+ WMI veri birçok farklı yolu erişilebilir. Microsoft, komut dosyaları, Visual Basic uygulamaları, C++ uygulamaları için WMI API'lerini sağlar ve [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] (http://msdn.microsoft.com/library/default.asp?url=/library/wmisdk/wmi/using_wmi.asp).  
   
  Bu örnek iki Java betiklerini kullanır: biri özellikleri ve kullanıcı tanımlı WMI verilerini görüntülemek için ikinci bazılarını yanı sıra bilgisayar üzerinde çalışan hizmetleri numaralandırılacak. Betik WMI sağlayıcısına bir bağlantı açar, verileri ayrıştırır ve toplanan verileri görüntüler.  
   

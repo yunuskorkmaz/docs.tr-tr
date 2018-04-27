@@ -16,11 +16,11 @@ manager: wpickett
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: 824e06a00c4242d8ee38bdfc5a57151a71e4f285
-ms.sourcegitcommit: ba765893e3efcece67d99fd6d5ce0074b050d1d9
+ms.openlocfilehash: 0da27afc5509af6db510b5e622ffde461ae2e0a1
+ms.sourcegitcommit: 2e8acae16ae802f2d6d04e3ce0a6dbf04e476513
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/02/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="xml-documents-and-data"></a>XML Belgeleri ve Verileri
 .NET Framework XML algılayan uygulamaları kolayca oluşturmanıza olanak tanıyan sınıflar kapsamlı ve tümleşik bir dizi sağlar. Aşağıdaki ad alanındaki sınıflar, ayrıştırma ve XML, bellek, veri doğrulama ve XSLT dönüşümü XML verileri düzenleme yazmayı destekler.  
@@ -35,21 +35,21 @@ ms.lasthandoff: 03/02/2018
   
 -   <xref:System.Xml.Linq>  
   
- Tam listesi için bkz: [System.Xml ad alanları](http://msdn.microsoft.com/library/gg145036.aspx) Web sayfası.  
+ Tam listesi için bkz: [System.Xml ad alanları](https://msdn.microsoft.com/library/gg145036.aspx) Web sayfası.  
   
  Bu ad alanındaki sınıflar World Wide Web Konsorsiyumu (W3C) önerileri destekler. Örneğin:  
   
--   <xref:System.Xml.XmlDocument?displayProperty=nameWithType> Uygulayan sınıf [W3C belge nesne modeli (DOM) Düzey 1 çekirdek](http://www.w3.org/TR/REC-DOM-Level-1/) ve [DOM Düzey 2 Çekirdek](http://www.w3.org/TR/DOM-Level-2-Core/) öneriler.  
+-   <xref:System.Xml.XmlDocument?displayProperty=nameWithType> Uygulayan sınıf [W3C belge nesne modeli (DOM) Düzey 1 çekirdek](https://www.w3.org/TR/REC-DOM-Level-1/) ve [DOM Düzey 2 Çekirdek](https://www.w3.org/TR/DOM-Level-2-Core/) öneriler.  
   
--   <xref:System.Xml.XmlReader?displayProperty=nameWithType> Ve <xref:System.Xml.XmlWriter?displayProperty=nameWithType> sınıfları Destek [W3C XML 1.0](http://www.w3.org/TR/2006/REC-xml-20060816/) ve [XML ad alanları](http://www.w3.org/TR/REC-xml-names/) öneriler.  
+-   <xref:System.Xml.XmlReader?displayProperty=nameWithType> Ve <xref:System.Xml.XmlWriter?displayProperty=nameWithType> sınıfları Destek [W3C XML 1.0](https://www.w3.org/TR/2006/REC-xml-20060816/) ve [XML ad alanları](https://www.w3.org/TR/REC-xml-names/) öneriler.  
   
--   Şemalarda <xref:System.Xml.Schema.XmlSchemaSet?displayProperty=nameWithType> sınıf destek [W3C XML Şeması Kısım 1: yapıları](http://www.w3.org/TR/xmlschema-1/) ve [XML Şeması Kısım 2: veri türleri](http://www.w3.org/TR/xmlschema-2/) öneriler.  
+-   Şemalarda <xref:System.Xml.Schema.XmlSchemaSet?displayProperty=nameWithType> sınıf destek [W3C XML Şeması Kısım 1: yapıları](https://www.w3.org/TR/xmlschema-1/) ve [XML Şeması Kısım 2: veri türleri](https://www.w3.org/TR/xmlschema-2/) öneriler.  
   
 -   Sınıfları <xref:System.Xml.Xsl?displayProperty=nameWithType> uygun ad alanı destek XSLT dönüştürmeleri [W3C XSLT 1.0](http://www.w3.org/TR/xslt) öneri.  
   
  .NET Framework XML sınıflarda şu avantajları sağlar:  
   
--   **Verimliliği.** [LINQ-XML](http://msdn.microsoft.com/library/f0fe21e9-ee43-4a55-b91a-0800e5782c13) XML programla kolaylaştırır ve SQL için benzer bir sorgu deneyimi sağlar.  
+-   **Verimliliği.** [LINQ-XML](https://msdn.microsoft.com/library/f0fe21e9-ee43-4a55-b91a-0800e5782c13) XML programla kolaylaştırır ve SQL için benzer bir sorgu deneyimi sağlar.  
   
 -   **Genişletilebilirlik.** .NET Framework XML sınıflarının soyut taban sınıfları ve sanal yöntemler kullanılarak genişletilebilir. Örneğin, türetilen bir sınıftan oluşturabilirsiniz <xref:System.Xml.XmlUrlResolver> yerel disk önbelleği akışa depolayan sınıf.  
   
@@ -72,7 +72,7 @@ ms.lasthandoff: 03/02/2018
  XML verilerini işlemek için seçenekleri açıklar.  
   
  [XML Verilerini Bellek İçinde İşleme](../../../../docs/standard/data/xml/processing-xml-data-in-memory.md)  
- XML veri bellek içi işleme için üç modeli açıklanır. [LINQ-XML](http://msdn.microsoft.com/library/f0fe21e9-ee43-4a55-b91a-0800e5782c13), <xref:System.Xml.XmlDocument> (W3C belge nesne modeli üzerinde tabanlı), sınıf ve <xref:System.Xml.XPath.XPathDocument> sınıfı (XPath veri modeline bağlı).  
+ XML veri bellek içi işleme için üç modeli açıklanır. [LINQ-XML](https://msdn.microsoft.com/library/f0fe21e9-ee43-4a55-b91a-0800e5782c13), <xref:System.Xml.XmlDocument> (W3C belge nesne modeli üzerinde tabanlı), sınıf ve <xref:System.Xml.XPath.XPathDocument> sınıfı (XPath veri modeline bağlı).  
   
  [XSLT Dönüşümleri](../../../../docs/standard/data/xml/xslt-transformations.md)  
  XSLT işlemci kullanımını açıklar.  

@@ -1,23 +1,24 @@
 ---
-title: "Özellik Kılavuzu Extensibliity"
-ms.custom: 
+title: Özellik Kılavuzu Extensibliity
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 3530c3a3-756d-4712-9f10-fb2897414d3a
-caps.latest.revision: "7"
+caps.latest.revision: 7
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: e3069e97a1696b37d56728eb86161cc2487dfdfa
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 9393947420709590312200e8f142092c95b91b1f
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="property-grid-extensibliity"></a>Özellik Kılavuzu Extensibliity
 Bir geliştirici, belirli bir etkinlik Tasarımcısı'nda seçildiğinde görüntülenen özellik Kılavuzu özelleştirebilirsiniz. Bu bir zengin düzenleme deneyimi oluşturmak için yapılabilir. Bu örnek, bu nasıl yapılabilir göstermektedir.  
@@ -42,7 +43,7 @@ Bir geliştirici, belirli bir etkinlik Tasarımcısı'nda seçildiğinde görün
   
 -   Türetilen bir tür oluşturur <xref:System.Activities.Presentation.PropertyEditing.PropertyValueEditor>.  
   
--   Oluşturucu, <xref:System.Activities.Presentation.PropertyEditing.PropertyValueEditor.InlineEditorTemplate%2A> değeri ayarlandığında bir [!INCLUDE[avalon1](../../../../includes/avalon1-md.md)] veri şablonu yok. Bu bir XAML şablona bağlı olabilir, ancak bu örnekte, veri bağlama başlatmak için kod kullanılır.  
+-   Oluşturucu, <xref:System.Activities.Presentation.PropertyEditing.PropertyValueEditor.InlineEditorTemplate%2A> değeri, bir Windows Presentation Foundation (WPF) veri şablonuyla ayarlanır. Bu bir XAML şablona bağlı olabilir, ancak bu örnekte, veri bağlama başlatmak için kod kullanılır.  
   
 -   Bir veri bağlamı veri şablonu bulunan <xref:System.Activities.Presentation.PropertyEditing.PropertyValue> özellik kılavuzunda çizilir öğesi. Bu bağlamda sonra bağlar aşağıdaki kodu (ile CustomInlineEditor.cs) Not `Value` özelliği.  
   

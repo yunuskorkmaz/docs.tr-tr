@@ -11,11 +11,11 @@ ms.topic: article
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: c770ae0286842241288c39c003456c52879c8706
-ms.sourcegitcommit: 9a4fe1a1c37b26532654b4bbe22d702237950009
+ms.openlocfilehash: bec1341df85f86d5f2aa15753a11a9c4a2d0173f
+ms.sourcegitcommit: 2e8acae16ae802f2d6d04e3ce0a6dbf04e476513
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="domain-events-design-and-implementation"></a>Etki alanı olayları: tasarım ve uygulama
 
@@ -209,7 +209,7 @@ Sorunun olup üzerinde nihai tutarlılık bu toplamalara bağlı olan karşı to
 
 Toplamalar yayılan herhangi bir kural her zaman güncel olması beklenen değil. Olay işleme, toplu işleme veya diğer güncelleştirme mekanizmaları belirli bir süre içinde başka bir bağımlılık çözülebilir. (sayfa 128)
 
-Vaughn Vernon aşağıdakileri belirten [etkili toplama tasarımı. Bölüm II: Yapma toplayan iş birlikte](http://dddcommunity.org/wp-content/uploads/files/pdf_articles/Vernon_2011_2.pdf):
+Vaughn Vernon aşağıdakileri belirten [etkili toplama tasarımı. Bölüm II: Yapma toplayan iş birlikte](https://dddcommunity.org/wp-content/uploads/files/pdf_articles/Vernon_2011_2.pdf):
 
 Bu nedenle, bir toplama örneği gerektirir ek iş kuralları bir veya daha fazla toplamalarda yürütmek bir komut yürütülürken, nihai tutarlılık kullanırsanız \[...\] Nihai tutarlılık DDD modelinde desteklemek için kullanışlı bir yol yoktur. Bir veya daha fazla zaman uyumsuz abonelere teslim saati olan bir etki alanı olay toplama yöntemi yayımlar.
 
@@ -347,13 +347,13 @@ Belirtildiği gibi açıkça yan etkileri etki alanınızda değişiklikleri uyg
     [*https://lostechies.com/jimmybogard/2014/05/13/a-better-domain-events-pattern/*](https://lostechies.com/jimmybogard/2014/05/13/a-better-domain-events-pattern/)
 
 -   **Vaughn Vernon. Etkin Toplama tasarımı Bölüm II: Toplamalar iş birlikte yapma**
-    [*http://dddcommunity.org/wp-content/uploads/files/pdf\_makaleleri/Vernon\_2011\_2. pdf*](http://dddcommunity.org/wp-content/uploads/files/pdf_articles/Vernon_2011_2.pdf)
+    [*http://dddcommunity.org/wp-content/uploads/files/pdf\_makaleleri/Vernon\_2011\_2. pdf*](https://dddcommunity.org/wp-content/uploads/files/pdf_articles/Vernon_2011_2.pdf)
 
 -   **Jimmy Bogard. Etki alanınızı güçlendirme: etki alanı olayları**
     *<https://lostechies.com/jimmybogard/2010/04/08/strengthening-your-domain-domain-events/> *
 
 -   **Tony Truong. Etki alanı olayları desen örneği**
-    [*http://www.tonytruong.net/domain-events-pattern-example/*](http://www.tonytruong.net/domain-events-pattern-example/)
+    [*https://www.tonytruong.net/domain-events-pattern-example/*](https://www.tonytruong.net/domain-events-pattern-example/)
 
 -   **UDI Dahan. Etki alanı modelleri tam oluşturma kapsüllenmiş**
     [*http://udidahan.com/2008/02/29/how-to-create-fully-encapsulated-domain-models/*](http://udidahan.com/2008/02/29/how-to-create-fully-encapsulated-domain-models/)

@@ -6,14 +6,15 @@ ms.author: wiwagn
 ms.date: 10/07/2017
 ms.prod: .net-core
 ms.technology: dotnet-docker
+ms.topic: article
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: df80dfb6029932c53e028bfb753dcfa94b548ba1
-ms.sourcegitcommit: 498799639937c89de777361aab74261efe7b79ea
+ms.openlocfilehash: 7d160d23808832ff6456e5c95f6e5ed5f4d44fa5
+ms.sourcegitcommit: 2e8acae16ae802f2d6d04e3ce0a6dbf04e476513
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/22/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="working-with-data-in-aspnet-core-apps"></a>ASP.NET Core uygulamalardaki verileri ile çalışma
 
@@ -206,7 +207,7 @@ await strategy.ExecuteAsync(async () =>
 > - **EF Çekirdek: İlgili veriler**  
 > <https://docs.microsoft.com/ef/core/querying/related-data>
 > - **ASP.NET uygulamalarında yavaş yükleniyor varlıklar kaçının**  
-> <http://ardalis.com/avoid-lazy-loading-entities-in-asp-net-applications>
+> <https://ardalis.com/avoid-lazy-loading-entities-in-asp-net-applications>
 
 ## <a name="ef-core-or-micro-orm"></a>EF çekirdek veya mikro ORM?
 
@@ -270,7 +271,7 @@ Başka bir karmaşıklık veritabanları uğraşmanız gereken NoSQL Sürüm ' d
 
 Birden fazla sürümünü nesneleri depolamak için NoSQL veritabanlarında mümkündür, bir şey sabit şemasına ilişkisel veritabanları genellikle desteklemez. Ancak, bu durumda uygulama kodunuz nesneleri, karmaşıklık ekleme önceki sürümlerini varlığını hesabı gerekir.
 
-NoSQL veritabanları genellikle zorla [ACID](http://en.wikipedia.org/wiki/ACID), sahip oldukları performans ve ölçeklenebilirlik avantajlarını ilişkisel veritabanları anlamına gelir. Bunlar, son derece büyük veri kümelerini ve depolama normalleştirilmiş tablo yapılarında için oldukça uygun olmayan nesneler için oldukça uygun. Neden tek bir uygulama hem ilişkisel yararlanamaz ve her en iyi olduğu kullanarak NoSQL veritabanlarını uygun bir neden yoktur.
+NoSQL veritabanları genellikle zorla [ACID](https://en.wikipedia.org/wiki/ACID), sahip oldukları performans ve ölçeklenebilirlik avantajlarını ilişkisel veritabanları anlamına gelir. Bunlar, son derece büyük veri kümelerini ve depolama normalleştirilmiş tablo yapılarında için oldukça uygun olmayan nesneler için oldukça uygun. Neden tek bir uygulama hem ilişkisel yararlanamaz ve her en iyi olduğu kullanarak NoSQL veritabanlarını uygun bir neden yoktur.
 
 ## <a name="azure-documentdb"></a>Azure DocumentDB
 

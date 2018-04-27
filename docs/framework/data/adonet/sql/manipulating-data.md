@@ -1,27 +1,29 @@
 ---
-title: "Verileri düzenleme"
-ms.custom: 
+title: Verileri düzenleme
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-ado
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-ado
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - csharp
 - vb
 ms.assetid: 51096a2e-8b38-4c4d-a523-799bfdb7ec69
-caps.latest.revision: "6"
+caps.latest.revision: 6
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.workload: dotnet
-ms.openlocfilehash: 65042cecc5a6841ffb9b74e471cb9f237d15373f
-ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
+ms.workload:
+- dotnet
+ms.openlocfilehash: e899ef34964c8bb7ae9b827f329efe60a7f83a0c
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="manipulating-data"></a>Verileri düzenleme
 Giriş, birden fazla etkin sonuç kümesi (MARS) önce geliştiricilerin belirli senaryolar çözmek için birden çok bağlantıları veya sunucu tarafı imleçler kullanmanız gerekiyordu. Birden çok bağlantı bir işlem durumda kullanılan, ayrıca, bağlı bağlantılar (ile **sp_getbindtoken** ve **sp_bindsession**) gerekirdi. Aşağıdaki senaryolarda nasıl yerine birden çok bağlantı MARS etkin bir bağlantı kullanılacağını gösterir.  
@@ -33,7 +35,7 @@ Giriş, birden fazla etkin sonuç kümesi (MARS) önce geliştiricilerin belirli
  Örnek tek bir bağlantı açar **AdventureWorks** veritabanı. Kullanarak bir <xref:System.Data.SqlClient.SqlCommand> nesne, bir <xref:System.Data.SqlClient.SqlDataReader> oluşturulur. Okuyucu kullanılır, ikinci olarak <xref:System.Data.SqlClient.SqlDataReader> , ilk verilerini kullanarak açıldığında <xref:System.Data.SqlClient.SqlDataReader> ikinci okuyucu WHERE yan tümcesi için giriş olarak.  
   
 > [!NOTE]
->  Aşağıdaki örnek, örnek kullanır **AdventureWorks** ile birlikte gelen veritabanı [!INCLUDE[ssNoVersion](../../../../../includes/ssnoversion-md.md)]. Örnek kodda sağlanan bağlantı dizesi veritabanına yüklenir ve yerel bilgisayarda kullanılabilir olduğunu varsayar. Bağlantı dizesi, ortamınız için gerektiği gibi değiştirin.  
+>  Aşağıdaki örnek, örnek kullanır **AdventureWorks** SQL Server'da bulunan veritabanı. Örnek kodda sağlanan bağlantı dizesi veritabanına yüklenir ve yerel bilgisayarda kullanılabilir olduğunu varsayar. Bağlantı dizesi, ortamınız için gerektiği gibi değiştirin.  
   
 ```vb  
 Option Strict On  
@@ -181,7 +183,7 @@ static void Main()
  Aşağıdaki konsol uygulaması iki kullanımı gösterilmiştir <xref:System.Data.SqlClient.SqlDataReader> üç nesneleriyle <xref:System.Data.SqlClient.SqlCommand> nesneleri ve tek bir <xref:System.Data.SqlClient.SqlConnection> MARS etkin olan nesne. İlk komut nesnesi, kredi derecelendirme 5'tir satıcılarının listesini alır. İkinci komut nesnesi kimliği sağlanan satıcının kullandığı bir <xref:System.Data.SqlClient.SqlDataReader> ikinci yüklemek için <xref:System.Data.SqlClient.SqlDataReader> tüm özel satıcı için ürünlerin. Her ürün kaydı ikinciye ziyaret edilen <xref:System.Data.SqlClient.SqlDataReader>. Hangi yeni belirlemek için bir hesaplama gerçekleştirilen **OnOrderQty** olmalıdır. Üçüncü komut nesnesi sonra güncelleştirmek için kullanılan **ProductVendor** yeni değeri içeren tablo. Tüm işlem sona erdiğinde geri tek bir işlem içinde yer alır.  
   
 > [!NOTE]
->  Aşağıdaki örnek, örnek kullanır **AdventureWorks** ile birlikte gelen veritabanı [!INCLUDE[ssNoVersion](../../../../../includes/ssnoversion-md.md)]. Örnek kodda sağlanan bağlantı dizesi veritabanına yüklenir ve yerel bilgisayarda kullanılabilir olduğunu varsayar. Bağlantı dizesi, ortamınız için gerektiği gibi değiştirin.  
+>  Aşağıdaki örnek, örnek kullanır **AdventureWorks** SQL Server'da bulunan veritabanı. Örnek kodda sağlanan bağlantı dizesi veritabanına yüklenir ve yerel bilgisayarda kullanılabilir olduğunu varsayar. Bağlantı dizesi, ortamınız için gerektiği gibi değiştirin.  
   
 ```vb  
 Option Strict On  

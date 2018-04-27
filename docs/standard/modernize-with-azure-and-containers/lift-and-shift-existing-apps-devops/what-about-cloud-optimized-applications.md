@@ -1,18 +1,19 @@
 ---
-title: "Bulut için iyileştirilmiş uygulamaları nasıldır?"
-description: "Kapsayıcılı .NET uygulamaları için .NET mikro mimarisi | Bulut için iyileştirilmiş uygulamaları nasıldır?"
+title: Bulut için iyileştirilmiş uygulamaları nasıldır?
+description: Kapsayıcılı .NET uygulamaları için .NET mikro mimarisi | Bulut için iyileştirilmiş uygulamaları nasıldır?
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 10/26/2017
 ms.prod: .net
+ms.topic: article
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: 249da9ecbac90514647f4fdc926928ac7ad4648e
-ms.sourcegitcommit: d3cfda0943364aaf6ccd574f55f584576c8a4fee
+ms.openlocfilehash: 63eb80dc43e174f4c803f772f09f6e72d8c8e7c2
+ms.sourcegitcommit: 2e8acae16ae802f2d6d04e3ce0a6dbf04e476513
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/08/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="what-about-cloud-optimized-applications"></a>Bulut için iyileştirilmiş uygulamaları nasıldır?
 
@@ -72,7 +73,7 @@ Ancak, mikro hizmetler sunan güçlü özellikler bağımsız dağıtım, güçl
 
 Mikro mimarisi karmaşıklığı nedeniyle, yalnızca belirli senaryolar ve belirli uygulama türleri mikro hizmet tabanlı uygulamalar için uygundur. Birden çok büyük ve karmaşık uygulamaları bunlar alt sistemleri gelişen. Bu durumlarda, bu artan uzun vadeli çeviklik ve daha verimli uygulama bakım için daha karmaşık bir yazılım mimarisinde yatırım değer olur. Ancak daha az karmaşık senaryolar için tek yapılı uygulama yaklaşımda devam etmek daha iyi olabilir veya basit N katmanlı yaklaşıyor.
 
-Bu kavram hakkında yinelenen olma at the risk of bile son Not olarak uygulamalarınızda mikro kullanarak göz önünde bulundurmanız gerekir "all-in veya hiçbir şey tüm*.*" Genişletme ve yeni, üzerinde mikro göre küçük senaryoları ekleyerek varolan tek yapılı uygulamaları geliştirin. Sıfırdan bir mikro mimarisi yaklaşım ile çalışmaya başlamak için Başlat gerek yoktur. Aslında, yeni senaryolar ekleyerek varolan bir tek yapılı veya N katmanlı uygulama kullanarak gelişmesi öneririz. Sonuç olarak, otonom bileşenleri veya mikro uygulamasına aşağı bozulabilir. Tek yapılı uygulamalarınızı mikro yönde, adım adım gelişen başlatabilirsiniz.
+Bu kavram hakkında yinelenen olma at the risk of bile son Not olarak uygulamalarınızda mikro kullanarak göz önünde bulundurmanız gerekir "all-in veya hiçbir şey tüm *.*" Genişletme ve yeni, üzerinde mikro göre küçük senaryoları ekleyerek varolan tek yapılı uygulamaları geliştirin. Sıfırdan bir mikro mimarisi yaklaşım ile çalışmaya başlamak için Başlat gerek yoktur. Aslında, yeni senaryolar ekleyerek varolan bir tek yapılı veya N katmanlı uygulama kullanarak gelişmesi öneririz. Sonuç olarak, otonom bileşenleri veya mikro uygulamasına aşağı bozulabilir. Tek yapılı uygulamalarınızı mikro yönde, adım adım gelişen başlatabilirsiniz.
 
 ## <a name="when-to-use-azure-app-service-for-modernizing-existing-net-apps"></a>Var olan .NET uygulamaları modernizing için Azure App Service'i kullanma zamanı
 

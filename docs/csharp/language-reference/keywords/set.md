@@ -14,11 +14,11 @@ ms.assetid: 30d7e4e5-cc2e-4635-a597-14a724879619
 caps.latest.revision: 14
 author: BillWagner
 ms.author: wiwagn
-ms.openlocfilehash: b810280724dcf608859bfa455947a75ce64b7abe
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 8b095520326c439601caa8fefa458dda75ba603e
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="set-c-reference"></a>set (C# Başvurusu)
 `set` Anahtar sözcüğü tanımlayan bir *erişimci* yöntemi bir özellik ya da özellik veya dizin oluşturucu öğesi için bir değer atar dizin oluşturucu. Daha fazla bilgi ve örnekler için bkz: [özellikleri](../../../csharp/programming-guide/classes-and-structs/properties.md), [Auto-Implemented özellikleri](../../../csharp/programming-guide/classes-and-structs/auto-implemented-properties.md), ve [dizin oluşturucular](../../../csharp/programming-guide/indexers/index.md).  
@@ -27,7 +27,7 @@ Aşağıdaki örnek, her ikisi de tanımlar bir `get` ve `set` adlı bir özelli
  
  [!code-csharp[set#1](../../../../samples/snippets/csharp/language-reference/keywords/get/get-1.cs)]  
 
-Genellikle, `set` erişimci önceki örnekte olduğu gibi bir değer döndüren tek bir deyimde oluşur. C# 7 ile başlayan, uygulayabileceğiniz `set` bir ifade bodied üye olarak erişimcisi. Aşağıdaki örnek hem de uygulayan `get` ve `set` erişimciler ifade bodied üye olarak.
+Genellikle, `set` erişimci önceki örnekte olduğu gibi bir değer döndüren tek bir deyimde oluşur. C# 7. 0'dan başlayarak, uygulayabileceğiniz `set` bir ifade bodied üye olarak erişimcisi. Aşağıdaki örnek hem de uygulayan `get` ve `set` erişimciler ifade bodied üye olarak.
 
  [!code-csharp[set#3](../../../../samples/snippets/csharp/language-reference/keywords/get/get-3.cs)]   
     
@@ -40,6 +40,6 @@ Basit durumlarda için bir özelliğin `get` ve `set` erişimciler ayarlama veya
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
  [C# başvurusu](../../../csharp/language-reference/index.md)  
- [C# programlama kılavuzu](../../../csharp/programming-guide/index.md)  
- [C# anahtar sözcükleri](../../../csharp/language-reference/keywords/index.md)  
- [Özellikleri](../../../csharp/programming-guide/classes-and-structs/properties.md)
+ [C# Programlama Kılavuzu](../../../csharp/programming-guide/index.md)  
+ [C# Anahtar Sözcükleri](../../../csharp/language-reference/keywords/index.md)  
+ [Özellikler](../../../csharp/programming-guide/classes-and-structs/properties.md)

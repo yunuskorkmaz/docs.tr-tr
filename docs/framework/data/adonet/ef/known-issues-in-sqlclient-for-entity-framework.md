@@ -1,38 +1,40 @@
 ---
 title: Entity Framework SqlClient bilinen sorunlar
-ms.custom: 
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-ado
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-ado
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 48fe4912-4d0f-46b6-be96-3a42c54780f6
-caps.latest.revision: "2"
+caps.latest.revision: 2
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.workload: dotnet
-ms.openlocfilehash: 3fb62e266ee6f0ca7957667d7c41fbd90dd34d32
-ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
+ms.workload:
+- dotnet
+ms.openlocfilehash: 8d5363ede9735ea805284638f795af67f2415ad0
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="known-issues-in-sqlclient-for-entity-framework"></a>Entity Framework SqlClient bilinen sorunlar
 Bu bölümde, .NET Framework veri sağlayıcısı için SQL Server (SqlClient) ilgili bilinen sorunlar açıklanmaktadır.  
   
 ## <a name="trailing-spaces-in-string-functions"></a>Dize işlevleri boşluk  
- [!INCLUDE[ssNoVersion](../../../../../includes/ssnoversion-md.md)]dize değerlerini boşluk yok sayar. Bu nedenle, dize boşluk geçirme öngörülemeyen sonuçlara, hatta hataları neden olabilir.  
+ SQL Server dize değerlerini boşluk yok sayar. Bu nedenle, dize boşluk geçirme öngörülemeyen sonuçlara, hatta hataları neden olabilir.  
   
- Sonunda boşluk dizenizi sahip olmanız, en sonda boşluk karakteri ekleme düşünmelisiniz böylece [!INCLUDE[ssNoVersion](../../../../../includes/ssnoversion-md.md)] dize kırpma değil. Sondaki boşlukları gerekli değilse, sorgu ardışık düzen geçirilmeden önce bunlar kırpılmış olması.  
+ Dizenizi boşluk varsa, böylece SQL Server dize kırpma değil en sonda boşluk karakteri ekleme düşünmelisiniz. Sondaki boşlukları gerekli değilse, sorgu ardışık düzen geçirilmeden önce bunlar kırpılmış olması.  
   
 ## <a name="right-function"></a>RIGHT işlevi  
  Olmayan bir varsa`null` ilk bağımsız değişken olarak geçirilen değer ve 0, ikinci bağımsız değişkeni olarak geçirilir `RIGHT(nvarchar(max)`, 0`)` veya `RIGHT(varchar(max)`, 0`)`, `NULL` değeri yerine döndürülecek bir `empty` dize.  
   
 ## <a name="cross-and-outer-apply-operators"></a>Çapraz ve OUTER APPLY işleçleri  
- Çapraz ve OUTER APPLY işleçleri sunuldu [!INCLUDE[ssVersion2005](../../../../../includes/ssversion2005-md.md)]. Bazı durumlarda çapraz uygulamak ve/veya OUTER APPLY işleçleri içeren bir Transact-SQL deyimini sorgu ardışık düzen üretebilir. Çünkü sürümleri dahil olmak üzere bazı arka uç sağlayıcıları [!INCLUDE[ssNoVersion](../../../../../includes/ssnoversion-md.md)] öncesi [!INCLUDE[ssVersion2005](../../../../../includes/ssversion2005-md.md)], bu işleçlere desteklemez, bu tür sorgular bu arka uç sağlayıcılarının yürütülemez.  
+ Çapraz ve OUTER APPLY işleçleri sunuldu [!INCLUDE[ssVersion2005](../../../../../includes/ssversion2005-md.md)]. Bazı durumlarda çapraz uygulamak ve/veya OUTER APPLY işleçleri içeren bir Transact-SQL deyimini sorgu ardışık düzen üretebilir. Çünkü SQL Server sürümleri dahil olmak üzere bazı arka uç sağlayıcıları öncesi [!INCLUDE[ssVersion2005](../../../../../includes/ssversion2005-md.md)], bu işleçlere desteklemez, bu tür sorgular bu arka uç sağlayıcılarının yürütülemez.  
   
  Çıktı sorgusunda ARASI uygulamak ve/veya OUTER APPLY işleçleri varlığını neden bazı tipik senaryolar şunlardır:  
   
@@ -68,7 +70,7 @@ SELECT c, (SELECT c, (SELECT c FROM AdventureWorksModel.Vendor AS c  ) As Inner2
 ```  
   
 ## <a name="server-generated-guid-identity-values"></a>Sunucu tarafından üretilen GUID kimlik değerleri  
- [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] Destekleyen sunucu tarafından üretilen GUID türü kimlik değerleri, ancak sağlayıcı desteklemelidir bir satır girildikten sonra sunucu tarafından üretilen kimlik değeri döndürüyor. İle başlayarak [!INCLUDE[ssNoVersion](../../../../../includes/ssnoversion-md.md)] 2005, sunucu tarafından üretilen GUID türünde döndürebilir bir [!INCLUDE[ssNoVersion](../../../../../includes/ssnoversion-md.md)] aracılığıyla veritabanı [OUTPUT yan tümcesi](http://go.microsoft.com/fwlink/?LinkId=169400) .  
+ [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] Destekleyen sunucu tarafından üretilen GUID türü kimlik değerleri, ancak sağlayıcı desteklemelidir bir satır girildikten sonra sunucu tarafından üretilen kimlik değeri döndürüyor. SQL Server 2005 ile başlayarak, bir SQL Server veritabanında sunucu tarafından üretilen GUID türü döndürebilir [OUTPUT yan tümcesi](http://go.microsoft.com/fwlink/?LinkId=169400) .  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
  [Entity Framework için SqlClient](../../../../../docs/framework/data/adonet/ef/sqlclient-for-the-entity-framework.md)  

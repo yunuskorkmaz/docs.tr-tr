@@ -12,17 +12,17 @@ ms.devlang: dotnet
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: 33123732514a53574036f6f8e948b2cf9acb9229
-ms.sourcegitcommit: c883637b41ee028786edceece4fa872939d2e64c
+ms.openlocfilehash: 7e9732fb6eaef240d08449635697ba6b8ad9c510
+ms.sourcegitcommit: 2e8acae16ae802f2d6d04e3ce0a6dbf04e476513
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/26/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="net-glossary"></a>.NET sözlüğü
 
 Birincil Bu sözlük anlamları seçili terimleri ve tanımları olmadan .NET belgelerinde sık görünen kısaltmalar açıklamak için hedefidir.
 
-## <a name="aot"></a>AOT
+## <a name="aot"></a>UYGULAMA NESNE AĞACI
 
 Zaman tamamlanan derleyicisi.
 
@@ -150,7 +150,7 @@ Geçmişte, Mono büyük API'si .NET Framework'ün uygulanan ve bazı UNIX üzer
 
 Mono genellikle tam zamanı derleyicisi ile kullanılır, ancak ayrıca iOS gibi platformlarda kullanılan bir tam statik derleyici (biri zamanında tamamlanan derleme) sahiptir.
 
-Mono hakkında daha fazla bilgi için bkz: [Mono belgelerine](http://www.mono-project.com/docs/).
+Mono hakkında daha fazla bilgi için bkz: [Mono belgelerine](https://www.mono-project.com/docs/).
 
 ## <a name="net"></a>.NET
 
@@ -164,13 +164,13 @@ Bkz: [.NET Kılavuzu](index.md)
 
 Bkz: [.NET Core](../core/index.md).
 
-## <a name="net-core-cli"></a>.NET Core CLI
+## <a name="net-core-cli"></a>.NET core CLI
 
 .NET Core uygulamaları geliştirmek için bir platformlar arası araç zinciri.
 
 Bkz: [.NET Core komut satırı arabirimi (CLI) araçları](../core/tools/index.md).
 
-## <a name="net-core-sdk"></a>.NET Core SDK
+## <a name="net-core-sdk"></a>.NET core SDK
 
 Kitaplıkları ve .NET Core uygulamaları ve kitaplıkları oluşturmak geliştiriciler izin araçlar kümesi. İçeren [.NET Core CLI](#net-core-cli) uygulamalar, .NET Core kitaplıkları ve oluşturmaya ve çalıştırmaya uygulamalar ve yürütülebilir dotnet için çalışma zamanı oluşturmak için (*dotnet.exe*), CLI komutları çalıştırır ve uygulamaları çalıştırır.
 
@@ -192,7 +192,7 @@ UWP .NET yerel tarafından desteklenen ilk uygulama çerçevesi oluştu. Artık,
 
 Bkz: [.NET yerel ve CoreRT giriş](https://github.com/dotnet/corert/blob/master/Documentation/intro-to-corert.md)
 
-## <a name="net-standard"></a>.NET Standard
+## <a name="net-standard"></a>.NET standart
 
 Her .NET uygulamasında kullanılabilen .NET API'lerini biçimsel belirtimini.
 

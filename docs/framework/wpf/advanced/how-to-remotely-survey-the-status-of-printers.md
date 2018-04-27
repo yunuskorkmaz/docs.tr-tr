@@ -1,12 +1,13 @@
 ---
-title: "Nasıl yapılır: Uzaktan Yazıcıların Durumunu Araştırma"
-ms.custom: 
+title: 'Nasıl yapılır: Uzaktan Yazıcıların Durumunu Araştırma'
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-wpf
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-wpf
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - csharp
@@ -18,19 +19,20 @@ helpviewer_keywords:
 - remotely surveying printer status [WPF]
 - status [WPF], printers [WPF], surveying remotely
 ms.assetid: d6324759-8292-4c23-9584-9c708887dc94
-caps.latest.revision: "9"
+caps.latest.revision: 9
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: eef67d6ade8fb2a17edadff35fc3155608f831cd
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 3d0faedbe8ce3394fb888a6509ece1441f0a353a
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="how-to-remotely-survey-the-status-of-printers"></a>Nasıl yapılır: Uzaktan Yazıcıların Durumunu Araştırma
-Orta ve büyük şirketlerin belirli bir zamanda adresindeki kağıt sıkışması veya kağıt veya bazı sorunlu durumlar dışında olan birden çok yazıcı olabilir. Yazıcı özellikleri de sağlanmaktadır zengin [!INCLUDE[TLA#tla_api#plural](../../../../includes/tlasharptla-apisharpplural-md.md)] , [!INCLUDE[TLA#tla_winfx](../../../../includes/tlasharptla-winfx-md.md)] yazıcıların durumlarının hızlı araştırmasını gerçekleştirmek için bir yol sağlar.  
+Orta ve büyük şirketlerin belirli bir zamanda adresindeki kağıt sıkışması veya kağıt veya bazı sorunlu durumlar dışında olan birden çok yazıcı olabilir. Yazıcı özellikleri de sağlanmaktadır zengin [!INCLUDE[TLA#tla_api#plural](../../../../includes/tlasharptla-apisharpplural-md.md)] yazıcıların durumlarının hızlı araştırmasını gerçekleştirmek için Microsoft .NET Framework'ü bir yol sağlar.  
   
 ## <a name="example"></a>Örnek  
  Bu tür bir yardımcı programı oluşturmak için önemli adımlar aşağıdaki gibidir.  

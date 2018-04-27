@@ -1,28 +1,28 @@
 ---
-title: "Web Hizmetleri IXmlSerializable teknolojisi örneği"
-ms.custom: 
+title: Web Hizmetleri IXmlSerializable teknolojisi örneği
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 0202d3f1-a50b-427d-a5bb-79208b8f1c22
-caps.latest.revision: "6"
+caps.latest.revision: 6
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: be0c76371bda9e91e0becf8a9e09beb44e44dd3c
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: d4a963051096d153232e8891839ded97ff356b9d
+ms.sourcegitcommit: 2e8acae16ae802f2d6d04e3ce0a6dbf04e476513
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="web-services-ixmlserializable-technology-sample"></a>Web Hizmetleri IXmlSerializable teknolojisi örneği
-[Örnek indirme](http://download.microsoft.com/download/4/7/B/47B2164C-E780-4B10-8DE4-2CB5B886E0A6/Technologies/Serialization/Xml%20Serialization/IXmlSerializable.zip.exe)  
+[Örnek indirme](https://download.microsoft.com/download/4/7/B/47B2164C-E780-4B10-8DE4-2CB5B886E0A6/Technologies/Serialization/Xml%20Serialization/IXmlSerializable.zip.exe)  
   
  Bu örnek nasıl kullanılacağını göstermektedir <xref:System.Xml.Serialization.IXmlSerializable> ASP.NET Web Hizmetleri içinde özel türleri serileştirmek denetlemek için.  
   

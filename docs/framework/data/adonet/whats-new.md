@@ -10,37 +10,37 @@ ms.technology:
 ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 3bb65d38-cce2-46f5-b979-e5c505e95e10
-caps.latest.revision: ''
+caps.latest.revision: 25
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload:
 - dotnet
-ms.openlocfilehash: fb23f329906e21f3d8558139075c5f575f2f13bd
-ms.sourcegitcommit: c883637b41ee028786edceece4fa872939d2e64c
+ms.openlocfilehash: a636734958cd73a2f158d3f25cbbe448ff703612
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/23/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="what39s-new-in-adonet"></a>Ne&#39;s ADO.NET'deki yenilikler
 Aşağıdaki özellikleri yeni [!INCLUDE[vstecado](../../../../includes/vstecado-md.md)] içinde [!INCLUDE[net_v45](../../../../includes/net-v45-md.md)].  
   
 ## <a name="sqlclient-data-provider"></a>SqlClient veri sağlayıcısı  
- Aşağıdaki özellikleri yeni [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] için veri sağlayıcı [!INCLUDE[ssNoVersion](../../../../includes/ssnoversion-md.md)] içinde [!INCLUDE[net_v45](../../../../includes/net-v45-md.md)]:  
+ Aşağıdaki özellikleri yeni [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] için SQL Server veri sağlayıcısı [!INCLUDE[net_v45](../../../../includes/net-v45-md.md)]:  
   
 -   ConnectRetryCount ve ConnectRetryInterval bağlantı dizesi anahtar sözcükler (<xref:System.Data.SqlClient.SqlConnection.ConnectionString%2A>) boştaki bağlantı dayanıklılığı özelliğini denetlemenize olanak verir.  
   
--   Destek'ten akış [!INCLUDE[ssNoVersion](../../../../includes/ssnoversion-md.md)] bir uygulamaya veri sunucuda nerede yapılandırılmamış senaryolarını destekler.  Bkz: [SqlClient akış Destek](../../../../docs/framework/data/adonet/sqlclient-streaming-support.md) daha fazla bilgi için.  
+-   Bir uygulamaya SQL Server'dan desteği akış verilerini sunucuda yapılandırılmamış olduğu senaryolar destekler.  Bkz: [SqlClient akış Destek](../../../../docs/framework/data/adonet/sqlclient-streaming-support.md) daha fazla bilgi için.  
   
 -   Zaman uyumsuz programlama için destek eklenmiştir.  Bkz: [zaman uyumsuz programlama](../../../../docs/framework/data/adonet/asynchronous-programming.md) daha fazla bilgi için.  
   
 -   Bağlantı hataları artık genişletilmiş olay günlüğüne kaydedilir. Daha fazla bilgi için bkz: [veri izleme ADO.NET](../../../../docs/framework/data/adonet/data-tracing.md).  
   
--   SqlClient desteği artık sahiptir [!INCLUDE[ssNoVersion](../../../../includes/ssnoversion-md.md)]'s yüksek kullanılabilirlik, olağanüstü durum kurtarma özelliği, AlwaysOn. Daha fazla bilgi için bkz: [SqlClient yüksek kullanılabilirlik, olağanüstü durum kurtarma desteği](../../../../docs/framework/data/adonet/sql/sqlclient-support-for-high-availability-disaster-recovery.md).  
+-   SqlClient SQL Server'ın yüksek kullanılabilirlik, olağanüstü durum kurtarma özelliği, AlwaysOn desteği artık sahiptir. Daha fazla bilgi için bkz: [SqlClient yüksek kullanılabilirlik, olağanüstü durum kurtarma desteği](../../../../docs/framework/data/adonet/sql/sqlclient-support-for-high-availability-disaster-recovery.md).  
   
--   Parola olarak geçirilen bir <xref:System.Security.SecureString> kullanırken [!INCLUDE[ssNoVersion](../../../../includes/ssnoversion-md.md)] kimlik doğrulaması. Daha fazla bilgi edinmek için bkz. <xref:System.Data.SqlClient.SqlCredential>.  
+-   Parola olarak geçirilen bir <xref:System.Security.SecureString> SQL Server kimlik doğrulaması kullanırken. Daha fazla bilgi edinmek için bkz. <xref:System.Data.SqlClient.SqlCredential>.  
   
--   Zaman `TrustServerCertificate` false ve `Encrypt` true, sunucu adı (veya IP adresi) bulunduğu bir [!INCLUDE[ssNoVersion](../../../../includes/ssnoversion-md.md)] SSL sertifikası sunucu adı (veya IP adresi) bağlantı dizesinde belirtilen tam olarak eşleşmelidir. Aksi takdirde, bağlantı girişimi başarısız olur. Daha fazla bilgi için açıklamasına bakın `Encrypt` bağlantı seçeneğinde <xref:System.Data.SqlClient.SqlConnection.ConnectionString%2A>.  
+-   Zaman `TrustServerCertificate` false ve `Encrypt` bir SQL Server SSL sertifikasındaki sunucu adı (veya IP adresi) tam olarak eşleşmelidir sunucu adı (veya IP adresi) bağlantı dizesinde belirtilen doğrudur. Aksi takdirde, bağlantı girişimi başarısız olur. Daha fazla bilgi için açıklamasına bakın `Encrypt` bağlantı seçeneğinde <xref:System.Data.SqlClient.SqlConnection.ConnectionString%2A>.  
   
      Bu değişiklik artık bağlanmak var olan bir uygulama neden olursa, aşağıdakilerden birini kullanarak uygulamayı düzeltebilirsiniz:  
   

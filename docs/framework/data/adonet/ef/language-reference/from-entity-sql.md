@@ -1,24 +1,26 @@
 ---
-title: "(Varlıktan, SQL)"
-ms.custom: 
+title: (Varlıktan, SQL)
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-ado
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-ado
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: ff3e3048-0d5d-4502-ae5c-9187fcbd0514
-caps.latest.revision: "3"
+caps.latest.revision: 3
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.workload: dotnet
-ms.openlocfilehash: 115fb8dfef46c74837d774012babdef9db915341
-ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
+ms.workload:
+- dotnet
+ms.openlocfilehash: 64d41359ba8a4131acb38b128238065ee2545f80
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="from-entity-sql"></a>(Varlıktan, SQL)
 Kullanılan koleksiyon belirtir [seçin](../../../../../../docs/framework/data/adonet/ef/language-reference/select-entity-sql.md) deyimleri.  
@@ -39,7 +41,7 @@ FROM expression [ ,...n ] as C
  `FROM C as c`  
   
 ## <a name="from-clause-items"></a>Yan tümcesi öğeleri  
- Her `FROM` yan tümce öğesi, bir kaynak koleksiyondaki başvurduğu [!INCLUDE[esql](../../../../../../includes/esql-md.md)] sorgu. [!INCLUDE[esql](../../../../../../includes/esql-md.md)]Aşağıdaki sınıflarını destekleyen `FROM` yan tümcesi öğeleri: basit `FROM` yan tümcesi öğeleri `JOIN FROM` yan tümcesi öğeleri ve `APPLY FROM` yan tümcesi öğeleri. Bunların her biri `FROM` yan tümcesi öğeleri aşağıdaki bölümlerde daha ayrıntılı olarak açıklanmaktadır.  
+ Her `FROM` yan tümce öğesi, bir kaynak koleksiyondaki başvurduğu [!INCLUDE[esql](../../../../../../includes/esql-md.md)] sorgu. [!INCLUDE[esql](../../../../../../includes/esql-md.md)] Aşağıdaki sınıflarını destekleyen `FROM` yan tümcesi öğeleri: basit `FROM` yan tümcesi öğeleri `JOIN FROM` yan tümcesi öğeleri ve `APPLY FROM` yan tümcesi öğeleri. Bunların her biri `FROM` yan tümcesi öğeleri aşağıdaki bölümlerde daha ayrıntılı olarak açıklanmaktadır.  
   
 ### <a name="simple-from-clause-item"></a>Basit yan tümce öğesi  
  En basit `FROM` yan tümce öğesi olan bir koleksiyonu ve bir diğer ad tanımlayan tek bir ifade. İfade, yalnızca bir varlık kümesi veya alt sorgu veya koleksiyon türü herhangi bir ifade olabilir. Bir örnek verilmiştir:  
@@ -57,7 +59,7 @@ LOB.Customers
  Diğer ad belirtilmezse, [!INCLUDE[esql](../../../../../../includes/esql-md.md)] Toplama ifadesi temelinde bir diğer ad oluşturmak çalışır.  
   
 ### <a name="join-from-clause-item"></a>Yan tümcesi öğesinden katılma  
- A `JOIN FROM` yan tümce öğesi temsil eden iki arasında bir birleşim `FROM` yan tümcesi öğeleri. [!INCLUDE[esql](../../../../../../includes/esql-md.md)]destekler, birleşimler, İç birleşimler sol ve sağ dış birleşimler ve tam dış birleştirmeler arası. Bu birleştirmeler benzer şekilde, desteklenen desteklenen [!INCLUDE[tsql](../../../../../../includes/tsql-md.md)]. Olarak [!INCLUDE[tsql](../../../../../../includes/tsql-md.md)], iki `FROM` yan tümcesi öğeleri söz konusu `JOIN` bağımsız olması gerekir. Diğer bir deyişle, bunlar ilişkilendirilemez. A `CROSS APPLY` veya `OUTER APPLY` bu durumlar için kullanılabilir.  
+ A `JOIN FROM` yan tümce öğesi temsil eden iki arasında bir birleşim `FROM` yan tümcesi öğeleri. [!INCLUDE[esql](../../../../../../includes/esql-md.md)] destekler, birleşimler, İç birleşimler sol ve sağ dış birleşimler ve tam dış birleştirmeler arası. Bu birleştirmeler benzer şekilde, desteklenen desteklenen [!INCLUDE[tsql](../../../../../../includes/tsql-md.md)]. Olarak [!INCLUDE[tsql](../../../../../../includes/tsql-md.md)], iki `FROM` yan tümcesi öğeleri söz konusu `JOIN` bağımsız olması gerekir. Diğer bir deyişle, bunlar ilişkilendirilemez. A `CROSS APPLY` veya `OUTER APPLY` bu durumlar için kullanılabilir.  
   
 #### <a name="cross-joins"></a>Birleştirmeler arası  
  A `CROSS JOIN` sorgu ifadesi aşağıdaki örnekte gösterildiği gibi iki koleksiyonların Kartezyen ürün oluşturur:  
@@ -91,7 +93,7 @@ LOB.Customers
 >  İçinde SQL-92 ile uyumluluğu korumak için [!INCLUDE[tsql](../../../../../../includes/tsql-md.md)] dış anahtar sözcüğü isteğe bağlıdır. Bu nedenle, `LEFT JOIN`, `RIGHT JOIN`, ve `FULL JOIN` için eş anlamlı sözcükleri olan `LEFT OUTER JOIN`, `RIGHT OUTER JOIN`, ve `FULL OUTER JOIN`.  
   
 ### <a name="apply-clause-item"></a>Yan tümce öğesi UYGULA  
- [!INCLUDE[esql](../../../../../../includes/esql-md.md)]iki tür destekler, `APPLY`: `CROSS APPLY` ve `OUTER APPLY`.  
+ [!INCLUDE[esql](../../../../../../includes/esql-md.md)] iki tür destekler, `APPLY`: `CROSS APPLY` ve `OUTER APPLY`.  
   
  A `CROSS APPLY` her soldaki koleksiyon öğesi sağdaki ifadesinin hesaplanmasıyla oluşturulan koleksiyonun bir öğesi ile benzersiz eşleştirmesi üretir. İle bir `CROSS APPLY`, sağdaki ifade aşağıdaki ilişkili koleksiyon örnekte gösterildiği gibi işlevsel olarak öğesi solda, bağlı:  
   
@@ -107,7 +109,7 @@ LOB.Customers
 >  Aksine, [!INCLUDE[tsql](../../../../../../includes/tsql-md.md)], bir açık unnest adım için gerekli [!INCLUDE[esql](../../../../../../includes/esql-md.md)].  
   
 > [!NOTE]
->  `CROSS`ve `OUTER APPLY` işleçleri sunuldu [!INCLUDE[ssVersion2005](../../../../../../includes/ssversion2005-md.md)]. Bazı durumlarda, içeren Transact-SQL sorgusu ardışık düzen üretebilir `CROSS APPLY` ve/veya `OUTER APPLY` işleçler. Çünkü sürümleri dahil olmak üzere bazı arka uç sağlayıcıları [!INCLUDE[ssNoVersion](../../../../../../includes/ssnoversion-md.md)] öncesi [!INCLUDE[ssVersion2005](../../../../../../includes/ssversion2005-md.md)], bu işleçlere desteklemez, bu tür sorgular bu arka uç sağlayıcılarının yürütülemez.  
+>  `CROSS` ve `OUTER APPLY` işleçleri sunuldu [!INCLUDE[ssVersion2005](../../../../../../includes/ssversion2005-md.md)]. Bazı durumlarda, içeren Transact-SQL sorgusu ardışık düzen üretebilir `CROSS APPLY` ve/veya `OUTER APPLY` işleçler. Çünkü SQL Server sürümleri dahil olmak üzere bazı arka uç sağlayıcıları öncesi [!INCLUDE[ssVersion2005](../../../../../../includes/ssversion2005-md.md)], bu işleçlere desteklemez, bu tür sorgular bu arka uç sağlayıcılarının yürütülemez.  
 >   
 >  Varlığı için yol açabilecek bazı tipik senaryolar `CROSS APPLY` ve/veya `OUTER APPLY` çıkış sorgusunda işleçler şunlardır: sayfalama ile; ilişkili bir alt sorgu İlişkili bir alt sorgu veya gezinti tarafından üretilen bir koleksiyon üzerinden AnyElement; LINQ bir öğe Seçicisi kabul yöntemleri gruplandırma kullanan sorgular; bir sorguda bir `CROSS APPLY` veya bir `OUTER APPLY` açıkça belirtilir; olan bir sorgu bir `DEREF` üzerinden oluşturmak bir `REF` oluşturun.  
   
@@ -142,7 +144,7 @@ from (C as c join D as d) cross apply c.Names as e
   
  `FROM` Üretir mantıksal olarak multiset satır türü (c, d, e) satır yan tümcesi burada alanları c, d ve e öğesi türünü varsayılır `C`, `D`, ve `c.Names`.  
   
- [!INCLUDE[esql](../../../../../../includes/esql-md.md)]Her basit için diğer ad tanıtır `FROM` kapsamında yan tümce öğesi. Örneğin, aşağıdakileri yan tümcesi parçacığı gelen kapsam içine sunulan c, d ve e adlardır.  
+ [!INCLUDE[esql](../../../../../../includes/esql-md.md)] Her basit için diğer ad tanıtır `FROM` kapsamında yan tümce öğesi. Örneğin, aşağıdakileri yan tümcesi parçacığı gelen kapsam içine sunulan c, d ve e adlardır.  
   
 ```  
 from (C as c join D as d) cross apply c.Names as e  

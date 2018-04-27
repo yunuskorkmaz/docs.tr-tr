@@ -1,24 +1,26 @@
 ---
-title: "İşlemler ve eşzamanlılık"
-ms.custom: 
+title: İşlemler ve eşzamanlılık
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-ado
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-ado
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: f46570de-9e50-4fe6-8710-a8c31fa8569b
-caps.latest.revision: "5"
+caps.latest.revision: 5
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.workload: dotnet
-ms.openlocfilehash: 6e6dfa946313bb9d43077bad68b761e8f03c175c
-ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
+ms.workload:
+- dotnet
+ms.openlocfilehash: 80db92f94f8cb523c3b8f9d0d08bbcb6b33c2fbe
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="transactions-and-concurrency"></a>İşlemler ve eşzamanlılık
 Bir işlem tek bir komutu veya bir paket olarak yürütme komut grubunu oluşur. İşlemler, iş birden çok işlem tek bir birime birleştirmenize izin verir. İşlem bir noktada bir hata oluşursa, tüm güncelleştirmeler geri ön işlem durumlarına geri alınabilir.  
@@ -30,7 +32,7 @@ Bir işlem tek bir komutu veya bir paket olarak yürütme komut grubunu oluşur.
   
  Bir işlem aynı veritabanı veya sunucu birden çok tablo içeriyorsa, ardından saklı yordamlarda açık işlemleri genellikle daha iyi gerçekleştirin. Transact-SQL kullanarak SQL Server saklı yordamlarda işlemleri oluşturabilirsiniz `BEGIN TRANSACTION`, `COMMIT TRANSACTION`, ve `ROLLBACK TRANSACTION` deyimleri. Daha fazla bilgi için SQL Server Books Online'a bakın.  
   
- Bir işlem arasında gibi farklı kaynak yöneticileri içeren işlemlerin [!INCLUDE[ssNoVersion](../../../../includes/ssnoversion-md.md)] ve Oracle, dağıtılmış bir işlem gerektirir.  
+ SQL Server ve Oracle, arasında bir işlem gibi farklı kaynak yöneticileri içeren işlemlerin bir dağıtılmış işlem gerektirir.  
   
 ## <a name="in-this-section"></a>Bu Bölümde  
  [Yerel İşlemler](../../../../docs/framework/data/adonet/local-transactions.md)  
@@ -40,7 +42,7 @@ Bir işlem tek bir komutu veya bir paket olarak yürütme komut grubunu oluşur.
  ADO.NET dağıtılmış işlemleri gerçekleştirmeyi açıklar.  
   
  [SQL Server ile System.Transactions Tümleştirmesi](../../../../docs/framework/data/adonet/system-transactions-integration-with-sql-server.md)  
- Açıklar <xref:System.Transactions> ile tümleştirme [!INCLUDE[ssNoVersion](../../../../includes/ssnoversion-md.md)] dağıtılmış işlemler ile çalışmak için.  
+ Açıklar <xref:System.Transactions> ile çalışmak için SQL Server ile tümleştirme dağıtılmış işlemler.  
   
  [İyimser Eşzamanlılık](../../../../docs/framework/data/adonet/optimistic-concurrency.md)  
  İyimser ve kötümser eşzamanlılık ve eşzamanlılık ihlali test nasıl açıklar.  

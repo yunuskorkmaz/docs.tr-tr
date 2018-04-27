@@ -1,12 +1,13 @@
 ---
-title: "Nasıl yapılır: Kod Kullanarak bir Olay İşleyicisi Ekleme"
-ms.custom: 
+title: 'Nasıl yapılır: Kod Kullanarak bir Olay İşleyicisi Ekleme'
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-wpf
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-wpf
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - csharp
@@ -15,16 +16,17 @@ helpviewer_keywords:
 - event handlers [WPF], adding
 - XAML [WPF], adding event handlers
 ms.assetid: 269c61e0-6bd9-4291-9bed-1c5ee66da486
-caps.latest.revision: "16"
+caps.latest.revision: 16
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 3abcd441219e58df2e5a0d4b66447e255c6aabd4
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 4e7627589ff7e422c4ad3cd7a37fdc14c8a9c9f4
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="how-to-add-an-event-handler-using-code"></a>Nasıl yapılır: Kod Kullanarak bir Olay İşleyicisi Ekleme
 Bu örnek kod kullanarak bir öğe olarak olay işleyicisi ekleme gösterir.  
@@ -34,7 +36,7 @@ Bu örnek kod kullanarak bir öğe olarak olay işleyicisi ekleme gösterir.
 ## <a name="example"></a>Örnek  
  Aşağıdaki örnek yeni bir ekler <xref:System.Windows.Controls.Button> başlangıçta tanımlanan varolan sayfasına [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]. Bir arka plan kod dosyasına bir olay işleyicisi yöntemi uygular ve daha sonra bu yöntem yeni bir olay işleyicisi ekler <xref:System.Windows.Controls.Button>.  
   
- [!INCLUDE[TLA2#tla_cshrp](../../../../includes/tla2sharptla-cshrp-md.md)] Örnek kullanır `+=` bir olay için bir işleyici atamak için işleci. Bu işleyici atamak için kullanılan, aynı işlecidir [!INCLUDE[TLA#tla_clr](../../../../includes/tlasharptla-clr-md.md)] olay işleme modeli. [!INCLUDE[TLA#tla_visualb](../../../../includes/tlasharptla-visualb-md.md)]olay işleyicileri ekleme yolu bu işleci desteklemez. Bunun yerine iki teknikleri birini gerektirir:  
+ C# örnek kullanır `+=` bir olay için bir işleyici atamak için işleci. Bu işleyici atamak için kullanılan, aynı işlecidir [!INCLUDE[TLA#tla_clr](../../../../includes/tlasharptla-clr-md.md)] olay işleme modeli. Microsoft Visual Basic bu işleci olay işleyicileri ekleme bir araç olarak desteklemez. Bunun yerine iki teknikleri birini gerektirir:  
   
 -   Kullanım <xref:System.Windows.UIElement.AddHandler%2A> yöntemi ile birlikte bir `AddressOf` olay işleyicisi uygulamasına başvurmak için işleci.  
   

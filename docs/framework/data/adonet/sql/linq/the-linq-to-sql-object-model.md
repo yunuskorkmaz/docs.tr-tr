@@ -1,27 +1,29 @@
 ---
 title: LINQ to SQL nesne modeli
-ms.custom: 
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-ado
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-ado
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - csharp
 - vb
 ms.assetid: 81dd0c37-e2a4-4694-83b0-f2e49e693810
-caps.latest.revision: "4"
+caps.latest.revision: 4
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.workload: dotnet
-ms.openlocfilehash: 0bfaf7b08b3725f1c1cc2f0985c7612aa47a6cb4
-ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
+ms.workload:
+- dotnet
+ms.openlocfilehash: cc05166cffdd7254c657f0c490afaaac4cf08fcb
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="the-linq-to-sql-object-model"></a>LINQ to SQL nesne modeli
 İçinde [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)], geliştirici programlama dilinde ifade nesne modeli ilişkisel veritabanı veri modeline eşlendi. Veriler üzerinde işlemler nesne modeline göre daha sonra yürütülür.  
@@ -76,14 +78,14 @@ ms.lasthandoff: 01/17/2018
  Daha fazla bilgi için ilişki özniteliğini bölümüne bakın [öznitelik tabanlı eşleme](../../../../../../docs/framework/data/adonet/sql/linq/attribute-based-mapping.md).  
   
 ## <a name="linq-to-sql-methods-and-database-stored-procedures"></a>LINQ-SQL yöntemleri ve veritabanı saklı yordamları  
- [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]saklı yordamlar ve kullanıcı tanımlı işlevler destekler. İçinde [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)], böylece istemci kodundan kesin türü belirtilmiş bir şekilde erişebilir istemci nesnelere bu veritabanı tanımlanan soyutlamalar eşleyin. Yöntem imzaları mümkün olduğunca yakın yordamları ve işlevleri veritabanı içinde tanımlanan imzalarını benzer. Bu yöntemler bulmak için IntelliSense kullanabilirsiniz.  
+ [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] saklı yordamlar ve kullanıcı tanımlı işlevler destekler. İçinde [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)], böylece istemci kodundan kesin türü belirtilmiş bir şekilde erişebilir istemci nesnelere bu veritabanı tanımlanan soyutlamalar eşleyin. Yöntem imzaları mümkün olduğunca yakın yordamları ve işlevleri veritabanı içinde tanımlanan imzalarını benzer. Bu yöntemler bulmak için IntelliSense kullanabilirsiniz.  
   
  Bir sonuç kümesi olan eşlenen bir yordam için bir çağrı tarafından döndürülen bir türü kesin belirlenmiş koleksiyonudur.  
   
- [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]saklı yordamları ve işlevleri kullanarak yöntemlere eşlemeleri <xref:System.Data.Linq.Mapping.FunctionAttribute> ve <xref:System.Data.Linq.Mapping.ParameterAttribute> öznitelikleri. Saklı yordamlar temsil eden yöntemleri temsil eden kullanıcı tanımlı işlevler tarafından kullanılanlardan ayırt <xref:System.Data.Linq.Mapping.FunctionAttribute.IsComposable%2A> özelliği. Bu özellik ayarlanmışsa `false` (varsayılan), bir saklı yordam yöntemi temsil eder. Bu ayarlanırsa `true`, yöntemi bir veritabanı işlevi temsil eder.  
+ [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] saklı yordamları ve işlevleri kullanarak yöntemlere eşlemeleri <xref:System.Data.Linq.Mapping.FunctionAttribute> ve <xref:System.Data.Linq.Mapping.ParameterAttribute> öznitelikleri. Saklı yordamlar temsil eden yöntemleri temsil eden kullanıcı tanımlı işlevler tarafından kullanılanlardan ayırt <xref:System.Data.Linq.Mapping.FunctionAttribute.IsComposable%2A> özelliği. Bu özellik ayarlanmışsa `false` (varsayılan), bir saklı yordam yöntemi temsil eder. Bu ayarlanırsa `true`, yöntemi bir veritabanı işlevi temsil eder.  
   
 > [!NOTE]
->  Kullanıyorsanız [!INCLUDE[vs_current_short](../../../../../../includes/vs-current-short-md.md)], kullanabileceğiniz [!INCLUDE[vs_ordesigner_long](../../../../../../includes/vs-ordesigner-long-md.md)] saklı yordamları ve kullanıcı tanımlı işlevler eşlenen yöntemleri oluşturmak için.  
+>  Visual Studio kullanıyorsanız, kullanabileceğiniz [!INCLUDE[vs_ordesigner_long](../../../../../../includes/vs-ordesigner-long-md.md)] saklı yordamları ve kullanıcı tanımlı işlevler eşlenen yöntemleri oluşturmak için.  
   
 ### <a name="example"></a>Örnek  
  [!code-csharp[DLinqObjectModel#4](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DLinqObjectModel/cs/northwind.cs#4)]

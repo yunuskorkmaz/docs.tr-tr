@@ -1,24 +1,26 @@
 ---
-title: "Windows Communication Foundation Örnekleri Derleme"
-ms.custom: 
+title: Windows Communication Foundation Örnekleri Derleme
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 2899e7a5-9cb2-4e8d-b8d2-f31391549198
-caps.latest.revision: "33"
+caps.latest.revision: 33
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: d5de916aa5825625f29efe316571ad5085afb431
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: d40b59faa4d0f50e59daaa71da6127da367f008b
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="building-the-windows-communication-foundation-samples"></a>Windows Communication Foundation Örnekleri Derleme
 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] Örnekleri, Visual Studio 2010 veya kullanarak oluşturulabilen **msbuild** komut satırından komutu. Bu konuda iki yordam açıklanmaktadır.  
@@ -39,7 +41,7 @@ ms.lasthandoff: 12/22/2017
   
 1.  Kullanıyorsanız [!INCLUDE[wv](../../../../includes/wv-md.md)], [!INCLUDE[lserver](../../../../includes/lserver-md.md)], Windows 7 veya Windows Server 2008 R2 ve çalışan [!INCLUDE[vs_current_long](../../../../includes/vs-current-long-md.md)], çalıştırmalısınız [!INCLUDE[vsprvs](../../../../includes/vsprvs-md.md)] yükseltilmiş iznine sahip. Bunu yapmak için Başlat menüsünde simgesine sağ tıklayın ve ardından **yönetici olarak çalıştır**.  
   
-2.  Gelen **dosya** menüde [!INCLUDE[vs_current_short](../../../../includes/vs-current-short-md.md)], tıklatın **açık**, ardından **proje/çözüm**. Dile özgü alt örnek yüklenen dizini altında gidin ve çözümde açmak için .sln dosyasını simgesini çift [!INCLUDE[vsprvs](../../../../includes/vsprvs-md.md)].  
+2.  Gelen **dosya** Visual Studio'da menüsünü **açık**, ardından **proje/çözüm**. Dile özgü alt örnek yüklenen dizini altında gidin ve çözümde açmak için .sln dosyasını simgesini çift [!INCLUDE[vsprvs](../../../../includes/vsprvs-md.md)].  
   
 3.  İçinde **yapı** menüsünde, select **çözümü yeniden derle**. İstemci program dosyaları için client\bin yerleşiktir ve hizmet program dosyaları için service\bin oluşturulur. Hizmet IIS'de barındırılıyorsa, hizmet program dosyalarını servicemodelsamples dizin ve \bin alt dizini de kopyalanır.  
   
@@ -50,10 +52,10 @@ ms.lasthandoff: 12/22/2017
  Setup.exe ve Cleanup.exe toplu iş dosyaları ve komut dosyaları için bir Visual Studio komut isteminden çalıştırılması gerekir. Yukarı ve dosyaları temizlenmesi birkaç kümesi yönetici ayrıcalıkları gerektiren ve yönetici ayrıcalıklarına sahip başlatılması gereken görevleri gerçekleştirir.  
   
 ## <a name="important-security-information-about-metadata-endpoints"></a>Meta veri uç noktalarını hakkında önemli güvenlik bilgileri  
- Olası hassas hizmeti meta verileri, için varsayılan yapılandırma, yanlışlıkla açığa çıkmasını önlemek amacıyla [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] Hizmetleri, meta veri yayımlama devre dışı bırakır. Bu davranışı varsayılan olarak güvenlidir, ancak ayrıca bir meta veri kullanamayacağı anlamına gelir (örneğin, Svcutil.exe) aracı hizmetin meta veri yayımlama davranışı açıkça yapılandırmasında etkinleştirilmediği sürece hizmetini çağırmak için gerekli istemci kodu oluşturmak üzere, içe. Daha kolay örnekleriyle denemeler yapmak için güvenli olmayan meta veri yayımlama uç noktası neredeyse tüm örneklerini kullanıma sunar. Bu tür uç noktaları anonim kimlik doğrulamasız tüketicilere potansiyel olarak kullanılabilir ve bakım gibi uç noktaları dağıtmadan önce genel olarak disclosing bir hizmetin meta veri uygun olduğundan emin olmak için izlenmelidir. [!INCLUDE[crabout](../../../../includes/crabout-md.md)]Hizmet meta veri yayımlama bkz [meta veri yayımlama davranışı](../../../../docs/framework/wcf/samples/metadata-publishing-behavior.md) örnek. Bkz: [özel güvenli meta veri uç noktasının](../../../../docs/framework/wcf/samples/custom-secure-metadata-endpoint.md) örnek bir meta veri uç noktası güvenli hale getirme örneği.  
+ Olası hassas hizmeti meta verileri, için varsayılan yapılandırma, yanlışlıkla açığa çıkmasını önlemek amacıyla [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] Hizmetleri, meta veri yayımlama devre dışı bırakır. Bu davranışı varsayılan olarak güvenlidir, ancak ayrıca bir meta veri kullanamayacağı anlamına gelir (örneğin, Svcutil.exe) aracı hizmetin meta veri yayımlama davranışı açıkça yapılandırmasında etkinleştirilmediği sürece hizmetini çağırmak için gerekli istemci kodu oluşturmak üzere, içe. Daha kolay örnekleriyle denemeler yapmak için güvenli olmayan meta veri yayımlama uç noktası neredeyse tüm örneklerini kullanıma sunar. Bu tür uç noktaları anonim kimlik doğrulamasız tüketicilere potansiyel olarak kullanılabilir ve bakım gibi uç noktaları dağıtmadan önce genel olarak disclosing bir hizmetin meta veri uygun olduğundan emin olmak için izlenmelidir. [!INCLUDE[crabout](../../../../includes/crabout-md.md)] Hizmet meta veri yayımlama bkz [meta veri yayımlama davranışı](../../../../docs/framework/wcf/samples/metadata-publishing-behavior.md) örnek. Bkz: [özel güvenli meta veri uç noktasının](../../../../docs/framework/wcf/samples/custom-secure-metadata-endpoint.md) örnek bir meta veri uç noktası güvenli hale getirme örneği.  
   
 ## <a name="exception-handling"></a>Özel Durum İşleme  
- Genel olarak bakıldığında bu örnekleri özel durum örnek konu üzerinde odaklanmış kod tutmak için işleme dahil etmeyin. [!INCLUDE[crabout](../../../../includes/crabout-md.md)]özel durum işleme bkz [beklenen özel durumlar](../../../../docs/framework/wcf/samples/expected-exceptions.md) örnek.  
+ Genel olarak bakıldığında bu örnekleri özel durum örnek konu üzerinde odaklanmış kod tutmak için işleme dahil etmeyin. [!INCLUDE[crabout](../../../../includes/crabout-md.md)] özel durum işleme bkz [beklenen özel durumlar](../../../../docs/framework/wcf/samples/expected-exceptions.md) örnek.  
   
 ## <a name="regenerating-clients-and-configuration-with-svcutil"></a>İstemcileri ve Svcutil yapılandırmayla yeniden oluşturuluyor  
  Kullanabileceğiniz [ServiceModel meta veri yardımcı Programracı (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md) istemci kodu ve yapılandırma örnekleri çoğu için yeniden oluşturmak için. Bazı örnekler el ile düzenlenmiş yapılandırma gerektirmez. Örneğin, istemci sertifikası kimlik bilgilerini kullanan bir örnek için yapılandırmayı yeniden oluşturmak için Svcutil.exe kullanma, daha önce yapılandırılan kimlik bilgileri el ile belirtmeniz gerekir. Bazı örnekler, oluşturulan kod etkilemek için belirli Svcutil.exe seçenekleri kullanın, bu seçenekler belirli örnek konularında belirtilmiş.  
@@ -74,7 +76,7 @@ ms.lasthandoff: 12/22/2017
     svcutil.exe /n:"http://Microsoft.ServiceModel.Samples,Microsoft.ServiceModel.Samples" http://localhost:8000/servicemodelsamples/service.svc/mex /out:generatedClient.cs  
     ```  
   
-     Http://localhost:8000/ServiceModelSamples/Service.svc/Mex kendini barındıran hizmet mex bitiş noktası adresiyle değiştirin.  
+     Değiştir http://localhost:8000/ServiceModelSamples/service.svc/mex kendini barındıran hizmet mex uç nokta adresine sahip.  
   
      İstemci bir Visual Basic türü oluşturmak için aşağıdaki komutu kullanın.  
   

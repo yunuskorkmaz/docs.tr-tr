@@ -20,17 +20,17 @@ helpviewer_keywords:
 - x:Null markup extension [XAML Services]
 - XAML [XAML Services], x:Null markup extension
 ms.assetid: 2e3ccc21-4996-481d-91b5-3910d8b3bfa3
-caps.latest.revision: ''
+caps.latest.revision: 20
 author: wadepickett
 ms.author: wpickett
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: 5b10d759a4f79eabe973a0fcd60736428e46f659
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 8f176598db00c57159bf351ea5d9ec428c5c04bc
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="xnull-markup-extension"></a>x:Null İşaretleme Uzantısı
 Belirtir `null` XAML üyesi için bir değer olarak.  
@@ -42,7 +42,7 @@ Belirtir `null` XAML üyesi için bir değer olarak.
 ```  
   
 ## <a name="remarks"></a>Açıklamalar  
- Bir null başvuru anahtar sözcüğü [!INCLUDE[TLA#tla_cshrp](../../../includes/tlasharptla-cshrp-md.md)] ve [!INCLUDE[TLA#tla_cpp](../../../includes/tlasharptla-cpp-md.md)] null. [!INCLUDE[TLA#tla_visualb](../../../includes/tlasharptla-visualb-md.md)] Anahtar sözcüğü bir null başvuru için `Nothing`, ancak her zaman kullanmanız `{x:Null}` arka plan kod dili XAML ile ilişkilendirmek XAML kullanımı bağımsız olarak.  
+ Bir null başvuru C# anahtar sözcüğü ve [!INCLUDE[TLA#tla_cpp](../../../includes/tlasharptla-cpp-md.md)] null. Microsoft Visual Basic anahtar sözcüğü bir null başvuru için `Nothing`, ancak her zaman kullanmanız `{x:Null}` arka plan kod dili XAML ile ilişkilendirmek XAML kullanımı bağımsız olarak.  
   
  `x:Null` Biçimlendirme uzantısı olan ayarlanabilir özellik yok.  
   

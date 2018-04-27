@@ -1,49 +1,49 @@
 ---
-title: SQL Server Security
-ms.custom: 
+title: SQL Server güvenlik
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - dotnet-ado
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 9053724d-a1fb-4f0f-b9dc-7f6dd893e8ff
-caps.latest.revision: 
+caps.latest.revision: 8
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload:
 - dotnet
-ms.openlocfilehash: c186b25aeaa42b7285316d7bc9de913dd7b89af7
-ms.sourcegitcommit: ba765893e3efcece67d99fd6d5ce0074b050d1d9
+ms.openlocfilehash: eb9eb073eb2227ce98d4adb93b8f4b60575cf1b7
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/02/2018
+ms.lasthandoff: 04/26/2018
 ---
-# <a name="sql-server-security"></a>SQL Server Security
-[!INCLUDE[ssNoVersion](../../../../../includes/ssnoversion-md.md)] Güvenli veritabanı uygulamaları oluşturmak destekleyen birçok özelliğe sahiptir.  
+# <a name="sql-server-security"></a>SQL Server güvenlik
+SQL Server güvenli veritabanı uygulamaları oluşturmak destekleyen birçok özelliğe sahiptir.  
   
- Veri hırsızlığı veya vandalism, gibi genel güvenlik konuları sürümü bağımsız olarak geçerli [!INCLUDE[ssNoVersion](../../../../../includes/ssnoversion-md.md)] kullanmakta olduğunuz. Veri bütünlüğü bir güvenlik sorunu da dikkate alınmalıdır. Veri korumalı değilse, geçici veri işleme izin verilir ve verileri yanlışlıkla ise worthless hale gelebilir veya kötü amaçlı olarak yanlış değerlerle değiştirilmiş veya tamamen silinmiş olduğunu mümkündür. Ayrıca, genellikle, için gizli bilgileri doğru depolama gibi bağlı yasal gereksinimi vardır. Bazı tür kişisel veri depolama tamamen içinde belirli bir dairesi uygulamak yasalarına bağlı olarak proscribed.  
+ Veri hırsızlığı veya vandalism, gibi genel güvenlik konuları, kullanmakta olduğunuz SQL Server sürümünden bağımsız olarak uygulanır. Veri bütünlüğü bir güvenlik sorunu da dikkate alınmalıdır. Veri korumalı değilse, geçici veri işleme izin verilir ve verileri yanlışlıkla ise worthless hale gelebilir veya kötü amaçlı olarak yanlış değerlerle değiştirilmiş veya tamamen silinmiş olduğunu mümkündür. Ayrıca, genellikle, için gizli bilgileri doğru depolama gibi bağlı yasal gereksinimi vardır. Bazı tür kişisel veri depolama tamamen içinde belirli bir dairesi uygulamak yasalarına bağlı olarak proscribed.  
   
- Her sürümü [!INCLUDE[ssNoVersion](../../../../../includes/ssnoversion-md.md)] her Windows sürümüyle, Öncekini Gelişmiş işlevlere sonraki sürümlerinde olduğu gibi farklı güvenlik özellikleri vardır. Güvenlik özellikleri tek başına güvenli veritabanı uygulaması garanti edemez anlamak önemlidir. Her veritabanı uygulaması, kendi gereksinimleri, yürütme ortamı, dağıtım modeli, fiziksel konumu ve kullanıcı nüfusu benzersizdir. Diğer yerel uygulamalar veya Internet üzerinden dağıtılan uygulamalar sıkı güvenlik önlemleri ve devam eden izleme ve değerlendirme gerektirebilir ancak yerel kapsamındaki bazı uygulamalar yalnızca en düşük güvenlik gerekebilir.  
+ Windows her sürümü Öncekini Gelişmiş işlevlere sonraki sürümleri ile olduğu gibi farklı güvenlik özellikleri, SQL Server'ın her bir sürümü vardır. Güvenlik özellikleri tek başına güvenli veritabanı uygulaması garanti edemez anlamak önemlidir. Her veritabanı uygulaması, kendi gereksinimleri, yürütme ortamı, dağıtım modeli, fiziksel konumu ve kullanıcı nüfusu benzersizdir. Diğer yerel uygulamalar veya Internet üzerinden dağıtılan uygulamalar sıkı güvenlik önlemleri ve devam eden izleme ve değerlendirme gerektirebilir ancak yerel kapsamındaki bazı uygulamalar yalnızca en düşük güvenlik gerekebilir.  
   
- Güvenlik gereksinimlerine göre bir [!INCLUDE[ssNoVersion](../../../../../includes/ssnoversion-md.md)] veritabanı uygulaması olarak kabul edilmelidir tasarım zamanında bir sonradan akla olarak değil. Erken geliştirme döngüsü tehditleri değerlendirme bir güvenlik açığı algıladı her yerde potansiyel hasarı azaltmak olanağı sağlar.  
+ Tasarım zamanında bir sonradan akla olarak değil bir SQL Server veritabanı uygulamasının güvenlik gereksinimlerini dikkate alınmalıdır. Erken geliştirme döngüsü tehditleri değerlendirme bir güvenlik açığı algıladı her yerde potansiyel hasarı azaltmak olanağı sağlar.  
   
  Bir uygulamanın başlangıç tasarımı ses olsa bile, sistem geliştikçe yeni tehditleri ortaya. Veritabanınızı geçici savunma çok satırlı oluşturarak, bir güvenlik ihlali tarafından şiddet zarar en aza indirebilirsiniz. İlk savunma hattı saldırı yüzeyini alan tarafından hiçbir zaman kesinlikle gerekli olandan daha fazla izin vermeye azaltmaktır.  
   
- Bu bölümdeki konular, güvenlik özellikleri kısaca açıklayan [!INCLUDE[ssNoVersion](../../../../../includes/ssnoversion-md.md)] geliştiricilere ilgili konulara bağlantılar için ilgili olan [!INCLUDE[ssNoVersion](../../../../../includes/ssnoversion-md.md)] Books Online ve daha ayrıntılı kapsamı sağlayan diğer kaynakları.  
+ Bu bölümdeki konular, SQL Server Books Online ve daha ayrıntılı kapsamı sağlayan diğer kaynakları ilgili konulara bağlantılar ile geliştiriciler için uygun olan SQL Server güvenlik özellikleri kısaca açıklanmaktadır.  
   
 ## <a name="in-this-section"></a>Bu Bölümde  
  [SQL Server Güvenliğine Genel Bakış](../../../../../docs/framework/data/adonet/sql/overview-of-sql-server-security.md)  
- Mimari ve güvenlik özelliklerini açıklayan [!INCLUDE[ssNoVersion](../../../../../includes/ssnoversion-md.md)].  
+ SQL Server'ın mimarisi ve güvenlik özellikleri açıklar.  
   
  [SQL Server'da Uygulama Güvenliği Senaryoları](../../../../../docs/framework/data/adonet/sql/application-security-scenarios-in-sql-server.md)  
- ADO.NET için çeşitli güvenlik senaryolarını ele konuları içerir ve [!INCLUDE[ssNoVersion](../../../../../includes/ssnoversion-md.md)] uygulamalar.  
+ ADO.NET ve SQL Server uygulamaları için çeşitli uygulama güvenlik senaryolarını ele konuları içerir.  
   
  [SQL Server Express Güvenliği](../../../../../docs/framework/data/adonet/sql/sql-server-express-security.md)  
- Güvenlik konuları açıklanmaktadır [!INCLUDE[ssNoVersion](../../../../../includes/ssnoversion-md.md)] Express.  
+ SQL Server Express için güvenlik konuları açıklanmaktadır.  
   
 ## <a name="related-sections"></a>İlgili Bölümler  
 [SQL Server veritabanı altyapısı ve Azure SQL veritabanı için Güvenlik Merkezi](/sql/relational-databases/security/security-center-for-sql-server-database-engine-and-azure-sql-database)  

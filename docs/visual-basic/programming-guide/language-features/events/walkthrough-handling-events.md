@@ -1,11 +1,12 @@
 ---
-title: "İşleme olaylar (Visual Basic)"
-ms.custom: 
+title: İşleme olaylar (Visual Basic)
+ms.custom: ''
 ms.date: 07/20/2015
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- devlang-visual-basic
 ms.topic: article
 helpviewer_keywords:
 - event handling [Visual Basic], walkthroughs
@@ -15,19 +16,19 @@ helpviewer_keywords:
 - WithEvents keyword [Visual Basic], walkthroughs
 - event handlers [Visual Basic], walkthroughs
 ms.assetid: f145b3fc-5ae0-4509-a2aa-1ff6934706bd
-caps.latest.revision: "18"
+caps.latest.revision: 18
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: e4e31937d67d2140865a9626f79fbddc16796709
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: c1743e5f5d9dcdf83ab646407cd1fcdc77ff71cd
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="walkthrough-handling-events-visual-basic"></a>İzlenecek yol: Olayları İşleme (Visual Basic)
 Bu olayları ile çalışmak nasıl gösteren iki konuları saniyedir. İlk konu [izlenecek yol: bildiren ve yükseltmeyi olayları](../../../../visual-basic/programming-guide/language-features/events/walkthrough-declaring-and-raising-events.md), bildirme ve olaylarının arttığı gösterilmektedir. Bu bölümde, bunlar gerçekleştiğinde olayları işlemek nasıl göstermek için bu gözden geçirme sınıfından ve form kullanır.  
   
- `Widget` Sınıf örneği, geleneksel olay işleme deyimleri kullanır. [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]olaylar ile çalışmak için başka teknikler sağlar. Bir alıştırma kullanmak için bu örnek değiştirebilirsiniz `AddHandler` ve `Handles` deyimleri.  
+ `Widget` Sınıf örneği, geleneksel olay işleme deyimleri kullanır. Visual Basic olaylar ile çalışmak için başka teknikler sağlar. Bir alıştırma kullanmak için bu örnek değiştirebilirsiniz `AddHandler` ve `Handles` deyimleri.  
   
 ### <a name="to-handle-the-percentdone-event-of-the-widget-class"></a>Pencere sınıfı PercentDone olayını işlemek için  
   
@@ -66,7 +67,7 @@ Bu olayları ile çalışmak nasıl gösteren iki konuları saniyedir. İlk konu
  Kullanıcı tıklarsa **iptal** düğmesini basılı `LongTask` çalıştığından, `Button2_Click` olay yürütüldüğünde hemen `DoEvents` deyimi olay işleme oluşmasına izin verir. Sınıf düzeyi değişkeni `mblnCancel` ayarlanır `True`ve `mWidget_PercentDone` olay sonra onu sınar ve ayarlar `ByRef Cancel` bağımsız değişkeni `True`.  
   
 ## <a name="connecting-a-withevents-variable-to-an-object"></a>Bir nesneye bir WithEvents değişkeni bağlanma  
- `Form1`Şimdi işlemek üzere ayarlanmış bir `Widget` nesnenin olaylar. Kalan tek şey bulmak için bir `Widget` yere.  
+ `Form1` Şimdi işlemek üzere ayarlanmış bir `Widget` nesnenin olaylar. Kalan tek şey bulmak için bir `Widget` yere.  
   
  Bir değişken bildirme zaman `WithEvents` tasarım zamanında hiçbir nesne ile ilişkilidir. A `WithEvents` yalnızca herhangi bir başka nesne değişken gibi bir değişkendir. Bir nesne oluşturmak ve onunla başvuru atamak kullandığınız `WithEvents` değişkeni.  
   
@@ -80,7 +81,7 @@ Bu olayları ile çalışmak nasıl gösteren iki konuları saniyedir. İlk konu
   
      [!code-vb[VbVbcnWalkthroughDeclaringAndRaisingEvents#7](../../../../visual-basic/programming-guide/language-features/events/codesnippet/VisualBasic/walkthrough-handling-events_4.vb)]  
   
- Bu kod yürütüldüğünde, [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] oluşturur bir `Widget` nesne ve ilişkili olay yordamları olaylarına bağlanır `mWidget`. Noktasındaki, her `Widget` başlatır kendi `PercentDone` olay `mWidget_PercentDone` olay yordamı gerçekleştirilir.  
+ Bu kod yürütüldüğünde, Visual Basic oluşturur bir `Widget` nesne ve ilişkili olay yordamları olaylarına bağlanır `mWidget`. Noktasındaki, her `Widget` başlatır kendi `PercentDone` olay `mWidget_PercentDone` olay yordamı gerçekleştirilir.  
   
 #### <a name="to-call-the-longtask-method"></a>LongTask yöntemini çağırmak için  
   
@@ -90,7 +91,7 @@ Bu olayları ile çalışmak nasıl gösteren iki konuları saniyedir. İlk konu
   
  Önce `LongTask` yöntemi çağrıldığında, tamamlanma görüntüler başlatılmalıdır etiketi ve sınıf düzeyi `Boolean` yöntemi iptal etme ayarlanmalıdır için bayrak `False`.  
   
- `LongTask`görev süresi 12.2 saniye olarak adlandırılır. `PercentDone` Olayı kez her üçte birinden bir saniye. Olayı, her zaman `mWidget_PercentDone` olay yordamı gerçekleştirilir.  
+ `LongTask` görev süresi 12.2 saniye olarak adlandırılır. `PercentDone` Olayı kez her üçte birinden bir saniye. Olayı, her zaman `mWidget_PercentDone` olay yordamı gerçekleştirilir.  
   
  Zaman `LongTask` yapılır, `mblnCancel` olup olmadığını test `LongTask` normal şekilde sona erdi veya çünkü durdurduysanız `mblnCancel` ayarlandı `True`. Tamamlanma yüzdesi yalnızca eski durumda güncelleştirilir.  
   
@@ -125,5 +126,5 @@ Bu olayları ile çalışmak nasıl gösteren iki konuları saniyedir. İlk konu
 >  Sayıda bildirebilir `WithEvents` değişkenleri, olarak gerekir, dizi `WithEvents` değişkenleri desteklenmez.  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [İzlenecek yol: Olay bildirme ve oluşturma](../../../../visual-basic/programming-guide/language-features/events/walkthrough-declaring-and-raising-events.md)  
- [Olayları](../../../../visual-basic/programming-guide/language-features/events/index.md)
+ [İzlenecek yol: Olay Bildirme ve Oluşturma](../../../../visual-basic/programming-guide/language-features/events/walkthrough-declaring-and-raising-events.md)  
+ [Olaylar](../../../../visual-basic/programming-guide/language-features/events/index.md)

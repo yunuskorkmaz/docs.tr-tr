@@ -1,23 +1,24 @@
 ---
-title: "XAMLX dayanıklı gecikmesi"
-ms.custom: 
+title: XAMLX dayanıklı gecikmesi
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: efc38df4-2d34-453c-8e59-2c21d1307354
-caps.latest.revision: "7"
+caps.latest.revision: 7
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: ff5eb09acea16ac125fac5d9e3ed875c9095e1c5
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 2d7377d843e4ab8bd583e135dcdfd2cbfca67b8d
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="durable-delay-in-xamlx"></a>XAMLX dayanıklı gecikmesi
 Bu örnek, sağlam bir aygıt için iş akışı sırasında gecikme devam ederse gecikme dayanıklı bir gecikme kullanımı gösterilmiştir.  
@@ -34,7 +35,7 @@ Bu örnek, sağlam bir aygıt için iş akışı sırasında gecikme devam eders
 ## <a name="discussion"></a>Tartışma  
  Örnek iş akışı tarafından bir gecikme ayrılmış iki iletileri yerel bir dosyaya içerir. Gecikme tetiklendiğinde, iş akışı kaldırılır ve iş akışı örneği deposundaki 5 bellekte yeniden yükleniyor önce saniye bekler.  
   
- İçinde barındırılan bir iş akışı hizmeti .xamlx dosyasıdır [!INCLUDE[vs_current_short](../../../../includes/vs-current-short-md.md)]. [!INCLUDE[vs_current_short](../../../../includes/vs-current-short-md.md)]bir iş akışı hizmeti ana kullanan Cassini iş akışı kullanır.  
+ Visual Studio'da barındırılan bir iş akışı hizmeti .xamlx dosyasıdır. Visual Studio, iş akışını bir iş akışı hizmeti ana kullanan Cassini kullanır.  
   
  İş akışı barındırma ek olarak, iş akışı hizmeti ana bilgisayarı iş akışı örnekleri yükleme ve bunları yüklemeyi kaldırma yönetir. Örneği başlatmak için [!INCLUDE[wf](../../../../includes/wf-md.md)] tanımı (iş akışı hizmeti ana bilgisayar üzerinde) ayarlamak için bir ileti gönderen istemci <xref:System.ServiceModel.Activities.Receive> etkinliği iş akışı. Bu <xref:System.ServiceModel.Activities.Receive> sahip kendi <xref:System.ServiceModel.Activities.Receive.CanCreateInstance%2A> özelliğini `true`, iletiyi aldıktan sonra iş akışının yeni bir örneğini oluşturmak üzere etkinleştirme.  
   

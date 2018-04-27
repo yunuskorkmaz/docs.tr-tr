@@ -1,7 +1,7 @@
 ---
 title: Azure Service Fabric kullanma
-description: "Kapsayıcılı .NET uygulamaları için .NET mikro mimarisi | Azure Service Fabric kullanma"
-keywords: "Docker, mikro, ASP.NET, kapsayıcı"
+description: Kapsayıcılı .NET uygulamaları için .NET mikro mimarisi | Azure Service Fabric kullanma
+keywords: Docker, mikro, ASP.NET, kapsayıcı
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 10/18/2017
@@ -11,11 +11,11 @@ ms.topic: article
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: 9480a3f67e9d0a61d0669bf34be4b66208f5e9ce
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: 85c9c336b0a215dc22a9308c5726f03789f31d5a
+ms.sourcegitcommit: 2e8acae16ae802f2d6d04e3ce0a6dbf04e476513
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="using-azure-service-fabric"></a>Azure Service Fabric kullanma
 
@@ -90,7 +90,7 @@ Durum bilgisiz ve durum bilgisi olan Tamamlayıcı hizmetleridir. Örneği için
 
 Durum bilgisi olan hizmetler sakıncaları vardır. Bunlar, bir ölçek genişletme olanak tanıyan karmaşıklık düzeyi zorunlu tuttukları. Genellikle dış veritabanı sistemleri tarafından uygulanan işlevleri veri çoğaltma gibi görevler için durum bilgisi olan mikro ve veri bölümlendirme arasında ele alınması gerekir. Ancak, bu bir orchestrator oluşturulacağı yeri alanlardan biridir [Azure Service Fabric](https://docs.microsoft.com/azure/service-fabric/service-fabric-reliable-services-platform-architecture) ile kendi [durum bilgisi olan güvenilir hizmetler](https://docs.microsoft.com/azure/service-fabric/service-fabric-reliable-services-introduction#when-to-use-reliable-services-apis) en yardımcı olabilir — geliştirme ve durum bilgisi olan yaşam döngüsü basitleştirme tarafından mikro kullanarak [güvenilir Hizmetleri API](https://docs.microsoft.com/azure/service-fabric/service-fabric-work-with-reliable-collections) ve [Reliable Actors](https://docs.microsoft.com/azure/service-fabric/service-fabric-reliable-actors-introduction).
 
-Aktör deseni destekleyen ve hataya dayanıklılık ve iş mantığı ve verileri arasında gecikme geliştirmek durum bilgisi olan hizmetler izin diğer mikro hizmet çerçeveler Microsoft, [Orleans](https://github.com/dotnet/orleans)Microsoft Research ve [ Akka.NET](http://getakka.net/). Her iki çerçeveleri şu anda Docker için destek geliştirme.
+Aktör deseni destekleyen ve hataya dayanıklılık ve iş mantığı ve verileri arasında gecikme geliştirmek durum bilgisi olan hizmetler izin diğer mikro hizmet çerçeveler Microsoft, [Orleans](https://github.com/dotnet/orleans)Microsoft Research ve [ Akka.NET](https://getakka.net/). Her iki çerçeveleri şu anda Docker için destek geliştirme.
 
 Docker kapsayıcıları durum bilgisiz kendilerini olduğuna dikkat edin. Durum bilgisi olan hizmet uygulamak istiyorsanız, daha önce not ettiğiniz ek önerilerde bulunan ve üst düzey çerçeveleri biri gerekir. 
 

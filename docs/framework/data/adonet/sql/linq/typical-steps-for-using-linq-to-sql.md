@@ -1,24 +1,26 @@
 ---
-title: "LINQ-SQL kullanma için tipik adımları"
-ms.custom: 
+title: LINQ-SQL kullanma için tipik adımları
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-ado
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-ado
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 9a88bd51-bd74-48f7-a9b1-f650e8d55a3e
-caps.latest.revision: "4"
+caps.latest.revision: 4
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.workload: dotnet
-ms.openlocfilehash: 3aedef610d8ad3f743b346a46059b15d917cf7ca
-ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
+ms.workload:
+- dotnet
+ms.openlocfilehash: 31daf8ee10334327070cb5bfc4068bc80e1d7ea4
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="typical-steps-for-using-linq-to-sql"></a>LINQ-SQL kullanma için tipik adımları
 Uygulamak için bir [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] uygulama, bu konunun ilerleyen bölümlerinde açıklanan adımları izleyin. Birçok adımı isteğe bağlı olduğunu unutmayın. Varsayılan durumundayken nesne modeli kullanabileceğiniz çok mümkündür.  
@@ -31,9 +33,9 @@ Uygulamak için bir [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-
 ### <a name="1-select-a-tool-to-create-the-model"></a>1. Model oluşturmak için bir aracı seçin.  
  Üç araçları, model oluşturmak için kullanılabilir.  
   
--   ,[!INCLUDE[vs_ordesigner_long](../../../../../../includes/vs-ordesigner-long-md.md)]  
+-   , [!INCLUDE[vs_ordesigner_long](../../../../../../includes/vs-ordesigner-long-md.md)]  
   
-     Bu tasarımcı, varolan bir veritabanından nesne modeli oluşturmak için zengin bir kullanıcı arabirimi sağlar. Bu aracı parçasıdır [!INCLUDE[vs_current_short](../../../../../../includes/vs-current-short-md.md)] IDE ve küçük veya Orta veritabanları için uygundur.  
+     Bu tasarımcı, varolan bir veritabanından nesne modeli oluşturmak için zengin bir kullanıcı arabirimi sağlar. Bu araç, Visual Studio IDE parçası olan ve küçük veya Orta veritabanları için uygundur.  
   
 -   SQLMetal kod oluşturma aracı  
   
@@ -41,13 +43,13 @@ Uygulamak için bir [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-
   
 -   Kod Düzenleyicisi  
   
-     Kullanarak kendi kodunuzu yazabilirsiniz [!INCLUDE[vs_current_short](../../../../../../includes/vs-current-short-md.md)] Kod düzenleyicisinde veya başka bir düzenleyici. Var olan bir veritabanı varsa ve kullanın ya da olabilen hatalara bu yaklaşım önermiyoruz [!INCLUDE[vs_ordesigner_short](../../../../../../includes/vs-ordesigner-short-md.md)] veya SQLMetal aracı. Bununla birlikte, Kod düzenleyicisinde daraltmayı veya diğer araçları kullanarak zaten oluşturulmuş kodu değiştirmek için yararlı olabilir. Daha fazla bilgi için bkz: [nasıl yapılır: kod düzenleyicisini kullanarak varlık sınıfı özelleştirmek](../../../../../../docs/framework/data/adonet/sql/linq/how-to-customize-entity-classes-by-using-the-code-editor.md).  
+     Visual Studio Kod Düzenleyicisi'ni veya başka bir düzenleyici kullanarak kendi kodunuzu yazabilirsiniz. Var olan bir veritabanı varsa ve kullanın ya da olabilen hatalara bu yaklaşım önermiyoruz [!INCLUDE[vs_ordesigner_short](../../../../../../includes/vs-ordesigner-short-md.md)] veya SQLMetal aracı. Bununla birlikte, Kod düzenleyicisinde daraltmayı veya diğer araçları kullanarak zaten oluşturulmuş kodu değiştirmek için yararlı olabilir. Daha fazla bilgi için bkz: [nasıl yapılır: kod düzenleyicisini kullanarak varlık sınıfı özelleştirmek](../../../../../../docs/framework/data/adonet/sql/linq/how-to-customize-entity-classes-by-using-the-code-editor.md).  
   
 ### <a name="2-select-the-kind-of-code-you-want-to-generate"></a>2. Oluşturmak istediğiniz kod türünü seçin.  
   
--   C# veya [!INCLUDE[vbprvb](../../../../../../includes/vbprvb-md.md)] öznitelik tabanlı eşleme için kaynak kod dosyası.  
+-   Bir C# veya Visual Basic kaynak kodu dosyasının öznitelik tabanlı eşleme.  
   
-     Daha sonra bu kodu dosyasına dahil, [!INCLUDE[vs_current_short](../../../../../../includes/vs-current-short-md.md)] projesi. Daha fazla bilgi için bkz: [öznitelik tabanlı eşleme](../../../../../../docs/framework/data/adonet/sql/linq/attribute-based-mapping.md).  
+     Ardından, Visual Studio projesi bu kod dosyası içerir. Daha fazla bilgi için bkz: [öznitelik tabanlı eşleme](../../../../../../docs/framework/data/adonet/sql/linq/attribute-based-mapping.md).  
   
 -   Dış eşleme için bir XML dosyası.  
   

@@ -15,19 +15,19 @@ ms.assetid: 410b60dc-5e60-4ec0-bfae-426755a2ee28
 caps.latest.revision: 10
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: fe21d8c0dcefaea35d9f96cd2ecbff92a1c83d36
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.openlocfilehash: 6c83667534dcf69ea0ec1106bb3a02d2c9accd87
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="delegates-visual-basic"></a>Temsilciler (Visual Basic)
-Temsilciler yöntemlere başvuran nesneleridir. Bunlar bazen olarak açıklanan *tür kullanımı uyumlu işlev işaretçileri* diğer programlama dillerinde kullanılan işlev işaretçileri benzer olduğundan. Ancak işlev işaretçileri aksine [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] temsilciler sınıfına dayalı bir başvuru türü olan <xref:System.Delegate?displayProperty=nameWithType>. Temsilciler paylaşılan her iki yöntem başvuru — belirli bir sınıf örneği çağrılabilir yöntemleri — ve örnek yöntemleri.  
+Temsilciler yöntemlere başvuran nesneleridir. Bunlar bazen olarak açıklanan *tür kullanımı uyumlu işlev işaretçileri* diğer programlama dillerinde kullanılan işlev işaretçileri benzer olduğundan. Ancak işlev işaretçileri, Visual Basic temsilciler sınıfına dayalı bir başvuru türü <xref:System.Delegate?displayProperty=nameWithType>. Temsilciler paylaşılan her iki yöntem başvuru — belirli bir sınıf örneği çağrılabilir yöntemleri — ve örnek yöntemleri.  
   
 ## <a name="delegates-and-events"></a>Temsilciler ve Olaylar  
- Temsilciler çağıran bir yordam ve çağrılan yordamı arasında bir aracı ihtiyaç duyacağınız durumlarda faydalıdır. Örneğin, farklı olay işleyicileri farklı koşullar altında arayabilmesi için olayları başlatır nesneyi isteyebilirsiniz. Ne yazık ki, olayları hangi olay işleyicisi önceden bilemezsiniz gerçekleştiren nesne belirli bir olay işliyor. [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]kullandığınızda, bir temsilci oluşturarak olayları ile dinamik olarak ilişkilendirme olay işleyicileri sağlar `AddHandler` deyimi. Çalışma zamanında temsilci uygun olay işleyicisi çağrılarını iletir.  
+ Temsilciler çağıran bir yordam ve çağrılan yordamı arasında bir aracı ihtiyaç duyacağınız durumlarda faydalıdır. Örneğin, farklı olay işleyicileri farklı koşullar altında arayabilmesi için olayları başlatır nesneyi isteyebilirsiniz. Ne yazık ki, olayları hangi olay işleyicisi önceden bilemezsiniz gerçekleştiren nesne belirli bir olay işliyor. Visual Basic sağlar, olayları ile dinamik olarak ilişkilendirme olay işleyicileri kullandığınızda, bir temsilci oluşturarak `AddHandler` deyimi. Çalışma zamanında temsilci uygun olay işleyicisi çağrılarını iletir.  
   
- Çoğu durumda, kendi temsilciler oluşturabilseniz [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] temsilci oluşturur ve alan ayrıntılarını sizin için gerçekleştirir. Örneğin, bir `Event` deyimi dolaylı olarak adlı bir temsilci sınıf tanımlar `<EventName>EventHandler` sınıfı içeren bir iç içe geçmiş sınıf olarak `Event` deyimi ve olay ile aynı imzayla. `AddressOf` Deyimi dolaylı olarak belirli bir yordamı başvuran bir temsilci örneği oluşturur. Aşağıdaki iki kod satırı eşdeğerdir. İlk satırda açık bir örneğinin oluşturulmasını bkz `Eventhandler`, yöntem başvuru `Button1_Click` bağımsız değişken olarak gönderilir. İkinci satır aynı şeyi yapmak için daha kullanışlı bir yoludur.  
+ Visual Basic temsilci oluşturur ve ayrıntılarını sizin için mvc'deki çoğu durumda, kendi temsilciler oluşturabilseniz de. Örneğin, bir `Event` deyimi dolaylı olarak adlı bir temsilci sınıf tanımlar `<EventName>EventHandler` sınıfı içeren bir iç içe geçmiş sınıf olarak `Event` deyimi ve olay ile aynı imzayla. `AddressOf` Deyimi dolaylı olarak belirli bir yordamı başvuran bir temsilci örneği oluşturur. Aşağıdaki iki kod satırı eşdeğerdir. İlk satırda açık bir örneğinin oluşturulmasını bkz `Eventhandler`, yöntem başvuru `Button1_Click` bağımsız değişken olarak gönderilir. İkinci satır aynı şeyi yapmak için daha kullanışlı bir yoludur.  
   
  [!code-vb[VbVbalrDelegates#6](../../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/delegates_1.vb)]  
   
@@ -58,7 +58,7 @@ Temsilciler yöntemlere başvuran nesneleridir. Bunlar bazen olarak açıklanan 
   
  Lambda ifadesi belirtmek için aşağıdaki sözdizimini kullanın:  
   
- `Function`([`parm` Olarak `type`, `parm2` olarak `type2`,...])`expression`  
+ `Function` ([`parm` Olarak `type`, `parm2` olarak `type2`,...]) `expression`  
   
  Aşağıdaki örnek, her ikisi de gösterir `AddressOf` ve lambda ifadeleri başvurusu için bir temsilci belirtmek için kullanılır.  
   
@@ -70,7 +70,7 @@ Temsilciler yöntemlere başvuran nesneleridir. Bunlar bazen olarak açıklanan 
   
 |Başlık|Açıklama|  
 |-----------|-----------------|  
-|[Nasıl yapılır: temsilci yöntemi çağırma](../../../../visual-basic/programming-guide/language-features/delegates/how-to-invoke-a-delegate-method.md)|Bir yöntem bir temsilci ile ilişkilendirmek ve temsilci aracılığıyla bu yöntemi çağırmak nasıl oluşturulduğunu gösteren bir örnek sağlar.|  
+|[Nasıl yapılır: Temsilci Yöntemi Çağırma](../../../../visual-basic/programming-guide/language-features/delegates/how-to-invoke-a-delegate-method.md)|Bir yöntem bir temsilci ile ilişkilendirmek ve temsilci aracılığıyla bu yöntemi çağırmak nasıl oluşturulduğunu gösteren bir örnek sağlar.|  
 |[Nasıl yapılır: Visual Basic'de başka bir yordama yordam geçirme](../../../../visual-basic/programming-guide/language-features/delegates/how-to-pass-procedures-to-another-procedure.md)|Temsilciler bir yordam için başka bir yordam geçirmek için nasıl kullanılacağını gösterir.|  
-|[Gevşek temsilci dönüşümü](../../../../visual-basic/programming-guide/language-features/delegates/relaxed-delegate-conversion.md)|Kendi imzaları aynı olmadığında bile nasıl, alt öğeler ve işlevleri temsilciler veya işleyicileri atayabilirsiniz açıklar|  
-|[Olayları](../../../../visual-basic/programming-guide/language-features/events/index.md)|Visual Basic'te olaylar genel bir bakış sağlar.|
+|[Gevşek Temsilci Dönüştürme](../../../../visual-basic/programming-guide/language-features/delegates/relaxed-delegate-conversion.md)|Kendi imzaları aynı olmadığında bile nasıl, alt öğeler ve işlevleri temsilciler veya işleyicileri atayabilirsiniz açıklar|  
+|[Olaylar](../../../../visual-basic/programming-guide/language-features/events/index.md)|Visual Basic'te olaylar genel bir bakış sağlar.|

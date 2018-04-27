@@ -1,6 +1,6 @@
 ---
-title: "Dil bağımsızlığı ve dilden bağımsız bileşenler"
-description: ".NET, C#, C + gibi birçok desteklenen dilde birinde nasıl geliştirebileceğinizi öğrenin +/ CLI, F #, IronPython, VB, Visual COBOL ve PowerShell."
+title: Dil bağımsızlığı ve dilden bağımsız bileşenler
+description: '.NET, C#, C + gibi birçok desteklenen dilde birinde nasıl geliştirebileceğinizi öğrenin +/ CLI, F #, IronPython, VB, Visual COBOL ve PowerShell.'
 keywords: .NET, .NET core
 author: dotnet-bot
 ms.author: dotnetcontent
@@ -16,11 +16,11 @@ ms.assetid: 2dbed1bc-86f5-43cd-9a57-adbb1c5efba4
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: 0a7a37b1c8eed81866035dc6fb55db89391f25aa
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: 2745bc67c926f50c28f5fdfb122ee94a85f020ec
+ms.sourcegitcommit: 2e8acae16ae802f2d6d04e3ce0a6dbf04e476513
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="language-independence-and-language-independent-components"></a>Dil bağımsızlığı ve dilden bağımsız bileşenler
 
@@ -29,7 +29,7 @@ ms.lasthandoff: 12/23/2017
 > [!NOTE]
 > Bu makalede bu ilk kısmı dilden bağımsız bileşenler - diğer bir deyişle, herhangi bir dilde yazılan uygulamaları tarafından kullanılabilecek bileşenler oluşturma açıklanır. Çeşitli dillerde yazılmış kaynak koddan tek bir bileşen ya uygulaması oluşturabilirsiniz; bkz: [diller arası birlikte çalışabilirlik](#cross-language-interoperability) ikinci bölümü, bu makalenin. 
 
-Tam olarak herhangi bir dilde yazılmış diğer nesnelerle etkileşim kurmak için nesneleri, tüm diller için ortak olan özellikleri arayanlara kullanıma gerekir. Bu ortak bir özellikler kümesi ortak dil belirtimi (CLS tarafından), hangi oluşturulmuş derlemeler için geçerli bir kurallar kümesidir tanımlanır. Ortak dil belirtimi bölüm ı yan tümceleri 7 11 /'ile tanımlanan [ECMA-335 standart: ortak dil altyapısı](http://www.ecma-international.org/publications/standards/Ecma-335.htm). 
+Tam olarak herhangi bir dilde yazılmış diğer nesnelerle etkileşim kurmak için nesneleri, tüm diller için ortak olan özellikleri arayanlara kullanıma gerekir. Bu ortak bir özellikler kümesi ortak dil belirtimi (CLS tarafından), hangi oluşturulmuş derlemeler için geçerli bir kurallar kümesidir tanımlanır. Ortak dil belirtimi bölüm ı yan tümceleri 7 11 /'ile tanımlanan [ECMA-335 standart: ortak dil altyapısı](https://www.ecma-international.org/publications/standards/Ecma-335.htm). 
 
 Bileşeniniz ortak dil belirtimi uyuyorsa, CLS uyumlu olması garanti ve CLS destekleyen tüm programlama dilinde yazılmıştır derlemelerde koddan erişilebilir. Bileşeniniz ortak dil belirtimi derleme zamanında uygulayarak uyup uymadığını belirleyebilirsiniz [CLSCompliantAttribute](xref:System.CLSCompliantAttribute) özniteliği için kaynak kodu. Daha fazla bilgi için bkz: [CLSCompliantAttribute özniteliği](#the-clscompliantattribute-attribute).
 
@@ -73,7 +73,7 @@ Bu makalede:
 
 ## <a name="cls-compliance-rules"></a>CLS uyumluluk kuralları
 
-Bu bölümde, CLS uyumlu bir bileşen oluşturmak için kurallar açıklanmaktadır. Bölüm ı yan tümcesi 11 / kuralları tam bir listesi için bkz [ECMA-335 standart: ortak dil altyapısı](http://www.ecma-international.org/publications/standards/Ecma-335.htm).
+Bu bölümde, CLS uyumlu bir bileşen oluşturmak için kurallar açıklanmaktadır. Bölüm ı yan tümcesi 11 / kuralları tam bir listesi için bkz [ECMA-335 standart: ortak dil altyapısı](https://www.ecma-international.org/publications/standards/Ecma-335.htm).
 
 > [!NOTE]
 > Çerçeveler (dil derleyici oluşturmak için kullandığınız geliştiriciler tüketicilere CLS uyumlu bir bileşen program aracılığıyla erişme (geliştiriciler) uygularken ortak dil belirtimi CLS uyumluluğu için her bir kural açıklanır. CLS-compliant kitaplıklar) ve Extender'larının (dil derleyici veya CLS uyumlu bileşenleri oluşturan bir kod ayrıştırıcı gibi bir araç oluşturan geliştiriciler). Çerçeveler için uygularken bu makalede kurallarında odaklanır. Ancak, bazı Extender'larının için geçerli olan kurallar da kullanılarak oluşturulan derlemeleri uygulayabilir Not [Reflection.Emit](xref:System.Reflection.Emit). 
@@ -158,7 +158,7 @@ Kitaplığın ortak arabirimi aşağıdakilerden oluşur:
 
 * Parametreler ve genel yöntemlerin ortak sınıflar, parametreler ve dönüş türleri ve yöntemleri türetilmiş sınıflara erişilebilir dönüş türü. 
 
-CLS uyumluluğu için kuralları aşağıdaki tabloda listelenmiştir. Kurallar metin alanından verbatim alınır [ECMA-335 standart: ortak dil altyapısı](http://www.ecma-international.org/publications/standards/Ecma-335.htm), telif hakkı 2012 Ecma uluslararası tarafından olduğu. Aşağıdaki bölümlerde bu kuralları hakkında daha ayrıntılı bilgi bulunamadı. 
+CLS uyumluluğu için kuralları aşağıdaki tabloda listelenmiştir. Kurallar metin alanından verbatim alınır [ECMA-335 standart: ortak dil altyapısı](https://www.ecma-international.org/publications/standards/Ecma-335.htm), telif hakkı 2012 Ecma uluslararası tarafından olduğu. Aşağıdaki bölümlerde bu kuralları hakkında daha ayrıntılı bilgi bulunamadı. 
 
 Kategori | Bkz.  | Kural | Kural numarası
 -------- | --- | ---- | -----------
@@ -333,7 +333,7 @@ CLS uyumlu türü | Açıklama
 [Tek](xref:System.Single) | Tek duyarlıklı kayan noktalı değeri
 [Çift](xref:System.Double) | Çift duyarlıklı kayan noktalı değeri
 [Boole değeri](xref:System.Boolean) | TRUE veya false değeri türü 
-[Char](xref:System.Char) | UTF-16 kodlu kod birimi
+[char](xref:System.Char) | UTF-16 kodlu kod birimi
 [Ondalık](xref:System.Decimal) | Olmayan kayan noktalı ondalık sayı
 [IntPtr](xref:System.IntPtr) | İşaretçi veya platform tarafından tanımlanan bir boyut tanıtıcısı
 [Dize](xref:System.String) | Sıfır, bir veya daha fazla karakter nesneleri koleksiyonu 
@@ -617,7 +617,7 @@ public class person
 //    Naming1.cs(6,14): (Location of symbol related to previous warning)
 ```
 
-Ad alanlarını, türleri ve üyeleri, adları gibi Dil tanımlayıcıları programlama gerekir uygun [Unicode standart 3.0, teknik rapor 15, eki 7](http://www.unicode.org/reports/tr15/tr15-18.html). Bunun anlamı:
+Ad alanlarını, türleri ve üyeleri, adları gibi Dil tanımlayıcıları programlama gerekir uygun [Unicode standart 3.0, teknik rapor 15, eki 7](https://www.unicode.org/reports/tr15/tr15-18.html). Bunun anlamı:
 
 * İlk karakteri bir tanımlayıcı olarak herhangi bir Unicode büyük harf, küçük harf, büyük/küçük harf başlık, değiştiricisi, diğer mektup olması veya numarası harf. Unicode karakter kategorileri hakkında daha fazla bilgi için bkz: [System.Globalization.UnicodeCategory](xref:System.Globalization.UnicodeCategory) numaralandırması. 
 
@@ -1630,7 +1630,7 @@ End Module
 '       Outer`1+Inner1B`1[System.String,System.Int32]
 ```
 
-Genel tür adları biçiminde kodlanmış *adı*'*n*, burada *adı* tür adı  *`*  olan bir karakter sabit değeri ve  *n*  türünde bildirilen parametrelerin sayısı veya genel iç içe geçmiş için türleri, yeni sunulan türü parametre sayısı. Bu genel tür adları CLS uyumlu bir Kitaplığı'nda genel türler erişmek için yansıma kullanan geliştiriciler öncelikle ilgisini kodlamadır. 
+Genel tür adları biçiminde kodlanmış *adı*'*n*, burada *adı* tür adı *`* bir karakter değişmez değeri değil ve *n* türünde bildirilen parametrelerin sayısı veya genel iç içe geçmiş için türleri, yeni sunulan türü parametre sayısı. Bu genel tür adları CLS uyumlu bir Kitaplığı'nda genel türler erişmek için yansıma kullanan geliştiriciler öncelikle ilgisini kodlamadır. 
 
 Bir genel kısıtlamalar uyguladıysanız kısıtlamaları da CLS ile uyumlu olması gerektiği kullanılan türleri yazın. Aşağıdaki örnek adlı bir sınıf tanımlar `BaseClass` yani değil CLS ile uyumlu ve adlı genel bir sınıf `BaseCollection` , tür parametresi öğesinden türetilmelidir `BaseClass`. Ancak çünkü `BaseClass` CLS uyumlu olmayan bir uyarı derleyicisi yayar. 
 
@@ -1862,7 +1862,7 @@ End Class
 
 Ortak dil belirtimi, iç içe geçmiş türler için koruyucu örneklemesi başına modeli uygular ve korumalı üyeler. Açık genel türler alanları veya iç içe geçmiş, korumalı bir genel türü belirli bir örnek oluşturma içeren imzaları üyeleriyle gösteremez. Belirli bir örnek oluşturma genel temel sınıf veya arabirim genişletmek olmayan genel türleri, alanlar veya iç içe geçmiş, korumalı bir genel türü farklı bir örnek oluşturma içeren imzaları üyeleriyle gösteremez.
 
-Aşağıdaki örnek, genel bir tür tanımlar `C1<T>`ve korumalı bir sınıf `C1<T>.N`. `C1<T>`iki yöntemi vardır `M1` ve `M2`. Ancak, `M1` döndürmeye çalışır CLS uyumlu olmadığından bir `C1<int>.N` nesnesinin `C1<T>`. İkinci sınıfı `C2`, türetildiği `C1<long>`. İki yöntemi vardır `M3` ve `M4`. `M3`döndürmeye çalışır CLS uyumlu olmadığından bir `C1<int>.N` öğesinin bir alt nesne `C1<long>`. Dil derleyicileri daha kısıtlayıcı olabileceğini unutmayın. Derlemeye çalıştığında bu örnekte, Visual Basic hata görüntüler. `M4`. 
+Aşağıdaki örnek, genel bir tür tanımlar `C1<T>`ve korumalı bir sınıf `C1<T>.N`. `C1<T>` iki yöntemi vardır `M1` ve `M2`. Ancak, `M1` döndürmeye çalışır CLS uyumlu olmadığından bir `C1<int>.N` nesnesinin `C1<T>`. İkinci sınıfı `C2`, türetildiği `C1<long>`. İki yöntemi vardır `M3` ve `M4`. `M3` döndürmeye çalışır CLS uyumlu olmadığından bir `C1<int>.N` öğesinin bir alt nesne `C1<long>`. Dil derleyicileri daha kısıtlayıcı olabileceğini unutmayın. Derlemeye çalıştığında bu örnekte, Visual Basic hata görüntüler. `M4`. 
 
 ```csharp
 using System;
@@ -2582,7 +2582,7 @@ Oluşturucunun ya da CLS uyumlu bir özniteliğin özelliklerini yalnızca şu t
 
 * [Bayt](xref:System.Byte)
 
-* [Char](xref:System.Char)
+* [char](xref:System.Char)
 
 * [Çift](xref:System.Double)
 
