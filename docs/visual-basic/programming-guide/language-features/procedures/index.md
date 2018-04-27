@@ -18,14 +18,14 @@ ms.assetid: 9effbcf0-80a0-4d1a-98f4-2c6920592766
 caps.latest.revision: 16
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: 5487dc7dbe9be50e065610cfd61815242bb74ac0
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 92cb2dd3f356acf89cbe62b5f3f5dc81fce271fc
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="procedures-in-visual-basic"></a>Visual Basic'de Yordamlar
-A *yordam* bloğudur [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] bildirimi deyimi tarafından içine deyimleri (`Function`, `Sub`, `Operator`, `Get`, `Set`) ve eşleşen bir `End` bildirimi. Tüm yürütülebilir deyimlerinde [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] bazı yordam içinde olması gerekir.  
+A *yordam* bildirimi deyimi tarafından içine Visual Basic deyimleri bloğudur (`Function`, `Sub`, `Operator`, `Get`, `Set`) ve eşleşen bir `End` bildirimi. Visual Basic'te tüm executable deyimleri bazı yordam içinde olmalıdır.  
   
 ## <a name="calling-a-procedure"></a>Bir yordam çağırma  
  Başka bir yerde kodda bir yordam çağırma. Bu olarak bilinen bir *yordam çağrısı*. Yordam tamamlandığında çalışıyorsa, bu denetimi olarak bilinen, çağrılan kodu döndürür *kodu çağırma*. Çağıran bir deyim veya bir ifade yordamı adıyla belirtir ve denetim aktardığından deyiminde, kodudur.  
@@ -43,7 +43,7 @@ A *yordam* bloğudur [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] bildirimi deyim
  Çoğu durumda, bir yordam her çağırdığında farklı veri üzerinde çalışması gerekir. Bu bilgiler yordama yordam çağrısı bir parçası olarak geçirebilirsiniz. Sıfır veya daha fazla yordamın tanımlar *parametreleri*, her temsil eden bir değer için geçirmeniz bekler. Yordamı tanımı'ndaki her bir parametreyi karşılık gelen olan bir *bağımsız değişkeni* yordam çağrısında. Bir bağımsız değişkeni için verilen yordam çağrısında karşılık gelen bir parametre geçirin değerini temsil eder.  
   
 ## <a name="types-of-procedures"></a>Yordamlar türleri  
- [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]çeşitli türlerde yordamlar kullanır:  
+ Visual Basic çeşitli türlerde yordamlar kullanır:  
   
 -   [Alt yordamlar](./sub-procedures.md) eylemleri gerçekleştirme ancak çağıran kodu bir değer döndürmüyor.  
   
@@ -71,13 +71,13 @@ A *yordam* bloğudur [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] bildirimi deyim
 -   Bir programda kullanmak için yordamlar geliştirmek sonra diğer programlarla, genellikle az veya hiç değişiklik kullanabilirsiniz. Bu kod yinelemesinden kaçınmak yardımcı olur.  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [Nasıl yapılır: bir yordam oluşturma](./how-to-create-a-procedure.md)  
- [Alt yordamlar](./sub-procedures.md)  
- [İşlev yordamları](./function-procedures.md)  
- [Özellik yordamları](./property-procedures.md)  
- [İşleç yordamları](./operator-procedures.md)  
- [Parametreler ve bağımsız değişkenler](./procedure-parameters-and-arguments.md)  
- [Özyinelemeli yordamlar](./recursive-procedures.md)  
- [Yordam aşırı yüklemesi](./procedure-overloading.md)  
+ [Nasıl yapılır: Yordam Oluşturma](./how-to-create-a-procedure.md)  
+ [Alt Yordamlar](./sub-procedures.md)  
+ [İşlev Yordamları](./function-procedures.md)  
+ [Özellik Yordamları](./property-procedures.md)  
+ [İşleç Yordamları](./operator-procedures.md)  
+ [Yordam Parametreleri ve Bağımsız Değişkenleri](./procedure-parameters-and-arguments.md)  
+ [Özyinelemeli Yordamlar](./recursive-procedures.md)  
+ [Yordam Aşırı Yüklemesi](./procedure-overloading.md)  
  [Visual Basic'de genel yordamlar](../../../../visual-basic/programming-guide/language-features/data-types/generic-procedures.md)  
- [Nesneler ve sınıflar](../../../../visual-basic/programming-guide/language-features/objects-and-classes/index.md)
+ [Nesneler ve Sınıflar](../../../../visual-basic/programming-guide/language-features/objects-and-classes/index.md)

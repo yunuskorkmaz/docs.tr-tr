@@ -1,32 +1,33 @@
 ---
-title: "Giriş etkinliği bekle"
-ms.custom: 
+title: Giriş etkinliği bekle
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: d58c344e-9ee8-4ce2-b199-75b3fe45237f
-caps.latest.revision: "6"
+caps.latest.revision: 6
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: ac05054d56c424ab3f4d1fdfd9c3590aac8b00bb
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: b9e7942ced071a795f1bf408ca4778a216cd85e4
+ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="wait-for-input-activity"></a>Giriş etkinliği bekle
-Bu örnek bir iş akışında adlandırılmış yer işaretleri oluşturulacağını gösterir. [!INCLUDE[wf](../../../../includes/wf-md.md)]bir etkinlik bildirim temelli yer işareti oluşturmak için sağlamaz. Bu nedenle, iş akışında yer işareti oluşturmak istediğinizde, oluşturduğu özel bir aktivite yazmanız gerekir. `WaitForInput` Bu örnekte tanımlanan faaliyet, kullanıcılar bir iş akışındaki bildirimli olarak yer işaretleri oluşturabilmesi için bu işlevselliği sağlar.  
+Bu örnek bir iş akışında adlandırılmış yer işaretleri oluşturulacağını gösterir. Windows Workflow Foundation (WF) bildirim temelli yer işareti oluşturmak için bir etkinlik sağlamaz. Bu nedenle, iş akışında yer işareti oluşturmak istediğinizde, oluşturduğu özel bir aktivite yazmanız gerekir. `WaitForInput` Bu örnekte tanımlanan faaliyet, kullanıcılar bir iş akışındaki bildirimli olarak yer işaretleri oluşturabilmesi için bu işlevselliği sağlar.  
   
 ## <a name="projects-in-this-sample"></a>Bu örnek proje  
   
 |**Proje adı**|**Açıklama**|**Ana dosyaları**|  
 |-|-|-|  
-|WaitForInput|İçeren `WaitForInput` etkinliği ve onun Tasarımcısı|WaitForInput.cs<br /><br /> `WaitForInput`Etkinlik tanımı.|  
+|WaitForInput|İçeren `WaitForInput` etkinliği ve onun Tasarımcısı|WaitForInput.cs<br /><br /> `WaitForInput` Etkinlik tanımı.|  
 |||WaitForInputDesigner.xaml<br /><br /> İçin özel Tasarımcısı `WaitForInput` etkinlik.|  
 |||TypeToFirstGenericArgumentConverter.cs<br /><br /> Etkinlik Tasarımcısı'nda genel türü güncelleştirmek için kullanılan WPF türü dönüştürücü.|  
 |WaitForInputTestClient|Yapılandırır ve iş akışı Tasarımcısı'nı kullanarak birkaç WaitForInput etkinlikleri kullanarak bir iş akışı çalıştıran örnek istemci uygulaması.|Sequence1.xaml<br /><br /> Kullanan bir sıralı iş akışı `WaitForInput` etkinlik.|  

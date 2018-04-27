@@ -14,11 +14,11 @@ ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: 788cc6b25e4faa8a680f5ec23d88a5d18d0a7c87
-ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
+ms.openlocfilehash: 866fe3ebcec295b57444f937b3b6fd6677bfe0f4
+ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="debugging-workflows"></a>İş akışları hata ayıklama
 [!INCLUDE[netfx_current_long](../../../includes/netfx-current-long-md.md)] geliştirme ortamı'ndan çalışan iş akışları hata ayıklama için çeşitli seçenekler sunar. İş Akışı Tasarımcısı'nda, XAML ve kod hata ayıklaması yapılabilir.  
@@ -36,7 +36,7 @@ ms.lasthandoff: 04/26/2018
  İş akışı ayrıca hata ayıklama için bir işlem eklemek için Visual Studio'nun altyapısını kullanarak destekler. Bu, Internet Information Services (IIS) 7.0 gibi farklı bir konak ortamında çalışan bir iş akışındaki hata ayıklamak iş akışı yazarı sağlar.  
   
 ## <a name="remote-debugging"></a>Uzaktan Hata Ayıklama  
- [!INCLUDE[wf](../../../includes/wf-md.md)] Uzaktan hata ayıklama için Visual Studio bileşenlerle uzaktan hata ayıklama ile aynı işlevleri. Uzaktan hata ayıklama kullanma hakkında daha fazla bilgi için bkz: [nasıl yapılır: uzaktan hata ayıklama etkinleştirme](http://go.microsoft.com/fwlink/?LinkId=196257).  
+ Windows Workflow Foundation (WF) uzaktan hata ayıklama için Visual Studio bileşenlerle uzaktan hata ayıklama ile aynı işlevleri. Uzaktan hata ayıklama kullanma hakkında daha fazla bilgi için bkz: [nasıl yapılır: uzaktan hata ayıklama etkinleştirme](http://go.microsoft.com/fwlink/?LinkId=196257).  
   
 > [!NOTE]
 >  İş akışı uygulaması x86 hedefliyorsa mimarisi ve 64 bit işletim sistemi çalıştıran bir bilgisayarda uzaktan hata ayıklama Visual Studio uzak bilgisayarda yüklü veya iş akışı uygulaması için hedef olarak değiştirildiğinde sürece çalışmaz sonra barındırılan **Tüm CPU**.  

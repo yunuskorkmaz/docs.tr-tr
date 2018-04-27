@@ -1,29 +1,30 @@
 ---
-title: "WF izleme kullanarak veri ayıklamak"
-ms.custom: 
+title: WF izleme kullanarak veri ayıklamak
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: e30c68f5-8c6a-495a-bd20-667a4364c68e
-caps.latest.revision: "14"
+caps.latest.revision: 14
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 4d6c269dc9c8b5a0050cfc3ffcefc3160b07c897
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 44e49aa0c9b3b9b53b921fe90838875ab34b7772
+ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="extract-wf-data-using-tracking"></a>WF izleme kullanarak veri ayıklamak
 Bu örnek, iş akışı iş akışı değişkenleri ve bağımsız değişkenler etkinliklerden ayıklamak için izleme kullanımı gösterilmiştir. Ayrıca, kaydeder ve veri yükü özel izleme kayıtları içinde ayıklama izleme için ek açıklamalar eklenmesi gösterilmektedir. Örnek veri akışından ayıklamak için olay izleme için Windows (ETW) izleme katılımcı kullanır.  
   
 ## <a name="sample-details"></a>Örnek Ayrıntıları  
- [!INCLUDE[wf](../../../../includes/wf-md.md)]bir iş akışı örneğini yürütmeyi görünürlük elde etmek için izleme sağlar. İzleme çalışma zamanı iş akışı iş akışı yürütme sırasında kayıtları izleme yayar. Kayıt iş akışı izleme yanı sıra, iş akışını iş akışı örneği verileri ayıklanabilir. Aşağıdaki listede kayıtları izleme ayıklanabilir veri türlerini Ayrıntılar verilmiştir:  
+ Windows Workflow Foundation (WF) iş akışı örneğini yürütmeyi görünürlük elde etmek için izleme sağlar. İzleme çalışma zamanı iş akışı iş akışı yürütme sırasında kayıtları izleme yayar. Kayıt iş akışı izleme yanı sıra, iş akışını iş akışı örneği verileri ayıklanabilir. Aşağıdaki listede kayıtları izleme ayıklanabilir veri türlerini Ayrıntılar verilmiştir:  
   
 1.  Bir etkinlik ve etkinliği yürütülürken kayıtları izleme değişkenler iş akışı.  
   

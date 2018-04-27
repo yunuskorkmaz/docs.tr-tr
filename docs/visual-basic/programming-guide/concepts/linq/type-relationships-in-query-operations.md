@@ -1,12 +1,13 @@
 ---
-title: "LINQ Sorgu İşlemlerinde Tür İlişkileri (Visual Basic)"
-ms.custom: 
+title: LINQ Sorgu İşlemlerinde Tür İlişkileri (Visual Basic)
+ms.custom: ''
 ms.date: 07/20/2015
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- devlang-visual-basic
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - variable relationships [LINQ in Visual Basic]
@@ -18,14 +19,14 @@ helpviewer_keywords:
 - inferring type information [LINQ in Visual Basic]
 - relationships [LINQ in Visual Basic]
 ms.assetid: b5ff4da5-f3fd-4a8e-aaac-1cbf52fa16f6
-caps.latest.revision: "34"
+caps.latest.revision: 34
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: 1b93188475dd2bb00aea044ff178028eb87e00d4
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: e38f51d77869dcca8a81fdcbc70aed32c4146935
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="type-relationships-in-query-operations-visual-basic"></a>LINQ Sorgu İşlemlerinde Tür İlişkileri (Visual Basic)
 Kullanılan değişkenleri [!INCLUDE[vbteclinqext](~/includes/vbteclinqext-md.md)] sorgu işlemleri kesin türü belirtilmiş ve birbiriyle uyumlu olması gerekir. Güçlü yazarak, veri kaynağı, sorgu ve sorgu yürütmesi kullanılır. Aşağıdaki çizimde açıklamak için kullanılan terimler tanımlayan bir [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] sorgu. Bir sorgunun bölümlerini hakkında daha fazla bilgi için bkz: [temel sorgu işlemleri (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/basic-query-operations.md).  
@@ -35,7 +36,7 @@ LINQ Sorgu bölümleri
   
  Sorgudaki Aralık değişkeninin türü veri kaynağındaki öğelerin türü ile uyumlu olmalıdır. Sorgu değişkeninin türü tanımlanan dizisi öğesi ile uyumlu olmalıdır `Select` yan tümcesi. Son olarak, sıra öğelerin türü ayrıca kullanılan for döngüsü denetim değişkeni türü ile uyumlu olmalıdır `For Each` Sorguyu yürüten deyimi. Bu güçlü yazarak türü hataları tanımlaması derleme zamanında kolaylaştırır.  
   
- [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]güçlü yazarak yerel türü çıkarımı olarak da bilinen uygulayarak kullanışlı hale getirir *örtülü yazma*. Özellik, önceki örnekte kullanılır ve bunu genelinde kullanılan görür [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] örnekler ve belgeler. Visual Basic'te yerel türü çıkarımı yalnızca kullanılarak gerçekleştirilen bir `Dim` deyimi olmadan bir `As` yan tümcesi. Aşağıdaki örnekte, `city` bir dize olarak kesin türü belirtilmiş.  
+ Visual Basic hale getirir yazmaya güçlü uygun yerel türü çıkarımı olarak da bilinen uygulayarak *örtülü yazma*. Özellik, önceki örnekte kullanılır ve bunu genelinde kullanılan görür [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] örnekler ve belgeler. Visual Basic'te yerel türü çıkarımı yalnızca kullanılarak gerçekleştirilen bir `Dim` deyimi olmadan bir `As` yan tümcesi. Aşağıdaki örnekte, `city` bir dize olarak kesin türü belirtilmiş.  
   
  [!code-vb[VbLINQTypeRels#1](../../../../visual-basic/programming-guide/concepts/linq/codesnippet/VisualBasic/type-relationships-in-query-operations_1.vb)]  
   
@@ -128,8 +129,8 @@ Next
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
  [Visual Basic'te Lınq'e Başlarken](../../../../visual-basic/programming-guide/concepts/linq/getting-started-with-linq.md)  
- [Anonim türler](../../../../visual-basic/programming-guide/language-features/objects-and-classes/anonymous-types.md)  
- [Yerel tür çıkarımı](../../../../visual-basic/programming-guide/language-features/variables/local-type-inference.md)  
+ [Anonim Tipler](../../../../visual-basic/programming-guide/language-features/objects-and-classes/anonymous-types.md)  
+ [Yerel Çıkarım](../../../../visual-basic/programming-guide/language-features/variables/local-type-inference.md)  
  [Visual Basic'de LINQ'e giriş](../../../../visual-basic/programming-guide/language-features/linq/introduction-to-linq.md)  
  [LINQ](../../../../visual-basic/programming-guide/language-features/linq/index.md)  
- [Sorguları](../../../../visual-basic/language-reference/queries/queries.md)
+ [Sorgular](../../../../visual-basic/language-reference/queries/queries.md)

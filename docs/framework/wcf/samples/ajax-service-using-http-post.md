@@ -1,24 +1,26 @@
 ---
 title: HTTP POST Kullanan AJAX Hizmeti
-ms.custom: 
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 1ac80f20-ac1c-4ed1-9850-7e49569ff44e
-caps.latest.revision: "28"
+caps.latest.revision: 28
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: c2447f641748cdcc3419fda2a6ae8f02d68ed98e
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 1446fadeb249d91f0eb3e65b1155f00090441a5a
+ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="ajax-service-using-http-post"></a>HTTP POST Kullanan AJAX Hizmeti
 Bu örnek nasıl kullanılacağı ortaya [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] oluşturmak için bir [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] HTTP POST kullanan zaman uyumsuz JavaScript ve XML (AJAX) hizmet. Bir AJAX hizmeti bir Web tarayıcısı istemciden temel JavaScript kodu kullanarak erişebilirsiniz biridir. Bu örnek derlemeler [temel AJAX hizmeti](../../../../docs/framework/wcf/samples/basic-ajax-service.md) örnek; iki örnek arasındaki tek fark, HTTP POST HTTP GET yerine kullanılmasıdır.  
@@ -31,19 +33,20 @@ Bu örnek nasıl kullanılacağı ortaya [!INCLUDE[indigo1](../../../../includes
  Aşağıdaki örnek hizmetinde bir [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] hizmeti ile AJAX özgü kodu yok.  
   
  Varsa <xref:System.ServiceModel.Web.WebInvokeAttribute> özniteliği üzerinde bir işlemi, uygulanan veya <xref:System.ServiceModel.Web.WebGetAttribute> özniteliği uygulanmamış, varsayılan HTTP fiili ("POST") kullanılır. POST istekleri GET istekleri oluşturmak için daha zor olan ancak önbelleğe alınmaz; POST istekleri önbelleğe alma uygun olduğu tüm işlemler için kullanın.  
-  
-```  
+
+```csharp
 [ServiceContract(Namespace = "PostAjaxService")]  
-    public interface ICalculator  
-    {        [WebInvoke]  
-        double Add(double n1, double n2);  
-        //Other operations omitted…  
-    }  
-```  
-  
+public interface ICalculator  
+{
+    [WebInvoke]  
+    double Add(double n1, double n2);  
+    //Other operations omitted…  
+}
+```
+
  Kullanarak hizmette bir AJAX uç noktası oluşturma <xref:System.ServiceModel.Activation.WebScriptServiceHostFactory>, yalnızca temel AJAX hizmeti örneği olduğu gibi.  
   
- GET isteklerinin tersine, tarayıcı POST Hizmetleri'nden çağıramaz. Örneğin, posta hizmeti beklediği bir hata http://localhost/ServiceModelSamples/service.svc/Add?n1=100&n2=200 sonuçlarında gezinme `n1` ve `n2` ileti gövdesi içinde gönderilmek üzere parametreleri — JSON biçiminde — URL içinde değil.  
+ GET isteklerinin tersine, tarayıcı POST Hizmetleri'nden çağıramaz. Örneğin, gezinme http://localhost/ServiceModelSamples/service.svc/Add?n1=100&n2=200 POST hizmet beklediği bir hatayla sonuçlanır `n1` ve `n2` ileti gövdesi içinde gönderilmek üzere parametreleri — JSON biçiminde — ve URL içinde değil.  
   
  İstemci Web sayfası PostAjaxClientPage.aspx kullanıcı işlemi düğmeleri sayfasında birini tıkladığında hizmetini çağırmak için ASP.NET kodu içerir. Hizmet yanıt olarak aynı şekilde [temel AJAX hizmeti](../../../../docs/framework/wcf/samples/basic-ajax-service.md) GET isteği ile örnek.  
   
@@ -62,6 +65,6 @@ Bu örnek nasıl kullanılacağı ortaya [!INCLUDE[indigo1](../../../../includes
   
 2.  Çözüm PostAjaxService.sln açıklandığı gibi yapı [Windows Communication Foundation örnekleri derleme](../../../../docs/framework/wcf/samples/building-the-samples.md).  
   
-3.  İçin http://localhost/ServiceModelSamples/PostAjaxClientPage.aspx gidin (PostAjaxClientPage.aspx proje dizininden tarayıcıda aç değil).  
+3.  Gidin http://localhost/ServiceModelSamples/PostAjaxClientPage.aspx (PostAjaxClientPage.aspx proje dizininden tarayıcıda aç değil).  
   
 ## <a name="see-also"></a>Ayrıca Bkz.

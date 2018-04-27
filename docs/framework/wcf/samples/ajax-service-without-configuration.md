@@ -1,24 +1,26 @@
 ---
-title: "Yapılandırma Olmadan AJAX Hizmeti"
-ms.custom: 
+title: Yapılandırma Olmadan AJAX Hizmeti
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: e6db7acd-5679-45d4-b98a-8449c6873838
-caps.latest.revision: "23"
+caps.latest.revision: 23
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 13f74a69e05c419cc76cc8df8f58d3e3385ab35f
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.workload:
+- dotnet
+ms.openlocfilehash: ae16dc38c5508eac4a94d464e818f0b97d3b9e3b
+ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="ajax-service-without-configuration"></a>Yapılandırma Olmadan AJAX Hizmeti
 Bu örnek nasıl kullanılacağı ortaya [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] herhangi bir yapılandırma ayarı kullanmadan bir temel ASP.NET zaman uyumsuz JavaScript ve XML (AJAX) hizmeti (bir Web tarayıcısı istemciden JavaScript kodu kullanarak erişebilirsiniz hizmeti) oluşturmak için. Hizmet otomatik olarak bir AJAX uç noktayı etkinleştirme .svc dosyasında özel sözdizimini kullanır.  
@@ -29,17 +31,17 @@ Bu örnek nasıl kullanılacağı ortaya [!INCLUDE[indigo1](../../../../includes
 >  Kurulum yordamı ve yapı yönergeleri Bu örnek için bu konunun sonunda yer alır.  
   
  Bu örnek AJAX hizmeti kullanarak HTTP POST oluşturur. Bölümünde açıklandığı gibi [temel AJAX hizmeti](../../../../docs/framework/wcf/samples/basic-ajax-service.md) örnek, <xref:System.ServiceModel.Activation.WebScriptServiceHostFactory> hizmet barındırmak için kullanılır.  
-  
-```  
+
+```svc
 <%ServiceHost  
     language=c#  
     Debug="true"  
     Service="Microsoft.Ajax.Samples.CalculatorService  
     Factory="System.ServiceModel.Activation.WebScriptServiceHostFactory"  
 %>  
-```  
-  
- <xref:System.ServiceModel.Activation.WebScriptServiceHostFactory>otomatik olarak ekler bir <xref:System.ServiceModel.Description.WebScriptEndpoint> hizmet. Hiçbir yapılandırma değişikliği uç noktasına yapılması gerekiyorsa \<sistem. ServiceModel > bölümüne tamamen kaldırılabilir hizmeti için Web.config dosyasından. Web.config dosyası ConfigFreeClientPage.aspx tarafından kullanılan bazı ASP.NET ayarları içerir. Durum değildi, tüm Web.config dosyası kaldırılamadı.  
+```
+
+ <xref:System.ServiceModel.Activation.WebScriptServiceHostFactory> otomatik olarak ekler bir <xref:System.ServiceModel.Description.WebScriptEndpoint> hizmet. Hiçbir yapılandırma değişikliği uç noktasına yapılması gerekiyorsa `<system.ServiceModel>` bölüm tamamen kaldırılabilir hizmeti için Web.config dosyasından. Web.config dosyası ConfigFreeClientPage.aspx tarafından kullanılan bazı ASP.NET ayarları içerir. Durum değildi, tüm Web.config dosyası kaldırılamadı.  
   
 > [!IMPORTANT]
 >  Örnekler, bilgisayarınızda yüklü. Devam etmeden önce aşağıdaki (varsayılan) dizin denetleyin.  
@@ -56,7 +58,7 @@ Bu örnek nasıl kullanılacağı ortaya [!INCLUDE[indigo1](../../../../includes
   
 2.  Çözüm ConfigFreeAjaxService.sln açıklandığı gibi yapı [Windows Communication Foundation örnekleri derleme](../../../../docs/framework/wcf/samples/building-the-samples.md).  
   
-3.  İçin http://localhost/ServiceModelSamples/ConfigFreeClientPage.aspx gidin (ConfigFreeClientPage.aspx tarayıcıda proje dizininde açık değil).  
+3.  Gidin http://localhost/ServiceModelSamples/ConfigFreeClientPage.aspx (ConfigFreeClientPage.aspx tarayıcıda proje dizininde açık değil).  
   
 > [!NOTE]
 >  Lütfen bu örnek çalıştırırken, anonim kimlik doğrulaması ve Windows kimlik doğrulaması aynı anda IIS ServiceModelSamples klasörü için etkin olmadığını emin olun. Lütfen bu durumda, Windows kimlik doğrulamasını devre dışı bırakın. Örnek çalıştırdıktan sonra Windows kimlik doğrulamasını etkinleştirmek ve "iisreset" çalıştırın.  

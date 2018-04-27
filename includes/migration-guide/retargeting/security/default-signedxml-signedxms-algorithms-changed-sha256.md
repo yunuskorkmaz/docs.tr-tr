@@ -1,0 +1,11 @@
+### <a name="default-signedxml-and-signedxms-algorithms-changed-to-sha256"></a>SHA256 için değiştirilen varsayılan SignedXML ve SignedXMS algoritmaları
+
+|   |   |
+|---|---|
+|Ayrıntılar|.NET Framework 4.7 ve önceki sürümlerinde, SHA1 için bazı işlemleri için varsayılan SignedXML ve SignedCMS. .NET Framework 4.7.1 ile başlayarak, SHA256, bu işlemler için varsayılan olarak etkindir. Bu değişiklik, SHA1 artık güvenli olacak şekilde olduğu kabul edildiği için gereklidir.|
+|Öneri|Varsayılan olarak SHA1 (güvenli olmayan) veya SHA256 kullanılıp kullanılmadığını denetlemek için iki yeni içerik anahtarı değerleri şunlardır:<ul><li>Switch.System.Security.Cryptography.Xml.UseInsecureHashAlgorithms</li><li>Switch.System.Security.Cryptography.Pkcs.UseInsecureHashAlgorithms</li></ul>SHA256 kullanımını istenmeyen, ise, hedef .NET Framework'ü 4.7.1 ve sonraki sürümlerde, varsayılan SHA1 için aşağıdaki yapılandırma ekleyerek geri yükleyebilmenizi uygulamalar için geçiş için [çalışma zamanı](~/docs/framework/configure-apps/file-schema/runtime/runtime-element.md) bölümü, uygulama yapılandırması dosyası:<pre><code class="language-xml">&lt;AppContextSwitchOverrides value=&quot;Switch.System.Security.Cryptography.Xml.UseInsecureHashAlgorithms=true;Switch.System.Security.Cryptography.Pkcs.UseInsecureHashAlgorithms=true&quot; /&gt;&#13;&#10;</code></pre>.NET Framework 4.7 ve önceki sürümlerini hedefleyen uygulamalar için aşağıdaki yapılandırma anahtarı ekleyerek bu değişikliği veritabanına seçebilirsiniz [çalışma zamanı](~/docs/framework/configure-apps/file-schema/runtime/runtime-element.md) uygulama yapılandırma dosyası bölümünü:<pre><code class="language-xml">&lt;AppContextSwitchOverrides value=&quot;Switch.System.Security.Cryptography.Xml.UseInsecureHashAlgorithms=false;Switch.System.Security.Cryptography.Pkcs.UseInsecureHashAlgorithms=false&quot; /&gt;&#13;&#10;</code></pre>|
+|Kapsam|Küçük|
+|Sürüm|4.7.1|
+|Tür|Yeniden hedefleme|
+|Etkilenen API'leri|<ul><li><xref:System.Security.Cryptography.Pkcs.CmsSigner?displayProperty=nameWithType></li><li><xref:System.Security.Cryptography.Xml.SignedXml?displayProperty=nameWithType></li><li><xref:System.Security.Cryptography.Xml.Reference?displayProperty=nameWithType></li></ul>|
+

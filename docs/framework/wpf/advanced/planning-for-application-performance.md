@@ -1,27 +1,29 @@
 ---
-title: "Uygulama Performansını Planlama"
-ms.custom: 
+title: Uygulama Performansını Planlama
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-wpf
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-wpf
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - applications [WPF], optimizing
 - WPF application [WPF], optimizing
 ms.assetid: c91bd0c5-a193-46ff-9da1-eb7a3a76a3b3
-caps.latest.revision: "6"
+caps.latest.revision: 6
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 6bdb140d90de02fa817c55a05f40e57fcd0d636c
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 15130ac57b0df2ab1632ad8ec31ae5e350afdfec
+ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="planning-for-application-performance"></a>Uygulama Performansını Planlama
 Performans hedefleriniz elde başarısı ne kadar iyi performans stratejinizi geliştirin bağlıdır. Planlama herhangi bir ürün geliştirme ilk aşamasıdır. Bu konu, iyi bir performans stratejisi geliştirme için birkaç basit kuralları açıklar.  
@@ -36,12 +38,12 @@ Performans hedefleriniz elde başarısı ne kadar iyi performans stratejinizi ge
  Her zaman ölçme, araştırma, uygulama geliştirme döngüsü sırasında daraltmayı/düzeltme süreçlerini sürdürün. Başlangıçtan itibaren geliştirme döngüsü sonuna, güvenilir ve kararlı bir ortamda, uygulamanızın performansını ölçmek gerekir. Dış faktörler tarafından neden değişkenlik kaçınmalısınız. Örneğin, performansı test edilirken virüsten koruma veya SMS gibi herhangi bir otomatik güncelleştirmeyi devre dışı bırakma, test sonuçları sırada değil etkisi performans. Uygulamanızın performansını ölçülen sonra büyük yenilikleri neden olacak değişiklikleri tanımlamanız gerekir. Uygulamanızı değiştirdiğinizde döngüyü yeniden başlatın.  
   
 ## <a name="make-performance-tuning-an-iterative-process"></a>Performans yinelemeli süreç ayarlama yapmak  
- Kullanacağınız her bir özelliğin göreli maliyetini bilmeniz gerekir. Örneğin, yansıma kullanımını [!INCLUDE[TLA#tla_avalonwinfx](../../../../includes/tlasharptla-avalonwinfx-md.md)] genellikle performans dikkatli kullanmak istersiniz, bilgi işlem kaynakları açısından yoğun içindir. Yalnızca uygulamanızı performans gereksinimlerine, kullandığınız özellikleri performans taleplerini dengelemek için dikkatli olmalıdır, bu yansıma, kullanımını önlemek anlamına gelmez.  
+ Kullanacağınız her bir özelliğin göreli maliyetini bilmeniz gerekir. Örneğin, Microsoft .NET Framework'te yansıma kullanımı, genellikle dikkatli kullanmak istersiniz bilgi işlem kaynakları açısından yoğun performans bağlıdır. Yalnızca uygulamanızı performans gereksinimlerine, kullandığınız özellikleri performans taleplerini dengelemek için dikkatli olmalıdır, bu yansıma, kullanımını önlemek anlamına gelmez.  
   
 ## <a name="build-towards-graphical-richness"></a>Grafik zenginliğini derleme  
  Doğrultusunda ölçeklendirilebilir bir yaklaşım oluşturmak için bir anahtar teknik [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] uygulama performansını grafik zenginliğini ve karmaşıklık doğrultusunda yapı etmektir. Her zaman senaryonun hedeflerinize ulaşmak için en az başarım yoğunluğu olan kaynakları kullanarak başlayın. Bu amaca sonra doğru grafik zenginliğini her zaman senaryonun hedeflerinize göz önünde bulundurarak daha fazla performans yoğun özelliklerini kullanarak oluşturun. Unutmayın, [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] çok zengin bir platformun ve çok zengin grafik özellikleri sağlar. Performans Düşünmeden yoğun özellikleri kullanarak, genel uygulama performansını olumsuz yönde etkileyebilir.  
   
- [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]denetimleri wide yayılan özelleştirmesi, denetim davranışlarını değiştirmeden, görünüm için izin vererek kendiliğinden genişletilebilir. Stiller, veri şablonları ve denetim şablonlarından yararlanarak, oluşturabilir ve artımlı olarak özelleştirilebilen [!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)] performans gereksinimlerinizi uyum sağlar.  
+ [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] denetimleri wide yayılan özelleştirmesi, denetim davranışlarını değiştirmeden, görünüm için izin vererek kendiliğinden genişletilebilir. Stiller, veri şablonları ve denetim şablonlarından yararlanarak, oluşturabilir ve artımlı olarak özelleştirilebilen [!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)] performans gereksinimlerinizi uyum sağlar.  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
  [WPF Uygulama Performansını İyileştirme](../../../../docs/framework/wpf/advanced/optimizing-wpf-application-performance.md)  

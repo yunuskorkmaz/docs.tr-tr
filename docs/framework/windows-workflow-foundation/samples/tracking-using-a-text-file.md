@@ -8,20 +8,20 @@ ms.suite: ''
 ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 56a82682-73c2-4b91-a206-4d8bb12c561b
-caps.latest.revision: ''
+caps.latest.revision: 13
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: f1d4b3f319d86dd463dabc8b71be7c76c7fef41f
-ms.sourcegitcommit: c883637b41ee028786edceece4fa872939d2e64c
+ms.openlocfilehash: 32aab8ae875158fed62c70cbc2d7506ba6c8d3c5
+ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/23/2018
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="tracking-using-a-text-file"></a>Bir metin dosyası kullanarak izleme
-Bu örnek izlemede genişletmek gösterilmiştir [!INCLUDE[wf](../../../../includes/wf-md.md)] özel izleme katılımcı oluşturarak. İzleme katılımcıları yayılan gibi çalışma zamanını şuradan izleme kayıtları aldığınız .NET Framework sınıflarıdır. Hangi hedef senaryonuz için gerekli izleme olayları taşıma için bir izleme katılımcı oluşturabilirsiniz. Örneğin, (Windows için olay izleme) ETW İzleme katılımcı parçası olarak sağlanan [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)]. Bu örnekte izleme katılımcı kayıtları XML biçiminde bir metin dosyasına yazar.  
+Bu örnek, bir özel izleme katılımcı oluşturarak izleme Windows Workflow Foundation (WF) genişletmek gösterilmiştir. İzleme katılımcıları yayılan gibi çalışma zamanını şuradan izleme kayıtları aldığınız .NET Framework sınıflarıdır. Hangi hedef senaryonuz için gerekli izleme olayları taşıma için bir izleme katılımcı oluşturabilirsiniz. Örneğin, (Windows için olay izleme) ETW İzleme katılımcı parçası olarak sağlanan [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)]. Bu örnekte izleme katılımcı kayıtları XML biçiminde bir metin dosyasına yazar.  
   
 ## <a name="sample-details"></a>Örnek Ayrıntıları  
  İzleme katılımcının sağlamlık ve yararlılığını iyileştirmek için bazı ek adımlar düzgün çalışma zamanına izleme katılımcı kablo tamamlanması gerekir. Aşağıdaki tabloda, en iyi yöntemlerle uyumlu bir izleme katılımcı oluşturmak için bu örnekte kullanılan sınıflar açıklanmaktadır.  
@@ -66,7 +66,7 @@ Bu örnek izlemede genişletmek gösterilmiştir [!INCLUDE[wf](../../../../inclu
   
 5.  Tarayıcı görüntüler **StockPriceService** sayfası, yerel hizmet wsdl adresini içerir. Bu adresini kopyalayın.  
   
-     Yerel Hizmet wsdl adresi http://localhost:53797/StockPriceService.xamlx?wsdl örnektir.  
+     Yerel Hizmet wsdl adresi örneğidir http://localhost:53797/StockPriceService.xamlx?wsdl.  
   
 6.  Kullanarak [!INCLUDE[fileExplorer](../../../../includes/fileexplorer-md.md)]gidin, [!INCLUDE[vs2010](../../../../includes/vs2010-md.md)] (varsayılan yükleme klasörüdür %SystemDrive%\Program Files\Microsoft Visual Studio 10.0) klasör. Ardından Common7\IDE\ alt klasörü bulun.  
   

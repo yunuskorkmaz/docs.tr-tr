@@ -1,11 +1,12 @@
 ---
 title: Alt Yordamlar (Visual Basic)
-ms.custom: 
+ms.custom: ''
 ms.date: 07/20/2015
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- devlang-visual-basic
 ms.topic: article
 helpviewer_keywords:
 - Sub procedures [Visual Basic], about Sub procedures
@@ -17,17 +18,17 @@ helpviewer_keywords:
 - procedures [Visual Basic], Sub
 - syntax [Visual Basic], Sub procedures
 ms.assetid: 6a0a4958-ed0a-4d3d-8d31-0772c82bda58
-caps.latest.revision: "21"
+caps.latest.revision: 21
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: 4e20e0dd5ff9e2b931e5792bebb3144930826f89
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 7258d57d2677042a2020097893a4f7a0adb35508
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="sub-procedures-visual-basic"></a>Alt Yordamlar (Visual Basic)
-A `Sub` yordamdır bir dizi [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] deyimleri içine tarafından `Sub` ve `End Sub` deyimleri. `Sub` Yordamı bir görevi gerçekleştirir ve çağrıyı yapan kod denetim verir, ancak çağıran kodu için bir değer döndürmüyor.  
+A `Sub` yordamdır bir dizi kapsadığı Visual Basic deyimi `Sub` ve `End Sub` deyimleri. `Sub` Yordamı bir görevi gerçekleştirir ve çağrıyı yapan kod denetim verir, ancak çağıran kodu için bir değer döndürmüyor.  
   
  Yordam çağrıldığında, her zaman kendi deyimleri, sonra ilk yürütülebilir ifadesiyle başlayan yürütülür `Sub` deyimi ve ilk ile bitiş `End Sub`, `Exit Sub`, veya `Return` deyimiyle karşılaşıldı.  
   
@@ -38,7 +39,7 @@ A `Sub` yordamdır bir dizi [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] deyimler
 ## <a name="declaration-syntax"></a>Bildirim Sözdizimi  
  Bildirme sözdizimi bir `Sub` yordam aşağıdaki gibidir:  
   
- `[`*değiştiricileri* `] Sub` *subname* `[(` *parametreListesi*  `)]`  
+ `[` *değiştiriciler* `] Sub` *subname* `[(` *parametreListesi*  `)]`  
   
  `' Statements of the Sub procedure.`  
   
@@ -65,7 +66,7 @@ A `Sub` yordamdır bir dizi [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] deyimler
   
  Çağrı sözdizimi bir `Sub` yordam aşağıdaki gibidir:  
   
- `[Call]`  *subname* `[(` *bağımsızdeğişkenListesi*`)]`  
+ `[Call]`  *subname* `[(` *bağımsızdeğişkenListesi* `)]`  
   
  Arayabileceğiniz bir `Sub` yönteminden tanımladığı sınıfı dışında. İlk olarak, kullanmak zorunda `New` sınıfının bir örneğini oluşturmak veya bir yöntem çağrısı için anahtar sözcüğü sınıfının bir örneğini döndürür. Daha fazla bilgi için bkz: [yeni işleç](../../../../visual-basic/language-reference/operators/new-operator.md). Ardından, çağırmak için aşağıdaki söz dizimini kullanabilirsiniz `Sub` örneği nesnesi üzerinde yöntemi:  
   
@@ -81,11 +82,11 @@ A `Sub` yordamdır bir dizi [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] deyimler
  [!code-vb[VbVbcnProcedures#3](./codesnippet/VisualBasic/sub-procedures_2.vb)]  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [Yordamları](./index.md)  
- [İşlev yordamları](./function-procedures.md)  
- [Özellik yordamları](./property-procedures.md)  
- [İşleç yordamları](./operator-procedures.md)  
- [Parametreler ve bağımsız değişkenler](./procedure-parameters-and-arguments.md)  
- [Sub deyimi](../../../../visual-basic/language-reference/statements/sub-statement.md)  
- [Nasıl yapılır: bir değer döndürmeyen bir yordam çağırma](./how-to-call-a-procedure-that-does-not-return-a-value.md)  
+ [Yordamlar](./index.md)  
+ [İşlev Yordamları](./function-procedures.md)  
+ [Özellik Yordamları](./property-procedures.md)  
+ [İşleç Yordamları](./operator-procedures.md)  
+ [Yordam Parametreleri ve Bağımsız Değişkenleri](./procedure-parameters-and-arguments.md)  
+ [Sub Deyimi](../../../../visual-basic/language-reference/statements/sub-statement.md)  
+ [Nasıl yapılır: Değer Döndürmeyen Bir Yordam Çağırma](./how-to-call-a-procedure-that-does-not-return-a-value.md)  
  [Nasıl yapılır: Visual Basic'te bir olay işleyicisi çağırma](./how-to-call-an-event-handler.md)

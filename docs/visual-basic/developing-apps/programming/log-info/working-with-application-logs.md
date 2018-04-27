@@ -1,25 +1,26 @@
 ---
-title: "Visual Basic'te Uygulama Günlükleriyle Çalışma"
-ms.custom: 
+title: Visual Basic'te Uygulama Günlükleriyle Çalışma
+ms.custom: ''
 ms.date: 07/20/2015
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- devlang-visual-basic
 ms.topic: article
 helpviewer_keywords:
 - logs, application
 - application event logs, Visual Basic
 - application event logs
 ms.assetid: 2581afd1-5791-4bc4-86b2-46244e9fe468
-caps.latest.revision: "21"
+caps.latest.revision: 21
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: ea5f3699ca5a1b6b0859ac266656deb933839d3d
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 40cad53cd9283a99a93cde79616151e77489e7bb
+ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="working-with-application-logs-in-visual-basic"></a>Visual Basic'te Uygulama Günlükleriyle Çalışma
 `My.Applicaton.Log` Ve `My.Log` nesneleri kolaylaştırır günlüğe kaydetme ve izleme bilgilerini günlüklere yazılır.  
@@ -38,7 +39,7 @@ ms.lasthandoff: 11/21/2017
 ## <a name="where-messages-are-logged"></a>İleti günlüğe nerede kaydedildiğini  
  Derleme herhangi bir yapılandırma dosyası varsa `My.Application.Log` ve `My.Log` nesneleri yazmak için uygulamanın hata ayıklama çıktısı (aracılığıyla <xref:System.Diagnostics.DefaultTraceListener> sınıfı). Ayrıca, `My.Application.Log` nesneyi derlemenin günlük dosyasına yazar (aracılığıyla <xref:Microsoft.VisualBasic.Logging.FileLogTraceListener> sınıfı), sırada `My.Log` nesnesi Yazar ASP.NET Web sayfasının çıkış (aracılığıyla <xref:System.Web.WebPageTraceListener> sınıfı).  
   
- Hata ayıklama çıktısı görüntülenebilir [!INCLUDE[vsprvs](~/includes/vsprvs-md.md)] **çıkış** uygulamanızı hata ayıklama modunda çalışırken penceresi. Açmak için **çıkış** penceresinde tıklatın **hata ayıklama** menü öğesi, noktasına **Windows**ve ardından **çıkış**. İçinde **çıkış** penceresinde, seçin **hata ayıklama** gelen **Göster çıktı** kutusu.  
+ Visual Studio'da hata ayıklama çıktısı görüntülenebilir **çıkış** uygulamanızı hata ayıklama modunda çalışırken penceresi. Açmak için **çıkış** penceresinde tıklatın **hata ayıklama** menü öğesi, noktasına **Windows**ve ardından **çıkış**. İçinde **çıkış** penceresinde, seçin **hata ayıklama** gelen **Göster çıktı** kutusu.  
   
  Varsayılan olarak, `My.Application.Log` yolunda kullanıcının uygulama verileri için günlük dosyasına yazar. Yolundan alabilirsiniz <xref:Microsoft.VisualBasic.Logging.FileLogTraceListener.FullLogFileName%2A> özelliği <xref:Microsoft.VisualBasic.Logging.Log.DefaultFileLogWriter%2A> nesnesi. Bu yol biçimi aşağıdaki gibidir:  
   
@@ -110,4 +111,4 @@ ms.lasthandoff: 11/21/2017
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
  <xref:Microsoft.VisualBasic.Logging.Log?displayProperty=nameWithType>  
- [Uygulama içinden bilgileri günlüğe kaydetme](../../../../visual-basic/developing-apps/programming/log-info/logging-information-from-the-application.md)
+ [Uygulamadan Günlüğe Bilgi Kaydetme](../../../../visual-basic/developing-apps/programming/log-info/logging-information-from-the-application.md)

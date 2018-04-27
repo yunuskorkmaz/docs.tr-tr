@@ -1,29 +1,30 @@
 ---
-title: "Öğretici2 Başlarken"
-ms.custom: 
+title: Öğretici2 Başlarken
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - WF [WF], getting started
 - Windows Workflow Foundation [WF], getting started
 ms.assetid: c2d3585f-6b1a-4d4f-9865-bd7cd31c5d42
-caps.latest.revision: "21"
+caps.latest.revision: 21
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: f25058071e041ac1e14de2c223750013c8ef1d30
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 1be017762ed64f61516216c9d103547f88598254
+ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="getting-started-tutorial"></a>Başlangıç Öğreticisi
-Bu bölüm için programlama tanıtılmaktadır gözden geçirme konuları kümesini içeren [!INCLUDE[wf](../../../includes/wf-md.md)] uygulamalar. Aşağıdaki konulardaki yordamları izleyerek, numara tahmin eden oyun bir uygulama oluşturacaksınız. Öğreticinin ilk konusunda iş akışı için gereken özel etkinlikler oluşturmak için aşağıdaki adımları size yol gösterir. İkinci konuda bu etkinlikleri yerleşik iş akışı etkinlikleri ile birlikte bir akış iş akışı ile birleştirilir. Üçüncü konusunda konak uygulama iş akışını çalıştırmak için yapılandırılmış ve son konusunda Kalıcılık sunulmuştur. Bunları sırayla tamamlamanızı öneririz şekilde bu işlemdeki her adım önceki adımları, bağlıdır.  
+Bu bölüm, Windows Workflow Foundation (WF) uygulama programlama tanıtmak gözden geçirme konuları kümesi içerir. Aşağıdaki konulardaki yordamları izleyerek, numara tahmin eden oyun bir uygulama oluşturacaksınız. Öğreticinin ilk konusunda iş akışı için gereken özel etkinlikler oluşturmak için aşağıdaki adımları size yol gösterir. İkinci konuda bu etkinlikleri yerleşik iş akışı etkinlikleri ile birlikte bir akış iş akışı ile birleştirilir. Üçüncü konusunda konak uygulama iş akışını çalıştırmak için yapılandırılmış ve son konusunda Kalıcılık sunulmuştur. Bunları sırayla tamamlamanızı öneririz şekilde bu işlemdeki her adım önceki adımları, bağlıdır.  
   
 ## <a name="in-this-section"></a>Bu Bölümde  
  [Nasıl Yapılır: Etkinlik Oluşturma](../../../docs/framework/windows-workflow-foundation/how-to-create-an-activity.md)  

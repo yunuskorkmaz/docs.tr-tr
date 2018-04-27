@@ -1,11 +1,12 @@
 ---
-title: "Bileşik Veri Türleri (Visual Basic)"
-ms.custom: 
+title: Bileşik Veri Türleri (Visual Basic)
+ms.custom: ''
 ms.date: 04/25/2017
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- devlang-visual-basic
 ms.topic: article
 helpviewer_keywords:
 - classes [Visual Basic], composite data types
@@ -17,17 +18,17 @@ helpviewer_keywords:
 - classes [Visual Basic], composite types
 - types [Visual Basic], composite
 ms.assetid: 62970f2e-52c0-4369-8963-613820f1f434
-caps.latest.revision: "19"
+caps.latest.revision: 19
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: e9adb407757dbee2f7ac5a94118623a62212faec
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: caa832fc191ad925674e21b1237ac98328ce0bd7
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="composite-data-types-visual-basic"></a>Bileşik Veri Türleri (Visual Basic)
-Başlangıç veri türleri yanı sıra [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] kaynakları, öğeleri oluşturmak için farklı türlerde da derlemek *bileşik veri türleri* yapıları, dizileri ve sınıflar gibi. Bileşik veri türleri başlangıç türleri ve diğer bileşik türler oluşturabilirsiniz. Örneğin, dizi üyeleriyle yapı öğeleri dizisi veya bir yapı tanımlayabilirsiniz.  
+Başlangıç veri türleri Visual Basic kaynakları ek olarak, öğeleri oluşturmak için farklı türlerde de toplayabilir *bileşik veri türleri* yapıları, dizileri ve sınıflar gibi. Bileşik veri türleri başlangıç türleri ve diğer bileşik türler oluşturabilirsiniz. Örneğin, dizi üyeleriyle yapı öğeleri dizisi veya bir yapı tanımlayabilirsiniz.  
   
 ## <a name="data-types"></a>Veri Türleri  
  Bileşik tür bileşenlerinin hiçbiri veri türünden farklıdır. Örneğin, bir dizi `Integer` öğeleri değil `Integer` veri türü.  
@@ -35,7 +36,7 @@ Başlangıç veri türleri yanı sıra [!INCLUDE[vbprvb](~/includes/vbprvb-md.md
  Öğe türü, parantez ve virgül gerektiği gibi kullanarak bir dizi veri türü normal olarak temsil edilir. Örneğin, tek boyutlu dizi `String` öğeler olarak temsil edilir `String()`ve iki boyutlu bir dizi `Boolean` öğeler olarak temsil edilir `Boolean(,)`.  
   
 ## <a name="structure-types"></a>Yapı türleri  
- Tüm yapıları kapsayan tek bir veri türü yok. Bunun yerine, iki yapıları aynı sırada aynı öğeleri tanımlamak olsa bile her bir yapı tanımının bir benzersiz veri türünü temsil eder. Ancak, aynı yapısı iki veya daha fazla örneğinin oluşturursanız [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] bunları aynı veri türünde olmasını göz önünde bulundurur.  
+ Tüm yapıları kapsayan tek bir veri türü yok. Bunun yerine, iki yapıları aynı sırada aynı öğeleri tanımlamak olsa bile her bir yapı tanımının bir benzersiz veri türünü temsil eder. Ancak, aynı yapısı iki veya daha fazla örneğinin oluşturursanız, Visual Basic bunları aynı veri türünde olmasını değerlendirir.  
   
 ## <a name="tuples"></a>Demetler
 
@@ -70,11 +71,11 @@ Dim arrayE( , ) As Short = New Short(4, 10) {}
  Sınıfları hakkında daha fazla bilgi için bkz: [nesneler ve sınıflar](../../../../visual-basic/programming-guide/language-features/objects-and-classes/index.md).  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [Veri türleri](../../../../visual-basic/programming-guide/language-features/data-types/index.md)  
- [Başlangıç veri türleri](../../../../visual-basic/programming-guide/language-features/data-types/elementary-data-types.md)  
+ [Veri Türleri](../../../../visual-basic/programming-guide/language-features/data-types/index.md)  
+ [Başlangıç Veri Türleri](../../../../visual-basic/programming-guide/language-features/data-types/elementary-data-types.md)  
  [Visual Basic'de genel türler](../../../../visual-basic/programming-guide/language-features/data-types/generic-types.md)  
- [Değer türleri ve başvuru türleri](../../../../visual-basic/programming-guide/language-features/data-types/value-types-and-reference-types.md)  
+ [Değer Türleri ve Başvuru Türleri](../../../../visual-basic/programming-guide/language-features/data-types/value-types-and-reference-types.md)  
  [Visual Basic'de tür dönüştürmeleri](../../../../visual-basic/programming-guide/language-features/data-types/type-conversions.md)  
- [Yapıları](../../../../visual-basic/programming-guide/language-features/data-types/structures.md)  
- [Veri türleri sorunlarını giderme](../../../../visual-basic/programming-guide/language-features/data-types/troubleshooting-data-types.md)  
- [Nasıl yapılır: değişkende birden fazla değer tutma](../../../../visual-basic/programming-guide/language-features/data-types/how-to-hold-more-than-one-value-in-a-variable.md)
+ [Yapılar](../../../../visual-basic/programming-guide/language-features/data-types/structures.md)  
+ [Veri Türü Sorunlarını Giderme](../../../../visual-basic/programming-guide/language-features/data-types/troubleshooting-data-types.md)  
+ [Nasıl yapılır: Değişkende Birden Fazla Değer Tutma](../../../../visual-basic/programming-guide/language-features/data-types/how-to-hold-more-than-one-value-in-a-variable.md)

@@ -1,5 +1,5 @@
 ---
-title: "Visual Basic'te Bileşenler Oluşturma ve Kullanma"
+title: Visual Basic'te Bileşenler Oluşturma ve Kullanma
 ms.date: 07/20/2015
 ms.prod: .net
 ms.technology:
@@ -8,19 +8,19 @@ ms.topic: article
 helpviewer_keywords:
 - components [Visual Basic]
 ms.assetid: ee6a4156-73f7-4e9b-8e01-c74c4798b65c
-caps.latest.revision: 
+caps.latest.revision: 9
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: 17c9b7440d60c38ba30d230f8412c3ca1a21830a
-ms.sourcegitcommit: 34ec7753acf76f90a0fa845235ef06663dc9e36e
+ms.openlocfilehash: 5b7b145d777ba7ec3250904ad4879dd21926e0e3
+ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="creating-and-using-components-in-visual-basic"></a>Visual Basic'te Bileşenler Oluşturma ve Kullanma
 A *bileşen* uygulayan bir sınıf <xref:System.ComponentModel.IComponent?displayProperty=nameWithType> arabirimi ya da uygulayan bir sınıftan türeyen doğrudan veya dolaylı olarak <xref:System.ComponentModel.IComponent>. A [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] yeniden kullanılabilir, diğer nesnelerle etkileşim kurabilir ve dış kaynaklara ve tasarım zamanı destek üzerinde denetim sağlar. bir nesne bir bileşendir.  
   
- Hangi bir bileşen olan bir sınıf olarak kullanılabileceği anlamına gelir designable, olmalarını bileşenlerin önemli özelliklerinden biridir [!INCLUDE[vsprvs](~/includes/vsprvs-md.md)] tümleşik geliştirme ortamı. Bir bileşenin Araç Kutusu'na eklenebilir, sürüklenen ve formunuza bırakılan ve bir tasarım yüzeyine yönetilebilir. Tasarım zamanı desteği bileşenleri için temel bildirimi içinde oluşturulan [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)]; bir bileşen Geliştirici temel tasarım zamanı işlevselliği yararlanmak için başka çalışma yapmasına gerek yoktur.  
+ Bir bileşen olan bir sınıf Visual Studio tümleşik geliştirme ortamında kullanılabilir başka bir deyişle, designable, olmalarını bileşenlerin önemli özelliklerinden biridir. Bir bileşenin Araç Kutusu'na eklenebilir, sürüklenen ve formunuza bırakılan ve bir tasarım yüzeyine yönetilebilir. Tasarım zamanı desteği bileşenleri için temel bildirimi içinde oluşturulan [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)]; bir bileşen Geliştirici temel tasarım zamanı işlevselliği yararlanmak için başka çalışma yapmasına gerek yoktur.  
   
  A *denetim* her ikisi de designable gibi bir bileşen için benzer. Ancak, bir bileşenin çalışmazken bir denetim bir kullanıcı arabirimi sağlar. Bir denetim temel denetim sınıfları birinden türetilmesi gerekir: <xref:System.Windows.Forms.Control> veya <xref:System.Web.UI.Control>.  
   

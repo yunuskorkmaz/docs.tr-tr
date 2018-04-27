@@ -23,14 +23,14 @@ ms.assetid: d6ff7f1e-b94f-4205-ab8d-5cfa91758724
 caps.latest.revision: 10
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: aceffe59fb6043b3089621b9a3f95b0425f9a522
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
-ms.translationtype: MT
+ms.openlocfilehash: 10ecc965fb6d728454b3af33a6e93b2d7dbc327d
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="early-and-late-binding-visual-basic"></a>Erken ve Geç Bağlama (Visual Basic)
-[!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] Derleyici adlı bir işlem gerçekleştirir `binding` bir nesne bir nesne değişkenine atanan zaman. Bir nesne *erken bağlama* bildirilen belirli nesne türünde olması için ne zaman bir değişkene atanır. Erken bağlama nesnelerine bellek ayırabilir ve bir uygulama yürütülmeden önce diğer en iyi duruma getirme gerçekleştirmek derleyici izin verin. Örneğin, aşağıdaki kod parçası türünde olması için bir değişken bildirir <xref:System.IO.FileStream>:  
+Visual Basic derleyici adlı bir işlem gerçekleştirir `binding` bir nesne bir nesne değişkenine atanan zaman. Bir nesne *erken bağlama* bildirilen belirli nesne türünde olması için ne zaman bir değişkene atanır. Erken bağlama nesnelerine bellek ayırabilir ve bir uygulama yürütülmeden önce diğer en iyi duruma getirme gerçekleştirmek derleyici izin verin. Örneğin, aşağıdaki kod parçası türünde olması için bir değişken bildirir <xref:System.IO.FileStream>:  
   
  [!code-vb[VbVbalrOOP#90](../../../../visual-basic/misc/codesnippet/VisualBasic/early-and-late-binding_1.vb)]  
   
@@ -48,5 +48,5 @@ ms.lasthandoff: 11/21/2017
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
  <xref:Microsoft.VisualBasic.Interaction.CreateObject%2A>  
- [Nesne ömrü: Nesneleri oluşturma ve yok etme](../../../../visual-basic/programming-guide/language-features/objects-and-classes/object-lifetime-how-objects-are-created-and-destroyed.md)  
- [Nesne veri türü](../../../../visual-basic/language-reference/data-types/object-data-type.md)
+ [Nesne Ömrü: Nesneleri Oluşturma ve Yok Etme](../../../../visual-basic/programming-guide/language-features/objects-and-classes/object-lifetime-how-objects-are-created-and-destroyed.md)  
+ [Object Veri Türü](../../../../visual-basic/language-reference/data-types/object-data-type.md)

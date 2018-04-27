@@ -8,23 +8,23 @@ ms.suite: ''
 ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 1b26617c-53e9-476a-81af-675c36d95919
-caps.latest.revision: ''
+caps.latest.revision: 9
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: 9a01be08367fac1f7713f5db4953f67b0d32e073
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 2057e2b1c03a1ebcd68d7d59be8839171305707f
+ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="consuming-odata-feeds-from-a-workflow"></a>Bir iş akışından akışları OData kullanma
 WCF Veri Hizmetleri bir bileşenidir [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] temsili durum aktarımı (REST) semantiği kullanarak Web veya intranet üzerinden verileri kullanmak ve kullanıma sunmak için açık veri Protokolü (OData) kullanan hizmetler oluşturmak etkinleştirir. OData veri URI tarafından adreslenebilir kaynaklar olarak kullanıma sunar. Bir HTTP isteği göndermek ve OData akışı işlem herhangi bir uygulama veri hizmeti döndürdüğünü bir OData tabanlı veri hizmetiyle etkileşim kurabilirsiniz. Ayrıca, WCF Veri Hizmetleri OData Akışları'kullandığında daha zengin bir programlama deneyimi sağlayan istemci kitaplıklarını içerir [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] uygulamalar. Bu konu, bir iş akışında istemci kitaplıkları kullanılarak ve kullanılmadan bir OData tüketen genel bir bakış akışı sağlar.  
   
 ## <a name="using-the-sample-northwind-odata-service"></a>Örnek Northwind OData hizmetini kullanma  
- Bu konudaki örnekler veri hizmeti bulunan Northwind örnek kullanmak [http://services.odata.org/Northwind/Northwind.svc/](http://go.microsoft.com/fwlink/?LinkID=187426). Bu hizmetin bir parçası olarak sağlanan [OData SDK](http://go.microsoft.com/fwlink/?LinkID=185248) ve örnek Northwind veritabanı salt okunur erişim sağlar. Yazma erişimi istenen ya da yerel bir WCF veri hizmeti istenirse, adımları takip edebilirsiniz [WCF Veri Hizmetleri Quickstart](http://go.microsoft.com/fwlink/?LinkID=131076) Northwind veritabanına erişim sağlayan yerel bir OData hizmet oluşturmak için. Hızlı Başlangıç izlerseniz, bu konudaki örnek kodda sağlanan yerel URI'sini değiştirin.  
+ Bu konudaki örnekler veri hizmeti bulunan Northwind örnek kullanmak [ http://services.odata.org/Northwind/Northwind.svc/ ](http://go.microsoft.com/fwlink/?LinkID=187426). Bu hizmetin bir parçası olarak sağlanan [OData SDK](http://go.microsoft.com/fwlink/?LinkID=185248) ve örnek Northwind veritabanı salt okunur erişim sağlar. Yazma erişimi istenen ya da yerel bir WCF veri hizmeti istenirse, adımları takip edebilirsiniz [WCF Veri Hizmetleri Quickstart](http://go.microsoft.com/fwlink/?LinkID=131076) Northwind veritabanına erişim sağlayan yerel bir OData hizmet oluşturmak için. Hızlı Başlangıç izlerseniz, bu konudaki örnek kodda sağlanan yerel URI'sini değiştirin.  
   
 ## <a name="consuming-an-odata-feed-using-the-client-libraries"></a>İstemci kitaplıkları kullanarak bir OData akışı kullanma  
  WCF veri hizmetleri içeren bir OData gelen akışı daha kolayca kullanmalarını sağlayan istemci kitaplıkları [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] ve istemci uygulamaları. Bu kitaplıklar, HTTP ileti gönderme ve alma basitleştirir. Bunlar ayrıca varlık verilerini temsil eden CLR nesneleri içine ileti yükü çevir. İstemci kitaplıkları iki çekirdek sınıfları özellik <xref:System.Data.Services.Client.DataServiceContext> ve <xref:System.Data.Services.Client.DataServiceQuery%601>. Bu sınıfları, veri hizmeti sorgulamak ve CLR nesneler olarak döndürülen varlığı verilerle çalışmak etkinleştirin. Bu bölüm, istemci kitaplıkları kullanan etkinlikleri oluşturmak için iki yaklaşım kapsar.  
@@ -37,13 +37,13 @@ WCF Veri Hizmetleri bir bileşenidir [!INCLUDE[dnprdnshort](../../../includes/dn
  Hizmeti tarafından ve de kullanıma sunulan hiçbir hizmet işlemleri olduğuna dikkat edin **Hizmetleri** vardır liste öğelerini Northwind veri hizmeti tarafından sunulan varlıkları temsil eden. Hizmet başvurusu eklendiğinde, sınıflar bu varlıklar için oluşturulur ve istemci kodu kullanılabilir. Bu konudaki örnekler bu sınıfları kullanır ve `NorthwindEntities` sorguları gerçekleştirmek için sınıf.  
   
 > [!NOTE]
->  [!INCLUDE[crdefault](../../../includes/crdefault-md.md)][Veri hizmeti istemci kitaplığı (WCF Veri Hizmetleri) oluşturma](http://go.microsoft.com/fwlink/?LinkID=191611).  
+>  [!INCLUDE[crdefault](../../../includes/crdefault-md.md)] [Veri Hizmeti istemci kitaplığı (WCF Veri Hizmetleri) oluşturma](http://go.microsoft.com/fwlink/?LinkID=191611).  
   
 ### <a name="using-asynchronous-methods"></a>Zaman uyumsuz yöntemler kullanma  
- WCF Veri Hizmetleri zaman uyumsuz olarak erişme öneririz kaynaklara Web üzerinden erişirken oluşabilecek olası gecikme sorunlarına yönelik. WCF Veri Hizmetleri istemci kitaplıkları sorguları çalıştırma zaman uyumsuz yöntemleri içerir ve [!INCLUDE[wf](../../../includes/wf-md.md)] sağlar <xref:System.Activities.AsyncCodeActivity> zaman uyumsuz etkinlikleri yazma sınıfı. <xref:System.Activities.AsyncCodeActivity>türetilen etkinlikleri yararlanmak için yazılabilir [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] , zaman uyumsuz yöntemleri veya zaman uyumsuz olarak yürütülecek kod olan sınıf bir yönteme koy ve temsilci kullanarak çağrılır. Bu bölümde, iki örnek bir <xref:System.Activities.AsyncCodeActivity> türetilmiş etkinlik; WCF Veri Hizmetleri istemci kitaplıkları zaman uyumsuz yöntemleri kullanan diğeri, bir temsilci kullanır.  
+ WCF Veri Hizmetleri zaman uyumsuz olarak erişme öneririz kaynaklara Web üzerinden erişirken oluşabilecek olası gecikme sorunlarına yönelik. WCF Veri Hizmetleri istemci kitaplıkları sorguları çalıştırma zaman uyumsuz yöntemleri içerir ve Windows Workflow Foundation (WF) sağlar <xref:System.Activities.AsyncCodeActivity> zaman uyumsuz etkinlikleri yazma sınıfı. <xref:System.Activities.AsyncCodeActivity> türetilen etkinlikleri yararlanmak için yazılabilir [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] , zaman uyumsuz yöntemleri veya zaman uyumsuz olarak yürütülecek kod olan sınıf bir yönteme koy ve temsilci kullanarak çağrılır. Bu bölümde, iki örnek bir <xref:System.Activities.AsyncCodeActivity> türetilmiş etkinlik; WCF Veri Hizmetleri istemci kitaplıkları zaman uyumsuz yöntemleri kullanan diğeri, bir temsilci kullanır.  
   
 > [!NOTE]
->  [!INCLUDE[crdefault](../../../includes/crdefault-md.md)][Zaman uyumsuz işlemleri (WCF Veri Hizmetleri)](http://go.microsoft.com/fwlink/?LinkId=193396) ve [zaman uyumsuz etkinlikleri oluşturma](../../../docs/framework/windows-workflow-foundation/creating-asynchronous-activities-in-wf.md).  
+>  [!INCLUDE[crdefault](../../../includes/crdefault-md.md)] [Zaman uyumsuz işlemleri (WCF Veri Hizmetleri)](http://go.microsoft.com/fwlink/?LinkId=193396) ve [zaman uyumsuz etkinlikleri oluşturma](../../../docs/framework/windows-workflow-foundation/creating-asynchronous-activities-in-wf.md).  
   
 ### <a name="using-client-library-asynchronous-methods"></a>İstemci Kitaplığı zaman uyumsuz yöntemler kullanma  
  <xref:System.Data.Services.Client.DataServiceQuery%601> SAX <xref:System.Data.Services.Client.DataServiceQuery%601.BeginExecute%2A> ve <xref:System.Data.Services.Client.DataServiceQuery%601.EndExecute%2A> OData hizmetine zaman uyumsuz olarak sorgulamak için yöntemleri. Bu yöntemlerin gelen çağrılabilir <xref:System.Activities.AsyncCodeActivity.BeginExecute%2A> ve <xref:System.Activities.AsyncCodeActivity.EndExecute%2A> , geçersiz kılan bir <xref:System.Activities.AsyncCodeActivity> türetilmiş sınıf. Zaman <xref:System.Activities.AsyncCodeActivity> <xref:System.Activities.AsyncCodeActivity.BeginExecute%2A> geçersiz kılma döndürür, iş akışı boşta gidin (ancak devam) ve zaman uyumsuz iş tamamlandığında, <xref:System.Activities.AsyncCodeActivity.EndExecute%2A> çalışma zamanı tarafından çağrılır.  
@@ -78,7 +78,7 @@ WCF Veri Hizmetleri bir bileşenidir [!INCLUDE[dnprdnshort](../../../includes/dn
  Aşağıdaki örnekte, bir `ListCustomers` etkinlik tanımlanır. Bu etkinlik örnek Northwind veri hizmeti sorgular ve döndüren bir `List<Customer>` Northwind veritabanındaki tüm müşteriler içerir. Zaman uyumsuz iş tarafından gerçekleştirilen `GetCustomers` yöntemi. Bu yöntem hizmeti tüm müşteriler için sorgular ve bunların içine kopyalar bir `List<Customer>`. Ardından sonuçları havuzda olmadığını görmek için denetler. Bu nedenle, hizmet sonraki sonuç sayfasını için sorgular, listeye ekler ve tüm müşteri verilerinin alınamadı kadar devam eder.  
   
 > [!NOTE]
->  [!INCLUDE[crabout](../../../includes/crabout-md.md)]WCF Veri Hizmetleri, disk belleği bakın. [Nasıl yapılır: yük, sonuçları (WCF Veri Hizmetleri) disk belleğine alınan](http://go.microsoft.com/fwlink/?LinkId=193452).  
+>  [!INCLUDE[crabout](../../../includes/crabout-md.md)] WCF Veri Hizmetleri, disk belleği bakın. [Nasıl yapılır: yük, sonuçları (WCF Veri Hizmetleri) disk belleğine alınan](http://go.microsoft.com/fwlink/?LinkId=193452).  
   
  Tüm müşteriler eklendikten sonra listesi döndürülür. `GetCustomers` Yöntemi etkinliğin içinde belirtilen <xref:System.Activities.AsyncCodeActivity.BeginExecute%2A> geçersiz kılar. Yöntemin dönüş değeri olduğundan bir `Func<string, List<Customer>>` yöntemini belirtmek için oluşturulur.  
   
@@ -111,11 +111,11 @@ WCF Veri Hizmetleri bir bileşenidir [!INCLUDE[dnprdnshort](../../../includes/dn
   
  **Döndürülen ham veriler:**  
 **\<? xml sürümü "1.0" kodlama = "utf-8" tek başına = = "yes"? >**   
-**\<ContactName xmlns = "http://schemas.microsoft.com/ado/2007/08/dataservices" > Maria Anders\</ContactName >** bir iş akışında, bu örnek kodu birleştirilir <xref:System.Activities.CodeActivity.Execute%2A> geçersizkılma<xref:System.Activities.CodeActivity>-özel etkinlik bağlı, ancak aynı işlevselliği kullanılarak da gerçekleştirilebilir <xref:System.Activities.Expressions.InvokeMethod%601> etkinlik. <xref:System.Activities.Expressions.InvokeMethod%601> Etkinlik statik çağırma ve yöntemleri bir sınıfın örneği iş akışı yazarları sağlar ve belirtilen yöntemini zaman uyumsuz olarak çağırma seçeneği de vardır. Aşağıdaki örnekte, bir <xref:System.Activities.Expressions.InvokeMethod%601> etkinliği çağırmak için yapılandırılmış <xref:System.Net.WebClient.DownloadString%2A> yöntemi <xref:System.Net.WebClient> sınıfı ve müşterilerin listesini döndürür.  
+**\<ContactName xmlns = "http://schemas.microsoft.com/ado/2007/08/dataservices" > Maria Anders\</ContactName >** bir iş akışında, bu örnek kodu birleştirilir <xref:System.Activities.CodeActivity.Execute%2A> , geçersiz bir <xref:System.Activities.CodeActivity>-özel etkinlik, ancak aynı temel işlevselliği de gerçekleştirilebilir kullanarak <xref:System.Activities.Expressions.InvokeMethod%601> etkinlik. <xref:System.Activities.Expressions.InvokeMethod%601> Etkinlik statik çağırma ve yöntemleri bir sınıfın örneği iş akışı yazarları sağlar ve belirtilen yöntemini zaman uyumsuz olarak çağırma seçeneği de vardır. Aşağıdaki örnekte, bir <xref:System.Activities.Expressions.InvokeMethod%601> etkinliği çağırmak için yapılandırılmış <xref:System.Net.WebClient.DownloadString%2A> yöntemi <xref:System.Net.WebClient> sınıfı ve müşterilerin listesini döndürür.  
   
  [!code-csharp[CFX_WCFDataServicesActivityExample#3](../../../samples/snippets/csharp/VS_Snippets_CFX/CFX_WCFDataServicesActivityExample/cs/Program.cs#3)]  
   
- <xref:System.Activities.Expressions.InvokeMethod%601>hem statik çağırın ve yöntemleri bir sınıfın örneğini kullanabilirsiniz. Bu yana <xref:System.Net.WebClient.DownloadString%2A> bir örnek yöntemi <xref:System.Net.WebClient> sınıfı, yeni bir örneğini <xref:System.Net.WebClient> sınıfı için belirtilen <xref:System.Activities.Expressions.InvokeMethod%601.TargetObject%2A>. `DownloadString`olarak belirtilen <xref:System.Activities.Expressions.InvokeMethod%601.MethodName%2A>, sorguyu içeren URI belirtilen <xref:System.Activities.Expressions.InvokeMethod%601.Parameters%2A> toplama ve dönüş değeri atanması <xref:System.Activities.Activity%601.Result%2A> değeri. <xref:System.Activities.Expressions.InvokeMethod%601.RunAsynchronously%2A> Değeri ayarı `true`, yöntem çağırma iş akışı ile zaman uyumsuz olarak çalıştıracak anlamına gelir. Aşağıdaki örnekte, kullanan bir iş akışı oluşturulan <xref:System.Activities.Expressions.InvokeMethod%601> örnek Northwind verileri sorgulamak için etkinlik hizmet siparişleri belirli bir müşteri için bir listesi için ve daha sonra döndürülen verileri konsola yazılır.  
+ <xref:System.Activities.Expressions.InvokeMethod%601> hem statik çağırın ve yöntemleri bir sınıfın örneğini kullanabilirsiniz. Bu yana <xref:System.Net.WebClient.DownloadString%2A> bir örnek yöntemi <xref:System.Net.WebClient> sınıfı, yeni bir örneğini <xref:System.Net.WebClient> sınıfı için belirtilen <xref:System.Activities.Expressions.InvokeMethod%601.TargetObject%2A>. `DownloadString` olarak belirtilen <xref:System.Activities.Expressions.InvokeMethod%601.MethodName%2A>, sorguyu içeren URI belirtilen <xref:System.Activities.Expressions.InvokeMethod%601.Parameters%2A> toplama ve dönüş değeri atanması <xref:System.Activities.Activity%601.Result%2A> değeri. <xref:System.Activities.Expressions.InvokeMethod%601.RunAsynchronously%2A> Değeri ayarı `true`, yöntem çağırma iş akışı ile zaman uyumsuz olarak çalıştıracak anlamına gelir. Aşağıdaki örnekte, kullanan bir iş akışı oluşturulan <xref:System.Activities.Expressions.InvokeMethod%601> örnek Northwind verileri sorgulamak için etkinlik hizmet siparişleri belirli bir müşteri için bir listesi için ve daha sonra döndürülen verileri konsola yazılır.  
   
  [!code-csharp[CFX_WCFDataServicesActivityExample#1](../../../samples/snippets/csharp/VS_Snippets_CFX/CFX_WCFDataServicesActivityExample/cs/Program.cs#1)]  
   
@@ -125,22 +125,22 @@ WCF Veri Hizmetleri bir bileşenidir [!INCLUDE[dnprdnshort](../../../includes/dn
 **Döndürülen ham veriler:**   
 **\<? xml sürümü "1.0" kodlama = "utf-8" tek başına = = "yes"? >**   
 **\<Akış**   
- **XML:Base "http://services.odata.org/Northwind/Northwind.svc/" =**  
- **xmlns:d "http://schemas.microsoft.com/ado/2007/08/dataservices" =**  
- **xmlns:m "http://schemas.microsoft.com/ado/2007/08/dataservices/metadata" =**  
+ **XML:Base = "http://services.odata.org/Northwind/Northwind.svc/"**  
+ **xmlns:d = "http://schemas.microsoft.com/ado/2007/08/dataservices"**  
+ **xmlns:m = "http://schemas.microsoft.com/ado/2007/08/dataservices/metadata"**  
  **xmlns = "http://www.w3.org/2005/Atom" >**  
  **\<türü title = "text" > siparişleri \< /title >**  
- **\<Kimliği>http://services.odata.org/Northwind/Northwind.svc/Customers('ALFKI')/siparişleri\</ID>**  
+ **\<Kimliği >http://services.odata.org/Northwind/Northwind.svc/Customers('ALFKI') / siparişleri\</ID >**  
  **\<güncelleştirilmiş > 2010-05-19T19:37:07Z\</ güncelleştirilmiş >**  
  **\<İlişki bağlantı "Otomatik" title = "Siparişler" href = "Siparişler" = / >**  
  **\<Giriş >**  
- **\<Kimliği>http://services.odata.org/Northwind/Northwind.svc/Orders(10643)\</ID>**  
+ **\<Kimliği >http://services.odata.org/Northwind/Northwind.svc/Orders(10643)\</ID >**  
  **\<türü title = "text" > \< /title >**  
  **\<güncelleştirilmiş > 2010-05-19T19:37:07Z\</ güncelleştirilmiş >**  
  **\<Yazar >**  
  **\<Ad / >**  
  **\</ author >**  
  **\<İlişki bağlantı "Düzenle" title = "Order" href="Orders(10643) =" / >**  
- **\<İlişki bağlantı "http://schemas.microsoft.com/ado/2007/08/dataservices/related/Customer" =**  
+ **\<İlişki bağlantı = "http://schemas.microsoft.com/ado/2007/08/dataservices/related/Customer"**  
  **türü = "uygulama/atom + xml yazın; Giriş =" title = "Müşteri" href = "(10643) / müşteri sipariş" = / >**  
-**...**  Bu örnek iş akışı uygulama yazarları bir OData hizmetten döndürülen ham verileri kullanmak üzere kullanabileceğiniz bir yöntem sağlar. [!INCLUDE[crabout](../../../includes/crabout-md.md)]WCF veri URI'ler kullanarak hizmetlere erişme, bkz: [veri hizmeti kaynaklar (WCF Veri Hizmetleri) erişim](http://go.microsoft.com/fwlink/?LinkId=193397) ve [OData: URI kuralları](http://go.microsoft.com/fwlink/?LinkId=185564).
+**...**  Bu örnek iş akışı uygulama yazarları bir OData hizmetten döndürülen ham verileri kullanmak üzere kullanabileceğiniz bir yöntem sağlar. [!INCLUDE[crabout](../../../includes/crabout-md.md)] WCF veri URI'ler kullanarak hizmetlere erişme, bkz: [veri hizmeti kaynaklar (WCF Veri Hizmetleri) erişim](http://go.microsoft.com/fwlink/?LinkId=193397) ve [OData: URI kuralları](http://go.microsoft.com/fwlink/?LinkId=185564).

@@ -1,13 +1,13 @@
 ---
-title: "Ekli Özelliklere Genel Bakış"
-ms.custom: 
+title: Ekli Özelliklere Genel Bakış
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - dotnet-wpf
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - csharp
@@ -15,17 +15,17 @@ dev_langs:
 helpviewer_keywords:
 - attached properties [WPF Designer]
 ms.assetid: 75928354-dc01-47e8-a018-8409aec1f32d
-caps.latest.revision: 
+caps.latest.revision: 28
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: 2d1d0eb55e75cd450d55b69aadca9c60e157eb09
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: ceba94d80ca66ab228804ffff2a5b8f89a68d7c4
+ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="attached-properties-overview"></a>Ekli Özelliklere Genel Bakış
 Ekli özellik XAML tarafından tanımlanan bir kavramdır. Ekli özellik, herhangi bir nesne ayarlanamaz genel özellik türü olarak kullanılmak üzere tasarlanmıştır. İçinde [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)], ekli özellikler genellikle geleneksel özelliği "sarmalayıcı" olmayan bir bağımlılık özelliğinin özel biçimi tanımlanmış.  
@@ -67,7 +67,7 @@ Ekli özellik XAML tarafından tanımlanan bir kavramdır. Ekli özellik, herhan
 ### <a name="an-example-of-a-parent-defined-attached-property"></a>Bir üst tanımlı ekli özellik örneği  
  Tipik senaryo nerede [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] ekli bir tanımlar özelliği olduğunda bir üst öğesi bir alt öğe koleksiyonunu destekler ve ayrıca bir davranış uygulayan burada davranışı tek tek her alt öğe için raporlandığı.  
   
- <xref:System.Windows.Controls.DockPanel>tanımlar <xref:System.Windows.Controls.DockPanel.Dock%2A?displayProperty=nameWithType> özelliği, eklenmiş ve <xref:System.Windows.Controls.DockPanel> işleme mantığı bir parçası olarak sınıf düzeyi koduna sahip (özellikle <xref:System.Windows.Controls.DockPanel.MeasureOverride%2A> ve <xref:System.Windows.Controls.DockPanel.ArrangeOverride%2A>). A <xref:System.Windows.Controls.DockPanel> örneği herhangi ve anlık alt öğeleri için bir değer ayarlamış olup olmadığını görmek için her zaman denetleyecek <xref:System.Windows.Controls.DockPanel.Dock%2A?displayProperty=nameWithType>. Öyleyse, bu değerleri bu belirli alt öğeye uygulanan işleme mantığı için giriş haline gelir. İç içe geçmiş <xref:System.Windows.Controls.DockPanel> örnekleri kendi hemen alt öğe koleksiyonları kabul eder, ancak bu davranışı uygulamasına özeldir nasıl <xref:System.Windows.Controls.DockPanel> işlemleri <xref:System.Windows.Controls.DockPanel.Dock%2A?displayProperty=nameWithType> değerleri. Teorik olarak en yakın üst ötesinde öğeleri etkileyen özellikleri ekli mümkündür. Varsa <xref:System.Windows.Controls.DockPanel.Dock%2A?displayProperty=nameWithType> ekli özelliğe sahip olmayan bir öğe üzerinde ayarlanmış <xref:System.Windows.Controls.DockPanel> , hiçbir hata veya özel durum sırasında yapması üst öğesi oluşturulur. Bu yalnızca bir genel özellik değerini ayarlamak, ancak geçerli olduğu anlamına gelir <xref:System.Windows.Controls.DockPanel> bilgileri kullanabilecek üst.  
+ <xref:System.Windows.Controls.DockPanel> tanımlar <xref:System.Windows.Controls.DockPanel.Dock%2A?displayProperty=nameWithType> özelliği, eklenmiş ve <xref:System.Windows.Controls.DockPanel> işleme mantığı bir parçası olarak sınıf düzeyi koduna sahip (özellikle <xref:System.Windows.Controls.DockPanel.MeasureOverride%2A> ve <xref:System.Windows.Controls.DockPanel.ArrangeOverride%2A>). A <xref:System.Windows.Controls.DockPanel> örneği herhangi ve anlık alt öğeleri için bir değer ayarlamış olup olmadığını görmek için her zaman denetleyecek <xref:System.Windows.Controls.DockPanel.Dock%2A?displayProperty=nameWithType>. Öyleyse, bu değerleri bu belirli alt öğeye uygulanan işleme mantığı için giriş haline gelir. İç içe geçmiş <xref:System.Windows.Controls.DockPanel> örnekleri kendi hemen alt öğe koleksiyonları kabul eder, ancak bu davranışı uygulamasına özeldir nasıl <xref:System.Windows.Controls.DockPanel> işlemleri <xref:System.Windows.Controls.DockPanel.Dock%2A?displayProperty=nameWithType> değerleri. Teorik olarak en yakın üst ötesinde öğeleri etkileyen özellikleri ekli mümkündür. Varsa <xref:System.Windows.Controls.DockPanel.Dock%2A?displayProperty=nameWithType> ekli özelliğe sahip olmayan bir öğe üzerinde ayarlanmış <xref:System.Windows.Controls.DockPanel> , hiçbir hata veya özel durum sırasında yapması üst öğesi oluşturulur. Bu yalnızca bir genel özellik değerini ayarlamak, ancak geçerli olduğu anlamına gelir <xref:System.Windows.Controls.DockPanel> bilgileri kullanabilecek üst.  
   
 <a name="attached_properties_code"></a>   
 ## <a name="attached-properties-in-code"></a>Kodda ekli özellikler  
@@ -106,12 +106,12 @@ Ekli özellik XAML tarafından tanımlanan bir kavramdır. Ekli özellik, herhan
  Bildirerek, ekli özellik bağımlılık özelliği olarak tanımlayan bir `public` `static` `readonly` türü alan <xref:System.Windows.DependencyProperty>. Dönüş değerini kullanarak bu alan tanımlayan <xref:System.Windows.DependencyProperty.RegisterAttached%2A> yöntemi. Alan adı dizesine eklenerek ekli özellik adıyla eşleşmelidir `Property`, kurulan izlemek için [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] tanımlayıcı adlandırma desenini temsil ettikleri özelliklere karşı alanları. Ekli özellik sağlayıcısı ayrıca statik sağlamalısınız `Get` *PropertyName* ve `Set` *PropertyName* ekli özellik erişimciler olarak yöntemlerini; bu işlem yapmak için başarısız ekli özellik erişememe özellik sistemindeki neden.  
   
 > [!NOTE]
->  Eklenen özelliğin get erişimcisine atlarsanız, özellikte veri bağlama tasarım araçlarına gibi çalışmaz [!INCLUDE[vsprvs](../../../../includes/vsprvs-md.md)] ve Expression Blend.  
+>  Eklenen özelliğin get erişimcisine atlarsanız, özellikte veri bağlama Tasarım araçları, Visual Studio ve Expression Blend gibi çalışmaz.  
   
 #### <a name="the-get-accessor"></a>Get erişimcisi  
  İmza için `Get` *PropertyName* erişimci olması gerekir:  
   
- `public static object Get`*PropertyName* `(object` `target`  `)`  
+ `public static object Get` *PropertyName* `(object`  `target` `)`  
   
 -   `target` Nesnesi, uygulamanızda daha belirli bir tür olarak belirtilebilir. Örneğin, <xref:System.Windows.Controls.DockPanel.GetDock%2A?displayProperty=nameWithType> yöntemi türleri parametre olarak <xref:System.Windows.UIElement>, çünkü iliştirilmiş özelliği yalnızca ayarlanmış olmayı amaçlar <xref:System.Windows.UIElement> örnekleri.  
   
@@ -120,7 +120,7 @@ Ekli özellik XAML tarafından tanımlanan bir kavramdır. Ekli özellik, herhan
 #### <a name="the-set-accessor"></a>Set erişimcisi  
  İmza için `Set` *PropertyName* erişimci olması gerekir:  
   
- `public static void Set`*PropertyName* `(object` `target` `, object` `value`    `)`  
+ `public static void Set` *PropertyName* `(object`  `target` `, object`  `value` `)`  
   
 -   `target` Nesnesi, uygulamanızda daha belirli bir tür olarak belirtilebilir. Örneğin, <xref:System.Windows.Controls.DockPanel.SetDock%2A> yöntemi olarak türleri <xref:System.Windows.UIElement>, çünkü iliştirilmiş özelliği yalnızca ayarlanmış olmayı amaçlar <xref:System.Windows.UIElement> örnekleri.  
   
@@ -132,7 +132,7 @@ Ekli özellik XAML tarafından tanımlanan bir kavramdır. Ekli özellik, herhan
  [!code-vb[WPFAquariumSln#RegisterAttachedBubbler](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/WPFAquariumSln/visualbasic/wpfaquariumobjects/class1.vb#registerattachedbubbler)]  
   
 #### <a name="attached-property-attributes"></a>Ekli özellik öznitelikleri  
- [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]birkaç tanımlar [!INCLUDE[TLA2#tla_netframewkattr#plural](../../../../includes/tla2sharptla-netframewkattrsharpplural-md.md)] yansıma işlemleri ve yansıma ve özellik bilgilerini tasarımcıları gibi tipik kullanıcılarının ekli özellikler hakkında bilgi sağlamayı amaçlar. Ekli özellikler sınırsız kapsam türü olduğundan, tasarımcıları XAML kullanan belirli teknoloji uygulamasında tanımlanan tüm iliştirilmiş özelliklerin genel listesiyle kullanıcıları zorlamayı önlemek için bir yönteme ihtiyacınız vardır. [!INCLUDE[TLA2#tla_netframewkattr#plural](../../../../includes/tla2sharptla-netframewkattrsharpplural-md.md)] , [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] Ekli özellikler burada ekli özelliğe görüntülenmesi gerekip Özellikler penceresinde durumları kapsamak için kullanılabilir tanımlar. Bu öznitelikler, kendi özel ekli özellikler için uygulamayı düşünebilirsiniz. Amaç ve sözdizimi [!INCLUDE[TLA2#tla_netframewkattr#plural](../../../../includes/tla2sharptla-netframewkattrsharpplural-md.md)] uygun başvuru sayfalarında açıklanır:  
+ [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] birkaç tanımlar [!INCLUDE[TLA2#tla_netframewkattr#plural](../../../../includes/tla2sharptla-netframewkattrsharpplural-md.md)] yansıma işlemleri ve yansıma ve özellik bilgilerini tasarımcıları gibi tipik kullanıcılarının ekli özellikler hakkında bilgi sağlamayı amaçlar. Ekli özellikler sınırsız kapsam türü olduğundan, tasarımcıları XAML kullanan belirli teknoloji uygulamasında tanımlanan tüm iliştirilmiş özelliklerin genel listesiyle kullanıcıları zorlamayı önlemek için bir yönteme ihtiyacınız vardır. [!INCLUDE[TLA2#tla_netframewkattr#plural](../../../../includes/tla2sharptla-netframewkattrsharpplural-md.md)] , [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] Ekli özellikler burada ekli özelliğe görüntülenmesi gerekip Özellikler penceresinde durumları kapsamak için kullanılabilir tanımlar. Bu öznitelikler, kendi özel ekli özellikler için uygulamayı düşünebilirsiniz. Amaç ve sözdizimi [!INCLUDE[TLA2#tla_netframewkattr#plural](../../../../includes/tla2sharptla-netframewkattrsharpplural-md.md)] uygun başvuru sayfalarında açıklanır:  
   
 -   <xref:System.Windows.AttachedPropertyBrowsableAttribute>  
   

@@ -1,0 +1,11 @@
+### <a name="rsacng-now-correctly-loads-rsa-keys-of-non-standard-key-size"></a>RSACng artık doğru şekilde standart anahtar boyutu RSA anahtarları yükler
+
+|   |   |
+|---|---|
+|Ayrıntılar|RSA sertifikaları için standart olmayan anahtar boyutları müşterilerle 4.6.2 önce .NET Framework sürümleri bu anahtarlar aracılığıyla erişimi sorunu yaşıyor <xref:System.Security.Cryptography.X509Certificates.RSACertificateExtensions.GetRSAPublicKey(System.Security.Cryptography.X509Certificates.X509Certificate2)?displayProperty=name> ve <xref:System.Security.Cryptography.X509Certificates.RSACertificateExtensions.GetRSAPrivateKey(System.Security.Cryptography.X509Certificates.X509Certificate2)?displayProperty=name> genişletme yöntemleri.  A <xref:System.Security.Cryptography.CryptographicException?displayProperty=name> iletiyle &quot;İstenen anahtar boyutu desteklenmiyor&quot; atılır. .NET Framework 4.6.2, bu sorun düzeltilmiştir. Benzer şekilde, <xref:System.Security.Cryptography.RSA.ImportParameters(System.Security.Cryptography.RSAParameters)> ve <xref:System.Security.Cryptography.RSACng.ImportParameters(System.Security.Cryptography.RSAParameters)> şimdi atma olmadan standart anahtar boyutlarıyla çalışma <xref:System.Security.Cryptography.CryptographicException?displayProperty=name>s.|
+|Öneri|Herhangi bir özel durum önceki davranışa dayanarak dayanır mantığı işleme ise burada bir <xref:System.Security.Cryptography.CryptographicException?displayProperty=name> standart anahtar boyutları kullanıldığında, durum mantığı kaldırmayı düşünün.|
+|Kapsam|Kenar|
+|Sürüm|4.6.2|
+|Tür|Yeniden hedefleme|
+|Etkilenen API'leri|<ul><li><xref:System.Security.Cryptography.RSA.ImportParameters(System.Security.Cryptography.RSAParameters)?displayProperty=nameWithType></li><li><xref:System.Security.Cryptography.RSACng.ImportParameters(System.Security.Cryptography.RSAParameters)?displayProperty=nameWithType></li><li><xref:System.Security.Cryptography.X509Certificates.RSACertificateExtensions.GetRSAPrivateKey(System.Security.Cryptography.X509Certificates.X509Certificate2)?displayProperty=nameWithType></li><li><xref:System.Security.Cryptography.X509Certificates.RSACertificateExtensions.GetRSAPublicKey(System.Security.Cryptography.X509Certificates.X509Certificate2)?displayProperty=nameWithType></li></ul>|
+

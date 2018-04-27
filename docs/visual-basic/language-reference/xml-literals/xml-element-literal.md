@@ -1,9 +1,9 @@
 ---
-title: "XML Öğesi Değişmez Değeri (Visual Basic)"
+title: XML Öğesi Değişmez Değeri (Visual Basic)
 ms.date: 07/20/2015
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - devlang-visual-basic
 ms.topic: article
@@ -14,14 +14,14 @@ helpviewer_keywords:
 - element literal [Visual Basic]
 - XML literals [Visual Basic], element
 ms.assetid: 95039642-7893-48b7-b23f-45a6c55d8f67
-caps.latest.revision: 
+caps.latest.revision: 32
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: de5825a6af1dd1b93c3c85651125cf817dc564f2
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 58b11c61253b199bdeeb2f373eed5f6a358b9e0e
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="xml-element-literal-visual-basic"></a>XML Öğesi Değişmez Değeri (Visual Basic)
 
@@ -111,18 +111,18 @@ Temsil eden bir hazır değer bir <xref:System.Xml.Linq.XElement> nesnesi.
  XML öğesi değişmez değer sözdizimi oluşturmak için kullanabileceğiniz <xref:System.Xml.Linq.XElement> kodunuzda nesneleri.  
   
 > [!NOTE]
->  XML değişmez değer, satır devamlılığı karakterleri kullanmadan birden fazla satır yayılabilir. Bu özellik, bir XML belgesinden içeriği Kopyala ve doğrudan yapıştırın sağlar bir [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] program.  
+>  XML değişmez değer, satır devamlılığı karakterleri kullanmadan birden fazla satır yayılabilir. Bu özellik, bir XML belgesinden içeriği Kopyala ve doğrudan bir Visual Basic programa yapıştırmak sağlar.  
   
  Formun ifadelerin katıştırılmış `<%= exp %>` , bir XML öğesi değişmez değer dinamik bilgi eklemenize olanak tanır. Daha fazla bilgi için bkz: [XML'de katıştırılmış ifadeler](../../../visual-basic/programming-guide/language-features/xml/embedded-expressions-in-xml.md).  
   
- [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] Derleyici çağrıları XML öğesi değişmez değeri dönüştürür <xref:System.Xml.Linq.XElement.%23ctor%2A> oluşturucusu ve gerekliyse, <xref:System.Xml.Linq.XAttribute.%23ctor%2A> Oluşturucusu.  
+ Visual Basic derleyici çağrıları XML öğesi değişmez değeri dönüştürür <xref:System.Xml.Linq.XElement.%23ctor%2A> oluşturucusu ve gerekliyse, <xref:System.Xml.Linq.XAttribute.%23ctor%2A> Oluşturucusu.  
   
 ## <a name="xml-namespaces"></a>XML ad alanları  
  XML ad alanı önekleri kodda birçok kez aynı ad alanından öğeler ile XML değişmez değerleri oluşturmanız gerektiğinde faydalıdır. Kullanarak tanımlayan genel XML ad alanı önekleri kullanabilirsiniz `Imports` deyimi veya kullanarak tanımladığınız yerel önekleri `xmlns:xmlPrefix="xmlNamespace"` öznitelik sözdizimi. Daha fazla bilgi için bkz: [Imports deyimi (XML Namespace)](../../../visual-basic/language-reference/statements/imports-statement-xml-namespace.md).  
   
  XML ad alanları için kapsam kurallarına uygun olarak yerel önekleri genel önekler'ne göre önceliğe sahiptir. XML değişmez değeri bir XML ad alanı tanımlıyorsa, ancak bu ad alanı katıştırılmış bir ifadede görünür ifadeleri kullanılamaz. Katıştırılmış ifade yalnızca genel XML ad alanı erişebilir.  
   
- [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] Derleyici bir XML değişmez değer oluşturulan kodun bir yerel ad tanımında içine kullanılan her genel XML ad alanı dönüştürür. Kullanılmayan genel XML ad alanları oluşturulan kodda görünmez.  
+ Visual Basic derleyici bir XML değişmez değer oluşturulan kodun bir yerel ad tanımında içine kullanılan her genel XML ad alanı dönüştürür. Kullanılmayan genel XML ad alanları oluşturulan kodda görünmez.  
   
 ## <a name="example"></a>Örnek  
  Aşağıdaki örnekte, iki iç içe geçmiş boş öğeye sahip basit bir XML öğesi oluşturulacağını gösterir.  
@@ -169,10 +169,10 @@ Temsil eden bir hazır değer bir <xref:System.Xml.Linq.XElement> nesnesi.
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
  <xref:System.Xml.Linq.XElement>  
- [Bildirilmiş XML öğeleri ve özniteliklerinin adları](../../../visual-basic/programming-guide/language-features/xml/names-of-declared-xml-elements-and-attributes.md)  
- [XML açıklama değişmez değeri](../../../visual-basic/language-reference/xml-literals/xml-comment-literal.md)  
- [XML CDATA değişmez değeri](../../../visual-basic/language-reference/xml-literals/xml-cdata-literal.md)  
- [XML değişmez değerleri](../../../visual-basic/language-reference/xml-literals/index.md)  
+ [Bildirilmiş XML Öğeleri ve Özniteliklerinin Adları](../../../visual-basic/programming-guide/language-features/xml/names-of-declared-xml-elements-and-attributes.md)  
+ [XML Açıklama Değişmez Değeri](../../../visual-basic/language-reference/xml-literals/xml-comment-literal.md)  
+ [XML CDATA Değişmez Değeri](../../../visual-basic/language-reference/xml-literals/xml-cdata-literal.md)  
+ [XML Değişmez Değerleri](../../../visual-basic/language-reference/xml-literals/index.md)  
  [Visual Basic'de XML oluşturma](../../../visual-basic/programming-guide/language-features/xml/creating-xml.md)  
- [XML'de katıştırılmış ifadeler](../../../visual-basic/programming-guide/language-features/xml/embedded-expressions-in-xml.md)  
- [Imports deyimi (XML Namespace)](../../../visual-basic/language-reference/statements/imports-statement-xml-namespace.md)
+ [XML'de Katıştırılmış İfadeler](../../../visual-basic/programming-guide/language-features/xml/embedded-expressions-in-xml.md)  
+ [Imports Deyimi (XML Ad Alanı)](../../../visual-basic/language-reference/statements/imports-statement-xml-namespace.md)

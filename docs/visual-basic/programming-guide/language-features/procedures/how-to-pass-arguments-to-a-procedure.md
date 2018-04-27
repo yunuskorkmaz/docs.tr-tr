@@ -1,11 +1,12 @@
 ---
-title: "Nasıl yapılır: Bir Yordama Bağımsız Değişkenler Geçirme (Visual Basic)"
-ms.custom: 
+title: 'Nasıl yapılır: Bir Yordama Bağımsız Değişkenler Geçirme (Visual Basic)'
+ms.custom: ''
 ms.date: 07/20/2015
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- devlang-visual-basic
 ms.topic: article
 helpviewer_keywords:
 - arguments [Visual Basic], passing to procedures
@@ -17,14 +18,14 @@ helpviewer_keywords:
 - procedures [Visual Basic], calling
 - argument passing [Visual Basic], procedures
 ms.assetid: 08723588-3890-4ddc-8249-79e049e0f241
-caps.latest.revision: "14"
+caps.latest.revision: 14
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: 3debb4fa6e7b15f9c321ef207d0cc04181a98da2
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 1e8f8e438dc749e7f5f0d33aeaa26dfbcf4c29f3
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="how-to-pass-arguments-to-a-procedure-visual-basic"></a>Nasıl yapılır: Bir Yordama Bağımsız Değişkenler Geçirme (Visual Basic)
 Bir yordam çağrısı için bağımsız değişken listesi parantez içinde yordam adıyla izleyin. Yordam tanımlar her gerekli parametre için karşılık gelen bir bağımsız değişken sağlayın ve isteğe bağlı olarak bağımsız değişkenleri sağlayın `Optional` parametreleri. Sağladığınız değil, bir `Optional` çağrısında parametre, sonraki tüm bağımsız değişkenleri sağlamış olursunuz, onun yerine bağımsız değişken listesinde işaretlemek için virgül içermelidir.  
@@ -45,7 +46,7 @@ Bir yordam çağrısı için bağımsız değişken listesi parantez içinde yor
   
 5.  Bir bağımsız değişken atlarsanız bir `Optional` parametre ve başka bir parametre sonra parametre listesinde, bağımsız değişken listesinde fazladan bir virgül tarafından belirtilmemiş bağımsız değişkeni yerine işaretleyebilirsiniz.  
   
-     Aşağıdaki örnek çağrıları [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] <xref:Microsoft.VisualBasic.Interaction.MsgBox%2A> işlevi.  
+     Aşağıdaki örnek Visual Basic çağırır <xref:Microsoft.VisualBasic.Interaction.MsgBox%2A> işlevi.  
   
      [!code-vb[VbVbcnProcedures#34](./codesnippet/VisualBasic/how-to-pass-arguments-to-a-procedure_1.vb)]  
   
@@ -53,14 +54,15 @@ Bir yordam çağrısı için bağımsız değişken listesi parantez içinde yor
   
      Bağımsız değişken listesinde ikinci virgülle belirtilmemişse ikinci bağımsız değişkeni yerine işaretler ve son dize için isteğe bağlı üçüncü parametresi, geçirilen `MsgBox`, başlık çubuğunda görüntülenecek metni olduğu.  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- [Alt yordamlar](./sub-procedures.md)  
- [İşlev yordamları](./function-procedures.md)  
- [Özellik yordamları](./property-procedures.md)  
- [İşleç yordamları](./operator-procedures.md)  
- [Nasıl yapılır: bir yordamın parametresini tanımlama](./how-to-define-a-parameter-for-a-procedure.md)  
- [Bağımsız değişkenleri değere ve başvuruya göre geçirme](./passing-arguments-by-value-and-by-reference.md)  
- [Özyinelemeli yordamlar](./recursive-procedures.md)  
- [Yordam aşırı yüklemesi](./procedure-overloading.md)  
- [Nesneler ve sınıflar](../../../../visual-basic/programming-guide/language-features/objects-and-classes/index.md)  
- [Nesne odaklı programlama](http://msdn.microsoft.com/library/1cf6e655-3f30-45f1-9a5d-4a88ca24a1c2)
+## <a name="see-also"></a>Ayrıca bkz.
+
+ [Alt Yordamlar](./sub-procedures.md)  
+ [İşlev Yordamları](./function-procedures.md)  
+ [Özellik Yordamları](./property-procedures.md)  
+ [İşleç Yordamları](./operator-procedures.md)  
+ [Nasıl yapılır: Bir Yordamın Parametresini Tanımlama](./how-to-define-a-parameter-for-a-procedure.md)  
+ [Bağımsız Değişkenleri Değere ve Başvuruya Göre Geçirme](./passing-arguments-by-value-and-by-reference.md)  
+ [Özyinelemeli Yordamlar](./recursive-procedures.md)  
+ [Yordam Aşırı Yüklemesi](./procedure-overloading.md)  
+ [Nesneler ve Sınıflar](../../../../visual-basic/programming-guide/language-features/objects-and-classes/index.md)  
+ [Nesne odaklı programlama (Visual Basic)](../../concepts/object-oriented-programming.md)  

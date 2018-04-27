@@ -1,27 +1,28 @@
 ---
-title: "Kültürün Visual Basic'de Dizeleri Etkilemesi"
-ms.custom: 
+title: Kültürün Visual Basic'de Dizeleri Etkilemesi
+ms.custom: ''
 ms.date: 07/20/2015
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- devlang-visual-basic
 ms.topic: article
 helpviewer_keywords:
 - locale [Visual Basic], effect on strings
 - strings [Visual Basic], locale dependence
 ms.assetid: c4664444-ee0d-47bf-bef1-eaa3c54bdd7f
-caps.latest.revision: "20"
+caps.latest.revision: 20
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: b61f008edc446445fd5873b6138b64f29e0b8b8c
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: c95dcc8d04725f7a072e8c8bc7fe058e53a95c05
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="how-culture-affects-strings-in-visual-basic"></a>Kültürün Visual Basic'de Dizeleri Etkilemesi
-Bu Yardım sayfası anlatılmaktadır nasıl [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] kültür bilgilerini dize dönüştürmeleri ve karşılaştırmaları gerçekleştirmek için kullanır.  
+Bu Yardım sayfası kültür bilgilerini Visual Basic dize dönüştürmeleri ve karşılaştırmaları gerçekleştirmek için nasıl kullandığını açıklar.  
   
 ## <a name="when-to-use-culture-specific-strings"></a>Kültüre özgü dizeleri kullanmak ne zaman  
  Genellikle, için sunulan tüm veriler için kültüre özgü dizelerini kullanın ve kullanıcılardan okuyun ve kültür değişmez değer dizeleri uygulamanızın iç verileri için kullanın.  
@@ -31,7 +32,7 @@ Bu Yardım sayfası anlatılmaktadır nasıl [!INCLUDE[vbprvb](~/includes/vbprvb
  Ancak, uygulama tarihi merkezi sunucusuna yükler, potansiyel olarak farklı tarih biçimleri arasında Karışıklığı önlemek için bir özel kültüre göre dize biçiminde.  
   
 ## <a name="culture-sensitive-functions"></a>Kültüre duyarlı işlevleri  
- Tüm [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] dize dönüştürme işlevleri (dışında `Str` ve `Val` işlevleri) karşılaştırmaları ve dönüşümleri kültür için uygun olduğundan emin olmak için uygulamanın kültür bilgilerini kullanın uygulamanın kullanıcı.  
+ Tüm Visual Basic dize dönüştürme işlevleri (dışında `Str` ve `Val` işlevleri) karşılaştırmaları ve dönüşümler uygulamanın kültür için uygun olduğundan emin olmak için uygulamanın kültür bilgilerini kullanın Kullanıcı.  
   
  Dize dönüştürme işlevleri farklı kültür ayarları olan bilgisayarlarda çalıştırılan uygulamalardaki kullanarak başarıyla anahtarını hangi işlevleri belirli kültür ayarı kullanın ve geçerli kültür ayarı kullanan anlamaktır. Uygulamanın kültür ayarları varsayılan olarak, işletim sistemi kültür ayarlarından devralınacağı dikkat edin. Daha fazla bilgi için bkz: <xref:Microsoft.VisualBasic.Strings.Asc%2A>, <xref:Microsoft.VisualBasic.Strings.AscW%2A>, <xref:Microsoft.VisualBasic.Strings.Chr%2A>, <xref:Microsoft.VisualBasic.Strings.ChrW%2A>, <xref:Microsoft.VisualBasic.Strings.Format%2A>, <xref:Microsoft.VisualBasic.Conversion.Hex%2A>, <xref:Microsoft.VisualBasic.Conversion.Oct%2A>, ve [tür dönüştürme işlevleri](../../../../visual-basic/language-reference/functions/type-conversion-functions.md).  
   
@@ -64,7 +65,7 @@ Bu Yardım sayfası anlatılmaktadır nasıl [!INCLUDE[vbprvb](~/includes/vbprvb
   
 -   **İki uygulama iç dizeleri (genellikle güvenlik nedenleriyle) tam olarak eşleşmesi olup olmadığı belirleniyor.** Geçerli kültür göz ardı işlemleri kullanın.  
   
- Her iki tür karşılaştırmalar gerçekleştirebilirsiniz [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] <xref:Microsoft.VisualBasic.Strings.StrComp%2A> işlevi. İsteğe bağlı belirtin `Compare` karşılaştırma türünü denetlemek için bağımsız değişken: `Text` çoğu giriş ve çıkış için `Binary` tam eşleşme belirlemek için.  
+ Visual Basic ile karşılaştırmaları her iki tür gerçekleştirebilirsiniz <xref:Microsoft.VisualBasic.Strings.StrComp%2A> işlevi. İsteğe bağlı belirtin `Compare` karşılaştırma türünü denetlemek için bağımsız değişken: `Text` çoğu giriş ve çıkış için `Binary` tam eşleşme belirlemek için.  
   
  `StrComp` İşlevi sıralama sırasına göre iki karşılaştırılan dizeler arasındaki ilişkiyi gösteren bir tamsayı döndürür. Sonuç için pozitif bir değer ilk dizesi ikinci dize büyük olduğunu gösterir. Negatif bir sonuç ilk dize küçüktür, sıfır dizeleri arasındaki eşitlik belirtir.  
   
@@ -79,9 +80,9 @@ Bu Yardım sayfası anlatılmaktadır nasıl [!INCLUDE[vbprvb](~/includes/vbprvb
 |Değeri `comparisonType` bağımsız değişken|Karşılaştırma türü|Ne zaman kullanmalı|  
 |---|---|---|  
 |`Ordinal`|Dizeleri bileşeni bayt alarak karşılaştırmayı.|Karşılaştırma olduğunda bu değeri kullanın: büyük küçük harfe duyarlı tanımlayıcıları, güvenlikle ilgili ayarları veya diğer dil olmayan tanımlayıcıları burada bayt eşleşmelidir.|  
-|`OrdinalIgnoreCase`|Dizeleri bileşeni bayt alarak karşılaştırmayı.<br /><br /> `OrdinalIgnoreCase`büyük harf yalnızca iki karakter farklı olduğunda belirlemek için sabit kültür bilgilerini kullanır.|Karşılaştırma olduğunda bu değeri kullanın: büyük küçük harf duyarsız tanımlayıcıları, güvenlikle ilgili ayarları ve Windows'ta depolanan verileri.|  
-|`CurrentCulture`veya`CurrentCultureIgnoreCase`|Geçerli kültür dizeleri yorumu temel alarak karşılaştırmayı.|Bu değerleri karşılaştırılırken kullanın: kullanıcı, çoğu kullanıcı girişi ve dil yorumlama gerektiren diğer veriler için görüntülenen verileri.|  
-|`InvariantCulture`veya`InvariantCultureIgnoreCase`|Sabit kültür dizeleri yorumu temel alarak karşılaştırmayı.<br /><br /> Bu farklıdır `Ordinal` ve `OrdinalIgnoreCase`, sabit kültür kabul edilebilir aralık dışında karakterler eşdeğer değişmez karakter olarak davrandığı için.|Kalıcı veri veya görüntüleme incelemeye ilgili verileri karşılaştırılırken sabit bir sıralama gerektiren yalnızca bu değerleri kullanın.|  
+|`OrdinalIgnoreCase`|Dizeleri bileşeni bayt alarak karşılaştırmayı.<br /><br /> `OrdinalIgnoreCase` büyük harf yalnızca iki karakter farklı olduğunda belirlemek için sabit kültür bilgilerini kullanır.|Karşılaştırma olduğunda bu değeri kullanın: büyük küçük harf duyarsız tanımlayıcıları, güvenlikle ilgili ayarları ve Windows'ta depolanan verileri.|  
+|`CurrentCulture` Veya `CurrentCultureIgnoreCase`|Geçerli kültür dizeleri yorumu temel alarak karşılaştırmayı.|Bu değerleri karşılaştırılırken kullanın: kullanıcı, çoğu kullanıcı girişi ve dil yorumlama gerektiren diğer veriler için görüntülenen verileri.|  
+|`InvariantCulture` Veya `InvariantCultureIgnoreCase`|Sabit kültür dizeleri yorumu temel alarak karşılaştırmayı.<br /><br /> Bu farklıdır `Ordinal` ve `OrdinalIgnoreCase`, sabit kültür kabul edilebilir aralık dışında karakterler eşdeğer değişmez karakter olarak davrandığı için.|Kalıcı veri veya görüntüleme incelemeye ilgili verileri karşılaştırılırken sabit bir sıralama gerektiren yalnızca bu değerleri kullanın.|  
   
 ### <a name="security-considerations"></a>Güvenlik Değerlendirmeleri  
  Uygulamanızı bir karşılaştırma ya da durum değiştirme işlemi sonucuna güvenlik kararları sonra işlemi kullanması gereken <xref:System.String.Compare%2A?displayProperty=nameWithType> yöntemi ve geçişi `Ordinal` veya `OrdinalIgnoreCase` için `comparisonType` bağımsız değişkeni.  
@@ -89,4 +90,4 @@ Bu Yardım sayfası anlatılmaktadır nasıl [!INCLUDE[vbprvb](~/includes/vbprvb
 ## <a name="see-also"></a>Ayrıca Bkz.  
  <xref:System.Globalization.CultureInfo>  
  [Visual Basic'de dizelere giriş](../../../../visual-basic/programming-guide/language-features/strings/introduction-to-strings.md)  
- [Tür dönüşüm işlevleri](../../../../visual-basic/language-reference/functions/type-conversion-functions.md)
+ [Tür Dönüştürme İşlevleri](../../../../visual-basic/language-reference/functions/type-conversion-functions.md)

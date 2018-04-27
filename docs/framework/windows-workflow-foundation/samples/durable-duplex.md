@@ -1,29 +1,30 @@
 ---
-title: "Dayanıklı Çift Yönlü"
-ms.custom: 
+title: Dayanıklı Çift Yönlü
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 4e76d1a1-f3d8-4a0f-8746-4a322cdff6eb
-caps.latest.revision: "10"
+caps.latest.revision: 10
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: b1298f150709b48f18de654be2ab17adfdcbf42a
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 50d0ac9efae8e6d795455a63d793b2e84407b987
+ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="durable-duplex"></a>Dayanıklı Çift Yönlü
-Bu örnek ayarlama ve mesajlaşma etkinlikleri kullanarak dayanıklı çift yönlü ileti Exchange'i yapılandırma gösterilmiştir [!INCLUDE[wf](../../../../includes/wf-md.md)]. Dayanıklı çift yönlü ileti değişimi gerçekleşir uzun bir süre boyunca bir iki yönlü ileti değişimi ' dir. İleti değişimi ömrü iletişim kanalını ömrü ve hizmet örnekleri bellek içi ömrü uzun olabilir.  
+Bu örnek, ayarlama ve mesajlaşma etkinlikleri Windows Workflow Foundation (WF) kullanan dayanıklı çift yönlü ileti alışverişi yapılandırma gösterilmektedir. Dayanıklı çift yönlü ileti değişimi gerçekleşir uzun bir süre boyunca bir iki yönlü ileti değişimi ' dir. İleti değişimi ömrü iletişim kanalını ömrü ve hizmet örnekleri bellek içi ömrü uzun olabilir.  
   
 ## <a name="sample-details"></a>Örnek Ayrıntıları  
- Bu örnekte, iki [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] kullanılarak uygulanan Hizmetleri [!INCLUDE[wf2](../../../../includes/wf2-md.md)] dayanıklı çift yönlü ileti değişimi kullanacak şekilde yapılandırılır. Dayanıklı çift yönlü ileti değişimi MSMQ gönderilir ve kullanılarak bağıntılı iki tek yönlü gelen iletileri oluşan [.NET bağlam değişimi](http://go.microsoft.com/fwlink/?LinkID=166059). İletileri kullanılarak gönderilen <xref:System.ServiceModel.Activities.Send> ve <xref:System.ServiceModel.Activities.Receive> Mesajlaşma etkinlikleri. .NET bağlam değişimi gönderilen iletileri geri çağırma adresini belirtmek için kullanın. Her iki hizmet Windows İşlem Etkinleştirme Hizmetleri (WAS) kullanılarak barındırılır ve Hizmetleri örneklerinin Kalıcılık etkinleştirmek için yapılandırılır.  
+ Bu örnekte, iki [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] Windows Workflow Foundation kullanılarak uygulanan Hizmetleri dayanıklı çift yönlü ileti değişimi için yapılandırılır. Dayanıklı çift yönlü ileti değişimi MSMQ gönderilir ve kullanılarak bağıntılı iki tek yönlü gelen iletileri oluşan [.NET bağlam değişimi](http://go.microsoft.com/fwlink/?LinkID=166059). İletileri kullanılarak gönderilen <xref:System.ServiceModel.Activities.Send> ve <xref:System.ServiceModel.Activities.Receive> Mesajlaşma etkinlikleri. .NET bağlam değişimi gönderilen iletileri geri çağırma adresini belirtmek için kullanın. Her iki hizmet Windows İşlem Etkinleştirme Hizmetleri (WAS) kullanılarak barındırılır ve Hizmetleri örneklerinin Kalıcılık etkinleştirmek için yapılandırılır.  
   
  İlk hizmet (Service1.xamlx) biraz çalışmanız gönderme hizmete (Service2.xamlx) bir isteği gönderir. İş tamamlandığında, Service2.xamlx iş tamamlanıp tamamlanmadığını göstermek için geri için Service1.xamlx bir bildirim gönderir. Bir iş akışı konsol uygulaması hizmetlerin dinlediği sıralarını ayarlar ve Service1.xamlx etkinleştirmek için ilk başlatma iletisi gönderir. İstenen iş tamamlandı Service2.xamlx bildirimden service1.xamlx aldıktan sonra Service1.xamlx sonucu bir XML dosyasına kaydeder. Geri çağırma ileti için beklenirken Service1.xamlx varsayılan kullanılarak örneği durumu devam <xref:System.ServiceModel.Activities.Description.WorkflowIdleBehavior>. Service2.xamlx örneği durumuna Service1.xamlx tarafından istenen çalışmayı tamamladıktan bir parçası olarak devam ettirir.  
   
@@ -154,7 +155,7 @@ Bu örnek ayarlama ve mesajlaşma etkinlikleri kullanarak dayanıklı çift yön
   
 4.  Örnek çalıştırın.  
   
-    1.  Http://localhost/private/durableduplex/service1.xamlx ve her iki hizmetlerinin çalıştığından emin olmak için http://localhost/private/durableduplex/service2.xamlx göz atın.  
+    1.  Gözat http://localhost/private/durableduplex/service1.xamlx ve http://localhost/private/durableduplex/service2.xamlx hem hizmetlerinin çalıştığından emin olmak için.  
   
     2.  DurableDuplexClient çalıştırmak için F5 tuşuna basın.  
   

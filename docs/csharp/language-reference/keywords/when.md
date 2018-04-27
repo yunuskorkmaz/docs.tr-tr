@@ -14,11 +14,11 @@ ms.assetid: dd543335-ae37-48ac-9560-bd5f047b9aea
 caps.latest.revision: 30
 author: BillWagner
 ms.author: wiwagn
-ms.openlocfilehash: f453d9f4b443d7adeeb0ab628b4ddad1a0116e49
-ms.sourcegitcommit: 7e99f66ef09d2903e22c789c67ff5a10aa953b2f
+ms.openlocfilehash: bbf150940be040a179618b6964608c8f2a72fc17
+ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/18/2017
+ms.lasthandoff: 04/27/2018
 ---
  # <a name="when-c-reference"></a>zaman (C# Başvurusu)
 
@@ -27,7 +27,7 @@ Kullanabileceğiniz `when` bağlamsal anahtar sözcüğü bir filtre koşulu iki
 - İçinde `catch` deyiminin bir [try/catch](try-catch.md) veya [try/catch/finally](try-catch-finally.md) bloğu.
 - İçinde `case` etiketini bir [geçiş](switch.md) deyimi.
 
-## <a name="when-in-a-catch-statement"></a>`when`içinde bir `catch` deyimi
+## <a name="when-in-a-catch-statement"></a>`when` içinde bir `catch` deyimi
 
 C# 6 ile başlayarak `When` kullanılabilir bir `catch` deyimi yürütmek belirli bir özel durum işleyicisi için doğru bir koşulu belirtin. Sözdizimi aşağıdaki gibidir:
 
@@ -40,9 +40,9 @@ Aşağıdaki örnek kullanır `when` koşullu işleyicileri yürütülecek anaht
 
  [!code-csharp[when-with-catch](../../../../samples/snippets/csharp/language-reference/keywords/when/catch.cs)]  
   
-## <a name="when-in-a-switch-statement"></a>`when`içinde bir `switch` deyimi
+## <a name="when-in-a-switch-statement"></a>`when` içinde bir `switch` deyimi
 
-7 ile başlayan `case` etiketleri artık olması birbirini dışlayan ve hangi sırayla `case` etiketlerinin görünür bir `switch` deyimi, hangi anahtar bloğu belirleyebilir yürütür. `when` Anahtar sözcüğü yalnızca filtre koşulu da true ise true olarak ilişkili servis talebi etiketini neden olan bir filtre koşulu belirtmek için kullanılabilir. Sözdizimi aşağıdaki gibidir:
+C# 7.0 ile başlayan `case` etiketleri artık olması birbirini dışlayan ve hangi sırayla `case` etiketlerinin görünür bir `switch` deyimi, hangi anahtar bloğu belirleyebilir yürütür. `when` Anahtar sözcüğü yalnızca filtre koşulu da true ise true olarak ilişkili servis talebi etiketini neden olan bir filtre koşulu belirtmek için kullanılabilir. Sözdizimi aşağıdaki gibidir:
 
 ```csharp
 case (expr) when (when-condition):
@@ -54,7 +54,7 @@ Aşağıdaki örnek kullanır `when` sınamak için anahtar sözcüğü `Shape` 
  [!code-csharp[when-with-case#1](../../../../samples/snippets/csharp/language-reference/keywords/when/when.cs#1)]  
 
 ## <a name="see-also"></a>Ayrıca bkz. 
-  [switch deyimi](switch.md)  
+  [Switch deyimi](switch.md)  
   [try/catch deyimi](try-catch.md)  
   [try/catch/finally ifadesi](try-catch-finally.md) 
 

@@ -1,28 +1,29 @@
 ---
 title: Visual Basic'de Dize Temelleri
-ms.custom: 
+ms.custom: ''
 ms.date: 07/20/2015
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- devlang-visual-basic
 ms.topic: article
 helpviewer_keywords:
 - strings [Visual Basic], Like operator
 - strings [Visual Basic], Visual Basic
 - strings [Visual Basic], regular expressions
 ms.assetid: 5674418d-f00d-4f72-9f98-d15897793350
-caps.latest.revision: "14"
+caps.latest.revision: 14
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: 8881ad6ab7f28689019463abdab3b867e010d51e
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 4a40435b76b0eee4f4eca15d5ba1a31cc58698ab
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="string-basics-in-visual-basic"></a>Visual Basic'de Dize Temelleri
-`String` Veri türünü temsil eden bir karakter dizisi (her sırayla örneğini temsil eden `Char` veri türü). Bu konu dizeleri temel kavramları tanıtır [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)].  
+`String` Veri türünü temsil eden bir karakter dizisi (her sırayla örneğini temsil eden `Char` veri türü). Bu konu, Visual Basic'de dizeleri temel kavramları tanıtır.  
   
 ## <a name="string-variables"></a>Dize değişkenleri  
  Bir dize örneği bir karakter dizisi temsil eden sabit bir değer atanabilir. Örneğin:  
@@ -37,7 +38,7 @@ ms.lasthandoff: 11/21/2017
   
  [!code-vb[VbVbalrStrings#65](../../../../visual-basic/language-reference/functions/codesnippet/VisualBasic/string-basics_3.vb)]  
   
- Bu kod, çünkü derleyici dize ikinci tırnağından sonra sonlandırır ve dizenin geri kalanı kodu olarak yorumlanır bir hataya neden olur. Bu sorunu çözmek için [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] iki tırnak işaretleri içine bir dize sabit değeri dize tek tırnak işareti olarak yorumlar. Aşağıdaki örnek, bir tırnak işareti içindeki bir dizeye dahil etmek için doğru bir şekilde gösterir:  
+ Bu kod, çünkü derleyici dize ikinci tırnağından sonra sonlandırır ve dizenin geri kalanı kodu olarak yorumlanır bir hataya neden olur. Bu sorunu çözmek için Visual Basic iki tırnak işaretleri içine bir dize sabit değeri dize tek tırnak işareti olarak yorumlar. Aşağıdaki örnek, bir tırnak işareti içindeki bir dizeye dahil etmek için doğru bir şekilde gösterir:  
   
  [!code-vb[VbVbalrStrings#66](../../../../visual-basic/language-reference/functions/codesnippet/VisualBasic/string-basics_4.vb)]  
   
@@ -81,6 +82,6 @@ World]]></xml>.Value
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
  [Visual Basic'de dizelere giriş](../../../../visual-basic/programming-guide/language-features/strings/introduction-to-strings.md)  
- [Dize veri türü](../../../../visual-basic/language-reference/data-types/string-data-type.md)  
- [Char veri türü](../../../../visual-basic/language-reference/data-types/char-data-type.md)  
- [Temel dize işlemleri](../../../../standard/base-types/basic-string-operations.md)
+ [String Veri Türü](../../../../visual-basic/language-reference/data-types/string-data-type.md)  
+ [Char Veri Türü](../../../../visual-basic/language-reference/data-types/char-data-type.md)  
+ [Temel Dize İşlemleri](../../../../standard/base-types/basic-string-operations.md)

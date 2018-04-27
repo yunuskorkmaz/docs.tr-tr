@@ -1,12 +1,13 @@
 ---
-title: "Windows Forms'ta Güvenliğe Genel Bakış"
-ms.custom: 
+title: Windows Forms'ta Güvenliğe Genel Bakış
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-winforms
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-winforms
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - code access security [Windows Forms], Windows Forms
@@ -15,23 +16,24 @@ helpviewer_keywords:
 - security [Windows Forms], about security
 - access control [Windows Forms], Windows Forms
 ms.assetid: 4810dc9f-ea23-4ce1-8ea1-657f0ff1d820
-caps.latest.revision: "16"
+caps.latest.revision: 16
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: e56ae77a36ce0000fd518a3324ab5e5b8409d1d4
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.workload:
+- dotnet
+ms.openlocfilehash: 57f46620e7b98bb1a4c120684075dbe065db9714
+ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="security-in-windows-forms-overview"></a>Windows Forms'ta Güvenliğe Genel Bakış
 ' İn yayımlanmasından önce [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)], çalışan tüm kod bir kullanıcı bilgisayar aynı hakları veya bilgisayarın kullanıcısı olan kaynaklara erişim izinleri olan kullanıcının. Örneğin, kullanıcının dosya sistemine erişim izni varsa, kodu dosya sistemi erişmesine izin; Kullanıcı bir veritabanına erişmek için izin verilen, o veritabanına erişmek için kod izin. Bu hak ve izinler kullanıcı açıkça yerel bilgisayarda yüklü yürütülebilir dosyalarında kod için kabul edilebilir olmakla birlikte, bunlar Internet veya yerel Intranet gelen zararlı kod için kabul edilebilir olmayabilir. Bu kodu izniniz olmadan kullanıcının bilgisayar kaynaklarına erişebildiğini olmamalıdır.  
   
  [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] İzinleri veya kod kullanıcının sahip olduğu haklara sahip hakları ayırt olanak sağlayan bir kod erişim güvenliği adlı bir altyapı sunar. Varsayılan olarak, Internet ve intranet'ten gelen kod yalnızca kısmi güven olarak bilinen de çalıştırabilirsiniz. Kısmi güven konuları kısıtlamaları bir dizi uygulamaya: başka şeylerin uygulama yerel sabit diske erişmesini sınırlıdır ve yönetilmeyen kod çalıştırılamıyor. [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] Kod erişmek için bu kodu kimliğine göre izin kaynakları denetler: nereden geldiğini onu olup, bir [Strong-Named derlemeleri](../../../docs/framework/app-domains/strong-named-assemblies.md), bir sertifika vb. ile imzalanıp imzalanmadığı.  
   
- [!INCLUDE[ndptecclick](../../../includes/ndptecclick-md.md)]Windows Forms uygulamaları dağıtmak için kullanın, teknoloji yardımcı olur, kısmi güven, tam güven veya kısmi güven yükseltilmiş izinler ile çalışan uygulamalar geliştirmek kolaylaştırır. [!INCLUDE[ndptecclick](../../../includes/ndptecclick-md.md)]Böylece, uygulama tam güven veya yükseltilmiş izinler yerel kullanıcıdan sorumlu bir şekilde isteyebilir izin yükseltme ve güvenilir uygulama dağıtımı gibi özellikler sağlar.  
+ [!INCLUDE[ndptecclick](../../../includes/ndptecclick-md.md)] Windows Forms uygulamaları dağıtmak için kullanın, teknoloji yardımcı olur, kısmi güven, tam güven veya kısmi güven yükseltilmiş izinler ile çalışan uygulamalar geliştirmek kolaylaştırır. [!INCLUDE[ndptecclick](../../../includes/ndptecclick-md.md)] Böylece, uygulama tam güven veya yükseltilmiş izinler yerel kullanıcıdan sorumlu bir şekilde isteyebilir izin yükseltme ve güvenilir uygulama dağıtımı gibi özellikler sağlar.  
   
 ## <a name="understanding-security-in-the-net-framework"></a>.NET Framework Güvenliği anlama  
  Kod erişim güvenliği değişen derecelerde, diğer yönlerini kodun kimlik ve kod kaynaklandığı bağlı olarak güvenilir olması için kod sağlar. Ortak dil çalışma zamanı güvenlik ilkesini belirlemek için kullanır kanıt hakkında daha fazla bilgi için bkz: [kanıt](http://msdn.microsoft.com/library/64ceb7c8-a0b4-46c4-97dc-6c22da0539da). Bilgisayar sistemleri kötü amaçlı koddan korunmasına yardımcı olur ve kasıtlı olarak veya kazayla güvenliği tehlikeye güvenilen kod korumaya yardımcı olur. Yalnızca uygulamanız için gereken izinleri belirtebildiğinizden kod erişim güvenliği, ayrıca, uygulamanızın neler yapabileceğinizi üzerinde daha fazla denetim sağlar. Bu kod değil tek kod-access-güvenlik yapma izni denetimi gerçekleştirir olsa bile kod erişim güvenliği ortak dil çalışma zamanı hedefleyen tüm yönetilen kod etkiler. Güvenlik konusunda daha fazla bilgi için [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)], bkz: [temel güvenlik kavramları](../../../docs/standard/security/key-security-concepts.md) ve [kod erişim güvenliği Temelleri](../../../docs/framework/misc/code-access-security-basics.md).  
@@ -60,7 +62,7 @@ ms.lasthandoff: 01/19/2018
   
  İsteğe bağlı izinleri istediğinde, uygulamanızı yazma izni, izinleri gerektiren bir eylem gerçekleştirirse, oluşturulacak güvenlik özel durumları işleme gerekir. İşleme uygun <xref:System.Security.SecurityException> uygulamanız çalışmaya devam edebilir güvence altına alır. Uygulamanızı özel durum, kullanıcı için bir özellik devre hale olup olmadığını belirlemek için kullanabilirsiniz. Örneğin, bir uygulama devre dışı bırakabilirsiniz **kaydetmek** gerekli dosya izni olmayan verilirse menü seçeneği.  
   
- Bazı durumlarda, uygulanan tüm uygun izinleri varsa bilmek zordur. Yüzey üzerinde zararsız görünen bir yöntem çağrısı, örneğin, belirli bir noktada dosya sistemi yürütmesi sırasında erişebilir. Uygulamanız gerekli izinlere sahip değil dağıtırsanız, masaüstünüzde hata ayıklama, ancak dağıtıldığında başarısız olduğunda iyi test. Her iki [!INCLUDE[dnprdnlong](../../../includes/dnprdnlong-md.md)] SDK ve [!INCLUDE[vsprvslong](../../../includes/vsprvslong-md.md)] uygulama gerekli olan izinleri hesaplamak için Araçlar içerir: MT.exe komut satırı aracı ve izinleri Hesapla özelliğini [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)]sırasıyla.  
+ Bazı durumlarda, uygulanan tüm uygun izinleri varsa bilmek zordur. Yüzey üzerinde zararsız görünen bir yöntem çağrısı, örneğin, belirli bir noktada dosya sistemi yürütmesi sırasında erişebilir. Uygulamanız gerekli izinlere sahip değil dağıtırsanız, masaüstünüzde hata ayıklama, ancak dağıtıldığında başarısız olduğunda iyi test. Her iki [!INCLUDE[dnprdnlong](../../../includes/dnprdnlong-md.md)] SDK ve [!INCLUDE[vsprvslong](../../../includes/vsprvslong-md.md)] uygulama gerekli olan izinleri hesaplamak için Araçlar içerir: MT.exe komut satırı aracı ve Visual Studio hesaplamak izinleri özelliğini sırasıyla.  
   
  Aşağıdaki konularda ek Windows Forms güvenlik özellikleri açıklanmaktadır.  
   
@@ -73,9 +75,9 @@ ms.lasthandoff: 01/19/2018
 -  
   
 ### <a name="deploying-an-application-with-the-appropriate-permissions"></a>Uygun izinlere sahip bir uygulama dağıtma  
- Bir istemci bilgisayar için bir Windows Forms uygulaması dağıtmanın en yaygın ile yöntemdir [!INCLUDE[ndptecclick](../../../includes/ndptecclick-md.md)], tüm bileşenlerini açıklayan bir dağıtım teknolojisi, uygulamanızın çalıştırılması gerekiyor. [!INCLUDE[ndptecclick](../../../includes/ndptecclick-md.md)]derleme ve uygulamayı oluşturan dosyaları açıklamak için bildirimler kullandığı XML dosyalarını çağrılır ve ayrıca, uygulamanızın izinleri gerektirir.  
+ Bir istemci bilgisayar için bir Windows Forms uygulaması dağıtmanın en yaygın ile yöntemdir [!INCLUDE[ndptecclick](../../../includes/ndptecclick-md.md)], tüm bileşenlerini açıklayan bir dağıtım teknolojisi, uygulamanızın çalıştırılması gerekiyor. [!INCLUDE[ndptecclick](../../../includes/ndptecclick-md.md)] derleme ve uygulamayı oluşturan dosyaları açıklamak için bildirimler kullandığı XML dosyalarını çağrılır ve ayrıca, uygulamanızın izinleri gerektirir.  
   
- [!INCLUDE[ndptecclick](../../../includes/ndptecclick-md.md)]bir istemci bilgisayarda yükseltilmiş izinleri isteyen iki teknolojiyi sahiptir. Her iki teknolojinin Authenticode sertifikaların kullanımını kullanır. Sertifikaları, uygulamanın güvenilir bir kaynaktan geliyor kullanıcılarınız için bazı güvence yardımcı olur.  
+ [!INCLUDE[ndptecclick](../../../includes/ndptecclick-md.md)] bir istemci bilgisayarda yükseltilmiş izinleri isteyen iki teknolojiyi sahiptir. Her iki teknolojinin Authenticode sertifikaların kullanımını kullanır. Sertifikaları, uygulamanın güvenilir bir kaynaktan geliyor kullanıcılarınız için bazı güvence yardımcı olur.  
   
  Aşağıdaki tabloda bu teknolojiler açıklanmaktadır.  
   
@@ -86,12 +88,12 @@ ms.lasthandoff: 01/19/2018
   
  Seçtiğiniz hangi teknoloji dağıtım ortamınıza bağlıdır. Daha fazla bilgi için bkz: [ClickOnce dağıtım stratejisini seçme](/visualstudio/deployment/choosing-a-clickonce-deployment-strategy).  
   
- Varsayılan olarak, [!INCLUDE[ndptecclick](../../../includes/ndptecclick-md.md)] kullanılarak dağıtılan uygulamalar [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] veya [!INCLUDE[dnprdnlong](../../../includes/dnprdnlong-md.md)] SDK Araçları (Mage.exe ve MageUI.exe), tam güven sahip bir istemci bilgisayarda çalışması için yapılandırılır. Kısmi güven kullanarak veya yalnızca bazı ek izinler kullanarak uygulamanızı dağıtıyorsanız, bu varsayılanı değiştirmek gerekecektir. Bunu biriyle yapabilirsiniz [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] veya [!INCLUDE[dnprdnlong](../../../includes/dnprdnlong-md.md)] SDK aracı dağıtımınızı yapılandırdığınızda MageUI.exe. İzlenecek yol MageUI.exe kullanma hakkında daha fazla bilgi için bkz: komut satırından ClickOnce uygulamasını dağıtma.  Ayrıca bkz. [nasıl yapılır: ClickOnce uygulaması için özel izinleri ayarlama](http://msdn.microsoft.com/library/hafybdaa\(v=vs.110\)) veya [nasıl yapılır: ClickOnce uygulaması için özel izinleri ayarlama](http://msdn.microsoft.com/library/hafybdaa\(v=vs.120\)).  
+ Varsayılan olarak, [!INCLUDE[ndptecclick](../../../includes/ndptecclick-md.md)] ya da Visual Studio kullanarak dağıtılmış uygulamalar veya [!INCLUDE[dnprdnlong](../../../includes/dnprdnlong-md.md)] SDK Araçları (Mage.exe ve MageUI.exe), tam güven sahip bir istemci bilgisayarda çalışması için yapılandırılır. Kısmi güven kullanarak veya yalnızca bazı ek izinler kullanarak uygulamanızı dağıtıyorsanız, bu varsayılanı değiştirmek gerekecektir. Bu da Visual Studio ile yapabileceğiniz veya [!INCLUDE[dnprdnlong](../../../includes/dnprdnlong-md.md)] SDK aracı dağıtımınızı yapılandırdığınızda MageUI.exe. İzlenecek yol MageUI.exe kullanma hakkında daha fazla bilgi için bkz: komut satırından ClickOnce uygulamasını dağıtma.  Ayrıca bkz. [nasıl yapılır: ClickOnce uygulaması için özel izinleri ayarlama](http://msdn.microsoft.com/library/hafybdaa\(v=vs.110\)) veya [nasıl yapılır: ClickOnce uygulaması için özel izinleri ayarlama](http://msdn.microsoft.com/library/hafybdaa\(v=vs.120\)).  
   
  Güvenlik yönlerini hakkında daha fazla bilgi için [!INCLUDE[ndptecclick](../../../includes/ndptecclick-md.md)] ve izin yükseltme, bkz: [ClickOnce uygulamalarının güvenliğini sağlama](/visualstudio/deployment/securing-clickonce-applications). Güvenilir uygulama dağıtımı hakkında daha fazla bilgi için bkz: [güvenilir uygulama dağıtımına genel bakış](/visualstudio/deployment/trusted-application-deployment-overview).  
   
 ### <a name="testing-the-application"></a>Uygulamayı Test Etme  
- Kullanarak Windows Forms uygulaması dağıttıysanız [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)], kısmi güven veya kısıtlı izin geliştirme ortamından kümesinin hata ayıklamayı etkinleştirebilirsiniz.  Ayrıca bkz. [nasıl yapılır: sınırlı izinler ile ClickOnce uygulamasında hata ayıklama](http://msdn.microsoft.com/library/593zkfdf\(v=vs.110\)) veya [nasıl yapılır: sınırlı izinler ile ClickOnce uygulamasında hata ayıklama](http://msdn.microsoft.com/library/593zkfdf\(v=vs.120\)).  
+ Visual Studio kullanarak Windows Forms uygulaması dağıttıysanız, kısmi güven veya kısıtlı izin geliştirme ortamından kümesinin hata ayıklamayı etkinleştirebilirsiniz.  Ayrıca bkz. [nasıl yapılır: sınırlı izinler ile ClickOnce uygulamasında hata ayıklama](http://msdn.microsoft.com/library/593zkfdf\(v=vs.110\)) veya [nasıl yapılır: sınırlı izinler ile ClickOnce uygulamasında hata ayıklama](http://msdn.microsoft.com/library/593zkfdf\(v=vs.120\)).  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
  [Windows Forms Güvenliği](../../../docs/framework/winforms/windows-forms-security.md)  

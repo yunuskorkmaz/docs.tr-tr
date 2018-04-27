@@ -17,14 +17,14 @@ ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: d6b61f5ae7d0e7f3102e0566fb1a6eff3ca072d9
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: ca790f97eb677414655b583e46cb693506ed0cc2
+ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="windows-workflow-foundation"></a>Windows Workflow Foundation
-Bu bölümde programlama modeli, örnekleri ve araçları açıklanmaktadır [!INCLUDE[wf](../../../includes/wf-md.md)].  
+Bu bölümde, programlama modeli, örnekleri ve araçlar Windows Workflow Foundation (WF) açıklanmaktadır.  
   
 ## <a name="in-this-section"></a>Bu Bölümde  
  [Windows Workflow Belgeleri Kılavuzu](../../../docs/framework/windows-workflow-foundation/guide-to-the-documentation.md)  
@@ -37,19 +37,19 @@ Bu bölümde programlama modeli, örnekleri ve araçları açıklanmaktadır [!I
  Windows Workflow Foundation ' yeni özellikleri açıklar [!INCLUDE[netfx_current_long](../../../includes/netfx-current-long-md.md)].  
   
  [Windows Workflow Foundation Özellik Ayrıntıları](../../../docs/framework/windows-workflow-foundation/feature-specifics.md)  
- Windows Workflow Foundation ' yeni özellikleri açıklar[!INCLUDE[netfx40_short](../../../includes/netfx40-short-md.md)]  
+ Windows Workflow Foundation ' yeni özellikleri açıklar  [!INCLUDE[netfx40_short](../../../includes/netfx40-short-md.md)]  
   
  [Windows Workflow’a Kavramsal Genel Bakış](../../../docs/framework/windows-workflow-foundation/conceptual-overview.md)  
- Daha büyük kavramları açıklar konuları kümesi [!INCLUDE[wf2](../../../includes/wf2-md.md)].  
+ Windows Workflow Foundation büyük kavramları açıklar konuları kümesi.  
   
  [Başlangıç Öğreticisi](../../../docs/framework/windows-workflow-foundation/getting-started-tutorial.md)  
- Bir dizi programlama için tanıtmak gözden geçirme konuları [!INCLUDE[wf2](../../../includes/wf2-md.md)] uygulamalar.  
+ Windows Workflow Foundation uygulamaları programlama tanıtmak gözden geçirme konuları kümesi.  
   
  [Windows Workflow Foundation Programlama](../../../docs/framework/windows-workflow-foundation/programming.md)  
  Bir bilgisi olmasını anlamalısınız primer konuları kümesi [!INCLUDE[wf1](../../../includes/wf1-md.md)] Programcı.  
   
  [Windows Workflow Foundation’ı Genişletme](../../../docs/framework/windows-workflow-foundation/extend.md)  
- Genişletmek ve özelleştirmek nasıl ele konuları birtakım [!INCLUDE[wf2](../../../includes/wf2-md.md)] gereksinimlerinize uygun olarak.  
+ Genişletmek veya Windows Workflow Foundation'ı, gereksinimlerinize uygun olarak özelleştirmek nasıl ele konuları kümesi.  
   
  [.NET Framework 4.5 için Windows Workflow Foundation sözlüğü](../../../docs/framework/windows-workflow-foundation/glossary.md)  
  WF için belirli terimleri listesini tanımlar.  

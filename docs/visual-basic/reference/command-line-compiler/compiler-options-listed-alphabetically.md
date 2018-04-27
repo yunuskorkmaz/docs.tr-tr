@@ -1,6 +1,6 @@
 ---
 title: Alfabetik Olarak Listelenmiş Visual Basic Derleyici Seçenekleri
-ms.date: 03/09/2018
+ms.date: 04/12/2018
 ms.prod: .net
 ms.reviewer: ''
 ms.suite: ''
@@ -12,14 +12,14 @@ helpviewer_keywords:
 ms.assetid: e67febba-bacf-4e1f-a143-c141e063f90e
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 4c78246a1e9fe14b0ba64ac447293d02e8416079
-ms.sourcegitcommit: c883637b41ee028786edceece4fa872939d2e64c
+ms.openlocfilehash: a6e95c52c708128267ab6dc79a1b37d21b30bac2
+ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/23/2018
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="visual-basic-compiler-options-listed-alphabetically"></a>Alfabetik listelenmiş Visual Basic derleyici seçenekleri
-Visual Basic komut satırı derleyicisi programlardan derleme alternatif olarak sağlanan [!INCLUDE[vsprvs](~/includes/vsprvs-md.md)] tümleşik geliştirme ortamı (IDE). Visual Basic komut satırı derleyicisi seçenekleri alfabetik listesi verilmiştir.  
+Visual Basic komut satırı derleyicisi Visual Studio tümleşik geliştirme ortamı (IDE) programları derleme alternatif olarak sağlanır. Visual Basic komut satırı derleyicisi seçenekleri alfabetik listesi verilmiştir.  
 
 [!INCLUDE[compiler-options](~/includes/compiler-options.md)]
   
@@ -37,6 +37,7 @@ Visual Basic komut satırı derleyicisi programlardan derleme alternatif olarak 
 |[-debug](../../../visual-basic/reference/command-line-compiler/debug.md)|Hata ayıklama bilgisi oluşturur.|  
 |[-define](../../../visual-basic/reference/command-line-compiler/define.md)|Koşullu derleme simgelerini tanımlar.|  
 |[-delaysign](../../../visual-basic/reference/command-line-compiler/delaysign.md)|Derlemenin tamamen veya kısmen imzalanacağını belirtir.|  
+|[-belirleyici](../../../visual-basic/reference/command-line-compiler/deterministic.md)|Derleyicinin girişleri özdeş ise ikili içerikleri derlemeleri arasında aynı olan bir derleme çıktı neden olur.|
 |[-doc](../../../visual-basic/reference/command-line-compiler/doc.md)|Belge açıklamaları bir XML dosyasına işler.|  
 |[-errorreport](../../../visual-basic/reference/command-line-compiler/errorreport.md)|Visual Basic derleyici iç derleyici hataları nasıl bildirmelisiniz belirtir.|  
 |[-filealign](../../../visual-basic/reference/command-line-compiler/filealign.md)|Çıkış dosyasının bölümlerinin hizalamak konumu belirtir.|  

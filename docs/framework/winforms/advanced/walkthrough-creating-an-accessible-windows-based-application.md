@@ -1,28 +1,30 @@
 ---
-title: "İzlenecek Yol: Erişilebilir bir Windows Tabanlı Uygulama Oluşturma"
-ms.custom: 
+title: 'İzlenecek Yol: Erişilebilir bir Windows Tabanlı Uygulama Oluşturma'
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-winforms
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-winforms
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - accessibility [Windows Forms], Windows applications
 - Windows applications [Windows Forms], accessibility
 - applications [Windows Forms], accessibility
 ms.assetid: 654c7f2f-1586-480b-9f12-9d9b8f5cc32b
-caps.latest.revision: "15"
+caps.latest.revision: 15
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: a8f0a35b569b38e0d7ca79129f720034420ecd23
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 600a0d3aaf7da1cd7513ba6dd1dadcb58031fbef
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="walkthrough-creating-an-accessible-windows-based-application"></a>İzlenecek Yol: Erişilebilir bir Windows Tabanlı Uygulama Oluşturma
 Erişilebilir bir uygulama oluşturmaya önemli iş etkilere sahiptir. Birçok hükümetler erişilebilirlik düzenlemeleri yazılım satın vardır. Certified for Windows logo erişilebilirlik gereksinimleri içerir. ABD tek başına, bunların olası müşteriler, kaç tahmini bir 30 milyon yaşayanlar yazılım erişilebilirlik tarafından etkilenir.  
@@ -52,7 +54,7 @@ Erişilebilir bir uygulama oluşturmaya önemli iş etkilere sahiptir. Birçok h
   
 #### <a name="to-begin-making-the-application"></a>Uygulama yapmaya başlamak için  
   
--   Yeni bir Windows uygulaması oluşturma [!INCLUDE[vbprvb](../../../../includes/vbprvb-md.md)] veya [!INCLUDE[csprcs](../../../../includes/csprcs-md.md)]. Proje adı **PizzaOrder**. (Ayrıntılar için bkz: [oluşturma yeni çözümler ve projeler](/visualstudio/ide/creating-solutions-and-projects).)  
+-   Visual Basic veya Visual C# içinde yeni bir Windows uygulaması oluşturun. Proje adı **PizzaOrder**. (Ayrıntılar için bkz: [oluşturma yeni çözümler ve projeler](/visualstudio/ide/creating-solutions-and-projects).)  
   
 ## <a name="adding-the-controls-to-the-form"></a>Forma denetim ekleme  
  Denetimleri form eklerken, erişilebilir uygulama yapmak için aşağıdaki yönergeleri göz önünde bulundurun:  

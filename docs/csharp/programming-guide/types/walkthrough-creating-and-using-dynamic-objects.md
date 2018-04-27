@@ -16,11 +16,11 @@ ms.assetid: 568f1645-1305-4906-8625-5d77af81e04f
 caps.latest.revision: 22
 author: BillWagner
 ms.author: wiwagn
-ms.openlocfilehash: d6b740e78503d0937c9a0f38a573bb7dd778075d
-ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
+ms.openlocfilehash: 16c08ff42ce77b3901f5909571c528394d139e03
+ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="walkthrough-creating-and-using-dynamic-objects-c-and-visual-basic"></a>İzlenecek yol: Dinamik Nesneler Oluşturma ve Kullanma (C# and Visual Basic)
 
@@ -48,7 +48,7 @@ Gereksinim duyduğunuz [IronPython](http://ironpython.net/) bu yönlendirmeyi ta
   
 #### <a name="to-create-a-custom-dynamic-class"></a>Özel bir dinamik sınıf oluşturmak için  
   
-1.  Başlat [!INCLUDE[vsprvs](~/includes/vsprvs-md.md)].  
+1.  Visual Studio'yu başlatın.  
   
 2.  Üzerinde **dosya** menüsündeki **yeni** ve ardından **proje**.  
   
@@ -143,7 +143,7 @@ Bu kılavuzda oluşturduğunuz sonraki proje IronPython dinamik dilinde yazılm�
   
 #### <a name="to-create-a-custom-dynamic-class"></a>Özel bir dinamik sınıf oluşturmak için  
   
-1.  İçinde [!INCLUDE[vsprvs](~/includes/vsprvs-md.md)], **dosya** menüsündeki **yeni** ve ardından **proje**.  
+1.  Visual Studio'da üzerinde **dosya** menüsündeki **yeni** ve ardından **proje**.  
   
 2.  İçinde **yeni proje** iletişim kutusunda **proje türleri** bölmesinde olduğundan emin olun **Windows** seçilir. Seçin **konsol uygulaması** içinde **şablonları** bölmesi. İçinde **adı** kutusuna `DynamicIronPythonSample`ve ardından **Tamam**. Yeni Proje oluşturulur.  
   

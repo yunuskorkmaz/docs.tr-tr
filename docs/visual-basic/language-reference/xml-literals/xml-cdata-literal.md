@@ -1,9 +1,9 @@
 ---
-title: "XML CDATA Değişmez Değeri (Visual Basic)"
+title: XML CDATA Değişmez Değeri (Visual Basic)
 ms.date: 07/20/2015
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - devlang-visual-basic
 ms.topic: article
@@ -14,14 +14,14 @@ helpviewer_keywords:
 - XML CDATA literal [Visual Basic]
 - XML literals [Visual Basic], CDATA
 ms.assetid: 9eafb6a4-dd9d-4866-85e8-0654c65abc44
-caps.latest.revision: 
+caps.latest.revision: 16
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: 906fd2494dd952c08088b9b7e38dba4505780481
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: e8dfc091409e060e20970b0b6d6bc19b4fc2aeea
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="xml-cdata-literal-visual-basic"></a>XML CDATA Değişmez Değeri (Visual Basic)
 Değişmez değer gösteren bir <xref:System.Xml.Linq.XCData> nesnesi.  
@@ -55,9 +55,9 @@ Değişmez değer gösteren bir <xref:System.Xml.Linq.XCData> nesnesi.
  Bir XML CDATA değişmez değer bir değişkene atayın veya bir XML öğesi değişmez değeri içerir.  
   
 > [!NOTE]
->  XML değişmez değer birden çok satıra yayılmış olabilir ancak satır devamlılığı karakterleri kullanmaz. Bu, bir XML belgesinden içeriği Kopyala ve doğrudan yapıştırın sağlar bir [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] program.  
+>  XML değişmez değer birden çok satıra yayılmış olabilir ancak satır devamlılığı karakterleri kullanmaz. Bu, bir XML belgesinden içeriği Kopyala ve doğrudan bir Visual Basic programa yapıştırmasını sağlar.  
   
- [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] Derleyici yapılan bir çağrı XML CDATA değişmez değer dönüştürür <xref:System.Xml.Linq.XCData.%23ctor%2A> Oluşturucusu.  
+ Visual Basic derleyici yapılan bir çağrı XML CDATA değişmez değer dönüştürür <xref:System.Xml.Linq.XCData.%23ctor%2A> Oluşturucusu.  
   
 ## <a name="example"></a>Örnek  
  Aşağıdaki örnek metin içeren bir CDATA bölümü oluşturur "değişmez değer içerebilir \<XML > etiketleri".  
@@ -66,6 +66,6 @@ Değişmez değer gösteren bir <xref:System.Xml.Linq.XCData> nesnesi.
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
  <xref:System.Xml.Linq.XCData>  
- [XML öğesi değişmez değeri](../../../visual-basic/language-reference/xml-literals/xml-element-literal.md)  
- [XML değişmez değerleri](../../../visual-basic/language-reference/xml-literals/index.md)  
+ [XML Öğesi Değişmez Değeri](../../../visual-basic/language-reference/xml-literals/xml-element-literal.md)  
+ [XML Değişmez Değerleri](../../../visual-basic/language-reference/xml-literals/index.md)  
  [Visual Basic'de XML oluşturma](../../../visual-basic/programming-guide/language-features/xml/creating-xml.md)

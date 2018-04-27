@@ -1,23 +1,24 @@
 ---
-title: "Dış Ruleset Araç Seti"
-ms.custom: 
+title: Dış Ruleset Araç Seti
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: a306d283-a031-475e-aa01-9ae86e7adcb0
-caps.latest.revision: "7"
+caps.latest.revision: 7
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 7fbac6bf8be169aca8ad61c69b8d024f44928d8b
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 40e28bb2b17e511a1b8953ccc8ff9bdf4f0f7392
+ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="external-ruleset-toolkit"></a>Dış Ruleset Araç Seti
 Bir iş akışı uygulama içinde kuralları kullanıldığında, normalde derlemenin parçası kurallardır. Bazı senaryolarda, böylece yeniden oluşturma ve dağıtma iş akışı derlemesi güncelleştirilebilir ayrı olarak derlemesinden RuleSets korumak isteyebilirsiniz. Bu örnek, yönetme ve bir veritabanında RuleSets düzenlemek ve çalışma zamanında bir iş akışı bu RuleSets erişmek sağlar. Bu otomatik olarak RuleSet değişikliklerin uygulanması çalışan iş akışı örnekleri sağlar.  
@@ -27,7 +28,7 @@ Bir iş akışı uygulama içinde kuralları kullanıldığında, normalde derle
 > [!NOTE]
 >  Bu örnek gerektirir [Microsoft SQL Server](http://go.microsoft.com/fwlink/?LinkId=96181).  
   
- [!INCLUDE[vsprvsext](../../../../includes/vsprvsext-md.md)]Windows Workflow Foundation (WF) bir parçası olarak RuleSet Düzenleyicisi sağlar. Bu Düzenleyici'yi tıklatarak başlatabilirsiniz `Policy` bir iş akışı; etkinliğinde tanımlı RuleSet nesnesi iş akışı ile ilişkilendirilmiş .rules dosyasına serileştiren (bir `Policy` etkinlik RuleSet örnek iş akışı karşı çalışır). İş akışı projeyi derlerken .rules dosyanın derleme bir kaynak olarak derlenir.  
+ [!INCLUDE[vsprvsext](../../../../includes/vsprvsext-md.md)] Windows Workflow Foundation (WF) bir parçası olarak RuleSet Düzenleyicisi sağlar. Bu Düzenleyici'yi tıklatarak başlatabilirsiniz `Policy` bir iş akışı; etkinliğinde tanımlı RuleSet nesnesi iş akışı ile ilişkilendirilmiş .rules dosyasına serileştiren (bir `Policy` etkinlik RuleSet örnek iş akışı karşı çalışır). İş akışı projeyi derlerken .rules dosyanın derleme bir kaynak olarak derlenir.  
   
  Bu örnek INCLUDE bileşenler:  
   
@@ -67,9 +68,9 @@ Bir iş akışı uygulama içinde kuralları kullanıldığında, normalde derle
   
  Şekil 3: RuleSet Düzenleyicisi  
   
- Bir Windows Workflow Foundation parçası olan Düzenleyicisi iletişim kutusu yeniden barındırma budur [!INCLUDE[vsprvs](../../../../includes/vsprvs-md.md)] eklentisi. IntelliSense desteği dahil olmak üzere aynı işlevselliği sağlar. Kurallar, aracı kümesinde ile ilişkili hedef türü (örneğin, bir iş akışı) karşı yazılan; tıkladığınızda **Gözat** ana aracı iletişim kutusunda, **türündeki iş akışı Seçici** Şekil 4'te gösterildiği gibi iletişim kutusu görüntülenir.  
+ Bir parçası olan Windows Workflow Foundation Visual Studio eklentisi Düzenleyicisi iletişim kutusu yeniden barındırma budur. IntelliSense desteği dahil olmak üzere aynı işlevselliği sağlar. Kurallar, aracı kümesinde ile ilişkili hedef türü (örneğin, bir iş akışı) karşı yazılan; tıkladığınızda **Gözat** ana aracı iletişim kutusunda, **türündeki iş akışı Seçici** Şekil 4'te gösterildiği gibi iletişim kutusu görüntülenir.  
   
- ![İş akışı &#47; Türü seçimi](../../../../docs/framework/windows-workflow-foundation/samples/media/71f08d57-e8f2-499e-8151-ece2cbdcabfd.gif "71f08d57-e8f2-499e-8151-ece2cbdcabfd")  
+ ![İş akışı &#47;türü seçimi](../../../../docs/framework/windows-workflow-foundation/samples/media/71f08d57-e8f2-499e-8151-ece2cbdcabfd.gif "71f08d57-e8f2-499e-8151-ece2cbdcabfd")  
   
  Şekil 4: Türündeki iş akışı Seçici  
   
@@ -83,7 +84,7 @@ Bir iş akışı uygulama içinde kuralları kullanıldığında, normalde derle
   
  Şekil 5: Doğrulama hataları  
   
- Gelen **veri** menü aracında içeri ve dışarı aktarma RuleSets. Tıkladığınızda **alma**, bir dosya Seçici iletişim kutusu görüntülenirse, .rules dosya seçin. Bu olabilir veya bir dosya başlangıçta içinde oluşturulabilir değil [!INCLUDE[vsprvs](../../../../includes/vsprvs-md.md)]. .Rules dosyası seri hale getirilmiş bir içermelidir `RuleDefinitions` koşulları koleksiyonu ve RuleSets koleksiyonunu içeren örneği. Aracı koşulları koleksiyonu kullanmaz, ancak kullanmak `RuleDefinitions` etkileşime izin vermek için .rules biçimi [!INCLUDE[vsprvs](../../../../includes/vsprvs-md.md)] ortamı.  
+ Gelen **veri** menü aracında içeri ve dışarı aktarma RuleSets. Tıkladığınızda **alma**, bir dosya Seçici iletişim kutusu görüntülenirse, .rules dosya seçin. Bu olabilir veya Visual Studio'da başlangıçta oluşturulmuş bir dosya olmayabilir. .Rules dosyası seri hale getirilmiş bir içermelidir `RuleDefinitions` koşulları koleksiyonu ve RuleSets koleksiyonunu içeren örneği. Aracı koşulları koleksiyonu kullanmaz, ancak kullanmak `RuleDefinitions` Visual Studio ortamı etkileşime izin vermek için .rules biçimi.  
   
  .Rules dosyayı seçtikten sonra bir **RuleSet Seçici** iletişim kutusu görüntülenir (Şekil 6'ya bakın). İçeri aktarmak istediğiniz dosyadan RuleSets seçmek için iletişim kutusunu kullanabilirsiniz (varsayılan tüm RuleSets belirtir). Kendi sürüm WF projedeki derlemesinin sürümü ile aynı olduğundan .rules dosyasında RuleSets sürüm numaralarını sahip değilsiniz. İçeri aktarma işlemi sırasında Aracı'nı (hangi içeri aktardıktan sonra değiştirebilirsiniz) sonraki kullanılabilir ana sürüm numarası otomatik olarak atar; atanan sürüm numaralarını görebilirsiniz **RuleSet Seçici** listesi.  
   
@@ -141,7 +142,7 @@ Bir iş akışı uygulama içinde kuralları kullanıldığında, normalde derle
   
 9. Uygulama yapılandırma dosyası hizmeti tarafından kullanılan veritabanı için bağlantı dizesini belirtmek için iş akışı projesinde eklenir. Bu RuleSet tablo içeren bir veritabanına işaret eden RuleSet aracı tarafından kullanılan aynı bağlantı dizesi olması gerekir.  
   
-10. Şimdi Çalıştır `RuleSetToolkitUsageSample` proje başka bir iş akışı konsol uygulaması gibi. F5 veya Ctrl + F5 içinde basın [!INCLUDE[vsprvs](../../../../includes/vsprvs-md.md)] veya RuleSetToolkitUsageSample.exe dosyasını doğrudan çalıştırın.  
+10. Şimdi Çalıştır `RuleSetToolkitUsageSample` proje başka bir iş akışı konsol uygulaması gibi. F5 veya Visual Studio içinde Ctrl + F5 tuşuna basın veya RuleSetToolkitUsageSample.exe dosyasını doğrudan çalıştırın.  
   
     > [!NOTE]
     >  Aracın kullanımı örnek derleme yüklediğinden RuleSet aracı kullanım örnek derlenir kapatmanız gerekir.

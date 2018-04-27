@@ -1,33 +1,35 @@
 ---
-title: "Oluşturulmuş İstemci Kodlarını Anlama"
-ms.custom: 
+title: Oluşturulmuş İstemci Kodlarını Anlama
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - csharp
 - vb
 ms.assetid: c3f6e4b0-1131-4c94-aa39-a197c5c2f2ca
-caps.latest.revision: "9"
+caps.latest.revision: 9
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 4c57469b61a12ff5043632cf2b6f4fe3a8a53d56
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: f7716921be5ff97c2353b3b31d841c0c8dc01658
+ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="understanding-generated-client-code"></a>Oluşturulmuş İstemci Kodlarını Anlama
-[ServiceModel meta veri yardımcı Programracı (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md) istemci uygulamaları oluşturmak istemci kodu ve kullanmak için bir istemci uygulama yapılandırma dosyası oluşturur. Bu konu, standart hizmet sözleşmesi senaryoları için oluşturulan kod örnekleri turu sağlar. [!INCLUDE[crabout](../../../../includes/crabout-md.md)]oluşturulan kod kullanarak bir istemci uygulaması oluşturma bkz [WCF istemcisi genel bakış](../../../../docs/framework/wcf/wcf-client-overview.md).  
+[ServiceModel meta veri yardımcı Programracı (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md) istemci uygulamaları oluşturmak istemci kodu ve kullanmak için bir istemci uygulama yapılandırma dosyası oluşturur. Bu konu, standart hizmet sözleşmesi senaryoları için oluşturulan kod örnekleri turu sağlar. [!INCLUDE[crabout](../../../../includes/crabout-md.md)] oluşturulan kod kullanarak bir istemci uygulaması oluşturma bkz [WCF istemcisi genel bakış](../../../../docs/framework/wcf/wcf-client-overview.md).  
   
 ## <a name="overview"></a>Genel Bakış  
- Kullanırsanız [!INCLUDE[vsprvs](../../../../includes/vsprvs-md.md)] oluşturmak için [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] , istemci türlerinin projeniz için genellikle gerekmez oluşturulan istemci kodunu inceleyin. Aynı hizmetleri gerçekleştiren bir geliştirme ortamı kullanmıyorsanız, istemci kodu oluşturmak ve ardından bu kodu istemci uygulamanızı geliştirmek için Svcutil.exe gibi bir araç kullanabilirsiniz.  
+ Oluşturmak için Visual Studio kullanıyorsanız [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] , istemci türlerinin projeniz için genellikle gerekmez oluşturulan istemci kodunu inceleyin. Aynı hizmetleri gerçekleştiren bir geliştirme ortamı kullanmıyorsanız, istemci kodu oluşturmak ve ardından bu kodu istemci uygulamanızı geliştirmek için Svcutil.exe gibi bir araç kullanabilirsiniz.  
   
  Oluşturulan tür bilgileri değiştirmek seçenekleri sayısı svcutil.exe sahip olduğundan, bu konuda tüm senaryoları açıklanmamıştır. Ancak, aşağıdaki standart görevler oluşturulan kod bulma içerir:  
   
@@ -50,14 +52,14 @@ ms.lasthandoff: 12/22/2017
   
  [!code-csharp[C_GeneratedCodeFiles#12](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_generatedcodefiles/cs/proxycode.cs#12)]  
   
- Oluşturulan hizmet sözleşme arabirimi ile birlikte kullanabileceğiniz <xref:System.ServiceModel.ChannelFactory?displayProperty=nameWithType> sınıfı oluşturmak için bir [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] hangi hizmet işlemleri çağırmak kanal nesnesi. [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)][Nasıl yapılır: ChannelFactory kullanma](../../../../docs/framework/wcf/feature-details/how-to-use-the-channelfactory.md).  
+ Oluşturulan hizmet sözleşme arabirimi ile birlikte kullanabileceğiniz <xref:System.ServiceModel.ChannelFactory?displayProperty=nameWithType> sınıfı oluşturmak için bir [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] hangi hizmet işlemleri çağırmak kanal nesnesi. [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)] [Nasıl yapılır: ChannelFactory kullanma](../../../../docs/framework/wcf/feature-details/how-to-use-the-channelfactory.md).  
   
 ### <a name="finding-wcf-client-classes"></a>WCF istemci sınıfları bulma  
  Bulunacak [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] istediğiniz kullanmak için arama uzantı için hizmet sözleşmesini uygulayan istemci sınıfı <xref:System.ServiceModel.ClientBase%601?displayProperty=nameWithType>, burada tür parametresi hizmet sözleşmesi arabirim, daha önce bulunan ve bu arabirim genişletir. Aşağıdaki örnekte gösterildiği kod <xref:System.ServiceModel.ClientBase%601> sınıf türü `ISampleService`.  
   
  [!code-csharp[C_GeneratedCodeFiles#14](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_generatedcodefiles/cs/proxycode.cs#14)]  
   
- Bu kullanabilirsiniz [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] yeni bir örneğini oluşturarak ve bunu uygulayan yöntemleri çağırma istemci sınıfı. Bu yöntemler, onu tasarlanmış ve etkileşim kurmak için yapılandırılmış hizmet işlemini çağırır. [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)][WCF istemcisi genel bakış](../../../../docs/framework/wcf/wcf-client-overview.md).  
+ Bu kullanabilirsiniz [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] yeni bir örneğini oluşturarak ve bunu uygulayan yöntemleri çağırma istemci sınıfı. Bu yöntemler, onu tasarlanmış ve etkileşim kurmak için yapılandırılmış hizmet işlemini çağırır. [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)] [WCF istemcisi genel bakış](../../../../docs/framework/wcf/wcf-client-overview.md).  
   
 > [!NOTE]
 >  SvcUtil.exe WCF istemci sınıfı oluşturduğunda ekler bir <xref:System.Diagnostics.DebuggerStepThroughAttribute> istemci sınıfına WCF istemci sınıfı aracılığıyla atlama gelen hata ayıklayıcıları engeller.  
@@ -71,10 +73,10 @@ ms.lasthandoff: 12/22/2017
   
  [!code-csharp[C_GeneratedCodeFiles#30](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_generatedcodefiles/cs/proxycode.cs#30)]  
   
- Bu durumda veri türü, istemci üzerinde belirli bir özel durum tarafından oluşturulan ayrıntı türüdür bir <xref:System.ServiceModel.FaultException%601> ayrıntı tür parametresi olduğu `microsoft.wcf.documentation.SampleFault`. [!INCLUDE[crabout](../../../../includes/crabout-md.md)]veri türlerini görmek [hizmet sözleşmelerinde veri aktarımı belirtme](../../../../docs/framework/wcf/feature-details/specifying-data-transfer-in-service-contracts.md). [!INCLUDE[crabout](../../../../includes/crabout-md.md)]istemcileri özel durumları işleme, bkz: [gönderme ve alma hataları](../../../../docs/framework/wcf/sending-and-receiving-faults.md).  
+ Bu durumda veri türü, istemci üzerinde belirli bir özel durum tarafından oluşturulan ayrıntı türüdür bir <xref:System.ServiceModel.FaultException%601> ayrıntı tür parametresi olduğu `microsoft.wcf.documentation.SampleFault`. [!INCLUDE[crabout](../../../../includes/crabout-md.md)] veri türlerini görmek [hizmet sözleşmelerinde veri aktarımı belirtme](../../../../docs/framework/wcf/feature-details/specifying-data-transfer-in-service-contracts.md). [!INCLUDE[crabout](../../../../includes/crabout-md.md)] istemcileri özel durumları işleme, bkz: [gönderme ve alma hataları](../../../../docs/framework/wcf/sending-and-receiving-faults.md).  
   
 ### <a name="finding-callback-contracts-for-duplex-services"></a>Çift yönlü hizmetler için geri çağırma sözleşmeleri bulma  
- Sözleşme arabirimi için bir değer belirten bir hizmet sözleşmesini bulursanız <xref:System.ServiceModel.ServiceContractAttribute.CallbackContract%2A?displayProperty=nameWithType> özelliği, sonra bu sözleşme çift yönlü bir sözleşme belirtir. Çift yönlü sözleşmeler gerektirir geri çağırma sözleşme uygulayan bir geri çağırma sınıf oluşturun ve o sınıfın örneğini geçirmek için istemci uygulaması <xref:System.ServiceModel.DuplexClientBase%601?displayProperty=nameWithType> veya <xref:System.ServiceModel.DuplexChannelFactory%601?displayProperty=nameWithType> hizmetiyle iletişim kurmak için kullanılır. [!INCLUDE[crabout](../../../../includes/crabout-md.md)]bkz: çift yönlü istemcileri [nasıl yapılır: çift yönlü sözleşme ile Erişim Hizmetleri](../../../../docs/framework/wcf/feature-details/how-to-access-services-with-a-duplex-contract.md).  
+ Sözleşme arabirimi için bir değer belirten bir hizmet sözleşmesini bulursanız <xref:System.ServiceModel.ServiceContractAttribute.CallbackContract%2A?displayProperty=nameWithType> özelliği, sonra bu sözleşme çift yönlü bir sözleşme belirtir. Çift yönlü sözleşmeler gerektirir geri çağırma sözleşme uygulayan bir geri çağırma sınıf oluşturun ve o sınıfın örneğini geçirmek için istemci uygulaması <xref:System.ServiceModel.DuplexClientBase%601?displayProperty=nameWithType> veya <xref:System.ServiceModel.DuplexChannelFactory%601?displayProperty=nameWithType> hizmetiyle iletişim kurmak için kullanılır. [!INCLUDE[crabout](../../../../includes/crabout-md.md)] bkz: çift yönlü istemcileri [nasıl yapılır: çift yönlü sözleşme ile Erişim Hizmetleri](../../../../docs/framework/wcf/feature-details/how-to-access-services-with-a-duplex-contract.md).  
   
  Bir geri çağırma sözleşme türü aşağıdaki sözleşme belirtir `SampleDuplexHelloCallback`.  
   

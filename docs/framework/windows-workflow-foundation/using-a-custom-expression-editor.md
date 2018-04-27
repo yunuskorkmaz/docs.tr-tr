@@ -14,16 +14,16 @@ ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: 5388ed3f55d97f3282a710ac59fe36cfb32fa49c
-ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
+ms.openlocfilehash: 6e9481364a70257f6c1711692daf5c81eee9fd88
+ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="using-a-custom-expression-editor"></a>Bir özel ifade Düzenleyicisi'ni kullanarak
 Özel ifade Düzenleyicisi düzenleme deneyimi daha zengin ya da daha basit bir ifade sağlamak üzere uygulanabilir. Özel ifade Düzenleyicisi kullanmak isteyebilirsiniz birkaç senaryo vardır:  
   
--   İçin IntelliSense ve diğer zengin düzenleme rehosted iş akışı Tasarımcısı'nda özellikleri için destek sağlama. Bu işlev sağlanmalıdır varsayılan [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] ifade Düzenleyicisi rehosted uygulamalarda kullanılamaz.  
+-   İçin IntelliSense ve diğer zengin düzenleme rehosted iş akışı Tasarımcısı'nda özellikleri için destek sağlama. Bu işlev varsayılan Visual Studio ifade Düzenleyicisi rehosted uygulamalarda kullanıldığından sağlanmalıdır.  
   
 -   Böylece, örneğin, Visual Basic öğrenme veya Visual Basic ifadelerle Dağıt gerekli değildir, iş analisti kullanıcılar için deneyimi düzenleme ifade basitleştirmek için.  
   

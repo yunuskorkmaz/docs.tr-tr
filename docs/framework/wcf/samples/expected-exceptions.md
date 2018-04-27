@@ -1,24 +1,26 @@
 ---
-title: "Beklenen Özel Durumlar"
-ms.custom: 
+title: Beklenen Özel Durumlar
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 299a6987-ae6b-43c6-987f-12b034b583ae
-caps.latest.revision: "7"
+caps.latest.revision: 7
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 728f13fcf265c20c480d34388001d528ce43190e
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 28af4a374d7ff474cf313aad711a3062f56263c9
+ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="expected-exceptions"></a>Beklenen Özel Durumlar
 Bu örnek, bir türü belirlenmiş istemci kullanırken beklenen özel durumları yakalamak gösterilmiştir. Bu örnek dayanır [Başlarken](../../../../docs/framework/wcf/samples/getting-started-sample.md) hesap makinesi hizmetinin uygular. Bu örnekte, istemci bir konsol uygulaması (.exe) ve Internet Information Services (IIS) tarafından barındırılan hizmetindeki.  
@@ -36,7 +38,7 @@ Bu örnek, bir türü belirlenmiş istemci kullanırken beklenen özel durumlar�
   
  İstemci iletişim yöntemini çağıran kodu gerekir catch `TimeoutException` ve `CommunicationException`. Bu tür hataları işlemek için bir istemci iptal etmek ve iletişim hatası rapor yoludur.  
   
-```  
+```csharp   
 try  
 {  
     ...  

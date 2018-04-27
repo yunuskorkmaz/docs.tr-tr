@@ -1,29 +1,30 @@
 ---
-title: "Uygulamalarla ilgili sorunları gidermek için izleme kullanma"
-ms.custom: 
+title: Uygulamalarla ilgili sorunları gidermek için izleme kullanma
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 8851adde-c3c2-4391-9523-d8eb831490af
-caps.latest.revision: "7"
+caps.latest.revision: 7
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: bb8971c344ff24120b5f85dceb518b0944bd5feb
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: adc9a159b8887b0198cf19891f73fdee2a48437b
+ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="using-tracking-to-troubleshoot-applications"></a>Uygulamalarla ilgili sorunları gidermek için izleme kullanma
-[!INCLUDE[wf](../../../includes/wf-md.md)]Ayrıntılar yürütülmesi vermek için iş akışı ile ilgili bilgileri izlemenize olanak sağlayan bir [!INCLUDE[wf2](../../../includes/wf2-md.md)] uygulama veya hizmet. [!INCLUDE[wf2](../../../includes/wf2-md.md)]ana bilgisayarlar bir iş akışı örneği yürütülürken iş akışı olaylarını yakalamak kullanabilirsiniz. İş akışınızı arıza ya da özel durum oluşturursa, kullanabileceğiniz [!INCLUDE[wf2](../../../includes/wf2-md.md)] ayrıntıları işlemesi sorun giderme için izleme.  
+Windows Workflow Foundation (WF), bir Windows Workflow Foundation uygulaması veya hizmeti yürütülmesi ayrıntıları vermek için iş akışı ile ilgili bilgileri izlemenize olanak sağlar. Windows Workflow Foundation ana iş akışı olayları bir iş akışı örneği yürütülürken yakalayabilir. İş akışınızı arıza ya da özel durum oluşturursa, Windows Workflow Foundation ayrıntıları işlemesi sorun giderme için izleme kullanabilirsiniz.  
   
 ## <a name="troubleshooting-a-wf-using-wf-tracking"></a>WF izleme kullanılarak WF sorunlarını giderme  
- Hatalarının işlenmesini içinde algılamak için bir [!INCLUDE[wf2](../../../includes/wf2-md.md)] etkinlik, izleme için sorgular bir izleme profiliyle etkinleştirebilir bir <xref:System.Activities.Tracking.ActivityStateRecord> Faulted durumunda. Karşılık gelen sorgu aşağıdaki kodu belirtilmedi.  
+ Windows Workflow Foundation etkinliği işlenmesini içinde hataları algılamak için izleme için sorgular bir izleme profiliyle etkinleştirebilirsiniz bir <xref:System.Activities.Tracking.ActivityStateRecord> Faulted durumunda. Karşılık gelen sorgu aşağıdaki kodu belirtilmedi.  
   
 ```xml  
 <activityStateQueries>  
@@ -55,9 +56,9 @@ ms.lasthandoff: 12/22/2017
 </workflowInstanceQueries>  
 ```  
   
- Bir iş akışı örneği işlenmeyen bir özel durum karşılaştığında bir <xref:System.Activities.Tracking.WorkflowInstanceUnhandledExceptionRecord> nesne varsa yayılan [!INCLUDE[wf2](../../../includes/wf2-md.md)] izleme etkinleştirildi.  
+ Bir iş akışı örneği işlenmeyen bir özel durum karşılaştığında bir <xref:System.Activities.Tracking.WorkflowInstanceUnhandledExceptionRecord> nesnesi Windows Workflow Foundation izleme etkinleştirilirse yayılan.  
   
- Bu izleme kaydı özel durum yığını formunda hata ayrıntıları içerir. Hatalı ve içinde işlenmeyen bir özel sonuçlandı hataya (örneğin, etkinlik) kaynak ayrıntılarını sahiptir. Hata olayları abone olmak için bir [!INCLUDE[wf2](../../../includes/wf2-md.md)], izleme katılımcı ekleyerek izlemeyi etkinleştir. Bu katılımcı için sorgular bir izleme profili yapılandırmak `ActivityStateQuery (state="Faulted")`, <xref:System.Activities.Tracking.FaultPropagationRecord>, ve `WorkflowInstanceQuery (state="UnhandledException")`.  
+ Bu izleme kaydı özel durum yığını formunda hata ayrıntıları içerir. Hatalı ve içinde işlenmeyen bir özel sonuçlandı hataya (örneğin, etkinlik) kaynak ayrıntılarını sahiptir. Windows Workflow Foundation hata olaylarına abone olmak için izleme katılımcı ekleyerek izlemeyi etkinleştirin. Bu katılımcı için sorgular bir izleme profili yapılandırmak `ActivityStateQuery (state="Faulted")`, <xref:System.Activities.Tracking.FaultPropagationRecord>, ve `WorkflowInstanceQuery (state="UnhandledException")`.  
   
  ETW İzleme katılımcı kullanarak izleme etkinleştirilirse, hata olayları ETW oturumuna gösterilen. Olaylar, Olay Görüntüleyicisi'ni Olay Görüntüleyicisi'ni kullanarak görüntülenebilir. Bu düğümü altında bulunabilir **Olay Görüntüleyicisi -> uygulamalar ve hizmet günlükleri -> Microsoft -> Windows -> Uygulama uygulamalarının** analitik kanal.  
   

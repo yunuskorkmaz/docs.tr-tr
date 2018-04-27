@@ -1,30 +1,13 @@
----
-title: "Etkinlik Kitaplığı"
-ms.custom: 
-ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
-ms.topic: article
-ms.assetid: 5323e9d4-71d6-47eb-bfa6-31feac62044d
-caps.latest.revision: "7"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 99d8fba848129156d94e54d1da7d08122ccfa735
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
-ms.translationtype: MT
-ms.contentlocale: tr-TR
-ms.lasthandoff: 12/22/2017
+ ---
+Başlık: "Etkinlik kitaplığı" MS.özel: "" ms.date: "03/30/2017" ms.prod: ".net framework" ms.reviewer: "" MS.Paket: "" ms.tgt_pltfrm: "" ms.topic: "ms.assetid makalesi": 5323e9d4-71d6-47eb-bfa6-31feac62044d caps.latest.revision: 7 Yazar: "dotnet-bot "ms.author:"dotnetcontent"Yöneticisi:"wpickett"ms.workload: 
+  - "dotnet"
 ---
 # <a name="activity-library"></a>Etkinlik Kitaplığı
-Bu bölümde Gelişmiş özel etkinlikleri gösteren örnekleri içeren [!INCLUDE[wf](../../../../includes/wf-md.md)].  
+Bu bölüm, Gelişmiş özel etkinlikler Windows Workflow Foundation (WF) gösteren örnekleri içerir.  
   
 ## <a name="in-this-section"></a>Bu Bölümde  
  [.NET Framework 4.5’te İlke Etkinliği](../../../../docs/framework/windows-workflow-foundation/samples/policy-activity-in-net-framework-4-5.md)  
- Policy4 etkinlik nasıl sağladığını gösterir [!INCLUDE[wf2](../../../../includes/wf2-md.md)] içinde [!INCLUDE[netfx35_long](../../../../includes/netfx35-long-md.md)] (WF 3.5) <xref:System.Workflow.Activities.Rules.RuleSet> kullanılacak nesneleri [!INCLUDE[wf2](../../../../includes/wf2-md.md)]içinde [!INCLUDE[netfx_current_long](../../../../includes/netfx-current-long-md.md)] (WF 4.5) WF 3. 5 ' sevk kurallar altyapısı kullanarak doğrudan.  
+ Windows Workflow Foundation Policy4 etkinlik nasıl sağladığını gösterir [!INCLUDE[netfx35_long](../../../../includes/netfx35-long-md.md)] (WF 3.5) <xref:System.Workflow.Activities.Rules.RuleSet> Windows Workflow Foundation kullanılacak nesneleri [!INCLUDE[netfx_current_long](../../../../includes/netfx-current-long-md.md)] (WF 4.5) WF 3. 5 ' sevk kurallar altyapısı kullanarak doğrudan.  
   
  [Bir Değer Aralığına Geçmek için Özel Etkinlik](../../../../docs/framework/windows-workflow-foundation/samples/custom-activity-to-switch-on-a-range-of-values.md)  
  Kullanımını genişleten bir özel etkinlik oluşturmak nasıl gösteren bir <xref:System.Activities.Statements.Switch%601>.  
@@ -57,7 +40,7 @@ Bu bölümde Gelişmiş özel etkinlikleri gösteren örnekleri içeren [!INCLUD
  Gösteren nasıl `ThrottleParallelForEach` etkinlik benzer <xref:System.Activities.Statements.ParallelForEach%601> etkinliği bir özel durum ile onun bir eşzamanlılık faktörü ayarını yürütmek için eşzamanlı dalların sayısını kısıtlayın izin verir.  
   
  [Varlık Etkinlikleri](../../../../docs/framework/windows-workflow-foundation/samples/entity-activities.md)  
- ADO.NET Entity Framework ile kullanımı gösterilmiştir [!INCLUDE[wf2](../../../../includes/wf2-md.md)] veri erişimi basitleştirmek için.  
+ ADO.NET Entity Framework ile Windows Workflow Foundation veri erişimi basitleştirmek için nasıl kullanılacağını gösterir.  
   
  [Veritabanı Erişimi Etkinlikleri](../../../../docs/framework/windows-workflow-foundation/samples/database-access-activities.md)  
  Nasıl almak veya bilgileri değiştirin ve kullanmak için veritabanlarına erişim sağlayan etkinlikler oluşturulduğunu gösteren [ADO.NET](http://go.microsoft.com/fwlink/?LinkId=166081) veritabanına erişmek için.  
@@ -66,7 +49,7 @@ Bu bölümde Gelişmiş özel etkinlikleri gösteren örnekleri içeren [!INCLUD
  Yolun etkili bir şekilde bunları yorum yürütülmesinin diğer etkinlikler kaldırır özel bir etkinlik yazma gösterir.  
   
  [.NET Framework 4.5’te Dış İlke Etkinliği](../../../../docs/framework/windows-workflow-foundation/samples/externalized-policy-activity-in-net-framework-4-5.md)  
- Mevcut yürütme ExternalizedPolicy4 etkinlik nasıl sağladığını gösterir [!INCLUDE[wf2](../../../../includes/wf2-md.md)] içinde [!INCLUDE[netfx35_long](../../../../includes/netfx35-long-md.md)] (WF 3.5) <xref:System.Workflow.Activities.Rules.RuleSet> nesnelerini [!INCLUDE[wf2](../../../../includes/wf2-md.md)] içinde [!INCLUDE[netfx_current_long](../../../../includes/netfx-current-long-md.md)] (WF 4.5) WF 3. 5 ' sevk kurallar altyapısı kullanarak doğrudan.  
+ Var olan Windows Workflow Foundation yürütme ExternalizedPolicy4 etkinlik nasıl sağladığını gösterir [!INCLUDE[netfx35_long](../../../../includes/netfx35-long-md.md)] (WF 3.5) <xref:System.Workflow.Activities.Rules.RuleSet> Windows Workflow Foundation ' nesneleri [!INCLUDE[netfx_current_long](../../../../includes/netfx-current-long-md.md)] (WF 4.5) doğrudan kullanarak kurallar altyapısı diğer bir deyişle WF 3. 5 ' geliyordu.  
   
  [NoPersistScope Etkinliği](../../../../docs/framework/windows-workflow-foundation/samples/nopersistscope-activity.md)  
  Bir iş akışındaki serileştirilebilir olmayan ve tek kullanımlık bir durumu işlemek gösterilmiştir.  

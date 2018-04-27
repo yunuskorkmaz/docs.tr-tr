@@ -2,9 +2,10 @@
 title: Dim Deyimi (Visual Basic)
 ms.date: 07/20/2015
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- devlang-visual-basic
 ms.topic: article
 f1_keywords:
 - vb.Dim
@@ -34,14 +35,14 @@ helpviewer_keywords:
 - Dim statement [Visual Basic], syntax
 - variables [Visual Basic], member and local
 ms.assetid: fae3eca1-f0b2-4400-994b-7aa58a848448
-caps.latest.revision: "72"
+caps.latest.revision: 72
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: a428f8be7b62600ca8fffd3160039c1de911e34e
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 36e2d416e4653bfa6fe212b75b92ae2d90775d53
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="dim-statement-visual-basic"></a>Dim Deyimi (Visual Basic)
 Bildirir ve depolama alanı için bir veya daha fazla değişken ayırır.  
@@ -63,13 +64,13 @@ Dim [ WithEvents ] variablelist
   
      İsteğe bağlı. Aşağıdakilerden biri olabilir:  
   
-    -   [Ortak](../../../visual-basic/language-reference/modifiers/public.md)  
+    -   [Public](../../../visual-basic/language-reference/modifiers/public.md)  
   
-    -   [Korumalı](../../../visual-basic/language-reference/modifiers/protected.md)  
+    -   [Protected](../../../visual-basic/language-reference/modifiers/protected.md)  
   
-    -   [Arkadaş](../../../visual-basic/language-reference/modifiers/friend.md)  
+    -   [Friend](../../../visual-basic/language-reference/modifiers/friend.md)  
   
-    -   [Özel](../../../visual-basic/language-reference/modifiers/private.md)  
+    -   [Private](../../../visual-basic/language-reference/modifiers/private.md)  
   
     -   `Protected Friend`  
   
@@ -251,7 +252,7 @@ Dim twoDimensions(,) As Integer = {{0, 1, 2}, {10, 11, 12}}
   
  Dizi değişmez değerleri hakkında daha fazla bilgi için bkz: [diziler](../../../visual-basic/programming-guide/language-features/arrays/index.md).  
   
-##  <a name="default"></a>Varsayılan veri türleri ve değerleri  
+##  <a name="default"></a> Varsayılan veri türleri ve değerleri  
  Veri türü ve Başlatıcı belirtmenin çeşitli birleşimleri sonuçları aşağıdaki tabloda açıklanmaktadır bir `Dim` deyimi.  
   
 |Belirtilen veri türü?|Belirtilen başlatıcı?|Örnek|Sonuç|  
@@ -261,7 +262,7 @@ Dim twoDimensions(,) As Integer = {{0, 1, 2}, {10, 11, 12}}
 |Evet|Hayır|`Dim qty As Integer`|Değişken veri türü için varsayılan değer için başlatılır. Bu bölümde daha sonra tabloya bakın.|  
 |Evet|Evet|`Dim qty  As Integer = 5`|Başlatıcı'veri türü belirtilen veri türüne dönüştürülebilir değilse, bir derleme zamanı hatası oluşur.|  
   
- Bir veri türü belirtin, ancak bir başlatıcı belirtmeyin [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] kendi veri türü için varsayılan değer değişkenine başlatır. Aşağıdaki tabloda, varsayılan başlatma değerleri gösterir.  
+ Bir veri türü belirtin, ancak bir başlatıcı belirtmezseniz, Visual Basic veri türü için varsayılan değer değişkenine başlatır. Aşağıdaki tabloda, varsayılan başlatma değerleri gösterir.  
   
 |Veri türü|Varsayılan değer|  
 |---|---|  
@@ -279,8 +280,8 @@ Dim twoDimensions(,) As Integer = {{0, 1, 2}, {10, 11, 12}}
 |Yordam bildirimi|Değişkeni başlatılamadı|Varolan değişkeni durdurur|  
 |---|---|---|  
 |Bir modüle|İlk kez yordamı çağrılır|Program yürütme durduğunda|  
-|Sınıf veya yapı yordamdır`Shared`|İlk kez yordamı belirli bir örneğe veya sınıf veya yapı kendisini çağrılır|Program yürütme durduğunda|  
-|Sınıf veya yapı yordamı değil`Shared`|İlk kez yordamı belirli bir örneğinde çağrılır|Çöp toplama (GC) örneği serbest bırakıldığında|  
+|Sınıf veya yapı yordamdır `Shared`|İlk kez yordamı belirli bir örneğe veya sınıf veya yapı kendisini çağrılır|Program yürütme durduğunda|  
+|Sınıf veya yapı yordamı değil `Shared`|İlk kez yordamı belirli bir örneğinde çağrılır|Çöp toplama (GC) örneği serbest bırakıldığında|  
   
 ## <a name="attributes-and-modifiers"></a>Öznitelikler ve değiştiricileri  
  Öznitelikleri yalnızca üye değişkenleri için değil, yerel değişkenleri uygulayabilirsiniz. Bir öznitelik derlemenin meta verilerini, bilgileri yerel değişkenler gibi geçici depolama için anlamlı olmayan katkıda bulunur.  
@@ -319,16 +320,16 @@ Dim twoDimensions(,) As Integer = {{0, 1, 2}, {10, 11, 12}}
  [!code-vb[VbVbalrStatements#145](../../../visual-basic/language-reference/error-messages/codesnippet/VisualBasic/dim-statement_4.vb)]  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [Const deyimi](../../../visual-basic/language-reference/statements/const-statement.md)  
- [ReDim deyimi](../../../visual-basic/language-reference/statements/redim-statement.md)  
- [Option Explicit deyimi](../../../visual-basic/language-reference/statements/option-explicit-statement.md)  
- [Option Infer deyimi](../../../visual-basic/language-reference/statements/option-infer-statement.md)  
- [Option Strict deyimi](../../../visual-basic/language-reference/statements/option-strict-statement.md)  
- [Derle sayfası, Proje Tasarımcısı (Visual Basic)](/visualstudio/ide/reference/compile-page-project-designer-visual-basic)  
- [Değişken bildirimi](../../../visual-basic/programming-guide/language-features/variables/variable-declaration.md)  
+ [Const Deyimi](../../../visual-basic/language-reference/statements/const-statement.md)  
+ [ReDim Deyimi](../../../visual-basic/language-reference/statements/redim-statement.md)  
+ [Option Explicit Deyimi](../../../visual-basic/language-reference/statements/option-explicit-statement.md)  
+ [Option Infer Deyimi](../../../visual-basic/language-reference/statements/option-infer-statement.md)  
+ [Option Strict Deyimi](../../../visual-basic/language-reference/statements/option-strict-statement.md)  
+ [Derleme Sayfası, Proje Tasarımcısı (Visual Basic)](/visualstudio/ide/reference/compile-page-project-designer-visual-basic)  
+ [Değişken Bildirimi](../../../visual-basic/programming-guide/language-features/variables/variable-declaration.md)  
  [Diziler](../../../visual-basic/programming-guide/language-features/arrays/index.md)  
- [Nesne başlatıcıları: Adlandırılmış ve anonim türler](../../../visual-basic/programming-guide/language-features/objects-and-classes/object-initializers-named-and-anonymous-types.md)  
- [Anonim türler](../../../visual-basic/programming-guide/language-features/objects-and-classes/anonymous-types.md)  
- [Nesne başlatıcıları: Adlandırılmış ve anonim türler](../../../visual-basic/programming-guide/language-features/objects-and-classes/object-initializers-named-and-anonymous-types.md)  
- [Nasıl yapılır: nesne Başlatıcı kullanarak nesne bildirme](../../../visual-basic/programming-guide/language-features/objects-and-classes/how-to-declare-an-object-by-using-an-object-initializer.md)  
- [Yerel tür çıkarımı](../../../visual-basic/programming-guide/language-features/variables/local-type-inference.md)
+ [Nesne Başlatıcıları: Adlandırılmış ve Anonim Tipler](../../../visual-basic/programming-guide/language-features/objects-and-classes/object-initializers-named-and-anonymous-types.md)  
+ [Anonim Tipler](../../../visual-basic/programming-guide/language-features/objects-and-classes/anonymous-types.md)  
+ [Nesne Başlatıcıları: Adlandırılmış ve Anonim Tipler](../../../visual-basic/programming-guide/language-features/objects-and-classes/object-initializers-named-and-anonymous-types.md)  
+ [Nasıl yapılır: Nesne Başlatıcısı Kullanarak Nesne Bildirme](../../../visual-basic/programming-guide/language-features/objects-and-classes/how-to-declare-an-object-by-using-an-object-initializer.md)  
+ [Yerel Çıkarım](../../../visual-basic/programming-guide/language-features/variables/local-type-inference.md)

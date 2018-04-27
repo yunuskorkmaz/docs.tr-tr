@@ -1,12 +1,13 @@
 ---
-title: "XAML İçin Tür Dönüştürücüleri ve İşaretleme Uzantıları"
-ms.custom: 
+title: XAML İçin Tür Dönüştürücüleri ve İşaretleme Uzantıları
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-wpf
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-wpf
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - XAML [XAML Services], type converter services
@@ -15,16 +16,17 @@ helpviewer_keywords:
 - value converters for XAML [XAML Services]
 - XAML [XAML Services], service context
 ms.assetid: db07a952-05ce-4aa4-b6f9-aac7397d0326
-caps.latest.revision: "13"
+caps.latest.revision: 13
 author: wadepickett
 ms.author: wpickett
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 946049cea6c9148d600cb50e6d49a4cc686c6d2d
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 6425685083c3b73d75d2d7c8a4509ae035542085
+ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="type-converters-and-markup-extensions-for-xaml"></a>XAML İçin Tür Dönüştürücüleri ve İşaretleme Uzantıları
 Tür dönüştürücüleri ve İşaretleme uzantıları Nesne grafiği bileşenleri oluşturmak için XAML türü sistemleri ve XAML yazıcılarının kullanan iki tekniklerle aynıdır. Bazı özellikleri paylaşır rağmen tür dönüştürücüleri ve İşaretleme uzantıları farklı bir XAML düğüm akış gösterilir. Bu belgede kümesi, tür dönüştürücüleri, biçimlendirme uzantıları ve benzer yapıları bazen topluca için değer dönüştürücüler bilinir.  
@@ -43,7 +45,7 @@ Tür dönüştürücüleri ve İşaretleme uzantıları Nesne grafiği bileşenl
   
 <a name="type_converters"></a>   
 ## <a name="type-converters"></a>Tür dönüştürücüleri  
- .NET Framework XAML hizmetlerinde tanımında tür dönüştürücüleri CLR türetilen sınıflardır <xref:System.ComponentModel.TypeConverter> sınıfı. <xref:System.ComponentModel.TypeConverter>içinde bir sınıf [!INCLUDE[TLA#tla_netframewk](../../../includes/tlasharptla-netframewk-md.md)] XAML yokken. Özellik windows ve metin tabanlı benzer düzenleme metaphors için destek için özgün amacı olan [!INCLUDE[TLA2#tla_ide](../../../includes/tla2sharptla-ide-md.md)] özellikleri. .NET Framework XAML giriş kullanan <xref:System.ComponentModel.TypeConverter> metin sözdizimini (olarak bir öznitelik değeri ya da XAML değer düğümü bulundu) bir nesnesine dönüştürmek için. <xref:System.ComponentModel.TypeConverter>Ayrıca bir nesne değeri metin sözdizimi için seri hale getirmek için kullanılabilir. <xref:System.ComponentModel.TypeConverter>Ayrıca önceki çerçeveye özel XAML uygulamalarında kullanıldı [!INCLUDE[TLA#tla_wpf](../../../includes/tlasharptla-wpf-md.md)] ve [!INCLUDE[vsindigo](../../../includes/vsindigo-md.md)]. Hakkında daha fazla bilgi için <xref:System.ComponentModel.TypeConverter> XAML'de bkz [XAML genel bakış için tür dönüştürücüleri](../../../docs/framework/xaml-services/type-converters-for-xaml-overview.md).  
+ .NET Framework XAML hizmetlerinde tanımında tür dönüştürücüleri CLR türetilen sınıflardır <xref:System.ComponentModel.TypeConverter> sınıfı. <xref:System.ComponentModel.TypeConverter> içinde bir sınıf [!INCLUDE[TLA#tla_netframewk](../../../includes/tlasharptla-netframewk-md.md)] XAML yokken. Özellik windows ve metin tabanlı benzer düzenleme metaphors için destek için özgün amacı olan [!INCLUDE[TLA2#tla_ide](../../../includes/tla2sharptla-ide-md.md)] özellikleri. .NET Framework XAML giriş kullanan <xref:System.ComponentModel.TypeConverter> metin sözdizimini (olarak bir öznitelik değeri ya da XAML değer düğümü bulundu) bir nesnesine dönüştürmek için. <xref:System.ComponentModel.TypeConverter> Ayrıca bir nesne değeri metin sözdizimi için seri hale getirmek için kullanılabilir. <xref:System.ComponentModel.TypeConverter> Ayrıca önceki çerçeveye özel XAML uygulamalarında kullanıldı [!INCLUDE[TLA#tla_wpf](../../../includes/tlasharptla-wpf-md.md)] ve [!INCLUDE[vsindigo](../../../includes/vsindigo-md.md)]. Hakkında daha fazla bilgi için <xref:System.ComponentModel.TypeConverter> XAML'de bkz [XAML genel bakış için tür dönüştürücüleri](../../../docs/framework/xaml-services/type-converters-for-xaml-overview.md).  
   
 <a name="markup_extensions"></a>   
 ## <a name="markup-extensions"></a>İşaretleme uzantıları  
@@ -56,7 +58,7 @@ Tür dönüştürücüleri ve İşaretleme uzantıları Nesne grafiği bileşenl
  XAML biçimlendirme uzantısı uygulama modeli hakkında daha fazla bilgi için bkz: [işaretleme uzantılarına genel bakış XAML](../../../docs/framework/xaml-services/markup-extensions-for-xaml-overview.md).  
   
 > [!NOTE]
->  <xref:System.Windows.Markup.MarkupExtension> Ve <xref:System.Windows.Markup.ValueSerializer> türleridir hem de <xref:System.Windows.Markup> ad alanı ve de <xref:System.Xaml> ad alanı. Bu bu tür için WPF ya da belirli göstermez veya [!INCLUDE[TLA2#tla_winforms](../../../includes/tla2sharptla-winforms-md.md)] aksi dizeyi içeren CLR ad alanları doldurmak teknolojileri `Windows`. <xref:System.Windows.Markup.MarkupExtension>ve <xref:System.Windows.Markup.ValueSerializer> System.Xaml derlemede ve belirli framework bağımlılık sahiptir. CLR ad alanı içinde bu tür var [!INCLUDE[net_v30_short](../../../includes/net-v30-short-md.md)] ve CLR ad alanındaki kalır [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)] başvuruları varolan WPF projelerindeki yeni önlemek için. Daha fazla bilgi için bkz: [geçirilen türler WPF gelen System.XAML'ye](../../../docs/framework/xaml-services/types-migrated-from-wpf-to-system-xaml.md).  
+>  <xref:System.Windows.Markup.MarkupExtension> Ve <xref:System.Windows.Markup.ValueSerializer> türleridir hem de <xref:System.Windows.Markup> ad alanı ve de <xref:System.Xaml> ad alanı. Bu bu tür aksi dizeyi içeren CLR ad alanları doldurmak WPF ya da Windows Forms teknolojiler için belirli göstermez `Windows`. <xref:System.Windows.Markup.MarkupExtension> ve <xref:System.Windows.Markup.ValueSerializer> System.Xaml derlemede ve belirli framework bağımlılık sahiptir. CLR ad alanı içinde bu tür var [!INCLUDE[net_v30_short](../../../includes/net-v30-short-md.md)] ve CLR ad alanındaki kalır [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)] başvuruları varolan WPF projelerindeki yeni önlemek için. Daha fazla bilgi için bkz: [geçirilen türler WPF gelen System.XAML'ye](../../../docs/framework/xaml-services/types-migrated-from-wpf-to-system-xaml.md).  
   
 <a name="value_serializers"></a>   
 ## <a name="value-serializers"></a>Değer serileştiricileri  

@@ -1,27 +1,29 @@
 ---
-title: "Modelleme ve eşleme"
-ms.custom: 
+title: Modelleme ve eşleme
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-ado
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-ado
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: ec8a9515-3708-4cde-a688-4d8e6975f150
-caps.latest.revision: "7"
+caps.latest.revision: 7
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.workload: dotnet
-ms.openlocfilehash: 0782d75aa44557ef87f1d59757b0d60873d8a949
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.workload:
+- dotnet
+ms.openlocfilehash: e7bd382cf2183bcd84c7ad4a420dcbd7570e0685
+ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="modeling-and-mapping"></a>Modelleme ve eşleme
-İçinde [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)]tanımlayabilirsiniz kavramsal model, depolama modelindeki ve uygulamanızı en iyi iki şekilde arasında eşleme uygun. Varlık veri modeli Araçları [!INCLUDE[vsprvs](../../../../../includes/vsprvs-md.md)] oluşturmanızı sağlayan bir.[ sistemin edmx dosyası](http://msdn.microsoft.com/library/f4c8e7ce-1db6-417e-9759-15f8b55155d4) bir veritabanı veya bir grafik modeli ve ardından güncelleştirme veritabanı veya model değiştiğinde, dosya.  
+İçinde [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)]tanımlayabilirsiniz kavramsal model, depolama modelindeki ve uygulamanızı en iyi iki şekilde arasında eşleme uygun. Varlık veri modeli araçları Visual Studio oluşturmanızı sağlayan bir. [edmx dosyası](http://msdn.microsoft.com/library/f4c8e7ce-1db6-417e-9759-15f8b55155d4) bir veritabanı veya bir grafik modeli ve ardından güncelleştirme veritabanı veya model değiştiğinde, dosya.  
   
  Entity Framework 4.1 ile başlayarak, Code First geliştirme kullanarak programlı olarak bir modeli de oluşturabilirsiniz. Code First geliştirme için iki farklı senaryolar vardır. Her iki durumda da Geliştirici .NET Framework sınıf tanımları kodlayarak bir model tanımlar ve ardından isteğe bağlı olarak ek eşleme veya yapılandırma veri ek açıklamaları veya fluent API kullanılarak belirtir.  
   

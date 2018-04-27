@@ -16,11 +16,11 @@ helpviewer_keywords:
 ms.assetid: fec8a3f1-b791-4a37-8af7-344859f8212d
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 53362c2eb5517d9230ea88975745315d6db7f1ba
-ms.sourcegitcommit: 498799639937c89de777361aab74261efe7b79ea
+ms.openlocfilehash: 5a25755bcbb8d42124cde531f641a611202ae5a1
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/22/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="-sdkpath"></a>-sdkpath
 Mscorlib.dll ve Microsoft.VisualBasic.dll içinde konumunu belirtir.  
@@ -36,10 +36,10 @@ Mscorlib.dll ve Microsoft.VisualBasic.dll içinde konumunu belirtir.
  Mscorlib.dll ve derleme için kullanılacak Microsoft.VisualBasic.dll içinde sürümleri içeren dizini. Bunu yüklenene kadar bu yolu doğrulanmaz. Dizin adı tırnak işaretleri içine alın ("") boşluk içeriyorsa.  
   
 ## <a name="remarks"></a>Açıklamalar  
- Bu seçenek söyler [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] derleyici Microsoft.VisualBasic.dll içinde dosya ve mscorlib.dll bir varsayılan olmayan konumundan yüklenemiyor. `-sdkpath` Seçeneği ile kullanılmak üzere tasarlanmış [- netcf](../../../visual-basic/reference/command-line-compiler/netcf.md). [!INCLUDE[Compact](~/includes/compact-md.md)] Bunlardan farklı sürümlerini kullanan destek kitaplıkları türleri ve farklı dil özelliklerini cihazlarda bulunamadı kullanmaktan kaçının.  
+ Bu seçenek varsayılan olmayan konumdan mscorlib.dll ve Microsoft.VisualBasic.dll içinde dosyaları yüklemek için Visual Basic derleyici söyler. `-sdkpath` Seçeneği ile kullanılmak üzere tasarlanmış [- netcf](../../../visual-basic/reference/command-line-compiler/netcf.md). [!INCLUDE[Compact](~/includes/compact-md.md)] Bunlardan farklı sürümlerini kullanan destek kitaplıkları türleri ve farklı dil özelliklerini cihazlarda bulunamadı kullanmaktan kaçının.  
   
 > [!NOTE]
->  `-sdkpath` Seçeneği Visual Studio geliştirme ortamında kullanılabilir değil; yalnızca komut satırından derlerken kullanılabilir. `-sdkpath` Seçeneği ayarlanmış olduğunda bir [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] aygıt proje yüklenir.  
+>  `-sdkpath` Seçeneği Visual Studio geliştirme ortamında kullanılabilir değil; yalnızca komut satırından derlerken kullanılabilir. `-sdkpath` Seçeneği, bir Visual Basic cihaz projesi yüklendiğinde ayarlanır.  
   
  Derleyici Visual Basic çalışma zamanı kitaplığı başvurusu olmadan kullanarak derleme belirtebilirsiniz `-vbruntime` derleyici seçeneği. Daha fazla bilgi için bkz: [- vbruntime](../../../visual-basic/reference/command-line-compiler/vbruntime.md).  
   

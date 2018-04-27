@@ -1,36 +1,38 @@
 ---
-title: "UI Otomasyon TextPattern Öğesine Genel Bakış"
-ms.custom: 
+title: UI Otomasyon TextPattern Öğesine Genel Bakış
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-bcl
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-bcl
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - UI Automation, TextPattern class
 - TextPattern class
 - classes, TextPattern
 ms.assetid: 41787927-df1f-4f4a-aba3-641662854fc4
-caps.latest.revision: "38"
+caps.latest.revision: 38
 author: Xansky
 ms.author: mhopkins
 manager: markl
-ms.workload: dotnet
-ms.openlocfilehash: dbf3e125d911a407be3b07d0ce93d5c17bd8a0b7
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.workload:
+- dotnet
+ms.openlocfilehash: 1b9504dceea6987945cfb3960f756148db9ebb8f
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="ui-automation-textpattern-overview"></a>UI Otomasyon TextPattern Öğesine Genel Bakış
 > [!NOTE]
 >  Bu belge yönetilen kullanmak isteyen .NET Framework için tasarlanan [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] tanımlanan sınıflar <xref:System.Windows.Automation> ad alanı. Hakkında en yeni bilgiler için [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)], bkz: [Windows Otomasyon API: UI Otomasyonu](http://go.microsoft.com/fwlink/?LinkID=156746).  
   
- Bu genel bakışta nasıl kullanılacağını açıklar [!INCLUDE[TLA#tla_uiautomation](../../../includes/tlasharptla-uiautomation-md.md)] metin denetimlerin biçimi ve stil öznitelikleri de dahil olmak üzere metin içeriği kullanıma sunmak için [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]-desteklenen platformlar. Bu denetimleri içerir, ancak bunlarla sınırlı değildir [!INCLUDE[TLA#tla_winfx](../../../includes/tlasharptla-winfx-md.md)] <xref:System.Windows.Controls.TextBox> ve <xref:System.Windows.Controls.RichTextBox> yanı sıra bunların [!INCLUDE[TLA2#tla_win32](../../../includes/tla2sharptla-win32-md.md)] eşdeğerleri.  
+ Bu genel bakışta nasıl kullanılacağını açıklar [!INCLUDE[TLA#tla_uiautomation](../../../includes/tlasharptla-uiautomation-md.md)] metin denetimlerin biçimi ve stil öznitelikleri de dahil olmak üzere metin içeriği kullanıma sunmak için [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]-desteklenen platformlar. Bu denetimler içerir, ancak Microsoft .NET Framework sınırlı değildir <xref:System.Windows.Controls.TextBox> ve <xref:System.Windows.Controls.RichTextBox> yanı sıra bunların [!INCLUDE[TLA2#tla_win32](../../../includes/tla2sharptla-win32-md.md)] eşdeğerleri.  
   
- Denetim metin içeriğini gösterme kullanılarak gerçekleştirilir <xref:System.Windows.Automation.TextPattern> metin kapsayıcı olarak bir metin akış içeriğini temsil eden denetim düzeni. Buna karşılık, <xref:System.Windows.Automation.TextPattern> desteği gerektiren <xref:System.Windows.Automation.Text.TextPatternRange> biçimi ve stil öznitelikleri kullanıma sunmak için sınıf. <xref:System.Windows.Automation.Text.TextPatternRange>destekleyen <xref:System.Windows.Automation.TextPattern> bitişik temsil eden tarafından veya birden çok, metin yayılma koleksiyonuyla metin kapsayıcısında ayrık <xref:System.Windows.Automation.Text.TextPatternRangeEndpoint.Start> ve <xref:System.Windows.Automation.Text.TextPatternRangeEndpoint.End> uç noktaları. <xref:System.Windows.Automation.Text.TextPatternRange>Seçimi, karşılaştırma, alma ve çapraz geçişi gibi işlevselliği destekler.  
+ Denetim metin içeriğini gösterme kullanılarak gerçekleştirilir <xref:System.Windows.Automation.TextPattern> metin kapsayıcı olarak bir metin akış içeriğini temsil eden denetim düzeni. Buna karşılık, <xref:System.Windows.Automation.TextPattern> desteği gerektiren <xref:System.Windows.Automation.Text.TextPatternRange> biçimi ve stil öznitelikleri kullanıma sunmak için sınıf. <xref:System.Windows.Automation.Text.TextPatternRange> destekleyen <xref:System.Windows.Automation.TextPattern> bitişik temsil eden tarafından veya birden çok, metin yayılma koleksiyonuyla metin kapsayıcısında ayrık <xref:System.Windows.Automation.Text.TextPatternRangeEndpoint.Start> ve <xref:System.Windows.Automation.Text.TextPatternRangeEndpoint.End> uç noktaları. <xref:System.Windows.Automation.Text.TextPatternRange> Seçimi, karşılaştırma, alma ve çapraz geçişi gibi işlevselliği destekler.  
   
 > [!NOTE]
 >  <xref:System.Windows.Automation.TextPattern> Sınıfları eklemek veya metin değiştirmek için bir yol sağlamaz. Ancak, denetimin bağlı olarak bu tarafından gerçekleştirilmesi [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] <xref:System.Windows.Automation.ValuePattern> veya doğrudan klavye girdisi aracılığıyla. Bkz: [TextPattern Ekle metin örnek](http://msdn.microsoft.com/library/67353f93-7ee2-42f2-ab76-5c078cf6ca16) bir örnek.  
@@ -39,7 +41,7 @@ ms.lasthandoff: 01/19/2018
   
 <a name="UI_Automation_TextPattern_vs__Cicero"></a>   
 ## <a name="ui-automation-textpattern-vs-text-services-framework"></a>UI Otomasyon TextPattern vs. Metin hizmetleri altyapısı  
- [!INCLUDE[TLA#tla_tsf](../../../includes/tlasharptla-tsf-md.md)]doğal dil hizmet ve Gelişmiş metin Masaüstü ve uygulama içinden girişi sağlayan bir basit ve ölçeklenebilir sistem çerçevedir. Metin depolarındaki kullanıma sunmak üzere uygulamalar için arabirim sağlayan ek olarak ayrıca meta veriler için bu metni deposu destekler.  
+ [!INCLUDE[TLA#tla_tsf](../../../includes/tlasharptla-tsf-md.md)] doğal dil hizmet ve Gelişmiş metin Masaüstü ve uygulama içinden girişi sağlayan bir basit ve ölçeklenebilir sistem çerçevedir. Metin depolarındaki kullanıma sunmak üzere uygulamalar için arabirim sağlayan ek olarak ayrıca meta veriler için bu metni deposu destekler.  
   
  Ancak, [!INCLUDE[TLA2#tla_tsf](../../../includes/tla2sharptla-tsf-md.md)] ise bağlam algılayan senaryolarına giriş eklemesine gereken uygulamalar için tasarlanmış <xref:System.Windows.Automation.TextPattern> olduğu bir salt okunur çözümüyle (yukarıda belirtilen sınırlı geçici çözüm) amacı bir metin deposu için en iyi duruma getirilmiş erişim sağlamak ekran okuyucuların ve Braille aygıtlar.  
   
@@ -97,11 +99,11 @@ ms.lasthandoff: 01/19/2018
 ## <a name="security"></a>Güvenlik  
  [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] Mimarisi göz önünde bulundurularak ile tasarlanmıştır (bkz [UI Otomasyon güvenliğine genel bakış](../../../docs/framework/ui-automation/ui-automation-security-overview.md)). Ancak, bu genel bakış içinde açıklanan TextPattern sınıfları bazı belirli güvenlik konuları gerektirir.  
   
--   [!INCLUDE[TLA#tla_uiautomation](../../../includes/tlasharptla-uiautomation-md.md)]metin sağlayıcıları salt okunur arabirimleri sağlayın ve varolan metin denetiminde değiştirme yeteneği sağlamaz.  
+-   [!INCLUDE[TLA#tla_uiautomation](../../../includes/tlasharptla-uiautomation-md.md)] metin sağlayıcıları salt okunur arabirimleri sağlayın ve varolan metin denetiminde değiştirme yeteneği sağlamaz.  
   
 -   UI Otomasyon istemcileri yalnızca kullanabilir [!INCLUDE[TLA#tla_uiautomation](../../../includes/tlasharptla-uiautomation-md.md)] tam olarak "" güvenilirse. Bunun bir örneği burada yalnızca bilinen ve güvenilen uygulamaları çalıştırabilir korumalı oturum açma Masaüstü olacaktır.  
   
--   UI Otomasyon sağlayıcılar geliştiricileri tüm bilgileri kendi denetimlerinde kullanıma sunmak tercih ettikleri olduğunu kullanan [!INCLUDE[TLA#tla_uiautomation](../../../includes/tlasharptla-uiautomation-md.md)] temelde ortak ve başka bir kod tarafından tam olarak erişilebilir. [!INCLUDE[TLA#tla_uiautomation](../../../includes/tlasharptla-uiautomation-md.md)]UI Otomasyonu istemci ve bu nedenle UI Otomasyon Sağlayıcı'nın güvenilirliği korumalı içerik veya hassas metinsel bilgileri (örneğin, parola alanları) açığa çıkarmamalıdır belirlemek için hiçbir çaba yapar.  
+-   UI Otomasyon sağlayıcılar geliştiricileri tüm bilgileri kendi denetimlerinde kullanıma sunmak tercih ettikleri olduğunu kullanan [!INCLUDE[TLA#tla_uiautomation](../../../includes/tlasharptla-uiautomation-md.md)] temelde ortak ve başka bir kod tarafından tam olarak erişilebilir. [!INCLUDE[TLA#tla_uiautomation](../../../includes/tlasharptla-uiautomation-md.md)] UI Otomasyonu istemci ve bu nedenle UI Otomasyon Sağlayıcı'nın güvenilirliği korumalı içerik veya hassas metinsel bilgileri (örneğin, parola alanları) açığa çıkarmamalıdır belirlemek için hiçbir çaba yapar.  
   
 -   Güvenlik için en önemli değişikliklerden biri [!INCLUDE[TLA#tla_winvista](../../../includes/tlasharptla-winvista-md.md)] kapsamlı olarak "Güvenli en az ayrıcalıklı (veya sınırlı) gibi teknolojileri kapsar girişini" olarak adlandırılır kullanıcı hesapları (LUA) ve kullanıcı Arabirimi ayrıcalık düzeyi yalıtım (UIPI).  
   
@@ -121,15 +123,15 @@ ms.lasthandoff: 01/19/2018
  Bir metin aralığını biçimlendirme özelliğidir (örneğin, <xref:System.Windows.Automation.TextPattern.IsItalicAttribute> veya <xref:System.Windows.Automation.TextPattern.FontNameAttribute>).  
   
  **Bozuk aralığı**  
- Bozuk bir boş veya sıfır karakterlik metin aralığını aralıktır. TextPattern denetim düzeni amaçları doğrultusunda, metin ekleme noktasını (veya sistem şapka) bozuk bir aralık olarak kabul edilir. Metin seçtiyseniz <xref:System.Windows.Automation.TextPattern.GetSelection%2A> metin ekleme noktasını bozuk bir aralığa döndürür ve <xref:System.Windows.Automation.TextPattern.RangeFromPoint%2A> bozuk bir aralık, başlangıç uç noktasında olarak döndürür. <xref:System.Windows.Automation.TextPattern.RangeFromChild%2A>ve <xref:System.Windows.Automation.TextPattern.GetVisibleRanges%2A> metin sağlayıcısı verilen koşulu sağlayan tüm metin aralıkları bulamadığında bozuk aralıkları döndürebilir. Bozuk bu aralık, başlangıç bir uç nokta metin sağlayıcısı içinde olarak kullanılabilir. <xref:System.Windows.Automation.Text.TextPatternRange.FindText%2A>ve <xref:System.Windows.Automation.Text.TextPatternRange.FindAttribute%2A> null bir başvuru döndürür (`Nothing` içinde [!INCLUDE[TLA2#tla_visualbnet](../../../includes/tla2sharptla-visualbnet-md.md)]) bozuk bir aralık karşı bulunan aralığıyla Karışıklığı önlemek için.  
+ Bozuk bir boş veya sıfır karakterlik metin aralığını aralıktır. TextPattern denetim düzeni amaçları doğrultusunda, metin ekleme noktasını (veya sistem şapka) bozuk bir aralık olarak kabul edilir. Metin seçtiyseniz <xref:System.Windows.Automation.TextPattern.GetSelection%2A> metin ekleme noktasını bozuk bir aralığa döndürür ve <xref:System.Windows.Automation.TextPattern.RangeFromPoint%2A> bozuk bir aralık, başlangıç uç noktasında olarak döndürür. <xref:System.Windows.Automation.TextPattern.RangeFromChild%2A> ve <xref:System.Windows.Automation.TextPattern.GetVisibleRanges%2A> metin sağlayıcısı verilen koşulu sağlayan tüm metin aralıkları bulamadığında bozuk aralıkları döndürebilir. Bozuk bu aralık, başlangıç bir uç nokta metin sağlayıcısı içinde olarak kullanılabilir. <xref:System.Windows.Automation.Text.TextPatternRange.FindText%2A> ve <xref:System.Windows.Automation.Text.TextPatternRange.FindAttribute%2A> null bir başvuru döndürür (`Nothing` Microsoft Visual Basic .NET içinde) bozuk bir aralık karşı bulunan aralığıyla Karışıklığı önlemek için.  
   
- **Embedded Object**  
+ **Katıştırılmış nesne**  
  Katıştırılmış nesneler iki tür vardır [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] metin modeli. Metin tabanlı içerik öğeleri Köprüler veya tablolar gibi ve görüntüleri ve düğmeleri gibi denetim öğeleri oluşur. Daha ayrıntılı bilgi için bkz: [erişim katıştırılmış nesneler kullanarak UI Otomasyonu](../../../docs/framework/ui-automation/access-embedded-objects-using-ui-automation.md).  
   
  **Uç nokta**  
  Mutlak <xref:System.Windows.Automation.Text.TextPatternRangeEndpoint.Start> veya <xref:System.Windows.Automation.Text.TextPatternRangeEndpoint.End> bir metin kapsayıcı içindeki bir metin aralığını noktası.  
   
- ![TextPatternRangeEndpoints &#40; başlangıç ve bitiş &#41;. ] (../../../docs/framework/ui-automation/media/uia-textpattern-endpoints.PNG "UIA_TextPattern_Endpoints")  
+ ![TextPatternRangeEndpoints &#40;başlangıç ve bitiş&#41;. ] (../../../docs/framework/ui-automation/media/uia-textpattern-endpoints.PNG "UIA_TextPattern_Endpoints")  
 Başlangıç ve bitiş noktalarını kümesi gösterilmektedir.  
   
  **TextRange**  

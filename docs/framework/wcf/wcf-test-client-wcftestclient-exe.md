@@ -1,27 +1,29 @@
 ---
-title: "WCF Test İstemcisi (WcfTestClient.exe)"
-ms.custom: 
+title: WCF Test İstemcisi (WcfTestClient.exe)
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: d4302855-677f-4640-aa90-c5d785d72fb7
-caps.latest.revision: "45"
+caps.latest.revision: 45
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 18866260c5d14cf27634afcd8391b159abac1dd1
-ms.sourcegitcommit: 2142a4732bb4ff519b9817db4c24a237b9810d4b
+ms.workload:
+- dotnet
+ms.openlocfilehash: 2eb32d36b1e6710f666391f918aff68c33566ab8
+ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/05/2018
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="wcf-test-client-wcftestclientexe"></a>WCF Test İstemcisi (WcfTestClient.exe)
-[!INCLUDE[indigo1](../../../includes/indigo1-md.md)]Test İstemcisi (WcfTestClient.exe), kullanıcılara giriş test parametreleri, bu hizmete giriş gönderme olanağı sağlar ve hizmet geri gönderdiği yanıt görüntülemek bir GUI aracıdır. İle birleştirildiğinde deneyimi sınama sorunsuz bir hizmet sunar [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] hizmet ana bilgisayarı.  
+[!INCLUDE[indigo1](../../../includes/indigo1-md.md)] Test İstemcisi (WcfTestClient.exe), kullanıcılara giriş test parametreleri, bu hizmete giriş gönderme olanağı sağlar ve hizmet geri gönderdiği yanıt görüntülemek bir GUI aracıdır. İle birleştirildiğinde deneyimi sınama sorunsuz bir hizmet sunar [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] hizmet ana bilgisayarı.  
   
  Genellikle bulabilirsiniz [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] Test İstemcisi (WcfTestClient.exe) aşağıdaki konumda: C:\Program Files (x86) \Microsoft Visual Studio\2017\Community\Common7\IDE - topluluk "Kuruluş", "Professional" veya "Topluluk" biri olabilir hangi bağlı olarak, Visual Studio düzeyini yüklenir.
   
@@ -43,7 +45,7 @@ ms.lasthandoff: 01/05/2018
   
  Aracı kullanmak için bu konumdan açmak için dosya adına çift tıklayın veya bir komut satırından başlatın.  
   
- [!INCLUDE[indigo2](../../../includes/indigo2-md.md)]Test İstemcisi rasgele bir URI sayısı komut satırı bağımsız değişkenleri olarak alır.  Test edilebilir Hizmetleri URI'ler bunlar.  
+ [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] Test İstemcisi rasgele bir URI sayısı komut satırı bağımsız değişkenleri olarak alır.  Test edilebilir Hizmetleri URI'ler bunlar.  
   
  `wcfTestClient.exe URI1 URI2 …`  
   
@@ -172,9 +174,9 @@ ms.lasthandoff: 01/05/2018
 ## <a name="closing-wcf-test-client"></a>WCF Test İstemcisi kapatma  
  Kapatabilirsiniz [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] aşağıdaki yollarla Test İstemcisi:  
   
--   Üzerinde **dosya** menüsünde tıklatın **çıkış**. Alternatif olarak, içinde [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] Test İstemcisi ana penceresinde, tıklatın **Kapat**. Bu eylemlerden her ikisi de kapatma [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] hizmeti otomatik ana bilgisayarı ve durdurma [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] işlemi, hata ayıklama [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] Test istemcisi tarafından başlatılmış [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)].  
+-   Üzerinde **dosya** menüsünde tıklatın **çıkış**. Alternatif olarak, içinde [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] Test İstemcisi ana penceresinde, tıklatın **Kapat**. Bu eylemlerden her ikisi de kapatma [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] hizmeti otomatik ana bilgisayarı ve Visual Studio hata ayıklama işlemek, Dur [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] Test istemcisi, Visual Studio tarafından başlatılmış.  
   
--   Sağ **WCF hizmet konağı** bildirim alanına ve ardından simge **çıkış.** Bu hem kapatır [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] hizmeti otomatik ana bilgisayarı ve [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] Test istemcisi ve durduğunda [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] işlem hata ayıklama.  
+-   Sağ **WCF hizmet konağı** bildirim alanına ve ardından simge **çıkış.** Bu hem kapatır [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] hizmeti otomatik ana bilgisayarı ve [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] hata ayıklama Visual Studio Test istemcisi ve durakları işlem.  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
  [WCF Hizmet Konağı (WcfSvcHost.exe)](../../../docs/framework/wcf/wcf-service-host-wcfsvchost-exe.md)

@@ -18,11 +18,11 @@ manager: wpickett
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: f7d4e552404f99580bceafe7f900db4607201c3d
-ms.sourcegitcommit: 6a9030eb5bd0f00e1d144f81958adb195cfb1f6f
+ms.openlocfilehash: ba353a34306b06e0f1df4696af5545799e7a5b37
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/10/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="how-to-use-joinblock-to-read-data-from-multiple-sources"></a>Nasıl yapılır: Birden Fazla Kaynaktan Okumak için JoinBlock'u Kullanma
 Bu belge nasıl kullanılacağını açıklamaktadır <xref:System.Threading.Tasks.Dataflow.JoinBlock%602> birden fazla kaynaktan veri bulunduğunda bir işlemi gerçekleştirmek için sınıf. Ayrıca, doyumsuz olmayan mod bir veri kaynağını daha verimli bir şekilde paylaşmak birden fazla birleştirme blokları etkinleştirmek için nasıl kullanılacağını gösterir.
@@ -38,13 +38,13 @@ Bu belge nasıl kullanılacağını açıklamaktadır <xref:System.Threading.Tas
  Paylaşılan havuzu verimli kullanımını etkinleştirmek için `MemoryResource` nesneleri, bu örnek belirtir bir <xref:System.Threading.Tasks.Dataflow.GroupingDataflowBlockOptions> olan nesneyi <xref:System.Threading.Tasks.Dataflow.GroupingDataflowBlockOptions.Greedy%2A> özelliğini `False` oluşturmak için <xref:System.Threading.Tasks.Dataflow.JoinBlock%602> doyumsuz olmayan modda hareket nesneleri. Bir her kaynaktan kullanılabilir hale gelene kadar doyumsuz olmayan birleştirme blok gelen tüm iletilerin erteler. Ertelenen iletilerini başka bir bloğu tarafından kabul edildi, birleştirme blok işlemi yeniden başlatır. Doyumsuz olmayan modu verileri için diğer blokları bekleyin gibi ilerleme gerçekleştirmek için bir veya daha fazla kaynak blokları paylaşmak birleştirme blokları sağlar. Bu örnekte, bir `MemoryResource` nesne eklenmiş olup `memoryResources` havuz, ilk birleştirme ikinci veri kaynağı almak için blok ilerleme yapabilir. Bu örnek doyumsuz modunu kullanacak şekilde olsaydı, varsayılan olarak, bir birleşim blok olduğu sürebilir `MemoryResource` nesne ve ikinci bir kaynak kullanılabilir olmasını bekleyin. Bir birleştirme blok kendi ikinci veri kaynağı varsa, ancak bunu ilerleme yapılamıyor, çünkü `MemoryResource` nesne bir birleşim bloğu tarafından alınmış.  
   
 ## <a name="compiling-the-code"></a>Kod Derleniyor  
- Örnek kodu kopyalayın ve bir Visual Studio projesi yapıştırın veya adlı bir dosyaya yapıştırın `DataflowNonGreedyJoin.cs` (`DataflowNonGreedyJoin.vb` için [!INCLUDE[vbprvb](../../../includes/vbprvb-md.md)]), ve ardından Visual Studio komut istemi penceresinde aşağıdaki komutu çalıştırın.  
+ Örnek kodu kopyalayın ve bir Visual Studio projesi yapıştırın veya adlı bir dosyaya yapıştırın `DataflowNonGreedyJoin.cs` (`DataflowNonGreedyJoin.vb` Visual Basic), ve ardından Visual Studio komut istemi penceresinde aşağıdaki komutu çalıştırın.  
   
- [!INCLUDE[csprcs](../../../includes/csprcs-md.md)]  
+ Visual C#  
   
  **csc.exe /r:System.Threading.Tasks.Dataflow.dll DataflowNonGreedyJoin.cs**  
   
- [!INCLUDE[vbprvb](../../../includes/vbprvb-md.md)]  
+ Visual Basic  
   
  **Vbc.exe /r:System.Threading.Tasks.Dataflow.dll DataflowNonGreedyJoin.vb**  
   

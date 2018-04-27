@@ -1,24 +1,26 @@
 ---
-title: "Kanal Fabrikası"
-ms.custom: 
+title: Kanal Fabrikası
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 09b53aa1-b13c-476c-a461-e82fcacd2a8b
-caps.latest.revision: "24"
+caps.latest.revision: 24
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 7f5fb22c329bf7b27c32f05a2d8e41734723f53b
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 37b5f880b18f4caac9dc452d93129922ecc33543
+ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="channel-factory"></a>Kanal Fabrikası
 Bu örnek bir istemci uygulaması bir kanal ile nasıl oluşturabileceğinizi gösterir <xref:System.ServiceModel.ChannelFactory> oluşturulan bir istemci yerine sınıfı. Bu örnek dayanır [Başlarken](../../../../docs/framework/wcf/samples/getting-started-sample.md) hesap makinesi hizmetinin uygular.  
@@ -28,7 +30,7 @@ Bu örnek bir istemci uygulaması bir kanal ile nasıl oluşturabileceğinizi g�
   
  Bu örnekte <xref:System.ServiceModel.ChannelFactory%601> hizmet uç noktası için bir kanal oluşturmak için sınıfı. Genellikle, bir hizmet uç noktası için bir kanal oluşturmak için bir istemci türü ile oluşturduğunuz [ServiceModel meta veri yardımcı Programracı (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md) ve oluşturulan türünün bir örneği oluşturun. Kullanarak bir kanal oluşturabilirsiniz <xref:System.ServiceModel.ChannelFactory%601> Bu örnekte gösterildiği gibi sınıfı. Aşağıdaki örnek kod tarafından oluşturulan hizmet ile hizmeti aynı [Başlarken](../../../../docs/framework/wcf/samples/getting-started-sample.md).  
   
-```  
+```csharp  
 EndpointAddress address = new EndpointAddress("http://localhost/servicemodelsamples/service.svc");  
 WSHttpBinding binding = new WSHttpBinding();  
 ChannelFactory<ICalculator> factory = new   
@@ -41,7 +43,7 @@ ICalculator channel = factory.CreateChannel();
   
  Kanalı oluşturduktan sonra hizmet işlemleri yalnızca olarak oluşturulan bir istemci ile çağrılabilir.  
   
-```  
+```csharp  
 // Call the Add service operation.  
 double value1 = 100.00D;  
 double value2 = 15.99D;  
@@ -51,7 +53,7 @@ Console.WriteLine("Add({0},{1}) = {2}", value1, value2, result);
   
  Kanal kapatmak için öncelikle için dönüştürülmelidir bir <xref:System.ServiceModel.IClientChannel> arabirimi. Oluşturulan kanalı kullanılarak istemci uygulama bildirildiğinden budur `ICalculator` yöntemlerine sahiptir arabirimi gibi `Add` ve `Subtract` ama `Close`. `Close` Yöntemi kaynaklandığı <xref:System.ServiceModel.ICommunicationObject> arabirimi.  
   
-```  
+```csharp  
 // Close the channel.  
  ((IClientChannel)client).Close();  
 ```  
@@ -79,7 +81,7 @@ Press <ENTER> to terminate client.
   
 1.  Aşağıdaki kodda "localhost" hizmetini çalıştıran bilgisayarın tam adı ile değiştirin.  
   
-    ```  
+    ```csharp  
     EndpointAddress address = new EndpointAddress("http://localhost/servicemodelsamples/service.svc");  
     ```  
   

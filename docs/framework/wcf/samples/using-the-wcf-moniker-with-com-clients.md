@@ -1,24 +1,26 @@
 ---
-title: "WCF Bilinen Adını COM İstemcileri ile Kullanma"
-ms.custom: 
+title: WCF Bilinen Adını COM İstemcileri ile Kullanma
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: e2799bfe-88bd-49d7-9d6d-ac16a9b16b04
-caps.latest.revision: "34"
+caps.latest.revision: 34
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 18633ab7c7d54b4feafc22f6b598acc564084f4a
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.workload:
+- dotnet
+ms.openlocfilehash: 322467510d499040c07d6e5e84842542aa325737
+ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="using-the-wcf-moniker-with-com-clients"></a>WCF Bilinen Adını COM İstemcileri ile Kullanma
 Bu örnek nasıl kullanılacağı ortaya [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] Microsoft Office Visual Basic for Applications (Office VBA) veya Visual Basic 6.0 gibi COM tabanlı geliştirme ortamlara Web Hizmetleri tümleştirmek için hizmet bilinen adı. Bu örnek bir Windows Script Host istemci (.vbs) destekleyen bir istemci kitaplığı (.dll) ve Internet Information Services (IIS) tarafından barındırılan bir hizmet kitaplığı (.dll) oluşur. Hizmeti bir hesaplama hizmetidir ve COM istemcisi matematik işlemleri çağırır — ekleme, çıkarma, çarpma ve bölme — hizmet üzerinde. İstemci etkinliği ileti kutusu pencerelerinde görünür olur.  
@@ -199,7 +201,7 @@ WScript.Echo "MEX service moniker: 9 * 81.25 = " & mexServiceMoniker.Multiply(9,
   
 2.  Çözüm C# veya Visual Basic .NET sürümünü oluşturmak için'ndaki yönergeleri izleyin [Windows Communication Foundation örnekleri derleme](../../../../docs/framework/wcf/samples/building-the-samples.md).  
   
-3.  Gelen bir [!INCLUDE[vsprvs](../../../../includes/vsprvs-md.md)] komut isteminde, dile özgü klasörü altında \client\bin klasörünü açın.  
+3.  Visual Studio komut isteminden, dile özgü klasörü altında \client\bin klasörünü açın.  
   
     > [!NOTE]
     >  Kullanıyorsanız [!INCLUDE[wv](../../../../includes/wv-md.md)], [!INCLUDE[lserver](../../../../includes/lserver-md.md)], Windows 7 veya Windows Server 2008 R2, komut istemini yönetici ayrıcalıklarıyla çalıştırın emin olun.  

@@ -21,11 +21,11 @@ manager: wpickett
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: 64a6fd2f5cbaee17ac35d7b4bd6f08326eafac64
-ms.sourcegitcommit: 2e8acae16ae802f2d6d04e3ce0a6dbf04e476513
+ms.openlocfilehash: ff475259d1835a048d6260cabf4f1d46d2436954
+ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="chaining-tasks-by-using-continuation-tasks"></a>Devamlılık Görevlerini Kullanarak Görevleri Birbirine Bağlama
 Zaman uyumsuz programlama, ikinci bir işlem çağırma ve veri iletmektir tamamlandığında, bir zaman uyumsuz işlemi çok yaygın bir sorundur. Geleneksel olarak, bu geri çağırma yöntemlerini kullanarak gerçekleştirilmedi. Görev paralel kitaplığı aynı işlevselliği tarafından sağlanan *devamlılık görevlerini*. (Yalnızca devamlılığı olarak da bilinir) bir devamlılık görevi olarak bilinen başka bir görev tarafından çağrılan bir zaman uyumsuz bir görevdir *antecedent*, antecedent sona erdiğinde.  
@@ -130,7 +130,7 @@ Zaman uyumsuz programlama, ikinci bir işlem çağırma ve veri iletmektir tamam
   
  Devamlılık durumunda yararlı kullanan var olan kodu dönüştürürken [zaman uyumsuz programlama modeli (APM)](../../../docs/standard/asynchronous-programming-patterns/asynchronous-programming-model-apm.md) TPL kullanılacak. APM, genellikle nesne durumda sağladığınız **başlamak *** yöntemi* yöntemi ve kullanarak durum sonraki erişim <xref:System.IAsyncResult.AsyncState%2A?displayProperty=nameWithType> özelliği. Kullanarak <xref:System.Threading.Tasks.Task.ContinueWith%2A> yöntemi, korumak bu durum TPL kullanmak için APM kullanan kodu dönüştürürken.  
   
- Devamlılık durumu da yararlı olabilir ile çalışırken <xref:System.Threading.Tasks.Task> nesnelerini [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] hata ayıklayıcı. Örneğin, **Paralel Görevler** penceresinde **görev** sütunu her görev için durum nesnenin dize gösterimini görüntüler. Hakkında daha fazla bilgi için **Paralel Görevler** penceresinde bkz [görevleri penceresini kullanma](/visualstudio/debugger/using-the-tasks-window).  
+ Devamlılık durumu da yararlı olabilir ile çalışırken <xref:System.Threading.Tasks.Task> Visual Studio hata ayıklayıcısında nesneleri. Örneğin, **Paralel Görevler** penceresinde **görev** sütunu her görev için durum nesnenin dize gösterimini görüntüler. Hakkında daha fazla bilgi için **Paralel Görevler** penceresinde bkz [görevleri penceresini kullanma](/visualstudio/debugger/using-the-tasks-window).  
   
  Aşağıdaki örnek devamlılık durumu kullanmayı gösterir. Devamlılık görevlerini zinciri oluşturur. Her görev geçerli zaman tanır bir <xref:System.DateTime> nesnesi için `state` parametresinin <xref:System.Threading.Tasks.Task.ContinueWith%2A> yöntemi. Her <xref:System.DateTime> nesnesi devamlılık görevi oluşturulur süreyi temsil eder. İkinci bir sonuç olarak her görev üreten <xref:System.DateTime> görev tamamlandıktan zamanı temsil eden nesne. Tüm görevleri tamamladıktan sonra bu örnek oluşturma saat ve her hangi bir devamlılık görev tamamlandığında saati görüntüler.  
   

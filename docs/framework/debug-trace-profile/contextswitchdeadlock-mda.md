@@ -1,12 +1,13 @@
 ---
 title: contextSwitchDeadlock MDA
-ms.custom: 
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - deadlocks [.NET Framework]
@@ -19,16 +20,17 @@ helpviewer_keywords:
 - message pumping
 - context switching deadlocks
 ms.assetid: 26dfaa15-9ddb-4b0a-b6da-999bba664fa6
-caps.latest.revision: "22"
+caps.latest.revision: 22
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 816afbae0cca18de24c11152541a509b54c119b8
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 2f3ee9aef3bc824ee25e577a5dbd14aeaa210be3
+ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="contextswitchdeadlock-mda"></a>contextSwitchDeadlock MDA
 `contextSwitchDeadlock` Yönetilen hata ayıklama Yardımcısı (MDA) bir kilitlenme denenen COM içerik geçişi sırasında algılandığında etkinleştirilir.  
@@ -54,7 +56,7 @@ ms.lasthandoff: 12/22/2017
  MDA yanlışlıkla etkinleştirilip etkinleştirilmediğini belirlemek için tüm kesme noktaları devre dışı bırakmak, uygulamayı yeniden başlatın ve durmadan çalışmasına izin verin. MDA etkinleştirilmemişse, ilk etkinleştirme false olasıdır. Bu durumda, mda'sı ile hata ayıklama oturumu önlemek için devre dışı bırakın.  
   
 > [!NOTE]
->  Bu mda'sı için varsayılan olarak [!INCLUDE[vsprvslong](../../../includes/vsprvslong-md.md)] ve sonraki sürümler. İçinde barındırma işlemi etkinleştirildiğinde [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)], varsayılan olarak ayarlanmış olan Mda'lar devre dışı bırakılamıyor. Barındırma işlemi varsayılan olarak etkindir, bu nedenle açıkça devre dışı bırakılması gerekir. Mda'lar devre dışı bırakma hakkında daha fazla bilgi için bkz: "Mda'lar etkinleştirme ve devre dışı bırakma" [yönetilen hata ayıklama Yardımcıları ile hataları tanılama](../../../docs/framework/debug-trace-profile/diagnosing-errors-with-managed-debugging-assistants.md).  
+>  Bu mda'sı için varsayılan olarak [!INCLUDE[vsprvslong](../../../includes/vsprvslong-md.md)] ve sonraki sürümler. Visual Studio'da barındırma işlemi etkin olduğunda, varsayılan olarak ayarlanmış olan Mda'lar devre dışı bırakılamıyor. Barındırma işlemi varsayılan olarak etkindir, bu nedenle açıkça devre dışı bırakılması gerekir. Mda'lar devre dışı bırakma hakkında daha fazla bilgi için bkz: "Mda'lar etkinleştirme ve devre dışı bırakma" [yönetilen hata ayıklama Yardımcıları ile hataları tanılama](../../../docs/framework/debug-trace-profile/diagnosing-errors-with-managed-debugging-assistants.md).  
   
 ## <a name="resolution"></a>Çözüm  
  STA ileti Pompalama ilgili COM kuralları izleyin.  

@@ -1,11 +1,12 @@
 ---
-title: "Nasıl yapılır: Bir İşleç Yordamı Çağırma (Visual Basic)"
-ms.custom: 
+title: 'Nasıl yapılır: Bir İşleç Yordamı Çağırma (Visual Basic)'
+ms.custom: ''
 ms.date: 07/20/2015
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- devlang-visual-basic
 ms.topic: article
 helpviewer_keywords:
 - operator procedures [Visual Basic], calling
@@ -17,19 +18,19 @@ helpviewer_keywords:
 - overloaded operators [Visual Basic], calling
 - operator overloading
 ms.assetid: 0dce42cc-f0b0-4c14-9f62-018b21f33497
-caps.latest.revision: "16"
+caps.latest.revision: 16
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: 0abff0a81ebcdacb59b69d0c307bb4aa219906c3
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 21545f2488bfabd0abc9c6e316d21bbc4d5aeb91
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="how-to-call-an-operator-procedure-visual-basic"></a>Nasıl yapılır: Bir İşleç Yordamı Çağırma (Visual Basic)
 Bir ifadeyi işleç simgesi kullanarak bir işleç yordamı çağırma. Bir dönüşüm işleci söz konusu olduğunda, çağrı [CType işlevi](../../../../visual-basic/language-reference/functions/ctype-function.md) bir değer bir veri türünden dönüştürmek için.  
   
- İşleç yordamları açıkça çağırmayın. Yalnızca işlecini kullanın veya `CType` bir atama ifadesi veya bir ifade, bir işleç normalde kullandığınız gibi işlev. [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]işleç yordamı çağrıda bulunur.  
+ İşleç yordamları açıkça çağırmayın. Yalnızca işlecini kullanın veya `CType` bir atama ifadesi veya bir ifade, bir işleç normalde kullandığınız gibi işlev. Visual Basic işleç yordamı çağrıda bulunur.  
   
  Bir sınıf veya yapı bir işleci tanımlama olarak da adlandırılır *aşırı* işleci.  
   
@@ -47,7 +48,7 @@ Bir ifadeyi işleç simgesi kullanarak bir işleç yordamı çağırma. Bir dön
   
 2.  İşlenen veri türlerini dönüştürme işlemi için ve doğru sırada uygun olduğundan emin olun.  
   
-3.  `CType`dönüştürme işleci yordam çağrıları ve dönüştürülen değeri döndürür.  
+3.  `CType` dönüştürme işleci yordam çağrıları ve dönüştürülen değeri döndürür.  
   
 ## <a name="example"></a>Örnek  
  Aşağıdaki örnekte iki oluşturur <xref:System.TimeSpan> yapıları, bunları bir araya getirir ve üçüncü bir sonucu depolar <xref:System.TimeSpan> yapısı. <xref:System.TimeSpan> Yapısı birkaç standart işleci aşırı yüklemeyi işleç yordamları tanımlar.  
@@ -62,13 +63,13 @@ Bir ifadeyi işleç simgesi kullanarak bir işleç yordamı çağırma. Bir dön
  Sınıf veya yapı kullanmakta olduğunuz kullanmak istediğiniz işleci tanımlar emin olun.  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [İşleç yordamları](./operator-procedures.md)  
- [Nasıl yapılır: bir işleci tanımlama](./how-to-define-an-operator.md)  
- [Nasıl yapılır: bir dönüşüm işleci tanımlama](./how-to-define-a-conversion-operator.md)  
- [Operator deyimi](../../../../visual-basic/language-reference/statements/operator-statement.md)  
- [Genişletme](../../../../visual-basic/language-reference/modifiers/widening.md)  
- [Daraltma](../../../../visual-basic/language-reference/modifiers/narrowing.md)  
- [Structure deyimi](../../../../visual-basic/language-reference/statements/structure-statement.md)  
- [Nasıl yapılır: bir yapıyı bildirme](../../../../visual-basic/programming-guide/language-features/data-types/how-to-declare-a-structure.md)  
- [Örtük ve açık dönüştürmeler](../../../../visual-basic/programming-guide/language-features/data-types/implicit-and-explicit-conversions.md)  
- [Genişletme ve daraltma dönüşümleri](../../../../visual-basic/programming-guide/language-features/data-types/widening-and-narrowing-conversions.md)
+ [İşleç Yordamları](./operator-procedures.md)  
+ [Nasıl yapılır: İşleç Tanımlama](./how-to-define-an-operator.md)  
+ [Nasıl yapılır: Dönüştürme İşleci Tanımlama](./how-to-define-a-conversion-operator.md)  
+ [Operator Deyimi](../../../../visual-basic/language-reference/statements/operator-statement.md)  
+ [Widening](../../../../visual-basic/language-reference/modifiers/widening.md)  
+ [Narrowing](../../../../visual-basic/language-reference/modifiers/narrowing.md)  
+ [Structure Deyimi](../../../../visual-basic/language-reference/statements/structure-statement.md)  
+ [Nasıl yapılır: Bir Yapıyı Bildirme](../../../../visual-basic/programming-guide/language-features/data-types/how-to-declare-a-structure.md)  
+ [Örtük ve Açık Dönüştürmeler](../../../../visual-basic/programming-guide/language-features/data-types/implicit-and-explicit-conversions.md)  
+ [Genişletme ve Daraltma Dönüştürmeleri](../../../../visual-basic/programming-guide/language-features/data-types/widening-and-narrowing-conversions.md)

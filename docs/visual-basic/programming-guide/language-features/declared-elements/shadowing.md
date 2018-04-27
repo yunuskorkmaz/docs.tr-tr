@@ -1,11 +1,12 @@
 ---
-title: "Visual Basic'de Gölgeleme"
-ms.custom: 
+title: Visual Basic'de Gölgeleme
+ms.custom: ''
 ms.date: 07/20/2015
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- devlang-visual-basic
 ms.topic: article
 helpviewer_keywords:
 - inheritance [Visual Basic], shadowing
@@ -24,17 +25,17 @@ helpviewer_keywords:
 - objects [Visual Basic], names
 - names [Visual Basic], shadowing
 ms.assetid: 54bb4c25-12c4-4181-b4a0-93546053964e
-caps.latest.revision: "24"
+caps.latest.revision: 24
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: cbfce3edc122ca875552b2d41ba876fe5cfcfc4d
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 489e1786b08085f229f66b2dbc434b96b06d86df
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="shadowing-in-visual-basic"></a>Visual Basic'de Gölgeleme
-İki programlama öğeleri aynı adı paylaşan, bunlardan birini gizleyebilirsiniz, veya *gölge*, diğerinde. Böyle bir durumda gölgeli öğesi başvurusu için kullanılabilir değil; Bunun yerine, kodunuzu kullandığında öğe adı [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] derleyici onu gölgeleme öğesine giderir.  
+İki programlama öğeleri aynı adı paylaşan, bunlardan birini gizleyebilirsiniz, veya *gölge*, diğerinde. Böyle bir durumda gölgeli öğesi başvurusu için kullanılabilir değil; kodunuzu öğe adı kullandığında, bunun yerine, Visual Basic derleyici gölgeleme öğesine çözer.  
   
 ## <a name="purpose"></a>Amaç  
  Gölgeleme ana amacı, sınıf üyeleri tanımını korumaktır. Taban sınıf, bir önceden tanımlamış aynı ada sahip bir öğe oluşturan bir değişiklik uygulanabilir. Bu durumda, `Shadows` değiştiricisi zorlar başvuran üyesine çözümlenmesi sınıfınız üzerinden tanımlanmış, yerine yeni bir temel sınıf öğesi için.  
@@ -148,10 +149,10 @@ End Class
  Önceki örnekte, değişken `basObj` temel sınıf olarak bildirilmedi. Atama bir `dervCls` nesnesiyle Genişletme dönüşümü oluşturduğunu ve bu nedenle geçerli değil. Ancak, temel sınıf değişkeni gölgeleme sürümü erişemiyor `z` türetilen sınıfta bu nedenle derleyici çözümler `basObj.z` özgün temel sınıf değerine.  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [Bildirilmiş öğelere başvurular](../../../../visual-basic/programming-guide/language-features/declared-elements/references-to-declared-elements.md)  
+ [Bildirilmiş Öğelere Başvurular](../../../../visual-basic/programming-guide/language-features/declared-elements/references-to-declared-elements.md)  
  [Visual Basic'de kapsam](../../../../visual-basic/programming-guide/language-features/declared-elements/scope.md)  
- [Genişletme ve daraltma dönüşümleri](../../../../visual-basic/programming-guide/language-features/data-types/widening-and-narrowing-conversions.md)  
- [Gölgeleri](../../../../visual-basic/language-reference/modifiers/shadows.md)  
- [Geçersiz kılmaları](../../../../visual-basic/language-reference/modifiers/overrides.md)  
+ [Genişletme ve Daraltma Dönüştürmeleri](../../../../visual-basic/programming-guide/language-features/data-types/widening-and-narrowing-conversions.md)  
+ [Shadows](../../../../visual-basic/language-reference/modifiers/shadows.md)  
+ [Overrides](../../../../visual-basic/language-reference/modifiers/overrides.md)  
  [Me, My, MyBase ve MyClass](../../../../visual-basic/programming-guide/program-structure/me-my-mybase-and-myclass.md)  
- [Devralma temelleri](../../../../visual-basic/programming-guide/language-features/objects-and-classes/inheritance-basics.md)
+ [Devralma Temelleri](../../../../visual-basic/programming-guide/language-features/objects-and-classes/inheritance-basics.md)

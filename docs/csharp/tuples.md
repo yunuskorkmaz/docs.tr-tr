@@ -1,7 +1,7 @@
 ---
-title: "Diziler - C# Kılavuzu"
-description: "C# adsız ve adlandırılmış tanımlama grubu türleri hakkında bilgi edinin"
-keywords: .NET, .NET core, C#
+title: Diziler - C# Kılavuzu
+description: C# adsız ve adlandırılmış tanımlama grubu türleri hakkında bilgi edinin
+keywords: .NET, .NET Core, C#
 author: BillWagner
 ms-author: wiwagn
 ms.date: 11/23/2016
@@ -10,17 +10,17 @@ ms.prod: .net
 ms.technology: devlang-csharp
 ms.devlang: csharp
 ms.assetid: ee8bf7c3-aa3e-4c9e-a5c6-e05cc6138baa
-ms.openlocfilehash: 58f76332a8f3717fe10788382552598d6693e7e3
-ms.sourcegitcommit: 882e02b086d7cb9c75f748494cf7a8d3377c5874
+ms.openlocfilehash: 1d1fc450503dc905e6b260a2b984e3ce2315fd45
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="c-tuple-types"></a>C# tanımlama grubu türleri #
 
-C# diziler basit bir söz dizimi kullanılarak tanımlayan türleridir. Avantajlar kuralları (kardinalite adlandırılır) sayısı ve türleri öğeleri ve kopyalar ve atamaları için tutarlı kurallarını temel dönüştürmeleri için daha basit bir sözdizimi vardır. Bir kolaylığını diziler devralma ile ilişkili nesne yönelimli deyimleri bazıları desteklemez. Bir genel bakış bölümünde alma [C# 7'de yenilikler içindeki diziler](whats-new/csharp-7.md#tuples) konu.
+C# diziler basit bir söz dizimi kullanılarak tanımlayan türleridir. Avantajlar kuralları (kardinalite adlandırılır) sayısı ve türleri öğeleri ve kopyalar ve atamaları için tutarlı kurallarını temel dönüştürmeleri için daha basit bir sözdizimi vardır. Bir kolaylığını diziler devralma ile ilişkili nesne yönelimli deyimleri bazıları desteklemez. Bir genel bakış bölümünde alma [C# 7. 0'yenilikler içindeki diziler](whats-new/csharp-7.md#tuples) konu.
 
-Bu konuda, C# 7, tanımlama grupları ile çalışma hakkında onları ve Başlangıç Kılavuzu kullanmak için farklı yollar diziler yöneten dil kurallarına öğreneceksiniz.
+Bu konuda, C# 7.0 ve daha sonra farklı yolları tanımlama grupları ile çalışma hakkında onları ve başlangıç kılavuzunu kullanın diziler yöneten dil kurallarına öğreneceksiniz.
 
 > [!NOTE]
 > Yeni diziler işlevleri <xref:System.ValueTuple> türleri.

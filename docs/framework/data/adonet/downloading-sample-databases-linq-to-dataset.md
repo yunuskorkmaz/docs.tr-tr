@@ -1,24 +1,26 @@
 ---
-title: "Örnek Veritabanları (LINQ-DataSet) yükleniyor"
-ms.custom: 
+title: Örnek Veritabanları (LINQ-DataSet) yükleniyor
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-ado
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-ado
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: eb42a7af-d410-4b7f-b4a8-13c72ce6fd09
-caps.latest.revision: "2"
+caps.latest.revision: 2
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.workload: dotnet
-ms.openlocfilehash: c8c1c2dabb13393764ca8b1fd9c1a717b9e2527e
-ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
+ms.workload:
+- dotnet
+ms.openlocfilehash: 8e19e51ecf4868d0d49e26b4aafd7e8b3840992d
+ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="downloading-sample-databases-linq-to-dataset"></a>Örnek Veritabanları (LINQ-DataSet) yükleniyor
 Örnekler ve izlenecek yollarda [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)] belgeleri AdventureWorks örnek veritabanını kullanın. Bu ürün ücretsiz Microsoft sitesinden indirebilirsiniz. Örnekler ve izlenecek yollarda [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)] belgeleri SQL Server veri deposu olarak kullanın. SQL Server Express ücretsiz kullanılabilir olan Edition yerine SQL Server veri deposu olarak da kullanılabilir.  
@@ -74,11 +76,11 @@ ms.lasthandoff: 01/17/2018
      Bu dosyalar farklı bir sürücü veya dizin yüklediyseniz, çalıştırmadan önce yolları uygun şekilde düzeltmeniz gerekir `sp_attach_db` saklı yordamı.  
   
 ## <a name="downloading-sql-server-express-edition"></a>SQL Server Express sürümü indirme  
- Örnekler ve izlenecek yollarda [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)] bölüm veri deposu olarak SQL Server 2005 kullanır ancak SQL Server Express Edition kullanmayı değiştirilebilir. SQL Server Express Edition ücretsiz kullanılabilir ve uygulamalarla yeniden dağıtabilirsiniz. Kullanıyorsanız [!INCLUDE[vsprvs](../../../../includes/vsprvs-md.md)], SQL Server Express Edition Pro ve sonraki sürümlerinde bulunur.  
+ Örnekler ve izlenecek yollarda [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)] bölüm veri deposu olarak SQL Server 2005 kullanır ancak SQL Server Express Edition kullanmayı değiştirilebilir. SQL Server Express Edition ücretsiz kullanılabilir ve uygulamalarla yeniden dağıtabilirsiniz. Visual Studio kullanıyorsanız, SQL Server Express Edition Pro ve sonraki sürümlerinde bulunur.  
   
 #### <a name="to-download-and-install-sql-server-express-edition"></a>SQL Server Express sürümünü karşıdan yükleyip  
   
-1.  Start Internet Explorer.  
+1.  Internet Explorer'ı başlatın.  
   
 2.  Git [Microsoft SQL Server 2005 Express Edition](http://go.microsoft.com/fwlink/?LinkID=31070) sayfa indirin.  
   

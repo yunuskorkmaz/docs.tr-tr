@@ -13,11 +13,11 @@ helpviewer_keywords:
 ms.assetid: 5fc32ec9-a149-4648-994c-a8d0cccd0a65
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 0948b9ef0675541ca595bb297e01e62c9d79a181
-ms.sourcegitcommit: 498799639937c89de777361aab74261efe7b79ea
+ms.openlocfilehash: e7dc75a0600c9694c4a20f028c810c6aca54eeb6
+ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/22/2018
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="-doc"></a>-doc
 Belge açıklamaları bir XML dosyasına işler.  
@@ -46,7 +46,7 @@ Belge açıklamaları bir XML dosyasına işler.
   
 -   Bir alan gibi üyeleri [olay](../../../visual-basic/language-reference/statements/event-statement.md), [özelliği](../../../visual-basic/language-reference/statements/property-statement.md), [işlevi](../../../visual-basic/language-reference/statements/function-statement.md), veya [alt yordama](../../../visual-basic/language-reference/statements/sub-statement.md).  
   
- Oluşturulan XML dosyası ile kullanmak için [!INCLUDE[vsprvs](~/includes/vsprvs-md.md)] [IntelliSense](/visualstudio/ide/using-intellisense) özelliği, desteklemek istediğiniz derleme ile aynı olması, XML dosyasının dosya adı sağlar. XML dosyası derleme ile aynı dizinde böylece zaman derleme başvuru olduğundan emin olun [!INCLUDE[vsprvs](~/includes/vsprvs-md.md)] proje, .xml dosyasını da bulunduğunda. XML belge dosyalarını kod projesi tarafından başvurulan projeleri veya bir proje içinde çalışmak IntelliSense için gerekli değildir.  
+ Visual Studio ile oluşturulan XML dosyasını kullanmak için [IntelliSense](/visualstudio/ide/using-intellisense) özelliği, desteklemek istediğiniz derleme ile aynı olması, XML dosyasının dosya adı sağlar. Böylece Visual Studio projesini derleme başvurulduğunda .xml dosyası da bulunur derlemeyle aynı dizinde XML dosyası olduğundan emin olun. XML belge dosyalarını kod projesi tarafından başvurulan projeleri veya bir proje içinde çalışmak IntelliSense için gerekli değildir.  
   
  İle derleme sürece `/target:module`, etiketler XML dosyasını içeren `<assembly></assembly>`. Bu etiketler derleme çıktı dosyası için derleme bildirimi içeren dosyanın adını belirtin.  
   

@@ -1,48 +1,50 @@
 ---
-title: "İstemci Tarafı UI Otomasyon Sağlayıcıyı Uygulama"
-ms.custom: 
+title: İstemci Tarafı UI Otomasyon Sağlayıcıyı Uygulama
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-bcl
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-bcl
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - UI Automation, client-side provider implementation
 - client-side UI Automation provider, implementation
 - provider implementation, UI Automation
 ms.assetid: 3584c0a1-9cd0-4968-8b63-b06390890ef6
-caps.latest.revision: "14"
+caps.latest.revision: 14
 author: Xansky
 ms.author: mhopkins
 manager: markl
-ms.workload: dotnet
-ms.openlocfilehash: 50335994fab424b3100c91a202a7ea53643db551
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 09f54098c34d835c04a18b16dc5e33c7ebed5edb
+ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="client-side-ui-automation-provider-implementation"></a>İstemci Tarafı UI Otomasyon Sağlayıcıyı Uygulama
 > [!NOTE]
 >  Bu belge yönetilen kullanmak isteyen .NET Framework için tasarlanan [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] tanımlanan sınıflar <xref:System.Windows.Automation> ad alanı. Hakkında en yeni bilgiler için [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)], bkz: [Windows Otomasyon API: UI Otomasyonu](http://go.microsoft.com/fwlink/?LinkID=156746).  
   
- Birkaç farklı [!INCLUDE[TLA#tla_ui](../../../includes/tlasharptla-ui-md.md)] çerçeveler, içinde kullanımda [!INCLUDE[TLA#tla_ms](../../../includes/tlasharptla-ms-md.md)] dahil olmak üzere işletim sistemlerini [!INCLUDE[TLA2#tla_win32](../../../includes/tla2sharptla-win32-md.md)], [!INCLUDE[TLA#tla_winforms](../../../includes/tlasharptla-winforms-md.md)], ve [!INCLUDE[TLA#tla_winclient](../../../includes/tlasharptla-winclient-md.md)]. [!INCLUDE[TLA#tla_uiautomation](../../../includes/tlasharptla-uiautomation-md.md)]istemciler için UI öğeleri hakkında bilgi gösterir. Ancak, [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] kendisi bu çerçeveleri mevcut denetimleri farklı türdeki tanıma sahip ve için gereken teknikleri bilgi onlardan ayıklayın. Bunun yerine, bu görev sağlayıcı olarak adlandırılan nesnelere bırakır. Bir sağlayıcı bilgileri belirli bir denetimden ayıklar ve bu bilgileri aktarır [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)], o istemci için tutarlı bir şekilde gösterir.  
+ Birkaç farklı [!INCLUDE[TLA#tla_ui](../../../includes/tlasharptla-ui-md.md)] çerçeveler, içinde kullanımda [!INCLUDE[TLA#tla_ms](../../../includes/tlasharptla-ms-md.md)] dahil olmak üzere işletim sistemlerini [!INCLUDE[TLA2#tla_win32](../../../includes/tla2sharptla-win32-md.md)], [!INCLUDE[TLA#tla_winforms](../../../includes/tlasharptla-winforms-md.md)], ve [!INCLUDE[TLA#tla_winclient](../../../includes/tlasharptla-winclient-md.md)]. [!INCLUDE[TLA#tla_uiautomation](../../../includes/tlasharptla-uiautomation-md.md)] istemciler için UI öğeleri hakkında bilgi gösterir. Ancak, [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] kendisi bu çerçeveleri mevcut denetimleri farklı türdeki tanıma sahip ve için gereken teknikleri bilgi onlardan ayıklayın. Bunun yerine, bu görev sağlayıcı olarak adlandırılan nesnelere bırakır. Bir sağlayıcı bilgileri belirli bir denetimden ayıklar ve bu bilgileri aktarır [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)], o istemci için tutarlı bir şekilde gösterir.  
   
- Sağlayıcıları, sunucu tarafında veya istemci tarafı bulunabilir. Sunucu tarafı sağlayıcı denetimi tarafından uygulanır. [!INCLUDE[TLA2#tla_winclient](../../../includes/tla2sharptla-winclient-md.md)]öğeleri uygulamak sağlayıcıları ile yazılmış herhangi bir üçüncü taraf denetim gibi [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] unutmayın.  
+ Sağlayıcıları, sunucu tarafında veya istemci tarafı bulunabilir. Sunucu tarafı sağlayıcı denetimi tarafından uygulanır. [!INCLUDE[TLA2#tla_winclient](../../../includes/tla2sharptla-winclient-md.md)] öğeleri uygulamak sağlayıcıları ile yazılmış herhangi bir üçüncü taraf denetim gibi [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] unutmayın.  
   
  Ancak, eski denetimler de gibi [!INCLUDE[TLA2#tla_win32](../../../includes/tla2sharptla-win32-md.md)] ve [!INCLUDE[TLA#tla_winforms](../../../includes/tlasharptla-winforms-md.md)] doğrudan desteklemez [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]. Bu denetimler, bunun yerine, istemci işlemini yok ve işlem içi iletişimi kullanarak denetimleri hakkında bilgi edinme sağlayıcıları tarafından sunulan; Örneğin, denetimleri windows ileti izleme tarafından. Bu tür istemci-tarafı sağlayıcıları bazen proxy'leri denir.  
   
- [!INCLUDE[TLA2#tla_winvista](../../../includes/tla2sharptla-winvista-md.md)]standart sağlayıcıları sağlayan [!INCLUDE[TLA2#tla_win32](../../../includes/tla2sharptla-win32-md.md)] ve [!INCLUDE[TLA2#tla_winforms](../../../includes/tla2sharptla-winforms-md.md)] kontrol eder. Ayrıca, bir geri dönüş sağlayıcısı kısmi verir [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] desteklemek için başka bir sunucu tarafı sağlayıcı tarafından sunulmuyor herhangi bir denetimi veya proxy ancak sahip bir [!INCLUDE[TLA#tla_aa](../../../includes/tlasharptla-aa-md.md)] uygulaması. Bu sağlayıcılar, otomatik olarak yüklenir ve istemci uygulamaları için kullanılabilir.  
+ [!INCLUDE[TLA2#tla_winvista](../../../includes/tla2sharptla-winvista-md.md)] standart sağlayıcıları sağlayan [!INCLUDE[TLA2#tla_win32](../../../includes/tla2sharptla-win32-md.md)] ve Windows Forms denetimleri. Ayrıca, bir geri dönüş sağlayıcısı kısmi verir [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] desteklemek için başka bir sunucu tarafı sağlayıcı tarafından sunulmuyor herhangi bir denetimi veya proxy ancak sahip bir [!INCLUDE[TLA#tla_aa](../../../includes/tlasharptla-aa-md.md)] uygulaması. Bu sağlayıcılar, otomatik olarak yüklenir ve istemci uygulamaları için kullanılabilir.  
   
- Desteği hakkında daha fazla bilgi için [!INCLUDE[TLA2#tla_win32](../../../includes/tla2sharptla-win32-md.md)] ve [!INCLUDE[TLA2#tla_winforms](../../../includes/tla2sharptla-winforms-md.md)] denetimleri bkz [standart denetimler için UI Otomasyon desteği](../../../docs/framework/ui-automation/ui-automation-support-for-standard-controls.md).  
+ Desteği hakkında daha fazla bilgi için [!INCLUDE[TLA2#tla_win32](../../../includes/tla2sharptla-win32-md.md)] ve Windows Forms denetimleri [standart denetimler için UI Otomasyon desteği](../../../docs/framework/ui-automation/ui-automation-support-for-standard-controls.md).  
   
  Uygulamaları, diğer istemci-tarafı sağlayıcıları da kaydedebilirsiniz.  
   
 <a name="Distributing_Client-Side_Providers"></a>   
 ## <a name="distributing-client-side-providers"></a>İstemci tarafı sağlayıcı dağıtma  
- [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]yönetilen kod derlemede istemci tarafı Sağlayıcı bulmak bekliyor. Bu ad alanı derleme adıyla aynı olmalıdır. Örneğin, ContosoProxies.dll adlı bir derleme ContosoProxies ad alanı içerir. Ad alanı içinde oluşturma bir <xref:UIAutomationClientsideProviders.UIAutomationClientSideProviders> sınıfı. Statik uygulamasında <xref:UIAutomationClientsideProviders.UIAutomationClientSideProviders.ClientSideProviderDescriptionTable> alan, bir dizi oluşturma <xref:System.Windows.Automation.ClientSideProviderDescription> sağlayıcıları açıklayan yapıları.  
+ [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] yönetilen kod derlemede istemci tarafı Sağlayıcı bulmak bekliyor. Bu ad alanı derleme adıyla aynı olmalıdır. Örneğin, ContosoProxies.dll adlı bir derleme ContosoProxies ad alanı içerir. Ad alanı içinde oluşturma bir <xref:UIAutomationClientsideProviders.UIAutomationClientSideProviders> sınıfı. Statik uygulamasında <xref:UIAutomationClientsideProviders.UIAutomationClientSideProviders.ClientSideProviderDescriptionTable> alan, bir dizi oluşturma <xref:System.Windows.Automation.ClientSideProviderDescription> sağlayıcıları açıklayan yapıları.  
   
 <a name="Registering_and_Configuring_Client-Side_Providers"></a>   
 ## <a name="registering-and-configuring-client-side-providers"></a>Kaydetme ve istemci tarafı sağlayıcı yapılandırma  

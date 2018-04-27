@@ -1,28 +1,28 @@
 ---
-title: "Nasıl Yapılır: İstemci Uygulama Hizmetlerini Yapılandırma"
-ms.custom: 
+title: 'Nasıl Yapılır: İstemci Uygulama Hizmetlerini Yapılandırma'
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - dotnet-clr
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - client application services, configuring
 ms.assetid: 34a8688a-a32c-40d3-94be-c8e610c6a4e8
-caps.latest.revision: 
+caps.latest.revision: 23
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: bac21a0c9535326becfe94610db33869da89c471
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
-ms.translationtype: MT
+ms.openlocfilehash: e7c6d31293109a0d778136235ccfc894aeba8574
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="how-to-configure-client-application-services"></a>Nasıl Yapılır: İstemci Uygulama Hizmetlerini Yapılandırma
 Bu konuda nasıl kullanılacağını açıklar [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] **Proje Tasarımcısı** etkinleştirmek ve istemci uygulama hizmetleri yapılandırmak için. İstemci uygulama Hizmetleri kullanıcıları doğrulamak ve mevcut bir kullanıcı rolleri ve ayarları almak için kullanabileceğiniz [!INCLUDE[ajax_current_short](../../../includes/ajax-current-short-md.md)] uygulama hizmeti. Yapılandırmadan sonra etkin hizmetleri, uygulama kodunuzda açıklandığı gibi erişebilirsiniz [istemci uygulama hizmetlerine genel bakış](../../../docs/framework/common-client-technologies/client-application-services-overview.md). Hakkında daha fazla bilgi için [!INCLUDE[ajax_current_short](../../../includes/ajax-current-short-md.md)] uygulama bkz [ASP.NET uygulama hizmetleri genel bakış](http://msdn.microsoft.com/library/1162e529-0d70-44b2-b3ab-83e60c695013).  
@@ -100,7 +100,7 @@ Bu konuda nasıl kullanılacağını açıklar [!INCLUDE[vsprvs](../../../includ
   
      Varsayılan değer olan `Data Source = |SQL/CE|` metin kutusunda görüntülenir.  
   
-3.  Oluştur ve SQL Server Compact veritabanını kullanmak için varsayılan bağlantı dizesi değeri koruyun. [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)]bir veritabanı dosyası oluşturur ve belirtilen dizinde put <xref:System.Windows.Forms.Application.UserAppDataPath%2A?displayProperty=nameWithType> özelliği.  
+3.  Oluştur ve SQL Server Compact veritabanını kullanmak için varsayılan bağlantı dizesi değeri koruyun. [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] bir veritabanı dosyası oluşturur ve belirtilen dizinde put <xref:System.Windows.Forms.Application.UserAppDataPath%2A?displayProperty=nameWithType> özelliği.  
   
 4.  Oluştur ve şifreli bir kullanmak için [!INCLUDE[ssEW](../../../includes/ssew-md.md)] veritabanı, ekleme `password` ve `encrypt database` aşağıdaki örnekte gösterildiği gibi bağlantı dizesi değerleri.  
   
@@ -111,7 +111,7 @@ Bu konuda nasıl kullanılacağını açıklar [!INCLUDE[vsprvs](../../../includ
     Data Source = |SQL/CE|;password=<password>;encrypt database=true  
     ```  
   
-5.  Kendi kullanılacak [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] veritabanı, bağlantı dizenizi belirtin. Geçerli bir bağlantı dizesi biçimleri hakkında daha fazla bilgi için bkz: [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] belgeleri. Bu veritabanını otomatik olarak oluşturulmaz. Bağlantı dizesi, aşağıdaki SQL deyimlerini kullanarak oluşturduğunuz varolan bir veritabanına başvurmalıdır.  
+5.  Kendi SQL Server veritabanını kullanmak için bağlantı dizenizi belirtin. Geçerli bir bağlantı dizesi biçimleri hakkında daha fazla bilgi için SQL Server belgelerine bakın. Bu veritabanını otomatik olarak oluşturulmaz. Bağlantı dizesi, aşağıdaki SQL deyimlerini kullanarak oluşturduğunuz varolan bir veritabanına başvurmalıdır.  
   
     ```  
     CREATE TABLE ApplicationProperties (PropertyName nvarchar(256),  
@@ -127,7 +127,7 @@ Bu konuda nasıl kullanılacağını açıklar [!INCLUDE[vsprvs](../../../includ
 ## <a name="using-custom-providers"></a>Özel sağlayıcılar kullanma  
  Varsayılan olarak, istemci uygulama hizmetleri özelliği sağlayıcıları kullanır <xref:System.Web.ClientServices.Providers?displayProperty=nameWithType> ad alanı. Kullanarak uygulamanızı yapılandırırken **Hizmetleri** sayfasında **Proje Tasarımcısı**, bu sağlayıcıları başvurular App.config dosyasına eklendi. Bu varsayılan sağlayıcı sunucuda karşılık gelen sağlayıcılar erişin. Web Hizmetleri gibi kullanıcı veri sağlayıcıları üzerinden erişim için sık sık yapılandırılır <xref:System.Web.Security.SqlMembershipProvider> ve <xref:System.Web.Security.SqlRoleProvider>.  
   
- Özel hizmet sağlayıcıları kullanmak istiyorsanız, böylece sunucunun erişen tüm istemci uygulamaları etkiler genellikle sunucu tarafında sağlayıcıları değiştirir. Ancak, istemci tarafında varsayılan olmayan sağlayıcıları kullanma seçeneğiniz vardır. Aşağıdaki yordamda gösterildiği gibi özel kimlik doğrulama veya rol sağlayıcıları projenizin App.config dosyasında belirtebilirsiniz. Özel kimlik doğrulama ve rol sağlayıcıları nasıl oluşturulacağı hakkında daha fazla bilgi için bkz: [üyelik sağlayıcısı uygulama](http://msdn.microsoft.com/library/d8658b8e-c962-4f64-95e1-4acce35e4582) ve [rol sağlayıcısı uygulama](http://msdn.microsoft.com/library/851671ce-bf9b-43f2-aba4-bc9d28b11c7d). Projenizin değiştirerek bir özel ayarlar sağlayıcısı kullanabilirsiniz `Settings` sınıfı (olarak erişilen `Properties.Settings.Default` C# ve `My.Settings` içinde [!INCLUDE[vbprvb](../../../includes/vbprvb-md.md)]). Daha fazla bilgi için bkz: [uygulama ayarları mimarisi](../../../docs/framework/winforms/advanced/application-settings-architecture.md).  
+ Özel hizmet sağlayıcıları kullanmak istiyorsanız, böylece sunucunun erişen tüm istemci uygulamaları etkiler genellikle sunucu tarafında sağlayıcıları değiştirir. Ancak, istemci tarafında varsayılan olmayan sağlayıcıları kullanma seçeneğiniz vardır. Aşağıdaki yordamda gösterildiği gibi özel kimlik doğrulama veya rol sağlayıcıları projenizin App.config dosyasında belirtebilirsiniz. Özel kimlik doğrulama ve rol sağlayıcıları nasıl oluşturulacağı hakkında daha fazla bilgi için bkz: [üyelik sağlayıcısı uygulama](http://msdn.microsoft.com/library/d8658b8e-c962-4f64-95e1-4acce35e4582) ve [rol sağlayıcısı uygulama](http://msdn.microsoft.com/library/851671ce-bf9b-43f2-aba4-bc9d28b11c7d). Projenizin değiştirerek bir özel ayarlar sağlayıcısı kullanabilirsiniz `Settings` sınıfı (olarak erişilen `Properties.Settings.Default` C# ve `My.Settings` Visual Basic'te). Daha fazla bilgi için bkz: [uygulama ayarları mimarisi](../../../docs/framework/winforms/advanced/application-settings-architecture.md).  
   
 #### <a name="to-configure-client-application-services-to-use-non-default-providers"></a>İstemci uygulama hizmetleri varsayılan olmayan sağlayıcısını kullanacak şekilde yapılandırmak için  
   

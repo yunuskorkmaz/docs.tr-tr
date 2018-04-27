@@ -1,28 +1,28 @@
 ---
-title: "WS İşlem Akışı"
-ms.custom: 
+title: WS İşlem Akışı
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - dotnet-clr
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - Transactions
 ms.assetid: f8eecbcf-990a-4dbb-b29b-c3f9e3b396bd
-caps.latest.revision: 
+caps.latest.revision: 43
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: bf441831a205b022899999b1bf34e1505b8fb6bb
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: f79ffdfe624674074f2e9cadeaccb7f2ab3ba0d7
+ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="ws-transaction-flow"></a>WS İşlem Akışı
 Bu örnek bir istemci Eşgüdümlü işlem kullanımını gösterir ve işlem için istemci ve sunucu seçenekleri WS-Atomic işlem veya OleTransactions protokolü kullanarak akış. Bu örnek dayanır [Başlarken](../../../../docs/framework/wcf/samples/getting-started-sample.md) hesap makinesi hizmetinin uygulayan ancak kullanımını göstermek için işlemleri öznitelikli `TransactionFlowAttribute` ile **TransactionFlowOption** ne derece işlem akışı etkin belirlemek için numaralandırması. Akışlı işlem kapsamı içinde istenen işlem günlüğünü veritabanına yazılır ve Eşgüdümlü istemci işlemi tamamlanana kadar - istemci işlemi tamamlanmazsa devam ederse Web hizmeti işlemi sağlar veritabanı için uygun güncelleştirmeleri iletilmez.  
@@ -31,8 +31,8 @@ Bu örnek bir istemci Eşgüdümlü işlem kullanımını gösterir ve işlem i�
 >  Kurulum yordamı ve yapı yönergeleri Bu örnek için bu konunun sonunda yer alır.  
   
  İstemci, hizmet ve işlem bağlantı başlatıldıktan sonra birkaç hizmet işlemleri erişir. Hizmet sözleşmesini gibi her biri için farklı bir ayar gösteren işlemleri ile tanımlanmış `TransactionFlowOption`.  
-  
-```  
+
+```csharp
 [ServiceContract(Namespace = "http://Microsoft.ServiceModel.Samples")]  
 public interface ICalculator  
 {  
@@ -48,8 +48,8 @@ public interface ICalculator
     [OperationContract]  
     double Divide(double n1, double n2);   
 }  
-```  
-  
+```
+
  Bu, işlenmeyi oldukları sırada operations tanımlar:  
   
 -   Bir `Add` işlem isteği akışlı bir işlem içermelidir.  
@@ -83,8 +83,8 @@ public interface ICalculator
   
 > [!NOTE]
 >  <xref:System.ServiceModel.OperationBehaviorAttribute.TransactionScopeRequired%2A> Özellik için hizmet yöntemi uygulamaları davranışını yerel tanımlar ve istemcinin yeteneği veya bir işlem akan gereksinim tanımlamıyor.  
-  
-```  
+
+```csharp
 // Service class that implements the service contract.  
 [ServiceBehavior(TransactionIsolationLevel = System.Transactions.IsolationLevel.Serializable)]  
 public class CalculatorService : ICalculator  
@@ -119,22 +119,22 @@ public class CalculatorService : ICalculator
   
     // Logging method omitted for brevity  
 }  
-```  
-  
+```
+
  İstemci, hizmet üzerinde `TransactionFlowOption` işlemlerini ayarları, istemcinin oluşturulan tanımında yansıtılır `ICalculator` arabirimi. Ayrıca, hizmetin `transactionFlow` özellik ayarları, istemci uygulama yapılandırmasında yansıtılır. İstemci taşıma ve protokolü uygun seçerek seçebilirsiniz `endpointConfigurationName`.  
-  
-```  
+
+```csharp
 // Create a client using either wsat or oletx endpoint configurations  
 CalculatorClient client = new CalculatorClient("WSAtomicTransaction_endpoint");  
 // CalculatorClient client = new CalculatorClient("OleTransactions_endpoint");  
-```  
-  
+```
+
 > [!NOTE]
 >  Bu örnekte gözlenen davranışını hangi protokolü veya taşıma seçilir aynıdır.  
   
  Hizmeti bağlantısı başlatılan istemci yeni bir oluşturur `TransactionScope` hizmet işlemleri çağrıları geçici.  
-  
-```  
+
+```csharp
 // Start a transaction scope  
 using (TransactionScope tx =  
             new TransactionScope(TransactionScopeOption.RequiresNew))  
@@ -191,8 +191,8 @@ using (TransactionScope tx =
 }  
   
 Console.WriteLine("Transaction committed");  
-```  
-  
+```
+
  İşlem çağrıları aşağıdaki gibidir:  
   
 -   `Add` İstek akışları hizmetine gerekli işlem ve hizmetin Eylemler istemcinin işlem kapsamı içinde gerçekleşir.  
@@ -238,7 +238,7 @@ Press <ENTER> to terminate the service.
   
 1.  Çözüm C# veya Visual Basic .NET sürümünü oluşturmak için'ndaki yönergeleri izleyin [Windows Communication Foundation örnekleri oluşturma](../../../../docs/framework/wcf/samples/building-the-samples.md)  
   
-2.  SQL Server Express Edition veya SQL Server yüklü olduğundan ve bağlantı dizesini hizmetin uygulama yapılandırma dosyasında doğru ayarlandığından emin olun. Örnek bir veritabanı kullanmadan çalışacak şekilde ayarlanmış `usingSql` hizmetin uygulama yapılandırma dosyasında değeri`false`  
+2.  SQL Server Express Edition veya SQL Server yüklü olduğundan ve bağlantı dizesini hizmetin uygulama yapılandırma dosyasında doğru ayarlandığından emin olun. Örnek bir veritabanı kullanmadan çalışacak şekilde ayarlanmış `usingSql` hizmetin uygulama yapılandırma dosyasında değeri `false`  
   
 3.  Tek veya çapraz makine yapılandırmada örneği çalıştırmak için'ndaki yönergeleri izleyin [Windows Communication Foundation örneklerini çalıştırma](../../../../docs/framework/wcf/samples/running-the-samples.md).  
   

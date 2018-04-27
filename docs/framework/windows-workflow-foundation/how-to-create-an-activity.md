@@ -1,26 +1,27 @@
 ---
-title: "Nasıl yapılır: bir etkinlik oluşturmak"
-ms.custom: 
+title: 'Nasıl yapılır: bir etkinlik oluşturmak'
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - csharp
 - vb
 ms.assetid: c09b1e99-21b5-4d96-9c04-ec31db3f4436
-caps.latest.revision: "39"
+caps.latest.revision: 39
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 4a3b9698d6a060120addff52e6600916a2de19fc
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 0d0d48d1e78efb3484f521958edf22d97ca8053d
+ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="how-to-create-an-activity"></a>Nasıl yapılır: bir etkinlik oluşturmak
 Etkinliklerin davranışını çekirdek biriminin olduğundan [!INCLUDE[wf1](../../../includes/wf1-md.md)]. Yönetilen kodda bir etkinlik yürütme mantığını uygulanabilir veya diğer etkinlikleri kullanarak uygulanabilir. Bu konuda iki etkinlik oluşturma gösterilir. İlk etkinlik, yürütme mantığını uygulamak için kod kullanan basit bir etkinliktir. İkinci etkinlik uyarlamasını diğer etkinlikleri kullanarak tanımlanır. Bu etkinlikler içindeki adımları izleyerek öğreticide kullanılır.  
@@ -44,7 +45,7 @@ Etkinliklerin davranışını çekirdek biriminin olduğundan [!INCLUDE[wf1](../
 5.  İçinde **yüklü** düğümü, select **Visual C#**, **iş akışı** (veya **Visual Basic**, **iş akışı**). Emin **.NET Framework 4.5** seçildiyse [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] sürüm aşağı açılan listesi. Seçin **etkinlik Kitaplığı** gelen **iş akışı** listesi. Tür `NumberGuessWorkflowActivities` içinde **adı** kutusuna ve ardından **Tamam**.  
   
     > [!NOTE]
-    >  Hangi programlama dili bağlı olarak birincil dilinde olarak yapılandırılan [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)], **Visual C#** veya **Visual Basic** düğümü altında olabilir **diğer diller**düğümünde **yüklü** düğümü.  
+    >  Visual Studio'da birincil dili olarak programlama dili bağlı olarak yapılandırılmış **Visual C#** veya **Visual Basic** düğümü altında olabilir **diğer diller** düğümünde **yüklü** düğümü.  
   
 6.  Sağ **Activity1.xaml** içinde **Çözüm Gezgini** ve **silmek**. Tıklatın **Tamam** onaylamak için.  
   
@@ -62,7 +63,7 @@ Etkinliklerin davranışını çekirdek biriminin olduğundan [!INCLUDE[wf1](../
      [!code-vb[CFX_WF_GettingStarted#1](../../../samples/snippets/visualbasic/VS_Snippets_CFX/cfx_wf_gettingstarted/vb/readint.vb#1)]  
   
     > [!NOTE]
-    >  `ReadInt` Etkinlik türer <xref:System.Activities.NativeActivity%601> yerine <xref:System.Activities.CodeActivity>, kod etkinlik şablonu için varsayılan değerdir. <xref:System.Activities.CodeActivity%601>Etkinlik aracılığıyla kullanıma sunulan tek bir sonuç sağlıyorsa kullanılabilir <xref:System.Activities.Activity%601.Result%2A> bağımsız değişkeni, ancak <xref:System.Activities.CodeActivity%601> kullanımı yer işaretleri, bu nedenle desteklemiyor <xref:System.Activities.NativeActivity%601> kullanılır.  
+    >  `ReadInt` Etkinlik türer <xref:System.Activities.NativeActivity%601> yerine <xref:System.Activities.CodeActivity>, kod etkinlik şablonu için varsayılan değerdir. <xref:System.Activities.CodeActivity%601> Etkinlik aracılığıyla kullanıma sunulan tek bir sonuç sağlıyorsa kullanılabilir <xref:System.Activities.Activity%601.Result%2A> bağımsız değişkeni, ancak <xref:System.Activities.CodeActivity%601> kullanımı yer işaretleri, bu nedenle desteklemiyor <xref:System.Activities.NativeActivity%601> kullanılır.  
   
 ### <a name="to-create-the-prompt-activity"></a>Komut istemi etkinlik oluşturmak için  
   

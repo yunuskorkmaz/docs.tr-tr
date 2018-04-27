@@ -1,12 +1,13 @@
 ---
-title: "İzlenecek Yol: Genişletilebilir Uygulama Oluşturma"
-ms.custom: 
+title: 'İzlenecek Yol: Genişletilebilir Uygulama Oluşturma'
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - csharp
@@ -18,16 +19,17 @@ helpviewer_keywords:
 - add-in-side adapter [.NET Framework]
 - contracts for add-in pipelines [.NET Framework]
 ms.assetid: 694a33c5-a040-450d-aed5-ac49fc88ce61
-caps.latest.revision: "32"
+caps.latest.revision: 32
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 5cee99346d19c632739bcc6540c43f1a35217a2f
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.workload:
+- dotnet
+ms.openlocfilehash: 8946e30ac9d7a224af7801bc721e7d9cf6e1fab0
+ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="walkthrough-creating-an-extensible-application"></a>İzlenecek Yol: Genişletilebilir Uygulama Oluşturma
 Bu kılavuz, basit hesaplayıcı işlevler gerçekleştirdiği bir eklenti için bir işlem hattı oluşturma açıklar. Gerçek dünya senaryoları gösterilmemiştir; Bunun yerine, bir ardışık düzen ve nasıl bir eklenti için hizmetleri bir konak sağlayabilir temel işlevselliğini gösterir.  
@@ -61,14 +63,14 @@ Bu kılavuz, basit hesaplayıcı işlevler gerçekleştirdiği bir eklenti için
 ## <a name="prerequisites"></a>Önkoşullar  
  Bu izlenecek yolu tamamlamak için aşağıdakiler gerekir:  
   
--   [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)].  
+-   Visual Studio.  
   
 ## <a name="creating-a-visual-studio-solution"></a>Visual Studio çözümü oluşturma  
- Bir çözümde kullanmak [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] ardışık düzen segmentlerinizi projeleri içerecek biçimde.  
+ Bir çözümü Visual Studio'da ardışık düzen segmentlerinizi projeleri içerecek biçimde kullanın.  
   
 #### <a name="to-create-the-pipeline-solution"></a>Ardışık Düzen çözüm oluşturmak için  
   
-1.  İçinde [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)], adlı yeni bir proje oluşturma `Calc1Contract`. İçin temel **sınıf kitaplığı** şablonu.  
+1.  Visual Studio'da adlı yeni bir proje oluşturma `Calc1Contract`. İçin temel **sınıf kitaplığı** şablonu.  
   
 2.  Çözüm adı `CalculatorV1`.  
   

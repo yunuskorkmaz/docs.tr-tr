@@ -1,28 +1,28 @@
 ---
-title: "İzlemeyi Yapılandırma"
-ms.custom: 
+title: İzlemeyi Yapılandırma
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - dotnet-clr
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - tracing [WCF]
 ms.assetid: 82922010-e8b3-40eb-98c4-10fc05c6d65d
-caps.latest.revision: 
+caps.latest.revision: 53
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: 3beeaec1ed9982fc49f6bf81e2717db862e7882f
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: b7b9590096789af609e83d1a5ed736cf18e27700
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="configuring-tracing"></a>İzlemeyi Yapılandırma
 Bu konuda nasıl izlemeyi etkinleştirmek, izlemeleri ve kümesi izleme düzeyleri, kümesi Etkinlik izleme ve uçtan uca izleme bağıntı desteklemek için yayma yaymak üzere izleme kaynakları yapılandırabilir ve izlemeleri erişmek için izleme dinleyicileri ayarlama açıklanmaktadır.  
@@ -33,13 +33,13 @@ Bu konuda nasıl izlemeyi etkinleştirmek, izlemeleri ve kümesi izleme düzeyle
 >  Windows 8'de izleme günlükleri oluşturmak, uygulamanız için sırayla, uygulama yükseltilmiş (yönetici olarak çalıştır) çalıştırmanız gerekir.  
   
 ## <a name="enabling-tracing"></a>İzlemeyi etkinleştirme  
- [!INCLUDE[indigo1](../../../../../includes/indigo1-md.md)]Aşağıdaki Tanılama izleme verilerini çıkarır:  
+ [!INCLUDE[indigo1](../../../../../includes/indigo1-md.md)] Aşağıdaki Tanılama izleme verilerini çıkarır:  
   
 -   Özel durumlar, uyarılar ve diğer önemli bir işleme olayları işlem kilometre taşları gibi işlem çağrıları uygulamalarının tüm bileşenleri arasında izlemelerini kodu.  
   
 -   Windows hata olaylarını izleme özelliği düzgün olduğunda. Bkz: [olay günlüğü](../../../../../docs/framework/wcf/diagnostics/event-logging/index.md).  
   
- [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)]İzleme üstünde oluşturulan <xref:System.Diagnostics>. İzlemeyi kullanmak için yapılandırma dosyası veya kod izleme kaynakları tanımlamanız gerekir. [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)]her biri için bir izleme kaynağını tanımlayan [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)] derleme. `System.ServiceModel` İzleme kaynağıdır en genel [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)] izleme kaynağını ve kayıtları arasında kilometre taşları işleme [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)] iletişimi yığınından kullanıcı kodu girme/bırakmak için Aktarım girme ve çıkılıyor. `System.ServiceModel.MessageLogging` İzleme kaynağını sistem üzerinden akan tüm iletileri kaydeder.  
+ [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)] İzleme üstünde oluşturulan <xref:System.Diagnostics>. İzlemeyi kullanmak için yapılandırma dosyası veya kod izleme kaynakları tanımlamanız gerekir. [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)] her biri için bir izleme kaynağını tanımlayan [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)] derleme. `System.ServiceModel` İzleme kaynağıdır en genel [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)] izleme kaynağını ve kayıtları arasında kilometre taşları işleme [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)] iletişimi yığınından kullanıcı kodu girme/bırakmak için Aktarım girme ve çıkılıyor. `System.ServiceModel.MessageLogging` İzleme kaynağını sistem üzerinden akan tüm iletileri kaydeder.  
   
  İzleme varsayılan olarak etkin değildir. İzlemeyi etkinleştirmek için bir izleme dinleyicisi oluşturmak ve yapılandırmada dışında "Kapalı" Seçili izleme kaynağı için izleme düzeyi; Aksi takdirde, [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)] herhangi izlemeleri oluşturmaz. Dinleyici belirtmezseniz, izleme otomatik olarak devre dışı bırakıldı. Dinleyici tanımlı, ancak hiçbir düzeyi belirtilen düzeyi "Kapalı için" hiçbir izleme yayınlanır anlamı varsayılan olarak ayarlanır.  
   
@@ -66,10 +66,10 @@ Bu konuda nasıl izlemeyi etkinleştirmek, izlemeleri ve kümesi izleme düzeyle
 ```  
   
 > [!NOTE]
->  Yapılandırma dosyasını düzenlemek için bir [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)] hizmet projesinde [!INCLUDE[vs_current_short](../../../../../includes/vs-current-short-md.md)], uygulamanın yapılandırma dosyasına sağ tıklayın — ya da Web.config Web barındırılan uygulamalar veya kendi kendini barındıran uygulamada Appname.exe.config  **Çözüm Gezgini**. Ardından **WCF yapılandırmasını Düzenle** bağlam menüsü öğesini. Bu başlatır [Yapılandırma Aracı (SvcConfigEditor.exe)](../../../../../docs/framework/wcf/configuration-editor-tool-svcconfigeditor-exe.md), yapılandırma ayarlarını değiştirmenizi sağlayan [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)] bir grafik kullanıcı arabirimini kullanarak hizmetleri.  
+>  Yapılandırma dosyasını düzenlemek için bir [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)] hizmet Visual Studio projesi, uygulamanın yapılandırma dosyasına sağ tıklayın — ya da Web.config Web barındırılan uygulamalar veya kendi kendini barındıran uygulamada Appname.exe.config  **Çözüm Gezgini**. Ardından **WCF yapılandırmasını Düzenle** bağlam menüsü öğesini. Bu başlatır [Yapılandırma Aracı (SvcConfigEditor.exe)](../../../../../docs/framework/wcf/configuration-editor-tool-svcconfigeditor-exe.md), yapılandırma ayarlarını değiştirmenizi sağlayan [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)] bir grafik kullanıcı arabirimini kullanarak hizmetleri.  
   
 ## <a name="configuring-trace-sources-to-emit-traces"></a>İzlemeler yaymak üzere izleme kaynaklarını yapılandırma  
- [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)]İzleme kaynağı her derlemesi için tanımlar. Bir derlemenin içinde oluşturulan izlemeleri, bu kaynak için tanımlanan dinleyicileri tarafından erişilir. Aşağıdaki izleme kaynakları tanımlanmıştır:  
+ [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)] İzleme kaynağı her derlemesi için tanımlar. Bir derlemenin içinde oluşturulan izlemeleri, bu kaynak için tanımlanan dinleyicileri tarafından erişilir. Aşağıdaki izleme kaynakları tanımlanmıştır:  
   
 -   System.ServiceModel: tüm aşamalarında günlüklerini [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)] işleme yapılandırma salt okunur olduğunda, bir ileti taşımasına işlenir, kullanıcı kodu ve benzeri işleme, güvenlik bir ileti gönderilir.  
   
@@ -146,16 +146,16 @@ Bu konuda nasıl izlemeyi etkinleştirmek, izlemeleri ve kümesi izleme düzeyle
 </system.diagnostics>  
 ```  
   
- [!INCLUDE[crabout](../../../../../includes/crabout-md.md)]İzleme kaynakları kullanıcı tanımlı oluşturmak için bkz: [genişletme izleme](../../../../../docs/framework/wcf/samples/extending-tracing.md).  
+ [!INCLUDE[crabout](../../../../../includes/crabout-md.md)] İzleme kaynakları kullanıcı tanımlı oluşturmak için bkz: [genişletme izleme](../../../../../docs/framework/wcf/samples/extending-tracing.md).  
   
 ## <a name="configuring-trace-listeners-to-consume-traces"></a>İzleme dinleyicileri izlemeleri kullanmak için yapılandırma  
- Çalışma zamanında [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)] akışları izleme verileri işleyen dinleyicileri verileri. [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)]birçok önceden tanımlı dinleyiciler için sağlar <xref:System.Diagnostics>, çıktı için kullandıkları biçiminde farklı. Özel dinleyicisi türleri de ekleyebilirsiniz.  
+ Çalışma zamanında [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)] akışları izleme verileri işleyen dinleyicileri verileri. [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)] birçok önceden tanımlı dinleyiciler için sağlar <xref:System.Diagnostics>, çıktı için kullandıkları biçiminde farklı. Özel dinleyicisi türleri de ekleyebilirsiniz.  
   
  Kullanabileceğiniz `add` adını ve kullanmak istediğiniz İzleme dinleyicisi türünü belirtmek için. Bizim örnek yapılandırma biz dinleyicisi adlı `traceListener` ve standart .NET Framework İzleme dinleyicisi eklenir (`System.Diagnostics.XmlWriterTraceListener`) istiyoruz kullanılacak türü. İzleme dinleyicileri her kaynağı için herhangi bir sayıda ekleyebilirsiniz. Dosya İzle İzleme dinleyicisi yayar, yapılandırma dosyasında çıktı dosya konumunu ve adını belirtmeniz gerekir. Bu ayarlayarak yapılır `initializeData` bu dinleyici dosyasının adı. Bir dosya adı belirtmezseniz, rasgele bir dosya adı kullanılan dinleyicisi türüne göre oluşturulur. Varsa <xref:System.Diagnostics.XmlWriterTraceListener> olan kullanıldığında, bir dosya adı uzantısı ile oluşturulur. Özel bir dinleyici uygularsanız, bu öznitelik bir dosya adı dışında başlatma veri almak için kullanabilirsiniz. Örneğin, bu öznitelik için bir veritabanı tanımlayıcı belirtebilirsiniz.  
   
  İzlemeler hattaki, örneğin, uzak bir veritabanına göndermek için bir özel İzleme dinleyicisi yapılandırabilirsiniz. Bir uygulama dağıtıcı uzak makinede izleme günlükleri uygun erişim denetimini zorunlu.  
   
- İzleme dinleyicisi programlı olarak da yapılandırabilirsiniz. [!INCLUDE[crdefault](../../../../../includes/crdefault-md.md)][Nasıl yapılır: oluşturma ve başlatma izleme dinleyicileri](http://go.microsoft.com/fwlink/?LinkId=94648) ve [özel TraceListener oluşturma](http://go.microsoft.com/fwlink/?LinkId=96239).  
+ İzleme dinleyicisi programlı olarak da yapılandırabilirsiniz. [!INCLUDE[crdefault](../../../../../includes/crdefault-md.md)] [Nasıl yapılır: oluşturma ve başlatma izleme dinleyicileri](http://go.microsoft.com/fwlink/?LinkId=94648) ve [özel TraceListener oluşturma](http://go.microsoft.com/fwlink/?LinkId=96239).  
   
 > [!CAUTION]
 >  Çünkü `System.Diagnostics.XmlWriterTraceListener` olan değil iş parçacığı, izleme kaynağı kaynakları özel olarak izlemeleri alırken kilitlemek. Kaynak çakışması ortaya çıkabilir, bu dinleyiciyi kullanmak üzere yapılandırılmış bir izleme kaynağına izlemeleri birçok iş parçacığı çıkış olduğunda, bir önemli performans sorunu sonuçlanır. Bu sorunu gidermek için iş parçacığı özel bir dinleyici uygulamanız gerekir.  
@@ -187,7 +187,7 @@ Bu konuda nasıl izlemeyi etkinleştirmek, izlemeleri ve kümesi izleme düzeyle
   
  `propagateActivity` Öznitelik, etkinlik ileti Exchange'de katılmak diğer uç noktalar olarak yayıldığı olup olmadığını gösterir. Bu değer ayarlayarak `true`, iki uç nokta tarafından oluşturulan izleme dosyaları alabilir ve nasıl başka bir uç noktada izlemeleri kümesi için bir uç noktada izlemeleri kümesi aktarılan inceleyin.  
   
- [!INCLUDE[crabout](../../../../../includes/crabout-md.md)]Etkinlik izleme ve yayma, bkz: [yayma](../../../../../docs/framework/wcf/diagnostics/tracing/propagation.md).  
+ [!INCLUDE[crabout](../../../../../includes/crabout-md.md)] Etkinlik izleme ve yayma, bkz: [yayma](../../../../../docs/framework/wcf/diagnostics/tracing/propagation.md).  
   
  Her ikisi de `propagateActivity` ve `ActivityTracing` Boole değerleri System.ServiceModel TraceSource uygulayın. `ActivityTracing` Değeri herhangi bir izleme kaynağını için de geçerlidir dahil olmak üzere [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)] veya kullanıcı tanımlı olanlar.  
   

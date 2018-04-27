@@ -13,11 +13,11 @@ helpviewer_keywords:
 ms.assetid: be36ec33-6800-4505-838c-4124564f5cc9
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: 736b35f51657aa7b21a6a077d70f5e9ff0d4fb85
-ms.sourcegitcommit: 498799639937c89de777361aab74261efe7b79ea
+ms.openlocfilehash: f098dd04b457b7db008788bcfb141af3f69843f8
+ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/22/2018
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="-codepage-visual-basic"></a>-codepage (Visual Basic)
 Derlemedeki tüm kaynak kodu dosyaları için kullanılacak kod sayfasını belirtir.  
@@ -37,10 +37,10 @@ Derlemedeki tüm kaynak kodu dosyaları için kullanılacak kod sayfasını beli
 ## <a name="remarks"></a>Açıklamalar  
  Belirli bir kodlama ile kaydedilmiş kaynak kodu derlemek için kullanabileceğiniz `-codepage` hangi kod sayfası kullanılması gerektiğini belirtmek için. `-codepage` Seçenek derlemeniz tüm kaynak kodu dosyaları için geçerlidir. Daha fazla bilgi için bkz: [karakter kodlamasını .NET Framework'teki](http://msdn.microsoft.com/library/bf6d9823-4c2d-48af-b280-919c5af66ae9).  
   
- `-codepage` Seçeneği kaynak kodu dosyaları geçerli ANSI kod sayfası, Unicode veya UTF-8 bir imza ile kullanılarak kaydedildiyse gerekli değildir. [!INCLUDE[vsprvs](~/includes/vsprvs-md.md)] Kullanıcı, başka bir kodlama belirtmedikçe tüm kaynak kodu dosyaları geçerli ANSI kod sayfası ile varsayılan olarak kaydeder. **kodlama** iletişim kutusu. [!INCLUDE[vsprvs](~/includes/vsprvs-md.md)] kullanan **kodlama** farklı kod sayfası ile kaydedilen kaynak kodu dosyaları açmak için iletişim kutusu.  
+ `-codepage` Seçeneği kaynak kodu dosyaları geçerli ANSI kod sayfası, Unicode veya UTF-8 bir imza ile kullanılarak kaydedildiyse gerekli değildir. Visual Studio kaydeder tüm kaynak kodu dosyaları geçerli ANSI kod sayfası ile varsayılan olarak, kullanıcı, başka bir kodlama belirtmedikçe **kodlama** iletişim kutusu. Visual Studio kullanan **kodlama** farklı kod sayfası ile kaydedilen kaynak kodu dosyaları açmak için iletişim kutusu.  
   
 > [!NOTE]
->  `-codepage` Seçeneği içinde kullanılabilir değil [!INCLUDE[vsprvs](~/includes/vsprvs-md.md)] geliştirme ortamı; yalnızca komut satırından derlerken kullanılabilir.  
+>  `-codepage` Seçeneği Visual Studio geliştirme ortamında kullanılabilir değil; yalnızca komut satırından derlerken kullanılabilir.  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
  [Visual Basic komut satırı derleyicisi](../../../visual-basic/reference/command-line-compiler/index.md)

@@ -1,34 +1,35 @@
 ---
-title: "Özel İzleme"
-ms.custom: 
+title: Özel İzleme
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 2d191c9f-62f4-4c63-92dd-cda917fcf254
-caps.latest.revision: "16"
+caps.latest.revision: 16
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 465da20193245a338143c566d1046c3d2212279e
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 71eb3adaae6a474cf4e0766029c549dfe3a08383
+ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="custom-tracking"></a>Özel İzleme
 Bu örnek, özel izleme katılımcı oluşturmak ve izleme verilerini içeriğini konsola yazma gösterilmiştir. Ayrıca, örnek yayma gösterilmiştir <xref:System.Activities.Tracking.CustomTrackingRecord> kullanıcıyla doldurulmuş nesneleri tanımlanmış veri. Konsol tabanlı izleme katılımcı filtreleri <xref:System.Activities.Tracking.TrackingRecord> izleme profili kullanan iş akışı tarafından gösterilen nesneleri kodda oluşturulan nesne.  
   
 ## <a name="sample-details"></a>Örnek Ayrıntıları  
- [!INCLUDE[wf](../../../../includes/wf-md.md)]bir iş akışı örneğini yürütmeyi izlemek üzere bir izleme altyapısı sağlar. İzleme çalışma zamanı iş akışı yaşam döngüsü olayları için iş akışı etkinlikleri ve özel izleme olaylarını ilgili olayları yaymak üzere bir iş akışı örneği uygular. Aşağıdaki tabloda birincil bileşenleri izleme altyapısının ayrıntılı olarak açıklanmaktadır.  
+ Windows Workflow Foundation (WF) iş akışı örneğini yürütmeyi izlemek üzere bir izleme altyapısı sağlar. İzleme çalışma zamanı iş akışı yaşam döngüsü olayları için iş akışı etkinlikleri ve özel izleme olaylarını ilgili olayları yaymak üzere bir iş akışı örneği uygular. Aşağıdaki tabloda birincil bileşenleri izleme altyapısının ayrıntılı olarak açıklanmaktadır.  
   
 |Bileşen|Açıklama|  
 |---------------|-----------------|  
 |Çalışma zamanı izleme|İzleme kayıtları yayma için altyapı sağlar.|  
-|Katılımcıların izleme|İzleme kayıtların tüketir. [!INCLUDE[netfx40_short](../../../../includes/netfx40-short-md.md)]Olay izleme için Windows (ETW) olayları olarak izleme kayıtları Yazar izleme katılımcı birlikte verilir.|  
+|Katılımcıların izleme|İzleme kayıtların tüketir. [!INCLUDE[netfx40_short](../../../../includes/netfx40-short-md.md)] Olay izleme için Windows (ETW) olayları olarak izleme kayıtları Yazar izleme katılımcı birlikte verilir.|  
 |İzleme profili|Bir iş akışı örneğinden yayılan izleme kayıtları alt kümeleri için abone olmak izleme katılımcı sağlayan bir filtreleme mekanizması.|  
   
  Aşağıdaki tabloda, iş akışı çalışma zamanı yayar izleme kayıtları ayrıntıları verilmektedir.  

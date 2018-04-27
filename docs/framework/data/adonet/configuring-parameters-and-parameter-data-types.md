@@ -1,27 +1,29 @@
 ---
-title: "Yapılandırma parametreleri ve parametre veri türleri"
-ms.custom: 
+title: Yapılandırma parametreleri ve parametre veri türleri
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-ado
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-ado
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - csharp
 - vb
 ms.assetid: 537d8a2c-d40b-4000-83eb-bc1fcc93f707
-caps.latest.revision: "6"
+caps.latest.revision: 6
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.workload: dotnet
-ms.openlocfilehash: a71ba7ed12196184b7e826ed70c92a9873efdb0c
-ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
+ms.workload:
+- dotnet
+ms.openlocfilehash: cdb6efb428f5c096178895f95fe1256846e9c1e5
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="configuring-parameters-and-parameter-data-types"></a>Yapılandırma parametreleri ve parametre veri türleri
 Komut nesneleri parametreleri SQL deyimlerini ya da tür denetleme ve doğrulama sağlayan saklı yordamlar için değerleri geçirmek için kullanın. Komut metni parametre girişini yürütülebilir kod olarak değil, sabit değer olarak kabul edilir. Bu, bu sunucuda güvenlik ihlalleri güvenlik SQL deyimi içine bir saldırganın komut ekler "SQL ekleme" saldırılarına karşı koruma yardımcı olur.  
@@ -58,7 +60,7 @@ Komut nesneleri parametreleri SQL deyimlerini ya da tür denetleme ve doğrulama
 |.NET Framework türü|DbType|SqlDbType|OleDbType|OdbcType|OracleType|  
 |-------------------------|------------|---------------|---------------|--------------|----------------|  
 |<xref:System.Boolean>|Boole değeri|bit|Boole değeri|bit|Bayt|  
-|<xref:System.Byte>|Bayt|TinyInt|UnsignedTinyInt|TinyInt|Bayt|  
+|<xref:System.Byte>|Bayt|Mini tamsayı|UnsignedTinyInt|Mini tamsayı|Bayt|  
 |Byte]|İkili|VarBinary`.` bayt dizisi 8000 bayt olduğu bir VarBinary en büyük boyuttan daha büyükse bu örtük dönüştürme başarısız olur. 8000 bayttan büyük bayt dizileri için açık olarak ayarlanıp <xref:System.Data.SqlDbType>.|VarBinary|İkili|Ham|  
 |<xref:System.Char>|``|Çıkarımını yapma bir <xref:System.Data.SqlDbType> char desteklenmiyor.|Char|Char|Bayt|  
 |<xref:System.DateTime>|DateTime|DateTime|DBTimeStamp|DateTime|DateTime|  
@@ -66,11 +68,11 @@ Komut nesneleri parametreleri SQL deyimlerini ya da tür denetleme ve doğrulama
 |<xref:System.Decimal>|Ondalık|Ondalık|Ondalık|sayısal|Sayı|  
 |<xref:System.Double>|Çift|Kayan nokta|Çift|Çift|Çift|  
 |<xref:System.Single>|Tek|Gerçek|Tek|Gerçek|Kayan nokta|  
-|<xref:System.Guid>|Guid|UniqueIdentifier|Guid|UniqueIdentifier|Ham|  
+|<xref:System.Guid>|Guid|Benzersiz tanımlayıcı|Guid|Benzersiz tanımlayıcı|Ham|  
 |<xref:System.Int16 >|Int16|Tamsayı|Tamsayı|Tamsayı|Int16|  
 |<xref:System.Int32>|Int32|int|int|int|Int32|  
 |<xref:System.Int64>|Int64|BigInt|BigInt|BigInt|Sayı|  
-|<xref:System.Object>|Nesne|Değişken|Değişken|Nesneden bir OdbcType çıkarımını yapma desteklenmiyor.|Blob|  
+|<xref:System.Object>|Nesne|Değişken|Değişken|Nesneden bir OdbcType çıkarımını yapma desteklenmiyor.|BLOB|  
 |<xref:System.String>|Dize|NVarChar. Dize 4000 karakterdir bir NVarChar en büyük boyuttan daha büyükse bu örtük dönüştürme başarısız olur. 4000 karakterden daha büyük olan dizeleri için açık olarak ayarlanıp <xref:System.Data.SqlDbType>.|VarWChar|NVarChar|NVarChar|  
 |<xref:System.TimeSpan>|Zaman|SQL Server 2008 süre. Çıkarımını yapma bir <xref:System.Data.SqlDbType> TimeSpan SQL Server 2008'den önceki SQL Server sürümlerinde desteklenmez.|DBTime|Zaman|DateTime|  
 |<xref:System.UInt16>|UInt16|Çıkarımını yapma bir <xref:System.Data.SqlDbType> UInt16 desteklenmiyor.|UnsignedSmallInt|int|UInt16|  
@@ -80,17 +82,17 @@ Komut nesneleri parametreleri SQL deyimlerini ya da tür denetleme ve doğrulama
 ||AnsiStringFixedLength|Char|Char|Char|Char|  
 |``|Para Birimi|para|Para Birimi|Çıkarımını yapma bir `OdbcType` gelen `Currency` desteklenmiyor.|Sayı|  
 |``|Tarih|SQL Server 2008'de tarih. Çıkarımını yapma bir <xref:System.Data.SqlDbType> tarihinden SQL Server 2008'den önceki SQL Server sürümlerinde desteklenmez.|DBDate|Tarih|DateTime|  
-|``|SByte|Çıkarımını yapma bir <xref:System.Data.SqlDbType> SByte desteklenmiyor.|TinyInt|Çıkarımını yapma bir `OdbcType` SByte desteklenmiyor.|SByte|  
+|``|SByte|Çıkarımını yapma bir <xref:System.Data.SqlDbType> SByte desteklenmiyor.|Mini tamsayı|Çıkarımını yapma bir `OdbcType` SByte desteklenmiyor.|SByte|  
 ||StringFixedLength|NChar|WChar|NChar|NChar|  
 ||Zaman|SQL Server 2008 süre. Çıkarımını yapma bir <xref:System.Data.SqlDbType> zamandan SQL Server 2008'den önceki SQL Server sürümlerinde desteklenmez.|DBTime|Zaman|DateTime|  
 ||VarNumeric|Çıkarımını yapma bir <xref:System.Data.SqlDbType> VarNumeric desteklenmiyor.|VarNumeric|Çıkarımını yapma bir `OdbcType` VarNumeric desteklenmiyor.|Sayı|  
-|Kullanıcı tanımlı tür (sahip bir nesne<xref:Microsoft.SqlServer.Server.SqlUserDefinedAggregateAttribute>|Nesne veya dize, sağlayıcı bağlı olarak (SqlClient her zaman döndüren bir nesne, Odbc her zaman bir dize döndürür ve OleDb yönetilen veri sağlayıcısı ya da görebilirsiniz|SqlDbType.Udt varsa <xref:Microsoft.SqlServer.Server.SqlUserDefinedTypeAttribute> olan mevcut, aksi takdirde değişken|(Değer null ise) OleDbType.VarWChar aksi OleDbType.Variant.|OdbcType.NVarChar|Desteklenmiyor|  
+|Kullanıcı tanımlı tür (sahip bir nesne <xref:Microsoft.SqlServer.Server.SqlUserDefinedAggregateAttribute>|Nesne veya dize, sağlayıcı bağlı olarak (SqlClient her zaman döndüren bir nesne, Odbc her zaman bir dize döndürür ve OleDb yönetilen veri sağlayıcısı ya da görebilirsiniz|SqlDbType.Udt varsa <xref:Microsoft.SqlServer.Server.SqlUserDefinedTypeAttribute> olan mevcut, aksi takdirde değişken|(Değer null ise) OleDbType.VarWChar aksi OleDbType.Variant.|OdbcType.NVarChar|Desteklenmiyor|  
   
 > [!NOTE]
 >  Ondalık değeri sıfıra doğru en yakın tam sayı değerine YUVARLA dönüşümleri daraltma ondalık gelen bir dönüşümleri diğer türleri için. Dönüştürme işleminin sonucu hedef türü gösterilebilir değilse, bir <xref:System.OverflowException> oluşturulur.  
   
 > [!NOTE]
->  Sunucuya bir null parametre değeri gönderdiğinizde belirtmelisiniz <xref:System.DBNull>değil `null` (`Nothing` içinde [!INCLUDE[vbprvb](../../../../includes/vbprvb-md.md)]). Null değer sisteminde değeri yok boş bir nesnedir. <xref:System.DBNull>Null değerleri temsil etmek için kullanılır. Veritabanı null değerler hakkında daha fazla bilgi için bkz: [boş değerler işleme](../../../../docs/framework/data/adonet/sql/handling-null-values.md).  
+>  Sunucuya bir null parametre değeri gönderdiğinizde belirtmelisiniz <xref:System.DBNull>değil `null` (`Nothing` Visual Basic'te). Null değer sisteminde değeri yok boş bir nesnedir. <xref:System.DBNull> Null değerleri temsil etmek için kullanılır. Veritabanı null değerler hakkında daha fazla bilgi için bkz: [boş değerler işleme](../../../../docs/framework/data/adonet/sql/handling-null-values.md).  
   
 ## <a name="deriving-parameter-information"></a>Parametre bilgileri türetme  
  Parametreler de türetilmiş kullanarak bir saklı yordam `DbCommandBuilder` sınıfı. Hem `SqlCommandBuilder` ve `OleDbCommandBuilder` sınıfları statik bir yöntem sunar `DeriveParameters`, hangi otomatik olarak dolduran bir saklı yordamdan parametre bilgilerini kullanan bir komut nesnesi parametreleri topluluğu. Unutmayın `DeriveParameters` komutu mevcut tüm parametre bilgilerini üzerine yazar.  

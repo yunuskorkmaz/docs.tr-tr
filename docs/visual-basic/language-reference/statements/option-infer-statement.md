@@ -2,9 +2,10 @@
 title: Option Infer Deyimi
 ms.date: 07/20/2015
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- devlang-visual-basic
 ms.topic: article
 f1_keywords:
 - vb.OptionInfer
@@ -16,14 +17,14 @@ helpviewer_keywords:
 - declaring variables [Visual Basic], inferred
 - inferred variable declaration
 ms.assetid: 4ad3e6e9-8f5b-4209-a248-de22ef6e4652
-caps.latest.revision: "72"
+caps.latest.revision: 72
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: 1c8bd94bc8dd379edfda8c4350428684a5cda0b1
-ms.sourcegitcommit: 34ec7753acf76f90a0fa845235ef06663dc9e36e
+ms.openlocfilehash: fb6aea2b1e8faf9afd7d252d8828358130fb5374
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="option-infer-statement"></a>Option Infer Deyimi
 Değişkenleri bildirme içinde yerel türü çıkarımı kullanımını etkinleştirir.  
@@ -57,7 +58,7 @@ Option Infer açık olduğunda IntelliSense
 Option Infer kapalı olduğunda IntelliSense  
   
 > [!NOTE]
->  Ne zaman bir değişken bildirilen olarak bir `Object`, program çalışırken çalışma zamanı türünü değiştirebilirsiniz. [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]adlı işlemleri gerçekleştirir *kutulama* ve *kutudan çıkarma* arasında dönüştürme için bir `Object` ve yürütme yavaş olmasını sağlayan bir değer türü. Kutulama ve kutudan çıkarma hakkında daha fazla bilgi için bkz: [Visual Basic dil belirtimi](../../../visual-basic/reference/language-specification/index.md).
+>  Ne zaman bir değişken bildirilen olarak bir `Object`, program çalışırken çalışma zamanı türünü değiştirebilirsiniz. Visual Basic adlı işlemler gerçekleştirdiğinde *kutulama* ve *kutudan çıkarma* arasında dönüştürme için bir `Object` ve yürütme yavaş olmasını sağlayan bir değer türü. Kutulama ve kutudan çıkarma hakkında daha fazla bilgi için bkz: [Visual Basic dil belirtimi](../../../visual-basic/reference/language-specification/index.md).
   
  Tür çıkarımı yordamı düzeyinde uygulanır ve sınıf, yapı, modül veya arabirim yordam dışında geçerli değildir.  
   

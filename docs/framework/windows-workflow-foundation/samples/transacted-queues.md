@@ -1,26 +1,27 @@
 ---
-title: "İşlenen sıraları"
-ms.custom: 
+title: İşlenen sıraları
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: b1b011dd-5e0b-482c-9bb0-9d8727038f14
-caps.latest.revision: "9"
+caps.latest.revision: 9
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: fa475ac31287cebe173df255380b1f34d9af2567
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 628e91589ad32a2646316401c7b2ddb31b13eace
+ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="transacted-queues"></a>İşlenen sıraları
-Bu örnek, kuyruklar ve işlemlerde tümleştirmek gösterilmiştir [!INCLUDE[wf](../../../../includes/wf-md.md)] güvenilir ve ölçeklenebilir hizmetler oluşturmak için. A <!--zz <xref:System.Activities.TransactionScope>--> `System.Activities.TransactionScope` istemci iş akışında kullanarak bir işlem altında kuyruğa ileti göndermek için kullanılan <xref:System.ServiceModel.NetMsmqBinding>. A <xref:System.ServiceModel.Activities.TransactedReceiveScope> sunucuda kuyruktan ileti alma ve iş akışı aynı işlem altında durumunu güncelleştirmek için kullanılır.  
+Bu örnek, kuyruklar ve işlemleri içinde Windows Workflow Foundation (güvenilir ve ölçeklenebilir hizmetler oluşturmak için WF) tümleştirme gösterilmektedir. A <!--zz <xref:System.Activities.TransactionScope>--> `System.Activities.TransactionScope` istemci iş akışında kullanarak bir işlem altında kuyruğa ileti göndermek için kullanılan <xref:System.ServiceModel.NetMsmqBinding>. A <xref:System.ServiceModel.Activities.TransactedReceiveScope> sunucuda kuyruktan ileti alma ve iş akışı aynı işlem altında durumunu güncelleştirmek için kullanılır.  
   
 ## <a name="demonstrates"></a>Gösteriler  
  <xref:System.Activities.Statements.TransactionScope>, <xref:System.ServiceModel.Activities.TransactedReceiveScope>, <xref:System.ServiceModel.NetMsmqBinding>, <xref:System.ServiceModel.Activities.Receive>ve içerik tabanlı bağıntı.  
@@ -30,7 +31,7 @@ Bu örnek, kuyruklar ve işlemlerde tümleştirmek gösterilmiştir [!INCLUDE[wf
   
  İstemci işlemi tamamlandıktan sonra hizmeti barındırılan ve yapılandırılır. Bunu açar açmaz zaten sırasına yerleştirilecek iletileri işleme başlatır. Her ileti aldı ve aynı sunucu işlemi altında işlenebilir. Bu örnekte, alınan ilk iletisidir bir `CreateAccount` örneği oluşturur ve hesap adını temel alarak içerik bağıntı başlatır isteği istek iletisinin bir parçası olarak geçirildi. Gerçek Hayatta, aşağıdaki iki beklediğiniz hizmet türünü modellemek için <xref:System.ServiceModel.Activities.TransactedReceiveScope> işlem etkinlikleri `AddPoints` ve `UsePoints` iletileri içinde paralel dalları yerleştirilir bir `while` böylece bunlar işleme döngüsü herhangi bir sırada sürekli iletileri.  
   
- <xref:System.Activities.Statements.TransactionScope>ve <xref:System.ServiceModel.Activities.TransactedReceiveScope> her bir örtük Kalıcılık noktasına sahip kendi kapsamları sonunda, böylece bu etkinlikler kullanarak [!INCLUDE[wf1](../../../../includes/wf1-md.md)] kuyruklarla birleştirilmiş akışınız, iletileri olduğunu sağlarken yanında, tutarlı bir durumdan diğerine taşımak için bir güvenilir yoludur hiçbir zaman kesildi.  
+ <xref:System.Activities.Statements.TransactionScope> ve <xref:System.ServiceModel.Activities.TransactedReceiveScope> her bir örtük Kalıcılık noktasına sahip kendi kapsamları sonunda, böylece bu etkinlikler kullanarak [!INCLUDE[wf1](../../../../includes/wf1-md.md)] kuyruklarla birleştirilmiş akışınız, iletileri olduğunu sağlarken yanında, tutarlı bir durumdan diğerine taşımak için bir güvenilir yoludur hiçbir zaman kesildi.  
   
 #### <a name="to-set-up-build-and-run-the-sample"></a>Ayarlamak için derleme ve örnek çalıştırın  
   

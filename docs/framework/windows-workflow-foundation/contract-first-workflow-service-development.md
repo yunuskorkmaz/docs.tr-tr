@@ -1,26 +1,27 @@
 ---
-title: "Sözleşme ilk iş akışı hizmeti geliştirme"
-ms.custom: 
+title: Sözleşme ilk iş akışı hizmeti geliştirme
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: e5dbaa7b-005f-4330-848d-58ac4f42f093
-caps.latest.revision: "2"
+caps.latest.revision: 2
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: bdafa52219dc7a275ceb64e24e8ecd91f0ec8068
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 4bc0c8fafd80651114d85d2d6b06c57dec6199b5
+ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="contract-first-workflow-service-development"></a>Sözleşme ilk iş akışı hizmeti geliştirme
-İle başlayarak [!INCLUDE[net_v45](../../../includes/net-v45-md.md)], [!INCLUDE[wf](../../../includes/wf-md.md)] özellikleri daha iyi web hizmetleri ve iş akışları sözleşme ilk iş akışı geliştirme biçiminde arasında tümleştirme. Sözleşme ilk iş akışı geliştirme aracı kod sözleşmede ilk tasarlamanızı sağlar. Araç ardından otomatik olarak bir etkinlik şablonu sözleşmesindeki işlemleri için araç kutusu oluşturur. Bu konu nasıl etkinlikleri ve iş akışı hizmeti özelliklerinde harita hizmet sözleşmesini öznitelikleri için genel bir bakış sağlar. Bir sözleşme ilk iş akışı hizmeti oluşturma adım adım örnek için bkz: [nasıl yapılır: varolan bir hizmet sözleşmesini tüketen bir iş akışı hizmeti oluşturma](../../../docs/framework/windows-workflow-foundation/how-to-create-a-workflow-service-that-consumes-an-existing-service-contract.md).  
+İle başlayarak [!INCLUDE[net_v45](../../../includes/net-v45-md.md)], Windows Workflow Foundation (WF) özellikleri daha iyi web hizmetleri ve iş akışları sözleşme ilk iş akışı geliştirme biçiminde arasında tümleştirme. Sözleşme ilk iş akışı geliştirme aracı kod sözleşmede ilk tasarlamanızı sağlar. Araç ardından otomatik olarak bir etkinlik şablonu sözleşmesindeki işlemleri için araç kutusu oluşturur. Bu konu nasıl etkinlikleri ve iş akışı hizmeti özelliklerinde harita hizmet sözleşmesini öznitelikleri için genel bir bakış sağlar. Bir sözleşme ilk iş akışı hizmeti oluşturma adım adım örnek için bkz: [nasıl yapılır: varolan bir hizmet sözleşmesini tüketen bir iş akışı hizmeti oluşturma](../../../docs/framework/windows-workflow-foundation/how-to-create-a-workflow-service-that-consumes-an-existing-service-contract.md).  
   
 ## <a name="in-this-topic"></a>Bu konuda  
   
@@ -42,7 +43,7 @@ ms.lasthandoff: 12/22/2017
   
     -   [Yapılandırılmış Mesajlaşma etkinlikleri oluşturma](../../../docs/framework/windows-workflow-foundation/contract-first-workflow-service-development.md#ActivityGeneration)  
   
-##  <a name="MappingAttributes"></a>İş akışı özniteliklere hizmeti sözleşme öznitelikleri eşleme  
+##  <a name="MappingAttributes"></a> İş akışı özniteliklere hizmeti sözleşme öznitelikleri eşleme  
  Aşağıdaki bölümlerde tablolarda farklı WCF belirtin öznitelikler ve özellikler ve mesajlaşma etkinlikleri ve sözleşme ilk iş akışı özelliklerinde nasıl eşlenmiş.  
   
 -   [Hizmet sözleşmesi öznitelikleri](../../../docs/framework/windows-workflow-foundation/contract-first-workflow-service-development.md#ServiceContract)  
@@ -55,7 +56,7 @@ ms.lasthandoff: 12/22/2017
   
 -   [Hataya sözleşme öznitelikleri](../../../docs/framework/windows-workflow-foundation/contract-first-workflow-service-development.md#FaultContract)  
   
-###  <a name="ServiceContract"></a>Hizmet sözleşmesi öznitelikleri  
+###  <a name="ServiceContract"></a> Hizmet sözleşmesi öznitelikleri  
   
 |Özellik adı|Desteklenir|Açıklama|WF doğrulama|  
 |-------------------|---------------|-----------------|-------------------|  
@@ -70,7 +71,7 @@ ms.lasthandoff: 12/22/2017
   
  Gövde alt bölümünü buraya ekleyin.  
   
-###  <a name="OperationContract"></a>İşlemi sözleşme öznitelikleri  
+###  <a name="OperationContract"></a> İşlemi sözleşme öznitelikleri  
   
 |Özellik adı|Desteklenir|Açıklama|WF doğrulama|  
 |-------------------|---------------|-----------------|-------------------|  
@@ -85,7 +86,7 @@ ms.lasthandoff: 12/22/2017
 |ReplyAction|Evet|Alır veya işlemi yanıt iletisi için SOAP eylemi değerini ayarlar.|SendReply.Action eşleşmesi gerekir.|  
 |TypeId|Hayır|Türetilen bir sınıfta uygulandığında, bu öznitelik için benzersiz bir tanımlayıcı alır. (Öznitelik devralındı.)|(YOK)|  
   
-###  <a name="MessageContract"></a>İleti sözleşmesi öznitelikleri  
+###  <a name="MessageContract"></a> İleti sözleşmesi öznitelikleri  
   
 |Özellik adı|Desteklenir|Açıklama|WF doğrulama|  
 |-------------------|---------------|-----------------|-------------------|  
@@ -96,7 +97,7 @@ ms.lasthandoff: 12/22/2017
 |WrapperName|Evet|Alır veya ayarlar ileti gövdesinin sarmalayıcı öğesinin adı.|Hiçbir doğrulama (Receive.Content ve SendReply.Content ileti sözleşmesi türüyle eşleşmelidir).|  
 |WrapperNamespace|Hayır|Alır veya ayarlar ileti gövdesi sarmalayıcı öğesinin ad alanı.|(YOK)|  
   
-###  <a name="DataContract"></a>Veri sözleşmesi öznitelikleri  
+###  <a name="DataContract"></a> Veri sözleşmesi öznitelikleri  
   
 |Özellik adı|Desteklenir|Açıklama|WF doğrulama|  
 |-------------------|---------------|-----------------|-------------------|  
@@ -105,7 +106,7 @@ ms.lasthandoff: 12/22/2017
 |Ad Alanı|Evet|Türünü alır veya veri sözleşmesi için ad alanı için ayarlar.|Hiçbir doğrulama (Receive.Content ve SendReply.Content ileti sözleşmesi türüyle eşleşmelidir).|  
 |TypeId|Hayır|Türetilen bir sınıfta uygulandığında, bu öznitelik için benzersiz bir tanımlayıcı alır. (Öznitelik devralındı.)|(YOK)|  
   
-###  <a name="FaultContract"></a>Hataya sözleşme öznitelikleri  
+###  <a name="FaultContract"></a> Hataya sözleşme öznitelikleri  
   
 |Özellik adı|Desteklenir|Açıklama|WF doğrulama|  
 |-------------------|---------------|-----------------|-------------------|  
@@ -117,19 +118,19 @@ ms.lasthandoff: 12/22/2017
 |ProtectionLevel|Hayır|Bir SOAP hatası bağlamasını gerektirir koruma düzeyini belirtir.|(YOK)|  
 |TypeId|Hayır|Türetilen bir sınıfta uygulandığında, bu öznitelik için benzersiz bir tanımlayıcı alır. (Öznitelik devralındı.)|(YOK)|  
   
-##  <a name="AdditionalSupport"></a>Ek destek ve uygulama bilgileri  
+##  <a name="AdditionalSupport"></a> Ek destek ve uygulama bilgileri  
   
 -   [Desteklenmeyen hizmet sözleşmesi özellikleri](../../../docs/framework/windows-workflow-foundation/contract-first-workflow-service-development.md#UnsupportedFeatures)  
   
 -   [Yapılandırılmış Mesajlaşma etkinlikleri oluşturma](../../../docs/framework/windows-workflow-foundation/contract-first-workflow-service-development.md#ActivityGeneration)  
   
-###  <a name="UnsupportedFeatures"></a>Desteklenmeyen hizmet sözleşmesi özellikleri  
+###  <a name="UnsupportedFeatures"></a> Desteklenmeyen hizmet sözleşmesi özellikleri  
   
 -   TPL (görev paralel kitaplığı) görevler sözleşmelerinde kullanımı desteklenmiyor.  
   
 -   Hizmet sözleşmelerinde devralma desteklenmiyor.  
   
-###  <a name="ActivityGeneration"></a>Yapılandırılmış Mesajlaşma etkinlikleri oluşturma  
+###  <a name="ActivityGeneration"></a> Yapılandırılmış Mesajlaşma etkinlikleri oluşturma  
  İki ortak statik yöntemler eklenir <xref:System.ServiceModel.Activities.Receive> ve <xref:System.ServiceModel.Activities.SendReply> oluşturulmasını desteklemek üzere etkinlikleri sözleşme ilk iş akışı hizmetlerini kullanırken İleti etkinlikleri önceden yapılandırılmış.  
   
 -   <xref:System.ServiceModel.Activities.Receive.FromOperationDescription%2A?displayProperty=nameWithType>  

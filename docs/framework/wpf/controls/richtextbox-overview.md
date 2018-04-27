@@ -1,12 +1,13 @@
 ---
-title: "RichTextBox Genel Bakışı"
-ms.custom: 
+title: RichTextBox Genel Bakışı
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-wpf
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-wpf
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - csharp
@@ -15,26 +16,27 @@ helpviewer_keywords:
 - controls [WPF], RichTextBox
 - RichTextBox control [WPF], about RichTextBox control
 ms.assetid: c94548b2-c1e9-4b62-b10c-dd8740eb23d8
-caps.latest.revision: "11"
+caps.latest.revision: 11
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: e88afe5f9c35448b3234498af413500bee163abc
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 3ac25413aaf15a18f70eff6114db81fbb6cc5411
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="richtextbox-overview"></a>RichTextBox Genel Bakışı
-<xref:System.Windows.Controls.RichTextBox> Denetimi görüntülemek veya paragraflar, görüntüler, tablolar ve benzeri bir akış içeriğini düzenlemenize olanak sağlar. Bu konu tanıtır <xref:System.Windows.Controls.TextBox> sınıfı ve ikisi de kullanma örnekleri sağlar [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)] ve [!INCLUDE[TLA#tla_lhcshrp](../../../../includes/tlasharptla-lhcshrp-md.md)].  
+<xref:System.Windows.Controls.RichTextBox> Denetimi görüntülemek veya paragraflar, görüntüler, tablolar ve benzeri bir akış içeriğini düzenlemenize olanak sağlar. Bu konu tanıtır <xref:System.Windows.Controls.TextBox> sınıfı ve ikisi de kullanma örnekleri sağlar [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)] ve C#.  
   
   
 <a name="textbox_or_richtextbox"></a>   
 ## <a name="textbox-or-richtextbox"></a>TextBox veya RichTextBox?  
  Her ikisi de <xref:System.Windows.Controls.RichTextBox> ve <xref:System.Windows.Controls.TextBox> metnini düzenlemek kullanıcılara izin ver, ancak iki denetim farklı senaryolarda kullanılır. A <xref:System.Windows.Controls.RichTextBox> kullanıcı biçimlendirilmiş metin, görüntüler, tablolar veya başka zengin içerik düzenlemek gerekli olduğunda daha iyi bir seçimdir. Örneğin, bir belge, makale veya biçimlendirme, gerektirir blog düzenleme görüntüleri, vb., kullanarak en iyi şekilde gerçekleştirilir bir <xref:System.Windows.Controls.RichTextBox>. A <xref:System.Windows.Controls.TextBox> daha az sistem kaynağı gerektiren sonra bir <xref:System.Windows.Controls.RichTextBox> ve olması yalnızca düz metin gerekir (yani kullanım formlarında) düzenlendiğinde idealdir. Bkz: [TextBox genel bakış](../../../../docs/framework/wpf/controls/textbox-overview.md) hakkında daha fazla bilgi için <xref:System.Windows.Controls.TextBox>. Ana özellikleri, aşağıdaki tabloda özetlenmiştir <xref:System.Windows.Controls.TextBox> ve <xref:System.Windows.Controls.RichTextBox>.  
   
-|Denetim|Gerçek zamanlı yazım denetimi|Bağlam menüsü|Biçimlendirme komutları gibi <xref:System.Windows.Documents.EditingCommands.ToggleBold%2A> (CTRL + B)|<xref:System.Windows.Documents.FlowDocument>içerik görüntüler, paragraflar, tablolar vb. gibi.|  
+|Denetim|Gerçek zamanlı yazım denetimi|Bağlam menüsü|Biçimlendirme komutları gibi <xref:System.Windows.Documents.EditingCommands.ToggleBold%2A> (CTRL + B)|<xref:System.Windows.Documents.FlowDocument> içerik görüntüler, paragraflar, tablolar vb. gibi.|  
 |-------------|------------------------------|------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|  
 |<xref:System.Windows.Controls.TextBox>|Evet|Evet|Hayır|Hayır.|  
 |<xref:System.Windows.Controls.RichTextBox>|Evet|Evet|Evet|Evet|  
@@ -68,7 +70,7 @@ ms.lasthandoff: 12/22/2017
 ## <a name="real-time-spell-checking"></a>Gerçek zamanlı yazım denetimi  
  Gerçek zamanlı yazım denetimi etkinleştirebilirsiniz bir <xref:System.Windows.Controls.TextBox> veya <xref:System.Windows.Controls.RichTextBox>. Yazım denetimi açıldığında, kırmızı bir çizgi (aşağıdaki resme bakın) yanlış yazılmış sözcüklerin altında görüntülenir.  
   
- ![Yazım &#45; olan TextBox denetimi](../../../../docs/framework/wpf/controls/media/editing-textbox-with-spellchecking.png "Editing_TextBox_with_Spellchecking")  
+ ![Yazım kutusuyla&#45;denetimi](../../../../docs/framework/wpf/controls/media/editing-textbox-with-spellchecking.png "Editing_TextBox_with_Spellchecking")  
   
  Bkz: [metin düzenleme denetiminde yazım denetimi etkinleştir](../../../../docs/framework/wpf/controls/how-to-enable-spell-checking-in-a-text-editing-control.md) nasıl etkinleştirileceğini öğrenin.  
   

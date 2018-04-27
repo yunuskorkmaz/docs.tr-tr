@@ -12,11 +12,11 @@ ms.assetid: 3086ab38-3be5-4b22-9385-7d0e16b04f6a
 caps.latest.revision: 23
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: 306a618f193f9223443938ae2a9e0996c1b5295c
-ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
+ms.openlocfilehash: fb6645279a71252ff0ac81348c460b8981771797
+ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="accessing-data-in-visual-basic-applications"></a>Visual Basic uygulamalarındaki verilere erişme
 Visual Basic veri erişimi uygulamaları geliştirmeye yardımcı olmak üzere çeşitli yeni özellikler içerir. Windows uygulamaları için veri bağlama formları konumundan öğeleri sürükleyerek oluşturulur [veri kaynakları penceresi](/visualstudio/data-tools/add-new-data-sources) forma. Konumundan öğeleri sürükleyerek verilere denetimler bağlama **veri kaynakları penceresi** mevcut denetimleri üzerine.  
@@ -26,7 +26,7 @@ Visual Basic veri erişimi uygulamaları geliştirmeye yardımcı olmak üzere �
  Uygulamalarınıza veri erişim işlevini dahil etme konusunun tartışıldığı sayfalara bağlantılar sağlar.
 
  [.NET için Visual Studio veri araçları](/visualstudio/data-tools/visual-studio-data-tools-for-dotnet)  
- [!INCLUDE[vsprvs](~/includes/vsprvs-md.md)] kullanarak, verilerle çalışan uygulamalar oluşturma hakkındaki sayfalara bağlantılar sağlar.  
+ Visual Studio kullanarak verilerle çalışmak uygulamaları oluşturma sayfalar için bağlantılar sağlar.  
   
  [LINQ](../../visual-basic/programming-guide/language-features/linq/index.md)  
  Visual Basic ile LINQ'nun nasıl kullanılacağını açıklayan konulara bağlantılar sağlar.  
@@ -41,7 +41,7 @@ Visual Basic veri erişimi uygulamaları geliştirmeye yardımcı olmak üzere �
  Çok verili uygulamaların nasıl oluşturulacağı hakkındaki konulara bağlantılar sağlar.  
      
  [Yeni bağlantı ekleme](/visualstudio/data-tools/add-new-connections)  
- Uygulamanızı [!INCLUDE[vsprvs](~/includes/vsprvs-md.md)] kullanarak tasarım zaman araçları ve ADO.NET bağlantı nesneleri ile veriye bağlama hakkındaki sayfalara bağlantılar sağlar.  
+ Tasarım zamanı araçları ve ADO.NET bağlantı nesneleri, Visual Studio kullanarak uygulamanızı verilere bağlanma üzerinde sayfalar için bağlantılar sağlar.  
 
  [Visual Studio'da veri kümesi araçları](/visualstudio/data-tools/dataset-tools-in-visual-studio)  
  Veri kümeslerine nasıl veri yükleneceğini ve SQL hesap özetlerinin ve depolanan yordamların nasıl yürütüleceğini açıklayan sayfalara bağlantılar sağlar.  

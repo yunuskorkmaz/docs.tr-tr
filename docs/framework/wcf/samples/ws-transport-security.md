@@ -1,24 +1,26 @@
 ---
-title: "WS Taşıma Güvenliği"
-ms.custom: 
+title: WS Taşıma Güvenliği
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 33a20358-5e1b-458a-a6a9-15753bc7b99b
-caps.latest.revision: "22"
+caps.latest.revision: 22
 author: BrucePerlerMS
 ms.author: bruceper
 manager: mbaldwin
-ms.workload: dotnet
-ms.openlocfilehash: 3435eab63cf745607b6ecf61b12123966f80442b
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 4a332394877e33f6ab97b4be77da6c3267d85401
+ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="ws-transport-security"></a>WS Taşıma Güvenliği
 Bu örnek ile taşıma güvenliği SSL kullanımını gösteren <xref:System.ServiceModel.WSHttpBinding> bağlama. Varsayılan olarak, `wsHttpBinding` bağlama HTTP iletişim sağlar. Taşıma güvenliği için yapılandırıldığında, bağlama HTTPS iletişimi destekler. Bu örnek dayanır [Başlarken](../../../../docs/framework/wcf/samples/getting-started-sample.md) hesap makinesi hizmetinin uygular. `wsHttpBinding` Belirtilen ve uygulama yapılandırma dosyaları istemci ve hizmet için yapılandırılır.  
@@ -62,13 +64,13 @@ Bu örnek ile taşıma güvenliği SSL kullanımını gösteren <xref:System.Ser
   
  Belirtilen adres https:// düzenini kullanır. Güvenlik modu bağlama yapılandırması ayarlar `Transport`. Aynı güvenlik modu hizmetin Web.config dosyasında belirtilmesi gerekir.  
   
- Bu örnekte kullanılan sertifikanın Makecert.exe ile oluşturulan bir test sertifikası olduğundan, bir https erişmeye çalıştığınızda bir güvenlik uyarısı görünür: tarayıcınızdan https://localhost/servicemodelsamples/service.svc gibi adresi. İzin vermek için [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] istemci, yerinde bir test sertifikası ile çalışmak için bazı ek kod güvenlik uyarıyı gizlemek için istemciye eklendi. Bu kod, eşlik eden sınıfı değil ve gerekli üretim sertifikalar kullanıldığında.  
-  
-```  
+ Bu örnekte kullanılan sertifikanın Makecert.exe ile oluşturulan bir test sertifikası olduğundan, bir https erişmeye çalıştığınızda bir güvenlik uyarısı görünür: gibi adres https://localhost/servicemodelsamples/service.svc, tarayıcınızdan. İzin vermek için [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] istemci, yerinde bir test sertifikası ile çalışmak için bazı ek kod güvenlik uyarıyı gizlemek için istemciye eklendi. Bu kod, eşlik eden sınıfı değil ve gerekli üretim sertifikalar kullanıldığında.  
+
+```csharp
 // This code is required only for test certificates like those created by Makecert.exe.  
 PermissiveCertificatePolicy.Enact("CN=ServiceModelSamples-HTTPS-Server");  
-```  
-  
+```
+
  Örneği çalıştırdığınızda, işlem isteklerini ve yanıtlarını istemci konsol penceresinde görüntülenir. İstemcisi penceresinde istemciyi aşağı kapatmak için ENTER tuşuna basın.  
   
 ```  

@@ -20,11 +20,11 @@ ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: 1e194a0784eb27043bbd0c127cde6883b4fafb2e
-ms.sourcegitcommit: 9a4fe1a1c37b26532654b4bbe22d702237950009
+ms.openlocfilehash: 2fa6efdc61620647d5c6318746e61e09cdde7a46
+ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="what-is-windows-communication-foundation"></a>Windows Communication Foundation nedir?
 [!INCLUDE[indigo1](../../../includes/indigo1-md.md)] Hizmet odaklı uygulamalar oluşturmaya yönelik bir çerçevedir. Kullanarak [!INCLUDE[indigo2](../../../includes/indigo2-md.md)], verileri zaman uyumsuz ileti bir hizmet uç noktasından diğerine gönderebilirsiniz. Hizmet uç noktası, IIS tarafından barındırılan sürekli olarak kullanılabilir bir hizmetin parçası veya bir uygulamada barındırılan bir hizmete olabilir. Bir uç nokta veri Hizmeti uç noktasından ister bir hizmetin istemci olabilir. İletileri tek karakter veya XML olarak gönderilen sözcük kadar basit ya da bir ikili veri akışı kadar karmaşık olabilir. Bazı örnek senaryolar şunlardır:  
@@ -80,7 +80,7 @@ ms.lasthandoff: 04/16/2018
   
 -   **Dayanıklı iletileri**  
   
-     Dayanıklı bir ileti hiçbir zaman iletişimde bir bozulma nedeniyle kaybolur biridir. Dayanıklı ileti deseni iletilerinde her zaman bir veritabanına kaydedilir. Bir kesinti oluşursa, veritabanı bağlantısı geri yüklendiğinde ileti değişimi sürdürmeye sağlar. Dayanıklı bir iletiyi kullanarak da oluşturabilirsiniz [!INCLUDE[wf](../../../includes/wf-md.md)]. [!INCLUDE[crdefault](../../../includes/crdefault-md.md)] [İş akışı Hizmetleri](../../../docs/framework/wcf/feature-details/workflow-services.md).  
+     Dayanıklı bir ileti hiçbir zaman iletişimde bir bozulma nedeniyle kaybolur biridir. Dayanıklı ileti deseni iletilerinde her zaman bir veritabanına kaydedilir. Bir kesinti oluşursa, veritabanı bağlantısı geri yüklendiğinde ileti değişimi sürdürmeye sağlar. Windows Workflow Foundation (WF) kullanılarak dayanıklı ileti de oluşturabilirsiniz. [!INCLUDE[crdefault](../../../includes/crdefault-md.md)] [İş akışı Hizmetleri](../../../docs/framework/wcf/feature-details/workflow-services.md).  
   
 -   **İşlemler**  
   
@@ -97,7 +97,7 @@ ms.lasthandoff: 04/16/2018
 ## <a name="wcf-integration-with-other-microsoft-technologies"></a>Diğer Microsoft teknolojileri ile WCF tümleştirme  
  [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] esnek bir platformdur. Bu aşırı esneklik nedeniyle [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] diğer Microsoft ürünleri birkaç de kullanılır. Temelleri anlama tarafından [!INCLUDE[indigo2](../../../includes/indigo2-md.md)], ayrıca bu ürünlerden birini kullanırsanız hemen bir avantajı vardır.  
   
- Eşleştirmeye ilk teknolojisi [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] Windows Workflow Foundation (WF) oluştu. İş akışları basitleştirmek "etkinlikler" uygulama geliştirme iş akışı kapsülleyerek adımları İlk sürümünde [!INCLUDE[wf2](../../../includes/wf2-md.md)], bir geliştirici iş akışı için bir ana bilgisayar oluşturması gerekiyordu. Sonraki sürümü [!INCLUDE[wf2](../../../includes/wf2-md.md)] ile tümleşik [!INCLUDE[indigo2](../../../includes/indigo2-md.md)]. İçinde kolayca barındırılması herhangi bir iş akışının izin verilen bir [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] service; bunu yapabilirsiniz otomatik olarak bir proje türü WF/WCF'i seçerek de [!INCLUDE[vs_current_long](../../../includes/vs-current-long-md.md)].  
+ Eşleştirmeye ilk teknolojisi [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] Windows Workflow Foundation (WF) oluştu. İş akışları basitleştirmek "etkinlikler" uygulama geliştirme iş akışı kapsülleyerek adımları Windows Workflow Foundation'ın ilk sürümünde, bir geliştirici iş akışı için bir ana bilgisayar oluşturması gerekiyordu. Windows Workflow Foundation ileri sürümü ile tümleşik [!INCLUDE[indigo2](../../../includes/indigo2-md.md)]. İçinde kolayca barındırılması herhangi bir iş akışının izin verilen bir [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] service; bunu yapabilirsiniz otomatik olarak bir proje türü WF/WCF'i seçerek de [!INCLUDE[vs_current_long](../../../includes/vs-current-long-md.md)].  
   
  Microsoft BizTalk Server R2'in de kullanacağını [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] iletişim teknolojisi olarak. BizTalk almak ve veri standartlaştırılmış bir biçimden diğerine dönüştürme için tasarlanmıştır. İleti Merkezi ileti kutusu için ileti katı bir eşleme kullanılarak dönüştürülebilir veya iş akışı altyapısının gibi BizTalk özellikleri birini kullanarak teslim edilmelidir. BizTalk şimdi kullanabileceğiniz [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] ileti kutusu iletileri sunmak için iş kolu (LOB) bağdaştırıcısı.  
   
@@ -105,7 +105,7 @@ ms.lasthandoff: 04/16/2018
   
  [!INCLUDE[dublin](../../../includes/dublin-md.md)] Uygulama sunucusu dağıtma ve kullanan uygulamaları yönetmek için özel olarak oluşturulmuş [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] iletişimi için. [!INCLUDE[dublin2](../../../includes/dublin2-md.md)] İçin özellikle tasarlanmış zengin araçları ve yapılandırma seçeneklerini içeren [!INCLUDE[indigo2](../../../includes/indigo2-md.md)]-etkin olan uygulamalar.  
   
-## <a name="see-also"></a>Ayrıca bkz.  
+## <a name="see-also"></a>Ayrıca Bkz.  
  <xref:System.ServiceModel>  
  [Temel Windows Communication Foundation Kavramları](../../../docs/framework/wcf/fundamental-concepts.md)  
  [Windows Communication Foundation Mimarisi](../../../docs/framework/wcf/architecture.md)  

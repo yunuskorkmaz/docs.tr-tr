@@ -1,12 +1,13 @@
 ---
-title: "Nasıl yapılır: Windows Forms Süreölçer Bileşeni ile Belirlenen Aralıklarda Yordamları Çalıştırma"
-ms.custom: 
+title: 'Nasıl yapılır: Windows Forms Süreölçer Bileşeni ile Belirlenen Aralıklarda Yordamları Çalıştırma'
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-winforms
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-winforms
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - csharp
@@ -20,16 +21,17 @@ helpviewer_keywords:
 - Timer component [Windows Forms], initializing
 - procedures [Windows Forms], specific time intervals
 ms.assetid: 8025247a-2de4-4d86-b8ab-a8cb8aeab2ea
-caps.latest.revision: "20"
+caps.latest.revision: 20
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 62cb416b311fd3c2c29f8ffc7c513fa6a9dfd8fe
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.workload:
+- dotnet
+ms.openlocfilehash: b0b25f2ea86e58b7fe644f84412d1923fa761b82
+ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="how-to-run-procedures-at-set-intervals-with-the-windows-forms-timer-component"></a>Nasıl yapılır: Windows Forms Süreölçer Bileşeni ile Belirlenen Aralıklarda Yordamları Çalıştırma
 Bazen belirli zaman aralıklarında bir döngü sona erdi veya ayarlanmış bir zaman aralığından geçtiğinde çalıştıran kadar çalıştıran bir yordam oluşturmak isteyebilirsiniz. <xref:System.Windows.Forms.Timer> Bileşen bu tür bir yordam olanaklı kılar.  
@@ -41,7 +43,7 @@ Bazen belirli zaman aralıklarında bir döngü sona erdi veya ayarlanmış bir 
   
 ### <a name="to-run-a-procedure-at-set-intervals-with-the-timer-component"></a>Süreölçer bileşeni ile belirlenen aralıklarda bir yordamı çalıştırmak için  
   
-1.  Ekleme bir <xref:System.Windows.Forms.Timer> formunuza. Bu program aracılığıyla yapmak nasıl bir çizimi için aşağıdaki örnek bölümüne bakın. [!INCLUDE[vsprvs](../../../../includes/vsprvs-md.md)]bileşenleri bir forma ekleme desteği de vardır. Ayrıca bkz. [nasıl yapılır: ekleme denetimleri olmadan bir kullanıcı arabirimine Windows Forms](http://msdn.microsoft.com/library/becyw7bz\(v=vs.110\)).  
+1.  Ekleme bir <xref:System.Windows.Forms.Timer> formunuza. Bu program aracılığıyla yapmak nasıl bir çizimi için aşağıdaki örnek bölümüne bakın. Visual Studio bileşenleri bir forma ekleme desteği de vardır. Ayrıca bkz. [nasıl yapılır: ekleme denetimleri olmadan bir kullanıcı arabirimine Windows Forms](http://msdn.microsoft.com/library/becyw7bz\(v=vs.110\)).  
   
 2.  Ayarlama <xref:System.Windows.Forms.Timer.Interval%2A> Zamanlayıcı için özelliği (milisaniye cinsinden). Bu özellik, yordamı tekrar çalıştırmadan önce ne kadar süre geçer belirler.  
   

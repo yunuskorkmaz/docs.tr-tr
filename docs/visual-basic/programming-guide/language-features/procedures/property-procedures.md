@@ -1,11 +1,12 @@
 ---
-title: "Özellik Yordamları (Visual Basic)"
-ms.custom: 
+title: Özellik Yordamları (Visual Basic)
+ms.custom: ''
 ms.date: 07/20/2015
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- devlang-visual-basic
 ms.topic: article
 helpviewer_keywords:
 - Set statement [Visual Basic], Property procedures
@@ -19,19 +20,19 @@ helpviewer_keywords:
 - property procedures
 - Get statement [Visual Basic], property procedures
 ms.assetid: 46a98379-e1a2-45dd-a48c-b51213f5ab07
-caps.latest.revision: "22"
+caps.latest.revision: 22
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: cbdf49d5c3eb5ef71b25a060d62f55f19098f445
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 0d9df6f381c89263aa16315fb06a2b3b0d645bbf
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="property-procedures-visual-basic"></a>Özellik Yordamları (Visual Basic)
-Bir özellik yordamı dizisidir [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] modülü, sınıf veya yapı özel bir özellik işlemek deyimleri. Özellik yordamları olan olarak da bilinen *özellik erişimcisi*.  
+Bir özellik yordamı bir özel özellik modülü, sınıf veya yapı işlemek Visual Basic deyimleri dizisidir. Özellik yordamları olan olarak da bilinen *özellik erişimcisi*.  
   
- [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]Aşağıdaki özellik yordamları sağlar:  
+ Visual Basic için aşağıdaki özellik yordamları sağlar:  
   
 -   A `Get` yordamı bir özelliğin değerini döndürür. Bir ifade özelliğinde eriştiğinizde çağrılır.  
   
@@ -114,13 +115,13 @@ End Property
  [!code-vb[VbVbcnProcedures#9](./codesnippet/VisualBasic/property-procedures_2.vb)]  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [Yordamları](./index.md)  
- [İşlev yordamları](./function-procedures.md)  
- [İşleç yordamları](./operator-procedures.md)  
- [Parametreler ve bağımsız değişkenler](./procedure-parameters-and-arguments.md)  
+ [Yordamlar](./index.md)  
+ [İşlev Yordamları](./function-procedures.md)  
+ [İşleç Yordamları](./operator-procedures.md)  
+ [Yordam Parametreleri ve Bağımsız Değişkenleri](./procedure-parameters-and-arguments.md)  
  [Visual Basic'de özellikler ve değişkenler arasındaki farklar](./differences-between-properties-and-variables.md)  
- [Nasıl yapılır: özellik oluşturma](./how-to-create-a-property.md)  
- [Nasıl yapılır: bir özellik yordamı çağırma](./how-to-call-a-property-procedure.md)  
+ [Nasıl yapılır: Özellik Oluşturma](./how-to-create-a-property.md)  
+ [Nasıl yapılır: Bir Özellik Yordamı Çağırma](./how-to-call-a-property-procedure.md)  
  [Nasıl yapılır: bildirme ve Visual Basic'te varsayılan özelliğini çağırın](./how-to-declare-and-call-a-default-property.md)  
- [Nasıl yapılır: bir özelliğe değer ekleme](./how-to-put-a-value-in-a-property.md)  
- [Nasıl yapılır: bir özellikten değer alma](./how-to-get-a-value-from-a-property.md)
+ [Nasıl yapılır: Bir Özelliğe Değer Ekleme](./how-to-put-a-value-in-a-property.md)  
+ [Nasıl yapılır: Bir Özellikten Değer Alma](./how-to-get-a-value-from-a-property.md)

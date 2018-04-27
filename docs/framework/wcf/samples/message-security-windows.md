@@ -1,28 +1,28 @@
 ---
-title: "İleti Güvenliği Windows"
-ms.custom: 
+title: İleti Güvenliği Windows
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - dotnet-clr
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - WS Security
 ms.assetid: d2221d1c-c9cb-48d1-b044-a3b4445c7f05
-caps.latest.revision: 
+caps.latest.revision: 34
 author: BrucePerlerMS
 ms.author: bruceper
 manager: mbaldwin
 ms.workload:
 - dotnet
-ms.openlocfilehash: c8bb8d0506dd535a312bd8df8954c8143d9543ae
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: d42f266e51f6d5dd8c772d674736adc729b2ac2c
+ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="message-security-windows"></a>İleti Güvenliği Windows
 Bu örnek nasıl yapılandırılacağını göstermektedir bir <xref:System.ServiceModel.WSHttpBinding> ileti düzeyi güvenlik Windows kimlik doğrulaması ile kullanılacak bağlama. Bu örnek dayanır [Başlarken](../../../../docs/framework/wcf/samples/getting-started-sample.md). Bu örnekte, Internet Information Services (IIS) barındırılan hizmetindeki ve istemcinin bir konsol uygulaması (.exe).  
@@ -75,15 +75,15 @@ Bu örnek nasıl yapılandırılacağını göstermektedir bir <xref:System.Serv
 ```  
   
  Hizmet kaynak kodunu göstermek için değiştirilmiş nasıl <xref:System.ServiceModel.OperationContext.ServiceSecurityContext%2A> arayan kimliği erişmek için kullanılabilir.  
-  
-```  
+
+```csharp
 public string GetCallerIdentity()  
 {  
     // The Windows identity of the caller can be accessed on the ServiceSecurityContext.WindowsIdentity.  
     return OperationContext.Current.ServiceSecurityContext.WindowsIdentity.Name;  
 }  
-```  
-  
+```
+
  Örneği çalıştırdığınızda, işlem isteklerini ve yanıtlarını istemci konsol penceresinde görüntülenir. İlk yöntem adlı - `GetCallerIdentity` -istemciye arayan kimliği adını döndürür. Konsol penceresinde istemciyi aşağı kapatmak için ENTER tuşuna basın.  
   
 ### <a name="to-set-up-build-and-run-the-sample"></a>Ayarlamak için derleme ve örnek çalıştırın  

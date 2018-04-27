@@ -1,5 +1,5 @@
 ---
-title: "Nasıl yapılır: Veri Akışı Bloğunu İptal Etme"
+title: 'Nasıl yapılır: Veri Akışı Bloğunu İptal Etme'
 ms.date: 03/30/2017
 ms.prod: .net
 ms.technology: dotnet-standard
@@ -18,11 +18,11 @@ manager: wpickett
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: 3ef7fa62513072e1ee0dc7a8fecf3e600f9c26f2
-ms.sourcegitcommit: 6a9030eb5bd0f00e1d144f81958adb195cfb1f6f
+ms.openlocfilehash: eece4992deecbf30299d6e9e96fa8c2faf16d3ab
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/10/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="how-to-cancel-a-dataflow-block"></a>Nasıl yapılır: Veri Akışı Bloğunu İptal Etme
 Bu belge, uygulamanızda iptalini etkinleştir gösterilmiştir. Bu örnekte, iş öğelerini bir veri akışı ardışık yanı sıra iptal etkilerini etkin olduğu göstermek için Windows Forms kullanır.  
@@ -33,7 +33,7 @@ Bu belge, uygulamanızda iptalini etkinleştir gösterilmiştir. Bu örnekte, i�
   
 1.  Bir C# veya Visual Basic oluşturma **Windows Forms uygulaması** projesi. Aşağıdaki adımlarda proje adı `CancellationWinForms`.  
   
-2.  Form1.cs ana form için form tasarımcısında (Form1.vb için [!INCLUDE[vbprvb](../../../includes/vbprvb-md.md)]), ekleme bir <xref:System.Windows.Forms.ToolStrip> denetim.  
+2.  Form1.cs (Visual Basic Form1.vb), ana form için form designer'ı eklemek bir <xref:System.Windows.Forms.ToolStrip> denetim.  
   
 3.  Ekleme bir <xref:System.Windows.Forms.ToolStripButton> denetimini <xref:System.Windows.Forms.ToolStrip> denetim. Ayarlama <xref:System.Windows.Forms.ToolStripItem.DisplayStyle%2A> özelliğine <xref:System.Windows.Forms.ToolStripItemDisplayStyle.Text> ve <xref:System.Windows.Forms.ToolStripItem.Text%2A> özelliğine **çalışma öğeleri ekleme**.  
   
@@ -48,7 +48,7 @@ Bu belge, uygulamanızda iptalini etkinleştir gösterilmiştir. Bu örnekte, i�
   
 1.  Projenizde, System.Threading.Tasks.Dataflow.dll bir başvuru ekleyin.  
   
-2.  Sağlamak Bu Form1.cs (Form1.vb için [!INCLUDE[vbprvb](../../../includes/vbprvb-md.md)]) aşağıdakileri içerir `using` deyimleri (`Imports` içinde [!INCLUDE[vbprvb](../../../includes/vbprvb-md.md)]).  
+2.  Form1.cs (Visual Basic Form1.vb) aşağıdaki içerdiğinden emin olun `using` deyimleri (`Imports` Visual Basic'te).  
   
      [!code-csharp[TPLDataflow_CancellationWinForms#1](../../../samples/snippets/csharp/VS_Snippets_Misc/tpldataflow_cancellationwinforms/cs/cancellationwinforms/form1.cs#1)]
      [!code-vb[TPLDataflow_CancellationWinForms#1](../../../samples/snippets/visualbasic/VS_Snippets_Misc/tpldataflow_cancellationwinforms/vb/cancellationwinforms/form1.vb#1)]  
@@ -92,7 +92,7 @@ Bu belge, uygulamanızda iptalini etkinleştir gösterilmiştir. Bu örnekte, i�
      [!code-vb[TPLDataflow_CancellationWinForms#6](../../../samples/snippets/visualbasic/VS_Snippets_Misc/tpldataflow_cancellationwinforms/vb/cancellationwinforms/form1.vb#6)]  
   
 ## <a name="example"></a>Örnek  
- Aşağıdaki örnek Form1.cs için tam kod gösterilir (Form1.vb için [!INCLUDE[vbprvb](../../../includes/vbprvb-md.md)]).  
+ Aşağıdaki örnek eksiksiz kod Form1.cs (Visual Basic Form1.vb) gösterir.  
   
  [!code-csharp[TPLDataflow_CancellationWinForms#100](../../../samples/snippets/csharp/VS_Snippets_Misc/tpldataflow_cancellationwinforms/cs/cancellationwinforms/form1.cs#100)]
  [!code-vb[TPLDataflow_CancellationWinForms#100](../../../samples/snippets/visualbasic/VS_Snippets_Misc/tpldataflow_cancellationwinforms/vb/cancellationwinforms/form1.vb#100)]  

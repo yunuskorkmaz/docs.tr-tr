@@ -20,11 +20,11 @@ ms.assetid: b86f3131-94ee-448f-96cd-79611e028b26
 caps.latest.revision: 18
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: dae47988e27ed4b1a714943ce1fbffe3b815066b
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 7c32ce34dc7d6cb662ebdb42a3d3431f8107687f
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="operators-and-expressions-in-visual-basic"></a>Visual Basic'de İşleçler ve İfadeler
 Bir *işleci* değerlerini tutan bir veya daha fazla kod öğeleri üzerinde bir işlemi gerçekleştiren bir kod öğedir. Değer öğeleri dahil değişkenlerinin, sabitleri, değişmez değerleri, özellikler, döndürür `Function` ve `Operator` yordamları ve ifadeler.  
@@ -32,7 +32,7 @@ Bir *işleci* değerlerini tutan bir veya daha fazla kod öğeleri üzerinde bir
  Bir *ifade* yeni bir değer veren bir dizi işleçleri ile birleştirilmiş değer öğeleri. İşleçler hesaplamalar, karşılaştırmaları veya diğer işlemleri gerçekleştirerek değeri öğeleri görür.  
   
 ## <a name="types-of-operators"></a>İşleçler türleri  
- [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]Aşağıdaki işleçleri türlerini sağlar:  
+ Visual Basic işleçleri aşağıdaki türlerini sağlar:  
   
 -   [Aritmetik işleçler](../../../../visual-basic/programming-guide/language-features/operators-and-expressions/arithmetic-operators.md) bunların bit şekillerine kaydırma dahil olmak üzere sayısal değerleri tanıdık hesaplamalar.  
   
@@ -69,11 +69,11 @@ Bir *işleci* değerlerini tutan bir veya daha fazla kod öğeleri üzerinde bir
   
  [!code-vb[VbVbalrOperators#56](../../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/index_1.vb)]  
   
- Önceki örnekte [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] atama işlecinin sağ tarafındaki ifade işlemleri gerçekleştirir (`=`), ardından sonuç değeri değişkenine atar `x` soldaki. Bir ifade, ancak bir anlayış birleştirilebilir işleçleri sayısına pratik bir sınır yoktur [Visual Basic'de İşleç önceliği](../../../../visual-basic/language-reference/operators/operator-precedence.md) beklediğiniz sonuçları aldığından emin olmak gereklidir.  
+ Önceki örnekte, Visual Basic ifade işlemlerinde atama işlecinin sağ tarafında gerçekleştirir (`=`), ardından sonuç değeri değişkenine atar `x` soldaki. Bir ifade, ancak bir anlayış birleştirilebilir işleçleri sayısına pratik bir sınır yoktur [Visual Basic'de İşleç önceliği](../../../../visual-basic/language-reference/operators/operator-precedence.md) beklediğiniz sonuçları aldığından emin olmak gereklidir.  
   
  Daha fazla bilgi ve örnekler için bkz: [İşleç aşırı yüklemesi Visual Basic 2005](http://go.microsoft.com/fwlink/?LinkId=101703).  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
  [İşleçler](../../../../visual-basic/language-reference/operators/index.md)  
- [İşleçlerin etkili bileşimi](../../../../visual-basic/programming-guide/language-features/operators-and-expressions/efficient-combination-of-operators.md)  
- [Deyimleri](../../../../visual-basic/language-reference/statements/index.md)
+ [İşleçlerin Etkili Bileşimi](../../../../visual-basic/programming-guide/language-features/operators-and-expressions/efficient-combination-of-operators.md)  
+ [Deyimler](../../../../visual-basic/language-reference/statements/index.md)

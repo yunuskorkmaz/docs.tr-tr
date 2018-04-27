@@ -15,14 +15,14 @@ ms.assetid: 8fb0353a-e41b-4e23-b78f-da65db832f70
 caps.latest.revision: 12
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: c18c1ea645c9f144e2c2043af5460d6fb03f13a1
-ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
+ms.openlocfilehash: 6a303b0bc9a51ec5566be5cf6db40ff9b9de4c9c
+ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="events-visual-basic"></a>Olaylar (Visual Basic)
-Görselleştirme ancak bir [!INCLUDE[vsprvs](~/includes/vsprvs-md.md)] proje gerçekte bir sırayla yürütmek yordamları bir dizi olarak çoğu olay yönelimli programlardır — akışını anlamı adlı dış oluşumu tarafından belirlenir *olayları*.  
+Gerçekte, sırayla yürütmek yordamları bir dizi olarak Visual Studio projesi görselleştirmek ancak çoğu olay yönelimli programlardır — akışını anlamı adlı dış oluşumu tarafından belirlenir *olayları*.  
   
  Önemli bir şey oluştu uygulamanın bildiren bir sinyal bir olaydır. Örneğin, bir kullanıcı bir form üzerinde denetim tıkladığında formun yükseltebilirsiniz bir `Click` olay ve arama olayını işler bir yordam. Olaylar, iletişim kurmak ayrı görevleri de olanak sağlar. Örneğin, uygulamanızın sıralama görev ayrı ayrı ana uygulamadaki yaptığı söyleyin. Bir kullanıcı sıralama iptal ederse, uygulamanızın durdurmak için sıralama işlemi söyleyen bir iptal olayı gönderebilirsiniz.  
   

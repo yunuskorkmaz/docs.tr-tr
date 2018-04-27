@@ -15,15 +15,15 @@ ms.assetid: bc62316a-d41f-4f90-8300-c6f4f0556e43
 caps.latest.revision: 20
 author: BillWagner
 ms.author: wiwagn
-ms.openlocfilehash: 9f0242439caa21268a6c314409f41587890c4126
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 44c15eb9d65adf10904f8777847b0653ff1dbc99
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="is-c-reference"></a>is (C# Başvurusu) #
 
-Bir nesneyi belirtilen bir türle uyumlu değil veya (C# 7 ile başlayan) belirli bir desene göre bir ifade testleri olup olmadığını denetler.
+Bir nesneyi belirtilen bir türle uyumlu değil veya (C# 7. 0'dan başlayarak) belirli bir desene göre bir ifade testleri olup olmadığını denetler.
 
 ## <a name="testing-for-type-compatibility"></a>Tür uyumluluk için test etme ##
 
@@ -45,7 +45,7 @@ Burada *expr* bazı türünün bir örneği için değerlendirilen ifade olan ve
 
 - *Expr* türeyen bir tür örneği *türü*. Diğer bir deyişle, sonucunu *expr* örneğine başvurmanıza olabilir *türü*.
 
-- *Expr* bir taban sınıf, derleme zamanı türüne sahip *türü*, ve *expr* olan bir çalışma zamanı türü *türü* veya türetilmiş *türü* . *Derleme zamanı tür* bir değişken değişkenin bildiriminde tanımlandığı gibi türüdür. *Çalışma zamanı tür* bir değişken bu değişkenine atanan örnek türüdür.
+- *Expr* bir taban sınıf, derleme zamanı türüne sahip *türü*, ve *expr* olan bir çalışma zamanı türü *türü* veya türetilmiş *türü*. *Derleme zamanı tür* bir değişken değişkenin bildiriminde tanımlandığı gibi türüdür. *Çalışma zamanı tür* bir değişken bu değişkenine atanan örnek türüdür.
 
 - *Expr* uygulayan bir tür örneği *türü* arabirimi.
 
@@ -57,14 +57,14 @@ Aşağıdaki örnekte gösterilir `is` ifadeyi hesaplar için `true` her dönü�
 
 [!code-csharp[is#2](../../../../samples/snippets/csharp/language-reference/keywords/is/is2.cs#2)]
 
-`expr`anonim yöntemler dışında bir değer döndüren ifadeye ve lambda ifadeleri olabilir. Aşağıdaki örnek kullanır `is` bir yöntem çağrısının dönüş değerini değerlendirmek için.   
+`expr` anonim yöntemler dışında bir değer döndüren ifadeye ve lambda ifadeleri olabilir. Aşağıdaki örnek kullanır `is` bir yöntem çağrısının dönüş değerini değerlendirmek için.   
 [!code-csharp[is#4](../../../../samples/snippets/csharp/language-reference/keywords/is/is4.cs#4)]
 
-C# 7 ile başlayan, deseni ile eşleşen kullanabilirsiniz [türü düzeni](#type) kullanan daha kısa kod yazmaya `is` deyimi.
+C# 7. 0'dan başlayarak, deseni ile eşleşen kullanabilirsiniz [türü düzeni](#type) kullanan daha kısa kod yazmaya `is` deyimi.
 
-## <a name="pattern-matching-with-is"></a>Desen ile eşleştirme`is` ##
+## <a name="pattern-matching-with-is"></a>Desen ile eşleştirme `is` ##
 
-C# 7 ile başlayan `is` ve [geçiş](../../../csharp/language-reference/keywords/switch.md) deyimleri destek desen eşleştirme. `is` Anahtar sözcüğünü aşağıdaki desenleri destekler:
+C# 7.0 ile başlayan `is` ve [geçiş](../../../csharp/language-reference/keywords/switch.md) deyimleri destek desen eşleştirme. `is` Anahtar sözcüğünü aşağıdaki desenleri destekler:
 
 - [Tür deseni](#type), bir ifade belirtilen türe dönüştürülüp dönüştürülemeyeceğini test eder ve, olabiliyorsa, bu tür bir değişkene çevirir.
 
@@ -72,7 +72,7 @@ C# 7 ile başlayan `is` ve [geçiş](../../../csharp/language-reference/keywords
 
 - [var deseni](#var), her zaman başarılı olur ve bir ifadenin değerini yeni yerel bir değişkene bağlayan bir eşleşme. 
 
-### <a name="type" />Tür deseni</a>
+### <a name="type" /> Tür deseni </a>
 
 Tür deseni desen eşleştirme gerçekleştirmek için kullanılırken `is` bir ifade belirtilen türe dönüştürülüp dönüştürülemeyeceğini test eder ve olabiliyorsa, bu tür bir değişkene çevirir. Basit bir uzantısıdır `is` kısa türü değerlendirme ve dönüştürme sağlayan deyimi. Genel biçiminde `is` türü deseni:
 
@@ -88,7 +88,7 @@ Burada *expr* bazı türünün bir örneği için değerlendirilen ifade *türü
 
 - *Expr* türeyen bir tür örneği *türü*. Diğer bir deyişle, sonucunu *expr* örneğine başvurmanıza olabilir *türü*.
 
-- *Expr* bir taban sınıf, derleme zamanı türüne sahip *türü*, ve *expr* olan bir çalışma zamanı türü *türü* veya türetilmiş *türü* . *Derleme zamanı tür* bir değişken değişkenin bildiriminde tanımlandığı gibi türüdür. *Çalışma zamanı tür* bir değişken bu değişkenine atanan örnek türüdür.
+- *Expr* bir taban sınıf, derleme zamanı türüne sahip *türü*, ve *expr* olan bir çalışma zamanı türü *türü* veya türetilmiş *türü*. *Derleme zamanı tür* bir değişken değişkenin bildiriminde tanımlandığı gibi türüdür. *Çalışma zamanı tür* bir değişken bu değişkenine atanan örnek türüdür.
 
 - *Expr* uygulayan bir tür örneği *türü* arabirimi.
 
@@ -110,9 +110,9 @@ Desen eşleştirme olmadan eşdeğer kodu içeren bir açık atama ayrı bir ata
 
 [!code-csharp[is#10](../../../../samples/snippets/csharp/language-reference/keywords/is/is-type-pattern10.cs#10)]
 
-### <a name="a-nameconstant--constant-pattern"></a><a name="constant" />Sabit düzeni ###
+### <a name="a-nameconstant--constant-pattern"></a><a name="constant" /> Sabit düzeni ###
 
-Sabit desenle eşleşen kalıbı gerçekleştirirken `is` belirtilen bir sabit bir ifade eşit olup olmadığını sınar. C# 6 ve önceki sürümlerinde, sabit düzeni tarafından desteklenen [geçiş](switch.md) deyimi. C# 7 ile başlayan, onu tarafından desteklenen `is` de deyimi. Sözdizimi aşağıdaki gibidir:
+Sabit desenle eşleşen kalıbı gerçekleştirirken `is` belirtilen bir sabit bir ifade eşit olup olmadığını sınar. C# 6 ve önceki sürümlerinde, sabit düzeni tarafından desteklenen [geçiş](switch.md) deyimi. C# 7. 0'dan başlayarak, onu tarafından desteklenen `is` de deyimi. Sözdizimi aşağıdaki gibidir:
 
 ```csharp
    expr is constant
@@ -136,7 +136,7 @@ Aşağıdaki örnekte bir nesne olup olmadığını sınamak için türü ve sab
 
 [!code-csharp[is#7](../../../../samples/snippets/csharp/language-reference/keywords/is/is-const-pattern7.cs#7)]
  
-### <a name="var" />var deseni</a>
+### <a name="var" /> var deseni </a>
 
 Desen eşleştirme var deseni ile her zaman başarılı olur. Sözdizimi aşağıdaki gibidir:
 
@@ -156,7 +156,7 @@ Unutmayın *expr* olan `null`, `is` ifade hala geçerlidir ve atar `null` için 
   
 ## <a name="see-also"></a>Ayrıca bkz.  
  [C# başvurusu](../../../csharp/language-reference/index.md)  
- [C# anahtar sözcükleri](../../../csharp/language-reference/keywords/index.md)  
+ [C# Anahtar Sözcükleri](../../../csharp/language-reference/keywords/index.md)  
  [typeof](../../../csharp/language-reference/keywords/typeof.md)  
- [olarak](../../../csharp/language-reference/keywords/as.md)  
- [İşleç anahtar sözcükleri](../../../csharp/language-reference/keywords/operator-keywords.md)
+ [as](../../../csharp/language-reference/keywords/as.md)  
+ [İşleç Anahtar Sözcükleri](../../../csharp/language-reference/keywords/operator-keywords.md)

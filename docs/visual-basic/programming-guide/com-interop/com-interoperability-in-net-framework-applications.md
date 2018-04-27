@@ -1,30 +1,31 @@
 ---
-title: ".NET Framework Uygulamalarında COM Birlikte Çalışabilirliği (Visual Basic)"
-ms.custom: 
+title: .NET Framework Uygulamalarında COM Birlikte Çalışabilirliği (Visual Basic)
+ms.custom: ''
 ms.date: 07/20/2015
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- devlang-visual-basic
 ms.topic: article
 helpviewer_keywords:
 - interoperability, COM and .NET framework objects
 - COM interop [Visual Basic]
 - shared components
 ms.assetid: f5a72143-c268-4dff-a019-974ad940e17d
-caps.latest.revision: "15"
+caps.latest.revision: 15
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: 0c84143e22f33f572447c50e33559a52469b181a
-ms.sourcegitcommit: 34ec7753acf76f90a0fa845235ef06663dc9e36e
-ms.translationtype: MT
+ms.openlocfilehash: 25fbde3845d378d4a2bcfc13c71124ad1bc29514
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="com-interoperability-in-net-framework-applications-visual-basic"></a>.NET Framework Uygulamalarında COM Birlikte Çalışabilirliği (Visual Basic)
-COM ve .NET Framework nesneleri aynı uygulamada kullanmak istediğinizde, nesnelerin nasıl bellekte mevcut farklar adresi gerekir. .NET Framework nesne yönetilen bellekte yer alan — ortak dil çalışma zamanı tarafından denetlenen bellek — ve çalışma zamanı tarafından gerektiği şekilde taşınmış olabilir. Bir COM nesnesi yönetilmeyen bellekte bulunur ve başka bir bellek konumuna taşımak için beklenmiyor. [!INCLUDE[vsprvs](~/includes/vsprvs-md.md)]ve [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] bu etkileşimini denetlemek için Araçlar yönetilen ve yönetilmeyen bileşenleri sağlar. Yönetilen kodu hakkında daha fazla bilgi için bkz: [ortak dil çalışma zamanı](../../../standard/clr.md).  
+COM ve .NET Framework nesneleri aynı uygulamada kullanmak istediğinizde, nesnelerin nasıl bellekte mevcut farklar adresi gerekir. .NET Framework nesne yönetilen bellekte yer alan — ortak dil çalışma zamanı tarafından denetlenen bellek — ve çalışma zamanı tarafından gerektiği şekilde taşınmış olabilir. Bir COM nesnesi yönetilmeyen bellekte bulunur ve başka bir bellek konumuna taşımak için beklenmiyor. [!INCLUDE[vsprvs](~/includes/vsprvs-md.md)] ve [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] bu etkileşimini denetlemek için Araçlar yönetilen ve yönetilmeyen bileşenleri sağlar. Yönetilen kodu hakkında daha fazla bilgi için bkz: [ortak dil çalışma zamanı](../../../standard/clr.md).  
   
- COM nesneleri .NET uygulamalarında kullanmanın yanı sıra, aynı zamanda kullanmak isteyebilirsiniz [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] nesneleri COM yoluyla yönetilmeyen koddan erişilebilir geliştirmek için  
+ COM nesneleri .NET uygulamalarında kullanarak ek olarak, aynı zamanda Visual Basic nesneleri COM yoluyla yönetilmeyen koddan erişilebilir geliştirmek için kullanmak istediğiniz  
   
  Bu sayfadaki bağlantıları COM ve .NET Framework nesneleri arasındaki etkileşimleri hakkında ayrıntılar sağlar.  
   

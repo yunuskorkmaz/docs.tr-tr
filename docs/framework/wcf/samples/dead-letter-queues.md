@@ -1,24 +1,26 @@
 ---
-title: "Teslim Edilemeyen İletiler Sırası"
-ms.custom: 
+title: Teslim Edilemeyen İletiler Sırası
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: ff664f33-ad02-422c-9041-bab6d993f9cc
-caps.latest.revision: "35"
+caps.latest.revision: 35
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 09a41abc8bc9fc3469ba35d7c7cfbe85d05ca174
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 9892579633103f1e7a6612c09865c91c559df34c
+ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="dead-letter-queues"></a>Teslim Edilemeyen İletiler Sırası
 Bu örnek, işler ve işlem teslim başarısız olmuş iletileri gösterilmiştir. Bağlı olduğu [işlem yapılan işlem MSMQ bağlama](../../../../docs/framework/wcf/samples/transacted-msmq-binding.md) örnek. Bu örnekte `netMsmqBinding` bağlama. Hizmeti, sıraya alınan iletileri alma hizmeti izlemek etkinleştirmek için bir kendi kendini barındıran konsol uygulamasıdır.  
@@ -35,7 +37,7 @@ Bu örnek, işler ve işlem teslim başarısız olmuş iletileri gösterilmişti
   
  Sahipsiz sıra `NetMsmqBinding` bağlama aşağıdaki özelliklerinde ifade:  
   
--   <xref:System.ServiceModel.MsmqBindingBase.DeadLetterQueue%2A>İstemci tarafından gerekli sahipsiz sırayı tür express özelliği. Bu numaralandırma aşağıdaki değerlere sahiptir:  
+-   <xref:System.ServiceModel.MsmqBindingBase.DeadLetterQueue%2A> İstemci tarafından gerekli sahipsiz sırayı tür express özelliği. Bu numaralandırma aşağıdaki değerlere sahiptir:  
   
 -   `None`: Hiçbir eski ileti sırası istemci tarafından gereklidir.  
   
@@ -43,28 +45,28 @@ Bu örnek, işler ve işlem teslim başarısız olmuş iletileri gösterilmişti
   
 -   `Custom`Kullanarak belirtilen özel sahipsiz sırayı <xref:System.ServiceModel.MsmqBindingBase.CustomDeadLetterQueue%2A> özelliği ölü iletileri depolamak için kullanılır. Bu özellik yalnızca üzerinde kullanılabilir [!INCLUDE[wv](../../../../includes/wv-md.md)]. Bu uygulama aynı bilgisayarda çalışan diğer uygulamalarla paylaşma yerine kendi sahipsiz sıra kullanmalıdır olduğunda kullanılır.  
   
--   <xref:System.ServiceModel.MsmqBindingBase.CustomDeadLetterQueue%2A>belirli sıranın atılacak kullanmak için express özelliği. Bu yalnızca kullanılabilir [!INCLUDE[wv](../../../../includes/wv-md.md)].  
+-   <xref:System.ServiceModel.MsmqBindingBase.CustomDeadLetterQueue%2A> belirli sıranın atılacak kullanmak için express özelliği. Bu yalnızca kullanılabilir [!INCLUDE[wv](../../../../includes/wv-md.md)].  
   
  Bu örnekte, istemci hizmetinden bir işlem kapsamı içinde toplu iletiler gönderir ve "zaman yaşam" Bu iletiler (yaklaşık 2 saniye) için rasgele düşük bir değer belirtir. İstemci ayrıca sıraya alma süresi dolan iletileri kullanmak için özel bir sahipsiz sırayı belirtir.  
   
  İstemci uygulaması, sahipsiz sırayı ve ileti göndermek ya da yeniden deneme iletiler okuma ya da teslim edilemeyen sırasına ve ileti göndermek özgün ileti nedeniyle hatayı düzeltin. Örnekte, istemci bir hata iletisi görüntüler.  
   
  Hizmet sözleşme `IOrderProcessor`, aşağıdaki örnek kodda gösterildiği gibi.  
-  
-```  
+
+```csharp
 [ServiceContract(Namespace="http://Microsoft.ServiceModel.Samples")]  
 public interface IOrderProcessor  
 {  
     [OperationContract(IsOneWay = true)]  
     void SubmitPurchaseOrder(PurchaseOrder po);  
 }  
-```  
-  
+```
+
  Örnek hizmet kodunda budur [işlem yapılan işlem MSMQ bağlama](../../../../docs/framework/wcf/samples/transacted-msmq-binding.md).  
   
  Hizmet ile iletişim bir işlem kapsamı içinde yer alır. Hizmet kuyruktan iletileri okur, işlemi gerçekleştirir ve işlemin sonuçlarını görüntüler. Uygulama atılacak teslim edilemeyen iletiler için de oluşturur.  
-  
-```  
+
+```csharp
 //The service contract is defined in generatedClient.cs, generated from the service by the svcutil tool.  
   
 //Client implementation code.  
@@ -117,8 +119,8 @@ class Client
         Console.ReadLine();  
     }  
 }  
-```  
-  
+```
+
  İstemcinin yapılandırma iletisinin hizmete erişmek kısa bir süre belirtir. Belirtilen süre içinde ileti iletilemedi, ileti süresi dolar ve sahipsiz sıraya taşınır.  
   
 > [!NOTE]
@@ -163,8 +165,8 @@ class Client
 >  Sahipsiz sıra bir istemci sıra ve istemci sıra yerel olan.  
   
  Teslim edilemeyen iletisi hizmet uygulaması bir ileti teslim ve gerçekleştirilen işlemlerin düzeltici önlemleri başarısız nedeni denetler. Bir ileti başarısızlık nedeni iki numaralandırmalara yakalanan <xref:System.ServiceModel.Channels.MsmqMessageProperty.DeliveryFailure%2A> ve <xref:System.ServiceModel.Channels.MsmqMessageProperty.DeliveryStatus%2A>. Alabilirsiniz <xref:System.ServiceModel.Channels.MsmqMessageProperty> gelen <xref:System.ServiceModel.OperationContext> aşağıdaki örnek kodda gösterildiği gibi:  
-  
-```  
+
+```csharp
 public void SubmitPurchaseOrder(PurchaseOrder po)  
 {  
     Console.WriteLine("Submitting purchase order did not succed ", po);  
@@ -176,15 +178,15 @@ public void SubmitPurchaseOrder(PurchaseOrder po)
     Console.WriteLine("Message Delivery Failure: {0}",   
                                                mqProp.DeliveryFailure);  
     Console.WriteLine();  
-    ….  
-}  
-```  
-  
+    …  
+}
+```
+
  İletileri teslim edilemeyen sırasındaki ileti işlenirken hizmetine gönderilen iletiler ' dir. Bu nedenle, ne zaman teslim edilemeyen ileti hizmeti okur iletileri sıradan [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] kanal katmanını uyuşmazlığı uç noktalarını bulur ve ileti göndermez. Bu durumda, ileti hizmeti işlem sırasını ele ancak teslim edilemeyen ileti hizmeti tarafından alınan. Farklı bir uç noktası için gönderilen bir ileti almak için bir adres filtresinin eşleşen herhangi bir adres için belirtilen `ServiceBehavior`. Bu, başarılı bir şekilde teslim edilemeyen kuyruktan okunmak iletileri işlemek için gereklidir.  
   
  Başarısızlık nedeni ise, bu örnekte, teslim edilemeyen ileti hizmeti ileti iletinin zaman aşımına uğradı düzenini yeniden gönderir. Diğer nedenlerle, aşağıdaki örnek kodda gösterildiği gibi teslim hatası gösterir:  
-  
-```  
+
+```csharp
 // Service class that implements the service contract.  
 // Added code to write output to the console window.  
 [ServiceBehavior(InstanceContextMode=InstanceContextMode.Single, ConcurrencyMode=ConcurrencyMode.Single, AddressFilterMode=AddressFilterMode.Any)]  
@@ -237,8 +239,8 @@ public class PurchaseOrderDLQService : IOrderProcessor
         }  
     }  
 }   
-```  
-  
+```
+
  Aşağıdaki örnek, bir teslim edilemeyen ileti için yapılandırmayı gösterir:  
   
 ```xml  

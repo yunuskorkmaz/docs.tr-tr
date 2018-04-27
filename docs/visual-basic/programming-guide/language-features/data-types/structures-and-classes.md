@@ -1,11 +1,12 @@
 ---
-title: "Yapılar ve Sınıflar (Visual Basic)"
-ms.custom: 
+title: Yapılar ve Sınıflar (Visual Basic)
+ms.custom: ''
 ms.date: 07/20/2015
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- devlang-visual-basic
 ms.topic: article
 helpviewer_keywords:
 - classes [Visual Basic], vs. structures
@@ -15,17 +16,17 @@ helpviewer_keywords:
 - structures [Visual Basic], structure variables
 - structure variables [Visual Basic]
 ms.assetid: a221e74a-ffcf-4bdc-a0f6-a088a9bf26cc
-caps.latest.revision: "21"
+caps.latest.revision: 21
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: 08e31481feac7a6184c6b29269d193c749f440ff
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: cf72fb0a7a34d45774cb9a58c037ebcb1c05288f
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="structures-and-classes-visual-basic"></a>Yapılar ve Sınıflar (Visual Basic)
-[!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]Yapılar ve sınıflar, her iki varlık aynı özelliklerin çoğunu destekler sonucunda sözdizimi birleştirir. Ancak, ayrıca önemli farklılıklar vardır yapılar ve sınıflar arasında.  
+Visual Basic yapılar ve sınıflar, her iki varlık aynı özelliklerin çoğunu destekler sonucunda sözdizimi birleştirir. Ancak, ayrıca önemli farklılıklar vardır yapılar ve sınıflar arasında.  
   
  Sınıfları, başvuru türleri olan avantajı sahiptir — bir başvuru geçirme tüm verilerini sahip bir yapı değişken geçirme daha verimlidir. Diğer taraftan, yapıları genel yığında bellek ayırma gerektirmez.  
   
@@ -80,7 +81,7 @@ ms.lasthandoff: 11/21/2017
 ## <a name="instances-and-variables"></a>Örnekler ve değişkenleri  
  Yapılar değer türleri olduğundan, her bir yapı değişken kalıcı olarak tek tek yapısı örneğine bağlı. Ancak başvuru türleri sınıflardır ve bir nesne değişkeni çeşitli sınıf örnekleri farklı zamanlarda başvuruda bulunabilir. Bu ayrım yapılar ve sınıflar kullanımınızı aşağıdaki şekillerde etkiler:  
   
--   **Başlatma.** Yapısı değişkeni örtük olarak bir başlatma yapısı parametresiz bir kurucusu kullanarak tüm öğeleri içerir. Bu nedenle, `Dim s As struct1` eşdeğerdir `Dim s As struct1 = New struct1()`.  
+-   **başlatma.** Yapısı değişkeni örtük olarak bir başlatma yapısı parametresiz bir kurucusu kullanarak tüm öğeleri içerir. Bu nedenle, `Dim s As struct1` eşdeğerdir `Dim s As struct1 = New struct1()`.  
   
 -   **Değişkenleri atama.** Başka bir yapı değişkeni atamak veya bir yordam bağımsız değişkeninin bir yapısı örneği geçirmek, değişken tüm öğeleri geçerli değerlerini yeni yapısına kopyalanır. Başka bir nesne değişkeni atamak veya bir nesne değişkeninin bir yordama geçmesi durumunda yalnızca başvuru işaretçisi kopyalanır.  
   
@@ -92,13 +93,13 @@ ms.lasthandoff: 11/21/2017
   
      Yapı öğeleri, ancak kendi örneğinde yalıtılır. Değişiklikleri değerlerine değil yansıtılır herhangi diğer yapı değişkenleri, aynı diğer durumlarda bile `Structure` bildirimi.  
   
--   **Eşitlik.** İki yapılarını eşitlik sınamasını ile öğesi öğeli test gerçekleştirilmesi gerekir. İki nesne değişkenleri kullanarak karşılaştırılabilir <xref:System.Object.Equals%2A> yöntemi. <xref:System.Object.Equals%2A>iki değişken aynı örneğini olup olmadığını gösterir.  
+-   **Eşitlik.** İki yapılarını eşitlik sınamasını ile öğesi öğeli test gerçekleştirilmesi gerekir. İki nesne değişkenleri kullanarak karşılaştırılabilir <xref:System.Object.Equals%2A> yöntemi. <xref:System.Object.Equals%2A> iki değişken aynı örneğini olup olmadığını gösterir.  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [Veri türleri](../../../../visual-basic/programming-guide/language-features/data-types/index.md)  
- [Bileşik veri türleri](../../../../visual-basic/programming-guide/language-features/data-types/composite-data-types.md)  
- [Değer türleri ve başvuru türleri](../../../../visual-basic/programming-guide/language-features/data-types/value-types-and-reference-types.md)  
- [Yapıları](../../../../visual-basic/programming-guide/language-features/data-types/structures.md)  
- [Veri türleri sorunlarını giderme](../../../../visual-basic/programming-guide/language-features/data-types/troubleshooting-data-types.md)  
- [Yapılar ve diğer programlama öğeleri](../../../../visual-basic/programming-guide/language-features/data-types/structures-and-other-programming-elements.md)  
- [Nesneler ve sınıflar](../../../../visual-basic/programming-guide/language-features/objects-and-classes/index.md)
+ [Veri Türleri](../../../../visual-basic/programming-guide/language-features/data-types/index.md)  
+ [Bileşik Veri Türleri](../../../../visual-basic/programming-guide/language-features/data-types/composite-data-types.md)  
+ [Değer Türleri ve Başvuru Türleri](../../../../visual-basic/programming-guide/language-features/data-types/value-types-and-reference-types.md)  
+ [Yapılar](../../../../visual-basic/programming-guide/language-features/data-types/structures.md)  
+ [Veri Türü Sorunlarını Giderme](../../../../visual-basic/programming-guide/language-features/data-types/troubleshooting-data-types.md)  
+ [Yapılar ve Diğer Programlama Öğeleri](../../../../visual-basic/programming-guide/language-features/data-types/structures-and-other-programming-elements.md)  
+ [Nesneler ve Sınıflar](../../../../visual-basic/programming-guide/language-features/objects-and-classes/index.md)

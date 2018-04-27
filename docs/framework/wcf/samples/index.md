@@ -16,11 +16,11 @@ ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: b4ccab2f885a6e177cb81cce153aa92c457b4fb6
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: b27547189692ac6f83b1c41d5f88fac35c7925c0
+ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="windows-communication-foundation-wcf-samples"></a>Windows Communication Foundation (WCF) Örnekleri
 Bu örnekler üzerinde çeşitli yönlerini yönerge sağlamak [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)].  
@@ -29,7 +29,7 @@ Bu örnekler üzerinde çeşitli yönlerini yönerge sağlamak [!INCLUDE[indigo1
   
 -   Örnekler Visual Basic sürümleri, Git [Visual Basic 2010 örnekleri](http://go.microsoft.com/fwlink/?LinkID=193373) tıklatıp **WF HYPERLINK "javascript:__doPostBack('ctl00$ctl00$Content$TabContentPanel$Content$ReleaseFiles$FileList$ctl02$ FileNameLink', '') "_WCF_Samples.zip**.  
   
- [!INCLUDE[wf](../../../../includes/wf-md.md)] [Uygulama](../../../../docs/framework/windows-workflow-foundation/samples/application.md) örnekleri de gösteren birkaç [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]özellikleri.  
+ Windows Workflow Foundation (WF) [uygulama](../../../../docs/framework/windows-workflow-foundation/samples/application.md) örnekleri de gösteren birkaç [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]özellikleri.  
   
  Belgeler ve Yardım Görüntüleyicisi tek başına bir sürümünü yüklemek için Yükle [Microsoft Windows SDK'sı v 7.1](http://go.microsoft.com/fwlink/?LinkID=194146).  
   

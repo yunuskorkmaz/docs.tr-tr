@@ -1,8 +1,9 @@
 ---
-title: "Numaralandırma türleri (C# programlama Kılavuzu)"
+title: Numaralandırma türleri (C# programlama Kılavuzu)
 ms.date: 09/10/2017
 ms.prod: .net
-ms.technology: devlang-csharp
+ms.technology:
+- devlang-csharp
 ms.topic: article
 helpviewer_keywords:
 - enumerations [C#]
@@ -10,14 +11,14 @@ helpviewer_keywords:
 - C# Language, enums
 - bit flags [C#]
 ms.assetid: 64a9b731-9e3c-4336-8a09-018db2aa10b7
-caps.latest.revision: "17"
+caps.latest.revision: 17
 author: BillWagner
 ms.author: wiwagn
-ms.openlocfilehash: 13ec7d5d2a44cddb2b7f440c8d811c2e4060d432
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: cdaa609acfa34f3b0b3073d88f09fe735d48e9a2
+ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="enumeration-types-c-programming-guide"></a>Numaralandırma türleri (C# programlama Kılavuzu)
 
@@ -47,7 +48,7 @@ Enum yerine sayısal bir tür kullanmanın yararları şunlardır:
 
 - Açıkça istemci kodu hangi değişken için geçerli değerler için belirtin.
 
-- İçinde [!INCLUDE[vsprvs](~/includes/vsprvs-md.md)], IntelliSense tanımlanan değerleri listeler.
+- Visual Studio'da IntelliSense tanımlanan değerleri listeler.
 
 Numaralandırıcı listedeki öğelerin değerlerini belirtmediğinde değerleri otomatik olarak 1 artırılır. Önceki örnekte, `Day.Sunday` 0 ' değerine sahip `Day.Monday` 1 ve benzeri bir değer içeriyor. Yeni bir oluşturduğunuzda `Day` nesnesi, varsayılan değer olan olacaktır `Day.Sunday` (0), açıkça, bir değer atamazsanız. Enum oluşturduğunuzda, en mantıklı varsayılan değer seçin ve sıfır değeri verin. Oluşturuldukları sırada açıkça bir değer atanmışlarsa değil, bu varsayılan değere sahip tüm numaralandırmaları neden.
 
@@ -68,7 +69,7 @@ Bir numaralandırma türü, bit bayrakları tanımlamak için hangi Numaralandı
 
 Bit bayrakları enum uygulayarak oluşturun <xref:System.FlagsAttribute?displayProperty=nameWithType> özniteliği ve değerleri uygun şekilde tanımlama böylece `AND`, `OR`, `NOT` ve `XOR` bit düzeyinde işlemler bunlar üzerinde gerçekleştirilebilir. Adlandırılmış bir sabit "hiçbir bayraklarını ayarlayın." anlamına gelir sıfır değeri ile bir bit bayrakları enum içindeki içerir "Hiçbir bayraklarını ayarlayın" gelmez, bir bayrak sıfır değeri vermeyin.
 
-Aşağıdaki örnekte, başka bir sürümü `Day` adlı enum `Days`, tanımlanır. `Days`sahip `Flags` öznitelik ve her değer 2'in sonraki büyük üssü atanır. Bu oluşturmanızı sağlayan bir `Days` değişken değeri `Days.Tuesday | Days.Thursday`.
+Aşağıdaki örnekte, başka bir sürümü `Day` adlı enum `Days`, tanımlanır. `Days` sahip `Flags` öznitelik ve her değer 2'in sonraki büyük üssü atanır. Bu oluşturmanızı sağlayan bir `Days` değişken değeri `Days.Tuesday | Days.Thursday`.
 
 [!code-csharp[csProgGuideEnums#2](../../../samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideEnums/CS/Enums.cs#2)]
 
@@ -94,5 +95,5 @@ Bir genişletme yöntemi kullanarak, bir numaralandırma için yeni bir yöntem 
 
 ## <a name="see-also"></a>Ayrıca bkz.
  <xref:System.Enum?displayProperty=nameWithType>  
- [C# programlama kılavuzu](../../csharp/programming-guide/index.md)  
- [Enum](../../csharp/language-reference/keywords/enum.md)
+ [C# Programlama Kılavuzu](../../csharp/programming-guide/index.md)  
+ [enum](../../csharp/language-reference/keywords/enum.md)

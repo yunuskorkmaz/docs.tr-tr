@@ -17,11 +17,11 @@ ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: 1e1c00abfec36622f5da493165259fb1786ab8d6
-ms.sourcegitcommit: c883637b41ee028786edceece4fa872939d2e64c
+ms.openlocfilehash: a13e5a0044c51700acce6b123688868443f635ae
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/26/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="how-to-host-and-run-a-basic-windows-communication-foundation-service"></a>Nasıl yapılır: Temel Bir Windows Communication Foundation Hizmeti Barındırma ve Çalıştırma
 Bu üçüncü altı görev oluşturmak için gerekli olan bir [!INCLUDE[indigo1](../../../includes/indigo1-md.md)] uygulama. Tüm altı görevlerinin genel bakış için bkz: [başlangıç Öğreticisi](../../../docs/framework/wcf/getting-started-tutorial.md) konu.  
@@ -170,7 +170,7 @@ Bu üçüncü altı görev oluşturmak için gerekli olan bir [!INCLUDE[indigo1]
   
 ### <a name="to-verify-the-service-is-working"></a>Hizmetin çalıştığını doğrulamak için  
   
-1.  İçinde gelen GettingStartedHost konsol uygulamasını çalıştırın [!INCLUDE[vs_current_long](../../../includes/vs-current-long-md.md)]. Çalışırken [!INCLUDE[wv](../../../includes/wv-md.md)] ve sonraki işletim sistemleri, hizmet yönetici ayrıcalıklarıyla çalıştırılmalıdır. Çünkü [!INCLUDE[vs_current_short](../../../includes/vs-current-short-md.md)] yönetici ayrıcalıklarıyla çalıştırın, GettingStartedHost da yönetici ayrıcalıklarıyla çalıştırın. Ayrıca, yönetici ayrıcalıklarıyla çalıştıran yeni bir komut istemi başlatın ve içerdiği service.exe çalıştırın.  
+1.  İçinde gelen GettingStartedHost konsol uygulamasını çalıştırın [!INCLUDE[vs_current_long](../../../includes/vs-current-long-md.md)]. Çalışırken [!INCLUDE[wv](../../../includes/wv-md.md)] ve sonraki işletim sistemleri, hizmet yönetici ayrıcalıklarıyla çalıştırılmalıdır. Visual Studio'nun yönetici ayrıcalıklarıyla çalıştığından, GettingStartedHost da yönetici ayrıcalıklarıyla çalıştırın. Ayrıca, yönetici ayrıcalıklarıyla çalıştıran yeni bir komut istemi başlatın ve içerdiği service.exe çalıştırın.  
   
 2.  Açık Internet Explorer ve hizmetin hata ayıklama sayfası adresindeki `http://localhost:8000/GettingStarted/CalculatorService`.  
   
@@ -424,7 +424,7 @@ End Module
 ```  
   
 > [!NOTE]
->  Bunun gibi hizmetleri HTTP adreslerini dinleme için makinede Kaydet izni gerektirir. Yönetici hesapları, bu izne sahip, ancak yönetici olmayan bir hesap HTTP ad alanları için izin verilmelidir. [!INCLUDE[crabout](../../../includes/crabout-md.md)] ad alanı ayırmaları yapılandırma hakkında [yapılandırma HTTP ve HTTPS](../../../docs/framework/wcf/feature-details/configuring-http-and-https.md). Altında çalışırken [!INCLUDE[vs_current_short](../../../includes/vs-current-short-md.md)], service.exe yönetici ayrıcalıklarıyla çalıştırılmalıdır.  
+>  Bunun gibi hizmetleri HTTP adreslerini dinleme için makinede Kaydet izni gerektirir. Yönetici hesapları, bu izne sahip, ancak yönetici olmayan bir hesap HTTP ad alanları için izin verilmelidir. [!INCLUDE[crabout](../../../includes/crabout-md.md)] ad alanı ayırmaları yapılandırma hakkında [yapılandırma HTTP ve HTTPS](../../../docs/framework/wcf/feature-details/configuring-http-and-https.md). Visual Studio altında çalışırken, service.exe yönetici ayrıcalıklarıyla çalıştırılmalıdır.  
   
  Şimdi hizmeti çalışıyor. İle devam [nasıl yapılır: bir istemci oluşturmak](../../../docs/framework/wcf/how-to-create-a-wcf-client.md). Sorun giderme bilgileri için bkz: [Başlarken Öğreticisi sorun giderme](../../../docs/framework/wcf/troubleshooting-the-getting-started-tutorial.md).  
   

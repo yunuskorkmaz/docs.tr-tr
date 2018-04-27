@@ -1,11 +1,12 @@
 ---
-title: "Visual Basic'de Aritmetik İşleçler"
-ms.custom: 
+title: Visual Basic'de Aritmetik İşleçler
+ms.custom: ''
 ms.date: 07/20/2015
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- devlang-visual-basic
 ms.topic: article
 helpviewer_keywords:
 - type safety
@@ -19,14 +20,14 @@ helpviewer_keywords:
 - Visual Basic code, operators
 - arithmetic operators [Visual Basic], about arithmetic operators
 ms.assetid: 325dac7a-ea4f-41d5-8b48-f6e904211569
-caps.latest.revision: "20"
+caps.latest.revision: 20
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: 7fec98c38eebc34a0f84e051dc7c0914f537418f
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: cef1e3610d885a0f3a2bae718641f7b8ca1062dc
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="arithmetic-operators-in-visual-basic"></a>Visual Basic'de Aritmetik İşleçler
 Aritmetik işleçler değişmez değerleri, değişkenleri, diğer ifadeler, işlevi ve özellik çağrılarını ve sabitler tarafından temsil edilen sayısal değerleri hesaplama ile ilgili bilinen aritmetik işlemler çoğunu gerçekleştirmek için kullanılır. Ayrıca aritmetik sınıflandırılmış işlenenler tek tek bit düzeyinde hareket ve bunların bit şekillerine sola veya sağa kaydırma bit kaydırma işleçleri var.  
@@ -65,7 +66,7 @@ Aritmetik işleçler değişmez değerleri, değişkenleri, diğer ifadeler, iş
   
 |Bölünen veri türü|Bölen veri türü|Bölünen değeri|Sonuç|  
 |---|---|---|---|  
-|`Double`|`Double`|0|<xref:System.Double.NaN>(matematiksel olarak tanımlanan sayı değil)|  
+|`Double`|`Double`|0|<xref:System.Double.NaN> (matematiksel olarak tanımlanan sayı değil)|  
 |`Double`|`Double`|> 0|<xref:System.Double.PositiveInfinity>|  
 |`Double`|`Double`|\< 0|<xref:System.Double.NegativeInfinity>|  
   
@@ -98,14 +99,14 @@ Aritmetik işleçler değişmez değerleri, değişkenleri, diğer ifadeler, iş
 ## <a name="type-safety"></a>Tür güvenliği  
  İşlenen normalde aynı türde olmalıdır. Örneğin, eklenmesiyle yapıyorsanız bir `Integer` değişken, onu diğerine eklemeniz `Integer` değişkeni ve atama sonucu türünde bir değişken `Integer` de.  
   
- Tek yönlü iyi tür kullanımı uyumlu emin olmak için yöntem kodlama kullanmaktır [Option Strict deyimi](../../../../visual-basic/language-reference/statements/option-strict-statement.md). Ayarlarsanız `Option Strict On`, [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] otomatik olarak gerçekleştirir *tür kullanımı uyumlu* dönüşümler. Eklemeye çalışırsanız, örneğin, bir `Integer` için değişken bir `Double` değişkeni ve değer atadığınız bir `Double` değişken, işlemi normal olarak, çünkü devam eder bir `Integer` değer dönüştürülebilir `Double` veri kaybı olmadan. Türü güvensiz dönüştürme, diğer yandan derleyici hatası ile neden `Option Strict On`. Eklemeye çalışırsanız, örneğin, bir `Integer` için değişken bir `Double` değişkeni ve değer atadığınız bir `Integer` değişken, bir derleyici hatası, çünkü sonuçları bir `Double` değişkeni örtük olarak dönüştürülemiyor yazmak için `Integer`.  
+ Tek yönlü iyi tür kullanımı uyumlu emin olmak için yöntem kodlama kullanmaktır [Option Strict deyimi](../../../../visual-basic/language-reference/statements/option-strict-statement.md). Ayarlarsanız `Option Strict On`, Visual Basic otomatik olarak gerçekleştirir *tür kullanımı uyumlu* dönüşümler. Eklemeye çalışırsanız, örneğin, bir `Integer` için değişken bir `Double` değişkeni ve değer atadığınız bir `Double` değişken, işlemi normal olarak, çünkü devam eder bir `Integer` değer dönüştürülebilir `Double` veri kaybı olmadan. Türü güvensiz dönüştürme, diğer yandan derleyici hatası ile neden `Option Strict On`. Eklemeye çalışırsanız, örneğin, bir `Integer` için değişken bir `Double` değişkeni ve değer atadığınız bir `Integer` değişken, bir derleyici hatası, çünkü sonuçları bir `Double` değişkeni örtük olarak dönüştürülemiyor yazmak için `Integer`.  
   
- Ayarlarsanız `Option Strict Off`, ancak [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] beklenmeyen veri veya duyarlık kaybına neden olabilir ancak gerçekleşmesi, örtük daraltma dönüşümleri sağlar. Bu nedenle, kullanmanızı öneririz `Option Strict On` üretim kodu yazarken. Daha fazla bilgi için bkz: [Widening ve daraltma dönüşümleri](../../../../visual-basic/programming-guide/language-features/data-types/widening-and-narrowing-conversions.md).  
+ Ayarlarsanız `Option Strict Off`, beklenmeyen veri veya duyarlık kaybına neden olabilir ancak bununla birlikte, Visual Basic, gerçekleşmesi örtük daraltma dönüşümleri izin verir. Bu nedenle, kullanmanızı öneririz `Option Strict On` üretim kodu yazarken. Daha fazla bilgi için bkz: [Widening ve daraltma dönüşümleri](../../../../visual-basic/programming-guide/language-features/data-types/widening-and-narrowing-conversions.md).  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [Aritmetik işleçler](../../../../visual-basic/language-reference/operators/arithmetic-operators.md)  
- [Bit kaydırma işleçleri](../../../../visual-basic/language-reference/operators/bit-shift-operators.md)  
+ [Aritmetik İşleçler](../../../../visual-basic/language-reference/operators/arithmetic-operators.md)  
+ [Bit Kaydırma İşleçleri](../../../../visual-basic/language-reference/operators/bit-shift-operators.md)  
  [Visual Basic'de Karşılaştırma işleçleri](../../../../visual-basic/programming-guide/language-features/operators-and-expressions/comparison-operators.md)  
  [Visual Basic'de birleştirme işleçleri](../../../../visual-basic/programming-guide/language-features/operators-and-expressions/concatenation-operators.md)  
  [Visual Basic'de mantıksal ve bit düzeyinde işleçler](../../../../visual-basic/programming-guide/language-features/operators-and-expressions/logical-and-bitwise-operators.md)  
- [İşleçlerin etkili bileşimi](../../../../visual-basic/programming-guide/language-features/operators-and-expressions/efficient-combination-of-operators.md)
+ [İşleçlerin Etkili Bileşimi](../../../../visual-basic/programming-guide/language-features/operators-and-expressions/efficient-combination-of-operators.md)

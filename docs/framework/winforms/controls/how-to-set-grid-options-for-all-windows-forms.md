@@ -1,12 +1,13 @@
 ---
-title: "Nasıl yapılır: Tüm Windows Formları için Kılavuz Seçeneklerini Ayarlama"
-ms.custom: 
+title: 'Nasıl yapılır: Tüm Windows Formları için Kılavuz Seçeneklerini Ayarlama'
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-winforms
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-winforms
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - snap to grid [Windows Forms], Windows Forms Designer
@@ -15,19 +16,20 @@ helpviewer_keywords:
 - Windows Forms, grid options in designer
 - Windows Forms Designer
 ms.assetid: 36967466-1dfd-4fae-a7f1-7bf2cbc94048
-caps.latest.revision: "10"
+caps.latest.revision: 10
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: f4b77f77490ce3229cd2f05f2a8824f2c4784bcd
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.workload:
+- dotnet
+ms.openlocfilehash: 67f59c76066e5ff1688d39a7bf5e349d00262bc3
+ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="how-to-set-grid-options-for-all-windows-forms"></a>Nasıl yapılır: Tüm Windows Formları için Kılavuz Seçeneklerini Ayarlama
-Çalışma için kullanılan hale [!INCLUDE[vsprvs](../../../../includes/vsprvs-md.md)] geliştirme ortamı, formlar ve projeleri ile çalışmak için Tercihler Windows Forms Tasarımcısı'nda ayarlayabilirsiniz.  
+Visual Studio geliştirme ortamında çalışmaya kullanılan hale olarak Windows Forms Tasarımcısı'nda tüm formlar ve projeleri ile çalışmak için tercihleri ayarlayabilirsiniz.  
   
 > [!NOTE]
 >  Gördüğünüz iletişim kutuları ve menü komutları, etkin ayarlarınıza ve ürün sürümüne bağlı olarak Yardım menüsünde açıklanana göre farklılık gösterebilir. Ayarlarınızı değiştirmek için tercih **içeri ve dışarı aktarma ayarları** üzerinde **Araçları** menüsü. Daha fazla bilgi için bkz: [Visual Studio'da geliştirme ayarlarını özelleştirme](http://msdn.microsoft.com/library/22c4debb-4e31-47a8-8f19-16f328d7dcd3).  

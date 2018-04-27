@@ -1,12 +1,13 @@
 ---
-title: "XAML'ye Genel Bakış (WPF)"
-ms.custom: 
+title: XAML'ye Genel Bakış (WPF)
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-wpf
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-wpf
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - csharp
@@ -26,16 +27,17 @@ helpviewer_keywords:
 - Extensible Application Markup Language (see XAML)
 - attribute syntax [XAML]
 ms.assetid: a80db4cd-dd0f-479f-a45f-3740017c22e4
-caps.latest.revision: "57"
+caps.latest.revision: 57
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: ce83713d2483320569bde0d5c9a677f0b357ebf2
-ms.sourcegitcommit: c3ebb11a66e85a465c9ba2c42592222630b7ff9e
+ms.workload:
+- dotnet
+ms.openlocfilehash: 87785d6bba58442a1a5ad27f5304aa63e16c1aa9
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="xaml-overview-wpf"></a>XAML'ye Genel Bakış (WPF)
 Bu konu, XAML dili özelliklerini açıklar ve yazmak için XAML nasıl kullanabileceğinizi gösterir [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] uygulamalar. Bu konuda özellikle tarafından uygulanan XAML açıklanmaktadır [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]. XAML kendisini olduğu daha büyük bir dil kavram [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)].  
@@ -146,7 +148,7 @@ Bu konu, XAML dili özelliklerini açıklar ve yazmak için XAML nasıl kullanab
   
  Burada, her <xref:System.Windows.Controls.Button> bir alt öğesi olan <xref:System.Windows.Controls.StackPanel>. İki farklı nedenlerle iki etiket atlar kolay ve sezgisel bir işaretleme budur.  
   
--   **Atlanan StackPanel.Children özellik öğesi:** <xref:System.Windows.Controls.StackPanel> türetilen <xref:System.Windows.Controls.Panel>. <xref:System.Windows.Controls.Panel>tanımlar <xref:System.Windows.Controls.Panel.Children%2A?displayProperty=nameWithType> kendi XAML içerik özelliği.  
+-   **Atlanan StackPanel.Children özellik öğesi:** <xref:System.Windows.Controls.StackPanel> türetilen <xref:System.Windows.Controls.Panel>. <xref:System.Windows.Controls.Panel> tanımlar <xref:System.Windows.Controls.Panel.Children%2A?displayProperty=nameWithType> kendi XAML içerik özelliği.  
   
 -   **Atlanan UIElementCollection object öğesi:** <xref:System.Windows.Controls.Panel.Children%2A?displayProperty=nameWithType> özelliği alır türü <xref:System.Windows.Controls.UIElementCollection>, hangi uygular <xref:System.Collections.IList>. Koleksiyonları gibi işlemek için XAML kurallar temel alınarak koleksiyonun öğe etiketi atlanabilir <xref:System.Collections.IList>. (Bu durumda, <xref:System.Windows.Controls.UIElementCollection> gerçekten varsayılan bir oluşturucu kullanıma sunmuyor ve nedeni başlatılamaz <xref:System.Windows.Controls.UIElementCollection> object öğesi çıkışı açıklamalı gösterilmiştir).  
   
@@ -192,7 +194,7 @@ Bu konu, XAML dili özelliklerini açıklar ve yazmak için XAML nasıl kullanab
 ## <a name="type-converters"></a>Tür dönüştürücüleri  
  İçinde [kısa XAML sözdiziminde](../../../../docs/framework/wpf/advanced/xaml-overview-wpf.md#xaml_syntax_in_brief) bölümünde, öznitelik değeri bir dize ayarlanması için belirtilmiştir. Dizeleri diğer nesne türleri veya ilkel değerler nasıl dönüştürülür, temel, yerel işleme dayalı <xref:System.String> kendisini yazın, ayrıca yerel belirli işleme türleri gibi <xref:System.DateTime> veya <xref:System.Uri>. Ancak birçok [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] türleri veya bu türlerde üyeleri genişletmek davranışı, daha karmaşık nesne türlerini örneklerini dizeler ve öznitelikleri belirtilebilir şekilde işleme temel dize özniteliği.  
   
- <xref:System.Windows.Thickness> Yapısı için XAML kullanımları etkin bir tür dönüştürme türün bir örneği verilmiştir. <xref:System.Windows.Thickness>içinde yuvalanmış dikdörtgene ölçümleri gösterir ve değeri olarak gibi özellikler için kullanılan <xref:System.Windows.FrameworkElement.Margin%2A>. Tür dönüştürücüsünü yerleştirerek tarafından <xref:System.Windows.Thickness>, kullanan tüm özellikleri bir <xref:System.Windows.Thickness> öznitelik olarak belirtilen çünkü XAML'de belirtmek daha kolay olur. Aşağıdaki örnek için bir değer sağlamak için bir tür dönüştürme ve öznitelik sözdizimi kullanır bir <xref:System.Windows.FrameworkElement.Margin%2A>:  
+ <xref:System.Windows.Thickness> Yapısı için XAML kullanımları etkin bir tür dönüştürme türün bir örneği verilmiştir. <xref:System.Windows.Thickness> içinde yuvalanmış dikdörtgene ölçümleri gösterir ve değeri olarak gibi özellikler için kullanılan <xref:System.Windows.FrameworkElement.Margin%2A>. Tür dönüştürücüsünü yerleştirerek tarafından <xref:System.Windows.Thickness>, kullanan tüm özellikleri bir <xref:System.Windows.Thickness> öznitelik olarak belirtilen çünkü XAML'de belirtmek daha kolay olur. Aşağıdaki örnek için bir değer sağlamak için bir tür dönüştürme ve öznitelik sözdizimi kullanır bir <xref:System.Windows.FrameworkElement.Margin%2A>:  
   
  [!code-xaml[XAMLOvwSupport#MarginTCE](../../../../samples/snippets/csharp/VS_Snippets_Wpf/XAMLOvwSupport/CSharp/page7.xaml#margintce)]  
   
@@ -216,14 +218,14 @@ Bu konu, XAML dili özelliklerini açıklar ve yazmak için XAML nasıl kullanab
   
  Bu kullanımı `xmlns` kullanım ve bir isim alanı eşlemesi için kapsamını tanımlamak için XML 1.0 belirtimi ile tutarlıdır. XAML ad kapsamları, yalnızca XAML isim alanı de tür çözümleme ve XAML ayrıştırma geldiğinde isim alanı'nın öğeleri türlerine göre nasıl yedeklenen hakkında bir şey anlamına gelir, XML ad kapsamları farklıdır.  
   
- Unutmayın `xmlns` öznitelikleridir yalnızca her XAML dosyasının kök öğesinin kesinlikle gerekli. `xmlns`tanımları kök öğesinin tüm alt öğelerine uygulanır (Bu davranış yeniden XML 1.0 belirtimi için tutarlı `xmlns`.) `xmlns` öznitelikler de diğer öğeleri kök altında izin verilen ve tanımlama öğesinin alt herhangi bir öğenin geçerli olur. Ancak, sık tanımı veya XAML ad uzayları şemadaki okunması zor olan bir XAML biçimlendirme stili neden olabilir.  
+ Unutmayın `xmlns` öznitelikleridir yalnızca her XAML dosyasının kök öğesinin kesinlikle gerekli. `xmlns` tanımları kök öğesinin tüm alt öğelerine uygulanır (Bu davranış yeniden XML 1.0 belirtimi için tutarlı `xmlns`.) `xmlns` öznitelikler de diğer öğeleri kök altında izin verilen ve tanımlama öğesinin alt herhangi bir öğenin geçerli olur. Ancak, sık tanımı veya XAML ad uzayları şemadaki okunması zor olan bir XAML biçimlendirme stili neden olabilir.  
   
  [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] XAML işlemcisinin uygulaması WPF çekirdek derlemelerin tanıma sahip bir altyapı içerir. [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] Çekirdek derlemeler bilinen destekleyen türler içerecek şekilde [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] varsayılan XAML ad uzayı eşlemeleri. Bu proje yapınızın parçası olan yapılandırma aracılığıyla etkinleştirilir dosya ve WPF derleme ve proje sistemleri. Bu nedenle, varsayılan olarak varsayılan XAML ad uzayı bildirme `xmlns` alınması XAML öğeleri başvurmak için gerekli olan tüm [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] derlemeler.  
   
 ### <a name="the-x-prefix"></a>Önek x:  
  Önceki örnekte kök öğesi, önek `x:` XAML ad uzayı eşlemek için kullanılan [!INCLUDE[TLA#tla_xamlxmlnsv1](../../../../includes/tlasharptla-xamlxmlnsv1-md.md)], XAML dili destekleyen ayrılmış XAML ad uzayı olduğu oluşturur. Bu `x:` önek bu XAML ad uzayı projeleri için şablonlar, örnekler ve bu belgelerinde eşlemek için kullanılan [!INCLUDE[TLA2#tla_sdk](../../../../includes/tla2sharptla-sdk-md.md)]. XAML dili için XAML ad alanı, XAML'de çok sık kullanacağınız çeşitli programlama yapılarını içerir. En yaygın bir listesi aşağıda verilmiştir `x:` kullanacağınız programlama yapıları öneki:  
   
--   [x: Key](../../../../docs/framework/xaml-services/x-key-directive.md): her kaynak için benzersiz bir anahtar ayarlar bir <xref:System.Windows.ResourceDictionary> (veya diğer çerçeveler benzer sözlük kavramlar). `x:Key`büyük olasılıkla % 90'ını hesabı olacak `x:` kullanımları bir tipik WPF uygulamanın biçimlendirmede görürsünüz.  
+-   [x: Key](../../../../docs/framework/xaml-services/x-key-directive.md): her kaynak için benzersiz bir anahtar ayarlar bir <xref:System.Windows.ResourceDictionary> (veya diğer çerçeveler benzer sözlük kavramlar). `x:Key` büyük olasılıkla % 90'ını hesabı olacak `x:` kullanımları bir tipik WPF uygulamanın biçimlendirmede görürsünüz.  
   
 -   [x: Class](../../../../docs/framework/xaml-services/x-class-directive.md): belirtir [!INCLUDE[TLA2#tla_clr](../../../../includes/tla2sharptla-clr-md.md)] XAML sayfası için arka plan kodu sağlayan sınıf için ad alanını ve sınıf adı. Arka plan kodu WPF programlama modeli başına desteklemek için sınıf olması gerekir ve bu nedenle, neredeyse her zaman görürsünüz `x:` hiçbir kaynak olsa bile, eşlenmiş.  
   
@@ -260,7 +262,7 @@ Bu konu, XAML dili özelliklerini açıklar ve yazmak için XAML nasıl kullanab
   
 <a name="events_and_xaml_codebehind"></a>   
 ## <a name="events-and-xaml-code-behind"></a>Olaylar ve XAML arka plan kodu  
- Çoğu [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] XAML biçimlendirme ve arka plan kodu uygulamaları oluşur. Bir projede XAML olarak yazılmış bir `.xaml` dosyası ve bir [!INCLUDE[TLA2#tla_clr](../../../../includes/tla2sharptla-clr-md.md)] dili gibi [!INCLUDE[TLA#tla_visualb](../../../../includes/tlasharptla-visualb-md.md)] veya [!INCLUDE[TLA#tla_cshrp](../../../../includes/tlasharptla-cshrp-md.md)] bir arka plan kodu dosya yazmak için kullanılır. XAML dosyası WPF programlama ve uygulama modelleri bir parçası olarak derlenmiş biçimlendirme, XAML arka plan kod konumunu bir ad alanı belirterek XAML dosyası tanımlanan dosya ve olarak sınıf `x:Class` XAML kök öğesinin özniteliği.  
+ Çoğu [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] XAML biçimlendirme ve arka plan kodu uygulamaları oluşur. Bir projede XAML olarak yazılmış bir `.xaml` dosyası ve bir [!INCLUDE[TLA2#tla_clr](../../../../includes/tla2sharptla-clr-md.md)] dil Microsoft Visual Basic veya C# gibi bir arka plan kod dosyasına yazma için kullanılır. XAML dosyası WPF programlama ve uygulama modelleri bir parçası olarak derlenmiş biçimlendirme, XAML arka plan kod konumunu bir ad alanı belirterek XAML dosyası tanımlanan dosya ve olarak sınıf `x:Class` XAML kök öğesinin özniteliği.  
   
  Örneklerde şu ana kadar birçok düğme gördünüz, ancak bu düğmeleri hiçbiri henüz ilişkili tüm mantıksal davranışını vardı. Bir nesne öğesi için bir davranış eklemek için birincil uygulama düzeyi var olan bir olaya öğesi sınıfının kullanın ve çalışma zamanında olay ortaya çıktığında çağrılan bu olay için belirli bir işleyicinin yazmak için mekanizmadır. İşleyicinizi uygulayan kod kod arkasında tanımlandı ancak olay adı ve kullanılacak işleyicisi adı biçimlendirmede belirtilir.  
   
@@ -314,13 +316,13 @@ Bu konu, XAML dili özelliklerini açıklar ve yazmak için XAML nasıl kullanab
   
 <a name="base_classes_and_xaml"></a>   
 ## <a name="base-types-and-xaml"></a>Taban türleri ve XAML  
- Temel alınan WPF XAML ve onun XAML ad uzayı koleksiyonudur karşılık türleri [!INCLUDE[TLA2#tla_clr](../../../../includes/tla2sharptla-clr-md.md)] nesneleri için XAML biçimlendirme öğeleri yanı sıra. Ancak, tüm sınıflar öğelerine eşlenebilir. Soyut sınıflar, gibi <xref:System.Windows.Controls.Primitives.ButtonBase>, ve belirli soyut taban sınıfları devralma için kullanılan [!INCLUDE[TLA2#tla_clr](../../../../includes/tla2sharptla-clr-md.md)] nesne modeli. Somut XAML öğelerin her biri kendi hiyerarşideki bazı temel sınıfından üyeleri devralındığından soyut olanlar da dahil olmak üzere temel sınıflar XAML geliştirme için hala önemlidir. Genellikle bu üyeleri olarak öznitelikleri öğede ayarlanabilir özellikleri veya işlenebilir olayları içerir. <xref:System.Windows.FrameworkElement>somut temeli [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] sınıfının [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] WPF framework düzeyinde. Tasarlarken [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)]kullanacağı çeşitli şekil, paneli, oluşturma öğesi veya denetim sınıfları, tüm türetilen <xref:System.Windows.FrameworkElement>. İlgili bir temel sınıf <xref:System.Windows.FrameworkContentElement>, iyi bir akış düzeni sunumu için iş belge yönelimli öğeleri destekler kullanarak [!INCLUDE[TLA2#tla_api#plural](../../../../includes/tla2sharptla-apisharpplural-md.md)] , kasıtlı olarak yansıtmak [!INCLUDE[TLA2#tla_api#plural](../../../../includes/tla2sharptla-apisharpplural-md.md)] içinde <xref:System.Windows.FrameworkElement>. Öğe düzeyinde özniteliklerinin birleşimi ve [!INCLUDE[TLA2#tla_clr](../../../../includes/tla2sharptla-clr-md.md)] nesne modeli belirli XAML öğesi ve temel alınan türü ne olursa olsun en somut XAML öğelerde ayarlanabilir ortak özellikler kümesi ile sağlar.  
+ Temel alınan WPF XAML ve onun XAML ad uzayı koleksiyonudur karşılık türleri [!INCLUDE[TLA2#tla_clr](../../../../includes/tla2sharptla-clr-md.md)] nesneleri için XAML biçimlendirme öğeleri yanı sıra. Ancak, tüm sınıflar öğelerine eşlenebilir. Soyut sınıflar, gibi <xref:System.Windows.Controls.Primitives.ButtonBase>, ve belirli soyut taban sınıfları devralma için kullanılan [!INCLUDE[TLA2#tla_clr](../../../../includes/tla2sharptla-clr-md.md)] nesne modeli. Somut XAML öğelerin her biri kendi hiyerarşideki bazı temel sınıfından üyeleri devralındığından soyut olanlar da dahil olmak üzere temel sınıflar XAML geliştirme için hala önemlidir. Genellikle bu üyeleri olarak öznitelikleri öğede ayarlanabilir özellikleri veya işlenebilir olayları içerir. <xref:System.Windows.FrameworkElement> somut temeli [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] sınıfının [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] WPF framework düzeyinde. Tasarlarken [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)]kullanacağı çeşitli şekil, paneli, oluşturma öğesi veya denetim sınıfları, tüm türetilen <xref:System.Windows.FrameworkElement>. İlgili bir temel sınıf <xref:System.Windows.FrameworkContentElement>, iyi bir akış düzeni sunumu için iş belge yönelimli öğeleri destekler kullanarak [!INCLUDE[TLA2#tla_api#plural](../../../../includes/tla2sharptla-apisharpplural-md.md)] , kasıtlı olarak yansıtmak [!INCLUDE[TLA2#tla_api#plural](../../../../includes/tla2sharptla-apisharpplural-md.md)] içinde <xref:System.Windows.FrameworkElement>. Öğe düzeyinde özniteliklerinin birleşimi ve [!INCLUDE[TLA2#tla_clr](../../../../includes/tla2sharptla-clr-md.md)] nesne modeli belirli XAML öğesi ve temel alınan türü ne olursa olsun en somut XAML öğelerde ayarlanabilir ortak özellikler kümesi ile sağlar.  
   
 <a name="xaml_security"></a>   
 ## <a name="xaml-security"></a>XAML güvenliği  
  XAML doğrudan nesne örnek oluşturma ve yürütme temsil eden bir biçimlendirme dilidir. Bu nedenle, XAML'de oluşturulan öğeleri aynı oluşturulan eşdeğer olarak (ağ erişimi, dosya sistemi g/ç, örneğin) sistem kaynakları ile etkileşim olanağına sahip kodu yapar.  
   
- [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]destekleyen [!INCLUDE[net_v40_short](../../../../includes/net-v40-short-md.md)] güvenlik framework [!INCLUDE[TLA#tla_cas](../../../../includes/tlasharptla-cas-md.md)]. Bunun anlamı [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] Internet bölgesinde çalışan içeriği yürütme izinleri daha az. "Esnek XAML'i" (derlenmemiş XAML sayfaları yorumlanan yükleme zamanında bir XAML İzleyici tarafından) ve [!INCLUDE[TLA#tla_xbap](../../../../includes/tlasharptla-xbap-md.md)] bu Internet bölgesinde genellikle çalıştırılır ve aynı izin kümesi kullanın.  Ancak, barındırma uygulama olduğu gibi tam güvenilen bir uygulamaya yüklenmiş XAML sistem kaynaklarına aynı erişimi vardır. Daha fazla bilgi için bkz: [WPF kısmi güven güvenlik](../../../../docs/framework/wpf/wpf-partial-trust-security.md).  
+ [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] destekleyen [!INCLUDE[net_v40_short](../../../../includes/net-v40-short-md.md)] güvenlik framework [!INCLUDE[TLA#tla_cas](../../../../includes/tlasharptla-cas-md.md)]. Bunun anlamı [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] Internet bölgesinde çalışan içeriği yürütme izinleri daha az. "Esnek XAML'i" (derlenmemiş XAML sayfaları yorumlanan yükleme zamanında bir XAML İzleyici tarafından) ve [!INCLUDE[TLA#tla_xbap](../../../../includes/tlasharptla-xbap-md.md)] bu Internet bölgesinde genellikle çalıştırılır ve aynı izin kümesi kullanın.  Ancak, barındırma uygulama olduğu gibi tam güvenilen bir uygulamaya yüklenmiş XAML sistem kaynaklarına aynı erişimi vardır. Daha fazla bilgi için bkz: [WPF kısmi güven güvenlik](../../../../docs/framework/wpf/wpf-partial-trust-security.md).  
   
 <a name="loading_xaml_from_code"></a>   
 ## <a name="loading-xaml-from-code"></a>XAML koddan yükleniyor  
@@ -332,7 +334,7 @@ Bu konu, XAML dili özelliklerini açıklar ve yazmak için XAML nasıl kullanab
   
  Zaten bu yapmadıysanız, öğretici konu alıştırmalarda deneyin [gözden geçirme: ilk WPF Masaüstü Uygulamam](../../../../docs/framework/wpf/getting-started/walkthrough-my-first-wpf-desktop-application.md). Öğreticisi tarafından açıklanan biçimlendirme merkezli uygulama oluşturduğunuzda, bu konuda açıklanan kavramları çoğunu pekiştirmek alıştırma yardımcı olur.  
   
- [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]temel alan belirli uygulama modelini kullanan <xref:System.Windows.Application> sınıfı. Ayrıntılar için bkz [uygulama yönetimine genel bakış](../../../../docs/framework/wpf/app-development/application-management-overview.md).  
+ [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] temel alan belirli uygulama modelini kullanan <xref:System.Windows.Application> sınıfı. Ayrıntılar için bkz [uygulama yönetimine genel bakış](../../../../docs/framework/wpf/app-development/application-management-overview.md).  
   
  [WPF uygulaması oluşturma](../../../../docs/framework/wpf/app-development/building-a-wpf-application-wpf.md) XAML dahil uygulamaların komut satırından ve ile nasıl yapılandırıldığı hakkında daha fazla ayrıntı sağlar [!INCLUDE[TLA#tla_visualstu](../../../../includes/tlasharptla-visualstu-md.md)].  
   

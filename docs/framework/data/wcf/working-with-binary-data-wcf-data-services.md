@@ -1,12 +1,13 @@
 ---
-title: "İkili veriler (WCF Veri Hizmetleri) ile çalışma"
-ms.custom: 
+title: İkili veriler (WCF Veri Hizmetleri) ile çalışma
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework-oob
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - csharp
@@ -15,16 +16,17 @@ helpviewer_keywords:
 - WCF Data Services, binary data
 - WCF Data Services, streams
 ms.assetid: aeccc45c-d5c5-4671-ad63-a492ac8043ac
-caps.latest.revision: "7"
+caps.latest.revision: 7
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: e02a98a327947e32acd42ccf79d922f5dff6fb6c
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 99143200b8135d5737454de325a95399c62fd506
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="working-with-binary-data-wcf-data-services"></a>İkili veriler (WCF Veri Hizmetleri) ile çalışma
 [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] İstemci kitaplığı almak ve ikili verileri güncelleştirmek sağlayan bir [!INCLUDE[ssODataFull](../../../../includes/ssodatafull-md.md)] aşağıdaki yollardan biriyle akış:  
@@ -33,10 +35,10 @@ ms.lasthandoff: 12/22/2017
   
 -   Ayrı ikili kaynak akış olarak. Bu, erişmek ve fotoğraf, video veya başka türde bir ikili kodlanmış verileri gösterebilir ikili büyük nesne (BLOB) verileri değiştirme önerilen yöntemdir.  
   
- [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)]' da tanımlandığı gibi HTTP kullanarak ikili veri akışı uygulayan [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)]. Bu mekanizma, ikili veri ayrıdır bir medya kaynağı olarak kabul ancak ilgili medya bağlantısı girişi olarak adlandırılan bir varlık için. Daha fazla bilgi için bkz: [Akış sağlayıcısı](../../../../docs/framework/data/wcf/streaming-provider-wcf-data-services.md).  
+ [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] ' da tanımlandığı gibi HTTP kullanarak ikili veri akışı uygulayan [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)]. Bu mekanizma, ikili veri ayrıdır bir medya kaynağı olarak kabul ancak ilgili medya bağlantısı girişi olarak adlandırılan bir varlık için. Daha fazla bilgi için bkz: [Akış sağlayıcısı](../../../../docs/framework/data/wcf/streaming-provider-wcf-data-services.md).  
   
 > [!TIP]
->  Nasıl oluşturulacağı hakkında adım adım bir örneği için bir [!INCLUDE[avalon1](../../../../includes/avalon1-md.md)] ikili resim dosyalarını indirir istemci uygulaması bir [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] fotoğrafları, depolayan hizmeti Bkz post [Veri Hizmetleri Akış sağlayıcısı serisi bölüm 2: bir ortama erişme Kaynak akışı istemciden](http://go.microsoft.com/fwlink/?LinkId=201637). Blog postasına öne çıkan akış fotoğraf veri hizmeti için örnek kod indirmek için bkz: [akış fotoğraf veri hizmeti örnek](http://go.microsoft.com/fwlink/?LinkId=198988) MSDN kod Galerisi'nden içinde.  
+>  İkili resim dosyalarını indirir bir Windows Presentation Foundation (WPF) istemci uygulamasının nasıl oluşturulacağını gösteren adım adım örnek bir [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] fotoğrafları, depolayan hizmeti Bkz post [Veri Hizmetleri Akış sağlayıcısı serisi-bölümü 2: bir medya kaynak akışı istemciden erişme](http://go.microsoft.com/fwlink/?LinkId=201637). Blog postasına öne çıkan akış fotoğraf veri hizmeti için örnek kod indirmek için bkz: [akış fotoğraf veri hizmeti örnek](http://go.microsoft.com/fwlink/?LinkId=198988) MSDN kod Galerisi'nden içinde.  
   
 ## <a name="entity-metadata"></a>Varlık meta verileri  
  İlgili medya kaynak akışı sahip bir varlık veri hizmeti meta verilerini tarafından belirtilen `HasStream` medya bağlantısı girişinin bir varlık türü için uygulanan öznitelik. Aşağıdaki örnekte, `PhotoInfo` varlıktır belirttiği bir ilgili medya kaynağı olan medya bağlantı girdisini `HasStream` özniteliği.  
@@ -49,7 +51,7 @@ ms.lasthandoff: 12/22/2017
  [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] İstemci kitaplığı ikili kaynak akışlardan erişmek için yöntemler sağlayan bir [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)]-tabanlı veri hizmeti. Ne zaman bir medya kaynağı indirme, medya kaynağı URI'sini ya da kullanabilir veya, bir ikili akış elde edebilirsiniz medya kaynak verilerini kendisini içerir. Ayrıca, ikili akış olarak medya kaynak verilerini karşıya yükleyebilir.  
   
 > [!TIP]
->  Nasıl oluşturulacağı hakkında adım adım bir örneği için bir [!INCLUDE[avalon1](../../../../includes/avalon1-md.md)] ikili resim dosyalarını indirir istemci uygulaması bir [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] fotoğrafları, depolayan hizmeti Bkz post [Veri Hizmetleri Akış sağlayıcısı serisi bölüm 2: bir ortama erişme Kaynak akışı istemciden](http://go.microsoft.com/fwlink/?LinkId=201637). Blog postasına öne çıkan akış fotoğraf veri hizmeti için örnek kod indirmek için bkz: [akış fotoğraf veri hizmeti örnek](http://go.microsoft.com/fwlink/?LinkId=198988) MSDN kod Galerisi'nden içinde.  
+>  İkili resim dosyalarını indirir bir Windows Presentation Foundation (WPF) istemci uygulamasının nasıl oluşturulacağını gösteren adım adım örnek bir [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] fotoğrafları, depolayan hizmeti Bkz post [Veri Hizmetleri Akış sağlayıcısı serisi-bölümü 2: bir medya kaynak akışı istemciden erişme](http://go.microsoft.com/fwlink/?LinkId=201637). Blog postasına öne çıkan akış fotoğraf veri hizmeti için örnek kod indirmek için bkz: [akış fotoğraf veri hizmeti örnek](http://go.microsoft.com/fwlink/?LinkId=198988) MSDN kod Galerisi'nden içinde.  
   
 ### <a name="getting-the-uri-of-the-binary-stream"></a>İkili akışın URI'sini alma  
  Belirli türde bir ortam kaynakları, resimleri ve diğer medya dosyaları gibi alınırken çoğu medya kaynağı URI'sini ikili veri akışı işleme daha, uygulamanızda kullanmak kolaydır. Bir medya bağlantısı girişle ile ilişkili bir kaynak akışı URI'sini almak için çağırmalısınız <xref:System.Data.Services.Client.DataServiceContext.GetReadStreamUri%2A> yöntemi <xref:System.Data.Services.Client.DataServiceContext> varlık izleme örneği. Aşağıdaki örnekte nasıl çağrılacağını gösterir <xref:System.Data.Services.Client.DataServiceContext.GetReadStreamUri%2A> istemci üzerinde yeni bir görüntü oluşturmak için kullanılan bir medya kaynak akışı URI'sini almak için yöntemi:  

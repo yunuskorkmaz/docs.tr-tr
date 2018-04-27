@@ -1,29 +1,31 @@
 ---
-title: "ADO.NET veri kümeleri"
-ms.custom: 
+title: ADO.NET veri kümeleri
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-ado
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-ado
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 82b641bb-6001-4512-bf1a-2830acdd92ab
-caps.latest.revision: "6"
+caps.latest.revision: 6
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.workload: dotnet
-ms.openlocfilehash: b9d566f99802ea80ae73132579bb3068b1ff3b28
-ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
+ms.workload:
+- dotnet
+ms.openlocfilehash: 9458206ea7edfeba61f9805c2b601d6aa9198256
+ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="adonet-datasets"></a>ADO.NET veri kümeleri
 <xref:System.Data.DataSet> Dağıtılmış veri senaryoları ile bağlantısı kesildi, Destek Merkezi nesnesidir [!INCLUDE[vstecado](../../../../includes/vstecado-md.md)]. **DataSet** bir veri kaynağı bağımsız olarak tutarlı bir ilişkisel programlama modeli sağlar veri bellekte gösterimidir. Birden fazla ile kullanılabilir ve farklı veri kaynakları, XML verileriyle ya da uygulamaya yerel verileri yönetmek için. **DataSet** ilişkili tabloları, kısıtlamalar ve tablolar arasında ilişkiler gibi veriler, eksiksiz bir kümesini temsil eder. Aşağıdaki çizimde gösterildiği **DataSet** nesne modeli.  
   
- ![ADO.Net graphic](../../../../docs/framework/data/adonet/media/ado-1-bpuedev11.png "ado_1_bpuedev11")  
+ ![ADO.Net grafiği](../../../../docs/framework/data/adonet/media/ado-1-bpuedev11.png "ado_1_bpuedev11")  
 Veri kümesi nesne modeli  
   
  Nesneler ve yöntemler bir **DataSet** ilişkisel veritabanı modeli de tutarlıdır.  
@@ -48,11 +50,11 @@ Veri kümesi nesne modeli
 ## <a name="xml"></a>XML  
  Doldurmak için bir **DataSet** bir XML akışı veya belge. XML akışı veya belge için sağlamak için kullanabileceğiniz **DataSet** verileri, şema bilgileri veya her ikisi de. Varolan veriler veya şema bilgileri zaten var XML akışı veya belge sağlanan bilgileri birleştirilebilir **DataSet**. Daha fazla bilgi için bkz: [XML kullanarak bir veri kümesinde](../../../../docs/framework/data/adonet/dataset-datatable-dataview/using-xml-in-a-dataset.md).  
   
-## <a name="extendedproperties"></a>ExtendedProperties  
+## <a name="extendedproperties"></a>extendedProperties  
  **DataSet**, **DataTable**, ve **DataColumn** tümüne sahip bir **ExtendedProperties** özelliği. **ExtendedProperties** olan bir **PropertyCollection** burada yerleştirebileceğiniz sonuç kümesi oluşturmak için kullanılan SELECT deyimi veya verilerin ne zaman oluşturulduğu saat gibi özel bilgiler. **ExtendedProperties** koleksiyonu için şema bilgileri olarak kalıcı **DataSet**.  
   
 ## <a name="linq-to-dataset"></a>LINQ - DataSet  
- [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)]bir veri kümesinde depolanan bağlantısı kesilen veriler için dil ile tümleşik sorgulama özellikleri sağlar. [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)]Standart kullanan [!INCLUDE[vbteclinq](../../../../includes/vbteclinq-md.md)] sözdizimi ve kullanırken derleme zamanı sözdizimi denetimi ve statik yazarak IntelliSense desteği sağlar ve [!INCLUDE[vsprvs](../../../../includes/vsprvs-md.md)] IDE.  
+ [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)] bir veri kümesinde depolanan bağlantısı kesilen veriler için dil ile tümleşik sorgulama özellikleri sağlar. [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)] Standart kullanan [!INCLUDE[vbteclinq](../../../../includes/vbteclinq-md.md)] sözdizimi ve Visual Studio IDE kullanılırken derleme zamanı sözdizimi denetimi, statik yazarak ve IntelliSense desteği sağlar.  
   
  Daha fazla bilgi için bkz: [LINQ-DataSet](../../../../docs/framework/data/adonet/linq-to-dataset.md).  
   

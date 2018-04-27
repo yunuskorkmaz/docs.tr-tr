@@ -1,6 +1,6 @@
 ---
-title: "Yöntemler - C# Kılavuzu"
-description: "Yöntem, yöntem parametreleri ve dönüş değerleri yöntemi genel bakış"
+title: Yöntemler - C# Kılavuzu
+description: Yöntem, yöntem parametreleri ve dönüş değerleri yöntemi genel bakış
 keywords: .NET, .NET Core, C#
 author: rpetrusha
 ms.author: ronpet
@@ -10,11 +10,11 @@ ms.prod: .net
 ms.technology: devlang-csharp
 ms.devlang: csharp
 ms.assetid: 577a8527-1081-4b36-9b9e-0685b6553c6e
-ms.openlocfilehash: 48127d5168ace7733f29f78dc3f72d9c0d051e4e
-ms.sourcegitcommit: 83dd5ec003e788ccb3e33f3412a7af39ae347646
+ms.openlocfilehash: 526cd6d269c7c089f6547fcf243b43e411037d13
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/15/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="methods"></a>Yöntemler #
 
@@ -263,7 +263,7 @@ Bir yöntem ile işaretlerseniz [zaman uyumsuz](language-reference/keywords/asyn
 > [!NOTE]
 > Bir zaman uyumsuz yöntem henüz tamamlanmadı ilk awaited nesne bulduğu veya zaman uyumsuz yönteminin sonuna alır çağırana döndürür hangisi önce gerçekleşir.
 
-Zaman uyumsuz yöntem dönüş türüne sahip olabilir <xref:System.Threading.Tasks.Task%601>, <xref:System.Threading.Tasks.Task>, veya `void`. `void` Türü öncelikle olay işleyicileri tanımlamak için kullanılan dönüş burada bir `void` dönüş türü gerekli. Döndüren bir zaman uyumsuz yöntem `void` beklemenin olamaz, ve void döndüren bir yöntem arayan yöntemi atar özel durumlarını yakalama olamaz. C# yayımlandığında, 7, bir zaman uyumsuz yöntem izin vermek için bu kısıtlama kolaylaştırır [herhangi bir görev benzeri türü döndürülecek](https://github.com/ljw1004/roslyn/blob/features/async-return/docs/specs/feature%20-%20arbitrary%20async%20returns.md).
+Zaman uyumsuz yöntem dönüş türüne sahip olabilir <xref:System.Threading.Tasks.Task%601>, <xref:System.Threading.Tasks.Task>, veya `void`. `void` Türü öncelikle olay işleyicileri tanımlamak için kullanılan dönüş burada bir `void` dönüş türü gerekli. Döndüren bir zaman uyumsuz yöntem `void` beklemenin olamaz, ve void döndüren bir yöntem arayan yöntemi atar özel durumlarını yakalama olamaz. C# yayımlandığında, 7.0, bir zaman uyumsuz yöntem izin vermek için bu kısıtlama kolaylaştırır [herhangi bir görev benzeri türü döndürülecek](https://github.com/ljw1004/roslyn/blob/features/async-return/docs/specs/feature%20-%20arbitrary%20async%20returns.md).
 
 Aşağıdaki örnekte, `DelayAsync` bir tamsayı döndürür bir dönüş ifadesi olan bir zaman uyumsuz bir yöntemdir. Bir zaman uyumsuz yöntem olduğu için yöntemi bildiriminden dönüş türüne sahip olmalıdır `Task<int>`. Dönüş türü olduğundan `Task<int>`, değerlendirmesi `await` ifadesinde `DoSomethingAsync` aşağıdaki gibi bir tamsayı üreten `int result = await delayTask` deyimini gösterir.
 

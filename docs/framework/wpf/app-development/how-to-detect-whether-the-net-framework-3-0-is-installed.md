@@ -20,21 +20,21 @@ ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: 48295a187870340948b045a64b852f1e6fdc1a65
-ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
+ms.openlocfilehash: dfa5eb8ec1e4f9f2eeeb142670b92d5ec35ab6cf
+ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="how-to-detect-whether-the-net-framework-30-is-installed"></a>Nasıl yapılır .NET Framework 3.0'ın Yüklü Olup Olmadığını Algılama
-Yöneticiler dağıtmadan önce [!INCLUDE[TLA#tla_avalonwinfx](../../../../includes/tlasharptla-avalonwinfx-md.md)] uygulamaları bir sistemde, bunlar ilk olduğunu onaylaması gerekir [!INCLUDE[TLA2#tla_avalonwinfx](../../../../includes/tla2sharptla-avalonwinfx-md.md)] çalışma zamanının. Bu konuda yazılmış bir betik sağlar, yöneticilerin belirlemek için kullanabilecekleri HTML/JavaScript içinde olup olmadığını [!INCLUDE[TLA2#tla_avalonwinfx](../../../../includes/tla2sharptla-avalonwinfx-md.md)] bir sistemde mevcut.  
+Yöneticiler bir sistemde Microsoft .NET Framework uygulamaları dağıtmadan önce ilk olarak, .NET Framework çalışma zamanının olduğunu onaylamanız gerekir. Bu konu, HTML/JavaScript yazılmış bir betik sağlar. Yöneticiler, .NET Framework bir sistemde yüklü olup olmadığını belirlemek için kullanabilirsiniz.  
   
 > [!NOTE]
 >  Yükleme hakkında daha ayrıntılı bilgi için dağıtma ve Microsoft .NET Framework algılama tartışmada bkz [dağıtma Microsoft .NET Framework sürüm 3.0](http://go.microsoft.com/fwlink/?LinkId=96739).  
   
 <a name="content_expiration"></a>   
 ## <a name="detect-the-net-clr-user-agent-string"></a>".NET CLR" kullanıcı aracısı dizesi algılama  
- Zaman [!INCLUDE[TLA2#tla_avalonwinfx](../../../../includes/tla2sharptla-avalonwinfx-md.md)] olan yüklü MSI ".NET CLR" ve sürüm numarasını UserAgent dizesi olarak ekler. Aşağıdaki örnekte basit bir HTML sayfasında yerleşik bir komut dosyası gösterilmektedir. Komut dosyası belirlemek için UserAgent dizesi arar olup olmadığını [!INCLUDE[TLA2#tla_avalonwinfx](../../../../includes/tla2sharptla-avalonwinfx-md.md)] yüklü olduğundan ve arama sonuçlarını durum iletisini görüntüler.  
+ .NET Framework yüklü olduğunda MSI ".NET CLR" ve sürüm numarasını UserAgent dizesi olarak ekler. Aşağıdaki örnekte basit bir HTML sayfasında yerleşik bir komut dosyası gösterilmektedir. Komut dosyası, .NET Framework yüklü ve arama sonuçlarını durum iletisini görüntüler olup olmadığını belirlemek için UserAgent dizesi arar.  
   
 ```  
 <HTML>  

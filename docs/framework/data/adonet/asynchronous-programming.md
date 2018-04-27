@@ -2,23 +2,25 @@
 title: Zaman uyumsuz programlama
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.technology: dotnet-ado
+ms.technology:
+- dotnet-ado
 ms.topic: article
 ms.assetid: 85da7447-7125-426e-aa5f-438a290d1f77
-caps.latest.revision: "30"
+caps.latest.revision: 30
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.workload: dotnet
-ms.openlocfilehash: 20e40a6705ad77dc42a70739e75abdbb058465e6
-ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
+ms.workload:
+- dotnet
+ms.openlocfilehash: 7dbc106b96e4e695108b6178951e3d43078467bc
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="asynchronous-programming"></a>Zaman uyumsuz programlama
 
-Bu konu içinde zaman uyumsuz programlama desteği anlatılmaktadır [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] için veri sağlayıcı [!INCLUDE[ssNoVersion](../../../../includes/ssnoversion-md.md)] (SqlClient) sürümünde sunulan zaman uyumsuz programlama işlevleri desteklemek için yapılan geliştirmeler dahil olmak üzere [!INCLUDE[net_v45](../../../../includes/net-v45-md.md)].  
+Bu konu içinde zaman uyumsuz programlama desteği anlatılmaktadır [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] için SQL Server (SqlClient) veri sunulmuştur zaman uyumsuz programlama işlevleri desteklemek için yapılan geliştirmeler dahil olmak üzere sağlayıcı [!INCLUDE[net_v45](../../../../includes/net-v45-md.md)].  
   
 ## <a name="legacy-asynchronous-programming"></a>Eski zaman uyumsuz programlama  
  Öncesinde [!INCLUDE[net_v45](../../../../includes/net-v45-md.md)], SqlClient ile zaman uyumsuz programlama aşağıdaki yöntemlerle yapıldı ve `Asynchronous Processing=true` bağlantı özelliği:  
@@ -33,7 +35,7 @@ Bu konu içinde zaman uyumsuz programlama desteği anlatılmaktadır [!INCLUDE[d
   
  ' Den başlayarak [!INCLUDE[net_v45](../../../../includes/net-v45-md.md)], bu yöntemleri artık gerek `Asynchronous Processing=true` bağlantı dizesinde.  
   
-## <a name="asynchronous-programming-features-added-in-includenetv45includesnet-v45-mdmd"></a>Eklenen zaman uyumsuz programlama Özellikler[!INCLUDE[net_v45](../../../../includes/net-v45-md.md)]  
+## <a name="asynchronous-programming-features-added-in-includenetv45includesnet-v45-mdmd"></a>Eklenen zaman uyumsuz programlama Özellikler [!INCLUDE[net_v45](../../../../includes/net-v45-md.md)]  
  Yeni zaman uyumsuz programlama özelliği Kodu'nu zaman uyumsuz için basit bir yöntem sağlar.  
   
  Sürümünde sunulan zaman uyumsuz programlama özelliği hakkında daha fazla bilgi için [!INCLUDE[net_v45](../../../../includes/net-v45-md.md)], bkz:  
@@ -637,7 +639,7 @@ namespace SqlBulkCopyAsyncCodeSample {
  Örnek tek bir bağlantı açar **AdventureWorks** veritabanı. Kullanarak bir <xref:System.Data.SqlClient.SqlCommand> nesne, bir <xref:System.Data.SqlClient.SqlDataReader> oluşturulur. Okuyucu kullanılır, ikinci olarak <xref:System.Data.SqlClient.SqlDataReader> , ilk verilerini kullanarak açıldığında <xref:System.Data.SqlClient.SqlDataReader> ikinci okuyucu WHERE yan tümcesi için giriş olarak.  
   
 > [!NOTE]
->  Aşağıdaki örnek, örnek kullanır **AdventureWorks** ile birlikte gelen veritabanı [!INCLUDE[ssNoVersion](../../../../includes/ssnoversion-md.md)]. Örnek kodda sağlanan bağlantı dizesi veritabanına yüklenir ve yerel bilgisayarda kullanılabilir olduğunu varsayar. Bağlantı dizesi, ortamınız için gerektiği gibi değiştirin.  
+>  Aşağıdaki örnek, örnek kullanır **AdventureWorks** SQL Server'da bulunan veritabanı. Örnek kodda sağlanan bağlantı dizesi veritabanına yüklenir ve yerel bilgisayarda kullanılabilir olduğunu varsayar. Bağlantı dizesi, ortamınız için gerektiği gibi değiştirin.  
   
 ```csharp
 using System;  
@@ -709,7 +711,7 @@ class Class1 {
  Aşağıdaki konsol uygulaması iki kullanımı gösterilmiştir <xref:System.Data.SqlClient.SqlDataReader> üç nesneleriyle <xref:System.Data.SqlClient.SqlCommand> nesneleri ve tek bir <xref:System.Data.SqlClient.SqlConnection> MARS etkin olan nesne. İlk komut nesnesi, kredi derecelendirme 5'tir satıcılarının listesini alır. İkinci komut nesnesi kimliği sağlanan satıcının kullandığı bir <xref:System.Data.SqlClient.SqlDataReader> ikinci yüklemek için <xref:System.Data.SqlClient.SqlDataReader> tüm özel satıcı için ürünlerin. Her ürün kaydı ikinciye ziyaret edilen <xref:System.Data.SqlClient.SqlDataReader>. Hangi yeni belirlemek için bir hesaplama gerçekleştirilen **OnOrderQty** olmalıdır. Üçüncü komut nesnesi sonra güncelleştirmek için kullanılan **ProductVendor** yeni değeri içeren tablo. Tüm işlem sona erdiğinde geri tek bir işlem içinde yer alır.  
   
 > [!NOTE]
->  Aşağıdaki örnek, örnek kullanır **AdventureWorks** ile birlikte gelen veritabanı [!INCLUDE[ssNoVersion](../../../../includes/ssnoversion-md.md)]. Örnek kodda sağlanan bağlantı dizesi veritabanına yüklenir ve yerel bilgisayarda kullanılabilir olduğunu varsayar. Bağlantı dizesi, ortamınız için gerektiği gibi değiştirin.  
+>  Aşağıdaki örnek, örnek kullanır **AdventureWorks** SQL Server'da bulunan veritabanı. Örnek kodda sağlanan bağlantı dizesi veritabanına yüklenir ve yerel bilgisayarda kullanılabilir olduğunu varsayar. Bağlantı dizesi, ortamınız için gerektiği gibi değiştirin.  
   
 ```csharp
 using System;  

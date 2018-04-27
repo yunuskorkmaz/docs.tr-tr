@@ -2,9 +2,10 @@
 title: For Each...Next Deyimi (Visual Basic)
 ms.date: 07/20/2015
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- devlang-visual-basic
 ms.topic: article
 f1_keywords:
 - vb.ForEach
@@ -27,14 +28,14 @@ helpviewer_keywords:
 - Exit statement [Visual Basic], For Each...Next statements
 - iteration
 ms.assetid: ebce3120-95c3-42b1-b70b-fa7da40c75e2
-caps.latest.revision: "56"
+caps.latest.revision: 56
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: 11601eb1caad1c6cc6d9898f590436a977a78fa1
-ms.sourcegitcommit: 34ec7753acf76f90a0fa845235ef06663dc9e36e
+ms.openlocfilehash: b1593d279d4338ebadca803fe757a201cbcd654b
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="for-eachnext-statement-visual-basic"></a>For Each...Next Deyimi (Visual Basic)
 Bir koleksiyondaki her öğe için bir grup ifadeleri tekrarlar.  
@@ -97,7 +98,7 @@ Next [ element ]
   
  Herhangi bir sayıda koyabilirsiniz `Exit For` deyimlerinde bir `For Each` döngü. Kullanıldığında içinde iç içe geçmiş `For Each` döngüler, `Exit For` iç içe geçme sonraki yüksek düzeyde en içteki döngü ve aktarımları denetimi'ndan çıkmak yürütme neden olur.  
   
- `Exit For`belli bir koşul bir değerlendirmesinden sonra sık kullanılan Örneğin, bir `If`... `Then`... `Else` yapısı. Kullanmak istediğiniz `Exit For` aşağıdaki koşulları için:  
+ `Exit For` belli bir koşul bir değerlendirmesinden sonra sık kullanılan Örneğin, bir `If`... `Then`... `Else` yapısı. Kullanmak istediğiniz `Exit For` aşağıdaki koşulları için:  
   
 -   Yinelemek etmeden gereksiz veya mümkün değil. Bunun nedeni hatalı bir değer veya bir sonlandırma isteği.  
   
@@ -133,7 +134,7 @@ Next [ element ]
   
  Veri türü `element` öğelerini veri türü gibi olmalıdır `group` kendisine dönüştürülebilir.  
   
- Veri türü `group` bir koleksiyon veya numaralandırılabilir bir dizi başvuran bir başvuru türü olmalıdır. Buna genellikle `group` uygulayan bir nesneye başvuruyor <xref:System.Collections.IEnumerable> arabiriminin `System.Collections` ad alanı veya <xref:System.Collections.Generic.IEnumerable%601> arabiriminin `System.Collections.Generic` ad alanı. `System.Collections.IEnumerable`tanımlar <xref:System.Collections.IEnumerable.GetEnumerator%2A> koleksiyonu için bir numaralandırıcı nesnesi döndüren yöntemi. Numaralandırıcı nesnesi uygulayan `System.Collections.IEnumerator` arabiriminin `System.Collections` ad alanı ve ortaya çıkaran <xref:System.Collections.IEnumerator.Current%2A> özelliği ve <xref:System.Collections.IEnumerator.Reset%2A> ve <xref:System.Collections.IEnumerator.MoveNext%2A> yöntemleri. Visual Basic Bu koleksiyonu geçiş için kullanır.  
+ Veri türü `group` bir koleksiyon veya numaralandırılabilir bir dizi başvuran bir başvuru türü olmalıdır. Buna genellikle `group` uygulayan bir nesneye başvuruyor <xref:System.Collections.IEnumerable> arabiriminin `System.Collections` ad alanı veya <xref:System.Collections.Generic.IEnumerable%601> arabiriminin `System.Collections.Generic` ad alanı. `System.Collections.IEnumerable` tanımlar <xref:System.Collections.IEnumerable.GetEnumerator%2A> koleksiyonu için bir numaralandırıcı nesnesi döndüren yöntemi. Numaralandırıcı nesnesi uygulayan `System.Collections.IEnumerator` arabiriminin `System.Collections` ad alanı ve ortaya çıkaran <xref:System.Collections.IEnumerator.Current%2A> özelliği ve <xref:System.Collections.IEnumerator.Reset%2A> ve <xref:System.Collections.IEnumerator.MoveNext%2A> yöntemleri. Visual Basic Bu koleksiyonu geçiş için kullanır.  
   
 ### <a name="narrowing-conversions"></a>Daraltma dönüşümleri  
  Zaman `Option Strict` ayarlanır `On`, daraltma dönüşümleri normalde derleyici hatalarına neden olabilir. İçinde bir `For Each` deyimi, ancak dönüşümleri öğelerde bulunan `group` için `element` değerlendirilir ve çalışma zamanında gerçekleştirilen ve daraltma dönüşümleri kaynaklanan derleyici hataları gizlenir.  
@@ -149,7 +150,7 @@ Next [ element ]
   
  **Koleksiyon değiştirme.** Numaralandırıcı nesnesi tarafından döndürülen <xref:System.Collections.IEnumerable.GetEnumerator%2A> normalde koleksiyon ekleme, silme, değiştirme veya herhangi bir öğe yeniden sıralama değiştirmenize izin vermez. Koleksiyon, başlattıktan sonra değiştirirseniz bir `For Each`... `Next` döngü, numaralandırıcı nesnesi geçersiz hale gelir ve sonraki bir öğesine erişme girişimi neden olan bir <xref:System.InvalidOperationException> özel durum.  
   
- Ancak, bu değişikliği engelleme tarafından belirlenen değil [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)], ancak bunun yerine uygulaması tarafından <xref:System.Collections.IEnumerable> arabirimi. Uygulamak mümkündür `IEnumerable` yineleme sırasında değişikliğe izin veren şekilde. Dinamik tür değişiklik yapılması düşünüyorsanız, özelliklerini anladığınızdan emin olun `IEnumerable` uygulama kullanmakta olduğunuz koleksiyonu.  
+ Ancak, bu değişikliği engelleme Visual Basic, ancak bunun yerine uygulama tarafından belirlenen değil <xref:System.Collections.IEnumerable> arabirimi. Uygulamak mümkündür `IEnumerable` yineleme sırasında değişikliğe izin veren şekilde. Dinamik tür değişiklik yapılması düşünüyorsanız, özelliklerini anladığınızdan emin olun `IEnumerable` uygulama kullanmakta olduğunuz koleksiyonu.  
   
  **Koleksiyon öğeleri değiştirme.** <xref:System.Collections.IEnumerator.Current%2A> Numaralandırıcı nesnesi özelliği [ReadOnly](../../../visual-basic/language-reference/modifiers/readonly.md), ve her koleksiyon öğesi yerel bir kopyasını döndürür. Bu öğeleri kendilerini değiştiremeyeceğiniz anlamına gelir, bir `For Each`... `Next` döngü. Yaptığınız değişiklikler yalnızca yerel kopyadan etkiler `Current` ve arka plandaki koleksiyona yansıtılan değil. Ancak, bir öğenin bir başvuru türü ise işaret ettiği örnek üyeleri değiştirebilir. Aşağıdaki örnek değiştirir `BackColor` her üyesi `thisControl` öğesi. Ancak, değiştiremezsiniz `thisControl` kendisi.  
   

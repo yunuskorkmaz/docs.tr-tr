@@ -1,24 +1,26 @@
 ---
 title: MTOM Kodlama
-ms.custom: 
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 820e316f-4ee1-4eb5-ae38-b6a536e8a14f
-caps.latest.revision: "14"
+caps.latest.revision: 14
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: ed65e2098a95a05f7cc5efa6d9014f67bf5ed261
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: d826b5f2973ac451b3943fd78b661093906c72ad
+ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="mtom-encoding"></a>MTOM Kodlama
 Bu örnek bir WSHttpBinding kodlama ileti iletim en iyi duruma getirme mekanizmasını (MTOM) iletisi kullanımını göstermektedir. MTOM SOAP iletilerle büyük ikili dosya eklerini ham bayt olarak iletmek için bir küçük iletiler için izin verme mekanizmadır.  
@@ -41,15 +43,15 @@ Bu örnek bir WSHttpBinding kodlama ileti iletim en iyi duruma getirme mekanizma
 ```  
   
  MTOM Kodlayıcısı bayt ve akışlar dizileri en iyi duruma getirebilirsiniz. Bu örnekte, işlem kullanan bir `Stream` parametresi ve bu nedenle iyileştirilebilir.  
-  
-```  
+
+```csharp
 [ServiceContract(Namespace="http://Microsoft.ServiceModel.Samples")]  
   public interface IUpload  
   {  
       [OperationContract]  
       int Upload(Stream data);  
   }  
-```  
+```
   
  Bu örnek için seçilen sözleşme hizmetine ikili veri aktaran ve dönüş değeri olarak karşıya bayt sayısını alır. Hizmetin yüklü olduğundan ve istemci çalıştırın, tüm 1000 bayt aldığını gösteren sayı 1000 yazdırır. Çıktı kalanı çeşitli yükü için en iyileştirilmiş veya iyileştirilmemiş ileti boyutlarını listeler.  
   

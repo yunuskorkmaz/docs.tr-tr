@@ -13,17 +13,17 @@ ms.assetid: 0b919d30-7fd6-42db-85c8-543d15312441
 caps.latest.revision: 20
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: aaa7fbd679eceea53a673646173dc14dc4f209bc
-ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
+ms.openlocfilehash: 230229203029740b82e706fe2aa7ff8ee06c486a
+ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="windows-forms-application-basics-visual-basic"></a>Windows Forms Uygulaması Temelleri (Visual Basic)
 Önemli Visual Basic kullanıcıların bilgisayarlarına yerel olarak çalışan Windows Forms uygulamaları oluşturma olanağı bir parçasıdır. Windows Forms kullanan uygulama ve kullanıcı arabirimini oluşturmak için Visual Studio'yu kullanabilirsiniz. Bir Windows Forms uygulaması sınıflardan üzerine inşa edilmiştir <xref:System.Windows.Forms> ad alanı.  
   
 ## <a name="designing-windows-forms-applications"></a>Forms uygulamaları Windows tasarlama  
- Windows Forms ve Windows hizmet uygulamaları ile oluşturabileceğiniz [!INCLUDE[vsprvs](~/includes/vsprvs-md.md)]. Daha fazla bilgi için aşağıdaki konulara bakın:  
+ Visual Studio ile Windows Forms ve Windows hizmet uygulamaları oluşturabilirsiniz. Daha fazla bilgi için aşağıdaki konulara bakın:  
   
 -   [Windows Forms'a Başlarken](../../../framework/winforms/getting-started-with-windows-forms.md). Oluşturma ve Windows Forms program bilgiler verilmektedir.  
    
@@ -32,7 +32,7 @@ ms.lasthandoff: 04/26/2018
 -   [Windows hizmet uygulamaları](../../../framework/windows-services/index.md). Windows Hizmetleri oluşturma açıklayan konulara listeler.  
   
 ## <a name="building-rich-interactive-user-interfaces"></a>Yapı zengin ve etkileşimli kullanıcı arabirimleri  
- Windows Forms bileşenidir akıllı istemci [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)], okuma ve dosya sistemine yazma gibi ortak uygulama görevlerini etkinleştirmek yönetilen kitaplıkları kümesi. Gibi bir geliştirme ortamı kullanarak [!INCLUDE[vsprvs](~/includes/vsprvs-md.md)], bir ağ üzerinden uzak bilgisayarlarla bilgilerini görüntülemek, kullanıcılardan giriş istemek ve iletişim kuran Windows Forms uygulamaları oluşturabilirsiniz.  
+ Windows Forms bileşenidir akıllı istemci [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)], okuma ve dosya sistemine yazma gibi ortak uygulama görevlerini etkinleştirmek yönetilen kitaplıkları kümesi. Visual Studio gibi bir geliştirme ortamı kullanarak, bir ağ üzerinden uzak bilgisayarlarla bilgilerini görüntülemek, kullanıcılardan girdi istemek ve iletişim kuran Windows Forms uygulamaları oluşturabilirsiniz.  
   
  Windows Forms'ta bir kullanıcıya bilgi görüntü üzerinde bir görsel yüzey biçimidir. Windows Forms uygulamaları formlarında denetimleri yerleştirme ve fare tıklamaları veya anahtar basarsa gibi kullanıcı eylemlerini yanıtlarını geliştirerek yaygın olarak oluşturun. A *denetim* veri girişi kabul eder ya da verileri görüntüleyen bir ayrık kullanıcı arabirimi (UI) öğesidir.  
   
@@ -44,7 +44,7 @@ ms.lasthandoff: 04/26/2018
   
  Windows Forms özellikleri Microsoft Office gibi gelişmiş uygulamalarda öykünmek zengin UI denetimleri vardır. Kullanarak <xref:System.Windows.Forms.ToolStrip> ve <xref:System.Windows.Forms.MenuStrip> denetim, araç çubukları ve alt menüler görüntülemek ve metin kutuları ve birleşik giriş kutuları gibi diğer denetimleri konak metin ve görüntüler içeren menüleri oluşturabilirsiniz.  
   
- İle [!INCLUDE[vsprvs](~/includes/vsprvs-md.md)] sürükle ve bırak forms Tasarımcısı Windows Forms uygulamaları kolayca oluşturabilirsiniz: yalnızca imlecinizi denetimleriyle seçin ve form üzerinde istediğiniz yere yerleştirin. Kılavuz çizgileri ve "dayama çizgileri" gibi araçları tasarımcı sağlar denetimleri hizalama dışında mücadele gerçekleştirilecek. Ve kullansanız [!INCLUDE[vsprvs](~/includes/vsprvs-md.md)] veya derleme komut satırında, kullandığınız <xref:System.Windows.Forms.FlowLayoutPanel>, <xref:System.Windows.Forms.TableLayoutPanel> ve <xref:System.Windows.Forms.SplitContainer> denetimleri Gelişmiş oluşturmak için en az zaman ve çaba düzenleriyle form.  
+ Visual Studio sürükle ve bırak forms Tasarımcısı ile Windows Forms uygulamaları kolayca oluşturabilirsiniz: yalnızca imlecinizi denetimleriyle seçin ve form üzerinde istediğiniz yere yerleştirin. Kılavuz çizgileri ve "dayama çizgileri" gibi araçları tasarımcı sağlar denetimleri hizalama dışında mücadele gerçekleştirilecek. Visual Studio'yu kullanın ya da komut satırında derleme olup olmadığını kullanabileceğiniz <xref:System.Windows.Forms.FlowLayoutPanel>, <xref:System.Windows.Forms.TableLayoutPanel> ve <xref:System.Windows.Forms.SplitContainer> denetimleri Gelişmiş oluşturmak için en az zaman ve çaba düzenleriyle form.  
   
 ### <a name="custom-ui-elements"></a>Özel kullanıcı Arabirimi öğeleri  
  Son olarak, kendi özel kullanıcı Arabirimi öğeleri oluşturmanız gerekiyorsa <xref:System.Drawing> ad alanı, tüm çizgiler, daireler ve diğer şekiller doğrudan bir form üzerinde işlemek için gereken sınıfları içerir.  
@@ -53,7 +53,7 @@ ms.lasthandoff: 04/26/2018
   
 |Bitiş|Bkz. |  
 |--------|---------|  
-|Yeni bir Windows Forms uygulaması oluşturma [!INCLUDE[vsprvs](~/includes/vsprvs-md.md)]|[İzlenecek yol: basit bir Windows formu oluşturma](http://msdn.microsoft.com/library/2d9daec0-0543-41d0-acb1-964f685bddbb)|  
+|Visual Studio ile yeni bir Windows Forms uygulaması oluşturma|[İzlenecek yol: basit bir Windows formu oluşturma](http://msdn.microsoft.com/library/2d9daec0-0543-41d0-acb1-964f685bddbb)|  
 |Formlarında denetimleri kullanın|[Nasıl yapılır: Windows Forms’a Denetimler Ekleme](../../../framework/winforms/controls/how-to-add-controls-to-windows-forms.md)|   
 |Grafik oluşturma <xref:System.Drawing>|[Grafik Programlamaya Başlarken](../../../framework/winforms/advanced/getting-started-with-graphics-programming.md)|  
 |Özel denetimler oluşturma|[Nasıl yapılır: UserControl Sınıfından Devralma](../../../framework/winforms/controls/how-to-inherit-from-the-usercontrol-class.md)|  
@@ -67,7 +67,7 @@ ms.lasthandoff: 04/26/2018
  Verilere bağlı denetimler kolayca veritabanları, Web Hizmetleri ve nesneleri gibi veri kaynakları projenize görüntüler veri kaynakları penceresini kullanarak oluşturabilirsiniz. Veri bağlama denetimleri projenizdeki forms üzerine bu pencereden öğeleri sürükleyerek oluşturabilirsiniz. Ayrıca veri mevcut denetimleri verileri için mevcut denetimleri üzerine veri kaynakları penceresinden nesneleri sürükleyerek bağlama.  
   
 ### <a name="settings"></a>Ayarlar  
- Windows Forms'ta yönetebilmeniz için veri bağlama başka bir tür ayarlarıdır. Çoğu akıllı istemci uygulamaları, forms, bilinen son boyutu gibi kendi çalışma zamanı durumu hakkındaki bazı bilgileri korumak ve kaydedilen dosyaları için varsayılan konumları gibi kullanıcı tercihi verileri tut. Uygulama ayarları özellik ayarları her iki tür istemci bilgisayarda depolamak için kolay bir yol sağlayarak bu gereksinimleri karşılar. Kullanarak kez tanımlanmış [!INCLUDE[vsprvs](~/includes/vsprvs-md.md)] ya da bir kod düzenleyicisinde, bu ayarlar XML olarak kalıcı ve çalışma zamanında otomatik olarak geri belleğe okuyun.  
+ Windows Forms'ta yönetebilmeniz için veri bağlama başka bir tür ayarlarıdır. Çoğu akıllı istemci uygulamaları, forms, bilinen son boyutu gibi kendi çalışma zamanı durumu hakkındaki bazı bilgileri korumak ve kaydedilen dosyaları için varsayılan konumları gibi kullanıcı tercihi verileri tut. Uygulama ayarları özellik ayarları her iki tür istemci bilgisayarda depolamak için kolay bir yol sağlayarak bu gereksinimleri karşılar. Visual Studio ya da bir kod düzenleyicisini kullanarak tanımlanan sonra bu ayarları XML olarak kalıcı ve çalışma zamanında otomatik olarak geri belleğe okuyun.  
   
  Bu özellikleri kullanma hakkında adım adım bilgiler için aşağıdaki Yardım konularına bakın.  
   
@@ -78,7 +78,7 @@ ms.lasthandoff: 04/26/2018
 |Veri Kaynakları penceresini kullanma|[İzlenecek yol: Bir Windows formunda veri görüntüleme](/visualstudio/data-tools/accessing-data-in-visual-studio)|  
   
 ## <a name="deploying-applications-to-client-computers"></a>İstemci bilgisayarlara uygulamaları dağıtma  
- Uygulamanızı yazıldıktan sonra yükleyebilir ve kendi istemci bilgisayarlarda çalıştırmak için bunu kullanıcılarınıza göndermelidir. Kullanarak [!INCLUDE[ndptecclick](~/includes/ndptecclick-md.md)] teknolojisi, dağıtabileceğiniz uygulamalarınızdan içinde [!INCLUDE[vsprvs](~/includes/vsprvs-md.md)] göre yalnızca birkaç tıklama kullanılması ve Web uygulamanıza işaret eden bir URL ile kullanıcılar sağlar. [!INCLUDE[ndptecclick](~/includes/ndptecclick-md.md)] tüm öğeleri ve bağımlılıklarını, uygulamanızda yönetir ve uygulama istemci bilgisayara düzgün yüklendiğini sağlar.  
+ Uygulamanızı yazıldıktan sonra yükleyebilir ve kendi istemci bilgisayarlarda çalıştırmak için bunu kullanıcılarınıza göndermelidir. Kullanarak [!INCLUDE[ndptecclick](~/includes/ndptecclick-md.md)] teknolojisi, yalnızca birkaç tıklama kullanarak Visual Studio'dan uygulamalarınızı dağıtma ve kullanıcılara Web uygulamanıza işaret eden bir URL sağlamak. [!INCLUDE[ndptecclick](~/includes/ndptecclick-md.md)] tüm öğeleri ve bağımlılıklarını, uygulamanızda yönetir ve uygulama istemci bilgisayara düzgün yüklendiğini sağlar.  
   
  [!INCLUDE[ndptecclick](~/includes/ndptecclick-md.md)] uygulamaları yalnızca kullanıcı ağa bağlandığında çalıştırmak için veya her ikisi de çevrimiçi çalıştırmak için yapılandırılmış ve çevrimdışı olabilir. Bir uygulama çevrimdışı işlemi desteklemesi gereken belirttiğinizde [!INCLUDE[ndptecclick](~/includes/ndptecclick-md.md)] kullanıcının uygulamanızda bir bağlantı ekler **Başlat** menüsünde, böylece kullanıcı URL kullanmadan açabilir.  
   

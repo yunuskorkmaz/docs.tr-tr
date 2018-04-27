@@ -1,12 +1,13 @@
 ---
 title: "İzlenecek yol: WPF'te ActiveX Denetimi Barındırma"
-ms.custom: 
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-wpf
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-wpf
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - csharp
@@ -15,16 +16,17 @@ helpviewer_keywords:
 - ActiveX controls [WPF interoperability]
 - hosting ActiveX controls [WPF]
 ms.assetid: 1931d292-0dd1-434f-963c-dcda7638d75a
-caps.latest.revision: "30"
+caps.latest.revision: 30
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: b0e85c715db30c6e577980376d25d56238e2835a
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.workload:
+- dotnet
+ms.openlocfilehash: fc4f577da04fb8ed15bae3c0497b35803a46f08f
+ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="walkthrough-hosting-an-activex-control-in-wpf"></a>İzlenecek yol: WPF'te ActiveX Denetimi Barındırma
 Tarayıcılarla geliştirilmiş etkileşimi etkinleştirmek için kullanabileceğiniz [!INCLUDE[TLA#tla_actx](../../../../includes/tlasharptla-actx-md.md)] denetimlerini, [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]-tabanlı. Bu anlatımda nasıl barındırabilir gösterilir [!INCLUDE[TLA#tla_wmp](../../../../includes/tlasharptla-wmp-md.md)] bir denetim olarak bir [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] sayfası.  
@@ -42,7 +44,7 @@ Tarayıcılarla geliştirilmiş etkileşimi etkinleştirmek için kullanabilece�
 ## <a name="prerequisites"></a>Önkoşullar  
  Bu izlenecek yolu tamamlamak için aşağıdaki bileşenlere ihtiyacınız vardır:  
   
--   [!INCLUDE[TLA#tla_wmp](../../../../includes/tlasharptla-wmp-md.md)]bilgisayarda yüklü olduğu [!INCLUDE[vsprvs](../../../../includes/vsprvs-md.md)] yüklenir.  
+-   [!INCLUDE[TLA#tla_wmp](../../../../includes/tlasharptla-wmp-md.md)] Visual Studio yüklendiği bilgisayarda yüklü.  
   
 -   [!INCLUDE[vs_dev10_long](../../../../includes/vs-dev10-long-md.md)].  
   
@@ -71,7 +73,7 @@ Tarayıcılarla geliştirilmiş etkileşimi etkinleştirmek için kullanabilece�
 9. Tüm başvuruları yeniden adlandırma istenirse tıklatın **Evet**.  
   
 ## <a name="creating-the-activex-control"></a>ActiveX denetimi oluşturma  
- [!INCLUDE[TLA#tla_visualstu](../../../../includes/tlasharptla-visualstu-md.md)]otomatik olarak oluşturan bir <xref:System.Windows.Forms.AxHost> sarmalayıcı sınıfı için bir [!INCLUDE[TLA#tla_actx](../../../../includes/tlasharptla-actx-md.md)] denetimi tasarım yüzeyine eklendiğinde denetim. Aşağıdaki yordam AxInterop.WMPLib.dll yönetilen bir bütünleştirilmiş kod oluşturur.  
+ [!INCLUDE[TLA#tla_visualstu](../../../../includes/tlasharptla-visualstu-md.md)] otomatik olarak oluşturan bir <xref:System.Windows.Forms.AxHost> sarmalayıcı sınıfı için bir [!INCLUDE[TLA#tla_actx](../../../../includes/tlasharptla-actx-md.md)] denetimi tasarım yüzeyine eklendiğinde denetim. Aşağıdaki yordam AxInterop.WMPLib.dll yönetilen bir bütünleştirilmiş kod oluşturur.  
   
 #### <a name="to-create-the-activex-control"></a>ActiveX denetimi oluşturulamıyor  
   

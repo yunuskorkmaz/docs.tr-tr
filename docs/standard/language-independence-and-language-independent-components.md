@@ -1,12 +1,12 @@
 ---
-title: "Dil Bağımsızlığı ve Dilden Bağımsız Bileşenler"
-ms.custom: 
+title: Dil Bağımsızlığı ve Dilden Bağımsız Bileşenler
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology: dotnet-standard
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - csharp
@@ -19,18 +19,18 @@ helpviewer_keywords:
 - runtime, language interoperability
 - common language runtime, language interoperability
 ms.assetid: 4f0b77d0-4844-464f-af73-6e06bedeafc6
-caps.latest.revision: 
+caps.latest.revision: 35
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: 81ccf70482c8b7f4acb0b18381ed4cf07edc06af
-ms.sourcegitcommit: 96cc82cac4650adfb65ba351506d8a8fbcd17b5c
+ms.openlocfilehash: 1d588768f53bf5850a0fa7cc825c5ffa1114ec6f
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/19/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="language-independence-and-language-independent-components"></a>Dil Bağımsızlığı ve Dilden Bağımsız Bileşenler
 .NET Framework bağımsız dilidir. Bir geliştirici olarak size .NET Framework, C#, C + gibi hedef birçok dilde birinde geliştirebilirsiniz, yani +/ CLI, Eiffel, F #, IronPython, IronRuby, PowerBuilder, Visual Basic, Visual COBOL ve Windows PowerShell. Türleri ve sınıf kitaplıkları için .NET Framework, bunlar ilk olarak yazılmış içinde dili bilmenize gerek kalmadan ve özgün dil kuralları birini izleyin gerek kalmadan geliştirilen üyeleri erişebilir. Bileşen geliştiriciyseniz bileşeniniz dili bağımsız olarak herhangi bir .NET Framework uygulama tarafından erişilebilir.  
@@ -38,7 +38,7 @@ ms.lasthandoff: 02/19/2018
 > [!NOTE]
 >  Dilden bağımsız bileşenler oluşturma bu ilk bölümü, bu makalenin ele — diğer bir deyişle, herhangi bir dilde yazılan uygulamaları tarafından kullanılabilecek bileşenler. Çeşitli dillerde yazılmış kaynak koddan tek bir bileşen ya uygulaması oluşturabilirsiniz; bkz: [diller arası birlikte çalışabilirlik](#CrossLang) ikinci bölümü, bu makalenin.  
   
- Tam olarak herhangi bir dilde yazılmış diğer nesnelerle etkileşim kurmak için nesneleri, tüm diller için ortak olan özellikleri arayanlara kullanıma gerekir. Bu ortak bir özellikler kümesi ortak dil belirtimi (CLS tarafından), hangi oluşturulmuş derlemeler için geçerli bir kurallar kümesidir tanımlanır. Ortak dil belirtimi bölüm ı yan tümceleri 7 11 /'ile tanımlanan [ECMA-335 standart: ortak dil altyapısı](http://go.microsoft.com/fwlink/?LinkID=116487).  
+ Tam olarak herhangi bir dilde yazılmış diğer nesnelerle etkileşim kurmak için nesneleri, tüm diller için ortak olan özellikleri arayanlara kullanıma gerekir. Bu ortak bir özellikler kümesi ortak dil belirtimi (CLS tarafından), hangi oluşturulmuş derlemeler için geçerli bir kurallar kümesidir tanımlanır. Ortak dil belirtimi bölüm ı yan tümceleri 7 11 /'ile tanımlanan [ECMA-335 standart: ortak dil altyapısı](https://www.ecma-international.org/publications/standards/Ecma-335.htm).  
   
  Bileşeniniz ortak dil belirtimi uyuyorsa, CLS uyumlu olması garanti ve CLS destekleyen tüm programlama dilinde yazılmıştır derlemelerde koddan erişilebilir. Bileşeniniz ortak dil belirtimi derleme zamanında uygulayarak uyup uymadığını belirleyebilirsiniz <xref:System.CLSCompliantAttribute> özniteliği için kaynak kodu. Daha fazla bilgi için bkz: [CLSCompliantAttribute özniteliği](#CLSAttribute).  
   
@@ -82,7 +82,7 @@ ms.lasthandoff: 02/19/2018
   
 <a name="Rules"></a>   
 ## <a name="cls-compliance-rules"></a>CLS uyumluluk kuralları  
- Bu bölümde, CLS uyumlu bir bileşen oluşturmak için kurallar açıklanmaktadır. Bölüm ı yan tümcesi 11 / kuralları tam bir listesi için bkz [ECMA-335 standart: ortak dil altyapısı](http://go.microsoft.com/fwlink/?LinkID=116487).  
+ Bu bölümde, CLS uyumlu bir bileşen oluşturmak için kurallar açıklanmaktadır. Bölüm ı yan tümcesi 11 / kuralları tam bir listesi için bkz [ECMA-335 standart: ortak dil altyapısı](https://www.ecma-international.org/publications/standards/Ecma-335.htm).  
   
 > [!NOTE]
 >  Çerçeveler (dil derleyici oluşturmak için kullandığınız geliştiriciler tüketicilere CLS uyumlu bir bileşen program aracılığıyla erişme (geliştiriciler) uygularken ortak dil belirtimi CLS uyumluluğu için her bir kural açıklanır. CLS-compliant kitaplıklar) ve Extender'larının (dil derleyici veya CLS uyumlu bileşenleri oluşturan bir kod ayrıştırıcı gibi bir araç oluşturan geliştiriciler). Çerçeveler için uygularken bu makalede kurallarında odaklanır. Ancak, bazı Extender'larının için geçerli olan kurallar da Reflection.Emit kullanılarak oluşturulan derlemeleri uygulayabilir unutmayın.  
@@ -110,7 +110,7 @@ ms.lasthandoff: 02/19/2018
   
 -   Parametreler ve genel yöntemlerin ortak sınıflar, parametreler ve dönüş türleri ve yöntemleri türetilmiş sınıflara erişilebilir dönüş türü.  
   
- CLS uyumluluğu için kuralları aşağıdaki tabloda listelenmiştir. Kurallar metin alanından verbatim alınır [ECMA-335 standart: ortak dil altyapısı](http://go.microsoft.com/fwlink/?LinkID=116487), telif hakkı 2012 Ecma uluslararası tarafından olduğu. Aşağıdaki bölümlerde bu kuralları hakkında daha ayrıntılı bilgi bulunamadı.  
+ CLS uyumluluğu için kuralları aşağıdaki tabloda listelenmiştir. Kurallar metin alanından verbatim alınır [ECMA-335 standart: ortak dil altyapısı](https://www.ecma-international.org/publications/standards/Ecma-335.htm), telif hakkı 2012 Ecma uluslararası tarafından olduğu. Aşağıdaki bölümlerde bu kuralları hakkında daha ayrıntılı bilgi bulunamadı.  
   
 |Kategori|Bkz. |Kural|Kural numarası|  
 |--------------|---------|----------|-----------------|  
@@ -144,7 +144,7 @@ ms.lasthandoff: 02/19/2018
 |Üyeler|[Genel üyeleri yazın](#members)|Genel statik alanları ve yöntemleri CLS uyumlu değildir.|36|  
 |Üyeler|--|Değişmez değer statik değerini alan başlatma meta veri kullanımı ile belirtilir. CLS uyumlu bir sabit değişmez değeri olarak tam olarak aynı türde alan başlatma meta verilerinde belirtilmiş bir değere sahip olmalıdır (veya bu değişmez değeri ise, temel türde bir `enum`).|13|  
 |Üyeler|[Genel üyeleri yazın](#members)|Vararg kısıtlaması CLS parçası değildir ve yalnızca çağırma kuralı CLS tarafından desteklenen standart çağırma yönetiliyor.|15|  
-|Adlandırma kuralları|[Adlandırma kuralları](#naming)|Derlemeleri eki 7, teknik rapor 15 başlatmak ve tanımlayıcıları, kullanılabilir onlineat http://www.unicode.org/unicode/reports/tr15/tr15-18.html dahil edilmesi için izin verilen karakter kümesini yöneten Unicode Standard3.0 izleyin. Tanımlayıcıları Unicode normalleştirme Form c tarafından tanımlanan thecanonical biçiminde olacaktır CLS amacıyla iki tanımlayıcılara aynı küçük eşlemelerini (Unicode yerel ayar-küçük harfe duyarlı bir toonelowercase eşlemeleri tarafından belirtildiği şekilde) aynı olması durumunda. Diğer bir deyişle, differentunder CLS ele alınması için iki tanımlayıcı bunların birden fazla yalnızca kendi durumda farklı. Ancak, aninherited tanımı geçersiz kılmak için CLI özgün bildirimi kesin kodlama kullanılabilir gerektirir.|4|  
+|Adlandırma kuralları|[Adlandırma kuralları](#naming)|Derlemeleri eki 7, teknik rapor 15 başlatmak ve tanımlayıcıları, kullanılabilir onlineat dahil edilmesi için izin verilen karakter kümesini yöneten Unicode Standard3.0 izleyin http://www.unicode.org/unicode/reports/tr15/tr15-18.html. Tanımlayıcıları Unicode normalleştirme Form c tarafından tanımlanan thecanonical biçiminde olacaktır CLS amacıyla iki tanımlayıcılara aynı küçük eşlemelerini (Unicode yerel ayar-küçük harfe duyarlı bir toonelowercase eşlemeleri tarafından belirtildiği şekilde) aynı olması durumunda. Diğer bir deyişle, differentunder CLS ele alınması için iki tanımlayıcı bunların birden fazla yalnızca kendi durumda farklı. Ancak, aninherited tanımı geçersiz kılmak için CLI özgün bildirimi kesin kodlama kullanılabilir gerektirir.|4|  
 |Aşırı Yükleme|[Adlandırma kuralları](#naming)|Tüm adları CLS uyumlu bir kapsamda tanıtılan aynı ve aşırı yükleme aracılığıyla çözülmüş olduğu dışında ayrı bağımsız ofkind olacaktır. Diğer bir deyişle, bir yöntem ve bir alan için aynı adı kullanmak için tek bir türü CTSallows sırasında CLS desteklemez.|5|  
 |Aşırı Yükleme|[Adlandırma kuralları](#naming)|Alanlar ve iç içe geçmiş türler tarafından tanımlayıcı karşılaştırma tek başına farklı olacaktır, ayırt edici olarak ayrı imzaları eventhough CTS sağlar. Yöntemler, özellikler ve olayları sahip aynı adda (tanımlayıcı karşılaştırma) dönüş türüne göre çok daha fazlası farklı dışındaki CLS kural 39 belirtildiği gibi.|6|  
 |Aşırı Yükleme|[Overloads](#overloads)|Yalnızca özelliklerini ve yöntemlerini aşırı yüklenmiş.|37|  
@@ -236,7 +236,7 @@ ms.lasthandoff: 02/19/2018
   
  [!code-csharp[Conceptual.CLSCompliant#16](../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.clscompliant/cs/naming1.cs#16)]  
   
- Ad alanlarını, türleri ve üyeleri, adları gibi Dil tanımlayıcıları programlama gerekir uygun [Unicode standart 3.0, teknik rapor 15, eki 7](http://www.unicode.org/reports/tr15/tr15-18.html). Bunun anlamı:  
+ Ad alanlarını, türleri ve üyeleri, adları gibi Dil tanımlayıcıları programlama gerekir uygun [Unicode standart 3.0, teknik rapor 15, eki 7](https://www.unicode.org/reports/tr15/tr15-18.html). Bunun anlamı:  
   
 -   İlk karakteri bir tanımlayıcı olarak herhangi bir Unicode büyük harf, küçük harf, büyük/küçük harf başlık, değiştiricisi, diğer mektup olması veya numarası harf. Unicode karakter kategorileri hakkında daha fazla bilgi için bkz: <xref:System.Globalization.UnicodeCategory?displayProperty=nameWithType> numaralandırması.  
   
@@ -372,7 +372,7 @@ ms.lasthandoff: 02/19/2018
  [!code-csharp[Conceptual.CLSCompliant#29](../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.clscompliant/cs/nestedgenerics2.cs#29)]
  [!code-vb[Conceptual.CLSCompliant#29](../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.clscompliant/vb/nestedgenerics2.vb#29)]  
   
- Genel tür adları biçiminde kodlanmış *adı\`n*, burada *adı* tür adı \` bir karakter değişmez değeri olduğu ve  *n*  türünde bildirilen parametrelerin sayısı veya genel iç içe geçmiş için türleri, yeni sunulan türü parametre sayısı. Bu genel tür adları CLS uyumlu bir Kitaplığı'nda genel türler erişmek için yansıma kullanan geliştiriciler öncelikle ilgisini kodlamadır.  
+ Genel tür adları biçiminde kodlanmış *adı\`n*, burada *adı* tür adı \` bir karakter değişmez değeri olduğu ve *n* sayısı Tür parametreleri türü veya, iç içe geçmiş genel türler, sayısı için yeni olarak bildirilen parametreleri sunmuştur. Bu genel tür adları CLS uyumlu bir Kitaplığı'nda genel türler erişmek için yansıma kullanan geliştiriciler öncelikle ilgisini kodlamadır.  
   
  Bir genel kısıtlamalar uyguladıysanız kısıtlamaları da CLS ile uyumlu olması gerektiği kullanılan türleri yazın. Aşağıdaki örnek adlı bir sınıf tanımlar `BaseClass` yani değil CLS ile uyumlu ve adlı genel bir sınıf `BaseCollection` , tür parametresi öğesinden türetilmelidir `BaseClass`. Ancak çünkü `BaseClass` CLS uyumlu olmayan bir uyarı derleyicisi yayar.  
   
@@ -572,7 +572,7 @@ csc /t:module NumberUtil.cs
   
  C# derleyici komut satırı sözdizimi hakkında daha fazla bilgi için bkz: [komut satırı yapı ile csc.exe](~/docs/csharp/language-reference/compiler-options/command-line-building-with-csc-exe.md).  
   
- Daha sonra [bağlantı aracını (Link.exe)](http://msdn.microsoft.com/library/c1d51b8a-bd23-416d-81e4-900e02b2c129) iki modülleri derlemeye derlemek için:  
+ Daha sonra [bağlantı aracını (Link.exe)](https://msdn.microsoft.com/library/c1d51b8a-bd23-416d-81e4-900e02b2c129) iki modülleri derlemeye derlemek için:  
   
 ```  
 link numberutil.netmodule stringutil.netmodule /out:UtilityLib.dll /dll   

@@ -1,5 +1,5 @@
 ---
-title: "Nasıl yapılır: Veri Akışı Bloğunda Görev Zamanlayıcısı Belirtme"
+title: 'Nasıl yapılır: Veri Akışı Bloğunda Görev Zamanlayıcısı Belirtme'
 ms.date: 03/30/2017
 ms.prod: .net
 ms.technology: dotnet-standard
@@ -18,11 +18,11 @@ manager: wpickett
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: 592b6c5c92a2c752fa0d2694cdb477423b15eb0d
-ms.sourcegitcommit: 6a9030eb5bd0f00e1d144f81958adb195cfb1f6f
+ms.openlocfilehash: 15b1168c34a22394424f250e8ab1887ec8ee1a5e
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/10/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="how-to-specify-a-task-scheduler-in-a-dataflow-block"></a>Nasıl yapılır: Veri Akışı Bloğunda Görev Zamanlayıcısı Belirtme
 Bu belge, veri akışı uygulamanızda kullandığınızda bir özel Görev Zamanlayıcı'yı ilişkilendirmek gösterilmiştir. Örnek kullanır <xref:System.Threading.Tasks.ConcurrentExclusiveSchedulerPair?displayProperty=nameWithType> okuyucu görevleri etkin olduğunda ve bir yazıcı görev etkin olduğunda göstermek için bir Windows Forms uygulamasında sınıfı. Ayrıca kullanır <xref:System.Threading.Tasks.TaskScheduler.FromCurrentSynchronizationContext%2A?displayProperty=nameWithType> kullanıcı arabirimi iş parçacığı üzerinde çalıştırmak bir veri akışı bloğu etkinleştirmek için yöntemi.
@@ -31,9 +31,9 @@ Bu belge, veri akışı uygulamanızda kullandığınızda bir özel Görev Zama
 
 ## <a name="to-create-the-windows-forms-application"></a>Form uygulama Windows oluşturmak için  
   
-1.  Oluşturma bir [!INCLUDE[csprcs](../../../includes/csprcs-md.md)] veya Visual Basic **Windows Forms uygulaması** projesi. Aşağıdaki adımlarda proje adı `WriterReadersWinForms`.  
+1.  Bir Visual C# veya Visual Basic oluşturma **Windows Forms uygulaması** projesi. Aşağıdaki adımlarda proje adı `WriterReadersWinForms`.  
   
-2.  Form1.cs ana form için form tasarımcısında (Form1.vb için [!INCLUDE[vbprvb](../../../includes/vbprvb-md.md)]), dört eklemek <xref:System.Windows.Forms.CheckBox> kontrol eder. Ayarlama <xref:System.Windows.Forms.Control.Text%2A> özelliğine **Okuyucu 1** için `checkBox1`, **okuyucu 2** için `checkBox2`, **okuyucu 3** için `checkBox3`, ve  **Yazıcı** için `checkBox4`. Ayarlama <xref:System.Windows.Forms.Control.Enabled%2A> özelliği için her denetim için `False`.  
+2.  Ana form için form Tasarımcısı üzerinde Form1.cs (Visual Basic Form1.vb) eklemek dört <xref:System.Windows.Forms.CheckBox> kontrol eder. Ayarlama <xref:System.Windows.Forms.Control.Text%2A> özelliğine **Okuyucu 1** için `checkBox1`, **okuyucu 2** için `checkBox2`, **okuyucu 3** için `checkBox3`, ve  **Yazıcı** için `checkBox4`. Ayarlama <xref:System.Windows.Forms.Control.Enabled%2A> özelliği için her denetim için `False`.  
   
 3.  Ekleme bir <xref:System.Windows.Forms.Timer> forma denetim. Ayarlama <xref:System.Windows.Forms.Timer.Interval%2A> özelliğine `2500`.  
   
@@ -44,7 +44,7 @@ Bu belge, veri akışı uygulamanızda kullandığınızda bir özel Görev Zama
   
 1.  Projenizde, System.Threading.Tasks.Dataflow.dll bir başvuru ekleyin.  
   
-2.  Sağlamak Bu Form1.cs (Form1.vb için [!INCLUDE[vbprvb](../../../includes/vbprvb-md.md)]) aşağıdakileri içerir `using` deyimleri (`Imports` içinde [!INCLUDE[vbprvb](../../../includes/vbprvb-md.md)]).  
+2.  Form1.cs (Visual Basic Form1.vb) aşağıdaki içerdiğinden emin olun `using` deyimleri (`Imports` Visual Basic'te).  
   
      [!code-csharp[TPLDataflow_WriterReadersWinForms#1](../../../samples/snippets/csharp/VS_Snippets_Misc/tpldataflow_writerreaderswinforms/cs/writerreaderswinforms/form1.cs#1)]
      [!code-vb[TPLDataflow_WriterReadersWinForms#1](../../../samples/snippets/visualbasic/VS_Snippets_Misc/tpldataflow_writerreaderswinforms/vb/writerreaderswinforms/form1.vb#1)]  
@@ -81,7 +81,7 @@ Bu belge, veri akışı uygulamanızda kullandığınızda bir özel Görev Zama
  Bu örnek ayrıca kullanır <xref:System.Threading.Tasks.ConcurrentExclusiveSchedulerPair> eşzamanlı olarak davranacak şekilde bazı veri akışı blokları etkinleştirmek için sınıf ve başka bir veri akışı bloğu aynı çalıştıran diğer tüm veri akışı blokları göre özel hareket <xref:System.Threading.Tasks.ConcurrentExclusiveSchedulerPair> nesnesi. Bu kaynağa erişim el ile eşitlemek için gereksinim attığından Bu teknik birden çok veri akışı blokları kaynak paylaşma ve bazı bu kaynağa özel erişim gerektiren kullanışlıdır. El ile eşitleme eleme kodu daha verimli hale getirebilir.  
   
 ## <a name="example"></a>Örnek  
- Aşağıdaki örnek Form1.cs için tam kod gösterilir (Form1.vb için [!INCLUDE[vbprvb](../../../includes/vbprvb-md.md)]).  
+ Aşağıdaki örnek eksiksiz kod Form1.cs (Visual Basic Form1.vb) gösterir.  
   
  [!code-csharp[TPLDataflow_WriterReadersWinForms#100](../../../samples/snippets/csharp/VS_Snippets_Misc/tpldataflow_writerreaderswinforms/cs/writerreaderswinforms/form1.cs#100)]
  [!code-vb[TPLDataflow_WriterReadersWinForms#100](../../../samples/snippets/visualbasic/VS_Snippets_Misc/tpldataflow_writerreaderswinforms/vb/writerreaderswinforms/form1.vb#100)]  

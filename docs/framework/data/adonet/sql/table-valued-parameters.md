@@ -1,30 +1,32 @@
 ---
-title: "Tablo değerli parametreleri"
-ms.custom: 
+title: Tablo değerli parametreleri
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-ado
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-ado
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - csharp
 - vb
 ms.assetid: 370c16d5-db7b-43e3-945b-ccaab35b739b
-caps.latest.revision: "5"
+caps.latest.revision: 5
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.workload: dotnet
-ms.openlocfilehash: 6e881213979d32cb9335f01d2804c35c19856b5e
-ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
+ms.workload:
+- dotnet
+ms.openlocfilehash: 01b19d49ee82a884247e4eb260f659f19f124cee
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="table-valued-parameters"></a>Tablo değerli parametreleri
-Tablo değerli parametreleri birden çok istemci uygulamasından veri satırı sıralama için kolay bir yol sağlamak [!INCLUDE[ssNoVersion](../../../../../includes/ssnoversion-md.md)] verileri işlemek için birden çok gidiş dönüş veya özel bir sunucu tarafı mantık gerektiren olmadan. Bir istemci uygulamasında veri satırı kapsüllemek ve tek bir parametreli komut sunucusuna veri gönderme için tablo değerli parametreleri kullanabilirsiniz. Gelen veri satırları sonra üzerinde kullanarak çalıştırılan tablo değişkeni depolanmış [!INCLUDE[tsql](../../../../../includes/tsql-md.md)].  
+Tablo değerli parametreleri birden çok gidiş dönüş veya özel bir sunucu tarafı mantığı verileri işlemek için gerek olmadan birden çok SQL Server için bir istemci uygulamasından veri satırı sıralama için kolay bir yol sağlar. Bir istemci uygulamasında veri satırı kapsüllemek ve tek bir parametreli komut sunucusuna veri gönderme için tablo değerli parametreleri kullanabilirsiniz. Gelen veri satırları sonra üzerinde kullanarak çalıştırılan tablo değişkeni depolanmış [!INCLUDE[tsql](../../../../../includes/tsql-md.md)].  
   
  Sütun değerleri tablo değerli parametrelerinde standart kullanarak erişilebilir [!INCLUDE[tsql](../../../../../includes/tsql-md.md)] SELECT deyimi. Tablo değerli parametreleri kesin türü belirtilmiş ve bunların yapısı otomatik olarak doğrulanır. Tablo değerli parametre boyutu yalnızca sunucu belleği ile sınırlıdır.  
   
@@ -35,13 +37,13 @@ Tablo değerli parametreleri birden çok istemci uygulamasından veri satırı s
   
 |Kaynak|Açıklama|  
 |--------------|-----------------|  
-|[Tablo değerli parametreleri (veritabanı altyapısı)](http://go.microsoft.com/fwlink/?LinkId=98363) içinde [!INCLUDE[ssNoVersion](../../../../../includes/ssnoversion-md.md)] Çevrimiçi Kitapları|Oluşturmayı ve tablo değerli parametreleri kullanmayı açıklar.|  
-|[Kullanıcı tanımlı tablo türlerinde](http://go.microsoft.com/fwlink/?LinkId=98364) içinde [!INCLUDE[ssNoVersion](../../../../../includes/ssnoversion-md.md)] Çevrimiçi Kitapları|Tablo değerli parametreleri bildirmek için kullanılan kullanıcı tanımlı tablo türleri açıklanmaktadır.|  
+|[Tablo değerli parametreleri (veritabanı altyapısı)](http://go.microsoft.com/fwlink/?LinkId=98363) SQL Server Çevrimiçi Kitapları'nda|Oluşturmayı ve tablo değerli parametreleri kullanmayı açıklar.|  
+|[Kullanıcı tanımlı tablo türlerinde](http://go.microsoft.com/fwlink/?LinkId=98364) SQL Server Çevrimiçi Kitapları'nda|Tablo değerli parametreleri bildirmek için kullanılan kullanıcı tanımlı tablo türleri açıklanmaktadır.|  
   
 ## <a name="passing-multiple-rows-in-previous-versions-of-sql-server"></a>SQL Server'ın önceki sürümlerinde birden çok satır geçirme  
- Tablo değerli parametreleri için sunulmadan önce [!INCLUDE[ssNoVersion](../../../../../includes/ssnoversion-md.md)] 2008, saklı yordam veya parametreli bir SQL komutu için verilerin birden çok satır geçirme seçenekleri sınırlıdır. Bir geliştirici sunucuya birden çok satır geçirme için aşağıdaki seçenekler arasından seçim:  
+ Tablo değerli parametreleri SQL Server 2008'e sunulmadan önce bir saklı yordam veya parametreli bir SQL komutu için verilerin birden çok satır geçirme seçenekleri sınırlıdır. Bir geliştirici sunucuya birden çok satır geçirme için aşağıdaki seçenekler arasından seçim:  
   
--   Birden çok sütun ve veri satırı değerleri temsil etmek için bir dizi tek tek parametre kullanın. Bu yöntem kullanılarak aktarılan veri miktarını izin parametrelerinin sayısı ile sınırlıdır. [!INCLUDE[ssNoVersion](../../../../../includes/ssnoversion-md.md)]yordamlar, en fazla 2100 parametrelerine sahip olabilirsiniz. Sunucu tarafı mantığı tablo değişkeni ya da geçici bir tablo işlem için ayrı ayrı bu değerleri derlemek için gereklidir.  
+-   Birden çok sütun ve veri satırı değerleri temsil etmek için bir dizi tek tek parametre kullanın. Bu yöntem kullanılarak aktarılan veri miktarını izin parametrelerinin sayısı ile sınırlıdır. SQL Server yordamları, en fazla 2100 parametrelerine sahip olabilirsiniz. Sunucu tarafı mantığı tablo değişkeni ya da geçici bir tablo işlem için ayrı ayrı bu değerleri derlemek için gereklidir.  
   
 -   Birden çok veri değerleri ayrılmış dizeler veya XML belgelerini paketini ve ardından bu metin değerleri bir yordam veya deyimi geçirin. Bu seçenek, yordam veya unbundling ve veri yapıları doğrulamak için gerekli mantığı bildirimini değerleri gerektirir.  
   
@@ -50,7 +52,7 @@ Tablo değerli parametreleri birden çok istemci uygulamasından veri satırı s
 -   Kullanım `bcp` yardımcı programı veya <xref:System.Data.SqlClient.SqlBulkCopy> birçok veri satırı bir tabloya yüklemek için nesne. Bu teknik çok verimli olmakla birlikte, verileri bir geçici bir tablo veya tablo değişkeni içine yüklenir sürece, sunucu tarafı işleme desteklemez.  
   
 ## <a name="creating-table-valued-parameter-types"></a>Tablo değerli parametre türleri oluşturma  
- Tablo değerli parametreleri kullanılarak tanımlanmış kesin türü belirtilmiş tablo yapılarının dayanır [!INCLUDE[tsql](../../../../../includes/tsql-md.md)] CREATE TYPE deyimleri. Bir tablo türü oluşturmak ve yapısında tanımlamak zorunda [!INCLUDE[ssNoVersion](../../../../../includes/ssnoversion-md.md)] istemci uygulamalarınızda tablo değerli parametreleri kullanmadan önce. Tablo türleri oluşturma hakkında daha fazla bilgi için bkz: [kullanıcı tanımlı tablo türlerinde](http://go.microsoft.com/fwlink/?LinkID=98364) içinde [!INCLUDE[ssNoVersion](../../../../../includes/ssnoversion-md.md)] Books Online.  
+ Tablo değerli parametreleri kullanılarak tanımlanmış kesin türü belirtilmiş tablo yapılarının dayanır [!INCLUDE[tsql](../../../../../includes/tsql-md.md)] CREATE TYPE deyimleri. Bir tablo türü oluşturmak, istemci uygulamalarınızda tablo değerli parametreleri kullanabilmeniz için önce SQL Server yapısı tanımlamanız gerekir. Tablo türleri oluşturma hakkında daha fazla bilgi için bkz: [kullanıcı tanımlı tablo türlerinde](http://go.microsoft.com/fwlink/?LinkID=98364) SQL Server Books Online.  
   
  Aşağıdaki deyim adlı kullanıcı, Categoryıd'si ve CategoryName sütundan oluşan CategoryTableType adlı bir tablo türü oluşturur:  
   
@@ -90,14 +92,14 @@ INSERT INTO dbo.Categories (CategoryID, CategoryName)
   
 -   Tablo değerli parametreleri geçiremezsiniz [CLR kullanıcı tanımlı işlevler](http://msdn.microsoft.com/library/ms131077.aspx).  
   
--   Tablo değerli parametreleri yalnızca benzersiz veya birincil anahtar kısıtlamalarını desteklemek için sıralanabilir. [!INCLUDE[ssNoVersion](../../../../../includes/ssnoversion-md.md)]Tablo değerli parametreleri istatistiklerle korumaz.  
+-   Tablo değerli parametreleri yalnızca benzersiz veya birincil anahtar kısıtlamalarını desteklemek için sıralanabilir. SQL Server tablo değerli parametreleri istatistiklerle korumaz.  
   
 -   Tablo değerli parametreleri salt okunur [!INCLUDE[tsql](../../../../../includes/tsql-md.md)] kodu. Tablo değerli bir parametre satırlarını sütun değerleri güncelleştirilemiyor ve ekleyemez veya satırları silin. Saklı yordama geçirilen veya tablo değerli parametre deyiminde parametreli verileri değiştirmek için geçici bir tablo veya tablo değişkeni verileri eklemeniz gerekir.  
   
 -   Tablo değerli parametreleri tasarımını değiştirmek için ALTER TABLE deyimleri kullanamaz.  
   
 ## <a name="configuring-a-sqlparameter-example"></a>SqlParameter örnek yapılandırma  
- <xref:System.Data.SqlClient>Tablo değerli parametrelerinden doldurma destekleyen <xref:System.Data.DataTable>, <xref:System.Data.Common.DbDataReader> veya <xref:System.Collections.Generic.IEnumerable%601>  \  <xref:Microsoft.SqlServer.Server.SqlDataRecord> nesneleri. Tablo değerli parametre için bir tür adını kullanarak belirtmelisiniz <xref:System.Data.SqlClient.SqlParameter.TypeName%2A> özelliği bir <xref:System.Data.SqlClient.SqlParameter>. `TypeName` Daha önce sunucuda oluşturulan uyumlu bir türü adı eşleşmelidir. Aşağıdaki kod parçası nasıl yapılandırılacağını göstermektedir <xref:System.Data.SqlClient.SqlParameter> veri eklemek için.  
+ <xref:System.Data.SqlClient> Tablo değerli parametrelerinden doldurma destekleyen <xref:System.Data.DataTable>, <xref:System.Data.Common.DbDataReader> veya <xref:System.Collections.Generic.IEnumerable%601>  \  <xref:Microsoft.SqlServer.Server.SqlDataRecord> nesneleri. Tablo değerli parametre için bir tür adını kullanarak belirtmelisiniz <xref:System.Data.SqlClient.SqlParameter.TypeName%2A> özelliği bir <xref:System.Data.SqlClient.SqlParameter>. `TypeName` Daha önce sunucuda oluşturulan uyumlu bir türü adı eşleşmelidir. Aşağıdaki kod parçası nasıl yapılandırılacağını göstermektedir <xref:System.Data.SqlClient.SqlParameter> veri eklemek için.  
   
 ```csharp  
 // Configure the command and parameter.  

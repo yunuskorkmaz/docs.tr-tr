@@ -11,17 +11,17 @@ helpviewer_keywords:
 - international user interface [WPF], XAML
 - globalization [WPF]
 ms.assetid: 4571ccfe-8a60-4f06-9b37-7ac0b1c2d10f
-caps.latest.revision: ''
+caps.latest.revision: 35
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: e6f39d40284e6212715d85fece545e653ff2e60a
-ms.sourcegitcommit: c883637b41ee028786edceece4fa872939d2e64c
-ms.translationtype: MT
+ms.openlocfilehash: 8bf63c59c0948dd8414232a52fc12fafa0d13aa1
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/26/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="globalization-for-wpf"></a>WPF için Genelleştirme
 Bu konuda yazarken bilmeniz gereken sorunlar açıklanır [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] küresel pazarda uygulamaları. Genelleştirme programlama öğeleri tanımlanan [!INCLUDE[TLA#tla_net](../../../../includes/tlasharptla-net-md.md)] içinde `System.Globalization`.  
@@ -47,7 +47,7 @@ Aşağıdaki örnekte bir onaltılı karakter başvurusunu gösterir. Olan bildi
 ```
 
 <a name="encoding"></a>   
-### <a name="encoding"></a>Encoding  
+### <a name="encoding"></a>Kodlama  
  Tarafından desteklenen kodlama [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] olan [!INCLUDE[TLA#tla_ascii](../../../../includes/tlasharptla-ascii-md.md)], [!INCLUDE[TLA2#tla_unicode](../../../../includes/tla2sharptla-unicode-md.md)] UTF-16 ve UTF-8. Kodlama deyimi başındadır [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] belge. Kodlama özniteliği var ve bayt sırası yoksa UTF-8'e ayrıştırıcı varsayılan olarak ayarlanır. UTF-8 ve UTF-16 tercih edilen kodlamaları desteklenmektedir. UTF-7 desteklenmez. Aşağıdaki örnek, bir UTF-8 kodlaması belirtmek gösterilmiştir bir [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] dosyası.  
   
 ```  
@@ -76,7 +76,7 @@ Aşağıdaki örnekte bir onaltılı karakter başvurusunu gösterir. Olan bildi
   
 <a name="intl_text"></a>   
 ### <a name="international-text"></a>Uluslararası metin  
- [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] tümü için yerleşik işleme içerir [!INCLUDE[TLA#tla_winfx](../../../../includes/tlasharptla-winfx-md.md)] yazı sistemlerinde desteklenir.  
+ [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] tüm desteklenen Microsoft .NET Framework yazı sistemleri için yerleşik işleme içerir.  
   
  Aşağıdaki komut dosyaları şu anda desteklenir:  
   
@@ -90,17 +90,17 @@ Aşağıdaki örnekte bir onaltılı karakter başvurusunu gösterir. Olan bildi
   
 -   Yunanca  
   
--   Gujarati  
+-   Gucerat dili  
   
--   Gurmukhi  
+-   Gurmuki  
   
 -   İbranice  
   
 -   Kavramsal betikler  
   
--   Kannada  
+-   Kannada dili  
   
--   Lao  
+-   Laos  
   
 -   Latin  
   
@@ -126,13 +126,13 @@ Aşağıdaki örnekte bir onaltılı karakter başvurusunu gösterir. Olan bildi
   
  Aşağıdaki komut dosyaları şu anda desteklenmez:  
   
--   Khmer  
+-   Khmer dili  
   
 -   Eski Hangul Kore dili  
   
 -   Myanmar  
   
--   Sinhala  
+-   Sinhali dili  
   
  Tüm yazı sistemi altyapıları Destek [!INCLUDE[TLA#tla_opentype](../../../../includes/tlasharptla-opentype-md.md)] yazı tipi. [!INCLUDE[TLA2#tla_opentype](../../../../includes/tla2sharptla-opentype-md.md)] yazı tipleri içerebilir [!INCLUDE[TLA2#tla_opentype](../../../../includes/tla2sharptla-opentype-md.md)] daha iyi uluslararası ve Gelişmiş tipografik yazı tipleri tasarlamak için yazı tipi oluşturucularını etkinleştiren Düzen tabloları. [!INCLUDE[TLA2#tla_opentype](../../../../includes/tla2sharptla-opentype-md.md)] Yazı tipi Düzen tabloları metin düzenini geliştirmek metin işleme uygulamalarını etkinleştirme karakter kısaltmaları, karakter konumlandırma, düzeltme ve temel konumlandırma, ilgili bilgiler içerir.  
   
@@ -158,7 +158,7 @@ Aşağıdaki örnekte bir onaltılı karakter başvurusunu gösterir. Olan bildi
   
 <a name="localizable_ui"></a>   
 ### <a name="localizable-user-interface"></a>Yerelleştirilebilir kullanıcı arabirimi  
- [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] uygulamaları [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] tanımlamak için kendi [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)]. [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] geliştiricilerin özellikleri ve mantığı kümesiyle nesneleri hiyerarşisini belirtin olanak tanır. Birincil kullanımını [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] geliştirmek için [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] herhangi bir hiyerarşi belirtmek için uygulamalar ancak kullanılabilir [!INCLUDE[TLA#tla_clr](../../../../includes/tlasharptla-clr-md.md)] nesneleri. Çoğu geliştiricilerin [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] kendi uygulamanın belirtmek için [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] ve bir programlama dili gibi kullandığınız [!INCLUDE[TLA#tla_cshrp](../../../../includes/tlasharptla-cshrp-md.md)] kullanıcı etkileşimi tepki vermek için.  
+ [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] uygulamaları [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] tanımlamak için kendi [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)]. [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] geliştiricilerin özellikleri ve mantığı kümesiyle nesneleri hiyerarşisini belirtin olanak tanır. Birincil kullanımını [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] geliştirmek için [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] herhangi bir hiyerarşi belirtmek için uygulamalar ancak kullanılabilir [!INCLUDE[TLA#tla_clr](../../../../includes/tlasharptla-clr-md.md)] nesneleri. Çoğu geliştiricilerin [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] kendi uygulamanın belirtmek için [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] ve kullanıcı etkileşimi tepki vermeye yönelik bir programlama dili gibi C# kullanın.  
   
  Kaynak açısından, bir [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] dile bağlı tanımlamak için tasarlanan dosya [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] bir kaynak öğesidir ve bu nedenle, son dağıtım biçimi uluslararası dilleri desteklemek için yerelleştirilebilir olmalıdır. Çünkü [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] olayları birçok işleyemez [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] uygulamalar bunu yapmak için kod blokları içerir. Daha fazla bilgi için bkz: [XAML genel bakış (WPF)](../../../../docs/framework/wpf/advanced/xaml-overview-wpf.md). Kod çıkarılır ve farklı ikili dosyalar içinde derlenir olduğunda bir [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] dosya XAML BAML forma simgeleştirilmiş. XAML dosyaları, görüntüler ve diğer yönetilen kaynak nesne türlerini BAML biçiminde katıştırılmış diğer dillere yerelleştirilmesi, uydu kaynak assembly veya ana derleme yerelleştirme gerekli olmadığında.  
   

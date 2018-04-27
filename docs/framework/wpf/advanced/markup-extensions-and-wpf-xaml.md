@@ -23,17 +23,17 @@ helpviewer_keywords:
 - characters [WPF], curly brace
 - DynamicResource markup extensions [WPF]
 ms.assetid: 618dc745-8b14-4886-833f-486d2254bb78
-caps.latest.revision: ''
+caps.latest.revision: 26
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: 5e6dec42d40039f9cc23ba976ecf421f6471888e
-ms.sourcegitcommit: c883637b41ee028786edceece4fa872939d2e64c
+ms.openlocfilehash: cf1d7fda58c3bca0f9d76c3c4d3b8d22545a9912
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/26/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="markup-extensions-and-wpf-xaml"></a>Biçimlendirme Uzantıları ve WPF XAML
 Bu konu, kendi sözdizimi kurallarına, amaç ve bunları altını çizen sınıfı nesne modeli de dahil olmak üzere XAML, biçimlendirme uzantıları kavramı tanıtır. Biçimlendirme uzantıları bir XAML dili ve XAML Hizmetleri .NET uygulaması genel özelliğidir. Bu konuda özellikle kullanımda WPF XAML işaretleme uzantılarına ayrıntılarını verir.  
@@ -64,7 +64,7 @@ Bu konu, kendi sözdizimi kurallarına, amaç ve bunları altını çizen sını
 -   `x:Array` XAML sözdizimi, durumlarda koleksiyonu desteği WPF temel öğeleri tarafından sağlanan ve denetim modelleri kasıtlı olarak kullanılmaz genel dizilerde oluşturulması için destek sağlar. Ayrıntılar için bkz [x: Array işaretleme uzantısı](../../../../docs/framework/xaml-services/x-array-markup-extension.md).  
   
 > [!NOTE]
->  `x:` Öneki, XAML dili ön tanımlı bir XAML dosyası veya üretim kök öğesinin tipik XAML ad alanı eşlemesi için kullanılır. Örneğin, [!INCLUDE[vs_current_short](../../../../includes/vs-current-short-md.md)] WPF uygulamaları için şablonlar başlatmak bunu kullanan XAML dosyası `x:` eşleme. Kendi XAML ad alanı eşlemesi farklı önek belirteci seçebilir, ancak bu belgeleri varsayılan varsayacak `x:` XAML ad uzayı XAML dili için tanımlanmış bir parçası olan bu varlıkların aygıtlardır tanımlamanın bir araç olarak eşleme WPF ile varsayılan ad alanı veya diğer XAML ad uzayları belirli bir framework ilişkili değil.  
+>  `x:` Öneki, XAML dili ön tanımlı bir XAML dosyası veya üretim kök öğesinin tipik XAML ad alanı eşlemesi için kullanılır. Örneğin, bunu kullanan XAML dosyası WPF uygulamalar için Visual Studio şablonları başlatmak `x:` eşleme. Kendi XAML ad alanı eşlemesi farklı önek belirteci seçebilir, ancak bu belgeleri varsayılan varsayacak `x:` XAML ad uzayı XAML dili için tanımlanmış bir parçası olan bu varlıkların aygıtlardır tanımlamanın bir araç olarak eşleme WPF ile varsayılan ad alanı veya diğer XAML ad uzayları belirli bir framework ilişkili değil.  
   
 <a name="WPF_Specific_Markup_Extensions"></a>   
 ## <a name="wpf-specific-markup-extensions"></a>WPF özgü biçimlendirme uzantıları  
@@ -112,7 +112,7 @@ Bu konu, kendi sözdizimi kurallarına, amaç ve bunları altını çizen sını
   
 <a name="EscapeSequences"></a>   
 ## <a name="escape-sequences-and-markup-extensions"></a>Kaçış sıraları ve İşaretleme uzantıları  
- XAML işlemcide işleme özniteliğini süslü ayraçlar biçimlendirme uzantısı dizisi göstergesi olarak kullanır. Değişmez değer kuşak tarafından izlenen bir boş kaşlı ayraç çifti kullanarak bir kaçış sırası girerek değişmez değer kuşak karakter öznitelik değer gerekirse oluşturmak mümkündür. Bkz: [{} kaçış sırası - biçimlendirme uzantısı](../../xaml-services/escape-sequence-markup-extension.md).  
+ XAML işlemcide işleme özniteliğini süslü ayraçlar biçimlendirme uzantısı dizisi göstergesi olarak kullanır. Değişmez değer kuşak tarafından izlenen bir boş kaşlı ayraç çifti kullanarak bir kaçış sırası girerek değişmez değer kuşak karakter öznitelik değer gerekirse oluşturmak mümkündür. Bkz: [ {} çıkış sırası - biçimlendirme uzantısı](../../xaml-services/escape-sequence-markup-extension.md).  
   
 <a name="Nesting"></a>   
 ## <a name="nesting-markup-extensions-in-xaml-usage"></a>Biçimlendirme uzantıları XAML kullanımı iç içe geçme  

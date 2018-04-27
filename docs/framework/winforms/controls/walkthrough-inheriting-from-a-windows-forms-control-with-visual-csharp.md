@@ -1,12 +1,13 @@
 ---
 title: "İzlenecek yol: Visual C# ile beraber Windows Forms Denetimi'nden Devralma"
-ms.custom: 
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-winforms
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-winforms
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - inheritance [Windows Forms], custom controls
@@ -15,16 +16,17 @@ helpviewer_keywords:
 - inheritance [Windows Forms], walkthroughs
 - custom controls [Windows Forms], inheritance
 ms.assetid: 09476da0-8d4c-4a4c-b969-649519dfb438
-caps.latest.revision: "17"
+caps.latest.revision: 17
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: adc8e4321dccea34b7d3132b2052ee9baa98a868
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.workload:
+- dotnet
+ms.openlocfilehash: cdf472776fc293bc5dfa1db940d23c6a297767e7
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="walkthrough-inheriting-from-a-windows-forms-control-with-visual-c"></a>İzlenecek yol: Visual C# ile beraber Windows Forms Denetimi'nden Devralma #
 İle [!INCLUDE[csprcslong](../../../../includes/csprcslong-md.md)], güçlü özel denetimlerde oluşturabilirsiniz *devralma*. Devralma sayesinde, tüm standart Windows Forms denetimleri devralınmış işlevselliğini korur, ancak ayrıca özel işlevselliğine sahiptir denetimleri oluşturabilirsiniz. Bu kılavuzda, adlı basit bir devralınan denetim oluşturacak `ValueButton`. Bu düğme standart Windows formlarının dışında işlevselliği devralır <xref:System.Windows.Forms.Button> denetlemek ve adlı özel bir özellik kullanıma `ButtonValue`.  
@@ -39,7 +41,7 @@ ms.lasthandoff: 01/19/2018
   
 1.  Üzerinde **dosya** menüsündeki **yeni** ve ardından **proje** açmak için **yeni proje** iletişim kutusu.  
   
-2.  Seçin **Windows Forms Denetim Kitaplığı** proje şablonu listesinden [!INCLUDE[csprcs](../../../../includes/csprcs-md.md)] projeleri ve türü `ValueButtonLib` içinde **adı** kutusu.  
+2.  Seçin **Windows Forms Denetim Kitaplığı** proje şablonu Visual C# projeleri ve tür listesinden `ValueButtonLib` içinde **adı** kutusu.  
   
      Proje adı `ValueButtonLib`, kök ad alanı için varsayılan olarak da atanmış. Kök ad derleme bileşenlerinde adlarını nitelemek için kullanılır. Örneğin, iki derleme adlı bileşenleri sağlarsanız `ValueButton`, belirtebilirsiniz, `ValueButton` bileşenini kullanarak `ValueButtonLib.ValueButton`. Daha fazla bilgi için bkz: [ad alanları](../../../csharp/programming-guide/namespaces/index.md).  
   
@@ -146,7 +148,7 @@ ms.lasthandoff: 01/19/2018
   
 11. Gelen **hata ayıklama** menüsünde, select **hata ayıklamayı Başlat**.  
   
-     `Form1`görünür.  
+     `Form1` görünür.  
   
 12. Tıklatın `valueButton1`.  
   

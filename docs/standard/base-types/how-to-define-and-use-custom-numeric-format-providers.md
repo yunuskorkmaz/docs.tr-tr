@@ -1,12 +1,12 @@
 ---
-title: "Nasıl yapılır: Özel Sayısal Biçim Sağlayıcıları Tanımlama ve Kullanma"
-ms.custom: 
+title: 'Nasıl yapılır: Özel Sayısal Biçim Sağlayıcıları Tanımlama ve Kullanma'
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology: dotnet-standard
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - csharp
@@ -21,18 +21,18 @@ helpviewer_keywords:
 - format providers [.NET Framework]
 - custom format strings
 ms.assetid: a281bfbf-6596-45ed-a2d6-3782d535ada2
-caps.latest.revision: "11"
+caps.latest.revision: 11
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: f8f06335d96b3e71f14b3df6b40ef3691c0915f1
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: eb578b18b3d3ab7ae617873a33745f36e0e8cacb
+ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="how-to-define-and-use-custom-numeric-format-providers"></a>Nasıl yapılır: Özel Sayısal Biçim Sağlayıcıları Tanımlama ve Kullanma
 [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] Sayısal değerleri dize gösterimini üzerinde kapsamlı denetim sağlar. Sayısal değerler biçimini özelleştirmek için aşağıdaki özellikleri destekler:  
@@ -49,7 +49,7 @@ ms.lasthandoff: 12/23/2017
   
 1.  Arabirimini uygulayan bir sınıf tanımlama <xref:System.IFormatProvider> ve <xref:System.ICustomFormatter> arabirimleri.  
   
-2.  Uygulama <xref:System.IFormatProvider.GetFormat%2A?displayProperty=nameWithType> yöntemi. <xref:System.IFormatProvider.GetFormat%2A>bir geri çağırma yöntemi, biçimlendirme yöntemi (gibi <xref:System.String.Format%28System.IFormatProvider%2CSystem.String%2CSystem.Object%5B%5D%29?displayProperty=nameWithType> yöntemi) gerçekte özel biçimlendirme gerçekleştirmek için sorumlu nesnesini almak için çağırır. Tipik bir uyarlamasını <xref:System.IFormatProvider.GetFormat%2A> şunları yapar:  
+2.  Uygulama <xref:System.IFormatProvider.GetFormat%2A?displayProperty=nameWithType> yöntemi. <xref:System.IFormatProvider.GetFormat%2A> bir geri çağırma yöntemi, biçimlendirme yöntemi (gibi <xref:System.String.Format%28System.IFormatProvider%2CSystem.String%2CSystem.Object%5B%5D%29?displayProperty=nameWithType> yöntemi) gerçekte özel biçimlendirme gerçekleştirmek için sorumlu nesnesini almak için çağırır. Tipik bir uyarlamasını <xref:System.IFormatProvider.GetFormat%2A> şunları yapar:  
   
     1.  Belirler olup olmadığını <xref:System.Type> nesnesi geçirildi bir yöntem olarak parametre temsil eden bir <xref:System.ICustomFormatter> arabirimi.  
   
@@ -99,7 +99,7 @@ ms.lasthandoff: 12/23/2017
  Bu örnekte, yöntem uygulayan <xref:System.ICustomFormatter.Format%2A?displayProperty=nameWithType> bir geri çağırma yöntemi olarak hizmet vermeye yönelik <xref:System.String.Format%28System.IFormatProvider%2CSystem.String%2CSystem.Object%5B%5D%29?displayProperty=nameWithType> yöntemi. Bu nedenle, inceler `formatProvider` parametresi geçerli bir başvuru içerip içermediğini belirlemek için `TelephoneFormatter` nesnesi. Ancak, yöntem doğrudan kodunuzdan çağrılabilir. Bu durumda, kullanabileceğiniz `formatProvider` sağlamak için parametre bir <xref:System.Globalization.CultureInfo> veya <xref:System.Globalization.NumberFormatInfo> kültüre özgü biçimlendirme bilgileri sağlayan nesne.  
   
 ## <a name="compiling-the-code"></a>Kod Derleniyor  
- Kodu, csc.exe veya vb.exe kullanarak komut satırında derleyin. Kodu [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] içinde derlemek için, bir konsol uygulaması projesi şablonu içine koyun.  
+ Kodu, csc.exe veya vb.exe kullanarak komut satırında derleyin. Visual Studio'da Kodu derlemek için bir konsol uygulama projesi şablonunda yerleştirin.  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
  [Biçimlendirme İşlemlerini Gerçekleştirme](../../../docs/standard/base-types/performing-formatting-operations.md)

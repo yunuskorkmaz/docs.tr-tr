@@ -1,12 +1,13 @@
 ---
-title: "Nasıl yapılır: Yazdır İletişim Kutusu Çağırma"
-ms.custom: 
+title: 'Nasıl yapılır: Yazdır İletişim Kutusu Çağırma'
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-wpf
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-wpf
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - csharp
@@ -15,16 +16,17 @@ helpviewer_keywords:
 - invoking print dialogs [WPF]
 - print dialogs [WPF], invoking
 ms.assetid: e3a2c84c-74fe-45a4-8501-5813f9dbfed2
-caps.latest.revision: "10"
+caps.latest.revision: 10
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 8831566daca6ca36b40fbaaedbec9ff3ca8aaa99
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 65ea65e13d3217466eeacdac4c386cc02c68b29a
+ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="how-to-invoke-a-print-dialog"></a>Nasıl yapılır: Yazdır İletişim Kutusu Çağırma
 Uygulamanızdan yazdırma olanağı sağlamak için yalnızca oluşturma açın ve bir <xref:System.Windows.Controls.PrintDialog> nesnesi.  
@@ -38,7 +40,7 @@ Uygulamanızdan yazdırma olanağı sağlamak için yalnızca oluşturma açın 
  İletişim kutusu açıldıktan sonra kullanıcıların bilgisayarlarında yüklü yazıcılar seçmek mümkün olacaktır. Seçme seçeneği de sağlanır [Microsoft XPS Belge Yazıcısı](http://go.microsoft.com/fwlink/?LinkId=147319) oluşturmak için bir [!INCLUDE[TLA#tla_xps](../../../../includes/tlasharptla-xps-md.md)] yazdırma yerine dosya.  
   
 > [!NOTE]
->  <xref:System.Windows.Controls.PrintDialog?displayProperty=nameWithType> Denetimini [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)], bu konuda ele alınmıştır karıştırılmamalıdır ile <xref:System.Windows.Forms.PrintDialog?displayProperty=nameWithType> bileşenini [!INCLUDE[TLA2#tla_winforms](../../../../includes/tla2sharptla-winforms-md.md)].  
+>  <xref:System.Windows.Controls.PrintDialog?displayProperty=nameWithType> Denetimini [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)], bu konuda ele alınmıştır karıştırılmamalıdır ile <xref:System.Windows.Forms.PrintDialog?displayProperty=nameWithType> Windows formlarının bileşen.  
   
  NET olarak söylemek kullanabileceğiniz <xref:System.Windows.Controls.PrintDialog.PrintDocument%2A> hiç iletişim kutusunu açmadan yöntemi. Bu anlamda denetim görünmeyen yazdırma bileşeni kullanılabilir. Ancak performans nedenleriyle kullanın ya da daha iyi olur <xref:System.Printing.PrintQueue.AddJob%2A> yöntemi veya çok biri <xref:System.Windows.Xps.XpsDocumentWriter.Write%2A> ve <xref:System.Windows.Xps.XpsDocumentWriter.WriteAsync%2A> yöntemlerini <xref:System.Windows.Xps.XpsDocumentWriter>. Bu konu hakkında daha fazla bilgi için bkz: [program aracılığıyla yazdırma XPS dosyaları](../../../../docs/framework/wpf/advanced/how-to-programmatically-print-xps-files.md) ve.  
   

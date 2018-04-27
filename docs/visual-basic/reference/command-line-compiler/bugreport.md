@@ -13,11 +13,11 @@ helpviewer_keywords:
 ms.assetid: e4325406-8dbd-4b48-b311-9ee0799e48bb
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: 766a4252fd77be95e2641239cba53a4d90e0cb1d
-ms.sourcegitcommit: 498799639937c89de777361aab74261efe7b79ea
+ms.openlocfilehash: 097435a3d8acda6325b27abaf3ca0fd2839d344e
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/22/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="-bugreport"></a>-bugreport
 Bir hata raporu dosyası oluştururken kullanabileceğiniz bir dosya oluşturur.  
@@ -54,7 +54,7 @@ Bir hata raporu dosyası oluştururken kullanabileceğiniz bir dosya oluşturur.
 > [!IMPORTANT]
 >  `-bugreport` Seçeneği olası duyarlı bilgileri içeren bir dosya oluşturur. Bu, geçerli saati, derleyici sürümü içerir [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] sürümü, işletim sistemi sürümü, kullanıcı adı, hangi derleyici çalıştırıldı, tüm kaynak kodu ve ikili biçimi herhangi başvurulan derleme komut satırı bağımsız değişkenleri. Bu seçenek, bir sunucu tarafı derlenmesi için Web.config dosyasındaki komut satırı seçenekleri belirterek erişilebilir bir [!INCLUDE[vstecasp](~/includes/vstecasp-md.md)] uygulama. Bunu önlemek için Machine.config dosyasının sunucuda derleme kullanıcıların izin vermeyecek şekilde değiştirin.  
   
- Bu seçenek ile kullanıldığında `-errorreport:prompt`, `-errorreport:queue`, veya `-errorreport:send`, bilgileri bir iç derleyici hatası uygulamanızı karşılaştığında `file` Microsoft Corporation'ın için gönderilir. Bu bilgileri Microsoft mühendisleri hatanın nedenini belirlemeye yardımcı olur ve sonraki sürümü artırmanıza yardımcı olabilecek [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]. Varsayılan olarak, hiçbir bilgi Microsoft'a gönderilmez. Ancak, ne zaman, derleme bir uygulama kullanarak `-errorreport:queue`, varsayılan olarak etkindir, uygulamanın kendi hata raporlarını toplar. Ardından, bilgisayarın yönetici oturum açtığında, hata raporlama sistem oturum açma işleminden sonra oluştu herhangi bir hata raporlarını Microsoft'a iletmek yöneticinin sağlar bir açılır pencere görüntüler.  
+ Bu seçenek ile kullanıldığında `-errorreport:prompt`, `-errorreport:queue`, veya `-errorreport:send`, bilgileri bir iç derleyici hatası uygulamanızı karşılaştığında `file` Microsoft Corporation'ın için gönderilir. Bu bilgileri Microsoft mühendisleri hatanın nedenini belirlemeye yardımcı olur ve Visual Basic sonraki sürümü artırmaya yardımcı. Varsayılan olarak, hiçbir bilgi Microsoft'a gönderilmez. Ancak, ne zaman, derleme bir uygulama kullanarak `-errorreport:queue`, varsayılan olarak etkindir, uygulamanın kendi hata raporlarını toplar. Ardından, bilgisayarın yönetici oturum açtığında, hata raporlama sistem oturum açma işleminden sonra oluştu herhangi bir hata raporlarını Microsoft'a iletmek yöneticinin sağlar bir açılır pencere görüntüler.  
   
 > [!NOTE]
 >  `/bugreport` Kullanılabilir olduğundan komut satırından derleme zaman yalnızca; seçeneği Visual Studio geliştirme ortamında kullanılabilir değil.  

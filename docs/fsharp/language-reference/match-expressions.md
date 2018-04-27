@@ -1,22 +1,20 @@
 ---
-title: "Eşleşme İfadeleri (F#)"
-description: "F # eşleşme ifadesi karşılaştırmaya ifade desenleri dayalı dallanma denetim nasıl sağladığını öğrenin."
-keywords: "Visual f #, f # işlevsel programlama"
+title: 'Eşleşme ifadeleri (F #)'
+description: 'F # eşleşme ifadesi karşılaştırmaya ifade desenleri dayalı dallanma denetim nasıl sağladığını öğrenin.'
 author: cartermp
 ms.author: phcart
-ms.date: 05/16/2016
+ms.date: 04/19/2018
 ms.topic: language-reference
 ms.prod: .net
 ms.technology: devlang-fsharp
 ms.devlang: fsharp
-ms.assetid: 8854b713-255a-408d-942a-e80ab52fd2a4
-ms.openlocfilehash: c8b9be744cfa7bc76f0d663b12abd66f8757fc56
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.openlocfilehash: f843e6fde98eae8a10235dd5cae38ffc10a4fb9f
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 04/26/2018
 ---
-# <a name="match-expressions"></a>Eşleşme İfadeleri
+# <a name="match-expressions"></a>Eşleşme ifadeleri
 
 `match` İfade karşılaştırmaya ifade desenleri dayalı dallanma denetim sağlar.
 
@@ -48,7 +46,7 @@ fun arg ->
     | pattern1 [ when condition ] -> result-expression1
     | pattern2 [ when condition ] -> result-expression2
     | ...
-```    
+```
 
 Lambda ifadeleri hakkında daha fazla bilgi için bkz: [Lambda ifadeleri: `fun` anahtar sözcüğü](functions/lambda-expressions-the-fun-keyword.md).
 
@@ -66,14 +64,29 @@ Aşağıdaki örnekte değişken deseni için sayısal bir aralık belirtmek iç
 
 [!code-fsharp[Main](../../../samples/snippets/fsharp/lang-ref-2/snippet4602.fs)]
 
-Değişmez değerler dışında değerleri düzende kullanılamadığından kullanmanız gerektiğini unutmayın bir `when` değerle giriş kısmı karşılaştırmak varsa, yan tümcesi. Bu aşağıdaki kodda gösterilir.
+Değişmez değerler dışında değerleri düzende kullanılamadığından kullanmanız gerektiğini unutmayın bir `when` değerle giriş kısmı karşılaştırmak varsa, yan tümcesi. Bu aşağıdaki kodda gösterilir:
 
 [!code-fsharp[Main](../../../samples/snippets/fsharp/lang-ref-2/snippet4603.fs)]
 
-## <a name="see-also"></a>Ayrıca Bkz.
+Birleşim deseni koruyucu tarafından kapsanan, koruma için geçerli olduğunu unutmayın **tüm** yalnızca sonuncu desen. Örneğin, aşağıdaki kod, koruma verilen `when a > 12` hem de geçerli `A a` ve `B a`:
 
-[F # dili başvurusu](index.md)
+```fsharp
+type Union =
+    | A of int
+    | B of int
 
-[Etkin desenler](active-patterns.md)
+let foo() =
+    let test = A 42
+    match test with
+    | A a
+    | B a when a > 41 -> a // the guard applies to both patterns
+    | _ -> 1
 
-[Desen eşleştirme](pattern-matching.md)
+foo() // returns 42
+```
+
+## <a name="see-also"></a>Ayrıca bkz.
+
+[F# Dili Başvurusu](index.md)  
+[Etkin Desenler](active-patterns.md)  
+[Desen Eşleştirme](pattern-matching.md)  

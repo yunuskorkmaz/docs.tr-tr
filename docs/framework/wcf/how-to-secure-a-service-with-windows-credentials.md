@@ -1,13 +1,13 @@
 ---
-title: "Nasıl yapılır: Windows Kimlik Bilgileri ile Bir Hizmeti Güvenli Hale Getirme"
-ms.custom: 
+title: 'Nasıl yapılır: Windows Kimlik Bilgileri ile Bir Hizmeti Güvenli Hale Getirme'
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - dotnet-clr
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - csharp
@@ -15,20 +15,20 @@ dev_langs:
 helpviewer_keywords:
 - WCF, security
 ms.assetid: d171b5ca-96ef-47ff-800c-c138023cf76e
-caps.latest.revision: 
+caps.latest.revision: 26
 author: BrucePerlerMS
 ms.author: bruceper
 manager: mbaldwin
 ms.workload:
 - dotnet
-ms.openlocfilehash: 6a5225f25ca921407d64f579bbc7c204917ff260
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: cbe29ed57a7eee3a74166dabd2b8931e73cd2860
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="how-to-secure-a-service-with-windows-credentials"></a>Nasıl yapılır: Windows Kimlik Bilgileri ile Bir Hizmeti Güvenli Hale Getirme
-Bu konu, taşıma güvenliği etkinleştirmek gösterilmiştir bir [!INCLUDE[indigo1](../../../includes/indigo1-md.md)] bir Windows etki alanında bulunan ve aynı etki alanındaki istemciler tarafından çağrılan hizmet. [!INCLUDE[crabout](../../../includes/crabout-md.md)]Bu senaryo, bkz: [Windows kimlik doğrulama ile taşıma güvenliği](../../../docs/framework/wcf/feature-details/transport-security-with-windows-authentication.md). Örnek bir uygulama için bkz: [WSHttpBinding](../../../docs/framework/wcf/samples/wshttpbinding.md) örnek.  
+Bu konu, taşıma güvenliği etkinleştirmek gösterilmiştir bir [!INCLUDE[indigo1](../../../includes/indigo1-md.md)] bir Windows etki alanında bulunan ve aynı etki alanındaki istemciler tarafından çağrılan hizmet. [!INCLUDE[crabout](../../../includes/crabout-md.md)] Bu senaryo, bkz: [Windows kimlik doğrulama ile taşıma güvenliği](../../../docs/framework/wcf/feature-details/transport-security-with-windows-authentication.md). Örnek bir uygulama için bkz: [WSHttpBinding](../../../docs/framework/wcf/samples/wshttpbinding.md) örnek.  
   
  Bu konu, varolan sözleşme arabirimi varsa ve uygulama zaten tanımlanmış ve açın ekleyen varsayar. Varolan hizmet ve istemci de değiştirebilirsiniz.  
   
@@ -57,17 +57,17 @@ Bu konu, taşıma güvenliği etkinleştirmek gösterilmiştir bir [!INCLUDE[ind
      [!code-vb[c_SecureWindowsService#1](../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_securewindowsservice/vb/secureservice.vb#1)]  
   
 ### <a name="using-the-binding-in-a-service"></a>Bir hizmet olarak bağlama işlemini kullanma  
- Bir kendi kendini barındıran hizmet bağlama kullanmayı gösterir ikinci yordam budur. [!INCLUDE[crabout](../../../includes/crabout-md.md)]barındırma Hizmetleri Bkz: [barındırma hizmetleri](../../../docs/framework/wcf/hosting-services.md).  
+ Bir kendi kendini barındıran hizmet bağlama kullanmayı gösterir ikinci yordam budur. [!INCLUDE[crabout](../../../includes/crabout-md.md)] barındırma Hizmetleri Bkz: [barındırma hizmetleri](../../../docs/framework/wcf/hosting-services.md).  
   
 ##### <a name="to-use-a-binding-in-a-service"></a>Bir hizmet olarak bir bağlama kullanmak için  
   
 1.  Yukarıdaki yordamı koddan sonra bu yordamın kodu ekleyin.  
   
-2.  Oluşturma bir <xref:System.Type> adlı değişken `contractType` ve arabirim atamak (`ICalculator`). Kullanırken [!INCLUDE[vbprvb](../../../includes/vbprvb-md.md)], kullanın `GetType` C#, kullanım kullanırken işleci; `typeof` anahtar sözcüğü.  
+2.  Oluşturma bir <xref:System.Type> adlı değişken `contractType` ve arabirim atamak (`ICalculator`). Visual Basic, kullanırken `GetType` C#, kullanım kullanırken işleci; `typeof` anahtar sözcüğü.  
   
 3.  İkinci bir oluşturma `Type` adlı değişken `serviceType` ve uygulanan sözleşme atamak (`Calculator`).  
   
-4.  Bir örneğini oluşturmak <xref:System.Uri> adlı sınıf `baseAddress` hizmetin taban adresine sahip. Temel adres taşıma eşleşen bir düzeni olması gerekir. Bu durumda, aktarma düzeni HTTP ve özel adres içerir Tekdüzen Kaynak Tanımlayıcısı (URI) "localhost" ve bir bağlantı noktası numarası (8036) yanı sıra temel uç noktası adresi ("serviceModelSamples /): http://localhost:8036/serviceModelSamples /.  
+4.  Bir örneğini oluşturmak <xref:System.Uri> adlı sınıf `baseAddress` hizmetin taban adresine sahip. Temel adres taşıma eşleşen bir düzeni olması gerekir. Bu durumda, aktarma düzeni HTTP ve özel adres içerir Tekdüzen Kaynak Tanımlayıcısı (URI) "localhost" ve bir bağlantı noktası numarası (8036) yanı sıra temel uç noktası adresi ("serviceModelSamples /): http://localhost:8036/serviceModelSamples/.  
   
 5.  Bir örneğini oluşturmak <xref:System.ServiceModel.ServiceHost> ile sınıf `serviceType` ve `baseAddress` değişkenleri.  
   
@@ -87,7 +87,7 @@ Bu konu, taşıma güvenliği etkinleştirmek gösterilmiştir bir [!INCLUDE[ind
   
 ##### <a name="to-use-a-binding-in-a-client-with-code"></a>Kod ile bir istemci bir bağlama kullanmak için  
   
-1.  Hizmet meta verilerinden proxy kodu oluşturmak için SvcUtil.exe aracını kullanın. [!INCLUDE[crdefault](../../../includes/crdefault-md.md)][Nasıl yapılır: bir istemci oluşturmak](../../../docs/framework/wcf/how-to-create-a-wcf-client.md). Oluşturulan proxy kodu devraldığı <xref:System.ServiceModel.ClientBase%601> her istemci gerekli Oluşturucular, yöntemleri ve özellikleri ile iletişim kurmak için sahip olmasını sağlar sınıfı bir [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] hizmet. Bu örnekte, oluşturulan kod içeren `CalculatorClient` sınıfı, hangi uygular `ICalculator` servis kodunu uyumluluğunu etkinleştirme arabirimi.  
+1.  Hizmet meta verilerinden proxy kodu oluşturmak için SvcUtil.exe aracını kullanın. [!INCLUDE[crdefault](../../../includes/crdefault-md.md)] [Nasıl yapılır: bir istemci oluşturmak](../../../docs/framework/wcf/how-to-create-a-wcf-client.md). Oluşturulan proxy kodu devraldığı <xref:System.ServiceModel.ClientBase%601> her istemci gerekli Oluşturucular, yöntemleri ve özellikleri ile iletişim kurmak için sahip olmasını sağlar sınıfı bir [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] hizmet. Bu örnekte, oluşturulan kod içeren `CalculatorClient` sınıfı, hangi uygular `ICalculator` servis kodunu uyumluluğunu etkinleştirme arabirimi.  
   
 2.  Bu yordamın kodu başında eklenir `Main` istemci programı yöntemi.  
   
@@ -140,7 +140,7 @@ Bu konu, taşıma güvenliği etkinleştirmek gösterilmiştir bir [!INCLUDE[ind
   
 ##### <a name="to-use-a-binding-in-a-client-with-configuration"></a>Bir istemci yapılandırmasına sahip bir bağlama kullanmak için  
   
-1.  Hizmet meta verilerinden proxy kod ve yapılandırma dosyası oluşturmak için SvcUtil.exe aracını kullanın. [!INCLUDE[crdefault](../../../includes/crdefault-md.md)][Nasıl yapılır: bir istemci oluşturmak](../../../docs/framework/wcf/how-to-create-a-wcf-client.md).  
+1.  Hizmet meta verilerinden proxy kod ve yapılandırma dosyası oluşturmak için SvcUtil.exe aracını kullanın. [!INCLUDE[crdefault](../../../includes/crdefault-md.md)] [Nasıl yapılır: bir istemci oluşturmak](../../../docs/framework/wcf/how-to-create-a-wcf-client.md).  
   
 2.  Değiştir [ \<bağlamaları >](../../../docs/framework/configure-apps/file-schema/wcf/bindings.md) önceki bölümdeki yapılandırma koduyla üretilen yapılandırma dosyasının bölümü.  
   

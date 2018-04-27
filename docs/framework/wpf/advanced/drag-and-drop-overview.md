@@ -20,17 +20,17 @@ helpviewer_keywords:
 - drag-and-drop [WPF], events
 - drop targets [WPF], drag-and-drop
 ms.assetid: 1a5b27b0-0ac5-4cdf-86c0-86ac0271fa64
-caps.latest.revision: ''
+caps.latest.revision: 31
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: b7a69a4dcd5fc39b700bf9c3404e70d581509ebc
-ms.sourcegitcommit: c883637b41ee028786edceece4fa872939d2e64c
+ms.openlocfilehash: fe34933c19e7f8a50d144cad99b99decbd501965
+ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/26/2018
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="drag-and-drop-overview"></a>Sürükleme ve Bırakmaya Genel Bakış
 Bu konu, sürükle ve bırak desteği'ne genel bakış sağlar. [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] uygulamalar. Sürükle ve bırak fare (veya başka bir işaretleme aygıtı) bir veya daha fazla nesne seçmek için bu nesneleri sürükleyerek bazı istenilen bırakma hedefi üzerinden kullanılmasına veri aktarım yöntemi için yaygın olarak başvuruyor [!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)]ve bunları bırakma.  
@@ -44,7 +44,7 @@ Bu konu, sürükle ve bırak desteği'ne genel bakış sağlar. [!INCLUDE[TLA#tl
   
  Bir Sürükle ve bırak işlemi sırasında belirli eylemlerin uygulama belirli ve genellikle bağlam tarafından belirlenen var.  Örneğin, seçim dosyalarını bir klasöründen diğerine aynı depolama aygıtında sürükleme dosyaları varsayılan olarak, dosyaları sürükleme taşınırken bir [!INCLUDE[TLA#tla_unc](../../../../includes/tlasharptla-unc-md.md)] bir yerel klasör paylaşımına varsayılan olarak dosyalarını kopyalar.  
   
- Tarafından sağlanan sürükle ve bırak özellikleri [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] oldukça esnek ve çok çeşitli sürükle ve bırak senaryolarını desteklemek üzere özelleştirilebilir olacak şekilde tasarlanmıştır.  Düzenleme nesneleri, tek bir uygulama içinde ya da farklı uygulamalar arasında sürükle ve bırak destekler. Sürükleme ve bırakma arasında [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] uygulamaları ve diğer [!INCLUDE[TLA2#tla_win](../../../../includes/tla2sharptla-win-md.md)] uygulamaları tam olarak desteklenir.  
+ Tarafından sağlanan sürükle ve bırak özellikleri [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] oldukça esnek ve çok çeşitli sürükle ve bırak senaryolarını desteklemek üzere özelleştirilebilir olacak şekilde tasarlanmıştır.  Düzenleme nesneleri, tek bir uygulama içinde ya da farklı uygulamalar arasında sürükle ve bırak destekler. Sürükleme ve bırakma arasında [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] uygulamaları ve diğer Windows uygulamalarını tam olarak desteklenir.  
   
  İçinde [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)], her türlü <xref:System.Windows.UIElement> veya <xref:System.Windows.ContentElement> sürükle ve bırak içinde katılabilirsiniz. Olayları ve içinde tanımlanan sürükle ve bırak işlemleri için gereken yöntemleri <xref:System.Windows.DragDrop> sınıfı. <xref:System.Windows.UIElement> Ve <xref:System.Windows.ContentElement> sınıfları için diğer adlar içeren <xref:System.Windows.DragDrop> sınıfında olayları görünmesini sağlayacak şekilde ekli olaylar üyeleri listeler bir <xref:System.Windows.UIElement> veya <xref:System.Windows.ContentElement> temel bir öğe devralınır. Bu olaylara bağlı olan olay işleyicileri için temel bağlı <xref:System.Windows.DragDrop> ekli olayı ve aynı olay veri örneğini alır. Daha fazla bilgi için bkz: <xref:System.Windows.UIElement.Drop?displayProperty=nameWithType> olay.  
   

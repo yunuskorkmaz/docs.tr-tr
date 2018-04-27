@@ -1,26 +1,27 @@
 ---
-title: "Dizinler ve Dosyalar Özeti (Visual Basic)"
+title: Dizinler ve Dosyalar Özeti (Visual Basic)
 ms.date: 07/20/2015
 ms.prod: .net
-ms.suite: 
-ms.technology: devlang-visual-basic
+ms.suite: ''
+ms.technology:
+- devlang-visual-basic
 ms.topic: article
 helpviewer_keywords:
 - files [Visual Basic]
 - directories [Visual Basic], Visual Basic
 - files [Visual Basic], summary
 ms.assetid: 588b75fd-a09b-4381-822d-19868990c170
-caps.latest.revision: "15"
+caps.latest.revision: 15
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: b07c2c400bd682d2340349435d03e192a1840c6e
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 7df9d0de955e6d9a225373d3711948886cff4c97
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="directories-and-files-summary-visual-basic"></a>Dizinler ve Dosyalar Özeti (Visual Basic)
-[!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]Dil anahtar sözcükleri ve çalışma zamanı kitaplığı üyeleri amacına göre düzenlenir ve kullanın.  
+Visual Basic dil anahtar sözcükleri ve çalışma zamanı kitaplığı üyeleri amacına göre düzenlenir ve kullanın.  
   
  Kullanarak `My` özellik size daha fazla verimlilik ve performans bu üyeleri kullanmaktan dosya g/ç işlemlerinde. Daha fazla bilgi için bkz. <xref:Microsoft.VisualBasic.FileIO.FileSystem>.  
   
@@ -40,9 +41,9 @@ ms.lasthandoff: 11/21/2017
 |Bir dosya için öznitelik bilgileri ayarlayın.|<xref:Microsoft.VisualBasic.FileSystem.SetAttr%2A>|  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [Anahtar sözcükler](../../../visual-basic/language-reference/keywords/index.md)  
- [Visual Basic çalışma zamanı kitaplığı üyeleri](../../../visual-basic/language-reference/runtime-library-members.md)  
- [Dosyaları okuma](../../../visual-basic/developing-apps/programming/drives-directories-files/reading-from-files.md)  
- [Dosyalara yazma](../../../visual-basic/developing-apps/programming/drives-directories-files/writing-to-files.md)  
- [Oluşturma, silme ve dosyaları ve dizinleri taşıma](../../../visual-basic/developing-apps/programming/drives-directories-files/creating-deleting-and-moving-files-and-directories.md)  
- [TextFieldParser nesnesiyle metin dosyalarını ayrıştırma](../../../visual-basic/developing-apps/programming/drives-directories-files/parsing-text-files-with-the-textfieldparser-object.md)
+ [Anahtar Sözcükler](../../../visual-basic/language-reference/keywords/index.md)  
+ [Visual Basic Çalışma Süresi Kitaplık Üyeleri](../../../visual-basic/language-reference/runtime-library-members.md)  
+ [Dosyalardan Okuma](../../../visual-basic/developing-apps/programming/drives-directories-files/reading-from-files.md)  
+ [Dosyalara Yazma](../../../visual-basic/developing-apps/programming/drives-directories-files/writing-to-files.md)  
+ [Dosya ve Dizin Oluşturma, Silme ve Taşıma](../../../visual-basic/developing-apps/programming/drives-directories-files/creating-deleting-and-moving-files-and-directories.md)  
+ [TextFieldParser Nesnesiyle Metin Dosyalarını Ayrıştırma](../../../visual-basic/developing-apps/programming/drives-directories-files/parsing-text-files-with-the-textfieldparser-object.md)

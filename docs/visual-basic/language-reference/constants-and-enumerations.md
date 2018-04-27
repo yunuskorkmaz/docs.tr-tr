@@ -1,43 +1,44 @@
 ---
-title: "Sabitler ve Numaralandırmalar (Visual Basic)"
+title: Sabitler ve Numaralandırmalar (Visual Basic)
 ms.date: 07/20/2015
 ms.prod: .net
-ms.technology: devlang-visual-basic
+ms.technology:
+- devlang-visual-basic
 ms.topic: article
 helpviewer_keywords:
 - enumerations [Visual Basic]
 - constants [Visual Basic]
 - constants [Visual Basic], list of
 ms.assetid: 309c0ad5-83e4-4f96-99ea-83cd95107417
-caps.latest.revision: "18"
+caps.latest.revision: 18
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: 9fd298cc504f9e4faf5205e53ebbf2ee355a21b3
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
-ms.translationtype: MT
+ms.openlocfilehash: da42d58190e8069154cd8383cf0a87e0b19f5ae4
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="constants-and-enumerations-visual-basic"></a>Sabitler ve Numaralandırmalar (Visual Basic)
-[!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]önceden tanımlı sabitler ve numaralandırmalar geliştiriciler için bir dizi sağlar. Sabitler uygulama yürütme sabit kalır değerleri depolar. Numaralandırmalar ilgili sabitleri kümeleriyle çalışmak ve sabit değerleri adlarıyla ilişkilendirmek için kolay bir yol sağlamak.  
+Bir dizi önceden tanımlanmış sabitler ve numaralandırmalar geliştiriciler için Visual Basic sağlar. Sabitler uygulama yürütme sabit kalır değerleri depolar. Numaralandırmalar ilgili sabitleri kümeleriyle çalışmak ve sabit değerleri adlarıyla ilişkilendirmek için kolay bir yol sağlamak.  
   
 ## <a name="constants"></a>Sabitler  
   
 ### <a name="conditional-compilation-constants"></a>Koşullu derleme sabitleri  
  Koşullu derleme için kullanılabilen önceden tanımlanmış sabitleri aşağıdaki tabloda listelenmektedir.  
   
-|**Sabit**|**Açıklama**|  
+|**sabiti**|**Açıklama**|  
 |---|---|  
 |`CONFIG`|Geçerli ayarına karşılık gelen bir dize **etkin çözüm yapılandırması** kutusunda **Configuration Manager**.|  
 |`DEBUG`|A `Boolean` ayarlanabilir değer **proje özelliklerini** iletişim kutusu. Varsayılan olarak, bir proje için hata ayıklama yapılandırmasını tanımlayan `DEBUG`. Zaman `DEBUG` tanımlanan <xref:System.Diagnostics.Debug> sınıfı yöntemleri Oluştur çıktıya **çıkış** penceresi. Bunu tanımlı değil, <xref:System.Diagnostics.Debug> sınıfı yöntemleri derlenmemiş ve hiçbir hata ayıklama çıktısı oluşturulur.|  
 |`TARGET`|Proje veya komut satırı ayarını için çıktı türünü temsil eden bir dize **/target** seçeneği. Olası değerlerini `TARGET` şunlardır:<br /><br /> -bir Windows uygulaması için "winexe".<br />-bir konsol uygulaması için "exe".<br />-bir sınıf kitaplığı için "kitaplığı".<br />-bir modül için "modülü".<br />- **/Target** seçeneği kümesinde [!INCLUDE[vsprvs](~/includes/vsprvs-md.md)] tümleşik geliştirme ortamı. Daha fazla bilgi için bkz: [/target (Visual Basic)](../../visual-basic/reference/command-line-compiler/target.md).|  
 |`TRACE`|A `Boolean` ayarlanabilir değer **proje özelliklerini** iletişim kutusu. Varsayılan olarak, bir proje için tüm yapılandırmaları tanımlamak `TRACE`. Zaman `TRACE` tanımlanan <xref:System.Diagnostics.Trace> sınıfı yöntemleri Oluştur çıktıya **çıkış** penceresi. Bunu tanımlı değil, <xref:System.Diagnostics.Trace> sınıfı yöntemleri derlenmemiş ve no `Trace` çıktı oluşturulur.|  
-|`VBC_VER`|Sayı temsil eden bir [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] sürümü, *ana*. *küçük* biçimi. İçin sürüm numarasını [!INCLUDE[vbprvblong](~/includes/vbprvblong-md.md)] 8.0.|  
+|`VBC_VER`|Visual Basic sürüm olarak temsil eden bir sayı *ana*. *küçük* biçimi. İçin sürüm numarasını [!INCLUDE[vbprvblong](~/includes/vbprvblong-md.md)] 8.0.|  
   
 ### <a name="print-and-display-constants"></a>Yazdırma ve görüntü sabitleri  
  Yazdırma çağırın ve görüntüleme işlevleri, kodunuzu yerine gerçek değerler aşağıdaki sabitleri kullanabilirsiniz.  
   
-|**Sabit**|**Açıklama**|  
+|**sabiti**|**Açıklama**|  
 |---|---|  
 |`vbCrLf`|Satır başı/satır besleme karakter birleşimi.|  
 |`vbCr`|Satır başı karakteri.|  
@@ -52,7 +53,7 @@ ms.lasthandoff: 11/21/2017
 |`vbVerticalTab`|Microsoft Windows kullanışlı değil.|  
   
 ## <a name="enumerations"></a>Numaralandırmalar  
- Aşağıdaki tabloda listelenmekte ve tarafından sağlanan numaralandırmalar açıklanmaktadır [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)].  
+ Aşağıdaki tabloda listelenmekte ve Visual Basic tarafından sağlanan numaralandırmalar açıklanmaktadır.  
   
 |Sabit Listesi|Açıklama|  
 |---|---|  
@@ -85,5 +86,5 @@ ms.lasthandoff: 11/21/2017
 ## <a name="see-also"></a>Ayrıca Bkz.  
  [Visual Basic Dil Başvurusu](../../visual-basic/language-reference/index.md)  
  [Visual Basic](../../visual-basic/index.md)  
- [Sabitlere genel bakış](../../visual-basic/programming-guide/language-features/constants-enums/constants-overview.md)  
- [Numaralandırmalara genel bakış](../../visual-basic/programming-guide/language-features/constants-enums/enumerations-overview.md)
+ [Sabitlere Genel Bakış](../../visual-basic/programming-guide/language-features/constants-enums/constants-overview.md)  
+ [Sabit Listelerine Genel Bakış](../../visual-basic/programming-guide/language-features/constants-enums/enumerations-overview.md)

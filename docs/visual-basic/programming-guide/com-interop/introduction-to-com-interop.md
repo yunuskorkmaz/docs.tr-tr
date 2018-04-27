@@ -1,29 +1,30 @@
 ---
-title: "COM Birlikte Çalışma'ya Giriş (Visual Basic)"
-ms.custom: 
+title: COM Birlikte Çalışma'ya Giriş (Visual Basic)
+ms.custom: ''
 ms.date: 07/20/2015
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- devlang-visual-basic
 ms.topic: article
 helpviewer_keywords:
 - interop assemblies
 - COM interop [Visual Basic], about COM interop
 ms.assetid: 8bd62e68-383d-407f-998b-29aa0ce0fd67
-caps.latest.revision: "12"
+caps.latest.revision: 12
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: 39a4245b51c1199a6aeb0c23282b1917f51164d2
-ms.sourcegitcommit: 34ec7753acf76f90a0fa845235ef06663dc9e36e
+ms.openlocfilehash: 5a13fabd729218dc2a980b9c63e153d17a140cce
+ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="introduction-to-com-interop-visual-basic"></a>COM Birlikte Çalışma'ya Giriş (Visual Basic)
 Bileşen Nesne Modeli (COM) diğer bileşenler ve konak uygulamaların işlevselliğini kullanıma nesneyi sağlar. COM nesneleri Windows yıllardır programlama için temel olsa da, Ortak Dil Çalışma Zamanı Modülü (CLR) tasarlanmış uygulamaları birçok avantaj sunar.  
   
- [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)]uygulamaları sonunda olanlar com ile geliştirilen değiştirir O zamana kadar kullanın veya kullanarak COM nesneleri oluşturmak yaptığınız [!INCLUDE[vsprvs](~/includes/vsprvs-md.md)]. COM birlikte çalışabilirliği veya *COM birlikte çalışma*, geçiş sırasında var olan COM nesneleri kullanmanıza olanak tanır [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] kendi hızınıza.  
+ [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] uygulamaları sonunda olanlar com ile geliştirilen değiştirir O zamana kadar kullanın veya Visual Studio kullanarak COM nesneleri oluşturma gerekebilir. COM birlikte çalışabilirliği veya *COM birlikte çalışma*, geçiş sırasında var olan COM nesneleri kullanmanıza olanak tanır [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] kendi hızınıza.  
   
  Kullanarak [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] COM bileşenlerini oluşturmak için Kayıtsız COM birlikte çalışma kullanabilirsiniz. Bu, birden fazla sürümü bir bilgisayarda yüklendiğinde ve son kullanıcılar XCOPY veya FTP uygulamanız kendi bilgisayarında uygun bir dizine kopyalamak için burada çalıştırılması kullanın sağlar hangi DLL sürümü etkin denetlemenize olanak tanır. Daha fazla bilgi için bkz: [Kayıtsız COM birlikte çalışma](http://msdn.microsoft.com/library/90f308b9-82dc-414a-bce1-77e0155e56bd).  
   
@@ -49,7 +50,7 @@ Bileşen Nesne Modeli (COM) diğer bileşenler ve konak uygulamaların işlevsel
  Derlemeler ve derleme bildirimleri hakkında daha fazla bilgi için bkz: [derlemeler ve genel derleme önbelleği](../../../visual-basic/programming-guide/concepts/assemblies-gac/index.md).  
   
 ### <a name="importing-and-exporting-type-libraries"></a>İçeri ve dışarı aktarma tür kitaplıkları  
- [!INCLUDE[vsprvs](~/includes/vsprvs-md.md)]bir yardımcı programı, bilgilerini tür kitaplığından içeri olanak sağlayan Tlbimp içeren bir [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] uygulama. Tlbexp yardımcı programını kullanarak derlemelerden tür kitaplıklarının oluşturabilir.  
+ Visual Studio tür kitaplığından bilgileri içe aktarmanıza izin verir Tlbimp, bir yardımcı içeren bir [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] uygulama. Tlbexp yardımcı programını kullanarak derlemelerden tür kitaplıklarının oluşturabilir.  
   
  Tlbimp ve Tlbexp hakkında daha fazla bilgi için bkz: [Tlbimp.exe (tür kitaplığı içeri Aktarıcı)](../../../framework/tools/tlbimp-exe-type-library-importer.md) ve [Tlbexp.exe (tür kitaplığı dışarı Aktarıcı)](http://msdn.microsoft.com/library/a487d61b-d166-467b-a7ca-d8b52fbff42d).  
   

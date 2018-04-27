@@ -1,9 +1,9 @@
 ---
-title: "Geçici Win32 kaynak dosyasını &#39;kaydedilirken hata oluştu; &lt;filename&gt;&#39;: &lt;hata iletisi&gt;"
+title: 'Geçici Win32 kaynak dosyası kaydedilirken hata &#39; &lt;filename&gt;&#39;: &lt;hata iletisi&gt;'
 ms.date: 07/20/2015
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - devlang-visual-basic
 ms.topic: article
@@ -13,17 +13,17 @@ f1_keywords:
 helpviewer_keywords:
 - BC30137
 ms.assetid: 61c23f48-0e06-42fc-be00-5598053c86dd
-caps.latest.revision: 
+caps.latest.revision: 11
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: ef9d98e7a0b2698ea2bea46734389db015e04b6a
-ms.sourcegitcommit: 34ec7753acf76f90a0fa845235ef06663dc9e36e
+ms.openlocfilehash: e2e4bbc095e419ae0af6eecf9ae4863d3cbd4bce
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/26/2018
 ---
-# <a name="error-saving-temporary-win32-resource-file-39ltfilenamegt39-lterror-messagegt"></a>Geçici Win32 kaynak dosyasını &#39;kaydedilirken hata oluştu; &lt;filename&gt;&#39;: &lt;hata iletisi&gt;
-[!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] Derleyici bir derleme bir bildirim oluşturmak için derleme bağlayıcı (Al.exe, Alink olarak da bilinir) çağırır. Bağlayıcı bir bellek içi kaynak yazarken kullanmak için bir dosya adı alma bir hata bildirdi.  
+# <a name="error-saving-temporary-win32-resource-file-39ltfilenamegt39-lterror-messagegt"></a>Geçici Win32 kaynak dosyası kaydedilirken hata &#39; &lt;filename&gt;&#39;: &lt;hata iletisi&gt;
+Visual Basic derleyici bir derleme bir bildirim oluşturmak için derleme bağlayıcı (Al.exe, Alink olarak da bilinir) çağırır. Bağlayıcı bir bellek içi kaynak yazarken kullanmak için bir dosya adı alma bir hata bildirdi.  
   
  **Hata Kimliği:** BC30137  
   

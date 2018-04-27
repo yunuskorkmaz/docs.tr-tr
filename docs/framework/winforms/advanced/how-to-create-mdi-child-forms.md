@@ -1,12 +1,13 @@
 ---
-title: "Nasıl yapılır: MDI Alt Formları Oluşturma"
-ms.custom: 
+title: 'Nasıl yapılır: MDI Alt Formları Oluşturma'
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-winforms
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-winforms
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - csharp
@@ -16,16 +17,17 @@ helpviewer_keywords:
 - MDI [Windows Forms], creating forms
 - child forms
 ms.assetid: 164b69bb-2eca-4339-ada3-0679eb2c6dda
-caps.latest.revision: "21"
+caps.latest.revision: 21
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: d0ee60e9b25ed4238ccdd738cd59a69876f6b55d
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.workload:
+- dotnet
+ms.openlocfilehash: d28a7390ea3cfbd922f029d963ad3249db399177
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="how-to-create-mdi-child-forms"></a>Nasıl yapılır: MDI Alt Formları Oluşturma
 MDI alt formları olan önemli bir öğe [Çoklu belge arabirimi (MDI) uygulamaları](../../../../docs/framework/winforms/advanced/multiple-document-interface-mdi-applications.md), bu formların kullanıcı etkileşimi merkezi olarak.  
@@ -47,7 +49,7 @@ MDI alt formları olan önemli bir öğe [Çoklu belge arabirimi (MDI) uygulamal
   
 4.  İçinde **Çözüm Gezgini**, projeye sağ tıklayın, fareyle **Ekle**ve ardından **Yeni Öğe Ekle**.  
   
-5.  İçinde **Yeni Öğe Ekle** iletişim kutusunda **Windows formu** (içinde [!INCLUDE[vbprvb](../../../../includes/vbprvb-md.md)] veya [!INCLUDE[csprcs](../../../../includes/csprcs-md.md)]) veya **Windows Forms uygulaması (.NET)** (içinde [!INCLUDE[vcprvc](../../../../includes/vcprvc-md.md)]) gelen **şablonları** bölmesi. İçinde **adı** kutusunda, formun ad **Form2**. Tıklatın **açık** projeye form ekleme düğmesi.  
+5.  İçinde **Yeni Öğe Ekle** iletişim kutusunda **Windows formu** (Visual Basic veya Visual C# ' ta) veya **Windows Forms uygulaması (.NET)** (içinde [!INCLUDE[vcprvc](../../../../includes/vcprvc-md.md)]) gelen **Şablonları** bölmesi. İçinde **adı** kutusunda, formun ad **Form2**. Tıklatın **açık** projeye form ekleme düğmesi.  
   
     > [!NOTE]
     >  Bu adımda oluşturduğunuz MDI alt standart Windows formu biçimidir. Bu nedenle, sahip bir <xref:System.Windows.Forms.Form.Opacity%2A> formun saydamlığını denetlemenize olanak sağlayan özelliği. Ancak, <xref:System.Windows.Forms.Form.Opacity%2A> özelliği, üst düzey windows için tasarlanmıştır. Boyama sorunları ortaya çıktığında MDI alt formları ile kullanmayın.  

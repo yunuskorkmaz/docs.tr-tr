@@ -1,24 +1,26 @@
 ---
-title: "WS 2007 Federasyon HTTP Bağlama"
-ms.custom: 
+title: WS 2007 Federasyon HTTP Bağlama
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 91c1b477-a96e-4bf5-9330-5e9312113371
-caps.latest.revision: "23"
+caps.latest.revision: 23
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 8b04984ad1e21da4bc86760046029d3b94b70758
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: b7126e4c0c293bfbf78cecf97cc13ea91e6c0c62
+ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="ws-2007-federation-http-binding"></a>WS 2007 Federasyon HTTP Bağlama
 Bu örnek kullanımını gösteren <xref:System.ServiceModel.WS2007FederationHttpBinding>, WS-Trust belirtimine destek sürümünün 1.3 Federasyon senaryoları oluşturmak için kullanabileceğiniz bağlama standart.  
@@ -108,17 +110,15 @@ Bu örnek kullanımını gösteren <xref:System.ServiceModel.WS2007FederationHtt
  STS kullanılabilir hale getirir tek bir uç nokta standart kullanarak <xref:System.ServiceModel.WS2007HttpBinding>. Hizmet belirteçleri istemcilerden gelen isteklere yanıt verir. Bir Windows hesabı kullanarak istemcinin kimliğinin, hizmeti bir talep olarak istemcinin kullanıcı adını içeren bir belirteç verir. STS işaretlerini belirtecin CN ile ilişkili özel anahtarı kullanarak belirteci oluşturma bir parçası olarak STS sertifikası =. Ayrıca, bir simetrik anahtar oluşturur ve CN ile ilişkilendirilmiş ortak anahtar kullanarak şifreler localhost sertifika =. Belirteç istemciye döndürmeden içinde STS, simetrik anahtar da döndürür. Verilen belirteç istemci sunar `ICalculator` hizmet ve bunu simetrik anahtar bu anahtarla ileti imzalayarak bilen kanıtlar.  
   
  Örneği çalıştırdığınızda, güvenlik belirteci isteği STS konsol penceresinde gösterilir. İşlem istekleri ve yanıtları istemci ve hizmet Konsolu pencerelerinde görüntülenir. Herhangi bir windows konsol uygulamasını kapatmak için ENTER tuşuna basın.  
-  
- `Add(100,15.99) = 115.99`  
-  
- `Subtract(145,76.54) = 68.46`  
-  
- `Multiply(9,81.25) = 731.25`  
-  
- `Divide(22,7) = 3.14285714285714`  
-  
- `Press <ENTER> to terminate client.`  
-  
+
+```
+Add(100,15.99) = 115.99
+Subtract(145,76.54) = 68.46
+Multiply(9,81.25) = 731.25
+Divide(22,7) = 3.14285714285714
+Press <ENTER> to terminate client.
+```
+
  Bu örnekle dahil Setup.bat dosya sunucusu ve STS kendini barındıran bir uygulamayı çalıştırmak için ilgili sertifikalarla yapılandırmanıza olanak sağlar. Toplu iş dosyası LocalMachine/TrustedPeople sertifika deposunda iki sertifikaları oluşturur. İlk sertifika CN bir konu adına sahip STS = ve STS tarafından istemcinin verdiği güvenlik belirteçleri imzalamak için kullanılır. İkinci sertifikanın CN bir konu adına sahip localhost = ve STS tarafından hizmet şifresini çözebilir şekilde anahtarı şifrelemek için kullanılır.  
   
 ### <a name="to-set-up-build-and-run-the-sample"></a>Ayarlamak için derleme ve örnek çalıştırın  

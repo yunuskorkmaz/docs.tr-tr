@@ -1,13 +1,13 @@
 ---
-title: "WPF Uygulaması Oluşturma (WPF)"
-ms.custom: 
+title: WPF Uygulaması Oluşturma (WPF)
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - dotnet-wpf
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - csharp
@@ -15,20 +15,20 @@ dev_langs:
 helpviewer_keywords:
 - WPF application [WPF], building
 ms.assetid: a58696fd-bdad-4b55-9759-136dfdf8b91c
-caps.latest.revision: 
+caps.latest.revision: 45
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: 87fc77aaa95e2d2de4b0c6eb75484ab9b4006c31
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.openlocfilehash: 054f6cd6ae71428aca6b99eb510b2ac34fc6c4b6
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="building-a-wpf-application-wpf"></a>WPF Uygulaması Oluşturma (WPF)
-[!INCLUDE[TLA#tla_wpf](../../../../includes/tlasharptla-wpf-md.md)]uygulamalar, olarak oluşturulabilen [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] yürütülebilir dosyalar (.exe) kitaplıkları (.dll) veya her iki tür derlemeleri birleşimi. Bu konu nasıl oluşturulacağını tanıtır [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] uygulamaları ve derleme işlemindeki anahtar adımları açıklar.  
+[!INCLUDE[TLA#tla_wpf](../../../../includes/tlasharptla-wpf-md.md)] uygulamalar, olarak oluşturulabilen [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] yürütülebilir dosyalar (.exe) kitaplıkları (.dll) veya her iki tür derlemeleri birleşimi. Bu konu nasıl oluşturulacağını tanıtır [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] uygulamaları ve derleme işlemindeki anahtar adımları açıklar.  
   
   
 <a name="Building_a_WPF_Application_using_Command_Line"></a>   
@@ -77,7 +77,7 @@ ms.lasthandoff: 01/19/2018
   
 3.  Yeni bir parçalı sınıf CodeDOM gösterimi oluşturulur ve obj\Release klasörüne kopyalanır.  
   
- Dile özgü kod dosyası için ek olarak, oluşturulan her [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] dosya. Örneğin, Page1.xaml sayfası için bir [!INCLUDE[TLA2#tla_visualb](../../../../includes/tla2sharptla-visualb-md.md)] project, bir Page1.g.vb oluşturulur; bir Page1.xaml için sayfa bir [!INCLUDE[TLA2#tla_cshrp](../../../../includes/tla2sharptla-cshrp-md.md)] proje, bir Page1.g.cs oluşturulur. Dosya adı ".g" dosyası oluşturulur gösterir biçimlendirme dosyasının en üst düzey öğesi için bir parçalı sınıf bildirimi sahip code (gibi `Page` veya `Window`). Sınıf ile bildirilmiş `partial` değiştiricisi [!INCLUDE[TLA2#tla_cshrp](../../../../includes/tla2sharptla-cshrp-md.md)] (`Extends` içinde [!INCLUDE[TLA2#tla_visualb](../../../../includes/tla2sharptla-visualb-md.md)]) başka bir sınıf için başka bir bildirim belirtmek için genellikle kod arkasında Page1.xaml.cs dosya.  
+ Dile özgü kod dosyası için ek olarak, oluşturulan her [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] dosya. Örneğin, bir Visual Basic projesinde Page1.xaml sayfası için bir Page1.g.vb oluşturulur; C# projesinde Page1.xaml sayfası için bir Page1.g.cs oluşturulur. Dosya adı ".g" dosyası oluşturulur gösterir biçimlendirme dosyasının en üst düzey öğesi için bir parçalı sınıf bildirimi sahip code (gibi `Page` veya `Window`). Sınıf ile bildirilmiş `partial` C# değiştiricisi (`Extends` Visual Basic'te) başka bir sınıf için başka bir bildirim belirtmek için genellikle kod arkasında Page1.xaml.cs dosya.  
   
  Uygun temel sınıfından kısmi sınıfını genişleten (gibi <xref:System.Windows.Controls.Page> bir sayfa için) ve uygulayan <xref:System.Windows.Markup.IComponentConnector?displayProperty=nameWithType> arabirimi. <xref:System.Windows.Markup.IComponentConnector> Arabirimi bileşeni başlatmak ve adları ve içeriği öğelerinde olaylarına bağlanmak için yöntemler vardır. Sonuç olarak, oluşturulan kod dosyası aşağıdakine benzer bir yöntem uygulamasına sahiptir:  
   
@@ -115,7 +115,7 @@ End Sub
   
 <a name="Pass_2_of_Markup_Compilation"></a>   
 ### <a name="markup-compilationpass-2"></a>Biçimlendirme derleme — 2 geçirin  
- Tüm [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] sayfaları derlenen adresindeki biçimlendirme derlemesinin 1 geçişi sırasında. [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]yerel olarak tanımlanan tür başvuruları (aynı projesi herhangi bir yerde kodda tanımlanan türlere başvurular) dosyaları, şu anda derleme dışındadır. Bu yerel olarak tanımlanmış türleri yalnızca kaynağında var ve henüz derlenmiş olmasıdır. Bunu belirlemek için ayrıştırıcı gibi öğeler için aramayı içeren buluşsal yöntemler kullanır `x:Name` biçimlendirme dosyasında. Bu tür bir örnek bulunduğunda biçimlendirme dosyanın derleme kod dosyaları, daha sonra derlenmiştir kadar ertelenir ikinci biçimlendirme derleme bu dosyaları işlemleri geçişi.  
+ Tüm [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] sayfaları derlenen adresindeki biçimlendirme derlemesinin 1 geçişi sırasında. [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] yerel olarak tanımlanan tür başvuruları (aynı projesi herhangi bir yerde kodda tanımlanan türlere başvurular) dosyaları, şu anda derleme dışındadır. Bu yerel olarak tanımlanmış türleri yalnızca kaynağında var ve henüz derlenmiş olmasıdır. Bunu belirlemek için ayrıştırıcı gibi öğeler için aramayı içeren buluşsal yöntemler kullanır `x:Name` biçimlendirme dosyasında. Bu tür bir örnek bulunduğunda biçimlendirme dosyanın derleme kod dosyaları, daha sonra derlenmiştir kadar ertelenir ikinci biçimlendirme derleme bu dosyaları işlemleri geçişi.  
   
 <a name="File_Classification"></a>   
 ### <a name="file-classification"></a>Dosya Sınıflandırma  
@@ -137,7 +137,7 @@ End Sub
   
  Bu bildirim dosyaları her zaman için oluşturulan [!INCLUDE[TLA2#tla_xbap#plural](../../../../includes/tla2sharptla-xbapsharpplural-md.md)]. Yüklü uygulamalar için sürece oluşturulmaz `GenerateManifests` özelliği belirtilen değerle proje dosyasında `true`.  
   
- [!INCLUDE[TLA2#tla_xbap#plural](../../../../includes/tla2sharptla-xbapsharpplural-md.md)]tipik Internet bölgesi uygulamalarına atanan bu izinleri üzerine iki ek izin alma: <xref:System.Security.Permissions.WebBrowserPermission> ve <xref:System.Security.Permissions.MediaPermission>. [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] Yapı sistem uygulama bildiriminde bu izinleri bildirir.  
+ [!INCLUDE[TLA2#tla_xbap#plural](../../../../includes/tla2sharptla-xbapsharpplural-md.md)] tipik Internet bölgesi uygulamalarına atanan bu izinleri üzerine iki ek izin alma: <xref:System.Security.Permissions.WebBrowserPermission> ve <xref:System.Security.Permissions.MediaPermission>. [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] Yapı sistem uygulama bildiriminde bu izinleri bildirir.  
   
 <a name="Incremental_Build_Support"></a>   
 ## <a name="incremental-build-support"></a>Artımlı derleme desteği  

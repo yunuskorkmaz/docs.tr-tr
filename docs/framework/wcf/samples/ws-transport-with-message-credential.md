@@ -1,29 +1,31 @@
 ---
-title: "İleti Kimlik Bilgileri ile WS Aktarma"
-ms.custom: 
+title: İleti Kimlik Bilgileri ile WS Aktarma
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 0d092f3a-b309-439b-920b-66d8f46a0e3c
-caps.latest.revision: "7"
+caps.latest.revision: 7
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: f782ac12c92755eb26eddd30c5d8c15168c35858
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 7b954e2d19f601476876beef6482ca10eb3f113b
+ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="ws-transport-with-message-credential"></a>İleti Kimlik Bilgileri ile WS Aktarma
 Bu örnek, iletide taşınmasına istemci kimlik bilgileri ile birlikte SSL taşıma güvenliği kullanımını göstermektedir. Bu örnekte `wsHttpBinding` bağlama.  
   
- Varsayılan olarak, `wsHttpBinding` bağlama HTTP iletişim sağlar. Taşıma güvenliği için yapılandırıldığında, bağlama HTTPS iletişimi destekler. HTTPS gizliliği ve bütünlük koruması kablo üzerinden gönderilen iletiler için sağlar. Ancak istemci hizmeti için kimlik doğrulaması için kullanılan kimlik doğrulama mekanizmaları HTTPS taşıma desteklediği için sınırlı kümesidir. [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)]sunan bir `TransportWithMessageCredential` bu sınırlamanın üstesinden gelmek için tasarlanmış güvenlik modu. Bu güvenlik modu yapılandırıldığında, taşıma güvenliği için iletilen iletileri gizliliği ve bütünlük sağlamak ve hizmet kimlik doğrulaması yapmak için kullanılır. Ancak, istemci kimlik doğrulama ileti doğrudan istemci kimlik bilgileri koyarak gerçekleştirilir. Bu ileti güvenlik modu aktarım güvenlik modu performans avantajı korurken istemci kimlik doğrulaması için tarafından desteklenen herhangi bir kimlik bilgisi türü kullanmanıza olanak sağlar.  
+ Varsayılan olarak, `wsHttpBinding` bağlama HTTP iletişim sağlar. Taşıma güvenliği için yapılandırıldığında, bağlama HTTPS iletişimi destekler. HTTPS gizliliği ve bütünlük koruması kablo üzerinden gönderilen iletiler için sağlar. Ancak istemci hizmeti için kimlik doğrulaması için kullanılan kimlik doğrulama mekanizmaları HTTPS taşıma desteklediği için sınırlı kümesidir. [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] sunan bir `TransportWithMessageCredential` bu sınırlamanın üstesinden gelmek için tasarlanmış güvenlik modu. Bu güvenlik modu yapılandırıldığında, taşıma güvenliği için iletilen iletileri gizliliği ve bütünlük sağlamak ve hizmet kimlik doğrulaması yapmak için kullanılır. Ancak, istemci kimlik doğrulama ileti doğrudan istemci kimlik bilgileri koyarak gerçekleştirilir. Bu ileti güvenlik modu aktarım güvenlik modu performans avantajı korurken istemci kimlik doğrulaması için tarafından desteklenen herhangi bir kimlik bilgisi türü kullanmanıza olanak sağlar.  
   
  Bu örnekte, bir `UserName` kimlik bilgisi türü hizmeti için istemci kimlik doğrulaması için kullanılır.  
   
@@ -33,15 +35,15 @@ Bu örnek, iletide taşınmasına istemci kimlik bilgileri ile birlikte SSL taş
 >  Kurulum yordamı ve yapı yönergeleri Bu örnek için bu konunun sonunda yer alır.  
   
  Örnek program kodunda olarak neredeyse aynıdır [Başlarken](../../../../docs/framework/wcf/samples/getting-started-sample.md) hizmet. Bir başka işlem tarafından hizmet sözleşmesini - sağlanan `GetCallerIdentity`. Bu işlem çağırana çağıranının kimliğini adını döndürür.  
-  
-```  
+
+```csharp
 public string GetCallerIdentity()  
 {  
     // Use ServiceSecurityContext.WindowsIdentity to get the name of the caller.  
     return ServiceSecurityContext.Current.WindowsIdentity.Name;  
 }  
-```  
-  
+```
+
  Bir sertifika oluşturun ve oluşturmaya ve örnek çalıştırmaya önce Web Sunucusu Sertifika Sihirbazı'nı kullanarak atamanız gerekir. Uç nokta tanımı ve bağlama tanımı dosyası ayarlarını etkinleştir `TransportWithMessageCredential` istemci için aşağıdaki örnek yapılandırma gösterildiği gibi güvenlik modu.  
   
 ```xml  
@@ -72,13 +74,13 @@ public string GetCallerIdentity()
   
  Belirtilen adres https:// düzenini kullanır. Güvenlik modu bağlama yapılandırması ayarlar `TransportWithMessageCredential`. Aynı güvenlik modu hizmetin Web.config dosyasında belirtilmesi gerekir.  
   
- Bu örnekte kullanılan sertifikanın Makecert.exe ile oluşturulan bir test sertifikası olduğundan, bir https erişmeye çalıştığınızda bir güvenlik uyarısı görünür: tarayıcınızdan https://localhost/servicemodelsamples/service.svc gibi adresi. İzin vermek için [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] istemci, yerinde bir test sertifikası ile çalışmak için bazı ek kod güvenlik uyarıyı gizlemek için istemciye eklendi. Bu kod, eşlik eden sınıfı değil ve gerekli üretim sertifikalar kullanıldığında.  
-  
-```  
+ Bu örnekte kullanılan sertifikanın Makecert.exe ile oluşturulan bir test sertifikası olduğundan, bir https erişmeye çalıştığınızda bir güvenlik uyarısı görünür: gibi adres https://localhost/servicemodelsamples/service.svc, tarayıcınızdan. İzin vermek için [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] istemci, yerinde bir test sertifikası ile çalışmak için bazı ek kod güvenlik uyarıyı gizlemek için istemciye eklendi. Bu kod, eşlik eden sınıfı değil ve gerekli üretim sertifikalar kullanıldığında.  
+
+```csharp
 // WARNING: This code is only needed for test certificates such as those created by makecert. It is   
 // not recommended for production code.  
 PermissiveCertificatePolicy.Enact("CN=ServiceModelSamples-HTTPS-Server");  
-```  
+```
   
  Örneği çalıştırdığınızda, işlem isteklerini ve yanıtlarını istemci konsol penceresinde görüntülenir. İstemcisi penceresinde istemciyi aşağı kapatmak için ENTER tuşuna basın.  
   

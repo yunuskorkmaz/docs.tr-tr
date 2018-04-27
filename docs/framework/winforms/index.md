@@ -20,14 +20,14 @@ ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: 4b38cbe1bab4c3d2bf0c6ee518dd26df4ff440dc
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 5949bebe91767539c230ba166f9389f09dc2392b
+ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="windows-forms"></a>Windows Forms
-Formları, uygulamanızın temel birim olarak, kendi işlevi ve tasarım bazı düşünce izni gereklidir. Bir sonuçta bir kullanıcı arabirimi oluşturmak için denetimleri ile verileri işlemek için kod, geliştirici olarak geliştirmek, boş bir Kurşun biçimidir. Bu amaçla için [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] tümleşik geliştirme ortamı (IDE) kod yazma yardımcı olmak için yanı sıra ile yazılmış ayarlamak zengin bir denetim sağlar [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)]. Bu denetimler işlevselliğini kodunuzla depolamanın tarafından kolayca ve hızlı bir şekilde, gereksinim duyduğunuz çözümleri geliştirin.  
+Formları, uygulamanızın temel birim olarak, kendi işlevi ve tasarım bazı düşünce izni gereklidir. Bir sonuçta bir kullanıcı arabirimi oluşturmak için denetimleri ile verileri işlemek için kod, geliştirici olarak geliştirmek, boş bir Kurşun biçimidir. Bu amaçla, Visual Studio tümleşik geliştirme ortamı (IDE) kod yazma yardımcı olmak için yanı sıra ile yazılmış ayarlamak zengin bir denetim sağlar [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)]. Bu denetimler işlevselliğini kodunuzla depolamanın tarafından kolayca ve hızlı bir şekilde, gereksinim duyduğunuz çözümleri geliştirin.  
   
 ## <a name="in-this-section"></a>Bu Bölümde  
  [Windows Forms'a Başlarken](../../../docs/framework/winforms/getting-started-with-windows-forms.md)  

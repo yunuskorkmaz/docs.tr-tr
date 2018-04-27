@@ -1,13 +1,13 @@
 ---
-title: "Nasıl yapılır: Windows Formlarında Dayama Çizgileri ve Kılavuz ile Denetimleri Düzenleme"
-ms.custom: 
+title: 'Nasıl yapılır: Windows Formlarında Dayama Çizgileri ve Kılavuz ile Denetimleri Düzenleme'
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - dotnet-winforms
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 f1_keywords:
 - GridSize
@@ -16,20 +16,20 @@ helpviewer_keywords:
 - Windows Forms, grid options in designer
 - controls [Windows Forms], aligning
 ms.assetid: bb54bce5-880f-4a36-af68-8cf92058dc1c
-caps.latest.revision: 
+caps.latest.revision: 10
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: 166ccba959bd9facb8e24d580d47577a0c8746a8
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.openlocfilehash: 3f7467abe6669b88e1a55851fd745c2dcb56c150
+ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="how-to-arrange-controls-with-snaplines-and-the-grid-in-windows-forms"></a>Nasıl yapılır: Windows Formlarında Dayama Çizgileri ve Kılavuz ile Denetimleri Düzenleme
-Düzen özelliklerini kullanarak [!INCLUDE[vsprvs](../../../../includes/vsprvs-md.md)], tam olarak bir form üzerinde denetimleri yerleştirildiği yönlendirebilirsiniz. Bir form için eklenip bir form üzerinde denetimleri otomatik olarak satırları ve sütunları Windows Forms Tasarımcısı kılavuzunun hizalanabilir veya dayama çizgileri özelliğini kullanarak denetimleri hizalama.  
+Visual Studio'nun yerleşim özellikleri kullanarak, bir form üzerinde denetimleri yerleştirildiği tam olarak yönlendirebilirsiniz. Bir form için eklenip bir form üzerinde denetimleri otomatik olarak satırları ve sütunları Windows Forms Tasarımcısı kılavuzunun hizalanabilir veya dayama çizgileri özelliğini kullanarak denetimleri hizalama.  
   
 > [!NOTE]
 >  Gördüğünüz iletişim kutuları ve menü komutları, etkin ayarlarınıza ve ürün sürümüne bağlı olarak Yardım menüsünde açıklanana göre farklılık gösterebilir. Ayarlarınızı değiştirmek için tercih **içeri ve dışarı aktarma ayarları** üzerinde **Araçları** menüsü. Daha fazla bilgi için bkz: [Visual Studio'da geliştirme ayarlarını özelleştirme](http://msdn.microsoft.com/library/22c4debb-4e31-47a8-8f19-16f328d7dcd3).  

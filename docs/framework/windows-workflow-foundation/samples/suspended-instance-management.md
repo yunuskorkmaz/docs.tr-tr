@@ -1,23 +1,24 @@
 ---
-title: "Askıya alınmış örnek Yönetimi"
-ms.custom: 
+title: Askıya alınmış örnek Yönetimi
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: f5ca3faa-ba1f-4857-b92c-d927e4b29598
-caps.latest.revision: "6"
+caps.latest.revision: 6
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 6e04f1e2f334993975b2c4261efdc28ba318dfa3
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 5f5073e9de217637141d7e3c9d70bb6a0b7a9cd0
+ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="suspended-instance-management"></a>Askıya alınmış örnek Yönetimi
 Bu örnek, askıya alınan iş akışı örnekleri yönetmek gösterilmiştir.  İçin varsayılan eylem <xref:System.ServiceModel.Activities.Description.WorkflowUnhandledExceptionBehavior> olan `AbandonAndSuspend`. Varsayılan olarak, içinde bir iş akışı örneğinden oluşturulan işlenmeyen özel durumları barındırılan yani <xref:System.ServiceModel.WorkflowServiceHost> örneği (terk) bellekten çıkarılması ve dayanıklı ve kalıcı örneğinin sürümü, askıya alındı olarak işaretlenmesine neden olacak. Askıya alınan iş akışı örneği çalıştırabilir ve onu unsuspended kadar olmaz.  
@@ -25,7 +26,7 @@ Bu örnek, askıya alınan iş akışı örnekleri yönetmek gösterilmiştir.  
  Komut satırı yardımcı programını askıya alınmış örnekleri için sorgu ve kullanıcı sürdürün veya örnek sonlandırmak için seçenek sunmak amacıyla nasıl nasıl uygulanabilir örnek gösterir. Bu örnekte, bir iş akışı hizmeti bilerek, askıya duruma neden olan bir özel durum oluşturur. Komut satırı yardımcı programı daha sonra örnek için sorgu ve daha sonra sürdürün veya örnek sonlandırmak için kullanılabilir.  
   
 ## <a name="demonstrates"></a>Gösteriler  
- <xref:System.ServiceModel.WorkflowServiceHost>ile <xref:System.ServiceModel.Activities.Description.WorkflowUnhandledExceptionBehavior> ve <xref:System.ServiceModel.Activities.WorkflowControlEndpoint> içinde [!INCLUDE[wf](../../../../includes/wf-md.md)].  
+ <xref:System.ServiceModel.WorkflowServiceHost> ile <xref:System.ServiceModel.Activities.Description.WorkflowUnhandledExceptionBehavior> ve <xref:System.ServiceModel.Activities.WorkflowControlEndpoint> Windows Workflow Foundation (WF) içinde.  
   
 ## <a name="discussion"></a>Tartışma  
  Bu örnekte uygulanan komut satırı yardımcı programı içinde birlikte gelen SQL örneği mağaza uygulamasına belirli [!INCLUDE[netfx_current_long](../../../../includes/netfx-current-long-md.md)]. Özel bir örnek deposuna uygulanmasına sahip sonra değiştirerek bu yardımcı program uyarlayabilirsiniz `WorkflowInstanceCommand` örnek uygulamalarında örneği deponuza belirli uygulamaları.  

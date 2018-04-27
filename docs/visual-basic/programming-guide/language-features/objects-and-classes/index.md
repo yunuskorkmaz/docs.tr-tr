@@ -15,21 +15,21 @@ ms.assetid: c68c5752-1006-46e1-975a-6717b62a42fc
 caps.latest.revision: 26
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: be5e0156b4cacc39e1613e06fe3c138838b02700
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.openlocfilehash: 19aa20097e35a780f923a84e3e5809eb2b8bb3e8
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="objects-and-classes-in-visual-basic"></a>Nesneler ve sınıflar Visual Basic'te
 Bir *nesne* kod ve bir birim olarak kabul veri birleşimidir. Bir nesne bir denetim veya formun gibi bir uygulama bir parçası olabilir. Tüm uygulama aynı zamanda bir nesne olabilir.
 
-Bir uygulama oluşturduğunuzda [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)], sürekli nesneleri ile çalışma. Tarafından sağlanan nesneleri kullanabilirsiniz [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]gibi denetimleri, formlar ve veri erişim nesneleri. Diğer uygulamalardan nesnelerden de kullanabilirsiniz, [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] uygulama. Hatta kendi nesneleri oluşturmak ve ek özellikleri ve yöntemleri kendileri için tanımlayın. Nesneleri hareket gibi prefabricated programlar için yapı taşları —, paylaştırılabilen bir kod kez yazma ve onu tekrar tekrar tekrar olanak tanır.  
+Visual Basic'te bir uygulama oluşturduğunuzda, sürekli nesneleri ile çalışma. Visual Basic tarafından sağlanan gibi denetimleri, formlar ve veri erişim nesneleri nesnelerini kullanabilirsiniz. Visual Basic uygulamanızdaki diğer uygulamalardan nesne de kullanabilirsiniz. Hatta kendi nesneleri oluşturmak ve ek özellikleri ve yöntemleri kendileri için tanımlayın. Nesneleri hareket gibi prefabricated programlar için yapı taşları —, paylaştırılabilen bir kod kez yazma ve onu tekrar tekrar tekrar olanak tanır.  
   
 Bu konuda nesneleri ayrıntılı ele alınmıştır.  
 
 ## <a name="objects-and-classes"></a>Nesneler ve sınıflar
-Her nesne [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] tarafından tanımlanan bir *sınıfı*. Bir sınıf değişkenleri, özellikleri, yordamlar ve olayları bir nesnenin açıklar. Nesneleri sınıfların örnekleri olan; bir sınıf tanımladıktan sonra gereksinim duyduğunuz kadar çok nesneleri oluşturabilirsiniz.
+Visual Basic'te her nesne tarafından tanımlanan bir *sınıfı*. Bir sınıf değişkenleri, özellikleri, yordamlar ve olayları bir nesnenin açıklar. Nesneleri sınıfların örnekleri olan; bir sınıf tanımladıktan sonra gereksinim duyduğunuz kadar çok nesneleri oluşturabilirsiniz.
 
 Bir nesne ve kendi sınıfı arasındaki ilişkiyi anlamak için tanımlama bilgisi cutters ve tanımlama bilgileri düşünün. Tanımlama Bilgisi kesici sınıftır. Örneğin boyutu ve şekli her tanımlama bilgisi özelliklerini tanımlar. Sınıf nesneleri oluşturmak için kullanılır. Tanımlama bilgilerini nesneleridir.
 
@@ -173,7 +173,7 @@ Sınıfları ve modüller de üyeleri için farklı kapsamlar kullanır. Üyeler
 ## <a name="reusing-classes-and-objects"></a>Sınıfları ve nesneleri yeniden kullanma  
 Nesneleri, değişken ve yordamların bir kez bildirme ve bunları gerektiğinde yeniden olanak tanır. Örneğin, yazım denetleyicisi uygulama eklemek istiyorsanız, tüm değişkenleri tanımlayın ve yazım denetimi işlevselliği sağlamak için işlevleri destekler. Yazım bir sınıf olarak oluşturursanız, daha sonra onu diğer uygulamalarda derlenmiş derlemesine başvuru ekleyerek tekrar kullanabilirsiniz. Daha iyi henüz başka birisi zaten geliştirmiştir yazım sınıfını kullanarak kendiniz bazı iş kaydetmek mümkün olabilir.
 
-[!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] Kullanılabilir bileşenleri birçok örnekler sağlar. Aşağıdaki örnek kullanır <xref:System.TimeZone> sınıfını <xref:System> ad alanı. <xref:System.TimeZone>Geçerli bilgisayar sistemi saat dilimi hakkında bilgi almaya izin üyeleri sağlar.
+[!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] Kullanılabilir bileşenleri birçok örnekler sağlar. Aşağıdaki örnek kullanır <xref:System.TimeZone> sınıfını <xref:System> ad alanı. <xref:System.TimeZone> Geçerli bilgisayar sistemi saat dilimi hakkında bilgi almaya izin üyeleri sağlar.
 
 ```vb
 Public Sub examineTimeZone()
@@ -241,26 +241,26 @@ Derleyici, yeni bir sınıf türetin istediğiniz sınıfı erişebildiğinden e
 Nesneleri ilgili başka bir yolu bir *kapsama ilişkisi*. Kapsayıcı nesneleri diğer nesnelerin mantıksal olarak kapsüller. Örneğin, <xref:System.OperatingSystem> nesnesini mantıksal olarak içeren bir <xref:System.Version> aracılığıyla döndürür nesne, kendi <xref:System.OperatingSystem.Version%2A> özelliği. Kapsayıcı nesne fiziksel olarak başka bir nesneyi içermiyor unutmayın.
 
 #### <a name="collections"></a>Koleksiyonlar
-Belirli bir nesne kapsama türü ile temsil edilir *koleksiyonları*. Koleksiyonları sıralanabilecek nesneleri gruplarıdır. [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]belirli bir söz dizimi destekleyen [For Each... Sonraki deyim](../../../../visual-basic/language-reference/statements/for-each-next-statement.md) koleksiyonu öğeler arasında yinelemek izin verir. Ayrıca, koleksiyonlar çoğunlukla kullanmanıza olanak sağlayan bir <xref:Microsoft.VisualBasic.Collection.Item%2A> kendi dizini veya benzersiz bir dize ile ilişkilendirerek öğeleri alınamadı. Koleksiyonlar eklemek veya dizinleri kullanmadan öğeleri kaldırmak izin verdiğinden diziler kullanmak daha kolay olabilir. Bunların kullanım kolaylığı nedeniyle, koleksiyonlar çoğunlukla formlar ve denetimler depolamak için kullanılır.
+Belirli bir nesne kapsama türü ile temsil edilir *koleksiyonları*. Koleksiyonları sıralanabilecek nesneleri gruplarıdır. Visual Basic destekler içindeki belirli bir sözdizimi [For Each... Sonraki deyim](../../../../visual-basic/language-reference/statements/for-each-next-statement.md) koleksiyonu öğeler arasında yinelemek izin verir. Ayrıca, koleksiyonlar çoğunlukla kullanmanıza olanak sağlayan bir <xref:Microsoft.VisualBasic.Collection.Item%2A> kendi dizini veya benzersiz bir dize ile ilişkilendirerek öğeleri alınamadı. Koleksiyonlar eklemek veya dizinleri kullanmadan öğeleri kaldırmak izin verdiğinden diziler kullanmak daha kolay olabilir. Bunların kullanım kolaylığı nedeniyle, koleksiyonlar çoğunlukla formlar ve denetimler depolamak için kullanılır.
 
 ## <a name="related-topics"></a>İlgili konular  
- [İzlenecek yol: Sınıfları tanımlama](../../../../visual-basic/programming-guide/language-features/objects-and-classes/walkthrough-defining-classes.md)  
+ [İzlenecek Yol: Sınıfları Tanımlama](../../../../visual-basic/programming-guide/language-features/objects-and-classes/walkthrough-defining-classes.md)  
  Bir sınıfın nasıl oluşturulacağı hakkında adım adım bir açıklaması verilmiştir.  
 
- [Aşırı yüklenmiş özellikler ve yöntemler](../../../../visual-basic/programming-guide/language-features/objects-and-classes/overloaded-properties-and-methods.md)  
+ [Aşırı Yüklenmiş Özellikler ve Yöntemler](../../../../visual-basic/programming-guide/language-features/objects-and-classes/overloaded-properties-and-methods.md)  
  Aşırı Yüklenmiş Özellikler ve Yöntemler  
 
- [Devralma temelleri](../../../../visual-basic/programming-guide/language-features/objects-and-classes/inheritance-basics.md)  
+ [Devralma Temelleri](../../../../visual-basic/programming-guide/language-features/objects-and-classes/inheritance-basics.md)  
  Devralma değiştiriciler, yöntemleri ve özellikleri, MyClass ve MyBase geçersiz kılma kapsar.  
 
- [Nesne ömrü: Nesneleri oluşturma ve yok etme](../../../../visual-basic/programming-guide/language-features/objects-and-classes/object-lifetime-how-objects-are-created-and-destroyed.md)  
+ [Nesne Ömrü: Nesneleri Oluşturma ve Yok Etme](../../../../visual-basic/programming-guide/language-features/objects-and-classes/object-lifetime-how-objects-are-created-and-destroyed.md)  
  Oluşturma ve sınıf örneklerini atma açıklanır.  
 
- [Anonim türler](../../../../visual-basic/programming-guide/language-features/objects-and-classes/anonymous-types.md)  
+ [Anonim Tipler](../../../../visual-basic/programming-guide/language-features/objects-and-classes/anonymous-types.md)  
  Oluşturma ve veri türü için bir sınıf tanımı yazmadan nesneleri oluşturmanıza izin anonim türler kullanma açıklar.  
 
- [Nesne başlatıcıları: Adlandırılmış ve anonim türler](../../../../visual-basic/programming-guide/language-features/objects-and-classes/object-initializers-named-and-anonymous-types.md)  
+ [Nesne Başlatıcıları: Adlandırılmış ve Anonim Tipler](../../../../visual-basic/programming-guide/language-features/objects-and-classes/object-initializers-named-and-anonymous-types.md)  
  Tek bir ifade kullanarak adlandırılmış ve anonim türler örneklerini oluşturmak için kullanılan nesne başlatıcıları açıklanır.  
 
- [Nasıl yapılır: özellik adları ve türlerini anonim türde bildirimlerden çıkarma](../../../../visual-basic/programming-guide/language-features/objects-and-classes/how-to-infer-property-names-and-types-in-anonymous-type-declarations.md)  
+ [Nasıl yapılır: Anonim Tip Bildirimlerinden Özellik Adları ve Türlerini Çıkarma](../../../../visual-basic/programming-guide/language-features/objects-and-classes/how-to-infer-property-names-and-types-in-anonymous-type-declarations.md)  
  Özellik adlarını ve türlerini anonim türde bildirimlerden çıkarma açıklanmaktadır. Başarılı ve başarısız çıkarım örnekleri sağlar.

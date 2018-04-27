@@ -889,11 +889,11 @@ ms.assetid: 48320e4a-6e17-45a6-9966-88c6ec89bd2f
 caps.latest.revision: 15
 author: BillWagner
 ms.author: wiwagn
-ms.openlocfilehash: 4aeea86778b44cbe8e71ed64ee5a3a3a1618cccd
-ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
+ms.openlocfilehash: c6cabc4c619e6ace4c376fd125e7531f10bf9b88
+ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="sorry-we-don39t-have-specifics-on-this-c-error"></a>Ne yazık ki güncelleştireceğinizi&#39;t bu C# hatasıyla ilgili ayrıntı sahip
 Üzgünüz, ancak bu hatayla ilgili belirli bir bilgi bulunmuyor. Web hakkında bilgi bulmak hata numarası ve ileti metni arayabilirsiniz. Veya bu forumları birini kullanarak diğer geliştiriciler isteyin:  
@@ -902,7 +902,7 @@ ms.lasthandoff: 04/26/2018
  Bir forum hakkında sorular ve Visual C# dili sözdizimi ve derleyicisi genel tartışmalara sağlar.  
   
  [Visual C# IDE](https://social.msdn.microsoft.com/Forums/en-US/home?forum=csharpide)  
- Nasıl çalıştığı hakkında sorular için bir forum sağlar [!INCLUDE[vsprvs](~/includes/vsprvs-md.md)] ortamı.  
+ Visual Studio ortamında çalışma hakkında sorular için bir forum sağlar.  
   
  [Visual C# genel](https://social.msdn.microsoft.com/Forums/vstudio/en-US/home?forum=csharpgeneral)  
  Hakkında sorular için bir forum sağlar ve sorunlar ile Visual C, diğer forumlarda açıklanmamaktadır #.  

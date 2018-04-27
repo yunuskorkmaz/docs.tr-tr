@@ -1,12 +1,13 @@
 ---
-title: "Ref dönüş değerleri (Visual Basic)"
-ms.custom: 
+title: Ref dönüş değerleri (Visual Basic)
+ms.custom: ''
 ms.date: 04/28/2017
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- devlang-visual-basic
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - variables [Visual Basic]
@@ -15,15 +16,15 @@ helpviewer_keywords:
 ms.assetid: 5ef0cc69-eb3a-4a67-92a2-78585f223cb5
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 560607f7aa304b25314daabeef3952e6bbef7426
-ms.sourcegitcommit: 7e99f66ef09d2903e22c789c67ff5a10aa953b2f
+ms.openlocfilehash: 6055028ac92016cbc4b6f7bffa7f483e5ea76608
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/18/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="support-for-reference-return-values-visual-basic"></a>Başvuru dönüş değerleri (Visual Basic) desteği
 
-C# 7 ile başlayan, C# dili destekleyen *başvuru dönüş değerleri*. Başvuru dönüş değerleri anlamak için bir yönteme başvurusu tarafından geçirilen bağımsız değişken karşıtı oldukları yoludur. Başvuruya göre geçirilen bağımsız değişken değiştirildiğinde, değişiklikler üzerinde çağıran değişkeninin değeri yansıtılır. Bir yöntem için çağıran bir başvuru dönüş değeri sağladığında, başvuru dönüş değeri çağıran tarafından yapılan değişiklikler çağrılan yöntemin verilerine yansıtılır.
+C# 7. 0'dan başlayarak, C# dili destekleyen *başvuru dönüş değerleri*. Başvuru dönüş değerleri anlamak için bir yönteme başvurusu tarafından geçirilen bağımsız değişken karşıtı oldukları yoludur. Başvuruya göre geçirilen bağımsız değişken değiştirildiğinde, değişiklikler üzerinde çağıran değişkeninin değeri yansıtılır. Bir yöntem için çağıran bir başvuru dönüş değeri sağladığında, başvuru dönüş değeri çağıran tarafından yapılan değişiklikler çağrılan yöntemin verilerine yansıtılır.
 
 Visual Basic başvurusu Yazar yöntemleriyle size dönüş değerleri, ancak başvuru dönüş değerlerini kullanmasına izin veriyor izin vermiyor. Diğer bir deyişle, başvuru dönüş değeri olan bir yöntemini çağırın ve o dönüş değerini değiştirin ve değişiklikleri başvuru dönüş değeri için çağrılan yöntemin verilerde yansıtılır.
 
@@ -56,6 +57,6 @@ Bu senaryo işlemek için en iyi yolu, bir yardımcı yöntem başvuru tarafınd
 ## <a name="see-also"></a>Ayrıca bkz.
 
 [Bağımsız değişkenleri değere ve başvuruya göre geçirme](passing-arguments-by-value-and-by-reference.md)   
-[Visual Basic'de yordamlar](index.md)   
+[Visual Basic'te Yordamlar](index.md)   
 
 

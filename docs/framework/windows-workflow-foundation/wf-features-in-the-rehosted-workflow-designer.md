@@ -1,26 +1,27 @@
 ---
-title: "Rehosted iş akışı Tasarımcısı'nda yeni iş akışı Foundation 4.5 özellikleri için destek"
-ms.custom: 
+title: Rehosted iş akışı Tasarımcısı'nda yeni iş akışı Foundation 4.5 özellikleri için destek
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 1a4a4038-d8e6-41dd-99ea-93bd76286772
-caps.latest.revision: "3"
+caps.latest.revision: 3
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: ee8467eaeaef490f4c7a8bfbcb204506d71f5500
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
-ms.translationtype: MT
+ms.workload:
+- dotnet
+ms.openlocfilehash: 999c18f20264a71cf73bbd5afd352ad3104a03e8
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="support-for-new-workflow-foundation-45-features-in-the-rehosted-workflow-designer"></a>Rehosted iş akışı Tasarımcısı'nda yeni iş akışı Foundation 4.5 özellikleri için destek
-[!INCLUDE[wf](../../../includes/wf-md.md)]içinde [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] iş akışı Tasarımcısı deneyimi bazı geliştirmeler dahil olmak üzere birçok yeni özellik sunulmuştur. Bu konu, bu özelliklerin rehosted Tasarımcısı'nda desteklenen ve hangilerinin şu anda desteklenmiyor ayrıntıları.  
+[!INCLUDE[wf](../../../includes/wf-md.md)] içinde [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] iş akışı Tasarımcısı deneyimi bazı geliştirmeler dahil olmak üzere birçok yeni özellik sunulmuştur. Bu konu, bu özelliklerin rehosted Tasarımcısı'nda desteklenen ve hangilerinin şu anda desteklenmiyor ayrıntıları.  
   
 > [!NOTE]
 >  Tüm yeni bir listesi için [!INCLUDE[wf](../../../includes/wf-md.md)] özellikleri kullanıma sunulan [!INCLUDE[net_v45](../../../includes/net-v45-md.md)], olanlar dahil olmak üzere ilgisiz Tasarımcı yeniden barındırma için, bkz: [.NET 4.5, Windows Workflow Foundation yenilikler](../../../docs/framework/windows-workflow-foundation/whats-new-in-wf-in-dotnet.md).  
@@ -54,7 +55,7 @@ ms.lasthandoff: 12/22/2017
   
  Aşağıdaki ekran görüntüsü gösterildiği bir `WriteLine` etkinliğinde `Body` , bir `NoPersistScope`.  
   
- ![Otomatik &#45; konuma bırakın surround](../../../docs/framework/windows-workflow-foundation/media/autosurround1.png "AutoSurround1")  
+ ![Otomatik&#45;çevreleyen bırakma konumu](../../../docs/framework/windows-workflow-foundation/media/autosurround1.png "AutoSurround1")  
   
  Aşağıdaki ekran görüntüsü otomatik olarak oluşturulan gösterir `Sequence` etkinliğinde `Body` ikinci bir zaman `WriteLine` ilk bırakılır.  
   
@@ -75,7 +76,7 @@ ms.lasthandoff: 12/22/2017
  Birden çok etkinlik seçimin ayrıca sürüklenen ve Tasarımcısı'nda bırakılan ve bağlam menüsünü kullanarak da bulunulması.  
   
 ### <a name="outline-view-of-workflow-items"></a>İş akışı öğelerinin anahat görünümü  
- Hiyerarşik iş akışları gitmek kolaylaştırmak için bir iş akışının bileşenleri bir ağaç stili anahat görünümünde gösterilir. Anahat görünümünde görüntülenen **belge anahattı** görünümü. Bu görünümü açmak için [!INCLUDE[vs_current_short](../../../includes/vs-current-short-md.md)], üstteki menüden seçin **Görünüm**, **diğer pencereler**, **belge anahattı**, veya Ctrl W, u tuşlarına basın Anahat görünümünde bir düğümüne tıklayarak karşılık gelen etkinlik iş akışı Tasarımcısı'nda gider ve anahat görünümü Tasarımcısı'nda seçili etkinlikler göstermek için güncelleştirilmiştir. Bu özellik rehosted Tasarımcısı'nda desteklenir.  
+ Hiyerarşik iş akışları gitmek kolaylaştırmak için bir iş akışının bileşenleri bir ağaç stili anahat görünümünde gösterilir. Anahat görünümünde görüntülenen **belge anahattı** görünümü. Bu görünüm, üstteki menüden Visual Studio'da açın, seçin **Görünüm**, **diğer pencereler**, **belge anahattı**, veya Ctrl W, u tuşlarına basın Anahat görünümünde bir düğümüne tıklayarak karşılık gelen etkinlik iş akışı Tasarımcısı'nda gider ve anahat görünümü Tasarımcısı'nda seçili etkinlikler göstermek için güncelleştirilmiştir. Bu özellik rehosted Tasarımcısı'nda desteklenir.  
   
  Aşağıdaki ekran görüntüsünde tamamlanan iş akışını [başlangıç Öğreticisi](../../../docs/framework/windows-workflow-foundation/getting-started-tutorial.md) sıralı iş akışı ile anahat görünümü gösterir.  
   
@@ -93,7 +94,7 @@ ms.lasthandoff: 12/22/2017
   
  Akış Çizelgesi düğümleri ve otomatik-iki düğüm arasında düğüm eklemek üzere durumları arasında etkinlikleri de bağlantıları sürüklenebilir. Aşağıdaki ekran görüntüsünde vurgulanan bağlanan satırı burada etkinlikler kullanılabilir Araç Kutusu'ndan sürüklenen ve bırakılan gösterir.  
   
- ![Otomatik &#45; etkinlikleri bırakarak işlemek INSERT](../../../docs/framework/windows-workflow-foundation/media/autoinsert.png "Autoinsert")  
+ ![Otomatik&#45;etkinlikleri bırakarak için tanıtıcı Ekle](../../../docs/framework/windows-workflow-foundation/media/autoinsert.png "Autoinsert")  
   
  Otomatik olarak bağlanabilir ve otomatik ekleme rehosted Tasarımcısı'nda desteklenir.  
   
@@ -140,7 +141,7 @@ ms.lasthandoff: 12/22/2017
   
 3.  Paylaşılan tetikleyici geçiş oluşturma için tasarımcı desteği  
   
-4.  Durum makinesinin iş akışları dahil olmak üzere, oluşturmak için kullanılan etkinliklerin: <xref:System.Activities.Statements.StateMachine>, <xref:System.Activities.Statements.State>, ve<xref:System.Activities.Statements.Transition>  
+4.  Durum makinesinin iş akışları dahil olmak üzere, oluşturmak için kullanılan etkinliklerin: <xref:System.Activities.Statements.StateMachine>, <xref:System.Activities.Statements.State>, ve <xref:System.Activities.Statements.Transition>  
   
  Aşağıdaki ekran görüntüsünde tamamlanan durumu makine akışından gösterir [başlangıç Öğreticisi](../../../docs/framework/windows-workflow-foundation/getting-started-tutorial.md) adım [nasıl yapılır: bir Durum makinesi iş akışı oluşturma](../../../docs/framework/windows-workflow-foundation/how-to-create-a-state-machine-workflow.md).  
   
@@ -149,7 +150,7 @@ ms.lasthandoff: 12/22/2017
  Durum makinesi iş akışları oluşturma hakkında daha fazla bilgi için bkz: [durumu makine iş akışları](../../../docs/framework/windows-workflow-foundation/state-machine-workflows.md). Durum makinesi iş akışları rehosted Tasarımcısı'nda desteklenir.  
   
 ### <a name="contract-first-workflow-development"></a>Önce anlaşma iş akışı geliştirme  
- Kodda bir sözleşme ilk olarak, daha sonra birkaç tıklama ile tasarlamak Geliştirici sözleşme ilk iş akışı geliştirme aracı sağlar [!INCLUDE[vs_current_short](../../../includes/vs-current-short-md.md)], otomatik olarak her işlemi temsil eden araç kutusunda bir etkinlik şablonu oluştur. Bu etkinlikler, ardından anlaşma tarafından tanımlanan işlemleri uygulayan bir iş akışı oluşturmak için kullanılır. İş Akışı Tasarımcısı'nı bu işlemler uygulanır ve iş akışının imza sözleşme imza eşleşen emin olmak için iş akışı hizmeti doğrular. Geliştirici, ayrıca bir iş akışı hizmeti uygulanan sözleşmeleri koleksiyonu ile ilişkilendirebilirsiniz. Önce anlaşma iş akışı hizmeti geliştirme hakkında daha fazla bilgi için bkz: [nasıl yapılır: varolan bir hizmet sözleşmesini tüketen bir iş akışı hizmeti oluşturma](../../../docs/framework/windows-workflow-foundation/how-to-create-a-workflow-service-that-consumes-an-existing-service-contract.md).  
+ Önce anlaşma iş akışı geliştirme aracı, kod sözleşmede ilk tasarım sonra Visual Studio birkaç tıklama ile her işlemi temsil eden araç kutusu otomatik olarak bir etkinlik şablonu oluşturmak, geliştirici sağlar. Bu etkinlikler, ardından anlaşma tarafından tanımlanan işlemleri uygulayan bir iş akışı oluşturmak için kullanılır. İş Akışı Tasarımcısı'nı bu işlemler uygulanır ve iş akışının imza sözleşme imza eşleşen emin olmak için iş akışı hizmeti doğrular. Geliştirici, ayrıca bir iş akışı hizmeti uygulanan sözleşmeleri koleksiyonu ile ilişkilendirebilirsiniz. Önce anlaşma iş akışı hizmeti geliştirme hakkında daha fazla bilgi için bkz: [nasıl yapılır: varolan bir hizmet sözleşmesini tüketen bir iş akışı hizmeti oluşturma](../../../docs/framework/windows-workflow-foundation/how-to-create-a-workflow-service-that-consumes-an-existing-service-contract.md).  
   
 > [!WARNING]
 >  Önce anlaşma iş akışı geliştirme iş akışı Tasarımcısı'nda desteklenmiyor.

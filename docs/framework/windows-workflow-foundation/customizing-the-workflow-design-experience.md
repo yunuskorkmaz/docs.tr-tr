@@ -16,11 +16,11 @@ ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: 0ee64ae3db9dbf98f2a62397075406c118a867bb
-ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
+ms.openlocfilehash: 37296298bda514d507b8fe65af516de74289d6a0
+ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="customizing-the-workflow-design-experience"></a>İş akışı tasarım deneyimini özelleştirme
 Özel etkinlikler tasarlama ve yeniden barındırma için senaryolar [!INCLUDE[wfd1](../../../includes/wfd1-md.md)] olarak büyük ölçüde basitleştirilmiştir [!INCLUDE[netfx40_short](../../../includes/netfx40-short-md.md)]. Geliştirme ve dağıtım artık daha kolay ve daha esnektir. Anahtar infrastructural yeni etkinlik Tasarımcısı programlama modeli Windows Presentation Foundation (WPF) üzerine oluşturulmuştur değişikliktir. Bu etkinlik tasarımcıları bildirimli olarak tanımlamanızı ve yeniden barındırma olanağı verir [!INCLUDE[wfd2](../../../includes/wfd2-md.md)] karşılaştırmalı kolay olan diğer uygulamalarda. Yeniden barındırma, özel ifade Düzenleyicisi IntelliSense veya Basitleştirilmiş ifade etki alanı destekleyecek şekilde geliştirilebilir. İle tümleştirme [!INCLUDE[indigo1](../../../includes/indigo1-md.md)] iş akışı Hizmetleri kullanımı ile daha kolay hale gelmiştir. Özel Etkinlik tasarımcıları ve Model öğesi ağacı tasarım zamanı rehosted iş akışı tasarımcılarına deneyimleri geliştirmek için kullanılabilir.  
@@ -30,7 +30,7 @@ ms.lasthandoff: 04/26/2018
  Yeni özel etkinlik tasarımcıları ve şablonları nasıl oluşturulacağını açıklar.  
   
  [İş Akışı Tasarımcısını Yeniden Barındırma](../../../docs/framework/windows-workflow-foundation/rehosting-the-workflow-designer.md)  
- Yeniden barındırmak açıklar [!INCLUDE[wfd1](../../../includes/wfd1-md.md)] dışında [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] ve doğrulama hataları görüntülemek nasıl.  
+ Yeniden barındırmak açıklar [!INCLUDE[wfd1](../../../includes/wfd1-md.md)] Visual Studio ve doğrulama hataları görüntülemek nasıl dışında.  
   
  [Özel İfade Düzenleyicisi Kullanma](../../../docs/framework/windows-workflow-foundation/using-a-custom-expression-editor.md)  
  İş akışı tasarımcıları dışında rehosted ile kullanılacak bir özel ifade Düzenleyicisi'ni uygulamak açıklar [!INCLUDE[vs2010](../../../includes/vs2010-md.md)].  

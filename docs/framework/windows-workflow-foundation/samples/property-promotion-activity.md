@@ -1,23 +1,24 @@
 ---
-title: "Özelliği yükseltme etkinliği"
-ms.custom: 
+title: Özelliği yükseltme etkinliği
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 802196b7-1159-4c05-b41b-d3bfdfcc88d9
-caps.latest.revision: "6"
+caps.latest.revision: 6
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 244cea33b684a8674681c4d1974d5d857c4c402b
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 12f7aa4bd10a22a3cd3ea361e32016b95e41e46b
+ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="property-promotion-activity"></a>Özelliği yükseltme etkinliği
 Bu örnek tümleşen bir uçtan uca çözümü sağlar <xref:System.Activities.DurableInstancing.SqlWorkflowInstanceStore> yükseltme özelliğini doğrudan yazma deneyimini iş akışına. Yapılandırma öğeleri, iş akışı etkinlikleri ve yükseltme özelliğini kullanımını kolaylaştırmak iş akışı uzantıları koleksiyonu sağlanır. Ayrıca, bu koleksiyonu kullanımı gösterilmiştir basit bir iş akışı örneği içerir.  
@@ -106,10 +107,10 @@ go
   
  Bir iş akışı örneği devam ediyorsa, bir satır eklenir `InstancePromotedProperties` görüntülemek için her `PromotionSet` yapılandırmasında tanımlanmış. Bu satır yükseltilen tüm özelliklerini içerir `PromotionSet` (bir yükseltilmiş özelliği sütun başına). Bu `PromotionSet` tanımlama grubu tarafından Anahtarlanan: `InstanceId, PromotionName`. Bu örnekte, biri sahibiz `PromotionSet` , adı özniteliği yapılandırmasında tanımlı `CounterService`. Not nasıl `PromotionName` sütun değeri için name özniteliği eşittir `PromotionSet` öğesi.  
   
- Sırasını `promotedValue` öğeleri karşılık gelen yükseltilen özelliklerinde yerleştirme `InstancePromotedProperties` görünümü. `Count`İlk `promotedValue` öğesi. Sonuç olarak, bu eşlenmiş `Value1` sütununda `InstancePromotedProperties` görünümü. `LastIncrementedAt`İkinci `promotedValue` öğesi. Sonuç olarak, bu eşlenmiş `Value2` sütununda `InstancePromotedProperties` görünümü.  
+ Sırasını `promotedValue` öğeleri karşılık gelen yükseltilen özelliklerinde yerleştirme `InstancePromotedProperties` görünümü. `Count` İlk `promotedValue` öğesi. Sonuç olarak, bu eşlenmiş `Value1` sütununda `InstancePromotedProperties` görünümü. `LastIncrementedAt` İkinci `promotedValue` öğesi. Sonuç olarak, bu eşlenmiş `Value2` sütununda `InstancePromotedProperties` görünümü.  
   
 #### <a name="using-the-promotevalue-activity"></a>PromoteValue etkinliğini kullanma  
- CounterService.xamlx dosyasında inceleyin [!INCLUDE[wf2](../../../../includes/wf2-md.md)] Tasarımcısı. WF tanımında iki özel etkinlikler olduğuna dikkat edin: `PromoteValue<DateTime>` ve `PromoteValue<Int32>`.  
+ Windows Workflow Foundation Tasarımcısı'nda CounterService.xamlx dosyasını inceleyin. WF tanımında iki özel etkinlikler olduğuna dikkat edin: `PromoteValue<DateTime>` ve `PromoteValue<Int32>`.  
   
  `PromoteValue<Int32>` Etkinlik sahip kendi `Name` üye olarak tanımlanan `Count`. Bu ilk eşleşen `promotedValue` yapılandırma öğesi ve kendi `Value` olarak tanımlanan `Counter` iş akışı değişkeni. İş akışı devam ederse, `Counter` yükseltilen bir özellik olarak iş akışı değişken kalıcı `Value1` sütunu `InstancePromotedProperties` görünümü.  
   

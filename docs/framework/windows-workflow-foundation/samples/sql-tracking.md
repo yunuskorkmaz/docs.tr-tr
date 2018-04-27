@@ -1,26 +1,27 @@
 ---
 title: SQL izleme
-ms.custom: 
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: bcaebeb1-b9e5-49e8-881b-e49af66fd341
-caps.latest.revision: "15"
+caps.latest.revision: 15
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 6bd8fbe1a29793778d93eeca64b185079d706f3e
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 2eeb5cf57e6efac77de4a76fe8131189273d5438
+ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="sql-tracking"></a>SQL izleme
-Bu örnek, bir özel SQL izleme katılımcı yazma gösterilmiştir, bir SQL veritabanına izleme kayıtları yazar. [!INCLUDE[wf](../../../../includes/wf-md.md)]İş akışı iş akışı örneğini yürütmeyi görünürlük elde etmek için izleme sağlar. İzleme çalışma zamanı iş akışı iş akışı yürütme sırasında kayıtları izleme yayar. [!INCLUDE[crabout](../../../../includes/crabout-md.md)]İzleme, iş akışı bkz [izleme ve izleme iş akışı](../../../../docs/framework/windows-workflow-foundation/workflow-tracking-and-tracing.md).  
+Bu örnek, bir özel SQL izleme katılımcı yazma gösterilmiştir, bir SQL veritabanına izleme kayıtları yazar. Windows Workflow Foundation (WF) iş akışı iş akışı örneğini yürütmeyi görünürlük elde etmek için izleme sağlar. İzleme çalışma zamanı iş akışı iş akışı yürütme sırasında kayıtları izleme yayar. [!INCLUDE[crabout](../../../../includes/crabout-md.md)] İzleme, iş akışı bkz [izleme ve izleme iş akışı](../../../../docs/framework/windows-workflow-foundation/workflow-tracking-and-tracing.md).  
   
 #### <a name="to-use-this-sample"></a>Bu örneği kullanmak için  
   
@@ -43,7 +44,7 @@ Bu örnek, bir özel SQL izleme katılımcı yazma gösterilmiştir, bir SQL ver
   
 7.  Tarayıcı yerel hizmet WSDL adresi içeren StockPriceService sayfa görüntüler. Bu adresini kopyalayın.  
   
-     Yerel Hizmet WSDL adresi http://localhost:65193/StockPriceService.xamlx?wsdl örneğidir.  
+     Yerel Hizmet WSDL adresi örneğidir http://localhost:65193/StockPriceService.xamlx?wsdl.  
   
 8.  Kullanarak [!INCLUDE[fileExplorer](../../../../includes/fileexplorer-md.md)], WCF test istemcisi (WcfTestClient.exe) çalıştırın. Microsoft Visual Studio 10.0\Common7\IDE dizininde bulunur.  
   
@@ -51,7 +52,7 @@ Bu örnek, bir özel SQL izleme katılımcı yazma gösterilmiştir, bir SQL ver
   
 10. WCF test istemcisi çift tıklayarak **GetStockPrice**. Bu açılır `GetStockPrice` bir parametre değeri türü alan işlemi `Contoso` tıklatıp **Invoke**.  
   
-11. Verilmiş izleme kayıtları bir SQL veritabanına yazılır. İzleme kayıtları görüntülemek için SQL Management Studio'da TrackingSample veritabanı açın ve tablolara gidin. [!INCLUDE[crabout](../../../../includes/crabout-md.md)]SQL Server Management Studio bkz [SQL Server Management Studio Tanıtımı](http://go.microsoft.com/fwlink/?LinkId=165645). SQL Server 2008 Management Studio Express indirilebilir [burada](http://go.microsoft.com/fwlink/?LinkId=180520). Tabloları seçme sorgusu çalıştıran ilgili tablolarda depolanan izleme kayıtları içinde verileri görüntüler.  
+11. Verilmiş izleme kayıtları bir SQL veritabanına yazılır. İzleme kayıtları görüntülemek için SQL Management Studio'da TrackingSample veritabanı açın ve tablolara gidin. [!INCLUDE[crabout](../../../../includes/crabout-md.md)] SQL Server Management Studio bkz [SQL Server Management Studio Tanıtımı](http://go.microsoft.com/fwlink/?LinkId=165645). SQL Server 2008 Management Studio Express indirilebilir [burada](http://go.microsoft.com/fwlink/?LinkId=180520). Tabloları seçme sorgusu çalıştıran ilgili tablolarda depolanan izleme kayıtları içinde verileri görüntüler.  
   
 #### <a name="to-uninstall-the-sample"></a>Örnek kaldırmak için  
   

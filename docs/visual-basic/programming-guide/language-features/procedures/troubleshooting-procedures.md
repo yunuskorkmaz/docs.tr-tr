@@ -1,11 +1,12 @@
 ---
-title: "Yordam Sorunlarını Giderme (Visual Basic)"
-ms.custom: 
+title: Yordam Sorunlarını Giderme (Visual Basic)
+ms.custom: ''
 ms.date: 07/20/2015
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- devlang-visual-basic
 ms.topic: article
 helpviewer_keywords:
 - troubleshooting Visual Basic, procedures
@@ -14,14 +15,14 @@ helpviewer_keywords:
 - troubleshooting procedures
 - procedures [Visual Basic], about procedures
 ms.assetid: 525721e8-2e02-4f75-b5d8-6b893462cf2b
-caps.latest.revision: "17"
+caps.latest.revision: 17
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: b838644baa5ad10f1deb917cff5751a0f625fca6
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 7e54c965dc15131734be2c5bcfe04ad70292bf23
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="troubleshooting-procedures-visual-basic"></a>Yordam Sorunlarını Giderme (Visual Basic)
 Bu sayfada yordamlarla çalışırken ortaya çıkabilecek bazı yaygın sorunlar listelenir.  
@@ -83,11 +84,11 @@ Bu sayfada yordamlarla çalışırken ortaya çıkabilecek bazı yaygın sorunla
   
  Aşağıdaki öğeler parametre listesine ait olsa bile bir yordam imza bileşenlerinin değil:  
   
--   Yordam değiştiricisi anahtar sözcükler gibi `Public`, `Shared`, ve`Static`  
+-   Yordam değiştiricisi anahtar sözcükler gibi `Public`, `Shared`, ve `Static`  
   
 -   Parametre adları  
   
--   Parametresi değiştiricisi anahtar sözcükler gibi `ByRef` ve`Optional`  
+-   Parametresi değiştiricisi anahtar sözcükler gibi `ByRef` ve `Optional`  
   
 -   Dönüş değeri (dışında bir dönüşüm işleci) veri türü  
   
@@ -99,7 +100,7 @@ Bu sayfada yordamlarla çalışırken ortaya çıkabilecek bazı yaygın sorunla
  Bir veya daha fazla bir yordamı aşırı yükleme varsa [isteğe bağlı](../../../../visual-basic/language-reference/modifiers/optional.md) parametreleri veya [ParamArray](../../../../visual-basic/language-reference/modifiers/paramarray.md) parametresi gerekir kaçının herhangi bir çoğaltma *örtük aşırı yüklemeleri*. Bilgi için bkz: [aşırı yükleme yordamları konuları](./considerations-in-overloading-procedures.md).  
   
 ## <a name="calling-a-wrong-version-of-an-overloaded-procedure"></a>Aşırı yüklenmiş bir yordamı yanlış sürümünü çağırma  
- Bir yordamın birden fazla aşırı yüklenmiş sürümleri varsa, tüm parametre listelerine ile ilgili bilgi sahibi olmanız ve anlamanız gerekir nasıl [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] çağrıları aşırı arasında çözümler. Aksi takdirde hedeflenen farklı bir aşırı çağırabilirsiniz.  
+ Bir yordamın birden fazla aşırı yüklenmiş sürümleri varsa, tüm parametre listelerine ile ilgili bilgi sahibi olmanız ve Visual Basic çağrıları aşırı arasında nasıl çözümlediği anlamanız gerekir. Aksi takdirde hedeflenen farklı bir aşırı çağırabilirsiniz.  
   
  Aramak istediğiniz hangi aşırı yüklemenin belirlediğinizde aşağıdaki kuralları inceleyip dikkatli olun:  
   
@@ -132,12 +133,12 @@ Bu sayfada yordamlarla çalışırken ortaya çıkabilecek bazı yaygın sorunla
  Bir yordamın iki aşırı son parametre bildirilmiş dışında aynı imzaları varsa [isteğe bağlı](../../../../visual-basic/language-reference/modifiers/optional.md) birinde ve [ParamArray](../../../../visual-basic/language-reference/modifiers/paramarray.md) diğer, bu yordam çağrısına derleyici çözümler göre en yakın eşleşme. Daha fazla bilgi için bkz: [aşırı yükleme çözümü](./overload-resolution.md).  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [Yordamları](./index.md)  
- [Alt yordamlar](./sub-procedures.md)  
- [İşlev yordamları](./function-procedures.md)  
- [Özellik yordamları](./property-procedures.md)  
- [İşleç yordamları](./operator-procedures.md)  
- [Parametreler ve bağımsız değişkenler](./procedure-parameters-and-arguments.md)  
- [Yordam aşırı yüklemesi](./procedure-overloading.md)  
- [Yordamları aşırı yüklemeye ilişkin düşünceler](./considerations-in-overloading-procedures.md)  
- [Aşırı yükleme çözümü](./overload-resolution.md)
+ [Yordamlar](./index.md)  
+ [Alt Yordamlar](./sub-procedures.md)  
+ [İşlev Yordamları](./function-procedures.md)  
+ [Özellik Yordamları](./property-procedures.md)  
+ [İşleç Yordamları](./operator-procedures.md)  
+ [Yordam Parametreleri ve Bağımsız Değişkenleri](./procedure-parameters-and-arguments.md)  
+ [Yordam Aşırı Yüklemesi](./procedure-overloading.md)  
+ [Yordamları Aşırı Yüklemeye İlişkin Düşünceler](./considerations-in-overloading-procedures.md)  
+ [Aşırı Yükleme Çözümü](./overload-resolution.md)

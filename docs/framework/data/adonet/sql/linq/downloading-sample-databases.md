@@ -16,11 +16,11 @@ ms.author: douglasl
 manager: craigg
 ms.workload:
 - dotnet
-ms.openlocfilehash: dd0b29e97d36d67781c92ee24c56aed43c703261
-ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
+ms.openlocfilehash: c4f18bc3e078a03795037f77505aa2533f1e853e
+ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="downloading-sample-databases"></a>Örnek veritabanları yükleme
 Bir dizi örnekleri ve izlenecek yollarda [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] Northwind örnek veritabanı ve SQL Server Express Edition belgeleri kullanın. Bu ürünler ücretsiz Microsoft sitesinden indirebilirsiniz.  
@@ -42,7 +42,7 @@ Bir dizi örnekleri ve izlenecek yollarda [!INCLUDE[vbtecdlinq](../../../../../.
      Veritabanı varsayılan olarak, yüklü olduğundan *sürücü*: \SQL Server 2000 örnek veritabanları.  
   
 ## <a name="downloading-sql-server-express-edition"></a>SQL Server Express sürümü indirme  
- SQL Server Express Edition ücretsiz kullanılabilir ve uygulamalarla yeniden dağıtabilirsiniz. Kullanıyorsanız [!INCLUDE[vsprvs](../../../../../../includes/vsprvs-md.md)], SQL Server Express Edition Pro ve büyük sürümlerinde bulunur.  
+ SQL Server Express Edition ücretsiz kullanılabilir ve uygulamalarla yeniden dağıtabilirsiniz. Visual Studio kullanıyorsanız, SQL Server Express Edition Pro ve büyük sürümlerinde bulunur.  
   
 #### <a name="to-download-and-install-sql-server-express-edition"></a>SQL Server Express sürümünü karşıdan yükleyip  
   

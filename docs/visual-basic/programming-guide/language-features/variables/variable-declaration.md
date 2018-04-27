@@ -1,12 +1,13 @@
 ---
-title: "Visual Basic'de Değişken Bildirimi"
-ms.custom: 
+title: Visual Basic'de Değişken Bildirimi
+ms.custom: ''
 ms.date: 07/20/2015
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- devlang-visual-basic
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - variables [Visual Basic], declaring
@@ -24,14 +25,14 @@ helpviewer_keywords:
 - local variables [Visual Basic], declarations
 - scope [Visual Basic], variables
 ms.assetid: d8f10226-92b1-480f-9f53-df377b2d7e15
-caps.latest.revision: "31"
+caps.latest.revision: 31
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: 7f7b924aed1da7db816aa5c11239e301428770b7
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 8edd0b65b08efd437cc35e8f58ed7ed423736920
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="variable-declaration-in-visual-basic"></a>Visual Basic'de Değişken Bildirimi
 Ad ve özelliklerini belirtmek için bir değişken bildirin. Değişken bildirimi deyimi [Dim deyimi](../../../../visual-basic/language-reference/statements/dim-statement.md). Konumuna ve içeriği değişkenin özellikleri belirler.  
@@ -41,7 +42,7 @@ Ad ve özelliklerini belirtmek için bir değişken bildirin. Değişken bildiri
 ## <a name="declaration-levels"></a>Bildirim düzeyleri  
   
 ### <a name="local-and-member-variables"></a>Yerel ve üye değişkenleri  
- A *yerel değişken* bir yordam içinde bildirilen biridir. A *üye değişkeni* üyesi olan bir [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] yazın; sınıf, yapı veya modül içinde ancak bu sınıf, yapı veya modülü iç herhangi bir yordam içinde değil modülü düzeyinde bildirilmedi.  
+ A *yerel değişken* bir yordam içinde bildirilen biridir. A *üye değişkeni* ; Visual Basic türü üyesi olan bir sınıf, yapı veya modül içinde ancak bu sınıf, yapı veya modülü iç herhangi bir yordam içinde değil modülü düzeyinde bildirilmedi.  
   
 ### <a name="shared-and-instance-variables"></a>Paylaşılan ve örnek değişkenleri  
  Sınıf veya yapı olsun veya olmasın, paylaşılan üzerinde bir üye değişkenine kategorisini bağlıdır. İle bildirilirse [paylaşılan](../../../../visual-basic/language-reference/modifiers/shared.md) olmasından anahtar sözcüğü bir *paylaşılan değişken*, ve sınıf veya yapı tüm örnekleri arasında paylaşılan tek bir kopya bulunmaktadır.  
@@ -51,15 +52,15 @@ Ad ve özelliklerini belirtmek için bir değişken bildirin. Değişken bildiri
 ## <a name="declaring-data-type"></a>Veri türü bildirme  
  [Olarak](../../../../visual-basic/language-reference/statements/as-clause.md) bildirim deyiminin yan tümcesinde veri türü veya nesne türü bildirme değişkenin tanımlamanıza izin verir. Şu türler için bir değişken belirtebilirsiniz:  
   
--   Başlangıç veri türü, gibi `Boolean`, `Long`, veya`Decimal`  
+-   Başlangıç veri türü, gibi `Boolean`, `Long`, veya `Decimal`  
   
 -   Bir dizi ya da yapısı gibi bir bileşik veri türü  
   
 -   Bir nesne türü ya da uygulamanızı veya başka bir uygulama tanımlı sınıfı  
   
--   A [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] gibi sınıfı <xref:System.Windows.Forms.Label> veya<xref:System.Windows.Forms.TextBox>  
+-   A [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] gibi sınıfı <xref:System.Windows.Forms.Label> veya <xref:System.Windows.Forms.TextBox>  
   
--   Arabirim türü, gibi <xref:System.IComparable> veya<xref:System.IDisposable>  
+-   Arabirim türü, gibi <xref:System.IComparable> veya <xref:System.IDisposable>  
   
  Veri türü yinelemek zorunda kalmadan bir deyim birkaç değişkenleri bildirebilirsiniz. Değişkenleri aşağıdaki deyimlerinde `i`, `j`, ve `k` türü olarak bildirilmiş `Integer`, `l` ve `m` olarak `Long`, ve `x` ve `y` olarak`Single`:  
   
@@ -87,12 +88,12 @@ Dim l, m As Long, x, y As Single
  Bir değişkenin *erişim düzeyine* erişmek için izne sahip code uzantı'dır. Bu erişim değiştiricisi tarafından belirlenir (gibi [ortak](../../../../visual-basic/language-reference/modifiers/public.md) veya [özel](../../../../visual-basic/language-reference/modifiers/private.md)) kullandığınız `Dim` deyimi. Daha fazla bilgi için bkz: [erişim düzeyini Visual Basic'te](../../../../visual-basic/programming-guide/language-features/declared-elements/access-levels.md).  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [Nasıl yapılır: yeni değişken oluşturma](../../../../visual-basic/programming-guide/language-features/variables/how-to-create-a-new-variable.md)  
- [Nasıl yapılır: içine ve dışına bir değişken veri taşıma](../../../../visual-basic/programming-guide/language-features/variables/how-to-move-data-into-and-out-of-a-variable.md)  
- [Veri türleri](../../../../visual-basic/language-reference/data-types/data-type-summary.md)  
- [Korumalı](../../../../visual-basic/language-reference/modifiers/protected.md)  
- [Arkadaş](../../../../visual-basic/language-reference/modifiers/friend.md)  
- [Statik](../../../../visual-basic/language-reference/modifiers/static.md)  
- [Bildirilen öğe özellikleri](../../../../visual-basic/programming-guide/language-features/declared-elements/declared-element-characteristics.md)  
- [Yerel tür çıkarımı](../../../../visual-basic/programming-guide/language-features/variables/local-type-inference.md)  
- [Option Infer deyimi](../../../../visual-basic/language-reference/statements/option-infer-statement.md)
+ [Nasıl yapılır: Yeni Değişken Oluşturma](../../../../visual-basic/programming-guide/language-features/variables/how-to-create-a-new-variable.md)  
+ [Nasıl yapılır: Bir Değişkende Veri Ekleme Çıkarma](../../../../visual-basic/programming-guide/language-features/variables/how-to-move-data-into-and-out-of-a-variable.md)  
+ [Veri Türleri](../../../../visual-basic/language-reference/data-types/data-type-summary.md)  
+ [Protected](../../../../visual-basic/language-reference/modifiers/protected.md)  
+ [Friend](../../../../visual-basic/language-reference/modifiers/friend.md)  
+ [Static](../../../../visual-basic/language-reference/modifiers/static.md)  
+ [Bildirilen Öğe Özellikleri](../../../../visual-basic/programming-guide/language-features/declared-elements/declared-element-characteristics.md)  
+ [Yerel Çıkarım](../../../../visual-basic/programming-guide/language-features/variables/local-type-inference.md)  
+ [Option Infer Deyimi](../../../../visual-basic/language-reference/statements/option-infer-statement.md)

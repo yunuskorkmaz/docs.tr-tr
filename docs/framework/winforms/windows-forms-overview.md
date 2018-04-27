@@ -1,27 +1,29 @@
 ---
-title: "Windows Forms'a Genel Bakış"
-ms.custom: 
+title: Windows Forms'a Genel Bakış
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-winforms
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-winforms
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - smart clients
 - Windows Forms, about Windows Forms
 ms.assetid: 3a2b6284-c8d6-4e1c-8c69-0bed38f38cd4
-caps.latest.revision: "34"
+caps.latest.revision: 34
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: bc9ff97583566bd950486d96bd100f05ef651c7e
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 2620d8314a11e0a90864120c40dbc3935cce75fe
+ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="windows-forms-overview"></a>Windows Forms'a Genel Bakış
 Aşağıdaki özette akıllı istemci uygulamaları, Windows Forms programlama ve bugünün kuruluşlar ve son kullanıcıların ihtiyaçlarını karşılamak akıllı istemciler oluşturmak için Windows Forms nasıl kullanabileceğiniz ana özelliklerini avantajları açıklanır.  
@@ -30,7 +32,7 @@ Aşağıdaki özette akıllı istemci uygulamaları, Windows Forms programlama v
  Windows Forms ile akıllı istemciler geliştirin. *Akıllı istemciler* kolay dağıtmak ve güncelleştirme, grafik zengin uygulamalar bağlı veya Internet bağlantısı kesilmiş çalışabilir ve daha güvenli bir şekilde daha geleneksel yerel bilgisayardaki kaynaklara erişebilir Windows tabanlı uygulamalar.  
   
 ### <a name="building-rich-interactive-user-interfaces"></a>Yapı zengin ve etkileşimli kullanıcı arabirimleri  
- Windows Forms için bir akıllı istemci teknolojisidir [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)], okuma ve dosya sistemine yazma gibi ortak uygulama görevlerini basitleştirmek yönetilen kitaplıkları kümesi. Gibi bir geliştirme ortamı kullandığınızda [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)], bir ağ üzerinden uzak bilgisayarlarla bilgilerini görüntülemek, kullanıcılardan giriş istemek ve iletişim kuran Windows Forms akıllı istemci uygulamaları oluşturabilirsiniz.  
+ Windows Forms için bir akıllı istemci teknolojisidir [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)], okuma ve dosya sistemine yazma gibi ortak uygulama görevlerini basitleştirmek yönetilen kitaplıkları kümesi. Visual Studio gibi bir geliştirme ortamı kullandığınızda, bir ağ üzerinden uzak bilgisayarlarla iletişim bilgilerini görüntülemek ve giriş kullanıcılarından istemek Windows Forms akıllı istemci uygulamaları oluşturabilirsiniz.  
   
  Windows Forms'ta bir *form* üzerinde görüntü bilgileri kullanıcıya görsel bir yüzey. Normalde formlarına denetimler ekleme ve fare tıklamaları veya anahtar basarsa gibi kullanıcı eylemlerini yanıtlarını geliştirerek Windows Forms uygulamaları oluşturun. A *denetim* veri girişi kabul eder ya da verileri görüntüleyen bir ayrık kullanıcı arabirimi (UI) öğesidir.  
   
@@ -40,7 +42,7 @@ Aşağıdaki özette akıllı istemci uygulamaları, Windows Forms programlama v
   
  Windows Forms özellikleri Microsoft Office gibi gelişmiş uygulamalarda öykünmek zengin UI denetimleri vardır. Kullandığınızda <xref:System.Windows.Forms.ToolStrip> ve <xref:System.Windows.Forms.MenuStrip> denetim, araç çubukları ve alt menüler görüntülemek ve metin kutuları ve birleşik giriş kutuları gibi diğer denetimleri konak metin ve görüntüler içeren menüleri oluşturabilirsiniz.  
   
- İle [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] sürükle ve bırak Windows Form Tasarımcısı Windows Forms uygulamaları kolayca oluşturabilir. Yalnızca imlecinizi denetimleriyle seçin ve form üzerinde istediğiniz yere ekleyin. Tasarımcı denetimleri hizalama dışında mücadele olabilmesi için kılavuz çizgileri ve ek satırları gibi araçlar sağlar. Ve kullansanız [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] veya derleme komut satırında, kullandığınız <xref:System.Windows.Forms.FlowLayoutPanel>, <xref:System.Windows.Forms.TableLayoutPanel> ve <xref:System.Windows.Forms.SplitContainer> daha kısa sürede Gelişmiş oluşturmak için denetimleri form düzenler.  
+ Visual Studio sürükle ve bırak Windows Form Tasarımcısı ile Windows Forms uygulamaları kolayca oluşturabilirsiniz. Yalnızca imlecinizi denetimleriyle seçin ve form üzerinde istediğiniz yere ekleyin. Tasarımcı denetimleri hizalama dışında mücadele olabilmesi için kılavuz çizgileri ve ek satırları gibi araçlar sağlar. Visual Studio'yu kullanın ya da komut satırında derleme olup olmadığını kullanabileceğiniz <xref:System.Windows.Forms.FlowLayoutPanel>, <xref:System.Windows.Forms.TableLayoutPanel> ve <xref:System.Windows.Forms.SplitContainer> Gelişmiş oluşturmak için denetimleri form düzenleri daha kısa sürede.  
   
  Son olarak, kendi özel kullanıcı Arabirimi öğeleri oluşturmanız gerekiyorsa <xref:System.Drawing> ad alanı, büyük seçimi çizgiler, daireler ve diğer şekiller doğrudan bir form üzerinde işlemek için sınıflar içerir.  
   
@@ -54,7 +56,7 @@ Aşağıdaki özette akıllı istemci uygulamaları, Windows Forms programlama v
 |-----------------|----------------|  
 |Form üzerinde denetimleri kullanma|[Nasıl yapılır: Windows Forms’a Denetimler Ekleme](../../../docs/framework/winforms/controls/how-to-add-controls-to-windows-forms.md)|  
 |Kullanarak <xref:System.Windows.Forms.ToolStrip> denetimi|[Nasıl yapılır: Tasarımcı Kullanarak Standart Öğelerle Temel bir ToolStrip Oluşturma](../../../docs/framework/winforms/controls/create-a-basic-wf-toolstrip-with-standard-items-using-the-designer.md)|  
-|Grafik oluşturma<xref:System.Drawing>|[Grafik Programlamaya Başlarken](../../../docs/framework/winforms/advanced/getting-started-with-graphics-programming.md)|  
+|Grafik oluşturma <xref:System.Drawing>|[Grafik Programlamaya Başlarken](../../../docs/framework/winforms/advanced/getting-started-with-graphics-programming.md)|  
 |Özel denetimler oluşturma|[Nasıl yapılır: UserControl Sınıfından Devralma](../../../docs/framework/winforms/controls/how-to-inherit-from-the-usercontrol-class.md)|  
   
 ### <a name="displaying-and-manipulating-data"></a>Verileri görüntüleme ve düzenleme  
@@ -64,7 +66,7 @@ Aşağıdaki özette akıllı istemci uygulamaları, Windows Forms programlama v
   
  Veri Kaynakları penceresini kullanarak verilere bağlı denetimler kolayca oluşturabilirsiniz. Pencerenin veritabanları, Web Hizmetleri ve nesneleri gibi veri kaynakları projenize görüntüler. Veri bağlama denetimleri projenizdeki forms üzerine bu pencereden öğeleri sürükleyerek oluşturabilirsiniz. Ayrıca veri mevcut denetimleri verileri için mevcut denetimleri üzerine veri kaynakları penceresinden nesneleri sürükleyerek bağlama.  
   
- Windows Forms'ta yönetebileceğiniz veri bağlamanın başka bir tür *ayarları*. Çoğu akıllı istemci uygulamaları, forms, bilinen son boyutu gibi kendi çalışma zamanı durumu hakkındaki bazı bilgileri korumak ve kaydedilen dosyaları için varsayılan konumları gibi kullanıcı tercihi verileri korur. Uygulama ayarları özellik ayarları her iki tür istemci bilgisayarda depolamak için kolay bir yol sağlayarak bu gereksinimleri karşılar. Bu ayarları kullanarak tanımladıktan sonra [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] ya da bir kod düzenleyicisinde, ayarları XML olarak kalıcı ve çalışma zamanında otomatik olarak geri belleğe okuyun.  
+ Windows Forms'ta yönetebileceğiniz veri bağlamanın başka bir tür *ayarları*. Çoğu akıllı istemci uygulamaları, forms, bilinen son boyutu gibi kendi çalışma zamanı durumu hakkındaki bazı bilgileri korumak ve kaydedilen dosyaları için varsayılan konumları gibi kullanıcı tercihi verileri korur. Uygulama ayarları özellik ayarları her iki tür istemci bilgisayarda depolamak için kolay bir yol sağlayarak bu gereksinimleri karşılar. Visual Studio veya kod düzenleyicisini kullanarak bu ayarları tanımladıktan sonra ayarları XML olarak kalıcı ve çalışma zamanında otomatik olarak geri belleğe okuyun.  
   
 #### <a name="help-displaying-and-manipulating-data"></a>Verileri Yardım görüntüleme ve düzenleme  
  Bu özellikler kullanma hakkında adım adım bilgiler için aşağıdaki Yardım konularına bakın.  
@@ -77,20 +79,20 @@ Aşağıdaki özette akıllı istemci uygulamaları, Windows Forms programlama v
 |Uygulama ayarları kullanma|[Nasıl yapılır: Uygulama Ayarları Oluşturma](../../../docs/framework/winforms/advanced/how-to-create-application-settings.md)|  
   
 ### <a name="deploying-applications-to-client-computers"></a>İstemci bilgisayarlara uygulamaları dağıtma  
- Uygulamanızı yazdıktan sonra yükleyebilir ve kendi istemci bilgisayarlarda çalıştırmak için kullanıcılarınızın uygulamaya göndermeniz gerekir. Kullandığınızda [!INCLUDE[ndptecclick](../../../includes/ndptecclick-md.md)] teknolojisi, dağıtabileceğiniz uygulamalarınızdan içinde [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] göre yalnızca birkaç tıklama kullanılması ve Web uygulamanıza işaret eden bir URL ile kullanıcılarınız sağlar. [!INCLUDE[ndptecclick](../../../includes/ndptecclick-md.md)]tüm öğeleri ve bağımlılıklarını, uygulamanızda yönetir ve uygulama, istemci bilgisayarda doğru şekilde yüklendiğini sağlar.  
+ Uygulamanızı yazdıktan sonra yükleyebilir ve kendi istemci bilgisayarlarda çalıştırmak için kullanıcılarınızın uygulamaya göndermeniz gerekir. Kullandığınızda [!INCLUDE[ndptecclick](../../../includes/ndptecclick-md.md)] teknolojisi uygulamalarınızdan Visual Studio içinde yalnızca birkaç tıklama kullanarak dağıtabilir ve Web uygulamanıza işaret eden bir URL ile kullanıcılarınız sağlayın. [!INCLUDE[ndptecclick](../../../includes/ndptecclick-md.md)] tüm öğeleri ve bağımlılıklarını, uygulamanızda yönetir ve uygulama, istemci bilgisayarda doğru şekilde yüklendiğini sağlar.  
   
- [!INCLUDE[ndptecclick](../../../includes/ndptecclick-md.md)]uygulamaları yalnızca kullanıcı ağa bağlandığında çalıştırmak için veya her ikisi de çevrimiçi çalıştırmak için yapılandırılmış ve çevrimdışı olabilir. Bir uygulama çevrimdışı işlemi desteklemesi gereken belirttiğinizde [!INCLUDE[ndptecclick](../../../includes/ndptecclick-md.md)] kullanıcının uygulamanızda bir bağlantı ekler **Başlat** menüsü. Kullanıcı uygulamayı açabilir ve URL'yi kullanarak olmadan.  
+ [!INCLUDE[ndptecclick](../../../includes/ndptecclick-md.md)] uygulamaları yalnızca kullanıcı ağa bağlandığında çalıştırmak için veya her ikisi de çevrimiçi çalıştırmak için yapılandırılmış ve çevrimdışı olabilir. Bir uygulama çevrimdışı işlemi desteklemesi gereken belirttiğinizde [!INCLUDE[ndptecclick](../../../includes/ndptecclick-md.md)] kullanıcının uygulamanızda bir bağlantı ekler **Başlat** menüsü. Kullanıcı uygulamayı açabilir ve URL'yi kullanarak olmadan.  
   
- Uygulamanızı güncelleştirdiğinizde, yeni bir dağıtım bildirimi ve yeni bir kopya uygulamanızın Web sunucunuza yayımlayın. [!INCLUDE[ndptecclick](../../../includes/ndptecclick-md.md)]bir güncelleştirme kullanılabilir olduğunu algılar ve kullanıcının yüklemeyi yükseltme; özel programlama eski derlemeleri güncelleştirmek için gereklidir.  
+ Uygulamanızı güncelleştirdiğinizde, yeni bir dağıtım bildirimi ve yeni bir kopya uygulamanızın Web sunucunuza yayımlayın. [!INCLUDE[ndptecclick](../../../includes/ndptecclick-md.md)] bir güncelleştirme kullanılabilir olduğunu algılar ve kullanıcının yüklemeyi yükseltme; özel programlama eski derlemeleri güncelleştirmek için gereklidir.  
   
 #### <a name="help-deploying-clickonce-applications"></a>ClickOnce uygulamaları dağıtma Yardımı  
  Bir tam giriş için [!INCLUDE[ndptecclick](../../../includes/ndptecclick-md.md)], bkz: [ClickOnce güvenliği ve dağıtımı](/visualstudio/deployment/clickonce-security-and-deployment). Bu özellikler kullanma hakkında adım adım bilgiler için aşağıdaki Yardım konularına bakın,  
   
 |Açıklama|Yardım konusu|  
 |-----------------|----------------|  
-|Kullanarak bir uygulamayı dağıtma[!INCLUDE[ndptecclick](../../../includes/ndptecclick-md.md)]|[Nasıl yapılır: Yayımlama Sihirbazını Kullanarak ClickOnce Uygulaması Yayımlama](/visualstudio/deployment/how-to-publish-a-clickonce-application-using-the-publish-wizard)<br /><br /> [İzlenecek yol: ClickOnce Uygulamasını El ile Dağıtma](/visualstudio/deployment/walkthrough-manually-deploying-a-clickonce-application)|  
+|Kullanarak bir uygulamayı dağıtma [!INCLUDE[ndptecclick](../../../includes/ndptecclick-md.md)]|[Nasıl yapılır: Yayımlama Sihirbazını Kullanarak ClickOnce Uygulaması Yayımlama](/visualstudio/deployment/how-to-publish-a-clickonce-application-using-the-publish-wizard)<br /><br /> [İzlenecek yol: ClickOnce Uygulamasını El ile Dağıtma](/visualstudio/deployment/walkthrough-manually-deploying-a-clickonce-application)|  
 |Güncelleştirme bir [!INCLUDE[ndptecclick](../../../includes/ndptecclick-md.md)] dağıtımı|[Nasıl yapılır: ClickOnce Uygulaması için Güncelleştirmeleri Yönetme](/visualstudio/deployment/how-to-manage-updates-for-a-clickonce-application)|  
-|Güvenlik ile yönetme[!INCLUDE[ndptecclick](../../../includes/ndptecclick-md.md)]|[Nasıl yapılır: ClickOnce Güvenlik Ayarlarını Etkinleştirme](/visualstudio/deployment/how-to-enable-clickonce-security-settings)|  
+|Güvenlik ile yönetme [!INCLUDE[ndptecclick](../../../includes/ndptecclick-md.md)]|[Nasıl yapılır: ClickOnce Güvenlik Ayarlarını Etkinleştirme](/visualstudio/deployment/how-to-enable-clickonce-security-settings)|  
   
 ### <a name="other-controls-and-features"></a>Diğer denetimleri ve özellikleri  
  Windows Forms'ta uygulama ortak görevleri hızlı ve kolay iletişim kutuları oluşturma, yazdırma, Yardım ve belgeler ekleme ve uygulamanız birden çok dilde yerelleştirme için destek gibi olun birçok özelliği vardır. Ayrıca, Windows Forms güçlü güvenlik sistemde dayanır [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)]. Bu sistemiyle müşterileriniz için daha güvenli uygulamalar serbest bırakabilirsiniz.  

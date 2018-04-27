@@ -10,20 +10,20 @@ ms.technology:
 ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: c13b4d7b-dac7-4ffd-9f84-765c903511e1
-caps.latest.revision: ''
+caps.latest.revision: 8
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: 02332e04f729abd125f43acdbe0883851004537e
-ms.sourcegitcommit: c883637b41ee028786edceece4fa872939d2e64c
+ms.openlocfilehash: af557d41709ea1015a4454d62df93e60dd975217
+ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/23/2018
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="jsonp"></a>JSONP
-Bu örnek, JSON ile doldurma (JSONP) WCF REST Hizmetleri'nde desteklemek gösterilmiştir. JSONP geçerli belgede oluşturma komut dosyası etiketlerini tarafından etki alanları arası komut çağırmak için kullanılan bir kuraldır. Sonuç belirtilen geri çağırma işlevi döndürülür. JSONP gibi etiketler fikir üzerinde temel \<src komut dosyası "http:/ /..." = > herhangi bir etki alanından betiklerini değerlendirilebilir ve bu etiketlerin tarafından alınan komut dosyası diğer işlevleri zaten tanımlanabilir içinde bir kapsamı içinde değerlendirilir.  
+Bu örnek, JSON ile doldurma (JSONP) WCF REST Hizmetleri'nde desteklemek gösterilmiştir. JSONP geçerli belgede oluşturma komut dosyası etiketlerini tarafından etki alanları arası komut çağırmak için kullanılan bir kuraldır. Sonuç belirtilen geri çağırma işlevi döndürülür. JSONP gibi etiketler fikir üzerinde temel `<script src="http://..." >` herhangi bir etki alanından betiklerini değerlendirilebilir ve bu etiketlerin tarafından alınan komut dosyası diğer işlevleri zaten tanımlanabilir içinde bir kapsamı içinde değerlendirilir.  
   
 ## <a name="demonstrates"></a>Gösteriler  
  Etki alanları arası JSONP ile komut dosyası.  
@@ -79,6 +79,6 @@ Sys._json0({"__type":"Customer:#Microsoft.Samples.Jsonp","Address":"1 Example Wa
   
 1.  Çözüm için JSONP örneği açın.  
   
-2.  Köprü "http://localhost:26648/JSONPClientPage.aspx" http://localhost:26648/JSONPClientPage.aspx tarayıcıda başlatmak için F5 tuşuna basın.  
+2.  Başlatmak için F5 tuşuna basın `http://localhost:26648/JSONPClientPage.aspx` tarayıcıda.  
   
 3.  Sayfa yüklendikten sonra "Name" ve "Adres" için metin girişleri değerlerle doldurulur dikkat edin.  Bu değerleri çağrısından sağlandı [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] sayfa işleme tarayıcı tamamladıktan sonra hizmet.

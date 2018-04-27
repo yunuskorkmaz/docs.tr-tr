@@ -1,10 +1,11 @@
 ---
-title: "Visual Basic'de İşleç Önceliği"
+title: Visual Basic'de İşleç Önceliği
 ms.date: 07/20/2015
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- devlang-visual-basic
 ms.topic: article
 helpviewer_keywords:
 - arithmetic operators [Visual Basic], precedence
@@ -19,14 +20,14 @@ helpviewer_keywords:
 - math operators [Visual Basic]
 - order of precedence
 ms.assetid: cbbdb282-f572-458e-a520-008a675f8063
-caps.latest.revision: "18"
+caps.latest.revision: 18
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: 6c0fb466b404cafdd4b91d061971fd683375c715
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 2d8de9deea84c7f0c11c91b55951cdfc200b017f
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="operator-precedence-in-visual-basic"></a>Visual Basic'de İşleç Önceliği
 Çeşitli işlemler bir ifadede gerçekleştiğinde, her bölüm değerlendirilir ve adlı önceden belirlenmiş bir sırayla çözülmüş *İşleç önceliği*.  
@@ -95,10 +96,10 @@ Dim n3 As Integer = 96 / (8 / 4)
   
  İlk ifade 96 bölme değerlendirir / (12'de sonuçlarını) 8'i ve ardından bölme 12 / üç içinde sonuçları 4. Derleyici işlemler için değerlendirildiği `n1` Bu sipariş için açıkça belirtildiğinde soldan sağa değerlendirme aynıdır `n2`. Her ikisi de `n1` ve `n2` üç sonucunu sahip. Bunun aksine, `n3` 48, sonucunu sahip parantez 8 değerlendirmek için derleyici zorla olduğundan / 4 ilk.  
   
- Bu davranış nedeniyle işleçleri yereldir *ilişkilendirilebilir sol* içinde [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)].  
+ Bu davranış nedeniyle işleçleri yereldir *ilişkilendirilebilir sol* Visual Basic'te.  
   
 ## <a name="overriding-precedence-and-associativity"></a>Öncelik ve birleşim geçersiz kılma  
- Başkalarının önce değerlendirilecek bir ifade bazı bölümleri zorlamak için parantez kullanabilirsiniz. Bu öncelik sırasını ve sol birleşim geçersiz kılabilirsiniz. [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]her zaman dışındaki önce parantez içine işlemleri gerçekleştirir. Parantez içinde parantez kullanmadığınız sürece ancak parantez içinde normal öncelik ve birleşim, tutar. Aşağıdaki örnek bunu göstermektedir.  
+ Başkalarının önce değerlendirilecek bir ifade bazı bölümleri zorlamak için parantez kullanabilirsiniz. Bu öncelik sırasını ve sol birleşim geçersiz kılabilirsiniz. Visual Basic her zaman dışındaki önce parantez içine işlemleri gerçekleştirir. Parantez içinde parantez kullanmadığınız sürece ancak parantez içinde normal öncelik ve birleşim, tutar. Aşağıdaki örnek bunu göstermektedir.  
   
 ```  
 Dim a, b, c, d, e, f, g As Double  
@@ -120,10 +121,10 @@ g = (a - (b + c)) / (d * e)
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
  [= İşleci](../../../visual-basic/language-reference/operators/assignment-operator.md)  
- [Is işleci](../../../visual-basic/language-reference/operators/is-operator.md)  
- [IsNot işleci](../../../visual-basic/language-reference/operators/isnot-operator.md)  
- [Like işleci](../../../visual-basic/language-reference/operators/like-operator.md)  
- [TypeOf işleci](../../../visual-basic/language-reference/operators/typeof-operator.md)  
- [Await işleci](../../../visual-basic/language-reference/operators/await-operator.md)  
- [İşlevselliğe göre listelenmiş işleçler](../../../visual-basic/language-reference/operators/operators-listed-by-functionality.md)  
- [İşleçler ve ifadeler](../../../visual-basic/programming-guide/language-features/operators-and-expressions/index.md)
+ [Is İşleci](../../../visual-basic/language-reference/operators/is-operator.md)  
+ [IsNot İşleci](../../../visual-basic/language-reference/operators/isnot-operator.md)  
+ [Like İşleci](../../../visual-basic/language-reference/operators/like-operator.md)  
+ [TypeOf İşleci](../../../visual-basic/language-reference/operators/typeof-operator.md)  
+ [Await İşleci](../../../visual-basic/language-reference/operators/await-operator.md)  
+ [İşlevselliğe Göre Listelenmiş İşleçler](../../../visual-basic/language-reference/operators/operators-listed-by-functionality.md)  
+ [İşleçler ve İfadeler](../../../visual-basic/programming-guide/language-features/operators-and-expressions/index.md)

@@ -1,7 +1,7 @@
 ---
-title: '&lt;AppContextSwitchOverrides&gt; Element'
+title: '&lt;AppContextSwitchOverrides&gt; öğesi'
 ms.custom: ''
-ms.date: 03/28/2018
+ms.date: 04/19/2018
 ms.prod: .net-framework
 ms.technology:
 - dotnet-bcl
@@ -19,18 +19,18 @@ ms.author: ronpet
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: a17d67a1c6143897802bb15b983a9a909fd5949c
-ms.sourcegitcommit: b750a8e3979749b214e7e10c82efb0a0524dfcb1
+ms.openlocfilehash: 146416a9872a8444316c2e4a754067b82030a81d
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/09/2018
+ms.lasthandoff: 04/26/2018
 ---
-# <a name="ltappcontextswitchoverridesgt-element"></a>&lt;AppContextSwitchOverrides&gt; Element
+# <a name="ltappcontextswitchoverridesgt-element"></a>&lt;AppContextSwitchOverrides&gt; öğesi
 Tarafından kullanılan bir veya daha fazla anahtarları tanımlar <xref:System.AppContext> sınıfı yeni işlevsellik için vazgeçme mekanizma sağlar.  
   
  \<Yapılandırma >  
- \<runtime>  
-\<AppContextSwitchOverrides>  
+ \<çalışma zamanı >  
+\<AppContextSwitchOverrides >  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -80,6 +80,7 @@ Tarafından kullanılan bir veya daha fazla anahtarları tanımlar <xref:System.
 |`Switch.System.Drawing.Printing.`</br>`OptimizePrintPreview`|Denetimleri olup olmadığını performansını <xref:System.Windows.Forms.PrintPreviewDialog> ağ yazıcıları için optimize edilmiştir. Daha fazla bilgi için bkz: [PrintPreviewDialog denetimine genel bakış](../../../winforms/controls/printpreviewdialog-control-overview-windows-forms.md).|.NET Framework 4.6|
 |`Switch.System.Globalization.NoAsyncCurrentCulture`|Zaman uyumsuz işlemleri çağıran iş parçacığının bağlamından geçmez olup olmadığını denetler. Daha fazla bilgi için bkz: [CurrentCulture ve CurrentUICulture akış görevleri](~/docs/framework/migration-guide/retargeting/4.5.2-4.6.md#currentculture-and-currentuiculture-flow-across-tasks).|.NET Framework 4.6|  
 |`Switch.System.IdentityModel.`<br/>`DisableMultipleDNSEntriesInSANCertificate`|Denetimleri olup olmadığını <xref:System.IdentityModel.Claims.X509CertificateClaimSet.FindClaims%2A?displayProperty=nameWithType> yöntemi, yalnızca son DNS girişi ile talep türüyle eşleşecek şekilde çalışır. Daha fazla bilgi için bkz: [azaltma: X509CertificateClaimSet.FindClaims yöntemi](~/docs/framework/migration-guide/mitigation-x509certificateclaimset-findclaims-method.md).|.NET Framework 4.6.1|  
+|`Switch.System.IdentityModel.`<br/>`EnableCachedEmptyDefaultAuthorizationContext`|Değişebilir bir nesne döndürmek AuthorizationContext.Empty izin verilip verilmeyeceğini denetler.|.NET Framework 4.6|  
 |`Switch.System.IO.BlockLongPaths`|Denetimleri olup olmadığını yolları daha uzun `MAX_PATH` (260 karakter) throw bir <xref:System.IO.PathTooLongException>. Daha fazla bilgi için bkz: [uzun yol Destek](~/docs/framework/migration-guide/retargeting/4.6.1-4.6.2.md#long-path-support).|.NET Framework 4.6.2|  
 |`Switch.System.IO.Compression.ZipFile.`<br/>`UseBackslash`|Ters eğik çizgi kullanır ("\\") yerine eğik çizgi ("/") yol ayırıcısı olarak <xref:System.IO.Compression.ZipArchiveEntry.FullName%2A?displayProperty=nameWithType> özelliği. Daha fazla bilgi için bkz: [azaltma: ZipArchiveEntry.FullName yol ayırıcısı](~/docs/framework/migration-guide/mitigation-ziparchiveentry-fullname-path-separator.md).|.NET Framework 4.6.1|  
 |`Switch.System.IO.Ports.`<br/>`DoNotCatchSerialStreamThreadExceptions`|Arka plan iş parçacıkları ile oluşturulan durum sistem özel durumlar işletim olup olmadığını denetler <xref:System.IO.Ports.SerialPort> akışları sonlandırma işlemi.|.NET framework 4.7.1| 
@@ -100,10 +101,13 @@ Tarafından kullanılan bir veya daha fazla anahtarları tanımlar <xref:System.
 |`Switch.System.ServiceModel.`<br/>`AllowUnsignedToHeader`|Belirler olup olmadığını `TransportWithMessageCredential` güvenlik modu sağlar imzasız iletilerle "için" başlığı. Bu bir katılımı anahtarıdır. Daha fazla bilgi için bkz: [.NET Framework 4.6.1 çalışma zamanı değişiklikleri](https://msdn.microsoft.com/library/mt592686.aspx#WCF).|.NET Framework 4.6.1| 
 |`Switch.System.ServiceModel.`<br/>`DisableAddressHeaderCollectionValidation`>|Denetimleri olup olmadığını <xref:System.ServiceModel.Channels.AddressHeaderCollection.%23ctor(System.Collections.Generic.IEnumerable{System.ServiceModel.Channels.AddressHeader})> Oluşturucusu oluşturur bir <xref:System.ArgumentException> öğeleri ise `null`.|.NET framework 4.7.1| 
 |`Switch.System.ServiceModel.`<br />`DisableCngCertificates`|İle X509 kullanma girişimi sertifikaları olup olmadığını CSG anahtarı depolama sağlayıcısı aykırı belirler. Daha fazla bilgi için bkz: [WCF taşıma güvenliği destekler CNG kullanarak depolanan Sertifikalar](~/docs/framework/migration-guide/retargeting/4.6.1-4.6.2.md#wcf-transport-security-supports-certificates-stored-using-cng).|.NET Framework 4.6.1|
+|`Switch.System.ServiceModel.`<br/>`DisableExplicitConnectionCloseHeader`|HTTP taşıma kendini barındıran hizmet ile kullanırken, bu değeri ayarlamak `true` bir uygulama ekleme yoksaymak WCF neden `Connection: close` bir istek için yanıt üstbilgileri için üstbilgi. Bu değeri ayarlamak `false` sağlayan ekleme `Connection: close` yanıt üstbilgileri için bir yanıt gönderdi sonra isteği yuva kapatma sonuçları üstbilgi.|.NET Framework 4.6|
 |`Switch.System.ServiceModel.`<br/>`DisableOperationContextAsyncFlow`|Tek iş parçacığı aynı anda yürütme desteklemeyeceğini hizmet örneklerini kısıtlama neden kilitlenmeleri işler.|.NET Framework 4.6.2|
 |`Switch.System.ServiceModel.`<br/>`DisableUsingServicePointManagerSecurityProtocols`|İle birlikte `Switch.System.Net.DontEnableSchUseStrongCrypto`, WCF ileti güvenliğini TLS 1.1 ve TLS 1.2 kullanıp kullanmadığını belirler.|.NET framework 4.7 |    
+|`Switch.System.ServiceModel.`<br/>`DontEnableSystemDefaultTlsVersions`|Değerini `false` işletim sisteminin protokolünü seçmenize izin vermek için varsayılan yapılandırmayı ayarlar. Değerini `true` kullanılabilir en yüksek protokol için varsayılan ayarlar. (Ayrıca önceki framework sürümlerinin seçenekli üzerinde kullanılabilir)|.NET framework 4.7.1|
 |`Switch.System.ServiceModel.`<br/>`UseSha1InMsmqEncryptionAlgorithm`|İmza algoritması WCF MSMQ iletiler için varsayılan ileti SHA1 veya SHA256 olup olmadığını belirler.|.NET framework 4.7.1|
 |`Switch.System.ServiceModel.`<br/>`UseSha1InPipeConnectionGetHashAlgorithm`|WCF rastgele adları için adlandırılmış kanallar oluşturmak için bir SHA1 veya SHA256 karma kullanıp kullanmadığını denetler.|.NET framework 4.7.1|
+|`Switch.System.ServiceModel.Internals`<br/>`IncludeNullExceptionMessageInETWTrace`|Throw verilip denetleyen bir [NullReferenceException](xref:System.NullReferenceException) özel durum iletisi olduğunda null.|.NET framework 4.7|  
 |`Switch.System.ServiceProcess.`<br/>`DontThrowExceptionsOnStart`|Hizmet başlatma sırasında oluşturulan özel durumları çağırana yayılır olup olmadığını denetler <xref:System.ServiceProcess.ServiceBase.Run%2A?displayProperty=nameWithType> yöntemi.|.NET framework 4.7.1|
 |`Switch.System.Windows.Controls.Grid.`<br/>`StarDefinitionsCanExceedAvailableSpace` |Windows Presentation Foundation eski bir algoritma geçerli olup olmadığını belirler (`true`) ya da yeni bir algoritma (`false`) için alan ayırma içinde \*-sütun. Daha fazla bilgi için bkz: [azaltma: kılavuz denetimin alanı ayırma yıldız sütunlara](Mitigation:%20Grid%20Control's%20Space%20Allocation%20to%20Star-columns.md). |.NET framework 4.7 |
 |`Switch.System.Windows.Controls.TabControl.`<br/>`SelectionPropertiesCanLagBehindSelectionChangedEvent`|Değişti olayı denetimleri olup bir seçici veya bir sekme denetimini her zaman kendi seçili değer özelliğinin değeri seçimi tetiklenmeden önce güncelleştirir.|.NET framework 4.7.1|

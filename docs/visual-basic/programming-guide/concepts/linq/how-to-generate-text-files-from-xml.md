@@ -1,28 +1,29 @@
 ---
 title: "Nasıl yapılır: metin dosyaları (Visual Basic) XML'den oluştur"
-ms.custom: 
+ms.custom: ''
 ms.date: 07/20/2015
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- devlang-visual-basic
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 3b33f191-4abe-4419-b81b-3cb81d9a317f
-caps.latest.revision: "3"
+caps.latest.revision: 3
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: 901d31b6dbac54740404a7dc182ecbadca5ddd74
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.openlocfilehash: 14d70da183a1dd179d9e3665de2aba0195e37148
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="how-to-generate-text-files-from-xml-visual-basic"></a>Nasıl yapılır: metin dosyaları (Visual Basic) XML'den oluştur
 Bu örnek bir XML dosyasından bir virgülle ayrılmış değerler (CSV) dosyası oluşturmak nasıl gösterir.  
   
 ## <a name="example"></a>Örnek  
- [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] Sürümünü dizeleri koleksiyon tek bir dize olarak toplamak için yordam kodu kullanır.  
+ Visual Basic sürümünü yordam kodu dizeleri koleksiyon tek bir dize olarak toplamak için kullanır.  
   
  Bu örnekte aşağıdaki XML belgesi kullanır: [örnek XML dosyası: müşteriler ve siparişler (LINQ-XML)](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-file-customers-and-orders-linq-to-xml.md).  
   

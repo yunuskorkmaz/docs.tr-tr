@@ -1,11 +1,12 @@
 ---
-title: "Nasıl yapılır: Sayısal Değerleri Hesaplama (Visual Basic)"
-ms.custom: 
+title: 'Nasıl yapılır: Sayısal Değerleri Hesaplama (Visual Basic)'
+ms.custom: ''
 ms.date: 07/20/2015
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- devlang-visual-basic
 ms.topic: article
 helpviewer_keywords:
 - operator precedence
@@ -17,14 +18,14 @@ helpviewer_keywords:
 - Visual Basic code, expressions
 - numeric expressions
 ms.assetid: ba6bf43d-bd96-49b8-b1de-4a7797551372
-caps.latest.revision: "13"
+caps.latest.revision: 13
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: 65cd446b99018d029e8a18d69ed33d8b8ac28f8c
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 322e2c9fe7f668e08a42cd707c5d81090aca627c
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="how-to-calculate-numeric-values-visual-basic"></a>Nasıl yapılır: Sayısal Değerleri Hesaplama (Visual Basic)
 Sayısal ifadeler kullanımıyla sayısal değerleri hesaplayabilirsiniz. A *sayısal ifade* değişmez değerleri, sabitleri ve değişkenleri sayısal değerleri temsil eden içeren bir ifade ve bu değerlere göre hareket işleçler.  
@@ -45,7 +46,7 @@ Sayısal ifadeler kullanımıyla sayısal değerleri hesaplayabilirsiniz. A *say
   
      İlk üç satırını bir hazır değer, bir sabit ve değişken gösterir. Her biri geçerli bir sayısal ifade tek başına oluşturur. Son satırı iki değişmez değerleri sahip bir değişken bileşimini gösterir.  
   
-     Sayısal ifade tam bir form değil, Not [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] deyimi kendisi tarafından. Tam bir deyim bir parçası olarak ifade kullanmanız gerekir.  
+     Sayısal ifade tam bir Visual Basic deyim tek başına oluşturmuyor olduğunu unutmayın. Tam bir deyim bir parçası olarak ifade kullanmanız gerekir.  
   
 #### <a name="to-store-a-numeric-value"></a>Sayısal bir değeri depolamak için  
   
@@ -71,9 +72,9 @@ Sayısal ifadeler kullanımıyla sayısal değerleri hesaplayabilirsiniz. A *say
      Daha fazla bilgi için bkz: [Visual Basic'de İşleç önceliği](../../../../visual-basic/language-reference/operators/operator-precedence.md).  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [İşleçler ve ifadeler](../../../../visual-basic/programming-guide/language-features/operators-and-expressions/index.md)  
- [Değer karşılaştırmaları](../../../../visual-basic/programming-guide/language-features/operators-and-expressions/value-comparisons.md)  
- [Deyimleri](../../../../visual-basic/language-reference/statements/index.md)  
+ [İşleçler ve İfadeler](../../../../visual-basic/programming-guide/language-features/operators-and-expressions/index.md)  
+ [Değer Karşılaştırmaları](../../../../visual-basic/programming-guide/language-features/operators-and-expressions/value-comparisons.md)  
+ [Deyimler](../../../../visual-basic/language-reference/statements/index.md)  
  [Visual Basic'de İşleç önceliği](../../../../visual-basic/language-reference/operators/operator-precedence.md)  
- [Aritmetik işleçler](../../../../visual-basic/language-reference/operators/arithmetic-operators.md)  
- [İşleçlerin etkili bileşimi](../../../../visual-basic/programming-guide/language-features/operators-and-expressions/efficient-combination-of-operators.md)
+ [Aritmetik İşleçler](../../../../visual-basic/language-reference/operators/arithmetic-operators.md)  
+ [İşleçlerin Etkili Bileşimi](../../../../visual-basic/programming-guide/language-features/operators-and-expressions/efficient-combination-of-operators.md)

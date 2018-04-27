@@ -1,12 +1,13 @@
 ---
-title: "x:Type İşaretleme Uzantısı"
-ms.custom: 
+title: x:Type İşaretleme Uzantısı
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-wpf
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-wpf
+ms.tgt_pltfrm: ''
 ms.topic: article
 f1_keywords:
 - x:TypeExtension
@@ -21,16 +22,17 @@ helpviewer_keywords:
 - TargetType attribute [XAML Services]
 - Type markup extension in XAML [XAML Services]
 ms.assetid: e0e0ce6f-e873-49c7-8ad7-8b840eb353ec
-caps.latest.revision: "27"
+caps.latest.revision: 27
 author: wadepickett
 ms.author: wpickett
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: a4d645d5c953c0ff33435a5648024ace099455e2
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: db56c2bcdca14b87de320dfe19a6c364c76ecef7
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="xtype-markup-extension"></a>x:Type İşaretleme Uzantısı
 CLR sağlayan <xref:System.Type> belirtilen bir XAML tür için temel alınan tür nesnesi.  
@@ -55,7 +57,7 @@ CLR sağlayan <xref:System.Type> belirtilen bir XAML tür için temel alınan t�
 |`typeNameValue`|Gerekli. Tür adı için geçerli varsayılan XAML ad uzayı çözümlenebilir; veya belirtilen eşlenmiş öneki varsa `prefix` sağlanır.|  
   
 ## <a name="remarks"></a>Açıklamalar  
- `x:Type` Biçimlendirme uzantısı benzer bir işlevi olan `typeof()` işlecinde [!INCLUDE[TLA#tla_cshrp](../../../includes/tlasharptla-cshrp-md.md)] veya `GetType` işlecinde [!INCLUDE[TLA#tla_visualb](../../../includes/tlasharptla-visualb-md.md)].  
+ `x:Type` Biçimlendirme uzantısı benzer bir işlevi olan `typeof()` C# işleci veya `GetType` Visual Basic'de işleç.  
   
  `x:Type` Biçimlendirme uzantısı türü ele özellikleri için bir dize öğesinden dönüştürme davranış sağlayan <xref:System.Type>. Giriş XAML türüdür. Giriş XAML türü ve CLR çıkış arasındaki ilişkiyi <xref:System.Type> çıkış olan <xref:System.Type> olan <xref:System.Xaml.XamlType.UnderlyingType%2A> giriş <xref:System.Xaml.XamlType>, gerekli bakan sonra <xref:System.Xaml.XamlType> XAML şema içeriği ve göre<xref:System.Windows.Markup.IXamlTypeResolver>Hizmet bağlamı sağlar.  
   
@@ -67,7 +69,7 @@ CLR sağlayan <xref:System.Type> belirtilen bir XAML tür için temel alınan t�
   
  `x:Type` Biçimlendirme uzantısı nesne öğesi sözdiziminde kullanılabilir. Bu durumda, değerini belirten <xref:System.Windows.Markup.TypeExtension.TypeName%2A> özelliği uzantıyı düzgün başlatmak için gereklidir.  
   
- `x:Type` Biçimlendirme uzantısı olarak ayrıntılı bir özniteliği de kullanılabilir; ancak bu kullanım tipik: `<``object``property``="{x:Type TypeName=``typeNameValue``}" .../>`  
+ `x:Type` Biçimlendirme uzantısı olarak ayrıntılı bir özniteliği de kullanılabilir; ancak bu kullanım tipik: `<``object` `property``="{x:Type TypeName=``typeNameValue``}" .../>`  
   
 ## <a name="wpf-usage-notes"></a>WPF kullanım notları  
   
@@ -82,7 +84,7 @@ CLR sağlayan <xref:System.Type> belirtilen bir XAML tür için temel alınan t�
 ## <a name="xaml-2009"></a>XAML 2009  
  XAML 2009 desteği sağlar. ek genel türleri ve özellik davranışını değiştiren `x:TypeArguments` ve `x:Type` bu desteği sağlamak için.  
   
--   `x:TypeArguments`ve ilişkili nesne öğesi genel nesne örneğini oluşturmada için kök başka öğelerde olabilir. Daha fazla bilgi için "XAML 2009" bölümüne bakın [x: TypeArguments yönergesi](../../../docs/framework/xaml-services/x-typearguments-directive.md).  
+-   `x:TypeArguments` ve ilişkili nesne öğesi genel nesne örneğini oluşturmada için kök başka öğelerde olabilir. Daha fazla bilgi için "XAML 2009" bölümüne bakın [x: TypeArguments yönergesi](../../../docs/framework/xaml-services/x-typearguments-directive.md).  
   
 -   XAML 2009 genel tür kısıtlaması biçimlendirmede belirtmek için bir söz dizimi destekler. Bu tarafından kullanılabilir `x:TypeArguments`, göre `x:Type`, veya iki özellik birlikte.  
   

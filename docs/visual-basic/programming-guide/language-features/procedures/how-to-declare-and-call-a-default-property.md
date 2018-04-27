@@ -1,11 +1,12 @@
 ---
 title: "Nasıl yapılır: Visual Basic'de Varsayılan Bir Özelliği Bildirme ve Çağırma"
-ms.custom: 
+ms.custom: ''
 ms.date: 07/20/2015
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- devlang-visual-basic
 ms.topic: article
 helpviewer_keywords:
 - defaults [Visual Basic], properties
@@ -16,17 +17,17 @@ helpviewer_keywords:
 - Visual Basic code, properties
 - default properties
 ms.assetid: 68b4026e-09ef-4613-808e-f6287494ff63
-caps.latest.revision: "23"
+caps.latest.revision: 23
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: 8baa03e37325a6ad7065ec1a60052b3ea6a46c6f
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 9c4f471eba42e47d6bef45a4d38abc0cbd2d32bc
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="how-to-declare-and-call-a-default-property-in-visual-basic"></a>Nasıl yapılır: Visual Basic'de Varsayılan Bir Özelliği Bildirme ve Çağırma
-A *varsayılan özellik* kodunuzu belirtme olmadan erişebileceği bir sınıf veya yapı özelliğidir. Kodu çağırma bir sınıf veya yapı ancak bir özellik adları ve bağlam bir özelliğine erişim verir [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] varsa, bu sınıf veya yapısı varsayılan özellik erişim giderir.  
+A *varsayılan özellik* kodunuzu belirtme olmadan erişebileceği bir sınıf veya yapı özelliğidir. Kod adları çağrılırken bir sınıf veya yapı ancak değil bir özellik ve bağlam erişim özelliği sayesinde, varsa, Visual Basic erişim o sınıfın veya yapısı varsayılan özellik giderir.  
   
  En çok bir sınıf veya yapı bir varsayılan özelliğine sahip olabilir. Ancak, varsayılan bir özellik aşırı yükleme ve birden fazla sürümüne sahip olmalıdır.  
   
@@ -90,13 +91,13 @@ A *varsayılan özellik* kodunuzu belirtme olmadan erişebileceği bir sınıf v
  Bu olumsuzlukları nedeniyle varsayılan özellikleri tanımlamaya değil göz önünde bulundurmalısınız. Kod okunabilirlik için ayrıca her zaman tüm özelliklerini açıkça başvuran göz önünde bulundurun, hatta özellikleri varsayılan.  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [Özellik yordamları](./property-procedures.md)  
- [Parametreler ve bağımsız değişkenler](./procedure-parameters-and-arguments.md)  
- [Property deyimi](../../../../visual-basic/language-reference/statements/property-statement.md)  
- [Varsayılan](../../../../visual-basic/language-reference/modifiers/default.md)  
+ [Özellik Yordamları](./property-procedures.md)  
+ [Yordam Parametreleri ve Bağımsız Değişkenleri](./procedure-parameters-and-arguments.md)  
+ [Property Deyimi](../../../../visual-basic/language-reference/statements/property-statement.md)  
+ [Default](../../../../visual-basic/language-reference/modifiers/default.md)  
  [Visual Basic'de özellikler ve değişkenler arasındaki farklar](./differences-between-properties-and-variables.md)  
- [Nasıl yapılır: özellik oluşturma](./how-to-create-a-property.md)  
- [Nasıl yapılır: bir özelliği karışık erişim düzeyleriyle bildirme](./how-to-declare-a-property-with-mixed-access-levels.md)  
- [Nasıl yapılır: bir özellik yordamı çağırma](./how-to-call-a-property-procedure.md)  
- [Nasıl yapılır: bir özelliğe değer ekleme](./how-to-put-a-value-in-a-property.md)  
- [Nasıl yapılır: bir özellikten değer alma](./how-to-get-a-value-from-a-property.md)
+ [Nasıl yapılır: Özellik Oluşturma](./how-to-create-a-property.md)  
+ [Nasıl yapılır: Bir Özelliği Karışık Erişim Düzeyleriyle Bildirme](./how-to-declare-a-property-with-mixed-access-levels.md)  
+ [Nasıl yapılır: Bir Özellik Yordamı Çağırma](./how-to-call-a-property-procedure.md)  
+ [Nasıl yapılır: Bir Özelliğe Değer Ekleme](./how-to-put-a-value-in-a-property.md)  
+ [Nasıl yapılır: Bir Özellikten Değer Alma](./how-to-get-a-value-from-a-property.md)

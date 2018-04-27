@@ -1,32 +1,33 @@
 ---
-title: "Bildirilmiş Öğelere Başvurular (Visual Basic)"
-ms.custom: 
+title: Bildirilmiş Öğelere Başvurular (Visual Basic)
+ms.custom: ''
 ms.date: 07/20/2015
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- devlang-visual-basic
 ms.topic: article
 helpviewer_keywords:
 - declared elements [Visual Basic]
 - references [Visual Basic], declared elements
 - qualified names [Visual Basic]
 ms.assetid: d6301709-f4cc-4b7a-b8ba-80898f14ab46
-caps.latest.revision: "19"
+caps.latest.revision: 19
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: 9b3847164b4e577a9265a746b9329218b4af928b
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 86d25d42688cffbf4076c4fb42eccc3b917d1dc1
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="references-to-declared-elements-visual-basic"></a>Bildirilmiş Öğelere Başvurular (Visual Basic)
-Kodunuz için bildirilen bir öğe, başvurduğunda [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] derleyici adının uygun bildirimi, başvuru adı ile eşleşir. Aynı ada sahip birden fazla öğe bildirilirse, bu öğeler tarafından başvurulacak olduğu denetleyebilirsiniz *belirleme* adı.  
+Kodunuzu bildirilen bir öğesiyle, Visual Basic derleyici adının uygun bildirimi, başvuru adı ile eşleşir. Aynı ada sahip birden fazla öğe bildirilirse, bu öğeler tarafından başvurulacak olduğu denetleyebilirsiniz *belirleme* adı.  
   
  Derleme adı bildirimiyle adı referansı eşleştirmeyi dener *dar kapsamı*. Bunun anlamı başvuru yapma kodu ile başlar ve dışa öğeleri içeren art arda gelen düzeyleri ile çalışır.  
   
- Aşağıdaki örnek, aynı ada sahip iki değişken başvuruları gösterir. Bu örnek iki değişken bildirir, her adlı `totalCount`, modüldeki kapsamının farklı düzeylerde `container`. Zaman yordamı `showCount` görüntüler `totalCount` nitelik olmadan [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] derleyici çözümler dar kapsamı, yani yerel bildirimi içinde bildirimiyle referansı `showCount`. Ne zaman niteleyen `totalCount` içeren modülü ile `container`, daha geniş kapsamlı bildirimi referansı derleyici giderir.  
+ Aşağıdaki örnek, aynı ada sahip iki değişken başvuruları gösterir. Bu örnek iki değişken bildirir, her adlı `totalCount`, modüldeki kapsamının farklı düzeylerde `container`. Zaman yordamı `showCount` görüntüler `totalCount` nitelemesiz, Visual Basic derleyici dar kapsamı, yani yerel bildirimi içinde bildirimiyle referansı çözümler `showCount`. Ne zaman niteleyen `totalCount` içeren modülü ile `container`, daha geniş kapsamlı bildirimi referansı derleyici giderir.  
   
 ```vb  
 ' Assume these two modules are both in the same assembly.  
@@ -199,13 +200,13 @@ Dim xDoc As xD.XmlDocument
  Tüm öğeleri benzersiz adlar sağlayarak ad belirsizliği önleyebilirsiniz. Daha sonra bir ad alanı, modül veya sınıf adıyla nitelemek gerek kalmadan herhangi bir öğeye başvuru yapabilirsiniz. Ayrıca, yanlışlıkla yanlış öğesine başvuran olasılığını de azaltın.  
   
 ## <a name="shadowing"></a>Gölgeleme  
- İki programlama öğeleri aynı adı paylaşan, bunlardan birini gizleyebilirsiniz, veya *gölge*, diğerinde. Gölgeli bir öğe için başvuru kullanılabilir değil; Bunun yerine, kodunuzu kullandığında gölgeli öğe adı [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] derleyici onu gölgeleme öğesine giderir. Örnekleri içeren daha ayrıntılı bir açıklaması için bkz: [Visual Basic'de gölgeleme](../../../../visual-basic/programming-guide/language-features/declared-elements/shadowing.md).  
+ İki programlama öğeleri aynı adı paylaşan, bunlardan birini gizleyebilirsiniz, veya *gölge*, diğerinde. Gölgeli bir öğe için başvuru kullanılabilir değil; kodunuzu gölgeli öğe adı kullandığında, bunun yerine, Visual Basic derleyici gölgeleme öğesine çözer. Örnekleri içeren daha ayrıntılı bir açıklaması için bkz: [Visual Basic'de gölgeleme](../../../../visual-basic/programming-guide/language-features/declared-elements/shadowing.md).  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [Bildirilen öğe adları](../../../../visual-basic/programming-guide/language-features/declared-elements/declared-element-names.md)  
- [Bildirilen öğe özellikleri](../../../../visual-basic/programming-guide/language-features/declared-elements/declared-element-characteristics.md)  
- [Proje ve çözüm özelliklerini yönetme](/visualstudio/ide/managing-project-and-solution-properties)  
- [Değişkenleri](../../../../visual-basic/programming-guide/language-features/variables/index.md)  
- [Imports deyimi (.NET Namespace ve türü)](../../../../visual-basic/language-reference/statements/imports-statement-net-namespace-and-type.md)  
- [New işleci](../../../../visual-basic/language-reference/operators/new-operator.md)  
- [Ortak](../../../../visual-basic/language-reference/modifiers/public.md)
+ [Bildirilen Öğe Adları](../../../../visual-basic/programming-guide/language-features/declared-elements/declared-element-names.md)  
+ [Bildirilen Öğe Özellikleri](../../../../visual-basic/programming-guide/language-features/declared-elements/declared-element-characteristics.md)  
+ [Proje ve Çözüm Özelliklerini Yönetme](/visualstudio/ide/managing-project-and-solution-properties)  
+ [Değişkenler](../../../../visual-basic/programming-guide/language-features/variables/index.md)  
+ [Imports Deyimi (.NET Ad Alanı ve Türü)](../../../../visual-basic/language-reference/statements/imports-statement-net-namespace-and-type.md)  
+ [New İşleci](../../../../visual-basic/language-reference/operators/new-operator.md)  
+ [Public](../../../../visual-basic/language-reference/modifiers/public.md)

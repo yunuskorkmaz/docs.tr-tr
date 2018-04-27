@@ -1,27 +1,29 @@
 ---
-title: "Nasıl Yapılır: Hizmetleri Başlatma"
-ms.custom: 
+title: 'Nasıl Yapılır: Hizmetleri Başlatma'
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - Windows Service applications, starting
 - services, starting
 ms.assetid: 9ea77955-2d96-4c3d-913c-14db7604cdad
-caps.latest.revision: "16"
+caps.latest.revision: 16
 author: ghogen
 ms.author: ghogen
 manager: douge
-ms.workload: dotnet
-ms.openlocfilehash: 8352edaa9386adc1fbf3057c6e98f5a9cf9ce4a1
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 47e27f579c0ed7d1be0b061bc6e79bba0c060abb
+ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="how-to-start-services"></a>Nasıl Yapılır: Hizmetleri Başlatma
 Bir hizmeti yüklendikten sonra başlatılmalıdır. Çağrıları başlangıç <xref:System.ServiceProcess.ServiceBase.OnStart%2A> yöntemi hizmet sınıfı üzerinde. Genellikle, <xref:System.ServiceProcess.ServiceBase.OnStart%2A> yöntemi hizmetin gerçekleştirecek yararlı çalışmaları tanımlar. Bir hizmeti başlatıldıktan sonra el ile duraklatıldı veya durduruluncaya kadar etkin kalır.  
@@ -29,7 +31,7 @@ Bir hizmeti yüklendikten sonra başlatılmalıdır. Çağrıları başlangıç 
  Hizmetleri otomatik olarak veya el ile başlatmak için ayarlanabilir. Yüklü olduğu bilgisayarın yeniden başlatılmasıyla ya da ilk açık olduğunda otomatik olarak başlayan bir hizmeti başlatılır. Bir kullanıcı el ile başlayan bir hizmetin başlatılması gerekir.  
   
 > [!NOTE]
->  Varsayılan olarak, hizmetler ile oluşturulan [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] el ile başlatmak için ayarlanır.  
+>  Varsayılan olarak, Visual Studio ile oluşturulan hizmetleri el ile başlatmak için ayarlanır.  
   
  Bir hizmeti el ile başlatabilirsiniz birkaç yolu vardır: gelen **Sunucu Gezgini**, gelen **Hizmet Denetim Yöneticisi**, veya bir bileşen kullanarak koddan çağrılan <xref:System.ServiceProcess.ServiceController>.  
   
@@ -70,7 +72,7 @@ Bir hizmeti yüklendikten sonra başlatılmalıdır. Çağrıları başlangıç 
   
     -   Windows XP ve 2000 Professional, sağ **Bilgisayarım** Masaüstü ve ardından **Yönet**. Görüntülenen iletişim kutusunda genişletin **hizmetler ve uygulamalar** düğümü.  
   
-         \-veya -  
+         \- veya -  
   
     -   Windows Server 2003 ve Windows 2000 Server'ı tıklatın **Başlat**, işaret **programları**, tıklatın **Yönetimsel Araçlar**ve ardından **Hizmetleri**.  
   

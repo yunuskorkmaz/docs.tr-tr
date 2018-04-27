@@ -1,31 +1,32 @@
 ---
-title: "Visual Basic'de Normal İfadeleri MaskedTextBox Denetimi ile Kullanma"
-ms.custom: 
+title: Visual Basic'de Normal İfadeleri MaskedTextBox Denetimi ile Kullanma
+ms.custom: ''
 ms.date: 07/20/2015
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- devlang-visual-basic
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - strings [Visual Basic], regular expressions
 - strings [Visual Basic], masked edit
 ms.assetid: 2a048fb0-7053-487d-b2c5-ffa5e22ed6f9
-caps.latest.revision: "10"
+caps.latest.revision: 10
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: 2638ed804593dd52481bd3865e1c67c5fdb2dcf9
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: c72542c05123ef62a8f95afbe1bb19cb823d1f21
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="using-regular-expressions-with-the-maskedtextbox-control-in-visual-basic"></a>Visual Basic'de Normal İfadeleri MaskedTextBox Denetimi ile Kullanma
 Bu örnek ile çalışmak için basit normal ifadeler dönüştürülmesi gösterilmektedir <xref:System.Windows.Forms.MaskedTextBox> denetim.  
   
 ## <a name="description-of-the-masking-language"></a>Maskeleme dil açıklaması  
- Standart <xref:System.Windows.Forms.MaskedTextBox> dil maskeleme temel tarafından kullanılan bir `Masked Edit` denetim [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] 6.0 ve o platformundan geçirildiğinde kullanıcılara bilgi sahibi olmanız gerekir.  
+ Standart <xref:System.Windows.Forms.MaskedTextBox> dil maskeleme temel tarafından kullanılan bir `Masked Edit` denetim Visual Basic 6. 0've bu platformundan geçirildiğinde kullanıcılara bilgi sahibi olmanız gerekir.  
   
  <xref:System.Windows.Forms.MaskedTextBox.Mask%2A> Özelliği <xref:System.Windows.Forms.MaskedTextBox> denetimi kullanmak için hangi giriş maskesi belirtir. Maske, bir veya daha fazla aşağıdaki tabloda maskeleme öğelerinden oluşan bir dize olması gerekir.  
   
@@ -68,4 +69,4 @@ Bu örnek ile çalışmak için basit normal ifadeler dönüştürülmesi göste
  <xref:System.Windows.Forms.MaskedTextBox.Mask%2A>  
  <xref:System.Windows.Forms.MaskedTextBox>  
  [Visual Basic'de dizeleri doğrulama](../../../../visual-basic/programming-guide/language-features/strings/validating-strings.md)  
- [MaskedTextBox denetimi](../../../../framework/winforms/controls/maskedtextbox-control-windows-forms.md)
+ [MaskedTextBox Denetimi](../../../../framework/winforms/controls/maskedtextbox-control-windows-forms.md)

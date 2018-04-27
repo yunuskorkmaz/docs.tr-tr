@@ -1,26 +1,26 @@
 ---
-title: "MSMQ Etkinleştirme"
-ms.custom: 
+title: MSMQ Etkinleştirme
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - dotnet-clr
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: e3834149-7b8c-4a54-806b-b4296720f31d
-caps.latest.revision: 
+caps.latest.revision: 29
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: a4c3d1dc8116e9c1b26febc4d8473b15d8648c01
-ms.sourcegitcommit: 15316053918995cc1380163a7d7e7edd5c44e6d7
+ms.openlocfilehash: e0f8077e425464d5a9f33662366377d573719659
+ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/19/2018
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="msmq-activation"></a>MSMQ Etkinleştirme
 Bu örnek, bir iletiyi kuyruktan okunur uygulamaların Windows İşlem Etkinleştirme Hizmeti (WAS) barındırmak gösterilmiştir. Bu örnekte `netMsmqBinding` ve dayanır [iki yönlü iletişim](../../../../docs/framework/wcf/samples/two-way-communication.md) örnek. Bu durumda Web barındırdığı bir uygulama hizmetidir ve istemci kendiliğinden barındırılır ve gönderilen satınalma siparişi durumunu izlemek için konsola çıkarır.  
@@ -33,9 +33,9 @@ Bu örnek, bir iletiyi kuyruktan okunur uygulamaların Windows İşlem Etkinleş
 >   
 >  \<InstallDrive >: \WF_WCF_Samples  
 >   
->  Bu dizin mevcut değilse, Git [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] HYPERLINK "http://go.microsoft.com/fwlink/?LinkId=150780" \t "_blank" ve [!INCLUDE[wf](../../../../includes/wf-md.md)] için örnekleri [!INCLUDE[netfx40_long](../../../../includes/netfx40-long-md.md)] tüm indirmek için [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] ve [!INCLUDE[wf1](../../../../includes/wf1-md.md)] örnekleri. Bu örnek aşağıdaki dizinde bulunur.  
+>  Bu dizin mevcut değilse, Git [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] HYPERLINK "http://go.microsoft.com/fwlink/?LinkId=150780" \t "_blank" ve Windows Workflow Foundation (WF) örnekleri [!INCLUDE[netfx40_long](../../../../includes/netfx40-long-md.md)] tüm indirmek için [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] ve [!INCLUDE[wf1](../../../../includes/wf1-md.md)] örnekleri. Bu örnek aşağıdaki dizinde bulunur.  
 >   
->  \<InstallDrive>:\Samples\WCFWFCardSpace\WCF\Basic\Services\Hosting\WASHost\MsmqActivation.  
+>  \<InstallDrive >: \Samples\WCFWFCardSpace\WCF\Basic\Services\Hosting\WASHost\MsmqActivation.  
   
  Windows İşlem Etkinleştirme Hizmeti (WAS), yeni bir işlem etkinleştirme mekanizmasıdır için [!INCLUDE[lserver](../../../../includes/lserver-md.md)], daha önce yalnızca HTTP tabanlı uygulamalara HTTP olmayan protokolleri kullanan uygulamalar için kullanılabilen IIS benzeri özellikleri sağlar. [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] Dinleyici Bağdaştırıcısı arabirimi tarafından desteklenen HTTP olmayan protokolleri üzerinden alınan etkinleştirme isteklerini iletişim kurmak için kullandığı [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]TCP, Adlandırılmış Kanallar ve MSMQ gibi. HTTP olmayan protokolleri isteklerini almak için işlevselliği SMSvcHost.exe içinde çalışan yönetilen Windows Hizmetleri tarafından barındırılır.  
   
@@ -282,7 +282,7 @@ Status of order 70cf9d63-3dfa-4e69-81c2-23aa4478ebed :Pending
         > [!NOTE]
         >  Bu komut, metnin tek bir satırdır.  
   
-         Bu komut /servicemodelsamples uygulama tarafından http://localhost/servicemodelsamples ve net.msmq://localhost/servicemodelsamples kullanarak erişilmesini sağlar.  
+         Bu komut kullanılarak erişilmesi /servicemodelsamples uygulamayı etkinleştirir http://localhost/servicemodelsamples ve net.msmq://localhost/servicemodelsamples.  
   
 7.  Daha önce yapmadıysanız, MSMQ Etkinleştirme hizmeti etkin olduğundan emin olun. Gelen **Başlat** menüsünde tıklatın **çalıştırmak**ve türü `Services.msc`. İçin Hizmetler listesi arama **Net.Msmq dinleyici bağdaştırıcısı**. Sağ tıklatıp **özellikleri**. Ayarlama **başlangıç türü** için **otomatik**, tıklatın **Uygula** tıklatıp **Başlat** düğmesi. Bu adım yalnızca bir kez Net.Msmq Dinleyici Bağdaştırıcısı hizmeti ilk kullanımını önce yapılmalıdır.  
   
@@ -350,7 +350,7 @@ Status of order 70cf9d63-3dfa-4e69-81c2-23aa4478ebed :Pending
   
      Etkinleştirme altında çalışacağı kimliği değiştirmek için:  
   
-    1.  Run Services.msc.  
+    1.  Services.msc dosyasını çalıştırın.  
   
     2.  Sağ **Net.MsmqListener bağdaştırıcısı**ve seçin **özellikleri**.  
   

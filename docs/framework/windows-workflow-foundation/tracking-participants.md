@@ -1,34 +1,35 @@
 ---
-title: "Katılımcıların izleme"
-ms.custom: 
+title: Katılımcıların izleme
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: f13e360c-eeb7-4a49-98a0-8f6a52d64f68
-caps.latest.revision: "24"
+caps.latest.revision: 24
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: f335695c86037d792b17b98080b7a2e668ac1df5
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 0d67924061b5d87bdb2e3229d9bf956501036c30
+ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="tracking-participants"></a>Katılımcıların izleme
-İzleme katılımcıları erişmek bir iş akışı Geliştirici izin genişletilebilirlik noktaları olan <xref:System.Activities.Tracking.InteropTrackingRecord.TrackingRecord%2A> nesneleri ve bunları işlem. [!INCLUDE[netfx_current_long](../../../includes/netfx-current-long-md.md)]Olay izleme için Windows (ETW) olayları olarak izleme kayıtları yazan standart izleme katılımcı içerir. Özel İzleme katılımcı Ayrıca, gereksinimlerinizi karşılamıyorsa yazabilirsiniz.  
+İzleme katılımcıları erişmek bir iş akışı Geliştirici izin genişletilebilirlik noktaları olan <xref:System.Activities.Tracking.InteropTrackingRecord.TrackingRecord%2A> nesneleri ve bunları işlem. [!INCLUDE[netfx_current_long](../../../includes/netfx-current-long-md.md)] Olay izleme için Windows (ETW) olayları olarak izleme kayıtları yazan standart izleme katılımcı içerir. Özel İzleme katılımcı Ayrıca, gereksinimlerinizi karşılamıyorsa yazabilirsiniz.  
   
 ## <a name="tracking-participants"></a>Katılımcıların izleme  
  İzleme altyapı, katılımcı kayıtların bir alt kümesini için abone olabilirsiniz gibi bir filtre uygulamayı giden izleme kayıtlarda sağlar. Bir filtre uygulamak için bir izleme profili mekanizmadır.  
   
- [!INCLUDE[wf](../../../includes/wf-md.md)]içinde [!INCLUDE[netfx_current_short](../../../includes/netfx-current-short-md.md)] izleme kayıtları ETW oturumuna Yazar izleme katılımcı sağlar. Katılımcı bir iş akışı hizmeti yapılandırma dosyasında bir izleme özgü davranış ekleyerek yapılandırılır. Bir ETW etkinleştirme, izleme katılımcı olmasını kayıtları izleme Olay Görüntüleyicisi görüntülenemez sağlar. SDK'sı örneği ETW tabanlı izleme, ETW tabanlı izleme katılımcı kullanılarak WF izlemeyle hakkında bilgi edinmek için iyi bir yoludur.  
+ Windows Workflow Foundation (WF) [!INCLUDE[netfx_current_short](../../../includes/netfx-current-short-md.md)] bir ETW oturum izleme kayıtları Yazar izleme katılımcı sağlar. Katılımcı bir iş akışı hizmeti yapılandırma dosyasında bir izleme özgü davranış ekleyerek yapılandırılır. Bir ETW etkinleştirme, izleme katılımcı olmasını kayıtları izleme Olay Görüntüleyicisi görüntülenemez sağlar. SDK'sı örneği ETW tabanlı izleme, ETW tabanlı izleme katılımcı kullanılarak WF izlemeyle hakkında bilgi edinmek için iyi bir yoludur.  
   
 ## <a name="etw-tracking-participant"></a>ETW İzleme katılımcı  
- [!INCLUDE[netfx_current_short](../../../includes/netfx-current-short-md.md)]bir ETW İzleme izleme kayıtları ETW oturumuna yazan Katılımcısı içerir. Bu, uygulamanızın performansı veya sunucunun işleme için en az etkiyle çok verimli bir şekilde gerçekleştirilir. Standart ETW İzleme katılımcı kullanmanın avantajı, aldığı izleme kayıtları başka bir uygulama ile görüntülenebilir ve Windows Olay Görüntüleyicisi'nde sistem günlüklerini olmasıdır.  
+ [!INCLUDE[netfx_current_short](../../../includes/netfx-current-short-md.md)] bir ETW İzleme izleme kayıtları ETW oturumuna yazan Katılımcısı içerir. Bu, uygulamanızın performansı veya sunucunun işleme için en az etkiyle çok verimli bir şekilde gerçekleştirilir. Standart ETW İzleme katılımcı kullanmanın avantajı, aldığı izleme kayıtları başka bir uygulama ile görüntülenebilir ve Windows Olay Görüntüleyicisi'nde sistem günlüklerini olmasıdır.  
   
  Standart ETW İzleme katılımcı Web.config dosyasında aşağıdaki örnekte gösterildiği gibi yapılandırılır.  
   
@@ -102,7 +103,7 @@ ms.lasthandoff: 12/22/2017
 ## <a name="custom-tracking-participant"></a>Özel İzleme katılımcı  
  İzleme katılımcı API izleme kayıtları iş akışı çalışma zamanı tarafından gösterilen işlemek için Özel mantık içerebilir bir kullanıcı tarafından sağlanan izleme katılımcı ile izleme çalışma zamanı uzantısı sağlar. Özel İzleme katılımcı yazmak için geliştirici uygulamalıdır `Track` yöntemi <xref:System.Activities.Tracking.TrackingParticipant> sınıfı. Bir izleme kaydı iş akışı çalışma zamanı tarafından gösterilen zaman bu yöntem çağrılır.  
   
- İzleme katılımcıları türetilen <xref:System.Activities.Tracking.TrackingParticipant> sınıfı. Sistem tarafından sağlanan <xref:System.Activities.Tracking.EtwTrackingParticipant> alınan her izleme kaydı için bir olay izleme için Windows (ETW) olayı yayar. Özel İzleme katılımcı oluşturmak için bir sınıf oluşturulur türetilen <xref:System.Activities.Tracking.TrackingParticipant>. Temel izleme işlevselliği sağlamak için geçersiz kılma <xref:System.Activities.Tracking.TrackingParticipant.Track%2A>. <xref:System.Activities.Tracking.TrackingParticipant.Track%2A>bir izleme kaydını çalışma zamanı tarafından gönderilen ve istenen biçimde işlenen olarak adlandırılır. Aşağıdaki örnekte, bir özel izleme katılımcı sınıf konsol penceresine tüm izleme kayıtları gösterdiği tanımlanır. Ayrıca uygulayabileceğiniz bir <xref:System.Activities.Tracking.TrackingParticipant> izleme işlemleri nesne kayıtları zaman uyumsuz olarak kullanarak kendi `BeginTrack` ve `EndTrack` yöntemleri  
+ İzleme katılımcıları türetilen <xref:System.Activities.Tracking.TrackingParticipant> sınıfı. Sistem tarafından sağlanan <xref:System.Activities.Tracking.EtwTrackingParticipant> alınan her izleme kaydı için bir olay izleme için Windows (ETW) olayı yayar. Özel İzleme katılımcı oluşturmak için bir sınıf oluşturulur türetilen <xref:System.Activities.Tracking.TrackingParticipant>. Temel izleme işlevselliği sağlamak için geçersiz kılma <xref:System.Activities.Tracking.TrackingParticipant.Track%2A>. <xref:System.Activities.Tracking.TrackingParticipant.Track%2A> bir izleme kaydını çalışma zamanı tarafından gönderilen ve istenen biçimde işlenen olarak adlandırılır. Aşağıdaki örnekte, bir özel izleme katılımcı sınıf konsol penceresine tüm izleme kayıtları gösterdiği tanımlanır. Ayrıca uygulayabileceğiniz bir <xref:System.Activities.Tracking.TrackingParticipant> izleme işlemleri nesne kayıtları zaman uyumsuz olarak kullanarak kendi `BeginTrack` ve `EndTrack` yöntemleri  
   
 ```csharp  
 class ConsoleTrackingParticipant : TrackingParticipant  

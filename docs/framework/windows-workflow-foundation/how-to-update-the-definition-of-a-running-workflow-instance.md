@@ -1,26 +1,27 @@
 ---
-title: "Nasıl yapılır: bir çalışan iş akışı örneği tanım güncelleştirme"
-ms.custom: 
+title: 'Nasıl yapılır: bir çalışan iş akışı örneği tanım güncelleştirme'
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - csharp
 - vb
 ms.assetid: 26dfac36-ae23-4909-9867-62495b55fb5e
-caps.latest.revision: "6"
+caps.latest.revision: 6
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 86a6e8d22d1e46407082af5d71cd83c179825bb9
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 9c0590f7fc9cd8cc48b725b83af55b4ed81a0e59
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="how-to-update-the-definition-of-a-running-workflow-instance"></a>Nasıl yapılır: bir çalışan iş akışı örneği tanım güncelleştirme
 Dinamik güncelleştirme kalıcı iş akışı örneği iş akışı tanımını güncelleştirmek için uygulama geliştiricileri iş akışı için bir mekanizma sağlar. Gerekli değişiklik yeni gereksinimleri, bir hata düzeltme uygulamak için veya beklenmeyen değişiklikleri uyum sağlayacak şekilde olabilir. Bu adım öğreticide kalıcı örnekleri değiştirmek için dinamik güncelleştirme kullanımı gösterilmiştir `v1` içinde çıkan yeni işlevsellik eşleşecek şekilde numarası iş akışı tahmin [nasıl yapılır: bir iş akışı yan yana birden fazla sürümünü ana bilgisayar ](../../../docs/framework/windows-workflow-foundation/how-to-host-multiple-versions-of-a-workflow-side-by-side.md).  
@@ -50,7 +51,7 @@ Dinamik güncelleştirme kalıcı iş akışı örneği iş akışı tanımını
   
 -   [İş akışları önceki sürümlerini başlangıç etkinleştirmek için](../../../docs/framework/windows-workflow-foundation/how-to-update-the-definition-of-a-running-workflow-instance.md#BKMK_StartPreviousVersions)  
   
-###  <a name="BKMK_CreateProject"></a>CreateUpdateMaps projesi oluşturmak için  
+###  <a name="BKMK_CreateProject"></a> CreateUpdateMaps projesi oluşturmak için  
   
 1.  Sağ **WF45GettingStartedTutorial** içinde **Çözüm Gezgini** ve **Ekle**, **yeni proje**.  
   
@@ -111,7 +112,7 @@ Dinamik güncelleştirme kalıcı iş akışı örneği iş akışı tanımını
     const string definitionPath = @"..\..\..\NumberGuessWorkflowActivities_du";  
     ```  
   
-11. Aşağıdakileri ekleyin `StartUpdate` yönteme `Program` sınıfı (veya `Module1`). Bu yöntem belirtilen xaml iş akışı tanımını yükler bir `ActivityBuilder`ve ardından çağırır `DynamicUpdate.PrepareForUpdate`. `PrepareForUpdate`İş akışı tanımı içinde bir kopyasını oluşturur `ActivityBuilder`. İş akışı tanımı değiştirildikten sonra bu kopya birlikte değiştirilmiş iş akışı tanımı güncelleştirme harita oluşturmak için kullanılır.  
+11. Aşağıdakileri ekleyin `StartUpdate` yönteme `Program` sınıfı (veya `Module1`). Bu yöntem belirtilen xaml iş akışı tanımını yükler bir `ActivityBuilder`ve ardından çağırır `DynamicUpdate.PrepareForUpdate`. `PrepareForUpdate` İş akışı tanımı içinde bir kopyasını oluşturur `ActivityBuilder`. İş akışı tanımı değiştirildikten sonra bu kopya birlikte değiştirilmiş iş akışı tanımı güncelleştirme harita oluşturmak için kullanılır.  
   
     ```vb  
     Private Function StartUpdate(name As String) As ActivityBuilder  
@@ -234,7 +235,7 @@ Dinamik güncelleştirme kalıcı iş akışı örneği iş akışı tanımını
     }  
     ```  
   
-###  <a name="BKMK_StateMachine"></a>StateMachineNumberGuessWorkflow güncelleştirmek için  
+###  <a name="BKMK_StateMachine"></a> StateMachineNumberGuessWorkflow güncelleştirmek için  
   
 1.  Ekleme bir `CreateStateMachineUpdateMap` için `Program` sınıfı (veya `Module1`).  
   
@@ -327,7 +328,7 @@ Dinamik güncelleştirme kalıcı iş akışı örneği iş akışı tanımını
     sm.States[1].Transitions[0].Action = wl;  
     ```  
   
-5.  İş akışı güncelleştirildikten sonra arama `CreateUpdateMaps` ve `SaveUpdatedDefinition`. `CreateUpdateMaps`oluşturur ve kaydeder `DynamicUpdateMap`, ve `SaveUpdatedDefinition` güncelleştirilmiş iş akışı tanımı kaydeder.  
+5.  İş akışı güncelleştirildikten sonra arama `CreateUpdateMaps` ve `SaveUpdatedDefinition`. `CreateUpdateMaps` oluşturur ve kaydeder `DynamicUpdateMap`, ve `SaveUpdatedDefinition` güncelleştirilmiş iş akışı tanımı kaydeder.  
   
     ```vb  
     'Create the update map.  
@@ -427,7 +428,7 @@ Dinamik güncelleştirme kalıcı iş akışı örneği iş akışı tanımını
     }  
     ```  
   
-###  <a name="BKMK_Flowchart"></a>FlowchartNumberGuessWorkflow güncelleştirmek için  
+###  <a name="BKMK_Flowchart"></a> FlowchartNumberGuessWorkflow güncelleştirmek için  
   
 1.  Aşağıdakileri ekleyin `CreateFlowchartUpdateMethod` için `Program` sınıfı (veya `Module1`). Bu yöntem benzer `CreateStateMachineUpdateMap`. Çağrı ile başlayan `StartUpdate`akış iş akışı tanımı güncelleştirir ve güncelleştirme eşlemesi ve güncelleştirilmiş iş akışı tanımı kaydederek tamamlanır.  
   
@@ -541,7 +542,7 @@ Dinamik güncelleştirme kalıcı iş akışı örneği iş akışı tanımını
     }  
     ```  
   
-###  <a name="BKMK_Sequential"></a>SequentialNumberGuessWorkflow güncelleştirmek için  
+###  <a name="BKMK_Sequential"></a> SequentialNumberGuessWorkflow güncelleştirmek için  
   
 1.  Aşağıdakileri ekleyin `CreateSequentialUpdateMethod` için `Program` sınıfı (veya `Module1`). Bu yöntem, diğer iki yöntemlere benzer. Çağrı ile başlayan `StartUpdate`sıralı iş akışı tanımı güncelleştirir ve güncelleştirme eşlemesi ve güncelleştirilmiş iş akışı tanımı kaydederek tamamlanır.  
   
@@ -621,7 +622,7 @@ Dinamik güncelleştirme kalıcı iş akışı örneği iş akışı tanımını
     }  
     ```  
   
-###  <a name="BKMK_CreateUpdateMaps"></a>Derleme ve CreateUpdateMaps uygulamayı çalıştırmak için  
+###  <a name="BKMK_CreateUpdateMaps"></a> Derleme ve CreateUpdateMaps uygulamayı çalıştırmak için  
   
 1.  Güncelleştirme `Main` yöntemi ve aşağıdaki üç yöntem çağrıları ekleyin. Bu yöntemler aşağıdaki bölümlerde eklenir. Her yöntem karşılık gelen sayı tahmin iş akışı güncelleştirir ve oluşturur bir `DynamicUpdateMap` güncelleştirmeleri açıklanır.  
   
@@ -655,7 +656,7 @@ Dinamik güncelleştirme kalıcı iş akışı örneği iş akışı tanımını
   
      Sonra güncelleştirme eşlemeleri oluşturulur ve güncelleştirilmiş iş akışı tanımları, sonraki adıma güncelleştirilmiş tanımları içeren bir güncelleştirilmiş iş akışı derleme oluşturmaktır.  
   
-###  <a name="BKMK_BuildAssembly"></a>Güncelleştirilmiş iş akışı derlemesi oluşturmak için  
+###  <a name="BKMK_BuildAssembly"></a> Güncelleştirilmiş iş akışı derlemesi oluşturmak için  
   
 1.  İkinci bir örneğini açmak [!INCLUDE[vs_current_long](../../../includes/vs-current-long-md.md)].  
   
@@ -680,13 +681,13 @@ Dinamik güncelleştirme kalıcı iş akışı örneği iş akışı tanımını
   
 9. Projeyi oluşturmak için CTRL+SHIFT+B tuşlarına basın.  
   
-10. Seçin **Kapat çözüm** gelen **dosya** menüsü. Bir çözüme proje gerekli değil böylece tıklatın **Hayır** kapatmak için [!INCLUDE[vs_current_short](../../../includes/vs-current-short-md.md)] bir çözüm dosyasını kaydetmeden. Seçin **çıkış** gelen **dosya** kapatmak için menü [!INCLUDE[vs_current_short](../../../includes/vs-current-short-md.md)].  
+10. Seçin **Kapat çözüm** gelen **dosya** menüsü. Bir çözüme proje gerekli değil böylece tıklatın **Hayır** Visual Studio çözüm dosyasını kaydetmeden kapatın. Seçin **çıkış** gelen **dosya** menü Visual Studio'yu kapatın.  
   
 11. Windows Gezgini'ni açın ve gidin **NumberGuessWorkflowActivities_du\bin\Debug** klasörü (veya **bin\Release** proje ayarlarınızı bağlı olarak).  
   
 12. Yeniden Adlandır **NumberGuessWorkflowActivities.dll** için **NumberGuessWorkflowActivities_v15.dll**ve kopyalayın **PreviousVersions** içindeoluşturduğunuzklasör[Nasıl yapılır: bir iş akışı yan yana birden fazla sürümünü konak](../../../docs/framework/windows-workflow-foundation/how-to-host-multiple-versions-of-a-workflow-side-by-side.md).  
   
-###  <a name="BKMK_UpdateWorkflowVersionMap"></a>Yeni sürümlerle WorkflowVersionMap güncelleştirmek için  
+###  <a name="BKMK_UpdateWorkflowVersionMap"></a> Yeni sürümlerle WorkflowVersionMap güncelleştirmek için  
   
 1.  Geçiş ilk örneğine [!INCLUDE[vs_current_long](../../../includes/vs-current-long-md.md)].  
   
@@ -1073,7 +1074,7 @@ Dinamik güncelleştirme kalıcı iş akışı örneği iş akışı tanımını
   
 5.  Projeyi oluşturmak için CTRL+SHIFT+B tuşlarına basın.  
   
-###  <a name="BKMK_ApplyUpdate"></a>Dinamik güncelleştirmeleri uygulamak için  
+###  <a name="BKMK_ApplyUpdate"></a> Dinamik güncelleştirmeleri uygulamak için  
   
 1.  Sağ **WF45GettingStartedTutorial** içinde **Çözüm Gezgini** ve **Ekle**, **yeni proje**.  
   
@@ -1448,7 +1449,7 @@ Dinamik güncelleştirme kalıcı iş akışı örneği iş akışı tanımını
 **İnceleme: SequentialNumberGuessWorkflow; Sürüm 2.0.0.0 =**   
 **Devam etmek için herhangi bir tuşa basın...**  
   
-###  <a name="BKMK_BuildAndRun"></a>Güncelleştirilmiş iş akışlarıyla uygulamayı çalıştırmak için  
+###  <a name="BKMK_BuildAndRun"></a> Güncelleştirilmiş iş akışlarıyla uygulamayı çalıştırmak için  
   
 1.  Sağ **NumberGuessWorkflowHost** içinde **Çözüm Gezgini** ve **başlangıç projesi olarak ayarla**.  
   
@@ -1483,7 +1484,7 @@ Dinamik güncelleştirme kalıcı iş akışı örneği iş akışı tanımını
 **Lütfen 1 ile 10 arasında bir sayı girin**   
 **6 doğrudur. Bu 4 kapatır tahmin.**  
   
-###  <a name="BKMK_StartPreviousVersions"></a>İş akışları önceki sürümlerini başlangıç etkinleştirmek için  
+###  <a name="BKMK_StartPreviousVersions"></a> İş akışları önceki sürümlerini başlangıç etkinleştirmek için  
  Güncelleştirme için iş akışlarını dışında çalıştırırsanız, değiştirebileceğiniz `NumberGuessWorkflowHost` uygulama iş akışlarını önceki sürümlerini başlayarak etkinleştirin.  
   
 1.  Çift **WorkflowHostForm** içinde **Çözüm Gezgini**seçip **WorkflowType** birleşik giriş kutusu.  

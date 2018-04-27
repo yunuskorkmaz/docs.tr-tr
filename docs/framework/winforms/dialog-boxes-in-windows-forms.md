@@ -1,31 +1,33 @@
 ---
-title: "Windows Forms'ta İletişim Kutuları"
-ms.custom: 
+title: Windows Forms'ta İletişim Kutuları
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-winforms
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-winforms
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - dialog boxes [Windows Forms], Windows Forms
 - Windows Forms dialog boxes
 - dialogs [Windows Forms], using in Windows Forms
 ms.assetid: d43d022b-451b-490d-9386-dc79d98fbf8a
-caps.latest.revision: "13"
+caps.latest.revision: 13
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: b8f493013744ffa7819d4cb554f794d9a591a371
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 423f8e83290d46b1f49a34517f67ddaef398b3b3
+ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="dialog-boxes-in-windows-forms"></a>Windows Forms'ta İletişim Kutuları
-İletişim kutuları, kullanıcıyla etkileşim ve bilgi almak için kullanılır. Basitçe bir formla iletişim kutusudur kendi <xref:System.Windows.Forms.FormBorderStyle> ayarlanan numaralandırma özelliği `FixedDialog`. Windows Forms Tasarımcısı'nda kullanarak kendi özel iletişim kutuları oluşturabileceğiniz [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)]. Denetimleri gibi ekleme `Label`, `Textbox`, ve `Button` iletişim kutuları, özel gereksinimlerinizi karşılamak için özelleştirmek için. [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] De önceden tanımlanmış iletişim kutuları gibi içerir **Dosya Aç** ve kendi uygulamalarınıza uyarlayabilirsiniz ileti kutuları. Daha fazla bilgi için bkz: [iletişim kutusu denetimleri ve bileşenleri](../../../docs/framework/winforms/controls/dialog-box-controls-and-components-windows-forms.md).  
+İletişim kutuları, kullanıcıyla etkileşim ve bilgi almak için kullanılır. Basitçe bir formla iletişim kutusudur kendi <xref:System.Windows.Forms.FormBorderStyle> ayarlanan numaralandırma özelliği `FixedDialog`. Visual Studio'da Windows Forms Tasarımcısı kullanarak kendi özel iletişim kutuları oluşturabilirsiniz. Denetimleri gibi ekleme `Label`, `Textbox`, ve `Button` iletişim kutuları, özel gereksinimlerinizi karşılamak için özelleştirmek için. [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] De önceden tanımlanmış iletişim kutuları gibi içerir **Dosya Aç** ve kendi uygulamalarınıza uyarlayabilirsiniz ileti kutuları. Daha fazla bilgi için bkz: [iletişim kutusu denetimleri ve bileşenleri](../../../docs/framework/winforms/controls/dialog-box-controls-and-components-windows-forms.md).  
   
 ## <a name="in-this-section"></a>Bu Bölümde  
  [Nasıl yapılır: Windows Forms için İletişim Kutularını Görüntüleme](../../../docs/framework/winforms/how-to-display-dialog-boxes-for-windows-forms.md)  

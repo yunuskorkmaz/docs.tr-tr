@@ -1,24 +1,26 @@
 ---
-title: "Özel Demux"
-ms.custom: 
+title: Özel Demux
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: fc54065c-518e-4146-b24a-0fe00038bfa7
-caps.latest.revision: "41"
+caps.latest.revision: 41
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 540469571f06f9c2ab38f9754a40aae5a3c3b267
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 45184c2d884347baef4090ed496e22e77aab5423
+ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="custom-demux"></a>Özel Demux
 Bu örnek için farklı hizmet işlemleri MSMQ ileti üstbilgilerini nasıl eşlenebilir gösterir şekilde [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] hizmetleri kullanan <xref:System.ServiceModel.MsmqIntegration.MsmqIntegrationBinding> örnekte gösterildiği gibi bir hizmet işlemi kullanmaya sınırlı değildir [Message Queuing için Windows Communication Foundation](../../../../docs/framework/wcf/samples/message-queuing-to-wcf.md) ve [Message Queuing için Windows Communication Foundation](../../../../docs/framework/wcf/samples/wcf-to-message-queuing.md) örnekleri.  
@@ -26,8 +28,8 @@ Bu örnek için farklı hizmet işlemleri MSMQ ileti üstbilgilerini nasıl eşl
  Bu örnekte, alan hizmetini sıraya alınan iletileri gözlemleyin sağlamak için bir kendi kendini barındıran konsol uygulaması hizmetidir.  
   
  Hizmet sözleşme `IOrderProcessor`ve Kuyruklar ile kullanım için uygun bir tek yönlü hizmet tanımlar.  
-  
-```  
+
+```csharp
 [ServiceContract]  
 [KnownType(typeof(PurchaseOrder))]  
 [KnownType(typeof(String))]  
@@ -39,11 +41,11 @@ public interface IOrderProcessor
     [OperationContract(IsOneWay = true, Name = "CancelPurchaseOrder")]  
     void CancelPurchaseOrder(MsmqMessage<string> ponumber);  
 }  
-```  
-  
+```
+
  MSMQ iletisine bir eylem üstbilgisi yok. Farklı MSMQ iletileri işlemi sözleşmeleri için otomatik olarak eşlemeye mümkün değildir. Bu nedenle, yalnızca bir işlem sözleşmesi olabilir. Hizmet Implements bu sınırlamanın üstesinden gelmek için <xref:System.ServiceModel.Dispatcher.IDispatchOperationSelector.SelectOperation%2A> yöntemi <xref:System.ServiceModel.Dispatcher.IDispatchOperationSelector> arabirimi. <xref:System.ServiceModel.Dispatcher.IDispatchOperationSelector.SelectOperation%2A> Yöntemi, belirli bir hizmet işlemi için belirtilen bir iletinin üstbilgisi eşlemek hizmet sağlar. Bu örnekte, ileti etiketi üstbilgi Hizmet işlemlerini eşlenir. `Name` İşlemi sözleşme parametresinin belirler hangi hizmet işlemi belirli bir ileti etiketi dağıtılması gerekir. Örneğin, "SubmitPurchaseOrder" İleti etiketi üstbilgi içeriyorsa, "SubmitPurchaseOrder" hizmet işlemi çağrılır.  
-  
-```  
+
+```csharp
 public class OperationSelector : IDispatchOperationSelector  
 {  
     public string SelectOperation(ref System.ServiceModel.Channels.Message message)  
@@ -52,29 +54,29 @@ public class OperationSelector : IDispatchOperationSelector
         return property.Label;  
     }  
 }  
-```  
-  
+```
+
  Hizmet uygulamalıdır <xref:System.ServiceModel.Description.IContractBehavior.ApplyDispatchBehavior%28System.ServiceModel.Description.ContractDescription%2CSystem.ServiceModel.Description.ServiceEndpoint%2CSystem.ServiceModel.Dispatcher.DispatchRuntime%29> yöntemi <xref:System.ServiceModel.Description.IContractBehavior> arabirimi aşağıdaki örnek kodda gösterildiği gibi. Bu özel geçerlidir `OperationSelector` hizmet framework gönderme çalışma zamanının.  
-  
-```  
+
+```csharp
 void IContractBehavior.ApplyDispatchBehavior(ContractDescription description, ServiceEndpoint endpoint, DispatchRuntime dispatch)  
 {  
     dispatch.OperationSelector = new OperationSelector();  
 }  
-```  
-  
+```
+
  Bir ileti dağıtıcısı kişinin geçmelidir <xref:System.ServiceModel.Dispatcher.EndpointDispatcher.ContractFilter%2A> ClientRuntime alma önce. Varsayılan olarak bir ileti reddedilir eylemi hizmeti tarafından uygulanan herhangi bir sözleşme bulunamadı. Bu onay önlemek için biz uygulayan bir <xref:System.ServiceModel.Description.IEndpointBehavior> adlı `MatchAllFilterBehavior`, herhangi bir iletisi geçişine izin veren `ContractFilter` uygulayarak <xref:System.ServiceModel.Dispatcher.MatchAllMessageFilter> gibi.  
-  
-```  
+
+```csharp
 public void ApplyDispatchBehavior(ServiceEndpoint serviceEndpoint, EndpointDispatcher endpointDispatcher)  
 {  
     endpointDispatcher.ContractFilter = new MatchAllMessageFilter();  
 }  
-```  
+```
   
  Bir ileti hizmeti tarafından alındığında, uygun hizmet işlemi etiket üstbilgisi tarafından sağlanan bilgileri kullanarak gönderilir. İleti gövdesi içine seri durumdan bir `PurchaseOrder` , aşağıdaki örnek kodda gösterildiği gibi nesne.  
-  
-```  
+
+```csharp
 [OperationBehavior(TransactionScopeRequired = true, TransactionAutoComplete = true)]  
 public void SubmitPurchaseOrder(MsmqMessage<PurchaseOrder> msg)  
 {  
@@ -83,11 +85,11 @@ public void SubmitPurchaseOrder(MsmqMessage<PurchaseOrder> msg)
     po.Status = (OrderStates)statusIndexer.Next(3);  
     Console.WriteLine("Processing {0} ", po);  
 }  
-```  
-  
+```
+
  Hizmet kendiliğinden barındırılır. MSMQ kullanırken, sıranın kullanılan önceden oluşturulmuş olması gerekir. Bu, el ile veya kod aracılığıyla yapılabilir. Bu örnek, hizmet sıranın varlığını denetlemek için kod içerir ve sıra yoksa oluşturur. Kuyruk adı yapılandırma dosyasından okunur.  
-  
-```  
+
+```csharp
 public static void Main()  
 {  
     // Get MSMQ queue name from app settings in configuration  
@@ -115,8 +117,8 @@ public static void Main()
         serviceHost.Close();  
     }  
 }  
-```  
-  
+```
+
  MSMQ kuyruk adı bir yapılandırma dosyasının appSettings bölümünde belirtilmiştir.  
   
 > [!NOTE]

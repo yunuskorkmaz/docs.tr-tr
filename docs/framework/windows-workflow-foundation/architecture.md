@@ -1,29 +1,30 @@
 ---
-title: "Windows iş akışı mimarisi"
-ms.custom: 
+title: Windows iş akışı mimarisi
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 1d4c6495-d64a-46d0-896a-3a01fac90aa9
-caps.latest.revision: "20"
+caps.latest.revision: 20
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: ed13d7885cb8abd760aed6bd5812cb8b7c75bc02
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: a3a59369738ada0c6b770d272afa9c6c79c2ce01
+ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="windows-workflow-architecture"></a>Windows iş akışı mimarisi
-[!INCLUDE[wf](../../../includes/wf-md.md)]Etkileşimli uzun süre çalışan uygulamalar geliştirmek için özet düzeyi başlatır. İş birimleri etkinlikler olarak kapsüllenir. Olanakları sağlar akış denetimi, özel durum işleme, arıza yayma, yüklenmesi ve devam eden iş akışlarının bellek, izleme ve işlem akışı kaldırılması durumu verilerinin kalıcılığı için bir ortamda etkinlikleri çalıştırın.  
+Windows Workflow Foundation (WF) etkileşimli uzun süre çalışan uygulamalar geliştirmek için özet düzeyi başlatır. İş birimleri etkinlikler olarak kapsüllenir. Olanakları sağlar akış denetimi, özel durum işleme, arıza yayma, yüklenmesi ve devam eden iş akışlarının bellek, izleme ve işlem akışı kaldırılması durumu verilerinin kalıcılığı için bir ortamda etkinlikleri çalıştırın.  
   
 ## <a name="activity-architecture"></a>Etkinlik mimarisi  
- Etkinliklerin herhangi birinden türetilen CLR türleri olarak geliştirilen <xref:System.Activities.Activity>, <xref:System.Activities.CodeActivity>, <xref:System.Activities.AsyncCodeActivity>, veya <xref:System.Activities.NativeActivity>, veya bir değer döndürmesi bunların türevleri <xref:System.Activities.Activity%601>, <xref:System.Activities.CodeActivity%601>, <xref:System.Activities.AsyncCodeActivity%601>, veya <xref:System.Activities.NativeActivity%601>. Öğesinden türetilen etkinliklerini geliştirme <xref:System.Activities.Activity> hızlı bir şekilde iş akışı ortamında yürütme iş birimleri oluşturmak için önceden var olan etkinlikleri derleyecek olanak tanır. <xref:System.Activities.CodeActivity>, diğer yandan, yönetilen kod kullanarak yazılmasını yürütme mantığını etkinleştirir <xref:System.Activities.CodeActivityContext> etkinlik bağımsız değişken erişimi için öncelikle. <xref:System.Activities.AsyncCodeActivity>benzer <xref:System.Activities.CodeActivity> dışında zaman uyumsuz görevleri uygulamak için kullanılabilir. Öğesinden türetilen etkinliklerini geliştirme <xref:System.Activities.NativeActivity> çalışma zamanı üzerinden erişmesine olanak tanır <xref:System.Activities.NativeActivityContext> alt yer işaretleri, oluşturma, zamanlama gibi işlevler için zaman uyumsuz iş kayıt işlemleri ve çok çağırma.  
+ Etkinliklerin herhangi birinden türetilen CLR türleri olarak geliştirilen <xref:System.Activities.Activity>, <xref:System.Activities.CodeActivity>, <xref:System.Activities.AsyncCodeActivity>, veya <xref:System.Activities.NativeActivity>, veya bir değer döndürmesi bunların türevleri <xref:System.Activities.Activity%601>, <xref:System.Activities.CodeActivity%601>, <xref:System.Activities.AsyncCodeActivity%601>, veya <xref:System.Activities.NativeActivity%601>. Öğesinden türetilen etkinliklerini geliştirme <xref:System.Activities.Activity> hızlı bir şekilde iş akışı ortamında yürütme iş birimleri oluşturmak için önceden var olan etkinlikleri derleyecek olanak tanır. <xref:System.Activities.CodeActivity>, diğer yandan, yönetilen kod kullanarak yazılmasını yürütme mantığını etkinleştirir <xref:System.Activities.CodeActivityContext> etkinlik bağımsız değişken erişimi için öncelikle. <xref:System.Activities.AsyncCodeActivity> benzer <xref:System.Activities.CodeActivity> dışında zaman uyumsuz görevleri uygulamak için kullanılabilir. Öğesinden türetilen etkinliklerini geliştirme <xref:System.Activities.NativeActivity> çalışma zamanı üzerinden erişmesine olanak tanır <xref:System.Activities.NativeActivityContext> alt yer işaretleri, oluşturma, zamanlama gibi işlevler için zaman uyumsuz iş kayıt işlemleri ve çok çağırma.  
   
  Öğesinden türetilen etkinlikleri yazma <xref:System.Activities.Activity> tanımlayıcıdır ve bu etkinlikler XAML'de yazılabilir. Aşağıdaki örnekte, bir etkinlik olarak adlandırılan `Prompt` yürütme gövdesi için diğer etkinlikleri kullanarak oluşturulur.  
   

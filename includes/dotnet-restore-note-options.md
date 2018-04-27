@@ -1,0 +1,4 @@
+> [!NOTE]
+> .NET Core 2.0 ile başlayarak, çalışması gerekmez [ `dotnet restore` ](~/docs/core/tools/dotnet-restore.md) tüm komutları tarafından gibi örtük olarak çalıştırıldığında çünkü `dotnet build` ve `dotnet run`, gerçekleşmesi için bir geri yükleme gerektirir. Bunu hala geçerli bir komut, açık bir geri yükleme yaparken anlamlı, belirli senaryolarda olduğu gibi [sürekli tümleştirme derlemeler Visual Studio Team Services içinde](/vsts/build-release/apps/aspnet/build-aspnet-core) veya açıkça zaman denetlemek için gereken derleme sistemlerinde geri yükleme oluşur.
+>
+> Bu komut ayrıca destekler `dotnet restore` seçenekleri uzun biçiminde geçirildiğinde (örneğin, `--source`). Form Seçenekleri gibi kısa `-s`, desteklenmez.

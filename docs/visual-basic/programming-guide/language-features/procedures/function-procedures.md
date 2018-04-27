@@ -1,11 +1,12 @@
 ---
-title: "İşlev Yordamları (Visual Basic)"
-ms.custom: 
+title: İşlev Yordamları (Visual Basic)
+ms.custom: ''
 ms.date: 07/20/2015
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- devlang-visual-basic
 ms.topic: article
 helpviewer_keywords:
 - Function procedures
@@ -15,17 +16,17 @@ helpviewer_keywords:
 - procedures [Visual Basic], Function procedures
 - syntax [Visual Basic], function procedures
 ms.assetid: 1b9f632c-553b-4cb6-920a-ded117ead8c0
-caps.latest.revision: "27"
+caps.latest.revision: 27
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: 9520a6555e65fd801a5c40d40748028e04a10739
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: ad4f55a9dd9fbd68c36dd53a01f97ddb03c2bb9b
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="function-procedures-visual-basic"></a>İşlev Yordamları (Visual Basic)
-A `Function` yordamdır bir dizi [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] deyimleri içine tarafından `Function` ve `End Function` deyimleri. `Function` Yordamı bir görevi gerçekleştirir ve çağrıyı yapan kod denetimini döndürür. Denetim geri döndüğünde, çağrıyı yapan kod de bir değer döndürür.  
+A `Function` yordamdır bir dizi kapsadığı Visual Basic deyimi `Function` ve `End Function` deyimleri. `Function` Yordamı bir görevi gerçekleştirir ve çağrıyı yapan kod denetimini döndürür. Denetim geri döndüğünde, çağrıyı yapan kod de bir değer döndürür.  
   
  Yordam çağrıldığında çalıştırmak, kendi deyimleri her zaman ilk yürütülebilir deyimi sonra başlayarak `Function` deyimi ve ilk ile bitiş `End Function`, `Exit Function`, veya `Return` deyimiyle karşılaşıldı.  
   
@@ -91,11 +92,11 @@ End Function
   
  Çağrı sözdizimi bir `Function` yordam aşağıdaki gibidir:  
   
- *lvalue*`=`*functionname* `[(` *bağımsızdeğişkenListesi*    `)]`  
+ *lvalue*`=`*functionname* `[(` *bağımsızdeğişkenListesi*  `)]`  
   
- `If ((`*functionname* `[(` *bağımsızdeğişkenListesi* `)] / 3) <=` *ifade*  `) Then`  
+ `If ((` *FunctionName* `[(` *bağımsızdeğişkenListesi* `)] / 3) <=` *ifadesi*  `) Then`  
   
- Çağırdığınızda bir `Function` yordamı, sahip olmadığınız dönüş değeri kullanılacak. Bunu yapmazsanız, işlevin tüm eylemler gerçekleştirilir, ancak dönüş değeri yoksayılır. <xref:Microsoft.VisualBasic.Interaction.MsgBox%2A>Genelde bu şekilde denir.  
+ Çağırdığınızda bir `Function` yordamı, sahip olmadığınız dönüş değeri kullanılacak. Bunu yapmazsanız, işlevin tüm eylemler gerçekleştirilir, ancak dönüş değeri yoksayılır. <xref:Microsoft.VisualBasic.Interaction.MsgBox%2A> Genelde bu şekilde denir.  
   
 ### <a name="illustration-of-declaration-and-call"></a>Bildirim ve çağrı çizimi  
  Aşağıdaki `Function` yordamı en uzun taraf veya diğer iki kenara için değerlerine göre bir sağ üçgen hipotenüsü hesaplar.  
@@ -107,12 +108,12 @@ End Function
  [!code-vb[VbVbcnProcedures#6](./codesnippet/VisualBasic/function-procedures_2.vb)]  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [Yordamları](./index.md)  
- [Alt yordamlar](./sub-procedures.md)  
- [Özellik yordamları](./property-procedures.md)  
- [İşleç yordamları](./operator-procedures.md)  
- [Parametreler ve bağımsız değişkenler](./procedure-parameters-and-arguments.md)  
- [Function deyimi](../../../../visual-basic/language-reference/statements/function-statement.md)  
- [Nasıl yapılır: değer döndüren bir yordam oluşturma](./how-to-create-a-procedure-that-returns-a-value.md)  
- [Nasıl yapılır: bir yordamdan değer döndürme](./how-to-return-a-value-from-a-procedure.md)  
- [Nasıl yapılır: değer döndüren bir yordam çağırma](./how-to-call-a-procedure-that-returns-a-value.md)
+ [Yordamlar](./index.md)  
+ [Alt Yordamlar](./sub-procedures.md)  
+ [Özellik Yordamları](./property-procedures.md)  
+ [İşleç Yordamları](./operator-procedures.md)  
+ [Yordam Parametreleri ve Bağımsız Değişkenleri](./procedure-parameters-and-arguments.md)  
+ [Function Deyimi](../../../../visual-basic/language-reference/statements/function-statement.md)  
+ [Nasıl yapılır: Değer Döndüren Bir Yordam Oluşturma](./how-to-create-a-procedure-that-returns-a-value.md)  
+ [Nasıl yapılır: Bir Yordamdan Değer Döndürme](./how-to-return-a-value-from-a-procedure.md)  
+ [Nasıl yapılır: Değer Döndüren Bir Yordam Çağırma](./how-to-call-a-procedure-that-returns-a-value.md)

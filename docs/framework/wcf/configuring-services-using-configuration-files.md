@@ -18,11 +18,11 @@ ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: e5ad91fa70a743b7135648cb10c7c519e3559bdb
-ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
+ms.openlocfilehash: 5f1c7449372ad012280b360c09017a15733fb95b
+ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="configuring-services-using-configuration-files"></a>Yapılandırma Dosyalarını Kullanarak Hizmetleri Yapılandırma
 Yapılandırma bir [!INCLUDE[indigo1](../../../includes/indigo1-md.md)] hizmeti bir yapılandırma dosyası ile tasarım zamanında yerine dağıtım noktasında uç noktası ve hizmet davranışı verileri sağlayan esnekliği sağlar. Bu konu, birincil teknikleri özetler.  
@@ -37,9 +37,9 @@ Yapılandırma bir [!INCLUDE[indigo1](../../../includes/indigo1-md.md)] hizmeti 
 ## <a name="systemconfiguration-webconfig-and-appconfig"></a>System.Configuration: Web.config ve App.config  
  [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] System.Configuration yapılandırma sistemini kullanan [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)].  
   
- Bir hizmet olarak yapılandırırken [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)], bir Web.config dosyası veya bir App.config dosyası ayarlarını belirtmek için kullanın. Yapılandırma dosyasının adını seçimi hizmeti için seçtiğiniz barındırma ortamı tarafından belirlenir. Hizmetinizi barındırmak için IIS kullanıyorsanız, bir Web.config dosyası kullanın. Herhangi bir barındırma ortamı kullanıyorsanız, bir App.config dosyası kullanın.  
+ Visual Studio'da bir hizmeti yapılandırma sırasında bir Web.config dosyası ya da bir App.config dosyası ayarlarını belirtmek için kullanın. Yapılandırma dosyasının adını seçimi hizmeti için seçtiğiniz barındırma ortamı tarafından belirlenir. Hizmetinizi barındırmak için IIS kullanıyorsanız, bir Web.config dosyası kullanın. Herhangi bir barındırma ortamı kullanıyorsanız, bir App.config dosyası kullanın.  
   
- İçinde [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)], App.config adlı dosyayı son yapılandırma dosyası oluşturmak için kullanılır. Gerçekte yapılandırma için kullanılan son adı derleme adına bağlıdır. Örneğin, "Cohowinery.exe" adlı bir derleme "Cohowinery.exe.config" bir son yapılandırma dosya adına sahip. Ancak, yalnızca App.config dosyasını değiştirmeniz gerekir. Bu dosyada yapılan değişiklikler, derleme zamanında son uygulama yapılandırma dosyasına otomatik olarak yapılır.  
+ Visual Studio'da App.config adlı dosyayı son yapılandırma dosyası oluşturmak için kullanılır. Gerçekte yapılandırma için kullanılan son adı derleme adına bağlıdır. Örneğin, "Cohowinery.exe" adlı bir derleme "Cohowinery.exe.config" bir son yapılandırma dosya adına sahip. Ancak, yalnızca App.config dosyasını değiştirmeniz gerekir. Bu dosyada yapılan değişiklikler, derleme zamanında son uygulama yapılandırma dosyasına otomatik olarak yapılır.  
   
  Kullanarak bir App.config dosyası yapılandırma sistemi App.config dosyası Machine.config dosyasının içeriği ile uygulama başlar ve yapılandırmanın uygulanması birleştirir. Bu mekanizma Machine.config dosyasında tanımlanmış için makine genelinde ayarlarını sağlar. App.config dosyasını Machine.config dosyasının ayarlarını geçersiz kılmak için kullanılabilir; Böylece kullanılan Machine.config dosyasının ayarlarında kilitleyebilirsiniz. Web.config durumda uygulama dizinine uygulanan yapılandırmaya baştaki tüm dizinleri Web.config dosyalarında yapılandırma sistemi birleştirir. [!INCLUDE[crabout](../../../includes/crabout-md.md)] Yapılandırma ve ayarı öncelikleri bkz konularında <xref:System.Configuration> ad alanı.  
   

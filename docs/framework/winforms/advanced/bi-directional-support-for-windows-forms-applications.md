@@ -1,8 +1,9 @@
 ---
-title: "Windows Forms Uygulamalarında İki Yönlü Destek"
+title: Windows Forms Uygulamalarında İki Yönlü Destek
 ms.date: 09/30/2017
 ms.prod: .net-framework
-ms.technology: dotnet-winforms
+ms.technology:
+- dotnet-winforms
 ms.topic: article
 helpviewer_keywords:
 - globalization [Windows Forms], bi-directional support in Windows
@@ -13,15 +14,16 @@ helpviewer_keywords:
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: a8ae0e958c842c2f3cf3fbb788cad1cde6e6cc2b
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: d670fedb2fe693a871de8f0147b81b97b4958853
+ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="bi-directional-support-for-windows-forms-applications"></a>Windows Forms Uygulamalarında İki Yönlü Destek
-Kullanabileceğiniz [!INCLUDE[vsprvs](../../../../includes/vsprvs-md.md)] Arapça ve İbranice gibi çift yönlü (sağdan sola) dilleri destekleyen Windows tabanlı uygulamalar oluşturmak için. Bu standart formlar, iletişim kutuları, MDI formları ve birlikte çalışabilir tüm denetimler bu formlarda içerir — diğer bir deyişle, tüm nesneleri <xref:System.Windows.Forms.Control> ad alanı.  
+Arapça ve İbranice gibi çift yönlü (sağdan sola) dilleri destekleyen Windows tabanlı uygulamalar oluşturmak için Visual Studio'yu kullanabilirsiniz. Bu standart formlar, iletişim kutuları, MDI formları ve birlikte çalışabilir tüm denetimler bu formlarda içerir — diğer bir deyişle, tüm nesneleri <xref:System.Windows.Forms.Control> ad alanı.  
   
 ## <a name="culture-support"></a>Kültür desteği  
  Kültür ve UI kültürü ayarlar tarih, saat, para birimi ve diğer bilgileri ile bir uygulamanın nasıl çalıştığını belirler. Diğer diller için olduğu gibi kültür ve UI kültürü desteği çift yönlü diller için aynıdır.   Ayrıca bkz. [genel Windows Formları ve Web formları için kültüre özgü sınıflar](http://msdn.microsoft.com/library/94ye9x8c\(v=vs.110\)) veya [genel Windows Formları ve Web formları için kültüre özgü sınıflar](http://msdn.microsoft.com/library/94ye9x8c\(v=vs.120\))  
@@ -33,7 +35,7 @@ Kullanabileceğiniz [!INCLUDE[vsprvs](../../../../includes/vsprvs-md.md)] Arapç
   
 |Denetim/bileşeni|RightToLeft özelliği etkisi|RightToLeftLayout özelliğinin etkisi|Yansıtması gerekir?|  
 |------------------------|------------------------------------|------------------------------------------|-------------------------|  
-|<xref:System.Windows.Forms.Button>|Okuma sırası RTL ayarlar. Tersine çevirir <xref:System.Windows.Forms.ButtonBase.TextAlign%2A>, <xref:System.Windows.Forms.ButtonBase.ImageAlign%2A>, ve<xref:System.Windows.Forms.ButtonBase.TextImageRelation%2A>|Herhangi bir etkisi|Hayır|  
+|<xref:System.Windows.Forms.Button>|Okuma sırası RTL ayarlar. Tersine çevirir <xref:System.Windows.Forms.ButtonBase.TextAlign%2A>, <xref:System.Windows.Forms.ButtonBase.ImageAlign%2A>, ve <xref:System.Windows.Forms.ButtonBase.TextImageRelation%2A>|Herhangi bir etkisi|Hayır|  
 |<xref:System.Windows.Forms.CheckBox>|Onay kutusu metni sağ tarafında görüntülenir|Herhangi bir etkisi|Hayır|  
 |<xref:System.Windows.Forms.CheckedListBox>|Tüm onay kutularını metnin sağ tarafında görüntülenir|Herhangi bir etkisi|Hayır|  
 |<xref:System.Windows.Forms.ColorDialog>|Etkilenen değil; işletim sisteminin diline bağlıdır|Herhangi bir etkisi|Hayır|  
@@ -49,8 +51,8 @@ Kullanabileceğiniz [!INCLUDE[vsprvs](../../../../includes/vsprvs-md.md)] Arapç
 |<xref:System.Windows.Forms.GroupBox>|Resim yazısı sağa hizalı görüntülenir. Alt denetimler, bu özellik devralır.|Kullanım bir <xref:System.Windows.Forms.TableLayoutPanel> sağdan sola yansıtması için Denetim içindeki desteği|Hayır|  
 |<xref:System.Windows.Forms.HScrollBar>|Sağa hizalı kaydırma kutusunun (Flash) ile başlar|Herhangi bir etkisi|Hayır|  
 |<xref:System.Windows.Forms.ImageList>|Gerekli değil|Herhangi bir etkisi|Hayır|  
-|<xref:System.Windows.Forms.Label>|Sağa hizalı görüntülenir. Tersine çevirir <xref:System.Windows.Forms.Label.TextAlign%2A> ve<xref:System.Windows.Forms.Label.ImageAlign%2A>|Herhangi bir etkisi|Hayır|  
-|<xref:System.Windows.Forms.LinkLabel>|Sağa hizalı görüntülenir. Tersine çevirir <xref:System.Windows.Forms.Label.TextAlign%2A> ve<xref:System.Windows.Forms.Label.ImageAlign%2A>|Herhangi bir etkisi|Hayır|  
+|<xref:System.Windows.Forms.Label>|Sağa hizalı görüntülenir. Tersine çevirir <xref:System.Windows.Forms.Label.TextAlign%2A> ve <xref:System.Windows.Forms.Label.ImageAlign%2A>|Herhangi bir etkisi|Hayır|  
+|<xref:System.Windows.Forms.LinkLabel>|Sağa hizalı görüntülenir. Tersine çevirir <xref:System.Windows.Forms.Label.TextAlign%2A> ve <xref:System.Windows.Forms.Label.ImageAlign%2A>|Herhangi bir etkisi|Hayır|  
 |<xref:System.Windows.Forms.ListBox>|Sağa hizalı öğeleri|Herhangi bir etkisi|Hayır|  
 |<xref:System.Windows.Forms.ListView>|Okuma sırasını RTL ayarlar; sola hizalı öğeleri kalır|Denetim yansıtır|Evet|  
 |<xref:System.Windows.Forms.MainMenu>|Sağa hizalı (değil tasarım zamanında) çalışma zamanında okuma sırası RTL görüntülenir|Herhangi bir etkisi|Hayır|  
@@ -79,7 +81,7 @@ Kullanabileceğiniz [!INCLUDE[vsprvs](../../../../includes/vsprvs-md.md)] Arapç
 |<xref:System.Windows.Forms.ToolTip>|Okuma sırası RTL ayarlar|Herhangi bir etkisi|Hayır|  
 |<xref:System.Windows.Forms.TrackBar>|Sağa kaydırma veya iz başlatır; zaman <xref:System.Windows.Forms.TrackBar.Orientation%2A> çizgilerine sağdan ortaya, dikeydir|Herhangi bir etkisi|Hayır|  
 |<xref:System.Windows.Forms.TreeView>|Okuma düzenini yalnızca RTL ayarlar|Denetim yansıtır|Evet|  
-|<xref:System.Windows.Forms.UserControl>|Sol taraftaki dikey kaydırma çubuğu görüntülenir; Yatay kaydırma çubuğu Flash sağ tarafta sahiptir.|Doğrudan destek yok; kullanan bir<xref:System.Windows.Forms.TableLayoutPanel>|Hayır|  
+|<xref:System.Windows.Forms.UserControl>|Sol taraftaki dikey kaydırma çubuğu görüntülenir; Yatay kaydırma çubuğu Flash sağ tarafta sahiptir.|Doğrudan destek yok; kullanan bir <xref:System.Windows.Forms.TableLayoutPanel>|Hayır|  
 |<xref:System.Windows.Forms.VScrollBar>|Kaydırılabilir denetimleri sağ tarafındaki yerine sol tarafında görüntülenir|Herhangi bir etkisi|Hayır|  
   
 ## <a name="encoding"></a>Kodlama  

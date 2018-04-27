@@ -1,29 +1,30 @@
 ---
-title: "Nasıl yapılır: özel izleme katılımcı oluşturma"
-ms.custom: 
+title: 'Nasıl yapılır: özel izleme katılımcı oluşturma'
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - csharp
 - vb
 ms.assetid: 1b612c7e-2381-4a7c-b07a-77030415f2a3
-caps.latest.revision: "6"
+caps.latest.revision: 6
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 345fd696559ba52d41874ff774bd46a2d37f6e6f
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: d53035c2fb41800a91d3cdea134ae811a09fa3e9
+ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="how-to-create-a-custom-tracking-participant"></a>Nasıl yapılır: özel izleme katılımcı oluşturma
-İş akışı izleme iş akışı yürütme durumu görünürlük sağlar. İş akışı çalışma zamanı iş akışı yaşam döngüsü olayları, etkinlik yaşam döngüsü olayları, yer işareti sürdürülmesi ve hataları açıklayan izleme kayıtları yayar. Bu izleme kayıtları katılımcıları izleme tarafından kullanılır. [!INCLUDE[wf](../../../includes/wf-md.md)]Olay izleme için Windows (ETW) olayları olarak izleme kayıtları yazan standart izleme katılımcı içerir. Özel İzleme katılımcı Ayrıca, gereksinimlerinizi karşılamıyorsa yazabilirsiniz. Bu öğretici adım özel izleme katılımcı ve çıktısını yakalama izleme profili oluşturmayı açıklar `WriteLine` etkinlikleri böylece kullanıcıya gösterilir.  
+İş akışı izleme iş akışı yürütme durumu görünürlük sağlar. İş akışı çalışma zamanı iş akışı yaşam döngüsü olayları, etkinlik yaşam döngüsü olayları, yer işareti sürdürülmesi ve hataları açıklayan izleme kayıtları yayar. Bu izleme kayıtları katılımcıları izleme tarafından kullanılır. Windows Workflow Foundation (WF) izleme kayıtları olay Windows için izleme (ETW) olayları olarak yazan standart izleme katılımcı içerir. Özel İzleme katılımcı Ayrıca, gereksinimlerinizi karşılamıyorsa yazabilirsiniz. Bu öğretici adım özel izleme katılımcı ve çıktısını yakalama izleme profili oluşturmayı açıklar `WriteLine` etkinlikleri böylece kullanıcıya gösterilir.  
   
 > [!NOTE]
 >  Başlarken Öğreticisi her bir konuda önceki konularda bağlıdır. Bu konuda tamamlamak için önce önceki konularını tamamlamanız gerekir. Tamamlanmış sürümü indirme veya videosu öğreticinin görüntülemek için bkz: [Windows Workflow Foundation (WF45) - başlangıç Öğreticisi](http://go.microsoft.com/fwlink/?LinkID=248976).  
@@ -38,7 +39,7 @@ ms.lasthandoff: 12/22/2017
   
 -   [Derleme ve uygulamayı çalıştırmak için](../../../docs/framework/windows-workflow-foundation/how-to-create-a-custom-tracking-participant.md#BKMK_BuildAndRun)  
   
-###  <a name="BKMK_CustomTrackingParticipant"></a>Özel İzleme katılımcı oluşturmak için  
+###  <a name="BKMK_CustomTrackingParticipant"></a> Özel İzleme katılımcı oluşturmak için  
   
 1.  Sağ **NumberGuessWorkflowHost** içinde **Çözüm Gezgini** ve **Ekle**, **sınıfı**. Tür `StatusTrackingParticipant` içine **adı** ve'ı tıklatın **Ekle**.  
   
@@ -114,7 +115,7 @@ ms.lasthandoff: 12/22/2017
   
      İzleme profili belirtildiğinde, varsayılan profili izleme kullanılır. Varsayılan profil izleme kullanıldığında, izleme kayıtları tüm gösterilen `ActivityStates`. Yalnızca bir kez yaşam döngüsü sırasında metni yakalamak ihtiyacımız çünkü `WriteLine` etkinlik, biz yalnızca Ayıkla metinden `ActivityStates.Executing` durumu. İçinde [izleme profili oluşturma ve izleme katılımcı kaydetme](../../../docs/framework/windows-workflow-foundation/how-to-create-a-custom-tracking-participant.md#BKMK_TrackingProfile), yalnızca belirten bir izleme profili oluşturulur `WriteLine` `ActivityStates.Executing` izleme kayıtları yayılan.  
   
-###  <a name="BKMK_TrackingProfile"></a>İzleme profili oluşturma ve izleme katılımcı kaydetme  
+###  <a name="BKMK_TrackingProfile"></a> İzleme profili oluşturma ve izleme katılımcı kaydetme  
   
 1.  Sağ **WorkflowHostForm** içinde **Çözüm Gezgini** ve **görünümü kodu**.  
   
@@ -235,7 +236,7 @@ ms.lasthandoff: 12/22/2017
         // Workflow lifecycle handlers...  
     ```  
   
-###  <a name="BKMK_DisplayTracking"></a>İzleme bilgilerini görüntülemek için  
+###  <a name="BKMK_DisplayTracking"></a> İzleme bilgilerini görüntülemek için  
   
 1.  Sağ **WorkflowHostForm** içinde **Çözüm Gezgini** ve **görünümü kodu**.  
   
@@ -330,7 +331,7 @@ ms.lasthandoff: 12/22/2017
     }  
     ```  
   
-###  <a name="BKMK_BuildAndRun"></a>Derleme ve uygulamayı çalıştırmak için  
+###  <a name="BKMK_BuildAndRun"></a> Derleme ve uygulamayı çalıştırmak için  
   
 1.  Uygulamanızı oluşturmak için Ctrl + Shift + B tuşuna basın.  
   

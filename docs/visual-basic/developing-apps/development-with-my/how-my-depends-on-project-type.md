@@ -1,28 +1,28 @@
 ---
-title: "My Özellikleri Proje Türüne Nasıl Bağımlıdır (Visual Basic)"
+title: My Özellikleri Proje Türüne Nasıl Bağımlıdır (Visual Basic)
 ms.date: 07/20/2015
 ms.prod: .net
-ms.suite: 
+ms.suite: ''
 ms.technology:
 - devlang-visual-basic
 ms.topic: article
 helpviewer_keywords:
 - _MYTYPE
 ms.assetid: c188b38e-bd9d-4121-9983-41ea6a94d28e
-caps.latest.revision: 
+caps.latest.revision: 18
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: 4a37bf43096931597278974099becb9be6ae133d
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: d931a2034d681c4e14cc35ecfbd9ad7accf5afaa
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="how-my-depends-on-project-type-visual-basic"></a>My Özellikleri Proje Türüne Nasıl Bağımlıdır (Visual Basic)
-`My`yalnızca belirli proje türüne göre gereken nesneleri gösterir. Örneğin, `My.Forms` nesnesi olan bir Windows Forms uygulamasında kullanılabilir, ancak bir konsol uygulamasında mevcut değil. Bu konuda açıklayan `My` nesneleri farklı proje türlerinde kullanılabilir.  
+`My` yalnızca belirli proje türüne göre gereken nesneleri gösterir. Örneğin, `My.Forms` nesnesi olan bir Windows Forms uygulamasında kullanılabilir, ancak bir konsol uygulamasında mevcut değil. Bu konuda açıklayan `My` nesneleri farklı proje türlerinde kullanılabilir.  
   
 ## <a name="my-in-windows-applications-and-web-sites"></a>İçinde Windows uygulamaları ve Web siteleri  
- `My`Geçerli proje türü yararlı olan nesneleri gösterir; geçerli olmayan nesneler gizler. Örneğin, aşağıdaki gösterir görüntü `My` nesne modelinde bir Windows Forms projesi.  
+ `My` Geçerli proje türü yararlı olan nesneleri gösterir; geçerli olmayan nesneler gizler. Örneğin, aşağıdaki gösterir görüntü `My` nesne modelinde bir Windows Forms projesi.  
   
  ![Şeklin My bir Windows Forms uygulamasında](../../../visual-basic/developing-apps/development-with-my/media/myinwinform.png "MyInWinForm")  
   
@@ -48,7 +48,7 @@ ms.lasthandoff: 11/21/2017
 |`My.User`|**Evet** <sup>6</sup>|**Evet** <sup>6</sup>|**Evet** <sup>6</sup>|**Evet** <sup>6</sup>|**Evet** <sup>7</sup>|**Evet** <sup>6</sup>|Hayır|**Evet** <sup>7</sup>|  
 |`My.WebServices`|**Evet**|**Evet**|**Evet**|**Evet**|**Evet**|**Evet**|Hayır|Hayır|  
   
- <sup>1</sup> Windows Forms sürümü `My.Application`. Konsol sürümünden türetilen (bkz. Not 3); uygulamanın windows ile etkileşim için destek ekler ve sağlar [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] uygulama modeli.  
+ <sup>1</sup> Windows Forms sürümü `My.Application`. Konsol sürümünden türetilen (bkz. Not 3); uygulamanın windows ile etkileşim için destek ekler ve Visual Basic uygulama modeli sağlar.  
   
  <sup>2</sup> kitaplık sürümünü `My.Application`. Bir uygulama tarafından gerek duyulan temel işlevleri sağlar: uygulama günlüğüne yazma ve uygulama bilgilerine erişmek için üyeleri sağlar.  
   
@@ -67,10 +67,10 @@ ms.lasthandoff: 11/21/2017
  <xref:Microsoft.VisualBasic.Devices.Computer>  
  <xref:Microsoft.VisualBasic.Logging.Log>  
  <xref:Microsoft.VisualBasic.ApplicationServices.User>  
- [Özelleştirme hangi nesnelerin kullanılabilir olduğunu My](../../../visual-basic/developing-apps/customizing-extending-my/customizing-which-objects-are-available-in-my.md)  
- [Koşullu derleme](../../../visual-basic/programming-guide/program-structure/conditional-compilation.md)  
+ [My Özelliklerinde Hangi Nesnelerin Kullanılabilir Olduğunu Özelleştirme](../../../visual-basic/developing-apps/customizing-extending-my/customizing-which-objects-are-available-in-my.md)  
+ [Koşullu Derleme](../../../visual-basic/programming-guide/program-structure/conditional-compilation.md)  
  [/ define (Visual Basic)](../../../visual-basic/reference/command-line-compiler/define.md)  
- [My.Forms nesnesi](../../../visual-basic/language-reference/objects/my-forms-object.md)  
- [My.Request nesnesi](../../../visual-basic/language-reference/objects/my-request-object.md)  
- [My.Response nesnesi](../../../visual-basic/language-reference/objects/my-response-object.md)  
- [My.WebServices nesnesi](../../../visual-basic/language-reference/objects/my-webservices-object.md)
+ [My.Forms Nesnesi](../../../visual-basic/language-reference/objects/my-forms-object.md)  
+ [My.Request Nesnesi](../../../visual-basic/language-reference/objects/my-request-object.md)  
+ [My.Response Nesnesi](../../../visual-basic/language-reference/objects/my-response-object.md)  
+ [My.WebServices Nesnesi](../../../visual-basic/language-reference/objects/my-webservices-object.md)

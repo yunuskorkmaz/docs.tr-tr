@@ -1,12 +1,13 @@
 ---
-title: "Veri Bağlama ve Windows Forms"
-ms.custom: 
+title: Veri Bağlama ve Windows Forms
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-winforms
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-winforms
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - master-details lists
@@ -19,16 +20,17 @@ helpviewer_keywords:
 - Windows Forms controls, data binding
 - data-bound controls [Windows Forms], Windows Forms
 ms.assetid: 419aac5e-819b-4aad-88b0-73a2f8c0bd27
-caps.latest.revision: "20"
+caps.latest.revision: 20
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: f2a4d023600456adf1e14b801ee6c24fd0a2348c
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: db0e3ad5602d7ee608299bc5b9c5c85b860cab7d
+ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="data-binding-and-windows-forms"></a>Veri Bağlama ve Windows Forms
 Windows Forms'ta yalnızca geleneksel veri kaynaklarına bağlayabilirsiniz, ancak Ayrıca verileri içeren neredeyse her yapısına. Çalışma zamanında hesaplamak, bir dosyadan okunan veya diğer denetimlerin değerleri türetilen değerleri dizisi bağlayabilirsiniz.  
@@ -48,7 +50,7 @@ Windows Forms'ta yalnızca geleneksel veri kaynaklarına bağlayabilirsiniz, anc
   
 |Veri bağlama türü|Açıklama|  
 |--------------------------|-----------------|  
-|Basit veri bağlama|Tek bir veri öğesi, bir veri kümesi tablo sütununda bir değer gibi bağlamak için bir denetim yeteneği. Bu tür denetimler için tipik bağlama olduğu gibi bir <xref:System.Windows.Forms.TextBox> denetim veya <xref:System.Windows.Forms.Label> genellikle yalnızca tek bir değer görüntüler denetimleri denetimi. Aslında, denetim üzerinde herhangi bir özelliği bir veritabanı alanına bağlanabilir. Bu özellik için kapsamlı destek [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)].<br /><br /> Daha fazla bilgi için bkz.:<br /><br /> -   [Veri bağlama ile ilgili arabirimler](../../../docs/framework/winforms/interfaces-related-to-data-binding.md)<br />-   [Nasıl yapılır: Windows formlarında verilerde gezinme](../../../docs/framework/winforms/how-to-navigate-data-in-windows-forms.md)<br />-   [Nasıl yapılır: bir Windows formunda basit bağlantılı denetim oluşturma](../../../docs/framework/winforms/how-to-create-a-simple-bound-control-on-a-windows-form.md)|  
+|Basit veri bağlama|Tek bir veri öğesi, bir veri kümesi tablo sütununda bir değer gibi bağlamak için bir denetim yeteneği. Bu tür denetimler için tipik bağlama olduğu gibi bir <xref:System.Windows.Forms.TextBox> denetim veya <xref:System.Windows.Forms.Label> genellikle yalnızca tek bir değer görüntüler denetimleri denetimi. Aslında, denetim üzerinde herhangi bir özelliği bir veritabanı alanına bağlanabilir. Visual Studio'da bu özellik için kapsamlı destek yoktur.<br /><br /> Daha fazla bilgi için bkz.:<br /><br /> -   [Veri bağlama ile ilgili arabirimler](../../../docs/framework/winforms/interfaces-related-to-data-binding.md)<br />-   [Nasıl yapılır: Windows formlarında verilerde gezinme](../../../docs/framework/winforms/how-to-navigate-data-in-windows-forms.md)<br />-   [Nasıl yapılır: bir Windows formunda basit bağlantılı denetim oluşturma](../../../docs/framework/winforms/how-to-create-a-simple-bound-control-on-a-windows-form.md)|  
 |Karmaşık veri bağlama|Birden fazla veri öğesi, genellikle birden fazla kayıt bir veritabanında bağlamak için bir denetim yeteneği. Karmaşık bağlama, liste tabanlı bağlama olarak da adlandırılır. Karmaşık bağlama destekleyen denetimleri örnekleri <xref:System.Windows.Forms.DataGridView>, <xref:System.Windows.Forms.ListBox>, ve <xref:System.Windows.Forms.ComboBox> kontrol eder. Karmaşık veri bağlama örneği için bkz: [nasıl yapılır: Windows Forms ComboBox veya ListBox denetimini verilere bağlama](../../../docs/framework/winforms/controls/how-to-bind-a-windows-forms-combobox-or-listbox-control-to-data.md).|  
   
 ## <a name="bindingsource-component"></a>BindingSource Bileşeni  

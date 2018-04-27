@@ -1,27 +1,29 @@
 ---
-title: "İzlenecek yol: Karma Uygulamayı Yerelleştirme"
-ms.custom: 
+title: 'İzlenecek yol: Karma Uygulamayı Yerelleştirme'
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-wpf
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-wpf
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - localization [WPF interoperability]
 - hybrid applications [WPF interoperability]
 ms.assetid: fbc0c54e-930a-4c13-8e9c-27b83665010a
-caps.latest.revision: "17"
+caps.latest.revision: 17
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 9f9bb7588ef1f6962a5cd55196154ac7f666d53b
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.workload:
+- dotnet
+ms.openlocfilehash: b00553c005b714094f208fc6d4ed40e838b90b49
+ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="walkthrough-localizing-a-hybrid-application"></a>İzlenecek yol: Karma Uygulamayı Yerelleştirme
 Bu kılavuz, yerelleştirme gösterilmektedir [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] öğelerinde bir [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)]-karma tabanlı.  
@@ -123,7 +125,7 @@ Bu kılavuz, yerelleştirme gösterilmektedir [!INCLUDE[TLA2#tla_winclient](../.
   
 #### <a name="to-assign-resource-identifiers"></a>Kaynak tanımlayıcılar atamak için  
   
-1.  Başlat menüsünden açmak [!INCLUDE[vsprvs](../../../../includes/vsprvs-md.md)] komut istemi.  
+1.  Başlat menüsünden, Visual Studio komut istemi açın.  
   
 2.  Kaynak tanımlayıcılar yerelleştirilebilir içeriğinize atamak için aşağıdaki komutu kullanın.  
   
@@ -150,7 +152,7 @@ Bu kılavuz, yerelleştirme gösterilmektedir [!INCLUDE[TLA2#tla_winclient](../.
     LocBaml /parse LocalizingWpfInWf.g.en-US.resources /out:temp.csv  
     ```  
   
-3.  Temp.csv dosyasını açın [!INCLUDE[vsprvs](../../../../includes/vsprvs-md.md)] veya başka bir metin düzenleyici. Dize Değiştir `"Hello"` kendi İspanyolca çevirisi ile `"Hola"`.  
+3.  Visual Studio veya başka bir metin düzenleyicisi ile temp.csv dosyasını açın. Dize Değiştir `"Hello"` kendi İspanyolca çevirisi ile `"Hola"`.  
   
 4.  Temp.csv dosyasını kaydedin.  
   

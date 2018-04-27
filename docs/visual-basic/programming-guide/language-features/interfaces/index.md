@@ -14,11 +14,11 @@ ms.assetid: 61b06674-12c9-430b-be68-cc67ecee1f5b
 caps.latest.revision: 11
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: c26bb7322064d0b8cdf733e74f8b37e81b1e620c
-ms.sourcegitcommit: c2e216692ef7576a213ae16af2377cd98d1a67fa
+ms.openlocfilehash: 558eae39b38161d01d599bba6c3121839560884b
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/22/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="interfaces-visual-basic"></a>Arabirimler (Visual Basic)
 *Arabirimler* özellikleri, yöntemleri ve sınıfları uygulayabilirsiniz olayları tanımlayın. Arabirimleri, özellikleri yakından ilgili özellikleri, yöntemleri ve olayları küçük gruplar olarak tanımlamanıza olanak sağlar; Bu, var olan kodu tehlikeye atmadan arabirimlerinizi için geliştirilmiş uygulamaları geliştirebilirsiniz çünkü uyumluluk sorunları azaltır. Ek arabirimleri ve uygulamaları geliştirerek herhangi bir zamanda yeni özellikleri ekleyebilirsiniz.  
@@ -46,13 +46,13 @@ ms.lasthandoff: 10/22/2017
  [!code-vb[VbVbalrOOP#17](../../../../visual-basic/misc/codesnippet/VisualBasic/index_1.vb)]  
   
 ## <a name="implementing-interfaces"></a>Arabirimler uygulama  
- [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] Ayrılmış sözcük `Implements` iki yolla kullanılır. `Implements` Deyimi güveninin bir sınıf veya yapı bir arabirimi uygular. `Implements` Anahtar sözcüğü güveninin bir sınıf üyesi veya yapı üyesi belirli arabirim üye uygular.  
+ Visual Basic ayrılmış sözcük `Implements` iki yolla kullanılır. `Implements` Deyimi güveninin bir sınıf veya yapı bir arabirimi uygular. `Implements` Anahtar sözcüğü güveninin bir sınıf üyesi veya yapı üyesi belirli arabirim üye uygular.  
   
 ### <a name="implements-statement"></a>Implements Deyimi  
  Bir sınıf veya yapı bir veya daha fazla arabirimlerini uygular, içermelidir `Implements` deyimi hemen sonra `Class` veya `Structure` deyimi. `Implements` Deyim için bir sınıf tarafından uygulanacak arabirim virgülle ayrılmış bir liste gerekir. Sınıf veya yapı kullanan tüm arabirimi üyeleri uygulamalıdır `Implements` anahtar sözcüğü.  
   
 ### <a name="implements-keyword"></a>Implements anahtar sözcüğü  
- `Implements` Anahtar sözcüğü uygulanacak arabirim üyeleri virgülle ayrılmış bir listesini gerektirir. Genellikle, yalnızca tek bir arabirim üye belirtildi, ancak birden çok üye belirtebilirsiniz. Implements deyimi sınıfı içinde belirtilmelidir arabirim adı, arabirim üyesini belirtimi oluşur; bir süre; ve üye işlevi, özelliği veya uygulanacak olay adı. Arabirim üyesini uygulayan bir üyenin adını herhangi bir yasal tanımlayıcı kullanabilirsiniz ve bunlarla sınırlı değildir `InterfaceName_MethodName` 'ın önceki sürümlerinde kullanılan kuralı [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)].  
+ `Implements` Anahtar sözcüğü uygulanacak arabirim üyeleri virgülle ayrılmış bir listesini gerektirir. Genellikle, yalnızca tek bir arabirim üye belirtildi, ancak birden çok üye belirtebilirsiniz. Implements deyimi sınıfı içinde belirtilmelidir arabirim adı, arabirim üyesini belirtimi oluşur; bir süre; ve üye işlevi, özelliği veya uygulanacak olay adı. Arabirim üyesini uygulayan bir üyenin adını herhangi bir yasal tanımlayıcı kullanabilirsiniz ve bunlarla sınırlı değildir `InterfaceName_MethodName` Visual Basic önceki sürümlerinde kullanılan kural.  
   
  Örneğin, aşağıdaki kodu adlı bir alt yordama bildirme gösterilmektedir `Sub1` arabirim yöntemini uygular:  
   
@@ -89,5 +89,5 @@ ms.lasthandoff: 10/22/2017
   
 |Başlık|Açıklama|  
 |-----------|-----------------|  
-|[İzlenecek yol: Arabirimleri oluşturma ve uygulama](../../../../visual-basic/programming-guide/language-features/interfaces/walkthrough-creating-and-implementing-interfaces.md)|Tanımlama ve kendi arabirimi uygulama işlemi boyunca sürer ayrıntılı bir yordam sağlar.|  
-|[Genel arabirimlerde varyans](../../concepts/covariance-contravariance/variance-in-generic-interfaces.md)|Kovaryans ve kontravaryans genel arabirimler açıklanır ve .NET Framework değişken genel arabirimler listesini sağlar.|
+|[İzlenecek yol: Arabirimleri Oluşturma ve Uygulama](../../../../visual-basic/programming-guide/language-features/interfaces/walkthrough-creating-and-implementing-interfaces.md)|Tanımlama ve kendi arabirimi uygulama işlemi boyunca sürer ayrıntılı bir yordam sağlar.|  
+|[Genel Arabirimlerde Varyans](../../concepts/covariance-contravariance/variance-in-generic-interfaces.md)|Kovaryans ve kontravaryans genel arabirimler açıklanır ve .NET Framework değişken genel arabirimler listesini sağlar.|

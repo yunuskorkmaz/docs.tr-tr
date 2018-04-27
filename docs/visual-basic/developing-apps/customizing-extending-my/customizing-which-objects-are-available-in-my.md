@@ -1,24 +1,25 @@
 ---
-title: "My Özelliklerinde Hangi Nesnelerin Kullanılabilir Olduğunu Özelleştirme (Visual Basic)"
+title: My Özelliklerinde Hangi Nesnelerin Kullanılabilir Olduğunu Özelleştirme (Visual Basic)
 ms.date: 07/20/2015
 ms.prod: .net
-ms.technology: devlang-visual-basic
+ms.technology:
+- devlang-visual-basic
 ms.topic: article
 helpviewer_keywords:
 - My namespace [Visual Basic], customizing
 - My namespace
 ms.assetid: 4e8279c2-ed5b-4681-8903-8a6671874000
-caps.latest.revision: "12"
+caps.latest.revision: 12
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: e5f5be7481ee102074fe1236b91110ee6b1d2944
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 669641a2b6ecbf988f6cad68acf52c5561b32515
+ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="customizing-which-objects-are-available-in-my-visual-basic"></a>My Özelliklerinde Hangi Nesnelerin Kullanılabilir Olduğunu Özelleştirme (Visual Basic)
-Bu konuda, hangi denetim nasıl açıklanmaktadır `My` nesneleri projenizin ayarlayarak etkin `_MYTYPE` koşullu derleme sabiti. [!INCLUDE[vsprvs](~/includes/vsprvs-md.md)] Tümleşik geliştirme ortamı (IDE) tutar `_MYTYPE` proje türü ile eşitlenmiş bir proje için koşullu derleme sabiti.  
+Bu konuda, hangi denetim nasıl açıklanmaktadır `My` nesneleri projenizin ayarlayarak etkin `_MYTYPE` koşullu derleme sabiti. Visual Studio tümleşik geliştirme ortamı (IDE) tutar `_MYTYPE` proje türü ile eşitlenmiş bir proje için koşullu derleme sabiti.  
   
 ## <a name="predefined-mytype-values"></a>Önceden tanımlanmış _MYTYPE değerleri  
  Kullanmalısınız `/define` ayarlamak için derleyici seçeneği `_MYTYPE` koşullu derleme sabiti. İçin kendi değer belirtirken `_MYTYPE` sabit, dize değeri ters eğik çizgi/tırnak işareti içine almanız gerekir (\\") sıraları. Örneğin, kullanabilirsiniz:  
@@ -36,7 +37,7 @@ Bu konuda, hangi denetim nasıl açıklanmaktadır `My` nesneleri projenizin aya
 |Web|"Web"|  
 |Web Denetim Kitaplığı|"WebControl"|  
 |Windows uygulaması|"Windows Forms"|  
-|Windows özel başlatılırken uygulama`Sub Main`|"WindowsFormsWithCustomSubMain"|  
+|Windows özel başlatılırken uygulama `Sub Main`|"WindowsFormsWithCustomSubMain"|  
 |Windows Denetim Kitaplığı|"Windows"|  
 |Windows Hizmeti|"Konsol"|  
 |boş|"Boş"|  
@@ -79,10 +80,10 @@ Bu konuda, hangi denetim nasıl açıklanmaktadır `My` nesneleri projenizin aya
  <xref:Microsoft.VisualBasic.Devices.Computer>  
  <xref:Microsoft.VisualBasic.Logging.Log>  
  <xref:Microsoft.VisualBasic.ApplicationServices.User>  
- [Nasıl My proje türüne göre değişir](../../../visual-basic/developing-apps/development-with-my/how-my-depends-on-project-type.md)  
- [Koşullu derleme](../../../visual-basic/programming-guide/program-structure/conditional-compilation.md)  
+ [My Özellikleri Proje Türüne Nasıl Bağımlıdır](../../../visual-basic/developing-apps/development-with-my/how-my-depends-on-project-type.md)  
+ [Koşullu Derleme](../../../visual-basic/programming-guide/program-structure/conditional-compilation.md)  
  [/ define (Visual Basic)](../../../visual-basic/reference/command-line-compiler/define.md)  
- [My.Forms nesnesi](../../../visual-basic/language-reference/objects/my-forms-object.md)  
- [My.Request nesnesi](../../../visual-basic/language-reference/objects/my-request-object.md)  
- [My.Response nesnesi](../../../visual-basic/language-reference/objects/my-response-object.md)  
- [My.WebServices nesnesi](../../../visual-basic/language-reference/objects/my-webservices-object.md)
+ [My.Forms Nesnesi](../../../visual-basic/language-reference/objects/my-forms-object.md)  
+ [My.Request Nesnesi](../../../visual-basic/language-reference/objects/my-request-object.md)  
+ [My.Response Nesnesi](../../../visual-basic/language-reference/objects/my-response-object.md)  
+ [My.WebServices Nesnesi](../../../visual-basic/language-reference/objects/my-webservices-object.md)

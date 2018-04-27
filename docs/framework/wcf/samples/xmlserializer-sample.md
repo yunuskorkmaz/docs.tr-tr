@@ -1,24 +1,26 @@
 ---
-title: "XMLSerializer Örneği"
-ms.custom: 
+title: XMLSerializer Örneği
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 7d134453-9a35-4202-ba77-9ca3a65babc3
-caps.latest.revision: "23"
+caps.latest.revision: 23
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: c89194eebbfe4f25b8d8120be16a18306a92a889
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: af051dffa93aea6586adaea1e49081ddc357a210
+ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="xmlserializer-sample"></a>XMLSerializer Örneği
 Bu örnek seri hale getirmek ve seri durumdan uyumlu türleri gösterilmiştir <xref:System.Xml.Serialization.XmlSerializer>. Varsayılan [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] biçimlendiricidir <xref:System.Runtime.Serialization.DataContractSerializer> sınıfı. <xref:System.Xml.Serialization.XmlSerializer> Sınıfı, serileştirme ve seri durumdan kullanılabilir olduğunda türleri <xref:System.Runtime.Serialization.DataContractSerializer> sınıfı kullanılamaz. XML denetleyebilmeniz Örneğin, - gerektiğinde bir XML özniteliği ve bir XML öğesi bir veri parçası olması gerekiyorsa bu genellikle durumdur. Ayrıca, <xref:System.Xml.Serialization.XmlSerializer> genellikle otomatik olarak istemciler için oluştururken seçilir olmayan[!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] Hizmetleri.  
@@ -30,7 +32,7 @@ Bu örnek seri hale getirmek ve seri durumdan uyumlu türleri gösterilmiştir <
   
  <xref:System.ServiceModel.ServiceContractAttribute> Ve <xref:System.ServiceModel.XmlSerializerFormatAttribute> aşağıdaki örnek kodda gösterildiği gibi arabirimine uygulanması gerekir.  
   
-```  
+```csharp  
 [ServiceContract(Namespace="http://Microsoft.ServiceModel.Samples"), XmlSerializerFormat]  
 public interface IXmlSerializerCalculator  
 {  
@@ -47,7 +49,7 @@ public interface IXmlSerializerCalculator
   
  Genel üyeleri `ComplexNumber` sınıfı tarafından serileştirilir <xref:System.Xml.Serialization.XmlSerializer> XML öznitelikleri. <xref:System.Runtime.Serialization.DataContractSerializer> Bu tür bir XML örneği oluşturmak için kullanılamaz.  
   
-```  
+```csharp  
 public class ComplexNumber  
 {  
     private double real;  
@@ -83,7 +85,7 @@ public class ComplexNumber
   
  Hizmet uygulaması hesaplar ve uygun sonucu döndürür — kabul edip, değerler döndüren `ComplexNumber` türü.  
   
-```  
+```csharp  
 public class XmlSerializerCalculatorService : IXmlSerializerCalculator  
 {  
     public ComplexNumber Add(ComplexNumber n1, ComplexNumber n2)  
@@ -97,7 +99,7 @@ public class XmlSerializerCalculatorService : IXmlSerializerCalculator
   
  İstemci uygulaması, ayrıca karmaşık numaralar kullanır. Hizmet sözleşmesi ve veri türleri tarafından üretildi generatedClient.cs kaynak dosyasında tanımlanan [ServiceModel meta veri yardımcı Programracı (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md) hizmeti meta veriler. Bir sözleşme tarafından seri hale getirilebilir olmadığında svcutil.exe algılayabilir <xref:System.Runtime.Serialization.DataContractSerializer> ve yayma için döner `XmlSerializable` bu durumda türleri. Kullanılmasını zorlamak istiyorsanız <xref:System.Xml.Serialization.XmlSerializer>, /serializer:XmlSerializer (kullanın XmlSerializer) komut seçeneği için Svcutil.exe aracını geçirebilirsiniz.  
   
-```  
+```csharp  
 // Create a client.  
 XmlSerializerCalculatorClient client = new  
                          XmlSerializerCalculatorClient();  

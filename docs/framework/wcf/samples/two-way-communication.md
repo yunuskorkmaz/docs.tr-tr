@@ -1,24 +1,26 @@
 ---
-title: "Çift Yönlü İletişim"
-ms.custom: 
+title: Çift Yönlü İletişim
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: fb64192d-b3ea-4e02-9fb3-46a508d26c60
-caps.latest.revision: "24"
+caps.latest.revision: 24
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 3ea6ea34e83f9c813062620c5029ea4b812cd777
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 9eb37e7e307bc9748113e5580ee96c8863d3ef89
+ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="two-way-communication"></a>Çift Yönlü İletişim
 Bu örnek üzerinde MSMQ hizmetteki iki yönlü kuyruğa alınan iletişim gerçekleştirme gösterir. Bu örnekte `netMsmqBinding` bağlama. Bu durumda, sıraya alınan iletileri alma hizmeti izlemek izin veren bir kendi kendini barındıran konsol uygulaması hizmetidir.  
@@ -33,33 +35,33 @@ Bu örnek üzerinde MSMQ hizmetteki iki yönlü kuyruğa alınan iletişim gerç
  Bu örnek 2 yönlü iletişimi kuyrukları kullanma gösterilmektedir. İstemci bir işlem kapsamı içinde sıradan satınalma siparişi gönderir. Hizmet siparişleri alır, sipariş işleme ve geri sırasını durumunu istemcisiyle bir işlem kapsamı içinde sırasından çağırır. Çift yönlü iletişimi kolaylaştırmak için istemci ve hizmet enqueue satınalma siparişi ve sipariş durumu sıralara kullanın.  
   
  Hizmet sözleşmesi `IOrderProcessor` queuing kullanımına uygun tek yönlü hizmet işlemleri tanımlar. Hizmet işlemini sipariş durumları göndermek için kullanılacak yanıt uç noktası içerir. Sipariş durumu istemciye göndermek için sıra URI'sini yanıt uç noktadır. Uygulama işlem sırası bu sözleşmenin uygular.  
-  
-```  
+
+```csharp
 [ServiceContract(Namespace="http://Microsoft.ServiceModel.Samples")]  
 public interface IOrderProcessor  
 {  
     [OperationContract(IsOneWay = true)]  
     void SubmitPurchaseOrder(PurchaseOrder po, string   
                                   reportOrderStatusTo);  
-}  
-```  
+}
+```
   
  Sipariş durumu gönderilecek yanıt sözleşmesi istemci tarafından belirtilir. İstemci, sipariş durumu sözleşme uygular. Hizmet, bu sözleşmenin oluşturulan proxy sipariş durumu istemciye göndermek için kullanır.  
-  
-```  
+
+```csharp
 [ServiceContract]  
 public interface IOrderStatus  
 {  
     [OperationContract(IsOneWay = true)]  
     void OrderStatus(string poNumber, string status);  
 }  
-```  
-  
+```
+
  Hizmet işlemini gönderilen satın alma siparişi işler. <xref:System.ServiceModel.OperationBehaviorAttribute> Kuyruk ve hizmet işlemi tamamlandıktan hareketlerinin otomatik tamamlama ileti almak için kullanılan bir işlemde otomatik kaydı belirtmek için hizmet işlemi uygulanır. `Orders` Sınıfı, sipariş işleme işlevselliği yalıtır. Bu durumda, satın alma siparişi bir sözlüğe ekler. Hizmet işlemi içinde kayıtlı işlem işlemlerinde kullanılabilir `Orders` sınıfı.  
   
  Sipariş durumlarını istemciye gönderilen satın alma siparişi işleme ek olarak hizmet işlemi yanıtlar.  
-  
-```  
+
+```csharp
 [OperationBehavior(TransactionScopeRequired = true, TransactionAutoComplete = true)]  
 public void SubmitPurchaseOrder(PurchaseOrder po, string reportOrderStatusTo)  
 {  
@@ -79,16 +81,16 @@ public void SubmitPurchaseOrder(PurchaseOrder po, string reportOrderStatusTo)
     //Close the client.  
     client.Close();  
 }  
-```  
-  
+```
+
  MSMQ kuyruk adı bir yapılandırma dosyasının appSettings bölümünde belirtilmiştir. Hizmeti için uç noktaya yapılandırma dosyası System.ServiceModel bölümünde tanımlanır.  
   
 > [!NOTE]
 >  MSMQ sırası ad ve uç nokta adresi biraz farklı adresleme yöntemini kullanın. MSMQ sırası adı yerel makine ve eğik çizgi ayırıcıları yolundaki bir nokta (.) kullanır. [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] Uç noktası adresi bir net.msmq belirtir: şeması, "localhost" için yerel makineyi ve eğik kendi yolunu kullanır. Uzak makinede barındırılan bir kuyruktan okumak için Değiştir "." ve "localhost" ile uzak makine adı.  
   
  Kendi kendini barındırılan hizmetidir. MSMQ taşıma kullanırken, sıranın kullanılan önceden oluşturulmuş olması gerekir. Bu, el ile veya kod aracılığıyla yapılabilir. Bu örnek, hizmet sıranın varlığını denetler ve, gerekirse oluşturur. Kuyruk adı yapılandırma dosyasından okunur. Temel adres tarafından kullanılan [ServiceModel meta veri yardımcı Programracı (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md) proxy hizmeti oluşturmak için.  
-  
-```  
+
+```csharp
 // Host the service within this EXE console application.  
 public static void Main()  
 {  
@@ -112,11 +114,11 @@ public static void Main()
         Console.ReadLine();  
     }  
 }  
-```  
-  
+```
+
  İstemci bir işlem oluşturur. Sıra ile iletişim, burada tüm iletileri başarılı veya başarısız atomik bir birim olarak değerlendirilmesi için neden işlem kapsamı içinde gerçekleşir.  
-  
-```  
+
+```csharp
 // Create a ServiceHost for the OrderStatus service type.  
 using (ServiceHost serviceHost = new ServiceHost(typeof(OrderStatusService)))  
 {  
@@ -152,11 +154,11 @@ using (ServiceHost serviceHost = new ServiceHost(typeof(OrderStatusService)))
     // Close the ServiceHost to shutdown the service.  
     serviceHost.Close();  
 }  
-```  
-  
+```
+
  İstemci kodu uygulayan `IOrderStatus` hizmetinden sipariş durumunu almak sözleşme. Bu durumda, sipariş durumu yazdırır.  
-  
-```  
+
+```csharp
 [ServiceBehavior]  
 public class OrderStatusService : IOrderStatus  
 {  
@@ -168,8 +170,8 @@ public class OrderStatusService : IOrderStatus
                                                            status);  
     }  
 }  
-```  
-  
+```
+
  Durum sırasını oluşturulan `Main` yöntemi. İstemci yapılandırması, aşağıdaki örnek yapılandırmada gösterildiği gibi sipariş durumu hizmeti barındırmak için sipariş durum hizmet yapılandırmasını içerir.  
   
 ```xml  
@@ -323,7 +325,7 @@ Status of order 124a1f69-3699-4b16-9bcc-43147a8756fc:Pending
   
 3.  Hizmeti bu örnek için bir bağlama oluşturur `OrderProcessorService`. Güvenlik modu ayarlamak için bağlama örneği sonra bir kod satırını ekleyin `None`.  
   
-    ```  
+    ```csharp
     NetMsmqBinding msmqCallbackBinding = new NetMsmqBinding();  
     msmqCallbackBinding.Security.Mode = NetMsmqSecurityMode.None;  
     ```  

@@ -20,17 +20,17 @@ ms.author: wpickett
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: 458b4c94d26b7bc083c5d31fcbccf05b42bba52e
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 1548f74cab4589690e49517cdf96144fb6515693
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="xaml-services"></a>XAML Hizmetleri
 Bu konu Hizmetleri .NET Framework XAML bilinen bir teknoloji kümesi özelliklerini açıklar. Açıklanan API'leri ve Hizmetleri çoğunluğu ile sunulan bir derleme System.Xaml derlemesindeki bulunur [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)] .NET core derlemeler kümesini. Hizmetleri içeren okuyucuları ve yazıcıları, şema sınıfları ve şema desteği oluşturucuları sınıfları, XAML dili iç desteği ve diğer XAML dil özellikleri öznitelik atanıyor.  
   
 ## <a name="about-this-documentation"></a>Bu belge hakkında  
- .NET Framework XAML Hizmetleri için kavramsal belgeler varsayar, XAML dili ve nasıl, belirli bir framework örneğin geçerli olabilecek önceki deneyim sahibi olduğunuzu [!INCLUDE[TLA#tla_winclient](../../../includes/tlasharptla-winclient-md.md)] veya [!INCLUDE[TLA#tla_workflow](../../../includes/tlasharptla-workflow-md.md)], veya belirli bir teknoloji alanı için özelliği Örnek derleme özelleştirme özelliklerini <xref:Microsoft.Build.Framework.XamlTypes>. Bu belge, bir işaretleme dili, XAML sözdizimi terminolojisi ya da diğer giriş malzeme XAML temelleri açıklamak denemez. Bunun yerine, bu belge etkinleştirilen .NET Framework XAML hizmetlerinde System.Xaml derleme Kitaplığı'nda özellikle kullanarak odaklanır. Bu API'ların XAML dil tümleştirmesi ve genişletilebilirlik senaryoları için durumdadır. Bunu aşağıdakilerden herhangi birini içerebilir:  
+ .NET Framework XAML Hizmetleri için kavramsal belgeler varsayar, XAML dili ve nasıl, belirli bir framework örneğin geçerli olabilecek önceki deneyim sahibi olduğunuzu [!INCLUDE[TLA#tla_winclient](../../../includes/tlasharptla-winclient-md.md)] veya Windows Workflow Foundation ya da belirli teknoloji özelliği alan, örneğin yapı özelleştirme özelliklerini <xref:Microsoft.Build.Framework.XamlTypes>. Bu belge, bir işaretleme dili, XAML sözdizimi terminolojisi ya da diğer giriş malzeme XAML temelleri açıklamak denemez. Bunun yerine, bu belge etkinleştirilen .NET Framework XAML hizmetlerinde System.Xaml derleme Kitaplığı'nda özellikle kullanarak odaklanır. Bu API'ların XAML dil tümleştirmesi ve genişletilebilirlik senaryoları için durumdadır. Bunu aşağıdakilerden herhangi birini içerebilir:  
   
 -   Temel XAML okuyucular veya (XAML düğümü akışı doğrudan işleme; kendi XAML okuyucu ya da XAML yazan türetme) XAML yazıcılarının yeteneklerini genişletmenin.  
   
@@ -49,7 +49,7 @@ Bu konu Hizmetleri .NET Framework XAML bilinen bir teknoloji kümesi özellikler
  XAML dili olarak giriş ortama arıyorsanız deneyebilecekleriniz [XAML genel bakış (WPF)](../../../docs/framework/wpf/advanced/xaml-overview-wpf.md). Bu konuda XAML yeni bir izleyici için her ikisini de ele alınmıştır [!INCLUDE[TLA#tla_winclient](../../../includes/tlasharptla-winclient-md.md)] ve ayrıca XAML biçimlendirme ve XAML dil özellikleri kullanılarak. Başka bir yararlı giriş malzeme belgedir [XAML dil belirtimi](http://go.microsoft.com/fwlink/?LinkId=114525).  
   
 ## <a name="net-framework-xaml-services-and-systemxaml-in-the-net-architecture"></a>.NET framework XAML Hizmetleri ve .NET mimarisinde System.Xaml  
- Önceki sürümlerinde [!INCLUDE[TLA#tla_netframewk](../../../includes/tlasharptla-netframewk-md.md)], XAML dili özellikleri uygulanan üzerinde oluşturulan çerçeveleri tarafından desteği [!INCLUDE[TLA#tla_netframewk](../../../includes/tlasharptla-netframewk-md.md)] ([!INCLUDE[TLA#tla_winclient](../../../includes/tlasharptla-winclient-md.md)], [!INCLUDE[TLA#tla_workflow](../../../includes/tlasharptla-workflow-md.md)] ve [!INCLUDE[vsindigo](../../../includes/vsindigo-md.md)]) ve bu nedenle davranışını ve bağlı olarak kullanılan API değişmesi kullanmakta olduğunuz belirli çerçevesi. Bu XAML dahil Ayrıştırıcı ve onun nesnesinden grafik oluşturma mekanizması, XAML dili yapı, serileştirme desteği ve benzeri.  
+ Önceki sürümlerinde [!INCLUDE[TLA#tla_netframewk](../../../includes/tlasharptla-netframewk-md.md)], XAML dili özellikleri uygulanan üzerinde oluşturulan çerçeveleri tarafından desteği [!INCLUDE[TLA#tla_netframewk](../../../includes/tlasharptla-netframewk-md.md)] ([!INCLUDE[TLA#tla_winclient](../../../includes/tlasharptla-winclient-md.md)], Windows Workflow Foundation ve [!INCLUDE[vsindigo](../../../includes/vsindigo-md.md)]) ve bu nedenle davranışını ve kullanılan API değişmesi kullanmakta olduğunuz bağlı olarak belirli hangi framework. Bu XAML dahil Ayrıştırıcı ve onun nesnesinden grafik oluşturma mekanizması, XAML dili yapı, serileştirme desteği ve benzeri.  
   
  İçinde [!INCLUDE[net_v40_long](../../../includes/net-v40-long-md.md)], .NET Framework XAML hizmetlerinde ve System.Xaml derleme XAML dil özellikleri desteklemek için gerekenleri çoğunu tanımlayın. XAML okuyucuları ve XAML yazıcıları için temel sınıflar içerir. Çerçeveye özel XAML uygulamaları hiçbirinde mevcut olmadığından .NET Framework XAML hizmetlerinde eklenen en önemli XAML tür sistem temsili özelliğidir. Tür sistemi gösterimi XAML çerçeveleri belirli özelliklerini bağımlılıkları bırakmadan XAML yeteneklerini merkezleri nesne yönelimli bir şekilde gösterir.  
   
@@ -68,11 +68,11 @@ Bu konu Hizmetleri .NET Framework XAML bilinen bir teknoloji kümesi özellikler
   
 -   UTF kodlu XML biçiminde bir XAML gösterimi ile başlar ve bir metin dosyası olarak kaydedilir.  
   
--   Bu XAML içine yük <xref:System.Xaml.XamlXmlReader>. <xref:System.Xaml.XamlXmlReader>olan bir <xref:System.Xaml.XamlReader> bir alt kümesi.  
+-   Bu XAML içine yük <xref:System.Xaml.XamlXmlReader>. <xref:System.Xaml.XamlXmlReader> olan bir <xref:System.Xaml.XamlReader> bir alt kümesi.  
   
 -   XAML düğümü akışı sonucudur. XAML düğümü akışı kullanmanın tek tek düğümlerin erişebildiği <xref:System.Xaml.XamlXmlReader>  /  <xref:System.Xaml.XamlReader> API. En tipik burada "geçerli bir kayıt" kullanarak her düğüm XAML düğüm akış işleme, ilerlemek için işlemdir benzetimini.  
   
--   Sonuçta elde edilen düğümler için XAML düğümü akışı geçirmek bir <xref:System.Xaml.XamlObjectWriter> API. <xref:System.Xaml.XamlObjectWriter>olan bir <xref:System.Xaml.XamlWriter> bir alt kümesi.  
+-   Sonuçta elde edilen düğümler için XAML düğümü akışı geçirmek bir <xref:System.Xaml.XamlObjectWriter> API. <xref:System.Xaml.XamlObjectWriter> olan bir <xref:System.Xaml.XamlWriter> bir alt kümesi.  
   
 -   <xref:System.Xaml.XamlObjectWriter> Kaynak XAML düğümü akışı ilerlemeyi uygun her seferinde bir nesne bir nesne grafiğinin yazar. Bu bir XAML şema içeriği ve yedekleme türü sisteminin ve framework türlerini ve derlemeleri erişebileceği uygulaması Yardımı ile gerçekleştirilir.  
   
@@ -82,11 +82,11 @@ Bu konu Hizmetleri .NET Framework XAML bilinen bir teknoloji kümesi özellikler
   
 -   Tüm uygulama çalıştırma zamanı, kullanıcı Arabirimi içeriğin ve çalışma zamanı durumunu ya da genel bir uygulamanın çalışma zamanında nesne temsili daha küçük bir parçasını nesne grafiğinin başlayın.  
   
--   Bir uygulama kökü veya belge kökü gibi bir mantıksal başlangıç nesnesinden nesnelerine yük <xref:System.Xaml.XamlObjectReader>. <xref:System.Xaml.XamlObjectReader>olan bir <xref:System.Xaml.XamlReader> bir alt kümesi.  
+-   Bir uygulama kökü veya belge kökü gibi bir mantıksal başlangıç nesnesinden nesnelerine yük <xref:System.Xaml.XamlObjectReader>. <xref:System.Xaml.XamlObjectReader> olan bir <xref:System.Xaml.XamlReader> bir alt kümesi.  
   
 -   XAML düğümü akışı sonucudur. XAML düğümü akışı kullanmanın tek tek düğümlerin erişebildiği <xref:System.Xaml.XamlObjectReader> ve <xref:System.Xaml.XamlReader> API. En tipik burada "geçerli bir kayıt" kullanarak her düğüm XAML düğüm akış işleme, ilerlemek için işlemdir benzetimini.  
   
--   Sonuçta elde edilen düğümler için XAML düğümü akışı geçirmek bir <xref:System.Xaml.XamlXmlWriter> API. <xref:System.Xaml.XamlXmlWriter>olan bir <xref:System.Xaml.XamlWriter> bir alt kümesi.  
+-   Sonuçta elde edilen düğümler için XAML düğümü akışı geçirmek bir <xref:System.Xaml.XamlXmlWriter> API. <xref:System.Xaml.XamlXmlWriter> olan bir <xref:System.Xaml.XamlWriter> bir alt kümesi.  
   
 -   <xref:System.Xaml.XamlXmlWriter> Kodlaması bir XML UTF XAML yazar. Bir akış olarak ya da diğer formlardaki bir metin dosyası olarak kaydedebilirsiniz.  
   
@@ -101,16 +101,16 @@ Bu konu Hizmetleri .NET Framework XAML bilinen bir teknoloji kümesi özellikler
   
 -   Çeşitli imzalarını <xref:System.Xaml.XamlServices.Save%2A> bir nesne grafiğinin kaydedin ve bir akış olarak bir çıkış üretemeyecek dosyası veya <xref:System.Xml.XmlWriter> / <xref:System.IO.TextWriter> örneği.  
   
--   <xref:System.Xaml.XamlServices.Transform%2A>bir yükleme yolu ve bir Kaydet bağlanmasıyla XAML dönüştürür yolu tek bir işlem olarak. Farklı şema bağlamı veya farklı yedekleme tür sistemi için kullanılabilecek <xref:System.Xaml.XamlReader> ve <xref:System.Xaml.XamlWriter>, olduğu ne elde edilen XAML nasıl dönüştürülür etkiler.  
+-   <xref:System.Xaml.XamlServices.Transform%2A> bir yükleme yolu ve bir Kaydet bağlanmasıyla XAML dönüştürür yolu tek bir işlem olarak. Farklı şema bağlamı veya farklı yedekleme tür sistemi için kullanılabilecek <xref:System.Xaml.XamlReader> ve <xref:System.Xaml.XamlWriter>, olduğu ne elde edilen XAML nasıl dönüştürülür etkiler.  
   
  Nasıl kullanılacağı hakkında daha fazla bilgi için <xref:System.Xaml.XamlServices>, bkz: [XAMLServices sınıfı ve temel XAML okuma veya yazma](../../../docs/framework/xaml-services/xamlservices-class-and-basic-xaml-reading-or-writing.md).  
   
 ## <a name="xaml-type-system"></a>XAML tür sistemi  
  XAML tür sistemi tek bir XAML düğüm akış düğümünü verilen ile çalışmak için gerekli API'ler sağlar.  
   
- <xref:System.Xaml.XamlType>bir nesnenin - ne başlangıç nesne düğümü ve son nesne düğümü arasında işliyor gösterimidir.  
+ <xref:System.Xaml.XamlType> bir nesnenin - ne başlangıç nesne düğümü ve son nesne düğümü arasında işliyor gösterimidir.  
   
- <xref:System.Xaml.XamlMember>bir nesne - üyesi için ne başlangıç üyesi düğümü ve son üye düğümü arasında işliyor gösterimidir.  
+ <xref:System.Xaml.XamlMember> bir nesne - üyesi için ne başlangıç üyesi düğümü ve son üye düğümü arasında işliyor gösterimidir.  
   
  API'leri gibi <xref:System.Xaml.XamlType.GetAllMembers%2A> ve <xref:System.Xaml.XamlType.GetMember%2A> ve <xref:System.Xaml.XamlMember.DeclaringType%2A> arasındaki ilişkileri rapor bir <xref:System.Xaml.XamlType> ve <xref:System.Xaml.XamlMember>.  
   

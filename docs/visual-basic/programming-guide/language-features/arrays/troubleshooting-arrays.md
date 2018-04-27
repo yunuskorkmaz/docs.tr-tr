@@ -1,11 +1,12 @@
 ---
-title: "Dizilerle İlgili Sorun Giderme (Visual Basic)"
-ms.custom: 
+title: Dizilerle İlgili Sorun Giderme (Visual Basic)
+ms.custom: ''
 ms.date: 07/20/2015
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- devlang-visual-basic
 ms.topic: article
 helpviewer_keywords:
 - troubleshooting arrays
@@ -15,14 +16,14 @@ helpviewer_keywords:
 - arrays [Visual Basic], declaration errors
 - arrays [Visual Basic], troubleshooting
 ms.assetid: f4e971c7-c0a4-4ed7-a77a-8d71039f266f
-caps.latest.revision: "17"
+caps.latest.revision: 17
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: 0417ae8d37642a65b14cc81ae9dcf3a3c32d63ce
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 9e5c00c2b531dd019a207b16ffcac95424bfe450
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="troubleshooting-arrays-visual-basic"></a>Dizilerle İlgili Sorun Giderme (Visual Basic)
 Bu sayfada dizilerle çalışırken ortaya çıkabilecek bazı yaygın sorunlar listelenir.  
@@ -60,10 +61,10 @@ Bu sayfada dizilerle çalışırken ortaya çıkabilecek bazı yaygın sorunlar 
  Bir dizi başlatma işleminin bir üst sınır alt sınır her boyut atamaktadır. Dizinin bir öğeye her erişim geçerli dizin ya da her boyut için indisi belirtmeniz gerekir. Bir dizin, alt sınır altında veya onun üst sınırının üzerinde ise bir <xref:System.IndexOutOfRangeException> özel durum sonuçları. Çalışma zamanında hata oluşmaz derleyici böyle bir hata algılayamaz.  
   
 ### <a name="determining-bounds"></a>Sınır belirleme  
- Başka bir bileşen kodunuzu bir dizi geçerse, örneğin bir yordam bağımsız değişken olarak, bu dizinin boyutu veya boyutlar uzunlukları bilmezsiniz. Herhangi bir öğe erişmeye çalışmadan önce her zaman bir dizinin her boyutu üst sınırı belirlemeniz gerekir. Dizi bazı yollarla dışında oluşturulup oluşturulmadığını bir [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] `New` yan tümcesi, alt sınırı 0 dışında bir şey olabilir ve o alt sınır de belirlemek en güvenlisidir.  
+ Başka bir bileşen kodunuzu bir dizi geçerse, örneğin bir yordam bağımsız değişken olarak, bu dizinin boyutu veya boyutlar uzunlukları bilmezsiniz. Herhangi bir öğe erişmeye çalışmadan önce her zaman bir dizinin her boyutu üst sınırı belirlemeniz gerekir. Dizi bir Visual Basic dışındaki bazı bir yöntemle oluşturduysanız, `New` yan tümcesi, alt sınırı 0 dışında bir şey olabilir ve o alt sınır de belirlemek en güvenlisidir.  
   
 ### <a name="specifying-the-dimension"></a>Boyut belirtme  
- Çok boyutlu bir diziye sınırlarına belirlerken, boyutun nasıl belirttiğiniz dikkatli olun. `dimension` Parametrelerinin <xref:System.Array.GetLowerBound%2A> ve <xref:System.Array.GetUpperBound%2A> yöntemler 0 tabanlı, çalışırken `Rank` parametrelerinin [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] <xref:Microsoft.VisualBasic.Information.LBound%2A> ve <xref:Microsoft.VisualBasic.Information.UBound%2A> işlevleri 1 tabanlı.  
+ Çok boyutlu bir diziye sınırlarına belirlerken, boyutun nasıl belirttiğiniz dikkatli olun. `dimension` Parametrelerinin <xref:System.Array.GetLowerBound%2A> ve <xref:System.Array.GetUpperBound%2A> yöntemler 0 tabanlı, çalışırken `Rank` Visual Basic parametrelerinin <xref:Microsoft.VisualBasic.Information.LBound%2A> ve <xref:Microsoft.VisualBasic.Information.UBound%2A> işlevleri 1 tabanlı.  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
  [Diziler](../../../../visual-basic/programming-guide/language-features/arrays/index.md)  

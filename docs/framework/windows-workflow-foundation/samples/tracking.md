@@ -1,26 +1,27 @@
 ---
-title: "İzleme"
-ms.custom: 
+title: İzleme
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: afdcd9bd-b462-4b2a-aac7-bebf9c80be81
-caps.latest.revision: "4"
+caps.latest.revision: 4
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 79ec9c423f86a0a736ed1b99d8ddf0f5a38160c0
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 6bb7d918fcc3b0948d5902764d8351a8f86b0389
+ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="tracking"></a>İzleme
-Bu bölümde iş akışı içinde izleme gösteren örnekleri içeren [!INCLUDE[wf](../../../../includes/wf-md.md)].  
+Bu bölümde iş akışı Windows Workflow Foundation (WF) izleme gösteren örnekleri içerir.  
   
 ## <a name="in-this-section"></a>Bu Bölümde  
  [Özel İzleme](../../../../docs/framework/windows-workflow-foundation/samples/custom-tracking.md)  

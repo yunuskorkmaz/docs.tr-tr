@@ -1,28 +1,30 @@
 ---
-title: "Otomatik Test İçin UI Otomasyonunu Kullanma"
-ms.custom: 
+title: Otomatik Test İçin UI Otomasyonunu Kullanma
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-bcl
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-bcl
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - automated testing
 - testing, UI Automation
 - UI Automation, automated testing
 ms.assetid: 3a0435c0-a791-4ad7-ba92-a4c1d1231fde
-caps.latest.revision: "26"
+caps.latest.revision: 26
 author: Xansky
 ms.author: mhopkins
 manager: markl
-ms.workload: dotnet
-ms.openlocfilehash: 128af9a015d25985b7075f5b670fea36c6773267
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 6539829feacf8c9a5c9c1339df299a21ac5fe64f
+ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="using-ui-automation-for-automated-testing"></a>Otomatik Test İçin UI Otomasyonunu Kullanma
 > [!NOTE]
@@ -30,9 +32,9 @@ ms.lasthandoff: 12/22/2017
   
  Bu genel bakış açıklanmaktadır nasıl [!INCLUDE[TLA#tla_uiautomation](../../../includes/tlasharptla-uiautomation-md.md)] programlı erişim için bir çerçeve olarak yararlı de senaryolarınızı test otomatikleştirilebilir.  
   
- [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]Tüm sağlayan bir birleşik nesne modeli sağlar [!INCLUDE[TLA#tla_ui](../../../includes/tlasharptla-ui-md.md)] çerçeveleri karmaşık ve zengin işlevleri erişilebilir ve kolayca otomatik bir şekilde kullanıma sunma.  
+ [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] Tüm sağlayan bir birleşik nesne modeli sağlar [!INCLUDE[TLA#tla_ui](../../../includes/tlasharptla-ui-md.md)] çerçeveleri karmaşık ve zengin işlevleri erişilebilir ve kolayca otomatik bir şekilde kullanıma sunma.  
   
- [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]bir ardılı olarak geliştirilmiştir [!INCLUDE[TLA#tla_aa](../../../includes/tlasharptla-aa-md.md)]. [!INCLUDE[TLA2#tla_aa](../../../includes/tla2sharptla-aa-md.md)]Varolan bir çerçeve denetimleri ve uygulamaları, erişilebilir yapmak için bir çözüm sağlamak için tasarlanmıştır. [!INCLUDE[TLA2#tla_aa](../../../includes/tla2sharptla-aa-md.md)]Bu rol erişilebilirlik ve Otomasyon çok benzer gereksinimlerini nedeniyle içine gelişen olsa bile test Otomasyonu aklınızda ile tasarlanmamıştır. [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)], daha gelişmiş çözümleri için erişilebilirlik sağlamanın yanı sıra, özellikle de otomatikleştirilmiş test için sağlam işlevselliği sağlamak için tasarlanmıştır. Örneğin, [!INCLUDE[TLA2#tla_aa](../../../includes/tla2sharptla-aa-md.md)] hem kullanıcı Arabirimi hakkında bilgi göstermek ve; ürünleri için gerekli bilgileri toplamak için tek bir arabirim kullanır [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] iki model ayırır.  
+ [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] bir ardılı olarak geliştirilmiştir [!INCLUDE[TLA#tla_aa](../../../includes/tlasharptla-aa-md.md)]. [!INCLUDE[TLA2#tla_aa](../../../includes/tla2sharptla-aa-md.md)] Varolan bir çerçeve denetimleri ve uygulamaları, erişilebilir yapmak için bir çözüm sağlamak için tasarlanmıştır. [!INCLUDE[TLA2#tla_aa](../../../includes/tla2sharptla-aa-md.md)] Bu rol erişilebilirlik ve Otomasyon çok benzer gereksinimlerini nedeniyle içine gelişen olsa bile test Otomasyonu aklınızda ile tasarlanmamıştır. [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)], daha gelişmiş çözümleri için erişilebilirlik sağlamanın yanı sıra, özellikle de otomatikleştirilmiş test için sağlam işlevselliği sağlamak için tasarlanmıştır. Örneğin, [!INCLUDE[TLA2#tla_aa](../../../includes/tla2sharptla-aa-md.md)] hem kullanıcı Arabirimi hakkında bilgi göstermek ve; ürünleri için gerekli bilgileri toplamak için tek bir arabirim kullanır [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] iki model ayırır.  
   
  Bir sağlayıcı ve istemci uygulamak için gereken [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] otomatikleştirilmiş test aracı olarak kullanışlı olması için. UI Otomasyon sağlayıcıları olan Microsoft Word, Excel gibi uygulamalar ve diğer üçüncü taraf uygulamalar veya denetimleri temel alarak [!INCLUDE[TLA#tla_win](../../../includes/tlasharptla-win-md.md)] işletim sistemi. UI Otomasyon istemcileri otomatikleştirilmiş test komut dosyaları ve yardımcı teknoloji uygulamalar içerir.  
   
@@ -50,7 +52,7 @@ ms.lasthandoff: 12/22/2017
   
 <a name="Implementing_UI_Automation"></a>   
 ### <a name="implementing-ui-automation"></a>UI Otomasyonu uygulama  
- Tarafından sağlanan birleşik modeli olmadan daha önce belirtildiği gibi [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)], test araçları ve geliştiricilerin özellikleri ve bu framework denetimlerinde davranışlarını kullanıma sunmak için framework özgü bilgileri bilmesi için gereklidir. Olabilir bu yana birçok farklı kullanıcı Arabirimi çerçevelerini tek dilediğiniz zaman içinde mevcut [!INCLUDE[TLA2#tla_win](../../../includes/tla2sharptla-win-md.md)] dahil olmak üzere işletim sistemlerini [!INCLUDE[TLA2#tla_win32](../../../includes/tla2sharptla-win32-md.md)], [!INCLUDE[TLA#tla_winforms](../../../includes/tlasharptla-winforms-md.md)], ve [!INCLUDE[TLA#tla_wpf](../../../includes/tlasharptla-wpf-md.md)], göründüğü denetimleri ile birden çok uygulama test etmek için zorlu bir görev olabilir benzer. Örneğin, aşağıdaki tabloda bir düğme denetimi ile ilişkili adı (veya metin) almak için gereken çerçeveye özel özellik adları özetler ve tek eşdeğerini gösterir [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] özelliği.  
+ Tarafından sağlanan birleşik modeli olmadan daha önce belirtildiği gibi [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)], test araçları ve geliştiricilerin özellikleri ve bu framework denetimlerinde davranışlarını kullanıma sunmak için framework özgü bilgileri bilmesi için gereklidir. Birçok farklı kullanıcı Arabirimi çerçevelerini tek herhangi bir zamanda Windows işletim sistemleri içinde mevcut olabilir beri dahil olmak üzere [!INCLUDE[TLA2#tla_win32](../../../includes/tla2sharptla-win32-md.md)], [!INCLUDE[TLA#tla_winforms](../../../includes/tlasharptla-winforms-md.md)], ve [!INCLUDE[TLA#tla_wpf](../../../includes/tlasharptla-wpf-md.md)], benzerdir denetimleri ile birden çok uygulama test etmek için zorlu bir görev olabilir . Örneğin, aşağıdaki tabloda bir düğme denetimi ile ilişkili adı (veya metin) almak için gereken çerçeveye özel özellik adları özetler ve tek eşdeğerini gösterir [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] özelliği.  
   
 |UI Otomasyon denetim türü|UI çerçevesi|Framework belirli özelliği|UI Otomasyon özelliği|  
 |--------------------------------|------------------|---------------------------------|----------------------------|  
@@ -70,7 +72,7 @@ ms.lasthandoff: 12/22/2017
   
 <a name="Programmatic_Access"></a>   
 ### <a name="programmatic-access"></a>Programlı erişim  
- Programlı erişim kodu, tüm etkileşim ve geleneksel fare ve klavye girdisi tarafından kullanıma sunulan deneyimi aracılığıyla taklit olanağı sağlar. [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]beş bileşenleri aracılığıyla programlı erişim sağlar:  
+ Programlı erişim kodu, tüm etkileşim ve geleneksel fare ve klavye girdisi tarafından kullanıma sunulan deneyimi aracılığıyla taklit olanağı sağlar. [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] beş bileşenleri aracılığıyla programlı erişim sağlar:  
   
 -   [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] Ağaç yapısını gezinmeyi kolaylaştırır [!INCLUDE[TLA2#tla_ui](../../../includes/tla2sharptla-ui-md.md)]. Ağaç hWnd'ın koleksiyonundan yerleşik olarak bulunur. Daha fazla bilgi için bkz: [UI Otomasyon ağacına genel bakış](../../../docs/framework/ui-automation/ui-automation-tree-overview.md)  
   
@@ -87,16 +89,16 @@ ms.lasthandoff: 12/22/2017
  Benzersiz şekilde tanımlamak ve daha sonra içinde herhangi bir denetimi bulun olanağı [!INCLUDE[TLA2#tla_ui](../../../includes/tla2sharptla-ui-md.md)] üzerinde çalışması otomatikleştirilmiş test uygulamaları için temel sağlayan [!INCLUDE[TLA2#tla_ui](../../../includes/tla2sharptla-ui-md.md)]. Birkaç yolu vardır [!INCLUDE[TLA#tla_uiautomation](../../../includes/tlasharptla-uiautomation-md.md)] istemciler ve bu konuda yardımcı sağlayıcıları tarafından kullanılan özellik.  
   
 #### <a name="automationid"></a>Automationıd  
- Eşdüzey bir Otomasyon öğeyi benzersiz olarak tanımlar. <xref:System.Windows.Automation.AutomationElement.AutomationIdProperty>, bir özellik gibi yerelleştirilmiş değil <xref:System.Windows.Automation.AutomationElement.NameProperty> , genellikle yerelleştirilmiş bir ürün birden fazla dilde sevk. Bkz: [Automationıd özelliğini kullanma](../../../docs/framework/ui-automation/use-the-automationid-property.md).  
+ Eşdüzey bir Otomasyon öğeyi benzersiz olarak tanımlar. <xref:System.Windows.Automation.AutomationElement.AutomationIdProperty> , bir özellik gibi yerelleştirilmiş değil <xref:System.Windows.Automation.AutomationElement.NameProperty> , genellikle yerelleştirilmiş bir ürün birden fazla dilde sevk. Bkz: [Automationıd özelliğini kullanma](../../../docs/framework/ui-automation/use-the-automationid-property.md).  
   
 > [!NOTE]
->  <xref:System.Windows.Automation.AutomationElement.AutomationIdProperty>Otomasyon ağacı genelinde benzersiz bir kimlik garanti etmez. Örneğin, bir uygulama olan, buna karşılık, birden çok alt menü öğesi birden çok üst düzey menü öğesi ile bir menü denetimi içerebilir. Bu ikincil menü öğeleri, "Item1, 2 öğesi, Item3, vb." gibi genel bir şema tarafından tanımlanan yinelenen tanımlayıcıları çocuklar için üst düzey menü öğeleri arasında izin verme.  
+>  <xref:System.Windows.Automation.AutomationElement.AutomationIdProperty> Otomasyon ağacı genelinde benzersiz bir kimlik garanti etmez. Örneğin, bir uygulama olan, buna karşılık, birden çok alt menü öğesi birden çok üst düzey menü öğesi ile bir menü denetimi içerebilir. Bu ikincil menü öğeleri, "Item1, 2 öğesi, Item3, vb." gibi genel bir şema tarafından tanımlanan yinelenen tanımlayıcıları çocuklar için üst düzey menü öğeleri arasında izin verme.  
   
 #### <a name="controltype"></a>ControlType  
  Bir Otomasyon öğesi tarafından temsil edilen denetim türünü tanımlar. Önemli bilgileri denetim türü bilgilerini çıkarsanabileceği. Bkz: [UI Otomasyon denetim türleri genel bakış](../../../docs/framework/ui-automation/ui-automation-control-types-overview.md).  
   
 #### <a name="nameproperty"></a>NameProperty  
- Bu tanımlayan veya bir denetim açıklayan bir metin dizesidir. <xref:System.Windows.Automation.AutomationElement.NameProperty>yerelleştirilmiş olabilir beri dikkatli kullanılmalıdır. Bkz: [UI Otomasyon özelliklerine genel bakış](../../../docs/framework/ui-automation/ui-automation-properties-overview.md).  
+ Bu tanımlayan veya bir denetim açıklayan bir metin dizesidir. <xref:System.Windows.Automation.AutomationElement.NameProperty> yerelleştirilmiş olabilir beri dikkatli kullanılmalıdır. Bkz: [UI Otomasyon özelliklerine genel bakış](../../../docs/framework/ui-automation/ui-automation-properties-overview.md).  
   
 <a name="Steps_Required_To_Automate_the_UI_in_a_Test_Application"></a>   
 ### <a name="implementing-ui-automation-in-a-test-application"></a>UI Otomasyonu Test uygulamada uygulama  

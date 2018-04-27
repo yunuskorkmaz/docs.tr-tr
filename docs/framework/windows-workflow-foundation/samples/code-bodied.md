@@ -1,23 +1,24 @@
 ---
 title: Kod Bodied
-ms.custom: 
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 5bfb2d95-9092-4551-9c59-bd8f0a37225e
-caps.latest.revision: "3"
+caps.latest.revision: 3
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 1e9c0cecbf398fb024bda672cf9085e9c779d620
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 1a07ef581459585f0418cdd24660b8064d0f51b0
+ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="code-bodied"></a>Kod Bodied
 Bu bölüm bildirimli olarak kod içinde oluşturulan özel etkinlik örnekleri içerir.  
@@ -39,7 +40,7 @@ Bu bölüm bildirimli olarak kod içinde oluşturulan özel etkinlik örnekleri 
  Bu örnek, bir özel geliştirmek gösterilmiştir <xref:System.Activities.CodeActivity> kullanan <xref:System.Activities.AsyncCodeActivityContext> iş akışı dışında zaman uyumsuz olarak gerçekleştirilecek. 
   
  [Merhaba Dünya Özel Etkinliği](../../../../docs/framework/windows-workflow-foundation/samples/hello-world-custom-activity.md)  
- Bu örnek birkaç anahtar özelliklerini gösterir [!INCLUDE[wf](../../../../includes/wf-md.md)], basit bir özel etkinlik oluşturmak nasıl dahil olmak üzere.  
+ Birkaç temel özellikleri, Windows Workflow Foundation (basit bir özel etkinlik oluşturmak nasıl dahil olmak üzere WF), bu örnek gösterilmektedir.  
   
  [Dinamik Bağımsız Değişkenler](../../../../docs/framework/windows-workflow-foundation/samples/dynamic-arguments.md)  
  Bu örnek, bağımsız değişkenler etkinlik Yazar yerine etkinlik tüketici tarafından tanımlanan bir etkinlik uygulayan gösterilmiştir.

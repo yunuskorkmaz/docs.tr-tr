@@ -1,28 +1,28 @@
 ---
-title: "WS Güvenilir Oturum"
-ms.custom: 
+title: WS Güvenilir Oturum
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - dotnet-clr
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - Reliable session
 ms.assetid: 86e914f2-060b-432b-bd17-333695317745
-caps.latest.revision: 
+caps.latest.revision: 30
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: c07130715b0416e7a8603b46a1c39c2f22dd7d2e
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 8d7b28968a77f03a622c67acdb58e239593199a2
+ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="ws-reliable-session"></a>WS Güvenilir Oturum
 Bu örnek güvenilir oturumlar kullanımını göstermektedir. Güvenilir oturumlar güvenilir Mesajlaşma ve oturumlar için destek sağlar. Güvenilir Mesajlaşma iletişim başarısızlığı yeniden deneme ve teslim Güvenceleri gibi iletilerin sıralı varış belirtilmesine izin verir. Oturum durumu çağrıları arasında istemcileri için korur. Örnek istemci durumunu korumak için oturumları uygular ve sıralı teslim Güvenceleri belirtir.  
@@ -65,13 +65,13 @@ Bu örnek güvenilir oturumlar kullanımını göstermektedir. Güvenilir oturum
 ```  
   
  Hizmet uygulaması sınıfı uygulayan <xref:System.ServiceModel.InstanceContextMode.PerSession> örneklemesini aşağıdaki örnek kodda gösterildiği gibi her bir istemci için ayrı sınıf örneğinin korumak için.  
-  
-```  
+
+```csharp
 [ServiceBehavior(InstanceContextMode=InstanceContextMode.PerSession)] public class CalculatorService : ICalculator  
 {  
     ...  
 }  
-```  
+```
   
  Örneği çalıştırdığınızda, işlem isteklerini ve yanıtlarını istemci konsol penceresinde görüntülenir. İstemcisi penceresinde istemciyi aşağı kapatmak için ENTER tuşuna basın.  
   

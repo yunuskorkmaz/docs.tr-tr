@@ -14,11 +14,11 @@ ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: 2d7377d843e4ab8bd583e135dcdfd2cbfca67b8d
-ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
+ms.openlocfilehash: 8fa5a9e4287bcbcb490754b84a8b5060d321f779
+ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="durable-delay-in-xamlx"></a>XAMLX dayanıklı gecikmesi
 Bu örnek, sağlam bir aygıt için iş akışı sırasında gecikme devam ederse gecikme dayanıklı bir gecikme kullanımı gösterilmiştir.  
@@ -37,7 +37,7 @@ Bu örnek, sağlam bir aygıt için iş akışı sırasında gecikme devam eders
   
  Visual Studio'da barındırılan bir iş akışı hizmeti .xamlx dosyasıdır. Visual Studio, iş akışını bir iş akışı hizmeti ana kullanan Cassini kullanır.  
   
- İş akışı barındırma ek olarak, iş akışı hizmeti ana bilgisayarı iş akışı örnekleri yükleme ve bunları yüklemeyi kaldırma yönetir. Örneği başlatmak için [!INCLUDE[wf](../../../../includes/wf-md.md)] tanımı (iş akışı hizmeti ana bilgisayar üzerinde) ayarlamak için bir ileti gönderen istemci <xref:System.ServiceModel.Activities.Receive> etkinliği iş akışı. Bu <xref:System.ServiceModel.Activities.Receive> sahip kendi <xref:System.ServiceModel.Activities.Receive.CanCreateInstance%2A> özelliğini `true`, iletiyi aldıktan sonra iş akışının yeni bir örneğini oluşturmak üzere etkinleştirme.  
+ İş akışı barındırma ek olarak, iş akışı hizmeti ana bilgisayarı iş akışı örnekleri yükleme ve bunları yüklemeyi kaldırma yönetir. Windows Workflow Foundation (WF) tanımı (iş akışı hizmeti ana bilgisayarı) örneği başlatmak için bir ileti gönderen istemci ayarlamak <xref:System.ServiceModel.Activities.Receive> etkinliği iş akışı. Bu <xref:System.ServiceModel.Activities.Receive> sahip kendi <xref:System.ServiceModel.Activities.Receive.CanCreateInstance%2A> özelliğini `true`, iletiyi aldıktan sonra iş akışının yeni bir örneğini oluşturmak üzere etkinleştirme.  
   
  Başlatma sırasında bir kaldırma örneği davranış altında kalıcı deponun (veritabanı) örneğini kaldırın iş akışı hizmeti ana bilgisayarı belirtir yapılandırma dosyasının eklenir. Bu örnek için (gecikme tetiklendiğinde) iş akışı boşta göründükten hemen sonra örneğini kaldırır.  
   

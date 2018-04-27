@@ -1,12 +1,13 @@
 ---
-title: "İzlenecek yol: Kısmi Güven Senaryolarında Kod Yayma"
-ms.custom: 
+title: 'İzlenecek yol: Kısmi Güven Senaryolarında Kod Yayma'
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - csharp
@@ -21,16 +22,17 @@ helpviewer_keywords:
 - reflection emit, dynamic methods
 - dynamic methods
 ms.assetid: c45be261-2a9d-4c4e-9bd6-27f0931b7d25
-caps.latest.revision: "15"
+caps.latest.revision: 15
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 835483d740b60f98c3170a590edbfbfbe970d783
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: cbdbf8a391235fc03140e032b35eb674a74dc88a
+ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="walkthrough-emitting-code-in-partial-trust-scenarios"></a>İzlenecek yol: Kısmi Güven Senaryolarında Kod Yayma
 Yansıma yayma aynı API tam veya kısmi güvende kümesini kullanır, ancak bazı özellikler kısmen güvenilen kod özel izinleri gerektirir. Ayrıca, yansıma yayma ile kısmi güven ve güvenlik saydam derlemeleri tarafından kullanılmak üzere tasarlanmış bir özelliği anonim barındırılan dinamik yöntemler vardır.  
@@ -144,7 +146,7 @@ Yansıma yayma aynı API tam veya kısmi güvende kümesini kullanır, ancak baz
      <xref:System.AppDomain.CreateInstanceAndUnwrap%2A> Yöntemi hedef uygulama etki alanı nesnesi oluşturur ve özellikleri ve yöntemleri nesnenin çağırmak için kullanılan bir proxy döndürür.  
   
     > [!NOTE]
-    >  Bu kodda kullanırsanız [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)], ad alanı içerecek şekilde sınıf adını değiştirmeniz gerekir. Varsayılan olarak, ad alanı, projeye adıdır. Örneğin, "PartialTrust" projesiyse sınıf adı "PartialTrust.Worker" olmalıdır.  
+    >  Visual Studio'da bu kodu kullanırsanız, ad alanı içerecek şekilde sınıf adını değiştirmeniz gerekir. Varsayılan olarak, ad alanı, projeye adıdır. Örneğin, "PartialTrust" projesiyse sınıf adı "PartialTrust.Worker" olmalıdır.  
   
 6.  Çağırmak için kodu ekleyin `SimpleEmitDemo` yöntemi. Uygulama etki alanı sınırından çağrı sıralanmış ve kod korumalı uygulama etki alanında yürütülür.  
   
@@ -178,7 +180,7 @@ Yansıma yayma aynı API tam veya kısmi güvende kümesini kullanır, ancak baz
      [!code-csharp[HowToEmitCodeInPartialTrust#16](../../../samples/snippets/csharp/VS_Snippets_CLR/HowToEmitCodeInPartialTrust/cs/source.cs#16)]
      [!code-vb[HowToEmitCodeInPartialTrust#16](../../../samples/snippets/visualbasic/VS_Snippets_CLR/HowToEmitCodeInPartialTrust/vb/source.vb#16)]  
   
-     Anonim barındırılan dinamik yöntemi yalnızca güven düzeyleri eşit veya verme derleme güven düzeyini değerinden sahip derlemelerde özel verilere erişebilmesini kısıtlamadır. Örneğin, dinamik yöntemi Internet güvenle yürütüyor, ayrıca Internet güvenle yürütülen diğer derlemelerden özel verilerine erişebilir, ancak özel verilerin erişemiyor [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] derlemeler. [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)]derlemeleri genel derleme önbelleğinde yüklenir ve her zaman tam güvenilir.  
+     Anonim barındırılan dinamik yöntemi yalnızca güven düzeyleri eşit veya verme derleme güven düzeyini değerinden sahip derlemelerde özel verilere erişebilmesini kısıtlamadır. Örneğin, dinamik yöntemi Internet güvenle yürütüyor, ayrıca Internet güvenle yürütülen diğer derlemelerden özel verilerine erişebilir, ancak özel verilerin erişemiyor [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] derlemeler. [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] derlemeleri genel derleme önbelleğinde yüklenir ve her zaman tam güvenilir.  
   
      Anonim barındırılan dinamik yöntemler yalnızca ana bilgisayar uygulamasını verirse JIT görünürlük denetimlerini atlamak için kısıtlı özelliği kullanabilir <xref:System.Security.Permissions.ReflectionPermission> ile <xref:System.Security.Permissions.ReflectionPermissionFlag.RestrictedMemberAccess?displayProperty=nameWithType> bayrağı. Yöntem çağrıldığında bu izin için isteğe bağlı hale getirilir.  
   
@@ -218,7 +220,7 @@ Yansıma yayma aynı API tam veya kısmi güvende kümesini kullanır, ancak baz
   
 ## <a name="compiling-the-code"></a>Kod Derleniyor  
   
--   Bu kod örneği yapı [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)], kendisine geçirdiğinizde ad alanı içerecek şekilde sınıfın adını değiştirmeli <xref:System.AppDomain.CreateInstanceAndUnwrap%2A> yöntemi. Varsayılan olarak, ad alanı, projeye adıdır. Örneğin, "PartialTrust" projesiyse sınıf adı "PartialTrust.Worker" olmalıdır.  
+-   Visual Studio'da bu kod örneği oluşturmak için geçirdiğinizde ad alanı içerecek şekilde sınıfın adını değiştirmeniz gerekir <xref:System.AppDomain.CreateInstanceAndUnwrap%2A> yöntemi. Varsayılan olarak, ad alanı, projeye adıdır. Örneğin, "PartialTrust" projesiyse sınıf adı "PartialTrust.Worker" olmalıdır.  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
  [Yansıma Yaymadaki Güvenlik Sorunları](../../../docs/framework/reflection-and-codedom/security-issues-in-reflection-emit.md)  

@@ -1,30 +1,32 @@
 ---
-title: "Performansı İyileştirme: Veri Bağlama"
-ms.custom: 
+title: 'Performansı İyileştirme: Veri Bağlama'
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-wpf
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-wpf
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - binding data [WPF], performance
 - data binding [WPF], performance
 ms.assetid: 1506a35d-c009-43db-9f1e-4e230ad5be73
-caps.latest.revision: "8"
+caps.latest.revision: 8
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: c420748a9361655eeb2df33ce8426d9f167d3414
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 4b21089ea3f3aef8a934c78187b30f2576b8d39b
+ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="optimizing-performance-data-binding"></a>Performansı İyileştirme: Veri Bağlama
-[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]veri bağlama sunmak ve veri ile etkileşim kurmak üzere uygulamalar için basit ve tutarlı bir yol sağlar. Çeşitli veri kaynakları biçiminde veriye, öğeler bağlanabilir [!INCLUDE[TLA2#tla_clr](../../../../includes/tla2sharptla-clr-md.md)] nesneleri ve [!INCLUDE[TLA#tla_xml](../../../../includes/tlasharptla-xml-md.md)].  
+[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] veri bağlama sunmak ve veri ile etkileşim kurmak üzere uygulamalar için basit ve tutarlı bir yol sağlar. Çeşitli veri kaynakları biçiminde veriye, öğeler bağlanabilir [!INCLUDE[TLA2#tla_clr](../../../../includes/tla2sharptla-clr-md.md)] nesneleri ve [!INCLUDE[TLA#tla_xml](../../../../includes/tlasharptla-xml-md.md)].  
   
  Bu konu, veri bağlama performans önerileri sağlar.  
   
@@ -34,7 +36,7 @@ ms.lasthandoff: 12/22/2017
 ## <a name="how-data-binding-references-are-resolved"></a>Veri bağlama başvuruları nasıl çözümleneceğini  
  Veri bağlama başarım sorunlarını ele önce keşfetmek faydalı olacaktır nasıl [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] veri bağlama altyapısı bağlama için nesne başvuruları giderir.  
   
- Kaynağı bir [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] veri bağlama herhangi olabilir [!INCLUDE[TLA2#tla_clr](../../../../includes/tla2sharptla-clr-md.md)] nesnesi. Özellikler, alt özellikleri veya dizin oluşturucular, bağlayabileceğiniz bir [!INCLUDE[TLA2#tla_clr](../../../../includes/tla2sharptla-clr-md.md)] nesnesi. Bağlama başvuruları kullanarak çözümlenir [!INCLUDE[TLA#tla_avalonwinfx](../../../../includes/tlasharptla-avalonwinfx-md.md)] yansıma ya da bir <xref:System.ComponentModel.ICustomTypeDescriptor>. Bağlama için nesne başvurularını çözmek için üç yöntem şunlardır.  
+ Kaynağı bir [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] veri bağlama herhangi olabilir [!INCLUDE[TLA2#tla_clr](../../../../includes/tla2sharptla-clr-md.md)] nesnesi. Özellikler, alt özellikleri veya dizin oluşturucular, bağlayabileceğiniz bir [!INCLUDE[TLA2#tla_clr](../../../../includes/tla2sharptla-clr-md.md)] nesnesi. Bağlama başvuruları ya da Microsoft .NET Framework yansıma kullanarak çözümlenir veya bir <xref:System.ComponentModel.ICustomTypeDescriptor>. Bağlama için nesne başvurularını çözmek için üç yöntem şunlardır.  
   
  Yansıma kullanarak ilk yöntemi içerir. Bu durumda, <xref:System.Reflection.PropertyInfo> nesnesi özelliğin özniteliklerini bulmak için kullanılır ve özellik meta verilerine erişim sağlar. Kullanırken <xref:System.ComponentModel.ICustomTypeDescriptor> arabirimi, veri bağlama altyapısı bu arabirimi özellik değerlerine erişmek için kullanır. <xref:System.ComponentModel.ICustomTypeDescriptor> Arabirimidir burada nesnesinin yok statik bir özellikler kümesi durumlarda özellikle yararlıdır.  
   
@@ -51,7 +53,7 @@ ms.lasthandoff: 12/22/2017
 |**Bir TextBlock metin özelliğini bağlama**|**Bağlama süresi (ms)**|**İşleme zamanı--bağlama (ms) içerir**|  
 |--------------------------------------------------|-----------------------------|--------------------------------------------------|  
 |Bir özelliği için bir [!INCLUDE[TLA2#tla_clr](../../../../includes/tla2sharptla-clr-md.md)] nesnesi|115|314|  
-|Bir özelliği için bir [!INCLUDE[TLA2#tla_clr](../../../../includes/tla2sharptla-clr-md.md)] uygulayan nesne<xref:System.ComponentModel.INotifyPropertyChanged>|115|305|  
+|Bir özelliği için bir [!INCLUDE[TLA2#tla_clr](../../../../includes/tla2sharptla-clr-md.md)] uygulayan nesne <xref:System.ComponentModel.INotifyPropertyChanged>|115|305|  
 |İçin bir <xref:System.Windows.DependencyProperty> , bir <xref:System.Windows.DependencyObject>.|90|263|  
   
 <a name="Binding_to_Large_CLR_Objects"></a>   
@@ -74,7 +76,7 @@ ms.lasthandoff: 12/22/2017
 |**Veri ItemsSource bağlama**|**Saat 1 için güncelleştirme öğesi (ms)**|  
 |--------------------------------------|---------------------------------------|  
 |İçin bir [!INCLUDE[TLA2#tla_clr](../../../../includes/tla2sharptla-clr-md.md)] <xref:System.Collections.Generic.List%601> nesnesi|1656|  
-|İçin bir<xref:System.Collections.ObjectModel.ObservableCollection%601>|20|  
+|İçin bir <xref:System.Collections.ObjectModel.ObservableCollection%601>|20|  
   
 <a name="Binding_IList_to_ItemsControl_not_IEnumerable"></a>   
 ## <a name="bind-ilist-to-itemscontrol-not-ienumerable"></a>IList ItemsControl değil IEnumerable bağlama  
@@ -82,7 +84,7 @@ ms.lasthandoff: 12/22/2017
   
 <a name="Do_not_Convert_CLR_objects_to_Xml_Just_For_Data_Binding"></a>   
 ## <a name="do-not-convert-clr-objects-to-xml-just-for-data-binding"></a>Veri bağlama için CLR nesnelerini yalnızca XML yapın.  
- [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]veri bağlama için verir [!INCLUDE[TLA#tla_xml](../../../../includes/tlasharptla-xml-md.md)] içerik; ancak, veri bağlamayı [!INCLUDE[TLA#tla_xml](../../../../includes/tlasharptla-xml-md.md)] içeriktir veri bağlama daha yavaş [!INCLUDE[TLA2#tla_clr](../../../../includes/tla2sharptla-clr-md.md)] nesneleri. Dönüştürme işlemini [!INCLUDE[TLA2#tla_clr](../../../../includes/tla2sharptla-clr-md.md)] tek amacı veri bağlama ise XML veri nesnesi.  
+ [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] veri bağlama için verir [!INCLUDE[TLA#tla_xml](../../../../includes/tlasharptla-xml-md.md)] içerik; ancak, veri bağlamayı [!INCLUDE[TLA#tla_xml](../../../../includes/tlasharptla-xml-md.md)] içeriktir veri bağlama daha yavaş [!INCLUDE[TLA2#tla_clr](../../../../includes/tla2sharptla-clr-md.md)] nesneleri. Dönüştürme işlemini [!INCLUDE[TLA2#tla_clr](../../../../includes/tla2sharptla-clr-md.md)] tek amacı veri bağlama ise XML veri nesnesi.  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
  [WPF Uygulama Performansını İyileştirme](../../../../docs/framework/wpf/advanced/optimizing-wpf-application-performance.md)  

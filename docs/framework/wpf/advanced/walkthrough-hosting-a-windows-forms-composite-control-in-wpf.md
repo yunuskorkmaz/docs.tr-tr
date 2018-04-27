@@ -1,12 +1,13 @@
 ---
 title: "İzlenecek yol: WPF'de Windows Forms Bileşik Denetimini Barındırma"
-ms.custom: 
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-wpf
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-wpf
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - csharp
@@ -15,23 +16,24 @@ helpviewer_keywords:
 - hosting Windows Forms control in WPF [WPF]
 - composite controls [WPF], hosting in WPF
 ms.assetid: 96fcd78d-1c77-4206-8928-3a0579476ef4
-caps.latest.revision: "33"
+caps.latest.revision: 33
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 9f332461bd5abb5e3fca705a8a5fd363c3d33296
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.workload:
+- dotnet
+ms.openlocfilehash: fe706e92223d868476ac438e98b16cf07bb21259
+ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="walkthrough-hosting-a-windows-forms-composite-control-in-wpf"></a>İzlenecek yol: WPF'de Windows Forms Bileşik Denetimini Barındırma
-[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]uygulamaları oluşturmak için zengin bir ortam sağlar. Önemli ölçüde yatırımınız varsa [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] kodu olabilir en az yeniden daha etkili kodda bazıları, [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] uygulama yerine baştan yeniden. Mevcut olduğunda en yaygın senaryodur [!INCLUDE[TLA2#tla_winforms](../../../../includes/tla2sharptla-winforms-md.md)] kontrol eder. Bazı durumlarda, bile bu denetimleri için kaynak koduna erişim sahip olmayabilir. [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]Bu tür denetimlerinde barındırmak için basit bir yordam sağlar bir [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] uygulama. Örneğin, kullanabileceğiniz [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] çoğu barındırırken, programlama için <xref:System.Windows.Forms.DataGridView> kontrol eder.  
+[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] uygulamaları oluşturmak için zengin bir ortam sağlar. Önemli ölçüde yatırımınız varsa [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] kodu olabilir en az yeniden daha etkili kodda bazıları, [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] uygulama yerine baştan yeniden. Var olan Windows Forms denetimleri olduğunda en yaygın senaryodur. Bazı durumlarda, bile bu denetimleri için kaynak koduna erişim sahip olmayabilir. [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] Bu tür denetimlerinde barındırmak için basit bir yordam sağlar bir [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] uygulama. Örneğin, kullanabileceğiniz [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] çoğu barındırırken, programlama için <xref:System.Windows.Forms.DataGridView> kontrol eder.  
   
- Bu kılavuzda barındıran aracılığıyla bir uygulama adımları bir [!INCLUDE[TLA2#tla_winforms](../../../../includes/tla2sharptla-winforms-md.md)] veri girişi gerçekleştirmek için bileşik denetim bir [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] uygulama. Bileşik Denetim DLL'de paketlenmiştir. Bu genel yordam daha karmaşık uygulamalar ve denetimler için genişletilebilir. Bu kılavuzda görünümünü ve işlevini neredeyse aynı olacak şekilde tasarlanmıştır [izlenecek yol: Windows Forms içerisinde WPF bileşik denetimi barındırma](../../../../docs/framework/wpf/advanced/walkthrough-hosting-a-wpf-composite-control-in-windows-forms.md). Barındırma senaryo tersine çevrildi birincil farktır.  
+ Bu kılavuzda veri girişi gerçekleştirmek için bir Windows Forms Bileşik Denetim barındıran bir uygulama aracılığıyla adımlar bir [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] uygulama. Bileşik Denetim DLL'de paketlenmiştir. Bu genel yordam daha karmaşık uygulamalar ve denetimler için genişletilebilir. Bu kılavuzda görünümünü ve işlevini neredeyse aynı olacak şekilde tasarlanmıştır [izlenecek yol: Windows Forms içerisinde WPF bileşik denetimi barındırma](../../../../docs/framework/wpf/advanced/walkthrough-hosting-a-wpf-composite-control-in-windows-forms.md). Barındırma senaryo tersine çevrildi birincil farktır.  
   
- İzlenecek yol iki bölüme ayrılmıştır. Uygulamasını ilk bölümü kısaca açıklar [!INCLUDE[TLA2#tla_winforms](../../../../includes/tla2sharptla-winforms-md.md)] bileşik denetim. İkinci bölümü, bileşik denetimi barındırmak nasıl ayrıntılı olarak anlatılmaktadır bir [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] uygulama, denetim olaylarını almasını ve denetimin özelliklerini erişebilirsiniz.  
+ İzlenecek yol iki bölüme ayrılmıştır. İlk bölüm, Windows Forms Bileşik denetimi uyarlamasını kısaca açıklanmaktadır. İkinci bölümü, bileşik denetimi barındırmak nasıl ayrıntılı olarak anlatılmaktadır bir [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] uygulama, denetim olaylarını almasını ve denetimin özelliklerini erişebilirsiniz.  
   
  Bu örneklerde gösterilen görevler aşağıdakileri içerir:  
   
@@ -47,7 +49,7 @@ ms.lasthandoff: 01/19/2018
 -   [!INCLUDE[vs_dev10_long](../../../../includes/vs-dev10-long-md.md)].  
   
 ## <a name="implementing-the-windows-forms-composite-control"></a>Windows Forms Bileşik denetimi uygulama  
- [!INCLUDE[TLA2#tla_winforms](../../../../includes/tla2sharptla-winforms-md.md)] Bu örnekte kullanılan bileşik denetim olan basit veri girişi formu. Bu form kullanıcının adı ve adresini alır ve bu bilgileri ana bilgisayara döndürmek için özel bir olay kullanır. Aşağıdaki çizimde işlenen denetimi göstermektedir.  
+ Bu örnekte kullanılan Windows Forms Bileşik Denetim basit veri girişi biçimidir. Bu form kullanıcının adı ve adresini alır ve bu bilgileri ana bilgisayara döndürmek için özel bir olay kullanır. Aşağıdaki çizimde işlenen denetimi göstermektedir.  
   
  ![Basit Windows Forms denetimi](../../../../docs/framework/wpf/advanced/media/wfcontrol.gif "WFControl")  
 Bileşik Windows Forms denetimi  
@@ -167,7 +169,7 @@ Tam uygulama denetimi gösteren WPF uygulamasında katıştırılmış
 4.  WindowsFormsIntegration.dll adlı WindowsFormsIntegration derlemesine başvuru ekleyin.  
   
 ### <a name="implementing-the-basic-layout"></a>Temel düzeni uygulama  
- [!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)] Ana uygulama MainWindow.xaml içinde uygulanır. Bu dosyayı içeren [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)] düzenini tanımlar ve barındıran biçimlendirmesi [!INCLUDE[TLA2#tla_winforms](../../../../includes/tla2sharptla-winforms-md.md)] denetim. Uygulama, üç bölgeye ayrılmıştır:  
+ [!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)] Ana uygulama MainWindow.xaml içinde uygulanır. Bu dosyayı içeren [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)] düzenini tanımlar ve barındıran Windows Forms denetiminde biçimlendirme. Uygulama, üç bölgeye ayrılmıştır:  
   
 -   **Denetim özelliklerini** paneli denetimden çeşitli özelliklerini değiştirmek için kullanabileceğiniz seçenek düğmeleri koleksiyonunu içerir.  
   
@@ -193,9 +195,9 @@ Tam uygulama denetimi gösteren WPF uygulamasında katıştırılmış
   
  XAML'de iki öğe barındırmayı işler:  
   
--   `WindowsFormsHost`temsil eden <xref:System.Windows.Forms.Integration.WindowsFormsHost> konağa etkinleştirir öğesi bir [!INCLUDE[TLA2#tla_winforms](../../../../includes/tla2sharptla-winforms-md.md)] denetim bir [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] uygulama.  
+-   `WindowsFormsHost` temsil eden <xref:System.Windows.Forms.Integration.WindowsFormsHost> bir Windows Forms denetimi barındırma olanak tanıyan öğe bir [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] uygulama.  
   
--   `mcl:MyControl1`, temsil eden `MyControl1`, eklenen <xref:System.Windows.Forms.Integration.WindowsFormsHost> öğenin alt koleksiyonu. Sonuç olarak, bu [!INCLUDE[TLA2#tla_winforms](../../../../includes/tla2sharptla-winforms-md.md)] denetim parçası olarak işlenen [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] pencere ve iletişim kurabilen uygulama denetiminden.  
+-   `mcl:MyControl1`, temsil eden `MyControl1`, eklenen <xref:System.Windows.Forms.Integration.WindowsFormsHost> öğenin alt koleksiyonu. Sonuç olarak, bu Windows Forms denetimini bir parçası olarak işlenir [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] pencere ve iletişim kurabilen uygulama denetiminden.  
   
 ### <a name="implementing-the-code-behind-file"></a>Arka plan kod dosyası uygulama  
  Arka plan kodu dosyasını MainWindow.xaml.vb veya MainWindow.xaml.cs, işlevselliğini uygulayan yordam kodunu içeren [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] önceki bölümde açıklanan. Birincil görevler şunlardır:  
@@ -229,7 +231,7 @@ using MyControls;
 ```  
   
 #### <a name="handling-the-onbuttonclick-event"></a>OnButtonClick olayını işleme  
- `MyControl1`başlatır `OnButtonClick` kullanıcı ya da denetim düğmesini tıklattığında olay.  
+ `MyControl1` başlatır `OnButtonClick` kullanıcı ya da denetim düğmesini tıklattığında olay.  
   
  Aşağıdaki kodu ekleyin `MainWindow` sınıfı.  
   

@@ -1,24 +1,26 @@
 ---
-title: "İşlem Yapılan Toplu İşlem"
-ms.custom: 
+title: İşlem Yapılan Toplu İşlem
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: ecd328ed-332e-479c-a894-489609bcddd2
-caps.latest.revision: "23"
+caps.latest.revision: 23
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 87d8e3e09618b214dcafb7afd82970dde54fc4fc
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 50596aaf5290146148ecb9636b78f7f9180c0b79
+ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="transacted-batching"></a>İşlem Yapılan Toplu İşlem
 Bu örnek, işlenen okuma Message Queuing (MSMQ) kullanarak toplu olarak gösterilmiştir. İşlenen Batching kuyruğa alınan iletişim hizmetteki okuma performansı en iyi duruma getirme özelliğini içindir.  
@@ -142,8 +144,8 @@ Bu örnek, işlenen okuma Message Queuing (MSMQ) kullanarak toplu olarak göster
  Bir işlemi davranışı ile hizmet davranışını tanımlayan `TransactionScopeRequired` kümesine `true`. Bu yöntem tarafından erişilen tüm kaynak yöneticileri kuyruktan ileti almak için kullanılan aynı işlem kapsamı kullandığı sağlar. Bu örnekte, iletideki satın alma siparişi bilgileri depolamak için bir temel veritabanı kullanın. İşlem kapsamı yöntemi bir özel durum oluşturursa ileti kuyruğuna döndürülür garanti eder. Bu işlemi davranışı ayarı olmadan sıraya alınmış bir kanal iletiyi sıradan okumak için bir işlem oluşturur ve böylece işlemi başarısız olursa, ileti kaybolur dağıtılmasından önce otomatik olarak kaydeder. Aşağıdaki kodda gösterildiği gibi kuyruktan ileti okumak için kullanılan işlem listeleme hizmet işlemleri için en yaygın senaryodur bakın.  
   
  Unutmayın `ReleaseServiceInstanceOnTransactionComplete` ayarlanır `false`. Bu, toplu işleme için önemli bir gereksinimdir. Özellik `ReleaseServiceInstanceOnTransactionComplete` üzerinde `ServiceBehaviorAttribute` hizmet örneği işlem tamamlandıktan sonra yapmanız gerekenler gösterir. Varsayılan olarak, hizmet örneği işlem tamamlandıktan sonra yayımlanır. Toplu işleme için çekirdek en boy okumak ve sıradaki birçok ileti gönderme için tek bir işlem kullanılır. Bu nedenle hizmet örneği serbest erken toplu işleme çok kullanımına negating işlem tamamlanmadan yukarı sona erer. Bu özellik ayarlanmışsa `true` ve işlenen toplu işleme davranışını eklenen uç noktasına toplu doğrulama davranışını bir özel durum oluşturur.  
-  
-```  
+
+```csharp
 // Service class that implements the service contract.  
 // Added code to write output to the console window.  
 [ServiceBehavior(ReleaseServiceInstanceOnTransactionComplete=false,   
@@ -160,11 +162,11 @@ public class OrderProcessorService : IOrderProcessor
     }  
     …  
 }  
-```  
-  
+```
+
  `Orders` Sınıfı, sipariş işleme yalıtır. Aşağıdaki örnekte veritabanını satın alma siparişi bilgilerle güncelleştirir.  
-  
-```  
+
+```csharp
 // Order Processing Logic  
 public class Orders  
 {  
@@ -234,8 +236,8 @@ public class Orders
                                      {1} ", rowsAffected, po.PONumber);  
     }  
 }  
-```  
-  
+```
+
  Toplu işleme davranışı ve yapılandırmasını hizmet uygulama yapılandırmasında belirtilir.  
   
 ```xml  
@@ -292,8 +294,8 @@ public class Orders
 >  Toplu iş boyutu, uygulamanızda bağımlı seçimdir. Yığın boyutu çok küçükse, istenen performans alamayabilirsiniz. Öte yandan yığın boyutu çok büyük ise, performans düşebilir. Örneğin, işleminiz artık canlı ve veritabanınızda kilitleri tutun veya işleminiz kullanılmayan, geri ve iş Yinele için toplu neden olabilecek kilitlenen.  
   
  İstemci bir işlem kapsamı oluşturur. Sıra ile iletişim, bu sıraya gönderilen tüm iletileri veya hiçbiri iletileri kuyruğa gönderilen olduğu atomik bir birim olarak kabul edilmesi neden işlem kapsamı içinde gerçekleşir. İşlem çağırarak gerçekleştirilir <xref:System.Transactions.TransactionScope.Complete%2A> işlem kapsamında.  
-  
-```  
+
+```csharp
 //Client implementation code.  
 class Client  
 {  
@@ -340,8 +342,8 @@ class Client
         Console.ReadLine();  
     }  
 }  
-```  
-  
+```
+
  Örneği çalıştırdığınızda, istemci ve hizmet etkinlikleri hem hizmet hem de istemci konsol pencerelerinde görüntülenir. İstemci hizmeti alma iletileri görebilirsiniz. Her konsol penceresinde hizmet ve istemci kapatmak için ENTER tuşuna basın. Queuing kullanımda olduğundan, istemci ve hizmet aynı anda açık ve çalışıyor olması sahip olmadığını unutmayın. İstemcisini çalıştıran, kapatmak ve hizmeti başlatın ve hala kendi iletilerini alır. İletileri bir toplu işlemde okuma ve işlenen olarak çalışırken çıkış görebilirsiniz.  
   
 ```  

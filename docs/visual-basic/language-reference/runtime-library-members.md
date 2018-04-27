@@ -1,5 +1,5 @@
 ---
-title: "Visual Basic Çalışma Süresi Kitaplık Üyeleri"
+title: Visual Basic Çalışma Süresi Kitaplık Üyeleri
 ms.date: 07/20/2015
 ms.prod: .net
 ms.technology:
@@ -13,17 +13,17 @@ helpviewer_keywords:
 - Microsoft.VisualBasic namespace
 - members [Visual Basic], Visual Basic run-time library
 ms.assetid: f5e82c6e-3500-452b-bdb8-78f0d5477604
-caps.latest.revision: 
+caps.latest.revision: 16
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: f928a01424853dc7e3637f49cc3af4108c5afb5b
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 47c7af031b2169d1a259a8f96f5485bcb354aa25
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="visual-basic-runtime-library-members"></a>Visual Basic Çalışma Süresi Kitaplık Üyeleri
-`Microsoft.VisualBasic` Ad alanı, sınıflar, modüller, sabitleri ve oluşturan numaralandırmalar içerir [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] çalışma zamanı kitaplığı. Bu kitaplık üyeleri yordamları, özellikleri ve kodunuzda kullanabilirsiniz sabit değerleri sağlayın. Her bir modül ve sınıf işlevselliğinin belirli bir kategoriye temsil eder.  
+`Microsoft.VisualBasic` Ad alanı, sınıflar, modüller, sabitleri ve Visual Basic çalışma zamanı kitaplığı oluşturduğunu numaralandırmalar içerir. Bu kitaplık üyeleri yordamları, özellikleri ve kodunuzda kullanabilirsiniz sabit değerleri sağlayın. Her bir modül ve sınıf işlevselliğinin belirli bir kategoriye temsil eder.  
   
 ## <a name="microsoftvisualbasiccollection-class"></a>Microsoft.VisualBasic.Collection sınıfı  
   
@@ -197,8 +197,8 @@ ms.lasthandoff: 11/21/2017
 |<xref:Microsoft.VisualBasic.VBMath.Randomize%2A>|<xref:Microsoft.VisualBasic.VBMath.Rnd%2A>|||  
   
 ## <a name="microsoftvisualbasic-constants-and-enumerations"></a>Microsoft.VisualBasic sabitler ve numaralandırmalar  
- `Microsoft.VisualBasic` Ad alanı, bir parçası olarak sabitler ve numaralandırmalar sağlar [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] çalışma zamanı kitaplığı. Bu sabit değerleri kodunuzda kullanabilirsiniz. Her numaralandırmanın işlevselliği belirli kategorisini temsil eder. Daha fazla bilgi için bkz: [sabitler ve numaralandırmalar](../../visual-basic/language-reference/constants-and-enumerations.md).  
+ `Microsoft.VisualBasic` Ad alanı, Visual Basic çalışma zamanı kitaplığı bir parçası olarak sabitler ve numaralandırmalar sağlar. Bu sabit değerleri kodunuzda kullanabilirsiniz. Her numaralandırmanın işlevselliği belirli kategorisini temsil eder. Daha fazla bilgi için bkz: [sabitler ve numaralandırmalar](../../visual-basic/language-reference/constants-and-enumerations.md).  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [Sabitler ve numaralandırmalar](../../visual-basic/language-reference/constants-and-enumerations.md)  
- [Anahtar sözcükler](../../visual-basic/language-reference/keywords/index.md)
+ [Sabitler ve Sabit Listeleri](../../visual-basic/language-reference/constants-and-enumerations.md)  
+ [Anahtar Sözcükler](../../visual-basic/language-reference/keywords/index.md)

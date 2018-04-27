@@ -16,11 +16,11 @@ helpviewer_keywords:
 ms.assetid: eb984aa5-ac98-4d0b-a0d2-24238d7bc8dc
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 4d56312743d70ed0d2f361c27d027a726562dc73
-ms.sourcegitcommit: 498799639937c89de777361aab74261efe7b79ea
+ms.openlocfilehash: 59b89d91cd81f735b44e030f72288f6b9a4d2b79
+ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/22/2018
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="-help---visual-basic"></a>-help,-? (Visual Basic)
 Derleyici seçeneklerini görüntüler.  
@@ -37,7 +37,7 @@ Derleyici seçeneklerini görüntüler.
  Bu seçenek bir derlemede eklerseniz, herhangi bir çıktı dosyası oluşturulur ve hiçbir derleme gerçekleşir.  
   
 > [!NOTE]
->  `-help` Seçeneği içinde kullanılabilir değil [!INCLUDE[vsprvs](~/includes/vsprvs-md.md)] geliştirme ortamı; yalnızca komut satırından derlerken kullanılabilir.  
+>  `-help` Seçeneği Visual Studio geliştirme ortamında kullanılabilir değil; yalnızca komut satırından derlerken kullanılabilir.  
   
 ## <a name="example"></a>Örnek  
  Aşağıdaki kod, komut satırından Yardımı görüntüler.  

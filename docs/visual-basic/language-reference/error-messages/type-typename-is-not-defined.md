@@ -1,9 +1,9 @@
 ---
-title: "Türü &#39; &lt;typename&gt;&#39; tanımlı değil"
+title: Tür &#39; &lt;typename&gt; &#39; tanımlı değil
 ms.date: 07/20/2015
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - devlang-visual-basic
 ms.topic: article
@@ -13,16 +13,16 @@ f1_keywords:
 helpviewer_keywords:
 - BC30002
 ms.assetid: b0faf204-57fd-44de-8c05-9db027eea663
-caps.latest.revision: 
+caps.latest.revision: 18
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: 68eb37f43600c51dc9117c3785a12e3c8ede1965
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 7c3efbcabf1e40c7f550b5f54d16e697561cf82c
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/26/2018
 ---
-# <a name="type-39lttypenamegt39-is-not-defined"></a>Türü &#39; &lt;typename&gt;&#39; tanımlı değil
+# <a name="type-39lttypenamegt39-is-not-defined"></a>Tür &#39; &lt;typename&gt; &#39; tanımlı değil
 Deyim tanımlanmamış bir tür referansı yaptı. Bir bildirim deyiminde gibi bir tür tanımlayabilirsiniz `Enum`, `Structure`, `Class`, veya `Interface`.  
   
  **Hata Kimliği:** BC30002  
@@ -35,14 +35,14 @@ Deyim tanımlanmamış bir tür referansı yaptı. Bir bildirim deyiminde gibi b
   
 -   Türünün ad alanını, projeyi yeniden değil emin olun. Gerekiyorsa, kullanın `Global` tür adı tam olarak nitelemek için anahtar sözcüğü. Örneğin, bir proje adlı bir ad alanını tanımlayan `System`, <xref:System.Object?displayProperty=nameWithType> türü ile tam olmadığı sürece erişilemiyor `Global` anahtar sözcüğü: `Global.System.Object`.  
   
--   Tür tanımlandı, ancak nesne kitaplığı ya da tanımlanmış tür kitaplığı içinde kayıtlı değil [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)], tıklatın **Başvuru Ekle** üzerinde **proje** menüsüne ve ardından uygun nesnesi kitaplığı veya tür kitaplığı.  
+-   Tür tanımlandı, ancak nesne kitaplığı ya da tanımlanmış tür kitaplığı Visual Basic, tıklatın kaydedilmemiş **Başvuru Ekle** üzerinde **proje** menüsüne ve ardından uygun nesnesi kitaplığı veya tür kitaplığı.  
   
 -   Türü hedef .NET Framework profilinin parçası olan bir derlemede olduğundan emin olun. Daha fazla bilgi için bkz: [.NET Framework hedefleme hataları giderme](/visualstudio/msbuild/troubleshooting-dotnet-framework-targeting-errors).  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
  [Visual Basic'de ad alanları](../../../visual-basic/programming-guide/program-structure/namespaces.md)  
- [Enum deyimi](../../../visual-basic/language-reference/statements/enum-statement.md)  
- [Structure deyimi](../../../visual-basic/language-reference/statements/structure-statement.md)  
- [Class deyimi](../../../visual-basic/language-reference/statements/class-statement.md)  
- [Interface deyimi](../../../visual-basic/language-reference/statements/interface-statement.md)  
+ [Enum Deyimi](../../../visual-basic/language-reference/statements/enum-statement.md)  
+ [Structure Deyimi](../../../visual-basic/language-reference/statements/structure-statement.md)  
+ [Class Deyimi](../../../visual-basic/language-reference/statements/class-statement.md)  
+ [Interface Deyimi](../../../visual-basic/language-reference/statements/interface-statement.md)  
  [Bir projedeki başvuruları yönetme](/visualstudio/ide/managing-references-in-a-project)

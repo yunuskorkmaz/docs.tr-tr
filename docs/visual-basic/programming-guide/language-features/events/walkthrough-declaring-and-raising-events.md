@@ -1,11 +1,12 @@
 ---
-title: "Olay (Visual Basic) bildirme ve oluşturma"
-ms.custom: 
+title: Olay (Visual Basic) bildirme ve oluşturma
+ms.custom: ''
 ms.date: 07/20/2015
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- devlang-visual-basic
 ms.topic: article
 helpviewer_keywords:
 - declarations [Visual Basic], events
@@ -15,14 +16,14 @@ helpviewer_keywords:
 - events [Visual Basic], raising
 - raising events [Visual Basic], walkthroughs
 ms.assetid: 8ffb3be8-097d-4d3c-b71e-04555ebda2a2
-caps.latest.revision: "16"
+caps.latest.revision: 16
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: 0bf75cfba5102be5d837af385e2d3578f78a03c0
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 27db585084703607a7389f5a0aa3eba6f70dd793
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="walkthrough-declaring-and-raising-events-visual-basic"></a>İzlenecek yol: Olay Bildirme ve Oluşturma (Visual Basic)
 Bu kılavuz, bildirme ve olayları adlı bir sınıf için yükseltmek gösterilmiştir `Widget`. Adımları tamamladıktan sonra Yardımcısı konuyu okumak isteyebilirsiniz [izlenecek yol: olayları işleme](../../../../visual-basic/programming-guide/language-features/events/walkthrough-handling-events.md), olayları kullanmayı gösterir `Widget` bir uygulamada durum bilgilerini sağlamak için nesneleri.  
@@ -36,7 +37,7 @@ Bu kılavuz, bildirme ve olayları adlı bir sınıf için yükseltmek gösteril
   
 #### <a name="to-build-the-code-example-for-this-topic"></a>Bu konu için kod örneği oluşturmak için  
   
-1.  Yeni bir [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] Windows uygulaması proje ve adlı bir form oluşturun `Form1`.  
+1.  Yeni bir Visual Basic Windows uygulama projesi açın ve adlı bir form oluşturun `Form1`.  
   
 2.  İki düğme ve bir etiket eklemek `Form1`.  
   
@@ -61,7 +62,7 @@ Bu kılavuz, bildirme ve olayları adlı bir sınıf için yükseltmek gösteril
 > [!NOTE]
 >  Yordamlar, aşağıdaki istisnalar dışında bağımsız gibi olay bağımsız bildirebilir: olayları olamaz `Optional` veya `ParamArray` bağımsız değişkenleri ve olaylar, dönüş değerleri gerekmez.  
   
- `PercentDone` Olayı tarafından `LongTask` yöntemi `Widget` sınıfı. `LongTask`iki bağımsız değişkeni alır: süre yöntemi çalışma ve önce en az zaman aralığını yaparak amaçları olan kişilerle tanışabilirsiniz `LongTask` yükseltmek için duraklatır `PercentDone` olay.  
+ `PercentDone` Olayı tarafından `LongTask` yöntemi `Widget` sınıfı. `LongTask` iki bağımsız değişkeni alır: süre yöntemi çalışma ve önce en az zaman aralığını yaparak amaçları olan kişilerle tanışabilirsiniz `LongTask` yükseltmek için duraklatır `PercentDone` olay.  
   
 #### <a name="to-raise-the-percentdone-event"></a>PercentDone olay yükseltmek için  
   
@@ -84,5 +85,5 @@ Bu kılavuz, bildirme ve olayları adlı bir sınıf için yükseltmek gösteril
 ## <a name="see-also"></a>Ayrıca Bkz.  
  <xref:Microsoft.VisualBasic.DateAndTime.Timer%2A>  
  <xref:Microsoft.VisualBasic.DateAndTime.Now%2A>  
- [İzlenecek yol: Olayları işleme](../../../../visual-basic/programming-guide/language-features/events/walkthrough-handling-events.md)  
- [Olayları](../../../../visual-basic/programming-guide/language-features/events/index.md)
+ [İzlenecek yol: Olayları İşleme](../../../../visual-basic/programming-guide/language-features/events/walkthrough-handling-events.md)  
+ [Olaylar](../../../../visual-basic/programming-guide/language-features/events/index.md)

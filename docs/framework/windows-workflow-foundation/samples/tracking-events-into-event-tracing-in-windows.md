@@ -1,36 +1,37 @@
 ---
-title: "Windows'da izleme olayı içine olayları izleme"
-ms.custom: 
+title: Windows'da izleme olayı içine olayları izleme
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: f812659b-0943-45ff-9430-4defa733182b
-caps.latest.revision: "19"
+caps.latest.revision: 19
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 6798494e442b2e7633461fb821c56130a2af2508
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 1a1038f848563c106ee1cac441b8a247e161e268
+ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="tracking-events-into-event-tracing-in-windows"></a>Windows'da izleme olayı içine olayları izleme
-Bu örnek nasıl etkinleştirileceğini göstermektedir [!INCLUDE[wf](../../../../includes/wf-md.md)] bir iş akışında izleme ve hizmet izleme olayları, olay izleme için Windows (ETW) yayma. Örnek iş akışı kayıtları ETW İzleme yaymak üzere ETW İzleme katılımcı kullanır (<xref:System.Activities.Tracking.EtwTrackingParticipant>).  
+Bu örnek, Windows Workflow Foundation (WF) iş akışı hizmeti üzerinde izleme etkinleştirin ve izleme olayları, olay izleme için Windows (ETW) yayma gösterilmiştir. Örnek iş akışı kayıtları ETW İzleme yaymak üzere ETW İzleme katılımcı kullanır (<xref:System.Activities.Tracking.EtwTrackingParticipant>).  
   
  Örnek iş akışında bir istek alırsa, giriş verilerinin devrik giriş değişkenine atar ve istemciye karşılıklı geri döndürür. Giriş verisi 0 olduğunda, bir sıfıra bölünme sıfır özel durum, işlenmemiş oluşan iptal etmek iş akışı neden olur. İzleme özelliği etkinleştirilmiş olan hata izleme kaydı hata daha sonra gidermenize yardımcı olacak ETW yayınlanır. ETW İzleme katılımcı kayıtları izleme için abone olmak için izleme profili ile yapılandırılır. İzleme profili Web.config dosyasında tanımlanmış ve bir yapılandırma parametresi ETW İzleme katılımcı sağlanan. ETW İzleme katılımcı iş akışı hizmeti Web.config dosyasında yapılandırılmış ve hizmet hizmet davranışı olarak uygulanır. Bu örnekte, Olay Görüntüleyicisi'ni kullanarak olay günlüğünde izleme olayları görüntüleyin.  
   
 ## <a name="workflow-tracking-details"></a>İş Akışı İzleme Ayrıntıları  
- [!INCLUDE[wf2](../../../../includes/wf2-md.md)]bir iş akışı örneğini yürütmeyi izlemek üzere bir izleme altyapısı sağlar. İzleme çalışma zamanı iş akışı yaşam döngüsü olayları için iş akışı etkinlikleri ve özel olaylar ilgili olayları yaymak üzere bir iş akışı örneği oluşturur. Aşağıdaki tabloda birincil bileşenleri izleme altyapısının ayrıntılı olarak açıklanmaktadır.  
+ Windows Workflow Foundation iş akışı örneğini yürütmeyi izlemek üzere bir izleme altyapısı sağlar. İzleme çalışma zamanı iş akışı yaşam döngüsü olayları için iş akışı etkinlikleri ve özel olaylar ilgili olayları yaymak üzere bir iş akışı örneği oluşturur. Aşağıdaki tabloda birincil bileşenleri izleme altyapısının ayrıntılı olarak açıklanmaktadır.  
   
 |Bileşen|Açıklama|  
 |---------------|-----------------|  
 |Çalışma zamanı izleme|İzleme kayıtları yayma için altyapı sağlar.|  
-|Katılımcıların izleme|İzleme kayıtları erişir. [!INCLUDE[netfx_current_short](../../../../includes/netfx-current-short-md.md)]Olay izleme için Windows (ETW) olayları olarak izleme kayıtları Yazar izleme katılımcı birlikte verilir.|  
+|Katılımcıların izleme|İzleme kayıtları erişir. [!INCLUDE[netfx_current_short](../../../../includes/netfx-current-short-md.md)] Olay izleme için Windows (ETW) olayları olarak izleme kayıtları Yazar izleme katılımcı birlikte verilir.|  
 |İzleme profili|Bir iş akışı örneğinden yayılan izleme kayıtları alt kümeleri için abone olmak izleme katılımcı sağlayan bir filtreleme mekanizması.|  
   
  Aşağıdaki tabloda, iş akışı çalışma zamanı yayar izleme kayıtları ayrıntıları verilmektedir.  
@@ -55,7 +56,7 @@ Bu örnek nasıl etkinleştirileceğini göstermektedir [!INCLUDE[wf](../../../.
   
 3.  Çözümü çalıştırmak için F5 tuşuna basın.  
   
-     Varsayılan olarak, hizmet 53797 (http://localhost:53797/SampleWorkflowService.xamlx) bağlantı noktasında dinliyor.  
+     Varsayılan olarak, hizmet 53797 bağlantı noktasında dinleme (http://localhost:53797/SampleWorkflowService.xamlx).  
   
 4.  Kullanarak [!INCLUDE[fileExplorer](../../../../includes/fileexplorer-md.md)], WCF test İstemcisi'ni açın.  
   
@@ -65,7 +66,7 @@ Bu örnek nasıl etkinleştirileceğini göstermektedir [!INCLUDE[wf](../../../.
   
 5.  WCF test istemcisi seçin **Hizmet Ekle** gelen **dosya** menüsü.  
   
-     Uç nokta adresi giriş kutusuna ekleyin. Http://localhost:53797/SampleWorkflowService.xamlx varsayılandır.  
+     Uç nokta adresi giriş kutusuna ekleyin. Varsayılan, http://localhost:53797/SampleWorkflowService.xamlx değeridir.  
   
 6.  Olay Görüntüleyicisi'ni uygulamasını açın.  
   

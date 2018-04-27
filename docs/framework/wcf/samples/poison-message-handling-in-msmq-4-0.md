@@ -1,24 +1,26 @@
 ---
-title: "MSMQ 4.0'da Zehirli İleti İşleme"
-ms.custom: 
+title: MSMQ 4.0'da Zehirli İleti İşleme
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: ec8d59e3-9937-4391-bb8c-fdaaf2cbb73e
-caps.latest.revision: "18"
+caps.latest.revision: 18
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 32d7c7a93636cbe0086cfbcb5fd1e401a2f013fb
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 6f2361ed862986d2490968ae422b9b1313eedea3
+ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="poison-message-handling-in-msmq-40"></a>MSMQ 4.0'da Zehirli İleti İşleme
 Bu örnek, bir hizmet olarak işleme zehir iletisi gerçekleştirmek gösterilmiştir. Bu örnek dayanır [işlem yapılan işlem MSMQ bağlama](../../../../docs/framework/wcf/samples/transacted-msmq-binding.md) örnek. Bu örnekte `netMsmqBinding`. Hizmeti, sıraya alınan iletileri alma hizmeti izlemek etkinleştirmek için bir kendi kendini barındıran konsol uygulamasıdır.  
@@ -34,7 +36,7 @@ Bu örnek, bir hizmet olarak işleme zehir iletisi gerçekleştirmek gösterilmi
 ## <a name="msmq-v40-poison-handling-sample"></a>MSMQ v4.0 Poison örnek işleme  
  İçinde [!INCLUDE[wv](../../../../includes/wv-md.md)], MSMQ zarar iletileri depolamak için kullanılan bir zarar alt sıra olanak sağlar. Bu örneği kullanarak zarar iletileri postalarla en iyi uygulama gösterir [!INCLUDE[wv](../../../../includes/wv-md.md)].  
   
- Zehir iletisi algılama [!INCLUDE[wv](../../../../includes/wv-md.md)] oldukça karmaşık değil. Algılama Yardım 3 özellikleri vardır. <xref:System.ServiceModel.MsmqBindingBase.ReceiveRetryCount%2A> Sayıda belirli bir ileti kuyruktan yeniden okuma ve işleme için uygulama gönderilen. Bu geri sıraya ileti uygulamaya gönderilen olamaz veya uygulama işlem hizmet işlemini geri alır. geçirdiğinizde bir ileti kuyruktan yeniden okunur. <xref:System.ServiceModel.MsmqBindingBase.MaxRetryCycles%2A>yeniden deneme kuyruğuna ileti taşınır sayısıdır. Zaman <xref:System.ServiceModel.MsmqBindingBase.ReceiveRetryCount%2A> olan ulaşıldı, yeniden kuyruğa ileti taşınır. Özellik <xref:System.ServiceModel.MsmqBindingBase.RetryCycleDelay%2A> geçmesi ileti taşınırken yeniden deneme sıradan geri ana sıranın zaman gecikmesi. <xref:System.ServiceModel.MsmqBindingBase.ReceiveRetryCount%2A> 0 değerine sıfırlanır. İleti yeniden denenir. İleti okumak için tüm denemeleri başarısız, ileti zarar olarak işaretlenir.  
+ Zehir iletisi algılama [!INCLUDE[wv](../../../../includes/wv-md.md)] oldukça karmaşık değil. Algılama Yardım 3 özellikleri vardır. <xref:System.ServiceModel.MsmqBindingBase.ReceiveRetryCount%2A> Sayıda belirli bir ileti kuyruktan yeniden okuma ve işleme için uygulama gönderilen. Bu geri sıraya ileti uygulamaya gönderilen olamaz veya uygulama işlem hizmet işlemini geri alır. geçirdiğinizde bir ileti kuyruktan yeniden okunur. <xref:System.ServiceModel.MsmqBindingBase.MaxRetryCycles%2A> yeniden deneme kuyruğuna ileti taşınır sayısıdır. Zaman <xref:System.ServiceModel.MsmqBindingBase.ReceiveRetryCount%2A> olan ulaşıldı, yeniden kuyruğa ileti taşınır. Özellik <xref:System.ServiceModel.MsmqBindingBase.RetryCycleDelay%2A> geçmesi ileti taşınırken yeniden deneme sıradan geri ana sıranın zaman gecikmesi. <xref:System.ServiceModel.MsmqBindingBase.ReceiveRetryCount%2A> 0 değerine sıfırlanır. İleti yeniden denenir. İleti okumak için tüm denemeleri başarısız, ileti zarar olarak işaretlenir.  
   
  İleti zarar olarak işaretlendikten sonra ileti ile ayarlara göre dağıtılır <xref:System.ServiceModel.MsmqBindingBase.ReceiveErrorHandling%2A> numaralandırması. Olası değerler yinelemek için:  
   
@@ -46,22 +48,22 @@ Bu örnek, bir hizmet olarak işleme zehir iletisi gerçekleştirmek gösterilmi
   
 -   Reddetme: ileti reddetmek için gönderene ileti gönderme sahipsiz sıra. Bu değer yalnızca kullanılabilir [!INCLUDE[wv](../../../../includes/wv-md.md)].  
   
- Örnek kullanarak gösterir `Move` zehir iletisi için eğilimi. `Move`İletinin zararlı alt kuyruğuna Taşı neden olur.  
+ Örnek kullanarak gösterir `Move` zehir iletisi için eğilimi. `Move` İletinin zararlı alt kuyruğuna Taşı neden olur.  
   
  Hizmet sözleşme `IOrderProcessor`, kuyruklar ile kullanım için uygun bir tek yönlü hizmet tanımlar.  
-  
-```  
+
+```csharp
 [ServiceContract(Namespace="http://Microsoft.ServiceModel.Samples")]  
 public interface IOrderProcessor  
 {  
     [OperationContract(IsOneWay = true)]  
     void SubmitPurchaseOrder(PurchaseOrder po);  
 }  
-```  
-  
+```
+
  Hizmet işlemi, sipariş işleme bildiren bir ileti görüntülenir. Zehir iletisi işlevselliğini göstermek için `SubmitPurchaseOrder` hizmet işlemi rastgele çağrılması hizmeti ile ilgili işlem geri almak için bir özel durum oluşturur. Bu iletinin kuyrukta geri yerleştirilecek neden olur. Sonunda iletisi poison işaretlenmiş. Zehir iletisi zarar alt kuyruğuna taşımak için yapılandırmasını ayarlayın.  
-  
-```  
+
+```csharp
 // Service class that implements the service contract.  
 // Added code to write output to the console window.  
 public class OrderProcessorService : IOrderProcessor  
@@ -127,8 +129,8 @@ public class OrderProcessorService : IOrderProcessor
   
     }  
 }  
-```  
-  
+```
+
  Hizmet yapılandırması aşağıdaki zehirli ileti özellikleri içerir: `receiveRetryCount`, `maxRetryCycles`, `retryCycleDelay`, ve `receiveErrorHandling` aşağıdaki yapılandırma dosyasında gösterildiği gibi.  
   
 ```xml  
@@ -171,8 +173,8 @@ public class OrderProcessorService : IOrderProcessor
  Zehirli ileti sıradaki iletiler zehir iletisi hizmet uç noktasından farklı olabilir iletisi işliyor hizmetine gönderilen iletiler ' dir. Bu nedenle, ne zaman zehir iletisi hizmeti okur iletileri sıradan [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] kanal katmanını uyuşmazlığı uç noktalarını bulur ve ileti göndermez. Bu durumda, ileti hizmeti işlem sırasını ele ancak zehir iletisi hizmeti tarafından alınan. İleti için farklı bir uç noktası ele olsa bile iletisini almaya devam etmek için biz eklemelisiniz bir `ServiceBehavior` eşleştirme ölçütü olduğu için ileti ele herhangi bir hizmet uç nokta eşleşecek şekilde filtre adreslere. Bu, başarılı bir şekilde zehirli ileti kuyruğundan okumak iletileri işlemek için gereklidir.  
   
  Zehir iletisi hizmet uygulaması kendi hizmet uygulaması çok benzer. Sözleşme uygular ve siparişleri işler. Kod örneği aşağıdaki gibidir.  
-  
-```  
+
+```csharp
 // Service class that implements the service contract.  
 // Added code to write output to the console window.  
 [ServiceBehavior(AddressFilterMode=AddressFilterMode.Any)]  
@@ -215,8 +217,8 @@ public class OrderProcessorService : IOrderProcessor
             serviceHost.Close();  
         }  
     }  
-```  
-  
+```
+
  Sipariş kuyruktan iletileri okur hizmeti işlem sırasını zehir iletisi hizmeti zararlı alt kuyruktan iletileri okur. Zararlı sıranın ana sıranın alt bir sıra, "poison" olarak adlandırılır ve MSMQ tarafından otomatik olarak oluşturulur. Erişmek için ana sıranın adından sağlayan bir ";" ve alt sıra adı, bu durumda-"Aşağıdaki örnek yapılandırmada gösterildiği gibi zararlı".  
   
 > [!NOTE]
@@ -325,7 +327,7 @@ Processing Purchase Order: 23e0b991-fbf9-4438-a0e2-20adf93a4f89
     > [!NOTE]
     >  Ayarı `security mode` için `None` ayarına eşdeğerdir `MsmqAuthenticationMode`, `MsmqProtectionLevel`, ve `Message` güvenlik `None`.  
   
-3.  İş Meta veri değişimi için sırayla biz http bağlama ile bir URL kaydedin. Bu hizmet bir yükseltilmiş komut istemi penceresine çalıştırmanızı gerektirir. Aksi halde, bir özel durum gibi alın: işlenmeyen özel durum: System.ServiceModel.AddressAccessDeniedException: HTTP URL http://+:8000/ServiceModelSamples/service/ kaydedemedi. İşleminizi bu ad alanına erişim hakları yok (Ayrıntılar için http://go.microsoft.com/fwlink/?LinkId=70353 bakın). System.Net.HttpListenerException--->: erişim reddedildi.  
+3.  İş Meta veri değişimi için sırayla biz http bağlama ile bir URL kaydedin. Bu hizmet bir yükseltilmiş komut istemi penceresine çalıştırmanızı gerektirir. Aksi halde, bir özel durum gibi alın: işlenmeyen özel durum: System.ServiceModel.AddressAccessDeniedException: HTTP URL kaydedemedi http://+:8000/ServiceModelSamples/service/. İşleminizi bu ad alanına erişim hakları yok (bkz http://go.microsoft.com/fwlink/?LinkId=70353 Ayrıntılar için). System.Net.HttpListenerException--->: erişim reddedildi.  
   
 > [!IMPORTANT]
 >  Örnekler, bilgisayarınızda yüklü. Devam etmeden önce aşağıdaki (varsayılan) dizin denetleyin.  

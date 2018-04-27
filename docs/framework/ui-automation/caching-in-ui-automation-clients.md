@@ -1,27 +1,29 @@
 ---
-title: "UI Otomasyonda Önbelleğe Alma"
-ms.custom: 
+title: UI Otomasyonda Önbelleğe Alma
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-bcl
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-bcl
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - UI Automation caching in clients
 - caching, UI Automation clients
 ms.assetid: 94c15031-4975-43cc-bcd5-c9439ed21c9c
-caps.latest.revision: "24"
+caps.latest.revision: 24
 author: Xansky
 ms.author: mhopkins
 manager: markl
-ms.workload: dotnet
-ms.openlocfilehash: cce1890357f5781f1772b6a0aa583e493e2cfa8b
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.workload:
+- dotnet
+ms.openlocfilehash: 5bbd54d4e1e8a6a1eae52f50696aecddd1f8bd8a
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="caching-in-ui-automation-clients"></a>UI Otomasyonda Önbelleğe Alma
 > [!NOTE]
@@ -67,7 +69,7 @@ ms.lasthandoff: 01/19/2018
 ## <a name="activating-the-cacherequest"></a>CacheRequest etkinleştirme  
  Önbelleğe alma gerçekleştirilir yalnızca <xref:System.Windows.Automation.AutomationElement> nesneleri alınır sırada bir <xref:System.Windows.Automation.CacheRequest> geçerli iş parçacığı için etkindir. Etkinleştirmek için iki yolla bir <xref:System.Windows.Automation.CacheRequest>.  
   
- Her zamanki gibi çağırmaktır <xref:System.Windows.Automation.CacheRequest.Activate%2A>. Bu yöntem uygulayan bir nesne döndürür <xref:System.IDisposable>. İstek etkin kaldığı sürece <xref:System.IDisposable> nesne yok. İçinde çağrısını için nesne ömrü denetlemek için en kolay yolu olan bir `using` ([!INCLUDE[TLA#tla_cshrp](../../../includes/tlasharptla-cshrp-md.md)]) veya `Using` ([!INCLUDE[TLA2#tla_visualb](../../../includes/tla2sharptla-visualb-md.md)]) engelle. Bu, özel durum oluşturuldu olsa bile, istek yığından Sil'i sağlar.  
+ Her zamanki gibi çağırmaktır <xref:System.Windows.Automation.CacheRequest.Activate%2A>. Bu yöntem uygulayan bir nesne döndürür <xref:System.IDisposable>. İstek etkin kaldığı sürece <xref:System.IDisposable> nesne yok. İçinde çağrısını için nesne ömrü denetlemek için en kolay yolu olan bir `using` (C#) veya `Using` (Visual Basic) engelle. Bu, özel durum oluşturuldu olsa bile, istek yığından Sil'i sağlar.  
   
  Önbellek isteği iç içe istediğinizde, yararlı olan, başka bir yolu çağırmaktır <xref:System.Windows.Automation.CacheRequest.Push%2A>. Bu istek bir yığında koyar ve etkinleştirir. İstek tarafından yığından kaldırılana kadar etkin kalır <xref:System.Windows.Automation.CacheRequest.Pop%2A>. Başka bir istek yığına gönderilen istek geçici olarak devre dışı haline gelir; yalnızca ilk istek yığında etkindir.  
   
@@ -115,4 +117,4 @@ ms.lasthandoff: 01/19/2018
 ## <a name="see-also"></a>Ayrıca Bkz.  
  [İstemciler İçin UI Otomasyonu Olayları](../../../docs/framework/ui-automation/ui-automation-events-for-clients.md)  
  [UI Otomasyonunda Önbelleğe Almayı Kullanma](../../../docs/framework/ui-automation/use-caching-in-ui-automation.md)  
- [FetchTimer Sample](http://msdn.microsoft.com/library/5b7d3294-de22-4f24-b2d6-d4785a304b90)
+ [FetchTimer örnek](http://msdn.microsoft.com/library/5b7d3294-de22-4f24-b2d6-d4785a304b90)

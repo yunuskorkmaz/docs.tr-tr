@@ -1,23 +1,23 @@
 ---
-title: "Yığın için ayrılan alan doldu (Visual Basic)"
+title: Yığın için ayrılan alan doldu (Visual Basic)
 ms.date: 07/20/2015
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - devlang-visual-basic
 ms.topic: article
 f1_keywords:
 - vbrID28
 ms.assetid: bfcd792b-ac29-4158-81fc-ea0c13f4ffa2
-caps.latest.revision: 
+caps.latest.revision: 8
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: 3959c24aa4e95204e156a9863ef0ce237af1fcda
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.openlocfilehash: ec839d1f0ad1931ed4229e898a900c3210d813ed
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="out-of-stack-space-visual-basic"></a>Yığın için ayrılan alan doldu (Visual Basic)
 Yığın yürütülen programınızı taleplerini ile dinamik olarak büyür ve küçülür bellek bir çalışma alanıdır. Kendi sınırlarını aştı.  
@@ -34,7 +34,7 @@ Yığın yürütülen programınızı taleplerini ile dinamik olarak büyür ve 
   
 5.  Sayısını denetleyin iç içe geçmiş `DoEvents` işlev çağrılarını kullanarak `Calls` hangi yordamların yığında etkin görüntülemek için iletişim kutusu.  
   
-6.  "Olay cascade" olay yordamı zaten yığında çağıran bir olay tetikleme tarafından neden değil emin olun. Bir olay cascade bir Sonlandırılmamış özyinelemeli yordam çağrısına benzer, ancak çağrı tarafından yapıldığından kadar belirgin [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] kodda açık bir çağrı yerine. Kullanım `Calls` hangi yordamların yığında etkin görüntülemek için iletişim kutusu.  
+6.  "Olay cascade" olay yordamı zaten yığında çağıran bir olay tetikleme tarafından neden değil emin olun. Bir olay cascade bir Sonlandırılmamış özyinelemeli yordam çağrısına benzer, ancak çağrı kodda açık bir çağrı yerine, Visual Basic yapıldığından kadar belirgin. Kullanım `Calls` hangi yordamların yığında etkin görüntülemek için iletişim kutusu.  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
  [Bellek pencereleri](/visualstudio/debugger/memory-windows)

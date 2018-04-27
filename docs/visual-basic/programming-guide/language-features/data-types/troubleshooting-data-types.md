@@ -1,11 +1,12 @@
 ---
-title: "Veri Türleri Sorunlarını Giderme (Visual Basic)"
-ms.custom: 
+title: Veri Türleri Sorunlarını Giderme (Visual Basic)
+ms.custom: ''
 ms.date: 07/20/2015
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- devlang-visual-basic
 ms.topic: article
 helpviewer_keywords:
 - Char data type [Visual Basic], converting
@@ -25,14 +26,14 @@ helpviewer_keywords:
 - floating-point numbers [Visual Basic], comparison
 - floating-point numbers
 ms.assetid: 90040d67-b630-4125-a6ae-37195b079042
-caps.latest.revision: "29"
+caps.latest.revision: 29
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: 4d2fb1cd1be9c88ad0dd413eedb8a226fe59f41e
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: f34e7bc50a51032387cf01db3fae17ef44b8b4d9
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="troubleshooting-data-types-visual-basic"></a>Veri Türleri Sorunlarını Giderme (Visual Basic)
 Bu sayfada, iç veri türleri üzerinde işlemler gerçekleştirdiğinizde oluşabilecek bazı yaygın sorunlar listelenir.  
@@ -74,7 +75,7 @@ Bu sayfada, iç veri türleri üzerinde işlemler gerçekleştirdiğinizde oluş
  Bunu bildirmek yeterli değildir `decimalRemainder` olarak `Decimal`. Değişmez değerler için zorlaması gerekir `Decimal`, veya kullandıkları `Double` varsayılan ve `decimalRemainder` aynı yanlış değerine alır `doubleRemainder`.  
   
 ## <a name="boolean-type-does-not-convert-to-numeric-type-accurately"></a>Boolean türü sayısal türe doğru şekilde dönüştürmez  
- [Boole veri türü](../../../../visual-basic/language-reference/data-types/boolean-data-type.md) değerlerini, sayı olarak depolanmaz ve depolanan değerlerin sayıya eşit olması amaçlanmamıştır. Önceki sürümlerle uyumluluk için [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] dönüşüm anahtar sözcükleri sağlar ([CType işlevi](../../../../visual-basic/language-reference/functions/ctype-function.md), `CBool`, `CInt`, vb.) arasında dönüştürme yapma `Boolean` ve sayısal türler. Bununla birlikte, diğer diller bazen dönüştürmeler gibi farklı şekilde gerçekleştirmeniz [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] yöntemleri.  
+ [Boole veri türü](../../../../visual-basic/language-reference/data-types/boolean-data-type.md) değerlerini, sayı olarak depolanmaz ve depolanan değerlerin sayıya eşit olması amaçlanmamıştır. Önceki sürümlerle uyumluluk için Visual Basic dönüşüm anahtar sözcükleri sağlar ([CType işlevi](../../../../visual-basic/language-reference/functions/ctype-function.md), `CBool`, `CInt`, vb.) arasında dönüştürme yapma `Boolean` ve sayısal türler. Bununla birlikte, diğer diller bazen dönüştürmeler gibi farklı şekilde gerçekleştirmeniz [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] yöntemleri.  
   
  Hiçbir zaman eşdeğer sayısal değerler için güvenen kod yazmanız gerekir `True` ve `False`. Mümkün olduğunda, kullanımını kısıtlamalısınız `Boolean` , bunlar tasarlanan mantıksal değerleri değişkenleri. Karışık gerekir, `Boolean` ve sayısal değerleri, seçtiğiniz dönüştürme yöntemi anladığınızdan emin olun.  
   
@@ -87,7 +88,7 @@ Bu sayfada, iç veri türleri üzerinde işlemler gerçekleştirdiğinizde oluş
  Dönüştürürseniz gerekir, bir `Boolean` değer sayısal veri türü için dikkatli olun hakkında hangi dönüştürme yöntemini kullanın.  
   
 ## <a name="character-literal-generates-compiler-error"></a>Derleyici Hatası karakter sabit değeri oluşturur  
- Herhangi bir tür karakteri olmadığında [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] veri türleri değişmez değerleri için varsayılan varsayar. Değişmez değer bir karakteri için varsayılan türü — tırnak işaretleri içine (`" "`) — olduğu `String`.  
+ Herhangi bir tür karakteri olmaması durumunda, Visual Basic veri türleri değişmez değerleri için varsayılan varsayar. Değişmez değer bir karakteri için varsayılan türü — tırnak işaretleri içine (`" "`) — olduğu `String`.  
   
  `String` Veri türü için genişletmek değil [Char veri türü](../../../../visual-basic/language-reference/data-types/char-data-type.md). Bunun anlamı bir hazır değer atamak istiyorsanız bir `Char` değişken, daraltma dönüştürme yapmak veya sabit zorla `Char` türü.  
 
@@ -102,7 +103,7 @@ Bu sayfada, iç veri türleri üzerinde işlemler gerçekleştirdiğinizde oluş
  Her zaman bir riski yoktur daraltma dönüşümleri kullanarak çünkü çalışma zamanında başarısız. Örneğin, bir dönüştürme `String` için `Char` başarısız `String` değeri birden fazla karakter içeriyor. Bu nedenle, daha iyi kullanmak için programlama `C` karakteri yazın.  
   
 ## <a name="string-conversion-fails-at-run-time"></a>Dize dönüştürme çalışma zamanında başarısız olur  
- [Dize veri türü](../../../../visual-basic/language-reference/data-types/string-data-type.md) çok az genişletme Dönüşümlerde katılır. `String`yalnızca kendisine widens ve `Object`, yalnızca ve `Char` ve `Char()` (bir `Char` array) için genişletmek `String`. Bunun nedeni, `String` değişkenleri ve sabitleri diğer veri türleri bulunamaz değerler içerebilir.  
+ [Dize veri türü](../../../../visual-basic/language-reference/data-types/string-data-type.md) çok az genişletme Dönüşümlerde katılır. `String` yalnızca kendisine widens ve `Object`, yalnızca ve `Char` ve `Char()` (bir `Char` array) için genişletmek `String`. Bunun nedeni, `String` değişkenleri ve sabitleri diğer veri türleri bulunamaz değerler içerebilir.  
   
  Tür denetleme zaman geçiş ([Option Strict deyimi](../../../../visual-basic/language-reference/statements/option-strict-statement.md)) olan `On`, tüm örtük daraltma dönüşümleri derleyici izin vermez. Bu ilgili olanlar içerir `String`. Kodunuzu dönüşüm anahtar sözcükleri gibi kullanmaya devam edebilirsiniz `CStr` ve [CType işlevi](../../../../visual-basic/language-reference/functions/ctype-function.md), hangi doğrudan [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] dönüştürme çalışır.  
   
@@ -121,10 +122,10 @@ Bu sayfada, iç veri türleri üzerinde işlemler gerçekleştirdiğinizde oluş
  Genel olarak, `String` değerlerini diğer veri türleri anlamlı değildir ve dönüştürme, yüksek oranda yapay ve tehlikeli. Mümkün olduğunda, kullanımını kısıtlamalısınız `String` , bunlar tasarlanan karakter dizileri değişkenleri. Hiçbir zaman diğer türleri eşdeğer değerleri dayanan kod yazmanız gerekir.  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [Veri türleri](../../../../visual-basic/programming-guide/language-features/data-types/index.md)  
- [Tür karakterleri](../../../../visual-basic/programming-guide/language-features/data-types/type-characters.md)  
- [Değer türleri ve başvuru türleri](../../../../visual-basic/programming-guide/language-features/data-types/value-types-and-reference-types.md)  
+ [Veri Türleri](../../../../visual-basic/programming-guide/language-features/data-types/index.md)  
+ [Tür Karakterleri](../../../../visual-basic/programming-guide/language-features/data-types/type-characters.md)  
+ [Değer Türleri ve Başvuru Türleri](../../../../visual-basic/programming-guide/language-features/data-types/value-types-and-reference-types.md)  
  [Visual Basic'de tür dönüştürmeleri](../../../../visual-basic/programming-guide/language-features/data-types/type-conversions.md)  
- [Veri türleri](../../../../visual-basic/language-reference/data-types/data-type-summary.md)  
- [Tür dönüşüm işlevleri](../../../../visual-basic/language-reference/functions/type-conversion-functions.md)  
- [Veri türlerinin etkili kullanımı](../../../../visual-basic/programming-guide/language-features/data-types/efficient-use-of-data-types.md)
+ [Veri Türleri](../../../../visual-basic/language-reference/data-types/data-type-summary.md)  
+ [Tür Dönüştürme İşlevleri](../../../../visual-basic/language-reference/functions/type-conversion-functions.md)  
+ [Veri Türlerinin Etkili Kullanımı](../../../../visual-basic/programming-guide/language-features/data-types/efficient-use-of-data-types.md)

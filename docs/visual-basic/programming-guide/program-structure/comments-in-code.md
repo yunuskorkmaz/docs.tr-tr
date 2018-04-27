@@ -1,11 +1,12 @@
 ---
-title: "Kod Açıklamaları (Visual Basic)"
-ms.custom: 
+title: Kod Açıklamaları (Visual Basic)
+ms.custom: ''
 ms.date: 07/20/2015
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- devlang-visual-basic
 ms.topic: article
 helpviewer_keywords:
 - Uncomment button
@@ -20,17 +21,17 @@ helpviewer_keywords:
 - comments
 - code comments
 ms.assetid: 90136fba-22eb-49f9-ba81-63db629b4a47
-caps.latest.revision: "17"
+caps.latest.revision: 17
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: 0cf1aa755c479c73c64951f80ab0b76985507da6
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 9cd3277ea61ac9b46d8d20028bd100811988f611
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="comments-in-code-visual-basic"></a>Kod Açıklamaları (Visual Basic)
-Kod örnekleri okurken Yorum simgesinin sık karşılaşırsanız (`'`). Bu simgenin söyler [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] , aşağıdaki metni yoksay derleyici veya *açıklama*. Açıklamalar, okuyan kişinin yararına olması için koda eklenmiş kısa ve açıklayıcı notlardır.  
+Kod örnekleri okurken Yorum simgesinin sık karşılaşırsanız (`'`). Bu simge, aşağıdaki metni yoksaymak için Visual Basic derleyici söyler veya *açıklama*. Açıklamalar, okuyan kişinin yararına olması için koda eklenmiş kısa ve açıklayıcı notlardır.  
   
  Tüm yordamlara, ilgili yordamın işlevsel özelliklerini (neler yaptığını) açıklayan kısa bir açıklama ile başlanması iyi bir programlama uygulamasıdır. Bu hem sizin yararınıza, hem de kodu inceleyen herhangi bir kişinin yararına olur. Gerçekleştirme ayrıntılarını (yordamın bunu nasıl yaptığı), işlevsel özellikleri anlatan açıklamalardan ayırmalısınız. Açıklamaya gerçekleştirme ayrıntılarını eklediğinizde, işlevi güncelleştirirken bunları da güncelleştirmeyi unutmayın.  
   
@@ -43,7 +44,7 @@ Kod örnekleri okurken Yorum simgesinin sık karşılaşırsanız (`'`). Bu simg
  [!code-vb[VbVbcnConventions#17](../../../visual-basic/programming-guide/language-features/codesnippet/VisualBasic/comments-in-code_2.vb)]  
   
 ## <a name="commenting-guidelines"></a>Açıklamalara İlişkin Kurallar  
- Aşağıdaki tabloda, kodun bir bölümünden önce hangi tür açıklamaların gelebileceğine dair genel kurallar verilmektedir. Bunlar önerilerdir; [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] açıklamaları eklemek için kuralları uygulamaz. Hem sizin, hem de kodu okuyan herhangi bir kişinin işine en çok yarayacak şeyleri yazın.  
+ Aşağıdaki tabloda, kodun bir bölümünden önce hangi tür açıklamaların gelebileceğine dair genel kurallar verilmektedir. Bunlar önerilerdir; Visual Basic açıklamaları eklemek için kuralları uygulamaz. Hem sizin, hem de kodu okuyan herhangi bir kişinin işine en çok yarayacak şeyleri yazın.  
   
 |||  
 |---|---|  
@@ -69,7 +70,7 @@ Kod örnekleri okurken Yorum simgesinin sık karşılaşırsanız (`'`). Bu simg
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
  [XML açıklamaları ile kodunuzu belgeleme](http://msdn.microsoft.com/magazine/dd722812.aspx)  
- [Nasıl yapılır: XML belgesi oluşturma](../../../visual-basic/programming-guide/program-structure/how-to-create-xml-documentation.md)  
- [XML açıklama etiketleri](../../../visual-basic/language-reference/xmldoc/recommended-xml-tags-for-documentation-comments.md)  
- [Program yapısı ve kod kuralları](../../../visual-basic/programming-guide/program-structure/program-structure-and-code-conventions.md)  
- [REM deyimi](../../../visual-basic/language-reference/statements/rem-statement.md)
+ [Nasıl yapılır: XML Belgesi Oluşturma](../../../visual-basic/programming-guide/program-structure/how-to-create-xml-documentation.md)  
+ [XML Açıklama Etiketleri](../../../visual-basic/language-reference/xmldoc/recommended-xml-tags-for-documentation-comments.md)  
+ [Program Yapısı ve Kod Kuralları](../../../visual-basic/programming-guide/program-structure/program-structure-and-code-conventions.md)  
+ [REM Deyimi](../../../visual-basic/language-reference/statements/rem-statement.md)

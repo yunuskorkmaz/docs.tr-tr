@@ -1,23 +1,24 @@
 ---
-title: "İşe alma işlemi"
-ms.custom: 
+title: İşe alma işlemi
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: d5fcacbb-c884-4b37-a5d6-02b1b8eec7b4
-caps.latest.revision: "13"
+caps.latest.revision: 13
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 30cad662a9cca679f7e8ce720cfde3d369b9ba60
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 8cfa23ab5f36b3a40de107a546dd4700a4523595
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="hiring-process"></a>İşe alma işlemi
 Bu örnek, Mesajlaşma etkinlikleri ve iş akışı Hizmetleri olarak barındırılan iki iş akışlarını kullanarak bir iş sürecini uygulamak gösterilmiştir. Bu iş akışları Contoso Ltd. adlı kurgusal bir şirkette BT altyapısının bir parçasıdır  
@@ -28,7 +29,7 @@ Bu örnek, Mesajlaşma etkinlikleri ve iş akışı Hizmetleri olarak barındır
   
  Bu örnek, aşağıdaki özellikleri gösteren [!INCLUDE[netfx_current_long](../../../../includes/netfx-current-long-md.md)]:  
   
--   <xref:System.Activities.Statements.Flowchart>ve <xref:System.Activities.Statements.Sequence> iş süreçlerini modelleme için iş akışları.  
+-   <xref:System.Activities.Statements.Flowchart> ve <xref:System.Activities.Statements.Sequence> iş süreçlerini modelleme için iş akışları.  
   
 -   İş akışı hizmetleri.  
   
@@ -48,9 +49,9 @@ Bu örnek, Mesajlaşma etkinlikleri ve iş akışı Hizmetleri olarak barındır
   
 -   Birleşim etkinlikler.  
   
--   <xref:System.Activities.Statements.Parallel>etkinlikler.  
+-   <xref:System.Activities.Statements.Parallel> etkinlikler.  
   
--   <xref:System.Activities.Statements.CancellationScope>Etkinlik.  
+-   <xref:System.Activities.Statements.CancellationScope> Etkinlik.  
   
 -   Dayanıklı zamanlayıcılar (<xref:System.Activities.Statements.Delay> etkinlik).  
   
@@ -129,25 +130,25 @@ Bu örnek, Mesajlaşma etkinlikleri ve iş akışı Hizmetleri olarak barındır
 |Özel İzleme|Örnek geçmişini kaydeden özel izleme katılımcı içeren bir `HiringRequestProcess` (Bu eylemi, kim tarafından gerçekleştirildi kaydeder ve ne zaman). Kaynak kodu HiringRequestService İzleme klasöründe bulunur.|HiringRequestService|  
 |ETW İzleme|Sistem tarafından sağlanan ETW İzleme HiringRequestService hizmet App.config dosyasında yapılandırılır.|HiringRequestService|  
 |Etkinlik oluşturma|İşlem tanımı boş oluşumunu kullanan <xref:System.Activities.Activity>. Akış birkaç dizisi ve aynı zamanda diğer etkinlikleri (vb.) içeren paralel etkinlikleri içerir.|HiringRequestService|  
-|Paralel etkinlikler|-   <xref:System.Activities.Statements.ParallelForEach%601>paralel (iki HR yöneticileri onay adım bekleniyor) CEO ve HR yöneticilerinin gelen kutunuzda kaydetmek için kullanılır.<br />-   <xref:System.Activities.Statements.Parallel>Tamamlanan ve reddedildi adımlarda bazı temizleme görevleri yapmak için kullanılır|HiringRequestService|  
+|Paralel etkinlikler|-   <xref:System.Activities.Statements.ParallelForEach%601> paralel (iki HR yöneticileri onay adım bekleniyor) CEO ve HR yöneticilerinin gelen kutunuzda kaydetmek için kullanılır.<br />-   <xref:System.Activities.Statements.Parallel> Tamamlanan ve reddedildi adımlarda bazı temizleme görevleri yapmak için kullanılır|HiringRequestService|  
 |Model iptali|Akış kullanan <xref:System.Activities.Statements.CancellationScope> iptal davranışı (Bu durumda bunu yapar bazı temizleyin.) oluşturmak için|HiringRequestService|  
-|Müşteri Kalıcılık katılımcı|`HiringRequestPersistenceParticipant`verileri bir iş akışı değişkeninden Contoso HR veritabanında depolanan bir tabloya kaydeder.|HiringRequestService|  
-|İş Akışı Hizmetleri|`ResumeRequestService`İş akışı Hizmetleri kullanılarak uygulanır. İş akışı tanımı ve hizmet bilgilerini ResumeRequestService.xamlx içinde yer alır. Hizmeti Kalıcılık ve izleme kullanmak üzere yapılandırılır.|ResumeRequestService|  
-|Dayanıklı zamanlayıcılar|`ResumeRequestService`dayanıklı zamanlayıcılar nakil iş süresini tanımlamak için kullanır (bir zaman aşımı süresi dolduktan sonra iş nakil kapalı).|ResumeRequestService|  
-|İşlemler|<xref:System.Activities.Statements.TransactionScope>(yeni Sürdür alındığında) birkaç etkinlik yürütülmesini içinde veri tutarlılığını sağlamak için kullanılır.|ResumeRequestService|  
+|Müşteri Kalıcılık katılımcı|`HiringRequestPersistenceParticipant` verileri bir iş akışı değişkeninden Contoso HR veritabanında depolanan bir tabloya kaydeder.|HiringRequestService|  
+|İş Akışı Hizmetleri|`ResumeRequestService` İş akışı Hizmetleri kullanılarak uygulanır. İş akışı tanımı ve hizmet bilgilerini ResumeRequestService.xamlx içinde yer alır. Hizmeti Kalıcılık ve izleme kullanmak üzere yapılandırılır.|ResumeRequestService|  
+|Dayanıklı zamanlayıcılar|`ResumeRequestService` dayanıklı zamanlayıcılar nakil iş süresini tanımlamak için kullanır (bir zaman aşımı süresi dolduktan sonra iş nakil kapalı).|ResumeRequestService|  
+|İşlemler|<xref:System.Activities.Statements.TransactionScope> (yeni Sürdür alındığında) birkaç etkinlik yürütülmesini içinde veri tutarlılığını sağlamak için kullanılır.|ResumeRequestService|  
 |İşlemler|Özel Kalıcılık katılımcı (`HiringRequestPersistenceParticipant`) ve özel izleme katılımcı (`HistoryFileTrackingParticipant`) aynı işlem kullanın.|HiringRequestService|  
 |Kullanarak [!INCLUDE[wf1](../../../../includes/wf1-md.md)] içinde [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] uygulamalar.|İş akışları iki erişilir [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] uygulamalar.|InternalClient / CareersWebSite|  
   
 ## <a name="data-storage"></a>Veri depolama  
  Veri adlı bir SQL Server veritabanında depolanan `ContosoHR` (Bu veritabanını oluşturmak için komut dosyası bulunan `DbSetup` klasörü). İş akışı örnekleri olarak adlandırılan bir SQL Server veritabanında depolanan `InstanceStore` (örnek deposuna oluşturma komut dosyaları parçası olan [!INCLUDE[netfx_current_short](../../../../includes/netfx-current-short-md.md)] dağıtım).  
   
- Her iki veritabanı Setup.cmd komut dosyasını çalıştırarak oluşturulan bir [!INCLUDE[vs_current_short](../../../../includes/vs-current-short-md.md)] komut istemi.  
+ Her iki veritabanı, bir Visual Studio komut isteminden Setup.cmd komut dosyasını çalıştırarak oluşturulur.  
   
 ## <a name="running-the-sample"></a>Örnek çalışıyor  
   
 #### <a name="to-create-the-databases"></a>Veritabanı oluşturma  
   
-1.  Açık bir [!INCLUDE[vs_current_short](../../../../includes/vs-current-short-md.md)] komut istemi.  
+1.  Visual Studio komut istemi açın.  
   
 2.  Örnek klasöre gidin.  
   
@@ -157,7 +158,7 @@ Bu örnek, Mesajlaşma etkinlikleri ve iş akışı Hizmetleri olarak barındır
   
 #### <a name="to-set-up-the-solution-for-execution"></a>Yürütme için çözüm ayarlamak için  
   
-1.  Çalıştırma [!INCLUDE[vs_current_short](../../../../includes/vs-current-short-md.md)] yönetici olarak. HiringRequest.sln açın.  
+1.  Visual Studio'yu yönetici olarak çalıştırın. HiringRequest.sln açın.  
   
 2.  Çözüme sağ **Çözüm Gezgini** seçip **özellikleri**.  
   
@@ -221,7 +222,7 @@ Bu örnek, Mesajlaşma etkinlikleri ve iş akışı Hizmetleri olarak barındır
   
 ## <a name="troubleshooting"></a>Sorun giderme  
   
-1.  Çalıştığından emin olun [!INCLUDE[vs_current_short](../../../../includes/vs-current-short-md.md)] yönetici ayrıcalıklarına sahip.  
+1.  Yönetici ayrıcalıklarıyla Visual Studio çalıştığından emin olun.  
   
 2.  Çözümü derleme işlemi başarısız olursa aşağıdakileri doğrulayın:  
   
@@ -237,7 +238,7 @@ Bu örnek, Mesajlaşma etkinlikleri ve iş akışı Hizmetleri olarak barındır
   
         2.  Sağ **Contoso** seçip **güncelleştirme Web/hizmet başvuruları**.  
   
-        3.  CTRL + SHIFT + B tuşuna basarak çözümü yeniden derleyin [!INCLUDE[vs_current_short](../../../../includes/vs-current-short-md.md)].  
+        3.  Visual Studio'da CTRL + SHIFT + B tuşuna basarak çözümü yeniden derleyin.  
   
 ## <a name="uninstalling"></a>Kaldırma  
   

@@ -1,24 +1,26 @@
 ---
-title: "Nasıl yapılır: EdmGen.exe modeli ve eşleme dosyaları oluşturmak için kullanın"
-ms.custom: 
+title: 'Nasıl yapılır: EdmGen.exe modeli ve eşleme dosyaları oluşturmak için kullanın'
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-ado
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-ado
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 40db462d-2fd2-4cc1-ad86-d280403e63fa
-caps.latest.revision: "4"
+caps.latest.revision: 4
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.workload: dotnet
-ms.openlocfilehash: 677955f0d5969d859febed2004e29ab8ebeb1b04
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.workload:
+- dotnet
+ms.openlocfilehash: 9208b52f4184b2b3aa91fee93d86c595220363fc
+ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="how-to-use-edmgenexe-to-generate-the-model-and-mapping-files"></a>Nasıl yapılır: EdmGen.exe modeli ve eşleme dosyaları oluşturmak için kullanın
 Bu konuda EDM Oluşturucu (EdmGen.exe) aracı Okul veritabanını temel alan aşağıdaki dosyaları oluşturmak için nasıl kullanılacağı gösterilmektedir:  
@@ -35,7 +37,7 @@ Bu konuda EDM Oluşturucu (EdmGen.exe) aracı Okul veritabanını temel alan aş
   
  EdmGen.exe aracı /mode:FullGeneration yukarıda listelenen dosyaları oluşturmak için kullanır. EdmGen.exe komutları hakkında daha fazla bilgi için bkz: [EDM Oluşturucu (EdmGen.exe)](../../../../../docs/framework/data/adonet/ef/edm-generator-edmgen-exe.md).  
   
- Model ve eşleme dosyaları oluşturmak için EdmGen.exe kullanırsanız hala yapılandırmanız gereken, [!INCLUDE[vsprvs](../../../../../includes/vsprvs-md.md)] kullanmak için proje [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)]. Daha fazla bilgi için bkz: [nasıl yapılır: bir Entity Framework projesi el ile yapılandırmanız](http://msdn.microsoft.com/library/73f6ae1d-b3b2-4577-aebd-ad5a75954e9e).  
+ Model ve eşleme dosyaları oluşturmak için EdmGen.exe kullanırsanız hala kullanmak için Visual Studio projenizi yapılandırmanız gereken [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)]. Daha fazla bilgi için bkz: [nasıl yapılır: bir Entity Framework projesi el ile yapılandırmanız](http://msdn.microsoft.com/library/73f6ae1d-b3b2-4577-aebd-ad5a75954e9e).  
   
 > [!NOTE]
 >  EdmGen.exe tarafından oluşturulan kavramsal model veritabanındaki tüm nesneleri içerir. Yalnızca belirli nesneleri içeren bir kavramsal model oluşturmak istiyorsanız, varlık veri modeli Sihirbazı'nı kullanın. Daha fazla bilgi için bkz: [nasıl yapılır: Varlık veri modeli Sihirbazı'nı](http://msdn.microsoft.com/library/dadb058a-c5d9-4c5c-8b01-28044112231d).  

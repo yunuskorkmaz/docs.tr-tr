@@ -1,12 +1,13 @@
 ---
-title: "Nasıl yapılır: Sorunlu Yazdırma İşini Tanımlama"
-ms.custom: 
+title: 'Nasıl yapılır: Sorunlu Yazdırma İşini Tanımlama'
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-wpf
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-wpf
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - csharp
@@ -17,19 +18,20 @@ helpviewer_keywords:
 - print jobs [WPF], troubleshooting
 - print jobs [WPF], diagnosing problems
 ms.assetid: b081a170-84c6-48f9-a487-5766a8d58a82
-caps.latest.revision: "7"
+caps.latest.revision: 7
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: cd9bfb187f77f1cff344aaeabebd36aec1312e30
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 2d8650f0bc5e30ff2ccbd4c2074a00c17140e7e2
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="how-to-diagnose-problematic-print-job"></a>Nasıl yapılır: Sorunlu Yazdırma İşini Tanımlama
-Ağ yöneticileri genellikle değil veya yavaş yazdırma yazdırma işleri hakkında kullanıcılardan şikayetlerinden alan. Yazdırma işi özellikleri de sağlanmaktadır zengin [!INCLUDE[TLA#tla_api#plural](../../../../includes/tlasharptla-apisharpplural-md.md)] , [!INCLUDE[TLA#tla_winfx](../../../../includes/tlasharptla-winfx-md.md)] yazdırma işlerinin hızlı uzaktan tanılamasını gerçekleştirmek için bir yol sağlar.  
+Ağ yöneticileri genellikle değil veya yavaş yazdırma yazdırma işleri hakkında kullanıcılardan şikayetlerinden alan. Yazdırma işi özellikleri de sağlanmaktadır zengin [!INCLUDE[TLA#tla_api#plural](../../../../includes/tlasharptla-apisharpplural-md.md)] yazdırma işlerinin hızlı uzaktan tanılamasını gerçekleştirmek için Microsoft .NET Framework'ü bir yol sağlar.  
   
 ## <a name="example"></a>Örnek  
  Bu tür bir yardımcı programı oluşturmak için önemli adımlar aşağıdaki gibidir.  

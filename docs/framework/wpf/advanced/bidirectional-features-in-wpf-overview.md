@@ -1,32 +1,34 @@
 ---
-title: "WPF Genel Bakışında Çift Yönlü Özellikler"
-ms.custom: 
+title: WPF Genel Bakışında Çift Yönlü Özellikler
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-wpf
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-wpf
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - Span elements [WPF]
 - bidirectional features [WPF]
 ms.assetid: fd850e25-7dba-408c-b521-8873e51dc968
-caps.latest.revision: "22"
+caps.latest.revision: 22
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: b50d98d5f02a59a013d7577f0e312e6ffde35690
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: fa2349bca86676f4dc3e1703216a2b0dc50ccd59
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="bidirectional-features-in-wpf-overview"></a>WPF Genel Bakışında Çift Yönlü Özellikler
 Tüm diğer geliştirme platformu, aksine [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] çift yönlü içeriğinin hızlı geliştirme desteği pek çok özellik vardır, örneğin, karma soldan sağa ve için sağa veri aynı belgede sol. Aynı anda [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] çift yönlü özellikler Arapça ve kullanıcıların konuşarak İbranice gibi isteyen kullanıcılar için mükemmel bir deneyim oluşturur.  
   
- Aşağıdaki bölümlerde, çift yönlü içerik en iyi görünümü elde etmek nasıl çalıştığını gösteren örnekler birlikte birçok çift yönlü özellikler açıklanmaktadır. Örneklerin en sık kullandığınız [!INCLUDE[TLA#tla_titlexaml](../../../../includes/tlasharptla-titlexaml-md.md)]kavramlara kolayca uygulayabilirsiniz ancak [!INCLUDE[TLA#tla_cshrp](../../../../includes/tlasharptla-cshrp-md.md)] veya [!INCLUDE[TLA#tla_visualb](../../../../includes/tlasharptla-visualb-md.md)] kodu.  
+ Aşağıdaki bölümlerde, çift yönlü içerik en iyi görünümü elde etmek nasıl çalıştığını gösteren örnekler birlikte birçok çift yönlü özellikler açıklanmaktadır. Örneklerin en sık kullandığınız [!INCLUDE[TLA#tla_titlexaml](../../../../includes/tlasharptla-titlexaml-md.md)]ancak C# veya Visual Basic kodu kavramları kolayca uygulayabilirsiniz.  
   
 
   
@@ -70,7 +72,7 @@ Tüm diğer geliştirme platformu, aksine [!INCLUDE[TLA2#tla_winclient](../../..
   
  İçinde [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)], <xref:System.Windows.Documents.FlowDocument> bir yönlüdür [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] metin, tablolar, resimleri ve diğer öğeleri bileşimini barındırabilir öğesi. Aşağıdaki bölümlerde örnekleri bu öğeyi kullanın.  
   
- Metin ekleme bir <xref:System.Windows.Documents.FlowDocument> bu bir şekilde daha yapılabilir. Bunu yapmak için basit bir yol aracılığıyladır bir <xref:System.Windows.Documents.Paragraph> metin gibi içeriği gruplandırmak için kullanılan blok düzeyi bir öğeyi olduğu. Örnekler kullanmak iç düzeydeki öğeler için metin eklemek için <xref:System.Windows.Documents.Span> ve <xref:System.Windows.Documents.Run>. <xref:System.Windows.Documents.Span>diğer satır içi öğeleri gruplandırmak için kullanılan bir satır içi düzeyi akış içerik öğe sırada bir <xref:System.Windows.Documents.Run> içi düzeyi akış öğesi hedeflenen biçimlendirilmemiş metin yürütülmesi içerecek şekilde içerik türüdür. A <xref:System.Windows.Documents.Span> birden çok içerebilir <xref:System.Windows.Documents.Run> öğeleri.  
+ Metin ekleme bir <xref:System.Windows.Documents.FlowDocument> bu bir şekilde daha yapılabilir. Bunu yapmak için basit bir yol aracılığıyladır bir <xref:System.Windows.Documents.Paragraph> metin gibi içeriği gruplandırmak için kullanılan blok düzeyi bir öğeyi olduğu. Örnekler kullanmak iç düzeydeki öğeler için metin eklemek için <xref:System.Windows.Documents.Span> ve <xref:System.Windows.Documents.Run>. <xref:System.Windows.Documents.Span> diğer satır içi öğeleri gruplandırmak için kullanılan bir satır içi düzeyi akış içerik öğe sırada bir <xref:System.Windows.Documents.Run> içi düzeyi akış öğesi hedeflenen biçimlendirilmemiş metin yürütülmesi içerecek şekilde içerik türüdür. A <xref:System.Windows.Documents.Span> birden çok içerebilir <xref:System.Windows.Documents.Run> öğeleri.  
   
  İlk belge örnek ağ paylaşım adları çeşitli sahip bir belge içerir; Örneğin `\\server1\folder\file.ext`. Bu ağ bağlantısı olup bir Arapça veya İngilizce, her zaman aynı şekilde görünmesini istediğiniz belgede. Aşağıdaki grafikte bir Arapça bağlantıyı gösterir <xref:System.Windows.FlowDirection.RightToLeft> belge.  
   
@@ -131,7 +133,7 @@ Tüm diğer geliştirme platformu, aksine [!INCLUDE[TLA2#tla_winclient](../../..
   
 <a name="FlowDirectionNontext"></a>   
 ## <a name="flowdirection-with-non-text-elements"></a>Metin dışı öğelerle FlowDirection  
- <xref:System.Windows.FlowDirection>yalnızca nasıl metin metinsel öğe aynı zamanda, neredeyse her diğer akış yönü içinde akar tanımlar [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] öğesi. Aşağıdaki grafik gösterildiği bir <xref:System.Windows.Controls.ToolBar> yatay kullanan <xref:System.Windows.Media.LinearGradientBrush> , arka plan çizmek için.  
+ <xref:System.Windows.FlowDirection> yalnızca nasıl metin metinsel öğe aynı zamanda, neredeyse her diğer akış yönü içinde akar tanımlar [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] öğesi. Aşağıdaki grafik gösterildiği bir <xref:System.Windows.Controls.ToolBar> yatay kullanan <xref:System.Windows.Media.LinearGradientBrush> , arka plan çizmek için.  
   
  **Bir araç çubuğu bir soldan sağa gradyan ile gösteren grafik**  
   
@@ -193,7 +195,7 @@ Tüm diğer geliştirme platformu, aksine [!INCLUDE[TLA2#tla_winclient](../../..
   
  Uygulamaları bunları bir dilden diğerine dönüştürmeyi gerek kalmadan sayısal değerleri işlemek izin verilen, örneğin bir kullanıcı açabilir bir [!INCLUDE[TLA#tla_xl](../../../../includes/tlasharptla-xl-md.md)] elektronik tabloda yerelleştirilmiş Arapça [!INCLUDE[TLA#tla_mswin](../../../../includes/tlasharptla-mswin-md.md)] ve Arapça'şeklinde numaralarını görebilirsiniz, ancak bunu açın Avrupa sürümü [!INCLUDE[TLA#tla_mswin](../../../../includes/tlasharptla-mswin-md.md)] ve Avrupa temsilini aynı numaralarını görebilirsiniz. Bunlar genellikle aynı belgedeki numaraları eşlik çünkü virgül ayırıcıları ve yüzde sembol gibi bu aynı zamanda diğer simgelerini gereklidir.  
   
- [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]aynı gelenek devam eder ve daha fazla değiştirme nasıl ve ne zaman kullanılır üzerinde daha fazla kullanıcı denetimi sağlayan bu özellik için destek ekler. Bu özellik herhangi bir dil için tasarlanmış olsa da, belirli bir dil için basamak şekillendirme genellikle Uygulama geliştiricileri için bir sınama uygulama çalışabilir çeşitli kültürler nedeniyle burada çift yönlü içerik özellikle yararlı olacaktır.  
+ [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] aynı gelenek devam eder ve daha fazla değiştirme nasıl ve ne zaman kullanılır üzerinde daha fazla kullanıcı denetimi sağlayan bu özellik için destek ekler. Bu özellik herhangi bir dil için tasarlanmış olsa da, belirli bir dil için basamak şekillendirme genellikle Uygulama geliştiricileri için bir sınama uygulama çalışabilir çeşitli kültürler nedeniyle burada çift yönlü içerik özellikle yararlı olacaktır.  
   
  İçinde nasıl sayı değiştirme denetleme çekirdek özelliği çalıştığı [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] olan <xref:System.Windows.Media.NumberSubstitution.Substitution%2A> bağımlılık özelliği. <xref:System.Windows.Media.NumberSubstitution> Sınıfı metin numaraları nasıl görüntüleneceğini belirtir. Davranışını tanımlayan üç ortak özellikleri vardır. Özelliklerin her biri bir özeti verilmiştir.  
   
@@ -251,7 +253,7 @@ Tüm diğer geliştirme platformu, aksine [!INCLUDE[TLA2#tla_winclient](../../..
 |-|  
 |`<TextBlock`<br /><br /> `Name="text1" NumberSubstitution.CultureSource="Text">`<br /><br /> `1234+5679=6913`<br /><br /> `</TextBlock>`|  
   
- Karşılık gelen [!INCLUDE[TLA2#tla_lhcshrp](../../../../includes/tla2sharptla-lhcshrp-md.md)] kod, ayarlamak `Language` özelliği örneğin `"ar-SA"`.  
+ Karşılık gelen C# kodunda ayarlamak `Language` özelliği örneğin `"ar-SA"`.  
   
 ||  
 |-|  
@@ -263,13 +265,13 @@ Tüm diğer geliştirme platformu, aksine [!INCLUDE[TLA2#tla_winclient](../../..
 |-|  
 |`text1.Language =`<br /><br /> `System.Windows.Markup.XmlLanguage.GetLanguage(`<br /><br /> `System.Globalization.CultureInfo.CurrentUICulture.IetfLanguageTag);`|  
   
- <xref:System.Globalization.CultureInfo.CurrentCulture%2A>Çalışma zamanında geçerli iş parçacığı tarafından kullanılan geçerli kültürü temsil eder.  
+ <xref:System.Globalization.CultureInfo.CurrentCulture%2A> Çalışma zamanında geçerli iş parçacığı tarafından kullanılan geçerli kültürü temsil eder.  
   
  Son [!INCLUDE[TLA#tla_titlexaml](../../../../includes/tlasharptla-titlexaml-md.md)] örnek aşağıdaki örneğe benzer.  
   
  [!code-xaml[Numbers2#Numbers2](../../../../samples/snippets/csharp/VS_Snippets_Wpf/Numbers2/CS/Window1.xaml#numbers2)]  
   
- Son [!INCLUDE[TLA#tla_cshrp](../../../../includes/tlasharptla-cshrp-md.md)] örnek aşağıdakine benzer.  
+ Son C# örnek aşağıdakine benzer olmalıdır.  
   
  [!code-csharp[NumbersCSharp#NumbersCSharp](../../../../samples/snippets/csharp/VS_Snippets_Wpf/NumbersCSharp/CSharp/Window1.xaml.cs#numberscsharp)]  
   

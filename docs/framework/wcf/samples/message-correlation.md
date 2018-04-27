@@ -1,24 +1,26 @@
 ---
-title: "İleti Bağıntısı"
-ms.custom: 
+title: İleti Bağıntısı
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 3f62babd-c991-421f-bcd8-391655c82a1f
-caps.latest.revision: "26"
+caps.latest.revision: 26
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 95336c55b2c3e83e2bd68bb653bbaacc446d8934
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 52dd8d66a4a28b515ebfaee88c4383889839fff0
+ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="message-correlation"></a>İleti Bağıntısı
 Bu örnek bir Message Queuing (MSMQ) uygulaması bir MSMQ iletisi nasıl gönderebilirsiniz gösteren bir [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] hizmeti ve nasıl iletileri bir istek/yanıt senaryosunda göndereni ve alıcısı uygulamalar arasında ilişkili olabilir. Bu örnek MsmqIntegrationBinding bağlama kullanır. Bu durumda, alan hizmetini sıraya alınan iletileri gözlemleyin olanak tanımak için bir kendi kendini barındıran konsol uygulaması hizmetidir. K  
@@ -28,8 +30,8 @@ Bu örnek bir Message Queuing (MSMQ) uygulaması bir MSMQ iletisi nasıl gönder
  `IOrderProcessor` Hizmet sözleşmesini tanımlayan queuing ile kullanım için uygun bir tek yönlü hizmet işlemi. Farklı MSMQ iletileri işlemi sözleşmeleri için otomatik olarak eşlemeye mümkün değildir bir MSMQ iletisinin bir eylem üstbilgisi yok. Bu nedenle, olabilir yalnızca bir işlem sözleşmesi bu durumda. Tanımlamak istiyorsanız daha fazla işlem hizmetinde sözleşmeler, uygulamanın hangi MSMQ üstbilgisinde (örneğin, etiket veya correlationıd değeri) ileti gönderme işlemi sözleşmeyi karar vermek için kullanılabilir bilgileri sağlamanız gerekir. Bu, gösterilmiştir [özel Demux](../../../../docs/framework/wcf/samples/custom-demux.md).  
   
  MSMQ iletisi aldığını üstbilgileri işlemi sözleşme farklı parametreler için eşlenen bilgileri de içermiyor. Bu nedenle, işlem sözleşmede yalnızca bir parametre olabilir. Parametre türünde <!--zz <xref:System.ServiceModel.MSMQIntegration.MsmqMessage%601>`MsmqMessage<T>`--> , `System.ServiceModel.MSMQIntegration.MsmqMessage` temel alınan MSMQ iletisi içerir. Türünde "T" `MsmqMessage<T>` sınıf MSMQ İleti gövdesi seri verileri temsil eder. Bu örnekte `PurchaseOrder` türü MSMQ İleti gövdesi seri.  
-  
-```  
+
+```csharp
 [ServiceContract(Namespace = "http://Microsoft.ServiceModel.Samples")]  
 [ServiceKnownType(typeof(PurchaseOrder))]  
 public interface IOrderProcessor  
@@ -37,11 +39,11 @@ public interface IOrderProcessor
     [OperationContract(IsOneWay = true, Action = "*")]  
     void SubmitPurchaseOrder(MsmqMessage<PurchaseOrder> msg);  
 }  
-```  
-  
+```
+
  Hizmet işlemini satın alma siparişi işler ve satın alma siparişi ve durumunu içeriğini hizmet konsol penceresinde görüntüler. <xref:System.ServiceModel.OperationBehaviorAttribute> İşlemi sıranın ile bir işlemde listeleme veya işlemi döndürdüğünde işlem tamamlandı olarak işaretlemek için yapılandırır. `PurchaseOrder` Hizmeti tarafından işlenmesi gereken sipariş ayrıntılarını içerir.  
-  
-```  
+
+```csharp
 // Service class that implements the service contract.  
 public class OrderProcessorService : IOrderProcessor  
 {  
@@ -74,13 +76,13 @@ public class OrderProcessorService : IOrderProcessor
         client.Close();  
     }  
 }  
-```  
-  
+```
+
  Özel bir istemci hizmetin kullandığı `OrderResponseClient` MSMQ ileti kuyruğuna göndermek için. Alan ve iletiyi işleyen bir uygulama bir MSMQ uygulaması olduğundan ve bir [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] uygulama, iki uygulama hiçbir örtük hizmet sözleşmesini yoktur. Bu senaryoda Svcutil.exe aracını kullanarak bir proxy şekilde oluşturamıyoruz.  
   
  Özel proxy temelde tüm aynıdır [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] kullanan uygulamalar `msmqIntegrationBinding` iletileri göndermek için bağlama. Diğer proxy'leri, bir dizi hizmet işlemleri içermeyecek. Bir Gönder ileti yalnızca işlemdir.  
-  
-```  
+
+```csharp
 [System.ServiceModel.ServiceContractAttribute(Namespace = "http://Microsoft.ServiceModel.Samples")]  
 public interface IOrderResponse  
 {  
@@ -108,11 +110,11 @@ public partial class OrderResponseClient : System.ServiceModel.ClientBase<IOrder
         base.Channel.SendOrderResponse(msg);  
     }  
 }  
-```  
-  
+```
+
  Kendi kendini barındırılan hizmetidir. MSMQ tümleştirme taşıma kullanırken, sıranın kullanılan önceden oluşturulmuş olması gerekir. Bu, el ile veya kod aracılığıyla yapılabilir. Bu örnekte, hizmeti içeren <xref:System.Messaging> kod sıranın varlığını denetlemek ve gerekirse oluşturun. Kuyruk adı yapılandırma dosyasından okunur.  
-  
-```  
+
+```csharp
 public static void Main()  
 {  
        // Get the MSMQ queue name from application settings in configuration.  
@@ -134,7 +136,7 @@ public static void Main()
             serviceHost.Close();  
       }  
 }  
-```  
+```
   
  Sipariş isteklerinin gönderilme MSMQ sırası yapılandırma dosyasının appSettings bölümünde belirtilir. İstemci ve hizmet uç noktaları yapılandırma dosyası system.serviceModel bölümünde tanımlanır. Her ikisini de belirtin `msmqIntegrationbinding` bağlama.  
   
@@ -176,8 +178,8 @@ public static void Main()
 ```  
   
  İstemci uygulaması kullanan <xref:System.Messaging> dayanıklı ve işlemsel ileti kuyruğuna göndermek için. İleti gövdesi satın alma siparişi içerir.  
-  
-```  
+
+```csharp
 static void PlaceOrder()  
 {  
     //Connect to the queue  
@@ -219,8 +221,8 @@ static void PlaceOrder()
     orderMessageID = msg.Id;  
     Console.WriteLine("Placed the order, waiting for response...");  
 }  
-```  
-  
+```
+
  Sırası yanıtlarını alındığı MSMQ sırası, aşağıdaki örnek yapılandırmada gösterildiği gibi bir yapılandırma dosyasının appSettings bölümünde belirtilir.  
   
 > [!NOTE]
@@ -233,8 +235,8 @@ static void PlaceOrder()
 ```  
   
  İstemci uygulama kaydeder `messageID` sipariş istek iletisinin hizmetine gönderir ve hizmetinden bir yanıt bekler. Bir yanıt sırada geldikten sonra istemci, gönderilen kullanarak sipariş iletiyle karşılık gelen `correlationID` içeren iletinin özelliği `messageID` sırasını ileti hizmete ilk olarak gönderilen istemci.  
-  
-```  
+
+```csharp
 static void DisplayOrderStatus()  
 {  
     MessageQueue orderResponseQueue = new   
@@ -273,8 +275,8 @@ static void DisplayOrderStatus()
     }  
   }  
 }  
-```  
-  
+```
+
  Örneği çalıştırdığınızda, istemci ve hizmet etkinlikleri hem hizmet hem de istemci konsol pencerelerinde görüntülenir. Bir yanıt istemciye geri hizmeti alma iletileri gönderir ve istemci görebilirsiniz. İstemci hizmetinden alınan yanıtta görüntüler. Her konsol penceresinde hizmet ve istemci kapatmak için ENTER tuşuna basın.  
   
 > [!NOTE]

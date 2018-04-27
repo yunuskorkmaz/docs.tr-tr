@@ -19,19 +19,19 @@ ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: 1d2a79a05f18fecf4e008aa6a95d359c719e854b
-ms.sourcegitcommit: f28752eab00d2bd97e971542c0f49ce63cfbc239
+ms.openlocfilehash: 00161608997abc14202775c06ecfb283d8d67013
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/29/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="application-development"></a>Uygulama Geliştirme
 <a name="introduction"></a>
-[!INCLUDE[TLA#tla_wpf](../../../../includes/tlasharptla-wpf-md.md)]Aşağıdaki uygulama türlerini geliştirmek için kullanılan bir sunu çerçevesidir:  
+[!INCLUDE[TLA#tla_wpf](../../../../includes/tlasharptla-wpf-md.md)] Aşağıdaki uygulama türlerini geliştirmek için kullanılan bir sunu çerçevesidir:  
   
 -   Tek başına uygulamaları (Geleneksel stili [!INCLUDE[TLA#tla_mswin](../../../../includes/tlasharptla-mswin-md.md)] yükleneceğini ve istemci bilgisayardan çalıştırılan yürütülebilir derlemeleri olarak oluşturulan uygulamalar).  
   
--   [!INCLUDE[TLA#tla_xbap#plural](../../../../includes/tlasharptla-xbapsharpplural-md.md)](uygulamalar oluşan yürütülebilir derlemeleri olarak oluşturulan ve Web tarayıcıları tarafından gibi barındırılan Gezinti sayfalarının [!INCLUDE[TLA#tla_ie](../../../../includes/tlasharptla-ie-md.md)] veya Mozilla Firefox).  
+-   [!INCLUDE[TLA#tla_xbap#plural](../../../../includes/tlasharptla-xbapsharpplural-md.md)] (uygulamalar oluşan yürütülebilir derlemeleri olarak oluşturulan ve Web tarayıcıları tarafından gibi barındırılan Gezinti sayfalarının [!INCLUDE[TLA#tla_ie](../../../../includes/tlasharptla-ie-md.md)] veya Mozilla Firefox).  
   
 -   Özel denetim kitaplıkları (yapılamayan derlemeleri yeniden kullanılabilir denetimler içeren).  
   
@@ -70,7 +70,7 @@ ms.lasthandoff: 01/29/2018
   
 <a name="WPF_Application_Resource__Content__and_Data_Files"></a>   
 ## <a name="wpf-application-resource-content-and-data-files"></a>WPF Uygulama Kaynağı, İçerik ve Veri Dosyaları  
- [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]Çekirdek desteği genişletir [!INCLUDE[TLA#tla_winfx](../../../../includes/tlasharptla-winfx-md.md)] yapılamayan veri dosyaları üç tür desteğiyle gömülü kaynaklar için: kaynak, içeriğini ve veri. Daha fazla bilgi için bkz: [WPF Uygulama kaynağı, içerik ve veri dosyalarını](../../../../docs/framework/wpf/app-development/wpf-application-resource-content-and-data-files.md).  
+ [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] gömülü kaynaklar için Microsoft .NET Framework Çekirdek desteği yapılamayan veri dosyaları üç tür desteği ile genişletir: kaynak, içeriğini ve veri. Daha fazla bilgi için bkz: [WPF Uygulama kaynağı, içerik ve veri dosyalarını](../../../../docs/framework/wpf/app-development/wpf-application-resource-content-and-data-files.md).  
   
  WPF yapılamayan veri dosyaları için destek kilit bir bileşeni belirlemek ve benzersiz bir kullanarak bunları yüklemek yeteneğidir [!INCLUDE[TLA2#tla_uri](../../../../includes/tla2sharptla-uri-md.md)]. Daha fazla bilgi için bkz: [Pack URI WPF'de](../../../../docs/framework/wpf/app-development/pack-uris-in-wpf.md).  
   
@@ -88,9 +88,9 @@ ms.lasthandoff: 01/29/2018
   
  Daha fazla bilgi için bkz: [WPF Windows genel bakış](../../../../docs/framework/wpf/app-development/wpf-windows-overview.md).  
   
- <xref:System.Windows.Window>özel türde bir iletişim kutusu olarak bilinen penceresi oluşturma olanağı destekler. Kalıcı ve kalıcı olmayan iletişim kutuları türleri oluşturulabilir.  
+ <xref:System.Windows.Window> özel türde bir iletişim kutusu olarak bilinen penceresi oluşturma olanağı destekler. Kalıcı ve kalıcı olmayan iletişim kutuları türleri oluşturulabilir.  
   
- Kolaylık sağlamak ve yeniden kullanılırlığı ve uygulamalar arasında tutarlı bir kullanıcı deneyimi avantajları [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] üç genel kullanıma sunan [!INCLUDE[TLA2#tla_mswin](../../../../includes/tla2sharptla-mswin-md.md)] iletişim kutuları: <xref:Microsoft.Win32.OpenFileDialog>, <xref:Microsoft.Win32.SaveFileDialog>, ve <xref:System.Windows.Controls.PrintDialog>.  
+ Kolaylık sağlamak ve yeniden kullanılırlığı ve uygulamalar arasında tutarlı bir kullanıcı deneyimi avantajları [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] üç genel Windows iletişim kutularında sunar: <xref:Microsoft.Win32.OpenFileDialog>, <xref:Microsoft.Win32.SaveFileDialog>, ve <xref:System.Windows.Controls.PrintDialog>.  
   
  Bir ileti kutusu iletişim kutusu kullanıcılara önemli metinsel bilgileri göstermek için ve basit Evet/Hayır/Tamam/iptal sorular sormak için özel bir türde değil. Kullandığınız <xref:System.Windows.MessageBox> oluşturmak ve ileti kutuları göstermek için sınıf.  
   
@@ -98,7 +98,7 @@ ms.lasthandoff: 01/29/2018
   
 <a name="Navigation"></a>   
 ## <a name="navigation"></a>Gezinme  
- [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]sayfalarını kullanarak Web stili Gezinti destekler (<xref:System.Windows.Controls.Page>) ve köprüleri (<xref:System.Windows.Documents.Hyperlink>). Gezinti çeşitli şunlardır şekillerde uygulanabilir:  
+ [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] sayfalarını kullanarak Web stili Gezinti destekler (<xref:System.Windows.Controls.Page>) ve köprüleri (<xref:System.Windows.Documents.Hyperlink>). Gezinti çeşitli şunlardır şekillerde uygulanabilir:  
   
 -   Bir Web tarayıcısında barındırılan tek başına sayfa.  
   
@@ -120,11 +120,11 @@ ms.lasthandoff: 01/29/2018
   
  Bilgi için bkz: [Gezinti genel bakış](../../../../docs/framework/wpf/app-development/navigation-overview.md).  
   
- [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]Ayrıca özel türde bir gezinti yapılandırılmış Gezinti bilinen destekler. Yapılandırılmış Gezinti işlevleri çağırma ile tutarlıdır yapılandırılmış ve tahmin edilebilir şekilde dönüş verileri bir veya daha fazla sayfa çağırmak için kullanılabilir. Bu özellik bağımlı <xref:System.Windows.Navigation.PageFunction%601> daha ayrıntılı açıklanmıştır sınıfı [yapılandırılmış Gezinti genel bakış](../../../../docs/framework/wpf/app-development/structured-navigation-overview.md). <xref:System.Windows.Navigation.PageFunction%601>Ayrıca açıklanan karmaşık gezinti topolojileri oluşturma işlemini basitleştirmek için hizmet [gezinti topolojilerine genel bakış](../../../../docs/framework/wpf/app-development/navigation-topologies-overview.md).  
+ [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] Ayrıca özel türde bir gezinti yapılandırılmış Gezinti bilinen destekler. Yapılandırılmış Gezinti işlevleri çağırma ile tutarlıdır yapılandırılmış ve tahmin edilebilir şekilde dönüş verileri bir veya daha fazla sayfa çağırmak için kullanılabilir. Bu özellik bağımlı <xref:System.Windows.Navigation.PageFunction%601> daha ayrıntılı açıklanmıştır sınıfı [yapılandırılmış Gezinti genel bakış](../../../../docs/framework/wpf/app-development/structured-navigation-overview.md). <xref:System.Windows.Navigation.PageFunction%601> Ayrıca açıklanan karmaşık gezinti topolojileri oluşturma işlemini basitleştirmek için hizmet [gezinti topolojilerine genel bakış](../../../../docs/framework/wpf/app-development/navigation-topologies-overview.md).  
   
 <a name="Hosting"></a>   
 ## <a name="hosting"></a>Barındırma  
- [!INCLUDE[TLA2#tla_xbap#plural](../../../../includes/tla2sharptla-xbapsharpplural-md.md)]içinde barındırılan [!INCLUDE[TLA#tla_ie](../../../../includes/tlasharptla-ie-md.md)] ya da Firefox. Her bir barındırma modeli hakkında önemli noktalar ve ele alınmaktadır kısıtlamalar kendi ayarlanmış [barındırma](../../../../docs/framework/wpf/app-development/hosting-wpf-applications.md).  
+ [!INCLUDE[TLA2#tla_xbap#plural](../../../../includes/tla2sharptla-xbapsharpplural-md.md)] içinde barındırılan [!INCLUDE[TLA#tla_ie](../../../../includes/tlasharptla-ie-md.md)] ya da Firefox. Her bir barındırma modeli hakkında önemli noktalar ve ele alınmaktadır kısıtlamalar kendi ayarlanmış [barındırma](../../../../docs/framework/wpf/app-development/hosting-wpf-applications.md).  
   
 <a name="Build_and_Deploy"></a>   
 ## <a name="build-and-deploy"></a>Yapılandırma ve Dağıtma  
@@ -142,5 +142,5 @@ ms.lasthandoff: 01/29/2018
 |[Gezintiye Genel Bakış](../../../../docs/framework/wpf/app-development/navigation-overview.md)|Uygulamanızın sayfaları arasında gezinme yönetimine genel bir bakış sağlar.|  
 |[Barındırma](../../../../docs/framework/wpf/app-development/hosting-wpf-applications.md)|Genel bir bakış sağlar [!INCLUDE[TLA#tla_xbap#plural](../../../../includes/tlasharptla-xbapsharpplural-md.md)].|  
 |[Derleme ve Dağıtma](../../../../docs/framework/wpf/app-development/building-and-deploying-wpf-applications.md)|Derleme ve WPF uygulamanızı dağıtmak açıklar.|  
-|[Visual Studio'da WPF'ye giriş](../../../../docs/framework/wpf/getting-started/introduction-to-wpf-in-vs.md)|WPF ana özelliklerini açıklar.|  
+|[Visual Studio’da WPF’ye Giriş](../../../../docs/framework/wpf/getting-started/introduction-to-wpf-in-vs.md)|WPF ana özelliklerini açıklar.|  
 |[İzlenecek Yol: İlk WPF masaüstü uygulamam](../../../../docs/framework/wpf/getting-started/walkthrough-my-first-wpf-desktop-application.md)|Gösterir uygulamasını kullanarak bir WPF oluşturmak için sayfa nasıl gezinme, düzeni, denetimleri, görüntüler, stil bir gözden geçirme ve bağlama.|

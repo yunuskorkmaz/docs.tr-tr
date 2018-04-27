@@ -1,11 +1,12 @@
 ---
-title: "İşleç Yordamları (Visual Basic)"
-ms.custom: 
+title: İşleç Yordamları (Visual Basic)
+ms.custom: ''
 ms.date: 07/20/2015
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- devlang-visual-basic
 ms.topic: article
 helpviewer_keywords:
 - Visual Basic code, procedures
@@ -17,22 +18,22 @@ helpviewer_keywords:
 - operator overloading
 - operator procedures
 ms.assetid: 8c513d38-246b-4fb7-8b75-29e1364e555b
-caps.latest.revision: "17"
+caps.latest.revision: 17
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: 865695731dd591b0c48f4416814fa97edf4ea42e
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 8fba5180da6498d280fa4192937c39d3e33168e8
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="operator-procedures-visual-basic"></a>İşleç Yordamları (Visual Basic)
-Bir işleç yordamı dizisidir [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] standart işleci davranışını tanımlama deyimleri (gibi `*`, `<>`, veya `And`) bir sınıf veya yapı tanımladığınız. Bu da adlandırılır *İşleç aşırı yüklemesi*.  
+Bir dizi standart işleci davranışını tanımlamak Visual Basic deyimi bir işleç yordamı olduğu (gibi `*`, `<>`, veya `And`) bir sınıf veya yapı tanımladığınız. Bu da adlandırılır *İşleç aşırı yüklemesi*.  
   
 ## <a name="when-to-define-operator-procedures"></a>İşleç yordamları tanımlamak ne zaman  
  Bir sınıf veya yapı tanımlandığında, bu sınıf veya yapı türünde olmasını değişkenleri bildirebilirsiniz. Bazen bir ifadenin bir parçası olarak bir işlem katılmayı gibi bir değişken gerekiyor. Bunu yapmak için bir işlecinin işleneni olmalıdır.  
   
- [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]işleçler üzerinde yalnızca kendi temel veri türlerini tanımlar. Bir işleç davranışını tanımlamak ya da işlenen her ikisi de sınıf veya yapı türünü.  
+ Visual Basic işleçleri üzerinde yalnızca kendi temel veri türlerini tanımlar. Bir işleç davranışını tanımlamak ya da işlenen her ikisi de sınıf veya yapı türünü.  
   
  Daha fazla bilgi için bkz: [Operator deyimi](../../../../visual-basic/language-reference/statements/operator-statement.md).  
   
@@ -90,13 +91,13 @@ Bir işleç yordamı dizisidir [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] stand
  Daha fazla bilgi ve örnekler için bkz: [İşleç aşırı yüklemesi Visual Basic 2005](http://go.microsoft.com/fwlink/?LinkId=101703).  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [Yordamları](./index.md)  
- [Alt yordamlar](./sub-procedures.md)  
- [İşlev yordamları](./function-procedures.md)  
- [Özellik yordamları](./property-procedures.md)  
- [Parametreler ve bağımsız değişkenler](./procedure-parameters-and-arguments.md)  
- [Operator deyimi](../../../../visual-basic/language-reference/statements/operator-statement.md)  
- [Nasıl yapılır: bir işleci tanımlama](./how-to-define-an-operator.md)  
- [Nasıl yapılır: bir dönüşüm işleci tanımlama](./how-to-define-a-conversion-operator.md)  
- [Nasıl yapılır: bir işleç yordamı çağırma](./how-to-call-an-operator-procedure.md)  
- [Nasıl yapılır: işleçleri tanımlayan bir sınıf kullanma](./how-to-use-a-class-that-defines-operators.md)
+ [Yordamlar](./index.md)  
+ [Alt Yordamlar](./sub-procedures.md)  
+ [İşlev Yordamları](./function-procedures.md)  
+ [Özellik Yordamları](./property-procedures.md)  
+ [Yordam Parametreleri ve Bağımsız Değişkenleri](./procedure-parameters-and-arguments.md)  
+ [Operator Deyimi](../../../../visual-basic/language-reference/statements/operator-statement.md)  
+ [Nasıl yapılır: İşleç Tanımlama](./how-to-define-an-operator.md)  
+ [Nasıl yapılır: Dönüştürme İşleci Tanımlama](./how-to-define-a-conversion-operator.md)  
+ [Nasıl yapılır: Bir İşleç Yordamı Çağırma](./how-to-call-an-operator-procedure.md)  
+ [Nasıl yapılır: İşleçleri Tanımlayan Bir Sınıf Kullanma](./how-to-use-a-class-that-defines-operators.md)

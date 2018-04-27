@@ -15,11 +15,11 @@ ms.assetid: c025b2e0-2357-4c27-8461-118f0090aeff
 caps.latest.revision: 43
 author: BillWagner
 ms.author: wiwagn
-ms.openlocfilehash: 58538b690958e11b1590c13e6709cac4109ef49d
-ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
+ms.openlocfilehash: 51a92f89415fd3750d8d2e1880be0d9c2867600d
+ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="interoperability-overview-c-programming-guide"></a>Birlikte Çalışabilirliğe Genel Bakış (C# Programlama Kılavuzu)
 Konu C# yönetilen kodu ve yönetilmeyen kod birlikte çalışabilirliği sağlamak için yöntemleri açıklar.  
@@ -42,7 +42,7 @@ Konu C# yönetilen kodu ve yönetilmeyen kod birlikte çalışabilirliği sağla
   
 2.  Projeye COM bileşeni veya türü kitaplığına bir başvuru ekleyin.  
   
-     Başvuru eklerken [!INCLUDE[vsprvs](~/includes/vsprvs-md.md)] kullanan [Tlbimp.exe (tür kitaplığı içeri Aktarıcı)](../../../../docs/framework/tools/tlbimp-exe-type-library-importer.md), .NET Framework birlikte çalışma derlemesi çıktısını almak için giriş olarak bir tür kitaplığı alır. Ayrıca bir çalışma zamanı aranabilir sarmalayıcısı (RCW) adlı bir derlemeye yönetilen sınıflar ve COM sınıfları sarmalamak arabirimleri ve Tür Kitaplığı'nda bulunan arabirimlerin içerir. [!INCLUDE[vsprvs](~/includes/vsprvs-md.md)] projeye oluşturulan derlemesine başvuru ekler.  
+     Referans eklediğinizde, Visual Studio kullanan [Tlbimp.exe (tür kitaplığı içeri Aktarıcı)](../../../../docs/framework/tools/tlbimp-exe-type-library-importer.md), .NET Framework birlikte çalışma derlemesi çıktısını almak için giriş olarak bir tür kitaplığı alır. Ayrıca bir çalışma zamanı aranabilir sarmalayıcısı (RCW) adlı bir derlemeye yönetilen sınıflar ve COM sınıfları sarmalamak arabirimleri ve Tür Kitaplığı'nda bulunan arabirimlerin içerir. Visual Studio projesi için oluşturulan derlemesine başvuru ekler.  
   
 3.  RCW tanımlı bir sınıf örneği oluşturun. Bu, buna karşılık, COM nesnesinin örneği oluşturur.  
   
@@ -59,7 +59,7 @@ Konu C# yönetilen kodu ve yönetilmeyen kod birlikte çalışabilirliği sağla
   
 2.  Bir COM tür kitaplığı oluşturmak ve COM kullanımı için kaydolun.  
   
-     C# derleme COM birlikte çalışma için otomatik olarak kaydedilecek şekilde Visual C# proje özelliklerini değiştirebilirsiniz. [!INCLUDE[vsprvs](~/includes/vsprvs-md.md)] kullanan [Regasm.exe (derleme kayıt aracı)](../../../../docs/framework/tools/regasm-exe-assembly-registration-tool.md)kullanarak `/tlb` komut satırı anahtarı, bir tür kitaplığı oluşturmak için yönetilen bir derleme giriş olarak alır. Bu tür kitaplığını açıklar `public` türleri derlemede ve COM istemcileri yönetilen sınıflar oluşturabilmesi için kayıt defteri girdileri ekler.  
+     C# derleme COM birlikte çalışma için otomatik olarak kaydedilecek şekilde Visual C# proje özelliklerini değiştirebilirsiniz. Visual Studio kullanan [Regasm.exe (derleme kayıt aracı)](../../../../docs/framework/tools/regasm-exe-assembly-registration-tool.md)kullanarak `/tlb` komut satırı anahtarı, bir tür kitaplığı oluşturmak için yönetilen bir derleme giriş olarak alır. Bu tür kitaplığını açıklar `public` türleri derlemede ve COM istemcileri yönetilen sınıflar oluşturabilmesi için kayıt defteri girdileri ekler.  
   
  Daha fazla bilgi için bkz: [.NET Framework bileşenlerini COM'da gösterme](../../../../docs/framework/interop/exposing-dotnet-components-to-com.md) ve [örnek COM sınıfı](../../../csharp/programming-guide/interop/example-com-class.md).  
   

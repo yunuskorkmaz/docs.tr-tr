@@ -16,11 +16,11 @@ ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: d40b59faa4d0f50e59daaa71da6127da367f008b
-ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
+ms.openlocfilehash: b8b3e3006072855673c37786ffb763fcd610e40c
+ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="building-the-windows-communication-foundation-samples"></a>Windows Communication Foundation Örnekleri Derleme
 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] Örnekleri, Visual Studio 2010 veya kullanarak oluşturulabilen **msbuild** komut satırından komutu. Bu konuda iki yordam açıklanmaktadır.  
@@ -39,9 +39,9 @@ ms.lasthandoff: 04/26/2018
   
 ### <a name="to-build-the-sample-using-visual-studio"></a>Visual Studio kullanarak örneği oluşturmak için  
   
-1.  Kullanıyorsanız [!INCLUDE[wv](../../../../includes/wv-md.md)], [!INCLUDE[lserver](../../../../includes/lserver-md.md)], Windows 7 veya Windows Server 2008 R2 ve çalışan [!INCLUDE[vs_current_long](../../../../includes/vs-current-long-md.md)], çalıştırmalısınız [!INCLUDE[vsprvs](../../../../includes/vsprvs-md.md)] yükseltilmiş iznine sahip. Bunu yapmak için Başlat menüsünde simgesine sağ tıklayın ve ardından **yönetici olarak çalıştır**.  
+1.  Kullanıyorsanız [!INCLUDE[wv](../../../../includes/wv-md.md)], [!INCLUDE[lserver](../../../../includes/lserver-md.md)], Windows 7 veya Windows Server 2008 R2 ve çalışan [!INCLUDE[vs_current_long](../../../../includes/vs-current-long-md.md)], Visual Studio yükseltilmiş izinle çalıştırmanız gerekir. Bunu yapmak için Başlat menüsünde simgesine sağ tıklayın ve ardından **yönetici olarak çalıştır**.  
   
-2.  Gelen **dosya** Visual Studio'da menüsünü **açık**, ardından **proje/çözüm**. Dile özgü alt örnek yüklenen dizini altında gidin ve çözümde açmak için .sln dosyasını simgesini çift [!INCLUDE[vsprvs](../../../../includes/vsprvs-md.md)].  
+2.  Gelen **dosya** Visual Studio'da menüsünü **açık**, ardından **proje/çözüm**. Dile özgü alt örnek yüklenen dizini altında gidin ve Visual Studio'da Çözüm açmak için .sln dosyasını simgesini çift tıklatın.  
   
 3.  İçinde **yapı** menüsünde, select **çözümü yeniden derle**. İstemci program dosyaları için client\bin yerleşiktir ve hizmet program dosyaları için service\bin oluşturulur. Hizmet IIS'de barındırılıyorsa, hizmet program dosyalarını servicemodelsamples dizin ve \bin alt dizini de kopyalanır.  
   

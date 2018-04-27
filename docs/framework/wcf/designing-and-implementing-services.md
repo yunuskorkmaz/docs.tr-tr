@@ -1,28 +1,28 @@
 ---
 title: Hizmetleri Tasarlama ve Uygulama
-ms.custom: 
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - dotnet-clr
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - defining service contracts [WCF]
 ms.assetid: 036fae20-7c55-4002-b71d-ac4466e167a3
-caps.latest.revision: 
+caps.latest.revision: 37
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: b6d5a2dfb4db1d57f60e4c7f8cf3300b766402e1
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 9b954a8ac4f8507b095eb97d0724095cecc7b75b
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="designing-and-implementing-services"></a>Hizmetleri Tasarlama ve Uygulama
 Bu bölümde tanımlamak ve uygulamak gösterilmiştir [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] sözleşmeleri. Bir hizmet sözleşmesini ne bir uç nokta için dış dünya iletişim kurar belirtir. Daha somut bir düzeyde, bu temel ileti exchange desenleri (MEPs) düzenlenmiştir belirli iletileri kümesi hakkında istek/yanıt gibi tek yönlü ve çift yönlü açıklamadır. Bir hizmet sözleşmesini ileti alışverişlerinde mantıksal olarak ilişkili bir dizi, bir hizmet işlemi tek bir ileti exchange ise. Örneğin, bir `Hello` işlemi (arayan Tebrik Duyurusu şekilde) açıkça bir ileti kabul etmeniz gerekir ve olabilir veya (işlemi geçici kullanım bağlı olarak) bir ileti döndürmeyebilir.  
@@ -68,7 +68,7 @@ Bu bölümde tanımlamak ve uygulamak gösterilmiştir [!INCLUDE[indigo2](../../
  Sözleşmeleri tasarlama hakkında daha fazla bilgi için bkz: [Hizmet sözleşmeleri tasarlama](../../../docs/framework/wcf/designing-service-contracts.md). Sözleşmelerini uygulama hakkında daha fazla bilgi için bkz: [hizmet sözleşmelerini uygulama](../../../docs/framework/wcf/implementing-service-contracts.md).  
   
 ### <a name="messages-up-front-and-center"></a>Ön ve merkezi iletileri  
- Yönetilen arabirimleri, sınıflar ve yöntemler modeli hizmet işlemlerine kullanarak basit uzaktan yordam çağrısı (RPC) kullanıldığında-stil yöntemi imzalar, hangi bir yönteme parametreleri geçirme dönüş değerleri alma olup normal biçiminde bir nesne veya başka bir kod türünden işlevselliği isteniyor. Örneğin, kullanarak programcıları diller gibi yönetilen [!INCLUDE[vbprvb](../../../includes/vbprvb-md.md)] ve C++ COM uygulayabileceğiniz bilgilerini RPC-style yaklaşımın (nesneleri veya arabirimleri kullanarak olup olmadığını) oluşturulmasına [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] Hizmet sözleşmeleri sorunlarınız olmadan RPC stilde devralınan dağıtılmış nesne sistemleri. Hizmet yönlendirmesi programlama deneyimine kolaylığı ve RPC aşina olduğunuz korurken geniş eşleşmiş, ileti kaynaklı programlama yararları sağlar.  
+ Yönetilen arabirimleri, sınıflar ve yöntemler modeli hizmet işlemlerine kullanarak basit uzaktan yordam çağrısı (RPC) kullanıldığında-stil yöntemi imzalar, hangi bir yönteme parametreleri geçirme dönüş değerleri alma olup normal biçiminde bir nesne veya başka bir kod türünden işlevselliği isteniyor. Örneğin, Visual Basic ve C++ COM bilgilerini RPC stili uygulayabilirsiniz gibi yönetilen dilleri kullanarak programcıları oluşturulmasına (nesneleri veya arabirimleri kullanarak olup olmadığını) yaklaşımını [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] Hizmet sözleşmeleri sorunlarınız olmadan RPC stilde devralınan dağıtılmış nesne sistemleri. Hizmet yönlendirmesi programlama deneyimine kolaylığı ve RPC aşina olduğunuz korurken geniş eşleşmiş, ileti kaynaklı programlama yararları sağlar.  
   
  İleti kaynaklı uygulama programlama arabirimleri, Microsoft MSMQ gibi ileti kuyrukları gibi birçok Programcı daha rahat <xref:System.Messaging> .NET Framework veya HTTP istekleri gönderen yapılandırılmamış XML ad alanları. İleti düzeyinde programlama hakkında daha fazla bilgi için bkz: [kullanarak ileti sözleşmeleri](../../../docs/framework/wcf/feature-details/using-message-contracts.md), [hizmet kanal düzeyi programlama](../../../docs/framework/wcf/extending/service-channel-level-programming.md), ve [POXuygulamalarıilebirlikteçalışabilirlik](../../../docs/framework/wcf/feature-details/interoperability-with-pox-applications.md).  
   

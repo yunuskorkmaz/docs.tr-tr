@@ -1,7 +1,7 @@
 ---
 title: Mikro hizmet uygulama katmanı Web API kullanarak uygulama
 description: Kapsayıcılı .NET uygulamaları için .NET mikro mimarisi | Mikro hizmet uygulama katmanı Web API kullanarak uygulama
-keywords: Docker, Microservices, ASP.NET, Container
+keywords: Docker, mikro, ASP.NET, kapsayıcı
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 12/12/2017
@@ -11,11 +11,11 @@ ms.topic: article
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: bdb080369c26a3d7ffab97f93ba3419d6bd84754
-ms.sourcegitcommit: b750a8e3979749b214e7e10c82efb0a0524dfcb1
+ms.openlocfilehash: b960636863ae1dcb0c955d96875d499b54b04105
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/09/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="implementing-the-microservice-application-layer-using-the-web-api"></a>Mikro hizmet uygulama katmanı Web API kullanarak uygulama
 
@@ -117,7 +117,7 @@ DI .NET Core kullanırken, bir derlemeyi tarayın ve türlerinden kurala göre o
 
 #### <a name="additional-resources"></a>Ek kaynaklar
 
--   **Matthew King. Hizmetleri Scrutor ile kaydediliyor**
+-   **Matthew Kol. Hizmetleri Scrutor ile kaydediliyor**
     [*https://mking.net/blog/registering-services-with-scrutor*](https://mking.net/blog/registering-services-with-scrutor)
 
 <!-- -->
@@ -158,7 +158,7 @@ public class ApplicationModule : Autofac.Module
 }
 ```
 
-Kavramları ve kayıt işlemine çok benzer şekilde, yerleşik ASP.NET Core iOS kapsayıcıyla türleri kaydedebilirsiniz, ancak Autofac kullanırken sözdizimi biraz farklıdır.
+Kavramları ve kayıt işlemine çok benzer şekilde, yerleşik ASP.NET Core IOC kapsayıcıyla türleri kaydedebilirsiniz, ancak Autofac kullanırken sözdizimi biraz farklıdır.
 
 Örnek kodda IOrderRepository soyutlama uygulama sınıfı OrderRepository birlikte kaydedilir. Bu, bağımlılık IOrderRepository soyutlama veya arabirimi aracılığıyla bir kurucusu bildirme her IOC kapsayıcı OrderRepository sınıfının bir örneğini ekleme anlamına gelir.
 

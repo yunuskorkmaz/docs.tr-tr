@@ -17,14 +17,14 @@ ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: 93915e8eeb46d91140198c2d51f88535a93a28cc
-ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
+ms.openlocfilehash: 605e1401eb2f2fdee7bb39c6636c0245154041a4
+ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="what39s-new-in-windows-workflow-foundation"></a>Ne&#39;s Windows Workflow Foundation'deki yenilikler
-[!INCLUDE[wf](../../../includes/wf-md.md)] içinde [!INCLUDE[netfx40_long](../../../includes/netfx40-long-md.md)] önceki sürümlerden birkaç geliştirme örneklerinde değiştirir. İş akışları oluşturmak, yürütme ve korumak ve yeni işlevsellik ana bilgisayarını uygulamak daha kolay. [!INCLUDE[crabout](../../../includes/crabout-md.md)] geçirme .NET 3.0 ve en son sürümü kullanmak için .NET 3.5 iş akışı uygulamaları bkz [Geçiş Kılavuzu](../../../docs/framework/windows-workflow-foundation/migration-guidance.md).  
+Windows Workflow Foundation (WF) [!INCLUDE[netfx40_long](../../../includes/netfx40-long-md.md)] önceki sürümlerden birkaç geliştirme örneklerinde değiştirir. İş akışları oluşturmak, yürütme ve korumak ve yeni işlevsellik ana bilgisayarını uygulamak daha kolay. [!INCLUDE[crabout](../../../includes/crabout-md.md)] geçirme .NET 3.0 ve en son sürümü kullanmak için .NET 3.5 iş akışı uygulamaları bkz [Geçiş Kılavuzu](../../../docs/framework/windows-workflow-foundation/migration-guidance.md).  
   
 ## <a name="workflow-activity-model"></a>İş akışı etkinlik modeli  
  Şimdi kullanmak yerine bir iş akışı oluşturmanın temel birimidir etkinliktir <xref:System.Workflow.Activities.SequentialWorkflowActivity> veya <xref:System.Workflow.Activities.StateMachineWorkflowActivity> sınıfları. <xref:System.Activities.Activity> Sınıfı, temel Özet akışı davranış sağlar. Etkinlik yazarlar ardından uygulayabilirsiniz ya da <xref:System.Activities.CodeActivity> temel özel etkinlik işlevsellik için veya <xref:System.Activities.NativeActivity> çalışma zamanı derecesini kullanan özel etkinlik işlevleri için. <xref:System.Activities.Activity> Yeni davranışları diğer bakımından bildirimli olarak ifade etmek için etkinlik yazarlar tarafından kullanılan bir sınıftır <xref:System.Activities.NativeActivity>, <xref:System.Activities.CodeActivity>, <xref:System.Activities.AsyncCodeActivity>, veya <xref:System.Activities.DynamicActivity> nesneleri özel geliştirilmiş ya da dahil olup [yerleşik etkinliği Kitaplık](../../../docs/framework/windows-workflow-foundation/net-framework-4-5-built-in-activity-library.md).  

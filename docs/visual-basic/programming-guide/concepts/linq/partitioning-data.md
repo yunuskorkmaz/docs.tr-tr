@@ -1,22 +1,23 @@
 ---
-title: "Bölümleme veri (Visual Basic)"
-ms.custom: 
+title: Bölümleme veri (Visual Basic)
+ms.custom: ''
 ms.date: 07/20/2015
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- devlang-visual-basic
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 69c59379-b66e-422c-b324-5b5c07760ef7
-caps.latest.revision: "3"
+caps.latest.revision: 3
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: 0ea305a67765e1b11ceebbf65c48a685024a41f3
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 01e4e6d6db07a520b97911de5388b8e42b7e1acc
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="partitioning-data-visual-basic"></a>Bölümleme veri (Visual Basic)
 LINQ bölümlendirme öğeleri yeniden düzenleme ve bölümlerden biri döndürme olmadan bir giriş sırası iki bölümlere ayırma işlemi ifade eder.  
@@ -29,7 +30,7 @@ LINQ bölümlendirme öğeleri yeniden düzenleme ve bölümlerden biri döndür
   
 ## <a name="operators"></a>İşleçler  
   
-|İşleç Adı|Açıklama|Visual Basic sorgu ifade sözdizimi|Daha Fazla Bilgi|  
+|İşleç Adı|Açıklama|Visual Basic sorgu ifade sözdizimi|Daha fazla bilgi|  
 |-------------------|-----------------|------------------------------------------|----------------------|  
 |Atla|Öğeleri bir sırada belirtilen konum kadar atlar.|`Skip`|<xref:System.Linq.Enumerable.Skip%2A?displayProperty=nameWithType><br /><br /> <xref:System.Linq.Queryable.Skip%2A?displayProperty=nameWithType>|  
 |SkipWhile|Bir öğe koşulu karşılamadığı kadar bir koşul işlevine bağlı öğeleri atlar.|`Skip While`|<xref:System.Linq.Enumerable.SkipWhile%2A?displayProperty=nameWithType><br /><br /> <xref:System.Linq.Queryable.SkipWhile%2A?displayProperty=nameWithType>|  
@@ -39,29 +40,29 @@ LINQ bölümlendirme öğeleri yeniden düzenleme ve bölümlerden biri döndür
 ## <a name="query-expression-syntax-examples"></a>Sorgu ifade sözdizimi örnekleri  
   
 ### <a name="skip"></a>Atla  
- Aşağıdaki kod örneğinde `Skip` yan tümcesinde [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] kalan dizeleri dizideki döndürmeden önce bir dizeler dizisi ilk dört dizelerde üzerinden atlanacak.  
+ Aşağıdaki kod örneğinde `Skip` yan tümcesi kalan döndürmeden önce bir dizeler dizisi ilk dört dizelerde üzerinden geçmek için Visual Basic'de dizeleri dizideki.  
   
  [!code-vb[CsLINQPartitioning#1](../../../../visual-basic/programming-guide/concepts/linq/codesnippet/VisualBasic/partitioning-data_1.vb)]  
   
 ### <a name="skipwhile"></a>SkipWhile  
- Aşağıdaki kod örneğinde `Skip While` yan tümcesinde [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] dizenin ilk harfi sırasında bir dizi dizelerde atlamayı için "a". Dizi kalan dizelerde döndürülür.  
+ Aşağıdaki kod örneğinde `Skip While` dizenin ilk harfi olsa da bir dizi dizelerde üzerinden atlamak için Visual Basic'te yan tümcesi "a". Dizi kalan dizelerde döndürülür.  
   
  [!code-vb[CsLINQPartitioning#2](../../../../visual-basic/programming-guide/concepts/linq/codesnippet/VisualBasic/partitioning-data_2.vb)]  
   
 ### <a name="take"></a>Take  
- Aşağıdaki kod örneğinde `Take` yan tümcesinde [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] bir dizeler dizisi ilk iki dizeyi dönün.  
+ Aşağıdaki kod örneğinde `Take` ilk iki dizeyi bir dizeler dizisi dönmek için Visual Basic'te yan tümcesi.  
   
  [!code-vb[CsLINQPartitioning#3](../../../../visual-basic/programming-guide/concepts/linq/codesnippet/VisualBasic/partitioning-data_3.vb)]  
   
 ### <a name="takewhile"></a>TakeWhile  
- Aşağıdaki kod örneğinde `Take While` yan tümcesinde [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] beş veya daha az dize uzunluğu iken dizeleri dizisinden dönün.  
+ Aşağıdaki kod örneğinde `Take While` beş veya daha az dize uzunluğu iken dizeleri dizisinden dönmek için Visual Basic'te yan tümcesi.  
   
  [!code-vb[CsLINQPartitioning#4](../../../../visual-basic/programming-guide/concepts/linq/codesnippet/VisualBasic/partitioning-data_4.vb)]  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
  <xref:System.Linq>  
  [Standart sorgu işleçlerine genel bakış (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/standard-query-operators-overview.md)  
- [Skip tümcesi](../../../../visual-basic/language-reference/queries/skip-clause.md)  
- [Skip While tümcesi](../../../../visual-basic/language-reference/queries/skip-while-clause.md)  
- [Take tümcesi](../../../../visual-basic/language-reference/queries/take-clause.md)  
- [Take While tümcesi](../../../../visual-basic/language-reference/queries/take-while-clause.md)
+ [Skip Yan Tümcesi](../../../../visual-basic/language-reference/queries/skip-clause.md)  
+ [Skip While Yan Tümcesi](../../../../visual-basic/language-reference/queries/skip-while-clause.md)  
+ [Take Yan Tümcesi](../../../../visual-basic/language-reference/queries/take-clause.md)  
+ [Take While Yan Tümcesi](../../../../visual-basic/language-reference/queries/take-while-clause.md)

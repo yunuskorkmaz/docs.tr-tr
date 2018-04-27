@@ -1,31 +1,33 @@
 ---
-title: "Öznitelik tabanlı eşleme"
-ms.custom: 
+title: Öznitelik tabanlı eşleme
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-ado
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-ado
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 6dd89999-f415-4d61-b8c8-237d23d7924e
-caps.latest.revision: "3"
+caps.latest.revision: 3
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.workload: dotnet
-ms.openlocfilehash: a7a66b165e5bcfc605842b96295ae1721e7b3af5
-ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
+ms.workload:
+- dotnet
+ms.openlocfilehash: 49969af962db9fb533ad316622af42104438be7d
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="attribute-based-mapping"></a>Öznitelik tabanlı eşleme
-[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]bir SQL Server veritabanı için eşleşen bir [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] nesne modeli ya da uygulanan öznitelikleri veya bir dış eşleme dosyası kullanarak. Bu konu, öznitelik tabanlı yaklaşım özetler.  
+[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] bir SQL Server veritabanı için eşleşen bir [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] nesne modeli ya da uygulanan öznitelikleri veya bir dış eşleme dosyası kullanarak. Bu konu, öznitelik tabanlı yaklaşım özetler.  
   
  En temel formunda, [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] bir veritabanı için eşleşen bir <xref:System.Data.Linq.DataContext>, bir sınıf, sütunları ve ilişkileri bu sınıfların özellikleri için bir tablo. Nesne modelinde bir devralma hiyerarşisini eşlemek için öznitelikler de kullanabilirsiniz. Daha fazla bilgi için bkz: [nasıl yapılır: Visual Basic veya C# içinde nesne modeli oluşturmak](../../../../../../docs/framework/data/adonet/sql/linq/how-to-generate-the-object-model-in-visual-basic-or-csharp.md).  
   
- Kullanan geliştiriciler [!INCLUDE[vs_current_short](../../../../../../includes/vs-current-short-md.md)] genellikle kullanarak öznitelik tabanlı eşleme gerçekleştirmek [!INCLUDE[vs_ordesigner_long](../../../../../../includes/vs-ordesigner-long-md.md)]. SQLMetal komut satırı aracı da kullanabilir veya elle kod öznitelikleri kendiniz kullanabilirsiniz. Daha fazla bilgi için bkz: [nasıl yapılır: Visual Basic veya C# içinde nesne modeli oluşturmak](../../../../../../docs/framework/data/adonet/sql/linq/how-to-generate-the-object-model-in-visual-basic-or-csharp.md).  
+ Visual Studio genellikle kullanan geliştiriciler kullanarak öznitelik tabanlı eşleme gerçekleştirmek [!INCLUDE[vs_ordesigner_long](../../../../../../includes/vs-ordesigner-long-md.md)]. SQLMetal komut satırı aracı da kullanabilir veya elle kod öznitelikleri kendiniz kullanabilirsiniz. Daha fazla bilgi için bkz: [nasıl yapılır: Visual Basic veya C# içinde nesne modeli oluşturmak](../../../../../../docs/framework/data/adonet/sql/linq/how-to-generate-the-object-model-in-visual-basic-or-csharp.md).  
   
 > [!NOTE]
 >  Ayrıca, harici bir XML dosyasını kullanarak da eşleştirebilirsiniz. Daha fazla bilgi için bkz: [dış eşleme](../../../../../../docs/framework/data/adonet/sql/linq/external-mapping.md).  
@@ -37,12 +39,12 @@ ms.lasthandoff: 01/17/2018
   
 |Özellik|Tür|Varsayılan|Açıklama|  
 |--------------|----------|-------------|-----------------|  
-|<xref:System.Data.Linq.Mapping.DatabaseAttribute.Name%2A>|Dize|Bkz:<xref:System.Data.Linq.Mapping.DatabaseAttribute.Name%2A>|İle kullanılan kendi <xref:System.Data.Linq.Mapping.DatabaseAttribute.Name%2A> özelliği, veritabanı adını belirtir.|  
+|<xref:System.Data.Linq.Mapping.DatabaseAttribute.Name%2A>|Dize|Bkz: <xref:System.Data.Linq.Mapping.DatabaseAttribute.Name%2A>|İle kullanılan kendi <xref:System.Data.Linq.Mapping.DatabaseAttribute.Name%2A> özelliği, veritabanı adını belirtir.|  
   
  Daha fazla bilgi için bkz. <xref:System.Data.Linq.Mapping.DatabaseAttribute>.  
   
 ## <a name="tableattribute-attribute"></a>TableAttribute özniteliği  
- Bu öznitelik, bir veritabanı tablosu veya görünümü ile ilişkili bir varlık sınıfı olarak bir sınıf belirlemek için kullanın. [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]Bu öznitelik kalıcı sınıfları olan sınıfları değerlendirir. Aşağıdaki tabloda açıklanmaktadır <xref:System.Data.Linq.Mapping.TableAttribute.Name%2A> özelliği.  
+ Bu öznitelik, bir veritabanı tablosu veya görünümü ile ilişkili bir varlık sınıfı olarak bir sınıf belirlemek için kullanın. [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] Bu öznitelik kalıcı sınıfları olan sınıfları değerlendirir. Aşağıdaki tabloda açıklanmaktadır <xref:System.Data.Linq.Mapping.TableAttribute.Name%2A> özelliği.  
   
 |Özellik|Tür|Varsayılan|Açıklama|  
 |--------------|----------|-------------|-----------------|  
@@ -72,7 +74,7 @@ ms.lasthandoff: 01/17/2018
  Daha fazla bilgi için bkz. <xref:System.Data.Linq.Mapping.ColumnAttribute>.  
   
 > [!NOTE]
->  AssociationAttribute ve ColumnAttribute depolama özellik değerleri büyük küçük harf duyarlıdır. Örneğin, öznitelikte AssociationAttribute.Storage özelliği için kullanılan değerler başka bir yerde kod içinde kullanılan karşılık gelen özellik adları söz konusu eşleştiğinden emin olun. Bu, tüm .NET programlama dili için olanlar genellikle büyük dahil olmak üzere küçük harf duyarlı, olmayan geçerlidir [!INCLUDE[vb_current_short](../../../../../../includes/vb-current-short-md.md)]. Depo özelliği hakkında daha fazla bilgi için bkz: <xref:System.Data.Linq.Mapping.DataAttribute.Storage%2A?displayProperty=nameWithType>.  
+>  AssociationAttribute ve ColumnAttribute depolama özellik değerleri büyük küçük harf duyarlıdır. Örneğin, öznitelikte AssociationAttribute.Storage özelliği için kullanılan değerler başka bir yerde kod içinde kullanılan karşılık gelen özellik adları söz konusu eşleştiğinden emin olun. Bu, tüm .NET programlama dili için olanlar genellikle büyük Visual Basic dahil olmak üzere küçük harf duyarlı, olmayan geçerlidir. Depo özelliği hakkında daha fazla bilgi için bkz: <xref:System.Data.Linq.Mapping.DataAttribute.Storage%2A?displayProperty=nameWithType>.  
   
 ## <a name="associationattribute-attribute"></a>AssociationAttribute özniteliği  
  Bu öznitelik, bir ilişki veritabanındaki yabancı anahtarı için birincil anahtar ilişkisi gibi göstermek için bir özellik belirlemek için kullanın. İlişkiler hakkında daha fazla bilgi için bkz: [nasıl yapılır: eşleme veritabanı ilişkileri](../../../../../../docs/framework/data/adonet/sql/linq/how-to-map-database-relationships.md).  
@@ -91,7 +93,7 @@ ms.lasthandoff: 01/17/2018
  Daha fazla bilgi için bkz. <xref:System.Data.Linq.Mapping.AssociationAttribute>.  
   
 > [!NOTE]
->  AssociationAttribute ve ColumnAttribute depolama özellik değerleri büyük küçük harf duyarlıdır. Örneğin, öznitelikte AssociationAttribute.Storage özelliği için kullanılan değerler başka bir yerde kod içinde kullanılan karşılık gelen özellik adları söz konusu eşleştiğinden emin olun. Bu, tüm .NET programlama dili için olanlar genellikle büyük dahil olmak üzere küçük harf duyarlı, olmayan geçerlidir [!INCLUDE[vb_current_short](../../../../../../includes/vb-current-short-md.md)]. Depo özelliği hakkında daha fazla bilgi için bkz: <xref:System.Data.Linq.Mapping.DataAttribute.Storage%2A?displayProperty=nameWithType>.  
+>  AssociationAttribute ve ColumnAttribute depolama özellik değerleri büyük küçük harf duyarlıdır. Örneğin, öznitelikte AssociationAttribute.Storage özelliği için kullanılan değerler başka bir yerde kod içinde kullanılan karşılık gelen özellik adları söz konusu eşleştiğinden emin olun. Bu, tüm .NET programlama dili için olanlar genellikle büyük Visual Basic dahil olmak üzere küçük harf duyarlı, olmayan geçerlidir. Depo özelliği hakkında daha fazla bilgi için bkz: <xref:System.Data.Linq.Mapping.DataAttribute.Storage%2A?displayProperty=nameWithType>.  
   
 ## <a name="inheritancemappingattribute-attribute"></a>InheritanceMappingAttribute özniteliği  
  Bu öznitelik, bir devralma hiyerarşisini eşlemek için kullanın.  
@@ -130,7 +132,7 @@ ms.lasthandoff: 01/17/2018
   
  Daha fazla bilgi için bkz. <xref:System.Data.Linq.Mapping.ParameterAttribute>.  
   
-## <a name="resulttypeattribute-attribute"></a>ResultTypeAttribute Attribute  
+## <a name="resulttypeattribute-attribute"></a>ResultTypeAttribute özniteliği  
  Bu öznitelik, bir sonuç türü belirtmek için kullanın.  
   
  Aşağıdaki tabloda, bu öznitelik özelliklerini açıklar.  

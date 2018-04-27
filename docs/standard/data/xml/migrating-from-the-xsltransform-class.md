@@ -19,11 +19,11 @@ manager: wpickett
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: 09d982105d8cf1297a53bd755003e3ef2b089293
-ms.sourcegitcommit: 2e8acae16ae802f2d6d04e3ce0a6dbf04e476513
+ms.openlocfilehash: 07b90baf64ad00509cf5cadea4b9a3008237759b
+ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="migrating-from-the-xsltransform-class"></a>Çok sınıftan geçirme
 XSLT mimari olarak tasarlandığından [!INCLUDE[vsprvslong](../../../../includes/vsprvslong-md.md)] serbest bırakın. <xref:System.Xml.Xsl.XslTransform> Sınıfı tarafından değiştirildi <xref:System.Xml.Xsl.XslCompiledTransform> sınıfı.  
@@ -73,7 +73,7 @@ writer.Close();
 ```  
   
 ### <a name="debug-option"></a>Debug seçeneği  
- <xref:System.Xml.Xsl.XslCompiledTransform> Sınıfı, Microsoft ile stil sayfası ayıklamanızı sağlar hata ayıklama bilgileri üretebilir [!INCLUDE[vsprvs](../../../../includes/vsprvs-md.md)] hata ayıklayıcı. Daha fazla bilgi edinmek için bkz. <xref:System.Xml.Xsl.XslCompiledTransform.%23ctor%28System.Boolean%29>.  
+ <xref:System.Xml.Xsl.XslCompiledTransform> Sınıfı, Microsoft Visual Studio hata ayıklayıcısı ile stil sayfası ayıklamanızı sağlar hata ayıklama bilgileri oluşturabilir. Daha fazla bilgi edinmek için bkz. <xref:System.Xml.Xsl.XslCompiledTransform.%23ctor%28System.Boolean%29>.  
   
 ## <a name="behavioral-differences"></a>Davranış farklılıkları  
   

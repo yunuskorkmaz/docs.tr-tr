@@ -1,29 +1,30 @@
 ---
-title: "Etkinlik doğrulama çağırma"
-ms.custom: 
+title: Etkinlik doğrulama çağırma
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 22bef766-c505-4fd4-ac0f-7b363b238969
-caps.latest.revision: "15"
+caps.latest.revision: 15
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: f22fc7dc53f52b47be2da3313f678825d4362750
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 39c059e7d8ed2191a4e0ce42d7d5b2087db84a5c
+ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="invoking-activity-validation"></a>Etkinlik doğrulama çağırma
-Etkinlik doğrulama tanımlamak ve yürütülmesinin önce herhangi bir etkinliğe ilişkin yapılandırma hataları rapor için bir yöntem sağlar. Bir iş akışı iş akışı Tasarımcısı'nda değiştirilir ve herhangi bir doğrulama hata veya uyarı iş akışı Tasarımcısı'nda görüntülenen doğrulama oluşur. Doğrulama da ortaya çıkar çalışma zamanında bir iş akışı çalıştırıldığında ve herhangi bir doğrulama hatası oluşursa, bir <xref:System.Activities.InvalidWorkflowException> varsayılan Doğrulama mantığı tarafından oluşturulur. [!INCLUDE[wf](../../../includes/wf-md.md)]sağlar <xref:System.Activities.Validation.ActivityValidationServices> iş akışı uygulaması ve araç geliştiriciler tarafından açıkça bir etkinlik doğrulamak için kullanılabilir sınıfı. Bu konuda nasıl kullanılacağını açıklar <xref:System.Activities.Validation.ActivityValidationServices> etkinlik doğrulama gerçekleştirmek için.  
+Etkinlik doğrulama tanımlamak ve yürütülmesinin önce herhangi bir etkinliğe ilişkin yapılandırma hataları rapor için bir yöntem sağlar. Bir iş akışı iş akışı Tasarımcısı'nda değiştirilir ve herhangi bir doğrulama hata veya uyarı iş akışı Tasarımcısı'nda görüntülenen doğrulama oluşur. Doğrulama da ortaya çıkar çalışma zamanında bir iş akışı çalıştırıldığında ve herhangi bir doğrulama hatası oluşursa, bir <xref:System.Activities.InvalidWorkflowException> varsayılan Doğrulama mantığı tarafından oluşturulur. Windows Workflow Foundation (WF) sağlayan <xref:System.Activities.Validation.ActivityValidationServices> iş akışı uygulaması ve araç geliştiriciler tarafından açıkça bir etkinlik doğrulamak için kullanılabilir sınıfı. Bu konuda nasıl kullanılacağını açıklar <xref:System.Activities.Validation.ActivityValidationServices> etkinlik doğrulama gerçekleştirmek için.  
   
 ## <a name="using-activityvalidationservices"></a>ActivityValidationServices kullanma  
- <xref:System.Activities.Validation.ActivityValidationServices>iki sahip <xref:System.Activities.Validation.ActivityValidationServices.Validate%2A> bir etkinliğin doğrulama mantığını çağırmak için kullanılan aşırı. İlk aşırı doğrulanması için Kök etkinlik alır ve doğrulama hataları ve Uyarıları koleksiyonunu döndürür. Aşağıdaki örnekte, özel bir `Add` etkinlik, iki bağımsız değişken gerekli olduğunu kullanılır.  
+ <xref:System.Activities.Validation.ActivityValidationServices> iki sahip <xref:System.Activities.Validation.ActivityValidationServices.Validate%2A> bir etkinliğin doğrulama mantığını çağırmak için kullanılan aşırı. İlk aşırı doğrulanması için Kök etkinlik alır ve doğrulama hataları ve Uyarıları koleksiyonunu döndürür. Aşağıdaki örnekte, özel bir `Add` etkinlik, iki bağımsız değişken gerekli olduğunu kullanılır.  
   
 ```csharp  
 public sealed class Add : CodeActivity<int>  
@@ -62,7 +63,7 @@ Activity wf = new Sequence
 };  
 ```  
   
- Bu iş akışı çağırarak doğrulanabilir <xref:System.Activities.Validation.ActivityValidationServices.Validate%2A>. <xref:System.Activities.Validation.ActivityValidationServices.Validate%2A>Aşağıdaki örnekte gösterildiği gibi herhangi bir doğrulama hataları veya etkinlik ve herhangi bir alt tarafından bulunan uyarıları koleksiyonunu döndürür.  
+ Bu iş akışı çağırarak doğrulanabilir <xref:System.Activities.Validation.ActivityValidationServices.Validate%2A>. <xref:System.Activities.Validation.ActivityValidationServices.Validate%2A> Aşağıdaki örnekte gösterildiği gibi herhangi bir doğrulama hataları veya etkinlik ve herhangi bir alt tarafından bulunan uyarıları koleksiyonunu döndürür.  
   
 ```csharp  
 ValidationResults results = ActivityValidationServices.Validate(wf);  
@@ -243,7 +244,7 @@ else
 >  Özel Etkinlik yazarları bir etkinliğin Doğrulama mantığı sağlayabilir <xref:System.Activities.CodeActivity.CacheMetadata%2A> geçersiz kılar. Öğesinden oluşturulan özel durumlar <xref:System.Activities.CodeActivity.CacheMetadata%2A> doğrulama hata olarak kabul edilmediği. Bu özel durumlar için çağrısından kaçış <xref:System.Activities.Validation.ActivityValidationServices.Validate%2A> ve çağıran tarafından yapılması gerekir.  
   
 ## <a name="using-validationsettings"></a>ValidationSettings kullanma  
- Doğrulama tarafından çağrıldığında varsayılan olarak, tüm etkinlikleri ve etkinlik ağacında değerlendirilir <xref:System.Activities.Validation.ActivityValidationServices>. <xref:System.Activities.Validation.ValidationSettings>birçok farklı yöntemle üç özelliklerini yapılandırarak özelleştirilmek üzere doğrulama sağlar. <xref:System.Activities.Validation.ValidationSettings.SingleLevel%2A>Doğrulayıcı veya tüm etkinlik ağaç yol yalnızca sağlanan etkinlik için doğrulama mantığını uygulamak belirtir. Bu değer için varsayılan değer `false`. <xref:System.Activities.Validation.ValidationSettings.AdditionalConstraints%2A>Ek kısıtlama eşlemeye türünden kısıtlamalar listesini belirtir. Her etkinlik Doğrulanmakta olan etkinlik ağacında temel tür yok içine bir arama <xref:System.Activities.Validation.ValidationSettings.AdditionalConstraints%2A>. Eşleşen bir sınırlama listesi bulunursa, listedeki tüm kısıtlamalar etkinliği için değerlendirilir. <xref:System.Activities.Validation.ValidationSettings.OnlyUseAdditionalConstraints%2A>Doğrulayıcı tüm kısıtlamalar değerlendirmelidir ya da yalnızca belirtilen belirtir <xref:System.Activities.Validation.ValidationSettings.AdditionalConstraints%2A>. Varsayılan değer `false` şeklindedir. <xref:System.Activities.Validation.ValidationSettings.AdditionalConstraints%2A>ve <xref:System.Activities.Validation.ValidationSettings.OnlyUseAdditionalConstraints%2A> FxCop gibi araçları için ilke kısıtlamaları gibi iş akışları için ek doğrulama eklemek iş akışı ana yazarları için faydalıdır. [!INCLUDE[crabout](../../../includes/crabout-md.md)]kısıtlamaları bkz [bildirim temelli kısıtlamaları](../../../docs/framework/windows-workflow-foundation/declarative-constraints.md).  
+ Doğrulama tarafından çağrıldığında varsayılan olarak, tüm etkinlikleri ve etkinlik ağacında değerlendirilir <xref:System.Activities.Validation.ActivityValidationServices>. <xref:System.Activities.Validation.ValidationSettings> birçok farklı yöntemle üç özelliklerini yapılandırarak özelleştirilmek üzere doğrulama sağlar. <xref:System.Activities.Validation.ValidationSettings.SingleLevel%2A> Doğrulayıcı veya tüm etkinlik ağaç yol yalnızca sağlanan etkinlik için doğrulama mantığını uygulamak belirtir. Bu değer için varsayılan değer `false`. <xref:System.Activities.Validation.ValidationSettings.AdditionalConstraints%2A> Ek kısıtlama eşlemeye türünden kısıtlamalar listesini belirtir. Her etkinlik Doğrulanmakta olan etkinlik ağacında temel tür yok içine bir arama <xref:System.Activities.Validation.ValidationSettings.AdditionalConstraints%2A>. Eşleşen bir sınırlama listesi bulunursa, listedeki tüm kısıtlamalar etkinliği için değerlendirilir. <xref:System.Activities.Validation.ValidationSettings.OnlyUseAdditionalConstraints%2A> Doğrulayıcı tüm kısıtlamalar değerlendirmelidir ya da yalnızca belirtilen belirtir <xref:System.Activities.Validation.ValidationSettings.AdditionalConstraints%2A>. Varsayılan değer `false` şeklindedir. <xref:System.Activities.Validation.ValidationSettings.AdditionalConstraints%2A> ve <xref:System.Activities.Validation.ValidationSettings.OnlyUseAdditionalConstraints%2A> FxCop gibi araçları için ilke kısıtlamaları gibi iş akışları için ek doğrulama eklemek iş akışı ana yazarları için faydalıdır. [!INCLUDE[crabout](../../../includes/crabout-md.md)] kısıtlamaları bkz [bildirim temelli kısıtlamaları](../../../docs/framework/windows-workflow-foundation/declarative-constraints.md).  
   
  Kullanılacak <xref:System.Activities.Validation.ValidationSettings>, istenen özelliklerini yapılandırmak ve çağrısında geçirmek <xref:System.Activities.Validation.ActivityValidationServices.Validate%2A>. Bu örnekte, bir iş akışı, oluşur bir <xref:System.Activities.Statements.Sequence> özel ile `Add` etkinlik doğrulandı. `Add` Etkinlik iki gerekli bağımsız değişkeni vardır.  
   
@@ -313,4 +314,4 @@ else
   
  Bu kod, aşağıdaki çıkış görüntüler:  
   
- **Herhangi bir uyarı veya hata** olsa bile `Add` etkinlik bağlı olmayan bağımsız değişkenler gerekli, yalnızca kök etkinlik değerlendirildiğinden doğrulama başarılı olur. Bu doğrulama türü, yalnızca belirli öğeleri özellik değişikliği bir Tasarımcısı'nda tek bir etkinliğin doğrulanması gibi bir etkinlik ağacında doğrulamak için kullanışlıdır. Bu iş akışı çağrılırsa iş akışı içinde yapılandırılmış tam doğrulama değerlendirilir unutmayın ve bir <xref:System.Activities.InvalidWorkflowException> durum. <xref:System.Activities.Validation.ActivityValidationServices>ve <xref:System.Activities.Validation.ValidationSettings> yalnızca ana bilgisayar tarafından açıkça çağrılan doğrulama ve olmayan iş akışı çağrıldığında oluşan doğrulama yapılandırın.
+ **Herhangi bir uyarı veya hata** olsa bile `Add` etkinlik bağlı olmayan bağımsız değişkenler gerekli, yalnızca kök etkinlik değerlendirildiğinden doğrulama başarılı olur. Bu doğrulama türü, yalnızca belirli öğeleri özellik değişikliği bir Tasarımcısı'nda tek bir etkinliğin doğrulanması gibi bir etkinlik ağacında doğrulamak için kullanışlıdır. Bu iş akışı çağrılırsa iş akışı içinde yapılandırılmış tam doğrulama değerlendirilir unutmayın ve bir <xref:System.Activities.InvalidWorkflowException> durum. <xref:System.Activities.Validation.ActivityValidationServices> ve <xref:System.Activities.Validation.ValidationSettings> yalnızca ana bilgisayar tarafından açıkça çağrılan doğrulama ve olmayan iş akışı çağrıldığında oluşan doğrulama yapılandırın.

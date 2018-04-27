@@ -1,9 +1,9 @@
 ---
-title: "XML Alt Axis Özelliği (Visual Basic)"
+title: XML Alt Axis Özelliği (Visual Basic)
 ms.date: 07/20/2015
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - devlang-visual-basic
 ms.topic: article
@@ -16,14 +16,14 @@ helpviewer_keywords:
 - XML child axis property [Visual Basic]
 - XML [Visual Basic], accessing
 ms.assetid: 89a59d00-985e-4f5c-b59f-29b47bad11cb
-caps.latest.revision: 
+caps.latest.revision: 18
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: ea4db763bbed651a01845b49395255586cb60113
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: dadb21f4985497a90cc62f98c5fb2abdd7cc2781
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="xml-child-axis-property-visual-basic"></a>XML Alt Axis Özelliği (Visual Basic)
 Aşağıdaki alt erişim sağlar: bir <xref:System.Xml.Linq.XElement> nesne, bir <xref:System.Xml.Linq.XDocument> nesnesi, bir koleksiyonu <xref:System.Xml.Linq.XElement> nesneleri veya koleksiyonu <xref:System.Xml.Linq.XDocument> nesneleri.  
@@ -40,7 +40,7 @@ object.<child>
 |---|---|  
 |`object`|Gerekli. Bir <xref:System.Xml.Linq.XElement> nesne, bir <xref:System.Xml.Linq.XDocument> nesnesi, bir koleksiyonu <xref:System.Xml.Linq.XElement> nesneleri veya koleksiyonu <xref:System.Xml.Linq.XDocument> nesneleri.|  
 |.<|Gerekli. Child axis özelliği başlangıcını gösterir.|  
-|`child`|Gerekli. Biçiminde erişmeye alt düğümlerin adı [`prefix``:`]`name`.<br /><br /> -   `Prefix`-İsteğe bağlı. Alt düğüm için XML ad alanı öneki. Genel bir XML ad alanı ile tanımlanmalıdır bir `Imports` deyimi.<br />-   `Name`-Gerekli. Yerel alt düğüm adı. Bkz: [bildirilmiş XML öğeleri ve özniteliklerinin adları](../../../visual-basic/programming-guide/language-features/xml/names-of-declared-xml-elements-and-attributes.md).|  
+|`child`|Gerekli. Biçiminde erişmeye alt düğümlerin adı [`prefix``:`]`name`.<br /><br /> -   `Prefix` -İsteğe bağlı. Alt düğüm için XML ad alanı öneki. Genel bir XML ad alanı ile tanımlanmalıdır bir `Imports` deyimi.<br />-   `Name` -Gerekli. Yerel alt düğüm adı. Bkz: [bildirilmiş XML öğeleri ve özniteliklerinin adları](../../../visual-basic/programming-guide/language-features/xml/names-of-declared-xml-elements-and-attributes.md).|  
 |>|Gerekli. Child axis özelliği sonunu gösterir.|  
   
 ## <a name="return-value"></a>Dönüş Değeri  
@@ -49,7 +49,7 @@ object.<child>
 ## <a name="remarks"></a>Açıklamalar  
  Adından tarafından erişim alt düğümler için bir XML alt axis özelliği kullanabilirsiniz bir <xref:System.Xml.Linq.XElement> veya <xref:System.Xml.Linq.XDocument> nesnesi veya bir koleksiyonundan <xref:System.Xml.Linq.XElement> veya <xref:System.Xml.Linq.XDocument> nesneleri. XML kullanmak `Value` döndürülen koleksiyon ilk alt düğüm değerini erişmek için özellik. Daha fazla bilgi için bkz: [XML değeri özelliği](../../../visual-basic/language-reference/xml-axis/xml-value-property.md).  
   
- [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] Derleyici çağrıları alt eksen özellikleri dönüştürür <xref:System.Xml.Linq.XContainer.Elements%2A> yöntemi.  
+ Visual Basic derleyici çağrıları alt eksen özellikleri dönüştürür <xref:System.Xml.Linq.XContainer.Elements%2A> yöntemi.  
   
 ## <a name="xml-namespaces"></a>XML ad alanları  
  Child axis özelliği adı ile genel olarak bildirilen XML ad alanı önekleri kullanabilirsiniz `Imports` deyimi. XML ad alanı önekleri XML öğesi değişmez içinde yerel olarak bildirilen kullanamazsınız. Daha fazla bilgi için bkz: [Imports deyimi (XML Namespace)](../../../visual-basic/language-reference/statements/imports-statement-xml-namespace.md).  
@@ -83,7 +83,7 @@ object.<child>
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
  <xref:System.Xml.Linq.XElement>  
- [XML eksen özellikleri](../../../visual-basic/language-reference/xml-axis/xml-axis-properties.md)  
- [XML değişmez değerleri](../../../visual-basic/language-reference/xml-literals/index.md)  
+ [XML Eksen Özellikleri](../../../visual-basic/language-reference/xml-axis/xml-axis-properties.md)  
+ [XML Değişmez Değerleri](../../../visual-basic/language-reference/xml-literals/index.md)  
  [Visual Basic'de XML oluşturma](../../../visual-basic/programming-guide/language-features/xml/creating-xml.md)  
- [Bildirilmiş XML öğeleri ve özniteliklerinin adları](../../../visual-basic/programming-guide/language-features/xml/names-of-declared-xml-elements-and-attributes.md)
+ [Bildirilmiş XML Öğeleri ve Özniteliklerinin Adları](../../../visual-basic/programming-guide/language-features/xml/names-of-declared-xml-elements-and-attributes.md)

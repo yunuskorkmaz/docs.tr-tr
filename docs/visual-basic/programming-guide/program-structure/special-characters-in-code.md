@@ -1,11 +1,12 @@
 ---
-title: "Kod'da Özel Karakterler (Visual Basic)"
-ms.custom: 
+title: Kod'da Özel Karakterler (Visual Basic)
+ms.custom: ''
 ms.date: 07/20/2015
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- devlang-visual-basic
 ms.topic: article
 f1_keywords:
 - vb.)
@@ -36,17 +37,17 @@ helpviewer_keywords:
 - exclamation point operator (!)
 - Visual Basic code, special characters
 ms.assetid: 310dce0c-45b5-4e0d-83e9-32df258d2a3e
-caps.latest.revision: "21"
+caps.latest.revision: 21
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: 11c5ef9ad41fc2362d9ba4f2cb5eb5b63a9ca31c
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: b724c48320f74045d7192be6d6e269c00511ffc9
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="special-characters-in-code-visual-basic"></a>Kod'da Özel Karakterler (Visual Basic)
-Bazen alfabetik veya sayısal olmayan karakterler kodunuzda, diğer bir deyişle, özel karakterler kullanmak zorunda. Noktalama işaretleri ve özel karakterler [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] karakter kümesine sahip derleyici ya derlenmiş program gerçekleştirdiği görevleri tanımlamak için program metin düzenleme gelen çeşitli kullanır. Bir işlemin gerçekleştirilmesi için belirtmeyin.  
+Bazen alfabetik veya sayısal olmayan karakterler kodunuzda, diğer bir deyişle, özel karakterler kullanmak zorunda. Noktalama işaretleri ve özel karakterler Visual Basic karakter kümesinde derleyici ya derlenmiş program gerçekleştirdiği görevleri tanımlamak için program metin düzenleme gelen çeşitli kullanımlar vardır. Bir işlemin gerçekleştirilmesi için belirtmeyin.  
   
 ## <a name="parentheses"></a>Parantez  
  Bir yordam gibi tanımlarken parantez kullanmak bir `Sub` veya `Function`. Tüm yordam bağımsız değişken listeleri parantez içine almanız gerekir. Ayrıca parantez mantıksal gruplar halinde koyarak değişkenleri veya bağımsız değişkenler için özellikle karmaşık bir ifadede İşleç önceliği varsayılan sırasını geçersiz kılmak için kullanın. Aşağıdaki örnek bunu göstermektedir.  
@@ -56,7 +57,7 @@ Bazen alfabetik veya sayısal olmayan karakterler kodunuzda, diğer bir deyişle
  Değerini önceki kod yürütmeyi izleyen `d` 8.225 ve değerini `e` 3'tür. Hesaplama için `d` varsayılan önceliği kullanan `/` üzerinden `+` ve eşdeğerdir `d = b + (c / a)`. Hesaplama için parantezlerde `e` varsayılan önceliği geçersiz kılar.  
   
 ## <a name="separators"></a>Ayırıcı  
- Ayırıcılar yapmak ne adlarının önerir: kodun bölümlerini ayırın. İçinde [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)], iki nokta üst üste ayırıcı karakter olan (`:`). Birden çok deyime ayrı satırlara yerine tek bir satırda dahil etmek istediğiniz zaman ayırıcı kullanın. Bu alanı kaydeder ve kodunuzun okunabilirliğini artırır. Aşağıdaki örnekte, üç değerlerini virgüllerle ayrılmış gösterir.  
+ Ayırıcılar yapmak ne adlarının önerir: kodun bölümlerini ayırın. Visual Basic'te iki nokta üst üste ayırıcı karakteridir (`:`). Birden çok deyime ayrı satırlara yerine tek bir satırda dahil etmek istediğiniz zaman ayırıcı kullanın. Bu alanı kaydeder ve kodunuzun okunabilirliğini artırır. Aşağıdaki örnekte, üç değerlerini virgüllerle ayrılmış gösterir.  
   
  [!code-vb[VbVbcnConventions#12](../../../visual-basic/programming-guide/language-features/codesnippet/VisualBasic/special-characters-in-code_2.vb)]  
   
@@ -96,5 +97,5 @@ Bazen alfabetik veya sayısal olmayan karakterler kodunuzda, diğer bir deyişle
  `!` Karakter olarak da kullanılır `Single` karakteri yazın.  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [Program yapısı ve kod kuralları](../../../visual-basic/programming-guide/program-structure/program-structure-and-code-conventions.md)  
- [Tür karakterleri](../../../visual-basic/programming-guide/language-features/data-types/type-characters.md)
+ [Program Yapısı ve Kod Kuralları](../../../visual-basic/programming-guide/program-structure/program-structure-and-code-conventions.md)  
+ [Tür Karakterleri](../../../visual-basic/programming-guide/language-features/data-types/type-characters.md)

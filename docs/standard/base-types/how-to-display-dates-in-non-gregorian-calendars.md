@@ -1,12 +1,12 @@
 ---
-title: "Nasıl yapılır: Miladi Olmayan Takvimlerde Tarihleri Görüntüleme"
-ms.custom: 
+title: 'Nasıl yapılır: Miladi Olmayan Takvimlerde Tarihleri Görüntüleme'
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology: dotnet-standard
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - csharp
@@ -17,18 +17,18 @@ helpviewer_keywords:
 - calendars [.NET Framework], displaying dates
 - displaying date and time data
 ms.assetid: ed324eff-4aff-4a76-b6c0-04e6c0d8f5a9
-caps.latest.revision: "7"
+caps.latest.revision: 7
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: 1a9e45fe43e38be3c618df37a639d63a6a0a5349
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: 8b0af7aad0efc63518291292b0d0b4ca4872956c
+ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="how-to-display-dates-in-non-gregorian-calendars"></a>Nasıl yapılır: Miladi Olmayan Takvimlerde Tarihleri Görüntüleme
 <xref:System.DateTime> Ve <xref:System.DateTimeOffset> türleri Gregoryen takvim kendi varsayılan takvim olarak kullanın. Bu tarih ve saat değerinin çağırma yani `ToString` yöntemi, tarihin dize gösterimini görüntüler ve saati, tarih ve saat olsa bile Gregoryen takvim, başka bir takvim kullanılarak oluşturulmuş. Bu tarih ve saat değeri ile Farsça takvim oluşturmak için iki farklı şekilde kullanır, ancak hala çağırdığında Gregoryen takvim bu tarih ve saat değerleri görüntüler aşağıdaki örnekte gösterilmiştir <xref:System.DateTime.ToString%2A> yöntemi. Bu örnek belirli bir takvim tarihi görüntüleme için iki yaygın olarak kullanılan ancak yanlış teknikleri yansıtır.  
@@ -73,7 +73,7 @@ ms.lasthandoff: 12/23/2017
   
     -   <xref:System.Globalization.Calendar.GetSecond%2A>, uygun takvimindeki dakika içinde saniye görüntülemek için.  
   
-    -   <xref:System.Globalization.Calendar.GetMilliseconds%2A>, uygun takvimindeki ikinci milisaniye görüntülenecek.  
+    -   <xref:System.Globalization.Calendar.GetMilliseconds%2A> , uygun takvimindeki ikinci milisaniye görüntülenecek.  
   
 ## <a name="example"></a>Örnek  
  Örneğin, iki farklı takvimler kullanma tarihi görüntüler. Ar-JO kültür için varsayılan takvim olarak Hicri takvimin tanımlama sonra tarihi görüntüler ve isteğe bağlı bir takvim olarak fa IR kültür tarafından desteklenmeyen Farsça takvimden tarihi görüntüler.  
@@ -98,7 +98,7 @@ ms.lasthandoff: 12/23/2017
 ## <a name="compiling-the-code"></a>Kod Derleniyor  
  Bu örnek, bir başvuru System.Core.dll gerektirir.  
   
- Kodu, csc.exe veya vb.exe kullanarak komut satırında derleyin. Kodu [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] içinde derlemek için, bir konsol uygulaması projesi şablonu içine koyun.  
+ Kodu, csc.exe veya vb.exe kullanarak komut satırında derleyin. Visual Studio'da Kodu derlemek için bir konsol uygulama projesi şablonunda yerleştirin.  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
  [Biçimlendirme İşlemlerini Gerçekleştirme](../../../docs/standard/base-types/performing-formatting-operations.md)

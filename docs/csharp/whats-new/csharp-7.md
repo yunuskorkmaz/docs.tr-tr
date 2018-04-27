@@ -1,7 +1,7 @@
 ---
-title: "C# 7 - C# Kılavuzu yenilikler nelerdir?"
-description: "C# dili gelecek sürümünde 7 gelen yeni özelliklere genel bakış alın."
-keywords: "Yenilikler C#, .NET, .NET Core, en son özellikleri"
+title: C# 7.0 - C# Kılavuzu yenilikler nelerdir?
+description: C# dili gelecek sürümünde 7 gelen yeni özelliklere genel bakış alın.
+keywords: Yenilikler C#, .NET, .NET Core, en son özellikleri
 author: BillWagner
 ms.author: wiwagn
 ms.date: 12/21/2016
@@ -10,15 +10,15 @@ ms.prod: .net
 ms.technology: devlang-csharp
 ms.devlang: csharp
 ms.assetid: fd41596d-d0c2-4816-b94d-c4d00a5d0243
-ms.openlocfilehash: 374ac9917464a7e83566440abab10eda8a9c8683
-ms.sourcegitcommit: 32172ca05d5dcce7ef3d327b9c8639c736e0fe2b
+ms.openlocfilehash: 1951c60ee11d0d5c4856f5f92eee8ba690b11f8d
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/20/2018
+ms.lasthandoff: 04/26/2018
 ---
-# <a name="whats-new-in-c-7"></a>C# 7'deki yenilikler
+# <a name="whats-new-in-c-70"></a>C# 7. 0'yenilikler nelerdir?
 
-C# 7 C# dili için birtakım yeni özellikleri ekler:
+C# 7.0 C# dili için birtakım yeni özellikleri ekler:
 * [`out` değişkenleri](#out-variables)
     - Bildirebilirsiniz `out` bunlar burada kullanılır yöntemi bağımsız değişken olarak satır içi değerleri.
 * [Demetler](#tuples)
@@ -88,8 +88,8 @@ C# sınıflar ve tasarım hedefi açıklamak için kullanılan yapılar için ze
 Alanları doğrulanmazsa ve kendi yöntemleri tanımlanamıyor
 
 > [!NOTE]
-> Diziler C# 7 önce kullanılabilir, ancak verimsiz ve hiçbir dil desteği vardı.
-> Bu başlığın öğeleri yalnızca olarak başvurulan geliyordu `Item1`, `Item2` ve benzeri. C# 7 yeni, daha verimli tanımlama grubu türlerini kullanarak bir tanımlama grubu alanlarının anlamsal adlarını etkinleştirir diziler için dil desteği sunar.
+> Diziler C# 7.0 önce kullanılabilir, ancak verimsiz ve hiçbir dil desteği vardı.
+> Bu başlığın öğeleri yalnızca olarak başvurulan geliyordu `Item1`, `Item2` ve benzeri. C# 7.0 yeni, daha verimli tanımlama grubu türlerini kullanarak bir tanımlama grubu alanlarının anlamsal adlarını etkinleştirir diziler için dil desteği sunar.
 
 Her üye bir değere atayarak bir tanımlama grubu oluşturabilirsiniz:
 
@@ -131,9 +131,6 @@ Yöntem bildirimi döndürülen tanımlama grubu alanlarının adları sağlar. 
 Bir yönteminden döndürülen bir tanımlama grubu üyeleri gitmeniz istediğinizde zamanlar olabilir.  Tanımlama grubundaki değerlerin her biri için ayrı değişkenlerini bildirerek yapabilirsiniz. Bu adlı *deconstructing* tanımlama:
 
 [!code-csharp[CallingWithDeconstructor](../../../samples/snippets/csharp/new-in-7/program.cs#10_CallingWithDeconstructor "Deconstructing a tuple")]
-
-<!-- Add wildcards here, if they are in C# 7
--->
 
 .NET içinde herhangi bir türü için benzer bir deconstruction sağlar. Bu yazarak yapılır bir `Deconstruct` sınıf üyesi olarak yöntemi. Olduğunu `Deconstruct` yöntemi sağlayan bir dizi `out` özelliklerin her biri için ayıklamak istediğiniz bağımsız değişkenleri. Şunları göz önünde bulundurun `Point` ayıklar deconstructor yöntemi sağlayan sınıf `X` ve `Y` koordinatları:
 
@@ -327,7 +324,7 @@ Yukarıdaki sürüm temizleyin yerel yöntemi başvurulan yalnızca dış yönte
 
 ## <a name="more-expression-bodied-members"></a>Daha fazla ifade bodied üyeleri
 
-C# 6 sunulan [ifade bodied üyeleri](csharp-6.md#expression-bodied-function-members) üye işlevleri ve salt okunur özellikler. C# 7 ifadeleri olarak uygulanabilir izin verilen üyeleri genişletir. C# 7'de, uygulayabileceğiniz *oluşturucular*, *sonlandırıcılar*, ve `get` ve `set` erişimciler üzerinde *özellikleri* ve *dizin oluşturucular* . Aşağıdaki kod örnekleri her gösterir:
+C# 6 sunulan [ifade bodied üyeleri](csharp-6.md#expression-bodied-function-members) üye işlevleri ve salt okunur özellikler. C# 7.0 ifadeleri olarak uygulanabilir izin verilen üyeleri genişletir. C# 7. 0 ', uygulayabileceğiniz *oluşturucular*, *sonlandırıcılar*, ve `get` ve `set` erişimciler üzerinde *özellikleri* ve *dizin oluşturucular* . Aşağıdaki kod örnekleri her gösterir:
 
 [!code-csharp[ExpressionBodiedMembers](../../../samples/snippets/csharp/new-in-7/expressionmembers.cs#36_ExpressionBodiedEverything "new expression-bodied members")]
 
@@ -338,7 +335,7 @@ Bu yeni konumlar ifade bodied üyeleri için C# dili için önemli bir kilometre
 
 ## <a name="throw-expressions"></a>Throw deyimleri
 
-C# ' ta, `throw` her zaman bir deyim olmuştur. Çünkü `throw` bir, olmayan bir ifade, var olan C# yapılarını burada kullandığınızda, bir ifadedir. Bunlar, koşullu ifadeleri, null birleştirmesi ifadeleri ve bazı lambda ifadeleri dahil. Daha fazla konumları ifade bodied üyelerinin eklenmesini ekler nerede `throw` ifadeleri yararlı olacaktır. Bu yapıları hiçbirini yazma böylece C# 7 tanıtır *ifadeleri throw*.
+C# ' ta, `throw` her zaman bir deyim olmuştur. Çünkü `throw` bir, olmayan bir ifade, var olan C# yapılarını burada kullandığınızda, bir ifadedir. Bunlar, koşullu ifadeleri, null birleştirmesi ifadeleri ve bazı lambda ifadeleri dahil. Daha fazla konumları ifade bodied üyelerinin eklenmesini ekler nerede `throw` ifadeleri yararlı olacaktır. Bu yapıları hiçbirini yazma böylece C# 7.0 tanıtır *ifadeleri throw*.
 
 Her zaman için kullandığınız sözdizimi aynıdır `throw` deyimleri. Tek fark, bunları yeni konumlarda gibi bir koşullu ifade yerleştirebilirsiniz şimdi Bunun anlamı:
 
@@ -376,7 +373,7 @@ Tüm performans önerileri, her iki sürümünü de büyük yapmadan önce Kıya
 
 ## <a name="numeric-literal-syntax-improvements"></a>Değişmez sayısal sözdizimi geliştirmeleri
 
-Sayısal sabitleri misreading ilk kez okunurken kod anlaşılması zor yapabilirsiniz. Bu sayı bit maskesi veya diğer sembolik olarak kullanıldığında, bu genellikle oluşur. sayısal değerler yerine. C# 7 kullanım için en okunabilir şekilde numaraları yazmayı kolaylaştırmak için iki yeni özellikler içerir: *ikili değişmez değerleri*, ve *basamak ayırıcıları*.
+Sayısal sabitleri misreading ilk kez okunurken kod anlaşılması zor yapabilirsiniz. Bu sayı bit maskesi veya diğer sembolik olarak kullanıldığında, bu genellikle oluşur. sayısal değerler yerine. C# 7.0 kullanım için en okunabilir şekilde numaraları yazmayı kolaylaştırmak için iki yeni özellikler içerir: *ikili değişmez değerleri*, ve *basamak ayırıcıları*.
 
 Bu kez için bu sayıyı ikili yazma en okunabilir kod bit maskesi oluştururken veya bir sayı ikili gösterimidir her yapar:
 

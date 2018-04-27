@@ -18,11 +18,11 @@ helpviewer_keywords:
 ms.assetid: 1885f24a-86f5-486c-a064-9fb7e455ccec
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: 4410818b43c0ab12f9488198fffbe4b0f2d89252
-ms.sourcegitcommit: 498799639937c89de777361aab74261efe7b79ea
+ms.openlocfilehash: 4699e3adfd83a35ee81a5c8838e300adf6ecf667
+ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/22/2018
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="-link-visual-basic"></a>-bağlantı (Visual Basic)
 Derleyici COM türü bilgileri belirtilen derlemelerde şu anda derlediğiniz proje kullanılabilir hale getirmek neden olur.  
@@ -51,7 +51,7 @@ Derleyici COM türü bilgileri belirtilen derlemelerde şu anda derlediğiniz pr
 > [!NOTE]
 >  Kodunuzda katıştırılmış COM türünün bir örneğini oluştururken uygun arabirimi kullanarak örneği oluşturmanız gerekir. Coclass'ı kullanarak katıştırılmış COM türünün bir örneği oluşturulmaya çalışılırken bir hata neden olur.  
   
- Ayarlamak için `-link` seçeneğini [!INCLUDE[vsprvs](~/includes/vsprvs-md.md)], bir derleme başvurusu ekleyin ve ayarlayın `Embed Interop Types` özelliğine **doğru**. İçin varsayılan `Embed Interop Types` özelliği **false**.  
+ Ayarlamak için `-link` seçeneği Visual Studio'da ve bir derleme başvurusu Ekle `Embed Interop Types` özelliğine **doğru**. İçin varsayılan `Embed Interop Types` özelliği **false**.  
   
  Bir COM derlemesine (a derlemesi) bağlantısının kendisi başka bir COM derlemesine (derleme B) başvuruyor, aşağıdakilerden biri doğruysa B derlemesine bağlantı gerekir:  
   

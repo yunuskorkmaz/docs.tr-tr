@@ -1,35 +1,35 @@
 ---
-title: "İzlenecek yol: WPF Bileşik Denetimini Windows Forms İçinde Barındırma"
-ms.custom: 
+title: 'İzlenecek yol: WPF Bileşik Denetimini Windows Forms İçinde Barındırma'
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - dotnet-wpf
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - hosting WPF content in Windows Forms [WPF]
 ms.assetid: 0ac41286-4c1b-4b17-9196-d985cb844ce1
-caps.latest.revision: 
+caps.latest.revision: 34
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: 129d699455467679c86c803e6d3124e6a7dfa1f9
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.openlocfilehash: f5a3cef6bc2614691584828ff61e0f8ea40b9f95
+ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="walkthrough-hosting-a-wpf-composite-control-in-windows-forms"></a>İzlenecek yol: WPF Bileşik Denetimini Windows Forms İçinde Barındırma
-[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]uygulamaları oluşturmak için zengin bir ortam sağlar. Önemli ölçüde yatırımınız varsa [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] kodu olabilir varolan genişletmek için daha etkili [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] uygulama [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] yerine baştan yeniden. Yaygın bir senaryo, bir eklemek istediğiniz ya da daha fazla denetim ile uygulanan olduğunda [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] içinde [!INCLUDE[TLA2#tla_winforms](../../../../includes/tla2sharptla-winforms-md.md)] uygulama. WPF denetimlerini özelleştirme hakkında daha fazla bilgi için bkz: [denetim özelleştirme](../../../../docs/framework/wpf/controls/control-customization.md).  
+[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] uygulamaları oluşturmak için zengin bir ortam sağlar. Önemli ölçüde yatırımınız varsa [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] kodu olabilir varolan genişletmek için daha etkili [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] uygulama [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] yerine baştan yeniden. Yaygın bir senaryo, bir eklemek istediğiniz ya da daha fazla denetim ile uygulanan olduğunda [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] Windows Forms uygulamanız içinde. WPF denetimlerini özelleştirme hakkında daha fazla bilgi için bkz: [denetim özelleştirme](../../../../docs/framework/wpf/controls/control-customization.md).  
   
- Bu kılavuzda barındıran aracılığıyla bir uygulama adımları bir [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] veri girişi gerçekleştirmek için bileşik denetim bir [!INCLUDE[TLA2#tla_winforms](../../../../includes/tla2sharptla-winforms-md.md)] uygulama. Bileşik Denetim DLL'de paketlenmiştir. Bu genel yordam daha karmaşık uygulamalar ve denetimler için genişletilebilir. Bu kılavuzda görünümünü ve işlevini neredeyse aynı olacak şekilde tasarlanmıştır [izlenecek yol: bir Windows Forms Bileşik Denetimi WPF barındırma](../../../../docs/framework/wpf/advanced/walkthrough-hosting-a-windows-forms-composite-control-in-wpf.md). Barındırma senaryo tersine çevrildi birincil farktır.  
+ Bu kılavuzda barındıran aracılığıyla bir uygulama adımları bir [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] bir Windows Forms uygulamasında veri girişi gerçekleştirmek için bileşik denetim. Bileşik Denetim DLL'de paketlenmiştir. Bu genel yordam daha karmaşık uygulamalar ve denetimler için genişletilebilir. Bu kılavuzda görünümünü ve işlevini neredeyse aynı olacak şekilde tasarlanmıştır [izlenecek yol: bir Windows Forms Bileşik Denetimi WPF barındırma](../../../../docs/framework/wpf/advanced/walkthrough-hosting-a-windows-forms-composite-control-in-wpf.md). Barındırma senaryo tersine çevrildi birincil farktır.  
   
- İzlenecek yol iki bölüme ayrılmıştır. Uygulamasını ilk bölümü kısaca açıklar [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] bileşik denetim. İkinci bölümü, bileşik denetimi barındırmak nasıl ayrıntılı olarak anlatılmaktadır bir [!INCLUDE[TLA2#tla_winforms](../../../../includes/tla2sharptla-winforms-md.md)] uygulama, denetim olaylarını almasını ve denetimin özelliklerini erişebilirsiniz.  
+ İzlenecek yol iki bölüme ayrılmıştır. Uygulamasını ilk bölümü kısaca açıklar [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] bileşik denetim. İkinci bölümü, bir Windows Forms uygulamasında bileşik denetim ana bilgisayar, denetim olaylarını almasını ve denetim özelliklerinden bazıları erişmek nasıl ayrıntılı olarak anlatılmaktadır.  
   
  Bu örneklerde gösterilen görevler aşağıdakileri içerir:  
   
@@ -79,7 +79,7 @@ WPF bileşik denetim
  [!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)] İle bileşik denetim uygulanması için [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)]. Bileşik Denetim [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] beş oluşur <xref:System.Windows.Controls.TextBox> öğeleri. Her <xref:System.Windows.Controls.TextBox> öğeye sahip bir ilişkili <xref:System.Windows.Controls.TextBlock> etiketi görevini gören öğesi. Var olan iki <xref:System.Windows.Controls.Button> alt öğeler **Tamam** ve **iptal**. Kullanıcı ya da düğmesine tıkladığında, denetim ana bilgisayara bilgileri döndürmek için özel bir olay başlatır.  
   
 #### <a name="basic-layout"></a>Temel düzeni  
- Çeşitli [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] öğeleri içerdiği bir <xref:System.Windows.Controls.Grid> öğesi. Kullanabileceğiniz <xref:System.Windows.Controls.Grid> bileşik içeriğini kontrol çok aynı düzenlemeyi şekilde kullanacağınız bir `Table` HTML öğesi. [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]Ayrıca bir <xref:System.Windows.Documents.Table> öğesi, ancak <xref:System.Windows.Controls.Grid> daha basit ve Basit Düzen görevler için daha iyi uygun.  
+ Çeşitli [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] öğeleri içerdiği bir <xref:System.Windows.Controls.Grid> öğesi. Kullanabileceğiniz <xref:System.Windows.Controls.Grid> bileşik içeriğini kontrol çok aynı düzenlemeyi şekilde kullanacağınız bir `Table` HTML öğesi. [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] Ayrıca bir <xref:System.Windows.Documents.Table> öğesi, ancak <xref:System.Windows.Controls.Grid> daha basit ve Basit Düzen görevler için daha iyi uygun.  
   
  Aşağıdaki XAML temel düzeni gösterilir. Bu XAML sütun sayısını belirterek denetiminin genel yapısını tanımlar ve içinde satırları <xref:System.Windows.Controls.Grid> öğesi.  
   
@@ -124,7 +124,7 @@ WPF bileşik denetim
   
 3.  Özel başlatır `OnButtonClick` kullanıcı tamamlandı ve ana bilgisayara verileri geçirmeden konak bildirir olay.  
   
- Denetim ayrıca bir dizi görünümünü değiştirebilmek için renk ve yazı tipi özellikleri kullanıma sunar. Aksine <xref:System.Windows.Forms.Integration.WindowsFormsHost> kullanılan sınıfı barındırmak için bir [!INCLUDE[TLA2#tla_winforms](../../../../includes/tla2sharptla-winforms-md.md)] denetimi <xref:System.Windows.Forms.Integration.ElementHost> sınıfı gösterir ve Denetim <xref:System.Windows.Controls.Panel.Background%2A> yalnızca özelliği. Bu kod örneği içinde açıklanan örneğin arasındaki benzerlik korumak için [izlenecek yol: bir Windows Forms Bileşik Denetimi WPF barındırma](../../../../docs/framework/wpf/advanced/walkthrough-hosting-a-windows-forms-composite-control-in-wpf.md), Denetim doğrudan kalan özellikleri sunar.  
+ Denetim ayrıca bir dizi görünümünü değiştirebilmek için renk ve yazı tipi özellikleri kullanıma sunar. Farklı <xref:System.Windows.Forms.Integration.WindowsFormsHost> bir Windows Forms denetimi barındırmak için kullanılan sınıf <xref:System.Windows.Forms.Integration.ElementHost> sınıfı gösterir ve Denetim <xref:System.Windows.Controls.Panel.Background%2A> yalnızca özelliği. Bu kod örneği içinde açıklanan örneğin arasındaki benzerlik korumak için [izlenecek yol: bir Windows Forms Bileşik Denetimi WPF barındırma](../../../../docs/framework/wpf/advanced/walkthrough-hosting-a-windows-forms-composite-control-in-wpf.md), Denetim doğrudan kalan özellikleri sunar.  
   
 #### <a name="the-basic-structure-of-the-code-behind-file"></a>Arka plan kod dosyasının temel yapısı  
  Arka plan kodu dosyasından tek bir ad alanı oluşur `MyControls`, iki sınıf içerecek `MyControl1` ve `MyControlEventArgs`.  
@@ -193,7 +193,7 @@ namespace MyControls
   
 <a name="winforms_host_section"></a>   
 ## <a name="implementing-the-windows-forms-host-application"></a>Windows Forms konak uygulamayı uygulama  
- [!INCLUDE[TLA2#tla_winforms](../../../../includes/tla2sharptla-winforms-md.md)] Konak uygulamanız tarafından kullanılan bir <xref:System.Windows.Forms.Integration.ElementHost> ana bilgisayar nesnesine [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] bileşik denetim. Uygulama tanıtıcıları `OnButtonClick` bileşik denetim verileri almak için olay. Uygulama denetimin görünümünü değiştirmek için kullanabileceğiniz seçenek düğmeleri kümesi de sahiptir. Aşağıdaki çizimde uygulamayı gösterir.  
+ Windows Forms konak uygulamanız tarafından kullanılan bir <xref:System.Windows.Forms.Integration.ElementHost> ana bilgisayar nesnesine [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] bileşik denetim. Uygulama tanıtıcıları `OnButtonClick` bileşik denetim verileri almak için olay. Uygulama denetimin görünümünü değiştirmek için kullanabileceğiniz seçenek düğmeleri kümesi de sahiptir. Aşağıdaki çizimde uygulamayı gösterir.  
   
  ![Windows Form Avalon Denetimi Barındırma](../../../../docs/framework/wpf/advanced/media/wfhost.png "WFHost")  
 Bir Windows Forms uygulaması'nda barındırılan WPF bileşik denetim  
@@ -257,8 +257,8 @@ Bir Windows Forms uygulaması'nda barındırılan WPF bileşik denetim
     |GroupBox|Ad|Metin|  
     |--------------|----------|----------|  
     |groupBox1|radioBackgroundOriginal|Özgün|  
-    |groupBox1|radioBackgroundLightGreen|LightGreen|  
-    |groupBox1|radioBackgroundLightSalmon|LightSalmon|  
+    |groupBox1|radioBackgroundLightGreen|Açık yeşil|  
+    |groupBox1|radioBackgroundLightSalmon|Açık Somon|  
     |groupBox2|radioForegroundOriginal|Özgün|  
     |groupBox2|radioForegroundRed|kırmızı|  
     |groupBox2|radioForegroundYellow|Sarı|  
@@ -308,9 +308,9 @@ Bir Windows Forms uygulaması'nda barındırılan WPF bileşik denetim
   
  Kalan iki satırları `Form1_Load` yöntemi işleyiciler iki denetim olaylarına ekleyin:  
   
--   `OnButtonClick`kullanıcı tıkladığında, bileşik denetim tarafından tetiklenen özel bir olaydır **Tamam** veya **iptal** düğmesi. Kullanıcının yanıtını alma ve kullanıcı tarafından belirtilen herhangi bir veri toplamak için olay işleyin.  
+-   `OnButtonClick` kullanıcı tıkladığında, bileşik denetim tarafından tetiklenen özel bir olaydır **Tamam** veya **iptal** düğmesi. Kullanıcının yanıtını alma ve kullanıcı tarafından belirtilen herhangi bir veri toplamak için olay işleyin.  
   
--   <xref:System.Windows.FrameworkElement.Loaded>tarafından gerçekleştirilen standart bir olaydır bir [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] tam yüklü olduğunda denetim. Örnek denetim özelliklerinden kullanarak birkaç genel değişkenler başlatması gerekir çünkü olay burada kullanılır. Formun zaman <xref:System.Windows.Forms.Form.Load> olayı denetimi tam olarak yüklü değil ve bu değerleri hala ayarlamak `null`. Denetimin kadar beklemeniz gerekir <xref:System.Windows.FrameworkElement.Loaded> olayı, bu özellikleri erişmeden önce oluşur.  
+-   <xref:System.Windows.FrameworkElement.Loaded> tarafından gerçekleştirilen standart bir olaydır bir [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] tam yüklü olduğunda denetim. Örnek denetim özelliklerinden kullanarak birkaç genel değişkenler başlatması gerekir çünkü olay burada kullanılır. Formun zaman <xref:System.Windows.Forms.Form.Load> olayı denetimi tam olarak yüklü değil ve bu değerleri hala ayarlamak `null`. Denetimin kadar beklemeniz gerekir <xref:System.Windows.FrameworkElement.Loaded> olayı, bu özellikleri erişmeden önce oluşur.  
   
  <xref:System.Windows.FrameworkElement.Loaded> Olay işleyicisi, önceki kodda gösterilir. `OnButtonClick` İşleyici bir sonraki bölümde ele alınmıştır.  
   

@@ -1,24 +1,26 @@
 ---
-title: "İşlem Gerçekleştirilmiş MSMQ Bağlama"
-ms.custom: 
+title: İşlem Gerçekleştirilmiş MSMQ Bağlama
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 71f5cb8d-f1df-4e1e-b8a2-98e734a75c37
-caps.latest.revision: "50"
+caps.latest.revision: 50
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 702f3ac45ade5fcd2f37d256ce1213a79f012ae3
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: e0529aa940c02ee79e25034e57f89d4b476861b8
+ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="transacted-msmq-binding"></a>İşlem Gerçekleştirilmiş MSMQ Bağlama
 Bu örnek, Message Queuing (MSMQ) kullanarak hizmetteki kuyruğa alınan iletişim gerçekleştirmek gösterilmiştir.  
@@ -33,19 +35,19 @@ Bu örnek, Message Queuing (MSMQ) kullanarak hizmetteki kuyruğa alınan iletiş
  Bu örnekte, istemci bir işlem kapsamı içinde hizmetinden toplu iletiler gönderir. Bu sıraya gönderilen iletileri sonra hizmet hizmet tarafından tanımlanan işlem kapsamı içinde tarafından alınır.  
   
  Hizmet sözleşme `IOrderProcessor`, aşağıdaki örnek kodda gösterildiği gibi. Sıralar ile kullanım için uygun bir tek yönlü hizmet arabirimi tanımlar.  
-  
-```  
+
+```csharp
 [ServiceContract(Namespace="http://Microsoft.ServiceModel.Samples")]  
 public interface IOrderProcessor  
 {  
     [OperationContract(IsOneWay = true)]  
     void SubmitPurchaseOrder(PurchaseOrder po);  
 }  
-```  
-  
+```
+
  Bir işlemi davranışı ile hizmet davranışını tanımlayan `TransactionScopeRequired` kümesine `true`. Bu yöntem tarafından erişilen tüm kaynak yöneticileri kuyruktan ileti almak için kullanılan aynı işlem kapsamı kullandığı sağlar. Ayrıca, yöntemi bir özel durum oluşturursa ileti kuyruğuna döndürülür garanti eder. Bu işlemi davranışı ayarı olmadan sıraya alınmış bir kanal iletiyi sıradan okumak için bir işlem oluşturur ve işlem başarısız olursa, ileti kaybolur şekilde, otomatik olarak gönderme önce kaydeder. Aşağıdaki kodda gösterildiği gibi sıradan ileti okumak için kullanılır işlemdeki listeleme hizmet işlemleri için en yaygın senaryodur bakın.  
-  
-```  
+
+```csharp
  // This service class that implements the service contract.  
  // This added code writes output to the console window.  
  public class OrderProcessorService : IOrderProcessor  
@@ -58,11 +60,11 @@ public interface IOrderProcessor
      }  
   …  
 }  
-```  
-  
+```
+
  Kendi kendini barındırılan hizmetidir. MSMQ taşıma kullanırken, sıranın kullanılan önceden oluşturulmuş olması gerekir. Bu, el ile veya kod aracılığıyla yapılabilir. Bu örnekte, hizmet sırası varlığını denetlemek ve henüz yoksa sırayı oluşturmak için kod içerir. Kuyruk adı yapılandırma dosyasından okunur. Temel adres tarafından kullanılan [ServiceModel meta veri yardımcı Programracı (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md) proxy hizmeti oluşturmak için.  
-  
-```  
+
+```csharp
 // Host the service within this EXE console application.  
 public static void Main()  
 {  
@@ -89,8 +91,8 @@ public static void Main()
         serviceHost.Close();  
     }  
 }  
-```  
-  
+```
+
  MSMQ kuyruk adı, aşağıdaki örnek yapılandırmada gösterildiği gibi bir yapılandırma dosyasının appSettings bölümünde belirtilir.  
   
 ```xml  
@@ -103,8 +105,8 @@ public static void Main()
 >  Kuyruk adı bir nokta (.) yolundaki ters eğik çizgi ayırıcılar ve yerel bilgisayar için sıra kullanarak oluştururken kullandığı <xref:System.Messaging>. [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] Uç nokta sıra adresini kullanır yerel bilgisayarı belirtmek için "localhost" net.msmq şeması ile kullanır ve kullandığı yolundaki eğik.  
   
  İstemci bir işlem kapsamı oluşturur. Sıra ile iletişim, bu sıraya gönderilen tüm iletileri veya hiçbiri iletileri kuyruğa gönderilen olduğu atomik bir birim olarak kabul edilmesi neden işlem kapsamı içinde gerçekleşir. İşlem çağırarak gerçekleştirilir <xref:System.Transactions.TransactionScope.Complete%2A> işlem kapsamında.  
-  
-```  
+
+```csharp
 // Create a client.  
 OrderProcessorClient client = new OrderProcessorClient();  
   
@@ -142,14 +144,14 @@ client.Close();
 Console.WriteLine();  
 Console.WriteLine("Press <ENTER> to terminate client.");  
 Console.ReadLine();  
-```  
-  
+```
+
  İşlemler çalıştığını doğrulamak için aşağıdaki örnek kodda gösterildiği gibi işlem kapsamı yorum istemci değiştirmek, çözümü yeniden derleyin ve istemci çalıştırın.  
-  
-```  
+
+```csharp
 //scope.Complete();  
-```  
-  
+```
+
  İşlem tamamlanmamış olduğundan, iletileri kuyruğa gönderilmez.  
   
  Örneği çalıştırdığınızda, istemci ve hizmet etkinlikleri hem hizmet hem de istemci konsol pencerelerinde görüntülenir. İstemci hizmeti alma iletileri görebilirsiniz. Her konsol penceresinde hizmet ve istemci kapatmak için ENTER tuşuna basın. Queuing kullanımda olduğundan, istemci ve hizmet aynı anda açık ve çalışıyor olması sahip olmadığını unutmayın. İstemcisini çalıştıran, kapatmak ve hizmeti başlatın ve hala iletilerini alır.  

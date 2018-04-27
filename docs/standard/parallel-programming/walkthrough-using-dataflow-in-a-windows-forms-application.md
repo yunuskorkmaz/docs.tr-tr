@@ -15,11 +15,11 @@ manager: wpickett
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: 8c0d44ca7933626c95603ccc81102889ba4c23cb
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
-ms.translationtype: MT
+ms.openlocfilehash: f28e103d6241d954dd6ac4f7e9c7fcb20a06ea0b
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="walkthrough-using-dataflow-in-a-windows-forms-application"></a>İzlenecek yol: Windows Forms Uygulaması'nda Veri Akışı Kullanma
 Bu belge, bir Windows Forms uygulaması'nda Görüntü işleme gerçekleştirmek veri akışı bloklarının bir ağ oluşturmak gösterilmiştir.  
@@ -48,9 +48,9 @@ Bu belge, bir Windows Forms uygulaması'nda Görüntü işleme gerçekleştirmek
   
 #### <a name="to-create-the-windows-forms-application"></a>Form uygulama Windows oluşturmak için  
   
-1.  İçinde [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)], oluşturma bir [!INCLUDE[csprcs](../../../includes/csprcs-md.md)] veya Visual Basic **Windows Forms uygulaması** projesi. Bu belgede, proje adı `CompositeImages`.  
+1.  İçinde [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)], bir Visual C# veya Visual Basic oluşturma **Windows Forms uygulaması** projesi. Bu belgede, proje adı `CompositeImages`.  
   
-2.  Form1.cs ana form için form tasarımcısında (Form1.vb için [!INCLUDE[vbprvb](../../../includes/vbprvb-md.md)]), ekleme bir <xref:System.Windows.Forms.ToolStrip> denetim.  
+2.  Form1.cs (Visual Basic Form1.vb), ana form için form designer'ı eklemek bir <xref:System.Windows.Forms.ToolStrip> denetim.  
   
 3.  Ekleme bir <xref:System.Windows.Forms.ToolStripButton> denetimini <xref:System.Windows.Forms.ToolStrip> denetim. Ayarlama <xref:System.Windows.Forms.ToolStripItem.DisplayStyle%2A> özelliğine <xref:System.Windows.Forms.ToolStripItemDisplayStyle.Text> ve <xref:System.Windows.Forms.ToolStripItem.Text%2A> özelliğine **Klasör Seç**.  
   
@@ -66,7 +66,7 @@ Bu belge, bir Windows Forms uygulaması'nda Görüntü işleme gerçekleştirmek
   
 1.  Bir başvuru System.Threading.Tasks.Dataflow.dll projenize ekleyin.  
   
-2.  Sağlamak Bu Form1.cs (Form1.vb için [!INCLUDE[vbprvb](../../../includes/vbprvb-md.md)]) aşağıdakileri içerir `using` (`Using` içinde [!INCLUDE[vbprvb](../../../includes/vbprvb-md.md)]) deyimleri:  
+2.  Form1.cs (Visual Basic Form1.vb) aşağıdaki içerdiğinden emin olun `using` (`Using` Visual Basic'te) deyimleri:  
   
      [!code-csharp[TPLDataflow_CompositeImages#1](../../../samples/snippets/csharp/VS_Snippets_Misc/tpldataflow_compositeimages/cs/compositeimages/form1.cs#1)]  
   
@@ -87,7 +87,7 @@ Bu belge, bir Windows Forms uygulaması'nda Görüntü işleme gerçekleştirmek
      [!code-csharp[TPLDataflow_CompositeImages#5](../../../samples/snippets/csharp/VS_Snippets_Misc/tpldataflow_compositeimages/cs/compositeimages/form1.cs#5)]  
   
     > [!NOTE]
-    >  C# sürümü `CreateCompositeBitmap` yöntemi verimli işlenmesini etkinleştirmek için işaretçileri kullanır <xref:System.Drawing.Bitmap?displayProperty=nameWithType> nesneleri. Bu nedenle, etkinleştirmeniz gerekir **güvenli olmayan kod izin** kullanmak için seçenek projenizdeki [güvensiz](~/docs/csharp/language-reference/keywords/unsafe.md) anahtar sözcüğü. Güvenli olmayan kod içinde etkinleştirme hakkında daha fazla bilgi için bir [!INCLUDE[csprcs](../../../includes/csprcs-md.md)] proje için bkz: [derleme sayfası, Proje Tasarımcısı (C#)](/visualstudio/ide/reference/build-page-project-designer-csharp).  
+    >  C# sürümü `CreateCompositeBitmap` yöntemi verimli işlenmesini etkinleştirmek için işaretçileri kullanır <xref:System.Drawing.Bitmap?displayProperty=nameWithType> nesneleri. Bu nedenle, etkinleştirmeniz gerekir **güvenli olmayan kod izin** kullanmak için seçenek projenizdeki [güvensiz](~/docs/csharp/language-reference/keywords/unsafe.md) anahtar sözcüğü. Visual C# projesinde güvenli olmayan kod etkinleştirme hakkında daha fazla bilgi için bkz: [derleme sayfası, Proje Tasarımcısı (C#)](/visualstudio/ide/reference/build-page-project-designer-csharp).  
   
  Aşağıdaki tabloda ağ üyeleri açıklanmaktadır.  
   
@@ -98,7 +98,7 @@ Bu belge, bir Windows Forms uygulaması'nda Görüntü işleme gerçekleştirmek
 |`displayCompositeBitmap`|<xref:System.Threading.Tasks.Dataflow.ActionBlock%601>|Bileşik bit eşlem formda görüntüler.|  
 |`operationCancelled`|<xref:System.Threading.Tasks.Dataflow.ActionBlock%601>|İşlem iptal edilir ve başka bir klasör seçmek kullanıcının sağlayan belirtmek için bir resim görüntüler.|  
   
- Bir ağ oluşturmak için veri akışı blokları bağlanmak için bu örnek kullanır <xref:System.Threading.Tasks.Dataflow.ISourceBlock%601.LinkTo%2A> yöntemi. <xref:System.Threading.Tasks.Dataflow.ISourceBlock%601.LinkTo%2A> Yöntemi alır aşırı yüklenmiş bir sürümünü içeren bir <xref:System.Predicate%601> hedef blok kabul ediyor veya bir ileti reddeder belirler nesnesi. Bu filtreleme mekanizması yalnızca belirli değerleri almak ileti blokları sağlar. Bu örnekte, iki yoldan biriyle ağ dal. Ana dala görüntüleri diskten yükler, bileşik görüntüsünü oluşturur ve bu görüntüyü formda görüntüler. Alternatif şube geçerli işlemi iptal eder. <xref:System.Predicate%601> Nesneleri belirli iletileri reddederek alternatif şube geçmek için ana dala boyunca veri akışı blokları sağlar. Örneğin, kullanıcı veri akışı bloğu işlemi iptal `createCompositeBitmap` üreten `null` (`Nothing` içinde [!INCLUDE[vbprvb](../../../includes/vbprvb-md.md)]) çıktısını olarak. Veri akışı bloğu `displayCompositeBitmap` reddeder `null` için giriş değerleri ve bu nedenle, iletiyi sunulur `operationCancelled`. Veri akışı bloğu `operationCancelled` tüm iletileri kabul eder ve bu nedenle, işlemi iptal edildiğini belirtmek için bir görüntüsünü görüntüler.  
+ Bir ağ oluşturmak için veri akışı blokları bağlanmak için bu örnek kullanır <xref:System.Threading.Tasks.Dataflow.ISourceBlock%601.LinkTo%2A> yöntemi. <xref:System.Threading.Tasks.Dataflow.ISourceBlock%601.LinkTo%2A> Yöntemi alır aşırı yüklenmiş bir sürümünü içeren bir <xref:System.Predicate%601> hedef blok kabul ediyor veya bir ileti reddeder belirler nesnesi. Bu filtreleme mekanizması yalnızca belirli değerleri almak ileti blokları sağlar. Bu örnekte, iki yoldan biriyle ağ dal. Ana dala görüntüleri diskten yükler, bileşik görüntüsünü oluşturur ve bu görüntüyü formda görüntüler. Alternatif şube geçerli işlemi iptal eder. <xref:System.Predicate%601> Nesneleri belirli iletileri reddederek alternatif şube geçmek için ana dala boyunca veri akışı blokları sağlar. Örneğin, kullanıcı veri akışı bloğu işlemi iptal `createCompositeBitmap` üreten `null` (`Nothing` Visual Basic'te) çıktısını olarak. Veri akışı bloğu `displayCompositeBitmap` reddeder `null` için giriş değerleri ve bu nedenle, iletiyi sunulur `operationCancelled`. Veri akışı bloğu `operationCancelled` tüm iletileri kabul eder ve bu nedenle, işlemi iptal edildiğini belirtmek için bir görüntüsünü görüntüler.  
   
  Görüntü işleme ağı aşağıda gösterilmektedir.  
   

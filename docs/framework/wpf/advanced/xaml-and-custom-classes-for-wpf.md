@@ -1,28 +1,30 @@
 ---
-title: "WPF için XAML ve Özel Sınıflar"
-ms.custom: 
+title: WPF için XAML ve Özel Sınıflar
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-wpf
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-wpf
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - custom classes in XAML [WPF]
 - XAML [WPF], custom classes
 - classes [WPF], custom classes in XAML
 ms.assetid: e7313137-581e-4a64-8453-d44e15a6164a
-caps.latest.revision: "22"
+caps.latest.revision: 22
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: da599afc94fba617d4df17c57679d8ee4bb05c61
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: a7aa7ffe38f1fbd7de71dbc95ae12b8faca6e356
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="xaml-and-custom-classes-for-wpf"></a>WPF için XAML ve Özel Sınıflar
 Uygulanan gibi XAML [!INCLUDE[TLA#tla_clr](../../../../includes/tlasharptla-clr-md.md)] çerçeveleri destekleyen özel sınıf veya yapı birinde tanımlama yeteneği [!INCLUDE[TLA#tla_clr](../../../../includes/tlasharptla-clr-md.md)] dil ve ardından erişim XAML biçimlendirme kullanarak sınıfı. Bir karışımını kullanabilirsiniz [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]-tanımlı türleri ve özel türlerinizi aynı biçimlendirme dosyası içinde genellikle XAML ad alanı öneki özel türler eşleyerek. Bu konuda bir XAML öğesi olarak kullanılabilmesi için özel bir sınıf getirmelidir gereksinimleri açıklanmaktadır.  
@@ -70,7 +72,7 @@ Uygulanan gibi XAML [!INCLUDE[TLA#tla_clr](../../../../includes/tlasharptla-clr-
  Burada öznitelik sözdizimi izin verilir ancak XAML object öğesini içeren özellik öğesi sözdizimini izin verilmeyen özellikleri örnekler ele çeşitli özellikleri <xref:System.Windows.Input.Cursor> türü. <xref:System.Windows.Input.Cursor> Sınıfına sahip bir özel tür dönüştürücüsünü <xref:System.Windows.Input.CursorConverter>, varsayılan bir oluşturucu oluşturmaz, ancak bu nedenle <xref:System.Windows.FrameworkElement.Cursor%2A> özelliği yalnızca ayarlanabilir öznitelik sözdizimi rağmen gerçek <xref:System.Windows.Input.Cursor> türü olan bir başvuru türü.  
   
 ### <a name="per-property-type-converters"></a>Özellik başına tür dönüştürücüleri  
- Alternatif olarak, özellik türü dönüştürücü özelliği düzeyinde bildirebilir. Bu "özelliği satır içi tür nesneleri için giriş olarak özniteliğinin gelen dize değerlerini işleyerek örneklendirir mini bir dil" sağlayan bir <xref:System.ComponentModel.TypeConverter.ConvertFrom%2A> işlemi uygun türüne bağlı. Bu bir kolaylık erişimcisi sağlamak için genellikle yapılır ve tek bir özellik XAML'de ayarlama etkinleştirmek anlamına gelir değil. Ancak, aynı zamanda varolan kullanmak istediğiniz öznitelikler için tür dönüştürücüleri kullanmak mümkündür [!INCLUDE[TLA2#tla_clr](../../../../includes/tla2sharptla-clr-md.md)] varsayılan bir oluşturucu veya öznitelikli tür dönüştürücüsünü sağlamazsanız türleri. Örneklerinden [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] API ele belirli özellikleri olan <xref:System.Globalization.CultureInfo> türü. Bu durumda, [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] varolan kullanılan [!INCLUDE[TLA#tla_winfx](../../../../includes/tlasharptla-winfx-md.md)] <xref:System.Globalization.CultureInfo> daha iyi çerçeveleri, önceki sürümlerinde kullanılan uyumluluğu ve geçiş senaryosu için türü ancak <xref:System.Globalization.CultureInfo> türü desteklemediği gerekli oluşturucular veya doğrudan XAML özellik değeri olarak kullanılabilmesi için tür dönüştürme türü düzeyi.  
+ Alternatif olarak, özellik türü dönüştürücü özelliği düzeyinde bildirebilir. Bu "özelliği satır içi tür nesneleri için giriş olarak özniteliğinin gelen dize değerlerini işleyerek örneklendirir mini bir dil" sağlayan bir <xref:System.ComponentModel.TypeConverter.ConvertFrom%2A> işlemi uygun türüne bağlı. Bu bir kolaylık erişimcisi sağlamak için genellikle yapılır ve tek bir özellik XAML'de ayarlama etkinleştirmek anlamına gelir değil. Ancak, aynı zamanda varolan kullanmak istediğiniz öznitelikler için tür dönüştürücüleri kullanmak mümkündür [!INCLUDE[TLA2#tla_clr](../../../../includes/tla2sharptla-clr-md.md)] varsayılan bir oluşturucu veya öznitelikli tür dönüştürücüsünü sağlamazsanız türleri. Örneklerinden [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] API ele belirli özellikleri olan <xref:System.Globalization.CultureInfo> türü. Bu durumda, [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] var olan Microsoft .NET Framework kullanılan <xref:System.Globalization.CultureInfo> daha iyi çerçeveleri, önceki sürümlerinde kullanılan uyumluluğu ve geçiş senaryosu için türü ancak <xref:System.Globalization.CultureInfo> türü desteklemediği gerekli Oluşturucular veya türü düzeyi tür dönüşümü doğrudan XAML özellik değeri olarak kullanılabilir.  
   
  XAML kullanımına sahip bir özellik kullanıma olduğunda, özellikle bir denetim yazarı varsa, kesinlikle bu özellik bir bağımlılık özelliği ile yedekleme düşünmelisiniz. Bu varolan kullanırsanız, özellikle geçerlidir [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] XAML işlemci uygulaması kullanarak performansı artırabilir çünkü <xref:System.Windows.DependencyProperty> yedekleme. Bağımlılık özelliği kullanıcılar XAML erişilebilir özelliği için beklenen gelir, bir özellik için özellik sistemi özellikleri açığa çıkarır. Animasyon, veri bağlama ve stil desteği gibi özellikler içerir. Daha fazla bilgi için bkz: [özel bağımlılık özellikleri](../../../../docs/framework/wpf/advanced/custom-dependency-properties.md) ve [XAML yükleme ve bağımlılık özellikleri](../../../../docs/framework/wpf/advanced/xaml-loading-and-dependency-properties.md).  
   

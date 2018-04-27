@@ -1,12 +1,13 @@
 ---
-title: "Zaman Uyumlu ve Zaman Uyumsuz İşlemler"
-ms.custom: 
+title: Zaman Uyumlu ve Zaman Uyumsuz İşlemler
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - csharp
@@ -15,24 +16,25 @@ helpviewer_keywords:
 - service contracts [WCF], synchronous operations
 - service contracts [WCF], asynchronous operations
 ms.assetid: db8a51cb-67e6-411b-9035-e5821ed350c9
-caps.latest.revision: "24"
+caps.latest.revision: 24
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 3d108c8c84af2563e48a9f339df2a96f8218c742
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 123186dd5f0d63693c04c0857709292ce122f918
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="synchronous-and-asynchronous-operations"></a>Zaman Uyumlu ve Zaman Uyumsuz İşlemler
 Bu konuda, uygulama ve zaman uyumsuz hizmet işlemlerini çağırma anlatılmaktadır.  
   
- Yöntem çağrısının çalışırken yararlı iş yapmadan devam etmek uygulama sağladığından birçok uygulamaları yöntemleri zaman uyumsuz olarak çağırır. [!INCLUDE[indigo1](../../../includes/indigo1-md.md)]Hizmetler ve istemcileri katılmak düzeylerinde sağlayan iki ayrı uygulama zaman uyumsuz işlem çağrılarında [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] uygulamaları bile karşı etkileşim dengeli verimliliği en üst düzeye çıkarmak için daha fazla esneklik.  
+ Yöntem çağrısının çalışırken yararlı iş yapmadan devam etmek uygulama sağladığından birçok uygulamaları yöntemleri zaman uyumsuz olarak çağırır. [!INCLUDE[indigo1](../../../includes/indigo1-md.md)] Hizmetler ve istemcileri katılmak düzeylerinde sağlayan iki ayrı uygulama zaman uyumsuz işlem çağrılarında [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] uygulamaları bile karşı etkileşim dengeli verimliliği en üst düzeye çıkarmak için daha fazla esneklik.  
   
 ## <a name="types-of-asynchronous-operations"></a>Zaman uyumsuz işlemleri türleri  
- Tüm hizmet sözleşmelerinde [!INCLUDE[indigo2](../../../includes/indigo2-md.md)], Hayır parametre türleri önemli ve dönüş değerleri, kullanma [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] hizmeti ile istemci arasında belirli ileti değişim deseni belirtmek için öznitelikler. [!INCLUDE[indigo2](../../../includes/indigo2-md.md)]otomatik olarak uygun hizmet işlemi için gelen ve giden iletileri yönlendiren veya istemci kodu çalıştırıyor.  
+ Tüm hizmet sözleşmelerinde [!INCLUDE[indigo2](../../../includes/indigo2-md.md)], Hayır parametre türleri önemli ve dönüş değerleri, kullanma [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] hizmeti ile istemci arasında belirli ileti değişim deseni belirtmek için öznitelikler. [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] otomatik olarak uygun hizmet işlemi için gelen ve giden iletileri yönlendiren veya istemci kodu çalıştırıyor.  
   
  İstemci, yalnızca belirli bir işlem için ileti değişim deseni belirtir hizmet sözleşmesini sahip olur. Temel alınan ileti değişim deseni gözlenir sürece istemciler Geliştirici tercih ettikleri, herhangi bir programlama modeli sunabilir. Belirtilen ileti deseni gözlenir sürece bu nedenle, çok, hizmetleri işlemleri herhangi bir biçimde uygulayabilirsiniz.  
   
@@ -53,7 +55,7 @@ Bu konuda, uygulama ve zaman uyumsuz hizmet işlemlerini çağırma anlatılmakt
   
 -   Bir ASP.NET sayfasının işlemlerini çağırdığınız, zaman uyumsuz sayfalar kullanın.  
   
--   Tek herhangi bir uygulamadan işlemleri çağırdığınız varsa, Windows Forms gibi iş parçacıklı veya [!INCLUDE[avalon1](../../../includes/avalon1-md.md)]. Olay tabanlı zaman uyumsuz çağırma modeli kullanılırken, birden çok iş parçacığı kendiniz işlemek gerek kalmadan uygulama yanıt hızını ekleme kullanıcı Arabirimi iş parçacığı üzerinde sonuç olay tetiklenir.  
+-   Tek iş parçacıklı, Windows Forms veya Windows Presentation Foundation (WPF) gibi herhangi bir uygulamadan işlemleri çağırdığınız durumunda. Olay tabanlı zaman uyumsuz çağırma modeli kullanılırken, birden çok iş parçacığı kendiniz işlemek gerek kalmadan uygulama yanıt hızını ekleme kullanıcı Arabirimi iş parçacığı üzerinde sonuç olay tetiklenir.  
   
 -   Genel olarak, bir zaman uyumlu ve zaman uyumsuz çağrı arasında bir seçim varsa, zaman uyumsuz çağrı seçin.  
   

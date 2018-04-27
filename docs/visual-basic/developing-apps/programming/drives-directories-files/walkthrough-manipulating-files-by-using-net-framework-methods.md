@@ -1,11 +1,12 @@
 ---
-title: ".NET Framework yöntemlerini (Visual Basic) kullanarak dosyaları düzenleme"
-ms.custom: 
+title: .NET Framework yöntemlerini (Visual Basic) kullanarak dosyaları düzenleme
+ms.custom: ''
 ms.date: 07/20/2015
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- devlang-visual-basic
 ms.topic: article
 helpviewer_keywords:
 - I/O [Visual Basic], walkthroughs
@@ -21,14 +22,14 @@ helpviewer_keywords:
 - text files [Visual Basic], reading
 - I/O [Visual Basic], reading text from files
 ms.assetid: 7d2109eb-f98a-4389-b43d-30f384aaa7d5
-caps.latest.revision: "18"
+caps.latest.revision: 18
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: bc42dee640271ef84d35ceeb039d98741d296c5e
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: ed363efeeef008927f2c34b393de66ca4ccbb0bb
+ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="walkthrough-manipulating-files-by-using-net-framework-methods-visual-basic"></a>İzlenecek Yol: .NET Framework Yöntemlerini Kullanarak Dosyaları Düzenleme (Visual Basic)
 Bu izlenecek yol açabilir ve okuyabilir kullanarak bir dosyaya gösterilmiştir <xref:System.IO.StreamReader> sınıfı, bir dosyaya erişim olmadığını denetleyin, bir dize örneği ile okuma dosyasının içinde arama <xref:System.IO.StreamReader> sınıfı ve kullanarak bir dosyaya yazma <xref:System.IO.StreamWriter> sınıfı.  
@@ -36,7 +37,7 @@ Bu izlenecek yol açabilir ve okuyabilir kullanarak bir dosyaya gösterilmiştir
 [!INCLUDE[note_settings_general](~/includes/note-settings-general-md.md)]  
   
 ## <a name="creating-the-application"></a>Uygulama oluşturma  
- Başlat [!INCLUDE[vsprvs](~/includes/vsprvs-md.md)] ve projeyi kullanıcı için belirtilen dosya yazmak için kullanabileceğiniz bir form oluşturarak başlayın.  
+ Visual Studio ve kullanıcı için belirtilen dosya yazmak için kullanabileceğiniz bir form oluşturarak proje başlatabilirsiniz.  
   
 #### <a name="to-create-the-project"></a>Proje oluşturmak için  
   
@@ -46,18 +47,18 @@ Bu izlenecek yol açabilir ve okuyabilir kullanarak bir dosyaya gösterilmiştir
   
 3.  İçinde **adı** kutusuna `MyDiary` tıklatıp **Tamam**.  
   
-     [!INCLUDE[vsprvs](~/includes/vsprvs-md.md)]projeye ekler **Çözüm Gezgini**ve **Windows Form Tasarımcısı** açar.  
+     Visual Studio projeye ekler **Çözüm Gezgini**ve **Windows Form Tasarımcısı** açar.  
   
 4.  Denetimleri aşağıdaki tabloda forma ekleme ve bunların özelliklerini karşılık gelen değerler ayarlayın.  
   
-|**Nesne**|**Veri Erişimi**|**Değer**|  
+|**Nesne**|**Özellikler**|**Değer**|  
 |---|---|---|   
 |<xref:System.Windows.Forms.Button>|**Ad**<br /><br /> **Metin**|`Submit`<br /><br /> **Giriş gönderme**|  
 |<xref:System.Windows.Forms.Button>|**Ad**<br /><br /> **Metin**|`Clear`<br /><br /> **Giriş temizleyin**|  
 |<xref:System.Windows.Forms.TextBox>|**Ad**<br /><br /> **Metin**<br /><br /> **Çok satırlı**|`Entry`<br /><br /> **Lütfen bir şey girin.**<br /><br /> `False`|  
   
 ## <a name="writing-to-the-file"></a>Dosyaya yazma  
- Uygulama yoluyla bir dosyaya yazma özelliği eklemek için kullanın <xref:System.IO.StreamWriter> sınıfı. <xref:System.IO.StreamWriter>karakter çıkışını bir belirli kodlama, ancak için tasarlanmış <xref:System.IO.Stream> sınıfı, giriş ve çıkış bayt için tasarlanmıştır. Kullanım <xref:System.IO.StreamWriter> satır bilgi standart metin dosyasına yazma. Daha fazla bilgi için <xref:System.IO.StreamWriter> sınıfı için bkz: <xref:System.IO.StreamWriter>.  
+ Uygulama yoluyla bir dosyaya yazma özelliği eklemek için kullanın <xref:System.IO.StreamWriter> sınıfı. <xref:System.IO.StreamWriter> karakter çıkışını bir belirli kodlama, ancak için tasarlanmış <xref:System.IO.Stream> sınıfı, giriş ve çıkış bayt için tasarlanmıştır. Kullanım <xref:System.IO.StreamWriter> satır bilgi standart metin dosyasına yazma. Daha fazla bilgi için <xref:System.IO.StreamWriter> sınıfı için bkz: <xref:System.IO.StreamWriter>.  
   
 #### <a name="to-add-writing-functionality"></a>Yazma işlevselliği eklemek için  
   
@@ -158,4 +159,4 @@ Bu izlenecek yol açabilir ve okuyabilir kullanarak bir dosyaya gösterilmiştir
 ## <a name="see-also"></a>Ayrıca Bkz.  
  <xref:System.IO.StreamReader>  
  <xref:System.IO.StreamWriter>  
- [İzlenecek yollar](../../../../visual-basic/walkthroughs.md)
+ [İzlenecek Yollar](../../../../visual-basic/walkthroughs.md)

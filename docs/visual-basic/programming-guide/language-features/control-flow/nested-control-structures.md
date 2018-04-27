@@ -1,11 +1,12 @@
 ---
-title: "İç İçe Geçmiş Denetim Yapıları (Visual Basic)"
-ms.custom: 
+title: İç İçe Geçmiş Denetim Yapıları (Visual Basic)
+ms.custom: ''
 ms.date: 07/20/2015
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- devlang-visual-basic
 ms.topic: article
 helpviewer_keywords:
 - Visual Basic code, control flow
@@ -16,20 +17,20 @@ helpviewer_keywords:
 - structures [Visual Basic], nested control
 - nested control statements [Visual Basic]
 ms.assetid: cf60b061-65d9-44a8-81f2-b0bdccd23a05
-caps.latest.revision: "20"
+caps.latest.revision: 20
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: 22adf4086cd494202a540b2ec16310072329b6ca
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: f2c91bcdd741ef75417fe50b0c08bd0f9bd5ff80
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="nested-control-structures-visual-basic"></a>İç İçe Geçmiş Denetim Yapıları (Visual Basic)
 Diğer denetim ifadelerine içine denetim ifadeleri örneğin yerleştirebilirsiniz bir `If...Then...Else` içinde engelleme bir `For...Next` döngü. Başka bir denetim deyimi içinde yerleştirilen bir denetim ifadesi olarak kabul edilir *iç içe geçmiş*.  
   
 ## <a name="nesting-levels"></a>İç içe geçme düzeyi  
- Denetim yapılarda [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] istediğiniz kadar çok düzeyde iç içe olamaz. Her biri gövdesi girintileme tarafından iç içe geçmiş yapılar daha okunabilir hale getirmek için yaygın bir uygulamadır. Tümleşik geliştirme ortamı (IDE) Düzenleyicisi'ni otomatik olarak bunu yapar.  
+ Visual Basic'de denetim yapıları için istediğiniz kadar çok düzeyde iç içe. Her biri gövdesi girintileme tarafından iç içe geçmiş yapılar daha okunabilir hale getirmek için yaygın bir uygulamadır. Tümleşik geliştirme ortamı (IDE) Düzenleyicisi'ni otomatik olarak bunu yapar.  
   
  Aşağıdaki örnekte, yordamı `sumRows` birlikte pozitif öğeleri matrisin her bir satır ekler.  
   
@@ -78,10 +79,10 @@ Next ctl
  ![Geçersiz iç içe grafik diyagramı](../../../../visual-basic/programming-guide/language-features/control-flow/media/nestexampleinvalid.gif "NestExampleInvalid")  
 Geçersiz iç içe geçmiş için ile yapıları  
   
- [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] Derleyici algılar böyle çakışan bir denetim yapıları ve derleme zamanı hata bildirir.  
+ Visual Basic derleyici böyle çakışan denetim yapıları algılar ve bir derleme zamanı hatası işaret eder.  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [Denetim akışı](../../../../visual-basic/programming-guide/language-features/control-flow/index.md)  
- [Karar yapıları](../../../../visual-basic/programming-guide/language-features/control-flow/decision-structures.md)  
- [Döngü yapıları](../../../../visual-basic/programming-guide/language-features/control-flow/loop-structures.md)  
- [Diğer denetim yapıları](../../../../visual-basic/programming-guide/language-features/control-flow/other-control-structures.md)
+ [Denetim Akışı](../../../../visual-basic/programming-guide/language-features/control-flow/index.md)  
+ [Karar Yapıları](../../../../visual-basic/programming-guide/language-features/control-flow/decision-structures.md)  
+ [Döngü Yapıları](../../../../visual-basic/programming-guide/language-features/control-flow/loop-structures.md)  
+ [Diğer Denetim Yapıları](../../../../visual-basic/programming-guide/language-features/control-flow/other-control-structures.md)

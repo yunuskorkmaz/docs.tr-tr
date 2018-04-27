@@ -12,11 +12,11 @@ ms.assetid: 6685467b-28fa-4cde-9516-f0e00ad08911
 caps.latest.revision: 36
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: 58e63d95c2f10329f85d6150b58f196294de38d1
-ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
+ms.openlocfilehash: ebaa934ffaed985439ed65b9f5308404171a91bd
+ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="get-started-with-visual-basic"></a>Visual Basic ile çalışmaya başlama
 Belgelerin bu bölümde Visual Basic uygulama geliştirme ile çalışmaya başlamanıza yardımcı olur.  
@@ -64,7 +64,7 @@ Sık karşılaşılan sorunların yanıtlarını bulmanıza yardımcı olabilece
  Destek alma ve geri bildirimde bulunma konularını ele alır.  
   
  [Visual Studio](/visualstudio/)  
- Uygulamasına ait bağlantılar sağlanmıştır [!INCLUDE[vsprvs](~/includes/vsprvs-md.md)] belgeleri.  
+ Visual Studio belgelerinde bağlantılar sağlar.  
   
  [C#](../../csharp/index.md) uygulama geliştirme Visual C# ile belgelerine içine bağlantılar sağlar.  
   
@@ -72,4 +72,4 @@ Sık karşılaşılan sorunların yanıtlarını bulmanıza yardımcı olabilece
  Visual C++ belgelerine ilişkin bağlantıları sağlar.  
   
  [Office ve SharePoint geliştirme](https://msdn.microsoft.com/library/d2tx7z6d)  
- Microsoft Office kullanma hakkında bilgi sağlar ve [!INCLUDE[vsprvs](~/includes/vsprvs-md.md)] bir iş uygulaması bir parçası olarak.
+ Microsoft Office ve Visual Studio bir iş uygulaması bir parçası olarak kullanma hakkında bilgi sağlar.

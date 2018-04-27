@@ -1,11 +1,12 @@
 ---
-title: "İzlenecek yol: Visual Basic ile COM Nesneleri Oluşturma"
-ms.custom: 
+title: 'İzlenecek yol: Visual Basic ile COM Nesneleri Oluşturma'
+ms.custom: ''
 ms.date: 07/20/2015
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- devlang-visual-basic
 ms.topic: article
 helpviewer_keywords:
 - COM interop [Visual Basic], creating COM objects
@@ -14,22 +15,22 @@ helpviewer_keywords:
 - object creation [Visual Basic], COM objects
 - COM objects, walkthroughs
 ms.assetid: 7b07a463-bc72-4392-9ba0-9dfcb697a44f
-caps.latest.revision: "30"
+caps.latest.revision: 30
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: ff7d3868a2e3ddaba06ebc6f98c8eacfc7299366
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: e660d672fc32455cee349dc44ad20c3244c087b4
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="walkthrough-creating-com-objects-with-visual-basic"></a>İzlenecek yol: Visual Basic ile COM Nesneleri Oluşturma
-Yeni uygulamalar veya bileşenleri oluştururken, .NET Framework derlemeleri oluşturma en iyisidir. Ancak, [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] com .NET Framework bileşenine kullanıma sunmak kolaylaştırır Bu, COM bileşenlerini gerektiren önceki uygulama paketleri için yeni bileşenler sağlamanıza izin verir. Bu kılavuzda nasıl kullanılacağı ortaya [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] kullanıma sunmak için [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] nesneleri COM nesneleri, hem ile hem de COM sınıfı şablonu olmadan olarak.  
+Yeni uygulamalar veya bileşenleri oluştururken, .NET Framework derlemeleri oluşturma en iyisidir. Ancak, Visual Basic ayrıca com .NET Framework bileşenine kullanıma sunmak kolaylaştırır Bu, COM bileşenlerini gerektiren önceki uygulama paketleri için yeni bileşenler sağlamanıza izin verir. Bu anlatımda Visual Basic kullanıma sunmak için nasıl kullanılacağı gösterilir [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] nesneleri COM nesneleri, hem ile hem de COM sınıfı şablonu olmadan olarak.  
   
  COM nesneleri kullanıma sunmak için en kolay yolu, COM sınıfı şablonu kullanmaktır. COM sınıfı şablonu yeni bir sınıf oluşturur ve projenizin COM nesnesi olarak sınıfı ve birlikte çalışabilirlik katmanı oluşturmak ve işletim sistemi ile kaydetmek için yapılandırır.  
   
 > [!NOTE]
->  Oluşturulan sınıf ayrıca getirebilir rağmen [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] kullanmak yönetilmeyen kod için bir COM nesnesi olarak doğru bir COM nesnesi değil ve tarafından kullanılamaz [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]. Daha fazla bilgi için bkz: [.NET Framework uygulamalarında COM birlikte çalışabilirliği](../../../visual-basic/programming-guide/com-interop/com-interoperability-in-net-framework-applications.md).  
+>  Visual Basic'te kullanmak yönetilmeyen kod için bir COM nesnesi olarak oluşturulmuş bir sınıf da getirebilir rağmen doğru bir COM nesnesi değil ve Visual Basic tarafından kullanılamaz. Daha fazla bilgi için bkz: [.NET Framework uygulamalarında COM birlikte çalışabilirliği](../../../visual-basic/programming-guide/com-interop/com-interoperability-in-net-framework-applications.md).  
   
 [!INCLUDE[note_settings_general](~/includes/note-settings-general-md.md)]  
   
@@ -41,11 +42,11 @@ Yeni uygulamalar veya bileşenleri oluştururken, .NET Framework derlemeleri olu
   
 3.  Seçin **Yeni Öğe Ekle** gelen **proje** menüsü. **Yeni Öğe Ekle** iletişim kutusu görüntülenir.  
   
-4.  Seçin **COM sınıfı** gelen **şablonları** listeleyin ve ardından **Ekle**. [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]Yeni bir sınıf ekler ve yeni proje COM birlikte çalışma için yapılandırır.  
+4.  Seçin **COM sınıfı** gelen **şablonları** listeleyin ve ardından **Ekle**. Visual Basic yeni bir sınıf ekler ve yeni proje COM birlikte çalışma için yapılandırır.  
   
 5.  Özellikleri, yöntemleri ve olayları gibi kodu COM sınıfına ekleyin.  
   
-6.  Seçin **yapı ClassLibrary1** gelen **yapı** menüsü. [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]derleme oluşturur ve COM nesnesi işletim sistemi ile kaydeder.  
+6.  Seçin **yapı ClassLibrary1** gelen **yapı** menüsü. Visual Basic derleme oluşturur ve COM nesnesi işletim sistemi ile kaydeder.  
   
 ## <a name="creating-com-objects-without-the-com-class-template"></a>COM sınıfı şablonu olmadan COM nesneleri oluşturma  
  COM sınıfı şablonu kullanmak yerine el ile bir COM sınıfı de oluşturabilirsiniz. Bu yordam, komut satırından çalışırken veya COM nesneleri nasıl tanımlanan üzerinde daha fazla denetim istediğinizde yararlıdır.  
@@ -93,15 +94,15 @@ Yeni uygulamalar veya bileşenleri oluştururken, .NET Framework derlemeleri olu
   
      [!code-vb[VbVbalrInterop#6](../../../visual-basic/programming-guide/com-interop/codesnippet/VisualBasic/walkthrough-creating-com-objects_5.vb)]  
   
-9. Özellikleri, yöntemleri ve olayları ile biten sınıfına ekleyin bir `End Class` deyimi. Seçin **yapı çözümü** gelen **yapı** menüsü. [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]derleme oluşturur ve COM nesnesi işletim sistemi ile kaydeder.  
+9. Özellikleri, yöntemleri ve olayları ile biten sınıfına ekleyin bir `End Class` deyimi. Seçin **yapı çözümü** gelen **yapı** menüsü. Visual Basic derleme oluşturur ve COM nesnesi işletim sistemi ile kaydeder.  
   
     > [!NOTE]
-    >  Oluşturduğunuz ile COM nesneleri [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] diğer kullanılamaz [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] uygulamaları true COM nesneleri olmadıklarından. Bu tür COM nesnelerine başvurular ekleme girişimleri bir hata ortaya koyar. Ayrıntılar için bkz [.NET Framework uygulamalarında COM birlikte çalışabilirliği](../../../visual-basic/programming-guide/com-interop/com-interoperability-in-net-framework-applications.md).  
+    >  Doğru COM nesneleri olmadıklarından Visual Basic ile oluşturduğunuz COM nesneleri başka bir Visual Basic uygulama tarafından kullanılamaz. Bu tür COM nesnelerine başvurular ekleme girişimleri bir hata ortaya koyar. Ayrıntılar için bkz [.NET Framework uygulamalarında COM birlikte çalışabilirliği](../../../visual-basic/programming-guide/com-interop/com-interoperability-in-net-framework-applications.md).  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
  <xref:Microsoft.VisualBasic.ComClassAttribute>  
- [COM birlikte çalışma](../../../visual-basic/programming-guide/com-interop/index.md)  
- [İzlenecek yol: COM nesnelerinde kalıtım uygulama](../../../visual-basic/programming-guide/com-interop/walkthrough-implementing-inheritance-with-com-objects.md)  
- [#Region yönergesi](../../../visual-basic/language-reference/directives/region-directive.md)  
- [.NET Framework uygulamalarında COM birlikte çalışabilirliği](../../../visual-basic/programming-guide/com-interop/com-interoperability-in-net-framework-applications.md)  
- [Birlikte çalışabilirlik sorunlarını giderme](../../../visual-basic/programming-guide/com-interop/troubleshooting-interoperability.md)
+ [COM Birlikte Çalışma](../../../visual-basic/programming-guide/com-interop/index.md)  
+ [İzlenecek yol: COM Nesnelerinde Kalıtım Uygulama](../../../visual-basic/programming-guide/com-interop/walkthrough-implementing-inheritance-with-com-objects.md)  
+ [#Region Yönergesi](../../../visual-basic/language-reference/directives/region-directive.md)  
+ [.NET Framework Uygulamalarında COM Birlikte Çalışabilirliği](../../../visual-basic/programming-guide/com-interop/com-interoperability-in-net-framework-applications.md)  
+ [Birlikte Çalışabilirlik İle İlgili Sorun Giderme](../../../visual-basic/programming-guide/com-interop/troubleshooting-interoperability.md)

@@ -1,30 +1,32 @@
 ---
-title: "Visual Basic ve WPF Olay İşleme"
-ms.custom: 
+title: Visual Basic ve WPF Olay İşleme
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-wpf
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-wpf
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - Visual Basic [WPF], event handlers
 - event handlers [WPF], Visual Basic
 ms.assetid: ad4eb9aa-3afc-4a71-8cf6-add3fbea54a1
-caps.latest.revision: "12"
+caps.latest.revision: 12
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: ed10e52c59112714a500fe52ccf5b398c14a97b7
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: f61b63e7f80ec779d03c230bd4f24eed00098242
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="visual-basic-and-wpf-event-handling"></a>Visual Basic ve WPF Olay İşleme
-İçin [!INCLUDE[TLA#tla_visualbnet](../../../../includes/tlasharptla-visualbnet-md.md)] dil dile özgü özellikle kullanabilirsiniz `Handles` öznitelikleri ile olay işleyicileri ekleme veya kullanma yerine örnekleri, olay işleyicileri ilişkilendirmek için anahtar sözcüğü <xref:System.Windows.UIElement.AddHandler%2A> yöntemi. Ancak, `Handles` örneklerine işleyicileri iliştirmek için teknik çünkü bazı sınırlamalar vardır `Handles` sözdizimi belirli yönlendirilmiş olay özelliklerinden bazıları destekleyemez [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] olay sistemi.  
+Microsoft Visual Basic .NET dil için özellikle dile özgü kullanabileceğiniz `Handles` öznitelikleri ile olay işleyicileri ekleme veya kullanma yerine örnekleri, olay işleyicileri ilişkilendirmek için anahtar sözcüğü <xref:System.Windows.UIElement.AddHandler%2A> yöntemi. Ancak, `Handles` örneklerine işleyicileri iliştirmek için teknik çünkü bazı sınırlamalar vardır `Handles` sözdizimi belirli yönlendirilmiş olay özelliklerinden bazıları destekleyemez [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] olay sistemi.  
   
 ## <a name="using-handles-in-a-wpf-application"></a>"Tanıtıcıları" bir WPF uygulamasında kullanma  
  Örnekler ve olaylar ile bağlı olay işleyicileri `Handles` tüm parçalı sınıf bildirimi de öğelerin öznitelik değerleri aracılığıyla atanan olay işleyicileri için bir gereksinimdir örneği içinde tanımlanması gerekir. Yalnızca belirtebilirsiniz `Handles` sahip sayfasında bir öğe için bir <xref:System.Windows.FrameworkContentElement.Name%2A> özellik değeri (veya [x: Name yönergesi](../../../../docs/framework/xaml-services/x-name-directive.md) bildirilen). Bunun nedeni, <xref:System.Windows.FrameworkContentElement.Name%2A> içinde [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] desteklemek gerekli olan örnek başvuru oluşturmasıdır *Instance.Event* gerektirdiği başvuru biçimi `Handles` sözdizimi. İçin kullanılan tek öğe `Handles` olmadan bir <xref:System.Windows.FrameworkContentElement.Name%2A> başvurudur kısmi sınıfı tanımlayan kök öğesi örneği.  
@@ -38,14 +40,14 @@ ms.lasthandoff: 12/22/2017
  Kullanabileceğiniz `Handles` işlenen olay üyeleri tablolarıyla tanımlayan örneklere işleyicileri ekleme sürece yönlendirilmiş olaylar için işleyiciler eklemek için. Yönlendirilmiş olaylar, ile bağlı işleyicileri için `Handles` olarak bağlı işleyicileri gibi aynı yönlendirme kurallarına [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] öznitelikleri veya ortak imzası ile <xref:System.Windows.UIElement.AddHandler%2A>. Bunun anlamı olay zaten işlenmiş olarak işaretlenmişse ( <xref:System.Windows.RoutedEventArgs.Handled%2A> olay verilerini bir özellik olan `True`), iliştirilmiş işleyiciler `Handles` olay örneğine yanıt olarak çağrılmaz. Olay rota başka bir öğe örnek işleyicileri veya geçerli öğe veya yol boyunca önceki öğeleri işleme sınıfı tarafından işlenmiş işaretlenebilir. Eşleştirilmiş tünel/Kabarcık olaylarını destekleyen giriş olayları için olay çiftini işlenen tünel yolu işaretlenmiş. Yönlendirilmiş olaylar hakkında daha fazla bilgi için bkz: [yönlendirilmiş olaylara genel bakış](../../../../docs/framework/wpf/advanced/routed-events-overview.md).  
   
 ## <a name="limitations-of-handles-for-adding-handlers"></a>"Tanıtıcıları" sınırlamaları işleyicileri ekleme  
- `Handles`ekli olaylar için işleyiciler başvuramaz. Kullanmalısınız `add` bu ekli olay erişimci yöntemi veya *typename.eventname* olay öznitelikleri [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]. Ayrıntılar için bkz [yönlendirilmiş olaylara genel bakış](../../../../docs/framework/wpf/advanced/routed-events-overview.md).  
+ `Handles` ekli olaylar için işleyiciler başvuramaz. Kullanmalısınız `add` bu ekli olay erişimci yöntemi veya *typename.eventname* olay öznitelikleri [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]. Ayrıntılar için bkz [yönlendirilmiş olaylara genel bakış](../../../../docs/framework/wpf/advanced/routed-events-overview.md).  
   
  Yönlendirilmiş olaylar için yalnızca kullanabileceğiniz `Handles` işleyici atamak için olayın örnek üyeler tablosunda bulunduğu örnekleri. Üst öğenin üyeler tablosunda olay yoksa bile ancak, yönlendirilmiş olaylarla genel olarak, bir üst öğesi alt öğe, bir olay için bir dinleyici olabilir. Bu işlemlerde belirtin öznitelik sözdiziminde bir *typename.membername* özniteliği hangi tür gerçekte işlemek istediğiniz olay tanımlar niteleyen formu. Örneğin, bir üst `Page` (hiçbir `Click` tanımlanan olay) biçiminde öznitelik işleyicisi atayarak düğme tıklama olaylarını dinleme `Button.Click`. Ancak `Handles` desteklemediği *typename.membername* formunda, çünkü bir çakışan desteklemesi gerekir *Instance.Event* formu. Ayrıntılar için bkz [yönlendirilmiş olaylara genel bakış](../../../../docs/framework/wpf/advanced/routed-events-overview.md).  
   
- `Handles`zaten işlenmiş olarak işaretlenmiş olaylar için çağırılan işleyicileri eklenemiyor. Bunun yerine, kod ve çağrı kullanmalısınız `handledEventsToo` , aşırı <xref:System.Windows.UIElement.AddHandler%28System.Windows.RoutedEvent%2CSystem.Delegate%2CSystem.Boolean%29>.  
+ `Handles` zaten işlenmiş olarak işaretlenmiş olaylar için çağırılan işleyicileri eklenemiyor. Bunun yerine, kod ve çağrı kullanmalısınız `handledEventsToo` , aşırı <xref:System.Windows.UIElement.AddHandler%28System.Windows.RoutedEvent%2CSystem.Delegate%2CSystem.Boolean%29>.  
   
 > [!NOTE]
->  Kullanmayın `Handles` sözdiziminde [!INCLUDE[vb_current_short](../../../../includes/vb-current-short-md.md)] XAML'deki aynı olay için olay işleyicisi belirttiğinizde kod. Bu durumda, olay işleyicisi iki kez çağrılır.  
+>  Kullanmayın `Handles` XAML'deki aynı olay için olay işleyicisi belirttiğinizde, Visual Basic kodundaki sözdizimi. Bu durumda, olay işleyicisi iki kez çağrılır.  
   
 ## <a name="how-wpf-implements-handles-functionality"></a>WPF Implements "işleme biçimini" işlevi  
  Zaman bir [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)] sayfa derlenmiş, Ara dosyayı bildirir `Friend` `WithEvents` başvuruları her öğeye sahip sayfasında bir <xref:System.Windows.FrameworkContentElement.Name%2A> özellik kümesi (veya [x: Name yönergesi](../../../../docs/framework/xaml-services/x-name-directive.md) bildirilen). Her adlandırılmış örnek potansiyel olarak yoluyla işleyiciye atanan bir öğedir `Handles`.  

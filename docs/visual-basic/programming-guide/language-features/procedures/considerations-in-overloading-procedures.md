@@ -1,11 +1,12 @@
 ---
-title: "Yordamları Aşırı Yüklemeye İlişkin Düşünceler (Visual Basic)"
-ms.custom: 
+title: Yordamları Aşırı Yüklemeye İlişkin Düşünceler (Visual Basic)
+ms.custom: ''
 ms.date: 07/20/2015
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- devlang-visual-basic
 ms.topic: article
 helpviewer_keywords:
 - signatures [Visual Basic], ParamArray arguments
@@ -31,14 +32,14 @@ helpviewer_keywords:
 - restrictions [Visual Basic], overloading procedures
 - procedures [Visual Basic], parameter lists
 ms.assetid: a2001248-10d0-42c5-b0ce-eeedc987319f
-caps.latest.revision: "26"
+caps.latest.revision: 26
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: 3c9a9a4759d4ec2dd87778c49c4fd82a08c081a8
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: ac4bc47f9e781f83c7930efffedd40d9c25c2ec2
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="considerations-in-overloading-procedures-visual-basic"></a>Yordamları Aşırı Yüklemeye İlişkin Düşünceler (Visual Basic)
 Bir yordamı aşırı yükleme, farklı bir kullanmalısınız *imza* aşırı yüklenmiş her sürüm için. Bu, genellikle her sürümü farklı parametre listesi belirtmelisiniz anlamına gelir. Daha fazla bilgi için bkz: "Farklı imza" [yordam aşırı yüklemesi](./procedure-overloading.md).  
@@ -50,7 +51,7 @@ Bir yordamı aşırı yükleme, farklı bir kullanmalısınız *imza* aşırı y
 ## <a name="alternatives-to-overloaded-versions"></a>Aşırı yüklenmiş sürümleri alternatifleri  
  Özellikle bağımsız değişken varlığını isteğe bağlı olduğunda veya numarasına değişkenidir bazen aşırı yüklenmiş sürümlere seçeneğiniz vardır.  
   
- İsteğe bağlı bağımsız değişkenler, tüm diller tarafından mutlaka desteklenmez ve parametre dizileri için sınırlı aklınızda bulundurun [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]. Birkaç farklı dildeki hiçbirinde yazılan kod öğesinden çağrılması büyük olasılıkla bir yordam yazıyorsanız sürümleri teklif en büyük esnekliği aşırı yüklendi.  
+ İsteğe bağlı bağımsız değişkenler mutlaka tüm diller tarafından desteklenmez ve parametre dizileri Visual Basic'e sınırlı aklınızda bulundurun. Birkaç farklı dildeki hiçbirinde yazılan kod öğesinden çağrılması büyük olasılıkla bir yordam yazıyorsanız sürümleri teklif en büyük esnekliği aşırı yüklendi.  
   
 ### <a name="overloads-and-optional-arguments"></a>Aşırı ve isteğe bağlı bağımsız değişkenler  
  Çağrıyı yapan kod, isteğe bağlı olarak sağlayın veya bağımsız değişkenlerden biri veya daha fazla atlarsanız, birden çok aşırı yüklü sürümlerini tanımlamak veya isteğe bağlı parametreler kullanın.  
@@ -104,7 +105,7 @@ Bir yordamı aşırı yükleme, farklı bir kullanmalısınız *imza* aşırı y
 ## <a name="implicit-overloads-for-a-paramarray-parameter"></a>ParamArray parametresi için örtük aşırı yüklemeleri  
  Bir yordama derleyici göz önünde bulundurur bir [ParamArray](../../../../visual-basic/language-reference/modifiers/paramarray.md) ne çağıran kodu parametre dizisine gibi geçirir birbirinden farklı bir aşırı yüklemeleri, sonsuz sayıda sahip parametre:  
   
--   Ne zaman çağıran kodu bir bağımsız değişken sağlamıyor için aşırı yüklemesiyle`ParamArray`  
+-   Ne zaman çağıran kodu bir bağımsız değişken sağlamıyor için aşırı yüklemesiyle `ParamArray`  
   
 -   Ne zaman tek boyutlu dizi çağıran kodu sağlıyor için aşırı yüklemesiyle `ParamArray` öğe türü  
   
@@ -130,12 +131,12 @@ Bir yordamı aşırı yükleme, farklı bir kullanmalısınız *imza* aşırı y
 -   Derleyici arama kodu yordamı desteği olmayan bir veri türü geçirir, bir hata sinyal olamaz.  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [Yordamları](./index.md)  
- [Parametreler ve bağımsız değişkenler](./procedure-parameters-and-arguments.md)  
- [Sorun giderme yordamları](./troubleshooting-procedures.md)  
- [Nasıl yapılır: bir yordamın birden fazla sürümünü tanımlama](./how-to-define-multiple-versions-of-a-procedure.md)  
- [Nasıl yapılır: aşırı yüklenmiş bir yordamı çağırma](./how-to-call-an-overloaded-procedure.md)  
- [Nasıl yapılır: isteğe bağlı parametreler isteyen bir yordamı aşırı yükleme](./how-to-overload-a-procedure-that-takes-optional-parameters.md)  
- [Nasıl yapılır: belirsiz sayıda parametre isteyen bir yordamı aşırı yükleme](./how-to-overload-a-procedure-that-takes-an-indefinite-number-of-parameters.md)  
- [Aşırı yükleme çözümü](./overload-resolution.md)  
- [Aşırı yüklemeler](../../../../visual-basic/language-reference/modifiers/overloads.md)
+ [Yordamlar](./index.md)  
+ [Yordam Parametreleri ve Bağımsız Değişkenleri](./procedure-parameters-and-arguments.md)  
+ [Yordam Sorunlarını Giderme](./troubleshooting-procedures.md)  
+ [Nasıl yapılır: Bir Yordamın Birden Fazla Sürümünü Tanımlama](./how-to-define-multiple-versions-of-a-procedure.md)  
+ [Nasıl yapılır: Aşırı Yüklenmiş Bir Yordamı Çağırma](./how-to-call-an-overloaded-procedure.md)  
+ [Nasıl yapılır: İsteğe Bağlı Parametreler İsteyen Bir Yordamı Aşırı Yükleme](./how-to-overload-a-procedure-that-takes-optional-parameters.md)  
+ [Nasıl yapılır: Belirsiz Sayıda Parametre İsteyen Bir Yordamı Aşırı Yükleme](./how-to-overload-a-procedure-that-takes-an-indefinite-number-of-parameters.md)  
+ [Aşırı Yükleme Çözümü](./overload-resolution.md)  
+ [Overloads](../../../../visual-basic/language-reference/modifiers/overloads.md)

@@ -1,12 +1,12 @@
 ---
-title: "Nasıl yapılır: Basit bir Parallel.ForEach Döngüsü Yazma"
-ms.custom: 
+title: 'Nasıl yapılır: Basit bir Parallel.ForEach Döngüsü Yazma'
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology: dotnet-standard
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - csharp
@@ -15,18 +15,18 @@ helpviewer_keywords:
 - foreach, parallel version
 - parallel programming, foreach
 ms.assetid: cb5fab92-1c19-499e-ae91-8b7525dd875f
-caps.latest.revision: "19"
+caps.latest.revision: 19
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: bb628c0de1f0e4452ae13b5f5ee392084118bea5
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: 90b900bf98ab664e0fce5c70573f01e044d70803
+ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="how-to-write-a-simple-parallelforeach-loop"></a>Nasıl yapılır: Basit bir Parallel.ForEach Döngüsü Yazma
 Bu örnek nasıl kullanılacağını gösteren bir <xref:System.Threading.Tasks.Parallel.ForEach%2A?displayProperty=nameWithType> veri paralelliği herhangi etkinleştirmek için döngü <xref:System.Collections.IEnumerable?displayProperty=nameWithType> veya <xref:System.Collections.Generic.IEnumerable%601?displayProperty=nameWithType> veri kaynağı.  
@@ -51,7 +51,7 @@ Bu örnek nasıl kullanılacağını gösteren bir <xref:System.Threading.Tasks.
   
 ## <a name="compiling-the-code"></a>Kod Derleniyor  
   
--   Bu kodu kopyalayıp bir [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] 2010 konsol uygulama projesi.  
+-   Bu kodu kopyalayıp bir Visual Studio 2010 konsol uygulaması projesine yapıştırın.  
   
 -   System.Drawing.dll bir başvuru ekleyin  
   

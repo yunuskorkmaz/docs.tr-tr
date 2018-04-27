@@ -17,79 +17,79 @@ ms.assetid: 5c6bd31a-9542-4f3e-bfd5-e951af58f0f2
 caps.latest.revision: 17
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: 2524df987bfea25b294c6e24abe5a6d8ff548df1
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
-ms.translationtype: MT
+ms.openlocfilehash: f65df8469ecfbc1296963f95eefbb29068f1cb57
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="visual-basic-language-reference"></a>Visual Basic Dil Başvurusu
-Bu bölümde çeşitli yönlerini için başvuru bilgileri [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] dili.  
+Bu bölümde Visual Basic dilinin çeşitli yönlerini için başvuru bilgileri sağlar.  
   
 ## <a name="in-this-section"></a>Bu Bölümde  
- [Tipografi ve kod kuralları](../../visual-basic/language-reference/typographic-and-code-conventions.md)  
- Anahtar sözcükler, yer tutucular ve diğer öğelerin dil biçimlendirilir şekilde özetlenmiştir [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] belgeleri.  
+ [Tipografi ve Kod Kuralları](../../visual-basic/language-reference/typographic-and-code-conventions.md)  
+ Anahtar sözcükler, yer tutucular ve diğer öğelerin dil Visual Basic belgelerinde biçimlendirilmiş şekilde özetler.  
   
- [Visual Basic çalışma zamanı kitaplığı üyeleri](../../visual-basic/language-reference/runtime-library-members.md)  
+ [Visual Basic Çalışma Süresi Kitaplık Üyeleri](../../visual-basic/language-reference/runtime-library-members.md)  
  Sınıfları ve modüllerini listeler <xref:Microsoft.VisualBasic?displayProperty=nameWithType> kendi üye işlevleri, yöntemler, özellikler, sabitler ve numaralandırmalar için bağlantılar ile birlikte ad alanı.  
   
- [Anahtar sözcükler](../../visual-basic/language-reference/keywords/index.md)  
+ [Anahtar Sözcükler](../../visual-basic/language-reference/keywords/index.md)  
  Tüm Visual Basic anahtar sözcükleri listeler ve daha fazla bilgi için bağlantılar sağlar.  
   
  [Öznitelikler (Visual Basic)](../../visual-basic/language-reference/attributes.md)  
- Bulunan öznitelikler belgeleri [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)].  
+ Visual Basic'te kullanılabilir öznitelikleri belgeler.  
   
- [Sabitler ve numaralandırmalar](../../visual-basic/language-reference/constants-and-enumerations.md)  
- Sabitler ve numaralandırmalar bulunan belgeleri [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)].  
+ [Sabitler ve Sabit Listeleri](../../visual-basic/language-reference/constants-and-enumerations.md)  
+ Sabitler ve numaralandırmalar Visual Basic'te kullanılabilir belgeleri.  
   
- [Veri türleri](../../visual-basic/language-reference/data-types/data-type-summary.md)  
- Veri türleri kullanılabilir belgeleri [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)].  
+ [Veri Türleri](../../visual-basic/language-reference/data-types/data-type-summary.md)  
+ Visual Basic'te kullanılabilen veri türleri belgeler.  
   
- [Yönergeleri](../../visual-basic/language-reference/directives/directives.md)  
- Derleyici yönergeleri bulunan belgeleri [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)].  
+ [Yönergeler](../../visual-basic/language-reference/directives/directives.md)  
+ Visual Basic'te kullanılabilir derleyici yönergeleri belgeler.  
   
  [İşlevler](../../visual-basic/language-reference/functions/index.md)  
- Çalışma zamanı işlevleri bulunan belgeleri [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)].  
+ Visual Basic çalışma zamanı işlevleri belgeler.  
   
  [Değiştiriciler](../../visual-basic/language-reference/modifiers/index.md)  
  Visual Basic çalışma zamanı değiştiricileri listeler ve daha fazla bilgi için bağlantılar sağlar.  
   
- [Modülleri](../../visual-basic/language-reference/modules.md)  
- İçinde kullanılabilir modül belgeleri [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] ve üyeleri.  
+ [Modüller](../../visual-basic/language-reference/modules.md)  
+ Visual Basic ve üyeleri kullanılabilir modül belgeler.  
   
- [Hiçbir şey](../../visual-basic/language-reference/nothing.md)  
+ [Nothing](../../visual-basic/language-reference/nothing.md)  
  Herhangi bir veri türünün varsayılan değeri açıklar.  
   
- [Nesneleri](../../visual-basic/language-reference/objects/index.md)  
- Kullanılabilir nesneler belgeleri [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] ve üyeleri.  
+ [Nesneler](../../visual-basic/language-reference/objects/index.md)  
+ Visual Basic ve üyeleri kullanılabilir nesneleri belgeler.  
   
  [İşleçler](../../visual-basic/language-reference/operators/index.md)  
- Kullanılabilir operatörler belgeleri [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)].  
+ Visual Basic'te kullanılabilir işleçleri belgeler.  
   
- [Özellikleri](../../visual-basic/language-reference/properties.md)  
- Kullanılabilir özellikler belgeleri [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)].  
+ [Özellikler](../../visual-basic/language-reference/properties.md)  
+ Visual Basic'te kullanılabilen özellikleri belgeler.  
   
- [Sorguları](../../visual-basic/language-reference/queries/queries.md)  
+ [Sorgular](../../visual-basic/language-reference/queries/queries.md)  
  Kullanma hakkında başvuru bilgileri sağlar [!INCLUDE[vbteclinqext](~/includes/vbteclinqext-md.md)] kodunuzu ifadelerinde.  
   
- [Deyimleri](../../visual-basic/language-reference/statements/index.md)  
- Bildirim ve yürütülebilir deyimleri bulunan belgeleri [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)].  
+ [Deyimler](../../visual-basic/language-reference/statements/index.md)  
+ Visual Basic'te kullanılabilir bildirimi ve yürütülebilir deyimleri belgeler.  
   
- [XML açıklama etiketleri](../../visual-basic/language-reference/xmldoc/recommended-xml-tags-for-documentation-comments.md)  
- Belge açıklamaları için IntelliSense sağlanır açıklar [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] Kod Düzenleyicisi.  
+ [XML Açıklama Etiketleri](../../visual-basic/language-reference/xmldoc/recommended-xml-tags-for-documentation-comments.md)  
+ IntelliSense Visual Basic Kod Düzenleyicisi'nde sağlanan belge açıklamaları açıklar.  
   
- [XML eksen özellikleri](../../visual-basic/language-reference/xml-axis/xml-axis-properties.md)  
+ [XML Eksen Özellikleri](../../visual-basic/language-reference/xml-axis/xml-axis-properties.md)  
  XML kodunuzda doğrudan erişmek için XML eksen özellikleri kullanma hakkında bilgi için bağlantılar sağlar.  
   
- [XML değişmez değerleri](../../visual-basic/language-reference/xml-literals/index.md)  
+ [XML Değişmez Değerleri](../../visual-basic/language-reference/xml-literals/index.md)  
  XML değişmez değerleri kodunuzda doğrudan XML içerecek şekilde kullanma hakkında bilgi için bağlantılar sağlar.  
   
- [Hata iletileri](../../visual-basic/language-reference/error-messages/index.md)  
- Bir listesini sağlar [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] derleyici ve çalışma zamanı hata iletileri ve bunları nasıl ele alınacağını hakkında Yardım.  
+ [Hata İletileri](../../visual-basic/language-reference/error-messages/index.md)  
+ Bunları işlemek Visual Basic derleyici ve çalışma zamanı hata iletileri ve Yardım bir listesi verilmektedir.  
   
 ## <a name="related-sections"></a>İlgili Bölümler  
  [Visual Basic](../../visual-basic/index.md)  
- Tüm alanları üzerinde kapsamlı Yardım sağlar [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] dili.  
+ Visual Basic Dil tüm alanlarının kapsamlı Yardım sağlar.  
   
  [Visual Basic komut satırı derleyicisi](../../visual-basic/reference/command-line-compiler/index.md)  
  Programların içinden derleme alternatif olarak komut satırı derleyicisi kullanmayı açıklar [!INCLUDE[vsprvs](~/includes/vsprvs-md.md)] tümleşik geliştirme ortamı (IDE).

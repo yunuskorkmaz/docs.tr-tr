@@ -26,14 +26,14 @@ ms.author: ronpet
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: 4d288d321063512f91ad94b417bb1a6bf38c9ef9
-ms.sourcegitcommit: cf22b29db780e532e1090c6e755aa52d28273fa6
+ms.openlocfilehash: 2e31605f428f4e1dc58ee3332977f14dfd394489
+ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/01/2018
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="add-ins-and-extensibility"></a>Eklentiler ve Genişletilebilirlik
-<a name="top"></a>Eklentiler genişletilmiş özellikler veya bir ana bilgisayar uygulaması için hizmetleri sağlar. [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] Geliştiriciler eklentiler geliştirmek ve bunları kendi ana bilgisayar uygulamasında etkinleştirmek için kullanabileceğiniz bir programlama modelidir. Model bu konak ve eklenti arasındaki iletişim ardışık düzeni oluşturarak elde eder. Model türler kullanılarak uygulanır <xref:System.AddIn>, <xref:System.AddIn.Hosting>, <xref:System.AddIn.Pipeline>, ve <xref:System.AddIn.Contract> ad alanları.  
+<a name="top"></a> Eklentiler genişletilmiş özellikler veya bir ana bilgisayar uygulaması için hizmetleri sağlar. [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] Geliştiriciler eklentiler geliştirmek ve bunları kendi ana bilgisayar uygulamasında etkinleştirmek için kullanabileceğiniz bir programlama modelidir. Model bu konak ve eklenti arasındaki iletişim ardışık düzeni oluşturarak elde eder. Model türler kullanılarak uygulanır <xref:System.AddIn>, <xref:System.AddIn.Hosting>, <xref:System.AddIn.Pipeline>, ve <xref:System.AddIn.Contract> ad alanları.  
   
  Bu genel bakışta aşağıdaki bölümleri içerir:  
   
@@ -54,7 +54,7 @@ ms.lasthandoff: 02/01/2018
   
  Aşağıdaki çizimde, ardışık düzen gösterir.  
   
- ![Ekleme &#45; ardışık düzen modeli. ] (../../../docs/framework/add-ins/media/addin1.png "AddIn1")  
+ ![Ekleme&#45;kanal modeli. ] (../../../docs/framework/add-ins/media/addin1.png "AddIn1")  
 Eklenti ardışık düzeni  
   
  Bu kesimler derlemelerde aynı uygulama etki alanında olması gerekli değildir. Kendi yeni uygulama etki alanına, var olan bir uygulama etki alanına veya ana bilgisayarın uygulama etki alanına bile bir eklenti yükleyebilirsiniz. Kaynakları ve güvenlik kapsamları paylaşmak eklentileri sağlayan aynı uygulama etki alanına, birden çok eklentileri yükleyebilir.  
@@ -116,7 +116,7 @@ Eklenti ardışık düzeni
   
 |Başlık|Açıklama|  
 |-----------|-----------------|  
-|[İşlem Hattı Geliştirme](../../../docs/framework/add-ins/pipeline-development.md)|Eklenti konak uygulamaya bölümlerinin iletişim kanalı açıklar. Kod örnekleri ardışık düzenini oluşturmak ve ardışık düzeninde kesimleri dağıtmak anlatan izlenecek konularda sağlar [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)].|  
+|[İşlem Hattı Geliştirme](../../../docs/framework/add-ins/pipeline-development.md)|Eklenti konak uygulamaya bölümlerinin iletişim kanalı açıklar. Kod örnekleri ardışık düzenini oluşturmak ve sonra Visual Studio'da ardışık düzene kesimleri dağıtmak anlatan izlenecek konularda sağlar.|  
 |[Uygulama Etki Alanları ve Derlemeler](http://msdn.microsoft.com/library/433b04ae-4ba8-4849-9dbd-79194f240346)|Güvenlik, güvenilirlik ve sürüm oluşturma için bir yalıtım sınırı sağlayan uygulama etki alanları ve derlemeler arasındaki ilişkiyi açıklar.|  
   
  [Başa dön](#top)  

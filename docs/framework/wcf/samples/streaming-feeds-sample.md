@@ -1,24 +1,26 @@
 ---
-title: "Akış Gerçekleştirme Örneği"
-ms.custom: 
+title: Akış Gerçekleştirme Örneği
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 1f1228c0-daaa-45f0-b93e-c4a158113744
-caps.latest.revision: "16"
+caps.latest.revision: 16
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: e3d2de4dd5510b212e030ea537cea0be3dce24f0
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 24dfd6c7eb2c1df6605d03bfb99cc82c0a489377
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="streaming-feeds-sample"></a>Akış Gerçekleştirme Örneği
 Bu örnek, çok sayıda öğe içeren dağıtım akışlarını yönetmek gösterilmiştir. Sunucu üzerinde örnek tek tek oluşturulması gecikme gösterilmiştir <xref:System.ServiceModel.Syndication.SyndicationItem> nesneleri hemen kadar akış içinde öğe ağ akışa yazılmadan önce.  
@@ -27,7 +29,7 @@ Bu örnek, çok sayıda öğe içeren dağıtım akışlarını yönetmek göste
   
  En iyi dağıtım API akış yeteneğini göstermek için bu örnek sunucu sonsuz sayıda öğe içeren bir akış sunar biraz olası bir senaryo kullanır. Bu durumda, sunucunun istemci belirtilen sayıda öğeyi akıştan (varsayılan olarak, 10) okuma izni olduğunu belirler kadar akışa yeni öğeler oluşturma devam eder. Basitlik, hem istemci hem de sunucunun aynı işlem içinde uygulanan ve paylaşılan kullanın `ItemCounter` kaç istemci öğelerini izlemek için nesne üretilen. `ItemCounter` Türü yalnızca düzgün bir şekilde sonlandırmak Örnek senaryo izin vermek amacıyla var ve gösterilen deseni çekirdek öğesi değil.  
   
- Tanıtım kullanır [!INCLUDE[csprcs](../../../../includes/csprcs-md.md)] yineleyiciler (kullanarak `yield``return` anahtar sözcüğü yapı). [!INCLUDE[crabout](../../../../includes/crabout-md.md)]yineleyiciler, MSDN'de "Yineleyiciler kullanma" konusuna bakın.  
+ Visual C#, kullanan Tanıtımı yararlanır yineleyiciler (kullanarak `yield``return` anahtar sözcüğü yapı). [!INCLUDE[crabout](../../../../includes/crabout-md.md)] yineleyiciler, MSDN'de "Yineleyiciler kullanma" konusuna bakın.  
   
 ## <a name="service"></a>Hizmet  
  Temel bir hizmet uygulayan <xref:System.ServiceModel.Web.WebGetAttribute> aşağıdaki kodda gösterildiği gibi bir işleme, oluşur sözleşme.  

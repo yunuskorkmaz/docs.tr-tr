@@ -12,14 +12,14 @@ helpviewer_keywords:
 - what's new [Visual Basic]
 - Visual Basic, what's new
 ms.assetid: d7e97396-7f42-4873-a81c-4ebcc4b6ca02
-caps.latest.revision: ''
+caps.latest.revision: 145
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 4641041657e99fa64bf1b7eb5317a43660ac7e2b
-ms.sourcegitcommit: 935d5267c44f9bce801468ef95f44572f1417e8c
+ms.openlocfilehash: 34c7e7147ce7ae43926de1796bee433667f08331
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/28/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="whats-new-for-visual-basic"></a>Visual Basic for yenilikler nelerdir?
 
@@ -129,7 +129,7 @@ Daha fazla bilgi için "Değişmez değer atamaları" bölümüne bakın [bayt](
 
 **C# başvurusu dönüş değerleri için destek**
 
-C# 7 ile başlayan, C# destekler başvurusu dönüş değerleri. Diğer bir deyişle, çağrıyı yapan yöntemini başvuru tarafından döndürülen bir değeri aldığında, başvuru değeri değiştirebilirsiniz. Visual Basic başvurusu yöntemleriyle yazmak için dönüş değerleri ancak kullanabilir ve başvuru dönüş değerlerini değiştirmek olanak izin vermiyor.
+C# 7. 0'dan başlayarak, C# destekler başvurusu dönüş değerleri. Diğer bir deyişle, çağrıyı yapan yöntemini başvuru tarafından döndürülen bir değeri aldığında, başvuru değeri değiştirebilirsiniz. Visual Basic başvurusu yöntemleriyle yazmak için dönüş değerleri ancak kullanabilir ve başvuru dönüş değerlerini değiştirmek olanak izin vermiyor.
 
 Örneğin, aşağıdaki `Sentence` C# ile yazılmış sınıfı içeren bir `FindNext` belirtilen bir alt dizesi ile başlayan bir tümcedeki sonraki sözcüğü bulur yöntemi. Bir başvuru döndürmek gibi değer ve bir dize döndürdü `Boolean` başvuruya yöntemine geçirilen değişken gösterir arama başarılı olup olmadığını. Bu, çağrıyı yapan yalnızca döndürülen değeri okunamıyor anlamına gelir; çözemiyorsa de değiştirebilirsiniz ve bu değişikliği yansıtılmıştır `Sentence` sınıfı.
 
@@ -151,7 +151,7 @@ Daha fazla bilgi için bkz: [başvuru dönüş değerleri](../programming-guide/
 
 ## <a name="visual-basic-14"></a>Visual Basic 14
 
-[Nameof](../../csharp/language-reference/keywords/nameof.md)  
+[nameof](../../csharp/language-reference/keywords/nameof.md)  
  Bir dize sabit kodlama olmadan bir hata iletisi kullanmak için bir tür veya üye nitelenmemiş dize adını elde edebilirsiniz.  Bu, kodunuzu yeniden düzenleme, doğru kalmasını sağlar.  Bu özellik ayrıca model-view-controller MVC bağlantıları takma ve özellik değişti olayları tetikleme için yararlıdır.  
   
 [Dize İlişkilendirme](../../visual-basic/programming-guide/language-features/strings/interpolated-strings.md)  

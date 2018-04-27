@@ -1,9 +1,10 @@
 ---
-title: "Ne yazık ki tan &#39; bu Visual Basic hatasıyla ilgili ayrıntı sahip t"
+title: Ne yazık ki güncelleştireceğinizi&#39;t bu Visual Basic hatasıyla ilgili ayrıntı sahip
 ms.date: 07/20/2015
 ms.prod: .net
-ms.technology: devlang-visual-basic
-ms.tgt_pltfrm: 
+ms.technology:
+- devlang-visual-basic
+ms.tgt_pltfrm: ''
 ms.topic: article
 f1_keywords:
 - vbc30234
@@ -3048,35 +3049,35 @@ f1_keywords:
 - bc30233
 - bc30829
 ms.assetid: 0938efc2-e205-450b-9314-99951fcbd702
-caps.latest.revision: "21"
+caps.latest.revision: 21
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: 132bb3f93ae5084df73aed56b6d1483830984928
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
-ms.translationtype: MT
+ms.openlocfilehash: 4ab447c06504d6c3bb7c51107e422b2cba1f45e3
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/26/2018
 ---
-# <a name="sorry-we-don39t-have-specifics-on-this-visual-basic-error"></a>Ne yazık ki tan &#39; bu Visual Basic hatasıyla ilgili ayrıntı sahip t
+# <a name="sorry-we-don39t-have-specifics-on-this-visual-basic-error"></a>Ne yazık ki güncelleştireceğinizi&#39;t bu Visual Basic hatasıyla ilgili ayrıntı sahip
 Üzgünüz, ancak bu hatayla ilgili belirli bir bilgi bulunmuyor. Web hakkında bilgi bulmak hata numarası ve ileti metni arayabilirsiniz. Veya bu forumları birini kullanarak diğer geliştiriciler isteyin:  
   
  [Visual Basic dili](http://go.microsoft.com/fwlink/?LinkId=145963)  
- Genel ve hakkında tartışmalar sorular için bir forum sağlar [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] dili sözdizimi ve derleyicisi.  
+ Bir forum sorular için derleyici ve Visual Basic dili sözdizimi hakkında ve genel tartışmalar sağlar.  
   
  [Visual Basic birlikte çalışabilirlik ve yükseltme](http://go.microsoft.com/fwlink/?LinkId=145966)  
- Hakkında sorular için bir forum sağlar ve sorunlar için yükseltme işlemiyle [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] ve birlikte çalışabilirlik özellikleri ile çalışma.  
+ Hakkında sorular için bir forum sağlar ve Visual Basic'e yükseltme ve birlikte çalışabilirlik özellikleri ile çalışma sorunlarını.  
   
  [Visual Basic IDE](http://go.microsoft.com/fwlink/?LinkId=145971)  
  Nasıl çalıştığı hakkında sorular için bir forum sağlar [!INCLUDE[vsprvs](~/includes/vsprvs-md.md)] ortamı.  
   
  [Visual Basic genel](http://go.microsoft.com/fwlink/?LinkId=145973)  
- Hakkında sorular için bir forum sağlar ve sorunlar [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] , değil tartışılır diğer forumlarda.  
+ Hakkında sorular için bir forum sağlar ve diğer forumlarda açıklanmamaktadır Visual Basic ile yayımlar.  
   
  [StackOverflow](http://stackoverflow.com/questions/tagged/vb.net)  
- Hakkında sorular için bir forum sağlar ve sorunlar [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)].  
+ Hakkında sorular için bir forum sağlar ve Visual Basic ile yayımlar.  
   
  Ayrıca bkz.:  
- [Visual Basic programcıları için ek kaynaklar](../../visual-basic/getting-started/additional-resources.md)  
+ [Visual Basic Programcıları için Ek Kaynaklar](../../visual-basic/getting-started/additional-resources.md)  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
  [Visual Basic programlama kılavuzu](../../visual-basic/programming-guide/index.md)  

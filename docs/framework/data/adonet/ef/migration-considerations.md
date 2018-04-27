@@ -1,24 +1,26 @@
 ---
-title: "Geçiş konuları (Entity Framework)"
-ms.custom: 
+title: Geçiş konuları (Entity Framework)
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-ado
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-ado
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: c85b6fe8-cc32-4642-8f0a-dc0e5a695936
-caps.latest.revision: "6"
+caps.latest.revision: 6
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.workload: dotnet
-ms.openlocfilehash: 8e4c1b06e5a3a7717b99379fd9bca2c5a8a14a6a
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.workload:
+- dotnet
+ms.openlocfilehash: c31d7d481d5016b8f2d440f8a727e5bfcf66717c
+ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="migration-considerations-entity-framework"></a>Geçiş konuları (Entity Framework)
 [!INCLUDE[vstecado](../../../../../includes/vstecado-md.md)] Entity Framework var olan bir uygulamaya birkaç avantaj sağlar. Çoğu biri veri kaynağındaki şemasından uygulama tarafından kullanılan veri yapılarını ayırmak için kavramsal model kullanma yeteneğini bu yararları önemlidir. Bu kolayca gelecekteki depolama modeli için veya uygulamaya karşılayan değişiklikleri yapmadan veri kaynağına kendisini değişiklik yapmanızı sağlar. Kullanmanın yararları hakkında daha fazla bilgi için [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)], bkz: [Entity Framework genel bakış](../../../../../docs/framework/data/adonet/ef/overview.md) ve [varlık veri modeli](../../../../../docs/framework/data/adonet/entity-data-model.md).  
@@ -44,7 +46,7 @@ ms.lasthandoff: 01/19/2018
   
 1.  Uygulamayı yükseltin.  
   
-     Önceki bir sürümü kullanılarak oluşturulmuş bir proje [!INCLUDE[vsprvs](../../../../../includes/vsprvs-md.md)] ve [!INCLUDE[dnprdnshort](../../../../../includes/dnprdnshort-md.md)] kullanılacak yükseltilmelidir [!INCLUDE[vsOrcas](../../../../../includes/vsorcas-md.md)] SP1 ve [!INCLUDE[dnprdnshort](../../../../../includes/dnprdnshort-md.md)] sürüm 3.5 SP1 ile başlayarak.  
+     Visual Studio'nun önceki bir sürümü kullanılarak oluşturulmuş bir proje ve [!INCLUDE[dnprdnshort](../../../../../includes/dnprdnshort-md.md)] kullanılacak yükseltilmelidir [!INCLUDE[vsOrcas](../../../../../includes/vsorcas-md.md)] SP1 ve [!INCLUDE[dnprdnshort](../../../../../includes/dnprdnshort-md.md)] sürüm 3.5 SP1 ile başlayarak.  
   
 2.  Modelleri ve eşleme tanımlayın.  
   
@@ -59,15 +61,15 @@ ms.lasthandoff: 01/19/2018
   
      [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] Kavramsal model sorguları yürütülürken özel olarak biçimlendirilmiş bağlantı dizesini kullanır. Bu bağlantı dizesi modeli ve eşleme dosyaları ve veri kaynağı bağlantısı hakkındaki bilgileri yalıtır. Daha fazla bilgi için bkz: [nasıl yapılır: bağlantı dizesini tanımlar](../../../../../docs/framework/data/adonet/ef/how-to-define-the-connection-string.md).  
   
-4.  Yapılandırma [!INCLUDE[vsprvs](../../../../../includes/vsprvs-md.md)] projesi.  
+4.  Visual Studio projesini yapılandırın.  
   
-     Başvurular [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] derlemeler, model ve eşleme dosyaları eklenmelidir [!INCLUDE[vsprvs](../../../../../includes/vsprvs-md.md)] projesi. Bunlar uygulama bağlantı dizesinde belirtilen konumda ile dağıtılan sağlamak için projeyi Bu eşleme dosyaları ekleyebilirsiniz. Daha fazla bilgi için bkz: [nasıl yapılır: bir Entity Framework projesi el ile yapılandırmanız](http://msdn.microsoft.com/library/73f6ae1d-b3b2-4577-aebd-ad5a75954e9e).  
+     Başvurular [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] derlemeler, model ve eşleme dosyaları için Visual Studio projesi eklenmesi gerekiyor. Bunlar uygulama bağlantı dizesinde belirtilen konumda ile dağıtılan sağlamak için projeyi Bu eşleme dosyaları ekleyebilirsiniz. Daha fazla bilgi için bkz: [nasıl yapılır: bir Entity Framework projesi el ile yapılandırmanız](http://msdn.microsoft.com/library/73f6ae1d-b3b2-4577-aebd-ad5a75954e9e).  
   
 ## <a name="considerations-for-applications-with-existing-objects"></a>Var olan nesneleri uygulamalarla dikkate alınacak noktalar  
  İle başlayarak [!INCLUDE[dnprdnshort](../../../../../includes/dnprdnshort-md.md)] 4, [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] "düz eski" destekleyen CLR nesnelerini (POCO) Kalıcılık kullanmayan nesneleri olarak da bilinir. Çoğu durumda, var olan nesneleri ile çalışabilirsiniz [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] küçük değişiklikler yaparak. Daha fazla bilgi için bkz: [POCO varlıklarla çalışmaya](http://msdn.microsoft.com/library/5e0fb82a-b6d1-41a1-b37b-c12db61629d3). Bir uygulamaya da geçirebilirsiniz [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] ve Entity Framework araçları tarafından oluşturulan veri sınıflarını kullanın. Daha fazla bilgi için bkz: [nasıl yapılır: Varlık veri modeli Sihirbazı'nı](http://msdn.microsoft.com/library/dadb058a-c5d9-4c5c-8b01-28044112231d).  
   
 ## <a name="considerations-for-applications-that-use-adonet-providers"></a>ADO.NET sağlayıcılarını kullanan uygulamalar için ilgili önemli noktalar  
- [!INCLUDE[vstecado](../../../../../includes/vstecado-md.md)]SqlClient gibi sağlayıcıları tablo veri döndürmek için bir veri kaynağını sorgulamak etkinleştirin. Veri da yüklenebilir içine bir [!INCLUDE[vstecado](../../../../../includes/vstecado-md.md)] veri kümesi. Aşağıdaki listede varolan kullanan bir uygulamayı yükseltmeyle ilgili konular açıklanmaktadır [!INCLUDE[vstecado](../../../../../includes/vstecado-md.md)] sağlayıcısı:  
+ [!INCLUDE[vstecado](../../../../../includes/vstecado-md.md)] SqlClient gibi sağlayıcıları tablo veri döndürmek için bir veri kaynağını sorgulamak etkinleştirin. Veri da yüklenebilir içine bir [!INCLUDE[vstecado](../../../../../includes/vstecado-md.md)] veri kümesi. Aşağıdaki listede varolan kullanan bir uygulamayı yükseltmeyle ilgili konular açıklanmaktadır [!INCLUDE[vstecado](../../../../../includes/vstecado-md.md)] sağlayıcısı:  
   
  Tablo verisi bir veri okuyucu kullanarak görüntüleme.  
  Yürütme düşünebilirsiniz bir [!INCLUDE[esql](../../../../../includes/esql-md.md)] sorgu EntityClient sağlayıcısı kullanarak ve döndürülen numaralandırma <xref:System.Data.EntityClient.EntityDataReader> nesnesi. Uygulamanız bir veri okuyucu kullanarak tablo verileri görüntüler ve tarafından sağlanan özellikleri gerektirmez bunu [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] veri nesnelerini gerçekleştirilmesini için değişiklik izleme ve güncelleştirmeleri yapma. Veri kaynağına güncelleştirmeleri yapar mevcut veri erişim kodu kullanmaya devam edebilirsiniz, ancak erişilen varolan bir bağlantıyı kullanabilirsiniz <xref:System.Data.EntityClient.EntityConnection.StoreConnection%2A> özelliği <xref:System.Data.EntityClient.EntityConnection>. Daha fazla bilgi için bkz: [EntityClient sağlayıcısı için Entity Framework](../../../../../docs/framework/data/adonet/ef/entityclient-provider-for-the-entity-framework.md).  
@@ -87,7 +89,7 @@ ms.lasthandoff: 01/19/2018
   
  Daha fazla bilgi için bkz: [denetimleri bağlama nesnelere](http://msdn.microsoft.com/library/2fd34855-929b-4303-a91e-4bb69d958f2b).  
   
- [!INCLUDE[vstecasp](../../../../../includes/vstecasp-md.md)]veri kaynağı denetimleri.  
+ [!INCLUDE[vstecasp](../../../../../includes/vstecasp-md.md)] veri kaynağı denetimleri.  
  [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] Veri bağlamanın basitleştirmek üzere tasarlanmış bir veri kaynağı denetimi içeren [!INCLUDE[vstecasp](../../../../../includes/vstecasp-md.md)] Web uygulamaları. Daha fazla bilgi için bkz: [Entity Framework Veri kaynağı denetimi](http://msdn.microsoft.com/library/1f09af00-9578-4744-a029-765710a3c83f).  
   
 ## <a name="other-considerations"></a>Diğer Konular  
@@ -104,7 +106,7 @@ ms.lasthandoff: 01/19/2018
  Uygulamanızı sorgulama XML verileri gerektiriyorsa, hala LINQ sorgularını avantajları LINQ-XML kullanarak yararlanabilirsiniz. Daha fazla bilgi için bkz: [LINQ-XML](http://msdn.microsoft.com/library/f0fe21e9-ee43-4a55-b91a-0800e5782c13).  
   
  Durumunu korumak uygulamalar.  
- [!INCLUDE[vstecasp](../../../../../includes/vstecasp-md.md)]Web uygulamaları bir Web sayfası veya bir kullanıcı oturum durumunu sık bakımını yapmanız gerekir. Nesneler bir <xref:System.Data.Objects.ObjectContext> örneği depolanan istemci görünüm durumu veya sunucu üzerinde oturum durumu ve daha sonra alınabilir ve yeni bir nesne bağlamına yeniden. Daha fazla bilgi için bkz: [Attaching ve ayırma nesneleri](http://msdn.microsoft.com/library/41d5c1ef-1b78-4502-aa10-7e1438d62d23).  
+ [!INCLUDE[vstecasp](../../../../../includes/vstecasp-md.md)] Web uygulamaları bir Web sayfası veya bir kullanıcı oturum durumunu sık bakımını yapmanız gerekir. Nesneler bir <xref:System.Data.Objects.ObjectContext> örneği depolanan istemci görünüm durumu veya sunucu üzerinde oturum durumu ve daha sonra alınabilir ve yeni bir nesne bağlamına yeniden. Daha fazla bilgi için bkz: [Attaching ve ayırma nesneleri](http://msdn.microsoft.com/library/41d5c1ef-1b78-4502-aa10-7e1438d62d23).  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
  [Dağıtım Konuları](../../../../../docs/framework/data/adonet/ef/deployment-considerations.md)  

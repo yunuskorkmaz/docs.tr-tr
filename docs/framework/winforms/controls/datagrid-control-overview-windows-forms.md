@@ -1,13 +1,13 @@
 ---
-title: "DataGrid Denetimine Genel Bakış (Windows Forms)"
-ms.custom: 
+title: DataGrid Denetimine Genel Bakış (Windows Forms)
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - dotnet-winforms
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 f1_keywords:
 - DataGrid
@@ -28,17 +28,17 @@ helpviewer_keywords:
 - parent table navigation in DataGrid
 - child tables [Windows Forms], dataGrid control
 ms.assetid: 85604bce-bc03-49d9-9030-dda8896c44b1
-caps.latest.revision: 
+caps.latest.revision: 22
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: 10220efc0bb77ddcc7f0f9fa0e3f2793a032a1bd
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: fd74ed0e31fff211f0197ad27f297f9fbecf5cab
+ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="datagrid-control-overview-windows-forms"></a>DataGrid Denetimine Genel Bakış (Windows Forms)
 > [!NOTE]
@@ -71,13 +71,13 @@ Birden çok tablo verileriyle ilişkili bir DataGrid
   
  Geçerli veri kaynakları için <xref:System.Windows.Forms.DataGrid> içerir:  
   
--   <xref:System.Data.DataTable>sınıfı  
+-   <xref:System.Data.DataTable> sınıfı  
   
--   <xref:System.Data.DataView>sınıfı  
+-   <xref:System.Data.DataView> sınıfı  
   
--   <xref:System.Data.DataSet>sınıfı  
+-   <xref:System.Data.DataSet> sınıfı  
   
--   <xref:System.Data.DataViewManager>sınıfı  
+-   <xref:System.Data.DataViewManager> sınıfı  
   
  Kaynağınız bir veri kümesi ise, veri kümesi biçiminde bir nesne veya forma bir XML Web hizmeti tarafından geçirilen bir nesne olabilir. Yazılı veya yazılmayan veri kümeleri ile bağlayabilirsiniz.  
   
@@ -103,11 +103,11 @@ Birden çok tablo verileriyle ilişkili bir DataGrid
 |Birden fazla ilgili tablo.|Kılavuz tablolarla seçmek için ağaç görünümünde görüntüleyebilir veya kılavuz üst tablo görüntüleme belirtebilirsiniz. Üst tablo kayıtlarında ilgili alt satırlara gitmek açmalarına olanak tanır.|  
   
 > [!NOTE]
->  Bir veri kümesi tablolarda kullanarak ilgili bir <xref:System.Data.DataRelation>.  Ayrıca bkz. [kümelerindeki HYPERLINK "http://msdn.microsoft.com/library/dbwcse3d (v=vs.110)" ilişkiler](http://msdn.microsoft.com/library/dbwcse3d\(v=vs.110\)) veya [kümelerindeki ilişkiler](http://msdn.microsoft.com/library/dbwcse3d\(v=vs.120\)).  
+>  Bir veri kümesi tablolarda kullanarak ilgili bir <xref:System.Data.DataRelation>.  Ayrıca bkz. [HYPERLINK "http://msdn.microsoft.com/library/dbwcse3d(v=vs.110)" kümelerindeki ilişkiler](http://msdn.microsoft.com/library/dbwcse3d\(v=vs.110\)) veya [kümelerindeki ilişkiler](http://msdn.microsoft.com/library/dbwcse3d\(v=vs.120\)).  
   
  Zaman <xref:System.Windows.Forms.DataGrid> denetim bir tablo görüntüleme ve <xref:System.Windows.Forms.DataGrid.AllowSorting%2A> özelliği ayarlanmış `true`, veri tekrar sütun üstbilgilerini tıklatarak. Kullanıcı ayrıca satır ekleme ve hücreleri düzenleyin.  
   
- Bir tablo kümesi arasındaki ilişkileri Gezinti üst/alt yapısını kullanarak kullanıcılara görüntülenir. Üst tablo en yüksek düzeyde veri, ve alt tablolar üst tablolar tek tek listelerinde türetilmiş veri tabloları. Genişleticileri alt tabloyu içeren her üst satır görüntülenir. Bir Genişletici tıklatarak alt tablolar için Web benzeri bağlantıların listesini oluşturur. Kullanıcı bağlantısını seçtiğinde alt tablo görüntülenir. Göster/Gizle üst satırları simgesine tıklayarak (![göster &#47; Gizle üst satırları simgesi](../../../../docs/framework/winforms/controls/media/vbicon.gif "vbIcon")) üst tablo hakkında bilgi gizlemek veya kullanıcı daha önce gizli değilse yeniden neden. Kullanıcı daha önce görüntülenen tabloya geri taşımak için bir geri düğmesini tıklatabilirsiniz.  
+ Bir tablo kümesi arasındaki ilişkileri Gezinti üst/alt yapısını kullanarak kullanıcılara görüntülenir. Üst tablo en yüksek düzeyde veri, ve alt tablolar üst tablolar tek tek listelerinde türetilmiş veri tabloları. Genişleticileri alt tabloyu içeren her üst satır görüntülenir. Bir Genişletici tıklatarak alt tablolar için Web benzeri bağlantıların listesini oluşturur. Kullanıcı bağlantısını seçtiğinde alt tablo görüntülenir. Göster/Gizle üst satırları simgesine tıklayarak (![Göster&#47;üst satırları simgesini gizle](../../../../docs/framework/winforms/controls/media/vbicon.gif "vbIcon")) üst tablo hakkında bilgi gizlemek veya kullanıcı daha önce gizli değilse yeniden neden. Kullanıcı daha önce görüntülenen tabloya geri taşımak için bir geri düğmesini tıklatabilirsiniz.  
   
 ## <a name="columns-and-rows"></a>Satırları ve sütunları  
  <xref:System.Windows.Forms.DataGrid> Bir koleksiyonundan oluşur <xref:System.Windows.Forms.DataGridTableStyle> bulunan nesneleri <xref:System.Windows.Forms.DataGrid> denetimin <xref:System.Windows.Forms.DataGrid.TableStyles%2A> özelliği. Tablo Stili koleksiyonu içerebilir <xref:System.Windows.Forms.DataGridColumnStyle> bulunan nesneleri <xref:System.Windows.Forms.DataGridTableStyle.GridColumnStyles%2A> özelliği <xref:System.Windows.Forms.DataGridTableStyle>... Düzenleyebileceğiniz <xref:System.Windows.Forms.DataGrid.TableStyles%2A> ve <xref:System.Windows.Forms.DataGridTableStyle.GridColumnStyles%2A> üzerinden erişilen koleksiyon düzenleyiciler kullanarak özellikleri **özellikleri** penceresi.  
@@ -117,7 +117,7 @@ Birden çok tablo verileriyle ilişkili bir DataGrid
  ![DataGrid denetimine eklenen nesneler](../../../../docs/framework/winforms/controls/media/vbcolumns1.gif "vbColumns1")  
 Aşağıdaki çizimde DataGrid denetiminde dahil olan nesneleri gösterir.  
   
- Tablo Stilleri ve sütun stilleri ile eşitlenir <xref:System.Data.DataTable> nesneleri ve <xref:System.Data.DataColumn> ayarlayarak nesneleri kendi `MappingName` uygun özellikleri <xref:System.Data.DataTable.TableName%2A> ve <xref:System.Data.DataColumn.ColumnName%2A> özellikleri. Zaman bir <xref:System.Windows.Forms.DataGridTableStyle> hiçbir sütun olan stiller eklenir bir <xref:System.Windows.Forms.DataGrid> geçerli bir veri kaynağı için bağlı olan denetim ve <xref:System.Windows.Forms.DataGridTableStyle.MappingName%2A> Bu tablo stili özelliği geçerli bir ayarlanmış <xref:System.Data.DataTable.TableName%2A> özelliği, bir koleksiyonu <xref:System.Windows.Forms.DataGridColumnStyle> nesneleri için oluşturulur Tablo stili. Her <xref:System.Data.DataColumn> bulunan <xref:System.Data.DataTable.Columns%2A> koleksiyonu <xref:System.Data.DataTable>, karşılık gelen <xref:System.Windows.Forms.DataGridColumnStyle> eklenen <xref:System.Windows.Forms.GridColumnStylesCollection>. <xref:System.Windows.Forms.GridColumnStylesCollection>üzerinden erişilen <xref:System.Windows.Forms.DataGridTableStyle.GridColumnStyles%2A> özelliği <xref:System.Windows.Forms.DataGridTableStyle>. Sütun eklenemez veya kılavuz kullanımından silinmiş <xref:System.Windows.Forms.GridColumnStylesCollection.Add%2A> veya <xref:System.Windows.Forms.GridColumnStylesCollection.Remove%2A> yöntemi <xref:System.Windows.Forms.GridColumnStylesCollection>. Daha fazla bilgi için bkz: [nasıl yapılır: eklemek tabloları ve sütunları Windows Forms DataGrid denetimi için](../../../../docs/framework/winforms/controls/how-to-add-tables-and-columns-to-the-windows-forms-datagrid-control.md) ve [nasıl yapılır: Delete ya da Windows Forms DataGrid denetiminde sütunları gizleme](../../../../docs/framework/winforms/controls/how-to-delete-or-hide-columns-in-the-windows-forms-datagrid-control.md).  
+ Tablo Stilleri ve sütun stilleri ile eşitlenir <xref:System.Data.DataTable> nesneleri ve <xref:System.Data.DataColumn> ayarlayarak nesneleri kendi `MappingName` uygun özellikleri <xref:System.Data.DataTable.TableName%2A> ve <xref:System.Data.DataColumn.ColumnName%2A> özellikleri. Zaman bir <xref:System.Windows.Forms.DataGridTableStyle> hiçbir sütun olan stiller eklenir bir <xref:System.Windows.Forms.DataGrid> geçerli bir veri kaynağı için bağlı olan denetim ve <xref:System.Windows.Forms.DataGridTableStyle.MappingName%2A> Bu tablo stili özelliği geçerli bir ayarlanmış <xref:System.Data.DataTable.TableName%2A> özelliği, bir koleksiyonu <xref:System.Windows.Forms.DataGridColumnStyle> nesneleri için oluşturulur Tablo stili. Her <xref:System.Data.DataColumn> bulunan <xref:System.Data.DataTable.Columns%2A> koleksiyonu <xref:System.Data.DataTable>, karşılık gelen <xref:System.Windows.Forms.DataGridColumnStyle> eklenen <xref:System.Windows.Forms.GridColumnStylesCollection>. <xref:System.Windows.Forms.GridColumnStylesCollection> üzerinden erişilen <xref:System.Windows.Forms.DataGridTableStyle.GridColumnStyles%2A> özelliği <xref:System.Windows.Forms.DataGridTableStyle>. Sütun eklenemez veya kılavuz kullanımından silinmiş <xref:System.Windows.Forms.GridColumnStylesCollection.Add%2A> veya <xref:System.Windows.Forms.GridColumnStylesCollection.Remove%2A> yöntemi <xref:System.Windows.Forms.GridColumnStylesCollection>. Daha fazla bilgi için bkz: [nasıl yapılır: eklemek tabloları ve sütunları Windows Forms DataGrid denetimi için](../../../../docs/framework/winforms/controls/how-to-add-tables-and-columns-to-the-windows-forms-datagrid-control.md) ve [nasıl yapılır: Delete ya da Windows Forms DataGrid denetiminde sütunları gizleme](../../../../docs/framework/winforms/controls/how-to-delete-or-hide-columns-in-the-windows-forms-datagrid-control.md).  
   
  Sütun türleri koleksiyonunu genişletir <xref:System.Windows.Forms.DataGridColumnStyle> zengin biçimlendirme ve düzenleme özellikleri ile sınıfı. Tüm sütun türleri devralınmalıdır <xref:System.Windows.Forms.DataGridColumnStyle> temel sınıfı. Oluşturulan sınıf bağlıdır <xref:System.Data.DataColumn.DataType%2A> özelliği <xref:System.Data.DataColumn> içinden <xref:System.Web.UI.WebControls.DataGridColumn> dayanır. Örneğin, bir <xref:System.Data.DataColumn> olan kendi <xref:System.Data.DataColumn.DataType%2A> özelliğini <xref:System.Boolean> ile ilişkili <xref:System.Windows.Forms.DataGridBoolColumn>. Aşağıdaki tabloda bu sütun türleri açıklanmaktadır.  
   
@@ -137,7 +137,7 @@ Aşağıdaki çizimde DataGrid denetiminde dahil olan nesneleri gösterir.
   
  Sütun stilleri tablo stilleri veri tablolarına yalnızca ilişkili gibi bir veri kümesinde sütun ilgilidir. Yalnızca her tablo yalnızca sahip çok her sütun için aynı anda, bu nedenle tanımlı bir tablo stili yalnızca olarak bir sütun stili onun için belirli Tablo stilinde tanımladınız. Bu ilişki sütunun içinde tanımlanan <xref:System.Windows.Forms.DataGridColumnStyle.MappingName%2A> özelliği.  
   
- Sütun stilleri, eklenen olmadan bir tablo stili oluşturduysanız [!INCLUDE[vsprvs](../../../../includes/vsprvs-md.md)] çalışma zamanında form ve kılavuz oluşturduğunuzda varsayılan sütun stilleri ekleyeceksiniz. Ancak, bir tablo stili oluşturduysanız ve tüm sütun stilleri, eklenen [!INCLUDE[vsprvs](../../../../includes/vsprvs-md.md)] sütun stilleri oluşturmaz. Ayrıca, sütun stilleri tanımlayın ve onlara kılavuzunda görünmesini istediğiniz sütunları için eşleme adla atamak gerekir.  
+ Kendisine eklenmiş sütun stilleri olmadan bir tablo stili oluşturduysanız, Visual Studio çalışma zamanında form ve kılavuz oluşturduğunuzda varsayılan sütun stilleri ekler. Ancak, Visual Studio tablo stili oluşturduysanız ve tüm sütun stilleri kendisine eklenmiş sütun stilleri oluşturmaz. Ayrıca, sütun stilleri tanımlayın ve onlara kılavuzunda görünmesini istediğiniz sütunları için eşleme adla atamak gerekir.  
   
  Bir sütun stili atayarak veri kılavuzunda dahil hangi sütunları belirtin ve hiçbir sütun stili sütunlara atanmış olduğundan kılavuzda görüntülenmez dataset veri sütunlarını dahil edebilirsiniz. Ancak, veri sütun kümesinde yer aldığından görüntülenmez verileri programlı olarak düzenleyebilirsiniz.  
   

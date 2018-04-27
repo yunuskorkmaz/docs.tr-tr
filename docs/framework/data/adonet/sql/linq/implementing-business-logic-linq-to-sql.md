@@ -1,27 +1,29 @@
 ---
-title: "İş mantığı (LINQ-SQL) uygulama"
-ms.custom: 
+title: İş mantığı (LINQ-SQL) uygulama
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-ado
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-ado
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - csharp
 - vb
 ms.assetid: c4577590-7b12-42e1-84a6-95aa2562727e
-caps.latest.revision: "4"
+caps.latest.revision: 4
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.workload: dotnet
-ms.openlocfilehash: d905f34c29fbd8a15cb8225a4a547490a5c14efd
-ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
+ms.workload:
+- dotnet
+ms.openlocfilehash: f519162818739d04cbe66b107911a0e0c30d93bc
+ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="implementing-business-logic-linq-to-sql"></a>İş mantığı (LINQ-SQL) uygulama
 Bu konudaki "iş mantığı" terimi herhangi bir özel kurallar veya onu takıldığında, güncelleştirilmiş veya veritabanından silinmiş önce verilere uygulamak doğrulama testleri anlamına gelir. İş mantığı da bazen "iş kurallarını" veya "etki alanı mantığı." adlandırılır Böylece sunu katmanı veya veri erişim katmanı bağımsız olarak değiştirilebilir n katmanlı uygulamalarda, genellikle bir mantıksal katman olarak tasarlanmıştır. İş mantığı, öncesinde veya sonrasında herhangi güncelleştirme, ekleme veya silme veritabanındaki verilerin, veri erişim katmanı tarafından çağrılabilir.  
@@ -166,7 +168,7 @@ public string CustomerID
 }  
 ```  
   
- Sınıfının, bölümünde yöntemi uygulayan bir tanımını yazın. İçinde [!INCLUDE[vsprvs](../../../../../../includes/vsprvs-md.md)], yazdıktan sonra `partial` bir sınıf parçası yöntemi tanımlarında için IntelliSense görürsünüz.  
+ Sınıfının, bölümünde yöntemi uygulayan bir tanımını yazın. Visual Studio'da yazdıktan sonra `partial` bir sınıf parçası yöntemi tanımlarında için IntelliSense görürsünüz.  
   
 ```vb  
 Partial Public Class Customer  

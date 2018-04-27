@@ -1,35 +1,36 @@
 ---
-title: "Varlık etkinlikleri"
-ms.custom: 
+title: Varlık etkinlikleri
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: c04f7413-7fb8-40c6-819e-dc92b145b62e
-caps.latest.revision: "9"
+caps.latest.revision: 9
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: c507c3da7f4583bf6ffb7b869cecbf0bfd305077
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 81f8b1852b939d7ceb8b9afae4435ca12239b880
+ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="entity-activities"></a>Varlık etkinlikleri
-Bu örnek ADO.NET Entity Framework ile kullanmayı gösterir [!INCLUDE[wf2](../../../../includes/wf2-md.md)] veri erişimi basitleştirmek için.  
+Bu örnek ADO.NET Entity Framework ile Windows Workflow Foundation veri erişimi basitleştirmek için nasıl kullanılacağını gösterir.  
   
- ADO.NET Entity Framework, özellikler ve ilişkiler müşteriler, siparişler, sipariş ayrıntılarını ve bu varlıkları arasındaki ilişkileri gibi etki alanına özgü nesneleri biçiminde verilerle çalışmak geliştiricilerin sağlar. ADO.NET Entity Framework bunu doğrudan bir ilişkisel depolama şema karşı programlama yerine kavramsal uygulama modeli karşı programlama etkinleştirir özet düzeyi sağlayarak gerçekleştirir. [!INCLUDE[crabout](../../../../includes/crabout-md.md)]ADO.NET Entity Framework Bkz: [ADO.NET Entity Framework](http://go.microsoft.com/fwlink/?LinkId=165549).  
+ ADO.NET Entity Framework, özellikler ve ilişkiler müşteriler, siparişler, sipariş ayrıntılarını ve bu varlıkları arasındaki ilişkileri gibi etki alanına özgü nesneleri biçiminde verilerle çalışmak geliştiricilerin sağlar. ADO.NET Entity Framework bunu doğrudan bir ilişkisel depolama şema karşı programlama yerine kavramsal uygulama modeli karşı programlama etkinleştirir özet düzeyi sağlayarak gerçekleştirir. [!INCLUDE[crabout](../../../../includes/crabout-md.md)] ADO.NET Entity Framework Bkz: [ADO.NET Entity Framework](http://go.microsoft.com/fwlink/?LinkId=165549).  
   
 ## <a name="sample-details"></a>Örnek Ayrıntıları  
  Bu örnekte `Northwind` veritabanı ve oluşturma ve kaldırma için komutlar içerir `Northwind` veritabanı (Setup.cmd ve Cleanup.cmd). Bu örnek projelerinde göre bir varlık veri modeli dahil `Northwind` veritabanı. Model açarak bulabileceğiniz `Northwind.edmx` projeye dahil dosyası. ADO.NET Entity Framework kullanılarak erişilebilir nesnelerin şeklini tanımlayan modeli budur.  
   
  Bu örnekte aşağıdaki etkinlikleri bulunmaktadır:  
   
--   `EntitySQLQuery``EntitySQLQuery` Etkinliği bir varlık SQL sorgu dizesine dayalı veritabanından nesneleri almanıza olanak sağlar. Varlık SQL, SQL için benzer bir mağaza bağımsız dildir ve kavramsal model ve model veya etki alanının parçası olan varlıkların temel alan sorgular belirtmenize olanak tanır. [!INCLUDE[crabout](../../../../includes/crabout-md.md)]Varlık SQL dil bkz [varlık SQL dil](http://go.microsoft.com/fwlink/?LinkId=165646).  
+-   `EntitySQLQuery``EntitySQLQuery` Etkinliği bir varlık SQL sorgu dizesine dayalı veritabanından nesneleri almanıza olanak sağlar. Varlık SQL, SQL için benzer bir mağaza bağımsız dildir ve kavramsal model ve model veya etki alanının parçası olan varlıkların temel alan sorgular belirtmenize olanak tanır. [!INCLUDE[crabout](../../../../includes/crabout-md.md)] Varlık SQL dil bkz [varlık SQL dil](http://go.microsoft.com/fwlink/?LinkId=165646).  
   
 -   `EntityLinqQuery`: Bu etkinlik, bir LINQ Sorgu veya koşulu göre veritabanından nesneleri almanıza olanak tanır.  
   

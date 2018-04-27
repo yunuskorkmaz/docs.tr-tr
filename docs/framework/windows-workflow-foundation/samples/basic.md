@@ -1,26 +1,27 @@
 ---
 title: Basic1
-ms.custom: 
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 84a315b6-3f96-4959-8306-49be37936a23
-caps.latest.revision: "9"
+caps.latest.revision: 9
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 7ec3fe498bc76c5fe7221d14c8af219420037c14
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 4f10a7789c60f6e5e0734f4f0c93e7e088162e7f
+ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="basic"></a>Temel
-Bu bölümde temel gösteren örnekler [!INCLUDE[wf](../../../../includes/wf-md.md)] işlevselliği.  
+Bu bölümde temel Windows Workflow Foundation (WF) işlevselliğini göstermek örnekleri sağlar.  
   
 ## <a name="in-this-section"></a>Bu Bölümde  
  [Yerleşik Etkinlikler](../../../../docs/framework/windows-workflow-foundation/samples/built-in-activities.md)  
@@ -42,10 +43,10 @@ Bu bölümde temel gösteren örnekler [!INCLUDE[wf](../../../../includes/wf-md.
  Yürütülen iş akışları gösteren örnekleri içerir.  
   
  [İfadeler](../../../../docs/framework/windows-workflow-foundation/samples/expressions.md)  
- Gösteren örnekleri içeren [!INCLUDE[wf](../../../../includes/wf-md.md)] ifadeler.  
+ Windows Workflow Foundation (WF) ifadeleri gösteren örnekleri içerir.  
   
  [Geçiş](../../../../docs/framework/windows-workflow-foundation/samples/migration.md)  
- Önceki sürümleriyle oluşturulan geçirme iş akışları gösteren örnekleri içeren [!INCLUDE[wf](../../../../includes/wf-md.md)].  
+ Önceki sürümlerinde Windows Workflow Foundation (WF) ile oluşturulan geçirme iş akışları gösteren örnekleri içerir.  
   
  [Kalıcılık](../../../../docs/framework/windows-workflow-foundation/samples/persistence.md)  
  Dayanıklı Orta kalıcı iş akışlarına gösteren örnekleri içerir.  
@@ -63,6 +64,6 @@ Bu bölümde temel gösteren örnekler [!INCLUDE[wf](../../../../includes/wf-md.
  İş akışı işlemleri gösteren örnekleri içerir.  
   
  [Doğrulama](../../../../docs/framework/windows-workflow-foundation/samples/validation.md)  
- Doğrulama gösteren örnekleri içeren [!INCLUDE[wf2](../../../../includes/wf2-md.md)].  
+ Windows Workflow Foundation doğrulama gösteren örnekleri içerir.  
   
 ## <a name="reference"></a>Başvuru

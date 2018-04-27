@@ -2,9 +2,10 @@
 title: Option Strict Deyimi
 ms.date: 07/20/2015
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- devlang-visual-basic
 ms.topic: article
 f1_keywords:
 - vb.Strict
@@ -16,14 +17,14 @@ helpviewer_keywords:
 - late binding [Visual Basic]
 - implicit conversions [Visual Basic]
 ms.assetid: 5883e0c1-a920-4274-8e46-b0ff047eaee5
-caps.latest.revision: "49"
+caps.latest.revision: 49
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: 1a01edd918ea49c08defddb45bf23c33307e814f
-ms.sourcegitcommit: 34ec7753acf76f90a0fa845235ef06663dc9e36e
+ms.openlocfilehash: 0e49c8f64d38b7f8d2dc1a34cf22925c15e3a505
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="option-strict-statement"></a>Option Strict Deyimi
 Yalnızca genişletme dönüşümleri için örtük veri türü dönüştürmelerini sınırlar, geç bağlama izin vermez ve örtük sonuçlanan yazmaya izin vermez bir `Object` türü.  
@@ -68,7 +69,7 @@ Option Strict { On | Off }
 ## <a name="implicit-narrowing-conversion-errors"></a>Örtük daraltma dönüştürme hataları  
  Daraltma dönüştürme örtük veri türü dönüşümü olduğunda örtük daraltma dönüştürme hataları oluşur.  
   
- [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]birçok veri türü diğer veri türlerine dönüştürebilirsiniz. Bir veri türü değeri daha az duyarlılık veya daha küçük bir kapasite sahip bir veri türüne dönüştürme sırasında veri kaybı oluşabilir. Daraltma bir dönüştürme başarısız olursa bir çalışma zamanı hatası oluşur. `Option Strict`bunları engellemek için bu daraltma dönüşümleri, derleme zamanı bildirim sağlar. Daha fazla bilgi için bkz: [dolaylı ve açık dönüştürmeler](../../../visual-basic/programming-guide/language-features/data-types/implicit-and-explicit-conversions.md) ve [Widening ve daraltma dönüşümleri](../../../visual-basic/programming-guide/language-features/data-types/widening-and-narrowing-conversions.md).  
+ Visual Basic birçok veri türü diğer veri türlerine dönüştürebilirsiniz. Bir veri türü değeri daha az duyarlılık veya daha küçük bir kapasite sahip bir veri türüne dönüştürme sırasında veri kaybı oluşabilir. Daraltma bir dönüştürme başarısız olursa bir çalışma zamanı hatası oluşur. `Option Strict` bunları engellemek için bu daraltma dönüşümleri, derleme zamanı bildirim sağlar. Daha fazla bilgi için bkz: [dolaylı ve açık dönüştürmeler](../../../visual-basic/programming-guide/language-features/data-types/implicit-and-explicit-conversions.md) ve [Widening ve daraltma dönüşümleri](../../../visual-basic/programming-guide/language-features/data-types/widening-and-narrowing-conversions.md).  
   
  Hatalara neden olabilir. dönüşümleri ifadelerinde ortaya örtük dönüşümler içerir. Daha fazla bilgi için aşağıdaki konulara bakın:  
   
@@ -120,7 +121,7 @@ Option Strict { On | Off }
   
 2.  Üzerinde **derleme** sekmesinde, değer kümesinde **Option Strict** kutusu.  
   
-###  <a name="conditions"></a>IDE içinde uyarı yapılandırmalarını ayarlamak için  
+###  <a name="conditions"></a> IDE içinde uyarı yapılandırmalarını ayarlamak için  
  Kullandığınızda [derleme sayfası, Proje Tasarımcısı (Visual Basic)](/visualstudio/ide/reference/compile-page-project-designer-visual-basic) yerine bir `Option Strict` deyimi, hatalara neden olan koşulları ek denetime sahiptir. **Uyarı yapılandırmaları** bölümünü **derle sayfası** derleme zamanı hatasına neden olan üç koşulları karşılık gelen ayarlara sahip olduğunda `Option Strict` açıktır. Bu ayarlar aşağıda verilmiştir:  
   
 -   **Örtük dönüştürme**  

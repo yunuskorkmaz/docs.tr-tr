@@ -1,30 +1,32 @@
 ---
-title: "WCF Visual Studio Şablonları"
-ms.custom: 
+title: WCF Visual Studio Şablonları
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 6a608575-3535-4190-89da-911e24c8374f
-caps.latest.revision: "31"
+caps.latest.revision: 31
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 2bb195af180ab9d840f91fe82f9f643119663374
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.workload:
+- dotnet
+ms.openlocfilehash: 9626905dbcec6bd40570e4188e9a188fca164144
+ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="wcf-visual-studio-templates"></a>WCF Visual Studio Şablonları
-[!INCLUDE[indigo1](../../../includes/indigo1-md.md)][!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] şablonlarıdır içinde kullanabileceğiniz önceden tanımlanmış proje ve öğe şablonları [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] hızlı bir şekilde oluşturmak için [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] hizmetler ve çevresindeki uygulamalar.  
+[!INCLUDE[indigo1](../../../includes/indigo1-md.md)] Visual Studio şablonları olan Visual Studio'da hızlı bir şekilde oluşturmak için kullanabileceğiniz önceden tanımlanmış proje ve öğe şablonları [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] hizmetler ve çevresindeki uygulamalar.  
   
 ## <a name="using-the-wcf-templates"></a>WCF şablonlarını kullanma  
- [!INCLUDE[indigo2](../../../includes/indigo2-md.md)][!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] şablonları, hizmet geliştirme için bir temel sınıf yapısı sağlar. Özellikle, bu şablonları, hizmet sözleşmesi, veri sözleşmesi, hizmet uygulaması ve yapılandırma için temel tanımları sağlar. Bu şablonlar, çok az kod etkileşim gibi daha gelişmiş Hizmetleri için bir yapı bloğu ile basit bir hizmet oluşturmak için kullanabilirsiniz.  
+ [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] Visual Studio şablonları, hizmet geliştirme için bir temel sınıf yapısı sağlar. Özellikle, bu şablonları, hizmet sözleşmesi, veri sözleşmesi, hizmet uygulaması ve yapılandırma için temel tanımları sağlar. Bu şablonlar, çok az kod etkileşim gibi daha gelişmiş Hizmetleri için bir yapı bloğu ile basit bir hizmet oluşturmak için kullanabilirsiniz.  
   
 ### <a name="wcf-service-library-project-template"></a>WCF hizmet kitaplığı proje şablonu  
  [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] Hizmet kitaplığı proje şablonu kullanılabilir yeni proje iletişim kutusunda altında **Visual C# \WCF** ve **Visual Basic\WCF**.  
@@ -38,7 +40,7 @@ ms.lasthandoff: 01/19/2018
 -   Uygulama yapılandırma dosyasına (App.config). Yapılandırma dosyasının temel öğelerini sağlayan bir [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] Güvenli HTTP bağlama ile hizmet modeli. Ayrıca, hizmet için bir uç nokta içerir ve meta veri değişimi sağlar.  
   
 > [!NOTE]
->  [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)]projesi için yapılandırma dosyası olarak App.config dosyasını kullanarak çalıştırıldığında tanımaya yapılandırılmış [WCF hizmet Konağı (WcfSvcHost.exe)](../../../docs/framework/wcf/wcf-service-host-wcfsvchost-exe.md), varsayılan yapılandırmadır. Yürütülebilir bir dosya hizmeti kitaplıkta barındırıyorsanız, yapılandırma dosyalarını DLL'ler için geçerli olmadığından, yapılandırma kodu yürütülebilir yapılandırma dosyasına taşıyın gerekir.  
+>  Visual Studio projesi için yapılandırma dosyası olarak App.config dosyasını kullanarak çalıştırıldığında tanımaya yapılandırılmış [WCF hizmet Konağı (WcfSvcHost.exe)](../../../docs/framework/wcf/wcf-service-host-wcfsvchost-exe.md), varsayılan yapılandırmadır. Yürütülebilir bir dosya hizmeti kitaplıkta barındırıyorsanız, yapılandırma dosyalarını DLL'ler için geçerli olmadığından, yapılandırma kodu yürütülebilir yapılandırma dosyasına taşıyın gerekir.  
   
 ### <a name="wcf-service-application-template"></a>WCF hizmet uygulama şablonu  
  [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] Hizmet uygulaması şablonu kullanılabilir altında yeni proje iletişim kutusundaki **Visual C# \WCF** ve **Visual Basic\WCF**.  
@@ -59,7 +61,7 @@ ms.lasthandoff: 01/19/2018
  [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] Web sitesi şablonu kullanılabilir altında yeni proje iletişim kutusundaki **Visual C# \Web Site\WCF hizmet** ve **Visual Basic\Web Site\WCF hizmet**. Bu WCF hizmeti uygulaması şablon olarak aynı dosyaları oluşturur ama bir ASP.NET web sitesi değilmiş gibi düzenler. App_Code ve App_Data klasör oluşturulur.  
   
 ### <a name="wcf-service-item-template"></a>WCF hizmet öğesi şablonu  
- [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] Hizmet öğesi şablonudur eklemek için bir hızlı yol sağlayan özel bir şablon [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] var olan Hizmetleri [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] projeleri.  
+ [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] Hizmet öğesi şablonudur eklemek için bir hızlı yol sağlayan özel bir şablon [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] mevcut Visual Studio projelerinize Hizmetleri.  
   
  Bu şablonu kullanmak için Git **Çözüm Gezgini** bölmesinde, proje adına sağ tıklayın, fareyle **Ekle**ve ardından **yeni öğe** başlatmak için **yeni Ekle Öğe** iletişim kutusu.  
   
@@ -70,15 +72,15 @@ ms.lasthandoff: 01/19/2018
  Var olan bir Web projesi projesiyse hizmet ana bilgisayar dosyası (service1.svc) da oluşturulur.  
   
 ### <a name="wcf-wf-service-project-and-item-template"></a>WCF WF hizmet proje ve öğe şablonu.  
- Bu şablonlar oluşturma [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] erişilebilir bir iş akışı olan bir iş akışı hizmeti, barındırma hizmetleri web hizmeti ister. Ayrı şablonları XAML veya kesinlik temelli programlama modelleri için mevcut. Şablonları kullanarak sıralı ya da Durum makinesi iş akışı oluşturabilirsiniz. Bu tür bir iş akışı hakkında daha fazla bilgi için bkz: [Windows Workflow Foundation öğreticileri](http://msdn.microsoft.com/library/e9705654-bd96-4b56-8d98-f1f118112d97). [!INCLUDE[crabout](../../../includes/crabout-md.md)]bkz. iş akışı projeleri oluşturma, [eski iş akışı projeleri oluşturma](/visualstudio/workflow-designer/creating-legacy-workflow-projects).  
+ Bu şablonlar oluşturma [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] erişilebilir bir iş akışı olan bir iş akışı hizmeti, barındırma hizmetleri web hizmeti ister. Ayrı şablonları XAML veya kesinlik temelli programlama modelleri için mevcut. Şablonları kullanarak sıralı ya da Durum makinesi iş akışı oluşturabilirsiniz. Bu tür bir iş akışı hakkında daha fazla bilgi için bkz: [Windows Workflow Foundation öğreticileri](http://msdn.microsoft.com/library/e9705654-bd96-4b56-8d98-f1f118112d97). [!INCLUDE[crabout](../../../includes/crabout-md.md)] bkz. iş akışı projeleri oluşturma, [eski iş akışı projeleri oluşturma](/visualstudio/workflow-designer/creating-legacy-workflow-projects).  
   
- [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)]İş akışları kullanılan XOML türü yerine kodunu olanları temel Tasarımcısı daha iyi yanıt olur. XOML iş akışı oluşturulması için varsayılan iş akışı türüdür.  
+ İş akışları kullanılan XOML türü yerine kodunu olanları temel visual Studio tasarımcısı daha iyi yanıt. XOML iş akışı oluşturulması için varsayılan iş akışı türüdür.  
   
 ### <a name="wcf-syndication-service-library-template"></a>WCF dağıtım hizmet kitaplığı şablonu  
  Bu şablon RSS veya ATOM biçimindeki akışınıza kullanıma sağlar bir [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] hizmet. Daha fazla bilgi için bkz: [WCF dağıtımı](../../../docs/framework/wcf/feature-details/wcf-syndication.md).  
   
 #### <a name="changing-the-address-of-the-feed"></a>Akış adresini değiştirme  
- Dağıtım şablonu, Internet Explorer yürütme sırasında kullanır. Projenize sağ **Çözüm Gezgini** içinde [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)]seçin **özellikleri**seçeneğini belirleyip **hata ayıklama** sekmesine tıkladığınızda, varsayılan adres görebilirsiniz Şablon. Internet Explorer bu adresinde akış açmaya çalışır.  
+ Dağıtım şablonu, Internet Explorer yürütme sırasında kullanır. Projenize sağ **Çözüm Gezgini** Visual Studio'da seçin **özellikleri**seçeneğini belirleyip **hata ayıklama** sekmesine tıkladığınızda, varsayılan adres görebilirsiniz Şablon. Internet Explorer bu adresinde akış açmaya çalışır.  
   
  Akışınıza adresini değiştirirseniz, adres, aynı zamanda değiştirmeniz gerekir **hata ayıklama** sekmesi. Bunu yaparsanız, Internet Explorer varsayılan adresindeki akış açın ve başarısız dener.  
   

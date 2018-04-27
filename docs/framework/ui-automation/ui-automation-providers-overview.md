@@ -1,27 +1,29 @@
 ---
-title: "UI Otomasyon Sağlayıcılara Genel Bakış"
-ms.custom: 
+title: UI Otomasyon Sağlayıcılara Genel Bakış
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-bcl
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-bcl
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - UI Automation, providers
 - providers, UI Automation
 ms.assetid: 859557b8-51e1-4d15-92e8-318d2dcdb2f7
-caps.latest.revision: "38"
+caps.latest.revision: 38
 author: Xansky
 ms.author: mhopkins
 manager: markl
-ms.workload: dotnet
-ms.openlocfilehash: dc5cb5749bbfe06fd3a1bbe3537b28c7bbfa295d
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: a8279b8c2c39ce37fa9e3af55a6b079e8202b3ff
+ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="ui-automation-providers-overview"></a>UI Otomasyon Sağlayıcılara Genel Bakış
 > [!NOTE]
@@ -38,12 +40,12 @@ ms.lasthandoff: 12/22/2017
  UI Otomasyon sağlayıcılar iki kategoriye ayrılır: istemci-tarafı sağlayıcıları ve sunucu tarafı sağlayıcıları.  
   
 ### <a name="client-side-providers"></a>İstemci tarafı sağlayıcı  
- İstemci tarafı sağlayıcı desteklemiyor veya tam olarak desteklemez, bir uygulama ile iletişim kurmak için UI Otomasyon istemcileri tarafından uygulanır [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]. İstemci-tarafı sağlayıcıları genellikle iletişim sunucuyla işlem sınırından gönderme ve alma [!INCLUDE[TLA2#tla_win](../../../includes/tla2sharptla-win-md.md)] iletileri.  
+ İstemci tarafı sağlayıcı desteklemiyor veya tam olarak desteklemez, bir uygulama ile iletişim kurmak için UI Otomasyon istemcileri tarafından uygulanır [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]. İstemci-tarafı sağlayıcıları genellikle sunucuyla işlem sınırından Windows ileti alma ve gönderme iletişim kurar.  
   
- Çünkü denetimler için UI Otomasyon sağlayıcılar [!INCLUDE[TLA2#tla_win32](../../../includes/tla2sharptla-win32-md.md)], [!INCLUDE[TLA2#tla_winforms](../../../includes/tla2sharptla-winforms-md.md)], veya [!INCLUDE[TLA2#tla_winclient](../../../includes/tla2sharptla-winclient-md.md)] uygulamalar, işletim sisteminin bir parçası sağlanır, istemci uygulamaları kendi sağlayıcıları uygulamak için nadiren sahip ve bu genel bakışta bunları kapsamaz Daha fazla.  
+ Çünkü denetimler için UI Otomasyon sağlayıcılar [!INCLUDE[TLA2#tla_win32](../../../includes/tla2sharptla-win32-md.md)], Windows Forms veya [!INCLUDE[TLA2#tla_winclient](../../../includes/tla2sharptla-winclient-md.md)] uygulamalar, işletim sisteminin bir parçası sağlanır, istemci uygulamaları kendi sağlayıcıları uygulamak için nadiren sahip ve bu genel bakışta bunları kapsamaz Daha fazla.  
   
 ### <a name="server-side-providers"></a>Sunucu tarafı sağlayıcıları  
- Sunucu tarafı sağlayıcıları özel denetimler veya başka bir kullanıcı Arabirimi Framework'e dayalı uygulamalar tarafından uygulanır [!INCLUDE[TLA2#tla_win32](../../../includes/tla2sharptla-win32-md.md)], [!INCLUDE[TLA2#tla_winforms](../../../includes/tla2sharptla-winforms-md.md)], veya [!INCLUDE[TLA2#tla_winclient](../../../includes/tla2sharptla-winclient-md.md)].  
+ Sunucu tarafı sağlayıcıları özel denetimler veya başka bir kullanıcı Arabirimi Framework'e dayalı uygulamalar tarafından uygulanır [!INCLUDE[TLA2#tla_win32](../../../includes/tla2sharptla-win32-md.md)], Windows Forms veya [!INCLUDE[TLA2#tla_winclient](../../../includes/tla2sharptla-winclient-md.md)].  
   
  Sunucu tarafı sağlayıcıları işlem sınırından arabirimlerine göstererek istemci uygulamaları ile iletişim kurmak [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] çekirdek sırayla istemcilerinden gelen istekleri hizmet veren sistem.  
   
@@ -52,10 +54,10 @@ ms.lasthandoff: 12/22/2017
  Bu bölümde bazı UI Otomasyon sağlayıcılar uygulamak için anlamanız gereken temel kavramları kısa açıklamaları.  
   
 ### <a name="elements"></a>Öğeleri  
- [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]öğeleridir parçalarını [!INCLUDE[TLA#tla_ui](../../../includes/tlasharptla-ui-md.md)] , UI Otomasyon istemcileri için görünür. Örnek uygulama windows, bölmeleri, düğmeleri, araç ipuçları, liste kutuları ve liste öğeleri içerir.  
+ [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] öğeleridir parçalarını [!INCLUDE[TLA#tla_ui](../../../includes/tlasharptla-ui-md.md)] , UI Otomasyon istemcileri için görünür. Örnek uygulama windows, bölmeleri, düğmeleri, araç ipuçları, liste kutuları ve liste öğeleri içerir.  
   
 ### <a name="navigation"></a>Gezinme  
- [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]öğeleri istemcilere açığa bir [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] ağacı. [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]başka bir öğeden giderek ağaç oluşturur. Gezinti sağlayıcıları her biri bir üst eşdüzey ve alt öğeleri için işaret edebilir, her bir öğe için etkinleştirilir.  
+ [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] öğeleri istemcilere açığa bir [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] ağacı. [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] başka bir öğeden giderek ağaç oluşturur. Gezinti sağlayıcıları her biri bir üst eşdüzey ve alt öğeleri için işaret edebilir, her bir öğe için etkinleştirilir.  
   
  İstemci görünümü hakkında daha fazla bilgi için [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] ağaç bkz [UI Otomasyon ağacına genel bakış](../../../docs/framework/ui-automation/ui-automation-tree-overview.md).  
   
@@ -75,11 +77,11 @@ ms.lasthandoff: 12/22/2017
 ### <a name="frameworks"></a>çerçeveler  
  Bir çerçeve alt denetimler, vuruş sınaması ve işleme ekran bir bölgede yöneten bir bileşenidir. Örneğin, bir [!INCLUDE[TLA#tla_win32](../../../includes/tlasharptla-win32-md.md)] penceresinde, genellikle bir HWND adlandırılan birden çok içeren bir çerçeve hizmet verebilir [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] menü çubuğunda, durum çubuğu ve düğmeleri gibi.  
   
- [!INCLUDE[TLA2#tla_win32](../../../includes/tla2sharptla-win32-md.md)]liste kutuları gibi kapsayıcı denetimleri ve ağaç görünümlerini isabet üzerlerinde sınama çerçeveleri, alt öğeleri oluşturma ve gerçekleştirmek için kendi kodlarını içerdiklerinden olduğu kabul edilir. Bunun aksine, bir [!INCLUDE[TLA2#tla_winclient](../../../includes/tla2sharptla-winclient-md.md)] liste kutusu, çerçeve işleme ve isabet test gerçekleştirilir için değil içeren [!INCLUDE[TLA2#tla_winclient](../../../includes/tla2sharptla-winclient-md.md)] penceresi.  
+ [!INCLUDE[TLA2#tla_win32](../../../includes/tla2sharptla-win32-md.md)] liste kutuları gibi kapsayıcı denetimleri ve ağaç görünümlerini isabet üzerlerinde sınama çerçeveleri, alt öğeleri oluşturma ve gerçekleştirmek için kendi kodlarını içerdiklerinden olduğu kabul edilir. Bunun aksine, bir [!INCLUDE[TLA2#tla_winclient](../../../includes/tla2sharptla-winclient-md.md)] liste kutusu, çerçeve işleme ve isabet test gerçekleştirilir için değil içeren [!INCLUDE[TLA2#tla_winclient](../../../includes/tla2sharptla-winclient-md.md)] penceresi.  
   
  [!INCLUDE[TLA2#tla_ui](../../../includes/tla2sharptla-ui-md.md)] Farklı çerçeveleri yapılabilmesi için bir uygulama. Örneğin, bir HWND uygulama penceresi içerebilir [!INCLUDE[TLA#tla_dhtml](../../../includes/tlasharptla-dhtml-md.md)] HWND açılan kutuda gibi bir bileşen sırayla içerir.  
   
-### <a name="fragments"></a>Parçaları  
+### <a name="fragments"></a>Parçalar  
  Bir tam alt ağacını belirli çerçeveden öğelerinin bir parçası olur. Alt ağacı kök düğümü konumundaki öğe, bir parça kök adı verilir. Parça kök bir üst öğesi yok, ancak bazı diğer Framework'te genellikle barındırılan bir [!INCLUDE[TLA2#tla_win32](../../../includes/tla2sharptla-win32-md.md)] penceresi (HWND).  
   
 ### <a name="hosts"></a>Ana bilgisayarlar  

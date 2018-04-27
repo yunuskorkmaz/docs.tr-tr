@@ -1,13 +1,13 @@
 ---
-title: "WPF Windows'a Genel Bakış"
-ms.custom: 
+title: WPF Windows'a Genel Bakış
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - dotnet-wpf
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - csharp
@@ -36,17 +36,17 @@ helpviewer_keywords:
 - modal dialog boxes [WPF]
 - displaying XAML pages [WPF]
 ms.assetid: 737d04ec-8861-46c3-8d44-fa11d3528d23
-caps.latest.revision: 
+caps.latest.revision: 65
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: c176f08904bac8e9c3877977c1e52afb57d5daca
-ms.sourcegitcommit: d3cfda0943364aaf6ccd574f55f584576c8a4fee
+ms.openlocfilehash: ae454e54abc2c8200f33bdb0bc5537806c824074
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/08/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="wpf-windows-overview"></a>WPF Windows'a Genel Bakış
 Kullanıcıların etkileşimde [!INCLUDE[TLA#tla_wpf](../../../../includes/tlasharptla-wpf-md.md)] tek başına uygulamalar windows aracılığıyla. Veri visualizes ve kullanıcıların veri ile etkileşim kurmasına olanak sağlayan içeriği barındırmak için bir pencere birincil amacı budur. Tek başına [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] uygulamaları kullanarak kendi windows sağlamak <xref:System.Windows.Window> sınıfı. Bu konu tanıtır <xref:System.Windows.Window> oluşturma ve tek başına uygulamaları Windows'ta yönetme temellerini kapsayan önce.  
@@ -282,7 +282,7 @@ Kullanıcıların etkileşimde [!INCLUDE[TLA#tla_wpf](../../../../includes/tlash
   
  Bir pencere istemci ve istemci alanlarında sağlanan bir yolla açıkça kapatılabilir, ancak bir pencere da örtük olarak davranışını uygulamanın diğer bölümlerinde sonucunda kapatılabilir veya [!INCLUDE[TLA#tla_mswin](../../../../includes/tlasharptla-mswin-md.md)], aşağıdakiler dahil:  
   
--   Bir kullanıcı oturumu kapattığında ya da kapatıldığında [!INCLUDE[TLA2#tla_mswin](../../../../includes/tla2sharptla-mswin-md.md)].  
+-   Bir kullanıcı oturumu kapattığında veya Windows'u kapatır.  
   
 -   Pencerenin sahibi kapatır (bkz: <xref:System.Windows.Window.Owner%2A>).  
   
@@ -315,7 +315,7 @@ Kullanıcıların etkileşimde [!INCLUDE[TLA#tla_wpf](../../../../includes/tlash
   
 -   <xref:System.Windows.WindowStartupLocation.Manual>  
   
- Başlangıç konumu olarak belirtilmişse, <xref:System.Windows.WindowStartupLocation.Manual>ve <xref:System.Windows.Window.Left%2A> ve <xref:System.Windows.Window.Top%2A> özellikleri değil ayarlanmış, <xref:System.Windows.Window> ister [!INCLUDE[TLA2#tla_mswin](../../../../includes/tla2sharptla-mswin-md.md)] görünmesi bir konum.  
+ Başlangıç konumu olarak belirtilmişse, <xref:System.Windows.WindowStartupLocation.Manual>ve <xref:System.Windows.Window.Left%2A> ve <xref:System.Windows.Window.Top%2A> özellikleri değil ayarlanmış, <xref:System.Windows.Window> Windows görünmesi için bir konum ister.  
   
 <a name="Topmost_Windows_and_Z_Order"></a>   
 ### <a name="topmost-windows-and-z-order"></a>En üstteki Windows ve Z düzeni  

@@ -16,19 +16,19 @@ ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: 0862f747cb969a6aa2e63d86e842097260e95b56
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 3df15e80a550857adbfbf30ebf8b6ef902426a1a
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="using-windows-management-instrumentation-for-diagnostics"></a>Tanılama için Windows Yönetim İzlemesini Kullanma
-[!INCLUDE[indigo1](../../../../../includes/indigo1-md.md)]Çalışma zamanında bir hizmetin denetleme kullanıma sunan bir [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)] Windows Yönetim Araçları (WMI) sağlayıcısı.  
+[!INCLUDE[indigo1](../../../../../includes/indigo1-md.md)] Çalışma zamanında bir hizmetin denetleme kullanıma sunan bir [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)] Windows Yönetim Araçları (WMI) sağlayıcısı.  
   
 ## <a name="enabling-wmi"></a>WMI etkinleştirme  
- WMI, Web tabanlı Kuruluş Yönetimi'nin (WBEM) standart Microsoft uygulamasıdır. [!INCLUDE[crabout](../../../../../includes/crabout-md.md)]bkz: WMI SDK [Windows Yönetim Araçları](https://msdn.microsoft.com/library/aa394582.aspx). WBEM nasıl uygulamaları dış Yönetim Araçları için Yönetim Araçları'nı kullanıma sunmak için bir endüstri standardıdır.  
+ WMI, Web tabanlı Kuruluş Yönetimi'nin (WBEM) standart Microsoft uygulamasıdır. [!INCLUDE[crabout](../../../../../includes/crabout-md.md)] bkz: WMI SDK [Windows Yönetim Araçları](https://msdn.microsoft.com/library/aa394582.aspx). WBEM nasıl uygulamaları dış Yönetim Araçları için Yönetim Araçları'nı kullanıma sunmak için bir endüstri standardıdır.  
   
- Bir WMI sağlayıcısı WBEM uyumlu arabirimi aracılığıyla çalışma zamanında izleme kullanıma sunan bir bileşenidir. Öznitelik/değer çiftine sahip WMI nesneler kümesinden oluşur. Çiftleri basit türler sayısı olabilir. Yönetim Araçları, çalışma zamanında arabirimi üzerinden hizmetlere bağlanabilir. [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)]adresler, bağlamalar, davranışları ve dinleyicileri gibi hizmetleri özniteliklerini kullanır.  
+ Bir WMI sağlayıcısı WBEM uyumlu arabirimi aracılığıyla çalışma zamanında izleme kullanıma sunan bir bileşenidir. Öznitelik/değer çiftine sahip WMI nesneler kümesinden oluşur. Çiftleri basit türler sayısı olabilir. Yönetim Araçları, çalışma zamanında arabirimi üzerinden hizmetlere bağlanabilir. [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)] adresler, bağlamalar, davranışları ve dinleyicileri gibi hizmetleri özniteliklerini kullanır.  
   
  Uygulama yapılandırma dosyasında yerleşik WMI Sağlayıcısı'nın etkin hale getirilebilir. Bu yoluyla yapılır `wmiProviderEnabled` özniteliği [ \<Tanılama >](../../../../../docs/framework/configure-apps/file-schema/wcf/diagnostics.md) içinde [ \<system.serviceModel >](../../../../../docs/framework/configure-apps/file-schema/wcf/system-servicemodel.md) bölümünde, aşağıdaki örnekte gösterildiği gibi yapılandırma.  
   
@@ -43,7 +43,7 @@ ms.lasthandoff: 12/22/2017
  Bu yapılandırma girdisi WMI arabirimini kullanıma sunar. Yönetim uygulamaları artık bu arabirimi üzerinden bağlanır ve Yönetim Araçları'nı uygulamanın erişir.  
   
 ## <a name="accessing-wmi-data"></a>WMI verilerine erişme  
- WMI veri birçok farklı yolla erişilebilir. Microsoft, komut dosyaları için WMI API'lerini sağlar [!INCLUDE[vbprvb](../../../../../includes/vbprvb-md.md)] uygulamalar, C++ uygulamaları ve [!INCLUDE[dnprdnshort](../../../../../includes/dnprdnshort-md.md)]. Daha fazla bilgi için bkz: [kullanılarak WMI](http://go.microsoft.com/fwlink/?LinkId=95183).  
+ WMI veri birçok farklı yolla erişilebilir. Microsoft, komut dosyaları, Visual Basic uygulamaları, C++ uygulamaları için WMI API'lerini sağlar ve [!INCLUDE[dnprdnshort](../../../../../includes/dnprdnshort-md.md)]. Daha fazla bilgi için bkz: [kullanılarak WMI](http://go.microsoft.com/fwlink/?LinkId=95183).  
   
 > [!CAUTION]
 >  WMI verilerini programlı olarak erişmek için yöntemler sağlanan .NET Framework'te kullanıyorsanız bağlantı kurulduğunda tür yöntem özel durumlar oluşturma farkında olması gerekir. Bağlantı oluşturma işlemi sırasında kurulmaz <xref:System.Management.ManagementObject> örneği, ancak ilk istek gerçek veri değişimi içeren. Bu nedenle, kullanmanız gereken bir `try..catch` olası özel durumlarını yakalama bloğu.  
@@ -52,7 +52,7 @@ ms.lasthandoff: 12/22/2017
   
  Bilmeniz gereken olması durumunda hiçbir ileti günlük kaydı izleme dinleyicileri ileti günlüğe kaydetme veya Hayır için `System.ServiceModel` izleme dinleyicileri izleme için yapılandırma dosyasında belirtilen, değişiklikleri WMI tarafından kabul edilen olsa bile, değişikliklerin hiçbiri yürürlüğe, alınır. Düzgün ilgili dinleyicileri ayarlama hakkında daha fazla bilgi için bkz: [yapılandırma ileti günlüğe kaydetme](../../../../../docs/framework/wcf/diagnostics/configuring-message-logging.md) ve [yapılandırma izleme](../../../../../docs/framework/wcf/diagnostics/tracing/configuring-tracing.md). Uygulama başladığında yapılandırması tarafından belirtilen diğer tüm izleme kaynakları izleme düzeyini etkilidir ve değiştirilemez.  
   
- [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)]kullanıma sunan bir `GetOperationCounterInstanceName` komut dosyası için yöntem. Bir işlem adıyla sağlarsanız, bu yöntem bir performans sayacı örneği adını döndürür. Ancak, giriş doğrulamaz. Bu nedenle, yanlış işlem adı sağlarsanız, yanlış sayaç adı döndürülür.  
+ [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)] kullanıma sunan bir `GetOperationCounterInstanceName` komut dosyası için yöntem. Bir işlem adıyla sağlarsanız, bu yöntem bir performans sayacı örneği adını döndürür. Ancak, giriş doğrulamaz. Bu nedenle, yanlış işlem adı sağlarsanız, yanlış sayaç adı döndürülür.  
   
  `OutgoingChannel` Özelliği `Service` örneği başka bir hizmete bağlanmak için bir hizmet tarafından açılmış kanalları saymak değil [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)] hedef hizmeti istemciye oluşturulmadı içinde `Service` yöntemi.  
   
@@ -160,7 +160,7 @@ ms.lasthandoff: 12/22/2017
 Whoami /user  
 ```  
   
- Bu geçerli kullanıcının SID sağlar, ancak bu yöntem, üzerinde herhangi bir kullanıcı SID almak için kullanılamaz. SID almak için başka bir yöntem kullanmaktır [getsid.exe](http://go.microsoft.com/fwlink/?LinkId=186467) öğesinden aracı [Windows 2000 Kaynak Seti Araçları yönetim görevleri için](http://go.microsoft.com/fwlink/?LinkId=178660). Bu aracı (yerel veya etki alanı) iki kullanıcı SID'si karşılaştırır ve bir yan etkisi komut satırına iki SID'ler yazdırır. [!INCLUDE[crdefault](../../../../../includes/crdefault-md.md)][İyi bilinen SID](http://go.microsoft.com/fwlink/?LinkId=186468).  
+ Bu geçerli kullanıcının SID sağlar, ancak bu yöntem, üzerinde herhangi bir kullanıcı SID almak için kullanılamaz. SID almak için başka bir yöntem kullanmaktır [getsid.exe](http://go.microsoft.com/fwlink/?LinkId=186467) öğesinden aracı [Windows 2000 Kaynak Seti Araçları yönetim görevleri için](http://go.microsoft.com/fwlink/?LinkId=178660). Bu aracı (yerel veya etki alanı) iki kullanıcı SID'si karşılaştırır ve bir yan etkisi komut satırına iki SID'ler yazdırır. [!INCLUDE[crdefault](../../../../../includes/crdefault-md.md)] [İyi bilinen SID](http://go.microsoft.com/fwlink/?LinkId=186468).  
   
 ## <a name="accessing-remote-wmi-object-instances"></a>Uzak WMI nesne örneklerini erişme  
  Erişmeniz gerekiyorsa [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)] WMI örnekleri uzak makinede paket gizliliği erişmek için kullandığınız araçları etkinleştirmeniz gerekir. Aşağıdaki bölümde bu elde etmek WMI CIM Studio, Windows Yönetim Araçları Sınayıcısı, yanı sıra .NET SDK 2.0 kullanarak açıklar.  

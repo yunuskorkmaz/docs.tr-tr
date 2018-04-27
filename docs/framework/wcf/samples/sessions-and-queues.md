@@ -1,24 +1,26 @@
 ---
 title: Oturumlar ve Kuyruklar
-ms.custom: 
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 47d7c5c2-1e6f-4619-8003-a0ff67dcfbd6
-caps.latest.revision: "27"
+caps.latest.revision: 27
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 0de2668eb03a658632bb8a18c711f780b333e86b
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: f1aeaa72937d23a321eb615ad8b1eb4ec1e7b48e
+ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="sessions-and-queues"></a>Oturumlar ve Kuyruklar
 Bu örnek, gönderip bir dizi ilgili ileti kuyruğa alınan iletişim Message Queuing (MSMQ) aktarımı üzerinden gösterilmiştir. Bu örnekte `netMsmqBinding` bağlama. Hizmeti, sıraya alınan iletileri alma hizmeti izlemek etkinleştirmek için bir kendi kendini barındıran konsol uygulamasıdır.  
@@ -42,8 +44,8 @@ Bu örnek, gönderip bir dizi ilgili ileti kuyruğa alınan iletişim Message Qu
  Örnekte, istemci hizmet tek bir işlem kapsamı içinde oturumun bir parçası olarak çeşitli iletiler gönderir.  
   
  Hizmet sözleşme `IOrderTaker`, kuyruklar ile kullanım için uygun bir tek yönlü hizmet tanımlar. <xref:System.ServiceModel.SessionMode> Aşağıda gösterildiği sözleşmelerde kullanılan örnek kod iletileri oturumunun parçası olan gösterir.  
-  
-```  
+
+```csharp
 [ServiceContract(Namespace = "http://Microsoft.ServiceModel.Samples", SessionMode=SessionMode.Required)]  
 public interface IOrderTaker  
 {  
@@ -56,11 +58,11 @@ public interface IOrderTaker
     [OperationContract(IsOneWay = true)]  
     void EndPurchaseOrder();  
 }  
-```  
-  
+```
+
  Hizmetin hizmet işlemleri ilk işlem işlemde kaydeder ancak otomatik olarak hareket tamamlanmazsa bir şekilde tanımlar. Ayrıca sonraki işlemleri aynı işlemde listeleme ancak otomatik olarak tamamlanmaz. Son işlem oturumda işlem otomatik olarak tamamlar. Bu nedenle, aynı işlem hizmet sözleşmesinde birkaç işlem çağrıları için kullanılır. İşlemlerden birini bir özel durum, işlem geri alınır ve oturum geri sıraya konur. Son işlemi başarıyla tamamlandıktan sonra işlemin taahhüt eder. Hizmet kullandığı `PerSession` olarak <xref:System.ServiceModel.InstanceContextMode> aynı hizmet örneği üzerinde bir oturumdaki tüm iletileri almak için.  
-  
-```  
+
+```csharp
 [ServiceBehavior(InstanceContextMode=InstanceContextMode.PerSession)]  
 public class OrderTakerService : IOrderTaker  
 {  
@@ -92,11 +94,11 @@ public class OrderTakerService : IOrderTaker
        Console.WriteLine(po.ToString());  
     }  
 }  
-```  
-  
+```
+
  Kendi kendini barındırılan hizmetidir. MSMQ taşıma kullanırken, sıranın kullanılan önceden oluşturulmuş olması gerekir. Bu, el ile veya kod aracılığıyla yapılabilir. Bu örnekte, hizmeti içeren <xref:System.Messaging> sıranın varlığını denetlemek için kod ve, gerekirse oluşturur. Kuyruk adı kullanarak yapılandırma dosyası okunduğu <xref:System.Configuration.ConfigurationManager.AppSettings%2A> sınıfı.  
-  
-```  
+
+```csharp
 // Host the service within this EXE console application.  
 public static void Main()  
 {  
@@ -123,8 +125,8 @@ public static void Main()
         serviceHost.Close();   
     }  
 }  
-```  
-  
+```
+
  MSMQ kuyruk adı bir yapılandırma dosyasının appSettings bölümünde belirtilmiştir. Hizmeti için uç noktaya yapılandırma dosyası system.serviceModel bölümünde tanımlanan ve belirten `netMsmqBinding` bağlama.  
   
 ```xml  
@@ -150,8 +152,8 @@ public static void Main()
 ```  
   
  İstemci bir işlem kapsamı oluşturur. Oturumdaki tüm iletilerin sıra burada tüm iletileri başarılı veya başarısız atomik bir birim olarak değerlendirilmesi için neden işlem kapsamı içinde gönderilir. İşlem çağırarak gerçekleştirilir <xref:System.Transactions.TransactionScope.Complete%2A>.  
-  
-```  
+
+```csharp
 //Create a transaction scope.  
 using (TransactionScope scope = new TransactionScope(TransactionScopeOption.Required))  
 {  
@@ -178,8 +180,8 @@ using (TransactionScope scope = new TransactionScope(TransactionScopeOption.Requ
     // Complete the transaction.  
     scope.Complete();  
 }  
-```  
-  
+```
+
 > [!NOTE]
 >  Oturumdaki tüm iletilerin işlem gerçekleştirmeden önce gönderilmesine ve yalnızca tek bir işlem oturumda tüm iletiler için kullanabilirsiniz. İstemci kapatma oturumunu kapatır. Bu nedenle, istemci tüm iletileri oturumda kuyruğa göndermek için işlem tamamlanmadan önce kapatılması gerekir.  
   

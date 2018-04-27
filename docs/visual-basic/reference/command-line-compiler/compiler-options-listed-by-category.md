@@ -1,6 +1,6 @@
 ---
 title: Kategoriye Göre Listelenmiş Visual Basic Derleyici Seçenekleri
-ms.date: 03/09/2018
+ms.date: 04/12/2018
 ms.prod: .net
 ms.reviewer: ''
 ms.suite: ''
@@ -12,14 +12,14 @@ helpviewer_keywords:
 ms.assetid: fbe36f7a-7cfa-4f77-a8d4-2be5958568e3
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: e66ec709a32b39e2e7427d6ce165f62212dac543
-ms.sourcegitcommit: c883637b41ee028786edceece4fa872939d2e64c
+ms.openlocfilehash: a90c54ae1bb4d89b2fbe0df62730bc55c0ceb64f
+ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/23/2018
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="visual-basic-compiler-options-listed-by-category"></a>Kategoriye göre listelenmiş Visual Basic derleyici seçenekleri
-Visual Basic komut satırı derleyicisi programları içinden derleme alternatif olarak sağlanan [!INCLUDE[vsprvs](~/includes/vsprvs-md.md)] tümleşik geliştirme ortamı (IDE). İşlev kategoriye göre sıralanmış Visual Basic komut satırı derleyicisi seçeneklerinin listesi verilmiştir.  
+Visual Basic komut satırı derleyicisi programlardan Visual Studio tümleşik geliştirme ortamı (IDE) içinde derleme alternatif olarak sağlanır. İşlev kategoriye göre sıralanmış Visual Basic komut satırı derleyicisi seçeneklerinin listesi verilmiştir.  
 
 [!INCLUDE[compiler-options](~/includes/compiler-options.md)]
   
@@ -31,7 +31,7 @@ Visual Basic komut satırı derleyicisi programları içinden derleme alternatif
 |[-utf8output](../../../visual-basic/reference/command-line-compiler/utf8output.md)|UTF-8 kodlaması kullanarak derleyici çıkışı görüntülenir.|  
 |[-verbose](../../../visual-basic/reference/command-line-compiler/verbose.md)|Derleme sırasında ek bilgiler çıkarır.|  
 |`-modulename:<string>`|Kaynak modülünün adını belirtin|  
-|[-preferreduilang](../../../csharp/language-reference/compiler-options/preferreduilang-compiler-option.md)|Derleyici çıktısı için bir dil belirtin.|  
+|[-preferreduilang](../../../csharp/language-reference/compiler-options/preferreduilang-compiler-option.md)|Derleyici çıktısı için bir dil belirtin.|
   
 ## <a name="optimization"></a>En iyi duruma getirme  
   
@@ -45,6 +45,7 @@ Visual Basic komut satırı derleyicisi programları içinden derleme alternatif
 |Seçenek|Amaç|  
 |---|---|  
 |[-doc](../../../visual-basic/reference/command-line-compiler/doc.md)|Bir XML dosyasına işlem belgeleri açıklamaları.|  
+|[-belirleyici](../../../visual-basic/reference/command-line-compiler/deterministic.md)|Derleyicinin girişleri özdeş ise ikili içerikleri derlemeleri arasında aynı olan bir derleme çıktı neden olur.|
 |[-netcf](../../../visual-basic/reference/command-line-compiler/netcf.md)|Hedefe derleyici ayarlar [!INCLUDE[Compact](~/includes/compact-md.md)].|  
 |[-out](../../../visual-basic/reference/command-line-compiler/out.md)|Bir çıkış dosyasını belirtir.|  
 |[-refonly](refonly-compiler-option.md)|Yalnızca bir referans derlemesini çıkarır.|
