@@ -217,7 +217,7 @@
 ## [C# Yenilikleri](csharp/whats-new/index.md)
 ### [C# 7.2 Yenilikleri](csharp/whats-new/csharp-7-2.md)
 ### [C# 7.1 Yenilikleri](csharp/whats-new/csharp-7-1.md)
-### [C# 7 Yenilikleri](csharp/whats-new/csharp-7.md)
+### [C# 7.0 Yenilikleri](csharp/whats-new/csharp-7.md)
 ### [C# 6 Yenilikleri](csharp/whats-new/csharp-6.md)
 ### [C# Sürüm Geçmişi](csharp/whats-new/csharp-version-history.md)
 ### [Dil ile çerçeve arasındaki ilişkiler](csharp/whats-new/relationships-between-language-and-library.md)
