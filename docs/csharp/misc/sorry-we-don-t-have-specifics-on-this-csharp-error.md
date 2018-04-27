@@ -1,5 +1,5 @@
 ---
-title: "Ne yazık ki tan &#39; bu C# hatasıyla ilgili ayrıntı sahip t"
+title: Ne yazık ki güncelleştireceğinizi&#39;t bu C# hatasıyla ilgili ayrıntı sahip
 ms.date: 07/20/2015
 ms.prod: .net
 ms.technology:
@@ -886,34 +886,34 @@ f1_keywords:
 helpviewer_keywords:
 - errors [C#], additional information
 ms.assetid: 48320e4a-6e17-45a6-9966-88c6ec89bd2f
-caps.latest.revision: 
+caps.latest.revision: 15
 author: BillWagner
 ms.author: wiwagn
-ms.openlocfilehash: 5f6224f661aff817b4314d832fcc2ff3938644c0
-ms.sourcegitcommit: 973a12d1e6962cd9a9c263fbfaad040ec8267fe9
+ms.openlocfilehash: 4aeea86778b44cbe8e71ed64ee5a3a3a1618cccd
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/22/2018
+ms.lasthandoff: 04/26/2018
 ---
-# <a name="sorry-we-don39t-have-specifics-on-this-c-error"></a><span data-ttu-id="233cd-102">Ne yazık ki tan &#39; bu C# hatasıyla ilgili ayrıntı sahip t</span><span class="sxs-lookup"><span data-stu-id="233cd-102">Sorry, we don&#39;t have specifics on this C# error</span></span>
-<span data-ttu-id="233cd-103">Üzgünüz, ancak bu hatayla ilgili belirli bir bilgi bulunmuyor.</span><span class="sxs-lookup"><span data-stu-id="233cd-103">We’re sorry, but we don’t have any specific information about this error.</span></span> <span data-ttu-id="233cd-104">Web hakkında bilgi bulmak hata numarası ve ileti metni arayabilirsiniz.</span><span class="sxs-lookup"><span data-stu-id="233cd-104">You can search for the error number and message text to find information on the web.</span></span> <span data-ttu-id="233cd-105">Veya bu forumları birini kullanarak diğer geliştiriciler isteyin:</span><span class="sxs-lookup"><span data-stu-id="233cd-105">Or you can ask other developers using one of these forums:</span></span>  
+# <a name="sorry-we-don39t-have-specifics-on-this-c-error"></a><span data-ttu-id="2800d-102">Ne yazık ki güncelleştireceğinizi&#39;t bu C# hatasıyla ilgili ayrıntı sahip</span><span class="sxs-lookup"><span data-stu-id="2800d-102">Sorry, we don&#39;t have specifics on this C# error</span></span>
+<span data-ttu-id="2800d-103">Üzgünüz, ancak bu hatayla ilgili belirli bir bilgi bulunmuyor.</span><span class="sxs-lookup"><span data-stu-id="2800d-103">We’re sorry, but we don’t have any specific information about this error.</span></span> <span data-ttu-id="2800d-104">Web hakkında bilgi bulmak hata numarası ve ileti metni arayabilirsiniz.</span><span class="sxs-lookup"><span data-stu-id="2800d-104">You can search for the error number and message text to find information on the web.</span></span> <span data-ttu-id="2800d-105">Veya bu forumları birini kullanarak diğer geliştiriciler isteyin:</span><span class="sxs-lookup"><span data-stu-id="2800d-105">Or you can ask other developers using one of these forums:</span></span>  
   
- [<span data-ttu-id="233cd-106">Visual C# dili</span><span class="sxs-lookup"><span data-stu-id="233cd-106">Visual C# Language</span></span>](https://social.msdn.microsoft.com/Forums/en-US/home?forum=csharplanguage)  
- <span data-ttu-id="233cd-107">Genel ve hakkında tartışmalar sorular için bir forum sağlar [!INCLUDE[csprcs](~/includes/csprcs-md.md)] dili sözdizimi ve derleyicisi.</span><span class="sxs-lookup"><span data-stu-id="233cd-107">Provides a forum for questions about and general discussions of the [!INCLUDE[csprcs](~/includes/csprcs-md.md)] language syntax and compiler.</span></span>  
+ [<span data-ttu-id="2800d-106">Visual C# dili</span><span class="sxs-lookup"><span data-stu-id="2800d-106">Visual C# Language</span></span>](https://social.msdn.microsoft.com/Forums/en-US/home?forum=csharplanguage)  
+ <span data-ttu-id="2800d-107">Bir forum hakkında sorular ve Visual C# dili sözdizimi ve derleyicisi genel tartışmalara sağlar.</span><span class="sxs-lookup"><span data-stu-id="2800d-107">Provides a forum for questions about and general discussions of the Visual C# language syntax and compiler.</span></span>  
   
- [<span data-ttu-id="233cd-108">Visual C# IDE</span><span class="sxs-lookup"><span data-stu-id="233cd-108">Visual C# IDE</span></span>](https://social.msdn.microsoft.com/Forums/en-US/home?forum=csharpide)  
- <span data-ttu-id="233cd-109">Nasıl çalıştığı hakkında sorular için bir forum sağlar [!INCLUDE[vsprvs](~/includes/vsprvs-md.md)] ortamı.</span><span class="sxs-lookup"><span data-stu-id="233cd-109">Provides a forum for questions about how to work in the [!INCLUDE[vsprvs](~/includes/vsprvs-md.md)] environment.</span></span>  
+ [<span data-ttu-id="2800d-108">Visual C# IDE</span><span class="sxs-lookup"><span data-stu-id="2800d-108">Visual C# IDE</span></span>](https://social.msdn.microsoft.com/Forums/en-US/home?forum=csharpide)  
+ <span data-ttu-id="2800d-109">Nasıl çalıştığı hakkında sorular için bir forum sağlar [!INCLUDE[vsprvs](~/includes/vsprvs-md.md)] ortamı.</span><span class="sxs-lookup"><span data-stu-id="2800d-109">Provides a forum for questions about how to work in the [!INCLUDE[vsprvs](~/includes/vsprvs-md.md)] environment.</span></span>  
   
- [<span data-ttu-id="233cd-110">Visual C# genel</span><span class="sxs-lookup"><span data-stu-id="233cd-110">Visual C# General</span></span>](https://social.msdn.microsoft.com/Forums/vstudio/en-US/home?forum=csharpgeneral)  
- <span data-ttu-id="233cd-111">Hakkında sorular için bir forum sağlar ve sorunlar [!INCLUDE[csprcs](~/includes/csprcs-md.md)] , değil tartışılır diğer forumlarda.</span><span class="sxs-lookup"><span data-stu-id="233cd-111">Provides a forum for questions about and issues with [!INCLUDE[csprcs](~/includes/csprcs-md.md)] that are not discussed in other forums.</span></span>  
+ [<span data-ttu-id="2800d-110">Visual C# genel</span><span class="sxs-lookup"><span data-stu-id="2800d-110">Visual C# General</span></span>](https://social.msdn.microsoft.com/Forums/vstudio/en-US/home?forum=csharpgeneral)  
+ <span data-ttu-id="2800d-111">Hakkında sorular için bir forum sağlar ve sorunlar ile Visual C, diğer forumlarda açıklanmamaktadır #.</span><span class="sxs-lookup"><span data-stu-id="2800d-111">Provides a forum for questions about and issues with Visual C# that are not discussed in other forums.</span></span>  
   
- [<span data-ttu-id="233cd-112">StackOverflow</span><span class="sxs-lookup"><span data-stu-id="233cd-112">StackOverflow</span></span>](http://stackoverflow.com/questions/tagged/c%23)  
- <span data-ttu-id="233cd-113">Hakkında sorular için bir forum sağlar ve sorunlar [!INCLUDE[csprcs](~/includes/csprcs-md.md)].</span><span class="sxs-lookup"><span data-stu-id="233cd-113">Provides a forum for questions about and issues with [!INCLUDE[csprcs](~/includes/csprcs-md.md)].</span></span>  
+ [<span data-ttu-id="2800d-112">StackOverflow</span><span class="sxs-lookup"><span data-stu-id="2800d-112">StackOverflow</span></span>](http://stackoverflow.com/questions/tagged/c%23)  
+ <span data-ttu-id="2800d-113">Hakkında sorular için bir forum sağlar ve Visual C# ile yayımlar.</span><span class="sxs-lookup"><span data-stu-id="2800d-113">Provides a forum for questions about and issues with Visual C#.</span></span>  
   
- <span data-ttu-id="233cd-114">Ayrıca bkz.:</span><span class="sxs-lookup"><span data-stu-id="233cd-114">Also see:</span></span>  
- [<span data-ttu-id="233cd-115">Visual C# programcıları için ek kaynaklar</span><span class="sxs-lookup"><span data-stu-id="233cd-115">Additional Resources for Visual C# Programmers</span></span>](../../csharp/getting-started/additional-resources.md)  
+ <span data-ttu-id="2800d-114">Ayrıca bkz.:</span><span class="sxs-lookup"><span data-stu-id="2800d-114">Also see:</span></span>  
+ [<span data-ttu-id="2800d-115">Visual C# programcıları için ek kaynaklar</span><span class="sxs-lookup"><span data-stu-id="2800d-115">Additional Resources for Visual C# Programmers</span></span>](../../csharp/getting-started/additional-resources.md)  
   
-## <a name="see-also"></a><span data-ttu-id="233cd-116">Ayrıca Bkz.</span><span class="sxs-lookup"><span data-stu-id="233cd-116">See Also</span></span>  
- [<span data-ttu-id="233cd-117">C# Programlama Kılavuzu</span><span class="sxs-lookup"><span data-stu-id="233cd-117">C# Programming Guide</span></span>](../../csharp/programming-guide/index.md)  
- [<span data-ttu-id="233cd-118">C# başvurusu</span><span class="sxs-lookup"><span data-stu-id="233cd-118">C# Reference</span></span>](../../csharp/language-reference/index.md)  
- [<span data-ttu-id="233cd-119">Bizimle İletişime Geçin</span><span class="sxs-lookup"><span data-stu-id="233cd-119">Talk to Us</span></span>](/visualstudio/ide/talk-to-us)  
+## <a name="see-also"></a><span data-ttu-id="2800d-116">Ayrıca Bkz.</span><span class="sxs-lookup"><span data-stu-id="2800d-116">See Also</span></span>  
+ [<span data-ttu-id="2800d-117">C# Programlama Kılavuzu</span><span class="sxs-lookup"><span data-stu-id="2800d-117">C# Programming Guide</span></span>](../../csharp/programming-guide/index.md)  
+ [<span data-ttu-id="2800d-118">C# başvurusu</span><span class="sxs-lookup"><span data-stu-id="2800d-118">C# Reference</span></span>](../../csharp/language-reference/index.md)  
+ [<span data-ttu-id="2800d-119">Bizimle İletişime Geçin</span><span class="sxs-lookup"><span data-stu-id="2800d-119">Talk to Us</span></span>](/visualstudio/ide/talk-to-us)  

@@ -1,49 +1,51 @@
 ---
-title: "LINQ-SQL kod oluşturma"
-ms.custom: 
+title: LINQ-SQL kod oluşturma
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-ado
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-ado
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: ddcbdaa1-e7fa-4d85-a379-313b49965c07
-caps.latest.revision: "4"
+caps.latest.revision: 4
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.workload: dotnet
-ms.openlocfilehash: 0d1c80817bb1126d8e9828171c2a2aeee52eb672
-ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
+ms.workload:
+- dotnet
+ms.openlocfilehash: ff543efecb65e61fecef0056650b35735bef83c0
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 04/26/2018
 ---
-# <a name="code-generation-in-linq-to-sql"></a><span data-ttu-id="d8845-102">LINQ-SQL kod oluşturma</span><span class="sxs-lookup"><span data-stu-id="d8845-102">Code Generation in LINQ to SQL</span></span>
-<span data-ttu-id="d8845-103">Kod kullanarak bir veritabanı temsil etmek için oluşturabileceğiniz [!INCLUDE[vs_ordesigner_long](../../../../../../includes/vs-ordesigner-long-md.md)] veya SQLMetal komut satırı aracı.</span><span class="sxs-lookup"><span data-stu-id="d8845-103">You can generate code to represent a database by using either the [!INCLUDE[vs_ordesigner_long](../../../../../../includes/vs-ordesigner-long-md.md)] or the SQLMetal command-line tool.</span></span> <span data-ttu-id="d8845-104">Her iki durumda da, uçtan uca kod oluşturma üç aşamada gerçekleşir:</span><span class="sxs-lookup"><span data-stu-id="d8845-104">In either case, end-to-end code generation occurs in three stages:</span></span>  
+# <a name="code-generation-in-linq-to-sql"></a><span data-ttu-id="fa5c9-102">LINQ-SQL kod oluşturma</span><span class="sxs-lookup"><span data-stu-id="fa5c9-102">Code Generation in LINQ to SQL</span></span>
+<span data-ttu-id="fa5c9-103">Kod kullanarak bir veritabanı temsil etmek için oluşturabileceğiniz [!INCLUDE[vs_ordesigner_long](../../../../../../includes/vs-ordesigner-long-md.md)] veya SQLMetal komut satırı aracı.</span><span class="sxs-lookup"><span data-stu-id="fa5c9-103">You can generate code to represent a database by using either the [!INCLUDE[vs_ordesigner_long](../../../../../../includes/vs-ordesigner-long-md.md)] or the SQLMetal command-line tool.</span></span> <span data-ttu-id="fa5c9-104">Her iki durumda da, uçtan uca kod oluşturma üç aşamada gerçekleşir:</span><span class="sxs-lookup"><span data-stu-id="fa5c9-104">In either case, end-to-end code generation occurs in three stages:</span></span>  
   
-1.  <span data-ttu-id="d8845-105">*DBML Ayıklayıcısı* veritabanından şema bilgileri ayıklar ve bilgilerini XML biçimli DBML dosyasına yeniden birleştirir.</span><span class="sxs-lookup"><span data-stu-id="d8845-105">The *DBML Extractor* extracts schema information from the database and reassembles the information into an XML-formatted DBML file.</span></span>  
+1.  <span data-ttu-id="fa5c9-105">*DBML Ayıklayıcısı* veritabanından şema bilgileri ayıklar ve bilgilerini XML biçimli DBML dosyasına yeniden birleştirir.</span><span class="sxs-lookup"><span data-stu-id="fa5c9-105">The *DBML Extractor* extracts schema information from the database and reassembles the information into an XML-formatted DBML file.</span></span>  
   
-2.  <span data-ttu-id="d8845-106">DBML dosya tarafından taranır *DBML Doğrulayıcı* hataları.</span><span class="sxs-lookup"><span data-stu-id="d8845-106">The DBML file is scanned by the *DBML Validator* for errors.</span></span>  
+2.  <span data-ttu-id="fa5c9-106">DBML dosya tarafından taranır *DBML Doğrulayıcı* hataları.</span><span class="sxs-lookup"><span data-stu-id="fa5c9-106">The DBML file is scanned by the *DBML Validator* for errors.</span></span>  
   
-3.  <span data-ttu-id="d8845-107">Doğrulama hataları görünüyorsa, dosya için kod Oluşturucu geçirilir.</span><span class="sxs-lookup"><span data-stu-id="d8845-107">If no validation errors appear, the file is passed to the Code Generator.</span></span>  
+3.  <span data-ttu-id="fa5c9-107">Doğrulama hataları görünüyorsa, dosya için kod Oluşturucu geçirilir.</span><span class="sxs-lookup"><span data-stu-id="fa5c9-107">If no validation errors appear, the file is passed to the Code Generator.</span></span>  
   
- <span data-ttu-id="d8845-108">Daha fazla bilgi için bkz: [SqlMetal.exe (kod üretme aracı)](../../../../../../docs/framework/tools/sqlmetal-exe-code-generation-tool.md).</span><span class="sxs-lookup"><span data-stu-id="d8845-108">For more information, see [SqlMetal.exe (Code Generation Tool)](../../../../../../docs/framework/tools/sqlmetal-exe-code-generation-tool.md).</span></span> <span data-ttu-id="d8845-109">Kullanan geliştiriciler [!INCLUDE[vs_current_short](../../../../../../includes/vs-current-short-md.md)] de kullanabilirsiniz [!INCLUDE[vs_ordesigner_long](../../../../../../includes/vs-ordesigner-long-md.md)] kodu oluşturmak için.</span><span class="sxs-lookup"><span data-stu-id="d8845-109">Developers using [!INCLUDE[vs_current_short](../../../../../../includes/vs-current-short-md.md)] can also use the [!INCLUDE[vs_ordesigner_long](../../../../../../includes/vs-ordesigner-long-md.md)] to generate code.</span></span> <span data-ttu-id="d8845-110">Bkz: [LINQ-SQL Visual Studio Araçları](/visualstudio/data-tools/linq-to-sql-tools-in-visual-studio2).</span><span class="sxs-lookup"><span data-stu-id="d8845-110">See [LINQ to SQL Tools in Visual Studio](/visualstudio/data-tools/linq-to-sql-tools-in-visual-studio2).</span></span>  
+ <span data-ttu-id="fa5c9-108">Daha fazla bilgi için bkz: [SqlMetal.exe (kod üretme aracı)](../../../../../../docs/framework/tools/sqlmetal-exe-code-generation-tool.md).</span><span class="sxs-lookup"><span data-stu-id="fa5c9-108">For more information, see [SqlMetal.exe (Code Generation Tool)](../../../../../../docs/framework/tools/sqlmetal-exe-code-generation-tool.md).</span></span> <span data-ttu-id="fa5c9-109">Geliştiriciler Visual Studio kullanarak da kullanabilirsiniz [!INCLUDE[vs_ordesigner_long](../../../../../../includes/vs-ordesigner-long-md.md)] kodu oluşturmak için.</span><span class="sxs-lookup"><span data-stu-id="fa5c9-109">Developers using Visual Studio can also use the [!INCLUDE[vs_ordesigner_long](../../../../../../includes/vs-ordesigner-long-md.md)] to generate code.</span></span> <span data-ttu-id="fa5c9-110">Bkz: [LINQ-SQL Visual Studio Araçları](/visualstudio/data-tools/linq-to-sql-tools-in-visual-studio2).</span><span class="sxs-lookup"><span data-stu-id="fa5c9-110">See [LINQ to SQL Tools in Visual Studio](/visualstudio/data-tools/linq-to-sql-tools-in-visual-studio2).</span></span>  
   
-## <a name="dbml-extractor"></a><span data-ttu-id="d8845-111">DBML Ayıklayıcısı</span><span class="sxs-lookup"><span data-stu-id="d8845-111">DBML Extractor</span></span>  
- <span data-ttu-id="d8845-112">DBML Ayıklayıcısı olan bir [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] bileşenidir veritabanı meta verisi giriş olarak alır ve çıktı olarak DBML dosyası oluşturur.</span><span class="sxs-lookup"><span data-stu-id="d8845-112">The DBML Extractor is a [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] component that takes database metadata as input and produces a DBML file as output.</span></span>  
+## <a name="dbml-extractor"></a><span data-ttu-id="fa5c9-111">DBML Ayıklayıcısı</span><span class="sxs-lookup"><span data-stu-id="fa5c9-111">DBML Extractor</span></span>  
+ <span data-ttu-id="fa5c9-112">DBML Ayıklayıcısı olan bir [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] bileşenidir veritabanı meta verisi giriş olarak alır ve çıktı olarak DBML dosyası oluşturur.</span><span class="sxs-lookup"><span data-stu-id="fa5c9-112">The DBML Extractor is a [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] component that takes database metadata as input and produces a DBML file as output.</span></span>  
   
-## <a name="code-generator"></a><span data-ttu-id="d8845-113">Kod Oluşturucu</span><span class="sxs-lookup"><span data-stu-id="d8845-113">Code Generator</span></span>  
- <span data-ttu-id="d8845-114">Kod oluşturucunun olan bir [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] DBML çevirir bileşen dosyaları [!INCLUDE[vbprvb](../../../../../../includes/vbprvb-md.md)], C# veya XML eşlemesi dosyaları.</span><span class="sxs-lookup"><span data-stu-id="d8845-114">The Code Generator is a [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] component that translates DBML files to [!INCLUDE[vbprvb](../../../../../../includes/vbprvb-md.md)], C#, or XML mapping files.</span></span>  
+## <a name="code-generator"></a><span data-ttu-id="fa5c9-113">Kod Oluşturucu</span><span class="sxs-lookup"><span data-stu-id="fa5c9-113">Code Generator</span></span>  
+ <span data-ttu-id="fa5c9-114">Kod oluşturucunun olan bir [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] DBML çevirir bileşen dosyaları Visual Basic, C# veya XML eşlemesi dosyalar.</span><span class="sxs-lookup"><span data-stu-id="fa5c9-114">The Code Generator is a [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] component that translates DBML files to Visual Basic, C#, or XML mapping files.</span></span>  
   
-## <a name="xml-schema-definition-file"></a><span data-ttu-id="d8845-115">XML şema tanımı dosyası</span><span class="sxs-lookup"><span data-stu-id="d8845-115">XML Schema Definition File</span></span>  
- <span data-ttu-id="d8845-116">DBML dosya geçerli bir XSD dosyası olarak aşağıdaki şema tanımı karşı olmalıdır.</span><span class="sxs-lookup"><span data-stu-id="d8845-116">The DBML file must be valid against the following schema definition as an XSD file.</span></span>  
+## <a name="xml-schema-definition-file"></a><span data-ttu-id="fa5c9-115">XML şema tanımı dosyası</span><span class="sxs-lookup"><span data-stu-id="fa5c9-115">XML Schema Definition File</span></span>  
+ <span data-ttu-id="fa5c9-116">DBML dosya geçerli bir XSD dosyası olarak aşağıdaki şema tanımı karşı olmalıdır.</span><span class="sxs-lookup"><span data-stu-id="fa5c9-116">The DBML file must be valid against the following schema definition as an XSD file.</span></span>  
   
- <span data-ttu-id="d8845-117">Bu şema tanımı dosyasındaki bir dış eşleme dosyasını doğrulamak için kullanılan şema tanımı dosyası ayırt etmek.</span><span class="sxs-lookup"><span data-stu-id="d8845-117">Distinguish this schema definition file from the schema definition file that is used to validate an external mapping file.</span></span> <span data-ttu-id="d8845-118">Daha fazla bilgi için bkz: [dış eşleme](../../../../../../docs/framework/data/adonet/sql/linq/external-mapping.md)).</span><span class="sxs-lookup"><span data-stu-id="d8845-118">For more information, see [External Mapping](../../../../../../docs/framework/data/adonet/sql/linq/external-mapping.md)).</span></span>  
+ <span data-ttu-id="fa5c9-117">Bu şema tanımı dosyasındaki bir dış eşleme dosyasını doğrulamak için kullanılan şema tanımı dosyası ayırt etmek.</span><span class="sxs-lookup"><span data-stu-id="fa5c9-117">Distinguish this schema definition file from the schema definition file that is used to validate an external mapping file.</span></span> <span data-ttu-id="fa5c9-118">Daha fazla bilgi için bkz: [dış eşleme](../../../../../../docs/framework/data/adonet/sql/linq/external-mapping.md)).</span><span class="sxs-lookup"><span data-stu-id="fa5c9-118">For more information, see [External Mapping](../../../../../../docs/framework/data/adonet/sql/linq/external-mapping.md)).</span></span>  
   
 > [!NOTE]
->  [!INCLUDE[vs_current_short](../../../../../../includes/vs-current-short-md.md)]<span data-ttu-id="d8845-119">Kullanıcılar ayrıca bu XSD dosyası XML şemaları iletişim kutusuna "DbmlSchema.xsd" bulur.</span><span class="sxs-lookup"><span data-stu-id="d8845-119"> users will also find this XSD file in the XML Schemas dialog box as "DbmlSchema.xsd".</span></span> <span data-ttu-id="d8845-120">XSD dosyası doğru olarak DBML dosyasını doğrulamak için kullanmak için bkz: [nasıl yapılır: DBML doğrulamak ve dış eşleme dosyaları](../../../../../../docs/framework/data/adonet/sql/linq/how-to-validate-dbml-and-external-mapping-files.md).</span><span class="sxs-lookup"><span data-stu-id="d8845-120">To use the XSD file correctly for validating a DBML file, see [How to: Validate DBML and External Mapping Files](../../../../../../docs/framework/data/adonet/sql/linq/how-to-validate-dbml-and-external-mapping-files.md).</span></span>  
+>  <span data-ttu-id="fa5c9-119">Visual Studio kullanıcılar da bu XSD dosyası XML şemaları iletişim kutusuna "DbmlSchema.xsd" bulur.</span><span class="sxs-lookup"><span data-stu-id="fa5c9-119">Visual Studio users will also find this XSD file in the XML Schemas dialog box as "DbmlSchema.xsd".</span></span> <span data-ttu-id="fa5c9-120">XSD dosyası doğru olarak DBML dosyasını doğrulamak için kullanmak için bkz: [nasıl yapılır: DBML doğrulamak ve dış eşleme dosyaları](../../../../../../docs/framework/data/adonet/sql/linq/how-to-validate-dbml-and-external-mapping-files.md).</span><span class="sxs-lookup"><span data-stu-id="fa5c9-120">To use the XSD file correctly for validating a DBML file, see [How to: Validate DBML and External Mapping Files](../../../../../../docs/framework/data/adonet/sql/linq/how-to-validate-dbml-and-external-mapping-files.md).</span></span>  
   
 ```  
 ?<?xml version="1.0" encoding="utf-16"?>  
@@ -253,8 +255,8 @@ elementFormDefault="qualified" >
 </xs:schema>  
 ```  
   
-## <a name="sample-dbml-file"></a><span data-ttu-id="d8845-121">Örnek DBML dosyası</span><span class="sxs-lookup"><span data-stu-id="d8845-121">Sample DBML File</span></span>  
- <span data-ttu-id="d8845-122">Northwind örnek veritabanından oluşturulan DBML dosyasından bir alıntı kodudur.</span><span class="sxs-lookup"><span data-stu-id="d8845-122">The following code is an excerpt from the DBML file created from the Northwind sample database.</span></span> <span data-ttu-id="d8845-123">SQLMetal ile kullanarak dosyanın tamamını oluşturabilirsiniz **/XML** seçeneği.</span><span class="sxs-lookup"><span data-stu-id="d8845-123">You can generate the whole file by using SQLMetal with the **/xml** option.</span></span> <span data-ttu-id="d8845-124">Daha fazla bilgi için bkz: [SqlMetal.exe (kod üretme aracı)](../../../../../../docs/framework/tools/sqlmetal-exe-code-generation-tool.md).</span><span class="sxs-lookup"><span data-stu-id="d8845-124">For more information, see [SqlMetal.exe (Code Generation Tool)](../../../../../../docs/framework/tools/sqlmetal-exe-code-generation-tool.md).</span></span>  
+## <a name="sample-dbml-file"></a><span data-ttu-id="fa5c9-121">Örnek DBML dosyası</span><span class="sxs-lookup"><span data-stu-id="fa5c9-121">Sample DBML File</span></span>  
+ <span data-ttu-id="fa5c9-122">Northwind örnek veritabanından oluşturulan DBML dosyasından bir alıntı kodudur.</span><span class="sxs-lookup"><span data-stu-id="fa5c9-122">The following code is an excerpt from the DBML file created from the Northwind sample database.</span></span> <span data-ttu-id="fa5c9-123">SQLMetal ile kullanarak dosyanın tamamını oluşturabilirsiniz **/XML** seçeneği.</span><span class="sxs-lookup"><span data-stu-id="fa5c9-123">You can generate the whole file by using SQLMetal with the **/xml** option.</span></span> <span data-ttu-id="fa5c9-124">Daha fazla bilgi için bkz: [SqlMetal.exe (kod üretme aracı)](../../../../../../docs/framework/tools/sqlmetal-exe-code-generation-tool.md).</span><span class="sxs-lookup"><span data-stu-id="fa5c9-124">For more information, see [SqlMetal.exe (Code Generation Tool)](../../../../../../docs/framework/tools/sqlmetal-exe-code-generation-tool.md).</span></span>  
   
 ```xml  
 <?xml version="1.0" encoding="utf-16"?>  
@@ -280,9 +282,9 @@ elementFormDefault="qualified" >
 </Database>  
 ```  
   
-## <a name="see-also"></a><span data-ttu-id="d8845-125">Ayrıca Bkz.</span><span class="sxs-lookup"><span data-stu-id="d8845-125">See Also</span></span>  
- [<span data-ttu-id="d8845-126">Arka Plan Bilgileri</span><span class="sxs-lookup"><span data-stu-id="d8845-126">Background Information</span></span>](../../../../../../docs/framework/data/adonet/sql/linq/background-information.md)  
- [<span data-ttu-id="d8845-127">Dış Eşleme</span><span class="sxs-lookup"><span data-stu-id="d8845-127">External Mapping</span></span>](../../../../../../docs/framework/data/adonet/sql/linq/external-mapping.md)  
- [<span data-ttu-id="d8845-128">Nasıl yapılır: Nesne Modelini Dış Dosya Olarak Oluşturma</span><span class="sxs-lookup"><span data-stu-id="d8845-128">How to: Generate the Object Model as an External File</span></span>](../../../../../../docs/framework/data/adonet/sql/linq/how-to-generate-the-object-model-as-an-external-file.md)  
- [<span data-ttu-id="d8845-129">Örnek Veritabanları İndirme</span><span class="sxs-lookup"><span data-stu-id="d8845-129">Downloading Sample Databases</span></span>](../../../../../../docs/framework/data/adonet/sql/linq/downloading-sample-databases.md)  
- [<span data-ttu-id="d8845-130">Başvuru</span><span class="sxs-lookup"><span data-stu-id="d8845-130">Reference</span></span>](../../../../../../docs/framework/data/adonet/sql/linq/reference.md)
+## <a name="see-also"></a><span data-ttu-id="fa5c9-125">Ayrıca Bkz.</span><span class="sxs-lookup"><span data-stu-id="fa5c9-125">See Also</span></span>  
+ [<span data-ttu-id="fa5c9-126">Arka Plan Bilgileri</span><span class="sxs-lookup"><span data-stu-id="fa5c9-126">Background Information</span></span>](../../../../../../docs/framework/data/adonet/sql/linq/background-information.md)  
+ [<span data-ttu-id="fa5c9-127">Dış Eşleme</span><span class="sxs-lookup"><span data-stu-id="fa5c9-127">External Mapping</span></span>](../../../../../../docs/framework/data/adonet/sql/linq/external-mapping.md)  
+ [<span data-ttu-id="fa5c9-128">Nasıl yapılır: Nesne Modelini Dış Dosya Olarak Oluşturma</span><span class="sxs-lookup"><span data-stu-id="fa5c9-128">How to: Generate the Object Model as an External File</span></span>](../../../../../../docs/framework/data/adonet/sql/linq/how-to-generate-the-object-model-as-an-external-file.md)  
+ [<span data-ttu-id="fa5c9-129">Örnek Veritabanları İndirme</span><span class="sxs-lookup"><span data-stu-id="fa5c9-129">Downloading Sample Databases</span></span>](../../../../../../docs/framework/data/adonet/sql/linq/downloading-sample-databases.md)  
+ [<span data-ttu-id="fa5c9-130">Başvuru</span><span class="sxs-lookup"><span data-stu-id="fa5c9-130">Reference</span></span>](../../../../../../docs/framework/data/adonet/sql/linq/reference.md)

@@ -1,58 +1,60 @@
 ---
-title: "Hızlı Başlangıç (WCF Veri Hizmetleri)"
-ms.custom: 
+title: Hızlı Başlangıç (WCF Veri Hizmetleri)
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework-oob
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - WCF Data Services, quick-start example
 - WCF Data Services, Entity Data Model (EDM) service
 ms.assetid: 7b18ca1e-d4d6-4c7a-afb9-ce3cebb98a8d
-caps.latest.revision: "3"
+caps.latest.revision: 3
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: fa6711ef5591110c74a1da95358aac4d8a8da655
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: cf23c6f86900fd94d269e77dcefb05da0ace5ea0
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/26/2018
 ---
-# <a name="quickstart-wcf-data-services"></a><span data-ttu-id="f260e-102">Hızlı Başlangıç (WCF Veri Hizmetleri)</span><span class="sxs-lookup"><span data-stu-id="f260e-102">Quickstart (WCF Data Services)</span></span>
-<span data-ttu-id="f260e-103">Bu hızlı başlangıç öğrenmeniz yardımcı olan [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] ve [!INCLUDE[ssODataFull](../../../../includes/ssodatafull-md.md)] konular, destek görevleri bir dizi [Başlarken](../../../../docs/framework/data/wcf/getting-started-with-wcf-data-services.md).</span><span class="sxs-lookup"><span data-stu-id="f260e-103">This quickstart helps you become familiar with [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] and the [!INCLUDE[ssODataFull](../../../../includes/ssodatafull-md.md)] through a series of tasks that support the topics in [Getting Started](../../../../docs/framework/data/wcf/getting-started-with-wcf-data-services.md).</span></span>  
+# <a name="quickstart-wcf-data-services"></a><span data-ttu-id="e0242-102">Hızlı Başlangıç (WCF Veri Hizmetleri)</span><span class="sxs-lookup"><span data-stu-id="e0242-102">Quickstart (WCF Data Services)</span></span>
+<span data-ttu-id="e0242-103">Bu hızlı başlangıç öğrenmeniz yardımcı olan [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] ve [!INCLUDE[ssODataFull](../../../../includes/ssodatafull-md.md)] konular, destek görevleri bir dizi [Başlarken](../../../../docs/framework/data/wcf/getting-started-with-wcf-data-services.md).</span><span class="sxs-lookup"><span data-stu-id="e0242-103">This quickstart helps you become familiar with [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] and the [!INCLUDE[ssODataFull](../../../../includes/ssodatafull-md.md)] through a series of tasks that support the topics in [Getting Started](../../../../docs/framework/data/wcf/getting-started-with-wcf-data-services.md).</span></span>  
   
-## <a name="what-you-will-learn"></a><span data-ttu-id="f260e-104">Ne öğreneceksiniz</span><span class="sxs-lookup"><span data-stu-id="f260e-104">What You Will Learn</span></span>  
- <span data-ttu-id="f260e-105">Bu hızlı başlangıç ilk görevde kullanıma sunmak için veri hizmeti oluşturmayı gösteren bir [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] Northwind örnek veritabanından akış.</span><span class="sxs-lookup"><span data-stu-id="f260e-105">The first task in this quickstart shows how to create a data service to expose an [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] feed from the Northwind sample database.</span></span> <span data-ttu-id="f260e-106">Sonraki konularda size erişecek [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] bir Web tarayıcısı kullanarak akış ve ayrıca oluşturabilirsiniz bir [!INCLUDE[avalon1](../../../../includes/avalon1-md.md)] tüketir istemci uygulaması [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] istemci kitaplıkları kullanarak akış.</span><span class="sxs-lookup"><span data-stu-id="f260e-106">In later topics, you will access the [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] feed by using a Web browser, and also create a [!INCLUDE[avalon1](../../../../includes/avalon1-md.md)] client application that consumes the [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] feed by using client libraries.</span></span>  
+## <a name="what-you-will-learn"></a><span data-ttu-id="e0242-104">Ne öğreneceksiniz</span><span class="sxs-lookup"><span data-stu-id="e0242-104">What You Will Learn</span></span>  
+ <span data-ttu-id="e0242-105">Bu hızlı başlangıç ilk görevde kullanıma sunmak için veri hizmeti oluşturmayı gösteren bir [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] Northwind örnek veritabanından akış.</span><span class="sxs-lookup"><span data-stu-id="e0242-105">The first task in this quickstart shows how to create a data service to expose an [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] feed from the Northwind sample database.</span></span> <span data-ttu-id="e0242-106">Sonraki konularda size erişecek [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] bir Web tarayıcısı kullanarak akış ve ayrıca tüketen Windows Presentation Foundation (WPF) istemci uygulaması oluşturma [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] istemci kitaplıkları kullanarak akış.</span><span class="sxs-lookup"><span data-stu-id="e0242-106">In later topics, you will access the [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] feed by using a Web browser, and also create a Windows Presentation Foundation (WPF) client application that consumes the [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] feed by using client libraries.</span></span>  
   
-## <a name="prerequisites"></a><span data-ttu-id="f260e-107">Önkoşullar</span><span class="sxs-lookup"><span data-stu-id="f260e-107">Prerequisites</span></span>  
- <span data-ttu-id="f260e-108">Bu hızlı başlangıç tamamlamak için aşağıdaki bileşenleri yüklemeniz gerekir:</span><span class="sxs-lookup"><span data-stu-id="f260e-108">To complete this quickstart, you must install the following components:</span></span>  
+## <a name="prerequisites"></a><span data-ttu-id="e0242-107">Önkoşullar</span><span class="sxs-lookup"><span data-stu-id="e0242-107">Prerequisites</span></span>  
+ <span data-ttu-id="e0242-108">Bu hızlı başlangıç tamamlamak için aşağıdaki bileşenleri yüklemeniz gerekir:</span><span class="sxs-lookup"><span data-stu-id="e0242-108">To complete this quickstart, you must install the following components:</span></span>  
   
--   [!INCLUDE[vs2010](../../../../includes/vs2010-md.md)]<span data-ttu-id="f260e-109">.</span><span class="sxs-lookup"><span data-stu-id="f260e-109">.</span></span>  
+-   [!INCLUDE[vs2010](../../../../includes/vs2010-md.md)]<span data-ttu-id="e0242-109">.</span><span class="sxs-lookup"><span data-stu-id="e0242-109">.</span></span>  
   
--   <span data-ttu-id="f260e-110">Örneği [!INCLUDE[msCoName](../../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../../includes/ssnoversion-md.md)].</span><span class="sxs-lookup"><span data-stu-id="f260e-110">An instance of [!INCLUDE[msCoName](../../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../../includes/ssnoversion-md.md)].</span></span> <span data-ttu-id="f260e-111">Bu varsayılan yüklemede bulunan SQL Server Express içerir [!INCLUDE[vs_current_short](../../../../includes/vs-current-short-md.md)].</span><span class="sxs-lookup"><span data-stu-id="f260e-111">This includes SQL Server Express, which is included in a default installation of [!INCLUDE[vs_current_short](../../../../includes/vs-current-short-md.md)].</span></span>  
+-   <span data-ttu-id="e0242-110">Örneği [!INCLUDE[msCoName](../../../../includes/msconame-md.md)] SQL Server.</span><span class="sxs-lookup"><span data-stu-id="e0242-110">An instance of [!INCLUDE[msCoName](../../../../includes/msconame-md.md)] SQL Server.</span></span> <span data-ttu-id="e0242-111">Bu, Visual Studio'nun varsayılan yüklemede bulunan SQL Server Express içerir.</span><span class="sxs-lookup"><span data-stu-id="e0242-111">This includes SQL Server Express, which is included in a default installation of Visual Studio.</span></span>  
   
--   <span data-ttu-id="f260e-112">Northwind örnek veritabanı.</span><span class="sxs-lookup"><span data-stu-id="f260e-112">The Northwind sample database.</span></span> <span data-ttu-id="f260e-113">Bu örnek veritabanı karşıdan yüklemek için indirme sayfasına bakın [örnek veritabanları için SQL Server](http://go.microsoft.com/fwlink/?linkid=24758).</span><span class="sxs-lookup"><span data-stu-id="f260e-113">To download this sample database, see the download page, [Sample Databases for SQL Server](http://go.microsoft.com/fwlink/?linkid=24758).</span></span>  
+-   <span data-ttu-id="e0242-112">Northwind örnek veritabanı.</span><span class="sxs-lookup"><span data-stu-id="e0242-112">The Northwind sample database.</span></span> <span data-ttu-id="e0242-113">Bu örnek veritabanı karşıdan yüklemek için indirme sayfasına bakın [örnek veritabanları için SQL Server](http://go.microsoft.com/fwlink/?linkid=24758).</span><span class="sxs-lookup"><span data-stu-id="e0242-113">To download this sample database, see the download page, [Sample Databases for SQL Server](http://go.microsoft.com/fwlink/?linkid=24758).</span></span>  
   
-## <a name="wcf-data-services-quickstart-tasks"></a><span data-ttu-id="f260e-114">Hızlı Başlangıç görevleri WCF Veri Hizmetleri</span><span class="sxs-lookup"><span data-stu-id="f260e-114">WCF Data Services Quickstart Tasks</span></span>  
- [<span data-ttu-id="f260e-115">Veri Hizmeti Oluşturma</span><span class="sxs-lookup"><span data-stu-id="f260e-115">Creating the Data Service</span></span>](../../../../docs/framework/data/wcf/creating-the-data-service.md)  
- <span data-ttu-id="f260e-116">Tanımlamak [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] uygulama, veri modelini tanımlar, veri hizmeti oluşturma ve kaynaklarına erişimi etkinleştirme.</span><span class="sxs-lookup"><span data-stu-id="f260e-116">Define the [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] application, define the data model, create the data service, and enable access to resources.</span></span>  
+## <a name="wcf-data-services-quickstart-tasks"></a><span data-ttu-id="e0242-114">Hızlı Başlangıç görevleri WCF Veri Hizmetleri</span><span class="sxs-lookup"><span data-stu-id="e0242-114">WCF Data Services Quickstart Tasks</span></span>  
+ [<span data-ttu-id="e0242-115">Veri Hizmeti Oluşturma</span><span class="sxs-lookup"><span data-stu-id="e0242-115">Creating the Data Service</span></span>](../../../../docs/framework/data/wcf/creating-the-data-service.md)  
+ <span data-ttu-id="e0242-116">Tanımlamak [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] uygulama, veri modelini tanımlar, veri hizmeti oluşturma ve kaynaklarına erişimi etkinleştirme.</span><span class="sxs-lookup"><span data-stu-id="e0242-116">Define the [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] application, define the data model, create the data service, and enable access to resources.</span></span>  
   
- [<span data-ttu-id="f260e-117">Web Tarayıcısından Hizmete Erişme</span><span class="sxs-lookup"><span data-stu-id="f260e-117">Accessing the Service from a Web Browser</span></span>](../../../../docs/framework/data/wcf/accessing-the-service-from-a-web-browser-wcf-data-services-quickstart.md)  
- <span data-ttu-id="f260e-118">Hizmeti Başlat [!INCLUDE[vs_current_short](../../../../includes/vs-current-short-md.md)] ve HTTP GET isteklerini gösterilen akışa bir Web tarayıcısı aracılığıyla göndererek hizmet erişebilirsiniz.</span><span class="sxs-lookup"><span data-stu-id="f260e-118">Start the service from [!INCLUDE[vs_current_short](../../../../includes/vs-current-short-md.md)] and access the service by submitting HTTP GET requests through a Web browser to the exposed feed.</span></span>  
+ [<span data-ttu-id="e0242-117">Web Tarayıcısından Hizmete Erişme</span><span class="sxs-lookup"><span data-stu-id="e0242-117">Accessing the Service from a Web Browser</span></span>](../../../../docs/framework/data/wcf/accessing-the-service-from-a-web-browser-wcf-data-services-quickstart.md)  
+ <span data-ttu-id="e0242-118">Visual Studio'dan hizmeti başlatmak ve HTTP GET isteklerini gösterilen akışa bir Web tarayıcısı aracılığıyla göndererek hizmet erişebilirsiniz.</span><span class="sxs-lookup"><span data-stu-id="e0242-118">Start the service from Visual Studio and access the service by submitting HTTP GET requests through a Web browser to the exposed feed.</span></span>  
   
- [<span data-ttu-id="f260e-119">.NET Framework İstemci Uygulaması Oluşturma</span><span class="sxs-lookup"><span data-stu-id="f260e-119">Creating the .NET Framework Client Application</span></span>](../../../../docs/framework/data/wcf/creating-the-dotnet-client-application-wcf-data-services-quickstart.md)  
- <span data-ttu-id="f260e-120">Oluşturma bir [!INCLUDE[avalon2](../../../../includes/avalon2-md.md)] kullanmak için istemci uygulaması [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] akışı, Windows denetimlere veri bağlama, veri bağlama denetimleri değiştirin ve değişiklikleri veri hizmetine geri gönderin.</span><span class="sxs-lookup"><span data-stu-id="f260e-120">Create a [!INCLUDE[avalon2](../../../../includes/avalon2-md.md)] client application to consume the [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] feed, bind data to Windows controls, change data in the bound controls, and then send the changes back to the data service.</span></span>  
+ [<span data-ttu-id="e0242-119">.NET Framework İstemci Uygulaması Oluşturma</span><span class="sxs-lookup"><span data-stu-id="e0242-119">Creating the .NET Framework Client Application</span></span>](../../../../docs/framework/data/wcf/creating-the-dotnet-client-application-wcf-data-services-quickstart.md)  
+ <span data-ttu-id="e0242-120">Oluşturma bir [!INCLUDE[avalon2](../../../../includes/avalon2-md.md)] kullanmak için istemci uygulaması [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] akışı, Windows denetimlere veri bağlama, veri bağlama denetimleri değiştirin ve değişiklikleri veri hizmetine geri gönderin.</span><span class="sxs-lookup"><span data-stu-id="e0242-120">Create a [!INCLUDE[avalon2](../../../../includes/avalon2-md.md)] client application to consume the [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] feed, bind data to Windows controls, change data in the bound controls, and then send the changes back to the data service.</span></span>  
   
 > [!NOTE]
->  <span data-ttu-id="f260e-121">Hızlı Başlangıç tamamlanmış bir sürümünden proje dosyalarını adresinden yüklenebilir [WCF Veri Hizmetleri belgeleri örnekleri](http://go.microsoft.com/fwlink/?LinkId=179994) sayfası.</span><span class="sxs-lookup"><span data-stu-id="f260e-121">Project files from a completed version of the quickstart can be downloaded from the [WCF Data Services Documentation Samples](http://go.microsoft.com/fwlink/?LinkId=179994) page.</span></span>  
+>  <span data-ttu-id="e0242-121">Hızlı Başlangıç tamamlanmış bir sürümünden proje dosyalarını adresinden yüklenebilir [WCF Veri Hizmetleri belgeleri örnekleri](http://go.microsoft.com/fwlink/?LinkId=179994) sayfası.</span><span class="sxs-lookup"><span data-stu-id="e0242-121">Project files from a completed version of the quickstart can be downloaded from the [WCF Data Services Documentation Samples](http://go.microsoft.com/fwlink/?LinkId=179994) page.</span></span>  
   
-## <a name="next-steps"></a><span data-ttu-id="f260e-122">Sonraki Adımlar</span><span class="sxs-lookup"><span data-stu-id="f260e-122">Next Steps</span></span>  
- <span data-ttu-id="f260e-123">[Hızlı Başlat](../../../../docs/framework/data/wcf/creating-the-data-service.md).</span><span class="sxs-lookup"><span data-stu-id="f260e-123">[Start the Quickstart](../../../../docs/framework/data/wcf/creating-the-data-service.md).</span></span>  
+## <a name="next-steps"></a><span data-ttu-id="e0242-122">Sonraki Adımlar</span><span class="sxs-lookup"><span data-stu-id="e0242-122">Next Steps</span></span>  
+ <span data-ttu-id="e0242-123">[Hızlı Başlat](../../../../docs/framework/data/wcf/creating-the-data-service.md).</span><span class="sxs-lookup"><span data-stu-id="e0242-123">[Start the Quickstart](../../../../docs/framework/data/wcf/creating-the-data-service.md).</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="f260e-124">Ayrıca Bkz.</span><span class="sxs-lookup"><span data-stu-id="f260e-124">See Also</span></span>  
- [<span data-ttu-id="f260e-125">ADO.NET Entity Framework</span><span class="sxs-lookup"><span data-stu-id="f260e-125">ADO.NET Entity Framework</span></span>](../../../../docs/framework/data/adonet/ef/index.md)
+## <a name="see-also"></a><span data-ttu-id="e0242-124">Ayrıca Bkz.</span><span class="sxs-lookup"><span data-stu-id="e0242-124">See Also</span></span>  
+ [<span data-ttu-id="e0242-125">ADO.NET Entity Framework</span><span class="sxs-lookup"><span data-stu-id="e0242-125">ADO.NET Entity Framework</span></span>](../../../../docs/framework/data/adonet/ef/index.md)

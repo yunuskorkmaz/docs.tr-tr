@@ -1,12 +1,12 @@
 ---
-title: "Genişletilebilirlik için tasarlama"
-ms.custom: 
+title: Genişletilebilirlik için tasarlama
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology: dotnet-standard
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - extending class libraries
@@ -14,35 +14,35 @@ helpviewer_keywords:
 - class library design guidelines [.NET Framework], extensibility
 - class library extensibility [.NET Framework]
 ms.assetid: 1cdb8740-871a-456c-9bd9-db96ca8d79b3
-caps.latest.revision: "11"
+caps.latest.revision: 11
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: f21e9239199ecd36432ed8f14adb896f1799506b
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: b643c33a1418839c8aabf06d681083232e61553a
+ms.sourcegitcommit: 2e8acae16ae802f2d6d04e3ce0a6dbf04e476513
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 04/18/2018
 ---
-# <a name="designing-for-extensibility"></a><span data-ttu-id="c5a93-102">Genişletilebilirlik için tasarlama</span><span class="sxs-lookup"><span data-stu-id="c5a93-102">Designing for Extensibility</span></span>
-<span data-ttu-id="c5a93-103">Bir çerçeve tasarlamanın önemli bir özelliği Genişletilebilirlik Çerçevesi dikkatle emin yapılmasıdır.</span><span class="sxs-lookup"><span data-stu-id="c5a93-103">One important aspect of designing a framework is making sure the extensibility of the framework has been carefully considered.</span></span> <span data-ttu-id="c5a93-104">Bu, çeşitli genişletilebilirlik mekanizmaları ile ilişkili yararlar ve maliyetleri anlamak gerektirir.</span><span class="sxs-lookup"><span data-stu-id="c5a93-104">This requires that you understand the costs and benefits associated with various extensibility mechanisms.</span></span> <span data-ttu-id="c5a93-105">Bu bölümde, genişletilebilirlik mekanizması karar vermenize yardımcı olan — sınıflara, olaylar, sanal üyeler, geri çağrılar ve benzeri —, framework gereksinimlerini en iyi karşılayabilecek.</span><span class="sxs-lookup"><span data-stu-id="c5a93-105">This chapter helps you decide which of the extensibility mechanisms—subclassing, events, virtual members, callbacks, and so on—can best meet the requirements of your framework.</span></span>  
+# <a name="designing-for-extensibility"></a><span data-ttu-id="84a91-102">Genişletilebilirlik için tasarlama</span><span class="sxs-lookup"><span data-stu-id="84a91-102">Designing for Extensibility</span></span>
+<span data-ttu-id="84a91-103">Bir çerçeve tasarlamanın önemli bir özelliği Genişletilebilirlik Çerçevesi dikkatle emin yapılmasıdır.</span><span class="sxs-lookup"><span data-stu-id="84a91-103">One important aspect of designing a framework is making sure the extensibility of the framework has been carefully considered.</span></span> <span data-ttu-id="84a91-104">Bu, çeşitli genişletilebilirlik mekanizmaları ile ilişkili yararlar ve maliyetleri anlamak gerektirir.</span><span class="sxs-lookup"><span data-stu-id="84a91-104">This requires that you understand the costs and benefits associated with various extensibility mechanisms.</span></span> <span data-ttu-id="84a91-105">Bu bölümde, genişletilebilirlik mekanizması karar vermenize yardımcı olan — sınıflara, olaylar, sanal üyeler, geri çağrılar ve benzeri —, framework gereksinimlerini en iyi karşılayabilecek.</span><span class="sxs-lookup"><span data-stu-id="84a91-105">This chapter helps you decide which of the extensibility mechanisms—subclassing, events, virtual members, callbacks, and so on—can best meet the requirements of your framework.</span></span>  
   
- <span data-ttu-id="c5a93-106">Genişletilebilirlik içinde çerçeve izin vermek için birçok yolu vardır.</span><span class="sxs-lookup"><span data-stu-id="c5a93-106">There are many ways to allow extensibility in frameworks.</span></span> <span data-ttu-id="c5a93-107">Bunlar daha az güçlü ancak daha az maliyetli pahalı ancak çok güçlü aralığının.</span><span class="sxs-lookup"><span data-stu-id="c5a93-107">They range from less powerful but less costly to very powerful but expensive.</span></span> <span data-ttu-id="c5a93-108">Tüm verilen genişletilebilirlik gereksinimini gereksinimlerini karşılayan en az maliyetli genişletilebilirlik mekanizmasını seçmeniz gerekir.</span><span class="sxs-lookup"><span data-stu-id="c5a93-108">For any given extensibility requirement, you should choose the least costly extensibility mechanism that meets the requirements.</span></span> <span data-ttu-id="c5a93-109">Daha fazla genişletilebilirlik daha sonra eklemek genellikle mümkündür, ancak hiçbir zaman onu hemen önemli değişiklikler oluşturmaksızın yapabileceğiniz aklınızda bulundurun.</span><span class="sxs-lookup"><span data-stu-id="c5a93-109">Keep in mind that it’s usually possible to add more extensibility later, but you can never take it away without introducing breaking changes.</span></span>  
+ <span data-ttu-id="84a91-106">Genişletilebilirlik içinde çerçeve izin vermek için birçok yolu vardır.</span><span class="sxs-lookup"><span data-stu-id="84a91-106">There are many ways to allow extensibility in frameworks.</span></span> <span data-ttu-id="84a91-107">Bunlar daha az güçlü ancak daha az maliyetli pahalı ancak çok güçlü aralığının.</span><span class="sxs-lookup"><span data-stu-id="84a91-107">They range from less powerful but less costly to very powerful but expensive.</span></span> <span data-ttu-id="84a91-108">Tüm verilen genişletilebilirlik gereksinimini gereksinimlerini karşılayan en az maliyetli genişletilebilirlik mekanizmasını seçmeniz gerekir.</span><span class="sxs-lookup"><span data-stu-id="84a91-108">For any given extensibility requirement, you should choose the least costly extensibility mechanism that meets the requirements.</span></span> <span data-ttu-id="84a91-109">Daha fazla genişletilebilirlik daha sonra eklemek genellikle mümkündür, ancak hiçbir zaman onu hemen önemli değişiklikler oluşturmaksızın yapabileceğiniz aklınızda bulundurun.</span><span class="sxs-lookup"><span data-stu-id="84a91-109">Keep in mind that it’s usually possible to add more extensibility later, but you can never take it away without introducing breaking changes.</span></span>  
   
-## <a name="in-this-section"></a><span data-ttu-id="c5a93-110">Bu Bölümde</span><span class="sxs-lookup"><span data-stu-id="c5a93-110">In This Section</span></span>  
- [<span data-ttu-id="c5a93-111">Mühürsüz Sınıflar</span><span class="sxs-lookup"><span data-stu-id="c5a93-111">Unsealed Classes</span></span>](../../../docs/standard/design-guidelines/unsealed-classes.md)  
- [<span data-ttu-id="c5a93-112">Korumalı Üyeler</span><span class="sxs-lookup"><span data-stu-id="c5a93-112">Protected Members</span></span>](../../../docs/standard/design-guidelines/protected-members.md)  
- [<span data-ttu-id="c5a93-113">Etkinlikler ve Geri Aramalar</span><span class="sxs-lookup"><span data-stu-id="c5a93-113">Events and Callbacks</span></span>](../../../docs/standard/design-guidelines/events-and-callbacks.md)  
- [<span data-ttu-id="c5a93-114">Sanal Üyeler</span><span class="sxs-lookup"><span data-stu-id="c5a93-114">Virtual Members</span></span>](../../../docs/standard/design-guidelines/virtual-members.md)  
- [<span data-ttu-id="c5a93-115">Soyutlamalar (Soyut Türler ve Arabirimler)</span><span class="sxs-lookup"><span data-stu-id="c5a93-115">Abstractions (Abstract Types and Interfaces)</span></span>](../../../docs/standard/design-guidelines/abstractions-abstract-types-and-interfaces.md)  
- [<span data-ttu-id="c5a93-116">Soyutlama Uygulamak için Temel Sınıflar</span><span class="sxs-lookup"><span data-stu-id="c5a93-116">Base Classes for Implementing Abstractions</span></span>](../../../docs/standard/design-guidelines/base-classes-for-implementing-abstractions.md)  
- [<span data-ttu-id="c5a93-117">Mühürleme</span><span class="sxs-lookup"><span data-stu-id="c5a93-117">Sealing</span></span>](../../../docs/standard/design-guidelines/sealing.md)  
- <span data-ttu-id="c5a93-118">*Bölümleri © 2005, 2009 Microsoft Corporation. Tüm hakları saklıdır.*</span><span class="sxs-lookup"><span data-stu-id="c5a93-118">*Portions © 2005, 2009 Microsoft Corporation. All rights reserved.*</span></span>  
+## <a name="in-this-section"></a><span data-ttu-id="84a91-110">Bu Bölümde</span><span class="sxs-lookup"><span data-stu-id="84a91-110">In This Section</span></span>  
+ [<span data-ttu-id="84a91-111">Mühürsüz Sınıflar</span><span class="sxs-lookup"><span data-stu-id="84a91-111">Unsealed Classes</span></span>](../../../docs/standard/design-guidelines/unsealed-classes.md)  
+ [<span data-ttu-id="84a91-112">Korumalı Üyeler</span><span class="sxs-lookup"><span data-stu-id="84a91-112">Protected Members</span></span>](../../../docs/standard/design-guidelines/protected-members.md)  
+ [<span data-ttu-id="84a91-113">Etkinlikler ve Geri Aramalar</span><span class="sxs-lookup"><span data-stu-id="84a91-113">Events and Callbacks</span></span>](../../../docs/standard/design-guidelines/events-and-callbacks.md)  
+ [<span data-ttu-id="84a91-114">Sanal Üyeler</span><span class="sxs-lookup"><span data-stu-id="84a91-114">Virtual Members</span></span>](../../../docs/standard/design-guidelines/virtual-members.md)  
+ [<span data-ttu-id="84a91-115">Soyutlamalar (Soyut Türler ve Arabirimler)</span><span class="sxs-lookup"><span data-stu-id="84a91-115">Abstractions (Abstract Types and Interfaces)</span></span>](../../../docs/standard/design-guidelines/abstractions-abstract-types-and-interfaces.md)  
+ [<span data-ttu-id="84a91-116">Soyutlama Uygulamak için Temel Sınıflar</span><span class="sxs-lookup"><span data-stu-id="84a91-116">Base Classes for Implementing Abstractions</span></span>](../../../docs/standard/design-guidelines/base-classes-for-implementing-abstractions.md)  
+ [<span data-ttu-id="84a91-117">Mühürleme</span><span class="sxs-lookup"><span data-stu-id="84a91-117">Sealing</span></span>](../../../docs/standard/design-guidelines/sealing.md)  
+ <span data-ttu-id="84a91-118">*Bölümleri © 2005, 2009 Microsoft Corporation. Tüm hakları saklıdır.*</span><span class="sxs-lookup"><span data-stu-id="84a91-118">*Portions © 2005, 2009 Microsoft Corporation. All rights reserved.*</span></span>  
   
- <span data-ttu-id="c5a93-119">*Pearson eğitim, Inc. şirketinin izni tarafından yeniden yazdırılmaları [Framework tasarım yönergeleri: kuralları, deyimleri ve yeniden kullanılabilir .NET kitaplıkları, 2 sürümü için desenleri](http://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619) Krzysztof Cwalina ve Brad Abrams tarafından 22 Eki 2008 tarafından yayımlanan Microsoft Windows geliştirme serisi bir parçası olarak Addison-Wesley Professional.*</span><span class="sxs-lookup"><span data-stu-id="c5a93-119">*Reprinted by permission of Pearson Education, Inc. from [Framework Design Guidelines: Conventions, Idioms, and Patterns for Reusable .NET Libraries, 2nd Edition](http://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619) by Krzysztof Cwalina and Brad Abrams, published Oct 22, 2008 by Addison-Wesley Professional as part of the Microsoft Windows Development Series.*</span></span>  
+ <span data-ttu-id="84a91-119">*Pearson eğitim, Inc. şirketinin izni tarafından yeniden yazdırılmaları [Framework tasarım yönergeleri: kuralları, deyimleri ve yeniden kullanılabilir .NET kitaplıkları, 2 sürümü için desenleri](https://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619) Krzysztof Cwalina ve Brad Abrams tarafından 22 Eki 2008 tarafından yayımlanan Microsoft Windows geliştirme serisi bir parçası olarak Addison-Wesley Professional.*</span><span class="sxs-lookup"><span data-stu-id="84a91-119">*Reprinted by permission of Pearson Education, Inc. from [Framework Design Guidelines: Conventions, Idioms, and Patterns for Reusable .NET Libraries, 2nd Edition](https://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619) by Krzysztof Cwalina and Brad Abrams, published Oct 22, 2008 by Addison-Wesley Professional as part of the Microsoft Windows Development Series.*</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="c5a93-120">Ayrıca Bkz.</span><span class="sxs-lookup"><span data-stu-id="c5a93-120">See Also</span></span>  
- [<span data-ttu-id="c5a93-121">Çerçeve Tasarım Yönergeleri</span><span class="sxs-lookup"><span data-stu-id="c5a93-121">Framework Design Guidelines</span></span>](../../../docs/standard/design-guidelines/index.md)
+## <a name="see-also"></a><span data-ttu-id="84a91-120">Ayrıca Bkz.</span><span class="sxs-lookup"><span data-stu-id="84a91-120">See Also</span></span>  
+ [<span data-ttu-id="84a91-121">Çerçeve Tasarım Yönergeleri</span><span class="sxs-lookup"><span data-stu-id="84a91-121">Framework Design Guidelines</span></span>](../../../docs/standard/design-guidelines/index.md)
