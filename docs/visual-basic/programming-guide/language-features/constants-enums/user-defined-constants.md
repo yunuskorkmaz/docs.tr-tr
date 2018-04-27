@@ -1,11 +1,12 @@
 ---
-title: "Kullanıcı Tanımlı Sabitler (Visual Basic)"
-ms.custom: 
+title: Kullanıcı Tanımlı Sabitler (Visual Basic)
+ms.custom: ''
 ms.date: 07/20/2015
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- devlang-visual-basic
 ms.topic: article
 helpviewer_keywords:
 - constants [Visual Basic], circular references
@@ -15,14 +16,14 @@ helpviewer_keywords:
 - constants [Visual Basic], user-defined
 - circular references between constants [Visual Basic]
 ms.assetid: a1206d5c-c45e-4ac2-970a-4a0be6a05fdd
-caps.latest.revision: "19"
+caps.latest.revision: 19
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: ce839c3e843a52b31e40c13cb765f8eaf9959ea4
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 9f4210193aeb386d3a4a76794cc9329cb24b2317
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="user-defined-constants-visual-basic"></a>Kullanıcı Tanımlı Sabitler (Visual Basic)
 Bir sabit bir sayı veya değişmez dize yerini alır anlamlı bir addır. Adından da anlaşılacağı gibi bir uygulama yürütme sabit kalır değerleri sabitleri depolar. Denetimleri veya birlikte çalıştığınız bileşenleri tarafından tanımlanan sabitleri kullanabilir veya kendi oluşturabilirsiniz. Kendi başınıza oluşturduğunuz sabitleri olarak açıklanmıştır *kullanıcı tanımlı*.  
@@ -61,15 +62,15 @@ Bir sabit bir sayı veya değişmez dize yerini alır anlamlı bir addır. Adın
  [!code-vb[VbEnumsTask#16](../../../../visual-basic/language-reference/statements/codesnippet/VisualBasic/user-defined-constants_4.vb)]  
 [!code-vb[VbEnumsTask#17](../../../../visual-basic/language-reference/statements/codesnippet/VisualBasic/user-defined-constants_5.vb)]  
   
- Bir döngü ortaya çıkarsa, [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] derleyici hatası oluşturur.  
+ Bir döngü ortaya çıkarsa, Visual Basic derleyici hatası oluşturur.  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [Const deyimi](../../../../visual-basic/language-reference/statements/const-statement.md)  
- [Sabit ve değişmez değerli veri türleri](../../../../visual-basic/programming-guide/language-features/constants-enums/constant-and-literal-data-types.md)  
- [Sabitler ve numaralandırmalar](../../../../visual-basic/programming-guide/language-features/constants-enums/index.md)  
- [Sabitler ve numaralandırmalar](../../../../visual-basic/language-reference/constants-and-enumerations.md)  
- [Numaralandırmalara genel bakış](../../../../visual-basic/programming-guide/language-features/constants-enums/enumerations-overview.md)  
- [Sabitlere genel bakış](../../../../visual-basic/programming-guide/language-features/constants-enums/constants-overview.md)  
+ [Const Deyimi](../../../../visual-basic/language-reference/statements/const-statement.md)  
+ [Sabit ve Değişmez Değerli Veri Türleri](../../../../visual-basic/programming-guide/language-features/constants-enums/constant-and-literal-data-types.md)  
+ [Sabitler ve Sabit Listeleri](../../../../visual-basic/programming-guide/language-features/constants-enums/index.md)  
+ [Sabitler ve Sabit Listeleri](../../../../visual-basic/language-reference/constants-and-enumerations.md)  
+ [Sabit Listelerine Genel Bakış](../../../../visual-basic/programming-guide/language-features/constants-enums/enumerations-overview.md)  
+ [Sabitlere Genel Bakış](../../../../visual-basic/programming-guide/language-features/constants-enums/constants-overview.md)  
  [Nasıl yapılır: bir numaralandırma bildirme](../../../../visual-basic/programming-guide/language-features/constants-enums/how-to-declare-enumerations.md)  
- [Numaralandırmalar ve ad niteliği](../../../../visual-basic/programming-guide/language-features/constants-enums/enumerations-and-name-qualification.md)  
- [Option Strict deyimi](../../../../visual-basic/language-reference/statements/option-strict-statement.md)
+ [Sabit Listeleri ve Ad Niteliği](../../../../visual-basic/programming-guide/language-features/constants-enums/enumerations-and-name-qualification.md)  
+ [Option Strict Deyimi](../../../../visual-basic/language-reference/statements/option-strict-statement.md)

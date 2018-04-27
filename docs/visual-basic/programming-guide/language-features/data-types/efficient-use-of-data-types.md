@@ -1,11 +1,12 @@
 ---
-title: "Veri Türlerinin Etkili Kullanımı (Visual Basic)"
-ms.custom: 
+title: Veri Türlerinin Etkili Kullanımı (Visual Basic)
+ms.custom: ''
 ms.date: 07/20/2015
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- devlang-visual-basic
 ms.topic: article
 helpviewer_keywords:
 - performance, data type efficiency
@@ -19,14 +20,14 @@ helpviewer_keywords:
 - data types [Visual Basic], optimizing
 - ChrW function [Visual Basic], preferred to Chr
 ms.assetid: 28f5e4ba-ec24-4f37-b90a-e8ee822f778a
-caps.latest.revision: "16"
+caps.latest.revision: 16
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: 0e13a1d61aacb06eb336c39aab969847127dfc67
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 4cac585cdc3072d595d2446e1937678f9ab03335
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="efficient-use-of-data-types-visual-basic"></a>Veri Türlerinin Etkili Kullanımı (Visual Basic)
 Bildirilmemiş değişkenleri ve veri türü bildirilen değişkenlerin atanır `Object` veri türü. Bu, hızlı bir şekilde programları yazmak kolaylaştırır, ancak bunları daha yavaş çalışmasına neden olabilir.  
@@ -41,7 +42,7 @@ Bildirilmemiş değişkenleri ve veri türü bildirilen değişkenlerin atanır 
 -   Kodunuzu daha hızlı yürütülmesini sonuçlanır.  
   
 ## <a name="most-efficient-data-types"></a>En verimli veri türleri  
- Hiçbir zaman kesirler içeren değişkenler için tam sayı veri türleri nonintegral türleri daha büyük/küçük harf verimlidir. İçinde [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)], `Integer` ve `UInteger` en verimli sayısal türler.  
+ Hiçbir zaman kesirler içeren değişkenler için tam sayı veri türleri nonintegral türleri daha büyük/küçük harf verimlidir. Visual Basic'te `Integer` ve `UInteger` en verimli sayısal türler.  
   
  Kesirli sayılar için `Double` en verimli veri türü geçerli platformlarda işlemci çift duyarlıklı kayan nokta işlemleri olmasıdır. Ancak, işlemleriyle `Double` gibi tam sayı türleri gibi ile kadar hızlı değildir `Integer`.  
   
@@ -61,7 +62,7 @@ Protected s As String
  <xref:Microsoft.VisualBasic.Strings.AscW%2A>  
  <xref:Microsoft.VisualBasic.Strings.Chr%2A>  
  <xref:Microsoft.VisualBasic.Strings.ChrW%2A>  
- [Veri türleri](../../../../visual-basic/programming-guide/language-features/data-types/index.md)  
- [Sayısal veri türleri](../../../../visual-basic/programming-guide/language-features/data-types/numeric-data-types.md)  
- [Değişken bildirimi](../../../../visual-basic/programming-guide/language-features/variables/variable-declaration.md)  
- [IntelliSense kullanma](/visualstudio/ide/using-intellisense)
+ [Veri Türleri](../../../../visual-basic/programming-guide/language-features/data-types/index.md)  
+ [Sayısal Veri Türleri](../../../../visual-basic/programming-guide/language-features/data-types/numeric-data-types.md)  
+ [Değişken Bildirimi](../../../../visual-basic/programming-guide/language-features/variables/variable-declaration.md)  
+ [IntelliSense Kullanma](/visualstudio/ide/using-intellisense)

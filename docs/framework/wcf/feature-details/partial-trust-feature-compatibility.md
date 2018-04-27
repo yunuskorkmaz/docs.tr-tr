@@ -1,30 +1,32 @@
 ---
-title: "Kısmi Güven Özelliği Uyumluluğu"
-ms.custom: 
+title: Kısmi Güven Özelliği Uyumluluğu
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: a36a540b-1606-4e63-88e0-b7c59e0e6ab7
-caps.latest.revision: "75"
+caps.latest.revision: 75
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 1950a0c4015658affb0b9fa0d7c87a062865144b
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
-ms.translationtype: MT
+ms.workload:
+- dotnet
+ms.openlocfilehash: 72282c62ad23ec825eab7054ab1909d07a062b45
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="partial-trust-feature-compatibility"></a>Kısmi Güven Özelliği Uyumluluğu
-[!INCLUDE[indigo1](../../../../includes/indigo1-md.md)]kısmen güvenilen bir ortamda çalışan sınırlı işlevlerinin bir alt kümesini destekler. Kısmi güvende desteklenen özellikler senaryoları belirli bir dizi açıklandığı şekilde tasarlanmış [desteklenen dağıtım senaryoları](../../../../docs/framework/wcf/feature-details/supported-deployment-scenarios.md) konu.  
+[!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] kısmen güvenilen bir ortamda çalışan sınırlı işlevlerinin bir alt kümesini destekler. Kısmi güvende desteklenen özellikler senaryoları belirli bir dizi açıklandığı şekilde tasarlanmış [desteklenen dağıtım senaryoları](../../../../docs/framework/wcf/feature-details/supported-deployment-scenarios.md) konu.  
   
 ## <a name="minimum-permission-requirements"></a>Minimum izin gereksinimleri  
- [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]özelliklerinin bir kısmı ya da aşağıdaki standart adlandırılmış izin kümeleri altında çalışan uygulamaları destekler:  
+ [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] özelliklerinin bir kısmı ya da aşağıdaki standart adlandırılmış izin kümeleri altında çalışan uygulamaları destekler:  
   
 -   Orta güven izinleri  
   
@@ -39,7 +41,7 @@ ms.lasthandoff: 12/22/2017
   
 -   Kullanırken `[ServiceKnownType]` özniteliği, belirtilen yöntemi olmalıdır `public`.  
   
--   `[MessageContract]`sınıflar ve üyeleri olabilir `public`. Varsa `[MessageContract]` sınıfı olabilir Uygulama derlemesinde tanımlanan `internal` ve `internal` üyeleri.  
+-   `[MessageContract]` sınıflar ve üyeleri olabilir `public`. Varsa `[MessageContract]` sınıfı olabilir Uygulama derlemesinde tanımlanan `internal` ve `internal` üyeleri.  
   
 ## <a name="system-provided-bindings"></a>Sistem Tarafından Sağlanan Bağlamalar  
  <xref:System.ServiceModel.BasicHttpBinding> Ve <xref:System.ServiceModel.WebHttpBinding> bir kısmi güven ortamda tam olarak desteklenir. <xref:System.ServiceModel.WSHttpBinding> Yalnızca Aktarım güvenlik modu için desteklenir.  
@@ -103,7 +105,7 @@ ms.lasthandoff: 12/22/2017
   
 -   Uygulama kullanıcılar bir kısmi güven ortamında uygulamayı çalıştırmak için kod erişimi güvenlik ayarlarını değiştiremez tam güvenilir bir uygulama olarak dağıtılırsa emin olun. Bunu yapmak, davranışı çalışmaz ve hiçbir özel durum oluşur. Bunu sağlamak için bkz: **levelfinal** seçeneği kullanılarak [Caspol.exe (kod erişim güvenliği ilke aracı)](../../../../docs/framework/tools/caspol-exe-code-access-security-policy-tool.md).  
   
- [!INCLUDE[crexample](../../../../includes/crexample-md.md)]bir ortak davranışı bkz [nasıl yapılır: Lock aşağı Enterprise uç noktalarını](../../../../docs/framework/wcf/extending/how-to-lock-down-endpoints-in-the-enterprise.md).  
+ Bir ortak davranışı örneği için bkz: [nasıl yapılır: Lock aşağı Enterprise uç noktalarını](../../../../docs/framework/wcf/extending/how-to-lock-down-endpoints-in-the-enterprise.md).  
   
 ## <a name="configuration"></a>Yapılandırma  
  Bunun tek istisnası kısmen güvenilen kod yalnızca yükleyebilir [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] yerel yapılandırma bölümlerinin `app.config` dosya. Yüklemek için [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] yapılandırma bölümler bu başvuruyu [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] bölümleri machine.config veya kök web.config dosyasında ConfigurationPermission(Unrestricted) gerektirir. Bu izin olmadan başvurular [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] yapılandırma yüklendiğinde bir özel durum yerel yapılandırma dosyası sonuçlarında dışında yapılandırma bölümlerinin (davranışları, bağlamaları).  
@@ -152,10 +154,10 @@ ms.lasthandoff: 12/22/2017
 >  İzleme dosyaları yinelenen hatalarla taşmasını önlemek için [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] kaynak ya da ilk güvenlik hatasından sonra işlem izlemeyi devre dışı bırakır. Kaynağa erişim veya eylemi gerçekleştirmek için bir girişimde ilk kez her başarısız kaynak erişimi için bir özel durum izleme yoktur.  
   
 ## <a name="wcf-service-host"></a>WCF hizmet konağı  
- [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]hizmet ana bilgisayarı, kısmi güven desteklemez. Kullanmak istiyorsanız bir [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] hizmet kısmi güvende, kullanmayın [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] hizmet kitaplığı proje şablonu [!INCLUDE[vsprvs](../../../../includes/vsprvs-md.md)] hizmetinizi oluşturmak için. Bunun yerine, yeni bir Web sitesi oluşturma [!INCLUDE[vsprvs](../../../../includes/vsprvs-md.md)] seçerek [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] bir Web sunucusunda hizmetinde barındırabilir Hizmet Web sitesi şablonu [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] kısmi güven desteklenir.  
+ [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] hizmet ana bilgisayarı, kısmi güven desteklemez. Kullanmak istiyorsanız bir [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] hizmet kısmi güvende, kullanmayın [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] hizmet kitaplığı proje şablonu [!INCLUDE[vsprvs](../../../../includes/vsprvs-md.md)] hizmetinizi oluşturmak için. Bunun yerine, yeni bir Web sitesi oluşturma [!INCLUDE[vsprvs](../../../../includes/vsprvs-md.md)] seçerek [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] bir Web sunucusunda hizmetinde barındırabilir Hizmet Web sitesi şablonu [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] kısmi güven desteklenir.  
   
 ## <a name="other-limitations"></a>Diğer sınırlamaları  
- [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]genellikle üzerine barındırma uygulaması tarafından uygulanan güvenlik konuları sınırlıdır. Örneğin, varsa [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] barındırılan bir XAML tarayıcısı uygulaması (XBAP içinde), XBAP sınırlamalara tabi açıklandığı gibi olmasından [Windows Presentation Foundation kısmi güven Security](http://go.microsoft.com/fwlink/?LinkId=89138).  
+ [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] genellikle üzerine barındırma uygulaması tarafından uygulanan güvenlik konuları sınırlıdır. Örneğin, varsa [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] barındırılan bir XAML tarayıcısı uygulaması (XBAP içinde), XBAP sınırlamalara tabi açıklandığı gibi olmasından [Windows Presentation Foundation kısmi güven Security](http://go.microsoft.com/fwlink/?LinkId=89138).  
   
  İndigo2 bir kısmi güven ortamında çalıştırırken aşağıdaki ek özellikler etkin değil:  
   

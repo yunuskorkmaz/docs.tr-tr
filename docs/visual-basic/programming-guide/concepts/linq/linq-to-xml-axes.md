@@ -1,22 +1,23 @@
 ---
 title: LINQ-XML eksenleri (Visual Basic)
-ms.custom: 
+ms.custom: ''
 ms.date: 07/20/2015
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- devlang-visual-basic
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: ecd3bd00-28e5-4517-a59f-53bff39fd478
-caps.latest.revision: "3"
+caps.latest.revision: 3
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: 119c4808b6d436c2227331dbb3ab9c4077ff56f2
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.openlocfilehash: 404ddcc89e6549d7575761e10c23413d9688a38f
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="linq-to-xml-axes-visual-basic"></a>LINQ-XML eksenleri (Visual Basic)
 Bir XML ağacı oluşturulamadı veya bir XML ağacına bir XML belgesi yüklenemedi sonra öğeleri ve özniteliklerinin bulmak ve bunların değerleri almak için sorgulayabilirsiniz.  
@@ -37,7 +38,7 @@ Bir XML ağacı oluşturulamadı veya bir XML ağacına bir XML belgesi yüklene
 |[Nasıl yapılır: tek bir öznitelik (LINQ-XML) alma (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/how-to-retrieve-a-single-attribute-linq-to-xml.md)|Bir öğenin tek bir özniteliği öznitelik adı verilen almak nasıl gösterir.|  
 |[Nasıl yapılır: bir öznitelik (LINQ-XML) değerini almak (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/how-to-retrieve-the-value-of-an-attribute-linq-to-xml.md)|Öznitelik değerleri alma gösterir.|  
 |[Nasıl yapılır: Basit değeri, bir öğenin (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/how-to-retrieve-the-shallow-value-of-an-element.md)|Bir öğenin yüzeysel değerini almak nasıl gösterir.|  
-|[Dil ile tümleşik eksenleri Visual Basic (LINQ-XML)](../../../../visual-basic/programming-guide/concepts/linq/language-integrated-axes.md)|Özetler [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] tümleşik eksenleri.|  
+|[Dil ile tümleşik eksenleri Visual Basic (LINQ-XML)](../../../../visual-basic/programming-guide/concepts/linq/language-integrated-axes.md)|Visual Basic tümleşik eksenleri özetler.|  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
  [Programlama Kılavuzu (LINQ-XML) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/programming-guide-linq-to-xml.md)

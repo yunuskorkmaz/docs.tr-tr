@@ -1,36 +1,38 @@
 ---
-title: "SQL Server ile System.Transactions tümleştirme"
-ms.custom: 
+title: SQL Server ile System.Transactions tümleştirme
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-ado
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-ado
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - csharp
 - vb
 ms.assetid: b555544e-7abb-4814-859b-ab9cdd7d8716
-caps.latest.revision: "6"
+caps.latest.revision: 6
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.workload: dotnet
-ms.openlocfilehash: 21924441c091c53a79d4b7bf8a683f8a7c74bd07
-ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
+ms.workload:
+- dotnet
+ms.openlocfilehash: 06f1555c8dbbdf10e8a1d0de867ddb227cb148b6
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="systemtransactions-integration-with-sql-server"></a>SQL Server ile System.Transactions tümleştirme
 [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] Üzerinden erişilen bir işlem framework sürüm 2.0 sunulan <xref:System.Transactions> ad alanı. Bu çerçeve işlemleri içinde tam olarak tümleşik bir şekilde kullanıma sunan [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)]gibi [!INCLUDE[vstecado](../../../../includes/vstecado-md.md)].  
   
  Programlanabilirlik geliştirmeleri yanı sıra <xref:System.Transactions> ve [!INCLUDE[vstecado](../../../../includes/vstecado-md.md)] işlemleri ile çalışırken en iyi duruma getirme koordine etmek için birlikte çalışabilir. Otomatik olarak bir tam olarak dağıtılmış işlem gerektiği düzenli olarak yükseltilebilmesi için basit bir (yerel) işlem buna yükseltilebilir bir işlemdir.  
   
- İle başlayarak [!INCLUDE[vstecado](../../../../includes/vstecado-md.md)] 2.0 <xref:System.Data.SqlClient> ile çalışırken yükseltilebilir işlemleri destekler [!INCLUDE[ssNoVersion](../../../../includes/ssnoversion-md.md)]. Yükseltilebilir işlem eklenen çağrılmaz işlemlerinin ek yükü dağıtılmış işlem eklenen ek yükü gerekli olmadığı sürece. Yükseltilebilir işlemleri otomatik olarak yapılır ve geliştiriciden müdahalesi gerektirmez.  
+ İle başlayarak [!INCLUDE[vstecado](../../../../includes/vstecado-md.md)] 2.0 <xref:System.Data.SqlClient> SQL Server ile çalışırken yükseltilebilir işlemleri destekler. Yükseltilebilir işlem eklenen çağrılmaz işlemlerinin ek yükü dağıtılmış işlem eklenen ek yükü gerekli olmadığı sürece. Yükseltilebilir işlemleri otomatik olarak yapılır ve geliştiriciden müdahalesi gerektirmez.  
   
- Yükseltilebilir işlemleri yalnızca kullanılabilir kullandığınızda [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] için SQL Server veri sağlayıcısı (`SqlClient`) ile [!INCLUDE[ssNoVersion](../../../../includes/ssnoversion-md.md)].  
+ Yükseltilebilir işlemleri yalnızca kullanılabilir kullandığınızda [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] için SQL Server veri sağlayıcısı (`SqlClient`) SQL Server ile.  
   
 ## <a name="creating-promotable-transactions"></a>Yükseltilebilir işlemler oluşturma  
  [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] SQL Server için sağlayıcısı sınıfları aracılığıyla işlenmesini yükseltilebilir işlemler için destek sağlar [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] <xref:System.Transactions> ad alanı. Yükseltilebilir işlemleri gerektiğinde kadar bir dağıtılmış işlem oluşturma ertelemeyi dağıtılmış işlemler en iyi duruma getirme. Yalnızca bir Kaynak Yöneticisi'ni gereklidir, dağıtılmış bir işlem oluşur.  
@@ -39,7 +41,7 @@ ms.lasthandoff: 01/17/2018
 >  Kısmen güvenilen bir senaryoda <xref:System.Transactions.DistributedTransactionPermission> dağıtılmış işlem için bir işlem yükseltildiğinde gereklidir.  
   
 ## <a name="promotable-transaction-scenarios"></a>Yükseltilebilir işlem senaryoları  
- Dağıtılmış işlemler genellikle Microsoft Dağıtılmış işlem, işlem sırasında erişilen tüm kaynak yöneticileri tümleştirir Düzenleyicisi (MS DTC) tarafından yönetilen önemli sistem kaynaklarını tüketebilir. Yükseltilebilir bir işlem özel bir biçimidir bir <xref:System.Transactions> etkili bir şekilde basit bir işi temsilciler işlem [!INCLUDE[ssNoVersion](../../../../includes/ssnoversion-md.md)] işlem. <xref:System.Transactions>, <xref:System.Data.SqlClient>, ve [!INCLUDE[ssNoVersion](../../../../includes/ssnoversion-md.md)] tam bir dağıtılmış işlem için gerektiği şekilde yükseltme işlemin işlenmesiyle ilgili iş koordinatı.  
+ Dağıtılmış işlemler genellikle Microsoft Dağıtılmış işlem, işlem sırasında erişilen tüm kaynak yöneticileri tümleştirir Düzenleyicisi (MS DTC) tarafından yönetilen önemli sistem kaynaklarını tüketebilir. Yükseltilebilir bir işlem özel bir biçimidir bir <xref:System.Transactions> etkili bir şekilde basit bir SQL Server işlem çalışmaya temsilciler işlem. <xref:System.Transactions>, <xref:System.Data.SqlClient>, ve SQL Server, tam bir dağıtılmış işlem için gerektiği şekilde yükseltme işlem işlenmesiyle ilgili iş koordine etmek.  
   
  Bağlantı etkin bir kullanarak yükseltilebilir işlemleri kullanmanın faydası, açıldığında <xref:System.Transactions.TransactionScope> işlem ve başka bir bağlantı açıldığında, ek yansıtılmasını yerine basit bir işlem olarak işlem yürütme tam bir dağıtılmış işlem yükü.  
   

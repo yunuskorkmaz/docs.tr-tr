@@ -1,11 +1,12 @@
 ---
-title: "Nasıl yapılır: Bir Özellikten Değer Alma (Visual Basic)"
-ms.custom: 
+title: 'Nasıl yapılır: Bir Özellikten Değer Alma (Visual Basic)'
+ms.custom: ''
 ms.date: 07/20/2015
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- devlang-visual-basic
 ms.topic: article
 helpviewer_keywords:
 - property values [Visual Basic]
@@ -14,29 +15,29 @@ helpviewer_keywords:
 - Visual Basic code, properties
 - properties [Visual Basic], values
 ms.assetid: 3954423e-6ab7-4a4c-b55c-a8d27be47891
-caps.latest.revision: "11"
+caps.latest.revision: 11
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: 6cde5408ea09398a79a3da01ae9b2d0202c58eaf
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 7161052b9d9b388d8da8bd421c3b220f15037805
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="how-to-get-a-value-from-a-property-visual-basic"></a>Nasıl yapılır: Bir Özellikten Değer Alma (Visual Basic)
 Bir ifadeyi özellik adı dahil olmak üzere bir özelliğin değerini alır.  
   
- Özelliğin `Get` yordamı değeri alır, ancak siz açıkça, ada göre çağırmayın. Bir değişken kullandığınız özelliğini kullanın. [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]özelliğin yordamlara çağrılar.  
+ Özelliğin `Get` yordamı değeri alır, ancak siz açıkça, ada göre çağırmayın. Bir değişken kullandığınız özelliğini kullanın. Visual Basic özelliğin yordamları çağrılar.  
   
 ### <a name="to-retrieve-a-value-from-a-property"></a>Bir özellikten değer almak için  
   
 1.  Özellik adı bir ifade bir değişken adı kullanacağınız aynı şekilde kullanın. Bir özellik kullanabileceğiniz bir değişken veya sabit herhangi bir yerde kullanabilirsiniz.  
   
-     veya  
+     -veya-  
   
      Eşittir aşağıdaki özellik adı kullanın (`=`) bir atama deyiminde oturum açın.  
   
-     Aşağıdaki örnek değeri okuyan [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] `Now` örtük olarak arama özelliği, kendi `Get` yordamı.  
+     Aşağıdaki örnek Visual Basic değerini okur `Now` örtük olarak arama özelliği, kendi `Get` yordamı.  
   
      [!code-vb[VbVbalrDateProperties#4](./codesnippet/VisualBasic/how-to-get-a-value-from-a-property_1.vb)]  
   
@@ -47,13 +48,13 @@ Bir ifadeyi özellik adı dahil olmak üzere bir özelliğin değerini alır.
  İfade bir değişken olarak yalnızca özelliğin değerini katıldığı sabiti misiniz veya değişkenin veya özelliğin Atama ifadesinin sol tarafında depolanır.  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [Yordamları](./index.md)  
- [Özellik yordamları](./property-procedures.md)  
- [Parametreler ve bağımsız değişkenler](./procedure-parameters-and-arguments.md)  
- [Property deyimi](../../../../visual-basic/language-reference/statements/property-statement.md)  
+ [Yordamlar](./index.md)  
+ [Özellik Yordamları](./property-procedures.md)  
+ [Yordam Parametreleri ve Bağımsız Değişkenleri](./procedure-parameters-and-arguments.md)  
+ [Property Deyimi](../../../../visual-basic/language-reference/statements/property-statement.md)  
  [Visual Basic'de özellikler ve değişkenler arasındaki farklar](./differences-between-properties-and-variables.md)  
- [Nasıl yapılır: özellik oluşturma](./how-to-create-a-property.md)  
- [Nasıl yapılır: bir özelliği karışık erişim düzeyleriyle bildirme](./how-to-declare-a-property-with-mixed-access-levels.md)  
- [Nasıl yapılır: bir özellik yordamı çağırma](./how-to-call-a-property-procedure.md)  
+ [Nasıl yapılır: Özellik Oluşturma](./how-to-create-a-property.md)  
+ [Nasıl yapılır: Bir Özelliği Karışık Erişim Düzeyleriyle Bildirme](./how-to-declare-a-property-with-mixed-access-levels.md)  
+ [Nasıl yapılır: Bir Özellik Yordamı Çağırma](./how-to-call-a-property-procedure.md)  
  [Nasıl yapılır: bildirme ve Visual Basic'te varsayılan özelliğini çağırın](./how-to-declare-and-call-a-default-property.md)  
- [Nasıl yapılır: bir özelliğe değer ekleme](./how-to-put-a-value-in-a-property.md)
+ [Nasıl yapılır: Bir Özelliğe Değer Ekleme](./how-to-put-a-value-in-a-property.md)

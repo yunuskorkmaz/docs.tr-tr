@@ -1,11 +1,12 @@
 ---
-title: "Bağımsız Değişkenleri Değere ve Başvuruya Göre Geçirme (Visual Basic)"
-ms.custom: 
+title: Bağımsız Değişkenleri Değere ve Başvuruya Göre Geçirme (Visual Basic)
+ms.custom: ''
 ms.date: 07/20/2015
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- devlang-visual-basic
 ms.topic: article
 helpviewer_keywords:
 - ByRef keyword [Visual Basic], passing arguments by reference
@@ -15,17 +16,17 @@ helpviewer_keywords:
 - arguments [Visual Basic], passing by value or by reference
 - argument passing [Visual Basic], by value or by reference
 ms.assetid: fd8a9de6-7178-44d5-a9bf-458d4ad907c2
-caps.latest.revision: "23"
+caps.latest.revision: 23
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: 752c0c8e90cafe457cbd5d684bc984a1ea4632ac
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: f10e0e582e060c1305a9c0fe922620cb4da2c215
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="passing-arguments-by-value-and-by-reference-visual-basic"></a>Bağımsız Değişkenleri Değere ve Başvuruya Göre Geçirme (Visual Basic)
-İçinde [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)], bir yordama bağımsız değişken geçirebilirsiniz *değeriyle* veya *başvuruya göre*. Bu olarak bilinir *mekanizması geçirme*, yordamı çağıran kodu değişkeninde temel programlama öğesi değişiklik olup olmadığını belirler. Yordam bildirimi belirterek her parametre için geçirme mekanizması belirler [ByVal](../../../../visual-basic/language-reference/modifiers/byval.md) veya [ByRef](../../../../visual-basic/language-reference/modifiers/byref.md) anahtar sözcüğü.  
+Visual Basic'te bir yordama bağımsız değişken geçirebilirsiniz *değeriyle* veya *başvuruya göre*. Bu olarak bilinir *mekanizması geçirme*, yordamı çağıran kodu değişkeninde temel programlama öğesi değişiklik olup olmadığını belirler. Yordam bildirimi belirterek her parametre için geçirme mekanizması belirler [ByVal](../../../../visual-basic/language-reference/modifiers/byval.md) veya [ByRef](../../../../visual-basic/language-reference/modifiers/byref.md) anahtar sözcüğü.  
   
 ## <a name="distinctions"></a>Farklılıklar  
  Bağımsız değişken bir yordama geçirilirken birbiriyle etkileşimde birkaç farklı farklılıklar farkında olması:  
@@ -45,7 +46,7 @@ ms.lasthandoff: 11/21/2017
   
 -   **Koruma**. Seçerken iki iletme mekanizmaları en önemli değişkenlerini değiştirmek için arama Etkilenme ölçüttür. Bağımsız değişken geçirme avantajı `ByRef` yordamı çağıran kodu bağımsız aracılığıyla bir değer döndürmesi emin olan. Bağımsız değişken geçirme avantajı `ByVal` yordamı tarafından değiştirilen bir değişken koruduğu emin olan.  
   
--   **Performans**. Geçirme mekanizması kodunuzu performansını etkileyebilir olsa da, genellikle anlamsız bir farktır. Bunun tek istisnası geçirilen değer türüdür `ByVal`. Bu durumda, [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] bağımsız değişkeni, tüm veri içeriğini kopyalar. Bu nedenle, bir yapı gibi büyük değer türü için bunu geçirileceğini daha etkili olabilir `ByRef`.  
+-   **Performans**. Geçirme mekanizması kodunuzu performansını etkileyebilir olsa da, genellikle anlamsız bir farktır. Bunun tek istisnası geçirilen değer türüdür `ByVal`. Bu durumda, Visual Basic bağımsız değişkeni, tüm veri içeriğini kopyalar. Bu nedenle, bir yapı gibi büyük değer türü için bunu geçirileceğini daha etkili olabilir `ByRef`.  
   
      Referans türleri için yalnızca verileri işaretçisine kopyalanan (dört 32-bit platformlarda 64 bit platformlarda sekiz bayt) bayttır. Bu nedenle, tür bağımsız değişkenler geçirebilirsiniz `String` veya `Object` performans zarar olmadan değeriyle.  
   
@@ -54,7 +55,7 @@ ms.lasthandoff: 11/21/2017
   
  Bir parametre ile bildirilirse `ByRef`, çağrıyı yapan kod mekanizmasına zorlayabilirsiniz `ByVal` çağrısında parantez içinde bağımsız değişken adı kapsayan tarafından. Daha fazla bilgi için bkz: [nasıl yapılır: bağımsız değişkeni değere göre bayraklarıdır için zorlama](./how-to-force-an-argument-to-be-passed-by-value.md).  
   
- Varsayılan olarak [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] bağımsız değişkenleri değere göre geçirmektir.  
+ Visual Basic'de bağımsız değişkenleri değere göre geçirilecek varsayılandır.  
   
 ## <a name="when-to-pass-an-argument-by-value"></a>Bir bağımsız değişken değeri tarafından geçirmek ne zaman  
   
@@ -77,11 +78,11 @@ ms.lasthandoff: 11/21/2017
  [!code-vb[VbVbcnProcedures#74](./codesnippet/VisualBasic/passing-arguments-by-value-and-by-reference_1.vb)]  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [Yordamları](./index.md)  
- [Parametreler ve bağımsız değişkenler](./procedure-parameters-and-arguments.md)  
- [Nasıl yapılır: bir yordama bağımsız değişkenler geçirme](./how-to-pass-arguments-to-a-procedure.md)  
- [Nasıl yapılır: bir yordam bağımsız değişkeninin değerini değiştirme](./how-to-change-the-value-of-a-procedure-argument.md)  
- [Nasıl yapılır: bir yordam bağımsız değişkenini değer değişikliklerine karşı koruma](./how-to-protect-a-procedure-argument-against-value-changes.md)  
- [Nasıl yapılır: bağımsız değişkeni değere göre geçirilecek şekilde zorlama](./how-to-force-an-argument-to-be-passed-by-value.md)  
- [Bağımsız değişkenleri konuma göre ve ada göre geçirme](./passing-arguments-by-position-and-by-name.md)  
- [Değer türleri ve başvuru türleri](../../../../visual-basic/programming-guide/language-features/data-types/value-types-and-reference-types.md)
+ [Yordamlar](./index.md)  
+ [Yordam Parametreleri ve Bağımsız Değişkenleri](./procedure-parameters-and-arguments.md)  
+ [Nasıl yapılır: Bir Yordama Bağımsız Değişkenler Geçirme](./how-to-pass-arguments-to-a-procedure.md)  
+ [Nasıl yapılır: Bir Yordam Bağımsız Değişkeninin Değerini Değiştirme](./how-to-change-the-value-of-a-procedure-argument.md)  
+ [Nasıl yapılır: Bir Yordam Bağımsız Değişkenini Değer Değişikliklerine Karşı Koruma](./how-to-protect-a-procedure-argument-against-value-changes.md)  
+ [Nasıl yapılır: Bağımsız Değişkeni Değere Göre Geçirilecek Şekilde Zorlama](./how-to-force-an-argument-to-be-passed-by-value.md)  
+ [Bağımsız Değişkenleri Konuma ve Ada Göre Geçirme](./passing-arguments-by-position-and-by-name.md)  
+ [Değer Türleri ve Başvuru Türleri](../../../../visual-basic/programming-guide/language-features/data-types/value-types-and-reference-types.md)

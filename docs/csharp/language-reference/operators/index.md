@@ -25,11 +25,11 @@ ms.assetid: 0301e31f-22ad-49af-ac3c-d5eae7f0ac43
 caps.latest.revision: 40
 author: BillWagner
 ms.author: wiwagn
-ms.openlocfilehash: c62a168c845575e4fd3df212db379548926d2fab
-ms.sourcegitcommit: b750a8e3979749b214e7e10c82efb0a0524dfcb1
+ms.openlocfilehash: a52fad2755c8c255d9489cd7148b0d279c0e1a5e
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/09/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="c-operators"></a>C# İşleçleri
 C# (matematik, dizin oluşturma, işlev çağrısı, vb.) bir ifadede gerçekleştirmek için hangi işlemleri belirtin simgelerdir birçok işleçleri sağlar. Yapabilecekleriniz [aşırı](../../../csharp/programming-guide/statements-expressions-operators/overloadable-operators.md) kullanıcı tanımlı bir tür uygulandığında anlamları değiştirmek için çok sayıda işleci.  
@@ -63,7 +63,7 @@ C# (matematik, dizin oluşturma, işlev çağrısı, vb.) bir ifadede gerçekle�
   
  [Unchecked](../../../csharp/language-reference/keywords/unchecked.md) – taşma denetimi tamsayı işlemleri için devre dışı bırakır. Varsayılan derleyici davranışı budur.  
   
- [Default(T)](../../../csharp/programming-guide/statements-expressions-operators/default-value-expressions.md) – t türünün varsayılan değeri döndürür `null` başvuru türleri için sıfır sayısal türler için ve sıfır /`null` üyeleri struct türleri için koyar.  
+ [Default(T)](../../../csharp/programming-guide/statements-expressions-operators/default-value-expressions.md) – t türünün varsayılan değeri üretir  
   
  [Temsilci](../../../csharp/programming-guide/statements-expressions-operators/anonymous-methods.md) – bildirir ve temsilci örneğini döndürür.  
   

@@ -1,41 +1,43 @@
 ---
-title: "Bir WPF Uygulamasını Dağıtma (WPF)"
-ms.custom: 
+title: Bir WPF Uygulamasını Dağıtma (WPF)
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-wpf
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-wpf
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - WPF applications [WPF], deployment
 - deployment [WPF], applications
 ms.assetid: 12cadca0-b32c-4064-9a56-e6a306dcc76d
-caps.latest.revision: "27"
+caps.latest.revision: 27
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 7cf0c5383728648d46427ce8fe2f5a97a736ab00
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.workload:
+- dotnet
+ms.openlocfilehash: 3beb8ee0869384f9f453023fe549b2339c126898
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="deploying-a-wpf-application-wpf"></a>Bir WPF Uygulamasını Dağıtma (WPF)
-Sonra [!INCLUDE[TLA#tla_wpf](../../../../includes/tlasharptla-wpf-md.md)] uygulamaları yerleşiktir, dağıtılması gerekiyor. [!INCLUDE[TLA#tla_mswin](../../../../includes/tlasharptla-mswin-md.md)]ve [!INCLUDE[TLA2#tla_winfx](../../../../includes/tla2sharptla-winfx-md.md)] birkaç dağıtım teknolojilerini içerir. Dağıtmak için kullanılan dağıtım teknolojisi bir [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] uygulama uygulama türüne bağlıdır. Bu konu, her dağıtım teknolojisi kısa bir genel bakış ve her dağıtım gereksinimleri ile birlikte nasıl kullanıldıkları sağlar [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] uygulama türü.  
+Sonra [!INCLUDE[TLA#tla_wpf](../../../../includes/tlasharptla-wpf-md.md)] uygulamaları yerleşiktir, dağıtılması gerekiyor. [!INCLUDE[TLA#tla_mswin](../../../../includes/tlasharptla-mswin-md.md)] ve [!INCLUDE[TLA2#tla_winfx](../../../../includes/tla2sharptla-winfx-md.md)] birkaç dağıtım teknolojilerini içerir. Dağıtmak için kullanılan dağıtım teknolojisi bir [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] uygulama uygulama türüne bağlıdır. Bu konu, her dağıtım teknolojisi kısa bir genel bakış ve her dağıtım gereksinimleri ile birlikte nasıl kullanıldıkları sağlar [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] uygulama türü.  
   
    
 <a name="Deployment_Technologies"></a>   
 ## <a name="deployment-technologies"></a>Dağıtım teknolojileri  
- [!INCLUDE[TLA#tla_mswin](../../../../includes/tlasharptla-mswin-md.md)]ve [!INCLUDE[TLA2#tla_winfx](../../../../includes/tla2sharptla-winfx-md.md)] dahil olmak üzere çeşitli dağıtım teknolojileri şunları içerir:  
+ [!INCLUDE[TLA#tla_mswin](../../../../includes/tlasharptla-mswin-md.md)] ve [!INCLUDE[TLA2#tla_winfx](../../../../includes/tla2sharptla-winfx-md.md)] dahil olmak üzere çeşitli dağıtım teknolojileri şunları içerir:  
   
 -   XCopy dağıtımı.  
   
--   [!INCLUDE[TLA2#tla_wininstall](../../../../includes/tla2sharptla-wininstall-md.md)]dağıtımı.  
+-   [!INCLUDE[TLA2#tla_wininstall](../../../../includes/tla2sharptla-wininstall-md.md)] dağıtımı.  
   
--   [!INCLUDE[TLA#tla_clickonce](../../../../includes/tlasharptla-clickonce-md.md)]dağıtımı.  
+-   [!INCLUDE[TLA#tla_clickonce](../../../../includes/tlasharptla-clickonce-md.md)] dağıtımı.  
   
 <a name="XCopy_Deployment"></a>   
 ### <a name="xcopy-deployment"></a>XCopy dağıtımı  
@@ -51,15 +53,15 @@ Sonra [!INCLUDE[TLA#tla_wpf](../../../../includes/tlasharptla-wpf-md.md)] uygula
   
 <a name="Windows_Installer"></a>   
 ### <a name="windows-installer"></a>Windows Installer  
- [!INCLUDE[TLA2#tla_wininstall](../../../../includes/tla2sharptla-wininstall-md.md)]kolayca istemcilere dağıtılan ve kendi başına yürütülebilen paketlenmiş uygulamalar sağlar. Ayrıca, [!INCLUDE[TLA2#tla_wininstall](../../../../includes/tla2sharptla-wininstall-md.md)] ile yüklenen [!INCLUDE[TLA#tla_mswin](../../../../includes/tlasharptla-mswin-md.md)] ve Masaüstü, Başlat menüsüne ve programlar Denetim Masası ile tümleştirme sağlar.  
+ [!INCLUDE[TLA2#tla_wininstall](../../../../includes/tla2sharptla-wininstall-md.md)] kolayca istemcilere dağıtılan ve kendi başına yürütülebilen paketlenmiş uygulamalar sağlar. Ayrıca, [!INCLUDE[TLA2#tla_wininstall](../../../../includes/tla2sharptla-wininstall-md.md)] ile yüklenen [!INCLUDE[TLA#tla_mswin](../../../../includes/tlasharptla-mswin-md.md)] ve Masaüstü, Başlat menüsüne ve programlar Denetim Masası ile tümleştirme sağlar.  
   
- [!INCLUDE[TLA2#tla_wininstall](../../../../includes/tla2sharptla-wininstall-md.md)]Yükleme ve kaldırma uygulamalarının kolaylaştırır, ancak yüklü uygulamaların sürüm oluşturma açısından güncel kalmasını sağlamaya yönelik olanakları sağlamaz.  
+ [!INCLUDE[TLA2#tla_wininstall](../../../../includes/tla2sharptla-wininstall-md.md)] Yükleme ve kaldırma uygulamalarının kolaylaştırır, ancak yüklü uygulamaların sürüm oluşturma açısından güncel kalmasını sağlamaya yönelik olanakları sağlamaz.  
   
  Hakkında daha fazla bilgi için [!INCLUDE[TLA2#tla_wininstall](../../../../includes/tla2sharptla-wininstall-md.md)], bkz: [Windows Installer dağıtımı](http://msdn.microsoft.com/library/121be21b-b916-43e2-8f10-8b080516d2a0).  
   
 <a name="ClickOnce_Deployment"></a>   
 ### <a name="clickonce-deployment"></a>ClickOnce dağıtımı  
- [!INCLUDE[TLA2#tla_clickonce](../../../../includes/tla2sharptla-clickonce-md.md)]Web olmayan uygulamalar için Web stili uygulama dağıtımı sağlar. Uygulamalar için yayımlanan ve Web veya dosya sunucusundan dağıtılır. Ancak [!INCLUDE[TLA2#tla_clickonce](../../../../includes/tla2sharptla-clickonce-md.md)] tam desteklemiyor istemci aralığını özellikleri [!INCLUDE[TLA2#tla_wininstall](../../../../includes/tla2sharptla-wininstall-md.md)]-yüklü uygulamalar yapmak için aşağıdakileri içeren bir alt kümesini destekler:  
+ [!INCLUDE[TLA2#tla_clickonce](../../../../includes/tla2sharptla-clickonce-md.md)] Web olmayan uygulamalar için Web stili uygulama dağıtımı sağlar. Uygulamalar için yayımlanan ve Web veya dosya sunucusundan dağıtılır. Ancak [!INCLUDE[TLA2#tla_clickonce](../../../../includes/tla2sharptla-clickonce-md.md)] tam desteklemiyor istemci aralığını özellikleri [!INCLUDE[TLA2#tla_wininstall](../../../../includes/tla2sharptla-wininstall-md.md)]-yüklü uygulamalar yapmak için aşağıdakileri içeren bir alt kümesini destekler:  
   
 -   Başlat menüsü ve programlar Denetim Masası ile tümleştirme.  
   
@@ -93,13 +95,13 @@ Sonra [!INCLUDE[TLA#tla_wpf](../../../../includes/tlasharptla-wpf-md.md)] uygula
   
  İçin güvenlik hakkında daha fazla bilgi için [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] uygulamalar, bkz [güvenlik](../../../../docs/framework/wpf/security-wpf.md).  
   
- Yalnızca biçimlendirme [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] sayfaları yüklenebilir yerel dosya sistemine XCopy kullanarak veya [!INCLUDE[TLA2#tla_wininstall](../../../../includes/tla2sharptla-wininstall-md.md)]. Bu sayfaları kullanılarak görüntülenebilir [!INCLUDE[TLA2#tla_iegeneric](../../../../includes/tla2sharptla-iegeneric-md.md)] veya [!INCLUDE[TLA2#tla_mswin](../../../../includes/tla2sharptla-mswin-md.md)] Explorer.  
+ Yalnızca biçimlendirme [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] sayfaları yüklenebilir yerel dosya sistemine XCopy kullanarak veya [!INCLUDE[TLA2#tla_wininstall](../../../../includes/tla2sharptla-wininstall-md.md)]. Bu sayfaları kullanılarak görüntülenebilir [!INCLUDE[TLA2#tla_iegeneric](../../../../includes/tla2sharptla-iegeneric-md.md)] veya Windows Gezgini'nde.  
   
  XAML hakkında daha fazla bilgi için bkz: [XAML genel bakış (WPF)](../../../../docs/framework/wpf/advanced/xaml-overview-wpf.md).  
   
 <a name="Deploying_XAML_Browser_Applications"></a>   
 ### <a name="deploying-xaml-browser-applications"></a>XAML tarayıcısı uygulamaları dağıtma  
- [!INCLUDE[TLA2#tla_xbap#plural](../../../../includes/tla2sharptla-xbapsharpplural-md.md)]Dağıtılacak aşağıdaki üç dosyayı gerektiren derlenmiş uygulamalar şunlardır:  
+ [!INCLUDE[TLA2#tla_xbap#plural](../../../../includes/tla2sharptla-xbapsharpplural-md.md)] Dağıtılacak aşağıdaki üç dosyayı gerektiren derlenmiş uygulamalar şunlardır:  
   
 -   *ApplicationName*.exe: çalıştırılabilir derleme uygulama dosyası.  
   
@@ -112,7 +114,7 @@ Sonra [!INCLUDE[TLA#tla_wpf](../../../../includes/tlasharptla-wpf-md.md)] uygula
   
  Bu dosyalar üretilen olduğunda bir [!INCLUDE[TLA2#tla_xbap](../../../../includes/tla2sharptla-xbap-md.md)] yerleşik olarak bulunur. Daha fazla bilgi için bkz: [nasıl yapılır: yeni bir WPF tarayıcı uygulaması projesi oluşturduğunuzda](http://msdn.microsoft.com/library/72ef4d90-e163-42a1-8df0-ea7ccfd1901f). Yalnızca biçimlendirme gibi [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] sayfaları [!INCLUDE[TLA2#tla_xbap#plural](../../../../includes/tla2sharptla-xbapsharpplural-md.md)] genellikle bir Web sunucusuna yayımlanır ve kullanarak görüntülenebilir [!INCLUDE[TLA2#tla_iegeneric](../../../../includes/tla2sharptla-iegeneric-md.md)].  
   
- [!INCLUDE[TLA2#tla_xbap#plural](../../../../includes/tla2sharptla-xbapsharpplural-md.md)]dağıtım tekniklerden herhangi birini kullanarak istemcilere dağıtılabilir. Ancak, [!INCLUDE[TLA#tla_clickonce](../../../../includes/tlasharptla-clickonce-md.md)] önerilir çünkü aşağıdaki yetenekleri sağlar:  
+ [!INCLUDE[TLA2#tla_xbap#plural](../../../../includes/tla2sharptla-xbapsharpplural-md.md)] dağıtım tekniklerden herhangi birini kullanarak istemcilere dağıtılabilir. Ancak, [!INCLUDE[TLA#tla_clickonce](../../../../includes/tlasharptla-clickonce-md.md)] önerilir çünkü aşağıdaki yetenekleri sağlar:  
   
 1.  Yeni bir sürümü yayımlandığında otomatik güncelleştirmeler.  
   
@@ -124,13 +126,13 @@ Sonra [!INCLUDE[TLA#tla_wpf](../../../../includes/tlasharptla-wpf-md.md)] uygula
   
 <a name="Installing__NET_Framework_3_0"></a>   
 ## <a name="installing-the-net-framework"></a>.NET Framework2ü yükleme  
- Çalıştırmak için bir [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] uygulama [!INCLUDE[TLA#tla_winfx](../../../../includes/tlasharptla-winfx-md.md)] istemcide yüklü olmalıdır. [!INCLUDE[TLA2#tla_ie](../../../../includes/tla2sharptla-ie-md.md)]otomatik olarak istemciler ile yüklü olup olmadığını algılar [!INCLUDE[TLA2#tla_winfx](../../../../includes/tla2sharptla-winfx-md.md)] zaman [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] tarayıcıda barındırılan uygulamalar görüntülendiğinde. Varsa [!INCLUDE[TLA2#tla_winfx](../../../../includes/tla2sharptla-winfx-md.md)] yüklü değil, [!INCLUDE[TLA2#tla_ie](../../../../includes/tla2sharptla-ie-md.md)] kullanıcıların yüklemesini ister.  
+ Çalıştırmak için bir [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] uygulama, Microsoft .NET Framework istemci üzerinde yüklü olmalıdır. [!INCLUDE[TLA2#tla_ie](../../../../includes/tla2sharptla-ie-md.md)] otomatik olarak istemciler ile yüklü olup olmadığını algılar [!INCLUDE[TLA2#tla_winfx](../../../../includes/tla2sharptla-winfx-md.md)] zaman [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] tarayıcıda barındırılan uygulamalar görüntülendiğinde. Varsa [!INCLUDE[TLA2#tla_winfx](../../../../includes/tla2sharptla-winfx-md.md)] yüklü değil, [!INCLUDE[TLA2#tla_ie](../../../../includes/tla2sharptla-ie-md.md)] kullanıcıların yüklemesini ister.  
   
  Algılamak için olup olmadığını [!INCLUDE[TLA2#tla_winfx](../../../../includes/tla2sharptla-winfx-md.md)] yüklü olduğu [!INCLUDE[TLA2#tla_ie](../../../../includes/tla2sharptla-ie-md.md)] geri dönüş olarak kayıtlı bir önyükleyici uygulama içerir [!INCLUDE[TLA#tla_mime](../../../../includes/tlasharptla-mime-md.md)] şu uzantılara sahip içerik dosyaları için işleyici: .xaml, .xps, .xbap ve .application. Bu dosya türlerini giderseniz ve [!INCLUDE[TLA2#tla_winfx](../../../../includes/tla2sharptla-winfx-md.md)] yüklü değil istemci üzerinde önyükleyici uygulama yüklemek için izin ister. İzni, tipleri sağlanmamışsa [!INCLUDE[TLA2#tla_winfx](../../../../includes/tla2sharptla-winfx-md.md)] veya uygulama yüklenir.  
   
  İzin verilirse [!INCLUDE[TLA2#tla_ie](../../../../includes/tla2sharptla-ie-md.md)] indirir ve yükler [!INCLUDE[TLA2#tla_winfx](../../../../includes/tla2sharptla-winfx-md.md)] kullanarak [!INCLUDE[TLA#tla_bits](../../../../includes/tlasharptla-bits-md.md)]. Başarılı yüklemesinden sonra [!INCLUDE[TLA2#tla_winfx](../../../../includes/tla2sharptla-winfx-md.md)], ilk olarak istenen dosyanın yeni bir tarayıcı penceresinde açılır.  
   
- [!INCLUDE[TLA2#tla_winfx](../../../../includes/tla2sharptla-winfx-md.md)]otomatik algılamayı edinilebilir [!INCLUDE[TLA#tla_longhorn](../../../../includes/tlasharptla-longhorn-md.md)], [!INCLUDE[TLA#tla_winxpsp2](../../../../includes/tlasharptla-winxpsp2-md.md)], ve [!INCLUDE[TLA#tla_winnetsvrfamsp1](../../../../includes/tlasharptla-winnetsvrfamsp1-md.md)] sahip istemciler [!INCLUDE[TLA2#tla_ie7](../../../../includes/tla2sharptla-ie7-md.md)] veya sonraki bir sürümü yüklü.  
+ [!INCLUDE[TLA2#tla_winfx](../../../../includes/tla2sharptla-winfx-md.md)] otomatik algılamayı edinilebilir [!INCLUDE[TLA#tla_longhorn](../../../../includes/tlasharptla-longhorn-md.md)], [!INCLUDE[TLA#tla_winxpsp2](../../../../includes/tlasharptla-winxpsp2-md.md)], ve [!INCLUDE[TLA#tla_winnetsvrfamsp1](../../../../includes/tlasharptla-winnetsvrfamsp1-md.md)] sahip istemciler [!INCLUDE[TLA2#tla_ie7](../../../../includes/tla2sharptla-ie7-md.md)] veya sonraki bir sürümü yüklü.  
   
  Daha fazla bilgi için bkz: [.NET Framework ve uygulamaları dağıtma](../../../../docs/framework/deployment/index.md).  
   

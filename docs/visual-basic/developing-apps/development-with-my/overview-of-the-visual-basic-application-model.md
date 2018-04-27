@@ -1,30 +1,31 @@
 ---
-title: "Visual Basic Uygulama Modeline Genel Bakış"
+title: Visual Basic Uygulama Modeline Genel Bakış
 ms.date: 07/20/2015
 ms.prod: .net
-ms.suite: 
-ms.technology: devlang-visual-basic
+ms.suite: ''
+ms.technology:
+- devlang-visual-basic
 ms.topic: article
 helpviewer_keywords:
 - My.Application object [Visual Basic], Visual Basic application model
 - Visual Basic application model
 ms.assetid: 17538984-84fe-43c9-82c8-724c9529fe8b
-caps.latest.revision: "30"
+caps.latest.revision: 30
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: 33b0e01317a6dab18ea03047c146def32b5675ad
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 74a8fcfe3f49ab042b3bb4775f9f6e84374db0ae
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="overview-of-the-visual-basic-application-model"></a>Visual Basic Uygulama Modeline Genel Bakış
-[!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]Windows Forms uygulamaları davranışını denetlemek için iyi tanımlanmış bir modeli sağlar: [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] uygulama modeli. Bu model uygulama başlatma ve kapatma, yanı sıra çalýþýrçalýþma yakalama işlenmeyen özel durum olayları işlemek için olaylarını içerir. Tek örnek uygulamaları geliştirmek için destek de sağlar. Uygulama modeli genişletilebilir, olduğundan daha fazla denetim gerektiren geliştiriciler kendi geçersiz kılınabilir yöntemleri özelleştirebilirsiniz.  
+Visual Basic Windows Forms uygulamaları davranışını denetlemek için iyi tanımlanmış bir model sağlar: Visual Basic uygulama modeli. Bu model uygulama başlatma ve kapatma, yanı sıra çalýþýrçalýþma yakalama işlenmeyen özel durum olayları işlemek için olaylarını içerir. Tek örnek uygulamaları geliştirmek için destek de sağlar. Uygulama modeli genişletilebilir, olduğundan daha fazla denetim gerektiren geliştiriciler kendi geçersiz kılınabilir yöntemleri özelleştirebilirsiniz.  
   
 ## <a name="uses-for-the-application-model"></a>Uygulama modeli kullanımları  
  Tipik bir uygulama başlatıldığında ve kapandıktan görevleri gerçekleştirmek gerekir. Örneğin, başladığında, uygulama bir giriş ekranı, veritabanı bağlantıları oluşturma, kaydedilen bir duruma yük ve benzeri. Uygulama kapatıldığında, veritabanı bağlantıları kapatın, geçerli durumunu kaydetmek ve benzeri. Ayrıca, uygulama kapattığında uygulamanın belirli bir kod yürütebilir beklenmedik şekilde gibi sırasında işlenmeyen bir özel durum olarak gider.  
   
- [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] Uygulama modeli oluşturmak kolaylaştırır bir *Tek Örnekli* uygulama. Tek Örnekli uygulama bir uygulamasından normal, uygulamayı yalnızca bir örneği aynı anda çalışabilir farklıdır. Tek Örnekli uygulama başka bir örneği başlatma girişimi sonuçları bildirilmesini özgün örneğinde — yoluyla `StartupNextInstance` olay —, başka bir başlatma girişiminde bulunuldu. Bildirim sonraki örneğinin komut satırı bağımsız değişkenleri içerir. Sıfırlamaları oluşabilmesi için öncelikle uygulamayı sonraki örneği kapatılır.  
+ Visual Basic uygulama modeli oluşturmak kolaylaştırır bir *Tek Örnekli* uygulama. Tek Örnekli uygulama bir uygulamasından normal, uygulamayı yalnızca bir örneği aynı anda çalışabilir farklıdır. Tek Örnekli uygulama başka bir örneği başlatma girişimi sonuçları bildirilmesini özgün örneğinde — yoluyla `StartupNextInstance` olay —, başka bir başlatma girişiminde bulunuldu. Bildirim sonraki örneğinin komut satırı bağımsız değişkenleri içerir. Sıfırlamaları oluşabilmesi için öncelikle uygulamayı sonraki örneği kapatılır.  
   
  Tek Örnekli uygulama başlar ve ilk örneği veya sonraki bir örnek uygulamanın olup olmadığını denetler:  
   
@@ -58,7 +59,7 @@ ms.lasthandoff: 11/21/2017
 -   **Uygulama kapatma**. Uygulamanın sağladığı <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.Shutdown> olay hakkında kapatmak için olduğunda sinyal. Bu olay işleyicisi, işlemleri gerçekleştirmek uygulamanız gereken emin olabilir — kapatma ve kaydetme, örneğin — tamamlanır. Uygulamanızı ana form kapandığında kapatma ya da yalnızca tüm formları kapattığınızda kapatmak için yapılandırabilirsiniz.  
   
 ## <a name="availability"></a>Kullanılabilirlik  
- Varsayılan olarak, [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] uygulama modeli Windows Forms projeleri için kullanılabilir. Farklı başlangıç nesnesi kullanmak için uygulamayı yapılandırma veya özel bir uygulama kodu Başlat `Sub Main`, bu nesne veya sınıf bir belirtin gerekebilir <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase> uygulama modelini kullanmak için sınıf. Başlangıç nesnesi değiştirme hakkında daha fazla bilgi için bkz: [uygulama sayfası, Proje Tasarımcısı (Visual Basic)](/visualstudio/ide/reference/application-page-project-designer-visual-basic).  
+ Varsayılan olarak, Visual Basic uygulama modeli Windows Forms projeleri için kullanılabilir. Farklı başlangıç nesnesi kullanmak için uygulamayı yapılandırma veya özel bir uygulama kodu Başlat `Sub Main`, bu nesne veya sınıf bir belirtin gerekebilir <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase> uygulama modelini kullanmak için sınıf. Başlangıç nesnesi değiştirme hakkında daha fazla bilgi için bkz: [uygulama sayfası, Proje Tasarımcısı (Visual Basic)](/visualstudio/ide/reference/application-page-project-designer-visual-basic).  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
  <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase>  
@@ -68,4 +69,4 @@ ms.lasthandoff: 11/21/2017
  <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.Shutdown>  
  <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.NetworkAvailabilityChanged>  
  <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase>  
- [Visual Basic uygulama modelini genişletme](../../../visual-basic/developing-apps/customizing-extending-my/extending-the-visual-basic-application-model.md)
+ [Visual Basic Uygulama Modelini Genişletme](../../../visual-basic/developing-apps/customizing-extending-my/extending-the-visual-basic-application-model.md)

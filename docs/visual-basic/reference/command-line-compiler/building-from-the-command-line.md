@@ -19,19 +19,19 @@ helpviewer_keywords:
 - command-line compilers [Visual Basic], Visual Basic
 - command line [Visual Basic], Visual Basic
 ms.assetid: e61947e9-a42e-4717-a699-5f70a98cdd03
-caps.latest.revision: ''
+caps.latest.revision: 13
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: c3f71a84feffce46bafd92ff701a0250c059a82e
-ms.sourcegitcommit: 498799639937c89de777361aab74261efe7b79ea
-ms.translationtype: MT
+ms.openlocfilehash: 1fd4054838925267647986a5166fd88037b17fae
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/22/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="building-from-the-command-line-visual-basic"></a>Komut Satırından Derleme (Visual Basic)
-A [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] proje oluşur bir veya daha fazla ayrı kaynak dosyaları. Derleme bilinen işlem sırasında bu dosyaları birlikte bir pakete yapılmadan — bir uygulama olarak çalıştırılabilir tek bir yürütülebilir dosya.  
+Visual Basic projesinde, bir veya daha fazla ayrı kaynak dosyalarını yapılır. Derleme bilinen işlem sırasında bu dosyaları birlikte bir pakete yapılmadan — bir uygulama olarak çalıştırılabilir tek bir yürütülebilir dosya.  
   
- [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] programların içinden derleme alternatif olarak komut satırı derleyicisi sağlar [!INCLUDE[vsprvs](~/includes/vsprvs-md.md)] tümleşik geliştirme ortamı (IDE). Komut satırı derleyicisi içinde gerektirmeyen IDE özelliklerinde, tamamını durumlar için tasarlanmış — Örneğin, ne zaman, kullanarak veya sınırlı sayıda sistem bellek veya depolama alanı sahip bilgisayarlar için yazma.  
+ Visual Basic programları içinden derleme alternatif olarak komut satırı derleyicisi sağlar [!INCLUDE[vsprvs](~/includes/vsprvs-md.md)] tümleşik geliştirme ortamı (IDE). Komut satırı derleyicisi içinde gerektirmeyen IDE özelliklerinde, tamamını durumlar için tasarlanmış — Örneğin, ne zaman, kullanarak veya sınırlı sayıda sistem bellek veya depolama alanı sahip bilgisayarlar için yazma.  
   
   İçinden kaynak dosyalarını derlemek için [!INCLUDE[vsprvs](~/includes/vsprvs-md.md)] IDE seçin **yapı** komutunu **yapı** menüsü.  
   

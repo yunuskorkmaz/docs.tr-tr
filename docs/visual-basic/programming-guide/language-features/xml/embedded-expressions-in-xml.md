@@ -1,13 +1,13 @@
 ---
-title: "XML'de Katıştırılmış İfadeler (Visual Basic)"
-ms.custom: 
+title: XML'de Katıştırılmış İfadeler (Visual Basic)
+ms.custom: ''
 ms.date: 07/20/2015
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - devlang-visual-basic
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 f1_keywords:
 - vb.XmlEmbeddedExpression
@@ -16,14 +16,14 @@ helpviewer_keywords:
 - LINQ to XML [Visual Basic], embedded expressions
 - XML literals [Visual Basic], embedded expressions
 ms.assetid: bf2eb779-b751-4b7c-854f-9f2161482352
-caps.latest.revision: 
+caps.latest.revision: 22
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: b1cdba0a39a932f143ac98c2514240e1696a8fe0
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 3c6dff88d123f33ad4c33e91685104b760ecca3b
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="embedded-expressions-in-xml-visual-basic"></a>XML'de Katıştırılmış İfadeler (Visual Basic)
 Katıştırılmış ifadeler çalışma zamanında değerlendirilir ifadeleri içeren XML değişmez değerleri oluşturma olanak sağlar. Katıştırılmış bir ifade sözdizimi `<%=` `expression` `%>`, olduğu aynı sözdizimini kullanılan gibi [!INCLUDE[vstecasp](~/includes/vstecasp-md.md)].  
@@ -43,14 +43,14 @@ Katıştırılmış ifadeler çalışma zamanında değerlendirilir ifadeleri i�
 ## <a name="embedded-expression-location-and-validation"></a>Katıştırılmış ifade konumu ve doğrulama  
  Katıştırılmış ifadeler yalnızca XML değişmez ifadeleri içinde belirli konumlarda yer alabilir. İfade türleri ifade konumu denetimleri döndürebilir ve nasıl `Nothing` ele alınır. Aşağıdaki tabloda, izin verilen konumların ve katıştırılmış ifadeler türleri açıklanmaktadır.  
   
-|Değişmez değeri konumda|İfade türü|İşleme`Nothing`|  
+|Değişmez değeri konumda|İfade türü|İşleme `Nothing`|  
 |---|---|---|  
 |XML öğesi adı|<xref:System.Xml.Linq.XName>|Hata|  
-|XML öğesi içeriği|`Object`veya dizi`Object`|Yoksayıldı|  
-|XML öğesi öznitelik adı|<xref:System.Xml.Linq.XName>|Hata, öznitelik değeri de olmadığı sürece`Nothing`|  
+|XML öğesi içeriği|`Object` veya dizi `Object`|Yoksayıldı|  
+|XML öğesi öznitelik adı|<xref:System.Xml.Linq.XName>|Hata, öznitelik değeri de olmadığı sürece `Nothing`|  
 |XML öğesi öznitelik değeri|`Object`|Göz ardı özniteliği bildirimi|  
-|XML öğe özniteliği|<xref:System.Xml.Linq.XAttribute>veya bir koleksiyonu<xref:System.Xml.Linq.XAttribute>|Yoksayıldı|  
-|XML belge kök öğesi|<xref:System.Xml.Linq.XElement>veya bir koleksiyonu <xref:System.Xml.Linq.XElement> nesne ve isteğe bağlı sayıda <xref:System.Xml.Linq.XProcessingInstruction> ve <xref:System.Xml.Linq.XComment> nesneleri|Yoksayıldı|  
+|XML öğe özniteliği|<xref:System.Xml.Linq.XAttribute> veya bir koleksiyonu <xref:System.Xml.Linq.XAttribute>|Yoksayıldı|  
+|XML belge kök öğesi|<xref:System.Xml.Linq.XElement> veya bir koleksiyonu <xref:System.Xml.Linq.XElement> nesne ve isteğe bağlı sayıda <xref:System.Xml.Linq.XProcessingInstruction> ve <xref:System.Xml.Linq.XComment> nesneleri|Yoksayıldı|  
   
 -   Bir XML öğesi adı katıştırılmış bir ifadede örneği:  
   
@@ -83,7 +83,7 @@ Katıştırılmış ifadeler çalışma zamanında değerlendirilir ifadeleri i�
  Katıştırılmış bir ifade hazır değer belirli bir tür kullanma hakkında daha fazla bilgi için bkz: [XML belgesi değişmez değer](../../../../visual-basic/language-reference/xml-literals/xml-document-literal.md), [XML öğesi değişmez değer](../../../../visual-basic/language-reference/xml-literals/xml-element-literal.md).  
   
 ## <a name="scoping-rules"></a>Kapsam kuralları  
- Derleyici Oluşturucusu çağrısı uygun değişmez değer türü için her XML değişmez değer dönüştürür. Değişmez değer içeriğine ve XML değişmez değeri katıştırılmış ifadeler oluşturucuya bağımsız değişken olarak geçirilir. Bunun anlamı tüm [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] programlama öğeleri bir XML değişmez değeri kullanılabilir, katıştırılmış ifadeler kullanılabilir de.  
+ Derleyici Oluşturucusu çağrısı uygun değişmez değer türü için her XML değişmez değer dönüştürür. Değişmez değer içeriğine ve XML değişmez değeri katıştırılmış ifadeler oluşturucuya bağımsız değişken olarak geçirilir. Başka bir deyişle, bir XML değişmez değer kullanılabilir tüm Visual Basic programlama öğeleri de kendi katıştırılmış ifadeler için kullanılabilir.  
   
  XML değişmez değer içinde önekleri bildirilen ile XML ad alanına erişebildiğinizi `Imports` deyimi. Yeni bir XML ad alanı önekini bildirmek veya kullanarak bir öğedeki var olan bir XML ad alanı öneki gölge `xmlns` özniteliği. Yeni ad alanı, o öğesinin alt düğümleri, ancak katıştırılmış ifadelerde XML değişmez değerleri kullanılabilir.  
   
@@ -92,8 +92,8 @@ Katıştırılmış ifadeler çalışma zamanında değerlendirilir ifadeleri i�
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
  [Visual Basic'de XML oluşturma](../../../../visual-basic/programming-guide/language-features/xml/creating-xml.md)  
- [XML belgesi değişmez değeri](../../../../visual-basic/language-reference/xml-literals/xml-document-literal.md)  
- [XML öğesi değişmez değeri](../../../../visual-basic/language-reference/xml-literals/xml-element-literal.md)  
- [Option Strict deyimi](../../../../visual-basic/language-reference/statements/option-strict-statement.md)  
- [Imports deyimi (.NET Namespace ve türü)](../../../../visual-basic/language-reference/statements/imports-statement-net-namespace-and-type.md)  
- [XML değişmez değerlerine genel bakış](../../../../visual-basic/programming-guide/language-features/xml/xml-literals-overview.md)
+ [XML Belgesi Değişmez Değeri](../../../../visual-basic/language-reference/xml-literals/xml-document-literal.md)  
+ [XML Öğesi Değişmez Değeri](../../../../visual-basic/language-reference/xml-literals/xml-element-literal.md)  
+ [Option Strict Deyimi](../../../../visual-basic/language-reference/statements/option-strict-statement.md)  
+ [Imports Deyimi (.NET Ad Alanı ve Türü)](../../../../visual-basic/language-reference/statements/imports-statement-net-namespace-and-type.md)  
+ [XML Değişmez Değerlerine Genel Bakış](../../../../visual-basic/programming-guide/language-features/xml/xml-literals-overview.md)

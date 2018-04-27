@@ -2,9 +2,10 @@
 title: Try...Catch...Finally Deyimi (Visual Basic)
 ms.date: 07/20/2015
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- devlang-visual-basic
 ms.topic: article
 f1_keywords:
 - vb.Try...Catch...Finally
@@ -24,14 +25,14 @@ helpviewer_keywords:
 - Visual Basic code, handling errors while running
 - structured exception handling, Try...Catch...Finally statements
 ms.assetid: d6488026-ccb3-42b8-a810-0d97b9d6472b
-caps.latest.revision: "69"
+caps.latest.revision: 69
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: c297a84b37b455a4b30b1848aa9bdd30dc567ec1
-ms.sourcegitcommit: 34ec7753acf76f90a0fa845235ef06663dc9e36e
+ms.openlocfilehash: 701475d41d24ad89e6c83796f7cc5cd4b7802a32
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="trycatchfinally-statement-visual-basic"></a>Try...Catch...Finally Deyimi (Visual Basic)
 Belirli bir kod bloğu içinde hala kod çalıştırılırken ortaya çıkabilecek bazı veya tüm olası hataları işlemek için bir yol sağlar.  
@@ -70,22 +71,22 @@ End Try
 ## <a name="remarks"></a>Açıklamalar  
  Belirli bir özel durum kodu belirli bir bölümü sırasında oluşabilecek bekliyorsanız, kod yerleştirecek bir `Try` engelleme ve kullanmak bir `Catch` denetimi korumak ve bu durum oluşursa özel durumu işlemek için blok.  
   
- A `Try…Catch` deyimi oluşur bir `Try` blok izlenen bir veya daha fazla tarafından `Catch` yan tümceleri çeşitli özel durumlar için işleyiciler belirleyin. Ne zaman özel durum bir `Try` bloğu [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] arar `Catch` özel durumu işler deyimi. Eşleşen bir varsa `Catch` deyimi bulunamadı, [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] geçerli yöntemi, vb. çağrı yığını çağrılan yöntemi inceler. Öyle değilse `Catch` blok bulunursa, [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] kullanıcıya bir işlenmeyen özel durum iletisi görüntüler ve programın yürütülmesi durdurur.  
+ A `Try…Catch` deyimi oluşur bir `Try` blok izlenen bir veya daha fazla tarafından `Catch` yan tümceleri çeşitli özel durumlar için işleyiciler belirleyin. Ne zaman özel durum bir `Try` engellemek, Visual Basic arar `Catch` özel durumu işler deyimi. Eşleşen bir varsa `Catch` deyimi bulunamadı, Visual Basic geçerli yöntemi, vb. çağrı yığını çağrılan yöntemi inceler. Öyle değilse `Catch` blok bulunursa, Visual Basic kullanıcı için bir işlenmeyen özel durum iletisi görüntülenir ve programın yürütülmesi durdurulur.  
   
  Birden fazla kullanabilirsiniz `Catch` deyiminde bir `Try…Catch` deyimi. Bu sırasını yaparsanız `Catch` yan tümceleri olduğundan önemli sırayla incelenir. Daha fazla özel durum daha az yayına önce yakalar.  
   
  Aşağıdaki `Catch` deyimi koşullar az özgüdür ve tüm yakalar öğesinden türetilen özel durumları <xref:System.Exception> sınıfı. Normalde bu değişimler birini son kullanmalıdır `Catch` engelleyin `Try...Catch...Finally` beklediğiniz tüm belirli özel durumları yakalama sonra yapısı. Denetim akışı hiçbir zaman ulaşmak bir `Catch` ya da bu değişimler izler bloğu.  
   
--   `type` Olan `Exception`, örneğin:`Catch ex As Exception`  
+-   `type` Olan `Exception`, örneğin: `Catch ex As Exception`  
   
--   Deyim sahip olmayan `exception` değişken, örneğin:`Catch`  
+-   Deyim sahip olmayan `exception` değişken, örneğin: `Catch`  
   
- Zaman bir `Try…Catch…Finally` deyimi iç içe başka bir programda `Try` bloğu [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] önce her inceler `Catch` ise en içteki deyiminde `Try` bloğu. Eşleşme varsa `Catch` deyimi bulunursa, aramaya devam eder `Catch` bilgilerinin dış `Try…Catch…Finally` bloğu.  
+ Zaman bir `Try…Catch…Finally` deyimi iç içe başka bir programda `Try` bloğu, Visual Basic önce inceler her `Catch` ise en içteki deyiminde `Try` bloğu. Eşleşme varsa `Catch` deyimi bulunursa, aramaya devam eder `Catch` bilgilerinin dış `Try…Catch…Finally` bloğu.  
   
  Yerel değişkenler arasından bir `Try` blok kullanılabilir olmayan bir `Catch` ayrı blokları olduklarından engelleyin. Birden fazla bloğu içinde bir değişken kullanmak istiyorsanız, dışında değişkeni bildirme `Try...Catch...Finally` yapısı.  
   
 > [!TIP]
->  `Try…Catch…Finally` Deyimi bir IntelliSense kod parçacığı olarak kullanılabilir. Kod parçacıkları Yöneticisi'nde **kod düzenleri - varsa, her biri için Try Catch, özellik, vb.**ve ardından **hata işleme (özel durumlar)**. Daha fazla bilgi için bkz: [kod parçacıkları](/visualstudio/ide/code-snippets).  
+>  `Try…Catch…Finally` Deyimi bir IntelliSense kod parçacığı olarak kullanılabilir. Kod parçacıkları Yöneticisi'nde **kod düzenleri - varsa, her biri için Try Catch, özellik, vb.** ve ardından **hata işleme (özel durumlar)**. Daha fazla bilgi için bkz: [kod parçacıkları](/visualstudio/ide/code-snippets).  
   
 ## <a name="finally-block"></a>Finally bloğu  
  Çıkmadan önce çalıştırmanız gereken bir veya daha fazla deyimleri varsa `Try` yapısı, kullanan bir `Finally` bloğu. Denetim geçtiği `Finally` yalnızca dışı geçirmeden önce engelle `Try…Catch` yapısı. İçinde herhangi bir yerden bir özel durum oluştuğunda dahi, bu durum geçerlidir `Try` yapısı.  
@@ -108,7 +109,7 @@ End Try
 ## <a name="exception-argument"></a>Özel durum bağımsız değişken  
  `Catch` Blok `exception` bağımsız değişkeni bir örneğidir <xref:System.Exception> sınıf veya türeyen bir sınıf `Exception` sınıfı. `Exception` Karşılık gelen sınıf örneği oluştu hata `Try` bloğu.  
   
- Özelliklerini `Exception` nesne neden ve bir özel durum konumunu belirlemek için Yardım. Örneğin, <xref:System.Exception.StackTrace%2A> özelliği için kod hatanın oluştuğu bulmanıza yardımcı olacak özel neden çağrılan yöntemler listeler. <xref:System.Exception.Message%2A>özel durumu açıklayan bir ileti döndürür. <xref:System.Exception.HelpLink%2A>bir bağlantı için ilişkili bir Yardım dosyası döndürür. <xref:System.Exception.InnerException%2A>döndürür `Exception` veya geçerli özel durumun nedeni nesnesi döndüren `Nothing` hiçbir özgün ise `Exception`.  
+ Özelliklerini `Exception` nesne neden ve bir özel durum konumunu belirlemek için Yardım. Örneğin, <xref:System.Exception.StackTrace%2A> özelliği için kod hatanın oluştuğu bulmanıza yardımcı olacak özel neden çağrılan yöntemler listeler. <xref:System.Exception.Message%2A> özel durumu açıklayan bir ileti döndürür. <xref:System.Exception.HelpLink%2A> bir bağlantı için ilişkili bir Yardım dosyası döndürür. <xref:System.Exception.InnerException%2A> döndürür `Exception` veya geçerli özel durumun nedeni nesnesi döndüren `Nothing` hiçbir özgün ise `Exception`.  
   
 ## <a name="considerations-when-using-a-trycatch-statement"></a>Try kullanmayla ilgili konular... Catch deyimi  
  Kullanım bir `Try…Catch` deyimi yalnızca olağan dışı ya da beklenmeyen program olayları oluşumunu sinyal. Bunun nedeni şunlardır:  

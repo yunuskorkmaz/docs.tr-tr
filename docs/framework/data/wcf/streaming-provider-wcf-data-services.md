@@ -1,12 +1,13 @@
 ---
-title: "Akış sağlayıcısı (WCF Veri Hizmetleri)"
-ms.custom: 
+title: Akış sağlayıcısı (WCF Veri Hizmetleri)
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework-oob
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - csharp
@@ -17,16 +18,17 @@ helpviewer_keywords:
 - streaming data provider [WCF Data Services]
 - WCF Data Services, streams
 ms.assetid: f0978fe4-5f9f-42aa-a5c2-df395d7c9495
-caps.latest.revision: "8"
+caps.latest.revision: 8
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: f965bc46c62742c0e2ffb0a7f8ae2e09eca5dc1c
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.workload:
+- dotnet
+ms.openlocfilehash: bc66d4154f60e46e53de8ca72596e133dc84eb97
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="streaming-provider-wcf-data-services"></a>Akış sağlayıcısı (WCF Veri Hizmetleri)
 Veri Hizmeti ikili büyük nesne veri getirebilir. Bu ikili verileri, video ve ses akışları, görüntüler, belge dosyaları veya diğer ikili medya türleri temsil edebilir. Bir veya daha fazla ikili özelliklerinin bir varlık veri modeli içerir, bu ikili veri akışı yanıt girişi içinde base-64 olarak kodlanmış veri hizmeti döndürür. Yükleme ve bu şekilde büyük ikili verileri seri hale getirme performansını etkileyebilir çünkü [!INCLUDE[ssODataFull](../../../../includes/ssodatafull-md.md)] ait olduğu varlık bağımsız ikili veri almak için bir mekanizma tanımlar. Bu, bir veya daha fazla veri akışlara varlıktan ikili veri ayırarak gerçekleştirilir.  
@@ -61,7 +63,7 @@ Veri Hizmeti ikili büyük nesne veri getirebilir. Bu ikili verileri, video ve s
   
  Ad alanı da eklemelisiniz `xmlns:m=http://schemas.microsoft.com/ado/2007/08/dataservices/metadata` varlık veya veri modeli tanımlayan .edmx veya .csdl dosyası kök.  
   
- [!INCLUDE[crexample](../../../../includes/crexample-md.md)]kullanan bir veri hizmeti [!INCLUDE[adonet_ef](../../../../includes/adonet-ef-md.md)] sağlayıcısı ve bir medya kaynağı ortaya çıkaran gönderiye bakın [Veri Hizmetleri Akış sağlayıcısı serisi: bir akış sağlayıcı (Kısım 1) uygulama](http://go.microsoft.com/fwlink/?LinkID=198989).  
+ Bir örnek kullanan bir veri hizmeti için [!INCLUDE[adonet_ef](../../../../includes/adonet-ef-md.md)] sağlayıcısı ve bir medya kaynağı gösterir gönderiye bakın [Veri Hizmetleri Akış sağlayıcısı serisi: bir akış sağlayıcı (Kısım 1) uygulama](http://go.microsoft.com/fwlink/?LinkID=198989).  
   
  **Yansıma Sağlayıcısı**  
  Bir varlığa bir medya bağlantısı girişinin olduğunu belirtmek için ekleme <xref:System.Data.Services.Common.HasStreamAttribute> sınıfına yansıma sağlayıcısında varlık türünü tanımlar.  
@@ -122,7 +124,7 @@ Veri Hizmeti ikili büyük nesne veri getirebilir. Bu ikili verileri, video ve s
   
     -   Bir medya kaynağı olan bir ikili özellik veri modelinde eklenmemelidir. Bir veri modeli kullanıma sunulan tüm özellikler akış yanıt girdisinde döndürülür.  
   
-    -   Büyük bir ikili akış performansınızı artırmak için ikili veri veritabanında depolamak için bir özel akış sınıf oluşturmanızı öneririz. Bu sınıf tarafından döndürülen, <xref:System.Data.Services.Providers.IDataServiceStreamProvider.GetWriteStream%2A> uygulama ve ikili veri öbekleri veritabanına gönderir. İçin bir [!INCLUDE[ssNoVersion](../../../../includes/ssnoversion-md.md)] veritabanı öneririz ikili verileri 1 MB'den büyük olduğunda veritabanına bir FILESTREAM veri akışı için kullanın.  
+    -   Büyük bir ikili akış performansınızı artırmak için ikili veri veritabanında depolamak için bir özel akış sınıf oluşturmanızı öneririz. Bu sınıf tarafından döndürülen, <xref:System.Data.Services.Providers.IDataServiceStreamProvider.GetWriteStream%2A> uygulama ve ikili veri öbekleri veritabanına gönderir. SQL Server veritabanı için ikili veriler 1 MB'den büyük olduğunda bir FILESTREAM veri akışı için veritabanına kullanmanızı öneririz.  
   
     -   Veritabanınız, veri hizmeti tarafından alınabilmesi için ikili büyük akış depolamak için tasarlanmıştır emin olun.  
   

@@ -1,34 +1,34 @@
 ---
-title: "İzlenecek yol: XAML Kullanarak bir Düğme Oluşturma"
-ms.custom: 
+title: 'İzlenecek yol: XAML Kullanarak bir Düğme Oluşturma'
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - dotnet-wpf
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - buttons [WPF]
 ms.assetid: 138c41c4-1759-4bbf-8d77-77031a06a8a0
-caps.latest.revision: 
+caps.latest.revision: 13
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: 5c5efa9f8787e65d59e1b544632e806bf3fbbc81
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 94ec5e56862190026b43331488cbc699fe7dfda4
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="walkthrough-create-a-button-by-using-xaml"></a>İzlenecek yol: XAML Kullanarak bir Düğme Oluşturma
 Animasyonlu bir düğme kullanılmak üzere oluşturma konusunda bilgi almak için bu kılavuzun amacı olan bir [!INCLUDE[TLA#tla_wpf](../../../../includes/tlasharptla-wpf-md.md)] uygulama. Bu kılavuz, kodu yeniden kullanma ve düğme mantığının ayrılması düğme bildiriminden izin veren bir özelleştirilmiş düğme kaynak oluşturmak için stilleri ve bir şablonu kullanır. Bu kılavuzda tamamen yazılmış [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)].  
   
 > [!IMPORTANT]
->  Bu kılavuzda, uygulamayı yazarak veya kopyalama ve yapıştırma oluşturmak için adımlarında size rehberlik [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)] Microsoft [!INCLUDE[vs_current_short](../../../../includes/vs-current-short-md.md)]. Aynı uygulamayı oluşturmak için bkz. tasarım aracı (Microsoft Expression Blend) kullanmayı öğrenmek tercih ederseniz [oluştur düğmesi Microsoft Expression Blend kullanarak tarafından](../../../../docs/framework/wpf/controls/walkthrough-create-a-button-by-using-microsoft-expression-blend.md).  
+>  Bu kılavuzda, uygulamayı yazarak veya kopyalama ve yapıştırma oluşturmak için adımlarında size rehberlik [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)] Microsoft Visual Studio uygulamasına. Aynı uygulamayı oluşturmak için bkz. tasarım aracı (Microsoft Expression Blend) kullanmayı öğrenmek tercih ederseniz [oluştur düğmesi Microsoft Expression Blend kullanarak tarafından](../../../../docs/framework/wpf/controls/walkthrough-create-a-button-by-using-microsoft-expression-blend.md).  
   
  Aşağıdaki şekil tamamlanmış düğmeleri gösterir.  
   
@@ -39,7 +39,7 @@ Animasyonlu bir düğme kullanılmak üzere oluşturma konusunda bilgi almak iç
   
 #### <a name="to-create-a-new-wpf-project-and-add-buttons-to-the-window"></a>Yeni bir WPF projesi oluşturun ve pencereyi düğme ekleme  
   
-1.  Başlat[!INCLUDE[vs_current_short](../../../../includes/vs-current-short-md.md)].  
+1.  Visual Studio'yu başlatın.  
   
 2.  **Yeni bir WPF projesi oluşturun:** üzerinde **dosya** menüsündeki **yeni**ve ardından **proje**. Bul **Windows uygulaması (WPF)** şablonu ve adını "AnimatedButton olarak" proje. Bu uygulama için bir çatı oluşturur.  
   
@@ -332,7 +332,7 @@ Animasyonlu bir düğme kullanılmak üzere oluşturma konusunda bilgi almak iç
   
      Uygulamayı çalıştırın ve düğmeleri birini tıklatın için F5 tuşuna basın. Odağı hala içerdiğinden tıklattıktan sonra düğmesi vurgulanan kalır dikkat edin. Başka bir düğmesine tıklarsanız, sonuncu onu kaybederse ederken yeni düğme odağı kazanır.  
   
-4.  **İçin animasyon ekleme** <xref:System.Windows.UIElement.MouseEnter> **ve** <xref:System.Windows.UIElement.MouseLeave> **:** bazı animasyonları tetikleyicilere sonraki ekleriz. Herhangi bir yere içinde aşağıdaki biçimlendirmeleri eklemek `ControlTemplate.Triggers` bloğu.  
+4.  **İçin animasyon ekleme** <xref:System.Windows.UIElement.MouseEnter> **ve** <xref:System.Windows.UIElement.MouseLeave> **:** bazı animasyonları tetikleyicilere sonraki ekleriz.   Herhangi bir yere içinde aşağıdaki biçimlendirmeleri eklemek `ControlTemplate.Triggers` bloğu.  
   
     ```  
     <!-- Animations that start when mouse enters and leaves button. -->  

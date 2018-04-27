@@ -1,24 +1,26 @@
 ---
-title: "Varsayılan XAML Şema İçeriği ve WPF XAML Şema İçeriği"
-ms.custom: 
+title: Varsayılan XAML Şema İçeriği ve WPF XAML Şema İçeriği
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-wpf
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-wpf
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 04e06a15-09b3-4210-9bdf-9a64c2eccb83
-caps.latest.revision: "7"
+caps.latest.revision: 7
 author: wadepickett
 ms.author: wpickett
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 9ee7c83868934f1a524bb0068ea5e749e6cbfab4
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: ec5e29ae9022470f8b583dc1b673a0b93040c862
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="default-xaml-schema-context-and-wpf-xaml-schema-context"></a>Varsayılan XAML Şema İçeriği ve WPF XAML Şema İçeriği
 XAML şema içeriği belirli bir XAML sözlük kullanan XAML üretim davranışı nasıl türü eşlemesi çözümler, derlemeler nasıl yüklenir, nasıl belirli okuyucu ve yazıcı dahil olmak üzere, yazma nesnesi ile nasıl etkileşim kurduğu niteleyen kavramsal bir varlıktır ayarları yorumlanır. Bu konu, .NET Framework XAML hizmetlerinde ve CLR türü sistemi temelinde ilişkili varsayılan XAML şema içeriği özelliklerini açıklar. Bu konu ayrıca WPF için kullanılan XAML şema içeriği açıklar.  
@@ -35,7 +37,7 @@ XAML şema içeriği belirli bir XAML sözlük kullanan XAML üretim davranış�
 ## <a name="wpf-xaml-schema-context"></a>WPF XAML şema içeriği  
  WPF uygulaması varsayılan olmayan XAML şema bağlamı uygulama tarafından sunulan özellikler türlerini ilginç bir çizimi sağladığından WPF XAML şema içeriği bu konuda açıklanan. Ayrıca, XAML şema içeriği kavramı çok WPF XAML adresleri WPF belgelerinde ele alınmamıştır; XAML şema içeriği etkinleştiren davranışı yalnızca varsayılan XAML şema içeriği nasıl çalıştığı ile ilgili bir tartışma bütünleştirdiyseniz tam olarak anlaşılabilir olabilir. WPF XAML şema içeriği aşağıdaki davranışı uygular.  
   
- **Arama geçersiz kılar:** WPF XAML için birkaç içerik modelleri sahip olmadan işlev XAML İçerik özellikleri olduğu <xref:System.Windows.Markup.ContentPropertyAttribute> öznitelikli. <xref:System.Xaml.XamlType.LookupContentProperty%2A>WPF için bu davranışı geçersiz kılmalarını.  
+ **Arama geçersiz kılar:** WPF XAML için birkaç içerik modelleri sahip olmadan işlev XAML İçerik özellikleri olduğu <xref:System.Windows.Markup.ContentPropertyAttribute> öznitelikli. <xref:System.Xaml.XamlType.LookupContentProperty%2A> WPF için bu davranışı geçersiz kılmalarını.  
   
  **WPF ifadeler için erteleme:** WPF çalışma zamanı bağlam kullanılabilir hale gelene kadar bir değer erteleneceği birkaç ifade sınıfları özellikleri. Ayrıca, şablonu genişletme üzerinde erteleme teknikleri kullanır bir çalışma zamanı davranıştır.  
   
@@ -68,7 +70,7 @@ XAML şema içeriği belirli bir XAML sözlük kullanan XAML üretim davranış�
     -   Eşlemede nitelenmemiş ise, çağrı <xref:System.Reflection.Assembly.LoadWithPartialName%2A?displayProperty=nameWithType>.  
   
 #### <a name="xamlbuildtask"></a>XamlBuildTask  
- `XamlBuildTask`için kullanılan [!INCLUDE[vsindigo](../../../includes/vsindigo-md.md)] ve [!INCLUDE[TLA#tla_workflow](../../../includes/tlasharptla-workflow-md.md)].  
+ `XamlBuildTask` için kullanılan [!INCLUDE[vsindigo](../../../includes/vsindigo-md.md)] ve Windows Workflow Foundation.  
   
  Aracılığıyla bütünleştirilmiş koduna başvuruyor Not `XamlBuildTask` her zaman tam olur.  
   

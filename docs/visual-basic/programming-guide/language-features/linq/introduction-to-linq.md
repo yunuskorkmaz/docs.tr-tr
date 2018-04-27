@@ -1,11 +1,12 @@
 ---
-title: "Visual Basic'de LINQ'e Giriş"
-ms.custom: 
+title: Visual Basic'de LINQ'e Giriş
+ms.custom: ''
 ms.date: 07/20/2015
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- devlang-visual-basic
 ms.topic: article
 helpviewer_keywords:
 - queries [LINQ in Visual Basic], about LINQ in Visual Basic queries
@@ -18,19 +19,19 @@ helpviewer_keywords:
 - deferred execution
 - iteration variables [Visual Basic]
 ms.assetid: 3047d86e-0d49-40e2-928b-dc02e46c7984
-caps.latest.revision: "28"
+caps.latest.revision: 28
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: 0bb55aecc1faafd812da212565a7a858c714e933
-ms.sourcegitcommit: 34ec7753acf76f90a0fa845235ef06663dc9e36e
+ms.openlocfilehash: 1f41252d6f28c7b2ffb459b3374833fde56393f8
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="introduction-to-linq-in-visual-basic"></a>Visual Basic'de LINQ'e Giriş
-Dil ile tümleşik sorgu (LINQ) ekler için sorgu özellikleri [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] ve her türlü verileri çalıştığınızda basit ve güçlü özellikler sağlar. İşlenmek üzere bir veritabanına bir sorgu gönderme veya her aradığınız veri türü için farklı sorgu sözdizimi ile çalışma yerine LINQ sorguları bir parçası olarak tanıtır. [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] dili. Veri türü ne olursa olsun birleşik bir sözdizimi kullanır.  
+Dil ile tümleşik sorgu (LINQ) Visual Basic'e sorgu özellikleri ekler ve her türlü verileri çalıştığınızda basit ve güçlü özellikler sağlar. İşlenmek üzere bir veritabanına bir sorgu gönderme veya her aradığınız veri türü için farklı sorgu sözdizimi ile çalışma yerine LINQ sorgularını Visual Basic dilinin bir parçası olarak tanıtır. Veri türü ne olursa olsun birleşik bir sözdizimi kullanır.  
   
- LINQ sağlar, sorgu verileri bir SQL Server veritabanı, XML, bellek içi diziler ve koleksiyonlar, [!INCLUDE[vstecado](~/includes/vstecado-md.md)] veri kümeleri veya diğer uzak veya yerel veri kaynağı LINQ destekleyen. Tüm ortak ile bunu yapabilirsiniz [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] dil öğeleri. Sorgularınızın yazıldığından [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] dil, sorgu sonuçları kesin türü belirtilmiş nesneler olarak döndürülür. Bu nesneler, kodu daha hızlı yazmanıza ve derleme zamanında yerine çalışma zamanında sorgularınızda hatalarını yakalama sağlar IntelliSense destekler. LINQ sorgularını sonuçları daraltmak için ek sorgu kaynağı olarak kullanılabilir. Böylece kullanıcılar, kolayca görüntüleyebilir ve sorgu sonuçlarınızı değiştirmek için denetimleri de bağlanabilir.  
+ LINQ sağlar, sorgu verileri bir SQL Server veritabanı, XML, bellek içi diziler ve koleksiyonlar, [!INCLUDE[vstecado](~/includes/vstecado-md.md)] veri kümeleri veya diğer uzak veya yerel veri kaynağı LINQ destekleyen. Tüm ortak Visual Basic Dil öğeleri ile bunu yapabilirsiniz. Sorgularınızın Visual Basic dilinde yazılır olduğundan, sorgu sonuçları kesin türü belirtilmiş nesneler olarak döndürülür. Bu nesneler, kodu daha hızlı yazmanıza ve derleme zamanında yerine çalışma zamanında sorgularınızda hatalarını yakalama sağlar IntelliSense destekler. LINQ sorgularını sonuçları daraltmak için ek sorgu kaynağı olarak kullanılabilir. Böylece kullanıcılar, kolayca görüntüleyebilir ve sorgu sonuçlarınızı değiştirmek için denetimleri de bağlanabilir.  
   
  Örneğin, aşağıdaki kod örneğinde, müşterilerin listesini koleksiyondan döndüren bir LINQ Sorgu ve konumlarını göre grupları gösterir.  
   
@@ -58,27 +59,27 @@ Dil ile tümleşik sorgu (LINQ) ekler için sorgu özellikleri [!INCLUDE[vbprvb]
   
 -   [Nasıl yapılır ve gözden geçirme konuları](#HowToAndWalkthroughTopics)  
   
-##  <a name="RunningtheExamples"></a>Örnekleri çalıştırma  
+##  <a name="RunningtheExamples"></a> Örnekleri çalıştırma  
  Giriş ve "Yapısı, bir LINQ Sorgu" bölümünde örnekleri çalıştırmak için müşteriler ve siparişler listesini döndürür aşağıdaki kodu ekleyin.  
   
  [!code-vb[VbVbalrIntroToLINQ#31](../../../../visual-basic/programming-guide/language-features/linq/codesnippet/VisualBasic/introduction-to-linq_2.vb)]  
   
-##  <a name="LINQProviders"></a>LINQ sağlayıcıları  
- A *LINQ sağlayıcısı* eşler, [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] LINQ sorgularını sorgulanan veri kaynağına. LINQ Sorgu yazdığınızda, sağlayıcı bu sorguyu alır ve veri kaynağı yürütme yapabileceği komutlara çevirir. Sağlayıcı ayrıca veri kaynağından Sorgu sonucunuz nesnelerini dönüştürür. Veri kaynağına güncelleştirmeleri gönderdiğinizde, son olarak, bu nesneleri verilere dönüştürür.  
+##  <a name="LINQProviders"></a> LINQ sağlayıcıları  
+ A *LINQ sağlayıcısı* sorgulanan veri kaynağı, Visual Basic LINQ sorgularını eşler. LINQ Sorgu yazdığınızda, sağlayıcı bu sorguyu alır ve veri kaynağı yürütme yapabileceği komutlara çevirir. Sağlayıcı ayrıca veri kaynağından Sorgu sonucunuz nesnelerini dönüştürür. Veri kaynağına güncelleştirmeleri gönderdiğinizde, son olarak, bu nesneleri verilere dönüştürür.  
   
- [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]Aşağıdaki LINQ sağlayıcıları içerir.  
+ Visual Basic aşağıdaki LINQ sağlayıcıları içerir.  
   
 |Sağlayıcı|Açıklama|  
 |---|---|  
-|Nesnelere LINQ|Nesneleri sağlayıcısına LINQ Sorgu bellek içi koleksiyonları ve diziler sağlar. Bir nesne ya da destekliyorsa <xref:System.Collections.IEnumerable> veya <xref:System.Collections.Generic.IEnumerable%601> arabirimi, LINQ to nesneleri sağlayıcısı, sorgu olanak sağlar.<br /><br /> İçeri aktararak nesneleri sağlayıcısına LINQ etkinleştirebilirsiniz <xref:System.Linq> varsayılan olarak tüm içe ad alanı [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] projeleri.<br /><br /> Nesneleri sağlayıcısına LINQ hakkında daha fazla bilgi için bkz: [nesnelere LINQ](http://msdn.microsoft.com/library/73cafe73-37cf-46e7-bfa7-97c7eea7ced9).|  
-|LINQ - SQL|LINQ-SQL sağlayıcısı, sorgu ve SQL Server veritabanındaki verileri değiştirme olanak sağlar. Bu, tablolar ve bir veritabanındaki nesneler için bir uygulama için nesne modeli eşlemek kolaylaştırır.<br /><br /> [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]Nesne İlişkisel Tasarımcısı (O/R Tasarımcısı) dahil ederek LINQ-SQL çalışmak kolaylaştırır. Bu tasarımcı nesne modeli bir veritabanındaki nesneler için eşleşen bir uygulama oluşturmak için kullanılır. O/R Tasarımcısı ayrıca saklı yordamlar eşlemek için işlevsellik sağlar ve verecek işlevler <xref:System.Data.Linq.DataContext> veritabanı ile iletişim yönetir ve depolar iyimser eşzamanlılık denetimleri için Durum nesnesidir.<br /><br /> LINQ-SQL sağlayıcısı hakkında daha fazla bilgi için bkz: [LINQ-SQL](../../../../framework/data/adonet/sql/linq/index.md). Nesne İlişkisel Tasarımcısı hakkında daha fazla bilgi için bkz: [LINQ-SQL Visual Studio Araçları](/visualstudio/data-tools/linq-to-sql-tools-in-visual-studio2).|  
-|LINQ - XML|LINQ-XML sağlayıcısı, sorgu ve XML değiştirmenize olanak sağlar. Bellek içi XML'yi değiştirebilir, veya XML gelen ve XML kaydetme bir dosyaya yükleyebilirsiniz.<br /><br /> Ayrıca, XML sağlayıcısına LINQ XML değişmez değerleri ve XML doğrudan yazma sağlayan XML eksen özellikleri etkinleştirir, [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] kodu. Daha fazla bilgi için bkz: [XML](../../../../visual-basic/programming-guide/language-features/xml/index.md).|  
+|Nesnelere LINQ|Nesneleri sağlayıcısına LINQ Sorgu bellek içi koleksiyonları ve diziler sağlar. Bir nesne ya da destekliyorsa <xref:System.Collections.IEnumerable> veya <xref:System.Collections.Generic.IEnumerable%601> arabirimi, LINQ to nesneleri sağlayıcısı, sorgu olanak sağlar.<br /><br /> İçeri aktararak nesneleri sağlayıcısına LINQ etkinleştirebilirsiniz <xref:System.Linq> tüm Visual Basic projeleri için varsayılan olarak içeri aktarılan ad alanı.<br /><br /> Nesneleri sağlayıcısına LINQ hakkında daha fazla bilgi için bkz: [nesnelere LINQ](http://msdn.microsoft.com/library/73cafe73-37cf-46e7-bfa7-97c7eea7ced9).|  
+|LINQ - SQL|LINQ-SQL sağlayıcısı, sorgu ve SQL Server veritabanındaki verileri değiştirme olanak sağlar. Bu, tablolar ve bir veritabanındaki nesneler için bir uygulama için nesne modeli eşlemek kolaylaştırır.<br /><br /> Visual Basic nesne ilişkisel Tasarımcısı (O/R Tasarımcısı) dahil ederek LINQ-SQL çalışmak daha kolay hale getirir. Bu tasarımcı nesne modeli bir veritabanındaki nesneler için eşleşen bir uygulama oluşturmak için kullanılır. O/R Tasarımcısı ayrıca saklı yordamlar eşlemek için işlevsellik sağlar ve verecek işlevler <xref:System.Data.Linq.DataContext> veritabanı ile iletişim yönetir ve depolar iyimser eşzamanlılık denetimleri için Durum nesnesidir.<br /><br /> LINQ-SQL sağlayıcısı hakkında daha fazla bilgi için bkz: [LINQ-SQL](../../../../framework/data/adonet/sql/linq/index.md). Nesne İlişkisel Tasarımcısı hakkında daha fazla bilgi için bkz: [LINQ-SQL Visual Studio Araçları](/visualstudio/data-tools/linq-to-sql-tools-in-visual-studio2).|  
+|LINQ - XML|LINQ-XML sağlayıcısı, sorgu ve XML değiştirmenize olanak sağlar. Bellek içi XML'yi değiştirebilir, veya XML gelen ve XML kaydetme bir dosyaya yükleyebilirsiniz.<br /><br /> Ayrıca, XML sağlayıcısına LINQ XML değişmez değerleri ve XML doğrudan Visual Basic kodunda yazmak etkinleştirmeniz XML eksen özellikleri sağlar. Daha fazla bilgi için bkz: [XML](../../../../visual-basic/programming-guide/language-features/xml/index.md).|  
 |LINQ - DataSet|Veri kümesi sağlayıcısına LINQ Sorgu ve güncelleştirme verilerde sağlayan bir [!INCLUDE[vstecado](~/includes/vstecado-md.md)] veri kümesi. LINQ gücünü basitleştirmek ve yeteneklerinizi sorgulama, toplama ve Veri kümenizi verileri güncelleştirmek için genişletmek için veri kümeleri kullanan uygulamalar ekleyebilirsiniz.<br /><br /> Daha fazla bilgi için bkz: [LINQ-DataSet](../../../../framework/data/adonet/linq-to-dataset.md).|  
   
-##  <a name="StructureOfALINQQuery"></a>LINQ Sorgu yapısı  
+##  <a name="StructureOfALINQQuery"></a> LINQ Sorgu yapısı  
  LINQ Sorgu genellikle olarak bilinir bir *sorgu ifadesi*, veri kaynakları ve sorgu için yineleme değişkenleri tanımlamak sorgu yan tümceleri bileşimini oluşur. Bir sorgu ifadesi kaynak verilere uygulanacak sıralama, filtreleme, gruplama ve katılma veya hesaplamalar için yönergeleri de içerir. Sorgu ifade sözdizimi SQL söz dizimi benzer; Bu nedenle, sözdizimi çoğunu hakkında bilgi bulabilirsiniz.  
   
- Bir sorgu ifadesi ile başlayan bir `From` yan tümcesi. Bu yan tümcesi bir sorgu ve veri kaynağını her öğe için ayrı ayrı başvurmak için kullanılan değişkenler için kaynak verilerini tanımlar. Bu değişkenler adlı *aralık değişkenleri* veya *yineleme değişkenleri*. `From` Yan tümcesi dışında bir sorgu için gereklidir `Aggregate` sorguları yeri `From` yan tümcesi isteğe bağlı. Kapsamını ve sorgunun kaynağı olarak tanımlanan sonra `From` veya `Aggregate` yan tümceleri, sorguyu daraltmak için sorgu yan tümceleri herhangi bir birleşimini içerebilir. Sorgu yan tümceleri hakkında daha fazla ayrıntı için bkz: [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] LINQ Sorgu işleçleri bu konunun ilerleyen bölümlerinde. Örneğin, aşağıdaki sorguyu kaynak koleksiyonu Müşteri verilerinin tanımlayan `customers` değişkeni ve adlı bir yineleme değişkeni `cust`.  
+ Bir sorgu ifadesi ile başlayan bir `From` yan tümcesi. Bu yan tümcesi bir sorgu ve veri kaynağını her öğe için ayrı ayrı başvurmak için kullanılan değişkenler için kaynak verilerini tanımlar. Bu değişkenler adlı *aralık değişkenleri* veya *yineleme değişkenleri*. `From` Yan tümcesi dışında bir sorgu için gereklidir `Aggregate` sorguları yeri `From` yan tümcesi isteğe bağlı. Kapsamını ve sorgunun kaynağı olarak tanımlanan sonra `From` veya `Aggregate` yan tümceleri, sorguyu daraltmak için sorgu yan tümceleri herhangi bir birleşimini içerebilir. Sorgu yan tümceleri hakkında daha fazla ayrıntı için Visual Basic LINQ Sorgu işleçleri bu konunun ilerleyen bölümlerinde bkz. Örneğin, aşağıdaki sorguyu kaynak koleksiyonu Müşteri verilerinin tanımlayan `customers` değişkeni ve adlı bir yineleme değişkeni `cust`.  
   
  [!code-vb[VbVbalrIntroToLINQ#2](../../../../visual-basic/programming-guide/language-features/linq/codesnippet/VisualBasic/introduction-to-linq_3.vb)]  
   
@@ -98,10 +99,10 @@ Dil ile tümleşik sorgu (LINQ) ekler için sorgu özellikleri [!INCLUDE[vbprvb]
   
  [!code-vb[VbVbalrIntroToLINQ#6](../../../../visual-basic/programming-guide/language-features/linq/codesnippet/VisualBasic/introduction-to-linq_7.vb)]  
   
- Güçlü sorgu ifadeleri oluşturmak için kullanabileceğiniz birkaç ek LINQ Sorgu işleçleri vardır. Bu konunun sonraki bölümlerinde sorgu ifadesinde dahil çeşitli sorgu yan tümceleri açıklanır. Hakkındaki ayrıntılar için [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] sorgu yan tümceleri, bkz: [sorguları](../../../../visual-basic/language-reference/queries/queries.md).  
+ Güçlü sorgu ifadeleri oluşturmak için kullanabileceğiniz birkaç ek LINQ Sorgu işleçleri vardır. Bu konunun sonraki bölümlerinde sorgu ifadesinde dahil çeşitli sorgu yan tümceleri açıklanır. Visual Basic sorgu yan tümceleri hakkında daha fazla ayrıntı için bkz: [sorguları](../../../../visual-basic/language-reference/queries/queries.md).  
   
-##  <a name="VisualBasicLINQQueryOperators"></a>Visual Basic LINQ Sorgu işleçleri  
- Sınıflarda <xref:System.Linq> ad alanı ve LINQ sorgularını destekler diğer ad alanları oluşturmak ve uygulamanızın gereksinimlerine göre sorgular daraltmak için arama yöntemleri içerir. [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]en yaygın sorgu yan tümceleri için anahtar sözcükleri tarafından aşağıdaki tabloda açıklandığı gibi içerir.  
+##  <a name="VisualBasicLINQQueryOperators"></a> Visual Basic LINQ Sorgu işleçleri  
+ Sınıflarda <xref:System.Linq> ad alanı ve LINQ sorgularını destekler diğer ad alanları oluşturmak ve uygulamanızın gereksinimlerine göre sorgular daraltmak için arama yöntemleri içerir. Visual Basic tarafından aşağıdaki tabloda açıklandığı gibi en yaygın sorgu yan tümceleri için anahtar sözcükleri içerir.  
   
 |Terim|Tanım|  
 |---|---|  
@@ -120,7 +121,7 @@ Dil ile tümleşik sorgu (LINQ) ekler için sorgu özellikleri [!INCLUDE[vbprvb]
 |[Take Yan Tümcesi](../../../../visual-basic/language-reference/queries/take-clause.md)|İsteğe bağlı. Belirtilen sayıda bitişik öğeyi koleksiyonu başından döndürür. Örneğin:<br /><br /> [!code-vb[VbVbalrIntroToLINQ#20](../../../../visual-basic/programming-guide/language-features/linq/codesnippet/VisualBasic/introduction-to-linq_21.vb)]|  
 |[Take While Yan Tümcesi](../../../../visual-basic/language-reference/queries/take-while-clause.md)|İsteğe bağlı. Belirtilen bir koşul olduğu sürece bir koleksiyondaki öğeleri içeren `true` ve kalan öğeleri atlar. Örneğin:<br /><br /> [!code-vb[VbVbalrIntroToLINQ#21](../../../../visual-basic/programming-guide/language-features/linq/codesnippet/VisualBasic/introduction-to-linq_22.vb)]|  
   
- Hakkındaki ayrıntılar için [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] sorgu yan tümceleri, bkz: [sorguları](../../../../visual-basic/language-reference/queries/queries.md).  
+ Visual Basic sorgu yan tümceleri hakkında daha fazla ayrıntı için bkz: [sorguları](../../../../visual-basic/language-reference/queries/queries.md).  
   
  LINQ tarafından sağlanan numaralandırılabilir ve sorgulanabilir türleri arama üyeleri tarafından ek LINQ Sorgu özellikleri kullanabilirsiniz. Bir sorgu ifadesi sonucu üzerinde belirli bir sorgu işleci çağırarak bu ek özellikler kullanabilirsiniz. Örneğin, aşağıdaki örnek kullanımları kod <xref:System.Linq.Enumerable.Union%2A> iki sorguların sonuçlarını bir sorgu sonucu birleştirmek için yöntem. Kullandığı <xref:System.Linq.Enumerable.ToList%2A> yöntemi sorgu sonucu genel bir liste olarak döndürür.  
   
@@ -128,15 +129,15 @@ Dil ile tümleşik sorgu (LINQ) ekler için sorgu özellikleri [!INCLUDE[vbprvb]
   
  Ek LINQ özellikleri hakkında daha fazla bilgi için bkz [standart sorgu işleçlerine genel bakış](http://msdn.microsoft.com/library/24cda21e-8af8-4632-b519-c404a839b9b2).  
   
-##  <a name="ConnectingToADatabase"></a>LINQ-SQL kullanarak bir veritabanına bağlanma  
- İçinde [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]tabloları, görünümleri ve saklı yordamlar gibi SQL Server veritabanı nesneleri tanımlamak, SQL dosyası için bir LINQ kullanarak erişmek istediğiniz. Bir LINQ to SQL dosyası .dbml uzantısına sahip.  
+##  <a name="ConnectingToADatabase"></a> LINQ-SQL kullanarak bir veritabanına bağlanma  
+ Visual Basic'te, SQL Server veritabanı nesneleri tabloları, görünümleri ve saklı yordamlar SQL dosyası için bir LINQ kullanarak erişim sağlamak istediğiniz gibi tanımlayın. Bir LINQ to SQL dosyası .dbml uzantısına sahip.  
   
  Bir SQL Server veritabanı için geçerli bir bağlantı varsa, ekleyebileceğiniz bir **LINQ'ten SQL'e sınıflarını** projenize öğe şablonu. Bu nesne ilişkisel Tasarımcısı (O/R Tasarımcısı) görüntüler. O/R Tasarımcısı kodunuzdan erişmek için istediğiniz öğeleri sürükleyin sağlar **Sunucu Gezgini**/**Database Explorer** Tasarımcı yüzeyine. LINQ-SQL dosya ekler bir <xref:System.Data.Linq.DataContext> projenize nesnesi. Bu nesnenin özellikleri ve tabloları ve görünümleri, aramak istediğiniz saklı yordamlar için yöntemleri ve erişimi istediğiniz koleksiyonları içerir. LINQ-SQL (.dbml) dosyası için yaptığınız değişiklikleri kaydettikten sonra bu nesnelerin kodunuzda başvurarak erişebilirsiniz <xref:System.Data.Linq.DataContext> O/R tasarımcısı tarafından tanımlanan nesnesi. <xref:System.Data.Linq.DataContext> Projenizi adlı nesne temel alarak, LINQ to SQL dosya adı. Örneğin, bir LINQ to Northwind.dbml adlı SQL dosyası oluşturacak bir <xref:System.Data.Linq.DataContext> adlı nesne `NorthwindDataContext`.  
   
  Adım adım yönergeleri ile ilgili örnekler için bkz: [nasıl yapılır: veritabanını sorgulama](../../../../visual-basic/programming-guide/language-features/linq/how-to-query-a-database-by-using-linq.md) ve [nasıl yapılır: bir saklı yordam çağrısı](../../../../visual-basic/programming-guide/language-features/linq/how-to-call-a-stored-procedure-by-using-linq.md).  
   
-##  <a name="VisualBasicFeaturesThatSupportLINQ"></a>Lınq'i destekleyen Visual Basic özellikleri  
- [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]LINQ kullanımını basitleştirir ve LINQ sorgularını gerçekleştirmek için yazmanız gereken kod miktarını azaltmak diğer önemli özellikler içerir. Bunlar aşağıdakileri içerir:  
+##  <a name="VisualBasicFeaturesThatSupportLINQ"></a> Lınq'i destekleyen Visual Basic özellikleri  
+ Visual Basic, LINQ kullanımını basitleştirir ve LINQ sorgularını gerçekleştirmek için yazmanız gereken kod miktarını azaltmak diğer önemli özellikler içerir. Bunlar aşağıdakileri içerir:  
   
 -   **Anonim türler**, bir sorgu sonucuna göre yeni bir türü oluşturmak etkinleştirin.  
   
@@ -146,7 +147,7 @@ Dil ile tümleşik sorgu (LINQ) ekler için sorgu özellikleri [!INCLUDE[vbprvb]
   
  Ayrıntılar için bkz [Visual Basic özellikleri, destek LINQ](../../../../visual-basic/programming-guide/concepts/linq/features-that-support-linq.md).  
   
-##  <a name="QueryExecution"></a>Ertelenmiş ve hemen sorgu yürütme  
+##  <a name="QueryExecution"></a> Ertelenmiş ve hemen sorgu yürütme  
  Sorgu yürütme sorgu oluşturma ayrıdır. Bir sorgu oluşturulduktan sonra yürütülmesinin ayrı bir mekanizma tarafından tetiklenir. Sorguda tanımlanan hemen yürütülebilir (*hemen yürütme*), veya tanımı depolanabilir ve sorgu daha sonra çalıştırılabilir (*yürütme ertelenmiş*).  
   
  Bir sorgu oluşturduğunuzda varsayılan olarak, sorgu hemen çalıştırma. Bunun yerine, sorgu tanımı sorgu sonucu başvurmak için kullanılan değişkende depolanır. Sorgu sonucu değişkeni eriştiği kodu, daha sonra gibi bir `For…Next` döngü, sorgu gerçekleştirilir. Bu işlem olarak adlandırılır *yürütme ertelenmiş*.  
@@ -157,8 +158,8 @@ Dil ile tümleşik sorgu (LINQ) ekler için sorgu özellikleri [!INCLUDE[vbprvb]
   
  Sorgu yürütme hakkında daha fazla bilgi için bkz: [yazma bilgisayarınızı ilk LINQ sorgusu](../../../../visual-basic/programming-guide/concepts/linq/writing-your-first-linq-query.md).  
   
-##  <a name="XMLInVisualBasic"></a>Visual Basic'de XML  
- XML özellikleri [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] XML değişmez değerleri ve kolayca oluşturma, erişim, sorgu ve XML kodunuzu değiştirmek etkinleştirmeniz XML eksen özellikleri içerir. XML değişmez değerleri kodunuzda doğrudan XML yazmanızı sağlar. Visual Basic derleyici XML birinci sınıf veri nesnesi olarak değerlendirir.  
+##  <a name="XMLInVisualBasic"></a> Visual Basic'de XML  
+ XML değişmez değerleri Visual Basic'te XML özellikleri içerir ve kolayca oluşturmanıza olanak tanır, XML eksen özellikleri erişim, sorgu ve XML kodunuzu değiştirmek. XML değişmez değerleri kodunuzda doğrudan XML yazmanızı sağlar. Visual Basic derleyici XML birinci sınıf veri nesnesi olarak değerlendirir.  
   
  Aşağıdaki kod örneği, bir XML öğesi oluşturmak, kendi alt öğeleri ve özniteliklerinin erişmek ve öğenin içeriğini LINQ kullanarak sorgulama gösterilmektedir.  
   
@@ -166,19 +167,19 @@ Dil ile tümleşik sorgu (LINQ) ekler için sorgu özellikleri [!INCLUDE[vbprvb]
   
  Daha fazla bilgi için bkz: [XML](../../../../visual-basic/programming-guide/language-features/xml/index.md).  
   
-##  <a name="RelatedResources"></a>İlgili kaynaklar  
+##  <a name="RelatedResources"></a> İlgili kaynaklar  
   
 |Konu|Açıklama|  
 |---|---|  
-|[XML](../../../../visual-basic/programming-guide/language-features/xml/index.md)|XML özellikleri açıklanmıştır [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] , sorgulanan ve birinci sınıf veri nesneleri olarak XML Ekle sağlayan, [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] kodu.|  
-|[Sorgular](../../../../visual-basic/language-reference/queries/queries.md)|Kullanılabilir sorgu yan tümceleri hakkında başvuru bilgileri sağlar [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)].|  
+|[XML](../../../../visual-basic/programming-guide/language-features/xml/index.md)|Visual Basic'te, sorgulanabilir ve birinci sınıf veri nesneleri, Visual Basic kodundaki olarak XML eklemenizi sağlamak XML özellikleri açıklar.|  
+|[Sorgular](../../../../visual-basic/language-reference/queries/queries.md)|Visual Basic'te kullanılabilir sorgu yan tümceleri hakkında başvuru bilgileri sağlar.|  
 |[LINQ (dil ile tümleşik sorgu)](http://msdn.microsoft.com/library/a73c4aec-5d15-4e98-b962-1274021ea93d)|Genel bilgiler, programlama kılavuzu ve örnekleri için LINQ içerir.|  
 |[LINQ to SQL](../../../../framework/data/adonet/sql/linq/index.md)|LINQ-SQL genel bilgiler, programlama yönergeler ve örnekleri içerir.|  
 |[LINQ to Objects](http://msdn.microsoft.com/library/73cafe73-37cf-46e7-bfa7-97c7eea7ced9)|Nesnelere LINQ genel bilgiler, programlama yönergeler ve örnekleri içerir.|  
 |[LINQ to ADO.NET (Portal Sayfası)](http://msdn.microsoft.com/library/dd7d3c6a-ff98-47e9-a1a7-2d4cfc42d150)|LINQ to için genel bilgileri, programlama kılavuzu ve örnek bağlantılarını içerir [!INCLUDE[vstecado](~/includes/vstecado-md.md)].|  
 |[LINQ to XML](http://msdn.microsoft.com/library/f0fe21e9-ee43-4a55-b91a-0800e5782c13)|LINQ-XML için genel bilgileri, programlama kılavuzu ve örnekleri içerir.|  
   
-##  <a name="HowToAndWalkthroughTopics"></a>Nasıl yapılır ve gözden geçirme konuları  
+##  <a name="HowToAndWalkthroughTopics"></a> Nasıl yapılır ve gözden geçirme konuları  
  [Nasıl yapılır: veritabanını sorgulama](how-to-query-a-database-by-using-linq.md)  
   
  [Nasıl yapılır: bir saklı yordamı çağırma](how-to-call-a-stored-procedure-by-using-linq.md)  

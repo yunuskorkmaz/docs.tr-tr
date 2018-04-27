@@ -1,12 +1,13 @@
 ---
-title: "Windows Forms'ta Daha Güvenli Dosya ve Veri Erişimi"
-ms.custom: 
+title: Windows Forms'ta Daha Güvenli Dosya ve Veri Erişimi
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-winforms
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-winforms
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - csharp
@@ -20,16 +21,17 @@ helpviewer_keywords:
 - file access [Windows Forms]
 - security [Windows Forms], data access
 ms.assetid: 3cd3e55b-2f5e-40dd-835d-f50f7ce08967
-caps.latest.revision: "14"
+caps.latest.revision: 14
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 335e9487468522abb3a18f51f9a089d25519e71c
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
-ms.translationtype: MT
+ms.workload:
+- dotnet
+ms.openlocfilehash: 61e4893ac32d2013b090a748078ec1e3a84ea3ac
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="more-secure-file-and-data-access-in-windows-forms"></a>Windows Forms'ta Daha Güvenli Dosya ve Veri Erişimi
 [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] İzinlerini kaynakları ve veri korumaya yardımcı olmak için kullanır. Burada, uygulamanızın Okuma veya yazma veri uygulamaya verilen izinler bağlıdır. Uygulamanızı bir kısmi güven ortamında çalıştığında, verilerinize erişimi olmayabilir veya verilere erişme şeklini değiştirmek zorunda kalabilirsiniz.  
@@ -144,7 +146,7 @@ private void ButtonOpen_Click(object sender, System.EventArgs e)
 ```  
   
 > [!NOTE]
->  İçinde [!INCLUDE[csprcs](../../../includes/csprcs-md.md)], olay işleyicisi olanak sağlamak için kod ekleme emin olun. Aşağıdaki kod, önceki örnek kodu kullanarak, olay işleyicisi etkinleştirme gösterir.`this.ButtonOpen.Click += newSystem.Windows.Forms.EventHandler(this.ButtonOpen_Click);`  
+>  Visual C# ' olay işleyicisi olanak sağlamak için kod ekleme emin olun. Aşağıdaki kod, önceki örnek kodu kullanarak, olay işleyicisi etkinleştirme gösterir.`this.ButtonOpen.Click += newSystem.Windows.Forms.EventHandler(this.ButtonOpen_Click);`  
   
 ### <a name="other-files"></a>Diğer dosyaları  
  Bazen okumak veya kullanıcı, uygulama ayarları ne zaman sürdürülmesi gereken gibi belirtmediğinden emin dosyaları yazmak gerekir. Yerel intranet ve Internet bölgeleri uygulamanızı yerel bir dosyaya veri depolamak için izne sahip değil. Ancak, uygulamanızın yalıtılmış depolamada verileri depolamak mümkün olacaktır. Yalıtılmış Depolama verilerinin depolandığı gerçek dizin konumları içeren depoları olarak adlandırılan bir veya daha fazla yalıtılmış depolama dosyaları içeren bir soyut veri bölme (belirli bir depolama konumu değil) olur. Dosya erişim izinleri gibi <xref:System.Security.Permissions.FileIOPermission> gerekli değildir; bunun yerine, <xref:System.Security.Permissions.IsolatedStoragePermission> sınıfı yalıtılmış depolama için izinleri denetler. Varsayılan olarak, yerel intranet ve Internet bölgeleri çalışmakta olan uygulamalar yalıtılmış depolama kullanarak veri depolayabilir; Ancak, disk kotası gibi ayarları farklılık gösterebilir. Yalıtılmış depolama hakkında daha fazla bilgi için bkz: [yalıtılmış depolama](../../../docs/standard/io/isolated-storage.md).  
@@ -365,7 +367,7 @@ public void Write()
  Kısmi güvende çalıştırmak için uygulamanızın istediğinden doğrudan bir veritabanı erişemiyorsanız, verilerinize erişmek bir alternatif anlamına gelir gibi bir Web hizmetini kullanabilirsiniz. Bir Web hizmeti, bir ağ üzerinden programlı olarak erişilebilir yazılım parçasıdır. Web Hizmetleri ile uygulamaları kodu Grup dilimlerinde veri paylaşabilir. Varsayılan olarak, yerel intranet ve Internet bölgeleri uygulamalarda sitelerinin bunları aynı sunucu üzerinde barındırılan bir Web hizmetini çağırmak etkinleştirir kaynak erişim hakkı verilir. Daha fazla bilgi için bkz: [ASP.NET AJAX Web hizmetlerinde](http://msdn.microsoft.com/library/8290e543-7eff-47a4-aace-681f3c07229b) veya [Windows Communication Foundation](http://msdn.microsoft.com/library/ms735119.aspx).  
   
 ## <a name="registry-access"></a>Kayıt defteri erişimi  
- <xref:System.Security.Permissions.RegistryPermission> Sınıfı işletim sisteminin kayıt defterine erişim denetler. Varsayılan olarak, yerel olarak çalışan yalnızca uygulamaları kayıt erişebilir.  <xref:System.Security.Permissions.RegistryPermission>yalnızca bir uygulama kayıt defteri erişimi deneyin hakkı verir; işletim sistemi hala kayıt defterindeki güvenlik zorladığından, erişim başarılı olur, garanti etmez.  
+ <xref:System.Security.Permissions.RegistryPermission> Sınıfı işletim sisteminin kayıt defterine erişim denetler. Varsayılan olarak, yerel olarak çalışan yalnızca uygulamaları kayıt erişebilir.  <xref:System.Security.Permissions.RegistryPermission> yalnızca bir uygulama kayıt defteri erişimi deneyin hakkı verir; işletim sistemi hala kayıt defterindeki güvenlik zorladığından, erişim başarılı olur, garanti etmez.  
   
  Kısmi güven altında kayıt defterine erişemediği için diğer yöntemleri, veri depolamanın bulmak gerekebilir. Uygulama ayarlarını depolamak, yalıtılmış depolama kayıt defteri yerine kullanın. Yalıtılmış Depolama, diğer uygulamaya özgü dosyalarını depolamak için de kullanılabilir. Varsayılan olarak, uygulamanın kendi kaynak site erişim hakkı verilir çünkü sunucu veya siteyle kaynak, genel uygulama bilgilerini de depolayabilirsiniz.  
   

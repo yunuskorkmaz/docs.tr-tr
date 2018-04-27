@@ -1,24 +1,26 @@
 ---
-title: "Güvenlik konuları (Entity Framework)"
-ms.custom: 
+title: Güvenlik konuları (Entity Framework)
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-ado
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-ado
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 84758642-9b72-4447-86f9-f831fef46962
-caps.latest.revision: "4"
+caps.latest.revision: 4
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.workload: dotnet
-ms.openlocfilehash: 68b077ec6c7edd30882c9c84a10aa14060a589e8
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.workload:
+- dotnet
+ms.openlocfilehash: d70b1a6aff3e93122b5d0fb21affdfcd13d817e6
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="security-considerations-entity-framework"></a>Güvenlik konuları (Entity Framework)
 Bu konuda, geliştirme, dağıtmak ve çalıştırmak için belirli güvenlik konuları açıklanmaktadır [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] uygulamalar. Öneriler güvenli oluşturmak için izlemeniz gereken [!INCLUDE[dnprdnshort](../../../../../includes/dnprdnshort-md.md)] uygulamalar. Daha fazla bilgi için bkz: [güvenliğine genel bakış](../../../../../docs/framework/data/adonet/security-overview.md).  
@@ -84,7 +86,7 @@ Bu konuda, geliştirme, dağıtmak ve çalıştırmak için belirli güvenlik ko
   
 -   <xref:System.Security.Permissions.SecurityPermission>: <xref:System.Security.Permissions.SecurityPermissionFlag.SerializationFormatter> kullanarak özel durum seri hale getirmek için <xref:System.Runtime.Serialization.ISerializable> arabirimi.  
   
--   Bir veritabanı bağlantısı açın ve veritabanında komutları gibi yürütme izni <xref:System.Data.SqlClient.SqlClientPermission> için bir [!INCLUDE[ssNoVersion](../../../../../includes/ssnoversion-md.md)] veritabanı.  
+-   Bir veritabanı bağlantısı açın ve veritabanında komutları gibi yürütme izni <xref:System.Data.SqlClient.SqlClientPermission> SQL Server veritabanı için.  
   
  Daha fazla bilgi için bkz: [kod erişim güvenliği ve ADO.NET](../../../../../docs/framework/data/adonet/code-access-security.md).  
   
@@ -105,13 +107,13 @@ Bu konuda, geliştirme, dağıtmak ve çalıştırmak için belirli güvenlik ko
 #### <a name="prevent-sql-injection-attacks"></a>SQL ekleme saldırılarını önler.  
  Uygulamaları sık dış giriş (bir kullanıcı veya başka bir dış aracı) alın ve bu girişinize göre eylemleri gerçekleştirebilirsiniz. Tüm kullanıcı veya bir dış aracı doğrudan veya dolaylı olarak türetilmiş giriş izinsiz eylemler gerçekleştirmek için hedef dil söz dizimini kullanan içerik olabilir. Hedef dil olduğunda bir yapılandırılmış sorgu dili (SQL), aşağıdaki gibi [!INCLUDE[tsql](../../../../../includes/tsql-md.md)], bu işleme bir SQL ekleme saldırısı bilinir. Kötü niyetli bir kullanıcının sorguyu doğrudan komutlar ekleme ve bir veritabanı tablosu bırakın, hizmet reddine neden veya aksi halde gerçekleştirilmekte olan işlemin doğası değiştirebilirsiniz.  
   
--   [!INCLUDE[esql](../../../../../includes/esql-md.md)]ekleme saldırıları:  
+-   [!INCLUDE[esql](../../../../../includes/esql-md.md)] ekleme saldırıları:  
   
      SQL ekleme saldırıları yapılabilir [!INCLUDE[esql](../../../../../includes/esql-md.md)] kötü amaçlı bir sorgu koşulu ve parametre adları kullanılan değerleri giriş sağlayarak. SQL ekleme riskini önlemek için hiç kullanıcı girişi ile birleştirmelisiniz [!INCLUDE[esql](../../../../../includes/esql-md.md)] komut metni.  
   
-     [!INCLUDE[esql](../../../../../includes/esql-md.md)]Sorgu parametreleri değişmez değerleri kabul edildiğini her yerde kabul eder. Sorguyu doğrudan bir dış aracının injecting değişmez değerler yerine parametreli sorgular kullanmanız gerekir. Güvenli bir şekilde oluşturmak için Sorgu Oluşturucu yöntemleri kullanarak de dikkate almalısınız [varlık SQL](http://msdn.microsoft.com/library/05685434-05e6-41c2-8d5e-8933b88a40b0).  
+     [!INCLUDE[esql](../../../../../includes/esql-md.md)] Sorgu parametreleri değişmez değerleri kabul edildiğini her yerde kabul eder. Sorguyu doğrudan bir dış aracının injecting değişmez değerler yerine parametreli sorgular kullanmanız gerekir. Güvenli bir şekilde oluşturmak için Sorgu Oluşturucu yöntemleri kullanarak de dikkate almalısınız [varlık SQL](http://msdn.microsoft.com/library/05685434-05e6-41c2-8d5e-8933b88a40b0).  
   
--   [!INCLUDE[linq_entities](../../../../../includes/linq-entities-md.md)]ekleme saldırıları:  
+-   [!INCLUDE[linq_entities](../../../../../includes/linq-entities-md.md)] ekleme saldırıları:  
   
      Sorgu oluşturma mümkün olsa da [!INCLUDE[linq_entities](../../../../../includes/linq-entities-md.md)], nesne modeli API'si gerçekleştirilir. Farklı [!INCLUDE[esql](../../../../../includes/esql-md.md)] sorguları, [!INCLUDE[linq_entities](../../../../../includes/linq-entities-md.md)] sorguları, dize düzenlemesi veya birleştirme kullanarak değil oluşur ve geleneksel SQL ekleme saldırılara açık değildir.  
   
@@ -161,13 +163,13 @@ Bu konuda, geliştirme, dağıtmak ve çalıştırmak için belirli güvenlik ko
  Ancak, değerlere kök işleci (`~`) ve `DataDirectory` değiştirme dizesi Çöz kalır sabit uygulamanın çalışma zamanı sırasında [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] bu değerleri değiştirme ana bilgisayarın kısıtlamaz.  
   
 #### <a name="verify-the-path-length-before-deployment"></a>Dağıtımdan önce yol uzunluğu doğrulayın.  
- Dağıtmadan önce bir [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] uygulaması emin olun, kök işleci (~) değerlerini ve `DataDirectory` değiştirme dizesi işletim sistemindeki yol uzunluğu sınırı aşmadığından. [!INCLUDE[vstecado](../../../../../includes/vstecado-md.md)]veri sağlayıcıları, yol uzunluğu geçerli sınırlarda olduğundan emin olursunuz.  
+ Dağıtmadan önce bir [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] uygulaması emin olun, kök işleci (~) değerlerini ve `DataDirectory` değiştirme dizesi işletim sistemindeki yol uzunluğu sınırı aşmadığından. [!INCLUDE[vstecado](../../../../../includes/vstecado-md.md)] veri sağlayıcıları, yol uzunluğu geçerli sınırlarda olduğundan emin olursunuz.  
   
 ## <a name="security-considerations-for-adonet-metadata"></a>ADO.NET meta veriler için güvenlik konuları  
  Oluşturma ve model ve eşleme dosyaları ile çalışırken aşağıdaki güvenlik hususlarını uygulayın.  
   
 #### <a name="do-not-expose-sensitive-information-through-logging"></a>Günlüğe kaydetme aracılığıyla hassas bilgilerin açığa çıkarmaz.  
- [!INCLUDE[vstecado](../../../../../includes/vstecado-md.md)]meta veri hizmet bileşenleri herhangi bir özel bilgi oturum açılamıyor. Erişim kısıtlamaları nedeniyle döndürülen sonuç yoksa veritabanı yönetim sistemleri ve dosya sistemleri, hassas bilgiler içeren bir özel durum oluşturma yerine sıfır sonuçların döndürülmesi gerekir.  
+ [!INCLUDE[vstecado](../../../../../includes/vstecado-md.md)] meta veri hizmet bileşenleri herhangi bir özel bilgi oturum açılamıyor. Erişim kısıtlamaları nedeniyle döndürülen sonuç yoksa veritabanı yönetim sistemleri ve dosya sistemleri, hassas bilgiler içeren bir özel durum oluşturma yerine sıfır sonuçların döndürülmesi gerekir.  
   
 #### <a name="do-not-accept-metadataworkspace-objects-from-untrusted-sources"></a>Güvenilir olmayan kaynaklardan gelen MetadataWorkspace nesneleri kabul etmez.  
  Uygulamaları kabul örneklerini <xref:System.Data.Metadata.Edm.MetadataWorkspace> güvenilir olmayan kaynaklardan gelen sınıfı. Bunun yerine, açıkça oluşturun ve bu tür bir kaynaktan bir çalışma alanı doldurmak.  

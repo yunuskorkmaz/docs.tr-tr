@@ -1,12 +1,13 @@
 ---
-title: "Sınıf Oluşturmak için Şemayı İçe Aktarma"
-ms.custom: 
+title: Sınıf Oluşturmak için Şemayı İçe Aktarma
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - csharp
@@ -15,16 +16,17 @@ helpviewer_keywords:
 - WCF, schema import and export
 - XsdDataContractImporter class
 ms.assetid: b9170583-8c34-43bd-97bb-6c0c8dddeee0
-caps.latest.revision: "15"
+caps.latest.revision: 15
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: a872fbd5be56fed3d01481d1740c70932fd60c06
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
-ms.translationtype: MT
+ms.workload:
+- dotnet
+ms.openlocfilehash: 7fc755ff7f1b6c583a1e9aa1bc209495563812f0
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="importing-schema-to-generate-classes"></a>Sınıf Oluşturmak için Şemayı İçe Aktarma
 İle kullanılabilen şemaları sınıfları oluşturmak için [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)], kullanın <xref:System.Runtime.Serialization.XsdDataContractImporter> sınıfı. Bu konu işlemini ve farklılıkları açıklar.  
@@ -63,7 +65,7 @@ ms.lasthandoff: 12/22/2017
   
  Normalde, genel türleri özel alanlar ve eşleşen ortak veri üye özellikleri ile şemasından üretilir. Bunun yerine iç türleri oluşturmak üzere <xref:System.Runtime.Serialization.ImportOptions.GenerateInternal%2A> özelliğine `true`.  
   
- Aşağıdaki örnek, bir iç dönüştürülen bir şema gösterir sınıfı <xref:System.Runtime.Serialization.ImportOptions.GenerateInternal%2A> özelliği ayarlanmış`true.`  
+ Aşağıdaki örnek, bir iç dönüştürülen bir şema gösterir sınıfı <xref:System.Runtime.Serialization.ImportOptions.GenerateInternal%2A> özelliği ayarlanmış `true.`  
   
  [!code-csharp[c_SchemaImportExport#2](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_schemaimportexport/cs/source.cs#2)]
  [!code-vb[c_SchemaImportExport#2](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_schemaimportexport/vb/source.vb#2)]  
@@ -77,7 +79,7 @@ ms.lasthandoff: 12/22/2017
   
  [!code-xml[c_SchemaImportExport#10](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_schemaimportexport/common/source.config#10)]  
   
- Aşağıdaki örnek kullanır `Namespaces` "http://schemas.contoso.com/carSchema" ad "Contoso.Cars" alanına eşlemek için özellik.  
+ Aşağıdaki örnek kullanır `Namespaces` eşlemek için özellik "http://schemas.contoso.com/carSchema" ad "Contoso.Cars" alanına.  
   
  [!code-csharp[c_SchemaImportExport#8](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_schemaimportexport/cs/source.cs#8)]
  [!code-vb[c_SchemaImportExport#8](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_schemaimportexport/vb/source.vb#8)]  
@@ -95,7 +97,7 @@ ms.lasthandoff: 12/22/2017
 #### <a name="adding-data-binding-support-enabledatabinding-or-the-enabledatabinding-switch"></a>Veri bağlama desteği (EnableDataBinding ya da /enableDataBinding anahtar) ekleme  
  Bu karşılık **/enableDataBinding** Svcutil.exe aracını kullanarak geçiş yapın.  
   
- Bazı durumlarda, böylece bu tür örnekleri için herhangi bir güncelleştirme kullanıcı Arabirimi otomatik olarak güncelleştirilecek şemadan grafik kullanıcı arabirimi bileşenlerini oluşturulan türlerini bağlamak isteyebilirsiniz. `XsdDataContractImporter` Uygulama türleri oluşturabilir <xref:System.ComponentModel.INotifyPropertyChanged> herhangi bir özellik değişikliği bir olay tetikler şekilde arabirimi. Bu arabirim destekleyen bir istemci kullanıcı Arabirimi bir programlama ortamı ile kullanılmak üzere türleri oluşturma varsa (gibi [!INCLUDE[avalon1](../../../../includes/avalon1-md.md)]) ayarlayın <xref:System.Runtime.Serialization.ImportOptions.EnableDataBinding%2A> özelliğine `true` bu özelliği etkinleştirmek için.  
+ Bazı durumlarda, böylece bu tür örnekleri için herhangi bir güncelleştirme kullanıcı Arabirimi otomatik olarak güncelleştirilecek şemadan grafik kullanıcı arabirimi bileşenlerini oluşturulan türlerini bağlamak isteyebilirsiniz. `XsdDataContractImporter` Uygulama türleri oluşturabilir <xref:System.ComponentModel.INotifyPropertyChanged> herhangi bir özellik değişikliği bir olay tetikler şekilde arabirimi. Bu arabirim (gibi Windows Presentation Foundation (WPF)) destekleyen bir istemci kullanıcı Arabirimi bir programlama ortamı ile kullanılmak üzere türleri oluşturmak istiyorsanız, ayarlayın <xref:System.Runtime.Serialization.ImportOptions.EnableDataBinding%2A> özelliğine `true` bu özelliği etkinleştirmek için.  
   
  Aşağıdaki örnekte gösterildiği `Vehicle` ile oluşturulan sınıf <xref:System.Runtime.Serialization.ImportOptions.EnableDataBinding%2A> kümesine `true`.  
   
@@ -112,7 +114,7 @@ ms.lasthandoff: 12/22/2017
  [!code-xml[C_SchemaImportExport#12](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_schemaimportexport/common/source.config#12)]  
   
 > [!NOTE]
->  Herhangi bir ilişkisi de listesini değerlendirilebilir. Örneğin, karmaşık bir liste olarak önceki ilişkilendirmesini görüntüleyebilirsiniz `city` (bir dize alanı ve tamsayı alan) iki alan sahipse nesneleri. İki desen gösterimi XSD şemasına sahip. Bir liste arasında bir ilişki sürece desenler her zaman listeleri davranılır şekilde ayırt etmek için bir yolu yoktur bir özel ek açıklama özgü [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] şemada mevcuttur. Ek açıklamanın belirli bir desen bir ilişkiyi temsil ettiğini gösterir. [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)][Veri sözleşmesi şema başvurusu](../../../../docs/framework/wcf/feature-details/data-contract-schema-reference.md).  
+>  Herhangi bir ilişkisi de listesini değerlendirilebilir. Örneğin, karmaşık bir liste olarak önceki ilişkilendirmesini görüntüleyebilirsiniz `city` (bir dize alanı ve tamsayı alan) iki alan sahipse nesneleri. İki desen gösterimi XSD şemasına sahip. Bir liste arasında bir ilişki sürece desenler her zaman listeleri davranılır şekilde ayırt etmek için bir yolu yoktur bir özel ek açıklama özgü [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] şemada mevcuttur. Ek açıklamanın belirli bir desen bir ilişkiyi temsil ettiğini gösterir. [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)] [Veri sözleşmesi şema başvurusu](../../../../docs/framework/wcf/feature-details/data-contract-schema-reference.md).  
   
  Genel bir listeden veya olarak türetilen bir koleksiyon veri sözleşmesi olarak listesini normalde, alınan bir [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] olsun veya olmasın koleksiyonlar için standart adlandırma deseni bir şemayı izlediğinden bağlı olarak, dizi. Bu daha ayrıntılı olarak açıklanmıştır [veri sözleşmelerinde koleksiyon türleri](../../../../docs/framework/wcf/feature-details/collection-types-in-data-contracts.md). İlişkilendirmeleri ya da normal olarak içeri aktarılan bir <xref:System.Collections.Generic.Dictionary%602> veya sözlük nesnesinden türer bir koleksiyonu veri sözleşme. Örneğin, aşağıdaki şema göz önünde bulundurun.  
   
@@ -159,7 +161,7 @@ ms.lasthandoff: 12/22/2017
   
 ##### <a name="design-considerations"></a>Tasarım konuları  
   
--   Zayıf yazılmış XML gösterimi ile doğrudan çalışmak zor olabilir. Bir alternatif serileştirme motoruna gibi kullanmayı <xref:System.Xml.Serialization.XmlSerializer>, şema verilerle uyumlu olmayan sözleşmeleri kesin türü belirtilmiş şekilde çalışmak için. [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)][XmlSerializer sınıfını kullanma](../../../../docs/framework/wcf/feature-details/using-the-xmlserializer-class.md).  
+-   Zayıf yazılmış XML gösterimi ile doğrudan çalışmak zor olabilir. Bir alternatif serileştirme motoruna gibi kullanmayı <xref:System.Xml.Serialization.XmlSerializer>, şema verilerle uyumlu olmayan sözleşmeleri kesin türü belirtilmiş şekilde çalışmak için. [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)] [XmlSerializer sınıfını kullanma](../../../../docs/framework/wcf/feature-details/using-the-xmlserializer-class.md).  
   
 -   Bazı şema yapıları tarafından aktarılamaz <xref:System.Runtime.Serialization.XsdDataContractImporter> bile <xref:System.Runtime.Serialization.ImportOptions.ImportXmlType%2A> özelliği ayarlanmış `true`. Yeniden kullanmayı <xref:System.Xml.Serialization.XmlSerializer> bu gibi durumlarda için.  
   
@@ -186,9 +188,9 @@ ms.lasthandoff: 12/22/2017
 #### <a name="import-options-advanced-options"></a>İçeri aktarma seçenekleri: Gelişmiş Seçenekleri  
  Aşağıdaki içeri aktarma Gelişmiş Seçenekler:  
   
--   <xref:System.Runtime.Serialization.ImportOptions.CodeProvider%2A>özellik. Belirtin <xref:System.CodeDom.Compiler.CodeDomProvider> oluşturulan sınıflar için kod oluşturmak için kullanılacak. Alma mekanizması girişimleri önlemek için özellikleri <xref:System.CodeDom.Compiler.CodeDomProvider> desteklemiyor. Varsa <xref:System.Runtime.Serialization.ImportOptions.CodeProvider%2A> ayarlı değil, tam kümesi [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] özellikleri ile herhangi bir kısıtlama kullanılır.  
+-   <xref:System.Runtime.Serialization.ImportOptions.CodeProvider%2A> özellik. Belirtin <xref:System.CodeDom.Compiler.CodeDomProvider> oluşturulan sınıflar için kod oluşturmak için kullanılacak. Alma mekanizması girişimleri önlemek için özellikleri <xref:System.CodeDom.Compiler.CodeDomProvider> desteklemiyor. Varsa <xref:System.Runtime.Serialization.ImportOptions.CodeProvider%2A> ayarlı değil, tam kümesi [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] özellikleri ile herhangi bir kısıtlama kullanılır.  
   
--   <xref:System.Runtime.Serialization.ImportOptions.DataContractSurrogate%2A>özellik. Bir <xref:System.Runtime.Serialization.IDataContractSurrogate> uygulaması bu özellik ile belirtilebilir. <xref:System.Runtime.Serialization.IDataContractSurrogate> İçeri aktarma işlemi özelleştirir. [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)][Veri sözleşmesi yedekleri](../../../../docs/framework/wcf/extending/data-contract-surrogates.md). Varsayılan olarak, hiçbir yedek kullanılır.  
+-   <xref:System.Runtime.Serialization.ImportOptions.DataContractSurrogate%2A> özellik. Bir <xref:System.Runtime.Serialization.IDataContractSurrogate> uygulaması bu özellik ile belirtilebilir. <xref:System.Runtime.Serialization.IDataContractSurrogate> İçeri aktarma işlemi özelleştirir. [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)] [Veri sözleşmesi yedekleri](../../../../docs/framework/wcf/extending/data-contract-surrogates.md). Varsayılan olarak, hiçbir yedek kullanılır.  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
  <xref:System.Runtime.Serialization.DataContractSerializer>  

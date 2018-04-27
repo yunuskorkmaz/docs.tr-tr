@@ -1,34 +1,36 @@
 ---
-title: "İzlenecek yol: Microsoft Expression Blend Kullanarak Düğme Oluşturma"
-ms.custom: 
+title: 'İzlenecek yol: Microsoft Expression Blend Kullanarak Düğme Oluşturma'
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-wpf
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-wpf
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - buttons [WPF]
 - converting [WPF], shape to button
 - Expression Blend [WPF Designer]
 ms.assetid: ff5037c2-bba7-4cae-8abb-6475b686c48e
-caps.latest.revision: "13"
+caps.latest.revision: 13
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 76025da208cc0929a20c379f76106d7e101c3358
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: e029537466e836cfc103bad64d4102652162c465
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="walkthrough-create-a-button-by-using-microsoft-expression-blend"></a>İzlenecek yol: Microsoft Expression Blend Kullanarak Düğme Oluşturma
 Bu kılavuzda oluşturma işleminde size adımlar bir [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] Microsoft Expression Blend kullanarak özelleştirilmiş düğmesi.  
   
 > [!IMPORTANT]
->  Microsoft Expression Blend çalışır oluşturarak [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)] , sonra derlenmiş bir yürütülebilir programı yapma. Bunun yerine ile çalışır, [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)] doğrudan bu kullanarak bir tane olarak aynı uygulamayı oluşturan başka bir gözden geçirme yok [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)] ile [!INCLUDE[vs_current_short](../../../../includes/vs-current-short-md.md)] karışım yerine. Bkz: [bir düğme kullanarak XAML tarafından oluşturmak](../../../../docs/framework/wpf/controls/walkthrough-create-a-button-by-using-xaml.md) daha fazla bilgi için.  
+>  Microsoft Expression Blend çalışır oluşturarak [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)] , sonra derlenmiş bir yürütülebilir programı yapma. Bunun yerine ile çalışır, [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)] doğrudan bu kullanarak bir tane olarak aynı uygulamayı oluşturan başka bir gözden geçirme yok [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)] karışım yerine, Visual Studio ile. Bkz: [bir düğme kullanarak XAML tarafından oluşturmak](../../../../docs/framework/wpf/controls/walkthrough-create-a-button-by-using-xaml.md) daha fazla bilgi için.  
   
  Aşağıdaki çizimde, oluşturacağınız özelleştirilmiş düğmesini gösterir.  
   
@@ -73,7 +75,7 @@ Bu kılavuzda oluşturma işleminde size adımlar bir [!INCLUDE[TLA2#tla_wpf](..
   
      !["Stil kaynağı oluştur" iletişim kutusu](../../../../docs/framework/wpf/controls/media/custom-button-blend-makebutton2.gif "custom_button_blend_MakeButton2")  
   
-     İçin **kaynak adı (anahtar)**seçin **tümüne uygula**.  Bu, sonuçta elde edilen stil ve düğmeler tüm nesnelere Uygula düğmesini şablon hale getirir. İçin **tanımlayın**seçin **uygulama**. Bu, sonuçta elde edilen stil ve tüm uygulama kapsama sahip düğmesi şablon hale getirir. Bu iki kutularında değerleri ayarlayın, tüm uygulama içindeki tüm düğmeleri düğme stili ve şablonu uygulamak ve uygulamada oluşturduğunuz her düğme, varsayılan olarak, bu şablonu kullanın.  
+     İçin **kaynak adı (anahtar)** seçin **tümüne uygula**.  Bu, sonuçta elde edilen stil ve düğmeler tüm nesnelere Uygula düğmesini şablon hale getirir. İçin **tanımlayın**seçin **uygulama**. Bu, sonuçta elde edilen stil ve tüm uygulama kapsama sahip düğmesi şablon hale getirir. Bu iki kutularında değerleri ayarlayın, tüm uygulama içindeki tüm düğmeleri düğme stili ve şablonu uygulamak ve uygulamada oluşturduğunuz her düğme, varsayılan olarak, bu şablonu kullanın.  
   
 ## <a name="edit-the-button-template"></a>Düğme şablonunu düzenleyin.  
  Artık bir düğmeye değiştirilmiş bir dikdörtgen var. Bu bölümde, şablonu düğmesinin değiştirmek ve nasıl göründüğünü özelleştirin.  

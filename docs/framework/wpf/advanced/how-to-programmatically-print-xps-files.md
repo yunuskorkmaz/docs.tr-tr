@@ -17,11 +17,11 @@ ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: 55a9a50527df0605cb9699622a165147597a500a
-ms.sourcegitcommit: 9a4fe1a1c37b26532654b4bbe22d702237950009
+ms.openlocfilehash: 9e461a847e36277cb7d70534249a926693584b1f
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="how-to-programmatically-print-xps-files"></a>Nasıl yapılır: Program Aracılığıyla XPS Dosyalarını Yazdırma
 Bir aşırı yüklemesini kullanabilirsiniz <xref:System.Printing.PrintQueue.AddJob%2A> yazdırmak için yöntemi [!INCLUDE[TLA#tla_xps](../../../../includes/tlasharptla-xps-md.md)] dosyaları açmadan bir <xref:System.Windows.Controls.PrintDialog> veya İlkesi, tüm [!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)] hiç.  
@@ -56,9 +56,9 @@ Bir aşırı yüklemesini kullanabilirsiniz <xref:System.Printing.PrintQueue.Add
   
  XPSDrv yazıcısı kullanıyorsanız sonra son parametre ayarlayabileceğiniz `true`. Bu durumda, bu yana [!INCLUDE[TLA2#tla_xps](../../../../includes/tla2sharptla-xps-md.md)] yazıcının sayfa açıklaması dili, yöntem, doğrulamadan veya başka bir sayfa tanımlama dili dönüştürme, yazıcıya dosya gönderir. Tasarım zamanında uygulama XPSDrv yazıcısı kullanarak vermeme emin değilseniz, uygulama okumak için değiştirebileceğiniz <xref:System.Printing.PrintQueue.IsXpsDevice%2A> özelliği ve neler bulduğu göre dalı.  
   
- Başlangıçta olacağından az XPSDrv kullanılabilir hemen yayımlandıktan sonra [!INCLUDE[TLA#tla_winvista](../../../../includes/tlasharptla-winvista-md.md)] ve [!INCLUDE[TLA#tla_winfx](../../../../includes/tlasharptla-winfx-md.md)], XPSDrv yazıcısı XPSDrv yazıcısı olarak gönderimi gerekebilir. Bunu yapmak için uygulamanızı çalıştıran bilgisayar aşağıdaki kayıt defteri anahtarında dosyaların listesini Pipelineconfig.xml'i ekleyin:  
+ Başlangıçta olacağından az XPSDrv kullanılabilir hemen yayımlandıktan sonra [!INCLUDE[TLA#tla_winvista](../../../../includes/tlasharptla-winvista-md.md)] ve Microsoft .NET Framework ihtiyacınız olabilecek XPSDrv yazıcısı XPSDrv yazıcısı olarak gönderimi. Bunu yapmak için uygulamanızı çalıştıran bilgisayar aşağıdaki kayıt defteri anahtarında dosyaların listesini Pipelineconfig.xml'i ekleyin:  
   
- HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\Print\Environments\Windows NT x86\Drivers\Version-3\\*\<PseudoXPSPrinter>*\DependentFiles  
+ HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\Print\Environments\Windows NT x86\Drivers\Version-3\\*\<PseudoXPSPrinter>* \DependentFiles  
   
  Burada  *\<PseudoXPSPrinter >* herhangi bir yazdırma sırasıdır. Makinenin daha sonra yeniden başlatılması gerekiyor.  
   
@@ -66,7 +66,7 @@ Bir aşırı yüklemesini kullanabilirsiniz <xref:System.Printing.PrintQueue.Add
   
  **Not** kolaylık sağlamak için yukarıdaki örnek varlığını kullanan bir \*.xps uzantısı bir dosyadır kendi test olarak [!INCLUDE[TLA2#tla_xps](../../../../includes/tla2sharptla-xps-md.md)]. Ancak, [!INCLUDE[TLA2#tla_xps](../../../../includes/tla2sharptla-xps-md.md)] bu uzantıya sahip dosyaların gerekmez. [İsXPS.exe (isXPS uyumluluk aracı)](https://msdn.microsoft.com/library/bfbb433f-7ab6-417a-90f0-71443d76bcb3(v=vs.100)) tek bir dosya için sınamanın bir yolu [!INCLUDE[TLA2#tla_xps](../../../../includes/tla2sharptla-xps-md.md)] geçerlilik.  
   
-## <a name="see-also"></a>Ayrıca bkz.  
+## <a name="see-also"></a>Ayrıca Bkz.  
  <xref:System.Printing.PrintQueue>  
  <xref:System.Printing.PrintQueue.AddJob%2A>  
  <xref:System.Threading.ApartmentState>  

@@ -1,12 +1,13 @@
 ---
-title: "İzlenecek Yol: Görsel Devralmayı Gösterme"
-ms.custom: 
+title: 'İzlenecek Yol: Görsel Devralmayı Gösterme'
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-winforms
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-winforms
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - csharp
@@ -18,16 +19,17 @@ helpviewer_keywords:
 - walkthroughs [Windows Forms], visual inheritance
 - Windows Forms, inheritance
 ms.assetid: 01966086-3142-450e-8210-3fd4cb33f591
-caps.latest.revision: "24"
+caps.latest.revision: 24
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 7c5ef33be9841b5c74b6ae2448daf56079489b61
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.workload:
+- dotnet
+ms.openlocfilehash: e76ddcb33980db1a6d1b6e602c1b71da60b53381
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="walkthrough-demonstrating-visual-inheritance"></a>İzlenecek Yol: Görsel Devralmayı Gösterme
 Görsel devralma temel form üzerinde denetimleri görmek için ve yeni denetim eklemek için sağlar. Bu kılavuzda temel form oluşturma ve bir sınıf kitaplığı'na derleyin. Bu sınıf kitaplığı başka bir projeye almak ve temel formundan devralan yeni bir form oluşturun. Bu gözden geçirme sırasında öğreneceksiniz nasıl yapılır:  
@@ -157,7 +159,7 @@ Görsel devralma temel form üzerinde denetimleri görmek için ve yeni denetim 
   
 7.  Özel seçin **Say güle güle** düğmesi ve yeniden boyutlandırma yok dikkat edin. Buna ek olarak **özellikleri** penceresinde, bu düğmenin özelliklerini gri bunlar değiştirilemez belirtmek için.  
   
-8.  Kullanıyorsanız [!INCLUDE[csprcs](../../../../includes/csprcs-md.md)]:  
+8.  Visual C# kullanıyorsanız:  
   
     1.  İçinde **Çözüm Gezgini**, sağ **Form1** içinde **InheritanceTest** proje ve ardından **silmek**. Görüntülenen ileti kutusunda tıklatın **Tamam** silme işlemini onaylayın.  
   
@@ -172,7 +174,7 @@ Görsel devralma temel form üzerinde denetimleri görmek için ve yeni denetim 
 12. Uygulamayı çalıştırın ve devralınan form davranışını izlemek için F5 tuşuna basın.  
   
 ## <a name="next-steps"></a>Sonraki Adımlar  
- Kullanıcı denetimleri için devralma kadar aynı şekilde çalışır. Yeni bir sınıf kitaplığı projesi açın ve bir kullanıcı denetimi ekle. Bağlı denetimler üzerindeki yerleştirin ve projeyi derleyin. Başka bir yeni sınıf kitaplığı proje açın ve derlenmiş sınıf kitaplığına bir başvuru ekleyin. Ayrıca, devralınan bir denetim eklemeyi deneyin (aracılığıyla **yeni öğeler eklemek** iletişim kutusu) projeye ve kullanarak **devralma Seçici**. Bir kullanıcı denetimi ekleme ve değiştirme `Inherits` (`:` içinde [!INCLUDE[csprcs](../../../../includes/csprcs-md.md)]) ifadesi. Daha fazla bilgi için bkz: [nasıl yapılır: Windows Forms devral](../../../../docs/framework/winforms/advanced/how-to-inherit-windows-forms.md).  
+ Kullanıcı denetimleri için devralma kadar aynı şekilde çalışır. Yeni bir sınıf kitaplığı projesi açın ve bir kullanıcı denetimi ekle. Bağlı denetimler üzerindeki yerleştirin ve projeyi derleyin. Başka bir yeni sınıf kitaplığı proje açın ve derlenmiş sınıf kitaplığına bir başvuru ekleyin. Ayrıca, devralınan bir denetim eklemeyi deneyin (aracılığıyla **yeni öğeler eklemek** iletişim kutusu) projeye ve kullanarak **devralma Seçici**. Bir kullanıcı denetimi ekleme ve değiştirme `Inherits` (`:` Visual C# ' ta) ifadesi. Daha fazla bilgi için bkz: [nasıl yapılır: Windows Forms devral](../../../../docs/framework/winforms/advanced/how-to-inherit-windows-forms.md).  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
  [Nasıl yapılır: Windows Forms’u Devralma](../../../../docs/framework/winforms/advanced/how-to-inherit-windows-forms.md)  

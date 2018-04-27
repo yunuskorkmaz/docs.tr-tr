@@ -1,30 +1,32 @@
 ---
-title: "İstemci Uygulama Hizmetlerine Genel Bakış"
-ms.custom: 
+title: İstemci Uygulama Hizmetlerine Genel Bakış
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - client application services, classes
 - client application services, about client application services
 ms.assetid: f0a2da13-e282-4fd7-88a1-f9102c9aeab1
-caps.latest.revision: "25"
+caps.latest.revision: 25
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 55b4ab154f9f3a9b17274697c30ca826218322ab
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
-ms.translationtype: MT
+ms.workload:
+- dotnet
+ms.openlocfilehash: 9ddc1b505146e7ca31bca5acc5e9d19d258a860d
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="client-application-services-overview"></a>İstemci Uygulama Hizmetlerine Genel Bakış
-İstemci uygulama hizmetleri sağlamak için Basitleştirilmiş erişim [!INCLUDE[ajax_current_short](../../../includes/ajax-current-short-md.md)] oturum açma, roller ve Windows Forms ve Windows Presentation Foundation (WPF) uygulamalardan profili Hizmetleri. [!INCLUDE[ajax_current_short](../../../includes/ajax-current-short-md.md)]Uygulama Hizmetleri, Microsoft ASP.NET 2.0 AJAX, içerdiği uzantıları bulunmaktadır [!INCLUDE[vs_orcas_long](../../../includes/vs-orcas-long-md.md)] ve [!INCLUDE[net_v35_long](../../../includes/net-v35-long-md.md)]. Bu hizmetler, birden çok Web ve Windows tabanlı uygulamalar kullanıcı bilgileri ve kullanıcı yönetimi işlevleri tek bir sunucudan paylaşmak için etkinleştirin.  
+İstemci uygulama hizmetleri sağlamak için Basitleştirilmiş erişim [!INCLUDE[ajax_current_short](../../../includes/ajax-current-short-md.md)] oturum açma, roller ve Windows Forms ve Windows Presentation Foundation (WPF) uygulamalardan profili Hizmetleri. [!INCLUDE[ajax_current_short](../../../includes/ajax-current-short-md.md)] Uygulama Hizmetleri, Microsoft ASP.NET 2.0 AJAX, içerdiği uzantıları bulunmaktadır [!INCLUDE[vs_orcas_long](../../../includes/vs-orcas-long-md.md)] ve [!INCLUDE[net_v35_long](../../../includes/net-v35-long-md.md)]. Bu hizmetler, birden çok Web ve Windows tabanlı uygulamalar kullanıcı bilgileri ve kullanıcı yönetimi işlevleri tek bir sunucudan paylaşmak için etkinleştirin.  
   
  İstemci uygulama hizmetleri, Windows tabanlı uygulamalar için aşağıdaki özellikleri etkinleştirmek için Web services genişletilebilirlik modeli takın istemci hizmeti sağlayıcıları içerir:  
   
@@ -59,7 +61,7 @@ ms.lasthandoff: 12/22/2017
  Nasıl ayarlandığı hakkında bilgi için [!INCLUDE[ajax_current_short](../../../includes/ajax-current-short-md.md)] rol hizmeti, bkz: [rolleri bilgilerle kullanarak Microsoft Ajax](http://msdn.microsoft.com/library/280f6ad9-ba1a-4fc9-b0cc-22e39e54a82d).  
   
 ## <a name="settings"></a>Ayarlar  
- İstemci uygulama hizmetleri mevcut bir kullanıcı uygulama ayarlarını almak için kullanabileceğiniz [!INCLUDE[ajax_current_short](../../../includes/ajax-current-short-md.md)] profil hizmeti. Web ayarları özelliği sağlanan uygulama ayarlarını özelliği ile tümleşir istemci uygulama hizmetleri [!INCLUDE[dnprdnlong](../../../includes/dnprdnlong-md.md)]. Web ayarları almak için önce oluşturmak bir `Settings` sınıfı (olarak erişilen `Properties.Settings.Default` C# ve `My.Settings` içinde [!INCLUDE[vbprvb](../../../includes/vbprvb-md.md)]) kullanarak projeniz için **ayarları** sekmesinde [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] Proje Tasarımcısı. Üzerinde **ayarları** kullanabileceğiniz sekmesinde **yük Web ayarları** Web ayarları almak ve bunları oluşturulan için Ekle düğmesini `Settings` sınıfı. Tüm kimliği doğrulanmış kullanıcılara veya tüm anonim kullanıcılar tarafından kullanılmak üzere yapılandırılmış Web ayarlarını kullanabilirsiniz.  
+ İstemci uygulama hizmetleri mevcut bir kullanıcı uygulama ayarlarını almak için kullanabileceğiniz [!INCLUDE[ajax_current_short](../../../includes/ajax-current-short-md.md)] profil hizmeti. Web ayarları özelliği sağlanan uygulama ayarlarını özelliği ile tümleşir istemci uygulama hizmetleri [!INCLUDE[dnprdnlong](../../../includes/dnprdnlong-md.md)]. Web ayarları almak için önce oluşturmak bir `Settings` sınıfı (olarak erişilen `Properties.Settings.Default` C# ve `My.Settings` Visual Basic'te) kullanarak projeniz için **ayarları** sekmesinde [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] Proje Tasarımcısı. Üzerinde **ayarları** kullanabileceğiniz sekmesinde **yük Web ayarları** Web ayarları almak ve bunları oluşturulan için Ekle düğmesini `Settings` sınıfı. Tüm kimliği doğrulanmış kullanıcılara veya tüm anonim kullanıcılar tarafından kullanılmak üzere yapılandırılmış Web ayarlarını kullanabilirsiniz.  
   
  Uygulama ayarları hakkında daha fazla bilgi için bkz: [uygulama ayarlarına genel bakış](../../../docs/framework/winforms/advanced/application-settings-overview.md). Birinde oluşturmak yerine, kendi ayarları sınıf uygulama hakkında bilgi için [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)], bkz: [nasıl yapılır: uygulama ayarları oluştur](../../../docs/framework/winforms/advanced/how-to-create-application-settings.md). Nasıl ayarlandığı hakkında bilgi için [!INCLUDE[ajax_current_short](../../../includes/ajax-current-short-md.md)] profil hizmet için bkz: [profil bilgilerle kullanarak Microsoft Ajax](http://msdn.microsoft.com/library/91239ae6-d01c-4f4e-a433-eb9040dbed61).  
   

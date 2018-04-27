@@ -1,12 +1,12 @@
 ---
-title: "PLINQ'te Birleştirme Seçenekleri"
-ms.custom: 
+title: PLINQ'te Birleştirme Seçenekleri
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology: dotnet-standard
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - csharp
@@ -14,21 +14,21 @@ dev_langs:
 helpviewer_keywords:
 - PLINQ queries, merge options
 ms.assetid: e8f7be3b-88de-4f33-ab14-dc008e76c1ba
-caps.latest.revision: 
+caps.latest.revision: 10
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: 4758046fef55af86754ecb38aa50c4ff832f54db
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: 9e155ee8de2846fc3c8c767a77f365127923f757
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="merge-options-in-plinq"></a>PLINQ'te Birleştirme Seçenekleri
-Birden çok iş parçacığı farklı bölümleri eşzamanlı olarak, genellikle ayrı iş parçacıklarına çalışabilmeniz için ne zaman bir sorgu paralel PLINQ bölümleri kaynak sıradaki yürütülüyor. Sonuçları bir iş parçacığı üzerinde tüketilmesi varsa örneğin, bir `foreach` (`For Each` içinde [!INCLUDE[vbprvb](../../../includes/vbprvb-md.md)]) döngü her iş parçacığı sonuçlarından bir sıralı geri birleştirilmelidir sonra. Sorguda mevcut işleçleri PLINQ gerçekleştirir birleştirme türünü bağlıdır. Örneğin, yeni bir sipariş sonuçlarını zorunlu tuttukları işleçleri tüm iş parçacıklarının tüm öğeleri arabellek gerekir. (Aynı zamanda olan, uygulama kullanıcısı) Süren iş parçacığı açısından bir belirgin süre ilk sonucu üreten önce tamamen arabelleğe alınan bir sorgu çalıştırabilirsiniz. Diğer işleçler varsayılan olarak, kısmen arabelleğe; Bunlar kendi yığınlardaki sonuçlar. Bir işleç <xref:System.Linq.ParallelEnumerable.ForAll%2A> varsayılan olarak arabelleğe değil. Bunu tüm öğeleri tüm iş parçacıklarından hemen verir.  
+Birden çok iş parçacığı farklı bölümleri eşzamanlı olarak, genellikle ayrı iş parçacıklarına çalışabilmeniz için ne zaman bir sorgu paralel PLINQ bölümleri kaynak sıradaki yürütülüyor. Sonuçları bir iş parçacığı üzerinde tüketilmesi varsa örneğin, bir `foreach` (`For Each` Visual Basic'te) döngü her iş parçacığı sonuçlarından bir sıralı geri birleştirilmelidir sonra. Sorguda mevcut işleçleri PLINQ gerçekleştirir birleştirme türünü bağlıdır. Örneğin, yeni bir sipariş sonuçlarını zorunlu tuttukları işleçleri tüm iş parçacıklarının tüm öğeleri arabellek gerekir. (Aynı zamanda olan, uygulama kullanıcısı) Süren iş parçacığı açısından bir belirgin süre ilk sonucu üreten önce tamamen arabelleğe alınan bir sorgu çalıştırabilirsiniz. Diğer işleçler varsayılan olarak, kısmen arabelleğe; Bunlar kendi yığınlardaki sonuçlar. Bir işleç <xref:System.Linq.ParallelEnumerable.ForAll%2A> varsayılan olarak arabelleğe değil. Bunu tüm öğeleri tüm iş parçacıklarından hemen verir.  
   
  Kullanarak <xref:System.Linq.ParallelEnumerable.WithMergeOptions%2A> yöntemi, aşağıdaki örnekte gösterildiği gibi sağlayabileceğiniz bir ipucu gerçekleştirmek için birleştirmenin ne tür gösteren PLINQ.  
   
@@ -48,7 +48,7 @@ Birden çok iş parçacığı farklı bölümleri eşzamanlı olarak, genellikle
   
 -   `Auto Buffered`  
   
-     <xref:System.Linq.ParallelMergeOptions.AutoBuffered> Seçeneği bir arabelleğe öğeleri toplamak ve düzenli aralıklarla arabellek içeriği aynı anda süren iş parçacığı yield sorgu neden olur. Bu "akış" davranışını kullanmak yerine "öbek" kaynak verilerde sağlayan için benzer `NotBuffered`. `AutoBuffered`daha uzun sürebilir `NotBuffered` ilk öğe alabilir iş parçacığı üzerinde kullanılabilir hale getirmek. Arabellek boyutu tam yielding davranışı, yapılandırılabilir olmayan ve sorguya ilişkili çeşitli etkenlere bağlı olarak değişebilir.  
+     <xref:System.Linq.ParallelMergeOptions.AutoBuffered> Seçeneği bir arabelleğe öğeleri toplamak ve düzenli aralıklarla arabellek içeriği aynı anda süren iş parçacığı yield sorgu neden olur. Bu "akış" davranışını kullanmak yerine "öbek" kaynak verilerde sağlayan için benzer `NotBuffered`. `AutoBuffered` daha uzun sürebilir `NotBuffered` ilk öğe alabilir iş parçacığı üzerinde kullanılabilir hale getirmek. Arabellek boyutu tam yielding davranışı, yapılandırılabilir olmayan ve sorguya ilişkili çeşitli etkenlere bağlı olarak değişebilir.  
   
 -   `FullyBuffered`  
   
@@ -73,7 +73,7 @@ Birden çok iş parçacığı farklı bölümleri eşzamanlı olarak, genellikle
   
  Tüm diğer PLINQ sorgu işleçleri kullanıcı tarafından sağlanan birleştirme seçeneklerini yoksay. Bazı sorgu işleçleri, örneğin, <xref:System.Linq.ParallelEnumerable.Reverse%2A> ve <xref:System.Linq.ParallelEnumerable.OrderBy%2A>, tüm üretilen kaldırılmasında ve kadar herhangi bir öğe verim olamaz. Bu nedenle, <xref:System.Linq.ParallelMergeOptions> da operatörün gibi içeren bir sorguda kullanılan <xref:System.Linq.ParallelEnumerable.Reverse%2A>, işleç sonuçlarını üretilen sonra birleştirme davranışı sorgu kadar uygulanmaz.  
   
- Birleştirme seçeneklerini işleme yeteneği bazı işleçlerinin kaynak sırası türüne göre değişir ve olup <xref:System.Linq.ParallelEnumerable.AsOrdered%2A> işleci sorgu daha önce kullanıldı. <xref:System.Linq.ParallelEnumerable.ForAll%2A>her zaman <xref:System.Linq.ParallelMergeOptions.NotBuffered> ; öğeleri hemen verir. <xref:System.Linq.ParallelEnumerable.OrderBy%2A>her zaman <xref:System.Linq.ParallelMergeOptions.FullyBuffered>; bunu verir önce tüm listeyi sıralamanız gerekir.  
+ Birleştirme seçeneklerini işleme yeteneği bazı işleçlerinin kaynak sırası türüne göre değişir ve olup <xref:System.Linq.ParallelEnumerable.AsOrdered%2A> işleci sorgu daha önce kullanıldı. <xref:System.Linq.ParallelEnumerable.ForAll%2A> her zaman <xref:System.Linq.ParallelMergeOptions.NotBuffered> ; öğeleri hemen verir. <xref:System.Linq.ParallelEnumerable.OrderBy%2A> her zaman <xref:System.Linq.ParallelMergeOptions.FullyBuffered>; bunu verir önce tüm listeyi sıralamanız gerekir.  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
  [Paralel LINQ (PLINQ)](../../../docs/standard/parallel-programming/parallel-linq-plinq.md)  

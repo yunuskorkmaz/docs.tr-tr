@@ -1,24 +1,26 @@
 ---
 title: Entity Framework terminolojisi
-ms.custom: 
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-ado
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-ado
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: fa2a1bd1-6118-487b-8673-eebc66b92945
-caps.latest.revision: "4"
+caps.latest.revision: 4
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.workload: dotnet
-ms.openlocfilehash: a2d55319b5463b2c9624fe22e7a16235c3d57614
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.workload:
+- dotnet
+ms.openlocfilehash: cd85760e219e810c089ebe88c8295d79ebaf0944
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="entity-framework-terminology"></a>Entity Framework terminolojisi
 Bu konuda sık başvurulan terimleri tanımlar [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] belgeleri. Ek bilgi kullanılabilir olduğu ilgili konulara bağlantılar sağlanmaktadır.  
@@ -32,7 +34,7 @@ Bu konuda sık başvurulan terimleri tanımlar [!INCLUDE[adonet_ef](../../../../
 |karmaşık türü|A [!INCLUDE[dnprdnshort](../../../../../includes/dnprdnshort-md.md)] kavramsal modelde tanımlanan bir karmaşık özellik temsil eden sınıf. Karmaşık türler varlıklar düzenlenmesine olanak skaler özellikler etkinleştirin. Karmaşık nesneler karmaşık türler örnekleridir. Daha fazla bilgi için bkz: [ComplexType öğesi (CSDL)](http://msdn.microsoft.com/library/f1c2f311-9889-4b87-abd8-a94f322052e3) ve [karmaşık tür](../../../../../docs/framework/data/adonet/complex-type.md).|  
 |ComplexType|Skaler olmayan özellik anahtar özelliğine sahip olmayan bir varlık türünün temsil eden bir veri türü için belirtimi.<br /><br /> Daha fazla bilgi için bkz: [ComplexType öğesi (CSDL)](http://msdn.microsoft.com/library/f1c2f311-9889-4b87-abd8-a94f322052e3) ve [karmaşık tür](../../../../../docs/framework/data/adonet/complex-type.md).|  
 |kavramsal model|Bir uygulama etki alanındaki varlık türleri, karmaşık türler, ilişkileri, varlık kapsayıcıları, varlık kümeleri ve ilişkilendirme için bir Özet belirtimi ayarlar [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)]. Kavramsal modelin csdl'deki .csdl dosyasında tanımlanır.<br /><br /> Daha fazla bilgi için bkz: [modelleme ve eşleme](../../../../../docs/framework/data/adonet/ef/modeling-and-mapping.md).|  
-|.csdl file|CSDL ifade edilen kavramsal model içeren bir XML dosyası.|  
+|.CSDL dosyası|CSDL ifade edilen kavramsal model içeren bir XML dosyası.|  
 |kavramsal şema tanım dili (CSDL)|Varlık türleri, ilişkileri, varlık kapsayıcıları, varlık kümeleri ve ilişki tanımlamak için kullanılan XML tabanlı bir dil kavramsal modelini ayarlar.<br /><br /> Daha fazla bilgi için bkz: [CSDL belirtimi](../../../../../docs/framework/data/adonet/ef/language-reference/csdl-specification.md).|  
 |kapsayıcı|Varlık ve ilişkilendirme mantıksal bir gruplandırması ayarlar.<br /><br /> Daha fazla bilgi için bkz: [EntityContainer öğesi (CSDL)](http://msdn.microsoft.com/library/06d03ecb-3b7a-4e7f-95d5-b95307d47a27) ve [varlık kapsayıcısının](../../../../../docs/framework/data/adonet/entity-container.md).|  
 |eşzamanlılık|Paylaşılan veri aynı anda erişmek ve değiştirmek birden çok kullanıcı izin veren bir işlem. Varsayılan olarak, [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] iyimser eşzamanlılık modeli uygular.|  
@@ -55,7 +57,7 @@ Bu konuda sık başvurulan terimleri tanımlar [!INCLUDE[adonet_ef](../../../../
 |bağımsız ilişkilendirme|Temsil ve bağımsız bir nesne tarafından izlenen varlıklar arasındaki ilişki.|  
 |anahtar|Hangi özelliği belirten bir varlık türü özniteliği veya özellikler kümesini varlık türü benzersiz örneklerini tanımlamak için kullanılır. Nesne katmanında tarafından temsil edilen <xref:System.Data.EntityKey> sınıfı.<br /><br /> Daha fazla bilgi için bkz: [anahtarı öğesi (CSDL)](http://msdn.microsoft.com/library/0cdb1402-dbc7-4a04-a11e-5729cdf7431b) ve [Varlık anahtarı](../../../../../docs/framework/data/adonet/entity-key.md).|  
 |yavaş yükleniyor|Nesneleri bir sorgu tarafından döndürülen, ilgili nesneleri aynı anda yüklü değil. Bunun yerine bunların gezinti özelliği erişildiğinde otomatik olarak yüklenir.|  
-|[!INCLUDE[linq_entities](../../../../../includes/linq-entities-md.md)]|Geçişi, filtre ve projeksiyon işlemlerinin doğrudan, bildirim temelli bir yolla ifade izin verin sorgu işleçleri kümesini tanımlayan sorgu sözdizimini [!INCLUDE[csprcs](../../../../../includes/csprcs-md.md)] ve [!INCLUDE[vbprvb](../../../../../includes/vbprvb-md.md)].<br /><br /> Daha fazla bilgi için bkz: [LINQ to Entities](../../../../../docs/framework/data/adonet/ef/language-reference/linq-to-entities.md).|  
+|[!INCLUDE[linq_entities](../../../../../includes/linq-entities-md.md)]|Geçişi, filtre ve projeksiyon işlemlerinin doğrudan, bildirim temelli bir yolla Visual C# ve Visual Basic ifade izin verin sorgu işleçleri kümesini tanımlayan sorgu sözdizimi.<br /><br /> Daha fazla bilgi için bkz: [LINQ to Entities](../../../../../docs/framework/data/adonet/ef/language-reference/linq-to-entities.md).|  
 |eşleme|Öğeleri kavramsal modelde ve depolama modelinde öğeleri arasındaki yazışmalar belirtimi.<br /><br /> Daha fazla bilgi için bkz: [MSL belirtimi](../../../../../docs/framework/data/adonet/ef/language-reference/msl-specification.md).|  
 |.MSL dosyası|Kavramsal model ve MSL ifade edilen depolama modeli arasında eşleme içeren bir XML dosyası.|  
 |eşleme belirtimi dili (MSL)|Bir depolama model öğelerine kavramsal modelde tanımlanan öğeleri eşlemek için kullanılan bir XML tabanlı bir dili.<br /><br /> Daha fazla bilgi için bkz: [MSL belirtimi](../../../../../docs/framework/data/adonet/ef/language-reference/msl-specification.md).|  
@@ -64,11 +66,11 @@ Bu konuda sık başvurulan terimleri tanımlar [!INCLUDE[adonet_ef](../../../../
 |tür başına birden çok varlık kümesine|Birden fazla varlık tanımlanmamış bir varlık türü özelliği ayarlayın.<br /><br /> Daha fazla bilgi için bkz: [EntitySet öğe (CSDL)](http://msdn.microsoft.com/library/ec56db77-718d-4c0e-adc9-f1d33c896287) ve [nasıl yapılır: tür başına birden çok varlık kümesine sahip bir modeli tanımlamak](http://msdn.microsoft.com/library/61aa4fca-5ac0-4f47-9bc8-46e8c2965ef7).|  
 |Gezinme özelliği|Bir ilişkilendirme tarafından tanımlandığı şekilde başka bir varlık türü için bir ilişki temsil eden bir varlık türü özelliği. Gezinti özellikleri ilgili nesneler olarak döndürmek için kullanılan bir <xref:System.Data.Objects.DataClasses.EntityCollection%601> veya bir <xref:System.Data.Objects.DataClasses.EntityReference%601>ilişkinin diğer ucundaki Çokluk bağlı olarak.<br /><br /> Daha fazla bilgi için bkz: [NavigationProperty öğesi (CSDL)](http://msdn.microsoft.com/library/5829a238-a50e-4c81-901d-7b54fc00f27e) ve [gezinti özelliği](../../../../../docs/framework/data/adonet/navigation-property.md).|  
 |Sorgu yolu|Bir dize gösterimi bir yolu, bir nesne sorgu çalıştırıldığında döndürülecek nesneleri ilgili belirtir. Bir sorgu yolu çağırarak tanımlı <xref:System.Data.Objects.ObjectQuery%601.Include%2A> yöntemi bir <xref:System.Data.Objects.ObjectQuery%601>.<br /><br /> Daha fazla bilgi için bkz: [yüklenirken ilişkili nesneleri](http://msdn.microsoft.com/library/452347d2-7b3b-44cd-9001-231299a28cb1).|  
-|nesne bağlamı|Kavramsal modelde tanımlanan varlığı kapsayıcıyı temsil eder. Temel alınan veri kaynağına bağlantı içerir ve değişiklik izleme ve kimlik çözümü gibi hizmetler sağlar. Bir nesne devamı ext bir örneği tarafından temsil edilen <xref:System.Data.Objects.ObjectContext> veya `DbContext` sınıfı.<br /><br /> `DbContext`parçası olan [Entity Framework 5.0](http://go.microsoft.com/fwlink/?LinkId=234900). Entity Framework 5.0 .NET Framework'ün bir parçası değil, ancak .NET Framework 4. 5'üzerinde oluşturulmuştur. Entity Framework 5.0 olarak kullanılabilir ['Entity Framework'](http://go.microsoft.com/fwlink/?LinkID=215714)[NuGet](http://go.microsoft.com/fwlink/?LinkId=232488) paket. Daha fazla bilgi için bkz: [Entity Framework sürümleri ve sürüm oluşturma](http://go.microsoft.com/fwlink/?LinkId=234899).|  
+|nesne bağlamı|Kavramsal modelde tanımlanan varlığı kapsayıcıyı temsil eder. Temel alınan veri kaynağına bağlantı içerir ve değişiklik izleme ve kimlik çözümü gibi hizmetler sağlar. Bir nesne devamı ext bir örneği tarafından temsil edilen <xref:System.Data.Objects.ObjectContext> veya `DbContext` sınıfı.<br /><br /> `DbContext` parçası olan [Entity Framework 5.0](http://go.microsoft.com/fwlink/?LinkId=234900). Entity Framework 5.0 .NET Framework'ün bir parçası değil, ancak .NET Framework 4. 5'üzerinde oluşturulmuştur. Entity Framework 5.0 olarak kullanılabilir ['Entity Framework'](http://go.microsoft.com/fwlink/?LinkID=215714)[NuGet](http://go.microsoft.com/fwlink/?LinkId=232488) paket. Daha fazla bilgi için bkz: [Entity Framework sürümleri ve sürüm oluşturma](http://go.microsoft.com/fwlink/?LinkId=234899).|  
 |Nesne Katman|Varlık türleri ve Entity Framework tarafından kullanılan nesne bağlamı tanımlar.|  
 |sorgu nesnesi|Kavramsal model karşı bir nesne bağlamına içinde yürütülen bir sorgu, veri ve nesneleri olarak döndürür.<br /><br /> Daha fazla bilgi için bkz: [nesne sorguları](http://msdn.microsoft.com/library/0768033c-876f-471d-85d5-264884349276).|  
 |Nesne İlişkisel eşleme|Nesne odaklı yazılım uygulamalarında kullanılan veri türlerine ilişkisel bir veritabanındaki verileri dönüştürme için bir teknik.<br /><br /> [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] Nesne ilişkisel eşleme Hizmetleri tarafından tanımlanan depolama modelindeki eşleme ilişkisel verileri veri türleri için kavramsal modelde tanımlanan sağlar.<br /><br /> Daha fazla bilgi için bkz: [modelleme ve eşleme](../../../../../docs/framework/data/adonet/ef/modeling-and-mapping.md).|  
-|Object Services|Tarafından sağlanan hizmetlerin [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] gibi varlıkları üzerinde çalışacağı uygulama kodu etkinleştir [!INCLUDE[dnprdnshort](../../../../../includes/dnprdnshort-md.md)] nesneleri.|  
+|Nesne Hizmetleri|Tarafından sağlanan hizmetlerin [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] gibi varlıkları üzerinde çalışacağı uygulama kodu etkinleştir [!INCLUDE[dnprdnshort](../../../../../includes/dnprdnshort-md.md)] nesneleri.|  
 |Kalıcılık kullanmayan nesnesi|Veri depolama alanına ilgili herhangi bir mantık içermiyor bir nesne. POCO varlık olarak da bilinir.|  
 |POCO|Düz eski CLR nesnesi. Başka bir sınıftan ya da bir arabirimini uygulayan bir nesne.|  
 |POCO varlık|Bir varlığı [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] , devralmaz gelen <xref:System.Data.Objects.DataClasses.EntityObject> veya <xref:System.Data.Objects.DataClasses.ComplexObject> ve uygulamayan [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] arabirimleri. POCO varlıklar sık kullandığınız etki alanı nesnelerini mevcut olan bir [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] uygulama. Bu varlıklar Kalıcılık kullanmayan destekler. Daha fazla bilgi için bkz: [POCO varlıklarla çalışmaya](http://msdn.microsoft.com/library/5e0fb82a-b6d1-41a1-b37b-c12db61629d3).|  
@@ -83,7 +85,7 @@ Bu konuda sık başvurulan terimleri tanımlar [!INCLUDE[adonet_ef](../../../../
 |Depolama modeli|Mantıksal bir ilişkisel veritabanı gibi desteklenen veri kaynağındaki veri modelinin bir tanımı. Depolama modelinin SSDL .ssdl dosyasında tanımlanır.<br /><br /> Daha fazla bilgi için bkz: [modelleme ve eşleme](../../../../../docs/framework/data/adonet/ef/modeling-and-mapping.md) ve [SSDL belirtimi](../../../../../docs/framework/data/adonet/ef/language-reference/ssdl-specification.md).|  
 |.SSDL dosyası|SSDL ifade edilen depolama modeli içeren bir XML dosyası.|  
 |depo şeması tanım dili (SSDL)|Depolama modelinin sık bir veritabanı şeması karşılık gelen bir varlık türleri, ilişkileri, varlık kapsayıcıları, varlık kümeleri ve ilişki tanımlamak için kullanılan XML tabanlı bir dili ayarlar.<br /><br /> Daha fazla bilgi için bkz: [SSDL belirtimi](../../../../../docs/framework/data/adonet/ef/language-reference/ssdl-specification.md).|  
-|table-per-hierarchy|Bir tabloda hiyerarşideki tüm türleri özniteliklerini içeren bir veritabanı tür hiyerarşisinde modelleme yöntem.|  
+|Tablo başına hiyerarşisi|Bir tabloda hiyerarşideki tüm türleri özniteliklerini içeren bir veritabanı tür hiyerarşisinde modelleme yöntem.|  
 |Tablo başına türü|Çeşitli türleri modellemek için birden çok tablo ile bire bir ilişkiler kullanan bir veritabanı tür hiyerarşisinde modelleme yöntem.|  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  

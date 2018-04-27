@@ -1,27 +1,29 @@
 ---
-title: "XAML İşaretleme Uzantılarına Genel Bakış"
-ms.custom: 
+title: XAML İşaretleme Uzantılarına Genel Bakış
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-wpf
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-wpf
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - markup extensions [XAML Services], custom
 - XAML [XAML Services], markup extensions
 ms.assetid: 261b2b11-2dc0-462f-8c66-55b8c9c6e436
-caps.latest.revision: "14"
+caps.latest.revision: 14
 author: wadepickett
 ms.author: wpickett
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 0feef370e6b09d2f58a33f2142bd654e1d7e3402
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 464c5f547089d47906f2e227effe821357196c16
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="markup-extensions-for-xaml-overview"></a>XAML İşaretleme Uzantılarına Genel Bakış
 Biçimlendirme uzantıları türünün bir temel veya de belirli XAML türü olan bir değer almak için bir XAML teknik yer almaktadır. Öznitelik kullanımı için bir parantezinden bilinen karakter dizisi biçimlendirme uzantıları kullanmak `{` biçimlendirme uzantısı kapsamı ve kapanış kuşak girmek için `}` çıkmak için. .NET Framework XAML hizmetlerinde kullanırken, önceden tanımlanmış XAML dil biçimlendirme uzantıları System.Xaml derlemesinden bazıları kullanabilirsiniz. Gelen bir alt kullanabileceğiniz <xref:System.Windows.Markup.MarkupExtension> sınıfı, System.Xaml içinde tanımlanan ve kendi biçimlendirme uzantıları tanımlayın. Veya zaten bu framework başvurduğunuzdan, belirli bir çerçevesi tarafından tanımlanan biçimlendirme uzantıları kullanabilirsiniz.  
@@ -33,22 +35,22 @@ Biçimlendirme uzantıları türünün bir temel veya de belirli XAML türü ola
  Birkaç biçimlendirme uzantıları, XAML dili desteği için .NET Framework XAML Hizmetleri tarafından uygulanır. Bu biçimlendirme uzantıları XAML belirtimi dili olarak bölümlerini karşılık gelir. Bunlar genellikle adlarıyla `x:` ortak kullanım görülen sözdiziminde öneki. Tüm türetilen bu XAML dil öğeleri için .NET Framework XAML hizmetlerinde uygulamaları <xref:System.Windows.Markup.MarkupExtension> temel sınıfı.  
   
 > [!NOTE]
->  `x:` Öneki, XAML dili ad uzayı XAML üretim kök öğesinin tipik XAML ad alanı eşlemesi için kullanılır. Örneğin, [!INCLUDE[vs_current_short](../../../includes/vs-current-short-md.md)] çeşitli belirli çerçeveler için proje ve sayfa şablonları başlatmak bunu kullanan XAML dosyası `x:` eşleme. Kendi XAML ad alanı eşlemesi farklı önek belirteci seçebilir, ancak bu belgeleri varsayılan varsayacak `x:` tersine XAML dili XAML ad uzayı, tanımlı bir parçası olan bu varlıkların tanımlamak için bir araç olarak eşleme bir belirli framework'ün varsayılan XAML ad uzayı veya diğer rasgele CLR veya XML ad alanları.  
+>  `x:` Öneki, XAML dili ad uzayı XAML üretim kök öğesinin tipik XAML ad alanı eşlemesi için kullanılır. Örneğin, bunu kullanan XAML dosyası çeşitli belirli çerçeveler için Visual Studio Proje ve sayfa şablonları başlatmak `x:` eşleme. Kendi XAML ad alanı eşlemesi farklı önek belirteci seçebilir, ancak bu belgeleri varsayılan varsayacak `x:` tersine XAML dili XAML ad uzayı, tanımlı bir parçası olan bu varlıkların tanımlamak için bir araç olarak eşleme bir belirli framework'ün varsayılan XAML ad uzayı veya diğer rasgele CLR veya XML ad alanları.  
   
 ### <a name="xtype"></a>x: Type  
- `x:Type`sağladığı <xref:System.Type> adlandırılmış türü için nesnesi. Bu işlev, CLR türü kullanan ve bir gruplandırma ad veya tanımlayıcı türetme yazın erteleme mekanizmaları, en sık kullanılır. WPF stilleri, şablonları ve bunların kullanımını `TargetType` özelliklerdir, belirli bir örneği. Daha fazla bilgi için bkz: [x: Type işaretleme uzantısı](../../../docs/framework/xaml-services/x-type-markup-extension.md).  
+ `x:Type` sağladığı <xref:System.Type> adlandırılmış türü için nesnesi. Bu işlev, CLR türü kullanan ve bir gruplandırma ad veya tanımlayıcı türetme yazın erteleme mekanizmaları, en sık kullanılır. WPF stilleri, şablonları ve bunların kullanımını `TargetType` özelliklerdir, belirli bir örneği. Daha fazla bilgi için bkz: [x: Type işaretleme uzantısı](../../../docs/framework/xaml-services/x-type-markup-extension.md).  
   
 ### <a name="xstatic"></a>x: Static  
- `x:Static`doğrudan bir özelliğin değerini türünü değildir, ancak bu tür için hesaplanan değer türü kodu varlıkları statik değerlerinden üretir. Bu tür tanımında iyi bilinen sabitleri olarak zaten mevcut değerleri belirtmek için kullanışlıdır. Daha fazla bilgi için bkz: [x: Static işaretleme uzantısı](../../../docs/framework/xaml-services/x-static-markup-extension.md).  
+ `x:Static` doğrudan bir özelliğin değerini türünü değildir, ancak bu tür için hesaplanan değer türü kodu varlıkları statik değerlerinden üretir. Bu tür tanımında iyi bilinen sabitleri olarak zaten mevcut değerleri belirtmek için kullanışlıdır. Daha fazla bilgi için bkz: [x: Static işaretleme uzantısı](../../../docs/framework/xaml-services/x-static-markup-extension.md).  
   
 ### <a name="xnull"></a>x: Null  
- `x:Null`belirtir `null` XAML üyesi için bir değer olarak. Belirli türleri ya da daha büyük framework kavramlarını tasarımına `null` her zaman bir özellik için varsayılan bir değer veya boş dize özniteliğin örtük değeri değil. Daha fazla bilgi için bkz: [x: Null işaretleme uzantısı](../../../docs/framework/xaml-services/x-null-markup-extension.md).  
+ `x:Null` belirtir `null` XAML üyesi için bir değer olarak. Belirli türleri ya da daha büyük framework kavramlarını tasarımına `null` her zaman bir özellik için varsayılan bir değer veya boş dize özniteliğin örtük değeri değil. Daha fazla bilgi için bkz: [x: Null işaretleme uzantısı](../../../docs/framework/xaml-services/x-null-markup-extension.md).  
   
 ### <a name="xarray"></a>x: Array  
- `x:Array`temel öğeler ve denetim modelleri tarafından sağlanan koleksiyonu desteği kasıtlı olarak değil kullanıldığı durumlarda XAML sözdiziminde genel dizi oluşturmayı destekler. Daha fazla bilgi için bkz: [x: Array işaretleme uzantısı](../../../docs/framework/xaml-services/x-array-markup-extension.md). XAML 2009 dil temelleri yerine bir uzantısı olarak diziler özellikle erişilir. Daha fazla bilgi için bkz: [XAML 2009 dil özellikleri](../../../docs/framework/xaml-services/xaml-2009-language-features.md).  
+ `x:Array` temel öğeler ve denetim modelleri tarafından sağlanan koleksiyonu desteği kasıtlı olarak değil kullanıldığı durumlarda XAML sözdiziminde genel dizi oluşturmayı destekler. Daha fazla bilgi için bkz: [x: Array işaretleme uzantısı](../../../docs/framework/xaml-services/x-array-markup-extension.md). XAML 2009 dil temelleri yerine bir uzantısı olarak diziler özellikle erişilir. Daha fazla bilgi için bkz: [XAML 2009 dil özellikleri](../../../docs/framework/xaml-services/xaml-2009-language-features.md).  
   
 ### <a name="xreference"></a>x: Reference  
- `x:Reference`XAML 2009, uzantı özgün (2006) dil kümesinin parçasıdır. `x:Reference`başka bir var olan bir nesne grafiğinin nesneye bir başvurusu temsil eder. Bu nesne tarafından tanımlanan kendi `x:Name`. Daha fazla bilgi için bkz: [x: Reference işaretleme uzantısı](../../../docs/framework/xaml-services/x-reference-markup-extension.md).  
+ `x:Reference` XAML 2009, uzantı özgün (2006) dil kümesinin parçasıdır. `x:Reference` başka bir var olan bir nesne grafiğinin nesneye bir başvurusu temsil eder. Bu nesne tarafından tanımlanan kendi `x:Name`. Daha fazla bilgi için bkz: [x: Reference işaretleme uzantısı](../../../docs/framework/xaml-services/x-reference-markup-extension.md).  
   
 ### <a name="other-x-constructs"></a>Diğer x: yapıları  
  Diğer `x:` XAML dil özellikleri desteklemek için yapıları var, ancak bunlar işaretleme uzantıları uygulanmadı. Daha fazla bilgi için bkz: [XAML Namespace (x:) Dil özellikleri](../../../docs/framework/xaml-services/xaml-namespace-x-language-features.md).  
@@ -133,7 +135,7 @@ public Collate(CollationMode collationMode, object collateThis) {...}
 ## <a name="attributing-for-a-custom-markup-extension"></a>Özel biçimlendirme uzantısı için öznitelik atanıyor  
  Tasarım ortamları ve belirli XAML nesne yazan senaryoları desteklemek için bir biçimlendirme uzantısı destek türü ile birkaç CLR öznitelikleri öznitelik. Bu öznitelikler hedeflenen biçimlendirme uzantısı kullanımı bildirin.  
   
- <xref:System.Windows.Markup.MarkupExtensionReturnTypeAttribute>raporları <xref:System.Type> nesne için bilgileri yazın <xref:System.Windows.Markup.ArrayExtension.ProvideValue%2A> döndürür. Saf imzası tarafından <xref:System.Windows.Markup.ArrayExtension.ProvideValue%2A> döndürür <xref:System.Object>. Ancak, çeşitli tüketicileri daha kesin dönüş türü bilgileri isteyebilirsiniz. Şunları içerir:  
+ <xref:System.Windows.Markup.MarkupExtensionReturnTypeAttribute> raporları <xref:System.Type> nesne için bilgileri yazın <xref:System.Windows.Markup.ArrayExtension.ProvideValue%2A> döndürür. Saf imzası tarafından <xref:System.Windows.Markup.ArrayExtension.ProvideValue%2A> döndürür <xref:System.Object>. Ancak, çeşitli tüketicileri daha kesin dönüş türü bilgileri isteyebilirsiniz. Şunları içerir:  
   
 -   Tasarımcılar ve türünü algılayan sağlayabilir olabilir IDE, için biçimlendirme uzantısı kullanımları destekler.  
   
@@ -149,11 +151,11 @@ public Collate(CollationMode collationMode, object collateThis) {...}
   
  Biçimlendirme uzantısı kullanımı konumsal bağımsız değişkenleri kullanıyorsa, bir başlatma değeri olan bir başlangıç nesnesi olarak temsil edilir. Kaba metin gösterimi olarak düğümü akışı aşağıdakine benzer:  
   
- `StartObject`(<xref:System.Xaml.XamlType> biçimlendirme uzantının tanım türü, kendi dönüş türü olan)  
+ `StartObject` (<xref:System.Xaml.XamlType> biçimlendirme uzantının tanım türü, kendi dönüş türü olan)  
   
- `StartMember`(adını <xref:System.Xaml.XamlMember> olan `_InitializationText`)  
+ `StartMember` (adını <xref:System.Xaml.XamlMember> olan `_InitializationText`)  
   
- `Value`(konumsal bağımsız değişkenleri müdahalede bulunan sınırlayıcıları dahil olmak üzere bir dize olarak değerdir)  
+ `Value` (konumsal bağımsız değişkenleri müdahalede bulunan sınırlayıcıları dahil olmak üzere bir dize olarak değerdir)  
   
  `EndMember`  
   

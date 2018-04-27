@@ -1,30 +1,31 @@
 ---
-title: "Visual Basic'de Dize Düzenleme Yöntemlerinin Türleri"
-ms.custom: 
+title: Visual Basic'de Dize Düzenleme Yöntemlerinin Türleri
+ms.custom: ''
 ms.date: 07/20/2015
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- devlang-visual-basic
 ms.topic: article
 helpviewer_keywords:
 - strings [Visual Basic], manipulating [Visual Basic]
 - string manipulation
 ms.assetid: 905055cd-7f50-48fb-9eed-b0995af1dc1f
-caps.latest.revision: "12"
+caps.latest.revision: 12
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: b437be4a6f4a0cc9d5a4d21291a80c9cb8fffcd3
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.openlocfilehash: 3677c8a23e956716af4357fe79041fc96f4014f2
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="types-of-string-manipulation-methods-in-visual-basic"></a>Visual Basic'de Dize Düzenleme Yöntemlerinin Türleri
-Analiz etmek ve dizelerinizi işlemek için birkaç farklı yolu vardır. Yöntemlerin bazıları bir parçası olan [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] dil ve diğerleri de devralınan `String` sınıfı.  
+Analiz etmek ve dizelerinizi işlemek için birkaç farklı yolu vardır. Yöntemlerin bazıları Visual Basic Dil parçası olan ve diğerleri de devralınan `String` sınıfı.  
   
 ## <a name="visual-basic-language-and-the-net-framework"></a>Visual Basic dili ve .NET Framework  
- [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]yöntemleri dil devralınmış işlevler kullanılır. Kodunuzu nitelikte olmadan kullanılabilir. Aşağıdaki örnek, tipik kullanımını gösterir bir [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] dize işleme komutu:  
+ Visual Basic yöntemleri dil devralınmış işlevler kullanılır. Kodunuzu nitelikte olmadan kullanılabilir. Aşağıdaki örnek, bir Visual Basic dize düzenlemesi komutu tipik kullanımını göstermektedir:  
   
  [!code-vb[VbVbalrStrings#44](../../../../visual-basic/language-reference/functions/codesnippet/VisualBasic/types-of-string-manipulation-methods_1.vb)]  
   

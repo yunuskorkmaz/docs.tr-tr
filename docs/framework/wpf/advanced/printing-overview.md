@@ -1,12 +1,13 @@
 ---
-title: "Yazdırmaya Genel Bakış"
-ms.custom: 
+title: Yazdırmaya Genel Bakış
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-wpf
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-wpf
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - csharp
@@ -22,39 +23,40 @@ helpviewer_keywords:
 - XPSDrv-based printers
 - GDI print path [WPF]
 ms.assetid: 0de8ac41-9aa6-413d-a121-7aa6f41539b1
-caps.latest.revision: "35"
+caps.latest.revision: 35
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 91ccf1f98d9e1e2f5784246cf30995b689a0b94b
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
-ms.translationtype: MT
+ms.workload:
+- dotnet
+ms.openlocfilehash: 9a36589ca670892398b4d6bb171e79a07060d458
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="printing-overview"></a>Yazdırmaya Genel Bakış
-İle [!INCLUDE[TLA#tla_winfx](../../../../includes/tlasharptla-winfx-md.md)], uygulama geliştiricilerinin kullanarak [!INCLUDE[TLA#tla_wpf](../../../../includes/tlasharptla-wpf-md.md)] yazdırmayı ve baskı sistem yönetimi zengin yeni kümesine sahip [!INCLUDE[TLA#tla_api#plural](../../../../includes/tlasharptla-apisharpplural-md.md)]. İle [!INCLUDE[TLA#tla_winvista](../../../../includes/tlasharptla-winvista-md.md)], bazıları bu yazdırma sistemi geliştirmelerini ayrıca oluşturma geliştiricilerine kullanılabilir [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] uygulamaları ve kullanan geliştiriciler yönetilmeyen kodu. Bu yeni işlevsellik özünde yenilikler [!INCLUDE[TLA#tla_xps](../../../../includes/tlasharptla-xps-md.md)] dosya biçimi ve [!INCLUDE[TLA2#tla_xps](../../../../includes/tla2sharptla-xps-md.md)] yazdırma yolu.  
+Microsoft .NET Framework kullanarak uygulama geliştiricileri [!INCLUDE[TLA#tla_wpf](../../../../includes/tlasharptla-wpf-md.md)] yazdırmayı ve baskı sistem yönetimi zengin yeni kümesine sahip [!INCLUDE[TLA#tla_api#plural](../../../../includes/tlasharptla-apisharpplural-md.md)]. İle [!INCLUDE[TLA#tla_winvista](../../../../includes/tlasharptla-winvista-md.md)], bazıları bu yazdırma sistemi geliştirmelerini ayrıca oluşturma geliştiricilerine kullanılabilir [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] uygulamaları ve kullanan geliştiriciler yönetilmeyen kodu. Bu yeni işlevsellik özünde yenilikler [!INCLUDE[TLA#tla_xps](../../../../includes/tlasharptla-xps-md.md)] dosya biçimi ve [!INCLUDE[TLA2#tla_xps](../../../../includes/tla2sharptla-xps-md.md)] yazdırma yolu.  
   
  Bu konu aşağıdaki bölümleri içerir.  
   
 <a name="introduction_to_XPS"></a>   
 ## <a name="about-xps"></a>XPS hakkında  
- [!INCLUDE[TLA2#tla_metro](../../../../includes/tla2sharptla-metro-md.md)]Elektronik belge biçimi, biriktirme dosya biçimidir ve sayfa açıklaması dili içindir. Bunu kullanan bir açık belge biçimidir [!INCLUDE[TLA#tla_xml](../../../../includes/tlasharptla-xml-md.md)], [!INCLUDE[TLA#tla_opc](../../../../includes/tlasharptla-opc-md.md)]ve platformlar arası belgeleri oluşturmak için diğer endüstri standartları. [!INCLUDE[TLA2#tla_metro](../../../../includes/tla2sharptla-metro-md.md)]tarafından dijital belgeleri oluşturulan, paylaşılan, yazdırılan, görüntülenen arşivlenmiş ve işlemini basitleştirir. Ek bilgi için [!INCLUDE[TLA2#tla_metro](../../../../includes/tla2sharptla-metro-md.md)], bkz: [XPS Web sitesi](http://www.microsoft.com/xps).  
+ [!INCLUDE[TLA2#tla_metro](../../../../includes/tla2sharptla-metro-md.md)] Elektronik belge biçimi, biriktirme dosya biçimidir ve sayfa açıklaması dili içindir. Bunu kullanan bir açık belge biçimidir [!INCLUDE[TLA#tla_xml](../../../../includes/tlasharptla-xml-md.md)], [!INCLUDE[TLA#tla_opc](../../../../includes/tlasharptla-opc-md.md)]ve platformlar arası belgeleri oluşturmak için diğer endüstri standartları. [!INCLUDE[TLA2#tla_metro](../../../../includes/tla2sharptla-metro-md.md)] tarafından dijital belgeleri oluşturulan, paylaşılan, yazdırılan, görüntülenen arşivlenmiş ve işlemini basitleştirir. Ek bilgi için [!INCLUDE[TLA2#tla_metro](../../../../includes/tla2sharptla-metro-md.md)], bkz: [XPS Web sitesi](http://www.microsoft.com/xps).  
   
- Yazdırma için çeşitli teknikler [!INCLUDE[TLA2#tla_metro](../../../../includes/tla2sharptla-metro-md.md)] tabanlı içerik kullanarak [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] örneklerde gösterildiği [program aracılığıyla yazdırma XPS dosyaları](../../../../docs/framework/wpf/advanced/how-to-programmatically-print-xps-files.md). Bu konuda yer alan içeriği gözden geçirme sırasında bu örnekleri başvuru daha yararlı olabilir. (Yönetilmeyen kod geliştiriciler için belgeleri görmelisiniz [MXDC_ESCAPE işlevi](https://msdn.microsoft.com/library/windows/desktop/dd162739.aspx). [!INCLUDE[TLA2#tla_winforms#initcap](../../../../includes/tla2sharptla-winformssharpinitcap-md.md)]Geliştiriciler kullanmalıdır [!INCLUDE[TLA2#tla_api](../../../../includes/tla2sharptla-api-md.md)] içinde <xref:System.Drawing.Printing> tam desteklemeyen ad alanı [!INCLUDE[TLA2#tla_xps](../../../../includes/tla2sharptla-xps-md.md)] yazdırma yolu ancak mu destek karma GDI XPS yazdırma yolu. Bkz: **yazdırma yolu mimarisi** aşağıda.)  
+ Yazdırma için çeşitli teknikler [!INCLUDE[TLA2#tla_metro](../../../../includes/tla2sharptla-metro-md.md)] tabanlı içerik kullanarak [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] örneklerde gösterildiği [program aracılığıyla yazdırma XPS dosyaları](../../../../docs/framework/wpf/advanced/how-to-programmatically-print-xps-files.md). Bu konuda yer alan içeriği gözden geçirme sırasında bu örnekleri başvuru daha yararlı olabilir. (Yönetilmeyen kod geliştiriciler için belgeleri görmelisiniz [MXDC_ESCAPE işlevi](https://msdn.microsoft.com/library/windows/desktop/dd162739.aspx). [!INCLUDE[TLA2#tla_winforms#initcap](../../../../includes/tla2sharptla-winformssharpinitcap-md.md)] Geliştiriciler kullanmalıdır [!INCLUDE[TLA2#tla_api](../../../../includes/tla2sharptla-api-md.md)] içinde <xref:System.Drawing.Printing> tam desteklemeyen ad alanı [!INCLUDE[TLA2#tla_xps](../../../../includes/tla2sharptla-xps-md.md)] yazdırma yolu ancak mu destek karma GDI XPS yazdırma yolu. Bkz: **yazdırma yolu mimarisi** aşağıda.)  
   
 <a name="XPS_print_path_intro"></a>   
 ## <a name="xps-print-path"></a>XPS yazdırma yolu  
- [!INCLUDE[TLA#tla_metro](../../../../includes/tlasharptla-metro-md.md)] Yazdırma yolu olan yeni bir [!INCLUDE[TLA#tla_mswin](../../../../includes/tlasharptla-mswin-md.md)] yazdırma nasıl işlendiğini yeniden tanımlamaktadır özelliği [!INCLUDE[TLA2#tla_mswin](../../../../includes/tla2sharptla-mswin-md.md)] uygulamalar. Çünkü [!INCLUDE[TLA2#tla_xps](../../../../includes/tla2sharptla-xps-md.md)] belge sunum dili (örneğin, RTF), yazdırma biriktiricisi biçiminde (örneğin, WMF) ve bir sayfa tanımlama dili (örneğin, PCL veya PostScript'i) değiştirebilirsiniz; yeni yazdırma yolu tutar [!INCLUDE[TLA2#tla_metro](../../../../includes/tla2sharptla-metro-md.md)] uygulamasından biçimi yazdırma sürücüsü ya da cihaz son işleme yayına.  
+ [!INCLUDE[TLA#tla_metro](../../../../includes/tlasharptla-metro-md.md)] Yazdırma yolu olan yeni bir [!INCLUDE[TLA#tla_mswin](../../../../includes/tlasharptla-mswin-md.md)] yazdırma Windows uygulamalarında nasıl işlendiğini yeniden tanımlamaktadır özelliği. Çünkü [!INCLUDE[TLA2#tla_xps](../../../../includes/tla2sharptla-xps-md.md)] belge sunum dili (örneğin, RTF), yazdırma biriktiricisi biçiminde (örneğin, WMF) ve bir sayfa tanımlama dili (örneğin, PCL veya PostScript'i) değiştirebilirsiniz; yeni yazdırma yolu tutar [!INCLUDE[TLA2#tla_metro](../../../../includes/tla2sharptla-metro-md.md)] uygulamasından biçimi yazdırma sürücüsü ya da cihaz son işleme yayına.  
   
  [!INCLUDE[TLA2#tla_metro](../../../../includes/tla2sharptla-metro-md.md)] Yazdırma yolu sırasında oluşturulan [!INCLUDE[TLA2#tla_metro](../../../../includes/tla2sharptla-metro-md.md)] sağlayan birkaç avantaj geliştiriciler için gibi yazıcı sürücüsü modeli (XPSDrv) [!INCLUDE[TLA#tla_wys](../../../../includes/tlasharptla-wys-md.md)] yazdırma, geliştirilmiş renk desteği ve yazdırma performansı önemli ölçüde iyileştirilmiştir. (XPSDrv hakkında daha fazla bilgi için bkz: [Windows Sürücü Geliştirme Seti](https://msdn.microsoft.com/library/windows/hardware/ff557573.aspx).)  
   
- Yazdırma Biriktiricisi için işlem [!INCLUDE[TLA2#tla_metro](../../../../includes/tla2sharptla-metro-md.md)] belgeleri olan temelde önceki sürümlerindekilerle aynı [!INCLUDE[TLA2#tla_mswin](../../../../includes/tla2sharptla-mswin-md.md)]. Ancak, bunu desteklemek için geliştirilmiştir [!INCLUDE[TLA2#tla_metro](../../../../includes/tla2sharptla-metro-md.md)] varolan yanı sıra yazdırma yolu [!INCLUDE[TLA2#tla_gdi](../../../../includes/tla2sharptla-gdi-md.md)] yazdırma yolu. Yeni yazdırma yolunun yerel olarak kullandığı bir [!INCLUDE[TLA2#tla_metro](../../../../includes/tla2sharptla-metro-md.md)] biriktirme dosya. While önceki sürümleri için yazılmış kullanıcı modu yazıcı sürücülerini [!INCLUDE[TLA#tla_mswin](../../../../includes/tlasharptla-mswin-md.md)] çalışmaya devam edecek bir [!INCLUDE[TLA2#tla_metro](../../../../includes/tla2sharptla-metro-md.md)] yazıcı sürücüsü (XPSDrv) kullanmak için gereklidir [!INCLUDE[TLA2#tla_metro](../../../../includes/tla2sharptla-metro-md.md)] yazdırma yolu.  
+ Yazdırma Biriktiricisi için işlem [!INCLUDE[TLA2#tla_metro](../../../../includes/tla2sharptla-metro-md.md)] belgeleri aynıdır temelde Windows'un önceki sürümlerinde olduğu gibi. Ancak, bunu desteklemek için geliştirilmiştir [!INCLUDE[TLA2#tla_metro](../../../../includes/tla2sharptla-metro-md.md)] varolan yanı sıra yazdırma yolu [!INCLUDE[TLA2#tla_gdi](../../../../includes/tla2sharptla-gdi-md.md)] yazdırma yolu. Yeni yazdırma yolunun yerel olarak kullandığı bir [!INCLUDE[TLA2#tla_metro](../../../../includes/tla2sharptla-metro-md.md)] biriktirme dosya. While önceki sürümleri için yazılmış kullanıcı modu yazıcı sürücülerini [!INCLUDE[TLA#tla_mswin](../../../../includes/tlasharptla-mswin-md.md)] çalışmaya devam edecek bir [!INCLUDE[TLA2#tla_metro](../../../../includes/tla2sharptla-metro-md.md)] yazıcı sürücüsü (XPSDrv) kullanmak için gereklidir [!INCLUDE[TLA2#tla_metro](../../../../includes/tla2sharptla-metro-md.md)] yazdırma yolu.  
   
  Avantajları [!INCLUDE[TLA2#tla_metro](../../../../includes/tla2sharptla-metro-md.md)] yazdırma yolu önemli bağlıdır ve şunları içerir:  
   
--   [!INCLUDE[TLA2#tla_wys](../../../../includes/tla2sharptla-wys-md.md)]yazdırma desteği  
+-   [!INCLUDE[TLA2#tla_wys](../../../../includes/tla2sharptla-wys-md.md)] yazdırma desteği  
   
 -   Kanal (bpc) CMYK başına 32 bit dahil gelişmiş renk profillerinin yerel destek adlı renkleri, n mürekkep ve saydamlık ve gradyan yerel destek.  
   
@@ -64,7 +66,7 @@ ms.lasthandoff: 12/22/2017
   
  Temel yazdırma senaryoları için basit ve sezgisel bir [!INCLUDE[TLA2#tla_api](../../../../includes/tla2sharptla-api-md.md)] kullanıcı arabirimi, yapılandırma ve iş gönderme için tek giriş noktası ile kullanılabilir. Gelişmiş senaryolar için ek destek için eklenen [!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)] özelleştirme (veya hiç [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] hiç), zaman uyumlu veya zaman uyumsuz yazdırma ve baskı yeteneği toplu. Her iki seçenek tam veya kısmi güven modunda yazdırma desteği sağlar.  
   
- [!INCLUDE[TLA2#tla_metro](../../../../includes/tla2sharptla-metro-md.md)]Genişletilebilirlik aklınızda ile tasarlanmıştır. Genişletilebilirlik Çerçevesi kullanarak, özellikler ve yetenekler eklenebilir [!INCLUDE[TLA2#tla_metro](../../../../includes/tla2sharptla-metro-md.md)] modüler bir şekilde. Genişletilebilirlik özellikleri şunlardır:  
+ [!INCLUDE[TLA2#tla_metro](../../../../includes/tla2sharptla-metro-md.md)] Genişletilebilirlik aklınızda ile tasarlanmıştır. Genişletilebilirlik Çerçevesi kullanarak, özellikler ve yetenekler eklenebilir [!INCLUDE[TLA2#tla_metro](../../../../includes/tla2sharptla-metro-md.md)] modüler bir şekilde. Genişletilebilirlik özellikleri şunlardır:  
   
 -   Şema yazdırın. Ortak şema düzenli olarak güncelleştirilir ve cihaz özelliklerinin hızlı uzantısını etkinleştirir. (Bkz **PrintTicket ve PrintCapabilities** aşağıda.)  
   
@@ -80,7 +82,7 @@ ms.lasthandoff: 12/22/2017
  ![XPS yazdırma sistemi](../../../../docs/framework/wpf/advanced/media/xpsprint.PNG "XPSPrint")  
   
 ### <a name="basic-xps-printing"></a>Temel XPS yazdırma  
- [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]Her iki temel tanımlar ve Gelişmiş [!INCLUDE[TLA#tla_api](../../../../includes/tlasharptla-api-md.md)]. Kapsamlı gerektirmeyen uygulamalar özelleştirme veya tam erişim yazdırmak için [!INCLUDE[TLA2#tla_metro](../../../../includes/tla2sharptla-metro-md.md)] özellik kümesi, temel yazdırma desteği mevcuttur. Temel yazdırma desteği minimal yapılandırma gerektirir ve bir tanıdık özellikleri bir yazdırma iletişim denetim sunulan [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)]. Birçok [!INCLUDE[TLA2#tla_metro](../../../../includes/tla2sharptla-metro-md.md)] bu Basitleştirilmiş yazdırma modelini kullanarak özellikleri kullanılabilir.  
+ [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] Her iki temel tanımlar ve Gelişmiş [!INCLUDE[TLA#tla_api](../../../../includes/tlasharptla-api-md.md)]. Kapsamlı gerektirmeyen uygulamalar özelleştirme veya tam erişim yazdırmak için [!INCLUDE[TLA2#tla_metro](../../../../includes/tla2sharptla-metro-md.md)] özellik kümesi, temel yazdırma desteği mevcuttur. Temel yazdırma desteği minimal yapılandırma gerektirir ve bir tanıdık özellikleri bir yazdırma iletişim denetim sunulan [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)]. Birçok [!INCLUDE[TLA2#tla_metro](../../../../includes/tla2sharptla-metro-md.md)] bu Basitleştirilmiş yazdırma modelini kullanarak özellikleri kullanılabilir.  
   
 #### <a name="printdialog"></a>PrintDialog  
  <xref:System.Windows.Controls.PrintDialog?displayProperty=nameWithType> Denetimi için bir tek giriş noktası sağlar [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)], yapılandırması ve [!INCLUDE[TLA2#tla_metro](../../../../includes/tla2sharptla-metro-md.md)] iş gönderme. Denetim oluşturulacağı ve kullanılacağı hakkında daha fazla bilgi için bkz: [Yazdır iletişim çağırma](../../../../docs/framework/wpf/advanced/how-to-invoke-a-print-dialog.md).  
@@ -127,7 +129,7 @@ Gerektirmeyen uygulamalar için [!INCLUDE[TLA2#tla_metro](../../../../includes/t
 ## <a name="xpsdrv-driver-model"></a>XPSDrv sürücü modeli  
  [!INCLUDE[TLA2#tla_metro](../../../../includes/tla2sharptla-metro-md.md)] Yazdırma yolu kullanarak biriktirici verimliliğini artırır [!INCLUDE[TLA2#tla_metro](../../../../includes/tla2sharptla-metro-md.md)] için yazdırırken yerel yazdırma biriktirme biçiminde bir [!INCLUDE[TLA2#tla_metro](../../../../includes/tla2sharptla-metro-md.md)] -etkin yazıcı veya sürücü. Basitleştirilmiş biriktirme işlemini gibi bir ara Biriktirme dosyası oluşturmak için ihtiyacını ortadan kaldıran bir [!INCLUDE[TLA2#tla_emf](../../../../includes/tla2sharptla-emf-md.md)] belge Biriktiricideki önce veri dosyası. Daha küçük biriktirme dosya boyutları aracılığıyla [!INCLUDE[TLA2#tla_metro](../../../../includes/tla2sharptla-metro-md.md)] yazdırma yolu ağ trafiği azaltmak ve yazdırma performansı.  
   
- [!INCLUDE[TLA2#tla_emf](../../../../includes/tla2sharptla-emf-md.md)]uygulama çıkış çağrılar bir dizi olarak temsil eden kapalı bir biçimidir [!INCLUDE[TLA2#tla_gdi](../../../../includes/tla2sharptla-gdi-md.md)] oluşturma hizmetleri için. Farklı [!INCLUDE[TLA2#tla_emf](../../../../includes/tla2sharptla-emf-md.md)], [!INCLUDE[TLA2#tla_metro](../../../../includes/tla2sharptla-metro-md.md)] biriktirme biçimi, ne zaman çıkış için daha fazla yorumlama gerek kalmadan gerçek belge temsil eden bir [!INCLUDE[TLA2#tla_metro](../../../../includes/tla2sharptla-metro-md.md)]-based yazıcı sürücüsü (XPSDrv). Sürücüleri biçimde veriler üzerinde doğrudan çalışabilir. Bu özelliği kullanırken gerekli veri ve renk alanı dönüşümleri ortadan [!INCLUDE[TLA2#tla_emf](../../../../includes/tla2sharptla-emf-md.md)] dosyaları ve [!INCLUDE[TLA2#tla_gdi](../../../../includes/tla2sharptla-gdi-md.md)]-yazdırma sürücülerini tabanlı.  
+ [!INCLUDE[TLA2#tla_emf](../../../../includes/tla2sharptla-emf-md.md)] uygulama çıkış çağrılar bir dizi olarak temsil eden kapalı bir biçimidir [!INCLUDE[TLA2#tla_gdi](../../../../includes/tla2sharptla-gdi-md.md)] oluşturma hizmetleri için. Farklı [!INCLUDE[TLA2#tla_emf](../../../../includes/tla2sharptla-emf-md.md)], [!INCLUDE[TLA2#tla_metro](../../../../includes/tla2sharptla-metro-md.md)] biriktirme biçimi, ne zaman çıkış için daha fazla yorumlama gerek kalmadan gerçek belge temsil eden bir [!INCLUDE[TLA2#tla_metro](../../../../includes/tla2sharptla-metro-md.md)]-based yazıcı sürücüsü (XPSDrv). Sürücüleri biçimde veriler üzerinde doğrudan çalışabilir. Bu özelliği kullanırken gerekli veri ve renk alanı dönüşümleri ortadan [!INCLUDE[TLA2#tla_emf](../../../../includes/tla2sharptla-emf-md.md)] dosyaları ve [!INCLUDE[TLA2#tla_gdi](../../../../includes/tla2sharptla-gdi-md.md)]-yazdırma sürücülerini tabanlı.  
   
  Biriktirme dosya boyutları genellikle kullandığınızda azaltılmış [!INCLUDE[TLA2#tla_metro](../../../../includes/tla2sharptla-metro-md.md)] hedefleyen belgeleri bir [!INCLUDE[TLA2#tla_metro](../../../../includes/tla2sharptla-metro-md.md)] yazıcı sürücüsü (XPSDrv) kıyasla ile bunların [!INCLUDE[TLA2#tla_emf](../../../../includes/tla2sharptla-emf-md.md)] eşdeğerleri; ancak, özel durum vardır:  
   

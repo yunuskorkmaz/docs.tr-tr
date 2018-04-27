@@ -1,30 +1,32 @@
 ---
-title: "Arka Plan Kod ve WPF İçindeki XAML"
-ms.custom: 
+title: Arka Plan Kod ve WPF İçindeki XAML
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-wpf
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-wpf
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - XAML [WPF], code-behind
 - code-behind files [WPF], XAML
 ms.assetid: 9df6d3c9-aed3-471c-af36-6859b19d999f
-caps.latest.revision: "14"
+caps.latest.revision: 14
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 19c7c2cdd49663a57a4184027fd7d6ad8fcd7656
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 9c28a501996e4f2cc25e9e280b2f63e1c0c67051
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="code-behind-and-xaml-in-wpf"></a>Arka Plan Kod ve WPF İçindeki XAML
-<a name="introduction"></a>Arka plan kodu biçimlendirme tanımlı nesneler ile birleştirilen kodu açıklamak için kullanılan bir terim olduğu durumlarda bir [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] sayfası biçimlendirme derlenmiş. Bu konu, arka plan kodu için gereksinimler ve aynı zamanda kodu için bir alternatif satır içi kod mekanizmasının açıklar [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)].  
+<a name="introduction"></a> Arka plan kodu biçimlendirme tanımlı nesneler ile birleştirilen kodu açıklamak için kullanılan bir terim olduğu durumlarda bir [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] sayfası biçimlendirme derlenmiş. Bu konu, arka plan kodu için gereksinimler ve aynı zamanda kodu için bir alternatif satır içi kod mekanizmasının açıklar [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)].  
   
  Bu konu aşağıdaki bölümleri içermektedir:  
   
@@ -57,11 +59,11 @@ ms.lasthandoff: 12/22/2017
   
 -   İşleyici yedekleme türü sistemindeki uygun olayı için temsilci eşleşmelidir.  
   
--   İçin [!INCLUDE[TLA#tla_visualb](../../../../includes/tlasharptla-visualb-md.md)] dil dile özgü özellikle kullanabilirsiniz `Handles` örnekleri ve öznitelikleri ile işleyicileri ekleme yerine işleyici bildiriminde olayları işleyicileri ilişkilendirmek için anahtar sözcüğü [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]. Ancak, bu teknik bazı sınırlamaları nedeniyle sahip `Handles` anahtar sözcüğü tüm belirli özelliklerini destekleyemez [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] gibi belirli olay sistem yönlendirilmiş olay senaryoları veya ekli olaylar. Ayrıntılar için bkz [Visual Basic ve WPF olay işleme](../../../../docs/framework/wpf/advanced/visual-basic-and-wpf-event-handling.md).  
+-   Microsoft Visual Basic dil için özellikle dile özgü kullanabileceğiniz `Handles` örnekleri ve öznitelikleri ile işleyicileri ekleme yerine işleyici bildiriminde olayları işleyicileri ilişkilendirmek için anahtar sözcüğü [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]. Ancak, bu teknik bazı sınırlamaları nedeniyle sahip `Handles` anahtar sözcüğü tüm belirli özelliklerini destekleyemez [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] gibi belirli olay sistem yönlendirilmiş olay senaryoları veya ekli olaylar. Ayrıntılar için bkz [Visual Basic ve WPF olay işleme](../../../../docs/framework/wpf/advanced/visual-basic-and-wpf-event-handling.md).  
   
 <a name="x_Code"></a>   
 ## <a name="xcode"></a>x: Code  
- [x: Code](../../../../docs/framework/xaml-services/x-code-intrinsic-xaml-type.md) yönerge öğesi tanımlanan [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]. Bir `x:Code` yönergesi öğesi, satır içi programlama kodu içerebilir. Satır içi olarak tanımlanan kod etkileşim kurabildikleri [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] aynı sayfa üzerinde. Aşağıdaki örnekte, satır içi gösterilmektedir [!INCLUDE[TLA2#tla_cshrp](../../../../includes/tla2sharptla-cshrp-md.md)] kodu. Kod içinde olduğuna dikkat edin `x:Code` öğesi ve kod tarafından alınmalıdır `<CDATA[`... `]]>` için içerik kaçınmak için [!INCLUDE[TLA2#tla_xml](../../../../includes/tla2sharptla-xml-md.md)], böylece bir [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] işlemci (ya da yorumlama [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] şema veya [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] şema) içeriğini yorumlama denemez tam anlamıyla olarak [!INCLUDE[TLA2#tla_xml](../../../../includes/tla2sharptla-xml-md.md)].  
+ [x: Code](../../../../docs/framework/xaml-services/x-code-intrinsic-xaml-type.md) yönerge öğesi tanımlanan [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]. Bir `x:Code` yönergesi öğesi, satır içi programlama kodu içerebilir. Satır içi olarak tanımlanan kod etkileşim kurabildikleri [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] aynı sayfa üzerinde. Aşağıdaki örnek, satır içi C# kod gösterilmektedir. Kod içinde olduğuna dikkat edin `x:Code` öğesi ve kod tarafından alınmalıdır `<CDATA[`... `]]>` için içerik kaçınmak için [!INCLUDE[TLA2#tla_xml](../../../../includes/tla2sharptla-xml-md.md)], böylece bir [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] işlemci (ya da yorumlama [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] şema veya [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] şema) içeriğini yorumlama denemez tam anlamıyla olarak [!INCLUDE[TLA2#tla_xml](../../../../includes/tla2sharptla-xml-md.md)].  
   
  [!code-xaml[XAMLOvwSupport#ButtonWithInlineCode](../../../../samples/snippets/csharp/VS_Snippets_Wpf/XAMLOvwSupport/CSharp/page4.xaml#buttonwithinlinecode)]  
   

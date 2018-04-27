@@ -1,32 +1,32 @@
 ---
-title: "Çöp Toplama ve Performans"
-ms.custom: 
+title: Çöp Toplama ve Performans
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology: dotnet-standard
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - garbage collection, troubleshooting
 - garbage collection, performance
 ms.assetid: c203467b-e95c-4ccf-b30b-953eb3463134
-caps.latest.revision: "35"
+caps.latest.revision: 35
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: e1cf3475ded3582cdf0754e68d13c97bd87b06a8
-ms.sourcegitcommit: 91691981897cf8451033cb01071d8f5d94017f97
+ms.openlocfilehash: daf70cdb7344f895059d0bc8b986edddbf7d53bc
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/09/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="garbage-collection-and-performance"></a>Çöp Toplama ve Performans
-<a name="top"></a>Bu konu, atık toplama ve bellek kullanımı ile ilgili sorunları açıklar. Yönetilen yığınla ilgili sorunları ele alır ve çöp toplamanın uygulamalarınız üzerindeki etkisinin nasıl en aza indirgenebileceğini açıklar. Her başlıkta, problemleri araştırmak için kullanabileceğiniz prosedürlerin bağlantıları yer alır.  
+<a name="top"></a> Bu konu, atık toplama ve bellek kullanımı ile ilgili sorunları açıklar. Yönetilen yığınla ilgili sorunları ele alır ve çöp toplamanın uygulamalarınız üzerindeki etkisinin nasıl en aza indirgenebileceğini açıklar. Her başlıkta, problemleri araştırmak için kullanabileceğiniz prosedürlerin bağlantıları yer alır.  
   
  Bu konu aşağıdaki bölümleri içermektedir:  
   
@@ -48,9 +48,9 @@ ms.lasthandoff: 01/09/2018
   
 <a name="sos"></a>   
 ### <a name="debugging-with-sos"></a>SOS ile hata ayıklama  
- Kullanabileceğiniz [Windows hata ayıklayıcısı (WinDbg)](/windows-hardware/drivers/debugger/index) nesneleri yönetilen yığında incelemek için.  
-  
- WinDbg yüklemek için hata ayıklama araçları için Windows'dan yükleyin [WDK ve geliştirici araçları Web sitesi](http://go.microsoft.com/fwlink/?LinkID=103787).  
+ Kullanabileceğiniz [Windows hata ayıklayıcısı (WinDbg)](/windows-hardware/drivers/debugger/index) nesneleri yönetilen yığında incelemek için.
+ 
+ WinDbg yüklemek için hata ayıklama araçları için Windows'dan yükleyin [karşıdan Windows hata ayıklama araçları için](/windows-hardware/drivers/debugger/debugger-download-tools) sayfası.
   
 <a name="etw"></a>   
 ### <a name="garbage-collection-etw-events"></a>Çöp Toplama ETW Olayları  
@@ -333,7 +333,7 @@ ms.lasthandoff: 01/09/2018
   
      Bu örnekte, en büyük boş bölge yaklaşık olarak 24000 KB büyüklüğündedir (onaltılık sistemde 3A980). Bu bölgenin boyutu, çöp toplayıcının bir segment için ihtiyaç duyduğu boyuttan daha küçüktür.  
   
-     veya  
+     -veya-  
   
 -   Kullanım **vmstat** komutu:  
   

@@ -1,5 +1,5 @@
 ---
-title: "Visual Basic Uygulama Modelini Genişletme"
+title: Visual Basic Uygulama Modelini Genişletme
 ms.date: 07/20/2015
 ms.prod: .net
 ms.technology:
@@ -8,14 +8,14 @@ ms.topic: article
 helpviewer_keywords:
 - Visual Basic Application Model, extending
 ms.assetid: e91d3bed-4c27-40e3-871d-2be17467c72c
-caps.latest.revision: 
+caps.latest.revision: 21
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: 15e6ea1a8b2df0b8ed1b84abceee9e6be2c556f9
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 5ffd882c2a1d04c29483d380e972d6ce70bdb5c4
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="extending-the-visual-basic-application-model"></a>Visual Basic Uygulama Modelini Genişletme
 Geçersiz kılarak uygulama modeli işlevselliği ekleyebilirsiniz `Overridable` üyeleri <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase> sınıfı. Bu teknik uygulama modeli davranışını özelleştirmek ve uygulama başlatıldığı ve kapandıktan gibi kendi yöntem çağrıları eklemenize izin verir.  
@@ -25,11 +25,11 @@ Geçersiz kılarak uygulama modeli işlevselliği ekleyebilirsiniz `Overridable`
   
  Aşağıdaki grafikte normal bir Visual Basic Windows Forms uygulaması'nda uygulama modeli çağrı sırası gösterir. Ne zaman dizisini başlatır `Sub Main` yordam çağrıları <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.Run%2A> yöntemi.  
   
- ![Visual Basic uygulama modeli &#45; &#45; Çalıştırma](../../../visual-basic/developing-apps/customizing-extending-my/media/vb_modelrun.gif "VB_ModelRun")  
+ ![Visual Basic uygulama modeli &#45; &#45; çalıştırmak](../../../visual-basic/developing-apps/customizing-extending-my/media/vb_modelrun.gif "VB_ModelRun")  
   
  Visual Basic uygulama modeli de sağlar <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.StartupNextInstance> ve <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.UnhandledException> olaylar. Bu olaylar oluşturma için mekanizma aşağıdaki grafik gösterir.  
   
- ![Visual Basic uygulama modeli &#45; &#45; Sonraki örnek](../../../visual-basic/developing-apps/customizing-extending-my/media/vb_modelnext.gif "VB_ModelNext")  
+ ![Visual Basic uygulama modeli &#45; &#45; sonraki örnek](../../../visual-basic/developing-apps/customizing-extending-my/media/vb_modelnext.gif "VB_ModelNext")  
   
  ![Visual Basic uygulama modeli işlenmemiş özel durum](../../../visual-basic/developing-apps/customizing-extending-my/media/vb_unhandex.gif "VB_UnhandEx")  
   
@@ -50,7 +50,7 @@ Geçersiz kılarak uygulama modeli işlevselliği ekleyebilirsiniz `Overridable`
   
     2.  <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.OnCreateSplashScreen%2A>. Giriş ekranı başlatır kod yaymak üzere bir tasarımcı sağlar.  
   
-         Varsayılan olarak, bu yöntem hiçbir şey yapmaz. Uygulamanız için bir giriş ekranı seçerseniz [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] **Proje Tasarımcısı**, Tasarımcı geçersiz kılmaları <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.OnCreateSplashScreen%2A> ayarlar yöntemiyle yöntemini <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.SplashScreen%2A> ekranı yeni bir örneğini özelliğine formu.  
+         Varsayılan olarak, bu yöntem hiçbir şey yapmaz. Visual Basic'te, uygulamanız için bir giriş ekranı seçerseniz **Proje Tasarımcısı**, Tasarımcı geçersiz kılmaları <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.OnCreateSplashScreen%2A> ayarlar yöntemiyle yöntemini <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.SplashScreen%2A> giriş ekranı formun yeni bir örneğini özelliğine .  
   
 2.  <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.OnStartup%2A>. Yükseltme için bir genişletilebilirlik noktasıdır `Startup` olay. Bu işlev döndürürse, uygulama başlatma sırası durdurur `False`.  
   
@@ -62,7 +62,7 @@ Geçersiz kılarak uygulama modeli işlevselliği ekleyebilirsiniz `Overridable`
   
     1.  <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.OnCreateMainForm%2A>. Ana form başlatır kod yaymak üzere designer için bir yol sağlar.  
   
-         Varsayılan olarak, bu yöntem hiçbir şey yapmaz. Ancak, seçtiğinizde, ana form, uygulamanız için [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] **Proje Tasarımcısı**, Tasarımcı geçersiz kılmaları <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.OnCreateMainForm%2A> ayarlar yöntemiyle yöntemini <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.MainForm%2A> ana formun yeni bir örneğini özelliğine .  
+         Varsayılan olarak, bu yöntem hiçbir şey yapmaz. Ancak, seçtiğinizde, ana form Visual Basic'te, uygulamanız için **Proje Tasarımcısı**, Tasarımcı geçersiz kılmaları <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.OnCreateMainForm%2A> ayarlar yöntemiyle yöntemini <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.MainForm%2A> ana formun yeni bir örneğini özelliğine.  
   
     2.  <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.HideSplashScreen%2A>. Uygulama tanımlı bir giriş ekranı sahiptir ve açık ise, bu yöntem giriş ekranı kapatır.  
   
@@ -85,7 +85,7 @@ Geçersiz kılarak uygulama modeli işlevselliği ekleyebilirsiniz `Overridable`
  <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.OnStartupNextInstance(Microsoft.VisualBasic.ApplicationServices.StartupNextInstanceEventArgs)> Oluşturucu çağrıları <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.UseCompatibleTextRendering%2A> belirlemek için uygulamanın formları kullanmak için hangi metin işleme altyapısı için özellik. Varsayılan olarak, <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.UseCompatibleTextRendering%2A> özelliği döndürür `False`, GDI metin işleme altyapısı kullanılması gerektiğini belirten, olduğu varsayılan olarak [!INCLUDE[vbprvblong](~/includes/vbprvblong-md.md)]. Geçersiz kılabilirsiniz <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.UseCompatibleTextRendering%2A> dönmek için özellik `True`, belirten GDI + metin işleme altyapısı kullanılmasını Visual Basic .NET 2002 ve Visual Basic .NET 2003'te varsayılan değerdir.  
   
 ## <a name="configuring-the-application"></a>Uygulamayı yapılandırma  
- Bir parçası olarak [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] uygulama modeli <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.UseCompatibleTextRendering> sınıfı, uygulamayı yapılandırma korumalı özellikleri sağlar. Bu özellikleri uygulayan sınıfa oluşturucuda ayarlamanız gerekir.  
+ Visual Basic uygulama modeli bir parçası olarak <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.UseCompatibleTextRendering> sınıfı, uygulamayı yapılandırma korumalı özellikleri sağlar. Bu özellikleri uygulayan sınıfa oluşturucuda ayarlamanız gerekir.  
   
  Bir varsayılan Windows Forms projesinde **Proje Tasarımcısı** Tasarımcı ayarlarla özelliklerini ayarlamak için kod oluşturur. Yalnızca uygulama başlatılırken özellikleri kullanılır; Uygulama başlatıldıktan sonra bunları ayar etkisizdir.  
   
@@ -104,5 +104,5 @@ Geçersiz kılarak uygulama modeli işlevselliği ekleyebilirsiniz `Overridable`
  <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.Shutdown>  
  <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.NetworkAvailabilityChanged>  
  <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.NetworkAvailabilityChanged>  
- [Visual Basic uygulama modeline genel bakış](../../../visual-basic/developing-apps/development-with-my/overview-of-the-visual-basic-application-model.md)  
- [Uygulama sayfası, Proje Tasarımcısı (Visual Basic)](/visualstudio/ide/reference/application-page-project-designer-visual-basic)
+ [Visual Basic Uygulama Modeline Genel Bakış](../../../visual-basic/developing-apps/development-with-my/overview-of-the-visual-basic-application-model.md)  
+ [Uygulama Sayfası, Proje Tasarımcısı (Visual Basic)](/visualstudio/ide/reference/application-page-project-designer-visual-basic)

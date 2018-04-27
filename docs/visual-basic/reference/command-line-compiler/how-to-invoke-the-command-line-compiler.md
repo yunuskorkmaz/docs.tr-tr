@@ -1,10 +1,11 @@
 ---
-title: "Nasıl yapılır: Komut Satırı Derleyicisini Çağırma (Visual Basic)"
+title: 'Nasıl yapılır: Komut Satırı Derleyicisini Çağırma (Visual Basic)'
 ms.date: 07/20/2015
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- devlang-visual-basic
 ms.topic: article
 helpviewer_keywords:
 - command-line arguments
@@ -12,14 +13,14 @@ helpviewer_keywords:
 - Visual Basic compiler, starting
 - command line [Visual Basic], arguments
 ms.assetid: 0fd9a8f6-f34e-4c35-a49d-9b9bbd8da4a9
-caps.latest.revision: "28"
+caps.latest.revision: 28
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: 5c69860ede5620272e67bde435e6e6fa08cc81bc
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
-ms.translationtype: MT
+ms.openlocfilehash: f1ccf08ba58fa6af60bd8ffd7cba79b205dc0f3d
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="how-to-invoke-the-command-line-compiler-visual-basic"></a>Nasıl yapılır: Komut Satırı Derleyicisini Çağırma (Visual Basic)
 Komut satırına olarak da bilinen MS-DOS İstemi yürütülebilir dosyanın adını yazarak komut satırı derleyicisini çağırma. Varsayılan Windows komut istemi derleme yaparsanız, yürütülebilir dosyanın tam yolunu yazmanız gerekir. Bu varsayılan davranışı geçersiz kılmak için kullanabilir [!INCLUDE[vsprvs](~/includes/vsprvs-md.md)] komut istemi veya PATH ortam değişkeni değiştirin. Her ikisi de, herhangi bir dizinden derleyici adını yazarak derlemek izin verir.  
@@ -54,7 +55,7 @@ Komut satırına olarak da bilinen MS-DOS İstemi yürütülebilir dosyanın ad�
   
 6.  Tıklatın **Tamam** yaptığınız düzenlemeleri onaylamak ve iletişim kutularını kapatın.  
   
-     PATH ortam değişkeni değiştirdikten sonra çalıştırabilirsiniz [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] derleyici bilgisayardaki herhangi bir dizinden Windows komut istemi.  
+     PATH ortam değişkeni değiştirdikten sonra Visual Basic derleyici Windows komut isteminde herhangi bir dizinden bilgisayarda çalıştırabilirsiniz.  
   
 ### <a name="to-invoke-the-compiler-using-the-windows-command-prompt"></a>Windows komut istemi kullanarak derleyici çağırmak için  
   
@@ -66,4 +67,4 @@ Komut satırına olarak da bilinen MS-DOS İstemi yürütülebilir dosyanın ad�
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
  [Visual Basic komut satırı derleyicisi](../../../visual-basic/reference/command-line-compiler/index.md)  
- [Koşullu derleme](../../../visual-basic/programming-guide/program-structure/conditional-compilation.md)
+ [Koşullu Derleme](../../../visual-basic/programming-guide/program-structure/conditional-compilation.md)

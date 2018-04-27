@@ -1,11 +1,12 @@
 ---
-title: "İzlenecek yol: COM Nesnelerinde Kalıtım Uygulama (Visual Basic)"
-ms.custom: 
+title: 'İzlenecek yol: COM Nesnelerinde Kalıtım Uygulama (Visual Basic)'
+ms.custom: ''
 ms.date: 07/20/2015
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- devlang-visual-basic
 ms.topic: article
 helpviewer_keywords:
 - inheritance [Visual Basic], COM reusability
@@ -13,17 +14,17 @@ helpviewer_keywords:
 - inheritance [Visual Basic], walkthroughs
 - derived classes [Visual Basic], COM reusability
 ms.assetid: f8e7263a-de13-48d1-b67c-ca1adf3544d9
-caps.latest.revision: "16"
+caps.latest.revision: 16
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: 8d6906c58431a0e844e8f430ade10ae819e77ff2
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
-ms.translationtype: MT
+ms.openlocfilehash: 10c6bdf46e351b23705107da3b693531718cfd37
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="walkthrough-implementing-inheritance-with-com-objects-visual-basic"></a>İzlenecek yol: COM Nesnelerinde Kalıtım Uygulama (Visual Basic)
-Visual Basic sınıflardan türetilemeyeceğini `Public` olanlar'ın önceki sürümlerinde oluşturulan COM nesnelerini sınıflarda [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]. Özellikleri ve yöntemleri COM nesneleri devralınan sınıfların geçersiz kılındı gibi özellikleri olarak aşırı yüklendi ve herhangi bir taban sınıf yöntemlerini geçersiz veya aşırı yüklenmiş. COM nesneleri içinden devralma yeniden derleyin istemediğiniz varolan bir sınıf kitaplığı olduğunda yararlıdır.  
+Visual Basic sınıflardan türetilemeyeceğini `Public` olanlar Visual Basic önceki sürümlerinde oluşturulan COM nesnelerini sınıflarda. Özellikleri ve yöntemleri COM nesneleri devralınan sınıfların geçersiz kılındı gibi özellikleri olarak aşırı yüklendi ve herhangi bir taban sınıf yöntemlerini geçersiz veya aşırı yüklenmiş. COM nesneleri içinden devralma yeniden derleyin istemediğiniz varolan bir sınıf kitaplığı olduğunda yararlıdır.  
   
  Aşağıdaki yordamda, Visual Basic 6.0 bir sınıfı içeren bir COM nesnesi oluşturmak ve temel sınıf olarak kullanmak gösterilmiştir.  
   
@@ -77,14 +78,14 @@ Visual Basic sınıflardan türetilemeyeceğini `Public` olanlar'ın önceki sü
 10. Oluşturma ve tıklayarak COM nesnesi kaydetme **olun ComObject1.dll** üzerinde **dosya** menüsü.  
   
     > [!NOTE]
-    >  Ayrıca ile oluşturulan bir sınıf getirebilir rağmen [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] bir COM nesnesi olarak doğru bir COM nesnesi değil ve bu kılavuzda kullanılamaz. Ayrıntılar için bkz [.NET Framework uygulamalarında COM birlikte çalışabilirliği](../../../visual-basic/programming-guide/com-interop/com-interoperability-in-net-framework-applications.md).  
+    >  Ayrıca bir COM nesnesi olarak Visual Basic ile oluşturulan bir sınıf getirebilir rağmen doğru bir COM nesnesi değil ve bu kılavuzda kullanılamaz. Ayrıntılar için bkz [.NET Framework uygulamalarında COM birlikte çalışabilirliği](../../../visual-basic/programming-guide/com-interop/com-interoperability-in-net-framework-applications.md).  
   
 ## <a name="interop-assemblies"></a>Birlikte çalışma derlemeleri  
- Aşağıdaki yordamda, yönetilmeyen kod (örneğin, bir COM nesnesi) ve yönetilen kod arasında bir köprü görevi gören bir birlikte çalışma derlemesi oluşturacak [!INCLUDE[vsprvs](~/includes/vsprvs-md.md)] kullanır. Birlikte çalışma derlemesi, [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] gibi birçok COM ile çalışma ayrıntılarını nesneleri tanıtıcıları oluşturur *birlikte çalışma hazırlama*, işlemi paketleme parametreler ve dönüş değerleri eşdeğer veri türleri için taşırken ve COM nesneleri. Başvuru [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] uygulama noktalarına birlikte çalışma derlemesi, gerçek COM nesnesi değil.  
+ Aşağıdaki yordamda, yönetilmeyen kod (örneğin, bir COM nesnesi) ve yönetilen kod arasında bir köprü görevi gören bir birlikte çalışma derlemesi oluşturacak [!INCLUDE[vsprvs](~/includes/vsprvs-md.md)] kullanır. Visual Basic oluşturur birlikte çalışma derlemesi birçok gibi COM nesneleri ile çalışma ayrıntılarını işler *birlikte çalışma hazırlama*, işlemi paketleme parametreler ve dönüş değerleri eşdeğer veri türleri için taşırken ve COM nesneleri. Visual Basic uygulama nokta derlemesine başvuru birlikte çalışma, gerçek COM nesnesi değil.  
   
 #### <a name="to-use-a-com-object-with-visual-basic-2005-and-later-versions"></a>Visual Basic 2005 ve sonraki sürümler ile COM nesnesini kullanma  
   
-1.  Yeni bir [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] Windows uygulama projesi.  
+1.  Yeni bir Visual Basic Windows uygulama projesi açın.  
   
 2.  Üzerinde **proje** menüsünde tıklatın **Başvuru Ekle**.  
   
@@ -124,7 +125,7 @@ Visual Basic sınıflardan türetilemeyeceğini `Public` olanlar'ın önceki sü
   
 3.  F5 tuşuna basarak projeyi çalıştırın.  
   
- Form düğmeyi tıkladığınızda `AddNumbers` yöntemi ile ilk çağrılır `Short` veri türü numaraları ve [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] uygun yöntemi temel sınıfından seçer. İkinci çağrı `AddNumbers` aşırı yükleme yönteminden yönlendirildiği `MathClass`. Üçüncü çağrıları çağrı `SubtractNumbers` sınıfını genişleten yöntemi. Taban sınıfı özelliğinde ayarlanır ve değer görüntülenir.  
+ Form düğmeyi tıkladığınızda `AddNumbers` yöntemi ile çağrılmadan önce `Short` veri türü numaraları ve Visual Basic temel sınıfından uygun yöntemi seçer. İkinci çağrı `AddNumbers` aşırı yükleme yönteminden yönlendirildiği `MathClass`. Üçüncü çağrıları çağrı `SubtractNumbers` sınıfını genişleten yöntemi. Taban sınıfı özelliğinde ayarlanır ve değer görüntülenir.  
   
 ## <a name="next-steps"></a>Sonraki Adımlar  
  Fark etmiş aşırı yüklenmiş `AddNumbers` işlevi aynı veri türünde COM nesnesinin temel sınıfından devralınan yöntemi olarak görünür. Visual Basic 6.0 16 bit tamsayı olarak bağımsız değişkenleri ve parametreleri temel sınıf yönteminin tanımlı, ancak türü 16 bit tamsayı olarak gösterilir çünkü `Short` Visual Basic sonraki sürümlerinde. Yeni işlev 32-bit tamsayı kabul eder ve temel sınıf işlevi overloads.  
@@ -138,6 +139,6 @@ Visual Basic sınıflardan türetilemeyeceğini `Public` olanlar'ın önceki sü
 -   Kullandığınız özellikler `ByRef` parametreleri geçersiz kılınamaz.  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [.NET Framework uygulamalarında COM birlikte çalışabilirliği](../../../visual-basic/programming-guide/com-interop/com-interoperability-in-net-framework-applications.md)  
- [Inherits deyimi](../../../visual-basic/language-reference/statements/inherits-statement.md)  
- [Short veri türü](../../../visual-basic/language-reference/data-types/short-data-type.md)
+ [.NET Framework Uygulamalarında COM Birlikte Çalışabilirliği](../../../visual-basic/programming-guide/com-interop/com-interoperability-in-net-framework-applications.md)  
+ [Inherits Deyimi](../../../visual-basic/language-reference/statements/inherits-statement.md)  
+ [Short Veri Türü](../../../visual-basic/language-reference/data-types/short-data-type.md)

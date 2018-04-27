@@ -1,11 +1,12 @@
 ---
 title: "İzlenecek yol: Windows API'larını Çağırma (Visual Basic)"
-ms.custom: 
+ms.custom: ''
 ms.date: 07/20/2015
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- devlang-visual-basic
 ms.topic: article
 helpviewer_keywords:
 - DLLs, calling
@@ -17,23 +18,23 @@ helpviewer_keywords:
 - DllImport attribute, calling Windows API
 - Declare statement [Visual Basic], declaring DLL functions
 ms.assetid: 9280ca96-7a93-47a3-8d01-6d01be0657cb
-caps.latest.revision: "20"
+caps.latest.revision: 20
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: d494ad0f8bd4eb0dac57de214064fd2d208011ff
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 34bfb732e2d99b259811573a427ae66628c7fc3a
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="walkthrough-calling-windows-apis-visual-basic"></a>İzlenecek yol: Windows API'larını Çağırma (Visual Basic)
 Windows, Windows işletim sisteminin parçası olan dinamik bağlantı kitaplıklarını (DLL'ler) apı'leridir. Bunları kendi eşdeğer yordamları yazmak zor olduğu durumlarda görevleri gerçekleştirmek için kullanın. Örneğin, Windows adlı bir işlev sağlar `FlashWindowEx` olanak tanıyan bir uygulama için başlık çubuğu açık ve koyu gri arasında alternatif olun.  
   
  Windows API'ları kodunuzda kullanmanın avantajı, zaten yazılır yararlı işlevleri onlarca ve kullanılacak bekleme içerdiğinden bunlar geliştirme zaman kazanabilirsiniz ' dir. Windows API ile ve unforgiving şeyler ters gittiğinde iş zor olabilir olumsuz olur.  
   
- Windows API'ları birlikte çalışabilirlik özel kategorisini temsil eder. Windows API'ları, yönetilen kod kullanmaz, tür kitaplıkları ve Visual Studio ile kullanılanlardan farklı veri türlerini kullanan yerleşik sahip değil. Bu farklılıklar nedeniyle ve Windows API'ları COM nesneleri, Windows API ile birlikte çalışabilirlik olmadığından ve [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] platformu kullanılarak gerçekleştirilen çağırma, veya PInvoke. Platform çağırma etkinleştirir DLL'lerde uygulanan yönetilmeyen işlevleri çağırmak için kodu yönetilen bir hizmettir. Daha fazla bilgi için bkz: [yönetilmeyen DLL işlevlerini kullanma](../../../framework/interop/consuming-unmanaged-dll-functions.md). İçinde PInvoke kullanabilirsiniz [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] kullanarak ya da `Declare` bildirimi veya uygulama `DllImport` özniteliği için boş bir yordamı.  
+ Windows API'ları birlikte çalışabilirlik özel kategorisini temsil eder. Windows API'ları, yönetilen kod kullanmaz, tür kitaplıkları ve Visual Studio ile kullanılanlardan farklı veri türlerini kullanan yerleşik sahip değil. Bu farklılıklar nedeniyle ve Windows API'ları COM nesneleri, Windows API ile birlikte çalışabilirlik olmadığından ve [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] platformu kullanılarak gerçekleştirilen çağırma, veya PInvoke. Platform çağırma etkinleştirir DLL'lerde uygulanan yönetilmeyen işlevleri çağırmak için kodu yönetilen bir hizmettir. Daha fazla bilgi için bkz: [yönetilmeyen DLL işlevlerini kullanma](../../../framework/interop/consuming-unmanaged-dll-functions.md). Visual Basic'te PInvoke kullanarak kullanabilirsiniz `Declare` bildirimi veya uygulama `DllImport` özniteliği için boş bir yordamı.  
   
- Windows API çağrıları önemli bir parçası olan [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] geçmişte programlama, ancak nadiren Visual Basic .NET ile gereklidir. Mümkün olduğunda, yönetilen koddan kullanması gereken [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] Windows API çağrıları yerine görevleri gerçekleştirmek için. Bu kılavuzda hangi kullanarak bu durumlar için bilgiler sağlar Windows API'ları gereklidir.  
+ Windows API çağrıları, Visual Basic geçmişte programlama önemli bir parçası olan, ancak nadiren Visual Basic .NET ile gereklidir. Mümkün olduğunda, yönetilen koddan kullanması gereken [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] Windows API çağrıları yerine görevleri gerçekleştirmek için. Bu kılavuzda hangi kullanarak bu durumlar için bilgiler sağlar Windows API'ları gereklidir.  
   
 [!INCLUDE[note_settings_general](~/includes/note-settings-general-md.md)]  
   
@@ -49,7 +50,7 @@ Windows, Windows işletim sisteminin parçası olan dinamik bağlantı kitaplık
   
 2.  Yeni bir Windows uygulama projesi tıklatarak **yeni** üzerinde **dosya** menüsüne ve ardından **proje**. **Yeni proje** iletişim kutusu görüntülenir.  
   
-3.  Seçin **Windows uygulaması** listesinden [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] proje şablonları. Yeni Proje görüntülenir.  
+3.  Seçin **Windows uygulaması** Visual Basic proje şablonları listesinden. Yeni Proje görüntülenir.  
   
 4.  Aşağıdakileri ekleyin `Declare` sınıfı veya modül DLL kullanmak istediğiniz işlev:  
   
@@ -66,13 +67,13 @@ Windows, Windows işletim sisteminin parçası olan dinamik bağlantı kitaplık
   
  Belirtin `Lib` anahtar sözcüğünü, çağırdığınız işlevi içeren dll Dosyasının konumunu ve adını. Windows Sistem dizinlerde bulunan dosyaların yolunu belirtmeniz gerekmez.  
   
- Kullanım `Alias` yoksa çağırdığınız işlevin adı geçerli bir anahtar sözcüğü [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] yordam adı ya da diğer öğeler, uygulamanızın adı ile çakışıyor. `Alias`Çağrılan işlev doğru adını gösterir.  
+ Kullanım `Alias` işlevin adını, arıyorsanız, anahtar sözcüğü geçerli bir Visual Basic yordamı adı değil ya da diğer öğeler, uygulamanızın adı ile çakışıyor. `Alias` Çağrılan işlev doğru adını gösterir.  
   
 #### <a name="argument-and-data-type-declarations"></a>Bağımsız değişken ve veri türü bildirimleri  
- Bağımsız değişkenler ve kendi veri türleri bildirin. Windows kullanan veri türleri Visual Studio veri türlerine karşılık gelmediğinden bu bölümü zor olabilir. [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]çok fazla iş uyumlu veri türleri, adlı bir işlem bağımsız değişkenleri dönüştürerek sizin için yapar *hazırlama*. Bağımsız değişkenler kullanarak nasıl sıralanmış açıkça kontrol edebilirsiniz <xref:System.Runtime.InteropServices.MarshalAsAttribute> tanımlanan öznitelik <xref:System.Runtime.InteropServices> ad alanı.  
+ Bağımsız değişkenler ve kendi veri türleri bildirin. Windows kullanan veri türleri Visual Studio veri türlerine karşılık gelmediğinden bu bölümü zor olabilir. Visual Basic mu çok fazla iş sizin için uyumlu veri türleri, adlı bir işlem bağımsız değişkenleri dönüştürerek *hazırlama*. Bağımsız değişkenler kullanarak nasıl sıralanmış açıkça kontrol edebilirsiniz <xref:System.Runtime.InteropServices.MarshalAsAttribute> tanımlanan öznitelik <xref:System.Runtime.InteropServices> ad alanı.  
   
 > [!NOTE]
->  Önceki sürümlerini [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] parametreleri bildirmek için izin verilen `As Any`, bu verileri tüm verilerin anlamı türü kullanılabilir. [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]belirli bir veri türüne tüm kullanmanızı gerektirir `Declare` deyimleri.  
+>  Visual Basic önceki sürümlerini parametreleri bildirmek izin `As Any`, bu verileri tüm verilerin anlamı türü kullanılabilir. Visual Basic gerektirir, belirli bir veri türüne tüm kullanmanızı `Declare` deyimleri.  
   
 #### <a name="windows-api-constants"></a>Windows API sabitleri  
  Bazı bağımsız değişkenler sabitleri birleşimleridir. Örneğin, `MessageBox` bu kılavuzda gösterilen API adlı tamsayı bağımsız değişken kabul `Typ` ileti kutusu nasıl görüntüleneceğini denetler. Bu sabitleri sayısal değerini inceleyerek belirleyebilirsiniz `#define` WinUser.h dosyasındaki ifadelerini. Dolayısıyla ekleyip ondalık biçime dönüştürmek için bir hesap makinesi kullanmak isteyebilirsiniz sayısal değerleri genellikle onaltılık olarak gösterilir. Örneğin, ünlem işareti stili için sabitleri birleştirmek istiyorsanız `MB_ICONEXCLAMATION` 0x00000030 ve Evet/stil yok `MB_YESNO` 0x00000004, sayıları ve bir sonuç 0x00000034 ya da 52 ondalık almak. Ondalık sonuç doğrudan kullanabilmenize karşın, bu değerleri, uygulamanızda sabitleri olarak bildirin ve bunları birleştirmek daha iyi kullanarak `Or` işleci.  
@@ -100,7 +101,7 @@ Windows, Windows işletim sisteminin parçası olan dinamik bağlantı kitaplık
 3.  F5 tuşuna basarak projeyi çalıştırın. İleti kutusu ikisi ile görüntülenen **Evet** ve **Hayır** yanıt düğmeler. Bunlardan birini tıklatın.  
   
 #### <a name="data-marshaling"></a>Veri hazırlama  
- [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]otomatik olarak dönüştürür için parametreler ve dönüş değerleri Windows API çağrıları, ancak veri türlerini kullanabilirsiniz `MarshalAs` bir API bekliyor yönetilmeyen veri türleri açıkça belirtmek için özniteliği. Birlikte çalışma hazırlama hakkında daha fazla bilgi için bkz: [birlikte çalışma hazırlama](../../../framework/interop/interop-marshaling.md).  
+ Visual Basic veri türleri için parametreler ve dönüş değerleri Windows API çağrıları otomatik olarak dönüştürür ancak kullanabilirsiniz `MarshalAs` bir API bekliyor yönetilmeyen veri türleri açıkça belirtmek için özniteliği. Birlikte çalışma hazırlama hakkında daha fazla bilgi için bkz: [birlikte çalışma hazırlama](../../../framework/interop/interop-marshaling.md).  
   
 ###### <a name="to-use-declare-and-marshalas-in-an-api-call"></a>Declare ve MarshalAs bir API çağrısında kullanmak için  
   
@@ -115,7 +116,7 @@ Windows, Windows işletim sisteminin parçası olan dinamik bağlantı kitaplık
      [!code-vb[VbVbalrInterop#14](../../../visual-basic/programming-guide/com-interop/codesnippet/VisualBasic/walkthrough-calling-windows-apis_5.vb)]  
   
 ## <a name="api-calls-using-dllimport"></a>DllImport kullanarak API çağrıları  
- `DllImport` Özniteliği tür kitaplıklarının DLL'lerde işlevleri çağırmak için ikinci bir yol sağlar. `DllImport`kullanmaya kabaca eşdeğerdir bir `Declare` deyimi ancak işlevler nasıl çağrılır üzerinde daha fazla denetim sağlar.  
+ `DllImport` Özniteliği tür kitaplıklarının DLL'lerde işlevleri çağırmak için ikinci bir yol sağlar. `DllImport` kullanmaya kabaca eşdeğerdir bir `Declare` deyimi ancak işlevler nasıl çağrılır üzerinde daha fazla denetim sağlar.  
   
  Kullanabileceğiniz `DllImport` ile çoğu Windows API çağrıları çağrı paylaşılan bir başvuruyor sürece (bazen adlı *statik*) yöntemi. Sınıfının bir örneği gerekli yöntemlerini kullanamazsınız. Farklı `Declare` deyimleri `DllImport` çağrıları kullanamaz `MarshalAs` özniteliği.  
   
@@ -123,7 +124,7 @@ Windows, Windows işletim sisteminin parçası olan dinamik bağlantı kitaplık
   
 1.  Yeni bir Windows uygulama projesi tıklatarak **yeni** üzerinde **dosya** menüsüne ve ardından **proje**. **Yeni proje** iletişim kutusu görüntülenir.  
   
-2.  Seçin **Windows uygulaması** listesinden [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] proje şablonları. Yeni Proje görüntülenir.  
+2.  Seçin **Windows uygulaması** Visual Basic proje şablonları listesinden. Yeni Proje görüntülenir.  
   
 3.  Adlı bir düğme ekleme `Button2` başlangıç formu.  
   
@@ -158,9 +159,9 @@ Windows, Windows işletim sisteminin parçası olan dinamik bağlantı kitaplık
 ## <a name="see-also"></a>Ayrıca Bkz.  
  <xref:System.Runtime.InteropServices.DllImportAttribute>  
  <xref:System.Runtime.InteropServices.MarshalAsAttribute>  
- [Declare deyimi](../../../visual-basic/language-reference/statements/declare-statement.md)  
- [Otomatik](../../../visual-basic/language-reference/modifiers/auto.md)  
+ [Declare Deyimi](../../../visual-basic/language-reference/statements/declare-statement.md)  
+ [Auto](../../../visual-basic/language-reference/modifiers/auto.md)  
  [Diğer ad](../../../visual-basic/language-reference/statements/alias-clause.md)  
- [COM birlikte çalışma](../../../visual-basic/programming-guide/com-interop/index.md)  
- [Yönetilen kodda prototipler oluşturma](../../../framework/interop/creating-prototypes-in-managed-code.md)  
- [Bir geri çağırma metodu olarak bir temsilci hazırlama](../../../framework/interop/marshaling-a-delegate-as-a-callback-method.md)
+ [COM Birlikte Çalışma](../../../visual-basic/programming-guide/com-interop/index.md)  
+ [Yönetilen Kodda Prototipler Oluşturma](../../../framework/interop/creating-prototypes-in-managed-code.md)  
+ [Geri Çağırma Yöntemi Olarak Bir Temsilci Hazırlama](../../../framework/interop/marshaling-a-delegate-as-a-callback-method.md)

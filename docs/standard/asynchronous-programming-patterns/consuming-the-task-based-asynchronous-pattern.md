@@ -1,12 +1,12 @@
 ---
-title: "Görev Tabanlı Zaman Uyumsuz Desen Kullanma"
-ms.custom: 
+title: Görev Tabanlı Zaman Uyumsuz Desen Kullanma
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology: dotnet-standard
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - .NET Framework, and TAP
@@ -15,18 +15,18 @@ helpviewer_keywords:
 - Task-based Asynchronous Pattern, .NET Framework support for
 - .NET Framework, asynchronous design patterns
 ms.assetid: 033cf871-ae24-433d-8939-7a3793e547bf
-caps.latest.revision: "15"
+caps.latest.revision: 15
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: 3eddf8899863b7f1c59950c9cd4fa4d42f7acdb7
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: eb1b73af4ccdc22e811988450824123c0055d9e6
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="consuming-the-task-based-asynchronous-pattern"></a>Görev Tabanlı Zaman Uyumsuz Desen Kullanma
 Zaman uyumsuz işlemleri ile çalışmak için görev tabanlı zaman uyumsuz desen (TAP) kullandığınızda, bekleme engellenmeden elde etmek için geri aramalar kullanabilirsiniz.  Görevler için bu yöntemlerle gibi sağlanır <xref:System.Threading.Tasks.Task.ContinueWith%2A?displayProperty=nameWithType>. Normal denetim akışı içinde beklemenin zaman uyumsuz işlemleri sağlayarak geri aramalar dil tabanlı zaman uyumsuz destek gizler ve derleyici tarafından üretilen kod aynı bu API düzeyinde destek sağlar.  
@@ -736,7 +736,7 @@ public class AsyncCache<TKey, TValue>
 }  
 ```  
   
- [AsyncCache\<TKey, TValue >](http://go.microsoft.com/fwlink/p/?LinkId=251941) sınıfı kabul kendi oluşturucusunu temsilci olarak isteyen bir işlevi bir `TKey` ve döndüren bir <xref:System.Threading.Tasks.Task%601>.  Daha önce erişilen tüm değerler önbellekten iç sözlükte depolanır ve `AsyncCache` önbellek eşzamanlı olarak erişilen bile, yalnızca görev anahtar oluşturulan sağlar.  
+ [AsyncCache\<TKey, TValue >](https://blogs.msdn.microsoft.com/pfxteam/2010/04/23/parallelextensionsextras-tour-12-asynccache/) sınıfı kabul kendi oluşturucusunu temsilci olarak isteyen bir işlevi bir `TKey` ve döndüren bir <xref:System.Threading.Tasks.Task%601>.  Daha önce erişilen tüm değerler önbellekten iç sözlükte depolanır ve `AsyncCache` önbellek eşzamanlı olarak erişilen bile, yalnızca görev anahtar oluşturulan sağlar.  
   
  Örneğin, indirilen web sayfaları için bir önbellek oluşturabilirsiniz:  
   

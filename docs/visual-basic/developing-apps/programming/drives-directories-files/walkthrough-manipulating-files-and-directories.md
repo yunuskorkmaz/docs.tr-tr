@@ -1,11 +1,12 @@
 ---
-title: "Dosyalar ve dizinler Visual Basic'te düzenleme"
-ms.custom: 
+title: Dosyalar ve dizinler Visual Basic'te düzenleme
+ms.custom: ''
 ms.date: 07/20/2015
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- devlang-visual-basic
 ms.topic: article
 helpviewer_keywords:
 - files [Visual Basic], reading text
@@ -21,19 +22,19 @@ helpviewer_keywords:
 - writing to files [Visual Basic], walkthroughs
 - I/O [Visual Basic], reading text from files
 ms.assetid: cae77565-9f78-4e46-8e42-eb2f9f8e1ffd
-caps.latest.revision: "49"
+caps.latest.revision: 49
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: bd1e61503394741e7943d30d383f2e7c5ea35f68
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
-ms.translationtype: MT
+ms.openlocfilehash: bff2e66b1a196117117370f7620f3f55576ad19b
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="walkthrough-manipulating-files-and-directories-in-visual-basic"></a>İzlenecek Yol: Visual Basic'te Dosyaları ve Dizinleri Düzenleme
-Bu kılavuzda dosya g/ç ile ilgili temel bilgileri tanıtılmaktadır [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]. Listeler ve metin dosyaları bir dizinde inceler küçük bir uygulamasının nasıl oluşturulacağını açıklar. Her seçili metin dosyası için dosya özniteliklerini ve içeriğindeki birinci satırın uygulama sağlar. Bilgilerini bir günlük dosyasına yazmak için bir seçenek yoktur.  
+Bu kılavuz, Visual Basic'te dosya g/ç ile ilgili temel bilgileri tanıtılmaktadır. Listeler ve metin dosyaları bir dizinde inceler küçük bir uygulamasının nasıl oluşturulacağını açıklar. Her seçili metin dosyası için dosya özniteliklerini ve içeriğindeki birinci satırın uygulama sağlar. Bilgilerini bir günlük dosyasına yazmak için bir seçenek yoktur.  
   
- Bu kılavuzda üyeleri kullanılır `My.Computer.FileSystem Object`, kullanılabilir olduğu [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]. Daha fazla bilgi edinmek için bkz. <xref:Microsoft.VisualBasic.FileIO.FileSystem>. İzlenecek yol sonunda sınıflardan kullanan bir eşdeğer örnek sağlanır <xref:System.IO> ad alanı.  
+ Bu kılavuzda üyeleri kullanılır `My.Computer.FileSystem Object`, Visual Basic'te kullanılabilir olduğu. Daha fazla bilgi edinmek için bkz. <xref:Microsoft.VisualBasic.FileIO.FileSystem>. İzlenecek yol sonunda sınıflardan kullanan bir eşdeğer örnek sağlanır <xref:System.IO> ad alanı.  
   
 [!INCLUDE[note_settings_general](~/includes/note-settings-general-md.md)]  
   
@@ -47,16 +48,16 @@ Bu kılavuzda dosya g/ç ile ilgili temel bilgileri tanıtılmaktadır [!INCLUDE
   
 3.  İçinde **adı** kutusuna `FileExplorer` proje adını ayarlayın ve ardından **Tamam**.  
   
-     [!INCLUDE[vsprvs](~/includes/vsprvs-md.md)]projeye ekler **Çözüm Gezgini**, ve Windows Forms Tasarımcısı'nı açar.  
+     [!INCLUDE[vsprvs](~/includes/vsprvs-md.md)] projeye ekler **Çözüm Gezgini**, ve Windows Forms Tasarımcısı'nı açar.  
   
 4.  Denetimleri aşağıdaki tabloda forma ekleme ve bunların özelliklerini karşılık gelen değerler ayarlayın.  
   
     |Denetim|Özellik|Değer|  
     |-------------|--------------|-----------|  
     |**ListBox**|**Ad**|`filesListBox`|  
-    |**Düğmesi**|**Ad**<br /><br /> **Metin**|`browseButton`<br /><br /> **Gözat**|  
-    |**Düğmesi**|**Ad**<br /><br /> **Metin**|`examineButton`<br /><br /> **İnceleyin**|  
-    |**Onay kutusu**|**Ad**<br /><br /> **Metin**|`saveCheckBox`<br /><br /> **Sonuçları Kaydet**|  
+    |**Düğme**|**Ad**<br /><br /> **Metin**|`browseButton`<br /><br /> **Gözat**|  
+    |**Düğme**|**Ad**<br /><br /> **Metin**|`examineButton`<br /><br /> **İnceleyin**|  
+    |**CheckBox**|**Ad**<br /><br /> **Metin**|`saveCheckBox`<br /><br /> **Sonuçları Kaydet**|  
     |**FolderBrowserDialog**|**Ad**|`FolderBrowserDialog1`|  
   
 ### <a name="to-select-a-folder-and-list-files-in-a-folder"></a>Bir klasör seçin ve bir klasördeki dosyaları listelemek için  
@@ -171,4 +172,4 @@ Bu kılavuzda dosya g/ç ile ilgili temel bilgileri tanıtılmaktadır [!INCLUDE
  <xref:System.IO>  
  <xref:Microsoft.VisualBasic.FileIO.FileSystem>  
  <xref:Microsoft.VisualBasic.FileIO.FileSystem.CurrentDirectory%2A>  
- [İzlenecek yol: .NET Framework yöntemlerini kullanarak dosyaları düzenleme](../../../../visual-basic/developing-apps/programming/drives-directories-files/walkthrough-manipulating-files-by-using-net-framework-methods.md)
+ [İzlenecek Yol: .NET Framework Yöntemlerini Kullanarak Dosyaları Düzenleme](../../../../visual-basic/developing-apps/programming/drives-directories-files/walkthrough-manipulating-files-by-using-net-framework-methods.md)

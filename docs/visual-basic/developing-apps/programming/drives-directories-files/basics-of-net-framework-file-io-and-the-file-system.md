@@ -1,11 +1,12 @@
 ---
-title: "Dosya Sistemi ve .NET Framework Dosyası G/Ç ile İlgili Temel Bilgiler (Visual Basic)"
-ms.custom: 
+title: Dosya Sistemi ve .NET Framework Dosyası G/Ç ile İlgili Temel Bilgiler (Visual Basic)
+ms.custom: ''
 ms.date: 07/20/2015
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- devlang-visual-basic
 ms.topic: article
 helpviewer_keywords:
 - file access, file I/O in Visual Basic
@@ -15,14 +16,14 @@ helpviewer_keywords:
 - streams
 - streams, definition
 ms.assetid: 49d837c0-cf28-416f-8606-4d83d7b479ef
-caps.latest.revision: "30"
+caps.latest.revision: 30
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: d6cfdb939bd4bf84fafbffceefccd5cd522018c2
-ms.sourcegitcommit: 34ec7753acf76f90a0fa845235ef06663dc9e36e
+ms.openlocfilehash: 02eaa98b8a52a2b9efa2b273b2a58158a5848b86
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="basics-of-net-framework-file-io-and-the-file-system-visual-basic"></a>Dosya Sistemi ve .NET Framework Dosyası G/Ç ile İlgili Temel Bilgiler (Visual Basic)
 Sınıfları <xref:System.IO> ad alanı, sürücüler, dosyaları ve dizinleri ile çalışmak için kullanılır.  
@@ -30,7 +31,7 @@ Sınıfları <xref:System.IO> ad alanı, sürücüler, dosyaları ve dizinleri i
  <xref:System.IO> Ad alanında <xref:System.IO.File> ve <xref:System.IO.Directory> sağlayan sınıflar [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] dosyaları ve dizinleri yöneten işlevselliği. Nedeni bu nesnelerin yöntemleri statik veya paylaşılan üyeler, bunları doğrudan sınıfının bir örneği ilk kez oluşturmadan kullanabilirsiniz. Bu sınıfların ile ilişkili olan <xref:System.IO.FileInfo> ve <xref:System.IO.DirectoryInfo> kullanıcıları için tanıdık gelecektir sınıfları `My` özelliği. Bu sınıfların kullanmak için tam olarak adları nitelemeniz veya içeri aktarmanız gerekir uygun ad alanlarını dahil ederek `Imports` başında deyim etkilenen kod. Daha fazla bilgi için bkz: [Imports deyimi (.NET Namespace ve türü)](../../../../visual-basic/language-reference/statements/imports-statement-net-namespace-and-type.md).  
   
 > [!NOTE]
->  Diğer konular bu bölüm kullanım `My.Computer.FileSystem` yerine nesne `System.IO` sürücüsü, dosyalar ve dizinler ile çalışmak için sınıflar. `My.Computer.FileSystem` Nesnesi, öncelikli olarak kullanılmak üzere tasarlanmıştır [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] programlar. `System.IO`sınıfları destekleyen herhangi bir dil tarafından kullanıma yöneliktir [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)]gibi [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)].  
+>  Diğer konular bu bölüm kullanım `My.Computer.FileSystem` yerine nesne `System.IO` sürücüsü, dosyalar ve dizinler ile çalışmak için sınıflar. `My.Computer.FileSystem` Nesne öncelikle Visual Basic programlarında kullanılmak için tasarlanmıştır. `System.IO` sınıfları destekleyen herhangi bir dil tarafından kullanıma yöneliktir [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)], Visual Basic dahil olmak üzere.  
   
 ## <a name="definition-of-a-stream"></a>Bir akış tanımı  
  [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] Okuma ve dosyalara yazma desteklemek için akışlarını kullanır. Tek boyutlu bir başlangıç ve bitiş tarihi olan ve burada imleci akışında geçerli konumu gösterir bitişik veri kümesi olarak akışı düşünebilirsiniz.  

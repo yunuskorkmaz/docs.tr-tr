@@ -1,12 +1,12 @@
 ---
-title: "Görev tabanlı zaman uyumsuz programlama"
-ms.custom: 
+title: Görev tabanlı zaman uyumsuz programlama
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology: dotnet-standard
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - csharp
@@ -14,18 +14,18 @@ dev_langs:
 helpviewer_keywords:
 - parallelism, task
 ms.assetid: 458b5e69-5210-45e5-bc44-3888f86abd6f
-caps.latest.revision: 
+caps.latest.revision: 51
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: 8e5367c8a786d720cdf3394922527020f8d4d47a
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: 87c49eb1cb2b8cef7057e73eca19f74e818b043e
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="task-based-asynchronous-programming"></a>Görev tabanlı zaman uyumsuz programlama
 Görev paralel kitaplığı (TPL) kavramını esas bir *görev*, zaman uyumsuz işlemi temsil eder. Bazı yönlerden bir görev bir iş parçacığı benzer veya <xref:System.Threading.ThreadPool> öğesi, ancak daha yüksek bir soyutlama düzeyinde çalışır. Terim *görev paralelliği* eşzamanlı olarak çalışan bir veya daha fazla bağımsız görevlere başvuruyor. Görevler iki adet birincil avantaj sağlar:  
@@ -74,7 +74,7 @@ Görev paralel kitaplığı (TPL) kavramını esas bir *görev*, zaman uyumsuz i
  [!code-csharp[TPL_TaskIntro#3](../../../samples/snippets/csharp/VS_Snippets_Misc/tpl_taskintro/cs/startnew1.cs#3)]
  [!code-vb[TPL_TaskIntro#3](../../../samples/snippets/visualbasic/VS_Snippets_Misc/tpl_taskintro/vb/startnew1.vb#3)]  
   
- <xref:System.Threading.Tasks.Task>ve <xref:System.Threading.Tasks.Task%601> her kullanıma statik <xref:System.Threading.Tasks.Task.Factory%2A> varsayılan örneği döndüren özelliği <xref:System.Threading.Tasks.TaskFactory>, böylece yöntemi olarak çağırabilirsiniz `Task.Factory.StartNew()`. Ayrıca, aşağıdaki örnekte, görevleri türde olmadığından <xref:System.Threading.Tasks.Task%601?displayProperty=nameWithType>, sahip oldukları her bir ortak <xref:System.Threading.Tasks.Task%601.Result%2A?displayProperty=nameWithType> hesaplamanın sonucu içeren özelliği. Görevler zaman uyumsuz olarak çalışır ve herhangi bir sırada tamamlanabilir. Varsa <xref:System.Threading.Tasks.Task%601.Result%2A> özelliği hesaplama tamamlanmadan önce erişilen, özellik değeri kullanılabilir hale gelene kadar çağıran iş parçacığı engeller.  
+ <xref:System.Threading.Tasks.Task> ve <xref:System.Threading.Tasks.Task%601> her kullanıma statik <xref:System.Threading.Tasks.Task.Factory%2A> varsayılan örneği döndüren özelliği <xref:System.Threading.Tasks.TaskFactory>, böylece yöntemi olarak çağırabilirsiniz `Task.Factory.StartNew()`. Ayrıca, aşağıdaki örnekte, görevleri türde olmadığından <xref:System.Threading.Tasks.Task%601?displayProperty=nameWithType>, sahip oldukları her bir ortak <xref:System.Threading.Tasks.Task%601.Result%2A?displayProperty=nameWithType> hesaplamanın sonucu içeren özelliği. Görevler zaman uyumsuz olarak çalışır ve herhangi bir sırada tamamlanabilir. Varsa <xref:System.Threading.Tasks.Task%601.Result%2A> özelliği hesaplama tamamlanmadan önce erişilen, özellik değeri kullanılabilir hale gelene kadar çağıran iş parçacığı engeller.  
   
  [!code-csharp[TPL_TaskIntro#4](../../../samples/snippets/csharp/VS_Snippets_Misc/tpl_taskintro/cs/result1.cs#4)]
  [!code-vb[TPL_TaskIntro#4](../../../samples/snippets/visualbasic/VS_Snippets_Misc/tpl_taskintro/vb/result1.vb#4)]  
@@ -102,7 +102,7 @@ Görev paralel kitaplığı (TPL) kavramını esas bir *görev*, zaman uyumsuz i
 ## <a name="task-creation-options"></a>Görev Oluşturma Seçenekleri  
  Görevler oluşturma çoğu API'leri kabul aşırı sağlayan bir <xref:System.Threading.Tasks.TaskCreationOptions> parametresi. Bu seçeneklerden birini belirleyerek görev zamanlayıcıya iş parçacığı havuzundaki görevi nasıl zamanlayacağını söyleyebilirsiniz. Aşağıdaki tabloda, çeşitli görev oluşturma seçenekleri listelenmektedir.  
   
-|<xref:System.Threading.Tasks.TaskCreationOptions>parametre değeri|Açıklama|  
+|<xref:System.Threading.Tasks.TaskCreationOptions> Parametre değeri|Açıklama|  
 |-------------------------------------------------------------------------------------------------------------------------------------------------------------------------|-----------------|  
 |<xref:System.Threading.Tasks.TaskCreationOptions.None>|Hiç seçenek belirtilmemişse varsayılan değerdir. Zamanlayıcı, görevi zamanlamak için varsayılan buluşsal yöntemlerini kullanır.|  
 |<xref:System.Threading.Tasks.TaskCreationOptions.PreferFairness>|Daha önce oluşturulmuş görevlerin daha önce çalıştırılabilmesi ve daha sonra oluşturulmuş görevlerin daha sonra çalıştırılabilmesi için görevin zamanlanması gerektiğini belirtir.|  
@@ -138,7 +138,7 @@ Görev paralel kitaplığı (TPL) kavramını esas bir *görev*, zaman uyumsuz i
 ## <a name="creating-task-continuations"></a>Görev devamlılıklar oluşturma  
  <xref:System.Threading.Tasks.Task.ContinueWith%2A?displayProperty=nameWithType> Ve <xref:System.Threading.Tasks.Task%601.ContinueWith%2A?displayProperty=nameWithType> yöntemleri başlatılmak üzere bir görev belirtmenize izin *öncül görev* tamamlanır. Devamlılık görevi temsilci öncül görev başvuru öncül görevin durumunu inceleyebilirsiniz ve olacak şekilde, değerini alarak geçirilen <xref:System.Threading.Tasks.Task%601.Result%2A?displayProperty=nameWithType> özelliği kullanabilir nın çıkış giriş olarak devamlılık için.  
   
- Aşağıdaki örnekte, `getData` görev için bir çağrı tarafından başlatılır <xref:System.Threading.Tasks.TaskFactory.StartNew%60%601%28System.Func%7B%60%600%7D%29?displayProperty=nameWithType> yöntemi. `processData` Görev başlatıldığında otomatik olarak ne zaman `getData` bitinceye ve `displayData` başlatıldığında `processData` tamamlanır. `getData`erişilebilir bir tamsayı dizisi üretir `processData` aracılığıyla görev `getData` görevin <xref:System.Threading.Tasks.Task%601.Result%2A?displayProperty=nameWithType> özelliği. `processData` Görev bu diziyi işler ve geçirilen lambda ifadesi dönüş türü türü çıkarımı yapılan bir sonuç döndürür <xref:System.Threading.Tasks.Task%601.ContinueWith%60%601%28System.Func%7BSystem.Threading.Tasks.Task%7B%600%7D%2C%60%600%7D%29?displayProperty=nameWithType> yöntemi. `displayData` Görevi yürütür otomatik olarak zaman `processData` bitinceye ve <xref:System.Tuple%603> tarafından döndürülen nesne `processData` lambda ifadesi için erişilebilir durumda `displayData` aracılığıyla görev `processData` görevin <xref:System.Threading.Tasks.Task%601.Result%2A?displayProperty=nameWithType> özellik. `displayData` Görev sonucunu alır `processData` görev ve benzer şekilde, türü çıkarımı yapılan ve hangi yapılan programa için kullanılabilir bir sonuç üretir <xref:System.Threading.Tasks.Task%601.Result%2A> özelliği.  
+ Aşağıdaki örnekte, `getData` görev için bir çağrı tarafından başlatılır <xref:System.Threading.Tasks.TaskFactory.StartNew%60%601%28System.Func%7B%60%600%7D%29?displayProperty=nameWithType> yöntemi. `processData` Görev başlatıldığında otomatik olarak ne zaman `getData` bitinceye ve `displayData` başlatıldığında `processData` tamamlanır. `getData` erişilebilir bir tamsayı dizisi üretir `processData` aracılığıyla görev `getData` görevin <xref:System.Threading.Tasks.Task%601.Result%2A?displayProperty=nameWithType> özelliği. `processData` Görev bu diziyi işler ve geçirilen lambda ifadesi dönüş türü türü çıkarımı yapılan bir sonuç döndürür <xref:System.Threading.Tasks.Task%601.ContinueWith%60%601%28System.Func%7BSystem.Threading.Tasks.Task%7B%600%7D%2C%60%600%7D%29?displayProperty=nameWithType> yöntemi. `displayData` Görevi yürütür otomatik olarak zaman `processData` bitinceye ve <xref:System.Tuple%603> tarafından döndürülen nesne `processData` lambda ifadesi için erişilebilir durumda `displayData` aracılığıyla görev `processData` görevin <xref:System.Threading.Tasks.Task%601.Result%2A?displayProperty=nameWithType> özellik. `displayData` Görev sonucunu alır `processData` görev ve benzer şekilde, türü çıkarımı yapılan ve hangi yapılan programa için kullanılabilir bir sonuç üretir <xref:System.Threading.Tasks.Task%601.Result%2A> özelliği.  
   
  [!code-csharp[TPL_TaskIntro#5](../../../samples/snippets/csharp/VS_Snippets_Misc/tpl_taskintro/cs/continuations1.cs#5)]
  [!code-vb[TPL_TaskIntro#5](../../../samples/snippets/visualbasic/VS_Snippets_Misc/tpl_taskintro/vb/continuations1.vb#5)]  
@@ -188,10 +188,10 @@ Görev paralel kitaplığı (TPL) kavramını esas bir *görev*, zaman uyumsuz i
   
  Bazı aşırı zaman aşımı belirtmenizi sağlar ve diğer ek bir ele <xref:System.Threading.CancellationToken> giriş parametresi olarak, böylece bekleme iptal edilebilir ya da program aracılığıyla veya yanıt kullanıcı olarak giriş.  
   
- Bir görevin tamamlanmasını bekleyin, örtük olarak kullanılarak oluşturulmuş olan tüm alt öğeleri bu görevin beklemeniz <xref:System.Threading.Tasks.TaskCreationOptions.AttachedToParent?displayProperty=nameWithType> seçeneği. <xref:System.Threading.Tasks.Task.Wait%2A?displayProperty=nameWithType>hemen görev zaten tamamlanmış olan döndürür. Bir görev tarafından gerçekleştirilen tüm özel durumlar tarafından oluşturulan bir <xref:System.Threading.Tasks.Task.Wait%2A?displayProperty=nameWithType> yöntemi, bile <xref:System.Threading.Tasks.Task.Wait%2A?displayProperty=nameWithType> yöntemi görevi tamamlandı çağrıldı.  
+ Bir görevin tamamlanmasını bekleyin, örtük olarak kullanılarak oluşturulmuş olan tüm alt öğeleri bu görevin beklemeniz <xref:System.Threading.Tasks.TaskCreationOptions.AttachedToParent?displayProperty=nameWithType> seçeneği. <xref:System.Threading.Tasks.Task.Wait%2A?displayProperty=nameWithType> hemen görev zaten tamamlanmış olan döndürür. Bir görev tarafından gerçekleştirilen tüm özel durumlar tarafından oluşturulan bir <xref:System.Threading.Tasks.Task.Wait%2A?displayProperty=nameWithType> yöntemi, bile <xref:System.Threading.Tasks.Task.Wait%2A?displayProperty=nameWithType> yöntemi görevi tamamlandı çağrıldı.  
   
 ## <a name="composing-tasks"></a>Görevler oluşturma  
- <xref:System.Threading.Tasks.Task> Ve <xref:System.Threading.Tasks.Task%601> sınıfları sağlar yardımcı olacak birkaç yöntem oluşturan ortak desenler uygulamak ve daha iyi C# tarafından sağlanan zaman uyumsuz dil özellikleri kullanmak için birden çok görev [!INCLUDE[vbprvb](../../../includes/vbprvb-md.md)]ve F #. Bu bölümde açıklanmıştır <xref:System.Threading.Tasks.Task.WhenAll%2A>, <xref:System.Threading.Tasks.Task.WhenAny%2A>, <xref:System.Threading.Tasks.Task.Delay%2A>, ve <xref:System.Threading.Tasks.Task.FromResult%2A> yöntemleri.  
+ <xref:System.Threading.Tasks.Task> Ve <xref:System.Threading.Tasks.Task%601> sınıfları sağlar yardımcı olacak birkaç yöntem ortak desenler uygulamak ve daha iyi C#, Visual Basic ve F # tarafından sağlanan zaman uyumsuz dil özellikleri kullanmak için birden çok görev oluşturun. Bu bölümde açıklanmıştır <xref:System.Threading.Tasks.Task.WhenAll%2A>, <xref:System.Threading.Tasks.Task.WhenAny%2A>, <xref:System.Threading.Tasks.Task.Delay%2A>, ve <xref:System.Threading.Tasks.Task.FromResult%2A> yöntemleri.  
   
 ### <a name="taskwhenall"></a>Task.WhenAll  
  <xref:System.Threading.Tasks.Task.WhenAll%2A?displayProperty=nameWithType> Yöntemi için birden çok zaman uyumsuz olarak bekler <xref:System.Threading.Tasks.Task> veya <xref:System.Threading.Tasks.Task%601> tamamlamak için nesneleri. Tek düzen olmayan görevler kümesini beklemenize olanak tanıyan aşırı yüklü sürümler sağlar. Örneğin, çoklu bekleyebilirsiniz <xref:System.Threading.Tasks.Task> ve <xref:System.Threading.Tasks.Task%601> bir yöntem çağrısının tamamlamak için nesneleri.  
@@ -279,4 +279,4 @@ Görev paralel kitaplığı (TPL) kavramını esas bir *görev*, zaman uyumsuz i
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
  [Paralel Programlama](../../../docs/standard/parallel-programming/index.md)  
- [.NET Framework ile paralel programlama için örnek](http://code.msdn.microsoft.com/Samples-for-Parallel-b4b76364)
+ [.NET Framework ile paralel programlama için örnek](https://code.msdn.microsoft.com/Samples-for-Parallel-b4b76364)

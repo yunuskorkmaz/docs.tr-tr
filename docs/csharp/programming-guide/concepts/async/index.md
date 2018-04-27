@@ -9,11 +9,11 @@ ms.assetid: 9bcf896a-5826-4189-8c1a-3e35fa08243a
 caps.latest.revision: 5
 author: BillWagner
 ms.author: wiwagn
-ms.openlocfilehash: c9f2699646db17c9358f84f4c5407e7aab8b60cf
-ms.sourcegitcommit: 83dd5ec003e788ccb3e33f3412a7af39ae347646
+ms.openlocfilehash: 70dd5606ba81619658eda24f8c4bfd4970d29308
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/15/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="asynchronous-programming-with-async-and-await-c"></a>Zaman uyumsuz programlama ile async ve await (C#)
 Zaman uyumsuz programlama kullanarak performans sorunlarını önleyebilir ve uygulamanızın genel yanıt verme becerisini geliştirebilirsiniz. Ancak, zaman uyumsuz uygulamalar yazmaya yönelik geleneksel teknikler karmaşık olabilir ve bu nedenle yazılmaları, hataların ayıklanması ve bakım yapılması zorlaşabilir.  
@@ -98,7 +98,7 @@ Aşağıdaki özellikler, önceki örneği neyin zaman uyumsuz hale getirdiğini
   
     -   `void` zaman uyumsuz olay işleyicisi yazıyorsanız.  
 
-    -   Sahip herhangi bir türü bir `GetAwaiter` yöntemi (C# 7 ile başlayan).
+    -   Sahip herhangi bir türü bir `GetAwaiter` yöntemi (C# 7. 0'dan başlayarak).
   
      Daha fazla bilgi için bkz: [dönüş türü ve parametreler](#BKMK_ReturnTypesandParameters) bölümü.  
   
@@ -179,7 +179,7 @@ Belirttiğiniz <xref:System.Threading.Tasks.Task%601> yöntemi içeriyorsa, dön
   
 Kullandığınız <xref:System.Threading.Tasks.Task> yöntemin dönüş deyimi yok veya işleneni döndürmez bir dönüş ifadesi içeriyor, dönüş türü.  
 
-Bu türü içeren koşuluyla, C# 7 ile başlayarak, ayrıca herhangi diğer dönüş türü, belirtebilirsiniz bir `GetAwaiter` yöntemi. <xref:System.Threading.Tasks.ValueTask%601> Bu tür bir türde bir örnektir. İçinde kullanılabilir [System.Threading.Tasks.Extension](https://www.nuget.org/packages/System.Threading.Tasks.Extensions/) NuGet paketi.
+Bu türü içeren koşuluyla, C# 7. 0'dan başlayarak, ayrıca herhangi diğer dönüş türü, belirtebilirsiniz bir `GetAwaiter` yöntemi. <xref:System.Threading.Tasks.ValueTask%601> Bu tür bir türde bir örnektir. İçinde kullanılabilir [System.Threading.Tasks.Extension](https://www.nuget.org/packages/System.Threading.Tasks.Extensions/) NuGet paketi.
   
  Aşağıdaki örnek, nasıl bildirme ve döndüren bir yöntem çağrısı gösterir bir <xref:System.Threading.Tasks.Task%601> veya <xref:System.Threading.Tasks.Task>.  
   

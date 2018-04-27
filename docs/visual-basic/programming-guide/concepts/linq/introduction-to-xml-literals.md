@@ -1,29 +1,30 @@
 ---
-title: "XML değişmez değerlerine Visual Basic2 giriş"
-ms.custom: 
+title: XML değişmez değerlerine Visual Basic2 giriş
+ms.custom: ''
 ms.date: 07/20/2015
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- devlang-visual-basic
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 94fc0e03-978e-4c08-ab6c-0dc3c1e64f10
-caps.latest.revision: "3"
+caps.latest.revision: 3
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: 7ac96691b5b9274f67039f36bbdbfaf8abd03705
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.openlocfilehash: 112c1d898c3cdf14b52d843dee8f5a51002be858
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="introduction-to-xml-literals-in-visual-basic"></a>Visual Basic'de XML değişmez değerleri giriş
-Bu bölümde XML ağaçlarında oluşturma hakkında bilgi [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)].  
+Bu bölümde, Visual Basic'te XML ağaçları oluşturma hakkında bilgi sağlar.  
   
  LINQ sorgularını sonuçlarını içerik için bir XML ağacı kullanma hakkında daha fazla bilgi için bkz: [işlevsel yapımı (LINQ-XML) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/functional-construction-linq-to-xml.md).  
   
- XML değişmez değerlerine hakkında daha fazla bilgi için [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)], bkz: [XML Visual Basic'te LINQ genel bakış](../../../../visual-basic/programming-guide/language-features/xml/overview-of-linq-to-xml.md).  
+ Visual Basic'de XML değişmez değerleri hakkında daha fazla bilgi için bkz: [XML Visual Basic'te LINQ genel bakış](../../../../visual-basic/programming-guide/language-features/xml/overview-of-linq-to-xml.md).  
   
 ## <a name="creating-xml-trees"></a>XML ağaçları oluşturma  
  Aşağıdaki örnekte nasıl oluşturulacağını gösterir bir <xref:System.Xml.Linq.XElement>, bu durumda `contacts`:  

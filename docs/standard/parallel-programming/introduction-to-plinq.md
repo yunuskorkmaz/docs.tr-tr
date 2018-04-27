@@ -1,12 +1,12 @@
 ---
-title: "PLINQ'e Giriş"
-ms.custom: 
+title: PLINQ'e Giriş
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology: dotnet-standard
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - csharp
@@ -14,22 +14,22 @@ dev_langs:
 helpviewer_keywords:
 - PLINQ queries, introduction to
 ms.assetid: eaa720d8-8999-4eb7-8df5-3c19ca61cad0
-caps.latest.revision: 
+caps.latest.revision: 22
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: 6ee718737885618322c3623a80b0b091bbfc729d
-ms.sourcegitcommit: 3a96c706e4dbb4667bf3bf37edac9e1666646f93
+ms.openlocfilehash: 24541b681844a2023df8d4d05f13b53d55375b80
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="introduction-to-plinq"></a>PLINQ'e Giriş
 ## <a name="what-is-a-parallel-query"></a>Paralel Sorgu nedir?  
- Dil ile tümleşik sorgu (LINQ) içinde sunulmuştur [!INCLUDE[net_v35_long](../../../includes/net-v35-long-md.md)].  Herhangi bir sorgulama için birleşik bir modeli özellikleri <xref:System.Collections.IEnumerable?displayProperty=nameWithType> veya <xref:System.Collections.Generic.IEnumerable%601?displayProperty=nameWithType> bir tür kullanımı uyumlu şekilde veri kaynağı. Nesnelere LINQ bellek içi koleksiyonları karşı gibi çalıştırmak LINQ sorgularını addır <xref:System.Collections.Generic.List%601> ve dizi. Bu makalede LINQ ilgili temel bilgilere sahip olduğunuzu varsayar. Daha fazla bilgi için bkz: [LINQ (dil ile tümleşik sorgu)](http://msdn.microsoft.com/library/a73c4aec-5d15-4e98-b962-1274021ea93d).  
+ Dil ile tümleşik sorgu (LINQ) içinde sunulmuştur [!INCLUDE[net_v35_long](../../../includes/net-v35-long-md.md)].  Herhangi bir sorgulama için birleşik bir modeli özellikleri <xref:System.Collections.IEnumerable?displayProperty=nameWithType> veya <xref:System.Collections.Generic.IEnumerable%601?displayProperty=nameWithType> bir tür kullanımı uyumlu şekilde veri kaynağı. Nesnelere LINQ bellek içi koleksiyonları karşı gibi çalıştırmak LINQ sorgularını addır <xref:System.Collections.Generic.List%601> ve dizi. Bu makalede LINQ ilgili temel bilgilere sahip olduğunuzu varsayar. Daha fazla bilgi için bkz: [LINQ (dil ile tümleşik sorgu)](https://msdn.microsoft.com/library/a73c4aec-5d15-4e98-b962-1274021ea93d).  
   
  Paralel LINQ (PLINQ) bir paralel LINQ düzeni uygulamasıdır. Birçok yolu PLINQ sorgusunda olmayan paralel LINQ to nesneleri sorgusunda benzer. PLINQ sorguları, olduğu gibi sıralı [!INCLUDE[vbteclinq](../../../includes/vbteclinq-md.md)] sorguları, çalışan tüm bellek içi üzerinde <xref:System.Collections.IEnumerable> veya <xref:System.Collections.Generic.IEnumerable%601> veri kaynağı ve bunlar değil başlamak sorgu numaralandırılan kadar yürütme anlamına gelir yürütme ertelenmiş. PLINQ sistemdeki tüm işlemcilerin tam kullanımını yapma girişiminde birincil farktır. Veri kaynağı kesimler halinde bölümlendirme ve birden çok işlemci üzerinde paralel ayrı çalışan iş parçacığı üzerinde her kesiminde sorgu yürütülürken tarafından bunu yapar. Çoğu durumda, sorgu önemli ölçüde daha hızlı çalışır, Paralel yürütme anlamına gelir.  
   
@@ -43,7 +43,7 @@ ms.lasthandoff: 02/27/2018
 ## <a name="the-parallelenumerable-class"></a>ParallelEnumerable Sınıfı  
  <xref:System.Linq.ParallelEnumerable?displayProperty=nameWithType> Sınıfı neredeyse tüm PLINQ'in işlevselliğini kullanıma sunar.  Bu ve diğer <xref:System.Linq?displayProperty=nameWithType> ad alanı türleri System.Core.dll bütünleştirilmiş koda derlenmiş. Visual Studio'da varsayılan C# ve Visual Basic projeleri derleme başvurusu hem ad içeri aktarın.  
   
- <xref:System.Linq.ParallelEnumerable> her biri paralel hale çalışmaz ancak nesnelere LINQ destekleyen tüm standart sorgu işleçlerinin uygulamaları içerir. Alışık değilseniz [!INCLUDE[vbteclinq](../../../includes/vbteclinq-md.md)], bkz: [Lınq'ye](http://msdn.microsoft.com/library/24dddf19-12a0-4707-a4bc-eba4fa7f219e).  
+ <xref:System.Linq.ParallelEnumerable> her biri paralel hale çalışmaz ancak nesnelere LINQ destekleyen tüm standart sorgu işleçlerinin uygulamaları içerir. Alışık değilseniz [!INCLUDE[vbteclinq](../../../includes/vbteclinq-md.md)], bkz: [Lınq'ye](https://msdn.microsoft.com/library/24dddf19-12a0-4707-a4bc-eba4fa7f219e).  
   
  Standart sorgu işleçleri yanı sıra <xref:System.Linq.ParallelEnumerable> sınıfı Paralel yürütme belirli davranışları sağlayan yöntemler kümesi içerir. Bu PLINQ özgü yöntemleri aşağıdaki tabloda listelenmiştir.  
   
@@ -93,10 +93,10 @@ ms.lasthandoff: 02/27/2018
  Bazı işlemler, veri kaynağını sıralı bir şekilde teslim edilmesi gerekir. <xref:System.Linq.ParallelEnumerable> Sorgu işleçleri, gerekli olduğunda sıralı moduna otomatik olarak geri döndürüyoruz. Kullanıcı tanımlı sorgu işleçleri ve sıralı yürütme gerektiren kullanıcı temsilcileri için PLINQ sağlar <xref:System.Linq.ParallelEnumerable.AsSequential%2A> yöntemi. Kullandığınızda <xref:System.Linq.ParallelEnumerable.AsSequential%2A>, sorgudaki tüm sonraki işleçleri kadar sırayla yürütülen <xref:System.Linq.ParallelEnumerable.AsParallel%2A> yeniden adlandırılır. Daha fazla bilgi için bkz: [nasıl yapılır: birleştirmek paralel ve sıralı LINQ sorgularını](../../../docs/standard/parallel-programming/how-to-combine-parallel-and-sequential-linq-queries.md).  
   
 ## <a name="options-for-merging-query-results"></a>Sorgu Sonuçlarını Birleştirme Seçenekleri  
- Tüketimi için ana iş parçacığı üzerine geri bir PLINQ sorgusu paralel olarak yürütüldüğünde, her iş parçacığı kendi sonuçlarından birleştirilmelidir bir `foreach` döngü (`For Each` içinde [!INCLUDE[vbprvb](../../../includes/vbprvb-md.md)]), veya bir liste veya dizi ekleme. Bazı durumlarda, örneğin birleştirme işlemi, belirli bir tür belirtmek için sonuçlar daha hızlı oluşturan başlamak için faydalı olabilir. Bu amaçla PLINQ destekleyen <xref:System.Linq.ParallelEnumerable.WithMergeOptions%2A> yöntemi ve <xref:System.Linq.ParallelMergeOptions> numaralandırması. Daha fazla bilgi için bkz: [plınq'te Birleştirme Seçenekleri](../../../docs/standard/parallel-programming/merge-options-in-plinq.md).  
+ Tüketimi için ana iş parçacığı üzerine geri bir PLINQ sorgusu paralel olarak yürütüldüğünde, her iş parçacığı kendi sonuçlarından birleştirilmelidir bir `foreach` döngü (`For Each` Visual Basic'te), veya bir liste veya dizi ekleme. Bazı durumlarda, örneğin birleştirme işlemi, belirli bir tür belirtmek için sonuçlar daha hızlı oluşturan başlamak için faydalı olabilir. Bu amaçla PLINQ destekleyen <xref:System.Linq.ParallelEnumerable.WithMergeOptions%2A> yöntemi ve <xref:System.Linq.ParallelMergeOptions> numaralandırması. Daha fazla bilgi için bkz: [plınq'te Birleştirme Seçenekleri](../../../docs/standard/parallel-programming/merge-options-in-plinq.md).  
   
 ## <a name="the-forall-operator"></a>ForAll İşleci  
- Sıralı olarak [!INCLUDE[vbteclinq](../../../includes/vbteclinq-md.md)] sorguları, yürütme sorgu numaralandırılan kadar ertelenmiş ya da bir `foreach` (`For Each` içinde [!INCLUDE[vbprvb](../../../includes/vbprvb-md.md)]) döngü veya göre çağrılırken bir yöntem gibi <xref:System.Linq.ParallelEnumerable.ToList%2A> , <xref:System.Linq.ParallelEnumerable.ToArray%2A> , veya <xref:System.Linq.ParallelEnumerable.ToDictionary%2A>. De kullanabilirsiniz, PLINQ'te `foreach` sorguyu yürütmek ve sonuçlarını yinelemek için. Ancak, `foreach` kendisini paralel olarak çalışmaz ve bu nedenle, tüm Paralel Görevler çıktısını geri döngü çalıştığı akışına birleştirilemez gerektirir. PLINQ'te, kullandığınız `foreach` zaman son sorgu sonuçlarını sıralama korumanız gerekir ve ayrıca her işlediğiniz sonuçları, çağrılırken örneğin seri bir şekilde `Console.WriteLine` her öğe için. İçin daha hızlı sorgu yürütme sıra koruma gerekli olmadığında ve sonuçları işlenmesini kendisini paralel birkaç ölçeklendirin kullanacağınız <xref:System.Linq.ParallelEnumerable.ForAll%2A> yöntemi bir PLINQ sorgusu yürütülemedi. <xref:System.Linq.ParallelEnumerable.ForAll%2A> Bu son birleştirme adım gerçekleştirmez. Aşağıdaki kod örneğinde nasıl kullanılacağını gösterir <xref:System.Linq.ParallelEnumerable.ForAll%2A> yöntemi. <xref:System.Collections.Concurrent.ConcurrentBag%601?displayProperty=nameWithType> aynı anda tüm öğeleri kaldırmak çalışırken olmadan ekleme birden çok iş parçacığı için optimize edilmiş olduğundan burada kullanılır.  
+ Sıralı olarak [!INCLUDE[vbteclinq](../../../includes/vbteclinq-md.md)] sorguları, yürütme sorgu numaralandırılan kadar ertelenmiş ya da bir `foreach` (`For Each` Visual Basic'te) döngü veya göre çağrılırken bir yöntem gibi <xref:System.Linq.ParallelEnumerable.ToList%2A> , <xref:System.Linq.ParallelEnumerable.ToArray%2A> , veya <xref:System.Linq.ParallelEnumerable.ToDictionary%2A>. De kullanabilirsiniz, PLINQ'te `foreach` sorguyu yürütmek ve sonuçlarını yinelemek için. Ancak, `foreach` kendisini paralel olarak çalışmaz ve bu nedenle, tüm Paralel Görevler çıktısını geri döngü çalıştığı akışına birleştirilemez gerektirir. PLINQ'te, kullandığınız `foreach` zaman son sorgu sonuçlarını sıralama korumanız gerekir ve ayrıca her işlediğiniz sonuçları, çağrılırken örneğin seri bir şekilde `Console.WriteLine` her öğe için. İçin daha hızlı sorgu yürütme sıra koruma gerekli olmadığında ve sonuçları işlenmesini kendisini paralel birkaç ölçeklendirin kullanacağınız <xref:System.Linq.ParallelEnumerable.ForAll%2A> yöntemi bir PLINQ sorgusu yürütülemedi. <xref:System.Linq.ParallelEnumerable.ForAll%2A> Bu son birleştirme adım gerçekleştirmez. Aşağıdaki kod örneğinde nasıl kullanılacağını gösterir <xref:System.Linq.ParallelEnumerable.ForAll%2A> yöntemi. <xref:System.Collections.Concurrent.ConcurrentBag%601?displayProperty=nameWithType> aynı anda tüm öğeleri kaldırmak çalışırken olmadan ekleme birden çok iş parçacığı için optimize edilmiş olduğundan burada kullanılır.  
   
  [!code-csharp[PLINQ#4](../../../samples/snippets/csharp/VS_Snippets_Misc/plinq/cs/plinq2_cs.cs#4)]
  [!code-vb[PLINQ#4](../../../samples/snippets/visualbasic/VS_Snippets_Misc/plinq/vb/plinq2_vb.vb#4)]  
