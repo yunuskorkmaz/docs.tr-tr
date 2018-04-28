@@ -1,0 +1,10 @@
+### <a name="winforms-checkforoverflowunderflow-property-is-now-true-for-systemdrawing"></a><span data-ttu-id="39eab-101">WinForm'ın CheckForOverflowUnderflow özelliği System.Drawing için geçerlidir</span><span class="sxs-lookup"><span data-stu-id="39eab-101">WinForm's CheckForOverflowUnderflow property is now true for System.Drawing</span></span>
+
+|   |   |
+|---|---|
+|<span data-ttu-id="39eab-102">Ayrıntılar</span><span class="sxs-lookup"><span data-stu-id="39eab-102">Details</span></span>|<span data-ttu-id="39eab-103">System.Drawing.dll derleme için CheckForOverflowUnderflow özelliğinin true.</span><span class="sxs-lookup"><span data-stu-id="39eab-103">The CheckForOverflowUnderflow property for the System.Drawing.dll assembly is set to true.</span></span>|
+|<span data-ttu-id="39eab-104">Öneri</span><span class="sxs-lookup"><span data-stu-id="39eab-104">Suggestion</span></span>|<span data-ttu-id="39eab-105">Daha önce taşmalar oluştuğunda, sonuç sessizce kesilebilir.</span><span class="sxs-lookup"><span data-stu-id="39eab-105">Previously when overflows occurred, the result would be silently truncated.</span></span> <span data-ttu-id="39eab-106">Şimdi bir <xref:System.OverflowException?displayProperty=name> özel durumu oluşur.</span><span class="sxs-lookup"><span data-stu-id="39eab-106">Now an <xref:System.OverflowException?displayProperty=name> exception is thrown.</span></span>|
+|<span data-ttu-id="39eab-107">Kapsam</span><span class="sxs-lookup"><span data-stu-id="39eab-107">Scope</span></span>|<span data-ttu-id="39eab-108">Kenar</span><span class="sxs-lookup"><span data-stu-id="39eab-108">Edge</span></span>|
+|<span data-ttu-id="39eab-109">Sürüm</span><span class="sxs-lookup"><span data-stu-id="39eab-109">Version</span></span>|<span data-ttu-id="39eab-110">4,5</span><span class="sxs-lookup"><span data-stu-id="39eab-110">4.5</span></span>|
+|<span data-ttu-id="39eab-111">Tür</span><span class="sxs-lookup"><span data-stu-id="39eab-111">Type</span></span>|<span data-ttu-id="39eab-112">Çalışma zamanı</span><span class="sxs-lookup"><span data-stu-id="39eab-112">Runtime</span></span>|
+

@@ -1,12 +1,13 @@
 ---
-title: "Nasıl yapılır: Windows Forms Uygulamalarında Baskı Önizlemede Görüntüleme"
-ms.custom: 
+title: 'Nasıl yapılır: Windows Forms Uygulamalarında Baskı Önizlemede Görüntüleme'
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-winforms
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-winforms
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - csharp
@@ -17,34 +18,35 @@ helpviewer_keywords:
 - printing [Windows Forms], print preview
 - examples [Windows Forms], print preview
 ms.assetid: e394134c-0886-4517-bd8d-edc4a3749eb5
-caps.latest.revision: "19"
+caps.latest.revision: 19
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 2567a564b5769abd91d34696c1a94c21ad2913ce
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 4868187e860afe8004742365465baf8c57e312a4
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/26/2018
 ---
-# <a name="how-to-display-print-preview-in-windows-forms-applications"></a><span data-ttu-id="291a2-102">Nasıl yapılır: Windows Forms Uygulamalarında Baskı Önizlemede Görüntüleme</span><span class="sxs-lookup"><span data-stu-id="291a2-102">How to: Display Print Preview in Windows Forms Applications</span></span>
-<span data-ttu-id="291a2-103">Kullanabileceğiniz <xref:System.Windows.Forms.PrintPreviewDialog> denetim yazdırılması için önce bir belgeyi genellikle görüntüleme olanağı verir.</span><span class="sxs-lookup"><span data-stu-id="291a2-103">You can use the <xref:System.Windows.Forms.PrintPreviewDialog> control to enable users to display a document, often before it is to be printed.</span></span>  
+# <a name="how-to-display-print-preview-in-windows-forms-applications"></a><span data-ttu-id="9b5d0-102">Nasıl yapılır: Windows Forms Uygulamalarında Baskı Önizlemede Görüntüleme</span><span class="sxs-lookup"><span data-stu-id="9b5d0-102">How to: Display Print Preview in Windows Forms Applications</span></span>
+<span data-ttu-id="9b5d0-103">Kullanabileceğiniz <xref:System.Windows.Forms.PrintPreviewDialog> denetim yazdırılması için önce bir belgeyi genellikle görüntüleme olanağı verir.</span><span class="sxs-lookup"><span data-stu-id="9b5d0-103">You can use the <xref:System.Windows.Forms.PrintPreviewDialog> control to enable users to display a document, often before it is to be printed.</span></span>  
   
- <span data-ttu-id="291a2-104">Bunu yapmak için bir örneğini belirtmeniz gerekir <xref:System.Drawing.Printing.PrintDocument> sınıf; yazdırılması belgeye budur.</span><span class="sxs-lookup"><span data-stu-id="291a2-104">To do this, you need to specify an instance of the <xref:System.Drawing.Printing.PrintDocument> class; this is the document to be printed.</span></span> <span data-ttu-id="291a2-105">Baskı Önizleme ile kullanma hakkında daha fazla bilgi için <xref:System.Drawing.Printing.PrintDocument> bileşeni Bkz [nasıl yapılır: Windows Forms kullanarak baskı önizlemede yazdırma](../../../../docs/framework/winforms/advanced/how-to-print-in-windows-forms-using-print-preview.md).</span><span class="sxs-lookup"><span data-stu-id="291a2-105">For more information about using print preview with the <xref:System.Drawing.Printing.PrintDocument> component, see [How to: Print in Windows Forms Using Print Preview](../../../../docs/framework/winforms/advanced/how-to-print-in-windows-forms-using-print-preview.md).</span></span>  
+ <span data-ttu-id="9b5d0-104">Bunu yapmak için bir örneğini belirtmeniz gerekir <xref:System.Drawing.Printing.PrintDocument> sınıf; yazdırılması belgeye budur.</span><span class="sxs-lookup"><span data-stu-id="9b5d0-104">To do this, you need to specify an instance of the <xref:System.Drawing.Printing.PrintDocument> class; this is the document to be printed.</span></span> <span data-ttu-id="9b5d0-105">Baskı Önizleme ile kullanma hakkında daha fazla bilgi için <xref:System.Drawing.Printing.PrintDocument> bileşeni Bkz [nasıl yapılır: Windows Forms kullanarak baskı önizlemede yazdırma](../../../../docs/framework/winforms/advanced/how-to-print-in-windows-forms-using-print-preview.md).</span><span class="sxs-lookup"><span data-stu-id="9b5d0-105">For more information about using print preview with the <xref:System.Drawing.Printing.PrintDocument> component, see [How to: Print in Windows Forms Using Print Preview](../../../../docs/framework/winforms/advanced/how-to-print-in-windows-forms-using-print-preview.md).</span></span>  
   
 > [!NOTE]
->  <span data-ttu-id="291a2-106">Kullanılacak <xref:System.Windows.Forms.PrintPreviewDialog> denetim Bu kısmen olduğundan çalışma zamanında, kullanıcıların bilgisayarlarında, yerel olarak veya bir ağ üzerinden yüklü bir yazıcı olmalıdır nasıl <xref:System.Windows.Forms.PrintPreviewDialog> bileşen bir belge yazdırıldığında nasıl görüneceğini belirler.</span><span class="sxs-lookup"><span data-stu-id="291a2-106">To use the <xref:System.Windows.Forms.PrintPreviewDialog> control at run time, users must have a printer installed on their computer, either locally or through a network, as this is partly how the <xref:System.Windows.Forms.PrintPreviewDialog> component determines how a document will look when printed.</span></span>  
+>  <span data-ttu-id="9b5d0-106">Kullanılacak <xref:System.Windows.Forms.PrintPreviewDialog> denetim Bu kısmen olduğundan çalışma zamanında, kullanıcıların bilgisayarlarında, yerel olarak veya bir ağ üzerinden yüklü bir yazıcı olmalıdır nasıl <xref:System.Windows.Forms.PrintPreviewDialog> bileşen bir belge yazdırıldığında nasıl görüneceğini belirler.</span><span class="sxs-lookup"><span data-stu-id="9b5d0-106">To use the <xref:System.Windows.Forms.PrintPreviewDialog> control at run time, users must have a printer installed on their computer, either locally or through a network, as this is partly how the <xref:System.Windows.Forms.PrintPreviewDialog> component determines how a document will look when printed.</span></span>  
   
- <span data-ttu-id="291a2-107"><xref:System.Windows.Forms.PrintPreviewDialog> Kontrol kullanır <xref:System.Drawing.Printing.PrinterSettings> sınıfı.</span><span class="sxs-lookup"><span data-stu-id="291a2-107">The <xref:System.Windows.Forms.PrintPreviewDialog> control uses the <xref:System.Drawing.Printing.PrinterSettings> class.</span></span> <span data-ttu-id="291a2-108">Ayrıca, <xref:System.Windows.Forms.PrintPreviewDialog> kontrol kullanır <xref:System.Drawing.Printing.PageSettings> sınıfı gibi <xref:System.Windows.Forms.PrintPreviewDialog> bileşen yapar.</span><span class="sxs-lookup"><span data-stu-id="291a2-108">Additionally, the <xref:System.Windows.Forms.PrintPreviewDialog> control uses the <xref:System.Drawing.Printing.PageSettings> class, just as the <xref:System.Windows.Forms.PrintPreviewDialog> component does.</span></span> <span data-ttu-id="291a2-109">Belirtilen Belgeyi Yazdır <xref:System.Windows.Forms.PrintPreviewDialog> denetimin <xref:System.Windows.Forms.PrintPreviewControl.Document%2A> özelliği hem örneklerine başvurur <xref:System.Drawing.Printing.PrinterSettings> ve <xref:System.Drawing.Printing.PageSettings> sınıfları ve bu Önizleme penceresinde belgeyi işlemek için kullanılır.</span><span class="sxs-lookup"><span data-stu-id="291a2-109">The print document specified in the <xref:System.Windows.Forms.PrintPreviewDialog> control's <xref:System.Windows.Forms.PrintPreviewControl.Document%2A> property refers to instances of both the <xref:System.Drawing.Printing.PrinterSettings> and <xref:System.Drawing.Printing.PageSettings> classes, and these are used to render the document in the preview window.</span></span>  
+ <span data-ttu-id="9b5d0-107"><xref:System.Windows.Forms.PrintPreviewDialog> Kontrol kullanır <xref:System.Drawing.Printing.PrinterSettings> sınıfı.</span><span class="sxs-lookup"><span data-stu-id="9b5d0-107">The <xref:System.Windows.Forms.PrintPreviewDialog> control uses the <xref:System.Drawing.Printing.PrinterSettings> class.</span></span> <span data-ttu-id="9b5d0-108">Ayrıca, <xref:System.Windows.Forms.PrintPreviewDialog> kontrol kullanır <xref:System.Drawing.Printing.PageSettings> sınıfı gibi <xref:System.Windows.Forms.PrintPreviewDialog> bileşen yapar.</span><span class="sxs-lookup"><span data-stu-id="9b5d0-108">Additionally, the <xref:System.Windows.Forms.PrintPreviewDialog> control uses the <xref:System.Drawing.Printing.PageSettings> class, just as the <xref:System.Windows.Forms.PrintPreviewDialog> component does.</span></span> <span data-ttu-id="9b5d0-109">Belirtilen Belgeyi Yazdır <xref:System.Windows.Forms.PrintPreviewDialog> denetimin <xref:System.Windows.Forms.PrintPreviewControl.Document%2A> özelliği hem örneklerine başvurur <xref:System.Drawing.Printing.PrinterSettings> ve <xref:System.Drawing.Printing.PageSettings> sınıfları ve bu Önizleme penceresinde belgeyi işlemek için kullanılır.</span><span class="sxs-lookup"><span data-stu-id="9b5d0-109">The print document specified in the <xref:System.Windows.Forms.PrintPreviewDialog> control's <xref:System.Windows.Forms.PrintPreviewControl.Document%2A> property refers to instances of both the <xref:System.Drawing.Printing.PrinterSettings> and <xref:System.Drawing.Printing.PageSettings> classes, and these are used to render the document in the preview window.</span></span>  
   
-### <a name="to-view-pages-using-the-printpreviewdialog-control"></a><span data-ttu-id="291a2-110">PrintPreviewDialog denetimi kullanan sayfalar görüntülemek için</span><span class="sxs-lookup"><span data-stu-id="291a2-110">To view pages using the PrintPreviewDialog control</span></span>  
+### <a name="to-view-pages-using-the-printpreviewdialog-control"></a><span data-ttu-id="9b5d0-110">PrintPreviewDialog denetimi kullanan sayfalar görüntülemek için</span><span class="sxs-lookup"><span data-stu-id="9b5d0-110">To view pages using the PrintPreviewDialog control</span></span>  
   
--   <span data-ttu-id="291a2-111">Kullanmak <xref:System.Windows.Forms.CommonDialog.ShowDialog%2A> iletişim kutusunu görüntülemek için yöntemi belirtme <xref:System.Drawing.Printing.PrintDocument> kullanmak için.</span><span class="sxs-lookup"><span data-stu-id="291a2-111">Use the <xref:System.Windows.Forms.CommonDialog.ShowDialog%2A> method to display the dialog box, specifying the <xref:System.Drawing.Printing.PrintDocument> to use.</span></span>  
+-   <span data-ttu-id="9b5d0-111">Kullanmak <xref:System.Windows.Forms.CommonDialog.ShowDialog%2A> iletişim kutusunu görüntülemek için yöntemi belirtme <xref:System.Drawing.Printing.PrintDocument> kullanmak için.</span><span class="sxs-lookup"><span data-stu-id="9b5d0-111">Use the <xref:System.Windows.Forms.CommonDialog.ShowDialog%2A> method to display the dialog box, specifying the <xref:System.Drawing.Printing.PrintDocument> to use.</span></span>  
   
-     <span data-ttu-id="291a2-112">Aşağıdaki kod örneğinde, <xref:System.Windows.Forms.Button> denetimin <xref:System.Windows.Forms.Control.Click> olay işleyicisi açılır örneği <xref:System.Windows.Forms.PrintPreviewDialog> denetim.</span><span class="sxs-lookup"><span data-stu-id="291a2-112">In the following code example, the <xref:System.Windows.Forms.Button> control's <xref:System.Windows.Forms.Control.Click> event handler opens an instance of the <xref:System.Windows.Forms.PrintPreviewDialog> control.</span></span> <span data-ttu-id="291a2-113">Belgeyi Yazdır belirtilen <xref:System.Windows.Forms.PrintDialog.Document%2A> özelliği.</span><span class="sxs-lookup"><span data-stu-id="291a2-113">The print document is specified in the <xref:System.Windows.Forms.PrintDialog.Document%2A> property.</span></span> <span data-ttu-id="291a2-114">Aşağıdaki örnekte, bir yazdırma belge belirtilmediğinde.</span><span class="sxs-lookup"><span data-stu-id="291a2-114">In the example below, no print document is specified.</span></span>  
+     <span data-ttu-id="9b5d0-112">Aşağıdaki kod örneğinde, <xref:System.Windows.Forms.Button> denetimin <xref:System.Windows.Forms.Control.Click> olay işleyicisi açılır örneği <xref:System.Windows.Forms.PrintPreviewDialog> denetim.</span><span class="sxs-lookup"><span data-stu-id="9b5d0-112">In the following code example, the <xref:System.Windows.Forms.Button> control's <xref:System.Windows.Forms.Control.Click> event handler opens an instance of the <xref:System.Windows.Forms.PrintPreviewDialog> control.</span></span> <span data-ttu-id="9b5d0-113">Belgeyi Yazdır belirtilen <xref:System.Windows.Forms.PrintDialog.Document%2A> özelliği.</span><span class="sxs-lookup"><span data-stu-id="9b5d0-113">The print document is specified in the <xref:System.Windows.Forms.PrintDialog.Document%2A> property.</span></span> <span data-ttu-id="9b5d0-114">Aşağıdaki örnekte, bir yazdırma belge belirtilmediğinde.</span><span class="sxs-lookup"><span data-stu-id="9b5d0-114">In the example below, no print document is specified.</span></span>  
   
-     <span data-ttu-id="291a2-115">Örnek formunuz olmasını gerektirir bir <xref:System.Windows.Forms.Button> denetimi, bir <xref:System.Drawing.Printing.PrintDocument> adlı bileşeni `myDocument`ve bir <xref:System.Windows.Forms.PrintPreviewDialog> denetim.</span><span class="sxs-lookup"><span data-stu-id="291a2-115">The example requires that your form has a <xref:System.Windows.Forms.Button> control, a <xref:System.Drawing.Printing.PrintDocument> component named `myDocument`, and a <xref:System.Windows.Forms.PrintPreviewDialog> control.</span></span>  
+     <span data-ttu-id="9b5d0-115">Örnek formunuz olmasını gerektirir bir <xref:System.Windows.Forms.Button> denetimi, bir <xref:System.Drawing.Printing.PrintDocument> adlı bileşeni `myDocument`ve bir <xref:System.Windows.Forms.PrintPreviewDialog> denetim.</span><span class="sxs-lookup"><span data-stu-id="9b5d0-115">The example requires that your form has a <xref:System.Windows.Forms.Button> control, a <xref:System.Drawing.Printing.PrintDocument> component named `myDocument`, and a <xref:System.Windows.Forms.PrintPreviewDialog> control.</span></span>  
   
     ```vb  
     Private Sub Button1_Click(ByVal sender As System.Object, _  
@@ -81,7 +83,7 @@ ms.lasthandoff: 12/22/2017
        }  
     ```  
   
-     <span data-ttu-id="291a2-116">([!INCLUDE[csprcs](../../../../includes/csprcs-md.md)], [!INCLUDE[vcprvc](../../../../includes/vcprvc-md.md)]) Formun oluşturucuda olay işleyicisi kaydetmek için aşağıdaki kodu yerleştirin.</span><span class="sxs-lookup"><span data-stu-id="291a2-116">([!INCLUDE[csprcs](../../../../includes/csprcs-md.md)], [!INCLUDE[vcprvc](../../../../includes/vcprvc-md.md)]) Place the following code in the form's constructor to register the event handler.</span></span>  
+     <span data-ttu-id="9b5d0-116">(Visual C# [!INCLUDE[vcprvc](../../../../includes/vcprvc-md.md)]) formun oluşturucuda olay işleyicisi kaydetmek için aşağıdaki kodu yerleştirin.</span><span class="sxs-lookup"><span data-stu-id="9b5d0-116">(Visual C#, [!INCLUDE[vcprvc](../../../../includes/vcprvc-md.md)]) Place the following code in the form's constructor to register the event handler.</span></span>  
   
     ```csharp  
     this.button1.Click += new System.EventHandler(this.button1_Click);  
@@ -92,8 +94,8 @@ ms.lasthandoff: 12/22/2017
        System::EventHandler(this, &Form1::button1_Click);  
     ```  
   
-## <a name="see-also"></a><span data-ttu-id="291a2-117">Ayrıca Bkz.</span><span class="sxs-lookup"><span data-stu-id="291a2-117">See Also</span></span>  
- [<span data-ttu-id="291a2-118">PrintDocument Bileşeni</span><span class="sxs-lookup"><span data-stu-id="291a2-118">PrintDocument Component</span></span>](../../../../docs/framework/winforms/controls/printdocument-component-windows-forms.md)  
- [<span data-ttu-id="291a2-119">PrintPreviewDialog Denetimi</span><span class="sxs-lookup"><span data-stu-id="291a2-119">PrintPreviewDialog Control</span></span>](../../../../docs/framework/winforms/controls/printpreviewdialog-control-windows-forms.md)  
- [<span data-ttu-id="291a2-120">Windows Forms Yazdırma Desteği</span><span class="sxs-lookup"><span data-stu-id="291a2-120">Windows Forms Print Support</span></span>](../../../../docs/framework/winforms/advanced/windows-forms-print-support.md)  
- [<span data-ttu-id="291a2-121">Windows Forms</span><span class="sxs-lookup"><span data-stu-id="291a2-121">Windows Forms</span></span>](../../../../docs/framework/winforms/index.md)
+## <a name="see-also"></a><span data-ttu-id="9b5d0-117">Ayrıca Bkz.</span><span class="sxs-lookup"><span data-stu-id="9b5d0-117">See Also</span></span>  
+ [<span data-ttu-id="9b5d0-118">PrintDocument Bileşeni</span><span class="sxs-lookup"><span data-stu-id="9b5d0-118">PrintDocument Component</span></span>](../../../../docs/framework/winforms/controls/printdocument-component-windows-forms.md)  
+ [<span data-ttu-id="9b5d0-119">PrintPreviewDialog Denetimi</span><span class="sxs-lookup"><span data-stu-id="9b5d0-119">PrintPreviewDialog Control</span></span>](../../../../docs/framework/winforms/controls/printpreviewdialog-control-windows-forms.md)  
+ [<span data-ttu-id="9b5d0-120">Windows Forms Yazdırma Desteği</span><span class="sxs-lookup"><span data-stu-id="9b5d0-120">Windows Forms Print Support</span></span>](../../../../docs/framework/winforms/advanced/windows-forms-print-support.md)  
+ [<span data-ttu-id="9b5d0-121">Windows Forms</span><span class="sxs-lookup"><span data-stu-id="9b5d0-121">Windows Forms</span></span>](../../../../docs/framework/winforms/index.md)
