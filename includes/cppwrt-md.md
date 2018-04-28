@@ -1,0 +1,1 @@
+<span data-ttu-id="758d1-101">Visual C++ bileşen uzantıları</span><span class="sxs-lookup"><span data-stu-id="758d1-101">Visual C++ component extensions</span></span>

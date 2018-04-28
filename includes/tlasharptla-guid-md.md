@@ -1,0 +1,1 @@
+<span data-ttu-id="be9b9-101">genel benzersiz tanımlayıcı (GUID)</span><span class="sxs-lookup"><span data-stu-id="be9b9-101">globally unique identifier (GUID)</span></span>

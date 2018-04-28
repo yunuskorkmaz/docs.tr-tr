@@ -1,0 +1,1 @@
+<span data-ttu-id="64f58-101">Giriş Yöntemi Düzenleyicisi (IME)</span><span class="sxs-lookup"><span data-stu-id="64f58-101">Input Method Editor (IME)</span></span>

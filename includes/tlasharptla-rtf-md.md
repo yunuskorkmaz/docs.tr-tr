@@ -1,0 +1,1 @@
+<span data-ttu-id="e1c49-101">Zengin Metin Biçimi (RTF)</span><span class="sxs-lookup"><span data-stu-id="e1c49-101">Rich Text Format (RTF)</span></span>

@@ -1,0 +1,2 @@
+> [!WARNING]
+> <span data-ttu-id="d5d84-101">Bu konu, .NET Core SDK 2.0 Önizleme 2 için geçerlidir.</span><span class="sxs-lookup"><span data-stu-id="d5d84-101">This topic applies to .NET Core SDK 2.0 Preview 2.</span></span>

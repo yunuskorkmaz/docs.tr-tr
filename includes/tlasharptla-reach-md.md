@@ -1,0 +1,1 @@
+<span data-ttu-id="8e21e-101">XML Paper Specification (XPS) belgesi</span><span class="sxs-lookup"><span data-stu-id="8e21e-101">XML Paper Specification (XPS) document</span></span>

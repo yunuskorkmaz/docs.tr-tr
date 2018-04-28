@@ -1,40 +1,35 @@
 ---
 title: Daha Fazla Bilgi İçin (Paralel Programlama)
-ms.custom: ''
-ms.date: 03/30/2017
+ms.date: 04/26/2018
 ms.prod: .net
-ms.reviewer: ''
-ms.suite: ''
 ms.technology: dotnet-standard
-ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - tasks, further reading
-ms.assetid: 98aee307-dde6-4cad-bb58-078497b8064f
-caps.latest.revision: 7
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: f09cbe788efb3baddf7b144c178e42a22c17bf95
-ms.sourcegitcommit: b750a8e3979749b214e7e10c82efb0a0524dfcb1
+ms.openlocfilehash: 87106f1d9b75775dd401cd856ccb50ceb733b944
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/09/2018
+ms.lasthandoff: 04/28/2018
 ---
-# <a name="for-further-reading-parallel-programming"></a><span data-ttu-id="b434a-102">Daha Fazla Bilgi İçin (Paralel Programlama)</span><span class="sxs-lookup"><span data-stu-id="b434a-102">For Further Reading (Parallel Programming)</span></span>
-<span data-ttu-id="b434a-103">Aşağıdaki kaynaklar, .NET Framework'te paralel programlama hakkında ek bilgi içerir:</span><span class="sxs-lookup"><span data-stu-id="b434a-103">The following resources contain additional information about Parallel Programming in the .NET Framework:</span></span>  
-  
--   <span data-ttu-id="b434a-104">[Paralel Computing Geliştirici Merkezi](https://msdn.microsoft.com/vstudio/bb964701) MSDN Web sitesini içeriklere sahip ve forum yazılarını .NET Framework ve yerel C++'ta paralel programlama hakkında.</span><span class="sxs-lookup"><span data-stu-id="b434a-104">The [Parallel Computing Developer Center](https://msdn.microsoft.com/vstudio/bb964701) on the MSDN Web site has links to the content and forum posts about parallel programming in the .NET Framework, and in native C++.</span></span>  
-  
--   <span data-ttu-id="b434a-105">[.NET blog paralel programlama](https://blogs.msdn.microsoft.com/pfxteam/) MSDN'de blog sitesi .NET Framework'te paralel programlama hakkında birçok ayrıntılı makaleleri içerir.</span><span class="sxs-lookup"><span data-stu-id="b434a-105">The [Parallel Programming with .NET blog](https://blogs.msdn.microsoft.com/pfxteam/) on the MSDN blog site contains many in-depth articles about parallel programming in the .NET Framework.</span></span>  
-  
--   <span data-ttu-id="b434a-106">[Paralel uzantıları Forumu](https://social.msdn.microsoft.com/Forums/en-US/home?forum=parallelextensions) isteyin ve paralel programlama hakkında sorularını yeri MSDN Forumları sitedir.</span><span class="sxs-lookup"><span data-stu-id="b434a-106">The [Parallel Extensions forum](https://social.msdn.microsoft.com/Forums/en-US/home?forum=parallelextensions) on the MSDN forums site is where to ask and answer questions about parallel programming.</span></span>  
-  
--   <span data-ttu-id="b434a-107">[Paralel uzantıları örnekleri](https://code.msdn.microsoft.com/ParExtSamples) MSDN Kod Galerisi Web sitesinde sayfası Ara ve Gelişmiş paralel programlama tekniklerinin gösteren birçok örnekleri içerir.</span><span class="sxs-lookup"><span data-stu-id="b434a-107">The [Parallel Extensions Samples](https://code.msdn.microsoft.com/ParExtSamples) page on the MSDN Code Gallery Web site contains many samples that demonstrate intermediate and advanced parallel programming techniques.</span></span>  
-  
-## <a name="see-also"></a><span data-ttu-id="b434a-108">Ayrıca Bkz.</span><span class="sxs-lookup"><span data-stu-id="b434a-108">See Also</span></span>  
- [<span data-ttu-id="b434a-109">Paralel Programlama</span><span class="sxs-lookup"><span data-stu-id="b434a-109">Parallel Programming</span></span>](../../../docs/standard/parallel-programming/index.md)  
- [<span data-ttu-id="b434a-110">Paralel programlama için desenleri: anlama ve uygulama paralel .NET Framework 4 desenler</span><span class="sxs-lookup"><span data-stu-id="b434a-110">Patterns for Parallel Programming: Understanding and Applying Parallel Patterns with the .NET Framework 4</span></span>](https://www.microsoft.com/download/details.aspx?id=19222)
+# <a name="for-further-reading-parallel-programming"></a><span data-ttu-id="a53fa-102">Daha Fazla Bilgi İçin (Paralel Programlama)</span><span class="sxs-lookup"><span data-stu-id="a53fa-102">For Further Reading (Parallel Programming)</span></span>
+
+<span data-ttu-id="a53fa-103">Aşağıdaki kaynaklar .NET içinde paralel programlama hakkında ek bilgi içerir:</span><span class="sxs-lookup"><span data-stu-id="a53fa-103">The following resources contain additional information about parallel programming in .NET:</span></span>
+
+- <span data-ttu-id="a53fa-104">[Paralel programlama desenleri: anlama ve .NET Framework 4 paralel desenlerle uygulama](https://www.microsoft.com/download/details.aspx?id=19222) belge açıklar ortak paralel desen ve bunları kullanan paralel bileşenleri geliştirmek için en iyi yöntemler desenler.</span><span class="sxs-lookup"><span data-stu-id="a53fa-104">The [Patterns for Parallel Programming: Understanding and Applying Parallel Patterns with the .NET Framework 4](https://www.microsoft.com/download/details.aspx?id=19222) document describes common parallel patterns and best practices for developing parallel components utilizing those patterns.</span></span>
+
+- <span data-ttu-id="a53fa-105">[Ayrıştırma ve çok çekirdekli mimarileri üzerinde düzenleme için Tasarım desenleri](https://msdn.microsoft.com/library/ff963553.aspx) defteri paralel programlama için .NET Framework 4'te tanıtılan Paralel Programlama Desteği kullanmak desenleri açıklar.</span><span class="sxs-lookup"><span data-stu-id="a53fa-105">The [Design Patterns for Decomposition and Coordination on Multicore Architectures](https://msdn.microsoft.com/library/ff963553.aspx) book describes patterns for parallel programming that use the parallel programming support introduced in the .NET Framework 4.</span></span>
+
+- <span data-ttu-id="a53fa-106">[Paralel programlama .NET ile](https://blogs.msdn.microsoft.com/pfxteam/) blog .NET içinde paralel programlama hakkında birçok ayrıntılı makaleleri içerir.</span><span class="sxs-lookup"><span data-stu-id="a53fa-106">The [Parallel Programming with .NET](https://blogs.msdn.microsoft.com/pfxteam/) blog contains many in-depth articles about parallel programming in .NET.</span></span>
+
+- <span data-ttu-id="a53fa-107">[Paralel programlama .NET Framework ile için örnek](https://code.msdn.microsoft.com/ParExtSamples) sayfası Ara ve Gelişmiş paralel programlama tekniklerinin gösteren birçok örnekleri içerir.</span><span class="sxs-lookup"><span data-stu-id="a53fa-107">The [Samples for Parallel Programming with the .NET Framework](https://code.msdn.microsoft.com/ParExtSamples) page contains many samples that demonstrate intermediate and advanced parallel programming techniques.</span></span>
+
+## <a name="see-also"></a><span data-ttu-id="a53fa-108">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="a53fa-108">See also</span></span>  
+ [<span data-ttu-id="a53fa-109">Paralel bilgi işlem Geliştirici Merkezi</span><span class="sxs-lookup"><span data-stu-id="a53fa-109">Parallel Computing Developer Center</span></span>](https://msdn.microsoft.com/vstudio/bb964701)  
+ [<span data-ttu-id="a53fa-110">Visual C++'ta Paralel Programlama</span><span class="sxs-lookup"><span data-stu-id="a53fa-110">Parallel Programming in Visual C++</span></span>](/cpp/parallel/parallel-programming-in-visual-cpp)  

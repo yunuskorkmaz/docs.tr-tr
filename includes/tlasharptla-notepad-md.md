@@ -1,0 +1,1 @@
+<span data-ttu-id="01236-101">Microsoft Not Defteri</span><span class="sxs-lookup"><span data-stu-id="01236-101">Microsoft Notepad</span></span>

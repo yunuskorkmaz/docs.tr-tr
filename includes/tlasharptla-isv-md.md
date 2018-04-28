@@ -1,0 +1,1 @@
+<span data-ttu-id="668a8-101">bağımsız yazılım satıcısı (ISV)</span><span class="sxs-lookup"><span data-stu-id="668a8-101">independent software vendor (ISV)</span></span>

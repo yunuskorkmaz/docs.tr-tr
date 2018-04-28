@@ -1,0 +1,1 @@
+<span data-ttu-id="5b1ee-101">Bu tür, .NET Framework altyapısını destekler ve doğrudan kodunuzdan kullanılmaya yönelik değildir.</span><span class="sxs-lookup"><span data-stu-id="5b1ee-101">This type supports the .NET Framework infrastructure and is not intended to be used directly from your code.</span></span>

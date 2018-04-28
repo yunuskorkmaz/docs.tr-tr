@@ -1,0 +1,1 @@
+<span data-ttu-id="27d6a-101">Denetlenen sıradaki öğenin türü.</span><span class="sxs-lookup"><span data-stu-id="27d6a-101">The type of an element in the controlled sequence.</span></span>

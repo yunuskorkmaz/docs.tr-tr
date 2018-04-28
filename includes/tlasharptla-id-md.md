@@ -1,0 +1,1 @@
+<span data-ttu-id="2c1a6-101">tanımlayıcı (kimlik)</span><span class="sxs-lookup"><span data-stu-id="2c1a6-101">identifier (ID)</span></span>

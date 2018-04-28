@@ -1,0 +1,1 @@
+<span data-ttu-id="70927-101">cihazdan bağımsız bit eşlem (DIB)</span><span class="sxs-lookup"><span data-stu-id="70927-101">device-independent bitmap (DIB)</span></span>
