@@ -10,6 +10,5 @@
 ## [Genel Temsilciler](generic-delegates.md)
 ## [C++ Şablonları ve C# Genel Türleri Arasındaki Farklar](differences-between-cpp-templates-and-csharp-generics.md)
 ## [Çalışma Zamanındaki Genel Türler](generics-in-the-run-time.md)
-## [.NET Framework Sınıf Kitaplığı'nda Genel Türler](generics-in-the-net-framework-class-library.md)
 ## [Genel Türler ve Yansıma](generics-and-reflection.md)
 ## [Genel Türler ve Öznitelikler](generics-and-attributes.md)
