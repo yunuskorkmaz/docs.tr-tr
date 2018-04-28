@@ -1,23 +1,24 @@
 ---
-title: "Özel Durumlar"
-ms.custom: 
+title: Özel Durumlar
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 065205cc-52dd-4f30-9578-b17d8d113136
-caps.latest.revision: "26"
+caps.latest.revision: 26
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: bf2c6e12dac2130a26aa01efc21b8f58f509294a
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 9e78546a10e1a8cdff780c44898fd209ca829c6c
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="exceptions"></a>Özel Durumlar
 İş akışları kullanabilirsiniz <xref:System.Activities.Statements.TryCatch> bir iş akışı yürütme sırasında başlatılan özel durumları işleme etkinlik. Bu özel durumlar işlenebilir veya bunlar kullanarak yeniden atılabilen <xref:System.Activities.Statements.Rethrow> etkinlik. Etkinlikler <xref:System.Activities.Statements.TryCatch.Finally%2A> bölümü olan yürütülmesi ya da <xref:System.Activities.Statements.TryCatch.Try%2A> bölüm veya <xref:System.Activities.Statements.TryCatch.Catches%2A> bölüm tamamlar. İş akışları tarafından barındırılan bir <xref:System.Activities.WorkflowApplication> örneği de kullanabilir <xref:System.Activities.WorkflowApplication.OnUnhandledException%2A> tarafından işlenmemiş özel durumları işlemek için olay işleyicisi bir <xref:System.Activities.Statements.TryCatch> etkinlik.  
@@ -58,7 +59,7 @@ ms.lasthandoff: 12/22/2017
 -   Özel durum tarafından daha yüksek bir düzeye işlenmemiş <xref:System.Activities.Statements.TryCatch>, çıkışları iş akışı ve iş akışı kökündeki Sonlandır yerine iptal edin veya iptal etmek üzere yapılandırılmış. İş akışlarını kullanarak barındırılan <xref:System.Activities.WorkflowApplication> işleyerek yapılandırabilirsiniz <xref:System.Activities.WorkflowApplication.OnUnhandledException%2A> ve döndürme <xref:System.Activities.UnhandledExceptionAction.Cancel>. İşleme örneği <xref:System.Activities.WorkflowApplication.OnUnhandledException%2A> bu konuda daha önce sağlanan. İş akışı Hizmetleri bu kullanarak konusunda yapılandırabilir <xref:System.ServiceModel.Activities.Description.WorkflowUnhandledExceptionBehavior> ve belirterek <xref:System.ServiceModel.Activities.Description.WorkflowUnhandledExceptionAction.Cancel>. Yapılandırma örneği için <xref:System.ServiceModel.Activities.Description.WorkflowUnhandledExceptionBehavior>, bkz: [iş akışı hizmeti konak genişletilebilirliği](../../../docs/framework/wcf/feature-details/workflow-service-host-extensibility.md).  
   
 ## <a name="exception-handling-versus-compensation"></a>Özel durum işleme maaş  
- Özel durum işleme ve Dengeleme arasındaki farkı özel durum işleme sırasında bir etkinlik yürütülmesini gerçekleşir. Bir etkinliği başarıyla tamamlandıktan sonra maaş oluşur. Özel durum işleme etkinlik özel durumu tetikler sonra maaş tarafından önceden tamamlanmış bir etkinliğin başarıyla tamamlanan iş alınabilecek bir mekanizma sağlar ancak temizleme fırsatı sağlar. [!INCLUDE[crdefault](../../../includes/crdefault-md.md)][Maaş](../../../docs/framework/windows-workflow-foundation/compensation.md).  
+ Özel durum işleme ve Dengeleme arasındaki farkı özel durum işleme sırasında bir etkinlik yürütülmesini gerçekleşir. Bir etkinliği başarıyla tamamlandıktan sonra maaş oluşur. Özel durum işleme etkinlik özel durumu tetikler sonra maaş tarafından önceden tamamlanmış bir etkinliğin başarıyla tamamlanan iş alınabilecek bir mekanizma sağlar ancak temizleme fırsatı sağlar. Daha fazla bilgi için bkz: [maaş](../../../docs/framework/windows-workflow-foundation/compensation.md).  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
  <xref:System.Activities.Statements.TryCatch>  

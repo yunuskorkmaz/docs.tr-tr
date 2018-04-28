@@ -1,12 +1,13 @@
 ---
-title: "WPF XAML Tarayıcı Uygulamalarına Genel Bakış"
-ms.custom: 
+title: WPF XAML Tarayıcı Uygulamalarına Genel Bakış
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-wpf
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-wpf
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - csharp
@@ -17,20 +18,21 @@ helpviewer_keywords:
 - XAML browser applications (XBAP)
 - browser-hosted applications [WPF]
 ms.assetid: 3a7a86a8-75d5-4898-96b9-73da151e5e16
-caps.latest.revision: "47"
+caps.latest.revision: 47
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 0f4f410f0f6c209dbc43642a15ae85a788390f4a
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.workload:
+- dotnet
+ms.openlocfilehash: 0afdce00cc169a5be9224a7b675e4666c1349bd5
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="wpf-xaml-browser-applications-overview"></a>WPF XAML Tarayıcı Uygulamalarına Genel Bakış
 <a name="introduction"></a>
-[!INCLUDE[TLA#tla_xbap#plural](../../../../includes/tlasharptla-xbapsharpplural-md.md)]Web uygulamaları ve zengin istemci uygulamaları özelliklerini bir araya getirir. Web uygulamaları gibi XBAP bir Web sunucusuna dağıtılır ve Internet Explorer ya da Firefox başlatıldı. Zengin istemci uygulamaları gibi yararlanabilir özelliklerini XBAP [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]. XBAP geliştirme de zengin istemci geliştirme benzer. Bu konu XBAP geliştirme basit, üst düzey bir giriş sağlar ve burada XBAP geliştirme standart zengin istemci geliştirme farklı açıklar.  
+[!INCLUDE[TLA#tla_xbap#plural](../../../../includes/tlasharptla-xbapsharpplural-md.md)] Web uygulamaları ve zengin istemci uygulamaları özelliklerini bir araya getirir. Web uygulamaları gibi XBAP bir Web sunucusuna dağıtılır ve Internet Explorer ya da Firefox başlatıldı. Zengin istemci uygulamaları gibi yararlanabilir özelliklerini XBAP [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]. XBAP geliştirme de zengin istemci geliştirme benzer. Bu konu XBAP geliştirme basit, üst düzey bir giriş sağlar ve burada XBAP geliştirme standart zengin istemci geliştirme farklı açıklar.  
   
  Bu konu aşağıdaki bölümleri içermektedir:  
   
@@ -63,7 +65,7 @@ ms.lasthandoff: 01/19/2018
 |Uygulama bildirimi (.manifest)|Bu uygulama ile ilişkili meta verileri içerir ve bir .manifest uzantısına sahiptir.|  
 |Dağıtım bildirimi (.xbap)|Bu dosya bilgilerini içerir, [!INCLUDE[TLA#tla_clickonce](../../../../includes/tlasharptla-clickonce-md.md)] uygulamayı dağıtmak için kullanır ve .xbap uzantısına sahiptir.|  
   
- XBAP Web sunucusuna, örneğin dağıttığınız [!INCLUDE[TLA#tla_iis50](../../../../includes/tlasharptla-iis50-md.md)] veya sonraki sürümler. Yükleme gerekmez [!INCLUDE[TLA2#tla_winfx](../../../../includes/tla2sharptla-winfx-md.md)] Web sunucusu, ancak sahip kaydetmek [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] [!INCLUDE[TLA#tla_mime](../../../../includes/tlasharptla-mime-md.md)] türlerini ve dosya adı uzantıları. Daha fazla bilgi için bkz: [yapılandırma IIS 5.0 ve IIS 6. 0'wpf uygulamaları dağıtmak için](../../../../docs/framework/wpf/app-development/how-to-configure-iis-5-0-and-iis-6-0-to-deploy-wpf-applications.md).  
+ XBAP Web sunucusuna, örneğin dağıttığınız [!INCLUDE[TLA#tla_iis50](../../../../includes/tlasharptla-iis50-md.md)] veya sonraki sürümler. Web sunucusunda .NET Framework'ü yüklemek gerekmez, ancak kaydetmek zorunda [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] [!INCLUDE[TLA#tla_mime](../../../../includes/tlasharptla-mime-md.md)] türlerini ve dosya adı uzantıları. Daha fazla bilgi için bkz: [yapılandırma IIS 5.0 ve IIS 6. 0'wpf uygulamaları dağıtmak için](../../../../docs/framework/wpf/app-development/how-to-configure-iis-5-0-and-iis-6-0-to-deploy-wpf-applications.md).  
   
  XBAP'ınız dağıtımına hazırlanmak için .exe ve ilişkili bildirimleri Web sunucusuna kopyalayın. .Xbap uzantısına sahip olan dosya dağıtım bildirimini açmak için köprü içeren bir HTML sayfası oluşturun. Kullanıcı .xbap dosyasını bağlantısını tıklattığında [!INCLUDE[TLA2#tla_clickonce](../../../../includes/tla2sharptla-clickonce-md.md)] otomatik olarak karşıdan yükleme ve uygulamayı başlatmayı mekanizması işler. Aşağıdaki örnek kod bir XBAP işaret eden bir köprü içeren bir HTML sayfası gösterilir.  
   
@@ -152,7 +154,7 @@ ms.lasthandoff: 01/19/2018
   
 -   WPF uygulaması ayrı bir iş parçacığı çalıştığından özel bir ActiveX denetimi ile iletişim sorunlarla karşılaşabilirsiniz.  
   
--   <xref:System.Windows.Interop.HwndHost.MessageHook>çünkü gerçekleşmedi <xref:System.Windows.Interop.HwndHost> başka bir iş parçacığı veya işlem çalıştıran bir pencereyi alt sınıf olamaz.  
+-   <xref:System.Windows.Interop.HwndHost.MessageHook> çünkü gerçekleşmedi <xref:System.Windows.Interop.HwndHost> başka bir iş parçacığı veya işlem çalıştıran bir pencereyi alt sınıf olamaz.  
   
 ### <a name="creating-a-full-trust-xbap"></a>Tam güven XBAP oluşturma  
  XBAP'ınız tam güven gerektiriyorsa, bu izni etkinleştirmek için projenizi değiştirebilirsiniz. Aşağıdaki adımlar, tam güven etkinleştirmek açıklanmaktadır:  

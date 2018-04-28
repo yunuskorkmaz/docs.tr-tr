@@ -1,20 +1,17 @@
 ---
-title: "Desen Eşleştirme (F#)"
+title: Desen Eşleştirme (F#)
 description: "Desenleri F #'de mantıksal yapıları verilerle karşılaştırmak, veri bağlı parçalarına ya da verilerden bilgi ayıklamak için nasıl kullanılacağını öğrenin."
-keywords: "Visual f #, f # işlevsel programlama"
 author: cartermp
 ms.author: phcart
 ms.date: 05/16/2016
 ms.topic: language-reference
-ms.prod: .net
-ms.technology: devlang-fsharp
+ms.prod: dotnet-fsharp
 ms.devlang: fsharp
-ms.assetid: 5562ee98-e2f1-4dcd-8e2f-16ae27baaade
-ms.openlocfilehash: 7c7a3110a8f34c0c96c12d4584010a9ac4b485fa
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.openlocfilehash: 31a5b321e5daecdc3add9a205d60b63b2c00ccd2
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="pattern-matching"></a>Desen Eşleştirme
 
@@ -40,8 +37,8 @@ Desteklenen desenleri aşağıdaki tabloda gösterilmiştir. Çalışma zamanın
 |----|-----------|-------|
 |Sabit düzeni|Tüm sayısal, karakter veya dize sabit değeri, bir numaralandırma sabiti veya tanımlı bir değişmez değer tanımlayıcısı|`1.0`, `"test"`, `30`, `Color.Red`|
 |Tanımlayıcı deseni|Servis talebi değerini ayrılmış UNION, bir özel durum etiketi veya bir etkin desen örneği|`Some(x)`<br /><br />`Failure(msg)`|
-|Değişken deseni|*tanımlayıcı*|`a`|
-|`as`düzeni|*Desen* olarak *tanımlayıcısı*|`(a, b) as tuple1`|
+|Değişken deseni|*Tanımlayıcı*|`a`|
+|`as` düzeni|*Desen* olarak *tanımlayıcısı*|`(a, b) as tuple1`|
 |VEYA deseni|*pattern1* &#124; *pattern2*|<code>([h] &#124; [h; _])</code>|
 |VE düzeni|*pattern1* &amp; *pattern2*|`(a, b) & (_, "test")`|
 |Cons deseni|*tanımlayıcı* :: *liste tanımlayıcısı*|`h :: t`|
@@ -195,8 +192,8 @@ Aşağıdaki örnek, null deseni ve değişken deseni kullanır.
 [!code-fsharp[Main](../../../samples/snippets/fsharp/lang-ref-2/snippet4817.fs)]
 
 ## <a name="see-also"></a>Ayrıca Bkz.
-[Eşleşme ifadeleri](match-expressions.md)
+[Eşleşme İfadeleri](match-expressions.md)
 
-[Etkin desenler](active-patterns.md)
+[Etkin Desenler](active-patterns.md)
 
-[F # dili başvurusu](index.md)
+[F# Dili Başvurusu](index.md)

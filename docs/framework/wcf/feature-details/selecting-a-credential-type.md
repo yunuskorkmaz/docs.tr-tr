@@ -1,33 +1,33 @@
 ---
-title: "Kimlik Bilgisi Türü Seçme"
-ms.custom: 
+title: Kimlik Bilgisi Türü Seçme
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - dotnet-clr
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: bf707063-3f30-4304-ab53-0e63413728a8
-caps.latest.revision: 
+caps.latest.revision: 25
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: 9e6b3d84db619ba1b4b5785b134cfe87d1b15cdc
-ms.sourcegitcommit: cf22b29db780e532e1090c6e755aa52d28273fa6
+ms.openlocfilehash: 9858475520b949d5b9ee62ecdc0994bbb9398953
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/01/2018
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="selecting-a-credential-type"></a>Kimlik Bilgisi Türü Seçme
 *Kimlik bilgileri* verileri [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] bir talep kimliği veya özellikleri kurmak için kullanır. Örneğin, passport bir kamu sorunlarını vatandaşlığa benzer bir ülke veya bölgedeki kanıtlamak için bir kimlik bilgisi ' dir. İçinde [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)], kimlik bilgileri, kullanıcı adı belirteçleri ve X.509 sertifikaları gibi birçok forms alabilir. Kimlik bilgileri, bu konuda ele alınmıştır, nasıl kullanıldıkları [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]ve uygulamanız için doğru kimlik bilgilerini seçme.  
   
  Birçok ülke ve bölgelerden içinde bir sürücünün lisans bir kimlik bilgisi örneğidir. Bir lisans kişinin kimlik ve özellikleri temsil eden veri içeriyor. Sahibi'nın resmi biçiminde kanıtını içerir. Lisans, lisans, genellikle bir kamu bölüm gibi güvenilir bir yetkili tarafından verilir. Lisans korumalı ve değil değiştirilmiş veya bırakıldığı sahtesi olduğunu gösteren bir hologramı içerebilir.  
   
- Bir kimlik bilgisi sunan hem veri hem de veri kanıtını sunan içerir. [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]çeşitli güvenlik düzeyleri taşıma ve ileti kimlik bilgisi türlerini destekler. Örneğin, iki tür desteklenen kimlik bilgileri göz önünde bulundurun [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]: sertifika kimlik bilgileri kullanıcı adı ve (X.509).  
+ Bir kimlik bilgisi sunan hem veri hem de veri kanıtını sunan içerir. [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] çeşitli güvenlik düzeyleri taşıma ve ileti kimlik bilgisi türlerini destekler. Örneğin, iki tür desteklenen kimlik bilgileri göz önünde bulundurun [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]: sertifika kimlik bilgileri kullanıcı adı ve (X.509).  
   
  Kullanıcı adı kimlik bilgisi için kullanıcı adı talep kimliğini temsil eder ve kanıtını parolasını sağlar. Güvenilir yetkili bu durumda kullanıcı adını ve parolayı doğrular sistemidir.  
   
@@ -41,7 +41,7 @@ ms.lasthandoff: 02/01/2018
 |Yok.|İstemci kimlik sunmak gerekmez belirtir. Anonim istemci için çevirir.|  
 |Temel|Temel kimlik doğrulaması için istemci belirtir. Ek bilgi için bkz: RFC2617 —[HTTP kimlik doğrulaması: temel ve Özet kimlik doğrulaması](http://go.microsoft.com/fwlink/?LinkID=88313).|  
 |Özet|Özet kimlik doğrulaması için istemci belirtir. Ek bilgi için bkz: RFC2617 —[HTTP kimlik doğrulaması: temel ve Özet kimlik doğrulaması](http://go.microsoft.com/fwlink/?LinkID=88313).|  
-|Ntlm|NT LAN Yöneticisi (NTLM) kimlik doğrulamasını belirtir. Bu, Kerberos kimlik doğrulaması için herhangi bir nedenle kullanılamaz olduğunda kullanılır. Ayarlayarak da bir geri dönüş olarak kullanılmasını devre dışı bırakabilirsiniz <xref:System.ServiceModel.Security.WindowsClientCredential.AllowNtlm%2A> özelliğine `false`, hangi nedenler [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] NTLM kullanılırsa, bir özel durum için bir en iyi çaba yapma. Bu özelliği ayarlamak Not `false` NTLM kimlik bilgileri kablo üzerinden gönderilen engelleyebilir değil.|  
+|NTLM|NT LAN Yöneticisi (NTLM) kimlik doğrulamasını belirtir. Bu, Kerberos kimlik doğrulaması için herhangi bir nedenle kullanılamaz olduğunda kullanılır. Ayarlayarak da bir geri dönüş olarak kullanılmasını devre dışı bırakabilirsiniz <xref:System.ServiceModel.Security.WindowsClientCredential.AllowNtlm%2A> özelliğine `false`, hangi nedenler [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] NTLM kullanılırsa, bir özel durum için bir en iyi çaba yapma. Bu özelliği ayarlamak Not `false` NTLM kimlik bilgileri kablo üzerinden gönderilen engelleyebilir değil.|  
 |Windows|Windows kimlik doğrulaması belirtir. Bir Windows etki alanında yalnızca Kerberos protokolünü belirtmek için ayarlayın <xref:System.ServiceModel.Security.WindowsClientCredential.AllowNtlm%2A> özelliğine `false` (varsayılan `true`).|  
 |Sertifika|Bir X.509 sertifikası kullanarak istemci kimlik doğrulaması gerçekleştirir.|  
 |Parola|Kullanıcı, bir kullanıcı adı ve parola girmeniz gerekir. Windows kimlik doğrulaması veya başka bir özel çözüm kullanarak kullanıcı adı/parola çifti doğrulayın.|  
@@ -53,9 +53,9 @@ ms.lasthandoff: 02/01/2018
 |-------------|-----------------|  
 |Yok.|İstemci bir kimlik bilgisi sunmak gerekmez belirtir. Anonim istemci için çevirir.|  
 |Windows|Windows kimlik bilgileri ile kurulan güvenlik bağlamı altında gerçekleşmesi SOAP ileti alışverişlerinde sağlar.|  
-|Kullanıcı adı|Hizmetinin istemci sahip bir kullanıcı adı kimlik bilgisi doğrulanmasını gerektiren izin verir. Unutmayın [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] imza oluşturulurken veya veri şifreleme gibi kullanıcı adları ile şifreleme işlemleri izin vermiyor. [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]taşıma kullanıcı adı kimlik bilgileri kullanırken güvenliği sağlar.|  
+|Kullanıcı adı|Hizmetinin istemci sahip bir kullanıcı adı kimlik bilgisi doğrulanmasını gerektiren izin verir. Unutmayın [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] imza oluşturulurken veya veri şifreleme gibi kullanıcı adları ile şifreleme işlemleri izin vermiyor. [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] taşıma kullanıcı adı kimlik bilgileri kullanırken güvenliği sağlar.|  
 |Sertifika|Hizmetinin gerektiren izin verir, istemci kimlik doğrulaması X.509 sertifikası kullanarak.|  
-|Belirteci veren|Bir güvenlik ilkesine göre yapılandırılmış bir özel simge türü. Varsayılan belirteci güvenlik onaylar biçimlendirme dili (SAML) türüdür. Belirtecin bir güvenli belirteç hizmeti tarafından verilir. [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)][Federasyon ve verilen belirteçleri](../../../../docs/framework/wcf/feature-details/federation-and-issued-tokens.md).|  
+|Belirteci veren|Bir güvenlik ilkesine göre yapılandırılmış bir özel simge türü. Varsayılan belirteci güvenlik onaylar biçimlendirme dili (SAML) türüdür. Belirtecin bir güvenli belirteç hizmeti tarafından verilir. Daha fazla bilgi için bkz: [Federasyon ve verilen belirteçleri](../../../../docs/framework/wcf/feature-details/federation-and-issued-tokens.md).|  
   
 ### <a name="negotiation-model-of-service-credentials"></a>Hizmet kimlik bilgileri anlaşma modeli  
  *Anlaşma* kimlik bilgilerini değiştirerek bir istemci ile hizmet arasında güven oluşturma işlemidir. İşlem, istemci ve hizmet, yalnızca sonraki adımda anlaşma işlemi için gerekli bilgileri ifşa amacıyla arasındaki yinelemeli olarak gerçekleştirilir. Uygulamada, bir hizmetin kimlik bilgisinin sonraki işlemlerde kullanılacak istemcisine teslim edilmesini son sonucudur.  
@@ -77,7 +77,7 @@ ms.lasthandoff: 02/01/2018
  Olup, bir hizmet veya istemci programlama bağlı olarak, kimlik bilgisi değeri ayarlamak için kullanılan yöntem biraz farklıdır.  
   
 ### <a name="setting-service-credentials"></a>Hizmet kimlik bilgilerini ayarlama  
- Aktarım Modu kullanıyorsanız ve aktarım olarak HTTP kullanarak, bir sertifika ile bağlantı noktasını yapılandırın veya ya da Internet Information Services (IIS) kullanmanız gerekir. [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)][Taşıma güvenliği genel bakış](../../../../docs/framework/wcf/feature-details/transport-security-overview.md) ve [HTTP taşıma güvenliği](../../../../docs/framework/wcf/feature-details/http-transport-security.md).  
+ Aktarım Modu kullanıyorsanız ve aktarım olarak HTTP kullanarak, bir sertifika ile bağlantı noktasını yapılandırın veya ya da Internet Information Services (IIS) kullanmanız gerekir. Daha fazla bilgi için bkz: [taşıma güvenliği genel bakış](../../../../docs/framework/wcf/feature-details/transport-security-overview.md) ve [HTTP taşıma güvenliği](../../../../docs/framework/wcf/feature-details/http-transport-security.md).  
   
  Kodda kimlik bilgilerine sahip bir hizmet sağlamak için bir örneğini oluşturmak <xref:System.ServiceModel.ServiceHost> sınıfı ve uygun kimlik bilgilerini kullanarak belirtin <xref:System.ServiceModel.Description.ServiceCredentials> üzerinden erişilen sınıfı <xref:System.ServiceModel.ServiceHostBase.Credentials%2A> özelliği.  
   

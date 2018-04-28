@@ -1,29 +1,31 @@
 ---
-title: "Nasıl yapılır: Enterprise Uç Noktalarını Kilitleme"
-ms.custom: 
+title: 'Nasıl yapılır: Enterprise Uç Noktalarını Kilitleme'
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 1b7eaab7-da60-4cf7-9d6a-ec02709cf75d
-caps.latest.revision: "21"
+caps.latest.revision: 21
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 5b6fa36a269dec4a191417813ec9c4ee26b699ee
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: e5b10665e9a820c7057231c684769bddf9cb0c79
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="how-to-lock-down-endpoints-in-the-enterprise"></a>Nasıl yapılır: Enterprise Uç Noktalarını Kilitleme
 Büyük ölçekli işletmeler genellikle Kurumsal güvenlik ilkeleriyle uyumlu uygulamalar geliştirilir gerektirir. Aşağıdaki konu geliştirmek ve tüm doğrulamak için kullanılan bir istemci uç nokta Doğrulayıcı yüklemek nasıl ele [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] istemci uygulamaları bilgisayarlarda yüklü.  
   
- Bu uç noktası davranışı istemciye eklendiği bu durumda, bir istemci Doğrulayıcı doğrulayıcıdır [ \<commonBehaviors >](../../../../docs/framework/configure-apps/file-schema/wcf/commonbehaviors.md) machine.config dosyasının bölümünde. [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]yalnızca istemci uygulamaları için ortak uç nokta davranışları yükler ve yalnızca hizmet uygulamaları için ortak hizmet davranışları yükler. Hizmet uygulamaları için aynı bu Doğrulayıcı yüklemek için Doğrulayıcı hizmet davranışı olması gerekir. [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)][ \<commonBehaviors >](../../../../docs/framework/configure-apps/file-schema/wcf/commonbehaviors.md) bölümü.  
+ Bu uç noktası davranışı istemciye eklendiği bu durumda, bir istemci Doğrulayıcı doğrulayıcıdır [ \<commonBehaviors >](../../../../docs/framework/configure-apps/file-schema/wcf/commonbehaviors.md) machine.config dosyasının bölümünde. [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] yalnızca istemci uygulamaları için ortak uç nokta davranışları yükler ve yalnızca hizmet uygulamaları için ortak hizmet davranışları yükler. Hizmet uygulamaları için aynı bu Doğrulayıcı yüklemek için Doğrulayıcı hizmet davranışı olması gerekir. Daha fazla bilgi için bkz: [ \<commonBehaviors >](../../../../docs/framework/configure-apps/file-schema/wcf/commonbehaviors.md) bölümü.  
   
 > [!IMPORTANT]
 >  Hizmet veya uç nokta davranışları işaretlenmemiş ile <xref:System.Security.AllowPartiallyTrustedCallersAttribute> eklenir (APTCA) özniteliği [ \<commonBehaviors >](../../../../docs/framework/configure-apps/file-schema/wcf/commonbehaviors.md) uygulama kısmi güvende çalıştığında, bir yapılandırma dosyası bölümünü çalıştırmak değil ortam ve hiçbir özel durum oluşur böyle bir durumda. Doğrulayıcıları gibi ortak davranışları çalışan zorlamak için aşağıdakilerden birini yapmanız gerekir:  

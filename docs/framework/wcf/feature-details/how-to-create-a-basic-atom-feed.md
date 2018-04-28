@@ -1,30 +1,32 @@
 ---
-title: "Nasıl Yapılır: Temel Bir Atom Akışı Oluşturma"
-ms.custom: 
+title: 'Nasıl Yapılır: Temel Bir Atom Akışı Oluşturma'
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - csharp
 - vb
 ms.assetid: 6e0cacc1-9b11-4665-adb7-577a62626fd6
-caps.latest.revision: "14"
+caps.latest.revision: 14
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 51a42e9b954fba7ccd58d74248fb65dc2b57a76b
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 26e5bf0771e3b8d700efeaf4f63b9866534db68a
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="how-to-create-a-basic-atom-feed"></a>Nasıl Yapılır: Temel Bir Atom Akışı Oluşturma
-[!INCLUDE[indigo1](../../../../includes/indigo1-md.md)]Akış bir dağıtım kullanıma sunan bir hizmet oluşturmanıza olanak sağlar. Bu konu, akışı bir Atom dağıtım gösteren bir dağıtım hizmetin nasıl oluşturulacağını açıklar.  
+[!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] Akış bir dağıtım kullanıma sunan bir hizmet oluşturmanıza olanak sağlar. Bu konu, akışı bir Atom dağıtım gösteren bir dağıtım hizmetin nasıl oluşturulacağını açıklar.  
   
 ### <a name="to-create-a-basic-syndication-service"></a>Bir temel dağıtım hizmet oluşturmak için  
   
@@ -34,7 +36,7 @@ ms.lasthandoff: 12/22/2017
      [!code-vb[htAtomBasic#0](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/htatombasic/vb/program.vb#0)]  
   
     > [!NOTE]
-    >  Geçerli tüm hizmet işlemleri <xref:System.ServiceModel.Web.WebGetAttribute> HTTP GET isteklerine eşlenir. İşlemi farklı bir HTTP yöntem eşleyin <xref:System.ServiceModel.Web.WebInvokeAttribute> yerine. [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)][Nasıl yapılır: bir temel WCF Web HTTP hizmeti oluşturma](../../../../docs/framework/wcf/feature-details/how-to-create-a-basic-wcf-web-http-service.md).  
+    >  Geçerli tüm hizmet işlemleri <xref:System.ServiceModel.Web.WebGetAttribute> HTTP GET isteklerine eşlenir. İşlemi farklı bir HTTP yöntem eşleyin <xref:System.ServiceModel.Web.WebInvokeAttribute> yerine. Daha fazla bilgi için bkz: [nasıl yapılır: temel bir WCF Web HTTP hizmeti oluşturma](../../../../docs/framework/wcf/feature-details/how-to-create-a-basic-wcf-web-http-service.md).  
   
 2.  Hizmet sözleşmesini uygulama.  
   
@@ -75,9 +77,9 @@ ms.lasthandoff: 12/22/2017
   
 ### <a name="to-call-getblog-with-an-http-get"></a>Bir HTTP GET ile GetBlog() çağırmak için  
   
-1.  Internet Explorer'ı açın, aşağıdaki URL'yi yazın ve ENTER tuşuna basın: 8000/BlogService/GetBlog  
+1.  Internet Explorer'ı açın, aşağıdaki URL'yi yazın ve ENTER tuşuna basın: http://localhost:8000/BlogService/GetBlog  
   
-     URL (8000/BlogService) hizmeti temel adresi, bitiş noktası ve hizmet işlemini çağırmak için göreli adresini içerir.  
+     Hizmetin taban adresi URL içerir (http://localhost:8000/BlogService), göreli adresi uç nokta ve hizmet işlemini çağırın.  
   
 ### <a name="to-call-getblog-from-code"></a>Koddan GetBlog() çağırmak için  
   

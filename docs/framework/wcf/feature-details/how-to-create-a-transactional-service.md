@@ -1,24 +1,26 @@
 ---
-title: "Nasıl yapılır: İşlemsel Hizmet Oluşturma"
-ms.custom: 
+title: 'Nasıl yapılır: İşlemsel Hizmet Oluşturma'
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 1bd2e4ed-a557-43f9-ba98-4c70cb75c154
-caps.latest.revision: "12"
+caps.latest.revision: 12
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 4a61c1c4aeba63baee3c5e2ba5110710ed9f45f2
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.workload:
+- dotnet
+ms.openlocfilehash: 9e39ecd346b5d5fb4113fd17abe9bde715a12aa4
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="how-to-create-a-transactional-service"></a>Nasıl yapılır: İşlemsel Hizmet Oluşturma
 Bu örnek, çeşitli yönlerini oluşturma işlemsel hizmet ve hizmet işlemleri koordine etmek için bir istemci tarafından başlatılan işlem kullanımını gösterir.  
@@ -76,7 +78,7 @@ Bu örnek, çeşitli yönlerini oluşturma işlemsel hizmet ve hizmet işlemleri
     }  
     ```  
   
-3.  Bağlamaları işlem bağlamı aktarılan olduğunu, belirterek yapılandırma dosyası ve bunu yapmak için kullanılan protokolleri yapılandırın. [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)][ServiceModel işlem Yapılandırması](../../../../docs/framework/wcf/feature-details/servicemodel-transaction-configuration.md). Uç nokta öğesinin belirtilen bağlama türü özellikle `binding` özniteliği. [ \<Uç noktası >](http://msdn.microsoft.com/library/13aa23b7-2f08-4add-8dbf-a99f8127c017) öğesi içeren bir `bindingConfiguration` adlı bir bağlama yapılandırması başvuran özniteliği `transactionalOleTransactionsTcpBinding`aşağıdaki örnek yapılandırmada gösterildiği gibi.  
+3.  Bağlamaları işlem bağlamı aktarılan olduğunu, belirterek yapılandırma dosyası ve bunu yapmak için kullanılan protokolleri yapılandırın. Daha fazla bilgi için bkz: [ServiceModel işlem Yapılandırması](../../../../docs/framework/wcf/feature-details/servicemodel-transaction-configuration.md). Uç nokta öğesinin belirtilen bağlama türü özellikle `binding` özniteliği. [ \<Uç noktası >](http://msdn.microsoft.com/library/13aa23b7-2f08-4add-8dbf-a99f8127c017) öğesi içeren bir `bindingConfiguration` adlı bir bağlama yapılandırması başvuran özniteliği `transactionalOleTransactionsTcpBinding`aşağıdaki örnek yapılandırmada gösterildiği gibi.  
   
     ```xml  
     <service name="CalculatorService">  
@@ -193,7 +195,7 @@ Bu örnek, çeşitli yönlerini oluşturma işlemsel hizmet ve hizmet işlemleri
   
 ### <a name="controlling-the-lifetime-of-a-transactional-service-instance"></a>Bir işlem hizmet örneği ömrü denetleme  
   
-1.  [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]kullanan <xref:System.ServiceModel.ServiceBehaviorAttribute.ReleaseServiceInstanceOnTransactionComplete%2A> özelliği bir işlem tamamlandığında, temel alınan hizmet örneği yayımlanan olup olmadığını belirtin. Bu varsayılan olarak bu yana `true`, aksi takdirde yapılandırılmadıkça [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] verimli ve öngörülebilir "tam zamanında" etkinleştirme davranışı sergiler. Bir hizmete bir sonraki işlem üzerinde yapılan çağrı hiçbir kalanları önceki işlemdeki durumu ile yeni bir hizmet örneği garanti. Bazen bu genellikle yararlı olsa da, işlem tamamlandığında ötesinde hizmet örneği içinde durumunu korumak isteyebilirsiniz. Gerekli durumu veya kaynakları işleyicilerine alınamıyor veya yeniden oluşturma pahalı olduğunda bu örnekleri olacaktır. Bunu ayarlayarak yapabilirsiniz <xref:System.ServiceModel.ServiceBehaviorAttribute.ReleaseServiceInstanceOnTransactionComplete%2A> özelliğine `false`. Bu ayar, örneği ve herhangi bir ilişkili durum sonraki çağrılar kullanılabilir. Bu kullanırken için ne zaman etkinleştirildiğine ve nasıl durumu ve işlemleri temizlenmiş tamamlandı ve. Aşağıdaki örnek bu örnekle tutarak bunu nasıl yapacağınızı gösterir `runningTotal` değişkeni.  
+1.  [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] kullanan <xref:System.ServiceModel.ServiceBehaviorAttribute.ReleaseServiceInstanceOnTransactionComplete%2A> özelliği bir işlem tamamlandığında, temel alınan hizmet örneği yayımlanan olup olmadığını belirtin. Bu varsayılan olarak bu yana `true`, aksi takdirde yapılandırılmadıkça [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] verimli ve öngörülebilir "tam zamanında" etkinleştirme davranışı sergiler. Bir hizmete bir sonraki işlem üzerinde yapılan çağrı hiçbir kalanları önceki işlemdeki durumu ile yeni bir hizmet örneği garanti. Bazen bu genellikle yararlı olsa da, işlem tamamlandığında ötesinde hizmet örneği içinde durumunu korumak isteyebilirsiniz. Gerekli durumu veya kaynakları işleyicilerine alınamıyor veya yeniden oluşturma pahalı olduğunda bu örnekleri olacaktır. Bunu ayarlayarak yapabilirsiniz <xref:System.ServiceModel.ServiceBehaviorAttribute.ReleaseServiceInstanceOnTransactionComplete%2A> özelliğine `false`. Bu ayar, örneği ve herhangi bir ilişkili durum sonraki çağrılar kullanılabilir. Bu kullanırken için ne zaman etkinleştirildiğine ve nasıl durumu ve işlemleri temizlenmiş tamamlandı ve. Aşağıdaki örnek bu örnekle tutarak bunu nasıl yapacağınızı gösterir `runningTotal` değişkeni.  
   
     ```  
     [ServiceBehavior(TransactionIsolationLevel = [ServiceBehavior(  

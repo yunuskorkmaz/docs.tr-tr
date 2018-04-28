@@ -1,20 +1,17 @@
 ---
-title: "Soyut Sınıflar (F#)"
-description: "Gerçeklenmemiş bazı veya tüm üyeleri bırakın F # soyut sınıfları hakkında bilgi edinin ve nesne türlerini farklı bir dizi ortak işlevselliğini temsil eder."
-keywords: "Visual f #, f # işlevsel programlama"
+title: Soyut Sınıflar (F#)
+description: 'Gerçeklenmemiş bazı veya tüm üyeleri bırakın F # soyut sınıfları hakkında bilgi edinin ve nesne türlerini farklı bir dizi ortak işlevselliğini temsil eder.'
 author: cartermp
 ms.author: phcart
 ms.date: 05/16/2016
 ms.topic: language-reference
-ms.prod: .net
-ms.technology: devlang-fsharp
+ms.prod: dotnet-fsharp
 ms.devlang: fsharp
-ms.assetid: a3dcc335-433b-4672-ac2d-ae6b11b816f3
-ms.openlocfilehash: 209bcca70318db59506011b1f2bb74a09bf3814a
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.openlocfilehash: 0d7ca996de89c44a5cfb9197c1b515741a2303df
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="abstract-classes"></a>Soyut sınıflar
 
@@ -62,10 +59,10 @@ Area of Circle: 78.539816
 ```
 
 ## <a name="see-also"></a>Ayrıca Bkz.
-[Sınıfları](classes.md)
+[Sınıflar](classes.md)
 
-[Üyeleri](members/index.md)
+[Üyeler](members/index.md)
 
-[Yöntemleri](members/methods.md)
+[Yöntemler](members/methods.md)
 
-[Özellikleri](members/Properties.md)
+[Özellikler](members/Properties.md)

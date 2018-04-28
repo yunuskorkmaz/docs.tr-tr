@@ -1,12 +1,13 @@
 ---
-title: "Veri Sözleşmesi Sürümü Oluşturma"
-ms.custom: 
+title: Veri Sözleşmesi Sürümü Oluşturma
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - csharp
@@ -16,16 +17,17 @@ helpviewer_keywords:
 - versioning [WCF]
 - data contracts [WCF], versioning
 ms.assetid: 4a0700cb-5f5f-4137-8705-3a3ecf06461f
-caps.latest.revision: "35"
+caps.latest.revision: 35
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: e9773725a0d4626a8488249ead6440ad67a2a14a
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: f232cb1cf98fe01aa0542c2a4b459fb7fc7b5089
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="data-contract-versioning"></a>Veri Sözleşmesi Sürümü Oluşturma
 Uygulamaları geliştikçe, aynı zamanda değiştirmeniz gerekebilir Hizmetleri kullanım verileri sözleşme. Bu konuda açıklanmaktadır sürüm veri sözleşmeleri nasıl. Bu konuda veri sözleşmesi sürümü oluşturma mekanizmaları açıklanmaktadır. Tam genel bakış ve düzenleyici sürüm oluşturma yönergeleri için bkz: [en iyi uygulamalar: veri sözleşmesi sürümü oluşturma](../../../../docs/framework/wcf/best-practices-data-contract-versioning.md).  
@@ -114,16 +116,16 @@ Uygulamaları geliştikçe, aynı zamanda değiştirmeniz gerekebilir Hizmetleri
   
  Değişikliklerin birçoğunu kabul olmasını bölünemez gerçekte şemaya katı bağlılığı gerekiyorsa sonu. Önceki örnekte, bir `CarV1` örneği yalnızca `Model` öğesi doğrulamak karşı `CarV2` şeması (her ikisi de olan `Model` ve `Horsepower`, ancak her ikisi de isteğe bağlı). Ancak, bu durumun tersi geçerli değildir: bir `CarV2` örneği karşı doğrulama başarısız olurdu `CarV1` şema.  
   
- Gidiş ayrıca bazı hususlar kapsar. [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)]"Şema hususlar" bölümünde [İleri uyumlu veri sözleşmeleri](../../../../docs/framework/wcf/feature-details/forward-compatible-data-contracts.md).  
+ Gidiş ayrıca bazı hususlar kapsar. Daha fazla bilgi için bkz: "Şema konuları" bölümünde [İleri uyumlu veri sözleşmeleri](../../../../docs/framework/wcf/feature-details/forward-compatible-data-contracts.md).  
   
 ### <a name="other-permitted-changes"></a>Diğer değişiklikler de izin verilir.  
- Uygulama <xref:System.Runtime.Serialization.IExtensibleDataObject> bölünemez değişikliği bir arabirimdir. Ancak, gidiş destek türü olan sürümden önceki sürümler için yok <xref:System.Runtime.Serialization.IExtensibleDataObject> uygulanmıştır. [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)][İleri uyumlu veri sözleşmeleri](../../../../docs/framework/wcf/feature-details/forward-compatible-data-contracts.md).  
+ Uygulama <xref:System.Runtime.Serialization.IExtensibleDataObject> bölünemez değişikliği bir arabirimdir. Ancak, gidiş destek türü olan sürümden önceki sürümler için yok <xref:System.Runtime.Serialization.IExtensibleDataObject> uygulanmıştır. Daha fazla bilgi için bkz: [İleri uyumlu veri sözleşmeleri](../../../../docs/framework/wcf/feature-details/forward-compatible-data-contracts.md).  
   
 ## <a name="enumerations"></a>Numaralandırmalar  
- Kesme ekleyerek veya kaldırarak bir numaralandırma üyesine farklıdır. Bir numaralandırma üyesine adının değiştirilmesi parçalamak, sözleşme adının eski sürüm ile aynı kullanarak tutulur sürece `EnumMemberAtttribute` özniteliği. [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)][Veri sözleşmelerinde Numaralandırma türleri](../../../../docs/framework/wcf/feature-details/enumeration-types-in-data-contracts.md).  
+ Kesme ekleyerek veya kaldırarak bir numaralandırma üyesine farklıdır. Bir numaralandırma üyesine adının değiştirilmesi parçalamak, sözleşme adının eski sürüm ile aynı kullanarak tutulur sürece `EnumMemberAtttribute` özniteliği. Daha fazla bilgi için bkz: [veri sözleşmelerinde Numaralandırma türleri](../../../../docs/framework/wcf/feature-details/enumeration-types-in-data-contracts.md).  
   
 ## <a name="collections"></a>Koleksiyonlar  
- Çoğu koleksiyonu değişiklikler bölünemez çoğu koleksiyon türü veri sözleşmesi modelinde birbirleri ile karşılıklı olduğundan. Ancak, özelleştirilmiş bir noncustomized koleksiyon yapma veya tersi önemli bir değişiklik olabilir. Ayrıca, koleksiyonun özelleştirme ayarlarını değiştirmek önemli bir değişiklik, diğer bir deyişle, kendi veri sözleşme adına ve ad alanı, yinelenen öğe adı, anahtar öğe adı ve değeri öğe adı değiştirme. [!INCLUDE[crabout](../../../../includes/crabout-md.md)]Koleksiyon özelleştirme bkz [veri sözleşmelerinde koleksiyon türleri](../../../../docs/framework/wcf/feature-details/collection-types-in-data-contracts.md).  
+ Çoğu koleksiyonu değişiklikler bölünemez çoğu koleksiyon türü veri sözleşmesi modelinde birbirleri ile karşılıklı olduğundan. Ancak, özelleştirilmiş bir noncustomized koleksiyon yapma veya tersi önemli bir değişiklik olabilir. Ayrıca, koleksiyonun özelleştirme ayarlarını değiştirmek önemli bir değişiklik, diğer bir deyişle, kendi veri sözleşme adına ve ad alanı, yinelenen öğe adı, anahtar öğe adı ve değeri öğe adı değiştirme. [!INCLUDE[crabout](../../../../includes/crabout-md.md)] Koleksiyon özelleştirme bkz [veri sözleşmelerinde koleksiyon türleri](../../../../docs/framework/wcf/feature-details/collection-types-in-data-contracts.md).  
 Doğal olarak, koleksiyon (örneğin, bir tamsayı listesinden dizeleri listesine değiştirme) içeriğinin veri sözleşmesi değiştirmek önemli bir değişiklik.  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  

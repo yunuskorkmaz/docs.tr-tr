@@ -1,23 +1,24 @@
 ---
-title: "Kalıcılık en iyi uygulamalar"
-ms.custom: 
+title: Kalıcılık en iyi uygulamalar
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 6974c5a4-1af8-4732-ab53-7d694608a3a0
-caps.latest.revision: "7"
+caps.latest.revision: 7
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 408257d9ec51e9d60cb899c16cbef3a26cdc609f
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: cfea5b8728774a4e788f3f0d866c6741d5b0bbe9
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="persistence-best-practices"></a>Kalıcılık en iyi uygulamalar
 Bu belgenin iş akışı tasarım ve iş akışı kalıcılığı için ilgili yapılandırma en iyi yöntemleri kapsar.  
@@ -31,7 +32,7 @@ Bu belgenin iş akışı tasarım ve iş akışı kalıcılığı için ilgili y
   
  İş akışınızı uzun bir süredir meşgul ise, iş akışı örneği, meşgul süresi boyunca düzenli olarak kalıcı öneririz. Bunu ekleyerek yapabilirsiniz <xref:System.Activities.Statements.Persist> iş akışı örneği meşgul tutan etkinlikler dizisini boyunca etkinlikler. Bu şekilde, uygulama etki alanı geri dönüştürme, ana bilgisayar hataları veya bilgisayar hatalarını meşgul dönem başlangıcı geri sisteme neden olmaz. Unutmayın, ekleme <xref:System.Activities.Statements.Persist> etkinlikler iş akışınız için bir performans düşmesine neden olabilir.  
   
- Windows Server App Fabric, yapılandırmayı ve kalıcılığı kullanımını büyük ölçüde basitleştirir. [!INCLUDE[crdefault](../../../includes/crdefault-md.md)][Windows Server App Fabric kalıcılığı](http://go.microsoft.com/fwlink/?LinkID=201200&clcid=0x409)  
+ Windows Server App Fabric, yapılandırmayı ve kalıcılığı kullanımını büyük ölçüde basitleştirir. Daha fazla bilgi için bkz: [Windows Server App Fabric kalıcılığı](http://go.microsoft.com/fwlink/?LinkID=201200&clcid=0x409)  
   
 ## <a name="configuration-of-scalability-parameters"></a>Ölçeklenebilirlik parametrelerinin yapılandırması  
  Ölçeklenebilirlik ve performans gereksinimlerini aşağıdaki parametreleri ayarlarını belirleyin:  

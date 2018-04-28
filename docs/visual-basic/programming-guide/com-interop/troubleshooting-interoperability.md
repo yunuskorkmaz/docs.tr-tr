@@ -26,11 +26,11 @@ ms.assetid: b324cc1e-b03c-4f39-aea6-6a6d5bfd0e37
 caps.latest.revision: 21
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: f3ff175a0f8d152febf2d50c294d401b12285fc7
-ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
-ms.translationtype: HT
+ms.openlocfilehash: 1fae8215543c50484dc5ea7fc24f292ba84e2699
+ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="troubleshooting-interoperability-visual-basic"></a>Birlikte Çalışabilirlik İle İlgili Sorun Giderme (Visual Basic)
 Ne zaman, çalışmanız COM ile yönetilen kod arasında [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)], bir veya daha fazla aşağıdaki ortak sorunları karşılaşabilirsiniz.  
@@ -107,7 +107,7 @@ Set db = DBEngine.OpenDatabase("C:\nwind.mdb")
  Özel durum nesnesi içeriğini inceleyerek hata açıklaması, HRESULT ve COM hatalarının kaynağını gibi bilgiler bulabilirsiniz.  
   
 ##  <a name="vbconinteroperabilitymarshalinganchor10"></a> ActiveX denetimi sorunları  
- Visual Basic 6.0 ile iş çoğu ActiveX denetimlerini sorun Visual Basic .NET ile birlikte çalışır. Ana kapsayıcı denetimleri veya görsel olarak diğer denetimleri içeren denetimler durumlardır. Bazı örnekler ile düzgün çalışmıyor eski denetimlerin [!INCLUDE[vsprvs](~/includes/vsprvs-md.md)] aşağıdaki gibidir:  
+ Visual Basic 6.0 ile iş çoğu ActiveX denetimlerini sorun Visual Basic .NET ile birlikte çalışır. Ana kapsayıcı denetimleri veya görsel olarak diğer denetimleri içeren denetimler durumlardır. Visual Studio ile düzgün çalışmıyor eski denetimleri bazı örnekleri şunlardır:  
   
 -   Microsoft Forms 2.0 çerçeve denetimi  
   
@@ -115,7 +115,7 @@ Set db = DBEngine.OpenDatabase("C:\nwind.mdb")
   
 -   Sheridan sekme denetimi  
   
- Desteklenmeyen ActiveX denetimi sorunları için yalnızca birkaç geçici çözümler vardır. Mevcut denetimleri geçirebilirsiniz [!INCLUDE[vsprvs](~/includes/vsprvs-md.md)] özgün kaynak kodunun sahipseniz. Aksi durumda, güncelleştirilmiş yazılım satıcıları ile denetleyebilirsiniz. NET uyumlu sürümlerini değiştirmek için denetimleri ActiveX denetimlerini desteklenmiyor.  
+ Desteklenmeyen ActiveX denetimi sorunları için yalnızca birkaç geçici çözümler vardır. Özgün kaynak kodunun sahipseniz Visual Studio için mevcut denetimleri geçirebilirsiniz. Aksi durumda, güncelleştirilmiş yazılım satıcıları ile denetleyebilirsiniz. NET uyumlu sürümlerini değiştirmek için denetimleri ActiveX denetimlerini desteklenmiyor.  
   
 ##  <a name="vbconinteroperabilitymarshalinganchor11"></a> Denetimleri ByRef geçirme ReadOnly özellikleri  
  Visual Basic .NET, geçirdiğinizde COM hataları gibi "Hata 0x800A017F CTL_E_SETNOTSUPPORTED" bazen başlatır `ReadOnly` bazı eski ActiveX denetimleri olarak özelliklerini `ByRef` diğer yordamlar için parametreler. Visual Basic 6.0 benzer yordam çağrıları hata yükseltmeyin ve değerine göre geçirilen gibi parametreleri kabul edilir. Bir özellik olmayan bir özellik değiştirmeye çalıştığınız Visual Basic .NET hata iletisi gösterir `Set` yordamı.  

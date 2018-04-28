@@ -1,24 +1,26 @@
 ---
-title: "Zaman Uyumsuz Bulma Örneği"
-ms.custom: 
+title: Zaman Uyumsuz Bulma Örneği
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 7a713a25-c1f4-42e1-8c4a-93d64ca45a3b
-caps.latest.revision: "15"
+caps.latest.revision: 15
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 4b0b21e9d75c0145c9bd3fa5edf13913cf43f461
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 1545791eceae6d4651ca5299a84623466e8b4976
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="asynchronous-find-sample"></a>Zaman Uyumsuz Bulma Örneği
 Bu örnek, bir istemci uygulaması zaman uyumsuz bulma işlemi kullanmayı gösterir.  
@@ -27,7 +29,7 @@ Bu örnek, bir istemci uygulaması zaman uyumsuz bulma işlemi kullanmayı göst
  Bu tasarım deseni aşağıdaki avantajı, istemci bulma isteği sonucunda bulunan uç noktaları zaman uyumsuz olarak bildirilir ' dir. Bunun nasıl çalıştığını görmek için Client.cs dosyasını açın. Not <xref:System.ServiceModel.Discovery.DiscoveryClient> nesnesi iki temsilciler olayı olarak işleyicilerinin sahiptir. Bir temsilci çağrılır bir <xref:System.ServiceModel.Discovery.DiscoveryClient.FindCompleted> olayı oluşturulur ve her zaman başka adlı bir <xref:System.ServiceModel.Discovery.DiscoveryClient.FindProgressChanged> olayı oluşturulur. Örnek nasıl uygulamanızda bu deseni kullanabilir gösterir.  
   
 > [!NOTE]
->  Bu örnek HTTP uç noktaları kullanır ve çalıştırmak için doğru URL ACL eklenmesi gerekir. [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)][HTTP ve HTTPS yapılandırma](../../../../docs/framework/wcf/feature-details/configuring-http-and-https.md). Aşağıdaki komutu yükseltilmiş ayrıcalık yürütme uygun ACL'ler eklemeniz gerekir. Komut olduğu gibi çalışmazsa şu bağımsız değişkenleri için kullanıcı adı ve etki alanı yerine isteyebilirsiniz. `netsh http add urlacl url=http://+:8000/ user=%DOMAIN%\%UserName%`  
+>  Bu örnek HTTP uç noktaları kullanır ve çalıştırmak için doğru URL ACL eklenmesi gerekir. Daha fazla bilgi için bkz: [yapılandırma HTTP ve HTTPS](../../../../docs/framework/wcf/feature-details/configuring-http-and-https.md). Aşağıdaki komutu yükseltilmiş ayrıcalık yürütme uygun ACL'ler eklemeniz gerekir. Komut olduğu gibi çalışmazsa şu bağımsız değişkenleri için kullanıcı adı ve etki alanı yerine isteyebilirsiniz. `netsh http add urlacl url=http://+:8000/ user=%DOMAIN%\%UserName%`  
   
 #### <a name="to-set-up-build-and-run-the-sample"></a>Ayarlamak için derleme ve örnek çalıştırın  
   

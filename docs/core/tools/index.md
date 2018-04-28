@@ -4,16 +4,16 @@ description: .NET Core komut satırı arabirimi (CLI) araçları ve özellikleri
 author: mairaw
 ms.author: mairaw
 ms.date: 08/14/2017
-ms.topic: article
-ms.prod: .net-core
+ms.topic: conceptual
+ms.prod: dotnet-core
 ms.technology: dotnet-cli
 ms.workload:
 - dotnetcore
-ms.openlocfilehash: d1bb4eb3b18fe08f38c2cf99a642afb516a797ff
-ms.sourcegitcommit: adcf9bdafeaa6bc243af7bf70b45f3df954f256a
+ms.openlocfilehash: 9d84858c800d50a99b2327f71212833f7160b1e1
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="net-core-command-line-interface-cli-tools"></a>.NET core komut satırı arabirimi (CLI) araçları
 
@@ -40,7 +40,7 @@ Aşağıdaki komutlar, varsayılan olarak yüklenir:
 * [restore](dotnet-restore.md)
 * [Derleme](dotnet-build.md)
 * [Yayımlama](dotnet-publish.md)
-* [run](dotnet-run.md)
+* [çalıştırma](dotnet-run.md)
 * [test etme](dotnet-test.md)
 * [vstest](dotnet-vstest.md)
 * [pack](dotnet-pack.md)
@@ -48,7 +48,7 @@ Aşağıdaki komutlar, varsayılan olarak yüklenir:
 * [Temizleme](dotnet-clean.md)
 * [sln](dotnet-sln.md)
 * [Yardım](dotnet-help.md)
-* [store](dotnet-store.md)
+* [Depolama](dotnet-store.md)
 
 **Proje değişikliği komutları**
 
@@ -66,7 +66,7 @@ Aşağıdaki komutlar, varsayılan olarak yüklenir:
 * [MSBuild](dotnet-msbuild.md)
 * [DotNet yükleme betiği](dotnet-install-script.md)
 
-# <a name="net-core-1xtabnetcore1x"></a>[.NET Core 1.x](#tab/netcore1x)
+# <a name="net-core-1xtabnetcore1x"></a>[.NET core 1.x](#tab/netcore1x)
 
 **Temel komutları**
 
@@ -74,7 +74,7 @@ Aşağıdaki komutlar, varsayılan olarak yüklenir:
 * [restore](dotnet-restore.md)
 * [Derleme](dotnet-build.md)
 * [Yayımlama](dotnet-publish.md)
-* [run](dotnet-run.md)
+* [çalıştırma](dotnet-run.md)
 * [test etme](dotnet-test.md)
 * [vstest](dotnet-vstest.md)
 * [pack](dotnet-pack.md)
@@ -114,7 +114,7 @@ dotnet build --output /build_output
 dotnet /build_output/my_app.dll
 ```
 
-# <a name="net-core-1xtabnetcore1x"></a>[.NET Core 1.x](#tab/netcore1x)
+# <a name="net-core-1xtabnetcore1x"></a>[.NET core 1.x](#tab/netcore1x)
 
 ```console
 dotnet new console
@@ -146,7 +146,7 @@ Komut satırında geçirdiğiniz bağımsız çağrılan komut için bağımsız
 
 Komut satırında geçirdiğiniz çağrılan komut seçenekleri seçeneklerdir. Örneğin, yürütülürken `dotnet publish --output /build_output`, `--output` seçeneği ve değerini için geçirilir `publish` komutu. 
 
-## <a name="migration-from-projectjson"></a>Migration from project.json
+## <a name="migration-from-projectjson"></a>Project.json geçiş
 
 Önizleme üretmek için tooling 2 kullandıysanız *project.json*-tabanlı projeler başvurun [dotnet geçirmek](dotnet-migrate.md) projeniz için MSBuild geçirme hakkında bilgi için konu /*.csproj*yayın araçları ile kullanım için. .NET Core Preview 2 araç sürümünden önce ya da el ile oluşturulan projeleri yer alan yönergeleri izleyerek proje güncelleştirme [.NET Core CLI (project.json) DNX geçiş](../migration/from-dnx.md) ve sonra da `dotnet migrate` veya doğrudan yükseltme projelerinizi.
 

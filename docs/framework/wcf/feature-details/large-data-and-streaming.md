@@ -1,26 +1,26 @@
 ---
-title: "Büyük Veriler ve Akış Yapma"
-ms.custom: 
+title: Büyük Veriler ve Akış Yapma
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - dotnet-clr
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: ab2851f5-966b-4549-80ab-c94c5c0502d2
-caps.latest.revision: 
+caps.latest.revision: 27
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: e9551fcf4f302be899dcee8737b3bcfad15f1210
-ms.sourcegitcommit: cf22b29db780e532e1090c6e755aa52d28273fa6
+ms.openlocfilehash: b37af67a3deeed4e55939ff1c1baf73752233e94
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/01/2018
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="large-data-and-streaming"></a>Büyük Veriler ve Akış Yapma
 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] bir XML tabanlı iletişim altyapısıdır. XML verilerini yaygın olarak tanımlanan standart metin biçiminde kodlanmış çünkü [XML 1.0 belirtimi](http://go.microsoft.com/fwlink/?LinkId=94838), bağlı sistemler geliştiricileri ve mimarlar genellikle açısından gönderilen iletiler kablo ayak izini (veya boyut) hakkında arasında Ağ ve metin tabanlı XML kodlaması, ikili veri verimli aktarımı için özel zorluklar doğurur.  
@@ -41,7 +41,7 @@ ms.lasthandoff: 02/01/2018
   
  Sonuç olarak, metin veya ikili arasında karar ikili iletileri her zaman XML metin iletileri küçük olduğunu varsayarak olarak oldukça olarak kolay değildir.  
   
- XML metin iletileri Temizle avantajlarından standartlara dayalı ve birlikte çalışabilirlik seçeneklerini ve platform desteği İlkler seçimi teklif ' dir. [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)]Bu konunun devamındaki "Kodlamalar" bölümü.  
+ XML metin iletileri Temizle avantajlarından standartlara dayalı ve birlikte çalışabilirlik seçeneklerini ve platform desteği İlkler seçimi teklif ' dir. Daha fazla bilgi için bu konunun devamındaki "Kodlamalar" bölümüne bakın.  
   
 ### <a name="binary-content"></a>İkili içerik  
  Bir alan ikili kodlamaları nerede metin tabanlı Kodlamalar elde edilen ileti boyutu açısından üstün olan resim, video, ses klipleri veya başka bir form hizmetleri arasında alınıp opak, ikili veri gibi büyük ikili veri öğeleri ve bunların Tüketiciler. Bu veri türlerini XML metni sığması için ortak Base64 kodlaması kullanarak bunları kodlanacak yaklaşımdır.  
@@ -52,7 +52,7 @@ ms.lasthandoff: 02/01/2018
   
  Böylece ilgili MIME bölümlerine bakın özel öğesi etiketleri ikili veri içerdiği ileti özgün öğeleri gerçekleşmesi MTOM SOAP iletisi beklemediğiniz kodlanmış sürümünden değiştirilir. Sonuç olarak, SOAP iletisi ile gönderilen MIME bölümleri göstererek ikili içerik başvuruyor, ancak Aksi durumda yalnızca XML metin veri taşır. Bu model yakından tanınmış SMTP modeliyle hizalanır çünkü yoktur araç kodlamak ve son derece birlikte çalışabilir bir seçim hangi kolaylaştırır MTOM iletileri birçok platformda kod çözme için desteği geniş.  
   
- Böylece MTOM kullanmanın yararları, yalnızca bir ikili veri öğesi boyutu yaklaşık 1 KB aştığında görülür yine de, Base64 olarak MTOM ayrıca MIME biçimi için gereken bazı ek ile birlikte gönderilir. Ek yükü nedeniyle, iletileri MTOM kodlu ikili yükü bu eşiğin altında kalırsa ikili veriler için Base64 kodlaması kullanan iletileri daha büyük olabilir. [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)]Bu konunun devamındaki "Kodlamalar" bölümü.  
+ Böylece MTOM kullanmanın yararları, yalnızca bir ikili veri öğesi boyutu yaklaşık 1 KB aştığında görülür yine de, Base64 olarak MTOM ayrıca MIME biçimi için gereken bazı ek ile birlikte gönderilir. Ek yükü nedeniyle, iletileri MTOM kodlu ikili yükü bu eşiğin altında kalırsa ikili veriler için Base64 kodlaması kullanan iletileri daha büyük olabilir. Daha fazla bilgi için bu konunun devamındaki "Kodlamalar" bölümüne bakın.  
   
 ### <a name="large-data-content"></a>Büyük veri içeriği  
  Kablo Ayak izi kenara, yukarıda açıklanan 500 MB yükü konumundaki bir harika yerel zorluk hizmet ve istemci için de oluşturur. Varsayılan olarak, [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] iletileri işleyen *arabellekli modu*. Bu, bir iletinin tüm içeriği bellekte mevcut gönderilmeden önce veya alındıktan sonra olduğu anlamına gelir. Çoğu senaryo için iyi bir stratejisi ve dijital imzalar ve güvenilir teslim gibi Mesajlaşma özellikleri için gerekli olmakla birlikte, büyük iletileri bir sistem kaynaklarının tüketebileceği.  
@@ -67,11 +67,11 @@ ms.lasthandoff: 02/01/2018
   
 -   Aktarım başlatıldığında tamamen içinde kullanılamaz.  
   
- Bu kısıtlamaların yok verileri için daha büyük bir ileti bir oturumun kapsamı içinde iletilerinin dizileri göndermek genellikle daha iyi olur. [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)]Bu konunun devamındaki "Veri akışı" bölümü.  
+ Bu kısıtlamaların yok verileri için daha büyük bir ileti bir oturumun kapsamı içinde iletilerinin dizileri göndermek genellikle daha iyi olur. Daha fazla bilgi için bu konunun devamındaki "Veri akışı" bölümüne bakın.  
   
  Büyük miktarlarda verinin gönderirken ayarlamanız gerekir `maxAllowedContentLength` IIS ayarını (daha fazla bilgi için bkz: [yapılandırma IIS istek sınırları](http://go.microsoft.com/fwlink/?LinkId=253165)) ve `maxReceivedMessageSize` ayarı bağlama (örneğin [ System.ServiceModel.BasicHttpBinding.MaxReceivedMessageSize](xref:System.ServiceModel.HttpBindingBase.MaxReceivedMessageSize%2A) veya <xref:System.ServiceModel.NetTcpBinding.MaxReceivedMessageSize%2A>). `maxAllowedContentLength` 28.6 M özelliği varsayılanlara ve `maxReceivedMessageSize` özellik varsayılanlarını 64 KB.  
   
-## <a name="encodings"></a>Encodings  
+## <a name="encodings"></a>Kodlamaları  
  Bir *kodlama* kablo iletileri sunmak nasıl hakkında kurallar kümesini tanımlar. Bir *Kodlayıcı* böyle bir kodlama uygulayan ve dönüş için Gönderen tarafında sorumlu olduğu bir <xref:System.ServiceModel.Channels.Message> bellek içi iletisine bayt akışı veya ağ üzerinden gönderilen bayt arabellek. Alıcı tarafında bir bayt dizisi bir bellek içi iletisine Kodlayıcı etkinleştirir.  
   
  [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] üç kodlayıcılar içerir ve gerekirse, yazma ve kendi kodlayıcılara takın olanak sağlar.  
@@ -246,7 +246,7 @@ public class UploadStreamMessage
   
  Bu nedenle, en büyük gelen ileti boyutu sınırlama, bu durumda yeterli değil. `MaxBufferSize` Özelliği bellek sınırlamak için gereklidir, [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] arabellek. Bu güvenli bir değere ayarlayın (veya varsayılan değer olarak saklamak) önemlidir akış olduğunda. Örneğin, hizmetiniz alması gerekir varsayalım en fazla 4 GB boyutunda dosyaları ve bunları yerel diskte depolar. Ayrıca, bellek, yalnızca 64 KB veri aynı anda arabellek şekilde kısıtlıdır varsayalım. Sonra da ayarlamanız gerekir `MaxReceivedMessageSize` 4 GB ve `MaxBufferSize` 64 KB. Ayrıca, hizmet uygulamanızda 64 KB öbek gelen akışta yalnızca okuma ve önceki bırakıldı önce sonraki öbek okunmaz sağlamanız gerekir. diske yazılan ve bellekten atıldı.  
   
- Gerçekleştirilir arabelleğe alma Bu kota yalnızca sınırlar anlaşılması önemlidir [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] ve tüm kendi hizmet veya istemci uygulamasında bunu arabelleğe karşı koruyamaz. [!INCLUDE[crabout](../../../../includes/crabout-md.md)]ek güvenlik konuları Bkz [veriler için güvenlik konuları](../../../../docs/framework/wcf/feature-details/security-considerations-for-data.md).  
+ Gerçekleştirilir arabelleğe alma Bu kota yalnızca sınırlar anlaşılması önemlidir [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] ve tüm kendi hizmet veya istemci uygulamasında bunu arabelleğe karşı koruyamaz. [!INCLUDE[crabout](../../../../includes/crabout-md.md)] ek güvenlik konuları Bkz [veriler için güvenlik konuları](../../../../docs/framework/wcf/feature-details/security-considerations-for-data.md).  
   
 > [!NOTE]
 >  Arabelleğe alınan veya akış aktarımları kullanmaya karar, uç noktanın yerel bir karardır. HTTP taşımaları için bir bağlantı üzerinden veya proxy sunucuları ve diğer aracılar için aktarım modunu dağıtılmaz. Aktarım modunu ayarlama hizmet arabirimi açıklamasında yansıtılmaz. Oluşturma sonrasında bir [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] istemci bir hizmet ile akış aktarımları modu ayarlamak için kullanılması hedeflenen Hizmetleri için yapılandırma dosyasını düzenlemeniz gerekir. TCP ve adlandırılmış kanal aktarımlar, aktarım modu İlkesi onaylama yayılır.  

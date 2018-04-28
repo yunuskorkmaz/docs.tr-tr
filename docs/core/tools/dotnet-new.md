@@ -4,16 +4,16 @@ description: Dotnet yeni komut belirtilen şablona dayalı yeni .NET Core projel
 author: mairaw
 ms.author: mairaw
 ms.date: 03/26/2018
-ms.topic: article
-ms.prod: .net-core
+ms.topic: conceptual
+ms.prod: dotnet-core
 ms.technology: dotnet-cli
 ms.workload:
 - dotnetcore
-ms.openlocfilehash: 4432587c0015c353a34816eee4206dc53cdefba9
-ms.sourcegitcommit: b750a8e3979749b214e7e10c82efb0a0524dfcb1
+ms.openlocfilehash: ab8d6f779a428aab7bd2739105dcf08b51d14ab9
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/09/2018
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="dotnet-new"></a>DotNet yeni
 
@@ -25,13 +25,13 @@ ms.lasthandoff: 04/09/2018
 
 ## <a name="synopsis"></a>Özet
 
-# <a name="net-core-20tabnetcore2x"></a>[.NET Core 2.0](#tab/netcore2x)
+# <a name="net-core-20tabnetcore2x"></a>[.NET core 2.0](#tab/netcore2x)
 ```
 dotnet new <TEMPLATE> [--force] [-i|--install] [-lang|--language] [-n|--name] [-o|--output] [-u|--uninstall] [Template options]
 dotnet new <TEMPLATE> [-l|--list] [--type]
 dotnet new [-h|--help]
 ```
-# <a name="net-core-1xtabnetcore1x"></a>[.NET Core 1.x](#tab/netcore1x)
+# <a name="net-core-1xtabnetcore1x"></a>[.NET core 1.x](#tab/netcore1x)
 ```
 dotnet new <TEMPLATE> [-lang|--language] [-n|--name] [-o|--output] [-all|--show-all] [-h|--help] [Template options]
 dotnet new <TEMPLATE> [-l|--list]
@@ -52,7 +52,7 @@ Komut çağrıları [şablon motoru](https://github.com/dotnet/templating) yapı
 
 Komutu çağrıldığında örneği oluşturmak için şablon. Her bir şablon geçirebilirsiniz belirli seçenekleri olabilir. Daha fazla bilgi için bkz: [şablon seçenekleri](#template-options).
 
-# <a name="net-core-20tabnetcore2x"></a>[.NET Core 2.0](#tab/netcore2x)
+# <a name="net-core-20tabnetcore2x"></a>[.NET core 2.0](#tab/netcore2x)
 
 Komut şablonlarının varsayılan listesini içerir. Kullanım `dotnet new -l` kullanılabilir şablonların listesini elde edilir. Aşağıdaki tabloda .NET Core 2.0 SDK ile birlikte önceden yüklenmiş olarak gelen şablonları gösterir. Şablon için varsayılan dili köşeli ayraçlar içinde gösterilmiştir.
 
@@ -61,15 +61,15 @@ Komut şablonlarının varsayılan listesini içerir. Kullanım `dotnet new -l` 
 | Konsol uygulaması                          | `console`     | [C#], F#, VB  |
 | Sınıf kitaplığı                                | `classlib`    | [C#], F#, VB  |
 | Birim testi projesi                            | `mstest`      | [C#], F#, VB  |
-| xUnit test project                           | `xunit`       | [C#], F#, VB  |
-| ASP.NET Core boş                           | `web`         | [C#], F#      |
-| ASP.NET Core Web uygulaması (Model-View-Controller) | `mvc`         | [C#], F#      |
+| xUnit test projesi                           | `xunit`       | [C#], F#, VB  |
+| ASP.NET Core boş                           | `web`         | [C#] F #      |
+| ASP.NET Core Web uygulaması (Model-View-Controller) | `mvc`         | [C#] F #      |
 | ASP.NET Core Web uygulaması                         | `razor`       | [C#]          |
 | ASP.NET Core Açısal ile                    | `angular`     | [C#]          |
 | ASP.NET Core React.js ile                   | `react`       | [C#]          |
 | ASP.NET Core React.js ve Redux         | `reactredux`  | [C#]          |
-| ASP.NET Core Web API                         | `webapi`      | [C#], F#      |
-| global.json file                             | `globaljson`  |               |
+| ASP.NET Core Web API'si                         | `webapi`      | [C#] F #      |
+| Global.JSON dosyası                             | `globaljson`  |               |
 | Nuget yapılandırma                                 | `nugetconfig` |               |
 | Web yapılandırma                                   | `webconfig`   |               |
 | Çözüm dosyası                                | `sln`         |               |
@@ -77,19 +77,19 @@ Komut şablonlarının varsayılan listesini içerir. Kullanım `dotnet new -l` 
 | MVC ViewImports                              | `viewimports` |               |
 | MVC ViewStart                                | `viewstart`   |               |
 
-# <a name="net-core-1xtabnetcore1x"></a>[.NET Core 1.x](#tab/netcore1x)
+# <a name="net-core-1xtabnetcore1x"></a>[.NET core 1.x](#tab/netcore1x)
 
 Komut şablonlarının varsayılan listesini içerir. Kullanım `dotnet new -all` kullanılabilir şablonların listesini elde edilir. .NET Core ile önceden yüklenmiş olarak gelen şablonları aşağıdaki tabloda gösterilmektedir 1.x SDK. Şablon için varsayılan dili köşeli ayraçlar içinde gösterilmiştir.
 
 |Şablon açıklaması  | Şablon adı | Diller |
 |----------------------|---------------|-----------|
-| Konsol uygulaması  | `console`     | [C#], F#  |
-| Sınıf kitaplığı        | `classlib`    | [C#], F#  |
-| Birim testi projesi    | `mstest`      | [C#], F#  |
-| xUnit test project   | `xunit`       | [C#], F#  |
+| Konsol uygulaması  | `console`     | [C#] F #  |
+| Sınıf kitaplığı        | `classlib`    | [C#] F #  |
+| Birim testi projesi    | `mstest`      | [C#] F #  |
+| xUnit test projesi   | `xunit`       | [C#] F #  |
 | ASP.NET Core boş   | `web`         | [C#]      |
-| ASP.NET Core Web uygulaması | `mvc`         | [C#], F#  |
-| ASP.NET Core Web API | `webapi`      | [C#]      |
+| ASP.NET Core Web uygulaması | `mvc`         | [C#] F #  |
+| ASP.NET Core Web API'si | `webapi`      | [C#]      |
 | Nuget yapılandırma         | `nugetconfig` |           |
 | Web yapılandırma           | `webconfig`   |           |
 | Çözüm dosyası        | `sln`         |           |
@@ -98,7 +98,7 @@ Komut şablonlarının varsayılan listesini içerir. Kullanım `dotnet new -all
 
 ## <a name="options"></a>Seçenekler
 
-# <a name="net-core-20tabnetcore2x"></a>[.NET Core 2.0](#tab/netcore2x)
+# <a name="net-core-20tabnetcore2x"></a>[.NET core 2.0](#tab/netcore2x)
 
 `--force`
 
@@ -145,7 +145,7 @@ Bir kaynak veya şablon paketini kaldırır `PATH` veya `NUGET_ID` sağlanan.
 > Bir şablon kullanarak kaldırmak için bir `PATH`, yolun tam olarak nitelemek gerekir. Örneğin, *C:/Users/\<kullanıcı > /Documents/Templates/GarciaSoftware.ConsoleTemplate.CSharp* çalışır, ancak *./GarciaSoftware.ConsoleTemplate.CSharp* içeren gelen Klasör almayacak.
 > Ayrıca, şablonu yoldaki son sonlandırma dizin eğik çizgi eklemeyin.
 
-# <a name="net-core-1xtabnetcore1x"></a>[.NET Core 1.x](#tab/netcore1x)
+# <a name="net-core-1xtabnetcore1x"></a>[.NET core 1.x](#tab/netcore1x)
 
 `-all|--show-all`
 
@@ -180,19 +180,19 @@ Oluşturulan çıktı yerleştirileceği konum. Geçerli dizin varsayılandır.
 
 Her proje şablonu ek seçenekleri olabilir. Çekirdek şablonları aşağıdaki ek seçeneklere sahip olursunuz:
 
-# <a name="net-core-20tabnetcore2x"></a>[.NET Core 2.0](#tab/netcore2x)
+# <a name="net-core-20tabnetcore2x"></a>[.NET core 2.0](#tab/netcore2x)
 
 **konsolunda, Açısal, tepki, reactredux**
 
   `--no-restore` -Proje oluşturma sırasında örtük bir geri yükleme yapın değil.
 
-**classlib**
+**ClassLib**
 
 `-f|--framework <FRAMEWORK>` -Belirtir [framework](../../standard/frameworks.md) hedef. Değerler: `netcoreapp2.0` .NET çekirdek sınıf kitaplığı oluşturmak için veya `netstandard2.0` .NET standart sınıf kitaplığı oluşturmak için. Varsayılan değer `netstandard2.0` şeklindedir.
 
 `--no-restore` -Proje oluşturma sırasında örtük bir geri yükleme yapın değil.
 
-**mstest, xunit**
+**mstest'i, xunit**
 
 `-p|--enable-pack` -Proje kullanma paketleme sağlar [dotnet paketi](dotnet-pack.md).
 
@@ -202,13 +202,13 @@ Her proje şablonu ek seçenekleri olabilir. Çekirdek şablonları aşağıdaki
 
 `--sdk-version <VERSION_NUMBER>` -Kullanmak için .NET Core SDK sürümünü belirtir *global.json* dosya.
 
-**web**
+**Web**
 
 `--use-launch-settings` -İçeren *launchSettings.json* oluşturulan şablon çıkışı.
 
 `--no-restore` -Proje oluşturma sırasında örtük bir geri yükleme yapın değil.
 
-**webapi**
+**webapı**
 
 `-au|--auth <AUTHENTICATION_TYPE>` -Kullanılacak kimlik doğrulama türü. Olası değerler şunlardır:
 
@@ -237,7 +237,7 @@ Her proje şablonu ek seçenekleri olabilir. Çekirdek şablonları aşağıdaki
 
 `--no-restore` -Proje oluşturma sırasında örtük bir geri yükleme yapın değil.
 
-**mvc, razor**
+**MVC, razor**
 
 `-au|--auth <AUTHENTICATION_TYPE>` -Kullanılacak kimlik doğrulama türü. Olası değerler şunlardır:
 
@@ -286,13 +286,13 @@ Her proje şablonu ek seçenekleri olabilir. Çekirdek şablonları aşağıdaki
 
 `-na|--namespace <NAMESPACE_NAME>`-Namespace üretilen kod için. Varsayılan değer `MyApp.Namespace` şeklindedir.
 
-# <a name="net-core-1xtabnetcore1x"></a>[.NET Core 1.x](#tab/netcore1x)
+# <a name="net-core-1xtabnetcore1x"></a>[.NET core 1.x](#tab/netcore1x)
 
 **Konsolu, xunit, mstest'i, web, webapı**
 
 `-f|--framework` -Belirtir [framework](../../standard/frameworks.md) hedef. Değerler: `netcoreapp1.0` veya `netcoreapp1.1`. Varsayılan değer `netcoreapp1.0` şeklindedir.
 
-**classlib**
+**ClassLib**
 
 `-f|--framework` -Belirtir [framework](../../standard/frameworks.md) hedef. Değerler: `netcoreapp1.0`, `netcoreapp1.1`, veya `netstandard1.0` için `netstandard1.6`. Varsayılan değer `netstandard1.4` şeklindedir.
 

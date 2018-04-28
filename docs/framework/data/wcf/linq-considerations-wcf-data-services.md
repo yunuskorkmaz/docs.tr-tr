@@ -23,11 +23,11 @@ ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: df596093333aa35b89f8d7ed36f817a457e48fda
-ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
+ms.openlocfilehash: c20817e791ae95efecd00a41a44c14eedec017d4
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="linq-considerations-wcf-data-services"></a>LINQ konuları (WCF Veri Hizmetleri)
 Bu konuda hangi LINQ sorgularını oluşur ve kullanırken yürütülen yolu hakkında bilgi verilmektedir [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] istemci ve uygulayan bir veri hizmeti sorgulamak için LINQ kullanma sınırlamaları [!INCLUDE[ssODataFull](../../../../includes/ssodatafull-md.md)]. [!INCLUDE[crabout](../../../../includes/crabout-md.md)] oluşturma ve sorguları yürütme bir [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)]-veri hizmeti temel bkz [veri hizmeti sorgulanırken](../../../../docs/framework/data/wcf/querying-the-data-service-wcf-data-services.md).  
@@ -36,7 +36,7 @@ Bu konuda hangi LINQ sorgularını oluşur ve kullanırken yürütülen yolu hak
  LINQ sorguları uygulayan nesneler koleksiyonunu oluşturan olanak tanır <xref:System.Collections.Generic.IEnumerable%601>. Her iki **hizmet Başvurusu Ekle** Visual Studio iletişim kutusunda ve DataSvcUtil.exe aracı bir gösterimini üretmek için kullanılan bir [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] öğesinden devralınan bir varlık kapsayıcı sınıfı olarak hizmet <xref:System.Data.Services.Client.DataServiceContext>, yanı akışlarında döndürülen varlıklar temsil eden nesneler. Bu araçları ayrıca akışları hizmet tarafından sunulan koleksiyonlar için varlık kapsayıcı sınıfındaki özellikleri oluşturur. Dönüş veri hizmeti yalıtan sınıfının bu özelliklerin her biri bir <xref:System.Data.Services.Client.DataServiceQuery%601>. Çünkü <xref:System.Data.Services.Client.DataServiceQuery%601> uygulayan sınıf <xref:System.Linq.IQueryable%601> LINQ tarafından tanımlanan arabirimi istemci kitaplığı tarafından bir sorgu isteği veri hizmetine gönderilen URI içine çevrilen veri hizmeti tarafından sunulan akışları bir LINQ Sorgu oluşturma yürütme.  
   
 > [!IMPORTANT]
->  LINQ sözdiziminde ifade sorguları kümesi tarafından kullanılan URI sözdizimi etkin olandan daha geniş [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] Veri Hizmetleri. A <xref:System.NotSupportedException> hedef veri hizmetindeki bir URI sorgu eşlenemiyor tetiklenir. [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)] [desteklenmeyen LINQ yöntemleri](../../../../docs/framework/data/wcf/linq-considerations-wcf-data-services.md#unsupportedMethods) bu konuda.  
+>  LINQ sözdiziminde ifade sorguları kümesi tarafından kullanılan URI sözdizimi etkin olandan daha geniş [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] Veri Hizmetleri. A <xref:System.NotSupportedException> hedef veri hizmetindeki bir URI sorgu eşlenemiyor tetiklenir. Daha fazla bilgi için bkz: [desteklenmeyen LINQ yöntemleri](../../../../docs/framework/data/wcf/linq-considerations-wcf-data-services.md#unsupportedMethods) bu konuda.  
   
  Aşağıdaki örnek döndüren bir LINQ Sorgu olduğu `Orders` birden fazla $30 bir nakliye maliyeti ve en son sevk tarihten başlayarak sonuçları sevkiyat tarihine göre sıralar:  
   

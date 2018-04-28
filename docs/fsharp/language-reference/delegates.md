@@ -1,20 +1,17 @@
 ---
 title: Temsilciler (F#)
-description: "F # temsilciler çalışmak öğrenin."
-keywords: "Visual f #, f # işlevsel programlama"
+description: 'F # temsilciler çalışmak öğrenin.'
 author: cartermp
 ms.author: phcart
 ms.date: 05/16/2016
 ms.topic: language-reference
-ms.prod: .net
-ms.technology: devlang-fsharp
+ms.prod: dotnet-fsharp
 ms.devlang: fsharp
-ms.assetid: 719948a3-83ba-4618-82d6-a22945c3f4b0
-ms.openlocfilehash: c929a342ab4c5098062417691a99cee3b007d2d2
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.openlocfilehash: 56520cc631d889f390a7d4300be1cb3185306be9
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="delegates"></a>Temsilciler
 
@@ -52,8 +49,8 @@ ccccc
 ```
 
 ## <a name="see-also"></a>Ayrıca Bkz.
-[F # dili başvurusu](index.md)
+[F# Dili Başvurusu](index.md)
 
-[Parametreler ve bağımsız değişkenler](parameters-and-arguments.md)
+[Parametreler ve Bağımsız Değişkenler](parameters-and-arguments.md)
 
-[Olayları](members/events.md)
+[Olaylar](members/events.md)

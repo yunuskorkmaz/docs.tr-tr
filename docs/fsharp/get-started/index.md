@@ -1,20 +1,17 @@
 ---
 title: 'F # kullanmaya Başlarken'
 description: 'F # .NET dilinde programlama kullanmaya başlayacağınızı öğrenin.'
-keywords: 'Visual f #, f #, işlev, .NET, .NET Core programlama'
 author: cartermp
 ms.author: phcart
 ms.date: 09/06/2016
-ms.topic: article
-ms.prod: .net
-ms.technology: devlang-fsharp
+ms.topic: conceptual
+ms.prod: dotnet-fsharp
 ms.devlang: fsharp
-ms.assetid: 615db1ec-6ef3-4de2-bae6-4586affa9771
-ms.openlocfilehash: 34e476054e8dbc6c41f3e9cee733e094a5f4e24e
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.openlocfilehash: 6aebe56ef942b8341b172227684f12dc029bf7d9
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="getting-started-with-f"></a>F # kullanmaya Başlarken #
 

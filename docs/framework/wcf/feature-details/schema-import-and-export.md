@@ -1,12 +1,13 @@
 ---
-title: "Şema İçeri ve Dışarı Aktarma"
-ms.custom: 
+title: Şema İçeri ve Dışarı Aktarma
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - csharp
@@ -16,19 +17,20 @@ helpviewer_keywords:
 - XsdDataContractExporter class
 - XsdDataContractImporter class
 ms.assetid: 0da32b50-ccd9-463a-844c-7fe803d3bf44
-caps.latest.revision: "14"
+caps.latest.revision: 14
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 79ca0be932f473c99f8e9aeb64635e4bcd4397bb
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 8489c0bf20d3d62501db269c5a72de657bcbbc97
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="schema-import-and-export"></a>Şema İçeri ve Dışarı Aktarma
-[!INCLUDE[indigo1](../../../../includes/indigo1-md.md)]Yeni bir seri hale getirme altyapısı içeren <xref:System.Runtime.Serialization.DataContractSerializer>. `DataContractSerializer` Arasında çevirir [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] nesneleri ve XML (her iki yönde). Seri hale getirici kendisini yanı sıra [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] ilişkili şema alma ve şema verme mekanizmaları içerir. *Şema* seri hale getirici üreten veya seri durumdan çıkarıcının erişebileceği XML şeklini resmi, kesin ve makine tarafından okunabilir açıklamasıdır. [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]World Wide Web Konsorsiyumu (W3C) XML Şeması Tanım Dili (XSD) çok sayıda üçüncü taraf platformlarıyla yaygın olarak çalışabilir, şema gösterimi olarak kullanır.  
+[!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] Yeni bir seri hale getirme altyapısı içeren <xref:System.Runtime.Serialization.DataContractSerializer>. `DataContractSerializer` Arasında çevirir [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] nesneleri ve XML (her iki yönde). Seri hale getirici kendisini yanı sıra [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] ilişkili şema alma ve şema verme mekanizmaları içerir. *Şema* seri hale getirici üreten veya seri durumdan çıkarıcının erişebileceği XML şeklini resmi, kesin ve makine tarafından okunabilir açıklamasıdır. [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] World Wide Web Konsorsiyumu (W3C) XML Şeması Tanım Dili (XSD) çok sayıda üçüncü taraf platformlarıyla yaygın olarak çalışabilir, şema gösterimi olarak kullanır.  
   
  Şema alma bileşen <xref:System.Runtime.Serialization.XsdDataContractImporter>, bir XSD şema belgesi alır ve oluşturur [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] sağlayacak şekilde serileştirilmiş forms verilen şemaya karşılık gelen sınıfları (normalde veri sözleşmesi sınıflar).  
   
@@ -44,7 +46,7 @@ ms.lasthandoff: 12/22/2017
   
  Oluşturulan tür birkaç veri sözleşmesi en iyi uygulama izlediğini unutmayın (bulunan [en iyi uygulamalar: veri sözleşmesi sürümü oluşturma](../../../../docs/framework/wcf/best-practices-data-contract-versioning.md)):  
   
--   Tür uygular <xref:System.Runtime.Serialization.IExtensibleDataObject> arabirimi. [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)][İleri uyumlu veri sözleşmeleri](../../../../docs/framework/wcf/feature-details/forward-compatible-data-contracts.md).  
+-   Tür uygular <xref:System.Runtime.Serialization.IExtensibleDataObject> arabirimi. Daha fazla bilgi için bkz: [İleri uyumlu veri sözleşmeleri](../../../../docs/framework/wcf/feature-details/forward-compatible-data-contracts.md).  
   
 -   Veri üyeleri özel alanlar sarmalamak ortak özellikleri olarak uygulanır.  
   
@@ -62,13 +64,13 @@ ms.lasthandoff: 12/22/2017
   
  [!code-xml[c_SchemaImportExport#9](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_schemaimportexport/common/source.config#9)]  
   
- [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)][Veri sözleşmesi şema başvurusu](../../../../docs/framework/wcf/feature-details/data-contract-schema-reference.md). Bir şema veri sözleşmesi kurallarına uymuyor farklı serileştirme motoruna kullanın. Örneğin, <xref:System.Xml.Serialization.XmlSerializer> kendi ayrı şema alma mekanizması kullanır. Ayrıca, desteklenen şema aralığını genişletilmiş olarak özel alma modu yoktur. [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)]bölüm oluşturma hakkında <xref:System.Xml.Serialization.IXmlSerializable> türlerini [oluşturmak sınıfları içeri aktarma şemaya](../../../../docs/framework/wcf/feature-details/importing-schema-to-generate-classes.md).  
+ Daha fazla bilgi için bkz: [veri sözleşmesi şema başvurusu](../../../../docs/framework/wcf/feature-details/data-contract-schema-reference.md). Bir şema veri sözleşmesi kurallarına uymuyor farklı serileştirme motoruna kullanın. Örneğin, <xref:System.Xml.Serialization.XmlSerializer> kendi ayrı şema alma mekanizması kullanır. Ayrıca, desteklenen şema aralığını genişletilmiş olarak özel alma modu yoktur. Bölüm oluşturma hakkında daha fazla bilgi için bkz <xref:System.Xml.Serialization.IXmlSerializable> türlerini [oluşturmak sınıfları içeri aktarma şemaya](../../../../docs/framework/wcf/feature-details/importing-schema-to-generate-classes.md).  
   
- `XsdDataContractExporter` Destekler [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] ile seri hale getirilebilir türler `DataContractSerializer`. [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)][Veri sözleşmesi seri hale getirici tarafından desteklenen türleri](../../../../docs/framework/wcf/feature-details/types-supported-by-the-data-contract-serializer.md). Bu şema kullanılarak oluşturulan Not `XsdDataContractExporter` normalde geçerli veriler, `XsdDataContractImporter` kullanabilirsiniz (sürece <xref:System.Xml.Serialization.XmlSchemaProviderAttribute> şema özelleştirmek için kullanılan).  
+ `XsdDataContractExporter` Destekler [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] ile seri hale getirilebilir türler `DataContractSerializer`. Daha fazla bilgi için bkz: [veri sözleşmesi seri hale getirici tarafından desteklenen türleri](../../../../docs/framework/wcf/feature-details/types-supported-by-the-data-contract-serializer.md). Bu şema kullanılarak oluşturulan Not `XsdDataContractExporter` normalde geçerli veriler, `XsdDataContractImporter` kullanabilirsiniz (sürece <xref:System.Xml.Serialization.XmlSchemaProviderAttribute> şema özelleştirmek için kullanılan).  
   
- [!INCLUDE[crabout](../../../../includes/crabout-md.md)]kullanarak <xref:System.Runtime.Serialization.XsdDataContractImporter>, bkz: [oluşturmak sınıfları içeri aktarma şemaya](../../../../docs/framework/wcf/feature-details/importing-schema-to-generate-classes.md).  
+ [!INCLUDE[crabout](../../../../includes/crabout-md.md)] kullanarak <xref:System.Runtime.Serialization.XsdDataContractImporter>, bkz: [oluşturmak sınıfları içeri aktarma şemaya](../../../../docs/framework/wcf/feature-details/importing-schema-to-generate-classes.md).  
   
- [!INCLUDE[crabout](../../../../includes/crabout-md.md)]kullanarak <xref:System.Runtime.Serialization.XsdDataContractExporter>, bkz: [sınıflardan Şemaları dışarı aktarma](../../../../docs/framework/wcf/feature-details/exporting-schemas-from-classes.md).  
+ [!INCLUDE[crabout](../../../../includes/crabout-md.md)] kullanarak <xref:System.Runtime.Serialization.XsdDataContractExporter>, bkz: [sınıflardan Şemaları dışarı aktarma](../../../../docs/framework/wcf/feature-details/exporting-schemas-from-classes.md).  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
  <xref:System.Runtime.Serialization.DataContractSerializer>  

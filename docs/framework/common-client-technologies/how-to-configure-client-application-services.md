@@ -18,14 +18,14 @@ ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: e7c6d31293109a0d778136235ccfc894aeba8574
-ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
-ms.translationtype: HT
+ms.openlocfilehash: f8a6c6be6874c1a90c9e40b5b82d833aeaa9b63a
+ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="how-to-configure-client-application-services"></a>Nasıl Yapılır: İstemci Uygulama Hizmetlerini Yapılandırma
-Bu konuda nasıl kullanılacağını açıklar [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] **Proje Tasarımcısı** etkinleştirmek ve istemci uygulama hizmetleri yapılandırmak için. İstemci uygulama Hizmetleri kullanıcıları doğrulamak ve mevcut bir kullanıcı rolleri ve ayarları almak için kullanabileceğiniz [!INCLUDE[ajax_current_short](../../../includes/ajax-current-short-md.md)] uygulama hizmeti. Yapılandırmadan sonra etkin hizmetleri, uygulama kodunuzda açıklandığı gibi erişebilirsiniz [istemci uygulama hizmetlerine genel bakış](../../../docs/framework/common-client-technologies/client-application-services-overview.md). Hakkında daha fazla bilgi için [!INCLUDE[ajax_current_short](../../../includes/ajax-current-short-md.md)] uygulama bkz [ASP.NET uygulama hizmetleri genel bakış](http://msdn.microsoft.com/library/1162e529-0d70-44b2-b3ab-83e60c695013).  
+Bu konu, Visual Studio kullanmayı açıklar **Proje Tasarımcısı** etkinleştirmek ve istemci uygulama hizmetleri yapılandırmak için. İstemci uygulama Hizmetleri kullanıcıları doğrulamak ve mevcut bir kullanıcı rolleri ve ayarları almak için kullanabileceğiniz [!INCLUDE[ajax_current_short](../../../includes/ajax-current-short-md.md)] uygulama hizmeti. Yapılandırmadan sonra etkin hizmetleri, uygulama kodunuzda açıklandığı gibi erişebilirsiniz [istemci uygulama hizmetlerine genel bakış](../../../docs/framework/common-client-technologies/client-application-services-overview.md). Hakkında daha fazla bilgi için [!INCLUDE[ajax_current_short](../../../includes/ajax-current-short-md.md)] uygulama bkz [ASP.NET uygulama hizmetleri genel bakış](http://msdn.microsoft.com/library/1162e529-0d70-44b2-b3ab-83e60c695013).  
   
  Etkinleştirme ve istemci uygulama Hizmetleri yapılandırmasına **Hizmetleri** sayfasında **Proje Tasarımcısı**. **Hizmetleri** sayfa projenizin App.config dosyasında değerlerini güncelleştirir. Erişim için **Proje Tasarımcısı**, kullanın **özellikleri** komutunu **proje** menüsü. Hakkında daha fazla bilgi için **Hizmetleri** sayfasında, bkz: [Hizmetler Sayfası, Proje Tasarımcısı](https://msdn.microsoft.com/library/bb398109).  
   
@@ -100,7 +100,7 @@ Bu konuda nasıl kullanılacağını açıklar [!INCLUDE[vsprvs](../../../includ
   
      Varsayılan değer olan `Data Source = |SQL/CE|` metin kutusunda görüntülenir.  
   
-3.  Oluştur ve SQL Server Compact veritabanını kullanmak için varsayılan bağlantı dizesi değeri koruyun. [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] bir veritabanı dosyası oluşturur ve belirtilen dizinde put <xref:System.Windows.Forms.Application.UserAppDataPath%2A?displayProperty=nameWithType> özelliği.  
+3.  Oluştur ve SQL Server Compact veritabanını kullanmak için varsayılan bağlantı dizesi değeri koruyun. Visual Studio veritabanı dosyası oluşturun ve tarafından belirtilen dizinde koymak <xref:System.Windows.Forms.Application.UserAppDataPath%2A?displayProperty=nameWithType> özelliği.  
   
 4.  Oluştur ve şifreli bir kullanmak için [!INCLUDE[ssEW](../../../includes/ssew-md.md)] veritabanı, ekleme `password` ve `encrypt database` aşağıdaki örnekte gösterildiği gibi bağlantı dizesi değerleri.  
   

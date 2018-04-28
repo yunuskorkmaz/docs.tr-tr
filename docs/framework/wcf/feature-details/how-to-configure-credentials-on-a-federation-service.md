@@ -1,12 +1,13 @@
 ---
-title: "Nasıl yapılır: Federe Bir Hizmette Kimlik Bilgilerini Yapılandırma"
-ms.custom: 
+title: 'Nasıl yapılır: Federe Bir Hizmette Kimlik Bilgilerini Yapılandırma'
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - csharp
@@ -15,25 +16,26 @@ helpviewer_keywords:
 - WCF, federation
 - federation
 ms.assetid: 149ab165-0ef3-490a-83a9-4322a07bd98a
-caps.latest.revision: "21"
+caps.latest.revision: 21
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 243dbd73d60577cbda2d8cf4fad1fd2e510d87ba
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: ffb33ea70f67e209648e470656a2719404dd7f2d
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="how-to-configure-credentials-on-a-federation-service"></a>Nasıl yapılır: Federe Bir Hizmette Kimlik Bilgilerini Yapılandırma
 İçinde [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)], Federasyon Hizmeti oluşturma, aşağıdaki ana yordamlardan oluşur:  
   
-1.  Yapılandırma bir <xref:System.ServiceModel.WSFederationHttpBinding> ya da benzer özel bağlama. [!INCLUDE[crabout](../../../../includes/crabout-md.md)]uygun bir bağlama bkz [nasıl yapılır: WSFederationHttpBinding oluşturma](../../../../docs/framework/wcf/feature-details/how-to-create-a-wsfederationhttpbinding.md).  
+1.  Yapılandırma bir <xref:System.ServiceModel.WSFederationHttpBinding> ya da benzer özel bağlama. [!INCLUDE[crabout](../../../../includes/crabout-md.md)] uygun bir bağlama bkz [nasıl yapılır: WSFederationHttpBinding oluşturma](../../../../docs/framework/wcf/feature-details/how-to-create-a-wsfederationhttpbinding.md).  
   
 2.  Yapılandırma <xref:System.ServiceModel.Security.IssuedTokenServiceCredential> hizmete sunulan nasıl verilen belirteçler denetimleri doğrulanır.  
   
- Bu konuda, ikinci adım hakkında ayrıntılar sağlar. [!INCLUDE[crabout](../../../../includes/crabout-md.md)]Federasyon hizmetinin çalıştığı bkz [Federasyon](../../../../docs/framework/wcf/feature-details/federation.md).  
+ Bu konuda, ikinci adım hakkında ayrıntılar sağlar. [!INCLUDE[crabout](../../../../includes/crabout-md.md)] Federasyon hizmetinin çalıştığı bkz [Federasyon](../../../../docs/framework/wcf/feature-details/federation.md).  
   
 ### <a name="to-set-the-properties-of-issuedtokenservicecredential-in-code"></a>Kodda IssuedTokenServiceCredential özelliklerini ayarlamak için  
   
@@ -78,9 +80,9 @@ ms.lasthandoff: 12/22/2017
   
 -   Bir sertifika tarafından döndürülen koleksiyonundaki tarafından verilen belirtecinin imzası bir X.509 Verenin seri numarası, X.509 konu anahtarı tanımlayıcısı veya X.509 parmak izi güvenlik tanımlayıcısı kullandığında, verilen belirteç imzalanmalıdır <xref:System.ServiceModel.Security.IssuedTokenServiceCredential.KnownCertificates%2A> özelliği<xref:System.ServiceModel.Security.IssuedTokenServiceCredential>sınıfı.  
   
--   Verilen belirteç X.509 sertifikası kullanarak imzalandığında sertifika değeri tarafından belirtilen semantiği başına doğrulamalısınız <xref:System.ServiceModel.Security.X509ServiceCertificateAuthentication.CertificateValidationMode%2A> olup bağlı olan taraf sertifika gönderildiği bakılmaksızın özelliği, bir <xref:System.IdentityModel.Tokens.X509RawDataKeyIdentifierClause> veya alındı gelen <xref:System.ServiceModel.Security.IssuedTokenServiceCredential.KnownCertificates%2A> özelliği. [!INCLUDE[crabout](../../../../includes/crabout-md.md)]X.509 sertifikasının bkz [sertifikalarla çalışma](../../../../docs/framework/wcf/feature-details/working-with-certificates.md).  
+-   Verilen belirteç X.509 sertifikası kullanarak imzalandığında sertifika değeri tarafından belirtilen semantiği başına doğrulamalısınız <xref:System.ServiceModel.Security.X509ServiceCertificateAuthentication.CertificateValidationMode%2A> olup bağlı olan taraf sertifika gönderildiği bakılmaksızın özelliği, bir <xref:System.IdentityModel.Tokens.X509RawDataKeyIdentifierClause> veya alındı gelen <xref:System.ServiceModel.Security.IssuedTokenServiceCredential.KnownCertificates%2A> özelliği. [!INCLUDE[crabout](../../../../includes/crabout-md.md)] X.509 sertifikasının bkz [sertifikalarla çalışma](../../../../docs/framework/wcf/feature-details/working-with-certificates.md).  
   
- Örneğin, ayarlama <xref:System.ServiceModel.Security.IssuedTokenServiceCredential.CertificateValidationMode%2A> için <xref:System.ServiceModel.Security.X509CertificateValidationMode.PeerTrust> herhangi verilen belirteç imzalama sertifikası konusu kimlik doğrulamasının `TrustedPeople` sertifika deposu. Bu durumda, ayarlamak <xref:System.ServiceModel.Security.IssuedTokenServiceCredential.TrustedStoreLocation%2A> ya da özellik <xref:System.Security.Cryptography.X509Certificates.StoreLocation.CurrentUser> veya <xref:System.Security.Cryptography.X509Certificates.StoreLocation.LocalMachine>. Dahil olmak üzere Diğer modları, seçebileceğiniz <xref:System.ServiceModel.Security.X509CertificateValidationMode.Custom>. Zaman `Custom` olan seçili örneği atamalısınız <xref:System.IdentityModel.Selectors.X509CertificateValidator> sınıfının <xref:System.ServiceModel.Security.IssuedTokenServiceCredential.CustomCertificateValidator%2A> özelliği. Özel Doğrulayıcı sertifikaları, yöntemlerine herhangi bir ölçütü kullanarak doğrulayabilirsiniz. [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)][Nasıl yapılır: özel bir sertifika Doğrulayıcı kullanan bir hizmet oluşturma](../../../../docs/framework/wcf/extending/how-to-create-a-service-that-employs-a-custom-certificate-validator.md).  
+ Örneğin, ayarlama <xref:System.ServiceModel.Security.IssuedTokenServiceCredential.CertificateValidationMode%2A> için <xref:System.ServiceModel.Security.X509CertificateValidationMode.PeerTrust> herhangi verilen belirteç imzalama sertifikası konusu kimlik doğrulamasının `TrustedPeople` sertifika deposu. Bu durumda, ayarlamak <xref:System.ServiceModel.Security.IssuedTokenServiceCredential.TrustedStoreLocation%2A> ya da özellik <xref:System.Security.Cryptography.X509Certificates.StoreLocation.CurrentUser> veya <xref:System.Security.Cryptography.X509Certificates.StoreLocation.LocalMachine>. Dahil olmak üzere Diğer modları, seçebileceğiniz <xref:System.ServiceModel.Security.X509CertificateValidationMode.Custom>. Zaman `Custom` olan seçili örneği atamalısınız <xref:System.IdentityModel.Selectors.X509CertificateValidator> sınıfının <xref:System.ServiceModel.Security.IssuedTokenServiceCredential.CustomCertificateValidator%2A> özelliği. Özel Doğrulayıcı sertifikaları, yöntemlerine herhangi bir ölçütü kullanarak doğrulayabilirsiniz. Daha fazla bilgi için bkz: [nasıl yapılır: özel bir sertifika Doğrulayıcı kullanan bir hizmet oluşturma](../../../../docs/framework/wcf/extending/how-to-create-a-service-that-employs-a-custom-certificate-validator.md).  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
  [Federasyon](../../../../docs/framework/wcf/feature-details/federation.md)  

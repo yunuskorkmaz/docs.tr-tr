@@ -1,0 +1,1 @@
+Bu sınıfın temsil ettiği ileti hakkında daha fazla bilgi için şu belirtimin 13 bölümüne bakın: [Web Hizmetleri Federasyon dili (WS-Federation) sürüm 1.2](http://docs.oasis-open.org/wsfed/federation/v1.2/os/ws-federation-1.2-spec-os.html) (http://docs.oasis-open.org/wsfed/federation/v1.2/os/ws-federation-1.2-spec-os.html).

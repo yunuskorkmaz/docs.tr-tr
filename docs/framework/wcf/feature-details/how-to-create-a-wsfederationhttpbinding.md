@@ -1,12 +1,13 @@
 ---
-title: "Nasıl yapılır: WSFederationHttpBinding Oluşturma"
-ms.custom: 
+title: 'Nasıl yapılır: WSFederationHttpBinding Oluşturma'
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - csharp
@@ -15,16 +16,17 @@ helpviewer_keywords:
 - WCF, federation
 - federation
 ms.assetid: e54897d7-aa6c-46ec-a278-b2430c8c2e10
-caps.latest.revision: "16"
+caps.latest.revision: 16
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 22322c7b8cd03abcf3a98c49b9d43125b37d956d
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 8962564bbefc3f43261a2979ae9765369b211f15
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="how-to-create-a-wsfederationhttpbinding"></a>Nasıl yapılır: WSFederationHttpBinding Oluşturma
 İçinde [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)], <xref:System.ServiceModel.WSFederationHttpBinding> sınıfı ([\<wsFederationHttpBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/wsfederationhttpbinding.md) yapılandırmasında) Federasyon Hizmeti gösterme için bir mekanizma sağlar. Diğer bir deyişle, istemcilerin bir güvenlik belirteci hizmeti tarafından verilen bir güvenlik belirteci kullanarak kimlik doğrulaması gerektiren bir hizmeti. Bu konu nasıl ayarlanacağını gösterir bir <xref:System.ServiceModel.WSFederationHttpBinding> kod ve yapılandırma. Bağlama oluşturulduktan sonra bu bağlamayı kullanmak için uç nokta ayarlamayı ayarlayabilirsiniz.  
@@ -36,7 +38,7 @@ ms.lasthandoff: 12/22/2017
     > [!NOTE]
     >  <xref:System.ServiceModel.WSFederationHttpBinding> De destekler `None` güvenlik modu. Bu mod, güvenli olmayan ve hata ayıklama amacıyla yalnızca sağlanır. Hizmet uç noktası ile dağıtılırsa bir <xref:System.ServiceModel.WSFederationHttpBinding> ayarlamak, güvenlik modu ile `None`, bağlama elde edilen istemci (tarafından oluşturulan [ServiceModel meta veri yardımcı Programracı (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md)) olan bir <<!--zz xref:System.ServiceModel.WsHttpBinding --> `xref:System.ServiceModel.WsHttpBinding`> bir güvenlik modu ile `None`.  
   
-     Diğer sistem tarafından sağlanan bağlamalar kullanırken bir istemci kimlik bilgisi türü seçmek ise gerekli değildir `WSFederationHttpBinding`. İstemci kimlik bilgisi türü her zaman verilen bir belirteç olmasıdır. [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]Belirtilen vereni uygulamasından bir belirteç alır ve istemci kimlik doğrulaması için hizmet belirtecini gösterir.  
+     Diğer sistem tarafından sağlanan bağlamalar kullanırken bir istemci kimlik bilgisi türü seçmek ise gerekli değildir `WSFederationHttpBinding`. İstemci kimlik bilgisi türü her zaman verilen bir belirteç olmasıdır. [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] Belirtilen vereni uygulamasından bir belirteç alır ve istemci kimlik doğrulaması için hizmet belirtecini gösterir.  
   
 2.  Federasyon istemcilerde ayarlamak <xref:System.ServiceModel.FederatedMessageSecurityOverHttp.IssuerAddress%2A> güvenlik belirteci hizmeti URL'sini özelliği. Ayarlama <xref:System.ServiceModel.FederatedMessageSecurityOverHttp.IssuerBinding%2A> güvenlik belirteci hizmeti ile iletişim kurmak için kullanılacak bağlama için.  
   
@@ -44,9 +46,9 @@ ms.lasthandoff: 12/22/2017
   
      Belirteç tür belirtilmedi, istemciler bir belirteç olmadan türü URI WS-Trust isteği güvenlik belirteçleri (RSTs) oluşturmak ve istemci kimlik doğrulaması varsayılan olarak bir güvenlik onaylar biçimlendirme dili (SAML) 1.1 belirteci kullanarak Hizmetleri beklediğiniz.  
   
-     SAML 1.1 belirteç URI'sini "http://docs.oasis-open.org/wss/oasis-wss-saml-token-profile-1.1#SAMLV1.1" dir.  
+     SAML 1.1 belirteci için bir URI "http://docs.oasis-open.org/wss/oasis-wss-saml-token-profile-1.1#SAMLV1.1".  
   
-4.  İsteğe bağlı. Federasyon hizmetlerinde ayarlamak <xref:System.ServiceModel.FederatedMessageSecurityOverHttp.IssuerMetadataAddress%2A> bir güvenlik belirteci hizmeti meta veri URL'sini özelliği. Hizmet meta veri yayımlama için yapılandırılmışsa, uygun bağlama/uç noktanın çifti seçmek istemcilerin hizmetinin meta veri uç noktası sağlar. [!INCLUDE[crabout](../../../../includes/crabout-md.md)]bkz: meta verileri yayımlama [meta veri yayımlama](../../../../docs/framework/wcf/feature-details/publishing-metadata.md).  
+4.  İsteğe bağlı. Federasyon hizmetlerinde ayarlamak <xref:System.ServiceModel.FederatedMessageSecurityOverHttp.IssuerMetadataAddress%2A> bir güvenlik belirteci hizmeti meta veri URL'sini özelliği. Hizmet meta veri yayımlama için yapılandırılmışsa, uygun bağlama/uç noktanın çifti seçmek istemcilerin hizmetinin meta veri uç noktası sağlar. [!INCLUDE[crabout](../../../../includes/crabout-md.md)] bkz: meta verileri yayımlama [meta veri yayımlama](../../../../docs/framework/wcf/feature-details/publishing-metadata.md).  
   
  Verilen belirteç, istemci ile hizmet arasında kullanılacak algoritma paketini kanıtını bir anahtar olarak kullanılan anahtar türü de dahil olmak üzere diğer özellikleri de ayarlayabilirsiniz anlaşma veya hizmet kimlik bilgilerini açıkça belirtmek için herhangi bir özel hizmet talepleri olup olmadığını Verilen belirteç içeren ve güvenlik belirteci hizmeti istemci gönderir isteğine eklenmesi gereken ek XML öğeleri bekliyor.  
   
@@ -63,7 +65,7 @@ ms.lasthandoff: 12/22/2017
   
 4.  Ayarlama <xref:System.ServiceModel.FederatedMessageSecurityOverHttp.IssuedKeyType%2A> özelliğine <xref:System.IdentityModel.Tokens.SecurityKeyType> `SymmetricKey` veya.`AsymmetricKey` gerektiği şekilde.  
   
-5.  Ayarlama <xref:System.ServiceModel.FederatedMessageSecurityOverHttp.IssuedTokenType%2A> uygun değere özelliği. Herhangi bir değer ayarlarsanız, [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] SAML 1.1 belirteçleri gösteren varsayılanlara "http://docs.oasis-open.org/wss/oasis-wss-saml-token-profile-1.1#SAMLV1.1".  
+5.  Ayarlama <xref:System.ServiceModel.FederatedMessageSecurityOverHttp.IssuedTokenType%2A> uygun değere özelliği. Herhangi bir değer ayarlarsanız, [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] varsayılan olarak "http://docs.oasis-open.org/wss/oasis-wss-saml-token-profile-1.1#SAMLV1.1", SAML 1.1 belirteçleri gösterir.  
   
 6.  Hiçbir yerel yayımlayan belirtilmişse, istemcide gerekli; hizmet üzerinde isteğe bağlı. Oluşturma bir <xref:System.ServiceModel.EndpointAddress> güvenlik belirteci hizmeti ve ata adresi ve kimlik bilgilerini içeren <xref:System.ServiceModel.EndpointAddress> için örnek <xref:System.ServiceModel.FederatedMessageSecurityOverHttp.IssuerAddress%2A> özelliği.  
   
@@ -99,9 +101,9 @@ ms.lasthandoff: 12/22/2017
   
 11. İsteğe bağlı. Ekleme bir `<identity>` alt öğesi ve güvenlik belirteci hizmeti kimliğini belirtin  
   
-12. [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)][Hizmet kimlik ve kimlik doğrulama](../../../../docs/framework/wcf/feature-details/service-identity-and-authentication.md).  
+12. Daha fazla bilgi için bkz: [hizmet kimliği ve kimlik doğrulama](../../../../docs/framework/wcf/feature-details/service-identity-and-authentication.md).  
   
-13. Hiçbir yerel yayımlayan belirtilmişse, istemcide gerekli; hizmette kullanılmaz. Oluşturma bir [ \<bağlama >](../../../../docs/framework/misc/binding.md) güvenlik belirteci hizmeti ile iletişim kurmak için kullanılan bağlamaları bölümünde öğesi. [!INCLUDE[crabout](../../../../includes/crabout-md.md)]bir bağlama bkz [nasıl yapılır: yapılandırmada hizmet bağlama belirtme](../../../../docs/framework/wcf/how-to-specify-a-service-binding-in-configuration.md).  
+13. Hiçbir yerel yayımlayan belirtilmişse, istemcide gerekli; hizmette kullanılmaz. Oluşturma bir [ \<bağlama >](../../../../docs/framework/misc/binding.md) güvenlik belirteci hizmeti ile iletişim kurmak için kullanılan bağlamaları bölümünde öğesi. [!INCLUDE[crabout](../../../../includes/crabout-md.md)] bir bağlama bkz [nasıl yapılır: yapılandırmada hizmet bağlama belirtme](../../../../docs/framework/wcf/how-to-specify-a-service-binding-in-configuration.md).  
   
 14. Ayarlayarak önceki adımda oluşturduğunuz bağlama belirtme `binding` ve `bindingConfiguration` özniteliklerini `<issuer>` öğesi.  
   

@@ -1,35 +1,35 @@
 ---
-title: "Güvenlik Etkinliklerini Denetleme"
-ms.custom: 
+title: Güvenlik Etkinliklerini Denetleme
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - dotnet-clr
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - auditing security events [WCF]
 ms.assetid: 5633f61c-a3c9-40dd-8070-1c373b66a716
-caps.latest.revision: 
+caps.latest.revision: 27
 author: BrucePerlerMS
 ms.author: bruceper
 manager: mbaldwin
 ms.workload:
 - dotnet
-ms.openlocfilehash: cb8f112c71c743fd6650baf04b8db55ceaeef4ae
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 948ff11cf1b7ecacc6f9f5fdebfc3a0cbd1ef5b1
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="auditing-security-events"></a>Güvenlik Etkinliklerini Denetleme
 İle oluşturulan uygulamaların [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] (başarı, hata veya her ikisi de) güvenlik olaylarını denetleme özelliği ile oturum açabilir. Olaylar için Windows sistem olay günlüğüne yazılır ve Olay Görüntüleyicisi'ni kullanarak incelenebilir.  
   
  Denetim bir yöneticinin zaten oluştu veya devam ediyor saldırının algılamak bir yol sağlar. Buna ek olarak, Denetim güvenlikle ilgili sorunların hatalarını ayıklamak için bir geliştirici yardımcı olabilir. Örneğin, yetkilendirme veya denetimi İlkesi yapılandırmasında bir hata için yetkili bir kullanıcı yanlışlıkla erişimini engellediği, bir geliştirici hızlı bir şekilde bulmak ve olay günlüğünü inceleyerek bu hatanın nedenini ortadan kaldırmak.  
   
- [!INCLUDE[crabout](../../../../includes/crabout-md.md)][!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] güvenlik, bkz: [güvenliğine genel bakış](../../../../docs/framework/wcf/feature-details/security-overview.md). [!INCLUDE[crabout](../../../../includes/crabout-md.md)]programlama [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)], bkz: [temel WCF programlama](../../../../docs/framework/wcf/basic-wcf-programming.md).  
+ [!INCLUDE[crabout](../../../../includes/crabout-md.md)] [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] Güvenlik, bkz: [güvenliğine genel bakış](../../../../docs/framework/wcf/feature-details/security-overview.md). [!INCLUDE[crabout](../../../../includes/crabout-md.md)] programlama [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)], bkz: [temel WCF programlama](../../../../docs/framework/wcf/basic-wcf-programming.md).  
   
 ## <a name="audit-level-and-behavior"></a>Denetim düzeyi ve davranışı  
  İki düzeyde güvenlik denetimleri mevcuttur:  
@@ -41,11 +41,11 @@ ms.lasthandoff: 12/22/2017
  Her ikisi de denetim başarılı veya başarısız olarak bilinen düzeyleri denetleyebilirsiniz *denetleme davranışı*.  
   
 ## <a name="audit-log-location"></a>Denetim günlüğü konumu  
- Bir denetim düzeyi ve davranış belirledikten sonra siz (veya yönetici) denetim günlüğü için bir konum belirtebilirsiniz. Üç Seçenekler şunlardır: varsayılan, uygulama ve güvenlik. Varsayılan belirttiğinizde, sistem güvenlik günlüğüne yazma destekleyip desteklemediğini ve hangi sistemde kullandığınız gerçek günlük bağlıdır. [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)]Bu konunun devamındaki "İşletim sistemi" bölümü.  
+ Bir denetim düzeyi ve davranış belirledikten sonra siz (veya yönetici) denetim günlüğü için bir konum belirtebilirsiniz. Üç Seçenekler şunlardır: varsayılan, uygulama ve güvenlik. Varsayılan belirttiğinizde, sistem güvenlik günlüğüne yazma destekleyip desteklemediğini ve hangi sistemde kullandığınız gerçek günlük bağlıdır. Daha fazla bilgi için bu konunun devamındaki "İşletim sistemi" bölümüne bakın.  
   
  Güvenlik günlüğü'ne yazmaya gerektirir `SeAuditPrivilege`. Varsayılan olarak, yalnızca yerel sistem ve ağ hizmet hesaplarını bu ayrıcalığına sahip. Güvenlik günlüğü işlevlerini yönetmek için `read` ve `delete` gerektirir `SeSecurityPrivilege`. Varsayılan olarak, yalnızca Yöneticiler bu ayrıcalığına sahip.  
   
- Buna karşılık, kimliği doğrulanmış kullanıcılara Okuma ve uygulama günlüğüne yazma. [!INCLUDE[wxp](../../../../includes/wxp-md.md)]varsayılan denetim olayları uygulama günlüğüne yazar. Günlük, tüm kimliği doğrulanmış kullanıcılar tarafından görülemez kişisel bilgilerini de içerebilir.  
+ Buna karşılık, kimliği doğrulanmış kullanıcılara Okuma ve uygulama günlüğüne yazma. [!INCLUDE[wxp](../../../../includes/wxp-md.md)] varsayılan denetim olayları uygulama günlüğüne yazar. Günlük, tüm kimliği doğrulanmış kullanıcılar tarafından görülemez kişisel bilgilerini de içerebilir.  
   
 ## <a name="suppressing-audit-failures"></a>Denetim hataları gizleme  
  Denetim sırasında başka hiçbir denetim hatası engellenip engellenmeyeceğini seçenektir. Varsayılan olarak, bir uygulama bir denetim hatası etkilemez. Gerekirse, ancak seçeneği ayarlayabileceğiniz `false`, bir özel durum oluşturulmasına neden olur.  
@@ -86,10 +86,10 @@ ms.lasthandoff: 12/22/2017
 </configuration>  
 ```  
   
- Denetim etkin olduğunda ve bir `auditLogLocation` değil belirtilmezse, varsayılan günlük güvenlik günlüğüne yazma destekleyen bir platform için "Güvenlik" günlük adıdır; Aksi takdirde, "Uygulama" günlüğü olur. Yalnızca [!INCLUDE[ws2003](../../../../includes/ws2003-md.md)] ve [!INCLUDE[wv](../../../../includes/wv-md.md)] işletim sistemleri için destek güvenlik günlüğüne yazma. [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)]Bu konunun devamındaki "İşletim sistemi" bölümü.  
+ Denetim etkin olduğunda ve bir `auditLogLocation` değil belirtilmezse, varsayılan günlük güvenlik günlüğüne yazma destekleyen bir platform için "Güvenlik" günlük adıdır; Aksi takdirde, "Uygulama" günlüğü olur. Yalnızca [!INCLUDE[ws2003](../../../../includes/ws2003-md.md)] ve [!INCLUDE[wv](../../../../includes/wv-md.md)] işletim sistemleri için destek güvenlik günlüğüne yazma. Daha fazla bilgi için bu konunun devamındaki "İşletim sistemi" bölümüne bakın.  
   
 ## <a name="security-considerations"></a>Güvenlik Değerlendirmeleri  
- Kötü niyetli bir kullanıcı denetiminin etkin olduğunu biliyorsa, bu saldırgan denetim girişlerini yazılmasına neden geçersiz iletileri gönderebilir. Bu şekilde denetim günlüğü dolu denetim sistemi başarısız olur. Bu durumu iyileştirmek için ayarlanmış <xref:System.ServiceModel.Description.ServiceSecurityAuditBehavior.SuppressAuditFailure%2A> özelliğine `true` ve Denetim davranışını denetlemek için Olay Görüntüleyicisi'ni özelliklerini kullanın. [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)]görüntüleme ve Windows XP'de adresinde Olay Görüntüleyicisi'ni kullanarak olay günlüklerini yönetme Microsoft Support makalesini [görüntülemek ve Windows XP'de Olay Görüntüleyicisi'nde olay günlüklerini yönetmek nasıl](http://go.microsoft.com/fwlink/?LinkId=89150).  
+ Kötü niyetli bir kullanıcı denetiminin etkin olduğunu biliyorsa, bu saldırgan denetim girişlerini yazılmasına neden geçersiz iletileri gönderebilir. Bu şekilde denetim günlüğü dolu denetim sistemi başarısız olur. Bu durumu iyileştirmek için ayarlanmış <xref:System.ServiceModel.Description.ServiceSecurityAuditBehavior.SuppressAuditFailure%2A> özelliğine `true` ve Denetim davranışını denetlemek için Olay Görüntüleyicisi'ni özelliklerini kullanın. Görüntüleme ve Windows XP'de adresinde Olay Görüntüleyicisi'ni kullanarak olay günlüklerini yönetme hakkında daha fazla bilgi için Microsoft Support makalesini bkz [görüntülemek ve Windows XP'de Olay Görüntüleyicisi'nde olay günlüklerini yönetmek nasıl](http://go.microsoft.com/fwlink/?LinkId=89150).  
   
  Üzerinde uygulama günlüğüne yazılan olaylarını denetleme [!INCLUDE[wxp](../../../../includes/wxp-md.md)] tüm kimliği doğrulanmış kullanıcılar tarafından görülebilir.  
   
@@ -100,8 +100,8 @@ ms.lasthandoff: 12/22/2017
   
 |Sistem|Uygulama günlüğü|Güvenlik günlüğü|  
 |------------|---------------------|------------------|  
-|[!INCLUDE[wxpsp2](../../../../includes/wxpsp2-md.md)]veya üzeri|Desteklenir|Desteklenmez|  
-|[!INCLUDE[ws2003sp1](../../../../includes/ws2003sp1-md.md)]ve[!INCLUDE[wv](../../../../includes/wv-md.md)]|Desteklenir|İş parçacığı içeriği sahip olması gerekir`SeAuditPrivilege`|  
+|[!INCLUDE[wxpsp2](../../../../includes/wxpsp2-md.md)] veya üzeri|Desteklenir|Desteklenmez|  
+|[!INCLUDE[ws2003sp1](../../../../includes/ws2003sp1-md.md)] Ve [!INCLUDE[wv](../../../../includes/wv-md.md)]|Desteklenir|İş parçacığı içeriği sahip olması gerekir `SeAuditPrivilege`|  
   
 #### <a name="other-factors"></a>Diğer etkenlere bağlı  
  İşletim sistemi ek olarak, aşağıdaki tabloda günlük kaydını etkinleştirme denetleyen diğer ayarların açıklar.  

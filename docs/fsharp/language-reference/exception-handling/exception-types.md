@@ -1,20 +1,17 @@
 ---
-title: "Özel Durum Türleri (F#)"
-description: "F # özel durum türlerini tanımlamak ve nasıl kullanılacağını öğrenin."
-keywords: "Visual f #, f # işlevsel programlama"
+title: Özel Durum Türleri (F#)
+description: 'F # özel durum türlerini tanımlamak ve nasıl kullanılacağını öğrenin.'
 author: cartermp
 ms.author: phcart
 ms.date: 05/16/2016
 ms.topic: language-reference
-ms.prod: .net
-ms.technology: devlang-fsharp
+ms.prod: dotnet-fsharp
 ms.devlang: fsharp
-ms.assetid: e850205a-b8da-459e-8f6d-cb3510f8f173
-ms.openlocfilehash: a0864218841396c0ebdf26c7585e0e5bb778f83e
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.openlocfilehash: 6aaa5cd1b94f829b98d5aed5dcf6e30472a8b751
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="exception-types"></a>Özel Durum Türleri
 
@@ -46,7 +43,7 @@ F # özel durum türü doğrudan filtreleri kullanabileceğiniz bir `try...with`
 
 
 ## <a name="see-also"></a>Ayrıca Bkz.
-[Özel durum işleme](index.md)
+[Özel Durum İşleme](index.md)
 
 [Özel durumlar: `raise` işlevi](the-raise-function.md)
 

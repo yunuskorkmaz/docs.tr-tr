@@ -21,11 +21,11 @@ ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: 94ff361e89693f53c8d1baedcac749cf5178086e
-ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
+ms.openlocfilehash: df3e207cdca3a40bb0cfaff1890f6e010bd0790c
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="designing-service-contracts"></a>Hizmet Sözleşmeleri Tasarlama
 Bu konuda açıklanmaktadır olan, nasıl tanımlanır, hangi işlemleri kullanılabilir (ve temel alınan ileti alışverişlerinde etkilerini) hangi hizmetin sözleşme, hangi veri türleri olan yardımcı kullanılan ve diğer tasarım sorunları karşılamak işlemleri Senaryonuz gereksinimleri.  
@@ -65,7 +65,7 @@ Bu konuda açıklanmaktadır olan, nasıl tanımlanır, hangi işlemleri kullan�
   
  Bir hizmet sözleşmesini oluşturmak için bir arabirimi kullanarak bir örnek için bkz: [nasıl yapılır: sözleşme arabirimi ile bir hizmet oluşturma](../../../docs/framework/wcf/feature-details/how-to-create-a-service-with-a-contract-interface.md).  
   
- Ancak, bir hizmet sözleşmesini tanımlama ve aynı zamanda bu sözleşmeyi uygulamak için bir sınıf kullanabilirsiniz. Hizmetlerinizin uygulayarak oluşturma avantajı <xref:System.ServiceModel.ServiceContractAttribute> ve <xref:System.ServiceModel.OperationContractAttribute> doğrudan sınıfı ve sınıfı yöntemleri, sırasıyla hızı ve Basitlik sağlamaktır. Olumsuz yönleri şunlardır: yönetilen sınıflar birden çok devralma desteklemez ve sonuç olarak, yalnızca bir hizmet sözleşmesini aynı anda uygulayabilirsiniz. Ayrıca, sınıf veya yöntemin imzaları kendilerine herhangi bir değişiklik değiştirilmemiş istemcilerin hizmetinizi kullanmalarına engel bu hizmet için ortak sözleşme değiştirir. [!INCLUDE[crdefault](../../../includes/crdefault-md.md)] [Hizmet sözleşmelerini uygulama](../../../docs/framework/wcf/implementing-service-contracts.md).  
+ Ancak, bir hizmet sözleşmesini tanımlama ve aynı zamanda bu sözleşmeyi uygulamak için bir sınıf kullanabilirsiniz. Hizmetlerinizin uygulayarak oluşturma avantajı <xref:System.ServiceModel.ServiceContractAttribute> ve <xref:System.ServiceModel.OperationContractAttribute> doğrudan sınıfı ve sınıfı yöntemleri, sırasıyla hızı ve Basitlik sağlamaktır. Olumsuz yönleri şunlardır: yönetilen sınıflar birden çok devralma desteklemez ve sonuç olarak, yalnızca bir hizmet sözleşmesini aynı anda uygulayabilirsiniz. Ayrıca, sınıf veya yöntemin imzaları kendilerine herhangi bir değişiklik değiştirilmemiş istemcilerin hizmetinizi kullanmalarına engel bu hizmet için ortak sözleşme değiştirir. Daha fazla bilgi için bkz: [hizmet sözleşmelerini uygulama](../../../docs/framework/wcf/implementing-service-contracts.md).  
   
  Bir hizmet sözleşmesini oluşturmak için bir sınıf kullanır ve aynı anda uygulayan bir örnek için bkz: [nasıl yapılır: Sözleşme sınıfı ile hizmet oluşturma](../../../docs/framework/wcf/feature-details/how-to-create-a-wcf-contract-with-a-class.md).  
   
@@ -193,7 +193,7 @@ End Interface
  Koruma düzeyi iletileri (ileti bölümleri) bir hizmet oturumunuz destekleyen imzalanmış ve şifrelenmiş veya imza veya şifreleme gönderilen olup olmadığını belirten bir değerdir. Koruma düzeyi çeşitli kapsamların ayarlanabilir: Bu işlem ya da bir ileti bölümü içindeki bir ileti için belirli bir işlem için hizmet düzeyinde. Bir kapsamda ayarladığınız değerlerini küçük kapsamlar için varsayılan değer açıkça geçersiz kılınmadığı sürece haline gelir. Bağlama yapılandırması sözleşme için gerekli minimum koruma düzeyi sağlayamaz, özel durum oluşur. Ve hiçbir koruma düzeyi değerleri açıkça sözleşme ayarlandığında, ileti güvenliği bağlama varsa, bağlama yapılandırması tüm iletiler için koruma düzeyini denetler. Bu varsayılan davranıştır.  
   
 > [!IMPORTANT]
->  Açıkça sözleşmenin çeşitli kapsamlar tam koruma düzeyini çok daha az ayarlanıp ayarlanmayacağını karar <xref:System.Net.Security.ProtectionLevel.EncryptAndSign?displayProperty=nameWithType> genellikle, performansı artırmak için güvenlik bazı derecesini trades bir karardır. Bu durumlarda, kararlarınızı işlemlerinizin ve bunlar exchange verilerin değerini etrafında Uzayda Döndür gerekir. [!INCLUDE[crdefault](../../../includes/crdefault-md.md)] [Hizmetleri güvenli hale getirme](../../../docs/framework/wcf/securing-services.md).  
+>  Açıkça sözleşmenin çeşitli kapsamlar tam koruma düzeyini çok daha az ayarlanıp ayarlanmayacağını karar <xref:System.Net.Security.ProtectionLevel.EncryptAndSign?displayProperty=nameWithType> genellikle, performansı artırmak için güvenlik bazı derecesini trades bir karardır. Bu durumlarda, kararlarınızı işlemlerinizin ve bunlar exchange verilerin değerini etrafında Uzayda Döndür gerekir. Daha fazla bilgi için bkz: [Hizmetleri güvenli hale getirme](../../../docs/framework/wcf/securing-services.md).  
   
  Örneğin, aşağıdaki kod örneğinde ya da ayarlamaz <xref:System.ServiceModel.ServiceContractAttribute.ProtectionLevel%2A> veya <xref:System.ServiceModel.OperationContractAttribute.ProtectionLevel%2A> sözleşme özelliği.  
   
@@ -273,7 +273,7 @@ End Interface
  [!INCLUDE[crabout](../../../includes/crabout-md.md)] koruma düzeyleri ve bunları kullanan konularına bakın [anlama koruma düzeyi](../../../docs/framework/wcf/understanding-protection-level.md). [!INCLUDE[crabout](../../../includes/crabout-md.md)] Güvenlik, bkz: [Hizmetleri güvenli hale getirme](../../../docs/framework/wcf/securing-services.md).  
   
 ##### <a name="other-operation-signature-requirements"></a>Diğer işlem imza gereksinimleri  
- Bazı uygulama özellikleri, belirli bir işlemi imza türünü gerektirir. Örneğin, <xref:System.ServiceModel.NetMsmqBinding> bağlama, dayanıklı hizmetler ve bir uygulama ortasında iletişimi yeniden başlatın ve herhangi bir ileti eksik olmadan kaldığı yerden alması istemcileri destekler. ([!INCLUDE[crdefault](../../../includes/crdefault-md.md)] [Wcf'de kuyruklar](../../../docs/framework/wcf/feature-details/queues-in-wcf.md).) Dayanıklı işlemleri yalnızca bir ancak almalıdır `in` parametre ve dönüş değeri yok.  
+ Bazı uygulama özellikleri, belirli bir işlemi imza türünü gerektirir. Örneğin, <xref:System.ServiceModel.NetMsmqBinding> bağlama, dayanıklı hizmetler ve bir uygulama ortasında iletişimi yeniden başlatın ve herhangi bir ileti eksik olmadan kaldığı yerden alması istemcileri destekler. (Daha fazla bilgi için bkz: [wcf'de kuyruklar](../../../docs/framework/wcf/feature-details/queues-in-wcf.md).) Dayanıklı işlemleri yalnızca bir ancak almalıdır `in` parametre ve dönüş değeri yok.  
   
  Başka bir örneği kullanımıdır <xref:System.IO.Stream> işlemlerinde türleri. Çünkü <xref:System.IO.Stream> parametresi içeriyorsa tüm ileti gövdesi bir giriş veya çıkış (diğer bir deyişle, `ref` parametresi `out` parametresi veya dönüş değeri) türü <xref:System.IO.Stream>, yalnızca giriş sonra olmalıdır veya çıkış belirtilen, işlem. Ayrıca, parametre veya dönüş türü ya da olması gerekir <xref:System.IO.Stream>, <xref:System.ServiceModel.Channels.Message?displayProperty=nameWithType>, veya <xref:System.Xml.Serialization.IXmlSerializable?displayProperty=nameWithType>. [!INCLUDE[crabout](../../../includes/crabout-md.md)] Akışlar, bkz: [büyük veriler ve akış](../../../docs/framework/wcf/feature-details/large-data-and-streaming.md).  
   

@@ -1,13 +1,13 @@
 ---
-title: "Veri Aktarımı Mimarisi Genel Bakış"
-ms.custom: 
+title: Veri Aktarımı Mimarisi Genel Bakış
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - dotnet-clr
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - csharp
@@ -15,20 +15,20 @@ dev_langs:
 helpviewer_keywords:
 - data transfer [WCF], architectural overview
 ms.assetid: 343c2ca2-af53-4936-a28c-c186b3524ee9
-caps.latest.revision: 
+caps.latest.revision: 14
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: 829635bd7fd73b58004c59862f4d589e95f67f9b
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: cb64b871b8e4ba3036d70f3b84e2fde1667f4529
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="data-transfer-architectural-overview"></a>Veri Aktarımı Mimarisi Genel Bakış
-[!INCLUDE[indigo1](../../../../includes/indigo1-md.md)]bir Mesajlaşma altyapısı düşünülebilir. Bu iletileri almak, bunları işlemek ve bunları başka bir eylem için kullanıcı kodu gönderme veya kullanıcı kodu tarafından verilen verilerden iletileri oluşturmak ve bunları bir hedefe teslim et. Gelişmiş geliştiricileri için tasarlanmıştır, bu konu, iletileri ve içerilen verileri işleme mimarisini açıklar. Veri göndermek ve almak nasıl daha basit, görev yönelimli görünümü için bkz: [hizmet sözleşmelerinde veri aktarımı belirtme](../../../../docs/framework/wcf/feature-details/specifying-data-transfer-in-service-contracts.md).  
+[!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] bir Mesajlaşma altyapısı düşünülebilir. Bu iletileri almak, bunları işlemek ve bunları başka bir eylem için kullanıcı kodu gönderme veya kullanıcı kodu tarafından verilen verilerden iletileri oluşturmak ve bunları bir hedefe teslim et. Gelişmiş geliştiricileri için tasarlanmıştır, bu konu, iletileri ve içerilen verileri işleme mimarisini açıklar. Veri göndermek ve almak nasıl daha basit, görev yönelimli görünümü için bkz: [hizmet sözleşmelerinde veri aktarımı belirtme](../../../../docs/framework/wcf/feature-details/specifying-data-transfer-in-service-contracts.md).  
   
 > [!NOTE]
 >  Bu konuda ele alınmıştır [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] inceleyerek görünmez uygulama ayrıntılarını [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] nesne modeli. İki uyarı belgelenen uygulama ayrıntılarını açısından sırayla sözcüklerdir. İlk olarak, açıklamaları basitleştirilmiştir; Gerçek uygulamayı en iyi duruma getirme veya diğer nedenlerle nedeniyle daha karmaşık olabilir. Hiçbir zaman ikinci olarak, yararlanmalıdır bu sürümünden sürümüne veya hizmet sürümdeki bile verilmeksizin çünkü belirli uygulama hakkında ayrıntılı bilgi bile olanlar da dahil belgelenmiştir.  
@@ -94,17 +94,17 @@ ms.lasthandoff: 12/22/2017
 |------------------|--------------------------|--------------------------------------------------|-------------------------------------------------------|  
 |Giden nonstreamed programlama modelinden oluşturulan|İleti yazmak için gereken verileri (örneğin, bir nesne ve <xref:System.Runtime.Serialization.DataContractSerializer> , seri hale getirmek için gereken örnek) *|Yapılacak yazmak için Özel mantık dayalı depolanan veriler üzerinde (örneğin, arama `WriteObject` üzerinde `DataContractSerializer` , kullanımdaki seri hale getirici ise) *|Çağrı `OnWriteBodyContents`, sonuçları arabellek, arabellek bir XML okuyucu Döndür|  
 |Giden akış programlama modelinden oluşturulan|`Stream` Yazılacak verilerle *|Saklı akış kullanımından verileri yazma <xref:System.Xml.IStreamProvider> mekanizması *|Çağrı `OnWriteBodyContents`, sonuçları arabellek, arabellek bir XML okuyucu Döndür|  
-|Kanal yığını akış öğesinden gelen|A `Stream` ile ağ üzerinden gelen verileri temsil eden nesne bir <xref:System.Xml.XmlReader> ele|İçeriği saklı yazma `XmlReader` kullanma`WriteNode`|Saklı döndürür`XmlReader`|  
-|Gelen nonstreaming kanal yığından|Gövde verilerle içeren bir arabellek bir `XmlReader` ele|İçeriği saklı Yazar `XmlReader` kullanma`WriteNode`|Saklı lang döndürür|  
+|Kanal yığını akış öğesinden gelen|A `Stream` ile ağ üzerinden gelen verileri temsil eden nesne bir <xref:System.Xml.XmlReader> ele|İçeriği saklı yazma `XmlReader` kullanma `WriteNode`|Saklı döndürür `XmlReader`|  
+|Gelen nonstreaming kanal yığından|Gövde verilerle içeren bir arabellek bir `XmlReader` ele|İçeriği saklı Yazar `XmlReader` kullanma `WriteNode`|Saklı lang döndürür|  
   
- \*Bu öğeler doğrudan uygulanmadı `Message` alt sınıfların, ancak alt sınıflarının <xref:System.ServiceModel.Channels.BodyWriter> sınıfı. Hakkında daha fazla bilgi için <xref:System.ServiceModel.Channels.BodyWriter>, bkz: [ileti sınıfını kullanma](../../../../docs/framework/wcf/feature-details/using-the-message-class.md).  
+ \* Bu öğeler doğrudan uygulanmadı `Message` alt sınıfların, ancak alt sınıflarının <xref:System.ServiceModel.Channels.BodyWriter> sınıfı. Hakkında daha fazla bilgi için <xref:System.ServiceModel.Channels.BodyWriter>, bkz: [ileti sınıfını kullanma](../../../../docs/framework/wcf/feature-details/using-the-message-class.md).  
   
 ## <a name="message-headers"></a>İleti üstbilgileri  
  Bir ileti üstbilgilerini içerebilir. Üstbilgi mantıksal olarak bir ad, bir ad alanı ve birkaç diğer özellikleri ile ilişkili bir XML bilgi oluşur. İleti üstbilgilerini kullanılarak erişilir `Headers` özelliği <xref:System.ServiceModel.Channels.Message>. Her üstbilgisi tarafından temsil edilen bir <xref:System.ServiceModel.Channels.MessageHeader> sınıfı. Normalde, ileti üstbilgilerini SOAP iletilerine ile çalışmak için yapılandırılmış bir kanal yığını kullanırken SOAP ileti üstbilgilerini eşlenir.  
   
  İleti üstbilgisi içine bilgi koyma ve bilgileri buradan ayıklanıyor ileti gövdesi kullanmaya benzer. Akış desteklenmediğinden işlemi biraz basitleştirilmiştir. Birden çok kez aynı başlığını içeriğine erişmek mümkündür ve her zaman arabelleğe alınıp üstbilgiler zorlama rastgele sırayla üstbilgileri erişilebilir. Üstbilgi bir XML okuyucuyu almak için kullanılabilecek hiçbir genel amaçlı mekanizması yoktur, ancak var. bir `MessageHeader` iç ağa bir alt [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] , böyle bir özellik ile okunabilir bir başlığı temsil eder. Bu tür `MessageHeader` özel uygulama üstbilgiler içeren bir ileti geldiğinde kanal yığını tarafından oluşturulur. Bu seri durumdan çıkarma altyapısı gibi kullanmak hizmet çerçevesi sağlar <xref:System.Runtime.Serialization.DataContractSerializer>, bu üstbilgileri yorumlayamadı.  
   
- [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)][İleti sınıfını kullanma](../../../../docs/framework/wcf/feature-details/using-the-message-class.md).  
+ Daha fazla bilgi için bkz: [ileti sınıfını kullanma](../../../../docs/framework/wcf/feature-details/using-the-message-class.md).  
   
 ## <a name="message-properties"></a>İleti özellikleri  
  Bir ileti özellikleri içerebilir. A *özelliği* herhangi [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] bir dize adı ile ilişkili nesne. Özellikler yoluyla erişilir `Properties` özelliği `Message`.  
@@ -113,7 +113,7 @@ ms.lasthandoff: 12/22/2017
   
  Örneğin, HTTP taşıma parçası olarak dahil edilen kanal [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] çeşitli HTTP durum kodları gibi üretebilen "404 (bulunamadı)" ve "500 (Dahili Sunucu hatası)," yanıtları istemcilere gönderdiğinde. Bir yanıt iletisi göndermeden önce onu bakar olup olmadığını `Properties` , `Message` "türünde bir nesne içeren httpResponse" adlı bir özellik içeren <xref:System.ServiceModel.Channels.HttpResponseMessageProperty>. Böyle bir özellik bulunursa, bunu ele alacağız <xref:System.ServiceModel.Channels.HttpResponseMessageProperty.StatusCode%2A> özelliği ve bu durum kodu kullanın. Bunu bulunamadı varsa, varsayılan değer "200 (Tamam)" kod kullanılır.  
   
- [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)][İleti sınıfını kullanma](../../../../docs/framework/wcf/feature-details/using-the-message-class.md).  
+ Daha fazla bilgi için bkz: [ileti sınıfını kullanma](../../../../docs/framework/wcf/feature-details/using-the-message-class.md).  
   
 ### <a name="the-message-as-a-whole"></a>İletinin bir bütün olarak  
  Şu ana kadar biz yalıtım iletisinde çeşitli kısımlarını erişmek için yöntemler ele. Ancak, <xref:System.ServiceModel.Channels.Message> sınıfı ayrıca bir bütün olarak tüm ileti çalışmak için yöntemler sağlar. Örneğin, `WriteMessage` yöntemi tüm yapılacak bir XML yazıcısına yazar.  
@@ -148,7 +148,7 @@ ms.lasthandoff: 12/22/2017
   
  Daha önce belirtildiği gibi eylemleri farklılık: gönderme veya çeşitli protokoller üzerinden ağ paketleri alma, okuma veya bir veritabanında işaretlemekdeki queuing veya sağlamak için bir Message Queuing sırasının, ancak birkaç örnek iletiyi kuyruktan alma. Tüm bu eylemler tek şey ortaktır: arasında dönüştürme gereksinim duydukları [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] `Message` örneği ve gerçek bir grup, alınan, okuma, yazılan gönderilebilir bayt sıraya veya kuyruktan çıkarıldı. Dönüştürme işlemi bir `Message` bayt grubuna adlı *kodlama*ve geriye doğru oluşturma işleminin bir `Message` bayt grubundan adlı *kod çözme*.  
   
- Adlı bileşenleri çoğu taşıma kanalları kullanmak *ileti kodlayıcılar* kodlama ve kod çözme iş gerçekleştirmek için. İleti Kodlayıcı sınıfıdır <xref:System.ServiceModel.Channels.MessageEncoder> sınıfı. `MessageEncoder`çeşitli içeren `ReadMessage` ve `WriteMessage` arasında dönüştürme yapma yöntemi aşırı `Message` ve grupları bayt.  
+ Adlı bileşenleri çoğu taşıma kanalları kullanmak *ileti kodlayıcılar* kodlama ve kod çözme iş gerçekleştirmek için. İleti Kodlayıcı sınıfıdır <xref:System.ServiceModel.Channels.MessageEncoder> sınıfı. `MessageEncoder` çeşitli içeren `ReadMessage` ve `WriteMessage` arasında dönüştürme yapma yöntemi aşırı `Message` ve grupları bayt.  
   
  Arabelleğe alma taşıma kanalı Gönderen tarafında geçirir `Message` için yukarıda bir kanaldan alınan nesne `WriteMessage`. Ayrıca sonra (örneğin, bu bayt olarak geçerli TCP paketlerini paketleme ve doğru hedef göndererek), eylemi gerçekleştirmek için kullandığı bir bayt dizisi geri alır. İlk olarak bir akış taşıma kanalı oluşturur bir `Stream` (örneğin, giden TCP bağlantısı üzerinden) ve her ikisi de geçirir `Stream` ve `Message` uygun göndermek gereken `WriteMessage` aşırı yükleme, hangi yapılacak Yazar .  
   
@@ -168,7 +168,7 @@ ms.lasthandoff: 12/22/2017
   
  Kodlayıcılar diğer işlevlerini de gerçekleştirebilirsiniz. Örneğin, kodlayıcılar XML okuyucuları ve yazıcıları havuza alabilir. Bir gerektiği her zaman yeni XML okuyucusu veya yazıcısı oluşturmak maliyetlidir. Bu nedenle, kodlayıcılar normalde bir havuzu okuyucuların ve yapılandırılabilir boyutunun yazıcılarının havuzu bakımını yapar. Daha önce açıklanan Kodlayıcı işlemi açıklamasında her "bir XML okuyucusu/yazıcı oluşturma" kullanılan, deyim Bu normalde "bir havuzdan almak veya mevcut değilse oluşturun." anlamına gelir Kodlayıcı (ve `Message` oluşturduğu çözülürken alt sınıfların) artık gerekli olmayan sonra okuyucuları ve yazıcıları havuzlarına geri dönmek için mantık içerir (örneğin, `Message` kapalı).  
   
- [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]Ek özel türler oluşturmak mümkün olmakla üç ileti kodlayıcılar sağlar. Sağlanan metin ve ikili ileti iletim en iyi duruma getirme mekanizmasını (MTOM) türleridir. Bunlar içinde ayrıntılı olarak açıklanmıştır [ileti Kodlayıcı seçme](../../../../docs/framework/wcf/feature-details/choosing-a-message-encoder.md).  
+ [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] Ek özel türler oluşturmak mümkün olmakla üç ileti kodlayıcılar sağlar. Sağlanan metin ve ikili ileti iletim en iyi duruma getirme mekanizmasını (MTOM) türleridir. Bunlar içinde ayrıntılı olarak açıklanmıştır [ileti Kodlayıcı seçme](../../../../docs/framework/wcf/feature-details/choosing-a-message-encoder.md).  
   
 ### <a name="the-istreamprovider-interface"></a>IStreamProvider arabirimi  
  Bir XML yazıcı akışlı bir gövde içeren giden iletisi yazılırken <xref:System.ServiceModel.Channels.Message> çağrıları aşağıdakine benzer bir dizi kullanan kendi <xref:System.ServiceModel.Channels.Message.OnWriteBodyContents%28System.Xml.XmlDictionaryWriter%29> uygulama:  
@@ -231,7 +231,7 @@ ms.lasthandoff: 12/22/2017
  Eylem = "*" satırı etkili bir şekilde ileti gönderilirken devre dışı bırakır ve tüm iletileri için gönderilen sağlar `IForwardingService` Sözleşme Oluştur kendi şekilde `ForwardMessage` işlemi. (Normalde, dağıtıcı için hazırlanmıştır hangi işlemi belirlemek için ileti "Eylem" başlığı inceleyin. Eylem = "\*" "eylem üstbilgisinin tüm olası değerler" anlamına gelir.) Eylem birleşimi = "\*" ve tüm olası iletileri almak mümkün olduğu için bir parametre "Evrensel sözleşme" bilinen bir iletiyi kullanarak. Tüm olası iletileri gönderebilmesi için ileti dönüş değeri olarak kullanın ve ayarlayın `ReplyAction` için "\*". Kullanarak bu başlığı denetlemenizi etkinleştirme kendi eylem üstbilgisi ekleyerek bu hizmet çerçevesi engelleyecek `Message` dönmek nesne.  
   
 ### <a name="3-message-contracts"></a>3. İleti Sözleşmeleri  
- [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]adlı iletileri açıklamak için bildirim temelli bir programlama modeli sağlar *ileti sözleşmeleri*. Bu model içinde ayrıntılı olarak açıklanmıştır [kullanarak ileti sözleşmeleri](../../../../docs/framework/wcf/feature-details/using-message-contracts.md). Esas olarak, tüm ileti tek bir tarafından temsil edilen [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] gibi özniteliklere kullanan türü <xref:System.ServiceModel.MessageBodyMemberAttribute> ve <xref:System.ServiceModel.MessageHeaderAttribute> ileti sözleşme sınıfı hangi kısımlarının ileti hangi kısmına eşlemelisiniz açıklamak için.  
+ [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] adlı iletileri açıklamak için bildirim temelli bir programlama modeli sağlar *ileti sözleşmeleri*. Bu model içinde ayrıntılı olarak açıklanmıştır [kullanarak ileti sözleşmeleri](../../../../docs/framework/wcf/feature-details/using-message-contracts.md). Esas olarak, tüm ileti tek bir tarafından temsil edilen [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] gibi özniteliklere kullanan türü <xref:System.ServiceModel.MessageBodyMemberAttribute> ve <xref:System.ServiceModel.MessageHeaderAttribute> ileti sözleşme sınıfı hangi kısımlarının ileti hangi kısmına eşlemelisiniz açıklamak için.  
   
  İleti sözleşmeleri sağlayan çok sayıda sonuç üzerinde denetim `Message` örnekleri (kullanarak olarak açıkça değil kadar denetim rağmen `Message` doğrudan sınıfı). Örneğin, İleti gövdeleri genellikle birden çok bilgi parçalarını oluşur, her biri kendi XML öğesi tarafından temsil edilen. Bu öğeleri ya da doğrudan gövdesinde oluşabilir (*tam* mod) veya olabilir *Sarmalanan* kapsamlı bir XML öğesi içinde. Programlama modeli ileti sözleşmesi kullanarak Sarmalanan karşılaştırması tam kararı ve kapsayıcı adı ve ad alanı adını denetlemenizi sağlar.  
   
@@ -240,7 +240,7 @@ ms.lasthandoff: 12/22/2017
  [!code-csharp[C_DataArchitecture#9](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_dataarchitecture/cs/source.cs#9)]
  [!code-vb[C_DataArchitecture#9](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_dataarchitecture/vb/source.vb#9)]  
   
- İşaretli öğeleri serileştirilmesi için (ile <xref:System.ServiceModel.MessageBodyMemberAttribute>, <xref:System.ServiceModel.MessageHeaderAttribute>, veya ilgili diğer öznitelikleri) bir ileti sözleşmesi katılmayı Serileştirilebilir olmalıdır. [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)]Bu konunun devamındaki "Serileştirme" bölümü.  
+ İşaretli öğeleri serileştirilmesi için (ile <xref:System.ServiceModel.MessageBodyMemberAttribute>, <xref:System.ServiceModel.MessageHeaderAttribute>, veya ilgili diğer öznitelikleri) bir ileti sözleşmesi katılmayı Serileştirilebilir olmalıdır. Daha fazla bilgi için bu konunun devamındaki "Serileştirme" bölümüne bakın.  
   
 ### <a name="4-parameters"></a>4. Parametreler  
  Genellikle, verileri birden çok parçalarını görevi gören bir işlemi tanımlamak için isteyen bir geliştirici denetime sahip ileti sözleşmeleri sağlayan gerekli değildir. Örneğin, yeni hizmetler oluştururken, bir genellikle Sarmalanan karşılaştırması tam kararı ve sarmalayıcı öğesi adına karar vermek istemez. Bu kararları genellikle Web Hizmetleri ve SOAP derinlemesine bilgi gerektirir.  
@@ -255,7 +255,7 @@ ms.lasthandoff: 12/22/2017
  Gönderilen veya önerilen yaklaşım basit işlemi sözleşme parametrelerin listesini olduğu gibi daha karmaşık ileti sözleşmesi taşımak için özel nedenleri mevcut sürece alınan bilgilere açıklayan veya `Message`-programlama modelleri tabanlı.  
   
 ### <a name="5-stream"></a>5. Akış  
- Kullanarak `Stream` veya bir işlem sözleşmesi veya bir ileti sözleşmesi bulunan bir tek ileti gövdesi parçası olarak kendi alt sınıflarından birini sayılabileceğini yukarıda açıklanan gördüğünüzden ayrı bir programlama modeli. Kullanarak `Stream` bu şekilde, sözleşme kendi akış uyumlu yazma eksikliği akışlı bir şekilde kullanılabilir olacağını garanti etmek için tek yoludur `Message` bir alt kümesi. [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)][Büyük veriler ve akış](../../../../docs/framework/wcf/feature-details/large-data-and-streaming.md).  
+ Kullanarak `Stream` veya bir işlem sözleşmesi veya bir ileti sözleşmesi bulunan bir tek ileti gövdesi parçası olarak kendi alt sınıflarından birini sayılabileceğini yukarıda açıklanan gördüğünüzden ayrı bir programlama modeli. Kullanarak `Stream` bu şekilde, sözleşme kendi akış uyumlu yazma eksikliği akışlı bir şekilde kullanılabilir olacağını garanti etmek için tek yoludur `Message` bir alt kümesi. Daha fazla bilgi için bkz: [büyük veriler ve akış](../../../../docs/framework/wcf/feature-details/large-data-and-streaming.md).  
   
  Zaman `Stream` veya onun alt sınıflarından birini bu şekilde kullanıldığında, seri hale getirici çağrılamaz. Özel akış giden iletiler için `Message` bir alt kümesi oluşturulur ve akış bölümünde açıklandığı gibi out yazılır <xref:System.Xml.IStreamProvider> arabirimi. Hizmet çerçevesi gelen iletiler için oluşturur bir `Stream` üzerinden gelen ileti bir alt işlemi sunar.  
   
@@ -279,11 +279,11 @@ ms.lasthandoff: 12/22/2017
 ## <a name="serialization"></a>Serileştirme  
  İleti içeriği açıklamak için ileti sözleşmeleri veya parametrelerini kullandığınızda arasında dönüştürme için seri hale getirme kullanmalısınız [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] türleri ve XML bilgi gösterimi. Seri hale getirme diğer bölümlerinde kullanılır [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)], örneğin, <xref:System.ServiceModel.Channels.Message> genel sahip <xref:System.ServiceModel.Channels.Message.GetBody%2A> bir nesneye tüm seri durumdan ileti gövdesini okumak için kullanabileceğiniz yöntemi.  
   
- [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]seri hale getirme ve seri durumdan parametreleri ve ileti bölümleri için iki serileştirme teknolojileri "dışında kutu" destekler: <xref:System.Runtime.Serialization.DataContractSerializer> ve `XmlSerializer`. Ayrıca, özel serileştiricileri yazabilirsiniz. Ancak, diğer bölümleri [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] (genel gibi `GetBody` yöntemi veya SOAP arıza seri hale getirme) yalnızca kullanmak üzere kısıtlanabilir <xref:System.Runtime.Serialization.XmlObjectSerializer> alt sınıflar (<xref:System.Runtime.Serialization.DataContractSerializer> ve <xref:System.Runtime.Serialization.NetDataContractSerializer>, ama <xref:System.Xml.Serialization.XmlSerializer>), veya bile olabilir yalnızca kullanmak için sabit kodlanmış <xref:System.Runtime.Serialization.DataContractSerializer>.  
+ [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] seri hale getirme ve seri durumdan parametreleri ve ileti bölümleri için iki serileştirme teknolojileri "dışında kutu" destekler: <xref:System.Runtime.Serialization.DataContractSerializer> ve `XmlSerializer`. Ayrıca, özel serileştiricileri yazabilirsiniz. Ancak, diğer bölümleri [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] (genel gibi `GetBody` yöntemi veya SOAP arıza seri hale getirme) yalnızca kullanmak üzere kısıtlanabilir <xref:System.Runtime.Serialization.XmlObjectSerializer> alt sınıflar (<xref:System.Runtime.Serialization.DataContractSerializer> ve <xref:System.Runtime.Serialization.NetDataContractSerializer>, ama <xref:System.Xml.Serialization.XmlSerializer>), veya bile olabilir yalnızca kullanmak için sabit kodlanmış <xref:System.Runtime.Serialization.DataContractSerializer>.  
   
- `XmlSerializer` Serileştirme motoruna kullanılan [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] Web Hizmetleri. `DataContractSerializer` Yeni veri sözleşmesi programlama modeli anlar yeni serileştirme altyapısıdır. `DataContractSerializer`Varsayılan seçenek ve kullanma seçimi `XmlSerializer` kullanarak bir işlem başına temel yapılan <xref:System.ServiceModel.Description.DataContractSerializerOperationBehavior.DataContractFormatAttribute%2A> özniteliği.  
+ `XmlSerializer` Serileştirme motoruna kullanılan [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] Web Hizmetleri. `DataContractSerializer` Yeni veri sözleşmesi programlama modeli anlar yeni serileştirme altyapısıdır. `DataContractSerializer` Varsayılan seçenek ve kullanma seçimi `XmlSerializer` kullanarak bir işlem başına temel yapılan <xref:System.ServiceModel.Description.DataContractSerializerOperationBehavior.DataContractFormatAttribute%2A> özniteliği.  
   
- <xref:System.ServiceModel.Description.DataContractSerializerOperationBehavior>ve <xref:System.ServiceModel.Description.XmlSerializerOperationBehavior> işlemi davranışları ileti biçimlendiricilerini takma için sorumlu olan `DataContractSerializer` ve `XmlSerializer`sırasıyla. <xref:System.ServiceModel.Description.DataContractSerializerOperationBehavior> Davranışı türetilen seri hale getirici ile gerçekte çalışabilir <xref:System.Runtime.Serialization.XmlObjectSerializer>dahil <xref:System.Runtime.Serialization.NetDataContractSerializer> (kullanarak tek başına serileştirmede ayrıntılı açıklanmıştır). Davranışı birine çağrılarını `CreateSerializer` sanal yöntemi aşırı seri hale getirici elde edilir. İçinde farklı bir seri hale getirici takmak için yeni bir oluşturma <xref:System.ServiceModel.Description.DataContractSerializerOperationBehavior> alt sınıf ve geçersiz kılma `CreateSerializer` aşırı.  
+ <xref:System.ServiceModel.Description.DataContractSerializerOperationBehavior> ve <xref:System.ServiceModel.Description.XmlSerializerOperationBehavior> işlemi davranışları ileti biçimlendiricilerini takma için sorumlu olan `DataContractSerializer` ve `XmlSerializer`sırasıyla. <xref:System.ServiceModel.Description.DataContractSerializerOperationBehavior> Davranışı türetilen seri hale getirici ile gerçekte çalışabilir <xref:System.Runtime.Serialization.XmlObjectSerializer>dahil <xref:System.Runtime.Serialization.NetDataContractSerializer> (kullanarak tek başına serileştirmede ayrıntılı açıklanmıştır). Davranışı birine çağrılarını `CreateSerializer` sanal yöntemi aşırı seri hale getirici elde edilir. İçinde farklı bir seri hale getirici takmak için yeni bir oluşturma <xref:System.ServiceModel.Description.DataContractSerializerOperationBehavior> alt sınıf ve geçersiz kılma `CreateSerializer` aşırı.  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
  [Hizmet Anlaşmalarında Veri Aktarımını Belirtme](../../../../docs/framework/wcf/feature-details/specifying-data-transfer-in-service-contracts.md)

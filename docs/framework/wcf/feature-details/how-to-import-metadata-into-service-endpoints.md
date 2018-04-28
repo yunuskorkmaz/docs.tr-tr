@@ -1,24 +1,26 @@
 ---
-title: "Nasıl yapılır: Hizmet Uç Noktalarına Meta Verileri İçe Aktarma"
-ms.custom: 
+title: 'Nasıl yapılır: Hizmet Uç Noktalarına Meta Verileri İçe Aktarma'
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: b69dbe20-92a1-4911-89d8-ffbc3dad4663
-caps.latest.revision: "13"
+caps.latest.revision: 13
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 2fa1831885eb24effc5f4267c208b8bffa9f0b75
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: b86f31217812767b0fbbd785a0f3ff96c2948854
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="how-to-import-metadata-into-service-endpoints"></a>Nasıl yapılır: Hizmet Uç Noktalarına Meta Verileri İçe Aktarma
 Bu konu hizmet uç noktaları koleksiyona meta verileri alma ve içinde tanımlanan Hizmeti'yle açıklanmaktadır [Başlarken](../../../../docs/framework/wcf/samples/getting-started-sample.md). Bu konu hizmet ve çağrıları sonra meta verileri içe aktaran bir istemci uygulaması oluşturmak nasıl Göster `Add` hizmette yöntemi.  
@@ -38,7 +40,7 @@ Bu konu hizmet uç noktaları koleksiyona meta verileri alma ve içinde tanımla
      [!code-csharp[UE_ImportMetadata#2](../../../../samples/snippets/csharp/VS_Snippets_CFX/ue_importmetadata/cs/client.cs#2)]  
   
     > [!NOTE]
-    >  Meta verileri içe aktardıktan sonra istemci kanal oluşturmak veya meta verilerini dışa aktarmak mümkün olmaz. Hiçbir tür bilgiler bu noktada kullanılamaz olmasıdır. Tür bilgileri gerçekte hizmetiyle etkileşim veya meta verilerini dışa aktarmak için gereklidir. Tür bilgileri oluşturmak için adım 4 ve 5 gösterilen kodu oluşturmak gerekir. Alternatif olarak, kullanabileceğinizi <xref:System.ServiceModel.Description.MetadataResolver> yardımcı sınıfı. [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)][Nasıl yapılır: bağlama meta verilerini dinamik olarak almak için MetadataResolver kullanma](../../../../docs/framework/wcf/feature-details/how-to-use-metadataresolver-to-obtain-binding-metadata-dynamically.md).  
+    >  Meta verileri içe aktardıktan sonra istemci kanal oluşturmak veya meta verilerini dışa aktarmak mümkün olmaz. Hiçbir tür bilgiler bu noktada kullanılamaz olmasıdır. Tür bilgileri gerçekte hizmetiyle etkileşim veya meta verilerini dışa aktarmak için gereklidir. Tür bilgileri oluşturmak için adım 4 ve 5 gösterilen kodu oluşturmak gerekir. Alternatif olarak, kullanabileceğinizi <xref:System.ServiceModel.Description.MetadataResolver> yardımcı sınıfı. Daha fazla bilgi için bkz: [nasıl yapılır: dinamik meta veri bağlama elde etmek için kullanım MetadataResolver](../../../../docs/framework/wcf/feature-details/how-to-use-metadataresolver-to-obtain-binding-metadata-dynamically.md).  
   
 4.  Her sözleşme için tür bilgisi oluşturur.  
   

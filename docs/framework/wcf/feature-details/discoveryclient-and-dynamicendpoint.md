@@ -1,30 +1,32 @@
 ---
 title: DiscoveryClient ve DynamicEndpoint
-ms.custom: 
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 7cd418f0-0eab-48d1-a493-7eb907867ec3
-caps.latest.revision: "5"
+caps.latest.revision: 5
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 6e3ac334d53480ba8b63cc8e8f117dd74315963c
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: c652e58b20a6fe836e647ed07c6a84328ee4631e
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="discoveryclient-and-dynamicendpoint"></a>DiscoveryClient ve DynamicEndpoint
-<xref:System.ServiceModel.Discovery.DiscoveryClient>ve <xref:System.ServiceModel.Discovery.DynamicEndpoint> istemci tarafında Hizmetleri aramak için kullanılan iki sınıf. <xref:System.ServiceModel.Discovery.DiscoveryClient>belirli bir eşleşen hizmetlerin listesini sizinle ölçütünü ayarlamak ve hizmetlere bağlanmanıza olanak sağlayan sağlar. <xref:System.ServiceModel.Discovery.DynamicEndpoint>aynı işlemi gerçekleştirir ve otomatik olarak bağlanır bulundu hizmetlerden biri için ek olarak. Herhangi bir uç nokta içine yapılabilir bir <xref:System.ServiceModel.Discovery.DynamicEndpoint>, arama ölçütlerini de yapılandırması, bu nedenle eklenebilir <xref:System.ServiceModel.Discovery.DynamicEndpoint> yararlı olduğunda bulma çözümünüzde gerekir, ancak istemci mantığı değiştirmek istiyor musunuz – uç noktalarını değiştirmek yeterlidir. <xref:System.ServiceModel.Discovery.DiscoveryClient>Öte yandan, arama işlemi üzerinde daha hassas denetim kazanmak için kullanılabilir. Kullanır ve her birinin avantajları aşağıda ayrıntılandırılmıştır.  
+<xref:System.ServiceModel.Discovery.DiscoveryClient> ve <xref:System.ServiceModel.Discovery.DynamicEndpoint> istemci tarafında Hizmetleri aramak için kullanılan iki sınıf. <xref:System.ServiceModel.Discovery.DiscoveryClient> belirli bir eşleşen hizmetlerin listesini sizinle ölçütünü ayarlamak ve hizmetlere bağlanmanıza olanak sağlayan sağlar. <xref:System.ServiceModel.Discovery.DynamicEndpoint> aynı işlemi gerçekleştirir ve otomatik olarak bağlanır bulundu hizmetlerden biri için ek olarak. Herhangi bir uç nokta içine yapılabilir bir <xref:System.ServiceModel.Discovery.DynamicEndpoint>, arama ölçütlerini de yapılandırması, bu nedenle eklenebilir <xref:System.ServiceModel.Discovery.DynamicEndpoint> yararlı olduğunda bulma çözümünüzde gerekir, ancak istemci mantığı değiştirmek istiyor musunuz – uç noktalarını değiştirmek yeterlidir. <xref:System.ServiceModel.Discovery.DiscoveryClient> Öte yandan, arama işlemi üzerinde daha hassas denetim kazanmak için kullanılabilir. Kullanır ve her birinin avantajları aşağıda ayrıntılandırılmıştır.  
   
 ## <a name="discoveryclient"></a>DiscoveryClient  
- <xref:System.ServiceModel.Discovery.DiscoveryClient> Zaman uyumlu ve zaman uyumsuz bulma yöntemleri tanımlar <xref:System.ServiceModel.Discovery.DiscoveryClient.FindCompleted> ve <xref:System.ServiceModel.Discovery.DiscoveryClient.FindProgressChanged> olaylar.  Zaman uyumlu ve zaman uyumsuz Çözümleme yöntemleri de tanımlar ve <xref:System.ServiceModel.Discovery.DiscoveryClient.ResolveCompleted> olay. Kullanım <xref:System.ServiceModel.Discovery.DiscoveryClient.Find%2A> veya <xref:System.ServiceModel.Discovery.DiscoveryClient.FindAsync%2A> Hizmetleri aramak için yöntemleri. Bu yöntemlerin her ikisi de ele bir <xref:System.ServiceModel.Discovery.FindCriteria> sözleşme tür adları, kapsamları, istenen sonuçlarının maksimum sayısını belirtmenize olanak tanır örneği ve eşleştirme kuralları kapsamı. <xref:System.ServiceModel.Discovery.DiscoveryClient.FindCompleted> Ve <xref:System.ServiceModel.Discovery.DiscoveryClient.FindProgressChanged> çağrılırken olayları kullanılabilir <xref:System.ServiceModel.Discovery.DiscoveryClient.FindAsync%2A> yöntemi. <xref:System.ServiceModel.Discovery.DiscoveryClient.FindProgressChanged>Her tetiklenir <xref:System.ServiceModel.Discovery.DiscoveryClient> bir hizmetinden bir yanıt alır. Bir ilerleme çubuğu bulma işleminin ilerleme durumunu gösteren görüntülemek için kullanılabilir. Ayrıca, bulma yanıtları alındıkları olarak hareket edecek de kullanılabilir. <xref:System.ServiceModel.Discovery.DiscoveryClient.FindCompleted> Bulma işlemi tamamlandığında olay tetiklenir. Bu yanıt maksimum sayısı aldığından veya varsa ortaya çıkabilir <xref:System.ServiceModel.Discovery.FindCriteria.Duration%2A> geçti. Bulma işlemi tamamlandığında sonuçları döndürülür bir <xref:System.ServiceModel.Discovery.FindResponse> örneği. <xref:System.ServiceModel.Discovery.FindResponse> Oluşan bir koleksiyon içeren <xref:System.ServiceModel.Discovery.EndpointDiscoveryMetadata> adresleri, sözleşme tür adları, uzantılar, dinleme URI'ler ve eşleşen hizmetleri kapsamını içerir. Bu bilgiler daha sonra bağlanmak ve eşleşen hizmetlerden biri çağırmak için de kullanabilirsiniz. Aşağıdaki örnek System.ServiceModel.Discovery.DiscoveryClient.Find(System.ServiceModel.Discovery.FindCriteria) yöntemini çağırın ve bulunan hizmetini çağırmak için döndürülen meta veri nasıl kullanılacağını gösterir. Kullanmanın bir avantajı <xref:System.ServiceModel.Discovery.DiscoveryClient.Find(System.ServiceModel.Discovery.FindCriteria)> olan buldunuz ve daha sonraki bir zamanda kullanmak bitiş noktaları listesini önbelleğe alabilirsiniz. Bu önbellek ile çeşitli hatası koşullarını işlemek için Özel mantık oluşturabilirsiniz.  
+ <xref:System.ServiceModel.Discovery.DiscoveryClient> Zaman uyumlu ve zaman uyumsuz bulma yöntemleri tanımlar <xref:System.ServiceModel.Discovery.DiscoveryClient.FindCompleted> ve <xref:System.ServiceModel.Discovery.DiscoveryClient.FindProgressChanged> olaylar.  Zaman uyumlu ve zaman uyumsuz Çözümleme yöntemleri de tanımlar ve <xref:System.ServiceModel.Discovery.DiscoveryClient.ResolveCompleted> olay. Kullanım <xref:System.ServiceModel.Discovery.DiscoveryClient.Find%2A> veya <xref:System.ServiceModel.Discovery.DiscoveryClient.FindAsync%2A> Hizmetleri aramak için yöntemleri. Bu yöntemlerin her ikisi de ele bir <xref:System.ServiceModel.Discovery.FindCriteria> sözleşme tür adları, kapsamları, istenen sonuçlarının maksimum sayısını belirtmenize olanak tanır örneği ve eşleştirme kuralları kapsamı. <xref:System.ServiceModel.Discovery.DiscoveryClient.FindCompleted> Ve <xref:System.ServiceModel.Discovery.DiscoveryClient.FindProgressChanged> çağrılırken olayları kullanılabilir <xref:System.ServiceModel.Discovery.DiscoveryClient.FindAsync%2A> yöntemi. <xref:System.ServiceModel.Discovery.DiscoveryClient.FindProgressChanged> Her tetiklenir <xref:System.ServiceModel.Discovery.DiscoveryClient> bir hizmetinden bir yanıt alır. Bir ilerleme çubuğu bulma işleminin ilerleme durumunu gösteren görüntülemek için kullanılabilir. Ayrıca, bulma yanıtları alındıkları olarak hareket edecek de kullanılabilir. <xref:System.ServiceModel.Discovery.DiscoveryClient.FindCompleted> Bulma işlemi tamamlandığında olay tetiklenir. Bu yanıt maksimum sayısı aldığından veya varsa ortaya çıkabilir <xref:System.ServiceModel.Discovery.FindCriteria.Duration%2A> geçti. Bulma işlemi tamamlandığında sonuçları döndürülür bir <xref:System.ServiceModel.Discovery.FindResponse> örneği. <xref:System.ServiceModel.Discovery.FindResponse> Oluşan bir koleksiyon içeren <xref:System.ServiceModel.Discovery.EndpointDiscoveryMetadata> adresleri, sözleşme tür adları, uzantılar, dinleme URI'ler ve eşleşen hizmetleri kapsamını içerir. Bu bilgiler daha sonra bağlanmak ve eşleşen hizmetlerden biri çağırmak için de kullanabilirsiniz. Aşağıdaki örnek System.ServiceModel.Discovery.DiscoveryClient.Find(System.ServiceModel.Discovery.FindCriteria) yöntemini çağırın ve bulunan hizmetini çağırmak için döndürülen meta veri nasıl kullanılacağını gösterir. Kullanmanın bir avantajı <xref:System.ServiceModel.Discovery.DiscoveryClient.Find(System.ServiceModel.Discovery.FindCriteria)> olan buldunuz ve daha sonraki bir zamanda kullanmak bitiş noktaları listesini önbelleğe alabilirsiniz. Bu önbellek ile çeşitli hatası koşullarını işlemek için Özel mantık oluşturabilirsiniz.  
   
 ```  
 DiscoveryClient dc = new DiscoveryClient(new UdpDiscoveryEndpoint());  
@@ -90,7 +92,7 @@ static void discoveryClient_FindCompleted(object sender, FindCompletedEventArgs 
         }  
 ```  
   
- [!INCLUDE[crabout](../../../../includes/crabout-md.md)]zaman uyumsuz hale çağrıları bulmak için bkz [zaman uyumsuz bulma](../../../../docs/framework/wcf/samples/asynchronous-find-sample.md).  
+ [!INCLUDE[crabout](../../../../includes/crabout-md.md)] zaman uyumsuz hale çağrıları bulmak için bkz [zaman uyumsuz bulma](../../../../docs/framework/wcf/samples/asynchronous-find-sample.md).  
   
  Kullanım <xref:System.ServiceModel.Discovery.DiscoveryClient.Resolve%2A> ve <xref:System.ServiceModel.Discovery.DiscoveryClient.ResolveAsync%28System.ServiceModel.Discovery.ResolveCriteria%29> bir hizmeti bulmak için yöntemleri temel uç nokta adresine. Uç nokta adresi adreslenebilir ağ olmadığında kullanışlıdır. Çözümleme yöntemleri bir örneği ele <xref:System.ServiceModel.Discovery.ResolveCriteria> , çözümleme, çözümleme işlemi en uzun süresi ve uzantılar kümesi, hizmet uç noktası adresi belirtme sağlar. Aşağıdaki örnekte nasıl kullanılacağını gösterir <xref:System.ServiceModel.Discovery.DiscoveryClient.Resolve%2A> bir hizmeti çözümlemek için yöntem.  
   
@@ -102,7 +104,7 @@ EndpointAddress newEp = response.EndpointDiscoveryMetadata.Address;
 ```  
   
 ## <a name="dynamicendpoint"></a>DynamicEndpoint  
- <xref:System.ServiceModel.Discovery.DynamicEndpoint>Standart uç noktası ([!INCLUDE[crdefault](../../../../includes/crdefault-md.md)] [standart uç noktaları](../../../../docs/framework/wcf/feature-details/standard-endpoints.md)) bulma işlemini gerçekleştirir ve eşleşen hizmet otomatik olarak seçer. Yalnızca oluşturmanız bir <xref:System.ServiceModel.Discovery.DynamicEndpoint> aramak ve kullanın ve geçirmek için bağlama sözleşmesindeki geçirme <xref:System.ServiceModel.Discovery.DynamicEndpoint> WCF istemcisini örneğine. Aşağıdaki örnekte, oluşturma ve kullanma gösterilmektedir bir <xref:System.ServiceModel.Discovery.DynamicEndpoint> hesaplayıcı hizmetini çağırmak için. İstemci her açıldığında bulma gerçekleştirilir. Yapılandırmada tanımlanan herhangi bir uç nokta da dönüştürülebilir bir <xref:System.ServiceModel.Discovery.DynamicEndpoint> ekleyerek `kind ="dynamicEndpoint"` özniteliği için uç nokta yapılandırma öğesi.  
+ <xref:System.ServiceModel.Discovery.DynamicEndpoint> Standart uç noktası (daha fazla bilgi için bkz: [standart uç noktaları](../../../../docs/framework/wcf/feature-details/standard-endpoints.md)) bulma işlemini gerçekleştirir ve eşleşen hizmet otomatik olarak seçer. Yalnızca oluşturmanız bir <xref:System.ServiceModel.Discovery.DynamicEndpoint> aramak ve kullanın ve geçirmek için bağlama sözleşmesindeki geçirme <xref:System.ServiceModel.Discovery.DynamicEndpoint> WCF istemcisini örneğine. Aşağıdaki örnekte, oluşturma ve kullanma gösterilmektedir bir <xref:System.ServiceModel.Discovery.DynamicEndpoint> hesaplayıcı hizmetini çağırmak için. İstemci her açıldığında bulma gerçekleştirilir. Yapılandırmada tanımlanan herhangi bir uç nokta da dönüştürülebilir bir <xref:System.ServiceModel.Discovery.DynamicEndpoint> ekleyerek `kind ="dynamicEndpoint"` özniteliği için uç nokta yapılandırma öğesi.  
   
 ```  
 DynamicEndpoint dynamicEndpoint = new DynamicEndpoint(ContractDescription.GetContract(typeof(ICalculatorService)), new WSHttpBinding());  

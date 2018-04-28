@@ -19,24 +19,24 @@ ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: 9ddc1b505146e7ca31bca5acc5e9d19d258a860d
-ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
-ms.translationtype: HT
+ms.openlocfilehash: b166dc273eed83660565d9b3bc6a70ffc85547fa
+ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="client-application-services-overview"></a>İstemci Uygulama Hizmetlerine Genel Bakış
 İstemci uygulama hizmetleri sağlamak için Basitleştirilmiş erişim [!INCLUDE[ajax_current_short](../../../includes/ajax-current-short-md.md)] oturum açma, roller ve Windows Forms ve Windows Presentation Foundation (WPF) uygulamalardan profili Hizmetleri. [!INCLUDE[ajax_current_short](../../../includes/ajax-current-short-md.md)] Uygulama Hizmetleri, Microsoft ASP.NET 2.0 AJAX, içerdiği uzantıları bulunmaktadır [!INCLUDE[vs_orcas_long](../../../includes/vs-orcas-long-md.md)] ve [!INCLUDE[net_v35_long](../../../includes/net-v35-long-md.md)]. Bu hizmetler, birden çok Web ve Windows tabanlı uygulamalar kullanıcı bilgileri ve kullanıcı yönetimi işlevleri tek bir sunucudan paylaşmak için etkinleştirin.  
   
  İstemci uygulama hizmetleri, Windows tabanlı uygulamalar için aşağıdaki özellikleri etkinleştirmek için Web services genişletilebilirlik modeli takın istemci hizmeti sağlayıcıları içerir:  
   
--   Basit istemci yapılandırması. Etkinleştirin ve oturum açma, roller ve profil Hizmetleri kullanarak yapılandırma [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] Proje Tasarımcısı veya projenizin App.config dosyasında istemci hizmeti sağlayıcıları belirterek. Daha fazla bilgi için bkz: [nasıl yapılır: istemci uygulama hizmetleri yapılandırma](../../../docs/framework/common-client-technologies/how-to-configure-client-application-services.md).  
+-   Basit istemci yapılandırması. Etkinleştirin ve oturum açma, roller ve profil Hizmetleri Visual Studio Proje Tasarımcısı'nı kullanarak veya projenizin App.config dosyasında istemci hizmeti sağlayıcıları belirterek yapılandırın. Daha fazla bilgi için bkz: [nasıl yapılır: istemci uygulama hizmetleri yapılandırma](../../../docs/framework/common-client-technologies/how-to-configure-client-application-services.md).  
   
 -   Basit programlamasına. Etkin ve istemci uygulama hizmetleri yapılandırdıktan sonra hizmet sağlayıcılarının dolaylı olarak varolan aracılığıyla erişebilirsiniz [!INCLUDE[dnprdnlong](../../../includes/dnprdnlong-md.md)] üyelik, roller ve uygulama ayarlarını sınıfları. Ayrıca doğrudan erişebilirsiniz [!INCLUDE[net_v35_long](../../../includes/net-v35-long-md.md)] istemci uygulama hizmetleri uygulayan sınıflar. Bununla birlikte, çoğu durumda, doğrudan erişim gerekli değildir. İstemci uygulama hizmetleri sınıfları hakkında daha fazla bilgi için bu konunun "İstemci uygulama hizmetleri sınıfları" bölümüne bakın.  
   
 -   Çevrimdışı Destek. Windows tabanlı uygulamalar genellikle bazen bağlı ortamlarda çalışmasına sahiptir. Uygulamanızı çevrimiçi olduğunda, istemci hizmeti sağlayıcıları uygulama çevrimdışı olduğunda kullanılacak sunucusundan alınan değerleri önbelleğe alır.  
   
--   İle tümleştirme [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] uygulama ayarları Tasarımcısı. Ayarları projenizde eklediğinizde [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)], istemci ayarlarını hizmet sağlayıcısı üzerinden erişilebilmesi için olan ayarları belirtebilirsiniz.  
+-   Visual Studio uygulama ayarları Tasarımcısı ile tümleştirme. Projeniz Visual Studio'da ayarları eklediğinizde, istemci ayarlarını hizmet sağlayıcısı üzerinden erişilebilmesi için olan ayarları belirtebilirsiniz.  
   
  Aşağıdaki bölümlerde bu özellikler daha ayrıntılı açıklanmıştır. Hakkında daha fazla bilgi için [!INCLUDE[ajax_current_short](../../../includes/ajax-current-short-md.md)] uygulama bkz [ASP.NET uygulama hizmetleri genel bakış](http://msdn.microsoft.com/library/1162e529-0d70-44b2-b3ab-83e60c695013).  
   
@@ -61,9 +61,9 @@ ms.lasthandoff: 04/26/2018
  Nasıl ayarlandığı hakkında bilgi için [!INCLUDE[ajax_current_short](../../../includes/ajax-current-short-md.md)] rol hizmeti, bkz: [rolleri bilgilerle kullanarak Microsoft Ajax](http://msdn.microsoft.com/library/280f6ad9-ba1a-4fc9-b0cc-22e39e54a82d).  
   
 ## <a name="settings"></a>Ayarlar  
- İstemci uygulama hizmetleri mevcut bir kullanıcı uygulama ayarlarını almak için kullanabileceğiniz [!INCLUDE[ajax_current_short](../../../includes/ajax-current-short-md.md)] profil hizmeti. Web ayarları özelliği sağlanan uygulama ayarlarını özelliği ile tümleşir istemci uygulama hizmetleri [!INCLUDE[dnprdnlong](../../../includes/dnprdnlong-md.md)]. Web ayarları almak için önce oluşturmak bir `Settings` sınıfı (olarak erişilen `Properties.Settings.Default` C# ve `My.Settings` Visual Basic'te) kullanarak projeniz için **ayarları** sekmesinde [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] Proje Tasarımcısı. Üzerinde **ayarları** kullanabileceğiniz sekmesinde **yük Web ayarları** Web ayarları almak ve bunları oluşturulan için Ekle düğmesini `Settings` sınıfı. Tüm kimliği doğrulanmış kullanıcılara veya tüm anonim kullanıcılar tarafından kullanılmak üzere yapılandırılmış Web ayarlarını kullanabilirsiniz.  
+ İstemci uygulama hizmetleri mevcut bir kullanıcı uygulama ayarlarını almak için kullanabileceğiniz [!INCLUDE[ajax_current_short](../../../includes/ajax-current-short-md.md)] profil hizmeti. Web ayarları özelliği sağlanan uygulama ayarlarını özelliği ile tümleşir istemci uygulama hizmetleri [!INCLUDE[dnprdnlong](../../../includes/dnprdnlong-md.md)]. Web ayarları almak için önce oluşturmak bir `Settings` sınıfı (olarak erişilen `Properties.Settings.Default` C# ve `My.Settings` Visual Basic'te) kullanarak projeniz için **ayarları** Visual Studio Proje Tasarımcısı'nın sekmesi. Üzerinde **ayarları** kullanabileceğiniz sekmesinde **yük Web ayarları** Web ayarları almak ve bunları oluşturulan için Ekle düğmesini `Settings` sınıfı. Tüm kimliği doğrulanmış kullanıcılara veya tüm anonim kullanıcılar tarafından kullanılmak üzere yapılandırılmış Web ayarlarını kullanabilirsiniz.  
   
- Uygulama ayarları hakkında daha fazla bilgi için bkz: [uygulama ayarlarına genel bakış](../../../docs/framework/winforms/advanced/application-settings-overview.md). Birinde oluşturmak yerine, kendi ayarları sınıf uygulama hakkında bilgi için [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)], bkz: [nasıl yapılır: uygulama ayarları oluştur](../../../docs/framework/winforms/advanced/how-to-create-application-settings.md). Nasıl ayarlandığı hakkında bilgi için [!INCLUDE[ajax_current_short](../../../includes/ajax-current-short-md.md)] profil hizmet için bkz: [profil bilgilerle kullanarak Microsoft Ajax](http://msdn.microsoft.com/library/91239ae6-d01c-4f4e-a433-eb9040dbed61).  
+ Uygulama ayarları hakkında daha fazla bilgi için bkz: [uygulama ayarlarına genel bakış](../../../docs/framework/winforms/advanced/application-settings-overview.md). Visual Studio birinde oluşturmak yerine, kendi ayarları sınıf uygulama hakkında daha fazla bilgi için bkz: [nasıl yapılır: uygulama ayarları oluştur](../../../docs/framework/winforms/advanced/how-to-create-application-settings.md). Nasıl ayarlandığı hakkında bilgi için [!INCLUDE[ajax_current_short](../../../includes/ajax-current-short-md.md)] profil hizmet için bkz: [profil bilgilerle kullanarak Microsoft Ajax](http://msdn.microsoft.com/library/91239ae6-d01c-4f4e-a433-eb9040dbed61).  
   
 ## <a name="client-application-services-classes"></a>Sınıfları istemci uygulama hizmetleri  
  Aşağıdaki tabloda, istemci uygulama hizmetleri özelliği uygulayan sınıflar açıklanmaktadır.  

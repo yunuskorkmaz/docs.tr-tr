@@ -1,20 +1,17 @@
 ---
-title: "Sorgu İfadeleri (F#)"
-description: "Sorgu ifadesi LINQ F # programlama dili desteği hakkında bilgi edinin."
-keywords: "Visual f #, f # işlevsel programlama"
+title: Sorgu İfadeleri (F#)
+description: 'Sorgu ifadesi LINQ F # programlama dili desteği hakkında bilgi edinin.'
 author: cartermp
 ms.author: phcart
 ms.date: 05/16/2016
 ms.topic: language-reference
-ms.prod: .net
-ms.technology: devlang-fsharp
+ms.prod: dotnet-fsharp
 ms.devlang: fsharp
-ms.assetid: 35df2d80-e6d2-4873-b2de-9b45b9e9e650
-ms.openlocfilehash: 20ea7ef820dd295497ed996ce10e5a594d021f7e
-ms.sourcegitcommit: 39b65a49271e082add68cb737b48fdbe09d24718
+ms.openlocfilehash: 81b81d25b8c0d8656dedffd2f8ec7a8297ef7191
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/30/2017
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="query-expressions"></a>Sorgu İfadeleri
 
@@ -680,7 +677,7 @@ query {
 </code></pre>
 
 </td></tr><tr><td>
-<code>IN</code>Belirtilen değer kümesi<br/>
+<code>IN</code> Belirtilen değer kümesi<br/>
 
 <pre><code class="lang-sql">SELECT *
 FROM Student
@@ -703,7 +700,7 @@ query {
 </code></pre>
 
 </td></tr><tr><td>
-<code>LIKE</code>ve <code>TOP</code>.<br/>
+<code>LIKE</code> ve <code>TOP</code>.<br/>
 
 <pre><code class="lang-sql">-- '_e%' matches strings where the second character is 'e'
 SELECT TOP 2 * FROM Student
@@ -721,7 +718,7 @@ query {
 </code></pre>
 
 </td></tr><tr><td>
-<code>LIKE</code>desenle kümesi ile eşleşmesi.<br/>
+<code>LIKE</code> desenle kümesi ile eşleşmesi.<br/>
 
 <pre><code class="lang-sql">-- '[abc]%' matches strings where the first character is
 -- 'a', 'b', 'c', 'A', 'B', or 'C'
@@ -738,7 +735,7 @@ WHERE Student.Name LIKE '[abc]%'
 </code></pre>
 
 </td></tr><tr><td>
-<code>LIKE</code>set dışlama deseni.<br/>
+<code>LIKE</code> set dışlama deseni.<br/>
 
 <pre><code class="lang-sql">-- '[^abc]%' matches strings where the first character is
 -- not 'a', 'b', 'c', 'A', 'B', or 'C'
@@ -757,7 +754,7 @@ query {
 </code></pre>
 
 </td></tr><tr><td>
-<code>LIKE</code>bir alan, ancak farklı bir alan seçin.<br/>
+<code>LIKE</code> bir alan, ancak farklı bir alan seçin.<br/>
 
 <pre><code class="lang-sql">SELECT StudentID AS ID FROM Student
 WHERE Student.Name LIKE '[^abc]%'
@@ -807,7 +804,7 @@ query {
 }
 </code></pre>
 
-</td></tr><tr><td><code>LEFT JOIN</code>iki tablo ile.<br/>
+</td></tr><tr><td><code>LEFT JOIN</code> iki tablo ile.<br/>
 
 <pre><code class="lang-sql">SELECT * FROM Student
 LEFT JOIN CourseSelection
@@ -826,7 +823,7 @@ query {
 }
 </code></pre>
 
-</td></tr><tr><td><code>JOIN</code>ile<code>COUNT</code><br/>
+</td></tr><tr><td><code>JOIN</code> İle <code>COUNT</code><br/>
 
 <pre><code class="lang-sql">SELECT COUNT( * ) FROM Student
 JOIN CourseSelection
@@ -909,7 +906,7 @@ query {
 }
 </code></pre>
 
-</td></tr><tr><td><code>OR</code>sıralama ile<br/>
+</td></tr><tr><td><code>OR</code> sıralama ile<br/>
 
 <pre><code class="lang-sql">SELECT * FROM Student
 WHERE Student.Age = 12 OR Student.Age = 13
@@ -949,7 +946,7 @@ query {
 }
 </code></pre>
 
-</td></tr><tr><td><code>UNION</code>iki sorguları.<br/>
+</td></tr><tr><td><code>UNION</code> iki sorguları.<br/>
 
 <pre><code class="lang-sql">SELECT * FROM Student
 UNION
@@ -998,7 +995,7 @@ let query2 =
 query1.Intersect(query2)
 </code></pre>
 
-</td></tr><tr><td><code>CASE</code>Koşul.<br/>
+</td></tr><tr><td><code>CASE</code> Koşul.<br/>
 
 <pre><code class="lang-sql">SELECT student.StudentID,
 CASE Student.Age
@@ -2434,8 +2431,8 @@ end
 ```
 
 ## <a name="see-also"></a>Ayrıca Bkz.
-[F # dili başvurusu](index.md)
+[F# Dili Başvurusu](index.md)
 
 [Linq.QueryBuilder sınıfı](https://msdn.microsoft.com/visualfsharpdocs/conceptual/linq.querybuilder-class-%5bfsharp%5d)
 
-[Hesaplama ifadeleri](Computation-Expressions.md)
+[Hesaplama İfadeleri](Computation-Expressions.md)

@@ -1,24 +1,26 @@
 ---
-title: "WCF Keşif Genel Bakış"
-ms.custom: 
+title: WCF Keşif Genel Bakış
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 84fad0e4-23b1-45b5-a2d4-c9cdf90bbb22
-caps.latest.revision: "21"
+caps.latest.revision: 21
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 28bf67b3840cb37c918198dd0910db9d592a6823
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 7b44a1587c704b0995821c7126f0264695861558
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="wcf-discovery-overview"></a>WCF Keşif Genel Bakış
 Bulma API'ları dinamik yayını ve bulma WS bulma protokolünü kullanarak bir Web Hizmetleri için birleşik bir programlama modeli sağlar. Bu API'leri kendilerini ve yayımlanan hizmetleri bulmak için istemcileri yayımlamak hizmetler sağlar. Bir hizmet bulunabilirlik sağlandıktan sonra hizmet duyuru iletileri gönderme yanı sıra dinler ve bulma isteklerine yanıt özelliğine sahiptir. Bulunabilirlik Hizmetleri Ağ üzerinde kendi varış duyurmaktan Merhaba iletileri ve bunların ayrılma ağdan duyurmaktan Bye iletileri gönderebilir. Bir hizmet bulmak için istemcilerin gönderdiği bir `Probe` hizmet sözleşmesi türü, anahtar sözcükleri ve ağ üzerindeki kapsamı gibi belirli bir ölçüte içeren isteği. Hizmetleri almak `Probe` istemek ve ölçütlerle eşleştiğini belirlemek. Bir hizmet eşleşirse, göndererek yanıt bir `ProbeMatch` hizmetiyle iletişim için gereken bilgiler ile istemciye ileti. İstemcileri de gönderebilirler `Resolve` bunları kendi uç noktası adresi değişmiş olabilir Hizmetleri bulmak izin istekleri. Eşleşen Hizmetleri yanıt için `Resolve` göndererek isteklerini bir `ResolveMatch` istemciye ileti.  
@@ -157,7 +159,7 @@ class Client
 ```  
   
 ## <a name="discovery-and-message-level-security"></a>Bulma ve ileti düzeyi güvenliği  
- İleti düzeyi güvenlik kullanılırken belirtmek için gerekli bir <xref:System.ServiceModel.EndpointIdentity> hizmet bulma uç noktası ve eşleşen bir <xref:System.ServiceModel.EndpointIdentity> istemci bulma uç. [!INCLUDE[crabout](../../../../includes/crabout-md.md)]ileti düzeyi güvenlik için bkz: [ileti güvenliği](../../../../docs/framework/wcf/feature-details/message-security-in-wcf.md).  
+ İleti düzeyi güvenlik kullanılırken belirtmek için gerekli bir <xref:System.ServiceModel.EndpointIdentity> hizmet bulma uç noktası ve eşleşen bir <xref:System.ServiceModel.EndpointIdentity> istemci bulma uç. [!INCLUDE[crabout](../../../../includes/crabout-md.md)] ileti düzeyi güvenlik için bkz: [ileti güvenliği](../../../../docs/framework/wcf/feature-details/message-security-in-wcf.md).  
   
 ## <a name="discovery-and-web-hosted-services"></a>Bulma ve Web Hizmetleri barındırılan  
  WCF hizmetleri bulunabilir sırayla bunlar çalıştırması gerekir. IIS kadar IIS ya da WAS çalıştırmayın altında barındırılan WCF hizmetleri / olan hizmet için varsayılan olarak bulunabilirlik olamaz bağlı bir ileti alır.  Web barındırılan hizmetleri bulunabilir yapmak için iki seçenek vardır:  
@@ -166,9 +168,9 @@ class Client
   
 2.  Adına hizmeti iletişim kurmak için keşif proxy'si kullanın  
   
- Windows Server AppFabric iletileri almadan önce başlatılması bir hizmet sağlayacak bir otomatik başlatma özelliği vardır. Bu otomatik başlatma olan ayarlayın, bir IIS / barındırılan WAS hizmeti bulunabilir olarak yapılandırılabilir. [!INCLUDE[crabout](../../../../includes/crabout-md.md)]Otomatik başlatma özelliği bakın, [Windows Server AppFabric otomatik başlatma özelliği](http://go.microsoft.com/fwlink/?LinkId=205545). Otomatik başlatma özelliğini kapatma yanı sıra, hizmet bulma için yapılandırmanız gerekir. [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)][Nasıl yapılır: program aracılığıyla bir WCF hizmeti ve istemci Keşfedilebilirlik ekleme](../../../../docs/framework/wcf/feature-details/how-to-programmatically-add-discoverability-to-a-wcf-service-and-client.md)[bulma yapılandırma dosyasındaki yapılandırma](../../../../docs/framework/wcf/feature-details/configuring-discovery-in-a-configuration-file.md).  
+ Windows Server AppFabric iletileri almadan önce başlatılması bir hizmet sağlayacak bir otomatik başlatma özelliği vardır. Bu otomatik başlatma olan ayarlayın, bir IIS / barındırılan WAS hizmeti bulunabilir olarak yapılandırılabilir. [!INCLUDE[crabout](../../../../includes/crabout-md.md)] Otomatik başlatma özelliği bakın, [Windows Server AppFabric otomatik başlatma özelliği](http://go.microsoft.com/fwlink/?LinkId=205545). Otomatik başlatma özelliğini kapatma yanı sıra, hizmet bulma için yapılandırmanız gerekir. Daha fazla bilgi için bkz: [nasıl yapılır: program aracılığıyla eklemek bulunabilirliği bir WCF hizmeti ve istemci](../../../../docs/framework/wcf/feature-details/how-to-programmatically-add-discoverability-to-a-wcf-service-and-client.md)[yapılandırma bulma yapılandırma dosyasında](../../../../docs/framework/wcf/feature-details/configuring-discovery-in-a-configuration-file.md).  
   
- Keşif proxy'si hizmeti çalışmadığı zaman adına WCF Hizmeti iletişim kurmak için kullanılabilir. Proxy için yoklama dinleme veya iletileri çözün ve istemci yanıt. İstemci, ardından doğrudan hizmet iletileri gönderebilir. İstemci hizmete bir ileti gönderdiğinde iletisinde örneği. [!INCLUDE[crabout](../../../../includes/crabout-md.md)]Keşif proxy'si ekleme bakın, [keşif proxy'si ekleme](../../../../docs/framework/wcf/feature-details/implementing-a-discovery-proxy.md).  
+ Keşif proxy'si hizmeti çalışmadığı zaman adına WCF Hizmeti iletişim kurmak için kullanılabilir. Proxy için yoklama dinleme veya iletileri çözün ve istemci yanıt. İstemci, ardından doğrudan hizmet iletileri gönderebilir. İstemci hizmete bir ileti gönderdiğinde iletisinde örneği. [!INCLUDE[crabout](../../../../includes/crabout-md.md)] Keşif proxy'si ekleme bakın, [keşif proxy'si ekleme](../../../../docs/framework/wcf/feature-details/implementing-a-discovery-proxy.md).  
   
 > [!NOTE]
 >  WCF keşif'ın düzgün çalışması tüm NIC'ler (ağ arabirimi denetleyicisinin) yalnızca 1 IP adresi olmalıdır.

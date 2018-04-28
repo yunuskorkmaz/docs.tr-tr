@@ -25,11 +25,11 @@ ms.assetid: cae77565-9f78-4e46-8e42-eb2f9f8e1ffd
 caps.latest.revision: 49
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: bff2e66b1a196117117370f7620f3f55576ad19b
-ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
-ms.translationtype: HT
+ms.openlocfilehash: 12461cc99ec03ed87924c894e23740f9d76385ed
+ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="walkthrough-manipulating-files-and-directories-in-visual-basic"></a>İzlenecek Yol: Visual Basic'te Dosyaları ve Dizinleri Düzenleme
 Bu kılavuz, Visual Basic'te dosya g/ç ile ilgili temel bilgileri tanıtılmaktadır. Listeler ve metin dosyaları bir dizinde inceler küçük bir uygulamasının nasıl oluşturulacağını açıklar. Her seçili metin dosyası için dosya özniteliklerini ve içeriğindeki birinci satırın uygulama sağlar. Bilgilerini bir günlük dosyasına yazmak için bir seçenek yoktur.  
@@ -48,7 +48,7 @@ Bu kılavuz, Visual Basic'te dosya g/ç ile ilgili temel bilgileri tanıtılmakt
   
 3.  İçinde **adı** kutusuna `FileExplorer` proje adını ayarlayın ve ardından **Tamam**.  
   
-     [!INCLUDE[vsprvs](~/includes/vsprvs-md.md)] projeye ekler **Çözüm Gezgini**, ve Windows Forms Tasarımcısı'nı açar.  
+     Visual Studio projeye ekler **Çözüm Gezgini**, ve Windows Forms Tasarımcısı'nı açar.  
   
 4.  Denetimleri aşağıdaki tabloda forma ekleme ve bunların özelliklerini karşılık gelen değerler ayarlayın.  
   

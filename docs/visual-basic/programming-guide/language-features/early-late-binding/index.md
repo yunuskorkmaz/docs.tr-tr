@@ -23,11 +23,11 @@ ms.assetid: d6ff7f1e-b94f-4205-ab8d-5cfa91758724
 caps.latest.revision: 10
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: 10ecc965fb6d728454b3af33a6e93b2d7dbc327d
-ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
-ms.translationtype: HT
+ms.openlocfilehash: fa63a250ce6bdf4a8a34d9f1c0284a9d04e75f38
+ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="early-and-late-binding-visual-basic"></a>Erken ve Geç Bağlama (Visual Basic)
 Visual Basic derleyici adlı bir işlem gerçekleştirir `binding` bir nesne bir nesne değişkenine atanan zaman. Bir nesne *erken bağlama* bildirilen belirli nesne türünde olması için ne zaman bir değişkene atanır. Erken bağlama nesnelerine bellek ayırabilir ve bir uygulama yürütülmeden önce diğer en iyi duruma getirme gerçekleştirmek derleyici izin verin. Örneğin, aşağıdaki kod parçası türünde olması için bir değişken bildirir <xref:System.IO.FileStream>:  
@@ -41,7 +41,7 @@ Visual Basic derleyici adlı bir işlem gerçekleştirir `binding` bir nesne bir
  [!code-vb[VbVbalrOOP#91](../../../../visual-basic/misc/codesnippet/VisualBasic/early-and-late-binding_2.vb)]  
   
 ## <a name="advantages-of-early-binding"></a>Erken bağlama avantajları  
- Daha verimli uygulamaları verim önemli iyileştirmeler yapmak için derleyici izin verdiğinden, mümkün olduğunda, erken bağlama nesneleri kullanmanız gerekir. Erken bağlama nesneleri geç bağlama nesneleri önemli ölçüde daha hızlıdır ve kodunuzu okuyun ve tam olarak ne tür bir nesneleri kullanıldığından belirterek sürdürmek daha kolay hale. Erken bağlama başka bir avantajı olduğundan, otomatik kod tamamlama ve dinamik Yardım gibi kullanışlı özellikler olanak tanıdığı olduğu [!INCLUDE[vsprvs](~/includes/vsprvs-md.md)] tümleşik geliştirme ortamı (IDE) düzenleme gibi tam olarak hangi nesne türünü çalıştığınız belirleyebilir kod. Bir program derlendiğinde derleyici hatalarını raporlamak izin verdiği için erken bağlama sayısı ve önem derecesi çalışma zamanı hataları azaltır.  
+ Daha verimli uygulamaları verim önemli iyileştirmeler yapmak için derleyici izin verdiğinden, mümkün olduğunda, erken bağlama nesneleri kullanmanız gerekir. Erken bağlama nesneleri geç bağlama nesneleri önemli ölçüde daha hızlıdır ve kodunuzu okuyun ve tam olarak ne tür bir nesneleri kullanıldığından belirterek sürdürmek daha kolay hale. Erken bağlama için başka bir avantajı Visual Studio tümleşik geliştirme ortamını (IDE) düzenleme gibi tam olarak hangi nesne türünü çalıştığınız belirleyebildiğinden otomatik kod tamamlama ve dinamik Yardım gibi kullanışlı özellikler olanak tanıdığı olmasıdır kod. Bir program derlendiğinde derleyici hatalarını raporlamak izin verdiği için erken bağlama sayısı ve önem derecesi çalışma zamanı hataları azaltır.  
   
 > [!NOTE]
 >  Geç bağlama yalnızca kullanılabilir olarak bildirilen tür üyeleri erişmek için `Public`. Üyelere erişme bildirilen `Friend` veya `Protected Friend` bir çalışma zamanı hatası oluşur.  

@@ -15,17 +15,17 @@ helpviewer_keywords:
 - Svcutil.exe
 - clients [WCF], consuming services
 ms.assetid: 1abf3d9f-b420-46f1-b628-df238751f308
-caps.latest.revision: ''
+caps.latest.revision: 40
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: ce66f98f064ec5c9460dd1909f8eb7bc44c26f76
-ms.sourcegitcommit: c883637b41ee028786edceece4fa872939d2e64c
+ms.openlocfilehash: 6cf6910dd370c32120487681829e72ad2681efbe
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/26/2018
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="servicemodel-metadata-utility-tool-svcutilexe"></a>ServiceModel Meta Veri Yardımcı Programracı (Svcutil.exe)
 ServiceModel meta veri yardımcı programracı meta veri belgelerini ve meta veri belgelerini hizmet modeli kodundan hizmet modeli kodu oluşturmak için kullanılır.  
@@ -58,7 +58,7 @@ ServiceModel meta veri yardımcı programracı meta veri belgelerini ve meta ver
 ### <a name="accessing-wsdl-documents"></a>WSDL belgeleri erişme  
  Bir güvenlik belirteci hizmeti (STS) başvuruyor WSDL belgeye erişmek için Svcutil kullandığınızda Svcutil STS çağrısı bir WS-MetadataExchange yapar. Ancak, hizmet WS-MetadataExchange veya HTTP GET kullanarak kendi WSDL belgeleri getirebilir. Bu nedenle, STS yalnızca kullanıma sunulan, HTTP GET, yazılan bir istemci kullanarak WSDL belgesi [!INCLUDE[vstecwinfx](../../../includes/vstecwinfx-md.md)] başarısız olur. Yazılan istemciler için [!INCLUDE[netfx35_short](../../../includes/netfx35-short-md.md)], Svcutil hem WS-MetadataExchange kullanmak deneyecek ve HTTP GET STS WSDL elde edilir.  
   
-## <a name="using-svcutilexe"></a>Using SvcUtil.exe  
+## <a name="using-svcutilexe"></a>SvcUtil.exe kullanma  
   
 ### <a name="common-usages"></a>Ortak kullanımlar  
  Aşağıdaki tabloda bazı yaygın olarak bu araç için kullanılan seçenekler gösterilmektedir.  
@@ -67,14 +67,14 @@ ServiceModel meta veri yardımcı programracı meta veri belgelerini ve meta ver
 |------------|-----------------|  
 |/ directory:\<dizin >|Dosyaları oluşturmak için dizin.<br /><br /> Varsayılan: Geçerli dizin.<br /><br /> Kısa biçimi: `/d`|  
 |/help|Araç için komut sözdizimini ve seçenekleri görüntüler.<br /><br /> Kısa biçimi: `/?`|  
-|/noLogo|Telif hakkı ve başlık iletisi engelleyin.|  
-|/svcutilConfig:\<configFile>|App.config dosyasında yerine kullanılacak özel bir yapılandırma dosyasına belirtir. Bu aracın yapılandırma dosyası değiştirmeden system.serviceModel uzantıları kaydetmek için kullanılabilir.|  
+|/ nologo|Telif hakkı ve başlık iletisi engelleyin.|  
+|/svcutilConfig:\<configFile >|App.config dosyasında yerine kullanılacak özel bir yapılandırma dosyasına belirtir. Bu aracın yapılandırma dosyası değiştirmeden system.serviceModel uzantıları kaydetmek için kullanılabilir.|  
 |/ target:\<çıktı türü >|Aracı tarafından oluşturulan çıkış belirtir.<br /><br /> Geçerli kod, meta verileri veya xmlSerializer değerleridir.<br /><br /> Kısa biçimi: `/t`|  
   
 ### <a name="code-generation"></a>Kod Üretimi  
  Svcutil.exe meta verileri belgelerden Hizmet sözleşmeleri, istemciler ve veri türleri için kod oluşturabilirsiniz. Bu meta veri belgelerini dayanıklı bir depolama üzerinde olabilir ya da çevrimiçi alınmalıdır. İçin (ayrıntıları meta veri yükleme bölümüne bakın) WS-Metadata değişimi veya DISCO Protokolü ya da çevrimiçi alma izler.  
   
- Önceden tanımlanmış bir WSDL belgeyi temel alarak hizmeti ve veri sözleşmeleri oluşturmak için SvcUtil.exe aracını kullanabilirsiniz. /ServiceContract anahtarını kullanın ve burada WSDL belgesinde indirilen bulunamadı veya değiştirilebilir URL veya dosya konumu belirtin. Bu, daha sonra uyumlu hizmet uygulamak için kullanılabilir WSDL belgesinde tanımlanan hizmeti ve veri sözleşmeleri oluşturur. [!INCLUDE[crdefault](../../../includes/crdefault-md.md)] [Nasıl yapılır: meta verileri alma ve uyumlu bir hizmet ekleme](../../../docs/framework/wcf/feature-details/how-to-retrieve-metadata-and-implement-a-compliant-service.md).  
+ Önceden tanımlanmış bir WSDL belgeyi temel alarak hizmeti ve veri sözleşmeleri oluşturmak için SvcUtil.exe aracını kullanabilirsiniz. /ServiceContract anahtarını kullanın ve burada WSDL belgesinde indirilen bulunamadı veya değiştirilebilir URL veya dosya konumu belirtin. Bu, daha sonra uyumlu hizmet uygulamak için kullanılabilir WSDL belgesinde tanımlanan hizmeti ve veri sözleşmeleri oluşturur. Daha fazla bilgi için bkz: [nasıl yapılır: meta verileri almak ve uygulama uyumlu bir hizmet](../../../docs/framework/wcf/feature-details/how-to-retrieve-metadata-and-implement-a-compliant-service.md).  
   
  BasicHttpContextbinding uç noktası ile bir hizmet için Svcutil.exe BasicHttpBinding ile oluşturur `allowCookies` özniteliğini `true` yerine. Tanımlama bilgileri, sunucu üzerindeki bağlamı için kullanılır. Hizmet tanımlama bilgileri kullandığında istemcide bağlam yönetmek istiyorsanız, bir bağlam bağlama kullanmak üzere yapılandırma el ile değiştirebilirsiniz.  
   
@@ -93,7 +93,7 @@ ServiceModel meta veri yardımcı programracı meta veri belgelerini ve meta ver
 |------------|-----------------|  
 |/Async|Her iki zaman uyumlu ve zaman uyumsuz yöntem imzaları oluşturur.<br /><br /> Varsayılan: yalnızca zaman uyumlu yöntemi imzalar oluşturur.<br /><br /> Kısa biçimi: `/a`|  
 |/collectionType:\<türü >|Liste koleksiyonu türü WCF istemcisi için belirtir.<br/><br /> Varsayılan: Koleksiyon System.Array türüdür. <br /><br /> Kısa biçimi: `/ct`|  
-|/config:\<configFile>|Oluşturulan yapılandırma dosyası için dosya adını belirtir.<br /><br /> Varsayılan: output.config|  
+|/ config:\<configFile >|Oluşturulan yapılandırma dosyası için dosya adını belirtir.<br /><br /> Varsayılan: output.config|  
 |/dataContractOnly|Veri sözleşmesi yalnızca türleri için kod oluşturur. Hizmet sözleşmesi türleri oluşturulmaz.<br /><br /> Yalnızca yerel meta veri dosyaları için bu seçeneği belirtmeniz gerekir.<br /><br /> Kısa biçimi: `/dconly`|  
 |/enableDataBinding|Implements <xref:System.ComponentModel.INotifyPropertyChanged> arabirimi veri bağlamasını etkinleştirmek için tüm veri sözleşmesi türler.<br /><br /> Kısa biçimi: `/edb`|  
 |/excludeType:\<türü >|Başvurulan sözleşme türlerinden çıkarılacak tam veya bütünleştirilmiş kod tam tür adını belirtir.<br /><br /> Bu anahtarı ile birlikte kullanırken `/r` ayrı DLL'lerden XSD sınıfın tam adını başvuruluyor.<br /><br /> Kısa biçimi: `/et`|  
@@ -103,7 +103,7 @@ ServiceModel meta veri yardımcı programracı meta veri belgelerini ve meta ver
 |/mergeConfig|Varolan dosyanın üzerine yerine varolan bir dosyanın, üretilen yapılandırma birleştirir.|  
 |/messageContract|İleti sözleşmesi türleri oluşturur.<br /><br /> Kısa biçimi: `/mc`|  
 |/ Namespace:\<dize, dize >|WSDL veya XML Şeması targetNamespace eşleme CLR ad belirtir. Kullanarak '\*' targetNamespace o CLR ad alanına açık bir eşleme olmadan tüm targetNamespaces eşler için.<br /><br /> İleti sözleşmesi adı işlemi adıyla birbiriyle çakışır değil, emin olmak için ya da türü başvurusuyla nitelemek `::`, veya adlarının benzersiz olduğundan emin olun.<br /><br /> Varsayılan: şema belgesi hedef ad alanından veri sözleşmeleri için türetilmiş. Varsayılan ad alanı diğer oluşturulan türleri için kullanılır.<br /><br /> Kısa süreli: `/n` **Not:** XmlSerializer ile kullanmak için türlerinden oluştururken, yalnızca tek bir ad eşlemesi desteklenir. Tüm oluşturulan türleri ya da varsayılan ad alanını veya tarafından belirtilen ad alanı olacak ' *'.|  
-|/noConfig|Yapılandırma dosyaları oluşturmaz.|  
+|/ noconfig|Yapılandırma dosyaları oluşturmaz.|  
 |/noStdLib|Standart kitaplıkları başvuruda bulunmayın.<br /><br /> Varsayılan: Mscorlib.dll ve System.servicemodel.dll başvurulur.|  
 |/ out:\<dosyası >|Oluşturulan kodun dosya adını belirtir.<br /><br /> Varsayılan: WSDL tanımı adından türetilen, WSDL hizmet adı veya ad alanı şemalardan birine hedefleyin.<br /><br /> Kısa biçimi: `/o`|  
 |/ reference:\<dosya yolu >|Belirtilen derleme başvuruları türleri. Ne zaman oluşturma istemciler, bu seçenek içeri aktarılan meta verileri temsil eden türleri içerebilir derlemeleri belirtmek için kullanın.<br /><br /> İleti sözleşmeleri belirtemezsiniz ve <xref:System.Xml.Serialization.XmlSerializer> bu anahtarı kullanarak türleri.<br /><br /> Varsa <xref:System.DateTimeOffset> başvurulan, bu türü yeni bir tür oluşturan yerine kullanılır. Uygulama kullanılarak yazılmışsa [!INCLUDE[netfx35_short](../../../includes/netfx35-short-md.md)], SvcUtil.exe başvuruları <xref:System.DateTimeOffset> otomatik olarak.<br /><br /> Kısa biçimi: `/r`|  
@@ -193,7 +193,7 @@ ServiceModel meta veri yardımcı programracı meta veri belgelerini ve meta ver
 |/ reference:\<dosya yolu >|Belirtilen derleme, tür başvuruları çözümlemek için kullanılan derlemeler kümesini ekler.<br /><br /> Kısa biçimi: `/r`|  
 |/excludeType:\<türü >|Dışarı aktarma veya doğrulama çıkarılacak bir türün tam veya bütünleştirilmiş kod tam adını belirtir.<br /><br /> Kısa biçimi: `/et`|  
 |/ out:\<dosyası >|Oluşturulan kod için dosya adını belirtir. Bu seçenek, aracı giriş olarak birden çok derleme geçirildiğinde yoksayılır.<br /><br /> Varsayılan: Derleme adından türetilmiş.<br /><br /> Kısa biçimi: `/o`|  
-|/UseSerializerForFaults|Belirleyen <!--zz <xref:System.Xml.XmlSerializer> --> `xref:System.Xml.XmlSerializer ` okuma ve yazma hataları, varsayılan yerine için kullanılması gereken <xref:System.Runtime.Serialization.DataContractSerializer>.|  
+|/ UseSerializerForFaults|Belirleyen <!--zz <xref:System.Xml.XmlSerializer> --> `xref:System.Xml.XmlSerializer ` okuma ve yazma hataları, varsayılan yerine için kullanılması gereken <xref:System.Runtime.Serialization.DataContractSerializer>.|  
   
 ## <a name="examples"></a>Örnekler  
  Aşağıdaki komut, çalışan bir hizmeti veya çevrimiçi meta veri belgelerini istemci kodu oluşturur.  
@@ -235,7 +235,7 @@ ServiceModel meta veri yardımcı programracı meta veri belgelerini ve meta ver
 ## <a name="maximum-nametable-character-count-quota"></a>Maksimum ad tablosu karakter sayısı kotası  
  Bir hizmet için meta verileri oluşturmak için svcutil kullanırken, aşağıdaki ileti alabilirsiniz:  
   
- Hata: 8000/somesservice/mex XML verileri okunurken maksimum ad tablosu karakter sayısı kotası (16384) aşıldı gelen meta veri alınamıyor. Ad tablosu XML işleme sırasında karşılaşılan dizeleri depolamak için kullanılan bir veri yapısıdır - yinelenmeyen öğe adları, öznitelik adları ve öznitelik değerlerine sahip uzun XML belgeleri bu kotayı tetikleyebilir. Bu kota XML okuyucusu oluşturulurken kullanılan XmlDictionaryReaderQuotas nesnesindeki MaxNameTableCharCount özelliği değiştirerek artırılabilir.  
+ Hata: Meta verileri elde edemiyor http://localhost:8000/somesservice/mex XML verileri okunurken maksimum ad tablosu karakter sayısı kotası (16384) aşıldı. Ad tablosu XML işleme sırasında karşılaşılan dizeleri depolamak için kullanılan bir veri yapısıdır - yinelenmeyen öğe adları, öznitelik adları ve öznitelik değerlerine sahip uzun XML belgeleri bu kotayı tetikleyebilir. Bu kota XML okuyucusu oluşturulurken kullanılan XmlDictionaryReaderQuotas nesnesindeki MaxNameTableCharCount özelliği değiştirerek artırılabilir.  
   
  Büyük bir WSDL dosya meta verilerini istediğinde döndüren bir hizmeti tarafından bu hataya neden. Svcutil.exe aracı karakter kota aşılırsa sorunudur. (Dos) hizmet reddi saldırılarını önlemeye yardımcı olmak için bu değeri ayarlayın. Bu Kotayı artırmak için svcutil için aşağıdaki yapılandırma dosyası.  
   

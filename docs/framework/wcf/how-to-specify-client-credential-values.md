@@ -1,27 +1,29 @@
 ---
-title: "Nasıl yapılır: İstemci Kimlik Bilgileri Değerlerini Belirtme"
-ms.custom: 
+title: 'Nasıl yapılır: İstemci Kimlik Bilgileri Değerlerini Belirtme'
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - csharp
 - vb
 ms.assetid: 82293d7f-471a-4549-8f19-0be890e7b074
-caps.latest.revision: "28"
+caps.latest.revision: 28
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: cd818a2342ff5b44e4e8ab1b237f7c657d3bf438
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 35244032a36af8d3d23fd9d88006ea032a99b44b
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="how-to-specify-client-credential-values"></a>Nasıl yapılır: İstemci Kimlik Bilgileri Değerlerini Belirtme
 Kullanarak [!INCLUDE[indigo1](../../../includes/indigo1-md.md)], hizmet istemci hizmete kimlik doğrulamasının nasıl belirtebilirsiniz. Örneğin, bir hizmeti bir sertifikayla istemcinin kimliğinin doğrulanmasını koşabilirsiniz.  
@@ -32,7 +34,7 @@ Kullanarak [!INCLUDE[indigo1](../../../includes/indigo1-md.md)], hizmet istemci 
   
 2.  XML yapılandırma dosyasını açın. Svcutil.exe aracı kullanırsanız, varsayılan dosya Output.config adıdır.  
   
-3.  Bul  **\<Güvenlik >** öğeyle **modu** özniteliği (**< güvenlik modu =** `MessageOrTransport`  **>**  burada `MessageOrTransport` güvenlik modlarından birine ayarlayın.  
+3.  Bul  **\<Güvenlik >** öğeyle **modu** özniteliği (**< güvenlik modu =** `MessageOrTransport` **>** burada `MessageOrTransport` güvenlik modlarından birine ayarlayın.  
   
 4.  Mod değeri ile eşleşen alt öğesi bulunamıyor. Örneğin modu ayarlamak, **ileti**, bulma  **\<ileti >** öğesi içinde yer alan  **\<Güvenlik >** öğesi.  
   
@@ -50,7 +52,7 @@ Kullanarak [!INCLUDE[indigo1](../../../includes/indigo1-md.md)], hizmet istemci 
 ```  
   
 ## <a name="example-tcp-transport-mode-with-certificate-as-client-credential"></a>Örnek: TCP taşıma modu istemci kimlik bilgileri olarak sertifikayla  
- Bu örnek güvenlik modunu aktarım modu için ayarlar ve istemci bir X.509 sertifikası kimlik bilgisi değeri ayarlar. Aşağıdaki yordamlar, istemci kodu ve yapılandırma içinde bulunan istemciye kimlik bilgisi değeri ayarlamak nasıl ekleyebileceğiniz gösterilmektedir. Bu, kullandığınız varsayar [ServiceModel meta veri yardımcı Programracı (Svcutil.exe)](../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md) meta veriler (kod ve yapılandırma) hizmetinden dönün. [!INCLUDE[crdefault](../../../includes/crdefault-md.md)][Nasıl yapılır: bir istemci oluşturmak](../../../docs/framework/wcf/how-to-create-a-wcf-client.md).  
+ Bu örnek güvenlik modunu aktarım modu için ayarlar ve istemci bir X.509 sertifikası kimlik bilgisi değeri ayarlar. Aşağıdaki yordamlar, istemci kodu ve yapılandırma içinde bulunan istemciye kimlik bilgisi değeri ayarlamak nasıl ekleyebileceğiniz gösterilmektedir. Bu, kullandığınız varsayar [ServiceModel meta veri yardımcı Programracı (Svcutil.exe)](../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md) meta veriler (kod ve yapılandırma) hizmetinden dönün. Daha fazla bilgi için bkz: [nasıl yapılır: bir istemci oluşturmak](../../../docs/framework/wcf/how-to-create-a-wcf-client.md).  
   
 #### <a name="to-specify-the-client-credential-value-on-the-client-in-code"></a>Kod içinde bulunan istemciye istemci kimlik bilgisi değeri belirtmek için  
   
@@ -73,7 +75,7 @@ Kullanarak [!INCLUDE[indigo1](../../../includes/indigo1-md.md)], hizmet istemci 
   
 3.  Ekleme bir [ \<clientCertificate >](../../../docs/framework/configure-apps/file-schema/wcf/clientcertificate-of-servicecredentials.md) öğesine [ \<clientCredentials >](../../../docs/framework/configure-apps/file-schema/wcf/clientcredentials.md) öğesi.  
   
-4.  Aşağıdaki öznitelikler uygun değerlere ayarlayın: `storeLocation`, `storeName`, `x509FindType`, ve `findValue`aşağıdaki kodda gösterildiği gibi. [!INCLUDE[crabout](../../../includes/crabout-md.md)]Sertifikalar, [sertifikalarla çalışma](../../../docs/framework/wcf/feature-details/working-with-certificates.md).  
+4.  Aşağıdaki öznitelikler uygun değerlere ayarlayın: `storeLocation`, `storeName`, `x509FindType`, ve `findValue`aşağıdaki kodda gösterildiği gibi. [!INCLUDE[crabout](../../../includes/crabout-md.md)] Sertifikalar, [sertifikalarla çalışma](../../../docs/framework/wcf/feature-details/working-with-certificates.md).  
   
     ```xml  
     <behaviors>  
@@ -113,7 +115,7 @@ Kullanarak [!INCLUDE[indigo1](../../../includes/indigo1-md.md)], hizmet istemci 
  [ServiceModel Meta Veri Yardımcı Programı Aracı (Svcutil.exe)](../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md)  
  [Sertifikalarla Çalışma](../../../docs/framework/wcf/feature-details/working-with-certificates.md)  
  [Nasıl yapılır: İstemci Oluşturma](../../../docs/framework/wcf/how-to-create-a-wcf-client.md)  
- [\<netTcpBinding >](../../../docs/framework/configure-apps/file-schema/wcf/nettcpbinding.md)  
+ [\<netTcpBinding>](../../../docs/framework/configure-apps/file-schema/wcf/nettcpbinding.md)  
  [\<Güvenlik >](../../../docs/framework/configure-apps/file-schema/wcf/security-of-nettcpbinding.md)  
  [\<İleti >](../../../docs/framework/configure-apps/file-schema/wcf/message-element-of-nettcpbinding.md)  
  [\<davranışı >](../../../docs/framework/configure-apps/file-schema/wcf/behavior-of-endpointbehaviors.md)  

@@ -10,17 +10,17 @@ ms.technology:
 ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 8d1c5e5a-7928-4a80-95ed-d8da211b8595
-caps.latest.revision: ''
+caps.latest.revision: 29
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: 8202c9f715944c6d556c0023444475838cfd5eab
-ms.sourcegitcommit: c883637b41ee028786edceece4fa872939d2e64c
+ms.openlocfilehash: 14b3eebb83115617ce32ab0ff45184cd6754e58c
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/26/2018
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="poison-message-handling"></a>Zehirli İleti İşleme
 A *zehir iletisi* uygulama Teslim girişimleri üst sınırını aştı iletisidir. Sıra tabanlı bir uygulama hataları nedeniyle bir ileti işleyemediğinde bu durum ortaya çıkabilir. Güvenilirlik taleplerini karşılamak üzere kuyruğa alınan bir uygulamayı bir işlem altında iletilerini alır. İleti altında yeni bir işlem denenir kuyruğa alınan iletinin alındığı işlem durduruluyor iletinin kuyrukta bırakır, böylece. İptal etmek işlem neden olan sorunu düzeltilmezse alma işlemini yapan uygulamanın alma ve teslim deneme sayısı aşıldı kadar aynı iletiyi durduruluyor döngü ve zehir iletisi sonuçları takılı.  
@@ -75,7 +75,7 @@ A *zehir iletisi* uygulama Teslim girişimleri üst sınırını aştı iletisid
 ## <a name="best-practice-handling-msmqpoisonmessageexception"></a>En iyi yöntem: MsmqPoisonMessageException işleme  
  Hizmet bir ileti zararlı olduğunu belirlediğinde, sıraya alınan aktarım oluşturur bir <xref:System.ServiceModel.MsmqPoisonMessageException> içeren `LookupId` zehirli ileti.  
   
- Alıcı uygulamanın uygulayabilirsiniz <xref:System.ServiceModel.Dispatcher.IErrorHandler> uygulama gerektiriyor hataları işlemek için arabirim. [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)] [Üzerinden hata işleme ve bildirme denetimini genişletme](../../../../docs/framework/wcf/samples/extending-control-over-error-handling-and-reporting.md).  
+ Alıcı uygulamanın uygulayabilirsiniz <xref:System.ServiceModel.Dispatcher.IErrorHandler> uygulama gerektiriyor hataları işlemek için arabirim. Daha fazla bilgi için bkz: [genişletme denetim üzerinden hata işleme ve Raporlama](../../../../docs/framework/wcf/samples/extending-control-over-error-handling-and-reporting.md).  
   
  Uygulama hizmeti sıradaki iletileri kalan erişebilmesi için bir zehirli ileti sırası zarar iletileri taşır otomatik zehirli ileti işleme çeşit gerektirebilir. Poison ileti özel durumlarını dinlemek için hata işleyicisine mekanizmasını kullanarak olduğu tek senaryo olduğunda <xref:System.ServiceModel.Configuration.MsmqBindingElementBase.ReceiveErrorHandling%2A> ayar <xref:System.ServiceModel.ReceiveErrorHandling.Fault>. Message Queuing 3.0 poison ileti örnek bu davranış gösterir. Aşağıda, en iyi uygulamalar dahil olmak üzere zarar iletileri işlemek için uygulanması gereken adımlar açıklanmaktadır:  
   

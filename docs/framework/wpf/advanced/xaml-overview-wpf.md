@@ -33,11 +33,11 @@ ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: 87785d6bba58442a1a5ad27f5304aa63e16c1aa9
-ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
+ms.openlocfilehash: ec0c7645d4d6a1affe78e23a9498ea5f5f8d5235
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="xaml-overview-wpf"></a>XAML'ye Genel Bakış (WPF)
 Bu konu, XAML dili özelliklerini açıklar ve yazmak için XAML nasıl kullanabileceğinizi gösterir [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] uygulamalar. Bu konuda özellikle tarafından uygulanan XAML açıklanmaktadır [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]. XAML kendisini olduğu daha büyük bir dil kavram [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)].  
@@ -46,7 +46,7 @@ Bu konu, XAML dili özelliklerini açıklar ve yazmak için XAML nasıl kullanab
   
 <a name="what_is_xaml"></a>   
 ## <a name="what-is-xaml"></a>XAML nedir?  
- XAML bildirim temelli biçimlendirme dilidir. Uygulanan gibi [!INCLUDE[TLA2#tla_winfx](../../../../includes/tla2sharptla-winfx-md.md)] programlama modeli, XAML oluşturma basitleştirir. bir [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] için bir [!INCLUDE[TLA2#tla_winfx](../../../../includes/tla2sharptla-winfx-md.md)] uygulama. Oluşturabileceğiniz görünür [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] öğeleri bildirim temelli XAML biçimlendirme ve sonra ayrı [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] arka plan kod dosyaları kullanarak çalışma zamanı mantığı tanımından birleştirilmiş parçalı sınıf tanımları aracılığıyla biçimlendirme için. XAML doğrudan belirli bir derlemede tanımlanan türlerin yedekleme kümesi nesneleri örneklemesi temsil eder. Bu, genellikle bir yedekleme türü sistemine doğrudan bağ olmadan yorumlanan bir dil olan çoğu diğer biçimlendirme dil benzemez. XAML etkinleştirir burada ayrı tarafların çalışabilir üzerinde bir iş akışı [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] ve farklı araçlar kullanarak bir uygulama mantığı.  
+ XAML bildirim temelli biçimlendirme dilidir. .NET Framework programlama modeline uygulanan gibi XAML oluşturma basitleştiren bir [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] bir .NET Framework uygulama. Oluşturabileceğiniz görünür [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] öğeleri bildirim temelli XAML biçimlendirme ve sonra ayrı [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] arka plan kod dosyaları kullanarak çalışma zamanı mantığı tanımından birleştirilmiş parçalı sınıf tanımları aracılığıyla biçimlendirme için. XAML doğrudan belirli bir derlemede tanımlanan türlerin yedekleme kümesi nesneleri örneklemesi temsil eder. Bu, genellikle bir yedekleme türü sistemine doğrudan bağ olmadan yorumlanan bir dil olan çoğu diğer biçimlendirme dil benzemez. XAML etkinleştirir burada ayrı tarafların çalışabilir üzerinde bir iş akışı [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] ve farklı araçlar kullanarak bir uygulama mantığı.  
   
  Metin olarak gösterilen, XAML dosyaları genellikle içeren XML dosyalarıdır `.xaml` uzantısı. Dosya kodlama, ancak UTF-8 tipik olarak kodlama herhangi XML tarafından kodlanmış olması.  
   

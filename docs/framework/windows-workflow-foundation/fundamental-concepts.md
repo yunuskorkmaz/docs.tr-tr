@@ -1,23 +1,24 @@
 ---
-title: "Temel Windows iş akışı kavramları"
-ms.custom: 
+title: Temel Windows iş akışı kavramları
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 0e930e80-5060-45d2-8a7a-95c0690105d4
-caps.latest.revision: "27"
+caps.latest.revision: 27
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: fca570f661b1867737cc3af295aff5fd8d4cd5ec
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: faeb05045049e9a53babf754f1ec058c6aac2f05
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="fundamental-windows-workflow-concepts"></a>Temel Windows iş akışı kavramları
 İş akışı geliştirme [!INCLUDE[netfx_current_long](../../../includes/netfx-current-long-md.md)] bazı geliştiriciler için yeni kavramları kullanır. Bu konuda bazı kavramlar ve nasıl uygulandığı açıklanmaktadır.  
@@ -35,7 +36,7 @@ ms.lasthandoff: 12/22/2017
 |İfade|Bağımsız değişken bağlantılarında kullanılan yükseltilmiş bir dönüş değeri olmayan bir etkinliği.|  
   
 ## <a name="workflow-runtime"></a>İş akışı çalışma zamanı  
- İş akışı çalışma zamanı, iş akışlarını yürütmek ortamıdır. <xref:System.Activities.WorkflowInvoker>bir iş akışını yürütmek için kolay bir yoludur. Konağın kullandığı <xref:System.Activities.WorkflowInvoker> aşağıdaki için:  
+ İş akışı çalışma zamanı, iş akışlarını yürütmek ortamıdır. <xref:System.Activities.WorkflowInvoker> bir iş akışını yürütmek için kolay bir yoludur. Konağın kullandığı <xref:System.Activities.WorkflowInvoker> aşağıdaki için:  
   
 -   Zaman uyumlu olarak bir iş akışının çağırmak için.  
   
@@ -43,7 +44,7 @@ ms.lasthandoff: 12/22/2017
   
 -   Etkinlikler tarafından kullanılacak uzantıları eklemek için.  
   
- <xref:System.Activities.ActivityInstance>ana bilgisayarları çalışma zamanı ile etkileşim kurmak için kullandığı iş parçacığı proxy olduğunda. Konağın kullandığı <xref:System.Activities.ActivityInstance> aşağıdaki için:  
+ <xref:System.Activities.ActivityInstance> ana bilgisayarları çalışma zamanı ile etkileşim kurmak için kullandığı iş parçacığı proxy olduğunda. Konağın kullandığı <xref:System.Activities.ActivityInstance> aşağıdaki için:  
   
 -   Bunu oluşturarak veya bir örnek mağazadan yüklenirken örneğini almak için.  
   
@@ -62,7 +63,7 @@ ms.lasthandoff: 12/22/2017
  Etkinlikler uygun kullanarak iş akışı çalışma zamanı ortamı elde <xref:System.Activities.ActivityContext> gibi türetilmiş bir sınıf, <xref:System.Activities.NativeActivityContext> veya <xref:System.Activities.CodeActivityContext>. Bu bağımsız değişkenler ve değişkenleri çözmek için alt etkinlikler zamanlamak için ve birçok başka amaçlarla kullanırlar.  
   
 ## <a name="services"></a>Hizmetler  
- İş akışları uygulamak ve mesajlaşma etkinlikleri kullanarak birbirine sıkı şekilde bağlı hizmetlere erişmek için doğal bir yolunu sağlar. Mesajlaşma etkinlikleri üzerinde oluşturulan [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] ve içine ve dışına bir iş akışı veri almak için kullanılan birincil sistemdir. İleti değişim deseni istediğiniz her türlü birlikte modellemek için Mesajlaşma etkinlikleri oluşturabilirsiniz. [!INCLUDE[crdefault](../../../includes/crdefault-md.md)]bkz: [Mesajlaşma etkinlikleri](../../../docs/framework/wcf/feature-details/messaging-activities.md). İş akışı Hizmetleri kullanılarak barındırılır <xref:System.ServiceModel.Activities.WorkflowServiceHost> sınıfı. [!INCLUDE[crdefault](../../../includes/crdefault-md.md)][İş akışı barındırma hizmetleri genel bakış](../../../docs/framework/wcf/feature-details/hosting-workflow-services-overview.md). [!INCLUDE[crabout](../../../includes/crabout-md.md)]İş akışı hizmetleri bakın [iş akışı Hizmetleri](../../../docs/framework/wcf/feature-details/workflow-services.md)  
+ İş akışları uygulamak ve mesajlaşma etkinlikleri kullanarak birbirine sıkı şekilde bağlı hizmetlere erişmek için doğal bir yolunu sağlar. Mesajlaşma etkinlikleri üzerinde oluşturulan [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] ve içine ve dışına bir iş akışı veri almak için kullanılan birincil sistemdir. İleti değişim deseni istediğiniz her türlü birlikte modellemek için Mesajlaşma etkinlikleri oluşturabilirsiniz. Daha fazla bilgi için bkz: [Mesajlaşma etkinlikleri](../../../docs/framework/wcf/feature-details/messaging-activities.md). İş akışı Hizmetleri kullanılarak barındırılır <xref:System.ServiceModel.Activities.WorkflowServiceHost> sınıfı. Daha fazla bilgi için bkz: [iş akışı hizmetleri genel bakış barındırma](../../../docs/framework/wcf/feature-details/hosting-workflow-services-overview.md). [!INCLUDE[crabout](../../../includes/crabout-md.md)] İş akışı hizmetleri bakın [iş akışı Hizmetleri](../../../docs/framework/wcf/feature-details/workflow-services.md)  
   
 ## <a name="persistence-unloading-and-long-running-workflows"></a>Kalıcılık, kaldırma ve uzun süre çalışan iş akışları  
  Windows iş akışı sağlayarak uzun süre çalışan reaktif programları yazma kolaylaştırır:  
@@ -73,4 +74,4 @@ ms.lasthandoff: 12/22/2017
   
 -   Bir iş akışının verilerini sürdürülmesi iş akışı kaldırma ve sonra yeniden yükleyin ve sürdürme yanıt akışında yeniden etkinleştirme olanağı <xref:System.Activities.Bookmark> belirli bir iş akışı nesneleri.  
   
- Bir iş akışı etkinlikleri yürütmek için daha fazla hiç etkinlik yok veya tüm kadar şu anda yürütülen etkinlikler için giriş bekleyen kadar sürekli olarak yürütür. Bu ikinci durumda, iş akışı boştadır. Boşta ilerlemiş iş akışları kaldırmak bir ana bilgisayar için ortak olan ve bunları bir ileti olduğunda yürütme devam etmek için yeniden ulaşır. <xref:System.ServiceModel.Activities.WorkflowServiceHost>Bu özellik için işlevsellik sağlar ve bir Genişletilebilir kaldırma İlkesi sağlar. Volatile durumu verilerini veya kalıcı yapılamıyor diğer verileri kullanan bloklarını yürütme için bir etkinlik bir konağa kullanarak kalıcı değil olduğunu gösterebilir <xref:System.Activities.NoPersistHandle>. Bir iş akışı kullanarak dayanıklı depolama ortamına verilerini de açıkça kalıcı <xref:System.Activities.Statements.Persist> etkinlik.
+ Bir iş akışı etkinlikleri yürütmek için daha fazla hiç etkinlik yok veya tüm kadar şu anda yürütülen etkinlikler için giriş bekleyen kadar sürekli olarak yürütür. Bu ikinci durumda, iş akışı boştadır. Boşta ilerlemiş iş akışları kaldırmak bir ana bilgisayar için ortak olan ve bunları bir ileti olduğunda yürütme devam etmek için yeniden ulaşır. <xref:System.ServiceModel.Activities.WorkflowServiceHost> Bu özellik için işlevsellik sağlar ve bir Genişletilebilir kaldırma İlkesi sağlar. Volatile durumu verilerini veya kalıcı yapılamıyor diğer verileri kullanan bloklarını yürütme için bir etkinlik bir konağa kullanarak kalıcı değil olduğunu gösterebilir <xref:System.Activities.NoPersistHandle>. Bir iş akışı kullanarak dayanıklı depolama ortamına verilerini de açıkça kalıcı <xref:System.Activities.Statements.Persist> etkinlik.

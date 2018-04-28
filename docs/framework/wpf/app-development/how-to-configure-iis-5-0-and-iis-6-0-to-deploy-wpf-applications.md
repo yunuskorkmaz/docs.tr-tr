@@ -27,11 +27,11 @@ ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: 5c1b03cf39608566ed80e2288204480e77994ad7
-ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
+ms.openlocfilehash: edc4bc985f7117dc66d29053d62a283d67b01a85
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="how-to-configure-iis-50-and-iis-60-to-deploy-wpf-applications"></a>Nasıl yapılır: WPF Uygulamalarını Dağıtmak için IIS 5.0 ve IIS 6.0'ı Yapılandırma
 Dağıtabilmeniz için bir [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] çoğu Web sunucularından uygulama uygun ile yapılandırılmış olan sürece [!INCLUDE[TLA#tla_mime](../../../../includes/tlasharptla-mime-md.md)] türleri. Varsayılan olarak, [!INCLUDE[TLA#tla_iis70](../../../../includes/tlasharptla-iis70-md.md)] ile yapılandırılmıştır [!INCLUDE[TLA2#tla_mime](../../../../includes/tla2sharptla-mime-md.md)] türleri, ancak [!INCLUDE[TLA#tla_iis50](../../../../includes/tlasharptla-iis50-md.md)] ve [!INCLUDE[TLA#tla_iis60](../../../../includes/tlasharptla-iis60-md.md)] değil.  
@@ -40,7 +40,7 @@ Dağıtabilmeniz için bir [!INCLUDE[TLA#tla_winclient](../../../../includes/tla
   
   
 > [!NOTE]
->  Kontrol edebilirsiniz *UserAgent* bir sistemin sahip olup olmadığını belirlemek üzere kayıt defterini dizesinde [!INCLUDE[TLA2#tla_winfx](../../../../includes/tla2sharptla-winfx-md.md)] yüklü. Ayrıntıları ve inceler bir komut dosyası için *UserAgent* belirlemek için dize olup olmadığını [!INCLUDE[TLA2#tla_winfx](../../../../includes/tla2sharptla-winfx-md.md)] olan bir sistemde yüklü, [algılamak yüklü olup olmadığı .NET Framework 3.0](../../../../docs/framework/wpf/app-development/how-to-detect-whether-the-net-framework-3-0-is-installed.md).  
+>  Kontrol edebilirsiniz *UserAgent* bir sistem .NET Framework'ün yüklü olup olmadığını belirlemek için kayıt defterinde dize. Ayrıntılar ve inceler bir komut dosyası için *UserAgent* .NET Framework bir sistemde yüklü olup olmadığını belirlemek için bkz: dize [algılamak yüklü olup olmadığı .NET Framework 3.0](../../../../docs/framework/wpf/app-development/how-to-detect-whether-the-net-framework-3-0-is-installed.md).  
   
 <a name="content_expiration"></a>   
 ## <a name="adjust-the-content-expiration-setting"></a>İçerik sona erme ayarını ayarlama  

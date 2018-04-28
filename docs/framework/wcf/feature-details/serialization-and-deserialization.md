@@ -1,36 +1,38 @@
 ---
-title: "Seri Hale Getirme ve Seri Durumdan Çıkarma"
-ms.custom: 
+title: Seri Hale Getirme ve Seri Durumdan Çıkarma
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - csharp
 - vb
 ms.assetid: 3d71814c-bda7-424b-85b7-15084ff9377a
-caps.latest.revision: "13"
+caps.latest.revision: 13
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: a73fa30f1ebae805abd6f3e7e397d005d5b7130d
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 4d5caa913a49205c387c22a615b2b8da2dba0a77
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="serialization-and-deserialization"></a>Seri Hale Getirme ve Seri Durumdan Çıkarma
-[!INCLUDE[indigo1](../../../../includes/indigo1-md.md)]Yeni bir seri hale getirme altyapısı içeren <xref:System.Runtime.Serialization.DataContractSerializer>. <xref:System.Runtime.Serialization.DataContractSerializer> Arasında çevirir [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] nesneleri ve her iki yönde XML. Bu konu, seri hale getirici nasıl çalıştığını açıklar.  
+[!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] Yeni bir seri hale getirme altyapısı içeren <xref:System.Runtime.Serialization.DataContractSerializer>. <xref:System.Runtime.Serialization.DataContractSerializer> Arasında çevirir [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] nesneleri ve her iki yönde XML. Bu konu, seri hale getirici nasıl çalıştığını açıklar.  
   
  Serileştirilirken [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] nesneleri seri hale getirici anlar serileştirme programlama modelleri, yeni dahil olmak üzere çeşitli *veri sözleşmesi* modeli. Desteklenen türlerinin tam listesi için bkz: [veri sözleşmesi seri hale getirici tarafından desteklenen türleri](../../../../docs/framework/wcf/feature-details/types-supported-by-the-data-contract-serializer.md). Veri sözleşmeleri giriş için bkz: [kullanarak veri sözleşmeleri](../../../../docs/framework/wcf/feature-details/using-data-contracts.md).  
   
  XML çıkarılırken seri hale getirici kullanan <xref:System.Xml.XmlReader> ve <xref:System.Xml.XmlWriter> sınıfları. Ayrıca destekler <xref:System.Xml.XmlDictionaryReader> ve <xref:System.Xml.XmlDictionaryWriter> üretmek etkinleştirmek üzere sınıfları XML gibi bazı durumlarda, iyileştirilmiş kullanırken [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] ikili XML biçimi.  
   
- [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]Ayrıca bir yardımcı serileştirici içerir <xref:System.Runtime.Serialization.NetDataContractSerializer>. <xref:System.Runtime.Serialization.NetDataContractSerializer> Benzer <xref:System.Runtime.Serialization.Formatters.Binary.BinaryFormatter> ve <xref:System.Runtime.Serialization.Formatters.Soap.SoapFormatter> serileştiricileri ayrıca yayar çünkü [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] adları serileştirilmiş veriler bir parçası olarak yazın. Seri hale getirme ve seri durumdan çıkarmak uçları aynı türlerini paylaşılan olduğunda kullanılır. Hem <xref:System.Runtime.Serialization.DataContractSerializer> ve <xref:System.Runtime.Serialization.NetDataContractSerializer> ortak bir taban sınıftan türetilen <xref:System.Runtime.Serialization.XmlObjectSerializer>.  
+ [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] Ayrıca bir yardımcı serileştirici içerir <xref:System.Runtime.Serialization.NetDataContractSerializer>. <xref:System.Runtime.Serialization.NetDataContractSerializer> Benzer <xref:System.Runtime.Serialization.Formatters.Binary.BinaryFormatter> ve <xref:System.Runtime.Serialization.Formatters.Soap.SoapFormatter> serileştiricileri ayrıca yayar çünkü [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] adları serileştirilmiş veriler bir parçası olarak yazın. Seri hale getirme ve seri durumdan çıkarmak uçları aynı türlerini paylaşılan olduğunda kullanılır. Hem <xref:System.Runtime.Serialization.DataContractSerializer> ve <xref:System.Runtime.Serialization.NetDataContractSerializer> ortak bir taban sınıftan türetilen <xref:System.Runtime.Serialization.XmlObjectSerializer>.  
   
 > [!WARNING]
 >  <xref:System.Runtime.Serialization.DataContractSerializer> 20 XML varlıkları olarak aşağıda onaltılık bir değerle denetim karakterleri içeren bir dize serileştirir. Bu tür veriler bir WCF hizmetine gönderirken bu olmayan WCF istemcisi ile ilgili bir sorun neden olabilir.  
@@ -52,7 +54,7 @@ ms.lasthandoff: 12/22/2017
  [!code-vb[c_StandaloneDataContractSerializer#2](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_standalonedatacontractserializer/vb/source.vb#2)]  
   
 ### <a name="specifying-known-types"></a>Bilinen türlerini belirtme  
- Çok biçimlilik kullanarak zaten işlenmiyor serileştirilen türleri söz konusu ise, <xref:System.Runtime.Serialization.KnownTypeAttribute> özniteliği veya başka bir mekanizma, olası bilinen türlerinin bir listesini gerekir bayraklarıdır seri hale getirici'nın oluşturucuya kullanarak `knownTypes` parametresi. [!INCLUDE[crabout](../../../../includes/crabout-md.md)]bilinen türlerini, bkz: [veri sözleşmesi bilinen türleri](../../../../docs/framework/wcf/feature-details/data-contract-known-types.md).  
+ Çok biçimlilik kullanarak zaten işlenmiyor serileştirilen türleri söz konusu ise, <xref:System.Runtime.Serialization.KnownTypeAttribute> özniteliği veya başka bir mekanizma, olası bilinen türlerinin bir listesini gerekir bayraklarıdır seri hale getirici'nın oluşturucuya kullanarak `knownTypes` parametresi. [!INCLUDE[crabout](../../../../includes/crabout-md.md)] bilinen türlerini, bkz: [veri sözleşmesi bilinen türleri](../../../../docs/framework/wcf/feature-details/data-contract-known-types.md).  
   
  Aşağıdaki örnek, bir sınıfı gösterir `LibraryPatron`, belirli bir türde bir koleksiyonu içeren `LibraryItem`. İkinci sınıfı tanımlayan `LibraryItem` türü. Üçüncü ve dördüncü sınıfları (`Book` ve `Newspaper`) devralınmalıdır `LibraryItem` sınıfı.  
   
@@ -85,12 +87,12 @@ ms.lasthandoff: 12/22/2017
  Bu değerleri dizeler veya örnekleri geçirilen <xref:System.Xml.XmlDictionaryString> ikili XML biçimi kullanarak kendi iyileştirme için izin veren sınıfı.  
   
 ### <a name="setting-the-maximum-objects-quota"></a>En büyük nesneleri kotası ayarlama  
- Bazı `DataContractSerializer` Oluşturucusu aşırı yüklü bir `maxItemsInObjectGraph` parametresi. Bu parametre, seri hale getirici serileştiren veya tek bir seri durumdan çıkarır nesne sayısını belirler <xref:System.Runtime.Serialization.XmlObjectSerializer.ReadObject%2A> yöntem çağrısı. (Yöntemi her zaman bir kök nesnesi okur, ancak bu nesne veri üyeleri başka nesneler olabilir. Bu nesneler diğer nesneleri vb.) 65536 varsayılandır. Seri hale getirme veya diziler seri durumdan çıkarılırken, her dizi girişi ayrı bir nesne sayar unutmayın. Ayrıca, bazı nesneler büyük bellek gösterimi olabilir ve bu nedenle bu kota tek başına bir hizmet reddi saldırısına önlemek yeterli olmayabilir unutmayın. [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)][Veriler için güvenlik konuları](../../../../docs/framework/wcf/feature-details/security-considerations-for-data.md). Varsayılan değerin dışında bu kotayı artırmak gerekiyorsa, bunu gönderen (seri hale getirme) ve hem için verileri okurken ve yazarken uygulandığından (seri durumdan) kenara alma üzerinde yapmak önemlidir.  
+ Bazı `DataContractSerializer` Oluşturucusu aşırı yüklü bir `maxItemsInObjectGraph` parametresi. Bu parametre, seri hale getirici serileştiren veya tek bir seri durumdan çıkarır nesne sayısını belirler <xref:System.Runtime.Serialization.XmlObjectSerializer.ReadObject%2A> yöntem çağrısı. (Yöntemi her zaman bir kök nesnesi okur, ancak bu nesne veri üyeleri başka nesneler olabilir. Bu nesneler diğer nesneleri vb.) 65536 varsayılandır. Seri hale getirme veya diziler seri durumdan çıkarılırken, her dizi girişi ayrı bir nesne sayar unutmayın. Ayrıca, bazı nesneler büyük bellek gösterimi olabilir ve bu nedenle bu kota tek başına bir hizmet reddi saldırısına önlemek yeterli olmayabilir unutmayın. Daha fazla bilgi için bkz: [veriler için güvenlik konuları](../../../../docs/framework/wcf/feature-details/security-considerations-for-data.md). Varsayılan değerin dışında bu kotayı artırmak gerekiyorsa, bunu gönderen (seri hale getirme) ve hem için verileri okurken ve yazarken uygulandığından (seri durumdan) kenara alma üzerinde yapmak önemlidir.  
   
 ### <a name="round-trips"></a>Gidiş dönüş  
  A *gidiş dönüş* bir nesne seri durumdan ve tek bir işlemde yeniden seri oluşur. Bu nedenle, XML'den bir nesne örneği ve geri için yeniden bir XML akışı gidiyor.  
   
- Bazı `DataContractSerializer` Oluşturucusu aşırı yüklü bir `ignoreExtensionDataObject` ayarlamak için parametre `false` varsayılan olarak. Implements veri sözleşmesi sürece bu varsayılan modda veri gidiş dönüş üzerinde bir veri sözleşmesi bir eski sürümü ve geri aracılığıyla daha yeni bir sürümünde kaybı olmadan daha yeni sürümüne gönderilebilir <xref:System.Runtime.Serialization.IExtensibleDataObject> arabirimi. Örneğin, 1. sürümü varsayalım `Person` veri sözleşmesi içeren `Name` ve `PhoneNumber` veri üyeleri ve sürüm 2 ekler bir `Nickname` üye. Varsa `IExtensibleDataObject` bilgi sürüm 1, sürüm 2 gönderirken uygulanır `Nickname` veriler depolanır ve verileri yeniden serileştirildiğinde yeniden yayılan; bu nedenle, hiçbir veri gidiş dönüş kaybolur. [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)][İleri uyumlu veri sözleşmeleri](../../../../docs/framework/wcf/feature-details/forward-compatible-data-contracts.md) ve [veri sözleşmesi sürümü oluşturma](../../../../docs/framework/wcf/feature-details/data-contract-versioning.md).  
+ Bazı `DataContractSerializer` Oluşturucusu aşırı yüklü bir `ignoreExtensionDataObject` ayarlamak için parametre `false` varsayılan olarak. Implements veri sözleşmesi sürece bu varsayılan modda veri gidiş dönüş üzerinde bir veri sözleşmesi bir eski sürümü ve geri aracılığıyla daha yeni bir sürümünde kaybı olmadan daha yeni sürümüne gönderilebilir <xref:System.Runtime.Serialization.IExtensibleDataObject> arabirimi. Örneğin, 1. sürümü varsayalım `Person` veri sözleşmesi içeren `Name` ve `PhoneNumber` veri üyeleri ve sürüm 2 ekler bir `Nickname` üye. Varsa `IExtensibleDataObject` bilgi sürüm 1, sürüm 2 gönderirken uygulanır `Nickname` veriler depolanır ve verileri yeniden serileştirildiğinde yeniden yayılan; bu nedenle, hiçbir veri gidiş dönüş kaybolur. Daha fazla bilgi için bkz: [İleri uyumlu veri sözleşmeleri](../../../../docs/framework/wcf/feature-details/forward-compatible-data-contracts.md) ve [veri sözleşmesi sürümü oluşturma](../../../../docs/framework/wcf/feature-details/data-contract-versioning.md).  
   
 #### <a name="security-and-schema-validity-concerns-with-round-trips"></a>Güvenlik ve gidiş dönüş ile şema geçerlilik sorunları  
  Gidiş dönüş güvenlik etkileri olabilir. Örneğin, seri durumdan ve büyük miktarlarda yabancı veri depolamak bir güvenlik riski olabilir. Özellikle dijital imzalar verilmemişse doğrulamak için hiçbir şekilde olduğunu bu verileri yeniden yayma ilgili güvenlik sorunları olabilir. Önceki senaryoda sürüm 1 endpoint örneğin oturum bir `Nickname` değeri kötü amaçlı veriler içerir. Son olarak, olabilir şema geçerlilik sorunları: bir uç nokta her zaman kesinlikle belirtilen sözleşmesi ve hiçbir ek değerler için eklenecek veri yayma isteyebilirsiniz. Önceki örnekte, yalnızca yayar sürüm 1 uç noktanın sözleşme diyor `Name` ve `PhoneNumber`ve şema doğrulaması kullanılıyorsa, ek yayma `Nickname` değeri doğrulama başarısız olmasına neden olur.  
@@ -152,7 +154,7 @@ ms.lasthandoff: 12/22/2017
 >  Zaman `preserveObjectReferences` modu etkin olduğunda, ayarlamak özellikle önemlidir `maxItemsInObjectGraph` doğru kota değeri. Diziler, bu modda işlenir yöntemi nedeniyle, yalnızca sınırlı büyük bellek tüketimine küçük bir kötü amaçlı iletisini oluşturmak bir saldırgan daha kolay `maxItemsInObjectGraph` kota.  
   
 ### <a name="specifying-a-data-contract-surrogate"></a>Bir veri sözleşmesi yedek belirtme  
- Bazı `DataContractSerializer` Oluşturucusu aşırı yüklü bir `dataContractSurrogate` olarak ayarlanmış olabilir parametresi `null`. Belirtmek için kullanın Aksi halde, bir *veri sözleşmesi yedek*, uygulayan bir tür olduğu <xref:System.Runtime.Serialization.IDataContractSurrogate> arabirimi. Ardından, serileştirme özelleştirmek ve işlem seri durumundan çıkarma için arabirimi kullanabilirsiniz. [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)][Veri sözleşmesi yedekleri](../../../../docs/framework/wcf/extending/data-contract-surrogates.md).  
+ Bazı `DataContractSerializer` Oluşturucusu aşırı yüklü bir `dataContractSurrogate` olarak ayarlanmış olabilir parametresi `null`. Belirtmek için kullanın Aksi halde, bir *veri sözleşmesi yedek*, uygulayan bir tür olduğu <xref:System.Runtime.Serialization.IDataContractSurrogate> arabirimi. Ardından, serileştirme özelleştirmek ve işlem seri durumundan çıkarma için arabirimi kullanabilirsiniz. Daha fazla bilgi için bkz: [veri sözleşmesi yedekleri](../../../../docs/framework/wcf/extending/data-contract-surrogates.md).  
   
 ## <a name="serialization"></a>Serileştirme  
  Aşağıdaki bilgiler devraldığı herhangi bir sınıf geçerlidir <xref:System.Runtime.Serialization.XmlObjectSerializer>dahil <xref:System.Runtime.Serialization.DataContractSerializer> ve <xref:System.Runtime.Serialization.NetDataContractSerializer> sınıfları.  
@@ -265,7 +267,7 @@ ms.lasthandoff: 12/22/2017
   
 -   <xref:System.Runtime.Serialization.NetDataContractSerializer.Serialize%2A> Ve <xref:System.Runtime.Serialization.NetDataContractSerializer.Deserialize%2A> yöntemleridir için diğer adlar <xref:System.Runtime.Serialization.XmlObjectSerializer.WriteObject%2A> ve <xref:System.Runtime.Serialization.XmlObjectSerializer.ReadObject%2A> yöntemleri. Bu ikili veya SOAP seri hale getirme ile daha tutarlı bir programlama modeli sağlamak için mevcut.  
   
- [!INCLUDE[crabout](../../../../includes/crabout-md.md)]Bu özellikler bkz [ikili seri hale getirme](../../../../docs/standard/serialization/binary-serialization.md).  
+ [!INCLUDE[crabout](../../../../includes/crabout-md.md)] Bu özellikler bkz [ikili seri hale getirme](../../../../docs/standard/serialization/binary-serialization.md).  
   
  XML biçimleri `NetDataContractSerializer` ve `DataContractSerializer` kullanım normalde uyumlu değil. Diğer bir deyişle, bu serileştiricileri biri ile seri hale getirmek ve diğer seri durumdan çalışılıyor desteklenen bir senaryo değil.  
   

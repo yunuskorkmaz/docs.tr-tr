@@ -1,20 +1,18 @@
 ---
-title: "Özel Durumlar: raise İşlevi (F#)"
+title: 'Özel Durumlar: raise İşlevi (F#)'
 description: "F # 'Yükselt' işlevi bir hata veya olağanüstü koşulu oluştu belirtmek için nasıl kullanıldığını öğrenin."
-keywords: "Visual f #, f # işlevsel programlama"
 author: cartermp
 ms.author: phcart
 ms.date: 05/16/2016
 ms.topic: language-reference
-ms.prod: .net
-ms.technology: devlang-fsharp
+ms.prod: dotnet-fsharp
 ms.devlang: fsharp
 ms.assetid: b00da469-4789-4cdd-9f77-7a2e29f28637
-ms.openlocfilehash: dc524a06d075b982a6aa1fd266769bfc7d883517
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.openlocfilehash: 6bc62b13467b8cf4cfcb22f7d4a5f3464236f6d1
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="exceptions-the-raise-function"></a>Özel Durumlar: raise İşlevi
 
@@ -41,9 +39,9 @@ Aşağıdaki kod örnekleri kullanımını göstermek `raise` bir özel durum ol
 [!code-fsharp[Main](../../../../samples/snippets/fsharp/lang-ref-2/snippet5802.fs)]
     
 ## <a name="see-also"></a>Ayrıca Bkz.
-[Özel durum işleme](index.md)
+[Özel Durum İşleme](index.md)
 
-[Özel durum türleri](exception-types.md)
+[Özel Durum Türleri](exception-types.md)
 
 [Özel durumlar: `try...with` ifade](the-try-with-expression.md)
 

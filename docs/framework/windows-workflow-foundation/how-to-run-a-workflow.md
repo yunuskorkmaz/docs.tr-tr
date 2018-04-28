@@ -1,26 +1,27 @@
 ---
-title: "Nasıl yapılır: bir iş akışını çalıştırma"
-ms.custom: 
+title: 'Nasıl yapılır: bir iş akışını çalıştırma'
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - csharp
 - vb
 ms.assetid: f814ff82-fe2b-4614-aebb-b768c3e61179
-caps.latest.revision: "33"
+caps.latest.revision: 33
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 2a41bf5c1f7a12e98ac10295af5b2608c8bf3a46
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 88c8adc74b707891a93e34aa135db82715da968e
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="how-to-run-a-workflow"></a>Nasıl yapılır: bir iş akışını çalıştırma
 Bu konu, Windows Workflow Foundation Başlarken Öğreticisi devamıdır ve bir iş akışı ana bilgisayarı oluşturmak ve önceki tanımlanan iş akışını çalıştırmak nasıl ele [nasıl yapılır: bir iş akışı oluşturmak](../../../docs/framework/windows-workflow-foundation/how-to-create-a-workflow.md) konu.  
@@ -72,7 +73,7 @@ Bu konu, Windows Workflow Foundation Başlarken Öğreticisi devamıdır ve bir 
     WorkflowInvoker.Invoke(workflow1);  
     ```  
   
-     Bu barındırma kodu kullandığı oluşturulan <xref:System.Activities.WorkflowInvoker>. <xref:System.Activities.WorkflowInvoker>yöntem çağrısı sırasında ve Kalıcılık kullanmayan yalnızca iş akışları için kullanılabilir gibi bir iş akışı çağırma için basit bir yol sağlar. <xref:System.Activities.WorkflowApplication>yaşam döngüsü olayları, yürütme denetimi, yer işareti sürdürme ve kalıcılığı bildirimi içeren iş akışlarını yürütmek için daha zengin bir modeli sağlar. Bu örnekte yer işaretleri kullanır ve <xref:System.Activities.WorkflowApplication> iş akışı barındırmak için kullanılır. Aşağıdakileri ekleyin `using` veya **içeri aktarmalar** deyimi en üstündeki **Program.cs** veya **Module1.vb** varolan aşağıda **kullanarak** veya **içeri aktarmalar** deyimleri.  
+     Bu barındırma kodu kullandığı oluşturulan <xref:System.Activities.WorkflowInvoker>. <xref:System.Activities.WorkflowInvoker> yöntem çağrısı sırasında ve Kalıcılık kullanmayan yalnızca iş akışları için kullanılabilir gibi bir iş akışı çağırma için basit bir yol sağlar. <xref:System.Activities.WorkflowApplication> yaşam döngüsü olayları, yürütme denetimi, yer işareti sürdürme ve kalıcılığı bildirimi içeren iş akışlarını yürütmek için daha zengin bir modeli sağlar. Bu örnekte yer işaretleri kullanır ve <xref:System.Activities.WorkflowApplication> iş akışı barındırmak için kullanılır. Aşağıdakileri ekleyin `using` veya **içeri aktarmalar** deyimi en üstündeki **Program.cs** veya **Module1.vb** varolan aşağıda **kullanarak** veya **içeri aktarmalar** deyimleri.  
   
     ```vb  
     Imports NumberGuessWorkflowActivities  
@@ -109,7 +110,7 @@ Bu konu, Windows Workflow Foundation Başlarken Öğreticisi devamıdır ve bir 
      [!code-csharp[CFX_WF_GettingStarted#6](../../../samples/snippets/csharp/VS_Snippets_CFX/cfx_wf_gettingstarted/cs/program.cs#6)]
      [!code-vb[CFX_WF_GettingStarted#6](../../../samples/snippets/visualbasic/VS_Snippets_CFX/cfx_wf_gettingstarted/vb/module1.vb#6)]  
   
-     Tek bir öğe anahtarı ile bu sözlük içeren `MaxNumber`. Giriş sözlüğündeki anahtarları bağımsız değişkenler iş akışı Kök etkinlik üzerinde giriş karşılık gelir. `MaxNumber`İş akışı tarafından rastgele oluşturulmuş sayısı için üst sınır belirlemek için kullanılır.  
+     Tek bir öğe anahtarı ile bu sözlük içeren `MaxNumber`. Giriş sözlüğündeki anahtarları bağımsız değişkenler iş akışı Kök etkinlik üzerinde giriş karşılık gelir. `MaxNumber` İş akışı tarafından rastgele oluşturulmuş sayısı için üst sınır belirlemek için kullanılır.  
   
 ### <a name="to-retrieve-output-arguments-of-a-workflow"></a>Bir iş akışının çıkış değişkenlerini almak için  
   
@@ -133,7 +134,7 @@ Bu konu, Windows Workflow Foundation Başlarken Öğreticisi devamıdır ve bir 
      İş akışı için sonraki tahmin, bekleyen boşta her zaman bu işleyici olarak adlandırılır ve `idleAction` <xref:System.Threading.AutoResetEvent> ayarlanır. Sonraki adımda kodu kullanan `idleEvent` ve `syncEvent` iş akışı için sonraki tahmin bekliyor veya tamamlandıktan belirlemek için.  
   
     > [!NOTE]
-    >  Bu örnekte, ana bilgisayar uygulamasını otomatik sıfırlama olayları kullanan <xref:System.Activities.WorkflowApplication.Completed%2A> ve <xref:System.Activities.WorkflowApplication.Idle%2A> konak uygulama iş akışı ilerleme ile eşitlemek için işleyiciler. Engelleme ve boşta durumuna yer işareti devam etmeden önce iş akışı için beklemek gerekli değildir, ancak bu örnekte, iş akışını tam olup veya kullanarakdahafazlakullanıcıgirdisiolupbekliyorkonakbilmesiiçineşitlemeolaylarıgereklidir<xref:System.Activities.Bookmark>. [!INCLUDE[crdefault](../../../includes/crdefault-md.md)][Yer işaretleri](../../../docs/framework/windows-workflow-foundation/bookmarks.md).  
+    >  Bu örnekte, ana bilgisayar uygulamasını otomatik sıfırlama olayları kullanan <xref:System.Activities.WorkflowApplication.Completed%2A> ve <xref:System.Activities.WorkflowApplication.Idle%2A> konak uygulama iş akışı ilerleme ile eşitlemek için işleyiciler. Engelleme ve boşta durumuna yer işareti devam etmeden önce iş akışı için beklemek gerekli değildir, ancak bu örnekte, iş akışını tam olup veya kullanarakdahafazlakullanıcıgirdisiolupbekliyorkonakbilmesiiçineşitlemeolaylarıgereklidir<xref:System.Activities.Bookmark>. Daha fazla bilgi için bkz: [yer işaretleri](../../../docs/framework/windows-workflow-foundation/bookmarks.md).  
   
 3.  Çağrı kaldırmak `WaitOne`ve kullanıcı ve sürdürme giriş toplamak için kod ile değiştirin <xref:System.Activities.Bookmark>.  
   
@@ -147,7 +148,7 @@ Bu konu, Windows Workflow Foundation Başlarken Öğreticisi devamıdır ve bir 
      [!code-csharp[CFX_WF_GettingStarted#11](../../../samples/snippets/csharp/VS_Snippets_CFX/cfx_wf_gettingstarted/cs/program.cs#11)]
      [!code-vb[CFX_WF_GettingStarted#11](../../../samples/snippets/visualbasic/VS_Snippets_CFX/cfx_wf_gettingstarted/vb/module1.vb#11)]  
   
-##  <a name="BKMK_ToRunTheApplication"></a>Derleme ve uygulamayı çalıştırmak için  
+##  <a name="BKMK_ToRunTheApplication"></a> Derleme ve uygulamayı çalıştırmak için  
   
 1.  Sağ **NumberGuessWorkflowHost** içinde **Çözüm Gezgini** seçip **başlangıç projesi olarak ayarla**.  
   

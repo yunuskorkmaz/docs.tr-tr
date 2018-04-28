@@ -14,11 +14,11 @@ ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: 2057e2b1c03a1ebcd68d7d59be8839171305707f
-ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
+ms.openlocfilehash: 09eb22c0c4bfaf549bd18cccae0c84957e730aa6
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/27/2018
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="consuming-odata-feeds-from-a-workflow"></a>Bir iş akışından akışları OData kullanma
 WCF Veri Hizmetleri bir bileşenidir [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] temsili durum aktarımı (REST) semantiği kullanarak Web veya intranet üzerinden verileri kullanmak ve kullanıma sunmak için açık veri Protokolü (OData) kullanan hizmetler oluşturmak etkinleştirir. OData veri URI tarafından adreslenebilir kaynaklar olarak kullanıma sunar. Bir HTTP isteği göndermek ve OData akışı işlem herhangi bir uygulama veri hizmeti döndürdüğünü bir OData tabanlı veri hizmetiyle etkileşim kurabilirsiniz. Ayrıca, WCF Veri Hizmetleri OData Akışları'kullandığında daha zengin bir programlama deneyimi sağlayan istemci kitaplıklarını içerir [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] uygulamalar. Bu konu, bir iş akışında istemci kitaplıkları kullanılarak ve kullanılmadan bir OData tüketen genel bir bakış akışı sağlar.  
@@ -37,13 +37,13 @@ WCF Veri Hizmetleri bir bileşenidir [!INCLUDE[dnprdnshort](../../../includes/dn
  Hizmeti tarafından ve de kullanıma sunulan hiçbir hizmet işlemleri olduğuna dikkat edin **Hizmetleri** vardır liste öğelerini Northwind veri hizmeti tarafından sunulan varlıkları temsil eden. Hizmet başvurusu eklendiğinde, sınıflar bu varlıklar için oluşturulur ve istemci kodu kullanılabilir. Bu konudaki örnekler bu sınıfları kullanır ve `NorthwindEntities` sorguları gerçekleştirmek için sınıf.  
   
 > [!NOTE]
->  [!INCLUDE[crdefault](../../../includes/crdefault-md.md)] [Veri Hizmeti istemci kitaplığı (WCF Veri Hizmetleri) oluşturma](http://go.microsoft.com/fwlink/?LinkID=191611).  
+>  Daha fazla bilgi için bkz: [veri hizmeti istemci kitaplığı (WCF Veri Hizmetleri) oluşturma](http://go.microsoft.com/fwlink/?LinkID=191611).  
   
 ### <a name="using-asynchronous-methods"></a>Zaman uyumsuz yöntemler kullanma  
  WCF Veri Hizmetleri zaman uyumsuz olarak erişme öneririz kaynaklara Web üzerinden erişirken oluşabilecek olası gecikme sorunlarına yönelik. WCF Veri Hizmetleri istemci kitaplıkları sorguları çalıştırma zaman uyumsuz yöntemleri içerir ve Windows Workflow Foundation (WF) sağlar <xref:System.Activities.AsyncCodeActivity> zaman uyumsuz etkinlikleri yazma sınıfı. <xref:System.Activities.AsyncCodeActivity> türetilen etkinlikleri yararlanmak için yazılabilir [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] , zaman uyumsuz yöntemleri veya zaman uyumsuz olarak yürütülecek kod olan sınıf bir yönteme koy ve temsilci kullanarak çağrılır. Bu bölümde, iki örnek bir <xref:System.Activities.AsyncCodeActivity> türetilmiş etkinlik; WCF Veri Hizmetleri istemci kitaplıkları zaman uyumsuz yöntemleri kullanan diğeri, bir temsilci kullanır.  
   
 > [!NOTE]
->  [!INCLUDE[crdefault](../../../includes/crdefault-md.md)] [Zaman uyumsuz işlemleri (WCF Veri Hizmetleri)](http://go.microsoft.com/fwlink/?LinkId=193396) ve [zaman uyumsuz etkinlikleri oluşturma](../../../docs/framework/windows-workflow-foundation/creating-asynchronous-activities-in-wf.md).  
+>  Daha fazla bilgi için bkz: [zaman uyumsuz işlemleri (WCF Veri Hizmetleri)](http://go.microsoft.com/fwlink/?LinkId=193396) ve [oluşturma zaman uyumsuz etkinlikleri](../../../docs/framework/windows-workflow-foundation/creating-asynchronous-activities-in-wf.md).  
   
 ### <a name="using-client-library-asynchronous-methods"></a>İstemci Kitaplığı zaman uyumsuz yöntemler kullanma  
  <xref:System.Data.Services.Client.DataServiceQuery%601> SAX <xref:System.Data.Services.Client.DataServiceQuery%601.BeginExecute%2A> ve <xref:System.Data.Services.Client.DataServiceQuery%601.EndExecute%2A> OData hizmetine zaman uyumsuz olarak sorgulamak için yöntemleri. Bu yöntemlerin gelen çağrılabilir <xref:System.Activities.AsyncCodeActivity.BeginExecute%2A> ve <xref:System.Activities.AsyncCodeActivity.EndExecute%2A> , geçersiz kılan bir <xref:System.Activities.AsyncCodeActivity> türetilmiş sınıf. Zaman <xref:System.Activities.AsyncCodeActivity> <xref:System.Activities.AsyncCodeActivity.BeginExecute%2A> geçersiz kılma döndürür, iş akışı boşta gidin (ancak devam) ve zaman uyumsuz iş tamamlandığında, <xref:System.Activities.AsyncCodeActivity.EndExecute%2A> çalışma zamanı tarafından çağrılır.  

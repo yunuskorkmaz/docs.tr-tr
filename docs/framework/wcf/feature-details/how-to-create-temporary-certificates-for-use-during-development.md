@@ -1,27 +1,29 @@
 ---
-title: "Nasıl yapılır: Geliştirme Sırasında Kullanmak için Geçici Sertifikalar Oluşturma"
-ms.custom: 
+title: 'Nasıl yapılır: Geliştirme Sırasında Kullanmak için Geçici Sertifikalar Oluşturma'
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - certificates [WCF], creating temporary certificates
 - temporary certificates [WCF]
 ms.assetid: bc5f6637-5513-4d27-99bb-51aad7741e4a
-caps.latest.revision: "14"
+caps.latest.revision: 14
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 4d6c955c3498c830403f628b4805611fadc44d68
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: ccbc8c6fa638c674dea28c312b2dedbc9d41968a
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="how-to-create-temporary-certificates-for-use-during-development"></a>Nasıl yapılır: Geliştirme Sırasında Kullanmak için Geçici Sertifikalar Oluşturma
 Güvenli hizmeti veya kullanan istemci geliştirirken [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)], kimlik bilgisi olarak kullanılacak bir X.509 sertifikası sağlamak genellikle gereklidir. Sertifika genellikle bilgisayar güvenilen kök sertifika yetkilileri deposunda bulunan kök yetkisine sahip bir sertifika zinciri parçasıdır. Bir sertifika zinciri sahip genellikle kök yetkilisi kuruluşunuz ya da iş birimi olduğu sertifikalar kümesini kapsam sağlar. Bu geliştirme anında benzetmek için güvenlik gereksinimlerini karşılamak için iki sertifika oluşturabilirsiniz. İlk olan otomatik olarak imzalanan bir sertifika olduğundan güvenilen kök sertifika yetkilileri deposunda yerleştirilir ve ikinci sertifikayla birinciden oluşturulur ve yerel makine konumunun kişisel deposunda ya kişisel deposuna yerleştirilir Geçerli kullanıcı konumu. Bu konuda kullanarak bu iki sertifika oluşturmak için adımlarda size yol [sertifika oluşturma Aracı (MakeCert.exe)](http://go.microsoft.com/fwlink/?LinkId=248185), tarafından sağlanan [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] SDK.  
@@ -29,9 +31,9 @@ Güvenli hizmeti veya kullanan istemci geliştirirken [!INCLUDE[indigo1](../../.
 > [!IMPORTANT]
 >  Sertifika Oluşturma Aracı'nı oluşturur sertifikalar yalnızca sınama amacıyla sağlanır. Bir hizmet veya istemci dağıtımı sırasında bir sertifika yetkilisi tarafından sağlanan uygun bir sertifika kullandığınızdan emin olun. Bu da gelen olabilir bir [!INCLUDE[ws2003](../../../../includes/ws2003-md.md)] sertifika kuruluşunuzdaki sunucuda veya bir üçüncü taraf.  
 >   
->  Varsayılan olarak, [Makecert.exe (sertifika oluşturma aracı)](http://msdn.microsoft.com/library/b0343f8e-9c41-4852-a85c-f8a0c408cf0d) , kök yetkilisi çağrılır sertifikaları oluşturur "kök Teşkilatı**."** "Kök Teşkilatı" güvenilen kök sertifika yetkilileri deposunda olmadığı için bu bu sertifikaları güvenli hale getirir. Güvenilen kök sertifika yetkilileri yerleştirilen otomatik olarak imzalanan sertifika oluşturma deposu daha yakından dağıtım ortamınızı taklit eden bir geliştirme ortamı oluşturmanıza olanak sağlar.  
+>  Varsayılan olarak, [Makecert.exe (sertifika oluşturma aracı)](http://msdn.microsoft.com/library/b0343f8e-9c41-4852-a85c-f8a0c408cf0d) , kök yetkilisi çağrılır sertifikaları oluşturur "kök Teşkilatı **."** "Kök Teşkilatı" güvenilen kök sertifika yetkilileri deposunda olmadığı için bu bu sertifikaları güvenli hale getirir. Güvenilen kök sertifika yetkilileri yerleştirilen otomatik olarak imzalanan sertifika oluşturma deposu daha yakından dağıtım ortamınızı taklit eden bir geliştirme ortamı oluşturmanıza olanak sağlar.  
   
- [!INCLUDE[crabout](../../../../includes/crabout-md.md)]bkz: oluşturma ve sertifikalarını kullanarak [sertifikalarla çalışma](../../../../docs/framework/wcf/feature-details/working-with-certificates.md). [!INCLUDE[crabout](../../../../includes/crabout-md.md)]bir kimlik bilgisi bir sertifika kullanılarak bkz [güvenli hale getirme hizmetler ve istemcileri](../../../../docs/framework/wcf/feature-details/securing-services-and-clients.md). Microsoft Authenticode teknolojisini kullanarak hakkında bir öğretici için bkz: [Authenticode genel bakış ve öğreticiler](http://go.microsoft.com/fwlink/?LinkId=88919).  
+ [!INCLUDE[crabout](../../../../includes/crabout-md.md)] bkz: oluşturma ve sertifikalarını kullanarak [sertifikalarla çalışma](../../../../docs/framework/wcf/feature-details/working-with-certificates.md). [!INCLUDE[crabout](../../../../includes/crabout-md.md)] bir kimlik bilgisi bir sertifika kullanılarak bkz [güvenli hale getirme hizmetler ve istemcileri](../../../../docs/framework/wcf/feature-details/securing-services-and-clients.md). Microsoft Authenticode teknolojisini kullanarak hakkında bir öğretici için bkz: [Authenticode genel bakış ve öğreticiler](http://go.microsoft.com/fwlink/?LinkId=88919).  
   
 ### <a name="to-create-a-self-signed-root-authority-certificate-and-export-the-private-key"></a>Otomatik olarak imzalanan kök yetkilisi sertifikası oluşturma ve özel anahtarı dışarı aktar  
   
@@ -74,7 +76,7 @@ Güvenli hizmeti veya kullanan istemci geliştirirken [!INCLUDE[indigo1](../../.
   
 #### <a name="to-install-a-self-signed-certificate-in-the-trusted-root-certification-authorities"></a>Güvenilen kök sertifika yetkilileri otomatik olarak imzalanan bir sertifika yüklemek için  
   
-1.  Sertifika ek bileşenini açın. [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)][Nasıl yapılır: MMC ek bileşeni ile sertifikaları görüntüle](../../../../docs/framework/wcf/feature-details/how-to-view-certificates-with-the-mmc-snap-in.md).  
+1.  Sertifika ek bileşenini açın. Daha fazla bilgi için bkz: [nasıl yapılır: MMC ek bileşeni ile sertifikaları görüntüleme](../../../../docs/framework/wcf/feature-details/how-to-view-certificates-with-the-mmc-snap-in.md).  
   
 2.  Sertifika ya da depolanacağı klasörü açın **yerel bilgisayar** veya **geçerli kullanıcı**.  
   

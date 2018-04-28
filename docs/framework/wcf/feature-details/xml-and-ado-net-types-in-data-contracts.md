@@ -1,27 +1,29 @@
 ---
-title: "Veri Sözleşmelerinde XML ve ADO.NET Türleri"
-ms.custom: 
+title: Veri Sözleşmelerinde XML ve ADO.NET Türleri
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - csharp
 - vb
 ms.assetid: c2ce8461-3c15-4c41-8c81-1cb78f5b59a6
-caps.latest.revision: "7"
+caps.latest.revision: 7
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: c4641815687f2c510aa664a287a79f64dc86d769
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 3a1fceb1017c5225b4e1de6891d6609c9ad5062e
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="xml-and-adonet-types-in-data-contracts"></a>Veri Sözleşmelerinde XML ve ADO.NET Türleri
 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] Veri sözleşmesi modeli XML doğrudan temsil eden belirli türlerini destekler. Bu tür için XML serileştirildiği zaman seri hale getirici herhangi başka bir işleme olmadan bu tür XML içeriği yazar. Desteklenen türler <xref:System.Xml.XmlElement>, dizilerin <xref:System.Xml.XmlNode> (ama `XmlNode` kendisini yazın), türleri uygulayan <xref:System.Xml.Serialization.IXmlSerializable>. <xref:System.Data.DataSet> Ve <xref:System.Data.DataTable> türü olarak yazılan veri kümeleri, veritabanı programlaması kullanılan yaygın olarak. Bu türleri uygulayan `IXmlSerializable` arabirimi ve bu nedenle veriler serileştirilebilir sözleşme modeli. Bu tür için bazı özel durumlar, bu konunun sonunda listelenmiştir.  
@@ -54,7 +56,7 @@ ms.lasthandoff: 12/22/2017
   
  XML parçası, için seri durumdan çıkarılmış olduğundan emin olun bir `XmlElement` kullanır ve tüm üst öğelerinden önek tanımları üzerinde kalmaz tüm ön eklerin tanımlar. Bu bir sorun yalnızca kullanıldığında `DataContractSerializer` XML farklı bir erişmek için (olmayan`DataContractSerializer`) kaynak.  
   
- İle kullanıldığında `DataContractSerializer`, `XmlElement` polymorphically, ancak yalnızca veri türünün bir üyesi için atanabilir <xref:System.Object>. Bunu uygulayan olsa bile <xref:System.Collections.IEnumerable>, bir `XmlElement` koleksiyon türü olarak kullanılamaz ve atanamaz bir <xref:System.Collections.IEnumerable> veri üyesi. Tüm çok biçimli atamaları gibi ile `DataContractSerializer` veri sözleşme adına yayar elde edilen XML'de – bu durumda, "XmlElement" "http://schemas.datacontract.org/2004/07/System.Xml" ad alanında öyledir.  
+ İle kullanıldığında `DataContractSerializer`, `XmlElement` polymorphically, ancak yalnızca veri türünün bir üyesi için atanabilir <xref:System.Object>. Bunu uygulayan olsa bile <xref:System.Collections.IEnumerable>, bir `XmlElement` koleksiyon türü olarak kullanılamaz ve atanamaz bir <xref:System.Collections.IEnumerable> veri üyesi. Tüm çok biçimli atamaları gibi ile `DataContractSerializer` veri sözleşme adına yayar elde edilen XML'de – bu durumda, "XmlElement" olarak "http://schemas.datacontract.org/2004/07/System.Xml" ad alanı.  
   
  İle `NetDataContractSerializer`, tüm geçerli biçimli atamasının `XmlElement` (için `Object` veya `IEnumerable`) desteklenir.  
   
@@ -98,7 +100,7 @@ ms.lasthandoff: 12/22/2017
   
  Türünün bir veri üyesi doldurma <xref:System.Array> , `Object` veya `Array` , `IEnumerable` ile `XmlNode` örnekleri ele veri üyesi olarak neden olmaz bir `Array` , `XmlNode` örnekleri. Her dizi üyesini ayrı olarak serileştirilir.  
   
- İle kullanıldığında `DataContractSerializer`, dizilerin `XmlNode` polymorphically, ancak yalnızca veri türünün bir üyesi için atanan `Object`. Bunu uygulayan olsa bile `IEnumerable`, bir dizi `XmlNode` koleksiyon türü olarak kullanılamaz ve atanması bir `IEnumerable` veri üyesi. Tüm çok biçimli atamaları gibi ile `DataContractSerializer` veri sözleşme adına yayar elde edilen XML'de – bu durumda, "ArrayOfXmlNode" "http://schemas.datacontract.org/2004/07/System.Xml" ad alanında öyledir. İle kullanıldığında `NetDataContractSerializer`, tüm geçerli atamasının bir `XmlNode` dizi desteklenir.  
+ İle kullanıldığında `DataContractSerializer`, dizilerin `XmlNode` polymorphically, ancak yalnızca veri türünün bir üyesi için atanan `Object`. Bunu uygulayan olsa bile `IEnumerable`, bir dizi `XmlNode` koleksiyon türü olarak kullanılamaz ve atanması bir `IEnumerable` veri üyesi. Tüm çok biçimli atamaları gibi ile `DataContractSerializer` veri sözleşme adına yayar elde edilen XML'de – bu durumda, "ArrayOfXmlNode" olarak "http://schemas.datacontract.org/2004/07/System.Xml" ad alanı. İle kullanıldığında `NetDataContractSerializer`, tüm geçerli atamasının bir `XmlNode` dizi desteklenir.  
   
 ### <a name="schema-considerations"></a>Şema konuları  
  Şema eşleme XML türleri hakkında daha fazla ayrıntı için bkz: [veri sözleşmesi şema başvurusu](../../../../docs/framework/wcf/feature-details/data-contract-schema-reference.md). Bu bölümde önemli noktaları özetini sağlar.  
@@ -148,16 +150,16 @@ ms.lasthandoff: 12/22/2017
 ### <a name="schema-considerations-for-ixmlserializable-content-types"></a>IXmlSerializable içerik türleri için şema konuları  
  Şema dışarı aktarılırken bir `IXmlSerializable` içerik türü, şema sağlayıcısı yöntemi çağrılır. Bir <xref:System.Xml.Schema.XmlSchemaSet> şema sağlayıcısı yönteme geçirilen. Yöntemin geçerli bir şema şema kümesine ekleyebilirsiniz. Şema kümesini şema verme oluştuğunda zamanında zaten biliniyor bir şema içeriyor. Şema sağlayıcı yöntemi şema kümesine bir öğe eklemelisiniz, varsa belirlemelisiniz bir <xref:System.Xml.Schema.XmlSchema> uygun ad alanı zaten kümesinde var. Destekliyorsa, şema sağlayıcı yöntemi yeni öğe varolan eklemelisiniz `XmlSchema`. Aksi takdirde, yeni bir oluşturmalısınız `XmlSchema` örneği. Bu önemlidir, dizilerin `IXmlSerializable` türleri kullanılmaktadır. Örneğin, bir `IXmlSerializable` ad "B", "A" türü olarak dışarı türü içeren şema sağlayıcısı yöntemi, önceden ayarlanmış şema çağrılır zamana göre "ArrayOfA" türü tutmak "B" için şemayı mümkün değil.  
   
- Türlere ekleme yanı sıra <xref:System.Xml.Schema.XmlSchemaSet>, içerik türleri için şema sağlayıcı yöntemi null olmayan bir değer döndürmesi gerekir. Geri dönebilirsiniz bir <xref:System.Xml.XmlQualifiedName> için kullanılacak şema türü adını belirtir verilen `IXmlSerializable` türü. Bu tam adı da verileri olarak hizmet sözleşme adı ve türü için ad alanı. Var olmayan bir tür hemen şema sağlayıcı yöntem döndüğünde kümesi şemasında dönüş izin verilir. Ancak, bunu zamanına göre tüm türleri verilir ilgili beklenen ( <xref:System.Runtime.Serialization.XsdDataContractExporter.Export%2A> yöntemi, üzerinde tüm ilgili türleri için çağrılır <xref:System.Runtime.Serialization.XsdDataContractExporter> ve <xref:System.Runtime.Serialization.XsdDataContractExporter.Schemas%2A> özelliği erişilir), şema kümesinde türü mevcut. Erişme `Schemas` tüm önce özelliği ilgili `Export` çağrıları yapılan sonuçlanabilir bir <xref:System.Xml.Schema.XmlSchemaException>. [!INCLUDE[crabout](../../../../includes/crabout-md.md)]dışa aktarma işlemi bkz [sınıflardan Şemaları dışarı aktarma](../../../../docs/framework/wcf/feature-details/exporting-schemas-from-classes.md).  
+ Türlere ekleme yanı sıra <xref:System.Xml.Schema.XmlSchemaSet>, içerik türleri için şema sağlayıcı yöntemi null olmayan bir değer döndürmesi gerekir. Geri dönebilirsiniz bir <xref:System.Xml.XmlQualifiedName> için kullanılacak şema türü adını belirtir verilen `IXmlSerializable` türü. Bu tam adı da verileri olarak hizmet sözleşme adı ve türü için ad alanı. Var olmayan bir tür hemen şema sağlayıcı yöntem döndüğünde kümesi şemasında dönüş izin verilir. Ancak, bunu zamanına göre tüm türleri verilir ilgili beklenen ( <xref:System.Runtime.Serialization.XsdDataContractExporter.Export%2A> yöntemi, üzerinde tüm ilgili türleri için çağrılır <xref:System.Runtime.Serialization.XsdDataContractExporter> ve <xref:System.Runtime.Serialization.XsdDataContractExporter.Schemas%2A> özelliği erişilir), şema kümesinde türü mevcut. Erişme `Schemas` tüm önce özelliği ilgili `Export` çağrıları yapılan sonuçlanabilir bir <xref:System.Xml.Schema.XmlSchemaException>. [!INCLUDE[crabout](../../../../includes/crabout-md.md)] dışa aktarma işlemi bkz [sınıflardan Şemaları dışarı aktarma](../../../../docs/framework/wcf/feature-details/exporting-schemas-from-classes.md).  
   
  Şema sağlayıcı yöntem de döndürebilir <xref:System.Xml.Schema.XmlSchemaType> kullanmak için. Türü olabilir veya anonim olmayabilir. Anonim, ise için şemayı `IXmlSerializable` türü her zaman anonim bir tür olarak dışarı `IXmlSerializable` türü, bir veri üyesi olarak kullanılır. `IXmlSerializable` Türü hala sahip bir veri sözleşmesi adı ve ad alanı. (Bu açıklandığı gibi belirlenir [veri sözleşmesi adları](../../../../docs/framework/wcf/feature-details/data-contract-names.md) dışında <xref:System.Runtime.Serialization.DataContractAttribute> özniteliği, adını özelleştirmek için kullanılamaz.) Anonim değilse, türlerden biri olmalıdır `XmlSchemaSet`. Bu durumda döndürmek için eşdeğer `XmlQualifiedName` türü.  
   
- Ayrıca, bir genel öğesi bildirimi türü için verilir. Tür yoksa <xref:System.Xml.Serialization.XmlRootAttribute> öğesi uygulanmış özniteliğine sahip aynı ad ve veri sözleşmesi ad alanına ve "bırakılabilir" özelliği true olarak ayarlandığında. Tür veri sözleşmesi ise tek özel durum Şema ad alanı ("http://www.w3.org/2001/XMLSchema") – bu ad alanında, karşılık gelen bir genel öğesi şemaya yeni öğeler eklemek için Yasak boş ad alanında nedeni ad alanı. Türündeyse `XmlRootAttribute` , genel bir öğe bildirimi özniteliğinin, aşağıdakileri kullanarak aktarılır: <xref:System.Xml.Serialization.XmlRootAttribute.ElementName%2A>, <xref:System.Xml.Serialization.XmlRootAttribute.Namespace%2A> ve <xref:System.Xml.Serialization.XmlRootAttribute.IsNullable%2A> özellikleri. Varsayılan değerlerle `XmlRootAttribute` uygulanan veri sözleşme adına, bir boş ad alanı ve "bırakılabilir" true ' dır.  
+ Ayrıca, bir genel öğesi bildirimi türü için verilir. Tür yoksa <xref:System.Xml.Serialization.XmlRootAttribute> öğesi uygulanmış özniteliğine sahip aynı ad ve veri sözleşmesi ad alanına ve "bırakılabilir" özelliği true olarak ayarlandığında. Bunun tek istisnası Şema ad alanıdır ("http://www.w3.org/2001/XMLSchema") – tür veri sözleşmesi bu ad alanında Şema ad alanına yeni öğeler eklemek için Yasak olduğundan karşılık gelen bir genel öğesi boş ad alanında ise,. Türündeyse `XmlRootAttribute` , genel bir öğe bildirimi özniteliğinin, aşağıdakileri kullanarak aktarılır: <xref:System.Xml.Serialization.XmlRootAttribute.ElementName%2A>, <xref:System.Xml.Serialization.XmlRootAttribute.Namespace%2A> ve <xref:System.Xml.Serialization.XmlRootAttribute.IsNullable%2A> özellikleri. Varsayılan değerlerle `XmlRootAttribute` uygulanan veri sözleşme adına, bir boş ad alanı ve "bırakılabilir" true ' dır.  
   
  Aynı genel öğesi bildirim kuralları eski veri kümesi türleri için geçerlidir. Unutmayın `XmlRootAttribute` ya da eklenen özel kod aracılığıyla eklenen genel öğesi bildirimleri geçersiz kılamaz `XmlSchemaSet` şema sağlayıcı yöntemi kullanarak aracılığıyla veya `GetSchema` eski veri kümesi türleri için.  
   
 ### <a name="ixmlserializable-element-types"></a>IXmlSerializable öğe türleri  
- `IXmlSerializable`öğe türleri ya da sahip `IsAny` özelliğini `true` veya dönüş kendi şema sağlayıcı yöntemi `null`.  
+ `IXmlSerializable` öğe türleri ya da sahip `IsAny` özelliğini `true` veya dönüş kendi şema sağlayıcı yöntemi `null`.  
   
  Seri hale getirme ve bir öğe türü seri durumdan seri hale getirme ve bir içerik türü seri durumdan çıkarmak için çok benzer. Ancak, önemli bazı farklar vardır:  
   
@@ -165,11 +167,11 @@ ms.lasthandoff: 12/22/2017
   
 -   `ReadXml` Uygulama sarmalayıcı öğesi değil kimler. Bir öğeyi okumak için beklenen, `WriteXml` üretir.  
   
--   Düzenli olarak bir öğe türü (örneğin, bir veri üyesi olarak bir veri sözleşmesi) serileştirilirken bir kapsayıcı öğe çağırmadan önce seri hale getirici çıkarır `WriteXml`, içerik türleri gibi. Ancak, en üst düzeyinde bir öğe türü seri hale getirme, seri hale getirici normalde hiç öğe çevresinde bir sarmalayıcı öğesi çıktı vermez, `WriteXml` bir kök ve ad alanına seri hale getirici oluştururken açıkça belirtilen sürece Yazar içinde `DataContractSerializer` veya `NetDataContractSerializer` oluşturucular. [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)][Seri hale getirme ve seri durumdan çıkarma](../../../../docs/framework/wcf/feature-details/serialization-and-deserialization.md).  
+-   Düzenli olarak bir öğe türü (örneğin, bir veri üyesi olarak bir veri sözleşmesi) serileştirilirken bir kapsayıcı öğe çağırmadan önce seri hale getirici çıkarır `WriteXml`, içerik türleri gibi. Ancak, en üst düzeyinde bir öğe türü seri hale getirme, seri hale getirici normalde hiç öğe çevresinde bir sarmalayıcı öğesi çıktı vermez, `WriteXml` bir kök ve ad alanına seri hale getirici oluştururken açıkça belirtilen sürece Yazar içinde `DataContractSerializer` veya `NetDataContractSerializer` oluşturucular. Daha fazla bilgi için bkz: [seri hale getirme ve seri durumdan çıkarma](../../../../docs/framework/wcf/feature-details/serialization-and-deserialization.md).  
   
 -   En üst düzeydeki bir öğe türü kök adı ve ad alanı oluşturma zamanında belirtmeden serileştirilirken <xref:System.Runtime.Serialization.XmlObjectSerializer.WriteStartObject%2A> ve <xref:System.Runtime.Serialization.XmlObjectSerializer.WriteEndObject%2A> temelde hiçbir şey yapmaz ve <xref:System.Runtime.Serialization.XmlObjectSerializer.WriteObjectContent%2A> çağrıları `WriteXml`. Bu modda, serileştirilen nesnesi null olamaz ve polymorphically atanamaz. Ayrıca, Nesne grafiği korunması olamaz etkin ve `NetDataContractSerializer` kullanılamaz.  
   
--   En üst düzeydeki bir öğe türü kök adı ve ad alanı oluşturma zamanında belirtmeden çıkarılırken <xref:System.Runtime.Serialization.XmlObjectSerializer.IsStartObject%2A> döndürür `true` herhangi bir öğenin başlangıç bulursanız. <xref:System.Runtime.Serialization.XmlObjectSerializer.ReadObject%2A>ile `verifyObjectName` parametre kümesine `true` aynı şekilde davranır `IsStartObject` gerçekten nesnesi okuma önce. `ReadObject`Ardından, denetimine geçirir `ReadXml` yöntemi.  
+-   En üst düzeydeki bir öğe türü kök adı ve ad alanı oluşturma zamanında belirtmeden çıkarılırken <xref:System.Runtime.Serialization.XmlObjectSerializer.IsStartObject%2A> döndürür `true` herhangi bir öğenin başlangıç bulursanız. <xref:System.Runtime.Serialization.XmlObjectSerializer.ReadObject%2A> ile `verifyObjectName` parametre kümesine `true` aynı şekilde davranır `IsStartObject` gerçekten nesnesi okuma önce. `ReadObject` Ardından, denetimine geçirir `ReadXml` yöntemi.  
   
  Öğe türleri için verilen şema olarak aynıdır `XmlElement` türü bir önceki bölümde açıklandığı gibi şema sağlayıcı yöntemi herhangi bir ek şema ekleyebilirsiniz dışında <xref:System.Xml.Schema.XmlSchemaSet> gibi içerik türleri. Kullanarak `XmlRootAttribute` öğe türleri özniteliğiyle izin verilmez ve genel öğesi bildirimleri hiçbir zaman bu türleri için gösterilen.  
   
@@ -200,7 +202,7 @@ ms.lasthandoff: 12/22/2017
   
 -   Tüm ile sağlanan XML yazıcılarının [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] XML işleme yönergelerini Reddet (\<? … ? >) ve belge tanımları yazın (\<! … >), çünkü SOAP iletilerine izin verilmiyor. Yeniden, bu kısıtlamaya almak için kendi kodlama mekanizması kullanabilirsiniz. Bu sonuç XML içermelidir gerekiyorsa, bunları destekleyen XML yazıcılarının kullanan özel bir kodlayıcı yazabilirsiniz.  
   
--   Uygularken `WriteXml`, arama kaçının <xref:System.Xml.XmlWriter.WriteRaw%2A> XML yazıcıyı yöntemi. [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]XML kodlamaları (dahil olmak üzere ikili) çeşitli kullanır, bu çok zor veya kullanmak mümkün `WriteRaw` sonucu hiçbir kodlama kullanılabilir olacak şekilde.  
+-   Uygularken `WriteXml`, arama kaçının <xref:System.Xml.XmlWriter.WriteRaw%2A> XML yazıcıyı yöntemi. [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] XML kodlamaları (dahil olmak üzere ikili) çeşitli kullanır, bu çok zor veya kullanmak mümkün `WriteRaw` sonucu hiçbir kodlama kullanılabilir olacak şekilde.  
   
 -   Uygularken `WriteXml`, kullanmaktan kaçının <xref:System.Xml.XmlWriter.WriteEntityRef%2A> ve <xref:System.Xml.XmlWriter.WriteNmToken%2A> ile sağlanan XML yazıcılarının desteklenmeyen yöntemleri [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)].  
   
@@ -209,7 +211,7 @@ ms.lasthandoff: 12/22/2017
   
 -   Bu tür için şemayı (özellikle <xref:System.Data.DataSet> ve kendi yazılan türetilmiş sınıfları) bazı ile birlikte çalışabilen olmayabilir olmayan[!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] platformları, ya da bu platformları ile kullanıldığında zayıf kullanılabilirlik neden olabilir. Ayrıca, kullanarak `DataSet` türü performans etkileri olabilir. Son olarak, bu, daha zor sizin için sürüme uygulamanızı gelecekte kalmasına neden olabilir. Açıkça tanımlanmış veri sözleşme türleri yerine kullanmayı `DataSet` sözleşmelerinizi türlerinde.  
   
--   İçe aktarma sırasında `DataSet` veya `DataTable` şema, bu tür başvurmak önemli. Svcutil.exe komut satırı aracı ile bu System.Data.dll derleme adı geçirerek gerçekleştirilebilir `/reference` geçin. Türü belirtilmiş veri kümesi şema alma, yazılan veri kümesi'nin bir türe başvurmalıdır. Türü belirtilmiş veri kümesi'nin derlemeye konumunu svcutil.exe ile geçirmek `/reference` geçin. [!INCLUDE[crabout](../../../../includes/crabout-md.md)]türlerine başvurma, bkz: [oluşturmak sınıfları içeri aktarma şemaya](../../../../docs/framework/wcf/feature-details/importing-schema-to-generate-classes.md).  
+-   İçe aktarma sırasında `DataSet` veya `DataTable` şema, bu tür başvurmak önemli. Svcutil.exe komut satırı aracı ile bu System.Data.dll derleme adı geçirerek gerçekleştirilebilir `/reference` geçin. Türü belirtilmiş veri kümesi şema alma, yazılan veri kümesi'nin bir türe başvurmalıdır. Türü belirtilmiş veri kümesi'nin derlemeye konumunu svcutil.exe ile geçirmek `/reference` geçin. [!INCLUDE[crabout](../../../../includes/crabout-md.md)] türlerine başvurma, bkz: [oluşturmak sınıfları içeri aktarma şemaya](../../../../docs/framework/wcf/feature-details/importing-schema-to-generate-classes.md).  
   
  Veri sözleşmesi modelindeki yazılan veri kümeleri için destek sınırlıdır. Yazılan veri kümeleri serisi seri hale getirilebilir ve kendi şema dışarı aktarabilirsiniz. Ancak, yalnızca var olanları yeniden kullanabilir olarak şema alma yeni oluşturamıyor veri sözleşmesi şema DataSet türlerinden yazılan. Kullanarak mevcut türü belirtilmiş veri kümesi için gösterebilir `/r` üzerinde Svcutil.exe geçin. Svcutil.exe olmadan kullanmayı denerseniz, `/r` türü belirtilmiş veri kümesi kullanan bir hizmet anahtarı, alternatif bir serileştirici (XmlSerializer) otomatik olarak seçilir. DataContractSerializer kullanmanız gerekir ve veri kümeleri şemadan oluşturmanız gerekir, aşağıdaki yordamı kullanabilirsiniz: türü belirtilmiş veri kümesi türleri oluştur (XSD.exe'nin aracıyla kullanarak `/d` hizmette geçiş) türleri derleyin ve ardından bunları kullanarak `/r` üzerinde Svcutil.exe geçin.  
   

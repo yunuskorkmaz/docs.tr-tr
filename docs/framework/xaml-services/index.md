@@ -20,11 +20,11 @@ ms.author: wpickett
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: 1548f74cab4589690e49517cdf96144fb6515693
-ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
+ms.openlocfilehash: f36f22e8bf68520f5f57280d33cf37990feb2df6
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="xaml-services"></a>XAML Hizmetleri
 Bu konu Hizmetleri .NET Framework XAML bilinen bir teknoloji kümesi özelliklerini açıklar. Açıklanan API'leri ve Hizmetleri çoğunluğu ile sunulan bir derleme System.Xaml derlemesindeki bulunur [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)] .NET core derlemeler kümesini. Hizmetleri içeren okuyucuları ve yazıcıları, şema sınıfları ve şema desteği oluşturucuları sınıfları, XAML dili iç desteği ve diğer XAML dil özellikleri öznitelik atanıyor.  
@@ -49,7 +49,7 @@ Bu konu Hizmetleri .NET Framework XAML bilinen bir teknoloji kümesi özellikler
  XAML dili olarak giriş ortama arıyorsanız deneyebilecekleriniz [XAML genel bakış (WPF)](../../../docs/framework/wpf/advanced/xaml-overview-wpf.md). Bu konuda XAML yeni bir izleyici için her ikisini de ele alınmıştır [!INCLUDE[TLA#tla_winclient](../../../includes/tlasharptla-winclient-md.md)] ve ayrıca XAML biçimlendirme ve XAML dil özellikleri kullanılarak. Başka bir yararlı giriş malzeme belgedir [XAML dil belirtimi](http://go.microsoft.com/fwlink/?LinkId=114525).  
   
 ## <a name="net-framework-xaml-services-and-systemxaml-in-the-net-architecture"></a>.NET framework XAML Hizmetleri ve .NET mimarisinde System.Xaml  
- Önceki sürümlerinde [!INCLUDE[TLA#tla_netframewk](../../../includes/tlasharptla-netframewk-md.md)], XAML dili özellikleri uygulanan üzerinde oluşturulan çerçeveleri tarafından desteği [!INCLUDE[TLA#tla_netframewk](../../../includes/tlasharptla-netframewk-md.md)] ([!INCLUDE[TLA#tla_winclient](../../../includes/tlasharptla-winclient-md.md)], Windows Workflow Foundation ve [!INCLUDE[vsindigo](../../../includes/vsindigo-md.md)]) ve bu nedenle davranışını ve kullanılan API değişmesi kullanmakta olduğunuz bağlı olarak belirli hangi framework. Bu XAML dahil Ayrıştırıcı ve onun nesnesinden grafik oluşturma mekanizması, XAML dili yapı, serileştirme desteği ve benzeri.  
+ Önceki sürümlerinde [!INCLUDE[TLA#tla_netframewk](../../../includes/tlasharptla-netframewk-md.md)], XAML dili özellikleri uygulanan üzerinde oluşturulan çerçeveleri tarafından desteği [!INCLUDE[TLA#tla_netframewk](../../../includes/tlasharptla-netframewk-md.md)] ([!INCLUDE[TLA#tla_winclient](../../../includes/tlasharptla-winclient-md.md)], Windows Workflow Foundation ve Windows Communication Foundation (WCF)) ve bu nedenle, değiştirilen kendi davranış ve bağlı olarak belirli hangi framework kullanmakta olduğunuz kullanılan API. Bu XAML dahil Ayrıştırıcı ve onun nesnesinden grafik oluşturma mekanizması, XAML dili yapı, serileştirme desteği ve benzeri.  
   
  İçinde [!INCLUDE[net_v40_long](../../../includes/net-v40-long-md.md)], .NET Framework XAML hizmetlerinde ve System.Xaml derleme XAML dil özellikleri desteklemek için gerekenleri çoğunu tanımlayın. XAML okuyucuları ve XAML yazıcıları için temel sınıflar içerir. Çerçeveye özel XAML uygulamaları hiçbirinde mevcut olmadığından .NET Framework XAML hizmetlerinde eklenen en önemli XAML tür sistem temsili özelliğidir. Tür sistemi gösterimi XAML çerçeveleri belirli özelliklerini bağımlılıkları bırakmadan XAML yeteneklerini merkezleri nesne yönelimli bir şekilde gösterir.  
   

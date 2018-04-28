@@ -1,30 +1,32 @@
 ---
-title: "Nasıl yapılır: Destekleyici Kimlik Bilgileri Oluşturma"
-ms.custom: 
+title: 'Nasıl yapılır: Destekleyici Kimlik Bilgileri Oluşturma'
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: d0952919-8bb4-4978-926c-9cc108f89806
-caps.latest.revision: "9"
+caps.latest.revision: 9
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 4afad13300e2eb50a9625a5991bc8cb724c21dd6
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: e74ba51306ba8761d916f580b21de9b3ba9cb7f4
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="how-to-create-a-supporting-credential"></a>Nasıl yapılır: Destekleyici Kimlik Bilgileri Oluşturma
 Birden fazla kimlik bilgisi gerektirir bir özel güvenlik düzeni olması mümkündür. Örneğin, bir hizmet istemci yalnızca bir kullanıcı adı ve parola talep edebilir, ancak aynı zamanda istemci kanıtlar bir kimlik bilgisi 18 yaş olan. İkinci kimlik bilgisinin bir *kimlik bilgisi destekleyen*. Bu konuda, bu tür kimlik bilgilerini uygulamak açıklanmaktadır bir [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] istemci.  
   
 > [!NOTE]
->  Kimlik bilgileri desteklemek için belirtimi WS-SecurityPolicy belirtimi bir parçasıdır. [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)][Web Hizmetleri Güvenlik belirtimleri](http://go.microsoft.com/fwlink/?LinkId=88537).  
+>  Kimlik bilgileri desteklemek için belirtimi WS-SecurityPolicy belirtimi bir parçasıdır. Daha fazla bilgi için bkz: [Web Hizmetleri Güvenlik belirtimleri](http://go.microsoft.com/fwlink/?LinkId=88537).  
   
 ## <a name="supporting-tokens"></a>Destek Belirteçleri  
  Kısaca, ileti güvenliği kullandığınızda bir *birincil kimlik bilgisi* her zaman (örneğin, bir X.509 sertifikası veya bir Kerberos anahtarı) ileti güvenliği için kullanılır.  
@@ -46,7 +48,7 @@ Birden fazla kimlik bilgisi gerektirir bir özel güvenlik düzeni olması mümk
 |İmzalı ve şifreleme|İmzalı, şifrelenmiş destek belirteçleri destek görüntülendikleri yükleyen de şifrelenir belirteçleri oturumunuz `wsse:SecurityHeader`.|  
   
 ## <a name="programming-supporting-credentials"></a>Kimlik bilgilerini destekleyen programlama  
- Destek belirteçleri oluşturmalısınız kullanan bir hizmet oluşturmak için bir [ \<customBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/custombinding.md). ([!INCLUDE[crdefault](../../../../includes/crdefault-md.md)] [Nasıl yapılır: SecurityBindingElement kullanarak özel bağlama oluşturma](../../../../docs/framework/wcf/feature-details/how-to-create-a-custom-binding-using-the-securitybindingelement.md).)  
+ Destek belirteçleri oluşturmalısınız kullanan bir hizmet oluşturmak için bir [ \<customBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/custombinding.md). (Daha fazla bilgi için bkz: [nasıl yapılır: SecurityBindingElement oluşturma bağlama kullanarak bir özel](../../../../docs/framework/wcf/feature-details/how-to-create-a-custom-binding-using-the-securitybindingelement.md).)  
   
  Özel bağlama oluştururken ilk adım, üç tür biri olabilir güvenlik bağlama öğesi oluşturmaktır:  
   

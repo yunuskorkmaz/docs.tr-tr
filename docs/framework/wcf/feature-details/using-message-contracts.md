@@ -1,13 +1,13 @@
 ---
-title: "İleti Sözleşmeleri Kullanılıyor"
-ms.custom: 
+title: İleti Sözleşmeleri Kullanılıyor
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - dotnet-clr
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - csharp
@@ -15,27 +15,27 @@ dev_langs:
 helpviewer_keywords:
 - message contracts [WCF]
 ms.assetid: 1e19c64a-ae84-4c2f-9155-91c54a77c249
-caps.latest.revision: 
+caps.latest.revision: 46
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: db19b5188c98d157b98d65422ee38d4ed59f733a
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: e9f6d0e9d64c510b47b0697d02178f1c0a95f61b
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="using-message-contracts"></a>İleti Sözleşmeleri Kullanılıyor
-Genellikle oluştururken [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] uygulamaları, geliştiricilerin serileştirme sorunları ve veri yapıları Kapat dikkat ve kendilerini içinde veri yazımının iletileri yapısıyla ilgilendiren gerekmez. Bu uygulamalar için parametreleri veya dönüş değerleri için veri sözleşmeleri oluşturma basittir. ([!INCLUDE[crdefault](../../../../includes/crdefault-md.md)] [Veri aktarımı hizmet sözleşmelerinde belirtme](../../../../docs/framework/wcf/feature-details/specifying-data-transfer-in-service-contracts.md).)  
+Genellikle oluştururken [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] uygulamaları, geliştiricilerin serileştirme sorunları ve veri yapıları Kapat dikkat ve kendilerini içinde veri yazımının iletileri yapısıyla ilgilendiren gerekmez. Bu uygulamalar için parametreleri veya dönüş değerleri için veri sözleşmeleri oluşturma basittir. (Daha fazla bilgi için bkz: [hizmet sözleşmelerinde veri aktarımı belirtme](../../../../docs/framework/wcf/feature-details/specifying-data-transfer-in-service-contracts.md).)  
   
  Ancak, bir SOAP iletisi yapısını bazen tam kontrole yalnızca, içeriğini üzerinde denetim olarak önem taşır. Birlikte çalışabilirlik önemli veya özellikle güvenlik denetlemek için ileti veya ileti bölümü düzeyinde sorunları olduğunda özellikle geçerlidir. Bu durumlarda, oluşturduğunuz bir *ileti sözleşmesi* gerekli kesin SOAP iletisi yapısını belirtmenize olanak sağlar.  
   
  Bu konu çeşitli ileti sözleşmesi öznitelikleri belirli ileti sözleşmesi işleminiz oluşturmak için nasıl kullanıldığını açıklar.  
   
 ## <a name="using-message-contracts-in-operations"></a>İleti sözleşmeleri işlemlerinde kullanma  
- [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]hakkında ya da Modellenen işlemlerini destekleyen *uzak yordam çağrısı (RPC) stili* veya *stili Mesajlaşma*. Bir RPC-style işleminde serializable bir tür kullanabilirsiniz ve birden çok parametre gibi yerel aramalar için kullanılabilen özellikleri erişimi ve `ref` ve `out` parametreleri. Bu stilde seçilen serileştirme form temel alınan iletilerde verilerin yapısını denetler ve [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] çalışma zamanı işlemi desteklemek için iletileri oluşturur. Bu, SOAP ile tanıdık olmayan ve iletileri kolayca SOAP ve kolayca oluşturup hizmet uygulamaları kullanın geliştiriciler sağlar.  
+ [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] hakkında ya da Modellenen işlemlerini destekleyen *uzak yordam çağrısı (RPC) stili* veya *stili Mesajlaşma*. Bir RPC-style işleminde serializable bir tür kullanabilirsiniz ve birden çok parametre gibi yerel aramalar için kullanılabilen özellikleri erişimi ve `ref` ve `out` parametreleri. Bu stilde seçilen serileştirme form temel alınan iletilerde verilerin yapısını denetler ve [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] çalışma zamanı işlemi desteklemek için iletileri oluşturur. Bu, SOAP ile tanıdık olmayan ve iletileri kolayca SOAP ve kolayca oluşturup hizmet uygulamaları kullanın geliştiriciler sağlar.  
   
  Aşağıdaki kod örneğinde RPC stilini Modellenen bir hizmet işlemi gösterilmektedir.  
   
@@ -44,7 +44,7 @@ Genellikle oluştururken [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)]
 public BankingTransactionResponse PostBankingTransaction(BankingTransaction bt);  
 ```  
   
- Normalde, bir veri sözleşmesi şema iletileri tanımlamak yeterlidir. Örneğin, önceki örnekte, çoğu uygulama için yeterli değilse `BankingTransaction` ve `BankingTransactionResponse` temel alınan SOAP iletilerine içeriğini tanımlamak için veri sözleşmeleri sahip. [!INCLUDE[crabout](../../../../includes/crabout-md.md)]Veri sözleşmeleri bkz [kullanarak veri sözleşmeleri](../../../../docs/framework/wcf/feature-details/using-data-contracts.md).  
+ Normalde, bir veri sözleşmesi şema iletileri tanımlamak yeterlidir. Örneğin, önceki örnekte, çoğu uygulama için yeterli değilse `BankingTransaction` ve `BankingTransactionResponse` temel alınan SOAP iletilerine içeriğini tanımlamak için veri sözleşmeleri sahip. [!INCLUDE[crabout](../../../../includes/crabout-md.md)] Veri sözleşmeleri bkz [kullanarak veri sözleşmeleri](../../../../docs/framework/wcf/feature-details/using-data-contracts.md).  
   
  Ancak, bazen onu tam olarak nasıl SOAP iletisi yapısını kablo üzerinden aktarılan denetlemek gereklidir. Bunun en yaygın senaryo özel SOAP üstbilgileri ekleniyor. Başka bir yaygın senaryodur güvenlik özelliklerini ileti üstbilgi ve gövde, yani tanımlamak için bu öğeler dijital olarak imzalanmış ve şifrelenmiş olup olmadığını karar vermek için. Son olarak, bazı üçüncü taraf SOAP yığınları iletileri gerektiren belirli bir biçimde olabilir. Mesajlaşma stili operations bu denetim sağlar.  
   
@@ -118,7 +118,7 @@ public class BankingTransaction
  <xref:System.ServiceModel.MessageContractAttribute> SOAP iletisi gövdesinde sarmalayıcı öğesinin adı kontrol WrapperName ve WrapperNamespace öznitelikleri belirtmenize olanak tanır. Varsayılan ileti sözleşmesi adını türü sarmalayıcı ve ileti sözleşmesi tanımlanır ad alanı için kullanılan `HYPERLINK "http://tempuri.org/" http://tempuri.org/` varsayılan ad alanı olarak kullanılır.  
   
 > [!NOTE]
->  <xref:System.Runtime.Serialization.KnownTypeAttribute>ileti sözleşmeleri öznitelikleri göz ardı edilir. Varsa bir <xref:System.Runtime.Serialization.KnownTypeAttribute> olan gerekli, bunu ileti sözleşmesi kullanan işlemi söz konusu yerleştirin.  
+>  <xref:System.Runtime.Serialization.KnownTypeAttribute> ileti sözleşmeleri öznitelikleri göz ardı edilir. Varsa bir <xref:System.Runtime.Serialization.KnownTypeAttribute> olan gerekli, bunu ileti sözleşmesi kullanan işlemi söz konusu yerleştirin.  
   
 ## <a name="controlling-header-and-body-part-names-and-namespaces"></a>Üstbilgi ve gövde bölümü adlarına ve ad alanlarını denetleme  
  İleti sözleşmesi SOAP gösterimini her üstbilgi ve gövde bölümü bir ad ve bir ad alanı olan bir XML öğesi eşler.  
@@ -167,7 +167,7 @@ public class BankingTransaction
 >  Birden fazla ileti Gövde bölümünün değil sarılır iletilerinde sahip WS ile uyumlu değil-ı temel Profil 1.1 ve yeni ileti sözleşmeleri tasarlarken önerilmez. Ancak, birden fazla sarmalanmamış ileti Gövde bölümünün belirli belirli birlikte çalışabilirlik senaryolarda sağlamak gerekli olabilir. Birden fazla parça ileti gövdesinde veri iletmek için kullanacaksanız, varsayılan (Sarmalanan) modunu kullanmak için önerilir. Birden fazla ileti üstbilgisi sarmalanmamış iletilerinde sahip tamamen kabul edilebilir.  
   
 ## <a name="using-custom-types-inside-message-contracts"></a>İleti sözleşmeleri içinde özel türleri kullanma  
- (XML içinde açık) her bireysel ileti başlığı ve ileti Gövde bölümünün serileştirilir seçilen serileştirme motoruna ileti kullanıldığı için hizmet sözleşmesini kullanma. Varsayılan serileştirme motoruna `XmlFormatter`, bir veri sözleşmesi ya da açıkça olan herhangi bir tür işleyebilir (sahip <xref:System.Runtime.Serialization.DataContractAttribute?displayProperty=nameWithType>) ya da örtük olarak (Basit tür olması, sahip <xref:System.SerializableAttribute?displayProperty=nameWithType>, vb.). [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)][Veri sözleşmelerini kullanma](../../../../docs/framework/wcf/feature-details/using-data-contracts.md).  
+ (XML içinde açık) her bireysel ileti başlığı ve ileti Gövde bölümünün serileştirilir seçilen serileştirme motoruna ileti kullanıldığı için hizmet sözleşmesini kullanma. Varsayılan serileştirme motoruna `XmlFormatter`, bir veri sözleşmesi ya da açıkça olan herhangi bir tür işleyebilir (sahip <xref:System.Runtime.Serialization.DataContractAttribute?displayProperty=nameWithType>) ya da örtük olarak (Basit tür olması, sahip <xref:System.SerializableAttribute?displayProperty=nameWithType>, vb.). Daha fazla bilgi için bkz: [kullanarak veri sözleşmeleri](../../../../docs/framework/wcf/feature-details/using-data-contracts.md).  
   
  Önceki örnekte `Operation` ve `BankingTransactionData` türleri, bir veri sözleşmesi olmalıdır ve `transactionDate` seri hale getirilemez çünkü <xref:System.DateTime> bir primitive (ve bu nedenle bir örtük veri sözleşmesi).  
   
@@ -257,13 +257,13 @@ public class PatientRecord
 ## <a name="soap-header-attributes"></a>SOAP üstbilgi öznitelikleri  
  SOAP standart üstbilgi bulunabilir aşağıdaki öznitelikleri tanımlar:  
   
--   `Actor/Role`(`Actor` SOAP 1.1 `Role` SOAP 1.2)  
+-   `Actor/Role` (`Actor` SOAP 1.1 `Role` SOAP 1.2)  
   
 -   `MustUnderstand`  
   
 -   `Relay`  
   
- `Actor` Veya `Role` özniteliği, verili bir üstbilginin amaçlanmıştır düğümü Tekdüzen Kaynak Tanımlayıcısı'nı (URI) belirtir. `MustUnderstand` Özniteliği, üst bilgi işlem düğümü, anlamak olup olmadığını belirtir. `Relay` Özniteliği, üstbilgi aşağı akış düğümlerine geçirilmesine izin olup olmadığını belirtir. [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]dışında bu özniteliklerin gelen iletileri üzerinde herhangi bir işlem gerçekleştirmez `MustUnderstand` özniteliği, bu konunun devamındaki "İleti sözleşmesi sürümü oluşturma" bölümünde belirtildiği gibi. Ancak, gerekirse aşağıdaki açıklama olduğu gibi bu öznitelikler okumasına ve yazmasına sağlar.  
+ `Actor` Veya `Role` özniteliği, verili bir üstbilginin amaçlanmıştır düğümü Tekdüzen Kaynak Tanımlayıcısı'nı (URI) belirtir. `MustUnderstand` Özniteliği, üst bilgi işlem düğümü, anlamak olup olmadığını belirtir. `Relay` Özniteliği, üstbilgi aşağı akış düğümlerine geçirilmesine izin olup olmadığını belirtir. [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] dışında bu özniteliklerin gelen iletileri üzerinde herhangi bir işlem gerçekleştirmez `MustUnderstand` özniteliği, bu konunun devamındaki "İleti sözleşmesi sürümü oluşturma" bölümünde belirtildiği gibi. Ancak, gerekirse aşağıdaki açıklama olduğu gibi bu öznitelikler okumasına ve yazmasına sağlar.  
   
  İleti gönderirken bu öznitelikler varsayılan olarak gösterilen değil. Bunu iki şekilde değiştirebilirsiniz. İlk olarak, statik olarak öznitelikleri için istenen tüm değerleri değiştirerek ayarladığınız <xref:System.ServiceModel.MessageHeaderAttribute.Actor%2A?displayProperty=nameWithType>, <xref:System.ServiceModel.MessageHeaderAttribute.MustUnderstand%2A?displayProperty=nameWithType>, ve <xref:System.ServiceModel.MessageHeaderAttribute.Relay%2A?displayProperty=nameWithType> aşağıdaki kod örneğinde gösterildiği gibi özellikler. (Unutmayın hiçbir `Role` özellik; ayarı <xref:System.ServiceModel.MessageHeaderAttribute.Actor%2A> özelliği yayar `Role` SOAP 1.2 kullanıyorsanız özniteliği).  
   
@@ -316,7 +316,7 @@ bt.documentApprover.MustUnderstand = false; // override the static default of 't
  Bir ileti alındı ve geri gönderilen zaman SOAP özniteliği ayarları yalnızca üst bilgilerinin gidiş dönüş gidin <xref:System.ServiceModel.MessageHeader%601> türü.  
   
 ## <a name="order-of-soap-body-parts"></a>SOAP gövdesi bölümleri sırasını  
- Bazı durumlarda, gövde bölümlerinin sırasını denetlemek gerekebilir. Gövde öğelerin sırasını varsayılan olarak alfabetik ancak tarafından denetlenen <xref:System.ServiceModel.MessageBodyMemberAttribute.Order%2A?displayProperty=nameWithType> özelliği. Bu özellik olarak aynı semantiklerine sahip <xref:System.Runtime.Serialization.DataMemberAttribute.Order%2A?displayProperty=nameWithType> devralma senaryolarda (ileti sözleşmeleri, temel türü gövdesi üyeleri önce türetilen tür gövde üyeleri sıralanmamış) davranış dışında özelliği. [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)][Veri üye sırası](../../../../docs/framework/wcf/feature-details/data-member-order.md).  
+ Bazı durumlarda, gövde bölümlerinin sırasını denetlemek gerekebilir. Gövde öğelerin sırasını varsayılan olarak alfabetik ancak tarafından denetlenen <xref:System.ServiceModel.MessageBodyMemberAttribute.Order%2A?displayProperty=nameWithType> özelliği. Bu özellik olarak aynı semantiklerine sahip <xref:System.Runtime.Serialization.DataMemberAttribute.Order%2A?displayProperty=nameWithType> devralma senaryolarda (ileti sözleşmeleri, temel türü gövdesi üyeleri önce türetilen tür gövde üyeleri sıralanmamış) davranış dışında özelliği. Daha fazla bilgi için bkz: [veri üye sırası](../../../../docs/framework/wcf/feature-details/data-member-order.md).  
   
  Aşağıdaki örnekte, `amount` alfabetik olarak ilk olduğundan normal olarak ilk gelecektir. Ancak, <xref:System.ServiceModel.MessageBodyMemberAttribute.Order%2A> özelliği, üçüncü yerine koyar.  
   
@@ -336,9 +336,9 @@ public class BankingTransaction
   
  Sürüm üstbilgilerini aşağıdaki kurallar geçerli olur:  
   
--   [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]eksik üstbilgileri nesne değildir — varsayılan değerlerine karşılık gelen üyeleri bırakılır.  
+-   [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] eksik üstbilgileri nesne değildir — varsayılan değerlerine karşılık gelen üyeleri bırakılır.  
   
--   [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]Ayrıca beklenmeyen fazladan üstbilgiler yoksayar. Ek üstbilgi varsa bu kuralın tek özel durum olan bir `MustUnderstand` özniteliğini `true` gelen SOAP iletisi — anlaşılmalıdır bir üstbilgi işlenemediği için bu durumda, bir özel durum oluşur.  
+-   [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] Ayrıca beklenmeyen fazladan üstbilgiler yoksayar. Ek üstbilgi varsa bu kuralın tek özel durum olan bir `MustUnderstand` özniteliğini `true` gelen SOAP iletisi — anlaşılmalıdır bir üstbilgi işlenemediği için bu durumda, bir özel durum oluşur.  
   
  İleti gövdeleri sahip benzer sürüm oluşturma kuralları — eksik ve ek İleti gövde bölümü yok sayılır.  
   
@@ -383,7 +383,7 @@ public class PatientRecord : PersonRecord
 -   Birden çok işlemlerinde aynı iletiyi kullanarak sözleşme, birden çok ileti türlerini WSDL belgesinde üretilir. Adları "3", numaraları "2" ekleyerek ve benzeri sonraki kullanımlar için benzersiz yapılır. Geri WSDL içe aktarırken, birden çok ileti sözleşme türleri oluşturulur ve adlarını dışında aynıdır.  
   
 ## <a name="soap-encoding-considerations"></a>SOAP konuları kodlama  
- [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]eski SOAP kodlama stilini XML kullanmanıza olanak tanır ancak kullanımı önerilmez. Bu stili kullanırken (ayarlayarak `Use` özelliğine `Encoded` üzerinde <xref:System.ServiceModel.XmlSerializerFormatAttribute?displayProperty=nameWithType> hizmet sözleşmesini uygulanan), aşağıdaki ek maddeler geçerlidir:  
+ [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] eski SOAP kodlama stilini XML kullanmanıza olanak tanır ancak kullanımı önerilmez. Bu stili kullanırken (ayarlayarak `Use` özelliğine `Encoded` üzerinde <xref:System.ServiceModel.XmlSerializerFormatAttribute?displayProperty=nameWithType> hizmet sözleşmesini uygulanan), aşağıdaki ek maddeler geçerlidir:  
   
 -   İleti üstbilgilerini desteklenmez; Bu öznitelik anlamına <xref:System.ServiceModel.MessageHeaderAttribute> ve dizi öznitelik <xref:System.ServiceModel.MessageHeaderArrayAttribute> SOAP kodlama ile uyumlu değil.  
   

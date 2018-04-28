@@ -1,21 +1,19 @@
 ---
 title: .NET core geçiş csproj biçimine
 description: .NET core project.json csproj geçiş
-keywords: .NET, .NET core, .NET Core geçiş
 author: blackdwarf
 ms.author: mairaw
 ms.date: 07/19/2017
-ms.topic: article
-ms.prod: .net-core
+ms.topic: conceptual
+ms.prod: dotnet-core
 ms.devlang: dotnet
-ms.assetid: 1feadf3d-3cfc-41dd-abb5-a4fc303a7b53
 ms.workload:
 - dotnetcore
-ms.openlocfilehash: 46373d1d100a71cbc43fcdfe6ce16a7ecd796573
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: 102b875072ed77a328bdb6a62ed6cc98612ff059
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="migrating-net-core-projects-to-the-csproj-format"></a>.Csproj biçimine geçirme .NET Core projeleri
 
@@ -61,7 +59,7 @@ Bkz: [project.json ve csproj özellikleri arasında bir eşleme](../tools/projec
 
 - Bir hata alırsanız: "hiçbir yürütülebilir eşleşen komutu dotnet bulunamadı-geçirmek":
 
-Çalıştırma `dotnet --version` kullanmakta olduğunuz hangi sürümü görmek için. [`dotnet migrate`](../tools/dotnet-migrate.md).NET Core CLI RC3 gerektirir ya da daha yüksek.
+Çalıştırma `dotnet --version` kullanmakta olduğunuz hangi sürümü görmek için. [`dotnet migrate`](../tools/dotnet-migrate.md) .NET Core CLI RC3 gerektirir ya da daha yüksek.
 Varsa bu hatayı alırsınız bir *global.json* geçerli dosya veya üst dizini ve `sdk` sürüm, daha eski bir sürüm olarak ayarlanır.
 
 ## <a name="migration-from-dnx-to-csproj"></a>Csproj DNX geçiş
@@ -78,7 +76,7 @@ Varsa bu hatayı alırsınız bir *global.json* geçerli dosya veya üst dizini 
 
 * Araçları sürüm özellikten kaldırmak `<Project>` varsa öğesi. 
 * XML ad alanı Kaldır (`xmlns`) gelen `<Project>` öğesi.
-* Yoksa, ekleme `Sdk` özniteliğini `<Project>` öğesi ve ayarlamak `Microsoft.NET.Sdk` veya `Microsoft.NET.Sdk.Web`. Bu öznitelik, proje kullanılacak SDK kullandığını belirtir. `Microsoft.NET.Sdk.Web`Web uygulamaları için kullanılır.
+* Yoksa, ekleme `Sdk` özniteliğini `<Project>` öğesi ve ayarlamak `Microsoft.NET.Sdk` veya `Microsoft.NET.Sdk.Web`. Bu öznitelik, proje kullanılacak SDK kullandığını belirtir. `Microsoft.NET.Sdk.Web` Web uygulamaları için kullanılır.
 * Kaldırma `<Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" />` ve `<Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />` deyimleri üst ve alt projenin. Bu yüzden projede olmalarına gerek yoktur, deyimleri SDK tarafından kapsanan bu içeri aktarma. 
 * Varsa `Microsoft.NETCore.App` veya `NETStandard.Library` `<PackageReference>` öğeleri projenizdeki kaldırmalısınız bunları. Bu paket başvuruları [SDK tarafından kapsanan](https://aka.ms/sdkimplicitrefs). 
 * Kaldırma `Microsoft.NET.Sdk` `<PackageReference>` varsa öğesi. SDK'sı başvurusu geldiği `Sdk` özniteliği `<Project>` öğesi. 

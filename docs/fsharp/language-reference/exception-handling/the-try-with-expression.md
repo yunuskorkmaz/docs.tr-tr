@@ -1,20 +1,17 @@
 ---
-title: "Özel Durumlar: try...with İfadesi (F#)"
+title: 'Özel Durumlar: try...with İfadesi (F#)'
 description: "Özel durum işleme için F # 'ile... deneyin' ifadesi kullanmayı öğrenin."
-keywords: "Visual f #, f # işlevsel programlama"
 author: cartermp
 ms.author: phcart
 ms.date: 05/16/2016
 ms.topic: language-reference
-ms.prod: .net
-ms.technology: devlang-fsharp
+ms.prod: dotnet-fsharp
 ms.devlang: fsharp
-ms.assetid: 36721076-95cd-4636-ae43-79dd512bee6c
-ms.openlocfilehash: 163dfab49d4aaf23123800246fae2cad33e2257c
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.openlocfilehash: 06e40b79fc1958918dc0615ce9d1004e0a6e74a5
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="exceptions-the-trywith-expression"></a>Özel Durumlar: try...with İfadesi
 
@@ -49,7 +46,7 @@ Sık sık hatayla de oluştuğunu olgu her özel durum işleyici ifadelerinde ö
 |:? *özel durum türü*|Belirtilen .NET özel durum türü eşleşir.|
 |:? *özel durum türü* olarak *tanımlayıcısı*|Belirtilen .NET özel durum türü eşleşir, ancak özel bir adlandırılmış değeri verir.|
 |*özel durum adı*(*bağımsız değişkenleri*)|F # özel durum türü ile eşleşen ve bağımsız değişkenler bağlar.|
-|*tanımlayıcı*|Herhangi bir özel durum ile eşleşen ve özel durum nesnesi adı bağlar. Eşdeğer **:? System.Exception olarak***tanımlayıcısı*|
+|*Tanımlayıcı*|Herhangi bir özel durum ile eşleşen ve özel durum nesnesi adı bağlar. Eşdeğer **:? System.Exception olarak *** tanımlayıcısı*|
 |*tanımlayıcı* zaman *koşulu*|Koşul doğru ise, bir özel durumla eşleşir.|
 
 ## <a name="examples"></a>Örnekler
@@ -65,8 +62,8 @@ Kullanabileceğiniz `try...with` içinde zaman uyumsuz iş akışları ve özell
 
 
 ## <a name="see-also"></a>Ayrıca Bkz.
-[Özel durum işleme](index.md)
+[Özel Durum İşleme](index.md)
 
-[Özel durum türleri](exception-types.md)
+[Özel Durum Türleri](exception-types.md)
 
 [Özel durumlar: `try...finally` ifade](the-try-finally-expression.md)

@@ -1,31 +1,31 @@
 ---
-title: "Sözleşme ve Hizmetlerde Hataları Belirtme ve İşleme"
-ms.custom: 
+title: Sözleşme ve Hizmetlerde Hataları Belirtme ve İşleme
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - dotnet-clr
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - handling faults [WCF]
 ms.assetid: a9696563-d404-4905-942d-1e0834c26dea
-caps.latest.revision: 
+caps.latest.revision: 22
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: 57fc01b77379389ca4d86d241ec8f3d672b519b6
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 70f8c1f89a5570f5b77eaba1bf72c42706d88947
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="specifying-and-handling-faults-in-contracts-and-services"></a>Sözleşme ve Hizmetlerde Hataları Belirtme ve İşleme
-[!INCLUDE[indigo1](../../../includes/indigo1-md.md)]uygulamaları, SOAP hataya ve SOAP hataya nesneleri yönetilen özel durum nesneleri için yönetilen özel durum nesneleri eşleme tarafından hata durumları işler. Bu bölümdeki konular, koşul olarak özel SOAP hataları, hizmet uygulaması'nın bir parçası olarak bu tür hataları döndürmek nasıl ve nasıl böyle hatası istemciler catch hata kullanıma sunmak için sözleşmeleri tasarlamak nasıl tartışın.  
+[!INCLUDE[indigo1](../../../includes/indigo1-md.md)] uygulamaları, SOAP hataya ve SOAP hataya nesneleri yönetilen özel durum nesneleri için yönetilen özel durum nesneleri eşleme tarafından hata durumları işler. Bu bölümdeki konular, koşul olarak özel SOAP hataları, hizmet uygulaması'nın bir parçası olarak bu tür hataları döndürmek nasıl ve nasıl böyle hatası istemciler catch hata kullanıma sunmak için sözleşmeleri tasarlamak nasıl tartışın.  
   
 ## <a name="error-handling-overview"></a>Hata işleme genel bakış  
  Tüm yönetilen uygulamalarda işleme hataları tarafından temsil edilen <xref:System.Exception> nesneleri. SOAP tabanlı uygulamalarda olduğu gibi [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] uygulamalar, hizmet yöntemleri iletişim SOAP hata iletileri kullanarak hata bilgilerini işleme. SOAP, bir hizmet işlemi için meta verileri içinde yer alan ve bu nedenle istemciler daha sağlam veya etkileşimli kendi işlemi yapmak için kullanabileceğiniz bir arıza sözleşmesi oluşturma ileti türlerini hatalarıdır. SOAP hataları XML formundaki istemcilere ifade edilir çünkü ek olarak, ulaşabileceği artırma herhangi bir SOAP platformda istemcilerin kullanabileceği bir yüksek oranda birlikte çalışabilir türü sistemdir, [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] uygulama.  
@@ -47,12 +47,12 @@ ms.lasthandoff: 12/22/2017
 ## <a name="map-exceptions-to-soap-faults"></a>SOAP hataları için özel durumları eşleme  
  Hata koşullarını işleme bir işlem oluşturmanın ilk adımı, hangi koşullar altında bir istemci uygulama hataları hakkında bilgi sahibi olmak karar vermektir. Hata koşulları işlevselliklerini belirli bazı işlemler vardır. Örneğin, bir `PurchaseOrder` işlemi artık bir satın alma siparişi başlatmak için izin verilen müşterileri için belirli bilgiler döndürebilir. Diğer durumlarda, aşağıdaki gibi bir `Calculator` hizmet, daha genel `MathFault` bir SOAP hatası tüm bir hizmetin tüm hata koşullarını tanımlamak kullanabilirsiniz. Hizmetinizin istemcileri hata koşullarını tanımlandıktan sonra özel bir SOAP hatası oluşturulabilir ve işlem, ilgili hata koşulu duyduğunuzda, bir SOAP hatası döndürerek olarak işaretlenebilir.  
   
- [!INCLUDE[crabout](../../../includes/crabout-md.md)]Bu adım olarak hizmet veya istemci, geliştirme bkz [tanımlama ve belirtme hataları](../../../docs/framework/wcf/defining-and-specifying-faults.md).  
+ [!INCLUDE[crabout](../../../includes/crabout-md.md)] Bu adım olarak hizmet veya istemci, geliştirme bkz [tanımlama ve belirtme hataları](../../../docs/framework/wcf/defining-and-specifying-faults.md).  
   
 ## <a name="clients-and-services-handle-soap-faults-as-exceptions"></a>İstemcileri ve Hizmetleri SOAP hataları özel durumları işleme  
  İşlem hata koşullarını tanımlamak, özel SOAP hataları tanımlama ve bu işlemler bu hataları döndürüyor olarak işaretleme olan ilk adımlar başarılı hata içinde işleme [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] uygulamalar. Sonraki adım düzgün bir şekilde gönderme ve alma bu hatalarının uygulamaktır. Genellikle Hizmetleri istemci uygulamaları hata koşulları hakkında bilgilendirmek için hataları gönderme, ancak çift yönlü istemcileri de Hizmetleri SOAP hataları gönderebilirsiniz.  
   
- [!INCLUDE[crdefault](../../../includes/crdefault-md.md)][Hataları gönderme ve alma](../../../docs/framework/wcf/sending-and-receiving-faults.md).  
+ Daha fazla bilgi için bkz: [gönderme ve alma hataları](../../../docs/framework/wcf/sending-and-receiving-faults.md).  
   
 ## <a name="undeclared-soap-faults-and-debugging"></a>Bildirilmemiş SOAP hataları ve hata ayıklama  
  Bildirilen SOAP hataları sağlam, birlikte çalışabilen, dağıtılmış uygulamaları oluşturmak için son derece yararlıdır. Ancak, bazı durumlarda bir bildirilmemiş bir SOAP hatası, bu işlem Web Hizmetleri Açıklama Dili (WSDL) belirtilmeyen bir göndermek hizmet (veya çift yönlü istemci) yararlı olur. Örneğin, bir hizmet geliştirirken, beklenmeyen durumları hata ayıklama bilgileri istemciye göndermek amacıyla faydalı olduğu ortaya çıkabilir. Ayrıca, ayarlayabileceğiniz <xref:System.ServiceModel.ServiceBehaviorAttribute.IncludeExceptionDetailInFaults%2A?displayProperty=nameWithType> özelliği veya <xref:System.ServiceModel.Description.ServiceDebugBehavior.IncludeExceptionDetailInFaults%2A?displayProperty=nameWithType> özelliğine `true` izin vermek için [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] iç hizmet işlemi özel durumlar hakkında bilgi edinmek için istemcileri. Hem tek tek hataları gönderme ve hata ayıklama davranışı özelliklerini ayarlama bölümünde açıklanmıştır [gönderme ve alma hataları](../../../docs/framework/wcf/sending-and-receiving-faults.md).  

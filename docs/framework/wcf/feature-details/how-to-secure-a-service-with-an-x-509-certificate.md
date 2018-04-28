@@ -1,36 +1,38 @@
 ---
-title: "Nasıl Yapılır: X.509 Sertifikası ile Bir Hizmeti Güvenli Hale Getirme"
-ms.custom: 
+title: 'Nasıl Yapılır: X.509 Sertifikası ile Bir Hizmeti Güvenli Hale Getirme'
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - csharp
 - vb
 ms.assetid: 2d06c2aa-d0d7-4e5e-ad7e-77416aa1c10b
-caps.latest.revision: "8"
+caps.latest.revision: 8
 author: BrucePerlerMS
 ms.author: bruceper
 manager: mbaldwin
-ms.workload: dotnet
-ms.openlocfilehash: e1ad7cd844ffbd3f45517f7d812ad3f5fa1ae3c3
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 31028b6fe2cc34a9ae5cabe410bef0d753fd9436
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="how-to-secure-a-service-with-an-x509-certificate"></a>Nasıl Yapılır: X.509 Sertifikası ile Bir Hizmeti Güvenli Hale Getirme
 Bir hizmeti bir X.509 sertifikası ile güvenli hale getirme olan bir temel teknik, çoğu bağlama [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] kullanın. Bu konuda bir X.509 sertifikası ile kendini barındıran hizmet yapılandırma adımları açıklanmaktadır.  
   
- Sunucu kimliğini doğrulamak için kullanılan geçerli bir sertifika önkoşuldur. Sertifika sunucuya bir güvenilen sertifika yetkilisi tarafından verilmiş olması gerekir. Sertifika geçerli değilse, hizmet kullanmayı deneyen herhangi bir istemci hizmeti güven değil ve bağlantı yapılan sonuç. [!INCLUDE[crabout](../../../../includes/crabout-md.md)]sertifikaları kullanma Bkz [sertifikalarla çalışma](../../../../docs/framework/wcf/feature-details/working-with-certificates.md).  
+ Sunucu kimliğini doğrulamak için kullanılan geçerli bir sertifika önkoşuldur. Sertifika sunucuya bir güvenilen sertifika yetkilisi tarafından verilmiş olması gerekir. Sertifika geçerli değilse, hizmet kullanmayı deneyen herhangi bir istemci hizmeti güven değil ve bağlantı yapılan sonuç. [!INCLUDE[crabout](../../../../includes/crabout-md.md)] sertifikaları kullanma Bkz [sertifikalarla çalışma](../../../../docs/framework/wcf/feature-details/working-with-certificates.md).  
   
 ### <a name="to-configure-a-service-with-a-certificate-using-code"></a>Kod kullanarak bir sertifika ile bir hizmeti yapılandırmak için  
   
-1.  Hizmet sözleşmesi ve uygulanan hizmeti oluşturun. [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)][Hizmetleri Tasarlama ve uygulama](../../../../docs/framework/wcf/designing-and-implementing-services.md).  
+1.  Hizmet sözleşmesi ve uygulanan hizmeti oluşturun. Daha fazla bilgi için bkz: [Hizmetleri Tasarlama ve uygulama](../../../../docs/framework/wcf/designing-and-implementing-services.md).  
   
 2.  Bir örneğini oluşturmak <xref:System.ServiceModel.WSHttpBinding> sınıfı ve kendi güvenlik modunu ayarlama <xref:System.ServiceModel.SecurityMode.Message>aşağıdaki kodda gösterildiği gibi.  
   

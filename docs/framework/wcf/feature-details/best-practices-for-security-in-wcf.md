@@ -21,11 +21,11 @@ ms.author: bruceper
 manager: mbaldwin
 ms.workload:
 - dotnet
-ms.openlocfilehash: 7416f8429f347d0b8dc6227415ad366b3ff63986
-ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
+ms.openlocfilehash: 19bb6d4a172568611f73e3a50d0c526016c65aac
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="best-practices-for-security-in-wcf"></a>WCF'de Güvenlik için En İyi Uygulamalar
 Aşağıdaki bölümlerde kullanarak güvenli uygulamaları oluştururken dikkate alınması gereken en iyi uygulamalar listesinde [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)]. [!INCLUDE[crabout](../../../../includes/crabout-md.md)] Güvenlik, bkz: [güvenlik konuları](../../../../docs/framework/wcf/feature-details/security-considerations-in-wcf.md), [veriler için güvenlik konuları](../../../../docs/framework/wcf/feature-details/security-considerations-for-data.md), ve [meta veriler hakkında güvenlik konuları](../../../../docs/framework/wcf/feature-details/security-considerations-with-metadata.md).  
@@ -60,7 +60,7 @@ Aşağıdaki bölümlerde kullanarak güvenli uygulamaları oluştururken dikkat
  Emin olun, meta veri kaynağına güveniyorsanız ve hiç kimse meta verileriyle değiştirilmiş olduğundan emin olun. HTTP protokolü kullanılarak alınan meta veriler düz metin olarak gönderilir ve ile değiştirilmiş. Hizmet kullanıyorsa <xref:System.ServiceModel.Description.ServiceMetadataBehavior.HttpsGetEnabled%2A> ve <xref:System.ServiceModel.Description.ServiceMetadataBehavior.HttpsGetUrl%2A> özellikleri, hizmet oluşturucusu tarafından sağlanan URL HTTPS protokolünü kullanarak veri yüklemek için kullanın.  
   
 ## <a name="publish-metadata-using-security"></a>Güvenlik kullanarak meta verileri yayımlama  
- Bir hizmetin yayımlanan meta verileriyle üzerinde oynanmasını önlemek için meta verileri exchange uç nokta taşıma veya ileti düzeyi güvenlik ile güvenli hale getirin. [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)] [Meta veri uç noktalarını yayımlama](../../../../docs/framework/wcf/publishing-metadata-endpoints.md) ve [nasıl yapılır: kod kullanarak bir hizmet için meta verileri yayımlama](../../../../docs/framework/wcf/feature-details/how-to-publish-metadata-for-a-service-using-code.md).  
+ Bir hizmetin yayımlanan meta verileriyle üzerinde oynanmasını önlemek için meta verileri exchange uç nokta taşıma veya ileti düzeyi güvenlik ile güvenli hale getirin. Daha fazla bilgi için bkz: [yayımlama meta veri uç noktalarını](../../../../docs/framework/wcf/publishing-metadata-endpoints.md) ve [nasıl yapılır: meta verileri kullanarak bir hizmet kodu yayımlama](../../../../docs/framework/wcf/feature-details/how-to-publish-metadata-for-a-service-using-code.md).  
   
 ## <a name="ensure-use-of-local-issuer"></a>Yerel yayımlayan kullanımını emin olun  
  Yerel yayımlayan bir veren adresi ve bağlama için belirtilen bir bağlama belirtilirse, bu bağlamayı kullanan uç noktaları için kullanılmaz. Her zaman yerel yayımlayan kullanmayı düşündüğünüz istemcilerinin veren adresi null olacak şekilde, bunlar bağlama değiştirmek veya böyle bir bağlama kullanmayın emin olun.  

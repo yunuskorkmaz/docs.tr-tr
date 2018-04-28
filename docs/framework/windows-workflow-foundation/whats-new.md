@@ -17,11 +17,11 @@ ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: 605e1401eb2f2fdee7bb39c6636c0245154041a4
-ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
+ms.openlocfilehash: 6604c4fccec50369d83cede58ff2931c2015c5b9
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/27/2018
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="what39s-new-in-windows-workflow-foundation"></a>Ne&#39;s Windows Workflow Foundation'deki yenilikler
 Windows Workflow Foundation (WF) [!INCLUDE[netfx40_long](../../../includes/netfx40-long-md.md)] önceki sürümlerden birkaç geliştirme örneklerinde değiştirir. İş akışları oluşturmak, yürütme ve korumak ve yeni işlevsellik ana bilgisayarını uygulamak daha kolay. [!INCLUDE[crabout](../../../includes/crabout-md.md)] geçirme .NET 3.0 ve en son sürümü kullanmak için .NET 3.5 iş akışı uygulamaları bkz [Geçiş Kılavuzu](../../../docs/framework/windows-workflow-foundation/migration-guidance.md).  
@@ -44,7 +44,7 @@ Windows Workflow Foundation (WF) [!INCLUDE[netfx40_long](../../../includes/netfx
 -   Yeni etkinlikler gibi Mesajlaşma <xref:System.ServiceModel.Activities.SendContent> ve <xref:System.ServiceModel.Activities.ReceiveReply>.  
   
 ## <a name="explicit-activity-data-model"></a>Açık etkinliği veri modeli  
- [!INCLUDE[netfx40_short](../../../includes/netfx40-short-md.md)] depolama ve veri taşıma yeni seçenekleri içerir. Bir etkinlik kullanarak veri depolanabilir <xref:System.Activities.Variable>. Bir etkinlik ve dışındaki veri taşırken, özelleştirilmiş bağımsız değişken türleri yönü veri taşıma olduğunu belirlemek için kullanılır. Bu türleri <xref:System.Activities.InArgument>, <xref:System.Activities.InOutArgument>, ve <xref:System.Activities.OutArgument>. [!INCLUDE[crdefault](../../../includes/crdefault-md.md)] [Windows Workflow Foundation veri modeli](../../../docs/framework/windows-workflow-foundation/data-model.md).  
+ [!INCLUDE[netfx40_short](../../../includes/netfx40-short-md.md)] depolama ve veri taşıma yeni seçenekleri içerir. Bir etkinlik kullanarak veri depolanabilir <xref:System.Activities.Variable>. Bir etkinlik ve dışındaki veri taşırken, özelleştirilmiş bağımsız değişken türleri yönü veri taşıma olduğunu belirlemek için kullanılır. Bu türleri <xref:System.Activities.InArgument>, <xref:System.Activities.InOutArgument>, ve <xref:System.Activities.OutArgument>. Daha fazla bilgi için bkz: [Windows Workflow Foundation veri modeli](../../../docs/framework/windows-workflow-foundation/data-model.md).  
   
 ## <a name="enhanced-hosting-persistence-and-tracking-options"></a>Gelişmiş, Kalıcılık, barındırma ve izleme seçenekleri  
  [!INCLUDE[netfx40_short](../../../includes/netfx40-short-md.md)] aşağıdaki gibi Kalıcılık geliştirmeleri içerir:  
@@ -66,4 +66,4 @@ Windows Workflow Foundation (WF) [!INCLUDE[netfx40_long](../../../includes/netfx
 -   Bekleyen bir iş akışını sürdürme yönetilen kullanarak bir <xref:System.Activities.Bookmark> nesnesi.  
   
 ## <a name="easier-ability-to-extend-wf-designer-experience"></a>WF Tasarımcısı deneyimi genişletmek için daha kolay özelliği  
- Yeni WF Tasarımcısı'nı Windows Presentation Foundation (WPF) oluşturulur ve Visual Studio dışında WF Tasarımcısı'nı yeniden barındırılmasını sırasında kullanmak için daha kolay bir modeli sağlar ve ayrıca özel etkinlik tasarımcıları oluşturmak için daha kolay mekanizmaları sağlar. [!INCLUDE[crdefault](../../../includes/crdefault-md.md)] [İş akışı tasarım deneyimini özelleştirme](../../../docs/framework/windows-workflow-foundation/customizing-the-workflow-design-experience.md).
+ Yeni WF Tasarımcısı'nı Windows Presentation Foundation (WPF) oluşturulur ve Visual Studio dışında WF Tasarımcısı'nı yeniden barındırılmasını sırasında kullanmak için daha kolay bir modeli sağlar ve ayrıca özel etkinlik tasarımcıları oluşturmak için daha kolay mekanizmaları sağlar. Daha fazla bilgi için bkz: [iş akışı tasarım deneyimini özelleştirme](../../../docs/framework/windows-workflow-foundation/customizing-the-workflow-design-experience.md).

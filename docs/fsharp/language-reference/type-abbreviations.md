@@ -1,20 +1,17 @@
 ---
-title: "Tür Kısaltmaları (F#)"
-description: "Bir tür kodu okunmasını kolaylaştırmak için daha anlamlı bir ad vermek için F # tür kısaltmaları hakkında bilgi edinin."
-keywords: "Visual f #, f # işlevsel programlama"
+title: Tür Kısaltmaları (F#)
+description: 'Bir tür kodu okunmasını kolaylaştırmak için daha anlamlı bir ad vermek için F # tür kısaltmaları hakkında bilgi edinin.'
 author: cartermp
 ms.author: phcart
 ms.date: 05/16/2016
 ms.topic: language-reference
-ms.prod: .net
-ms.technology: devlang-fsharp
+ms.prod: dotnet-fsharp
 ms.devlang: fsharp
-ms.assetid: 560af74f-935f-415c-af56-604cddb9da6b
-ms.openlocfilehash: 235c0240fe89d203b9474dec2b3f91947f453cd8
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.openlocfilehash: bf17ee9795947fdc11fe958f09d52f5730b95bf8
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="type-abbreviations"></a>Tür Kısaltmaları
 
@@ -43,5 +40,5 @@ Tür kısaltmaları ölçü üzerinde de kullanılabilir. Daha fazla bilgi için
 
 
 ## <a name="see-also"></a>Ayrıca Bkz.
-[F # dili başvurusu](index.md)
+[F# Dili Başvurusu](index.md)
 

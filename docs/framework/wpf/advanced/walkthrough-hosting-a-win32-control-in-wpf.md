@@ -22,11 +22,11 @@ ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: ab80f39a15952bee8296166ea19a78498c3c1b23
-ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
-ms.translationtype: HT
+ms.openlocfilehash: 7c33e764b9af46aec3788e7e113d01c4c5fc9905
+ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="walkthrough-hosting-a-win32-control-in-wpf"></a>İzlenecek yol: WPF'te Win32 Denetimi Barındırma
 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] uygulamaları oluşturmak için zengin bir ortam sağlar. Önemli ölçüde yatırımınız varsa [!INCLUDE[TLA#tla_win32](../../../../includes/tlasharptla-win32-md.md)] kodu olabilir en az yeniden daha etkili kodda bazıları, [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] tamamen yeniden yazmak yerine uygulama. [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] barındırma için basit bir mekanizma sağlar bir [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)] penceresi, bir [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] sayfası.  
@@ -141,7 +141,7 @@ ms.lasthandoff: 04/26/2018
   
 <a name="communication"></a>   
 ## <a name="implement-communication-between-the-control-and-the-page"></a>Denetim ve sayfa arasındaki iletişimi uygulama  
- Göndererek denetimi işlemek [!INCLUDE[TLA2#tla_win](../../../../includes/tla2sharptla-win-md.md)] iletileri. Kullanıcı kendi konak penceresine bildirimleri göndererek ile etkileşim denetimi size bildirir. [WPF Örneğinde Win32 ListBox denetimi barındırma](http://go.microsoft.com/fwlink/?LinkID=159998) örnek bunun nasıl çalıştığı çeşitli örnekler sağlayan bir kullanıcı Arabirimi içerir:  
+ Windows iletileri göndererek denetimi değiştirebilirsiniz. Kullanıcı kendi konak penceresine bildirimleri göndererek ile etkileşim denetimi size bildirir. [WPF Örneğinde Win32 ListBox denetimi barındırma](http://go.microsoft.com/fwlink/?LinkID=159998) örnek bunun nasıl çalıştığı çeşitli örnekler sağlayan bir kullanıcı Arabirimi içerir:  
   
 -   Bir öğeyi listeye ekleyin.  
   

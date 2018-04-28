@@ -1,26 +1,26 @@
 ---
-title: "İş akışı kalıcılığı"
-ms.custom: 
+title: İş akışı kalıcılığı
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - programming [WF], persistence
 ms.assetid: 39e69d1f-b771-4c16-9e18-696fa43b65b2
-caps.latest.revision: 
+caps.latest.revision: 26
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: 9e65f07fc01d0d364d7271c4f1378b968b687881
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: d2278762895978f90d80977f9e538b0e10a4f3f8
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="workflow-persistence"></a>İş akışı kalıcılığı
 İş akışı Kalıcılık dayanıklı yakalama bir iş akışı örneğinin durumu, işlem veya bilgisayar bilgilerinin bağımsız olur. Bu sistem hatası durumunda iş akışı örneği için iyi bilinen bir kurtarma noktası sağlamak üzere veya etkin olarak iş yapmamanın kaldırma iş akışı örnekleri tarafından bellek korumak için ya da iş akışı örneği çalışma durumu bir düğümden diğerine taşımak için gerçekleştirilir bir sunucu grubundaki düğümü.  
@@ -33,7 +33,7 @@ ms.lasthandoff: 12/22/2017
   
  Depolamak ve iş akışı örneği ile ilgili bilgilerin yanı sıra, uygulamaya özgü verileri yüklemek için genişletme Kalıcılık katılımcıları oluşturabilirsiniz <xref:System.Activities.Persistence.PersistenceParticipant> sınıfı. Kalıcı depoya belleğe örneği Mağazası'ndan veri yüklemeye ve ilave bir mantık Kalıcılık işlem altında gerçekleştirmek için özel seri hale getirilebilir veri kaydetmek için Kalıcılık işlemindeki Kalıcılık katılımcı katılır. Daha fazla bilgi için bkz: [Kalıcılık katılımcıları](../../../docs/framework/windows-workflow-foundation/persistence-participants.md).  
   
- Windows Server App Fabric kalıcılığı yapılandırma işlemini basitleştirir. [!INCLUDE[crdefault](../../../includes/crdefault-md.md)][Windows Server App Fabric ile kalıcılığı kavramları](http://go.microsoft.com/fwlink/?LinkId=201200)  
+ Windows Server App Fabric kalıcılığı yapılandırma işlemini basitleştirir. Daha fazla bilgi için bkz: [Windows Server App Fabric ile kalıcılığı kavramları](http://go.microsoft.com/fwlink/?LinkId=201200)  
   
 ## <a name="implicit-persistence-points"></a>Örtük Kalıcılık noktaları  
  Aşağıdaki listeden bir örnek deposuna bir iş akışı ile ilişkili olduğunda bağlı bir iş akışı kalıcı koşulları örnekleri içerir.  

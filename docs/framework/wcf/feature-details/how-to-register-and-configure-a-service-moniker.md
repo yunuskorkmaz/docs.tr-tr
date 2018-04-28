@@ -1,27 +1,29 @@
 ---
-title: "Nasıl yapılır: Hizmet Bilinen Adını Kaydetme ve Yapılandırma"
-ms.custom: 
+title: 'Nasıl yapılır: Hizmet Bilinen Adını Kaydetme ve Yapılandırma'
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - COM [WCF], configure service monikers
 - COM [WCF], register service monikers
 ms.assetid: e5e16c80-8a8e-4eef-af53-564933b651ef
-caps.latest.revision: "20"
+caps.latest.revision: 20
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 6e5c57927a455b5d2a253becac35b1bf9033933f
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 52b3ec27560ca2dc47b7951cb209f33f307fa7ea
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="how-to-register-and-configure-a-service-moniker"></a>Nasıl yapılır: Hizmet Bilinen Adını Kaydetme ve Yapılandırma
 Kullanmadan önce [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] hizmet bilinen adı yazılı sözleşme ile COM uygulama içinde gerekli öznitelikli türleri COM ile kaydetme ve COM uygulama ve ad gerekli bağlama yapılandırması ile yapılandırmanız gerekir.  
@@ -36,7 +38,7 @@ Kullanmadan önce [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] hizmet
     [assembly: ComVisible(true)]  
     ```  
   
-3.  Yönetilen derleme [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] istemci tanımlayıcı adlı bir derleme olarak. Bu, bir şifreleme anahtar çifti ile imzalama gerektirir. [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)][Bir derlemeyi tanımlayıcı adla imzalama](http://go.microsoft.com/fwlink/?LinkId=94874) .NET Geliştirici Kılavuzu.  
+3.  Yönetilen derleme [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] istemci tanımlayıcı adlı bir derleme olarak. Bu, bir şifreleme anahtar çifti ile imzalama gerektirir. Daha fazla bilgi için bkz: [bir derlemeyi tanımlayıcı adla imzalama](http://go.microsoft.com/fwlink/?LinkId=94874) .NET Geliştirici Kılavuzu.  
   
 4.  Derleme kaydı (Regasm.exe) aracıyla kullanın `/tlb` türleri com derlemesine kaydetmek için seçeneği  
   

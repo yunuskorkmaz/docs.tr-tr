@@ -16,11 +16,11 @@ ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: 0af083ba1d97fcf07eab6f9d789f023a9194070c
-ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
+ms.openlocfilehash: c603032e175fd8390abea2db625321d3e3558c1a
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="information-disclosure"></a>Bilgileri Açıklama
 Bilgilerin açığa çıkmasına bir sistemi hakkında değerli bilgiler sağlamasına olanak sağlar. Bu nedenle, her zaman ve ortaya bilgiler, kötü niyetli bir kullanıcı tarafından kullanılıp kullanılamayacağını göz önünde bulundurun. Aşağıdaki olası bilgileri açığa saldırıları listeler ve bunları azaltmanın yollarını her sağlar.  
@@ -32,7 +32,7 @@ Bilgilerin açığa çıkmasına bir sistemi hakkında değerli bilgiler sağlam
  İlke güvenliğini sağlamanın özellikle hassas verilen belirteç gereksinimleri veya belirteç verenin bilgileri ilkesinde Burada sunulan Federasyon senaryolarında önemlidir. Bu durumlarda verilen belirteç koymak için talep türü gibi hizmeti hakkında bilgi almak veya istemciler için kötü amaçlı belirteci verenler yönlendirme saldırganların önlemek için federasyon hizmetinin İlkesi uç nokta güvenliğini sağlamak için önerilir. Örneğin, bir saldırganın man-in--middle saldırı yürütülen bir veren sonlandırmak için federe güven zinciri yapılandırarak kullanıcı adı/parola çiftlerini bulmak. Ayrıca, bağlantıları ilke alma işlemi aracılığıyla elde Federasyon istemcileri edinilen federe güven zincirinde verenler güven doğrulamanız önerilir. [!INCLUDE[crabout](../../../../includes/crabout-md.md)] Federasyon senaryolarında bkz [Federasyon](../../../../docs/framework/wcf/feature-details/federation.md).  
   
 ## <a name="memory-dumps-can-reveal-claim-information"></a>Bellek dökümlerini talep bilgilerini ortaya çıkarabilir  
- Bir uygulama başarısız olduğunda, günlük dosyalarını olanlar Dr tarafından üretilen gibi. Watson, talep bilgilerini içerebilir. Bu bilgileri destek ekiplerini gibi diğer varlıklar için verilebilir; Aksi takdirde, özel verileri içeren talep bilgileri de aktarılır. Bu günlük dosyaları için bilinmeyen varlıkların göndererek değil azaltabilirsiniz. [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)] [Windows Server 2003](http://go.microsoft.com/fwlink/?LinkId=89160).  
+ Bir uygulama başarısız olduğunda, günlük dosyalarını olanlar Dr tarafından üretilen gibi. Watson, talep bilgilerini içerebilir. Bu bilgileri destek ekiplerini gibi diğer varlıklar için verilebilir; Aksi takdirde, özel verileri içeren talep bilgileri de aktarılır. Bu günlük dosyaları için bilinmeyen varlıkların göndererek değil azaltabilirsiniz. Daha fazla bilgi için bkz: [Windows Server 2003](http://go.microsoft.com/fwlink/?LinkId=89160).  
   
 ## <a name="endpoint-addresses"></a>Uç Noktası Adresleri  
  Bir uç nokta adresi bir uç nokta ile iletişim kurmak için gereken bilgileri içerir. SOAP Güvenliği tam olarak bir istemci ve sunucu arasında bir simetrik anahtar anlaşması için alınıp verilen güvenlik anlaşma iletileri adresi içermesi gerekir. Güvenlik görüşmeleri önyükleme bir işlem olduğundan, adres üstbilgileri bu işlem sırasında şifrelenemez. Bu nedenle, adres gizli herhangi bir veri içermemesi gerekir; Aksi takdirde, bilgi ifşası saldırılara yol açar.  

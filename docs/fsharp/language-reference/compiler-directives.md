@@ -1,20 +1,17 @@
 ---
-title: "Derleyici Yönergeleri (F#)"
-description: "F # dili önişlemci yönergeleri, koşullu derleme yönergeleri, satır yönergeleri ve derleyici yönergeleri hakkında bilgi edinin."
-keywords: "Visual f #, f # işlevsel programlama"
+title: Derleyici Yönergeleri (F#)
+description: 'F # dili önişlemci yönergeleri, koşullu derleme yönergeleri, satır yönergeleri ve derleyici yönergeleri hakkında bilgi edinin.'
 author: cartermp
 ms.author: phcart
 ms.date: 05/16/2016
 ms.topic: language-reference
-ms.prod: .net
-ms.technology: devlang-fsharp
+ms.prod: dotnet-fsharp
 ms.devlang: fsharp
-ms.assetid: 93aef07a-6747-4ce4-a10f-a05168978af6
-ms.openlocfilehash: c7ec056f407f3af34528205a5abb1cdef7d43fef
-ms.sourcegitcommit: 83dd5ec003e788ccb3e33f3412a7af39ae347646
+ms.openlocfilehash: 03fe3598f04025cf6dfaf2424b9fcb33ed4b3859
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/15/2018
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="compiler-directives"></a>Derleyici Yönergeleri
 
@@ -75,7 +72,7 @@ Aşağıdaki tabloda, F #'da kullanılabilir derleyici yönergesi listeler.
 
 |Yönergesi|Açıklama|
 |---------|-----------|
-|`#light` ["on"&#124;"off"]|Etkinleştirir veya diğer ML sürümleri ile uyumluluk için basit sözdizimi devre dışı bırakır. Varsayılan olarak, basit sözdizimi etkindir. Ayrıntılı sözdizimi her zaman etkindir. Bu nedenle, basit sözdizimi ve ayrıntılı sözdizimi kullanabilirsiniz. Yönergesi `#light` tek başına eşdeğer olan `#light "on"`. Belirtirseniz `#light "off"`, tüm dil yapıları için ayrıntılı sözdizimi kullanmanız gerekir. F # belgeleri sözdiziminde basit sözdizimi kullanmakta olduğunuz varsayılarak da sunulur. Daha fazla bilgi için bkz: [ayrıntılı sözdizimi](verbose-syntax.md).|
+|`#light` ["açık"&#124;"off"]|Etkinleştirir veya diğer ML sürümleri ile uyumluluk için basit sözdizimi devre dışı bırakır. Varsayılan olarak, basit sözdizimi etkindir. Ayrıntılı sözdizimi her zaman etkindir. Bu nedenle, basit sözdizimi ve ayrıntılı sözdizimi kullanabilirsiniz. Yönergesi `#light` tek başına eşdeğer olan `#light "on"`. Belirtirseniz `#light "off"`, tüm dil yapıları için ayrıntılı sözdizimi kullanmanız gerekir. F # belgeleri sözdiziminde basit sözdizimi kullanmakta olduğunuz varsayılarak da sunulur. Daha fazla bilgi için bkz: [ayrıntılı sözdizimi](verbose-syntax.md).|
 Yorumlayıcı (fsi.exe) yönergeleri için bkz: [etkileşimli programlama F # ile](../tutorials/fsharp-interactive/index.md).
 
 

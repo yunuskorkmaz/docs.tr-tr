@@ -1,18 +1,19 @@
 ---
-title: "DotNet Yardım komut - .NET Core CLI"
-description: "Belirtilen komut için çevrimiçi belgeleri ayrıntılı dotnet Yardım komut gösterir."
+title: DotNet Yardım komut - .NET Core CLI
+description: Belirtilen komut için çevrimiçi belgeleri ayrıntılı dotnet Yardım komut gösterir.
 author: mairaw
 ms.author: mairaw
 ms.date: 08/17/2017
-ms.topic: article
-ms.prod: .net-core
+ms.topic: conceptual
+ms.prod: dotnet-core
 ms.technology: dotnet-cli
-ms.workload: dotnetcore
-ms.openlocfilehash: 47b7b53b9f13935bbd2cf508c7c57d00584822d0
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.workload:
+- dotnetcore
+ms.openlocfilehash: 189eeea87babbce16751c5875f62c990ebecc10a
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="dotnet-help-reference"></a>DotNet Yardım başvurusu
 
@@ -20,7 +21,7 @@ ms.lasthandoff: 12/23/2017
 
 ## <a name="name"></a>Ad
 
-`dotnet help`-Gösterir, belirtilen komutu için çevrimiçi belgeleri daha ayrıntılı.
+`dotnet help` -Gösterir, belirtilen komutu için çevrimiçi belgeleri daha ayrıntılı.
 
 ## <a name="synopsis"></a>Özet
 

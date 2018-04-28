@@ -4,15 +4,15 @@ description: Çalışma zamanı tanımlayıcı (RID) ve RID .NET Core nasıl kul
 author: mairaw
 ms.author: mairaw
 ms.date: 09/07/2017
-ms.topic: article
-ms.prod: .net-core
+ms.topic: conceptual
+ms.prod: dotnet-core
 ms.workload:
 - dotnetcore
-ms.openlocfilehash: 9343d475319084ddfe3450b4c1d2bbcbd394ad1f
-ms.sourcegitcommit: b750a8e3979749b214e7e10c82efb0a0524dfcb1
+ms.openlocfilehash: 42707d96744ff765c2ea6ae2298da3e8b27f912f
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/09/2018
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="net-core-rid-catalog"></a>.NET core RID Kataloğu
 
@@ -91,7 +91,7 @@ En son ve tam sürümü için bkz: [runtime.json](https://github.com/dotnet/core
 
 Aşağıdaki liste, her işletim sistemi için kullanılan en yaygın RID gösterir. Bu kapsamıyordur `arm` veya `corert` değerleri.
 
-## <a name="windows-rids"></a>Windows RIDs
+## <a name="windows-rids"></a>Windows RID
 
 - Taşınabilir
   - `win-x86`
@@ -115,7 +115,7 @@ Aşağıdaki liste, her işletim sistemi için kullanılan en yaygın RID göste
 
 Bkz: [.NET Core Windows önkoşulları](windows-prerequisites.md) daha fazla bilgi için.
 
-## <a name="linux-rids"></a>Linux RIDs
+## <a name="linux-rids"></a>Linux RID
 
 - Taşınabilir
   - `linux-x64`
@@ -169,7 +169,7 @@ Bkz: [.NET Core Windows önkoşulları](windows-prerequisites.md) daha fazla bil
 
 Bkz: [.NET Core Linux önkoşulları](linux-prerequisites.md) daha fazla bilgi için.
 
-## <a name="macos-rids"></a>macOS RIDs
+## <a name="macos-rids"></a>macOS RID
 
 macOS RID eski markalama "OSX" kullanın.
 

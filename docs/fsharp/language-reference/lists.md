@@ -1,20 +1,17 @@
 ---
 title: Listeler (F#)
-description: "F # listeleri, aynı türdeki öğeleri sıralı, sabit bir dizi hakkında bilgi edinin."
-keywords: "Visual f #, f # işlevsel programlama"
+description: 'F # listeleri, aynı türdeki öğeleri sıralı, sabit bir dizi hakkında bilgi edinin.'
 author: cartermp
 ms.author: phcart
 ms.date: 05/16/2016
 ms.topic: language-reference
-ms.prod: .net
-ms.technology: devlang-fsharp
+ms.prod: dotnet-fsharp
 ms.devlang: fsharp
-ms.assetid: a1a6075f-064d-4aee-8222-2b59ff16cc12
-ms.openlocfilehash: 5802a5a1c48ad05c1765c4c0fa2e8a81a92dee8d
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.openlocfilehash: e29dbdac5e920c009bf7758fd2cc1ad486041cad
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="lists"></a>Listeler
 
@@ -71,10 +68,10 @@ Liste türü aşağıdaki özellikleri destekler:
 |Özellik|Tür|Açıklama|
 |--------|----|-----------|
 |[HEAD](https://msdn.microsoft.com/library/5f9414fd-6bdb-470a-8b72-40016db30740)|`'T`|İlk öğe.|
-|[Boş](https://msdn.microsoft.com/library/44406ecb-1918-4d32-b32a-ca1f69840386)|`'T list`|Uygun bir tür boş bir liste döndürür bir statik özellik.|
-|[IsEmpty](https://msdn.microsoft.com/library/3ba087b2-2fc2-406d-b10a-cff6a19322da)|`bool`|`true`Listenin öğe varsa.|
+|[boş](https://msdn.microsoft.com/library/44406ecb-1918-4d32-b32a-ca1f69840386)|`'T list`|Uygun bir tür boş bir liste döndürür bir statik özellik.|
+|[IsEmpty](https://msdn.microsoft.com/library/3ba087b2-2fc2-406d-b10a-cff6a19322da)|`bool`|`true` Listenin öğe varsa.|
 |[Öğesi](https://msdn.microsoft.com/library/bdb2553a-0e54-4ff8-baed-ab1aac8f5dae)|`'T`|(Sıfır tabanlı) belirtilen dizininde bulunan öğe.|
-|[Uzunluğu](https://msdn.microsoft.com/library/25f715c8-9daa-4c4d-a6c7-26772f9dab4d)|`int`|Öğe sayısı.|
+|[uzunluğu](https://msdn.microsoft.com/library/25f715c8-9daa-4c4d-a6c7-26772f9dab4d)|`int`|Öğe sayısı.|
 |[Tail](https://msdn.microsoft.com/library/2a6f8eb9-dc32-41aa-8b62-2baffaface91)|`'T list`|Listenin ilk öğe olmadan.|
 Bu özellikleri kullanarak bazı örnekler verilmiştir.
 
@@ -109,7 +106,7 @@ Primes Up To 100:
 ```
 
 ## <a name="module-functions"></a>Modül işlevleri
-[List Modülü](https://msdn.microsoft.com/library/a2264ba3-2d45-40dd-9040-4f7aa2ad9788) bir liste öğelerini erişim işlevleri sağlar. Head öğesi, hızlı ve kolay erişim ' dir. Özelliğini kullanın [Head](https://msdn.microsoft.com/library/5f9414fd-6bdb-470a-8b72-40016db30740) veya modül işlevi [List.head](https://msdn.microsoft.com/library/22514cc5-0511-498b-a2cc-837b688a6da2). Tail listesini kullanarak erişebilirsiniz [Tail](https://msdn.microsoft.com/library/2a6f8eb9-dc32-41aa-8b62-2baffaface91) özelliği veya [List.tail](https://msdn.microsoft.com/library/da0a0638-4420-4571-84b6-d09ae601f601) işlevi. Dizine göre bir öğeyi bulmak için [List.nth](https://msdn.microsoft.com/library/1f717d57-89be-4007-a971-9cf5a28d83b1) işlevi. `List.nth`Listenin erişir. Bu nedenle, O olur (*n*). Kodunuzu kullanıyorsa `List.nth` genellikle, bir dizi yerine bir listesini kullanarak düşünmek isteyebilirsiniz. Dizilerde öğesi erişim O(1) ' dir.
+[List Modülü](https://msdn.microsoft.com/library/a2264ba3-2d45-40dd-9040-4f7aa2ad9788) bir liste öğelerini erişim işlevleri sağlar. Head öğesi, hızlı ve kolay erişim ' dir. Özelliğini kullanın [Head](https://msdn.microsoft.com/library/5f9414fd-6bdb-470a-8b72-40016db30740) veya modül işlevi [List.head](https://msdn.microsoft.com/library/22514cc5-0511-498b-a2cc-837b688a6da2). Tail listesini kullanarak erişebilirsiniz [Tail](https://msdn.microsoft.com/library/2a6f8eb9-dc32-41aa-8b62-2baffaface91) özelliği veya [List.tail](https://msdn.microsoft.com/library/da0a0638-4420-4571-84b6-d09ae601f601) işlevi. Dizine göre bir öğeyi bulmak için [List.nth](https://msdn.microsoft.com/library/1f717d57-89be-4007-a971-9cf5a28d83b1) işlevi. `List.nth` Listenin erişir. Bu nedenle, O olur (*n*). Kodunuzu kullanıyorsa `List.nth` genellikle, bir dizi yerine bir listesini kullanarak düşünmek isteyebilirsiniz. Dizilerde öğesi erişim O(1) ' dir.
 
 
 ### <a name="boolean-operations-on-lists"></a>Boole işleçleri listeleri hakkında
@@ -160,9 +157,9 @@ false
 ```
 
 ### <a name="sort-operations-on-lists"></a>Sıralama işlemi listeleri hakkında
-[List.sort](https://msdn.microsoft.com/library/17f1030e-aa7e-41dd-94ea-72cb6c04fd3d), [List.sortBy](https://msdn.microsoft.com/library/955bfc5f-ad9c-4f2d-a7ab-91e43eb21359), ve [List.sortWith](https://msdn.microsoft.com/library/1d806a54-9166-4198-906d-15101f7916c7) işlevleri sıralama listeler. Sıralama işlevini kullanmak için bu üç işlevlerin belirler. `List.sort`Varsayılan genel karşılaştırma kullanır. Genel karşılaştırma genel karşılaştırma işlevine dayalı genel işleçlerini değerleri karşılaştırmak için kullanır. Çok çeşitli basit sayısal türler, tanımlama grupları, kayıtları, ayrılmış birleşimler, listeler, dizileri ve uygulayan herhangi bir türü gibi öğe türleri ile verimli bir şekilde çalıştığını `System.IComparable`. Bu uygulama türleri için `System.IComparable`, genel karşılaştırma kullanır `System.IComparable.CompareTo()` işlevi. Genel karşılaştırma ayrıca dizelerle çalışır, ancak bir kültür bağımsız sıralama düzenini kullanır. İşlev türleri gibi desteklenmeyen türleri hakkında genel karşılaştırma kullanılmamalıdır. Ayrıca, varsayılan genel karşılaştırma performansını küçük yapılandırılmış türleri için en iyisidir; Karşılaştırılan ve sık sıralanmış gereken büyük yapılandırılmış türleri için uygulayın `System.IComparable` ve verimli uygulaması sağlama `System.IComparable.CompareTo()` yöntemi.
+[List.sort](https://msdn.microsoft.com/library/17f1030e-aa7e-41dd-94ea-72cb6c04fd3d), [List.sortBy](https://msdn.microsoft.com/library/955bfc5f-ad9c-4f2d-a7ab-91e43eb21359), ve [List.sortWith](https://msdn.microsoft.com/library/1d806a54-9166-4198-906d-15101f7916c7) işlevleri sıralama listeler. Sıralama işlevini kullanmak için bu üç işlevlerin belirler. `List.sort` Varsayılan genel karşılaştırma kullanır. Genel karşılaştırma genel karşılaştırma işlevine dayalı genel işleçlerini değerleri karşılaştırmak için kullanır. Çok çeşitli basit sayısal türler, tanımlama grupları, kayıtları, ayrılmış birleşimler, listeler, dizileri ve uygulayan herhangi bir türü gibi öğe türleri ile verimli bir şekilde çalıştığını `System.IComparable`. Bu uygulama türleri için `System.IComparable`, genel karşılaştırma kullanır `System.IComparable.CompareTo()` işlevi. Genel karşılaştırma ayrıca dizelerle çalışır, ancak bir kültür bağımsız sıralama düzenini kullanır. İşlev türleri gibi desteklenmeyen türleri hakkında genel karşılaştırma kullanılmamalıdır. Ayrıca, varsayılan genel karşılaştırma performansını küçük yapılandırılmış türleri için en iyisidir; Karşılaştırılan ve sık sıralanmış gereken büyük yapılandırılmış türleri için uygulayın `System.IComparable` ve verimli uygulaması sağlama `System.IComparable.CompareTo()` yöntemi.
 
-`List.sortBy`Sıralama ölçütü kullanılan bir değer döndüren bir işlev alır ve `List.sortWith` bir karşılaştırma işlevi bağımsız değişken olarak alır. Bu ikinci iki işlevleri karşılaştırma desteklemez veya ne zaman karşılaştırma kültür duyarlı dize durumunda olduğu gibi daha karmaşık karşılaştırma semantiği gerektiren türleriyle çalışırken faydalıdır.
+`List.sortBy` Sıralama ölçütü kullanılan bir değer döndüren bir işlev alır ve `List.sortWith` bir karşılaştırma işlevi bağımsız değişken olarak alır. Bu ikinci iki işlevleri karşılaştırma desteklemez veya ne zaman karşılaştırma kültür duyarlı dize durumunda olduğu gibi daha karmaşık karşılaştırma semantiği gerektiren türleriyle çalışırken faydalıdır.
 
 Aşağıdaki örnek kullanımını gösteren `List.sort`.
 
@@ -377,7 +374,7 @@ Aynı zamanda [List.filter](https://msdn.microsoft.com/library/11a8c926-547b-44d
 
 Sonuç listesi `[2; 4; 6]`.
 
-Bir harita ve filtre birleşimi [List.choose](https://msdn.microsoft.com/library/2e21d3fb-ce35-4824-8a57-c4404616093d) dönüştürme ve öğeleri aynı anda seçmenize olanak sağlar. `List.choose`Her bir liste öğesi için bir seçenek döndürür ve işlev seçenek değeri döndürdüğünde sonuçlar öğeleri için yeni bir listesi döndüren bir işlev uygular `Some`.
+Bir harita ve filtre birleşimi [List.choose](https://msdn.microsoft.com/library/2e21d3fb-ce35-4824-8a57-c4404616093d) dönüştürme ve öğeleri aynı anda seçmenize olanak sağlar. `List.choose` Her bir liste öğesi için bir seçenek döndürür ve işlev seçenek değeri döndürdüğünde sonuçlar öğeleri için yeni bir listesi döndüren bir işlev uygular `Some`.
 
 Aşağıdaki kod kullanımını gösteren `List.choose` sözcüklerin listesini dışında büyük harfli sözcükleri seçin.
 
@@ -411,7 +408,7 @@ Aşağıdaki örnek kullanımını gösteren `List.fold2`.
 
 [!code-fsharp[Main](../../../samples/snippets/fsharp/lists/snippet28.fs)]
 
-`List.fold`ve [List.scan](https://msdn.microsoft.com/library/21f636db-885c-4a72-970e-e3841f33a1b8) içinde farklı `List.fold` fazladan parametresinin son değeri döndürür ancak `List.scan` fazladan parametresinin (birlikte son değer) Ara değer listesi döndürür.
+`List.fold` ve [List.scan](https://msdn.microsoft.com/library/21f636db-885c-4a72-970e-e3841f33a1b8) içinde farklı `List.fold` fazladan parametresinin son değeri döndürür ancak `List.scan` fazladan parametresinin (birlikte son değer) Ara değer listesi döndürür.
 
 Örneğin, bu işlevlerin her biri ters değişim içerir [List.foldBack](https://msdn.microsoft.com/library/b9a58e66-efe1-445f-a90c-ac9ffb9d40c7), farklı sırayla, listenin sonuna ve bağımsız değişkenlerin sırası. Ayrıca, `List.fold` ve `List.foldBack` çeşitlemeleri sahip [List.fold2](https://msdn.microsoft.com/library/6cfcd043-a65d-4423-805a-2ab234cb5343) ve [List.foldBack2](https://msdn.microsoft.com/library/56371d3e-5271-4183-9e8c-15a02eda9aa2), iki liste eşit uzunlukta alın. Her öğe üzerinde yürüten işlev hem listelerinin karşılık gelen öğeleri bazı eylemleri gerçekleştirmek için kullanabilirsiniz. İki liste öğesi türlerini bir liste işlem tutarlarının bir banka hesabı içeren aşağıdaki örnekteki gibi farklı olabilir ve diğer listenin işlem türünü içerir: banka veya mevzuatı.
 
@@ -425,7 +422,7 @@ Aşağıdaki örnek, banka hesabı örneği döndürür. Bu zaman yeni bir işle
 
 [!code-fsharp[Main](../../../samples/snippets/fsharp/lists/snippet34.fs)]
 
-İşlev [List.reduce](https://msdn.microsoft.com/library/048e1f95-691b-49cb-bb99-fb85f68f3d8b) bakıma olan `List.fold` ve `List.scan`dışında ayrı accumulator geçici geçirme yerine `List.reduce` yerine öğe türünün iki bağımsız değişken almayan bir işlev alır tek ve bu bağımsız değişkenlerden biri hesaplamanın Ara sonucu depolar anlamı accumulator davranır. `List.reduce`ilk iki liste öğeleri çalıştırılarak başlar ve ardından sonraki öğeye birlikte işleminin sonucu kullanır. Kendi türüne sahip ayrı bir accumulator olmadığından `List.reduce` yerine kullanılabilir `List.fold` yalnızca zaman accumulator ve öğe türü aynı türe sahip. Aşağıdaki kod kullanımını gösteren `List.reduce`. `List.reduce`sağlanan listesini öğe varsa, bir özel durum oluşturur.
+İşlev [List.reduce](https://msdn.microsoft.com/library/048e1f95-691b-49cb-bb99-fb85f68f3d8b) bakıma olan `List.fold` ve `List.scan`dışında ayrı accumulator geçici geçirme yerine `List.reduce` yerine öğe türünün iki bağımsız değişken almayan bir işlev alır tek ve bu bağımsız değişkenlerden biri hesaplamanın Ara sonucu depolar anlamı accumulator davranır. `List.reduce` ilk iki liste öğeleri çalıştırılarak başlar ve ardından sonraki öğeye birlikte işleminin sonucu kullanır. Kendi türüne sahip ayrı bir accumulator olmadığından `List.reduce` yerine kullanılabilir `List.fold` yalnızca zaman accumulator ve öğe türü aynı türe sahip. Aşağıdaki kod kullanımını gösteren `List.reduce`. `List.reduce` sağlanan listesini öğe varsa, bir özel durum oluşturur.
 
 Aşağıdaki kodda ilk çağrıda lambda ifadesi bağımsız değişkeni 2 ve 4 verilir ve 6 döndürür ve sonucu 16 nedenle sonraki çağrı bağımsız değişkenleri 6 ve 10 verilir.
 
@@ -440,11 +437,11 @@ Listelerde ek işlemleri hakkında daha fazla bilgi için Kitaplık Başvurusu k
 
 
 ## <a name="see-also"></a>Ayrıca Bkz.
-[F # dili başvurusu](index.md)
+[F# Dili Başvurusu](index.md)
 
-[F # türleri](fsharp-types.md)
+[F# Türleri](fsharp-types.md)
 
-[Dizileri](sequences.md)
+[Diziler](sequences.md)
 
 [Diziler](arrays.md)
 

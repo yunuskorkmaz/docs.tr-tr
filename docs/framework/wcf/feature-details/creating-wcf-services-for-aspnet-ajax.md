@@ -1,24 +1,26 @@
 ---
-title: "ASP.NET AJAX için WCF Hizmetleri Oluşturma"
-ms.custom: 
+title: ASP.NET AJAX için WCF Hizmetleri Oluşturma
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 04c0402c-e617-4ba5-aedf-d17692234776
-caps.latest.revision: "18"
+caps.latest.revision: 18
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: c2e3ba1d360c55f10cde9447b3961d84ffe1cdb2
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 64ab5c6bf4b555504562dbf68a60d032743df865
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="creating-wcf-services-for-aspnet-ajax"></a>ASP.NET AJAX için WCF Hizmetleri Oluşturma
 Microsoft ASP.NET AJAX, esnek ve tanıdık kullanıcı arabirimi öğeleri ile zengin kullanıcı deneyimi içeren Web sayfaları hızlı bir şekilde oluşturmanızı sağlar. ASP.NET AJAX tarayıcılar arası ECMAScript (JavaScript) ve dinamik HTML (DHTML) teknolojilerini istemci-komut dosyası kitaplıkları sağlar ve onu ASP.NET 2.0 sunucu tabanlı geliştirme platformu ile tümleştirir. ASP.NET AJAX'ı kullanarak, kullanıcı deneyimi ve Web uygulamalarınızın verimliliğini artırabilir.  
@@ -31,13 +33,13 @@ Microsoft ASP.NET AJAX, esnek ve tanıdık kullanıcı arabirimi öğeleri ile z
   
  Visual Studio şablonları kullanmıyorsanız, ASP.NET AJAX uç noktası oluşturmanın iki yolu vardır:  
   
--   Herhangi bir yapılandırma kullanmadan dinamik ana bilgisayar etkinleştirmesi uç noktası oluşturun. WCF yapılandırma sistemiyle tanımıyorsanız bu en temel bir yaklaşımdır. [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)][Nasıl yapılır: yapılandırma kullanmadan ASP.NET AJAX uç noktası eklemek](../../../../docs/framework/wcf/feature-details/how-to-add-an-aspnet-ajax-endpoint-without-using-configuration.md).  
+-   Herhangi bir yapılandırma kullanmadan dinamik ana bilgisayar etkinleştirmesi uç noktası oluşturun. WCF yapılandırma sistemiyle tanımıyorsanız bu en temel bir yaklaşımdır. Daha fazla bilgi için bkz: [nasıl yapılır: ASP.NET AJAX uç nokta olmadan kullanarak Yapılandırması Ekle](../../../../docs/framework/wcf/feature-details/how-to-add-an-aspnet-ajax-endpoint-without-using-configuration.md).  
   
--   Bir AJAX etkinleştirilmiş uç nokta ekleyin bir [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] Yapılandırması kullanılarak hizmet. [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)][Nasıl yapılır: ASP.NET AJAX uç noktası eklemek için yapılandırma kullanma](../../../../docs/framework/wcf/feature-details/how-to-use-configuration-to-add-an-aspnet-ajax-endpoint.md).  
+-   Bir AJAX etkinleştirilmiş uç nokta ekleyin bir [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] Yapılandırması kullanılarak hizmet. Daha fazla bilgi için bkz: [nasıl yapılır: ASP.NET AJAX uç noktası eklemek için yapılandırma kullan](../../../../docs/framework/wcf/feature-details/how-to-use-configuration-to-add-an-aspnet-ajax-endpoint.md).  
   
  Açıklanan Web programlama modeli [WCF Web HTTP programlama modeline genel bakış](../../../../docs/framework/wcf/feature-details/wcf-web-http-programming-model-overview.md) ASP.NET AJAX Hizmetleri ile kullanılabilir. Özellikle:  
   
--   Kullanabileceğiniz <xref:System.ServiceModel.Web.WebGetAttribute> ve <xref:System.ServiceModel.Web.WebInvokeAttribute> arasında HTTP GET ve POST HTTP fiilleri seçmek için öznitelikler. Doğru kullandıysanız, bu, uygulamanızın performansını önemli ölçüde artırabilir. [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)][Nasıl yapılır: istekleri ASP.NET AJAX uç noktaları için HTTP POST ve HTTP GET arasında seçim yapma](../../../../docs/framework/wcf/feature-details/http-post-and-http-get-requests-for-aspnet-ajax-endpoints.md).  
+-   Kullanabileceğiniz <xref:System.ServiceModel.Web.WebGetAttribute> ve <xref:System.ServiceModel.Web.WebInvokeAttribute> arasında HTTP GET ve POST HTTP fiilleri seçmek için öznitelikler. Doğru kullandıysanız, bu, uygulamanızın performansını önemli ölçüde artırabilir. Daha fazla bilgi için bkz: [nasıl yapılır: istekleri ASP.NET AJAX uç noktaları için HTTP POST ve HTTP GET arasında seçim yapma](../../../../docs/framework/wcf/feature-details/http-post-and-http-get-requests-for-aspnet-ajax-endpoints.md).  
   
 -   Kullanabileceğiniz <xref:System.ServiceModel.Web.WebGetAttribute.ResponseFormat%2A> ve <xref:System.ServiceModel.Web.WebInvokeAttribute.ResponseFormat%2A> hizmetinizin varsayılan JavaScript nesne gösterimi (JSON) yerine XML verileri döndürmek için neden özellikleri. Bunu yapmak ASP.NET AJAX framework ile bir XML DOM nesnesi almak JavaScript istemci neden olur.  
   

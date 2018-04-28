@@ -21,11 +21,11 @@ ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: 491cbf19ac3c8f1817b12c895655ca1958972a62
-ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
+ms.openlocfilehash: 3669260d34aac0783f2ebd735c79ced91741408a
+ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
 ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="wcf-client-overview"></a>WCF İstemcisi Genel Bakış
 Bu bölümde hangi istemci uygulamaları yapın, yapılandırma, oluşturma ve kullanma açıklanmaktadır bir [!INCLUDE[indigo1](../../../includes/indigo1-md.md)] istemci ve istemci uygulamalarının güvenliğini sağlama.  
@@ -73,11 +73,11 @@ svcutil /language:vb /out:ClientCode.vb /config:app.config http://computerName/M
  Kullanımını göstermek için bir <xref:System.ServiceModel.ClientBase%601> sınıfı, bir hizmet uygulamasından aşağıdaki basit hizmet sözleşmesi oluşturuldu varsayalım.  
   
 > [!NOTE]
->  Kullanıyorsanız [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] oluşturmak için [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] istemci, nesneleri yüklenir otomatik olarak nesne tarayıcısı, hizmet başvurusu projenize ekleyin.  
+>  Oluşturmak için Visual Studio kullanıyorsanız, [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] istemci, nesneleri yüklenir otomatik olarak nesne tarayıcısı, hizmet başvurusu projenize ekleyin.  
   
  [!code-csharp[C_GeneratedCodeFiles#12](../../../samples/snippets/csharp/VS_Snippets_CFX/c_generatedcodefiles/cs/proxycode.cs#12)]  
   
- Kullanmıyorsanız, [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)], genişletir türü bulmak için oluşturulan sözleşme kodunu İnceleme <xref:System.ServiceModel.ClientBase%601> ve hizmet sözleşme arabirimi `ISampleService`. Bu durumda, bu tür aşağıdaki kod gibi görünür:  
+ Visual Studio kullanmıyorsanız genişletir türü bulmak için oluşturulan sözleşme kodu incelemek <xref:System.ServiceModel.ClientBase%601> ve hizmet sözleşme arabirimi `ISampleService`. Bu durumda, bu tür aşağıdaki kod gibi görünür:  
   
  [!code-csharp[C_GeneratedCodeFiles#14](../../../samples/snippets/csharp/VS_Snippets_CFX/c_generatedcodefiles/cs/proxycode.cs#14)]  
   

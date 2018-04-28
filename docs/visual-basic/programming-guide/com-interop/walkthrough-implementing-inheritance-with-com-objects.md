@@ -17,11 +17,11 @@ ms.assetid: f8e7263a-de13-48d1-b67c-ca1adf3544d9
 caps.latest.revision: 16
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: 10c6bdf46e351b23705107da3b693531718cfd37
-ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
-ms.translationtype: HT
+ms.openlocfilehash: b03b81c9e04e79f8ce7763ecf8a489d248ff480b
+ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="walkthrough-implementing-inheritance-with-com-objects-visual-basic"></a>İzlenecek yol: COM Nesnelerinde Kalıtım Uygulama (Visual Basic)
 Visual Basic sınıflardan türetilemeyeceğini `Public` olanlar Visual Basic önceki sürümlerinde oluşturulan COM nesnelerini sınıflarda. Özellikleri ve yöntemleri COM nesneleri devralınan sınıfların geçersiz kılındı gibi özellikleri olarak aşırı yüklendi ve herhangi bir taban sınıf yöntemlerini geçersiz veya aşırı yüklenmiş. COM nesneleri içinden devralma yeniden derleyin istemediğiniz varolan bir sınıf kitaplığı olduğunda yararlıdır.  
@@ -81,7 +81,7 @@ Visual Basic sınıflardan türetilemeyeceğini `Public` olanlar Visual Basic ö
     >  Ayrıca bir COM nesnesi olarak Visual Basic ile oluşturulan bir sınıf getirebilir rağmen doğru bir COM nesnesi değil ve bu kılavuzda kullanılamaz. Ayrıntılar için bkz [.NET Framework uygulamalarında COM birlikte çalışabilirliği](../../../visual-basic/programming-guide/com-interop/com-interoperability-in-net-framework-applications.md).  
   
 ## <a name="interop-assemblies"></a>Birlikte çalışma derlemeleri  
- Aşağıdaki yordamda, yönetilmeyen kod (örneğin, bir COM nesnesi) ve yönetilen kod arasında bir köprü görevi gören bir birlikte çalışma derlemesi oluşturacak [!INCLUDE[vsprvs](~/includes/vsprvs-md.md)] kullanır. Visual Basic oluşturur birlikte çalışma derlemesi birçok gibi COM nesneleri ile çalışma ayrıntılarını işler *birlikte çalışma hazırlama*, işlemi paketleme parametreler ve dönüş değerleri eşdeğer veri türleri için taşırken ve COM nesneleri. Visual Basic uygulama nokta derlemesine başvuru birlikte çalışma, gerçek COM nesnesi değil.  
+ Aşağıdaki yordamda, yönetilmeyen kod (örneğin, bir COM nesnesi) ve Visual Studio kullanan yönetilen kod arasında bir köprü görevi gören bir birlikte çalışma derlemesi oluşturur. Visual Basic oluşturur birlikte çalışma derlemesi birçok gibi COM nesneleri ile çalışma ayrıntılarını işler *birlikte çalışma hazırlama*, işlemi paketleme parametreler ve dönüş değerleri eşdeğer veri türleri için taşırken ve COM nesneleri. Visual Basic uygulama nokta derlemesine başvuru birlikte çalışma, gerçek COM nesnesi değil.  
   
 #### <a name="to-use-a-com-object-with-visual-basic-2005-and-later-versions"></a>Visual Basic 2005 ve sonraki sürümler ile COM nesnesini kullanma  
   

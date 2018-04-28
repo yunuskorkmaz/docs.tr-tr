@@ -15,11 +15,11 @@ ms.assetid: 3ffd1bdf-1b8d-47f5-87eb-75b659f64294
 caps.latest.revision: 14
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: f3f9d7fb51198041356cfc68d49cc703dfdf78b5
-ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
-ms.translationtype: HT
+ms.openlocfilehash: a2c418855cd2e79c31301705706ff1b98f119a97
+ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="com-interop-visual-basic"></a>COM Birlikte Çalışma (Visual Basic)
 Bileşen Nesne Modeli (COM) diğer bileşenler ve konak uygulamaların işlevselliğini kullanıma sunmak bir nesne sağlar. Günümüzün yazılım çoğunu COM nesneleri içerir. .NET derlemelerini yeni uygulamalar için en iyi seçenek olmakla birlikte, bazen COM nesneleri uygulamadığınız gerekebilir. Bu bölümde bazı oluşturma ve Visual Basic ile COM nesneleri kullanma ile ilgili sorunları ele alınmaktadır.  
@@ -32,7 +32,7 @@ Bileşen Nesne Modeli (COM) diğer bileşenler ve konak uygulamaların işlevsel
  Tür kitaplıkları sahip COM nesnelerine başvurular ekleme kapsar.  
   
  [Nasıl yapılır: ActiveX Denetimleriyle Çalışma](../../../visual-basic/programming-guide/com-interop/how-to-work-with-activex-controls.md)  
- Varolan ActiveX denetimlerini özellikleri eklemek için nasıl kullanılacağı gösterilmektedir [!INCLUDE[vsprvs](~/includes/vsprvs-md.md)] araç.  
+ Visual Studio araç kutusuna özellikleri eklemek için var olan ActiveX denetimlerini kullanmayı gösterir.  
   
  [İzlenecek yol: Windows API'lerini Çağırma](../../../visual-basic/programming-guide/com-interop/walkthrough-calling-windows-apis.md)  
  Windows işletim sisteminin parçası olan API'larını çağırma sürecinde adımları.  

@@ -1,20 +1,17 @@
 ---
-title: "F # kullanarak Azure kuyruk depolamaya başlayın"
-description: "Uygulama bileşenleri arasında güvenilir ve zaman uyumsuz Mesajlaşma Azure kuyrukları sağlar. İleti etkinleştirir bağımsız olarak ölçeklendirebilirsiniz uygulama bileşenlerinizin bulut."
-keywords: "Visual f #, f #, işlev, .NET, .NET Core, Azure programlama"
+title: 'F # kullanarak Azure kuyruk depolamaya başlayın'
+description: Uygulama bileşenleri arasında güvenilir ve zaman uyumsuz Mesajlaşma Azure kuyrukları sağlar. İleti etkinleştirir bağımsız olarak ölçeklendirebilirsiniz uygulama bileşenlerinizin bulut.
 author: sylvanc
 ms.author: phcart
 ms.date: 09/20/2016
-ms.topic: article
-ms.prod: .net
-ms.technology: devlang-fsharp
+ms.topic: conceptual
+ms.prod: dotnet-fsharp
 ms.devlang: fsharp
-ms.assetid: 70dc554c-8f4d-42a7-8e2a-6438657d012a
-ms.openlocfilehash: 50b2d69a1753add688aa14c3314a0ca2df9f03a4
-ms.sourcegitcommit: 655fd4f78741967f80c409cef98347fdcf77857d
+ms.openlocfilehash: bd49fd0f0e8d91449443051ab9a4ffc2d2638e11
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/28/2018
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="get-started-with-azure-queue-storage-using-f"></a>F # kullanarak Azure kuyruk depolamaya başlayın #
 

@@ -1,23 +1,24 @@
 ---
-title: "Birlikte çalışma etkinliğini bir .NET Framework 4 iş akışında kullanma"
-ms.custom: 
+title: Birlikte çalışma etkinliğini bir .NET Framework 4 iş akışında kullanma
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 9bb747f0-eb33-4f70-84cd-317382372dcd
-caps.latest.revision: "20"
+caps.latest.revision: 20
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 0a02d6dbc7c6f6583a174bd10853d8c8070ac273
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: ebef74097d22c9624a29470f4cda231bbb32fe90
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="using-the-interop-activity-in-a-net-framework-4-workflow"></a>Birlikte çalışma etkinliğini bir .NET Framework 4 iş akışında kullanma
 Kullanılarak oluşturulan etkinlikleri [!INCLUDE[vstecwinfx](../../../includes/vstecwinfx-md.md)] veya [!INCLUDE[netfx35_short](../../../includes/netfx35-short-md.md)] kullanılabilir bir [!INCLUDE[netfx_current_short](../../../includes/netfx-current-short-md.md)] kullanarak iş akışı <xref:System.Activities.Statements.Interop> etkinlik. Bu konuda kullanarak genel bir bakış sağlar <xref:System.Activities.Statements.Interop> etkinlik.  
@@ -256,7 +257,7 @@ Rule3: IF this.DiscountPercent > 0
     ```  
   
     > [!NOTE]
-    >  `Subtotal`, `DiscountPercent`, Ve `Total` özelliklerini `DiscountCalculator` etkinlik bağımsız ortaya <xref:System.Activities.Statements.Interop> etkinliği ve yerel ilişkili iş akışı değişken <xref:System.Activities.Statements.Interop> etkinliğin <xref:System.Activities.Statements.Interop.ActivityProperties%2A> koleksiyonu. `Subtotal`eklenen bir <xref:System.Activities.ArgumentDirection.In> bağımsız değişkeni çünkü `Subtotal` veri akışları içine <xref:System.Activities.Statements.Interop> etkinlik, ve `DiscountPercent` ve `Total` olarak eklenir <xref:System.Activities.ArgumentDirection.Out> bağımsız değişkenler dışı kendi veri akışları için <xref:System.Activities.Statements.Interop> etkinlik. Unutmayın iki <xref:System.Activities.ArgumentDirection.Out> bağımsız değişken adlarıyla eklenen `DiscountPercentOut` ve `TotalOut` temsil ettikleri belirtmek için <xref:System.Activities.ArgumentDirection.Out> bağımsız değişkenler. `DiscountCalculator` Türü olarak belirtildiğinde <xref:System.Activities.Statements.Interop> etkinliğin <xref:System.Activities.Statements.Interop.ActivityType%2A>.  
+    >  `Subtotal`, `DiscountPercent`, Ve `Total` özelliklerini `DiscountCalculator` etkinlik bağımsız ortaya <xref:System.Activities.Statements.Interop> etkinliği ve yerel ilişkili iş akışı değişken <xref:System.Activities.Statements.Interop> etkinliğin <xref:System.Activities.Statements.Interop.ActivityProperties%2A> koleksiyonu. `Subtotal` eklenen bir <xref:System.Activities.ArgumentDirection.In> bağımsız değişkeni çünkü `Subtotal` veri akışları içine <xref:System.Activities.Statements.Interop> etkinlik, ve `DiscountPercent` ve `Total` olarak eklenir <xref:System.Activities.ArgumentDirection.Out> bağımsız değişkenler dışı kendi veri akışları için <xref:System.Activities.Statements.Interop> etkinlik. Unutmayın iki <xref:System.Activities.ArgumentDirection.Out> bağımsız değişken adlarıyla eklenen `DiscountPercentOut` ve `TotalOut` temsil ettikleri belirtmek için <xref:System.Activities.ArgumentDirection.Out> bağımsız değişkenler. `DiscountCalculator` Türü olarak belirtildiğinde <xref:System.Activities.Statements.Interop> etkinliğin <xref:System.Activities.Statements.Interop.ActivityType%2A>.  
   
 5.  Derleme ve uygulamayı çalıştırmak için CTRL + F5 tuşuna basın. Yedek için farklı değerler `Subtotal` tarafından sağlanan farklı indirim düzeyleri çıkışı test etmek için değer `DiscountCalculator` etkinlik.  
   
@@ -370,10 +371,10 @@ Rule3: IF this.DiscountPercent > 0
 |Kuralları özelliği|Belgeler|  
 |-------------------|-------------------|  
 |Kurallarına genel bakış|[Windows Workflow Foundation kurallar altyapısı giriş](http://go.microsoft.com/fwlink/?LinkID=152836)|  
-|RuleSet|[İş akışlarında RuleSets kullanarak](http://go.microsoft.com/fwlink/?LinkId=178516) ve<xref:System.Workflow.Activities.Rules.RuleSet>|  
+|RuleSet|[İş akışlarında RuleSets kullanarak](http://go.microsoft.com/fwlink/?LinkId=178516) ve <xref:System.Workflow.Activities.Rules.RuleSet>|  
 |Kuralları değerlendirmesi|[RuleSets kuralları değerlendirmesine](http://go.microsoft.com/fwlink/?LinkId=178517)|  
 |Zincirleme kuralları|[İleri denetim zincirleme](http://go.microsoft.com/fwlink/?LinkId=178518) ve [İleri kuralları zincirleme](http://go.microsoft.com/fwlink/?LinkId=178519)|  
 |Kural koleksiyonlarında işleme|[Kural koleksiyonlarında işleme](http://go.microsoft.com/fwlink/?LinkId=178520)|  
-|PolicyActivity kullanma|[Kullanarak PolicyActivity etkinliğini](http://go.microsoft.com/fwlink/?LinkId=178521) ve<xref:System.Workflow.Activities.PolicyActivity>|  
+|PolicyActivity kullanma|[Kullanarak PolicyActivity etkinliğini](http://go.microsoft.com/fwlink/?LinkId=178521) ve <xref:System.Workflow.Activities.PolicyActivity>|  
   
- Oluşturulan iş akışları [!INCLUDE[netfx_current_short](../../../includes/netfx-current-short-md.md)] tarafından sağlanan tüm kuralları özelliklere kullanmayın [!INCLUDE[wf1](../../../includes/wf1-md.md)]bildirim temelli etkinlik koşullar ve gibi koşullu etkinlikler gibi <xref:System.Workflow.Activities.ConditionedActivityGroup> ve <xref:System.Workflow.Activities.ReplicatorActivity>. Gerekirse, bu işlevselliği kullanılarak oluşturulan iş akışları için kullanılabilir [!INCLUDE[vstecwinfx](../../../includes/vstecwinfx-md.md)] ve [!INCLUDE[netfx35_short](../../../includes/netfx35-short-md.md)]. [!INCLUDE[crdefault](../../../includes/crdefault-md.md)][Geçiş Kılavuzu](../../../docs/framework/windows-workflow-foundation/migration-guidance.md).
+ Oluşturulan iş akışları [!INCLUDE[netfx_current_short](../../../includes/netfx-current-short-md.md)] tarafından sağlanan tüm kuralları özelliklere kullanmayın [!INCLUDE[wf1](../../../includes/wf1-md.md)]bildirim temelli etkinlik koşullar ve gibi koşullu etkinlikler gibi <xref:System.Workflow.Activities.ConditionedActivityGroup> ve <xref:System.Workflow.Activities.ReplicatorActivity>. Gerekirse, bu işlevselliği kullanılarak oluşturulan iş akışları için kullanılabilir [!INCLUDE[vstecwinfx](../../../includes/vstecwinfx-md.md)] ve [!INCLUDE[netfx35_short](../../../includes/netfx35-short-md.md)]. Daha fazla bilgi için bkz: [Geçiş Kılavuzu](../../../docs/framework/windows-workflow-foundation/migration-guidance.md).

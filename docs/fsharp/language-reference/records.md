@@ -1,20 +1,17 @@
 ---
-title: "Kayıtlar (F#)"
-description: "F # kayıtları üyeleri isteğe bağlı olarak adlandırılmış değerler basit toplamalar nasıl temsil öğrenin."
-keywords: "Visual f #, f # işlevsel programlama"
+title: Kayıtlar (F#)
+description: 'F # kayıtları üyeleri isteğe bağlı olarak adlandırılmış değerler basit toplamalar nasıl temsil öğrenin.'
 author: cartermp
 ms.author: phcart
 ms.date: 05/16/2016
 ms.topic: language-reference
-ms.prod: .net
-ms.technology: devlang-fsharp
+ms.prod: dotnet-fsharp
 ms.devlang: fsharp
-ms.assetid: 3a3701ea-4308-4fa1-9b5c-b955c470f17a
-ms.openlocfilehash: 478ab74ad32cc6e53daffd1bd6229729149d2a1e
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.openlocfilehash: 1270bf4eaeba99a15b0f81b5477f4c3b98644f66
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="records"></a>Kayıtlar
 

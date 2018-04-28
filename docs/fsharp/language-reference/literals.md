@@ -1,20 +1,17 @@
 ---
-title: "Değişmez Değerler (F#)"
-description: "F # programlama dili değişmez değer türleri hakkında bilgi edinin."
-keywords: "Visual f #, f # işlevsel programlama"
+title: Değişmez Değerler (F#)
+description: 'F # programlama dili değişmez değer türleri hakkında bilgi edinin.'
 author: cartermp
 ms.author: phcart
 ms.date: 05/16/2016
 ms.topic: language-reference
-ms.prod: .net
-ms.technology: devlang-fsharp
+ms.prod: dotnet-fsharp
 ms.devlang: fsharp
-ms.assetid: 4b1d6e9d-f933-4cd4-966d-d643152c27e4
-ms.openlocfilehash: 6bb1f233b6846e226c4e73aee00b8cf77735fe2d
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.openlocfilehash: 961d6a10122c5d5c691d394efa8d2b7b31a80453
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="literals"></a>Sabit değerler
 
@@ -37,17 +34,17 @@ Değişmez değer türleri aşağıdaki tabloda F #'de gösterilmektedir. Onalt�
 |unativeint|işaretsiz doğal sayı olarak yerel işaretçiden|kaldırma|`0x00002D3Fun`|
 |Int64|işaretli 64 bit tam sayı|L|`86L`|
 |uint64|İmzasız 64-bit doğal sayı|UL|`86UL`|
-|tek float32|32 bit kayan nokta sayısı|F veya f|`4.14F`veya`4.14f`|
+|tek float32|32 bit kayan nokta sayısı|F veya f|`4.14F` Veya `4.14f`|
 |||LF|`0x00000000lf`|
-|float; çift|64-bit kayan nokta sayısı|yok|`4.14`veya `2.3E+32` veya`2.3e+32`|
+|float; çift|64-bit kayan nokta sayısı|yok|`4.14` veya `2.3E+32` veya `2.3e+32`|
 |||LF|`0x0000000000000000LF`|
 |bigint|64-bit gösterimine bunlarla sınırlı olmamak tamsayı|I|`9999999999999999999999999999I`|
-|decimal|bir sabit bir nokta ya da rasyonel sayı olarak temsil kesirli numarası|M veya m|`0.7833M`veya`0.7833m`|
+|decimal|bir sabit bir nokta ya da rasyonel sayı olarak temsil kesirli numarası|M veya m|`0.7833M` Veya `0.7833m`|
 |Char|Unicode karakter|yok|`'a'`|
 |Dize|UNICODE dizesi|yok|`"text\n"`<br /><br />veya<br /><br />`@"c:\filename"`<br /><br />veya<br /><br />`"""<book title="Paradise Lost">"""`<br /><br />veya<br /><br />`"string1" + "string2"`<br /><br />Ayrıca bkz. [dizeleri](Strings.md).|
 |byte|ASCII karakter|B|`'a'B`|
 |Byte]|ASCII dizesi|B|`"text"B`|
-|String veya byte]|harfi harfine dize|@ öneki|`@"\\server\share"`(Unicode)<br /><br />`@"\\server\share"B`(ASCII)|
+|String veya byte]|harfi harfine dize|@ öneki|`@"\\server\share"` (Unicode)<br /><br />`@"\\server\share"B` (ASCII)|
 
 ## <a name="remarks"></a>Açıklamalar
 Unicode dizelerini kullanarak belirtebilirsiniz açık Kodlamalar içerebilir `\u` bir 16 bit onaltılık kodu veya kullanarak belirtebilirsiniz UTF-32 kodlamaları arkasından `\U` bir Unicode temsil eden bir 32 bit onaltılık kodla ve ardından yedek çifti.

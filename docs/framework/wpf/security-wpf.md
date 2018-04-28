@@ -1,12 +1,13 @@
 ---
-title: "Güvenlik (WPF)"
-ms.custom: 
+title: Güvenlik (WPF)
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-wpf
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-wpf
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - XAML files [WPF], sandbox behavior
@@ -20,23 +21,24 @@ helpviewer_keywords:
 - XBAP security [WPF]
 - Internet Explorer security settings [WPF]
 ms.assetid: ee1baea0-3611-4e36-9ad6-fcd5205376fb
-caps.latest.revision: "38"
+caps.latest.revision: 38
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: fae5c8553cc395268b1c6afb1b64727014756975
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 134efba11742ab9cc8da2dfab77c233b52f1bcf1
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="security-wpf"></a>Güvenlik (WPF)
-<a name="introduction"></a>Geliştirirken [!INCLUDE[TLA#tla_wpf](../../../includes/tlasharptla-wpf-md.md)] tek başına ve tarayıcıda barındırılan uygulamalar, güvenlik modeli bulundurmalısınız. [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)]tek başına uygulamalarını yürütmek Kısıtlanmamış izinlerle ( [!INCLUDE[TLA2#tla_cas](../../../includes/tla2sharptla-cas-md.md)] **FullTrust** izin kümesi), Windows Installer (.msi), XCopy, kullanılarak dağıtılan olup olmadığını veya [!INCLUDE[TLA2#tla_clickonce](../../../includes/tla2sharptla-clickonce-md.md)]. Kısmi güven, tek başına WPF uygulamaları ClickOnce ile dağıtma desteklenmiyor. Ancak, bir tam güven ana bilgisayar uygulaması kısmi güven oluşturabilirsiniz <xref:System.AppDomain> kullanarak .NET Framework eklenti modeli. Daha fazla bilgi için bkz: [WPF eklentileri genel bakış](../../../docs/framework/wpf/app-development/wpf-add-ins-overview.md).  
+<a name="introduction"></a> Geliştirirken [!INCLUDE[TLA#tla_wpf](../../../includes/tlasharptla-wpf-md.md)] tek başına ve tarayıcıda barındırılan uygulamalar, güvenlik modeli bulundurmalısınız. [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] tek başına uygulamalarını yürütmek Kısıtlanmamış izinlerle ( [!INCLUDE[TLA2#tla_cas](../../../includes/tla2sharptla-cas-md.md)] **FullTrust** izin kümesi), Windows Installer (.msi), XCopy, kullanılarak dağıtılan olup olmadığını veya [!INCLUDE[TLA2#tla_clickonce](../../../includes/tla2sharptla-clickonce-md.md)]. Kısmi güven, tek başına WPF uygulamaları ClickOnce ile dağıtma desteklenmiyor. Ancak, bir tam güven ana bilgisayar uygulaması kısmi güven oluşturabilirsiniz <xref:System.AppDomain> kullanarak .NET Framework eklenti modeli. Daha fazla bilgi için bkz: [WPF eklentileri genel bakış](../../../docs/framework/wpf/app-development/wpf-add-ins-overview.md).  
   
- [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)]tarayıcıda barındırılan uygulamalar tarafından barındırılan [!INCLUDE[TLA#tla_iegeneric](../../../includes/tlasharptla-iegeneric-md.md)] ya da Firefox ve ya da olabilir [!INCLUDE[TLA#tla_xbap#plural](../../../includes/tlasharptla-xbapsharpplural-md.md)] veya gevşek [!INCLUDE[TLA#tla_xaml](../../../includes/tlasharptla-xaml-md.md)] belgeler hakkında daha fazla bilgi için bkz: [WPF XAML tarayıcısı uygulamaları genel bakış](../../../docs/framework/wpf/app-development/wpf-xaml-browser-applications-overview.md).  
+ [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] tarayıcıda barındırılan uygulamalar tarafından barındırılan [!INCLUDE[TLA#tla_iegeneric](../../../includes/tlasharptla-iegeneric-md.md)] ya da Firefox ve ya da olabilir [!INCLUDE[TLA#tla_xbap#plural](../../../includes/tlasharptla-xbapsharpplural-md.md)] veya gevşek [!INCLUDE[TLA#tla_xaml](../../../includes/tlasharptla-xaml-md.md)] belgeler hakkında daha fazla bilgi için bkz: [WPF XAML tarayıcısı uygulamaları genel bakış](../../../docs/framework/wpf/app-development/wpf-xaml-browser-applications-overview.md).  
   
- [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)]tarayıcıda barındırılan uygulamalar için varsayılan sınırlıdır varsayılan olarak kısmi güven güvenlik sandbox içinde yürütme [!INCLUDE[TLA2#tla_cas](../../../includes/tla2sharptla-cas-md.md)] **Internet** bölge izin kümesi. Bu etkili bir şekilde yalıtır [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] yalıtılması normal Web uygulamaları beklediğiniz şekilde istemci bilgisayardan tarayıcıda barındırılan uygulamalar. Bir XBAP ayrıcalıkları, tam güven kadar dağıtım URL'si ve istemcinin güvenlik yapılandırması güvenlik bölgesi bağlı olarak yükseltebilirsiniz. Daha fazla bilgi için bkz: [WPF kısmi güven güvenlik](../../../docs/framework/wpf/wpf-partial-trust-security.md).  
+ [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] tarayıcıda barındırılan uygulamalar için varsayılan sınırlıdır varsayılan olarak kısmi güven güvenlik sandbox içinde yürütme [!INCLUDE[TLA2#tla_cas](../../../includes/tla2sharptla-cas-md.md)] **Internet** bölge izin kümesi. Bu etkili bir şekilde yalıtır [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] yalıtılması normal Web uygulamaları beklediğiniz şekilde istemci bilgisayardan tarayıcıda barındırılan uygulamalar. Bir XBAP ayrıcalıkları, tam güven kadar dağıtım URL'si ve istemcinin güvenlik yapılandırması güvenlik bölgesi bağlı olarak yükseltebilirsiniz. Daha fazla bilgi için bkz: [WPF kısmi güven güvenlik](../../../docs/framework/wpf/wpf-partial-trust-security.md).  
   
  Bu konu için güvenlik modeli açıklanır [!INCLUDE[TLA#tla_wpf](../../../includes/tlasharptla-wpf-md.md)] tek başına ve tarayıcıda barındırılan uygulamalar.  
   
@@ -73,7 +75,7 @@ ms.lasthandoff: 12/22/2017
 |Kaynak|Bir yapı türüne sahip bir projeye eklenen dosyalar **kaynak**.|`pack://application:,,,/MyResourceFile.xaml`|  
 |İçerik|Bir yapı türüne sahip bir projeye eklenen dosyalar **içerik**.|`pack://application:,,,/MyContentFile.xaml`|  
 |Kaynak site|Bir yapı türüne sahip bir projeye eklenen dosyalar **hiçbiri**.|`pack://siteoforigin:,,,/MySiteOfOriginFile.xaml`|  
-|Uygulama kodu|Bir derlenmiş arka plan kod sahip XAML kaynaklar.<br /><br /> veya<br /><br /> Bir yapı türüne sahip bir projeye eklenen XAML dosyaları **sayfa**.|`pack://application:,,,/MyResourceFile``.xaml`|  
+|Uygulama kodu|Bir derlenmiş arka plan kod sahip XAML kaynaklar.<br /><br /> -veya-<br /><br /> Bir yapı türüne sahip bir projeye eklenen XAML dosyaları **sayfa**.|`pack://application:,,,/MyResourceFile``.xaml`|  
   
 > [!NOTE]
 >  Uygulama verileri dosyaları ve paketi hakkında daha fazla bilgi için [!INCLUDE[TLA2#tla_uri#plural](../../../includes/tla2sharptla-urisharpplural-md.md)], bkz: [WPF Uygulama kaynağı, içerik ve veri dosyalarını](../../../docs/framework/wpf/app-development/wpf-application-resource-content-and-data-files.md).  
@@ -100,13 +102,13 @@ ms.lasthandoff: 12/22/2017
 ## <a name="web-browsing-software-security-settings"></a>Web gözatma yazılım güvenlik ayarları  
  Güvenlik ayarları, bilgisayarınızdaki tüm Web yazılım taraması verilen erişim belirler. Web yazılım taraması içeren herhangi bir uygulama veya kullandığı bileşenin [WinINet](http://go.microsoft.com/fwlink/?LinkId=179379) veya [UrlMon](http://go.microsoft.com/fwlink/?LinkId=179383) API'leri, Internet Explorer ve PresentationHost.exe dahil olmak üzere.  
   
- [!INCLUDE[TLA2#tla_iegeneric](../../../includes/tla2sharptla-iegeneric-md.md)]göre ya da çalıştırılmasına izin işlevselliği, yapılandırabileceğiniz bir mekanizma sağlar [!INCLUDE[TLA2#tla_iegeneric](../../../includes/tla2sharptla-iegeneric-md.md)], aşağıdakiler dahil:  
+ [!INCLUDE[TLA2#tla_iegeneric](../../../includes/tla2sharptla-iegeneric-md.md)] göre ya da çalıştırılmasına izin işlevselliği, yapılandırabileceğiniz bir mekanizma sağlar [!INCLUDE[TLA2#tla_iegeneric](../../../includes/tla2sharptla-iegeneric-md.md)], aşağıdakiler dahil:  
   
--   [!INCLUDE[TLA2#tla_winfx](../../../includes/tla2sharptla-winfx-md.md)]-bağımlı bileşenler  
+-   .NET framework bağımlı bileşenler  
   
 -   ActiveX denetimleri ve eklentiler  
   
--   Yüklemeleri  
+-   İndirmeler  
   
 -   Betik Oluşturma  
   
@@ -131,7 +133,7 @@ ms.lasthandoff: 12/22/2017
 > [!NOTE]
 >  Ayrıca, Internet Seçenekleri iletişim kutusu için Internet Explorer'dan alabilirsiniz. Tıklatın **Araçları** ve ardından **Internet Seçenekleri**.  
   
- İle başlayarak [!INCLUDE[TLA#tla_ie7](../../../includes/tlasharptla-ie7-md.md)], özellikle için aşağıdaki güvenlik ayarları [!INCLUDE[TLA2#tla_winfx](../../../includes/tla2sharptla-winfx-md.md)] eklenmiştir:  
+ İle başlayarak [!INCLUDE[TLA#tla_ie7](../../../includes/tlasharptla-ie7-md.md)], özellikle .NET Framework için aşağıdaki güvenlik ayarları eklenmiştir:  
   
 -   **Esnek XAML'i**. Denetimleri olup olmadığını [!INCLUDE[TLA2#tla_iegeneric](../../../includes/tla2sharptla-iegeneric-md.md)] gidin ve kaybetmiş [!INCLUDE[TLA2#tla_xaml](../../../includes/tla2sharptla-xaml-md.md)] dosyaları. (Etkinleştir, devre dışı bırakın ve seçenekleri ister).  
   
@@ -231,7 +233,7 @@ ms.lasthandoff: 12/22/2017
   
  Ancak, bir APTCA derleme uygulamasına yüklendikten sonra bir güvenlik açığı sergilemesine mümkündür [!INCLUDE[TLA2#tla_gac](../../../includes/tla2sharptla-gac-md.md)]. Bir güvenlik açığı bulunduktan sonra derleme yayımcılar mevcut yüklemelerinde sorunu gidermek için bir güvenlik güncelleştirmesi oluşturabilir ve sonra bu sorun oluşabilir yüklemelere karşı korumak için bulunan. Derleme kullanan diğer tam olarak güvenilmeyen istemci uygulamaları değiştirmiş olabilir ancak bir güncelleştirme için derlemesini kaldırmak için seçenektir.  
   
- [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)]tarafından APTCA derlemeyi devre dışı bırakılabilir kısmen güvenilir bir mekanizma sağlar [!INCLUDE[TLA2#tla_xbap#plural](../../../includes/tla2sharptla-xbapsharpplural-md.md)] APTCA derleme kaldırma olmadan.  
+ [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] tarafından APTCA derlemeyi devre dışı bırakılabilir kısmen güvenilir bir mekanizma sağlar [!INCLUDE[TLA2#tla_xbap#plural](../../../includes/tla2sharptla-xbapsharpplural-md.md)] APTCA derleme kaldırma olmadan.  
   
  APTCA derlemeyi devre dışı bırakmak için özel kayıt defteri anahtarı oluşturmanız gerekir:  
   
@@ -252,7 +254,7 @@ ms.lasthandoff: 12/22/2017
  Bir derlemeyi kısmen güvenilen istemci uygulamalar için devre dışı bırakılması varsa, kayıt defteri anahtarı ve değeri oluşturan bir güncelleştirme yazabilirsiniz.  
   
 > [!NOTE]
->  Çekirdek [!INCLUDE[TLA2#tla_winfx](../../../includes/tla2sharptla-winfx-md.md)] derlemeler için yönetilen uygulamaları çalıştırmak gerekli olduğundan bunları bu şekilde devre dışı bırakarak etkilenmez. APTCA derlemeleri devre dışı bırakmak için destek, üçüncü taraf uygulamaları için öncelikle yöneliktir.  
+>  Çekirdek .NET Framework derlemeler için yönetilen uygulamaları çalıştırmak gerekli olduğundan bunları bu şekilde devre dışı bırakarak etkilenmez. APTCA derlemeleri devre dışı bırakmak için destek, üçüncü taraf uygulamaları için öncelikle yöneliktir.  
   
 <a name="LooseContentSandboxing"></a>   
 ## <a name="sandbox-behavior-for-loose-xaml-files"></a>Gevşek XAML dosyaları için korumalı alan davranışı  

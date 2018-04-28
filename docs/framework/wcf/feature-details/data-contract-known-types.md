@@ -1,12 +1,13 @@
 ---
-title: "Veri Sözleşmesi Bilinen Türler"
-ms.custom: 
+title: Veri Sözleşmesi Bilinen Türler
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - csharp
@@ -16,23 +17,24 @@ helpviewer_keywords:
 - KnownTypeAttribute [WCF]
 - KnownTypes [WCF]
 ms.assetid: 1a0baea1-27b7-470d-9136-5bbad86c4337
-caps.latest.revision: "42"
+caps.latest.revision: 42
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 24d26358c0bf0440b2fbba143629a0e4bda21cec
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: c9c180a0f1544fa187ddb53ec79a47f908c298d7
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="data-contract-known-types"></a>Veri Sözleşmesi Bilinen Türler
 <xref:System.Runtime.Serialization.KnownTypeAttribute> Sınıfı, öncelikli göz önünde bulundurarak seri durumdan çıkarma sırasında için dahil edilecek türleri belirtmenize olanak verir. Çalışan bir örnek için bkz: [bilinen türleri](../../../../docs/framework/wcf/samples/known-types.md) örnek.  
   
  Normalde, parametreler ve dönüş değerleri bir istemci ve hizmet arasında geçirirken, her iki uç noktalar tüm aktarılacak olan verilerin veri sözleşmeleri paylaşır. Ancak, aşağıdaki koşullarda durumda değil:  
   
--   Gönderilen veri sözleşmesi beklenen veri sözleşmeden türetilir. [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)]Devralma hakkındaki bölüme [veri sözleşmesi eşitliği](../../../../docs/framework/wcf/feature-details/data-contract-equivalence.md)). Bu durumda, aktarılan verilerin alıcı bitiş noktası tarafından beklendiği gibi sözleşme aynı veri yok.  
+-   Gönderilen veri sözleşmesi beklenen veri sözleşmeden türetilir. Daha fazla bilgi için devralma hakkındaki bölüme bakın [veri sözleşmesi eşitliği](../../../../docs/framework/wcf/feature-details/data-contract-equivalence.md)). Bu durumda, aktarılan verilerin alıcı bitiş noktası tarafından beklendiği gibi sözleşme aynı veri yok.  
   
 -   Aktarılacak türü bilgileri için bir sınıf, yapı veya numaralandırma aksine bir arabirimdir. Bu nedenle, bu önceden uygulayan arabirimi gerçekte gönderilir ve bu nedenle, alıcı endpoint iletilen veriler veri sözleşmesi önceden belirleyemiyor tür bilinmesi olamaz.  
   

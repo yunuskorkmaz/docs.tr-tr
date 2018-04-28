@@ -1,0 +1,11 @@
+### <a name="selector-selectionchanged-event-and-selectedvalue-property"></a>Seçici SelectionChanged olayı ve SelectedValue özelliği
+
+|   |   |
+|---|---|
+|Ayrıntılar|.Net ile başlayan Framework 4.7.1, bir <xref:System.Windows.Controls.Primitives.Selector> değeri her zaman güncelleştirmeleri kendi <xref:System.Windows.Controls.Primitives.Selector.SelectedValue%2A> oluşturma işlemi önce özellik <xref:System.Windows.Controls.Primitives.Selector.SelectionChanged> kendi seçim değiştiğinde olay. Bu SelectedValue özelliği diğer seçim özellikleri ile tutarlı hale getirir (<xref:System.Windows.Controls.Primitives.Selector.SelectedItem%2A> ve <xref:System.Windows.Controls.Primitives.Selector.SelectedIndex%2A>), hangi olayı tetiklenmeden önce güncelleştirilir. .NET Framework 4.7 ve önceki sürümleri, çoğu durumda olayından önce SelectedValue güncelleştirmeye oldu, ancak seçimi değişiklik değiştirerek neden oldu, sonra olayın meydana geldiği <xref:System.Windows.Controls.Primitives.Selector.SelectedValue%2A> özelliği.|
+|Öneri|.NET Framework 4.7.1 hedefleyen veya daha sonra bu dışında seçebilirsiniz uygulamalar değiştirin ve aşağıdaki ekleyerek eski davranışı kullanmak <code>&lt;runtime&gt;</code> uygulama yapılandırma dosyasının:<pre><code class="language-xml">&lt;runtime&gt;&#13;&#10;&lt;AppContextSwitchOverrides&#13;&#10;value=&quot;Switch.System.Windows.Controls.TabControl.SelectionPropertiesCanLagBehindSelectionChangedEvent=true&quot; /&gt;&#13;&#10;&lt;/runtime&gt;&#13;&#10;</code></pre>Daha sonra yeni davranışı aşağıdaki satırı ekleyerek etkinleştirebilirsiniz veya .NET Framework 4.7.1 çalıştırıyorsanız .NET Framework 4.7 veya önceki ancak hedef uygulamaları <code>&lt;runtime&gt;</code> uygulama .configuration dosyasının:<pre><code class="language-xml">&lt;runtime&gt;&#13;&#10;&lt;AppContextSwitchOverrides value=&quot;Switch.System.Windows.Controls.TabControl.SelectionPropertiesCanLagBehindSelectionChangedEvent=false&quot; /&gt;&#13;&#10;&lt;/runtime&gt;&#13;&#10;</code></pre>|
+|Kapsam|Küçük|
+|Sürüm|4.7.1|
+|Tür|Yeniden hedefleme|
+|Etkilenen API'leri|<ul><li><xref:System.Windows.Controls.TabControl.SelectedContent?displayProperty=nameWithType></li><li><xref:System.Windows.Controls.Primitives.Selector.SelectionChanged?displayProperty=nameWithType></li></ul>|
+

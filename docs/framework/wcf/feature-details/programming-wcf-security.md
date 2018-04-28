@@ -1,13 +1,13 @@
 ---
-title: "WCF Güvenliğini Programlama"
-ms.custom: 
+title: WCF Güvenliğini Programlama
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - dotnet-clr
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - csharp
@@ -15,17 +15,17 @@ dev_langs:
 helpviewer_keywords:
 - message security [WCF], programming overview
 ms.assetid: 739ec222-4eda-4cc9-a470-67e64a7a3f10
-caps.latest.revision: 
+caps.latest.revision: 25
 author: BrucePerlerMS
 ms.author: bruceper
 manager: mbaldwin
 ms.workload:
 - dotnet
-ms.openlocfilehash: 4b296d9bf9b52dfc8e782f6e324be1de8c76d349
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 6c8769511f608834c7539779d83977880e1d4093
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="programming-wcf-security"></a>WCF Güvenliğini Programlama
 Bu konu güvenli oluşturmak için kullanılan temel programlama görevleri açıklar [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] uygulama. Bu konu, yalnızca kimlik doğrulaması, gizliliği ve bütünlük, topluca olarak bilinen kapsar *Aktarım güvenlik*. Bu konuda yetkilendirme (kaynaklarına veya hizmetlerine erişim denetimi); kapsamaz Yetkilendirme hakkında daha fazla bilgi için bkz: [yetkilendirme](../../../../docs/framework/wcf/feature-details/authorization-in-wcf.md).  
@@ -48,26 +48,26 @@ Bu konu güvenli oluşturmak için kullanılan temel programlama görevleri aç�
   
     1.  `Transport`  
   
-         Taşıma güvenliği seçmiş olduğunuz bağlama kullanan mekanizmasını bağlıdır. Örneğin, kullanıyorsanız `WSHttpBinding` güvenlik mekanizması Güvenli Yuva Katmanı (SSL) (aynı zamanda HTTPS protokolü için mekanizması) olur. Genel olarak bakıldığında, taşıma güvenliği ana avantajı, hangi aktarım olsun, kullanmakta olduğunuz iyi verimlilik sağlar ' dir. Ancak, iki sınırlamaları vardır: aktarım mekanizması bir kullanıcının kimliğini doğrulamak için kullanılan kimlik bilgisi türünü belirleyen ilk sunucudur. Yalnızca hizmet kimlik bilgilerini farklı türde talep diğer hizmetlerle birlikte çalışmak gerekiyorsa bir dezavantajı budur. İkinci güvenlik ileti düzeyinde uygulanmadığından güvenlik bir atlama atlamalı şekilde uçtan uca yerine, uygulanmasıdır. Yalnızca istemci ile hizmet arasında ileti yolu aracılar içeriyorsa bu ikinci sınırlama bir sorundur. [!INCLUDE[crabout](../../../../includes/crabout-md.md)]Hangi aktarım kullanmak için bkz: [taşıma seçme](../../../../docs/framework/wcf/feature-details/choosing-a-transport.md). [!INCLUDE[crabout](../../../../includes/crabout-md.md)]taşıma güvenliği bkz [taşıma güvenliği genel bakış](../../../../docs/framework/wcf/feature-details/transport-security-overview.md).  
+         Taşıma güvenliği seçmiş olduğunuz bağlama kullanan mekanizmasını bağlıdır. Örneğin, kullanıyorsanız `WSHttpBinding` güvenlik mekanizması Güvenli Yuva Katmanı (SSL) (aynı zamanda HTTPS protokolü için mekanizması) olur. Genel olarak bakıldığında, taşıma güvenliği ana avantajı, hangi aktarım olsun, kullanmakta olduğunuz iyi verimlilik sağlar ' dir. Ancak, iki sınırlamaları vardır: aktarım mekanizması bir kullanıcının kimliğini doğrulamak için kullanılan kimlik bilgisi türünü belirleyen ilk sunucudur. Yalnızca hizmet kimlik bilgilerini farklı türde talep diğer hizmetlerle birlikte çalışmak gerekiyorsa bir dezavantajı budur. İkinci güvenlik ileti düzeyinde uygulanmadığından güvenlik bir atlama atlamalı şekilde uçtan uca yerine, uygulanmasıdır. Yalnızca istemci ile hizmet arasında ileti yolu aracılar içeriyorsa bu ikinci sınırlama bir sorundur. [!INCLUDE[crabout](../../../../includes/crabout-md.md)] Hangi aktarım kullanmak için bkz: [taşıma seçme](../../../../docs/framework/wcf/feature-details/choosing-a-transport.md). [!INCLUDE[crabout](../../../../includes/crabout-md.md)] taşıma güvenliği bkz [taşıma güvenliği genel bakış](../../../../docs/framework/wcf/feature-details/transport-security-overview.md).  
   
     2.  `Message`  
   
          İleti güvenliği her ileti gerekli üst bilgileri içerir ve ileti tutmak için veri güvenli anlamına gelir. Üstbilgileri oluşumunu değiştiğinden, herhangi bir sayıda kimlik bilgileri içerebilir. Bu, diğer hizmetlerle birlikte bir aktarım mekanizması sağlayamıyor bir belirli kimlik bilgisi türü bu talebi birlikte veya ileti burada her bir hizmet farklı bir kimlik bilgisi türü talep birden fazla hizmet ile birlikte kullanılmalıdır bir etmen haline gelir.  
   
-         [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)][İleti güvenlik](../../../../docs/framework/wcf/feature-details/message-security-in-wcf.md).  
+         Daha fazla bilgi için bkz: [ileti güvenliği](../../../../docs/framework/wcf/feature-details/message-security-in-wcf.md).  
   
     3.  `TransportWithMessageCredential`  
   
          İleti aktarma güvenliğini sağlamak için Aktarım katmanı bu seçenek kullanır, her ileti Zengin kimlik bilgilerini içerir ancak diğer hizmetlerin gerekir. Bu, ileti güvenliği zengin kimlik bilgilerini avantajı ile taşıma güvenliği performans avantajı birleştirir. Bu aşağıdaki bağlamalarla kullanılabilir: <xref:System.ServiceModel.BasicHttpBinding>, <xref:System.ServiceModel.WSFederationHttpBinding>, <xref:System.ServiceModel.NetPeerTcpBinding>, ve <xref:System.ServiceModel.WSHttpBinding>.  
   
-3.  Taşıma güvenliği için HTTP (diğer bir deyişle, HTTPS) kullanmaya karar verirseniz, aynı zamanda bir SSL sertifikası ile ana bilgisayar yapılandırma ve SSL bağlantı noktası etkinleştirme gerekir. [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)][HTTP taşıma güvenliği](../../../../docs/framework/wcf/feature-details/http-transport-security.md).  
+3.  Taşıma güvenliği için HTTP (diğer bir deyişle, HTTPS) kullanmaya karar verirseniz, aynı zamanda bir SSL sertifikası ile ana bilgisayar yapılandırma ve SSL bağlantı noktası etkinleştirme gerekir. Daha fazla bilgi için bkz: [HTTP taşıma güvenliği](../../../../docs/framework/wcf/feature-details/http-transport-security.md).  
   
 4.  Kullanıyorsanız <xref:System.ServiceModel.WSHttpBinding> ve gerekmez güvenli bir oturumu ayarlamak <xref:System.ServiceModel.NonDualMessageSecurityOverHttp.EstablishSecurityContext%2A> özelliğine `false`.  
   
      Simetrik anahtar (istemci ve sunucu iletişim kapatılana kadar bir konuşma uzunluğu için aynı anahtarı kullanan) kullanarak bir kanal istemci ve hizmet oluşturduğunuzda, güvenli bir oturum gerçekleşir.  
   
 ## <a name="setting-the-client-credential-type"></a>İstemci kimlik bilgisi türü ayarlama  
- Bir istemci kimlik bilgisi türü uygun şekilde seçin. [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)][Bir kimlik bilgisi türü seçme](../../../../docs/framework/wcf/feature-details/selecting-a-credential-type.md). Aşağıdaki istemci kimlik bilgisi türleri kullanılabilir:  
+ Bir istemci kimlik bilgisi türü uygun şekilde seçin. Daha fazla bilgi için bkz: [bir kimlik bilgisi türü seçme](../../../../docs/framework/wcf/feature-details/selecting-a-credential-type.md). Aşağıdaki istemci kimlik bilgisi türleri kullanılabilir:  
   
 -   `Windows`  
   

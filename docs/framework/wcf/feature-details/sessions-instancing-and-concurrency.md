@@ -1,24 +1,26 @@
 ---
-title: "Oturumlar, Örnek Oluşturma ve Eşzamanlılık"
-ms.custom: 
+title: Oturumlar, Örnek Oluşturma ve Eşzamanlılık
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 50797a3b-7678-44ed-8138-49ac1602f35b
-caps.latest.revision: "16"
+caps.latest.revision: 16
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 5d4559f177b05f7d238c9f30649a5b01af7fb6f9
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 6dd96ea552bb92dd90c1c47abac744c55e2e67e5
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="sessions-instancing-and-concurrency"></a>Oturumlar, Örnek Oluşturma ve Eşzamanlılık
 A *oturum* iki uç noktaları arasında gönderilen tüm iletiler bağıntı değil. *Örnek oluşturma* kullanıcı tanımlı bir hizmet nesneleri ve bunların ilgili ömrü denetlenmesi için başvuruyor <xref:System.ServiceModel.InstanceContext> nesneleri. *Eşzamanlılık* olan içinde çalışan iş parçacıklarının sayısını denetlemek için belirtilen terimin bir <xref:System.ServiceModel.InstanceContext> aynı anda.  
@@ -28,7 +30,7 @@ A *oturum* iki uç noktaları arasında gönderilen tüm iletiler bağıntı de�
 ## <a name="sessions"></a>Oturumlar  
  Ne zaman bir hizmet sözleşmesini ayarlar <xref:System.ServiceModel.ServiceContractAttribute.SessionMode%2A?displayProperty=nameWithType> özelliğine <xref:System.ServiceModel.SessionMode.Required?displayProperty=nameWithType>, bu sözleşme tüm çağrıları (çağrıları destekleyen başka bir deyişle, temel alınan ileti alışverişlerinde) aynı konuşmada bir parçası olması gerektiğini söyleyen. Bir sözleşme oturumları sağlar ancak bir gerektirmez, istemcilerin bağlanabileceği ya da bir veya oturumu belirtirse. Sona ererse ve bir ileti aynı oturum tabanlı kanal bir özel durum atılır gönderilir.  
   
- [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]oturumları aşağıdaki ana kavramsal özelliklere sahiptir:  
+ [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] oturumları aşağıdaki ana kavramsal özelliklere sahiptir:  
   
 -   Bunlar açıkça başlatılan ve çağıran uygulama tarafından sonlandırıldı.  
   
@@ -40,11 +42,11 @@ A *oturum* iki uç noktaları arasında gönderilen tüm iletiler bağıntı de�
   
  Hakkında bilginiz varsa <xref:System.Web.SessionState.HttpSessionState?displayProperty=nameWithType> sınıfını [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] uygulamaları ve işlevselliği sağlar, bu tür bir oturum arasındaki aşağıdaki farkları görebilirsiniz ve [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] oturumları:  
   
--   [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)]oturumları her zaman sunucu-başlatılır.  
+-   [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] oturumları her zaman sunucu-başlatılır.  
   
--   [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)]oturumları örtük olarak sıralanmamış.  
+-   [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] oturumları örtük olarak sıralanmamış.  
   
--   [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)]oturumları istekler genelinde bir genel veri depolama mekanizması sağlar.  
+-   [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] oturumları istekler genelinde bir genel veri depolama mekanizması sağlar.  
   
  İstemci uygulamaları ve hizmet uygulamaları oturumlarıyla farklı şekillerde etkileşim. İstemci uygulamaları oturumlarını başlatmak ve ardından almak ve oturum içinde gönderilen iletileri işleme. Hizmet uygulamaları oturumları ek davranış eklemek için bir genişletilebilirlik noktası olarak kullanın. Bu doğrudan ile çalışarak yapılır <xref:System.ServiceModel.InstanceContext> veya özel örnek bağlamı sağlayıcıyı uygulama.  
   
@@ -93,7 +95,7 @@ public class CalculatorService : ICalculatorInstance
 -   <xref:System.ServiceModel.ConcurrencyMode.Reentrant>: Her hizmet örneği aynı anda tek bir ileti işler, ancak içe işlemi çağrılarını kabul eder. Bunu aracılığıyla çağrılırken hizmet yalnızca bu çağrıları kabul bir [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] istemci nesnesi.  
   
 > [!NOTE]
->  Anlama ve güvenli bir şekilde birden çok iş parçacığı kullanan kodu geliştirme başarıyla yazmak zor olabilir. Kullanmadan önce <xref:System.ServiceModel.ConcurrencyMode.Multiple> veya <xref:System.ServiceModel.ConcurrencyMode.Reentrant> değerleri emin olun, hizmeti bu modları için düzgün şekilde tasarlanmıştır. [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)] <xref:System.ServiceModel.ServiceBehaviorAttribute.ConcurrencyMode%2A>.  
+>  Anlama ve güvenli bir şekilde birden çok iş parçacığı kullanan kodu geliştirme başarıyla yazmak zor olabilir. Kullanmadan önce <xref:System.ServiceModel.ConcurrencyMode.Multiple> veya <xref:System.ServiceModel.ConcurrencyMode.Reentrant> değerleri emin olun, hizmeti bu modları için düzgün şekilde tasarlanmıştır. Daha fazla bilgi için bkz. <xref:System.ServiceModel.ServiceBehaviorAttribute.ConcurrencyMode%2A>.  
   
  Eşzamanlılık kullanımını örnekleme modunu ilişkilidir. İçinde <xref:System.ServiceModel.InstanceContextMode.PerCall> her ileti yeni tarafından işlenir depolamasına, eşzamanlılık ilgili, olmadığından <xref:System.ServiceModel.InstanceContext> ve bu nedenle, hiçbir zaman birden fazla iş parçacığının etkin olduğu <xref:System.ServiceModel.InstanceContext>.  
   

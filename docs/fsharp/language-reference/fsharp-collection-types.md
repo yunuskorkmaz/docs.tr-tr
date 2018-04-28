@@ -1,20 +1,17 @@
 ---
-title: "F# Koleksiyon Türleri"
+title: F# Koleksiyon Türleri
 description: "F # koleksiyon türleri ve bunlar .NET Framework'teki koleksiyonu türlerinden farklılıklar hakkında bilgi edinin."
-keywords: "Visual f #, f # işlevsel programlama"
 author: cartermp
 ms.author: phcart
 ms.date: 05/16/2016
 ms.topic: language-reference
-ms.prod: .net
-ms.technology: devlang-fsharp
+ms.prod: dotnet-fsharp
 ms.devlang: fsharp
-ms.assetid: cdf6a7e6-6b3d-4c44-b7b6-773a2b700331
-ms.openlocfilehash: c22178641a88c304e0f666b07aca94e620161071
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.openlocfilehash: 0baad5bdf88e8f381240b822a3f6132898dc9ff9
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="f-collection-types"></a>F# Koleksiyon Türleri
 
@@ -32,9 +29,9 @@ Aşağıdaki tabloda, F # koleksiyon türleri gösterilmektedir.
 |----|-----------|-------------|
 |[Liste](https://msdn.microsoft.com/library/c627b668-477b-4409-91ed-06d7f1b3e4a7)|Bir sıralı, sabit dizi öğeleri aynı türde. Bağlantılı bir liste olarak uygulanır.|[Listeler](lists.md)<br /><br />[List Modülü](https://msdn.microsoft.com/library/a2264ba3-2d45-40dd-9040-4f7aa2ad9788)|
 |[Dizi](https://msdn.microsoft.com/library/0cda8040-9396-40dd-8dcd-cf48542165a1)|Tümü aynı türde ardışık veri öğelerinin sabit boyutlu, sıfır tabanlı, değişebilir bir koleksiyonu.|[Diziler](arrays.md)<br /><br />[Dizi Modülü](https://msdn.microsoft.com/library/0cda8040-9396-40dd-8dcd-cf48542165a1)<br /><br />[Array2D Modülü](https://msdn.microsoft.com/library/ae1a9746-7817-4430-bcdb-a79c2411bbd3)<br /><br />[Array3D Modülü](https://msdn.microsoft.com/library/c8355e2d-add8-48a4-8aa6-1c57ae74c560)|
-|[Seq](https://msdn.microsoft.com/library/2f0c87c6-8a0d-4d33-92a6-10d1d037ce75)|Bir türdeki tüm öğeleri mantıksal bir dizi. Veri koleksiyonunu sıralı büyük, varsa ancak mutlaka tüm öğeleri kullanılacak beklemeyen sıraları özellikle yararlı olur. Tek tek sırası öğeleri yalnızca olarak hesaplanan bir sıralı listesini daha iyi gerçekleştirebilirsiniz değilse şekilde tüm öğeleri kullanılır gerekli. Sıraları temsil ettiği `seq<'T>` türü olan bir diğer ad için `IEnumerable<T>`. Bu nedenle, uygulayan bir .NET Framework türü `System.Collections.Generic.IEnumerable<'T>` bir dizi olarak kullanılabilir.|[Dizileri](sequences.md)<br /><br />[Seq Modülü](https://msdn.microsoft.com/library/54e8f059-ca52-4632-9ae9-49685ee9b684)|
-|[Eşleme](https://msdn.microsoft.com/library/975316ea-55e3-4987-9994-90897ad45664)|Öğe değişmez bir sözlük. Öğeler anahtar ile erişilir.|[Map Modülü](https://msdn.microsoft.com/library/bfe61ead-f16c-416f-af98-56dbcbe23e4f)|
-|[Ayarlama](https://msdn.microsoft.com/library/50cebdce-0cd7-4c5c-8ebc-f3a9e90b38d8)|Karşılaştırma olduğu F # Yapısal karşılaştırma işlevi, büyük olasılıkla uygulamaları kullanan ikili ağaçları temelinde bir değişmez kümesi `System.IComparable` anahtar değerleri arabirimde.|[Set Modülü](https://msdn.microsoft.com/library/61efa732-d55d-4c32-993f-628e2f98e6a0)|
+|[Seq](https://msdn.microsoft.com/library/2f0c87c6-8a0d-4d33-92a6-10d1d037ce75)|Bir türdeki tüm öğeleri mantıksal bir dizi. Veri koleksiyonunu sıralı büyük, varsa ancak mutlaka tüm öğeleri kullanılacak beklemeyen sıraları özellikle yararlı olur. Tek tek sırası öğeleri yalnızca olarak hesaplanan bir sıralı listesini daha iyi gerçekleştirebilirsiniz değilse şekilde tüm öğeleri kullanılır gerekli. Sıraları temsil ettiği `seq<'T>` türü olan bir diğer ad için `IEnumerable<T>`. Bu nedenle, uygulayan bir .NET Framework türü `System.Collections.Generic.IEnumerable<'T>` bir dizi olarak kullanılabilir.|[Diziler](sequences.md)<br /><br />[Seq Modülü](https://msdn.microsoft.com/library/54e8f059-ca52-4632-9ae9-49685ee9b684)|
+|[eşleme](https://msdn.microsoft.com/library/975316ea-55e3-4987-9994-90897ad45664)|Öğe değişmez bir sözlük. Öğeler anahtar ile erişilir.|[Map Modülü](https://msdn.microsoft.com/library/bfe61ead-f16c-416f-af98-56dbcbe23e4f)|
+|[ayarlama](https://msdn.microsoft.com/library/50cebdce-0cd7-4c5c-8ebc-f3a9e90b38d8)|Karşılaştırma olduğu F # Yapısal karşılaştırma işlevi, büyük olasılıkla uygulamaları kullanan ikili ağaçları temelinde bir değişmez kümesi `System.IComparable` anahtar değerleri arabirimde.|[Set Modülü](https://msdn.microsoft.com/library/61efa732-d55d-4c32-993f-628e2f98e6a0)|
 
 ### <a name="table-of-functions"></a>Tablo işlevleri
 Bu bölümde, F # koleksiyon türleri üzerinde kullanılabilir işlevlerini karşılaştırılmaktadır. Burada N ilk koleksiyon boyutunu ve M ikinci koleksiyon varsa boyutudur işlevi hesaplama karmaşıklığını verilir. Bir tire (-) gösteren koleksiyonda bu işlev kullanılamıyor. Dizileri gevşek değerlendirildiği için hemen döndürdüğünden hala numaralandırıldığı zaman sırası performansını etkiler ancak bir işlev Seq.distinct gibi O(1) olabilir.
@@ -62,8 +59,8 @@ Bu bölümde, F # koleksiyon türleri üzerinde kullanılabilir işlevlerini kar
 |oluşturma|O(N)|-|-|-|-|Tüm başlangıçta belirtilen değere eşit olan tüm öğeleri dizisi oluşturur.|
 |gecikme|-|-|O(1)|-|-|Yerleşik bir dizi bir dizi verilen gecikmeli belirtiminden döndürür.|
 |difference|-|-|-|-|O (M &#42; günlük N)|İlk kümeden kaldırılmış ikinci kümenin öğeleri ile yeni bir küme döndürür.|
-|Farklı|||O(1) &#42;|||Genel karma ve eşitlik karşılaştırmaları girdileri göre yinelenen girdi içermeyen bir dizi döndürür. Bir öğe sırasını birden çok kez oluşursa sonraki oluşumlar çıkarılır.|
-|distinctBy|||O(1) &#42;|||Verilen anahtar üretme işlevi döndürür anahtarlar genel karma ve eşitlik karşılaştırmaları göre yinelenen girdi içermeyen bir dizi döndürür. Bir öğe sırasını birden çok kez oluşursa sonraki oluşumlar çıkarılır.|
+|Farklı|||O(1)&AMP;#42;|||Genel karma ve eşitlik karşılaştırmaları girdileri göre yinelenen girdi içermeyen bir dizi döndürür. Bir öğe sırasını birden çok kez oluşursa sonraki oluşumlar çıkarılır.|
+|distinctBy|||O(1)&AMP;#42;|||Verilen anahtar üretme işlevi döndürür anahtarlar genel karma ve eşitlik karşılaştırmaları göre yinelenen girdi içermeyen bir dizi döndürür. Bir öğe sırasını birden çok kez oluşursa sonraki oluşumlar çıkarılır.|
 |empty|O(1)|O(1)|O(1)|O(1)|O(1)|Boş bir koleksiyon oluşturur.|
 |var|O(N)|O(N)|O(N)|O (günlük N)|O (günlük N)|Belirtilen koşulun dizisi herhangi bir öğe karşılayıp karşılamadığını sınar.|
 |exists2|O(Min(N,M))|-|O(Min(N,M))|||Belirtilen koşulun giriş dizilerini karşılık gelen öğelerinin herhangi bir çifti karşılayıp karşılamadığını sınar.|
@@ -83,7 +80,7 @@ Bu bölümde, F # koleksiyon türleri üzerinde kullanılabilir işlevlerini kar
 |Init|O(N)|O(N)|O(1)|-|-|Boyutu ve öğeleri hesaplamak için oluşturucu işlevi verilen bir koleksiyon oluşturur.|
 |initInfinite|-|-|O(1)|-|-|Bir sıra oluşturur, yinelendiğinde verilen işlevi çağırarak art arda öğeleri döndürür.|
 |INTERSECT|-|-|-|-|O (günlük N &#42; günlük M)|İki kümenin kesişimini hesaplar.|
-|intersectMany|-|-|-|-|O (N1 &#42; ... N2)|Bir dizi kümenin kesişimini hesaplar. Dizi boş olmamalıdır.|
+|intersectMany|-|-|-|-|O (N1 &AMP;#42; N2...)|Bir dizi kümenin kesişimini hesaplar. Dizi boş olmamalıdır.|
 |IsEmpty|O(1)|O(1)|O(1)|O(1)|-|Döndürür `true` koleksiyonu boş ise.|
 |isProperSubset|-|-|-|-|O (M &#42; günlük N)|Döndürür `true` ilk kümenin tüm öğeleri ikinci kümesinde yer alan ve en az bir öğe ikinci kümenin ilk kümesinde değil.|
 |isProperSuperset|-|-|-|-|O (M &#42; günlük N)|Döndürür `true` ikinci kümenin tüm öğeleri ilk kümesinde yer alan ve ikinci kümede ilk kümenin en az bir öğe değil.|
@@ -146,7 +143,7 @@ Bu bölümde, F # koleksiyon türleri üzerinde kullanılabilir işlevlerini kar
 |tryPick|O(N)|O(N)|O(N)|O (günlük N)|-|Verilen işlevin işlevin döndüğü ilk sonucu döndürerek ardışık öğelere uygulanır `Some` için bir değer. Böyle bir öğe var olup olmadığını döndürür işlemi `None`.|
 |unfold|-|-|O(N)|-|-|Verilen hesaplamayı oluşturur öğelerini içeren bir dizi döndürür.|
 |birleşim|-|-|-|-|O (M &#42; günlük N)|İki kümenin birleşimini hesaplar.|
-|unionMany|-|-|-|-|O (N1 &#42; ... N2)|Bir dizi kümenin birleşimini hesaplar.|
+|unionMany|-|-|-|-|O (N1 &AMP;#42; N2...)|Bir dizi kümenin birleşimini hesaplar.|
 |sıkıştırmasını açın|O(N)|O(N)|O(N)|-|-|Çiftlerinin listesini iki listeye böler.|
 |unzip3|O(N)|O(N)|O(N)|-|-|Üçlü listesini üç listeye böler.|
 |Pencereli|-|-|O(N)|-|-|Giriş dizisinden alınan öğeleri içeren kayan pencere veren bir dizi döndürür. Her pencere yeni bir dizi olarak döndürülür.|
@@ -154,7 +151,7 @@ Bu bölümde, F # koleksiyon türleri üzerinde kullanılabilir işlevlerini kar
 |zip3|O(N)|O(N)|O(N)|-|-|Üçlü üç koleksiyonları bir liste halinde birleştirir. Listeler eşit uzunlukta olması gerekir.|
 
 ## <a name="see-also"></a>Ayrıca Bkz.
-[F # türleri](fsharp-types.md)
+[F# Türleri](fsharp-types.md)
 
-[F # dili başvurusu](index.md)
+[F# Dili Başvurusu](index.md)
 

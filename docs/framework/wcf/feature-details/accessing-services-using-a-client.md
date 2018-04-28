@@ -19,11 +19,11 @@ ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: 5258f2eaf9ca60dc43ff8182c058d9c68043200f
-ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
+ms.openlocfilehash: 2138a412af30812b4ff443963604dda52eafea11
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="accessing-services-using-a-client"></a>İstemci Kullanarak Hizmetlere Erişme
 İstemci uygulamaları oluşturmak gerekir, yapılandırmak ve kullanmak [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] Hizmetleri ile iletişim kurmak için istemci veya kanal nesne. [WCF istemcisi genel bakış](../../../../docs/framework/wcf/wcf-client-overview.md) konu, nesneleri ve temel istemci ve kanal nesneleri oluşturmak ve bunları kullanarak söz konusu adımlar genel bakış sağlar.  
@@ -53,7 +53,7 @@ ms.lasthandoff: 04/26/2018
 > [!NOTE]
 >  Açıkça hatalı süre sonuyla kanalları algılamak çalışırken, ne zaman bildirilir oturum uygulama bağımlı olduğundan genellikle kullanışlı değildir. Örneğin, çünkü <xref:System.ServiceModel.NetTcpBinding?displayProperty=nameWithType> dinlemek için varsa (devre dışı güvenilir oturumla) TCP bağlantısı oturumu ortaya çıkarır <xref:System.ServiceModel.ICommunicationObject.Faulted?displayProperty=nameWithType> olayı hizmeti veya bir ağ hatası durumunda hızla bildirilmesi büyük olasılıkla istemci üzerinde. Ancak güvenilir oturumlar (bağlamaları, belirlenen <xref:System.ServiceModel.Channels.ReliableSessionBindingElement?displayProperty=nameWithType> etkin) küçük ağ hataları Hizmetleri'nden verenlerden için tasarlanmıştır. Oturum makul bir süre sonunda süresi, aynı bağlama kurulmaları varsa — güvenilir oturumlar için yapılandırılmış — kesinti daha uzun bir süre devam kadar arıza değil.  
   
- (Bu, uygulama katmanı kanallara kullanıma) sistem tarafından sağlanan bağlamalar en sık kullandığınız oturumlar varsayılan olarak, ancak <xref:System.ServiceModel.BasicHttpBinding?displayProperty=nameWithType> desteklemez. [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)] [Oturumları kullanarak](../../../../docs/framework/wcf/using-sessions.md).  
+ (Bu, uygulama katmanı kanallara kullanıma) sistem tarafından sağlanan bağlamalar en sık kullandığınız oturumlar varsayılan olarak, ancak <xref:System.ServiceModel.BasicHttpBinding?displayProperty=nameWithType> desteklemez. Daha fazla bilgi için bkz: [kullanarak oturumları](../../../../docs/framework/wcf/using-sessions.md).  
   
 ### <a name="the-proper-use-of-sessions"></a>Oturumları doğru kullanımı  
  Oturumları tüm ileti exchange tam ise ve her iki başarılı kabul olmadığını bilmek için bir yol sağlar. Çağrı yapan uygulamanın kanal açın, kullanmak ve bir try bloğunun kanalı önerilir. Bir oturum kanalı açıksa ve <xref:System.ServiceModel.ICommunicationObject.Close%2A?displayProperty=nameWithType> yöntemi bir kez çağrılır ve bu çağrı başarılı bir şekilde döndürür, ardından oturumu başarılı oldu. Başarılı bu durumda, belirtilen bağlama tüm teslim garanti anlamına gelir karşılanmadı ve diğer taraftaki çağrılmayan <xref:System.ServiceModel.ICommunicationObject.Abort%2A?displayProperty=nameWithType> çağırmadan önce kanalda <xref:System.ServiceModel.ICommunicationObject.Close%2A>.  
@@ -64,7 +64,7 @@ ms.lasthandoff: 04/26/2018
  İstemci uygulamalarında özel durumları işleme basittir. Bir kanal açılan, kullanılan try bloğunun içine kapalı ise, bir özel durum sürece sonra konuşma, başarılı oldu. Genellikle, bir özel durum, konuşma iptal edilir.  
   
 > [!NOTE]
->  Kullanımı `using` deyimi (`Using` Visual Basic'te) önerilmez. Bunun nedeni, sonuna `using` deyimi hakkında bilmeniz gereken diğer özel durumlar maskeleyebilirsiniz özel durumlara neden olabilir. [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)] [Using deyimi sorunlarını önleme](../../../../docs/framework/wcf/samples/avoiding-problems-with-the-using-statement.md).  
+>  Kullanımı `using` deyimi (`Using` Visual Basic'te) önerilmez. Bunun nedeni, sonuna `using` deyimi hakkında bilmeniz gereken diğer özel durumlar maskeleyebilirsiniz özel durumlara neden olabilir. Daha fazla bilgi için bkz: [Using deyimi sorunlarını önleme](../../../../docs/framework/wcf/samples/avoiding-problems-with-the-using-statement.md).  
   
  Try/catch bloğu kullanarak önerilen istemci desen aşağıdaki kod örneğinde gösterir ve `using` deyimi.  
   
@@ -79,7 +79,7 @@ ms.lasthandoff: 04/26/2018
  Uygulama düzeyinde hata bilgileri ile çalışma hakkında daha ayrıntılı bilgi için bkz: [belirtme ve işleme hataları sözleşme ve hizmetlerde](../../../../docs/framework/wcf/specifying-and-handling-faults-in-contracts-and-services.md). [Özel durumlar beklenen](../../../../docs/framework/wcf/samples/expected-exceptions.md) beklenen özel durumlar açıklar ve bunları nasıl ele alınacağını gösterir. [!INCLUDE[crabout](../../../../includes/crabout-md.md)] Kanallar geliştirirken hataları işlemek için bkz: nasıl [özel durum işleme ve hataları](../../../../docs/framework/wcf/extending/handling-exceptions-and-faults.md).  
   
 ### <a name="client-blocking-and-performance"></a>İstemci engelleme ve performans  
- Bir uygulama zaman uyumlu olarak çağırdığında bir istek-yanıt işlemi, dönüş değeri alınana kadar istemci blokları veya bir özel durum (gibi bir <xref:System.TimeoutException?displayProperty=nameWithType>) oluşturulur. Bu davranış, yerel davranışına benzer. Ne zaman bir uygulamayı eşzamanlı olarak çağıran bir işlem üzerinde bir [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] istemci nesnesi veya kanal, istemci döndürmez kadar kanal katmanını ağa veya bir özel durum kadar veri yazabilirsiniz. Tek yönlü ileti değişim deseni ederken (bir işlemle işaretleyerek belirtilen <xref:System.ServiceModel.OperationContractAttribute.IsOneWay%2A?displayProperty=nameWithType> kümesine `true`) bağlama ve ne ileti zaten silinmiş bağlı olarak daha iyi yanıt, tek yönlü işlemleri da engeller, bazı istemciler yapabilirsiniz gönderdi. Yalnızca ileti exchange hakkında daha fazla ve az tek yönlü işlemleridir. [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)] [Tek yönlü Hizmetler](../../../../docs/framework/wcf/feature-details/one-way-services.md).  
+ Bir uygulama zaman uyumlu olarak çağırdığında bir istek-yanıt işlemi, dönüş değeri alınana kadar istemci blokları veya bir özel durum (gibi bir <xref:System.TimeoutException?displayProperty=nameWithType>) oluşturulur. Bu davranış, yerel davranışına benzer. Ne zaman bir uygulamayı eşzamanlı olarak çağıran bir işlem üzerinde bir [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] istemci nesnesi veya kanal, istemci döndürmez kadar kanal katmanını ağa veya bir özel durum kadar veri yazabilirsiniz. Tek yönlü ileti değişim deseni ederken (bir işlemle işaretleyerek belirtilen <xref:System.ServiceModel.OperationContractAttribute.IsOneWay%2A?displayProperty=nameWithType> kümesine `true`) bağlama ve ne ileti zaten silinmiş bağlı olarak daha iyi yanıt, tek yönlü işlemleri da engeller, bazı istemciler yapabilirsiniz gönderdi. Yalnızca ileti exchange hakkında daha fazla ve az tek yönlü işlemleridir. Daha fazla bilgi için bkz: [One-Way Hizmetleri](../../../../docs/framework/wcf/feature-details/one-way-services.md).  
   
  Büyük veri öbekleri hangi ileti değişim deseni olsun işleme istemci yavaşlatabilir. Bu sorunların nasıl ele alınacağını anlamak için bkz: [büyük veriler ve akış](../../../../docs/framework/wcf/feature-details/large-data-and-streaming.md).  
   

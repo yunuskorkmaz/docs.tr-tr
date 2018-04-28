@@ -1,28 +1,28 @@
 ---
 title: Hizmet Reddi
-ms.custom: 
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - dotnet-clr
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - denial of service [WCF]
 ms.assetid: dfb150f3-d598-4697-a5e6-6779e4f9b600
-caps.latest.revision: 
+caps.latest.revision: 12
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: 5d5f67790abad5dcf6311de1817b4ea093e703d9
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: fb9f542d931f5febc2c04d1b0e093cc20f487c57
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="denial-of-service"></a>Hizmet Reddi
 Hizmet reddi oluşur. bir sistem iletileri işlenemiyor veya çok yavaş işlenene bir şekilde doludur.  
@@ -57,12 +57,12 @@ Hizmet reddi oluşur. bir sistem iletileri işlenemiyor veya çok yavaş işlene
 ## <a name="auditing-event-log-can-be-filled"></a>Olay günlüğü denetleme doldurulabilir  
  Kötü niyetli bir kullanıcı denetimi etkinleştirildiğini bilirse, bu saldırgan denetim girişlerini yazılmasına neden geçersiz iletileri gönderebilir. Bu şekilde denetim günlüğü dolu denetim sistemi başarısız olur.  
   
- Bu durumu iyileştirmek için ayarlanmış <xref:System.ServiceModel.Description.ServiceSecurityAuditBehavior.SuppressAuditFailure%2A> özelliğine `true` ve Denetim davranışını denetlemek için Olay Görüntüleyicisi'ni özelliklerini kullanın. [!INCLUDE[crabout](../../../../includes/crabout-md.md)]Olay günlükleri görüntüleme ve yönetme için Olay Görüntüleyicisi'ni kullanarak bkz [Olay Görüntüleyicisi'ni](http://go.microsoft.com/fwlink/?LinkId=186123). [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)][Denetim](../../../../docs/framework/wcf/feature-details/auditing-security-events.md).  
+ Bu durumu iyileştirmek için ayarlanmış <xref:System.ServiceModel.Description.ServiceSecurityAuditBehavior.SuppressAuditFailure%2A> özelliğine `true` ve Denetim davranışını denetlemek için Olay Görüntüleyicisi'ni özelliklerini kullanın. [!INCLUDE[crabout](../../../../includes/crabout-md.md)] Olay günlükleri görüntüleme ve yönetme için Olay Görüntüleyicisi'ni kullanarak bkz [Olay Görüntüleyicisi'ni](http://go.microsoft.com/fwlink/?LinkId=186123). Daha fazla bilgi için bkz: [denetim](../../../../docs/framework/wcf/feature-details/auditing-security-events.md).  
   
 ## <a name="invalid-implementations-of-iauthorizationpolicy-can-cause-service-hangs"></a>Geçersiz uygulamaları IAuthorizationPolicy Can neden Hizmeti kilitleniyor  
  Çağırma <xref:System.IdentityModel.Policy.IAuthorizationPolicy.Evaluate%2A> hatalı uyarlamasını yöntemi <xref:System.IdentityModel.Policy.IAuthorizationPolicy> arabirimi hizmet askıda kalmasına neden olabilir.  
   
- Azaltma: yalnızca güvenilir kodunu kullanın. Diğer bir deyişle, kullanan yazılmış ve test kod veya güvenilen bir sağlayıcı gelir. Güvenilmeyen uzantılarını izin verme <xref:System.IdentityModel.Policy.IAuthorizationPolicy> kodunuzu son olmadan takılı için göz önünde bulundurarak. Bu, bir hizmet uygulamasında kullanılan tüm uzantıları uygular. [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]Genişletilebilirlik noktaları kullanarak uygulama kodu ve takılı yabancı kodu arasında hiçbir ayrım yapmaz.  
+ Azaltma: yalnızca güvenilir kodunu kullanın. Diğer bir deyişle, kullanan yazılmış ve test kod veya güvenilen bir sağlayıcı gelir. Güvenilmeyen uzantılarını izin verme <xref:System.IdentityModel.Policy.IAuthorizationPolicy> kodunuzu son olmadan takılı için göz önünde bulundurarak. Bu, bir hizmet uygulamasında kullanılan tüm uzantıları uygular. [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] Genişletilebilirlik noktaları kullanarak uygulama kodu ve takılı yabancı kodu arasında hiçbir ayrım yapmaz.  
   
 ## <a name="kerberos-maximum-token-size-may-need-resizing"></a>Yeniden boyutlandırma Kerberos en büyük simge boyutu gerekebilir  
  Bir istemci çok sayıda grupları ait olup olmadığını (yaklaşık 900 gerçek sayı grupları bağlı olarak değişir rağmen), ileti üst bilginin blok 64 kilobayt aştığında bir sorun ortaya çıkabilir. Bu durumda, Microsoft Support makalesini içinde açıklandığı gibi en yüksek Kerberos belirteci boyutunu artırabilirsiniz "[Internet Explorer Kerberos kimlik doğrulaması için IIS bağlanan bir yetersiz arabellek nedeniyle çalışmıyor](http://go.microsoft.com/fwlink/?LinkId=89176)." Ayrıca en fazla artırmanız gerekebilir [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] ileti büyük Kerberos belirteci uyum sağlayacak şekilde boyutu.  
@@ -74,7 +74,7 @@ Hizmet reddi oluşur. bir sistem iletileri işlenemiyor veya çok yavaş işlene
   
  Bunu azaltmak için üzerinde daha kesin bir arama ölçütü kullanarak tam sertifika başvuru [ \<serviceCredentials >](../../../../docs/framework/configure-apps/file-schema/wcf/servicecredentials.md). Örneğin, <xref:System.Security.Cryptography.X509Certificates.X509FindType.FindByThumbprint> seçeneği ve kendi benzersiz parmak izi tarafından (karma) sertifikasını belirtin.  
   
- [!INCLUDE[crabout](../../../../includes/crabout-md.md)]Otomatik kayıt özelliğini bkz [Windows Server 2003'te sertifika otomatik kaydını](http://go.microsoft.com/fwlink/?LinkId=95166).  
+ [!INCLUDE[crabout](../../../../includes/crabout-md.md)] Otomatik kayıt özelliğini bkz [Windows Server 2003'te sertifika otomatik kaydını](http://go.microsoft.com/fwlink/?LinkId=95166).  
   
 ## <a name="last-of-multiple-alternative-subject-names-used-for-authorization"></a>Son yetkilendirme için kullanılan birden fazla alternatif konu adları  
  Birden çok alternatif konu adı, bir X.509 sertifikası içerir ve alternatif konu adı kullanarak yetkilendirmek, yetkilendirme başarısız olabileceği ender durumda.  
@@ -82,13 +82,13 @@ Hizmet reddi oluşur. bir sistem iletileri işlenemiyor veya çok yavaş işlene
 ## <a name="protect-configuration-files-with-acls"></a>ACL'ler ile yapılandırma dosyalarını koruyun  
  Kod ve yapılandırma dosyaları için gerekli ve isteğe bağlı talep belirtebilirsiniz [!INCLUDE[infocard](../../../../includes/infocard-md.md)] verilen belirteçler. Bu ilgili öğeleri de gösterilmesini sonuçlanır `RequestSecurityToken` güvenlik gönderilen iletileri hizmet belirteci. Bir saldırgan kod veya yapılandırma gerekli veya isteğe bağlı talep kaldırmak için potansiyel olarak hedef hizmete erişim izni olmayan bir belirteç vermek için güvenlik belirteci hizmeti alma değişiklik yapabilirsiniz.  
   
- Azaltmak için: yapılandırma dosyasını değiştirmek için bilgisayara erişimi gerektirir. Dosya erişimi denetimi kullan yapılandırma dosyalarını güvenli hale getirmek için listeleri (ACL'ler). [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]yapılandırmasından yüklenmesi gibi kodu sağlayacak önce kodu uygulama dizini veya genel derleme önbelleği olmasını gerektirir. Dizin ACL dizinleri güvenliğini sağlamak için kullanın.  
+ Azaltmak için: yapılandırma dosyasını değiştirmek için bilgisayara erişimi gerektirir. Dosya erişimi denetimi kullan yapılandırma dosyalarını güvenli hale getirmek için listeleri (ACL'ler). [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] yapılandırmasından yüklenmesi gibi kodu sağlayacak önce kodu uygulama dizini veya genel derleme önbelleği olmasını gerektirir. Dizin ACL dizinleri güvenliğini sağlamak için kullanın.  
   
 ## <a name="maximum-number-of-secure-sessions-for-a-service-is-reached"></a>Bir hizmet için güvenli oturumlar sayısı üst sınırına  
  Bir istemci bir hizmet tarafından başarıyla doğrulandıktan ve güvenli bir oturum hizmetiyle kurulan hizmeti istemci iptal eder veya oturum süresinin sona kadar oturum izler. Her kurulan oturum sınırınızı için en fazla bir hizmetle etkin eşzamanlı oturum sayısını sayar. Bu sınıra ulaşıldığında, yeni bir oturum hizmetle oluşturma denemesi istemcileri kadar reddedilir veya fazla etkin oturum sona veya istemci tarafından iptal edildi. Bir istemci bir hizmet ile birden çok oturumu olabilir ve her biri bu oturumlar, sınırında sayılır.  
   
 > [!NOTE]
->  Durum bilgisi olan oturumlar kullandığınızda, önceki paragrafta geçerli değildir. [!INCLUDE[crabout](../../../../includes/crabout-md.md)]durum bilgisi olan oturumlar, bkz: [nasıl yapılır: güvenli oturum açmak için bir güvenlik bağlamı belirteci oluşturma](../../../../docs/framework/wcf/feature-details/how-to-create-a-security-context-token-for-a-secure-session.md).  
+>  Durum bilgisi olan oturumlar kullandığınızda, önceki paragrafta geçerli değildir. [!INCLUDE[crabout](../../../../includes/crabout-md.md)] durum bilgisi olan oturumlar, bkz: [nasıl yapılır: güvenli oturum açmak için bir güvenlik bağlamı belirteci oluşturma](../../../../docs/framework/wcf/feature-details/how-to-create-a-security-context-token-for-a-secure-session.md).  
   
  Bunu azaltmak için bir oturum için en uzun kullanım ömrünü ve en fazla etkin oturum sayısı sınırı ayarlamak için <xref:System.ServiceModel.Channels.SecurityBindingElement> özelliği <xref:System.ServiceModel.Channels.SecurityBindingElement> sınıfı.  
   

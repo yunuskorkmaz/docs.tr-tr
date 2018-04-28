@@ -1,27 +1,29 @@
 ---
-title: "İleti Sınıfını Kullanma"
-ms.custom: 
+title: İleti Sınıfını Kullanma
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - csharp
 - vb
 ms.assetid: d1d62bfb-2aa3-4170-b6f8-c93d3afdbbed
-caps.latest.revision: "14"
+caps.latest.revision: 14
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 5c3e33f4db403fdc4ad1d4efd14282fe2beac8dc
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: c63a0a88997a1c35b24562bcca3e0fdb40ebfd41
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="using-the-message-class"></a>İleti Sınıfını Kullanma
 <xref:System.ServiceModel.Channels.Message> Sınıfı için temel [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)]. İstemciler ve hizmetler arasındaki tüm iletişimi sonuçta sonuçlanır <xref:System.ServiceModel.Channels.Message> örnekleri gönderilen ve alınan.  
@@ -76,7 +78,7 @@ ms.lasthandoff: 12/22/2017
 ## <a name="creating-messages-with-bodywriter"></a>İletileri BodyWriter ile oluşturma  
  Bir `CreateMessage` alır aşırı bir `BodyWriter` ileti gövdesini açıklamak için örneği. A `BodyWriter` İleti gövdeleri nasıl oluşturulduğunu özelleştirmek için türetilmiş bir Özet sınıf. Kendi oluşturabilirsiniz `BodyWriter` türetilen İleti gövdeleri özel bir biçimde tanımlamak için sınıfı. Geçersiz kılmanız gerekir `BodyWriter.OnWriteBodyContents` yönteminin alan bir <xref:System.Xml.XmlDictionaryWriter>; bu yöntem gövde yazmaktan sorumludur.  
   
- Gövde yazıcılarının arabelleğe veya (akışı arabelleğe olmayan). Akış olanları içeriklerini yalnızca bir kez yazabilirsiniz sırada arabelleğe alınan gövde yazıcılarının zaman, herhangi bir sayıda içeriklerini yazabilirsiniz. `IsBuffered` Özelliği, Gövde yazıcısı veya arabelleğe alınıp alınmayacağını belirtir. Bu, Gövde yazıcısı için korumalı çağırarak ayarlayabileceğiniz `BodyWriter` alan oluşturucu bir `isBuffered` Boole parametresi. Gövde yazıcılarının arabelleğe gövde yazıcıdan bir arabelleğe alınan Gövde yazıcısı oluşturmayı destekler. Geçersiz kılabilirsiniz `OnCreateBufferedCopy` bu işlemi özelleştirmek için yöntem. Varsayılan olarak, XML içeren bir bellek içi arabellek tarafından döndürülen `OnWriteBodyContents` kullanılır. `OnCreateBufferedCopy`alan bir `maxBufferSize` tamsayı parametresi; bu yöntemi geçersiz kılarsanız, arabellek bu en yüksek boyuttan büyük oluşturmamalıdır.  
+ Gövde yazıcılarının arabelleğe veya (akışı arabelleğe olmayan). Akış olanları içeriklerini yalnızca bir kez yazabilirsiniz sırada arabelleğe alınan gövde yazıcılarının zaman, herhangi bir sayıda içeriklerini yazabilirsiniz. `IsBuffered` Özelliği, Gövde yazıcısı veya arabelleğe alınıp alınmayacağını belirtir. Bu, Gövde yazıcısı için korumalı çağırarak ayarlayabileceğiniz `BodyWriter` alan oluşturucu bir `isBuffered` Boole parametresi. Gövde yazıcılarının arabelleğe gövde yazıcıdan bir arabelleğe alınan Gövde yazıcısı oluşturmayı destekler. Geçersiz kılabilirsiniz `OnCreateBufferedCopy` bu işlemi özelleştirmek için yöntem. Varsayılan olarak, XML içeren bir bellek içi arabellek tarafından döndürülen `OnWriteBodyContents` kullanılır. `OnCreateBufferedCopy` alan bir `maxBufferSize` tamsayı parametresi; bu yöntemi geçersiz kılarsanız, arabellek bu en yüksek boyuttan büyük oluşturmamalıdır.  
   
  `BodyWriter` SAX `WriteBodyContents` ve `CreateBufferedCopy` temelde olan yöntemler, geçici sarmalayıcıları ince `OnWriteBodyContents` ve `OnCreateBufferedCopy` yöntemleri, sırasıyla. Bu yöntemler bir arabelleğe Gövde yazıcısı birden çok kez erişmediğinden emin olmak için durum denetimi gerçekleştirin. Bu yöntemlerin doğrudan yalnızca özel oluşturulurken çağrılır `Message` türetilmiş sınıflar temel `BodyWriters`.  
   
@@ -107,9 +109,9 @@ ms.lasthandoff: 12/22/2017
   
  İki ek yardımcı yöntemler belirli SOAP başlangıç öğesi etiketleri yazma. Bu yöntemler ileti gövdesi erişmemesi ve bu nedenle bunlar ileti durumu değiştirme. Bu güncelleştirmeler şunlardır:  
   
--   <xref:System.ServiceModel.Channels.Message.WriteStartBody%2A>Örneğin, başlangıç body öğesi Yazar `<soap:Body>`.  
+-   <xref:System.ServiceModel.Channels.Message.WriteStartBody%2A> Örneğin, başlangıç body öğesi Yazar `<soap:Body>`.  
   
--   <xref:System.ServiceModel.Channels.Message.WriteStartEnvelope%2A>Örneğin, başlangıç envelope öğesi Yazar `<soap:Envelope>`.  
+-   <xref:System.ServiceModel.Channels.Message.WriteStartEnvelope%2A> Örneğin, başlangıç envelope öğesi Yazar `<soap:Envelope>`.  
   
  Öğe etiketleri karşılık gelen son yazmak için arama `WriteEndElement` karşılık gelen XML yazıcıda. Bu yöntemler nadiren doğrudan denir.  
   
@@ -162,7 +164,7 @@ ms.lasthandoff: 12/22/2017
  Kullanabileceğiniz <xref:System.ServiceModel.Channels.Message.GetBodyAttribute%28System.String%2CSystem.String%29> gövde sarmalayıcı öğe üzerinde belirli bir öznitelik erişmek için yöntem (örneğin, `<soap:Body>`) belirli ad ve ad alanı tarafından tanımlanan. Bu tür bir öznitelik bulunmazsa `null` döndürülür. Bu yöntem yalnızca çağrılabilir `Message` (ileti gövdesi yok henüz erişildikten olduğunda) oluşturulan bir durumda.  
   
 ## <a name="working-with-headers"></a>Üst bilgileri ile çalışma  
- A `Message` adlı adlandırılmış XML parçaları herhangi bir sayıda içerebilir *üstbilgileri*. Her parça normalde bir SOAP üstbilgi eşler. Üstbilgiler yoluyla erişilir `Headers` türündeki özelliği <xref:System.ServiceModel.Channels.MessageHeaders>. <xref:System.ServiceModel.Channels.MessageHeaders>koleksiyonudur <xref:System.ServiceModel.Channels.MessageHeaderInfo> nesneleri ve tek tek üstbilgileri erişilebilir aracılığıyla kendi <xref:System.Collections.IEnumerable> arabirimi veya kendi dizinleyici aracılığıyla. Örneğin, aşağıdaki kod tüm üstbilgilerinde adlarını listeler bir `Message`.  
+ A `Message` adlı adlandırılmış XML parçaları herhangi bir sayıda içerebilir *üstbilgileri*. Her parça normalde bir SOAP üstbilgi eşler. Üstbilgiler yoluyla erişilir `Headers` türündeki özelliği <xref:System.ServiceModel.Channels.MessageHeaders>. <xref:System.ServiceModel.Channels.MessageHeaders> koleksiyonudur <xref:System.ServiceModel.Channels.MessageHeaderInfo> nesneleri ve tek tek üstbilgileri erişilebilir aracılığıyla kendi <xref:System.Collections.IEnumerable> arabirimi veya kendi dizinleyici aracılığıyla. Örneğin, aşağıdaki kod tüm üstbilgilerinde adlarını listeler bir `Message`.  
   
  [!code-csharp[C_UsingTheMessageClass#8](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_usingthemessageclass/cs/source.cs#8)]
  [!code-vb[C_UsingTheMessageClass#8](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_usingthemessageclass/vb/source.vb#8)]  
@@ -172,7 +174,7 @@ ms.lasthandoff: 12/22/2017
   
  Kullanarak bir belirli üst bilgisi almak <xref:System.ServiceModel.Channels.MessageHeaders.FindHeader%2A> yöntemi. Bu yöntem adı ve bulmak için üst bilgisi ad alanını alır ve dizinini döndürür. Üstbilgi birden çok kez ortaya çıkarsa, bir özel durum oluşur. Üstbilgi bulunmazsa -1 döndürür.  
   
- SOAP üstbilgi modelinde üstbilgileri olabilir bir `Actor` üstbilgisinin hedeflenen alıcı belirten değer. En temel `FindHeader` aşırı yalnızca ileti ultimate alıcısı için hedeflenen üstbilgileri arar. Ancak, başka bir aşırı, hangi belirtmenize olanak tanır `Actor` değerleri aramada dahil edilir. [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)]SOAP belirtimi.  
+ SOAP üstbilgi modelinde üstbilgileri olabilir bir `Actor` üstbilgisinin hedeflenen alıcı belirten değer. En temel `FindHeader` aşırı yalnızca ileti ultimate alıcısı için hedeflenen üstbilgileri arar. Ancak, başka bir aşırı, hangi belirtmenize olanak tanır `Actor` değerleri aramada dahil edilir. Daha fazla bilgi için SOAP belirtime bakın.  
   
  A <xref:System.ServiceModel.Channels.MessageHeaders.CopyTo%28System.ServiceModel.Channels.MessageHeaderInfo%5B%5D%2CSystem.Int32%29> yöntemi sağlanan üstbilgileri kopyalamak için bir <xref:System.ServiceModel.Channels.MessageHeaders> bir dizi koleksiyona <xref:System.ServiceModel.Channels.MessageHeaderInfo> nesneleri.  
   
@@ -187,7 +189,7 @@ ms.lasthandoff: 12/22/2017
 ### <a name="defining-the-message-body-contents"></a>İleti gövdesi içeriğini tanımlama  
  Üç birincil teknikleri mevcut bir ileti gövdesi içinde verilerine erişmek için: yazma, okuma ve bir arabelleğine kopyalanıyor. Bu işlemler sonuçta neden <xref:System.ServiceModel.Channels.Message.OnWriteBodyContents%2A>, <xref:System.ServiceModel.Channels.Message.OnGetReaderAtBodyContents%2A>, ve <xref:System.ServiceModel.Channels.Message.OnCreateBufferedCopy%2A> , sırasıyla türetilmiş sınıfınız çağrılan yöntemler `Message`. Temel `Message` sınıfı garanti bu yöntemlerden sadece birini her biri için çağrılır `Message` örneği ve onu birden çok kez çağrılmaz olduğunu. Taban sınıfı, aynı zamanda kapatılan bir mesaj yöntemleri adlı değil sağlar. Uygulamanızda ileti durumunu izlemek için gerek yoktur.  
   
- <xref:System.ServiceModel.Channels.Message.OnWriteBodyContents%2A>soyut bir yöntemdir ve uygulanması gerekir. İleti gövdesi içeriğini tanımlamak için en basit yolu, bu yöntemi kullanarak yazmaktır. Örneğin, aşağıdaki iletiyi 1'den 100.000 rastgele sayılar 20 içerir.  
+ <xref:System.ServiceModel.Channels.Message.OnWriteBodyContents%2A> soyut bir yöntemdir ve uygulanması gerekir. İleti gövdesi içeriğini tanımlamak için en basit yolu, bu yöntemi kullanarak yazmaktır. Örneğin, aşağıdaki iletiyi 1'den 100.000 rastgele sayılar 20 içerir.  
   
  [!code-csharp[C_UsingTheMessageClass#9](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_usingthemessageclass/cs/source.cs#9)]
  [!code-vb[C_UsingTheMessageClass#9](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_usingthemessageclass/vb/source.vb#9)]  

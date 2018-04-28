@@ -17,11 +17,11 @@ ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: 8bf63c59c0948dd8414232a52fc12fafa0d13aa1
-ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
-ms.translationtype: HT
+ms.openlocfilehash: 909461811907c1eb3f494b29294db45dbbe8b01d
+ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="globalization-for-wpf"></a>WPF için Genelleştirme
 Bu konuda yazarken bilmeniz gereken sorunlar açıklanır [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] küresel pazarda uygulamaları. Genelleştirme programlama öğeleri tanımlanan [!INCLUDE[TLA#tla_net](../../../../includes/tlasharptla-net-md.md)] içinde `System.Globalization`.  
@@ -180,7 +180,7 @@ Aşağıdaki örnekte bir onaltılı karakter başvurusunu gösterir. Olan bildi
   
 <a name="using_clickonce"></a>   
 ## <a name="using-clickonce-with-localized-applications"></a>ClickOnce yerelleştirilmiş uygulamalarıyla kullanma  
- ClickOnce ile birlikte yeni bir Windows Forms dağıtım teknolojisi olan [!INCLUDE[TLA#tla_visualstu2005](../../../../includes/tlasharptla-visualstu2005-md.md)]. Uygulama yükleme ve Web uygulamalarının yükseltilmesini sağlar. ClickOnce ile dağıtılan bir uygulama yerelleştirilmiş olduğunda yalnızca yerelleştirilmiş kültür üzerinde görüntülenebilir. Dağıtılan bir uygulama için Japonca yerelleştirilmiş ise, örneğin, bunu yalnızca üzerinde Japonca görüntülenebilir [!INCLUDE[TLA#tla_win](../../../../includes/tlasharptla-win-md.md)] İngilizce değil, [!INCLUDE[TLA2#tla_win](../../../../includes/tla2sharptla-win-md.md)]. Japonca kullanıcıların İngilizce sürümünü çalıştırması yaygın bir senaryo olduğundan bu bir sorun gösterir [!INCLUDE[TLA2#tla_win](../../../../includes/tla2sharptla-win-md.md)].  
+ ClickOnce ile birlikte yeni bir Windows Forms dağıtım teknolojisi olan [!INCLUDE[TLA#tla_visualstu2005](../../../../includes/tlasharptla-visualstu2005-md.md)]. Uygulama yükleme ve Web uygulamalarının yükseltilmesini sağlar. ClickOnce ile dağıtılan bir uygulama yerelleştirilmiş olduğunda yalnızca yerelleştirilmiş kültür üzerinde görüntülenebilir. Dağıtılan bir uygulama için Japonca yerelleştirilmiş ise, örneğin, bunu yalnızca üzerinde Japonca görüntülenebilir [!INCLUDE[TLA#tla_win](../../../../includes/tlasharptla-win-md.md)] İngilizce Windows üzerinde değil. Japonca kullanıcıların Windows İngilizce sürümünü çalıştırması yaygın bir senaryo olduğundan bu bir sorun gösterir.  
   
  Bu sorun için çözüm dilden geri dönüş özniteliğini ayarlamaktır. Bir uygulama geliştiricisi isteğe bağlı olarak kaynakları ana bütünleştirilmiş koddan kaldırın ve kaynaklar için belirli bir kültür karşılık gelen bir uydu derlemesinde bulunabilir belirtin. Bu işlem kullanımı denetlemek için <xref:System.Resources.NeutralResourcesLanguageAttribute>. Oluşturucusunun <xref:System.Resources.NeutralResourcesLanguageAttribute> sınıfına sahip iki imzalar, bir alan bir <xref:System.Resources.UltimateResourceFallbackLocation> konumunu belirtmek için parametre nerede <xref:System.Resources.ResourceManager> geri dönüş kaynakları ayıklamak: ana derleme veya uydu derleme. Aşağıdaki örnek, özniteliğin nasıl kullanılacağını gösterir. Son geri dönüş konumu için kod neden <xref:System.Resources.ResourceManager> şu anda yürütülen bütünleştirilmiş dizininin "de" alt kaynakları aramak için.  
   

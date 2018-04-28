@@ -1,21 +1,21 @@
 ---
-title: "DotNet nuget anında iletme komutu - .NET Core CLI"
-description: "Dotnet nuget anında iletme komutu sunucuya bir paket gönderir ve onu yayımlar."
+title: DotNet nuget anında iletme komutu - .NET Core CLI
+description: Dotnet nuget anında iletme komutu sunucuya bir paket gönderir ve onu yayımlar.
 author: karann-msft
 ms.author: mairaw
 ms.date: 08/14/2017
-ms.topic: article
-ms.prod: .net-core
+ms.topic: conceptual
+ms.prod: dotnet-core
 ms.technology: dotnet-cli
 ms.workload:
 - dotnetcore
-ms.openlocfilehash: a0f872ae930d17638e018cdd204cc08a773a3df5
-ms.sourcegitcommit: d95a91d685565f4d95c8773b558752864a6a3d7e
+ms.openlocfilehash: 29bc05c42bff9ace3fac2328ba44e15e4746e10e
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/12/2018
+ms.lasthandoff: 04/28/2018
 ---
-# <a name="dotnet-nuget-push"></a>dotnet nuget push
+# <a name="dotnet-nuget-push"></a>DotNet nuget gönderme
 
 [!INCLUDE [topic-appliesto-net-core-all](../../../includes/topic-appliesto-net-core-all.md)]
 

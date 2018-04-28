@@ -1,13 +1,13 @@
 ---
-title: "Nasıl yapılır: Taşıma Güveniği ve İleti Kimlik Bilgilerini Kullanma"
-ms.custom: 
+title: 'Nasıl yapılır: Taşıma Güveniği ve İleti Kimlik Bilgilerini Kullanma'
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - dotnet-clr
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - csharp
@@ -15,20 +15,20 @@ dev_langs:
 helpviewer_keywords:
 - TransportWithMessageCredentials
 ms.assetid: 6cc35346-c37a-4859-b82b-946c0ba6e68f
-caps.latest.revision: 
+caps.latest.revision: 11
 author: BrucePerlerMS
 ms.author: bruceper
 manager: mbaldwin
 ms.workload:
 - dotnet
-ms.openlocfilehash: 70575732e7840d243373fd1512f788c776f17ceb
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: fad7970711435cdabecd883f5e1dc44c64bd2c93
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="how-to-use-transport-security-and-message-credentials"></a>Nasıl yapılır: Taşıma Güveniği ve İleti Kimlik Bilgilerini Kullanma
-Taşıma ve ileti kimlik bilgileri olan bir hizmeti güvenli hale getirme kullanan taşıma ve ileti güvenlik modlarında iyi [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)]. İleti Katmanı Güvenliği katı taşıma güvenlik mekanizmaları ile mümkün olmayan kimlik bilgilerini, çeşitli sağlarken, toplamda bütünlüğü ve gizliliği, Aktarım Katmanı Güvenliği sağlar. Bu konuda, ileti kimlik bilgilerini kullanarak aktarım uygulamak için temel adımlar açıklanmıştır <xref:System.ServiceModel.WSHttpBinding> ve <xref:System.ServiceModel.NetTcpBinding> bağlar. [!INCLUDE[crabout](../../../../includes/crabout-md.md)]bkz: güvenlik modunu ayarlama, [nasıl yapılır: güvenlik modunu ayarlama](../../../../docs/framework/wcf/how-to-set-the-security-mode.md).  
+Taşıma ve ileti kimlik bilgileri olan bir hizmeti güvenli hale getirme kullanan taşıma ve ileti güvenlik modlarında iyi [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)]. İleti Katmanı Güvenliği katı taşıma güvenlik mekanizmaları ile mümkün olmayan kimlik bilgilerini, çeşitli sağlarken, toplamda bütünlüğü ve gizliliği, Aktarım Katmanı Güvenliği sağlar. Bu konuda, ileti kimlik bilgilerini kullanarak aktarım uygulamak için temel adımlar açıklanmıştır <xref:System.ServiceModel.WSHttpBinding> ve <xref:System.ServiceModel.NetTcpBinding> bağlar. [!INCLUDE[crabout](../../../../includes/crabout-md.md)] bkz: güvenlik modunu ayarlama, [nasıl yapılır: güvenlik modunu ayarlama](../../../../docs/framework/wcf/how-to-set-the-security-mode.md).  
   
  Güvenlik modu ayarlarken `TransportWithMessageCredential`, aktarım düzeyinde güvenlik sağlayan gerçek mekanizması taşıma belirler. HTTP için Güvenli Yuva Katmanı (SSL) HTTP (HTTPS) üzerinden mekanizmasıdır; TCP için bu SSL TCP veya Windows üzerinde değil.  
   
@@ -38,11 +38,11 @@ Taşıma ve ileti kimlik bilgileri olan bir hizmeti güvenli hale getirme kullan
   
 ### <a name="to-use-the-wshttpbinding-with-a-certificate-for-transport-security-in-code"></a>WSHttpBinding aktarım güvenliğinde (kod) için bir sertifika ile kullanmak için  
   
-1.  Makine üzerindeki bir bağlantı noktası bir SSL sertifikası bağlamak için HttpCfg.exe aracını kullanın. [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)][Nasıl yapılır: bir SSL sertifikası ile bir bağlantı noktası yapılandırın](../../../../docs/framework/wcf/feature-details/how-to-configure-a-port-with-an-ssl-certificate.md).  
+1.  Makine üzerindeki bir bağlantı noktası bir SSL sertifikası bağlamak için HttpCfg.exe aracını kullanın. Daha fazla bilgi için bkz: [nasıl yapılır: bir SSL sertifikası ile bir bağlantı noktası yapılandırın](../../../../docs/framework/wcf/feature-details/how-to-configure-a-port-with-an-ssl-certificate.md).  
   
 2.  Bir örneğini oluşturmak <xref:System.ServiceModel.WSHttpBinding> sınıfı ve ayarlayın <xref:System.ServiceModel.WSHttpSecurity.Mode%2A> özelliğine <xref:System.ServiceModel.SecurityMode.TransportWithMessageCredential>.  
   
-3.  Ayarlama <xref:System.ServiceModel.HttpTransportSecurity.ClientCredentialType%2A> uygun bir değere özelliği. ([!INCLUDE[crdefault](../../../../includes/crdefault-md.md)] [Bir kimlik bilgisi türü seçme](../../../../docs/framework/wcf/feature-details/selecting-a-credential-type.md).) Aşağıdaki kod <xref:System.ServiceModel.MessageCredentialType.Certificate> değeri.  
+3.  Ayarlama <xref:System.ServiceModel.HttpTransportSecurity.ClientCredentialType%2A> uygun bir değere özelliği. (Daha fazla bilgi için bkz: [bir kimlik bilgisi türü seçme](../../../../docs/framework/wcf/feature-details/selecting-a-credential-type.md).) Aşağıdaki kod <xref:System.ServiceModel.MessageCredentialType.Certificate> değeri.  
   
 4.  Bir örneğini oluşturmak <xref:System.Uri> uygun taban adresi olan sınıf. Adres "HTTPS" şeması kullanması gerekir ve makine ve SSL sertifikasını bağlı bağlantı noktası numarasını gerçek adını içermelidir unutmayın. (Alternatif olarak, taban adresi yapılandırmasında ayarlayabilirsiniz.)  
   
@@ -97,7 +97,7 @@ Taşıma ve ileti kimlik bilgileri olan bir hizmeti güvenli hale getirme kullan
   
 #### <a name="to-use-the-wshttpbinding"></a>WSHttpBinding kullanmak için  
   
-1.  Bilgisayarı bir bağlantı noktasına bağlı bir SSL sertifikası ile yapılandırın. ([!INCLUDE[crdefault](../../../../includes/crdefault-md.md)] [Nasıl yapılır: bir SSL sertifikası ile bir bağlantı noktası yapılandırın](../../../../docs/framework/wcf/feature-details/how-to-configure-a-port-with-an-ssl-certificate.md)). Ayarlanacak gerekmez bir <`transport`> öğesinin değeri bu yapılandırmaya sahip.  
+1.  Bilgisayarı bir bağlantı noktasına bağlı bir SSL sertifikası ile yapılandırın. (Daha fazla bilgi için bkz: [nasıl yapılır: bir SSL sertifikası ile bir bağlantı noktası yapılandırın](../../../../docs/framework/wcf/feature-details/how-to-configure-a-port-with-an-ssl-certificate.md)). Ayarlanacak gerekmez bir <`transport`> öğesinin değeri bu yapılandırmaya sahip.  
   
 2.  İleti düzeyi güvenlik için istemci kimlik bilgisi türünü belirtin. Aşağıdaki örnek kümeleri `clientCredentialType` özniteliği <`message`> öğesine `UserName`.  
   

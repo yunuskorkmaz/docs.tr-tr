@@ -1,24 +1,26 @@
 ---
-title: "Özel Bağlama Üzerinden Meta Veri Yayımlama ve Alma"
-ms.custom: 
+title: Özel Bağlama Üzerinden Meta Veri Yayımlama ve Alma
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 904e11b4-d90e-45c6-9ee5-c3472c90008c
-caps.latest.revision: "7"
+caps.latest.revision: 7
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 88495e42a57790b75c096235cda65cbedbf86a23
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: f6226f01a284a9a24593c1be4fed2f96f3eae730
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="publishing-and-retrieving-metadata-over-a-custom-binding"></a>Özel Bağlama Üzerinden Meta Veri Yayımlama ve Alma
 <xref:System.ServiceModel.Description.ServiceMetadataBehavior?displayProperty=nameWithType> Bir hizmet için meta veri uç noktası eklemek için destek sağlar. Bu meta veri uç noktalarını bir URL HTTP GET isteklerine yanıt vermesini sağlayabilirsiniz bir `?wsdl` querystring ve WS-MetadataExchange (MEX) belirtiminde tanımlanan WS aktarma GET istekleri. MEX uç noktaları uygulamak <xref:System.ServiceModel.Description.IMetadataExchange?displayProperty=nameWithType> sözleşme.  
@@ -31,7 +33,7 @@ ms.lasthandoff: 12/22/2017
 ## <a name="retrieving-metadata-over-a-custom-binding"></a>Özel bağlama üzerinden meta verileri alma  
  Standart HTTP veya HTTPS GET isteklerini kullanarak HTTP Get hem de HTTPS alma meta veri uç noktalarından meta verileri alınabilir.  
   
- MEX meta veri uç noktasından meta verilerini almak için genellikle tarafından desteklenen standart MEX bağlamaları birini kullanabilirsiniz [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]. [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)] <xref:System.ServiceModel.Description.MetadataExchangeBindings?displayProperty=nameWithType>. <xref:System.ServiceModel.Description.MetadataExchangeClient?displayProperty=nameWithType> Türü ve Svcutil.exe Aracı'nı otomatik olarak aşağıdakilerden birini seçin belirtilen meta veri uç noktasının adresini temel alan bu standart MEX bağlar.  
+ MEX meta veri uç noktasından meta verilerini almak için genellikle tarafından desteklenen standart MEX bağlamaları birini kullanabilirsiniz [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]. Daha fazla bilgi için bkz. <xref:System.ServiceModel.Description.MetadataExchangeBindings?displayProperty=nameWithType>. <xref:System.ServiceModel.Description.MetadataExchangeClient?displayProperty=nameWithType> Türü ve Svcutil.exe Aracı'nı otomatik olarak aşağıdakilerden birini seçin belirtilen meta veri uç noktasının adresini temel alan bu standart MEX bağlar.  
   
  MEX meta veri uç noktasının standart MEX bağlamaları olandan farklı bir bağlama kullanıyorsa, bağlama tarafından kullanılan yapılandırabilirsiniz <xref:System.ServiceModel.Description.MetadataExchangeClient> kod kullanarak veya göre sağlayan bir <xref:System.ServiceModel.Description.IMetadataExchange> istemci uç nokta yapılandırması. Svcutil.exe Aracı'nı otomatik olarak yükler, yapılandırma dosyasından bir <xref:System.ServiceModel.Description.IMetadataExchange> URI düzeni meta veri uç noktası adresi için aynı ada sahip istemci uç nokta yapılandırması.  
   

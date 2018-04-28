@@ -19,11 +19,11 @@ ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: 3834f48c407f799fc5fede17182f47652f49747f
-ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
+ms.openlocfilehash: 082fa083dbba601cefc00e40bad7b91e14a45d44
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="best-practices-for-queued-communication"></a>Kuyruğa Alınan İletişim için En İyi Uygulamalar
 Bu konu içinde kuyruğa alınan iletişim için önerilen yöntemler sağlar [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)]. Aşağıdaki bölümlerde bir senaryo açısından önerilen yöntemler açıklanmaktadır.  
@@ -33,7 +33,7 @@ Bu konu içinde kuyruğa alınan iletişim için önerilen yöntemler sağlar [!
   
  Ayrıca, disk yazma işlemleri maliyetini ayarlayarak tabi değil seçebileceğiniz <xref:System.ServiceModel.MsmqBindingBase.Durable%2A> özelliğine `false`.  
   
- Güvenlik, performans üzerinde etkilere sahiptir. [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)] [Başarım Değerlendirmeleri](../../../../docs/framework/wcf/feature-details/performance-considerations.md).  
+ Güvenlik, performans üzerinde etkilere sahiptir. Daha fazla bilgi için bkz: [başarım düşünceleri](../../../../docs/framework/wcf/feature-details/performance-considerations.md).  
   
 ## <a name="reliable-end-to-end-queued-messaging"></a>Güvenilir uçtan uca ileti kuyruğa alındı  
  Aşağıdaki bölümler, uçtan uca güvenilir Mesajlaşma gerektiren senaryolar için önerilen uygulamaları açıklamaktadır.  
@@ -49,21 +49,21 @@ Bu konu içinde kuyruğa alınan iletişim için önerilen yöntemler sağlar [!
   
  Sıralarındaki uçtan uca güvenilir iletişim için kapatma önerilmez.  
   
- [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)] [İleti aktarımı hatalarını işlemek için teslim edilemeyen iletiler sırası kullanma](../../../../docs/framework/wcf/feature-details/using-dead-letter-queues-to-handle-message-transfer-failures.md).  
+ Daha fazla bilgi için bkz: [ileti aktarımı hatalarını işlemek için teslim edilemeyen iletiler sırası kullanma](../../../../docs/framework/wcf/feature-details/using-dead-letter-queues-to-handle-message-transfer-failures.md).  
   
 ### <a name="use-of-poison-message-handling"></a>Poison ileti işleme kullanımı  
  Poison ileti işleme işlem iletileri hatasından kurtarma olanağı sağlar.  
   
  Poison ileti işleme özelliğini kullanırken emin <xref:System.ServiceModel.MsmqBindingBase.ReceiveErrorHandling%2A> özelliğini uygun değere ayarlayın. Ayar <xref:System.ServiceModel.ReceiveErrorHandling.Drop> veriler kaybolur anlamına gelir. Diğer taraftan, ayarı <xref:System.ServiceModel.ReceiveErrorHandling.Fault> zararlı bir ileti algıladığında hizmet konağı hataları. MSMQ 3.0 kullanılarak <xref:System.ServiceModel.ReceiveErrorHandling.Fault> veri kaybını önlemek ve zararlı ileti dışına taşımak için en iyi seçenektir. MSMQ 4. 0'da da kullanarak <xref:System.ServiceModel.ReceiveErrorHandling.Move> önerilen yaklaşımdır. <xref:System.ServiceModel.ReceiveErrorHandling.Move> Hizmet yeni iletileri işlemeye devam edebilmek için sıradaki zarar görmüş bir ileti taşır. Poison ileti hizmeti zehir iletisi sonra ayrı olarak işleyebilir.  
   
- [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)] [Zehirli ileti işleme](../../../../docs/framework/wcf/feature-details/poison-message-handling.md).  
+ Daha fazla bilgi için bkz: [zehirli ileti işleme](../../../../docs/framework/wcf/feature-details/poison-message-handling.md).  
   
 ## <a name="achieving-high-throughput"></a>Yüksek verimlilik elde  
  Tek bir uç noktada yüksek verimlilik elde etmek için aşağıdakileri kullanın:  
   
--   İşlem yapılan toplu işlem. İşlenen toplu iş çok sayıda ileti tek bir işlemde okuyabilmelerini sağlar. Bu işlem yürütme, genel performansı artırma en iyi duruma getirir. Toplu işleme maliyetini bir yığın içindeki tek bir ileti hata oluşuyor sonra toplu işlemin tamamını geri alınır ve iletileri işlenen teker teker yeniden toplu güvenlidir kadar olması gerekiyorsa olmasıdır. Çoğu durumda, toplu işleme özellikle işlemde diğer kaynak yöneticileri olduğunda sistem performansını artırmak için tercih edilen yöntem olmasını zarar iletileri seyrek, kullanılır. [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)] [Bir işlemde toplu ileti işleme](../../../../docs/framework/wcf/feature-details/batching-messages-in-a-transaction.md).  
+-   İşlem yapılan toplu işlem. İşlenen toplu iş çok sayıda ileti tek bir işlemde okuyabilmelerini sağlar. Bu işlem yürütme, genel performansı artırma en iyi duruma getirir. Toplu işleme maliyetini bir yığın içindeki tek bir ileti hata oluşuyor sonra toplu işlemin tamamını geri alınır ve iletileri işlenen teker teker yeniden toplu güvenlidir kadar olması gerekiyorsa olmasıdır. Çoğu durumda, toplu işleme özellikle işlemde diğer kaynak yöneticileri olduğunda sistem performansını artırmak için tercih edilen yöntem olmasını zarar iletileri seyrek, kullanılır. Daha fazla bilgi için bkz: [bir işlemde toplu ileti](../../../../docs/framework/wcf/feature-details/batching-messages-in-a-transaction.md).  
   
--   Eşzamanlılık. Eşzamanlılık verimliliğini artırır, ancak eşzamanlılık paylaşılan kaynakları için Çekişme de etkiler. [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)] [Eşzamanlılık](../../../../docs/framework/wcf/samples/concurrency.md).  
+-   Eşzamanlılık. Eşzamanlılık verimliliğini artırır, ancak eşzamanlılık paylaşılan kaynakları için Çekişme de etkiler. Daha fazla bilgi için bkz: [eşzamanlılık](../../../../docs/framework/wcf/samples/concurrency.md).  
   
 -   Azaltma. En iyi performans için ileti dağıtıcısı ardışık düzeninde sayısını azaltma. Bunun nasıl yapılacağı örneği için bkz: [azaltma](../../../../docs/framework/wcf/samples/throttling.md).  
   
@@ -73,12 +73,12 @@ Bu konu içinde kuyruğa alınan iletişim için önerilen yöntemler sağlar [!
   
  Grupları kullanırken, MSMQ 3.0 uzak işlem temelli okuma desteklemediğini unutmayın. MSMQ 4.0 uzaktan hizmetteki okuma desteklemiyor.  
   
- [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)] [Bir işlemde toplu ileti işleme](../../../../docs/framework/wcf/feature-details/batching-messages-in-a-transaction.md) ve [Windows Vista, Windows Server 2003 ve Windows XP'de kuyruğa alma özelliği farklar](../../../../docs/framework/wcf/feature-details/diff-in-queue-in-vista-server-2003-windows-xp.md).  
+ Daha fazla bilgi için bkz: [bir işlemde toplu ileti](../../../../docs/framework/wcf/feature-details/batching-messages-in-a-transaction.md) ve [Queuing özelliği Windows Vista, Windows Server 2003 ve Windows XP arasındaki farklar](../../../../docs/framework/wcf/feature-details/diff-in-queue-in-vista-server-2003-windows-xp.md).  
   
 ## <a name="queuing-with-unit-of-work-semantics"></a>İş semantiği birimle queuing  
  Bazı senaryolarda iletiler bir kuyrukta grubunu ilgili olabilir ve bu nedenle, bu iletilerin sıralama önemlidir. Bu senaryolarda, ilgili iletiler birlikte tek bir birim olarak bir grup işlem: tüm iletileri başarıyla işlendi ya da yok. Bu tür davranış uygulamak için kuyruklarla oturumları kullanın.  
   
- [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)] [Bir oturumda kuyruğa alınmış iletileri gruplandırma](../../../../docs/framework/wcf/feature-details/grouping-queued-messages-in-a-session.md).  
+ Daha fazla bilgi için bkz: [gruplandırma sıraya alınan iletileri bir oturumda](../../../../docs/framework/wcf/feature-details/grouping-queued-messages-in-a-session.md).  
   
 ## <a name="correlating-request-reply-messages"></a>İstek-yanıt iletilerini ilişkilendirme  
  Kuyruklar genellikle tek yönlü olmakla birlikte, bazı senaryolarda daha önce gönderilen bir istek aldı bir Yanıtla ilişkilendirmek isteyebilirsiniz. Bu tür bağıntı gerektiriyorsa, iletinin bağıntı bilgilerle içeren kendi SOAP iletisi üstbilgisi uygulamanız önerilir. Genellikle, bu iletiyi başlığıyla gönderen ekler ve iletiyi işlemeyi ve yanıt sırası üzerinde yeni bir ileti ile geri yanıtlama alıcı, böylece gönderenin bağıntı bilgilerini içeren gönderenin ileti üstbilgisi ekler İstek iletisi yanıt iletisiyle tanımlayın.  

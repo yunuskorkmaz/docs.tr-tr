@@ -1,20 +1,17 @@
 ---
-title: "Geç Hesaplamalar (F#)"
-description: "F # geç hesaplamalar uygulamalarınızı ve kitaplıkları performansını geliştirebilirsiniz nasıl öğrenin."
-keywords: "Visual f #, f # işlevsel programlama"
+title: Geç Hesaplamalar (F#)
+description: 'F # geç hesaplamalar uygulamalarınızı ve kitaplıkları performansını geliştirebilirsiniz nasıl öğrenin.'
 author: cartermp
 ms.author: phcart
 ms.date: 05/16/2016
 ms.topic: language-reference
-ms.prod: .net
-ms.technology: devlang-fsharp
+ms.prod: dotnet-fsharp
 ms.devlang: fsharp
-ms.assetid: 3499293e-1d53-4b02-b764-f687fbdaa7fe
-ms.openlocfilehash: 984c96ab68a8919e2382eefe8260b07f191027dd
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.openlocfilehash: 72dc5a14a845b52ae2512314d730516ca0cf4b9d
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="lazy-computations"></a>Geç Hesaplamalar
 
@@ -32,7 +29,7 @@ let identifier = lazy ( expression )
 
 Geç hesaplamalar hesaplamanın sonucu gerekli durumlar için yürütmesi kısıtlayarak performansını artırmak etkinleştirin.
 
-Gerçekleştirilecek hesaplama zorlamak için yöntemi çağırın `Force`. `Force`yalnızca bir kez gerçekleştirilmesi yürütme neden olur. Sonraki çağrılar `Force` aynı sonucu, ancak herhangi bir kod yürütülmez döndürür.
+Gerçekleştirilecek hesaplama zorlamak için yöntemi çağırın `Force`. `Force` yalnızca bir kez gerçekleştirilmesi yürütme neden olur. Sonraki çağrılar `Force` aynı sonucu, ancak herhangi bir kod yürütülmez döndürür.
 
 Aşağıdaki kod yavaş hesaplama kullanımını ve kullanımını gösterir `Force`. Bu kod türünü `result` olan `Lazy<int>`ve `Force` yöntemi döndürür bir `int`.
 
@@ -42,6 +39,6 @@ Geç değerlendirme, ama `Lazy` yazın, sıraları için de kullanılır. Daha f
 
 ## <a name="see-also"></a>Ayrıca Bkz.
 
-[F # dili başvurusu](index.md)
+[F# Dili Başvurusu](index.md)
 
 [LazyExtensions Modülü](https://msdn.microsoft.com/library/86671f40-84a0-402a-867d-ae596218d948)

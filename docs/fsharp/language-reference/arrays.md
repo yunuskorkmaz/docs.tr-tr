@@ -1,20 +1,17 @@
 ---
 title: Diziler (F#)
-description: "Oluşturma ve diziler F # programlama dilini kullanma hakkında bilgi edinin."
-keywords: "Visual f #, f # işlevsel programlama"
+description: 'Oluşturma ve diziler F # programlama dilini kullanma hakkında bilgi edinin.'
 author: cartermp
 ms.author: phcart
 ms.date: 05/16/2016
 ms.topic: language-reference
-ms.prod: .net
-ms.technology: devlang-fsharp
+ms.prod: dotnet-fsharp
 ms.devlang: fsharp
-ms.assetid: 61fa9084-abdc-4cf5-8213-91ec1211866b
-ms.openlocfilehash: 7c9d8405230f4d765d3afdeaa154ddc598d0d1ec
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.openlocfilehash: 650321e864556ff0ba8591e09ffa34877c8a39b7
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="arrays"></a>Diziler
 
@@ -68,7 +65,7 @@ Tüm F # dizi türü .NET Framework türüdür <xref:System.Array?displayPropert
 Kitaplık Modülü [ `Microsoft.FSharp.Collections.Array` ](https://msdn.microsoft.com/library/0cda8040-9396-40dd-8dcd-cf48542165a1) tek boyutlu diziler işlemlerini destekler. Modülleri `Array2D`, `Array3D`, ve `Array4D` dizileri üzerinde işlemler iki, üç ve dört boyut sırasıyla destek işlevler içerir. Rank dizileri dört kullanarak sıfırdan oluşturabilir <xref:System.Array?displayProperty=nameWithType>.
 
 ### <a name="simple-functions"></a>Basit işlevleri
-[`Array.get`](https://msdn.microsoft.com/library/dd93e85d-7e80-4d76-8de0-b6d45bcf07bc)bir öğeyi alır. [`Array.length`](https://msdn.microsoft.com/library/0d775b6a-4a8f-4bd1-83e5-843b3251725f)bir dizi uzunluğu, sağlar. [`Array.set`](https://msdn.microsoft.com/library/847edc0d-4dc5-4a39-98c7-d4320c60e790)bir öğe için belirtilen değere ayarlar. Aşağıdaki kod örneği, bu işlevler kullanımını göstermektedir.
+[`Array.get`](https://msdn.microsoft.com/library/dd93e85d-7e80-4d76-8de0-b6d45bcf07bc) bir öğeyi alır. [`Array.length`](https://msdn.microsoft.com/library/0d775b6a-4a8f-4bd1-83e5-843b3251725f) bir dizi uzunluğu, sağlar. [`Array.set`](https://msdn.microsoft.com/library/847edc0d-4dc5-4a39-98c7-d4320c60e790) bir öğe için belirtilen değere ayarlar. Aşağıdaki kod örneği, bu işlevler kullanımını göstermektedir.
 
 [!code-fsharp[Main](../../../samples/snippets/fsharp/arrays/snippet9.fs)]
 
@@ -80,7 +77,7 @@ Kitaplık Modülü [ `Microsoft.FSharp.Collections.Array` ](https://msdn.microso
 
 ### <a name="functions-that-create-arrays"></a>Diziler oluşturma işlevleri
 
-Çeşitli işlevler, var olan bir dizi gerek kalmadan diziler oluşturun. [`Array.empty`](https://msdn.microsoft.com/library/c3694b92-1c16-4c54-9bf2-fe398fadce32)herhangi bir öğe içermiyor yeni bir dizi oluşturur. [`Array.create`](https://msdn.microsoft.com/library/e848c8d6-1142-4080-9727-8dacc26066be)Belirtilen boyutta bir dizi oluşturur ve sağlanan değerlere tüm öğelerini ayarlar. [`Array.init`](https://msdn.microsoft.com/library/ee898089-63b0-40aa-910c-5ae7e32f6665)bir dizi verilen boyut ve öğeleri oluşturmak için bir işlev oluşturur. [`Array.zeroCreate`](https://msdn.microsoft.com/library/fa5b8e7a-1b5b-411c-8622-b58d7a14d3b2)içinde tüm öğeleri sıfır değeri dizinin türü için başlatılan bir dizi oluşturur. Aşağıdaki kod, bu işlevler gösterir.
+Çeşitli işlevler, var olan bir dizi gerek kalmadan diziler oluşturun. [`Array.empty`](https://msdn.microsoft.com/library/c3694b92-1c16-4c54-9bf2-fe398fadce32) herhangi bir öğe içermiyor yeni bir dizi oluşturur. [`Array.create`](https://msdn.microsoft.com/library/e848c8d6-1142-4080-9727-8dacc26066be) Belirtilen boyutta bir dizi oluşturur ve sağlanan değerlere tüm öğelerini ayarlar. [`Array.init`](https://msdn.microsoft.com/library/ee898089-63b0-40aa-910c-5ae7e32f6665) bir dizi verilen boyut ve öğeleri oluşturmak için bir işlev oluşturur. [`Array.zeroCreate`](https://msdn.microsoft.com/library/fa5b8e7a-1b5b-411c-8622-b58d7a14d3b2) içinde tüm öğeleri sıfır değeri dizinin türü için başlatılan bir dizi oluşturur. Aşağıdaki kod, bu işlevler gösterir.
 
 [!code-fsharp[Main](../../../samples/snippets/fsharp/arrays/snippet91.fs)]
 
@@ -92,7 +89,7 @@ Area of floats set to 5.0: [|5.0; 5.0; 5.0; 5.0; 5.0; 5.0; 5.0; 5.0; 5.0; 5.0|]
 Array of squares: [|0; 1; 4; 9; 16; 25; 36; 49; 64; 81|]
 ```
 
-[`Array.copy`](https://msdn.microsoft.com/library/9d0202f1-1ea0-475e-9d66-4f8ccc3c5b5f)Varolan dizisinden kopyalanır öğeleri içeren yeni bir dizi oluşturur. Kopya öğe türüne bir başvuru türü ise yalnızca başvuru kopyalanır anlamına gelir basit bir kopyası olduğunu unutmayın, temel alınan nesnesi değil. Aşağıdaki kod örneği bunu gösterir.
+[`Array.copy`](https://msdn.microsoft.com/library/9d0202f1-1ea0-475e-9d66-4f8ccc3c5b5f) Varolan dizisinden kopyalanır öğeleri içeren yeni bir dizi oluşturur. Kopya öğe türüne bir başvuru türü ise yalnızca başvuru kopyalanır anlamına gelir basit bir kopyası olduğunu unutmayın, temel alınan nesnesi değil. Aşağıdaki kod örneği bunu gösterir.
 
 [!code-fsharp[Main](../../../samples/snippets/fsharp/arrays/snippet11.fs)]
 
@@ -105,7 +102,7 @@ Array of squares: [|0; 1; 4; 9; 16; 25; 36; 49; 64; 81|]
 
 Dize `Test1` yeni bir öğe oluşturma işlemi başvurusunda yazdığından yalnızca ilk dizisinde görünür `firstArray` içinde hala mevcut olduğu boş bir dize özgün referansı etkilemez ancak `secondArray`. Dize `Test2` çünkü her iki dizilerde görünür `Insert` işlemi <xref:System.Text.StringBuilder?displayProperty=nameWithType> türü etkiler arka plandaki <xref:System.Text.StringBuilder?displayProperty=nameWithType> hem dizilerde başvurulan nesne.
 
-[`Array.sub`](https://msdn.microsoft.com/library/40fb12ba-41d7-4ef0-b33a-56727deeef9d)Yeni bir dizi bir dizi alt aralığı oluşturur. Başlangıç dizini ve uzunluk sağlayarak alt aralığı belirtin. Aşağıdaki kod kullanımını gösteren `Array.sub`.
+[`Array.sub`](https://msdn.microsoft.com/library/40fb12ba-41d7-4ef0-b33a-56727deeef9d) Yeni bir dizi bir dizi alt aralığı oluşturur. Başlangıç dizini ve uzunluk sağlayarak alt aralığı belirtin. Aşağıdaki kod kullanımını gösteren `Array.sub`.
 
 [!code-fsharp[Main](../../../samples/snippets/fsharp/arrays/snippet12.fs)]
 
@@ -114,7 +111,7 @@ Dize `Test1` yeni bir öğe oluşturma işlemi başvurusunda yazdığından yaln
 ```
 [|5; 6; 7; 8; 9; 10; 11; 12; 13; 14|]
 ```
-[`Array.append`](https://msdn.microsoft.com/library/08836310-5036-4474-b9a2-2c73e2293911)Yeni bir dizi varolan dizilerinin birleştirerek oluşturur.
+[`Array.append`](https://msdn.microsoft.com/library/08836310-5036-4474-b9a2-2c73e2293911) Yeni bir dizi varolan dizilerinin birleştirerek oluşturur.
 
 Aşağıdaki kodda **Array.append**.
 
@@ -126,7 +123,7 @@ Aşağıdaki kodda **Array.append**.
 [|1; 2; 3; 4; 5; 6|]
 ```
 
-[`Array.choose`](https://msdn.microsoft.com/library/f5c8a5e2-637f-44d4-b35c-be96a6618b09)Yeni bir dizi dahil etmek için bir dizi öğeleri seçer. Aşağıdaki kodda `Array.choose`. Dizi öğesi türü seçenek türü döndürülen değer türüyle eşleşecek şekilde yok unutmayın. Bu örnekte, öğe türü olan `int` ve seçeneği polinom işlevin sonucu `elem*elem - 1`, olarak bir kayan nokta sayısı.
+[`Array.choose`](https://msdn.microsoft.com/library/f5c8a5e2-637f-44d4-b35c-be96a6618b09) Yeni bir dizi dahil etmek için bir dizi öğeleri seçer. Aşağıdaki kodda `Array.choose`. Dizi öğesi türü seçenek türü döndürülen değer türüyle eşleşecek şekilde yok unutmayın. Bu örnekte, öğe türü olan `int` ve seçeneği polinom işlevin sonucu `elem*elem - 1`, olarak bir kayan nokta sayısı.
 
 [!code-fsharp[Main](../../../samples/snippets/fsharp/arrays/snippet14.fs)]
 
@@ -136,7 +133,7 @@ Aşağıdaki kodda **Array.append**.
 [|3.0; 15.0; 35.0; 63.0; 99.0|]
 ```
 
-[`Array.collect`](https://msdn.microsoft.com/library/c3b60c3b-9455-48c9-bc2b-e88f0434342a)Belirtilen işlev var olan bir dizi her dizi öğesi üzerinde çalışır ve işlev tarafından oluşturulan öğelerin toplar ve bunları yeni bir dizi birleştirir. Aşağıdaki kodda `Array.collect`.
+[`Array.collect`](https://msdn.microsoft.com/library/c3b60c3b-9455-48c9-bc2b-e88f0434342a) Belirtilen işlev var olan bir dizi her dizi öğesi üzerinde çalışır ve işlev tarafından oluşturulan öğelerin toplar ve bunları yeni bir dizi birleştirir. Aşağıdaki kodda `Array.collect`.
 
 [!code-fsharp[Main](../../../samples/snippets/fsharp/arrays/snippet15.fs)]
 
@@ -146,7 +143,7 @@ Aşağıdaki kodda **Array.append**.
 [|0; 1; 0; 1; 2; 3; 4; 5; 0; 1; 2; 3; 4; 5; 6; 7; 8; 9; 10|]
 ```
 
-[`Array.concat`](https://msdn.microsoft.com/library/f7219b79-1ec8-4a25-96b1-edbedb358302)diziler dizisi alır ve bunları tek bir dizi birleştirir. Aşağıdaki kodda `Array.concat`.
+[`Array.concat`](https://msdn.microsoft.com/library/f7219b79-1ec8-4a25-96b1-edbedb358302) diziler dizisi alır ve bunları tek bir dizi birleştirir. Aşağıdaki kodda `Array.concat`.
 
 [!code-fsharp[Main](../../../samples/snippets/fsharp/arrays/snippet16.fs)]
 
@@ -157,7 +154,7 @@ Aşağıdaki kodda **Array.append**.
 (3, 2, 6); (3, 3, 9)|]
 ```
 
-[`Array.filter`](https://msdn.microsoft.com/library/b885b214-47fc-4639-9664-b8c183a39ede)Boole koşul işlevi alır ve yalnızca koşulun doğru olması Giriş dizisinden öğeleri içeren yeni bir dizi oluşturur. Aşağıdaki kodda `Array.filter`.
+[`Array.filter`](https://msdn.microsoft.com/library/b885b214-47fc-4639-9664-b8c183a39ede) Boole koşul işlevi alır ve yalnızca koşulun doğru olması Giriş dizisinden öğeleri içeren yeni bir dizi oluşturur. Aşağıdaki kodda `Array.filter`.
 
 [!code-fsharp[Main](../../../samples/snippets/fsharp/arrays/snippet17.fs)]
 
@@ -167,7 +164,7 @@ Aşağıdaki kodda **Array.append**.
 [|2; 4; 6; 8; 10|]
 ```
 
-[`Array.rev`](https://msdn.microsoft.com/library/1bbf822c-763b-4794-af21-97d2e48ef709)Yeni bir dizi var olan bir dizi sırasını döndürerek oluşturur. Aşağıdaki kodda `Array.rev`.
+[`Array.rev`](https://msdn.microsoft.com/library/1bbf822c-763b-4794-af21-97d2e48ef709) Yeni bir dizi var olan bir dizi sırasını döndürerek oluşturur. Aşağıdaki kodda `Array.rev`.
 
 [!code-fsharp[Main](../../../samples/snippets/fsharp/arrays/snippet18.fs)]  
 
@@ -334,7 +331,7 @@ false
 
 ### <a name="searching-arrays"></a>Arama diziler
 
-[`Array.find`](https://msdn.microsoft.com/library/db6d920a-de19-4520-85a4-d83de77c1b33)Boolean işlevi alır ve işlevin döndüğü ilk öğeyi döndürür `true`, veya başlatır bir <xref:System.Collections.Generic.KeyNotFoundException?displayProperty=nameWithType> koşulu karşılayan herhangi bir öğe bulunursa. [`Array.findIndex`](https://msdn.microsoft.com/library/5ae3a8f9-7b8f-44ea-a740-d5700f4d899f)benzer `Array.find`, ancak bu öğenin kendisi yerine öğenin dizinini döndürür.
+[`Array.find`](https://msdn.microsoft.com/library/db6d920a-de19-4520-85a4-d83de77c1b33) Boolean işlevi alır ve işlevin döndüğü ilk öğeyi döndürür `true`, veya başlatır bir <xref:System.Collections.Generic.KeyNotFoundException?displayProperty=nameWithType> koşulu karşılayan herhangi bir öğe bulunursa. [`Array.findIndex`](https://msdn.microsoft.com/library/5ae3a8f9-7b8f-44ea-a740-d5700f4d899f) benzer `Array.find`, ancak bu öğenin kendisi yerine öğenin dizinini döndürür.
 
 Aşağıdaki kod `Array.find` ve `Array.findIndex` bir mükemmel kare ve mükemmel küpe numarasını bulmak için.
 
@@ -346,7 +343,7 @@ Aşağıdaki kod `Array.find` ve `Array.findIndex` bir mükemmel kare ve mükemm
 The first element that is both a square and a cube is 64 and its index is 62.
 ```
 
-[`Array.tryFind`](https://msdn.microsoft.com/library/7bd65f6c-df77-454c-ac3a-6f7baecec9d9)benzer `Array.find`sonucunu bir seçenek türü ve onu döndürür dışında `None` hiçbir öğe bulunursa. `Array.tryFind`yerine kullanılmalıdır `Array.find` değil bildiğinizde eşleşen bir öğe dizide olup olmadığını. Benzer şekilde, [ `Array.tryFindIndex` ](https://msdn.microsoft.com/library/da82f7fe-95e9-4fd5-a924-cd3c9d10618a) benzer [ `Array.findIndex` ](https://msdn.microsoft.com/library/5ae3a8f9-7b8f-44ea-a740-d5700f4d899f) dışında bu seçenek türü dönüş değeri değil. Hiçbir öğe bulunursa, seçenektir `None`.
+[`Array.tryFind`](https://msdn.microsoft.com/library/7bd65f6c-df77-454c-ac3a-6f7baecec9d9) benzer `Array.find`sonucunu bir seçenek türü ve onu döndürür dışında `None` hiçbir öğe bulunursa. `Array.tryFind` yerine kullanılmalıdır `Array.find` değil bildiğinizde eşleşen bir öğe dizide olup olmadığını. Benzer şekilde, [ `Array.tryFindIndex` ](https://msdn.microsoft.com/library/da82f7fe-95e9-4fd5-a924-cd3c9d10618a) benzer [ `Array.findIndex` ](https://msdn.microsoft.com/library/5ae3a8f9-7b8f-44ea-a740-d5700f4d899f) dışında bu seçenek türü dönüş değeri değil. Hiçbir öğe bulunursa, seçenektir `None`.
 
 Aşağıdaki kod kullanımını gösteren `Array.tryFind`. Bu kod, önceki koduna bağlıdır.
 
@@ -380,7 +377,7 @@ Found an element 4096 with square root 64 and cube root 16.
 
 Kullanım [ `Array.max` ](https://msdn.microsoft.com/library/f03fbda0-fce6-40e2-a85d-79c9d81f710b) veya [ `Array.min` ](https://msdn.microsoft.com/library/d6b3da5f-bac0-4355-9846-4b72d95bc3fd) öğe türü destekliyorsa, en düşük veya en fazla öğe alınamıyor. Benzer şekilde, [ `Array.maxBy` ](https://msdn.microsoft.com/library/18dbe7c5-482e-4766-8e01-12a76f847045) ve [ `Array.minBy` ](https://msdn.microsoft.com/library/24091583-be78-4cc9-9fab-de6d7506af4f) önce yürütülecek, belki de karşılaştırma destekleyen türüne dönüştürmek için bir işlev izin.
 
-[`Array.sum`](https://msdn.microsoft.com/library/4ffdb8c8-cd94-4b0b-9e5c-a7c9c17963c2)bir dizinin öğeleri ekler ve [ `Array.sumBy` ](https://msdn.microsoft.com/library/41698ba6-1adc-4169-8cc5-7a0e3f8de56b) her öğe üzerinde bir işlevini çağırır ve sonuçları bir araya getirir.
+[`Array.sum`](https://msdn.microsoft.com/library/4ffdb8c8-cd94-4b0b-9e5c-a7c9c17963c2) bir dizinin öğeleri ekler ve [ `Array.sumBy` ](https://msdn.microsoft.com/library/41698ba6-1adc-4169-8cc5-7a0e3f8de56b) her öğe üzerinde bir işlevini çağırır ve sonuçları bir araya getirir.
 
 Dönüş değerleri depolamadan dizideki her öğe üzerinde bir işlev yürütmek için kullanın [ `Array.iter` ](https://msdn.microsoft.com/library/94eba0f1-ecd7-459f-b89f-ed2a2923e516). İki dizi eşit uzunlukta içeren bir işlevi için [ `Array.iter2` ](https://msdn.microsoft.com/library/018aa9b9-f186-4142-be8a-a62462794fdc). Bir dizi işlevinin sonuçlarını tutmak ihtiyacınız varsa, kullanmak [ `Array.map` ](https://msdn.microsoft.com/library/38cbe824-0480-47be-85fd-df3afdd97a45) veya [ `Array.map2` ](https://msdn.microsoft.com/library/bb7aafe8-4a1f-45b9-92fc-1af9eafbea5c), aynı anda iki diziler üzerinde çalışır.
 
@@ -392,7 +389,7 @@ Aynı adlı işlevleri hesaplamalar gerçekleştirmek için bu işlevler karşı
 
 ### <a name="modifying-arrays"></a>Diziler değiştirme
 
-[`Array.set`](https://msdn.microsoft.com/library/847edc0d-4dc5-4a39-98c7-d4320c60e790)bir öğe için belirtilen değere ayarlar. [`Array.fill`](https://msdn.microsoft.com/library/c83c9886-81d9-44f9-a195-61c7b87f7df2)belirli bir değere bir dizide öğe aralığını ayarlar. Aşağıdaki kod örneği sağlar `Array.fill`.
+[`Array.set`](https://msdn.microsoft.com/library/847edc0d-4dc5-4a39-98c7-d4320c60e790) bir öğe için belirtilen değere ayarlar. [`Array.fill`](https://msdn.microsoft.com/library/c83c9886-81d9-44f9-a195-61c7b87f7df2) belirli bir değere bir dizide öğe aralığını ayarlar. Aşağıdaki kod örneği sağlar `Array.fill`.
 
 [!code-fsharp[Main](../../../samples/snippets/fsharp/arrays/snippet28.fs)]
 
@@ -406,7 +403,7 @@ Kullanabileceğiniz [ `Array.blit` ](https://msdn.microsoft.com/library/675e13e4
 
 ### <a name="converting-to-and-from-other-types"></a>İçin ve diğer türleri dönüştürme
 
-[`Array.ofList`](https://msdn.microsoft.com/library/e7225239-f561-45a4-b0b5-69a1cdcae78b)bir dizi listesinden bir liste oluşturur. [`Array.ofSeq`](https://msdn.microsoft.com/library/6bedf5e0-4b22-46da-b09c-6aa09eff220c)bir dizi bir dizisini oluşturur. [`Array.toList`](https://msdn.microsoft.com/library/4deff724-0be4-4688-92e7-9d67a1097786)ve [ `Array.toSeq` ](https://msdn.microsoft.com/library/ac28dbab-406c-4fe0-ab08-c1ce5e247af4) dizi türünden diğer bu koleksiyon türleri dönüştürmek.
+[`Array.ofList`](https://msdn.microsoft.com/library/e7225239-f561-45a4-b0b5-69a1cdcae78b) bir dizi listesinden bir liste oluşturur. [`Array.ofSeq`](https://msdn.microsoft.com/library/6bedf5e0-4b22-46da-b09c-6aa09eff220c) bir dizi bir dizisini oluşturur. [`Array.toList`](https://msdn.microsoft.com/library/4deff724-0be4-4688-92e7-9d67a1097786) ve [ `Array.toSeq` ](https://msdn.microsoft.com/library/ac28dbab-406c-4fe0-ab08-c1ce5e247af4) dizi türünden diğer bu koleksiyon türleri dönüştürmek.
 
 ### <a name="sorting-arrays"></a>Sıralama dizileri
 
@@ -414,13 +411,13 @@ Kullanım [ `Array.sort` ](https://msdn.microsoft.com/library/c6679075-e7eb-463c
 
 ### <a name="arrays-and-tuples"></a>Diziler ve diziler
 
-İşlevler [ `Array.zip` ](https://msdn.microsoft.com/library/23e086b8-b266-4db2-8b68-e88e6a8e2187) ve [ `Array.unzip` ](https://msdn.microsoft.com/library/a529b47c-2e2b-4f79-ad44-c578432d2f48) dizi ve diziler tanımlama grubu çiftleri dizileri Dönüştür. [`Array.zip3`](https://msdn.microsoft.com/library/1745744a-d2ca-4c3e-b825-3f15d9f4000d)ve [ `Array.unzip3` ](https://msdn.microsoft.com/library/bc3e6db0-f334-444f-8c30-813942880677) üç öğelerinin diziler veya üç dizi diziler çalışmak benzer.
+İşlevler [ `Array.zip` ](https://msdn.microsoft.com/library/23e086b8-b266-4db2-8b68-e88e6a8e2187) ve [ `Array.unzip` ](https://msdn.microsoft.com/library/a529b47c-2e2b-4f79-ad44-c578432d2f48) dizi ve diziler tanımlama grubu çiftleri dizileri Dönüştür. [`Array.zip3`](https://msdn.microsoft.com/library/1745744a-d2ca-4c3e-b825-3f15d9f4000d) ve [ `Array.unzip3` ](https://msdn.microsoft.com/library/bc3e6db0-f334-444f-8c30-813942880677) üç öğelerinin diziler veya üç dizi diziler çalışmak benzer.
 
 ## <a name="parallel-computations-on-arrays"></a>Diziler üzerinde paralel hesaplamalar
 
 Modül [ `Array.Parallel` ](https://msdn.microsoft.com/library/60f30b77-5af4-4050-9a5c-bcdb3f5cbb09) diziler üzerinde paralel hesaplamalar gerçekleştirmek için işlevler içerir. Bu modül, .NET Framework 4. sürümden önceki sürümlerini hedefleyen uygulamalar de kullanılamaz.
 
 ## <a name="see-also"></a>Ayrıca Bkz.
-[F # dili başvurusu](index.md)
+[F# Dili Başvurusu](index.md)
 
 [F #'TA; Türler](fsharp-types.md)

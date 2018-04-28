@@ -1,27 +1,26 @@
 ---
-title: "DotNet yükleme betikleri"
-description: ".NET Core CLI araçlarını ve paylaşılan çalışma zamanı yükleme dotnet yükleme betikleri hakkında bilgi edinin."
-keywords: "DotNet yükleme, dotnet yükleme betikleri, .NET Core"
+title: DotNet yükleme betikleri
+description: .NET Core CLI araçlarını ve paylaşılan çalışma zamanı yükleme dotnet yükleme betikleri hakkında bilgi edinin.
 author: blackdwarf
 ms.author: mairaw
 ms.date: 09/11/2017
-ms.topic: article
-ms.prod: .net-core
+ms.topic: conceptual
+ms.prod: dotnet-core
 ms.technology: dotnet-cli
 ms.devlang: dotnet
-ms.assetid: b64e7e6f-ffb4-4fc8-b43b-5731c89479c2
-ms.workload: dotnetcore
-ms.openlocfilehash: bc38ca7b9f00c6c252ff4963c42519a64c456b43
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.workload:
+- dotnetcore
+ms.openlocfilehash: 96336df087ea2ad01584010f0715ad31e079b663
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="dotnet-install-scripts-reference"></a>DotNet yükleme komut başvurusu
 
 ## <a name="name"></a>Ad
 
-`dotnet-install.ps1` | `dotnet-install.sh`-.NET Core CLI araçlarını ve paylaşılan çalışma zamanı'nı yüklemek için kullanılan komut dosyası.
+`dotnet-install.ps1` | `dotnet-install.sh` -.NET Core CLI araçlarını ve paylaşılan çalışma zamanı'nı yüklemek için kullanılan komut dosyası.
 
 ## <a name="synopsis"></a>Özet
 
@@ -39,8 +38,8 @@ macOS/Linux:
 
 Üzerinde barındırılan kararlı sürümünü kullanmanızı öneririz [.NET Core ana Web sitesi](https://dot.net). Komut dosyalarını doğrudan yolları şunlardır:
 
-* https://dot.NET/v1/dotnet-install.sh (bash, UNIX)
-* https://dot.NET/v1/dotnet-install.ps1 (Powershell, Windows)
+* https://dot.net/v1/dotnet-install.sh (bash, UNIX)
+* https://dot.net/v1/dotnet-install.ps1 (Powershell, Windows)
 
 Bu komut dosyalarını ana yararlılığı Otomasyon senaryoları ve yönetici olmayan yüklemeleri de sağlanır. İki komut vardır: Windows üzerinde çalışan bir PowerShell Betiği biridir. Diğer komut dosyası Linux/macOS üzerinde çalıştığı bir bash komut dosyasıdır. Her iki komut dosyasını aynı davranışı sahiptir. Linux/macOS sistemlerde komut dosyasıyla PowerShell anahtarları kullanabilmeniz için bash komut dosyası ayrıca PowerShell anahtarları okur. 
 
@@ -58,8 +57,8 @@ Belirli bir sürüm kullanarak yükleyebilirsiniz `--version` bağımsız deği�
 
 Yükleme için kaynak kanalı belirtir. Olası değerler şunlardır:
 
-- `Current`-Geçerli sürüm
-- `LTS`-Uzun vadeli bir destek kanalıyla (geçerli desteklenen sürüm)
+- `Current` -Geçerli sürüm
+- `LTS` -Uzun vadeli bir destek kanalıyla (geçerli desteklenen sürüm)
 - İki parçalı sürümü belirli bir sürüm temsil eden X.Y biçiminde (örneğin, `2.0` veya `1.0`)
 - Dal adı [Örneğin, `release/2.0.0`, `release/2.0.0-preview2`, veya `master` için en son `master` şube (gecelik sürümleri "kenar taşmasını")]
 
@@ -69,9 +68,9 @@ Varsayılan değer `LTS` şeklindedir. .NET Destek kanallarını hakkında daha 
 
 Özel Yapı sürümünü temsil eder. Olası değerler şunlardır:
 
-- `latest`-En yeni kanal oluştur (ile kullanılan `-Channel` seçeneği)
-- `coherent`-Son tutarlı yapı kanalda; en son kararlı paket birlikte kullanır (şube adı ile kullanılan `-Channel` seçenekleri)
-- Belirli bir temsil eden X.Y.Z biçiminde üç bölümlük sürüm yapı sürümü; yerine geçen `-Channel` seçeneği. Örneğin:`2.0.0-preview2-006120`
+- `latest` -En yeni kanal oluştur (ile kullanılan `-Channel` seçeneği)
+- `coherent` -Son tutarlı yapı kanalda; en son kararlı paket birlikte kullanır (şube adı ile kullanılan `-Channel` seçenekleri)
+- Belirli bir temsil eden X.Y.Z biçiminde üç bölümlük sürüm yapı sürümü; yerine geçen `-Channel` seçeneği. Örneğin: `2.0.0-preview2-006120`
 
 Atlanırsa, `-Version` varsayılan olarak `latest`.
 

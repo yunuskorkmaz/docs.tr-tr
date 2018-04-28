@@ -1,20 +1,17 @@
 ---
-title: "F# Türleri"
-description: "F # ve F # türleri nasıl adlı ve açıklanan kullanılan türleri hakkında bilgi edinin."
-keywords: "Visual f #, f # işlevsel programlama"
+title: F# Türleri
+description: 'F # ve F # türleri nasıl adlı ve açıklanan kullanılan türleri hakkında bilgi edinin.'
 author: cartermp
 ms.author: phcart
 ms.date: 05/16/2016
 ms.topic: language-reference
-ms.prod: .net
-ms.technology: devlang-fsharp
+ms.prod: dotnet-fsharp
 ms.devlang: fsharp
-ms.assetid: c7272a0d-5ab6-4eae-bceb-e49af498b917
-ms.openlocfilehash: 9b7235637f301f91ae2cc8fbc59adc27cdfd5bd0
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.openlocfilehash: 42521ed75a76753af81d3bbb9693ec5af29536ad
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="f-types"></a>F# Türleri
 
@@ -51,12 +48,12 @@ Aşağıdaki tabloda, F # türleri türü sözdizimi yönlerini gösterir.
 |dizi|*tür adı*[] veya<br /><br />*tür adı* dizisi|`int[]`<br /><br />`array<int>`<br /><br />`int array`|
 |İki boyutlu dizi|*tür adı*[,]|`int[,]`<br /><br />`float[,]`|
 |Üç boyutlu dizi|*tür adı*[,]|`float[,,]`|
-|Tanımlama grubu|*türü Ad1* &#42; *türü ad2* ...|Örneğin, `(1,'b',3)` türüne sahip`int * char * int`|
+|Tanımlama grubu|*türü Ad1* &#42; *türü ad2* ...|Örneğin, `(1,'b',3)` türüne sahip `int * char * int`|
 |genel tür|*tür parametresi* *genel tür adı*<br /><br />veya<br /><br />*genel tür adı*&lt;*türü parametre listesi*&gt;|`'a list`<br /><br />`list<'a>`<br /><br />`Dictionary<'key, 'value>`|
 |oluşturulan türü (sağlanan belirli tür bağımsız değişkeni olan genel bir tür)|*tür bağımsız değişkeni* *genel tür adı*<br /><br />veya<br /><br />*genel tür adı*&lt;*türü bağımsız değişken listesi*&gt;|`int option`<br /><br />`string list`<br /><br />`int ref`<br /><br />`option<int>`<br /><br />`list<string>`<br /><br />`ref<int>`<br /><br />`Dictionary<int, string>`|
-|tek bir parametre olan işlevi türü|*parametre type1*  - &gt; *dönüş türü*|İsteyen bir işlevi bir `int` ve döndüren bir `string` türüne sahip`int -> string`|
-|birden çok parametre olan işlevi türü|*parametre type1*  - &gt; *parametresi type2*  - &gt; ... -&gt; *dönüş türü*|İsteyen bir işlevi bir `int` ve `float` ve döndüren bir `string` türüne sahip`int -> float -> string`|
-|bir parametre olarak daha yüksek sıra işlevi|(*işlev türü*)|`List.map`türüne sahip`('a -> 'b) -> 'a list -> 'b list`|
+|tek bir parametre olan işlevi türü|*parametre type1*  - &gt; *dönüş türü*|İsteyen bir işlevi bir `int` ve döndüren bir `string` türüne sahip `int -> string`|
+|birden çok parametre olan işlevi türü|*parametre type1*  - &gt; *parametresi type2*  - &gt; ... -&gt; *dönüş türü*|İsteyen bir işlevi bir `int` ve `float` ve döndüren bir `string` türüne sahip `int -> float -> string`|
+|bir parametre olarak daha yüksek sıra işlevi|(*işlev türü*)|`List.map` türüne sahip `('a -> 'b) -> 'a list -> 'b list`|
 |temsilci|Temsilci *işlev türü*|`delegate of unit -> int`|
 |Esnek türü|#*tür adı*|`#System.Windows.Forms.Control`<br /><br />`#seq<int>`|
 
@@ -65,20 +62,20 @@ Aşağıdaki tabloda, F # türleri türü sözdizimi yönlerini gösterir.
 
 |Konu|Açıklama|
 |-----|-----------|
-|[İlkel türler](primitive-types.md)|Tam sayı türleri, Boolean türünde ve karakter türleri gibi yerleşik basit türleri açıklanmaktadır.|
-|[Birim türü](unit-type.md)|Açıklar `unit` türü, bir değere sahip ve () tarafından belirtilen bir türü; eşdeğer `void` C# ve `Nothing` Visual Basic'te.|
-|[Diziler](tuples.md)|Tanımlama grubu, çiftleri, Üçlü, quadruples ve benzeri gruplandırılmış herhangi bir türde ilişkili değerleri içeren bir türü açıklanmaktadır.|
+|[İlkel Türler](primitive-types.md)|Tam sayı türleri, Boolean türünde ve karakter türleri gibi yerleşik basit türleri açıklanmaktadır.|
+|[Birim Türü](unit-type.md)|Açıklar `unit` türü, bir değere sahip ve () tarafından belirtilen bir türü; eşdeğer `void` C# ve `Nothing` Visual Basic'te.|
+|[Demetler](tuples.md)|Tanımlama grubu, çiftleri, Üçlü, quadruples ve benzeri gruplandırılmış herhangi bir türde ilişkili değerleri içeren bir türü açıklanmaktadır.|
 |[Seçenekler](options.md)|Seçeneği, bir değere sahip veya boş bir türü açıklanmaktadır.|
 |[Listeler](lists.md)|Öğeleri sıralı, sabit dizi listelerini açıklar tüm aynı türde.|
 |[Diziler](arrays.md)|Bitişik bir bellek bloğu kaplar ve sabit boyutludur değişebilir öğeleri aynı türde kümesi sıralı diziler açıklar.|
-|[Dizileri](sequences.md)|Mantıksal bir değer dizisini temsil eden dizisi türü açıklanır; tek tek değerleri yalnızca gerektiğinde hesaplanır.|
-|[Kayıtları](records.md)|Kayıt türü, küçük bir adlandırılmış değerler toplamasını açıklar.|
-|[Ayrılmış birleşimler](discriminated-unions.md)|Ayrılmış birleşim türü değerleri olası türleri kümesi herhangi biri olabilir bir tür açıklar.|
+|[Diziler](sequences.md)|Mantıksal bir değer dizisini temsil eden dizisi türü açıklanır; tek tek değerleri yalnızca gerektiğinde hesaplanır.|
+|[Kayıtlar](records.md)|Kayıt türü, küçük bir adlandırılmış değerler toplamasını açıklar.|
+|[Ayrılmış Birleşimler](discriminated-unions.md)|Ayrılmış birleşim türü değerleri olası türleri kümesi herhangi biri olabilir bir tür açıklar.|
 |[İşlevler](functions/index.md)|İşlev değerleri açıklanmaktadır.|
-|[Sınıfları](classes.md)|Sınıf türü, bir .NET başvurusu türüne karşılık gelen bir nesne türü açıklanmaktadır. Sınıf türleri üyeleri, özellikler, uygulanan arabirimler ve bir taban türü içerebilir.|
-|[Yapıları](structures.md)|Açıklar `struct` türü, bir .NET değer türüne karşılık gelen bir nesne türü. `struct` Türü genellikle veri küçük bir toplamasını temsil eder.|
-|[Arabirimleri](interfaces.md)|Bazı işlevler sağlar, ancak hiçbir veri içeren üyelerin kümesini temsil eden türler arabirimi türleri açıklanmaktadır. Bir arabirim türü kullanışlı olması için bir nesne türü tarafından uygulanmalıdır.|
+|[Sınıflar](classes.md)|Sınıf türü, bir .NET başvurusu türüne karşılık gelen bir nesne türü açıklanmaktadır. Sınıf türleri üyeleri, özellikler, uygulanan arabirimler ve bir taban türü içerebilir.|
+|[Yapılar](structures.md)|Açıklar `struct` türü, bir .NET değer türüne karşılık gelen bir nesne türü. `struct` Türü genellikle veri küçük bir toplamasını temsil eder.|
+|[Arabirimler](interfaces.md)|Bazı işlevler sağlar, ancak hiçbir veri içeren üyelerin kümesini temsil eden türler arabirimi türleri açıklanmaktadır. Bir arabirim türü kullanışlı olması için bir nesne türü tarafından uygulanmalıdır.|
 |[Temsilciler](delegates.md)|Bir nesne olarak bir işlevi temsil temsilci türünü tanımlar.|
-|[Numaralandırmalar](enumerations.md)|Değerleri bir adlandırılmış değerler kümesine ait numaralandırma türleri açıklanmaktadır.|
-|[Öznitelikleri](attributes.md)|Başka bir tür için meta verileri belirtmek için kullanılan öznitelikleri açıklanmaktadır.|
-|[Özel durum türleri](exception-handling/exception-types.md)|Hata bilgilerini belirtmek özel durumlar açıklanmaktadır.|
+|[Sabit Listeleri](enumerations.md)|Değerleri bir adlandırılmış değerler kümesine ait numaralandırma türleri açıklanmaktadır.|
+|[Öznitelikler](attributes.md)|Başka bir tür için meta verileri belirtmek için kullanılan öznitelikleri açıklanmaktadır.|
+|[Özel Durum Türleri](exception-handling/exception-types.md)|Hata bilgilerini belirtmek özel durumlar açıklanmaktadır.|

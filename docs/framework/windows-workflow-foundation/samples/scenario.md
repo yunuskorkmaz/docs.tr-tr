@@ -14,14 +14,14 @@ ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: 60f6571d7702236ee24c0cb9da2aa4121feddcf0
-ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
-ms.translationtype: HT
+ms.openlocfilehash: ecf45e4d40c305c5e324d3ab8469ff24f5a092ef
+ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="scenario"></a>Senaryo
-Bu bölümde örnekleri içeren [!INCLUDE[wf](../../../../includes/wf-md.md)] senaryoları.  
+Bu bölüm, Windows Workflow Foundation (WF) senaryoları örnekleri içerir.  
   
 ## <a name="in-this-section"></a>Bu Bölümde  
  [Etkinlik Kitaplığı](../../../../docs/framework/windows-workflow-foundation/samples/activity-library.md)  
@@ -40,7 +40,7 @@ Bu bölümde örnekleri içeren [!INCLUDE[wf](../../../../includes/wf-md.md)] se
  Bir birleşimini kullanarak basit kronometre senaryosunun nasıl uygulanacağını gösterir <xref:System.Activities.Statements.Flowchart> ve <xref:System.Activities.Statements.Pick> etkinlikler.  
   
  [XAML içinde WPF ve WF tümleştirmesi](../../../../docs/framework/windows-workflow-foundation/samples/wpf-and-wf-integration-in-xaml.md)  
- Windows Presentation Foundation (WPF) kullanan bir uygulama oluşturmak nasıl gösterir ve [!INCLUDE[wf](../../../../includes/wf-md.md)] tek bir XAML belge özellikleri. Bunu başarmak için örnek kullanır [!INCLUDE[wf](../../../../includes/wf-md.md)] ve XAML genişletilebilirlik.  
+ Tek bir XAML belge içinde Windows Presentation Foundation (WPF) ve Windows Workflow Foundation (WF) özelliklerini kullanan bir uygulama oluşturmak gösterilmiştir. Bunu başarmak için Windows Workflow Foundation (WF) ve XAML genişletilebilirlik örnek kullanır.  
   
  [Dış Kural Kümesi Araç Seti](../../../../docs/framework/windows-workflow-foundation/samples/external-ruleset-toolkit.md)  
  Yönetmek ve bir veritabanında RuleSets düzenlemek ve çalışma zamanında bir iş akışı bu RuleSets erişmek gösterilmiştir.

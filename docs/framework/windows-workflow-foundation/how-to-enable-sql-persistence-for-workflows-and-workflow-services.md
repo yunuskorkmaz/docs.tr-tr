@@ -1,31 +1,32 @@
 ---
-title: "Nasıl yapılır: iş akışları ve iş akışı hizmetleri için SQL kalıcılığı etkinleştir"
-ms.custom: 
+title: 'Nasıl yapılır: iş akışları ve iş akışı hizmetleri için SQL kalıcılığı etkinleştir'
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - csharp
 - vb
 ms.assetid: ca7bf77f-3e5d-4b23-b17a-d0b60f46411d
-caps.latest.revision: "36"
+caps.latest.revision: 36
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 60fac3cba4da35b5146f777abd912ad15f0f29eb
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 5d687c00edd9d495f3b7715474d7eb2e107c23f0
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="how-to-enable-sql-persistence-for-workflows-and-workflow-services"></a>Nasıl yapılır: iş akışları ve iş akışı hizmetleri için SQL kalıcılığı etkinleştir
 Bu konuda, iş akışlarınızı kalıcılığını etkinleştirmek için SQL iş akışı örneği deposuna özelliği yapılandırmayı açıklar ve iş akışı her ikisi de program aracılığıyla bir yapılandırma dosyası kullanarak hizmetleri ve.  
   
- Windows Server App Fabric kalıcılığı yapılandırma işlemini basitleştirir. [!INCLUDE[crdefault](../../../includes/crdefault-md.md)][App Fabric kalıcılığı yapılandırma](http://go.microsoft.com/fwlink/?LinkId=201204)  
+ Windows Server App Fabric kalıcılığı yapılandırma işlemini basitleştirir. Daha fazla bilgi için bkz: [uygulama doku kalıcılığı yapılandırma](http://go.microsoft.com/fwlink/?LinkId=201204)  
   
  SQL iş akışı örneği depolama özelliğini kullanmadan önce iş akışı örnekleri kalıcı hale getirmek için özelliğini kullanan bir veritabanı oluşturun. [!INCLUDE[netfx_current_short](../../../includes/netfx-current-short-md.md)] Kurulum programı %WINDIR%\Microsoft.NET\Framework\v4.xxx\SQL\EN klasörüne SQL iş akışı örneği deposuna özelliğiyle ilişkili SQL komut dosyalarını kopyalar. Bu komut dosyaları, iş akışı örnekleri kalıcı hale getirmek için kullanılacak SQL iş akışı örneği deposu istediğiniz SQL Server 2005 veya SQL Server 2008 veritabanına karşı çalışırlar. İlk SqlWorkflowInstanceStoreSchema.sql dosyasını çalıştırın ve sonra SqlWorkflowInstanceStoreLogic.sql dosyasını çalıştırın.  
   
@@ -40,7 +41,7 @@ Bu konuda, iş akışlarınızı kalıcılığını etkinleştirmek için SQL i�
 >   
 >  System.Data.SqlClient.SqlException: saklı yordam 'System.Activities.DurableInstancing.CreateLockOwner' bulunamadı.  
   
- Aşağıdaki bölümlerde, iş akışları ve iş akışı hizmetleri SQL iş akışı örneği deposunu kullanan kalıcılığını etkinleştirmek açıklar. [!INCLUDE[crabout](../../../includes/crabout-md.md)]SQL iş akışı örneği deposuna özelliklerini görmek [özellikleri SQL iş akışı örneği deposuna](../../../docs/framework/windows-workflow-foundation/properties-of-sql-workflow-instance-store.md).  
+ Aşağıdaki bölümlerde, iş akışları ve iş akışı hizmetleri SQL iş akışı örneği deposunu kullanan kalıcılığını etkinleştirmek açıklar. [!INCLUDE[crabout](../../../includes/crabout-md.md)] SQL iş akışı örneği deposuna özelliklerini görmek [özellikleri SQL iş akışı örneği deposuna](../../../docs/framework/windows-workflow-foundation/properties-of-sql-workflow-instance-store.md).  
   
 ## <a name="enabling-persistence-for-self-hosted-workflows-that-use-workflowapplication"></a>Kalıcılığı Self-Hosted WorkflowApplication kullanan iş akışları için etkinleştirme  
  Kalıcılık kullanan kendi kendini barındıran iş akışları için etkinleştirebilirsiniz <xref:System.Activities.WorkflowApplication> kullanarak program aracılığıyla <xref:System.Activities.DurableInstancing.SqlWorkflowInstanceStore> nesne modeli. Aşağıdaki yordam, bunu yapmak için adımları içerir.  

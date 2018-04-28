@@ -1,20 +1,17 @@
 ---
-title: "Numaralandırmalar (F#)"
-description: "F # numaralandırmalar değişmez değerler yerine kodunuzu daha okunabilir ve korunabilir hale getirmek için nasıl kullanılacağını öğrenin."
-keywords: "Visual f #, f # işlevsel programlama"
+title: Numaralandırmalar (F#)
+description: 'F # numaralandırmalar değişmez değerler yerine kodunuzu daha okunabilir ve korunabilir hale getirmek için nasıl kullanılacağını öğrenin.'
 author: cartermp
 ms.author: phcart
 ms.date: 05/16/2016
 ms.topic: language-reference
-ms.prod: .net
-ms.technology: devlang-fsharp
+ms.prod: dotnet-fsharp
 ms.devlang: fsharp
-ms.assetid: 9272bf5a-9a9f-4314-9e34-a3248e5244f5
-ms.openlocfilehash: de0273900b707c99e6fb1bcc84e5c2b9ef2bc725
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.openlocfilehash: 4b1a61fb69403f826733893667e55991d39867c6
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="enumerations"></a>Numaralandırmalar
 
@@ -56,6 +53,6 @@ Varsayılan `enum` işlevi çalışır türüyle `int32`. Bu nedenle, temel alı
 [!code-fsharp[Main](../../../samples/snippets/fsharp/lang-ref-1/snippet2104.fs)]
     
 ## <a name="see-also"></a>Ayrıca Bkz.
-[F # dili başvurusu](index.md)
+[F# Dili Başvurusu](index.md)
 
-[Atama ve dönüştürmeler](casting-and-conversions.md)
+[Tür Değiştirme ve Dönüştürmeler](casting-and-conversions.md)

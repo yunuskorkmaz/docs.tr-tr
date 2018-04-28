@@ -1,20 +1,21 @@
 ---
-title: "Visual Studio 2017 .NET çekirdek ile bir sınıf kitaplığı kullanma"
-description: "Visual Studio 2017 ile bir sınıf kitaplığı'nda üyeleri çağrı öğrenin."
+title: Visual Studio 2017 .NET çekirdek ile bir sınıf kitaplığı kullanma
+description: Visual Studio 2017 ile bir sınıf kitaplığı'nda üyeleri çağrı öğrenin.
 author: BillWagner
 ms.author: wiwagn
 ms.date: 08/07/2017
-ms.topic: article
-ms.prod: .net-core
+ms.topic: conceptual
+ms.prod: dotnet-core
 dev_langs:
 - csharp
 - vb
-ms.workload: dotnetcore
-ms.openlocfilehash: 1525bd3f9d249fe39fd65b53bc8d1e8eddb09ab9
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.workload:
+- dotnetcore
+ms.openlocfilehash: 7364f9a4dadf7c4a28dab0cff2fca80d0f3af62c
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="consuming-a-class-library-with-net-core-in-visual-studio-2017"></a>Visual Studio 2017 .NET çekirdek ile bir sınıf kitaplığı kullanma
 
@@ -61,7 +62,7 @@ Sınıf kitaplığı olarak aynı çözümde birim testleri dahil gibi uygulaman
 # <a name="visual-basictabvisual-basic"></a>[Visual Basic](#tab/visual-basic)
 1. Açık `ClassLibraryProjects` oluşturduğunuz çözüm [sınıfı Visual Basic ve Visual Studio 2017 .NET Core kitaplığı oluşturma](vb-library-with-visual-studio.md) konu. İçinde **Çözüm Gezgini**, sağ **ClassLibraryProjects** çözümü ve select **Ekle** > **yeni proje** gelen bağlam menüsü.
 
-1. İçinde **Yeni Proje Ekle** iletişim kutusunda, genişletin **Visual Basic** düğümü ve select **.NET Core** düğümünü ve ardından **konsol uygulaması (.NET Core)**proje şablonu. İçinde **adı** metin kutusu, "Gösterimi" yazın ve seçin **Tamam** düğmesi.
+1. İçinde **Yeni Proje Ekle** iletişim kutusunda, genişletin **Visual Basic** düğümü ve select **.NET Core** düğümünü ve ardından **konsol uygulaması (.NET Core)** proje şablonu. İçinde **adı** metin kutusu, "Gösterimi" yazın ve seçin **Tamam** düğmesi.
 
    ![Yeni Proje iletişim kutusu ekleme](./media/consuming-library-with-visual-studio/vb-addnewproject.png)
 

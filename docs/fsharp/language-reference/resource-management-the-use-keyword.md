@@ -1,20 +1,17 @@
 ---
-title: "Kaynak Yönetimi: use Anahtar Sözcüğü (F#)"
+title: 'Kaynak Yönetimi: use Anahtar Sözcüğü (F#)'
 description: "F # anahtar sözcüğü 'use' ve yayın kaynakların ve başlatma denetleyebilirsiniz 'kullanılarak' işlevi hakkında bilgi edinin."
-keywords: "Visual f #, f # işlevsel programlama"
 author: cartermp
 ms.author: phcart
 ms.date: 05/16/2016
 ms.topic: language-reference
-ms.prod: .net
-ms.technology: devlang-fsharp
+ms.prod: dotnet-fsharp
 ms.devlang: fsharp
-ms.assetid: 00c3040e-859f-4dad-a7b5-7b8d44dc232c
-ms.openlocfilehash: d4e8626f07f1c77e52e8fabd5ccc07dbf1fa8ddd
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.openlocfilehash: 0e134bf5b302911324dd224316941fee693b787b
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="resource-management-the-use-keyword"></a>Kaynak Yönetimi: use Anahtar Sözcüğü
 
@@ -44,7 +41,7 @@ Kullanabileceğiniz `use` hesaplama ifadelerde özelleştirilmiş bir sürümün
 ## <a name="using-function"></a>using işlevi
 `using` İşlevi aşağıdaki biçime sahiptir:
 
-`using`(*İfade1*) *işlevi veya lambda*
+`using` (*İfade1*) *işlevi veya lambda*
 
 İçinde bir `using` ifadesi *İfade1* çıkarılması gerekir nesnesi oluşturur. Sonucu *İfade1* (çıkarılması gerekir nesnesi) bir bağımsız değişken hale *değeri*, *işlevi veya lambda*, tek bir bekliyor ya da bir işlevi olan bağımsız değişken değeri ile eşleşen bir tür kalan üretilen *İfade1*, ya da bu türünde bir bağımsız değişken bekler bir lambda ifadesi. Çalışma zamanı yürütme işlevi işlemi sonunda, çağıran `Dispose` ve kaynakları serbest bırakır (değer değilse `null`, bu durumda Dispose çağrısı bulunulmadı).
 
@@ -64,4 +61,4 @@ Not işlevi bazı bağımsız değişkenler uygulanmış olan bir işlev olabili
 
 
 ## <a name="see-also"></a>Ayrıca Bkz.
-[F # dili başvurusu](index.md)
+[F# Dili Başvurusu](index.md)

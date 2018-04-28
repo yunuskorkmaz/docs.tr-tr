@@ -1,20 +1,17 @@
 ---
 title: Olaylar (F#)
-description: "F # olayları nasıl GUI programlamada önemli kullanıcı eylemlerini işlev çağrılarını ilişkilendirmek etkinleştirme hakkında bilgi edinin."
-keywords: "Visual f #, f # işlevsel programlama"
+description: 'F # olayları nasıl GUI programlamada önemli kullanıcı eylemlerini işlev çağrılarını ilişkilendirmek etkinleştirme hakkında bilgi edinin.'
 author: cartermp
 ms.author: phcart
 ms.date: 05/16/2016
 ms.topic: language-reference
-ms.prod: .net
-ms.technology: devlang-fsharp
+ms.prod: dotnet-fsharp
 ms.devlang: fsharp
-ms.assetid: 28b588f2-0c9e-4c0d-babf-901ed934638a
-ms.openlocfilehash: 9465f33bac6fa8234f684ddefe24cbe4d6c71028
-ms.sourcegitcommit: 685143b62385500f59bc36274b8adb191f573a16
+ms.openlocfilehash: 5c5f152830d4d91a25c79a09800263cdd85ed8b7
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/09/2017
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="events"></a>Olaylar
 
@@ -33,7 +30,7 @@ Türü `Add` yöntemi `('a -> unit) -> unit`. Bu nedenle, olay işleyicisi yönt
 [!code-fsharp[Main](../../../../samples/snippets/fsharp/lang-ref-2/snippet3602.fs)]
     
 ## <a name="creating-custom-events"></a>Özel Olaylar Oluşturma
-F # olayları temsil F # tarafından [olay](https://msdn.microsoft.com/library/f3b47c8a-4ee5-4ce8-9a72-ad305a17c4b9) sınıfı, hangi uygulayan [IEvent](https://msdn.microsoft.com/library/8dbca0df-f8a1-40bd-8d50-aa26f6a8b862) arabirimi. `IEvent`kendisini diğer iki arabirim işlevlerini birleştiren bir arabirimdir `System.IObservable<'T>` ve [IDelegateEvent](https://msdn.microsoft.com/library/3d849465-6b8e-4fc5-b36c-2941d734268a). Bu nedenle, `Event`s sahip diğer dillerde temsilciler eşdeğer işlevselliğini yanı sıra, ek işlevinden `IObservable`, başka bir deyişle, F # olayları olay filtreleme ve F # birinci sınıf işlevler ve lambda ifadeleri kullanma desteği olay işleyicileri olarak. Bu işlev sağlanan [Olay Modülü](https://msdn.microsoft.com/library/8b883baa-a460-4840-9baa-de8260351bc7).
+F # olayları temsil F # tarafından [olay](https://msdn.microsoft.com/library/f3b47c8a-4ee5-4ce8-9a72-ad305a17c4b9) sınıfı, hangi uygulayan [IEvent](https://msdn.microsoft.com/library/8dbca0df-f8a1-40bd-8d50-aa26f6a8b862) arabirimi. `IEvent` kendisini diğer iki arabirim işlevlerini birleştiren bir arabirimdir `System.IObservable<'T>` ve [IDelegateEvent](https://msdn.microsoft.com/library/3d849465-6b8e-4fc5-b36c-2941d734268a). Bu nedenle, `Event`s sahip diğer dillerde temsilciler eşdeğer işlevselliğini yanı sıra, ek işlevinden `IObservable`, başka bir deyişle, F # olayları olay filtreleme ve F # birinci sınıf işlevler ve lambda ifadeleri kullanma desteği olay işleyicileri olarak. Bu işlev sağlanan [Olay Modülü](https://msdn.microsoft.com/library/8b883baa-a460-4840-9baa-de8260351bc7).
 
 Yalnızca tüm diğer .NET Framework olay gibi davranan bir sınıf bir olay oluşturmak için sınıfa eklemek bir `let` tanımlar bağlama bir `Event` bir sınıftaki bir alan olarak. İstenen olay bağımsız değişkeni türünü tür bağımsız değişkeni olarak belirtebilir veya boş bırakarak derleyicinin uygun türü ortaya çıkarmasını sağlayabilirsiniz. Ayrıca, olay CLI olayı olarak sunan bir olay üyesi de tanımlamanız gerekir. Bu üye olmalıdır [CLIEvent](https://msdn.microsoft.com/library/d359f1dd-ffa5-42fb-8808-b4c8131a0333) özniteliği. Bir özellik gibi bildirilmiş ve bir çağrı yalnızca kendi uygulamasıdır [Yayımla](https://msdn.microsoft.com/library/b0fdaad5-25e5-43d0-9c0c-ce37c4aeb68e) olay özelliği. Kullanıcılar sınıfınızın `Add` yayınlanan olay işleyicisi eklemek için yöntemi. Bağımsız değişken için `Add` yöntemi lambda ifadesi olabilir. Kullanabileceğiniz `Trigger` olay işleyicisi işleve bağımsız değişkenleri geçirme olayı özelliği. Aşağıdaki kod örneği bunu gösterir. Bu örnekte, olay için gösterilen tür bağımsız değişkeni, lambda ifadesi için bağımsız değişkenleri temsil eden bir kayıt düzenidir.
 
@@ -180,7 +177,7 @@ Application.Run(appForm)
 ```
 
 ## <a name="see-also"></a>Ayrıca Bkz.
-[Üyeleri](index.md)
+[Üyeler](index.md)
 
 [Olaylar oluşturma ve işleme](../../../../docs/standard/events/index.md)
 
@@ -188,6 +185,6 @@ Application.Run(appForm)
 
 [Control.Event Modülü](https://msdn.microsoft.com/visualfsharpdocs/conceptual/control.event-module-%5bfsharp%5d)
 
-[Control.Event &#60;' T &#62; Sınıfı](https://msdn.microsoft.com/visualfsharpdocs/conceptual/control.event%5b%27t%5d-class-%5bfsharp%5d)
+[Control.Event&#60;'T&#62; sınıfı](https://msdn.microsoft.com/visualfsharpdocs/conceptual/control.event%5b%27t%5d-class-%5bfsharp%5d)
 
-[Control.Event &#60;' Temsilci,'Args &#62; Sınıfı](https://msdn.microsoft.com/visualfsharpdocs/conceptual/control.event%5b%27delegate%2c%27args%5d-class-%5bfsharp%5d)
+[Control.Event&#60;'Temsilci' bağımsız değişken&#62; sınıfı](https://msdn.microsoft.com/visualfsharpdocs/conceptual/control.event%5b%27delegate%2c%27args%5d-class-%5bfsharp%5d)

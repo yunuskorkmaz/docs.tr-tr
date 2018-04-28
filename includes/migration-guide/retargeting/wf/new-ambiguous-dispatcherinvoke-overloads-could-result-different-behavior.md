@@ -1,0 +1,11 @@
+### <a name="new-ambiguous-dispatcherinvoke-overloads-could-result-in-different-behavior"></a>Yeni (belirsiz) Dispatcher.Invoke aşırı farklı davranışlara neden
+
+|   |   |
+|---|---|
+|Ayrıntılar|.NET Framework 4.5 için yeni aşırı ekler <xref:System.Windows.Threading.Dispatcher.Invoke%2A?displayProperty=nameWithType> türünde bir parametre içeren <xref:System.Action>. Var olan kodu derlenmiştir zaman derleyicileri sahip Dispatcher.Invoke yöntem çağrıları çözülebilir bir <xref:System.Delegate> çağrıları Dispatcher.Invoke yöntemleriyle olarak parametresi bir <xref:System.Action> parametresi. Çağrı, bir Dispatcher.Invoke aşırı ile bir <xref:System.Delegate> parametredir Dispatcher.Invoke aşırı ile yapılan bir çağrı olarak çözümlenen bir <xref:System.Action> parametresi, aşağıdaki davranış farklılıkları oluşabilir:<ul><li>Bir özel durum oluşursa, <xref:System.Windows.Threading.Dispatcher.UnhandledExceptionFilter> ve <xref:System.Windows.Threading.Dispatcher.UnhandledException> olayları oluşmaz. Bunun yerine, özel durum tarafından işlenen <xref:System.Threading.Tasks.TaskScheduler.UnobservedTaskException?displayProperty=name> olay.</li><li>Bazı üyeler için gibi çağırır <xref:System.Windows.Threading.DispatcherOperation.Result>, işlem tamamlanana kadar engelleyin.</li></ul>|
+|Öneri|Belirsizliği (ve özel durum işleme veya davranışları engelleme olası farkları) kaçınmak için arama Dispatcher.Invoke kod boş object [] ikinci parametre olarak .NET 4.0 yöntemi aşırı yüklemesine çözme emin olmak için Invoke çağrısına geçirebilirsiniz.|
+|Kapsam|Küçük|
+|Sürüm|4,5|
+|Tür|Yeniden hedefleme|
+|Etkilenen API'leri|<ul><li><xref:System.Windows.Threading.Dispatcher.Invoke(System.Delegate,System.Object[])?displayProperty=nameWithType></li><li><xref:System.Windows.Threading.Dispatcher.Invoke(System.Delegate,System.TimeSpan,System.Object[])?displayProperty=nameWithType></li><li><xref:System.Windows.Threading.Dispatcher.Invoke(System.Delegate,System.TimeSpan,System.Windows.Threading.DispatcherPriority,System.Object[])?displayProperty=nameWithType></li><li><xref:System.Windows.Threading.Dispatcher.Invoke(System.Delegate,System.Windows.Threading.DispatcherPriority,System.Object[])?displayProperty=nameWithType></li></ul>|
+

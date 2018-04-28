@@ -13,11 +13,11 @@ ms.assetid: 3673e4ca-6098-4ec1-890f-8fceb2a794a2
 caps.latest.revision: 11
 author: BillWagner
 ms.author: wiwagn
-ms.openlocfilehash: 9b196bbbce110acb596602fa4de2507515cdbb68
-ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
+ms.openlocfilehash: 37e06d97b082ba6de75d8efa81723442403e39be
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="pragma-checksum-c-reference"></a>#pragma sağlama toplamı (C# Başvurusu)
 Hata ayıklamaya yardımcı olmak kaynak dosyaları için sağlama oluşturur [!INCLUDE[vstecasp](~/includes/vstecasp-md.md)] sayfaları.  
@@ -33,7 +33,7 @@ Hata ayıklamaya yardımcı olmak kaynak dosyaları için sağlama oluşturur [!
  İzleme gerektiren değişiklikler veya güncelleştirmeler için dosyanın adı.  
   
  `"{guid}"`  
- Genel benzersiz tanımlayıcı (GUID) dosyası için.  
+ Genel benzersiz tanımlayıcı (GUID) karma algoritması için.  
   
  `"checksum_bytes"`  
  Onaltılık basamak sağlama toplamı baytını temsil eden dize. Onaltılık basamak sayısı bir çift sayı olmalıdır. Derleme zamanı uyarı ve yönergesi basamak sonuçlarında tek sayıda göz ardı edilir.  
@@ -54,7 +54,7 @@ class TestClass
 {  
     static int Main()  
     {  
-        #pragma checksum "file.cs" "{3673e4ca-6098-4ec1-890f-8fceb2a794a2}" "{012345678AB}" // New checksum  
+        #pragma checksum "file.cs" "{406EA660-64CF-4C82-B6F0-42D48172A799}" "ab007f1d23d9" // New checksum  
     }  
 }  
 ```  

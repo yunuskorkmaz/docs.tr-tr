@@ -1,20 +1,17 @@
 ---
-title: "Özellikler (F#)"
-description: "Bir nesneyle ilişkilendirilmiş değerlerini temsil eden üyeleri olan F # özellikleri hakkında bilgi edinin."
-keywords: "Visual f #, f # işlevsel programlama"
+title: Özellikler (F#)
+description: 'Bir nesneyle ilişkilendirilmiş değerlerini temsil eden üyeleri olan F # özellikleri hakkında bilgi edinin.'
 author: cartermp
 ms.author: phcart
 ms.date: 05/16/2016
 ms.topic: language-reference
-ms.prod: .net
-ms.technology: devlang-fsharp
+ms.prod: dotnet-fsharp
 ms.devlang: fsharp
-ms.assetid: 98b363a5-ee6a-4b7b-b8ae-b244f2a0b316
-ms.openlocfilehash: 53b93b20310c557ad9c30226bc08f85cbf2f3010
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.openlocfilehash: 6cad5d0e32958374e080f9b8046f7eb73b6bf615
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="properties"></a>Özellikler
 
@@ -74,7 +71,7 @@ Hem de okuma/yazma özellikleri için bir `get` ve `set` yöntemi, sırasını `
 
 [!code-fsharp[Main](../../../../samples/snippets/fsharp/lang-ref-1/snippet3203.fs)]
 
-Özel özellikler için verileri çağrılır ayrı tutmayı değerleri *depolarını yedekleme*. Derleyicinin yedekleme deposu otomatik olarak oluşturmak için anahtar sözcüklerini kullanın `member val`, kendi kendine tanımlayıcı çıkarın ve ardından özelliği başlatmak için bir ifade girin. Özelliği değişebilir olması gerekiyorsa dahil `with get, set`. Örneğin, aşağıdaki sınıf türü iki otomatik olarak uygulanan özellikler içerir. `Property1`salt okunur ve birincil oluşturucuya sağlanan değişkeni başlatılır ve `Property2` boş bir dize olarak başlatılan bir özelliğidir ayarlanabilir:
+Özel özellikler için verileri çağrılır ayrı tutmayı değerleri *depolarını yedekleme*. Derleyicinin yedekleme deposu otomatik olarak oluşturmak için anahtar sözcüklerini kullanın `member val`, kendi kendine tanımlayıcı çıkarın ve ardından özelliği başlatmak için bir ifade girin. Özelliği değişebilir olması gerekiyorsa dahil `with get, set`. Örneğin, aşağıdaki sınıf türü iki otomatik olarak uygulanan özellikler içerir. `Property1` salt okunur ve birincil oluşturucuya sağlanan değişkeni başlatılır ve `Property2` boş bir dize olarak başlatılan bir özelliğidir ayarlanabilir:
 
 ```fsharp
 type MyClass(property1 : int) =
@@ -98,7 +95,7 @@ printfn "class1.ExplicitProperty = %d" class1.ExplicitProperty
 printfn "class1.ExplicitProperty = %d" class1.ExplicitProperty
 ```
 
-**Çıktı**
+**Output**
 
 ```
 class1.AutoProperty = 1853799794
@@ -151,6 +148,6 @@ Sağlayan özellikleri ayarlayabilirsiniz `set` kullanarak erişimciler `<-` iş
 [!code-fsharp[Main](../../../../samples/snippets/fsharp/lang-ref-1/snippet3207.fs)]
 
 ## <a name="see-also"></a>Ayrıca Bkz.
-[Üyeleri](index.md)
+[Üyeler](index.md)
 
-[Yöntemleri](methods.md)
+[Yöntemler](methods.md)

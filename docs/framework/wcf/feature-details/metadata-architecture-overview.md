@@ -1,37 +1,37 @@
 ---
-title: "Meta Veri Mimarisi Genel Bakış"
-ms.custom: 
+title: Meta Veri Mimarisi Genel Bakış
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - dotnet-clr
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - metadata [WCF], overview
 ms.assetid: 1d37645e-086d-4d68-a358-f3c5b6e8205e
-caps.latest.revision: 
+caps.latest.revision: 24
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: a8890cc05ec6b0b889dafcb787e216b50a681876
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: bce838d9584480028c7b02d1ba19547fe208bf2c
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="metadata-architecture-overview"></a>Meta Veri Mimarisi Genel Bakış
-[!INCLUDE[indigo1](../../../../includes/indigo1-md.md)]dışarı aktarma, yayımlama, alma ve hizmet meta verileri içe aktarma için zengin bir altyapı sağlar. [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]Hizmetleri, böylece Svcutil.exe gibi araçları hizmete erişim için istemci kodu otomatik olarak oluşturabilir hizmetin uç ile etkileşim kurmak nasıl açıklamak için meta verileri kullanın.  
+[!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] dışarı aktarma, yayımlama, alma ve hizmet meta verileri içe aktarma için zengin bir altyapı sağlar. [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] Hizmetleri, böylece Svcutil.exe gibi araçları hizmete erişim için istemci kodu otomatik olarak oluşturabilir hizmetin uç ile etkileşim kurmak nasıl açıklamak için meta verileri kullanın.  
   
  Çoğu oluşturan türleri [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] meta verileri altyapı bulunan <xref:System.ServiceModel.Description> ad alanı.  
   
- [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]kullanan <xref:System.ServiceModel.Description.ServiceEndpoint> hizmet uç noktalarını tanımlamak için sınıf. Kullanabileceğiniz [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] hizmet uç noktaları için meta verileri oluşturun veya oluşturmak için hizmet meta verilerini almak için <xref:System.ServiceModel.Description.ServiceEndpoint> örnekleri.  
+ [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] kullanan <xref:System.ServiceModel.Description.ServiceEndpoint> hizmet uç noktalarını tanımlamak için sınıf. Kullanabileceğiniz [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] hizmet uç noktaları için meta verileri oluşturun veya oluşturmak için hizmet meta verilerini almak için <xref:System.ServiceModel.Description.ServiceEndpoint> örnekleri.  
   
- [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]bir hizmet için meta veri örneği temsil eden <xref:System.ServiceModel.Description.MetadataSet> yapısını WS-MetadataExchange tanımlı meta verileri seri hale getirme biçimi için bağlı kesinlikle türü. <xref:System.ServiceModel.Description.MetadataSet> Türü sunmaktadır Web Hizmetleri Açıklama Dili (WSDL) belgeleri, XML Şeması belgelerinde veya WS-Policy ifadeler gibi gerçek hizmeti meta verileri koleksiyonu olarak <xref:System.ServiceModel.Description.MetadataSection> örnekleri. Her <xref:System.ServiceModel.Description.MetadataSection?displayProperty=nameWithType> belirli meta veriler dialect ve bir tanımlayıcı örneğini içerir. A <xref:System.ServiceModel.Description.MetadataSection?displayProperty=nameWithType> bulunan aşağıdaki öğelerin içerebilir, <xref:System.ServiceModel.Description.MetadataSection.Metadata%2A?displayProperty=nameWithType> özelliği:  
+ [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] bir hizmet için meta veri örneği temsil eden <xref:System.ServiceModel.Description.MetadataSet> yapısını WS-MetadataExchange tanımlı meta verileri seri hale getirme biçimi için bağlı kesinlikle türü. <xref:System.ServiceModel.Description.MetadataSet> Türü sunmaktadır Web Hizmetleri Açıklama Dili (WSDL) belgeleri, XML Şeması belgelerinde veya WS-Policy ifadeler gibi gerçek hizmeti meta verileri koleksiyonu olarak <xref:System.ServiceModel.Description.MetadataSection> örnekleri. Her <xref:System.ServiceModel.Description.MetadataSection?displayProperty=nameWithType> belirli meta veriler dialect ve bir tanımlayıcı örneğini içerir. A <xref:System.ServiceModel.Description.MetadataSection?displayProperty=nameWithType> bulunan aşağıdaki öğelerin içerebilir, <xref:System.ServiceModel.Description.MetadataSection.Metadata%2A?displayProperty=nameWithType> özelliği:  
   
 -   Ham meta veriler.  
   
@@ -39,7 +39,7 @@ ms.lasthandoff: 12/22/2017
   
 -   A <xref:System.ServiceModel.Description.MetadataLocation> örneği.  
   
- A <xref:System.ServiceModel.Description.MetadataReference?displayProperty=nameWithType> örnekleri için başka bir meta veri değişimi (MEX) uç noktası ve <xref:System.ServiceModel.Description.MetadataLocation?displayProperty=nameWithType> örnekleri noktası bir HTTP URL'sini kullanarak bir meta veri belgesi. [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]Hizmet uç noktaları, hizmet sözleşmelerini, bağlamaları, ileti açıklamak için WSDL belgeleri kullanılmasını destekler desenleri, iletileri ve hata iletileri hizmeti tarafından uygulanan exchange. Hizmet tarafından kullanılan veri türlerine XML Şeması'nı kullanarak WSDL belgelerde açıklanmıştır. [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)][Şema içeri ve dışarı aktarma](../../../../docs/framework/wcf/feature-details/schema-import-and-export.md). Kullanabileceğiniz [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] hizmet davranışı için WSDL uzantıları almak ve vermek için davranışları ve bir hizmetin işlevlerini genişletmek bağlama öğeleri sözleşme. [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)][WCF uzantısı için özel meta verileri dışarı aktarma](../../../../docs/framework/wcf/extending/exporting-custom-metadata-for-a-wcf-extension.md).  
+ A <xref:System.ServiceModel.Description.MetadataReference?displayProperty=nameWithType> örnekleri için başka bir meta veri değişimi (MEX) uç noktası ve <xref:System.ServiceModel.Description.MetadataLocation?displayProperty=nameWithType> örnekleri noktası bir HTTP URL'sini kullanarak bir meta veri belgesi. [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] Hizmet uç noktaları, hizmet sözleşmelerini, bağlamaları, ileti açıklamak için WSDL belgeleri kullanılmasını destekler desenleri, iletileri ve hata iletileri hizmeti tarafından uygulanan exchange. Hizmet tarafından kullanılan veri türlerine XML Şeması'nı kullanarak WSDL belgelerde açıklanmıştır. Daha fazla bilgi için bkz: [şema içeri ve dışarı aktarma](../../../../docs/framework/wcf/feature-details/schema-import-and-export.md). Kullanabileceğiniz [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] hizmet davranışı için WSDL uzantıları almak ve vermek için davranışları ve bir hizmetin işlevlerini genişletmek bağlama öğeleri sözleşme. Daha fazla bilgi için bkz: [WCF uzantısı için özel meta verileri dışarı aktarma](../../../../docs/framework/wcf/extending/exporting-custom-metadata-for-a-wcf-extension.md).  
   
 ## <a name="exporting-service-metadata"></a>Hizmet meta verileri dışarı aktarma  
  İçinde [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)], *meta veri dışarı aktarma* hizmet uç noktaları açıklayan ve istemcilerin Hizmeti'nin nasıl kullanılacağını anlamak için kullanabileceği bir paralel, standartlaştırılmış gösterimine yansıtma işlemidir. Meta verilerini dışa aktarmak için <xref:System.ServiceModel.Description.ServiceEndpoint> örnekleri, kullanın uygulaması <xref:System.ServiceModel.Description.MetadataExporter> soyut sınıf. A <xref:System.ServiceModel.Description.MetadataExporter?displayProperty=nameWithType> uygulama içinde kapsüllenir meta verilerini oluşturur bir <xref:System.ServiceModel.Description.MetadataSet> örneği.  
@@ -53,13 +53,13 @@ ms.lasthandoff: 12/22/2017
  Özel WSDL meta verileri veya uç nokta davranışları, sözleşme davranışları veya hizmet uç noktası bağlama öğeleri için WSDL uzantıları dışarı aktarmak için uygulayabileceğiniz <xref:System.ServiceModel.Description.IWsdlExportExtension> arabirimi. <xref:System.ServiceModel.Description.WsdlExporter> Bakan bir <xref:System.ServiceModel.Description.ServiceEndpoint> öğeleri, işlemi davranışları, sözleşme davranışları ve uygulama uç noktası davranışları bağlama için örnek <xref:System.ServiceModel.Description.IWsdlExportExtension> WSDL belgesi oluştururken arabirim.  
   
 ## <a name="publishing-service-metadata"></a>Hizmet meta verileri yayımlama  
- [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]Hizmetleri, bir veya daha fazla meta veri uç noktalarını göstererek meta veri yayımlama. Hizmet meta veri yayımlama hizmeti meta verileri MEX ve HTTP/GET istekleri gibi standart protokoller kullanılarak kullanılabilir hale getirir. Bir adresi, bağlama ve bir sözleşme sahip diğer hizmet uç noktalarına meta veri uç noktalarını benzerdir. Bir hizmet ana bilgisayar yapılandırma veya kod meta veri uç noktalar ekleyebilirsiniz.  
+ [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] Hizmetleri, bir veya daha fazla meta veri uç noktalarını göstererek meta veri yayımlama. Hizmet meta veri yayımlama hizmeti meta verileri MEX ve HTTP/GET istekleri gibi standart protokoller kullanılarak kullanılabilir hale getirir. Bir adresi, bağlama ve bir sözleşme sahip diğer hizmet uç noktalarına meta veri uç noktalarını benzerdir. Bir hizmet ana bilgisayar yapılandırma veya kod meta veri uç noktalar ekleyebilirsiniz.  
   
  Meta veri uç noktaları için yayımlamak için bir [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] hizmeti örneği ilk eklemeniz gerekir <xref:System.ServiceModel.Description.ServiceMetadataBehavior> hizmet hizmet davranışı. Ekleme bir <xref:System.ServiceModel.Description.ServiceMetadataBehavior?displayProperty=nameWithType> örneği hizmetiniz için bir veya daha fazla meta veri uç noktalarını göstererek meta verileri yayımlama olanağı hizmetinizi artırmaktadır. Eklediğiniz sonra <xref:System.ServiceModel.Description.ServiceMetadataBehavior?displayProperty=nameWithType> hizmet davranışı HTTP/GET isteklerine yanıt veren MEX protokolü veya meta veri uç noktaları destek meta veri uç noktalarını sonra sunabilir.  
   
  MEX protokolünü kullanan meta veri uç noktalarını eklemek için hizmet uç noktaları IMetadataExchange adlı hizmet sözleşmesini kullanın, hizmet ana bilgisayarı ekleyin.[!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] tanımlar <xref:System.ServiceModel.Description.IMetadataExchange> bu hizmet sözleşmesi adı olan arabirimi. WS-MetadataExchange uç noktaları veya MEX uç birini kullanabilirsiniz üzerinde statik Fabrika yöntemler tarafından sunulan dört varsayılan bağlamaları <xref:System.ServiceModel.Description.MetadataExchangeBindings> sınıfı tarafından kullanılan varsayılan bağlamaları eşleşecek şekilde [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] Svcutil.exe gibi araçları. Özel bağlama kullanma MEX meta veri uç noktalarını da yapılandırabilirsiniz.  
   
- <xref:System.ServiceModel.Description.ServiceMetadataBehavior> Kullanan bir <xref:System.ServiceModel.Description.WsdlExporter?displayProperty=nameWithType> hizmetinizde tüm hizmet uç noktalarına meta verilerini dışa aktarmak için. [!INCLUDE[crabout](../../../../includes/crabout-md.md)]bkz. bir hizmetinden meta verileri dışa aktarma [aktarma ve içeri aktarma meta verileri](../../../../docs/framework/wcf/feature-details/exporting-and-importing-metadata.md).  
+ <xref:System.ServiceModel.Description.ServiceMetadataBehavior> Kullanan bir <xref:System.ServiceModel.Description.WsdlExporter?displayProperty=nameWithType> hizmetinizde tüm hizmet uç noktalarına meta verilerini dışa aktarmak için. [!INCLUDE[crabout](../../../../includes/crabout-md.md)] bkz. bir hizmetinden meta verileri dışa aktarma [aktarma ve içeri aktarma meta verileri](../../../../docs/framework/wcf/feature-details/exporting-and-importing-metadata.md).  
   
  <xref:System.ServiceModel.Description.ServiceMetadataBehavior> Ekleyerek, hizmet ana bilgisayarı güçlendirir bir <xref:System.ServiceModel.Description.ServiceMetadataExtension> örneği, hizmet ana bilgisayarı için bir uzantı olarak. <xref:System.ServiceModel.Description.ServiceMetadataExtension?displayProperty=nameWithType> Meta veri protokolleri yayımlama uygulamasını sağlar. Aynı zamanda <xref:System.ServiceModel.Description.ServiceMetadataExtension?displayProperty=nameWithType> erişerek çalışma zamanında hizmetin meta verileri almak için <xref:System.ServiceModel.Description.ServiceMetadataExtension.Metadata%2A> özelliği.  
   
@@ -80,7 +80,7 @@ ms.lasthandoff: 12/22/2017
 > -   İşlemler ad alanlarından birini kullanılarak farklı bir ad alanı olarak ayarlanan <xref:System.ServiceModel.ServiceContractAttribute.Namespace%2A> özelliği.  
   
 ## <a name="retrieving-service-metadata"></a>Hizmet meta verilerini alma  
- [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]WS-MetadataExchange ve HTTP gibi standart protokoller kullanılarak hizmeti meta verileri alabilir. Bu protokollerin her ikisi de tarafından desteklenen <xref:System.ServiceModel.Description.MetadataExchangeClient> türü. Hizmet meta verileri kullanarak almak <xref:System.ServiceModel.Description.MetadataExchangeClient?displayProperty=nameWithType> bir adres ve isteğe bağlı bir bağlama sağlayarak türü. Bağlama tarafından kullanılan bir <xref:System.ServiceModel.Description.MetadataExchangeClient?displayProperty=nameWithType> örnek varsayılan bağlantılardan biri olabilir <xref:System.ServiceModel.Description.MetadataExchangeBindings> statik sınıf, bir kullanıcı tarafından sağlanan bağlama veya bir bağlama yüklenen bir uç nokta yapılandırması için gelen `IMetadataExchange` sözleşme. <xref:System.ServiceModel.Description.MetadataExchangeClient?displayProperty=nameWithType> Meta verileri kullanarak HTTP URL'si başvurular de çözebilirsiniz <xref:System.Net.HttpWebRequest> türü.  
+ [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] WS-MetadataExchange ve HTTP gibi standart protokoller kullanılarak hizmeti meta verileri alabilir. Bu protokollerin her ikisi de tarafından desteklenen <xref:System.ServiceModel.Description.MetadataExchangeClient> türü. Hizmet meta verileri kullanarak almak <xref:System.ServiceModel.Description.MetadataExchangeClient?displayProperty=nameWithType> bir adres ve isteğe bağlı bir bağlama sağlayarak türü. Bağlama tarafından kullanılan bir <xref:System.ServiceModel.Description.MetadataExchangeClient?displayProperty=nameWithType> örnek varsayılan bağlantılardan biri olabilir <xref:System.ServiceModel.Description.MetadataExchangeBindings> statik sınıf, bir kullanıcı tarafından sağlanan bağlama veya bir bağlama yüklenen bir uç nokta yapılandırması için gelen `IMetadataExchange` sözleşme. <xref:System.ServiceModel.Description.MetadataExchangeClient?displayProperty=nameWithType> Meta verileri kullanarak HTTP URL'si başvurular de çözebilirsiniz <xref:System.Net.HttpWebRequest> türü.  
   
  Varsayılan olarak, bir <xref:System.ServiceModel.Description.MetadataExchangeClient?displayProperty=nameWithType> örneğinin tek bir bağlı <xref:System.ServiceModel.Channels.ChannelFactoryBase> örneği. Değiştirin veya Değiştir <xref:System.ServiceModel.Channels.ChannelFactoryBase> örneği tarafından kullanılan bir <xref:System.ServiceModel.Description.MetadataExchangeClient?displayProperty=nameWithType> kılarak <xref:System.ServiceModel.Description.MetadataExchangeClient.GetChannelFactory%2A> sanal yöntemi. Benzer şekilde, değiştirin ya da değiştirebileceğiniz <xref:System.Net.HttpWebRequest?displayProperty=nameWithType> örneği tarafından kullanılan bir <xref:System.ServiceModel.Description.MetadataExchangeClient?displayProperty=nameWithType> HTTP/GET istekleri geçersiz kılarak yapmak için <xref:System.ServiceModel.Description.MetadataExchangeClient.GetWebRequest%2A?displayProperty=nameWithType> sanal yöntemi.  
   

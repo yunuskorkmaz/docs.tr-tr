@@ -1,12 +1,13 @@
 ---
 title: Federasyon
-ms.custom: 
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - csharp
@@ -15,16 +16,17 @@ helpviewer_keywords:
 - WCF, federation
 - federation [WCF]
 ms.assetid: 2f1e646f-8361-48d4-9d5d-1b961f31ede4
-caps.latest.revision: "26"
+caps.latest.revision: 26
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 3c87fa08a698350d601f72d5d19ef353bd4257a9
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 0e7aef1f53675089ee311aa79a54abf60441b728
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="federation"></a>Federasyon
 Bu konu, Federasyon güvenlik kavramı kısa bir genel bakış sağlar. Ayrıca açıklanır [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] destek federe güvenlik mimarileri dağıtmak için. Federasyon gösteren örnek bir uygulama için bkz: [Federasyon örnek](../../../../docs/framework/wcf/samples/federation-sample.md).  
@@ -32,7 +34,7 @@ Bu konu, Federasyon güvenlik kavramı kısa bir genel bakış sağlar. Ayrıca 
 ## <a name="definition-of-federated-security"></a>Federasyon güvenlik tanımı  
  Bir istemci erişim hizmeti ile ilişkili kimlik doğrulama ve yetkilendirme yordamları arasında temiz ayırmayı federe güvenlik sağlar. Federasyon güvenlik işbirliği birden çok sistemler, ağlar ve farklı güven bölgelerinde kuruluşlarda üzerinden de sağlar.  
   
- [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]oluşturma ve dağıtma federe güvenlik işe dağıtılmış sistemler için destek sağlar.  
+ [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] oluşturma ve dağıtma federe güvenlik işe dağıtılmış sistemler için destek sağlar.  
   
 ### <a name="elements-of-a-federated-security-architecture"></a>Öğeleri bir federe güvenlik mimarisi  
  Federasyon güvenlik mimarisi aşağıdaki tabloda açıklandığı gibi üç temel öğeleri vardır.  
@@ -71,14 +73,14 @@ Bu konu, Federasyon güvenlik kavramı kısa bir genel bakış sağlar. Ayrıca 
   
  B kuruluştaki kimliğini doğrular ve kendi erişimini yetkilendirir geçerli güvenlik uygulamasından bir belirteç kuruluştaki B STS sunmalıdır Web hizmeti erişim vermek istiyorsanız bir federe güvenlik mimaride kullanıcılar bir kuruluştan biliyor belirli hizmet.  
   
- STS B başvurarak üzerinde kullanıcılar yöneltmesi başka bir düzeyi STS ile ilişkili ilkesinden alır. Geçerli bir güvenlik sunması gerekir (yani, güven istemcisinin) STS A'dan belirteci STS B bunları bir güvenlik belirteci yayımlayabilmesi. Bu iki kuruluş arasında bir güven ilişkisi corollary ve kuruluş B A. kuruluştan kullanıcılar için kimlikleri yönetme yok anlamına gelir Uygulamada, STS B null sahip `issuerAddress` ve `issuerMetadataAddress`. [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)][Nasıl yapılır: yerel yayımlayan yapılandırma](../../../../docs/framework/wcf/feature-details/how-to-configure-a-local-issuer.md). Bu durumda, istemci STS A. bulmak için bir yerel ilke başvurur Bu yapılandırma olarak adlandırılır *giriş bölgesi Federasyon* ve STS B STS A. hakkındaki bilgileri tutmak sahip olmadığından daha iyi ölçeklenir  
+ STS B başvurarak üzerinde kullanıcılar yöneltmesi başka bir düzeyi STS ile ilişkili ilkesinden alır. Geçerli bir güvenlik sunması gerekir (yani, güven istemcisinin) STS A'dan belirteci STS B bunları bir güvenlik belirteci yayımlayabilmesi. Bu iki kuruluş arasında bir güven ilişkisi corollary ve kuruluş B A. kuruluştan kullanıcılar için kimlikleri yönetme yok anlamına gelir Uygulamada, STS B null sahip `issuerAddress` ve `issuerMetadataAddress`. Daha fazla bilgi için bkz: [nasıl yapılır: yerel yayımlayan yapılandırma](../../../../docs/framework/wcf/feature-details/how-to-configure-a-local-issuer.md). Bu durumda, istemci STS A. bulmak için bir yerel ilke başvurur Bu yapılandırma olarak adlandırılır *giriş bölgesi Federasyon* ve STS B STS A. hakkındaki bilgileri tutmak sahip olmadığından daha iyi ölçeklenir  
   
  Kullanıcıların sonra kuruluştaki bir STS başvurun ve normalde A. kuruluştaki herhangi bir kaynağa erişmek için kullandıkları kimlik doğrulama bilgilerini sunarak bir güvenlik belirteci alın Bu aynı zamanda birden çok kimlik bilgileri kümesi bakımını yapmak zorunda veya birden çok hizmet sitede aynı kimlik bilgileri kümesini kullanarak kullanıcı sorununu ortadan kaldırır.  
   
  Kullanıcılar bir güvenlik belirteci STS A'dan edindikten sonra kullanıcıların isteklerin yetkilendirme gerçekleştirmek üzere STS B. kuruluş B kazançlar belirtece sunmak ve kullanıcılara kendi güvenlik belirteçlerini kümesinden bir güvenlik belirteci verir. Kullanıcılar kendi belirteci kaynağa B kuruluştan sunmak ve hizmete erişim.  
   
 ## <a name="support-for-federated-security-in-wcf"></a>Wcf'de güvenlik desteği  
- [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]Federasyon güvenlik mimarileri üzerinden dağıtmak için anahtar teslimi desteği sağlar [ \<wsFederationHttpBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/wsfederationhttpbinding.md).  
+ [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] Federasyon güvenlik mimarileri üzerinden dağıtmak için anahtar teslimi desteği sağlar [ \<wsFederationHttpBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/wsfederationhttpbinding.md).  
   
  [ \<WsFederationHttpBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/wsfederationhttpbinding.md) istek-yanıt iletişim stili temelindeki iletim mekanizması olarak HTTP kullanımını kapsar güvenli, güvenilir ve birlikte çalışabilir bağlama öğesi sağlar metin ve XML kodlama için kablo biçimi olarak kullanan.  
   
@@ -159,7 +161,7 @@ operationRequirementType="FederationSample.MyServiceOperationRequirement, MyServ
 ```  
   
 > [!NOTE]
->  Bir ince noktası gerektirdiği talepler hakkında unutulmamalıdır `MyService`. İkinci şekil belirten `MyService` bir SAML belirteci gerektirir `accessAuthorized` talep. Daha kesin olacak şekilde bu talep türü belirtir `MyService` gerektirir. Bu talep türünün tam adını (birlikte ilişkili ad alanı), hizmet yapılandırma dosyasında kullanılan http://tempuri.org:accessAuthorized ' dir. Bu talep değerini bu talep durumunu gösteren ve ayarlamak için kabul `true` STS B. tarafından  
+>  Bir ince noktası gerektirdiği talepler hakkında unutulmamalıdır `MyService`. İkinci şekil belirten `MyService` bir SAML belirteci gerektirir `accessAuthorized` talep. Daha kesin olacak şekilde bu talep türü belirtir `MyService` gerektirir. Bu talep türü tam adı http://tempuri.org:accessAuthorized (ilişkili ad alanı ile birlikte), hangi hizmet yapılandırma dosyasında kullanılır. Bu talep değerini bu talep durumunu gösteren ve ayarlamak için kabul `true` STS B. tarafından  
   
  Çalışma zamanında, bu ilke tarafından uygulanan `MyServiceOperationRequirement` parçası olarak uygulanan sınıfı `MyService`.  
   
@@ -218,7 +220,7 @@ operationRequirementType="FederationSample.MyServiceOperationRequirement, MyServ
 ```  
   
 > [!NOTE]
->  Yeniden `userAuthenticated` talep olduğu STS B. tarafından gerekli talep türü Bu talep türünün tam adını STS yapılandırma dosyasında kullanılan http://tempuri.org:userAuthenticated (birlikte ilişkili ad alanı), ' dir. Bu talep değerini bu talep durumunu gösteren ve ayarlamak için kabul `true` STS A. tarafından  
+>  Yeniden `userAuthenticated` talep olduğu STS B. tarafından gerekli talep türü Bu talep türü tam adı http://tempuri.org:userAuthenticated (ilişkili ad alanı ile birlikte), hangi STS yapılandırma dosyasında kullanılır. Bu talep değerini bu talep durumunu gösteren ve ayarlamak için kabul `true` STS A. tarafından  
   
  Çalışma zamanında `STS_B_OperationRequirement` sınıfı STS B. bir parçası olarak uygulanan bu ilkeyi zorlar  
   

@@ -3,15 +3,17 @@ title: 'Birim F # kitaplığı .NET dotnet test ve NUnit kullanarak çekirdek te
 description: 'Birim testi kavramları F # .NET Core için adım adım örnek çözüm oluşturma bir etkileşimli deneyimler aracılığıyla öğrenmeniz dotnet test ve NUnit kullanarak.'
 author: rprouse
 ms.date: 12/01/2017
-ms.topic: article
+ms.topic: conceptual
 dev_langs:
 - fsharp
-ms.prod: .net-core
-ms.openlocfilehash: c38be75ff39fae3afd371a5a3a9332ee5ac96022
-ms.sourcegitcommit: 9a4fe1a1c37b26532654b4bbe22d702237950009
+ms.prod: dotnet-core
+ms.workload:
+- dotnetcore
+ms.openlocfilehash: f5793c79177e919547b9daa9b8fd2523938d3c66
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="unit-testing-f-libraries-in-net-core-using-dotnet-test-and-nunit"></a>Birim F # kitaplığı .NET dotnet test ve NUnit kullanarak çekirdek testi
 

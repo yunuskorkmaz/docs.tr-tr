@@ -14,14 +14,14 @@ ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: 0447df0e6d4f14a4171a315858f992ad23d69373
-ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
-ms.translationtype: HT
+ms.openlocfilehash: 6bc761b93ff8d5c0dc79a86d0159d50d65fb727c
+ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="wpf-and-wf-integration-in-xaml"></a>WPF ve XAML içinde WF tümleştirmesi
-Bu örnek, Windows Presentation Foundation (WPF) kullanan bir uygulama oluşturmak gösterilmiştir ve [!INCLUDE[wf](../../../../includes/wf-md.md)] tek bir XAML belge özellikleri. Bunu başarmak için örnek kullanır [!INCLUDE[wf](../../../../includes/wf-md.md)] ve XAML genişletilebilirlik.  
+Bu örnek, tek bir XAML belge içinde Windows Presentation Foundation (WPF) ve Windows Workflow Foundation (WF) özelliklerini kullanan bir uygulama oluşturmak gösterilmiştir. Bunu başarmak için Windows Workflow Foundation (WF) ve XAML genişletilebilirlik örnek kullanır.  
   
 ## <a name="sample-details"></a>Örnek Ayrıntıları  
  İçine ShowWindow.xaml dosyası çıkarır bir <xref:System.Activities.Statements.Sequence> sırasının etkinlikler tarafından yönetilen iki dize değişkenleri etkinlikle: `ShowWindow` ve `WriteLine`. <xref:System.Activities.Statements.WriteLine> Etkinlik için atar ifade konsol penceresine çıkarır <xref:System.Activities.Statements.WriteLine.Text%2A> özelliği. `ShowWindow` Etkinlik görüntüler bir [!INCLUDE[avalon2](../../../../includes/avalon2-md.md)] pencere yürütme mantığının parçası olarak. <xref:System.Activities.ActivityContext.DataContext%2A> Sırada bildirilen değişkenlerin pencerenin içerir. Pencerenin denetimleri bildirilen `ShowWindow` etkinliği değişkenlere işlemek için veri bağlama kullanın. Son olarak, pencerenin düğme denetimi içerir. `Click` Düğmesinin olayı tarafından işlenir bir <xref:System.Activities.ActivityDelegate> adlı `MarkupExtension` içeren bir `CloseWindow` etkinlik. `MarkUpExtension` tarafından tanımlanan herhangi bir nesne bağlamı olarak sağlar kapsanan etkinliği çağırır bir `x:Name`, yanı sıra <xref:System.Activities.ActivityContext.DataContext%2A> içeren penceresi. Bu nedenle, `CloseWindow.InArgument<Window>` pencerenin adına başvuran bir ifade kullanarak bağlanabilir.  

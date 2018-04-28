@@ -1,20 +1,17 @@
 ---
-title: "İmzalar (F#)"
-description: "F # programı öğeleri türleri, ad alanları ve modülleri gibi bir dizi ortak imzalar hakkında bilgiyi tutmak için bir F # imza dosyası kullanmayı öğrenin."
-keywords: "Visual f #, f # işlevsel programlama"
+title: İmzalar (F#)
+description: 'F # programı öğeleri türleri, ad alanları ve modülleri gibi bir dizi ortak imzalar hakkında bilgiyi tutmak için bir F # imza dosyası kullanmayı öğrenin.'
 author: cartermp
 ms.author: phcart
 ms.date: 05/16/2016
 ms.topic: language-reference
-ms.prod: .net
-ms.technology: devlang-fsharp
+ms.prod: dotnet-fsharp
 ms.devlang: fsharp
-ms.assetid: 76c84a62-b2f6-44ec-8238-e687e2f7d18e
-ms.openlocfilehash: d0f71c6472852268303a2d3af2e4b0a3c256704e
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.openlocfilehash: c98ac6c62fdcee51532a162596e99309a31802ec
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="signatures"></a>İmzalar
 
@@ -83,8 +80,8 @@ Aşağıdaki kod uygulama dosyasını gösterir.
 [!code-fsharp[Main](../../../samples/snippets/fsharp/fssignatures/snippet9001.fs)]
     
 ## <a name="see-also"></a>Ayrıca Bkz.
-[F # dili başvurusu](index.md)
+[F# Dili Başvurusu](index.md)
 
-[Erişim denetimi](access-control.md)
+[Erişim Denetimi](access-control.md)
 
 [Derleyici Seçenekleri](compiler-options.md)

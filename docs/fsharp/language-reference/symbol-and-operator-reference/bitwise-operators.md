@@ -1,20 +1,17 @@
 ---
-title: "Bitwise İşleçleri (F#)"
-description: "F # programlama dili kullanılabilen bit düzeyinde işleçler hakkında bilgi edinin."
-keywords: "Visual f #, f # işlevsel programlama"
+title: Bitwise İşleçleri (F#)
+description: 'F # programlama dili kullanılabilen bit düzeyinde işleçler hakkında bilgi edinin.'
 author: cartermp
 ms.author: phcart
 ms.date: 05/16/2016
 ms.topic: language-reference
-ms.prod: .net
-ms.technology: devlang-fsharp
+ms.prod: dotnet-fsharp
 ms.devlang: fsharp
-ms.assetid: 8a2c87f5-b4c7-47fe-8580-82c956f605e5
-ms.openlocfilehash: 61a8e6bafe97a229480c967a4afb5d2a256474c8
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.openlocfilehash: 4d5abff564a5d1dcbe52b99edf431ca10e442061
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="bitwise-operators"></a>Bitwise İşleçleri
 
@@ -35,9 +32,9 @@ Aşağıdaki tabloda, F # dilinde sarmalanmamış tam sayı türleri için deste
 Bit düzeyinde işleçler ile aşağıdaki türleri kullanılabilir: `byte`, `sbyte`, `int16`, `uint16`, `int32 (int)`, `uint32`, `int64`, `uint64`, `nativeint`, ve `unativeint`.
 
 ## <a name="see-also"></a>Ayrıca Bkz.
-[Simge ve işleç başvurusu](index.md)
+[Simge ve İşleç Başvurusu](index.md)
 
-[Aritmetik işleçler](arithmetic-operators.md)
+[Aritmetik İşleçler](arithmetic-operators.md)
 
-[Boole işleçleri](boolean-operators.md)
+[Boole İşleçleri](boolean-operators.md)
 

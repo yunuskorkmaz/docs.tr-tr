@@ -1,20 +1,17 @@
 ---
-title: "Kod Tırnak İşaretleri (F#)"
-description: "F # kod teklifleri hakkında oluşturmak ve F # kodu ifadelerle programlı olarak çalışmanıza olanak sağlayan bir dil özellik öğrenin."
-keywords: "Visual f #, f # işlevsel programlama"
+title: Kod Tırnak İşaretleri (F#)
+description: 'F # kod teklifleri hakkında oluşturmak ve F # kodu ifadelerle programlı olarak çalışmanıza olanak sağlayan bir dil özellik öğrenin.'
 author: cartermp
 ms.author: phcart
 ms.date: 05/16/2016
 ms.topic: language-reference
-ms.prod: .net
-ms.technology: devlang-fsharp
+ms.prod: dotnet-fsharp
 ms.devlang: fsharp
-ms.assetid: 4559e659-2b04-48bd-8a0b-8527920eec95
-ms.openlocfilehash: f7a08013bc6487b570a62576bb01ca2dd65ce8b1
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.openlocfilehash: cfa2e4b9a4ad1776315dfa8ea82fb8fc3f13a552
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="code-quotations"></a>Kod Tırnak İşaretleri
 
@@ -88,7 +85,7 @@ let f = fun (x:System.Int32) -> x + 10 in f 10
 ## <a name="example"></a>Örnek
 
 ### <a name="description"></a>Açıklama
-Üç Etkin desenler içinde de kullanabilirsiniz [ExprShape Modülü](https://msdn.microsoft.com/library/7685150e-2432-4d39-9338-57292eff18de) ifade ağaçları daha az Etkin desenler ile geçiş yapmak için. Bu Etkin desenler bir ağacı gezme istiyor ancak çoğu düğümlerinin tüm bilgileri gerekmez kullanışlı olabilir. Bu düzenleri kullandığınızda, herhangi bir F # ifade aşağıdaki üç desenleri biriyle eşleşen: `ShapeVar` ifade bir değişken ise `ShapeLambda` ifade bir lambda ifadesi ise veya `ShapeCombination` ifade başka bir şey olması durumunda. Etkin desenler önceki kod örneğinde olduğu gibi kullanarak bir ifade ağacına gezme, olası tüm F # ifade türleri işlemek için çok daha fazla desenleri kullanmak zorunda ve kodunuzu daha karmaşık olacaktır. Daha fazla bilgi için bkz: [ExprShape.ShapeVar &#124; ShapeLambda &#124; ShapeCombination etkin düzeni](https://msdn.microsoft.com/visualfsharpdocs/conceptual/exprshape.shapevarhshapelambdahshapecombination-active-pattern-%5bfsharp%5d).
+Üç Etkin desenler içinde de kullanabilirsiniz [ExprShape Modülü](https://msdn.microsoft.com/library/7685150e-2432-4d39-9338-57292eff18de) ifade ağaçları daha az Etkin desenler ile geçiş yapmak için. Bu Etkin desenler bir ağacı gezme istiyor ancak çoğu düğümlerinin tüm bilgileri gerekmez kullanışlı olabilir. Bu düzenleri kullandığınızda, herhangi bir F # ifade aşağıdaki üç desenleri biriyle eşleşen: `ShapeVar` ifade bir değişken ise `ShapeLambda` ifade bir lambda ifadesi ise veya `ShapeCombination` ifade başka bir şey olması durumunda. Etkin desenler önceki kod örneğinde olduğu gibi kullanarak bir ifade ağacına gezme, olası tüm F # ifade türleri işlemek için çok daha fazla desenleri kullanmak zorunda ve kodunuzu daha karmaşık olacaktır. Daha fazla bilgi için bkz: [ExprShape.ShapeVar&#124;ShapeLambda&#124;ShapeCombination etkin düzeni](https://msdn.microsoft.com/visualfsharpdocs/conceptual/exprshape.shapevarhshapelambdahshapecombination-active-pattern-%5bfsharp%5d).
 
 Aşağıdaki kod örneği için daha karmaşık çapraz geçişlerine temeli olarak kullanılabilir. Bu kod, bir işlev çağrısı içeren bir ifadenin bir ifade ağacına oluşturulur `add`. [SpecificCall](https://msdn.microsoft.com/library/05a77b21-20fe-4b9a-8e07-aa999538198d) etkin desen herhangi çağrısına algılamak için kullanılan `add` ifade ağacında. Bu etkin desen çağrısı bağımsız atar `exprList` değeri. Bu durumda, vardır yalnızca iki, böylece bunlar çekilen ve işlev bağımsız değişkenler üzerinde yinelemeli olarak adlandırılır. Sonuçları bir çağrı temsil eden bir kod tırnak içine eklenen `mul` splice işlecini kullanarak (`%%`). `println` İşlevi önceki örnekten sonuçları görüntülemek için kullanılır.
 
@@ -106,5 +103,5 @@ Elde edilen ifadesi yalnızca değişikliği farklıdır şekilde diğer etkin d
 ```
 
 ## <a name="see-also"></a>Ayrıca Bkz.
-[F # dili başvurusu](index.md)
+[F# Dili Başvurusu](index.md)
 

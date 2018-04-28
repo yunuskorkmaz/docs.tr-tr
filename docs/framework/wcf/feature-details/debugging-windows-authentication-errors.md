@@ -1,12 +1,13 @@
 ---
-title: "Windows Kimlik Doğrulama Hatalarını Ayıklama"
-ms.custom: 
+title: Windows Kimlik Doğrulama Hatalarını Ayıklama
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - csharp
@@ -15,16 +16,17 @@ helpviewer_keywords:
 - WCF, authentication
 - WCF, Windows authentication
 ms.assetid: 181be4bd-79b1-4a66-aee2-931887a6d7cc
-caps.latest.revision: "21"
+caps.latest.revision: 21
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: b24d5a8ebccbd454579394a986614e0d40d8d0e6
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: e6efcb5097729ac5f096e78883e9bc49598c9a37
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="debugging-windows-authentication-errors"></a>Windows Kimlik Doğrulama Hatalarını Ayıklama
 Windows kimlik doğrulaması bir güvenlik mekanizması olarak kullanırken, Güvenlik Desteği Sağlayıcısı Arabirimi (SSPI) güvenlik işlemleri işler. SSPI katmanında güvenlik hatası meydana geldiğinde, bunlar tarafından çıkmış [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)]. Bu konu, hataları tanılamak için sorularını kümesi ve bir çerçeve sağlar.  
@@ -73,11 +75,11 @@ Windows kimlik doğrulaması bir güvenlik mekanizması olarak kullanırken, Gü
 ### <a name="kerberos-protocol"></a>Kerberos protokolü  
   
 #### <a name="spnupn-problems-with-the-kerberos-protocol"></a>Kerberos protokolü SPN/UPN sorunları  
- Windows kimlik doğrulaması ve Kerberos protokolü kullanılan veya SSPI tarafından anlaşılan kullanırken, istemci uç nokta kullandığı URL'yi hizmetin konak hizmeti URL'si içinde tam olarak nitelenmiş etki alanı adını içermelidir. Bu hizmetinin altında çalıştığı hesabın en yaygın olarak hizmetin altında çalıştırılarak yapılır Active Directory etki alanına bilgisayar eklendiğinde oluşturduğunuz makine (varsayılan) hizmet asıl adı (SPN) anahtarı erişimi olduğunu varsayar. Ağ hizmeti hesabı. Hizmet makine SPN anahtarına erişimi yoksa, istemcinin uç noktası kimlik hizmetin çalıştığı hesabın doğru SPN veya kullanıcı asıl adı (UPN) sağlamanız gerekir. [!INCLUDE[crabout](../../../../includes/crabout-md.md)]nasıl [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] SPN ve UPN, çalışır bkz [hizmet kimliği ve kimlik doğrulama](../../../../docs/framework/wcf/feature-details/service-identity-and-authentication.md).  
+ Windows kimlik doğrulaması ve Kerberos protokolü kullanılan veya SSPI tarafından anlaşılan kullanırken, istemci uç nokta kullandığı URL'yi hizmetin konak hizmeti URL'si içinde tam olarak nitelenmiş etki alanı adını içermelidir. Bu hizmetinin altında çalıştığı hesabın en yaygın olarak hizmetin altında çalıştırılarak yapılır Active Directory etki alanına bilgisayar eklendiğinde oluşturduğunuz makine (varsayılan) hizmet asıl adı (SPN) anahtarı erişimi olduğunu varsayar. Ağ hizmeti hesabı. Hizmet makine SPN anahtarına erişimi yoksa, istemcinin uç noktası kimlik hizmetin çalıştığı hesabın doğru SPN veya kullanıcı asıl adı (UPN) sağlamanız gerekir. [!INCLUDE[crabout](../../../../includes/crabout-md.md)] nasıl [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] SPN ve UPN, çalışır bkz [hizmet kimliği ve kimlik doğrulama](../../../../docs/framework/wcf/feature-details/service-identity-and-authentication.md).  
   
  Yük Dengeleme içindeki Web grupları veya Web bahçelerinde gibi senaryolara yaygın bir uygulamadır her uygulama için benzersiz bir hesap tanımlayın, bu hesap için bir SPN atayın ve bu hesabın tüm uygulama hizmetleri çalıştırdığınızdan emin olun.  
   
- Hizmet hesabı için bir SPN elde etmek için bir Active Directory etki alanı yöneticisi olmanız gerekir. [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)][Windows için Kerberos teknik Eki'ni](http://go.microsoft.com/fwlink/?LinkID=88330).  
+ Hizmet hesabı için bir SPN elde etmek için bir Active Directory etki alanı yöneticisi olmanız gerekir. Daha fazla bilgi için bkz: [Kerberos teknik Eki'ni Windows için](http://go.microsoft.com/fwlink/?LinkID=88330).  
   
 #### <a name="kerberos-protocol-direct-requires-the-service-to-run-under-a-domain-machine-account"></a>Kerberos protokolü doğrudan bir etki alanı makine hesabı altında Çalıştır hizmetine gerektirir  
  Bu meydana zaman `ClientCredentialType` özelliği ayarlanmış `Windows` ve <xref:System.ServiceModel.MessageSecurityOverHttp.NegotiateServiceCredential%2A> özelliği ayarlanmış `false`aşağıdaki kodda gösterildiği gibi.  
@@ -102,7 +104,7 @@ Windows kimlik doğrulaması bir güvenlik mekanizması olarak kullanırken, Gü
   
 3.  Kerberos, NTLM kullanımını engelleyerek kullanmak için SSPI anlaşması gerektirir:  
   
-    1.  Bu kod, aşağıdaki deyim ile yapın:`ChannelFactory.Credentials.Windows.AllowNtlm = false`  
+    1.  Bu kod, aşağıdaki deyim ile yapın: `ChannelFactory.Credentials.Windows.AllowNtlm = false`  
   
     2.  Veya yapılandırma dosyasında ayarlayarak bunu yapabilirsiniz `allowNtlm` özniteliğini `false`. Bu öznitelik yer [ \<windows >](../../../../docs/framework/configure-apps/file-schema/wcf/windows-of-clientcredentials-element.md).  
   
@@ -132,7 +134,7 @@ Windows kimlik doğrulaması bir güvenlik mekanizması olarak kullanırken, Gü
  [!code-csharp[C_DebuggingWindowsAuth#6](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_debuggingwindowsauth/cs/source.cs#6)]
  [!code-vb[C_DebuggingWindowsAuth#6](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_debuggingwindowsauth/vb/source.vb#6)]  
   
- [!INCLUDE[crabout](../../../../includes/crabout-md.md)]Kimliğe bürünme, bkz: [temsilcilik ve kimliğe bürünme](../../../../docs/framework/wcf/feature-details/delegation-and-impersonation-with-wcf.md).  
+ [!INCLUDE[crabout](../../../../includes/crabout-md.md)] Kimliğe bürünme, bkz: [temsilcilik ve kimliğe bürünme](../../../../docs/framework/wcf/feature-details/delegation-and-impersonation-with-wcf.md).  
   
  Alternatif olarak, istemci, yerleşik sistem hesabı kullanarak bir Windows hizmet olarak çalışıyor.  
   

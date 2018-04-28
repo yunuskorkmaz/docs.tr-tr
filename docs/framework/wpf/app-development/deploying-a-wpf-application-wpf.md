@@ -19,19 +19,19 @@ ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: 3beb8ee0869384f9f453023fe549b2339c126898
-ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
+ms.openlocfilehash: bf92f12e415b937c36dfc518af4a4c1795c8b789
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="deploying-a-wpf-application-wpf"></a>Bir WPF Uygulamasını Dağıtma (WPF)
-Sonra [!INCLUDE[TLA#tla_wpf](../../../../includes/tlasharptla-wpf-md.md)] uygulamaları yerleşiktir, dağıtılması gerekiyor. [!INCLUDE[TLA#tla_mswin](../../../../includes/tlasharptla-mswin-md.md)] ve [!INCLUDE[TLA2#tla_winfx](../../../../includes/tla2sharptla-winfx-md.md)] birkaç dağıtım teknolojilerini içerir. Dağıtmak için kullanılan dağıtım teknolojisi bir [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] uygulama uygulama türüne bağlıdır. Bu konu, her dağıtım teknolojisi kısa bir genel bakış ve her dağıtım gereksinimleri ile birlikte nasıl kullanıldıkları sağlar [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] uygulama türü.  
+Sonra [!INCLUDE[TLA#tla_wpf](../../../../includes/tlasharptla-wpf-md.md)] uygulamaları yerleşiktir, dağıtılması gerekiyor. [!INCLUDE[TLA#tla_mswin](../../../../includes/tlasharptla-mswin-md.md)] ve .NET Framework birkaç dağıtım teknolojileri içerir. Dağıtmak için kullanılan dağıtım teknolojisi bir [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] uygulama uygulama türüne bağlıdır. Bu konu, her dağıtım teknolojisi kısa bir genel bakış ve her dağıtım gereksinimleri ile birlikte nasıl kullanıldıkları sağlar [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] uygulama türü.  
   
    
 <a name="Deployment_Technologies"></a>   
 ## <a name="deployment-technologies"></a>Dağıtım teknolojileri  
- [!INCLUDE[TLA#tla_mswin](../../../../includes/tlasharptla-mswin-md.md)] ve [!INCLUDE[TLA2#tla_winfx](../../../../includes/tla2sharptla-winfx-md.md)] dahil olmak üzere çeşitli dağıtım teknolojileri şunları içerir:  
+ [!INCLUDE[TLA#tla_mswin](../../../../includes/tlasharptla-mswin-md.md)] ve .NET Framework dahil olmak üzere çeşitli dağıtım teknolojileri şunları içerir:  
   
 -   XCopy dağıtımı.  
   
@@ -126,13 +126,13 @@ Sonra [!INCLUDE[TLA#tla_wpf](../../../../includes/tlasharptla-wpf-md.md)] uygula
   
 <a name="Installing__NET_Framework_3_0"></a>   
 ## <a name="installing-the-net-framework"></a>.NET Framework2ü yükleme  
- Çalıştırmak için bir [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] uygulama, Microsoft .NET Framework istemci üzerinde yüklü olmalıdır. [!INCLUDE[TLA2#tla_ie](../../../../includes/tla2sharptla-ie-md.md)] otomatik olarak istemciler ile yüklü olup olmadığını algılar [!INCLUDE[TLA2#tla_winfx](../../../../includes/tla2sharptla-winfx-md.md)] zaman [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] tarayıcıda barındırılan uygulamalar görüntülendiğinde. Varsa [!INCLUDE[TLA2#tla_winfx](../../../../includes/tla2sharptla-winfx-md.md)] yüklü değil, [!INCLUDE[TLA2#tla_ie](../../../../includes/tla2sharptla-ie-md.md)] kullanıcıların yüklemesini ister.  
+ Çalıştırmak için bir [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] uygulama, Microsoft .NET Framework istemci üzerinde yüklü olmalıdır. [!INCLUDE[TLA2#tla_ie](../../../../includes/tla2sharptla-ie-md.md)] istemciler ile .NET Framework yüklü olup olmadığını otomatik olarak algılar, [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] tarayıcıda barındırılan uygulamalar görüntülendiğinde. .NET Framework yüklü değilse [!INCLUDE[TLA2#tla_ie](../../../../includes/tla2sharptla-ie-md.md)] kullanıcıların yüklemesini ister.  
   
- Algılamak için olup olmadığını [!INCLUDE[TLA2#tla_winfx](../../../../includes/tla2sharptla-winfx-md.md)] yüklü olduğu [!INCLUDE[TLA2#tla_ie](../../../../includes/tla2sharptla-ie-md.md)] geri dönüş olarak kayıtlı bir önyükleyici uygulama içerir [!INCLUDE[TLA#tla_mime](../../../../includes/tlasharptla-mime-md.md)] şu uzantılara sahip içerik dosyaları için işleyici: .xaml, .xps, .xbap ve .application. Bu dosya türlerini giderseniz ve [!INCLUDE[TLA2#tla_winfx](../../../../includes/tla2sharptla-winfx-md.md)] yüklü değil istemci üzerinde önyükleyici uygulama yüklemek için izin ister. İzni, tipleri sağlanmamışsa [!INCLUDE[TLA2#tla_winfx](../../../../includes/tla2sharptla-winfx-md.md)] veya uygulama yüklenir.  
+ .NET Framework yüklü olup olmadığını algılamak için [!INCLUDE[TLA2#tla_ie](../../../../includes/tla2sharptla-ie-md.md)] geri dönüş olarak kayıtlı bir önyükleyici uygulama içerir [!INCLUDE[TLA#tla_mime](../../../../includes/tlasharptla-mime-md.md)] şu uzantılara sahip içerik dosyaları için işleyici: .xaml, .xps, .xbap ve .application. Bu dosya türlerini gidin ve istemcide .NET Framework yüklü değilse, önyükleyici uygulama yüklemek için izin ister. İzni sağlanmazsa, .NET Framework ne uygulama yüklenir.  
   
- İzin verilirse [!INCLUDE[TLA2#tla_ie](../../../../includes/tla2sharptla-ie-md.md)] indirir ve yükler [!INCLUDE[TLA2#tla_winfx](../../../../includes/tla2sharptla-winfx-md.md)] kullanarak [!INCLUDE[TLA#tla_bits](../../../../includes/tlasharptla-bits-md.md)]. Başarılı yüklemesinden sonra [!INCLUDE[TLA2#tla_winfx](../../../../includes/tla2sharptla-winfx-md.md)], ilk olarak istenen dosyanın yeni bir tarayıcı penceresinde açılır.  
+ İzin verilirse [!INCLUDE[TLA2#tla_ie](../../../../includes/tla2sharptla-ie-md.md)] indirir ve .NET Framework kullanılarak yükler [!INCLUDE[TLA#tla_bits](../../../../includes/tlasharptla-bits-md.md)]. .NET Framework başarılı yüklemesinden sonra ilk olarak istenen dosyanın yeni bir tarayıcı penceresinde açılır.  
   
- [!INCLUDE[TLA2#tla_winfx](../../../../includes/tla2sharptla-winfx-md.md)] otomatik algılamayı edinilebilir [!INCLUDE[TLA#tla_longhorn](../../../../includes/tlasharptla-longhorn-md.md)], [!INCLUDE[TLA#tla_winxpsp2](../../../../includes/tlasharptla-winxpsp2-md.md)], ve [!INCLUDE[TLA#tla_winnetsvrfamsp1](../../../../includes/tlasharptla-winnetsvrfamsp1-md.md)] sahip istemciler [!INCLUDE[TLA2#tla_ie7](../../../../includes/tla2sharptla-ie7-md.md)] veya sonraki bir sürümü yüklü.  
+ .NET framework otomatik algılamayı edinilebilir [!INCLUDE[TLA#tla_longhorn](../../../../includes/tlasharptla-longhorn-md.md)], [!INCLUDE[TLA#tla_winxpsp2](../../../../includes/tlasharptla-winxpsp2-md.md)], ve [!INCLUDE[TLA#tla_winnetsvrfamsp1](../../../../includes/tlasharptla-winnetsvrfamsp1-md.md)] sahip istemciler [!INCLUDE[TLA2#tla_ie7](../../../../includes/tla2sharptla-ie7-md.md)] veya sonraki bir sürümü yüklü.  
   
  Daha fazla bilgi için bkz: [.NET Framework ve uygulamaları dağıtma](../../../../docs/framework/deployment/index.md).  
   

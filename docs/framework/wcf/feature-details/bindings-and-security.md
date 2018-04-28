@@ -15,17 +15,17 @@ helpviewer_keywords:
 - Windows Communication Foundation, security
 - bindings [WCF]
 ms.assetid: 4de03dd3-968a-4e65-af43-516e903d7f95
-caps.latest.revision: ''
+caps.latest.revision: 42
 author: BrucePerlerMS
 ms.author: bruceper
 manager: mbaldwin
 ms.workload:
 - dotnet
-ms.openlocfilehash: 9e44db963a696f22f91569eb3d7c2956289a9c76
-ms.sourcegitcommit: c883637b41ee028786edceece4fa872939d2e64c
+ms.openlocfilehash: 5eb1019694f6228edbe3656849b85dfa7611ef18
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/26/2018
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="bindings-and-security"></a>Bağlamalar ve Güvenlik
 İle birlikte gelen sistem tarafından sağlanan bağlamalar [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] program hızlı bir şekilde sunma [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] uygulamalar. Bunun tek istisnası etkin bir varsayılan güvenlik düzeni tüm bağlamaları vardır. Bu konuda, güvenlik ihtiyaçlarınızı için doğru bağlama seçmenize yardımcı olur.  
@@ -56,7 +56,7 @@ ms.lasthandoff: 03/26/2018
   
 -   WS içinde tanımlanan temel güvenlik profili-ı.  
   
- Varsayılan olarak, bu bağlantı güvenli değil. ASMX Hizmetleri ile birlikte çalışmak üzere tasarlanmıştır. Güvenlik etkinleştirildiğinde, bağlama temel kimlik doğrulaması, Özet ve tümleşik Windows güvenliği gibi Internet Information Services (IIS) güvenlik mekanizmaları ile sorunsuz birlikte çalışma için tasarlanmıştır. [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)] [Taşıma güvenliği genel bakış](../../../../docs/framework/wcf/feature-details/transport-security-overview.md). Bu bağlama aşağıdakileri destekler:  
+ Varsayılan olarak, bu bağlantı güvenli değil. ASMX Hizmetleri ile birlikte çalışmak üzere tasarlanmıştır. Güvenlik etkinleştirildiğinde, bağlama temel kimlik doğrulaması, Özet ve tümleşik Windows güvenliği gibi Internet Information Services (IIS) güvenlik mekanizmaları ile sorunsuz birlikte çalışma için tasarlanmıştır. Daha fazla bilgi için bkz: [taşıma güvenliği genel bakış](../../../../docs/framework/wcf/feature-details/transport-security-overview.md). Bu bağlama aşağıdakileri destekler:  
   
 -   HTTPS taşıma güvenliği.  
   
@@ -64,7 +64,7 @@ ms.lasthandoff: 03/26/2018
   
 -   WS-güvenliği.  
   
- [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)] <xref:System.ServiceModel.BasicHttpSecurity>, <xref:System.ServiceModel.BasicHttpMessageSecurity>, <xref:System.ServiceModel.BasicHttpMessageCredentialType>, ve <xref:System.ServiceModel.BasicHttpSecurityMode>.  
+ Daha fazla bilgi için bkz: <xref:System.ServiceModel.BasicHttpSecurity>, <xref:System.ServiceModel.BasicHttpMessageSecurity>, <xref:System.ServiceModel.BasicHttpMessageCredentialType>, ve <xref:System.ServiceModel.BasicHttpSecurityMode>.  
   
 ### <a name="wshttpbinding"></a>WSHttpBinding  
  Kod içinde kullanma <xref:System.ServiceModel.WSHttpBinding> sınıf; yapılandırmasında kullanmasına [ \<wsHttpBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/wshttpbinding.md).  
@@ -77,7 +77,7 @@ ms.lasthandoff: 03/26/2018
   
 -   HTTPS koruma SOAP iletisi kimlik bilgisi güvenlik arayan kimlik doğrulaması için taşıma.  
   
- [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)] <xref:System.ServiceModel.WSHttpSecurity>, <xref:System.ServiceModel.MessageSecurityOverHttp>, <xref:System.ServiceModel.MessageCredentialType>, <xref:System.ServiceModel.SecurityMode>, <xref:System.ServiceModel.HttpTransportSecurity>, <xref:System.ServiceModel.HttpClientCredentialType>, ve <xref:System.ServiceModel.HttpProxyCredentialType>.  
+ Daha fazla bilgi için bkz: <xref:System.ServiceModel.WSHttpSecurity>, <xref:System.ServiceModel.MessageSecurityOverHttp>, <xref:System.ServiceModel.MessageCredentialType>, <xref:System.ServiceModel.SecurityMode>, <xref:System.ServiceModel.HttpTransportSecurity>, <xref:System.ServiceModel.HttpClientCredentialType>, ve <xref:System.ServiceModel.HttpProxyCredentialType>.  
   
 ### <a name="wsdualhttpbinding"></a>WSDualHttpBinding  
  Kod içinde kullanma <xref:System.ServiceModel.WSDualHttpBinding> sınıf; yapılandırmasında kullanmasına [ \<wsDualHttpBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/wsdualhttpbinding.md).  
@@ -102,7 +102,7 @@ ms.lasthandoff: 03/26/2018
   
     -   Kanal kurulumunun bir parçası olarak hizmetinden hizmet kimlik bilgilerini sağlayan anlaşma.  
   
- [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)] <xref:System.ServiceModel.WSDualHttpSecurity> ve <xref:System.ServiceModel.WSDualHttpSecurityMode>.  
+ Daha fazla bilgi için bkz. <xref:System.ServiceModel.WSDualHttpSecurity> ve <xref:System.ServiceModel.WSDualHttpSecurityMode>.  
   
 ### <a name="nettcpbinding"></a>NetTcpBinding  
  Kod içinde kullanma <xref:System.ServiceModel.NetTcpBinding> sınıf; yapılandırmasında kullanmasına [ \<netTcpBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/nettcpbinding.md).  
@@ -125,7 +125,7 @@ ms.lasthandoff: 03/26/2018
   
 -   Aktarım ileti kimlik bilgileri ile güvenliği — gizliliği ve bütünlük Aktarım Katmanı Güvenliği (TLS) tarafından WS-Security tarafından sağlanan yetkilendirme için TCP ve kimlik bilgileri sağlanan.  
   
- [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)] <xref:System.ServiceModel.NetTcpSecurity>, <xref:System.ServiceModel.TcpTransportSecurity>, <xref:System.ServiceModel.TcpClientCredentialType>, <xref:System.ServiceModel.MessageSecurityOverTcp>, ve <xref:System.ServiceModel.MessageCredentialType>.  
+ Daha fazla bilgi için bkz: <xref:System.ServiceModel.NetTcpSecurity>, <xref:System.ServiceModel.TcpTransportSecurity>, <xref:System.ServiceModel.TcpClientCredentialType>, <xref:System.ServiceModel.MessageSecurityOverTcp>, ve <xref:System.ServiceModel.MessageCredentialType>.  
   
 ### <a name="netnamedpipebinding"></a>NetNamedPipeBinding  
  Kod içinde kullanma <xref:System.ServiceModel.NetNamedPipeBinding> sınıf; yapılandırmasında kullanmasına [ \<netNamedPipeBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/netnamedpipebinding.md).  
@@ -144,7 +144,7 @@ ms.lasthandoff: 03/26/2018
   
 -   Windows güvenliği kullanarak kimlik doğrulaması.  
   
- [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)] <xref:System.ServiceModel.NetNamedPipeSecurity>, <xref:System.ServiceModel.NetNamedPipeSecurityMode>, ve <xref:System.ServiceModel.NamedPipeTransportSecurity>.  
+ Daha fazla bilgi için bkz: <xref:System.ServiceModel.NetNamedPipeSecurity>, <xref:System.ServiceModel.NetNamedPipeSecurityMode>, ve <xref:System.ServiceModel.NamedPipeTransportSecurity>.  
   
 ### <a name="msmqintegrationbinding"></a>MsmqIntegrationBinding  
  Kod içinde kullanma <xref:System.ServiceModel.MsmqIntegration.MsmqIntegrationBinding> sınıf; yapılandırmasında kullanmasına [ \<MsmqIntegrationBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/msmqintegrationbinding.md).  
@@ -157,7 +157,7 @@ ms.lasthandoff: 03/26/2018
   
 -   MSMQ taşıma güvenliği (aktarım).  
   
- [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)] <xref:System.ServiceModel.NetMsmqSecurity> ve <xref:System.ServiceModel.NetMsmqSecurityMode>.  
+ Daha fazla bilgi için bkz. <xref:System.ServiceModel.NetMsmqSecurity> ve <xref:System.ServiceModel.NetMsmqSecurityMode>.  
   
 ### <a name="netmsmqbinding"></a>NetMsmqBinding  
  Kod içinde kullanma <xref:System.ServiceModel.NetMsmqBinding> sınıf; yapılandırmasında kullanmasına [ \<netMsmqBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/netmsmqbinding.md).  
@@ -178,17 +178,17 @@ ms.lasthandoff: 03/26/2018
   
  <xref:System.ServiceModel.MessageCredentialType.Certificate> Kimlik bilgisi yalnızca güvenlik modu olarak ayarlandığında desteklenir <xref:System.ServiceModel.NetMsmqSecurityMode.Both> veya <xref:System.ServiceModel.NetMsmqSecurityMode.Message>.  
   
- [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)] <xref:System.ServiceModel.MessageSecurityOverMsmq> ve <xref:System.ServiceModel.MsmqTransportSecurity>.  
+ Daha fazla bilgi için bkz. <xref:System.ServiceModel.MessageSecurityOverMsmq> ve <xref:System.ServiceModel.MsmqTransportSecurity>.  
   
 ### <a name="wsfederationhttpbinding"></a>WSFederationHttpBinding  
  Kod içinde kullanma <xref:System.ServiceModel.WSFederationHttpBinding> sınıf; yapılandırmasında kullanmasına [ \<wsFederationHttpBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/wsfederationhttpbinding.md).  
   
  Varsayılan olarak, bu bağlama WS-Security (ileti Katmanı Güvenliği) kullanır.  
   
- [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)] [Federasyon](../../../../docs/framework/wcf/feature-details/federation.md), <xref:System.ServiceModel.WSFederationHttpSecurity>, ve <xref:System.ServiceModel.WSFederationHttpSecurityMode>.  
+ Daha fazla bilgi için bkz: [Federasyon](../../../../docs/framework/wcf/feature-details/federation.md), <xref:System.ServiceModel.WSFederationHttpSecurity>, ve <xref:System.ServiceModel.WSFederationHttpSecurityMode>.  
   
 ## <a name="custom-bindings"></a>Özel Bağlamalar  
- Sistem tarafından sağlanan bağlamalar hiçbiri gereksinimlerini karşılayıp karşılamadığını olan bir özel güvenlik bağlama öğesi özel bağlama oluşturabilirsiniz. [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)] [Özel bağlamalarla güvenlik özellikleri](../../../../docs/framework/wcf/feature-details/security-capabilities-with-custom-bindings.md).  
+ Sistem tarafından sağlanan bağlamalar hiçbiri gereksinimlerini karşılayıp karşılamadığını olan bir özel güvenlik bağlama öğesi özel bağlama oluşturabilirsiniz. Daha fazla bilgi için bkz: [özel bağlamalarla güvenlik özellikleri](../../../../docs/framework/wcf/feature-details/security-capabilities-with-custom-bindings.md).  
   
 ## <a name="binding-choices"></a>Seçimler bağlama  
  Güvenlik Modu ayarını sunulan özellikler aşağıdaki tabloda özetlenmiştir, diğer bir deyişle, güvenlik modu ayarlandığında kullanılabilen özellikleri listeler `Transport`, `Message`, veya `TransportWithMessageCredential`. Uygulamanızın gerektirdiği güvenlik özellikleri bulmanıza yardımcı olmak için bu tabloyu kullanın.  
@@ -218,12 +218,12 @@ ms.lasthandoff: 03/26/2018
 |Tür|Açıklama|  
 |----------|-----------------|  
 |Yok.|İstemci kimlik sunmak gerekmez belirtir. Anonim istemci için çevirir.|  
-|Temel|Temel kimlik doğrulaması. [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)] RFC 2617 – HTTP kimlik doğrulaması: Temel ve Özet kimlik doğrulaması, adresinde [ http://go.microsoft.com/fwlink/?LinkId=84023 ](http://go.microsoft.com/fwlink/?LinkId=84023).|  
-|Özet|Özet kimlik doğrulaması. [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)] RFC 2617 – HTTP kimlik doğrulaması: Temel ve Özet kimlik doğrulaması, adresinde [ http://go.microsoft.com/fwlink/?LinkId=84023 ](http://go.microsoft.com/fwlink/?LinkId=84023).|  
+|Temel|Temel kimlik doğrulaması. HTTP kimlik doğrulaması RFC 2617 – daha fazla bilgi için bkz: temel ve Özet kimlik doğrulaması, adresinde [ http://go.microsoft.com/fwlink/?LinkId=84023 ](http://go.microsoft.com/fwlink/?LinkId=84023).|  
+|Özet|Özet kimlik doğrulaması. HTTP kimlik doğrulaması RFC 2617 – daha fazla bilgi için bkz: temel ve Özet kimlik doğrulaması, adresinde [ http://go.microsoft.com/fwlink/?LinkId=84023 ](http://go.microsoft.com/fwlink/?LinkId=84023).|  
 |NTLM|NT LAN Yöneticisi (NTLM) kimlik doğrulaması.|  
 |Windows|Windows kimlik doğrulaması.|  
 |Sertifika|Kimlik doğrulaması, bir sertifika kullanılarak gerçekleştirilir.|  
-|IssuedToken|Hizmetinin gerektiren izin verir, istemci kimlik doğrulaması ile veya bir güvenlik belirteci hizmeti tarafından verilmiş bir belirteç kullanarak [!INCLUDE[infocard](../../../../includes/infocard-md.md)]. [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)] [Federasyon ve verilen belirteçleri](../../../../docs/framework/wcf/feature-details/federation-and-issued-tokens.md).|  
+|IssuedToken|Hizmetinin gerektiren izin verir, istemci kimlik doğrulaması ile veya bir güvenlik belirteci hizmeti tarafından verilmiş bir belirteç kullanarak [!INCLUDE[infocard](../../../../includes/infocard-md.md)]. Daha fazla bilgi için bkz: [Federasyon ve verilen belirteçleri](../../../../docs/framework/wcf/feature-details/federation-and-issued-tokens.md).|  
   
 ### <a name="message-client-credentials-in-bindings"></a>Bağlamaları ileti istemci kimlik bilgileri  
  Aşağıdaki tabloda, bir bağlama ileti güvenlik modunda kullanırken kullanılabilir istemci kimlik bilgisi türlerini listeler.  

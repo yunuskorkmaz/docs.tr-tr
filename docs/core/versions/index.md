@@ -4,17 +4,16 @@ description: .NET Core sürüm nasıl çalıştığını anlayın.
 author: bleroy
 ms.author: mairaw
 ms.date: 02/13/2018
-ms.topic: article
-ms.prod: .net-core
+ms.topic: conceptual
+ms.prod: dotnet-core
 ms.devlang: dotnet
-ms.assetid: f6f684b1-1d2c-4105-8376-7c1959e23803
 ms.workload:
 - dotnetcore
-ms.openlocfilehash: 70c7f179f3451e51d5ab383cde80959a69f959a1
-ms.sourcegitcommit: 96cc82cac4650adfb65ba351506d8a8fbcd17b5c
+ms.openlocfilehash: 437bea33f26c9ae445cf412657f4d23fcce18873
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/19/2018
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="net-core-versioning"></a>.NET core sürüm oluşturma
 
@@ -75,14 +74,14 @@ Tüm web sitesi açıklamaları ve yükleyicileri UI dizelerde tutarlı, doğru 
 
 | Installer | Pencere Başlığı                                    | Yükleyici diğer içeriği        | Yüklenenler                                                   |
 | :--       | :--                                             | :--                               | :--                                                                 |
-| SDK       | .NET core 2.0 Preview 1 (x 64) SDK'sı yükleyicisi     | .NET Core 2.0.0 Preview 1 SDK     | .NET core 2.0.0 Preview 1 araçları + .NET Core 2.0.0 1 çalışma zamanı Önizleme |
+| SDK       | .NET core 2.0 Preview 1 (x 64) SDK'sı yükleyicisi     | .NET core 2.0.0 Önizleme 1 SDK'sı     | .NET core 2.0.0 Preview 1 araçları + .NET Core 2.0.0 1 çalışma zamanı Önizleme |
 | Çalışma zamanı   | .NET core 2.0 Preview 1 çalışma zamanı (x64) Yükleyici | .NET core 2.0.0 Preview 1 çalışma zamanı | .NET core 2.0.0 Preview 1 çalışma zamanı                                   |
 
 SDK sürüm çalışma zamanı birden fazla sürümünü içeren oluşabilir. Bu durum oluştuğunda yükleyici UX aşağıdaki gibi yalnızca (SDK sürüm gösterilir ve yüklü çalışma zamanı sürümleri, Windows ve Mac üzerinde yükleme işleminin sonunda Özet sayfasında gösterilir) görünür:
 
 | Installer | Pencere Başlığı                      | Yükleyici diğer içeriği                                   | Yüklenenler                                                         |
 | :--       | :--                               | :--                                                          | :--                                                                       |
-| SDK       | .NET core 2.1 (x 64) SDK'sı yükleyicisi | .NET Core 2.1.1 SDK <br> .NET core 2.1.1 çalışma zamanı <br> .NET core 2.0.6 çalışma zamanı | .NET core 2.1.1 araçları, .NET Core 2.1.1 çalışma zamanı + .NET Core 2.0.6 çalışma zamanı |
+| SDK       | .NET core 2.1 (x 64) SDK'sı yükleyicisi | .NET core 2.1.1 SDK <br> .NET core 2.1.1 çalışma zamanı <br> .NET core 2.0.6 çalışma zamanı | .NET core 2.1.1 araçları, .NET Core 2.1.1 çalışma zamanı + .NET Core 2.0.6 çalışma zamanı |
 
 .NET Core Araçları çalışma zamanı değişiklikleri güncelleştirilmesi gerektiğini mümkündür. Bu durumda (örneğin, 2.1.2) SDK sürümü artırılır ve sonra çalışma zamanı sonraki zaman onu gelir (örneğin, hem çalışma zamanı ve SDK 2.1.3 sonraki sürede gönderilen) yakalar.
 
@@ -115,9 +114,9 @@ Paket maintainers Önizleme sürümleri çalışma zamanı ve SDK'sını içerec
 Adlandırma genel bir Docker etiketi bileşen adı önce sürüm numarası yerleştirmektir. Bu kural, kullanılacak devam edebilir. Geçerli etiketler yalnızca çalışma zamanı sürümü aşağıdaki şekilde ekleyin.
 
 * 1.0.8-Runtime
-* 1.0.8-sdk
+* 1.0.8-SDK
 * 2.0.4-Runtime
-* 2.0.4-sdk
+* 2.0.4-SDK
 * 2.1.1-Runtime
 * 2.1.1-sdk
 
@@ -192,7 +191,7 @@ Daha fazla bilgi için bkz: [.NET Core destek yaşam döngüsü olgu sayfası](h
 
 .NET core ayrıca hedef çerçeve kümesini içerir (örneğin, `netstandard` veya `netcoreapp`) giderek daha büyük bir API kümesini temsil eden sürüm numaralarını artırılır gibi.
 
-### <a name="net-standard"></a>.NET Standard
+### <a name="net-standard"></a>.NET standart
 
 .NET standart kullanarak bir `MAJOR.MINOR` sürüm düzeni. `PATCH` Düzey standart .NET için yararlı değildir üzerinde daha az sıklıkta yinelendiğinde ve sürüm oluşturma için gerçek uygulaması ile aynı gereksinimlerini sunmak değil sözleşmeleri kümesini ifade eder.
 

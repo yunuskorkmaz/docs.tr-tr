@@ -1,23 +1,24 @@
 ---
-title: "Bildirim temelli kısıtlamaları"
-ms.custom: 
+title: Bildirim temelli kısıtlamaları
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 67001ed1-7f4d-4ada-ae57-a31176901a53
-caps.latest.revision: "12"
+caps.latest.revision: 12
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: a11c62c7011d7ffb13ed0d0ebf060a3cbeb7d7f8
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: f5ab784498805473830b46962d9e02591fc3eace
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="declarative-constraints"></a>Bildirim temelli kısıtlamaları
 Bildirim temelli kısıtlamaları bir etkinlik ve diğer etkinlikler ilişkilerini için güçlü bir yöntem doğrulama sağlayın. Kısıtlamaları yazma işlemi sırasında bir etkinlik için yapılandırılmış, ancak ek kısıtlamalar iş akışı ana bilgisayar tarafından da belirtilebilir. Bu konu, etkinlik doğrulama sağlamak için bildirim temelli kısıtlamaları kullanarak genel bir bakış sağlar.  
@@ -70,9 +71,9 @@ public sealed class SampleActivity : CodeActivity
  <xref:System.Activities.Validation.AddValidationError> Etkinlik, bir ifadenin değerlendirmesine gerek kalmadan bir doğrulama hata veya uyarı oluşturmak için kullanılır. Özelliklerini benzer <xref:System.Activities.Validation.AssertValidation> ve onu bir kısıtlamanın akış denetimi etkinlikleriyle birlikte gibi kullanılabilir <xref:System.Activities.Statements.If> etkinlik.  
   
 ### <a name="workflow-relationship-activities"></a>İş akışı ilişki etkinlikleri  
- Birkaç doğrulama etkinliği kullanılabilir Doğrulanmakta olan etkinliği bağlantılı olarak iş akışındaki diğer etkinlikleri hakkında bilgi sağlar. <xref:System.Activities.Validation.GetParentChain>geçerli etkinliği Kök etkinlik arasındaki etkinliklerin tümünü içeren bir koleksiyon etkinliklerin döndürür. <xref:System.Activities.Validation.GetChildSubtree>bir özyinelemeli düzeninde alt etkinlikler içeren bir koleksiyon etkinliklerin sağlar ve <xref:System.Activities.Validation.GetWorkflowTree> tüm etkinlikler iş akışında alır.  
+ Birkaç doğrulama etkinliği kullanılabilir Doğrulanmakta olan etkinliği bağlantılı olarak iş akışındaki diğer etkinlikleri hakkında bilgi sağlar. <xref:System.Activities.Validation.GetParentChain> geçerli etkinliği Kök etkinlik arasındaki etkinliklerin tümünü içeren bir koleksiyon etkinliklerin döndürür. <xref:System.Activities.Validation.GetChildSubtree> bir özyinelemeli düzeninde alt etkinlikler içeren bir koleksiyon etkinliklerin sağlar ve <xref:System.Activities.Validation.GetWorkflowTree> tüm etkinlikler iş akışında alır.  
   
- Aşağıdaki örnekte [etkinlik ilişkileri doğrulama](../../../docs/framework/windows-workflow-foundation/samples/activity-relationships-validation.md) örnek, bir `CreateState` etkinlik tanımlanır. `CreateState` Etkinlik bulunan, içinde bir `CreateCountry` etkinliği ve `GetParent` yöntemi bu gereksinimini zorlar bir kısıtlama döndürür. `GetParent`kullanan <xref:System.Activities.Validation.GetParentChain> etkinlik ile birlikte bir <xref:System.Activities.Statements.ForEach%601> üst etkinliklerini incelemek için etkinlik `CreateState` gereksinim karşılanır belirlemek için etkinlik.  
+ Aşağıdaki örnekte [etkinlik ilişkileri doğrulama](../../../docs/framework/windows-workflow-foundation/samples/activity-relationships-validation.md) örnek, bir `CreateState` etkinlik tanımlanır. `CreateState` Etkinlik bulunan, içinde bir `CreateCountry` etkinliği ve `GetParent` yöntemi bu gereksinimini zorlar bir kısıtlama döndürür. `GetParent` kullanan <xref:System.Activities.Validation.GetParentChain> etkinlik ile birlikte bir <xref:System.Activities.Statements.ForEach%601> üst etkinliklerini incelemek için etkinlik `CreateState` gereksinim karşılanır belirlemek için etkinlik.  
   
 ```csharp  
 public sealed class CreateState : CodeActivity  
@@ -146,7 +147,7 @@ public sealed class CreateState : CodeActivity
 }  
 ```  
   
- [!INCLUDE[crdefault](../../../includes/crdefault-md.md)]Windows Workflow Foundation [doğrulama](../../../docs/framework/windows-workflow-foundation/samples/validation.md) örnekleri.  
+ Daha fazla bilgi için bkz: Windows Workflow Foundation [doğrulama](../../../docs/framework/windows-workflow-foundation/samples/validation.md) örnekleri.  
   
 ## <a name="additional-constraints"></a>Ek sınırlamalar  
  İş akışı ana yazarları belirtebilirsiniz ek doğrulama kısıtlamaları etkinlikler için bir iş akışında kısıtlamaları oluşturarak ve bunları ekleme <xref:System.Activities.Validation.ValidationSettings.AdditionalConstraints%2A> sözlüğü bir <xref:System.Activities.Validation.ValidationSettings> örneği. Her öğe <xref:System.Activities.Validation.ValidationSettings.AdditionalConstraints%2A> için etkinlik türünü içerir kısıtlamaları uygulanacak ve bu tür bir etkinlik için ek kısıtlamalar listesi. Doğrulama için iş akışını çağrıldığında, her etkinlik türetilen sınıflar dahil olmak üzere belirtilen türde kısıtlamalar değerlendirir. Bu örnekte, `ActivityDisplayNameIsNotSetWarning` önceki bölümdeki kısıtlaması, bir iş akışındaki tüm etkinlikler için uygulanır.  
@@ -187,4 +188,4 @@ else
 }  
 ```  
   
- Varsa <xref:System.Activities.Validation.ValidationSettings.OnlyUseAdditionalConstraints%2A> özelliği <xref:System.Activities.Validation.ValidationSettings> olan `true`, yalnızca belirtilen ek kısıtlamalar doğrulama çağırarak çağrıldığında değerlendirilir sonra <xref:System.Activities.Validation.ActivityValidationServices.Validate%2A>. Bu, belirli doğrulama yapılandırmaları için iş akışlarını incelemek için yararlı olabilir. Ancak iş akışı çağrıldığında iş akışı içinde yapılandırılmış doğrulama mantığını değerlendirilir ve başarılı bir şekilde başlamak iş akışı için geçmesi gereken unutmayın. [!INCLUDE[crabout](../../../includes/crabout-md.md)]doğrulama, çağırma bkz [çağırma etkinlik doğrulama](../../../docs/framework/windows-workflow-foundation/invoking-activity-validation.md).
+ Varsa <xref:System.Activities.Validation.ValidationSettings.OnlyUseAdditionalConstraints%2A> özelliği <xref:System.Activities.Validation.ValidationSettings> olan `true`, yalnızca belirtilen ek kısıtlamalar doğrulama çağırarak çağrıldığında değerlendirilir sonra <xref:System.Activities.Validation.ActivityValidationServices.Validate%2A>. Bu, belirli doğrulama yapılandırmaları için iş akışlarını incelemek için yararlı olabilir. Ancak iş akışı çağrıldığında iş akışı içinde yapılandırılmış doğrulama mantığını değerlendirilir ve başarılı bir şekilde başlamak iş akışı için geçmesi gereken unutmayın. [!INCLUDE[crabout](../../../includes/crabout-md.md)] doğrulama, çağırma bkz [çağırma etkinlik doğrulama](../../../docs/framework/windows-workflow-foundation/invoking-activity-validation.md).

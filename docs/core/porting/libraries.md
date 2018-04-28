@@ -1,21 +1,19 @@
 ---
-title: ".NET Core - kitaplıkları taşıma"
-description: ".NET Framework kitaplığı projelerden .NET Core için bağlantı noktası öğrenin."
-keywords: .NET, .NET Core
+title: .NET Core - kitaplıkları taşıma
+description: .NET Framework kitaplığı projelerden .NET Core için bağlantı noktası öğrenin.
 author: cartermp
 ms.author: mairaw
 ms.date: 07/14/2017
-ms.topic: article
-ms.prod: .net-core
+ms.topic: conceptual
+ms.prod: dotnet-core
 ms.devlang: dotnet
-ms.assetid: a0fd860d-d6b6-4659-b325-8a6e6f5fa4a1
 ms.workload:
 - dotnetcore
-ms.openlocfilehash: 24c74f0396dd7bfdf19fc0e11a29110fdbf27173
-ms.sourcegitcommit: cf22b29db780e532e1090c6e755aa52d28273fa6
+ms.openlocfilehash: ca71ed4b2423846db4b2c2fc0ba87c49330b7d14
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/01/2018
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="porting-to-net-core---libraries"></a>.NET Core - kitaplıkları taşıma
 
@@ -79,7 +77,7 @@ Benzer CA'lar için güvenlik saydamlık korumalı kod güvenlik kritik kodundan
 
 En az çalışan işlemleri için sanallaştırma, kapsayıcıları veya kullanıcı hesapları gibi işletim sistemi tarafından sağlanan güvenlik sınırları kullanın ayrıcalık kümesi.
 
-### <a name="globaljson"></a>global.json
+### <a name="globaljson"></a>Global.JSON
 
 *Global.json* bir projenin .NET Core araçları sürümünü ayarlamanıza olanak tanır isteğe bağlı bir dosya bir dosyadır. .NET Core gecelik derlemelerini kullanıyorsanız ve SDK'ın belirli bir sürüm belirtmek istiyorsanız, sürümüyle belirtin bir *global.json* dosya. Genellikle geçerli çalışma dizini veya üst dizinleri birinde yer alıyor. 
 
@@ -185,7 +183,7 @@ Kodunuzu bağlantı noktalı zaman her şeyi çalıştığından emin olmak içi
 - [NUnit](http://www.nunit.org/)
   * [Başlarken](https://github.com/nunit/docs/wiki/Installation)
   * [Blog yayını için NUnit mstest'i geçirme hakkında](http://www.florian-rappl.de/News/Page/275/convert-mstest-to-nunit)
-- [MSTest](https://docs.microsoft.com/visualstudio/test/unit-test-basics)
+- [Mstest'i](https://docs.microsoft.com/visualstudio/test/unit-test-basics)
 
 ## <a name="recommended-approach-to-porting"></a>Taşıma için önerilen yaklaşım
 

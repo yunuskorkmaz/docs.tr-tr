@@ -1,9 +1,7 @@
 ---
-title: "Mod İşleci (Visual Basic)"
-ms.date: 07/20/2015
+title: Mod İşleci (Visual Basic)
+ms.date: 04/24/2018
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - devlang-visual-basic
 ms.topic: article
@@ -18,16 +16,15 @@ helpviewer_keywords:
 - arithmetic operators [Visual Basic], Mod
 - math operators [Visual Basic]
 ms.assetid: 6ff7e40e-cec8-4c77-bff6-8ddd2791c25b
-caps.latest.revision: 
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: 5464b57c993e5703c09529b527a7bc714e045870
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+author: rpetrusha
+ms.author: ronpet
+ms.openlocfilehash: cf0889cbea609b4555581fbf67cd0cba1ea889d0
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/28/2018
 ---
-# <a name="mod-operator-visual-basic"></a>Mod İşleci (Visual Basic)
+# <a name="mod-operator-visual-basic"></a>Mod işleci (Visual Basic)
 İki sayıyı böler ve yalnızca kalanı döndürür.  
   
 ## <a name="syntax"></a>Sözdizimi  
@@ -46,9 +43,31 @@ number1 Mod number2
 ## <a name="supported-types"></a>Desteklenen türler  
  Tüm sayısal türler. Bu imzasız ve kayan nokta türleri içerir ve `Decimal`.  
   
-## <a name="result"></a>Sonuç  
- Sonra geri kalan sonucudur `number1` bölünür `number2`. Örneğin, ifade `14 Mod 4` 2 olarak değerlendirir.  
-  
+## <a name="result"></a>Sonuç
+
+Sonra geri kalan sonucudur `number1` bölünür `number2`. Örneğin, ifade `14 Mod 4` 2 olarak değerlendirir.  
+
+> [!NOTE]
+> Arasında bir fark *kalan* ve *modulus* negatif sayılar için farklı sonuçlarla matematik içinde. `Mod` Visual Basic'te .NET Framework işleci `op_Modulus` işleci ve temel alınan [rem]<xref:System.Reflection.Emit.OpCodes.Rem> IL yönerge tüm kalan işlemi gerçekleştirin.
+
+Sonucunu bir `Mod` işlemi korur bölünen oturum `number1`, ve olumlu veya olumsuz olabilir. Sonucu her zaman aralığı içinde değil (-`number2`, `number2`), özel. Örneğin:
+
+```vb
+Public Module Example
+   Public Sub Main()
+      Console.WriteLine($" 8 Mod  3 = {8 Mod 3}")
+      Console.WriteLine($"-8 Mod  3 = {-8 Mod 3}")
+      Console.WriteLine($" 8 Mod -3 = {8 Mod -3}")
+      Console.WriteLine($"-8 Mod -3 = {-8 Mod -3}")
+   End Sub
+End Module
+' The example displays the following output:
+'       8 Mod  3 = 2
+'      -8 Mod  3 = -2
+'       8 Mod -3 = 2
+'      -8 Mod -3 = -2
+```
+
 ## <a name="remarks"></a>Açıklamalar  
  Her iki `number1` veya `number2` bir kayan nokta bölme kayan nokta kalanı döndürülen değerdir. Sonuç veri türü veri türlerini bölme kaynaklanan tüm olası değerler tutabileceği en küçük veri türüdür `number1` ve `number2`.  
   
@@ -70,8 +89,8 @@ number1 Mod number2
   
  `a - (b * Fix(a / b))`  
   
-## <a name="floating-point-imprecision"></a>Kayan nokta Imprecision  
- Kayan nokta sayıları ile çalışırken, bunlar her zaman kesin bir gösterimi belleğe sahip olmadığını unutmayın. Değer karşılaştırması gibi bazı işlemleri alanından bu beklenmeyen sonuçlara neden ve `Mod` işleci. Daha fazla bilgi için bkz: [veri türleri sorunlarını giderme](../../../visual-basic/programming-guide/language-features/data-types/troubleshooting-data-types.md).  
+## <a name="floating-point-imprecision"></a>Kayan nokta imprecision  
+ Kayan nokta sayıları ile çalışırken, bunlar her zaman kesin bir ondalık gösterimi belleğe sahip olmadığını unutmayın. Değer karşılaştırması gibi bazı işlemleri alanından bu beklenmeyen sonuçlara neden olabilir ve `Mod` işleci. Daha fazla bilgi için bkz: [veri türleri sorunlarını giderme](../../../visual-basic/programming-guide/language-features/data-types/troubleshooting-data-types.md).  
   
 ## <a name="overloading"></a>Aşırı Yükleme  
  `Mod` İşleci olabilir *aşırı*, yani bir sınıf veya yapı davranışını tanımlayabilirsiniz. Kodunuzu geçerliyse `Mod` bir sınıf ya da böyle bir aşırı içerir yapısı bir örneğine yeniden tanımlanan davranışını anladığınızdan emin olun. Daha fazla bilgi için bkz: [işleç yordamları](../../../visual-basic/programming-guide/language-features/procedures/operator-procedures.md).  
@@ -86,12 +105,12 @@ number1 Mod number2
   
  [!code-vb[VbVbalrOperators#32](../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/mod-operator_2.vb)]  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
+## <a name="see-also"></a>Ayrıca bkz.  
  <xref:Microsoft.VisualBasic.Conversion.Int%2A>  
  <xref:Microsoft.VisualBasic.Conversion.Fix%2A>  
- [Aritmetik işleçler](../../../visual-basic/language-reference/operators/arithmetic-operators.md)  
+ [Aritmetik İşleçler](../../../visual-basic/language-reference/operators/arithmetic-operators.md)  
  [Visual Basic'de İşleç önceliği](../../../visual-basic/language-reference/operators/operator-precedence.md)  
- [İşlevselliğe göre listelenmiş işleçler](../../../visual-basic/language-reference/operators/operators-listed-by-functionality.md)  
- [Veri türleri sorunlarını giderme](../../../visual-basic/programming-guide/language-features/data-types/troubleshooting-data-types.md)  
+ [İşlevselliğe Göre Listelenmiş İşleçler](../../../visual-basic/language-reference/operators/operators-listed-by-functionality.md)  
+ [Veri Türü Sorunlarını Giderme](../../../visual-basic/programming-guide/language-features/data-types/troubleshooting-data-types.md)  
  [Visual Basic'de aritmetik işleçler](../../../visual-basic/programming-guide/language-features/operators-and-expressions/arithmetic-operators.md)  
  [\ İşleci (Visual Basic)](../../../visual-basic/language-reference/operators/integer-division-operator.md)

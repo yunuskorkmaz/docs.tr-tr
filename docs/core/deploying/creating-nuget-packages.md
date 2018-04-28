@@ -1,21 +1,20 @@
 ---
-title: "Çapraz Platform araçları ile bir NuGet paketi oluşturma"
-description: "Bir NuGet paketi 'dotnet pack' komutuyla oluşturmayı öğrenin."
-keywords: .NET, .NET core NuGet
+title: Çapraz Platform araçları ile bir NuGet paketi oluşturma
+description: Bir NuGet paketi 'dotnet pack' komutuyla oluşturmayı öğrenin.
 author: cartermp
 ms.author: mairaw
 ms.date: 06/20/2016
-ms.topic: article
-ms.prod: .net-core
+ms.topic: conceptual
+ms.prod: dotnet-core
 ms.technology: dotnet-cli
 ms.devlang: dotnet
-ms.assetid: 2f0415c1-110b-433d-87c1-ae3d543a8844
-ms.workload: dotnetcore
-ms.openlocfilehash: 92f950be3efb203fbe8bbc07a83bfb0f1fd11a45
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.workload:
+- dotnetcore
+ms.openlocfilehash: b85f6d53787cb513ae4c1e8147a066188b0e56c6
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="how-to-create-a-nuget-package-with-cross-platform-tools"></a>Çapraz Platform araçları ile bir NuGet paketi oluşturma
 
@@ -65,6 +64,6 @@ SuperAwesomeLibrary.1.0.0.symbols.nupkg
 
 Ve şimdi bir NuGet paketi yayımlamak için gerekli dosyaları!
 
-## <a name="dont-confuse-dotnet-pack-with-dotnet-publish"></a>Karıştırmayın `dotnet pack` ile`dotnet publish`
+## <a name="dont-confuse-dotnet-pack-with-dotnet-publish"></a>Karıştırmayın `dotnet pack` ile `dotnet publish`
 
 Herhangi bir noktada olduğunu dikkate almak önemlidir `dotnet publish` komut söz konusu.  `dotnet publish` Komuttur dağıtılmış ve NuGet üzerinden tüketilen bir NuGet paketi oluşturma değil aynı gruptaki -, bağımlılıklarının tümü ile uygulamaları dağıtmak için.

@@ -1,20 +1,17 @@
 ---
-title: "Erişim Denetimi (F#)"
-description: "Türleri, yöntemleri ve İşlevler, F # programlama dili gibi programlama öğeleri erişimi denetlemek öğrenin."
-keywords: "Visual f #, f # işlevsel programlama"
+title: Erişim Denetimi (F#)
+description: 'Türleri, yöntemleri ve İşlevler, F # programlama dili gibi programlama öğeleri erişimi denetlemek öğrenin.'
 author: cartermp
 ms.author: phcart
 ms.date: 05/16/2016
 ms.topic: language-reference
-ms.prod: .net
-ms.technology: devlang-fsharp
+ms.prod: dotnet-fsharp
 ms.devlang: fsharp
-ms.assetid: 955b06fe-d1cd-431d-8db6-93e83b697453
-ms.openlocfilehash: a02e20a585a0456577901f2762a0eeb0e3ecd2f0
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.openlocfilehash: fee5f719904b61c3082d56f73448defdea39f472
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="access-control"></a>Erişim Denetimi
 
@@ -25,11 +22,11 @@ ms.lasthandoff: 10/18/2017
 F #'ta erişimi denetleyen tanımlayıcıları `public`, `internal`, ve `private` modülleri, türleri, yöntemleri, değer tanımları, İşlevler, özellikleri ve açık alanlar için uygulanabilir.
 
 
-- `public`Varlık tüm arayanlar tarafından erişilebilir gösterir.
+- `public` Varlık tüm arayanlar tarafından erişilebilir gösterir.
 
-- `internal`varlık yalnızca aynı derlemesinden erişilebilir gösterir.
+- `internal` varlık yalnızca aynı derlemesinden erişilebilir gösterir.
 
-- `private`varlık yalnızca kapsayan türü veya modülünden erişilebilir gösterir.
+- `private` varlık yalnızca kapsayan türü veya modülünden erişilebilir gösterir.
 
 
 >[!NOTE] 
@@ -63,6 +60,6 @@ Aşağıdaki kod içinde oluşturulan türleri erişilebilirliğini testleri `Mo
 [!code-fsharp[Main](../../../samples/snippets/fsharp/access-control/snippet2.fs)]
     
 ## <a name="see-also"></a>Ayrıca Bkz.
-[F # dili başvurusu](index.md)
+[F# Dili Başvurusu](index.md)
 
-[İmzaları](signatures.md)
+[İmzalar](signatures.md)

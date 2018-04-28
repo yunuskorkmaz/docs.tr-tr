@@ -1,20 +1,17 @@
 ---
-title: "F# Geliştirme Ortamı Özellikleri"
+title: F# Geliştirme Ortamı Özellikleri
 description: "Hangi Visual Studio 2012 F #'de desteklenen özellikler hakkında bilgi edinin."
-keywords: "Visual f #, f # işlevsel programlama"
 author: cartermp
 ms.author: phcart
 ms.date: 05/16/2016
 ms.topic: language-reference
-ms.prod: .net
-ms.technology: devlang-fsharp
+ms.prod: dotnet-fsharp
 ms.devlang: fsharp
-ms.assetid: 809e9a34-b271-4c87-8356-2426b44f4721
-ms.openlocfilehash: 05727bf11eccfd64f823dd280b1a19210815ca5a
-ms.sourcegitcommit: 685143b62385500f59bc36274b8adb191f573a16
+ms.openlocfilehash: dd5c3165a73bd4f821a26d183094829dab7eaeae
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/09/2017
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="visual-f-development-environment-features"></a>Visual F # geliştirme ortamı özellikleri
 
@@ -106,10 +103,10 @@ F # için destek Visual Studio Araçları'nda aşağıdaki tabloda özetlenmişt
 |Aracı|Açıklama|F #'de destekleniyor mu?|
 |----|-----------|----------------|
 |Çağrı Hiyerarşisi|Görüntüler, kodunuzda iç içe geçmiş yapısını işlevi çağırır.|Hayır|
-|Kod ölçümleri|Satır sayısı gibi kodu hakkında bilgi toplar.|Hayır|
+|Kod Ölçümleri|Satır sayısı gibi kodu hakkında bilgi toplar.|Hayır|
 |Sınıf Görünümü|Bir proje kodda tür tabanlı bir görünümünü sağlar.|Hayır|
 |[Hata Listesi Penceresi](/visualstudio/ide/reference/error-list-window)|Hataların listesini kodu gösterir.|Evet|
-|[F # Etkileşimli](../tutorials/fsharp-interactive/index.md)|Yazın (veya kopyalayıp yapıştırmak için) F # kod ve projenizin yapı bağımsız olarak hemen çalıştırmak sağlar. F # Etkileşimli penceredir oku, değerlendir, yazdırma döngü (Çoğaltma).|Evet|
+|[F# Interactive](../tutorials/fsharp-interactive/index.md)|Yazın (veya kopyalayıp yapıştırmak için) F # kod ve projenizin yapı bağımsız olarak hemen çalıştırmak sağlar. F # Etkileşimli penceredir oku, değerlendir, yazdırma döngü (Çoğaltma).|Evet|
 |Nesne Tarayıcısı|Bir derlemede türleri görüntülemenize olanak tanır.|Derlenmiş derlemelerde göründükleri gibi tam olarak yazar olarak F # türleri görünmez. F # türleri derlenmiş gösterimi göz atabilirsiniz ancak F # göründükleri gibi türleri görüntüleyemezsiniz.|
 |[Çıktı Penceresi](/visualstudio/ide/reference/output-window)|Oluşum çıktısını görüntüler.|Evet|
 |Performans Analizi|Kodunuzu performansını ölçmek için araçlar sağlar.|Evet|
@@ -122,4 +119,4 @@ F # için destek Visual Studio Araçları'nda aşağıdaki tabloda özetlenmişt
 
 ## <a name="see-also"></a>Ayrıca Bkz.
  [F # Visual Studio ile çalışmaya başlama](../get-started/get-started-visual-studio.md)  
- [Projeleri yapılandırma](configuring-projects.md)  
+ [Projeleri Yapılandırma](configuring-projects.md)  

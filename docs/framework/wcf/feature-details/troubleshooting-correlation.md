@@ -1,24 +1,26 @@
 ---
-title: "Bağıntı Sorunlarını Giderme"
-ms.custom: 
+title: Bağıntı Sorunlarını Giderme
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 98003875-233d-4512-a688-4b2a1b0b5371
-caps.latest.revision: "11"
+caps.latest.revision: 11
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 76b6178d3190165e711f46af60a6541a82ad0bd7
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 5bdf111e6802692aef893cf9dcae88f0f51aa467
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="troubleshooting-correlation"></a>Bağıntı Sorunlarını Giderme
 Bağıntı iş akışı hizmeti iletileri birbirine ve doğru iş akışı örneği ilişkilendirmek için kullanılır, ancak doğru yapılandırılmamışsa, ileti alınmadı ve uygulamaların düzgün çalışmaz. Bu konuda bağıntı sorunlarını gidermek için çeşitli yöntemler genel bir bakış sağlar ve ayrıca bağıntı kullandığınızda oluşabilecek bazı ortak sorunlar listelenmiştir.  
@@ -89,7 +91,7 @@ host.WorkflowExtensions.Add(new ConsoleTrackingParticipant());
   
  İzleme katılımcı ConsoleTrackingParticipant gibi bir konsol penceresi sahip kendini barındıran iş akışı hizmetleri için yararlıdır. Web barındırılan bir hizmet için izleme bilgilerini dayanıklı bir depolama alanına oturum izleme katılımcı, yerleşik gibi kullanılmalıdır <xref:System.Activities.Tracking.EtwTrackingParticipant>, veya bilgileri gibi bir dosyaya kaydeder özel izleme katılımcı `TextWriterTrackingParticpant` gelen[ Bir metin dosyası kullanarak izleme](../../../../docs/framework/windows-workflow-foundation/samples/tracking-using-a-text-file.md) örnek.  
   
- [!INCLUDE[crabout](../../../../includes/crabout-md.md)]İzleme ve bir iş akışı Web barındırılan hizmet için izleme yapılandırma Bkz [izleme ve izleme iş akışı](../../../../docs/framework/windows-workflow-foundation/workflow-tracking-and-tracing.md), [yapılandırma izleme iş akışı için](../../../../docs/framework/windows-workflow-foundation/configuring-tracking-for-a-workflow.md)ve [izleme &#91; WF örnekleri &#93; ](../../../../docs/framework/windows-workflow-foundation/samples/tracking.md) örnekleri.  
+ [!INCLUDE[crabout](../../../../includes/crabout-md.md)] İzleme ve bir iş akışı Web barındırılan hizmet için izleme yapılandırma Bkz [izleme ve izleme iş akışı](../../../../docs/framework/windows-workflow-foundation/workflow-tracking-and-tracing.md), [yapılandırma izleme iş akışı için](../../../../docs/framework/windows-workflow-foundation/configuring-tracking-for-a-workflow.md)ve [izleme &#91;WF Örnekleri&#93; ](../../../../docs/framework/windows-workflow-foundation/samples/tracking.md) örnekleri.  
   
 ## <a name="use-wcf-tracing"></a>WCF izleme kullanın  
  WCF izleme ve bir iş akışı hizmetinden ileti akışı izlemeyi sağlar. Bu izleme bilgilerini bağıntı sorunlarını, özellikle içerik tabanlı bağıntı sorunlarını giderirken yararlıdır. İzlemeyi etkinleştirmek için istenen izleme dinleyicilerini belirtin `system.diagnostics` bölümünü `web.config` Web barındırılan iş akışı hizmeti ise, dosya veya `app.config` iş akışı hizmeti kendini barındıran ise dosya. İzleme dosyasında iletilerinin içeriğini dahil edileceğini belirtin `true` için `logEntireMessage` içinde `messageLogging` öğesinde `diagnostics` bölümünü `system.serviceModel`. Aşağıdaki örnekte, mesajlarının içeriğini izleme bilgilerini adlı bir dosyaya yazılması için yapılandırılmış `service.svclog`.  
@@ -127,7 +129,7 @@ host.WorkflowExtensions.Add(new ConsoleTrackingParticipant());
 </configuration>  
 ```  
   
- Bulunan izleme bilgilerini görüntülemek için `service.svclog`, [hizmet izleme Görüntüleyicisi aracı (SvcTraceViewer.exe)](../../../../docs/framework/wcf/service-trace-viewer-tool-svctraceviewer-exe.md) kullanılır. İleti içeriğini görüntülemek ve tam olarak ne geçirilen ve eşleşen olup olmadığını görmek için içerik tabanlı bağıntı sorunlarını giderme gönderdiğinde, bu özellikle yararlı olur <xref:System.ServiceModel.CorrelationQuery> içerik tabanlı bağıntı için. [!INCLUDE[crabout](../../../../includes/crabout-md.md)]WCF bkz: izleme, [hizmet izleme Görüntüleyicisi aracı (SvcTraceViewer.exe)](../../../../docs/framework/wcf/service-trace-viewer-tool-svctraceviewer-exe.md), [yapılandırma izleme](../../../../docs/framework/wcf/diagnostics/tracing/configuring-tracing.md), ve [uygulamanız sorun giderme kullanarak izlemeyi](../../../../docs/framework/wcf/diagnostics/tracing/using-tracing-to-troubleshoot-your-application.md).  
+ Bulunan izleme bilgilerini görüntülemek için `service.svclog`, [hizmet izleme Görüntüleyicisi aracı (SvcTraceViewer.exe)](../../../../docs/framework/wcf/service-trace-viewer-tool-svctraceviewer-exe.md) kullanılır. İleti içeriğini görüntülemek ve tam olarak ne geçirilen ve eşleşen olup olmadığını görmek için içerik tabanlı bağıntı sorunlarını giderme gönderdiğinde, bu özellikle yararlı olur <xref:System.ServiceModel.CorrelationQuery> içerik tabanlı bağıntı için. [!INCLUDE[crabout](../../../../includes/crabout-md.md)] WCF bkz: izleme, [hizmet izleme Görüntüleyicisi aracı (SvcTraceViewer.exe)](../../../../docs/framework/wcf/service-trace-viewer-tool-svctraceviewer-exe.md), [yapılandırma izleme](../../../../docs/framework/wcf/diagnostics/tracing/configuring-tracing.md), ve [uygulamanız sorun giderme kullanarak izlemeyi](../../../../docs/framework/wcf/diagnostics/tracing/using-tracing-to-troubleshoot-your-application.md).  
   
 ## <a name="common-context-exchange-correlation-issues"></a>Ortak bağlam Exchange bağıntı sorunları  
  Belirli türde bir bağıntı düzgün çalışması için belirli bir bağlama türü için bağıntı kullanılır gerektirir. Örnekler arasında iki yönlü bağlama gibi gerektirir istek-yanıt bağıntısı <xref:System.ServiceModel.BasicHttpBinding>ve bir bağlam tabanlı gibi bağlama gerektirir bağlam değişimi bağıntısı <xref:System.ServiceModel.BasicHttpContextBinding>. Bu istek-yanıt bağıntısı için yaygın bir sorun değildir ancak dahil olmak üzere içerik tabanlı bağlamalar sayıda vardır çoğu bağlamalar iki yönlü işlemlerini destekleyen <xref:System.ServiceModel.BasicHttpContextBinding>, <xref:System.ServiceModel.WSHttpContextBinding>, ve <xref:System.ServiceModel.NetTcpContextBinding>. Bu bağlamaların bir tanesini kullanılmaz bir iş akışı hizmeti ilk çağrı başarılı olur, ancak sonraki çağrılar başarısız olur şununla <xref:System.ServiceModel.FaultException>.  
@@ -141,7 +143,7 @@ supports the context protocol and has a valid context initialized.
   
  Bağlam bağıntı için kullanılan bağlam bilgilerini tarafından döndürülen <xref:System.ServiceModel.Activities.SendReply> için <xref:System.ServiceModel.Activities.Receive> iki yönlü bir işlem veya kullanma işlemi ise, çağıran tarafından belirtilebilir yükleyen bağlam bağıntı başlatır etkinliği tek yönlü. Bağlam çağıran tarafından gönderilen değil veya iş akışı hizmeti sonra aynı tarafından döndürülen <xref:System.ServiceModel.FaultException> açıklanan daha önce bir sonraki işlemi çalıştırıldığında döndürülür.  
   
- [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)][Bağlam değişimi](../../../../docs/framework/wcf/feature-details/context-exchange-correlation.md).  
+ Daha fazla bilgi için bkz: [bağlam değişimi](../../../../docs/framework/wcf/feature-details/context-exchange-correlation.md).  
   
 ## <a name="common-request-reply-correlation-issues"></a>İstek-yanıt bağıntısı ile ilgili genel sorunları  
  İstek-yanıt bağıntısı ile kullanılan bir <xref:System.ServiceModel.Activities.Receive> / <xref:System.ServiceModel.Activities.SendReply> çifti ile bir iş akışı hizmeti de iki yönlü bir işlem uygulamak için bir <xref:System.ServiceModel.Activities.Send> / <xref:System.ServiceModel.Activities.ReceiveReply> iki yönlü bir işlem başka bir Web çağırır çifti hizmet. Bir WCF hizmetindeki iki yönlü bir işlem çağrılırken, hizmet ya da bir geleneksel kesinliği kod tabanlı olabilir [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] hizmeti veya bir iş akışı hizmeti olabilir. İstek-yanıt bağıntısı iki yönlü bir bağlama kullanılmalıdır, gibi kullanmak için <xref:System.ServiceModel.BasicHttpBinding>, ve işlemler iki yönlü olması gerekir.  
@@ -176,7 +178,7 @@ SendReply ReplyToStartOrder = new SendReply
   
  Kalıcılık arasında izin verilmez bir <xref:System.ServiceModel.Activities.Receive> / <xref:System.ServiceModel.Activities.SendReply> çifti veya <xref:System.ServiceModel.Activities.Send> / <xref:System.ServiceModel.Activities.ReceiveReply> çifti. No-persist bölge hem etkinlikleri tamamlanana kadar sürer oluşturulur. Bir gecikme etkinliği gibi bir etkinlik bu no-persist bölgesinde bulunan ve boşta durumuna iş akışı neden olursa, konak olduklarında iş akışları kalıcı olacak şekilde yapılandırılmış boş olsa bile iş akışı kalıcı olmaz. Kalan etkinliği gibi bir etkinlik açıkça Hayır kalan bölgesinde kalıcı hale getirmek çalışırsa, bir önemli özel durum, iş akışı durdurulduğunda oluşur ve bir <xref:System.ServiceModel.FaultException> çağırana döndürülür. Önemli özel durum iletisi "System.InvalidOperationException: kalıcı etkinlikleri hiçbir Kalıcılık bloğu içinde bulunan yapılamıyor.". Bu özel durumun çağırana döndürülmez ancak izleme etkin olup olmadığını gösterilebilir. İleti için <xref:System.ServiceModel.FaultException> yapana "işlemi gerçekleştirilemedi iş akışı örneği '5836145b-7da2 - 49 d 0-a052-a49162adeab6' tamamlandığından" değil.  
   
- [!INCLUDE[crabout](../../../../includes/crabout-md.md)]İstek-yanıt bağıntısı bkz [istek-yanıt](../../../../docs/framework/wcf/feature-details/request-reply-correlation.md).  
+ [!INCLUDE[crabout](../../../../includes/crabout-md.md)] İstek-yanıt bağıntısı bkz [istek-yanıt](../../../../docs/framework/wcf/feature-details/request-reply-correlation.md).  
   
 ## <a name="common-content-correlation-issues"></a>İçerik bağıntı ile ilgili genel sorunları  
  İçeriğe dayalı bağıntı birden fazla ileti bir iş akışı hizmeti alır ve bir veri alışverişi iletilerindeki parçasını istenen örneğini tanımlar olduğunda kullanılır. İçeriğe dayalı bağıntı iletide, müşteri numarası veya sipariş kimliği iletileri yönlendirmek için doğru iş akışı örneği gibi bu verileri kullanır. Bu bölümde içerik tabanlı bağıntı kullanırken oluşabilecek çeşitli ortak sorunlar açıklanmaktadır.  
@@ -261,4 +263,4 @@ sm:header()/tempuri:CartId
 </Receive>  
 ```  
   
- [!INCLUDE[crabout](../../../../includes/crabout-md.md)]içeriğe dayalı bağıntı bkz [içerik tabanlı](../../../../docs/framework/wcf/feature-details/content-based-correlation.md) ve [bağıntılı hesaplayıcı](../../../../docs/framework/windows-workflow-foundation/samples/correlated-calculator.md) örnek.
+ [!INCLUDE[crabout](../../../../includes/crabout-md.md)] içeriğe dayalı bağıntı bkz [içerik tabanlı](../../../../docs/framework/wcf/feature-details/content-based-correlation.md) ve [bağıntılı hesaplayıcı](../../../../docs/framework/windows-workflow-foundation/samples/correlated-calculator.md) örnek.

@@ -1,20 +1,19 @@
 ---
-title: ".NET core CLI araçları ile uygulama dağıtımı"
-description: ".NET Core uygulama dağıtım araçları komut satırı arabirimi (CLI) ile bilgi edinin"
-keywords: ".NET, .NET core, .NET Core dağıtım"
+title: .NET core CLI araçları ile uygulama dağıtımı
+description: .NET Core uygulama dağıtım araçları komut satırı arabirimi (CLI) ile bilgi edinin
 author: rpetrusha
 ms.author: ronpet
 ms.date: 04/18/2017
-ms.topic: article
-ms.prod: .net-core
+ms.topic: conceptual
+ms.prod: dotnet-core
 ms.devlang: dotnet
-ms.assetid: 82ebe16d-5e1c-46cc-91e8-71974296429c
-ms.workload: dotnetcore
-ms.openlocfilehash: 302383ec44afd91d1df7f6c717b268d5f965c8c9
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.workload:
+- dotnetcore
+ms.openlocfilehash: 21e824e6092b0d30e0499ff05c5471a291c8d269
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="deploying-net-core-apps-with-command-line-interface-cli-tools"></a>Komut satırı arabirimi (CLI) araçları ile .NET Core uygulamaları dağıtma
 
@@ -86,7 +85,7 @@ Bir veya daha fazla üçüncü taraf bağımlılıkları framework bağımlı da
 
 Üçüncü taraf bağımlılıkları framework bağımlı dağıtımla yalnızca üçüncü taraf bağımlılıkları olarak taşınabilir olduğuna dikkat edin. Örneğin, bir üçüncü taraf kitaplık yalnızca macOS destekliyorsa, uygulamayı Windows sistemleri için taşınabilir değil. Üçüncü taraf bağımlılığı yerel kodu bağımlı olması durumunda bu gerçekleşir. Bu iyi bir örnektir [Kestrel server](/aspnet/core/fundamentals/servers/kestrel), üzerindeki yerel bir bağımlılık gerektiren [libuv](https://github.com/libuv/libuv). Üçüncü taraf bağımlılığı bu tür bir uygulama için bir FDD oluşturulduğunda, yayımlanan çıktı bir klasör için her içerir [çalışma zamanı tanımlayıcı (RID)](../rid-catalog.md) yerel bağımlılık destekleyen (ve onun NuGet paketi var).
 
-## <a name="simpleSelf"></a>Üçüncü taraf bağımlılıkları kendi içinde bulunan dağıtımıdır
+## <a name="simpleSelf"></a> Üçüncü taraf bağımlılıkları kendi içinde bulunan dağıtımıdır
 
 Üçüncü taraf bağımlılıkları içerir olmadan projesi oluşturma kendi içinde bulunan bir dağıtım dağıtma değiştirme *csproj* dosya oluşturma, test etme ve uygulama yayımlama. C# ile yazılmış basit bir örnek işlemi gösterilmektedir. Örnek kullanarak kendi içinde bulunan dağıtımı oluşturmak nasıl gösterir [dotnet yardımcı programı](../tools/dotnet.md) komut satırından.
 

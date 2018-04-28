@@ -27,11 +27,11 @@ ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: 61e4893ac32d2013b090a748078ec1e3a84ea3ac
-ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
-ms.translationtype: HT
+ms.openlocfilehash: 77c69c5c39d90dcc28aa9c6084d84ace29df6f18
+ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="more-secure-file-and-data-access-in-windows-forms"></a>Windows Forms'ta Daha Güvenli Dosya ve Veri Erişimi
 [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] İzinlerini kaynakları ve veri korumaya yardımcı olmak için kullanır. Burada, uygulamanızın Okuma veya yazma veri uygulamaya verilen izinler bağlıdır. Uygulamanızı bir kısmi güven ortamında çalıştığında, verilerinize erişimi olmayabilir veya verilere erişme şeklini değiştirmek zorunda kalabilirsiniz.  
@@ -39,7 +39,7 @@ ms.lasthandoff: 04/26/2018
  Bir güvenlik kısıtlama karşılaştığınızda, iki seçeneğiniz vardır: (Bu verildiğini uygulamanıza varsayılarak) izni assert veya kısmi güvende çalışması için yazılmış özelliği sürümünü kullanın. Aşağıdaki bölümlerde dosya, veritabanı ve kayıt defteri erişimi bir kısmi güven ortamında çalışan uygulamalardan ile çalışma konusunda açıklanmaktadır.  
   
 > [!NOTE]
->  Varsayılan olarak, oluşturma araçları [!INCLUDE[ndptecclick](../../../includes/ndptecclick-md.md)] dağıtımları varsayılan bu dağıtımlar isteyen tam güven için çalıştıkları bilgisayarlardan. Kısmi güvende çalıştırma ek güvenlik avantajları istemediğinize karar verirseniz, bu varsayılan olarak ya da değiştirmeniz gerekir [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] veya biri [!INCLUDE[winsdklong](../../../includes/winsdklong-md.md)] Araçları (Mage.exe veya MageUI.exe). Windows Forms güvenliği hakkında ve uygulamanız için uygun güven düzeyini belirleme hakkında daha fazla bilgi için bkz: [Windows Forms'a genel bakış güvenlik](../../../docs/framework/winforms/security-in-windows-forms-overview.md).  
+>  Varsayılan olarak, oluşturma araçları [!INCLUDE[ndptecclick](../../../includes/ndptecclick-md.md)] dağıtımları varsayılan bu dağıtımlar isteyen tam güven için çalıştıkları bilgisayarlardan. Kısmi güvende çalıştırma ek güvenlik avantajları istemediğinize karar verirseniz, bu varsayılan olarak Visual Studio veya birini değiştirmelisiniz [!INCLUDE[winsdklong](../../../includes/winsdklong-md.md)] Araçları (Mage.exe veya MageUI.exe). Windows Forms güvenliği hakkında ve uygulamanız için uygun güven düzeyini belirleme hakkında daha fazla bilgi için bkz: [Windows Forms'a genel bakış güvenlik](../../../docs/framework/winforms/security-in-windows-forms-overview.md).  
   
 ## <a name="file-access"></a>Dosya erişimi  
  <xref:System.Security.Permissions.FileIOPermission> Sınıf denetimleri dosya ve klasör erişim [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)]. Varsayılan olarak, güvenlik sistemi değil vermez <xref:System.Security.Permissions.FileIOPermission> kısmi güven ortamlara yerel intranet ve Internet bölgeleri gibi. Ancak, uygulamanızın tasarımını ya da dosyalara erişim için farklı yöntemler kullanın dosya erişimi gerektiren bir uygulama bu ortamlarda hala çalışabilir. Varsayılan olarak, yerel intranet bölgesine aynı site erişimi ve aynı dizin erişimi, geri, kaynak siteye bağlanmak ve kendi yükleme dizininden okumak için sahip hakkı verilir. Varsayılan olarak, Internet bölgesi yalnızca verilir kendi başlangıç sitesine geri bağlanma hakkı.  

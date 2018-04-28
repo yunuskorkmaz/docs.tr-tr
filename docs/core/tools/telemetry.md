@@ -1,22 +1,20 @@
 ---
-title: ".NET core CLI araçlarını telemetri"
-description: "Analiz, hangi verileri toplanır ve nasıl devre dışı bırakmak için kullanım bilgilerini toplamasına .NET Core araçları telemetri özellikleri keşfedin."
-keywords: .NET, .NET core telemetri
+title: .NET core CLI araçlarını telemetri
+description: Analiz, hangi verileri toplanır ve nasıl devre dışı bırakmak için kullanım bilgilerini toplamasına .NET Core araçları telemetri özellikleri keşfedin.
 author: richlander
 ms.author: mairaw
 ms.date: 08/04/2017
-ms.topic: article
-ms.prod: .net-core
+ms.topic: conceptual
+ms.prod: dotnet-core
 ms.technology: dotnet-cli
 ms.devlang: dotnet
-ms.assetid: 480df976-7568-4df4-9d26-9911357b5a31
 ms.workload:
 - dotnetcore
-ms.openlocfilehash: 9a78ec370fd53260f26a5d8c15707a5d611e458f
-ms.sourcegitcommit: be1fb5d9447ad459bef22b91a91c72e3e0b2d916
+ms.openlocfilehash: b3da69a7fc8de095b3845428af742870e7e737ad
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="net-core-cli-tools-telemetry"></a>.NET core CLI araçlarını telemetri
 
@@ -49,20 +47,20 @@ Telemetri *etkin* kullanırken [.NET Core CLI komutları](index.md), gibi:
 
 Bu özellik aşağıdaki verileri toplar:
 
-- Zaman damgası çağırma &#8224;
-- (Örneğin "Oluştur") çağrılan komut &#8224;
-- Coğrafi konum &#8224;belirlemek için kullanılan üç sekizli IP adresini;
-- `ExitCode`komutu
+- Zaman damgası çağırma&#8224;
+- (Örneğin "Oluştur") çağrılan komutu&#8224;
+- Coğrafi konumunu belirlemek için kullanılan üç sekizli IP adresi&#8224;
+- `ExitCode` komutu
 - Test Çalıştırıcısı (için test projeleri)
-- İşletim sistemi ve sürümü &#8224;
+- İşletim sistemi ve sürümü&#8224;
 - Çalışma zamanı kimlikleri çalışma zamanları düğümünde mevcut olup olmadığı
-- .NET core SDK sürüm &#8224;
+- .NET core SDK sürümü&#8224;
 
-&#8224; Bu ölçüm yayımlanır.
+&#8224;Bu ölçüm yayımlanır.
 
 .NET Core SDK 2.0 ile başlayarak, yeni veri noktaları toplanır:
 
-- `dotnet`komut bağımsız değişkenleri ve seçenekleri: yalnızca bağımsız değişkenleri ve seçenekleri toplanan (değil rastgele dizeleri) bilinir.
+- `dotnet` komut bağımsız değişkenleri ve seçenekleri: yalnızca bağımsız değişkenleri ve seçenekleri toplanan (değil rastgele dizeleri) bilinir.
 - SDK bir kapsayıcıda çalışıp çalışmadığını.
 - Bir hedef çerçeve.
 - Karma MAC adresi: bir şifreleme açısından (SHA256) anonim ve benzersiz kimliği için bir makine. Bu ölçüm yayımlanmaz.
@@ -76,23 +74,23 @@ Araçlar nasıl kullanıldığı ve bunlar da, ne araçlarla oluşturmakta deği
 
 Yayımlanan verileri üç aylık olarak kullanılabilir ve adresinde listelenmiş [.NET Core SDK kullanım verilerini](https://github.com/dotnet/core/blob/master/release-notes/cli-usage-data.md). Bir veri dosyası sütunlarının şunlardır:
 - zaman damgası
-- Yineleme &#8224;
+- Yineleme&#8224;
 - Komut
-- Coğrafya &#8225;
+- Coğrafi konum&#8225;
 - OSFamily
 - RuntimeID
 - OSVersion
 - SDKVersion
 
-&#8224; *Oluşum* sütunu bu komut, sıranın ölçümleri kullanılmak o gün toplam sayısını görüntüler. 
+&#8224;*Oluşum* sütunu bu komut, sıranın ölçümleri kullanılmak o gün toplam sayısını görüntüler. 
 
-&#8225; Genellikle, *Coğrafya* sütun bir ülke adını görüntüler. Bazı durumlarda, bu sütun, .NET Core Antarktika veya yanlış konumu verileri kullanarak araştırmacılarının nedeniyle Antarktika kıtada görünür.
+&#8225;Genellikle, *Coğrafya* sütun bir ülke adını görüntüler. Bazı durumlarda, bu sütun, .NET Core Antarktika veya yanlış konumu verileri kullanarak araştırmacılarının nedeniyle Antarktika kıtada görünür.
 
 ### <a name="example"></a>Örnek
 
 | zaman damgası      | Yineleme | Komut | coğrafi konum | OSFamily | RuntimeID     | OSVersion | SDKVersion |
 | -------------- | ----------- | ------- | --------- | -------- | ------------- | --------- | ---------- |
-| 4/16/2017 0:00 | 8           | çalıştırma     | Uganda    | Darwin   | osx.10.12-x64 | 10.12     | 1.0.1      |
+| 4/16/2017 0:00 | 8           | çalıştırma     | Uganda    | Darwin   | osx.10.12 x64 | 10.12     | 1.0.1      |
 
 ### <a name="datasets"></a>Veri kümeleri
 
@@ -113,7 +111,7 @@ https://dotnetcli.blob.core.windows.net/usagedata/dotnet-cli-usage-<YEAR>-q<QUAR
 
 [.NET NuGet paketleri](https://www.nuget.org/profiles/dotnetframework) aynı lisans kullanır ancak telemetri etkinleştirmezseniz (bkz [kapsam](#scope)).
 
-> 2. VERİLER. Yazılım ve yazılımı kullanımınız hakkında bilgi toplamak ve Microsoft'a göndermek. Microsoft, bu bilgiler, ürünlerimizi ve hizmetlerimizi geliştirmek için kullanabilir. Veri toplama hakkında daha fazla bilgi ve Yardım belgelerine ve http://go.microsoft.com/fwlink/?LinkId=528096 adresindeki Gizlilik Bildirimi'ne kullanın. Bu uygulamalar için onay yazılımı kullanımınız çalışır.
+> 2. VERİLER. Yazılım ve yazılımı kullanımınız hakkında bilgi toplamak ve Microsoft'a göndermek. Microsoft, bu bilgiler, ürünlerimizi ve hizmetlerimizi geliştirmek için kullanabilir. Veri toplama hakkında daha fazla bilgi ve Yardım belgelerine ve adresindeki Gizlilik Bildirimi'ne kullanma http://go.microsoft.com/fwlink/?LinkId=528096. Bu uygulamalar için onay yazılımı kullanımınız çalışır.
 
 ## <a name="disclosure"></a>Açığa çıkması
 

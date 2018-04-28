@@ -1,20 +1,17 @@
 ---
-title: "Başvuru Hücreleri (F#)"
-description: "F # başvuru hücreleri değişebilir değerleri başvuru semantiği ile oluşturmanıza olanak sağlaması depolama konumları ne olduğunu öğrenin."
-keywords: "Visual f #, f # işlevsel programlama"
+title: Başvuru Hücreleri (F#)
+description: 'F # başvuru hücreleri değişebilir değerleri başvuru semantiği ile oluşturmanıza olanak sağlaması depolama konumları ne olduğunu öğrenin.'
 author: cartermp
 ms.author: phcart
 ms.date: 05/16/2016
 ms.topic: language-reference
-ms.prod: .net
-ms.technology: devlang-fsharp
+ms.prod: dotnet-fsharp
 ms.devlang: fsharp
-ms.assetid: 09a0b221-ea21-45c4-bae8-5e4a339750c4
-ms.openlocfilehash: c7470c9a36cf2cd24dd89ceffcf6e90c6dc4d2dd
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.openlocfilehash: e017adb2a031dff996892e2bb6585fc95f644ff9
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="reference-cells"></a>Başvuru Hücreleri
 
@@ -58,11 +55,11 @@ Aşağıdaki tablo başvuru hücresindeki mevcut özellikleri göstermektedir.
 
 |İşleç, üye veya alan|Açıklama|Tür|Tanım|
 |--------------------------|-----------|----|----------|
-|`!`(işleci başvuru)|Temeldeki değeri döndürür.|`'a ref -> 'a`|`let (!) r = r.contents`|
-|`:=`(atama işleci)|Temeldeki değeri değiştirir.|`'a ref -> 'a -> unit`|`let (:=) r x = r.contents <- x`|
-|`ref`(işleç)|Yeni bir başvuru hücresine bir değer kapsüller.|`'a -> 'a ref`|`let ref x = { contents = x }`|
-|`Value`(özellik)|Temeldeki değeri alır veya ayarlar.|`unit -> 'a`|`member x.Value = x.contents`|
-|`contents`(kayıt alanı)|Temeldeki değeri alır veya ayarlar.|`'a`|`let ref x = { contents = x }`|
+|`!` (işleci başvuru)|Temeldeki değeri döndürür.|`'a ref -> 'a`|`let (!) r = r.contents`|
+|`:=` (atama işleci)|Temeldeki değeri değiştirir.|`'a ref -> 'a -> unit`|`let (:=) r x = r.contents <- x`|
+|`ref` (işleç)|Yeni bir başvuru hücresine bir değer kapsüller.|`'a -> 'a ref`|`let ref x = { contents = x }`|
+|`Value` (özellik)|Temeldeki değeri alır veya ayarlar.|`unit -> 'a`|`member x.Value = x.contents`|
+|`contents` (kayıt alanı)|Temeldeki değeri alır veya ayarlar.|`'a`|`let ref x = { contents = x }`|
 Temeldeki değere erişmek için çeşitli yollar vardır. Başvuru işleci tarafından döndürülen değer (`!`) atanabilen bir değer değil. Bu nedenle, temeldeki değer değiştiriyorsanız atama işleci kullanmanız gerekir (`:=`) yerine.
 
 Her iki `Value` özelliği ve `contents` alan atanabilir değerleri şunlardır. Bu nedenle, bunları temeldeki değere ulaşmak ya da onu değiştirmek için aşağıdaki kodda gösterildiği gibi kullanabilirsiniz.
@@ -135,8 +132,8 @@ let f (x: byref<int>) = &x
 Şu anda oluşturmak için bir yolu yoktur bir `ref` F, C# dilinde kullanılabilecek # dönüş.
 
 ## <a name="see-also"></a>Ayrıca Bkz.
-[F # dili başvurusu](index.md)
+[F# Dili Başvurusu](index.md)
 
-[Parametreler ve bağımsız değişkenler](parameters-and-arguments.md)
+[Parametreler ve Bağımsız Değişkenler](parameters-and-arguments.md)
 
-[Simge ve işleç başvurusu](symbol-and-operator-reference/index.md)
+[Simge ve İşleç Başvurusu](symbol-and-operator-reference/index.md)

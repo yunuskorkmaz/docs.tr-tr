@@ -1,21 +1,20 @@
 ---
-title: "Project.JSON ve csproj karşılaştırması - .NET Core"
-description: "Project.json ve csproj öğeleri arasında bir eşleme bakın."
-keywords: Project.JSON, csproj, .NET Core, MSBuild
+title: Project.JSON ve csproj karşılaştırması - .NET Core
+description: Project.json ve csproj öğeleri arasında bir eşleme bakın.
 author: natemcmaster
 ms.author: mairaw
 ms.date: 03/13/2017
-ms.topic: article
-ms.prod: .net-core
+ms.topic: conceptual
+ms.prod: dotnet-core
 ms.technology: dotnet-cli
 ms.devlang: dotnet
-ms.assetid: 79c50621-a24a-4e64-bbb9-b953113e841c
-ms.workload: dotnetcore
-ms.openlocfilehash: 655f74def4d6163959d7dbbe605f7322fb0573c8
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.workload:
+- dotnetcore
+ms.openlocfilehash: c5753d73f062aa107d7afbec6146ea3452901fb1
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="a-mapping-between-projectjson-and-csproj-properties"></a>Project.json ve csproj özellikleri arasında bir eşleme
 
@@ -351,7 +350,7 @@ Daha fazla bilgi için bkz: [müstakil dağıtımları (SCD)](../deploying/index
 ```
 
 > [!NOTE]
-> `imports`Araçlar ' csproj desteklenmez. İçeri aktarmalar gereken araçları yeni çalışmaz `Microsoft.NET.Sdk`.
+> `imports` Araçlar ' csproj desteklenmez. İçeri aktarmalar gereken araçları yeni çalışmaz `Microsoft.NET.Sdk`.
 
 ## <a name="buildoptions"></a>buildOptions
 
@@ -619,9 +618,9 @@ Tüm MSBuild `ItemGroup` öğeleri Destek `Include`, `Exclude`, ve `Remove`.
 
 Paket düzeni .nupkg içinde ile değiştirilebilir `PackagePath="path"`.
 
-Dışında `Content`, çoğu öğesi gruplarını açıkça ekleme gerektiren `Pack="true"` pakete dahil edilecek. `Content`işaretleneceğini belirtilir *içerik* MSBuild itibaren bir paket klasörüne `<IncludeContentInPack>` özelliği ayarlanmış `true` varsayılan olarak. Daha fazla bilgi için bkz: [bir paketteki içerik dahil olmak üzere](/nuget/schema/msbuild-targets#including-content-in-a-package).
+Dışında `Content`, çoğu öğesi gruplarını açıkça ekleme gerektiren `Pack="true"` pakete dahil edilecek. `Content` işaretleneceğini belirtilir *içerik* MSBuild itibaren bir paket klasörüne `<IncludeContentInPack>` özelliği ayarlanmış `true` varsayılan olarak. Daha fazla bilgi için bkz: [bir paketteki içerik dahil olmak üzere](/nuget/schema/msbuild-targets#including-content-in-a-package).
 
-`PackagePath="%(Identity)"`Proje göreli dosya yolu paket yolu ayarlama kısa bir yoludur.
+`PackagePath="%(Identity)"` Proje göreli dosya yolu paket yolu ayarlama kısa bir yoludur.
 
 ## <a name="testrunner"></a>testRunner
 

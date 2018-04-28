@@ -22,18 +22,18 @@ ms.assetid: e61947e9-a42e-4717-a699-5f70a98cdd03
 caps.latest.revision: 13
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: 1fd4054838925267647986a5166fd88037b17fae
-ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
-ms.translationtype: HT
+ms.openlocfilehash: 9a9dee47f06e4f7d9fc8d237376df7707130921d
+ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="building-from-the-command-line-visual-basic"></a>Komut Satırından Derleme (Visual Basic)
 Visual Basic projesinde, bir veya daha fazla ayrı kaynak dosyalarını yapılır. Derleme bilinen işlem sırasında bu dosyaları birlikte bir pakete yapılmadan — bir uygulama olarak çalıştırılabilir tek bir yürütülebilir dosya.  
   
- Visual Basic programları içinden derleme alternatif olarak komut satırı derleyicisi sağlar [!INCLUDE[vsprvs](~/includes/vsprvs-md.md)] tümleşik geliştirme ortamı (IDE). Komut satırı derleyicisi içinde gerektirmeyen IDE özelliklerinde, tamamını durumlar için tasarlanmış — Örneğin, ne zaman, kullanarak veya sınırlı sayıda sistem bellek veya depolama alanı sahip bilgisayarlar için yazma.  
+ Visual Basic, Visual Studio tümleşik geliştirme ortamı (IDE) içinde programları derleme alternatif olarak komut satırı derleyicisi sağlar. Komut satırı derleyicisi içinde gerektirmeyen IDE özelliklerinde, tamamını durumlar için tasarlanmış — Örneğin, ne zaman, kullanarak veya sınırlı sayıda sistem bellek veya depolama alanı sahip bilgisayarlar için yazma.  
   
-  İçinden kaynak dosyalarını derlemek için [!INCLUDE[vsprvs](~/includes/vsprvs-md.md)] IDE seçin **yapı** komutunu **yapı** menüsü.  
+  Visual Studio IDE içinde kaynak dosyalarını derlemek için seçin **yapı** komutunu **yapı** menüsü.  
   
 > [!TIP]
 >  Visual Studio IDE kullanarak proje dosyalarını derlerken ilişkili ilgili bilgileri görüntüleyebilirsiniz **vbc** komut ve çıktı penceresinde alt anahtarlar. Bu bilgileri görüntülemek için açık [Seçenekler iletişim kutusu, projeler ve çözümler, derleme ve çalıştırma](/visualstudio/ide/reference/options-dialog-box-projects-and-solutions-build-and-run)ve ardından **MSBuild Proje yapı çıktı ayrıntı** için **Normal** veya daha yüksek bir ayrıntı düzeyi. Daha fazla bilgi için bkz: [nasıl yapılır: görünümü, kaydetme ve yapı günlük dosyalarını Yapılandır](http://msdn.microsoft.com/library/75d38b76-26d6-4f43-bbe7-cbacd7cc81e7).  

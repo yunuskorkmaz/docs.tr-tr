@@ -16,14 +16,14 @@ ms.assetid: 0fd9a8f6-f34e-4c35-a49d-9b9bbd8da4a9
 caps.latest.revision: 28
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: f1ccf08ba58fa6af60bd8ffd7cba79b205dc0f3d
-ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
-ms.translationtype: HT
+ms.openlocfilehash: 20239045426e466ba58427bb9794ea7e55b3aa4c
+ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="how-to-invoke-the-command-line-compiler-visual-basic"></a>Nasıl yapılır: Komut Satırı Derleyicisini Çağırma (Visual Basic)
-Komut satırına olarak da bilinen MS-DOS İstemi yürütülebilir dosyanın adını yazarak komut satırı derleyicisini çağırma. Varsayılan Windows komut istemi derleme yaparsanız, yürütülebilir dosyanın tam yolunu yazmanız gerekir. Bu varsayılan davranışı geçersiz kılmak için kullanabilir [!INCLUDE[vsprvs](~/includes/vsprvs-md.md)] komut istemi veya PATH ortam değişkeni değiştirin. Her ikisi de, herhangi bir dizinden derleyici adını yazarak derlemek izin verir.  
+Komut satırına olarak da bilinen MS-DOS İstemi yürütülebilir dosyanın adını yazarak komut satırı derleyicisini çağırma. Varsayılan Windows komut istemi derleme yaparsanız, yürütülebilir dosyanın tam yolunu yazmanız gerekir. Bu varsayılan davranışı geçersiz kılmak için Visual Studio komut istemi kullanabilir veya PATH ortam değişkeni değiştirin. Her ikisi de, herhangi bir dizinden derleyici adını yazarak derlemek izin verir.  
   
 [!INCLUDE[note_settings_general](~/includes/note-settings-general-md.md)]  
   
@@ -31,9 +31,9 @@ Komut satırına olarak da bilinen MS-DOS İstemi yürütülebilir dosyanın ad�
   
 1.  Microsoft Visual Studio program grubunu Visual Studio Araçları program klasördeki açın.  
   
-2.  Kullanabileceğiniz [!INCLUDE[vsprvs](~/includes/vsprvs-md.md)] Visual Studio yüklüyse, makinenizde herhangi bir dizinden derleyici erişmek için komut isteminden.  
+2.  Visual Studio yüklüyse, derleyici, makinenizde herhangi bir dizinden erişmek için Visual Studio Komut İstemi'ni kullanabilirsiniz.  
   
-3.  Çağırma [!INCLUDE[vsprvs](~/includes/vsprvs-md.md)] komut istemi.  
+3.  Visual Studio komut istemi çağırır.  
   
 4.  Komut satırında `vbc.exe` *sourceFileName* yazıp ENTER tuşuna basın.  
   

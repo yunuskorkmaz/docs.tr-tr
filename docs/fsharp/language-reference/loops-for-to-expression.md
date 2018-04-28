@@ -1,20 +1,17 @@
 ---
-title: "Döngüler: for...to İfadesi (F#)"
-description: "Bkz. nasıl F # for... ifade için bir döngü değişken değerlerini aralığında bir döngüde yinelemek için kullanılır."
-keywords: "Visual f #, f # işlevsel programlama"
+title: 'Döngüler: for...to İfadesi (F#)'
+description: 'Bkz. nasıl F # for... ifade için bir döngü değişken değerlerini aralığında bir döngüde yinelemek için kullanılır.'
 author: cartermp
 ms.author: phcart
 ms.date: 05/16/2016
 ms.topic: language-reference
-ms.prod: .net
-ms.technology: devlang-fsharp
+ms.prod: dotnet-fsharp
 ms.devlang: fsharp
-ms.assetid: e14c38d9-b1ef-4b7f-be9a-fb6ef6708e02
-ms.openlocfilehash: 1a1d71d30b5e87e4691a78acd5032de9419399db
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.openlocfilehash: 95a8960d71c82c01118d2e71479fc0ec5298a02b
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="loops-forto-expression"></a>Döngüler: for...to İfadesi
 
@@ -44,7 +41,7 @@ Teknik olarak bir ifade rağmen `for...to` daha geleneksel deyimi kesinlik temel
 ```
 
 ## <a name="see-also"></a>Ayrıca Bkz.
-[F # dili başvurusu](index.md)
+[F# Dili Başvurusu](index.md)
 
 [Döngüler: `for...in` ifade](loops-for-in-expression.md)
 

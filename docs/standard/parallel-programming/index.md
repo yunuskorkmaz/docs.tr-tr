@@ -1,33 +1,28 @@
 ---
 title: .NET içinde Paralel Programlama
-ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net
-ms.reviewer: ''
-ms.suite: ''
 ms.technology: dotnet-standard
-ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - parallel programming
-ms.assetid: 4d83c690-ad2d-489e-a2e0-b85b898a672d
-caps.latest.revision: 19
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: 1e649bcb37b711d01199bd4e4823a9bb0cac60b4
-ms.sourcegitcommit: 2e8acae16ae802f2d6d04e3ce0a6dbf04e476513
+ms.openlocfilehash: 679ffe40e525884070ee62662b7a7e5acd7e58ad
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="parallel-programming-in-net"></a>.NET içinde Paralel Programlama
-Birçok kişisel bilgisayar ve iş istasyonunun, birden çok iş parçacığının aynı anda yürütülmesini sağlayan iki veya dört çekirdeği (yani CPU'su) vardır. Yakın gelecekte bilgisayarların önemli ölçüde daha fazla çekirdeğe sahip olacağı tahmin edilmektedir. Bugünün ve yarının donanımlarından yararlanmak için kodunuzu işi birden fazla işlemci arasında dağıtacak şekilde paralel hale getirebilirsiniz. Geçmişte, paralel hale getirme için iş parçacıklarının ve kilitlerin düşük düzeyde kullanımı gerekiyordu. [!INCLUDE[vs_dev10_long](../../../includes/vs-dev10-long-md.md)] ve [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)] yeni bir çalışma zamanı, yeni sınıf kitaplığı türleri ve yeni tanılama araçları sağlayarak Paralel Programlama Desteği geliştirir. Bu özellikler, doğrudan iş parçacıkları veya iş parçacığı havuzuyla çalışmak zorunda kalmadan doğal bir ifadede etkili, ayrıntılı ve ölçeklenebilir paralel kod yazmanız için paralel geliştirmeyi basitleştirir. Aşağıdaki çizimde paralel programlama mimarisinde üst düzey bir genel bakış sağlayan [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)].  
+
+Birçok kişisel bilgisayarlar ve iş istasyonlarında aynı anda yürütülebilecek birden çok iş parçacığı etkinleştirmek birkaç CPU çekirdeği vardır. Yakın gelecekte bilgisayarların önemli ölçüde daha fazla çekirdeğe sahip olacağı tahmin edilmektedir. Bugünün ve yarının donanımlarından yararlanmak için kodunuzu işi birden fazla işlemci arasında dağıtacak şekilde paralel hale getirebilirsiniz. Geçmişte, paralel hale getirme için iş parçacıklarının ve kilitlerin düşük düzeyde kullanımı gerekiyordu. Visual Studio 2010 ve .NET Framework 4 Paralel Programlama Desteği yeni bir çalışma zamanı, yeni sınıf kitaplığı türleri ve yeni tanılama araçları sağlayarak geliştirin. Bu özellikler, doğrudan iş parçacıkları veya iş parçacığı havuzuyla çalışmak zorunda kalmadan doğal bir ifadede etkili, ayrıntılı ve ölçeklenebilir paralel kod yazmanız için paralel geliştirmeyi basitleştirir. Aşağıdaki çizimde, .NET Framework 4'te paralel programlama mimarisi üst düzey bir genel bakış sağlar.
   
- ![.NET paralel programlama mimarisi](../../../docs/standard/parallel-programming/media/tpl-architecture.png "TPL_Architecture")  
+ ![.NET paralel programlama mimarisi](./media/tpl-architecture.png "TPL_Architecture")  
   
 ## <a name="related-topics"></a>İlgili Konular  
   
@@ -40,8 +35,8 @@ Birçok kişisel bilgisayar ve iş istasyonunun, birden çok iş parçacığın�
 |[PLINQ ve TPL için Özel Bölümleyiciler](../../../docs/standard/parallel-programming/custom-partitioners-for-plinq-and-tpl.md)|Bölümleyicilerin nasıl çalıştığını ve varsayılan bölümleyicilerin nasıl yapılandırılacağını veya nasıl yeni bir bölümleyicinin oluşturulacağını açıklar.|  
 |[Görev zamanlayıcılar](http://msdn.microsoft.com/library/638f8ea5-21db-47a2-a934-86e1e961bf65)|Planlayıcıların nasıl çalıştığını ve varsayılan planlayıcıların nasıl yapılandırılması gerektiğini açıklar.|  
 |[PLINQ ve TPL'deki Lambda İfadeleri](../../../docs/standard/parallel-programming/lambda-expressions-in-plinq-and-tpl.md)|C# ve Visual Basic'teki lambda ifadelerine kısa bir genel bakış sunar ve PLINQ ve Görev Paralel Kitaplığı'nda nasıl kullanıldıklarını gösterir.|  
-|[Daha Fazla Bilgi İçin](../../../docs/standard/parallel-programming/for-further-reading-parallel-programming.md)|.NET Framework'te paralel programlamaya yönelik ek belgeler ve örnek kaynaklar için bağlantılar sağlar.|  
-  
-## <a name="see-also"></a>Ayrıca Bkz.  
- [Paralel programlama için desenleri: anlama ve uygulama paralel .NET Framework 4 desenler](https://www.microsoft.com/download/details.aspx?id=19222)  
- [.NET Framework ile paralel programlama için örnek](https://code.msdn.microsoft.com/Samples-for-Parallel-b4b76364)
+|[Daha Fazla Bilgi İçin](../../../docs/standard/parallel-programming/for-further-reading-parallel-programming.md)|. NET'te paralel programlama için ek bilgi ve örnek kaynaklara bağlantılar sağlar.|  
+
+## <a name="see-also"></a>Ayrıca bkz.  
+ [Zaman uyumsuz genel bakış](../async.md)  
+ [Yönetilen iş parçacığı oluşturma](../threading/index.md)  

@@ -1,12 +1,13 @@
 ---
-title: "En İyi Uygulamalar: Veri Sözleşmesi Sürümü Oluşturma"
-ms.custom: 
+title: 'En İyi Uygulamalar: Veri Sözleşmesi Sürümü Oluşturma'
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - data contracts
@@ -14,19 +15,20 @@ helpviewer_keywords:
 - best practices [WCF], data contract versioning
 - Windows Communication Foundation, data contracts
 ms.assetid: bf0ab338-4d36-4e12-8002-8ebfdeb346cb
-caps.latest.revision: "24"
+caps.latest.revision: 24
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 78373d482aaaa0121a6c2708f543188d9cc9464d
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: dfb3d781a570db6a929a7d984aa45c224dda66bd
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="best-practices-data-contract-versioning"></a>En İyi Uygulamalar: Veri Sözleşmesi Sürümü Oluşturma
-Bu konu, zaman içinde kolayca gelişmesi veri sözleşmeleri oluşturmak için en iyi uygulamaları listeler. [!INCLUDE[crabout](../../../includes/crabout-md.md)]Veri sözleşmeleri bkz konularındaki [kullanarak veri sözleşmeleri](../../../docs/framework/wcf/feature-details/using-data-contracts.md).  
+Bu konu, zaman içinde kolayca gelişmesi veri sözleşmeleri oluşturmak için en iyi uygulamaları listeler. [!INCLUDE[crabout](../../../includes/crabout-md.md)] Veri sözleşmeleri bkz konularındaki [kullanarak veri sözleşmeleri](../../../docs/framework/wcf/feature-details/using-data-contracts.md).  
   
 ## <a name="note-on-schema-validation"></a>Şema doğrulaması göz önünde bulundurun  
  Veri sözleşmesi sürümü oluşturma ele içinde bu verileri tarafından verilen şema sözleşme dikkate almak önemlidir [!INCLUDE[indigo1](../../../includes/indigo1-md.md)] öğeleri varsayılan olarak isteğe bağlı olarak işaretlenmiş olgu dışındaki herhangi bir sürüm oluşturma desteğine sahip değil.  
@@ -46,7 +48,7 @@ Bu konu, zaman içinde kolayca gelişmesi veri sözleşmeleri oluşturmak için 
   
  ("2" ekleyerek) adlarının değiştirilmesi bu örneklerde rağmen yeni ad alanları bir sürüm numarası veya bir tarih ile ekleyerek adları yerine ad alanlarını değiştirmek için önerilir. Örneğin, `http://schemas.contoso.com/2005/05/21/PurchaseOrder` veri sözleşmesi değiştirmek için `http://schemas.contoso.com/2005/10/14/PurchaseOrder` veri sözleşme.  
   
- [!INCLUDE[crdefault](../../../includes/crdefault-md.md)]En iyi uygulamalar: [hizmet sürümü oluşturma](../../../docs/framework/wcf/service-versioning.md).  
+ En iyi yöntemleri daha fazla bilgi için bkz: [hizmet sürümü oluşturma](../../../docs/framework/wcf/service-versioning.md).  
   
  Bazen, uygulamanız tarafından gönderilen iletiler için kesin şema uyumluluğu güvence altına almalıdır ancak kesinlikle şeması uyumlu olacak şekilde gelen iletileri bağlı olamaz. Bu durumda, gelen iletiyi gereksiz veriler içerebilir tehlike yoktur. Yabancı değerler depolanabilir ve tarafından döndürülen [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] ve böylece gönderilen şema geçersiz iletilerinde sonuçlanır. Bu sorunu önlemek için gidiş özelliği kapatılması. Bunu yapmanın iki yolu vardır.  
   
@@ -54,7 +56,7 @@ Bu konu, zaman içinde kolayca gelişmesi veri sözleşmeleri oluşturmak için 
   
 -   Geçerli bir <xref:System.ServiceModel.ServiceBehaviorAttribute> öznitelik, hizmet sözleşmesi ile <xref:System.ServiceModel.ServiceBehaviorAttribute.IgnoreExtensionDataObject%2A> özelliğini `true`.  
   
- [!INCLUDE[crabout](../../../includes/crabout-md.md)]gidiş, bkz: [İleri uyumlu veri sözleşmeleri](../../../docs/framework/wcf/feature-details/forward-compatible-data-contracts.md).  
+ [!INCLUDE[crabout](../../../includes/crabout-md.md)] gidiş, bkz: [İleri uyumlu veri sözleşmeleri](../../../docs/framework/wcf/feature-details/forward-compatible-data-contracts.md).  
   
 ## <a name="versioning-when-schema-validation-is-not-required"></a>Şema doğrulama gerekli olmadığında sürüm oluşturma  
  Kesin şema uyumluluk nadiren gereklidir. Birçok platformda şeması tarafından açıklanmayan ekstra öğeler tolerans. Bu izin sürece, özellikleri, tamamını açıklanan [veri sözleşmesi sürümü oluşturma](../../../docs/framework/wcf/feature-details/data-contract-versioning.md) ve [İleri uyumlu veri sözleşmeleri](../../../docs/framework/wcf/feature-details/forward-compatible-data-contracts.md) kullanılabilir. Aşağıdaki yönergeler tavsiye edilir.  
@@ -65,9 +67,9 @@ Bu konu, zaman içinde kolayca gelişmesi veri sözleşmeleri oluşturmak için 
   
 2.  Veri sözleşmeleri birlikte devralma kullanımını, devralma sürüm oluşturma mekanizması olarak kullanılmaz ve belirli kurallar ardından koşuluyla izin verilir. Bazı temel türünden bir türü türetilen varsa, onu farklı bir taban türü gelecek bir sürümünde öğesinden türetilen yapmayın (aynı verilere sahip olmadığı sürece sözleşme). Bu bir istisna vardır: bir veri sözleşmesi türünün temel türü arasındaki hiyerarşi içine bir türü ekleyebilirsiniz, ancak yalnızca veri üyeleriyle içermiyorsa, aynı diğer üyeleri hiyerarşideki diğer türleri olası tüm sürümlerini adları. Genel olarak, veri üyeleri aynı farklı düzeylerde aynı adlarıyla kullanarak Devralma Hiyerarşisi ciddi sürüm sorunlara yol açabilir ve kaçınılmalıdır.  
   
-3.  İlk veri sözleşmesi sürümü ile başlayarak, her zaman uygulamak <xref:System.Runtime.Serialization.IExtensibleDataObject> gidiş etkinleştirmek için. [!INCLUDE[crdefault](../../../includes/crdefault-md.md)][İleri uyumlu veri sözleşmeleri](../../../docs/framework/wcf/feature-details/forward-compatible-data-contracts.md). Bu arabirim uygulamadan bir türü bir veya daha fazla sürümleri yayımlandı durumunda türü bir sonraki sürümde uygulayın.  
+3.  İlk veri sözleşmesi sürümü ile başlayarak, her zaman uygulamak <xref:System.Runtime.Serialization.IExtensibleDataObject> gidiş etkinleştirmek için. Daha fazla bilgi için bkz: [İleri uyumlu veri sözleşmeleri](../../../docs/framework/wcf/feature-details/forward-compatible-data-contracts.md). Bu arabirim uygulamadan bir türü bir veya daha fazla sürümleri yayımlandı durumunda türü bir sonraki sürümde uygulayın.  
   
-4.  Sonraki sürümlerde, veri sözleşme adı veya ad alanı değiştirmeyin. Adı veya temel veri sözleşmesi türünün ad alanını değiştirme, uygun mekanizmaları gibi kullanarak ad alanı ve veri sözleşmesi adını doğru yazdığınızdan emin <xref:System.Runtime.Serialization.DataContractAttribute.Name%2A> özelliği <xref:System.Runtime.Serialization.DataContractAttribute>. [!INCLUDE[crabout](../../../includes/crabout-md.md)]adlandırma, [veri sözleşmesi adları](../../../docs/framework/wcf/feature-details/data-contract-names.md).  
+4.  Sonraki sürümlerde, veri sözleşme adı veya ad alanı değiştirmeyin. Adı veya temel veri sözleşmesi türünün ad alanını değiştirme, uygun mekanizmaları gibi kullanarak ad alanı ve veri sözleşmesi adını doğru yazdığınızdan emin <xref:System.Runtime.Serialization.DataContractAttribute.Name%2A> özelliği <xref:System.Runtime.Serialization.DataContractAttribute>. [!INCLUDE[crabout](../../../includes/crabout-md.md)] adlandırma, [veri sözleşmesi adları](../../../docs/framework/wcf/feature-details/data-contract-names.md).  
   
 5.  Sonraki sürümlerde, herhangi bir veri üyesi adlarını değiştirmeyin. Alan, özelliği veya veri üyesi temel olay adının değiştirilmesi kullanırsanız `Name` özelliği <xref:System.Runtime.Serialization.DataMemberAttribute> mevcut veri üye adı korumak için.  
   
@@ -79,7 +81,7 @@ Bu konu, zaman içinde kolayca gelişmesi veri sözleşmeleri oluşturmak için 
   
     1.  <xref:System.Runtime.Serialization.DataMemberAttribute.IsRequired%2A> Özelliği her zaman sol varsayılan değerinde `false`.  
   
-    2.  Varsayılan değer olarak, `null` veya sıfır üye için kabul edilemez ise, bir geri çağırma yöntemi kullanılarak sağlanmalıdır <xref:System.Runtime.Serialization.OnDeserializingAttribute> makul varsayılan bir durumda gelen akışını üye yok sağlamak için. [!INCLUDE[crabout](../../../includes/crabout-md.md)]geri çağırma bkz [sürüm toleranslı seri hale getirme geri çağrıları](../../../docs/framework/wcf/feature-details/version-tolerant-serialization-callbacks.md).  
+    2.  Varsayılan değer olarak, `null` veya sıfır üye için kabul edilemez ise, bir geri çağırma yöntemi kullanılarak sağlanmalıdır <xref:System.Runtime.Serialization.OnDeserializingAttribute> makul varsayılan bir durumda gelen akışını üye yok sağlamak için. [!INCLUDE[crabout](../../../includes/crabout-md.md)] geri çağırma bkz [sürüm toleranslı seri hale getirme geri çağrıları](../../../docs/framework/wcf/feature-details/version-tolerant-serialization-callbacks.md).  
   
     3.  `Order` Özellikte `DataMemberAttribute` tüm yeni eklenen veri üyelerinin sonra varolan veri üyeleri göründüğünden emin olmak için kullanılmalıdır. İçin önerilen yol bunu yaparsanız, bu şu şekildedir: veri sözleşmesi ilk sürümünde veri üyeleri hiçbiri olmalıdır kendi `Order` özellik kümesi. Tüm veri sözleşmesi 2 sürümünde eklenen veri üyeleri olmalıdır kendi `Order` özelliği 2 olarak ayarlanmış. Sürüm veri sözleşmesi 3 eklenen veri üyelerin tümünü olmalıdır kendi `Order` 3'e ayarlayın ve benzeri. Birden fazla veri üyesi aynı ayarlamak için izin verilen `Order` sayısı.  
   

@@ -1,26 +1,27 @@
 ---
-title: "Örnek depolar"
-ms.custom: 
+title: Örnek depolar
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: f2629668-0923-4987-b943-67477131c1e0
-caps.latest.revision: "14"
+caps.latest.revision: 14
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 63cfe130e841ce073f794db6494fa8e97364d476
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: a41c25dc3c664715bd9e811d6a21a6e3600aa8a5
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="instance-stores"></a>Örnek depolar
-Bir örnek deposuna örneklerinin mantıksal bir kapsayıcısıdır. Örnek veri ve meta veri depolandığı yerdir. Bir örnek deposuna ayrılmış bir fiziksel depolama göstermez. Bir örnek deposuna dayanıklı bir SQL Server veritabanında veya dayanıklı olmayan durum bilgileri bellek içerebilir. [!INCLUDE[netfx_current_long](../../../includes/netfx-current-long-md.md)] Örnek verileri ve meta verileri bir SQL Server 2005 veya SQL Server 2008 veritabanına kalıcı hale getirmek iş akışları sağlayan bir örnek deposuna somut bir uygulamasıdır SQL iş akışı örneği deposuna birlikte verilir. Ayrıca Windows Server App Fabric ayrıca bir örnek deposuna somut bir uygulamasını sağlar. [!INCLUDE[crdefault](../../../includes/crdefault-md.md)][Windows Server App Fabric örnek deposu, sorgu ve denetim sağlayıcıları](http://go.microsoft.com/fwlink/?LinkID=201201&clcid=0x409).  
+Bir örnek deposuna örneklerinin mantıksal bir kapsayıcısıdır. Örnek veri ve meta veri depolandığı yerdir. Bir örnek deposuna ayrılmış bir fiziksel depolama göstermez. Bir örnek deposuna dayanıklı bir SQL Server veritabanında veya dayanıklı olmayan durum bilgileri bellek içerebilir. [!INCLUDE[netfx_current_long](../../../includes/netfx-current-long-md.md)] Örnek verileri ve meta verileri bir SQL Server 2005 veya SQL Server 2008 veritabanına kalıcı hale getirmek iş akışları sağlayan bir örnek deposuna somut bir uygulamasıdır SQL iş akışı örneği deposuna birlikte verilir. Ayrıca Windows Server App Fabric ayrıca bir örnek deposuna somut bir uygulamasını sağlar. Daha fazla bilgi için bkz: [Windows Server App Fabric örnek deposu, sorgu ve denetim sağlayıcıları](http://go.microsoft.com/fwlink/?LinkID=201201&clcid=0x409).  
   
  API kalıcı bir ana bilgisayar ve komut istekleri göndermek ana bilgisayar tanır bir örnek deposuna arasındaki arabirimdir (örneğin, <xref:System.Activities.DurableInstancing.LoadWorkflowCommand> ve <xref:System.Activities.DurableInstancing.SaveWorkflowCommand>) örnek deposuna. Bu API somut uyarlamasını kalıcı bir sağlayıcı adı verilir. Kalıcılık sağlayıcı bir ana bilgisayardan isteklerini alır ve örnek deposuna değiştirir.  
   

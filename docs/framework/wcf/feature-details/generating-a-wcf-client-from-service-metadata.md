@@ -10,17 +10,17 @@ ms.technology:
 ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 27f8f545-cc44-412a-b104-617e0781b803
-caps.latest.revision: ''
+caps.latest.revision: 9
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: 9eedf84d1dccb8bc2540aca7e6bd338b4e58326d
-ms.sourcegitcommit: c883637b41ee028786edceece4fa872939d2e64c
+ms.openlocfilehash: 3f48de4b4073a6b34671b3eab5e07890790c71ce
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/26/2018
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="generating-a-wcf-client-from-service-metadata"></a>Hizmet Meta Verilerinden WCF İstemcisi Oluşturma
 Bu konu, meta veri belgelerden istemcileri oluşturmak için Svcutil.exe içinde çeşitli anahtarları kullanmayı açıklar.  
@@ -60,7 +60,7 @@ svcutil.exe [/t:code]  <metadataDocumentPath>* | <url>* | <epr>
   
 |Seçenek|Açıklama|  
 |------------|-----------------|  
-|**/Language:\<dil >**|Kod oluşturma için kullanılacak programlama dilini belirtir. Machine.config dosyasının veya öğesinden devralınan bir sınıf tam adını kayıtlı ya da bir dil adı sağlayın <xref:System.CodeDom.Compiler.CodeDomProvider>.<br /><br /> Değerler: c#, cs, csharp, vb, vbs, visualbasic'tir, vbscript, javascript, c ++, mc, cpp<br /><br /> Varsayılan: csharp<br /><br /> Kısa biçimi: `/l`<br /><br /> [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)] [CodeDomProvider sınıfı](http://go.microsoft.com/fwlink/?LinkId=94778).|  
+|**/Language:\<dil >**|Kod oluşturma için kullanılacak programlama dilini belirtir. Machine.config dosyasının veya öğesinden devralınan bir sınıf tam adını kayıtlı ya da bir dil adı sağlayın <xref:System.CodeDom.Compiler.CodeDomProvider>.<br /><br /> Değerler: c#, cs, csharp, vb, vbs, visualbasic'tir, vbscript, javascript, c ++, mc, cpp<br /><br /> Varsayılan: csharp<br /><br /> Kısa biçimi: `/l`<br /><br /> Daha fazla bilgi için bkz: [CodeDomProvider sınıfı](http://go.microsoft.com/fwlink/?LinkId=94778).|  
   
 ## <a name="choosing-a-namespace-for-the-client"></a>İstemci için bir Namespace seçme  
   
@@ -80,7 +80,7 @@ svcutil.exe [/t:code]  <metadataDocumentPath>* | <url>* | <epr>
 |------------|-----------------|  
 |**/ config:\<configFile >**|Oluşturulan yapılandırma dosyası için dosya adını belirtir.<br /><br /> Varsayılan: output.config|  
 |**/mergeConfig**|Varolan dosyanın üzerine yerine varolan bir dosyanın, üretilen yapılandırma birleştirir.|  
-|**/noConfig**|Yapılandırma dosyaları oluşturmaz.|  
+|**/ noconfig**|Yapılandırma dosyaları oluşturmaz.|  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
  [Meta Verileri Kullanma](../../../../docs/framework/wcf/feature-details/using-metadata.md)  

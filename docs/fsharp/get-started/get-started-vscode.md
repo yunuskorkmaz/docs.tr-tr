@@ -1,20 +1,17 @@
 ---
-title: "F # Visual Studio Code ile çalışmaya başlama"
-description: "F # Visual Studio Code ve Ionide eklentisi paketiyle nasıl kullanacağınızı öğrenin."
-keywords: "Visual f #, f #, işlev, .NET, Visual Studio Code vscode Ionide programlama"
+title: 'F # Visual Studio Code ile çalışmaya başlama'
+description: 'F # Visual Studio Code ve Ionide eklentisi paketiyle nasıl kullanacağınızı öğrenin.'
 author: cartermp
 ms.author: phcart
 ms.date: 02/28/2018
-ms.topic: article
-ms.prod: .net
-ms.technology: devlang-fsharp
+ms.topic: conceptual
+ms.prod: dotnet-fsharp
 ms.devlang: fsharp
-ms.assetid: 49775139-082e-442f-b5a2-dd402399b5d2
-ms.openlocfilehash: c452e791b27bc3f32e137a515011d953005344c6
-ms.sourcegitcommit: 83dd5ec003e788ccb3e33f3412a7af39ae347646
+ms.openlocfilehash: 43fed76a57bd7749a7f22a2039ad625e3d26d132
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/15/2018
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="get-started-with-f-in-visual-studio-code"></a>F # Visual Studio Code ile çalışmaya başlama
 
@@ -278,4 +275,4 @@ F # ve dil özellikleri hakkında daha fazla bilgi için kullanıma [Tur, F #](.
 
 [Ad Alanları](../language-reference/namespaces.md)
 
-[Ionide-VSCode: FSharp](https://github.com/ionide/ionide-vscode-fsharp)
+[Ionide VSCode: FSharp](https://github.com/ionide/ionide-vscode-fsharp)

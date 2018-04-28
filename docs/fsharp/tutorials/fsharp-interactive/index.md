@@ -1,20 +1,17 @@
 ---
 title: F# Etkileşimli (fsi.exe) Başvurusu
 description: 'Nasıl F # Etkileşimli (fsi.exe) konsolda F # kodunu etkileşimli olarak çalıştırmak için veya F # betiklerini yürütmek için kullanılan öğrenin.'
-keywords: 'Visual f #, f # işlevsel programlama'
 author: cartermp
 ms.author: phcart
 ms.date: 05/16/2016
 ms.topic: language-reference
-ms.prod: .net
-ms.technology: devlang-fsharp
+ms.prod: dotnet-fsharp
 ms.devlang: fsharp
-ms.assetid: 36af8d1b-dc08-4a37-9497-d23c0a0ac11c
-ms.openlocfilehash: a18f339d898374a59858cd774154b3846594d183
-ms.sourcegitcommit: cf22b29db780e532e1090c6e755aa52d28273fa6
+ms.openlocfilehash: e745562e4165ce6744fcb6d07268b1a5761194aa
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/01/2018
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="interactive-programming-with-f"></a>İle F # Etkileşimli programlama #
 
@@ -59,7 +56,7 @@ F # derleyici yürütülürken bulunmayan etkileşimli komut yürütülürken ba
 |**#load**|Bir kaynak dosyasını okur, derlendiğinden ve çalıştırır.|
 |**#quit**|F # Etkileşimli oturum sona erer.|
 |**#r**|Bir derlemeye başvurur.|
-|**#time ["on"&#124;"off"]**|Kendi kendine **#time** performans bilgileri görüntülenip görüntülenmeyeceğini değiştirir. Etkinleştirildiğinde, F # Etkileşimli gerçek zamanlı, CPU süresi ve atık toplama bilgi yorumlanır ve yürütülen kod her bölüm için ölçer.|
+|**#time ["açık"&#124;"off"]**|Kendi kendine **#time** performans bilgileri görüntülenip görüntülenmeyeceğini değiştirir. Etkinleştirildiğinde, F # Etkileşimli gerçek zamanlı, CPU süresi ve atık toplama bilgi yorumlanır ve yürütülen kod her bölüm için ölçer.|
 
 Dosyaları veya yolları F # Etkileşimli'de belirttiğiniz zaman, bir dize sabit değeri bekleniyordu. Bu nedenle, dosyaları ve yolları tırnak işaretleri içinde olmalıdır ve her zamanki kaçış karakterleri uygulayın. Ayrıca, kullanabileceğiniz @ karakteri F # yol verbatim bir dize olarak içeren bir dize yorumlamaya etkileşimli neden olacak. F # herhangi bir kaçış karakteri yoksaymak etkileşimli neden olur.
 

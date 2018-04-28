@@ -1,29 +1,30 @@
 ---
-title: "Tasarlama ve uygulama özel etkinlikler"
-ms.custom: 
+title: Tasarlama ve uygulama özel etkinlikler
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 4e30e63d-6e33-4842-a7a4-ce807cef1fad
-caps.latest.revision: "22"
+caps.latest.revision: 22
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: d162635a82027d1aaa46545dabad3e103d0f339c
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: bafa54764ba8b02dd05cadd65c3f3cbc64c4b081
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="designing-and-implementing-custom-activities"></a>Tasarlama ve uygulama özel etkinlikler
 Özel etkinlikleri [!INCLUDE[netfx_current_long](../../../includes/netfx-current-long-md.md)] ya da assembling sistem tarafından sağlanan etkinliklerine bileşik etkinlikleri veya öğesinden türetilen yeni türleri oluşturma tarafından oluşturulan <xref:System.Activities.CodeActivity>, <xref:System.Activities.AsyncCodeActivity>, veya <xref:System.Activities.NativeActivity>. Bu bölümde, her iki yöntemle özel etkinlikler oluşturmayı açıklar.  
   
 > [!IMPORTANT]
->  Varsayılan olarak özel etkinlikler iş akışı Tasarımcısı'nda etkinliğe ilişkin adlı basit bir dikdörtgen olarak görüntüler. İş akışı etkinlik özel görsel gösterimi sağlamak için tasarımcı da özel bir tasarımcı oluşturmanız gerekir. [!INCLUDE[crdefault](../../../includes/crdefault-md.md)][Özel etkinlik tasarımcıları ve şablonlar kullanarak](../../../docs/framework/windows-workflow-foundation/using-custom-activity-designers-and-templates.md).  
+>  Varsayılan olarak özel etkinlikler iş akışı Tasarımcısı'nda etkinliğe ilişkin adlı basit bir dikdörtgen olarak görüntüler. İş akışı etkinlik özel görsel gösterimi sağlamak için tasarımcı da özel bir tasarımcı oluşturmanız gerekir. Daha fazla bilgi için bkz: [kullanarak özel etkinlik tasarımcıları ve şablonları](../../../docs/framework/windows-workflow-foundation/using-custom-activity-designers-and-templates.md).  
   
 ## <a name="in-this-section"></a>Bu Bölümde  
  [Etkinlik Yazma Seçenekleri](../../../docs/framework/windows-workflow-foundation/activity-authoring-options-in-wf.md)  

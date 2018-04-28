@@ -1,20 +1,17 @@
 ---
-title: "Yapılar (F#)"
-description: "F # yapısı hakkında genellikle bir compact nesne türü öğrenin küçük miktarda veri ve basit davranışı türleriyle için bir sınıf daha verimlidir."
-keywords: "Visual f #, f # işlevsel programlama"
+title: Yapılar (F#)
+description: 'F # yapısı hakkında genellikle bir compact nesne türü öğrenin küçük miktarda veri ve basit davranışı türleriyle için bir sınıf daha verimlidir.'
 author: cartermp
 ms.author: phcart
 ms.date: 05/16/2016
 ms.topic: language-reference
-ms.prod: .net
-ms.technology: devlang-fsharp
+ms.prod: dotnet-fsharp
 ms.devlang: fsharp
-ms.assetid: 50819506-3210-418f-9602-0ee1c9a52177
-ms.openlocfilehash: 542b69a5aacb8fcfb0e8f6d6c943fe1954c4c59c
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.openlocfilehash: 14a4799b13c40e363dd400f7effd53264acc5614
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="structures"></a>Yapılar
 
@@ -59,10 +56,10 @@ Aşağıdaki kod örnekleri yapısı tanımları gösterilmektedir.
 F # 4.1 ile başlayarak, size gösterebilir [kayıtları](records.md) ve [ayrılmış birleşimler](discriminated-unions.md) ile yapılar olarak `[<Struct>]` özniteliği.  Daha fazla bilgi için her makalesine bakın.
     
 ## <a name="see-also"></a>Ayrıca Bkz.
-[F # dili başvurusu](index.md)
+[F# Dili Başvurusu](index.md)
 
-[Sınıfları](classes.md)
+[Sınıflar](classes.md)
 
-[Kayıtları](records.md)
+[Kayıtlar](records.md)
 
-[Üyeleri](members/index.md)
+[Üyeler](members/index.md)

@@ -1,13 +1,13 @@
 ---
-title: "Bir Uç Noktası Adresi Belirtme"
-ms.custom: 
+title: Bir Uç Noktası Adresi Belirtme
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - dotnet-clr
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - csharp
@@ -15,17 +15,17 @@ dev_langs:
 helpviewer_keywords:
 - endpoints [WCF], addressing
 ms.assetid: ac24f5ad-9558-4298-b168-c473c68e819b
-caps.latest.revision: 
+caps.latest.revision: 41
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: 403ff897de4dc9ee95a854d9658bdee344755d59
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.openlocfilehash: 09a3bf2d552b49e36375210e3036e344a9702405
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="specifying-an-endpoint-address"></a>Bir Uç Noktası Adresi Belirtme
 İle tüm iletişimin bir [!INCLUDE[indigo1](../../../includes/indigo1-md.md)] hizmet kendi bitiş noktalarından oluşur. Her <xref:System.ServiceModel.Description.ServiceEndpoint> içeren bir <xref:System.ServiceModel.Description.ServiceEndpoint.Address%2A>, <xref:System.ServiceModel.Description.ServiceEndpoint.Binding%2A>ve bir <xref:System.ServiceModel.Description.ServiceEndpoint.Contract%2A>. Hangi işlemleri kullanılabilir sözleşme belirtir. Bağlama hizmetiyle iletişim kurma ve hizmet nerede bulacağını adresini belirtir. Her uç noktası benzersiz bir adres olmalıdır. Uç nokta adresi tarafından temsil edilen <xref:System.ServiceModel.EndpointAddress> hizmetinin adresini gösteren bir Tekdüzen Kaynak Tanımlayıcısı (URI) içeren sınıf bir <xref:System.ServiceModel.EndpointAddress.Identity%2A>, hizmet güvenlik kimliğini ve isteğe bağlı bir topluluğu gösterir <xref:System.ServiceModel.EndpointAddress.Headers%2A>. İsteğe bağlı üstbilgi tanımlamak veya uç noktasıyla etkileşim için adresleme daha ayrıntılı bilgi sağlar. Örneğin, üstbilgileri gelen iletiyi işlemeye nasıl, burada uç nokta bir yanıt iletisi göndermesi gerekir veya birden çok örneği kullanılamadığında belirli bir kullanıcıdan gelen iletiyi işlemek için kullanılacak bir hizmetin hangi örneğinin gösterebilir.  
@@ -33,7 +33,7 @@ ms.lasthandoff: 01/19/2018
 ## <a name="definition-of-an-endpoint-address"></a>Bir uç nokta adresi tanımı  
  İçinde [!INCLUDE[indigo2](../../../includes/indigo2-md.md)], bir <xref:System.ServiceModel.EndpointAddress> bir uç nokta başvurusu (EPR) WS adresleme standardında tanımlanan modeller.  
   
- Çoğu taşıma için URI adresi dört bölümden oluşur. Örneğin, "http://www.fabrikam.com:322/mathservice.svc/secureEndpoint" Bu URI aşağıdaki dört bölümden oluşur:  
+ Çoğu taşıma için URI adresi dört bölümden oluşur. Örneğin, bu URI "http://www.fabrikam.com:322/mathservice.svc/secureEndpoint" aşağıdaki dört bölümden oluşur:  
   
 -   Düzen: http:  
   
@@ -41,7 +41,7 @@ ms.lasthandoff: 01/19/2018
   
 -   (İsteğe bağlı) Bağlantı noktası: 322  
   
--   Path: /mathservice.svc/secureEndpoint  
+-   Yol: /mathservice.svc/secureEndpoint  
   
  Her bitiş noktası başvurusu fazladan tanımlama bilgilerini eklemek bazı başvuru parametreleri taşıyabilir EPR modelin parçası olur. İçinde [!INCLUDE[indigo2](../../../includes/indigo2-md.md)], bu başvuru parametreleri örnekleri olarak Modellenen <xref:System.ServiceModel.Channels.AddressHeader> sınıfı.  
   
@@ -49,7 +49,7 @@ ms.lasthandoff: 01/19/2018
   
  Bir hizmet için uç nokta adresleri belirtmek için iki yolla [!INCLUDE[indigo2](../../../includes/indigo2-md.md)]. Taban adresi sağlayabilir veya hizmetle ilişkilendirilmiş her uç noktası için mutlak bir adres belirtebilirsiniz <xref:System.ServiceModel.ServiceHost> bir hizmetin ve ardından bu temel göre tanımlanan bu hizmeti ile ilişkili her uç nokta için bir adres belirtin adresi. Bu yordamların her biri, yapılandırma ve kodun içerisinde bir hizmeti için uç nokta adresleri belirtmek için kullanabilirsiniz. Göreli bir Adres belirtmezseniz, hizmetin taban adresi kullanır. Ayrıca bir hizmet için birden çok taban adresi olabilir ancak her hizmetin her aktarım için yalnızca bir taban adresi izin verilir. Her biri farklı bir bağlama ile yapılandırılan birden çok uç nokta varsa adresleri benzersiz olmalıdır. Aynı kullanan uç ancak farklı sözleşmeleri bağlama aynı adres kullanabilirsiniz.  
   
- IIS ile barındırdığında değil yönettiğiniz <xref:System.ServiceModel.ServiceHost> kendiniz örneği. Temel adres, her zaman IIS'de barındırdığında hizmeti .svc dosyasında belirtilen adrestir. Bu nedenle, göreli uç nokta adresleri IIS tarafından barındırılan hizmet uç noktaları için kullanmanız gerekir. Tam uç noktası adresi biri hizmet dağıtımı hatalara yol açabilir. [!INCLUDE[crdefault](../../../includes/crdefault-md.md)][Bir Internet Information Services tarafından barındırılan bir WCF Hizmeti dağıtma](../../../docs/framework/wcf/feature-details/deploying-an-internet-information-services-hosted-wcf-service.md).  
+ IIS ile barındırdığında değil yönettiğiniz <xref:System.ServiceModel.ServiceHost> kendiniz örneği. Temel adres, her zaman IIS'de barındırdığında hizmeti .svc dosyasında belirtilen adrestir. Bu nedenle, göreli uç nokta adresleri IIS tarafından barındırılan hizmet uç noktaları için kullanmanız gerekir. Tam uç noktası adresi biri hizmet dağıtımı hatalara yol açabilir. Daha fazla bilgi için bkz: [Internet Information Services-Hosted WCF Hizmeti dağıtma](../../../docs/framework/wcf/feature-details/deploying-an-internet-information-services-hosted-wcf-service.md).  
   
 ## <a name="defining-endpoint-addresses-in-configuration"></a>Uç nokta adresleri yapılandırmasında tanımlama  
  Bir yapılandırma dosyasında bir uç nokta tanımlamak için [ \<uç noktası >](http://msdn.microsoft.com/library/13aa23b7-2f08-4add-8dbf-a99f8127c017) öğesi.  
@@ -58,7 +58,7 @@ ms.lasthandoff: 01/19/2018
   
  Zaman <xref:System.ServiceModel.Channels.CommunicationObject.Open%2A> yöntemi (diğer bir deyişle, barındırma uygulama hizmetini başlatmak çalıştığında) çağrılır, sistem arar bir [ \<hizmet >](../../../docs/framework/configure-apps/file-schema/wcf/service.md) "UE. belirten bir ad özniteliği olan öğe Samples.HelloService". Varsa [ \<hizmet >](../../../docs/framework/configure-apps/file-schema/wcf/service.md) öğe bulundu, Sistem belirtilen sınıf yükler ve uç noktaları yapılandırma dosyasında sağlanan uç nokta tanımları kullanarak oluşturur. Bu düzenek, yüklemek ve bağlama ve adresleme bilgilerini kodunuzu dışında tutulması sırasında iki kod satırı ile bir hizmeti başlatmak sağlar. Bu yaklaşımın avantajı, bu değişiklikleri yeniden derleyin veya uygulamayı yeniden dağıtmak zorunda kalmadan yapılabilir ' dir.  
   
- İsteğe bağlı üstbilgi içinde bildirilen bir [ \<üstbilgiler >](../../../docs/framework/configure-apps/file-schema/wcf/headers-element.md). Bir hizmeti için uç noktalar arasında iki üstbilgi ayıran bir yapılandırma dosyası belirtmek için kullanılan öğelerinin bir örneği şudur: "Altın" istemcilerinden http://tempuri1.org/ ve http://tempuri2.org/ "Standart" istemcilerden gelen. Bu hizmet çağırma istemci uygun olmalıdır [ \<üstbilgiler >](../../../docs/framework/configure-apps/file-schema/wcf/headers-element.md) yapılandırma dosyası.  
+ İsteğe bağlı üstbilgi içinde bildirilen bir [ \<üstbilgiler >](../../../docs/framework/configure-apps/file-schema/wcf/headers-element.md). Bir hizmeti için uç noktalar arasında iki üstbilgi ayıran bir yapılandırma dosyası belirtmek için kullanılan öğelerinin bir örneği şudur: "Altın" istemcilerden http://tempuri1.org/ ve "Standart" istemcilerden http://tempuri2.org/. Bu hizmet çağırma istemci uygun olmalıdır [ \<üstbilgiler >](../../../docs/framework/configure-apps/file-schema/wcf/headers-element.md) yapılandırma dosyası.  
   
  [!code-xml[S_UEHelloWorld#1](../../../samples/snippets/common/VS_Snippets_CFX/s_uehelloworld/common/serviceapp.config#1)]  
   
@@ -93,7 +93,7 @@ ms.lasthandoff: 01/19/2018
 ## <a name="using-default-endpoints"></a>Varsayılan uç noktaları kullanma  
  Uç nokta yok kod veya yapılandırma belirtilmezse, çalışma zamanı her taban adresi hizmeti tarafından uygulanan her hizmet sözleşmesi için bir varsayılan uç nokta ekleyerek varsayılan uç noktaları sağlar. Kod veya yapılandırma taban adresi belirtilebilir ve varsayılan uç noktaları eklenip <xref:System.ServiceModel.Channels.CommunicationObject.Open%2A> üzerinde adlı <xref:System.ServiceModel.ServiceHost>.  
   
- Uç noktalar açıkça verdiyse, varsayılan uç noktalar hala çağırarak eklenebilir <xref:System.ServiceModel.ServiceHostBase.AddDefaultEndpoints%2A> üzerinde <xref:System.ServiceModel.ServiceHost> çağırmadan önce <xref:System.ServiceModel.Channels.CommunicationObject.Open%2A>. [!INCLUDE[crabout](../../../includes/crabout-md.md)]Varsayılan uç noktalar, bağlamaları ve davranışları, bkz: [Basitleştirilmiş yapılandırma](../../../docs/framework/wcf/simplified-configuration.md) ve [WCF hizmetleri için Basitleştirilmiş yapılandırma](../../../docs/framework/wcf/samples/simplified-configuration-for-wcf-services.md).  
+ Uç noktalar açıkça verdiyse, varsayılan uç noktalar hala çağırarak eklenebilir <xref:System.ServiceModel.ServiceHostBase.AddDefaultEndpoints%2A> üzerinde <xref:System.ServiceModel.ServiceHost> çağırmadan önce <xref:System.ServiceModel.Channels.CommunicationObject.Open%2A>. [!INCLUDE[crabout](../../../includes/crabout-md.md)] Varsayılan uç noktalar, bağlamaları ve davranışları, bkz: [Basitleştirilmiş yapılandırma](../../../docs/framework/wcf/simplified-configuration.md) ve [WCF hizmetleri için Basitleştirilmiş yapılandırma](../../../docs/framework/wcf/samples/simplified-configuration-for-wcf-services.md).  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
  <xref:System.ServiceModel.EndpointAddress>  

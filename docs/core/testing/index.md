@@ -1,21 +1,19 @@
 ---
 title: Birim testi .NET çekirdek
 description: Birim testi hiç daha kolay olmamıştı. Birim testi .NET Core ve .NET standart projelerinde kullanma konusuna bakın.
-keywords: .NET, .NET core, .NET standart birim testi
 author: ardalis
 ms.author: wiwagn
 ms.date: 08/30/2017
-ms.topic: article
-ms.prod: .net-core
+ms.topic: conceptual
+ms.prod: dotnet-core
 ms.devlang: dotnet
-ms.assetid: 815ac74c-4bd9-4a94-a87c-78288b27c0e2
 ms.workload:
 - dotnetcore
-ms.openlocfilehash: cb78a66a3a6a7158a86a76d62e5230c75b51a416
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: 652378bc6518218d25d2db1b5d1eceb60e53cde5
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="unit-testing-in-net-core-and-net-standard"></a>Birim .NET Core ve .NET standart testi
 

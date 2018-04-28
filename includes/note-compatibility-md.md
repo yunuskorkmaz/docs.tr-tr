@@ -1,0 +1,2 @@
+> [!NOTE]
+>  <xref:Microsoft.VisualBasic.Compatibility.VB6> ad alanındaki işlevler ve nesneler, Visual Basic 6.0’dan Visual Basic 2008’e yükseltme araçlarının kullanımı için sağlanır. Çoğu durumda, bu işlevler ve nesneler .NET Framework’teki diğer ad alanlarında bulabileceğiniz işlevlerin birer yinelemesidir. Bunlar yalnızca, Visual Basic 6.0 kod modelinin .NET Framework uygulamasından önemli ölçüde farklı olduğu durumlarda gereklidir.

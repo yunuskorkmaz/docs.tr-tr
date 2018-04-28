@@ -1,28 +1,28 @@
 ---
-title: "Veri Sözleşmesi Yedekleri"
-ms.custom: 
+title: Veri Sözleşmesi Yedekleri
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - dotnet-clr
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - data contracts [WCF], surrogates
 ms.assetid: 8c31134c-46c5-4ed7-94af-bab0ac0dfce5
-caps.latest.revision: 
+caps.latest.revision: 8
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: f6fcae1989b75a668fd6ff38596b06feca7be9e8
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: e6b372b998d7b3a91189032947a9ad8c68074b5d
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="data-contract-surrogates"></a>Veri Sözleşmesi Yedekleri
 Veri sözleşmesi *yedek* veri sözleşmesi modeli yerleşik Gelişmiş bir özelliktir. Bu özellik türü özelleştirme ve kullanıcılar nasıl bir türü seri durumdan çıkarılmış veya meta veri içine tahmini serileştirilir değiştirmek istediğiniz durumlarda değiştirme için kullanılmak üzere tasarlanmıştır. Burada bir yedek kullanılabilir bazı senaryolar türü, alanları ve özellikleri ile işaretlenmemiş için bir veri sözleşmesi belirtilmemiş olduğunda <xref:System.Runtime.Serialization.DataMemberAttribute> özniteliği ya da kullanıcılar şema Çeşitlemeler dinamik olarak oluşturmak istediğiniz.  
@@ -75,7 +75,7 @@ Veri sözleşmesi *yedek* veri sözleşmesi modeli yerleşik Gelişmiş bir öze
   
  `targetType` Parametresi üyesinin bildirilen bir türe başvurur. Bu parametre, tarafından döndürülen surrogated türüdür <xref:System.Runtime.Serialization.IDataContractSurrogate.GetDataContractType%2A> yöntemi. Seri hale getirici döndürülen nesne bu türe atanabilir uygulamaz. `obj` Nesneyi serileştirmek için bir parametredir ve gerekirse, yedek dönüştürülür. Bu yöntem, surrogated nesne işlemiyor durumunda giriş nesnesi döndürmesi gerekir. Aksi takdirde, yeni bir yedek nesne döndürülür. Nesne null ise temsilci çağrılmaz. Çok sayıda yedek eşlemeleri farklı örnekleri için bu yöntem içinde tanımlanabilir.  
   
- Oluştururken bir <xref:System.Runtime.Serialization.DataContractSerializer>, nesne başvuruları korumak için söyleyebilirsiniz. ([!INCLUDE[crdefault](../../../../includes/crdefault-md.md)] [Seri hale getirme ve seri durumdan çıkarma](../../../../docs/framework/wcf/feature-details/serialization-and-deserialization.md).) Bu ayarlayarak yapılır `preserveObjectReferences` kendi oluşturucuya parametresinde `true`. Bu durumda, tüm sonraki serializations başvuru akışa yazmanız yeterlidir beri yedek bir nesne için yalnızca bir kez çağrılır. Varsa `preserveObjectReferences` ayarlanır `false`, sonra bir örneği ile her karşılaşmanızda yedek olarak adlandırılır.  
+ Oluştururken bir <xref:System.Runtime.Serialization.DataContractSerializer>, nesne başvuruları korumak için söyleyebilirsiniz. (Daha fazla bilgi için bkz: [seri hale getirme ve seri durumdan çıkarma](../../../../docs/framework/wcf/feature-details/serialization-and-deserialization.md).) Bu ayarlayarak yapılır `preserveObjectReferences` kendi oluşturucuya parametresinde `true`. Bu durumda, tüm sonraki serializations başvuru akışa yazmanız yeterlidir beri yedek bir nesne için yalnızca bir kez çağrılır. Varsa `preserveObjectReferences` ayarlanır `false`, sonra bir örneği ile her karşılaşmanızda yedek olarak adlandırılır.  
   
  Seri hale getirilmiş örnek türü bildirilen türünden farklıysa, türü bilgileri akışa, örneğin, yazılır `xsi:type` diğer sonunda seri durumdan çıkarılacak örneği izin vermek için. Bu işlem, nesne veya surrogated gerçekleşir.  
   
@@ -144,7 +144,7 @@ Veri sözleşmesi *yedek* veri sözleşmesi modeli yerleşik Gelişmiş bir öze
 ### <a name="getknowncustomdatatypes-method"></a>GetKnownCustomDataTypes yöntemi  
  Bu yöntem şemadan tanımlı özel veri türleri alır. Yöntem için şema başlangıcından isteğe bağlıdır.  
   
- Yöntem şema dışarı ve içeri aktarma başında çağrılır. Bu yöntem, dışarı veya içeri aktarılan şemasında kullanılan özel veri türleri döndürür. Yöntemine geçirilen bir <xref:System.Collections.ObjectModel.Collection%601> ( `customDataTypes` parametresi), türleri koleksiyonu. Yöntemi, bu koleksiyona ek bilinen türleri eklemeniz gerekir. Bilinen özel veri türleri seri hale getirme ve seri durumdan çıkarma özel verileri kullanarak etkinleştirmek için gerekli olan <xref:System.Runtime.Serialization.DataContractSerializer>. [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)][Veri sözleşmesi bilinen türler](../../../../docs/framework/wcf/feature-details/data-contract-known-types.md).  
+ Yöntem şema dışarı ve içeri aktarma başında çağrılır. Bu yöntem, dışarı veya içeri aktarılan şemasında kullanılan özel veri türleri döndürür. Yöntemine geçirilen bir <xref:System.Collections.ObjectModel.Collection%601> ( `customDataTypes` parametresi), türleri koleksiyonu. Yöntemi, bu koleksiyona ek bilinen türleri eklemeniz gerekir. Bilinen özel veri türleri seri hale getirme ve seri durumdan çıkarma özel verileri kullanarak etkinleştirmek için gerekli olan <xref:System.Runtime.Serialization.DataContractSerializer>. Daha fazla bilgi için bkz: [veri sözleşmesi bilinen türleri](../../../../docs/framework/wcf/feature-details/data-contract-known-types.md).  
   
 ## <a name="implementing-a-surrogate"></a>Bir yedek uygulama  
  Veri sözleşmesi yedek içinde kullanmak için [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)], birkaç özel yordamları izlemeniz gerekir.  

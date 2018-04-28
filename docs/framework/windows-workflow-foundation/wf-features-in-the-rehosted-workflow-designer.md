@@ -14,17 +14,17 @@ ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: 999c18f20264a71cf73bbd5afd352ad3104a03e8
-ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
-ms.translationtype: HT
+ms.openlocfilehash: a11a1cddbb5b65bf174cabe7774ad62791657f54
+ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="support-for-new-workflow-foundation-45-features-in-the-rehosted-workflow-designer"></a>Rehosted iş akışı Tasarımcısı'nda yeni iş akışı Foundation 4.5 özellikleri için destek
-[!INCLUDE[wf](../../../includes/wf-md.md)] içinde [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] iş akışı Tasarımcısı deneyimi bazı geliştirmeler dahil olmak üzere birçok yeni özellik sunulmuştur. Bu konu, bu özelliklerin rehosted Tasarımcısı'nda desteklenen ve hangilerinin şu anda desteklenmiyor ayrıntıları.  
+Windows Workflow Foundation (WF) [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] iş akışı Tasarımcısı deneyimi bazı geliştirmeler dahil olmak üzere birçok yeni özellik sunulmuştur. Bu konu, bu özelliklerin rehosted Tasarımcısı'nda desteklenen ve hangilerinin şu anda desteklenmiyor ayrıntıları.  
   
 > [!NOTE]
->  Tüm yeni bir listesi için [!INCLUDE[wf](../../../includes/wf-md.md)] özellikleri kullanıma sunulan [!INCLUDE[net_v45](../../../includes/net-v45-md.md)], olanlar dahil olmak üzere ilgisiz Tasarımcı yeniden barındırma için, bkz: [.NET 4.5, Windows Workflow Foundation yenilikler](../../../docs/framework/windows-workflow-foundation/whats-new-in-wf-in-dotnet.md).  
+>  Tüm sunulan yeni Windows Workflow Foundation (WF) özelliklerin bir listesi için [!INCLUDE[net_v45](../../../includes/net-v45-md.md)], olanlar dahil olmak üzere ilgisiz Tasarımcı yeniden barındırma için, bkz: [.NET 4.5, Windows Workflow Foundation yenilikler](../../../docs/framework/windows-workflow-foundation/whats-new-in-wf-in-dotnet.md).  
   
 ## <a name="activities"></a>Etkinlikler  
  Yerleşik etkinlik kitaplığı yeni etkinlikler ve varolan etkinlikleri için yeni özellikler içerir. Bu yeni etkinliklerin tümü rehosted Tasarımcısı'nda desteklenir. Bu yeni etkinlikler hakkında daha fazla bilgi için bkz: [etkinlikleri](../../../docs/framework/windows-workflow-foundation/whats-new-in-wf-in-dotnet.md#BKMK_NewActivities) bölümünü [.NET 4.5, Windows Workflow Foundation yenilikler](../../../docs/framework/windows-workflow-foundation/whats-new-in-wf-in-dotnet.md).  

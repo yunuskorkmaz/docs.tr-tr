@@ -1,12 +1,8 @@
 ---
-title: .NET Framework'te Genel Türler
-ms.custom: ''
+title: .NET içindeki Genel Türler
 ms.date: 03/30/2017
 ms.prod: .net
-ms.reviewer: ''
-ms.suite: ''
 ms.technology: dotnet-standard
-ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - csharp
@@ -39,16 +35,17 @@ manager: wpickett
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: d06c2ae074045ae750c079383f43c3d6aa6f726c
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: ba9149da420b7b7bdad01e1376793c64adaf1c8d
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 04/28/2018
 ---
-# <a name="generics-in-the-net-framework"></a>.NET Framework'te Genel Türler
-<a name="top"></a>Genel türler yöntemi, sınıf, yapı veya arabirimi temel aldığı kesin veri türüne uyarlamak olanak tanır. Örneğin kullanmak yerine <xref:System.Collections.Hashtable> sınıf sağlayan anahtarlarını ve değerlerini herhangi bir türde olması için kullanabilirsiniz <xref:System.Collections.Generic.Dictionary%602> genel sınıf ve anahtar için izin verilen türü ve izin verilen değer türü belirtin. Genel türlerin yararları arasında artan kod yeniden kullanılırlığı ve tür güvenliği ' dir.  
+# <a name="generics-in-net"></a>.NET içindeki Genel Türler
+
+<a name="top"></a> Genel türler yöntemi, sınıf, yapı veya arabirimi temel aldığı kesin veri türüne uyarlamak olanak tanır. Örneğin kullanmak yerine <xref:System.Collections.Hashtable> sınıf sağlayan anahtarlarını ve değerlerini herhangi bir türde olması için kullanabilirsiniz <xref:System.Collections.Generic.Dictionary%602> genel sınıf ve anahtar için izin verilen türü ve izin verilen değer türü belirtin. Genel türlerin yararları arasında artan kod yeniden kullanılırlığı ve tür güvenliği ' dir.  
   
- Bu konu, .NET Framework'teki genel türler genel bir bakış ve genel türleri veya yöntemleri özetini sağlar. Aşağıdaki bölümleri içerir:  
+ Bu konu, .NET'nda genel türler genel bir bakış ve genel türleri veya yöntemleri özetini sağlar. Aşağıdaki bölümleri içerir:  
   
 -   [Tanımlama ve genel türler kullanma](#defining_and_using_generics)  
   
@@ -78,7 +75,7 @@ ms.lasthandoff: 12/23/2017
   
 <a name="generics_terminology"></a>   
 ### <a name="generics-terminology"></a>Genel türler terminolojisi  
- Aşağıdaki terimler, .NET Framework'teki genel türler tartışmak için kullanılır:  
+ Aşağıdaki terimler .NET'nda genel türler tartışmak için kullanılır:  
   
 -   A *genel tür tanımında* bir sınıf, yapı ya da bir şablonla kullanan içeren veya türleri yer tutucular olarak işlev arabirimi bildirimi. Örneğin, <xref:System.Collections.Generic.Dictionary%602?displayProperty=nameWithType> sınıfı, iki tür içerebilir: anahtarları ve değerleri. Genel tür tanımında yalnızca bir şablon olduğundan, sınıf, yapı veya genel tür tanımı arabirimi örneği oluşturulamıyor.  
   
@@ -145,11 +142,11 @@ ms.lasthandoff: 12/23/2017
   
 <a name="class_library_and_language_support"></a>   
 ## <a name="class-library-and-language-support"></a>Sınıf kitaplığı ve dil desteği  
- .NET Framework şu ad alanlarından genel koleksiyon sınıfları birkaç sağlar:  
+ .NET şu ad alanlarından genel koleksiyon sınıfları birkaç sağlar:  
   
--   <xref:System.Collections.Generic> Ad alanı .NET Framework tarafından sağlanan gibi genel koleksiyon türleri çoğunu kataloglar <xref:System.Collections.Generic.List%601> ve <xref:System.Collections.Generic.Dictionary%602> Genel sınıflar.  
+-   <xref:System.Collections.Generic> Ad alanı gibi .NET tarafından sağlanan genel koleksiyon türleri çoğunu içeren <xref:System.Collections.Generic.List%601> ve <xref:System.Collections.Generic.Dictionary%602> Genel sınıflar.  
   
--   <xref:System.Collections.ObjectModel> Ad alanı kataloglar ek genel koleksiyon türleri gibi <xref:System.Collections.ObjectModel.ReadOnlyCollection%601> nesne modelleri, sınıfların kullanıcılara sunulması için kullanışlı olan genel bir sınıf.  
+-   <xref:System.Collections.ObjectModel> Ad alanı içeren ek genel koleksiyon türleri gibi <xref:System.Collections.ObjectModel.ReadOnlyCollection%601> nesne modelleri, sınıfların kullanıcılara sunulması için kullanışlı olan genel bir sınıf.  
   
  Sıralama ve eşitlik karşılaştırmaları uygulamak için genel arabirimler içinde verilmiştir <xref:System> olay işleyicileri, dönüştürme ve arama koşulları için genel temsilci türleri ile birlikte ad alanı.  
   
@@ -172,11 +169,11 @@ ms.lasthandoff: 12/23/2017
   
 |Başlık|Açıklama|  
 |-----------|-----------------|  
-|[.NET Framework'teki Genel Koleksiyonlar](../../../docs/standard/generics/collections.md)|Genel koleksiyon sınıfları ve .NET Framework'teki diğer genel türleri açıklanmaktadır.|  
+|[.NET’te Genel Koleksiyonlar](../../../docs/standard/generics/collections.md)|Genel koleksiyon sınıfları ve diğer genel türleri .NET içinde açıklanmıştır.|  
 |[Dizi ve Listeleri Düzenlemek için Genel Temsilciler](../../../docs/standard/generics/delegates-for-manipulating-arrays-and-lists.md)|Bir dizi veya koleksiyon öğeleri üzerinde gerçekleştirilecek genel temsilciler dönüşümleri, arama koşulları ve eylemleri açıklar.|  
 |[Genel Arabirimler](../../../docs/standard/generics/interfaces.md)|Genel türler aileleri arasında ortak işlevsellik sağlayan genel arabirimler açıklanmaktadır.|  
 |[Kovaryans ve Kontravaryans](../../../docs/standard/generics/covariance-and-contravariance.md)|Kovaryans ve kontravaryans genel tür parametreleri açıklar.|  
-|[Yaygın Olarak Kullanılan Koleksiyon Türleri](../../../docs/standard/collections/commonly-used-collection-types.md)|.NET Framework'teki genel türleri dahil olmak üzere, koleksiyon türleri kullanım senaryoları ve özellikleri hakkındaki özet bilgileri sağlar.|  
+|[Yaygın Olarak Kullanılan Koleksiyon Türleri](../../../docs/standard/collections/commonly-used-collection-types.md)|.NET genel türleri dahil olmak üzere, koleksiyon türlerini kullanım senaryoları ve özellikleri hakkındaki özet bilgileri sağlar.|  
 |[Genel Koleksiyonlar Ne Zaman Kullanılır?](../../../docs/standard/collections/when-to-use-generic-collections.md)|Ne zaman genel koleksiyon türleri kullanılacağını belirlemek için genel kurallar açıklanmaktadır.|  
 |[Nasıl yapılır: Yansıma Yayma ile Genel Tür Tanımlama](../../../docs/framework/reflection-and-codedom/how-to-define-a-generic-type-with-reflection-emit.md)|Genel türler ve yöntemleri dahil dinamik derlemeleri oluşturma açıklanmaktadır.|  
 |[Visual Basic'de genel türler](~/docs/visual-basic/programming-guide/language-features/data-types/generic-types.md)|Visual Basic kullanıcıları, kullanma ve genel türleri tanımlama için nasıl yapılır konuları dahil olmak üzere genel türler özelliğini açıklar.|  

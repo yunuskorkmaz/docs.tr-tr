@@ -13,17 +13,17 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 00959326-aa9d-44d0-af61-54933d4adc7f
-caps.latest.revision: ''
+caps.latest.revision: 23
 author: BrucePerlerMS
 ms.author: bruceper
 manager: mbaldwin
 ms.workload:
 - dotnet
-ms.openlocfilehash: 71325089f2c72f6f01b2179bd150d21a98b3a8e2
-ms.sourcegitcommit: c883637b41ee028786edceece4fa872939d2e64c
+ms.openlocfilehash: 5619041ccf4ce4d899f3c9a478d125a1a2d8d32a
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/26/2018
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="transport-security-overview"></a>Taşıma Güvenliği Genel Bakış
 Aktarım de güvenlik mekanizmaları [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] bağlamada değişir ve kullanılan taşıma. Örneğin, kullanırken <xref:System.ServiceModel.WSHttpBinding> sınıfı, aktarım HTTP ve taşıma güvenliğini sağlamak için birincil mekanizmayı Güvenli Yuva Katmanı (SSL) genellikle HTTPS adlı HTTP üzerinden şeklindedir. Bu konuda kullanılan ana taşıma güvenlik mekanizmaları ele alınmıştır [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] sistem tarafından sağlanan bağlamalar.  
@@ -72,10 +72,10 @@ Aktarım de güvenlik mekanizmaları [!INCLUDE[indigo1](../../../../includes/ind
  Bu Tümleşik Windows kimlik doğrulaması IIS'de karşılık gelir. Bu değer ayarlandığında, sunucunun kendi etki alanı denetleyicisi olarak Kerberos protokolünü kullanan bir Windows etki alanı mevcut ayrıca beklenir. Sunucu, Kerberos tarafından desteklenen bir etki alanı üzerinde değil ya da Kerberos sistem başarısız olursa, sonraki bölümde açıklanan NT LAN Yöneticisi (NTLM) değeri kullanabilirsiniz. [!INCLUDE[crabout](../../../../includes/crabout-md.md)] [!INCLUDE[iis601](../../../../includes/iis601-md.md)], bkz: [IIS 6.0, tümleşik Windows kimlik doğrulaması](http://go.microsoft.com/fwlink/?LinkId=88597). [!INCLUDE[crabout](../../../../includes/crabout-md.md)] [!INCLUDE[iisver](../../../../includes/iisver-md.md)], bkz: [IIS 7.0 Beta: IIS 7.0 sunucu sertifikalarını yapılandırma](http://go.microsoft.com/fwlink/?LinkId=88595).  
   
 #### <a name="ntlm"></a>NTLM  
- Bu, Kerberos protokolü başarısız olursa NTLM kimlik doğrulaması için kullanılacak sunucuyu sağlar. [!INCLUDE[crabout](../../../../includes/crabout-md.md)] IIS yapılandırma [!INCLUDE[iis601](../../../../includes/iis601-md.md)], bkz: [zorlama NTLM kimlik doğrulaması](http://go.microsoft.com/fwlink/?LinkId=88598). İçin [!INCLUDE[iisver](../../../../includes/iisver-md.md)], NTLM kimlik doğrulaması Windows kimlik doğrulaması içerir. [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)] [IIS 7.0 Beta: IIS 7.0 sunucu sertifikalarını yapılandırma](http://go.microsoft.com/fwlink/?LinkID=88595).  
+ Bu, Kerberos protokolü başarısız olursa NTLM kimlik doğrulaması için kullanılacak sunucuyu sağlar. [!INCLUDE[crabout](../../../../includes/crabout-md.md)] IIS yapılandırma [!INCLUDE[iis601](../../../../includes/iis601-md.md)], bkz: [zorlama NTLM kimlik doğrulaması](http://go.microsoft.com/fwlink/?LinkId=88598). İçin [!INCLUDE[iisver](../../../../includes/iisver-md.md)], NTLM kimlik doğrulaması Windows kimlik doğrulaması içerir. Daha fazla bilgi için bkz: [IIS 7.0 Beta: IIS 7.0 sunucu sertifikalarını yapılandırma](http://go.microsoft.com/fwlink/?LinkID=88595).  
   
 ## <a name="wshttpbinding"></a>WsHttpBinding  
- <xref:System.ServiceModel.WSHttpBinding> Sınıfı, WS - uygulama hizmetleri ile birlikte çalışma için tasarlanmıştır * belirtimleri. Bu bağlama için taşıma güvenliği, HTTP veya HTTPS üzerinden Güvenli Yuva Katmanı (SSL) vardır. Oluşturmak için bir [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] SSL kullanan uygulamayı uygulamasını barındırmak için IIS kullanın. Alternatif olarak, bir kendi kendini barındıran uygulaması oluşturuyorsanız, bir bilgisayardaki belirli bir bağlantı noktası bir X.509 sertifikası bağlamak için HttpCfg.exe aracını kullanın. Bağlantı noktası numarasını parçası olarak belirtilen [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] uç noktası adresi olarak uygulama. Aktarım modu kullanırken, uç nokta adresi HTTPS protokolünü içermelidir veya çalışma zamanında bir özel durum oluşturulur. [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)] [HTTP taşıma güvenliği](../../../../docs/framework/wcf/feature-details/http-transport-security.md).  
+ <xref:System.ServiceModel.WSHttpBinding> Sınıfı, WS - uygulama hizmetleri ile birlikte çalışma için tasarlanmıştır * belirtimleri. Bu bağlama için taşıma güvenliği, HTTP veya HTTPS üzerinden Güvenli Yuva Katmanı (SSL) vardır. Oluşturmak için bir [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] SSL kullanan uygulamayı uygulamasını barındırmak için IIS kullanın. Alternatif olarak, bir kendi kendini barındıran uygulaması oluşturuyorsanız, bir bilgisayardaki belirli bir bağlantı noktası bir X.509 sertifikası bağlamak için HttpCfg.exe aracını kullanın. Bağlantı noktası numarasını parçası olarak belirtilen [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] uç noktası adresi olarak uygulama. Aktarım modu kullanırken, uç nokta adresi HTTPS protokolünü içermelidir veya çalışma zamanında bir özel durum oluşturulur. Daha fazla bilgi için bkz: [HTTP taşıma güvenliği](../../../../docs/framework/wcf/feature-details/http-transport-security.md).  
   
  İstemci kimlik doğrulaması için ayarlanmış <xref:System.ServiceModel.HttpTransportSecurity.ClientCredentialType%2A> özelliği <xref:System.ServiceModel.HttpTransportSecurity> birine sınıfı <xref:System.ServiceModel.HttpClientCredentialType> numaralandırma değerleri. Numaralandırma değerleri için istemci kimlik bilgisi türlerinin aynıdır <xref:System.ServiceModel.BasicHttpBinding> ve IIS hizmetleri ile barındırılacak şekilde tasarlanmıştır.  
   

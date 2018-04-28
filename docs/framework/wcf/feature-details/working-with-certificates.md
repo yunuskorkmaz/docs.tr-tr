@@ -21,11 +21,11 @@ ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: ba49d990c9f067ae2c10ae2a60cbad24b30f43eb
-ms.sourcegitcommit: b750a8e3979749b214e7e10c82efb0a0524dfcb1
+ms.openlocfilehash: e731fd31f2a247466891abbf75d67a61dba7f286
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/09/2018
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="working-with-certificates"></a>Sertifikalarla Çalışma
 Programa [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] güvenlik, X.509 dijital sertifikalar genellikle istemcilerin ve sunucuların kimliğini doğrulamak için kullanılan, şifrelemek ve iletileri dijital olarak imzala. Bu konu kısaca X.509 dijital sertifika özelliklerini ve bunların içinde nasıl kullanılacağını açıklamaktadır [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]ve bu kavramları daha fazla açıklamak veya kullanarak ortak görevleri gerçekleştirmek nasıl Göster konulara bağlantılar içerir [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] ve sertifikalar.  
@@ -37,7 +37,7 @@ Programa [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] güvenlik, X.50
  Sertifika bir üçüncü taraf veren sertifikalarının görülür bir sertifika yetkilisi tarafından verilmelidir. Bir Windows etki alanında bir sertifika yetkilisi dahil etki alanındaki bilgisayarların sertifika vermek için kullanılabilir.  
   
 ## <a name="viewing-certificates"></a>Sertifikaları görüntüleme  
- Sertifikalar ile çalışmak için genellikle bunları görüntülemek ve bunların özelliklerini incelemek gereklidir. Bu, Microsoft Yönetim Konsolu (MMC) ek bileşenini aracıyla kolayca gerçekleştirilir. [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)] [Nasıl yapılır: MMC ek bileşeni ile sertifikaları görüntüle](../../../../docs/framework/wcf/feature-details/how-to-view-certificates-with-the-mmc-snap-in.md).  
+ Sertifikalar ile çalışmak için genellikle bunları görüntülemek ve bunların özelliklerini incelemek gereklidir. Bu, Microsoft Yönetim Konsolu (MMC) ek bileşenini aracıyla kolayca gerçekleştirilir. Daha fazla bilgi için bkz: [nasıl yapılır: MMC ek bileşeni ile sertifikaları görüntüleme](../../../../docs/framework/wcf/feature-details/how-to-view-certificates-with-the-mmc-snap-in.md).  
   
 ## <a name="certificate-stores"></a>Sertifika depoları  
  Sertifika deposunda bulunamadı. Daha fazla alt depoları ayrılır iki ana deposu konum yok. Bir bilgisayarda yöneticisiyseniz, MMC ek bileşen aracını kullanarak her iki ana depoları görüntüleyebilirsiniz. Yönetici olmayanlar yalnızca geçerli kullanıcı deposunda görüntüleyebilirsiniz.  
@@ -89,14 +89,14 @@ Programa [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] güvenlik, X.50
   
 -   [\<kimlik doğrulama >](../../../../docs/framework/configure-apps/file-schema/wcf/authentication-of-servicecertificate-element.md)  
   
--   [\<peerAuthentication>](../../../../docs/framework/configure-apps/file-schema/wcf/peerauthentication-element.md)  
+-   [\<peerAuthentication >](../../../../docs/framework/configure-apps/file-schema/wcf/peerauthentication-element.md)  
   
--   [\<messageSenderAuthentication>](../../../../docs/framework/configure-apps/file-schema/wcf/messagesenderauthentication-element.md)  
+-   [\<messageSenderAuthentication >](../../../../docs/framework/configure-apps/file-schema/wcf/messagesenderauthentication-element.md)  
   
 ## <a name="custom-authentication"></a>Özel kimlik doğrulama  
  `CertificateValidationMode` Özelliği de sertifikaları nasıl doğrulanır özelleştirme olanak sağlar. Varsayılan olarak, düzeyini ayarlamak `ChainTrust`. Kullanılacak <xref:System.ServiceModel.Security.X509CertificateValidationMode.Custom> değeri de ayarlamanız gerekir `CustomCertificateValidatorType` özniteliği bir derleme ve sertifikayı doğrulamak için kullanılan türü. Özel Doğrulayıcı sağlayıcısı oluşturmak için Özet devralmalıdır <xref:System.IdentityModel.Selectors.X509CertificateValidator> sınıfı.  
   
- Özel bir kimlik doğrulayıcı oluştururken, geçersiz kılmak için en önemli yöntemdir <xref:System.IdentityModel.Selectors.X509CertificateValidator.Validate%2A> yöntemi. Özel kimlik doğrulama bir örnek için bkz: [X.509 Sertifika Doğrulayıcı](../../../../docs/framework/wcf/samples/x-509-certificate-validator.md) örnek. [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)] [Özel kimlik bilgileri ve kimlik bilgileri doğrulaması](../../../../docs/framework/wcf/extending/custom-credential-and-credential-validation.md).  
+ Özel bir kimlik doğrulayıcı oluştururken, geçersiz kılmak için en önemli yöntemdir <xref:System.IdentityModel.Selectors.X509CertificateValidator.Validate%2A> yöntemi. Özel kimlik doğrulama bir örnek için bkz: [X.509 Sertifika Doğrulayıcı](../../../../docs/framework/wcf/samples/x-509-certificate-validator.md) örnek. Daha fazla bilgi için bkz: [özel kimlik bilgisi ve kimlik bilgileri doğrulaması](../../../../docs/framework/wcf/extending/custom-credential-and-credential-validation.md).  
   
 ## <a name="using-makecertexe-to-build-a-certificate-chain"></a>Bir sertifika zinciri oluşturmak için MakeCert.exe kullanma  
  Sertifika Oluşturma Aracı'nı (Makecert.exe) X.509 sertifikaları ve özel anahtarı/ortak anahtar çifti oluşturur. Disk ve vermek ve yeni sertifikaları imzalamak için kullanmak üzere özel anahtarı böylece zincirleme sertifika hiyerarşisini benzetimi kaydedebilirsiniz. Hizmetleri ve hiçbir zaman gerçek dağıtım sertifikalarını oluşturmak için kullanılması gereken geliştirme aracı yalnızca bir yardımcı olarak kullanıma yöneliktir. Geliştirirken bir [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] hizmet, bir Makecert.exe ile güven zinciri oluşturmak için aşağıdaki adımları kullanın.  

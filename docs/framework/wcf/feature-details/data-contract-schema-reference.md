@@ -12,23 +12,23 @@ ms.topic: article
 helpviewer_keywords:
 - data contracts [WCF], schema reference
 ms.assetid: 9ebb0ebe-8166-4c93-980a-7c8f1f38f7c0
-caps.latest.revision: ''
+caps.latest.revision: 24
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: 57ccc812aab5df0a9acd99bdcde327d56e4bad8d
-ms.sourcegitcommit: c883637b41ee028786edceece4fa872939d2e64c
+ms.openlocfilehash: 739046945a019541f279b15d2d1b945f526861fb
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/23/2018
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="data-contract-schema-reference"></a>Veri Sözleşmesi Şema Başvurusu
 Bu konu, XML Şeması (tarafından kullanılan XSD) alt açıklar <xref:System.Runtime.Serialization.DataContractSerializer> ortak dil tanımlamak için XML serileştirmesi için çalışma zamanı (CLR) türleri.  
   
 ## <a name="datacontractserializer-mappings"></a>DataContractSerializer eşlemeleri  
- `DataContractSerializer` Gelen meta verileri verildiğinde CLR türleri için XSD eşleyen bir [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] bir meta veri uç noktası kullanarak hizmet veya [ServiceModel meta veri yardımcı Programracı (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md). [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)] [Veri sözleşmesi seri hale getirici](../../../../docs/framework/wcf/feature-details/data-contract-serializer.md).  
+ `DataContractSerializer` Gelen meta verileri verildiğinde CLR türleri için XSD eşleyen bir [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] bir meta veri uç noktası kullanarak hizmet veya [ServiceModel meta veri yardımcı Programracı (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md). Daha fazla bilgi için bkz: [veri sözleşmesi seri hale getirici](../../../../docs/framework/wcf/feature-details/data-contract-serializer.md).  
   
  `DataContractSerializer` Ayrıca Web Hizmetleri Açıklama Dili (WSDL) veya XSD belgelere erişmek ve Hizmetleri veya istemciler için veri sözleşmeleri oluşturmak için Svcutil.exe kullanıldığında XSD CLR Türleri ile eşleştirir.  
   
@@ -63,7 +63,7 @@ Bu konu, XML Şeması (tarafından kullanılan XSD) alt açıklar <xref:System.R
 |`targetNamespace`|Desteklenen ve veri sözleşmesi ad alanına eşlenir. Bu özniteliği belirtilmezse, boş ad alanı kullanılır. Ayrılmış ad olamaz http://schemas.microsoft.com/2003/10/Serialization/.|  
 |`version`|Yoksayıldı.|  
   
-### <a name="xsschema-contents"></a>\<xs:schema>: contents  
+### <a name="xsschema-contents"></a>\<xs: Schema >: içeriği  
   
 |İçindekiler|Şema|  
 |--------------|------------|  
@@ -78,7 +78,7 @@ Bu konu, XML Şeması (tarafından kullanılan XSD) alt açıklar <xref:System.R
 |`attribute`|Yoksayıldı. `DataContractSerializer` kullanımını desteklemez `xs:group`, `xs:attributeGroup`, ve `xs:attribute`. Bu bildirimler alt olarak sayılır `xs:schema`, içinden başvurulamaz ancak `complexType` veya diğer desteklenen yapıları.|  
 |`notation`|Yoksayıldı.|  
   
-## <a name="complex-types--xscomplextype"></a>Complex Types – \<xs:complexType>  
+## <a name="complex-types--xscomplextype"></a>Karmaşık türler – \<xs:complexType >  
   
 ### <a name="general-information"></a>Genel bilgiler  
  Her karmaşık tür \<xs:complexType > bir veri sözleşmesine eşler.  
@@ -128,7 +128,7 @@ Bu konu, XML Şeması (tarafından kullanılan XSD) alt açıklar <xref:System.R
 |`any`|Alınamaz.|  
 |(boş)|Veri sözleşmesi hiçbir veri üyeleri ile eşlenir.|  
   
-## <a name="elements--xselement"></a>Elements – \<xs:element>  
+## <a name="elements--xselement"></a>Öğeleri – \<xs:element >  
   
 ### <a name="general-information"></a>Genel bilgiler  
  `<xs:element>` Aşağıdaki bağlamlarda oluşabilir:  
@@ -202,7 +202,7 @@ Bu konu, XML Şeması (tarafından kullanılan XSD) alt açıklar <xref:System.R
 |`substitutionGroup`|İçinde ilişkili GEDs alınamaz.|  
 |`type`|Desteklenen ve (anonim bir tür öğeyi içeren sürece) ilişkili türü için ilişkili GEDs eşleşmesi gerekir.|  
   
-### <a name="xselement-contents"></a>\<xs:element>: contents  
+### <a name="xselement-contents"></a>\<xs:Element >: içeriği  
   
 |İçindekiler|Şema|  
 |--------------|------------|  
@@ -239,7 +239,7 @@ Bu konu, XML Şeması (tarafından kullanılan XSD) alt açıklar <xref:System.R
 |`list`|Desteklenen. Numaralandırma veri sözleşmeleri bayrak eşler. Bkz: `xs:simpleType` bölümünde listelenmiştir.|  
 |`union`|Alınamaz.|  
   
-### <a name="xsrestriction"></a>\<xs:restriction>  
+### <a name="xsrestriction"></a>\<xs:restriction >  
   
 -   Karmaşık tür kısıtlamaları yalnızca için temel desteklenen = "`xs:anyType`".  
   
@@ -342,7 +342,7 @@ public enum MyEnum
 </xs:simpleType>  
 ```  
   
-### <a name="xslist"></a>\<xs:list>  
+### <a name="xslist"></a>\<xs:list >  
  `DataContractSerializer` MAPS Numaralandırma türleri ile işaretlenen `System.FlagsAttribute` için `xs:list` türetilen `xs:string`. Başka `xs:list` Çeşitlemeler desteklenir.  
   
 ### <a name="xslist-attributes"></a>\<xs:list >: öznitelikleri  
@@ -450,14 +450,14 @@ public class Employee : Person
 </xs:complexType>  
 ```  
   
-### <a name="xscomplexcontent-attributes"></a>\<xs:complexContent>: attributes  
+### <a name="xscomplexcontent-attributes"></a>\<xs:complexContent >: öznitelikleri  
   
 |Öznitelik|Şema|  
 |---------------|------------|  
 |`id`|Yoksayıldı.|  
 |`mixed`|False olmalıdır.|  
   
-### <a name="xscomplexcontent-contents"></a>\<xs:complexContent>: contents  
+### <a name="xscomplexcontent-contents"></a>\<xs:complexContent >: içeriği  
   
 |İçindekiler|Şema|  
 |--------------|------------|  
@@ -471,7 +471,7 @@ public class Employee : Person
 |`id`|Yoksayıldı.|  
 |`base`|Desteklenen. Bu tür öğesinden devralınan eşlemeleri temel veri sözleşmesi yazın.|  
   
-### <a name="xsextension-in-xscomplexcontent-contents"></a>\<xs:extension> in \<xs:complexContent>: contents  
+### <a name="xsextension-in-xscomplexcontent-contents"></a>\<xs:Extension > içinde \<xs:complexContent >: içeriği  
  Kuralları aynıdır `<xs:complexType>` içeriği.  
   
  Varsa bir `<xs:sequence>` sağlanır, kendi üyesi türetilmiş veri sözleşmede ek veri üyelerin eşlemeniz öğeleri.  

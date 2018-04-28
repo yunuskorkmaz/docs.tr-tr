@@ -1,32 +1,33 @@
 ---
 title: OperationScope
-ms.custom: 
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 56206a21-1e63-422d-b92a-e5d8b713e707
-caps.latest.revision: "7"
+caps.latest.revision: 7
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 837be2de516f604dd6869449d99df238fb6dbd24
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 3bf92d7a726a53c5d625f31b0386e11c941cdde9
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="operationscope"></a>OperationScope
 Bu örnek gösterilmektedir nasıl Mesajlaşma etkinlikleri, <xref:System.ServiceModel.Activities.Receive> ve <xref:System.ServiceModel.Activities.SendReply> var olan bir özel etkinlik bir iş akışı hizmetinde bir işlem olarak kullanıma sunmak için kullanılabilir. Bu örnek olarak adlandırılan yeni bir özel etkinlik içeren bir `OperationScope`. Kullanıcıların kendi işlemleri ayrı olarak özel etkinlikler olarak gövdesi Yazar izin vermek ve ardından bunları kullanarak hizmet işlemleri kolayca gösterme tarafından bir iş akışı hizmeti geliştirmeyi kolaylaştırmak için tasarlanmıştır `OperationScope` etkinlik. Örneğin, bir özel `Add` iki alan etkinlik `in` bağımsız değişkenleri ve döndürür bir `out` bağımsız değişkeni ortaya olarak bir `Add` içine bırakmadan tarafından iş akışı hizmeti işlemi bir `OperationScope`.  
   
  Kapsam, kendi gövdesi olarak sağlanan etkinlik inceleyerek çalışır. Herhangi bir ilişkisiz `in` bağımsız değişkenleri varsayılır girişleri gelen iletisi. Tüm `out` olup bağlandıktan, bağımsız olarak bağımsız değişkenler, varsayılır çıkışları sonraki yanıt iletisi. Sunulan işlemin adı görünen adından alınan `OperationScope` etkinlik. Gövde etkinlik olarak paketlenir nihai sonucu olan bir <xref:System.ServiceModel.Activities.Receive> ve <xref:System.ServiceModel.Activities.SendReply> bağlı etkinlik bağımsız değişkenler için iletilerden parametrelere sahip.  
   
- Bu örnek, HTTP uç noktalarını kullanarak bir iş akışı hizmeti kullanıma sunar. Çalıştırmak için doğru URL ACL eklenmesi gerekir. [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)][HTTP ve HTTPS yapılandırma](http://go.microsoft.com/fwlink/?LinkId=70353). Yükseltilmiş bir komut isteminde aşağıdaki komutu yürütülürken ekler uygun ACL'ler (kullanıcı adı ve etki alanı için etki alanı % yerine olun\\% UserName %).  
+ Bu örnek, HTTP uç noktalarını kullanarak bir iş akışı hizmeti kullanıma sunar. Çalıştırmak için doğru URL ACL eklenmesi gerekir. Daha fazla bilgi için bkz: [yapılandırma HTTP ve HTTPS](http://go.microsoft.com/fwlink/?LinkId=70353). Yükseltilmiş bir komut isteminde aşağıdaki komutu yürütülürken ekler uygun ACL'ler (kullanıcı adı ve etki alanı için etki alanı % yerine olun\\% UserName %).  
   
- **Netsh http add urlacl url = http: / / +: 8000 / kullanıcı etki alanı % =\\% UserName %**  
+ **Netsh http add urlacl url =http://+:8000/ kullanıcı etki alanı % =\\% UserName %**  
   
 ### <a name="to-run-the-sample"></a>Örnek çalıştırmak için  
   

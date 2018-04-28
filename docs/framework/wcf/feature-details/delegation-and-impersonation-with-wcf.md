@@ -22,11 +22,11 @@ ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: 5c1acfdfdbac2660fd4de7ec391c94b39890f669
-ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
+ms.openlocfilehash: 885faab43b620cf347c1780d445a72361cb5cdb4
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="delegation-and-impersonation-with-wcf"></a>WCF ile Temsilcilik ve Kimliğe Bürünme
 *Kimliğe bürünme* bir hizmeti etki alanı kaynaklarına istemci erişimini kısıtlamak için hizmetlerini kullanan ortak bir tekniktir. Hizmeti etki alanı kaynaklarına ya da yerel dosyaları (kimliğe bürünme) gibi makine kaynakları veya bir dosya paylaşımı (temsilci) gibi başka bir makinede bir kaynak olabilir. Örnek bir uygulama için bkz: [istemci kimliğine bürünme](../../../../docs/framework/wcf/samples/impersonating-the-client.md). Kimliğe bürünme kullanma örneği için bkz: [nasıl yapılır: bir hizmete bir istemcinin kimliğine bürünmek](../../../../docs/framework/wcf/how-to-impersonate-a-client-on-a-service.md).  
@@ -84,7 +84,7 @@ ms.lasthandoff: 04/26/2018
  [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] Çağıran bir Windows kullanıcı hesabıyla eşlenir kimlik bilgileri ile doğrulanırsa, altyapı arayan taklit. Hizmet, bir Windows hesabı eşlenemiyor kimlik bilgilerini kullanarak kimlik doğrulaması için yapılandırılmışsa, hizmet yöntemi yürütülemiyor.  
   
 > [!NOTE]
->  Üzerinde [!INCLUDE[wxp](../../../../includes/wxp-md.md)], kimliğe bürünme başarısız olursa SCT oluşturulur, sonuçta bir durum bilgisi olan bir <xref:System.InvalidOperationException>. [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)] [Desteklenmeyen senaryolar](../../../../docs/framework/wcf/feature-details/unsupported-scenarios.md).  
+>  Üzerinde [!INCLUDE[wxp](../../../../includes/wxp-md.md)], kimliğe bürünme başarısız olursa SCT oluşturulur, sonuçta bir durum bilgisi olan bir <xref:System.InvalidOperationException>. Daha fazla bilgi için bkz: [desteklenmeyen senaryolar](../../../../docs/framework/wcf/feature-details/unsupported-scenarios.md).  
   
 ## <a name="impersonation-in-a-service-method-imperative-model"></a>Bir hizmet yöntemi, kimliğe bürünme: kesinlik temelli modeli  
  Bazen çağıran işlevi, ancak yalnızca bir kısmının tüm hizmet yöntemi taklit gerekmez. Bu durumda, çağıran hizmet yöntemi içinde Windows kimliğini almak ve kimliğe bürünme imperatively gerçekleştirin. Kullanarak bunu <xref:System.ServiceModel.ServiceSecurityContext.WindowsIdentity%2A> özelliği <xref:System.ServiceModel.ServiceSecurityContext> bir örneğini döndürmek için <xref:System.Security.Principal.WindowsIdentity> sınıfı ve arama <xref:System.Security.Principal.WindowsIdentity.Impersonate%2A> örneğini kullanmadan önce yöntemi.  

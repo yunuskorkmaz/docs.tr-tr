@@ -13,11 +13,11 @@ ms.assetid: 309c0ad5-83e4-4f96-99ea-83cd95107417
 caps.latest.revision: 18
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: da42d58190e8069154cd8383cf0a87e0b19f5ae4
-ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
-ms.translationtype: HT
+ms.openlocfilehash: bffbb8dabdd2463633c9d2ca8de3ef120850be3f
+ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="constants-and-enumerations-visual-basic"></a>Sabitler ve Numaralandırmalar (Visual Basic)
 Bir dizi önceden tanımlanmış sabitler ve numaralandırmalar geliştiriciler için Visual Basic sağlar. Sabitler uygulama yürütme sabit kalır değerleri depolar. Numaralandırmalar ilgili sabitleri kümeleriyle çalışmak ve sabit değerleri adlarıyla ilişkilendirmek için kolay bir yol sağlamak.  
@@ -31,7 +31,7 @@ Bir dizi önceden tanımlanmış sabitler ve numaralandırmalar geliştiriciler 
 |---|---|  
 |`CONFIG`|Geçerli ayarına karşılık gelen bir dize **etkin çözüm yapılandırması** kutusunda **Configuration Manager**.|  
 |`DEBUG`|A `Boolean` ayarlanabilir değer **proje özelliklerini** iletişim kutusu. Varsayılan olarak, bir proje için hata ayıklama yapılandırmasını tanımlayan `DEBUG`. Zaman `DEBUG` tanımlanan <xref:System.Diagnostics.Debug> sınıfı yöntemleri Oluştur çıktıya **çıkış** penceresi. Bunu tanımlı değil, <xref:System.Diagnostics.Debug> sınıfı yöntemleri derlenmemiş ve hiçbir hata ayıklama çıktısı oluşturulur.|  
-|`TARGET`|Proje veya komut satırı ayarını için çıktı türünü temsil eden bir dize **/target** seçeneği. Olası değerlerini `TARGET` şunlardır:<br /><br /> -bir Windows uygulaması için "winexe".<br />-bir konsol uygulaması için "exe".<br />-bir sınıf kitaplığı için "kitaplığı".<br />-bir modül için "modülü".<br />- **/Target** seçeneği kümesinde [!INCLUDE[vsprvs](~/includes/vsprvs-md.md)] tümleşik geliştirme ortamı. Daha fazla bilgi için bkz: [/target (Visual Basic)](../../visual-basic/reference/command-line-compiler/target.md).|  
+|`TARGET`|Proje veya komut satırı ayarını için çıktı türünü temsil eden bir dize **/target** seçeneği. Olası değerlerini `TARGET` şunlardır:<br /><br /> -bir Windows uygulaması için "winexe".<br />-bir konsol uygulaması için "exe".<br />-bir sınıf kitaplığı için "kitaplığı".<br />-bir modül için "modülü".<br />- **/Target** seçeneği Visual Studio tümleşik geliştirme ortamında ayarlanmış olabilir. Daha fazla bilgi için bkz: [/target (Visual Basic)](../../visual-basic/reference/command-line-compiler/target.md).|  
 |`TRACE`|A `Boolean` ayarlanabilir değer **proje özelliklerini** iletişim kutusu. Varsayılan olarak, bir proje için tüm yapılandırmaları tanımlamak `TRACE`. Zaman `TRACE` tanımlanan <xref:System.Diagnostics.Trace> sınıfı yöntemleri Oluştur çıktıya **çıkış** penceresi. Bunu tanımlı değil, <xref:System.Diagnostics.Trace> sınıfı yöntemleri derlenmemiş ve no `Trace` çıktı oluşturulur.|  
 |`VBC_VER`|Visual Basic sürüm olarak temsil eden bir sayı *ana*. *küçük* biçimi. İçin sürüm numarasını [!INCLUDE[vbprvblong](~/includes/vbprvblong-md.md)] 8.0.|  
   

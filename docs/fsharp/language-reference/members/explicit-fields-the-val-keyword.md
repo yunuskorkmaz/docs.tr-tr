@@ -1,20 +1,17 @@
 ---
-title: "Açık Alanlar: val Anahtar Sözcüğü (F#)"
+title: 'Açık Alanlar: val Anahtar Sözcüğü (F#)'
 description: "F # hakkında 'val' öğrenme anahtar sözcük türü başlatmadan bir sınıf veya yapı türünde bir değer depolamak için bir konum bildirmek için kullanılır."
-keywords: "Visual f #, f # işlevsel programlama"
 author: cartermp
 ms.author: phcart
 ms.date: 05/16/2016
 ms.topic: language-reference
-ms.prod: .net
-ms.technology: devlang-fsharp
+ms.prod: dotnet-fsharp
 ms.devlang: fsharp
-ms.assetid: 3bdbc745-436b-407f-bf54-5d11ca829cd0
-ms.openlocfilehash: cee53a48f08aec89b0bdd40189ed331cadee877d
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.openlocfilehash: dc277680121976c0469b18c77bd84443cd251afb
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="explicit-fields-the-val-keyword"></a>Açık Alanlar: val Anahtar Sözcüğü
 
@@ -49,7 +46,7 @@ Değişebilir bir alan için derlenmiş .NET temsili bir .NET alandır.
 
 
 >[!WARNING] 
-`Note`.NET Framework ad `System.ComponentModel` aynı ada sahip bir öznitelik içeriyor. Bu öznitelik hakkında daha fazla bilgi için bkz: `System.ComponentModel.DefaultValueAttribute`.
+`Note` .NET Framework ad `System.ComponentModel` aynı ada sahip bir öznitelik içeriyor. Bu öznitelik hakkında daha fazla bilgi için bkz: `System.ComponentModel.DefaultValueAttribute`.
 
 
 Açık alanlar ve karşılaştırma, kullanımı aşağıdaki kod gösterir bir `let` birincil bir oluşturucuya sahip bir sınıfta bağlama. Unutmayın `let`-ilişkili alan `myInt1` özeldir. Zaman `let`-ilişkili alan `myInt1` bir üye yöntemi, kendi kendine tanımlayıcı başvurulan `this` gerekli değildir. Ancak zaman başvuruda açık alanlar `myInt2` ve `myString`, kendi kendine tanımlayıcısı gereklidir.
@@ -81,8 +78,8 @@ Zaman anahtar sözcükleri `member val` görünür birlikte bir tür tanımında
 
 
 ## <a name="see-also"></a>Ayrıca Bkz.
-[Özellikleri](properties.md)
+[Özellikler](properties.md)
 
-[Üyeleri](index.md)
+[Üyeler](index.md)
 
-[`let`Sınıflardaki bağlamaları](let-bindings-in-classes.md)
+[`let` Sınıflardaki bağlamaları](let-bindings-in-classes.md)

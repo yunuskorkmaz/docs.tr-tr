@@ -1,20 +1,17 @@
 ---
-title: "Dizini Oluşturulan Özellikler (F#)"
-description: "Sıralı verilerine dizi benzeri erişim sağlayan özellikleri olan F # dizin oluşturulmuş özellikleri hakkında bilgi edinin."
-keywords: "Visual f #, f # işlevsel programlama"
+title: Dizini Oluşturulan Özellikler (F#)
+description: 'Sıralı verilerine dizi benzeri erişim sağlayan özellikleri olan F # dizin oluşturulmuş özellikleri hakkında bilgi edinin.'
 author: cartermp
 ms.author: phcart
 ms.date: 05/16/2016
 ms.topic: language-reference
-ms.prod: .net
-ms.technology: devlang-fsharp
+ms.prod: dotnet-fsharp
 ms.devlang: fsharp
-ms.assetid: f1266b8b-e2e3-4f49-9332-65c6d34dc0f3
-ms.openlocfilehash: 78a09a70621e82f073346471e68ec826359641d6
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.openlocfilehash: 39396b3a5ec43f9a8ab0df96afeb69e05801c752
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="indexed-properties"></a>Dizini Oluşturulan Özellikler
 
@@ -77,4 +74,4 @@ Aşağıdaki kod, birden çok dizin değişkenleriyle dizinli bir özelliği kul
 [!code-fsharp[Main](../../../../samples/snippets/fsharp/lang-ref-1/snippet3302.fs)]
     
 ## <a name="see-also"></a>Ayrıca Bkz.
-[Üyeleri](index.md)
+[Üyeler](index.md)

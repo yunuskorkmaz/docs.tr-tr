@@ -1,20 +1,17 @@
 ---
 title: Değerler (F#)
 description: 'F # değerleri belirli bir türe sahip miktarları nasıl olduğunu öğrenin.'
-keywords: 'Visual f #, f # işlevsel programlama'
 author: cartermp
 ms.author: phcart
 ms.date: 05/16/2016
 ms.topic: language-reference
-ms.prod: .net
-ms.technology: devlang-fsharp
+ms.prod: dotnet-fsharp
 ms.devlang: fsharp
-ms.assetid: 5e1e73c3-5adb-4bba-9976-d57f1ff6cd8d
-ms.openlocfilehash: a1e077552ba39a483be3129c89af48b547219733
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.openlocfilehash: b40e4a0409a9161a4ef48c8d4ad82b4da346538e
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="values"></a>Değerler
 
@@ -49,10 +46,10 @@ Kullanarak bir başlangıç değeri değişebilir bir değişkene atayabilirsini
 
 |Başlık|Açıklama|
 |-----|-----------|
-|[let bağlamaları](../functions/let-bindings.md)|Kullanma hakkında bilgi sağlar `let` değerlerin ve işlevlerin adlarını bağlamak için anahtar sözcüğü.|
+|[let Bağlamaları](../functions/let-bindings.md)|Kullanma hakkında bilgi sağlar `let` değerlerin ve işlevlerin adlarını bağlamak için anahtar sözcüğü.|
 |[İşlevler](../functions/index.md)|F # işlevleri genel bir bakış sağlar.|
 
 ## <a name="see-also"></a>Ayrıca Bkz.
-[Null değerler](null-Values.md)
+[Null Değerler](null-Values.md)
 
-[F # dili başvurusu](../index.md)
+[F# Dili Başvurusu](../index.md)

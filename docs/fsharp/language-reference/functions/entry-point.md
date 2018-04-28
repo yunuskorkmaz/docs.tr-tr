@@ -1,20 +1,17 @@
 ---
-title: "Girdi Noktası (F#)"
-description: "Giriş noktası yürütme resmi olarak başladığı bir yürütülebilir dosyası olarak derlenmiş bir F # programına öğrenin."
-keywords: "Visual f #, f # işlevsel programlama"
+title: Girdi Noktası (F#)
+description: 'Giriş noktası yürütme resmi olarak başladığı bir yürütülebilir dosyası olarak derlenmiş bir F # programına öğrenin.'
 author: cartermp
 ms.author: phcart
 ms.date: 05/16/2016
 ms.topic: language-reference
-ms.prod: .net
-ms.technology: devlang-fsharp
+ms.prod: dotnet-fsharp
 ms.devlang: fsharp
-ms.assetid: 91455443-ff9d-4510-a7e9-1560bdcd0bb0
-ms.openlocfilehash: 685fd4da67119aa5fcaaffd142a0a17c8f5dc7f6
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.openlocfilehash: 42e5fe7f85285f990ef92e9791ed5bdfacb85059
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="entry-point"></a>Girdi Noktası
 
@@ -52,4 +49,4 @@ Bir program yok olduğunda **EntryPoint** derlenecek son dosyanın üst düzey b
 ## <a name="see-also"></a>Ayrıca Bkz.
 [İşlevler](index.md)
 
-[let bağlamaları](let-bindings.md)
+[let Bağlamaları](let-bindings.md)

@@ -4,16 +4,16 @@ description: Dotnet komutu (.NET Core CLI araçlarını genel sürücüsü) ve k
 author: mairaw
 ms.author: mairaw
 ms.date: 03/20/2018
-ms.topic: article
-ms.prod: .net-core
+ms.topic: conceptual
+ms.prod: dotnet-core
 ms.technology: dotnet-cli
 ms.workload:
 - dotnetcore
-ms.openlocfilehash: 2d22124cb613152df402046541650f3262e7e202
-ms.sourcegitcommit: 6f967c86dde55472440f0c8669b0e910ee3c53ba
+ms.openlocfilehash: bf69be7eb8dfe454823236012113fa53ed39f2f4
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/22/2018
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="dotnet-command"></a>DotNet komutu
 
@@ -30,7 +30,7 @@ ms.lasthandoff: 03/22/2018
 dotnet [command] [arguments] [--additional-deps] [--additionalprobingpath] [-d|--diagnostics]
     [--fx-version] [-h|--help] [--info] [--roll-forward-on-no-candidate-fx] [-v|--verbosity] [--version]
 ```
-# <a name="net-core-1xtabnetcore1x"></a>[.NET Core 1.x](#tab/netcore1x)
+# <a name="net-core-1xtabnetcore1x"></a>[.NET core 1.x](#tab/netcore1x)
 ```
 dotnet [command] [arguments] [--additionalprobingpath] [-d|--diagnostics] [--fx-version]
     [-h|--help] [--info] [-v|--verbosity] [--version]
@@ -85,7 +85,7 @@ Komutun ayrıntı düzeyi ayarlar. İzin verilen değerler `q[uiet]`, `m[inimal]
 
 Kullanımdaki .NET Core SDK sürümü yazdırır.
 
-# <a name="net-core-1xtabnetcore1x"></a>[.NET Core 1.x](#tab/netcore1x)
+# <a name="net-core-1xtabnetcore1x"></a>[.NET core 1.x](#tab/netcore1x)
 
 `--additionalprobingpath <PATH>`
 
@@ -139,7 +139,7 @@ Kullanımdaki .NET Core SDK sürümü yazdırır.
 | [dotnet store](dotnet-store.md)     | Derlemeleri çalışma zamanı paketi deposunda saklar.                     |
 | [dotnet test](dotnet-test.md)       | Test Çalıştırıcısı kullanarak testleri çalıştırır.                                     |
 
-# <a name="net-core-1xtabnetcore1x"></a>[.NET Core 1.x](#tab/netcore1x)
+# <a name="net-core-1xtabnetcore1x"></a>[.NET core 1.x](#tab/netcore1x)
 
 | Komut                             | İşlev                                                            |
 | ----------------------------------- | ------------------------------------------------------------------- |
@@ -220,7 +220,7 @@ Birincil paketi önbelleği. Ayarlanmazsa, varsayılan olarak, `$HOME/.nuget/pac
 
 .NET çekirdeği çalışma zamanı, paylaşılan framework veya SDK olmadığını çözümlenmiş genel konumu belirtir. Ayarlanmazsa, varsayılan olarak, `true`. Kümesine `false` değil genel konumdan çözmek ve .NET çekirdeği yüklemeleri buluncaya (değerleri `0` veya `false` kabul edilir). Birden çok düzeyli arama hakkında daha fazla bilgi için bkz: [çok düzeyli SharedFX arama](https://github.com/dotnet/core-setup/blob/master/Documentation/design-docs/multilevel-sharedfx-lookup.md).
 
-# <a name="net-core-1xtabnetcore1x"></a>[.NET Core 1.x](#tab/netcore1x)
+# <a name="net-core-1xtabnetcore1x"></a>[.NET core 1.x](#tab/netcore1x)
 
 `DOTNET_PACKAGES`
 

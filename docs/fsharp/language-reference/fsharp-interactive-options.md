@@ -1,20 +1,17 @@
 ---
-title: "F# Etkileşimli Seçenekleri"
-description: "F # Etkileşimli tarafından desteklenen komut satırı seçenekleri hakkında bilgi edinin fsi.exe."
-keywords: "Visual f #, f # işlevsel programlama"
+title: F# Etkileşimli Seçenekleri
+description: 'F # Etkileşimli tarafından desteklenen komut satırı seçenekleri hakkında bilgi edinin fsi.exe.'
 author: cartermp
 ms.author: phcart
 ms.date: 05/16/2016
 ms.topic: language-reference
-ms.prod: .net
-ms.technology: devlang-fsharp
+ms.prod: dotnet-fsharp
 ms.devlang: fsharp
-ms.assetid: f9f3e39b-ce6c-41ff-991f-0625f46441ae
-ms.openlocfilehash: f0a8893abca0435307907aa9c169646bf3dec2d5
-ms.sourcegitcommit: adcf9bdafeaa6bc243af7bf70b45f3df954f256a
+ms.openlocfilehash: 45ed12e63a440ce176947cbfca189781c8675e10
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="f-interactive-options"></a>F# Etkileşimli Seçenekleri
 
@@ -44,23 +41,23 @@ F # Etkileşimli seçenek bağımsız değişkenlerinde listeler görünür bura
 |**--codepage:&lt;int&gt;**|Aynı **fsc.exe** derleyici seçeneği. Daha fazla bilgi için bkz: [derleyici seçenekleri](compiler-options.md).|
 |**--consolecolors**[**+**&#124;**-**]|Çıktıları uyarı ve hata iletilerinde rengi.|
 |**--crossoptimize**[**+**&#124;**-**]|Etkinleştirmek veya devre dışı çapraz modülü en iyi duruma getirme.|
-|**--debug**[**+**&#124;**-**]<br /><br />**--debug:**[**full**&#124;**pdbonly**&#124;**portable**&#124;**embedded**]<br /><br />**-g**[**+**&#124;**-**]<br /><br />**-g:**[**full**&#124;**pdbonly**&#124;**portable**&#124;**embedded**]|Aynı **fsc.exe** derleyici seçeneği. Daha fazla bilgi için bkz: [derleyici seçenekleri](compiler-options.md).|
+|**--debug**[**+**&#124;**-**]<br /><br />**--hata ayıklama:**[**tam**&#124;**pdbonly**&#124;**taşınabilir**&#124;**katıştırılmış**]<br /><br />**-g**[**+**&#124;**-**]<br /><br />**-g:**[**tam**&#124;**pdbonly**&#124;**taşınabilir**&#124;**katıştırılmış**]|Aynı **fsc.exe** derleyici seçeneği. Daha fazla bilgi için bkz: [derleyici seçenekleri](compiler-options.md).|
 |**--tanımlayın:&lt;dize&gt;**|Aynı **fsc.exe** derleyici seçeneği. Daha fazla bilgi için bkz: [derleyici seçenekleri](compiler-options.md).|
 |**--deterministic**[**+**&#124;**-**]|(Modül sürümü GUID ve zaman damgası dahil) belirleyici bir derleme üretir.|
 |**--Yönet**|F dosyaları yükleme veya komut satırında belirtilen betiği çalıştırdıktan sonra çıkmak için # etkileşimli bildirir.|
 |**--fullpaths**|Aynı **fsc.exe** derleyici seçeneği. Daha fazla bilgi için bkz: [derleyici seçenekleri](compiler-options.md).|
-|**--gui**[**+**&#124;**-**]|Etkinleştirir veya Windows Forms olay döngüsünü devre dışı bırakır. Varsayılan etkindir.|
+|**--GUI**[**+**&#124;**-**]|Etkinleştirir veya Windows Forms olay döngüsünü devre dışı bırakır. Varsayılan etkindir.|
 |**--Yardım**<br /><br />**-?**|Komut satırı sözdizimi ve her seçeneğin kısa bir açıklamasını görüntülemek için kullanılır.|
-|**--lib:&lt;folder-list&gt;**<br /><br />**-I:&lt;folder-list&gt;**|Aynı **fsc.exe** derleyici seçeneği. Daha fazla bilgi için bkz: [derleyici seçenekleri](compiler-options.md).|
-|**--Yük:&lt;dosya adı&gt;**|Başlatma sırasında verilen kaynak kodu derler ve derlenen F # yapılarını oturuma yükler. Hedef kaynak komut dosyası yönergeleri gibi içeriyorsa **#use** veya **#load**, kullanmalısınız sonra **--kullanmak** veya **#use** yerine**--yük** veya **#load**.|
+|**--lib:&lt;klasör listesi&gt;**<br /><br />**-I:&lt;klasör listesi&gt;**|Aynı **fsc.exe** derleyici seçeneği. Daha fazla bilgi için bkz: [derleyici seçenekleri](compiler-options.md).|
+|**--Yük:&lt;dosya adı&gt;**|Başlatma sırasında verilen kaynak kodu derler ve derlenen F # yapılarını oturuma yükler. Hedef kaynak komut dosyası yönergeleri gibi içeriyorsa **#use** veya **#load**, kullanmalısınız sonra **--kullanmak** veya **#use** yerine **--yük** veya **#load**.|
 |**--mlcompatibility**|Aynı **fsc.exe** derleyici seçeneği. Daha fazla bilgi için bkz: [derleyici seçenekleri](compiler-options.md).|
 |**--noframework**|Aynı **fsc.exe** derleyici seçeneği. Daha fazla bilgi için bkz: [derleyici seçenekleri](compiler-options.md)|
 |**--nologo**|Aynı **fsc.exe** derleyici seçeneği. Daha fazla bilgi için bkz: [derleyici seçenekleri](compiler-options.md).|
 |**--nowarn:&lt;uyarı listesi&gt;**|Aynı **fsc.exe** derleyici seçeneği. Daha fazla bilgi için bkz: [derleyici seçenekleri](compiler-options.md).|
-|**--optimize**[**+**&#124;**-**]|Aynı **fsc.exe** derleyici seçeneği. Daha fazla bilgi için bkz: [derleyici seçenekleri](compiler-options.md).|
+|**--en iyi duruma getirme**[**+**&#124;**-**]|Aynı **fsc.exe** derleyici seçeneği. Daha fazla bilgi için bkz: [derleyici seçenekleri](compiler-options.md).|
 |**--preferreduilang:&lt;lang&gt;**| Tercih edilen çıkış dil kültür adı (örneğin, es-ES, ja-JP) belirtir. |
 |**--Sessiz**|F # Etkileşimli çıktısını bastırmak **stdout** akış.|
-|**--quotations-debug**|Ek hata ayıklama bilgileri, F # tırnak değişmez değerleri türetilmiş ve tanımları yansıtılan ifadeler yayınlaması gerektiğini belirtir. Hata ayıklama bilgileri bir F # ifade Ağaç düğümünün özel öznitelikleri eklenir. Bkz: [kod tırnak işaretleri](code-quotations.md) ve [Expr.CustomAttributes](https://msdn.microsoft.com/library/eb89943f-5f5b-474e-b125-030ca412edb3).|
+|**--teklifleri hata ayıklama**|Ek hata ayıklama bilgileri, F # tırnak değişmez değerleri türetilmiş ve tanımları yansıtılan ifadeler yayınlaması gerektiğini belirtir. Hata ayıklama bilgileri bir F # ifade Ağaç düğümünün özel öznitelikleri eklenir. Bkz: [kod tırnak işaretleri](code-quotations.md) ve [Expr.CustomAttributes](https://msdn.microsoft.com/library/eb89943f-5f5b-474e-b125-030ca412edb3).|
 |**--readline**[**+**&#124;**-**]|Etkinleştirmek veya etkileşimli modda sekme tamamlama devre dışı.|
 |**--başvuru:&lt;dosya adı&gt;**<br /><br />**-r:&lt;dosya adı&gt;**|Aynı **fsc.exe** derleyici seçeneği. Daha fazla bilgi için bkz: [derleyici seçenekleri](compiler-options.md).|
 |**--shadowcopyreferences**[**+**&#124;**-**]|F # Etkileşimli işlem tarafından kilitleniyor gelen başvuruları engeller.|

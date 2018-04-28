@@ -1,27 +1,29 @@
 ---
-title: "Ayrıcalık Yükseltme"
-ms.custom: 
+title: Ayrıcalık Yükseltme
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - elevation of privilege [WCF]
 - security [WCF], elevation of privilege
 ms.assetid: 146e1c66-2a76-4ed3-98a5-fd77851a06d9
-caps.latest.revision: "16"
+caps.latest.revision: 16
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 4225460698d36b3b56b9b0b03cde34e4502b13c9
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 6d93a8ae074e4016d7d8ec4b8734f0d14ead938f
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="elevation-of-privilege"></a>Ayrıcalık Yükseltme
 *Ayrıcalık yükseltme* izinleri bu başlangıçta verilen ötesinde bir saldırganın yetkilendirme vermesine neden olur. Örneğin, bir saldırganın bir ayrıcalık kümesi "salt okunur" izinleri ile "okuma ve yazma" içerecek şekilde kümesi şekilde yükseltir  
@@ -29,7 +31,7 @@ ms.lasthandoff: 12/22/2017
 ## <a name="trusted-sts-should-sign-saml-token-claims"></a>STS SAML belirteç talep imzalamalısınız güvenilir  
  Verilen belirteçler için varsayılan türdür genel bir XML belirteci bir güvenlik onaylar biçimlendirme dili (SAML) belirtecidir. SAML belirteci tarafından bir güvenlik belirteci hizmeti (Web hizmeti bitiş tipik Exchange'de güvendiği STS) oluşturulabilir. SAML belirteçleri deyimlerinde içerir. Bir saldırgan, uygulamasından geçerli bir belirteç talep kopyalama, yeni bir SAML belirteci oluşturun ve farklı bir veren ile oturum açın. Sunucu verenler doğrulama olup olmadığını belirlemek ve değilse, bu amaçlayan bir güvenilen STS tarafından ötesinde ayrıcalıklarına izin SAML belirteçleri oluşturmak için zayıflık kullanmak için hedefi değil.  
   
- <xref:System.IdentityModel.Tokens.SamlAssertion> Sınıfı bir SAML belirtecine ve varsayılan içinde bulunan dijital imzayı doğrular <xref:System.IdentityModel.Selectors.SamlSecurityTokenAuthenticator> SAML belirteçleri geçerli olduğunda bir X.509 sertifikası tarafından imzalanmış olmasını gerektirir <xref:System.ServiceModel.Security.IssuedTokenServiceCredential.CertificateValidationMode%2A> , <xref:System.ServiceModel.Security.IssuedTokenServiceCredential> içinsetsınıfı<xref:System.ServiceModel.Security.X509CertificateValidationMode.ChainTrust>. `ChainTrust`tek başına modunda SAML belirteci veren güvenilir olup olmadığını belirlemek için yeterli değil. Daha ayrıntılı bir güven modeli ya da gerektirebilirsiniz Hizmetleri verilen belirteç kimlik doğrulaması tarafından üretilen talep kümelerinin veren denetleyin veya üzerinde X.509 doğrulama ayarlarını kullanmak için yetkilendirme ve zorlama ilkelerini kullanmak <xref:System.ServiceModel.Security.IssuedTokenServiceCredential> kümesini kısıtlamak için İmzalama sertifikaları izin verilir. [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)][Beyanlar ve yetkilendirmeyi kimlik modeliyle yönetme](../../../../docs/framework/wcf/feature-details/managing-claims-and-authorization-with-the-identity-model.md) ve [Federasyon ve verilen belirteçleri](../../../../docs/framework/wcf/feature-details/federation-and-issued-tokens.md).  
+ <xref:System.IdentityModel.Tokens.SamlAssertion> Sınıfı bir SAML belirtecine ve varsayılan içinde bulunan dijital imzayı doğrular <xref:System.IdentityModel.Selectors.SamlSecurityTokenAuthenticator> SAML belirteçleri geçerli olduğunda bir X.509 sertifikası tarafından imzalanmış olmasını gerektirir <xref:System.ServiceModel.Security.IssuedTokenServiceCredential.CertificateValidationMode%2A> , <xref:System.ServiceModel.Security.IssuedTokenServiceCredential> içinsetsınıfı<xref:System.ServiceModel.Security.X509CertificateValidationMode.ChainTrust>. `ChainTrust` tek başına modunda SAML belirteci veren güvenilir olup olmadığını belirlemek için yeterli değil. Daha ayrıntılı bir güven modeli ya da gerektirebilirsiniz Hizmetleri verilen belirteç kimlik doğrulaması tarafından üretilen talep kümelerinin veren denetleyin veya üzerinde X.509 doğrulama ayarlarını kullanmak için yetkilendirme ve zorlama ilkelerini kullanmak <xref:System.ServiceModel.Security.IssuedTokenServiceCredential> kümesini kısıtlamak için İmzalama sertifikaları izin verilir. Daha fazla bilgi için bkz: [yönetme beyanlar ve yetkilendirmeyi kimlik modeliyle](../../../../docs/framework/wcf/feature-details/managing-claims-and-authorization-with-the-identity-model.md) ve [Federasyon ve verilen belirteçleri](../../../../docs/framework/wcf/feature-details/federation-and-issued-tokens.md).  
   
 ## <a name="switching-identity-without-a-security-context"></a>Bir güvenlik bağlamı olmadan kimliğini değiştirme  
  Aşağıdaki yalnızca geçerli [!INCLUDE[vstecwinfx](../../../../includes/vstecwinfx-md.md)].  
@@ -57,7 +59,7 @@ ms.lasthandoff: 12/22/2017
 >  Kullanırken `BeginOpen` yöntemi, yakalanan kimlik bilgilerini garanti edilemediği yöntemini çağırır işlem kimlik bilgileri olmalıdır.  
   
 ## <a name="token-caches-allow-replay-using-obsolete-data"></a>Belirteç önbellekleri kullanarak eski verileri yeniden yürütme izin ver  
- [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]Yerel güvenlik yetkilisi (LSA) kullanan `LogonUser` kullanıcı adı ve parola ile kullanıcıların kimliklerini doğrulamak için işlev. Oturum açma işlevini pahalı bir işlem olduğundan [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] performansını artırmak için kimliği doğrulanmış kullanıcılar temsil eden önbellek belirteçleri sağlar. Önbelleğe alma mekanizması sonuçlarından kaydeder `LogonUser` sonraki kullanımlar için. Bu düzenek, varsayılan olarak devre dışıdır; etkinleştirmek için ayarlanmış <xref:System.ServiceModel.Security.UserNamePasswordServiceCredential.CacheLogonTokens%2A> özelliğine `true`, veya `cacheLogonTokens` özniteliği [ \<userNameAuthentication >](../../../../docs/framework/configure-apps/file-schema/wcf/usernameauthentication.md).  
+ [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] Yerel güvenlik yetkilisi (LSA) kullanan `LogonUser` kullanıcı adı ve parola ile kullanıcıların kimliklerini doğrulamak için işlev. Oturum açma işlevini pahalı bir işlem olduğundan [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] performansını artırmak için kimliği doğrulanmış kullanıcılar temsil eden önbellek belirteçleri sağlar. Önbelleğe alma mekanizması sonuçlarından kaydeder `LogonUser` sonraki kullanımlar için. Bu düzenek, varsayılan olarak devre dışıdır; etkinleştirmek için ayarlanmış <xref:System.ServiceModel.Security.UserNamePasswordServiceCredential.CacheLogonTokens%2A> özelliğine `true`, veya `cacheLogonTokens` özniteliği [ \<userNameAuthentication >](../../../../docs/framework/configure-apps/file-schema/wcf/usernameauthentication.md).  
   
  Ayarlayarak için önbelleğe alınmış belirteçleri Live (TTL) bir süresini ayarlayabilirsiniz <xref:System.ServiceModel.Security.UserNamePasswordServiceCredential.CachedLogonTokenLifetime%2A> özelliğine bir <xref:System.TimeSpan>, veya `cachedLogonTokenLifetime` özniteliği `userNameAuthentication` öğesi; varsayılan değer 15 dakikadır. Bir belirteç önbelleğe olsa da, aynı kullanıcı adı ve parola sunan herhangi bir istemci bir belirteç kullanıcı hesabı Windows'dan silinse bile veya parolasını değiştirdiyseniz kullanabileceğinizi unutmayın. TTL süresi ve belirteç önbellekten kaldırılır kadar [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] (büyük olasılıkla kötü amaçlı) kullanıcının kimlik doğrulamasını sağlar.  
   

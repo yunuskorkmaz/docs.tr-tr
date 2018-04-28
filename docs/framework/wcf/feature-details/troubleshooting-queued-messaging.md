@@ -1,24 +1,26 @@
 ---
-title: "Kuyruğa Alınan İletilerde Sorun Giderme"
-ms.custom: 
+title: Kuyruğa Alınan İletilerde Sorun Giderme
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: a5f2836f-018d-42f5-a571-1e97e64ea5b0
-caps.latest.revision: "19"
+caps.latest.revision: 19
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: a35de5ea587ad77a13105442f0c47344638b611c
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: d7de2912029efb61135d5329f186ed2c1ca95840
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="troubleshooting-queued-messaging"></a>Kuyruğa Alınan İletilerde Sorun Giderme
 Bu bölüm yaygın sorular ve sorun giderme Yardımı kuyruklarda kullanma içerir [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)].  
@@ -26,7 +28,7 @@ Bu bölüm yaygın sorular ve sorun giderme Yardımı kuyruklarda kullanma içer
 ## <a name="common-questions"></a>Sık sorulan sorular  
  **S:** kullandım [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] Beta 1 ve MSMQ düzeltmesinin yüklü. Düzeltmeyi kaldırmak gerekiyor mu?  
   
- **Y:** Evet. Bu düzeltme artık desteklenmiyor. [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]Şimdi MSMQ üzerinde bir düzeltme gereksinimi çalışır.  
+ **Y:** Evet. Bu düzeltme artık desteklenmiyor. [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] Şimdi MSMQ üzerinde bir düzeltme gereksinimi çalışır.  
   
  **S:** MSMQ için iki bağlamaları vardır: <xref:System.ServiceModel.NetMsmqBinding> ve <xref:System.ServiceModel.MsmqIntegration.MsmqIntegrationBinding>. Ne kullanmalıyım ve ne zaman?  
   
@@ -46,7 +48,7 @@ Bu bölüm yaygın sorular ve sorun giderme Yardımı kuyruklarda kullanma içer
   
 -   Yalnızca MSMQ 4.0 uzaktan hizmetteki okuma destekler.  
   
- [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)][Windows Vista, Windows Server 2003 ve Windows XP'de kuyruğa alma özelliği farklar](../../../../docs/framework/wcf/feature-details/diff-in-queue-in-vista-server-2003-windows-xp.md).  
+ Daha fazla bilgi için bkz: [Queuing özelliği Windows Vista, Windows Server 2003 ve Windows XP arasındaki farklar](../../../../docs/framework/wcf/feature-details/diff-in-queue-in-vista-server-2003-windows-xp.md).  
   
  **S:** MSMQ 3.0 kuyruğa alınan iletişim ve MSMQ 4.0 bir tarafındaki diğer tarafındaki kullanabilir miyim?  
   

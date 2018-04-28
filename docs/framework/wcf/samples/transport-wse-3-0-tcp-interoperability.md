@@ -1,24 +1,26 @@
 ---
-title: "Taşıma: WSE 3.0 TCP Birlikte Çalışabilirlik"
-ms.custom: 
+title: 'Taşıma: WSE 3.0 TCP Birlikte Çalışabilirlik'
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 5f7c3708-acad-4eb3-acb9-d232c77d1486
-caps.latest.revision: "18"
+caps.latest.revision: 18
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 63641f7a99b7c567e871d6a67dd72380f0c077ed
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 510d523cea78aa16a16adc8572c839e95059c068
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="transport-wse-30-tcp-interoperability"></a>Taşıma: WSE 3.0 TCP Birlikte Çalışabilirlik
 WSE 3.0 TCP birlikte çalışabilirlik aktarım örnek TCP çift yönlü oturum özel olarak uygulamak gösterilmiştir [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] taşıma. Kanal katmanını genişletilebilirlik arabirimine varolan dağıtılan sistemleriyle kablo üzerinden nasıl kullanabileceğinizi gösterir. Aşağıdaki adımlar, bu özel nasıl oluşturulacağını gösterir [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] taşıma:  
@@ -31,10 +33,10 @@ WSE 3.0 TCP birlikte çalışabilirlik aktarım örnek TCP çift yönlü oturum 
   
 4.  Ağa özgü özel durumlar için uygun olan türetilmiş sınıf normalleştirilmiş emin olun <xref:System.ServiceModel.CommunicationException>.  
   
-5.  Bir kanal yığınına özel taşıma ekler bir bağlama öğesi ekleyin. [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)][Bağlama öğesi ekleme].  
+5.  Bir kanal yığınına özel taşıma ekler bir bağlama öğesi ekleyin. [Bağlama öğesi ekleme] daha fazla bilgi için bkz.  
   
 ## <a name="creating-iduplexsessionchannel"></a>Da IDuplexSessionChannel öğelerini oluşturma  
- WSE 3.0 TCP birlikte çalışabilirlik aktarım yazma ilk adımı uygulaması oluşturmaktır <xref:System.ServiceModel.Channels.IDuplexSessionChannel> üstünde bir <xref:System.Net.Sockets.Socket>. `WseTcpDuplexSessionChannel`türetilen <xref:System.ServiceModel.Channels.ChannelBase>. Bir ileti gönderme mantığı iki ana parçalarını oluşur: (1) bayt sayısı, (2) bu bayt çerçeveleme ve kablo göndererek içine iletinin kodlaması.  
+ WSE 3.0 TCP birlikte çalışabilirlik aktarım yazma ilk adımı uygulaması oluşturmaktır <xref:System.ServiceModel.Channels.IDuplexSessionChannel> üstünde bir <xref:System.Net.Sockets.Socket>. `WseTcpDuplexSessionChannel` türetilen <xref:System.ServiceModel.Channels.ChannelBase>. Bir ileti gönderme mantığı iki ana parçalarını oluşur: (1) bayt sayısı, (2) bu bayt çerçeveleme ve kablo göndererek içine iletinin kodlaması.  
   
  `ArraySegment<byte> encodedBytes = EncodeMessage(message);`  
   
@@ -42,13 +44,13 @@ WSE 3.0 TCP birlikte çalışabilirlik aktarım örnek TCP çift yönlü oturum 
   
  Ayrıca, bir kilit böylece Send() çağrıları da IDuplexSessionChannel öğelerini sıralı garantisi korumak ve temel yuva çağrıları doğru eşitlenmesi alınır.  
   
- `WseTcpDuplexSessionChannel`kullanan bir <xref:System.ServiceModel.Channels.MessageEncoder> çevirme için bir <xref:System.ServiceModel.Channels.Message> byte [] gelen ve giden. Bir taşıma olduğundan `WseTcpDuplexSessionChannel` ayrıca kanalı ile yapılandırılmış uzak adres uygulamak için sorumludur. `EncodeMessage`Bu dönüştürme için mantığı yalıtır.  
+ `WseTcpDuplexSessionChannel` kullanan bir <xref:System.ServiceModel.Channels.MessageEncoder> çevirme için bir <xref:System.ServiceModel.Channels.Message> byte [] gelen ve giden. Bir taşıma olduğundan `WseTcpDuplexSessionChannel` ayrıca kanalı ile yapılandırılmış uzak adres uygulamak için sorumludur. `EncodeMessage` Bu dönüştürme için mantığı yalıtır.  
   
  `this.RemoteAddress.ApplyTo(message);`  
   
  `return encoder.WriteMessage(message, maxBufferSize, bufferManager);`  
   
- Bir kez <xref:System.ServiceModel.Channels.Message> kodlanır baytlara, onu kablo aktarılması gerekir. Bu ileti sınırlarını tanımlamak için bir sistem gerektirir. WSE 3.0 kullanan bir sürümünü [DIME](http://go.microsoft.com/fwlink/?LinkId=94999) çerçeveleme protokol olarak. `WriteData`byte [] DIME kayıt kümesine sarmalamak için çerçeveleme mantığı yalıtır.  
+ Bir kez <xref:System.ServiceModel.Channels.Message> kodlanır baytlara, onu kablo aktarılması gerekir. Bu ileti sınırlarını tanımlamak için bir sistem gerektirir. WSE 3.0 kullanan bir sürümünü [DIME](http://go.microsoft.com/fwlink/?LinkId=94999) çerçeveleme protokol olarak. `WriteData` byte [] DIME kayıt kümesine sarmalamak için çerçeveleme mantığı yalıtır.  
   
  İletileri almak için mantığı çok benzer. Ana karmaşıklık okuma yuva istenenden daha az bayt döndürebilir olgu işliyor. Bir ileti alacak `WseTcpDuplexSessionChannel` kablo kapalı bayt okur, DIME çerçeveleme kodunu çözer ve ardından kullanır <xref:System.ServiceModel.Channels.MessageEncoder> kapatma içine byte [] için bir <xref:System.ServiceModel.Channels.Message>.  
   
@@ -63,7 +65,7 @@ WSE 3.0 TCP birlikte çalışabilirlik aktarım örnek TCP çift yönlü oturum 
 ## <a name="channel-factory"></a>Kanal Fabrikası  
  TCP taşıma yazma sonraki adım uygulaması oluşturmaktır <xref:System.ServiceModel.Channels.IChannelFactory> istemci kanalları.  
   
--   `WseTcpChannelFactory`türetilen <xref:System.ServiceModel.Channels.ChannelFactoryBase> \<da IDuplexSessionChannel öğelerini >. Geçersiz kılan bir Fabrika olduğu `OnCreateChannel` istemci kanallar oluşturmak için.  
+-   `WseTcpChannelFactory` türetilen <xref:System.ServiceModel.Channels.ChannelFactoryBase> \<da IDuplexSessionChannel öğelerini >. Geçersiz kılan bir Fabrika olduğu `OnCreateChannel` istemci kanallar oluşturmak için.  
   
  `protected override IDuplexSessionChannel OnCreateChannel(EndpointAddress remoteAddress, Uri via)`  
   
@@ -73,7 +75,7 @@ WSE 3.0 TCP birlikte çalışabilirlik aktarım örnek TCP çift yönlü oturum 
   
  `}`  
   
--   `ClientWseTcpDuplexSessionChannel`temel mantığı ekler `WseTcpDuplexSessionChannel` bir TCP sunucusuna bağlanmak için `channel.Open` zaman. İlk ana bilgisayar adı aşağıdaki kodda gösterildiği gibi bir IP adresine çözümlenir.  
+-   `ClientWseTcpDuplexSessionChannel` temel mantığı ekler `WseTcpDuplexSessionChannel` bir TCP sunucusuna bağlanmak için `channel.Open` zaman. İlk ana bilgisayar adı aşağıdaki kodda gösterildiği gibi bir IP adresine çözümlenir.  
   
  `hostEntry = Dns.GetHostEntry(Via.Host);`  
   
@@ -90,7 +92,7 @@ WSE 3.0 TCP birlikte çalışabilirlik aktarım örnek TCP çift yönlü oturum 
 ## <a name="channel-listener"></a>Kanal dinleyicisi  
  TCP taşıma yazma sonraki adım uygulaması oluşturmaktır <xref:System.ServiceModel.Channels.IChannelListener> sunucuya kanalların kabul etmek için.  
   
--   `WseTcpChannelListener`türetilen <xref:System.ServiceModel.Channels.ChannelListenerBase> \<da IDuplexSessionChannel öğelerini > ve geçersiz kılma [Başlangıç] ve [Başlangıç] açık üzerinde Dinleme yuvası ömrü kapatmak için denetim. Açıldığında, yuva IP_ANY üzerinde dinlenecek oluşturulur. Daha gelişmiş uygulamaları IPv6 için de dinlemek için ikinci bir yuva oluşturabilirsiniz. Ayrıca ana bilgisayar adı belirtilmesi için IP adresi izin verebilirsiniz.  
+-   `WseTcpChannelListener` türetilen <xref:System.ServiceModel.Channels.ChannelListenerBase> \<da IDuplexSessionChannel öğelerini > ve geçersiz kılma [Başlangıç] ve [Başlangıç] açık üzerinde Dinleme yuvası ömrü kapatmak için denetim. Açıldığında, yuva IP_ANY üzerinde dinlenecek oluşturulur. Daha gelişmiş uygulamaları IPv6 için de dinlemek için ikinci bir yuva oluşturabilirsiniz. Ayrıca ana bilgisayar adı belirtilmesi için IP adresi izin verebilirsiniz.  
   
  `IPEndPoint localEndpoint = new IPEndPoint(IPAddress.Any, uri.Port);`  
   

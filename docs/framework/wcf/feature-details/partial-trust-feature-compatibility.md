@@ -16,11 +16,11 @@ ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: 72282c62ad23ec825eab7054ab1909d07a062b45
-ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
-ms.translationtype: HT
+ms.openlocfilehash: 20cb6c1cd7a3b06b57bce02d5c3caacc7e2e42b7
+ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="partial-trust-feature-compatibility"></a>Kısmi Güven Özelliği Uyumluluğu
 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] kısmen güvenilen bir ortamda çalışan sınırlı işlevlerinin bir alt kümesini destekler. Kısmi güvende desteklenen özellikler senaryoları belirli bir dizi açıklandığı şekilde tasarlanmış [desteklenen dağıtım senaryoları](../../../../docs/framework/wcf/feature-details/supported-deployment-scenarios.md) konu.  
@@ -154,7 +154,7 @@ ms.lasthandoff: 04/26/2018
 >  İzleme dosyaları yinelenen hatalarla taşmasını önlemek için [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] kaynak ya da ilk güvenlik hatasından sonra işlem izlemeyi devre dışı bırakır. Kaynağa erişim veya eylemi gerçekleştirmek için bir girişimde ilk kez her başarısız kaynak erişimi için bir özel durum izleme yoktur.  
   
 ## <a name="wcf-service-host"></a>WCF hizmet konağı  
- [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] hizmet ana bilgisayarı, kısmi güven desteklemez. Kullanmak istiyorsanız bir [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] hizmet kısmi güvende, kullanmayın [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] hizmet kitaplığı proje şablonu [!INCLUDE[vsprvs](../../../../includes/vsprvs-md.md)] hizmetinizi oluşturmak için. Bunun yerine, yeni bir Web sitesi oluşturma [!INCLUDE[vsprvs](../../../../includes/vsprvs-md.md)] seçerek [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] bir Web sunucusunda hizmetinde barındırabilir Hizmet Web sitesi şablonu [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] kısmi güven desteklenir.  
+ [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] hizmet ana bilgisayarı, kısmi güven desteklemez. Kullanmak istiyorsanız bir [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] hizmet kısmi güvende, kullanmayın [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] hizmetinizi oluşturmak için Visual Studio'da hizmet kitaplığı proje şablonu. Bunun yerine, Visual Studio'da oluşturma seçerek yeni bir Web sitesi [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] bir Web sunucusunda hizmetinde barındırabilir Hizmet Web sitesi şablonu [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] kısmi güven desteklenir.  
   
 ## <a name="other-limitations"></a>Diğer sınırlamaları  
  [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] genellikle üzerine barındırma uygulaması tarafından uygulanan güvenlik konuları sınırlıdır. Örneğin, varsa [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] barındırılan bir XAML tarayıcısı uygulaması (XBAP içinde), XBAP sınırlamalara tabi açıklandığı gibi olmasından [Windows Presentation Foundation kısmi güven Security](http://go.microsoft.com/fwlink/?LinkId=89138).  

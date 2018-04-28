@@ -13,23 +13,23 @@ helpviewer_keywords:
 - WCF [WCF], what's new
 - Windows Communication Foundation [WCF], what's new
 ms.assetid: 7e93fe73-af93-46b5-9f63-32f761ee40cf
-caps.latest.revision: ''
+caps.latest.revision: 35
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: 091925dd1f505693df0d1eb770bca604cf038667
-ms.sourcegitcommit: c883637b41ee028786edceece4fa872939d2e64c
+ms.openlocfilehash: 3ca03c4529588964abe2d0d434bfd47b005e8d26
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/23/2018
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="what39s-new-in-windows-communication-foundation-45"></a>Ne&#39;s Windows Communication Foundation 4.5'deki yenilikler
 Bu konuda yeni özellikler ele alınmıştır [!INCLUDE[indigo1](../../../includes/indigo1-md.md)].  
   
 ## <a name="wcf-simplification-features"></a>WCF Kolaylaştırma Özellikleri  
- Çok iş, WCF 4.5 uygulamaları geliştirmek ve bakımını kolaylaştırmak için yapılır. [!INCLUDE[crdefault](../../../includes/crdefault-md.md)] [WCF kolaylaştırma özellikleri](../../../docs/framework/wcf/wcf-simplification-features.md).  
+ Çok iş, WCF 4.5 uygulamaları geliştirmek ve bakımını kolaylaştırmak için yapılır. Daha fazla bilgi için bkz: [WCF kolaylaştırma özellikleri](../../../docs/framework/wcf/wcf-simplification-features.md).  
   
 ### <a name="task-based-async-support"></a>Görev tabanlı zaman uyumsuz desteği  
  Varsayılan olarak, hizmet Başvurusu Ekle görev döndüren zaman uyumsuz hizmet işlemi yöntemleri oluşturur. Bu, zaman uyumlu ve zaman uyumsuz yöntemleri için gerçekleştirilir. Bu, zaman uyumsuz olarak yeni görev tabanlı zaman uyumsuz programlama modeli kullanarak hizmet işlemlerini çağırma olanak sağlar. Oluşturulan proxy yöntemini çağırdığınızda, WCF görev döndürür ve zaman uyumsuz işlem size göstermek için bir görev nesnesi oluşturur. İşlem tamamlandığında görev tamamlar.  Zaman uyumsuz bir işlem uygularken, bir görev tabanlı zaman uyumsuz işlem olarak uygulayabilirsiniz. Daha fazla bilgi için [zaman uyumlu ve zaman uyumsuz işlemleri](../../../docs/framework/wcf/synchronous-and-asynchronous-operations.md).  
@@ -37,22 +37,22 @@ Bu konuda yeni özellikler ele alınmıştır [!INCLUDE[indigo1](../../../includ
 ### <a name="simplified-generated-configuration-files"></a>Basitleştirilmiş üretilen yapılandırma dosyaları  
  Visual Studio'da hizmet Başvurusu Ekle veya SvcUtil.exe Aracı'nı kullandığınızda, bir istemci yapılandırma dosyası oluşturulur. Değerini varsayılan değer olsa bile WCF önceki sürümlerinde bu yapılandırma dosyalarını her bağlama özelliğinin değeri içeriyor. WCF 4.5 üretilen yapılandırma dosyaları için varsayılan olmayan bir değer ayarlandığını bağlama özellikleri içerir.  
   
- [!INCLUDE[crdefault](../../../includes/crdefault-md.md)] [WCF kolaylaştırma özellikleri](../../../docs/framework/wcf/wcf-simplification-features.md)  
+ Daha fazla bilgi için bkz: [WCF kolaylaştırma özellikleri](../../../docs/framework/wcf/wcf-simplification-features.md)  
   
 ### <a name="contract-first-development"></a>Önce anlaşma geliştirme  
  WCF sözleşmesi ilk geliştirme desteği artık sahiptir. Svcutl.exe hizmeti ve veri sözleşmeleri WSDL belgeden oluşturmanıza olanak sağlayan bir /serviceContract anahtar vardır.  
   
 ### <a name="add-service-reference-from-a-portable-subset-project"></a>Taşınabilir alt küme projesine hizmet Başvurusu Ekle  
- Taşınabilir alt projeleri .NET derleme programcıların tek kaynak ağaç korumak ve birden çok .NET Platformu (Masaüstü, Silverlight, Windows Phone ve XBOX) hala desteklerken oluşturma sistemi etkinleştirin. Taşınabilir alt projeleri yalnızca herhangi bir .NET platformda kullanılabilir bir .NET framework derlemesi olan .NET taşınabilir kitaplıklara başvuru. Geliştirici deneyimi başka bir WCF istemcisi uygulama içinde bir hizmet başvurusu ekleme aynıdır. [!INCLUDE[crdefault](../../../includes/crdefault-md.md)] [Bir taşınabilir alt küme projesine hizmet Başvurusu Ekle](../../../docs/framework/wcf/add-service-reference-in-a-portable-subset-project.md).  
+ Taşınabilir alt projeleri .NET derleme programcıların tek kaynak ağaç korumak ve birden çok .NET Platformu (Masaüstü, Silverlight, Windows Phone ve XBOX) hala desteklerken oluşturma sistemi etkinleştirin. Taşınabilir alt projeleri yalnızca herhangi bir .NET platformda kullanılabilir bir .NET framework derlemesi olan .NET taşınabilir kitaplıklara başvuru. Geliştirici deneyimi başka bir WCF istemcisi uygulama içinde bir hizmet başvurusu ekleme aynıdır. Daha fazla bilgi için bkz: [hizmet Başvurusu Ekle taşınabilir alt küme projesine](../../../docs/framework/wcf/add-service-reference-in-a-portable-subset-project.md).  
   
 ### <a name="aspnet-compatibility-mode-default-changed"></a>ASP.NET uyumluluğu modu varsayılan değiştirildi  
- WCF WCF hizmetleri yazılırken geliştiriciler ASP.NET HTTP ardışık düzen yer alan özelliklerin tam erişim vermek için ASP.NET uyumluluk modu sağlar. Bu modu kullanmak üzere ayarlamalısınız `aspNetCompatibilityEnabled` özniteliğini true [ \<serviceHostingEnvironment >](../../../docs/framework/configure-apps/file-schema/wcf/servicehostingenvironment.md) web.config Bölümü. Ayrıca, bu appDomain içinde herhangi bir hizmeti olmalıdır `RequirementsMode` özellikte kendi <xref:System.ServiceModel.Activation.AspNetCompatibilityRequirementsAttribute> kümesine <xref:System.ServiceModel.Activation.AspNetCompatibilityRequirementsMode.Allowed> veya <xref:System.ServiceModel.Activation.AspNetCompatibilityRequirementsMode.Required>. Varsayılan olarak <xref:System.ServiceModel.Activation.AspNetCompatibilityRequirementsAttribute> şimdi ayarlamak <xref:System.ServiceModel.Activation.AspNetCompatibilityRequirementsMode.Allowed>. [!INCLUDE[crdefault](../../../includes/crdefault-md.md)] [Windows Communication Foundation yenilikler](../../../docs/framework/wcf/whats-new.md) ve [WCF hizmetleri ve ASP.NET](../../../docs/framework/wcf/feature-details/wcf-services-and-aspnet.md).  
+ WCF WCF hizmetleri yazılırken geliştiriciler ASP.NET HTTP ardışık düzen yer alan özelliklerin tam erişim vermek için ASP.NET uyumluluk modu sağlar. Bu modu kullanmak üzere ayarlamalısınız `aspNetCompatibilityEnabled` özniteliğini true [ \<serviceHostingEnvironment >](../../../docs/framework/configure-apps/file-schema/wcf/servicehostingenvironment.md) web.config Bölümü. Ayrıca, bu appDomain içinde herhangi bir hizmeti olmalıdır `RequirementsMode` özellikte kendi <xref:System.ServiceModel.Activation.AspNetCompatibilityRequirementsAttribute> kümesine <xref:System.ServiceModel.Activation.AspNetCompatibilityRequirementsMode.Allowed> veya <xref:System.ServiceModel.Activation.AspNetCompatibilityRequirementsMode.Required>. Varsayılan olarak <xref:System.ServiceModel.Activation.AspNetCompatibilityRequirementsAttribute> şimdi ayarlamak <xref:System.ServiceModel.Activation.AspNetCompatibilityRequirementsMode.Allowed>. Daha fazla bilgi için bkz: [Windows Communication Foundation yenilikler](../../../docs/framework/wcf/whats-new.md) ve [WCF hizmetleri ve ASP.NET](../../../docs/framework/wcf/feature-details/wcf-services-and-aspnet.md).  
   
 ### <a name="new-transport-default-values"></a>Yeni aktarım varsayılan değerler  
- Taşıma özelliği varsayılan değerlerinin sayısı değişmiş yapılandırmasını basitleştirmek için. [!INCLUDE[crdefault](../../../includes/crdefault-md.md)] [WCF kolaylaştırma özellikleri](../../../docs/framework/wcf/wcf-simplification-features.md).  
+ Taşıma özelliği varsayılan değerlerinin sayısı değişmiş yapılandırmasını basitleştirmek için. Daha fazla bilgi için bkz: [WCF kolaylaştırma özellikleri](../../../docs/framework/wcf/wcf-simplification-features.md).  
   
 ### <a name="xmldictionaryreaderquotas"></a>XmlDictionaryReaderQuotas  
- <xref:System.Xml.XmlDictionaryReaderQuotas> bir ileti oluşturulurken bir kodlayıcı tarafından kullandığı bellek miktarını sınırlamak XML sözlük okuyucular için yapılandırılabilir kota değerlerini içerir. Bu kotalar yapılandırılabilir olsa da, varsayılan değerleri bir geliştirici açıkça tahsis etmek zorunda kalacaksınız olasılığını azaltmak için değiştirilmiştir. [!INCLUDE[crdefault](../../../includes/crdefault-md.md)] [WCF kolaylaştırma özellikleri](../../../docs/framework/wcf/wcf-simplification-features.md).  
+ <xref:System.Xml.XmlDictionaryReaderQuotas> bir ileti oluşturulurken bir kodlayıcı tarafından kullandığı bellek miktarını sınırlamak XML sözlük okuyucular için yapılandırılabilir kota değerlerini içerir. Bu kotalar yapılandırılabilir olsa da, varsayılan değerleri bir geliştirici açıkça tahsis etmek zorunda kalacaksınız olasılığını azaltmak için değiştirilmiştir. Daha fazla bilgi için bkz: [WCF kolaylaştırma özellikleri](../../../docs/framework/wcf/wcf-simplification-features.md).  
   
 ### <a name="wcf-configuration-validation"></a>WCF yapılandırmasını doğrulama  
  Visual Studio içinde derleme işleminin bir parçası olarak, WCF yapılandırma dosyalarını proje içinde tanımlanmış öznitelikler için şimdi doğrulanır. Doğrulama başarısız olursa, doğrulama hataları ve Uyarıları listesini Visual Studio'da görüntülenir.  
@@ -61,7 +61,7 @@ Bu konuda yeni özellikler ele alınmıştır [!INCLUDE[indigo1](../../../includ
  Hizmetlerini yapılandırmak için yeni ve mevcut WCF Hizmeti geliştiricilere yardımcı olmak için Visual Studio XML düzenleyicisini şimdi araç ipuçları her yapılandırma öğesi ve hizmet yapılandırma dosyasının bir parçası olan özellikleri sağlar.  
   
 ## <a name="streaming-improvements"></a>Akış geliştirmeleri  
- Doğru zaman uyumsuz olduğu gönderme tarafı şimdi değil alış tarafı değil okuma ise iş parçacığı engellemek veya böylece ölçeklenebilirlik okuma yavaş akış için destek eklendi. Bir istemci akışlı bir ileti bir IIS barındırılan WCF hizmetindeki gönderdiğinde, ileti arabelleğe alma sınırlama kaldırılmıştır. [!INCLUDE[crdefault](../../../includes/crdefault-md.md)] [WCF kolaylaştırma özellikleri](../../../docs/framework/wcf/wcf-simplification-features.md).  
+ Doğru zaman uyumsuz olduğu gönderme tarafı şimdi değil alış tarafı değil okuma ise iş parçacığı engellemek veya böylece ölçeklenebilirlik okuma yavaş akış için destek eklendi. Bir istemci akışlı bir ileti bir IIS barındırılan WCF hizmetindeki gönderdiğinde, ileti arabelleğe alma sınırlama kaldırılmıştır. Daha fazla bilgi için bkz: [WCF kolaylaştırma özellikleri](../../../docs/framework/wcf/wcf-simplification-features.md).  
   
 ## <a name="simplifying-exposing-an-endpoint-over-https-with-iis"></a>IIS ile HTTPS üzerinden bir uç nokta gösterme basitleştirme  
  HTTPS üzerinden bir uç nokta gösterme basitleştirmek için bir HTTPS protokolü eşlemesi eklendi. Bir HTTPS uç noktasını etkinleştirmek için Web sitenizi bir HTTPS bağlama ve SSL sertifikası yapılandırılmış olduğundan emin olun ve HTTPS hizmeti barındıran bir sanal dizinde yalnızca etkinleştirin. Hizmet için meta veri etkinleştirilirse, bunu HTTPS üzerinden de gösterilir.  
@@ -77,7 +77,7 @@ Bu konuda yeni özellikler ele alınmıştır [!INCLUDE[indigo1](../../../includ
   
 |Özellik|Açık|Yeni varsayılan|Daha fazla bilgi için bkz.|  
 |--------------|--------|-----------------|------------------------------|  
-|channelInitializationTimeout|<xref:System.ServiceModel.NetTcpBinding>|30 saniye|<xref:System.ServiceModel.Channels.ConnectionOrientedTransportBindingElement.ChannelInitializationTimeout%2A>|  
+|ChannelInitializationTimeout|<xref:System.ServiceModel.NetTcpBinding>|30 saniye|<xref:System.ServiceModel.Channels.ConnectionOrientedTransportBindingElement.ChannelInitializationTimeout%2A>|  
 |listenBacklog|<xref:System.ServiceModel.NetTcpBinding>|12 * işlemci sayısı|<xref:System.ServiceModel.NetTcpBinding.ListenBacklog%2A>|  
 |maxPendingAccepts|ConnectionOrientedTransportBindingElement<br /><br /> SMSvcHost.exe|2 * taşıma için İşlemci sayısı<br /><br /> 4 \* SMSvcHost.exe için İşlemci sayısı|<xref:System.ServiceModel.Channels.ConnectionOrientedTransportBindingElement.MaxPendingAccepts%2A> [Net.TCP bağlantı noktası hizmetini yapılandırma](http://msdn.microsoft.com/library/b6dd81fa-68b7-4e1b-868e-88e5901b7ea0)|  
 |maxPendingConnections|ConnectionOrientedTransportBindingElement|12 * işlemci sayısı|<xref:System.ServiceModel.Channels.ConnectionOrientedTransportBindingElement.MaxPendingConnections%2A>|  
@@ -87,7 +87,7 @@ Bu konuda yeni özellikler ele alınmıştır [!INCLUDE[indigo1](../../../includ
  Hizmetlerini yapılandırmak için yeni ve mevcut WCF Hizmeti geliştiricilere yardımcı olmak için Visual Studio XML düzenleyicisini şimdi araç ipuçları her yapılandırma öğesi ve hizmet yapılandırma dosyasının bir parçası olan özellikleri sağlar.  
   
 ## <a name="configuring-wcf-services-in-code"></a>WCF Hizmetlerini Kodda Yapılandırma  
- [!INCLUDE[indigo1](../../../includes/indigo1-md.md)] Yapılandırma dosyalarının veya kod kullanarak hizmetleri yapılandırma yayınlamasına izin verir.  Yapılandırma dosyaları bir hizmet dağıtılan sonra yapılandırılması gerektiğinde faydalıdır. Yapılandırma dosyaları kullanırken, bir BT Uzmanı yapılandırma dosyasını güncelleştirmek yeterlidir, hiçbir yeniden derlenmek gereklidir. Yapılandırma dosyaları, ancak, karmaşık ve korumak zor olabilir. Hata ayıklama yapılandırma dosyaları için desteği yoktur ve yapılandırma öğeleri zor ve hataya yatkın yapılandırma dosyalarını geliştirme kılan adları tarafından başvurulur. [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] Ayrıca Hizmetleri kodda yapılandırmanıza olanak sağlar. Önceki sürümlerinde [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] (4.0 ve önceki) hizmetlerini kodda yapılandırma kendini barındıran senaryolarda kolay <xref:System.ServiceModel.ServiceHost> uç noktaları ve ServiceHost.Open çağırmadan önce davranışları yapılandırmak için sınıfa izin verilmiyor. Webde barındırılan senaryolarda, ancak erişiminiz yok <xref:System.ServiceModel.ServiceHost> sınıfı. Barındırılan hizmeti oluşturmak için gerekli bir web yapılandırmak için bir `System.ServiceModel.ServiceHostFactory` oluşturulan <xref:System.ServiceModel.Activation.ServiceHostFactory> ve gerekli olan herhangi bir yapılandırmaya gerçekleştirilir. .NET 4.5 ile başlayan [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] daha kolay bir yolu kendi kendini barındıran her ikisi de yapılandırmak ve web hizmetlerini kodda barındırılan sağlar. [!INCLUDE[crdefault](../../../includes/crdefault-md.md)] [WCF hizmetlerini kodda yapılandırma](../../../docs/framework/wcf/configuring-wcf-services-in-code.md).  
+ [!INCLUDE[indigo1](../../../includes/indigo1-md.md)] Yapılandırma dosyalarının veya kod kullanarak hizmetleri yapılandırma yayınlamasına izin verir.  Yapılandırma dosyaları bir hizmet dağıtılan sonra yapılandırılması gerektiğinde faydalıdır. Yapılandırma dosyaları kullanırken, bir BT Uzmanı yapılandırma dosyasını güncelleştirmek yeterlidir, hiçbir yeniden derlenmek gereklidir. Yapılandırma dosyaları, ancak, karmaşık ve korumak zor olabilir. Hata ayıklama yapılandırma dosyaları için desteği yoktur ve yapılandırma öğeleri zor ve hataya yatkın yapılandırma dosyalarını geliştirme kılan adları tarafından başvurulur. [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] Ayrıca Hizmetleri kodda yapılandırmanıza olanak sağlar. Önceki sürümlerinde [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] (4.0 ve önceki) hizmetlerini kodda yapılandırma kendini barındıran senaryolarda kolay <xref:System.ServiceModel.ServiceHost> uç noktaları ve ServiceHost.Open çağırmadan önce davranışları yapılandırmak için sınıfa izin verilmiyor. Webde barındırılan senaryolarda, ancak erişiminiz yok <xref:System.ServiceModel.ServiceHost> sınıfı. Barındırılan hizmeti oluşturmak için gerekli bir web yapılandırmak için bir `System.ServiceModel.ServiceHostFactory` oluşturulan <xref:System.ServiceModel.Activation.ServiceHostFactory> ve gerekli olan herhangi bir yapılandırmaya gerçekleştirilir. .NET 4.5 ile başlayan [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] daha kolay bir yolu kendi kendini barındıran her ikisi de yapılandırmak ve web hizmetlerini kodda barındırılan sağlar. Daha fazla bilgi için bkz: [WCF hizmetlerini kodda yapılandırma](../../../docs/framework/wcf/configuring-wcf-services-in-code.md).  
   
 ## <a name="channelfactory-caching"></a>ChannelFactory önbelleğe alma  
  WCF istemci uygulamalarını kullanan <xref:System.ServiceModel.ChannelFactory%601> bir WCF Hizmeti ile bir iletişim kanalı oluşturmak için sınıfı.  Oluşturma <xref:System.ServiceModel.ChannelFactory%601> örnekleri aşağıdaki işlemleri içerdiğinden bazı ek yük doğurur:  
@@ -100,10 +100,10 @@ Bu konuda yeni özellikler ele alınmıştır [!INCLUDE[indigo1](../../../includ
   
 4.  Kaynaklarını atma  
   
- WCF bu yükünü en aza indirmek için bir WCF istemcisi proxy kullanılırken kanal fabrikaları önbelleğe alabilir. [!INCLUDE[crdefault](../../../includes/crdefault-md.md)] [Kanal fabrikası ve önbelleğe alma](../../../docs/framework/wcf/feature-details/channel-factory-and-caching.md).  
+ WCF bu yükünü en aza indirmek için bir WCF istemcisi proxy kullanılırken kanal fabrikaları önbelleğe alabilir. Daha fazla bilgi için bkz: [kanal fabrikası ve önbelleğe alma](../../../docs/framework/wcf/feature-details/channel-factory-and-caching.md).  
   
 ## <a name="compression-and-the-binary-encoder"></a>Sıkıştırma ve ikili kodlama  
- WCF ikili kodlama WCF 4.5 ile başlayan sıkıştırma desteği ekler. Sıkıştırma türünü ile yapılandırılmış <xref:System.ServiceModel.Channels.BinaryMessageEncodingBindingElement.CompressionFormat%2A> özelliği. Hem istemci hem de hizmet yapılandırmalısınız <xref:System.ServiceModel.Channels.BinaryMessageEncodingBindingElement.CompressionFormat%2A> özelliği. Sıkıştırma için HTTP, HTTPS ve TCP protokollerini çalışır. Sıkıştırma kullanmak için bir istemci belirtir ancak hizmet desteklemiyor protokol uyumsuzluğu belirten bir iletişim kuralı özel durum oluşturulur. [!INCLUDE[crdefault](../../../includes/crdefault-md.md)] [İleti Kodlayıcı seçme](../../../docs/framework/wcf/feature-details/choosing-a-message-encoder.md)  
+ WCF ikili kodlama WCF 4.5 ile başlayan sıkıştırma desteği ekler. Sıkıştırma türünü ile yapılandırılmış <xref:System.ServiceModel.Channels.BinaryMessageEncodingBindingElement.CompressionFormat%2A> özelliği. Hem istemci hem de hizmet yapılandırmalısınız <xref:System.ServiceModel.Channels.BinaryMessageEncodingBindingElement.CompressionFormat%2A> özelliği. Sıkıştırma için HTTP, HTTPS ve TCP protokollerini çalışır. Sıkıştırma kullanmak için bir istemci belirtir ancak hizmet desteklemiyor protokol uyumsuzluğu belirten bir iletişim kuralı özel durum oluşturulur. Daha fazla bilgi için bkz: [ileti Kodlayıcı seçme](../../../docs/framework/wcf/feature-details/choosing-a-message-encoder.md)  
   
 ## <a name="udp"></a>UDP  
  "Yangın ve unut" kullanan hizmetler yazmak geliştiricilere sağlayan bir UDP taşıma için destek eklenmiştir Mesajlaşma. Bir istemci bir hizmete bir ileti gönderir ve hizmet yanıt bekliyor.  

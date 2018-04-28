@@ -1,19 +1,19 @@
 ---
 title: DotNet .NET Core CLI command - derleme
-description: "Dotnet bir proje ve tüm bağımlılıkları komutu derlemeleri oluşturun."
+description: Dotnet bir proje ve tüm bağımlılıkları komutu derlemeleri oluşturun.
 author: mairaw
 ms.author: mairaw
 ms.date: 03/10/2018
-ms.topic: article
-ms.prod: .net-core
+ms.topic: conceptual
+ms.prod: dotnet-core
 ms.technology: dotnet-cli
 ms.workload:
 - dotnetcore
-ms.openlocfilehash: e7181f502e2a25b17077366da9d9f071e7e94d33
-ms.sourcegitcommit: 83dd5ec003e788ccb3e33f3412a7af39ae347646
+ms.openlocfilehash: 2c258f2906be43436b57b9795b5851af88804443
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/15/2018
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="dotnet-build"></a>DotNet derleme
 
@@ -31,7 +31,7 @@ dotnet build [<PROJECT>] [-c|--configuration] [-f|--framework] [--force] [--no-d
     [--no-restore] [-o|--output] [-r|--runtime] [-v|--verbosity] [--version-suffix]
 dotnet build [-h|--help]
 ```
-# <a name="net-core-1xtabnetcore1x"></a>[.NET Core 1.x](#tab/netcore1x)
+# <a name="net-core-1xtabnetcore1x"></a>[.NET core 1.x](#tab/netcore1x)
 ```
 dotnet build [<PROJECT>] [-c|--configuration] [-f|--framework] [--no-dependencies] [--no-incremental] [-o|--output]
     [-r|--runtime] [-v|--verbosity] [--version-suffix]
@@ -117,7 +117,7 @@ Komutun ayrıntı düzeyi ayarlar. İzin verilen değerler `q[uiet]`, `m[inimal]
 
 Sürüm soneki için bir yıldız işareti tanımlar (`*`) proje dosyasının sürüm alanında. NuGet sürümü yönergeleri biçimdedir.
 
-# <a name="net-core-1xtabnetcore1x"></a>[.NET Core 1.x](#tab/netcore1x)
+# <a name="net-core-1xtabnetcore1x"></a>[.NET core 1.x](#tab/netcore1x)
 
 `-c|--configuration {Debug|Release}`
 

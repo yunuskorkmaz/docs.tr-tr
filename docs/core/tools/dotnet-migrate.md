@@ -1,18 +1,19 @@
 ---
-title: "DotNet command - .NET Core CLI geçirme"
-description: "Dotnet geçirmek komutu bir proje ve tüm bağımlılıkları geçirir."
+title: DotNet command - .NET Core CLI geçirme
+description: Dotnet geçirmek komutu bir proje ve tüm bağımlılıkları geçirir.
 author: mairaw
 ms.author: mairaw
 ms.date: 08/14/2017
-ms.topic: article
-ms.prod: .net-core
+ms.topic: conceptual
+ms.prod: dotnet-core
 ms.technology: dotnet-cli
-ms.workload: dotnetcore
-ms.openlocfilehash: 7fad6bf67dfe7b0d6f70ce527a153080aa17d888
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.workload:
+- dotnetcore
+ms.openlocfilehash: 796a241fea2c85fb03729a9cb0ed79682ac0dcee
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="dotnet-migrate"></a>DotNet geçirme
 
@@ -20,7 +21,7 @@ ms.lasthandoff: 12/23/2017
 
 ## <a name="name"></a>Ad
 
-`dotnet migrate`-Önizleme 2 .NET Core proje .NET Core SDK 1.0 projeye taşır.
+`dotnet migrate` -Önizleme 2 .NET Core proje .NET Core SDK 1.0 projeye taşır.
 
 ## <a name="synopsis"></a>Özet
 

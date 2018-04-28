@@ -16,11 +16,11 @@ ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: 90e9d5f3a2cff454ff7892877f012f8679b9ccac
-ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
+ms.openlocfilehash: bfd7c3e36bf28c364adf3cd230522cfc40a9503b
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/27/2018
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="workflow-security"></a>İş akışı güvenlik
 Windows Workflow Foundation (WF), Microsoft SQL Server gibi birçok farklı teknolojiler ile tümleşiktir ve [!INCLUDE[indigo1](../../../includes/indigo1-md.md)]. Bu teknolojiler ile etkileşim yanlış yapıldığında iş akışınıza güvenlik sorunlar çıkarabilir.  
@@ -41,15 +41,15 @@ Windows Workflow Foundation (WF), Microsoft SQL Server gibi birçok farklı tekn
   
 -   Çok sayıda alt etkinlikler, konumları, yer işaretleri, ana bilgisayar uzantıları veya kapsamları kullanıldığında veya yer işaretleri çok büyük yükleri ile kullanıldığında belleği tükendi veya veritabanı alanı aşırı miktarda sırasında Kalıcılık ayrılabilir. Bu nesne ve veritabanı düzeyi güvenlik kullanılarak azaltılabilir.  
   
--   Kullanırken <xref:System.Activities.DurableInstancing.SqlWorkflowInstanceStore>, örnek deposuna güvenli hale getirilmelidir. [!INCLUDE[crdefault](../../../includes/crdefault-md.md)] [SQL Server en iyi uygulamalar](http://go.microsoft.com/fwlink/?LinkId=164972).  
+-   Kullanırken <xref:System.Activities.DurableInstancing.SqlWorkflowInstanceStore>, örnek deposuna güvenli hale getirilmelidir. Daha fazla bilgi için bkz: [SQL Server en iyi uygulamalar](http://go.microsoft.com/fwlink/?LinkId=164972).  
   
--   Örnek deposuna gizli verileri şifrelenmelidir. [!INCLUDE[crdefault](../../../includes/crdefault-md.md)] [SQL güvenlik şifreleme](http://go.microsoft.com/fwlink/?LinkId=164976).  
+-   Örnek deposuna gizli verileri şifrelenmelidir. Daha fazla bilgi için bkz: [SQL güvenlik şifreleme](http://go.microsoft.com/fwlink/?LinkId=164976).  
   
 -   Yapılandırma dosyasında (Web.Config genellikle) güvenlidir ve dahil oturum açma ve parola bilgilerini olmadığından emin olmak için veritabanı bağlantı dizesi genellikle bir yapılandırma dosyasına dahil olduğundan, windows düzeyi güvenlik (ACL) kullanılmalıdır bağlantı dizesi. Windows kimlik doğrulaması veritabanı ve web sunucusu arasında yerine kullanılmalıdır.  
   
 ## <a name="considerations-for-workflowservicehost"></a>WorkflowServiceHost için ilgili önemli noktalar  
   
--   [!INCLUDE[indigo1](../../../includes/indigo1-md.md)] iş akışlarında kullanılan uç noktalarını güvenli hale getirilmelidir. [!INCLUDE[crdefault](../../../includes/crdefault-md.md)] [WCF güvenlik genel bakış](http://go.microsoft.com/fwlink/?LinkID=164975).  
+-   [!INCLUDE[indigo1](../../../includes/indigo1-md.md)] iş akışlarında kullanılan uç noktalarını güvenli hale getirilmelidir. Daha fazla bilgi için bkz: [WCF güvenliğine genel bakış](http://go.microsoft.com/fwlink/?LinkID=164975).  
   
 -   Ana bilgisayar düzeyinde yetkilendirme kullanarak uygulanabilir <xref:System.ServiceModel.ServiceAuthorizationManager>. Bkz: [nasıl yapılır: Özel Yetkilendirme Yöneticisi için bir hizmet oluşturma](http://go.microsoft.com/fwlink/?LinkId=192228) Ayrıntılar için. Bu ayrıca aşağıdaki örnekte gösterilmiştir: [güvenli hale getirme iş akışı Hizmetleri](../../../docs/framework/windows-workflow-foundation/samples/securing-workflow-services.md).  
   

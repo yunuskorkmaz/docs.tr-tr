@@ -1,21 +1,19 @@
 ---
-title: ".NET core dağıtım paketleme"
-description: "Paket, öğrenin adını ve dağıtım için .NET Core sürümü."
-keywords: ".NET, .NET core, kaynak, yapı"
+title: .NET core dağıtım paketleme
+description: Paket, öğrenin adını ve dağıtım için .NET Core sürümü.
 author: bleroy
 ms.author: mairaw
 ms.date: 06/28/2017
-ms.topic: article
-ms.prod: .net-core
+ms.topic: conceptual
+ms.prod: dotnet-core
 ms.devlang: dotnet
-ms.assetid: 71b9d722-c5a8-4271-9ce1-d87e7ae2494d
 ms.workload:
 - dotnetcore
-ms.openlocfilehash: e511ea13c578ab44c65a5ba78f666cce1ab6a0c4
-ms.sourcegitcommit: c3957fdb990060559d73cca44ab3e2c7b4d049c0
+ms.openlocfilehash: 63ff542dbde30f8ff72a2d257a16a18b2a9e71b8
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/05/2018
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="net-core-distribution-packaging"></a>.NET core dağıtım paketleme
 
@@ -64,7 +62,7 @@ Tek bir ana bilgisayar olsa da, diğer bileşenleri sürümlü dizinleri (2,3,5,
 
 - (5) **shared/Microsoft.NETCore.App/\<çalışma zamanı sürümü >** bu framework .NET çekirdeği çalışma zamanı ve destekleyici yönetilen kitaplıklarını içerir.
 
-- (6,7) **shared/Microsoft.AspNetCore.{App,All}/\<aspnetcore version>** contains the ASP.NET Core libraries. Kitaplıkları altında `Microsoft.AspNetCore.App` geliştirilen ve .NET Core projenin bir parçası olarak desteklenir. Kitaplıkları altında `Microsoft.AspNetCore.All` 3 taraf kitaplıkları da içeren bir alt kümesi olan.
+- (6,7) **shared/Microsoft.AspNetCore. { Uygulama, tüm} /\<aspnetcore sürüm >** ASP.NET Core kitaplıkları içerir. Kitaplıkları altında `Microsoft.AspNetCore.App` geliştirilen ve .NET Core projenin bir parçası olarak desteklenir. Kitaplıkları altında `Microsoft.AspNetCore.All` 3 taraf kitaplıkları da içeren bir alt kümesi olan.
 
 - (8) **LICENSE.txt,ThirdPartyNotices.txt** .NET Core lisans ve lisansları .NET Core kullanılan üçüncü taraf kitaplıkların.
 
@@ -83,13 +81,13 @@ Aşağıdaki tablolarda önerilen paketleri gösterir.
 
 | Ad                                    | Örnek                | Kullanım örneği: yükle...           | İçerir           | Bağımlılıklar                                   | Sürüm            |
 |-----------------------------------------|------------------------|---------------------------------|--------------------|------------------------------------------------|--------------------|
-| dotnet-sdk-[major]                      | dotnet-sdk-2           | Çalışma zamanı ana için en son SDK'sı    |                    | dotnet-sdk-[major].[latestminor]               | \<SDK sürümü >     |
-| dotnet-sdk-[major].[minor]              | dotnet-sdk-2.1         | Belirli bir çalışma zamanı için en son SDK'sı |                    | DotNet - sdk-[Temel]. [alt]. [son sdk feat] xx | \<SDK sürümü >     |
-| dotnet-sdk-[major].[minor].[sdk feat]xx | dotnet-sdk-2.1.3xx     | Belirli sdk özellik sürüm    | (3),(4)            | aspnetcore - çalışma zamanı-[Temel]. [alt]             | \<SDK sürümü >     |
-| aspnetcore - çalışma zamanı-[Temel]. [alt]      | aspnetcore çalışma zamanı 2.1 | Belirli ASP.NET çekirdeği çalışma zamanı   | (6),[(7)]          | dotnet-runtime-[major].[minor]                 | \<çalışma zamanı sürümü > |
-| dotnet-runtime-[major].[minor]          | dotnet-runtime-2.1     | Belirli bir çalışma zamanı                | (5)                | host-fxr:\<runtime version>+                   | \<çalışma zamanı sürümü > |
+| dotnet-sdk-[major]                      | dotnet-sdk-2           | Çalışma zamanı ana için en son SDK'sı    |                    | DotNet - sdk-[Temel]. [latestminor]               | \<SDK sürümü >     |
+| DotNet - sdk-[Temel]. [alt]              | DotNet sdk 2.1         | Belirli bir çalışma zamanı için en son SDK'sı |                    | DotNet - sdk-[Temel]. [alt]. [son sdk feat] xx | \<SDK sürümü >     |
+| DotNet - sdk-[Temel]. [alt]. [sdk feat] xx | DotNet sdk 2.1.3xx     | Belirli sdk özellik sürüm    | (3),(4)            | aspnetcore - çalışma zamanı-[Temel]. [alt]             | \<SDK sürümü >     |
+| aspnetcore - çalışma zamanı-[Temel]. [alt]      | aspnetcore çalışma zamanı 2.1 | Belirli ASP.NET çekirdeği çalışma zamanı   | (6),[(7)]          | DotNet - çalışma zamanı-[Temel]. [alt]                 | \<çalışma zamanı sürümü > |
+| DotNet - çalışma zamanı-[Temel]. [alt]          | DotNet çalışma zamanı 2.1     | Belirli bir çalışma zamanı                | (5)                | ana bilgisayar fxr:\<çalışma zamanı sürümü > +                   | \<çalışma zamanı sürümü > |
 | dotnet-host-fxr                         | dotnet-host-fxr        | _bağımlılık_                    | (2)                | ana bilgisayar:\<çalışma zamanı sürümü > +                       | \<çalışma zamanı sürümü > |
-| dotnet-host                             | dotnet-host            | _bağımlılık_                    | (1),(8),(9),(10)   |                                                | \<çalışma zamanı sürümü > |
+| DotNet ana bilgisayar                             | DotNet ana bilgisayar            | _bağımlılık_                    | (1),(8),(9),(10)   |                                                | \<çalışma zamanı sürümü > |
 
 Çoğu dağıtımları kaynağından oluşturulacak tüm yapıları gerektirir. Bu paketleri bazı etkisi vardır:
 
@@ -111,19 +109,19 @@ Aşağıdaki tabloda önerilen paketleri gösterir ve **düzeltme eki paketleri*
 
 | Ad                                           | Örnek                  | İçerir         | Bağımlılıklar                                              |
 |------------------------------------------------|--------------------------|------------------|-----------------------------------------------------------|
-| dotnet-sdk-[major]                             | dotnet-sdk-2             |                  | dotnet-sdk-[major].[latest sdk minor]                     |
-| dotnet-sdk-[major].[minor]                     | dotnet-sdk-2.1           |                  | DotNet - sdk-[Temel]. [alt]. [son sdk feat] xx            |
-| dotnet-sdk-[major].[minor].[sdk feat]xx        | dotnet-sdk-2.1.3xx       |                  | dotnet-sdk-[major].[minor].[latest sdk patch]             |
-| **dotnet-sdk-[major].[minor].[patch]**         | dotnet-sdk-2.1.300       | (3),(4)          | aspnetcore-runtime-[major].[minor].[sdk runtime patch]    |
+| dotnet-sdk-[major]                             | dotnet-sdk-2             |                  | DotNet - sdk-[Temel]. [ikincil son sdk]                     |
+| DotNet - sdk-[Temel]. [alt]                     | DotNet sdk 2.1           |                  | DotNet - sdk-[Temel]. [alt]. [son sdk feat] xx            |
+| DotNet - sdk-[Temel]. [alt]. [sdk feat] xx        | DotNet sdk 2.1.3xx       |                  | DotNet - sdk-[Temel]. [alt]. [son sdk düzeltme]             |
+| **DotNet - sdk-[Temel]. [alt]. [düzeltme]**         | DotNet sdk 2.1.300       | (3),(4)          | aspnetcore - çalışma zamanı-[Temel]. [alt]. [sdk çalışma zamanı düzeltme]    |
 | aspnetcore - çalışma zamanı-[Temel]. [alt]             | aspnetcore çalışma zamanı 2.1   |                  | aspnetcore - çalışma zamanı-[Temel]. [alt]. [son çalışma zamanı düzeltme] |
-| **aspnetcore - çalışma zamanı-[Temel]. [alt]. [düzeltme]** | aspnetcore çalışma zamanı 2.1.0 | (6),[(7)]        | dotnet-runtime-[major].[minor].[patch]                    |
-| dotnet-runtime-[major].[minor]                 | dotnet-runtime-2.1       |                  | DotNet - çalışma zamanı-[Temel]. [alt]. [son çalışma zamanı düzeltme]     |
-| **dotnet-runtime-[major].[minor].[patch]**     | dotnet-runtime-2.1.0     | (5)              | host-fxr:\<runtime version>+                              |
+| **aspnetcore - çalışma zamanı-[Temel]. [alt]. [düzeltme]** | aspnetcore çalışma zamanı 2.1.0 | (6),[(7)]        | DotNet - çalışma zamanı-[Temel]. [alt]. [düzeltme]                    |
+| DotNet - çalışma zamanı-[Temel]. [alt]                 | DotNet çalışma zamanı 2.1       |                  | DotNet - çalışma zamanı-[Temel]. [alt]. [son çalışma zamanı düzeltme]     |
+| **DotNet - çalışma zamanı-[Temel]. [alt]. [düzeltme]**     | DotNet çalışma zamanı 2.1.0     | (5)              | ana bilgisayar fxr:\<çalışma zamanı sürümü > +                              |
 | dotnet-host-fxr                                | dotnet-host-fxr          | (2)              | ana bilgisayar:\<çalışma zamanı sürümü > +                                  |
-| dotnet-host                                    | dotnet-host              | (1),(8),(9),(10) |                                                           |
+| DotNet ana bilgisayar                                    | DotNet ana bilgisayar              | (1),(8),(9),(10) |                                                           |
 
 Düzeltme eki paketleri bir alternatifidir _sabitleme_ Paket Yöneticisi'ni kullanarak belirli bir sürüme paketler. Diğer uygulamalar/kullanıcıları etkileyen önlemek için bu tür uygulamalar yerleşik ve değiştirebilirsiniz bir kapsayıcıda dağıtılır.
 
 ## <a name="building-packages"></a>Yapı paketleri
 
-Https://github.com/dotnet/source-build depo kaynağı tarball .NET Core SDK'sını ve tüm bileşenlerini derleme hakkında yönergeler sağlar. Kaynak derleme deposu çıktısı, bu makalenin ilk bölümünde açıklanan düzeni eşleşir.
+https://github.com/dotnet/source-build Depo kaynağı tarball .NET Core SDK'sını ve tüm bileşenlerini derleme hakkında yönergeler sağlar. Kaynak derleme deposu çıktısı, bu makalenin ilk bölümünde açıklanan düzeni eşleşir.

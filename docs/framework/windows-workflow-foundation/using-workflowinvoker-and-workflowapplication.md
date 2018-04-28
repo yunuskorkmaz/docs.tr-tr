@@ -14,11 +14,11 @@ ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: 90999867ee1dd678e279832d73d7ecaaa416fe7b
-ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
+ms.openlocfilehash: af520c1520f605d34076e6ecabdf84deb52fbfd0
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/27/2018
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="using-workflowinvoker-and-workflowapplication"></a>WorkflowInvoker ve WorkflowApplication kullanma
 Windows Workflow Foundation (WF) iş akışı barındırma çeşitli yöntemler sağlar. <xref:System.Activities.WorkflowInvoker> yöntem çağrısı sırasında ve Kalıcılık kullanmayan yalnızca iş akışları için kullanılabilir gibi bir iş akışı çağırma için basit bir yol sağlar. <xref:System.Activities.WorkflowApplication> yaşam döngüsü olayları, yürütme denetimi, yer işareti sürdürme ve kalıcılığı bildirimi içeren iş akışlarını yürütmek için daha zengin bir modeli sağlar. <xref:System.ServiceModel.Activities.WorkflowServiceHost> Mesajlaşma etkinlikleri için destek sağlar ve iş akışı Hizmetleri ile birincil olarak kullanılır. Bu konu ile iş akışı barındırma için tanıtır <xref:System.Activities.WorkflowInvoker> ve <xref:System.Activities.WorkflowApplication>. [!INCLUDE[crabout](../../../includes/crabout-md.md)] iş akışlarıyla barındırma <xref:System.ServiceModel.Activities.WorkflowServiceHost>, bkz: [iş akışı Hizmetleri](../../../docs/framework/wcf/feature-details/workflow-services.md) ve [iş akışı hizmetleri genel bakış barındırma](../../../docs/framework/wcf/feature-details/hosting-workflow-services-overview.md).  
@@ -35,7 +35,7 @@ Windows Workflow Foundation (WF) iş akışı barındırma çeşitli yöntemler 
 > [!NOTE]
 >  <xref:System.TimeoutException> Yalnızca zaman aşımı aralığı geçtikten ve iş akışı yürütme sırasında boşta duruma dönerse oluşturulur. İş akışı boşta değil tamamlamak için belirtilen zaman aşımı aralığından daha uzun sürer bir iş akışı başarıyla tamamlar.  
   
- <xref:System.Activities.WorkflowInvoker> Invoke yöntemi zaman uyumsuz sürümlerini de sağlar. [!INCLUDE[crdefault](../../../includes/crdefault-md.md)] <xref:System.Activities.WorkflowInvoker.InvokeAsync%2A> ve <xref:System.Activities.WorkflowInvoker.BeginInvoke%2A>.  
+ <xref:System.Activities.WorkflowInvoker> Invoke yöntemi zaman uyumsuz sürümlerini de sağlar. Daha fazla bilgi için bkz. <xref:System.Activities.WorkflowInvoker.InvokeAsync%2A> ve <xref:System.Activities.WorkflowInvoker.BeginInvoke%2A>.  
   
 ### <a name="setting-input-arguments-of-a-workflow"></a>Bir iş akışının ayarı giriş bağımsız değişkenleri  
  Veri akışının giriş bağımsız değişkeni için eşleme bağımsız değişken adıyla anahtarlı giriş parametreleri sözlüğü kullanarak bir iş akışı içine geçirilebilir. Bu örnekte, bir <xref:System.Activities.Statements.WriteLine> çağrılır ve değeri kendi <xref:System.Activities.Statements.WriteLine.Text%2A> bağımsız değişkeni, giriş parametreleri sözlüğünü kullanarak belirtilir.  

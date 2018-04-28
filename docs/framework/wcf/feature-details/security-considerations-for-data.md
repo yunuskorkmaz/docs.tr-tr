@@ -1,30 +1,32 @@
 ---
-title: "Veriler için Güvenlik Konuları"
-ms.custom: 
+title: Veriler için Güvenlik Konuları
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - csharp
 - vb
 ms.assetid: a7eb98da-4a93-4692-8b59-9d670c79ffb2
-caps.latest.revision: "23"
+caps.latest.revision: 23
 author: BrucePerlerMS
 ms.author: bruceper
 manager: mbaldwin
-ms.workload: dotnet
-ms.openlocfilehash: bb7a40bc38a3fdf3f7be2b31e30e768e26be2d15
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: aa0692c130fdfcf3685c152cdcb73a07d041ab9b
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="security-considerations-for-data"></a>Veriler için Güvenlik Konuları
-Verilerle ilgilenirken [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)], tehdit kategori sayısı dikkate almanız gerekir. Aşağıdaki tabloda veri işleme ile ilgili en önemli tehdit sınıflar listelenir. [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]Bu tehditleri azaltmak için araçlar sağlar.  
+Verilerle ilgilenirken [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)], tehdit kategori sayısı dikkate almanız gerekir. Aşağıdaki tabloda veri işleme ile ilgili en önemli tehdit sınıflar listelenir. [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] Bu tehditleri azaltmak için araçlar sağlar.  
   
  Hizmet reddi  
  Güvenilmeyen veri alırken, verileri uzun hesaplamalar neden olarak orantısız miktarda bellek, iş parçacıkları, kullanılabilir bağlantıları veya işlemci döngülerinin gibi çeşitli kaynak erişmek alma tarafı neden olabilir. Bir sunucuya karşı bir hizmet reddi saldırısı kilitlenmesine ve diğer, yasal istemcilerinden gelen iletileri işleyemiyor neden.  
@@ -44,7 +46,7 @@ Verilerle ilgilenirken [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)], 
   
  Kötü amaçlı kod çeşitli genişletilebilirlik noktaları prize takılı olduğundan emin olun. Kısmen güvenilen derlemelerden türleriyle ilgilenme veya kısmen güvenilen kod tarafından kullanılabilir bileşenler oluşturma kısmi güven altında çalışırken özellikle ilgili budur. Daha fazla bilgi için "Kısmi güven tehditleri" sonraki bölümüne bakın.  
   
- Kısmi güvende çalıştırırken veri sözleşmesi seri hale getirme altyapısı ve veri modelinin sözleşme programlama - Örneğin, özel veri üyeleri için sınırlı bir alt destekler veya kullanarak türleri unutmayın <xref:System.SerializableAttribute> öznitelik desteklenmez. [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)][Kısmi güven](../../../../docs/framework/wcf/feature-details/partial-trust.md).  
+ Kısmi güvende çalıştırırken veri sözleşmesi seri hale getirme altyapısı ve veri modelinin sözleşme programlama - Örneğin, özel veri üyeleri için sınırlı bir alt destekler veya kullanarak türleri unutmayın <xref:System.SerializableAttribute> öznitelik desteklenmez. Daha fazla bilgi için bkz: [kısmi güven](../../../../docs/framework/wcf/feature-details/partial-trust.md).  
   
 ## <a name="avoiding-unintentional-information-disclosure"></a>Yanlışlıkla bilgilerin açığa çıkmasına önleme  
  Seri hale getirilebilir türler göz önünde bulundurularak ile tasarlarken, bilgi açıklama olası bir konudur.  
@@ -78,7 +80,7 @@ Verilerle ilgilenirken [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)], 
   
  Ayrıca `MaxReceivedMessageSize` bir üst sınır ileti başına bellek tüketimi üzerinde yerleştirmez, ancak kendisine içinde sabit bir faktör sınırlar. Örneğin, varsa `MaxReceivedMessageSize` 1 MB'tır ve 1 MB ileti aldı ve ardından seri durumdan çıkarılmış, ek bellek toplam bellek tüketimi iyi üzerinde 1 MB kaynaklanan seri durumdan çıkarılmış Nesne grafiği içeren için gereklidir. Bu nedenle, gelen kadar veri olmadan önemli bellek kullanımına neden olabilir seri hale getirilebilir türler oluşturmamaya özen gösterin. Örneğin, 50 isteğe bağlı verileri üye ve bir ek 100 özel alanları ile "MyContract" ile XML yapım örneği bir veri sözleşmesi "\<MyContract / >". Bu XML 150 alanlar için erişilen bellek sonuçlanır. Veri üyeleri varsayılan olarak isteğe bağlı olduğunu unutmayın. Bu tür bir türü bir dizi parçası olduğunda sorun araya geldiğinde.  
   
- `MaxReceivedMessageSize`tek başına tüm hizmet reddi saldırılarını önlemek yeterli değil. Örneğin, seri durumdan çıkarıcının (henüz başka bir vb. içeren başka bir nesne içeren bir nesne) bir iç içe nesne grafiğinin seri durumdan çıkarılacak gelen ileti tarafından zorlanabilir. Hem <xref:System.Runtime.Serialization.DataContractSerializer> ve <xref:System.Xml.Serialization.XmlSerializer> iç içe geçmiş bir şekilde böyle grafikleri seri durumdan yöntemlerini çağırın. Yöntem çağrıları derin iç içe geçmiş bir kurtarılamaz neden <xref:System.StackOverflowException>. Bu tehdit ayarlayarak azaltıldığından <xref:System.ServiceModel.Configuration.XmlDictionaryReaderQuotasElement.MaxDepth%2A> konunun devamındaki "Güvenle XML kullanarak" bölümünde açıklandığı gibi XML iç içe geçme düzeyi sınırlamak için kota.  
+ `MaxReceivedMessageSize` tek başına tüm hizmet reddi saldırılarını önlemek yeterli değil. Örneğin, seri durumdan çıkarıcının (henüz başka bir vb. içeren başka bir nesne içeren bir nesne) bir iç içe nesne grafiğinin seri durumdan çıkarılacak gelen ileti tarafından zorlanabilir. Hem <xref:System.Runtime.Serialization.DataContractSerializer> ve <xref:System.Xml.Serialization.XmlSerializer> iç içe geçmiş bir şekilde böyle grafikleri seri durumdan yöntemlerini çağırın. Yöntem çağrıları derin iç içe geçmiş bir kurtarılamaz neden <xref:System.StackOverflowException>. Bu tehdit ayarlayarak azaltıldığından <xref:System.ServiceModel.Configuration.XmlDictionaryReaderQuotasElement.MaxDepth%2A> konunun devamındaki "Güvenle XML kullanarak" bölümünde açıklandığı gibi XML iç içe geçme düzeyi sınırlamak için kota.  
   
  Ek kotalar ayarını `MaxReceivedMessageSize` ikili XML kodlama kullanılarak, özellikle önemlidir. İkili kodlama kullanılarak eşdeğerdir sıkıştırma biraz: gelen ileti baytlarının miktarını küçük bir grup çok miktarda veri temsil edebilir. Bu nedenle, bir ileti içine sığdırma bile `MaxReceivedMessageSize` sınırı sürebilir çok daha fazla bellek tam olarak genişletilmiş biçiminde. Bu tür XML özgü tehditleri azaltmak için tüm XML okuyucusu kotalar bu konunun devamındaki "Güvenle XML kullanarak" bölümünde açıklandığı gibi doğru şekilde ayarlanması gerekir.  
   
@@ -90,12 +92,12 @@ Verilerle ilgilenirken [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)], 
 ### <a name="maxbuffersize-details"></a>MaxBufferSize ayrıntıları  
  `MaxBufferSize` Özelliği sınırlar herhangi toplu arabelleğe alma [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] yapar. Örneğin, [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] her zaman bir ileti iletim en iyi duruma getirme mekanizmasını (MTOM) iletisi doğal okuma sırada olmaması için bulunan tüm MIME bölümler yanı sıra SOAP üstbilgileri ve SOAP hataları arabelleğe alır. Bu ayar, tüm bu durumlarda arabelleğe alma miktarını sınırlar.  
   
- [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]Bunu geçirerek gerçekleştirir `MaxBufferSize` arabellek çeşitli bileşenler için değer. Örneğin, bazı <xref:System.ServiceModel.Channels.Message.CreateMessage%2A> , overloads <xref:System.ServiceModel.Channels.Message> sınıfı Al bir `maxSizeOfHeaders` parametresi. [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]geçirir `MaxBufferSize` SOAP üstbilgi arabelleğe alma miktarını sınırlamak için bu parametre için değer. Kullanırken bu parametreyi ayarlayın önemlidir <xref:System.ServiceModel.Channels.Message> doğrudan sınıfı. Bir bileşenin kullanırken genel olarak, [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] kota parametreleri alan bu parametreleri güvenlik etkilerini anlamak ve doğru bir şekilde ayarlamak önemlidir.  
+ [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] Bunu geçirerek gerçekleştirir `MaxBufferSize` arabellek çeşitli bileşenler için değer. Örneğin, bazı <xref:System.ServiceModel.Channels.Message.CreateMessage%2A> , overloads <xref:System.ServiceModel.Channels.Message> sınıfı Al bir `maxSizeOfHeaders` parametresi. [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] geçirir `MaxBufferSize` SOAP üstbilgi arabelleğe alma miktarını sınırlamak için bu parametre için değer. Kullanırken bu parametreyi ayarlayın önemlidir <xref:System.ServiceModel.Channels.Message> doğrudan sınıfı. Bir bileşenin kullanırken genel olarak, [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] kota parametreleri alan bu parametreleri güvenlik etkilerini anlamak ve doğru bir şekilde ayarlamak önemlidir.  
   
  MTOM ileti Kodlayıcı de sahip bir `MaxBufferSize` ayarı. Standart bağlamaları kullanırken, bu aktarım düzeyi için otomatik olarak ayarlanır `MaxBufferSize` değeri. Ancak, özel bağlama oluşturmak için MTOM ileti Kodlayıcı bağlama öğesi kullanırken ayarlamak önemli olduğunu `MaxBufferSize` özelliği akış olduğunda güvenli bir değeri için kullanılır.  
   
 ## <a name="xml-based-streaming-attacks"></a>XML tabanlı akış saldırıları  
- `MaxBufferSize`tek başına emin olmak yeterli değil [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] akış beklendiğinde arabelleğe alma içine zorlanamaz. Örneğin, [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] XML okuyucular yeni bir öğe okumak başlatırken tüm XML öğenin başlangıç etiketinde her zaman arabellek. Ad alanları ve öznitelikleri düzgün bir şekilde işlenir böylece bu yapılır. Varsa `MaxReceivedMessageSize` yapılandırılmış (senaryo akış doğrudan disk büyük bir dosya etkinleştirmek için örneğin,) büyük olması için kötü amaçlı bir ileti burada tüm ileti gövdesi büyük bir XML öğenin başlangıç etiketinde yapılandırılmıştır. Dosyayı okuma girişimi sonuçlanan bir <xref:System.OutOfMemoryException>. Bu, tüm XML okuyucusu kotaları, bu konunun devamındaki "Güvenle XML kullanarak" bölümünde açıklanan kullanılarak azaltılabilir birçok olası XML tabanlı hizmet reddi saldırıları biridir. Akış, tüm bu kotalar ayarlamak özellikle önemlidir.  
+ `MaxBufferSize` tek başına emin olmak yeterli değil [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] akış beklendiğinde arabelleğe alma içine zorlanamaz. Örneğin, [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] XML okuyucular yeni bir öğe okumak başlatırken tüm XML öğenin başlangıç etiketinde her zaman arabellek. Ad alanları ve öznitelikleri düzgün bir şekilde işlenir böylece bu yapılır. Varsa `MaxReceivedMessageSize` yapılandırılmış (senaryo akış doğrudan disk büyük bir dosya etkinleştirmek için örneğin,) büyük olması için kötü amaçlı bir ileti burada tüm ileti gövdesi büyük bir XML öğenin başlangıç etiketinde yapılandırılmıştır. Dosyayı okuma girişimi sonuçlanan bir <xref:System.OutOfMemoryException>. Bu, tüm XML okuyucusu kotaları, bu konunun devamındaki "Güvenle XML kullanarak" bölümünde açıklanan kullanılarak azaltılabilir birçok olası XML tabanlı hizmet reddi saldırıları biridir. Akış, tüm bu kotalar ayarlamak özellikle önemlidir.  
   
 ### <a name="mixing-streaming-and-buffering-programming-models"></a>Akış ve programlama modelleri arabelleğe alma karıştırma  
  Olası saldırıların çoğu, akış ve akış dışı programlama modelleri aynı hizmet karıştırma kaynaklanır. Bir hizmet sözleşmesini iki işlem ile olduğunu varsayın: alır bir <xref:System.IO.Stream> ve başka bazı özel türünün dizisini alır. Ayrıca varsayın `MaxReceivedMessageSize` geniş akışlar işleme ilk işlemini etkinleştirmek için büyük bir değere ayarlayın. Ne yazık ki, bu işlemi çağrılmadan önce büyük iletileri artık ikinci bir işlem de ve seri durumdan çıkarıcının arabellekleri verilere bellekte bir dizi olarak gönderilip gönderilmediğini anlamına gelir. Olası bir hizmet reddi saldırısı budur: `MaxBufferSize` kota ileti gövdesi boyutunu sınırlamaz olduğu seri durumdan çıkarıcının ile çalışır.  
@@ -121,7 +123,7 @@ Verilerle ilgilenirken [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)], 
 ### <a name="slow-stream-attacks"></a>Yavaş akış saldırıları  
  Akış hizmet reddi saldırılarını sınıfının bellek tüketimi gerektirmez. Bunun yerine, saldırı bir yavaş veya vericinin veri içerir. Gönderilen veya alınan verilerin beklerken, iş parçacıkları ve kullanılabilir bağlantıları gibi kaynakları tükendi. Bu durum kötü amaçlı saldırı sonucunda ya da yasal bir gönderici/alıcı bir yavaş ağ bağlantısı üzerinde meydana gelebilecek.  
   
- Bu saldırıları azaltmak için Aktarım zaman aşımlarını doğru olarak ayarlayın. [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)][Taşıma kotaları](../../../../docs/framework/wcf/feature-details/transport-quotas.md). İkincisi, hiçbir zaman zaman uyumlu kullanmak `Read` veya `Write` akış ile çalışırken işlemleri [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)].  
+ Bu saldırıları azaltmak için Aktarım zaman aşımlarını doğru olarak ayarlayın. Daha fazla bilgi için bkz: [taşıma kotaları](../../../../docs/framework/wcf/feature-details/transport-quotas.md). İkincisi, hiçbir zaman zaman uyumlu kullanmak `Read` veya `Write` akış ile çalışırken işlemleri [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)].  
   
 ## <a name="using-xml-safely"></a>XML kullanarak güvenli bir şekilde  
   
@@ -129,7 +131,7 @@ Verilerle ilgilenirken [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)], 
 >  Bu bölümde XML hakkında olsa da, bilgi JavaScript nesne gösterimi (JSON) belgeleri için de geçerlidir. Kullanarak kotaları benzer şekilde, iş [arasında eşleme JSON ve XML](../../../../docs/framework/wcf/feature-details/mapping-between-json-and-xml.md).  
   
 ### <a name="secure-xml-readers"></a>XML okuyucular güvenli  
- XML bilgi tüm ileti işlenirken temelini [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]. XML verilerini azaltılması gereken olasılıklar mevcut hizmet reddi saldırısı sayısı güvenilmeyen bir kaynaktan kabul ederken. [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]özel, güvenli XML okuyucu sağlar. Bu okuyucular standart kodlamaları birini kullanırken otomatik olarak oluşturulan [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] (metin, ikili veya MTOM).  
+ XML bilgi tüm ileti işlenirken temelini [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]. XML verilerini azaltılması gereken olasılıklar mevcut hizmet reddi saldırısı sayısı güvenilmeyen bir kaynaktan kabul ederken. [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] özel, güvenli XML okuyucu sağlar. Bu okuyucular standart kodlamaları birini kullanırken otomatik olarak oluşturulan [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] (metin, ikili veya MTOM).  
   
  Bazı güvenlik özelliklerini bu okuyucular her zaman etkindir. Örneğin, okuyucular hiçbir zaman olası bir hizmet reddi saldırılarını kaynağı olan ve hiçbir zaman yasal SOAP iletilerinde görünmesi gereken belge tür tanımları (DTD) işler. Diğer güvenlik özellikleri yapılandırılmalıdır, okuyucu kotalar sonraki bölümde açıklanan içerir.  
   
@@ -143,12 +145,12 @@ Verilerle ilgilenirken [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)], 
   
 -   Okunmakta zaman öğe adı ve öznitelikleri her zaman bellekte arabelleğe alınmış. Bu nedenle, bu kota doğru akış beklendiğinde aşırı arabelleğe almayı önlemek için modu akış ayarlamak önemlidir. Bkz: `MaxDepth` gerçekleşir kota bölüm gerçek miktarını arabelleğe alma hakkında bilgi için.  
   
--   Öznitelik adları için benzersizlik denetlenecek olduğundan çok fazla XML özniteliklere sahip orantısız işleme zamanı kullanabilir. `MaxBytesPerRead`Bu tehdidi azaltır.  
+-   Öznitelik adları için benzersizlik denetlenecek olduğundan çok fazla XML özniteliklere sahip orantısız işleme zamanı kullanabilir. `MaxBytesPerRead` Bu tehdidi azaltır.  
   
 #### <a name="maxdepth"></a>MaxDepth  
- Bu kota en fazla iç içe geçirme derinliği XML öğelerinin sınırlar. Örneğin, belge "\<A >\<B >\<C / >\</B >\</A >" üç iç içe geçirme derinliği sahiptir. <xref:System.Xml.XmlDictionaryReaderQuotas.MaxDepth%2A>Aşağıdaki nedenlerle önemlidir:  
+ Bu kota en fazla iç içe geçirme derinliği XML öğelerinin sınırlar. Örneğin, belge "\<A >\<B >\<C / >\</B >\</A >" üç iç içe geçirme derinliği sahiptir. <xref:System.Xml.XmlDictionaryReaderQuotas.MaxDepth%2A> Aşağıdaki nedenlerle önemlidir:  
   
--   `MaxDepth`ile etkileşime giren `MaxBytesPerRead`: okuyucu en fazla bellek tüketimi bu iki ayar ürününe orantılı şekilde okuyucu her zaman veri geçerli öğe ve tüm alt öğelerinden bellekte saklar.  
+-   `MaxDepth` ile etkileşime giren `MaxBytesPerRead`: okuyucu en fazla bellek tüketimi bu iki ayar ürününe orantılı şekilde okuyucu her zaman veri geçerli öğe ve tüm alt öğelerinden bellekte saklar.  
   
 -   İç içe nesne grafiğinin seri durumdan çıkarılırken, seri durumdan çıkarıcının tüm yığın erişmek ve kurtarılamaz bir throw zorlanır <xref:System.StackOverflowException>. XML iç içe geçme ve nesne iç içe geçme her ikisi arasında doğrudan bir ilişki var. <xref:System.Runtime.Serialization.DataContractSerializer> ve <xref:System.Xml.Serialization.XmlSerializer>. Kullanım `MaxDepth` bu tehdidi azaltmak için.  
   
@@ -177,17 +179,17 @@ Verilerle ilgilenirken [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)], 
   
  <xref:System.Xml.XmlDictionaryReaderQuotas.MaxNameTableCharCount%2A>, `MaxStringContentLength`, Ve `MaxArrayLength` özellikleri yalnızca bellek tüketimini sınırlamak. Bunlar bellek kullanımı zaten tarafından sınırlı olduğundan akışı olmayan kullanımı tüm tehditlerin azaltılmasına gerekmez normalde `MaxReceivedMessageSize`. Ancak, `MaxReceivedMessageSize` öncesi genişletme bayt sayısı. İkili kodlama kullanımda olduğunda, bellek tüketimi olası sunmamızı `MaxReceivedMessageSize`, yalnızca faktörüyle sınırlı <xref:System.ServiceModel.Channels.BinaryMessageEncodingBindingElement.MaxSessionSize%2A>. Bu nedenle, her zaman tüm okuyucu kotalar ayarlamak önemlidir (özellikle <xref:System.Xml.XmlDictionaryReaderQuotas.MaxStringContentLength%2A>) ikili kodlama kullanırken.  
   
- İle birlikte ikili kodlama kullanırken <xref:System.Runtime.Serialization.DataContractSerializer>, `IExtensibleDataObject` arabirimi kötüye sözlük genişletme saldırısı. Bu arabirim, sınırsız depolama sözleşmenin parçası olmayan rastgele veriler için temelde sağlar. Kotalar yeterince düşük ayarlanamaz, şekilde `MaxSessionSize` çarpılmasıyla `MaxReceivedMessageSize` yok bir sorun teşkil, devre dışı `IExtensibleDataObject` ikili kodlama kullanırken özelliği. Ayarlama `IgnoreExtensionDataObject` özelliğine `true` üzerinde `ServiceBehaviorAttribute` özniteliği. Alternatif olarak, uygulamayan `IExtensibleDataObject` arabirimi. [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)][İleri uyumlu veri sözleşmeleri](../../../../docs/framework/wcf/feature-details/forward-compatible-data-contracts.md).  
+ İle birlikte ikili kodlama kullanırken <xref:System.Runtime.Serialization.DataContractSerializer>, `IExtensibleDataObject` arabirimi kötüye sözlük genişletme saldırısı. Bu arabirim, sınırsız depolama sözleşmenin parçası olmayan rastgele veriler için temelde sağlar. Kotalar yeterince düşük ayarlanamaz, şekilde `MaxSessionSize` çarpılmasıyla `MaxReceivedMessageSize` yok bir sorun teşkil, devre dışı `IExtensibleDataObject` ikili kodlama kullanırken özelliği. Ayarlama `IgnoreExtensionDataObject` özelliğine `true` üzerinde `ServiceBehaviorAttribute` özniteliği. Alternatif olarak, uygulamayan `IExtensibleDataObject` arabirimi. Daha fazla bilgi için bkz: [İleri uyumlu veri sözleşmeleri](../../../../docs/framework/wcf/feature-details/forward-compatible-data-contracts.md).  
   
 ### <a name="quotas-summary"></a>Kotalar özeti  
  Kotalar ilgili yönergeleri aşağıdaki tabloda özetlenmiştir.  
   
 |Koşul|Önemli kotalar ayarlamak için|  
 |---------------|-----------------------------|  
-|Akış veya küçük iletileri, metin ya da MTOM kodlama akış|`MaxReceivedMessageSize`, `MaxBytesPerRead`, ve`MaxDepth`|  
-|Akış veya küçük iletileri, ikili akış kodlama|`MaxReceivedMessageSize`, `MaxSessionSize`ve tüm`ReaderQuotas`|  
-|Akış büyük iletiler, metin ya da MTOM kodlama|`MaxBufferSize`ve tüm`ReaderQuotas`|  
-|Akış büyük iletiler, ikili kodlama|`MaxBufferSize`, `MaxSessionSize`ve tüm`ReaderQuotas`|  
+|Akış veya küçük iletileri, metin ya da MTOM kodlama akış|`MaxReceivedMessageSize`, `MaxBytesPerRead`, ve `MaxDepth`|  
+|Akış veya küçük iletileri, ikili akış kodlama|`MaxReceivedMessageSize`, `MaxSessionSize`ve tüm `ReaderQuotas`|  
+|Akış büyük iletiler, metin ya da MTOM kodlama|`MaxBufferSize` ve tüm `ReaderQuotas`|  
+|Akış büyük iletiler, ikili kodlama|`MaxBufferSize`, `MaxSessionSize`ve tüm `ReaderQuotas`|  
   
 -   Aktarım düzeyinde zaman aşımlarını her zaman ayarlamanız gerekir ve akış olup büyük veya küçük iletileri akış bağımsız olarak kullanımda olduğunda eşzamanlı okuma/yazma hiçbir zaman kullanın.  
   
@@ -214,11 +216,11 @@ Verilerle ilgilenirken [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)], 
   
  Ayrıca, <xref:System.Runtime.Serialization.DataContractSerializer> çok biçimlilik destekler. Bir veri üyesi olarak bildirilmelidir <xref:System.Object>, ancak gelen veri içerebilir bir `Customer` örneği. Bu mümkündür yalnızca `Customer` türü yapılmadı "bilinen" kaldırıcı bu mekanizmalardan biri yoluyla:  
   
--   <xref:System.Runtime.Serialization.KnownTypeAttribute>bir türe uygulanan öznitelik.  
+-   <xref:System.Runtime.Serialization.KnownTypeAttribute> bir türe uygulanan öznitelik.  
   
--   `KnownTypeAttribute`türlerinin bir listesini döndüren bir yöntem belirten özniteliği.  
+-   `KnownTypeAttribute` türlerinin bir listesini döndüren bir yöntem belirten özniteliği.  
   
--   `ServiceKnownTypeAttribute`özniteliği.  
+-   `ServiceKnownTypeAttribute` özniteliği.  
   
 -   `KnownTypes` Yapılandırma bölümü.  
   
@@ -228,7 +230,7 @@ Verilerle ilgilenirken [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)], 
   
  Bilinen bir türe kapsamda eklendiğinde, dilediğiniz zaman yüklenebilir ve gerçekte kullanarak sözleşme engelliyor olsa bile türdeki örneklerin oluşturulabilir. Örneğin, "MyDangerousType" Yukarıdaki mekanizmalardan biri kullanılarak bilinen türleri listesine eklenir türü varsayalım. Bunun anlamı:  
   
--   `MyDangerousType`yüklenir ve kendi sınıf oluşturucu döngülerinden.  
+-   `MyDangerousType` yüklenir ve kendi sınıf oluşturucu döngülerinden.  
   
 -   Bile bir dize veri üyesi olan bir veri sözleşmesi seri durumdan çıkarılırken, kötü amaçlı bir ileti örneği hala neden olabilir `MyDangerousType` oluşturmak için. Kod `MyDangerousType`, özellik ayarlayıcıları gibi çalışabilir. Bu yapıldıktan sonra bu örneğin dize veri üyesini atamak ve bir özel durumla başarısız seri durumdan çıkarıcının çalışır.  
   
@@ -259,7 +261,7 @@ Verilerle ilgilenirken [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)], 
   
 -   Zaman <xref:System.Runtime.Serialization.DataContractSerializer> çoğu sınıf, çalışmıyor oluşturucular seri durumdan çıkarır. Bu nedenle, oluşturucuda yapılan herhangi bir durum Yönetim güvenmeyin.  
   
--   Geri aramalar nesne geçerli bir durumda olduğundan emin olmak için kullanın. Geri çağırma işaretlenmiş <xref:System.Runtime.Serialization.OnDeserializedAttribute> özniteliği olduğundan özellikle yararlı seri durumdan çıkarma işlemi tamamlandıktan ve inceleyin ve genel durumu düzeltmek için bir fırsat sonra çalışır. [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)][Sürüm toleranslı seri hale getirme geri çağrıları](../../../../docs/framework/wcf/feature-details/version-tolerant-serialization-callbacks.md).  
+-   Geri aramalar nesne geçerli bir durumda olduğundan emin olmak için kullanın. Geri çağırma işaretlenmiş <xref:System.Runtime.Serialization.OnDeserializedAttribute> özniteliği olduğundan özellikle yararlı seri durumdan çıkarma işlemi tamamlandıktan ve inceleyin ve genel durumu düzeltmek için bir fırsat sonra çalışır. Daha fazla bilgi için bkz: [sürüm toleranslı seri hale getirme geri çağrıları](../../../../docs/framework/wcf/feature-details/version-tolerant-serialization-callbacks.md).  
   
 -   Hangi özelliği ayarlayıcılar çağrılmalıdır belirli bir sıraya üzerinde yararlanmayı veri sözleşmesi tasarım türleri değil.  
   
@@ -267,10 +269,10 @@ Verilerle ilgilenirken [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)], 
   
 -   Güvenmeyin <xref:System.Runtime.Serialization.DataMemberAttribute.IsRequired%2A> özelliği `DataMemberAttribute` durum güvenlik açısından oldukça veri güvence altına almak için öznitelik. Verileri her zaman olabilir `null`, `zero`, veya `invalid`.  
   
--   Hiçbir zaman ilk önce doğrulamadan güvenilmeyen veri kaynağından bir nesne grafiğinin seri durumdan güven. Tek tek her nesne bir bütün olmayabilir tutarlı bir duruma, ancak nesne grafiğinin olabilir. Ayrıca, Nesne grafiği koruma modu devre dışı bırakılırsa, seri durumdan çıkarılmış grafik aynı nesne birden çok başvuran sahip olabilir veya döngüsel başvuru. [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)][Seri hale getirme ve seri durumdan çıkarma](../../../../docs/framework/wcf/feature-details/serialization-and-deserialization.md).  
+-   Hiçbir zaman ilk önce doğrulamadan güvenilmeyen veri kaynağından bir nesne grafiğinin seri durumdan güven. Tek tek her nesne bir bütün olmayabilir tutarlı bir duruma, ancak nesne grafiğinin olabilir. Ayrıca, Nesne grafiği koruma modu devre dışı bırakılırsa, seri durumdan çıkarılmış grafik aynı nesne birden çok başvuran sahip olabilir veya döngüsel başvuru. Daha fazla bilgi için bkz: [seri hale getirme ve seri durumdan çıkarma](../../../../docs/framework/wcf/feature-details/serialization-and-deserialization.md).  
   
 ### <a name="using-the-netdatacontractserializer-securely"></a>NetDataContractSerializer güvenli bir şekilde kullanma  
- <xref:System.Runtime.Serialization.NetDataContractSerializer> Sıkı bağlantı türlerini kullanan bir seri hale getirme altyapısıdır. Bu benzer <xref:System.Runtime.Serialization.Formatters.Binary.BinaryFormatter> ve <xref:System.Runtime.Serialization.Formatters.Soap.SoapFormatter>. Diğer bir deyişle, okuyarak örneği oluşturmak için tür belirler [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] gelen veri derleme ve tür adı. Bir parçası olmasına rağmen [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)], bu serileştirme motoruna takma sağlanan bir yolu yoktur; özel kod yazılabilir. `NetDataContractSerializer` Öncelikle geçişini kolaylaştırmak için sağlanan [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] remoting [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]. [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)]ilgili bölümünde [seri hale getirme ve seri durumdan çıkarma](../../../../docs/framework/wcf/feature-details/serialization-and-deserialization.md).  
+ <xref:System.Runtime.Serialization.NetDataContractSerializer> Sıkı bağlantı türlerini kullanan bir seri hale getirme altyapısıdır. Bu benzer <xref:System.Runtime.Serialization.Formatters.Binary.BinaryFormatter> ve <xref:System.Runtime.Serialization.Formatters.Soap.SoapFormatter>. Diğer bir deyişle, okuyarak örneği oluşturmak için tür belirler [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] gelen veri derleme ve tür adı. Bir parçası olmasına rağmen [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)], bu serileştirme motoruna takma sağlanan bir yolu yoktur; özel kod yazılabilir. `NetDataContractSerializer` Öncelikle geçişini kolaylaştırmak için sağlanan [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] remoting [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]. Daha fazla bilgi için ilgili bölümüne bakın [seri hale getirme ve seri durumdan çıkarma](../../../../docs/framework/wcf/feature-details/serialization-and-deserialization.md).  
   
  Herhangi bir tür yüklenebilir, ileti gösteriyor olabilir çünkü <xref:System.Runtime.Serialization.NetDataContractSerializer> mekanizması doğası gereği güvenli değil ve yalnızca güvenilen verilerle kullanılmalıdır. Yüklemek yalnızca güvenli türler sağlayan bir güvenli, türü sınırlama türü bağlayıcı yazarak Güvenli yapmak mümkündür (kullanarak <xref:System.Runtime.Serialization.NetDataContractSerializer.Binder%2A> özelliği).  
   
@@ -308,7 +310,7 @@ Verilerle ilgilenirken [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)], 
   
 -   Olgu, <xref:System.Runtime.Serialization.ExtensionDataObject> türünde hiçbir ortak üyeler içerdiği verilerin güvenli olduğunu gelmez. Bazı verilerin bulunduğu, kısmen güvenilen kod, nesne sonra elle bir nesneye bir ayrıcalıklı veri kaynağından seri durumdan Örneğin, kısmen güvenilen kod verileri okuyabilir `ExtensionDataObject` nesnesi seri hale getirilirken tarafından. Ayar göz önünde bulundurun <xref:System.Runtime.Serialization.DataContractSerializer.IgnoreExtensionDataObject%2A> için `true` ne zaman ayrıcalıklı veri kaynağından daha sonraki bir nesnede seri durumdan izin ver geçirilen kısmen güvenilen kod.  
   
--   <xref:System.Runtime.Serialization.DataContractSerializer>ve <xref:System.Runtime.Serialization.Json.DataContractJsonSerializer> özel, korumalı, iç ve Genel üyeler serileştirmek tam güvende destekler. Ancak, kısmi güvende yalnızca Genel üyeler seri hale getirilebilir. A `SecurityException` genel olmayan üyesi seri hale getirmek bir uygulama denemesi olursa oluşturulur.  
+-   <xref:System.Runtime.Serialization.DataContractSerializer> ve <xref:System.Runtime.Serialization.Json.DataContractJsonSerializer> özel, korumalı, iç ve Genel üyeler serileştirmek tam güvende destekler. Ancak, kısmi güvende yalnızca Genel üyeler seri hale getirilebilir. A `SecurityException` genel olmayan üyesi seri hale getirmek bir uygulama denemesi olursa oluşturulur.  
   
      İç izin vermek veya kısmi güvende serileştirilmesi için korumalı iç üyeleri `System.Runtime.CompilerServices.InternalsVisibleTo` derleme özniteliği. Bu öznitelik iç üyeleri başka bir derleme halinde görünür olduğunu bildirmek bir derleme sağlar. Bu durumda, serileştirilmiş kendi iç üyelere sahip istediği bir derlemeyi iç üyeleri için System.Runtime.Serialization.dll görünür olduğunu bildirir.  
   
@@ -350,7 +352,7 @@ Verilerle ilgilenirken [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)], 
 -   JavaScript uç nokta kullanılırken, hassas ve özel bilgileri istemci Web tarayıcısının önbelleğine korunur.  
   
 ## <a name="a-note-on-components"></a>Not bileşenleri  
- [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]bir esnek ve özelleştirilebilir sistemidir. Bu konuda içeriğini çoğunu odak en sık karşılaşılan [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] kullanım senaryoları. Ancak, bu bileşenleri oluşturmak mümkündür [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] birçok farklı yolla sağlar. Her bileşen kullanarak güvenlik etkilerini anlamak önemlidir. Özellikle:  
+ [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] bir esnek ve özelleştirilebilir sistemidir. Bu konuda içeriğini çoğunu odak en sık karşılaşılan [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] kullanım senaryoları. Ancak, bu bileşenleri oluşturmak mümkündür [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] birçok farklı yolla sağlar. Her bileşen kullanarak güvenlik etkilerini anlamak önemlidir. Özellikle:  
   
 -   XML okuyucular kullandığınızda gerekir okuyucular kullanın <xref:System.Xml.XmlDictionaryReader> sınıfı, aksine başka bir okuyucu sağlar. Güvenli okuyucular kullanılarak oluşturulan <xref:System.Xml.XmlDictionaryReader.CreateTextReader%2A>, <xref:System.Xml.XmlDictionaryReader.CreateBinaryReader%2A>, veya <xref:System.Xml.XmlDictionaryReader.CreateMtomReader%2A> yöntemleri. Kullanmayın <xref:System.Xml.XmlReader.Create%2A> yöntemi. Okuyucular her zaman güvenli kotaları yapılandırın. Seri hale getirme altyapıları [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] yalnızca güvenli XML okuyuculardan ile kullanıldığında güvenlidir [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)].  
   

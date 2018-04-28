@@ -18,11 +18,11 @@ ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: b7b9590096789af609e83d1a5ed736cf18e27700
-ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
+ms.openlocfilehash: 2ad8a3a79967c42b8e8afdd9b9d796a7a1dfdd79
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="configuring-tracing"></a>İzlemeyi Yapılandırma
 Bu konuda nasıl izlemeyi etkinleştirmek, izlemeleri ve kümesi izleme düzeyleri, kümesi Etkinlik izleme ve uçtan uca izleme bağıntı desteklemek için yayma yaymak üzere izleme kaynakları yapılandırabilir ve izlemeleri erişmek için izleme dinleyicileri ayarlama açıklanmaktadır.  
@@ -155,7 +155,7 @@ Bu konuda nasıl izlemeyi etkinleştirmek, izlemeleri ve kümesi izleme düzeyle
   
  İzlemeler hattaki, örneğin, uzak bir veritabanına göndermek için bir özel İzleme dinleyicisi yapılandırabilirsiniz. Bir uygulama dağıtıcı uzak makinede izleme günlükleri uygun erişim denetimini zorunlu.  
   
- İzleme dinleyicisi programlı olarak da yapılandırabilirsiniz. [!INCLUDE[crdefault](../../../../../includes/crdefault-md.md)] [Nasıl yapılır: oluşturma ve başlatma izleme dinleyicileri](http://go.microsoft.com/fwlink/?LinkId=94648) ve [özel TraceListener oluşturma](http://go.microsoft.com/fwlink/?LinkId=96239).  
+ İzleme dinleyicisi programlı olarak da yapılandırabilirsiniz. Daha fazla bilgi için bkz: [nasıl yapılır: oluşturma ve izleme dinleyicilerini başlatma](http://go.microsoft.com/fwlink/?LinkId=94648) ve [özel TraceListener oluşturma](http://go.microsoft.com/fwlink/?LinkId=96239).  
   
 > [!CAUTION]
 >  Çünkü `System.Diagnostics.XmlWriterTraceListener` olan değil iş parçacığı, izleme kaynağı kaynakları özel olarak izlemeleri alırken kilitlemek. Kaynak çakışması ortaya çıkabilir, bu dinleyiciyi kullanmak üzere yapılandırılmış bir izleme kaynağına izlemeleri birçok iş parçacığı çıkış olduğunda, bir önemli performans sorunu sonuçlanır. Bu sorunu gidermek için iş parçacığı özel bir dinleyici uygulamanız gerekir.  

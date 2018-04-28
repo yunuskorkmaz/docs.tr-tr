@@ -10,17 +10,17 @@ ms.technology:
 ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 5cbbe03f-4a9e-4d44-9e02-c5773239cf52
-caps.latest.revision: ''
+caps.latest.revision: 24
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: ac77fe2c83828d2cc9473417d2b29b2d2e540923
-ms.sourcegitcommit: c883637b41ee028786edceece4fa872939d2e64c
+ms.openlocfilehash: b0fedb812cee5cfa1e4c2ff921a78beb2a6c1beb
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/26/2018
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="uritemplate-and-uritemplatetable"></a>UriTemplate ve UriTemplateTable
 Web geliştiricileri şekli ve kendi Hizmetleri yanıt URI düzeni tanımlamak için gerektirir. [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] Geliştiriciler kendi URI'ler üzerinde denetime iki yeni sınıflar eklendi. <xref:System.UriTemplate> ve <xref:System.UriTemplateTable> URI tabanlı gönderme altyapısında temelini [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]. Bu sınıfların de kendi izin geliştiricilere şablonları ve URI eşleme mekanizması uygulamadan yararlanmak için kullanılabilir bir [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] hizmet.  
@@ -51,7 +51,7 @@ Web geliştiricileri şekli ve kendi Hizmetleri yanıt URI düzeni tanımlamak i
   
  <xref:System.UriTemplate.PathSegmentVariableNames%2A> Özellik adları şablon dizesinde yol kesimleri içinde kullanılan değişkenlerinin koleksiyonunu içerir.  
   
- <xref:System.UriTemplate.IsEquivalentTo%28System.UriTemplate%29> alan bir <xref:System.UriTemplate> bir parametre olarak ve iki şablonları eşdeğer olup olmadığını belirten bir Boole değeri döndürür. [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)] Bu konunun ilerleyen bölümlerinde şablon eşdeğer bölümü.  
+ <xref:System.UriTemplate.IsEquivalentTo%28System.UriTemplate%29> alan bir <xref:System.UriTemplate> bir parametre olarak ve iki şablonları eşdeğer olup olmadığını belirten bir Boole değeri döndürür. Daha fazla bilgi için bu konunun ilerleyen bölümlerinde şablon eşdeğer bölümüne bakın.  
   
  <xref:System.UriTemplate> HTTP URI dilbilgisi uyan herhangi bir URI şeması ile çalışmak üzere tasarlanmıştır. Desteklenen URI şemaları örnekleri verilmiştir.  
   
@@ -63,7 +63,7 @@ Web geliştiricileri şekli ve kendi Hizmetleri yanıt URI düzeni tanımlamak i
   
 -   net.pipe://  
   
--   sb://  
+-   SB: / /  
   
  Düzenleri gibi file:// ve urn: / / değil HTTP URI dilbilgisi uygun ve URI şablonları ile kullanıldığında öngörülemeyen sonuçlara neden.  
   
@@ -100,15 +100,15 @@ Web geliştiricileri şekli ve kendi Hizmetleri yanıt URI düzeni tanımlamak i
   
 -   "ayakkabı / {bot} / *"  
   
--   "shoe/boat?x=2"  
+-   "ayakkabı/bot? x 2 ="  
   
--   "shoe/{boat}?x={bed}"  
+-   "ayakkabı / {bot}? x = {yatak}"  
   
 -   "ayakkabı / {bot}? = {yatak} & y x bant ="  
   
--   "?x={shoe}"  
+-   "? x = {ayakkabı}"  
   
--   "shoe?x=3&y={var}  
+-   "ayakkabı? x 3 & y = {var} =  
   
  Geçersiz şablon dizesi örnekleri:  
   
@@ -131,13 +131,13 @@ Web geliştiricileri şekli ve kendi Hizmetleri yanıt URI düzeni tanımlamak i
   
 -   /{filename}.jpg/  
   
--   /{filename}.{ext}/  
+-   / {filename}. {ext} /  
   
 -   / {a}. {b}someLiteral{c}({d}) /  
   
  Geçersiz bir yol kesimleri örnekleri verilmiştir.  
   
--   /{} - Değişkenleri şeklinde adlandırılmalıdır.  
+-   /{} -Değişkenleri adlı.  
   
 -   / {ayakkabı} {bot} - değişkenleri bir hazır değer ile ayrılmalıdır.  
   
@@ -202,7 +202,7 @@ foreach (string key in m1.BoundVariables.AllKeys)
 ```  
   
 > [!NOTE]
->  8000 / / / gibi bir URI şablonunu eşleşmiyor önceki kod, ancak listelenen 8000 gibi bir URI / yapar.  
+>  Bir URI gibi http://localhost:8000/// önceki kod, ancak listelenen şablon eşleşmiyor gibi bir URI http://localhost:8000/ yapar.  
   
  Aşağıdaki kod, bir URI ile bir şablon oluştururken, varsayılan değişken değerleri nasıl işleneceğini gösterir.  
   
@@ -259,11 +259,11 @@ Console.WriteLine("Bound URI: {0}", boundUri);
 ### <a name="template-equivalence"></a>Şablon eşdeğer  
  İki şablonları olmasını denirse *yapısal olarak eşdeğer* zaman tüm şablonları değişmez değerleri eşleşmesi ve aynı segmentlerinde değişkenleriniz. Örneğin aşağıdaki şablonlardan yapısal olarak eşdeğerdir:  
   
--   /a/{var1}/b b/{var2}?x=1&y=2  
+-   /b b /a/ {var1} / {var2}? x = 1 & y = 2  
   
 -   a/{x}/b%20b/{var1}?y=2&x=1  
   
--   a/{y}/B%20B/{z}/?y=2&x=1  
+-   a/{y}/B%20B/{z}/?y=2 & x = 1  
   
  Fark edilecek bazı noktalar:  
   
@@ -296,7 +296,7 @@ Console.WriteLine("Bound URI: {0}", boundUri);
   
 -   ?x=3  
   
--   ?x=1&y={var}  
+-   ? x = 1 & y = {var}  
   
 -   ?x=2&z={var}  
   
@@ -310,13 +310,13 @@ Console.WriteLine("Bound URI: {0}", boundUri);
   
 -   ?  
   
--   ?m=get&c=rss  
+-   ? m = get & c = rss  
   
--   ?m=put&c=rss  
+-   ? m = put & c = rss  
   
--   ?m=get&c=atom  
+-   ? m = get & c atom =  
   
--   ?m=put&c=atom  
+-   ? m put & c = atom =  
   
  Aşağıdaki sorgu dizesi şablonları kendilerini içinde belirsiz şunlardır:  
   
@@ -328,17 +328,17 @@ Console.WriteLine("Bound URI: {0}", boundUri);
   
 -   ?x=1  
   
--   ?y=2  
+-   ? y = 2  
   
  "x 1 & y = 2 =" her iki şablonları ile eşleşir. Eşleşen şablonu sonra daha fazla sorgu dizesi değişkenlerinin bir sorgu dizesi içerebilir olmasıdır.  
   
 -   ?x=1  
   
--   ?x=1&y={var}  
+-   ? x = 1 & y = {var}  
   
  "x 1 & y = 3 =" her iki şablonları ile eşleşir.  
   
--   ?x=3&y=4  
+-   ? x 3 & y = 4 =  
   
 -   ?x=3&z=5  
   

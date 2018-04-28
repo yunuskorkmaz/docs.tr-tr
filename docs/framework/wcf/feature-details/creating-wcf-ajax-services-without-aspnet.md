@@ -1,27 +1,29 @@
 ---
-title: "ASP.NET Olmadan WCF AJAX Hizmetleri Oluşturma"
-ms.custom: 
+title: ASP.NET Olmadan WCF AJAX Hizmetleri Oluşturma
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: ba4a7d1b-e277-4978-9f62-37684e6dc934
-caps.latest.revision: "7"
+caps.latest.revision: 7
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: a9e321a3ea972208bb136c76e52168d89da8d162
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: b652bcd522a8eea81b3d1218fbd054ee0b2caea8
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="creating-wcf-ajax-services-without-aspnet"></a>ASP.NET Olmadan WCF AJAX Hizmetleri Oluşturma
-[!INCLUDE[indigo1](../../../../includes/indigo1-md.md)]AJAX Hizmetleri, ASP.NET AJAX gerek kalmadan tüm JavaScript etkin Web sayfasından erişilebilir. Bu konuda gibi oluşturmayı açıklar bir [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] hizmet.  
+[!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] AJAX Hizmetleri, ASP.NET AJAX gerek kalmadan tüm JavaScript etkin Web sayfasından erişilebilir. Bu konuda gibi oluşturmayı açıklar bir [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] hizmet.  
   
  Kullanma yönergeleri için [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] ASP.NET AJAX ile bkz [ASP.NET AJAX için WCF hizmetleri oluşturma](../../../../docs/framework/wcf/feature-details/creating-wcf-services-for-aspnet-ajax.md).  
   
@@ -82,7 +84,7 @@ string[] GetCities(string firstLetters);
   
  Bu işlem bir HTTP POST kullanılarak erişilebilir olduğundan `http://serviceaddress/endpointaddress/GetCities` ve bir XML iletisi döndürür.  
   
- Bu temel özelliklerini özelleştirmek için tam Web programlama modelini kullanabilirsiniz. Örneğin, kullanabileceğiniz <xref:System.ServiceModel.Web.WebGetAttribute> veya <xref:System.ServiceModel.Web.WebInvokeAttribute> işlemi yanıt vereceği HTTP fiili denetlemek veya kullanmak için öznitelikler `UriTemplate` özel URI'ler belirtmek için bu ilgili öznitelikler özelliği. [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)][WCF Web HTTP programlama modeli](../../../../docs/framework/wcf/feature-details/wcf-web-http-programming-model.md) konu.  
+ Bu temel özelliklerini özelleştirmek için tam Web programlama modelini kullanabilirsiniz. Örneğin, kullanabileceğiniz <xref:System.ServiceModel.Web.WebGetAttribute> veya <xref:System.ServiceModel.Web.WebInvokeAttribute> işlemi yanıt vereceği HTTP fiili denetlemek veya kullanmak için öznitelikler `UriTemplate` özel URI'ler belirtmek için bu ilgili öznitelikler özelliği. Daha fazla bilgi için bkz: [WCF Web HTTP programlama modeli](../../../../docs/framework/wcf/feature-details/wcf-web-http-programming-model.md) konu.  
   
  JSON veri biçimi genellikle AJAX Hizmetleri kullanılır. XML yerine JSON döndüren bir işlemi oluşturmak için <xref:System.ServiceModel.Web.WebGetAttribute.ResponseFormat%2A> (veya <xref:System.ServiceModel.Web.WebInvokeAttribute.ResponseFormat%2A>) özelliğine <xref:System.ServiceModel.Web.WebMessageFormat.Json>. [Tek başına JSON serileştirmesi](../../../../docs/framework/wcf/feature-details/stand-alone-json-serialization.md) konu, JSON olarak nasıl yerleşik .NET türleri ve verileri sözleşme türleri Haritası gösterir.  
   
@@ -113,7 +115,7 @@ string[] GetCities(string firstLetters, int maxNumber);
 ```  
   
 ## <a name="accessing-ajax-services"></a>AJAX hizmetlere erişme  
- [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]AJAX uç noktaları her zaman JSON ve XML isteklerini kabul edin.  
+ [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] AJAX uç noktaları her zaman JSON ve XML isteklerini kabul edin.  
   
  HTTP POST istekleri bir içerik türü "application/json" JSON olarak kabul edilir ve XML (örneğin, "text/xml") gösteren içerik türü olan XML olarak kabul edilir.  
   

@@ -20,11 +20,11 @@ ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: 2fa6efdc61620647d5c6318746e61e09cdde7a46
-ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
+ms.openlocfilehash: d9650fd6a4fa40cb425c9f15d4a12e6c73d8c599
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/27/2018
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="what-is-windows-communication-foundation"></a>Windows Communication Foundation nedir?
 [!INCLUDE[indigo1](../../../includes/indigo1-md.md)] Hizmet odaklı uygulamalar oluşturmaya yönelik bir çerçevedir. Kullanarak [!INCLUDE[indigo2](../../../includes/indigo2-md.md)], verileri zaman uyumsuz ileti bir hizmet uç noktasından diğerine gönderebilirsiniz. Hizmet uç noktası, IIS tarafından barındırılan sürekli olarak kullanılabilir bir hizmetin parçası veya bir uygulamada barındırılan bir hizmete olabilir. Bir uç nokta veri Hizmeti uç noktasından ister bir hizmetin istemci olabilir. İletileri tek karakter veya XML olarak gönderilen sözcük kadar basit ya da bir ikili veri akışı kadar karmaşık olabilir. Bazı örnek senaryolar şunlardır:  
@@ -44,7 +44,7 @@ ms.lasthandoff: 04/27/2018
  Bu tür uygulamalar varlığını önce olası oluşturulurken [!INCLUDE[indigo2](../../../includes/indigo2-md.md)], [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] uç noktaları geliştirme zamankinden daha kolay hale getirir. Özet olarak, [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] Web Hizmetleri ve Web hizmeti istemcileri oluşturma için yönetilebilir bir yaklaşım sunmak üzere tasarlanmıştır.  
   
 ## <a name="features-of-wcf"></a>WCF özellikleri  
- [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] Aşağıdaki özellikler kümesi içerir. [!INCLUDE[crdefault](../../../includes/crdefault-md.md)] [WCF özellik ayrıntıları](../../../docs/framework/wcf/feature-details/index.md).  
+ [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] Aşağıdaki özellikler kümesi içerir. Daha fazla bilgi için bkz: [WCF özellik ayrıntıları](../../../docs/framework/wcf/feature-details/index.md).  
   
 -   **Hizmet yönlendirmesi**  
   
@@ -60,15 +60,15 @@ ms.lasthandoff: 04/27/2018
   
 -   **Hizmet meta verileri**  
   
-     [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] Hizmet meta verilerini WSDL, XML şeması ve WS-Policy gibi endüstri standartları belirtilen biçimlerini kullanarak yayımlamayı destekler. Bu meta veriler otomatik olarak oluşturmak ve erişmek için istemcileri yapılandırmak için kullanılan [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] Hizmetleri. Meta veriler, HTTP ve HTTPS yayımlanabilir veya Web hizmeti meta veri değişimi standart kullanma. [!INCLUDE[crdefault](../../../includes/crdefault-md.md)] [Meta veri](../../../docs/framework/wcf/feature-details/metadata.md).  
+     [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] Hizmet meta verilerini WSDL, XML şeması ve WS-Policy gibi endüstri standartları belirtilen biçimlerini kullanarak yayımlamayı destekler. Bu meta veriler otomatik olarak oluşturmak ve erişmek için istemcileri yapılandırmak için kullanılan [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] Hizmetleri. Meta veriler, HTTP ve HTTPS yayımlanabilir veya Web hizmeti meta veri değişimi standart kullanma. Daha fazla bilgi için bkz: [meta verileri](../../../docs/framework/wcf/feature-details/metadata.md).  
   
 -   **Veri Anlaşmaları**  
   
-     Çünkü [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] kullanılarak oluşturulan [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)], ayrıca kod kolay uygulamak istediğiniz sözleşmeleri sağlama yöntemleri içerir. Evrensel türdeki sözleşmelerin veri sözleşmesi biridir. Visual C# veya Visual Basic kullanarak hizmetinizi kod, esas olarak, verileri işlemek için en kolay yolu veri varlığa ait özelliklere sahip bir veri varlığı temsil eden sınıfları oluşturarak aynıdır. [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] Bu kolay şekilde verilerle çalışmak için kapsamlı bir sistem içerir. Verilerini temsil eden sınıfları oluşturduktan sonra hizmetiniz tasarladığınız veri türleriyle uyumlu istemcilerin meta verileri otomatik olarak oluşturur. [!INCLUDE[crdefault](../../../includes/crdefault-md.md)] [Veri sözleşmelerini kullanma](../../../docs/framework/wcf/feature-details/using-data-contracts.md)  
+     Çünkü [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] kullanılarak oluşturulan [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)], ayrıca kod kolay uygulamak istediğiniz sözleşmeleri sağlama yöntemleri içerir. Evrensel türdeki sözleşmelerin veri sözleşmesi biridir. Visual C# veya Visual Basic kullanarak hizmetinizi kod, esas olarak, verileri işlemek için en kolay yolu veri varlığa ait özelliklere sahip bir veri varlığı temsil eden sınıfları oluşturarak aynıdır. [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] Bu kolay şekilde verilerle çalışmak için kapsamlı bir sistem içerir. Verilerini temsil eden sınıfları oluşturduktan sonra hizmetiniz tasarladığınız veri türleriyle uyumlu istemcilerin meta verileri otomatik olarak oluşturur. Daha fazla bilgi için bkz: [kullanarak veri sözleşmeleri](../../../docs/framework/wcf/feature-details/using-data-contracts.md)  
   
 -   **Güvenlik**  
   
-     Gizliliğinizi korumak için iletileri şifrelenebilir ve iletileri almasına izin verilmeden önce kimlik doğrulaması yapmalarına gerek duyabilirsiniz. Güvenlik, SSL veya WS-SecureConversation gibi bilinen standartları kullanarak uygulanabilir. [!INCLUDE[crdefault](../../../includes/crdefault-md.md)] [Güvenlik](../../../docs/framework/wcf/feature-details/security.md).  
+     Gizliliğinizi korumak için iletileri şifrelenebilir ve iletileri almasına izin verilmeden önce kimlik doğrulaması yapmalarına gerek duyabilirsiniz. Güvenlik, SSL veya WS-SecureConversation gibi bilinen standartları kullanarak uygulanabilir. Daha fazla bilgi için bkz: [güvenlik](../../../docs/framework/wcf/feature-details/security.md).  
   
 -   **Birden çok aktarımları ve kodlamaları**  
   
@@ -80,7 +80,7 @@ ms.lasthandoff: 04/27/2018
   
 -   **Dayanıklı iletileri**  
   
-     Dayanıklı bir ileti hiçbir zaman iletişimde bir bozulma nedeniyle kaybolur biridir. Dayanıklı ileti deseni iletilerinde her zaman bir veritabanına kaydedilir. Bir kesinti oluşursa, veritabanı bağlantısı geri yüklendiğinde ileti değişimi sürdürmeye sağlar. Windows Workflow Foundation (WF) kullanılarak dayanıklı ileti de oluşturabilirsiniz. [!INCLUDE[crdefault](../../../includes/crdefault-md.md)] [İş akışı Hizmetleri](../../../docs/framework/wcf/feature-details/workflow-services.md).  
+     Dayanıklı bir ileti hiçbir zaman iletişimde bir bozulma nedeniyle kaybolur biridir. Dayanıklı ileti deseni iletilerinde her zaman bir veritabanına kaydedilir. Bir kesinti oluşursa, veritabanı bağlantısı geri yüklendiğinde ileti değişimi sürdürmeye sağlar. Windows Workflow Foundation (WF) kullanılarak dayanıklı ileti de oluşturabilirsiniz. Daha fazla bilgi için bkz: [iş akışı Hizmetleri](../../../docs/framework/wcf/feature-details/workflow-services.md).  
   
 -   **İşlemler**  
   

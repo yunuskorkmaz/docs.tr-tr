@@ -1,12 +1,13 @@
 ---
-title: "Nasıl Yapılır: SSL Sertifikası ile Bir Bağlantı Noktasını Yapılandırma"
-ms.custom: 
+title: 'Nasıl Yapılır: SSL Sertifikası ile Bir Bağlantı Noktasını Yapılandırma'
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - csharp
@@ -16,23 +17,24 @@ helpviewer_keywords:
 - WCF, security mode
 - WCF, security
 ms.assetid: b8abcc8e-a5f5-4317-aca5-01e3c40ab24d
-caps.latest.revision: "18"
+caps.latest.revision: 18
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 3fbd3b640e90ecf0ff5857bd33465e8c60135eac
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: bbf3d4b9888d07a89d1b6a8225a7f7415e8c67cc
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="how-to-configure-a-port-with-an-ssl-certificate"></a>Nasıl Yapılır: SSL Sertifikası ile Bir Bağlantı Noktasını Yapılandırma
-Kendini barındıran oluştururken [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] hizmeti ile <xref:System.ServiceModel.WSHttpBinding> bu kullanımları taşıma güvenliği sınıfı, bir bağlantı noktası bir X.509 sertifikası ile yapılandırmanız da gerekir. Kendini barındıran hizmet oluşturuyorsanız değil, hizmetiniz Internet Information Services (IIS) üzerinde barındırabilir. [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)][HTTP taşıma güvenliği](../../../../docs/framework/wcf/feature-details/http-transport-security.md).  
+Kendini barındıran oluştururken [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] hizmeti ile <xref:System.ServiceModel.WSHttpBinding> bu kullanımları taşıma güvenliği sınıfı, bir bağlantı noktası bir X.509 sertifikası ile yapılandırmanız da gerekir. Kendini barındıran hizmet oluşturuyorsanız değil, hizmetiniz Internet Information Services (IIS) üzerinde barındırabilir. Daha fazla bilgi için bkz: [HTTP taşıma güvenliği](../../../../docs/framework/wcf/feature-details/http-transport-security.md).  
   
  Bir bağlantı noktasını yapılandırmak için kullandığınız araç, makinede çalışan işletim sistemine bağlıdır.  
   
- Çalıştırıyorsanız, [!INCLUDE[ws2003](../../../../includes/ws2003-md.md)] veya [!INCLUDE[wxp](../../../../includes/wxp-md.md)], HttpCfg.exe aracını kullanın. İle [!INCLUDE[ws2003](../../../../includes/ws2003-md.md)] bu aracı yüklenir. İle [!INCLUDE[wxp](../../../../includes/wxp-md.md)], aracı indirebilirsiniz [Windows XP Service Pack 2 Destek Araçları](http://go.microsoft.com/fwlink/?LinkId=88606). [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)][Httpcfg genel bakış](http://go.microsoft.com/fwlink/?LinkId=88605). [Windows Destek Araçları belgeleri](http://go.microsoft.com/fwlink/?LinkId=94840) Httpcfg.exe araç söz dizimi açıklanmıştır.  
+ Çalıştırıyorsanız, [!INCLUDE[ws2003](../../../../includes/ws2003-md.md)] veya [!INCLUDE[wxp](../../../../includes/wxp-md.md)], HttpCfg.exe aracını kullanın. İle [!INCLUDE[ws2003](../../../../includes/ws2003-md.md)] bu aracı yüklenir. İle [!INCLUDE[wxp](../../../../includes/wxp-md.md)], aracı indirebilirsiniz [Windows XP Service Pack 2 Destek Araçları](http://go.microsoft.com/fwlink/?LinkId=88606). Daha fazla bilgi için bkz: [Httpcfg genel bakış](http://go.microsoft.com/fwlink/?LinkId=88605). [Windows Destek Araçları belgeleri](http://go.microsoft.com/fwlink/?LinkId=94840) Httpcfg.exe araç söz dizimi açıklanmıştır.  
   
  Çalıştırıyorsanız, [!INCLUDE[wv](../../../../includes/wv-md.md)], zaten yüklüyse Netsh.exe aracını kullanın.  
   
@@ -66,9 +68,9 @@ Kendini barındıran oluştururken [!INCLUDE[indigo1](../../../../includes/indig
   
 ### <a name="to-get-a-certificates-thumbprint"></a>Bir sertifikanın parmak izi almak için  
   
-1.  İstemci kimlik doğrulaması amacı olan bir X.509 sertifikası bulmak için sertifikalar MMC ek bileşenini kullanın. [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)][Nasıl yapılır: MMC ek bileşeni ile sertifikaları görüntüle](../../../../docs/framework/wcf/feature-details/how-to-view-certificates-with-the-mmc-snap-in.md).  
+1.  İstemci kimlik doğrulaması amacı olan bir X.509 sertifikası bulmak için sertifikalar MMC ek bileşenini kullanın. Daha fazla bilgi için bkz: [nasıl yapılır: MMC ek bileşeni ile sertifikaları görüntüleme](../../../../docs/framework/wcf/feature-details/how-to-view-certificates-with-the-mmc-snap-in.md).  
   
-2.  Sertifikanın parmak izi erişin. [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)][Nasıl yapılır: bir sertifikanın parmak izini alma](../../../../docs/framework/wcf/feature-details/how-to-retrieve-the-thumbprint-of-a-certificate.md).  
+2.  Sertifikanın parmak izi erişin. Daha fazla bilgi için bkz: [nasıl yapılır: bir sertifikanın parmak izini alma](../../../../docs/framework/wcf/feature-details/how-to-retrieve-the-thumbprint-of-a-certificate.md).  
   
 3.  Sertifikanın parmak izini Not Defteri gibi bir metin düzenleyicisine kopyalayın.  
   

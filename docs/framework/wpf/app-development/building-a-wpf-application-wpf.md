@@ -21,11 +21,11 @@ ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: 054f6cd6ae71428aca6b99eb510b2ac34fc6c4b6
-ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
+ms.openlocfilehash: b7003756e5c805c21fc5f4013deccf64b5ba8811
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="building-a-wpf-application-wpf"></a>WPF Uygulaması Oluşturma (WPF)
 [!INCLUDE[TLA#tla_wpf](../../../../includes/tlasharptla-wpf-md.md)] uygulamalar, olarak oluşturulabilen [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] yürütülebilir dosyalar (.exe) kitaplıkları (.dll) veya her iki tür derlemeleri birleşimi. Bu konu nasıl oluşturulacağını tanıtır [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] uygulamaları ve derleme işlemindeki anahtar adımları açıklar.  
@@ -51,7 +51,7 @@ ms.lasthandoff: 04/26/2018
 ### <a name="pre-build-initializations"></a>Derleme öncesi başlatmaları  
  Yapılandırmadan önce [!INCLUDE[TLA2#tla_msbuild](../../../../includes/tla2sharptla-msbuild-md.md)] önemli araçlar ve kitaplıkları, aşağıdakiler dahil konumunu belirler:  
   
--   [!INCLUDE[TLA2#tla_winfx](../../../../includes/tla2sharptla-winfx-md.md)].  
+-   .NET Framework.  
   
 -   [!INCLUDE[TLA2#tla_wcsdk](../../../../includes/tla2sharptla-wcsdk-md.md)] Dizinleri.  
   
@@ -63,7 +63,7 @@ ms.lasthandoff: 04/26/2018
   
 <a name="Resolving_references"></a>   
 ### <a name="resolving-references"></a>Başvuruları çözme  
- Derleme işlemi bulur ve uygulama projesi oluşturmak için gerekli olan derlemeleri bağlar. Bu mantık yer `ResolveAssemblyReference` görev. Olarak bildirilen tüm derlemeler `Reference` proje dosyasında görev arama yolları hakkında bilgi ve sistemde zaten yüklü derlemeleri meta verileri ile birlikte sağlanır. Görev derlemeleri arar ve bu çekirdek filtrelemek için yüklü derlemenin meta verilerini kullanır [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] gösterme çıkış bildirimleri gereksinim derlemeler. Bu, yedek bilgilerin ClickOnce bildirimlerinde önlemek için yapılır. PresentationFramework.dll temsilcisi kabul edilebilir olduğundan Örneğin, bir uygulama ve yerleşik [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] ve dahası tüm bu yana [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] derlemeler var olan her makinede aynı konumda [!INCLUDE[TLA2#tla_winfx](../../../../includes/tla2sharptla-winfx-md.md)] yüklü tüm tüm bilgileri içerecek şekilde gerek yoktur [!INCLUDE[TLA2#tla_winfx](../../../../includes/tla2sharptla-winfx-md.md)] başvuru derlemeleri bildirimlerinde.  
+ Derleme işlemi bulur ve uygulama projesi oluşturmak için gerekli olan derlemeleri bağlar. Bu mantık yer `ResolveAssemblyReference` görev. Olarak bildirilen tüm derlemeler `Reference` proje dosyasında görev arama yolları hakkında bilgi ve sistemde zaten yüklü derlemeleri meta verileri ile birlikte sağlanır. Görev derlemeleri arar ve bu çekirdek filtrelemek için yüklü derlemenin meta verilerini kullanır [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] gösterme çıkış bildirimleri gereksinim derlemeler. Bu, yedek bilgilerin ClickOnce bildirimlerinde önlemek için yapılır. PresentationFramework.dll temsilcisi kabul edilebilir olduğundan Örneğin, bir uygulama ve yerleşik [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] ve dahası tüm bu yana [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] derlemeler mevcut .NET Framework'ün olduğu her makinede aynı konumda yüklü tüm .NET Framework başvuru derlemeleri üzerindeki tüm bilgileri bildirimleri eklemenize gerek yoktur.  
   
 <a name="Markup_Compilation___Pass_1"></a>   
 ### <a name="markup-compilationpass-1"></a>Biçimlendirme derleme — geçiş 1  

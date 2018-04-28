@@ -1,20 +1,17 @@
 ---
-title: "Ölçü Birimleri (F#)"
-description: "Nasıl kayan nokta öğrenin ve F # imzalı tamsayı değerleri, genellikle uzunluğu, ses ve yığın belirtmek için kullanılan ölçü ilişkili."
-keywords: "Visual f #, f # işlevsel programlama"
+title: Ölçü Birimleri (F#)
+description: 'Nasıl kayan nokta öğrenin ve F # imzalı tamsayı değerleri, genellikle uzunluğu, ses ve yığın belirtmek için kullanılan ölçü ilişkili.'
 author: cartermp
 ms.author: phcart
 ms.date: 05/16/2016
 ms.topic: language-reference
-ms.prod: .net
-ms.technology: devlang-fsharp
+ms.prod: dotnet-fsharp
 ms.devlang: fsharp
-ms.assetid: cb2eb658-df6c-422e-afad-97422609c773
-ms.openlocfilehash: 2d0683e864c5684a78c02e177c296d3067295723
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.openlocfilehash: 336a1e04426fb39f5ceb98e06a06cd7eadc36e85
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="units-of-measure"></a>Ölçü Birimleri
 
@@ -122,4 +119,4 @@ F # PowerPack'ten kullanılabilir bir birim kitaplıktır. Birim kitaplığı s�
 
 
 ## <a name="see-also"></a>Ayrıca Bkz.
-[F # dili başvurusu](index.md)
+[F# Dili Başvurusu](index.md)

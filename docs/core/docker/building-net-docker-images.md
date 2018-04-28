@@ -1,24 +1,22 @@
 ---
-title: ".NET Core Docker görüntülerinizi oluşturmak"
-description: "Docker görüntüler ve .NET Core anlama"
-keywords: .NET, .NET Core, Docker
+title: .NET Core Docker görüntülerinizi oluşturmak
+description: Docker görüntüler ve .NET Core anlama
 author: jralexander
 ms.author: johalex
 ms.date: 11/06/2017
 ms.topic: tutorial
-ms.prod: .net-core
+ms.prod: dotnet-core
 ms.technology: dotnet-docker
 ms.devlang: dotnet
-ms.assetid: 03c28597-7e73-46d6-a9c3-f9cb55642739
 ms.custom: mvc
 manager: wpickett
 ms.workload:
 - dotnetcore
-ms.openlocfilehash: d5631bdbc0334640b290c08df17cba0bfe99fe85
-ms.sourcegitcommit: c3957fdb990060559d73cca44ab3e2c7b4d049c0
+ms.openlocfilehash: c1983be59b4a961cabd94915852e0cab7811682c
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/05/2018
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="building-docker-images-for-net-core-applications"></a>.NET Core uygulamaları için Docker görüntülerinizi oluşturmak
 
@@ -109,14 +107,14 @@ Kullandığı [Docker çok aşama yapı özelliği](https://docs.docker.com/engi
 
 Derlemek ve çalıştırmak için aşağıdaki öğeleri yükleyin:
 
-#### <a name="net-core-20-sdk"></a>.NET Core 2.0 SDK
+#### <a name="net-core-20-sdk"></a>.NET core 2.0 SDK'sı
 
 * Yükleme [.NET Core SDK 2.0](https://www.microsoft.com/net/core).
 
 * Henüz yapmadıysanız, sık kullanılan kod düzenleyicisinde yükleyin.
 
 > [!TIP]
-> Kod Düzenleyicisi yüklemeniz gerekiyor? Try [Visual Studio](https://visualstudio.com/downloads)!
+> Kod Düzenleyicisi yüklemeniz gerekiyor? Deneyin [Visual Studio](https://visualstudio.com/downloads)!
 
 #### <a name="installing-docker-client"></a>Docker istemcisi yükleme
 
@@ -163,7 +161,7 @@ cd aspnetapp
 dotnet run
 ```
 
-Uygulama başlatıldıktan sonra ziyaret **http://localhost: 5000** web tarayıcınızda.
+Uygulama başlatıldıktan sonra ziyaret **http://localhost:5000** web tarayıcınızda.
 
 ### <a name="build-and-run-the-sample-with-docker-for-linux-containers"></a>Derleme ve örnek Linux kapsayıcıları için Docker ile çalıştırma
 
@@ -178,7 +176,7 @@ docker run -it --rm -p 5000:80 --name aspnetcore_sample aspnetapp
 > [!NOTE]
 > `docker run` '-P' bağımsız değişkeni eşlemeleri bağlantı noktası 5000 kapsayıcının 80 numaralı bağlantı noktasına yerel makinenizde (bağlantı noktası eşleme form `host:container`). Daha fazla bilgi için bkz: [çalıştırmak docker](https://docs.docker.com/engine/reference/commandline/exec/) komut satırı parametreleri başvuru.
 
-Uygulama başlatıldıktan sonra ziyaret **http://localhost: 5000** web tarayıcınızda.
+Uygulama başlatıldıktan sonra ziyaret **http://localhost:5000** web tarayıcınızda.
 
 ### <a name="build-and-run-the-sample-with-docker-for-windows-containers"></a>Derleme ve örnek ile Windows için Docker kapsayıcıları çalıştırma
 
@@ -191,7 +189,7 @@ docker run -it --rm --name aspnetcore_sample aspnetapp
 ```
 
 > [!IMPORTANT]
-> İçin gezinmesi gereken **kapsayıcı IP adresi** (aksine http://localhost) doğrudan tarayıcınızda Windows kapsayıcıları kullanırken. Aşağıdaki adımlarla, kapsayıcı IP adresini elde edebilirsiniz:
+> İçin gezinmesi gereken **kapsayıcı IP adresi** (tersine http://localhost) doğrudan tarayıcınızda Windows kapsayıcıları kullanırken. Aşağıdaki adımlarla, kapsayıcı IP adresini elde edebilirsiniz:
 
 * Başka bir komut istemi açın.
 * Çalıştırma `docker ps` çalışan kapsayıcıları görmek için. "Aspnetcore_sample" kapsayıcı olması.

@@ -22,11 +22,11 @@ ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: 7fc755ff7f1b6c583a1e9aa1bc209495563812f0
-ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
+ms.openlocfilehash: 43eaa4ffe562cf1dde5abd7e7540125dcf383732
+ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
 ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="importing-schema-to-generate-classes"></a>Sınıf Oluşturmak için Şemayı İçe Aktarma
 İle kullanılabilen şemaları sınıfları oluşturmak için [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)], kullanın <xref:System.Runtime.Serialization.XsdDataContractImporter> sınıfı. Bu konu işlemini ve farklılıkları açıklar.  
@@ -154,7 +154,7 @@ ms.lasthandoff: 04/26/2018
  `ReferencedTypes` Özelliğine karşılık gelen **/reference** geçiş işlemi Svcutil.exe aracının belirli modlarında.  
   
 > [!NOTE]
->  Svcutil.exe kullanırken veya (içinde [!INCLUDE[vsprvs](../../../../includes/vsprvs-md.md)]) **hizmet Başvurusu Ekle** araçları, tüm MsCorLib.dll türlerini otomatik olarak başvurulan.  
+>  Svcutil.exe kullanırken veya (Visual Studio) **hizmet Başvurusu Ekle** araçları, tüm MsCorLib.dll türlerini otomatik olarak başvurulan.  
   
 #### <a name="import-options-importing-non-datacontract-schema-as-ixmlserializable-types"></a>İçeri aktarma seçenekleri: Olmayan DataContract şema IXmlSerializable türleri olarak alma  
  <xref:System.Runtime.Serialization.XsdDataContractImporter> Şemasının sınırlı bir alt kümesini destekler. Desteklenmeyen şema yapıları (örneğin, XML öznitelikleri) varsa, içe aktarma girişimi bir özel durum ile başarısız olur. Ancak, ayarı <xref:System.Runtime.Serialization.ImportOptions.ImportXmlType%2A> özelliğine `true` desteklenen şema aralığını genişletir. Ayarlandığında `true`, <xref:System.Runtime.Serialization.XsdDataContractImporter> uygulama türleri oluşturur <xref:System.Xml.Serialization.IXmlSerializable> arabirimi. Bu, bu tür XML gösterimini doğrudan erişim sağlar.  

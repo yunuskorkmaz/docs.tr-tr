@@ -1,20 +1,17 @@
 ---
 title: Simge ve İşleç Başvurusu (F#)
 description: 'Simgeler ve F # programlama dili kullanılan işleçler hakkında bilgi edinin.'
-keywords: 'Visual f #, f # işlevsel programlama'
 author: cartermp
 ms.author: phcart
 ms.date: 04/04/2018
 ms.topic: language-reference
-ms.prod: .net
-ms.technology: devlang-fsharp
+ms.prod: dotnet-fsharp
 ms.devlang: fsharp
-ms.assetid: ab453800-d4d0-4a11-9d55-2b358d56af27
-ms.openlocfilehash: 2fa4504c7059b4559b364d4000fe4ec6131430e5
-ms.sourcegitcommit: b750a8e3979749b214e7e10c82efb0a0524dfcb1
+ms.openlocfilehash: 5b4b89ae29a067f2c793862a555fbcf78a800d88
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/09/2018
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="symbol-and-operator-reference"></a>Simge ve İşleç Başvurusu
 
@@ -138,12 +135,12 @@ Aşağıdaki tabloda en düşük önceliğe siparişe en yüksek önceliğe F # 
 |`or`, <code>&#124;&#124;</code>|Sol|
 |`&`, `&&`|Sol|
 |`:>`, `:?>`|Sağ|
-|`!=`*op*, `<`*op*, `>`*op*, `=`, <code>&#124;</code>*op*, `&`*op*, `&`<br /><br />(de dahil olmak üzere `<<<`, `>>>`, <code>&#124;&#124;&#124;</code>, `&&&`)|Sol|
+|`!=`*OP*, `<` *op*, `>` *op*, `=`, <code>&#124;</code> *op*, `&` *op* , `&`<br /><br />(de dahil olmak üzere `<<<`, `>>>`, <code>&#124;&#124;&#124;</code>, `&&&`)|Sol|
 |`^`*OP*<br /><br />(de dahil olmak üzere `^^^`)|Sağ|
 |`::`|Sağ|
 |`:?`|Değil ilişkilendirilebilir|
-|`-`*op*, `+`*op*|Bu simgeleri kullanımlarını infix uygular|
-|`*`*op*, `/`*op*, `%`*op*|Sol|
+|`-`*OP*, `+` *op*|Bu simgeleri kullanımlarını infix uygular|
+|`*`*OP*, `/` *op*, `%` *op*|Sol|
 |`**`*OP*|Sağ|
 |`f x` (işlev uygulaması)|Sol|
 |<code>&#124;</code> (Desen eşleştirmesi)|Sağ|

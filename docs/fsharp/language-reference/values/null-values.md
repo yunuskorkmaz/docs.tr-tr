@@ -1,20 +1,17 @@
 ---
-title: "Boş Değerler (F#)"
-description: "Nasıl null değer F # programlama dili kullanılır öğrenin."
-keywords: "Visual f #, f # işlevsel programlama"
+title: Boş Değerler (F#)
+description: 'Nasıl null değer F # programlama dili kullanılır öğrenin.'
 author: cartermp
 ms.author: phcart
 ms.date: 05/16/2016
 ms.topic: language-reference
-ms.prod: .net
-ms.technology: devlang-fsharp
+ms.prod: dotnet-fsharp
 ms.devlang: fsharp
-ms.assetid: 68ebd261-51cf-4582-b2dc-44c84d1c2500
-ms.openlocfilehash: 01c14de00eb5efd0952145ffc8aabe69d65a3a48
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.openlocfilehash: 8d302cc78c5de582f58c6f9b9dea7b23ee7ddfea
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="null-values"></a>Boş Değerler
 
@@ -45,6 +42,6 @@ Rastgele bir değerin boş olup olmadığını denetlemek için aşağıdaki kod
 [!code-fsharp[Main](../../../../samples/snippets/fsharp/lang-ref-1/snippet703.fs)]
 
 ## <a name="see-also"></a>Ayrıca Bkz.
-[Değerleri](index.md)
+[Değerler](index.md)
 
-[Eşleşme ifadeleri](../match-expressions.md)
+[Eşleşme İfadeleri](../match-expressions.md)

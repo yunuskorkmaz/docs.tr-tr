@@ -10,17 +10,17 @@ ms.technology:
 ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 381fdc3a-6e6c-4890-87fe-91cca6f4b476
-caps.latest.revision: ''
+caps.latest.revision: 45
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: 70d1b76108c9eab0280e6499ab2b4d0c70def853
-ms.sourcegitcommit: c883637b41ee028786edceece4fa872939d2e64c
+ms.openlocfilehash: ba8a2eb97b071608b16b5549ead403b578329ee5
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/26/2018
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="wcf-web-http-programming-model-overview"></a>WCF Web HTTP Programlama Modeli Genel Bakış
 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] WEB HTTP programlama modeli sağlar WEB HTTP Hizmetleri oluşturmak için gereken temel öğeleri [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]. [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] WEB HTTP Hizmetleri yelpazedeki Web tarayıcıları gibi olası istemcileri tarafından erişilecek tasarlanmıştır ve aşağıdaki benzersiz gereksinimlere sahiptir:  
@@ -33,13 +33,13 @@ ms.lasthandoff: 03/26/2018
   
  [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] WEB HTTP programlama modeli genişletir ulaşabileceği [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] WEB HTTP Hizmetleri, AJAX ve JSON Hizmetleri ve dağıtım (ATOM/RSS) akışları içeren Web stili senaryoları için. [!INCLUDE[crabout](../../../../includes/crabout-md.md)] AJAX ve JSON Hizmetleri bkz [AJAX tümleştirme ve JSON desteği](../../../../docs/framework/wcf/feature-details/ajax-integration-and-json-support.md). [!INCLUDE[crabout](../../../../includes/crabout-md.md)] Dağıtım, bkz: [WCF dağıtımı genel bakış](../../../../docs/framework/wcf/feature-details/wcf-syndication-overview.md).  
   
- Bir WEB HTTP hizmetinden döndürülen veri türleri hakkında ek bir kısıtlama yoktur. Bir WEB HTTP hizmeti işleminin serializable bir tür döndürülebilir. Hangi veri türleri bir URL belirtilebilir bir sınırlama yoktur bir web tarayıcısı tarafından WEB HTTP hizmeti işlemleri olabileceğinden çağırır. Varsayılan olarak desteklenen hangi türleri hakkında daha fazla bilgi için bkz: **UriTemplate sorgu dizesi parametreleri ve URL'leri** bölümüne bakın. Varsayılan davranış, gerçek parametre türü için bir URL içinde belirtilen parametreler dönüştürme belirten kendi T:System.ServiceModel.Dispatcher.QueryStringConverter uygulamasını sağlayarak değiştirilebilir. [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)]<xref:System.ServiceModel.Dispatcher.QueryStringConverter>  
+ Bir WEB HTTP hizmetinden döndürülen veri türleri hakkında ek bir kısıtlama yoktur. Bir WEB HTTP hizmeti işleminin serializable bir tür döndürülebilir. Hangi veri türleri bir URL belirtilebilir bir sınırlama yoktur bir web tarayıcısı tarafından WEB HTTP hizmeti işlemleri olabileceğinden çağırır. Varsayılan olarak desteklenen hangi türleri hakkında daha fazla bilgi için bkz: **UriTemplate sorgu dizesi parametreleri ve URL'leri** bölümüne bakın. Varsayılan davranış, gerçek parametre türü için bir URL içinde belirtilen parametreler dönüştürme belirten kendi T:System.ServiceModel.Dispatcher.QueryStringConverter uygulamasını sağlayarak değiştirilebilir. Daha fazla bilgi için bkz: <xref:System.ServiceModel.Dispatcher.QueryStringConverter>  
   
 > [!CAUTION]
 >  İle yazılmış Hizmetler [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] WEB HTTP programlama modeli SOAP iletilerine kullanmayın. SOAP kullanılmadığı için güvenlik özellikleri tarafından sağlanan [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] kullanılamaz. Ancak taşıma tabanlı güvenlik hizmetiniz HTTPS ile barındırarak kullanabilirsiniz. [!INCLUDE[crabout](../../../../includes/crabout-md.md)] [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] Güvenlik, bkz: [güvenliğine genel bakış](../../../../docs/framework/wcf/feature-details/security-overview.md)  
   
 > [!WARNING]
->  WebDAV uzantısının IIS yüklemek, tüm PUT isteklerini işlemek için uzantı çalışır WebDAV bir HTTP 405 hata dönmek Web HTTP Hizmetleri neden olabilir. Bu sorunu çözmek için WebDAV uzantısının kaldırın veya WebDAV uzantısı, web siteniz için devre dışı bırakabilirsiniz. [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)] [IIS ve WebDav](http://learn.iis.net/page.aspx/357/webdav-for-iis-70/)  
+>  WebDAV uzantısının IIS yüklemek, tüm PUT isteklerini işlemek için uzantı çalışır WebDAV bir HTTP 405 hata dönmek Web HTTP Hizmetleri neden olabilir. Bu sorunu çözmek için WebDAV uzantısının kaldırın veya WebDAV uzantısı, web siteniz için devre dışı bırakabilirsiniz. Daha fazla bilgi için bkz: [IIS ve WebDav](http://learn.iis.net/page.aspx/357/webdav-for-iis-70/)  
   
 ## <a name="uri-processing-with-uritemplate-and-uritemplatetable"></a>UriTemplate ve UriTemplateTable işleme URI  
  URI şablonları, yapısal olarak benzer URI'ler büyük kümesini ifade etmek için verimli bir sözdizimi sağlar. Örneğin, aşağıdaki şablonu, "a" ile başlamalı ve bitmelidir "c" Ara kesiminin ile değeri dikkate almaksızın üç segment URI'ler kümesini ifade eder: bir / {/c segmentlere}  
@@ -125,12 +125,12 @@ interface ICustomer
 |<xref:System.UInt32>|0 - 4,294,967,295|  
 |<xref:System.UInt64>|0 - 18,446,744,073,709,551,615|  
 |<xref:System.Single>|-3.402823e38 - 3.402823e38 (üstel gösterimde gerekli değildir)|  
-|<xref:System.Double>|-1.79769313486232e308 - 1.79769313486232e308 (exponent notation is not required)|  
+|<xref:System.Double>|-1.79769313486232e308 - 1.79769313486232e308 (üstel gösterimde gerekli değildir)|  
 |<xref:System.Char>|Herhangi bir tek karakteri|  
 |<xref:System.Decimal>|Tüm ondalık standart gösteriminde (üs yok)|  
 |<xref:System.Boolean>|TRUE veya False (duyarsız büyük-küçük harf)|  
 |<xref:System.String>|Herhangi bir dize (dize desteklenmez ve yok kaçış yapılır null)|  
-|<xref:System.DateTime>|AA/GG/YYYY<br /><br /> MM/DD/YYYY HH:MM:SS [AM&#124;PM]<br /><br /> Ayın günü yıl<br /><br /> Month Day Year HH:MM:SS [AM&#124;PM]|  
+|<xref:System.DateTime>|AA/GG/YYYY<br /><br /> AA/GG/YYYY SS: DD: [AM&AMP;#124;PM]<br /><br /> Ayın günü yıl<br /><br /> Ay gün yıl ss [AM&#124;PM]|  
 |<xref:System.TimeSpan>|DD.HH:MM:SS<br /><br /> Burada gg gün, ss = = saat, dd dakika, SS = = saniye|  
 |<xref:System.Guid>|Örneğin bir GUID:<br /><br /> 936DA01F-9ABD-4d9d-80C7-02AF85C822A8|  
 |<xref:System.DateTimeOffset>|AA/GG/YYYY SS: DD: SS: DD<br /><br /> Burada gg gün, ss = = saat, dd dakika, SS = = saniye|  

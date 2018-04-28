@@ -14,11 +14,11 @@ ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: 94eca5c2aad919fe46fa75626954e10bb68f1110
-ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
+ms.openlocfilehash: b34a0118c9223e8d09bf56de39e3fea1b115688f
+ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
 ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="windows-workflow-foundation-4-performance"></a>Windows Workflow Foundation 4 performansı
 Dustin Metzgar  
@@ -27,7 +27,7 @@ Dustin Metzgar
   
  Microsoft Corporation ' ın Eylül 2010  
   
- Microsoft [!INCLUDE[netfx40_long](../../../includes/netfx40-long-md.md)] önemli bir sürümünü içeren [!INCLUDE[wf](../../../includes/wf-md.md)] performansı yoğun yatırım ile.  Bu yeni bir düzeltme önemli tasarım değişiklikleri önceki sürümlerinden tanıtır [!INCLUDE[wf1](../../../includes/wf1-md.md)] .NET Framework 3.0 bir parçası olarak gönderilen ve [!INCLUDE[netfx35_short](../../../includes/netfx35-short-md.md)]. Programlama modeli, çalışma zamanı ve performansını ve kullanılabilirliğini önemli ölçüde artırmak için araç çekirdek yeniden tasarlanmış olmuştur. Bu konu, bu düzeltmeleri önemli performans özelliklerini gösterir ve bu önceki sürüm karşı karşılaştırır.  
+ Microsoft [!INCLUDE[netfx40_long](../../../includes/netfx40-long-md.md)] büyük düzeltme ağır Yatırımlar ile Windows Workflow Foundation (WF), performans içerir.  Bu yeni bir düzeltme önemli tasarım değişiklikleri önceki sürümlerinden tanıtır [!INCLUDE[wf1](../../../includes/wf1-md.md)] .NET Framework 3.0 bir parçası olarak gönderilen ve [!INCLUDE[netfx35_short](../../../includes/netfx35-short-md.md)]. Programlama modeli, çalışma zamanı ve performansını ve kullanılabilirliğini önemli ölçüde artırmak için araç çekirdek yeniden tasarlanmış olmuştur. Bu konu, bu düzeltmeleri önemli performans özelliklerini gösterir ve bu önceki sürüm karşı karşılaştırır.  
   
  Büyüklük WF3 WF4 arasındaki tarafından ayrı ayrı iş akışı bileşen performansı artar.  Bu, elle kodlanmış arasında boşluk bırakır [!INCLUDE[indigo1](../../../includes/indigo1-md.md)] Hizmetleri ve [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] oldukça küçük olacak şekilde iş akışı hizmetleri.  İş akışı gecikme süresi içinde WF4 önemli ölçüde düşürdü.  2.5-3.0 faktörüyle Kalıcılık performans artar.  İş akışı izleme yoluyla sistem durumu izleme önemli ölçüde daha az yüke sahiptir.  Bu, geçiş veya WF4 uygulamalarınızda benimsemek için nedenleri çekici.  
   
@@ -192,7 +192,7 @@ public sealed class CompensableActivityEmptyCompensation : CodeActivity
  "Bileşen düzeyinde performans karşılaştırmaları" önceki bölümde gösterildiği gibi önemli ölçüde azalma WF3 WF4 arasındaki yükündeki açıldı.  [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] İş akışı Hizmetleri artık neredeyse aynı el kodlanmış performansını [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] hizmetleri hala ancak sahip tüm avantajlarını [!INCLUDE[wf1](../../../includes/wf1-md.md)] çalışma zamanı.  Bu test senaryosu karşılaştıran bir [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] karşı hizmet bir [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] WF4 iş akışı hizmetinde.  
   
 ### <a name="online-store-service"></a>Çevrimiçi depolama hizmeti  
- Gücü birini [!INCLUDE[wf2](../../../includes/wf2-md.md)] birkaç hizmetleri kullanan işlemleri oluşturma yeteneği.  Bu örnekte, bir sıra satın almak için iki hizmet çağrıları düzenler bir çevrimiçi mağaza hizmeti yok.  İlk adım bir sipariş doğrulama hizmetini kullanarak sipariş doğrulamaktır.  İkinci adım ambar hizmetini kullanarak sipariş doldurmaktır.  
+ Windows Workflow Foundation'ın gücünü de birkaç hizmetleri kullanan işlemleri oluşturan yeteneğidir.  Bu örnekte, bir sıra satın almak için iki hizmet çağrıları düzenler bir çevrimiçi mağaza hizmeti yok.  İlk adım bir sipariş doğrulama hizmetini kullanarak sipariş doğrulamaktır.  İkinci adım ambar hizmetini kullanarak sipariş doldurmaktır.  
   
  İki arka uç, sipariş doğrulama ve hizmetlerini ambarı hizmeti, her iki testler için aynı kalır.  Değişen orchestration gerçekleştirir çevrimiçi mağaza hizmetinin parçasıdır.  Bir durumda, hizmet el olarak kodlanmıştır bir [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] hizmet.  Diğer durumlarda, hizmet olarak yazılmış bir [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] WF4 iş akışı hizmetinde. [!INCLUDE[wf1](../../../includes/wf1-md.md)]-Bu test için izleme ve kalıcılığı kapalıdır gibi belirli özellikleri.  
   
@@ -448,7 +448,7 @@ public class Workflow1 : Activity
  Sistem durumu izleme kabaca üzerinde üretilen işi %3 bir etkisi yoktur.  Temel profilinin maliyet yaklaşık % 8'dir.  
   
 ## <a name="interop"></a>Birlikte çalışma  
- WF4 olduğu neredeyse Tamamlandı'nin yeniden [!INCLUDE[wf1](../../../includes/wf1-md.md)] ve bu nedenle WF3 iş akışları ve etkinlikler WF4 ile doğrudan uyumlu değil.  Benimsenen birçok müşteri [!INCLUDE[wf2](../../../includes/wf2-md.md)] erken şirket içi veya üçüncü taraf iş akışı tanımları ve özel etkinlikler için WF3 sahip olacaktır.  WF4 geçişi kolaylaştırmak için bir yol WF4 iş akışı içinde WF3 etkinliklerden yürütebilir birlikte çalışma etkinlik kullanmaktır.  Önerilir <xref:System.Activities.Statements.Interop> etkinliği yalnızca kullanılabilir gerektiğinde. [!INCLUDE[crabout](../../../includes/crabout-md.md)] WF4 kullanıma geçiş [WF4 Geçiş Kılavuzu](http://go.microsoft.com/fwlink/?LinkID=153313).  
+ WF4 olduğu neredeyse Tamamlandı'nin yeniden [!INCLUDE[wf1](../../../includes/wf1-md.md)] ve bu nedenle WF3 iş akışları ve etkinlikler WF4 ile doğrudan uyumlu değil.  Windows Workflow Foundation erken benimsenen birçok müşteri şirket içi veya üçüncü taraf iş akışı tanımları ve özel etkinlikler için WF3 sahip olacaktır.  WF4 geçişi kolaylaştırmak için bir yol WF4 iş akışı içinde WF3 etkinliklerden yürütebilir birlikte çalışma etkinlik kullanmaktır.  Önerilir <xref:System.Activities.Statements.Interop> etkinliği yalnızca kullanılabilir gerektiğinde. [!INCLUDE[crabout](../../../includes/crabout-md.md)] WF4 kullanıma geçiş [WF4 Geçiş Kılavuzu](http://go.microsoft.com/fwlink/?LinkID=153313).  
   
 ### <a name="environment-setup"></a>Ortam Kurulumu  
  ![İş akışı performansı sınama ortamı](../../../docs/framework/windows-workflow-foundation/media/wfperfenvironment.gif "WFPerfEnvironment")  

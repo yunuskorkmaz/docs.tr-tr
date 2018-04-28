@@ -1,20 +1,17 @@
 ---
-title: "Tür Uzantıları (F#)"
-description: "Önceden tanımlanmış nesne türü için yeni üye eklemek F # tür uzantıları nasıl izin öğrenin."
-keywords: "Visual f #, f # işlevsel programlama"
+title: Tür Uzantıları (F#)
+description: 'Önceden tanımlanmış nesne türü için yeni üye eklemek F # tür uzantıları nasıl izin öğrenin.'
 author: cartermp
 ms.author: phcart
 ms.date: 05/16/2016
 ms.topic: language-reference
-ms.prod: .net
-ms.technology: devlang-fsharp
+ms.prod: dotnet-fsharp
 ms.devlang: fsharp
-ms.assetid: c9d7ce27-f5ad-4766-b9e9-34187da5bc24
-ms.openlocfilehash: f78f8689e95fc1547f1a2b17c615592c00051f7c
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.openlocfilehash: 3399778799fbf0f8eee56e332135656150918a60
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="type-extensions"></a>Tür Uzantıları
 
@@ -107,6 +104,6 @@ Bu kodda, iki tür bir listesi için tek uzantısı üyesi tanımlayarak aşır�
 
 
 ## <a name="see-also"></a>Ayrıca Bkz.
-[F # dili başvurusu](index.md)
+[F# Dili Başvurusu](index.md)
 
-[Üyeleri](members/index.md)
+[Üyeler](members/index.md)

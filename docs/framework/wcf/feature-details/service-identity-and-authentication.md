@@ -1,13 +1,13 @@
 ---
-title: "Kimlik Doğrulama ile Hizmet Kimliği"
-ms.custom: 
+title: Kimlik Doğrulama ile Hizmet Kimliği
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - dotnet-clr
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - csharp
@@ -15,17 +15,17 @@ dev_langs:
 helpviewer_keywords:
 - authentication [WCF], specifying the identity of a service
 ms.assetid: a4c8f52c-5b30-45c4-a545-63244aba82be
-caps.latest.revision: 
+caps.latest.revision: 32
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: 579f41a213564dd18dae719a14170100903efd92
-ms.sourcegitcommit: 973a12d1e6962cd9a9c263fbfaad040ec8267fe9
+ms.openlocfilehash: a0229ce5c6b7081ae493af22b0daeee444736783
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/22/2018
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="service-identity-and-authentication"></a>Kimlik Doğrulama ile Hizmet Kimliği
 Bir hizmetin *uç noktası kimlik*hizmeti Web Hizmetleri Açıklama Dili (WSDL) oluşturulan bir değerdir. Herhangi bir istemciye yayılan, bu değer, hizmetin kimliğini doğrulamak için kullanılır. İstemci iletişimi için bir bitiş noktasına başlatır ve hizmeti kendisi için istemci kimlik doğrulaması sonra istemci uç noktası kimlik doğrulama işlemi döndürdü gerçek değer uç noktası kimlik değerle karşılaştırır. Eşleşirlerse, istemci beklenen hizmet uç noktası başvurduğunu emin olur. Bu karşı bir koruma görür *kimlik avı* kötü amaçlı bir hizmet tarafından barındırılan bir uç nokta yönlendiren bir istemci engelleyerek.  
@@ -48,7 +48,7 @@ Bir hizmetin *uç noktası kimlik*hizmeti Web Hizmetleri Açıklama Dili (WSDL) 
  <xref:System.ServiceModel.EndpointAddress.Identity%2A> Özelliği <xref:System.ServiceModel.EndpointAddress> sınıfı, istemci tarafından adlı hizmeti kimliğini temsil eder. Hizmet yayımlar <xref:System.ServiceModel.EndpointAddress.Identity%2A> meta verilerinde. İstemci Geliştirici çalıştığında [ServiceModel meta veri yardımcı Programracı (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md) Hizmeti uç noktası karşı üretilen yapılandırma hizmetin değerini içeren <xref:System.ServiceModel.EndpointAddress.Identity%2A> özelliği. [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] (Güvenliği ile yapılandırılmışsa) altyapısı hizmeti belirtilen kimlik sahip olduğunu doğrular.  
   
 > [!IMPORTANT]
->  Meta veri hizmeti beklenen kimliğini içerdiğinden, hizmeti meta verileri güvenli araçlarla, örneğin, hizmet için bir HTTPS uç noktası oluşturarak ortaya önerilir. [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)] [Nasıl yapılır: meta veri uç noktalarını güvenli](../../../../docs/framework/wcf/feature-details/how-to-secure-metadata-endpoints.md).  
+>  Meta veri hizmeti beklenen kimliğini içerdiğinden, hizmeti meta verileri güvenli araçlarla, örneğin, hizmet için bir HTTPS uç noktası oluşturarak ortaya önerilir. Daha fazla bilgi için bkz: [nasıl yapılır: meta veri uç noktalarını güvenli](../../../../docs/framework/wcf/feature-details/how-to-secure-metadata-endpoints.md).  
   
 ## <a name="identity-types"></a>Kimlik türleri  
  Bir hizmeti kimlikleri altı tür sağlayabilir. İçinde bulunan bir öğeye karşılık gelen her kimlik türü `<identity>` yapılandırma öğesinde. Kullanılan türü senaryo ve hizmetin güvenlik gereksinimlerine bağlıdır. Aşağıdaki tabloda, her kimlik türü açıklanmaktadır.  

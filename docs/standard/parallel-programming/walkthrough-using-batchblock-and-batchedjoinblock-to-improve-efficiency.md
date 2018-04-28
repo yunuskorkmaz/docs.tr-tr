@@ -17,11 +17,11 @@ manager: wpickett
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: c9ea53fb186551a24f678d905d35caaaa0c26494
-ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
-ms.translationtype: HT
+ms.openlocfilehash: e9305fd2a0e61a71f6875d6061f835e9cdae5dd1
+ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="walkthrough-using-batchblock-and-batchedjoinblock-to-improve-efficiency"></a>İzlenecek yol: Verimliliği Artırmak için BatchBlock ve BatchedJoinBlock'u Kullanma
 TPL veri akışı kitaplığı sağlar <xref:System.Threading.Tasks.Dataflow.BatchBlock%601?displayProperty=nameWithType> ve <xref:System.Threading.Tasks.Dataflow.BatchedJoinBlock%602?displayProperty=nameWithType> , alabilir ve arabellek bir veya daha fazla kaynaklardan veri ve o arabelleğe alınan verileri bir koleksiyon olarak kullanıma yayılması böylece sınıfları. Bu toplu mekanizması, bir veya daha çok kaynaktan veri toplamak ve ardından birden çok veri öğesi toplu iş olarak işlem durumlarda faydalıdır. Örneğin, bir veritabanına kayıtları eklemek için veri akışı kullanan bir uygulamayı göz önünde bulundurun. Bu işlem, birden çok öğe aynı zamanda bir kerede yerine sırayla eklenirse daha etkili olabilir. Bu belge nasıl kullanılacağını açıklar <xref:System.Threading.Tasks.Dataflow.BatchBlock%601> böyle bir veritabanını verimliliğini artırmak için sınıf ekleme işlemleri. Ayrıca nasıl kullanılacağını açıklar <xref:System.Threading.Tasks.Dataflow.BatchedJoinBlock%602> sonuçları ve programı bir veritabanından okuduğunda oluşan özel durumları yakalamak için sınıf.
@@ -35,7 +35,7 @@ TPL veri akışı kitaplığı sağlar <xref:System.Threading.Tasks.Dataflow.Bat
 2.  Northwind veritabanı Northwind.sdf, bilgisayarınızda bulunan bir kopya olduğundan emin olun. Bu dosya, klasör % Program Files%\Microsoft SQL Server Compact Edition\v3.5\Samples genellikle bulunur\\.  
   
     > [!IMPORTANT]
-    >  Bazı Windows sürümlerinde Northwind.sdf için varsa bağlanamıyor [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] yönetici olmayan modda çalışıyor. İçin Northwind.sdf bağlanmak için başlangıç [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] veya [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] Komut İstemi'nde **yönetici olarak çalıştır** modu.  
+    >  Bazı Windows sürümlerinde, Visual Studio yönetici olmayan modda çalışıyorsa, Northwind.sdf için bağlantı kuramıyor. Visual Studio veya Visual Studio komut istemi başlatmak için Northwind.sdf bağlanmak için **yönetici olarak çalıştır** modu.  
   
  Bu kılavuz aşağıdaki bölümleri içerir:  
   
@@ -57,7 +57,7 @@ TPL veri akışı kitaplığı sağlar <xref:System.Threading.Tasks.Dataflow.Bat
 ## <a name="creating-the-console-application"></a>Konsol Uygulaması Oluşturma  
   
 <a name="consoleApp"></a>   
-1.  İçinde [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)], bir Visual C# veya Visual Basic oluşturma **konsol uygulaması** projesi. Bu belgede, proje adı `DataflowBatchDatabase`.  
+1.  Visual Studio'da bir Visual C# veya Visual Basic oluşturma **konsol uygulaması** projesi. Bu belgede, proje adı `DataflowBatchDatabase`.  
   
 2.  Projenizde, System.Data.SqlServerCe.dll başvuru ve System.Threading.Tasks.Dataflow.dll bir başvuru ekleyin.  
   

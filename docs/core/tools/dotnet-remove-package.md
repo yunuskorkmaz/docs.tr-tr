@@ -1,18 +1,19 @@
 ---
-title: "DotNet Paketi komutu - .NET Core CLI Kaldır"
-description: "Dotnet Kaldır Paketi komutu NuGet paketi başvurusu projeye kaldırmak için uygun bir seçeneği sağlar."
+title: DotNet Paketi komutu - .NET Core CLI Kaldır
+description: Dotnet Kaldır Paketi komutu NuGet paketi başvurusu projeye kaldırmak için uygun bir seçeneği sağlar.
 author: mairaw
 ms.author: mairaw
 ms.date: 08/14/2017
-ms.topic: article
-ms.prod: .net-core
+ms.topic: conceptual
+ms.prod: dotnet-core
 ms.technology: dotnet-cli
-ms.workload: dotnetcore
-ms.openlocfilehash: 1bc8d9cdc4db1f103b73116b43e630185a2c35de
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.workload:
+- dotnetcore
+ms.openlocfilehash: bdb66a24526b04e8300e654a991719bb607971b8
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="dotnet-remove-package"></a>DotNet Kaldır paketi
 
@@ -20,7 +21,7 @@ ms.lasthandoff: 12/23/2017
 
 ## <a name="name"></a>Ad
 
-`dotnet remove package`-Paket başvuru proje dosyasından kaldırır.
+`dotnet remove package` -Paket başvuru proje dosyasından kaldırır.
 
 ## <a name="synopsis"></a>Özet
 

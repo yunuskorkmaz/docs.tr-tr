@@ -17,17 +17,17 @@ helpviewer_keywords:
 - data contracts [WCF], collection types
 - collection types [WCF]
 ms.assetid: 9b45b28e-0a82-4ea3-8c33-ec0094aff9d5
-caps.latest.revision: ''
+caps.latest.revision: 19
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: e74bd7d90d5653890fd5cf48e76c81d0227c6172
-ms.sourcegitcommit: c883637b41ee028786edceece4fa872939d2e64c
+ms.openlocfilehash: 528c1661b99ff5f50d42bb7a42371c302e335c90
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/26/2018
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="collection-types-in-data-contracts"></a>Veri Sözleşmelerinde Koleksiyon Türleri
 A *koleksiyonu* belirli bir türdeki öğeleri listesini içerir. İçinde [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)], böyle listeleri dizileri veya diğer türleri çeşitli kullanarak temsil edilebilir (genel listesi, genel <xref:System.ComponentModel.BindingList%601>, <xref:System.Collections.Specialized.StringCollection>, veya <xref:System.Collections.ArrayList>). Örneğin, bir koleksiyon için belirli bir müşteri adresleri listesi tutabilir. Bu koleksiyon adı verilen *listesinde koleksiyonları*kendi gerçek türü ne olursa olsun.  
@@ -40,7 +40,7 @@ A *koleksiyonu* belirli bir türdeki öğeleri listesini içerir. İçinde [!INC
   
  Koleksiyon türleri'adlı bir yöntemi olması gibi ek gereksinimleri `Add` ve varsayılan bir oluşturucu, aşağıdaki bölümlerde ayrıntılı olarak ele alınmıştır. Bu koleksiyon türleri hem seri durumdan ve sağlar. Bazı koleksiyonlar doğrudan, gibi genel desteklenmediğini yani <xref:System.Collections.ObjectModel.ReadOnlyCollection%601> (varsayılan oluşturucu yok olduğundan). Ancak, bu kısıtlamalar atlamak hakkında daha fazla bilgi için bu konunun devamındaki "Kullanarak koleksiyon arabirimi türleri ve salt okunur koleksiyonları" bölümüne bakın.  
   
- Koleksiyonlarda yer alan türleri veri sözleşme türleri veya aksi halde seri hale getirilebilir. [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)] [Veri sözleşmesi seri hale getirici tarafından desteklenen türleri](../../../../docs/framework/wcf/feature-details/types-supported-by-the-data-contract-serializer.md).  
+ Koleksiyonlarda yer alan türleri veri sözleşme türleri veya aksi halde seri hale getirilebilir. Daha fazla bilgi için bkz: [veri sözleşmesi seri hale getirici tarafından desteklenen türleri](../../../../docs/framework/wcf/feature-details/types-supported-by-the-data-contract-serializer.md).  
   
  [!INCLUDE[crabout](../../../../includes/crabout-md.md)] nedir ve ne nasıl koleksiyonları serileştirilir, geçerli bir koleksiyon, yaklaşık de olarak kabul edilmez, bu konunun "Gelişmiş toplama kuralları" bölümünde seri hale getirilmesi hakkında bilgi bakın.  
   
@@ -152,7 +152,7 @@ A *koleksiyonu* belirli bir türdeki öğeleri listesini içerir. İçinde [!INC
 </cust_list>  
 ```  
   
- [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)] Bu konunun devamındaki "Toplama kuralları Gelişmiş" bölümü.  
+ Daha fazla bilgi için bu konunun devamındaki "Toplama kuralları Gelişmiş" bölümüne bakın.  
   
 ### <a name="customizing-the-repeating-element-name-in-list-collections"></a>Yinelenen öğe adı listesi koleksiyonlarda özelleştirme  
  Liste koleksiyonları yinelenen girişler içerir. Normalde, her yinelenen giriş derlemesinde türü veri sözleşme adına göre adlı bir öğe olarak temsil edilir.  
@@ -286,7 +286,7 @@ svcutil.exe MyService.wsdl MyServiceSchema.xsd /r:C:\full_path_to_system_dll\Sys
 |---------------------|----------------------------------------------|-------------|----------------------|  
 |Genel olmayan ya da kapalı genel (parametreleri herhangi sayısı)|Non-genel|`MyType : IList`<br /><br /> veya<br /><br /> `MyType<T> : IList`<br /><br /> Burada T = `int`|Genel olarak kapalı `Object` (örneğin, `IList<object>`)|  
 |Genel olmayan ya da kapalı genel (mutlaka koleksiyon türü ile eşleşmiyor parametre herhangi sayısı)|Genel kapalı|`MyType : IList<string>`<br /><br /> veya<br /><br /> `MyType<T> : IList<string>` Burada T =`int`|Kapalı genel (örneğin, `IList<string>`)|  
-|Herhangi bir sayıda parametreyle genel kapalı|Açık genel tür parametreleri herhangi birini kullanarak|`MyType<T,U,V> : IList<U>`<br /><br /> where T=`int`, U=`string`, V=`bool`|Kapalı genel (örneğin, `IList<string>`)|  
+|Herhangi bir sayıda parametreyle genel kapalı|Açık genel tür parametreleri herhangi birini kullanarak|`MyType<T,U,V> : IList<U>`<br /><br /> Burada T =`int`, U =`string`, V =`bool`|Kapalı genel (örneğin, `IList<string>`)|  
 |Açık genel bir parametre ile|Açık genel tür parametresi kullanılarak|`MyType<T> : IList<T>`, T, açık|Açık genel (örneğin, `IList<T>`)|  
   
  Bir türü birden fazla liste koleksiyonu arabirimini uygulayan durumunda aşağıdaki kısıtlamalar geçerlidir:  
@@ -301,8 +301,8 @@ svcutil.exe MyService.wsdl MyServiceSchema.xsd /r:C:\full_path_to_system_dll\Sys
 |---------------------|----------------------------------------------|-------------|---------------------|  
 |Genel olmayan ya da kapalı genel (parametreleri herhangi sayısı)|<xref:System.Collections.IDictionary>|`MyType : IDictionary`<br /><br /> veya<br /><br /> `MyType<T> : IDictionary` Burada T =`int`|Genel kapalı `IDictionary<object,object>`|  
 |Kapalı genel (parametreleri herhangi sayısı)|<xref:System.Collections.Generic.IDictionary%602>, kapalı|`MyType<T> : IDictionary<string, bool>` Burada T =`int`|Kapalı genel (örneğin, `IDIctionary<string,bool>`)|  
-|Kapalı genel (parametreleri herhangi sayısı)|Genel <xref:System.Collections.Generic.IDictionary%602>, bir anahtar veya değer kapalı, diğer açık olduğundan ve tür parametrelerden birini kullanır|`MyType<T,U,V> : IDictionary<string,V>` where T=`int`, U=`float`,V=`bool`<br /><br /> veya<br /><br /> `MyType<Z> : IDictionary<Z,bool>` where Z=`string`|Kapalı genel (örneğin, `IDictionary<string,bool>`)|  
-|Kapalı genel (parametreleri herhangi sayısı)|Genel <xref:System.Collections.Generic.IDictionary%602>, anahtar ve değer açık ve her tür parametrelerden birini kullanır|`MyType<T,U,V> : IDictionary<V,U>` where T=`int`, U=`bool`, V=`string`|Kapalı genel (örneğin, `IDictionary<string,bool>`)|  
+|Kapalı genel (parametreleri herhangi sayısı)|Genel <xref:System.Collections.Generic.IDictionary%602>, bir anahtar veya değer kapalı, diğer açık olduğundan ve tür parametrelerden birini kullanır|`MyType<T,U,V> : IDictionary<string,V>` Burada T =`int`, U =`float`, V =`bool`<br /><br /> veya<br /><br /> `MyType<Z> : IDictionary<Z,bool>` Burada Z =`string`|Kapalı genel (örneğin, `IDictionary<string,bool>`)|  
+|Kapalı genel (parametreleri herhangi sayısı)|Genel <xref:System.Collections.Generic.IDictionary%602>, anahtar ve değer açık ve her tür parametrelerden birini kullanır|`MyType<T,U,V> : IDictionary<V,U>` Burada T =`int`, U =`bool`, V =`string`|Kapalı genel (örneğin, `IDictionary<string,bool>`)|  
 |Açık genel (iki parametre)|Genel <xref:System.Collections.Generic.IDictionary%602>, açın, her iki tür genel parametreler göründükleri sırada kullanır|`MyType<K,V> : IDictionary<K,V>`, K ve V hem açın|Açık genel (örneğin, `IDictionary<K,V>`)|  
   
  Türü hem de uyguluyorsa <xref:System.Collections.IDictionary> ve genel <xref:System.Collections.Generic.IDictionary%602>, yalnızca genel <xref:System.Collections.Generic.IDictionary%602> olarak kabul edilir.  
@@ -338,7 +338,7 @@ svcutil.exe MyService.wsdl MyServiceSchema.xsd /r:C:\full_path_to_system_dll\Sys
 |<xref:System.Collections.IDictionary>|`get_Keys`, `get_Values`|`Add`|  
 |Genel <xref:System.Collections.Generic.IList%601>|Genel <xref:System.Collections.Generic.IList%601> dizin oluşturucu|Genel ekleme|  
 |Genel <xref:System.Collections.Generic.ICollection%601>|Numaralandırıcı|Genel ekleme|  
-|<xref:System.Collections.IList>|<xref:System.Collections.IList> Indexer|`Add`|  
+|<xref:System.Collections.IList>|<xref:System.Collections.IList> Dizin Oluşturucu|`Add`|  
 |Genel <xref:System.Collections.Generic.IEnumerable%601>|`GetEnumerator`|Statik olmayan yöntemi `Add` (genel parametre türü) veya temel türlerinden biri uygun türde bir parametre alır. Bu tür bir yöntem bir koleksiyon türü seri hale getirme ve seri durumdan çıkarma sırasında bir koleksiyon olarak işlemek seri hale getirici için mevcut olması gerekir.|  
 |<xref:System.Collections.IEnumerable> (ve bu nedenle <xref:System.Collections.ICollection>, ondan türetilen)|`GetEnumerator`|Statik olmayan yöntemi `Add` türünde bir parametre alan `Object`. Bu tür bir yöntem bir koleksiyon türü seri hale getirme ve seri durumdan çıkarma sırasında bir koleksiyon olarak işlemek seri hale getirici için mevcut olması gerekir.|  
   

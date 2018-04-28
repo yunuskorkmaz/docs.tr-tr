@@ -21,11 +21,11 @@ ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: c541c44f0043000ccd4e7edb0d38eba2c66d0844
-ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
+ms.openlocfilehash: 15e958a3bfe4dfdeebfaaad83130a604c56932c7
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/27/2018
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="using-the-xmlserializer-class"></a>XmlSerializer Sınıfını Kullanma
 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] iki farklı serileştirme teknolojileri, istemciler ve hizmetler, serileştirme adlı bir işlem arasında iletilir XML uygulamanıza içinde veri kapatmak için kullanabilirsiniz.  
@@ -45,10 +45,10 @@ ms.lasthandoff: 04/27/2018
   
  Birçok [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] türleri ikinci iki kategoriye ayrılır ve böylece seri hale getirilebilir. Seri hale getirilebilir türlerin dizileri de seri hale getirilebilir. Tam bir listesi için bkz: [hizmet sözleşmelerinde veri aktarımı belirtme](../../../../docs/framework/wcf/feature-details/specifying-data-transfer-in-service-contracts.md).  
   
- <xref:System.Runtime.Serialization.DataContractSerializer>, Anlaşma türleri verileri ile birlikte kullanılan, yeni yazmak için önerilen yöntem [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] Hizmetleri. [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)] [Veri sözleşmelerini kullanma](../../../../docs/framework/wcf/feature-details/using-data-contracts.md).  
+ <xref:System.Runtime.Serialization.DataContractSerializer>, Anlaşma türleri verileri ile birlikte kullanılan, yeni yazmak için önerilen yöntem [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] Hizmetleri. Daha fazla bilgi için bkz: [kullanarak veri sözleşmeleri](../../../../docs/framework/wcf/feature-details/using-data-contracts.md).  
   
 ## <a name="when-to-use-the-xmlserializer-class"></a>XmlSerializer sınıfını kullanma zamanı  
- [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] Ayrıca destekler <xref:System.Xml.Serialization.XmlSerializer> sınıfı. <xref:System.Xml.Serialization.XmlSerializer> Sınıfı için benzersiz değil [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]. Aynı seri hale getirme altyapısı olan [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] Web Hizmetleri kullanın. <xref:System.Xml.Serialization.XmlSerializer> Sınıfı bir kadar dar kümesini destekler türlerinden daha <xref:System.Runtime.Serialization.DataContractSerializer> sınıfı, ancak sonuç XML üzerinde daha fazla denetim olanağı sağlar ve XML Şeması Tanım Dili (XSD) standart çok daha fazla destekler. Seri hale getirilebilir türler bildirim temelli öznitelikleri de gerektirmez. [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)] XML serileştirme konusunda [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] belgeleri. <xref:System.Xml.Serialization.XmlSerializer> Sınıf veri sözleşme türleri desteklemez.  
+ [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] Ayrıca destekler <xref:System.Xml.Serialization.XmlSerializer> sınıfı. <xref:System.Xml.Serialization.XmlSerializer> Sınıfı için benzersiz değil [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]. Aynı seri hale getirme altyapısı olan [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] Web Hizmetleri kullanın. <xref:System.Xml.Serialization.XmlSerializer> Sınıfı bir kadar dar kümesini destekler türlerinden daha <xref:System.Runtime.Serialization.DataContractSerializer> sınıfı, ancak sonuç XML üzerinde daha fazla denetim olanağı sağlar ve XML Şeması Tanım Dili (XSD) standart çok daha fazla destekler. Seri hale getirilebilir türler bildirim temelli öznitelikleri de gerektirmez. Daha fazla bilgi için XML serileştirme konusuna [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] belgeleri. <xref:System.Xml.Serialization.XmlSerializer> Sınıf veri sözleşme türleri desteklemez.  
   
  Svcutil.exe kullanırken veya **hizmet Başvurusu Ekle** özelliği bir üçüncü taraf hizmeti için istemci kodu oluşturmak veya bir üçüncü taraf şeması, uygun bir seri hale getirici erişmek için Visual Studio otomatik olarak seçilir sizin için. Şema ile uyumlu değilse, <xref:System.Runtime.Serialization.DataContractSerializer>, <xref:System.Xml.Serialization.XmlSerializer> seçilir.  
   
@@ -150,7 +150,7 @@ ms.lasthandoff: 04/27/2018
   
 -   `ReadXml` Uygulama sarmalayıcı öğesi değil kimler. Bir öğeyi okumak için beklenen, `WriteXml` üretir.  
   
--   Düzenli olarak bir öğe türü (örneğin, bir veri üyesi olarak bir veri sözleşmesi) serileştirilirken bir kapsayıcı öğe çağırmadan önce seri hale getirici çıkarır `WriteXml`, içerik türleri gibi. Ancak, en üst düzeyinde bir öğe türü seri hale getirme, seri hale getirici normalde hiç öğe çevresinde bir sarmalayıcı öğesi çıktı vermez, `WriteXml` bir kök ve ad alanına getiricisi oluştururken açıkça belirtilmediği sürece, yazar `DataContractSerializer` veya `NetDataContractSerializer` oluşturucular. [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)] [Seri hale getirme ve seri durumdan çıkarma](../../../../docs/framework/wcf/feature-details/serialization-and-deserialization.md).  
+-   Düzenli olarak bir öğe türü (örneğin, bir veri üyesi olarak bir veri sözleşmesi) serileştirilirken bir kapsayıcı öğe çağırmadan önce seri hale getirici çıkarır `WriteXml`, içerik türleri gibi. Ancak, en üst düzeyinde bir öğe türü seri hale getirme, seri hale getirici normalde hiç öğe çevresinde bir sarmalayıcı öğesi çıktı vermez, `WriteXml` bir kök ve ad alanına getiricisi oluştururken açıkça belirtilmediği sürece, yazar `DataContractSerializer` veya `NetDataContractSerializer` oluşturucular. Daha fazla bilgi için bkz: [seri hale getirme ve seri durumdan çıkarma](../../../../docs/framework/wcf/feature-details/serialization-and-deserialization.md).  
   
 -   En üst düzeydeki bir öğe türü kök adı ve ad alanı oluşturma zamanında belirtmeden serileştirilirken <xref:System.Runtime.Serialization.XmlObjectSerializer.WriteStartObject%2A> ve <xref:System.Runtime.Serialization.XmlObjectSerializer.WriteEndObject%2A> temelde hiçbir şey yapma ve <xref:System.Runtime.Serialization.XmlObjectSerializer.WriteObjectContent%2A> çağrıları `WriteXml`. Bu modda, serileştirilen nesnenin olamaz `null` ve polymorphically atanamaz. Ayrıca, Nesne grafiği korunması olamaz etkin ve `NetDataContractSerializer` kullanılamaz.  
   

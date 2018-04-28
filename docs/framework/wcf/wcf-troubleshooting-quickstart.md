@@ -1,27 +1,29 @@
 ---
-title: "WCF Sorun Giderme Hızlı Başlangıç"
-ms.custom: 
+title: WCF Sorun Giderme Hızlı Başlangıç
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - WCF [WCF], troubleshooting
 - Windows Communication Foundation [WCF], troubleshooting
 ms.assetid: a9ea7a53-f31a-46eb-806e-898e465a4992
-caps.latest.revision: "22"
+caps.latest.revision: 22
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: d0bcd7d08a698a2a839094204dcc5f7105ef8f6b
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.workload:
+- dotnet
+ms.openlocfilehash: 490b756a9beae09b20a36d3fc6a20c85aad76618
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="wcf-troubleshooting-quickstart"></a>WCF Sorun Giderme Hızlı Başlangıç
 Bu konuda müşteriler içine geliştirme WCF istemcileri ve Hizmetleri sırasında çalıştırdığınız bilinen sorunlar sayısını listeler. İçine çalıştırdığınız sorunu bu listede değilse, hizmetiniz için izleme yapılandırma öneririz. Bu bir izleme dosyası oluşturur izleme dosyası Görüntüleyici ile birlikte görüntülemek ve özel durumlar hakkında ayrıntılı bilgi almak hizmet içinde gerçekleşen. İzlemeyi yapılandırma hakkında daha fazla bilgi için bkz: [yapılandırma izleme](../../../docs/framework/wcf/diagnostics/tracing/configuring-tracing.md). İzleme dosyası Görüntüleyici hakkında daha fazla bilgi için bkz: [hizmet izleme Görüntüleyicisi aracı (SvcTraceViewer.exe)](../../../docs/framework/wcf/service-trace-viewer-tool-svctraceviewer-exe.md).  
@@ -62,11 +64,11 @@ Bu konuda müşteriler içine geliştirme WCF istemcileri ve Hizmetleri sırası
   
 <a name="BKMK_q1"></a>   
 ## <a name="sometimes-i-receive-a-messagesecurityexception-on-the-second-request-if-my-client-is-idle-for-a-while-after-the-first-request-what-is-happening"></a>My istemci bir süre sonra ilk istek için boşta kalırsa bazen MessageSecurityException ikinci isteğinde alıyorum. Ne oluyor?  
- İkinci bir istek temelde iki nedenden dolayı başarısız olabilir: (1 oturum zaman aşımına uğradı veya barındırma hizmeti (2 Web sunucusu dönüştürülmeden. İlk durumda hizmeti zaman aşımına uğrayana kadar oturum geçerli değil. Ne zaman hizmeti almaz bir istek istemciden hizmetin bağlamada belirtilen süre içinde (<xref:System.ServiceModel.Channels.Binding.ReceiveTimeout%2A>), hizmet güvenlik oturumu sona erer. Sonraki istemci iletileri neden <xref:System.ServiceModel.Security.MessageSecurityException>. İstemci, gelecekteki iletileri göndermek veya bir durum bilgisi olan güvenlik bağlamı belirteci kullanmak için hizmet ile güvenli bir oturumu yeniden oluşturmanız gerekir. Durum bilgisi olan güvenlik bağlamı belirteçleri dönüştürüldüğü bir Web sunucusu varlığını sürdürmesi güvenli bir oturum de olanak sağlar. [!INCLUDE[crabout](../../../includes/crabout-md.md)]durum bilgisi olan güvenli içeriği belirteçleri kullanarak güvenli bir oturumda bkz [nasıl yapılır: güvenli oturum açmak için bir güvenlik bağlamı belirteci oluşturma](../../../docs/framework/wcf/feature-details/how-to-create-a-security-context-token-for-a-secure-session.md). Alternatif olarak, güvenli oturumlar devre dışı bırakabilirsiniz. Kullandığınızda [ \<wsHttpBinding >](../../../docs/framework/configure-apps/file-schema/wcf/wshttpbinding.md) ayarlayabileceğiniz bağlama, `establishSecurityContext` özelliğine `false` güvenli oturumlar devre dışı bırakmak için. Güvenli oturumlar diğer bağlantılar için devre dışı bırakmak için özel bağlama oluşturmanız gerekir. Özel bağlama oluşturma hakkında daha fazla bilgi için bkz: [nasıl yapılır: SecurityBindingElement kullanarak özel bir bağlama oluşturun](../../../docs/framework/wcf/feature-details/how-to-create-a-custom-binding-using-the-securitybindingelement.md). Bu seçeneklerin hiçbirini uygulamadan önce uygulamanızın güvenlik gereksinimlerini anlamanız gerekir.  
+ İkinci bir istek temelde iki nedenden dolayı başarısız olabilir: (1 oturum zaman aşımına uğradı veya barındırma hizmeti (2 Web sunucusu dönüştürülmeden. İlk durumda hizmeti zaman aşımına uğrayana kadar oturum geçerli değil. Ne zaman hizmeti almaz bir istek istemciden hizmetin bağlamada belirtilen süre içinde (<xref:System.ServiceModel.Channels.Binding.ReceiveTimeout%2A>), hizmet güvenlik oturumu sona erer. Sonraki istemci iletileri neden <xref:System.ServiceModel.Security.MessageSecurityException>. İstemci, gelecekteki iletileri göndermek veya bir durum bilgisi olan güvenlik bağlamı belirteci kullanmak için hizmet ile güvenli bir oturumu yeniden oluşturmanız gerekir. Durum bilgisi olan güvenlik bağlamı belirteçleri dönüştürüldüğü bir Web sunucusu varlığını sürdürmesi güvenli bir oturum de olanak sağlar. [!INCLUDE[crabout](../../../includes/crabout-md.md)] durum bilgisi olan güvenli içeriği belirteçleri kullanarak güvenli bir oturumda bkz [nasıl yapılır: güvenli oturum açmak için bir güvenlik bağlamı belirteci oluşturma](../../../docs/framework/wcf/feature-details/how-to-create-a-security-context-token-for-a-secure-session.md). Alternatif olarak, güvenli oturumlar devre dışı bırakabilirsiniz. Kullandığınızda [ \<wsHttpBinding >](../../../docs/framework/configure-apps/file-schema/wcf/wshttpbinding.md) ayarlayabileceğiniz bağlama, `establishSecurityContext` özelliğine `false` güvenli oturumlar devre dışı bırakmak için. Güvenli oturumlar diğer bağlantılar için devre dışı bırakmak için özel bağlama oluşturmanız gerekir. Özel bağlama oluşturma hakkında daha fazla bilgi için bkz: [nasıl yapılır: SecurityBindingElement kullanarak özel bir bağlama oluşturun](../../../docs/framework/wcf/feature-details/how-to-create-a-custom-binding-using-the-securitybindingelement.md). Bu seçeneklerin hiçbirini uygulamadan önce uygulamanızın güvenlik gereksinimlerini anlamanız gerekir.  
   
 <a name="BKMK_q2"></a>   
 ## <a name="my-service-starts-to-reject-new-clients-after-about-10-clients-are-interacting-with-it-what-is-happening"></a>Yaklaşık 10 istemcileri ile etkileşim sonra yeni istemciler reddetmeye My hizmetini başlatır. Ne oluyor?  
- Varsayılan olarak, yalnızca 10 eşzamanlı oturum Hizmetleri olabilir. Hizmet bağlamaları oturumları kullanırsanız, daha sonra yeni istemci bağlantılarını bir geçerli oturum sona kadar reddediyor bu sayıyı ulaşana kadar bu nedenle, hizmetin yeni istemci bağlantılarını kabul eder. Daha fazla istemciyi çeşitli yollarla destekleyebilir. Hizmetinizi oturumları gerektirmiyorsa, bir süre sonuyla bağlama kullanmayın. ([!INCLUDE[crdefault](../../../includes/crdefault-md.md)] [Oturumları kullanarak](../../../docs/framework/wcf/using-sessions.md).) Değerini değiştirerek oturum sınırı artırmak için başka bir seçenektir <xref:System.ServiceModel.Description.ServiceThrottlingBehavior.MaxConcurrentSessions%2A> özelliği, koşullar uygun sayısı.  
+ Varsayılan olarak, yalnızca 10 eşzamanlı oturum Hizmetleri olabilir. Hizmet bağlamaları oturumları kullanırsanız, daha sonra yeni istemci bağlantılarını bir geçerli oturum sona kadar reddediyor bu sayıyı ulaşana kadar bu nedenle, hizmetin yeni istemci bağlantılarını kabul eder. Daha fazla istemciyi çeşitli yollarla destekleyebilir. Hizmetinizi oturumları gerektirmiyorsa, bir süre sonuyla bağlama kullanmayın. (Daha fazla bilgi için bkz: [kullanarak oturumları](../../../docs/framework/wcf/using-sessions.md).) Değerini değiştirerek oturum sınırı artırmak için başka bir seçenektir <xref:System.ServiceModel.Description.ServiceThrottlingBehavior.MaxConcurrentSessions%2A> özelliği, koşullar uygun sayısı.  
   
 <a name="BKMK_q3"></a>   
 ## <a name="can-i-load-my-service-configuration-from-somewhere-other-than-the-wcf-applications-configuration-file"></a>Hizmet yapılandırma sıralandığından WCF uygulamanın yapılandırma dosyasında diğer gelen yükleyebilir?  
@@ -143,13 +145,13 @@ public class MyServiceHost : ServiceHost
   
     4.  Yeni bir SPN SetSPN kullanarak etki alanı ile kaydedin. Bunu yapmak için bir etki alanı yöneticisi olması gerektiğine dikkat edin.  
   
- [!INCLUDE[crabout](../../../includes/crabout-md.md)]Kerberos protokolü Bkz [WCF güvenlik kavramları kullanılan](../../../docs/framework/wcf/feature-details/security-concepts-used-in-wcf.md) ve:  
+ [!INCLUDE[crabout](../../../includes/crabout-md.md)] Kerberos protokolü Bkz [WCF güvenlik kavramları kullanılan](../../../docs/framework/wcf/feature-details/security-concepts-used-in-wcf.md) ve:  
   
 -   [Windows Kimlik Doğrulama Hatalarını Ayıklama](../../../docs/framework/wcf/feature-details/debugging-windows-authentication-errors.md)  
   
 -   [Http.sys kullanarak Kerberos hizmet asıl adlarını kaydetme](http://go.microsoft.com/fwlink/?LinkId=86943)  
   
--   [Kerberos Explained](http://go.microsoft.com/fwlink/?LinkId=86946)  
+-   [Kerberos açıklanmıştır](http://go.microsoft.com/fwlink/?LinkId=86946)  
   
 <a name="BKMK_q5"></a>   
 ## <a name="when-i-throw-a-faultexceptionexception-where-the-type-is-an-exception-i-always-receive-a-general-faultexception-type-on-the-client-and-not-the-generic-type-whats-happening"></a>Bir FaultException ı throw zaman\<özel durum > türü özel bir durum olduğunda, her zaman istemci üzerinde genel bir FaultException tür ve genel tür alıyorum. Ne oluyor?  
@@ -159,13 +161,13 @@ public class MyServiceHost : ServiceHost
   
 -   Özel durumlar standart bir şekilde seri hale getirme sırasında bağımlı olamaz. Bazı — gibi <xref:System.Security.SecurityException>— hiç seri hale getirilebilir olmayabilir.  
   
--   İstemcilere iç uygulama ayrıntılarını gösterir. [!INCLUDE[crdefault](../../../includes/crdefault-md.md)][Belirtme ve sözleşme ve hizmetlerde hataları işleme](../../../docs/framework/wcf/specifying-and-handling-faults-in-contracts-and-services.md).  
+-   İstemcilere iç uygulama ayrıntılarını gösterir. Daha fazla bilgi için bkz: [belirtme ve işleme hataları sözleşme ve hizmetlerde](../../../docs/framework/wcf/specifying-and-handling-faults-in-contracts-and-services.md).  
   
  Bir uygulamada hata ayıklama yaparsanız, ancak, özel durum bilgilerini serileştirme ve kullanarak istemciye Döndür <xref:System.ServiceModel.Description.ServiceDebugBehavior> sınıfı.  
   
 <a name="BKMK_q6"></a>   
 ## <a name="it-seems-like-one-way-and-request-reply-operations-return-at-roughly-the-same-speed-when-the-reply-contains-no-data-whats-happening"></a>Gibi tek yönlü görünür ve yanıt hiçbir veri içerdiğinde istek-yanıt işlemleri kabaca aynı hızda döndürür. Ne oluyor?  
- Bir işlem bir yolu olduğunu belirten yalnızca işlem sözleşmesi bir giriş iletisi kabul eder ve bir çıktı iletisi döndürmüyor anlamına gelir. İçinde [!INCLUDE[indigo2](../../../includes/indigo2-md.md)], tüm istemci çağrılarını giden veri kablo için yazılmış veya bir özel durum döndürür. Tek yönlü işlemler aynı şekilde çalışır ve hizmet bulunması veya hizmet ağdan verileri kabul etmek için hazır değil bloke atabilirsiniz. Genellikle, [!INCLUDE[indigo2](../../../includes/indigo2-md.md)], bu istemci istek-yanıt; daha hızlı döndüren tek yönlü çağrıları sonuçlanır ancak istek-yanıt işlemlerinin yanı sıra tek yönlü işlemler giden verilerin ağ üzerinden gönderilmesi yavaşlatır herhangi bir koşul yavaşlatır. [!INCLUDE[crdefault](../../../includes/crdefault-md.md)][Tek yönlü Hizmetler](../../../docs/framework/wcf/feature-details/one-way-services.md) ve [bir WCF istemcisi kullanarak hizmetlere erişme](../../../docs/framework/wcf/feature-details/accessing-services-using-a-client.md).  
+ Bir işlem bir yolu olduğunu belirten yalnızca işlem sözleşmesi bir giriş iletisi kabul eder ve bir çıktı iletisi döndürmüyor anlamına gelir. İçinde [!INCLUDE[indigo2](../../../includes/indigo2-md.md)], tüm istemci çağrılarını giden veri kablo için yazılmış veya bir özel durum döndürür. Tek yönlü işlemler aynı şekilde çalışır ve hizmet bulunması veya hizmet ağdan verileri kabul etmek için hazır değil bloke atabilirsiniz. Genellikle, [!INCLUDE[indigo2](../../../includes/indigo2-md.md)], bu istemci istek-yanıt; daha hızlı döndüren tek yönlü çağrıları sonuçlanır ancak istek-yanıt işlemlerinin yanı sıra tek yönlü işlemler giden verilerin ağ üzerinden gönderilmesi yavaşlatır herhangi bir koşul yavaşlatır. Daha fazla bilgi için bkz: [One-Way Hizmetleri](../../../docs/framework/wcf/feature-details/one-way-services.md) ve [bir WCF istemcisi kullanarak hizmetlere erişme](../../../docs/framework/wcf/feature-details/accessing-services-using-a-client.md).  
   
 <a name="BKMK_q77"></a>   
 ## <a name="im-using-an-x509-certificate-with-my-service-and-i-get-a-systemsecuritycryptographycryptographicexception-whats-happening"></a>Bir X.509 sertifikası ile Hizmetim kullanıyorum ve bir System.Security.Cryptography.CryptographicException alın. Ne oluyor?  
@@ -173,7 +175,7 @@ public class MyServiceHost : ServiceHost
   
  Bu durumda, özel anahtarı içeren dosyayı için işlemin hesaba okuma erişimi ayrıcalıkları vermeniz gerekir. Örneğin, IIS çalışan işlemi Bob hesabı altında çalışıyorsa, özel anahtarı içeren dosyanın Bob okuma erişimi verin gerekecektir.  
   
- [!INCLUDE[crabout](../../../includes/crabout-md.md)]belirli bir X.509 Sertifika özel anahtarı içeren dosyayı doğru kullanıcı hesabı erişimi vermek için bkz [nasıl yapılır: olun X.509 sertifikalarını WCF için erişilebilir](../../../docs/framework/wcf/feature-details/how-to-make-x-509-certificates-accessible-to-wcf.md).  
+ [!INCLUDE[crabout](../../../includes/crabout-md.md)] belirli bir X.509 Sertifika özel anahtarı içeren dosyayı doğru kullanıcı hesabı erişimi vermek için bkz [nasıl yapılır: olun X.509 sertifikalarını WCF için erişilebilir](../../../docs/framework/wcf/feature-details/how-to-make-x-509-certificates-accessible-to-wcf.md).  
   
 <a name="BKMK_q88"></a>   
 ## <a name="i-changed-the-first-parameter-of-an-operation-from-uppercase-to-lowercase-now-my-client-throws-an-exception-whats-happening"></a>Bir işlemin ilk parametre gelen büyük değiştirdim küçük harf için; Şimdi my istemcisi bir özel durum oluşturur. Ne oluyor?  

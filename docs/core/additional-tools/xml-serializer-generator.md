@@ -1,18 +1,20 @@
 ---
-title: ".NET Core üzerinde Microsoft XML seri hale getirici oluşturucusunu kullanarak"
-description: "Microsoft XML seri hale getirici Oluşturucu genel bakış."
+title: .NET Core üzerinde Microsoft XML seri hale getirici oluşturucusunu kullanarak
+description: Microsoft XML seri hale getirici Oluşturucu genel bakış.
 author: mlacouture
 manager: wpickett
 ms.author: johalex
 ms.date: 01/19/2017
 ms.topic: tutorial
-ms.prod: .net-core
+ms.prod: dotnet-core
 ms.custom: mvc
-ms.openlocfilehash: b2f52a068d128b2eb978c9e086508bd87e103ebc
-ms.sourcegitcommit: dd6ea7f0e581ac84e0a90d9b23c463fcf1ec3ce7
+ms.workload:
+- dotnetcore
+ms.openlocfilehash: d7332546cf7643ff808a29c83d13050571447666
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2018
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="using-microsoft-xml-serializer-generator-on-net-core"></a>.NET Core üzerinde Microsoft XML seri hale getirici oluşturucusunu kullanarak
 
@@ -35,7 +37,7 @@ Bu öğreticiyi tamamlamak için:
 * Henüz yapmadıysanız, sık kullanılan kod düzenleyicisinde yükleyin.
 
 > [!TIP]
-> Kod Düzenleyicisi yüklemeniz gerekiyor? Try [Visual Studio](https://aka.ms/vsdownload?utm_source=mscom&utm_campaign=msdocs)!
+> Kod Düzenleyicisi yüklemeniz gerekiyor? Deneyin [Visual Studio](https://aka.ms/vsdownload?utm_source=mscom&utm_campaign=msdocs)!
   
 ## <a name="use-microsoft-xml-serializer-generator-in-a-net-core-console-application"></a>Microsoft XML seri hale getirici oluşturucuyu bir .NET Core konsol uygulamasında kullanma 
 
@@ -112,7 +114,7 @@ Konsol penceresinde aşağıdaki komutu yazın:
  $ dotnet run
  ```
 > [!NOTE]
-> [`dotnet run`](../tools/dotnet-run.md)çağrıları [ `dotnet build` ](../tools/dotnet-build.md) hedefleri yerleşik yapı ve çağrıları emin olmak için `dotnet <assembly.dll>` hedef uygulamayı çalıştırın.
+> [`dotnet run`](../tools/dotnet-run.md) çağrıları [ `dotnet build` ](../tools/dotnet-build.md) hedefleri yerleşik yapı ve çağrıları emin olmak için `dotnet <assembly.dll>` hedef uygulamayı çalıştırın.
 
 > [!IMPORTANT]
 > Komutlar ve uygulamanızı çalıştırmak için Bu öğreticide gösterilen adımlar yalnızca geliştirme zamanı sırasında kullanılır. Uygulamanızı dağıtmak hazır olduğunuzda, farklı bir göz atalım [dağıtım stratejilerini](../deploying/index.md) .NET Core uygulamaları için ve [ `dotnet publish` ](../tools/dotnet-publish.md) komutu.
