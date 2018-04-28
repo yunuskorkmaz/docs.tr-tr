@@ -22,11 +22,11 @@ ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: 43eaa4ffe562cf1dde5abd7e7540125dcf383732
-ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
-ms.translationtype: HT
+ms.openlocfilehash: 4d7988630e2eba3e6d5ebdc8b15b23aeb280a66f
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/27/2018
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="importing-schema-to-generate-classes"></a>Sınıf Oluşturmak için Şemayı İçe Aktarma
 İle kullanılabilen şemaları sınıfları oluşturmak için [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)], kullanın <xref:System.Runtime.Serialization.XsdDataContractImporter> sınıfı. Bu konu işlemini ve farklılıkları açıklar.  
@@ -114,7 +114,7 @@ ms.lasthandoff: 04/27/2018
  [!code-xml[C_SchemaImportExport#12](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_schemaimportexport/common/source.config#12)]  
   
 > [!NOTE]
->  Herhangi bir ilişkisi de listesini değerlendirilebilir. Örneğin, karmaşık bir liste olarak önceki ilişkilendirmesini görüntüleyebilirsiniz `city` (bir dize alanı ve tamsayı alan) iki alan sahipse nesneleri. İki desen gösterimi XSD şemasına sahip. Bir liste arasında bir ilişki sürece desenler her zaman listeleri davranılır şekilde ayırt etmek için bir yolu yoktur bir özel ek açıklama özgü [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] şemada mevcuttur. Ek açıklamanın belirli bir desen bir ilişkiyi temsil ettiğini gösterir. [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)] [Veri sözleşmesi şema başvurusu](../../../../docs/framework/wcf/feature-details/data-contract-schema-reference.md).  
+>  Herhangi bir ilişkisi de listesini değerlendirilebilir. Örneğin, karmaşık bir liste olarak önceki ilişkilendirmesini görüntüleyebilirsiniz `city` (bir dize alanı ve tamsayı alan) iki alan sahipse nesneleri. İki desen gösterimi XSD şemasına sahip. Bir liste arasında bir ilişki sürece desenler her zaman listeleri davranılır şekilde ayırt etmek için bir yolu yoktur bir özel ek açıklama özgü [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] şemada mevcuttur. Ek açıklamanın belirli bir desen bir ilişkiyi temsil ettiğini gösterir. Daha fazla bilgi için bkz: [veri sözleşmesi şema başvurusu](../../../../docs/framework/wcf/feature-details/data-contract-schema-reference.md).  
   
  Genel bir listeden veya olarak türetilen bir koleksiyon veri sözleşmesi olarak listesini normalde, alınan bir [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] olsun veya olmasın koleksiyonlar için standart adlandırma deseni bir şemayı izlediğinden bağlı olarak, dizi. Bu daha ayrıntılı olarak açıklanmıştır [veri sözleşmelerinde koleksiyon türleri](../../../../docs/framework/wcf/feature-details/collection-types-in-data-contracts.md). İlişkilendirmeleri ya da normal olarak içeri aktarılan bir <xref:System.Collections.Generic.Dictionary%602> veya sözlük nesnesinden türer bir koleksiyonu veri sözleşme. Örneğin, aşağıdaki şema göz önünde bulundurun.  
   
@@ -161,7 +161,7 @@ ms.lasthandoff: 04/27/2018
   
 ##### <a name="design-considerations"></a>Tasarım konuları  
   
--   Zayıf yazılmış XML gösterimi ile doğrudan çalışmak zor olabilir. Bir alternatif serileştirme motoruna gibi kullanmayı <xref:System.Xml.Serialization.XmlSerializer>, şema verilerle uyumlu olmayan sözleşmeleri kesin türü belirtilmiş şekilde çalışmak için. [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)] [XmlSerializer sınıfını kullanma](../../../../docs/framework/wcf/feature-details/using-the-xmlserializer-class.md).  
+-   Zayıf yazılmış XML gösterimi ile doğrudan çalışmak zor olabilir. Bir alternatif serileştirme motoruna gibi kullanmayı <xref:System.Xml.Serialization.XmlSerializer>, şema verilerle uyumlu olmayan sözleşmeleri kesin türü belirtilmiş şekilde çalışmak için. Daha fazla bilgi için bkz: [XmlSerializer sınıfını kullanma](../../../../docs/framework/wcf/feature-details/using-the-xmlserializer-class.md).  
   
 -   Bazı şema yapıları tarafından aktarılamaz <xref:System.Runtime.Serialization.XsdDataContractImporter> bile <xref:System.Runtime.Serialization.ImportOptions.ImportXmlType%2A> özelliği ayarlanmış `true`. Yeniden kullanmayı <xref:System.Xml.Serialization.XmlSerializer> bu gibi durumlarda için.  
   
@@ -190,7 +190,7 @@ ms.lasthandoff: 04/27/2018
   
 -   <xref:System.Runtime.Serialization.ImportOptions.CodeProvider%2A> özellik. Belirtin <xref:System.CodeDom.Compiler.CodeDomProvider> oluşturulan sınıflar için kod oluşturmak için kullanılacak. Alma mekanizması girişimleri önlemek için özellikleri <xref:System.CodeDom.Compiler.CodeDomProvider> desteklemiyor. Varsa <xref:System.Runtime.Serialization.ImportOptions.CodeProvider%2A> ayarlı değil, tam kümesi [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] özellikleri ile herhangi bir kısıtlama kullanılır.  
   
--   <xref:System.Runtime.Serialization.ImportOptions.DataContractSurrogate%2A> özellik. Bir <xref:System.Runtime.Serialization.IDataContractSurrogate> uygulaması bu özellik ile belirtilebilir. <xref:System.Runtime.Serialization.IDataContractSurrogate> İçeri aktarma işlemi özelleştirir. [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)] [Veri sözleşmesi yedekleri](../../../../docs/framework/wcf/extending/data-contract-surrogates.md). Varsayılan olarak, hiçbir yedek kullanılır.  
+-   <xref:System.Runtime.Serialization.ImportOptions.DataContractSurrogate%2A> özellik. Bir <xref:System.Runtime.Serialization.IDataContractSurrogate> uygulaması bu özellik ile belirtilebilir. <xref:System.Runtime.Serialization.IDataContractSurrogate> İçeri aktarma işlemi özelleştirir. Daha fazla bilgi için bkz: [veri sözleşmesi yedekleri](../../../../docs/framework/wcf/extending/data-contract-surrogates.md). Varsayılan olarak, hiçbir yedek kullanılır.  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
  <xref:System.Runtime.Serialization.DataContractSerializer>  

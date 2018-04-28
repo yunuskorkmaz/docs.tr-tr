@@ -14,11 +14,11 @@ ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: 4aa77a0135cea18847c4d4425171b0bdcf447988
-ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
-ms.translationtype: HT
+ms.openlocfilehash: fa529ddbdfa05ce876c99efd4a717c6136cf6686
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/27/2018
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="what39s-new-in-windows-workflow-foundation-in-net-45"></a>Ne&#39;s .NET 4.5, Windows Workflow Foundation'deki yenilikler
 Windows Workflow Foundation (WF) [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] yeni etkinlikler, Tasarımcısı özellikleri ve iş akışı geliştirme modeli gibi birçok yeni özellik sunar. Birçok, ancak tüm, sunulan yeni iş akışı özellikleri [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] yeniden barındırılan iş akışı Tasarımcısı'nda desteklenir. [!INCLUDE[crabout](../../../includes/crabout-md.md)] desteklenen, yeni özellikler bkz [Rehosted iş akışı Tasarımcısı'nda yeni iş akışı Foundation 4.5 özellikleri için destek](../../../docs/framework/windows-workflow-foundation/wf-features-in-the-rehosted-workflow-designer.md). [!INCLUDE[crabout](../../../includes/crabout-md.md)] geçirme .NET 3.0 ve en son sürümü kullanmak için .NET 3.5 iş akışı uygulamaları bkz [Geçiş Kılavuzu](../../../docs/framework/windows-workflow-foundation/migration-guidance.md). Bu konuda sunulan yeni iş akışı özelliklerine genel bakış sağlayan [!INCLUDE[net_v45](../../../includes/net-v45-md.md)].  
@@ -40,7 +40,7 @@ Windows Workflow Foundation (WF) [!INCLUDE[net_v45](../../../includes/net-v45-md
   
 -   Dinamik güncelleştirme kalıcı iş akışı örneği tanımını güncelleştirmek için bir mekanizma sağlayan sunulmuştur. Daha fazla bilgi için bkz: [dinamik güncelleştirme](../../../docs/framework/windows-workflow-foundation/dynamic-update.md) ve [nasıl yapılır: iş akışı örneği çalışma tanım güncelleştirme](../../../docs/framework/windows-workflow-foundation/how-to-update-the-definition-of-a-running-workflow-instance.md).  
   
--   SqlWorkflowInstanceStoreSchemaUpgrade.sql veritabanı komut dosyası kullanılarak oluşturulan Kalıcılık veritabanları yükseltmek için sağlanan [!INCLUDE[netfx40_short](../../../includes/netfx40-short-md.md)] veritabanı komut dosyaları. Bu komut dosyası güncelleştirmeleri [!INCLUDE[netfx40_short](../../../includes/netfx40-short-md.md)] sunulan yeni sürüm özelliklerini desteklemek için Kalıcılık veritabanlarını [!INCLUDE[net_v45](../../../includes/net-v45-md.md)]. Veritabanında kalıcı iş akışı örnekleri varsayılan sürüm değerleri verilir ve yan yana yürütme ve dinamik güncelleştirme katılabilirsiniz. [!INCLUDE[crdefault](../../../includes/crdefault-md.md)] [İş akışı sürüm desteklemek için .NET Framework 4 Kalıcılık veritabanlarını yükseltme](../../../docs/framework/windows-workflow-foundation/using-workflowidentity-and-versioning.md#UpdatingWF4PersistenceDatabases).  
+-   SqlWorkflowInstanceStoreSchemaUpgrade.sql veritabanı komut dosyası kullanılarak oluşturulan Kalıcılık veritabanları yükseltmek için sağlanan [!INCLUDE[netfx40_short](../../../includes/netfx40-short-md.md)] veritabanı komut dosyaları. Bu komut dosyası güncelleştirmeleri [!INCLUDE[netfx40_short](../../../includes/netfx40-short-md.md)] sunulan yeni sürüm özelliklerini desteklemek için Kalıcılık veritabanlarını [!INCLUDE[net_v45](../../../includes/net-v45-md.md)]. Veritabanında kalıcı iş akışı örnekleri varsayılan sürüm değerleri verilir ve yan yana yürütme ve dinamik güncelleştirme katılabilirsiniz. Daha fazla bilgi için bkz: [destek iş akışı sürüm oluşturma için .NET Framework 4 Kalıcılık veritabanlarını yükseltme](../../../docs/framework/windows-workflow-foundation/using-workflowidentity-and-versioning.md#UpdatingWF4PersistenceDatabases).  
   
 ##  <a name="BKMK_NewActivities"></a> Etkinlikler  
  Yerleşik etkinlik kitaplığı yeni etkinlikler ve varolan etkinlikleri için yeni özellikler içerir.  

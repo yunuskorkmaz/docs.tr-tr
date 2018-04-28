@@ -14,11 +14,11 @@ ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: b34a0118c9223e8d09bf56de39e3fea1b115688f
-ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
-ms.translationtype: HT
+ms.openlocfilehash: ae5bf1088ec03229eb996b0e43b3d3395497571a
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/27/2018
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="windows-workflow-foundation-4-performance"></a>Windows Workflow Foundation 4 performansı
 Dustin Metzgar  
@@ -36,7 +36,7 @@ Dustin Metzgar
   
  [!INCLUDE[indigo1](../../../includes/indigo1-md.md)] Hizmet odaklı uygulamalar oluşturmak için Microsoft'un programlama modelidir. İlk .net 3.0 WF3 birlikte bir parçası olarak sunulmuştur ve şimdi anahtar bileşenlerinden biri olan [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)].  
   
- Windows Server AppFabric oluşturulmasını, ölçeklenmesini ve Web ve IIS'de çalışan bileşik uygulamaları yönetmek kolaylaştıran bir tümleşik teknoloji kümesidir. İzleme ve Hizmetleri ve iş akışlarını yönetmek için araçlar sağlar. [!INCLUDE[crdefault](../../../includes/crdefault-md.md)] [Windows Server AppFabric](http://msdn.microsoft.com/windowsserver/ee695849.aspx)  
+ Windows Server AppFabric oluşturulmasını, ölçeklenmesini ve Web ve IIS'de çalışan bileşik uygulamaları yönetmek kolaylaştıran bir tümleşik teknoloji kümesidir. İzleme ve Hizmetleri ve iş akışlarını yönetmek için araçlar sağlar. Daha fazla bilgi için bkz: [Windows Server AppFabric](http://msdn.microsoft.com/windowsserver/ee695849.aspx)  
   
 ## <a name="goals"></a>Hedefleri  
  Bu konuda farklı senaryolar için ölçülen verilerle WF4 performans özelliklerini göstermek için hedefidir. Ayrıca WF4 WF3 arasındaki ayrıntılı karşılaştırmaları sağlar ve böylece bu yeni düzeltmede yapılan harika geliştirmeleri gösterir. Senaryolar ve bu makalede sunulan veri WF4 ve WF3 farklı yönlerini temel maliyetini ölçme. Bu veriler WF4 performans özelliklerini anlamak yararlı olur ve WF4 WF3 kümesinden planlama veya uygulama geliştirme WF4 kullanılarak yararlı olabilir. Ancak, bu makaledeki sunulan verilerden çizilmiş sonuçları dikkatli olunmalıdır. Yüksek oranda bağımlı iş akışının nasıl uygulandığını ve farklı bir bileşik iş akışı uygulamanın performansını bileşenleri ile tümleştirilmiştir. Bir uygulama performans özelliklerini belirlemek için her bir uygulama ölçmek gerekir.  
@@ -67,7 +67,7 @@ Dustin Metzgar
 ### <a name="messaging"></a>İleti  
  Başlangıçta WF3 çok olan dış olayları veya web üzerinden sınırlı Mesajlaşma Destek Hizmetleri çağrılarını. .NET 3.5, iş akışları olarak uygulanabilir [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] istemcileri veya olarak sunulan [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] aracılığıyla Hizmetleri <xref:System.Workflow.Activities.SendActivity> ve <xref:System.Workflow.Activities.ReceiveActivity>. WF4 içinde iş akışı tabanlı Mesajlaşma programlama kavramı daha fazla ile sıkı tümleştirme güçlendirilmiş [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] mantığı WF Mesajlaşma.  
   
- Sağlanan birleştirilmiş ileti işleme ardışık düzen [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] .Net 4 önemli ölçüde daha iyi performans ve ölçeklenebilirlik WF3 daha WF4 Hizmetleri yardımcı olur. WF4 karmaşık ileti Exchange desenleri (MEPs) model daha zengin Mesajlaşma programlama desteği de sağlar. Geliştiriciler ya da yazılı Hizmet sözleşmeleri kolay programlama veya seri hale getirme maliyetleri ödeme olmadan daha iyi performans elde etmek için türsüz Hizmet sözleşmeleri elde etmek için kullanabilirsiniz. İstemci tarafı önbelleğe alma desteğini kanal <xref:System.ServiceModel.Activities.SendMessageChannelCache> WF4 sınıfında geliştiricileri en az çaba ile hızlı uygulamalar oluşturmanıza yardımcı olur. [!INCLUDE[crdefault](../../../includes/crdefault-md.md)] [Düzeyler gönderme işlemleri için önbellek paylaşımı değiştirme](../../../docs/framework/wcf/feature-details/changing-the-cache-sharing-levels-for-send-activities.md).  
+ Sağlanan birleştirilmiş ileti işleme ardışık düzen [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] .Net 4 önemli ölçüde daha iyi performans ve ölçeklenebilirlik WF3 daha WF4 Hizmetleri yardımcı olur. WF4 karmaşık ileti Exchange desenleri (MEPs) model daha zengin Mesajlaşma programlama desteği de sağlar. Geliştiriciler ya da yazılı Hizmet sözleşmeleri kolay programlama veya seri hale getirme maliyetleri ödeme olmadan daha iyi performans elde etmek için türsüz Hizmet sözleşmeleri elde etmek için kullanabilirsiniz. İstemci tarafı önbelleğe alma desteğini kanal <xref:System.ServiceModel.Activities.SendMessageChannelCache> WF4 sınıfında geliştiricileri en az çaba ile hızlı uygulamalar oluşturmanıza yardımcı olur. Daha fazla bilgi için bkz: [Gönder etkinlikler için önbellek paylaşımı düzeylerini değiştirme](../../../docs/framework/wcf/feature-details/changing-the-cache-sharing-levels-for-send-activities.md).  
   
 ### <a name="declarative-programming"></a>Bildirim temelli programlama  
  WF4 bir temiz ve basit bildirim temelli programlama çerçevesi model iş süreçlerini ve hizmetleri sağlar. Tam bildirim temelli birleşim ile hiçbir kod-iş akışı yazma büyük ölçüde basitleştirir yanında, etkinliklerin programlama modelini destekler. İçinde [!INCLUDE[netfx40_short](../../../includes/netfx40-short-md.md)], XAML tabanlı bildirim temelli programlama çerçevesini tek derlemeye WPF ve WF desteklemek için System.Xaml.dll birleşik.  
@@ -314,7 +314,7 @@ public sealed class CompensableActivityEmptyCompensation : CodeActivity
  Bu grafikte fark Temizle eğilimleri iç içe geçme bellek kullanımını WF3 ve WF4 göreceli olarak en az bir etkiye sahip biridir.  Belirli bir iş akışındaki etkinliklerin sayısını en önemli bellek etkiye gelir.  Veri dizisi 1000, karmaşık derinliği 5 dizisi 5 ve karmaşık derinliği 7 sırası 1 Çeşitlemeler verildiğinde, etkinliklerin sayısını binlerce girerken, bellek kullanım artışı daha belirgin hale işaretlenmemiştir.  (1 derinliğini 7 sırası) olağanüstü durumda ~ 29K etkinlikleri olduğu WF4 neredeyse %79 daha az bellek WF3 daha kullanıyor.  
   
 ### <a name="multiple-workflow-definitions-test"></a>Birden çok iş akışı tanımları testi  
- İş akışı tanımı başına bellek ölçme iki farklı testlere WF3 ve WF4 iş akışlarını barındırmak için kullanılabilir seçenekleri nedeniyle ayrılmıştır.  Belirli bir iş akışı instanced ve tanımı yalnızca bir kez yürütülen iş akışı karmaşıklık test değerinden farklı bir şekilde testleri çalıştırın.  İş akışı tanımı ve ana bilgisayar AppDomain ömrü boyunca bellekte kalması olmasıdır.  Belirtilen iş akışı örneği çalıştıran tarafından kullanılan bellek çöp toplama sırasında temizlenmelidir.  Geçiş Kılavuzu WF4 için barındırma seçenekleri hakkında daha ayrıntılı bilgi içerir. [!INCLUDE[crdefault](../../../includes/crdefault-md.md)] [WF Geçiş Kılavuzu: İş akışı barındırma](http://go.microsoft.com/fwlink/?LinkID=153313).  
+ İş akışı tanımı başına bellek ölçme iki farklı testlere WF3 ve WF4 iş akışlarını barındırmak için kullanılabilir seçenekleri nedeniyle ayrılmıştır.  Belirli bir iş akışı instanced ve tanımı yalnızca bir kez yürütülen iş akışı karmaşıklık test değerinden farklı bir şekilde testleri çalıştırın.  İş akışı tanımı ve ana bilgisayar AppDomain ömrü boyunca bellekte kalması olmasıdır.  Belirtilen iş akışı örneği çalıştıran tarafından kullanılan bellek çöp toplama sırasında temizlenmelidir.  Geçiş Kılavuzu WF4 için barındırma seçenekleri hakkında daha ayrıntılı bilgi içerir. Daha fazla bilgi için bkz: [WF Geçiş Kılavuzu: iş akışı barındırma](http://go.microsoft.com/fwlink/?LinkID=153313).  
   
  İş akışı tanımı testi için birçok iş akışı tanımları oluşturma çeşitli şekillerde yapılabilir.  Örneği için bir ad aynı dışında 1000 iş akışları oluşturmak için kod oluşturma kullanın ve bu iş akışlarının her ayrı dosyalara kaydedin.  Bu yaklaşım için konsol barındırılan sınama yapılmadı.  WF3 içinde <xref:System.Workflow.Runtime.WorkflowRuntime> sınıfı, iş akışı tanımları çalıştırmak için kullanıldı.  WF4 olabilir ya da kullanım <xref:System.Activities.WorkflowApplication> tek iş akışı örneği oluşturmak veya doğrudan kullanmak için <xref:System.Activities.WorkflowInvoker> bir yöntem çağrısı değilmiş gibi etkinliği çalıştırmak için.  <xref:System.Activities.WorkflowApplication> tek iş akışı örneğinin bir ana bilgisayardır ve daha yakın özellik eşliği sahip <xref:System.Workflow.Runtime.WorkflowRuntime> böylece bu test kullanıldı.  
   

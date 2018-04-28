@@ -29,11 +29,11 @@ ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: 8694c646cabfd6637325035e563298b0619dac14
-ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
-ms.translationtype: HT
+ms.openlocfilehash: 639e1bbac049e4186faa2b243200f7ef544add38
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/27/2018
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="printing-overview"></a>Yazdırmaya Genel Bakış
 Microsoft .NET Framework kullanarak uygulama geliştiricileri [!INCLUDE[TLA#tla_wpf](../../../../includes/tlasharptla-wpf-md.md)] yazdırmayı ve baskı sistem yönetimi zengin yeni kümesine sahip [!INCLUDE[TLA#tla_api#plural](../../../../includes/tlasharptla-apisharpplural-md.md)]. İle [!INCLUDE[TLA#tla_winvista](../../../../includes/tlasharptla-winvista-md.md)], bazıları bu yazdırma sistemi geliştirmelerini ayrıca oluşturma geliştiricilerine kullanılabilir [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] uygulamaları ve kullanan geliştiriciler yönetilmeyen kodu. Bu yeni işlevsellik özünde yenilikler [!INCLUDE[TLA#tla_xps](../../../../includes/tlasharptla-xps-md.md)] dosya biçimi ve [!INCLUDE[TLA2#tla_xps](../../../../includes/tla2sharptla-xps-md.md)] yazdırma yolu.  
@@ -60,7 +60,7 @@ Microsoft .NET Framework kullanarak uygulama geliştiricileri [!INCLUDE[TLA#tla_
   
 -   Kanal (bpc) CMYK başına 32 bit dahil gelişmiş renk profillerinin yerel destek adlı renkleri, n mürekkep ve saydamlık ve gradyan yerel destek.  
   
--   Her ikisi için Yazdırma performans geliştirilmiş [!INCLUDE[TLA2#tla_winfx](../../../../includes/tla2sharptla-winfx-md.md)] ve [!INCLUDE[TLA#tla_win32](../../../../includes/tlasharptla-win32-md.md)] tabanlı uygulamaları.  
+-   Hem .NET Framework için yazdırma performansı geliştirildi ve [!INCLUDE[TLA#tla_win32](../../../../includes/tlasharptla-win32-md.md)] tabanlı uygulamaları.  
   
 -   Endüstri standardı [!INCLUDE[TLA2#tla_metro](../../../../includes/tla2sharptla-metro-md.md)] biçimi.  
   
@@ -73,7 +73,7 @@ Microsoft .NET Framework kullanarak uygulama geliştiricileri [!INCLUDE[TLA#tla_
 -   Genişletilebilir filtre ardışık düzen. [!INCLUDE[TLA2#tla_metro](../../../../includes/tla2sharptla-metro-md.md)] Yazıcı sürücüsü (XPSDrv) filtre ardışık düzen hem doğrudan hem de ölçeklenebilir yazdırmayı etkinleştirmek için tasarlanmış [!INCLUDE[TLA2#tla_metro](../../../../includes/tla2sharptla-metro-md.md)] belgeleri. (Arama "XPSDrv" içinde [Windows Sürücü Seti](https://msdn.microsoft.com/library/windows/hardware/ff557573.aspx).)  
   
 ### <a name="print-path-architecture"></a>Yazdırma yolu mimarisi  
- Her ikisi de while [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)] ve [!INCLUDE[TLA2#tla_winfx](../../../../includes/tla2sharptla-winfx-md.md)] uygulamaları destekleyen [!INCLUDE[TLA2#tla_metro](../../../../includes/tla2sharptla-metro-md.md)], [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)] ve Windows Forms uygulamaları kullanmak bir [!INCLUDE[TLA2#tla_gdi](../../../../includes/tla2sharptla-gdi-md.md)] için [!INCLUDE[TLA2#tla_metro](../../../../includes/tla2sharptla-metro-md.md)] oluşturmak için dönüştürme [!INCLUDE[TLA2#tla_metro](../../../../includes/tla2sharptla-metro-md.md)] biçimlendirilmiş içerik için[!INCLUDE[TLA2#tla_metro](../../../../includes/tla2sharptla-metro-md.md)] yazıcı sürücüsü (XPSDrv). Bu uygulamaları kullanmak için gerekli [!INCLUDE[TLA2#tla_metro](../../../../includes/tla2sharptla-metro-md.md)] yazdırma yolu ve kullanmaya devam edebilirsiniz [!INCLUDE[TLA#tla_emf](../../../../includes/tlasharptla-emf-md.md)] yazdırma tabanlı. Bununla birlikte, çoğu [!INCLUDE[TLA2#tla_metro](../../../../includes/tla2sharptla-metro-md.md)] özellikler ve geliştirmeler yalnızca hedef uygulamalar için de kullanılabilir [!INCLUDE[TLA2#tla_metro](../../../../includes/tla2sharptla-metro-md.md)] yazdırma yolu.  
+ Her ikisi de while [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)] ve .NET Framework uygulamaları Destek [!INCLUDE[TLA2#tla_metro](../../../../includes/tla2sharptla-metro-md.md)], [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)] ve Windows Forms uygulamaları kullanın bir [!INCLUDE[TLA2#tla_gdi](../../../../includes/tla2sharptla-gdi-md.md)] için [!INCLUDE[TLA2#tla_metro](../../../../includes/tla2sharptla-metro-md.md)] oluşturmak için dönüştürme [!INCLUDE[TLA2#tla_metro](../../../../includes/tla2sharptla-metro-md.md)] biçimlendirilmiş içerik için[!INCLUDE[TLA2#tla_metro](../../../../includes/tla2sharptla-metro-md.md)]yazıcı sürücüsü (XPSDrv). Bu uygulamaları kullanmak için gerekli [!INCLUDE[TLA2#tla_metro](../../../../includes/tla2sharptla-metro-md.md)] yazdırma yolu ve kullanmaya devam edebilirsiniz [!INCLUDE[TLA#tla_emf](../../../../includes/tlasharptla-emf-md.md)] yazdırma tabanlı. Bununla birlikte, çoğu [!INCLUDE[TLA2#tla_metro](../../../../includes/tla2sharptla-metro-md.md)] özellikler ve geliştirmeler yalnızca hedef uygulamalar için de kullanılabilir [!INCLUDE[TLA2#tla_metro](../../../../includes/tla2sharptla-metro-md.md)] yazdırma yolu.  
   
  XPSDrv tabanlı yazıcılar tarafından kullanımını etkinleştirmek için [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)] ve Windows Forms uygulamaları [!INCLUDE[TLA2#tla_metro](../../../../includes/tla2sharptla-metro-md.md)] yazıcı sürücüsü (XPSDrv) destekleyen dönüştürülmesi [!INCLUDE[TLA2#tla_gdi](../../../../includes/tla2sharptla-gdi-md.md)] için [!INCLUDE[TLA2#tla_metro](../../../../includes/tla2sharptla-metro-md.md)] biçimi. XPSDrv modeli için bir dönüştürücü de sağlar [!INCLUDE[TLA2#tla_metro](../../../../includes/tla2sharptla-metro-md.md)] için [!INCLUDE[TLA2#tla_gdi](../../../../includes/tla2sharptla-gdi-md.md)] biçimi böylece [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)] uygulamaları yazdırabilirsiniz [!INCLUDE[TLA2#tla_xps](../../../../includes/tla2sharptla-xps-md.md)] belgeleri. İçin [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] uygulamalar, dönüştürülmesi [!INCLUDE[TLA2#tla_metro](../../../../includes/tla2sharptla-metro-md.md)] için [!INCLUDE[TLA2#tla_gdi](../../../../includes/tla2sharptla-gdi-md.md)] biçimi tarafından otomatik olarak yapılır <xref:System.Windows.Xps.XpsDocumentWriter.Write%2A> ve <xref:System.Windows.Xps.XpsDocumentWriter.WriteAsync%2A> yöntemlerinin <xref:System.Windows.Xps.XpsDocumentWriter> yazma işlemi hedef yazdırma sırasını sahip olduğunda sınıfı bir XPSDrv sürücüsü. (Windows Forms uygulamaları olamaz yazdırma [!INCLUDE[TLA2#tla_xps](../../../../includes/tla2sharptla-xps-md.md)] belgeler.)  
   
