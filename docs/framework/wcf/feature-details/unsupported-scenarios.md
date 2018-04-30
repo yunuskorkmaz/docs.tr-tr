@@ -16,11 +16,11 @@ ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: 7738eba66619e8a312ed2f9bd43142dbb097b259
-ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
+ms.openlocfilehash: cfeca11f7d78e8aa2d201238e3a485576b3e0c82
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/28/2018
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="unsupported-scenarios"></a>Desteklenmeyen Senaryolar
 Çeşitli nedenlerle [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] bazı belirli güvenlik senaryoları desteklemez. Örneğin, [!INCLUDE[wxp](../../../../includes/wxp-md.md)] Home Edition SSPI veya Kerberos kimlik doğrulama protokolleri uygulamaz ve bu nedenle [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] bu platformda Windows kimlik doğrulaması ile bir hizmeti çalıştıran desteklemiyor. Kullanıcı adı/parola ve HTTP/HTTPS ile tümleşik kimlik doğrulaması gibi diğer kimlik doğrulama mekanizmaları çalıştırırken desteklenen [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] Windows XP Home Edition altında.  
@@ -58,7 +58,7 @@ ms.lasthandoff: 04/28/2018
 >  İçin varsayılan değer <xref:System.ServiceModel.Security.WindowsClientCredential.AllowedImpersonationLevel%2A> özelliği <xref:System.ServiceModel.Security.WindowsClientCredential> sınıfı <xref:System.Security.Principal.TokenImpersonationLevel.Identification>. Çoğu durumda, bir kimlik düzeyi kimliğe bürünme bağlamı herhangi bir ek derlemeler yükleme izni yok. Bu dikkat edilmesi gereken çok yaygın bir durumdur için varsayılan değer budur. Kimliğe bürünme kimlik düzeyi de oluşur özellikleri alınırken işlem olmadığı zaman `SeImpersonate` ayrıcalık. Daha fazla bilgi için bkz: [temsilcilik ve kimliğe bürünme](../../../../docs/framework/wcf/feature-details/delegation-and-impersonation-with-wcf.md).  
   
 ### <a name="delegation-requires-credential-negotiation"></a>Kimlik bilgileri görüşmesi temsilci gerektirir  
- Temsilci ile Kerberos kimlik doğrulama protokolünü kullanmak için Kerberos protokolünü (çok leg ya da çok adımlı Kerberos de denir) kimlik bilgileri görüşmesi ile uygulamalıdır. Kerberos kimlik doğrulaması (bazen tek adımda ya da tek leg Kerberos denir) kimlik bilgileri görüşmesi uygularsanız, özel durum oluşur. [!INCLUDE[crabout](../../../../includes/crabout-md.md)] kimlik bilgileri görüşmesi uygulamak için bkz: nasıl [hata ayıklama Windows kimlik doğrulama hataları](../../../../docs/framework/wcf/feature-details/debugging-windows-authentication-errors.md).  
+ Temsilci ile Kerberos kimlik doğrulama protokolünü kullanmak için Kerberos protokolünü (çok leg ya da çok adımlı Kerberos de denir) kimlik bilgileri görüşmesi ile uygulamalıdır. Kerberos kimlik doğrulaması (bazen tek adımda ya da tek leg Kerberos denir) kimlik bilgileri görüşmesi uygularsanız, özel durum oluşur. Kimlik bilgileri görüşmesi uygulama hakkında daha fazla bilgi için bkz: [hata ayıklama Windows kimlik doğrulama hataları](../../../../docs/framework/wcf/feature-details/debugging-windows-authentication-errors.md).  
   
 ## <a name="cryptography"></a>Belirttiğiniz Bu, bir WSDL içe aktarma sırasında  doğrudan  veya  talep türü koleksiyonları doğrudan kullanmak yerine.  
   

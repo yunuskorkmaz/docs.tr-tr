@@ -22,11 +22,11 @@ ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: 123186dd5f0d63693c04c0857709292ce122f918
-ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
+ms.openlocfilehash: c626699dc5291f4d4f6d432e89708661b233f16d
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="synchronous-and-asynchronous-operations"></a>Zaman Uyumlu ve Zaman Uyumsuz İşlemler
 Bu konuda, uygulama ve zaman uyumsuz hizmet işlemlerini çağırma anlatılmaktadır.  
@@ -51,7 +51,7 @@ Bu konuda, uygulama ve zaman uyumsuz hizmet işlemlerini çağırma anlatılmakt
   
 -   Bir istemci zaman uyumsuz bir yaklaşım veya çağrı yapan uygulamanın şu durumlarda kullanın:  
   
--   Orta katman uygulama işlemlerinden çağırdığınız durumunda. ([!INCLUDE[crabout](../../../includes/crabout-md.md)] bu senaryolara bkz [orta katman istemci uygulamaları](../../../docs/framework/wcf/feature-details/middle-tier-client-applications.md).)  
+-   Orta katman uygulama işlemlerinden çağırdığınız durumunda. (Bu tür senaryoları hakkında daha fazla bilgi için bkz: [orta katman istemci uygulamaları](../../../docs/framework/wcf/feature-details/middle-tier-client-applications.md).)  
   
 -   Bir ASP.NET sayfasının işlemlerini çağırdığınız, zaman uyumsuz sayfalar kullanın.  
   

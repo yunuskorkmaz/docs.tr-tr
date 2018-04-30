@@ -18,11 +18,11 @@ ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: 7b051cdeebf83b34b6e503d8d9cb54a38a46a2a6
-ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
+ms.openlocfilehash: 989ae3d70bce2a4cb374904ee6b2f30f770ccf8a
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/28/2018
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="choosing-a-transport"></a>Taşıma Seçme
 Bu konuda yer alan üç ana taşımalar arasından seçim ölçütleri ele alınmıştır [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)]: HTTP, TCP ve adlandırılmış kanallar. [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] Ayrıca içeren bir message queuing (MSMQ olarak da bilinir) taşıma, ancak bu belgede, message queuing kapsamaz.  
@@ -39,7 +39,7 @@ Bu konuda yer alan üç ana taşımalar arasından seçim ölçütleri ele alın
  Bu bölümde, aralarında seçmeye yönelik ayrıntılı karar grafiği dahil olmak üzere üç ana taşımalar herhangi birini seçerek ana nedenleri açıklanmaktadır.  
   
 ### <a name="when-to-use-http-transport"></a>HTTP taşıma kullanma zamanı  
- HTTP, istemciler ve sunucular arasındaki bir istek/yanıt kuralıdır. Bir Web sunucusu ile iletişim kuran Web tarayıcısı istemcilerinin en yaygın uygulama oluşur. İstemci, istemci istek iletileri için dinleyen bir sunucuya bir istek gönderir. Sunucu bir istek aldığında, istek durumunu içeren bir yanıt döndürür. Başarılı olursa, bir Web sayfası, bir hata iletisi veya diğer bilgileri gibi isteğe bağlı veriler döndürülür. [!INCLUDE[crabout](../../../../includes/crabout-md.md)] HTTP Protokolü Bkz [HTTP - Köprü Metni Aktarım Protokolü](http://go.microsoft.com/fwlink/?LinkId=94858).  
+ HTTP, istemciler ve sunucular arasındaki bir istek/yanıt kuralıdır. Bir Web sunucusu ile iletişim kuran Web tarayıcısı istemcilerinin en yaygın uygulama oluşur. İstemci, istemci istek iletileri için dinleyen bir sunucuya bir istek gönderir. Sunucu bir istek aldığında, istek durumunu içeren bir yanıt döndürür. Başarılı olursa, bir Web sayfası, bir hata iletisi veya diğer bilgileri gibi isteğe bağlı veriler döndürülür. HTTP protokolü ile ilgili daha fazla bilgi için bkz: [HTTP - Köprü Metni Aktarım Protokolü](http://go.microsoft.com/fwlink/?LinkId=94858).  
   
  HTTP protokolü bağlantı tabanlı değildir — yanıt gönderildikten sonra hiçbir durumu korunur. Birden çok sayfa işlemleri işlemek için uygulama gerekli herhangi bir durum kalıcı olması gerekir.  
   

@@ -18,11 +18,11 @@ ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: bce838d9584480028c7b02d1ba19547fe208bf2c
-ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
+ms.openlocfilehash: df603da0f4feedeacc59198c156322c78fd2f388
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/28/2018
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="metadata-architecture-overview"></a>Meta Veri Mimarisi Genel Bakış
 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] dışarı aktarma, yayımlama, alma ve hizmet meta verileri içe aktarma için zengin bir altyapı sağlar. [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] Hizmetleri, böylece Svcutil.exe gibi araçları hizmete erişim için istemci kodu otomatik olarak oluşturabilir hizmetin uç ile etkileşim kurmak nasıl açıklamak için meta verileri kullanın.  
@@ -59,7 +59,7 @@ ms.lasthandoff: 04/28/2018
   
  MEX protokolünü kullanan meta veri uç noktalarını eklemek için hizmet uç noktaları IMetadataExchange adlı hizmet sözleşmesini kullanın, hizmet ana bilgisayarı ekleyin.[!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] tanımlar <xref:System.ServiceModel.Description.IMetadataExchange> bu hizmet sözleşmesi adı olan arabirimi. WS-MetadataExchange uç noktaları veya MEX uç birini kullanabilirsiniz üzerinde statik Fabrika yöntemler tarafından sunulan dört varsayılan bağlamaları <xref:System.ServiceModel.Description.MetadataExchangeBindings> sınıfı tarafından kullanılan varsayılan bağlamaları eşleşecek şekilde [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] Svcutil.exe gibi araçları. Özel bağlama kullanma MEX meta veri uç noktalarını da yapılandırabilirsiniz.  
   
- <xref:System.ServiceModel.Description.ServiceMetadataBehavior> Kullanan bir <xref:System.ServiceModel.Description.WsdlExporter?displayProperty=nameWithType> hizmetinizde tüm hizmet uç noktalarına meta verilerini dışa aktarmak için. [!INCLUDE[crabout](../../../../includes/crabout-md.md)] bkz. bir hizmetinden meta verileri dışa aktarma [aktarma ve içeri aktarma meta verileri](../../../../docs/framework/wcf/feature-details/exporting-and-importing-metadata.md).  
+ <xref:System.ServiceModel.Description.ServiceMetadataBehavior> Kullanan bir <xref:System.ServiceModel.Description.WsdlExporter?displayProperty=nameWithType> hizmetinizde tüm hizmet uç noktalarına meta verilerini dışa aktarmak için. Meta veri alanından bir hizmet verme hakkında daha fazla bilgi için bkz: [aktarma ve içeri aktarma meta verileri](../../../../docs/framework/wcf/feature-details/exporting-and-importing-metadata.md).  
   
  <xref:System.ServiceModel.Description.ServiceMetadataBehavior> Ekleyerek, hizmet ana bilgisayarı güçlendirir bir <xref:System.ServiceModel.Description.ServiceMetadataExtension> örneği, hizmet ana bilgisayarı için bir uzantı olarak. <xref:System.ServiceModel.Description.ServiceMetadataExtension?displayProperty=nameWithType> Meta veri protokolleri yayımlama uygulamasını sağlar. Aynı zamanda <xref:System.ServiceModel.Description.ServiceMetadataExtension?displayProperty=nameWithType> erişerek çalışma zamanında hizmetin meta verileri almak için <xref:System.ServiceModel.Description.ServiceMetadataExtension.Metadata%2A> özelliği.  
   

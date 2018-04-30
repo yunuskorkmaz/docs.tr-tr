@@ -14,14 +14,14 @@ ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: fa529ddbdfa05ce876c99efd4a717c6136cf6686
-ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
+ms.openlocfilehash: d862865057f9978a0b815f3026f2ba67c87eac7d
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/28/2018
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="what39s-new-in-windows-workflow-foundation-in-net-45"></a>Ne&#39;s .NET 4.5, Windows Workflow Foundation'deki yenilikler
-Windows Workflow Foundation (WF) [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] yeni etkinlikler, Tasarımcısı özellikleri ve iş akışı geliştirme modeli gibi birçok yeni özellik sunar. Birçok, ancak tüm, sunulan yeni iş akışı özellikleri [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] yeniden barındırılan iş akışı Tasarımcısı'nda desteklenir. [!INCLUDE[crabout](../../../includes/crabout-md.md)] desteklenen, yeni özellikler bkz [Rehosted iş akışı Tasarımcısı'nda yeni iş akışı Foundation 4.5 özellikleri için destek](../../../docs/framework/windows-workflow-foundation/wf-features-in-the-rehosted-workflow-designer.md). [!INCLUDE[crabout](../../../includes/crabout-md.md)] geçirme .NET 3.0 ve en son sürümü kullanmak için .NET 3.5 iş akışı uygulamaları bkz [Geçiş Kılavuzu](../../../docs/framework/windows-workflow-foundation/migration-guidance.md). Bu konuda sunulan yeni iş akışı özelliklerine genel bakış sağlayan [!INCLUDE[net_v45](../../../includes/net-v45-md.md)].  
+Windows Workflow Foundation (WF) [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] yeni etkinlikler, Tasarımcısı özellikleri ve iş akışı geliştirme modeli gibi birçok yeni özellik sunar. Birçok, ancak tüm, sunulan yeni iş akışı özellikleri [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] yeniden barındırılan iş akışı Tasarımcısı'nda desteklenir. Desteklenen yeni özellikler hakkında daha fazla bilgi için bkz: [Rehosted iş akışı Tasarımcısı'nda yeni iş akışı Foundation 4.5 özellikleri için destek](../../../docs/framework/windows-workflow-foundation/wf-features-in-the-rehosted-workflow-designer.md). En son sürümü kullanmak için .NET 3.0 ve .NET 3.5 iş akışı uygulamalarını geçirme hakkında daha fazla bilgi için bkz: [Geçiş Kılavuzu](../../../docs/framework/windows-workflow-foundation/migration-guidance.md). Bu konuda sunulan yeni iş akışı özelliklerine genel bakış sağlayan [!INCLUDE[net_v45](../../../includes/net-v45-md.md)].  
   
 > [!WARNING]
 >  İçinde sunulan yeni Windows Workflow Foundation özellikleri [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] framework'ün önceki sürümlerini hedefleyen projeler için kullanılabilir değil. Hedefleyen bir projede varsa [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] framework'ün önceki bir sürüme çeşitli sorunlar oluşabilir yeniden yöneliktir.  
@@ -158,7 +158,7 @@ Windows Workflow Foundation (WF) [!INCLUDE[net_v45](../../../includes/net-v45-md
   
  C# ifadeleri tasarım zamanında doğrulanır. C# ifadelerde hata bir kırmızı dalgalı alt çizgi ile işaretlenir.  
   
- [!INCLUDE[crabout](../../../includes/crabout-md.md)] C# ifadeleri, bkz: [C# ifadeleri](../../../docs/framework/windows-workflow-foundation/csharp-expressions.md).  
+ C# ifadeler hakkında daha fazla bilgi için bkz: [C# ifadeleri](../../../docs/framework/windows-workflow-foundation/csharp-expressions.md).  
   
 ###  <a name="BKMK_Visibility"></a> Daha fazla denetim görünürlüğü Kabuk çubuğu ve üstbilgi öğeleri  
  Rehosted Tasarımcısı'nda bazı standart kullanıcı Arabirimi denetimlerini belirli bir iş akışı için anlamı olmayabilir ve kapalı olabilir. İçinde [!INCLUDE[netfx40_short](../../../includes/netfx40-short-md.md)], bu özelleştirme yalnızca Tasarımcısı'nın altındaki Kabuk çubuğu tarafından desteklenir. İçinde [!INCLUDE[net_v45](../../../includes/net-v45-md.md)], kabuk üstbilgi öğeleri Tasarımcı üstündeki görünürlüğünü ayarlayarak ayarlanabilir <xref:System.Activities.Presentation.View.DesignerView.WorkflowShellHeaderItemsVisibility%2A> uygun ile <xref:System.Activities.Presentation.View.ShellHeaderItemsVisibility> değeri.  

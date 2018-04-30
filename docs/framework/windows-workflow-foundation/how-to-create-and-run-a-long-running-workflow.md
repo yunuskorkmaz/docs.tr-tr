@@ -17,11 +17,11 @@ ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: 10ca88533297e56d48b73b6368c2e8457380f543
-ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
+ms.openlocfilehash: c7776c9155ef2c2c5c4ea804285cd67e995ef119
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/27/2018
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="how-to-create-and-run-a-long-running-workflow"></a>Nasıl yapılır: oluşturma ve uzun çalıştırma iş akışını çalıştıran
 Windows Workflow Foundation (WF) merkezi özelliklerinin kalıcı hale getirmek ve boşta iş akışları veritabanına unload zamanının yeteneği biridir. ' Ndaki adımları [nasıl yapılır: bir iş akışını çalıştırma](../../../docs/framework/windows-workflow-foundation/how-to-run-a-workflow.md) bir konsol uygulaması kullanarak iş akışı barındırma temelleri gösterilmektedir. Örnekler başlangıç iş akışları, iş akışı yaşam döngüsü işleyicileri ve devam ettirme yer işaretleri gösterilmesine neden olan. İş akışı Kalıcılık etkili bir şekilde göstermek için daha karmaşık bir iş akışı ana gerekli değildir başlatılıyor ve birden çok iş akışı örneği sürdürme destekler. Bu adım öğreticide nasıl başlatma ve sürdürme birden çok iş akışı örnekleri, iş akışı Kalıcılık destekleyen ve izleme gibi gelişmiş özellikler için temel sağlayan uygulama ve olan sürüm oluşturma Windows form konağı oluşturulacağını gösterir sonraki öğretici adımlar gösterilmektedir.  
@@ -703,7 +703,7 @@ Windows Workflow Foundation (WF) merkezi özelliklerinin kalıcı hale getirmek 
     ```  
   
 ###  <a name="BKMK_WorkflowVersionMap"></a> Başlangıç ve birden çok iş akışı türü sürdürme etkinleştirmek için  
- Bir iş akışı örneği sürdürmek için bir iş akışı tanımını sağlamak üzere ana bilgisayar sahiptir. Bu öğreticide üç iş akışı türü vardır ve bu tür birden fazla sürümünü sonraki öğretici adımları tanıtır. `WorkflowIdentity` tanımlama bilgilerini kalıcı iş akışı örneği ile ilişkilendirilecek bir ana bilgisayar uygulaması için bir yol sağlar. Bu bölümdeki adımları kalıcı iş akışı örneği iş akışı kimliği karşılık gelen iş akışı tanımı için eşleme ile yardımcı olması için bir yardımcı sınıf oluşturmak nasıl ekleyebileceğiniz gösterilmektedir. [!INCLUDE[crabout](../../../includes/crabout-md.md)] `WorkflowIdentity` ve sürüm oluşturma, bkz: [kullanarak WorkflowIdentity ve sürüm oluşturma](../../../docs/framework/windows-workflow-foundation/using-workflowidentity-and-versioning.md).  
+ Bir iş akışı örneği sürdürmek için bir iş akışı tanımını sağlamak üzere ana bilgisayar sahiptir. Bu öğreticide üç iş akışı türü vardır ve bu tür birden fazla sürümünü sonraki öğretici adımları tanıtır. `WorkflowIdentity` tanımlama bilgilerini kalıcı iş akışı örneği ile ilişkilendirilecek bir ana bilgisayar uygulaması için bir yol sağlar. Bu bölümdeki adımları kalıcı iş akışı örneği iş akışı kimliği karşılık gelen iş akışı tanımı için eşleme ile yardımcı olması için bir yardımcı sınıf oluşturmak nasıl ekleyebileceğiniz gösterilmektedir. Hakkında daha fazla bilgi için `WorkflowIdentity` ve sürüm oluşturma, bkz: [kullanarak WorkflowIdentity ve sürüm oluşturma](../../../docs/framework/windows-workflow-foundation/using-workflowidentity-and-versioning.md).  
   
 1.  Sağ **NumberGuessWorkflowHost** içinde **Çözüm Gezgini** ve **Ekle**, **sınıfı**. Tür `WorkflowVersionMap` içine **adı** kutusuna ve tıklatın **Ekle**.  
   

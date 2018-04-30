@@ -21,14 +21,14 @@ ms.author: bruceper
 manager: mbaldwin
 ms.workload:
 - dotnet
-ms.openlocfilehash: 3dc83697a27bf99a63305bf89a57fbcb4d459b45
-ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
+ms.openlocfilehash: 80fd6163db1b7b168be4e19b01c8eb9f15865f04
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/28/2018
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="how-to-create-a-custom-binding-using-the-securitybindingelement"></a>Nasıl yapılır: SecurityBindingElement Kullanarak Özel Bağlama Oluşturma
-[!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] yapılandırılabilir, ancak tüm güvenlik yapılandırma seçenekleri, tam esneklik sağlıyor mu birkaç sistem tarafından sağlanan bağlamaları içerir [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] destekler. Bu konuda doğrudan tek tek bağlama öğelerini özel bağlama oluşturma gösterir ve bu tür bir bağlama oluşturulurken belirtilen güvenlik ayarlarını bazılarını vurgular. [!INCLUDE[crabout](../../../../includes/crabout-md.md)] özel bağlama oluşturma, bkz: [bağlamaları genişletme](../../../../docs/framework/wcf/extending/extending-bindings.md).  
+[!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] yapılandırılabilir, ancak tüm güvenlik yapılandırma seçenekleri, tam esneklik sağlıyor mu birkaç sistem tarafından sağlanan bağlamaları içerir [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] destekler. Bu konuda doğrudan tek tek bağlama öğelerini özel bağlama oluşturma gösterir ve bu tür bir bağlama oluşturulurken belirtilen güvenlik ayarlarını bazılarını vurgular. Özel bağlama oluşturma hakkında daha fazla bilgi için bkz: [bağlamaları genişletme](../../../../docs/framework/wcf/extending/extending-bindings.md).  
   
 > [!WARNING]
 >  <xref:System.ServiceModel.Channels.SecurityBindingElement> desteklemediği <xref:System.ServiceModel.Channels.IDuplexSessionChannel> kanal TCP tarafından varsayılan kanal şekli kullanımı şekli ne zaman aktarım <xref:System.ServiceModel.TransferMode> ayarlanır <xref:System.ServiceModel.TransferMode.Buffered>. Ayarlamalısınız <xref:System.ServiceModel.TransferMode> için <xref:System.ServiceModel.TransferMode.Streamed> kullanmak için <xref:System.ServiceModel.Channels.SecurityBindingElement> Bu senaryoda.  

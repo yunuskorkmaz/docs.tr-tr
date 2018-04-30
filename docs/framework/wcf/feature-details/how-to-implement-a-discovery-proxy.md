@@ -1,27 +1,29 @@
 ---
 title: "Nasıl yapılır: Keşif Proxy'si Uygulama"
-ms.custom: 
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 78d70e0a-f6c3-4cfb-a7ca-f66ebddadde0
-caps.latest.revision: "19"
+caps.latest.revision: 19
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 25db6b46758e11c194952fbca03286891a5914d9
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 2e984a55137aec0042f8de0d69aa1310ed43a0df
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="how-to-implement-a-discovery-proxy"></a>Nasıl yapılır: Keşif Proxy'si Uygulama
-Bu konuda, bir keşif proxy'si uygulama açıklanmaktadır. [!INCLUDE[crabout](../../../../includes/crabout-md.md)]bulma özelliği [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)], bkz: [WCF keşif genel bakış](../../../../docs/framework/wcf/feature-details/wcf-discovery-overview.md). Keşif proxy'si genişleten bir sınıfı oluşturarak uygulanabilir <xref:System.ServiceModel.Discovery.DiscoveryProxy> soyut sınıf. Tanımlanan ve bu örnekte kullanılan diğer destek sınıfları mevcuttur. `OnResolveAsyncResult`, `OnFindAsyncResult`, ve `AsyncResult`. Bu sınıfların uygulamak <xref:System.IAsyncResult> arabirimi. [!INCLUDE[crabout](../../../../includes/crabout-md.md)]<xref:System.IAsyncResult> bkz [System.IAsyncResult arabirimi](xref:System.IAsyncResult).
+Bu konuda, bir keşif proxy'si uygulama açıklanmaktadır. Bulma özelliği hakkında daha fazla bilgi için [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)], bkz: [WCF keşif genel bakış](../../../../docs/framework/wcf/feature-details/wcf-discovery-overview.md). Keşif proxy'si genişleten bir sınıfı oluşturarak uygulanabilir <xref:System.ServiceModel.Discovery.DiscoveryProxy> soyut sınıf. Tanımlanan ve bu örnekte kullanılan diğer destek sınıfları mevcuttur. `OnResolveAsyncResult`, `OnFindAsyncResult`, ve `AsyncResult`. Bu sınıfların uygulamak <xref:System.IAsyncResult> arabirimi. Hakkında daha fazla bilgi için <xref:System.IAsyncResult> bkz [System.IAsyncResult arabirimi](xref:System.IAsyncResult).
   
  Keşif proxy'si ekleme Bu konuda üç ana kısma ayrılmıştır:  
   

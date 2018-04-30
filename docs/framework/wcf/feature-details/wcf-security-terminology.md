@@ -1,35 +1,35 @@
 ---
-title: "WCF Güvenlik Terimleri"
-ms.custom: 
+title: WCF Güvenlik Terimleri
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - dotnet-clr
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - security [WCF], terminology
 - security glossary [WCF]
 - security terms [WCF]
 ms.assetid: 68dde024-8e51-40ba-804f-ec52d85e9ca9
-caps.latest.revision: 
+caps.latest.revision: 14
 author: BrucePerlerMS
 ms.author: bruceper
 manager: mbaldwin
 ms.workload:
 - dotnet
-ms.openlocfilehash: 352615238d95cf02788cf88ef412a11ffd2faf37
-ms.sourcegitcommit: cf22b29db780e532e1090c6e755aa52d28273fa6
+ms.openlocfilehash: 46f70ad623d852e051ff69fb68690114f8c39381
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/01/2018
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="wcf-security-terminology"></a>WCF Güvenlik Terimleri
 Bazı güvenlik ele alırken kullanılan terminolojiyi bilinmiyor olabilir. Bu konu, bazı güvenlik koşulları kısa açıklamaları sağlar, ancak her öğe için kapsamlı belgeler sağlamak üzere tasarlanmamıştır.  
   
- [!INCLUDE[crabout](../../../../includes/crabout-md.md)] içinde kullanılan terimleri [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] belgelerine bakın [temel Windows Communication Foundation kavramları](../../../../docs/framework/wcf/fundamental-concepts.md).  
+ Kullanılan terimler hakkında daha fazla bilgi için [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] belgelerine bakın [temel Windows Communication Foundation kavramları](../../../../docs/framework/wcf/fundamental-concepts.md).  
   
  erişim denetimi listesi (ACL)  
  Bir nesne için geçerli bir güvenlik korumaları listesi. (Bir nesne bir dosya, işlem, olay veya başka bir güvenlik açıklayıcısı sahip herhangi bir şey olabilir.) ACL içindeki bir erişim denetim girdisi (ACE) giriştir. ACL'ler iki tür vardır: isteğe bağlı ve sistem.  

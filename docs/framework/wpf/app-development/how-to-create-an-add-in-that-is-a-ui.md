@@ -1,12 +1,13 @@
 ---
-title: "Nasıl yapılır: UI Olan Eklenti Oluşturma"
-ms.custom: 
+title: 'Nasıl yapılır: UI Olan Eklenti Oluşturma'
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-wpf
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-wpf
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - creating an add-in that is a UI [WPF]
@@ -16,19 +17,20 @@ helpviewer_keywords:
 - implementing UI add-ins [WPF]
 - pipeline segments [WPF], creating add-ins
 ms.assetid: 86375525-282b-4039-8352-8680051a10ea
-caps.latest.revision: "8"
+caps.latest.revision: 8
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: fea1c718eedb12d49eced9964e4f9045badf07ed
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: cadb992a68f4ee9f06ad37adf71856cdc4f46503
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="how-to-create-an-add-in-that-is-a-ui"></a>Nasıl yapılır: UI Olan Eklenti Oluşturma
-Bu örnek bir eklenti oluşturmak nasıl gösterir bir [!INCLUDE[TLA#tla_wpf](../../../../includes/tlasharptla-wpf-md.md)] [!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)] tarafından barındırılan bir [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] tek başına uygulama.  
+Bu örnek bir Windows Presentation Foundation (tarafından barındırılan WPF) olan bir eklenti oluşturmak nasıl gösterir bir [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] tek başına uygulama.  
   
  Eklenti bir [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] diğer bir deyişle bir [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] kullanıcı denetimi. Tek bir düğme, tıklatıldığında, kullanıcı denetimi içeriği olan bir ileti kutusu görüntüler. [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] Tek başına uygulamayı barındıran eklenti [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] ana uygulama penceresinin içeriği olarak.  
   
@@ -64,7 +66,7 @@ Bu örnek bir eklenti oluşturmak nasıl gösterir bir [!INCLUDE[TLA#tla_wpf](..
   
  [!code-csharp[SimpleAddInIsAUISample#AddInSideAdapterCode](../../../../samples/snippets/csharp/VS_Snippets_Wpf/SimpleAddInIsAUISample/CSharp/AddInSideAdapters/WPFAddIn_ViewToContractAddInSideAdapter.cs#addinsideadaptercode)]  
   
- Bir eklenti döndüğü eklenti modelinde bir [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] (bkz [bir eklenti döndürür bir kullanıcı Arabirimi oluşturma](../../../../docs/framework/wpf/app-development/how-to-create-an-add-in-that-returns-a-ui.md)), eklenti bağdaştırıcısı dönüştürülen <xref:System.Windows.FrameworkElement> için bir <xref:System.AddIn.Contract.INativeHandleContract> çağırarak <xref:System.AddIn.Pipeline.FrameworkElementAdapters.ViewToContractAdapter%2A>. <xref:System.AddIn.Pipeline.FrameworkElementAdapters.ViewToContractAdapter%2A>Ayrıca, çağıran kodu yazılacak yönteminden uygulamak gerek olmasa da bu modelde, çağrılmalıdır. Geçersiz kılarak bunu <xref:System.AddIn.Pipeline.ContractBase.QueryContract%2A> ve çağıran kodu uygulama <xref:System.AddIn.Pipeline.FrameworkElementAdapters.ViewToContractAdapter%2A> , çağıran kodu <xref:System.AddIn.Pipeline.ContractBase.QueryContract%2A> beklediği bir <xref:System.AddIn.Contract.INativeHandleContract>. Bu durumda, arayan bir sonraki alt bölümünde ele konak tarafı bağdaştırıcısı olacaktır.  
+ Bir eklenti döndüğü eklenti modelinde bir [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] (bkz [bir eklenti döndürür bir kullanıcı Arabirimi oluşturma](../../../../docs/framework/wpf/app-development/how-to-create-an-add-in-that-returns-a-ui.md)), eklenti bağdaştırıcısı dönüştürülen <xref:System.Windows.FrameworkElement> için bir <xref:System.AddIn.Contract.INativeHandleContract> çağırarak <xref:System.AddIn.Pipeline.FrameworkElementAdapters.ViewToContractAdapter%2A>. <xref:System.AddIn.Pipeline.FrameworkElementAdapters.ViewToContractAdapter%2A> Ayrıca, çağıran kodu yazılacak yönteminden uygulamak gerek olmasa da bu modelde, çağrılmalıdır. Geçersiz kılarak bunu <xref:System.AddIn.Pipeline.ContractBase.QueryContract%2A> ve çağıran kodu uygulama <xref:System.AddIn.Pipeline.FrameworkElementAdapters.ViewToContractAdapter%2A> , çağıran kodu <xref:System.AddIn.Pipeline.ContractBase.QueryContract%2A> beklediği bir <xref:System.AddIn.Contract.INativeHandleContract>. Bu durumda, arayan bir sonraki alt bölümünde ele konak tarafı bağdaştırıcısı olacaktır.  
   
 > [!NOTE]
 >  Geçersiz kılmanız gerekir <xref:System.AddIn.Pipeline.ContractBase.QueryContract%2A> konak uygulama arasında sekmeyle gitmeyi etkinleştirme için bu modelde [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] ve eklenti [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)]. Daha fazla bilgi için bkz: "WPF Eklenti kısıtlamaları" [WPF eklentileri genel bakış](../../../../docs/framework/wpf/app-development/wpf-add-ins-overview.md).  

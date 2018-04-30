@@ -1,13 +1,13 @@
 ---
-title: "WPF Fırçalarına Genel Bakış"
-ms.custom: 
+title: WPF Fırçalarına Genel Bakış
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - dotnet-wpf
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - csharp
@@ -15,17 +15,17 @@ dev_langs:
 helpviewer_keywords:
 - brushes [WPF], about brushes
 ms.assetid: ecea1955-420b-45c6-bf43-c1404c072c41
-caps.latest.revision: 
+caps.latest.revision: 12
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: ec7e566e6f56c215bbaeafdfb5c5e97cc0add0bf
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 1ef53da1febd6a49af8404e5889a728a1b7c649b
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="wpf-brushes-overview"></a>WPF Fırçalarına Genel Bakış
 Fırça tarafından boyandığında çünkü ekranda görünen her şeyi görünür olur. Örneğin, bir fırça bir düğme, metin ön ve şeklin dolgu arka plan açıklamak için kullanılır. Bu konu ile Boyama kavramlarını tanıtır [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] fırçaları ve örnekler sağlar. Fırçalar boyamak etkinleştirme [!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)] nesneler herhangi bir şeyin desenleri ve görüntüleri karmaşık kümesi için basit, düz renk ile.  
@@ -142,7 +142,7 @@ Dikdörtgene VisualBrush kullanılarak boyanır
   
 <a name="paintwithpredefinedbrushesandsystemcolors"></a>   
 ## <a name="paint-using-predefined-and-system-brushes"></a>Önceden tanımlanmış ve sistem fırçaları ile Boyama  
- Kolaylık sağlamak için [!INCLUDE[TLA#tla_wpf](../../../../includes/tlasharptla-wpf-md.md)] bir dizi önceden tanımlanmış ve sistem fırçaları nesneleri boyamak için kullanabileceğiniz sağlar.  
+ Kolaylık olması için bir dizi önceden tanımlanmış ve sistem nesneleri boyamak için kullanabileceğiniz fırçaları Windows Presentation Foundation (WPF) sağlar.  
   
 -   Kullanılabilen önceden tanımlanmış Fırçalar listesi için bkz: <xref:System.Windows.Media.Brushes> sınıfı. Önceden tanımlanmış fırça kullanma gösteren bir örnek için bkz: [düz renk ile alanı boyamak](../../../../docs/framework/wpf/graphics-multimedia/how-to-paint-an-area-with-a-solid-color.md).  
   
@@ -150,7 +150,7 @@ Dikdörtgene VisualBrush kullanılarak boyanır
   
 <a name="commonbrushfeatures"></a>   
 ## <a name="common-brush-features"></a>Ortak Fırça özellikleri  
- <xref:System.Windows.Media.Brush>nesneleri sağlayan bir <xref:System.Windows.Media.Brush.Opacity%2A> fırça saydam veya kısmen saydam yapmak için kullanılan özellik. Bir <xref:System.Windows.Media.Brush.Opacity%2A> 0 değeri fırça sırasında tamamen saydam yapar bir <xref:System.Windows.Media.Brush.Opacity%2A> 1 değerini fırça tamamen opak yapar. Aşağıdaki örnek kullanır <xref:System.Windows.Media.Brush.Opacity%2A> özelliğini bir <xref:System.Windows.Media.SolidColorBrush> yüzde 25 donuk.  
+ <xref:System.Windows.Media.Brush> nesneleri sağlayan bir <xref:System.Windows.Media.Brush.Opacity%2A> fırça saydam veya kısmen saydam yapmak için kullanılan özellik. Bir <xref:System.Windows.Media.Brush.Opacity%2A> 0 değeri fırça sırasında tamamen saydam yapar bir <xref:System.Windows.Media.Brush.Opacity%2A> 1 değerini fırça tamamen opak yapar. Aşağıdaki örnek kullanır <xref:System.Windows.Media.Brush.Opacity%2A> özelliğini bir <xref:System.Windows.Media.SolidColorBrush> yüzde 25 donuk.  
   
  [!code-xaml[BrushOverviewExamples_snip#OpacityExample1XAML](../../../../samples/snippets/xaml/VS_Snippets_Wpf/BrushOverviewExamples_snip/XAML/OpacityExample.xaml#opacityexample1xaml)]  
   

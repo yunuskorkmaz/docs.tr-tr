@@ -27,20 +27,20 @@ ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: 134efba11742ab9cc8da2dfab77c233b52f1bcf1
-ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
+ms.openlocfilehash: 51b940d4a2463be7aaea9d0ff8e48e2b9f47363a
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/28/2018
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="security-wpf"></a>Güvenlik (WPF)
-<a name="introduction"></a> Geliştirirken [!INCLUDE[TLA#tla_wpf](../../../includes/tlasharptla-wpf-md.md)] tek başına ve tarayıcıda barındırılan uygulamalar, güvenlik modeli bulundurmalısınız. [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] tek başına uygulamalarını yürütmek Kısıtlanmamış izinlerle ( [!INCLUDE[TLA2#tla_cas](../../../includes/tla2sharptla-cas-md.md)] **FullTrust** izin kümesi), Windows Installer (.msi), XCopy, kullanılarak dağıtılan olup olmadığını veya [!INCLUDE[TLA2#tla_clickonce](../../../includes/tla2sharptla-clickonce-md.md)]. Kısmi güven, tek başına WPF uygulamaları ClickOnce ile dağıtma desteklenmiyor. Ancak, bir tam güven ana bilgisayar uygulaması kısmi güven oluşturabilirsiniz <xref:System.AppDomain> kullanarak .NET Framework eklenti modeli. Daha fazla bilgi için bkz: [WPF eklentileri genel bakış](../../../docs/framework/wpf/app-development/wpf-add-ins-overview.md).  
+<a name="introduction"></a> Windows Presentation Foundation (WPF) tek başına ve tarayıcıda barındırılan uygulamalar geliştirirken, güvenlik modeli dikkate almanız gerekir. [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] tek başına uygulamalarını yürütmek Kısıtlanmamış izinlerle ( [!INCLUDE[TLA2#tla_cas](../../../includes/tla2sharptla-cas-md.md)] **FullTrust** izin kümesi), Windows Installer (.msi), XCopy, kullanılarak dağıtılan olup olmadığını veya [!INCLUDE[TLA2#tla_clickonce](../../../includes/tla2sharptla-clickonce-md.md)]. Kısmi güven, tek başına WPF uygulamaları ClickOnce ile dağıtma desteklenmiyor. Ancak, bir tam güven ana bilgisayar uygulaması kısmi güven oluşturabilirsiniz <xref:System.AppDomain> kullanarak .NET Framework eklenti modeli. Daha fazla bilgi için bkz: [WPF eklentileri genel bakış](../../../docs/framework/wpf/app-development/wpf-add-ins-overview.md).  
   
  [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] tarayıcıda barındırılan uygulamalar tarafından barındırılan [!INCLUDE[TLA#tla_iegeneric](../../../includes/tlasharptla-iegeneric-md.md)] ya da Firefox ve ya da olabilir [!INCLUDE[TLA#tla_xbap#plural](../../../includes/tlasharptla-xbapsharpplural-md.md)] veya gevşek [!INCLUDE[TLA#tla_xaml](../../../includes/tlasharptla-xaml-md.md)] belgeler hakkında daha fazla bilgi için bkz: [WPF XAML tarayıcısı uygulamaları genel bakış](../../../docs/framework/wpf/app-development/wpf-xaml-browser-applications-overview.md).  
   
  [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] tarayıcıda barındırılan uygulamalar için varsayılan sınırlıdır varsayılan olarak kısmi güven güvenlik sandbox içinde yürütme [!INCLUDE[TLA2#tla_cas](../../../includes/tla2sharptla-cas-md.md)] **Internet** bölge izin kümesi. Bu etkili bir şekilde yalıtır [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] yalıtılması normal Web uygulamaları beklediğiniz şekilde istemci bilgisayardan tarayıcıda barındırılan uygulamalar. Bir XBAP ayrıcalıkları, tam güven kadar dağıtım URL'si ve istemcinin güvenlik yapılandırması güvenlik bölgesi bağlı olarak yükseltebilirsiniz. Daha fazla bilgi için bkz: [WPF kısmi güven güvenlik](../../../docs/framework/wpf/wpf-partial-trust-security.md).  
   
- Bu konu için güvenlik modeli açıklanır [!INCLUDE[TLA#tla_wpf](../../../includes/tlasharptla-wpf-md.md)] tek başına ve tarayıcıda barındırılan uygulamalar.  
+ Bu konu Windows Presentation Foundation (WPF) tek başına ve tarayıcıda barındırılan uygulamalar için güvenlik modeli açıklanır.  
   
  Bu konu aşağıdaki bölümleri içermektedir:  
   

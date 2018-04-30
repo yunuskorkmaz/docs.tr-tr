@@ -1,45 +1,47 @@
 ---
-title: "WCF Analiz İzleme"
-ms.custom: 
+title: WCF Analiz İzleme
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 6029c7c7-3515-4d36-9d43-13e8f4971790
-caps.latest.revision: "21"
+caps.latest.revision: 21
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 37dea97db8816f68f0331580cfa21daed7f69914
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 57e3ee18848031bce8ffbb54d26353fe36ee1def
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="wcf-analytic-tracing"></a>WCF Analiz İzleme
 Bu örnek, kendi izleme olaylarını analitik akışının içine izlerini eklemek gösterilmiştir [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] ETW Yazar [!INCLUDE[netfx_current_long](../../../../includes/netfx-current-long-md.md)]. Analitik izlemeleri, yüksek performanslı cezası ödeme olmadan Hizmetleri içine görünürlük elde kolaylaştırmak için yöneliktir. Bu örnek nasıl kullanılacağını göstermektedir <xref:System.Diagnostics.Eventing?displayProperty=nameWithType> API'leri ile tümleştirmenize yazma olayları [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] Hizmetleri.  
   
- [!INCLUDE[crabout](../../../../includes/crabout-md.md)]<xref:System.Diagnostics.Eventing?displayProperty=nameWithType> API'leri, bkz: <xref:System.Diagnostics.Eventing?displayProperty=nameWithType>.  
+ Hakkında daha fazla bilgi için <xref:System.Diagnostics.Eventing?displayProperty=nameWithType> API'leri, bkz: <xref:System.Diagnostics.Eventing?displayProperty=nameWithType>.  
   
  Windows olay izleme hakkında daha fazla bilgi için bkz: [artırmak hata ayıklama ve performans ayarlama ETW ile](http://go.microsoft.com/fwlink/?LinkId=166488).  
   
 ## <a name="disposing-eventprovider"></a>EventProvider atma  
- Bu örnekte <xref:System.Diagnostics.Eventing.EventProvider?displayProperty=nameWithType> sınıfı, hangi uygulayan <xref:System.IDisposable?displayProperty=nameWithType>. İzlemeyi uygularken bir [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] hizmeti, bunu kullanabilir, büyük olasılıkla <xref:System.Diagnostics.Eventing.EventProvider>ait hizmet ömrü için kaynaklar. Bu örnek hiçbir zaman bu nedenle ve Okunabilirlik için kaydırılmış siler. <xref:System.Diagnostics.Eventing.EventProvider>. Herhangi bir nedenden dolayı hizmetiniz farklı varsa, izleme ve gereksinimleri bu kaynağını atma gerekir ve bu örnek yönetilmeyen kaynaklarını atma yönelik en iyi uygulamaları uygun olarak değiştirmeniz gerekir. [!INCLUDE[crabout](../../../../includes/crabout-md.md)]yönetilmeyen kaynakları atma, bkz: [Dispose yöntemi uygulama](http://go.microsoft.com/fwlink/?LinkId=166436).  
+ Bu örnekte <xref:System.Diagnostics.Eventing.EventProvider?displayProperty=nameWithType> sınıfı, hangi uygulayan <xref:System.IDisposable?displayProperty=nameWithType>. İzlemeyi uygularken bir [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] hizmeti, bunu kullanabilir, büyük olasılıkla <xref:System.Diagnostics.Eventing.EventProvider>ait hizmet ömrü için kaynaklar. Bu örnek hiçbir zaman bu nedenle ve Okunabilirlik için kaydırılmış siler. <xref:System.Diagnostics.Eventing.EventProvider>. Herhangi bir nedenden dolayı hizmetiniz farklı varsa, izleme ve gereksinimleri bu kaynağını atma gerekir ve bu örnek yönetilmeyen kaynaklarını atma yönelik en iyi uygulamaları uygun olarak değiştirmeniz gerekir. Yönetilmeyen kaynakları atma hakkında daha fazla bilgi için bkz: [Dispose yöntemi uygulama](http://go.microsoft.com/fwlink/?LinkId=166436).  
   
 ## <a name="self-hosting-vs-web-hosting"></a>Kendi kendine barındırma vs. Web barındırma  
- İçin Web barındırılan hizmetleri, WCF'ın analitik izlemeleri izleri yayma hizmeti tanımlamak için kullanılan "HostReference" adlı bir alan sağlar. Bu modelde, Genişletilebilir kullanıcı izlemeleri katılabilir ve bu örnek Bunun yapılması için en iyi uygulamaları gösterir. Bir Web ana bilgisayarı biçimi başvuru kanal ' &#124;' karakteri gerçekte görünür kaynaklanan dize aşağıdakilerden herhangi biri olabilir:  
+ İçin Web barındırılan hizmetleri, WCF'ın analitik izlemeleri izleri yayma hizmeti tanımlamak için kullanılan "HostReference" adlı bir alan sağlar. Bu modelde, Genişletilebilir kullanıcı izlemeleri katılabilir ve bu örnek Bunun yapılması için en iyi uygulamaları gösterir. Bir Web ana bilgisayarı biçimi başvuru kanal '&#124;' karakteri gerçekte görünür kaynaklanan dize aşağıdakilerden herhangi biri olabilir:  
   
 -   Uygulama kök dizininde değilse.  
   
-     \<SiteName >\<ApplicationVirtualPath > &#124;\< ServiceVirtualPath > &#124; \<ServiceName >  
+     \<SiteName >\<ApplicationVirtualPath >&#124;\<ServiceVirtualPath >&#124;\<ServiceName >  
   
 -   Uygulama kök dizininde ise.  
   
-     \<SiteName > &#124; \<ServiceVirtualPath > &#124; \<ServiceName >  
+     \<SiteName >&#124;\<ServiceVirtualPath >&#124;\<ServiceName >  
   
  Kendini barındıran Hizmetleri için [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]'s analitik izlemeleri "HostReference" alanını doldurmak değil. `WCFUserEventProvider` Sınıfı bu örnekteki davranır tutarlı bir kendi kendini barındıran hizmet tarafından kullanıldığında.  
   

@@ -20,11 +20,11 @@ ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: 754915d5ba596b5121c47be3533ee679b4f9594b
-ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
+ms.openlocfilehash: 998920e4c1d7e0524da1c9843378e92517f4ee96
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/28/2018
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="web-services-protocols-supported-by-system-provided-interoperability-bindings"></a>Sistem Tarafından Sağlanan Birlikte Kullanılabilirlik Bağlamaları ile Desteklenen Web Hizmeti Protokolleri
 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] Web hizmetleri belirtimleri bilinen belirtim kümesi desteği Web Hizmetleri ile birlikte çalışmak için yerleşik olarak bulunur. Birlikte çalışabilirlik en iyi yöntemler, hizmet yapılandırmasını basitleştirmek için [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] üç birlikte çalışabilir sistem tarafından sağlanan bağlamalar sunar: <xref:System.ServiceModel.BasicHttpBinding?displayProperty=nameWithType>, <xref:System.ServiceModel.WSHttpBinding?displayProperty=nameWithType>, ve <xref:System.ServiceModel.WSDualHttpBinding?displayProperty=nameWithType>. Terfi, yapılandırılmış bilgi standartları (OASIS) standartları için kuruluş ile birlikte çalışabilirlik [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] bir birlikte çalışabilen sistem tarafından sağlanan bir bağlamayı içerir: <xref:System.ServiceModel.WS2007HttpBinding?displayProperty=nameWithType>. Meta veri yayımlama için [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] iki birlikte çalışabilir sistem tarafından sağlanan bağlamaları içerir: [ \<mexHttpBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/mexhttpbinding.md) ve [ \<mexHttpsBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/mexhttpsbinding.md). Bu konu, sistem tarafından sağlanan birlikte çalışabilir bağlamalar destek özellikleri listeler.  
@@ -102,7 +102,7 @@ ms.lasthandoff: 04/28/2018
  Aşağıdaki tablolar tarafından sunulan sistem tarafından sağlanan birlikte çalışabilir meta veri bağlamaları tarafından desteklenen protokolleri açıklamaktadır <xref:System.ServiceModel.Description.MetadataExchangeBindings?displayProperty=nameWithType> sınıfı.  
   
 ### <a name="mexhttpbinding"></a>mexHttpBinding  
- [ \<MexHttpBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/mexhttpbinding.md) bağlama aşağıdaki protokollerini destekler. [!INCLUDE[crabout](../../../../includes/crabout-md.md)] Bu bağlama bkz [meta veri yayımlama](../../../../docs/framework/wcf/feature-details/publishing-metadata.md).  
+ [ \<MexHttpBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/mexhttpbinding.md) bağlama aşağıdaki protokollerini destekler. Bu bağlama işlemini kullanma hakkında daha fazla bilgi için bkz: [meta veri yayımlama](../../../../docs/framework/wcf/feature-details/publishing-metadata.md).  
   
 |Kategori|Protokol|Belirtimi ve kullanımı|  
 |--------------|--------------|-----------------------------|  
@@ -112,7 +112,7 @@ ms.lasthandoff: 04/28/2018
 |Meta Veriler|WS-MetadataExchange|[WS-MetadataExchange](http://go.microsoft.com/fwlink/?LinkId=94868)<br /><br /> [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] XML Şeması, WSDL ve WS-Policy almak için WS-MetadataExchange uygular.|  
   
 ### <a name="mexhttpsbinding"></a>mexHttpsBinding  
- [\<mexHttpsBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/mexhttpsbinding.md) aşağıdaki protokollerini destekler. [!INCLUDE[crabout](../../../../includes/crabout-md.md)] Bu bağlama bkz [meta veri yayımlama](../../../../docs/framework/wcf/feature-details/publishing-metadata.md).  
+ [\<mexHttpsBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/mexhttpsbinding.md) aşağıdaki protokollerini destekler. Bu bağlama işlemini kullanma hakkında daha fazla bilgi için bkz: [meta veri yayımlama](../../../../docs/framework/wcf/feature-details/publishing-metadata.md).  
   
 |Kategori|Protokol|Belirtimi ve kullanımı|  
 |--------------|--------------|-----------------------------|  

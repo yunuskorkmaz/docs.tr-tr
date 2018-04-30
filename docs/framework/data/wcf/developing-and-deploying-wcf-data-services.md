@@ -21,11 +21,11 @@ ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: d20d4c39a6cca744ac981d1a143d2847d9b20e5a
-ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
+ms.openlocfilehash: bc962b328f2321d1cfb016b78a53307b43fac30d
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/28/2018
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="developing-and-deploying-wcf-data-services"></a>Geliştirme ve WCF Veri Hizmetleri dağıtma
 Bu konuda geliştirme ve dağıtma hakkında bilgi verilmektedir [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)]. Hakkında daha fazla temel bilgiler için [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)], bkz: [Başlarken](../../../../docs/framework/data/wcf/getting-started-with-wcf-data-services.md) ve [genel bakış](../../../../docs/framework/data/wcf/wcf-data-services-overview.md).  
@@ -80,7 +80,7 @@ Bu konuda geliştirme ve dağıtma hakkında bilgi verilmektedir [!INCLUDE[ssAst
   
 3.  **Windows Azure geliştirme ortamı**  
   
-     Windows Azure Araçları Visual Studio için Visual Studio'da Windows Azure hizmetlerini geliştirmek için Araçlar tümleşik bir dizi içerir. Bu araçlarla, Microsoft Azure'a dağıtılabilen bir veri hizmeti geliştirebilir ve veri hizmetini dağıtımdan önce yerel bilgisayarda test edebilirsiniz. Windows Azure platformu üzerinde çalışan veri hizmeti geliştirmek için Visual Studio kullanarak bu araçları kullanın. Visual Studio'dan için Windows Azure Araçları'nı yükleyebilirsiniz [Microsoft Download Center](http://go.microsoft.com/fwlink/?LinkID=201848). [!INCLUDE[crabout](../../../../includes/crabout-md.md)] Windows Azure üzerinde çalışan veri hizmeti geliştirme Bkz post [Windows Azure bir OData hizmetini dağıtma](http://go.microsoft.com/fwlink/?LinkId=201847).  
+     Windows Azure Araçları Visual Studio için Visual Studio'da Windows Azure hizmetlerini geliştirmek için Araçlar tümleşik bir dizi içerir. Bu araçlarla, Microsoft Azure'a dağıtılabilen bir veri hizmeti geliştirebilir ve veri hizmetini dağıtımdan önce yerel bilgisayarda test edebilirsiniz. Windows Azure platformu üzerinde çalışan veri hizmeti geliştirmek için Visual Studio kullanarak bu araçları kullanın. Visual Studio'dan için Windows Azure Araçları'nı yükleyebilirsiniz [Microsoft Download Center](http://go.microsoft.com/fwlink/?LinkID=201848). Post Windows Azure üzerinde çalışan veri hizmeti geliştirme hakkında daha fazla bilgi için bkz: [Windows Azure bir OData hizmetini dağıtma](http://go.microsoft.com/fwlink/?LinkId=201847).  
   
 ### <a name="development-tips"></a>Geliştirme İpuçları  
  Bir veri hizmeti geliştirirken, aşağıdakileri dikkate almanız gerekir:  
@@ -116,21 +116,21 @@ Bu konuda geliştirme ve dağıtma hakkında bilgi verilmektedir [!INCLUDE[ssAst
   
         -   [XCopy](http://msdn.microsoft.com/library/4312c651-2119-49be-bbeb-ee28bdbfe71e)  
   
-     [!INCLUDE[crabout](../../../../includes/crabout-md.md)] dağıtım seçenekleri bir [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] uygulama, bkz: [Visual Studio ve ASP.NET Web dağıtımına genel bakış](http://msdn.microsoft.com/library/99bd1927-b59f-4e02-87b4-55c6ba2adbc3).  
+     Dağıtım seçenekleri hakkında daha fazla bilgi için bir [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] uygulama, bkz: [Visual Studio ve ASP.NET Web dağıtımına genel bakış](http://msdn.microsoft.com/library/99bd1927-b59f-4e02-87b4-55c6ba2adbc3).  
   
     > [!TIP]
     >  Veri hizmetini IIS'ye dağıtmayı denemeden önce, IIS çalıştıran Web sunucusuna dağıtımı test ettiğinizden emin olun. Daha fazla bilgi için bkz: [nasıl yapılır: bir WCF veri hizmeti üzerinde çalışan IIS geliştirmek](../../../../docs/framework/data/wcf/how-to-develop-a-wcf-data-service-running-on-iis.md).  
   
 -   **Microsoft Azure**  
   
-     Visual Studio için Windows Azure araçları kullanarak, bir veri hizmeti Windows Azure'a dağıtabilirsiniz. Visual Studio'dan için Windows Azure Araçları'nı yükleyebilirsiniz [Microsoft Download Center](http://go.microsoft.com/fwlink/?LinkID=201848). [!INCLUDE[crabout](../../../../includes/crabout-md.md)] bkz: post için Windows Azure, bir veri hizmeti dağıtma [Windows Azure bir OData hizmetini dağıtma](http://go.microsoft.com/fwlink/?LinkId=201847).  
+     Visual Studio için Windows Azure araçları kullanarak, bir veri hizmeti Windows Azure'a dağıtabilirsiniz. Visual Studio'dan için Windows Azure Araçları'nı yükleyebilirsiniz [Microsoft Download Center](http://go.microsoft.com/fwlink/?LinkID=201848). Post için Windows Azure veri hizmeti dağıtma hakkında daha fazla bilgi için bkz: [Windows Azure bir OData hizmetini dağıtma](http://go.microsoft.com/fwlink/?LinkId=201847).  
   
 ### <a name="deployment-considerations"></a>Dağıtım Hakkında Önemli Noktalar  
  Bir veri hizmetini dağıtırken, aşağıdakileri dikkate almanız gerekir:  
   
 -   Kullanan bir veri hizmeti dağıttığınızda [!INCLUDE[adonet_ef](../../../../includes/adonet-ef-md.md)] bir SQL Server veritabanına erişmek için sağlayıcı veri yapılarını, verileri yaymak gerekebilir veya ikisi verilerinizi ile dağıtım hizmet. Visual Studio hedef veritabanında bunun için komut dosyalarını (.sql dosyaları) otomatik olarak oluşturabilir ve bu komut dosyaları Web dağıtımı paketi dahil edilebilir bir [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] uygulama. Daha fazla bilgi için bkz: [NIB: nasıl yapılır: bir veritabanı ile bir Web uygulaması projesi dağıtma](http://msdn.microsoft.com/library/683b33f1-8a3d-45cf-af6e-61ab50fc518b). İçin bir [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] Web sitesi, bunu yapabilirsiniz kullanarak **veritabanı Yayımlama Sihirbazı'nı** Visual Studio. Daha fazla bilgi için bkz: [veritabanı Yayımlama Sihirbazı'nı kullanarak bir veritabanı dağıtma](http://msdn.microsoft.com/library/1e3682e7-8b57-4da6-a393-af9640ccf8b7).  
   
--   Çünkü [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] temel içeren [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] uygulaması, Windows Server'da çalışan IIS dağıtılmış bir veri hizmeti izlemek için Windows Server AppFabric kullanabilirsiniz. [!INCLUDE[crabout](../../../../includes/crabout-md.md)] Windows Server AppFabric bir veri hizmeti izlemek için bkz post [izleme WCF Veri Hizmetleri ile Windows Server AppFabric](http://go.microsoft.com/fwlink/?LinkID=202005).  
+-   Çünkü [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] temel içeren [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] uygulaması, Windows Server'da çalışan IIS dağıtılmış bir veri hizmeti izlemek için Windows Server AppFabric kullanabilirsiniz. Post veri hizmeti izlemek için Windows Server AppFabric kullanma hakkında daha fazla bilgi için bkz: [izleme WCF Veri Hizmetleri ile Windows Server AppFabric](http://go.microsoft.com/fwlink/?LinkID=202005).  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
  [Veri Hizmeti Barındırma](../../../../docs/framework/data/wcf/hosting-the-data-service-wcf-data-services.md)  

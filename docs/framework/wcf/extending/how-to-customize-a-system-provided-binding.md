@@ -1,34 +1,36 @@
 ---
-title: "Nasıl yapılır: Sistem Tarafından Sağlanan Bir Bağlamayı Özelleştirme"
-ms.custom: 
+title: 'Nasıl yapılır: Sistem Tarafından Sağlanan Bir Bağlamayı Özelleştirme'
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - csharp
 - vb
 ms.assetid: f8b97862-e8bb-470d-8b96-07733c21fe26
-caps.latest.revision: "10"
+caps.latest.revision: 10
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: a9b048b5c57d174ac921793ee8677622b88a0595
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 1d70a4c4234047e7410ae4f631e48595a0859f37
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="how-to-customize-a-system-provided-binding"></a>Nasıl yapılır: Sistem Tarafından Sağlanan Bir Bağlamayı Özelleştirme
-[!INCLUDE[indigo1](../../../../includes/indigo1-md.md)]temel bağlama öğeleri özelliklerden bazıları, ancak tüm özellikleri yapılandırmanıza olanak tanıyan çeşitli sistem tarafından sağlanan bağlamaları içerir. Bu konu, özelliklerin özel bağlama oluşturma için bağlama öğeleri nasıl ayarlanacağını gösterir.  
+[!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] temel bağlama öğeleri özelliklerden bazıları, ancak tüm özellikleri yapılandırmanıza olanak tanıyan çeşitli sistem tarafından sağlanan bağlamaları içerir. Bu konu, özelliklerin özel bağlama oluşturma için bağlama öğeleri nasıl ayarlanacağını gösterir.  
   
- [!INCLUDE[crabout](../../../../includes/crabout-md.md)]doğrudan oluşturmak ve bağlama öğeleri sistem tarafından sağlanan bağlamalar kullanmadan yapılandırmak bkz: nasıl [özel bağlamaları](../../../../docs/framework/wcf/extending/custom-bindings.md).  
+ Doğrudan oluşturmak ve bağlama öğeleri sistem tarafından sağlanan bağlamalar kullanmadan yapılandırma hakkında daha fazla bilgi için bkz: [özel bağlamaları](../../../../docs/framework/wcf/extending/custom-bindings.md).  
   
- [!INCLUDE[crabout](../../../../includes/crabout-md.md)]bkz: oluşturma ve özel bağlamaları genişletme [bağlamaları genişletme](../../../../docs/framework/wcf/extending/extending-bindings.md).  
+ Oluşturma ve özel bağlamaları genişletme hakkında daha fazla bilgi için bkz: [bağlamaları genişletme](../../../../docs/framework/wcf/extending/extending-bindings.md).  
   
  İçinde [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] tüm bağlamaları, oluşur *bağlama öğeleri*. Her bağlama öğesi türetilen <xref:System.ServiceModel.Channels.BindingElement> sınıfı. Sistem tarafından sağlanan bağlamalar gibi <xref:System.ServiceModel.BasicHttpBinding> oluşturun ve kendi bağlama öğeleri yapılandırın. Bu konu erişmek ve doğrudan bağlamada sunulmaz Bu bağlama öğeleri özelliklerini değiştirmek nasıl gösterir; Özellikle, <xref:System.ServiceModel.BasicHttpBinding> sınıfı.  
   

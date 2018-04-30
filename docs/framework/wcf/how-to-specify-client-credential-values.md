@@ -19,11 +19,11 @@ ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: 35244032a36af8d3d23fd9d88006ea032a99b44b
-ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
+ms.openlocfilehash: 856d33f88b55c35927998b15acc7bbf8ff1e9fe2
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/28/2018
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="how-to-specify-client-credential-values"></a>Nasıl yapılır: İstemci Kimlik Bilgileri Değerlerini Belirtme
 Kullanarak [!INCLUDE[indigo1](../../../includes/indigo1-md.md)], hizmet istemci hizmete kimlik doğrulamasının nasıl belirtebilirsiniz. Örneğin, bir hizmeti bir sertifikayla istemcinin kimliğinin doğrulanmasını koşabilirsiniz.  
@@ -75,7 +75,7 @@ Kullanarak [!INCLUDE[indigo1](../../../includes/indigo1-md.md)], hizmet istemci 
   
 3.  Ekleme bir [ \<clientCertificate >](../../../docs/framework/configure-apps/file-schema/wcf/clientcertificate-of-servicecredentials.md) öğesine [ \<clientCredentials >](../../../docs/framework/configure-apps/file-schema/wcf/clientcredentials.md) öğesi.  
   
-4.  Aşağıdaki öznitelikler uygun değerlere ayarlayın: `storeLocation`, `storeName`, `x509FindType`, ve `findValue`aşağıdaki kodda gösterildiği gibi. [!INCLUDE[crabout](../../../includes/crabout-md.md)] Sertifikalar, [sertifikalarla çalışma](../../../docs/framework/wcf/feature-details/working-with-certificates.md).  
+4.  Aşağıdaki öznitelikler uygun değerlere ayarlayın: `storeLocation`, `storeName`, `x509FindType`, ve `findValue`aşağıdaki kodda gösterildiği gibi. Sertifikalar hakkında daha fazla bilgi için bkz: [sertifikalarla çalışma](../../../docs/framework/wcf/feature-details/working-with-certificates.md).  
   
     ```xml  
     <behaviors>  

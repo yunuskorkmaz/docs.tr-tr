@@ -1,12 +1,13 @@
 ---
-title: "İletişim Kutularına Genel Bakış"
-ms.custom: 
+title: İletişim Kutularına Genel Bakış
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-wpf
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-wpf
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - csharp
@@ -17,16 +18,17 @@ helpviewer_keywords:
 - message boxes [WPF]
 - modal dialog boxes [WPF]
 ms.assetid: 0d23d544-a393-4a02-a3aa-d8cd5d3d6511
-caps.latest.revision: "25"
+caps.latest.revision: 25
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 112a9badaf9a64b2c6d3f73d64c27fbc36ec48a3
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: dfe22dec0827f0ceb880b9410b64668f219a422f
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="dialog-boxes-overview"></a>İletişim Kutularına Genel Bakış
 Bağımsız uygulamalar genellikle her ikisi de görüntülediğini ana veri uygulama üzerinden çalışır ve aracılığıyla bu verileri işlemek için işlevselliği kullanıma sunan bir ana penceresi sahip [!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)] mekanizmaları menü çubukları, araç çubukları ve durum çubukları gibi. Önemsiz olmayan bir uygulama Ayrıca aşağıdakileri yapmak için ek windows görüntülenebilir:  
@@ -43,7 +45,7 @@ Bağımsız uygulamalar genellikle her ikisi de görüntülediğini ana veri uyg
   
  A *kalıcı olmayan* iletişim kutusu, diğer yandan engellemez kullanıcı açık durumdayken diğer windows etkinleştirme. Örneğin, bir kullanıcı bir belgedeki belirli bir sözcük oluşumlarını bulmak isterse, ana pencereyi genellikle bir kullanıcı aradıklarını hangi word sormak için bir iletişim kutusunu açın. Yana bulma bir word belgesi düzenleme kullanıcı engellemez, ancak iletişim kutusunun kalıcı olması gerekmez. En az bir kalıcı olmayan iletişim kutusu sağlar bir **kapatmak** iletişim kutusunu kapatmak için düğmesini ve belirli işlevleri gibi yürütmek için ek düğmeler sağlayabilen bir **Sonrakini Bul** Sonrakini Bul düğmesi, word sözcük arama Bul ölçütlerini eşleşir.  
   
- [!INCLUDE[TLA#tla_wpf](../../../../includes/tlasharptla-wpf-md.md)]iletişim kutuları, ileti kutuları, ortak iletişim kutuları ve özel iletişim kutuları gibi çeşitli türlerde oluşturmanıza olanak sağlar. Bu konu, her açıklar ve [iletişim kutusu örnek](http://go.microsoft.com/fwlink/?LinkID=159984) eşleşen örnekler verilmektedir.  
+ Windows Presentation Foundation (WPF) iletişim kutuları, ileti kutuları, ortak iletişim kutuları ve özel iletişim kutuları gibi çeşitli türlerde oluşturmanıza olanak sağlar. Bu konu, her açıklar ve [iletişim kutusu örnek](http://go.microsoft.com/fwlink/?LinkID=159984) eşleşen örnekler verilmektedir.  
   
  
   
@@ -53,7 +55,7 @@ Bağımsız uygulamalar genellikle her ikisi de görüntülediğini ana veri uyg
   
  ![Sözcük işlemci iletişim kutusu](../../../../docs/framework/wpf/app-development/media/dialogboxesoverviewfigure1.png "DialogBoxesOverviewFigure1")  
   
- Bir ileti kutusu oluşturmak için kullandığınız <xref:System.Windows.MessageBox> sınıfı. <xref:System.Windows.MessageBox>ileti kutusu metni, başlık, simge ve aşağıdaki gibi kod kullanarak düğmeleri, yapılandırmanızı sağlar.  
+ Bir ileti kutusu oluşturmak için kullandığınız <xref:System.Windows.MessageBox> sınıfı. <xref:System.Windows.MessageBox> ileti kutusu metni, başlık, simge ve aşağıdaki gibi kod kullanarak düğmeleri, yapılandırmanızı sağlar.  
   
  [!code-csharp[DialogBoxesOverviewSnippets#MsgBoxConfigureCODEBEHIND](../../../../samples/snippets/csharp/VS_Snippets_Wpf/DialogBoxesOverviewSnippets/CSharp/Window1.xaml.cs#msgboxconfigurecodebehind)]
  [!code-vb[DialogBoxesOverviewSnippets#MsgBoxConfigureCODEBEHIND](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/DialogBoxesOverviewSnippets/VisualBasic/window1.xaml.vb#msgboxconfigurecodebehind)]  
@@ -72,13 +74,13 @@ Bağımsız uygulamalar genellikle her ikisi de görüntülediğini ana veri uyg
   
  Ancak <xref:System.Windows.MessageBox> kullanmanın avantajı bir basit iletişim kutusunu kullanıcı deneyimi sunabilir <xref:System.Windows.MessageBox> kısmi güven güvenlik sandbox içinde çalışan uygulamalar tarafından gösterilen penceresi türü olan (bkz: [güvenlik](../../../../docs/framework/wpf/security-wpf.md)), aşağıdaki gibi [!INCLUDE[TLA#tla_xbap#plural](../../../../includes/tlasharptla-xbapsharpplural-md.md)].  
   
- Çoğu iletişim kutusu görüntülemek ve metin, seçim (onay kutuları) birbirini dışlayan seçimi (radyo düğmeleri) dahil olmak üzere bir ileti kutusu sonucu'den daha karmaşık veri toplamak ve seçim (liste kutuları, birleşik giriş kutularını, açılan liste kutuları) listesi. Bu, [!INCLUDE[TLA#tla_wpf](../../../../includes/tlasharptla-wpf-md.md)] birçok ortak iletişim kutuları sağlar ve ya da kullanımını tam güven ile çalışan uygulamalar için sınırlı olsa da, kendi iletişim kutuları oluşturmanıza olanak sağlar.  
+ Çoğu iletişim kutusu görüntülemek ve metin, seçim (onay kutuları) birbirini dışlayan seçimi (radyo düğmeleri) dahil olmak üzere bir ileti kutusu sonucu'den daha karmaşık veri toplamak ve seçim (liste kutuları, birleşik giriş kutularını, açılan liste kutuları) listesi. Bu, Windows Presentation Foundation (WPF) birkaç ortak iletişim kutuları sağlar ve ya da kullanımını tam güven ile çalışan uygulamalar için sınırlı olsa da, kendi iletişim kutuları oluşturmanıza olanak sağlar.  
   
 <a name="Common_Dialogs"></a>   
 ## <a name="common-dialog-boxes"></a>Ortak iletişim kutuları  
- [!INCLUDE[TLA#tla_mswin](../../../../includes/tlasharptla-mswin-md.md)]dosyaları kaydetme ve yazdırma dosyaları açma, iletişim kutularını dahil olmak üzere tüm uygulamalar için ortak olan yeniden kullanılabilir iletişim kutuları, çeşitli uygular. Bu iletişim kutularından işletim sistemi tarafından uygulanan olduğundan, kullanıcı deneyimini tutarlılık yardımcı olan işletim sistemi üzerinde çalışan tüm uygulamaları arasında paylaşılabilir; Kullanıcılar bir uygulamayı işletim sistemi tarafından sağlanan iletişim kutusunda, kullanımıyla öğrendiğinizde, diğer uygulamalar bu iletişim kutusunda kullanmayı öğrenmek gerekmez. Bu iletişim kutularından tüm uygulamalar için kullanılabilir olduğundan ve bunlar tutarlı bir kullanıcı deneyimi sağlamak için bunlar olarak da bilinir *ortak iletişim kutuları*.  
+ [!INCLUDE[TLA#tla_mswin](../../../../includes/tlasharptla-mswin-md.md)] dosyaları kaydetme ve yazdırma dosyaları açma, iletişim kutularını dahil olmak üzere tüm uygulamalar için ortak olan yeniden kullanılabilir iletişim kutuları, çeşitli uygular. Bu iletişim kutularından işletim sistemi tarafından uygulanan olduğundan, kullanıcı deneyimini tutarlılık yardımcı olan işletim sistemi üzerinde çalışan tüm uygulamaları arasında paylaşılabilir; Kullanıcılar bir uygulamayı işletim sistemi tarafından sağlanan iletişim kutusunda, kullanımıyla öğrendiğinizde, diğer uygulamalar bu iletişim kutusunda kullanmayı öğrenmek gerekmez. Bu iletişim kutularından tüm uygulamalar için kullanılabilir olduğundan ve bunlar tutarlı bir kullanıcı deneyimi sağlamak için bunlar olarak da bilinir *ortak iletişim kutuları*.  
   
- [!INCLUDE[TLA#tla_wpf](../../../../includes/tlasharptla-wpf-md.md)]Dosya ve yazdırma ortak iletişim kutuları Kaydet'i açık dosyanın yalıtır ve tek başına uygulamalarda kullanabilmeniz için olarak yönetilen sınıflar gösterir. Bu konu, her kısa bir genel bakış sağlar.  
+ Windows Presentation Foundation (WPF) açık dosyanın yalıtır, dosyayı kaydetmek ve ortak iletişim kutuları yazdırma ve tek başına uygulamalarda kullanabilmeniz için olarak yönetilen sınıflar gösterir. Bu konu, her kısa bir genel bakış sağlar.  
   
 <a name="Open_File_Dialog"></a>   
 ### <a name="open-file-dialog"></a>Dosya Aç iletişim kutusu  
@@ -94,7 +96,7 @@ Bağımsız uygulamalar genellikle her ikisi de görüntülediğini ana veri uyg
  Dosya Aç iletişim kutusu hakkında daha fazla bilgi için bkz: <xref:Microsoft.Win32.OpenFileDialog?displayProperty=nameWithType>.  
   
 > [!NOTE]
->  <xref:Microsoft.Win32.OpenFileDialog>güvenli bir şekilde dosya adları almak için kısmi güven ile çalışan uygulamalar tarafından kullanılabilir (bkz [güvenlik](../../../../docs/framework/wpf/security-wpf.md)).  
+>  <xref:Microsoft.Win32.OpenFileDialog> güvenli bir şekilde dosya adları almak için kısmi güven ile çalışan uygulamalar tarafından kullanılabilir (bkz [güvenlik](../../../../docs/framework/wpf/security-wpf.md)).  
   
 <a name="Save_File_Dialog"></a>   
 ### <a name="save-file-dialog-box"></a>Dosya Kaydet iletişim kutusu  
@@ -124,7 +126,7 @@ Bağımsız uygulamalar genellikle her ikisi de görüntülediğini ana veri uyg
   
 <a name="Custom_Dialog_Boxes"></a>   
 ## <a name="custom-dialog-boxes"></a>Özel iletişim kutuları  
- Ortak iletişim kutuları yararlıdır ve mümkün olduğunda kullanılmalıdır olsa da, etki alanına özgü iletişim kutuları gereksinimlerini desteklemez. Bu durumda, kendi iletişim kutuları oluşturmanız gerekir. Anlatıldığı gibi bir iletişim kutusu özel davranışlarla penceredir. <xref:System.Windows.Window>Bu davranışları uygular ve sonuç olarak, kullandığınız <xref:System.Windows.Window> özel kalıcı ve kalıcı olmayan iletişim kutuları oluşturmak için.  
+ Ortak iletişim kutuları yararlıdır ve mümkün olduğunda kullanılmalıdır olsa da, etki alanına özgü iletişim kutuları gereksinimlerini desteklemez. Bu durumda, kendi iletişim kutuları oluşturmanız gerekir. Anlatıldığı gibi bir iletişim kutusu özel davranışlarla penceredir. <xref:System.Windows.Window> Bu davranışları uygular ve sonuç olarak, kullandığınız <xref:System.Windows.Window> özel kalıcı ve kalıcı olmayan iletişim kutuları oluşturmak için.  
   
 <a name="Creating_a_Modal_Custom_Dialog_Box"></a>   
 ### <a name="creating-a-modal-custom-dialog-box"></a>Özel bir Modal iletişim kutusu oluşturma  
@@ -221,7 +223,7 @@ Bağımsız uygulamalar genellikle her ikisi de görüntülediğini ana veri uyg
   
  ![Geçersiz sol kenar boşluğu](../../../../docs/framework/wpf/app-development/media/dialogboxesoverviewfigure7.png "DialogBoxesOverviewFigure7")  
   
- [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]Geçerli veri girene kadar bir kullanıcı için geçersiz denetim kısıtlamaz. Bir iletişim kutusu için iyi davranış budur; bir kullanıcı bir iletişim kutusu denetimlerinde verileri geçerli olup olmadığını serbestçe gidebilirsiniz olmalıdır. Ancak, bir kullanıcı, geçersiz veri ve tuşuna girebilirsiniz yani **Tamam** düğmesi. Bu nedenle, kodunuzu ayrıca bir iletişim kutusu içindeki tüm denetimler doğrulamak gereken kutusunu **Tamam** düğmesi işleyerek basılı <xref:System.Windows.Controls.Primitives.ButtonBase.Click> olay.  
+ [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] Geçerli veri girene kadar bir kullanıcı için geçersiz denetim kısıtlamaz. Bir iletişim kutusu için iyi davranış budur; bir kullanıcı bir iletişim kutusu denetimlerinde verileri geçerli olup olmadığını serbestçe gidebilirsiniz olmalıdır. Ancak, bir kullanıcı, geçersiz veri ve tuşuna girebilirsiniz yani **Tamam** düğmesi. Bu nedenle, kodunuzu ayrıca bir iletişim kutusu içindeki tüm denetimler doğrulamak gereken kutusunu **Tamam** düğmesi işleyerek basılı <xref:System.Windows.Controls.Primitives.ButtonBase.Click> olay.  
   
  [!code-csharp[DialogBoxSample#MarginsDialogBoxValidationCODEBEHIND1](../../../../samples/snippets/csharp/VS_Snippets_Wpf/DialogBoxSample/CSharp/MarginsDialogBox.xaml.cs#marginsdialogboxvalidationcodebehind1)]
  [!code-vb[DialogBoxSample#MarginsDialogBoxValidationCODEBEHIND1](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/DialogBoxSample/VisualBasic/MarginsDialogBox.xaml.vb#marginsdialogboxvalidationcodebehind1)]  
@@ -307,7 +309,7 @@ Bağımsız uygulamalar genellikle her ikisi de görüntülediğini ana veri uyg
  Farklı <xref:System.Windows.Window.ShowDialog%2A>, <xref:System.Windows.Window.Show%2A> hemen döndürür. Kalıcı olmayan iletişim kutusu kapatılır ve bu nedenle, ne zaman bir iletişim kutusu sonuç denetleyin veya başka bir işleme için iletişim kutusundan veri alma hakkında bilgi sahibi değildir, bu nedenle, arama penceresinde bildiremez. Bunun yerine, iletişim kutusu veri işleme için arama penceresine dönmek için alternatif bir yol oluşturması gerekir.  
   
 #### <a name="processing-data-returned-from-a-modeless-dialog-box"></a>Kalıcı olmayan iletişim kutusundan dönen veri işleme  
- Bu örnekte, `FindDialogBox` bir veya daha fazla bulma ana penceresinde, belirli herhangi sıklığı Aranan metin bağlı olarak sonuçlar döndürebilir. Bir modal iletişim kutusu olduğu gibi bir kalıcı olmayan iletişim kutusu özelliklerini kullanarak sonuçlar döndürebilir. Ancak, iletişim kutusu sahip pencere bu özellikleri denetlemek ne zaman bilmek ister. Bunu yapmanın bir yolu iletişim kutusu metin bulunduğunda bir olayı uygulamak olur. `FindDialogBox`uygulayan `TextFoundEvent` bu amaç için bir temsilci hangi ilk gerektirir.  
+ Bu örnekte, `FindDialogBox` bir veya daha fazla bulma ana penceresinde, belirli herhangi sıklığı Aranan metin bağlı olarak sonuçlar döndürebilir. Bir modal iletişim kutusu olduğu gibi bir kalıcı olmayan iletişim kutusu özelliklerini kullanarak sonuçlar döndürebilir. Ancak, iletişim kutusu sahip pencere bu özellikleri denetlemek ne zaman bilmek ister. Bunu yapmanın bir yolu iletişim kutusu metin bulunduğunda bir olayı uygulamak olur. `FindDialogBox` uygulayan `TextFoundEvent` bu amaç için bir temsilci hangi ilk gerektirir.  
   
  [!code-csharp[DialogBoxSample#TextFoundEventHandlerCODE](../../../../samples/snippets/csharp/VS_Snippets_Wpf/DialogBoxSample/CSharp/TextFoundEventHandler.cs#textfoundeventhandlercode)]
  [!code-vb[DialogBoxSample#TextFoundEventHandlerCODE](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/DialogBoxSample/VisualBasic/TextFoundEventHandler.vb#textfoundeventhandlercode)]  

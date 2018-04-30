@@ -16,11 +16,11 @@ ms.author: bruceper
 manager: mbaldwin
 ms.workload:
 - dotnet
-ms.openlocfilehash: 72712e0934646a39c1e03a38716179384051003a
-ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
+ms.openlocfilehash: 74b16698d40747937a89f84f0d958178b42d2e44
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/28/2018
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="security-concepts-used-in-wcf"></a>WCF'de Kullanılan Güvenlik Kavramları
 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] Güvenlik temel kavramları kullanılmakta olan yerleşik ve çeşitli güvenlik altyapılar içinde dağıtılır.  
@@ -36,10 +36,10 @@ ms.lasthandoff: 04/28/2018
  Ortak anahtar altyapısı (PKI), dijital sertifikalar, sertifika yetkilileri ve ortak anahtar şifrelemesi kullanılarak elektronik bir işlemde her taraf doğrulayan ve diğer yetkililerden için kullanılan bir sistemdir. Daha fazla bilgi için bkz: [Windows Server 2008 R2 Sertifika Hizmetleri](http://go.microsoft.com/fwlink/?LinkId=210211).  
   
 ### <a name="kerberos-protocol"></a>Kerberos protokolü  
- *Kerberos protokolü* bir Windows etki alanındaki kullanıcıların kimliğini doğrulayan bir güvenlik mekanizması oluşturma için belirtimidir. Kullanıcının bir etki alanındaki diğer varlıklarla güvenli bir bağlam kurmak izin verir. Windows 2000 ve üstü platformları varsayılan Kerberos protokolünü kullanır. Bir hizmet oluşturma intranet istemcileri ile etkileşime gireceğini sistem mekanizmalarını anlama yararlıdır. Ayrıca, bu yana *Web Hizmetleri Güvenlik Kerberos bağlama* yaygın olan yayımlanan, Internet istemcileri ile iletişim kurmak için Kerberos protokolünü kullanabilirsiniz (diğer bir deyişle, Kerberos protokolü birlikte çalışabilir). [!INCLUDE[crabout](../../../../includes/crabout-md.md)] Kerberos protokolünün Windows'da uygulanır bkz [Microsoft Kerberos](http://go.microsoft.com/fwlink/?LinkId=210212).  
+ *Kerberos protokolü* bir Windows etki alanındaki kullanıcıların kimliğini doğrulayan bir güvenlik mekanizması oluşturma için belirtimidir. Kullanıcının bir etki alanındaki diğer varlıklarla güvenli bir bağlam kurmak izin verir. Windows 2000 ve üstü platformları varsayılan Kerberos protokolünü kullanır. Bir hizmet oluşturma intranet istemcileri ile etkileşime gireceğini sistem mekanizmalarını anlama yararlıdır. Ayrıca, bu yana *Web Hizmetleri Güvenlik Kerberos bağlama* yaygın olan yayımlanan, Internet istemcileri ile iletişim kurmak için Kerberos protokolünü kullanabilirsiniz (diğer bir deyişle, Kerberos protokolü birlikte çalışabilir). Kerberos protokolünün Windows'da nasıl uygulandığı hakkında daha fazla bilgi için bkz: [Microsoft Kerberos](http://go.microsoft.com/fwlink/?LinkId=210212).  
   
 ### <a name="x509-certificates"></a>X.509 sertifikaları  
- X.509 sertifikaları güvenlik uygulamalarında kullanılan birincil kimlik bilgisi şeklindedir. X.509 hakkında daha fazla bilgi için bkz: sertifikalar [X.509 ortak anahtar sertifikaları](http://go.microsoft.com/fwlink/?LinkId=210213). X.509 sertifikaları bir sertifika deposunda saklanır. Windows çalıştıran bir bilgisayarı sertifika depoları, her biri farklı bir amaç çeşitli türlerde vardır. [!INCLUDE[crabout](../../../../includes/crabout-md.md)] farklı depoları bkz [sertifika depolarını](http://go.microsoft.com/fwlink/?LinkID=87787).  
+ X.509 sertifikaları güvenlik uygulamalarında kullanılan birincil kimlik bilgisi şeklindedir. X.509 hakkında daha fazla bilgi için bkz: sertifikalar [X.509 ortak anahtar sertifikaları](http://go.microsoft.com/fwlink/?LinkId=210213). X.509 sertifikaları bir sertifika deposunda saklanır. Windows çalıştıran bir bilgisayarı sertifika depoları, her biri farklı bir amaç çeşitli türlerde vardır. Farklı depoları hakkında daha fazla bilgi için bkz: [sertifika depolarını](http://go.microsoft.com/fwlink/?LinkID=87787).  
   
 ## <a name="web-services-security-specifications"></a>Güvenlik özellikleri Web Hizmetleri  
  Sistem tarafından tanımlanan bağlamaları birçok yaygın olarak kullanılan web Hizmetleri güvenlik özelliklerini destekler. Sistem tarafından sağlanan bağlamalar ve web hizmetleri belirtimleri tam listesi için bkz: destekledikleri: [Web Hizmetleri protokolleri desteklenen System-Provided birlikte kullanılabilirlik bağlamaları ile](../../../../docs/framework/wcf/feature-details/web-services-protocols-supported-by-system-provided-interoperability-bindings.md)  

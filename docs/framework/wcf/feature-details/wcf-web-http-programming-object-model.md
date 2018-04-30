@@ -10,17 +10,17 @@ ms.technology:
 ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: ed96b5fc-ca2c-4b0d-bdba-d06b77c3cb2a
-caps.latest.revision: ''
+caps.latest.revision: 40
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: d71a373d3410c90f405a37e104e7d1b440a7aa14
-ms.sourcegitcommit: c883637b41ee028786edceece4fa872939d2e64c
+ms.openlocfilehash: 7bf6512be6fabb87797fb6338f64320d5787d547
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/26/2018
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="wcf-web-http-programming-object-model"></a>WCF Web HTTP Programlama Nesnesi Modeli
 WCF WEB HTTP programlama modeli kullanıma sunmak geliştiricilerin sağlar [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] Web Hizmetleri temel HTTP istekleri aracılığıyla SOAP gerek kalmadan. WCF WEB HTTP programlama modeli varolan üstünde oluşturulmuş [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] genişletilebilirlik modeli. Aşağıdaki sınıflar tanımlar:  
@@ -95,7 +95,7 @@ WCF WEB HTTP programlama modeli kullanıma sunmak geliştiricilerin sağlar [!IN
 ## <a name="webhttpbehavior"></a>WebHttpBehavior  
  <xref:System.ServiceModel.Description.WebHttpBehavior> Sınıfı işlemi seçiciler, gerekli biçimlendiricileri sağlayan ve benzeri hizmet modeli katmanında stili Web hizmeti desteği için gereklidir. Bu uç noktası davranışı gerçekleştirilir (ile birlikte kullanılan <xref:System.ServiceModel.WebHttpBinding>) ve biçimlendiricileri ve işlem Seçici SOAP ve POX uç noktalarını kullanıma sunmak aynı hizmet uygulaması sağlayan her bitiş belirtilmesine izin verir.  
   
-### <a name="extending-webhttpbehavior"></a>Extending WebHttpBehavior  
+### <a name="extending-webhttpbehavior"></a>WebHttpBehavior genişletme  
  <xref:System.ServiceModel.Description.WebHttpBehavior> çeşitli sanal yöntemler kullanarak genişletilebilirdir: <xref:System.ServiceModel.Description.WebHttpBehavior.GetOperationSelector%28System.ServiceModel.Description.ServiceEndpoint%29>, <xref:System.ServiceModel.Description.WebHttpBehavior.GetReplyClientFormatter%28System.ServiceModel.Description.OperationDescription%2CSystem.ServiceModel.Description.ServiceEndpoint%29>, <xref:System.ServiceModel.Description.WebHttpBehavior.GetRequestClientFormatter%28System.ServiceModel.Description.OperationDescription%2CSystem.ServiceModel.Description.ServiceEndpoint%29>, <xref:System.ServiceModel.Description.WebHttpBehavior.GetReplyDispatchFormatter%28System.ServiceModel.Description.OperationDescription%2CSystem.ServiceModel.Description.ServiceEndpoint%29>, ve <xref:System.ServiceModel.Description.WebHttpBehavior.GetRequestDispatchFormatter%28System.ServiceModel.Description.OperationDescription%2CSystem.ServiceModel.Description.ServiceEndpoint%29>. Geliştiriciler bir sınıftan türetilen <xref:System.ServiceModel.Description.WebHttpBehavior> ve varsayılan davranışını özelleştirmek için bu yöntemleri geçersiz kılın.  
   
  <xref:System.ServiceModel.Description.WebScriptEnablingBehavior> Genişletme örneğidir <xref:System.ServiceModel.Description.WebHttpBehavior>. <xref:System.ServiceModel.Description.WebScriptEnablingBehavior> etkinleştirir [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] tarayıcı tabanlı ASP.NET AJAX istemciden gelen HTTP isteklerini almak için uç noktaları. [AJAX hizmeti kullanarak HTTP POST](../../../../docs/framework/wcf/samples/ajax-service-using-http-post.md) bu genişletilebilirlik noktasını kullanarak bir örnektir.  
@@ -110,7 +110,7 @@ WCF WEB HTTP programlama modeli kullanıma sunmak geliştiricilerin sağlar [!IN
  [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] WEB HTTP programlama modeli SOAP tabanlı iletileri kullanmaz ve bu nedenle WS - desteklemez * protokoller. Ancak, aynı sözleşme iki farklı bitiş noktası tarafından kullanıma: SOAP ve diğer olmayan bir kullanarak SOAP kullanarak. Bkz: [nasıl yapılır: bir sözleşmeyi SOAP ve Web istemcileri kullanıma](../../../../docs/framework/wcf/feature-details/how-to-expose-a-contract-to-soap-and-web-clients.md) bir örnek.  
   
 ## <a name="security"></a>Güvenlik  
- Çünkü [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] WEB HTTP programlama modeli desteklemez WS-* üzerinde oluşturulan bir Web hizmeti güvenli hale getirmek için tek yolu protokolleri [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] WEB HTTP programlama modeli olan SSL kullanarak hizmetinizi kullanıma sunmak için. [!INCLUDE[crabout](../../../../includes/crabout-md.md)] SSL ile ayarlama [!INCLUDE[iisver](../../../../includes/iisver-md.md)] görmek [IIS'te SSL uygulama](http://go.microsoft.com/fwlink/?LinkId=131613)  
+ Çünkü [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] WEB HTTP programlama modeli desteklemez WS-* üzerinde oluşturulan bir Web hizmeti güvenli hale getirmek için tek yolu protokolleri [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] WEB HTTP programlama modeli olan SSL kullanarak hizmetinizi kullanıma sunmak için. SSL ile ayarlama hakkında daha fazla bilgi için [!INCLUDE[iisver](../../../../includes/iisver-md.md)] görmek [IIS'te SSL uygulama](http://go.microsoft.com/fwlink/?LinkId=131613)  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
  <xref:System.ServiceModel.WebHttpBinding>  

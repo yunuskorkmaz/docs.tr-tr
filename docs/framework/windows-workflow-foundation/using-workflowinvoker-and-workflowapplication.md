@@ -14,14 +14,14 @@ ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: af520c1520f605d34076e6ecabdf84deb52fbfd0
-ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
+ms.openlocfilehash: d0b12fc6c91f57ec49050a0a37b16f64d0e54e6d
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/28/2018
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="using-workflowinvoker-and-workflowapplication"></a>WorkflowInvoker ve WorkflowApplication kullanma
-Windows Workflow Foundation (WF) iş akışı barındırma çeşitli yöntemler sağlar. <xref:System.Activities.WorkflowInvoker> yöntem çağrısı sırasında ve Kalıcılık kullanmayan yalnızca iş akışları için kullanılabilir gibi bir iş akışı çağırma için basit bir yol sağlar. <xref:System.Activities.WorkflowApplication> yaşam döngüsü olayları, yürütme denetimi, yer işareti sürdürme ve kalıcılığı bildirimi içeren iş akışlarını yürütmek için daha zengin bir modeli sağlar. <xref:System.ServiceModel.Activities.WorkflowServiceHost> Mesajlaşma etkinlikleri için destek sağlar ve iş akışı Hizmetleri ile birincil olarak kullanılır. Bu konu ile iş akışı barındırma için tanıtır <xref:System.Activities.WorkflowInvoker> ve <xref:System.Activities.WorkflowApplication>. [!INCLUDE[crabout](../../../includes/crabout-md.md)] iş akışlarıyla barındırma <xref:System.ServiceModel.Activities.WorkflowServiceHost>, bkz: [iş akışı Hizmetleri](../../../docs/framework/wcf/feature-details/workflow-services.md) ve [iş akışı hizmetleri genel bakış barındırma](../../../docs/framework/wcf/feature-details/hosting-workflow-services-overview.md).  
+Windows Workflow Foundation (WF) iş akışı barındırma çeşitli yöntemler sağlar. <xref:System.Activities.WorkflowInvoker> yöntem çağrısı sırasında ve Kalıcılık kullanmayan yalnızca iş akışları için kullanılabilir gibi bir iş akışı çağırma için basit bir yol sağlar. <xref:System.Activities.WorkflowApplication> yaşam döngüsü olayları, yürütme denetimi, yer işareti sürdürme ve kalıcılığı bildirimi içeren iş akışlarını yürütmek için daha zengin bir modeli sağlar. <xref:System.ServiceModel.Activities.WorkflowServiceHost> Mesajlaşma etkinlikleri için destek sağlar ve iş akışı Hizmetleri ile birincil olarak kullanılır. Bu konu ile iş akışı barındırma için tanıtır <xref:System.Activities.WorkflowInvoker> ve <xref:System.Activities.WorkflowApplication>. İş akışları ile barındırma hakkında daha fazla bilgi için <xref:System.ServiceModel.Activities.WorkflowServiceHost>, bkz: [iş akışı Hizmetleri](../../../docs/framework/wcf/feature-details/workflow-services.md) ve [iş akışı hizmetleri genel bakış barındırma](../../../docs/framework/wcf/feature-details/hosting-workflow-services-overview.md).  
   
 ## <a name="using-workflowinvoker"></a>WorkflowInvoker kullanma  
  <xref:System.Activities.WorkflowInvoker> yöntem çağrısı değilmiş gibi bir iş akışını yürütmek için bir model sağlar. Kullanarak bir iş akışının çağırmak için <xref:System.Activities.WorkflowInvoker>, çağrı <xref:System.Activities.WorkflowInvoker.Invoke%2A> yöntemi ve iş akışının çağırmak için iş akışı tanımını geçirin. Bu örnekte, bir <xref:System.Activities.Statements.WriteLine> etkinliğini kullanarak çağrıldığında <xref:System.Activities.WorkflowInvoker>.  
@@ -78,7 +78,7 @@ Windows Workflow Foundation (WF) iş akışı barındırma çeşitli yöntemler 
  [!code-csharp[CFX_WorkflowApplicationExample#21](../../../samples/snippets/csharp/VS_Snippets_CFX/cfx_workflowapplicationexample/cs/program.cs#21)]  
   
 > [!NOTE]
->  <xref:System.Activities.WorkflowApplication> ve <xref:System.Activities.WorkflowInvoker> giriş bağımsız değişkeni sözlüğü almak ve bir sözlüğü döndürür `out` bağımsız değişkenler. Bu sözlük parametreler, özellikleri ve dönüş değerleri türünde olduğundan `IDictionary<string, object>`. Geçirilen dictionary sınıfı gerçek örneğini uygulayan herhangi bir sınıf olabilir `IDictionary<string, object>`. Bu örneklerde `Dictionary<string, object>` kullanılır. [!INCLUDE[crabout](../../../includes/crabout-md.md)] sözlük, bkz: <xref:System.Collections.Generic.IDictionary%602> ve <xref:System.Collections.Generic.Dictionary%602>.  
+>  <xref:System.Activities.WorkflowApplication> ve <xref:System.Activities.WorkflowInvoker> giriş bağımsız değişkeni sözlüğü almak ve bir sözlüğü döndürür `out` bağımsız değişkenler. Bu sözlük parametreler, özellikleri ve dönüş değerleri türünde olduğundan `IDictionary<string, object>`. Geçirilen dictionary sınıfı gerçek örneğini uygulayan herhangi bir sınıf olabilir `IDictionary<string, object>`. Bu örneklerde `Dictionary<string, object>` kullanılır. Sözlük hakkında daha fazla bilgi için bkz: <xref:System.Collections.Generic.IDictionary%602> ve <xref:System.Collections.Generic.Dictionary%602>.  
   
 ### <a name="passing-data-into-a-running-workflow-using-bookmarks"></a>Yer işaretlerini kullanma çalışan akışına veri geçirme  
  Yer işaretleri, bir etkinlik pasif olarak sürdürülmesini beklemek ve çalışan bir iş akışı örneğine veri geçirme için bir mekanizma olan bir sistemdir. Bir etkinlik için verileri bekliyorsa oluşturabilirsiniz bir <xref:System.Activities.Bookmark> ve ne zaman çağrılacak bir geri çağırma yöntemi kaydedilmeye <xref:System.Activities.Bookmark> , aşağıdaki örnekte gösterildiği gibi sürdürülür.  

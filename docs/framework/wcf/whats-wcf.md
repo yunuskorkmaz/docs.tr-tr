@@ -20,11 +20,11 @@ ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: d9650fd6a4fa40cb425c9f15d4a12e6c73d8c599
-ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
+ms.openlocfilehash: c182cf5e5cc9346645f15293060671a0a0ce1caf
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/28/2018
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="what-is-windows-communication-foundation"></a>Windows Communication Foundation nedir?
 [!INCLUDE[indigo1](../../../includes/indigo1-md.md)] Hizmet odaklı uygulamalar oluşturmaya yönelik bir çerçevedir. Kullanarak [!INCLUDE[indigo2](../../../includes/indigo2-md.md)], verileri zaman uyumsuz ileti bir hizmet uç noktasından diğerine gönderebilirsiniz. Hizmet uç noktası, IIS tarafından barındırılan sürekli olarak kullanılabilir bir hizmetin parçası veya bir uygulamada barındırılan bir hizmete olabilir. Bir uç nokta veri Hizmeti uç noktasından ister bir hizmetin istemci olabilir. İletileri tek karakter veya XML olarak gönderilen sözcük kadar basit ya da bir ikili veri akışı kadar karmaşık olabilir. Bazı örnek senaryolar şunlardır:  
@@ -52,11 +52,11 @@ ms.lasthandoff: 04/28/2018
   
 -   **Birlikte çalışabilirlik**  
   
-     [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] Web hizmeti birlikte çalışabilirlik için modern endüstri standartları uygular. [!INCLUDE[crabout](../../../includes/crabout-md.md)] desteklenen standartlar bkz [birlikte çalışabilirlik ve tümleştirme](../../../docs/framework/wcf/feature-details/interoperability-and-integration.md).  
+     [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] Web hizmeti birlikte çalışabilirlik için modern endüstri standartları uygular. Desteklenen standartları hakkında daha fazla bilgi için bkz: [birlikte çalışabilirlik ve tümleştirme](../../../docs/framework/wcf/feature-details/interoperability-and-integration.md).  
   
 -   **Birden çok ileti desenleri**  
   
-     İletiler birkaç desenleri birinde değiştirilir. En yaygın düzeni, burada bir uç nokta verileri ikinci uç noktasından ister istek/yanıt Düzen yöneliktir. İkinci uç nokta yanıtlar. Tek bir uç nokta herhangi bir yanıt beklentisi olmadan bir ileti gönderir tek yönlü bir ileti gibi diğer düzenleri vardır. Daha karmaşık bir desen burada iki uç nokta bağlantı kurmak ve veri geri ve ileri bir anlık ileti programı benzer göndermek çift yönlü değişim deseni ' dir. [!INCLUDE[crabout](../../../includes/crabout-md.md)] farklı ileti exchange uygulama düzenleri kullanarak [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] bkz [sözleşmeleri](../../../docs/framework/wcf/feature-details/contracts.md).  
+     İletiler birkaç desenleri birinde değiştirilir. En yaygın düzeni, burada bir uç nokta verileri ikinci uç noktasından ister istek/yanıt Düzen yöneliktir. İkinci uç nokta yanıtlar. Tek bir uç nokta herhangi bir yanıt beklentisi olmadan bir ileti gönderir tek yönlü bir ileti gibi diğer düzenleri vardır. Daha karmaşık bir desen burada iki uç nokta bağlantı kurmak ve veri geri ve ileri bir anlık ileti programı benzer göndermek çift yönlü değişim deseni ' dir. Farklı ileti exchange desenlerini kullanarak uygulama hakkında daha fazla bilgi için [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] bkz [sözleşmeleri](../../../docs/framework/wcf/feature-details/contracts.md).  
   
 -   **Hizmet meta verileri**  
   
@@ -72,11 +72,11 @@ ms.lasthandoff: 04/28/2018
   
 -   **Birden çok aktarımları ve kodlamaları**  
   
-     İletiler hiçbirinde birkaç yerleşik aktarım protokolleri ve Kodlamalar gönderilebilir. En sık kullanılan protokol ve kodlama olan metin kodlanmış World Wide Web üzerinde kullanım için Köprü Metni Aktarım Protokolü (HTTP) kullanarak SOAP iletileri göndermek için. Alternatif olarak, [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] kanallar veya MSMQ adlı TCP üzerinden iletileri göndermenize izin verir. Bu iletiler olarak kodlanmış metin ya da bir en iyi duruma getirilmiş ikili biçimini kullanarak olarak.  İkili veriler MTOM standart verimli şekilde kullanma gönderilebilir. Sağlanan taşımaları veya Kodlamalar hiçbiri gereksinimlerinize uygun değilse, kendi özel oluşturabilirsiniz taşıma veya kodlama. [!INCLUDE[crabout](../../../includes/crabout-md.md)] taşımalar ve tarafından desteklenen Kodlamalar [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] bkz [taşımaları](../../../docs/framework/wcf/feature-details/transports.md).  
+     İletiler hiçbirinde birkaç yerleşik aktarım protokolleri ve Kodlamalar gönderilebilir. En sık kullanılan protokol ve kodlama olan metin kodlanmış World Wide Web üzerinde kullanım için Köprü Metni Aktarım Protokolü (HTTP) kullanarak SOAP iletileri göndermek için. Alternatif olarak, [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] kanallar veya MSMQ adlı TCP üzerinden iletileri göndermenize izin verir. Bu iletiler olarak kodlanmış metin ya da bir en iyi duruma getirilmiş ikili biçimini kullanarak olarak.  İkili veriler MTOM standart verimli şekilde kullanma gönderilebilir. Sağlanan taşımaları veya Kodlamalar hiçbiri gereksinimlerinize uygun değilse, kendi özel oluşturabilirsiniz taşıma veya kodlama. Taşımalar ve tarafından desteklenen Kodlamalar hakkında daha fazla bilgi için [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] bkz [taşımaları](../../../docs/framework/wcf/feature-details/transports.md).  
   
 -   **Güvenilir ve sıraya alınan iletileri**  
   
-     [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] WS güvenilir Mesajlaşma uygulanan ve MSMQ kullanarak güvenilir oturumlar kullanarak güvenilir ileti Exchange'i destekler. [!INCLUDE[crabout](../../../includes/crabout-md.md)] güvenilir ve sıraya alınan ileti desteği [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] bkz [kuyruklar ve güvenilir oturumlar](../../../docs/framework/wcf/feature-details/queues-and-reliable-sessions.md).  
+     [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] WS güvenilir Mesajlaşma uygulanan ve MSMQ kullanarak güvenilir oturumlar kullanarak güvenilir ileti Exchange'i destekler. Güvenilir ve sıraya alınan ileti hakkında daha fazla bilgi için destek [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] bkz [kuyruklar ve güvenilir oturumlar](../../../docs/framework/wcf/feature-details/queues-and-reliable-sessions.md).  
   
 -   **Dayanıklı iletileri**  
   
@@ -84,7 +84,7 @@ ms.lasthandoff: 04/28/2018
   
 -   **İşlemler**  
   
-     WCF da üç işlem modeli birini kullanarak işlemleri destekler: WS-AtomicTtransactions, API'leri <xref:System.Transactions> ad alanı ve Microsoft Dağıtılmış İşlem Düzenleyicisi. [!INCLUDE[crabout](../../../includes/crabout-md.md)] işlem desteği, [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] bkz [işlemleri](../../../docs/framework/wcf/feature-details/transactions-in-wcf.md).  
+     WCF da üç işlem modeli birini kullanarak işlemleri destekler: WS-AtomicTtransactions, API'leri <xref:System.Transactions> ad alanı ve Microsoft Dağıtılmış İşlem Düzenleyicisi. İşlem hakkında daha fazla bilgi için destek [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] bkz [işlemleri](../../../docs/framework/wcf/feature-details/transactions-in-wcf.md).  
   
 -   **AJAX ve REST desteği**  
   
@@ -92,7 +92,7 @@ ms.lasthandoff: 04/28/2018
   
 -   **Genişletilebilirlik**  
   
-     [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] Mimariye sahip genişletilebilirlik noktaları sayısı. Ek özelliği gerekliyse, bir hizmet davranışını özelleştirmenizi giriş noktası sayısını vardır. [!INCLUDE[crabout](../../../includes/crabout-md.md)] kullanılabilir genişletilebilirlik noktaları Bkz [genişletme WCF](../../../docs/framework/wcf/extending/index.md).  
+     [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] Mimariye sahip genişletilebilirlik noktaları sayısı. Ek özelliği gerekliyse, bir hizmet davranışını özelleştirmenizi giriş noktası sayısını vardır. Noktaları kullanılabilir genişletilebilirlik hakkında daha fazla bilgi için bkz: [genişletme WCF](../../../docs/framework/wcf/extending/index.md).  
   
 ## <a name="wcf-integration-with-other-microsoft-technologies"></a>Diğer Microsoft teknolojileri ile WCF tümleştirme  
  [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] esnek bir platformdur. Bu aşırı esneklik nedeniyle [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] diğer Microsoft ürünleri birkaç de kullanılır. Temelleri anlama tarafından [!INCLUDE[indigo2](../../../includes/indigo2-md.md)], ayrıca bu ürünlerden birini kullanırsanız hemen bir avantajı vardır.  

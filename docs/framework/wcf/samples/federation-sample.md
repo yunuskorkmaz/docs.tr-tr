@@ -1,30 +1,32 @@
 ---
-title: "Federasyon Örneği"
-ms.custom: 
+title: Federasyon Örneği
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 7e9da0ca-e925-4644-aa96-8bfaf649d4bb
-caps.latest.revision: "26"
+caps.latest.revision: 26
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 6c87984b08a073f37dcf155a39fab0f5e580e985
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 58a8ab012682d5acb04b201c36d931276426ffe8
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="federation-sample"></a>Federasyon Örneği
 Bu örnek federe güvenlik gösterir.  
   
 ## <a name="sample-details"></a>Örnek Ayrıntıları  
- [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)]Federasyon güvenlik mimarileri üzerinden dağıtmak için destek sağlar `wsFederationHttpBinding`. `wsFederationHttpBinding` Kullanmayı HTTP temelindeki iletim mekanizması olarak istek/yanıt iletişimi ve Text/XML kodlama için kablo biçiminde içerir güvenli, güvenilir ve birlikte çalışabilir bağlama sağlar. [!INCLUDE[crabout](../../../../includes/crabout-md.md)]İçinde Federasyon [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)], bkz: [Federasyon](../../../../docs/framework/wcf/feature-details/federation.md).  
+ [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] Federasyon güvenlik mimarileri üzerinden dağıtmak için destek sağlar `wsFederationHttpBinding`. `wsFederationHttpBinding` Kullanmayı HTTP temelindeki iletim mekanizması olarak istek/yanıt iletişimi ve Text/XML kodlama için kablo biçiminde içerir güvenli, güvenilir ve birlikte çalışabilir bağlama sağlar. İçinde Federasyon hakkında daha fazla bilgi için [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)], bkz: [Federasyon](../../../../docs/framework/wcf/feature-details/federation.md).  
   
  Senaryo 4 parçalarını oluşur:  
   

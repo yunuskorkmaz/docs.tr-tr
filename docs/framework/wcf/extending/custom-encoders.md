@@ -1,24 +1,26 @@
 ---
-title: "Özel Kodlayıcılar"
-ms.custom: 
+title: Özel Kodlayıcılar
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: fa0e1d7f-af36-4bf4-aac9-cd4eab95bc4f
-caps.latest.revision: "15"
+caps.latest.revision: 15
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: f1c8223ea7900ba0a89ee2c5c48895a1782d18a0
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 90926fd334eb5ccef3a63f637d5273c408c0c13e
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="custom-encoders"></a>Özel Kodlayıcılar
 Bu konu özel kodlayıcılar oluşturulacağını açıklar.  
@@ -32,20 +34,20 @@ Bu konu özel kodlayıcılar oluşturulacağını açıklar.
  Bir önceden var olan istemci veya sunucu bağlanırken belirli ileti kodlama kullanma hakkında bir seçenek olmayabilir. Ancak, [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] Hizmetleri yapılabilir birden çok uç nokta, her biri farklı ileti Kodlayıcı üzerinden erişilebilir. Tek bir kodlayıcı hedef kitle hizmetiniz için kapsamaz, birden çok Uç noktalara hizmetinizi gösterme göz önünde bulundurun. İstemci uygulamaları sonra bunlar için en iyisidir uç noktası seçebilirsiniz. Birden çok uç noktalarını kullanarak diğer bağlama öğeleriyle farklı ileti kodlayıcılar avantajları birleştirmek sağlar.  
   
 ## <a name="system-provided-encoders"></a>Sistem tarafından sağlanan kodlayıcılar  
- [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]en yaygın uygulama senaryolarını kapsamak üzere tasarlanmış birçok sistem tarafından sağlanan bağlamaları sağlar. Her bu bağlamaların bir aktarım, ileti Kodlayıcı ve diğer seçenekleri (örneğin, güvenlik) birleştirir. Bu konuda nasıl genişletileceğini açıklar `Text`, `Binary`, ve `MTOM` iletisi içinde yer alan kodlayıcılar [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)], veya kendi özel Kodlayıcı oluşturun. Metin ileti Kodlayıcı hem bir düz XML kodlama yanı sıra SOAP Kodlamalar destekler. Metin ileti Kodlayıcı düz XML kodlama modunu metin tabanlı SOAP kodlamadan ayırt etmek için POX ("düz eski XML") Kodlayıcı adı verilir.  
+ [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] en yaygın uygulama senaryolarını kapsamak üzere tasarlanmış birçok sistem tarafından sağlanan bağlamaları sağlar. Her bu bağlamaların bir aktarım, ileti Kodlayıcı ve diğer seçenekleri (örneğin, güvenlik) birleştirir. Bu konuda nasıl genişletileceğini açıklar `Text`, `Binary`, ve `MTOM` iletisi içinde yer alan kodlayıcılar [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)], veya kendi özel Kodlayıcı oluşturun. Metin ileti Kodlayıcı hem bir düz XML kodlama yanı sıra SOAP Kodlamalar destekler. Metin ileti Kodlayıcı düz XML kodlama modunu metin tabanlı SOAP kodlamadan ayırt etmek için POX ("düz eski XML") Kodlayıcı adı verilir.  
   
- [!INCLUDE[crabout](../../../../includes/crabout-md.md)]Sistem tarafından sağlanan bağlamalar tarafından sağlanan bağlama öğeleri birleşimlerini karşılık gelen bölümüne bakın [taşıma seçme](../../../../docs/framework/wcf/feature-details/choosing-a-transport.md).  
+ Sistem tarafından sağlanan bağlamaları ile sağlanan bağlama öğeleri birleşimlerini hakkında daha fazla bilgi için karşılık gelen bölümüne bakın [taşıma seçme](../../../../docs/framework/wcf/feature-details/choosing-a-transport.md).  
   
 ## <a name="how-to-work-with-system-provided-encoders"></a>Sistem tarafından sağlanan kodlayıcılar ile çalışma  
  Bir kodlama türetilmiş bir sınıf kullanarak bir bağlama eklenir <xref:System.ServiceModel.Channels.MessageEncodingBindingElement>.  
   
- [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]aşağıdaki türden türetilmiş bağlama öğeleri sağlar <xref:System.ServiceModel.Channels.MessageEncodingBindingElement> metin, ikili ve ileti iletim en iyi duruma getirme mekanizmasını (MTOM) kodlama için sağlayabilen sınıfı:  
+ [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] aşağıdaki türden türetilmiş bağlama öğeleri sağlar <xref:System.ServiceModel.Channels.MessageEncodingBindingElement> metin, ikili ve ileti iletim en iyi duruma getirme mekanizmasını (MTOM) kodlama için sağlayabilen sınıfı:  
   
 -   <xref:System.ServiceModel.Channels.TextMessageEncodingBindingElement>: En birlikte çalışabilir, ancak XML iletileri için az verimli Kodlayıcı. Genellikle Web hizmeti veya Web hizmeti istemcisi metinsel XML anlayabilirsiniz. Ancak, büyük metin olarak ikili veri blokları iletmek etkili değildir.  
   
 -   <xref:System.ServiceModel.Channels.BinaryMessageEncodingBindingElement>: Karakter kodlamasını belirtir bağlama öğesi ve sürüm oluşturma ikili tabanlı XML iletileri için kullanılan ileti temsil eder. Bu kodlama seçeneklerini, ancak en az çalışabilen en etkili yoldur yalnızca tarafından desteklenmediği için [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] uç noktaları.  
   
--   <<!--zz xref:System.ServiceModel.Channels.MTOMMessageEncodingBindingElement -->`System.ServiceModel.Channels.MTOMMessageEncodingBindingElement`>: bir ileti iletim en iyi duruma getirme mekanizmasını (MTOM) kodlama kullanılarak bir ileti için kullanılan ileti sürüm oluşturma ve karakter kodlamasını belirtir bağlama öğesi temsil eder. MTOM, ikili dosya verilerini iletmek için verimli bir teknolojisidir [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] iletileri. MTOM Kodlayıcısı verimliliği ve birlikte çalışabilirlik arasında dengelemek çalışır. MTOM kodlama çoğu XML metin biçiminde aktarır ancak bunları olarak ileterek büyük ikili veri blokları en iyi duruma getirir-metne dönüştürme olmadan, ise.  
+-   <<!--zz xref:System.ServiceModel.Channels.MTOMMessageEncodingBindingElement --> `System.ServiceModel.Channels.MTOMMessageEncodingBindingElement`>: bir ileti iletim en iyi duruma getirme mekanizmasını (MTOM) kodlama kullanılarak bir ileti için kullanılan ileti sürüm oluşturma ve karakter kodlamasını belirtir bağlama öğesi temsil eder. MTOM, ikili dosya verilerini iletmek için verimli bir teknolojisidir [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] iletileri. MTOM Kodlayıcısı verimliliği ve birlikte çalışabilirlik arasında dengelemek çalışır. MTOM kodlama çoğu XML metin biçiminde aktarır ancak bunları olarak ileterek büyük ikili veri blokları en iyi duruma getirir-metne dönüştürme olmadan, ise.  
   
  Bir ikili, MTOM veya metin bağlama öğesi oluşturur <xref:System.ServiceModel.Channels.MessageEncoderFactory>. Bir ikili, MTOM veya metin üreteci oluşturur <xref:System.ServiceModel.Channels.MessageEncoderFactory> örneği. Genellikle, yalnızca tek bir örneği yoktur. Ancak oturumları kullandıysanız, farklı bir kodlayıcı her oturuma sağlanabilir. İkili kodlama sağlar (bkz. XML altyapı) dinamik sözlük koordine etmek için bu kullanın.  
   
@@ -61,7 +63,7 @@ Bu konu özel kodlayıcılar oluşturulacağını açıklar.
 ### <a name="pooling"></a>Biriktirme  
  Kodlayıcı uygulamaların her biri mümkün olduğunca havuz dener. Ayırmalar azaltma, yönetilen kod performansını artırmak için anahtar bir yoludur. Bu havuzu gerçekleştirmek için uygulamaları kullanır `SynchronizedPool` sınıfı. C# dosyasına bu sınıf tarafından kullanılan ek iyileştirmeler açıklamasını içerir.  
   
- `XmlDictionaryReader`ve `XmlDictionaryWriter` örnekleri havuza ve yenilerini her ileti için ayırma önlemek için yeniden başlatıldı. Okuyucular için bir `OnClose` geri çağırma kaldırsa okuyucu olduğunda `Close()` olarak adlandırılır. Kodlayıcı iletileri oluştururken kullanılan bazı ileti durumu nesneler de geri dönüştürür. Bu havuzları tarafından yapılandırılabilir boyutlarıdır `MaxReadPoolSize` ve `MaxWritePoolSize` her üç sınıfların özelliklerini türetilen <xref:System.ServiceModel.Channels.MessageEncodingBindingElement>.  
+ `XmlDictionaryReader` ve `XmlDictionaryWriter` örnekleri havuza ve yenilerini her ileti için ayırma önlemek için yeniden başlatıldı. Okuyucular için bir `OnClose` geri çağırma kaldırsa okuyucu olduğunda `Close()` olarak adlandırılır. Kodlayıcı iletileri oluştururken kullanılan bazı ileti durumu nesneler de geri dönüştürür. Bu havuzları tarafından yapılandırılabilir boyutlarıdır `MaxReadPoolSize` ve `MaxWritePoolSize` her üç sınıfların özelliklerini türetilen <xref:System.ServiceModel.Channels.MessageEncodingBindingElement>.  
   
 ### <a name="binary-encoding"></a>İkili kodlama  
  Dinamik sözlük dize ikili zaman kullandığı oturumları kodlama, ileti alıcısı için bildirilmesi gerekir. Bu, dinamik sözlük dizeleri iletisiyle ekleyerek yapılır. Alıcı dizeleri kaldırır, oturumuna ekler ve iletiyi işler. Sözlük dizeler doğru geçirme taşıma arabelleğe alınıp gerektirir.  
@@ -90,9 +92,9 @@ Bu konu özel kodlayıcılar oluşturulacağını açıklar.
   
 -   Geçersiz kılmanız gerekir bu sınıfın anahtar yöntemler şunlardır:  
   
--   <xref:System.ServiceModel.Channels.MessageEncoder.WriteMessage%2A>hangi alır bir <xref:System.ServiceModel.Channels.MessageEncodingBindingElement> nesne ve içine Yazar bir <xref:System.IO.Stream> nesnesi.  
+-   <xref:System.ServiceModel.Channels.MessageEncoder.WriteMessage%2A> hangi alır bir <xref:System.ServiceModel.Channels.MessageEncodingBindingElement> nesne ve içine Yazar bir <xref:System.IO.Stream> nesnesi.  
   
--   <xref:System.ServiceModel.Channels.MessageEncoder.ReadMessage%2A>hangi alır bir <xref:System.IO.Stream> nesne ve en fazla üstbilgi boyutu ve döndürür bir <xref:System.ServiceModel.Channels.Message> nesnesi.  
+-   <xref:System.ServiceModel.Channels.MessageEncoder.ReadMessage%2A> hangi alır bir <xref:System.IO.Stream> nesne ve en fazla üstbilgi boyutu ve döndürür bir <xref:System.ServiceModel.Channels.Message> nesnesi.  
   
  Bu yöntemleri yazma standart Aktarım Protokolü ve özelleştirilmiş kodlama arasında dönüştürme işleyen kodu değil.  
   

@@ -16,17 +16,17 @@ ms.author: bruceper
 manager: mbaldwin
 ms.workload:
 - dotnet
-ms.openlocfilehash: d033a3e22def60c5d82191fd7fcc93bd67f4548b
-ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
+ms.openlocfilehash: 393730ffe57c4678f53d16e67b8b8f64ad16509c
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/28/2018
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="security-considerations-with-metadata"></a>Meta Veriler Hakkında Güvenlik Konuları
 Meta verileri kullanarak ne zaman özellikleri [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)]yayımlama güvenlik etkilerini göz önünde bulundurmanız, alma ve kullanarak hizmet meta verileri.  
   
 ## <a name="when-to-publish-metadata"></a>Ne zaman meta verileri yayımlama  
- [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] Hizmetleri meta verileri varsayılan olarak yayımlamayın. Meta verilerini yayımlamak için bir [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] açıkça etkinleştirmelisiniz meta veri yayımlama hizmetinize meta veri uç noktalarını ekleyerek hizmet (bkz [meta veri yayımlama](../../../../docs/framework/wcf/feature-details/publishing-metadata.md)). Meta veri yayımlama devre dışı bırakarak, hizmetiniz için saldırı yüzeyini azaltan ve istemeyerek bilgi ifşaatı riskini azaltır. Tüm hizmetler meta veri yayımlamanız gerekir. Meta veri yayımlama yoksa, devre dışı bırakarak göz önünde bulundurun. Doğrudan kullanarak, hizmet derlemelerden meta verileri ve istemci kodu hala oluşturabilirsiniz Not [ServiceModel meta veri yardımcı Programracı (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md). [!INCLUDE[crabout](../../../../includes/crabout-md.md)] bkz: meta verileri dışarı aktarmak için svcutil.exe kullanma [nasıl yapılır: derlenmiş hizmet kodundan dışarı meta verilerine kullanım Svcutil.exe](../../../../docs/framework/wcf/feature-details/how-to-use-svcutil-exe-to-export-metadata-from-compiled-service-code.md).  
+ [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] Hizmetleri meta verileri varsayılan olarak yayımlamayın. Meta verilerini yayımlamak için bir [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] açıkça etkinleştirmelisiniz meta veri yayımlama hizmetinize meta veri uç noktalarını ekleyerek hizmet (bkz [meta veri yayımlama](../../../../docs/framework/wcf/feature-details/publishing-metadata.md)). Meta veri yayımlama devre dışı bırakarak, hizmetiniz için saldırı yüzeyini azaltan ve istemeyerek bilgi ifşaatı riskini azaltır. Tüm hizmetler meta veri yayımlamanız gerekir. Meta veri yayımlama yoksa, devre dışı bırakarak göz önünde bulundurun. Doğrudan kullanarak, hizmet derlemelerden meta verileri ve istemci kodu hala oluşturabilirsiniz Not [ServiceModel meta veri yardımcı Programracı (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md). Meta veri dışarı aktarmak için Svcutil.exe kullanma hakkında daha fazla bilgi için bkz: [nasıl yapılır: derlenmiş hizmet kodundan dışarı meta verilerine kullanım Svcutil.exe](../../../../docs/framework/wcf/feature-details/how-to-use-svcutil-exe-to-export-metadata-from-compiled-service-code.md).  
   
 ## <a name="publishing-metadata-using-a-secure-binding"></a>Güvenli bağlama kullanarak meta verileri yayımlama  
  Varsayılan meta veri bağlamaları, [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] değil güvenli ve meta verileri anonim erişime izin sağlar. Hizmet meta verileri, bir [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] hizmet yayımlar hizmeti hakkında ayrıntılı bir açıklama içerir ve kasıtlı veya kasıtsız olarak hassas bilgiler içerebilir. Örneğin, hizmeti meta verileri genel olarak yayınlamak için amaçlanmamış altyapı işlemleri hakkında bilgi içerebilir. Hizmet meta verileri yetkisiz erişimden korumak için güvenli bağlama, meta veri uç noktası için kullanabilirsiniz. Meta veri uç noktalarını Güvenli Yuva Katmanı (SSL) meta verileri güvenli hale getirmek için kullanabileceğiniz HTTP/GET isteklerine yanıt. Daha fazla bilgi için bkz: [nasıl yapılır: meta veri uç noktalarını güvenli](../../../../docs/framework/wcf/feature-details/how-to-secure-metadata-endpoints.md).  

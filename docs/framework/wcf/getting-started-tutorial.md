@@ -20,16 +20,16 @@ ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: 9c66e7d8f610126e2702a6c593a93ee496108ecf
-ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
+ms.openlocfilehash: 2dbf3ddb903600df6094c8486fda7183eac2abe7
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="getting-started-tutorial"></a>Başlangıç Öğreticisi
 Bu bölümdeki konularda hızlı maruz sağlamak için tasarlanmıştır [!INCLUDE[indigo1](../../../includes/indigo1-md.md)] programlama deneyimine. Bu konunun sonundaki listesi sırasına göre tamamlanması için tasarlanmıştır. Bu öğreticide, bir giriş anlayış oluşturmak için gerekli adımları verir [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] hizmet ve istemci uygulamaları. Bir hizmet bir veya daha fazla uç noktalar, her biri bir veya daha fazla hizmet işlemini kullanıma sunar, kullanıma sunar. *Endpoint* Hizmetin nerede hizmet bulunabilir, bir adresi nasıl bir istemci hizmeti ve işlevselliği tanımlayan bir sözleşme ile iletişim kurması gereken açıklayan bilgileri içeren bir bağlama belirtir hizmet tarafından istemcilerine sağlanan.  
   
- Bu öğreticideki konu başlıklarını sırasıyla çalıştıktan sonra çalışan bir hizmetiniz ve hizmetin çağıran bir istemci sahip olacaktır. İlk üç konularda bir hizmet sözleşmesini tanımlama, hizmet sözleşmesini uygulama ve hizmet barındırmak nasıl açıklanmaktadır. Oluşturulan hizmet bir konsol uygulaması içinde kendiliğinden barındırılır. Hizmetler, aynı zamanda Internet Information Services (IIS) altında barındırılabilir. [!INCLUDE[crabout](../../../includes/crabout-md.md)] Bunu yapmak için bkz: nasıl [nasıl yapılır: IIS'de WCF Hizmeti barındırma](../../../docs/framework/wcf/feature-details/how-to-host-a-wcf-service-in-iis.md). Kod içinde hizmet yapılandırılan; Ancak, hizmetleri yapılandırma dosyasının içinde yapılandırılabilir. [!INCLUDE[crabout](../../../includes/crabout-md.md)] bir yapılandırma dosyası kullanarak bkz [yapılandırma dosyalarını kullanarak Hizmetleri Yapılandırma](../../../docs/framework/wcf/configuring-services-using-configuration-files.md).  
+ Bu öğreticideki konu başlıklarını sırasıyla çalıştıktan sonra çalışan bir hizmetiniz ve hizmetin çağıran bir istemci sahip olacaktır. İlk üç konularda bir hizmet sözleşmesini tanımlama, hizmet sözleşmesini uygulama ve hizmet barındırmak nasıl açıklanmaktadır. Oluşturulan hizmet bir konsol uygulaması içinde kendiliğinden barındırılır. Hizmetler, aynı zamanda Internet Information Services (IIS) altında barındırılabilir. Bunun nasıl yapılacağı hakkında daha fazla bilgi için bkz: [nasıl yapılır: IIS'de WCF Hizmeti barındırma](../../../docs/framework/wcf/feature-details/how-to-host-a-wcf-service-in-iis.md). Kod içinde hizmet yapılandırılan; Ancak, hizmetleri yapılandırma dosyasının içinde yapılandırılabilir. Bir yapılandırma dosyası kullanma hakkında daha fazla bilgi için bkz: [yapılandırma dosyalarını kullanarak Hizmetleri Yapılandırma](../../../docs/framework/wcf/configuring-services-using-configuration-files.md).  
   
  Sonraki üç konuları, istemci proxy oluşturma, istemci uygulaması yapılandırın ve hizmeti tarafından sunulan hizmet işlemini çağırmak için istemci proxy kullanma açıklanmaktadır. Hizmetleri hizmeti ile iletişim için bir istemci uygulaması gereken bilgileri tanımlayan meta veri yayımlama. [!INCLUDE[vs_current_long](../../../includes/vs-current-long-md.md)] Bu meta verilere erişme işlemini otomatikleştiren ve oluşturmak ve hizmeti için istemci uygulamasını yapılandırmak için kullanır. Kullanmıyorsanız, [!INCLUDE[vs_current_long](../../../includes/vs-current-long-md.md)], kullanabileceğiniz [ServiceModel meta veri yardımcı Programracı (Svcutil.exe)](../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md) oluşturmak ve hizmeti için istemci uygulaması yapılandırın.  
   

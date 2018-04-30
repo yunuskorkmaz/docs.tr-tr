@@ -22,11 +22,11 @@ ms.author: bruceper
 manager: mbaldwin
 ms.workload:
 - dotnet
-ms.openlocfilehash: e043b9b9a3b09bec0d7484fb732e33571b5aaf0c
-ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
+ms.openlocfilehash: 827fef90a6277387ceac1c8f1d6df00a69a5d612
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/28/2018
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="how-to-create-a-security-token-service"></a>Nasıl yapılır: Güvenlik Belirteci Hizmeti Oluşturma
 Bir güvenlik belirteci hizmeti WS-Trust belirtimine tanımlanan protokolünü uygular. Bu protokol, ileti biçimleri ve verme, yenileme, iptal etme ve doğrulama güvenlik belirteçleri için ileti exchange desenleri tanımlar. Verilen güvenlik belirteci hizmeti bir veya daha fazla bu yetenekleri sağlar. Bu konuda en yaygın bir senaryo arar: belirteci verme uygulama.  
@@ -124,7 +124,7 @@ Bir güvenlik belirteci hizmeti WS-Trust belirtimine tanımlanan protokolünü u
  [!code-csharp[c_CreateSTS#6](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_creatests/cs/source.cs#6)]
  [!code-vb[c_CreateSTS#6](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_creatests/vb/source.vb#6)]  
   
- [!INCLUDE[crabout](../../../../includes/crabout-md.md)] İstemci ve güvenlik belirteci hem de hizmet verdiğinizde düzeltme belirteci oluşturmak nasıl paylaşılan anahtar için anahtar malzemesi sağlamak, bkz: [Federasyon örnek](../../../../docs/framework/wcf/samples/federation-sample.md).  
+ İstemci hem de güvenlik belirteci hizmeti paylaşılan anahtar için anahtar malzemesi sağladığınızda düzeltme belirteci oluşturma hakkında daha fazla bilgi için bkz: [Federasyon örnek](../../../../docs/framework/wcf/samples/federation-sample.md).  
   
  Verilen belirteç başvuruları örneklerini oluşturma tarafından oluşturulan <xref:System.IdentityModel.Tokens.SecurityKeyIdentifierClause> sınıfı.  
   

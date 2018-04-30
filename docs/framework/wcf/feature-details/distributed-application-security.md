@@ -1,32 +1,34 @@
 ---
-title: "Dağıtılan Uygulama Güvenliği"
-ms.custom: 
+title: Dağıtılan Uygulama Güvenliği
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - distributed application security [WCF]
 - security [WCF], transfer
 ms.assetid: 53928a10-e474-46d0-ab90-5f98f8d7b668
-caps.latest.revision: "32"
+caps.latest.revision: 32
 author: BrucePerlerMS
 ms.author: bruceper
 manager: mbaldwin
-ms.workload: dotnet
-ms.openlocfilehash: 1e67c5da534e7b35d4d27c0164d9389c8afe252b
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 8b5bc311262aae1110f7d0249be60135e318785e
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="distributed-application-security"></a>Dağıtılan Uygulama Güvenliği
-[!INCLUDE[indigo1](../../../../includes/indigo1-md.md)]Güvenlik üç ana işlevsel alanlara bölünmüş: güvenlik, erişim denetimi ve denetim aktarın. Aktarım güvenlik bütünlüğü, gizlilik ve kimlik doğrulaması sağlar. Aktarım güvenlik şunlardan biri tarafından sağlanır: aktarım güvenliği, ileti güvenliği veya `TransportWithMessageCredential`.  
+[!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] Güvenlik üç ana işlevsel alanlara bölünmüş: güvenlik, erişim denetimi ve denetim aktarın. Aktarım güvenlik bütünlüğü, gizlilik ve kimlik doğrulaması sağlar. Aktarım güvenlik şunlardan biri tarafından sağlanır: aktarım güvenliği, ileti güvenliği veya `TransportWithMessageCredential`.  
   
- Genel Bakış [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] ileti güvenlik için bkz: [güvenliğine genel bakış](../../../../docs/framework/wcf/feature-details/security-overview.md). [!INCLUDE[crabout](../../../../includes/crabout-md.md)]diğer iki parça [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] güvenlik, bkz: [yetkilendirme](../../../../docs/framework/wcf/feature-details/authorization-in-wcf.md) ve [denetim](../../../../docs/framework/wcf/feature-details/auditing-security-events.md).  
+ Genel Bakış [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] ileti güvenlik için bkz: [güvenliğine genel bakış](../../../../docs/framework/wcf/feature-details/security-overview.md). Diğer iki parça hakkında daha fazla bilgi için [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] güvenlik, bkz: [yetkilendirme](../../../../docs/framework/wcf/feature-details/authorization-in-wcf.md) ve [denetim](../../../../docs/framework/wcf/feature-details/auditing-security-events.md).  
   
 ## <a name="transfer-security-scenarios"></a>Aktarım güvenlik senaryoları  
  Uygulamadığınız yaygın senaryolar [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] aktarımı güvenlik aşağıdakileri içerir:  
@@ -47,7 +49,7 @@ ms.lasthandoff: 12/22/2017
 |Kimlik doğrulaması|*Kimlik doğrulama* talep edilen kimlik doğrulama. Örneğin, bir banka hesabı kullanırken, bu hesap yalnızca gerçek sahibi fon programdan çıkın izin verileceğini zorunludur. Kimlik doğrulama anlamına gelir, çeşitli tarafından sağlanabilir. Bir ortak yöntemi kullanıcı/parola sistemidir. İkinci, üçüncü taraf tarafından sağlanan bir X.509 sertifikası kullanılır.|  
   
 ## <a name="security-modes"></a>Güvenlik modu  
- [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]Aşağıdaki tabloda açıklanan birkaç aktarımı güvenlik modu vardır.  
+ [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] Aşağıdaki tabloda açıklanan birkaç aktarımı güvenlik modu vardır.  
   
 |Mod|Açıklama|  
 |----------|-----------------|  
@@ -58,7 +60,7 @@ ms.lasthandoff: 12/22/2017
 |Her ikisi|Koruma ve kimlik doğrulama, iki düzeyde gerçekleştirir. Bu modu yalnızca kullanılabilir [ \<netMsmqBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/netmsmqbinding.md) öğesi.|  
   
 ## <a name="credentials-and-transfer-security"></a>Kimlik bilgileri ve Aktarım güvenlik  
- A *kimlik bilgisi* bir talep kimliği veya özellikleri oluşturmak için sunulan veriler. Bir kimlik bilgisi sunan hem veri hem de veri kanıtını sunan içerir. [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]çeşitli güvenlik düzeyleri taşıma ve ileti kimlik bilgisi türlerini destekler. İçin kimlik bilgisi türünü belirtebilirsiniz bir [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] bağlama.  
+ A *kimlik bilgisi* bir talep kimliği veya özellikleri oluşturmak için sunulan veriler. Bir kimlik bilgisi sunan hem veri hem de veri kanıtını sunan içerir. [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] çeşitli güvenlik düzeyleri taşıma ve ileti kimlik bilgisi türlerini destekler. İçin kimlik bilgisi türünü belirtebilirsiniz bir [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] bağlama.  
   
  Birçok ülke veya bölgelerde, bir sürücünün lisans bir kimlik bilgisi örneğidir. Bir lisans birinin kimlik ve özellikleri temsil eden veri içeriyor. Sahibi'nın resmi biçiminde kanıtını içerir. Lisans, genellikle kamu bir lisans bölüm gibi güvenilir bir yetkili tarafından verilir. Lisans korumalı ve değil değiştirilmiş veya bırakıldığı sahtesi olduğunu gösteren bir hologramı içerebilir.  
   
@@ -68,7 +70,7 @@ ms.lasthandoff: 12/22/2017
   
  Sertifika kimlik bilgisi, konu adı, konu diğer adı ya da sertifika içinde belirli alanları talep edilen kimlik ve/veya özellikleri göstermek için kullanılabilir. Kimlik bilgisi verilerin kanıtını bir imzayı üretmek için ilişkili özel anahtarı kullanılarak oluşturulur.  
   
- [!INCLUDE[crabout](../../../../includes/crabout-md.md)]Aktarım güvenliğini programlama ve kimlik bilgileri bkz [bağlamalar ve güvenlik](../../../../docs/framework/wcf/feature-details/bindings-and-security.md) ve [güvenlik davranışları](../../../../docs/framework/wcf/feature-details/security-behaviors-in-wcf.md).  
+ Programlama hakkında daha fazla bilgi aktarmak güvenlik ve kimlik bilgileri görmek için [bağlamalar ve güvenlik](../../../../docs/framework/wcf/feature-details/bindings-and-security.md) ve [güvenlik davranışları](../../../../docs/framework/wcf/feature-details/security-behaviors-in-wcf.md).  
   
 ### <a name="transport-client-credential-types"></a>Taşıma istemcisi kimlik bilgisi türleri  
  Aktarım güvenlik kullanan bir uygulama oluşturma sırasında kullanılan olası değerler aşağıdaki tabloda gösterilmektedir. Kod veya bağlama ayarları bu değerleri kullanabilirsiniz.  
@@ -96,7 +98,7 @@ ms.lasthandoff: 12/22/2017
 ### <a name="programming-credentials"></a>Kimlik bilgileri programlama  
  İstemci kimlik bilgisi türlerinin her biri için [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] programlama modeli kimlik bilgileri değerlerini belirtmenize olanak verir ve kimlik bilgisi doğrulayıcılar kullanarak hizmet davranışları ve kanal davranışları.  
   
- [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]güvenlik kimlik bilgileri iki tür vardır: Hizmet kimlik bilgisi davranışları ve kanal kimlik bilgisi davranışları. Kimlik bilgisi davranışlarının [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] kimlik bilgileri kullanılan bağlamaları ifade güvenlik gereksinimlerini karşılayacak biçimde, gerçek veri öğesine belirtin. İçinde [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)], işlem çağırma ve iletileri arasında dönüştürür çalışma zamanı bileşeni bir istemci sınıftır. Tüm istemcilerin devralınmalıdır <xref:System.ServiceModel.ClientBase%601> sınıfı. <xref:System.ServiceModel.ClientBase%601.ClientCredentials%2A> Temel sınıf özelliği çeşitli değerleri istemci kimlik bilgileri belirtmenize olanak verir.  
+ [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] güvenlik kimlik bilgileri iki tür vardır: Hizmet kimlik bilgisi davranışları ve kanal kimlik bilgisi davranışları. Kimlik bilgisi davranışlarının [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] kimlik bilgileri kullanılan bağlamaları ifade güvenlik gereksinimlerini karşılayacak biçimde, gerçek veri öğesine belirtin. İçinde [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)], işlem çağırma ve iletileri arasında dönüştürür çalışma zamanı bileşeni bir istemci sınıftır. Tüm istemcilerin devralınmalıdır <xref:System.ServiceModel.ClientBase%601> sınıfı. <xref:System.ServiceModel.ClientBase%601.ClientCredentials%2A> Temel sınıf özelliği çeşitli değerleri istemci kimlik bilgileri belirtmenize olanak verir.  
   
  İçinde [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)], hizmet davranışları olan hizmet programlı olarak denetlemek için bir hizmet sözleşmesini (arabirimi) uygulama sınıfına uygulanan öznitelikleri. <xref:System.ServiceModel.Description.ServiceCredentials> Sınıfı Sertifikalar çeşitli istemci kimlik bilgisi türlerinin hizmeti kimlik bilgileri ve istemci doğrulama ayarları belirtmenize olanak verir.  
   

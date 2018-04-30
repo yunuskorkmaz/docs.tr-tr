@@ -19,11 +19,11 @@ ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: 490b756a9beae09b20a36d3fc6a20c85aad76618
-ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
+ms.openlocfilehash: 24ca6899e6ac2bb316c0543932d70abc13626aa2
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/28/2018
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="wcf-troubleshooting-quickstart"></a>WCF Sorun Giderme Hızlı Başlangıç
 Bu konuda müşteriler içine geliştirme WCF istemcileri ve Hizmetleri sırasında çalıştırdığınız bilinen sorunlar sayısını listeler. İçine çalıştırdığınız sorunu bu listede değilse, hizmetiniz için izleme yapılandırma öneririz. Bu bir izleme dosyası oluşturur izleme dosyası Görüntüleyici ile birlikte görüntülemek ve özel durumlar hakkında ayrıntılı bilgi almak hizmet içinde gerçekleşen. İzlemeyi yapılandırma hakkında daha fazla bilgi için bkz: [yapılandırma izleme](../../../docs/framework/wcf/diagnostics/tracing/configuring-tracing.md). İzleme dosyası Görüntüleyici hakkında daha fazla bilgi için bkz: [hizmet izleme Görüntüleyicisi aracı (SvcTraceViewer.exe)](../../../docs/framework/wcf/service-trace-viewer-tool-svctraceviewer-exe.md).  
@@ -64,7 +64,7 @@ Bu konuda müşteriler içine geliştirme WCF istemcileri ve Hizmetleri sırası
   
 <a name="BKMK_q1"></a>   
 ## <a name="sometimes-i-receive-a-messagesecurityexception-on-the-second-request-if-my-client-is-idle-for-a-while-after-the-first-request-what-is-happening"></a>My istemci bir süre sonra ilk istek için boşta kalırsa bazen MessageSecurityException ikinci isteğinde alıyorum. Ne oluyor?  
- İkinci bir istek temelde iki nedenden dolayı başarısız olabilir: (1 oturum zaman aşımına uğradı veya barındırma hizmeti (2 Web sunucusu dönüştürülmeden. İlk durumda hizmeti zaman aşımına uğrayana kadar oturum geçerli değil. Ne zaman hizmeti almaz bir istek istemciden hizmetin bağlamada belirtilen süre içinde (<xref:System.ServiceModel.Channels.Binding.ReceiveTimeout%2A>), hizmet güvenlik oturumu sona erer. Sonraki istemci iletileri neden <xref:System.ServiceModel.Security.MessageSecurityException>. İstemci, gelecekteki iletileri göndermek veya bir durum bilgisi olan güvenlik bağlamı belirteci kullanmak için hizmet ile güvenli bir oturumu yeniden oluşturmanız gerekir. Durum bilgisi olan güvenlik bağlamı belirteçleri dönüştürüldüğü bir Web sunucusu varlığını sürdürmesi güvenli bir oturum de olanak sağlar. [!INCLUDE[crabout](../../../includes/crabout-md.md)] durum bilgisi olan güvenli içeriği belirteçleri kullanarak güvenli bir oturumda bkz [nasıl yapılır: güvenli oturum açmak için bir güvenlik bağlamı belirteci oluşturma](../../../docs/framework/wcf/feature-details/how-to-create-a-security-context-token-for-a-secure-session.md). Alternatif olarak, güvenli oturumlar devre dışı bırakabilirsiniz. Kullandığınızda [ \<wsHttpBinding >](../../../docs/framework/configure-apps/file-schema/wcf/wshttpbinding.md) ayarlayabileceğiniz bağlama, `establishSecurityContext` özelliğine `false` güvenli oturumlar devre dışı bırakmak için. Güvenli oturumlar diğer bağlantılar için devre dışı bırakmak için özel bağlama oluşturmanız gerekir. Özel bağlama oluşturma hakkında daha fazla bilgi için bkz: [nasıl yapılır: SecurityBindingElement kullanarak özel bir bağlama oluşturun](../../../docs/framework/wcf/feature-details/how-to-create-a-custom-binding-using-the-securitybindingelement.md). Bu seçeneklerin hiçbirini uygulamadan önce uygulamanızın güvenlik gereksinimlerini anlamanız gerekir.  
+ İkinci bir istek temelde iki nedenden dolayı başarısız olabilir: (1 oturum zaman aşımına uğradı veya barındırma hizmeti (2 Web sunucusu dönüştürülmeden. İlk durumda hizmeti zaman aşımına uğrayana kadar oturum geçerli değil. Ne zaman hizmeti almaz bir istek istemciden hizmetin bağlamada belirtilen süre içinde (<xref:System.ServiceModel.Channels.Binding.ReceiveTimeout%2A>), hizmet güvenlik oturumu sona erer. Sonraki istemci iletileri neden <xref:System.ServiceModel.Security.MessageSecurityException>. İstemci, gelecekteki iletileri göndermek veya bir durum bilgisi olan güvenlik bağlamı belirteci kullanmak için hizmet ile güvenli bir oturumu yeniden oluşturmanız gerekir. Durum bilgisi olan güvenlik bağlamı belirteçleri dönüştürüldüğü bir Web sunucusu varlığını sürdürmesi güvenli bir oturum de olanak sağlar. Durum bilgisi olan güvenli içeriği belirteçleri güvenli bir oturumda kullanma hakkında daha fazla bilgi için bkz: [nasıl yapılır: güvenli oturum açmak için bir güvenlik bağlamı belirteci oluşturma](../../../docs/framework/wcf/feature-details/how-to-create-a-security-context-token-for-a-secure-session.md). Alternatif olarak, güvenli oturumlar devre dışı bırakabilirsiniz. Kullandığınızda [ \<wsHttpBinding >](../../../docs/framework/configure-apps/file-schema/wcf/wshttpbinding.md) ayarlayabileceğiniz bağlama, `establishSecurityContext` özelliğine `false` güvenli oturumlar devre dışı bırakmak için. Güvenli oturumlar diğer bağlantılar için devre dışı bırakmak için özel bağlama oluşturmanız gerekir. Özel bağlama oluşturma hakkında daha fazla bilgi için bkz: [nasıl yapılır: SecurityBindingElement kullanarak özel bir bağlama oluşturun](../../../docs/framework/wcf/feature-details/how-to-create-a-custom-binding-using-the-securitybindingelement.md). Bu seçeneklerin hiçbirini uygulamadan önce uygulamanızın güvenlik gereksinimlerini anlamanız gerekir.  
   
 <a name="BKMK_q2"></a>   
 ## <a name="my-service-starts-to-reject-new-clients-after-about-10-clients-are-interacting-with-it-what-is-happening"></a>Yaklaşık 10 istemcileri ile etkileşim sonra yeni istemciler reddetmeye My hizmetini başlatır. Ne oluyor?  
@@ -145,7 +145,7 @@ public class MyServiceHost : ServiceHost
   
     4.  Yeni bir SPN SetSPN kullanarak etki alanı ile kaydedin. Bunu yapmak için bir etki alanı yöneticisi olması gerektiğine dikkat edin.  
   
- [!INCLUDE[crabout](../../../includes/crabout-md.md)] Kerberos protokolü Bkz [WCF güvenlik kavramları kullanılan](../../../docs/framework/wcf/feature-details/security-concepts-used-in-wcf.md) ve:  
+ Kerberos protokolü hakkında daha fazla bilgi için bkz: [WCF güvenlik kavramları kullanılan](../../../docs/framework/wcf/feature-details/security-concepts-used-in-wcf.md) ve:  
   
 -   [Windows Kimlik Doğrulama Hatalarını Ayıklama](../../../docs/framework/wcf/feature-details/debugging-windows-authentication-errors.md)  
   
@@ -175,7 +175,7 @@ public class MyServiceHost : ServiceHost
   
  Bu durumda, özel anahtarı içeren dosyayı için işlemin hesaba okuma erişimi ayrıcalıkları vermeniz gerekir. Örneğin, IIS çalışan işlemi Bob hesabı altında çalışıyorsa, özel anahtarı içeren dosyanın Bob okuma erişimi verin gerekecektir.  
   
- [!INCLUDE[crabout](../../../includes/crabout-md.md)] belirli bir X.509 Sertifika özel anahtarı içeren dosyayı doğru kullanıcı hesabı erişimi vermek için bkz [nasıl yapılır: olun X.509 sertifikalarını WCF için erişilebilir](../../../docs/framework/wcf/feature-details/how-to-make-x-509-certificates-accessible-to-wcf.md).  
+ Belirli bir X.509 Sertifika özel anahtarı içeren dosyayı doğru kullanıcı hesabı erişimi vermek hakkında daha fazla bilgi için bkz: [nasıl yapılır: olun X.509 sertifikalarını WCF için erişilebilir](../../../docs/framework/wcf/feature-details/how-to-make-x-509-certificates-accessible-to-wcf.md).  
   
 <a name="BKMK_q88"></a>   
 ## <a name="i-changed-the-first-parameter-of-an-operation-from-uppercase-to-lowercase-now-my-client-throws-an-exception-whats-happening"></a>Bir işlemin ilk parametre gelen büyük değiştirdim küçük harf için; Şimdi my istemcisi bir özel durum oluşturur. Ne oluyor?  

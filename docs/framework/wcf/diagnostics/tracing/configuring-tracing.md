@@ -18,11 +18,11 @@ ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: 2ad8a3a79967c42b8e8afdd9b9d796a7a1dfdd79
-ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
+ms.openlocfilehash: 23dbf9808976496686dfe9d595487110da41730b
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/28/2018
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="configuring-tracing"></a>İzlemeyi Yapılandırma
 Bu konuda nasıl izlemeyi etkinleştirmek, izlemeleri ve kümesi izleme düzeyleri, kümesi Etkinlik izleme ve uçtan uca izleme bağıntı desteklemek için yayma yaymak üzere izleme kaynakları yapılandırabilir ve izlemeleri erişmek için izleme dinleyicileri ayarlama açıklanmaktadır.  
@@ -146,7 +146,7 @@ Bu konuda nasıl izlemeyi etkinleştirmek, izlemeleri ve kümesi izleme düzeyle
 </system.diagnostics>  
 ```  
   
- [!INCLUDE[crabout](../../../../../includes/crabout-md.md)] İzleme kaynakları kullanıcı tanımlı oluşturmak için bkz: [genişletme izleme](../../../../../docs/framework/wcf/samples/extending-tracing.md).  
+ Kullanıcı tanımlı izleme kaynakları oluşturma hakkında daha fazla bilgi için bkz: [genişletme izleme](../../../../../docs/framework/wcf/samples/extending-tracing.md).  
   
 ## <a name="configuring-trace-listeners-to-consume-traces"></a>İzleme dinleyicileri izlemeleri kullanmak için yapılandırma  
  Çalışma zamanında [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)] akışları izleme verileri işleyen dinleyicileri verileri. [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)] birçok önceden tanımlı dinleyiciler için sağlar <xref:System.Diagnostics>, çıktı için kullandıkları biçiminde farklı. Özel dinleyicisi türleri de ekleyebilirsiniz.  
@@ -187,7 +187,7 @@ Bu konuda nasıl izlemeyi etkinleştirmek, izlemeleri ve kümesi izleme düzeyle
   
  `propagateActivity` Öznitelik, etkinlik ileti Exchange'de katılmak diğer uç noktalar olarak yayıldığı olup olmadığını gösterir. Bu değer ayarlayarak `true`, iki uç nokta tarafından oluşturulan izleme dosyaları alabilir ve nasıl başka bir uç noktada izlemeleri kümesi için bir uç noktada izlemeleri kümesi aktarılan inceleyin.  
   
- [!INCLUDE[crabout](../../../../../includes/crabout-md.md)] Etkinlik izleme ve yayma, bkz: [yayma](../../../../../docs/framework/wcf/diagnostics/tracing/propagation.md).  
+ Etkinlik izleme ve yayma hakkında daha fazla bilgi için bkz: [yayma](../../../../../docs/framework/wcf/diagnostics/tracing/propagation.md).  
   
  Her ikisi de `propagateActivity` ve `ActivityTracing` Boole değerleri System.ServiceModel TraceSource uygulayın. `ActivityTracing` Değeri herhangi bir izleme kaynağını için de geçerlidir dahil olmak üzere [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)] veya kullanıcı tanımlı olanlar.  
   

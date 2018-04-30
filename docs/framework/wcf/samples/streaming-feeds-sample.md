@@ -16,11 +16,11 @@ ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: 24dfd6c7eb2c1df6605d03bfb99cc82c0a489377
-ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
+ms.openlocfilehash: 1eb5d8e0b19bc32ea5158d1614447b76f4924440
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="streaming-feeds-sample"></a>Akış Gerçekleştirme Örneği
 Bu örnek, çok sayıda öğe içeren dağıtım akışlarını yönetmek gösterilmiştir. Sunucu üzerinde örnek tek tek oluşturulması gecikme gösterilmiştir <xref:System.ServiceModel.Syndication.SyndicationItem> nesneleri hemen kadar akış içinde öğe ağ akışa yazılmadan önce.  
@@ -29,7 +29,7 @@ Bu örnek, çok sayıda öğe içeren dağıtım akışlarını yönetmek göste
   
  En iyi dağıtım API akış yeteneğini göstermek için bu örnek sunucu sonsuz sayıda öğe içeren bir akış sunar biraz olası bir senaryo kullanır. Bu durumda, sunucunun istemci belirtilen sayıda öğeyi akıştan (varsayılan olarak, 10) okuma izni olduğunu belirler kadar akışa yeni öğeler oluşturma devam eder. Basitlik, hem istemci hem de sunucunun aynı işlem içinde uygulanan ve paylaşılan kullanın `ItemCounter` kaç istemci öğelerini izlemek için nesne üretilen. `ItemCounter` Türü yalnızca düzgün bir şekilde sonlandırmak Örnek senaryo izin vermek amacıyla var ve gösterilen deseni çekirdek öğesi değil.  
   
- Visual C#, kullanan Tanıtımı yararlanır yineleyiciler (kullanarak `yield``return` anahtar sözcüğü yapı). [!INCLUDE[crabout](../../../../includes/crabout-md.md)] yineleyiciler, MSDN'de "Yineleyiciler kullanma" konusuna bakın.  
+ Visual C#, kullanan Tanıtımı yararlanır yineleyiciler (kullanarak `yield``return` anahtar sözcüğü yapı). Yineleyiciler hakkında daha fazla bilgi için MSDN'de "Yineleyiciler kullanma" konusuna bakın.  
   
 ## <a name="service"></a>Hizmet  
  Temel bir hizmet uygulayan <xref:System.ServiceModel.Web.WebGetAttribute> aşağıdaki kodda gösterildiği gibi bir işleme, oluşur sözleşme.  

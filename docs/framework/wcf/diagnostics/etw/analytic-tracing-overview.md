@@ -18,16 +18,16 @@ ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: c29065ebe03617e288d7ebde3dc6b42cbfcf6061
-ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
+ms.openlocfilehash: 530f6ce3d253cfc50818c82fc70e401382b50b85
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/28/2018
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="analytic-tracing-overview"></a>Çözümleme İzleme Genel Bakış
 Çözümleme izleme içinde [!INCLUDE[netfx_current_long](../../../../../includes/netfx-current-long-md.md)] yüksek performans ve düşük ayrıntı izleme özelliği olay izleme için Windows (ETW üstünde) ayarlayın. ETW çekirdek izleme işlemlerinin ek yükünü önemli ölçüde azaltan düzeyinde çalışır. Verimli bir şekilde kullanıcı ve çekirdek modu olaylarını arabelleğe alır ve dinamik günlüğü etkinleştirme hizmet yeniden başlatıldığında gerek kalmadan sağlar. Sonraki günlükleri yayılan ve alınan olay izleme verileri mevcut değil.  
   
- [!INCLUDE[crabout](../../../../../includes/crabout-md.md)] ETW, bkz: [artırmak hata ayıklama ve performans ayarlama ETW ile](http://go.microsoft.com/fwlink/?LinkId=164781).  
+ ETW hakkında daha fazla bilgi için bkz: [artırmak hata ayıklama ve performans ayarlama ETW ile](http://go.microsoft.com/fwlink/?LinkId=164781).  
   
  Uygulama, analiz etmek için Windows Sistem, güvenlik ve uygulama olay günlüklerini kullanmanın yanı sıra [!INCLUDE[wv](../../../../../includes/wv-md.md)] ve [!INCLUDE[lserver](../../../../../includes/lserver-md.md)] ek günlükleri uygulama ve hizmet günlükleri en üst düzey düğümü altında sunulan. Belirli bir uygulama veya sistem genelinde etkileyebilir (örneğin, güvenlik olay günlüğüne kaydedebilir olayların türünü) genel olayları yerine belirli bileşeni için olayları depolamak için bu yeni günlükler amacı budur. [!INCLUDE[netfx_current_short](../../../../../includes/netfx-current-short-md.md)] birleştirir ve günlüğe karşılık gelen [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)] izleme olayları [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)] ileti günlüklerini ve [!INCLUDE[wf1](../../../../../includes/wf1-md.md)] kayıtları uygulamalar ve hizmet günlükleri izleme.  
   
@@ -57,7 +57,7 @@ ms.lasthandoff: 04/28/2018
  ETW altyapı olması için izlemeyi sağlar etkinleştirilmeli ve standart Windows araçlarını kullanarak dinamik olarak yapılandırılmalıdır. Daha fazla bilgi için bkz: [izlemeyi dinamik olarak etkinleştirme analitik](../../../../../docs/framework/wcf/diagnostics/etw/dynamically-enabling-analytic-tracing.md).  
   
 ### <a name="message-flow-tracing"></a>İleti akışı izlemeyi  
- [!INCLUDE[crabout](../../../../../includes/crabout-md.md)] ileti akışı izlemeyi etkinleştirmek için bkz: nasıl [ileti akışı izlemeyi yapılandırma](../../../../../docs/framework/wcf/diagnostics/etw/configuring-message-flow-tracing.md).  
+ İleti akışı izlemeyi etkinleştirme hakkında daha fazla bilgi için bkz: [ileti akışı izlemeyi yapılandırma](../../../../../docs/framework/wcf/diagnostics/etw/configuring-message-flow-tracing.md).  
   
 ### <a name="keywords"></a>Anahtar Sözcükler  
  İzleme İletileri Filtrele ve hangi bileşeninin tanımlamak için kullanılan anahtar sözcükleri [!INCLUDE[dnprdnshort](../../../../../includes/dnprdnshort-md.md)] olay yayılan. Daha fazla bilgi için bkz: [izlemeyi dinamik olarak etkinleştirme analitik](../../../../../docs/framework/wcf/diagnostics/etw/dynamically-enabling-analytic-tracing.md).

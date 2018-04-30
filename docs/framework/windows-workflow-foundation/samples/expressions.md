@@ -1,28 +1,29 @@
 ---
 title: Expressions2
-ms.custom: 
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 43a85905-77b5-4893-bb38-1cb9b293d69d
-caps.latest.revision: "14"
+caps.latest.revision: 14
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: a22cf5ae3434e0f79a4cba1b772b02316ccdb007
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: c8470a3bb93385724f50e18d25c148ee609c3a77
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="expressions"></a>İfadeler
 Bu örnek temel ifadeleri bir iş akışında kullanmayı gösterir. İki kurgusal bir şirkette çalışanlar için temel maaş istatistikleri hesaplar bir iş akışı oluşur. İki sınıf `Employee` ve `SalaryStats`, Employee.cs ve SalaryStats.cs tanımlanır. Bu sınıfların basit aritmetik ve dize değişkenleri özelliklerini, karmaşık türler işlemleri gösteren bir iş akışında kullanılır.  
   
- Maaş hesaplama iş akışı XAML hem de iki geliştirme stilleri göstermek için C# tanımlanır. XAML sürüm SalaryCalculation.xaml içinde yer alan ve görüntülenebilir ve iş akışı Tasarımcısı'nda düzenlenemez. C# sürümü Program.cs içinde bulunur. XAML'de kullanılan ifadeleri Visual Basic sözdizimine uygun olması ve kullanmak <xref:Microsoft.VisualBasic.Activities.VisualBasicValue%601> ve <xref:Microsoft.VisualBasic.Activities.VisualBasicReference%601> ifade etkinliklerinin yürütülmesine. [!INCLUDE[crabout](../../../../includes/crabout-md.md)]Visual Basic ifadeleri bakın, [Visual Basic ifadeleri](http://go.microsoft.com/fwlink/?LinkId=165912). Diğer taraftan, C# ' ifadelerin lambda ifadeleri olarak yazılmıştır ve kullanmak <xref:System.Activities.Expressions.LambdaValue%601> ve <xref:System.Activities.Expressions.LambdaReference%601> ifade etkinlikler. Lambda ifadeleri olarak deyimleri yazarken sözdizimi vurgulama sağlamak için C# Derleyici ve statik doğrulama sağlar. [!INCLUDE[crabout](../../../../includes/crabout-md.md)]Lambda ifadeleri C# ' ta, bkz: [Lambda ifadeleri (C# programlama Kılavuzu)](http://go.microsoft.com/fwlink/?LinkId=182082). Visual Basic kullanarak kod içinde bir iş akışı yazılmışsa, Visual Basic lambda ifadeleri kullanılır. [!INCLUDE[crabout](../../../../includes/crabout-md.md)]Lambda ifadeleri Visual Basic'te bkz [Lambda ifadeleri (Visual Basic)](http://go.microsoft.com/fwlink/?LinkId=152437). [!INCLUDE[crabout](../../../../includes/crabout-md.md)]kod kullanarak da iş akışları yazma hakkında bkz [geliştirme iş akışları, etkinlikler ve ifadeler kullanarak kesinliği kod](../../../../docs/framework/windows-workflow-foundation/authoring-workflows-activities-and-expressions-using-imperative-code.md).  
+ Maaş hesaplama iş akışı XAML hem de iki geliştirme stilleri göstermek için C# tanımlanır. XAML sürüm SalaryCalculation.xaml içinde yer alan ve görüntülenebilir ve iş akışı Tasarımcısı'nda düzenlenemez. C# sürümü Program.cs içinde bulunur. XAML'de kullanılan ifadeleri Visual Basic sözdizimine uygun olması ve kullanmak <xref:Microsoft.VisualBasic.Activities.VisualBasicValue%601> ve <xref:Microsoft.VisualBasic.Activities.VisualBasicReference%601> ifade etkinliklerinin yürütülmesine. Visual Basic ifadeleri bakın hakkında daha fazla bilgi için [Visual Basic ifadeleri](http://go.microsoft.com/fwlink/?LinkId=165912). Diğer taraftan, C# ' ifadelerin lambda ifadeleri olarak yazılmıştır ve kullanmak <xref:System.Activities.Expressions.LambdaValue%601> ve <xref:System.Activities.Expressions.LambdaReference%601> ifade etkinlikler. Lambda ifadeleri olarak deyimleri yazarken sözdizimi vurgulama sağlamak için C# Derleyici ve statik doğrulama sağlar. C# ' deki lambda ifadeleri hakkında daha fazla bilgi için bkz: [Lambda ifadeleri (C# programlama Kılavuzu)](http://go.microsoft.com/fwlink/?LinkId=182082). Visual Basic kullanarak kod içinde bir iş akışı yazılmışsa, Visual Basic lambda ifadeleri kullanılır. Visual Basic'te lambda ifadeleri hakkında daha fazla bilgi için bkz: [Lambda ifadeleri (Visual Basic)](http://go.microsoft.com/fwlink/?LinkId=152437). Kod kullanarak iş akışları yazma hakkında daha fazla bilgi için bkz: [geliştirme iş akışları, etkinlikler ve ifadeler kullanarak kesinliği kod](../../../../docs/framework/windows-workflow-foundation/authoring-workflows-activities-and-expressions-using-imperative-code.md).  
   
 #### <a name="to-run-the-sample"></a>Örnek çalıştırmak için  
   

@@ -1,28 +1,30 @@
 ---
-title: "Ek Açıklamalar Şeması"
-ms.custom: 
+title: Ek Açıklamalar Şeması
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-wpf
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-wpf
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - XML schema definition (XSD)
 - Microsoft Annotations Framework [WPF]
 - documents [WPF], annotations
 ms.assetid: a893442b-e220-4603-bf6a-b01fefcb4b37
-caps.latest.revision: "14"
+caps.latest.revision: 14
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 7989269e8076eda1deef6384b7efdb51c2d279ec
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: a78e287065fb714878d4d97b037d44440d063a5a
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="annotations-schema"></a>Ek Açıklamalar Şeması
 Bu konuda kaydedin ve kullanıcı ek açıklama verilerini almak için Microsoft ek açıklamalar çerçevesi tarafından kullanılan XML şema tanımı (XSD) açıklanmaktadır.  
@@ -37,7 +39,7 @@ Bu konuda kaydedin ve kullanıcı ek açıklama verilerini almak için Microsoft
   
  Çekirdek Şema, birincil XML yapısını tanımlar. bir <xref:System.Windows.Annotations.Annotation>.  Çekirdek Şeması'nda tanımlanan XML öğelerinin çoğunluğu karşılık gelen türlerine <xref:System.Windows.Annotations> ad alanı.  Çekirdek Şeması uygulamaları kendi XML verileri, ekleyebileceğiniz üç uzantı noktaları kullanıma sunar.  Bu uzantı noktaları dahil <xref:System.Windows.Annotations.Annotation.Authors%2A>, <xref:System.Windows.Annotations.ContentLocatorPart>ve "İçerik".  (İçerik öğeleri biçiminde sağlanan bir <xref:System.Xml.XmlElement> listesi.)  
   
- Bu konuda açıklanan Taban Şeması uzantıları tanımlar <xref:System.Windows.Annotations.Annotation.Authors%2A>, <xref:System.Windows.Annotations.ContentLocatorPart>ve içerik türlerine ilk dahil [!INCLUDE[TLA#tla_wpf](../../../../includes/tlasharptla-wpf-md.md)] serbest bırakın.  
+ Bu konuda açıklanan Taban Şeması uzantıları tanımlar <xref:System.Windows.Annotations.Annotation.Authors%2A>, <xref:System.Windows.Annotations.ContentLocatorPart>ve içerik türlerine ilk Windows Presentation Foundation (WPF) sürümüyle dahil.  
   
 <a name="CoreSchema"></a>   
 ## <a name="annotations-xml-core-schema"></a>Ek Açıklamalar XML Çekirdek Şeması  

@@ -1,27 +1,29 @@
 ---
-title: "WCF Web HTTP Hizmeti Yardım Sayfası"
-ms.custom: 
+title: WCF Web HTTP Hizmeti Yardım Sayfası
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 63c7c695-44b6-4f31-bb9c-00f2763f525e
-caps.latest.revision: "11"
+caps.latest.revision: 11
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: cdd05397990c2b1bfc89493235804e14f6d41a1f
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: dabb5e7a949cb26c619ad02dc73d0405222d08cf
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="wcf-web-http-service-help-page"></a>WCF Web HTTP Hizmeti Yardım Sayfası
-[!INCLUDE[netfx_current_long](../../../../includes/netfx-current-long-md.md)]bir otomatik Yardım sayfası için WCF WEB HTTP Hizmetleri sağlar. Bu Yardım sayfası, her işlem, istek ve yanıt formatları ve şemaları açıklamasını listeler. Bu işlev varsayılan olarak kapalıdır. Ne zaman bir kullanıcı için bir WCF WEB HTTP hizmeti gözatar ve ekler "/ Yardım" URL'si, örneğin 8000/müşteriler/Yardım, son açın aşağıdaki gibi bir Yardım sayfası görüntülenir.  
+[!INCLUDE[netfx_current_long](../../../../includes/netfx-current-long-md.md)] bir otomatik Yardım sayfası için WCF WEB HTTP Hizmetleri sağlar. Bu Yardım sayfası, her işlem, istek ve yanıt formatları ve şemaları açıklamasını listeler. Bu işlev varsayılan olarak kapalıdır. Ne zaman bir kullanıcı için bir WCF WEB HTTP hizmeti gözatar ve ekler "/ Yardım" Örneğin URL'nin sonuna açın http://localhost:8000/Customers/Help, aşağıda gösterilen gibi bir Yardım sayfası.  
   
  ![WCF REST Yardım sayfası](../../../../docs/framework/wcf/feature-details/media/wcfresthelppagemain.gif "WCFRESTHELPPAGEMAIN")  
   
@@ -251,4 +253,4 @@ using (WebServiceHost host = new WebServiceHost(typeof(Service), new Uri("http:/
 </xs:schema>  
 ```  
   
- [!INCLUDE[crabout](../../../../includes/crabout-md.md)]veri sözleşmesi seri hale getirme şeması bkz [veri sözleşmesi şema başvurusu](../../../../docs/framework/wcf/feature-details/data-contract-schema-reference.md).
+ Veri sözleşmesi seri hale getirme şeması hakkında daha fazla bilgi için bkz: [veri sözleşmesi şema başvurusu](../../../../docs/framework/wcf/feature-details/data-contract-schema-reference.md).

@@ -1,12 +1,13 @@
 ---
-title: "Nasıl yapılır: Yerelleştirilebilir Dize Kaynaklarını Yönetmek için ResourceDictionary Kullanma"
-ms.custom: 
+title: 'Nasıl yapılır: Yerelleştirilebilir Dize Kaynaklarını Yönetmek için ResourceDictionary Kullanma'
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-wpf
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-wpf
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - csharp
@@ -17,19 +18,20 @@ helpviewer_keywords:
 - ResourceDictionary [WPF]
 - localization [WPF], packaging string resources
 ms.assetid: 19e7d9a5-20df-4ad3-b157-fe6515902e5e
-caps.latest.revision: "9"
+caps.latest.revision: 9
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 9fba115ea8c954da177afcacbf679f41474e2b68
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 70f8f02f315580c8056ee698b5e45b1a31a3dc74
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="how-to-use-a-resourcedictionary-to-manage-localizable-string-resources"></a>Nasıl yapılır: Yerelleştirilebilir Dize Kaynaklarını Yönetmek için ResourceDictionary Kullanma
-Bu örnek nasıl kullanılacağını gösteren bir <xref:System.Windows.ResourceDictionary> için paket Yerelleştirilebilir Dize Kaynakları [!INCLUDE[TLA#tla_wpf](../../../../includes/tlasharptla-wpf-md.md)] uygulamalar.  
+Bu örnek nasıl kullanılacağını gösteren bir <xref:System.Windows.ResourceDictionary> paket yerelleştirilebilir dize kaynaklarını Windows Presentation Foundation (WPF) uygulamaları için.  
   
 ### <a name="to-use-a-resourcedictionary-to-manage-localizable-string-resources"></a>Yerelleştirilebilir Dize kaynaklarını yönetmek için ResourceDictionary Kullanma  
   

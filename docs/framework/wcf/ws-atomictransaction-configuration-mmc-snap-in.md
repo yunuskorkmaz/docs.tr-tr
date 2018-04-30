@@ -1,24 +1,26 @@
 ---
-title: "WS-AtomicTransaction Yapılandırması MMC Ek Bileşeni"
-ms.custom: 
+title: WS-AtomicTransaction Yapılandırması MMC Ek Bileşeni
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 23592973-1d51-44cc-b887-bf8b0d801e9e
-caps.latest.revision: "17"
+caps.latest.revision: 17
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 73db4b201aba6e07891803aa86c56403f135f863
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 2e8b127e0d3c241a1e37ac2161d9fadcea990425
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="ws-atomictransaction-configuration-mmc-snap-in"></a>WS-AtomicTransaction Yapılandırması MMC Ek Bileşeni
 WS-AtomicTransaction yapılandırması MMC ek bileşenini hem yerel hem de uzak makinelerde bir kısmı WS-AtomicTransaction ayarlarını yapılandırmak için kullanılır.  
@@ -28,7 +30,7 @@ WS-AtomicTransaction yapılandırması MMC ek bileşenini hem yerel hem de uzak 
   
  Windows Vista çalıştırıyorsanız veya [!INCLUDE[lserver](../../../includes/lserver-md.md)], MMC ek bileşeninde bulunabilir tıklayarak **Başlat** düğmesine tıklayın ve yazarak `dcomcnfg.exe` içinde **arama** kutusu. MMC açıldığında gidin **My Computer\Distributed işlem Coordinator\Local DTC** düğümünü sağ tıklatın ve seçin **özellikleri**. Yapılandırma için kullanılabilir seçenekleri altında gruplandırılır **WS-AT** sekmesi.  
   
- Önceki adımlar yerel makine yapılandırma eklentisi başlatmak için kullanılır. Bir uzak makine yapılandırmak istiyorsanız, Uzak makinenin adında bulun **Denetim Masası/Yönetimsel Araçlar/Bileşen Hizmetleri /**ve çalıştırıyorsanız, benzer adımları [!INCLUDE[wxp](../../../includes/wxp-md.md)] veya [!INCLUDE[ws2003](../../../includes/ws2003-md.md)]. Windows Vista çalıştırıyorsanız veya [!INCLUDE[lserver](../../../includes/lserver-md.md)], Vista için önceki adımları izleyin ve [!INCLUDE[lserver](../../../includes/lserver-md.md)], ancak **dağıtılmış işlem Coordinator\Local DTC** düğümü altında uzaktaki bilgisayarın düğümü.  
+ Önceki adımlar yerel makine yapılandırma eklentisi başlatmak için kullanılır. Bir uzak makine yapılandırmak istiyorsanız, Uzak makinenin adında bulun **Denetim Masası/Yönetimsel Araçlar/Bileşen Hizmetleri /** ve çalıştırıyorsanız, benzer adımları [!INCLUDE[wxp](../../../includes/wxp-md.md)] veya [!INCLUDE[ws2003](../../../includes/ws2003-md.md)]. Windows Vista çalıştırıyorsanız veya [!INCLUDE[lserver](../../../includes/lserver-md.md)], Vista için önceki adımları izleyin ve [!INCLUDE[lserver](../../../includes/lserver-md.md)], ancak **dağıtılmış işlem Coordinator\Local DTC** düğümü altında uzaktaki bilgisayarın düğümü.  
   
  Aracı tarafından sağlanan kullanıcı arabirimi kullanmak için aşağıdaki yolda bulunur WsatUI.dll dosyasını kaydetmek sahip olduğunuz  
   
@@ -42,9 +44,9 @@ regasm.exe /codebase WsatUI.dll
   
  Temel WS-AtomicTransaction ayarlarını değiştirmek için bu aracı kullanabilirsiniz. Örneğin, etkinleştirmek ve WS-AtomicTransaction Protokolü desteğini devre dışı bırakın, WS-AT için HTTP bağlantı noktalarını yapılandırmak, bir SSL sertifikası HTTP bağlantı noktasına bağlayın, sertifikalar sertifika konu adları belirterek yapılandırabilir, izleme modunu seçin ve ayarlayın Varsayılan ve en büyük zaman aşımı.  
   
- WS-AtomicTransaction desteği yalnızca yerel makinede yapılandırmanız gerekir, bu aracı komut satırı sürümünü kullanabilirsiniz. [!INCLUDE[crabout](../../../includes/crabout-md.md)]komut satırı aracı bkz [WS-AtomicTransaction yapılandırma yardımcı programı (wsatConfig.exe)](../../../docs/framework/wcf/ws-atomictransaction-configuration-utility-wsatconfig-exe.md) konu.  
+ WS-AtomicTransaction desteği yalnızca yerel makinede yapılandırmanız gerekir, bu aracı komut satırı sürümünü kullanabilirsiniz. Komut satırı aracı hakkında daha fazla bilgi için bkz: [WS-AtomicTransaction yapılandırma yardımcı programı (wsatConfig.exe)](../../../docs/framework/wcf/ws-atomictransaction-configuration-utility-wsatconfig-exe.md) konu.  
   
- MMC ek bileşenini hem de komut satırı aracı tüm WS-AT ayarlarını yapılandırmayı desteklemez olduğunu bilmeniz gerekir. Bu ayarlar yalnızca kayıt defterini doğrudan değiştirerek düzenlenebilir. [!INCLUDE[crabout](../../../includes/crabout-md.md)]Bu kayıt defteri ayarları bkz [WS-Atomic işlem desteğini yapılandırma](../../../docs/framework/wcf/feature-details/configuring-ws-atomic-transaction-support.md).  
+ MMC ek bileşenini hem de komut satırı aracı tüm WS-AT ayarlarını yapılandırmayı desteklemez olduğunu bilmeniz gerekir. Bu ayarlar yalnızca kayıt defterini doğrudan değiştirerek düzenlenebilir. Bu kayıt defteri ayarları hakkında daha fazla bilgi için bkz: [WS-Atomic işlem desteğini yapılandırma](../../../docs/framework/wcf/feature-details/configuring-ws-atomic-transaction-support.md).  
   
 ### <a name="user-interface-description"></a>Kullanıcı arabirimi açıklaması  
  **WS-Atomic işlem ağ desteğini etkinleştirme**:  
@@ -95,7 +97,7 @@ regasm.exe /codebase WsatUI.dll
 > [!NOTE]
 >  Başka bir izleme tüketici WS-AT izleme sağlayıcısı kullanırken, olayları izlemek için yeni bir günlük oturumu oluşturulamıyor. Hata iletisinde "Sağlayıcı etkinleştirme başarısız oldu. Bu süre boyunca günlüğe kaydetmeyi yapılandırmak için her türlü girişim sonuçları Hata kodu: 1".  
   
- [!INCLUDE[crabout](../../../includes/crabout-md.md)]İzleme ve kaydetme, bkz: [yönetim ve tanılama](../../../docs/framework/wcf/diagnostics/index.md).  
+ İzleme ve kaydetme hakkında daha fazla bilgi için bkz: [yönetim ve tanılama](../../../docs/framework/wcf/diagnostics/index.md).  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
  [WS-Atomic İşlem Desteğini Yapılandırma](../../../docs/framework/wcf/feature-details/configuring-ws-atomic-transaction-support.md)  

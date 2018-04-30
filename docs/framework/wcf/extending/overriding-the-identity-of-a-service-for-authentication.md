@@ -1,27 +1,29 @@
 ---
-title: "Bir Hizmetin Kimliğini Kimlik Doğrulama için Geçersiz Kılma"
-ms.custom: 
+title: Bir Hizmetin Kimliğini Kimlik Doğrulama için Geçersiz Kılma
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - csharp
 - vb
 ms.assetid: d613a22b-07d7-41a4-bada-1adc653b9b5d
-caps.latest.revision: "9"
+caps.latest.revision: 9
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: e1f8f6bd4d8661393bc849405a8668341f65f8d5
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: f5383a1d241134318ce48c8c0c9f39f831396730
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="overriding-the-identity-of-a-service-for-authentication"></a>Bir Hizmetin Kimliğini Kimlik Doğrulama için Geçersiz Kılma
 Genellikle, bir istemci kimlik bilgisi türü seçimi hizmet metaveri kimliği türü belirler olduğu bir hizmette kimlik Ayarla gerekmez. Örneğin, aşağıdaki yapılandırma kodunu kullanan [ \<wsHttpBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/wshttpbinding.md) öğesi ve kümelerini `clientCredentialType` özniteliği Windows.  
@@ -32,12 +34,12 @@ Genellikle, bir istemci kimlik bilgisi türü seçimi hizmet metaveri kimliği t
   
   
   
- Kimlik ayarı gösteren örnek bir uygulama için bkz: [hizmet kimliği örneği](../../../../docs/framework/wcf/samples/service-identity-sample.md). [!INCLUDE[crabout](../../../../includes/crabout-md.md)]Hizmet kimliği, bkz: [hizmet kimliği ve kimlik doğrulama](../../../../docs/framework/wcf/feature-details/service-identity-and-authentication.md).  
+ Kimlik ayarı gösteren örnek bir uygulama için bkz: [hizmet kimliği örneği](../../../../docs/framework/wcf/samples/service-identity-sample.md). Hizmet kimliği hakkında daha fazla bilgi için bkz: [hizmet kimliği ve kimlik doğrulama](../../../../docs/framework/wcf/feature-details/service-identity-and-authentication.md).  
   
 ## <a name="kerberos-authentication-and-identity"></a>Kerberos kimlik doğrulaması ve kimlik  
  Bir hizmeti bir Windows kimlik bilgisi kullanmak için yapılandırıldığında varsayılan olarak, bir [ \<kimliği >](../../../../docs/framework/configure-apps/file-schema/wcf/identity.md) içeren öğe bir [ \<userPrincipalName >](../../../../docs/framework/configure-apps/file-schema/wcf/userprincipalname.md) veya [ \<servicePrincipalName >](../../../../docs/framework/configure-apps/file-schema/wcf/serviceprincipalname.md) öğesi WSDL içinde oluşturulur. Hizmet altında çalışıyorsa, `LocalSystem`, `LocalService`, veya `NetworkService` hesabı, bir hizmet asıl adı (SPN) biçiminde varsayılan oluşturulur `host/` \< *ana bilgisayar adı*> için Bu hesaplar bilgisayarın SPN veri erişimi. Hizmet başka bir hesap altında çalışıyorsa, [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] UPN biçiminde üretir \< *kullanıcıadı*>@<*domainName*`>`. Bu durum, UPN veya SPN bir hizmetin kimliğini istemciye sağlanması Kerberos kimlik doğrulaması gerektiren kaynaklanır.  
   
- Bir hizmetin hesabının bir etki alanındaki ek bir SPN kaydolmak için Setspn.exe Aracı'nı da kullanabilirsiniz. Bu gibi durumlarda, SPN sonra hizmet kimliği olarak kullanabilirsiniz. Aracı indirmek için bkz: [Windows 2000 Kaynak Seti aracı: Setspn.exe](http://go.microsoft.com/fwlink/?LinkId=91752). [!INCLUDE[crabout](../../../../includes/crabout-md.md)]Aracı bkz [setspn aracına genel bakış](http://go.microsoft.com/fwlink/?LinkId=61374).  
+ Bir hizmetin hesabının bir etki alanındaki ek bir SPN kaydolmak için Setspn.exe Aracı'nı da kullanabilirsiniz. Bu gibi durumlarda, SPN sonra hizmet kimliği olarak kullanabilirsiniz. Aracı indirmek için bkz: [Windows 2000 Kaynak Seti aracı: Setspn.exe](http://go.microsoft.com/fwlink/?LinkId=91752). Aracı hakkında daha fazla bilgi için bkz: [setspn aracına genel bakış](http://go.microsoft.com/fwlink/?LinkId=61374).  
   
 > [!NOTE]
 >  Windows kimlik bilgisi türü anlaşma olmadan kullanmak için hizmetin kullanıcı hesabının Active Directory etki alanı ile kayıtlı SPN erişiminiz olmalıdır. Bunu aşağıdaki yöntemlerle yapabilirsiniz:  
@@ -46,7 +48,7 @@ Genellikle, bir istemci kimlik bilgisi türü seçimi hizmet metaveri kimliği t
   
 -   Hizmetinizi çalıştırmak için rasgele bir Active Directory etki alanı hesabı kullanın. Bu durumda, Setspn.exe yardımcı programı aracını kullanarak yapabilirsiniz, etki alanı hesabı için bir SPN kurun. Hizmet hesabı SPN'yi oluşturduktan sonra yapılandırma [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] bu SPN hizmetin istemcileri meta verilerini (WSDL) aracılığıyla yayımlamak için. Bu uç noktası kimlik gösterilen uç noktası için bir uygulama yapılandırma dosyası veya kod aracılığıyla ya da ayarlayarak yapılır.  
   
- [!INCLUDE[crabout](../../../../includes/crabout-md.md)]SPN'ler, Kerberos protokolü ve Active Directory bkz [Kerberos teknik Eki'ni Windows için](http://go.microsoft.com/fwlink/?LinkId=88330).  
+ SPN'ler hakkında daha fazla bilgi, Kerberos protokolü ve Active Directory için bkz: [Kerberos teknik Eki'ni Windows için](http://go.microsoft.com/fwlink/?LinkId=88330).  
   
 ### <a name="when-spn-or-upn-equals-the-empty-string"></a>Ne zaman boş dize SPN veya UPN'e eşittir  
  SPN veya UPN boş bir dize eşit ayarlarsanız birkaç farklı işlemler, kullanılan güvenlik düzeyini ve kimlik doğrulama modu bağlı olarak gerçekleşir:  

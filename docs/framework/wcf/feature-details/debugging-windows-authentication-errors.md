@@ -22,11 +22,11 @@ ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: e6efcb5097729ac5f096e78883e9bc49598c9a37
-ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
+ms.openlocfilehash: 39c033d45488b827a4aee7439904db8094795db4
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/28/2018
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="debugging-windows-authentication-errors"></a>Windows Kimlik Doğrulama Hatalarını Ayıklama
 Windows kimlik doğrulaması bir güvenlik mekanizması olarak kullanırken, Güvenlik Desteği Sağlayıcısı Arabirimi (SSPI) güvenlik işlemleri işler. SSPI katmanında güvenlik hatası meydana geldiğinde, bunlar tarafından çıkmış [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)]. Bu konu, hataları tanılamak için sorularını kümesi ve bir çerçeve sağlar.  
@@ -75,7 +75,7 @@ Windows kimlik doğrulaması bir güvenlik mekanizması olarak kullanırken, Gü
 ### <a name="kerberos-protocol"></a>Kerberos protokolü  
   
 #### <a name="spnupn-problems-with-the-kerberos-protocol"></a>Kerberos protokolü SPN/UPN sorunları  
- Windows kimlik doğrulaması ve Kerberos protokolü kullanılan veya SSPI tarafından anlaşılan kullanırken, istemci uç nokta kullandığı URL'yi hizmetin konak hizmeti URL'si içinde tam olarak nitelenmiş etki alanı adını içermelidir. Bu hizmetinin altında çalıştığı hesabın en yaygın olarak hizmetin altında çalıştırılarak yapılır Active Directory etki alanına bilgisayar eklendiğinde oluşturduğunuz makine (varsayılan) hizmet asıl adı (SPN) anahtarı erişimi olduğunu varsayar. Ağ hizmeti hesabı. Hizmet makine SPN anahtarına erişimi yoksa, istemcinin uç noktası kimlik hizmetin çalıştığı hesabın doğru SPN veya kullanıcı asıl adı (UPN) sağlamanız gerekir. [!INCLUDE[crabout](../../../../includes/crabout-md.md)] nasıl [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] SPN ve UPN, çalışır bkz [hizmet kimliği ve kimlik doğrulama](../../../../docs/framework/wcf/feature-details/service-identity-and-authentication.md).  
+ Windows kimlik doğrulaması ve Kerberos protokolü kullanılan veya SSPI tarafından anlaşılan kullanırken, istemci uç nokta kullandığı URL'yi hizmetin konak hizmeti URL'si içinde tam olarak nitelenmiş etki alanı adını içermelidir. Bu hizmetinin altında çalıştığı hesabın en yaygın olarak hizmetin altında çalıştırılarak yapılır Active Directory etki alanına bilgisayar eklendiğinde oluşturduğunuz makine (varsayılan) hizmet asıl adı (SPN) anahtarı erişimi olduğunu varsayar. Ağ hizmeti hesabı. Hizmet makine SPN anahtarına erişimi yoksa, istemcinin uç noktası kimlik hizmetin çalıştığı hesabın doğru SPN veya kullanıcı asıl adı (UPN) sağlamanız gerekir. Hakkında daha fazla bilgi için [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] SPN ve UPN, çalışır bkz [hizmet kimliği ve kimlik doğrulama](../../../../docs/framework/wcf/feature-details/service-identity-and-authentication.md).  
   
  Yük Dengeleme içindeki Web grupları veya Web bahçelerinde gibi senaryolara yaygın bir uygulamadır her uygulama için benzersiz bir hesap tanımlayın, bu hesap için bir SPN atayın ve bu hesabın tüm uygulama hizmetleri çalıştırdığınızdan emin olun.  
   
@@ -134,7 +134,7 @@ Windows kimlik doğrulaması bir güvenlik mekanizması olarak kullanırken, Gü
  [!code-csharp[C_DebuggingWindowsAuth#6](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_debuggingwindowsauth/cs/source.cs#6)]
  [!code-vb[C_DebuggingWindowsAuth#6](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_debuggingwindowsauth/vb/source.vb#6)]  
   
- [!INCLUDE[crabout](../../../../includes/crabout-md.md)] Kimliğe bürünme, bkz: [temsilcilik ve kimliğe bürünme](../../../../docs/framework/wcf/feature-details/delegation-and-impersonation-with-wcf.md).  
+ Kimliğe bürünme hakkında daha fazla bilgi için bkz: [temsilcilik ve kimliğe bürünme](../../../../docs/framework/wcf/feature-details/delegation-and-impersonation-with-wcf.md).  
   
  Alternatif olarak, istemci, yerleşik sistem hesabı kullanarak bir Windows hizmet olarak çalışıyor.  
   

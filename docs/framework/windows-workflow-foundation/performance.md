@@ -14,11 +14,11 @@ ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: ae5bf1088ec03229eb996b0e43b3d3395497571a
-ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
+ms.openlocfilehash: 4db761d2e6ba0231cb83d4ef5d1ee663c99178c5
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/28/2018
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="windows-workflow-foundation-4-performance"></a>Windows Workflow Foundation 4 performansı
 Dustin Metzgar  
@@ -32,7 +32,7 @@ Dustin Metzgar
  Büyüklük WF3 WF4 arasındaki tarafından ayrı ayrı iş akışı bileşen performansı artar.  Bu, elle kodlanmış arasında boşluk bırakır [!INCLUDE[indigo1](../../../includes/indigo1-md.md)] Hizmetleri ve [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] oldukça küçük olacak şekilde iş akışı hizmetleri.  İş akışı gecikme süresi içinde WF4 önemli ölçüde düşürdü.  2.5-3.0 faktörüyle Kalıcılık performans artar.  İş akışı izleme yoluyla sistem durumu izleme önemli ölçüde daha az yüke sahiptir.  Bu, geçiş veya WF4 uygulamalarınızda benimsemek için nedenleri çekici.  
   
 ## <a name="terminology"></a>Terminoloji  
- Sürümü [!INCLUDE[wf1](../../../includes/wf1-md.md)] sunulan [!INCLUDE[netfx40_short](../../../includes/netfx40-short-md.md)] için bu konunun geri kalanı için WF4 anılacaktır.  [!INCLUDE[wf1](../../../includes/wf1-md.md)] .NET 3.0 sunulmuştur ve birkaç küçük düzeltmeden vardı [!INCLUDE[netfx35_short](../../../includes/netfx35-short-md.md)] SP1. [!INCLUDE[netfx35_short](../../../includes/netfx35-short-md.md)] Workflow Foundation sürümü bulunulabilir için WF3 bu konunun geri kalanı için. WF3 gönderildiği [!INCLUDE[netfx40_short](../../../includes/netfx40-short-md.md)] yana birimi WF4 ile. [!INCLUDE[crabout](../../../includes/crabout-md.md)] WF4 geçirme WF3 yapılara bkz: [Windows Workflow Foundation 4 Geçiş Kılavuzu](http://go.microsoft.com/fwlink/?LinkID=153313)  
+ Sürümü [!INCLUDE[wf1](../../../includes/wf1-md.md)] sunulan [!INCLUDE[netfx40_short](../../../includes/netfx40-short-md.md)] için bu konunun geri kalanı için WF4 anılacaktır.  [!INCLUDE[wf1](../../../includes/wf1-md.md)] .NET 3.0 sunulmuştur ve birkaç küçük düzeltmeden vardı [!INCLUDE[netfx35_short](../../../includes/netfx35-short-md.md)] SP1. [!INCLUDE[netfx35_short](../../../includes/netfx35-short-md.md)] Workflow Foundation sürümü bulunulabilir için WF3 bu konunun geri kalanı için. WF3 gönderildiği [!INCLUDE[netfx40_short](../../../includes/netfx40-short-md.md)] yana birimi WF4 ile. WF4 geçirme WF3 yapılara hakkında daha fazla bilgi için bkz: [Windows Workflow Foundation 4 Geçiş Kılavuzu](http://go.microsoft.com/fwlink/?LinkID=153313)  
   
  [!INCLUDE[indigo1](../../../includes/indigo1-md.md)] Hizmet odaklı uygulamalar oluşturmak için Microsoft'un programlama modelidir. İlk .net 3.0 WF3 birlikte bir parçası olarak sunulmuştur ve şimdi anahtar bileşenlerinden biri olan [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)].  
   
@@ -218,13 +218,13 @@ public sealed class CompensableActivityEmptyCompensation : CodeActivity
  ![Ortam Kurulumu testleri gecikme süresi ve verimlilik için](../../../docs/framework/windows-workflow-foundation/media/latencyandthroughputenvironment.gif "LatencyAndThroughputEnvironment")  
   
 ##### <a name="test-setup"></a>Test Kurulumu  
- Senaryoda, bir istemci bilgisayarın bağlantı kurduğu bir [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] Bağlam tabanlı bağıntı kullanarak iş akışı hizmeti.  Bağlam bağıntı özel bağlam bağlama gerektirir ve iletileri doğru iş akışı örneğine ilişkilendirmek için içerik üstbilgisi veya tanımlama bilgisi kullanır.  İleti gövdesi ayrıştırılacak gerek kalmayacak şekilde kimliği ileti üstbilgisinde bulunan bağıntı yararlı bir performans sahiptir. [!INCLUDE[crabout](../../../includes/crabout-md.md)] bağlam bağıntı bkz [bağlam değişimi bağıntısı](../../../docs/framework/wcf/feature-details/context-exchange-correlation.md)  
+ Senaryoda, bir istemci bilgisayarın bağlantı kurduğu bir [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] Bağlam tabanlı bağıntı kullanarak iş akışı hizmeti.  Bağlam bağıntı özel bağlam bağlama gerektirir ve iletileri doğru iş akışı örneğine ilişkilendirmek için içerik üstbilgisi veya tanımlama bilgisi kullanır.  İleti gövdesi ayrıştırılacak gerek kalmayacak şekilde kimliği ileti üstbilgisinde bulunan bağıntı yararlı bir performans sahiptir. Bağlam bağıntı hakkında daha fazla bilgi için bkz: [bağlam değişimi bağıntısı](../../../docs/framework/wcf/feature-details/context-exchange-correlation.md)  
   
  Hizmet isteği ile yeni bir iş akışı oluşturmak ve böylece gecikme süresi ölçümü iş akışını çalıştıran harcanan süre içermez hemen bir yanıt gönderin.  WF3 XOML bir arka plan kodu ile iş akışıdır ve WF4 tamamen XAML iş akışıdır.  WF4 iş akışı şu şekildedir:  
   
  ![WF 4 bağıntı kapsam](../../../docs/framework/windows-workflow-foundation/media/correlationscopeworkflow.gif "CorrelationScopeWorkflow")  
   
- <xref:System.ServiceModel.Activities.Receive> Etkinliği iş akışı örneği oluşturur.  Alınan iletide geçirilen bir değer yanıt iletisinde yansıtılır.  İş akışının geri kalanı yanıt izleyen bir dizisini içerir.  Yukarıdaki durumda yalnızca bir yorum etkinlik gösterilir.  İş akışı karmaşıklık benzetimini yapmak için açıklama etkinliklerin sayısını değiştirildi.  Bir WF3 eşdeğer yorum etkinliktir <xref:System.Workflow.Activities.CodeActivity> çalışma gerçekleştirir. [!INCLUDE[crabout](../../../includes/crabout-md.md)] Açıklama etkinlik bu makalenin "bileşen düzeyinde performans karşılaştırma" bölümüne bakın.  
+ <xref:System.ServiceModel.Activities.Receive> Etkinliği iş akışı örneği oluşturur.  Alınan iletide geçirilen bir değer yanıt iletisinde yansıtılır.  İş akışının geri kalanı yanıt izleyen bir dizisini içerir.  Yukarıdaki durumda yalnızca bir yorum etkinlik gösterilir.  İş akışı karmaşıklık benzetimini yapmak için açıklama etkinliklerin sayısını değiştirildi.  Bir WF3 eşdeğer yorum etkinliktir <xref:System.Workflow.Activities.CodeActivity> çalışma gerçekleştirir. Açıklama etkinliği hakkında daha fazla bilgi için bu makalenin "bileşen düzeyinde performans karşılaştırma" bölümüne bakın.  
   
 ##### <a name="test-results"></a>Test Sonuçları  
  ![Gecikme süresi sonuçları](../../../docs/framework/windows-workflow-foundation/media/latencyresultsgraph.gif "LatencyResultsGraph")  
@@ -234,7 +234,7 @@ public sealed class CompensableActivityEmptyCompensation : CodeActivity
  Yukarıdaki grafikte soğuk talebine başvuruyor. söz konusu olduğunda olmayan mevcut bir <xref:System.ServiceModel.WorkflowServiceHost> verilen iş akışı için.  Diğer bir deyişle, iş akışı ilk kez kullanılıyor ve XOML ya da XAML derlenmesi gerekiyor soğuk gecikme olur.  Yarı gecikme iş akışı türü zaten derlenmiş zaman yeni bir iş akışı örneği oluşturmak için saattir.  İş akışı karmaşıklığını WF4 durumda çok az fark etmez ancak WF3 durumda doğrusal progression sahiptir.  
   
 #### <a name="correlation-throughput"></a>Bağıntı işleme  
- WF4 yeni bir içerik tabanlı bağıntı özelliği sunmaktadır.  WF3 yalnızca Bağlam tabanlı bağıntı sağlanır.  Bağlam tabanlı bağıntı özel yalnızca yapılabilir [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] kanal bağlamaları.  İş akışı kimliği, bu bağlamaların kullanırken ileti üstbilgisine eklenir.  WF3 çalışma zamanı yalnızca bir iş akışı kimliğini tarafından tanımlayamadı  İçeriğe dayalı bağıntı ile iş akışı Yazar bir bağıntı anahtar ilgili bir hesap numarası veya müşteri kimliği gibi veri parçası dışında oluşturabilir [!INCLUDE[crabout](../../../includes/crabout-md.md)] içerik tabanlı bağıntı bakın [içeriğe dayalı bağıntı](../../../docs/framework/wcf/feature-details/content-based-correlation.md).  
+ WF4 yeni bir içerik tabanlı bağıntı özelliği sunmaktadır.  WF3 yalnızca Bağlam tabanlı bağıntı sağlanır.  Bağlam tabanlı bağıntı özel yalnızca yapılabilir [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] kanal bağlamaları.  İş akışı kimliği, bu bağlamaların kullanırken ileti üstbilgisine eklenir.  WF3 çalışma zamanı yalnızca bir iş akışı kimliğini tarafından tanımlayamadı  İçeriğe dayalı bağıntı ile iş akışı Yazar bir bağıntı anahtarı dışında bir hesap numarası veya müşteri kimliği gibi veri ilgili bir parçası oluşturabilirsiniz İçeriğe dayalı bağıntı hakkında daha fazla bilgi için bkz: [içeriğe dayalı bağıntı](../../../docs/framework/wcf/feature-details/content-based-correlation.md).  
   
  Bağıntı anahtarı ileti üstbilgisinde bulunur, bağlam tabanlı bağıntı performans avantajı vardır.  Anahtar iletisi Kaldır-serialization/ileti kopyalama olmadan okuyabilir.  İçeriğe dayalı bağıntı içinde bağıntı anahtar ileti gövdesi içinde depolanır.  Bir XPath ifadesi anahtarı bulmak için kullanılır.  Bu ek işleme maliyetini ileti gövdesi ve anahtar sayısı anahtarında derinliği boyutuna bağlıdır.  Bu test içeriği ve içerik tabanlı bağıntı karşılaştırır ve aynı zamanda birden çok anahtar kullanırken performans düşüşü gösterir.  
   
@@ -435,7 +435,7 @@ public class Workflow1 : Activity
   
  WF4 SQL izleme sağlayıcısı olmasa AppFabric yapar.  AppFabric'ın SQL izleme olayları toplu işlemleri ve bunları hızlı eklemeleri için tasarlanmış bir SQL tablosuna yazan bir Windows hizmeti ile ETW olayları abone olmak için bir yaklaşımdır.  Ayrı bir iş, bu tablodan veri boşaltır ve AppFabric Panosunda görüntülenebilir tabloları raporlamasına reforms.  Başka bir deyişle, olayları izleme toplu geldiği ve bu nedenle Kalıcılık noktası için kaydedilen önce beklenecek yok iş akışının bağımsız olarak işlenir.  
   
- ETW olayları logman veya XPerf'in gibi araçlarla kaydedilebilir.  Compact ETL dosya xperfview gibi bir araçla görüntülenemez veya daha okunabilir bir biçimde, XML gibi tracerpt ile dönüştürülür.  WF3 içinde bir SQL veritabanı olmadan olayları izleme almak için tek seçenek özel izleme hizmeti oluşturmaktır. [!INCLUDE[crabout](../../../includes/crabout-md.md)] ETW, bkz: [WCF hizmetleri ve Windows için olay izleme](../../../docs/framework/wcf/samples/wcf-services-and-event-tracing-for-windows.md) ve [Windows için olay izleme](http://msdn.microsoft.com/library/ff190903.aspx\)).  
+ ETW olayları logman veya XPerf'in gibi araçlarla kaydedilebilir.  Compact ETL dosya xperfview gibi bir araçla görüntülenemez veya daha okunabilir bir biçimde, XML gibi tracerpt ile dönüştürülür.  WF3 içinde bir SQL veritabanı olmadan olayları izleme almak için tek seçenek özel izleme hizmeti oluşturmaktır. ETW hakkında daha fazla bilgi için bkz: [WCF hizmetleri ve Windows için olay izleme](../../../docs/framework/wcf/samples/wcf-services-and-event-tracing-for-windows.md) ve [Windows için olay izleme](http://msdn.microsoft.com/library/ff190903.aspx\)).  
   
  Etkinleştirme iş akışı izleme değişen derece cinsinden performansını etkiler.  Kıyaslama logman aracı olayları izleme ETW tüketebilir ve bir ETL dosyasına kaydetmek için kullanır.  İçinde AppFabric İzleme SQL maliyetini bu makalenin kapsamı içinde değil.  Ayrıca AppFabric içinde kullanılan temel izleme profili, bu Kıyaslama gösterilir.  ' De yer izleme olaylarını izleme durumu maliyetidir.  Bu olaylar, sorun giderme ve sistem ortalama verimi belirlemek için kullanışlıdır.  
   
@@ -448,7 +448,7 @@ public class Workflow1 : Activity
  Sistem durumu izleme kabaca üzerinde üretilen işi %3 bir etkisi yoktur.  Temel profilinin maliyet yaklaşık % 8'dir.  
   
 ## <a name="interop"></a>Birlikte çalışma  
- WF4 olduğu neredeyse Tamamlandı'nin yeniden [!INCLUDE[wf1](../../../includes/wf1-md.md)] ve bu nedenle WF3 iş akışları ve etkinlikler WF4 ile doğrudan uyumlu değil.  Windows Workflow Foundation erken benimsenen birçok müşteri şirket içi veya üçüncü taraf iş akışı tanımları ve özel etkinlikler için WF3 sahip olacaktır.  WF4 geçişi kolaylaştırmak için bir yol WF4 iş akışı içinde WF3 etkinliklerden yürütebilir birlikte çalışma etkinlik kullanmaktır.  Önerilir <xref:System.Activities.Statements.Interop> etkinliği yalnızca kullanılabilir gerektiğinde. [!INCLUDE[crabout](../../../includes/crabout-md.md)] WF4 kullanıma geçiş [WF4 Geçiş Kılavuzu](http://go.microsoft.com/fwlink/?LinkID=153313).  
+ WF4 olduğu neredeyse Tamamlandı'nin yeniden [!INCLUDE[wf1](../../../includes/wf1-md.md)] ve bu nedenle WF3 iş akışları ve etkinlikler WF4 ile doğrudan uyumlu değil.  Windows Workflow Foundation erken benimsenen birçok müşteri şirket içi veya üçüncü taraf iş akışı tanımları ve özel etkinlikler için WF3 sahip olacaktır.  WF4 geçişi kolaylaştırmak için bir yol WF4 iş akışı içinde WF3 etkinliklerden yürütebilir birlikte çalışma etkinlik kullanmaktır.  Önerilir <xref:System.Activities.Statements.Interop> etkinliği yalnızca kullanılabilir gerektiğinde. WF4 için geçirme hakkında daha fazla bilgi için kullanıma [WF4 Geçiş Kılavuzu](http://go.microsoft.com/fwlink/?LinkID=153313).  
   
 ### <a name="environment-setup"></a>Ortam Kurulumu  
  ![İş akışı performansı sınama ortamı](../../../docs/framework/windows-workflow-foundation/media/wfperfenvironment.gif "WFPerfEnvironment")  

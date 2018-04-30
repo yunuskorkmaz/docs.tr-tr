@@ -1,34 +1,36 @@
 ---
-title: "Yazdırma ile İlgili Nasıl Yapılır Konuları"
-ms.custom: 
+title: Yazdırma ile İlgili Nasıl Yapılır Konuları
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-wpf
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-wpf
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - printing [WPF]
 - print system management [WPF]
 ms.assetid: 5f3d391a-4afd-49ee-ad99-ceb737c0c8a8
-caps.latest.revision: "10"
+caps.latest.revision: 10
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 9647ce04528df390620dba67619a538d96aa7068
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.workload:
+- dotnet
+ms.openlocfilehash: 0865e0f2d28ec44647882c030050638144fa715d
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="printing-how-to-topics"></a>Yazdırma ile İlgili Nasıl Yapılır Konuları
 Bu bölümdeki konular, yazdırma kullanmayı göstermek ve yazdırma sistemi yönetimi özellikleri bulunan [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] yanı sıra yeni [!INCLUDE[TLA#tla_xps](../../../../includes/tlasharptla-xps-md.md)] yazdırma yolu.  
   
 ## <a name="in-this-section"></a>Bu Bölümde  
  [Yazdır İletişim Kutusu Çağırma](../../../../docs/framework/wpf/advanced/how-to-invoke-a-print-dialog.md)  
- XAML biçimlendirme bildirmek için yönergeler bir [!INCLUDE[TLA#tla_win](../../../../includes/tlasharptla-win-md.md)] yazdırma iletişim nesnesi ve iletişim içinden çağırmak için kod kullanarak bir [!INCLUDE[TLA#tla_wpf](../../../../includes/tlasharptla-wpf-md.md)] uygulama.  
+ XAML biçimlendirme bildirmek için yönergeler bir [!INCLUDE[TLA#tla_win](../../../../includes/tlasharptla-win-md.md)] yazdırma iletişim nesnesi ve iletişim kutusundan bir Windows Presentation Foundation (WPF) uygulamasında çağırmak için kodu kullanarak.  
   
  [Yazıcı Kopyalama](../../../../docs/framework/wpf/advanced/how-to-clone-a-printer.md)  
  Var olan olarak tam olarak aynı özelliklere sahip ikinci bir yazdırma sırası yükleme hakkında yönergeler yazdırma sırası.  

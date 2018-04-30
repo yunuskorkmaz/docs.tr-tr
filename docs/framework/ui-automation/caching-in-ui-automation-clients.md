@@ -19,11 +19,11 @@ ms.author: mhopkins
 manager: markl
 ms.workload:
 - dotnet
-ms.openlocfilehash: 5bbd54d4e1e8a6a1eae52f50696aecddd1f8bd8a
-ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
+ms.openlocfilehash: 2db81007b745a1c3ee8434b400ab92a01aeeb6e2
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="caching-in-ui-automation-clients"></a>UI Otomasyonda Önbelleğe Alma
 > [!NOTE]
@@ -33,7 +33,7 @@ ms.lasthandoff: 04/26/2018
   
  İçinde [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)], önbelleğe alma veri önceden getirme anlamına gelir. Verileri daha fazla işlem içi iletişimi erişilebilir. Önbelleğe alma genellikle UI otomasyon istemci uygulamaları tarafından özellikleri ve denetim düzenleri toplu almak için kullanılır. Bilgi gerektiğinde önbellekten alınır. Uygulama önbellek düzenli aralıklarla, genellikle olaylarına yanıt olarak günceller gösterir bir içinde [!INCLUDE[TLA#tla_ui](../../../includes/tlasharptla-ui-md.md)] değişti.  
   
- Önbelleğe alma avantajlarını ile en dikkat çeken [!INCLUDE[TLA#tla_wpf](../../../includes/tlasharptla-wpf-md.md)] denetimleri ve sunucu tarafı UI Otomasyon sağlayıcıları olan özel denetimler. Varsayılan sağlayıcı için gibi istemci tarafı sağlayıcıları erişirken küçük avantajı olan [!INCLUDE[TLA2#tla_win32](../../../includes/tla2sharptla-win32-md.md)] kontrol eder.  
+ Önbelleğe alma avantajlarını Windows Presentation Foundation (WPF) denetimleri ve sunucu tarafı UI Otomasyon sağlayıcıları olan özel denetimler ile en dikkat çeken. Varsayılan sağlayıcı için gibi istemci tarafı sağlayıcıları erişirken küçük avantajı olan [!INCLUDE[TLA2#tla_win32](../../../includes/tla2sharptla-win32-md.md)] kontrol eder.  
   
  Önbelleğe alma oluşur uygulama etkinleştirdiğinde bir <xref:System.Windows.Automation.CacheRequest> ve herhangi bir yöntemi veya döndüren özelliği kullanan bir <xref:System.Windows.Automation.AutomationElement>; Örneğin, <xref:System.Windows.Automation.AutomationElement.FindFirst%2A>, <xref:System.Windows.Automation.AutomationElement.FindAll%2A>. Yöntemlerinin <xref:System.Windows.Automation.TreeWalker> sınıfı bir özel durum; önbellek yalnızca yapılır, bir <xref:System.Windows.Automation.CacheRequest> parametre olarak belirtilen (örneğin, <xref:System.Windows.Automation.TreeWalker.GetFirstChild%28System.Windows.Automation.AutomationElement%2CSystem.Windows.Automation.CacheRequest%29?displayProperty=nameWithType>.  
   

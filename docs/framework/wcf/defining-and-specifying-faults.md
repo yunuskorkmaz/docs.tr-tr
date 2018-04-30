@@ -1,12 +1,13 @@
 ---
-title: "Hataları Tanımlama ve Belirtme"
-ms.custom: 
+title: Hataları Tanımlama ve Belirtme
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - csharp
@@ -15,19 +16,20 @@ helpviewer_keywords:
 - handling faults [WCF], specifying
 - handling faults [WCF], defining
 ms.assetid: c00c84f1-962d-46a7-b07f-ebc4f80fbfc1
-caps.latest.revision: "13"
+caps.latest.revision: 13
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 713b9594ac628c2c256e8592d3894feee8029332
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 6c200ad587d437875f510adc4f05b30bdb7ab089
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="defining-and-specifying-faults"></a>Hataları Tanımlama ve Belirtme
-SOAP hatalarının istemciye ve çift yönlü durumda, birlikte çalışabilen bir yolla bir hizmete bir istemciden hata koşulu bilgi hizmet aktarın. Bu konuda, özel hata içeriği tanımlamak ve hangi işlemleri geri dönebilirsiniz belirlemek nasıl ve ne zaman anlatılmaktadır. [!INCLUDE[crabout](../../../includes/crabout-md.md)]bir hizmet veya çift yönlü istemci, bu hataları ve bir istemci veya hizmet uygulaması bu hataları nasıl işlediğini gönderebilirsiniz bkz [gönderme ve alma hataları](../../../docs/framework/wcf/sending-and-receiving-faults.md). Hata işleme, genel bir bakış için [!INCLUDE[indigo1](../../../includes/indigo1-md.md)] uygulamalar, bkz [belirtme ve işleme hataları sözleşme ve hizmetlerde](../../../docs/framework/wcf/specifying-and-handling-faults-in-contracts-and-services.md).  
+SOAP hatalarının istemciye ve çift yönlü durumda, birlikte çalışabilen bir yolla bir hizmete bir istemciden hata koşulu bilgi hizmet aktarın. Bu konuda, özel hata içeriği tanımlamak ve hangi işlemleri geri dönebilirsiniz belirlemek nasıl ve ne zaman anlatılmaktadır. Bir hizmet veya çift yönlü istemci, bu hataları nasıl gönderebilir ve bir istemci veya hizmet uygulaması bu hatalarını nasıl işlediği hakkında daha fazla bilgi için bkz: [gönderme ve alma hataları](../../../docs/framework/wcf/sending-and-receiving-faults.md). Hata işleme, genel bir bakış için [!INCLUDE[indigo1](../../../includes/indigo1-md.md)] uygulamalar, bkz [belirtme ve işleme hataları sözleşme ve hizmetlerde](../../../docs/framework/wcf/specifying-and-handling-faults-in-contracts-and-services.md).  
   
 ## <a name="overview"></a>Genel Bakış  
  SOAP hataları olan bir işlem olduğu bildirildiğinde bir <xref:System.ServiceModel.FaultContractAttribute?displayProperty=nameWithType> özel bir SOAP hatası türü belirtir. Bildirilmemiş SOAP hatalarının bir işlem için bir sözleşmede belirtilen değil izinlerdir. Bu konuda bu hata koşullarını tanımlamak ve istemcilerin düzgün özel SOAP hataları bildirildiğinde bu hata koşullarını işlemek için kullanabileceği hizmetiniz için hatalı sözleşme oluşturmanıza yardımcı olur. Temel görevler, sırasıyla şunlardır:  
@@ -77,7 +79,7 @@ End Class
  [!code-csharp[Faults#2](../../../samples/snippets/csharp/VS_Snippets_CFX/faults/cs/service.cs#2)]
  [!code-vb[Faults#2](../../../samples/snippets/visualbasic/VS_Snippets_CFX/faults/vb/service.vb#2)]  
   
- [!INCLUDE[crabout](../../../includes/crabout-md.md)]Verilerinizi emin olmak nasıl seri hale getirilebilir bkz [hizmet sözleşmelerinde veri aktarımı belirtme](../../../docs/framework/wcf/feature-details/specifying-data-transfer-in-service-contracts.md). Seri hale getirme listesi için destek <xref:System.Runtime.Serialization.DataContractSerializer?displayProperty=nameWithType> sağlar, bkz: [veri sözleşmesi seri hale getirici tarafından desteklenen türleri](../../../docs/framework/wcf/feature-details/types-supported-by-the-data-contract-serializer.md).  
+ Hakkında daha fazla bilgi için verilerinizi emin olmak nasıl seri hale getirilebilir bkz [hizmet sözleşmelerinde veri aktarımı belirtme](../../../docs/framework/wcf/feature-details/specifying-data-transfer-in-service-contracts.md). Seri hale getirme listesi için destek <xref:System.Runtime.Serialization.DataContractSerializer?displayProperty=nameWithType> sağlar, bkz: [veri sözleşmesi seri hale getirici tarafından desteklenen türleri](../../../docs/framework/wcf/feature-details/types-supported-by-the-data-contract-serializer.md).  
   
 ### <a name="mark-operations-to-establish-the-fault-contract"></a>Hatalı sözleşme kurmaya işareti işlemleri  
  Özel bir SOAP hatası parçası tanımlandığı gibi döndürülen bir seri hale getirilebilir veri yapısı, işlem sözleşmesi bu tür bir SOAP hatası atma olarak işaretlemek için son adımı olduğunda. Bunu yapmak için kullanın <xref:System.ServiceModel.FaultContractAttribute?displayProperty=nameWithType> özniteliği ve oluşturulan özel veri türü türünü geçirin. Aşağıdaki kod örneğinde nasıl kullanılacağını gösterir <xref:System.ServiceModel.FaultContractAttribute> belirtmek için öznitelik `Divide` işlemi türünde bir SOAP hatası dönebilirsiniz `MathFault`. Matematik tabanlı diğer işlemleri artık da bunlar döndürebilir belirtebilirsiniz bir `MathFault`.  
@@ -96,7 +98,7 @@ End Class
   
  SOAP standart göre bir hataya sahip bir `Action`, `Code`ve bir `Reason`. `Action` Tarafından denetlenen <xref:System.ServiceModel.FaultContractAttribute.Action%2A> özelliği. <xref:System.ServiceModel.FaultException.Code%2A> Özelliği ve <xref:System.ServiceModel.FaultException.Reason%2A> özelliği olan iki özelliklerini <xref:System.ServiceModel.FaultException?displayProperty=nameWithType> genel üst sınıfı sınıfı <xref:System.ServiceModel.FaultException%601?displayProperty=nameWithType>. `Code` Özelliği içeren bir <xref:System.ServiceModel.FaultCode.SubCode%2A> üye.  
   
- Olmayan hataları oluşturan Hizmetleri erişirken, belirli sınırlamalarla mevcut. [!INCLUDE[indigo2](../../../includes/indigo2-md.md)]Şema açıklayan ve veri sözleşmeleri ile uyumlu olan ayrıntı türleri yalnızca hataları destekler. Örneğin, yukarıda söz edildiği gibi [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] XML öznitelikleri ayrıntı türlerini kullanın arıza ya da birden fazla üst düzey öğe ayrıntı bölümündeki hataları desteklemiyor.  
+ Olmayan hataları oluşturan Hizmetleri erişirken, belirli sınırlamalarla mevcut. [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] Şema açıklayan ve veri sözleşmeleri ile uyumlu olan ayrıntı türleri yalnızca hataları destekler. Örneğin, yukarıda söz edildiği gibi [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] XML öznitelikleri ayrıntı türlerini kullanın arıza ya da birden fazla üst düzey öğe ayrıntı bölümündeki hataları desteklemiyor.  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
  <xref:System.ServiceModel.FaultContractAttribute>  

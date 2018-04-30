@@ -1,24 +1,26 @@
 ---
-title: "Windows Communication Foundation Örneklerini Çalıştırma"
-ms.custom: 
+title: Windows Communication Foundation Örneklerini Çalıştırma
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: db8a83da-95c1-4a21-a9d2-48caeb6398ea
-caps.latest.revision: "26"
+caps.latest.revision: 26
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 603a6dce17d527a3f14e408da19006509514df52
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.workload:
+- dotnet
+ms.openlocfilehash: 2aca4555277a1b365ddee1c672a6375edfde9f34
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="running-the-windows-communication-foundation-samples"></a>Windows Communication Foundation Örneklerini Çalıştırma
 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] Örnekleri tek makineli veya makine bazındaki bir yapılandırmada çalıştırılabilir. Sağlanan gibi örnekleri tek bir makinede çalıştırmak için hazır olursunuz. Çapraz makine yapılandırması, bir örnek ait yapılandırma dosyası ayarları değiştirmek gereklidir. Aşağıdaki yordamlarda bir örneği aynı makineye ve çapraz makine yapılandırmalarını çalıştırma açıklanmaktadır. Internet Information Services (IIS) ve kendi kendini barındıran örnekleri barındırılan hizmetler için adımları Çeşitlemeler olduğuna dikkat edin. Çoğu örnekleri IIS'de barındırılan; nasıl barındırılan belirlemek için örnek Benioku bilgilere bakın.  
@@ -64,7 +66,7 @@ ms.lasthandoff: 01/19/2018
   
     1.  Hizmeti bir etki alanı hesabı altında çalışır değilse, istemci yapılandırma dosyasını açın ve yeni adresi hizmetinizin eşleştirmek için uç nokta tanımı adresi değerini değiştirin. Tüm başvuruları "localhost" adresi bir tam etki alanı adıyla değiştirin.  
   
-    2.  Hizmeti bir etki alanı hesabı altında çalışıyorsa, istemci yapılandırması karşı hizmet Svcutil.exe çalıştırarak yeniden oluşturun. [!INCLUDE[crabout](../../../../includes/crabout-md.md)]svcutil.exe, çalışıp [Windows Communication Foundation örnekleri derleme](../../../../docs/framework/wcf/samples/building-the-samples.md). Örnek yapılandırma dosyasında yerine oluşturulan dosyasını kullanın. Oluşturulan yapılandırma dosyası, ek kimlik bilgileri olan ve varsayılan ayarları olsa bile hizmet uç noktasına bağlanmak gerekli tüm ayarları içerir. [!INCLUDE[crabout](../../../../includes/crabout-md.md)]kimlik bilgileri bkz [hizmet kimliği ve kimlik doğrulama](../../../../docs/framework/wcf/feature-details/service-identity-and-authentication.md), ve [ \<kimliği >](../../../../docs/framework/configure-apps/file-schema/wcf/identity.md).  
+    2.  Hizmeti bir etki alanı hesabı altında çalışıyorsa, istemci yapılandırması karşı hizmet Svcutil.exe çalıştırarak yeniden oluşturun. Svcutil.exe çalıştırma hakkında daha fazla bilgi için bkz: [Windows Communication Foundation örnekleri derleme](../../../../docs/framework/wcf/samples/building-the-samples.md). Örnek yapılandırma dosyasında yerine oluşturulan dosyasını kullanın. Oluşturulan yapılandırma dosyası, ek kimlik bilgileri olan ve varsayılan ayarları olsa bile hizmet uç noktasına bağlanmak gerekli tüm ayarları içerir. Kimlik bilgileri hakkında daha fazla bilgi için bkz: [hizmet kimliği ve kimlik doğrulama](../../../../docs/framework/wcf/feature-details/service-identity-and-authentication.md), ve [ \<kimliği >](../../../../docs/framework/configure-apps/file-schema/wcf/identity.md).  
   
 4.  İstemci makinesinde, bir komut isteminden Client.exe başlatın.  
   
@@ -74,7 +76,7 @@ ms.lasthandoff: 01/19/2018
   
 2.  IIS'de barındırılan hizmetindeki ise:  
   
-    1.  Adres http://localhost/servicemodelsamples/service.svc girerek bir tarayıcı kullanarak hizmetini etkinleştirin.  
+    1.  Adresini girerek bir tarayıcı kullanarak hizmetini etkinleştirme http://localhost/servicemodelsamples/service.svc.  
   
     2.  Çözümde seçin **hata ayıklama** menü ve **ekleme işlemi için** menü öğesi.  
   
@@ -93,4 +95,4 @@ ms.lasthandoff: 01/19/2018
 ## <a name="see-also"></a>Ayrıca Bkz.  
  [Windows Communication Foundation Örnekleri Derleme](../../../../docs/framework/wcf/samples/building-the-samples.md)  
  [Bir çalışma grubunda ve makinelerde örneklerini çalıştırma](http://msdn.microsoft.com/library/a451a525-e7ce-452d-9da9-620221260113)  
- [Sorun giderme ipuçları](http://msdn.microsoft.com/library/8787c877-5e96-42da-8214-fa737a38f10b)
+ [Sorun Giderme İpuçları](http://msdn.microsoft.com/library/8787c877-5e96-42da-8214-fa737a38f10b)

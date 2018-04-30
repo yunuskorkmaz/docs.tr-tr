@@ -1,28 +1,28 @@
 ---
-title: "Hizmetler ve İstemcileri Yapılandırmak için Bağlamaları Kullanma"
-ms.custom: 
+title: Hizmetler ve İstemcileri Yapılandırmak için Bağlamaları Kullanma
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - dotnet-clr
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - bindings [WCF], using
 ms.assetid: c39479c3-0766-4a17-ba4c-97a74607f392
-caps.latest.revision: 
+caps.latest.revision: 33
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: e63bb0b44e19ec9186096a819801ea05195b5523
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 68c8c2c93ce29147247c332848025fd931bf7854
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="using-bindings-to-configure-services-and-clients"></a>Hizmetler ve İstemcileri Yapılandırmak için Bağlamaları Kullanma
 Bağlamaları bir bitiş noktasına bağlanmak için gereken iletişim ayrıntılarını belirtin nesneleridir. Daha açık belirtmek gerekirse bağlamaları taşımaları, bağlantı biçimlerini (ileti kodlama) ve ilgili uç noktası veya istemci kanalı protokolleri ayrıntılarını tanımlayarak istemci veya hizmet çalışma zamanı oluşturmak için kullanılan yapılandırma bilgilerini içerir. Çalışan bir oluşturmak için [!INCLUDE[indigo1](../../../includes/indigo1-md.md)] hizmet, hizmet her bitiş bağlama gerektirir. Bu konuda ne bağlamaları, nasıl tanımlanır ve belirli bir bağlama için bir uç nokta nasıl belirtilen açıklanmaktadır.  
@@ -40,7 +40,7 @@ Bağlamaları bir bitiş noktasına bağlanmak için gereken iletişim ayrıntı
  İleti kodlama, örneğin, text/XML, ikili veya ileti iletim en iyi duruma getirme mekanizmasını (iletileri bayt akışları hattaki olarak nasıl temsil edildiğini belirleyen MTOM), belirler.  
   
 ## <a name="system-provided-bindings"></a>Sistem Tarafından Sağlanan Bağlamalar  
- [!INCLUDE[indigo2](../../../includes/indigo2-md.md)]çoğu uygulama gereksinimleri ve senaryolarını kapsamak üzere tasarlanmış sistem tarafından sağlanan bağlamaları kümesi içerir. Aşağıdaki sınıflar sistem tarafından sağlanan bağlamalar bazı örnekleri temsil eder:  
+ [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] çoğu uygulama gereksinimleri ve senaryolarını kapsamak üzere tasarlanmış sistem tarafından sağlanan bağlamaları kümesi içerir. Aşağıdaki sınıflar sistem tarafından sağlanan bağlamalar bazı örnekleri temsil eder:  
   
 -   <xref:System.ServiceModel.BasicHttpBinding>: WS uyumlu Web hizmetlerine bağlanmak için uygun bağlama bir HTTP protokolü-ı temel Profil 1.1 belirtimini (örneğin, [ASMX] ASP.NET Web Hizmetleri-services tabanlı).  
   
@@ -53,7 +53,7 @@ Bağlamaları bir bitiş noktasına bağlanmak için gereken iletişim ayrıntı
  Açıklamalarını, sistem tarafından sağlanan bağlamalar tam bir listesi için bkz: [System-Provided bağlamaları](../../../docs/framework/wcf/system-provided-bindings.md).  
   
 ## <a name="custom-bindings"></a>Özel Bağlamalar  
- Sistem tarafından sağlanan bir bağlamayı koleksiyonu bir hizmet uygulaması gerektiren özellikleri doğru birleşimini yoksa oluşturabileceğiniz bir <xref:System.ServiceModel.Channels.CustomBinding> bağlama. [!INCLUDE[crabout](../../../includes/crabout-md.md)]öğelerini bir <xref:System.ServiceModel.Channels.CustomBinding> bağlama, bkz: [ \<customBinding >](../../../docs/framework/configure-apps/file-schema/wcf/custombinding.md) ve [özel bağlamaları](../../../docs/framework/wcf/extending/custom-bindings.md).  
+ Sistem tarafından sağlanan bir bağlamayı koleksiyonu bir hizmet uygulaması gerektiren özellikleri doğru birleşimini yoksa oluşturabileceğiniz bir <xref:System.ServiceModel.Channels.CustomBinding> bağlama. Öğeleri hakkında daha fazla bilgi için bir <xref:System.ServiceModel.Channels.CustomBinding> bağlama, bkz: [ \<customBinding >](../../../docs/framework/configure-apps/file-schema/wcf/custombinding.md) ve [özel bağlamaları](../../../docs/framework/wcf/extending/custom-bindings.md).  
   
 ## <a name="using-bindings"></a>Bağlamaları kullanma  
  Bağlamalar kullanılarak iki temel adımları kapsar:  

@@ -14,14 +14,14 @@ ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: 2eeb5cf57e6efac77de4a76fe8131189273d5438
-ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
+ms.openlocfilehash: 4153ed905fc9c5c67ce1743fa76497f76b7398cc
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/27/2018
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="sql-tracking"></a>SQL izleme
-Bu örnek, bir özel SQL izleme katılımcı yazma gösterilmiştir, bir SQL veritabanına izleme kayıtları yazar. Windows Workflow Foundation (WF) iş akışı iş akışı örneğini yürütmeyi görünürlük elde etmek için izleme sağlar. İzleme çalışma zamanı iş akışı iş akışı yürütme sırasında kayıtları izleme yayar. [!INCLUDE[crabout](../../../../includes/crabout-md.md)] İzleme, iş akışı bkz [izleme ve izleme iş akışı](../../../../docs/framework/windows-workflow-foundation/workflow-tracking-and-tracing.md).  
+Bu örnek, bir özel SQL izleme katılımcı yazma gösterilmiştir, bir SQL veritabanına izleme kayıtları yazar. Windows Workflow Foundation (WF) iş akışı iş akışı örneğini yürütmeyi görünürlük elde etmek için izleme sağlar. İzleme çalışma zamanı iş akışı iş akışı yürütme sırasında kayıtları izleme yayar. İş akışı izleme hakkında daha fazla bilgi için bkz: [izleme ve izleme iş akışı](../../../../docs/framework/windows-workflow-foundation/workflow-tracking-and-tracing.md).  
   
 #### <a name="to-use-this-sample"></a>Bu örneği kullanmak için  
   
@@ -52,7 +52,7 @@ Bu örnek, bir özel SQL izleme katılımcı yazma gösterilmiştir, bir SQL ver
   
 10. WCF test istemcisi çift tıklayarak **GetStockPrice**. Bu açılır `GetStockPrice` bir parametre değeri türü alan işlemi `Contoso` tıklatıp **Invoke**.  
   
-11. Verilmiş izleme kayıtları bir SQL veritabanına yazılır. İzleme kayıtları görüntülemek için SQL Management Studio'da TrackingSample veritabanı açın ve tablolara gidin. [!INCLUDE[crabout](../../../../includes/crabout-md.md)] SQL Server Management Studio bkz [SQL Server Management Studio Tanıtımı](http://go.microsoft.com/fwlink/?LinkId=165645). SQL Server 2008 Management Studio Express indirilebilir [burada](http://go.microsoft.com/fwlink/?LinkId=180520). Tabloları seçme sorgusu çalıştıran ilgili tablolarda depolanan izleme kayıtları içinde verileri görüntüler.  
+11. Verilmiş izleme kayıtları bir SQL veritabanına yazılır. İzleme kayıtları görüntülemek için SQL Management Studio'da TrackingSample veritabanı açın ve tablolara gidin. SQL Server Management Studio hakkında daha fazla bilgi için bkz: [SQL Server Management Studio Tanıtımı](http://go.microsoft.com/fwlink/?LinkId=165645). SQL Server 2008 Management Studio Express indirilebilir [burada](http://go.microsoft.com/fwlink/?LinkId=180520). Tabloları seçme sorgusu çalıştıran ilgili tablolarda depolanan izleme kayıtları içinde verileri görüntüler.  
   
 #### <a name="to-uninstall-the-sample"></a>Örnek kaldırmak için  
   

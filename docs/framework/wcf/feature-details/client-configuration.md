@@ -16,11 +16,11 @@ ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: 19d1f7630c96f557791f0682fbc0c5d7286c7eb7
-ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
+ms.openlocfilehash: c2c0d17c7274cc9fdaf1b5080950ddb4f69f539a
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/28/2018
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="client-configuration"></a>İstemci Yapılandırması
 Kullanabileceğiniz [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] , bağlama davranışı adresi belirtin ve sözleşme istemci yapılandırmasını, hizmet uç noktalarına bağlanmak için istemcileri kullanın istemci uç nokta "ABC" özelliklerini. [ \<İstemci >](../../../../docs/framework/configure-apps/file-schema/wcf/client.md) öğeye sahip bir [ \<uç noktası >](http://msdn.microsoft.com/library/13aa23b7-2f08-4add-8dbf-a99f8127c017) öğesi özniteliklerini ABC uç noktası yapılandırmak için kullanılır. Bu öznitelikler, bu konunun "Uç noktaları yapılandırma" bölümünde ele alınmıştır.  
@@ -97,14 +97,14 @@ Kullanabileceğiniz [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] , ba
   
  Tüm uç bulun ve uç noktayı tanımlamak için ilişkili bir adresi olması gerekir. `address` Özniteliği, uç nokta konumunu sağlar URL'yi belirtmek için kullanılabilir. Ancak bir hizmet uç noktası adresi Tekdüzen Kaynak Tanımlayıcısı (URI) oluşturarak kodda de belirtilmesi ve eklenen <xref:System.ServiceModel.ServiceHost> birini kullanarak <xref:System.ServiceModel.ServiceHost.AddServiceEndpoint%2A> yöntemleri. Daha fazla bilgi için bkz: [adresleri](../../../../docs/framework/wcf/feature-details/endpoint-addresses.md). Giriş da anlaşılacağı gibi [ \<üstbilgiler >](../../../../docs/framework/configure-apps/file-schema/wcf/headers.md) ve [ \<kimliği >](../../../../docs/framework/configure-apps/file-schema/wcf/identity.md) öğeleri parçası olan <xref:System.ServiceModel.EndpointAddress> ve ayrıca ele alınmıştır [ Adresleri](../../../../docs/framework/wcf/feature-details/endpoint-addresses.md) konu.  
   
- `binding` Öznitelik, uç nokta bağlama türünü bekliyor bir hizmete bağlanırken kullanılacak gösterir. Başvurulacak yoksa türü kayıtlı yapılandırma bölümü olması gerekir. Önceki örnekte budur [ \<wsHttpBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/wshttpbinding.md) uç nokta kullandığını gösterir bölüm bir <xref:System.ServiceModel.WSHttpBinding>. Ancak uç nokta kullanabilirsiniz belirli bir türde birden fazla bağlama olabilir. Bunların her biri kendi sahip [ \<bağlama >](../../../../docs/framework/misc/binding.md) (bağlama) türü öğe içinde. `bindingconfiguration` Özniteliği aynı türde bağlamaları arasında ayrım yapmak için kullanılır. Değeri ile eşleşen `name` özniteliği [ \<bağlama >](../../../../docs/framework/misc/binding.md) öğesi. [!INCLUDE[crabout](../../../../includes/crabout-md.md)] bir istemciyi nasıl yapılandıracağınız yapılandırmayı kullanarak bağlama bkz [nasıl yapılır: yapılandırmada istemci bağlama belirtme](../../../../docs/framework/wcf/how-to-specify-a-client-binding-in-configuration.md).  
+ `binding` Öznitelik, uç nokta bağlama türünü bekliyor bir hizmete bağlanırken kullanılacak gösterir. Başvurulacak yoksa türü kayıtlı yapılandırma bölümü olması gerekir. Önceki örnekte budur [ \<wsHttpBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/wshttpbinding.md) uç nokta kullandığını gösterir bölüm bir <xref:System.ServiceModel.WSHttpBinding>. Ancak uç nokta kullanabilirsiniz belirli bir türde birden fazla bağlama olabilir. Bunların her biri kendi sahip [ \<bağlama >](../../../../docs/framework/misc/binding.md) (bağlama) türü öğe içinde. `bindingconfiguration` Özniteliği aynı türde bağlamaları arasında ayrım yapmak için kullanılır. Değeri ile eşleşen `name` özniteliği [ \<bağlama >](../../../../docs/framework/misc/binding.md) öğesi. Yapılandırmayı kullanarak bağlama bir istemci yapılandırma hakkında daha fazla bilgi için bkz [nasıl yapılır: yapılandırmada istemci bağlama belirtme](../../../../docs/framework/wcf/how-to-specify-a-client-binding-in-configuration.md).  
   
  `behaviorConfiguration` Belirtmek için kullanılan öznitelik [ \<davranışı >](../../../../docs/framework/configure-apps/file-schema/wcf/behavior-of-endpointbehaviors.md) , [ \<endpointBehaviors >](../../../../docs/framework/configure-apps/file-schema/wcf/endpointbehaviors.md) uç noktası kullanmanız gerekir. Değeri ile eşleşen `name` özniteliği [ \<davranışı >](../../../../docs/framework/configure-apps/file-schema/wcf/behavior-of-endpointbehaviors.md) öğesi. İstemci davranışlarını belirtmek için yapılandırma kullanma örneği için bkz: [istemci davranışlarını yapılandırma](../../../../docs/framework/wcf/configuring-client-behaviors.md).  
   
  `contract` Özniteliği uç nokta gösterme hangi sözleşme belirtir. Bu değer eşlendiği <xref:System.ServiceModel.ServiceContractAttribute.ConfigurationName%2A> , <xref:System.ServiceModel.ServiceContractAttribute>. Hizmet uygulayan sınıfa tam tür adını varsayılan değerdir.  
   
 ### <a name="configuring-metadata"></a>Meta verileri yapılandırma  
- [ \<Meta verileri >](../../../../docs/framework/configure-apps/file-schema/wcf/metadata.md) öğe meta verileri kaydetmek için kullanılan ayarları içeri uzantılarını belirtmek için kullanılır. [!INCLUDE[crabout](../../../../includes/crabout-md.md)] meta veri sistemini genişletme bkz[meta veri sistemini genişletme](../../../../docs/framework/wcf/extending/extending-the-metadata-system.md).  
+ [ \<Meta verileri >](../../../../docs/framework/configure-apps/file-schema/wcf/metadata.md) öğe meta verileri kaydetmek için kullanılan ayarları içeri uzantılarını belirtmek için kullanılır. Meta veri sistemini genişletme hakkında daha fazla bilgi için bkz:[meta veri sistemini genişletme](../../../../docs/framework/wcf/extending/extending-the-metadata-system.md).  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
  [Uç Noktalar: Adresler, Bağlamalar ve Anlaşmalar](../../../../docs/framework/wcf/feature-details/endpoints-addresses-bindings-and-contracts.md)  

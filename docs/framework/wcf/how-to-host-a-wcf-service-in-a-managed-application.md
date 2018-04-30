@@ -1,36 +1,38 @@
 ---
-title: "Nasıl yapılır: Yönetilen Bir Uygulamada Bir WCF Hizmeti Barındırma"
-ms.custom: 
+title: 'Nasıl yapılır: Yönetilen Bir Uygulamada Bir WCF Hizmeti Barındırma'
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - csharp
 - vb
 ms.assetid: 5eb29db0-b6dc-4e77-8c68-0a62f79d743b
-caps.latest.revision: "42"
+caps.latest.revision: 42
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 6491faa6134c1e80e07294d8f888200c04fa8704
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 5f2671dc381e0d3ef8f55ced01268de6205fcb7d
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="how-to-host-a-wcf-service-in-a-managed-application"></a>Nasıl yapılır: Yönetilen Bir Uygulamada Bir WCF Hizmeti Barındırma
 Yönetilen bir uygulama içinde bir hizmet barındırmak için hizmet içinde yönetilen uygulama kodu için kod ekleme, hizmet için bir uç nokta imperatively kodda, yapılandırma veya varsayılan uç noktalarını kullanarak aracılığıyla bildirimli olarak tanımlamanızı ve ardından oluşturmak bir örneği <xref:System.ServiceModel.ServiceHost>.  
   
  İleti alma başlatmak için arama <xref:System.ServiceModel.ICommunicationObject.Open%2A> üzerinde <xref:System.ServiceModel.ServiceHost>. Bu oluşturur ve hizmet için dinleyici açar. Bu şekilde bir hizmet barındırma genellikle "yönetilen uygulamayı barındıran iş yaptığını çünkü kendi kendine barındırma olarak" adlandırılır. Hizmeti kapatmak için çağrı <xref:System.ServiceModel.Channels.CommunicationObject.Close%2A?displayProperty=nameWithType> üzerinde <xref:System.ServiceModel.ServiceHost>.  
   
- Bir hizmet, yönetilen bir Windows hizmetinde, Internet Information Services (IIS) veya Windows İşlem Etkinleştirme Hizmeti (WAS) barındırılabilir. [!INCLUDE[crabout](../../../includes/crabout-md.md)]bir hizmetin seçeneklerini barındırma, bkz: [barındırma hizmetleri](../../../docs/framework/wcf/hosting-services.md).  
+ Bir hizmet, yönetilen bir Windows hizmetinde, Internet Information Services (IIS) veya Windows İşlem Etkinleştirme Hizmeti (WAS) barındırılabilir. Bir hizmetin seçeneklerini barındırma hakkında daha fazla bilgi için bkz: [barındırma hizmetleri](../../../docs/framework/wcf/hosting-services.md).  
   
- Yönetilen bir uygulamada bir hizmet barındırma en esnek bir seçenektir; çünkü dağıtmak için en az altyapısı gerektirir. [!INCLUDE[crabout](../../../includes/crabout-md.md)]barındırma hizmetleri yönetilen uygulamalarda, bkz: [yönetilen bir uygulamada barındırma](../../../docs/framework/wcf/feature-details/hosting-in-a-managed-application.md).  
+ Yönetilen bir uygulamada bir hizmet barındırma en esnek bir seçenektir; çünkü dağıtmak için en az altyapısı gerektirir. Barındırma hizmetleri yönetilen uygulamalarda hakkında daha fazla bilgi için bkz: [yönetilen bir uygulamada barındırma](../../../docs/framework/wcf/feature-details/hosting-in-a-managed-application.md).  
   
  Aşağıdaki yordam, bir konsol uygulamasında kendini barındıran hizmet uygulamak gösterilmiştir.  
   
@@ -58,7 +60,7 @@ Yönetilen bir uygulama içinde bir hizmet barındırmak için hizmet içinde y�
      [!code-vb[CFX_SelfHost4#2](../../../samples/snippets/visualbasic/VS_Snippets_CFX/cfx_selfhost4/vb/module1.vb#2)]  
   
     > [!NOTE]
-    >  [!INCLUDE[crabout](../../../includes/crabout-md.md)]tanımlamak ve bir hizmet arabirimini uygulayan bkz [nasıl yapılır: bir hizmet sözleşmesini tanımlama](../../../docs/framework/wcf/how-to-define-a-wcf-service-contract.md) ve [nasıl yapılır: bir hizmet sözleşmesini uygulama](../../../docs/framework/wcf/how-to-implement-a-wcf-contract.md).  
+    >  Tanımlamak ve bir hizmet arabirimini uygulayan hakkında daha fazla bilgi için bkz: [nasıl yapılır: bir hizmet sözleşmesini tanımlama](../../../docs/framework/wcf/how-to-define-a-wcf-service-contract.md) ve [nasıl yapılır: bir hizmet sözleşmesini uygulama](../../../docs/framework/wcf/how-to-implement-a-wcf-contract.md).  
   
 7.  Üstündeki `Main` yöntemi, bir örneğini oluşturmak <xref:System.Uri> hizmeti temel adresi ile sınıfı.  
   
@@ -71,7 +73,7 @@ Yönetilen bir uygulama içinde bir hizmet barındırmak için hizmet içinde y�
      [!code-vb[CFX_SelfHost4#4](../../../samples/snippets/visualbasic/VS_Snippets_CFX/cfx_selfhost4/vb/module1.vb#4)]       
   
     > [!NOTE]
-    >  Bu örnek varsayılan uç noktaları kullanır ve bu hizmet için herhangi bir yapılandırma dosyası gereklidir. Uç nokta yok yapılandırdıysanız, çalışma zamanı hizmeti tarafından uygulanan her hizmet sözleşmesi için her bir taban adresi için bir uç noktası oluşturur. [!INCLUDE[crabout](../../../includes/crabout-md.md)]Varsayılan uç noktaları için bkz: [Basitleştirilmiş yapılandırma](../../../docs/framework/wcf/simplified-configuration.md) ve [WCF hizmetleri için Basitleştirilmiş yapılandırma](../../../docs/framework/wcf/samples/simplified-configuration-for-wcf-services.md).  
+    >  Bu örnek varsayılan uç noktaları kullanır ve bu hizmet için herhangi bir yapılandırma dosyası gereklidir. Uç nokta yok yapılandırdıysanız, çalışma zamanı hizmeti tarafından uygulanan her hizmet sözleşmesi için her bir taban adresi için bir uç noktası oluşturur. Varsayılan uç noktalar hakkında daha fazla bilgi için bkz: [Basitleştirilmiş yapılandırma](../../../docs/framework/wcf/simplified-configuration.md) ve [WCF hizmetleri için Basitleştirilmiş yapılandırma](../../../docs/framework/wcf/samples/simplified-configuration-for-wcf-services.md).  
   
 9. Çözümü derlemek için CTRL + SHIFT + B tuşuna basın.  
   

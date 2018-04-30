@@ -14,11 +14,11 @@ ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: efec9885ae804263f7ae4c6d1d5c3bc4f39831c9
-ms.sourcegitcommit: 68b60d38043e50104ccc90c76f8599b1ffe18346
+ms.openlocfilehash: a8b30882ef2e75f21c3b90d0e13ff06b52fe5229
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/20/2018
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="using-activity-delegates"></a>Etkinlik temsilcileri kullanma
 Etkinlik temsilciler etkinlik yazarların kullanıcılar etkinliğin etkinlik tabanlı işleyicileri sağlayabilir belirli imzaları ile geri çağırmalar etkinleştirin. İki tür etkinlik temsilciler kullanılabilir: <xref:System.Activities.ActivityAction%601> bir dönüş değeri olmayan etkinlik temsilciler tanımlamak için kullanılır ve <xref:System.Activities.ActivityFunc%601> bir dönüş değerine sahip etkinlik temsilciler tanımlamak için kullanılır.  
@@ -38,7 +38,7 @@ Bu konudaki örnekler nesne başlatma sözdizimini kullanın. Nesne başlatma s�
   
  [!code-csharp[CFX_ActivityExample#7](../../../samples/snippets/csharp/VS_Snippets_CFX/CFX_ActivityExample/cs/Program.cs#7)]  
   
- [!INCLUDE[crabout](../../../includes/crabout-md.md)] Nesne başlatıcılar, bkz: [nasıl yapılır: nesneler Oluşturucusu (C# programlama Kılavuzu) çağırma olmadan başlatmak](http://go.microsoft.com/fwlink/?LinkId=161015) ve [nasıl yapılır: nesne Başlatıcı kullanarak nesne bildirme](http://go.microsoft.com/fwlink/?LinkId=161016).  
+ Nesne başlatıcıları hakkında daha fazla bilgi için bkz: [nasıl yapılır: Oluşturucusu (C# programlama Kılavuzu) çağırma olmadan nesneleri başlatma](http://go.microsoft.com/fwlink/?LinkId=161015) ve [nasıl yapılır: nesne Başlatıcı kullanarak nesne bildirme](http://go.microsoft.com/fwlink/?LinkId=161016).  
   
  Aşağıdaki örnekte, bir <xref:System.Activities.Statements.TryCatch> etkinlik, bir iş akışında kullanılır. Bir <xref:System.ApplicationException> iş akışı tarafından oluşturulan ve tarafından işlenen bir <xref:System.Activities.Statements.Catch%601> etkinlik. İşleyicisi <xref:System.Activities.Statements.Catch%601> etkinliğin etkinlik eylem bir <xref:System.Activities.Statements.WriteLine> etkinliği ve özel durum ayrıntısı aktarılan aracılığıyla kullanarak `ex` <xref:System.Activities.DelegateInArgument%601>.  
   

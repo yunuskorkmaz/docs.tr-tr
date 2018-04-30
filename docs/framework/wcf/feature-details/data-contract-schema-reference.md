@@ -18,11 +18,11 @@ ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: 739046945a019541f279b15d2d1b945f526861fb
-ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
+ms.openlocfilehash: 075f8d89caccd7723f3a1dc54fde695a8fb624ab
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/28/2018
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="data-contract-schema-reference"></a>Veri Sözleşmesi Şema Başvurusu
 Bu konu, XML Şeması (tarafından kullanılan XSD) alt açıklar <xref:System.Runtime.Serialization.DataContractSerializer> ortak dil tanımlamak için XML serileştirmesi için çalışma zamanı (CLR) türleri.  
@@ -245,7 +245,7 @@ Bu konu, XML Şeması (tarafından kullanılan XSD) alt açıklar <xref:System.R
   
 -   Basit türü kısıtlamalarını `xs:string` sahip olmayan bir kısıtlama modelleri dışında `xs:enumeration` numaralandırma veri sözleşmelerine eşlenir.  
   
--   Diğer tüm basit tür kısıtlamaları bunlar kısıtlama türlerine eşlenir. Örneğin, bir kısıtlaması `xs:int` gibi bir tamsayıya eşlemeleri `xs:int` kendisi yapar. [!INCLUDE[crabout](../../../../includes/crabout-md.md)] eşleme, ilkel türü türü/ilkel eşleme bakın.  
+-   Diğer tüm basit tür kısıtlamaları bunlar kısıtlama türlerine eşlenir. Örneğin, bir kısıtlaması `xs:int` gibi bir tamsayıya eşlemeleri `xs:int` kendisi yapar. İlkel tür eşlemesi hakkında daha fazla bilgi için türü/ilkel eşleme bakın.  
   
 ### <a name="xsrestriction-attributes"></a>\<xs:restriction >: öznitelikleri  
   
@@ -549,7 +549,7 @@ public class Employee : Person
 </xs:complexType>  
 ```  
   
- İsteğe bağlı öznitelik `ser:FactoryType` veri sözleşmesi seri hale getirme içinde bildirilen şema türü seri durumdan bir Üreteç sınıfını başvuruyor. Fabrika sınıfı bilinen türleri koleksiyonunu bir parçası olması `DataContractSerializer` kullanılan örnek. [!INCLUDE[crabout](../../../../includes/crabout-md.md)] bilinen türlerini, bkz: [veri sözleşmesi bilinen türleri](../../../../docs/framework/wcf/feature-details/data-contract-known-types.md).  
+ İsteğe bağlı öznitelik `ser:FactoryType` veri sözleşmesi seri hale getirme içinde bildirilen şema türü seri durumdan bir Üreteç sınıfını başvuruyor. Fabrika sınıfı bilinen türleri koleksiyonunu bir parçası olması `DataContractSerializer` kullanılan örnek. Bilinen türleri hakkında daha fazla bilgi için bkz: [veri sözleşmesi bilinen türleri](../../../../docs/framework/wcf/feature-details/data-contract-known-types.md).  
   
 ## <a name="datacontract-serialization-schema"></a>DataContract seri hale getirme şeması  
  Bir dizi Şemaları dışarı tarafından `DataContractSerializer` türler, öğeleri ve özel bir veri sözleşmesi seri hale getirme ad alanındaki öznitelikler kullanın:  

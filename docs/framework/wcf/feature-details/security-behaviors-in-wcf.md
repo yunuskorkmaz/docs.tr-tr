@@ -16,14 +16,14 @@ ms.author: bruceper
 manager: mbaldwin
 ms.workload:
 - dotnet
-ms.openlocfilehash: 98323b4d29b68d57d3c01e9a007b5f0f9fc08377
-ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
+ms.openlocfilehash: bb10d98eb96213029ae43533935312c6f1cf09c7
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/28/2018
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="security-behaviors-in-wcf"></a>WCF'de Güvenlik Davranışları
-İçinde [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)], davranışlar çalışma zamanı davranışını hizmet düzeyinde veya uç nokta düzeyine değiştirin. ([!INCLUDE[crabout](../../../../includes/crabout-md.md)] davranışları genel olarak, bkz: [hizmet çalışma zamanı davranışını belirtme](../../../../docs/framework/wcf/specifying-service-run-time-behavior.md).) *Güvenlik davranışları* kimlik bilgileri, kimlik doğrulama, yetkilendirme denetime izin vermek ve günlükleri denetleme. Programlama ile veya yapılandırma yoluyla davranışları kullanabilirsiniz. Bu konuda, güvenlik işlevleri ile ilgili aşağıdaki davranışları yapılandırma üzerinde durulmaktadır:  
+İçinde [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)], davranışlar çalışma zamanı davranışını hizmet düzeyinde veya uç nokta düzeyine değiştirin. (Genel olarak, davranışları hakkında daha fazla bilgi için bkz [hizmet çalışma zamanı davranışını belirtme](../../../../docs/framework/wcf/specifying-service-run-time-behavior.md).) *Güvenlik davranışları* kimlik bilgileri, kimlik doğrulama, yetkilendirme denetime izin vermek ve günlükleri denetleme. Programlama ile veya yapılandırma yoluyla davranışları kullanabilirsiniz. Bu konuda, güvenlik işlevleri ile ilgili aşağıdaki davranışları yapılandırma üzerinde durulmaktadır:  
   
 -   [\<serviceCredentials >](../../../../docs/framework/configure-apps/file-schema/wcf/servicecredentials.md).  
   
@@ -38,7 +38,7 @@ ms.lasthandoff: 04/28/2018
 ## <a name="setting-credentials-with-behaviors"></a>Davranışlarla kimlik bilgilerini ayarlama  
  Kullanım [ \<serviceCredentials >](../../../../docs/framework/configure-apps/file-schema/wcf/servicecredentials.md) ve [ \<clientCredentials >](../../../../docs/framework/configure-apps/file-schema/wcf/clientcredentials.md) bir hizmet veya istemci kimlik bilgileri değerlerini ayarlamak için. Temel bağlama yapılandırması bir kimlik bilgisi ayarlanmış olup olmadığını belirler. Örneğin, güvenlik modu ayarlanmışsa `None`, istemciler ve hizmetler değil birbirinin kimliğini doğrular ve herhangi bir türde kimlik bilgisi gerektirir.  
   
- Diğer taraftan, hizmet bağlama bir istemci kimlik bilgisi türü gerektirebilir. Bu durumda, bir davranış kullanarak bir kimlik bilgisi değeri ayarlamanız gerekebilir. ([!INCLUDE[crabout](../../../../includes/crabout-md.md)] kimlik bilgileri, olası türlerini görmek [bir kimlik bilgisi türü seçme](../../../../docs/framework/wcf/feature-details/selecting-a-credential-type.md).) Windows kimlik bilgileri kimlik doğrulaması için kullanıldığında gibi bazı durumlarda, ortam gerçek kimlik bilgisi değeri otomatik olarak oluşturur ve (farklı kimlik bilgileri kümesi belirtmek istemediğiniz sürece) kimlik bilgisi değeri açıkça ayarlanmış gerekmez.  
+ Diğer taraftan, hizmet bağlama bir istemci kimlik bilgisi türü gerektirebilir. Bu durumda, bir davranış kullanarak bir kimlik bilgisi değeri ayarlamanız gerekebilir. (Kimlik bilgilerinin olası türleri hakkında daha fazla bilgi için bkz: [bir kimlik bilgisi türü seçme](../../../../docs/framework/wcf/feature-details/selecting-a-credential-type.md).) Windows kimlik bilgileri kimlik doğrulaması için kullanıldığında gibi bazı durumlarda, ortam gerçek kimlik bilgisi değeri otomatik olarak oluşturur ve (farklı kimlik bilgileri kümesi belirtmek istemediğiniz sürece) kimlik bilgisi değeri açıkça ayarlanmış gerekmez.  
   
  Tüm hizmet kimlik bilgilerini alt öğeleri olarak bulunan [ \<serviceBehaviors >](../../../../docs/framework/configure-apps/file-schema/wcf/servicebehaviors.md). Aşağıdaki örnek, bir hizmeti kimlik bilgileri kullanılan bir sertifika gösterir.  
   
@@ -66,10 +66,10 @@ ms.lasthandoff: 04/28/2018
 ### <a name="servicecertificate-element"></a>\<serviceCertificate > öğesi  
  İleti güvenlik modunu kullanarak istemcilere hizmet kimliğini doğrulamak için kullanılan bir X.509 sertifikasını belirtmek için bu öğeyi kullanın. Düzenli aralıklarla olan bir sertifikayı kullanıyorsanız, yenileme, ardından parmak izi değişikliklerin. Bu durumda konu adı olarak kullanın `X509FindType` sertifika ile aynı konu adı verilmesi için.  
   
- [!INCLUDE[crabout](../../../../includes/crabout-md.md)] öğesini kullanarak bkz [nasıl yapılır: istemci kimlik bilgileri değerlerini belirtme](../../../../docs/framework/wcf/how-to-specify-client-credential-values.md).  
+ Öğe kullanma hakkında daha fazla bilgi için bkz: [nasıl yapılır: istemci kimlik bilgileri değerlerini belirtme](../../../../docs/framework/wcf/how-to-specify-client-credential-values.md).  
   
 ### <a name="certificate-of-clientcertificate-element"></a>\<Sertifika >, \<clientCertificate > öğesi  
- Kullanım [ \<sertifika >](../../../../docs/framework/configure-apps/file-schema/wcf/certificate-of-clientcertificate-element.md) öğesi hizmeti istemcisi ile önceden güvenli bir şekilde iletişim kurmak için istemci sertifikasını sahip olmalıdır. Bu, çift yönlü iletişim düzeni kullanırken oluşur. Daha tipik istek-yanıt desende istemci sertifikasını istemciye yanıt güvenliğini sağlamak için hizmeti kullanır istekte içerir. Çift yönlü iletişim düzeni, ancak hiçbir istekleri ve yanıtları vardır. Hizmet iletişim istemci sertifikasının gösterilemez ve bu nedenle hizmet önceden istemci iletileri güvenli hale getirmek için istemci sertifikasını gerektirir. İstemci sertifikasının bir bant dışı şekilde edinmeli ve bu öğe kullanarak sertifikayı belirtin. [!INCLUDE[crabout](../../../../includes/crabout-md.md)] çift yönlü hizmetler bkz [nasıl yapılır: çift yönlü sözleşme oluşturma](../../../../docs/framework/wcf/feature-details/how-to-create-a-duplex-contract.md).  
+ Kullanım [ \<sertifika >](../../../../docs/framework/configure-apps/file-schema/wcf/certificate-of-clientcertificate-element.md) öğesi hizmeti istemcisi ile önceden güvenli bir şekilde iletişim kurmak için istemci sertifikasını sahip olmalıdır. Bu, çift yönlü iletişim düzeni kullanırken oluşur. Daha tipik istek-yanıt desende istemci sertifikasını istemciye yanıt güvenliğini sağlamak için hizmeti kullanır istekte içerir. Çift yönlü iletişim düzeni, ancak hiçbir istekleri ve yanıtları vardır. Hizmet iletişim istemci sertifikasının gösterilemez ve bu nedenle hizmet önceden istemci iletileri güvenli hale getirmek için istemci sertifikasını gerektirir. İstemci sertifikasının bir bant dışı şekilde edinmeli ve bu öğe kullanarak sertifikayı belirtin. Çift yönlü hizmetler hakkında daha fazla bilgi için bkz: [nasıl yapılır: çift yönlü sözleşme oluşturma](../../../../docs/framework/wcf/feature-details/how-to-create-a-duplex-contract.md).  
   
 ### <a name="authentication-of-clientcertificate-element"></a>\<kimlik doğrulama >, \<clientCertificate > öğesi  
  [ \<Kimlik doğrulama >](../../../../docs/framework/configure-apps/file-schema/wcf/authentication-of-clientcertificate-element.md) öğeleri nasıl istemcilerinin kimlik doğrulamalarının özelleştirmenize olanak sağlar. Ayarlayabileceğiniz `CertificateValidationMode` özniteliğini `None`, `ChainTrust`, `PeerOrChainTrust`, `PeerTrust`, veya `Custom`. Varsayılan olarak, düzeyini ayarlamak `ChainTrust`, belirten her sertifika biten sertifika hiyerarşisini bulunması gereken bir *kök yetkilisi* zincirinin üstünde. Bu en güvenli bir moddur. De değer ayarlayabilirsiniz `PeerOrChainTrust`, kendi kendine verilen sertifikaların (eş güven) güvenilen zincirinde sertifikaları yanı sıra kabul edileceğini belirtir. Bu değer, geliştirme ve kendi kendine verilen sertifikaların güvenilir bir yetkiliden satın alınması değil çünkü hata ayıklama istemcileri ve Hizmetleri zaman kullanılır. Bir istemci dağıtımı sırasında kullanmak `ChainTrust` yerine değer. De değer ayarlayabilirsiniz `Custom`. Ayarlandığında `Custom` değeri de ayarlamanız gerekir `CustomCertificateValidatorType` özniteliği bir derleme ve sertifikayı doğrulamak için kullanılan türü. Kendi özel Doğrulayıcısı oluşturmak için Özet devralmalıdır <xref:System.IdentityModel.Selectors.X509CertificateValidator> sınıfı.  
@@ -97,7 +97,7 @@ ms.lasthandoff: 04/28/2018
   
  Daha fazla bilgi için bkz. <xref:System.IdentityModel.Selectors.SamlSecurityTokenAuthenticator>.  
   
- [!INCLUDE[crabout](../../../../includes/crabout-md.md)] Bu yapılandırma öğesi bkz [nasıl yapılır: bir Federasyon Hizmeti kimlik bilgileri yapılandırma](../../../../docs/framework/wcf/feature-details/how-to-configure-credentials-on-a-federation-service.md).  
+ Bu yapılandırma öğesi kullanma hakkında daha fazla bilgi için bkz: [nasıl yapılır: bir Federasyon Hizmeti kimlik bilgileri yapılandırma](../../../../docs/framework/wcf/feature-details/how-to-configure-credentials-on-a-federation-service.md).  
   
 #### <a name="allowing-anonymous-cardspace-users"></a>Anonim CardSpace kullanıcılar izin verme  
  Ayarı `AllowUntrustedRsaIssuers` özniteliği `<IssuedTokenAuthentication>` öğesine `true` açıkça rasgele bir RSA anahtar çifti ile imzalanmış otomatik olarak verilen bir belirteç sunmak herhangi bir istemci sağlar. Veren *güvenilmeyen* ilişkili veren veri anahtara sahip olduğundan. A [!INCLUDE[infocard](../../../../includes/infocard-md.md)] kullanıcı, kendi kendine sağlanan talep kimliğini içerir kendini yayınlayan bir kart oluşturabilirsiniz. Bu özellik dikkatli kullanın. Bu özelliği kullanmak için RSA ortak anahtarı bir kullanıcı adı ile birlikte bir veritabanında depolanması daha güvenli bir parola olarak düşünün. Bir istemci erişim hizmetine izin vermeden önce istemci sunulan RSA ortak anahtar sunulan kullanıcı adı için depolanan ortak anahtar ile karşılaştırarak doğrulayın. Bu, kullanıcılar kullanıcı adlarını kaydedebilir ve kendi kendine verilen RSA ortak anahtarlarla ilişkilendirme alınabildiği bir kayıt işlemi kurulan varsayar.  
@@ -105,7 +105,7 @@ ms.lasthandoff: 04/28/2018
 ## <a name="client-credentials"></a>İstemci kimlik bilgileri  
  İstemci kimlik bilgileri, karşılıklı kimlik doğrulaması gerekli olduğu durumlarda Hizmetleri için istemci kimlik doğrulaması için kullanılır. Bölümü, istemci Hizmeti'ne hizmetin sertifikayla iletileri burada güvenlik altına almanız gerekir senaryolar için hizmet sertifikaları belirtmek için kullanabilirsiniz.  
   
- Ayrıca bir istemci Federasyon senaryosunun bir parçası verilen kullanım belirteçleri güvenli belirteç hizmeti veya yerel yayımlayan belirteçlerin yapılandırabilirsiniz. [!INCLUDE[crabout](../../../../includes/crabout-md.md)] Federe senaryolarda bkz [Federasyon ve verilen belirteçleri](../../../../docs/framework/wcf/feature-details/federation-and-issued-tokens.md). Tüm istemci kimlik bilgileri altında bulunan [ \<endpointBehaviors >](../../../../docs/framework/configure-apps/file-schema/wcf/endpointbehaviors.md)aşağıdaki kodda gösterildiği gibi.  
+ Ayrıca bir istemci Federasyon senaryosunun bir parçası verilen kullanım belirteçleri güvenli belirteç hizmeti veya yerel yayımlayan belirteçlerin yapılandırabilirsiniz. Federasyon senaryoları hakkında daha fazla bilgi için bkz: [Federasyon ve verilen belirteçleri](../../../../docs/framework/wcf/feature-details/federation-and-issued-tokens.md). Tüm istemci kimlik bilgileri altında bulunan [ \<endpointBehaviors >](../../../../docs/framework/configure-apps/file-schema/wcf/endpointbehaviors.md)aşağıdaki kodda gösterildiği gibi.  
   
 ```xml  
 <behaviors>  

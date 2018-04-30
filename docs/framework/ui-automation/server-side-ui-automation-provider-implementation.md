@@ -1,28 +1,30 @@
 ---
-title: "Sunucu Tarafı UI Otomasyonu Sağlayıcıyı Uygulama"
-ms.custom: 
+title: Sunucu Tarafı UI Otomasyonu Sağlayıcıyı Uygulama
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-bcl
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-bcl
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - server-side UI Automation provider implementation
 - UI Automation, server-side provider implementation
 - provider implementation, UI Automation
 ms.assetid: 6acc6d08-bd67-4e2e-915c-9c1d34eb86fe
-caps.latest.revision: "39"
+caps.latest.revision: 39
 author: Xansky
 ms.author: mhopkins
 manager: markl
-ms.workload: dotnet
-ms.openlocfilehash: d25f561444cd672e8842711025f4299c375d6bb4
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.workload:
+- dotnet
+ms.openlocfilehash: 0068efb6f45fca15232be61a8a997f6df94f99a5
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="server-side-ui-automation-provider-implementation"></a>Sunucu Tarafı UI Otomasyonu Sağlayıcıyı Uygulama
 > [!NOTE]
@@ -30,7 +32,7 @@ ms.lasthandoff: 01/19/2018
   
  Bu bölüm, özel bir denetim için sunucu tarafı UI Otomasyonu sağlayıcıyı uygulama açıklar.  
   
- Uygulamasını [!INCLUDE[TLA#tla_wpf](../../../includes/tlasharptla-wpf-md.md)] öğeleri ve olmayan-[!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] öğeleri (olanlar için tasarlanmış gibi [!INCLUDE[TLA#tla_winforms](../../../includes/tlasharptla-winforms-md.md)]) temelde farklıdır. [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)]öğeleri için destek sağlar [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] türetilmiş sınıf aracılığıyla <xref:System.Windows.Automation.Peers.AutomationPeer>. Olmayan[!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] öğeleri uygulamaları sağlayıcısı arabirimleri aracılığıyla destek sağlar.  
+ Windows Presentation Foundation (WPF) öğeleri için ve olmayan uygulama-[!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] öğeleri (olanlar için tasarlanmış gibi [!INCLUDE[TLA#tla_winforms](../../../includes/tlasharptla-winforms-md.md)]) temelde farklıdır. [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] öğeleri için destek sağlar [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] türetilmiş sınıf aracılığıyla <xref:System.Windows.Automation.Peers.AutomationPeer>. Olmayan[!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] öğeleri uygulamaları sağlayıcısı arabirimleri aracılığıyla destek sağlar.  
   
 <a name="Security_Considerations"></a>   
 ## <a name="security-considerations"></a>Güvenlik Değerlendirmeleri  
@@ -80,7 +82,7 @@ ms.lasthandoff: 01/19/2018
   
 |İşlevi|Uygulama|  
 |-------------------|--------------------|  
-|Sağlayıcıyı gösterme[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]|Denetim penceresine gönderilen WM_GETOBJECT iletisine yanıt olarak, uygulayan nesnenin dönüş <xref:System.Windows.Automation.Provider.IRawElementProviderSimple> (veya türetilmiş bir arabirim). Parçaları için bu sağlayıcı için parça kök olmalıdır.|  
+|Sağlayıcıyı gösterme [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]|Denetim penceresine gönderilen WM_GETOBJECT iletisine yanıt olarak, uygulayan nesnenin dönüş <xref:System.Windows.Automation.Provider.IRawElementProviderSimple> (veya türetilmiş bir arabirim). Parçaları için bu sağlayıcı için parça kök olmalıdır.|  
 |Özellik değerlerini sağlayın|Uygulama <xref:System.Windows.Automation.Provider.IRawElementProviderSimple.GetPropertyValue%2A> sağlayabilir veya değerlerini geçersiz kılar.|  
 |İstemci denetimi ile etkileşim kurmak etkinleştirin|Uygulama Denetim düzenleri gibi desteği arabirimleri <xref:System.Windows.Automation.Provider.IInvokeProvider>. Uygulamanızda bu deseni sağlayıcılarını döndüren <xref:System.Windows.Automation.Provider.IRawElementProviderSimple.GetPatternProvider%2A>.|  
 |Olayları Yükselt|Statik yöntemlerinden birini çağrı <xref:System.Windows.Automation.Provider.AutomationInteropProvider> istemci dinlediği bir olay yükseltmek için.|  
@@ -89,7 +91,7 @@ ms.lasthandoff: 01/19/2018
   
 <a name="Property_Values_in_Non_WPF_Providers"></a>   
 ### <a name="property-values-in-non-wpf-providers"></a>Özellik değerlerini WPF olmayan sağlayıcıları  
- [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]özel denetimler için sağlayıcıları Otomasyon sistemi tarafından ve aynı zamanda istemci uygulamaları tarafından kullanılan belirli özellikleri desteklemesi gerekir. Windows (Cwnd'lerden) barındırılan öğelerin [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] bazı özellikler varsayılan pencere sağlayıcıdan alabilir, ancak diğer özel sağlayıcıdan edinmeniz gerekir.  
+ [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] özel denetimler için sağlayıcıları Otomasyon sistemi tarafından ve aynı zamanda istemci uygulamaları tarafından kullanılan belirli özellikleri desteklemesi gerekir. Windows (Cwnd'lerden) barındırılan öğelerin [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] bazı özellikler varsayılan pencere sağlayıcıdan alabilir, ancak diğer özel sağlayıcıdan edinmeniz gerekir.  
   
  Sağlayıcıları temel HWND denetimleri için genellikle (alan değerlerini tarafından tanımlanan) aşağıdaki özellikleri sağlayan gerekmez:  
   
@@ -124,7 +126,7 @@ ms.lasthandoff: 01/19/2018
   
 <a name="Events_in_Non_WPF_Providers"></a>   
 ### <a name="events-in-non-wpf-providers"></a>WPF olmayan sağlayıcıları olayları  
- [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]sağlayıcıları UI durumu değişiklikleri istemci uygulamalarının bildirmek için olayları tetiklemelidir. Aşağıdaki yöntemlerden olayları yükseltmek için kullanılır.  
+ [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] sağlayıcıları UI durumu değişiklikleri istemci uygulamalarının bildirmek için olayları tetiklemelidir. Aşağıdaki yöntemlerden olayları yükseltmek için kullanılır.  
   
 |Yöntem|Açıklama|  
 |------------|-----------------|  
@@ -156,7 +158,7 @@ ms.lasthandoff: 01/19/2018
   
 <a name="Non_WPF_Provider_Reparenting"></a>   
 ### <a name="non-wpf-provider-reparenting"></a>WPF olmayan sağlayıcı Reparenting  
- Açılır pencereler gerçekten üst düzey Windows ve varsayılan olarak bu nedenle görüntülenmesini [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] masaüstünün alt öğeleri olarak ağacı. Çoğu durumda, ancak, açılır pencereleri mantıksal olarak başka bir denetim alt değildir. Örneğin, bir birleşik giriş kutusu açılan listesi mantıksal olarak bir alt birleşik giriş kutusu öğesi değil. Benzer şekilde, menüsü açılır pencere mantıksal olarak bir alt menü öğesi değil. [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]ilişkili denetim alt olmasını görünecekleri açılır pencereleri üst öğesini değiştirme için destek sağlar.  
+ Açılır pencereler gerçekten üst düzey Windows ve varsayılan olarak bu nedenle görüntülenmesini [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] masaüstünün alt öğeleri olarak ağacı. Çoğu durumda, ancak, açılır pencereleri mantıksal olarak başka bir denetim alt değildir. Örneğin, bir birleşik giriş kutusu açılan listesi mantıksal olarak bir alt birleşik giriş kutusu öğesi değil. Benzer şekilde, menüsü açılır pencere mantıksal olarak bir alt menü öğesi değil. [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] ilişkili denetim alt olmasını görünecekleri açılır pencereleri üst öğesini değiştirme için destek sağlar.  
   
  Açılır pencere üst öğesini değiştirme için:  
   
@@ -174,7 +176,7 @@ ms.lasthandoff: 01/19/2018
   
 <a name="Non_WPF_Provider_Repositioning"></a>   
 ### <a name="non-wpf-provider-repositioning"></a>WPF olmayan sağlayıcısı yeniden konumlandırma  
- [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]parçaları her penceresinde (HWND) bulunan iki veya daha fazla öğe içeriyor olabilir. Her HWND içeren bir HWND alt HWND göz önünde bulundurur kendi varsayılan sağlayıcı olduğundan [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] ağaç varsayılan olarak, gösterir Cwnd'lerden parçadaki üst penceresinin alt öğesi. Çoğu durumda bu arzu davranıştır, ancak mantıksal yapısı eşleşmediği için bazen bu karışıklığa yol açabilir [!INCLUDE[TLA2#tla_ui](../../../includes/tla2sharptla-ui-md.md)].  
+ [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] parçaları her penceresinde (HWND) bulunan iki veya daha fazla öğe içeriyor olabilir. Her HWND içeren bir HWND alt HWND göz önünde bulundurur kendi varsayılan sağlayıcı olduğundan [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] ağaç varsayılan olarak, gösterir Cwnd'lerden parçadaki üst penceresinin alt öğesi. Çoğu durumda bu arzu davranıştır, ancak mantıksal yapısı eşleşmediği için bazen bu karışıklığa yol açabilir [!INCLUDE[TLA2#tla_ui](../../../includes/tla2sharptla-ui-md.md)].  
   
  Rebar denetimiyle bu iyi bir örneği bulunmaktadır. Bir rebar bantları, her biri bir HWND tabanlı denetim araç, bir düzenleme kutusu veya açılan kutu gibi sırayla içerebilir içerir. HWND rebar için varsayılan pencere sağlayıcı bant denetim Cwnd'lerden alt öğesi olarak görür ve rebar sağlayıcı bantları alt öğesi olarak görür. Olduğundan HWND sağlayıcısı ve rebar sağlayıcısı dağıtımınızla çalışma ve bunların alt öğeleri birleştirme bantları ve HWND tabanlı denetimler rebar alt öğesi olarak görünür. Mantıksal olarak, ancak yalnızca bantları rebar alt öğesi olarak görünmesi gereken ve her bant provider içerdiği denetimi için varsayılan HWND sağlayıcısıyla eşleştirilmek.  
   

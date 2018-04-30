@@ -1,23 +1,24 @@
 ---
-title: "Gerekli bağımsız değişkenleri ve aşırı grupları"
-ms.custom: 
+title: Gerekli bağımsız değişkenleri ve aşırı grupları
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 4ca3ed06-b9af-4b85-8b70-88c2186aefa3
-caps.latest.revision: "6"
+caps.latest.revision: 6
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 8b6025fb65c5e2d4d0683d302638f8a1d2803662
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 47e94c65ff722d3b4f98b026d69ecd31bc02b934
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="required-arguments-and-overload-groups"></a>Gerekli bağımsız değişkenleri ve aşırı grupları
 Böylece bazı bağımsız değişkenler için yürütme geçerli olması etkinliği bağlanması için gerekli olan etkinlikleri yapılandırılabilir. `RequiredArgument` Özniteliği bazı bağımsız değişkenler bir etkinlikte gerekli olduğunu belirtmek için kullanılır ve `OverloadGroup` özniteliği gerekli bağımsız kategorilerini gruplamak için kullanılır. Öznitelikleri kullanarak, etkinlik yazarlar basit veya karmaşık etkinlik doğrulama yapılandırmaları sağlayabilir.  
@@ -73,7 +74,7 @@ public sealed class Add : CodeActivity<int>
   
  **Gerekli etkinlik bağımsız değişkeni 'Operand1' için değer girilmedi.**  
 > [!NOTE]
->  [!INCLUDE[crabout](../../../includes/crabout-md.md)]denetleme ve doğrulama hataları ve Uyarıları işleme hakkında bkz: [çağırma etkinlik doğrulama](../../../docs/framework/windows-workflow-foundation/invoking-activity-validation.md).  
+>  Denetleme ve doğrulama hataları ve Uyarıları işleme hakkında daha fazla bilgi için bkz: [çağırma etkinlik doğrulama](../../../docs/framework/windows-workflow-foundation/invoking-activity-validation.md).  
   
 ## <a name="using-overload-groups"></a>Aşırı grupları kullanma  
  Aşırı grupları engellenecek bağımsız olan bir etkinlikte geçerli olmadığını belirten bir yöntem sağlar. Bağımsız değişkenler gruplandırılır birlikte kullanarak <xref:System.Activities.OverloadGroupAttribute>. Her grubu tarafından belirtilen bir ad verilir <xref:System.Activities.OverloadGroupAttribute>, etkinlik bir aşırı yüklemesini grubundaki bağımsız değişkenler tek kümesine bağlı olduğunda geçerlidir. Aşağıdaki örnekte, geçen [OverloadGroups](../../../docs/framework/windows-workflow-foundation/samples/overloadgroups.md) örnek, bir `CreateLocation` sınıfı tanımlanır.  
@@ -113,7 +114,7 @@ class CreateLocation: Activity
 }  
 ```  
   
- ABD'de bir konum belirtmek için bu etkinliği amacı olan. Bunu yapmak için kullanıcı etkinliğinin bağımsız değişkenlerinin üç gruplarından birini kullanarak konum belirtebilirsiniz. Bağımsız değişkenler geçerli birleşimlerini belirtmek için üç aşırı grupları tanımlanır. `G1`içeren `Latitude` ve `Longitude` bağımsız değişkenler. `G2`içeren `Street`, `City`, ve `State`. `G3`içeren `Street` ve `Zip`. `Name`da gerekli bir bağımsız değişken, ancak bir aşırı yüklemesini grubunun bir parçası değil. Geçerli olması bu etkinliği `Name` tüm bağımsız değişkenler ile birlikte tek bir aşırı yüklemesini grubundan bağlanması gerekir.  
+ ABD'de bir konum belirtmek için bu etkinliği amacı olan. Bunu yapmak için kullanıcı etkinliğinin bağımsız değişkenlerinin üç gruplarından birini kullanarak konum belirtebilirsiniz. Bağımsız değişkenler geçerli birleşimlerini belirtmek için üç aşırı grupları tanımlanır. `G1` içeren `Latitude` ve `Longitude` bağımsız değişkenler. `G2` içeren `Street`, `City`, ve `State`. `G3` içeren `Street` ve `Zip`. `Name` da gerekli bir bağımsız değişken, ancak bir aşırı yüklemesini grubunun bir parçası değil. Geçerli olması bu etkinliği `Name` tüm bağımsız değişkenler ile birlikte tek bir aşırı yüklemesini grubundan bağlanması gerekir.  
   
  Aşağıdaki örnekte, geçen [veritabanı erişimi etkinliklerini](../../../docs/framework/windows-workflow-foundation/samples/database-access-activities.md) örnek, iki aşırı grupları vardır: `ConnectionString` ve `ConfigFileSectionName`. Ya da geçerli olması bu etkinliği `ProviderName` ve `ConnectionString` bağımsız değişkenleri bağlı olmalıdır, veya `ConfigName` bağımsız değişkeni, ancak ikisini birden değil.  
   

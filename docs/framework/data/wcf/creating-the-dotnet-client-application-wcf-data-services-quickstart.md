@@ -1,27 +1,29 @@
 ---
-title: ".NET Framework istemci uygulaması oluşturma (WCF Veri Hizmetleri Hızlı Başlangıç)"
-ms.custom: 
+title: .NET Framework istemci uygulaması oluşturma (WCF Veri Hizmetleri Hızlı Başlangıç)
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework-oob
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - csharp
 - vb
 ms.assetid: 41ade767-eeab-437d-9121-9797e8fb8045
-caps.latest.revision: "3"
+caps.latest.revision: 3
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 563d08a5907c8248a74ba992de17ac3dd0679827
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 0bdbb88cc3070c68c540a09ab0d6ce41f790d1c3
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="creating-the-net-framework-client-application-wcf-data-services-quickstart"></a>.NET Framework istemci uygulaması oluşturma (WCF Veri Hizmetleri Hızlı Başlangıç)
 Bu, son görevdir [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] hızlı başlangıç. Bu görevde, bir konsol uygulaması çözüme eklemek için bir başvuru ekleyin [!INCLUDE[ssODataFull](../../../../includes/ssodatafull-md.md)] akış bu yeni istemci uygulaması ve erişim [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] oluşturulan istemci veri hizmeti sınıfları ve istemci kullanarak istemci uygulamasından akışı kitaplıkları.  
@@ -89,7 +91,7 @@ Bu, son görevdir [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] h�
     >  NorthwindClient uygulamasının bu sürümü, ekleme ve silme varlıklarının desteklemez.  
   
 ## <a name="next-steps"></a>Sonraki Adımlar  
- Northwind örnek erişen istemci uygulaması başarıyla oluşturdunuz [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] akış. Ayrıca tamamladınız [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] hızlı başlangıç. [!INCLUDE[crabout](../../../../includes/crabout-md.md)]erişen bir [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] besleme yeri bir [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] uygulama, bkz: [WCF Veri Hizmetleri İstemci Kitaplığı](../../../../docs/framework/data/wcf/wcf-data-services-client-library.md).  
+ Northwind örnek erişen istemci uygulaması başarıyla oluşturdunuz [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] akış. Ayrıca tamamladınız [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] hızlı başlangıç. Erişme hakkında daha fazla bilgi için bir [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] besleme yeri bir [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] uygulama, bkz: [WCF Veri Hizmetleri İstemci Kitaplığı](../../../../docs/framework/data/wcf/wcf-data-services-client-library.md).  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
  [Başlarken](../../../../docs/framework/data/wcf/getting-started-with-wcf-data-services.md)  

@@ -31,14 +31,14 @@ ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: 61197255c11745c2c3f6f60db084b96dc812cb00
-ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
+ms.openlocfilehash: 8d4606023c1a9f3252e9039da547f384d27b7ecd
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/28/2018
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="wpf-security-strategy---platform-security"></a>WPF Güvenlik Stratejisi - Platform Güvenliği
-Sırada [!INCLUDE[TLA#tla_wpf](../../../includes/tlasharptla-wpf-md.md)] çeşitli sağlar güvenlik hizmetleri, bu da işletim sistemi içeren bir temel platform güvenlik özelliklerini yararlanır [!INCLUDE[TLA2#tla_clr](../../../includes/tla2sharptla-clr-md.md)], ve [!INCLUDE[TLA2#tla_ie](../../../includes/tla2sharptla-ie-md.md)]. Sağlamak üzere bu Katmanlar birleştirilmiştir [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] herhangi tek hata noktası, önlemek için aşağıdaki resimde gösterildiği gibi çalışır bir güçlü, savunma güvenlik modeli:  
+Windows Presentation Foundation (WPF) güvenlik hizmetleri, çeşitli sağlarken, bu da işletim sistemi içeren bir temel platform güvenlik özelliklerini yararlanır [!INCLUDE[TLA2#tla_clr](../../../includes/tla2sharptla-clr-md.md)], ve [!INCLUDE[TLA2#tla_ie](../../../includes/tla2sharptla-ie-md.md)]. Sağlamak üzere bu Katmanlar birleştirilmiştir [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] herhangi tek hata noktası, önlemek için aşağıdaki resimde gösterildiği gibi çalışır bir güçlü, savunma güvenlik modeli:  
   
  ![WPF Güvenliği çizimi](../../../docs/framework/wpf/media/windowplatformsecurity.PNG "windowplatformsecurity")  
   

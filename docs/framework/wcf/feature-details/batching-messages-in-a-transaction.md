@@ -1,31 +1,31 @@
 ---
-title: "Bir İşlemde Toplu İleti İşleme"
-ms.custom: 
+title: Bir İşlemde Toplu İleti İşleme
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - dotnet-clr
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - batching messages [WCF]
 ms.assetid: 53305392-e82e-4e89-aedc-3efb6ebcd28c
-caps.latest.revision: 
+caps.latest.revision: 19
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: 0587624dd3b9bc12c6e421343ad2cdc1da6b970f
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 17d9bd3b58e8320bfe1f62ac56aff59ba52f4374
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="batching-messages-in-a-transaction"></a>Bir İşlemde Toplu İleti İşleme
-Sıraya alınan uygulamaları işlemleri doğruluk ve iletilerin güvenilir teslimini emin olmak için kullanın. İşlemler, ancak pahalı işlemleri ve ileti işleme önemli ölçüde azaltabilir. İleti verimini artırmak için bir uygulamanın okuma ve tek bir işlem içinde birden çok iletileri işlemek için yoludur. Performans ve kurtarma arasında dengelemeyi olduğundan: toplu ileti sayısı arttıkça, bu nedenle işlemler geri alınacak, gerekli kurtarma iş miktarı verir. Toplu işlem ve oturumları ileti işleme arasındaki farkı dikkate almak önemlidir. A *oturum* tek bir uygulama tarafından işlenen ve tek bir birim olarak kabul edilen ilgili iletiler grubudur. Oturumlar, genellikle bir grup ilgili iletiler birlikte işlenmesi gereken olduğunda kullanılır. Bunun bir örneğini çevrimiçi bir alışveriş Web sitesidir. *Toplu* birden çok işlemek için kullanılan, ilgisiz artar verimlilik ileti şekilde iletileri. [!INCLUDE[crabout](../../../../includes/crabout-md.md)]oturumları, bkz: [gruplandırma sıraya alınan iletileri bir oturumda](../../../../docs/framework/wcf/feature-details/grouping-queued-messages-in-a-session.md). Bir toplu iletiler de tek bir uygulama tarafından işlenen ve tek bir birim olarak kabul edilen, ancak toplu iletileri arasında hiçbir ilişki olabilir. Bir işlemde toplu ileti işleme, uygulama nasıl çalışacağını değişmeyen bir hale getirilmesidir.  
+Sıraya alınan uygulamaları işlemleri doğruluk ve iletilerin güvenilir teslimini emin olmak için kullanın. İşlemler, ancak pahalı işlemleri ve ileti işleme önemli ölçüde azaltabilir. İleti verimini artırmak için bir uygulamanın okuma ve tek bir işlem içinde birden çok iletileri işlemek için yoludur. Performans ve kurtarma arasında dengelemeyi olduğundan: toplu ileti sayısı arttıkça, bu nedenle işlemler geri alınacak, gerekli kurtarma iş miktarı verir. Toplu işlem ve oturumları ileti işleme arasındaki farkı dikkate almak önemlidir. A *oturum* tek bir uygulama tarafından işlenen ve tek bir birim olarak kabul edilen ilgili iletiler grubudur. Oturumlar, genellikle bir grup ilgili iletiler birlikte işlenmesi gereken olduğunda kullanılır. Bunun bir örneğini çevrimiçi bir alışveriş Web sitesidir. *Toplu* birden çok işlemek için kullanılan, ilgisiz artar verimlilik ileti şekilde iletileri. Oturumları hakkında daha fazla bilgi için bkz: [gruplandırma sıraya alınan iletileri bir oturumda](../../../../docs/framework/wcf/feature-details/grouping-queued-messages-in-a-session.md). Bir toplu iletiler de tek bir uygulama tarafından işlenen ve tek bir birim olarak kabul edilen, ancak toplu iletileri arasında hiçbir ilişki olabilir. Bir işlemde toplu ileti işleme, uygulama nasıl çalışacağını değişmeyen bir hale getirilmesidir.  
   
 ## <a name="entering-batching-mode"></a>Toplu işleme modunu girme  
  <xref:System.ServiceModel.Description.TransactedBatchingBehavior> Toplu işleme uç noktası davranışı denetimleri. Bu uç noktası davranışı bir hizmet uç noktası ekleme söyler [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] bir işlemde toplu iletileri. Bir işlem gerektiren yalnızca iletileri bir toplu işlemde yerleştirilir bunu tüm iletileri bir işlem gerektirir ve yalnızca işlemlerinden gönderilen iletiler ile işaretlenen `TransactionScopeRequired`  =  `true` ve `TransactionAutoComplete`  =  `true` olan Toplu işlem için kabul edilir. Hizmet sözleşmesi tüm işlemler ile işaretlenmiş ise `TransactionScopeRequired`  =  `false` ve `TransactionAutoComplete`  =  `false`, toplu işlem modu hiç girilmedi sonra.  

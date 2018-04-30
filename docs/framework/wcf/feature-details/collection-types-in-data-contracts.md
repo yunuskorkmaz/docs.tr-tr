@@ -23,11 +23,11 @@ ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: 528c1661b99ff5f50d42bb7a42371c302e335c90
-ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
+ms.openlocfilehash: c771d78c5e78feabcfe883934ed7ea3589c938d2
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/28/2018
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="collection-types-in-data-contracts"></a>Veri Sözleşmelerinde Koleksiyon Türleri
 A *koleksiyonu* belirli bir türdeki öğeleri listesini içerir. İçinde [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)], böyle listeleri dizileri veya diğer türleri çeşitli kullanarak temsil edilebilir (genel listesi, genel <xref:System.ComponentModel.BindingList%601>, <xref:System.Collections.Specialized.StringCollection>, veya <xref:System.Collections.ArrayList>). Örneğin, bir koleksiyon için belirli bir müşteri adresleri listesi tutabilir. Bu koleksiyon adı verilen *listesinde koleksiyonları*kendi gerçek türü ne olursa olsun.  
@@ -42,7 +42,7 @@ A *koleksiyonu* belirli bir türdeki öğeleri listesini içerir. İçinde [!INC
   
  Koleksiyonlarda yer alan türleri veri sözleşme türleri veya aksi halde seri hale getirilebilir. Daha fazla bilgi için bkz: [veri sözleşmesi seri hale getirici tarafından desteklenen türleri](../../../../docs/framework/wcf/feature-details/types-supported-by-the-data-contract-serializer.md).  
   
- [!INCLUDE[crabout](../../../../includes/crabout-md.md)] nedir ve ne nasıl koleksiyonları serileştirilir, geçerli bir koleksiyon, yaklaşık de olarak kabul edilmez, bu konunun "Gelişmiş toplama kuralları" bölümünde seri hale getirilmesi hakkında bilgi bakın.  
+ Nedir ve ne geçerli bir koleksiyon olarak kabul edilmez hakkında yanı sıra koleksiyonlar nasıl serileştirilmiş hakkında daha fazla bilgi için bu konunun "Gelişmiş toplama kuralları" bölümünde biçimlendiricisi koleksiyonları hakkında bilgi bakın.  
   
 ## <a name="interchangeable-collections"></a>Birbirinin yerine koleksiyonları  
  Tüm liste koleksiyonları aynı türde aynı verilere sahip düşünülür Sözleşme (kullanarak özelleştirilen sürece <xref:System.Runtime.Serialization.CollectionDataContractAttribute> özniteliği, bu konunun ilerleyen bölümlerinde açıklandığı gibi). Bu nedenle, örneğin, aşağıdaki veri sözleşmeleri eşdeğerdir.  
@@ -91,7 +91,7 @@ A *koleksiyonu* belirli bir türdeki öğeleri listesini içerir. İçinde [!INC
 ## <a name="customizing-collection-types"></a>Koleksiyon türleri özelleştirme  
  Koleksiyon türleri kullanarak özelleştirebileceğiniz <xref:System.Runtime.Serialization.CollectionDataContractAttribute> birkaç kullanımı vardır özniteliği.  
   
- Genellikle bu öznitelik mümkün olduğunca uygulanmasını önlemek için önerilir, özelleştirme koleksiyon türleri güvenlik ihlalleri koleksiyonu interchangeability, unutmayın. [!INCLUDE[crabout](../../../../includes/crabout-md.md)] Bu sorun, bu konunun devamındaki "Toplama kuralları Gelişmiş" bölümüne bakın.  
+ Genellikle bu öznitelik mümkün olduğunca uygulanmasını önlemek için önerilir, özelleştirme koleksiyon türleri güvenlik ihlalleri koleksiyonu interchangeability, unutmayın. Bu sorun hakkında daha fazla bilgi için bu konunun devamındaki "Toplama kuralları Gelişmiş" bölümüne bakın.  
   
 ### <a name="collection-data-contract-naming"></a>Koleksiyon veri sözleşmesi adlandırma  
  Koleksiyon türleri adlandırma kuralları bölümünde açıklandığı gibi normal veri sözleşme türleri, adlandırma benzerdir [veri sözleşmesi adları](../../../../docs/framework/wcf/feature-details/data-contract-names.md), önemli bazı farklar olsa da:  
@@ -203,7 +203,7 @@ A *koleksiyonu* belirli bir türdeki öğeleri listesini içerir. İçinde [!INC
 </CountriesOrRegionsWithCapitals>  
 ```  
   
- [!INCLUDE[crabout](../../../../includes/crabout-md.md)] Sözlük koleksiyonlar, bu konunun devamındaki "Toplama kuralları Gelişmiş" bölümüne bakın.  
+ Sözlük Koleksiyonlar hakkında daha fazla bilgi için bu konunun devamındaki "Toplama kuralları Gelişmiş" bölümüne bakın.  
   
 ## <a name="collections-and-known-types"></a>Koleksiyonlar ve bilinen türler  
  Diğer koleksiyonları veya koleksiyon arabirimleri yerine polymorphically kullanıldığında bilinen türleri koleksiyon türleri eklemeniz gerekmez. Örneğin, bir veri üyesi türü bildirirseniz <xref:System.Collections.IEnumerable> ve örneği göndermek için kullanmak <xref:System.Collections.ArrayList>, eklemek gerekmez <xref:System.Collections.ArrayList> bilinen türleri için.  
@@ -318,7 +318,7 @@ svcutil.exe MyService.wsdl MyServiceSchema.xsd /r:C:\full_path_to_system_dll\Sys
   
 -   Koleksiyon türleri (koleksiyonların koleksiyon sahip) birleştirerek izin verilir. Basit diziler koleksiyonların koleksiyon olarak kabul edilir. Çok boyutlu diziler desteklenmiyor.  
   
--   Bayt ve dizilerin dizilerini <xref:System.Xml.XmlNode> değil koleksiyonları temel olarak davranılır özel dizi türleridir. Her bayt için ayrı bir öğe yerine Base64 olarak kodlanmış veri yığınını içeren tek bir XML öğesi sonuçlarında bayt dizisi seri hale getirme. [!INCLUDE[crabout](../../../../includes/crabout-md.md)] bir dizi nasıl <xref:System.Xml.XmlNode> olduğu kabul edilir, bkz: [XML ve ADO.NET türleri veri sözleşmelerinde](../../../../docs/framework/wcf/feature-details/xml-and-ado-net-types-in-data-contracts.md). Elbette, bu özel türleri kendilerini koleksiyonlarda katılabilir: bir dizi içeren her veri Base64 ile kodlanmış bir Öbek ile birden çok XML öğeleri sonuçlarında bayt dizisi.  
+-   Bayt ve dizilerin dizilerini <xref:System.Xml.XmlNode> değil koleksiyonları temel olarak davranılır özel dizi türleridir. Her bayt için ayrı bir öğe yerine Base64 olarak kodlanmış veri yığınını içeren tek bir XML öğesi sonuçlarında bayt dizisi seri hale getirme. Hakkında daha fazla bilgi için bir dizi <xref:System.Xml.XmlNode> olduğu kabul edilir, bkz: [XML ve ADO.NET türleri veri sözleşmelerinde](../../../../docs/framework/wcf/feature-details/xml-and-ado-net-types-in-data-contracts.md). Elbette, bu özel türleri kendilerini koleksiyonlarda katılabilir: bir dizi içeren her veri Base64 ile kodlanmış bir Öbek ile birden çok XML öğeleri sonuçlarında bayt dizisi.  
   
 -   Varsa <xref:System.Runtime.Serialization.DataContractAttribute> özniteliği bir koleksiyon türü uygulanır, türü normal veri sözleşmesi türü, bir koleksiyon olarak değil olarak kabul edilir.  
   
@@ -361,7 +361,7 @@ svcutil.exe MyService.wsdl MyServiceSchema.xsd /r:C:\full_path_to_system_dll\Sys
   
 -   Liste koleksiyonu veri sözleşmeleri için varsayılan adı adını kullanarak geçersiz kılınmadığı sürece derlemesinde türü veri sözleşme adı "ArrayOf" birlikte dizedir. Örneğin, veri sözleşmesi genel olarak tamsayılar listesi "ArrayOfint" adıdır. Adını veri sözleşmesi göz önünde bulundurmanız `Object` genel olmayan listeleri veri sözleşmesi adını ister "anyType" olduğundan <xref:System.Collections.ArrayList> "ArrayOfanyType" değil.  
   
- Sözlük koleksiyonu veriler için varsayılan ad sözleşmeler, kullanarak geçersiz kılınmadığı sürece `Name`, "ArrayOfKeyValueOf" birleştirilmiş değer türü veri sözleşmesi adını yazarak ve ardından anahtar türü veri sözleşme adı dizesi. Örneğin, veri sözleşmesi adı bir dize genel bir sözlük ve tamsayı olan "ArrayOfKeyValueOfstringint". Ayrıca, anahtar veya değer türleri ilkel türler emin değilseniz, anahtar ve değer türleri veri sözleşmesi ad alanları bir ad alanı karma ada eklenir. [!INCLUDE[crabout](../../../../includes/crabout-md.md)] ad alanı karmaları bkz [veri sözleşmesi adları](../../../../docs/framework/wcf/feature-details/data-contract-names.md).  
+ Sözlük koleksiyonu veriler için varsayılan ad sözleşmeler, kullanarak geçersiz kılınmadığı sürece `Name`, "ArrayOfKeyValueOf" birleştirilmiş değer türü veri sözleşmesi adını yazarak ve ardından anahtar türü veri sözleşme adı dizesi. Örneğin, veri sözleşmesi adı bir dize genel bir sözlük ve tamsayı olan "ArrayOfKeyValueOfstringint". Ayrıca, anahtar veya değer türleri ilkel türler emin değilseniz, anahtar ve değer türleri veri sözleşmesi ad alanları bir ad alanı karma ada eklenir. Ad alanı karmaları hakkında daha fazla bilgi için bkz: [veri sözleşmesi adları](../../../../docs/framework/wcf/feature-details/data-contract-names.md).  
   
  Her sözlük koleksiyon veri sözleşmesi sözlükteki bir girişini temsil eden bir yardımcı veri sözleşmesi sahiptir. Adı "ArrayOf" öneki dışında sözlük veri sözleşmesi ile aynıdır ve kendi ad sözlük veri sözleşmesi ile aynıdır. Örneğin, "ArrayOfKeyValueOfstringint" sözlük veri sözleşmesi için bir giriş sözlükteki "KeyValueofstringint" veri sözleşmesi temsil eder. Bu veri sözleşmesi adını kullanarak özelleştirebileceğiniz `ItemName` sonraki bölümde açıklandığı gibi özelliği.  
   

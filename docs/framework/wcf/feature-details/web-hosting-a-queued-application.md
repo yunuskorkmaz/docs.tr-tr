@@ -1,31 +1,33 @@
 ---
-title: "Kuyruğa Alınan Bir Uygulamayı Web'de Barındırma"
-ms.custom: 
+title: Kuyruğa Alınan Bir Uygulamayı Web'de Barındırma
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: c7a539fa-e442-4c08-a7f1-17b7f5a03e88
-caps.latest.revision: "18"
+caps.latest.revision: 18
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: a12348c3c49c29812530bc568bb5873ec53f7eb5
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 7b7168d5283a0dbe1001631f855e493335576a80
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="web-hosting-a-queued-application"></a>Kuyruğa Alınan Bir Uygulamayı Web'de Barındırma
 Windows İşlem Etkinleştirme Hizmeti (WAS) etkinleştirme ve uygulamaları barındıran içeren çalışan işlemleri ömrü yönetir [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] Hizmetleri. WAS işlem modelini genelleştirir [!INCLUDE[iis601](../../../../includes/iis601-md.md)] işlem modeli HTTP bağımlılığını kaldırarak HTTP sunucusu. Böylece [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] hizmetleri hem HTTP hem de net.msmq ve ileti tabanlı etkinleştirme destekler ve verilen bir bilgisayardaki uygulamaları, çok sayıda konak olanağı sunar bir barındırma ortamında msmq.formatname gibi HTTP olmayan protokolleri kullanır.  
   
  OLAN bir veya daha fazla iletiler bir uygulama tarafından kullanılan sıraların yerleştirilir kuyruğa alınan bir uygulamayı etkinleştirir bir Message Queuing (MSMQ) etkinleştirme hizmeti içerir. MSMQ Etkinleştirme hizmeti varsayılan olarak otomatik olarak başlatılan bir NT hizmetidir.  
   
- [!INCLUDE[crabout](../../../../includes/crabout-md.md)]WAS ve onun avantajlarını bkz [Windows İşlem Etkinleştirme hizmetinde barındırma](../../../../docs/framework/wcf/feature-details/hosting-in-windows-process-activation-service.md). [!INCLUDE[crabout](../../../../includes/crabout-md.md)]MSMQ bkz [kuyruklar genel bakış](../../../../docs/framework/wcf/feature-details/queues-overview.md)  
+ WAS ve onun avantajlarını hakkında daha fazla bilgi için bkz: [Windows İşlem Etkinleştirme hizmetinde barındırma](../../../../docs/framework/wcf/feature-details/hosting-in-windows-process-activation-service.md). MSMQ hakkında daha fazla bilgi için bkz: [kuyruklar genel bakış](../../../../docs/framework/wcf/feature-details/queues-overview.md)  
   
 ## <a name="queue-addressing-in-was"></a>WAS içinde adresleme sırası  
  Uygulamaları Tekdüzen Kaynak Tanımlayıcısı (URI) adreslerine sahip oldu. Uygulama adreslerine sahip iki bölümden oluşur: temel bir URI öneki ve uygulamaya özgü, göreli adresi (yol). Bu iki bölümden birlikte katıldığında bir uygulama için dış adresini sağlayın. Taban URI öneki site bağlamayı oluşturulur ve örneğin, "net.msmq://localhost", "msmq.formatname://localhost" veya "net.tcp://localhost" site altındaki tüm uygulamalar için kullanılır. Uygulama adresleri ardından oluşturulur uygulamaya özgü yol parçaları gerçekleştirerek (gibi "/ applicationOne") ve taban URI ekleme önek tam uygulamayı URI, örneğin, gelmesi "net.msmq://localhost/applicationOne".  

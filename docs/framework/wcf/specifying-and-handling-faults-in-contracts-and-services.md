@@ -18,11 +18,11 @@ ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: 70f8c1f89a5570f5b77eaba1bf72c42706d88947
-ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
+ms.openlocfilehash: 00b3687169aa2e5521a3e3348be2a45738e97093
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/28/2018
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="specifying-and-handling-faults-in-contracts-and-services"></a>Sözleşme ve Hizmetlerde Hataları Belirtme ve İşleme
 [!INCLUDE[indigo1](../../../includes/indigo1-md.md)] uygulamaları, SOAP hataya ve SOAP hataya nesneleri yönetilen özel durum nesneleri için yönetilen özel durum nesneleri eşleme tarafından hata durumları işler. Bu bölümdeki konular, koşul olarak özel SOAP hataları, hizmet uygulaması'nın bir parçası olarak bu tür hataları döndürmek nasıl ve nasıl böyle hatası istemciler catch hata kullanıma sunmak için sözleşmeleri tasarlamak nasıl tartışın.  
@@ -47,7 +47,7 @@ ms.lasthandoff: 04/28/2018
 ## <a name="map-exceptions-to-soap-faults"></a>SOAP hataları için özel durumları eşleme  
  Hata koşullarını işleme bir işlem oluşturmanın ilk adımı, hangi koşullar altında bir istemci uygulama hataları hakkında bilgi sahibi olmak karar vermektir. Hata koşulları işlevselliklerini belirli bazı işlemler vardır. Örneğin, bir `PurchaseOrder` işlemi artık bir satın alma siparişi başlatmak için izin verilen müşterileri için belirli bilgiler döndürebilir. Diğer durumlarda, aşağıdaki gibi bir `Calculator` hizmet, daha genel `MathFault` bir SOAP hatası tüm bir hizmetin tüm hata koşullarını tanımlamak kullanabilirsiniz. Hizmetinizin istemcileri hata koşullarını tanımlandıktan sonra özel bir SOAP hatası oluşturulabilir ve işlem, ilgili hata koşulu duyduğunuzda, bir SOAP hatası döndürerek olarak işaretlenebilir.  
   
- [!INCLUDE[crabout](../../../includes/crabout-md.md)] Bu adım olarak hizmet veya istemci, geliştirme bkz [tanımlama ve belirtme hataları](../../../docs/framework/wcf/defining-and-specifying-faults.md).  
+ Hizmet veya istemci geliştirme Bu adım hakkında daha fazla bilgi için bkz: [tanımlama ve belirtme hataları](../../../docs/framework/wcf/defining-and-specifying-faults.md).  
   
 ## <a name="clients-and-services-handle-soap-faults-as-exceptions"></a>İstemcileri ve Hizmetleri SOAP hataları özel durumları işleme  
  İşlem hata koşullarını tanımlamak, özel SOAP hataları tanımlama ve bu işlemler bu hataları döndürüyor olarak işaretleme olan ilk adımlar başarılı hata içinde işleme [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] uygulamalar. Sonraki adım düzgün bir şekilde gönderme ve alma bu hatalarının uygulamaktır. Genellikle Hizmetleri istemci uygulamaları hata koşulları hakkında bilgilendirmek için hataları gönderme, ancak çift yönlü istemcileri de Hizmetleri SOAP hataları gönderebilirsiniz.  

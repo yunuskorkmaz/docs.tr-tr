@@ -42,14 +42,14 @@ ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: ae454e54abc2c8200f33bdb0bc5537806c824074
-ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
+ms.openlocfilehash: c379a1db6b825a8ede7866661c11bdbf43cd630c
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="wpf-windows-overview"></a>WPF Windows'a Genel Bakış
-Kullanıcıların etkileşimde [!INCLUDE[TLA#tla_wpf](../../../../includes/tlasharptla-wpf-md.md)] tek başına uygulamalar windows aracılığıyla. Veri visualizes ve kullanıcıların veri ile etkileşim kurmasına olanak sağlayan içeriği barındırmak için bir pencere birincil amacı budur. Tek başına [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] uygulamaları kullanarak kendi windows sağlamak <xref:System.Windows.Window> sınıfı. Bu konu tanıtır <xref:System.Windows.Window> oluşturma ve tek başına uygulamaları Windows'ta yönetme temellerini kapsayan önce.  
+Kullanıcılar, Windows Presentation Foundation (WPF) tek başına uygulamalar windows aracılığıyla etkileşim. Veri visualizes ve kullanıcıların veri ile etkileşim kurmasına olanak sağlayan içeriği barındırmak için bir pencere birincil amacı budur. Tek başına [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] uygulamaları kullanarak kendi windows sağlamak <xref:System.Windows.Window> sınıfı. Bu konu tanıtır <xref:System.Windows.Window> oluşturma ve tek başına uygulamaları Windows'ta yönetme temellerini kapsayan önce.  
   
 > [!NOTE]
 >  Tarayıcıda barındırılan [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] gibi uygulamaları [!INCLUDE[TLA#tla_xbap#plural](../../../../includes/tlasharptla-xbapsharpplural-md.md)] ve gevşek [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)] sayfaları, kendi windows sağlayan yok. Windows tarafından sağlanan bunun yerine, barındırılan [!INCLUDE[TLA#tla_iegeneric](../../../../includes/tlasharptla-iegeneric-md.md)]. Bkz: [WPF XAML tarayıcısı uygulamaları genel bakış](../../../../docs/framework/wpf/app-development/wpf-xaml-browser-applications-overview.md).  

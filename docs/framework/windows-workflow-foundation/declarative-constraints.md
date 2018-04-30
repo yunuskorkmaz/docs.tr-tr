@@ -14,11 +14,11 @@ ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: f5ab784498805473830b46962d9e02591fc3eace
-ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
+ms.openlocfilehash: 4406bbbe7780fabc8872718ca21e8d755ea85c59
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/28/2018
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="declarative-constraints"></a>Bildirim temelli kısıtlamaları
 Bildirim temelli kısıtlamaları bir etkinlik ve diğer etkinlikler ilişkilerini için güçlü bir yöntem doğrulama sağlayın. Kısıtlamaları yazma işlemi sırasında bir etkinlik için yapılandırılmış, ancak ek kısıtlamalar iş akışı ana bilgisayar tarafından da belirtilebilir. Bu konu, etkinlik doğrulama sağlamak için bildirim temelli kısıtlamaları kullanarak genel bir bakış sağlar.  
@@ -188,4 +188,4 @@ else
 }  
 ```  
   
- Varsa <xref:System.Activities.Validation.ValidationSettings.OnlyUseAdditionalConstraints%2A> özelliği <xref:System.Activities.Validation.ValidationSettings> olan `true`, yalnızca belirtilen ek kısıtlamalar doğrulama çağırarak çağrıldığında değerlendirilir sonra <xref:System.Activities.Validation.ActivityValidationServices.Validate%2A>. Bu, belirli doğrulama yapılandırmaları için iş akışlarını incelemek için yararlı olabilir. Ancak iş akışı çağrıldığında iş akışı içinde yapılandırılmış doğrulama mantığını değerlendirilir ve başarılı bir şekilde başlamak iş akışı için geçmesi gereken unutmayın. [!INCLUDE[crabout](../../../includes/crabout-md.md)] doğrulama, çağırma bkz [çağırma etkinlik doğrulama](../../../docs/framework/windows-workflow-foundation/invoking-activity-validation.md).
+ Varsa <xref:System.Activities.Validation.ValidationSettings.OnlyUseAdditionalConstraints%2A> özelliği <xref:System.Activities.Validation.ValidationSettings> olan `true`, yalnızca belirtilen ek kısıtlamalar doğrulama çağırarak çağrıldığında değerlendirilir sonra <xref:System.Activities.Validation.ActivityValidationServices.Validate%2A>. Bu, belirli doğrulama yapılandırmaları için iş akışlarını incelemek için yararlı olabilir. Ancak iş akışı çağrıldığında iş akışı içinde yapılandırılmış doğrulama mantığını değerlendirilir ve başarılı bir şekilde başlamak iş akışı için geçmesi gereken unutmayın. Doğrulama çağırma hakkında daha fazla bilgi için bkz: [çağırma etkinlik doğrulama](../../../docs/framework/windows-workflow-foundation/invoking-activity-validation.md).

@@ -14,14 +14,14 @@ ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: 7085b9069235de7cd8754937f9f6facdf60cd5b3
-ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
+ms.openlocfilehash: f131d644d58359cec305b83c136e6fe7f68a1b93
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/27/2018
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="externalized-policy-activity-in-net-framework-45"></a>.NET Framework 4.5 externalized ilke etkinlik
-Bu örnek varolan yürütme ExternalizedPolicy4 etkinlik nasıl sağladığını gösterir [!INCLUDE[netfx35_long](../../../../includes/netfx35-long-md.md)] Windows Workflow Foundation (WF 3.5) <xref:System.Workflow.Activities.Rules.RuleSet> nesnelerini [!INCLUDE[netfx_current_long](../../../../includes/netfx-current-long-md.md)] Windows Workflow kurallar altyapısı kullanarak doğrudan Foundation (WF 4.5) Bu WF 3. 5 ' gönderilmektedir. Bu etkinlik kullanarak açın ve varolan tüm WF 3.5 yürütme <xref:System.Workflow.Activities.Rules.RuleSet>. [!INCLUDE[crabout](../../../../includes/crabout-md.md)] WF 3.5 kural Windows Workflow Foundation, bir parçası olarak dahil edilen altyapısı okuyun [Windows Workflow Foundation kurallar altyapısı giriş](http://go.microsoft.com/fwlink/?LinkId=166079). [!INCLUDE[crabout](../../../../includes/crabout-md.md)] taşıma kuralları [!INCLUDE[wf1](../../../../includes/wf1-md.md)] içinde [!INCLUDE[netfx_current_short](../../../../includes/netfx-current-short-md.md)], lütfen adresindeki Geçiş Kılavuzu okuyun [Geçiş Kılavuzu](../../../../docs/framework/windows-workflow-foundation/migration-guidance.md).  
+Bu örnek varolan yürütme ExternalizedPolicy4 etkinlik nasıl sağladığını gösterir [!INCLUDE[netfx35_long](../../../../includes/netfx35-long-md.md)] Windows Workflow Foundation (WF 3.5) <xref:System.Workflow.Activities.Rules.RuleSet> nesnelerini [!INCLUDE[netfx_current_long](../../../../includes/netfx-current-long-md.md)] Windows Workflow kurallar altyapısı kullanarak doğrudan Foundation (WF 4.5) Bu WF 3. 5 ' gönderilmektedir. Bu etkinlik kullanarak açın ve varolan tüm WF 3.5 yürütme <xref:System.Workflow.Activities.Rules.RuleSet>. Windows Workflow Foundation bir parçası olarak dahil edilen WF 3.5 kurallar altyapısı hakkında daha fazla bilgi için lütfen okuyun [Windows Workflow Foundation kurallar altyapısı giriş](http://go.microsoft.com/fwlink/?LinkId=166079). Geçiş hakkında daha fazla bilgi için kurallar [!INCLUDE[wf1](../../../../includes/wf1-md.md)] içinde [!INCLUDE[netfx_current_short](../../../../includes/netfx-current-short-md.md)], lütfen adresindeki Geçiş Kılavuzu okuyun [Geçiş Kılavuzu](../../../../docs/framework/windows-workflow-foundation/migration-guidance.md).  
   
 ## <a name="projects-in-this-sample"></a>Bu örnek proje  
   

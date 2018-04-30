@@ -19,11 +19,11 @@ ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: c7abf272cb1d069b0fbdcd561256580de5a82c29
-ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
+ms.openlocfilehash: d9427d091855a4f658cc971ceca1116cfd74e2ab
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/28/2018
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="nettcp-port-sharing"></a>Net.TCP Bağlantı Noktası Paylaşımı
 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] Yeni bir TCP tabanlı ağ protokolü (net.tcp://) için yüksek performanslı iletişim sağlar. [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] aynı zamanda yeni bir sistem bileşeni olan birden çok kullanıcı işlemleri arasında paylaşılacak net.tcp bağlantı noktalarını etkinleştirir Net.TCP bağlantı noktası Paylaşımı hizmeti sunar.  
@@ -56,7 +56,7 @@ ms.lasthandoff: 04/28/2018
 ## <a name="using-nettcp-port-sharing-in-an-application"></a>NET.TCP bir uygulamada bağlantı noktası kullanma  
  İçinde net.tcp:// bağlantı noktası kullanmak için en kolay yolu, [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] uygulamasıdır kullanarak hizmet kullanıma sunmak için <xref:System.ServiceModel.NetTcpBinding> ve ardından Net.TCP bağlantı noktası Paylaşımı hizmeti kullanarak etkinleştirmek için <xref:System.ServiceModel.NetTcpBinding.PortSharingEnabled%2A> özelliği.  
   
- [!INCLUDE[crabout](../../../../includes/crabout-md.md)] Bunu yapmak için bkz: nasıl [nasıl yapılır: bir WCF hizmetini kullan bağlantı noktası paylaşımı için yapılandırma](../../../../docs/framework/wcf/feature-details/how-to-configure-a-wcf-service-to-use-port-sharing.md).  
+ Bunun nasıl yapılacağı hakkında daha fazla bilgi için bkz: [nasıl yapılır: bir WCF hizmetini kullan bağlantı noktası paylaşımı için yapılandırma](../../../../docs/framework/wcf/feature-details/how-to-configure-a-wcf-service-to-use-port-sharing.md).  
   
 ## <a name="security-implications-of-port-sharing"></a>Bağlantı noktası paylaşımı güvenlik etkileri  
  Net.TCP bağlantı noktası Paylaşımı hizmeti işlemleri uygulamalar ve ağ arasında bir katmanı sağlasa da, ağ üzerinde doğrudan dinleme gibi bağlantı noktası Paylaşımı kullanan uygulamalar yine güvenli hale getirilmelidir. Özellikle, bağlantı noktası Paylaşımı kullanan uygulamalar, altında çalıştığı işlem ayrıcalıkları değerlendirmelisiniz. Ağ iletişimi için gereken işlem ayrıcalıklar en az sayıda ile çalıştırır yerleşik ağ hizmeti hesabını kullanarak uygulamanızı çalıştıran göz önünde bulundurun.  

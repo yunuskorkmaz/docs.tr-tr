@@ -1,12 +1,13 @@
 ---
-title: "WPF Uygulama Kaynağı, İçerik ve Veri Dosyaları"
-ms.custom: 
+title: WPF Uygulama Kaynağı, İçerik ve Veri Dosyaları
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-wpf
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-wpf
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - csharp
@@ -24,19 +25,20 @@ helpviewer_keywords:
 - application development [WPF], files
 - application management [WPF]
 ms.assetid: 7ad2943b-3961-41d3-8fc6-1582d43f5d99
-caps.latest.revision: "25"
+caps.latest.revision: 25
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 284c3b6788fd43a10d65cfa8bd6c032e4b1e1cd6
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: bcf0a725b7b3467a50a9f51850709dd972da217d
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="wpf-application-resource-content-and-data-files"></a>WPF Uygulama Kaynağı, İçerik ve Veri Dosyaları
-[!INCLUDE[TLA#tla_win](../../../../includes/tlasharptla-win-md.md)]uygulamalar genellikle gibi yürütülebilir olmayan veri içeren dosyaları bağımlı [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)], resim, video ve ses. [!INCLUDE[TLA#tla_wpf](../../../../includes/tlasharptla-wpf-md.md)]yapılandırma, tanımlayan ve bu tür bir uygulama verileri dosyaları adı verilen veri dosyalarını kullanmak için özel destek sağlar. Bu destek, uygulama verilerini dosya türleri dahil olmak üzere, belirli bir dizi döner:  
+[!INCLUDE[TLA#tla_win](../../../../includes/tlasharptla-win-md.md)] uygulamalar genellikle gibi yürütülebilir olmayan veri içeren dosyaları bağımlı [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)], resim, video ve ses. Windows Presentation Foundation (WPF) yapılandırma, tanımlayan ve bu tür bir uygulama verileri dosyaları adı verilen veri dosyalarını kullanmak için özel destek sağlar. Bu destek, uygulama verilerini dosya türleri dahil olmak üzere, belirli bir dizi döner:  
   
 -   **Kaynak dosyaları**: bir yürütülebilir dosya veya kitaplık derlenmiş veri dosyaları [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] derleme.  
   
@@ -46,7 +48,7 @@ ms.lasthandoff: 12/22/2017
   
  Bu dosyaları üç türleri arasında yapmak için bir önemli fark, kaynak dosyaları ve içerik dosyalarının derleme zamanında bilinen olur; bir derleme bunların açık bilgisine sahiptir. Kaynak dosyaları sitesi için Bununla birlikte, bir derlemeyi bunları olanağıyla hiç olabilir veya bir paketi aracılığıyla örtülü bilgisi [!INCLUDE[TLA#tla_uri](../../../../includes/tlasharptla-uri-md.md)] başvuru; durumunda İkincisi, kaynak dosya başvurulan sitesinin gerçekten var garantisi yoktur.  
   
- Uygulama verileri dosyaları, başvurmak için [!INCLUDE[TLA#tla_wpf](../../../../includes/tlasharptla-wpf-md.md)] paketi kullanan [!INCLUDE[TLA#tla_uri](../../../../includes/tlasharptla-uri-md.md)] içinde ayrıntılı olarak açıklanmıştır düzeni [Pack URI WPF'de](../../../../docs/framework/wpf/app-development/pack-uris-in-wpf.md)).  
+ Uygulama verileri dosyaları başvurmak için paketi Windows Presentation Foundation (WPF) kullanan [!INCLUDE[TLA#tla_uri](../../../../includes/tlasharptla-uri-md.md)] içinde ayrıntılı olarak açıklanmıştır düzeni [Pack URI WPF'de](../../../../docs/framework/wpf/app-development/pack-uris-in-wpf.md)).  
   
  Bu konuda, yapılandırma ve uygulama verileri dosyaları kullanma açıklar.  
   
@@ -85,7 +87,7 @@ ms.lasthandoff: 12/22/2017
  Proje yapılandırıldığında [!INCLUDE[TLA2#tla_msbuild](../../../../includes/tla2sharptla-msbuild-md.md)] kaynak bütünleştirilmiş koda derler.  
   
 ### <a name="using-resource-files"></a>Kaynak dosyalarını kullanma  
- Kaynak dosyayı yüklemek için çağırabilirsiniz <xref:System.Windows.Application.GetResourceStream%2A> yöntemi <xref:System.Windows.Application> sınıfı, bir paketi geçirme [!INCLUDE[TLA2#tla_uri](../../../../includes/tla2sharptla-uri-md.md)] istenen kaynak dosyayı tanımlar. <xref:System.Windows.Application.GetResourceStream%2A>döndüren bir <xref:System.Windows.Resources.StreamResourceInfo> olarak kaynak dosyayı sunan nesnesi bir <xref:System.IO.Stream> ve içerik türünü açıklar.  
+ Kaynak dosyayı yüklemek için çağırabilirsiniz <xref:System.Windows.Application.GetResourceStream%2A> yöntemi <xref:System.Windows.Application> sınıfı, bir paketi geçirme [!INCLUDE[TLA2#tla_uri](../../../../includes/tla2sharptla-uri-md.md)] istenen kaynak dosyayı tanımlar. <xref:System.Windows.Application.GetResourceStream%2A> döndüren bir <xref:System.Windows.Resources.StreamResourceInfo> olarak kaynak dosyayı sunan nesnesi bir <xref:System.IO.Stream> ve içerik türünü açıklar.  
   
  Örnek olarak, aşağıdaki kodu nasıl kullanılacağını gösterir. <xref:System.Windows.Application.GetResourceStream%2A> yüklemek için bir <xref:System.Windows.Controls.Page> kaynak dosyasını ve içeriği olarak ayarlanmış bir <xref:System.Windows.Controls.Frame> (`pageFrame`):  
   
@@ -165,7 +167,7 @@ ms.lasthandoff: 12/22/2017
  <xref:System.Windows.Resources.AssemblyAssociatedContentFileAttribute> Değeri değeridir ayrıca yapı çıkış klasöründe içerik dosyasının yolu.  
   
 ### <a name="using-content-files"></a>İçerik dosyalarını kullanma  
- Bir içerik dosyası yüklemek için çağırabilirsiniz <xref:System.Windows.Application.GetContentStream%2A> yöntemi <xref:System.Windows.Application> sınıfı, bir paketi geçirme [!INCLUDE[TLA2#tla_uri](../../../../includes/tla2sharptla-uri-md.md)] istenen içerik dosyasını tanımlar. <xref:System.Windows.Application.GetContentStream%2A>döndüren bir <xref:System.Windows.Resources.StreamResourceInfo> olarak içerik dosyasını sunan nesnesi bir <xref:System.IO.Stream> ve içerik türünü açıklar.  
+ Bir içerik dosyası yüklemek için çağırabilirsiniz <xref:System.Windows.Application.GetContentStream%2A> yöntemi <xref:System.Windows.Application> sınıfı, bir paketi geçirme [!INCLUDE[TLA2#tla_uri](../../../../includes/tla2sharptla-uri-md.md)] istenen içerik dosyasını tanımlar. <xref:System.Windows.Application.GetContentStream%2A> döndüren bir <xref:System.Windows.Resources.StreamResourceInfo> olarak içerik dosyasını sunan nesnesi bir <xref:System.IO.Stream> ve içerik türünü açıklar.  
   
  Örnek olarak, aşağıdaki kodu nasıl kullanılacağını gösterir. <xref:System.Windows.Application.GetContentStream%2A> yüklemek için bir <xref:System.Windows.Controls.Page> içerik dosyasını ve içeriği olarak ayarlanmış bir <xref:System.Windows.Controls.Frame> (`pageFrame`).  
   
@@ -227,7 +229,7 @@ ms.lasthandoff: 12/22/2017
  Proje yapılandırıldığında [!INCLUDE[TLA2#tla_msbuild](../../../../includes/tla2sharptla-msbuild-md.md)] belirtilen dosyaları yapı çıktı klasörüne kopyalar.  
   
 ### <a name="using-site-of-origin-files"></a>Kaynak dosyaları sitesi kullanma  
- Kaynak dosya sitesini yüklemek için çağırabilirsiniz <xref:System.Windows.Application.GetRemoteStream%2A> yöntemi <xref:System.Windows.Application> sınıfı, bir paketi geçirme [!INCLUDE[TLA2#tla_uri](../../../../includes/tla2sharptla-uri-md.md)] kaynak dosya istenen site tanımlar. <xref:System.Windows.Application.GetRemoteStream%2A>döndüren bir <xref:System.Windows.Resources.StreamResourceInfo> site kaynak dosya kullanıma sunar nesnesi bir <xref:System.IO.Stream> ve içerik türünü açıklar.  
+ Kaynak dosya sitesini yüklemek için çağırabilirsiniz <xref:System.Windows.Application.GetRemoteStream%2A> yöntemi <xref:System.Windows.Application> sınıfı, bir paketi geçirme [!INCLUDE[TLA2#tla_uri](../../../../includes/tla2sharptla-uri-md.md)] kaynak dosya istenen site tanımlar. <xref:System.Windows.Application.GetRemoteStream%2A> döndüren bir <xref:System.Windows.Resources.StreamResourceInfo> site kaynak dosya kullanıma sunar nesnesi bir <xref:System.IO.Stream> ve içerik türünü açıklar.  
   
  Örnek olarak, aşağıdaki kodu nasıl kullanılacağını gösterir. <xref:System.Windows.Application.GetRemoteStream%2A> yüklemek için bir <xref:System.Windows.Controls.Page> kaynak site dosya ve içeriği olarak ayarlanmış bir <xref:System.Windows.Controls.Frame> (`pageFrame`).  
   

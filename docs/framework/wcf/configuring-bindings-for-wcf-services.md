@@ -1,28 +1,28 @@
 ---
-title: "Windows Communication Foundation Hizmetleri için Bağlamaları Yapılandırma"
-ms.custom: 
+title: Windows Communication Foundation Hizmetleri için Bağlamaları Yapılandırma
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - dotnet-clr
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - binding configuration [WCF]
 ms.assetid: 99a85fd8-f7eb-4a84-a93e-7721b37d415c
-caps.latest.revision: 
+caps.latest.revision: 36
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: b11810e0a39c5b6091a63ef33e5abfccb95b7555
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: f98d7c7b7d816687487a652f0527886300f0ee86
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="configuring-bindings-for-windows-communication-foundation-services"></a>Windows Communication Foundation Hizmetleri için Bağlamaları Yapılandırma
 Bir uygulama oluştururken, genellikle uygulama dağıtımdan sonra yönetici kararları erteleneceği istersiniz. Örneğin, genellikle bir hizmet adresi ya da Tekdüzen Kaynak Tanımlayıcısı (URI) ne olacağını önceden bilmesinin yolu yoktur. Sabit bir adresi kodlama yerine, bir hizmet oluşturduktan sonra bunu yapmak için yönetici izin vermek için tercih edilir. Bu esneklik yapılandırma aracılığıyla gerçekleştirilir.  
@@ -47,13 +47,13 @@ Bir uygulama oluştururken, genellikle uygulama dağıtımdan sonra yönetici ka
 ```  
   
 ### <a name="servicemodel-elements"></a>ServiceModel öğeleri  
- İlişkisindeki tarafından bölüm kullanabilirsiniz `system.ServiceModel` öğesi bir hizmet türünün bir veya daha fazla uç noktaları gibi bir hizmete yönelik ayarları yapılandırın. Her uç nokta bir adresi, bir sözleşme ve bağlama ile yapılandırılabilir. [!INCLUDE[crabout](../../../includes/crabout-md.md)]uç noktaları, bkz: [uç noktası oluşturma genel bakış](../../../docs/framework/wcf/endpoint-creation-overview.md). Uç nokta yok belirtilirse, çalışma zamanı varsayılan uç noktaları ekler. [!INCLUDE[crabout](../../../includes/crabout-md.md)]Varsayılan uç noktalar, bağlamaları ve davranışları, bkz: [Basitleştirilmiş yapılandırma](../../../docs/framework/wcf/simplified-configuration.md) ve [WCF hizmetleri için Basitleştirilmiş yapılandırma](../../../docs/framework/wcf/samples/simplified-configuration-for-wcf-services.md).  
+ İlişkisindeki tarafından bölüm kullanabilirsiniz `system.ServiceModel` öğesi bir hizmet türünün bir veya daha fazla uç noktaları gibi bir hizmete yönelik ayarları yapılandırın. Her uç nokta bir adresi, bir sözleşme ve bağlama ile yapılandırılabilir. Uç noktalar hakkında daha fazla bilgi için bkz: [uç noktası oluşturma genel bakış](../../../docs/framework/wcf/endpoint-creation-overview.md). Uç nokta yok belirtilirse, çalışma zamanı varsayılan uç noktaları ekler. Varsayılan uç noktalar, bağlamaları ve davranışları hakkında daha fazla bilgi için bkz: [Basitleştirilmiş yapılandırma](../../../docs/framework/wcf/simplified-configuration.md) ve [WCF hizmetleri için Basitleştirilmiş yapılandırma](../../../docs/framework/wcf/samples/simplified-configuration-for-wcf-services.md).  
   
  Bir bağlama taşımaları (HTTP, TCP, Kanallar, Message Queuing) ve protokolleri (güvenlik, güvenilirlik, işlem akışları) belirtir ve bağlama öğeleri, her biri bir uç nokta nasıl iletişim kurduğu en/boy dünyayla belirtir oluşur.  
   
  Örneğin, belirten [ \<basicHttpBinding >](../../../docs/framework/configure-apps/file-schema/wcf/basichttpbinding.md) öğesi belirten HTTP taşıma olarak bir uç noktası için kullanılacak. Bu kullanılan kablo uç noktası Bu uç nokta kullanarak hizmet açıldığında çalışma zamanında ayarlama için.  
   
- Bağlamalar iki tür vardır: önceden tanımlanmış ve özel. Önceden tanımlanmış bağlamaları yararlı birleşimlerini ortak senaryolarda kullanılır öğeleri içerir. Önceden tanımlanmış bağlama listesi türleri için [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] sağlar, bkz: [System-Provided bağlamaları](../../../docs/framework/wcf/system-provided-bindings.md). Önceden tanımlanmış bağlama koleksiyonu bir hizmet uygulaması gereken özellikleri doğru birleşimini varsa, uygulamanın gereksinimlerini karşılamak için özel bağlamalar oluşturabilirsiniz. [!INCLUDE[crabout](../../../includes/crabout-md.md)]Özel bağlamalar bkz [ \<customBinding >](../../../docs/framework/configure-apps/file-schema/wcf/custombinding.md).  
+ Bağlamalar iki tür vardır: önceden tanımlanmış ve özel. Önceden tanımlanmış bağlamaları yararlı birleşimlerini ortak senaryolarda kullanılır öğeleri içerir. Önceden tanımlanmış bağlama listesi türleri için [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] sağlar, bkz: [System-Provided bağlamaları](../../../docs/framework/wcf/system-provided-bindings.md). Önceden tanımlanmış bağlama koleksiyonu bir hizmet uygulaması gereken özellikleri doğru birleşimini varsa, uygulamanın gereksinimlerini karşılamak için özel bağlamalar oluşturabilirsiniz. Özel bağlama hakkında daha fazla bilgi için bkz: [ \<customBinding >](../../../docs/framework/configure-apps/file-schema/wcf/custombinding.md).  
   
  Aşağıdaki dört örnekler ayarlamak için kullanılan en yaygın bağlama yapılandırmaları göstermek bir [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] hizmet.  
   
@@ -71,7 +71,7 @@ Bir uygulama oluştururken, genellikle uygulama dağıtımdan sonra yönetici ka
 </service>  
 ```  
   
- Bu örnekte, `name` özniteliği yapılandırmadır için hangi hizmet türünü gösterir. Kodunuzu ile bir hizmet oluşturduğunuzda `HelloWorld` sözleşme, örnek yapılandırmada tanımlanan bitiş noktalarının tümü ile başlatıldı. Derleme yalnızca bir hizmet sözleşmesi, uyguluyorsa `name` hizmeti yalnızca kullanılabilir türü kullandığından özniteliği'nin etmeyebilirsiniz. Öznitelik biçiminde olması gereken bir dize alır`Namespace.Class, AssemblyName, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null`  
+ Bu örnekte, `name` özniteliği yapılandırmadır için hangi hizmet türünü gösterir. Kodunuzu ile bir hizmet oluşturduğunuzda `HelloWorld` sözleşme, örnek yapılandırmada tanımlanan bitiş noktalarının tümü ile başlatıldı. Derleme yalnızca bir hizmet sözleşmesi, uyguluyorsa `name` hizmeti yalnızca kullanılabilir türü kullandığından özniteliği'nin etmeyebilirsiniz. Öznitelik biçiminde olması gereken bir dize alır `Namespace.Class, AssemblyName, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null`  
   
  `address` Özniteliği, diğer uç noktaları için hizmet iletişim kurmak için kullandıkları URI belirtir. URI mutlak veya göreli yol ya da olabilir. Göreli bir adresi sağlanırsa, konak bağlama kullanılan aktarma düzeni için uygun bir taban adresi sağlaması beklenir. Bir adresi yapılandırılmamışsa, taban adresi Bu uç nokta adresi olduğu varsayılır.  
   

@@ -1,12 +1,13 @@
 ---
-title: "Özel İşleme Mürekkebi"
-ms.custom: 
+title: Özel İşleme Mürekkebi
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-wpf
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-wpf
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - csharp
@@ -16,19 +17,20 @@ helpviewer_keywords:
 - ink [WPF], custom-rendering
 - classes [WPF], InkCanvas
 ms.assetid: 65c978a7-0ee0-454f-ac7f-b1bd2efecac5
-caps.latest.revision: "10"
+caps.latest.revision: 10
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 481990acdf2f5b8f798144d36434569b9e2cd481
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: e8f7288d9d3b729ab9c38bc6b2afd603b4d6d1aa
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="custom-rendering-ink"></a>Özel İşleme Mürekkebi
-<xref:System.Windows.Ink.Stroke.DrawingAttributes%2A> Vuruş özelliğinin boyutunu, rengini ve şekil gibi bir vuruş görünümünü belirtmenize olanak verir, ancak ne ötesinde görünümünü özelleştirmek istediğiniz zamanlar olabilir <xref:System.Windows.Ink.Stroke.DrawingAttributes%2A> izin verin. Hava fırça, Petrol boyama ve diğer birçok efekt görünümünü işlemede tarafından mürekkep görünümünü özelleştirmek isteyebilirsiniz. [!INCLUDE[TLA#tla_wpf](../../../../includes/tlasharptla-wpf-md.md)] , Özel işleme mürekkep özel bir uygulama tarafından verir <xref:System.Windows.Input.StylusPlugIns.DynamicRenderer> ve <xref:System.Windows.Ink.Stroke> nesne.  
+<xref:System.Windows.Ink.Stroke.DrawingAttributes%2A> Vuruş özelliğinin boyutunu, rengini ve şekil gibi bir vuruş görünümünü belirtmenize olanak verir, ancak ne ötesinde görünümünü özelleştirmek istediğiniz zamanlar olabilir <xref:System.Windows.Ink.Stroke.DrawingAttributes%2A> izin verin. Hava fırça, Petrol boyama ve diğer birçok efekt görünümünü işlemede tarafından mürekkep görünümünü özelleştirmek isteyebilirsiniz. Windows Presentation Foundation (WPF), özel işleme mürekkep özel bir uygulama tarafından verir <xref:System.Windows.Input.StylusPlugIns.DynamicRenderer> ve <xref:System.Windows.Ink.Stroke> nesne.  
   
  Bu konu, aşağıdaki alt bölümleri içerir:  
   

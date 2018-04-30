@@ -19,11 +19,11 @@ ms.author: bruceper
 manager: mbaldwin
 ms.workload:
 - dotnet
-ms.openlocfilehash: a50b3d3ec2a99d53bc7d5817f3ed530ef92d474b
-ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
+ms.openlocfilehash: 1475891cf83c05552da247ffb04a866d80a396ea
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/28/2018
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="security-overview"></a>Güvenlik Genel Bakış
 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] bir SOAP iletisi tabanlı dağıtılmış programlama platformudur ve istemcileri ve Hizmetleri arasındaki iletileri güvenli hale getirme verilerini korumak için önemlidir. [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] var olan güvenlik altyapısı ve SOAP iletilerine tanınan güvenlik standartları temel güvenli ileti değiş tokuşu için çok yönlü ve birlikte çalışabilir bir platform sağlar.  
@@ -98,7 +98,7 @@ ms.lasthandoff: 04/28/2018
   
 -   *İleti güvenlik modu*, diğer yandan, WS-güvenlik kullanır (ve diğer belirtimleri) aktarımı güvenlik uygulamak. İleti güvenliği doğrudan SOAP iletilerine uygulanır ve uygulama verilerini birlikte SOAP Zarflar içindedir çünkü Aktarım Protokolü bağımsız, fazla genişletilebilir ve sağlayarak uçtan uca güvenlik olma avantajına sahiptir (Noktadan noktaya karşı); SOAP iletilerine XML yapısı ile mücadele etmek içerdiğinden Aktarım güvenlik modu birkaç kez daha yavaş olan dezavantajı vardır.  
   
- [!INCLUDE[crabout](../../../../includes/crabout-md.md)] Bu farklılıklar bkz [güvenli hale getirme hizmetler ve istemcileri](../../../../docs/framework/wcf/feature-details/securing-services-and-clients.md).  
+ Bu farklılıklar hakkında daha fazla bilgi için bkz: [güvenli hale getirme hizmetler ve istemcileri](../../../../docs/framework/wcf/feature-details/securing-services-and-clients.md).  
   
  Üçüncü güvenlik modu önceki her iki mod kullanır ve her ikisi de avantajları beraberinde getirir. Bu mod adlı `TransportWithMessageCredential`. Bu modda, ileti güvenliği istemci kimlik doğrulaması için kullanılır ve taşıma güvenliği sunucunun kimliğini doğrulamak ve ileti gizliliği ve bütünlük sağlamak için kullanılır. Bu, sayesinde `TransportWithMessageCredential` güvenlik modu neredeyse Aktarım güvenlik modu gibi hızlı bir işlemdir ve istemci ile ileti güvenliği aynı şekilde kimlik doğrulaması genişletilebilirlik sağlar. Ancak, ileti güvenlik modu farklı olarak, tüm uçtan uca güvenlik sağlamaz.  
   

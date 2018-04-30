@@ -1,12 +1,13 @@
 ---
-title: "Görüntülemeye Genel Bakış"
-ms.custom: 
+title: Görüntülemeye Genel Bakış
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-wpf
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-wpf
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - csharp
@@ -28,24 +29,25 @@ helpviewer_keywords:
 - decoding image formats [WPF]
 - rotating images [WPF]
 ms.assetid: 72aad87a-e6f3-4937-94cd-a18b7766e990
-caps.latest.revision: "32"
+caps.latest.revision: 32
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: c7d0a880dd30fe737a1bd4d1368dde16ed0df1e3
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 8715f04f6cdec84e74d53213c0a5a5ff360c7d28
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="imaging-overview"></a>Görüntülemeye Genel Bakış
-Bu konuda tanıtılmaktadır [!INCLUDE[TLA#tla_wic](../../../../includes/tlasharptla-wic-md.md)]. [!INCLUDE[TLA2#tla_wic](../../../../includes/tla2sharptla-wic-md.md)]geliştiricilerin görüntülemek, dönüştürme ve görüntüleri format sağlar.  
+Bu konuda tanıtılmaktadır [!INCLUDE[TLA#tla_wic](../../../../includes/tlasharptla-wic-md.md)]. [!INCLUDE[TLA2#tla_wic](../../../../includes/tla2sharptla-wic-md.md)] geliştiricilerin görüntülemek, dönüştürme ve görüntüleri format sağlar.  
   
   
 <a name="_wpfImaging"></a>   
 ## <a name="wpf-imaging-component"></a>WPF görüntüleme bileşeni  
- [!INCLUDE[TLA2#tla_wic](../../../../includes/tla2sharptla-wic-md.md)]içinde görüntüleme özelliğinde önemli iyileştirmeler sağlar [!INCLUDE[TLA#tla_win](../../../../includes/tlasharptla-win-md.md)]. Bir bit eşlem görüntüleme veya ortak bir denetimde bir resim kullanma gibi özellikleri Imaging önceden bağımlıdır [!INCLUDE[TLA#tla_gdi](../../../../includes/tlasharptla-gdi-md.md)] veya [!INCLUDE[TLA#tla_gdiplus](../../../../includes/tlasharptla-gdiplus-md.md)] kitaplıkları. Bunlar [!INCLUDE[TLA2#tla_api](../../../../includes/tla2sharptla-api-md.md)] taban çizgisi görüntüleme işlevselliği sağlar, ancak eksik codec genişletilebilirliği ve yüksek doğruluk görüntü desteği için desteği gibi özellikleri. [!INCLUDE[TLA2#tla_wic](../../../../includes/tla2sharptla-wic-md.md)]eksikliklerini aşmak için tasarlanmış [!INCLUDE[TLA2#tla_gdi](../../../../includes/tla2sharptla-gdi-md.md)] ve [!INCLUDE[TLA2#tla_gdiplus](../../../../includes/tla2sharptla-gdiplus-md.md)] ve yeni bir dizi sağlamak [!INCLUDE[TLA2#tla_api](../../../../includes/tla2sharptla-api-md.md)] görüntülemek ve uygulamalarınızdaki resimleri kullanmak için.  
+ [!INCLUDE[TLA2#tla_wic](../../../../includes/tla2sharptla-wic-md.md)] içinde görüntüleme özelliğinde önemli iyileştirmeler sağlar [!INCLUDE[TLA#tla_win](../../../../includes/tlasharptla-win-md.md)]. Bir bit eşlem görüntüleme veya ortak bir denetimde bir resim kullanma gibi özellikleri Imaging önceden bağımlıdır [!INCLUDE[TLA#tla_gdi](../../../../includes/tlasharptla-gdi-md.md)] veya [!INCLUDE[TLA#tla_gdiplus](../../../../includes/tlasharptla-gdiplus-md.md)] kitaplıkları. Bunlar [!INCLUDE[TLA2#tla_api](../../../../includes/tla2sharptla-api-md.md)] taban çizgisi görüntüleme işlevselliği sağlar, ancak eksik codec genişletilebilirliği ve yüksek doğruluk görüntü desteği için desteği gibi özellikleri. [!INCLUDE[TLA2#tla_wic](../../../../includes/tla2sharptla-wic-md.md)] eksikliklerini aşmak için tasarlanmış [!INCLUDE[TLA2#tla_gdi](../../../../includes/tla2sharptla-gdi-md.md)] ve [!INCLUDE[TLA2#tla_gdiplus](../../../../includes/tla2sharptla-gdiplus-md.md)] ve yeni bir dizi sağlamak [!INCLUDE[TLA2#tla_api](../../../../includes/tla2sharptla-api-md.md)] görüntülemek ve uygulamalarınızdaki resimleri kullanmak için.  
   
  Erişim için iki yolla [!INCLUDE[TLA2#tla_wic](../../../../includes/tla2sharptla-wic-md.md)] [!INCLUDE[TLA2#tla_api](../../../../includes/tla2sharptla-api-md.md)], yönetilen bileşen ve yönetilmeyen bir bileşen. Yönetilmeyen bileşen aşağıdaki özellikleri sağlar.  
   
@@ -61,7 +63,7 @@ Bu konuda tanıtılmaktadır [!INCLUDE[TLA#tla_wic](../../../../includes/tlashar
   
 -   Dosya içinde özel meta verileri desteği.  
   
--   Yönetilen bileşen diğer ile sorunsuz bütünleştirme görüntülerinin sağlamak için yönetilmeyen altyapısını kullanan [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] gibi özellikleri [!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)], animasyon ve grafik. Yönetilen bileşen de faydalanır [!INCLUDE[TLA#tla_wpf](../../../../includes/tlasharptla-wpf-md.md)] yeni görüntüyü otomatik olarak tanınmasını sağlayan görüntü codec genişletilebilirlik modeli biçimleri [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] uygulamalar.  
+-   Yönetilen bileşen diğer ile sorunsuz bütünleştirme görüntülerinin sağlamak için yönetilmeyen altyapısını kullanan [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] gibi özellikleri [!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)], animasyon ve grafik. Yönetilen bileşen yeni resim biçimlerinin otomatik olarak tanınmasını sağlayan Windows Presentation Foundation (WPF) görüntü codec genişletilebilirlik modeli de faydalanır [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] uygulamalar.  
   
  Çoğu yönetilen [!INCLUDE[TLA2#tla_wic](../../../../includes/tla2sharptla-wic-md.md)] [!INCLUDE[TLA2#tla_api](../../../../includes/tla2sharptla-api-md.md)] bulunan <xref:System.Windows.Media.Imaging?displayProperty=nameWithType> ad alanı, birkaç önemli tür rağmen gibi <xref:System.Windows.Media.ImageBrush> ve <xref:System.Windows.Media.ImageDrawing> bulunan <xref:System.Windows.Media?displayProperty=nameWithType> ad alanı ve <xref:System.Windows.Controls.Image> bulunuyor<xref:System.Windows.Controls?displayProperty=nameWithType> ad alanı.  
   
@@ -69,9 +71,9 @@ Bu konuda tanıtılmaktadır [!INCLUDE[TLA#tla_wic](../../../../includes/tlashar
   
 <a name="_imageformats"></a>   
 ## <a name="wpf-image-formats"></a>WPF resim biçimleri  
- Codec kod çözme veya belirli bir medya biçiminin kodlamak için kullanılır. [!INCLUDE[TLA2#tla_wic](../../../../includes/tla2sharptla-wic-md.md)]için bir codec içerir [!INCLUDE[TLA2#tla_bmp](../../../../includes/tla2sharptla-bmp-md.md)], [!INCLUDE[TLA2#tla_jpeg](../../../../includes/tla2sharptla-jpeg-md.md)], [!INCLUDE[TLA2#tla_png](../../../../includes/tla2sharptla-png-md.md)], [!INCLUDE[TLA2#tla_tiff](../../../../includes/tla2sharptla-tiff-md.md)], [!INCLUDE[TLA2#tla_wdp](../../../../includes/tla2sharptla-wdp-md.md)], [!INCLUDE[TLA2#tla_gif](../../../../includes/tla2sharptla-gif-md.md)]ve Icon resim biçimleri. Her codec simgesi hariç olmak üzere, bunların ilgili resim biçimleri kodlanacağını ve, uygulamaların etkinleştirin.  
+ Codec kod çözme veya belirli bir medya biçiminin kodlamak için kullanılır. [!INCLUDE[TLA2#tla_wic](../../../../includes/tla2sharptla-wic-md.md)] için bir codec içerir [!INCLUDE[TLA2#tla_bmp](../../../../includes/tla2sharptla-bmp-md.md)], [!INCLUDE[TLA2#tla_jpeg](../../../../includes/tla2sharptla-jpeg-md.md)], [!INCLUDE[TLA2#tla_png](../../../../includes/tla2sharptla-png-md.md)], [!INCLUDE[TLA2#tla_tiff](../../../../includes/tla2sharptla-tiff-md.md)], [!INCLUDE[TLA2#tla_wdp](../../../../includes/tla2sharptla-wdp-md.md)], [!INCLUDE[TLA2#tla_gif](../../../../includes/tla2sharptla-gif-md.md)]ve Icon resim biçimleri. Her codec simgesi hariç olmak üzere, bunların ilgili resim biçimleri kodlanacağını ve, uygulamaların etkinleştirin.  
   
- <xref:System.Windows.Media.Imaging.BitmapSource>önemli bir sınıftır kod çözme ve görüntülerini kodlamada kullanılır. Temel yapı bloğu olduğu [!INCLUDE[TLA2#tla_wic](../../../../includes/tla2sharptla-wic-md.md)] kanal ve belirli bir boyut ve çözümleme piksel tek, sabit bir kümesini temsil eder. A <xref:System.Windows.Media.Imaging.BitmapSource> birden çok çerçeve resminin tek bir çerçevesi olabilir veya üzerinde gerçekleştirilen bir dönüşümün sonucu olabilir bir <xref:System.Windows.Media.Imaging.BitmapSource>. Kullanılan birincil sınıfların çoğu üst olduğu [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] gibi Imaging <xref:System.Windows.Media.Imaging.BitmapFrame>.  
+ <xref:System.Windows.Media.Imaging.BitmapSource> önemli bir sınıftır kod çözme ve görüntülerini kodlamada kullanılır. Temel yapı bloğu olduğu [!INCLUDE[TLA2#tla_wic](../../../../includes/tla2sharptla-wic-md.md)] kanal ve belirli bir boyut ve çözümleme piksel tek, sabit bir kümesini temsil eder. A <xref:System.Windows.Media.Imaging.BitmapSource> birden çok çerçeve resminin tek bir çerçevesi olabilir veya üzerinde gerçekleştirilen bir dönüşümün sonucu olabilir bir <xref:System.Windows.Media.Imaging.BitmapSource>. Kullanılan birincil sınıfların çoğu üst olduğu [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] gibi Imaging <xref:System.Windows.Media.Imaging.BitmapFrame>.  
   
  A <xref:System.Windows.Media.Imaging.BitmapFrame> bir resim biçimi gerçek bitmap verileri depolamak için kullanılır. Çoğu resim biçimleri yalnızca tek bir destek <xref:System.Windows.Media.Imaging.BitmapFrame>, ancak gibi biçimler [!INCLUDE[TLA2#tla_gif](../../../../includes/tla2sharptla-gif-md.md)] ve [!INCLUDE[TLA2#tla_tiff](../../../../includes/tla2sharptla-tiff-md.md)] resim başına birden çok çerçeveyi destekler. Çerçeveler kod çözücüleri tarafından girdi verisi olarak kullanılır ve resim dosyaları oluşturmak için kodlayıcıya geçirilir.  
   
@@ -90,7 +92,7 @@ Bu konuda tanıtılmaktadır [!INCLUDE[TLA#tla_wic](../../../../includes/tlashar
  [!code-vb[BmpBitmapDecoderEncoder#5](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/BmpBitmapDecoderEncoder/VB/BitmapFrame.vb#5)]  
   
 ### <a name="image-format-encoding"></a>Görüntü biçimi kodlama  
- Görüntü kodlama resim verilerinin belirli bir resim biçimine çevrilmesidir. Kodlanmış resim verileri daha sonra yeni resim dosyaları oluşturmak için kullanılabilir. [!INCLUDE[TLA2#tla_wic](../../../../includes/tla2sharptla-wic-md.md)]Yukarıda açıklanan resim biçimleri için kodlayıcılar sağlar.  
+ Görüntü kodlama resim verilerinin belirli bir resim biçimine çevrilmesidir. Kodlanmış resim verileri daha sonra yeni resim dosyaları oluşturmak için kullanılabilir. [!INCLUDE[TLA2#tla_wic](../../../../includes/tla2sharptla-wic-md.md)] Yukarıda açıklanan resim biçimleri için kodlayıcılar sağlar.  
   
  Aşağıdaki örnek, yeni oluşturulan bit eşlem resim kaydetmek için bir kodlayıcı kullanımını gösterir.  
   
@@ -100,25 +102,25 @@ Bu konuda tanıtılmaktadır [!INCLUDE[TLA#tla_wic](../../../../includes/tlashar
   
 <a name="_displayingimages"></a>   
 ## <a name="displaying-images-in-wpf"></a>WPF'de görüntüleri görüntüleme  
- Görüntüyü görüntülemek için çeşitli yollar vardır bir [!INCLUDE[TLA#tla_wpf](../../../../includes/tlasharptla-wpf-md.md)] uygulama. Görüntüleri kullanılarak görüntülenebilir bir <xref:System.Windows.Controls.Image> denetimi, bir görsel kullanarak boyandığında bir <xref:System.Windows.Media.ImageBrush>, veya kullanılarak çizilen bir <xref:System.Windows.Media.ImageDrawing>.  
+ Bir Windows Presentation Foundation (WPF) uygulamasında görüntüyü görüntülemek için çeşitli yollar vardır. Görüntüleri kullanılarak görüntülenebilir bir <xref:System.Windows.Controls.Image> denetimi, bir görsel kullanarak boyandığında bir <xref:System.Windows.Media.ImageBrush>, veya kullanılarak çizilen bir <xref:System.Windows.Media.ImageDrawing>.  
   
 ### <a name="using-the-image-control"></a>Resim denetimini kullanma  
- <xref:System.Windows.Controls.Image>Çerçeve öğesidir ve uygulamalarda görüntüleri göstermek için birincil yol olur. İçinde [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)], <xref:System.Windows.Controls.Image> iki yolla; öznitelik sözdizimi veya özellik sözdizimi kullanılabilir. Aşağıdaki örnek, bir resmin 200 piksel genişliğinde öznitelik sözdizimi ve özellik etiketi sözdizimi kullanılarak nasıl işleneceğini gösterir. Öznitelik sözdizimi ve özellik sözdizimi hakkında daha fazla bilgi için bkz: [bağımlılık özelliklerine genel bakış](../../../../docs/framework/wpf/advanced/dependency-properties-overview.md).  
+ <xref:System.Windows.Controls.Image> Çerçeve öğesidir ve uygulamalarda görüntüleri göstermek için birincil yol olur. İçinde [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)], <xref:System.Windows.Controls.Image> iki yolla; öznitelik sözdizimi veya özellik sözdizimi kullanılabilir. Aşağıdaki örnek, bir resmin 200 piksel genişliğinde öznitelik sözdizimi ve özellik etiketi sözdizimi kullanılarak nasıl işleneceğini gösterir. Öznitelik sözdizimi ve özellik sözdizimi hakkında daha fazla bilgi için bkz: [bağımlılık özelliklerine genel bakış](../../../../docs/framework/wpf/advanced/dependency-properties-overview.md).  
   
  [!code-xaml[ImageElementExample_snip#ImageSimpleExampleInlineMarkup](../../../../samples/snippets/csharp/VS_Snippets_Wpf/ImageElementExample_snip/CSharp/ImageSimpleExample.xaml#imagesimpleexampleinlinemarkup)]  
   
- Birçok örnek kullanmak bir <xref:System.Windows.Media.Imaging.BitmapImage> resim dosyası başvurmak için nesne. <xref:System.Windows.Media.Imaging.BitmapImage>özelleştirilmiş <xref:System.Windows.Media.Imaging.BitmapSource> için iyileştirilmiş [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)] yükleme ve görüntü olarak görüntülemek için kolay bir yoludur <xref:System.Windows.Controls.Image.Source%2A> , bir <xref:System.Windows.Controls.Image> denetim.  
+ Birçok örnek kullanmak bir <xref:System.Windows.Media.Imaging.BitmapImage> resim dosyası başvurmak için nesne. <xref:System.Windows.Media.Imaging.BitmapImage> özelleştirilmiş <xref:System.Windows.Media.Imaging.BitmapSource> için iyileştirilmiş [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)] yükleme ve görüntü olarak görüntülemek için kolay bir yoludur <xref:System.Windows.Controls.Image.Source%2A> , bir <xref:System.Windows.Controls.Image> denetim.  
   
  Aşağıdaki örnek bir resmin 200 piksel genişliğinde kod kullanarak nasıl işleneceğini gösterir.  
   
 > [!NOTE]
->  <xref:System.Windows.Media.Imaging.BitmapImage>uygulayan <xref:System.ComponentModel.ISupportInitialize> başlatma birden çok özellikleri en iyi duruma getirme arabirimi. Özellik değişiklikleri yalnızca nesne başlatma sırasında ortaya çıkabilir. Çağrı <xref:System.Windows.Media.Imaging.BitmapImage.BeginInit%2A> başlatmanın başladı sinyal ve <xref:System.Windows.Media.Imaging.BitmapImage.EndInit%2A> başlatmanın tamamlandı sinyal. Başlatıldıktan sonra özellik değişikliklerini göz ardı edilir.  
+>  <xref:System.Windows.Media.Imaging.BitmapImage> uygulayan <xref:System.ComponentModel.ISupportInitialize> başlatma birden çok özellikleri en iyi duruma getirme arabirimi. Özellik değişiklikleri yalnızca nesne başlatma sırasında ortaya çıkabilir. Çağrı <xref:System.Windows.Media.Imaging.BitmapImage.BeginInit%2A> başlatmanın başladı sinyal ve <xref:System.Windows.Media.Imaging.BitmapImage.EndInit%2A> başlatmanın tamamlandı sinyal. Başlatıldıktan sonra özellik değişikliklerini göz ardı edilir.  
   
  [!code-csharp[ImageElementExample_snip#ImageSimpleExampleInlineCode1](../../../../samples/snippets/csharp/VS_Snippets_Wpf/ImageElementExample_snip/CSharp/ImageSimpleExample.xaml.cs#imagesimpleexampleinlinecode1)]
  [!code-vb[ImageElementExample_snip#ImageSimpleExampleInlineCode1](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/ImageElementExample_snip/VB/ImageSimpleExample.xaml.vb#imagesimpleexampleinlinecode1)]  
   
 #### <a name="rotating-converting-and-cropping-images"></a>Döndürme, dönüştürme ve görüntüleri kırpma  
- [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]Kullanıcıların özelliklerini kullanarak görüntüleri dönüştürme olanak sağlayan <xref:System.Windows.Media.Imaging.BitmapImage> veya ek kullanarak <xref:System.Windows.Media.Imaging.BitmapSource> gibi nesneleri <xref:System.Windows.Media.Imaging.CroppedBitmap> veya <xref:System.Windows.Media.Imaging.FormatConvertedBitmap>. Bu görüntü dönüşümleri ölçeklemek veya görüntüyü döndürmek, görüntünün piksel biçimini değiştirme veya görüntü kırpma.  
+ [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] Kullanıcıların özelliklerini kullanarak görüntüleri dönüştürme olanak sağlayan <xref:System.Windows.Media.Imaging.BitmapImage> veya ek kullanarak <xref:System.Windows.Media.Imaging.BitmapSource> gibi nesneleri <xref:System.Windows.Media.Imaging.CroppedBitmap> veya <xref:System.Windows.Media.Imaging.FormatConvertedBitmap>. Bu görüntü dönüşümleri ölçeklemek veya görüntüyü döndürmek, görüntünün piksel biçimini değiştirme veya görüntü kırpma.  
   
  Resim döndürme kullanılarak gerçekleştirilir <xref:System.Windows.Media.Imaging.BitmapImage.Rotation%2A> özelliği <xref:System.Windows.Media.Imaging.BitmapImage>. Döndürme yalnızca 90 derece artışlarla yapılabilir. Aşağıdaki örnekte, bir görüntü 90 derece döndürülür.  
   
@@ -177,7 +179,7 @@ Farklı Uzatma Ayarları
 ## <a name="image-metadata"></a>Görüntü meta verilerini  
  Bazı görüntü dosyaları içerik veya dosya özelliklerini açıklayan meta veriler içeriyor. Örneğin, çoğu dijital kamera marka ve model görüntüsünü yakalamak için kullanılan kamera hakkındaki meta verileri içeren görüntüleri oluşturun. Her resim biçimi meta verileri farklı işler ancak [!INCLUDE[TLA2#tla_wic](../../../../includes/tla2sharptla-wic-md.md)] depolama ve her desteklenen resim biçimi için meta veri alma Tekdüzen bir yol sağlar.  
   
- Meta verilerine erişim aracılığıyla sağlanır <xref:System.Windows.Media.Imaging.BitmapSource.Metadata%2A> özelliği bir <xref:System.Windows.Media.Imaging.BitmapSource> nesnesi. <xref:System.Windows.Media.Imaging.BitmapSource.Metadata%2A>döndüren bir <xref:System.Windows.Media.Imaging.BitmapMetadata> görüntü tarafından bulunan tüm meta veriler içeren nesne. Bu veriler bir meta veri şema veya farklı şemaların birleşimi olabilir. [!INCLUDE[TLA2#tla_wic](../../../../includes/tla2sharptla-wic-md.md)]Aşağıdaki resim meta veri şemalarını destekler: [!INCLUDE[TLA#tla_exif](../../../../includes/tlasharptla-exif-md.md)], metin (PNG metinsel veriler), [!INCLUDE[TLA#tla_ifd](../../../../includes/tlasharptla-ifd-md.md)], [!INCLUDE[TLA#tla_iptc](../../../../includes/tlasharptla-iptc-md.md)], ve [!INCLUDE[TLA#tla_xmp](../../../../includes/tlasharptla-xmp-md.md)].  
+ Meta verilerine erişim aracılığıyla sağlanır <xref:System.Windows.Media.Imaging.BitmapSource.Metadata%2A> özelliği bir <xref:System.Windows.Media.Imaging.BitmapSource> nesnesi. <xref:System.Windows.Media.Imaging.BitmapSource.Metadata%2A> döndüren bir <xref:System.Windows.Media.Imaging.BitmapMetadata> görüntü tarafından bulunan tüm meta veriler içeren nesne. Bu veriler bir meta veri şema veya farklı şemaların birleşimi olabilir. [!INCLUDE[TLA2#tla_wic](../../../../includes/tla2sharptla-wic-md.md)] Aşağıdaki resim meta veri şemalarını destekler: [!INCLUDE[TLA#tla_exif](../../../../includes/tlasharptla-exif-md.md)], metin (PNG metinsel veriler), [!INCLUDE[TLA#tla_ifd](../../../../includes/tlasharptla-ifd-md.md)], [!INCLUDE[TLA#tla_iptc](../../../../includes/tlasharptla-iptc-md.md)], ve [!INCLUDE[TLA#tla_xmp](../../../../includes/tlasharptla-xmp-md.md)].  
   
  Meta verileri okuma işlemini basitleştirmek için <xref:System.Windows.Media.Imaging.BitmapMetadata> gibi kolay erişilebilen adlandırılmış özellikleri sağlar <xref:System.Windows.Media.Imaging.BitmapMetadata.Author%2A>, <xref:System.Windows.Media.Imaging.BitmapMetadata.Title%2A>, ve <xref:System.Windows.Media.Imaging.BitmapMetadata.CameraModel%2A>. Bu özelliklerin çoğunu da meta veri yazmak için kullanılabilir. Meta veri okumak için ek destek meta veri sorgu okuyucusu tarafından sağlanır. <xref:System.Windows.Media.Imaging.BitmapMetadata.GetQuery%2A> Yöntemi gibi bir dize sorgu sağlayarak bir meta veri sorgu okuyucusunu almak için kullanılır *"/ app1/exif /"*. Aşağıdaki örnekte, <xref:System.Windows.Media.Imaging.BitmapMetadata.GetQuery%2A> depolanan metni elde etmek için kullanılan *"/ metin/açıklama"* konumu.  
   
@@ -185,7 +187,7 @@ Farklı Uzatma Ayarları
  [!code-csharp[BitmapMetadata#GetQuery](../../../../samples/snippets/csharp/VS_Snippets_Wpf/BitMapMetadata/CSharp/BitmapMetadata.cs#getquery)]
  [!code-vb[BitmapMetadata#GetQuery](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/BitMapMetadata/VB/BitmapMetadata.vb#getquery)]  
   
- Meta veri yazmak için bir meta veri sorgu yazıcısı kullanılır. <xref:System.Windows.Media.Imaging.BitmapMetadata.SetQuery%2A>Sorgu yazıcısını alır ve istenilen değeri ayarlar. Aşağıdaki örnekte, <xref:System.Windows.Media.Imaging.BitmapMetadata.SetQuery%2A> depolanan metin yazmak için kullanılan *"/ metin/açıklama"* konumu.  
+ Meta veri yazmak için bir meta veri sorgu yazıcısı kullanılır. <xref:System.Windows.Media.Imaging.BitmapMetadata.SetQuery%2A> Sorgu yazıcısını alır ve istenilen değeri ayarlar. Aşağıdaki örnekte, <xref:System.Windows.Media.Imaging.BitmapMetadata.SetQuery%2A> depolanan metin yazmak için kullanılan *"/ metin/açıklama"* konumu.  
   
  [!code-cpp[BitmapMetadata#SetQuery](../../../../samples/snippets/cpp/VS_Snippets_Wpf/BitMapMetadata/CPP/BitmapMetadata.cpp#setquery)]
  [!code-csharp[BitmapMetadata#SetQuery](../../../../samples/snippets/csharp/VS_Snippets_Wpf/BitMapMetadata/CSharp/BitmapMetadata.cs#setquery)]

@@ -1,26 +1,26 @@
 ---
-title: "Hizmet Sürümü Oluşturma"
-ms.custom: 
+title: Hizmet Sürümü Oluşturma
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - dotnet-clr
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 37575ead-d820-4a67-8059-da11a2ab48e2
-caps.latest.revision: 
+caps.latest.revision: 19
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: 791e201907f72f9d590f6d835fd6ec1bfc25633f
-ms.sourcegitcommit: 15316053918995cc1380163a7d7e7edd5c44e6d7
+ms.openlocfilehash: fef65a4134f1cf526a7082b08aa4d8d1c6ea7f4d
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/19/2018
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="service-versioning"></a>Hizmet Sürümü Oluşturma
 İlk dağıtım ve olası birkaç kez kendi ömürleri sırasında sonra Hizmetleri (ve bunların kullanıma uç noktaları) çeşitli değişen işletme gereksinimlerine göre bilgi teknolojisi gereksinimleri gibi nedenlerle, değiştirilecek veya diğer gidermenin gerekebilir sorunları. Her değişiklik hizmeti yeni bir sürümünü kullanıma sunmaktadır. Bu konuda, sürüm oluşturma dikkate alınması gereken açıklanmaktadır [!INCLUDE[indigo1](../../../includes/indigo1-md.md)].  
@@ -138,7 +138,7 @@ ms.lasthandoff: 03/19/2018
  İstemcileri yeni uç nokta adresi dinamik olarak bulma veya bağlama yeteneğine sahip olmadığınız sürece uç noktası adresi ve bağlama değişiklikler değişiklikleri ayırırsınız. Bu özelliği uygulamak için bir kayıt defterine Evrensel bulma açıklama ve tümleştirme (UDDI) ve UDDI çağırma olduğu bir istemci bir uç nokta ile iletişim kurmaya çalışır ve, başarısızlık durumunda, iyi bilinen UDDI sorgular düzeni kullanarak mekanizmadır Geçerli uç nokta meta veriler için kayıt defteri. İstemci ardından adresi ve bu meta verilerden bağlama bitiş noktası ile iletişim kurmak için kullanır. Bu iletişim başarılı olursa, istemci gelecekte kullanım için adres ve bağlama bilgilerini önbelleğe alır.  
   
 ## <a name="routing-service-and-versioning"></a>Yönlendirme hizmeti ve sürüm oluşturma  
- Değişiklikleri ve yeni bir hizmet için yapılan değişiklikler, iki veya daha fazla farklı sürümlerini çalıştıran bir hizmet sağlamak için aynı anda WCF yönlendirme hizmeti iletileri yönlendirmek için uygun hizmet örneği için kullanabileceğiniz. Yönlendirme WCF hizmeti içerik tabanlı yönlendirme kullanıyor, diğer bir deyişle, ileti yönlendirmek nereye belirlemek için ileti içindeki bilgileri kullanır. [!INCLUDE[crabout](../../../includes/crabout-md.md)] WCF yönlendirme hizmeti Bkz: [yönlendirme hizmeti](../../../docs/framework/wcf/feature-details/routing-service.md). Hizmet sürümü oluşturma için yönlendirme WCF hizmetini kullanma örneği için bkz: [nasıl yapılır: Hizmet sürümü oluşturma](../../../docs/framework/wcf/feature-details/how-to-service-versioning.md).  
+ Değişiklikleri ve yeni bir hizmet için yapılan değişiklikler, iki veya daha fazla farklı sürümlerini çalıştıran bir hizmet sağlamak için aynı anda WCF yönlendirme hizmeti iletileri yönlendirmek için uygun hizmet örneği için kullanabileceğiniz. Yönlendirme WCF hizmeti içerik tabanlı yönlendirme kullanıyor, diğer bir deyişle, ileti yönlendirmek nereye belirlemek için ileti içindeki bilgileri kullanır. WCF yönlendirme hizmeti bakın hakkında daha fazla bilgi için [yönlendirme hizmeti](../../../docs/framework/wcf/feature-details/routing-service.md). Hizmet sürümü oluşturma için yönlendirme WCF hizmetini kullanma örneği için bkz: [nasıl yapılır: Hizmet sürümü oluşturma](../../../docs/framework/wcf/feature-details/how-to-service-versioning.md).  
   
 ## <a name="appendix"></a>Ek  
  Veri sözleşmeleri değişmez olarak kabul eder ve değişikliklerin gerekli olduğunda yeni kampanya oluşturmak için katı sürüm gerektiğinde genel veri sözleşmesi sürümü oluşturma yönergeler verilmiştir. Yeni bir sınıf için her yeni veri sözleşmesi oluşturulmalıdır, bir mekanizma cinsinden yazılmış varolan kodun almak zorunda kalmamak için gerektiği şekilde eski verileri sınıfı sözleşme ve yeni veri sözleşme sınıfı bakımından yeniden yazma.  

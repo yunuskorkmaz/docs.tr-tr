@@ -21,23 +21,23 @@ ms.author: bruceper
 manager: mbaldwin
 ms.workload:
 - dotnet
-ms.openlocfilehash: 5eb1019694f6228edbe3656849b85dfa7611ef18
-ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
+ms.openlocfilehash: 440bbcf03eef8f32a28073bfc9f5aeeb824a50fd
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/28/2018
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="bindings-and-security"></a>Bağlamalar ve Güvenlik
 İle birlikte gelen sistem tarafından sağlanan bağlamalar [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] program hızlı bir şekilde sunma [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] uygulamalar. Bunun tek istisnası etkin bir varsayılan güvenlik düzeni tüm bağlamaları vardır. Bu konuda, güvenlik ihtiyaçlarınızı için doğru bağlama seçmenize yardımcı olur.  
   
- Genel Bakış [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] güvenlik, bkz: [güvenliğine genel bakış](../../../../docs/framework/wcf/feature-details/security-overview.md). [!INCLUDE[crabout](../../../../includes/crabout-md.md)] programlama [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] bağlamalar kullanılarak, bkz: [WCF güvenliğini programlama](../../../../docs/framework/wcf/feature-details/programming-wcf-security.md).  
+ Genel Bakış [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] güvenlik, bkz: [güvenliğine genel bakış](../../../../docs/framework/wcf/feature-details/security-overview.md). Programlama hakkında daha fazla bilgi için [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] bağlamalar kullanılarak, bkz: [WCF güvenliğini programlama](../../../../docs/framework/wcf/feature-details/programming-wcf-security.md).  
   
  Bir bağlama seçtiyseniz, güvenlik ile ilişkili çalışma zamanı davranışı hakkında daha fazla bilgi bulabilirsiniz [güvenlik davranışları](../../../../docs/framework/wcf/feature-details/security-behaviors-in-wcf.md).  
   
  Bazı güvenlik işlevleri sistem tarafından sağlanan bağlamalar kullanılarak programlanabilir değildir. Özel bağlama kullanma daha fazla denetim için bkz: [özel bağlamalarla güvenlik özellikleri](../../../../docs/framework/wcf/feature-details/security-capabilities-with-custom-bindings.md).  
   
 ## <a name="security-functions-of-bindings"></a>Güvenlik işlevlerini bağlamaları  
- [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] Çoğu gereksinimlerini karşılayacak sistem tarafından sağlanan bağlamalar sayısını içerir. Belirli bir bağlama yeterli değil, özel bağlama de oluşturabilirsiniz. Sistem tarafından sağlanan bağlamalar listesi için bkz: [System-Provided bağlamaları](../../../../docs/framework/wcf/system-provided-bindings.md). [!INCLUDE[crabout](../../../../includes/crabout-md.md)] Özel bağlamalar bkz [özel bağlamalar](../../../../docs/framework/wcf/extending/custom-bindings.md).  
+ [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] Çoğu gereksinimlerini karşılayacak sistem tarafından sağlanan bağlamalar sayısını içerir. Belirli bir bağlama yeterli değil, özel bağlama de oluşturabilirsiniz. Sistem tarafından sağlanan bağlamalar listesi için bkz: [System-Provided bağlamaları](../../../../docs/framework/wcf/system-provided-bindings.md). Özel bağlama hakkında daha fazla bilgi için bkz: [özel bağlamalar](../../../../docs/framework/wcf/extending/custom-bindings.md).  
   
  Her bağlama [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] iki tür vardır: bir API ve bir yapılandırma dosyasında kullanılan bir XML öğesi olarak. Örneğin, `WSHttpBinding` (API) sahip bir karşılık gelen [ \<wsHttpBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/wshttpbinding.md).  
   

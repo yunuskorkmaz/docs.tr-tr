@@ -1,29 +1,31 @@
 ---
-title: "&lt;customBinding&gt; &lt;güvenliği&gt;"
-ms.custom: 
+title: '&lt;customBinding&gt; &lt;güvenliği&gt;'
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 243a5148-bbd1-447f-a8a5-6e7792c0a3f1
-caps.latest.revision: "24"
+caps.latest.revision: 24
 author: BrucePerlerMS
 ms.author: bruceper
 manager: mbaldwin
-ms.workload: dotnet
-ms.openlocfilehash: e35f10071f8931c551645d4d07ca0f2113c52002
-ms.sourcegitcommit: 6a9030eb5bd0f00e1d144f81958adb195cfb1f6f
+ms.workload:
+- dotnet
+ms.openlocfilehash: 15f2dd3eac33a54e53a609fc706397eef5e7dbe2
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/10/2018
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="ltsecuritygt-of-ltcustombindinggt"></a>&lt;customBinding&gt; &lt;güvenliği&gt;
 Özel bağlama için güvenlik seçeneklerini belirtir.  
   
- \<system.serviceModel >  
+ \<system.serviceModel>  
 \<bağlamaları >  
 \<customBinding >  
 \<bağlama >  
@@ -115,7 +117,7 @@ messageProtectionOrder="SignBeforeEncrypt/SignBeforeEncryptAndEncryptSignature/E
 |[\<bağlama >](../../../../../docs/framework/misc/binding.md)|Özel bağlama tüm bağlama özelliklerini tanımlar.|  
   
 ## <a name="remarks"></a>Açıklamalar  
- [!INCLUDE[crabout](../../../../../includes/crabout-md.md)]Bu öğe bkz [SecurityBindingElement kimlik doğrulama modları](../../../../../docs/framework/wcf/feature-details/securitybindingelement-authentication-modes.md) ve [nasıl yapılır: SecurityBindingElement oluşturma bağlama kullanarak bir özel](../../../../../docs/framework/wcf/feature-details/how-to-create-a-custom-binding-using-the-securitybindingelement.md).  
+ Bu öğe kullanma hakkında daha fazla bilgi için bkz: [SecurityBindingElement kimlik doğrulama modları](../../../../../docs/framework/wcf/feature-details/securitybindingelement-authentication-modes.md) ve [nasıl yapılır: SecurityBindingElement oluşturma bağlama kullanarak bir özel](../../../../../docs/framework/wcf/feature-details/how-to-create-a-custom-binding-using-the-securitybindingelement.md).  
   
 ## <a name="example"></a>Örnek  
  Aşağıdaki örnek özel bağlama kullanma güvenliğinin nasıl yapılandırılacağı gösterilmektedir. Özel bağlama güvenli bir taşıma birlikte ileti düzeyi güvenliği etkinleştirmek için nasıl kullanılacağını gösterir. Bu, güvenli bir taşıma hizmet ve istemci arasındaki iletileri iletmek için gerekli ve iletileri ileti düzeyi üzerinde aynı anda güvenli olmalıdır durumunda faydalı olur. Bu yapılandırma, sistem tarafından sağlanan bağlamalar tarafından desteklenmiyor.  

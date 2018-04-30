@@ -29,14 +29,14 @@ ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: 740146bffe869dc30bbf8e8472c30be317ce6f7c
-ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
+ms.openlocfilehash: 023de9e20206411f7dd6774553ae39eefaa508a0
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="wpf-partial-trust-security"></a>WPF Kısmi Güven Güvenliği
-<a name="introduction"></a> Genel olarak, Internet uygulamaları kötü amaçlı zarar önlemek için önemli sistem kaynaklarına doğrudan erişimi olmaktan sınırlandırılmalıdır. Varsayılan olarak, [!INCLUDE[TLA#tla_html](../../../includes/tlasharptla-html-md.md)] ve istemci tarafı komut dosyası dili önemli sistem kaynaklarına erişmek mümkün değildir. Çünkü [!INCLUDE[TLA#tla_wpf](../../../includes/tlasharptla-wpf-md.md)] tarayıcıda barındırılan uygulamalar tarayıcıdan başlatılabilir, kısıtlamaları benzer bir dizi uymalıdır. Bu kısıtlamaları zorlamak için [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] hem dayanır [!INCLUDE[TLA#tla_cas](../../../includes/tlasharptla-cas-md.md)] ve [!INCLUDE[TLA#tla_clickonce](../../../includes/tlasharptla-clickonce-md.md)] (bkz [WPF güvenlik stratejisi - Platform güvenliği](../../../docs/framework/wpf/wpf-security-strategy-platform-security.md)). Varsayılan olarak, tarayıcıda barındırılan uygulamalar Internet bölgesi isteği [!INCLUDE[TLA2#tla_cas](../../../includes/tla2sharptla-cas-md.md)] Internet, yerel intranet ya da yerel bilgisayar başlatıldığında yedeklemiş izinler kümesi. Herhangi bir şey izinler kümesini değerinden ile çalışan uygulamalar, kısmi güven ile çalışan söylenir.  
+<a name="introduction"></a> Genel olarak, Internet uygulamaları kötü amaçlı zarar önlemek için önemli sistem kaynaklarına doğrudan erişimi olmaktan sınırlandırılmalıdır. Varsayılan olarak, [!INCLUDE[TLA#tla_html](../../../includes/tlasharptla-html-md.md)] ve istemci tarafı komut dosyası dili önemli sistem kaynaklarına erişmek mümkün değildir. Windows Presentation Foundation (WPF) tarayıcıda barındırılan uygulamalar tarayıcıdan başlatılabilir çünkü kısıtlamaları benzer bir dizi uygun olmalıdır. Bu kısıtlamaları zorlamak için [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] hem dayanır [!INCLUDE[TLA#tla_cas](../../../includes/tlasharptla-cas-md.md)] ve [!INCLUDE[TLA#tla_clickonce](../../../includes/tlasharptla-clickonce-md.md)] (bkz [WPF güvenlik stratejisi - Platform güvenliği](../../../docs/framework/wpf/wpf-security-strategy-platform-security.md)). Varsayılan olarak, tarayıcıda barındırılan uygulamalar Internet bölgesi isteği [!INCLUDE[TLA2#tla_cas](../../../includes/tla2sharptla-cas-md.md)] Internet, yerel intranet ya da yerel bilgisayar başlatıldığında yedeklemiş izinler kümesi. Herhangi bir şey izinler kümesini değerinden ile çalışan uygulamalar, kısmi güven ile çalışan söylenir.  
   
  [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] çok çeşitli kadar işlevselliği mümkün olduğunca güvenli bir şekilde kısmi güven ve ile birlikte kullanılabilir emin olmak için destek sağlar [!INCLUDE[TLA2#tla_cas](../../../includes/tla2sharptla-cas-md.md)], kısmi güven programlama için ek destek sağlar.  
   
@@ -50,7 +50,7 @@ ms.lasthandoff: 04/26/2018
   
 <a name="WPF_Feature_Partial_Trust_Support"></a>   
 ## <a name="wpf-feature-partial-trust-support"></a>WPF özellik kısmi güven desteği  
- Aşağıdaki tabloda, üst düzey özellikleri listeler [!INCLUDE[TLA#tla_wpf](../../../includes/tlasharptla-wpf-md.md)] Internet bölgesi izin kümesi sınırları içinde kullanmak güvenli olan.  
+ Aşağıdaki tabloda Internet bölgesi izin kümesi sınırları içinde kullanmak güvenli üst düzey özellikleri Windows Presentation Foundation (WPF) listeler.  
   
  Tablo 1: kısmi güven kasada WPF özellikleri  
   

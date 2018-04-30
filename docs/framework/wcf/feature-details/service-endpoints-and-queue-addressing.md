@@ -1,24 +1,26 @@
 ---
-title: "Hizmet Uç Noktaları ve Kuyruk İşleme"
-ms.custom: 
+title: Hizmet Uç Noktaları ve Kuyruk İşleme
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 7d2d59d7-f08b-44ed-bd31-913908b83d97
-caps.latest.revision: "18"
+caps.latest.revision: 18
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 8488e802ee191c261b65388d48bd26aa37d18206
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.workload:
+- dotnet
+ms.openlocfilehash: f2244ccb1637f944f9e3349cf0d94caa2f6676bf
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="service-endpoints-and-queue-addressing"></a>Hizmet Uç Noktaları ve Kuyruk İşleme
 Bu konuda ele alınmıştır nasıl istemcileri adresi sıralarından okuma Hizmetleri ve hizmet uç noktaları sıralara nasıl eşleyin. Bir anımsatıcı Klasik aşağıda gösterilmiştir [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] uygulama dağıtımı sıraya alındı.  
@@ -32,7 +34,7 @@ Bu konuda ele alınmıştır nasıl istemcileri adresi sıralarından okuma Hizm
   
  Yol adları "Yönlendirme ve sıra yöneticisi Aktarım Protokolü dahil olmak üzere adresini, ek yönlerini belirlemek için FormatNames" için eşlenir. Sıra yöneticisini iki aktarım protokollerini destekler: yerel MSMQ protokolü ve SOAP Güvenilir Mesajlaşma Protokolü (SRMP).  
   
- [!INCLUDE[crabout](../../../../includes/crabout-md.md)]MSMQ yolu ve Biçim adlarını görmek [hakkında Message Queuing](http://go.microsoft.com/fwlink/?LinkId=94837).  
+ MSMQ yolu ve biçim adları hakkında daha fazla bilgi için bkz: [hakkında Message Queuing](http://go.microsoft.com/fwlink/?LinkId=94837).  
   
 ## <a name="netmsmqbinding-and-service-addressing"></a>NetMsmqBinding ve hizmet adresleme  
  Bir hizmet için bir ileti belirtirken, URI düzeni iletişim için kullanılan aktarım göre seçilir. Her aktarım [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] benzersiz şemasına sahip. Düzeni iletişim için kullanılan aktarım yapısını yansıtması gerekir. Örneğin, net.tcp, net.pipe, HTTP ve benzeri.  
@@ -84,7 +86,7 @@ Bu konuda ele alınmıştır nasıl istemcileri adresi sıralarından okuma Hizm
 |WCF URI tabanlı sıra adresi|Active Directory özelliğini kullanın|Sıra Aktarım Protokolü özelliği|Sonuçta elde edilen MSMQ biçim adları|  
 |----------------------------------|-----------------------------------|--------------------------------------|---------------------------------|  
 |NET.MSMQ://\<makine adı >/özel/abc|False (varsayılan)|Yerel (varsayılan)|DOĞRUDAN OS:machine =-name\private$ \abc|  
-|NET.MSMQ://\<makine adı >/özel/abc|False|SRMP|DOĞRUDAN http://machine/msmq/private$ / abc =|  
+|NET.MSMQ://\<makine adı >/özel/abc|False|SRMP|DOĞRUDAN =http://machine/msmq/private$/ abc|  
 |NET.MSMQ://\<makine adı >/özel/abc|Doğru|Yerel|Ortak GUID bazı (sıranın GUID) =|  
   
 ### <a name="reading-messages-from-the-dead-letter-queue-or-the-poison-message-queue"></a>Sahipsiz sıra veya Poison iletiyi kuyruktan iletileri okuma  
@@ -105,13 +107,13 @@ Bu konuda ele alınmıştır nasıl istemcileri adresi sıralarından okuma Hizm
 ## <a name="msmqintegrationbinding-and-service-addressing"></a>MsmqIntegrationBinding ve hizmet adresleme  
  `MsmqIntegrationBinding` Geleneksel MSMQ uygulamaları ile iletişim için kullanılır. Varolan bir MSMQ uygulaması ile birlikte çalışma kolaylaştırmak için [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] destekler yalnızca biçim adı adresleme. Bu nedenle, bu bağlama kullanılarak gönderilen iletileri için kullanılacak URI düzeni uygun olmalıdır:  
   
- msmq.formatname:\<*MSMQ-format-name*>>  
+ MSMQ.FormatName:\<*MSMQ biçim adı*>>  
   
  MSMQ biçim adı MSMQ tarafından belirtilen biçimde olduğundan [hakkında Message Queuing](http://go.microsoft.com/fwlink/?LinkId=94837).  
   
  Yalnızca doğrudan biçim adları ve ortak ve özel biçim adları kullanabileceğinizi unutmayın (Active Directory Tümleştirme gerektirir) iletileri kullanarak bir sıra alırken `MsmqIntegrationBinding`. Ancak, doğrudan biçim adları kullanmanız önerilir. Örneğin, [!INCLUDE[wv](../../../../includes/wv-md.md)], başka bir biçim adını kullanarak neden olan bir hata yalnızca doğrudan biçim adıyla açılabilen bir alt sırayı açmak sistem çalışır olduğundan.  
   
- SRMP kullanarak belirtirken `MsmqIntegrationBinding`, /msmq/ göndermeyi ile Internet Information Services (IIS) yardımcı olmak için doğrudan biçim adını eklemek için gereksinimi yoktur. Örneğin: abc SRMP kullanarak protokolü, yerine doğrudan bir sıra belirtirken = http://adatum.com/msmq/private$ / abc, doğrudan kullanması gereken = http://adatum.com/private$ / abc.  
+ SRMP kullanarak belirtirken `MsmqIntegrationBinding`, /msmq/ göndermeyi ile Internet Information Services (IIS) yardımcı olmak için doğrudan biçim adını eklemek için gereksinimi yoktur. Örneğin: abc SRMP kullanarak protokolü, yerine doğrudan bir sıra belirtirken =http://adatum.com/msmq/private$/ abc, kullanmanız gereken doğrudan =http://adatum.com/private$/ abc.  
   
  Net.msmq:// adresleme kullanamayacağınızı unutmayın `MsmqIntegrationBinding`. Çünkü `MsmqIntegrationBinding` serbest biçimli MSMQ adı biçimi adresleme, destekler kullanabileceğiniz bir [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] MSMQ çok noktaya yayın ve dağıtım listesi özellikleri kullanmak için bu bağlamayı kullanan hizmet. Yöntemi bir özel durum belirtme `CustomDeadLetterQueue` kullanırken `MsmqIntegrationBinding`. Bunu nasıl olduğu için benzer form net.msmq:// olmalıdır kullanarak belirtilen `NetMsmqBinding`.  
   

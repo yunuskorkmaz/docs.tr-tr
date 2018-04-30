@@ -20,11 +20,11 @@ ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: 331e71f26b1c703f7df27086d943e799b4eb13e2
-ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
+ms.openlocfilehash: 991c3879990fd5b6562a2270c65e1560efadc022
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/28/2018
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="introduction-to-extensibility"></a>Genişletilebilirlik Genel Bakış
 [!INCLUDE[indigo1](../../../includes/indigo1-md.md)] Uygulama modeli herhangi bir dağıtılmış uygulama iletişimi gereksinimleriyle büyük bölümü çözmek için tasarlanmıştır. Ancak her zaman varsayılan uygulama modeli ve sistem tarafından sağlanan uygulamaları desteklemez senaryolar vardır. [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] Genişletilebilirlik modeli, tüm uygulama modeli değiştirme noktasına bile her düzeyde sistem davranışını değiştirmek sağlayarak özel senaryoları desteklemek için tasarlanmıştır. Bu konu, çeşitli alanlarda uzantısının özetler ve noktalarını her hakkında daha fazla bilgi için.  
@@ -43,7 +43,7 @@ ms.lasthandoff: 04/28/2018
   
  Bir istemci için hedefleyen veri ya da siz veya müşteriniz oluşturduğu hizmeti işlemi uygulama iletileri içerir. Bu iletiler, uygulama düzeyi uzantı sistemi gereksinimlerinize bağlı olarak, ileti ya da nesne formunda için kullanılabilir.  
   
- Tüm iletileri kanal sistem üzerinden geçirin; yalnızca uygulama iletileri kanal sisteminden uygulamasına geçirilir. Yeni kanal düzeyi işlevselliğe oluşturmak için kanal sistem genişletmeniz gerekir. Yeni uygulama düzeyi işlevselliğe oluşturmak için hizmet veya istemci çalışma zamanı genişletmeniz gerekir (Dağıtıcıları ve kanal fabrikaları sırasıyla). [!INCLUDE[crabout](../../../includes/crabout-md.md)] bkz: uygulama çalışma zamanı genişletme [genişletme ServiceHost ve hizmet modeli katmanını](../../../docs/framework/wcf/extending/extending-servicehost-and-the-service-model-layer.md).  
+ Tüm iletileri kanal sistem üzerinden geçirin; yalnızca uygulama iletileri kanal sisteminden uygulamasına geçirilir. Yeni kanal düzeyi işlevselliğe oluşturmak için kanal sistem genişletmeniz gerekir. Yeni uygulama düzeyi işlevselliğe oluşturmak için hizmet veya istemci çalışma zamanı genişletmeniz gerekir (Dağıtıcıları ve kanal fabrikaları sırasıyla). Uygulama çalışma zamanı genişletme hakkında daha fazla bilgi için bkz: [genişletme ServiceHost ve hizmet modeli katmanını](../../../docs/framework/wcf/extending/extending-servicehost-and-the-service-model-layer.md).  
   
 #### <a name="extending-security"></a>Güvenliği Genişletme  
  Belirteçleri ve kimlik bilgileri gibi özel güvenlik mekanizmaları oluşturmak için bir güvenlik sistemi genişletmeniz gerekir. Daha fazla bilgi için bkz: [genişletme güvenlik](../../../docs/framework/wcf/extending/extending-security.md).  

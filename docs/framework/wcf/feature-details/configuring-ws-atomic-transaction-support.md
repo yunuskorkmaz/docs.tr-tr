@@ -1,28 +1,28 @@
 ---
-title: "WS-Atomic İşlem Desteğini Yapılandırma"
-ms.custom: 
+title: WS-Atomic İşlem Desteğini Yapılandırma
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - dotnet-clr
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - WS-AT protocol [WCF], configuring WS-Atomic Transaction
 ms.assetid: cb9f1c9c-1439-4172-b9bc-b01c3e09ac48
-caps.latest.revision: 
+caps.latest.revision: 31
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: 922b2048a262e722a11ee77c41e96dddec411326
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: b2d94c96b8cc225344300540d9fc406a4742db2a
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="configuring-ws-atomic-transaction-support"></a>WS-Atomic İşlem Desteğini Yapılandırma
 Bu konuda, WS-AT yapılandırma yardımcı programını kullanarak WS-AtomicTransaction (WS-AT) desteğini nasıl yapılandırabileceğiniz açıklanmaktadır.  
@@ -34,11 +34,11 @@ Bu konuda, WS-AT yapılandırma yardımcı programını kullanarak WS-AtomicTran
   
  Komut satırı penceresinde Windows SDK yükleme konumunda "%WINDIR%\Microsoft.NET\Framework\v3.0\Windows Communication Foundation" erişilebilir.  
   
- [!INCLUDE[crabout](../../../../includes/crabout-md.md)]komut satırı aracı bkz [WS-AtomicTransaction yapılandırma yardımcı programı (wsatConfig.exe)](../../../../docs/framework/wcf/ws-atomictransaction-configuration-utility-wsatconfig-exe.md).  
+ Komut satırı aracı hakkında daha fazla bilgi için bkz: [WS-AtomicTransaction yapılandırma yardımcı programı (wsatConfig.exe)](../../../../docs/framework/wcf/ws-atomictransaction-configuration-utility-wsatconfig-exe.md).  
   
  Çalıştırıyorsanız, [!INCLUDE[wxp](../../../../includes/wxp-md.md)] veya [!INCLUDE[ws2003](../../../../includes/ws2003-md.md)], MMC ek bileşenini giderek erişebilirsiniz **Denetim Masası/Yönetimsel Araçlar/Component Services**, sağ **Bilgisayarım**, ve seçme **özellikleri**. Bu, Microsoft Dağıtılmış İşlem Düzenleyicisi (MSDTC) yapılandırabileceğiniz aynı konumdur. Yapılandırma için kullanılabilir seçenekleri altında gruplandırılır **WS-AT** sekmesi. Windows Vista çalıştırıyorsanız veya [!INCLUDE[lserver](../../../../includes/lserver-md.md)], MMC ek bileşenini tıklayarak bulunabilir **Başlat** düğmesi ve girerek `dcomcnfg.exe` içinde **arama** kutusu. MMC açıldığında gidin **My Computer\Distributed işlem Coordinator\Local DTC** düğümünü sağ tıklatın ve seçin **özellikleri**. Yapılandırma için kullanılabilir seçenekleri altında gruplandırılır **WS-AT** sekmesi.  
   
- [!INCLUDE[crabout](../../../../includes/crabout-md.md)]ek bileşenini bakın [WS-AtomicTransaction yapılandırması MMC ek bileşenini](../../../../docs/framework/wcf/ws-atomictransaction-configuration-mmc-snap-in.md).  
+ Ek bileşeni hakkında daha fazla bilgi için bkz: [WS-AtomicTransaction yapılandırması MMC ek bileşenini](../../../../docs/framework/wcf/ws-atomictransaction-configuration-mmc-snap-in.md).  
   
  Aracın kullanıcı arabirimini etkinleştirmek için önce aşağıdaki yolda bulunan WsatUI.dll dosyasını kaydetmeniz gerekir  
   
@@ -88,7 +88,7 @@ Bu konuda, WS-AT yapılandırma yardımcı programını kullanarak WS-AtomicTran
 ### <a name="configuring-msdtc-to-use-certificates"></a>Sertifikaları kullanmasını MSDTC yapılandırma  
  WS-AT protokolü hizmetini hem istemci hem de bir sunucu olarak görev olduğundan, hem gelen bağlantılar için dinleme ve gerekir giden bağlantılar başlatamaz. Bu nedenle, böylece dış taraflarla iletişim kurarken kullanması için hangi sertifikanın ve gelen iletişimi kabul ederken yetkilendirmek için hangi sertifikaların bilir MSDTC yapılandırmanız gerekir.  
   
- Bu WS-AT MMC ek bileşenini kullanarak yapılandırabilirsiniz. [!INCLUDE[crabout](../../../../includes/crabout-md.md)]Bu araç bkz [WS-AtomicTransaction yapılandırması MMC ek bileşenini](../../../../docs/framework/wcf/ws-atomictransaction-configuration-mmc-snap-in.md) konu. Aşağıdaki adımlar MSDTC çalıştıran iki bilgisayar arasında güven oluşturmak nasıl açıklamaktadır.  
+ Bu WS-AT MMC ek bileşenini kullanarak yapılandırabilirsiniz. Bu araç hakkında daha fazla bilgi için bkz: [WS-AtomicTransaction yapılandırması MMC ek bileşenini](../../../../docs/framework/wcf/ws-atomictransaction-configuration-mmc-snap-in.md) konu. Aşağıdaki adımlar MSDTC çalıştıran iki bilgisayar arasında güven oluşturmak nasıl açıklamaktadır.  
   
 1.  Makine A'ın ayarlarını yapılandırın. "İçin sertifika uç noktası," certA seçin. "Yetkili sertifikaları için" certB seçin.  
   

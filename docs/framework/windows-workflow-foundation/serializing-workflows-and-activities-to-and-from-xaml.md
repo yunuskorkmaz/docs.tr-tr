@@ -14,11 +14,11 @@ ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: 9a215be76002b9e8fca8ac4a9073885b3b30a97b
-ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
+ms.openlocfilehash: a36b8a6bdf1a024f4ddee91bd937afac516e391f
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/28/2018
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="serializing-workflows-and-activities-to-and-from-xaml"></a>İş akışları ve etkinlikler XAML seri hale getirme
 Derlemelerde bulunan türlerine derlenmiş ek olarak, iş akışı tanımları da XAML için seri hale getirilebilir. Bu seri hale getirilmiş tanımları düzenleme için yeniden yüklenmesi veya denetleme, derleme için bir yapı sistemi geçirilen veya yüklenen ve çağrılır. Bu konu, iş akışı tanımları seri hale getirme ve XAML iş akışı tanımları ile çalışmaya genel bir bakış sağlar.  
@@ -84,7 +84,7 @@ sw.Close();
  **25 + 15**  
 **40**    
 > [!NOTE]
->  [!INCLUDE[crabout](../../../includes/crabout-md.md)] Giriş ve çıkış bağımsız değişkenleri iş akışlarıyla çağrılırken, bkz: [kullanarak WorkflowInvoker ve WorkflowApplication](../../../docs/framework/windows-workflow-foundation/using-workflowinvoker-and-workflowapplication.md) ve <xref:System.Activities.WorkflowInvoker.Invoke%2A>.  
+>  Giriş ve çıkış bağımsız değişkenleri iş akışlarıyla çağırma hakkında daha fazla bilgi için bkz: [kullanarak WorkflowInvoker ve WorkflowApplication](../../../docs/framework/windows-workflow-foundation/using-workflowinvoker-and-workflowapplication.md) ve <xref:System.Activities.WorkflowInvoker.Invoke%2A>.  
   
  C# ifadeler, sıralı iş akışı içeriyorsa, sonra bir <xref:System.Activities.XamlIntegration.ActivityXamlServicesSettings> örneği kendi <xref:System.Activities.XamlIntegration.ActivityXamlServicesSettings.CompileExpressions%2A> özelliğini `true` bir parametre olarak geçirilmelidir <xref:System.Activities.XamlIntegration.ActivityXamlServices.Load%2A?displayProperty=nameWithType>, aksi takdirde bir <xref:System.NotSupportedException> benzer bir ileti ile oluşturulur Aşağıdaki: `Expression Activity type 'CSharpValue`1' derleme çalıştırmak için gereklidir.  Lütfen iş akışının derlendikten olduğundan emin olun.'  
   

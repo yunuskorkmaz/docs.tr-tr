@@ -1,27 +1,29 @@
 ---
-title: "Taşıma Güvenliği ile Kimliğe Bürünme Kullanma"
-ms.custom: 
+title: Taşıma Güvenliği ile Kimliğe Bürünme Kullanma
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 426df8cb-6337-4262-b2c0-b96c2edf21a9
-caps.latest.revision: "12"
+caps.latest.revision: 12
 author: BrucePerlerMS
 ms.author: bruceper
 manager: mbaldwin
-ms.workload: dotnet
-ms.openlocfilehash: 57b40493d0e9bcbbaaf1366c74ff116343f6ee96
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: d5610a107a198a3d8fd0517dca6ca7e2f4d22cbb
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="using-impersonation-with-transport-security"></a>Taşıma Güvenliği ile Kimliğe Bürünme Kullanma
-*Kimliğe bürünme* bir sunucu uygulaması istemci kimliği üzerinde gerçekleştirilecek özelliğidir. Kimliğe bürünme kaynaklarına erişimi doğrularken kullanmak üzere hizmetlerin yaygındır. Bir hizmet hesabı kullanarak sunucu uygulaması çalışır, ancak server istemci bağlantısı kabul ettiğinde, böylece erişim denetimlerini istemcinin kimlik bilgileri kullanılarak gerçekleştirilir, istemci temsil eder. Taşıma güvenliği bir hem de bu kimlik bilgilerini kullanarak güvenli hale getirmek ve kimlik bilgilerini geçirme mekanizmadır. Bu konu, taşıma güveliği kullanarak açıklar [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] kimliğe bürünme özelliği ile. [!INCLUDE[crabout](../../../../includes/crabout-md.md)]ileti güvenliği kullanarak kimliğe bürünme bkz [temsilcilik ve kimliğe bürünme](../../../../docs/framework/wcf/feature-details/delegation-and-impersonation-with-wcf.md).  
+*Kimliğe bürünme* bir sunucu uygulaması istemci kimliği üzerinde gerçekleştirilecek özelliğidir. Kimliğe bürünme kaynaklarına erişimi doğrularken kullanmak üzere hizmetlerin yaygındır. Bir hizmet hesabı kullanarak sunucu uygulaması çalışır, ancak server istemci bağlantısı kabul ettiğinde, böylece erişim denetimlerini istemcinin kimlik bilgileri kullanılarak gerçekleştirilir, istemci temsil eder. Taşıma güvenliği bir hem de bu kimlik bilgilerini kullanarak güvenli hale getirmek ve kimlik bilgilerini geçirme mekanizmadır. Bu konu, taşıma güveliği kullanarak açıklar [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] kimliğe bürünme özelliği ile. İleti güvenliği kullanarak kimliğe bürünme hakkında daha fazla bilgi için bkz: [temsilcilik ve kimliğe bürünme](../../../../docs/framework/wcf/feature-details/delegation-and-impersonation-with-wcf.md).  
   
 ## <a name="five-impersonation-levels"></a>Beş kimliğe bürünme düzeyi  
  Aktarım güvenliği kullanır kimliğe bürünme, beş düzeyde aşağıdaki tabloda açıklandığı gibi.  
@@ -48,7 +50,7 @@ ms.lasthandoff: 12/22/2017
   
 -   Adlandırılmış Kanallar ile kullanılamaz `Impersonate` veya `Delegate` kimliğe bürünme düzeyi. Adlandırılmış kanal Bu kimliğe bürünme düzeyleri makine üzerinde garantisi zorunlu kılamaz.  
   
- [!INCLUDE[crabout](../../../../includes/crabout-md.md)]Adlandırılmış Kanallar, bkz: [taşıma seçme](../../../../docs/framework/wcf/feature-details/choosing-a-transport.md).  
+ Adlandırılmış kanallar hakkında daha fazla bilgi için bkz: [taşıma seçme](../../../../docs/framework/wcf/feature-details/choosing-a-transport.md).  
   
 ### <a name="http-transport"></a>HTTP taşıma  
  HTTP taşıması kullanan bağlamaları (<xref:System.ServiceModel.WSHttpBinding> ve <xref:System.ServiceModel.BasicHttpBinding>) birden fazla kimlik doğrulama şemasını açıklandığı gibi destek [anlama HTTP kimlik doğrulaması](../../../../docs/framework/wcf/feature-details/understanding-http-authentication.md). Kimliğe bürünme düzeyi desteklenen kimlik doğrulama şeması bağlıdır. Aşağıdaki öğeler ile HTTP aktarma kullanılır:  
@@ -63,7 +65,7 @@ ms.lasthandoff: 12/22/2017
   
 -   Yalnızca anlaşması ile seçilebilir, Kerberos kimlik doğrulama şeması herhangi bir desteklenen kimliğe bürünme düzeyi ile kullanılabilir.  
   
- [!INCLUDE[crabout](../../../../includes/crabout-md.md)]HTTP taşıma bkz [taşıma seçme](../../../../docs/framework/wcf/feature-details/choosing-a-transport.md).  
+ HTTP taşıma hakkında daha fazla bilgi için bkz: [taşıma seçme](../../../../docs/framework/wcf/feature-details/choosing-a-transport.md).  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
  [Temsilcilik ve Kimliğe Bürünme](../../../../docs/framework/wcf/feature-details/delegation-and-impersonation-with-wcf.md)  

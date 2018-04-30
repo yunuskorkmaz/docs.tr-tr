@@ -1,23 +1,24 @@
 ---
 title: SQLStoreExtensibility
-ms.custom: 
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 5da1b5a3-f144-41ba-b9c4-02818b28b15d
-caps.latest.revision: "11"
+caps.latest.revision: 11
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: f4d3776c4cc3fb61fc01b84ee90bb714e1acb4fa
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 722c7cda49b2efc4c146970c69cc5e3c7bbad9b0
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="sqlstoreextensibility"></a>SQLStoreExtensibility
 Bu örnek kullanım ve SQL iş akışı örneği deposundaki yükseltilen özellikleri yapılandırmasını gösterir. SQL iş akışı örneği deposuna bir SQL tabanlı bir örnek deposuna uygulamasıdır. Durumu kaydedin ve durumunu bir SQL Server veya SQL Server Express veritabanı gelen ve giden yüklemek bir örnek sağlar. Depolama genişletilebilirlik özelliği örneği deposunda saklanır özelliklerini tanımlamak kullanıcı sağlar. Bu özellikler için sorgu kullanıcıya veren bir yükseltilen özellikleri görünümü görüntülenir.  
@@ -36,7 +37,7 @@ Bu örnek kullanım ve SQL iş akışı örneği deposundaki yükseltilen özell
   
  Sayaç değeri özel bir özellik olarak yükseltmek için aşağıdaki adımlar izlenmelidir:  
   
-1.  Sınıf `CounterStatus` türünün bir örneği uzantısını tanımlayan <xref:System.Activities.Persistence.PersistenceParticipant>, etkinlikler tarafından durumu değişkenleri sağlamak için kullanılan. `Count`bir salt değer olarak tanımlanır. Bir iş akışı örneği Kalıcılık noktasına geldiğinde, örnek uzantısı kaydeder `Count` özelliği Kalıcılık veri koleksiyonu.  
+1.  Sınıf `CounterStatus` türünün bir örneği uzantısını tanımlayan <xref:System.Activities.Persistence.PersistenceParticipant>, etkinlikler tarafından durumu değişkenleri sağlamak için kullanılan. `Count` bir salt değer olarak tanımlanır. Bir iş akışı örneği Kalıcılık noktasına geldiğinde, örnek uzantısı kaydeder `Count` özelliği Kalıcılık veri koleksiyonu.  
   
 2.  Örnek deposu, yeni bir özellik oluştururken `CountStatus`, aracılığıyla tanımlanan `store.Promote()` yöntemi.  
   
@@ -62,7 +63,7 @@ Bu örnek kullanım ve SQL iş akışı örneği deposundaki yükseltilen özell
   
 ### <a name="to-verify-the-sample-is-working-correctly"></a>Örnek doğru şekilde çalıştığını doğrulama  
   
-1.  Seçerek örneği tablosunun içeriğini görüntülemek için SQL Server Management Studio kullanın **veritabanları**, **InstanceStore**ve ardından  **System.ServiceModel.Activities.DurableInstancing.InstanceTable** nesne Gezgini'nde sağ **System.ServiceModel.Activities.DurableInstancing.InstanceTable** ve seçin **İlk 1000 satırı Seç**. [!INCLUDE[crabout](../../../../includes/crabout-md.md)]SQL Server Management Studio bkz [SQL Server Management Studio Tanıtımı](http://go.microsoft.com/fwlink/?LinkId=165645)  
+1.  Seçerek örneği tablosunun içeriğini görüntülemek için SQL Server Management Studio kullanın **veritabanları**, **InstanceStore**ve ardından  **System.ServiceModel.Activities.DurableInstancing.InstanceTable** nesne Gezgini'nde sağ **System.ServiceModel.Activities.DurableInstancing.InstanceTable** ve seçin **İlk 1000 satırı Seç**. SQL Server Management Studio hakkında daha fazla bilgi için bkz: [SQL Server Management Studio Tanıtımı](http://go.microsoft.com/fwlink/?LinkId=165645)  
   
 2.  Listelenen iş akışı örnekleri inceleyin.  
   

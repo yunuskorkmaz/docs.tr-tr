@@ -16,14 +16,14 @@ ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: b0c59c0688fca53a7c7623330f3fdba4f5defd88
-ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
+ms.openlocfilehash: 6eb5381438aa082eae8b4252bbd1cf343ba0ebf7
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/28/2018
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="workflow-services-overview"></a>İş Akışı Hizmetleri Genel Bakış
-İş akışı Hizmetleri [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]-tabanlı iş akışları kullanılarak uygulanan services. İş akışı hizmetlerdir göndermek ve almak için Mesajlaşma etkinlikleri kullanan iş akışları [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] iletileri. .NET framework 4.5 birkaç iş akışı içinden iletilerini gönderip izin Mesajlaşma etkinlikleri tanıtır. [!INCLUDE[crabout](../../../../includes/crabout-md.md)] Mesajlaşma etkinlikleri ve nasıl farklı ileti exchange desenlerini, uygulama için kullanılabilmesi için bkz: [Mesajlaşma etkinlikleri](../../../../docs/framework/wcf/feature-details/messaging-activities.md).  
+İş akışı Hizmetleri [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]-tabanlı iş akışları kullanılarak uygulanan services. İş akışı hizmetlerdir göndermek ve almak için Mesajlaşma etkinlikleri kullanan iş akışları [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] iletileri. .NET framework 4.5 birkaç iş akışı içinden iletilerini gönderip izin Mesajlaşma etkinlikleri tanıtır. Etkinlikleri ve nasıl farklı ileti exchange desenleri uygulamak için kullanılabilmesi için Mesajlaşma hakkında daha fazla bilgi için bkz: [Mesajlaşma etkinlikleri](../../../../docs/framework/wcf/feature-details/messaging-activities.md).  
   
 ## <a name="benefits-of-using-workflow-services"></a>İş akışı hizmetleri kullanmanın yararları  
  Giderek dağıtılmış uygulamalar hale gibi tek tek Hizmetleri işinin bir kısmını boşaltmak için diğer hizmetler çağırmak için sorumlu olur. Zaman uyumsuz işlemler olarak bu çağrıları uygulama karmaşıklık koda getirir. Hata işleme karmaşıklık özel durumları işleme ve ayrıntılı izleme bilgilerini sağlama biçiminde ekler. Bazı hizmetler çoğunlukla uzun süre çalışan olur ve önemli sistem kaynakları için giriş beklerken alabilir. Bu sorunları nedeniyle dağıtılmış uygulamaların çoğunlukla çok karmaşık ve zordur yazma ve korumak. İş akışları, zaman uyumsuz iş, özellikle dış hizmetler çağrıları eşgüdümünü express doğal bir yoludur. İş akışları da uzun süre çalışan iş süreçlerini temsil eden en etkili olur. Dağıtılmış bir ortama hizmetler oluşturma için harika bir varlık iş akışının olmasını bu niteliklerini olur.  

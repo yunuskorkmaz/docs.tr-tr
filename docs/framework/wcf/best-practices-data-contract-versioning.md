@@ -21,14 +21,14 @@ ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: dfb3d781a570db6a929a7d984aa45c224dda66bd
-ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
+ms.openlocfilehash: 6ea139f6b854a299760df4c7cb8c315b58701ab8
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/28/2018
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="best-practices-data-contract-versioning"></a>En İyi Uygulamalar: Veri Sözleşmesi Sürümü Oluşturma
-Bu konu, zaman içinde kolayca gelişmesi veri sözleşmeleri oluşturmak için en iyi uygulamaları listeler. [!INCLUDE[crabout](../../../includes/crabout-md.md)] Veri sözleşmeleri bkz konularındaki [kullanarak veri sözleşmeleri](../../../docs/framework/wcf/feature-details/using-data-contracts.md).  
+Bu konu, zaman içinde kolayca gelişmesi veri sözleşmeleri oluşturmak için en iyi uygulamaları listeler. Veri sözleşmeleri hakkında daha fazla bilgi için konulara bakın [kullanarak veri sözleşmeleri](../../../docs/framework/wcf/feature-details/using-data-contracts.md).  
   
 ## <a name="note-on-schema-validation"></a>Şema doğrulaması göz önünde bulundurun  
  Veri sözleşmesi sürümü oluşturma ele içinde bu verileri tarafından verilen şema sözleşme dikkate almak önemlidir [!INCLUDE[indigo1](../../../includes/indigo1-md.md)] öğeleri varsayılan olarak isteğe bağlı olarak işaretlenmiş olgu dışındaki herhangi bir sürüm oluşturma desteğine sahip değil.  
@@ -56,7 +56,7 @@ Bu konu, zaman içinde kolayca gelişmesi veri sözleşmeleri oluşturmak için 
   
 -   Geçerli bir <xref:System.ServiceModel.ServiceBehaviorAttribute> öznitelik, hizmet sözleşmesi ile <xref:System.ServiceModel.ServiceBehaviorAttribute.IgnoreExtensionDataObject%2A> özelliğini `true`.  
   
- [!INCLUDE[crabout](../../../includes/crabout-md.md)] gidiş, bkz: [İleri uyumlu veri sözleşmeleri](../../../docs/framework/wcf/feature-details/forward-compatible-data-contracts.md).  
+ Gidiş hakkında daha fazla bilgi için bkz: [İleri uyumlu veri sözleşmeleri](../../../docs/framework/wcf/feature-details/forward-compatible-data-contracts.md).  
   
 ## <a name="versioning-when-schema-validation-is-not-required"></a>Şema doğrulama gerekli olmadığında sürüm oluşturma  
  Kesin şema uyumluluk nadiren gereklidir. Birçok platformda şeması tarafından açıklanmayan ekstra öğeler tolerans. Bu izin sürece, özellikleri, tamamını açıklanan [veri sözleşmesi sürümü oluşturma](../../../docs/framework/wcf/feature-details/data-contract-versioning.md) ve [İleri uyumlu veri sözleşmeleri](../../../docs/framework/wcf/feature-details/forward-compatible-data-contracts.md) kullanılabilir. Aşağıdaki yönergeler tavsiye edilir.  
@@ -69,7 +69,7 @@ Bu konu, zaman içinde kolayca gelişmesi veri sözleşmeleri oluşturmak için 
   
 3.  İlk veri sözleşmesi sürümü ile başlayarak, her zaman uygulamak <xref:System.Runtime.Serialization.IExtensibleDataObject> gidiş etkinleştirmek için. Daha fazla bilgi için bkz: [İleri uyumlu veri sözleşmeleri](../../../docs/framework/wcf/feature-details/forward-compatible-data-contracts.md). Bu arabirim uygulamadan bir türü bir veya daha fazla sürümleri yayımlandı durumunda türü bir sonraki sürümde uygulayın.  
   
-4.  Sonraki sürümlerde, veri sözleşme adı veya ad alanı değiştirmeyin. Adı veya temel veri sözleşmesi türünün ad alanını değiştirme, uygun mekanizmaları gibi kullanarak ad alanı ve veri sözleşmesi adını doğru yazdığınızdan emin <xref:System.Runtime.Serialization.DataContractAttribute.Name%2A> özelliği <xref:System.Runtime.Serialization.DataContractAttribute>. [!INCLUDE[crabout](../../../includes/crabout-md.md)] adlandırma, [veri sözleşmesi adları](../../../docs/framework/wcf/feature-details/data-contract-names.md).  
+4.  Sonraki sürümlerde, veri sözleşme adı veya ad alanı değiştirmeyin. Adı veya temel veri sözleşmesi türünün ad alanını değiştirme, uygun mekanizmaları gibi kullanarak ad alanı ve veri sözleşmesi adını doğru yazdığınızdan emin <xref:System.Runtime.Serialization.DataContractAttribute.Name%2A> özelliği <xref:System.Runtime.Serialization.DataContractAttribute>. Adlandırma hakkında daha fazla bilgi için bkz: [veri sözleşmesi adları](../../../docs/framework/wcf/feature-details/data-contract-names.md).  
   
 5.  Sonraki sürümlerde, herhangi bir veri üyesi adlarını değiştirmeyin. Alan, özelliği veya veri üyesi temel olay adının değiştirilmesi kullanırsanız `Name` özelliği <xref:System.Runtime.Serialization.DataMemberAttribute> mevcut veri üye adı korumak için.  
   
@@ -81,7 +81,7 @@ Bu konu, zaman içinde kolayca gelişmesi veri sözleşmeleri oluşturmak için 
   
     1.  <xref:System.Runtime.Serialization.DataMemberAttribute.IsRequired%2A> Özelliği her zaman sol varsayılan değerinde `false`.  
   
-    2.  Varsayılan değer olarak, `null` veya sıfır üye için kabul edilemez ise, bir geri çağırma yöntemi kullanılarak sağlanmalıdır <xref:System.Runtime.Serialization.OnDeserializingAttribute> makul varsayılan bir durumda gelen akışını üye yok sağlamak için. [!INCLUDE[crabout](../../../includes/crabout-md.md)] geri çağırma bkz [sürüm toleranslı seri hale getirme geri çağrıları](../../../docs/framework/wcf/feature-details/version-tolerant-serialization-callbacks.md).  
+    2.  Varsayılan değer olarak, `null` veya sıfır üye için kabul edilemez ise, bir geri çağırma yöntemi kullanılarak sağlanmalıdır <xref:System.Runtime.Serialization.OnDeserializingAttribute> makul varsayılan bir durumda gelen akışını üye yok sağlamak için. Geri çağırma hakkında daha fazla bilgi için bkz: [sürüm toleranslı seri hale getirme geri çağrıları](../../../docs/framework/wcf/feature-details/version-tolerant-serialization-callbacks.md).  
   
     3.  `Order` Özellikte `DataMemberAttribute` tüm yeni eklenen veri üyelerinin sonra varolan veri üyeleri göründüğünden emin olmak için kullanılmalıdır. İçin önerilen yol bunu yaparsanız, bu şu şekildedir: veri sözleşmesi ilk sürümünde veri üyeleri hiçbiri olmalıdır kendi `Order` özellik kümesi. Tüm veri sözleşmesi 2 sürümünde eklenen veri üyeleri olmalıdır kendi `Order` özelliği 2 olarak ayarlanmış. Sürüm veri sözleşmesi 3 eklenen veri üyelerin tümünü olmalıdır kendi `Order` 3'e ayarlayın ve benzeri. Birden fazla veri üyesi aynı ayarlamak için izin verilen `Order` sayısı.  
   

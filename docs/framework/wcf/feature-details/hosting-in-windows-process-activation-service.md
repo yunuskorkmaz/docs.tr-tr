@@ -1,33 +1,33 @@
 ---
-title: "Windows İşlem Etkinleştirme Hizmetinde Barındırma"
-ms.custom: 
+title: Windows İşlem Etkinleştirme Hizmetinde Barındırma
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - dotnet-clr
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - hosting services [WCF], WAS
 ms.assetid: d2b9d226-15b7-41fc-8c9a-cb651ac20ecd
-caps.latest.revision: 
+caps.latest.revision: 16
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: 40122670c84f87590a31b79f39695e9626ea9883
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: a31d66cd4b4430ec838b34fcd77d712698f9e1dc
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="hosting-in-windows-process-activation-service"></a>Windows İşlem Etkinleştirme Hizmetinde Barındırma
 Windows İşlem Etkinleştirme Hizmeti (WAS) etkinleştirme ve uygulamaları barındıran içeren çalışan işlemleri ömrü yönetir [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] Hizmetleri. WAS işlem modelini genelleştirir [!INCLUDE[iis601](../../../../includes/iis601-md.md)] işlem modeli HTTP bağımlılığını kaldırarak HTTP sunucusu. Böylece [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] hizmetleri hem HTTP hem de uygulamaları belirli bir makineye çok sayıda konak olanağı sunar ve ileti tabanlı etkinleştirme desteklediğini bir barındırma ortamında Net.TCP gibi HTTP olmayan protokolleri kullanır.  
   
- [!INCLUDE[crabout](../../../../includes/crabout-md.md)]derleme bir [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] WAS barındırma ortamı, çalışan bir hizmete bkz [nasıl yapılır: bir WCF Hizmeti barındırma](../../../../docs/framework/wcf/feature-details/how-to-host-a-wcf-service-in-was.md).  
+ Oluşturma hakkında daha fazla bilgi için bir [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] WAS barındırma ortamı, çalışan bir hizmete bkz [nasıl yapılır: bir WCF Hizmeti barındırma](../../../../docs/framework/wcf/feature-details/how-to-host-a-wcf-service-in-was.md).  
   
  WAS işlem modeli uygulamaların, daha sağlam ve daha kolay yönetilebilir ve kaynaklarını verimli bir şekilde kullanan bir biçimde barındırılmasına olanak sağlayan birçok özellik sağlar:  
   
@@ -39,7 +39,7 @@ Windows İşlem Etkinleştirme Hizmeti (WAS) etkinleştirme ve uygulamaları bar
   
 -   Uygulamaların dağıtım yüklemesi ayak izinin bir tam IIS gerekmeksizin IIS işlem modelini yararlanmak izin verir.  
   
- [!INCLUDE[crabout](../../../../includes/crabout-md.md)]WAS özellikleri, bkz. [IIS 7.0 Beta: IIS 7.0 Web yönetimi](../../../../docs/framework/wcf/feature-details/hosting-in-windows-process-activation-service.md).  
+ WAS özellikler hakkında daha fazla bilgi için bkz: [IIS 7.0 Beta: IIS 7.0 Web yönetimi](../../../../docs/framework/wcf/feature-details/hosting-in-windows-process-activation-service.md).  
   
  [Windows Server AppFabric](http://go.microsoft.com/fwlink/?LinkId=196496) çalışır [!INCLUDE[iisver](../../../../includes/iisver-md.md)] ve barındırma ortamı NET4 WCF ve WF Hizmetleri için zengin bir uygulama sağlamak için Windows İşlem Etkinleştirme Hizmeti (WAS). Bu, işlem yaşam döngüsü yönetimi, işlem geri dönüştürme, paylaşılan barındırma, hızlı hata koruması, işlem alt öğe Yitimi, isteğe bağlı etkinleştirme ve sistem durumu izleme yararları. Ayrıntılı bilgi için bkz: [AppFabric barındırma özellikleri](http://go.microsoft.com/fwlink/?LinkId=196494) ve [AppFabric barındırma kavramları](http://go.microsoft.com/fwlink/?LinkId=196495).  
   
@@ -58,7 +58,7 @@ Windows İşlem Etkinleştirme Hizmeti (WAS) etkinleştirme ve uygulamaları bar
   
  Hizmet ve kaynakları bir uygulama içinde de çözülebilir. Bir uygulama içinde uygulama kaynakları göre taban uygulama yol ele alınmıştır. Örneğin, bir makine adı contoso.com sitesinde hem HTTP hem de Net.TCP protokoller için site bağlamalarını sahip olduğunu varsayın. Ayrıca site GetOrders.svc bir hizmeti sunan /Billing konumunda bulunan bir uygulama içerdiğini varsayar. GetOrders.svc hizmet SecureEndpoint göreli adresi olan bir uç nokta kullanıma sunulan, daha sonra hizmet uç noktası aşağıdaki iki URI'ler eline:  
   
- http://contoso.com/billing/GetOrders.svc/SecureEndpoint  
+ http://contoso.com/Billing/GetOrders.svc/SecureEndpoint  
 NET.TCP://contoso.com/billing/GetOrders.svc/SecureEndpoint  
   
 ## <a name="the-was-runtime"></a>WAS çalışma zamanı  

@@ -1,35 +1,37 @@
 ---
-title: "Hizmet Çalışma Zamanı Davranışını Belirtme"
-ms.custom: 
+title: Hizmet Çalışma Zamanı Davranışını Belirtme
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - csharp
 - vb
 ms.assetid: 5c5450ea-6af1-4b75-a267-613d0ac54707
-caps.latest.revision: "12"
+caps.latest.revision: 12
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: c2c1534b161f81fa90dce52c825b0417dc8fd35d
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: e45c35d0b19833b6fd43c7fd5794ecf8bd3a9769
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="specifying-service-run-time-behavior"></a>Hizmet Çalışma Zamanı Davranışını Belirtme
-Bir hizmet sözleşmesini tasarladıktan sonra ([Hizmet sözleşmeleri tasarlama](../../../docs/framework/wcf/designing-service-contracts.md)) ve hizmet sözleşmesini uygulanan ([hizmet sözleşmelerini uygulama](../../../docs/framework/wcf/implementing-service-contracts.md)) işlemi davranışını yapılandırabilirsiniz Hizmet çalışma zamanı. Bu konu, sistem tarafından sağlanan hizmet ve işlem davranışları açıklar ve yeni davranışlar oluşturma hakkında daha fazla bilgi bulmak nerede tanımlar. Bazı davranışları öznitelik olarak uygulanır, ancak çoğu uygulama yapılandırma dosyası kullanılarak uygulanır veya program aracılığıyla. [!INCLUDE[crabout](../../../includes/crabout-md.md)]bkz: hizmet uygulamanızın yapılandırma [Hizmetleri'ni Yapılandırma](../../../docs/framework/wcf/configuring-services.md).  
+Bir hizmet sözleşmesini tasarladıktan sonra ([Hizmet sözleşmeleri tasarlama](../../../docs/framework/wcf/designing-service-contracts.md)) ve hizmet sözleşmesini uygulanan ([hizmet sözleşmelerini uygulama](../../../docs/framework/wcf/implementing-service-contracts.md)) işlemi davranışını yapılandırabilirsiniz Hizmet çalışma zamanı. Bu konu, sistem tarafından sağlanan hizmet ve işlem davranışları açıklar ve yeni davranışlar oluşturma hakkında daha fazla bilgi bulmak nerede tanımlar. Bazı davranışları öznitelik olarak uygulanır, ancak çoğu uygulama yapılandırma dosyası kullanılarak uygulanır veya program aracılığıyla. Hizmet uygulamanızın yapılandırma hakkında daha fazla bilgi için bkz: [Hizmetleri'ni Yapılandırma](../../../docs/framework/wcf/configuring-services.md).  
   
 ## <a name="overview"></a>Genel Bakış  
  Sözleşme Girişleri, çıktıları, veri türleri ve bu tür bir hizmet özelliklerini tanımlar. Bir hizmet sözleşmesini uygulama oluşturur bir sınıf, bir adresinde bir bağlama ile yapılandırıldığında bunu uygulayan sözleşme yerine getirir. Sözleşme, bağlama ve adres bilgilerini tüm istemci tarafından bilinen; bunları istemci yapamazsınız hizmetini kullanın.  
   
- Ancak, sorunları veya örnek yönetimi, iş parçacığı oluşturma gibi işlem özellikleri, istemcilere donuk değildir. Hizmet sözleşmesi uyguladıktan sonra kullanarak çok sayıda işlem özelliklerini yapılandırabilirsiniz *davranışları*. Davranışları olan değiştirme nesneler [!INCLUDE[indigo1](../../../includes/indigo1-md.md)] ya da bir çalışma zamanı özellik ayarlama veya özelleştirme türü çalışma zamanına ekleyerek çalışma zamanı. [!INCLUDE[crabout](../../../includes/crabout-md.md)]çalışma zamanı davranışı, kullanıcı tanımlı oluşturarak değiştirme bkz [genişletme ServiceHost ve hizmet modeli katmanını](../../../docs/framework/wcf/extending/extending-servicehost-and-the-service-model-layer.md).  
+ Ancak, sorunları veya örnek yönetimi, iş parçacığı oluşturma gibi işlem özellikleri, istemcilere donuk değildir. Hizmet sözleşmesi uyguladıktan sonra kullanarak çok sayıda işlem özelliklerini yapılandırabilirsiniz *davranışları*. Davranışları olan değiştirme nesneler [!INCLUDE[indigo1](../../../includes/indigo1-md.md)] ya da bir çalışma zamanı özellik ayarlama veya özelleştirme türü çalışma zamanına ekleyerek çalışma zamanı. Çalışma zamanı kullanıcı tarafından tanımlanan davranışları oluşturarak değiştirme hakkında daha fazla bilgi için bkz: [genişletme ServiceHost ve hizmet modeli katmanını](../../../docs/framework/wcf/extending/extending-servicehost-and-the-service-model-layer.md).  
   
  <xref:System.ServiceModel.ServiceBehaviorAttribute?displayProperty=nameWithType> Ve <xref:System.ServiceModel.OperationBehaviorAttribute?displayProperty=nameWithType> özniteliklerin en yaygın olarak yararlı davranışları ve sunmaya en sık istenen işlemi özellikleri. Öznitelikleri olduklarından, hizmet veya işlem uygulaması için geçerlidir. Diğer davranışları gibi <xref:System.ServiceModel.Description.ServiceMetadataBehavior?displayProperty=nameWithType> veya <xref:System.ServiceModel.Description.ServiceDebugBehavior?displayProperty=nameWithType>, program aracılığıyla kullanabilirsiniz ancak genellikle bir uygulama yapılandırma dosyası kullanılarak uygulanır.  
   

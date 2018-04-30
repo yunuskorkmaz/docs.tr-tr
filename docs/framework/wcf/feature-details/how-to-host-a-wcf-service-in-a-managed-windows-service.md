@@ -1,27 +1,29 @@
 ---
-title: "Nasıl yapılır: Yönetilen Bir Windows Hizmetinde Bir WCF Hizmeti Barındırma"
-ms.custom: 
+title: 'Nasıl yapılır: Yönetilen Bir Windows Hizmetinde Bir WCF Hizmeti Barındırma'
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - csharp
 - vb
 ms.assetid: 8e37363b-4dad-4fb6-907f-73c30fac1d9a
-caps.latest.revision: "21"
+caps.latest.revision: 21
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: f4b2c8daa176ef1f9aef24cac3125d59fcc02fa9
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: aab9780a0d40ab71710d454deb3144219557450f
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="how-to-host-a-wcf-service-in-a-managed-windows-service"></a>Nasıl yapılır: Yönetilen Bir Windows Hizmetinde Bir WCF Hizmeti Barındırma
 Bu konu oluşturmak için gereken temel adımlarda özetler bir [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] bir Windows hizmeti tarafından barındırılan hizmet. Senaryo barındırma uzun süreli olduğundan seçeneği yönetilen Windows hizmeti tarafından etkin [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] etkinleştirildi, değil ileti güvenli bir ortamda Internet Information Services (IIS) dışında barındırılan hizmeti. Hizmet ömrü, bunun yerine işletim sistemi tarafından denetlenir. Barındırma bu seçenek, tüm Windows sürümlerinde kullanılabilir.  
@@ -61,7 +63,7 @@ Bu konu oluşturmak için gereken temel adımlarda özetler bir [!INCLUDE[indigo
      [!code-csharp[c_HowTo_HostInNTService#2](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_howto_hostinntservice/cs/service.cs#2)]
      [!code-vb[c_HowTo_HostInNTService#2](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_howto_hostinntservice/vb/service.vb#2)]  
   
-8.  Adlı yeni bir sınıf oluşturmak `CalculatorWindowsService` devraldığı <xref:System.ServiceProcess.ServiceBase> sınıfı. Adlı bir yerel değişken Ekle `serviceHost` başvuru <xref:System.ServiceModel.ServiceHost> örneği. Tanımlamak `Main` çağıran yöntemi`ServiceBase.Run(new CalculatorWindowsService)`  
+8.  Adlı yeni bir sınıf oluşturmak `CalculatorWindowsService` devraldığı <xref:System.ServiceProcess.ServiceBase> sınıfı. Adlı bir yerel değişken Ekle `serviceHost` başvuru <xref:System.ServiceModel.ServiceHost> örneği. Tanımlamak `Main` çağıran yöntemi `ServiceBase.Run(new CalculatorWindowsService)`  
   
      [!code-csharp[c_HowTo_HostInNTService#3](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_howto_hostinntservice/cs/service.cs#3)]
      [!code-vb[c_HowTo_HostInNTService#3](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_howto_hostinntservice/vb/service.vb#3)]  
@@ -122,7 +124,7 @@ Bu konu oluşturmak için gereken temel adımlarda özetler bir [!INCLUDE[indigo
   
      App.config dosyasını sağ tıklatın **Çözüm Gezgini** seçip **özellikleri**. Altında **çıktı dizinine Kopyala** seçin **yeniyse Kopyala**.  
   
-     Bu örnek, yapılandırma dosyasında uç noktalar açıkça belirtir. Hizmeti için uç nokta eklemezseniz çalışma zamanı varsayılan uç noktaları ekler. Bu örnekte, hizmetin sahip olduğu bir <xref:System.ServiceModel.Description.ServiceMetadataBehavior> kümesine `true`, hizmetiniz etkin meta veri yayımlama de vardır. [!INCLUDE[crabout](../../../../includes/crabout-md.md)]Varsayılan uç noktalar, bağlamaları ve davranışları, bkz: [Basitleştirilmiş yapılandırma](../../../../docs/framework/wcf/simplified-configuration.md) ve [WCF hizmetleri için Basitleştirilmiş yapılandırma](../../../../docs/framework/wcf/samples/simplified-configuration-for-wcf-services.md).  
+     Bu örnek, yapılandırma dosyasında uç noktalar açıkça belirtir. Hizmeti için uç nokta eklemezseniz çalışma zamanı varsayılan uç noktaları ekler. Bu örnekte, hizmetin sahip olduğu bir <xref:System.ServiceModel.Description.ServiceMetadataBehavior> kümesine `true`, hizmetiniz etkin meta veri yayımlama de vardır. Varsayılan uç noktalar, bağlamaları ve davranışları hakkında daha fazla bilgi için bkz: [Basitleştirilmiş yapılandırma](../../../../docs/framework/wcf/simplified-configuration.md) ve [WCF hizmetleri için Basitleştirilmiş yapılandırma](../../../../docs/framework/wcf/samples/simplified-configuration-for-wcf-services.md).  
   
 ### <a name="install-and-run-the-service"></a>Yükleyin ve hizmet çalıştırın  
   

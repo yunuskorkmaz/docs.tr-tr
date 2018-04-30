@@ -1,23 +1,24 @@
 ---
-title: "Yerleşik yapılandırma"
-ms.custom: 
+title: Yerleşik yapılandırma
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 34e85c9b-088d-4347-816c-0f77cb73ef2f
-caps.latest.revision: "15"
+caps.latest.revision: 15
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 3ddf9b316074a69a88f08a0d7f519533f2db0002
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 0c414f34da0cd4bbf484c0a439f8832f02a5ae58
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="built-in-configuration"></a>Yerleşik yapılandırma
 Bu örnek, kullanım ve SQL iş akışı örneği depolama yapılandırmasını gösterir. SQL iş akışı örneği deposuna bir SQL tabanlı bir örnek deposuna uygulamasıdır. Kaydetme ve yükleme durumu için ve SQL Server veya SQL Server Express veritabanından bir örnek sağlar.  
@@ -36,7 +37,7 @@ Bu örnek, kullanım ve SQL iş akışı örneği depolama yapılandırmasını 
   
  Sayım iş akışını bir iş akışı hizmeti ana bilgisayar tarafından kendiliğinden barındırılır. Programın `Main` yöntemi sayım iş akışı barındıran iş akışı hizmeti ana bilgisayarı örneği oluşturur. Sayım iş akışı altında ulaşılabilen uç noktaları tanımlar. Bundan sonra SQL iş akışı örneği deposunu yapılandırmak için kullanılan bir SQL iş akışı örneği deposu davranışı tanımlar. Ardından, program sayım iş akışının başlangıç yöntemini çağıran bir istemci oluşturur.  
   
- Program başladıktan sonra sayaç sayım otomatik olarak başlar. Örneği yüklemek ve SQL iş akışı örneği deposunu yapılandırmak için birkaç saniye sürebilir unutmayın. [!INCLUDE[crabout](../../../../includes/crabout-md.md)]İş akışı örneği deposu bkz [SQL iş akışı örneği deposuna](../../../../docs/framework/windows-workflow-foundation/sql-workflow-instance-store.md).  
+ Program başladıktan sonra sayaç sayım otomatik olarak başlar. Örneği yüklemek ve SQL iş akışı örneği deposunu yapılandırmak için birkaç saniye sürebilir unutmayın. İş akışı örneği mağazası hakkında daha fazla bilgi için bkz: [SQL iş akışı örneği deposuna](../../../../docs/framework/windows-workflow-foundation/sql-workflow-instance-store.md).  
   
  Örnek iki bölümden oluşur:  
   

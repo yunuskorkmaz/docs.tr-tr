@@ -16,11 +16,11 @@ ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: b37af67a3deeed4e55939ff1c1baf73752233e94
-ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
+ms.openlocfilehash: e367c11b48e6f4034afb1f42ded3498d748848a7
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/28/2018
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="large-data-and-streaming"></a>Büyük Veriler ve Akış Yapma
 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] bir XML tabanlı iletişim altyapısıdır. XML verilerini yaygın olarak tanımlanan standart metin biçiminde kodlanmış çünkü [XML 1.0 belirtimi](http://go.microsoft.com/fwlink/?LinkId=94838), bağlı sistemler geliştiricileri ve mimarlar genellikle açısından gönderilen iletiler kablo ayak izini (veya boyut) hakkında arasında Ağ ve metin tabanlı XML kodlaması, ikili veri verimli aktarımı için özel zorluklar doğurur.  
@@ -246,7 +246,7 @@ public class UploadStreamMessage
   
  Bu nedenle, en büyük gelen ileti boyutu sınırlama, bu durumda yeterli değil. `MaxBufferSize` Özelliği bellek sınırlamak için gereklidir, [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] arabellek. Bu güvenli bir değere ayarlayın (veya varsayılan değer olarak saklamak) önemlidir akış olduğunda. Örneğin, hizmetiniz alması gerekir varsayalım en fazla 4 GB boyutunda dosyaları ve bunları yerel diskte depolar. Ayrıca, bellek, yalnızca 64 KB veri aynı anda arabellek şekilde kısıtlıdır varsayalım. Sonra da ayarlamanız gerekir `MaxReceivedMessageSize` 4 GB ve `MaxBufferSize` 64 KB. Ayrıca, hizmet uygulamanızda 64 KB öbek gelen akışta yalnızca okuma ve önceki bırakıldı önce sonraki öbek okunmaz sağlamanız gerekir. diske yazılan ve bellekten atıldı.  
   
- Gerçekleştirilir arabelleğe alma Bu kota yalnızca sınırlar anlaşılması önemlidir [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] ve tüm kendi hizmet veya istemci uygulamasında bunu arabelleğe karşı koruyamaz. [!INCLUDE[crabout](../../../../includes/crabout-md.md)] ek güvenlik konuları Bkz [veriler için güvenlik konuları](../../../../docs/framework/wcf/feature-details/security-considerations-for-data.md).  
+ Gerçekleştirilir arabelleğe alma Bu kota yalnızca sınırlar anlaşılması önemlidir [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] ve tüm kendi hizmet veya istemci uygulamasında bunu arabelleğe karşı koruyamaz. Ek güvenlik konuları hakkında daha fazla bilgi için bkz: [veriler için güvenlik konuları](../../../../docs/framework/wcf/feature-details/security-considerations-for-data.md).  
   
 > [!NOTE]
 >  Arabelleğe alınan veya akış aktarımları kullanmaya karar, uç noktanın yerel bir karardır. HTTP taşımaları için bir bağlantı üzerinden veya proxy sunucuları ve diğer aracılar için aktarım modunu dağıtılmaz. Aktarım modunu ayarlama hizmet arabirimi açıklamasında yansıtılmaz. Oluşturma sonrasında bir [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] istemci bir hizmet ile akış aktarımları modu ayarlamak için kullanılması hedeflenen Hizmetleri için yapılandırma dosyasını düzenlemeniz gerekir. TCP ve adlandırılmış kanal aktarımlar, aktarım modu İlkesi onaylama yayılır.  

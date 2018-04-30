@@ -16,11 +16,11 @@ ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: 14b3eebb83115617ce32ab0ff45184cd6754e58c
-ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
+ms.openlocfilehash: 6fa35209b2dafc088605848a0dc96a53a2813dfd
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/28/2018
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="poison-message-handling"></a>Zehirli İleti İşleme
 A *zehir iletisi* uygulama Teslim girişimleri üst sınırını aştı iletisidir. Sıra tabanlı bir uygulama hataları nedeniyle bir ileti işleyemediğinde bu durum ortaya çıkabilir. Güvenilirlik taleplerini karşılamak üzere kuyruğa alınan bir uygulamayı bir işlem altında iletilerini alır. İleti altında yeni bir işlem denenir kuyruğa alınan iletinin alındığı işlem durduruluyor iletinin kuyrukta bırakır, böylece. İptal etmek işlem neden olan sorunu düzeltilmezse alma işlemini yapan uygulamanın alma ve teslim deneme sayısı aşıldı kadar aynı iletiyi durduruluyor döngü ve zehir iletisi sonuçları takılı.  
@@ -104,7 +104,7 @@ A *zehir iletisi* uygulama Teslim girişimleri üst sınırını aştı iletisid
  Bir oturum tek bir ileti aynı yeniden deneme ve poison ileti işleme yordamları uğradığında. Zehirli ileti için daha önce listelenen özellikleri tüm oturum için geçerlidir. Bu, tüm oturum yeniden denenir ve ileti reddedilirse son poison ileti sırası veya gönderenin sahipsiz sırayı giden anlamına gelir.  
   
 ## <a name="batching-and-poison-messages"></a>Toplu işleme ve zarar iletileri  
- Bir ileti zararlı bir ileti olur ve bir toplu iş parçası ise, toplu işin tamamını geri alınır ve aynı anda tek bir ileti okuma kanal döndürür. [!INCLUDE[crabout](../../../../includes/crabout-md.md)] Toplu işleme, bkz: [bir işlemde toplu ileti](../../../../docs/framework/wcf/feature-details/batching-messages-in-a-transaction.md)  
+ Bir ileti zararlı bir ileti olur ve bir toplu iş parçası ise, toplu işin tamamını geri alınır ve aynı anda tek bir ileti okuma kanal döndürür. Toplu işleme hakkında daha fazla bilgi için bkz: [bir işlemde toplu ileti](../../../../docs/framework/wcf/feature-details/batching-messages-in-a-transaction.md)  
   
 ## <a name="poison-message-handling-for-messages-in-a-poison-queue"></a>Poison ileti zararlı sıradaki iletiler için işleme  
  Bir ileti poison ileti sıraya yerleştirildiğinde poison ileti işleme bitmez. Poison ileti sıradaki iletiler hala okuyun ve işlenmiş. Son zarar alt sırasına iletileri okunurken poison ileti işleme ayarların bir alt kümesini kullanabilirsiniz. Geçerli ayarları `ReceiveRetryCount` ve `ReceiveErrorHandling`. Ayarlayabileceğiniz `ReceiveErrorHandling` , reddetme, bırakma veya hata. `MaxRetryCycles` göz ardı edilir ve varsa bir özel durum `ReceiveErrorHandling` taşımak için ayarlanır.  

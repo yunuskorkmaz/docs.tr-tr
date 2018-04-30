@@ -1,32 +1,34 @@
 ---
-title: "Nasıl yapılır: WCF Aracısı ile WSE 3.0 Hizmetine Erişme"
-ms.custom: 
+title: 'Nasıl yapılır: WCF Aracısı ile WSE 3.0 Hizmetine Erişme'
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - csharp
 - vb
 ms.assetid: 1f9bcd9b-8f8f-47fa-8f1e-0d47236eb800
-caps.latest.revision: "12"
+caps.latest.revision: 12
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 49ff6378bcd35ab2d4e2adf3783a1c4e73025d3a
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.workload:
+- dotnet
+ms.openlocfilehash: 382762917e790d54dca31158f2b7ffde560c1427
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="how-to-access-a-wse-30-service-with-a-wcf-client"></a>Nasıl yapılır: WCF Aracısı ile WSE 3.0 Hizmetine Erişme
-[!INCLUDE[indigo1](../../../../includes/indigo1-md.md)]istemcileridir hat düzeyinde uyumlu Web Services Enhancements (WSE) 3.0 ile ne zaman Microsoft .NET hizmetleri için [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] istemcileri WS adresleme belirtimi Ağustos 2004 sürümünü kullanacak şekilde yapılandırılır. Ancak, WSE 3.0 hizmetlerini meta veri değişimi (MEX) protokolü, bu nedenle desteklemeyen kullandığınızda [ServiceModel meta veri yardımcı Programracı (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md) oluşturmak için bir [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] istemci sınıfı, güvenlik ayarları uygulanmaz için oluşturulan [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] istemci. Bu nedenle, sonra WSE 3.0 hizmet gerektiren güvenlik ayarlarını belirtmeniz gerekir [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] istemci oluşturulur.  
+[!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] istemcileridir hat düzeyinde uyumlu Web Services Enhancements (WSE) 3.0 ile ne zaman Microsoft .NET hizmetleri için [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] istemcileri WS adresleme belirtimi Ağustos 2004 sürümünü kullanacak şekilde yapılandırılır. Ancak, WSE 3.0 hizmetlerini meta veri değişimi (MEX) protokolü, bu nedenle desteklemeyen kullandığınızda [ServiceModel meta veri yardımcı Programracı (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md) oluşturmak için bir [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] istemci sınıfı, güvenlik ayarları uygulanmaz için oluşturulan [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] istemci. Bu nedenle, sonra WSE 3.0 hizmet gerektiren güvenlik ayarlarını belirtmeniz gerekir [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] istemci oluşturulur.  
   
- WSE 3.0 hizmetin gereksinimleri ve WSE 3.0 hizmet arasındaki birlikte çalışabilir gereksinimlerini dikkate almanız özel bağlama kullanarak bu güvenlik ayarlarını uygulayabilirsiniz ve [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] istemci. Bu birlikte çalışabilirlik gereksinimleri Ağustos 2004 daha önce bahsedilen kullanımını içerir belirtimi WS adresleme ve 3.0default WSE iletisi korumasını <xref:System.ServiceModel.Security.MessageProtectionOrder.SignBeforeEncrypt>. Varsayılan ileti koruması [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] olan <xref:System.ServiceModel.Security.MessageProtectionOrder.SignBeforeEncryptAndEncryptSignature>. Bu konuda oluşturma ayrıntıları bir [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] bağlaması WSE 3.0 hizmeti ile birlikte çalışır. [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]Ayrıca bu bağlamayı içeren bir örnek sağlar. [!INCLUDE[crabout](../../../../includes/crabout-md.md)]Bu örnek, bkz: [ASMX Web Hizmetleri ile birlikte çalışma](../../../../docs/framework/wcf/samples/interoperating-with-asmx-web-services.md).  
+ WSE 3.0 hizmetin gereksinimleri ve WSE 3.0 hizmet arasındaki birlikte çalışabilir gereksinimlerini dikkate almanız özel bağlama kullanarak bu güvenlik ayarlarını uygulayabilirsiniz ve [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] istemci. Bu birlikte çalışabilirlik gereksinimleri Ağustos 2004 daha önce bahsedilen kullanımını içerir belirtimi WS adresleme ve 3.0default WSE iletisi korumasını <xref:System.ServiceModel.Security.MessageProtectionOrder.SignBeforeEncrypt>. Varsayılan ileti koruması [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] olan <xref:System.ServiceModel.Security.MessageProtectionOrder.SignBeforeEncryptAndEncryptSignature>. Bu konuda oluşturma ayrıntıları bir [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] bağlaması WSE 3.0 hizmeti ile birlikte çalışır. [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] Ayrıca bu bağlamayı içeren bir örnek sağlar. Bu örnek hakkında daha fazla bilgi için bkz: [ASMX Web Hizmetleri ile birlikte çalışma](../../../../docs/framework/wcf/samples/interoperating-with-asmx-web-services.md).  
   
 ### <a name="to-access-a-wse-30-web-service-with-a-wcf-client"></a>Bir WCF istemcisi ile WSE 3.0 Web hizmetine erişmek için  
   
@@ -34,7 +36,7 @@ ms.lasthandoff: 01/19/2018
   
      WSE 3.0 Web hizmeti için bir [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] istemci oluşturulur. WSE 3.0 MEX Protokolü desteklemediğinden, Web hizmeti için güvenlik gereksinimlerini almak için Aracı'nı kullanamazsınız. Uygulama geliştiricisi istemcisi için güvenlik ayarları eklemeniz gerekir.  
   
-     [!INCLUDE[crabout](../../../../includes/crabout-md.md)]oluşturma bir [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] istemci, bkz: [nasıl yapılır: bir istemci oluşturmak](../../../../docs/framework/wcf/how-to-create-a-wcf-client.md).  
+     Oluşturma hakkında daha fazla bilgi için bir [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] istemci, bkz: [nasıl yapılır: bir istemci oluşturmak](../../../../docs/framework/wcf/how-to-create-a-wcf-client.md).  
   
 2.  WSE 3.0 Web Hizmetleri ile iletişim kurabilen bir bağlama temsil eden bir sınıf oluşturun.  
   

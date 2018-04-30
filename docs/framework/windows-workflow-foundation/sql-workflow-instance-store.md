@@ -14,11 +14,11 @@ ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: 11e61e1d702572af10cf4e46b9d1b284022fa56e
-ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
+ms.openlocfilehash: 60eaef2bbbb2ff7653aeac832163276c32bc696b
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/28/2018
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="sql-workflow-instance-store"></a>SQL iş akışı örneği deposu
 [!INCLUDE[netfx_current_short](../../../includes/netfx-current-short-md.md)] İş akışı örneği bir SQL Server 2005 veya SQL Server 2008 veritabanı ile ilgili durum bilgisini kalıcı hale getirmek için iş akışlarını tanır SQL iş akışı örneği deposu ile birlikte gelir. Bu özellik öncelikle biçiminde uygulanan <xref:System.Activities.DurableInstancing.SqlWorkflowInstanceStore> Özet türeyen sınıf <xref:System.Runtime.DurableInstancing.InstanceStore> Kalıcılık framework'ün sınıfı. SQL iş akışı örneği depolama özelliğini Kalıcılık komutları mağazaya göndermek için bir konak kullanır API Kalıcılık somut bir uygulamasıdır SQL Kalıcılık sağlayıcısı meydana gelir.  
@@ -29,7 +29,7 @@ ms.lasthandoff: 04/28/2018
   
  Bu bölümdeki konularda SQL iş akışı örneği deposunun özellikleri açıklamak ve depolama yapılandırma hakkında ayrıntılar sağlar.  
   
- Windows Server App Fabric kendi örnek deposuna ve yapılandırmayı ve örnek deposuna kullanımını kolaylaştırmak için araç sağlar. Daha fazla bilgi için bkz: [Windows Server App Fabric örnek deposuna](http://go.microsoft.com/fwlink/?LinkId=201201). [!INCLUDE[crabout](../../../includes/crabout-md.md)] Uygulama doku SQL Server Kalıcılık veritabanı bakın [uygulama doku SQL Server Kalıcılık veritabanı](http://go.microsoft.com/fwlink/?LinkId=201202)  
+ Windows Server App Fabric kendi örnek deposuna ve yapılandırmayı ve örnek deposuna kullanımını kolaylaştırmak için araç sağlar. Daha fazla bilgi için bkz: [Windows Server App Fabric örnek deposuna](http://go.microsoft.com/fwlink/?LinkId=201201). Uygulama doku SQL Server Kalıcılık veritabanı bakın hakkında daha fazla bilgi için [uygulama doku SQL Server Kalıcılık veritabanı](http://go.microsoft.com/fwlink/?LinkId=201202)  
   
 ## <a name="in-this-section"></a>Bu Bölümde  
   

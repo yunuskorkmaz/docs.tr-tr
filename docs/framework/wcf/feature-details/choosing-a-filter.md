@@ -10,17 +10,17 @@ ms.technology:
 ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 67ab5af9-b9d9-4300-b3b1-41abb5a1fd10
-caps.latest.revision: ''
+caps.latest.revision: 8
 author: wadepickett
 ms.author: wpickett
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: e81af51be3e281faa94bcea17ff75b41341abb33
-ms.sourcegitcommit: c883637b41ee028786edceece4fa872939d2e64c
+ms.openlocfilehash: 653013de37278f051f37fdda52e68fc3d84c2cbb
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/26/2018
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="choosing-a-filter"></a>Filtre Seçme
 Yönlendirme hizmeti yapılandırırken, doğru ileti filtreleri seçin ve bunları aldığınız iletileri karşı tam eşleşme yapmanıza izin verecek şekilde yapılandırmak önemlidir. Seçtiğiniz filtre kendi eşleşmeleri aşırı geniş kapsamlı veya yanlış yapılandırılmış iletiler yanlış yönlendirilir. Filtreler çok kısıtlayıcı olması durumunda, kullanılabilir tüm geçerli yollar bazı iletilerinizin olmayabilir.  
@@ -29,7 +29,7 @@ Yönlendirme hizmeti yapılandırırken, doğru ileti filtreleri seçin ve bunla
  Yönlendirme hizmeti tarafından kullanılan filtreleri seçerken, hangi bilgilerin kullanılabilir yanı sıra her bir filtrenin nasıl çalıştığını anlamak önemlidir gelen iletileri bir parçası olarak. Tüm iletileri aynı uç noktası üzerinden alınırsa, tüm iletileri bu filtreler eşleştiğinden örneği için adres ve EndpointName filtreleri yararlı değildir.  
   
 ### <a name="action"></a>Eylem  
- Eylem filtresi inceler <xref:System.ServiceModel.Channels.MessageHeaders.Action%2A> özelliği. Eylem üst bilgi iletisi içeriği filtre yapılandırmasında belirtilen filtre veri değeri eşleşmesi durumunda bu filtre döndürür `true`. Aşağıdaki örnek tanımlayan bir `FilterElement` iletileri "http://namespace/contract/operation/" değerini içeren bir eylem üstbilgisi ile eşleşecek şekilde eylem filtresi kullanan.  
+ Eylem filtresi inceler <xref:System.ServiceModel.Channels.MessageHeaders.Action%2A> özelliği. Eylem üst bilgi iletisi içeriği filtre yapılandırmasında belirtilen filtre veri değeri eşleşmesi durumunda bu filtre döndürür `true`. Aşağıdaki örnek tanımlayan bir `FilterElement` iletileri değerini içeren bir eylem üstbilgisi ile eşleşecek şekilde eylem filtresi kullanan "http://namespace/contract/operation/".  
   
 ```xml  
 <filter name="action1" filterType="Action" filterData="http://namespace/contract/operation/" />  
@@ -105,7 +105,7 @@ MyCustomMsgFilter custom1=new MyCustomMsgFilter("Custom Data");
   
  İle sağlanan filtreler tarafından kapsanmayan bir ileti karşı özel eşleşen mantık yapmanız gereken [!INCLUDE[netfx_current_short](../../../../includes/netfx-current-short-md.md)], uygulamasıdır özel bir filtre oluşturmanız gerekir **MessageFilter** sınıfı. Örneğin, bir alana filtre yapılandırma olarak verilen bilinen değerler listesini karşı gelen ileti karşılaştırır veya belirli ileti öğesi karma hale getirir ve bu değeri belirlemek için inceler özel bir filtre oluşturabilirsiniz olup olmadığını filtresi döndürmelidir `true` veya `false`.  
   
-### <a name="endpointname"></a>endpointName  
+### <a name="endpointname"></a>EndpointName  
  EndpointName filtre iletisi aldı uç noktanın adı olup olmadığını denetler. Aşağıdaki örnek tanımlayan bir `FilterElement` EndpointName filtre "SvcEndpoint" alınan iletileri yönlendirmek için kullanır.  
   
 ```xml  
@@ -144,9 +144,9 @@ XPathMessageFilter xpath1=new XPathMessageFilter("//ns:element");
   
  Bu filtre, aldığınız iletileri belirli bir değer içeren biliyorsanız yararlıdır. Örneğin, hizmetinin daha yeni sürümünü gönderilen iletiler özel üstbilgisinde benzersiz bir değer içermesi bildiğiniz iki sürümü aynı hizmet barındırma bu başlığı gitmek için XPath kullanır ve değer pres karşılaştırır bir filtresi oluşturabilirsiniz başka bir filtre eşleşip eşleşmediğini belirlemek için filtre yapılandırmada verilen üstbilgisinde ent.  
   
- XPath sorguları genellikle uzun benzersiz ad alanları genellikle içerir veya karmaşık dize değerlerini XPath filtresi ad alanı tablosu, ad alanları için benzersiz önekleri belirlemek için kullanılır olanak tanıyan çünkü. [!INCLUDE[crabout](../../../../includes/crabout-md.md)] ad alanı tablo bkz [ileti filtreleri](../../../../docs/framework/wcf/feature-details/message-filters.md).  
+ XPath sorguları genellikle uzun benzersiz ad alanları genellikle içerir veya karmaşık dize değerlerini XPath filtresi ad alanı tablosu, ad alanları için benzersiz önekleri belirlemek için kullanılır olanak tanıyan çünkü. Ad alanı tablosu hakkında daha fazla bilgi için bkz: [ileti filtreleri](../../../../docs/framework/wcf/feature-details/message-filters.md).  
   
- [!INCLUDE[crabout](../../../../includes/crabout-md.md)] XPath sorguları tasarlama, bkz: [XPath sözdizimi](http://go.microsoft.com/fwlink/?LinkId=164592).  
+ XPath sorguları tasarlama hakkında daha fazla bilgi için bkz: [XPath sözdizimi](http://go.microsoft.com/fwlink/?LinkId=164592).  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
  [İleti Filtreleri](../../../../docs/framework/wcf/feature-details/message-filters.md)  

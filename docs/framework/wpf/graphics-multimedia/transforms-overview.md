@@ -1,12 +1,13 @@
 ---
-title: "Dönüşümlere Genel Bakış"
-ms.custom: 
+title: Dönüşümlere Genel Bakış
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-wpf
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-wpf
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - transformations [WPF], about transformations
@@ -19,16 +20,17 @@ helpviewer_keywords:
 - Transforms [WPF], about Transforms
 - FrameworkElement objects [WPF], scaling
 ms.assetid: 8f153d5e-ed61-4aa5-a7cd-286f0c427a13
-caps.latest.revision: "21"
+caps.latest.revision: 21
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 4992b5be4243d8d29b6075c0ad746494dc2eb168
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: e63b83ea455a342d5d3fedaee0ad7d1714e90998
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="transforms-overview"></a>Dönüşümlere Genel Bakış
 Bu konuda nasıl kullanılacağını açıklar [!INCLUDE[TLA#tla_2d](../../../../includes/tlasharptla-2d-md.md)] <xref:System.Windows.Media.Transform> döndürme, ölçeklendirme, taşıma için sınıflar (çevirme) ve eğme <xref:System.Windows.FrameworkElement> nesneleri.  
@@ -39,7 +41,7 @@ Bu konuda nasıl kullanılacağını açıklar [!INCLUDE[TLA#tla_2d](../../../..
  A <xref:System.Windows.Media.Transform> nasıl harita veya dönüştürme, bir koordinat noktasına başka bir koordinat tanımlar. Bu eşleme bir dönüşüm tarafından açıklanan <xref:System.Windows.Media.Matrix>, üç satır koleksiyonu üç sütunlarının sahip olduğu <xref:System.Double> değerleri.  
   
 > [!NOTE]
->  [!INCLUDE[TLA#tla_wpf](../../../../includes/tlasharptla-wpf-md.md)]satır ağırlıklı matrisleri kullanır. Vektörler satır vektörleri olarak, sütun vektörleri değil ifade edilir.  
+>  Windows Presentation Foundation (WPF) satır ağırlıklı matrisleri kullanır. Vektörler satır vektörleri olarak, sütun vektörleri değil ifade edilir.  
   
  Aşağıdaki tabloda yapısını gösteren bir [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] matris.  
   
@@ -51,13 +53,13 @@ Bu konuda nasıl kullanılacağını açıklar [!INCLUDE[TLA#tla_2d](../../../..
 |<xref:System.Windows.Media.Matrix.M21%2A><br /><br /> Varsayılan: 0,0|<xref:System.Windows.Media.Matrix.M22%2A><br /><br /> Varsayılan: 1.0|0.0|  
 |<xref:System.Windows.Media.Matrix.OffsetX%2A><br /><br /> Varsayılan: 0,0|<xref:System.Windows.Media.Matrix.OffsetY%2A><br /><br /> Varsayılan: 0,0|1.0|  
   
- Matris değerlerini değiştirerek, döndürme, ölçeklendirme, eğme taşıyın ve (çevirme) bir nesne. Örneğin, üçüncü satırın ilk sütunundaki değeri değiştirin ( <xref:System.Windows.Media.Matrix.OffsetX%2A> değeri) 100'e bunu nesneyi 100 birim x ekseni boyunca taşımak için kullanabilirsiniz. İkinci satırın ikinci sütunundaki değeri 3 değiştirirseniz, bir nesneyi üç kez geçerli yüksekliğiyle uzatmak için kullanabilirsiniz. Her iki değeri değiştirirseniz, nesneyi 100 birim x ekseni boyunca taşıyın ve yüksekliğinin 3 faktörüyle uzatma. Çünkü [!INCLUDE[TLA#tla_wpf](../../../../includes/tlasharptla-wpf-md.md)] destekler afin dönüşümler, sağdaki sütundaki değerleri her zaman yalnızca 0, 0, 1.  
+ Matris değerlerini değiştirerek, döndürme, ölçeklendirme, eğme taşıyın ve (çevirme) bir nesne. Örneğin, üçüncü satırın ilk sütunundaki değeri değiştirin ( <xref:System.Windows.Media.Matrix.OffsetX%2A> değeri) 100'e bunu nesneyi 100 birim x ekseni boyunca taşımak için kullanabilirsiniz. İkinci satırın ikinci sütunundaki değeri 3 değiştirirseniz, bir nesneyi üç kez geçerli yüksekliğiyle uzatmak için kullanabilirsiniz. Her iki değeri değiştirirseniz, nesneyi 100 birim x ekseni boyunca taşıyın ve yüksekliğinin 3 faktörüyle uzatma. Windows Presentation Foundation (WPF) yalnızca afin dönüşümler desteklediğinden, sağdaki sütundaki değerleri her zaman 0, 0, 1.  
   
- Rağmen [!INCLUDE[TLA#tla_wpf](../../../../includes/tlasharptla-wpf-md.md)] doğrudan matris değerlerini yönetmenize olanak sağlayan birkaç de sağlar <xref:System.Windows.Media.Transform> temel matris yapısının nasıl yapılandırıldığını bilmeden bir nesneyi dönüştürmenizi etkinleştiren sınıfları. Örneğin, <xref:System.Windows.Media.ScaleTransform> sınıfı ayarlayarak nesneyi ölçeklendirmenizi sağlar, <xref:System.Windows.Media.ScaleTransform.ScaleX%2A> ve <xref:System.Windows.Media.ScaleTransform.ScaleY%2A> bir dönüştürme matrisi düzenleme yerine özellikleri. Benzer şekilde, <xref:System.Windows.Media.RotateTransform> sınıfı bir nesne yalnızca ayarlayarak döndürmenizi sağlar, <xref:System.Windows.Media.RotateTransform.Angle%2A> özelliği.  
+ Windows Presentation Foundation (WPF) doğrudan matris değerlerini yönetmenize olanak sağlar, ancak Ayrıca birkaç sağlar <xref:System.Windows.Media.Transform> temel matris yapısının nasıl yapılandırıldığını bilmeden bir nesneyi dönüştürmenizi etkinleştiren sınıfları. Örneğin, <xref:System.Windows.Media.ScaleTransform> sınıfı ayarlayarak nesneyi ölçeklendirmenizi sağlar, <xref:System.Windows.Media.ScaleTransform.ScaleX%2A> ve <xref:System.Windows.Media.ScaleTransform.ScaleY%2A> bir dönüştürme matrisi düzenleme yerine özellikleri. Benzer şekilde, <xref:System.Windows.Media.RotateTransform> sınıfı bir nesne yalnızca ayarlayarak döndürmenizi sağlar, <xref:System.Windows.Media.RotateTransform.Angle%2A> özelliği.  
   
 <a name="transformClassesSection"></a>   
 ## <a name="transform-classes"></a>Dönüşüm sınıfları  
- [!INCLUDE[TLA#tla_wpf](../../../../includes/tlasharptla-wpf-md.md)]Aşağıdaki sağlar [!INCLUDE[TLA#tla_2d](../../../../includes/tlasharptla-2d-md.md)] <xref:System.Windows.Media.Transform> sınıflar ortak dönüşüm işlemleri için:  
+ Windows Presentation Foundation (WPF) aşağıdakileri sağlar [!INCLUDE[TLA#tla_2d](../../../../includes/tlasharptla-2d-md.md)] <xref:System.Windows.Media.Transform> sınıflar ortak dönüşüm işlemleri için:  
   
 |örneği|Açıklama|Örnek|Çizim|  
 |-----------|-----------------|-------------|------------------|  
@@ -66,18 +68,18 @@ Bu konuda nasıl kullanılacağını açıklar [!INCLUDE[TLA#tla_2d](../../../..
 |<xref:System.Windows.Media.SkewTransform>|Bir öğe tarafından belirtilen Eğer <xref:System.Windows.Media.SkewTransform.AngleX%2A> ve <xref:System.Windows.Media.SkewTransform.AngleY%2A> tutarlar.|[Bir Öğeyi Eğme](../../../../docs/framework/wpf/graphics-multimedia/how-to-skew-an-element.md)|![Çizim eğme](../../../../docs/framework/wpf/graphics-multimedia/media/graphicsmm-thumbnails-skew.png "graphicsmm_thumbnails_skew")|  
 |<xref:System.Windows.Media.TranslateTransform>|Taşır (çevirir) tarafından belirtilen bir öğe <xref:System.Windows.Media.TranslateTransform.X%2A> ve <xref:System.Windows.Media.TranslateTransform.Y%2A> tutarlar.|[Bir Öğeyi Çevirme](../../../../docs/framework/wpf/graphics-multimedia/how-to-translate-an-element.md)|![Çeviri çizimi](../../../../docs/framework/wpf/graphics-multimedia/media/graphicsmm-thumbnails-translate.png "graphicsmm_thumbnails_translate")|  
   
- Daha karmaşık dönüşümleri oluşturmak için [!INCLUDE[TLA#tla_wpf](../../../../includes/tlasharptla-wpf-md.md)] aşağıdaki iki sınıfı sağlar:  
+ Daha karmaşık dönüşümleri oluşturmak için Windows Presentation Foundation (WPF) aşağıdaki iki sınıfı sağlar:  
   
 |örneği|Açıklama|Örnek|  
 |-----------|-----------------|-------------|  
 |<xref:System.Windows.Media.TransformGroup>|Grupları birden çok <xref:System.Windows.Media.TransformGroup> nesnelerini tek <xref:System.Windows.Media.Transform> , sonra Özellikler dönüştürmek için uygulayabilirsiniz.|[Nesneye Birden Çok Dönüşüm Uygulama](../../../../docs/framework/wpf/graphics-multimedia/how-to-apply-multiple-transforms-to-an-object.md)|  
 |<xref:System.Windows.Media.MatrixTransform>|Tarafından sağlanmayan özel dönüşümleri oluşturur <xref:System.Windows.Media.Transform> sınıfları. Kullandığınızda, bir <xref:System.Windows.Media.MatrixTransform>, Matrisi doğrudan düzenlersiniz.|[Özel Dönüşümler Oluşturmak için MatrixTransform Kullanma](../../../../docs/framework/wpf/graphics-multimedia/how-to-use-a-matrixtransform-to-create-custom-transforms.md)|  
   
- [!INCLUDE[TLA#tla_wpf](../../../../includes/tlasharptla-wpf-md.md)]Ayrıca sağlar [!INCLUDE[TLA#tla_3d](../../../../includes/tlasharptla-3d-md.md)] dönüşümler. Daha fazla bilgi için bkz: <xref:System.Windows.Media.Media3D.Transform3D> sınıfı.  
+ Windows Presentation Foundation (WPF) de sağlar [!INCLUDE[TLA#tla_3d](../../../../includes/tlasharptla-3d-md.md)] dönüşümler. Daha fazla bilgi için bkz: <xref:System.Windows.Media.Media3D.Transform3D> sınıfı.  
   
 <a name="transformationproperties"></a>   
 ## <a name="common-transformation-properties"></a>Ortak dönüştürme özellikleri  
- Nesneyi dönüştürmek için bir yoldur uygun bildirmek için <xref:System.Windows.Media.Transform> yazın ve nesne dönüştürme özelliğine uygulamak. Farklı türde nesne farklı tür dönüşüm özellikleri vardır. Aşağıdaki tabloda birçok yaygın olarak kullanılan listeler [!INCLUDE[TLA#tla_wpf](../../../../includes/tlasharptla-wpf-md.md)] türlerini ve bunların dönüşüm özellikleri.  
+ Nesneyi dönüştürmek için bir yoldur uygun bildirmek için <xref:System.Windows.Media.Transform> yazın ve nesne dönüştürme özelliğine uygulamak. Farklı türde nesne farklı tür dönüşüm özellikleri vardır. Aşağıdaki tabloda birçok yaygın olarak kullanılan Windows Presentation Foundation (WPF) türlerini ve bunların dönüşüm özellikleri listeler.  
   
 |Tür|Dönüşüm özellikleri|  
 |----------|-------------------------------|  
@@ -95,7 +97,7 @@ Bu konuda nasıl kullanılacağını açıklar [!INCLUDE[TLA#tla_2d](../../../..
   
  Aşağıdaki örnek kullanan bir <xref:System.Windows.Media.RotateTransform> döndürmek için bir <xref:System.Windows.Shapes.Rectangle> öğesi, bir tür <xref:System.Windows.FrameworkElement>, kendi varsayılan merkezinde 45 derece (0, 0). Aşağıdaki çizimde döndürme etkisini gösterir.  
   
- ![45 derece döndürülen FrameworkElement &#40; 0,0 &#41; ] (../../../../docs/framework/wpf/graphics-multimedia/media/graphicsmm-fe-rotated-about-upperleft-corner.png "graphicsmm_FE_rotated_about_upperleft_corner")  
+ ![45 derece döndürülen FrameworkElement &#40;0,0&#41;](../../../../docs/framework/wpf/graphics-multimedia/media/graphicsmm-fe-rotated-about-upperleft-corner.png "graphicsmm_FE_rotated_about_upperleft_corner")  
 (0,0) noktasında 45 derece döndürülmüş bir dikdörtgen öğesi  
   
  [!code-xaml[Transforms_snip#TransformsFERotatedAboutTopLeft](../../../../samples/snippets/csharp/VS_Snippets_Wpf/Transforms_snip/CS/CoordinateSystemExample.xaml#transformsferotatedabouttopleft)]  
@@ -104,7 +106,7 @@ Bu konuda nasıl kullanılacağını açıklar [!INCLUDE[TLA#tla_2d](../../../..
   
  Sonraki örnekte de kullanır bir <xref:System.Windows.Media.RotateTransform> döndürmek için bir <xref:System.Windows.Shapes.Rectangle> öğesini 45 derece; ancak bu kez <xref:System.Windows.Media.RotateTransform.CenterX%2A> ve <xref:System.Windows.Media.RotateTransform.CenterY%2A> özelliklerinin böylece <xref:System.Windows.Media.RotateTransform> merkezine sahip (25, 25). Aşağıdaki çizimde döndürme etkisini gösterir.  
   
- ![45 derece &#40; döndürülen Geometry 25, 25 &#41; ] (../../../../docs/framework/wpf/graphics-multimedia/media/graphicsmm-fe-rotated-about-center.png "graphicsmm_FE_rotated_about_center")  
+ ![45 derece döndürülen Geometry &#40;25, 25&#41;](../../../../docs/framework/wpf/graphics-multimedia/media/graphicsmm-fe-rotated-about-center.png "graphicsmm_FE_rotated_about_center")  
 (25, 25) noktasında 45 derece döndürülmüş bir dikdörtgen öğesi  
   
  [!code-xaml[Transforms_snip#TransformsFERotatedAboutCenter](../../../../samples/snippets/csharp/VS_Snippets_Wpf/Transforms_snip/CS/CoordinateSystemExample.xaml#transformsferotatedaboutcenter)]  
@@ -113,9 +115,9 @@ Bu konuda nasıl kullanılacağını açıklar [!INCLUDE[TLA#tla_2d](../../../..
 ## <a name="transforming-a-frameworkelement"></a>FrameworkElement dönüştürme  
  Dönüştürmeler uygulamak için bir <xref:System.Windows.FrameworkElement>, oluşturma bir <xref:System.Windows.Media.Transform> ve iki özelliklerden biri için geçerlidir, <xref:System.Windows.FrameworkElement> sınıfı sağlar:  
   
--   <xref:System.Windows.FrameworkElement.LayoutTransform%2A>Düzen geçişinden önce uygulanan bir dönüşüm. Dönüşüm uygulandıktan sonra Düzen sistemi dönüştürülmüş boyutunu ve konumunu öğesi işler.  
+-   <xref:System.Windows.FrameworkElement.LayoutTransform%2A> Düzen geçişinden önce uygulanan bir dönüşüm. Dönüşüm uygulandıktan sonra Düzen sistemi dönüştürülmüş boyutunu ve konumunu öğesi işler.  
   
--   <xref:System.Windows.UIElement.RenderTransform%2A>– Öğesinin görünümünü değiştirir, ancak Düzen geçişi tamamlandıktan sonra uygulanan bir dönüşüm. Kullanarak <xref:System.Windows.UIElement.RenderTransform%2A> özelliği yerine <xref:System.Windows.FrameworkElement.LayoutTransform%2A> özelliği, başarım faydaları elde edebilirsiniz.  
+-   <xref:System.Windows.UIElement.RenderTransform%2A> – Öğesinin görünümünü değiştirir, ancak Düzen geçişi tamamlandıktan sonra uygulanan bir dönüşüm. Kullanarak <xref:System.Windows.UIElement.RenderTransform%2A> özelliği yerine <xref:System.Windows.FrameworkElement.LayoutTransform%2A> özelliği, başarım faydaları elde edebilirsiniz.  
   
  Hangi özelliği kullanmalısınız? Sağladığı performans avantajları nedeniyle kullanmak <xref:System.Windows.UIElement.RenderTransform%2A> özellikle kullandığınızda olası animasyonlu her özellik <xref:System.Windows.Media.Transform> nesneleri. Kullanım <xref:System.Windows.FrameworkElement.LayoutTransform%2A> özelliği ölçeklendirme, döndürme veya eğme ve öğenin dönüştürülmüş boyutu ayarlaması için üst öğenin gerektiğinde. İle kullanıldığında, Not <xref:System.Windows.FrameworkElement.LayoutTransform%2A> özelliği <xref:System.Windows.Media.TranslateTransform> nesneleri gibi görünüyor öğeler üzerinde hiçbir etkisi yoktur. Düzen sistemi, işleme bir parçası olarak özgün konumuna çevrilmiş öğeyi döndürür. olmasıdır.  
   

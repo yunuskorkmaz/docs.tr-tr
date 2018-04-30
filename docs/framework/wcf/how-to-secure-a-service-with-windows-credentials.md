@@ -21,14 +21,14 @@ ms.author: bruceper
 manager: mbaldwin
 ms.workload:
 - dotnet
-ms.openlocfilehash: c754a4ec57751b2ca5a809c771b2fb5235ec0510
-ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
+ms.openlocfilehash: 2828b6b9df313bab5a904712ad4e97cc7062f387
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/28/2018
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="how-to-secure-a-service-with-windows-credentials"></a>Nasıl yapılır: Windows Kimlik Bilgileri ile Bir Hizmeti Güvenli Hale Getirme
-Bu konu, taşıma güvenliği etkinleştirmek gösterilmiştir bir [!INCLUDE[indigo1](../../../includes/indigo1-md.md)] bir Windows etki alanında bulunan ve aynı etki alanındaki istemciler tarafından çağrılan hizmet. [!INCLUDE[crabout](../../../includes/crabout-md.md)] Bu senaryo, bkz: [Windows kimlik doğrulama ile taşıma güvenliği](../../../docs/framework/wcf/feature-details/transport-security-with-windows-authentication.md). Örnek bir uygulama için bkz: [WSHttpBinding](../../../docs/framework/wcf/samples/wshttpbinding.md) örnek.  
+Bu konu, taşıma güvenliği etkinleştirmek gösterilmiştir bir [!INCLUDE[indigo1](../../../includes/indigo1-md.md)] bir Windows etki alanında bulunan ve aynı etki alanındaki istemciler tarafından çağrılan hizmet. Bu senaryo hakkında daha fazla bilgi için bkz: [Windows kimlik doğrulama ile taşıma güvenliği](../../../docs/framework/wcf/feature-details/transport-security-with-windows-authentication.md). Örnek bir uygulama için bkz: [WSHttpBinding](../../../docs/framework/wcf/samples/wshttpbinding.md) örnek.  
   
  Bu konu, varolan sözleşme arabirimi varsa ve uygulama zaten tanımlanmış ve açın ekleyen varsayar. Varolan hizmet ve istemci de değiştirebilirsiniz.  
   
@@ -57,7 +57,7 @@ Bu konu, taşıma güvenliği etkinleştirmek gösterilmiştir bir [!INCLUDE[ind
      [!code-vb[c_SecureWindowsService#1](../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_securewindowsservice/vb/secureservice.vb#1)]  
   
 ### <a name="using-the-binding-in-a-service"></a>Bir hizmet olarak bağlama işlemini kullanma  
- Bir kendi kendini barındıran hizmet bağlama kullanmayı gösterir ikinci yordam budur. [!INCLUDE[crabout](../../../includes/crabout-md.md)] barındırma Hizmetleri Bkz: [barındırma hizmetleri](../../../docs/framework/wcf/hosting-services.md).  
+ Bir kendi kendini barındıran hizmet bağlama kullanmayı gösterir ikinci yordam budur. Barındırma hizmetleri hakkında daha fazla bilgi için bkz: [barındırma hizmetleri](../../../docs/framework/wcf/hosting-services.md).  
   
 ##### <a name="to-use-a-binding-in-a-service"></a>Bir hizmet olarak bir bağlama kullanmak için  
   

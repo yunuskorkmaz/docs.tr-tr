@@ -21,11 +21,11 @@ ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: e9f6d0e9d64c510b47b0697d02178f1c0a95f61b
-ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
+ms.openlocfilehash: 600d938b8981ddfabcb79028ae66b5b9d02107b7
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/28/2018
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="using-message-contracts"></a>İleti Sözleşmeleri Kullanılıyor
 Genellikle oluştururken [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] uygulamaları, geliştiricilerin serileştirme sorunları ve veri yapıları Kapat dikkat ve kendilerini içinde veri yazımının iletileri yapısıyla ilgilendiren gerekmez. Bu uygulamalar için parametreleri veya dönüş değerleri için veri sözleşmeleri oluşturma basittir. (Daha fazla bilgi için bkz: [hizmet sözleşmelerinde veri aktarımı belirtme](../../../../docs/framework/wcf/feature-details/specifying-data-transfer-in-service-contracts.md).)  
@@ -44,7 +44,7 @@ Genellikle oluştururken [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)]
 public BankingTransactionResponse PostBankingTransaction(BankingTransaction bt);  
 ```  
   
- Normalde, bir veri sözleşmesi şema iletileri tanımlamak yeterlidir. Örneğin, önceki örnekte, çoğu uygulama için yeterli değilse `BankingTransaction` ve `BankingTransactionResponse` temel alınan SOAP iletilerine içeriğini tanımlamak için veri sözleşmeleri sahip. [!INCLUDE[crabout](../../../../includes/crabout-md.md)] Veri sözleşmeleri bkz [kullanarak veri sözleşmeleri](../../../../docs/framework/wcf/feature-details/using-data-contracts.md).  
+ Normalde, bir veri sözleşmesi şema iletileri tanımlamak yeterlidir. Örneğin, önceki örnekte, çoğu uygulama için yeterli değilse `BankingTransaction` ve `BankingTransactionResponse` temel alınan SOAP iletilerine içeriğini tanımlamak için veri sözleşmeleri sahip. Veri sözleşmeleri hakkında daha fazla bilgi için bkz: [kullanarak veri sözleşmeleri](../../../../docs/framework/wcf/feature-details/using-data-contracts.md).  
   
  Ancak, bazen onu tam olarak nasıl SOAP iletisi yapısını kablo üzerinden aktarılan denetlemek gereklidir. Bunun en yaygın senaryo özel SOAP üstbilgileri ekleniyor. Başka bir yaygın senaryodur güvenlik özelliklerini ileti üstbilgi ve gövde, yani tanımlamak için bu öğeler dijital olarak imzalanmış ve şifrelenmiş olup olmadığını karar vermek için. Son olarak, bazı üçüncü taraf SOAP yığınları iletileri gerektiren belirli bir biçimde olabilir. Mesajlaşma stili operations bu denetim sağlar.  
   

@@ -1,24 +1,24 @@
 ---
-title: "SendMail özel etkinlik"
-ms.custom: 
+title: SendMail özel etkinlik
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 947a9ae6-379c-43a3-9cd5-87f573a5739f
-caps.latest.revision: 
+caps.latest.revision: 11
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: 6086ca0ccb31603874feda6df1384b9346adb49d
-ms.sourcegitcommit: cf22b29db780e532e1090c6e755aa52d28273fa6
+ms.openlocfilehash: 46038466233e7039229890b15b0ad6ca9d1a717f
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/01/2018
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="sendmail-custom-activity"></a>SendMail özel etkinlik
 Bu örnek, türetilen özel bir etkinlik oluşturmak gösterilmiştir <xref:System.Activities.AsyncCodeActivity> bir iş akışı uygulama içinde kullanmak için SMTP kullanarak posta göndermek için. Özel Etkinlik özelliklerini kullanan <xref:System.Net.Mail.SmtpClient> zaman uyumsuz olarak e-posta göndermek için ve kimlik doğrulaması ile posta göndermek için. Bırakma yolu test ve test modu, belirteç değiştirme, dosya şablonları gibi bazı son kullanıcı özellikler de sağlar.  
@@ -29,7 +29,7 @@ Bu örnek, türetilen özel bir etkinlik oluşturmak gösterilmiştir <xref:Syst
 |-|-|-|  
 |Ana bilgisayar|Dize|SMTP sunucusunun ana bilgisayar adresi.|  
 |Bağlantı Noktası|Dize|Ana bilgisayar SMTP hizmetinin bağlantı noktası.|  
-|EnableSsl|bool|Belirtir olup olmadığını <xref:System.Net.Mail.SmtpClient> Güvenli Yuva Katmanı (SSL) bağlantıyı şifrelemek için kullanır.|  
+|enableSsl|bool|Belirtir olup olmadığını <xref:System.Net.Mail.SmtpClient> Güvenli Yuva Katmanı (SSL) bağlantıyı şifrelemek için kullanır.|  
 |UserName|Dize|Gönderenin kimliğini doğrulamak için kimlik bilgilerini ayarlamak için kullanıcı adı <xref:System.Net.Mail.SmtpClient.Credentials%2A> özelliği.|  
 |Parola|Dize|Gönderenin kimliğini doğrulamak için kimlik bilgilerini ayarlamak için parola <xref:System.Net.Mail.SmtpClient.Credentials%2A> özelliği.|  
 |Konu|<xref:System.Activities.InArgument%601>\<dize >|İleti konusu.|  
@@ -116,7 +116,7 @@ new SendMail
 ## <a name="set-up-instructions"></a>Kurulum Yönergeleri  
  Bu örnek için bir SMTP sunucusuna erişim gereklidir.  
   
- [!INCLUDE[crabout](../../../../includes/crabout-md.md)] bir SMTP sunucusu kurma ayarlama, aşağıdaki bağlantılara bakın.  
+ SMTP sunucusu kurma hakkında daha fazla bilgi için aşağıdaki bağlantılara bakın.  
   
 -   [Microsoft Technet](http://go.microsoft.com/fwlink/?LinkId=166060)  
   

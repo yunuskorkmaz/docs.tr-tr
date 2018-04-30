@@ -14,11 +14,11 @@ ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: 17528db182676ae69694c4e416ee10bff1ae6ef2
-ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
+ms.openlocfilehash: 32fb7be6f8c465994b40814a94efd95d42a481da
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/27/2018
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="c-expressions"></a>C# ifadeleri
 İle başlayarak [!INCLUDE[net_v45](../../../includes/net-v45-md.md)], C# ifadeleri, Windows Workflow Foundation (WF) desteklenir. Yeni C# iş akışı projeleri oluşturulan [!INCLUDE[vs_current_long](../../../includes/vs-current-long-md.md)] hedefleyen [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] kullanım C# ifadeleri ve Visual Basic iş akışı projeleri Visual Basic ifadeler kullanın. Varolan [!INCLUDE[netfx40_short](../../../includes/netfx40-short-md.md)] Visual Basic ifadeleri kullanma iş akışı projeleri geçiş yapabilir için [!INCLUDE[netfx_current_short](../../../includes/netfx-current-short-md.md)] dil ve bu projenin bağımsız olarak desteklenir. Bu konu, C# ifadelerinde genel bir bakış sağlar. [!INCLUDE[wf1](../../../includes/wf1-md.md)].  
@@ -45,7 +45,7 @@ ms.lasthandoff: 04/27/2018
  ![Sıralı etkinlik otomatik olarak oluşturulan](../../../docs/framework/windows-workflow-foundation/media/autosurround2.png "AutoSurround2")  
   
 > [!NOTE]
->  C# ifadeleri yalnızca Visual Studio'da desteklenir ve yeniden barındırılan iş akışı Tasarımcısı'nda desteklenmez. [!INCLUDE[crabout](../../../includes/crabout-md.md)] bkz: yeniden barındırılan Tasarımcısı'nda desteklenen yeni WF45 özellikleri [Rehosted iş akışı Tasarımcısı'nda yeni iş akışı Foundation 4.5 özellikleri için destek](../../../docs/framework/windows-workflow-foundation/wf-features-in-the-rehosted-workflow-designer.md).  
+>  C# ifadeleri yalnızca Visual Studio'da desteklenir ve yeniden barındırılan iş akışı Tasarımcısı'nda desteklenmez. Yeniden barındırılan Tasarımcısı'nda desteklenen yeni WF45 özellikler hakkında daha fazla bilgi için bkz: [Rehosted iş akışı Tasarımcısı'nda yeni iş akışı Foundation 4.5 özellikleri için destek](../../../docs/framework/windows-workflow-foundation/wf-features-in-the-rehosted-workflow-designer.md).  
   
 ####  <a name="BackwardCompat"></a> Geriye dönük uyumluluk  
  Visual Basic ifadeleri varolan [!INCLUDE[netfx40_short](../../../includes/netfx40-short-md.md)] için geçirilen C# iş akışı projeleri [!INCLUDE[netfx_current_short](../../../includes/netfx-current-short-md.md)] desteklenir. Visual Basic ifadeleri iş akışı Tasarımcısı'nda görüntülendiğinde mevcut Visual Basic ifade metin ile değiştirilir **değeri XAML'de ayarlandığı**, Visual Basic ifade geçerli C# sözdizimi değilse. Visual Basic ifade geçerli C# sözdizimi ise, ifadesi görüntülenir. Visual Basic ifadeleri C# güncelleştirmek için iş akışı Tasarımcısı'nda düzenleyebilir ve eşdeğer C# ifadeyi belirtin. Visual Basic ifadeler için C#, ancak ifadeleri dönüştürülür C# ve Visual Basic geri olmayan iş akışı Tasarımcısı'nda güncelleştirilmiş bir kez güncelleştirmek için gerekli değildir.  
@@ -195,7 +195,7 @@ static void CompileExpressions(DynamicActivity dynamicActivity)
   
 -   `CompiledExpressionInvoker.SetCompiledExpressionRootForImplementation` yerine adlı `CompiledExpressionInvoker.SetCompiledExpressionRoot`.  
   
- [!INCLUDE[crabout](../../../includes/crabout-md.md)] kodda ifadeleri ile çalışma, bkz: [geliştirme iş akışları, etkinlikler ve ifadeler kullanarak kesinliği kod](../../../docs/framework/windows-workflow-foundation/authoring-workflows-activities-and-expressions-using-imperative-code.md).  
+ Kodda ifadeleri ile çalışma hakkında daha fazla bilgi için bkz: [geliştirme iş akışları, etkinlikler ve ifadeler kullanarak kesinliği kod](../../../docs/framework/windows-workflow-foundation/authoring-workflows-activities-and-expressions-using-imperative-code.md).  
   
 ###  <a name="XamlWorkflows"></a> XAML iş akışlarında C# ifadeler kullanma  
  C# ifadeleri XAML iş akışlarında desteklenir. Derlenmiş XAML iş akışı bir türe derlenir ve gevşek XAML iş akışı çalışma zamanı tarafından yüklenen ve iş akışı çalıştırıldığında bir etkinlik ağacına derlenir.  
@@ -219,7 +219,7 @@ ActivityXamlServicesSettings settings = new ActivityXamlServicesSettings
 DynamicActivity<int> wf = ActivityXamlServices.Load(new StringReader(serializedAB), settings) as DynamicActivity<int>;  
 ```  
   
- [!INCLUDE[crabout](../../../includes/crabout-md.md)] XAML iş akışlarıyla çalışma, bkz: [seri hale getirme iş akışları ve etkinlikler XAML gelen ve giden](../../../docs/framework/windows-workflow-foundation/serializing-workflows-and-activities-to-and-from-xaml.md).  
+ XAML iş akışları ile çalışma hakkında daha fazla bilgi için bkz: [seri hale getirme iş akışları ve etkinlikler XAML gelen ve giden](../../../docs/framework/windows-workflow-foundation/serializing-workflows-and-activities-to-and-from-xaml.md).  
   
 ###  <a name="WFServices"></a> C# ifadeler XAMLX iş akışı hizmetleri kullanma  
  C# ifadeleri XAMLX iş akışı hizmetleri desteklenir. Başka adım gerekli değildir sonra bir iş akışı hizmeti IIS ya da WAS içinde barındırıldığında, ancak XAML iş akışı hizmeti Self barındırılıyorsa, C# ifadeleri derlenmiş gerekir. C# ifadelerinde kendini barındıran XAMLX iş akışı hizmeti derlemek için önce XAMLX dosyasına yüklemek bir `WorkflowService`ve ardından geçirmek `Body` , `WorkflowService` için `CompileExpressions` önceki açıklanan yöntemi [kullanarak C# kod iş akışları ifadelerinde](../../../docs/framework/windows-workflow-foundation/csharp-expressions.md#CodeWorkflows) bölümü. Aşağıdaki örnekte, XAMLX iş akışı hizmeti yüklenmiş, C# ifadeleri derlenir ve iş akışı hizmeti açıldıktan sonra istekleri için bekler.  

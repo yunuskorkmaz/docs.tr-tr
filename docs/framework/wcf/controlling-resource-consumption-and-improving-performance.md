@@ -1,30 +1,32 @@
 ---
-title: "Kaynak Tüketimini Denetleme ve Performansı Geliştirme"
-ms.custom: 
+title: Kaynak Tüketimini Denetleme ve Performansı Geliştirme
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 9a829669-5f76-4c88-80ec-92d0c62c0660
-caps.latest.revision: "18"
+caps.latest.revision: 18
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: ecb8ae5edfb35ccaffecbfb4e960d3f4a46bad0e
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 6e864e0a90dbb46f440e2eba2b676413c72e0da9
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="controlling-resource-consumption-and-improving-performance"></a>Kaynak Tüketimini Denetleme ve Performansı Geliştirme
 Bu konu, farklı bölgelerdeki çeşitli özellikleri açıklar [!INCLUDE[indigo1](../../../includes/indigo1-md.md)] kaynak tüketimini denetleme ve performans ölçümleri etkileyen iş mimarisi.  
   
 ## <a name="properties-that-constrain-resource-consumption-in-wcf"></a>WCF kaynak tüketimini sınırlamak özellikleri  
- [!INCLUDE[indigo1](../../../includes/indigo1-md.md)]belirli türde bir işlemler güvenlik veya performans amacıyla kısıtlamalar geçerlidir. Bu kısıtlamaların iki ana biçimde, kotaları ve kısıtlamaları gelir. *Kotalar* ulaştı veya aşıldı sistemde belirli bir noktada hemen bir özel durum harekete kısıtlamalardır. *Kısıtlar* hemen bir özel durum oluşturulmasına neden olmaz kısıtlamalardır. Bunun yerine, bir kısıtlama sınırına ulaşıldığında, işleme devam eder ancak sınırlarda tarafından kısıtlama değeri ayarlayın. Sınırlı bu işlem başka bir yerde bir özel durum harekete, ancak bu uygulamanın bağlıdır.  
+ [!INCLUDE[indigo1](../../../includes/indigo1-md.md)] belirli türde bir işlemler güvenlik veya performans amacıyla kısıtlamalar geçerlidir. Bu kısıtlamaların iki ana biçimde, kotaları ve kısıtlamaları gelir. *Kotalar* ulaştı veya aşıldı sistemde belirli bir noktada hemen bir özel durum harekete kısıtlamalardır. *Kısıtlar* hemen bir özel durum oluşturulmasına neden olmaz kısıtlamalardır. Bunun yerine, bir kısıtlama sınırına ulaşıldığında, işleme devam eder ancak sınırlarda tarafından kısıtlama değeri ayarlayın. Sınırlı bu işlem başka bir yerde bir özel durum harekete, ancak bu uygulamanın bağlıdır.  
   
  Kotaları ve kısıtlamaları arasında ayrım yanı sıra kısıtlayan bazı özellikleri seri hale getirme düzeyinde, bazı aktarım düzeyinde ve bazı uygulama düzeyinde bulunur. Örneğin, kota <xref:System.ServiceModel.Channels.TransportBindingElement.MaxReceivedMessageSize%2A?displayProperty=nameWithType>, tüm sistem tarafından sağlanan aktarım bağlama öğeleri tarafından uygulanan ayarlanmış 65,536 bayt varsayılan olarak hizmet reddi saldırılarına karşı bir hizmet olarak aşırı bellek neden olarak yapmasının kötü amaçlı istemcileri azaltabilir Tüketim. (Tipik olarak, performans bu değeri azaltarak artırabilirsiniz.)  
   
@@ -55,7 +57,7 @@ Bu konu, farklı bölgelerdeki çeşitli özellikleri açıklar [!INCLUDE[indigo
  [ServiceModel meta veri yardımcı Programracı (Svcutil.exe)](../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md) başlangıcından bu uygulamalar için uygulama için derlenmiş derlemelerden gerekli serileştirme kod oluşturarak performansı artırabilir. Daha fazla bilgi için bkz: [nasıl yapılır: Başlangıç saati, WCF istemci XmlSerializer kullanarak uygulamaları geliştirmek](../../../docs/framework/wcf/feature-details/startup-time-of-wcf-client-applications-using-the-xmlserializer.md).  
   
 ## <a name="performance-issues-when-hosting-wcf-services-under-aspnet"></a>WCF hizmetleri ASP.NET altında barındırdığında performans sorunları  
- Bir WCF Hizmeti IIS ve ASP.NET altında barındırıldığında, IIS ve ASP.NET yapılandırma ayarlarını WCF hizmetini işleme ve bellek ayak etkileyebilir.  [!INCLUDE[crabout](../../../includes/crabout-md.md)]ASP.NET performansı bkz [ASP.NET performans geliştirme](http://go.microsoft.com/fwlink/?LinkId=186462).  Bir ayar olabilir istenmeyen sonuçlara olan <xref:System.Web.Configuration.ProcessModelSection.MinWorkerThreads%2A>, bir özelliği olan <xref:System.Web.Configuration.ProcessModelSection>. Uygulamanızın istemci sabit veya küçük bir sayısı varsa, ayarı <xref:System.Web.Configuration.ProcessModelSection.MinWorkerThreads%2A> 2 CPU kullanımı % 100 yakın olan çok işlemcili bir makinede verimliliği artırma sağlayabilir. Bu artış performans maliyeti ile gelir: de ölçeklenebilirlik azaltabilir bellek kullanımında artışa neden olur.  
+ Bir WCF Hizmeti IIS ve ASP.NET altında barındırıldığında, IIS ve ASP.NET yapılandırma ayarlarını WCF hizmetini işleme ve bellek ayak etkileyebilir.  ASP.NET performansı hakkında daha fazla bilgi için bkz: [ASP.NET performans geliştirme](http://go.microsoft.com/fwlink/?LinkId=186462).  Bir ayar olabilir istenmeyen sonuçlara olan <xref:System.Web.Configuration.ProcessModelSection.MinWorkerThreads%2A>, bir özelliği olan <xref:System.Web.Configuration.ProcessModelSection>. Uygulamanızın istemci sabit veya küçük bir sayısı varsa, ayarı <xref:System.Web.Configuration.ProcessModelSection.MinWorkerThreads%2A> 2 CPU kullanımı % 100 yakın olan çok işlemcili bir makinede verimliliği artırma sağlayabilir. Bu artış performans maliyeti ile gelir: de ölçeklenebilirlik azaltabilir bellek kullanımında artışa neden olur.  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
  [Yönetim ve Tanılama](../../../docs/framework/wcf/diagnostics/index.md)  

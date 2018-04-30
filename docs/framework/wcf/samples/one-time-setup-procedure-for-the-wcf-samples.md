@@ -1,24 +1,26 @@
 ---
-title: "Windows Communication Foundation Örnekleri için Bir Kerelik Kurulum Prosedürü"
-ms.custom: 
+title: Windows Communication Foundation Örnekleri için Bir Kerelik Kurulum Prosedürü
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: a5848ffd-3eb5-432d-812e-bd948ccb6bca
-caps.latest.revision: "83"
+caps.latest.revision: 83
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: bab723e4e52db9936e635f1348dff86d75de274d
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.workload:
+- dotnet
+ms.openlocfilehash: acb89c8c1819024ebdb77720654ab7280333e456
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="one-time-setup-procedure-for-the-windows-communication-foundation-samples"></a>Windows Communication Foundation Örnekleri için Bir Kerelik Kurulum Prosedürü
 Çoğu [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] örnekleri Internet Information Services (IIS) barındırılan ve bir ortak sanal dizinden çalıştırın. Bu bir kerelik Kurulum prosedürü disk üzerinde bir klasör oluşturur; Ayrıca IIS adlı bir sanal dizin ekler **ServiceModelSamples**.  
@@ -26,11 +28,11 @@ ms.lasthandoff: 01/19/2018
  **ServiceModelSamples** sanal dizini oluşturmak ve bir IIS tarafından barındırılan hizmeti kullanan tüm örnekleri çalıştırmak için kullanılır. Bu örnekleri çalıştırmak için gereken tek sanal dizinidir. Örnek oluşturma bu sanal dizin önceden dağıtılmış bir hizmeti değiştirir; yalnızca en son oluşturulan örnek, dağıtılan ve bu sanal dizin kullanılabilir olacaktır.  
   
 > [!NOTE]
->  Tüm komutlar yerel yönetici hesabı altında çalışmalıdır. Windows 7, kullanıyorsanız [!INCLUDE[windowsver](../../../../includes/windowsver-md.md)], veya Windows Server 2008 R2, ayrıca çalıştırmanız gerekir komut isteminde yükseltilmiş ayrıcalıklara sahip. Bunu yapmak için komut istemi simgesine sağ tıklayın ve ardından **yönetici olarak çalıştır**. Bu konudaki tüm komutlar uygun yolu ayarlara sahip bir komut istemi çalıştırmanız gerekir.  Bunu sağlamak için en kolay yolu, Visual Studio komut istemi kullanmaktır. Bu İstemi'ni açmak için **Başlat**seçin **tüm programlar**, aşağı kaydırarak **Visual Studio 2010**seçin **Visual Studio Araçları**, sağ **Visual Studio komut istemi (2010)**ve ardından **yönetici olarak çalıştır**. Yüklü Visual Studio Express sürümleri biri varsa, bu komut istemi kullanılabilir değil ve sistem yoluna "C:\Windows\Microsoft.Net\Framework\v4.0" eklemeniz gerekir.  
+>  Tüm komutlar yerel yönetici hesabı altında çalışmalıdır. Windows 7, kullanıyorsanız [!INCLUDE[windowsver](../../../../includes/windowsver-md.md)], veya Windows Server 2008 R2, ayrıca çalıştırmanız gerekir komut isteminde yükseltilmiş ayrıcalıklara sahip. Bunu yapmak için komut istemi simgesine sağ tıklayın ve ardından **yönetici olarak çalıştır**. Bu konudaki tüm komutlar uygun yolu ayarlara sahip bir komut istemi çalıştırmanız gerekir.  Bunu sağlamak için en kolay yolu, Visual Studio komut istemi kullanmaktır. Bu İstemi'ni açmak için **Başlat**seçin **tüm programlar**, aşağı kaydırarak **Visual Studio 2010**seçin **Visual Studio Araçları**, sağ **Visual Studio komut istemi (2010)** ve ardından **yönetici olarak çalıştır**. Yüklü Visual Studio Express sürümleri biri varsa, bu komut istemi kullanılabilir değil ve sistem yoluna "C:\Windows\Microsoft.Net\Framework\v4.0" eklemeniz gerekir.  
   
 ### <a name="one-time-setup-procedure-for-wcf-samples"></a>WCF örnekleri için bir kerelik Kurulum prosedürü  
   
-1.  Emin [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] ayarlanır. [!INCLUDE[crabout](../../../../includes/crabout-md.md)]nasıl ayarlandığı [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)], bkz: [Internet Information Service barındırma yönergeleri](../../../../docs/framework/wcf/samples/internet-information-service-hosting-instructions.md).  
+1.  Emin [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] ayarlanır. Nasıl ayarlandığı hakkında daha fazla bilgi için [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)], bkz: [Internet Information Service barındırma yönergeleri](../../../../docs/framework/wcf/samples/internet-information-service-hosting-instructions.md).  
   
 2.  Emin [!INCLUDE[netfx40_long](../../../../includes/netfx40-long-md.md)] yüklenir. Aşağıdaki v4.0 için dizin (veya üstü) arama: **\Windows\Microsoft.NET\Framework**  
   
@@ -88,7 +90,7 @@ ms.lasthandoff: 01/19/2018
     > [!NOTE]
     >  Güvenlik nedeniyle, sanal dizin tanımı ve örneklerle tamamladıktan sonra Cleanupvroot.bat adlı toplu iş dosyasını çalıştırarak Kurulum adımlarında verilen izinleri kaldırmayı unutmayın.  
   
-13. Kendi kendine barındırılmaktadır (IIS'de barındırılan değil) örnekleri bilgisayarda dinleme için HTTP adreslerini Kaydet izni gerektirir. Bir HTTP ad alanı ayırmasını izinlerini örneği çalıştırmak için kullanılan kullanıcı hesabından gelir. Varsayılan olarak, yönetici hesapları herhangi bir HTTP adresi kaydetme iznine sahip. Yönetici olmayan hesaplar örnekleri tarafından kullanılan HTTP ad alanları için izin verilmelidir. [!INCLUDE[crabout](../../../../includes/crabout-md.md)]ad alanı ayırmaları yapılandırma hakkında [yapılandırma HTTP ve HTTPS](../../../../docs/framework/wcf/feature-details/configuring-http-and-https.md).  
+13. Kendi kendine barındırılmaktadır (IIS'de barındırılan değil) örnekleri bilgisayarda dinleme için HTTP adreslerini Kaydet izni gerektirir. Bir HTTP ad alanı ayırmasını izinlerini örneği çalıştırmak için kullanılan kullanıcı hesabından gelir. Varsayılan olarak, yönetici hesapları herhangi bir HTTP adresi kaydetme iznine sahip. Yönetici olmayan hesaplar örnekleri tarafından kullanılan HTTP ad alanları için izin verilmelidir. Ad alanı ayırmaları yapılandırma hakkında daha fazla bilgi için bkz: [yapılandırma HTTP ve HTTPS](../../../../docs/framework/wcf/feature-details/configuring-http-and-https.md).  
   
 14. Bazı örnekler, Message Queuing gerektirir. Bkz: [yükleme Message Queuing (MSMQ)](../../../../docs/framework/wcf/samples/installing-message-queuing-msmq.md) yükleme yönergeleri için.  
   

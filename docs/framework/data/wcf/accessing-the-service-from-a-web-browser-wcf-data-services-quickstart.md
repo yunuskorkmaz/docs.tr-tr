@@ -16,17 +16,17 @@ ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: c9ae96facd79ae3d268c630ff7bf8adf411eb775
-ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
+ms.openlocfilehash: 5550e97d97adf28a84566c5d7936369656c65e43
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="accessing-the-service-from-a-web-browser-wcf-data-services-quickstart"></a>Bir Web tarayıcısından hizmetine erişim (WCF Veri Hizmetleri Hızlı Başlangıç)
 Bu görevde, başlayacak [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] Visual Studio ve isteğe bağlı olarak Web tarayıcısında okuma akışı devre dışı bırakın. Sonra hizmet tanımı belge almak yanı sıra HTTP GET isteklerini sunulan kaynakları için bir Web tarayıcısı aracılığıyla göndererek veri hizmeti kaynaklara erişim.  
   
 > [!NOTE]
->  Varsayılan olarak, Visual Studio otomatik-bir bağlantı noktası numarası atar `localhost` bilgisayarınızda URI. Bu görev bağlantı noktası numarasını kullanır `12345` URI örneklerde. [!INCLUDE[crabout](../../../../includes/crabout-md.md)] belirli bir bağlantı noktası numarası, Visual Studio Proje bakın ayarlamak nasıl [veri hizmeti oluşturma](../../../../docs/framework/data/wcf/creating-the-data-service.md).  
+>  Varsayılan olarak, Visual Studio otomatik-bir bağlantı noktası numarası atar `localhost` bilgisayarınızda URI. Bu görev bağlantı noktası numarasını kullanır `12345` URI örneklerde. Visual Studio projenizde belirli bağlantı noktası numarasını ayarlama hakkında daha fazla bilgi için bkz: [veri hizmeti oluşturma](../../../../docs/framework/data/wcf/creating-the-data-service.md).  
   
 ### <a name="to-request-the-default-service-document-by-using-internet-explorer"></a>Internet Explorer kullanarak varsayılan hizmet belgesini istemek için  
   

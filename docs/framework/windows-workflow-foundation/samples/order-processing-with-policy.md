@@ -1,23 +1,24 @@
 ---
-title: "İlke ile işlem sırası"
-ms.custom: 
+title: İlke ile işlem sırası
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 66833724-dc36-4fad-86b0-59ffeaa3ba6a
-caps.latest.revision: "8"
+caps.latest.revision: 8
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: d86c7890af651ba9f0ee0ec2a1763f9c579bac89
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: f99db44a636a5255990f734d34266b3b2e4a678b
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="order-processing-with-policy"></a>İlke ile işlem sırası
 Sipariş işleme ilkesi örnek sunulan anahtar özelliklerinden bazıları gösterir [!INCLUDE[netfx35_long](../../../../includes/netfx35-long-md.md)] Windows Workflow Foundation (WF). Aşağıdaki işlevleri WF kurallar altyapısı için yenidir:  
@@ -29,12 +30,12 @@ Sipariş işleme ilkesi örnek sunulan anahtar özelliklerinden bazıları göst
 -   Kullanıcı deneyimini WF kurallarından genişletme yöntemleri çağırma C stilleri # kodlama ile uyumlu hale getirmek genişletme yöntemleri için destek.  
   
 > [!NOTE]
->  Bu örnek gerektiren [!INCLUDE[netfx35_long](../../../../includes/netfx35-long-md.md)] derlemek ve çalıştırmak için yüklenir. [!INCLUDE[vs_current_long](../../../../includes/vs-current-long-md.md)]Proje ve çözüm dosyalarını açmak için gereklidir.  
+>  Bu örnek gerektiren [!INCLUDE[netfx35_long](../../../../includes/netfx35-long-md.md)] derlemek ve çalıştırmak için yüklenir. [!INCLUDE[vs_current_long](../../../../includes/vs-current-long-md.md)] Proje ve çözüm dosyalarını açmak için gereklidir.  
   
  Örnek gösteren bir `OrderProcessingPolicy` proje numaralandırılmış bir kullanılabilir öğeleri ve bir posta kodu listesinden oluşur, bir müşteri siparişi girilir. Her iki girişleri doğruysa sırasını başarıyla işlenir; Aksi takdirde hata nesneleri, bir aşırı yüklenmiş kullanılarak ilkesi oluşturur `+` işleci ve önceden tanımlanmış genişletme yöntemi hataları kullanıcıyı bilgilendirmek üzere.  
   
 > [!NOTE]
->  [!INCLUDE[crabout](../../../../includes/crabout-md.md)]genişletme yöntemleri, bkz: [C# sürüm 3.0 belirtimi](http://go.microsoft.com/fwlink/?LinkId=95402).  
+>  Uzantı yöntemleri hakkında daha fazla bilgi için bkz: [C# sürüm 3.0 belirtimi](http://go.microsoft.com/fwlink/?LinkId=95402).  
   
  Örnek aşağıdaki projeleri oluşmaktadır:  
   

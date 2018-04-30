@@ -1,37 +1,37 @@
 ---
-title: "İstemcileri Güvenli Hale Getirme"
-ms.custom: 
+title: İstemcileri Güvenli Hale Getirme
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - dotnet-clr
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - clients [WCF], security considerations
 ms.assetid: 44c8578c-9a5b-4acd-8168-1c30a027c4c5
-caps.latest.revision: 
+caps.latest.revision: 22
 author: BrucePerlerMS
 ms.author: bruceper
 manager: mbaldwin
 ms.workload:
 - dotnet
-ms.openlocfilehash: 611272f9d0369a89d401315e9b6379d2e8cd27c0
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.openlocfilehash: 7d06df1a9c4ef5a7cb64f71d2f7afc77c41a0e6f
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="securing-clients"></a>İstemcileri Güvenli Hale Getirme
-İçinde [!INCLUDE[indigo1](../../../includes/indigo1-md.md)], istemciler için güvenlik gereksinimlerini hizmet belirler. Diğer bir deyişle, hizmeti kullanmak için hangi güvenlik modunu belirtir ve istemci bir kimlik bilgisi olup olmadığına sağlamanız gerekir. Bir istemci, bu nedenle, güvenli hale getirme işlemi basittir: bir istemciyi derlemek ve (yayımlanırsa) hizmetinden alınan meta veriler kullanın. Meta veriler istemcisinin nasıl yapılandırılacağını belirtir. Hizmet istemci kimlik bilgileri sağlamanız gerektiriyorsa, gereksinime uyan bir kimlik bilgisi edinmeniz gerekir. Bu konuda daha ayrıntılı ele alınmaktadır. [!INCLUDE[crabout](../../../includes/crabout-md.md)]bkz. güvenli bir hizmet oluşturma [Hizmetleri güvenli hale getirme](../../../docs/framework/wcf/securing-services.md).  
+İçinde [!INCLUDE[indigo1](../../../includes/indigo1-md.md)], istemciler için güvenlik gereksinimlerini hizmet belirler. Diğer bir deyişle, hizmeti kullanmak için hangi güvenlik modunu belirtir ve istemci bir kimlik bilgisi olup olmadığına sağlamanız gerekir. Bir istemci, bu nedenle, güvenli hale getirme işlemi basittir: bir istemciyi derlemek ve (yayımlanırsa) hizmetinden alınan meta veriler kullanın. Meta veriler istemcisinin nasıl yapılandırılacağını belirtir. Hizmet istemci kimlik bilgileri sağlamanız gerektiriyorsa, gereksinime uyan bir kimlik bilgisi edinmeniz gerekir. Bu konuda daha ayrıntılı ele alınmaktadır. Güvenli bir hizmet oluşturma hakkında daha fazla bilgi için bkz: [Hizmetleri güvenli hale getirme](../../../docs/framework/wcf/securing-services.md).  
   
 ## <a name="the-service-specifies-security"></a>Güvenlik hizmeti belirtir  
  Varsayılan olarak, [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] bağlamaları etkin güvenlik özellikleri vardır. (Özel durum <xref:System.ServiceModel.BasicHttpBinding>.) Bu nedenle, hizmetin kullanarak oluşturduysanız [!INCLUDE[indigo2](../../../includes/indigo2-md.md)], kimlik doğrulaması, gizliliği ve bütünlük sağlamak için güvenlik uygulamak büyük bir olasılığı yüksektir. Bu durumda, hizmeti sağlayan meta verileri hangi güvenli bir iletişim kanalı kurulamadı gerektirdiğini gösterir. Hizmet meta verileri tüm güvenlik gereksinimleriniz içermiyorsa, güvenlik, bir düzeni gibi Güvenli Yuva Katmanı (SSL) HTTP üzerinden bir hizmete koymak için yolu yoktur. Ancak, hizmet bir kimlik bilgisi sağlamak istemci gerektiriyorsa, istemci hizmete kendi kimliğini doğrulamak için kullanacağınız gerçek kimlik bilgisi istemci geliştirici, dağıtıcı veya yönetici sağlamalısınız.  
   
 ## <a name="obtaining-metadata"></a>Meta veri alma  
- Bir istemci oluştururken ilk adımı istemci iletişim hizmet için meta verileri elde edilir. Bu iki yolla yapılabilir. Hizmet meta veri değişimi (MEX) uç noktası yayımlar veya meta verilerini HTTP veya HTTPS üzerinden yapar, ilk olarak, meta verileri kullanarak indirebilirsiniz [ServiceModel meta veri yardımcı Programracı (Svcutil.exe)](../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md), hangi oluşturur hem de bir istemci ve bunun yanı sıra bir yapılandırma dosyası için kod dosyaları. ([!INCLUDE[crabout](../../../includes/crabout-md.md)] Aracı'nı kullanarak bkz [bir WCF istemcisi kullanarak hizmetlere erişme](../../../docs/framework/wcf/accessing-services-using-a-wcf-client.md).) Hizmet MEX bitiş noktası yayımlamaz ve ayrıca meta verilerini kullanılabilir HTTP veya HTTPS üzerinden yapmaz, güvenlik gereksinimleri ve meta verileri tanımlayan belgelerine hizmeti oluşturan başvurmanız gerekir.  
+ Bir istemci oluştururken ilk adımı istemci iletişim hizmet için meta verileri elde edilir. Bu iki yolla yapılabilir. Hizmet meta veri değişimi (MEX) uç noktası yayımlar veya meta verilerini HTTP veya HTTPS üzerinden yapar, ilk olarak, meta verileri kullanarak indirebilirsiniz [ServiceModel meta veri yardımcı Programracı (Svcutil.exe)](../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md), hangi oluşturur hem de bir istemci ve bunun yanı sıra bir yapılandırma dosyası için kod dosyaları. (Aracını kullanma hakkında daha fazla bilgi için bkz: [bir WCF istemcisi kullanarak hizmetlere erişme](../../../docs/framework/wcf/accessing-services-using-a-wcf-client.md).) Hizmet MEX bitiş noktası yayımlamaz ve ayrıca meta verilerini kullanılabilir HTTP veya HTTPS üzerinden yapmaz, güvenlik gereksinimleri ve meta verileri tanımlayan belgelerine hizmeti oluşturan başvurmanız gerekir.  
   
 > [!IMPORTANT]
 >  Meta veriler güvenilir bir kaynaktan geldiğini ve onu değiştirilmiş değil, önerilir. HTTP protokolü kullanılarak alınan meta veriler düz metin olarak gönderilir ve ile değiştirilmiş. Hizmet kullanıyorsa <xref:System.ServiceModel.Description.ServiceMetadataBehavior.HttpsGetEnabled%2A> ve <xref:System.ServiceModel.Description.ServiceMetadataBehavior.HttpsGetUrl%2A> özellikleri, hizmet Oluşturucusu sağlanan verileri HTTPS protokolünü kullanarak indirmek için URL kullanın.  
@@ -93,13 +93,13 @@ ms.lasthandoff: 01/19/2018
   
 |ClientCredential özelliği|Açıklama|Notlar|  
 |-------------------------------|-----------------|-----------|  
-|<xref:System.ServiceModel.Description.ClientCredentials.ClientCertificate%2A>|Döndürür bir<xref:System.ServiceModel.Security.X509CertificateInitiatorClientCredential>|Hizmete kendi kimliğini doğrulamak için istemci tarafından sağlanan bir X.509 sertifikası temsil eder.|  
-|<xref:System.ServiceModel.Description.ClientCredentials.HttpDigest%2A>|Döndürür bir<xref:System.ServiceModel.Security.HttpDigestClientCredential>|Bir HTTP digest kimlik bilgileri temsil eder. Kimlik bilgisi, kullanıcı adı ve parola karmasıdır.|  
-|<xref:System.ServiceModel.Description.ClientCredentials.IssuedToken%2A>|Döndürür bir<xref:System.ServiceModel.Security.IssuedTokenClientCredential>|Bir güvenlik belirteci Federasyon senaryolarında kullanılan hizmeti tarafından verilmiş bir özel güvenlik belirteci temsil eder.|  
-|<xref:System.ServiceModel.Description.ClientCredentials.Peer%2A>|Döndürür bir<xref:System.ServiceModel.Security.PeerCredential>|Bir Windows etki alanındaki bir eş kafes katılım için eş kimlik bilgilerini temsil eder.|  
-|<xref:System.ServiceModel.Description.ClientCredentials.ServiceCertificate%2A>|Döndürür bir<xref:System.ServiceModel.Security.X509CertificateRecipientClientCredential>|Bir bant dışı anlaşma hizmeti tarafından sağlanan bir X.509 sertifikası temsil eder.|  
-|<xref:System.ServiceModel.Description.ClientCredentials.UserName%2A>|Döndürür bir<xref:System.ServiceModel.Security.UserNamePasswordClientCredential>|Bir kullanıcı adı ve parola çiftini temsil eder.|  
-|<xref:System.ServiceModel.Description.ClientCredentials.Windows%2A>|Döndürür bir<xref:System.ServiceModel.Security.WindowsClientCredential>|Bir Windows istemcisi kimlik bilgisi (Kerberos kimlik bilgisi) temsil eder. Sınıfının özelliklerine salt okunurdur.|  
+|<xref:System.ServiceModel.Description.ClientCredentials.ClientCertificate%2A>|Döndürür bir <xref:System.ServiceModel.Security.X509CertificateInitiatorClientCredential>|Hizmete kendi kimliğini doğrulamak için istemci tarafından sağlanan bir X.509 sertifikası temsil eder.|  
+|<xref:System.ServiceModel.Description.ClientCredentials.HttpDigest%2A>|Döndürür bir <xref:System.ServiceModel.Security.HttpDigestClientCredential>|Bir HTTP digest kimlik bilgileri temsil eder. Kimlik bilgisi, kullanıcı adı ve parola karmasıdır.|  
+|<xref:System.ServiceModel.Description.ClientCredentials.IssuedToken%2A>|Döndürür bir <xref:System.ServiceModel.Security.IssuedTokenClientCredential>|Bir güvenlik belirteci Federasyon senaryolarında kullanılan hizmeti tarafından verilmiş bir özel güvenlik belirteci temsil eder.|  
+|<xref:System.ServiceModel.Description.ClientCredentials.Peer%2A>|Döndürür bir <xref:System.ServiceModel.Security.PeerCredential>|Bir Windows etki alanındaki bir eş kafes katılım için eş kimlik bilgilerini temsil eder.|  
+|<xref:System.ServiceModel.Description.ClientCredentials.ServiceCertificate%2A>|Döndürür bir <xref:System.ServiceModel.Security.X509CertificateRecipientClientCredential>|Bir bant dışı anlaşma hizmeti tarafından sağlanan bir X.509 sertifikası temsil eder.|  
+|<xref:System.ServiceModel.Description.ClientCredentials.UserName%2A>|Döndürür bir <xref:System.ServiceModel.Security.UserNamePasswordClientCredential>|Bir kullanıcı adı ve parola çiftini temsil eder.|  
+|<xref:System.ServiceModel.Description.ClientCredentials.Windows%2A>|Döndürür bir <xref:System.ServiceModel.Security.WindowsClientCredential>|Bir Windows istemcisi kimlik bilgisi (Kerberos kimlik bilgisi) temsil eder. Sınıfının özelliklerine salt okunurdur.|  
   
 #### <a name="setting-a-clientcredentials-value-in-configuration"></a>Ayarı bir \<clientCredentials > yapılandırma değeri  
  Kimlik bilgileri değerlerini belirtilen bir uç noktası davranışı alt öğeleri olarak kullanarak [ \<clientCredentials >](../../../docs/framework/configure-apps/file-schema/wcf/clientcredentials.md) öğesi. Kullanılan öğe istemci kimlik bilgisi türüne bağlıdır. Örneğin, aşağıdaki örnekte bir X.509 sertifikası kullanarak ayarlamak için yapılandırma gösterilir <[\<clientCertificate >](../../../docs/framework/configure-apps/file-schema/wcf/clientcertificate-of-clientcredentials-element.md).  
@@ -147,10 +147,10 @@ ms.lasthandoff: 01/19/2018
 > [!NOTE]
 >  Bazı istemci kimlik bilgisi değerleri kümesi uygulama yapılandırma dosyaları, örneğin kullanarak, kullanıcı adı ve parola veya Windows kullanıcı ve parola değerlerini olamaz. Bu kimlik bilgisi değerleri yalnızca kodda belirtilebilir.  
   
- [!INCLUDE[crabout](../../../includes/crabout-md.md)]istemci kimlik bilgileri ayar bkz [nasıl yapılır: istemci kimlik bilgileri değerlerini belirtme](../../../docs/framework/wcf/how-to-specify-client-credential-values.md).  
+ İstemci kimlik bilgileri ayarlama hakkında daha fazla bilgi için bkz: [nasıl yapılır: istemci kimlik bilgileri değerlerini belirtme](../../../docs/framework/wcf/how-to-specify-client-credential-values.md).  
   
 > [!NOTE]
->  `ClientCredentialType`ne zaman göz ardı edilir `SecurityMode` ayarlanır `"TransportWithMessageCredential",` aşağıdaki örnek yapılandırmada gösterildiği gibi.  
+>  `ClientCredentialType` ne zaman göz ardı edilir `SecurityMode` ayarlanır `"TransportWithMessageCredential",` aşağıdaki örnek yapılandırmada gösterildiği gibi.  
   
 ```xml  
 <wsHttpBinding>  

@@ -1,24 +1,26 @@
 ---
-title: "Kurulum Sorunlarını Giderme"
-ms.custom: 
+title: Kurulum Sorunlarını Giderme
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 1644f885-c408-4d5f-a5c7-a1a907bc8acd
-caps.latest.revision: "15"
+caps.latest.revision: 15
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 284805f8ca1fb9778dc6bccd9807fa86dc7e2d77
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 9238c1a1c9092e6806ee941bd7c992071cf98e09
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="troubleshooting-setup-issues"></a>Kurulum Sorunlarını Giderme
 Bu konuda nasıl giderileceği açıklanmaktadır [!INCLUDE[indigo1](../../../includes/indigo1-md.md)] sorunları ayarlayın.  
@@ -63,7 +65,7 @@ Bu konuda nasıl giderileceği açıklanmaktadır [!INCLUDE[indigo1](../../../in
   
  Daha önce açıklanan sorunu gidermek için aşağıdaki adımlar izlenmelidir.  
   
-1.  Çalıştırma [WMI tanılama yardımcı programı, sürüm 2.0](http://go.microsoft.com/fwlink/?LinkId=94685) WMI hizmetinin onarmak için. [!INCLUDE[crabout](../../../includes/crabout-md.md)]Bu aracı kullanarak bkz [WMI tanılama yardımcı programı](http://go.microsoft.com/fwlink/?LinkId=94686) konu.  
+1.  Çalıştırma [WMI tanılama yardımcı programı, sürüm 2.0](http://go.microsoft.com/fwlink/?LinkId=94685) WMI hizmetinin onarmak için. Bu aracı kullanmayla ilgili daha fazla bilgi için bkz: [WMI tanılama yardımcı programı](http://go.microsoft.com/fwlink/?LinkId=94686) konu.  
   
  Kullanarak .NET Framework 3.0 yüklemesini onarmak **Program Ekle/Kaldır** uygulaması bulunan **Denetim Masası**, ya da kaldırma/yeniden .NET Framework 3.0.  
   

@@ -2,7 +2,8 @@
 title: "Mürekkep Nesnesi Modeli: Windows Forms ve WPF'ye Karşı COM"
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.technology: dotnet-wpf
+ms.technology:
+- dotnet-wpf
 ms.topic: article
 dev_langs:
 - csharp
@@ -15,20 +16,21 @@ helpviewer_keywords:
 - ink [WPF], enabling
 - events [WPF], tablet pen
 ms.assetid: 577835be-b145-4226-8570-1d309e9b3901
-caps.latest.revision: "9"
+caps.latest.revision: 9
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 38c7692d433fb91584718984ef2ad81e563517db
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 06a2c2049ec7fe7046bd6dae2711fe8e46592fcf
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="the-ink-object-model-windows-forms-and-com-versus-wpf"></a>Mürekkep Nesnesi Modeli: Windows Forms ve WPF'ye Karşı COM
 
-Dijital Mürekkep desteği temelde üç platformları vardır: Tablet PC Windows Forms platform, Tablet PC COM platform ve [!INCLUDE[TLA#tla_wpf](../../../../includes/tlasharptla-wpf-md.md)] platform.  Benzer bir nesne modeli, ancak nesne modeli için Windows Forms ve COM platformları paylaşım [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] platform önemli ölçüde farklıdır.  Bu konuda, böylece bir nesne modelini kullanarak çalıştıktan geliştiriciler diğer daha iyi anlayabilirsiniz en üst düzey farklılıklar açıklanmaktadır.  
+Dijital Mürekkep desteği temelde üç platformları vardır: Tablet PC Windows Forms platform, Tablet PC COM ve Windows Presentation Foundation (WPF) platformunu.  Benzer bir nesne modeli, ancak nesne modeli için Windows Forms ve COM platformları paylaşım [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] platform önemli ölçüde farklıdır.  Bu konuda, böylece bir nesne modelini kullanarak çalıştıktan geliştiriciler diğer daha iyi anlayabilirsiniz en üst düzey farklılıklar açıklanmaktadır.  
   
 ## <a name="enabling-ink-in-an-application"></a>Bir uygulamada mürekkep etkinleştirme  
  Tüm üç platformlar nesneleri ve tablet kalem girişi almak bir uygulamayı etkinleştir denetim birlikte.  COM platformları ve Windows Forms ile birlikte gelen [Microsoft.Ink.InkPicture](https://msdn.microsoft.com/library/aa514604.aspx), [Microsoft.Ink.InkEdit](https://msdn.microsoft.com/library/ms835842.aspx), [Microsoft.Ink.InkOverlay](https://msdn.microsoft.com/library/ms833057.aspx) ve [ Microsoft.Ink.InkCollector](https://msdn.microsoft.com/library/ms836493.aspx) sınıfları.  [Microsoft.Ink.InkPicture](https://msdn.microsoft.com/library/aa514604.aspx) ve [Microsoft.Ink.InkEdit](https://msdn.microsoft.com/library/ms835842.aspx) ekleyebileceğiniz denetimler mürekkep toplamak için bir uygulama.  [Microsoft.Ink.InkOverlay](https://msdn.microsoft.com/library/ms833057.aspx) ve [Microsoft.Ink.InkCollector](https://msdn.microsoft.com/library/ms836493.aspx) mürekkep etkinleştir windows ve özel denetimler için varolan bir pencere eklenir.  
@@ -49,7 +51,7 @@ Dijital Mürekkep desteği temelde üç platformları vardır: Tablet PC Windows
   
  Aşağıdaki çizimler çiftinin mürekkep veri nesne modelleri karşılaştırır.  Windows Forms ve COM platformlarda [Microsoft.Ink.Ink](https://msdn.microsoft.com/library/aa515768.aspx?displayProperty=nameWithType) nesne ömrü kısıtlar [Microsoft.Ink.Stroke](https://msdn.microsoft.com/library/ms827842.aspx?displayProperty=nameWithType) nesneleri ve tek tek vuruşları ait kalem paketler.  İki veya daha fazla vuruşları aynı başvuru [Microsoft.Ink.DrawingAttributes](https://msdn.microsoft.com/library/ms837931.aspx?displayProperty=nameWithType) , aşağıdaki çizimde gösterildiği gibi nesne.  
   
- ![COM &#47;için mürekkep nesne modelinin diyagramı; WinForms. ] (../../../../docs/framework/wpf/advanced/media/ink-inkownsstrokes.png "Ink_InkOwnsStrokes")  
+ ![COM için mürekkep nesne modelinin diyagramı&#47;Winforms. ] (../../../../docs/framework/wpf/advanced/media/ink-inkownsstrokes.png "Ink_InkOwnsStrokes")  
   
  Üzerinde [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)], her <xref:System.Windows.Ink.Stroke?displayProperty=nameWithType> bir şey bir referansı olduğu sürece, mevcut bir ortak dil çalışma zamanı nesnesi.  Her <xref:System.Windows.Ink.Stroke> başvurular bir <xref:System.Windows.Input.StylusPointCollection> ve <xref:System.Windows.Ink.DrawingAttributes?displayProperty=nameWithType> de ortak dil çalışma zamanı nesneleri olan nesne.  
   
@@ -64,7 +66,7 @@ Dijital Mürekkep desteği temelde üç platformları vardır: Tablet PC Windows
 |İsabet testi|<xref:System.Windows.Ink.StrokeCollection.HitTest%2A>|[Microsoft.Ink.Ink.HitTest](https://msdn.microsoft.com/library/aa515934.aspx)|  
 |Mürekkep kopyalayın|<xref:System.Windows.Controls.InkCanvas.CopySelection%2A>|[Microsoft.Ink.Ink.ClipboardCopy](https://msdn.microsoft.com/library/microsoft.ink.ink.clipboardcopy(v=vs.100).aspx)|  
 |Mürekkep Yapıştır|<xref:System.Windows.Controls.InkCanvas.Paste%2A>|[Microsoft.Ink.Ink.ClipboardPaste](https://msdn.microsoft.com/library/microsoft.ink.ink.clipboardpaste(v=vs.100).aspx)|  
-|Özel özellikleri vuruş topluluğunu erişim|<xref:System.Windows.Ink.StrokeCollection.AddPropertyData%2A>(Özellikler dahili olarak depolanır ve aracılığıyla erişilen <xref:System.Windows.Ink.StrokeCollection.AddPropertyData%2A>, <xref:System.Windows.Ink.StrokeCollection.RemovePropertyData%2A>, ve <xref:System.Windows.Ink.StrokeCollection.ContainsPropertyData%2A>)|Kullanım [Microsoft.Ink.Ink.ExtendedProperties](https://msdn.microsoft.com/library/microsoft.ink.ink.extendedproperties(v=vs.100).aspx)|  
+|Özel özellikleri vuruş topluluğunu erişim|<xref:System.Windows.Ink.StrokeCollection.AddPropertyData%2A> (Özellikler dahili olarak depolanır ve aracılığıyla erişilen <xref:System.Windows.Ink.StrokeCollection.AddPropertyData%2A>, <xref:System.Windows.Ink.StrokeCollection.RemovePropertyData%2A>, ve <xref:System.Windows.Ink.StrokeCollection.ContainsPropertyData%2A>)|Kullanım [Microsoft.Ink.Ink.ExtendedProperties](https://msdn.microsoft.com/library/microsoft.ink.ink.extendedproperties(v=vs.100).aspx)|  
   
 ### <a name="sharing-ink-between-platforms"></a>Platformlar arasındaki mürekkep paylaşımı  
  Platformlar mürekkep verileri için farklı nesne modellerini sahip olsa da, platformlar arasında veri paylaşımı çok kolaydır. Aşağıdaki örnekler, bir Windows Forms uygulamasından mürekkep kaydedin ve bir Windows Presentation Foundation uygulamasına mürekkep yükleyin.  

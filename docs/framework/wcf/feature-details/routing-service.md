@@ -1,24 +1,26 @@
 ---
-title: "Yönlendirme Hizmeti"
-ms.custom: 
+title: Yönlendirme Hizmeti
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: ca7c216a-5141-4132-8193-102c181d2eba
-caps.latest.revision: "13"
+caps.latest.revision: 13
 author: wadepickett
 ms.author: wpickett
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: a7214a14b11ae1f91906c8d2140bc82836988390
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 8ff2a99bc06ab0de2aedce98ea029f484e47053f
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="routing-service"></a>Yönlendirme Hizmeti
 Yönlendirme iletisi yönlendirici olarak davranan genel bir SOAP aracı hizmetidir. Yönlendirme hizmeti çekirdek işlevselliğini iletisini üstbilgisinde veya ileti gövdesi içinde bir değere göre bir istemci uç noktası iletilmesi için bir ileti verir ileti içeriği göre iletileri yönlendirmek için yeteneğidir.  
@@ -98,12 +100,12 @@ Yönlendirme iletisi yönlendirici olarak davranan genel bir SOAP aracı hizmeti
   
  Yönlendirme hizmeti karşılaşırsa bir <xref:System.ServiceModel.CommunicationException> bir ileti göndermeye çalışırken hata işleme gerçekleşir.  Bu özel durumlar gibi tanımlanmış istemci uç noktası ile iletişim kurmaya çalışırken bir sorunla karşılaşıldı genellikle belirtmek bir <xref:System.ServiceModel.EndpointNotFoundException>, <xref:System.ServiceModel.ServerTooBusyException>, veya <xref:System.ServiceModel.CommunicationObjectFaultedException>.  Hata işleme kodu da yakalamak ve ne zaman göndermeyi yeniden deneme girişimi bir **TimeoutException** oluşur, türetilmedi başka bir ortak özel durumu olan **CommunicationException**.  
   
- [!INCLUDE[crabout](../../../../includes/crabout-md.md)]hata işleme, bkz: [yönlendirme giriş](../../../../docs/framework/wcf/feature-details/routing-introduction.md).  
+ Hata işleme hakkında daha fazla bilgi için bkz: [yönlendirme giriş](../../../../docs/framework/wcf/feature-details/routing-introduction.md).  
   
 ## <a name="backup-endpoints"></a>Yedekleme uç noktaları  
  Her filtre tanımını filtre tablosundaki ile ilişkili hedef istemci uç noktaları ek olarak, ileti için bir iletim hatası durumunda yönlendirilir yedekleme uç noktaları listesi oluşturabilirsiniz. Bir hata oluşur ve yedekleme listesini filtre girişi için tanımlanan, yönlendirme hizmeti listesinde tanımlı Birinci uç nokta ileti göndermeye çalışacak. Bu iletim girişimi başarısız oldu, hizmet sonraki endpoint deneyin ve bu işlem iletim denemesi başarılı olana kadar devam, iletim olmayan ilgili hata veya yedekleme listesindeki tüm uç noktaları bir iletim hatası döndürmüş döndürür.  
   
- [!INCLUDE[crabout](../../../../includes/crabout-md.md)]Yedekleme uç noktaları, bkz: [yönlendirme giriş](../../../../docs/framework/wcf/feature-details/routing-introduction.md) ve [ileti filtreleri](../../../../docs/framework/wcf/feature-details/message-filters.md).  
+ Yedekleme uç noktaları hakkında daha fazla bilgi için bkz: [yönlendirme giriş](../../../../docs/framework/wcf/feature-details/routing-introduction.md) ve [ileti filtreleri](../../../../docs/framework/wcf/feature-details/message-filters.md).  
   
 ## <a name="streaming"></a>Akış  
  Akış desteklemek için bağlama ayarlarsanız, yönlendirme hizmeti başarıyla iletileri akışını sağlayabilirsiniz.  Ancak, bazı koşullar altında iletilerini arabelleğe gerekebilir vardır:  

@@ -14,11 +14,11 @@ ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: faeb05045049e9a53babf754f1ec058c6aac2f05
-ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
+ms.openlocfilehash: 2c55d88eb6c3b41c703bddfd09e6224f3a6aefe2
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/28/2018
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="fundamental-windows-workflow-concepts"></a>Temel Windows iş akışı kavramları
 İş akışı geliştirme [!INCLUDE[netfx_current_long](../../../includes/netfx-current-long-md.md)] bazı geliştiriciler için yeni kavramları kullanır. Bu konuda bazı kavramlar ve nasıl uygulandığı açıklanmaktadır.  
@@ -63,7 +63,7 @@ ms.lasthandoff: 04/28/2018
  Etkinlikler uygun kullanarak iş akışı çalışma zamanı ortamı elde <xref:System.Activities.ActivityContext> gibi türetilmiş bir sınıf, <xref:System.Activities.NativeActivityContext> veya <xref:System.Activities.CodeActivityContext>. Bu bağımsız değişkenler ve değişkenleri çözmek için alt etkinlikler zamanlamak için ve birçok başka amaçlarla kullanırlar.  
   
 ## <a name="services"></a>Hizmetler  
- İş akışları uygulamak ve mesajlaşma etkinlikleri kullanarak birbirine sıkı şekilde bağlı hizmetlere erişmek için doğal bir yolunu sağlar. Mesajlaşma etkinlikleri üzerinde oluşturulan [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] ve içine ve dışına bir iş akışı veri almak için kullanılan birincil sistemdir. İleti değişim deseni istediğiniz her türlü birlikte modellemek için Mesajlaşma etkinlikleri oluşturabilirsiniz. Daha fazla bilgi için bkz: [Mesajlaşma etkinlikleri](../../../docs/framework/wcf/feature-details/messaging-activities.md). İş akışı Hizmetleri kullanılarak barındırılır <xref:System.ServiceModel.Activities.WorkflowServiceHost> sınıfı. Daha fazla bilgi için bkz: [iş akışı hizmetleri genel bakış barındırma](../../../docs/framework/wcf/feature-details/hosting-workflow-services-overview.md). [!INCLUDE[crabout](../../../includes/crabout-md.md)] İş akışı hizmetleri bakın [iş akışı Hizmetleri](../../../docs/framework/wcf/feature-details/workflow-services.md)  
+ İş akışları uygulamak ve mesajlaşma etkinlikleri kullanarak birbirine sıkı şekilde bağlı hizmetlere erişmek için doğal bir yolunu sağlar. Mesajlaşma etkinlikleri üzerinde oluşturulan [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] ve içine ve dışına bir iş akışı veri almak için kullanılan birincil sistemdir. İleti değişim deseni istediğiniz her türlü birlikte modellemek için Mesajlaşma etkinlikleri oluşturabilirsiniz. Daha fazla bilgi için bkz: [Mesajlaşma etkinlikleri](../../../docs/framework/wcf/feature-details/messaging-activities.md). İş akışı Hizmetleri kullanılarak barındırılır <xref:System.ServiceModel.Activities.WorkflowServiceHost> sınıfı. Daha fazla bilgi için bkz: [iş akışı hizmetleri genel bakış barındırma](../../../docs/framework/wcf/feature-details/hosting-workflow-services-overview.md). İş akışı hizmetleri hakkında daha fazla bilgi için bkz: [iş akışı Hizmetleri](../../../docs/framework/wcf/feature-details/workflow-services.md)  
   
 ## <a name="persistence-unloading-and-long-running-workflows"></a>Kalıcılık, kaldırma ve uzun süre çalışan iş akışları  
  Windows iş akışı sağlayarak uzun süre çalışan reaktif programları yazma kolaylaştırır:  

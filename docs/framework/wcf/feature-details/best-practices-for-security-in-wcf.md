@@ -21,14 +21,14 @@ ms.author: bruceper
 manager: mbaldwin
 ms.workload:
 - dotnet
-ms.openlocfilehash: 19bb6d4a172568611f73e3a50d0c526016c65aac
-ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
+ms.openlocfilehash: 0545ff40247b7ff86cb6227fa8cf4af8666c3629
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/28/2018
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="best-practices-for-security-in-wcf"></a>WCF'de Güvenlik için En İyi Uygulamalar
-Aşağıdaki bölümlerde kullanarak güvenli uygulamaları oluştururken dikkate alınması gereken en iyi uygulamalar listesinde [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)]. [!INCLUDE[crabout](../../../../includes/crabout-md.md)] Güvenlik, bkz: [güvenlik konuları](../../../../docs/framework/wcf/feature-details/security-considerations-in-wcf.md), [veriler için güvenlik konuları](../../../../docs/framework/wcf/feature-details/security-considerations-for-data.md), ve [meta veriler hakkında güvenlik konuları](../../../../docs/framework/wcf/feature-details/security-considerations-with-metadata.md).  
+Aşağıdaki bölümlerde kullanarak güvenli uygulamaları oluştururken dikkate alınması gereken en iyi uygulamalar listesinde [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)]. Güvenlik hakkında daha fazla bilgi için bkz: [güvenlik konuları](../../../../docs/framework/wcf/feature-details/security-considerations-in-wcf.md), [veriler için güvenlik konuları](../../../../docs/framework/wcf/feature-details/security-considerations-for-data.md), ve [meta veriler hakkında güvenlik konuları](../../../../docs/framework/wcf/feature-details/security-considerations-with-metadata.md).  
   
 ## <a name="identify-services-performing-windows-authentication-with-spns"></a>Windows kimlik doğrulaması ile SPN'ler gerçekleştirme Services belirle  
  Hizmetleri, kullanıcı asıl adları (UPN'ler) veya hizmet asıl adları (SPN) ile tanımlanabilir. Ağ hizmeti gibi makine hesabı altında çalışan hizmetleri çalıştırdıkları makineye karşılık gelen bir SPN kimliğe sahip. Kullanıcı hesapları altında çalışan hizmetleri sahip çalışıyor, kullanıcı ancak karşılık gelen bir UPN kimliği `setspn` aracı, kullanıcı hesabı için bir SPN atamak için kullanılabilir. Bir hizmeti SPN tanımlanabilir ve hizmete bağlanmada istemcilerini bu SPN kullanacak şekilde yapılandırma belirli yapabilirsiniz yapılandırma daha zor saldırıları. Bu kılavuz, Kerberos veya SSPI anlaşması kullanarak bağlamaları için geçerlidir.  İstemciler, burada SSPI NTLM'ye geri döner durumda bir SPN hala belirtmeniz gerekir.  
@@ -66,7 +66,7 @@ Aşağıdaki bölümlerde kullanarak güvenli uygulamaları oluştururken dikkat
  Yerel yayımlayan bir veren adresi ve bağlama için belirtilen bir bağlama belirtilirse, bu bağlamayı kullanan uç noktaları için kullanılmaz. Her zaman yerel yayımlayan kullanmayı düşündüğünüz istemcilerinin veren adresi null olacak şekilde, bunlar bağlama değiştirmek veya böyle bir bağlama kullanmayın emin olun.  
   
 ## <a name="saml-token-size-quotas"></a>SAML belirteci boyutu kotaları  
- Güvenlik onaylar biçimlendirme dili (SAML) belirteçleri iletilerinde, bir güvenlik belirteci hizmeti (STS) tarafından verildiğinde veya istemciler bunları Hizmetleri kimlik doğrulaması bir parçası olarak mevcut olduğunda serileştirildiği zaman maksimum ileti boyutu kotası yeterince olmalıdır SAML belirteci ve diğer ileti bölümleri içerecek kadar büyük. Normal durumlarda, varsayılan ileti boyutu kotalarını yeterlidir. Ancak, talep yüzlerce içerdiğinden bir SAML belirtecine büyük olduğu durumlarda, kotalar serileştirilmiş belirteci uyum sağlayacak şekilde artırılacak. [!INCLUDE[crabout](../../../../includes/crabout-md.md)] Kotalar, bkz: [veriler için güvenlik konuları](../../../../docs/framework/wcf/feature-details/security-considerations-for-data.md).  
+ Güvenlik onaylar biçimlendirme dili (SAML) belirteçleri iletilerinde, bir güvenlik belirteci hizmeti (STS) tarafından verildiğinde veya istemciler bunları Hizmetleri kimlik doğrulaması bir parçası olarak mevcut olduğunda serileştirildiği zaman maksimum ileti boyutu kotası yeterince olmalıdır SAML belirteci ve diğer ileti bölümleri içerecek kadar büyük. Normal durumlarda, varsayılan ileti boyutu kotalarını yeterlidir. Ancak, talep yüzlerce içerdiğinden bir SAML belirtecine büyük olduğu durumlarda, kotalar serileştirilmiş belirteci uyum sağlayacak şekilde artırılacak. Kotalar hakkında daha fazla bilgi için bkz: [veriler için güvenlik konuları](../../../../docs/framework/wcf/feature-details/security-considerations-for-data.md).  
   
 ## <a name="set-securitybindingelementincludetimestamp-to-true-on-custom-bindings"></a>SecurityBindingElement.IncludeTimestamp üzerinde özel bağlamalar True olarak ayarlayın  
  Özel bağlama oluşturduğunuzda, ayarlamalısınız <xref:System.ServiceModel.Channels.SecurityBindingElement.IncludeTimestamp%2A> için `true`. Aksi halde, eğer <xref:System.ServiceModel.Channels.SecurityBindingElement.IncludeTimestamp%2A> ayarlanır `false`, ve istemci bir X509 gibi bir asimetrik anahtar tabanlı belirteci kullanarak sertifika, ileti imzalanmamış.  

@@ -1,28 +1,28 @@
 ---
-title: "Sistem Tarafından Sağlanan Bağlamalar"
-ms.custom: 
+title: Sistem Tarafından Sağlanan Bağlamalar
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - dotnet-clr
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - bindings [WCF], system-provided
 ms.assetid: 2c243746-45ce-4588-995e-c17126a579a6
-caps.latest.revision: 
+caps.latest.revision: 60
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: c5f8df31e31c9617fe7bcd92789671d220382a82
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 4ccdab56a90f4114836dd9f0a56cc495657ee9c8
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="system-provided-bindings"></a>Sistem Tarafından Sağlanan Bağlamalar
 Bağlamalar ve bir bitiş noktasına bağlanmak nasıl belirtmek için bir uç nokta konuşurken kullanmak için iletişim mekanizması belirtin. Bir bağlama aşağıdaki öğeleri içerir:  
@@ -33,7 +33,7 @@ Bağlamalar ve bir bitiş noktasına bağlanmak nasıl belirtmek için bir uç n
   
 -   Kodlama uç noktasına örneğin gönderilen iletiler, text/XML, ikili veya ileti iletim en iyi duruma getirme mekanizmasını (MTOM) için kullanılacak kodlama kablo belirler.  
   
- Bu konuda tüm sistem tarafından sağlanan sunulmaktadır [!INCLUDE[indigo1](../../../includes/indigo1-md.md)] bağlar. Hiçbiri uygulamanızın tam ölçütlerini karşılıyorsa, özel bir bağlama oluşturabilirsiniz. [!INCLUDE[crabout](../../../includes/crabout-md.md)]özel bağlama oluşturma, bkz: [özel bağlamalar](../../../docs/framework/wcf/extending/custom-bindings.md).  
+ Bu konuda tüm sistem tarafından sağlanan sunulmaktadır [!INCLUDE[indigo1](../../../includes/indigo1-md.md)] bağlar. Hiçbiri uygulamanızın tam ölçütlerini karşılıyorsa, özel bir bağlama oluşturabilirsiniz. Özel bağlama oluşturma hakkında daha fazla bilgi için bkz: [özel bağlamalar](../../../docs/framework/wcf/extending/custom-bindings.md).  
   
  WS-Federasyon protokolünü destekleyen bir güvenli ve birlikte çalışabilir bağlama verimli bir şekilde kimlik doğrulaması ve kullanıcılara yetki vermek için bir Federasyon kuruluşlar sağlar.  
   
@@ -49,12 +49,12 @@ Bağlamalar ve bir bitiş noktasına bağlanmak nasıl belirtmek için bir uç n
 |Bağlama|Yapılandırma öğesi|Açıklama|  
 |-------------|---------------------------|-----------------|  
 |<xref:System.ServiceModel.BasicHttpBinding>|[\<basicHttpBinding >](../../../docs/framework/configure-apps/file-schema/wcf/basichttpbinding.md)|WS-temel profil uyumluluğunu Web Hizmetleri ile Örneğin, ASP.NET Web Hizmetleri (ASMX) iletişim kurmak için uygun olan bir bağlama-services tabanlı. Bu bağlama taşıma ve varsayılan ileti kodlama olarak text/XML olarak HTTP kullanır.|  
-|<xref:System.ServiceModel.WSHttpBinding>|[\<wsHttpBinding >](../../../docs/framework/configure-apps/file-schema/wcf/wshttpbinding.md)|Olmayan yönlü Hizmet sözleşmeleri için uygun bir güvenli ve birlikte çalışabilir bağlama.|  
+|<xref:System.ServiceModel.WSHttpBinding>|[\<wsHttpBinding>](../../../docs/framework/configure-apps/file-schema/wcf/wshttpbinding.md)|Olmayan yönlü Hizmet sözleşmeleri için uygun bir güvenli ve birlikte çalışabilir bağlama.|  
 |<xref:System.ServiceModel.WSDualHttpBinding>|[\<wsDualHttpBinding >](../../../docs/framework/configure-apps/file-schema/wcf/wsdualhttpbinding.md)|Çift yönlü Hizmet sözleşmeleri veya SOAP aracılarla iletişim için uygun bir güvenli ve birlikte çalışabilir bağlama.|  
 |<xref:System.ServiceModel.WSFederationHttpBinding>|[\<wsFederationHttpBinding >](../../../docs/framework/configure-apps/file-schema/wcf/wsfederationhttpbinding.md)|Güvenli ve birlikte çalışabilir, bağlama verimli bir şekilde kimlik doğrulaması ve kullanıcılara yetki vermek için bir Federasyon olan kuruluşların WS-Federasyon protokolünü destekler.|  
-|<xref:System.ServiceModel.NetHttpBinding>|\<netHttpBinding >|HTTP veya WebSocket Hizmetleri kullanma için tasarlanmış bir bağlama ikili kodlama varsayılan olarak kullanılır.|  
+|<xref:System.ServiceModel.NetHttpBinding>|\<netHttpBinding>|HTTP veya WebSocket Hizmetleri kullanma için tasarlanmış bir bağlama ikili kodlama varsayılan olarak kullanılır.|  
 |<xref:System.ServiceModel.NetHttpsBinding>|\<netHttpsBinding >|HTTP veya WebSocket Hizmetleri kullanma için tasarlanmış güvenli bağlama ikili kodlama varsayılan olarak kullanılır.|  
-|<xref:System.ServiceModel.NetTcpBinding>|[\<netTcpBinding >](../../../docs/framework/configure-apps/file-schema/wcf/nettcpbinding.md)|Güvenli ve en iyi duruma getirilmiş bağlama arasında makineler arası iletişim için uygun [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] uygulamalar.|  
+|<xref:System.ServiceModel.NetTcpBinding>|[\<netTcpBinding>](../../../docs/framework/configure-apps/file-schema/wcf/nettcpbinding.md)|Güvenli ve en iyi duruma getirilmiş bağlama arasında makineler arası iletişim için uygun [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] uygulamalar.|  
 |<xref:System.ServiceModel.NetNamedPipeBinding>|[\<netNamedPipeBinding >](../../../docs/framework/configure-apps/file-schema/wcf/netnamedpipebinding.md)|Makine üzerindeki arasındaki iletişim için uygun bir güvenli, güvenilir ve en iyi duruma getirilmiş bağlama [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] uygulamalar.|  
 |<xref:System.ServiceModel.NetMsmqBinding>|[\<netMsmqBinding >](../../../docs/framework/configure-apps/file-schema/wcf/netmsmqbinding.md)|Arasında makineler arası iletişim için uygun bir sıralı bağlama [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] uygulamalar.|  
 |<xref:System.ServiceModel.NetPeerTcpBinding>|[\<netPeerTcpBinding >](../../../docs/framework/configure-apps/file-schema/wcf/netpeertcpbinding.md)|Birden fazla makine iletişimi sağlayan bir bağlama.|  
@@ -85,7 +85,7 @@ Bağlamalar ve bir bitiş noktasına bağlanmak nasıl belirtmek için bir uç n
 |<xref:System.ServiceModel.UdpBinding>|.NET **Not:** birlikte çalışabilirlik elde edilebilir bu bağlamayı gerçekleştiren standart SOAP üzerinden UDP spec uygulayarak.|(Hiçbiri)|(Hiçbiri)|(Hiçbiri)|yok|(Metin)|Hayır|  
   
 > [!IMPORTANT]
->  <xref:System.ServiceModel.NetHttpBinding>HTTP veya WebSocket Hizmetleri kullanma için tasarlanmış bir bağlama ve ikili kodlama varsayılan olarak kullanır. <xref:System.ServiceModel.NetHttpBinding>İstek-yanıt sözleşmesi ya da çift yönlü sözleşme ile kullanılan olup olmadığını algılar ve eşleşecek şekilde davranışını değiştirme - Bunu HTTP istek-yanıt ve WebSockets için çift yönlü için kullanır. Bu davranış kullanılarak geçersiz kılınabilir <!--zz <xref:System.ServiceModel.NetHttpBinding.WebSocketTransportUsage%2A>--> `System.ServiceModel.NetHttpBinding.WebSocketTransportUsage` ayarı bağlama: izin verilen - bu varsayılan değerdir ve yukarıda açıklandığı gibi davranır. QueuedDeliveryRequirements - bu WebSockets kullanılmasını engeller. Çift yönlü sözleşme ile bu ayarı kullanın çalışılırken bir özel durum neden olur. Gerekli - bu bile istek-yanıt sözleşmeleri için kullanılacak WebSockets zorlar. NetHttpBinding güvenilir oturumlar hem HTTP modu hem de WebSocket modu destekler. WebSocket içinde modu oturumları taşıma tarafından sağlanır.  
+>  <xref:System.ServiceModel.NetHttpBinding> HTTP veya WebSocket Hizmetleri kullanma için tasarlanmış bir bağlama ve ikili kodlama varsayılan olarak kullanır. <xref:System.ServiceModel.NetHttpBinding> İstek-yanıt sözleşmesi ya da çift yönlü sözleşme ile kullanılan olup olmadığını algılar ve eşleşecek şekilde davranışını değiştirme - Bunu HTTP istek-yanıt ve WebSockets için çift yönlü için kullanır. Bu davranış kullanılarak geçersiz kılınabilir <!--zz <xref:System.ServiceModel.NetHttpBinding.WebSocketTransportUsage%2A>--> `System.ServiceModel.NetHttpBinding.WebSocketTransportUsage` ayarı bağlama: izin verilen - bu varsayılan değerdir ve yukarıda açıklandığı gibi davranır. QueuedDeliveryRequirements - bu WebSockets kullanılmasını engeller. Çift yönlü sözleşme ile bu ayarı kullanın çalışılırken bir özel durum neden olur. Gerekli - bu bile istek-yanıt sözleşmeleri için kullanılacak WebSockets zorlar. NetHttpBinding güvenilir oturumlar hem HTTP modu hem de WebSocket modu destekler. WebSocket içinde modu oturumları taşıma tarafından sağlanır.  
   
  Aşağıdaki tabloda önceki tabloda listelenen özellikleri açıklanmaktadır.  
   

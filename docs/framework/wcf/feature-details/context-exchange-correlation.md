@@ -1,24 +1,26 @@
 ---
-title: "Bağlam Değişimi Bağıntısı "
-ms.custom: 
+title: 'Bağlam Değişimi Bağıntısı '
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 1e2852be-3601-45ae-b507-ccc465d45c60
-caps.latest.revision: "18"
+caps.latest.revision: 18
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: ee22feab20e2c96f3e708a277f9048f739213520
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.workload:
+- dotnet
+ms.openlocfilehash: bf84dfce2b2164d78bf07f840d66d6089a16ff23
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="context-exchange-correlation"></a>Bağlam Değişimi Bağıntısı 
 Bağlam bağıntı açıklanan bağlam değişimi mekanizması temel [.NET bağlam değişimi protokolü belirtimi](http://go.microsoft.com/fwlink/?LinkId=166059). Bağlam bağıntı, doğru örneğini iletileri ilişkilendirmek için iyi bilinen içerik üstbilgisi veya tanımlama bilgisi kullanır. Bir bağlam tabanlı gibi bağlama bağlamı bağıntı kullanılacak <xref:System.ServiceModel.BasicHttpContextBinding>, <xref:System.ServiceModel.WSHttpContextBinding>, veya <xref:System.ServiceModel.NetTcpContextBinding> için sağlanan uç kullanılmalıdır <xref:System.ServiceModel.Activities.WorkflowServiceHost>. Bu konu bir iş akışı hizmeti Mesajlaşma etkinliklerle bağlam bağıntı kullanmayı açıklar.  
@@ -54,7 +56,7 @@ SendReply ReplyToStartOrder = new SendReply
 ```  
   
 > [!NOTE]
->  Bu örnekte kullanılan bağıntı gerçekte iki tür vardır: bağlam bağıntı ve istek-yanıt bağıntısı. Böylece istemcilerden çağrılarını doğru örneğine yönlendirilecek bağlam bağıntı kullanılır. İstek-yanıt bağıntısı tarafından kullanılan <xref:System.ServiceModel.Activities.Receive> ve <xref:System.ServiceModel.Activities.SendReply> etkinlikleri birlikte iki yönlü işlemi uygulamak için bu etkinlikler tarafından modellenir. Bu örnekte, yalnızca bağlam bağıntı açıkça yapılandırılmış ve <xref:System.ServiceModel.Activities.Receive> / <xref:System.ServiceModel.Activities.SendReply> çifti örtük tarafından sağlanan varsayılan istek-yanıt bağıntısı kullanarak <xref:System.ServiceModel.Activities.CorrelationHandle> yönetimini <xref:System.ServiceModel.Activities.WorkflowServiceHost>. Kullanırken **ReceiveAndSendReply** iş akışı Tasarımcısı, istek-yanıt bağıntısı etkinlik şablonu açıkça yapılandırılmış. [!INCLUDE[crabout](../../../../includes/crabout-md.md)]İstek-yanıt bağıntısı ve örtük bağıntı tanıtıcısı yönetimi Bkz [istek-yanıt](../../../../docs/framework/wcf/feature-details/request-reply-correlation.md) ve [bağıntı genel bakış](../../../../docs/framework/wcf/feature-details/correlation-overview.md). [!INCLUDE[crabout](../../../../includes/crabout-md.md)]**ReceiveAndSendReply** etkinlik şablonu bkz [ReceiveAndSendReply](/visualstudio/workflow-designer/receiveandsendreply-template-designer).  
+>  Bu örnekte kullanılan bağıntı gerçekte iki tür vardır: bağlam bağıntı ve istek-yanıt bağıntısı. Böylece istemcilerden çağrılarını doğru örneğine yönlendirilecek bağlam bağıntı kullanılır. İstek-yanıt bağıntısı tarafından kullanılan <xref:System.ServiceModel.Activities.Receive> ve <xref:System.ServiceModel.Activities.SendReply> etkinlikleri birlikte iki yönlü işlemi uygulamak için bu etkinlikler tarafından modellenir. Bu örnekte, yalnızca bağlam bağıntı açıkça yapılandırılmış ve <xref:System.ServiceModel.Activities.Receive> / <xref:System.ServiceModel.Activities.SendReply> çifti örtük tarafından sağlanan varsayılan istek-yanıt bağıntısı kullanarak <xref:System.ServiceModel.Activities.CorrelationHandle> yönetimini <xref:System.ServiceModel.Activities.WorkflowServiceHost>. Kullanırken **ReceiveAndSendReply** iş akışı Tasarımcısı, istek-yanıt bağıntısı etkinlik şablonu açıkça yapılandırılmış. İstek-yanıt bağıntısı ve örtük bağıntı tanıtıcısı yönetimi hakkında daha fazla bilgi için bkz: [istek-yanıt](../../../../docs/framework/wcf/feature-details/request-reply-correlation.md) ve [bağıntı genel bakış](../../../../docs/framework/wcf/feature-details/correlation-overview.md). Hakkında daha fazla bilgi için **ReceiveAndSendReply** etkinlik şablonu bkz [ReceiveAndSendReply](/visualstudio/workflow-designer/receiveandsendreply-template-designer).  
   
  Sonraki <xref:System.ServiceModel.Activities.Receive> iş akışı hizmetinde etkinlikleri başvuru <xref:System.ServiceModel.Activities.CorrelationHandle> , başlatılmış tarafından <xref:System.ServiceModel.Activities.SendReply> önceki örnekte.  
   
@@ -109,6 +111,6 @@ Send request2 = new Send
 };  
 ```  
   
- Bu örneklerde, bağlam bağıntı açıkça yapılandırıldığını unutmayın. İstemci iş akışı ayrıca içinde barındırılmıyorsa bir <xref:System.ServiceModel.Activities.WorkflowServiceHost>, etkinlikleri içerdiği sürece bağıntı açıkça, yapılandırılmalıdır sonra bir <xref:System.ServiceModel.Activities.CorrelationScope> etkinlik. [!INCLUDE[crabout](../../../../includes/crabout-md.md)]bağlam bağıntı bkz [NetContextExchangeCorrelation](http://msdn.microsoft.com/library/93c74a1a-b9e2-46c6-95c0-c9b0e9472caf) örnek.  
+ Bu örneklerde, bağlam bağıntı açıkça yapılandırıldığını unutmayın. İstemci iş akışı ayrıca içinde barındırılmıyorsa bir <xref:System.ServiceModel.Activities.WorkflowServiceHost>, etkinlikleri içerdiği sürece bağıntı açıkça, yapılandırılmalıdır sonra bir <xref:System.ServiceModel.Activities.CorrelationScope> etkinlik. Bağlam bağıntı hakkında daha fazla bilgi için bkz: [NetContextExchangeCorrelation](http://msdn.microsoft.com/library/93c74a1a-b9e2-46c6-95c0-c9b0e9472caf) örnek.  
   
  İş akışı hizmeti çağrıları yapma istemci bir iş akışı değilse, bunu açıkça geri iş akışı hizmeti için ilk çağrısından döndürülen bağlam geçirir sürece sonra bunu hala yinelenen aramaları yapabilir. Hizmet başvuru ekleyerek oluşturulan proxy'leri [!INCLUDE[vs_current_long](../../../../includes/vs-current-long-md.md)] depolamak ve varsayılan olarak bu bağlamda geçer.

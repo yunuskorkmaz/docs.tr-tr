@@ -38,14 +38,14 @@ ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: 7c84c5742fcbb0d1554bd6fc379fc44f3b9cb055
-ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
+ms.openlocfilehash: bf7ec6cc18461a906e889a997968677d0c63df20
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/28/2018
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="navigation-overview"></a>Gezintiye Genel Bakış
-[!INCLUDE[TLA#tla_wpf](../../../../includes/tlasharptla-wpf-md.md)] iki tür uygulamalarda kullanılabilir tarayıcısı stilinde Gezinti destekler: tek başına uygulamaları ve [!INCLUDE[TLA#tla_xbap#plural](../../../../includes/tlasharptla-xbapsharpplural-md.md)]. Gezinme, paket içeriği için [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] sağlar <xref:System.Windows.Controls.Page> sınıfı. Birinden gidebilirsiniz <xref:System.Windows.Controls.Page> diğerine bildirimli olarak, kullanarak bir <xref:System.Windows.Documents.Hyperlink>, veya kullanarak programlı olarak <xref:System.Windows.Navigation.NavigationService>. [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] Günlük sayfadan çıkıldığında sayfaları unutmayın ve bunları geri gitmek için kullanır.  
+Windows Presentation Foundation (WPF) iki tür uygulamalarda kullanılabilir tarayıcısı stilinde Gezinti destekler: tek başına uygulamaları ve [!INCLUDE[TLA#tla_xbap#plural](../../../../includes/tlasharptla-xbapsharpplural-md.md)]. Gezinme, paket içeriği için [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] sağlar <xref:System.Windows.Controls.Page> sınıfı. Birinden gidebilirsiniz <xref:System.Windows.Controls.Page> diğerine bildirimli olarak, kullanarak bir <xref:System.Windows.Documents.Hyperlink>, veya kullanarak programlı olarak <xref:System.Windows.Navigation.NavigationService>. [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] Günlük sayfadan çıkıldığında sayfaları unutmayın ve bunları geri gitmek için kullanır.  
   
  <xref:System.Windows.Controls.Page>, <xref:System.Windows.Documents.Hyperlink>, <xref:System.Windows.Navigation.NavigationService>, ve günlük form tarafından sunulan gezinti desteği çekirdek [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]. Bu genel bakışta gezinme gevşek içeren Gelişmiş gezinti desteği kapsayan önce bu özellikleri ayrıntılı araştırır [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)] dosyaları [!INCLUDE[TLA#tla_html](../../../../includes/tlasharptla-html-md.md)] dosyaları ve nesneleri.  
   

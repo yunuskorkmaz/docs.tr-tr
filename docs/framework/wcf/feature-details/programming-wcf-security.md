@@ -21,11 +21,11 @@ ms.author: bruceper
 manager: mbaldwin
 ms.workload:
 - dotnet
-ms.openlocfilehash: 6c8769511f608834c7539779d83977880e1d4093
-ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
+ms.openlocfilehash: 63f5c2c61a374b92b018419c83c9429e6ad796d8
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/28/2018
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="programming-wcf-security"></a>WCF Güvenliğini Programlama
 Bu konu güvenli oluşturmak için kullanılan temel programlama görevleri açıklar [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] uygulama. Bu konu, yalnızca kimlik doğrulaması, gizliliği ve bütünlük, topluca olarak bilinen kapsar *Aktarım güvenlik*. Bu konuda yetkilendirme (kaynaklarına veya hizmetlerine erişim denetimi); kapsamaz Yetkilendirme hakkında daha fazla bilgi için bkz: [yetkilendirme](../../../../docs/framework/wcf/feature-details/authorization-in-wcf.md).  
@@ -48,7 +48,7 @@ Bu konu güvenli oluşturmak için kullanılan temel programlama görevleri aç�
   
     1.  `Transport`  
   
-         Taşıma güvenliği seçmiş olduğunuz bağlama kullanan mekanizmasını bağlıdır. Örneğin, kullanıyorsanız `WSHttpBinding` güvenlik mekanizması Güvenli Yuva Katmanı (SSL) (aynı zamanda HTTPS protokolü için mekanizması) olur. Genel olarak bakıldığında, taşıma güvenliği ana avantajı, hangi aktarım olsun, kullanmakta olduğunuz iyi verimlilik sağlar ' dir. Ancak, iki sınırlamaları vardır: aktarım mekanizması bir kullanıcının kimliğini doğrulamak için kullanılan kimlik bilgisi türünü belirleyen ilk sunucudur. Yalnızca hizmet kimlik bilgilerini farklı türde talep diğer hizmetlerle birlikte çalışmak gerekiyorsa bir dezavantajı budur. İkinci güvenlik ileti düzeyinde uygulanmadığından güvenlik bir atlama atlamalı şekilde uçtan uca yerine, uygulanmasıdır. Yalnızca istemci ile hizmet arasında ileti yolu aracılar içeriyorsa bu ikinci sınırlama bir sorundur. [!INCLUDE[crabout](../../../../includes/crabout-md.md)] Hangi aktarım kullanmak için bkz: [taşıma seçme](../../../../docs/framework/wcf/feature-details/choosing-a-transport.md). [!INCLUDE[crabout](../../../../includes/crabout-md.md)] taşıma güvenliği bkz [taşıma güvenliği genel bakış](../../../../docs/framework/wcf/feature-details/transport-security-overview.md).  
+         Taşıma güvenliği seçmiş olduğunuz bağlama kullanan mekanizmasını bağlıdır. Örneğin, kullanıyorsanız `WSHttpBinding` güvenlik mekanizması Güvenli Yuva Katmanı (SSL) (aynı zamanda HTTPS protokolü için mekanizması) olur. Genel olarak bakıldığında, taşıma güvenliği ana avantajı, hangi aktarım olsun, kullanmakta olduğunuz iyi verimlilik sağlar ' dir. Ancak, iki sınırlamaları vardır: aktarım mekanizması bir kullanıcının kimliğini doğrulamak için kullanılan kimlik bilgisi türünü belirleyen ilk sunucudur. Yalnızca hizmet kimlik bilgilerini farklı türde talep diğer hizmetlerle birlikte çalışmak gerekiyorsa bir dezavantajı budur. İkinci güvenlik ileti düzeyinde uygulanmadığından güvenlik bir atlama atlamalı şekilde uçtan uca yerine, uygulanmasıdır. Yalnızca istemci ile hizmet arasında ileti yolu aracılar içeriyorsa bu ikinci sınırlama bir sorundur. Hangi aktarım kullanılacak hakkında daha fazla bilgi için bkz: [taşıma seçme](../../../../docs/framework/wcf/feature-details/choosing-a-transport.md). Taşıma güvenliği kullanma hakkında daha fazla bilgi için bkz: [taşıma güvenliği genel bakış](../../../../docs/framework/wcf/feature-details/transport-security-overview.md).  
   
     2.  `Message`  
   

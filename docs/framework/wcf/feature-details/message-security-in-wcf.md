@@ -1,27 +1,29 @@
 ---
-title: "WCF'de İleti Güvenliği"
-ms.custom: 
+title: WCF'de İleti Güvenliği
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: a80efb59-591a-4a37-bb3c-8fffa6ca0b7d
-caps.latest.revision: "9"
+caps.latest.revision: 9
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 92422e40742909dbf338ec2660e5494ffcdd31cc
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 3ef96dd25903076fedc59ad1507674dd40dcfcc5
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="message-security-in-wcf"></a>WCF'de İleti Güvenliği
-[!INCLUDE[indigo1](../../../../includes/indigo1-md.md)]güvenlik sağlamak için iki ana modu vardır (`Transport` ve `Message`) ve üçüncü modu (`TransportWithMessageCredential`) iki birleştirir. Bu konuda, ileti güvenliği ve kullanmak için nedenleri açıklanmaktadır.  
+[!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] güvenlik sağlamak için iki ana modu vardır (`Transport` ve `Message`) ve üçüncü modu (`TransportWithMessageCredential`) iki birleştirir. Bu konuda, ileti güvenliği ve kullanmak için nedenleri açıklanmaktadır.  
   
 ## <a name="what-is-message-security"></a>İleti güvenlik nedir?  
  İleti güvenliği WS-Security belirtimi iletileri güvenli hale getirmek için kullanır. WS-Securityspecification gizlilik, bütünlük ve kimlik doğrulamasını (aktarım düzeyi) yerine SOAP iletisi düzeyinde emin olmak için Mesajlaşma SOAP geliştirmeler açıklanmaktadır.  
@@ -37,7 +39,7 @@ ms.lasthandoff: 12/22/2017
   
 -   Birden çok aktarımı için destek. Güvenlik protokolü Bel gerek kalmadan Adlandırılmış Kanallar ve TCP, gibi birçok farklı taşımaları üzerinden güvenli iletiler gönderebilir. Aktarım düzeyi güvenlik, tüm güvenlik bilgilerini tek özel taşımanın bağlantı kapsamlıdır ve ileti içeriği kendisini kullanılabilir değil. İleti güvenliği iletinin ileti ve güvenlik bağlamı iletmek için kullandığınız hangi aktarım doğrudan ileti içine katıştırılmış bağımsız olarak güvenli hale getirir.  
   
--   Geniş bir dizi kimlik bilgilerini ve talepler için destek. İleti güvenliği talep SOAP iletisi içinde herhangi bir türde gönderebilen genişletilebilir bir çerçeve sağlar WS-Security belirtimi temel alır. Taşıma güvenliği farklı olarak, kimlik doğrulama mekanizması veya kullanabileceğiniz talep kümesi taşıma özellikleri tarafından sınırlı değildir. [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]ileti güvenliği ve gerektiği gibi ek türlerini desteklemek için Genişletilebilir kimlik doğrulama ve talep iletim birden çok türde içerir. Bu nedenlerle, örneğin, bir Federasyon kimlik senaryosu ileti güvenliği mümkün değildir. [!INCLUDE[crabout](../../../../includes/crabout-md.md)]WCF Federasyon senaryoları destekler, bkz: [Federasyon ve verilen belirteçleri](../../../../docs/framework/wcf/feature-details/federation-and-issued-tokens.md).  
+-   Geniş bir dizi kimlik bilgilerini ve talepler için destek. İleti güvenliği talep SOAP iletisi içinde herhangi bir türde gönderebilen genişletilebilir bir çerçeve sağlar WS-Security belirtimi temel alır. Taşıma güvenliği farklı olarak, kimlik doğrulama mekanizması veya kullanabileceğiniz talep kümesi taşıma özellikleri tarafından sınırlı değildir. [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] ileti güvenliği ve gerektiği gibi ek türlerini desteklemek için Genişletilebilir kimlik doğrulama ve talep iletim birden çok türde içerir. Bu nedenlerle, örneğin, bir Federasyon kimlik senaryosu ileti güvenliği mümkün değildir. Federasyon senaryolarında WCF desteklediği hakkında daha fazla bilgi için bkz: [Federasyon ve verilen belirteçleri](../../../../docs/framework/wcf/feature-details/federation-and-issued-tokens.md).  
   
 ## <a name="how-message-and-transport-security-compare"></a>İleti ve taşıma güvenliği nasıl Karşılaştır  
   

@@ -1,27 +1,29 @@
 ---
-title: "İzlenecek Yol: Özel İstemci ve Hizmet Kimlik Bilgileri Oluşturma"
-ms.custom: 
+title: 'İzlenecek Yol: Özel İstemci ve Hizmet Kimlik Bilgileri Oluşturma'
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - csharp
 - vb
 ms.assetid: 2b5ba5c3-0c6c-48e9-9e46-54acaec443ba
-caps.latest.revision: "13"
+caps.latest.revision: 13
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 99ee624ef6198ed67141d3d92e63fb9ba815c4fd
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.workload:
+- dotnet
+ms.openlocfilehash: cf9f6c1ad5be3a2d63140f03f74713809624e277
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="walkthrough-creating-custom-client-and-service-credentials"></a>İzlenecek Yol: Özel İstemci ve Hizmet Kimlik Bilgileri Oluşturma
 Bu konu, nasıl özel istemci ve hizmet kimlik bilgilerini uygulanacağını ve uygulama kodu özel kimlik bilgilerini kullanmayı gösterir.  
@@ -35,7 +37,7 @@ Bu konu, nasıl özel istemci ve hizmet kimlik bilgilerini uygulanacağını ve 
   
  Hem <xref:System.ServiceModel.Description.ClientCredentials> ve <xref:System.ServiceModel.Description.ServiceCredentials> sınıfları devral Özet <xref:System.ServiceModel.Security.SecurityCredentialsManager> döndürmek için sözleşmesini tanımlayan sınıfı <xref:System.IdentityModel.Selectors.SecurityTokenManager>.  
   
- [!INCLUDE[crabout](../../../../includes/crabout-md.md)]kimlik bilgileri sınıfları ve nasıl bunların içine sığması [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] güvenlik mimarisi bkz [güvenlik mimarisi](http://msdn.microsoft.com/library/16593476-d36a-408d-808c-ae6fd483e28f).  
+ Kimlik bilgileri sınıfları ve nasıl bunların içine sığması hakkında daha fazla bilgi için [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] güvenlik mimarisi bkz [güvenlik mimarisi](http://msdn.microsoft.com/library/16593476-d36a-408d-808c-ae6fd483e28f).  
   
  Sağlanan varsayılan uygulamaları [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] sistem tarafından sağlanan kimlik bilgisi türlerini destekler ve bu kimlik bilgileri türlerde işleyebilen belirteci Yöneticisi güvenlik oluşturun.  
   
@@ -81,11 +83,11 @@ Bu konu, nasıl özel istemci ve hizmet kimlik bilgilerini uygulanacağını ve 
   
 1.  Türetilen yeni bir sınıf tanımlama <xref:System.ServiceModel.ClientCredentialsSecurityTokenManager>.  
   
-2.  İsteğe bağlı. Geçersiz kılma <xref:System.IdentityModel.Selectors.SecurityTokenManager.CreateSecurityTokenProvider%28System.IdentityModel.Selectors.SecurityTokenRequirement%29> yöntemi bir özel durumunda <xref:System.IdentityModel.Selectors.SecurityTokenProvider> uygulama oluşturulmalıdır. [!INCLUDE[crabout](../../../../includes/crabout-md.md)]özel güvenlik belirteci sağlayıcıları Bkz [nasıl yapılır: özel bir güvenlik belirteci sağlayıcı oluşturma](../../../../docs/framework/wcf/extending/how-to-create-a-custom-security-token-provider.md).  
+2.  İsteğe bağlı. Geçersiz kılma <xref:System.IdentityModel.Selectors.SecurityTokenManager.CreateSecurityTokenProvider%28System.IdentityModel.Selectors.SecurityTokenRequirement%29> yöntemi bir özel durumunda <xref:System.IdentityModel.Selectors.SecurityTokenProvider> uygulama oluşturulmalıdır. Özel güvenlik belirteci sağlayıcıları hakkında daha fazla bilgi için bkz: [nasıl yapılır: özel bir güvenlik belirteci sağlayıcı oluşturma](../../../../docs/framework/wcf/extending/how-to-create-a-custom-security-token-provider.md).  
   
-3.  İsteğe bağlı. Geçersiz kılma <xref:System.IdentityModel.Selectors.SecurityTokenManager.CreateSecurityTokenAuthenticator%28System.IdentityModel.Selectors.SecurityTokenRequirement%2CSystem.IdentityModel.Selectors.SecurityTokenResolver%40%29> yöntemi bir özel durumunda <xref:System.IdentityModel.Selectors.SecurityTokenAuthenticator> uygulama oluşturulmalıdır. [!INCLUDE[crabout](../../../../includes/crabout-md.md)]özel güvenlik belirteci Doğrulayıcı bkz [nasıl yapılır: bir özel güvenlik belirteci kimlik doğrulayıcı oluşturma](../../../../docs/framework/wcf/extending/how-to-create-a-custom-security-token-authenticator.md).  
+3.  İsteğe bağlı. Geçersiz kılma <xref:System.IdentityModel.Selectors.SecurityTokenManager.CreateSecurityTokenAuthenticator%28System.IdentityModel.Selectors.SecurityTokenRequirement%2CSystem.IdentityModel.Selectors.SecurityTokenResolver%40%29> yöntemi bir özel durumunda <xref:System.IdentityModel.Selectors.SecurityTokenAuthenticator> uygulama oluşturulmalıdır. Özel güvenlik belirteci Doğrulayıcı hakkında daha fazla bilgi için bkz: [nasıl yapılır: bir özel güvenlik belirteci kimlik doğrulayıcı oluşturma](../../../../docs/framework/wcf/extending/how-to-create-a-custom-security-token-authenticator.md).  
   
-4.  İsteğe bağlı. Geçersiz kılma <xref:System.IdentityModel.Selectors.SecurityTokenManager.CreateSecurityTokenSerializer%2A> yöntemi bir özel durumunda <xref:System.IdentityModel.Selectors.SecurityTokenSerializer> oluşturulması gerekir. [!INCLUDE[crabout](../../../../includes/crabout-md.md)]özel güvenlik belirteçleri ve özel güvenlik belirteci serileştiricileri bkz [nasıl yapılır: özel belirteç oluşturma](../../../../docs/framework/wcf/extending/how-to-create-a-custom-token.md).  
+4.  İsteğe bağlı. Geçersiz kılma <xref:System.IdentityModel.Selectors.SecurityTokenManager.CreateSecurityTokenSerializer%2A> yöntemi bir özel durumunda <xref:System.IdentityModel.Selectors.SecurityTokenSerializer> oluşturulması gerekir. Özel güvenlik belirteçleri ve özel güvenlik belirteci seri hale getiricileri genişletme hakkında daha fazla bilgi için bkz: [nasıl yapılır: özel belirteç oluşturma](../../../../docs/framework/wcf/extending/how-to-create-a-custom-token.md).  
   
      [!code-csharp[c_CustomCredentials#2](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_customcredentials/cs/source.cs#2)]
      [!code-vb[c_CustomCredentials#2](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_customcredentials/vb/client/client.vb#2)]  
@@ -101,7 +103,7 @@ Bu konu, nasıl özel istemci ve hizmet kimlik bilgilerini uygulanacağını ve 
      [!code-csharp[c_CustomCredentials#3](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_customcredentials/cs/source.cs#3)]
      [!code-vb[c_CustomCredentials#3](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_customcredentials/vb/client/client.vb#3)]  
   
- Önceki yordamda uygulama kodu üzerinden istemci kimlik bilgilerini kullanmayı gösterir. [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]Uygulama yapılandırma dosyası kullanarak kimlik bilgilerini de yapılandırılabilir. Uygulama Yapılandırması'nı kullanarak genellikle, kaynak, yeniden derlenmesi ve yeniden dağıtım değiştirmek zorunda kalmadan uygulama parametreleri değiştirilmesini sağladığından kodlamak için tercih edilir.  
+ Önceki yordamda uygulama kodu üzerinden istemci kimlik bilgilerini kullanmayı gösterir. [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] Uygulama yapılandırma dosyası kullanarak kimlik bilgilerini de yapılandırılabilir. Uygulama Yapılandırması'nı kullanarak genellikle, kaynak, yeniden derlenmesi ve yeniden dağıtım değiştirmek zorunda kalmadan uygulama parametreleri değiştirilmesini sağladığından kodlamak için tercih edilir.  
   
  Sonraki yordam desteklemek için özel kimlik bilgileri yapılandırmasını açıklar.  
   
@@ -169,11 +171,11 @@ Bu konu, nasıl özel istemci ve hizmet kimlik bilgilerini uygulanacağını ve 
   
 1.  Türetilen yeni bir sınıf tanımlama <xref:System.ServiceModel.Security.ServiceCredentialsSecurityTokenManager> sınıfı.  
   
-2.  İsteğe bağlı. Geçersiz kılma <xref:System.IdentityModel.Selectors.SecurityTokenManager.CreateSecurityTokenProvider%2A> yöntemi bir özel durumunda <xref:System.IdentityModel.Selectors.SecurityTokenProvider> uygulama oluşturulmalıdır. [!INCLUDE[crabout](../../../../includes/crabout-md.md)]özel güvenlik belirteci sağlayıcıları Bkz [nasıl yapılır: özel bir güvenlik belirteci sağlayıcı oluşturma](../../../../docs/framework/wcf/extending/how-to-create-a-custom-security-token-provider.md).  
+2.  İsteğe bağlı. Geçersiz kılma <xref:System.IdentityModel.Selectors.SecurityTokenManager.CreateSecurityTokenProvider%2A> yöntemi bir özel durumunda <xref:System.IdentityModel.Selectors.SecurityTokenProvider> uygulama oluşturulmalıdır. Özel güvenlik belirteci sağlayıcıları hakkında daha fazla bilgi için bkz: [nasıl yapılır: özel bir güvenlik belirteci sağlayıcı oluşturma](../../../../docs/framework/wcf/extending/how-to-create-a-custom-security-token-provider.md).  
   
-3.  İsteğe bağlı. Geçersiz kılma <xref:System.IdentityModel.Selectors.SecurityTokenManager.CreateSecurityTokenAuthenticator%2A> yöntemi bir özel durumunda <xref:System.IdentityModel.Selectors.SecurityTokenAuthenticator> uygulama oluşturulmalıdır. [!INCLUDE[crabout](../../../../includes/crabout-md.md)]özel güvenlik belirteci Doğrulayıcı bkz [nasıl yapılır: bir özel güvenlik belirteci kimlik doğrulayıcı oluşturma](../../../../docs/framework/wcf/extending/how-to-create-a-custom-security-token-authenticator.md) konu.  
+3.  İsteğe bağlı. Geçersiz kılma <xref:System.IdentityModel.Selectors.SecurityTokenManager.CreateSecurityTokenAuthenticator%2A> yöntemi bir özel durumunda <xref:System.IdentityModel.Selectors.SecurityTokenAuthenticator> uygulama oluşturulmalıdır. Özel güvenlik belirteci Doğrulayıcı hakkında daha fazla bilgi için bkz: [nasıl yapılır: bir özel güvenlik belirteci kimlik doğrulayıcı oluşturma](../../../../docs/framework/wcf/extending/how-to-create-a-custom-security-token-authenticator.md) konu.  
   
-4.  İsteğe bağlı. Geçersiz kılma <xref:System.IdentityModel.Selectors.SecurityTokenManager.CreateSecurityTokenSerializer%28System.IdentityModel.Selectors.SecurityTokenVersion%29> yöntemi bir özel durumunda <xref:System.IdentityModel.Selectors.SecurityTokenSerializer> oluşturulması gerekir. [!INCLUDE[crabout](../../../../includes/crabout-md.md)]özel güvenlik belirteçleri ve özel güvenlik belirteci serileştiricileri bkz [nasıl yapılır: özel belirteç oluşturma](../../../../docs/framework/wcf/extending/how-to-create-a-custom-token.md).  
+4.  İsteğe bağlı. Geçersiz kılma <xref:System.IdentityModel.Selectors.SecurityTokenManager.CreateSecurityTokenSerializer%28System.IdentityModel.Selectors.SecurityTokenVersion%29> yöntemi bir özel durumunda <xref:System.IdentityModel.Selectors.SecurityTokenSerializer> oluşturulması gerekir. Özel güvenlik belirteçleri ve özel güvenlik belirteci seri hale getiricileri genişletme hakkında daha fazla bilgi için bkz: [nasıl yapılır: özel belirteç oluşturma](../../../../docs/framework/wcf/extending/how-to-create-a-custom-token.md).  
   
      [!code-csharp[c_CustomCredentials#5](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_customcredentials/cs/source.cs#5)]
      [!code-vb[c_CustomCredentials#5](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_customcredentials/vb/service/service.vb#5)]  

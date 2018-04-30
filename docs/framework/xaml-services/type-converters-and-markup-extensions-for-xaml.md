@@ -22,11 +22,11 @@ ms.author: wpickett
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: 34d48e7de0269449bd4ed6eedb83a7464b6d3d50
-ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
+ms.openlocfilehash: a6ab52105785dc1efbffe093cdafb12cdf8eac4d
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/28/2018
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="type-converters-and-markup-extensions-for-xaml"></a>XAML İçin Tür Dönüştürücüleri ve İşaretleme Uzantıları
 Tür dönüştürücüleri ve İşaretleme uzantıları Nesne grafiği bileşenleri oluşturmak için XAML türü sistemleri ve XAML yazıcılarının kullanan iki tekniklerle aynıdır. Bazı özellikleri paylaşır rağmen tür dönüştürücüleri ve İşaretleme uzantıları farklı bir XAML düğüm akış gösterilir. Bu belgede kümesi, tür dönüştürücüleri, biçimlendirme uzantıları ve benzer yapıları bazen topluca için değer dönüştürücüler bilinir.  
@@ -45,7 +45,7 @@ Tür dönüştürücüleri ve İşaretleme uzantıları Nesne grafiği bileşenl
   
 <a name="type_converters"></a>   
 ## <a name="type-converters"></a>Tür dönüştürücüleri  
- .NET Framework XAML hizmetlerinde tanımında tür dönüştürücüleri CLR türetilen sınıflardır <xref:System.ComponentModel.TypeConverter> sınıfı. <xref:System.ComponentModel.TypeConverter> içinde bir sınıf [!INCLUDE[TLA#tla_netframewk](../../../includes/tlasharptla-netframewk-md.md)] XAML yokken. Özellik windows ve metin tabanlı benzer düzenleme metaphors için destek için özgün amacı olan [!INCLUDE[TLA2#tla_ide](../../../includes/tla2sharptla-ide-md.md)] özellikleri. .NET Framework XAML giriş kullanan <xref:System.ComponentModel.TypeConverter> metin sözdizimini (olarak bir öznitelik değeri ya da XAML değer düğümü bulundu) bir nesnesine dönüştürmek için. <xref:System.ComponentModel.TypeConverter> Ayrıca bir nesne değeri metin sözdizimi için seri hale getirmek için kullanılabilir. <xref:System.ComponentModel.TypeConverter> Ayrıca önceki çerçeveye özel XAML uygulamalarında kullanıldı [!INCLUDE[TLA#tla_wpf](../../../includes/tlasharptla-wpf-md.md)] ve Windows Communication Foundation (WCF). Hakkında daha fazla bilgi için <xref:System.ComponentModel.TypeConverter> XAML'de bkz [XAML genel bakış için tür dönüştürücüleri](../../../docs/framework/xaml-services/type-converters-for-xaml-overview.md).  
+ .NET Framework XAML hizmetlerinde tanımında tür dönüştürücüleri CLR türetilen sınıflardır <xref:System.ComponentModel.TypeConverter> sınıfı. <xref:System.ComponentModel.TypeConverter> içinde bir sınıf [!INCLUDE[TLA#tla_netframewk](../../../includes/tlasharptla-netframewk-md.md)] XAML yokken. Özellik windows ve metin tabanlı benzer düzenleme metaphors için destek için özgün amacı olan [!INCLUDE[TLA2#tla_ide](../../../includes/tla2sharptla-ide-md.md)] özellikleri. .NET Framework XAML giriş kullanan <xref:System.ComponentModel.TypeConverter> metin sözdizimini (olarak bir öznitelik değeri ya da XAML değer düğümü bulundu) bir nesnesine dönüştürmek için. <xref:System.ComponentModel.TypeConverter> Ayrıca bir nesne değeri metin sözdizimi için seri hale getirmek için kullanılabilir. <xref:System.ComponentModel.TypeConverter> Ayrıca Windows Presentation Foundation (WPF) ve Windows Communication Foundation (WCF) önceki çerçeveye özel XAML uygulamalarında kullanıldı. Hakkında daha fazla bilgi için <xref:System.ComponentModel.TypeConverter> XAML'de bkz [XAML genel bakış için tür dönüştürücüleri](../../../docs/framework/xaml-services/type-converters-for-xaml-overview.md).  
   
 <a name="markup_extensions"></a>   
 ## <a name="markup-extensions"></a>İşaretleme uzantıları  

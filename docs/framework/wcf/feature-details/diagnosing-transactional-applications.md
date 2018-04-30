@@ -16,11 +16,11 @@ ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: a730daeadbed0f7453b8312612c096846d4e2cda
-ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
+ms.openlocfilehash: 5b8171f382812480078b76588089871233bdf9ca
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/28/2018
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="diagnosing-transactional-applications"></a>İşlemsel Uygulamaları Tanılama
 Bu konuda nasıl kullanılacağını açıklar [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] işlem uygulamada sorun gidermek için yönetim ve tanılama özelliği.  
@@ -58,7 +58,7 @@ Bu konuda nasıl kullanılacağını açıklar [!INCLUDE[indigo1](../../../../in
 |Saniyede Akışı Yapılan İşlem|Bu uç noktada işlemlerine içinde saniyede akışı yapılan işlem işlem sayısı. Bu sayaç, bir işlem bitiş noktasına gönderilen ileti bulunur dilediğiniz zaman artırılır.|  
   
 ## <a name="windows-management-instrumentation"></a>Windows Yönetim Araçları  
- [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] İnceleme, bir hizmetin aracılığıyla çalışma zamanında kullanıma sunan bir [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] Windows Yönetim Araçları (WMI) sağlayıcısı. [!INCLUDE[crabout](../../../../includes/crabout-md.md)] bkz: WMI veri erişme, [tanılama için Windows Yönetim araçları kullanarak](../../../../docs/framework/wcf/diagnostics/wmi/index.md).  
+ [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] İnceleme, bir hizmetin aracılığıyla çalışma zamanında kullanıma sunan bir [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] Windows Yönetim Araçları (WMI) sağlayıcısı. WMI veri erişimi hakkında daha fazla bilgi için bkz: [tanılama için Windows Yönetim araçları kullanarak](../../../../docs/framework/wcf/diagnostics/wmi/index.md).  
   
  Salt okunur WMI özellikleri sayısı bir hizmeti için uygulanan işlem ayarlarını belirtin. Aşağıdaki tablolarda tüm bu ayarlar listelenmektedir.  
   

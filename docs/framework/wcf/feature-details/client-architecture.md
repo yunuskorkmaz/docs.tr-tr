@@ -1,27 +1,29 @@
 ---
-title: "İstemci Mimarisi"
-ms.custom: 
+title: İstemci Mimarisi
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 02624403-0d77-41cb-9a86-ab55e98c7966
-caps.latest.revision: "7"
+caps.latest.revision: 7
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 6418c3b5c82ac42fb7e6d3ce85913896a3f76442
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 12db0d4f5717287439b66810e6354b12a4c68b77
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="client-architecture"></a>İstemci Mimarisi
-Uygulamaları [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] hizmet işlemleri çağırmak için istemci nesne. Bu konuda ele alınmıştır [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] istemci nesneleri [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] istemci kanalları ve bunların ilişkileri temel kanal mimarisi. Temel bir bakış için [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] istemci nesneleri görür [WCF istemcisi genel bakış](../../../../docs/framework/wcf/wcf-client-overview.md). [!INCLUDE[crabout](../../../../includes/crabout-md.md)]Kanal katmanını bkz [kanal katmanını genişletme](../../../../docs/framework/wcf/extending/extending-the-channel-layer.md).  
+Uygulamaları [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] hizmet işlemleri çağırmak için istemci nesne. Bu konuda ele alınmıştır [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] istemci nesneleri [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] istemci kanalları ve bunların ilişkileri temel kanal mimarisi. Temel bir bakış için [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] istemci nesneleri görür [WCF istemcisi genel bakış](../../../../docs/framework/wcf/wcf-client-overview.md). Kanal katmanını hakkında daha fazla bilgi için bkz: [kanal katmanını genişletme](../../../../docs/framework/wcf/extending/extending-the-channel-layer.md).  
   
 ## <a name="overview"></a>Genel Bakış  
  Çalışma zamanı hizmet modeli oluşturur [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] istemcileri aşağıdakilerden oluşur:  
@@ -37,7 +39,7 @@ Uygulamaları [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] hizmet iş
 ## <a name="client-objects-and-client-channels"></a>İstemci nesneleri ve istemci kanalları  
  Temel arabiriminin [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] istemciler <xref:System.ServiceModel.IClientChannel?displayProperty=nameWithType> çekirdek istemci işlevselliğinin yanı sıra temel iletişim nesnesi işlevselliği kullanıma sunan arabirim <xref:System.ServiceModel.ICommunicationObject?displayProperty=nameWithType>, bağlam işlevselliğini <xref:System.ServiceModel.IContextChannel?displayProperty=nameWithType>ve Genişletilebilir davranışını <xref:System.ServiceModel.IExtensibleObject%601?displayProperty=nameWithType>.  
   
- <xref:System.ServiceModel.IClientChannel> Arabirimi, ancak değil tanımlayan bir hizmet sözleşmesini. Bu hizmet sözleşme arabirimi tarafından bildirilen (genellikle hizmeti meta verileri gibi bir araç kullanılarak oluşturulmuş [ServiceModel meta veri yardımcı Programracı (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md)). [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]istemci türlerini genişletmek her ikisi de <xref:System.ServiceModel.IClientChannel> ve uygulamaların doğrudan ve ayrıca operations çağrı yapmasını etkinleştirmek için hedef hizmet sözleşme arabirimi istemci-tarafı çalışma zamanı işlevselliği erişime sahiptir. Oluşturma bir [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] istemci sağlar [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] <xref:System.ServiceModel.ChannelFactory?displayProperty=nameWithType> bağlanabilir ve yapılandırılan hizmet uç noktası ile etkileşim nesnelerle çalışma süresi oluşturmak için gereken bilgiler.  
+ <xref:System.ServiceModel.IClientChannel> Arabirimi, ancak değil tanımlayan bir hizmet sözleşmesini. Bu hizmet sözleşme arabirimi tarafından bildirilen (genellikle hizmeti meta verileri gibi bir araç kullanılarak oluşturulmuş [ServiceModel meta veri yardımcı Programracı (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md)). [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] istemci türlerini genişletmek her ikisi de <xref:System.ServiceModel.IClientChannel> ve uygulamaların doğrudan ve ayrıca operations çağrı yapmasını etkinleştirmek için hedef hizmet sözleşme arabirimi istemci-tarafı çalışma zamanı işlevselliği erişime sahiptir. Oluşturma bir [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] istemci sağlar [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] <xref:System.ServiceModel.ChannelFactory?displayProperty=nameWithType> bağlanabilir ve yapılandırılan hizmet uç noktası ile etkileşim nesnelerle çalışma süresi oluşturmak için gereken bilgiler.  
   
  İki daha önce belirtildiği gibi [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] kullanabilmek için önce istemci türlerini'nin yapılandırılması gerekir. En basit [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] istemci türleridir öğesinden türetilen nesneler <xref:System.ServiceModel.ClientBase%601> (veya <xref:System.ServiceModel.DuplexClientBase%601> hizmet sözleşmesi çift yönlü sözleşme ise). Bu tür programlı olarak yapılandırılmış bir Oluşturucu kullanarak veya bir yapılandırma dosyası kullanarak oluşturabilirsiniz ve hizmet işlemleri çağırmak için doğrudan çağrılır. Temel bir bakış için <xref:System.ServiceModel.ClientBase%601> nesneleri bkz [WCF istemcisi genel bakış](../../../../docs/framework/wcf/wcf-client-overview.md).  
   
@@ -48,7 +50,7 @@ Uygulamaları [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] hizmet iş
   
  İstemci yeni örneklerini arama önce bunları için sağlanan yapılandırma için kanal oluşturmak hakkında kanal fabrikaları anımsaması önemli şey. <xref:System.ServiceModel.ChannelFactory%601.CreateChannel%2A?displayProperty=nameWithType>. Çağırmanız sonra <xref:System.ServiceModel.ChannelFactory%601.CreateChannel%2A> (veya <xref:System.ServiceModel.ClientBase%601.Open%2A?displayProperty=nameWithType>, <xref:System.ServiceModel.ClientBase%601.CreateChannel%2A?displayProperty=nameWithType>, ya da herhangi bir işlem üzerinde bir [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] istemci nesnesi), kanal fabrikası değiştirmek ve yalnızca hedef değiştiriyorsunuz olsa bile kanalları farklı hizmet örneklerine bekler uç nokta adresi. Bir istemci nesnesi ya da istemci kanal ile farklı bir yapılandırma oluşturmak istiyorsanız, yeni bir kanal fabrikası önce oluşturmanız gerekir.  
   
- [!INCLUDE[crabout](../../../../includes/crabout-md.md)]kullanarak çeşitli sorunlarını [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] istemci nesneleri ve [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] istemci bkz [bir WCF istemcisi kullanarak hizmetlere erişme](../../../../docs/framework/wcf/feature-details/accessing-services-using-a-client.md).  
+ Kullanarak çeşitli sorunlar hakkında daha fazla bilgi için [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] istemci nesneleri ve [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] istemci bkz [bir WCF istemcisi kullanarak hizmetlere erişme](../../../../docs/framework/wcf/feature-details/accessing-services-using-a-client.md).  
   
  Aşağıdaki iki oluşturulmasını ve kullanımını bölümlerde [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] istemci kanal nesneleri.  
   

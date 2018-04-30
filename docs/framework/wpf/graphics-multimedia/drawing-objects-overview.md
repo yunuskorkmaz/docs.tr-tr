@@ -1,12 +1,13 @@
 ---
-title: "Çizim Nesnelerine Genel Bakış"
-ms.custom: 
+title: Çizim Nesnelerine Genel Bakış
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-wpf
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-wpf
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - ImageDrawing objects [WPF]
@@ -16,16 +17,17 @@ helpviewer_keywords:
 - Drawing objects [WPF]
 - DrawingGroup objects [WPF]
 ms.assetid: 9b5ce5c0-e204-4320-a7a8-0b2210d62f88
-caps.latest.revision: "25"
+caps.latest.revision: 25
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: c9b77b47a3f3ade27f2ba86304b1868a8d388482
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.workload:
+- dotnet
+ms.openlocfilehash: 3672e4b1deacd8fb50a5318270854daae9c74761
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="drawing-objects-overview"></a>Çizim Nesnelerine Genel Bakış
 Bu konu tanıtır <xref:System.Windows.Media.Drawing> nesnelerini ve bunların şekiller, bit eşlemler, metin ve medya verimli bir şekilde çizmek için nasıl kullanılacağını açıklar. Kullanmak <xref:System.Windows.Media.Drawing> küçük resim oluşturduğunuzda nesneleri boyamak ile bir <xref:System.Windows.Media.DrawingBrush>, veya <xref:System.Windows.Media.Visual> nesneleri.  
@@ -36,17 +38,17 @@ Bu konu tanıtır <xref:System.Windows.Media.Drawing> nesnelerini ve bunların �
 ## <a name="what-is-a-drawing-object"></a>Çizim nesnesi nedir?  
  A <xref:System.Windows.Media.Drawing> nesne gibi bir şekil, bit eşlem, görüntü veya metin satırının görünür içeriği açıklar. Farklı türde çizimler farklı içerik türlerini açıklar. Çizim nesneleri farklı türlerinin bir listesi verilmiştir.  
   
--   <xref:System.Windows.Media.GeometryDrawing>Şekil çizer.  
+-   <xref:System.Windows.Media.GeometryDrawing> Şekil çizer.  
   
--   <xref:System.Windows.Media.ImageDrawing>Resim çizer.  
+-   <xref:System.Windows.Media.ImageDrawing> Resim çizer.  
   
--   <xref:System.Windows.Media.GlyphRunDrawing>Metin çizer.  
+-   <xref:System.Windows.Media.GlyphRunDrawing> Metin çizer.  
   
--   <xref:System.Windows.Media.VideoDrawing>– Bir ses veya video dosyası çalar.  
+-   <xref:System.Windows.Media.VideoDrawing> – Bir ses veya video dosyası çalar.  
   
--   <xref:System.Windows.Media.DrawingGroup>Diğer çizimleri çizer. Diğer tek bileşik çizim çizimlerini birleştirmek için bir çizim grubu kullanın.  
+-   <xref:System.Windows.Media.DrawingGroup> Diğer çizimleri çizer. Diğer tek bileşik çizim çizimlerini birleştirmek için bir çizim grubu kullanın.  
   
- <xref:System.Windows.Media.Drawing>nesneleri yönlüdür; kullanabileceğiniz birçok yolu bir <xref:System.Windows.Media.Drawing> nesnesi.  
+ <xref:System.Windows.Media.Drawing> nesneleri yönlüdür; kullanabileceğiniz birçok yolu bir <xref:System.Windows.Media.Drawing> nesnesi.  
   
 -   Kullanarak, bir görüntü olarak görüntüleyebilirsiniz bir <xref:System.Windows.Media.DrawingImage> ve bir <xref:System.Windows.Controls.Image> denetim.  
   
@@ -86,7 +88,7 @@ GeometryDrawing
   
  Aşağıdaki örnek (75,75) bulunan bir dikdörtgen içine bir resim çizer yani 100 x 100 piksel. Aşağıdaki çizimde gösterildiği <xref:System.Windows.Media.ImageDrawing> örnek tarafından oluşturuldu. Gri kenarlık sınırları göstermek için eklendi <xref:System.Windows.Media.ImageDrawing>.  
   
- ![Tarafından 100 100 adresindeki çizilmiş ImageDrawing &#40; 75,75 &#41; ] (../../../../docs/framework/wpf/graphics-multimedia/media/graphicsmm-simple-imagedrawing-offset.png "graphicsmm_simple_imagedrawing_offset")  
+ ![Tarafından 100 100 adresindeki çizilmiş ImageDrawing &#40;75,75&#41;](../../../../docs/framework/wpf/graphics-multimedia/media/graphicsmm-simple-imagedrawing-offset.png "graphicsmm_simple_imagedrawing_offset")  
 100 x 100 ImageDrawing  
   
  [!code-csharp[DrawingMiscSnippets_snip#ImageDrawing100by100Inline](../../../../samples/snippets/csharp/VS_Snippets_Wpf/DrawingMiscSnippets_snip/CSharp/ImageDrawingExample.cs#imagedrawing100by100inline)]
@@ -180,7 +182,7 @@ Bileşik çizim
  [!code-csharp[DrawingMiscSnippets_snip#GraphicsMMSimpleDrawingGroupExample](../../../../samples/snippets/csharp/VS_Snippets_Wpf/DrawingMiscSnippets_snip/CSharp/DrawingGroupExample.cs#graphicsmmsimpledrawinggroupexample)]
  [!code-xaml[DrawingMiscSnippets_snip#GraphicsMMSimpleDrawingGroupExample](../../../../samples/snippets/xaml/VS_Snippets_Wpf/DrawingMiscSnippets_snip/XAML/DrawingGroupExample.xaml#graphicsmmsimpledrawinggroupexample)]  
   
- A <xref:System.Windows.Media.DrawingGroup> ayrıca geçirgenlik maskeleri, dönüşümler, bit eşlem efektleri ve diğer işlemleri içeriğine uygulamanızı sağlar. <xref:System.Windows.Media.DrawingGroup>işlem, şu sırayla uygulanır: <xref:System.Windows.Media.DrawingGroup.OpacityMask%2A>, <xref:System.Windows.Media.DrawingGroup.Opacity%2A>, <xref:System.Windows.Media.DrawingGroup.BitmapEffect%2A>, <xref:System.Windows.Media.DrawingGroup.ClipGeometry%2A>, <xref:System.Windows.Media.DrawingGroup.GuidelineSet%2A>ve ardından <xref:System.Windows.Media.DrawingGroup.Transform%2A>.  
+ A <xref:System.Windows.Media.DrawingGroup> ayrıca geçirgenlik maskeleri, dönüşümler, bit eşlem efektleri ve diğer işlemleri içeriğine uygulamanızı sağlar. <xref:System.Windows.Media.DrawingGroup> işlem, şu sırayla uygulanır: <xref:System.Windows.Media.DrawingGroup.OpacityMask%2A>, <xref:System.Windows.Media.DrawingGroup.Opacity%2A>, <xref:System.Windows.Media.DrawingGroup.BitmapEffect%2A>, <xref:System.Windows.Media.DrawingGroup.ClipGeometry%2A>, <xref:System.Windows.Media.DrawingGroup.GuidelineSet%2A>ve ardından <xref:System.Windows.Media.DrawingGroup.Transform%2A>.  
   
  Aşağıdaki çizimde sırayı gösterir <xref:System.Windows.Media.DrawingGroup> işlemler uygulanır.  
   
@@ -229,10 +231,10 @@ DrawingBrush ile kullanılan GeometryDrawing
  A <xref:System.Windows.Media.DrawingVisual> çizimi işlemek için tasarlanmış görsel nesne türüdür. Çalışma visual katmanında doğrudan üst düzeyde özelleştirilmiş bir grafik ortamı oluşturmak ve bu genel bakışta açıklanmayan geliştiriciler için bir seçenektir. Daha fazla bilgi için bkz: [kullanarak DrawingVisual nesneleri](../../../../docs/framework/wpf/graphics-multimedia/using-drawingvisual-objects.md) genel bakış.  
   
 <a name="drawingcontextobjects"></a>   
-## <a name="drawingcontext-objects"></a>DrawingContext Objects  
+## <a name="drawingcontext-objects"></a>DrawingContext nesneleri  
  <xref:System.Windows.Media.DrawingContext> Sınıfı sağlar, doldurmak bir <xref:System.Windows.Media.Visual> veya <xref:System.Windows.Media.Drawing> visual içeriğe sahip. Bu tür birçok alt düzey grafik nesneleri kullanın bir <xref:System.Windows.Media.DrawingContext> çünkü grafik içeriği çok verimli bir şekilde açıklar.  
   
- Ancak <xref:System.Windows.Media.DrawingContext> çizim yöntemleri için çizim yöntemlerinin benzer görünür <xref:System.Drawing.Graphics?displayProperty=nameWithType> türü, bunlar gerçekte çok farklı. <xref:System.Windows.Media.DrawingContext>olan bir saklama modu grafik sistemi ile kullanıldığında, while <xref:System.Drawing.Graphics?displayProperty=nameWithType> türü anlık kip grafik sistemi ile kullanılır. Kullandığınızda, bir <xref:System.Windows.Media.DrawingContext> nesnenin çizim komutları, gerçekte işleme yönergeler kümesini depoluyorsanız (tam depolama mekanizması sağlayan nesne türüne göre değişir ancak <xref:System.Windows.Media.DrawingContext>) daha sonra kullanılacak grafikleri ile sistem; gerçek zamanlı ekrana çizim değil. Ne hakkında daha fazla bilgi için [!INCLUDE[TLA#tla_wpf](../../../../includes/tlasharptla-wpf-md.md)] grafik sistem çalıştığını görmek [WPF Grafik işleme genel bakış](../../../../docs/framework/wpf/graphics-multimedia/wpf-graphics-rendering-overview.md).  
+ Ancak <xref:System.Windows.Media.DrawingContext> çizim yöntemleri için çizim yöntemlerinin benzer görünür <xref:System.Drawing.Graphics?displayProperty=nameWithType> türü, bunlar gerçekte çok farklı. <xref:System.Windows.Media.DrawingContext> olan bir saklama modu grafik sistemi ile kullanıldığında, while <xref:System.Drawing.Graphics?displayProperty=nameWithType> türü anlık kip grafik sistemi ile kullanılır. Kullandığınızda, bir <xref:System.Windows.Media.DrawingContext> nesnenin çizim komutları, gerçekte işleme yönergeler kümesini depoluyorsanız (tam depolama mekanizması sağlayan nesne türüne göre değişir ancak <xref:System.Windows.Media.DrawingContext>) daha sonra kullanılacak grafikleri ile sistem; gerçek zamanlı ekrana çizim değil. Windows Presentation Foundation (WPF) grafik sisteminin nasıl çalıştığı hakkında daha fazla bilgi için bkz: [WPF Grafik işleme genel bakış](../../../../docs/framework/wpf/graphics-multimedia/wpf-graphics-rendering-overview.md).  
   
  Hiçbir zaman doğrudan örneği bir <xref:System.Windows.Media.DrawingContext>; belirli yöntemlerden çizim bağlamı gibi ancak elde edebilir <xref:System.Windows.Media.DrawingGroup.Open%2A?displayProperty=nameWithType> ve <xref:System.Windows.Media.DrawingVisual.RenderOpen%2A?displayProperty=nameWithType>.  
   

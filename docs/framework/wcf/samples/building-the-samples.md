@@ -16,11 +16,11 @@ ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: b8b3e3006072855673c37786ffb763fcd610e40c
-ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
+ms.openlocfilehash: fcc57d28c109801cc5f995bebd31c49fcbdbe19c
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/27/2018
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="building-the-windows-communication-foundation-samples"></a>Windows Communication Foundation Örnekleri Derleme
 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] Örnekleri, Visual Studio 2010 veya kullanarak oluşturulabilen **msbuild** komut satırından komutu. Bu konuda iki yordam açıklanmaktadır.  
@@ -52,10 +52,10 @@ ms.lasthandoff: 04/27/2018
  Setup.exe ve Cleanup.exe toplu iş dosyaları ve komut dosyaları için bir Visual Studio komut isteminden çalıştırılması gerekir. Yukarı ve dosyaları temizlenmesi birkaç kümesi yönetici ayrıcalıkları gerektiren ve yönetici ayrıcalıklarına sahip başlatılması gereken görevleri gerçekleştirir.  
   
 ## <a name="important-security-information-about-metadata-endpoints"></a>Meta veri uç noktalarını hakkında önemli güvenlik bilgileri  
- Olası hassas hizmeti meta verileri, için varsayılan yapılandırma, yanlışlıkla açığa çıkmasını önlemek amacıyla [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] Hizmetleri, meta veri yayımlama devre dışı bırakır. Bu davranışı varsayılan olarak güvenlidir, ancak ayrıca bir meta veri kullanamayacağı anlamına gelir (örneğin, Svcutil.exe) aracı hizmetin meta veri yayımlama davranışı açıkça yapılandırmasında etkinleştirilmediği sürece hizmetini çağırmak için gerekli istemci kodu oluşturmak üzere, içe. Daha kolay örnekleriyle denemeler yapmak için güvenli olmayan meta veri yayımlama uç noktası neredeyse tüm örneklerini kullanıma sunar. Bu tür uç noktaları anonim kimlik doğrulamasız tüketicilere potansiyel olarak kullanılabilir ve bakım gibi uç noktaları dağıtmadan önce genel olarak disclosing bir hizmetin meta veri uygun olduğundan emin olmak için izlenmelidir. [!INCLUDE[crabout](../../../../includes/crabout-md.md)] Hizmet meta veri yayımlama bkz [meta veri yayımlama davranışı](../../../../docs/framework/wcf/samples/metadata-publishing-behavior.md) örnek. Bkz: [özel güvenli meta veri uç noktasının](../../../../docs/framework/wcf/samples/custom-secure-metadata-endpoint.md) örnek bir meta veri uç noktası güvenli hale getirme örneği.  
+ Olası hassas hizmeti meta verileri, için varsayılan yapılandırma, yanlışlıkla açığa çıkmasını önlemek amacıyla [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] Hizmetleri, meta veri yayımlama devre dışı bırakır. Bu davranışı varsayılan olarak güvenlidir, ancak ayrıca bir meta veri kullanamayacağı anlamına gelir (örneğin, Svcutil.exe) aracı hizmetin meta veri yayımlama davranışı açıkça yapılandırmasında etkinleştirilmediği sürece hizmetini çağırmak için gerekli istemci kodu oluşturmak üzere, içe. Daha kolay örnekleriyle denemeler yapmak için güvenli olmayan meta veri yayımlama uç noktası neredeyse tüm örneklerini kullanıma sunar. Bu tür uç noktaları anonim kimlik doğrulamasız tüketicilere potansiyel olarak kullanılabilir ve bakım gibi uç noktaları dağıtmadan önce genel olarak disclosing bir hizmetin meta veri uygun olduğundan emin olmak için izlenmelidir. Hizmet meta veri yayımlama hakkında daha fazla bilgi için bkz: [meta veri yayımlama davranışı](../../../../docs/framework/wcf/samples/metadata-publishing-behavior.md) örnek. Bkz: [özel güvenli meta veri uç noktasının](../../../../docs/framework/wcf/samples/custom-secure-metadata-endpoint.md) örnek bir meta veri uç noktası güvenli hale getirme örneği.  
   
 ## <a name="exception-handling"></a>Özel Durum İşleme  
- Genel olarak bakıldığında bu örnekleri özel durum örnek konu üzerinde odaklanmış kod tutmak için işleme dahil etmeyin. [!INCLUDE[crabout](../../../../includes/crabout-md.md)] özel durum işleme bkz [beklenen özel durumlar](../../../../docs/framework/wcf/samples/expected-exceptions.md) örnek.  
+ Genel olarak bakıldığında bu örnekleri özel durum örnek konu üzerinde odaklanmış kod tutmak için işleme dahil etmeyin. Özel durum işleme hakkında daha fazla bilgi için bkz: [beklenen özel durumlar](../../../../docs/framework/wcf/samples/expected-exceptions.md) örnek.  
   
 ## <a name="regenerating-clients-and-configuration-with-svcutil"></a>İstemcileri ve Svcutil yapılandırmayla yeniden oluşturuluyor  
  Kullanabileceğiniz [ServiceModel meta veri yardımcı Programracı (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md) istemci kodu ve yapılandırma örnekleri çoğu için yeniden oluşturmak için. Bazı örnekler el ile düzenlenmiş yapılandırma gerektirmez. Örneğin, istemci sertifikası kimlik bilgilerini kullanan bir örnek için yapılandırmayı yeniden oluşturmak için Svcutil.exe kullanma, daha önce yapılandırılan kimlik bilgileri el ile belirtmeniz gerekir. Bazı örnekler, oluşturulan kod etkilemek için belirli Svcutil.exe seçenekleri kullanın, bu seçenekler belirli örnek konularında belirtilmiş.  

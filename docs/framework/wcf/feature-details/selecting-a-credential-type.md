@@ -16,11 +16,11 @@ ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: 9858475520b949d5b9ee62ecdc0994bbb9398953
-ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
+ms.openlocfilehash: ae5eb9a10f438f1bb76c51c3c9da68273d94ab57
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/28/2018
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="selecting-a-credential-type"></a>Kimlik Bilgisi Türü Seçme
 *Kimlik bilgileri* verileri [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] bir talep kimliği veya özellikleri kurmak için kullanır. Örneğin, passport bir kamu sorunlarını vatandaşlığa benzer bir ülke veya bölgedeki kanıtlamak için bir kimlik bilgisi ' dir. İçinde [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)], kimlik bilgileri, kullanıcı adı belirteçleri ve X.509 sertifikaları gibi birçok forms alabilir. Kimlik bilgileri, bu konuda ele alınmıştır, nasıl kullanıldıkları [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]ve uygulamanız için doğru kimlik bilgilerini seçme.  
@@ -108,7 +108,7 @@ ms.lasthandoff: 04/28/2018
 > [!IMPORTANT]
 >  Ne zaman kimliğini döndürülemez farkında olması için bir durum yok (diğer bir deyişle, ne zaman güvenliğini sağlayın bağlamı, varsayılan davranış olduğu). İkinci bir hizmeti ile iletişim kuran bir hizmet oluşturursanız, kimlik açmak için kullanılan [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] ikinci hizmet istemciye değiştirilemez. Bu bir sorun birden çok istemci ilk hizmetin kullanmasına izin verilen ve ikinci hizmet erişirken istemcilere hizmet taklit haline gelir. Aynı istemci tüm çağıranlar için hizmeti yeniden kullanır, ikinci hizmet tüm çağrıları ikinci hizmet İstemcisi'ni açmak için kullanılan ilk arayan kimliği altında yapılır. Diğer bir deyişle, hizmet ikinci hizmetiyle iletişim kurmak için tüm istemciler için ilk istemci kimliğini kullanır. Bu ayrıcalık yükselmesine yol açabilir. İstenen davranışı hizmetinizin bu değilse, her çağıran izlemek ve yeni bir istemci için her ayrı çağıran ikinci hizmetini oluşturun ve hizmet ikinci hizmetiyle iletişim kurmak için doğru çağıran için yalnızca doğru istemci kullanır olmanız gerekir.  
   
- [!INCLUDE[crabout](../../../../includes/crabout-md.md)] kimlik bilgileri ve güvenli oturumlar bkz [güvenli oturumlar için güvenlik konuları](../../../../docs/framework/wcf/feature-details/security-considerations-for-secure-sessions.md).  
+ Kimlik bilgileri ve güvenli oturumlar hakkında daha fazla bilgi için bkz: [güvenli oturumlar için güvenlik konuları](../../../../docs/framework/wcf/feature-details/security-considerations-for-secure-sessions.md).  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
  <xref:System.ServiceModel.ClientBase%601?displayProperty=nameWithType>  

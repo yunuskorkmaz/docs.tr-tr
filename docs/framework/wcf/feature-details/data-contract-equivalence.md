@@ -21,11 +21,11 @@ ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: 9d4463a04ac2113778d9ea0d315beeef7d564764
-ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
+ms.openlocfilehash: aebd21186f7d038dfa5d7c3c65f833d41f4a1f71
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/28/2018
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="data-contract-equivalence"></a>Veri Sözleşmesi Eşitliği
 Bir hizmeti veya başarılı bir şekilde bir istemciye veri göndermek için bir hizmeti belirli bir türde veri başarıyla göndermek bir istemci için gönderilen türü mutlaka alan tarafta mevcut gerekmez. Veri sözleşmeleri her iki türdeki eşdeğer tek gereksinimdir. (Bazı durumlarda, katı eşdeğer anlatıldığı gibi gerekli değil [veri sözleşmesi sürümü oluşturma](../../../../docs/framework/wcf/feature-details/data-contract-versioning.md).)  
@@ -37,7 +37,7 @@ Bir hizmeti veya başarılı bir şekilde bir istemciye veri göndermek için bi
 > [!NOTE]
 >  Verileri veri üye adları, yanı sıra adları ve ad alanları sözleşme Not büyük küçük harfe duyarlıdır.  
   
- [!INCLUDE[crabout](../../../../includes/crabout-md.md)] veri sözleşmesi adları ve ad alanları yanı sıra, bkz: veri üye adı [veri sözleşmesi adları](../../../../docs/framework/wcf/feature-details/data-contract-names.md).  
+ Veri üye adlarının yanı sıra veri sözleşmesi adları ve ad alanları hakkında daha fazla bilgi için bkz: [veri sözleşmesi adları](../../../../docs/framework/wcf/feature-details/data-contract-names.md).  
   
  İki tür mevcutsa aynı tarafında (gönderen veya alıcı) ve kendi veri sözleşmeleri eşdeğer değildir (örneğin, farklı veri üyelerinin sahip oldukları), siz bunları aynı ad ve ad vermemelisiniz. Bunun yapılması, özel durum oluşturulmasına neden olabilir.  
   

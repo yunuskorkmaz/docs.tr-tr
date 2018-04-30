@@ -1,27 +1,29 @@
 ---
-title: "İleti Aktarma Akışı"
-ms.custom: 
+title: İleti Aktarma Akışı
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 72a47a51-e5e7-4b76-b24a-299d51e0ae5a
-caps.latest.revision: "13"
+caps.latest.revision: 13
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: a751245f0a933fda649d5919bab86abf2969dbf6
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: ed2aa57e044910ab9fd9c60dfd47eb7aaa0ce75e
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="streaming-message-transfer"></a>İleti Aktarma Akışı
-[!INCLUDE[indigo1](../../../../includes/indigo1-md.md)]taşımalar iletileri aktarmak için iki modunu destekler:  
+[!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] taşımalar iletileri aktarmak için iki modunu destekler:  
   
 -   Aktarım işlemi tamamlanana kadar arabelleğe alınan aktarımları tüm ileti bir bellek arabelleği basılı tutun. Bir alıcı okumadan önce arabelleğe alınan ileti tamamen teslim gerekir.  
   
@@ -52,7 +54,7 @@ ms.lasthandoff: 12/22/2017
   
  Bazı [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] güvenilir Mesajlaşma, işlemleri ve SOAP iletisi düzeyi güvenliği gibi özellikleri kullanan iletileri aktarımları için arabelleğe. Bu özellikleri kullanarak azaltın veya akış kullanılarak elde performans avantajı ortadan kaldırmak. Bir akış taşıma güvenliğini sağlamak için yalnızca aktarım düzeyinde güvenlik kullanın veya aktarım düzeyinde güvenlik artı yalnızca kimlik doğrulama ileti güvenliği kullanın.  
   
- Bile aktarım modu akış ayarlandığında SOAP üstbilgileri her zaman, arabelleğe alınmamış. Bir ileti için üstbilgiler boyutunu aşmamalıdır `MaxBufferSize` aktarım kotası. [!INCLUDE[crabout](../../../../includes/crabout-md.md)]Bu ayar, bkz. [taşıma kotaları](../../../../docs/framework/wcf/feature-details/transport-quotas.md).  
+ Bile aktarım modu akış ayarlandığında SOAP üstbilgileri her zaman, arabelleğe alınmamış. Bir ileti için üstbilgiler boyutunu aşmamalıdır `MaxBufferSize` aktarım kotası. Bu ayar hakkında daha fazla bilgi için bkz: [taşıma kotaları](../../../../docs/framework/wcf/feature-details/transport-quotas.md).  
   
 ## <a name="differences-between-buffered-and-streamed-transfers"></a>Arabelleğe alınan ve akış aktarımı arasındaki farklar  
  Akışı arabelleğe aktarımı modundan değiştirme TCP ve adlandırılmış kanal taşımaları yerel kanal şeklini değiştirir. Arabelleğe alınan aktarımları için yerel kanal şeklin olduğu <xref:System.ServiceModel.Channels.IDuplexSessionChannel>. Yerel kanal akış aktarımları için olan <xref:System.ServiceModel.Channels.IRequestChannel> ve <xref:System.ServiceModel.Channels.IReplyChannel>. Bunlar kullanan mevcut bir uygulamayı aktarım modunda değiştirme taşımaları doğrudan (diğer bir deyişle, bir hizmet sözleşmesini üzerinden değil) beklenen kanal şekli kanal fabrikaları ve dinleyiciler için değiştirilmesi gerekir.  

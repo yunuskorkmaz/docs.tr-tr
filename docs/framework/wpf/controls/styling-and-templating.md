@@ -1,12 +1,13 @@
 ---
-title: "Stil ve Şablon Oluşturma"
-ms.custom: 
+title: Stil ve Şablon Oluşturma
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-wpf
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-wpf
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - csharp
@@ -22,19 +23,20 @@ helpviewer_keywords:
 - styles [WPF], triggers
 - styles [WPF], event triggers
 ms.assetid: 481765e5-5467-4a75-9f7b-e10e2ac410d9
-caps.latest.revision: "34"
+caps.latest.revision: 34
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: c33739d0e753146ffdc8b825d88c6ca7ba63fa1a
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 7aafd709bfc1da63d11a56ada59aedf0ada12f3a
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="styling-and-templating"></a>Stil ve Şablon Oluşturma
-[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]Stil ve şablon suite geliştiricilerin ve tasarımcıların görsel olarak ilgi çekici efektler oluşturmak ve kendi ürün için tutarlı bir görünüm oluşturmak için izin özellikleri (stiller, şablonlar, tetikleyiciler ve film şeritleri) bakın. Geliştiriciler ve/veya tasarımcıları bir uygulama tarafından uygulama temelinde yaygın görünümünü özelleştirebilirsiniz rağmen güçlü bir stil ve şablon modeli Bakım ve görünümü içinde ve uygulamalar arasında paylaşılmasını izin vermek gereklidir. [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]Bu modeli sağlar.  
+[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] Stil ve şablon suite geliştiricilerin ve tasarımcıların görsel olarak ilgi çekici efektler oluşturmak ve kendi ürün için tutarlı bir görünüm oluşturmak için izin özellikleri (stiller, şablonlar, tetikleyiciler ve film şeritleri) bakın. Geliştiriciler ve/veya tasarımcıları bir uygulama tarafından uygulama temelinde yaygın görünümünü özelleştirebilirsiniz rağmen güçlü bir stil ve şablon modeli Bakım ve görünümü içinde ve uygulamalar arasında paylaşılmasını izin vermek gereklidir. [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] Bu modeli sağlar.  
   
  Başka bir özelliği olan [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] stil modeldir sunu ve mantığı ayrılması. Bu yalnızca kullanarak tasarımcıları uygulamanın görünümünü çalışabilirsiniz anlamına gelir [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] aynı anda geliştiriciler C# veya Visual Basic kullanarak programlama mantığa göre çalışır.  
   
@@ -181,15 +183,15 @@ ms.lasthandoff: 12/22/2017
  ![Stil örnek ekran görüntüsü](../../../../docs/framework/wpf/controls/media/stylingintro-eventtriggers.png "StylingIntro_EventTriggers")  
   
 ### <a name="multitriggers-datatriggers-and-multidatatriggers"></a>MultiTriggers, DataTriggers ve MultiDataTriggers  
- Ek olarak <xref:System.Windows.Trigger> ve <xref:System.Windows.EventTrigger>, diğer tür tetikleyici sunucusu vardır. <xref:System.Windows.MultiTrigger>birden çok koşullara göre özellik değerlerini ayarlamanıza olanak sağlar. Kullandığınız <xref:System.Windows.DataTrigger> ve <xref:System.Windows.MultiDataTrigger> koşulunuz özelliği verilere bağlı olduğunda.  
+ Ek olarak <xref:System.Windows.Trigger> ve <xref:System.Windows.EventTrigger>, diğer tür tetikleyici sunucusu vardır. <xref:System.Windows.MultiTrigger> birden çok koşullara göre özellik değerlerini ayarlamanıza olanak sağlar. Kullandığınız <xref:System.Windows.DataTrigger> ve <xref:System.Windows.MultiDataTrigger> koşulunuz özelliği verilere bağlı olduğunda.  
   
 <a name="styling_themes"></a>   
 ## <a name="shared-resources-and-themes"></a>Paylaşılan kaynaklar ve Temalar  
- Tipik bir [!INCLUDE[TLA#tla_wpf](../../../../includes/tlasharptla-wpf-md.md)] uygulama uygulama genelinde uygulanan birden çok kullanıcı arabirimi (UI) kaynaklara sahip olabilir. Toplu olarak, bu kaynakları kümesi tema uygulama için kabul edilebilir. [!INCLUDE[TLA#tla_wpf](../../../../includes/tlasharptla-wpf-md.md)]paketleme kullanıcı arabirimi (UI) kaynakların bir tema olarak olarak kapsüllenmiş bir kaynak sözlüğü kullanarak destek sağlar <xref:System.Windows.ResourceDictionary> sınıfı.  
+ Tipik bir Windows Presentation Foundation (WPF) uygulaması uygulama genelinde uygulanan birden çok kullanıcı arabirimi (UI) kaynakları olabilir. Toplu olarak, bu kaynakları kümesi tema uygulama için kabul edilebilir. Windows Presentation Foundation (WPF) desteği sağlar. paketleme kullanıcı arabirimi (UI) kaynakları bir tema olarak olarak kapsüllenmiş bir kaynak sözlüğü kullanarak <xref:System.Windows.ResourceDictionary> sınıfı.  
   
- [!INCLUDE[TLA#tla_wpf](../../../../includes/tlasharptla-wpf-md.md)]Temalar, stil ve şablon mekanizma kullanılarak tanımlanır, [!INCLUDE[TLA#tla_wpf](../../../../includes/tlasharptla-wpf-md.md)] herhangi bir öğeyi görsel özelleştirmek için kullanıma sunar.  
+ Windows Presentation Foundation (WPF) temalar, stil ve Windows Presentation Foundation (WPF) sunan şablon mekanizması herhangi bir öğeyi görsel özelleştirmek için kullanarak tanımlanır.  
   
- [!INCLUDE[TLA#tla_wpf](../../../../includes/tlasharptla-wpf-md.md)]Tema Kaynakları katıştırılmış kaynak sözlükte depolanır. Bu kaynak sözlüklerindeki içinde imzalı bir derleme gömülü gerekir ve ya da aynı bütünleştirilmiş kod veya yan yana derleme katıştırılabilir. PresentationFramework.dll, içeren derleme durumunda [!INCLUDE[TLA#tla_wpf](../../../../includes/tlasharptla-wpf-md.md)] denetimleri tema kaynaklardır yan yana derlemeler bir dizi.  
+ Windows Presentation Foundation (WPF) Tema Kaynakları katıştırılmış kaynak sözlükte depolanır. Bu kaynak sözlüklerindeki içinde imzalı bir derleme gömülü gerekir ve ya da aynı bütünleştirilmiş kod veya yan yana derleme katıştırılabilir. Windows Presentation Foundation (WPF) denetimleri içeren derleme PresentationFramework.dll söz konusu olduğunda tema yan yana derlemeler bir dizi kaynaklardır.  
   
  Tema, bir öğenin stili ararken aramak için son yer haline gelir. Genellikle, arama uygun bir kaynak için arama öğe ağacı adım adım ilerlemenizi sağlayarak başlamak sonra uygulama kaynak koleksiyonunda görüneceğini ve son olarak sistem sorgu. Bu uygulama geliştiricileri ağaç veya uygulama düzeyinde herhangi bir nesne için stil tema erişmeden önce yeniden tanımlamanız olanağı verir.  
   

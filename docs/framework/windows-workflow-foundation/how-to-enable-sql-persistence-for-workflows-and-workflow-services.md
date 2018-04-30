@@ -17,11 +17,11 @@ ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: 5d687c00edd9d495f3b7715474d7eb2e107c23f0
-ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
+ms.openlocfilehash: 3e5872be7e8b686a744832bf63a98e97a99cf9b6
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/28/2018
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="how-to-enable-sql-persistence-for-workflows-and-workflow-services"></a>Nasıl yapılır: iş akışları ve iş akışı hizmetleri için SQL kalıcılığı etkinleştir
 Bu konuda, iş akışlarınızı kalıcılığını etkinleştirmek için SQL iş akışı örneği deposuna özelliği yapılandırmayı açıklar ve iş akışı her ikisi de program aracılığıyla bir yapılandırma dosyası kullanarak hizmetleri ve.  
@@ -41,7 +41,7 @@ Bu konuda, iş akışlarınızı kalıcılığını etkinleştirmek için SQL i�
 >   
 >  System.Data.SqlClient.SqlException: saklı yordam 'System.Activities.DurableInstancing.CreateLockOwner' bulunamadı.  
   
- Aşağıdaki bölümlerde, iş akışları ve iş akışı hizmetleri SQL iş akışı örneği deposunu kullanan kalıcılığını etkinleştirmek açıklar. [!INCLUDE[crabout](../../../includes/crabout-md.md)] SQL iş akışı örneği deposuna özelliklerini görmek [özellikleri SQL iş akışı örneği deposuna](../../../docs/framework/windows-workflow-foundation/properties-of-sql-workflow-instance-store.md).  
+ Aşağıdaki bölümlerde, iş akışları ve iş akışı hizmetleri SQL iş akışı örneği deposunu kullanan kalıcılığını etkinleştirmek açıklar. SQL iş akışı örneği deposunun özellikleri hakkında daha fazla bilgi için bkz: [özellikleri SQL iş akışı örneği deposuna](../../../docs/framework/windows-workflow-foundation/properties-of-sql-workflow-instance-store.md).  
   
 ## <a name="enabling-persistence-for-self-hosted-workflows-that-use-workflowapplication"></a>Kalıcılığı Self-Hosted WorkflowApplication kullanan iş akışları için etkinleştirme  
  Kalıcılık kullanan kendi kendini barındıran iş akışları için etkinleştirebilirsiniz <xref:System.Activities.WorkflowApplication> kullanarak program aracılığıyla <xref:System.Activities.DurableInstancing.SqlWorkflowInstanceStore> nesne modeli. Aşağıdaki yordam, bunu yapmak için adımları içerir.  

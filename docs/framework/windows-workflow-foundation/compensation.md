@@ -14,11 +14,11 @@ ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: 861e0c9eb4e9afa5f9924160efed428d565bac4e
-ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
+ms.openlocfilehash: 2ed51d14c56358e283d6c014f036a8aff73d2bfe
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/27/2018
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="compensation"></a>Maaş
 Windows Workflow Foundation (WF) Maaş, daha önce tamamlanmış iş bulunabilir geri alınamaz veya (aşağıdaki uygulama tarafından tanımlanan mantık) dengelendi mekanizması olduğunu izleyen bir hata oluştuğunda. Bu bölümde, iş akışlarında maaş kullanmayı açıklar.  
@@ -27,7 +27,7 @@ Windows Workflow Foundation (WF) Maaş, daha önce tamamlanmış iş bulunabilir
  Bir işlem, tek bir birim birden çok işleme iş birleştirmenize olanak sağlar. Bir işlem kullanarak uygulamanızı (geri dön) gelen tüm hataları işlem işleminin herhangi bir bölümü sırasında oluşursa işlem içinde yürütülen tüm değişiklikleri iptal etmek için olanak sağlar. Ancak, işlemleri kullanarak iş uzunsa çalıştıran uygun olmayabilir. Örneğin, seyahat planlama uygulama iş akışı olarak uygulanır. İş akışı adımları bir uçuş kayıt, Yöneticisi onay bekliyor ve uçuş için ödeme oluşabilir. Bu işlem günlerce sürebilir ve kayıt ve aynı işlemde katılmayı uçuş için ödeme işlemleri için kullanışlı değildir. Bunun gibi bir senaryoda, maaş işlenirken bir hata olduğunda iş akışının kayıt adımı geri almak için kullanılabilir.  
   
 > [!NOTE]
->  Bu konu, iş akışlarında maaş kapsar. [!INCLUDE[crabout](../../../includes/crabout-md.md)] iş akışlarında, işlemleri görmek [işlemleri](../../../docs/framework/windows-workflow-foundation/workflow-transactions.md) ve <xref:System.Activities.Statements.TransactionScope>. [!INCLUDE[crabout](../../../includes/crabout-md.md)] işlemler, bkz: <xref:System.Transactions?displayProperty=nameWithType> ve <xref:System.Transactions.Transaction?displayProperty=nameWithType>.  
+>  Bu konu, iş akışlarında maaş kapsar. İş akışlarında işlemleri hakkında daha fazla bilgi için bkz: [işlemleri](../../../docs/framework/windows-workflow-foundation/workflow-transactions.md) ve <xref:System.Activities.Statements.TransactionScope>. İşlemler hakkında daha fazla bilgi için bkz: <xref:System.Transactions?displayProperty=nameWithType> ve <xref:System.Transactions.Transaction?displayProperty=nameWithType>.  
   
 ## <a name="using-compensableactivity"></a>CompensableActivity kullanma  
  <xref:System.Activities.Statements.CompensableActivity> Çekirdek maaş etkinliktir [!INCLUDE[wf1](../../../includes/wf1-md.md)]. Dengelenebilmesi gerekebilir çalışmayı gerçekleştirmek hiç etkinlik içine yerleştirilen <xref:System.Activities.Statements.CompensableActivity.Body%2A> , bir <xref:System.Activities.Statements.CompensableActivity>. Bu örnekte, bir uçuş satın alma ayırma adım içine yerleştirildiğinde <xref:System.Activities.Statements.CompensableActivity.Body%2A> , bir <xref:System.Activities.Statements.CompensableActivity> ve ayırma iptaline yerleştirilir <xref:System.Activities.Statements.CompensableActivity.CompensationHandler%2A>. Hemen ardından <xref:System.Activities.Statements.CompensableActivity> için yönetici onayı bekleyin ve ardından satın alma uçuş adımın iki etkinlik iş akışı içinde olan. Bir hata koşulu sonra iptal edilmesi iş akışı neden olursa <xref:System.Activities.Statements.CompensableActivity> başarıyla tamamlandı, ardından etkinlikler <xref:System.Activities.Statements.CompensableActivity.CompensationHandler%2A> işleyici zamanlanır ve uçuş iptal edilir.  
@@ -177,7 +177,7 @@ Activity wf = new Sequence()
 **İş akışı işlenmemiş özel durum oluştu:**   
 **System.ApplicationException: İş akışı benzetimli hata koşulu.**   
 **CancelCreditCard: kredi kartı ücretleri iptal edin.**   
-**İş akışı durumu ile başarıyla tamamlandı: iptal edildi.**  [!INCLUDE[crabout](../../../includes/crabout-md.md)] iptal etme, bkz: [iptal](../../../docs/framework/windows-workflow-foundation/modeling-cancellation-behavior-in-workflows.md).  
+**İş akışı durumu ile başarıyla tamamlandı: iptal edildi.**  İptal etme hakkında daha fazla bilgi için bkz: [iptal](../../../docs/framework/windows-workflow-foundation/modeling-cancellation-behavior-in-workflows.md).  
   
 ### <a name="explicit-compensation-using-the-compensate-activity"></a>Açık maaş kullanarak etkinlik dengelemek  
  Önceki bölümde örtük maaş ele. Örtük maaş sonra işleme maaş zamanlama üzerinden daha açık denetim gerekli olup olmadığını ancak basit senaryolar için uygun olabilir <xref:System.Activities.Statements.Compensate> etkinlik kullanılabilir. İle maaş işlemini başlatmak için <xref:System.Activities.Statements.Compensate> etkinliği <xref:System.Activities.Statements.CompensationToken> , <xref:System.Activities.Statements.CompensableActivity> hangi maaş istenen kullanılır. <xref:System.Activities.Statements.Compensate> Etkinlik, herhangi bir tamamlandı maaş başlatmak için kullanılabilir <xref:System.Activities.Statements.CompensableActivity> , doğrulanmamış veya dengelendi. Örneğin, bir <xref:System.Activities.Statements.Compensate> etkinlik kullanılabilirdi <xref:System.Activities.Statements.TryCatch.Catches%2A> bölümünü bir <xref:System.Activities.Statements.TryCatch> etkinlik ya da sonra her zaman <xref:System.Activities.Statements.CompensableActivity> tamamlandı. Bu örnekte, <xref:System.Activities.Statements.Compensate> etkinlik kullanılıyor <xref:System.Activities.Statements.TryCatch.Catches%2A> bölümünü bir <xref:System.Activities.Statements.TryCatch> eylemini tersine çevirmek için etkinlik <xref:System.Activities.Statements.CompensableActivity>.  

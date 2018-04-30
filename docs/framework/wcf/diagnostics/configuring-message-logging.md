@@ -18,11 +18,11 @@ ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: 63bdbc68851ace71b3afef30e274b9821ed1ad5f
-ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
+ms.openlocfilehash: 6e2d45e7b8769ee525835ad3dc50262a03a5a7b6
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/28/2018
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="configuring-message-logging"></a>İleti Günlüğe Kaydetmeyi Yapılandırma
 Bu konuda, ileti günlüğe kaydetme farklı senaryolar için nasıl yapılandırabileceğiniz açıklanmaktadır.  
@@ -58,7 +58,7 @@ Bu konuda, ileti günlüğe kaydetme farklı senaryolar için nasıl yapılandı
 </system.serviceModel>  
 ```  
   
- [!INCLUDE[crabout](../../../../includes/crabout-md.md)] İleti günlüğe kaydetme ayarlarını, bkz: [izleme ve ileti günlüğe kaydetme için önerilen ayarları](../../../../docs/framework/wcf/diagnostics/tracing/recommended-settings-for-tracing-and-message-logging.md).  
+ İleti günlüğe kaydetme ayarlarını hakkında daha fazla bilgi için bkz: [izleme ve ileti günlüğe kaydetme için önerilen ayarları](../../../../docs/framework/wcf/diagnostics/tracing/recommended-settings-for-tracing-and-message-logging.md).  
   
  Kullanabileceğiniz `add` adını ve kullanmak istediğiniz dinleyici türünü belirtmek için. Örnek yapılandırma dinleyicisi "iletileri" olarak adlandırılır ve standart .NET Framework İzleme dinleyicisi ekler (`System.Diagnostics.XmlWriterTraceListener`) olarak kullanmak üzere türü. Kullanırsanız `System.Diagnostics.XmlWriterTraceListener`, yapılandırma dosyasında çıktı dosya konumunu ve adını belirtmeniz gerekir. Bu ayarlayarak yapılır `initializeData` günlük dosyasının adı. Aksi takdirde, sistem bir özel durum oluşturur. Ayrıca varsayılan dosyasına yayar özel bir dinleyici uygulayabilirsiniz.  
   
@@ -73,7 +73,7 @@ Bu konuda, ileti günlüğe kaydetme farklı senaryolar için nasıl yapılandı
 <source name="System.ServiceModel.MessageLogging" switchValue="Verbose">  
 ```  
   
- İzleme kaynağı devre dışı bırakmak istiyorsanız, kullanması gereken `logMessagesAtServiceLevel`, `logMalformedMessages`, ve `logMessagesAtTransportLevel` özniteliklerini `messageLogging` öğesi yerine. Bu öznitelikler kümesine `false`. Bu yapılandırma Düzenleyicisi UI arabirimi aracılığıyla önceki kod örneğinde, yapılandırma dosyası kullanarak veya WMI kullanılarak yapılabilir. [!INCLUDE[crabout](../../../../includes/crabout-md.md)] Yapılandırma Düzenleyicisi araç bkz [Yapılandırma Aracı (SvcConfigEditor.exe)](../../../../docs/framework/wcf/configuration-editor-tool-svcconfigeditor-exe.md). [!INCLUDE[crabout](../../../../includes/crabout-md.md)] WMI, bkz: [tanılama için Windows Yönetim araçları kullanarak](../../../../docs/framework/wcf/diagnostics/wmi/index.md).  
+ İzleme kaynağı devre dışı bırakmak istiyorsanız, kullanması gereken `logMessagesAtServiceLevel`, `logMalformedMessages`, ve `logMessagesAtTransportLevel` özniteliklerini `messageLogging` öğesi yerine. Bu öznitelikler kümesine `false`. Bu yapılandırma Düzenleyicisi UI arabirimi aracılığıyla önceki kod örneğinde, yapılandırma dosyası kullanarak veya WMI kullanılarak yapılabilir. Yapılandırma Düzenleyicisi aracı hakkında daha fazla bilgi için bkz: [Yapılandırma Aracı (SvcConfigEditor.exe)](../../../../docs/framework/wcf/configuration-editor-tool-svcconfigeditor-exe.md). WMI hakkında daha fazla bilgi için bkz: [tanılama için Windows Yönetim araçları kullanarak](../../../../docs/framework/wcf/diagnostics/wmi/index.md).  
   
 ## <a name="logging-levels-and-options"></a>Günlük düzeyleri ve seçenekleri  
  Gelen iletiler için günlüğe kaydetme hemen ileti hizmet düzeyi için kullanıcı kodu büyümeden hemen ileti, biçimlendirilmemiş sonra ve hatalı biçimlendirilmiş iletileri algılandığında gerçekleşir.  
@@ -91,7 +91,7 @@ Bu konuda, ileti günlüğe kaydetme farklı senaryolar için nasıl yapılandı
  Bu katmanda günlüğe kaydedilen iletileri kodlanmış veya için veya taşıma hattaki sonra kodunu çözdü hazırsınız demektir. Filtreler tanımladıysanız, filtrelerle eşleşen iletileri günlüğe kaydedilir. Aksi takdirde, Aktarım katmanı tüm iletileri günlüğe kaydedilir. Tüm altyapı iletileri güvenilir Mesajlaşma iletileri de dahil olmak üzere bu katmanda günlüğe kaydedilir. Akış iletilerde yalnızca üstbilgileri günlüğe kaydedilir. Ayrıca, güvenli iletiler IF dışında bu düzeyde HTTPS kullanılan gibi güvenli bir taşıma şifrelenmiş olarak kaydedilir.  
   
 ### <a name="malformed-level"></a>Hatalı biçimlendirilmiş düzeyi  
- Hatalı biçimlendirilmiş iletiler olan tarafından reddedilen iletiler [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] işleminin herhangi bir aşamada yığını. Hatalı biçimlendirilmiş iletileri olarak kaydediliyor-olduğu: bunu uygun olmayan XML vb. ile olmaları durumunda şifrelenmiş. `maxSizeOfMessageToLog` CDATA olarak kaydedilen iletinin boyutunu tanımlanır. Varsayılan olarak, `maxSizeOfMessageToLog` 256 K eşittir. [!INCLUDE[crabout](../../../../includes/crabout-md.md)] Bu öznitelik diğer seçenekleri bölümüne bakın.  
+ Hatalı biçimlendirilmiş iletiler olan tarafından reddedilen iletiler [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] işleminin herhangi bir aşamada yığını. Hatalı biçimlendirilmiş iletileri olarak kaydediliyor-olduğu: bunu uygun olmayan XML vb. ile olmaları durumunda şifrelenmiş. `maxSizeOfMessageToLog` CDATA olarak kaydedilen iletinin boyutunu tanımlanır. Varsayılan olarak, `maxSizeOfMessageToLog` 256 K eşittir. Bu öznitelik hakkında daha fazla bilgi için diğer seçenekleri bölümüne bakın.  
   
 ### <a name="other-options"></a>Diğer seçenekleri  
  Günlüğe kaydetme düzeylerini yanı sıra kullanıcı aşağıdaki seçenekleri belirtebilirsiniz:  

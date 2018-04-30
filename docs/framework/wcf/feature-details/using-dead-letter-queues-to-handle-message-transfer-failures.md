@@ -1,27 +1,29 @@
 ---
-title: "İleti Aktarımı Hatalarını İşlemek için Teslim Edilemeyen İletiler Sırası Kullanma"
-ms.custom: 
+title: İleti Aktarımı Hatalarını İşlemek için Teslim Edilemeyen İletiler Sırası Kullanma
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - csharp
 - vb
 ms.assetid: 9e891c6a-d960-45ea-904f-1a00e202d61a
-caps.latest.revision: "19"
+caps.latest.revision: 19
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 9f10b3895fcdea0c3ab80617acd9874953b7665e
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: b51999b1984dedf1baf23e41c1592382849c431b
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="using-dead-letter-queues-to-handle-message-transfer-failures"></a>İleti Aktarımı Hatalarını İşlemek için Teslim Edilemeyen İletiler Sırası Kullanma
 Sıraya alınan iletileri teslim başarısız olabilir. Bu başarısız iletileri teslim edilemeyen sırada kaydedilir. Başarısız teslim nedenlerden ötürü ağ hataları, silinen bir kuyruk, dolu bir sıra, kimlik doğrulama hatası veya zamanında teslim etmek için bir hata neden olabilir.  
@@ -54,7 +56,7 @@ Sıraya alınan iletileri teslim başarısız olabilir. Bu başarısız iletiler
   
 -   Özel sahipsiz kuyruktan iletileri okumak için URI form: net.msmq://localhost/private/ olmalıdır\<*özel dlq ad*> Burada *özel dlq ad* özel adıdır sahipsiz sıra.  
   
- [!INCLUDE[crabout](../../../../includes/crabout-md.md)]Kuyruklar adres nasıl [hizmet uç noktaları ve kuyruk işleme](../../../../docs/framework/wcf/feature-details/service-endpoints-and-queue-addressing.md).  
+ Adresi sıralara hakkında daha fazla bilgi için bkz: [hizmet uç noktaları ve kuyruk işleme](../../../../docs/framework/wcf/feature-details/service-endpoints-and-queue-addressing.md).  
   
  [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] Üzerinde dinleyen bir hizmet alıcı eşleşmeleri adresleri iletideki adresiyle yığında. Adresleri eşleşirse, ileti gönderilir; Aksi durumda, ileti değil gönderilir. Teslim edilemeyen sıradaki iletiler genellikle hizmeti ve eski ileti sırası hizmeti yönlendirildiği bu sorunları sahipsiz sıradan okunurken neden olabilir. Bu nedenle, sahipsiz sırasından okuma hizmetini bir adresi filtresi yüklemelisiniz `ServiceBehavior` alıcıyı bağımsız olarak sıradaki tüm iletileri eşleştirmek için yığın bildirir. Özellikle, eklemelisiniz bir `ServiceBehavior` ile <xref:System.ServiceModel.AddressFilterMode.Any> iletileri teslim edilemeyen sırasından okuma hizmetine parametresi.  
   

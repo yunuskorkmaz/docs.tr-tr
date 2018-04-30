@@ -21,11 +21,11 @@ ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: fc64ff14c321bd2053b0a97b3cf1ac075b02e973
-ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
+ms.openlocfilehash: 852519dc1edc499511652f4027f4cd4eed6eef98
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/28/2018
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="specifying-data-transfer-in-service-contracts"></a>Hizmet Sözleşmelerinde Veri Aktarımını Belirtme
 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] , Bir Mesajlaşma altyapısı düşünülebilir. Hizmet işlemleri iletilerini işlemek ve iletileri göndermek. İletileri işlemi sözleşmeleri kullanma açıklanmaktadır. Örneğin, aşağıdaki sözleşme göz önünde bulundurun.  
@@ -453,7 +453,7 @@ End Class
  Veri seri hale getirilmiş biçimini özelleştirmek için değişik yapabilirsiniz.  
   
 ### <a name="changing-server-serialization-settings"></a>Sunucu serileştirme ayarlarını değiştirme  
- Zaman varsayılan <xref:System.Runtime.Serialization.DataContractSerializer> olan kullanımda uygulayarak için seri hale getirme işlemi hizmet üzerinde bazı yönlerini denetleyebilirsiniz <xref:System.ServiceModel.ServiceBehaviorAttribute> hizmete özniteliği. Özellikle, kullanabilir `MaxItemsInObjectGraph` nesneleri sayısının üst sınırını belirler kota ayarlamak için özellik <xref:System.Runtime.Serialization.DataContractSerializer> seri durumdan çıkarır. Kullanabileceğiniz `IgnoreExtensionDataObject` gidiş sürüm oluşturma özelliği devre dışı bırakmak için özelliği. [!INCLUDE[crabout](../../../../includes/crabout-md.md)] Kotalar, bkz: [veriler için güvenlik konuları](../../../../docs/framework/wcf/feature-details/security-considerations-for-data.md). [!INCLUDE[crabout](../../../../includes/crabout-md.md)] gidiş, bkz: [İleri uyumlu veri sözleşmeleri](../../../../docs/framework/wcf/feature-details/forward-compatible-data-contracts.md).  
+ Zaman varsayılan <xref:System.Runtime.Serialization.DataContractSerializer> olan kullanımda uygulayarak için seri hale getirme işlemi hizmet üzerinde bazı yönlerini denetleyebilirsiniz <xref:System.ServiceModel.ServiceBehaviorAttribute> hizmete özniteliği. Özellikle, kullanabilir `MaxItemsInObjectGraph` nesneleri sayısının üst sınırını belirler kota ayarlamak için özellik <xref:System.Runtime.Serialization.DataContractSerializer> seri durumdan çıkarır. Kullanabileceğiniz `IgnoreExtensionDataObject` gidiş sürüm oluşturma özelliği devre dışı bırakmak için özelliği. Kotalar hakkında daha fazla bilgi için bkz: [veriler için güvenlik konuları](../../../../docs/framework/wcf/feature-details/security-considerations-for-data.md). Gidiş hakkında daha fazla bilgi için bkz: [İleri uyumlu veri sözleşmeleri](../../../../docs/framework/wcf/feature-details/forward-compatible-data-contracts.md).  
   
 ```csharp  
 [ServiceBehavior(MaxItemsInObjectGraph=100000)]  
@@ -585,7 +585,7 @@ Dim serviceHost As ServiceHost = New ServiceHost(GetType(IDataService))
   
 3.  Hizmet ana bilgisayarını açma veya bir istemci kanal oluşturma önce varolan kaldırmak <xref:System.ServiceModel.Description.DataContractSerializerOperationBehavior> davranışı ve önceki adımlarda oluşturduğunuz özel türetilen sınıfta takın.  
   
- [!INCLUDE[crabout](../../../../includes/crabout-md.md)] seri hale getirme kavramları gelişmiş, bkz: [seri hale getirme ve seri durumdan çıkarma](../../../../docs/framework/wcf/feature-details/serialization-and-deserialization.md).  
+ Gelişmiş serileştirme kavramları hakkında daha fazla bilgi için bkz: [seri hale getirme ve seri durumdan çıkarma](../../../../docs/framework/wcf/feature-details/serialization-and-deserialization.md).  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
  [XmlSerializer Sınıfını Kullanma](../../../../docs/framework/wcf/feature-details/using-the-xmlserializer-class.md)  

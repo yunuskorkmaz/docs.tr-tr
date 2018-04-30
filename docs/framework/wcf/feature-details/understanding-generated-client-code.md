@@ -19,14 +19,14 @@ ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: 95e27941cece3bfb96c4567516d07bcbe07c7490
-ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
+ms.openlocfilehash: 8cd3e7f5ac8f129e29ed080cbf510dfe106edfb7
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/28/2018
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="understanding-generated-client-code"></a>Oluşturulmuş İstemci Kodlarını Anlama
-[ServiceModel meta veri yardımcı Programracı (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md) istemci uygulamaları oluşturmak istemci kodu ve kullanmak için bir istemci uygulama yapılandırma dosyası oluşturur. Bu konu, standart hizmet sözleşmesi senaryoları için oluşturulan kod örnekleri turu sağlar. [!INCLUDE[crabout](../../../../includes/crabout-md.md)] oluşturulan kod kullanarak bir istemci uygulaması oluşturma bkz [WCF istemcisi genel bakış](../../../../docs/framework/wcf/wcf-client-overview.md).  
+[ServiceModel meta veri yardımcı Programracı (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md) istemci uygulamaları oluşturmak istemci kodu ve kullanmak için bir istemci uygulama yapılandırma dosyası oluşturur. Bu konu, standart hizmet sözleşmesi senaryoları için oluşturulan kod örnekleri turu sağlar. Oluşturulan kod kullanarak bir istemci uygulaması oluşturma hakkında daha fazla bilgi için bkz: [WCF istemcisi genel bakış](../../../../docs/framework/wcf/wcf-client-overview.md).  
   
 ## <a name="overview"></a>Genel Bakış  
  Oluşturmak için Visual Studio kullanıyorsanız [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] , istemci türlerinin projeniz için genellikle gerekmez oluşturulan istemci kodunu inceleyin. Aynı hizmetleri gerçekleştiren bir geliştirme ortamı kullanmıyorsanız, istemci kodu oluşturmak ve ardından bu kodu istemci uygulamanızı geliştirmek için Svcutil.exe gibi bir araç kullanabilirsiniz.  
@@ -73,10 +73,10 @@ ms.lasthandoff: 04/28/2018
   
  [!code-csharp[C_GeneratedCodeFiles#30](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_generatedcodefiles/cs/proxycode.cs#30)]  
   
- Bu durumda veri türü, istemci üzerinde belirli bir özel durum tarafından oluşturulan ayrıntı türüdür bir <xref:System.ServiceModel.FaultException%601> ayrıntı tür parametresi olduğu `microsoft.wcf.documentation.SampleFault`. [!INCLUDE[crabout](../../../../includes/crabout-md.md)] veri türlerini görmek [hizmet sözleşmelerinde veri aktarımı belirtme](../../../../docs/framework/wcf/feature-details/specifying-data-transfer-in-service-contracts.md). [!INCLUDE[crabout](../../../../includes/crabout-md.md)] istemcileri özel durumları işleme, bkz: [gönderme ve alma hataları](../../../../docs/framework/wcf/sending-and-receiving-faults.md).  
+ Bu durumda veri türü, istemci üzerinde belirli bir özel durum tarafından oluşturulan ayrıntı türüdür bir <xref:System.ServiceModel.FaultException%601> ayrıntı tür parametresi olduğu `microsoft.wcf.documentation.SampleFault`. Veri türleri hakkında daha fazla bilgi için bkz: [hizmet sözleşmelerinde veri aktarımı belirtme](../../../../docs/framework/wcf/feature-details/specifying-data-transfer-in-service-contracts.md). İstemcileri özel durum işleme hakkında daha fazla bilgi için bkz: [gönderme ve alma hataları](../../../../docs/framework/wcf/sending-and-receiving-faults.md).  
   
 ### <a name="finding-callback-contracts-for-duplex-services"></a>Çift yönlü hizmetler için geri çağırma sözleşmeleri bulma  
- Sözleşme arabirimi için bir değer belirten bir hizmet sözleşmesini bulursanız <xref:System.ServiceModel.ServiceContractAttribute.CallbackContract%2A?displayProperty=nameWithType> özelliği, sonra bu sözleşme çift yönlü bir sözleşme belirtir. Çift yönlü sözleşmeler gerektirir geri çağırma sözleşme uygulayan bir geri çağırma sınıf oluşturun ve o sınıfın örneğini geçirmek için istemci uygulaması <xref:System.ServiceModel.DuplexClientBase%601?displayProperty=nameWithType> veya <xref:System.ServiceModel.DuplexChannelFactory%601?displayProperty=nameWithType> hizmetiyle iletişim kurmak için kullanılır. [!INCLUDE[crabout](../../../../includes/crabout-md.md)] bkz: çift yönlü istemcileri [nasıl yapılır: çift yönlü sözleşme ile Erişim Hizmetleri](../../../../docs/framework/wcf/feature-details/how-to-access-services-with-a-duplex-contract.md).  
+ Sözleşme arabirimi için bir değer belirten bir hizmet sözleşmesini bulursanız <xref:System.ServiceModel.ServiceContractAttribute.CallbackContract%2A?displayProperty=nameWithType> özelliği, sonra bu sözleşme çift yönlü bir sözleşme belirtir. Çift yönlü sözleşmeler gerektirir geri çağırma sözleşme uygulayan bir geri çağırma sınıf oluşturun ve o sınıfın örneğini geçirmek için istemci uygulaması <xref:System.ServiceModel.DuplexClientBase%601?displayProperty=nameWithType> veya <xref:System.ServiceModel.DuplexChannelFactory%601?displayProperty=nameWithType> hizmetiyle iletişim kurmak için kullanılır. Çift yönlü istemcileri hakkında daha fazla bilgi için bkz: [nasıl yapılır: çift yönlü sözleşme ile Erişim Hizmetleri](../../../../docs/framework/wcf/feature-details/how-to-access-services-with-a-duplex-contract.md).  
   
  Bir geri çağırma sözleşme türü aşağıdaki sözleşme belirtir `SampleDuplexHelloCallback`.  
   

@@ -16,17 +16,17 @@ ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: e8fd88edd711513d1b143029d8088401c9945d13
-ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
+ms.openlocfilehash: 2e01418844db4197cea2f9292f72b9089e77a596
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/28/2018
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="using-windows-management-instrumentation-for-diagnostics"></a>Tanılama için Windows Yönetim İzlemesini Kullanma
 [!INCLUDE[indigo1](../../../../../includes/indigo1-md.md)] Çalışma zamanında bir hizmetin denetleme kullanıma sunan bir [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)] Windows Yönetim Araçları (WMI) sağlayıcısı.  
   
 ## <a name="enabling-wmi"></a>WMI etkinleştirme  
- WMI, Web tabanlı Kuruluş Yönetimi'nin (WBEM) standart Microsoft uygulamasıdır. [!INCLUDE[crabout](../../../../../includes/crabout-md.md)] bkz: WMI SDK [Windows Yönetim Araçları](https://msdn.microsoft.com/library/aa394582.aspx). WBEM nasıl uygulamaları dış Yönetim Araçları için Yönetim Araçları'nı kullanıma sunmak için bir endüstri standardıdır.  
+ WMI, Web tabanlı Kuruluş Yönetimi'nin (WBEM) standart Microsoft uygulamasıdır. WMI SDK'sı hakkında daha fazla bilgi için bkz: [Windows Yönetim Araçları](https://msdn.microsoft.com/library/aa394582.aspx). WBEM nasıl uygulamaları dış Yönetim Araçları için Yönetim Araçları'nı kullanıma sunmak için bir endüstri standardıdır.  
   
  Bir WMI sağlayıcısı WBEM uyumlu arabirimi aracılığıyla çalışma zamanında izleme kullanıma sunan bir bileşenidir. Öznitelik/değer çiftine sahip WMI nesneler kümesinden oluşur. Çiftleri basit türler sayısı olabilir. Yönetim Araçları, çalışma zamanında arabirimi üzerinden hizmetlere bağlanabilir. [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)] adresler, bağlamalar, davranışları ve dinleyicileri gibi hizmetleri özniteliklerini kullanır.  
   

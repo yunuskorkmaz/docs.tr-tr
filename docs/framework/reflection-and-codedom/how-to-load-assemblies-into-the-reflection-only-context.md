@@ -1,12 +1,13 @@
 ---
-title: "Nasıl yapılır: Salt Yansıma Bağlamına Derlemeleri Yükleme"
-ms.custom: 
+title: 'Nasıl yapılır: Salt Yansıma Bağlamına Derlemeleri Yükleme'
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - csharp
@@ -19,16 +20,17 @@ helpviewer_keywords:
 - assemblies [.NET Framework], reflection-only loader context
 - reflection-only loader context
 ms.assetid: 9818b660-52f5-423d-a9af-e75163aa7068
-caps.latest.revision: "8"
+caps.latest.revision: 8
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: ebf25ec707ddb238431ffad35156b3a8cec7e4b6
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 6ab0224dd0452003f1d43a314d03aaca0fe04fda
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="how-to-load-assemblies-into-the-reflection-only-context"></a>Nasıl yapılır: Salt Yansıma Bağlamına Derlemeleri Yükleme
 Yalnızca yansıma yükleme bağlamı, diğer platformlar için veya diğer .NET Framework sürümleri için derlenmiş derlemeleri incelemek sağlar. Bu bağlamına yüklenen kod yalnızca incelenebilir; yürütülemez. Oluşturucular yürütülemiyor çünkü bu nesneleri oluşturulamayacağını, anlamına gelir. Kod yürütülemiyor çünkü bağımlılıkları otomatik olarak yüklenmez. Bunları inceleyin ihtiyacınız varsa, bunları kendiniz yüklemelisiniz.  
@@ -40,7 +42,7 @@ Yalnızca yansıma yükleme bağlamı, diğer platformlar için veya diğer .NET
     > [!NOTE]
     >  Yalnızca yansıma bağlamı dışında yürütme bağlamı sürümünde .NET Framework sürümünün mscorlib.dll bir sürümünü yüklemek için kullanamazsınız.  
   
-2.  Derleme bağımlılıkları varsa <xref:System.Reflection.Assembly.ReflectionOnlyLoad%2A> yöntemi yüklenmemesi bunları. Bunları incelemek ihtiyacınız varsa, bunları kendiniz yüklemeniz gerekir.  
+2.  Derleme bağımlılıkları varsa <xref:System.Reflection.Assembly.ReflectionOnlyLoad%2A> yöntemi yüklenmemesi bunları. Bunları inceleyin ihtiyacınız varsa, bunları kendiniz yüklemelisiniz.  
   
 3.  Derlemenin kullanarak, bir derlemeyi salt yansıma bağlamına yüklü olup olmadığını belirlemek <xref:System.Reflection.Assembly.ReflectionOnly%2A> özelliği.  
   

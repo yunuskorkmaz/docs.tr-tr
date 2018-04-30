@@ -1,24 +1,26 @@
 ---
 title: "Nasıl yapılır: AJAX Etkinleştirilmiş ASP.NET Web Hizmetlerini WCF'ye Taşıma"
-ms.custom: 
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 1428df4d-b18f-4e6d-bd4d-79ab3dd5147c
-caps.latest.revision: "17"
+caps.latest.revision: 17
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 2ca8dbbffdb48c33160e3c4f7495057b9ce60c13
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 2b728e6283a2f038b7e5ef4c535da41f4eb8ebef
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="how-to-migrate-ajax-enabled-aspnet-web-services-to-wcf"></a>Nasıl yapılır: AJAX Etkinleştirilmiş ASP.NET Web Hizmetlerini WCF'ye Taşıma
 Bu konu için eşdeğer bir temel ASP.NET AJAX hizmeti geçirme yordamları özetler AJAX etkinleştirilmiş [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] hizmet. İşlevsel olarak eşdeğer oluşturulacağını gösterir [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] ASP.NET AJAX hizmeti sürümü. İki hizmet daha sonra bir yan yana kullanılabilir veya [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] hizmet, ASP.NET AJAX hizmeti değiştirmek için kullanılabilir.  
@@ -33,7 +35,7 @@ Bu konu için eşdeğer bir temel ASP.NET AJAX hizmeti geçirme yordamları öze
   
  Bu konuda anlatılan yordamlar oluşur kod yordamları aşağıdaki örnekte sağlanır.  
   
- [!INCLUDE[crabout](../../../../includes/crabout-md.md)]gösterme bir [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] hizmet AJAX etkinleştirilmiş uç noktası için bkz: [nasıl yapılır: ASP.NET AJAX uç noktası eklemek için yapılandırma kullan](../../../../docs/framework/wcf/feature-details/how-to-use-configuration-to-add-an-aspnet-ajax-endpoint.md) konu.  
+ Gösterme hakkında daha fazla bilgi için bir [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] hizmet AJAX etkinleştirilmiş uç noktası için bkz: [nasıl yapılır: ASP.NET AJAX uç noktası eklemek için yapılandırma kullan](../../../../docs/framework/wcf/feature-details/how-to-use-configuration-to-add-an-aspnet-ajax-endpoint.md) konu.  
   
 ### <a name="to-create-and-test-the-aspnet-web-service-application"></a>Oluşturmak ve ASP.NET Web hizmeti uygulamasını sınamak için  
   
@@ -204,9 +206,9 @@ d.Add("two", 2);
   
  Bu sözlük JSON nesneleri aşağıdaki listede gösterildiği gibi gösterilir:  
   
--   [{"Anahtarı": "Bir", "Value": 1}, {"Anahtarı": "İki", "Value": 2}] tarafından<xref:System.Runtime.Serialization.Json.DataContractJsonSerializer>  
+-   [{"Anahtarı": "Bir", "Value": 1}, {"Anahtarı": "İki", "Value": 2}] tarafından <xref:System.Runtime.Serialization.Json.DataContractJsonSerializer>  
   
--   {"bir": 1, "iki": 2} ASP.NET AJAX tarafından<xref:System.Web.Script.Serialization.JavaScriptSerializer>  
+-   {"bir": 1, "iki": 2} ASP.NET AJAX tarafından <xref:System.Web.Script.Serialization.JavaScriptSerializer>  
   
  <xref:System.Runtime.Serialization.Json.DataContractJsonSerializer> Bu anahtar türü dizesi olduğu sözlükler işleyebilir anlamda daha güçlüdür ancak <xref:System.Web.Script.Serialization.JavaScriptSerializer> olamaz. Ancak ikinci daha JSON kolay.  
   
@@ -215,11 +217,11 @@ d.Add("two", 2);
 |Farkları kategorisi|DataContractJsonSerializer|ASP.NET AJAX JavaScriptSerializer|  
 |-----------------------------|--------------------------------|---------------------------------------|  
 |Boş arabellek seri durumdan (içine yeni byte[0]) <xref:System.Object> (veya <xref:System.Uri>, ya da başka bir sınıf).|SerializationException|null|  
-|Seri hale getirilmesi için<xref:System.DBNull.Value>|{} (veya {"__type": "#System"})|Null|  
+|Seri hale getirilmesi için <xref:System.DBNull.Value>|{} (veya {"__type": "#System"})|Null|  
 |Serileştirme [Serializable] türleri özel üyeleri.|seri hale getirilmiş|Serileştirilmiş değil|  
 |Ortak özellikleri serileştirmek <xref:System.Runtime.Serialization.ISerializable> türleri.|Serileştirilmiş değil|seri hale getirilmiş|  
 |JSON "uzantılarını"|Nesne üyesi adlarını tekliflerinde gerektirir JSON belirtimi aynılarını ({"a": "hello"}).|Nesne üyeleri tırnak işaretleri ({a: "hello"}) olmadan adlarını destekler.|  
-|<xref:System.DateTime>Eşgüdümlü Evrensel Saat (UTC)|Biçim desteklemiyor "\\/Date(123456789U)\\/" veya "\\/Date\\(\d+ (U &#124; (\\+\\-[\d{4}]))?\\) \\\\/)".|Destekler biçimi "\\/Date(123456789U)\\/" ve "\\/Date\\(\d+ (U &#124; (\\+\\-[\d{4}]))?\\) \\ \\/) "DateTime değerleri olarak.|  
+|<xref:System.DateTime> Eşgüdümlü Evrensel Saat (UTC)|Biçim desteklemiyor "\\/Date(123456789U)\\/" veya "\\/Date\\(\d+ (U&#124;(\\+\\-[\d{4}]))?\\) \\\\/)".|Destekler biçimi "\\/Date(123456789U)\\/" ve "\\/Date\\(\d+ (U&#124;(\\+\\-[\d{4}]))?\\) \\ \\/) "DateTime değerleri olarak.|  
 |Sözlük gösterimi|Bir dizi KeyValuePair\<K, V >, dize olmayan anahtar türleri işler.|Gerçek JSON nesnelerinin - ancak dizelerdir yalnızca tanıtıcıları anahtar türü.|  
 |Kaçış karakterli karakterleri|Her zaman bir kaçış ile eğik çizgi (/); ilet hiçbir zaman "\n" gibi atlanmamış geçersiz JSON karaktere izin verilir.|Bir kaçış ile eğik çizgi (/) DateTime değerleri için iletin.|  
   

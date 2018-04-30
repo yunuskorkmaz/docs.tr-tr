@@ -16,11 +16,11 @@ ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: c652e58b20a6fe836e647ed07c6a84328ee4631e
-ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
+ms.openlocfilehash: 3e7c8c5700159b5568a5a455b21f738d1be43dfe
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/28/2018
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="discoveryclient-and-dynamicendpoint"></a>DiscoveryClient ve DynamicEndpoint
 <xref:System.ServiceModel.Discovery.DiscoveryClient> ve <xref:System.ServiceModel.Discovery.DynamicEndpoint> istemci tarafında Hizmetleri aramak için kullanılan iki sınıf. <xref:System.ServiceModel.Discovery.DiscoveryClient> belirli bir eşleşen hizmetlerin listesini sizinle ölçütünü ayarlamak ve hizmetlere bağlanmanıza olanak sağlayan sağlar. <xref:System.ServiceModel.Discovery.DynamicEndpoint> aynı işlemi gerçekleştirir ve otomatik olarak bağlanır bulundu hizmetlerden biri için ek olarak. Herhangi bir uç nokta içine yapılabilir bir <xref:System.ServiceModel.Discovery.DynamicEndpoint>, arama ölçütlerini de yapılandırması, bu nedenle eklenebilir <xref:System.ServiceModel.Discovery.DynamicEndpoint> yararlı olduğunda bulma çözümünüzde gerekir, ancak istemci mantığı değiştirmek istiyor musunuz – uç noktalarını değiştirmek yeterlidir. <xref:System.ServiceModel.Discovery.DiscoveryClient> Öte yandan, arama işlemi üzerinde daha hassas denetim kazanmak için kullanılabilir. Kullanır ve her birinin avantajları aşağıda ayrıntılandırılmıştır.  
@@ -92,7 +92,7 @@ static void discoveryClient_FindCompleted(object sender, FindCompletedEventArgs 
         }  
 ```  
   
- [!INCLUDE[crabout](../../../../includes/crabout-md.md)] zaman uyumsuz hale çağrıları bulmak için bkz [zaman uyumsuz bulma](../../../../docs/framework/wcf/samples/asynchronous-find-sample.md).  
+ Bulma çağrıları zaman uyumsuz yapma hakkında daha fazla bilgi için bkz: [zaman uyumsuz bulma](../../../../docs/framework/wcf/samples/asynchronous-find-sample.md).  
   
  Kullanım <xref:System.ServiceModel.Discovery.DiscoveryClient.Resolve%2A> ve <xref:System.ServiceModel.Discovery.DiscoveryClient.ResolveAsync%28System.ServiceModel.Discovery.ResolveCriteria%29> bir hizmeti bulmak için yöntemleri temel uç nokta adresine. Uç nokta adresi adreslenebilir ağ olmadığında kullanışlıdır. Çözümleme yöntemleri bir örneği ele <xref:System.ServiceModel.Discovery.ResolveCriteria> , çözümleme, çözümleme işlemi en uzun süresi ve uzantılar kümesi, hizmet uç noktası adresi belirtme sağlar. Aşağıdaki örnekte nasıl kullanılacağını gösterir <xref:System.ServiceModel.Discovery.DiscoveryClient.Resolve%2A> bir hizmeti çözümlemek için yöntem.  
   

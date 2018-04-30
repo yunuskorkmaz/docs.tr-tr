@@ -1,37 +1,39 @@
 ---
-title: "&lt;peerAuthentication&gt; Öğesi"
-ms.custom: 
+title: '&lt;peerAuthentication&gt; Öğesi'
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 09a8a9ff-e395-42f6-8ceb-9d44bdc1cbe1
-caps.latest.revision: "7"
+caps.latest.revision: 7
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: a2b0195ec042a0ad342f199f0bf9c2fd3a19821f
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.workload:
+- dotnet
+ms.openlocfilehash: 9d8809378d8ad8bd5b62d6435919602e4ad0b042
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="ltpeerauthenticationgt-element"></a>&lt;peerAuthentication&gt; Öğesi
 Eşler arası istemciler için kimlik doğrulama seçeneklerini belirtir.  
   
- [!INCLUDE[crabout](../../../../../includes/crabout-md.md)]eşler arası programlama, bkz: [eşler arası ağ](../../../../../docs/framework/wcf/feature-details/peer-to-peer-networking.md).  
+ Eşler arası programlama hakkında daha fazla bilgi için bkz: [eşler arası ağ](../../../../../docs/framework/wcf/feature-details/peer-to-peer-networking.md).  
   
  \<system.ServiceModel>  
 \<davranışları >  
-\<endpointBehaviors>  
-\<behavior>  
-\<clientCredentials>  
+\<endpointBehaviors >  
+\<davranışı >  
+\<clientCredentials >  
 \<Eş >  
-\<PeerAuthentication >  
+\<peerAuthentication >  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -56,7 +58,7 @@ trustedStoreLocation="CurrentUser/LocalMachine"
 |`revocationMode`|İsteğe bağlı numaralandırması. İptal edilen sertifika (CRL) listeler denetlemek için kullanılan modlarından birini. Varsayılan, `Online` değeridir.|  
 |`trustedStoreLocation`|İsteğe bağlı numaralandırması. İki sistem deposu konumlardan birini: `LocalMachine` veya `CurrentUser`. Bu değer, bir hizmet sertifikası istemciye anlaşıldığında kullanılır. Doğrulama işlemi gerçekleştirildiğinde karşı **güvenilir kişiler** belirtilen depo konumda saklayın. Varsayılan, `CurrentUser` değeridir.|  
   
-## <a name="customcertificatevalidatortype-attribute"></a>customCertificateValidatorType Attribute  
+## <a name="customcertificatevalidatortype-attribute"></a>customCertificateValidatorType özniteliği  
   
 |Değer|Açıklama|  
 |-----------|-----------------|  
@@ -74,7 +76,7 @@ trustedStoreLocation="CurrentUser/LocalMachine"
 |-----------|-----------------|  
 |Sabit Listesi|Aşağıdaki değerlerden birini: `NoCheck`, `Online`, `Offline`. Varsayılan, `Online` değeridir.<br /><br /> Daha fazla bilgi için bkz: [sertifikalarla çalışma](../../../../../docs/framework/wcf/feature-details/working-with-certificates.md).|  
   
-## <a name="trustedstorelocation-attribute"></a>trustedStoreLocation Attribute  
+## <a name="trustedstorelocation-attribute"></a>trustedStoreLocation özniteliği  
   
 |Değer|Açıklama|  
 |-----------|-----------------|  

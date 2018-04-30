@@ -19,11 +19,11 @@ ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: 4d5caa913a49205c387c22a615b2b8da2dba0a77
-ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
+ms.openlocfilehash: 2343ebe5a2a029ddb40da98d28f5c442aa7b6962
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/28/2018
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="serialization-and-deserialization"></a>Seri Hale Getirme ve Seri Durumdan Çıkarma
 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] Yeni bir seri hale getirme altyapısı içeren <xref:System.Runtime.Serialization.DataContractSerializer>. <xref:System.Runtime.Serialization.DataContractSerializer> Arasında çevirir [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] nesneleri ve her iki yönde XML. Bu konu, seri hale getirici nasıl çalıştığını açıklar.  
@@ -54,7 +54,7 @@ ms.lasthandoff: 04/28/2018
  [!code-vb[c_StandaloneDataContractSerializer#2](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_standalonedatacontractserializer/vb/source.vb#2)]  
   
 ### <a name="specifying-known-types"></a>Bilinen türlerini belirtme  
- Çok biçimlilik kullanarak zaten işlenmiyor serileştirilen türleri söz konusu ise, <xref:System.Runtime.Serialization.KnownTypeAttribute> özniteliği veya başka bir mekanizma, olası bilinen türlerinin bir listesini gerekir bayraklarıdır seri hale getirici'nın oluşturucuya kullanarak `knownTypes` parametresi. [!INCLUDE[crabout](../../../../includes/crabout-md.md)] bilinen türlerini, bkz: [veri sözleşmesi bilinen türleri](../../../../docs/framework/wcf/feature-details/data-contract-known-types.md).  
+ Çok biçimlilik kullanarak zaten işlenmiyor serileştirilen türleri söz konusu ise, <xref:System.Runtime.Serialization.KnownTypeAttribute> özniteliği veya başka bir mekanizma, olası bilinen türlerinin bir listesini gerekir bayraklarıdır seri hale getirici'nın oluşturucuya kullanarak `knownTypes` parametresi. Bilinen türleri hakkında daha fazla bilgi için bkz: [veri sözleşmesi bilinen türleri](../../../../docs/framework/wcf/feature-details/data-contract-known-types.md).  
   
  Aşağıdaki örnek, bir sınıfı gösterir `LibraryPatron`, belirli bir türde bir koleksiyonu içeren `LibraryItem`. İkinci sınıfı tanımlayan `LibraryItem` türü. Üçüncü ve dördüncü sınıfları (`Book` ve `Newspaper`) devralınmalıdır `LibraryItem` sınıfı.  
   
@@ -267,7 +267,7 @@ ms.lasthandoff: 04/28/2018
   
 -   <xref:System.Runtime.Serialization.NetDataContractSerializer.Serialize%2A> Ve <xref:System.Runtime.Serialization.NetDataContractSerializer.Deserialize%2A> yöntemleridir için diğer adlar <xref:System.Runtime.Serialization.XmlObjectSerializer.WriteObject%2A> ve <xref:System.Runtime.Serialization.XmlObjectSerializer.ReadObject%2A> yöntemleri. Bu ikili veya SOAP seri hale getirme ile daha tutarlı bir programlama modeli sağlamak için mevcut.  
   
- [!INCLUDE[crabout](../../../../includes/crabout-md.md)] Bu özellikler bkz [ikili seri hale getirme](../../../../docs/standard/serialization/binary-serialization.md).  
+ Bu özellikler hakkında daha fazla bilgi için bkz: [ikili seri hale getirme](../../../../docs/standard/serialization/binary-serialization.md).  
   
  XML biçimleri `NetDataContractSerializer` ve `DataContractSerializer` kullanım normalde uyumlu değil. Diğer bir deyişle, bu serileştiricileri biri ile seri hale getirmek ve diğer seri durumdan çalışılıyor desteklenen bir senaryo değil.  
   

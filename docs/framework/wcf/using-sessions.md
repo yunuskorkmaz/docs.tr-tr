@@ -21,11 +21,11 @@ ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: 9f6a6a819b4667bc60ab0abb575d6fff397d67fe
-ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
+ms.openlocfilehash: 172ef71bd3ae09e3c9f15cb0bdb48728a587605e
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/28/2018
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="using-sessions"></a>Oturumları Kullanma
 İçinde [!INCLUDE[indigo1](../../../includes/indigo1-md.md)] uygulamalar, bir *oturum* iletileri bir grup konuşma karşılık gelen. [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] oturumları bulunan oturum nesnesi farklı [!INCLUDE[vstecasp](../../../includes/vstecasp-md.md)] uygulamaları, farklı davranışlar desteklemek ve farklı şekillerde denetlenir. Bu konu içinde oturumları etkinleştir özellikleri açıklar [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] uygulamaları ve bunların nasıl kullanılacağını.  
@@ -144,7 +144,7 @@ ms.lasthandoff: 04/28/2018
   
  Örnekler için bkz: [nasıl yapılır: bir hizmet olduğundan gerektirir oturumları oluşturmak](../../../docs/framework/wcf/feature-details/how-to-create-a-service-that-requires-sessions.md) yanı sıra [varsayılan hizmet davranışı](../../../docs/framework/wcf/samples/default-service-behavior.md) ve [Instancing](../../../docs/framework/wcf/samples/instancing.md) örnekleri.  
   
- [!INCLUDE[crabout](../../../includes/crabout-md.md)] istemcileri ve oturumlar bkz [bir WCF istemcisi kullanarak hizmetlere erişme](../../../docs/framework/wcf/feature-details/accessing-services-using-a-client.md).  
+ İstemcileri ve oturumlar hakkında daha fazla bilgi için bkz: [bir WCF istemcisi kullanarak hizmetlere erişme](../../../docs/framework/wcf/feature-details/accessing-services-using-a-client.md).  
   
 ## <a name="sessions-interact-with-instancecontext-settings"></a>Oturumları InstanceContext ayarlarla etkileşim  
  Arasında bir etkileşim yoktur <xref:System.ServiceModel.SessionMode> bir sözleşme numaralandırmada ve <xref:System.ServiceModel.ServiceBehaviorAttribute.InstanceContextMode%2A?displayProperty=nameWithType> kanalları belirli hizmet nesneleri arasındaki ilişki denetimleri özelliği. Daha fazla bilgi için bkz: [oturumları, Instancing ve eşzamanlılık](../../../docs/framework/wcf/feature-details/sessions-instancing-and-concurrency.md).  

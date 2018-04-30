@@ -1,31 +1,31 @@
 ---
-title: "İşlem Akışını Etkinleştirme"
-ms.custom: 
+title: İşlem Akışını Etkinleştirme
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - dotnet-clr
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - transactions [WCF], enabling flow
 ms.assetid: a03f5041-5049-43f4-897c-e0292d4718f7
-caps.latest.revision: 
+caps.latest.revision: 17
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: 814df9ff4fb11b0aa59270ac251b5dbd9ed7fe96
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: ffc7a1af9c9a021e93c0fca14c0d7d2826f8af6a
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="enabling-transaction-flow"></a>İşlem Akışını Etkinleştirme
-[!INCLUDE[indigo1](../../../../includes/indigo1-md.md)]işlem akışını denetlemek için yüksek oranda esnek seçenekler sunar. Bir hizmetin işlem akışı ayarlarını öznitelikleri ve yapılandırma birleşimini kullanarak ifade edilebilir.  
+[!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] işlem akışını denetlemek için yüksek oranda esnek seçenekler sunar. Bir hizmetin işlem akışı ayarlarını öznitelikleri ve yapılandırma birleşimini kullanarak ifade edilebilir.  
   
 ## <a name="transaction-flow-settings"></a>İşlem akışını ayarları  
  İşlem akışını ayarlar, aşağıdaki üç değerlerinin kesişimini sonucu olarak hizmet uç noktası için oluşturulur:  
@@ -58,10 +58,10 @@ ms.lasthandoff: 12/22/2017
   
 |Gelen ileti|TransactionFlow ayarı|İşlem üstbilgisi|İleti işleme sonucu|  
 |----------------------|-----------------------------|------------------------|-------------------------------|  
-|İşlem beklenen Protokolü biçimle eşleştiğinden|İzin verilen veya zorunlu|`MustUnderstand`eşittir `true`.|İşlem|  
-|İşlem beklenen Protokolü biçimiyle eşleşmiyor|Zorunlu|`MustUnderstand`eşittir `false`.|Bir işlem gerekli olduğu için reddedildi|  
-|İşlem beklenen Protokolü biçimiyle eşleşmiyor|İzin verilen|`MustUnderstand`eşittir `false`.|Üstbilgi değil anlaşılır olmadığından reddetti|  
-|Herhangi bir protokolü biçimini kullanarak işlem|QueuedDeliveryRequirements|`MustUnderstand`eşittir `false`.|Üstbilgi değil anlaşılır olmadığından reddetti|  
+|İşlem beklenen Protokolü biçimle eşleştiğinden|İzin verilen veya zorunlu|`MustUnderstand` eşittir `true`.|İşlem|  
+|İşlem beklenen Protokolü biçimiyle eşleşmiyor|Zorunlu|`MustUnderstand` eşittir `false`.|Bir işlem gerekli olduğu için reddedildi|  
+|İşlem beklenen Protokolü biçimiyle eşleşmiyor|İzin verilen|`MustUnderstand` eşittir `false`.|Üstbilgi değil anlaşılır olmadığından reddetti|  
+|Herhangi bir protokolü biçimini kullanarak işlem|QueuedDeliveryRequirements|`MustUnderstand` eşittir `false`.|Üstbilgi değil anlaşılır olmadığından reddetti|  
 |İşlem yok|Zorunlu|Yok|Bir işlem gerekli olduğu için reddedildi|  
 |İşlem yok|İzin verilen|Yok|İşlem|  
 |İşlem yok|QueuedDeliveryRequirements|Yok|İşlem|  
@@ -78,7 +78,7 @@ ms.lasthandoff: 12/22/2017
   
  Bağlama işlem akışını devre dışı bıraktı, ancak bir hizmet sözleşmesini işlemlerden biri, gelen bir işlem gerekiyor, bir doğrulama özel hizmetin başlatılması sırasında durum oluşur.  
   
- Durumu bağlamaları çoğu [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] sağlar içeren `transactionFlow` ve `transactionProtocol` gelen işlemler kabul etmek için belirli bağlama yapılandırmanızı sağlayan öznitelikler. [!INCLUDE[crabout](../../../../includes/crabout-md.md)]yapılandırma öğelerini ayar bkz [ \<bağlama >](../../../../docs/framework/misc/binding.md).  
+ Durumu bağlamaları çoğu [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] sağlar içeren `transactionFlow` ve `transactionProtocol` gelen işlemler kabul etmek için belirli bağlama yapılandırmanızı sağlayan öznitelikler. Yapılandırma öğelerini ayarlama hakkında daha fazla bilgi için bkz: [ \<bağlama >](../../../../docs/framework/misc/binding.md).  
   
  Bir yönetici veya dağıtıcı uç nokta düzeyine işlem akışı işlem akışı gereksinimlerini veya kısıtlamalarını yapılandırma dosyası kullanarak dağıtım sırasında yapılandırmak için kullanabilirsiniz.  
   
@@ -101,7 +101,7 @@ using (TransactionScope scope = new TransactionScope(TransactionScopeOption.Supp
  Ayrıca, hizmetleri, yalnızca yetkili kimlik doğrulaması ve sahip istemcilerden gelen işlemler kabul edecek şekilde yapılandırılmalıdır. Yüksek oranda güvenilir istemcilerden gelse gelen işlemleri yalnızca kabul edilmemelidir.  
   
 ## <a name="policy-assertions"></a>İlke onaylamalarını  
- [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]işlem akışını denetlemek için ilke onaylamalarını kullanır. İlke onaylamalarını toplayarak sözleşmeleri, yapılandırma ve öznitelikleri tarafından oluşturulan bir hizmetin ilke belgesi bulunabilir. İstemci bir HTTP GET veya bir WS-MetadataExchange istek-yanıt kullanarak hizmetin ilke belgesi elde edebilirsiniz. İstemciler daha sonra bir hizmet sözleşmesini hangi işlemleri gerektirebilir desteklemek veya işlem akışını belirlemek için ilke belgesi işleyebilir.  
+ [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] işlem akışını denetlemek için ilke onaylamalarını kullanır. İlke onaylamalarını toplayarak sözleşmeleri, yapılandırma ve öznitelikleri tarafından oluşturulan bir hizmetin ilke belgesi bulunabilir. İstemci bir HTTP GET veya bir WS-MetadataExchange istek-yanıt kullanarak hizmetin ilke belgesi elde edebilirsiniz. İstemciler daha sonra bir hizmet sözleşmesini hangi işlemleri gerektirebilir desteklemek veya işlem akışını belirlemek için ilke belgesi işleyebilir.  
   
  İşlem akışını ilke onaylamalarını SOAP üstbilgileri belirterek işlem akışı etkileyen bir işlem temsil etmek için bir istemci bir hizmete göndermesi gerekir. Tüm işlem üstbilgileri ile işaretlenmelidir `MustUnderstand` eşit `true`. Aksi takdirde olarak işaretlenmiş bir üstbilgiyle herhangi bir iletisi, bir SOAP hatası reddedilir.  
   

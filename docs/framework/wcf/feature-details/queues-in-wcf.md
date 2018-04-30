@@ -1,31 +1,31 @@
 ---
 title: Windows Communication Foundation'da Kuyruklar
-ms.custom: 
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - dotnet-clr
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - queues [WCF]
 ms.assetid: 43008409-1bb4-4bd4-85d7-862c8f10ae20
-caps.latest.revision: 
+caps.latest.revision: 17
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: 4dfc78d355db4bd8c9d43541545e6fac35086b39
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.openlocfilehash: 82eb421b86f57cfe7c9a23de3ab24de2d4c470cb
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="queues-in-windows-communication-foundation"></a>Windows Communication Foundation'da Kuyruklar
-Bu bölümdeki konular ele [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] desteklemek için sıralar. [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]bir taşıma olarak (daha önce MSMQ da bilinir) Microsoft Message Queuing yararlanarak queuing için destek sağlar ve aşağıdaki senaryolara olanak sağlar:  
+Bu bölümdeki konular ele [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] desteklemek için sıralar. [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] bir taşıma olarak (daha önce MSMQ da bilinir) Microsoft Message Queuing yararlanarak queuing için destek sağlar ve aşağıdaki senaryolara olanak sağlar:  
   
 -   Gevşek bağlı uygulamalar. Gönderen uygulamaların, sıraya alma işlemini yapan uygulamanın iletiyi işlemek kullanılabilir olup olmadığını bilmenize gerek olmadan iletileri gönderebilir. Sıranın kuyruğa alma uygulamaları iletileri ne kadar hızlı işleyebilir bağlı olmayan bir hızda iletileri göndermek gönderen bir uygulama sağlar işleme bağımsızlığı sağlar. Kuyruğa ileti gönderme sıkı bir şekilde ileti işleme değil birleştirildiğinde genel sistem kullanılabilirliğini artırır.  
   
@@ -35,7 +35,7 @@ Bu bölümdeki konular ele [!INCLUDE[indigo1](../../../../includes/indigo1-md.md
   
 -   Bağlantısı kesilmiş işlemleri. Gönderme, alma ve işlemlerinde gibi yüksek Gecikmeli ağlarda veya sınırlı kullanılabilirlik, mobil cihazlar söz konusu olduğunda iletişim kurarken kaybedebilir. Kuyruklar devam etmek bile zaman uç noktalar bağlantısı kesilen bu işlemler sağlar. Bağlantı kurulduğunda, sıraya alma işlemini yapan uygulamanın iletileri iletir.  
   
- Kuyruklar özelliğini kullanmak için bir [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] uygulama standart bağlamaları birini kullanabilirsiniz veya standart bağlamaları biri, gereksinimlerinize uygun değil, özel bir bağlama oluşturabilirsiniz. [!INCLUDE[crabout](../../../../includes/crabout-md.md)]ilgili standart bağlamalar ve bir seçim yapma bkz [nasıl yapılır: WCF uç noktaları ve Message Queuing uygulamaları ile Exchange iletileri](../../../../docs/framework/wcf/feature-details/how-to-exchange-messages-with-wcf-endpoints-and-message-queuing-applications.md). [!INCLUDE[crabout](../../../../includes/crabout-md.md)]özel bağlama oluşturma, bkz: [özel bağlamalar](../../../../docs/framework/wcf/extending/custom-bindings.md).  
+ Kuyruklar özelliğini kullanmak için bir [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] uygulama standart bağlamaları birini kullanabilirsiniz veya standart bağlamaları biri, gereksinimlerinize uygun değil, özel bir bağlama oluşturabilirsiniz. İlgili standart bağlamalar ve bir seçim yapma hakkında daha fazla bilgi için bkz: [nasıl yapılır: WCF uç noktaları ve Message Queuing uygulamaları ile Exchange iletileri](../../../../docs/framework/wcf/feature-details/how-to-exchange-messages-with-wcf-endpoints-and-message-queuing-applications.md). Özel bağlama oluşturma hakkında daha fazla bilgi için bkz: [özel bağlamalar](../../../../docs/framework/wcf/extending/custom-bindings.md).  
   
 ## <a name="in-this-section"></a>Bu Bölümde  
  [Kuyruklara Genel Bakış](../../../../docs/framework/wcf/feature-details/queues-overview.md)  

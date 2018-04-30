@@ -1,24 +1,26 @@
 ---
-title: "Uzun Süre Çalışan Bir İş Akışı Hizmeti Oluşturma"
-ms.custom: 
+title: Uzun Süre Çalışan Bir İş Akışı Hizmeti Oluşturma
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 4c39bd04-5b8a-4562-a343-2c63c2821345
-caps.latest.revision: "9"
+caps.latest.revision: 9
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 94a62a54fb138e394d8e9fa944e49e6526ae7152
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 1cd7cc70c50ac2aa56d8cca55037769aa0b6a64a
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="creating-a-long-running-workflow-service"></a>Uzun Süre Çalışan Bir İş Akışı Hizmeti Oluşturma
 Bu konu, uzun süre çalışan iş akışı hizmeti oluşturmayı açıklar. İş akışı hizmetleri uzun süre çalışan uzun bir süre için çalıştırabilirsiniz. Belirli bir noktada iş akışı için bazı ek bilgiler bekleyen boşta gidebilir. Bu meydana geldiğinde iş akışını bir SQL veritabanına kalıcı ve bellekten kaldırılır. Ek bilgi kullanılabilir hale geldiğinde iş akışı örneği belleğe geri yüklenir ve yürütmeye devam eder.  Bu senaryoda, oldukça basitleştirilmiş bir sıralama sistem uyguluyorsanız.  İstemci sırasını başlatmak için iş akışı hizmeti için bir Başlangıç iletisi gönderir. Bu, istemciye bir sipariş Kimliğini döndürür. Bu noktada iş akışı hizmeti istemciden başka bir ileti bekliyor ve boşta durumuna geçtiğinde ve SQL Server veritabanına kalıcı.  İstemci öğeyi sıralamak için sonraki ileti gönderdiğinde, iş akışı hizmeti belleğe geri yüklenmez ve sipariş işleme tamamlanır. Kod örneğinde öğe siparişe eklenmiş belirten bir dize döndürür. Kod örneği teknolojisi, ancak bunun yerine bir uzun süre çalışan iş akışı hizmetleri gösterilmektedir basit örnek gerçek dünya uygulamasının olması düşünülmemiştir. Bu konu nasıl oluşturulacağını bilmeniz varsayar [!INCLUDE[vs_current_long](../../../../includes/vs-current-long-md.md)] projeler ve çözümler.  
@@ -30,7 +32,7 @@ Bu konu, uzun süre çalışan iş akışı hizmeti oluşturmayı açıklar. İ�
   
 2.  [!INCLUDE[vs_current_long](../../../../includes/vs-current-long-md.md)]  
   
-3.  Microsoft[!INCLUDE[netfx_current_long](../../../../includes/netfx-current-long-md.md)]  
+3.  Microsoft  [!INCLUDE[netfx_current_long](../../../../includes/netfx-current-long-md.md)]  
   
 4.  WCF ile tanıdık ve [!INCLUDE[vs_current_long](../../../../includes/vs-current-long-md.md)] ve projeleri/çözümler oluşturmak nasıl biliyorsunuz.  
   
@@ -82,7 +84,7 @@ Bu konu, uzun süre çalışan iş akışı hizmeti oluşturmayı açıklar. İ�
   
          ![Küme alacak etkinlik özellikleri](../../../../docs/framework/wcf/feature-details/media/setreceiveproperties.png "SetReceiveProperties")  
   
-         DisplayName özelliğini Al etkinliğinin Tasarımcısı'nda görüntülenen adını ayarlar. ServiceContractName ve OperationName özellikleri hizmet sözleşmesini ve Al etkinliği tarafından uygulanan işlem adını belirtin. [!INCLUDE[crabout](../../../../includes/crabout-md.md)]İş akışında sözleşmeleri nasıl kullanıldığını Hizmetleri Bkz: [iş akışında sözleşmeleri kullanma](../../../../docs/framework/wcf/feature-details/using-contracts-in-workflow.md).  
+         DisplayName özelliğini Al etkinliğinin Tasarımcısı'nda görüntülenen adını ayarlar. ServiceContractName ve OperationName özellikleri hizmet sözleşmesini ve Al etkinliği tarafından uygulanan işlem adını belirtin. İş akışı hizmetleri sözleşmeleri nasıl kullanıldığı konusunda daha fazla bilgi için bkz: [iş akışında sözleşmeleri kullanma](../../../../docs/framework/wcf/feature-details/using-contracts-in-workflow.md).  
   
     2.  Tıklatın **tanımlayın...**  bağlamak **ReceiveStartOrder** etkinliği ve aşağıdaki çizimde gösterilen özellikleri ayarlayın.  Dikkat **parametreleri** radyo düğmesi seçilirse, adlı bir parametre `p_customerName` bağlı `customerName` değişkeni. Bu yapılandırır **alma** bazı veri almasına ve bu verileri yerel değişkenlere bağlamak için etkinlik.  
   
@@ -120,13 +122,13 @@ Bu konu, uzun süre çalışan iş akışı hizmeti oluşturmayı açıklar. İ�
   
          ![Alma için ikinci parametrelerini belirterek](../../../../docs/framework/wcf/feature-details/media/addreceive2parameters.png "AddReceive2Parameters")  
   
-    4.  Tıklatın **CorrelateOn** üç nokta düğmesini tıklatın ve girin `orderIdHandle`. Altında **XPath sorguları**, açılan oku tıklatın ve seçin `p_orderId`. Bu ikinci bağıntı yapılandırır etkinlik alırsınız. [!INCLUDE[crabout](../../../../includes/crabout-md.md)]Bağıntı bakın [bağıntı](../../../../docs/framework/wcf/feature-details/correlation.md).  
+    4.  Tıklatın **CorrelateOn** üç nokta düğmesini tıklatın ve girin `orderIdHandle`. Altında **XPath sorguları**, açılan oku tıklatın ve seçin `p_orderId`. Bu ikinci bağıntı yapılandırır etkinlik alırsınız. Bağıntı hakkında daha fazla bilgi için bkz: [bağıntı](../../../../docs/framework/wcf/feature-details/correlation.md).  
   
          ![CorrelatesOn özelliğinin ayarlanması](../../../../docs/framework/wcf/feature-details/media/correlateson.png "CorrelatesOn")  
   
     5.  Sürükleme ve bırakma bir **varsa** etkinlik hemen sonra **ReceiveAddItem** etkinlik. Bu etkinlik yalnızca bir if gibi davranan deyimi.  
   
-        1.  Ayarlama **koşulu** özelliği`itemId=="Zune HD" (itemId="Zune HD" for Visual Basic)`  
+        1.  Ayarlama **koşulu** özelliği `itemId=="Zune HD" (itemId="Zune HD" for Visual Basic)`  
   
         2.  Sürükleme ve bırakma bir **atamak** etkinliğinde için **sonra** bölümü ve başka bir dosyaya **Else** bölüm özelliklerini ayarlamak **atamak** Aşağıdaki çizimde gösterildiği gibi etkinlikler.  
   

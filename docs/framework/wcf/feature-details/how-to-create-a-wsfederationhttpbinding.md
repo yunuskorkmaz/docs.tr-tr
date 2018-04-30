@@ -22,11 +22,11 @@ ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: 8962564bbefc3f43261a2979ae9765369b211f15
-ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
+ms.openlocfilehash: f43b95df73b35b7dc7c34c2e16364dfa7bbdbee4
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/28/2018
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="how-to-create-a-wsfederationhttpbinding"></a>Nasıl yapılır: WSFederationHttpBinding Oluşturma
 İçinde [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)], <xref:System.ServiceModel.WSFederationHttpBinding> sınıfı ([\<wsFederationHttpBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/wsfederationhttpbinding.md) yapılandırmasında) Federasyon Hizmeti gösterme için bir mekanizma sağlar. Diğer bir deyişle, istemcilerin bir güvenlik belirteci hizmeti tarafından verilen bir güvenlik belirteci kullanarak kimlik doğrulaması gerektiren bir hizmeti. Bu konu nasıl ayarlanacağını gösterir bir <xref:System.ServiceModel.WSFederationHttpBinding> kod ve yapılandırma. Bağlama oluşturulduktan sonra bu bağlamayı kullanmak için uç nokta ayarlamayı ayarlayabilirsiniz.  
@@ -48,7 +48,7 @@ ms.lasthandoff: 04/28/2018
   
      SAML 1.1 belirteci için bir URI "http://docs.oasis-open.org/wss/oasis-wss-saml-token-profile-1.1#SAMLV1.1".  
   
-4.  İsteğe bağlı. Federasyon hizmetlerinde ayarlamak <xref:System.ServiceModel.FederatedMessageSecurityOverHttp.IssuerMetadataAddress%2A> bir güvenlik belirteci hizmeti meta veri URL'sini özelliği. Hizmet meta veri yayımlama için yapılandırılmışsa, uygun bağlama/uç noktanın çifti seçmek istemcilerin hizmetinin meta veri uç noktası sağlar. [!INCLUDE[crabout](../../../../includes/crabout-md.md)] bkz: meta verileri yayımlama [meta veri yayımlama](../../../../docs/framework/wcf/feature-details/publishing-metadata.md).  
+4.  İsteğe bağlı. Federasyon hizmetlerinde ayarlamak <xref:System.ServiceModel.FederatedMessageSecurityOverHttp.IssuerMetadataAddress%2A> bir güvenlik belirteci hizmeti meta veri URL'sini özelliği. Hizmet meta veri yayımlama için yapılandırılmışsa, uygun bağlama/uç noktanın çifti seçmek istemcilerin hizmetinin meta veri uç noktası sağlar. Meta veri yayımlama hakkında daha fazla bilgi için bkz: [meta veri yayımlama](../../../../docs/framework/wcf/feature-details/publishing-metadata.md).  
   
  Verilen belirteç, istemci ile hizmet arasında kullanılacak algoritma paketini kanıtını bir anahtar olarak kullanılan anahtar türü de dahil olmak üzere diğer özellikleri de ayarlayabilirsiniz anlaşma veya hizmet kimlik bilgilerini açıkça belirtmek için herhangi bir özel hizmet talepleri olup olmadığını Verilen belirteç içeren ve güvenlik belirteci hizmeti istemci gönderir isteğine eklenmesi gereken ek XML öğeleri bekliyor.  
   
@@ -103,7 +103,7 @@ ms.lasthandoff: 04/28/2018
   
 12. Daha fazla bilgi için bkz: [hizmet kimliği ve kimlik doğrulama](../../../../docs/framework/wcf/feature-details/service-identity-and-authentication.md).  
   
-13. Hiçbir yerel yayımlayan belirtilmişse, istemcide gerekli; hizmette kullanılmaz. Oluşturma bir [ \<bağlama >](../../../../docs/framework/misc/binding.md) güvenlik belirteci hizmeti ile iletişim kurmak için kullanılan bağlamaları bölümünde öğesi. [!INCLUDE[crabout](../../../../includes/crabout-md.md)] bir bağlama bkz [nasıl yapılır: yapılandırmada hizmet bağlama belirtme](../../../../docs/framework/wcf/how-to-specify-a-service-binding-in-configuration.md).  
+13. Hiçbir yerel yayımlayan belirtilmişse, istemcide gerekli; hizmette kullanılmaz. Oluşturma bir [ \<bağlama >](../../../../docs/framework/misc/binding.md) güvenlik belirteci hizmeti ile iletişim kurmak için kullanılan bağlamaları bölümünde öğesi. Bağlama oluşturma hakkında daha fazla bilgi için bkz: [nasıl yapılır: yapılandırmada hizmet bağlama belirtme](../../../../docs/framework/wcf/how-to-specify-a-service-binding-in-configuration.md).  
   
 14. Ayarlayarak önceki adımda oluşturduğunuz bağlama belirtme `binding` ve `bindingConfiguration` özniteliklerini `<issuer>` öğesi.  
   

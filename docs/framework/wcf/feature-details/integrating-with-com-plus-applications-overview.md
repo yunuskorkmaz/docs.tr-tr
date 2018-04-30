@@ -1,30 +1,32 @@
 ---
-title: "COM+ Uygulamaları ile Tümleştirme Genel Bakış"
-ms.custom: 
+title: COM+ Uygulamaları ile Tümleştirme Genel Bakış
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - Windows Communication Foundation, COM+ integration
 - WCF, COM+ integration
 ms.assetid: e481e48f-7096-40eb-9f20-7f0098412941
-caps.latest.revision: "29"
+caps.latest.revision: 29
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 0fbed530a1b968bb049ee20262eb2b8fa9ba13c2
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 3c723bda93feac3eef18f302ab0c8ec7c702eb7a
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="integrating-with-com-applications-overview"></a>COM+ Uygulamaları ile Tümleştirme Genel Bakış
-[!INCLUDE[indigo1](../../../../includes/indigo1-md.md)]dağıtılmış uygulamaları oluşturmak için zengin bir ortam sağlar. COM + barındırılan bir bileşen tabanlı uygulama mantığı zaten kullanıyorsanız, kullanabileceğiniz [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] yeniden yazmak zorunda yerine mevcut mantığınızı genişletmek için. Yaygın bir senaryo, varolan COM + ya da kuruluş Hizmetleri iş mantığı Web Hizmetleri aracılığıyla kullanıma sunmak istediğiniz durumdur.  
+[!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] dağıtılmış uygulamaları oluşturmak için zengin bir ortam sağlar. COM + barındırılan bir bileşen tabanlı uygulama mantığı zaten kullanıyorsanız, kullanabileceğiniz [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] yeniden yazmak zorunda yerine mevcut mantığınızı genişletmek için. Yaygın bir senaryo, varolan COM + ya da kuruluş Hizmetleri iş mantığı Web Hizmetleri aracılığıyla kullanıma sunmak istediğiniz durumdur.  
   
  Bir COM bileşeni arabirimdeki bir Web hizmeti olarak kullanıma sunulduğunda belirtim ve bu hizmetleri sözleşmesi uygulama başlatma zamanında gerçekleştirilen bir otomatik eşleme tarafından belirlenir. Aşağıdaki listede, bu eşleme için kavramsal model gösterilmektedir:  
   
@@ -51,9 +53,9 @@ ms.lasthandoff: 12/22/2017
   
 2.  Uygun bir barındırma modu seçin.  
   
-3.  COM + hizmet modeli Yapılandırma Aracı (ComSvcConfig.exe) arabirimi için bir Web hizmeti eklemek için kullanın. [!INCLUDE[crabout](../../../../includes/crabout-md.md)]ComSvcConfig.exe kullanma hakkında [nasıl yapılır: COM + hizmet modeli yapılandırma aracını kullanma](../../../../docs/framework/wcf/feature-details/how-to-use-the-com-service-model-configuration-tool.md).  
+3.  COM + hizmet modeli Yapılandırma Aracı (ComSvcConfig.exe) arabirimi için bir Web hizmeti eklemek için kullanın. ComSvcConfig.exe kullanma hakkında daha fazla bilgi için bkz: [nasıl yapılır: COM + hizmet modeli yapılandırma aracını kullanma](../../../../docs/framework/wcf/feature-details/how-to-use-the-com-service-model-configuration-tool.md).  
   
-4.  Uygulama yapılandırma dosyasında herhangi bir ek hizmet ayarı yapılandırın. [!INCLUDE[crabout](../../../../includes/crabout-md.md)]bir bileşeni yapılandırma hakkında [nasıl yapılır: COM + hizmet ayarlarını yapılandırma](../../../../docs/framework/wcf/feature-details/how-to-configure-com-service-settings.md).  
+4.  Uygulama yapılandırma dosyasında herhangi bir ek hizmet ayarı yapılandırın. Bir bileşeni yapılandırma hakkında daha fazla bilgi için bkz: [nasıl yapılır: COM + hizmet ayarlarını yapılandırma](../../../../docs/framework/wcf/feature-details/how-to-configure-com-service-settings.md).  
   
 ## <a name="supported-interfaces"></a>Desteklenen arabirimleri  
  Bir Web hizmeti olarak verilebilen arabirimleri türünü bazı kısıtlamalar vardır. Aşağıdaki tür arabirimi desteklenmez:  

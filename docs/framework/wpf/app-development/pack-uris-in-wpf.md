@@ -1,12 +1,13 @@
 ---
-title: "WPF İçinde URI'leri Paketleme"
-ms.custom: 
+title: WPF İçinde URI'leri Paketleme
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-wpf
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-wpf
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - pack URI scheme [WPF]
@@ -16,19 +17,20 @@ helpviewer_keywords:
 - loading non-resource files
 - application management [WPF]
 ms.assetid: 43adb517-21a7-4df3-98e8-09e9cdf764c4
-caps.latest.revision: "35"
+caps.latest.revision: 35
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 3143bcc05d88cde43e844ec21b95963e672bbc52
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: d90345f6c6e44bfdd98d2a1313a36372cdfe8b06
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="pack-uris-in-wpf"></a>WPF İçinde URI'leri Paketleme
-İçinde [!INCLUDE[TLA#tla_wpf](../../../../includes/tlasharptla-wpf-md.md)], [!INCLUDE[TLA#tla_uri#plural](../../../../includes/tlasharptla-urisharpplural-md.md)] belirlemek ve aşağıdakiler dahil pek çok yolla dosyaları yüklemek için kullanılır:  
+Windows Presentation Foundation (WPF) [!INCLUDE[TLA#tla_uri#plural](../../../../includes/tlasharptla-urisharpplural-md.md)] belirlemek ve aşağıdakiler dahil pek çok yolla dosyaları yüklemek için kullanılır:  
   
 -   Belirtme [!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)] göstermek için bir uygulamayı ilk kez başlatıldığında.  
   
@@ -92,7 +94,7 @@ ms.lasthandoff: 12/22/2017
   
 <a name="Resource_File_Pack_URIs___Local_Assembly"></a>   
 ## <a name="resource-file-pack-uris"></a>Kaynak dosya Pack URI  
- Kaynak dosyaları olarak yapılandırılmış [!INCLUDE[TLA2#tla_msbuild](../../../../includes/tla2sharptla-msbuild-md.md)] `Resource` öğeleri ve derlemelerine derlenir. [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]Paketi yapımı destekleyen [!INCLUDE[TLA2#tla_uri#plural](../../../../includes/tla2sharptla-urisharpplural-md.md)] yerel bütünleştirilmiş koda derlenmiş ya da yerel derlemesinden başvuruda bulunulan bir bütünleştirilmiş koda derlenmiş kaynak dosyaları belirlemek için kullanılabilir.  
+ Kaynak dosyaları olarak yapılandırılmış [!INCLUDE[TLA2#tla_msbuild](../../../../includes/tla2sharptla-msbuild-md.md)] `Resource` öğeleri ve derlemelerine derlenir. [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] Paketi yapımı destekleyen [!INCLUDE[TLA2#tla_uri#plural](../../../../includes/tla2sharptla-urisharpplural-md.md)] yerel bütünleştirilmiş koda derlenmiş ya da yerel derlemesinden başvuruda bulunulan bir bütünleştirilmiş koda derlenmiş kaynak dosyaları belirlemek için kullanılabilir.  
   
 <a name="Local_Assembly_Resource_File"></a>   
 ### <a name="local-assembly-resource-file"></a>Yerel derleme kaynak dosyası  
@@ -163,7 +165,7 @@ ms.lasthandoff: 12/22/2017
  `pack://application:,,,/Subfolder/ContentFile.xaml`  
   
 > [!NOTE]
->  [!INCLUDE[TLA2#tla_html](../../../../includes/tla2sharptla-html-md.md)]İçerik dosyaları için erişilemeyeceğini. [!INCLUDE[TLA2#tla_uri](../../../../includes/tla2sharptla-uri-md.md)] Düzeni yalnızca gezinme destekler [!INCLUDE[TLA2#tla_html](../../../../includes/tla2sharptla-html-md.md)] kaynak sitede bulunan dosyalar.  
+>  [!INCLUDE[TLA2#tla_html](../../../../includes/tla2sharptla-html-md.md)] İçerik dosyaları için erişilemeyeceğini. [!INCLUDE[TLA2#tla_uri](../../../../includes/tla2sharptla-uri-md.md)] Düzeni yalnızca gezinme destekler [!INCLUDE[TLA2#tla_html](../../../../includes/tla2sharptla-html-md.md)] kaynak sitede bulunan dosyalar.  
   
 <a name="The_siteoforigin_____Authority"></a>   
 ## <a name="site-of-origin-pack-uris"></a>Kaynak Paketi URI'ler site  
@@ -183,7 +185,7 @@ ms.lasthandoff: 12/22/2017
   
 <a name="Page_Files"></a>   
 ## <a name="page-files"></a>Sayfa dosyası  
- [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]olarak yapılandırılmış dosyalar [!INCLUDE[TLA2#tla_msbuild](../../../../includes/tla2sharptla-msbuild-md.md)] `Page` öğeleri kaynak dosyaları aynı şekilde derlemelerine derlenir. Sonuç olarak, [!INCLUDE[TLA2#tla_msbuild](../../../../includes/tla2sharptla-msbuild-md.md)] `Page` öğeleri paketi kullanarak belirlenebilir [!INCLUDE[TLA2#tla_uri#plural](../../../../includes/tla2sharptla-urisharpplural-md.md)] kaynak dosyaları için.  
+ [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] olarak yapılandırılmış dosyalar [!INCLUDE[TLA2#tla_msbuild](../../../../includes/tla2sharptla-msbuild-md.md)] `Page` öğeleri kaynak dosyaları aynı şekilde derlemelerine derlenir. Sonuç olarak, [!INCLUDE[TLA2#tla_msbuild](../../../../includes/tla2sharptla-msbuild-md.md)] `Page` öğeleri paketi kullanarak belirlenebilir [!INCLUDE[TLA2#tla_uri#plural](../../../../includes/tla2sharptla-urisharpplural-md.md)] kaynak dosyaları için.  
   
  Türlerini [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] yaygın olarak yapılandırılmış dosyalar [!INCLUDE[TLA2#tla_msbuild](../../../../includes/tla2sharptla-msbuild-md.md)] `Page` öğeleriniz kendi kök öğesi olarak şunlardan biri:  
   
@@ -256,7 +258,7 @@ ms.lasthandoff: 12/22/2017
   
 5.  Kaynak bulunmazsa, dahili olarak oluşturulan <xref:System.Uri> geçersiz.  
   
- [!INCLUDE[TLA2#tla_uri](../../../../includes/tla2sharptla-uri-md.md)]çözümleme için geçerli olmayan [!INCLUDE[TLA2#tla_uri#plural](../../../../includes/tla2sharptla-urisharpplural-md.md)] aşağıdaki bakın:  
+ [!INCLUDE[TLA2#tla_uri](../../../../includes/tla2sharptla-uri-md.md)] çözümleme için geçerli olmayan [!INCLUDE[TLA2#tla_uri#plural](../../../../includes/tla2sharptla-urisharpplural-md.md)] aşağıdaki bakın:  
   
 -   İçerik başvurulan derlemelerin dosyalarında: Bu dosya türlerini tarafından desteklenmeyen [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)].  
   
@@ -294,7 +296,7 @@ ms.lasthandoff: 12/22/2017
   
  Tablo 1: Mutlak Pack URI biçimlendirme  
   
-|Dosya|Mutlak paketi[!INCLUDE[TLA2#tla_uri](../../../../includes/tla2sharptla-uri-md.md)]|  
+|Dosya|Mutlak paketi [!INCLUDE[TLA2#tla_uri](../../../../includes/tla2sharptla-uri-md.md)]|  
 |----------|-------------------------------------------------------------------------------------------------------------------------|  
 |Kaynak dosya - yerel derleme|`"pack://application:,,,/ResourceFile.xaml"`|  
 |Alt - yerel derleme kaynak dosyası|`"pack://application:,,,/Subfolder/ResourceFile.xaml"`|  
@@ -310,7 +312,7 @@ ms.lasthandoff: 12/22/2017
   
  Tablo 2: Göreli Pack URI biçimlendirme  
   
-|Dosya|Göreli paketi[!INCLUDE[TLA2#tla_uri](../../../../includes/tla2sharptla-uri-md.md)]|  
+|Dosya|Göreli paketi [!INCLUDE[TLA2#tla_uri](../../../../includes/tla2sharptla-uri-md.md)]|  
 |----------|-------------------------------------------------------------------------------------------------------------------------|  
 |Yerel derleme kaynak dosyası|`"/ResourceFile.xaml"`|  
 |Yerel derleme alt kaynak dosyası|`"/Subfolder/ResourceFile.xaml"`|  
@@ -355,7 +357,7 @@ Uri uri = new Uri(userProvidedUriTextBox.Text, UriKind.RelativeOrAbsolute);
   
  Tablo 3: Mutlak Pack URI kodu  
   
-|Dosya|Mutlak paketi[!INCLUDE[TLA2#tla_uri](../../../../includes/tla2sharptla-uri-md.md)]|  
+|Dosya|Mutlak paketi [!INCLUDE[TLA2#tla_uri](../../../../includes/tla2sharptla-uri-md.md)]|  
 |----------|-------------------------------------------------------------------------------------------------------------------------|  
 |Kaynak dosya - yerel derleme|`Uri uri = new Uri("pack://application:,,,/ResourceFile.xaml", UriKind.Absolute);`|  
 |Alt - yerel derleme kaynak dosyası|`Uri uri = new Uri("pack://application:,,,/Subfolder/ResourceFile.xaml", UriKind.Absolute);`|  
@@ -371,7 +373,7 @@ Uri uri = new Uri(userProvidedUriTextBox.Text, UriKind.RelativeOrAbsolute);
   
  Tablo 4: Göreli Pack URI kodu  
   
-|Dosya|Göreli paketi[!INCLUDE[TLA2#tla_uri](../../../../includes/tla2sharptla-uri-md.md)]|  
+|Dosya|Göreli paketi [!INCLUDE[TLA2#tla_uri](../../../../includes/tla2sharptla-uri-md.md)]|  
 |----------|-------------------------------------------------------------------------------------------------------------------------|  
 |Kaynak dosya - yerel derleme|`Uri uri = new Uri("/ResourceFile.xaml", UriKind.Relative);`|  
 |Alt - yerel derleme kaynak dosyası|`Uri uri = new Uri("/Subfolder/ResourceFile.xaml", UriKind.Relative);`|  
@@ -386,7 +388,7 @@ Uri uri = new Uri(userProvidedUriTextBox.Text, UriKind.RelativeOrAbsolute);
   
 <a name="Specifying_the_UI_to_Show_when_an_Application_Starts"></a>   
 #### <a name="specifying-the-ui-to-show-when-an-application-starts"></a>Bir uygulama başlatıldığında göstermek için kullanıcı Arabirimi belirtme  
- <xref:System.Windows.Application.StartupUri%2A>ilk belirtir [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] ne zaman göstermek için bir [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] uygulama başlatıldığında. Bağımsız uygulamalar için [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] penceresinde, aşağıdaki örnekte gösterildiği gibi olabilir.  
+ <xref:System.Windows.Application.StartupUri%2A> ilk belirtir [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] ne zaman göstermek için bir [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] uygulama başlatıldığında. Bağımsız uygulamalar için [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] penceresinde, aşağıdaki örnekte gösterildiği gibi olabilir.  
   
  [!code-xaml[PackURIOverviewSnippets#StartupUriWindow](../../../../samples/snippets/csharp/VS_Snippets_Wpf/PackURIOverviewSnippets/CS/Copy of App.xaml#startupuriwindow)]  
   
@@ -416,7 +418,7 @@ Uri uri = new Uri(userProvidedUriTextBox.Text, UriKind.RelativeOrAbsolute);
   
 <a name="Loading_Image__Audio__and_Video_Files"></a>   
 #### <a name="loading-image-audio-and-video-files"></a>Görüntü, ses ve Video dosyaları yükleniyor  
- [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]uygulamaların her biri algılanabilir ve paketiyle yüklenen medya türleri, çok geniş bir yelpazedeki kullanmasını sağlayan [!INCLUDE[TLA2#tla_uri#plural](../../../../includes/tla2sharptla-urisharpplural-md.md)]aşağıdaki örneklerde gösterildiği gibi.  
+ [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] uygulamaların her biri algılanabilir ve paketiyle yüklenen medya türleri, çok geniş bir yelpazedeki kullanmasını sağlayan [!INCLUDE[TLA2#tla_uri#plural](../../../../includes/tla2sharptla-urisharpplural-md.md)]aşağıdaki örneklerde gösterildiği gibi.  
   
  [!code-xaml[MediaPlayerVideoSample#VideoPackURIAtSOO](../../../../samples/snippets/csharp/VS_Snippets_Wpf/MediaPlayerVideoSample/CS/HomePage.xaml#videopackuriatsoo)]  
   

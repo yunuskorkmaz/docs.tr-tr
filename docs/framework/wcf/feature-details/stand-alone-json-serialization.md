@@ -16,11 +16,11 @@ ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: 1a0a11d613ffb8f71437edd73a8be64fb5f55a4c
-ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
+ms.openlocfilehash: 4d3c7234c25b0a968ca67b58a560e8c8b55bb73d
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/28/2018
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="stand-alone-json-serialization"></a>Bağımsız JSON Seri Hale Getirme
 JSON (JavaScript nesne gösterimi) özellikle Web sayfalarında tarayıcı içinde çalışan JavaScript kodu tarafından kullanılmak üzere tasarlanmış bir veri biçimidir. Oluşturulan ASP.NET AJAX Hizmetleri tarafından kullanılan varsayılan veri biçimi olan [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)].  
@@ -53,7 +53,7 @@ JSON (JavaScript nesne gösterimi) özellikle Web sayfalarında tarayıcı için
 |`Null` herhangi bir tür için değer|Null|Boş değer atanabilir türler de desteklenir ve eşlemek için JSON null türleri aynı şekilde.|  
   
 ### <a name="enumerations-and-json"></a>Numaralandırmalar ve JSON  
- Numaralandırma üye değerlerinin sayılar nasıl bunlar veri sözleşmelerinde davranılır öğesinden farklı üye adları dahil olduğu JSON olarak kabul edilir. [!INCLUDE[crabout](../../../../includes/crabout-md.md)] veri işleme, sözleşme bkz [veri sözleşmelerinde Numaralandırma türleri](../../../../docs/framework/wcf/feature-details/enumeration-types-in-data-contracts.md).  
+ Numaralandırma üye değerlerinin sayılar nasıl bunlar veri sözleşmelerinde davranılır öğesinden farklı üye adları dahil olduğu JSON olarak kabul edilir. Veri sözleşmesi işleme hakkında daha fazla bilgi için bkz: [veri sözleşmelerinde Numaralandırma türleri](../../../../docs/framework/wcf/feature-details/enumeration-types-in-data-contracts.md).  
   
 -   Örneğin, `public enum Color {red, green, blue, yellow, pink}`, biçimlendiricisi `yellow` 3 sayısını ve "Sarı" dize değil üretir.  
   

@@ -1,32 +1,34 @@
 ---
-title: "İşlem Protokolleri sürüm 1.0"
-ms.custom: 
+title: İşlem Protokolleri sürüm 1.0
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 034679af-0002-402e-98a8-ef73dcd71bb6
-caps.latest.revision: "3"
+caps.latest.revision: 3
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: e616f989416fcee77caa9b9a5d87cfa6812eab32
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 60867daa7b8519f745c37371604807c51aa1cbb9
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="transaction-protocols-version-10"></a>İşlem Protokolleri sürüm 1.0
-[!INCLUDE[indigo1](../../../../includes/indigo1-md.md)]Sürüm 1, sürüm 1.0 WS-Atomic işlemleri ve Web Hizmetleri koordinasyonu kurallarının uygular. [!INCLUDE[crabout](../../../../includes/crabout-md.md)]Sürüm 1.1 bkz [işlem protokolleri](../../../../docs/framework/wcf/feature-details/transaction-protocols.md).  
+[!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] Sürüm 1, sürüm 1.0 WS-Atomic işlemleri ve Web Hizmetleri koordinasyonu kurallarının uygular. Sürüm 1.1 hakkında daha fazla bilgi için bkz: [işlem protokolleri](../../../../docs/framework/wcf/feature-details/transaction-protocols.md).  
   
 |Belirtim/belgesi|Bağlantı|  
 |-----------------------------|----------|  
-|WS-düzenleme|http://msdn.microsoft.com/ws/2005/08/ws-Coordination/|  
-|WS-AtomicTransaction|http://msdn.microsoft.com/ws/2005/08/WS-AtomicTransaction/|  
+|WS-düzenleme|http://msdn.microsoft.com/ws/2005/08/ws-coordination/|  
+|WS-AtomicTransaction|http://msdn.microsoft.com/ws/2005/08/ws-atomictransaction/|  
   
  Bu protokol belirtimleri üzerinde birlikte çalışabilirlik iki düzeyde gereklidir: uygulamalar arasında arasında işlem yöneticileri (Aşağıdaki şekle bakın). İletisi ve ileti formatları için her iki birlikte çalışabilirlik düzeylerini exchange harika ayrıntılı özellikleri açıklanmaktadır. Normal uygulama exchange için yaptığınız gibi belirli güvenlik, güvenilirlik ve kodlamaları uygulama uygulaması exchange için geçerlidir. Ancak, kullanıcı tarafından genellikle yapılandırılmadığı için işlem yöneticileri başarılı işlerliği belirli bağlama anlaşmasında gerektirir.  
   
@@ -70,12 +72,12 @@ ms.lasthandoff: 12/22/2017
   
 |önek|Namespace URI|  
 |------------|-------------------|  
-|S11|http://schemas.xmlsoap.org/SOAP/Envelope|  
-|wsa|http://www.w3.org/2004/08/Addressing|  
+|s11|http://schemas.xmlsoap.org/soap/envelope|  
+|wsa|http://www.w3.org/2004/08/addressing|  
 |wscoor|http://schemas.xmlsoap.org/ws/2004/10/wscoor|  
-|WSAT|http://schemas.xmlsoap.org/ws/2004/10/WSAT|  
-|t|http://schemas.xmlsoap.org/ws/2005/02/Trust|  
-|O|http://docs.oasis-Open.org/WSS/2004/01/oasis-200401-WSS-wssecurity-secext-1.0.xsd|  
+|WSAT|http://schemas.xmlsoap.org/ws/2004/10/wsat|  
+|t|http://schemas.xmlsoap.org/ws/2005/02/trust|  
+|o|http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-secext-1.0.xsd|  
 |XSD|http://www.w3.org/2001/XMLSchema|  
   
 ## <a name="transaction-manager-bindings"></a>İşlem Yöneticisi bağlamaları  
@@ -94,10 +96,10 @@ ms.lasthandoff: 12/22/2017
 -   B1112: DNS başarılı olması için her gönderenin alıcı çifti arasında X.509 konu adı denetimleri için sistemdeki işlevsel olması gerekir.  
   
 #### <a name="activation-and-registration-binding-configuration"></a>Etkinleştirme ve yapılandırma bağlama kayıt  
- [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]İstek/yanıt çift yönlü bağıntı bağlamayla HTTPS üzerinden gerektirir. (WS-Atomic işlemleri, Bölüm 8 bağıntı ve istek/yanıt iletisi exchange desenleri açıklamalarını hakkında daha fazla bilgi için bkz.)  
+ [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] İstek/yanıt çift yönlü bağıntı bağlamayla HTTPS üzerinden gerektirir. (WS-Atomic işlemleri, Bölüm 8 bağıntı ve istek/yanıt iletisi exchange desenleri açıklamalarını hakkında daha fazla bilgi için bkz.)  
   
 #### <a name="2pc-protocol-binding-configuration"></a>2PC Protokolü bağlama yapılandırması  
- [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]tek yönlü (datagram) iletileri HTTPS üzerinden destekler. Bağıntı iletileri arasında bir uygulama ayrıntı olarak kalır.  
+ [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] tek yönlü (datagram) iletileri HTTPS üzerinden destekler. Bağıntı iletileri arasında bir uygulama ayrıntı olarak kalır.  
   
  B2131: Uygulamaları desteklemelidir `wsa:ReferenceParameters` WS-bağıntı elde etmek için adresleme içinde açıklandığı gibi [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]'s 2PC iletileri.  
   
@@ -130,7 +132,7 @@ ms.lasthandoff: 12/22/2017
  `wsse:Timestamp` Öğesi kullanılarak imzalanmalıdır `SecurityContextToken``STx` verilmiş. Bu imza belirli işlemle ilişkili belirtecinin kanıtını olup işlemde kaydetme katılımcı kimliğini doğrulamak için kullanılır. RegistrationResponse ileti HTTPS üzerinden gönderilir.  
   
 #### <a name="2pc-protocol-binding-configuration"></a>2PC Protokolü bağlama yapılandırması  
- [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]tek yönlü (datagram) iletileri HTTPS üzerinden destekler. Bağıntı iletileri arasında bir uygulama ayrıntı olarak kalır.  
+ [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] tek yönlü (datagram) iletileri HTTPS üzerinden destekler. Bağıntı iletileri arasında bir uygulama ayrıntı olarak kalır.  
   
  B2131: Uygulamaları desteklemelidir `wsa:ReferenceParameters` WS-bağıntı elde etmek için adresleme içinde açıklandığı gibi [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]'s 2PC iletileri.  
   

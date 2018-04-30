@@ -1,24 +1,26 @@
 ---
-title: "Form Gönderme"
-ms.custom: 
+title: Form Gönderme
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: fa6f84f9-2e07-4e3c-92d0-a245308b7dff
-caps.latest.revision: "9"
+caps.latest.revision: 9
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: fe1be9177f3e811a3037377360f46f42904d5af3
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 31d2ebbdb6f899390d7b3af485c1583fb80ae6dc
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="form-post"></a>Form Gönderme
 Bu örnek, yeni gelen istek biçimlerinin desteklemek için WCF programlama modeli REST genişletmek gösterilmiştir. Örnek ayrıca, bir HTML form postasına isteğinden seri durumdan bir biçimlendirici uygulaması içeren bir [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] türü. Ayrıca, örnek bir T4 şablon kullanıcılar geri WCF REST hizmeti nakledebilirsiniz HTML formu sağlayan bir HTML sayfasına dönmek için kullanır.  
@@ -38,7 +40,7 @@ Bu örnek, yeni gelen istek biçimlerinin desteklemek için WCF programlama mode
   
  Bu konsol uygulama projesi genişletir [temel kaynak hizmeti](../../../../docs/framework/wcf/samples/basic-resource-service.md) örnek. Temel kaynak hizmeti örneği, WCF REST programlama modeli kullanan bir şekilde bir kaynak kullanıma gösterilmiştir. Koleksiyondaki müşteriler oluşturulabilir, alınan, güncelleştirilmiş silinmiş ve şekilde temel kaynak hizmeti örnek bir müşteri koleksiyon kaynağı açıktır. Temel kaynak hizmeti örneği, yalnızca iki yerel olarak desteklenen gelen istek biçimi, XML ve JSON kullanır.  
   
- Bu Form Post örnek konsol uygulamasındaki kullanıcıların bir tarayıcı kullanarak bir HTML form post bir istek göndererek müşterilerin oluşturmasını sağlayan HtmlFormProcessing Kitaplığı'nda özel biçimlendirici kullanır. Ayrıca, hizmete geri postalama için formu içeren bir HTML sayfası döndüren bir işlem ekler. Bu HTML sayfası .tt dosyası ve bir otomatik olarak oluşturulan .cs dosyası oluşan bir önceden işlenmiş T4 şablon kullanılarak oluşturulur. .Tt dosya değişkenlerini içeren bir şablon biçiminde bir yanıt yazma ve yapıları denetlemek bir geliştirici sağlar. [!INCLUDE[crabout](../../../../includes/crabout-md.md)]T4, bkz: [oluşturma yapıları tarafından kullanarak metin şablonlarını](http://go.microsoft.com/fwlink/?LinkId=178139).  
+ Bu Form Post örnek konsol uygulamasındaki kullanıcıların bir tarayıcı kullanarak bir HTML form post bir istek göndererek müşterilerin oluşturmasını sağlayan HtmlFormProcessing Kitaplığı'nda özel biçimlendirici kullanır. Ayrıca, hizmete geri postalama için formu içeren bir HTML sayfası döndüren bir işlem ekler. Bu HTML sayfası .tt dosyası ve bir otomatik olarak oluşturulan .cs dosyası oluşan bir önceden işlenmiş T4 şablon kullanılarak oluşturulur. .Tt dosya değişkenlerini içeren bir şablon biçiminde bir yanıt yazma ve yapıları denetlemek bir geliştirici sağlar. T4 hakkında daha fazla bilgi için bkz: [oluşturma yapıları tarafından kullanarak metin şablonlarını](http://go.microsoft.com/fwlink/?LinkId=178139).  
   
 #### <a name="to-run-the-sample"></a>Örnek çalıştırmak için  
   

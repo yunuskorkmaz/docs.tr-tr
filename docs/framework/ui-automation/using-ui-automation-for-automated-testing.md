@@ -20,11 +20,11 @@ ms.author: mhopkins
 manager: markl
 ms.workload:
 - dotnet
-ms.openlocfilehash: 6539829feacf8c9a5c9c1339df299a21ac5fe64f
-ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
+ms.openlocfilehash: d38183d90e99c7b8b9b5ffabb871f13886d801f0
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/27/2018
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="using-ui-automation-for-automated-testing"></a>Otomatik Test İçin UI Otomasyonunu Kullanma
 > [!NOTE]
@@ -52,7 +52,7 @@ ms.lasthandoff: 04/27/2018
   
 <a name="Implementing_UI_Automation"></a>   
 ### <a name="implementing-ui-automation"></a>UI Otomasyonu uygulama  
- Tarafından sağlanan birleşik modeli olmadan daha önce belirtildiği gibi [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)], test araçları ve geliştiricilerin özellikleri ve bu framework denetimlerinde davranışlarını kullanıma sunmak için framework özgü bilgileri bilmesi için gereklidir. Birçok farklı kullanıcı Arabirimi çerçevelerini tek herhangi bir zamanda Windows işletim sistemleri içinde mevcut olabilir beri dahil olmak üzere [!INCLUDE[TLA2#tla_win32](../../../includes/tla2sharptla-win32-md.md)], [!INCLUDE[TLA#tla_winforms](../../../includes/tlasharptla-winforms-md.md)], ve [!INCLUDE[TLA#tla_wpf](../../../includes/tlasharptla-wpf-md.md)], benzerdir denetimleri ile birden çok uygulama test etmek için zorlu bir görev olabilir . Örneğin, aşağıdaki tabloda bir düğme denetimi ile ilişkili adı (veya metin) almak için gereken çerçeveye özel özellik adları özetler ve tek eşdeğerini gösterir [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] özelliği.  
+ Tarafından sağlanan birleşik modeli olmadan daha önce belirtildiği gibi [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)], test araçları ve geliştiricilerin özellikleri ve bu framework denetimlerinde davranışlarını kullanıma sunmak için framework özgü bilgileri bilmesi için gereklidir. Birçok farklı kullanıcı Arabirimi çerçevelerini tek herhangi bir zamanda Windows işletim sistemleri içinde mevcut olabilir beri dahil olmak üzere [!INCLUDE[TLA2#tla_win32](../../../includes/tla2sharptla-win32-md.md)], [!INCLUDE[TLA#tla_winforms](../../../includes/tlasharptla-winforms-md.md)], ve Windows Presentation Foundation (WPF) ile birden çok uygulama test etmek için zorlu bir görev olabilir benzerdir denetler. Örneğin, aşağıdaki tabloda bir düğme denetimi ile ilişkili adı (veya metin) almak için gereken çerçeveye özel özellik adları özetler ve tek eşdeğerini gösterir [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] özelliği.  
   
 |UI Otomasyon denetim türü|UI çerçevesi|Framework belirli özelliği|UI Otomasyon özelliği|  
 |--------------------------------|------------------|---------------------------------|----------------------------|  

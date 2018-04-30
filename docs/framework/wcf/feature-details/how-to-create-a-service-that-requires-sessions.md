@@ -1,30 +1,32 @@
 ---
-title: "Nasıl yapılır: Oturum Gerektiren Bir Hizmet Oluşturma"
-ms.custom: 
+title: 'Nasıl yapılır: Oturum Gerektiren Bir Hizmet Oluşturma'
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - csharp
 - vb
 ms.assetid: 8a7613ef-0df9-47c3-b8dc-47f42cb1fd8b
-caps.latest.revision: "9"
+caps.latest.revision: 9
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 1fba00b6b8aed8e27d5f16612bb77191f6674abe
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 9fdf104c46757c7cf41082a2a0e134527b75b238
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="how-to-create-a-service-that-requires-sessions"></a>Nasıl yapılır: Oturum Gerektiren Bir Hizmet Oluşturma
-Oturumları geri aramalar, çoklu atlamalı güvenlik ve istemciler ve hizmet örnekleri arasındaki ilişkileri gibi yararlı özellikleri etkinleştirir iki veya daha fazla uç noktalar arasında paylaşılan bir durum oluşturun. [!INCLUDE[crabout](../../../../includes/crabout-md.md)]oturumlarında [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] uygulamalar, bkz [kullanarak oturumları](../../../../docs/framework/wcf/using-sessions.md).  
+Oturumları geri aramalar, çoklu atlamalı güvenlik ve istemciler ve hizmet örnekleri arasındaki ilişkileri gibi yararlı özellikleri etkinleştirir iki veya daha fazla uç noktalar arasında paylaşılan bir durum oluşturun. Oturumlarında hakkında daha fazla bilgi için [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] uygulamalar, bkz [kullanarak oturumları](../../../../docs/framework/wcf/using-sessions.md).  
   
 ### <a name="to-specify-that-a-contract-require-its-binding-to-support-sessions"></a>Bir sözleşme bağlamasına oturumları desteklemek gerekli olduğunu belirtmek için  
   
@@ -32,11 +34,11 @@ Oturumları geri aramalar, çoklu atlamalı güvenlik ve istemciler ve hizmet ö
   
 2.  Değiştirme <xref:System.ServiceModel.ServiceContractAttribute?displayProperty=nameWithType> ayarlayarak sözleşme bildiren <xref:System.ServiceModel.ServiceContractAttribute.SessionMode%2A?displayProperty=nameWithType> ya da özellik:  
   
-    -   <xref:System.ServiceModel.SessionMode.Required?displayProperty=nameWithType>Bu sözleşme bir oturumunda çalıştırmanız gerekir  
+    -   <xref:System.ServiceModel.SessionMode.Required?displayProperty=nameWithType> Bu sözleşme bir oturumunda çalıştırmanız gerekir  
   
-    -   <xref:System.ServiceModel.SessionMode.Allowed?displayProperty=nameWithType>Bu sözleşme bir oturumda çalıştırabilirsiniz  
+    -   <xref:System.ServiceModel.SessionMode.Allowed?displayProperty=nameWithType> Bu sözleşme bir oturumda çalıştırabilirsiniz  
   
-    -   <xref:System.ServiceModel.SessionMode.NotAllowed?displayProperty=nameWithType>Bu sözleşme bir oturumda çalıştırılmamalıdır durumunda.  
+    -   <xref:System.ServiceModel.SessionMode.NotAllowed?displayProperty=nameWithType> Bu sözleşme bir oturumda çalıştırılmamalıdır durumunda.  
   
 3.  Oturumları destekleyen bir bağlama kullanmak için hizmet uç noktası yapılandırın. Aşağıdaki yapılandırma örneği kullanımı gösterilmiştir <xref:System.ServiceModel.WSDualHttpBinding?displayProperty=nameWithType>, bir WS destekleyen`-`ReliableMessaging oturumu.  
   

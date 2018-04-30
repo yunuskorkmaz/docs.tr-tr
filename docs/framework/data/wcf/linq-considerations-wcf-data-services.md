@@ -23,14 +23,14 @@ ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: c20817e791ae95efecd00a41a44c14eedec017d4
-ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
+ms.openlocfilehash: 365bab484be17fd7bd1466a39d5af53f116ad06f
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/28/2018
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="linq-considerations-wcf-data-services"></a>LINQ konuları (WCF Veri Hizmetleri)
-Bu konuda hangi LINQ sorgularını oluşur ve kullanırken yürütülen yolu hakkında bilgi verilmektedir [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] istemci ve uygulayan bir veri hizmeti sorgulamak için LINQ kullanma sınırlamaları [!INCLUDE[ssODataFull](../../../../includes/ssodatafull-md.md)]. [!INCLUDE[crabout](../../../../includes/crabout-md.md)] oluşturma ve sorguları yürütme bir [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)]-veri hizmeti temel bkz [veri hizmeti sorgulanırken](../../../../docs/framework/data/wcf/querying-the-data-service-wcf-data-services.md).  
+Bu konuda hangi LINQ sorgularını oluşur ve kullanırken yürütülen yolu hakkında bilgi verilmektedir [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] istemci ve uygulayan bir veri hizmeti sorgulamak için LINQ kullanma sınırlamaları [!INCLUDE[ssODataFull](../../../../includes/ssodatafull-md.md)]. Oluşturma ve sorguları yürütme hakkında daha fazla bilgi için bir [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)]-veri hizmeti temel bkz [veri hizmeti sorgulanırken](../../../../docs/framework/data/wcf/querying-the-data-service-wcf-data-services.md).  
   
 ## <a name="composing-linq-queries"></a>Çıktısından LINQ sorguları  
  LINQ sorguları uygulayan nesneler koleksiyonunu oluşturan olanak tanır <xref:System.Collections.Generic.IEnumerable%601>. Her iki **hizmet Başvurusu Ekle** Visual Studio iletişim kutusunda ve DataSvcUtil.exe aracı bir gösterimini üretmek için kullanılan bir [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] öğesinden devralınan bir varlık kapsayıcı sınıfı olarak hizmet <xref:System.Data.Services.Client.DataServiceContext>, yanı akışlarında döndürülen varlıklar temsil eden nesneler. Bu araçları ayrıca akışları hizmet tarafından sunulan koleksiyonlar için varlık kapsayıcı sınıfındaki özellikleri oluşturur. Dönüş veri hizmeti yalıtan sınıfının bu özelliklerin her biri bir <xref:System.Data.Services.Client.DataServiceQuery%601>. Çünkü <xref:System.Data.Services.Client.DataServiceQuery%601> uygulayan sınıf <xref:System.Linq.IQueryable%601> LINQ tarafından tanımlanan arabirimi istemci kitaplığı tarafından bir sorgu isteği veri hizmetine gönderilen URI içine çevrilen veri hizmeti tarafından sunulan akışları bir LINQ Sorgu oluşturma yürütme.  

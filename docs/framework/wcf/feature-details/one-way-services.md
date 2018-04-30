@@ -1,28 +1,30 @@
 ---
-title: "Tek Yönlü Hizmetler"
-ms.custom: 
+title: Tek Yönlü Hizmetler
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - Windows Communication Foundation [WCF], one-way service contracts
 - WCF [WCF], one-way service contracts
 - service contracts [WCF], defining one-way
 ms.assetid: 19053a36-4492-45a3-bfe6-0365ee0205a3
-caps.latest.revision: "18"
+caps.latest.revision: 18
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 0d023d3623777a93cf72715410aed87fe8a63ee5
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 380f6a10994c7eb69f4a59b222aa2d422151f247
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="one-way-services"></a>Tek Yönlü Hizmetler
 İstek-yanıt desen bir hizmet işlemi, varsayılan davranıştır. Hizmet işlemini kodu olarak temsil edilir olsa bile bir istek-yanıt desende istemci yanıt iletisi için bekler. bir `void` yöntemi. Tek yönlü bir işlemle tek bir ileti iletilir. Alıcı bir yanıt iletisi göndermek veya gönderen bir beklediğiniz yapar.  
@@ -31,7 +33,7 @@ ms.lasthandoff: 12/22/2017
   
 -   Ne zaman istemci işlemleri çağırmanız gerekir ve işlem düzeyinde işleminin sonucu etkilenmez.  
   
--   Kullanırken <xref:System.ServiceModel.NetMsmqBinding> veya <xref:System.ServiceModel.MsmqIntegration.MsmqIntegrationBinding> sınıfı. ([!INCLUDE[crabout](../../../../includes/crabout-md.md)] bu senaryo, bkz: [wcf'de kuyruklar](../../../../docs/framework/wcf/feature-details/queues-in-wcf.md).)  
+-   Kullanırken <xref:System.ServiceModel.NetMsmqBinding> veya <xref:System.ServiceModel.MsmqIntegration.MsmqIntegrationBinding> sınıfı. (Bu senaryo hakkında daha fazla bilgi için bkz: [wcf'de kuyruklar](../../../../docs/framework/wcf/feature-details/queues-in-wcf.md).)  
   
  Tek yönlü bir işlem olduğunda, istemciye hata bilgilerini taşımak için yanıt iletisi yok. Güvenilir oturumlar gibi temel bağlama özelliklerini kullanarak hata koşullarını algılayabilir veya çift yönlü hizmet sözleşmesi tasarlayarak iki yönlü işlem kullanan — ve başka bir hizmet işlemini çağırmak için tek yönlü sözleşme istemci hizmeti tek yönlü sözleşme hizmet ve istemci arasında hizmet istemci uygulayan bir geri çağırma kullanarak bunu istemciye geri hataları gönderebilirsiniz.  
   

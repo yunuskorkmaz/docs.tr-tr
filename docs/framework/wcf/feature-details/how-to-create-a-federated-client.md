@@ -22,16 +22,16 @@ ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: 38436a83bf58c4903a931ecafebf922800d230c1
-ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
+ms.openlocfilehash: 9a52aa5c2c3af6c7288b2a375e44024195dfe1cc
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/28/2018
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="how-to-create-a-federated-client"></a>Nasıl yapılır: Federe İstemci Oluşturma
 İçinde [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)], bir istemci için oluşturma bir *Federasyon Hizmeti* üç ana adımdan oluşur:  
   
-1.  Yapılandırma bir [ \<wsFederationHttpBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/wsfederationhttpbinding.md) ya da benzer özel bağlama. [!INCLUDE[crabout](../../../../includes/crabout-md.md)] uygun bir bağlama bkz [nasıl yapılır: WSFederationHttpBinding oluşturma](../../../../docs/framework/wcf/feature-details/how-to-create-a-wsfederationhttpbinding.md). Alternatif olarak, çalıştırın [ServiceModel meta veri yardımcı Programracı (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md) Federasyon Hizmeti ve bir veya daha fazla ile iletişim için bir yapılandırma dosyası oluşturmak için Federasyon Hizmeti meta veri uç noktası Güvenlik belirteci Hizmetleri.  
+1.  Yapılandırma bir [ \<wsFederationHttpBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/wsfederationhttpbinding.md) ya da benzer özel bağlama. Uygun bir bağlama oluşturma hakkında daha fazla bilgi için bkz: [nasıl yapılır: WSFederationHttpBinding oluşturma](../../../../docs/framework/wcf/feature-details/how-to-create-a-wsfederationhttpbinding.md). Alternatif olarak, çalıştırın [ServiceModel meta veri yardımcı Programracı (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md) Federasyon Hizmeti ve bir veya daha fazla ile iletişim için bir yapılandırma dosyası oluşturmak için Federasyon Hizmeti meta veri uç noktası Güvenlik belirteci Hizmetleri.  
   
 2.  Özellik kümesinin <xref:System.ServiceModel.Security.IssuedTokenClientCredential> bir güvenlik belirteci hizmeti ile bir istemcinin etkileşimi çeşitli yönlerini denetler.  
   
@@ -40,7 +40,7 @@ ms.lasthandoff: 04/28/2018
 > [!NOTE]
 >  A <xref:System.Security.Cryptography.CryptographicException> istemci kimliğine bürünülen kimlik bilgileri kullandığında oluşturulan <xref:System.ServiceModel.WSFederationHttpBinding> bağlama veya özel tarafından verilen bir belirteç ve asimetrik anahtarlar. Asimetrik anahtarlar ile kullanılan <xref:System.ServiceModel.WSFederationHttpBinding> bağlama ve özel verilen ne zaman belirteçler <xref:System.ServiceModel.FederatedMessageSecurityOverHttp.IssuedKeyType%2A> ve <xref:System.ServiceModel.Security.Tokens.IssuedSecurityTokenParameters.KeyType%2A> özellikleri, sırasıyla ayarlandığında <xref:System.IdentityModel.Tokens.SecurityKeyType.AsymmetricKey>. <xref:System.Security.Cryptography.CryptographicException> Bir ileti göndermek istemci çalışır ve bir kullanıcı profili için istemci kimliğine bürünme kimlik yok zaman oluşturulur. Bu sorunu azaltmak için oturum açın istemci bilgisayarı veya çağrı `LoadUserProfile` iletiyi göndermeden önce.  
   
- Bu konu, bu yordamları hakkında ayrıntılı bilgi sağlar. [!INCLUDE[crabout](../../../../includes/crabout-md.md)] uygun bir bağlama bkz [nasıl yapılır: WSFederationHttpBinding oluşturma](../../../../docs/framework/wcf/feature-details/how-to-create-a-wsfederationhttpbinding.md). [!INCLUDE[crabout](../../../../includes/crabout-md.md)] Federasyon hizmetinin çalıştığı bkz [Federasyon](../../../../docs/framework/wcf/feature-details/federation.md).  
+ Bu konu, bu yordamları hakkında ayrıntılı bilgi sağlar. Uygun bir bağlama oluşturma hakkında daha fazla bilgi için bkz: [nasıl yapılır: WSFederationHttpBinding oluşturma](../../../../docs/framework/wcf/feature-details/how-to-create-a-wsfederationhttpbinding.md). Federasyon hizmetinin nasıl çalıştığı hakkında daha fazla bilgi için bkz: [Federasyon](../../../../docs/framework/wcf/feature-details/federation.md).  
   
 ### <a name="to-generate-and-examine-the-configuration-for-a-federated-service"></a>Oluştur ve bir Federasyon Hizmeti için yapılandırma incelemek için  
   
@@ -165,7 +165,7 @@ ms.lasthandoff: 04/28/2018
 ## <a name="localissuer-required"></a>Gerekli LocalIssuer  
  İstemciler her zaman yerel yayımlayan kullan beklenir, aşağıdakilere dikkat edin: ikinci en son güvenlik belirteci hizmeti zincirde bir veren adresi veya veren meta veri adresi belirtiyorsa kullanılmayan yerel yayımlayan Svcutil.exe sonuçlarında varsayılan çıktısı.  
   
- [!INCLUDE[crabout](../../../../includes/crabout-md.md)] ayarı <xref:System.ServiceModel.Security.IssuedTokenClientCredential.LocalIssuerAddress%2A>, <xref:System.ServiceModel.Security.IssuedTokenClientCredential.LocalIssuerBinding%2A>, ve <xref:System.ServiceModel.Security.IssuedTokenClientCredential.LocalIssuerChannelBehaviors%2A> özelliklerini <xref:System.ServiceModel.Security.IssuedTokenClientCredential> sınıfı için bkz: [nasıl yapılır: yerel yayımlayan yapılandırma](../../../../docs/framework/wcf/feature-details/how-to-configure-a-local-issuer.md).  
+ Ayar hakkında daha fazla bilgi için <xref:System.ServiceModel.Security.IssuedTokenClientCredential.LocalIssuerAddress%2A>, <xref:System.ServiceModel.Security.IssuedTokenClientCredential.LocalIssuerBinding%2A>, ve <xref:System.ServiceModel.Security.IssuedTokenClientCredential.LocalIssuerChannelBehaviors%2A> özelliklerini <xref:System.ServiceModel.Security.IssuedTokenClientCredential> sınıfı için bkz: [nasıl yapılır: yerel yayımlayan yapılandırma](../../../../docs/framework/wcf/feature-details/how-to-configure-a-local-issuer.md).  
   
 ## <a name="scoped-certificates"></a>Kapsamlı sertifikaları  
  Herhangi bir güvenlik belirteci Hizmetleri ile iletişim kurmak için hizmet sertifikaları belirtilmelidir, sertifikası anlaşması kullanılmaması nedeni genellikle bunlar kullanılarak belirtilebilir <xref:System.ServiceModel.Security.X509CertificateRecipientClientCredential.ScopedCertificates%2A> özelliği <xref:System.ServiceModel.Security.X509CertificateRecipientClientCredential> sınıfı. <xref:System.ServiceModel.Security.X509CertificateRecipientClientCredential.SetDefaultCertificate%2A> Metodu bir <xref:System.Uri> ve bir <xref:System.Security.Cryptography.X509Certificates.X509Certificate2> parametre olarak. Belirtilen sertifika belirtilen URI'sine uç noktalar ile iletişim kurarken kullanılır. Alternatif olarak, kullanabileceğiniz <xref:System.ServiceModel.Security.X509CertificateRecipientClientCredential.SetScopedCertificate%2A> yöntemi tarafından döndürülen koleksiyonu için bir sertifika eklemek için <xref:System.ServiceModel.Security.X509CertificateRecipientClientCredential.ScopedCertificates%2A> özelliği.  

@@ -16,11 +16,11 @@ ms.author: bruceper
 manager: mbaldwin
 ms.workload:
 - dotnet
-ms.openlocfilehash: be9d55e508308f23e70be81ac0d4fe0dfd0ea9cd
-ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
+ms.openlocfilehash: 088b01151d0471527bbfc2ffa04b5b5064700081
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/28/2018
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="securing-messages-using-message-security"></a>İleti Güveliği Kullanarak İletileri Güvenli Hale Getirme
 Bu bölümde ele alınmaktadır [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] kullanırken güvenlik iletisi <xref:System.ServiceModel.NetMsmqBinding>.  
@@ -54,7 +54,7 @@ Bu bölümde ele alınmaktadır [!INCLUDE[indigo2](../../../../includes/indigo2-
   
  Kuyruklar bağlantısı kesilmiş yapısını verildiğinde, istemci ve hizmet aynı anda çevrimiçi olmayabilir. Bu nedenle, hizmet ve istemci sertifikaları, bant exchange gerekir. Özellikle, bir sertifika yetkilisine zincirlenmiş) hizmet sertifikası (kendi güvenilen deposunda tutan, istemci, doğru hizmetiyle iletişim kurduğunu güvenmesi gerekir. İstemci kimlik doğrulaması için hizmet kullandığı iletiye iliştirilmiş X.509 sertifikası, istemci orijinalliğini doğrulamak için kendi deposundaki sertifikayı ile eşleşir. Yeniden, sertifika bir sertifika yetkilisine zincirleme gerekir.  
   
- Windows çalıştıran bir bilgisayarda, sertifika depoları çeşitli türlerde tutulur. [!INCLUDE[crabout](../../../../includes/crabout-md.md)] farklı depoları bkz [sertifika depoları](http://go.microsoft.com/fwlink/?LinkId=87787).  
+ Windows çalıştıran bir bilgisayarda, sertifika depoları çeşitli türlerde tutulur. Farklı depoları hakkında daha fazla bilgi için bkz: [sertifika depoları](http://go.microsoft.com/fwlink/?LinkId=87787).  
   
 ### <a name="windows"></a>Windows  
  Windows ileti kimlik bilgisi türü Kerberos protokolünü kullanır.  

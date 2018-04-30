@@ -18,11 +18,11 @@ ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: fb9f542d931f5febc2c04d1b0e093cc20f487c57
-ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
+ms.openlocfilehash: 4734407868d9dae2acc422c0f07aad57d42d4566
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/28/2018
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="denial-of-service"></a>Hizmet Reddi
 Hizmet reddi oluşur. bir sistem iletileri işlenemiyor veya çok yavaş işlenene bir şekilde doludur.  
@@ -57,7 +57,7 @@ Hizmet reddi oluşur. bir sistem iletileri işlenemiyor veya çok yavaş işlene
 ## <a name="auditing-event-log-can-be-filled"></a>Olay günlüğü denetleme doldurulabilir  
  Kötü niyetli bir kullanıcı denetimi etkinleştirildiğini bilirse, bu saldırgan denetim girişlerini yazılmasına neden geçersiz iletileri gönderebilir. Bu şekilde denetim günlüğü dolu denetim sistemi başarısız olur.  
   
- Bu durumu iyileştirmek için ayarlanmış <xref:System.ServiceModel.Description.ServiceSecurityAuditBehavior.SuppressAuditFailure%2A> özelliğine `true` ve Denetim davranışını denetlemek için Olay Görüntüleyicisi'ni özelliklerini kullanın. [!INCLUDE[crabout](../../../../includes/crabout-md.md)] Olay günlükleri görüntüleme ve yönetme için Olay Görüntüleyicisi'ni kullanarak bkz [Olay Görüntüleyicisi'ni](http://go.microsoft.com/fwlink/?LinkId=186123). Daha fazla bilgi için bkz: [denetim](../../../../docs/framework/wcf/feature-details/auditing-security-events.md).  
+ Bu durumu iyileştirmek için ayarlanmış <xref:System.ServiceModel.Description.ServiceSecurityAuditBehavior.SuppressAuditFailure%2A> özelliğine `true` ve Denetim davranışını denetlemek için Olay Görüntüleyicisi'ni özelliklerini kullanın. Olay günlükleri görüntüleme ve yönetme için Olay Görüntüleyicisi'ni kullanma hakkında daha fazla bilgi için bkz: [Olay Görüntüleyicisi'ni](http://go.microsoft.com/fwlink/?LinkId=186123). Daha fazla bilgi için bkz: [denetim](../../../../docs/framework/wcf/feature-details/auditing-security-events.md).  
   
 ## <a name="invalid-implementations-of-iauthorizationpolicy-can-cause-service-hangs"></a>Geçersiz uygulamaları IAuthorizationPolicy Can neden Hizmeti kilitleniyor  
  Çağırma <xref:System.IdentityModel.Policy.IAuthorizationPolicy.Evaluate%2A> hatalı uyarlamasını yöntemi <xref:System.IdentityModel.Policy.IAuthorizationPolicy> arabirimi hizmet askıda kalmasına neden olabilir.  
@@ -74,7 +74,7 @@ Hizmet reddi oluşur. bir sistem iletileri işlenemiyor veya çok yavaş işlene
   
  Bunu azaltmak için üzerinde daha kesin bir arama ölçütü kullanarak tam sertifika başvuru [ \<serviceCredentials >](../../../../docs/framework/configure-apps/file-schema/wcf/servicecredentials.md). Örneğin, <xref:System.Security.Cryptography.X509Certificates.X509FindType.FindByThumbprint> seçeneği ve kendi benzersiz parmak izi tarafından (karma) sertifikasını belirtin.  
   
- [!INCLUDE[crabout](../../../../includes/crabout-md.md)] Otomatik kayıt özelliğini bkz [Windows Server 2003'te sertifika otomatik kaydını](http://go.microsoft.com/fwlink/?LinkId=95166).  
+ Otomatik kayıt özelliği hakkında daha fazla bilgi için bkz: [Windows Server 2003'te sertifika otomatik kaydını](http://go.microsoft.com/fwlink/?LinkId=95166).  
   
 ## <a name="last-of-multiple-alternative-subject-names-used-for-authorization"></a>Son yetkilendirme için kullanılan birden fazla alternatif konu adları  
  Birden çok alternatif konu adı, bir X.509 sertifikası içerir ve alternatif konu adı kullanarak yetkilendirmek, yetkilendirme başarısız olabileceği ender durumda.  
@@ -88,7 +88,7 @@ Hizmet reddi oluşur. bir sistem iletileri işlenemiyor veya çok yavaş işlene
  Bir istemci bir hizmet tarafından başarıyla doğrulandıktan ve güvenli bir oturum hizmetiyle kurulan hizmeti istemci iptal eder veya oturum süresinin sona kadar oturum izler. Her kurulan oturum sınırınızı için en fazla bir hizmetle etkin eşzamanlı oturum sayısını sayar. Bu sınıra ulaşıldığında, yeni bir oturum hizmetle oluşturma denemesi istemcileri kadar reddedilir veya fazla etkin oturum sona veya istemci tarafından iptal edildi. Bir istemci bir hizmet ile birden çok oturumu olabilir ve her biri bu oturumlar, sınırında sayılır.  
   
 > [!NOTE]
->  Durum bilgisi olan oturumlar kullandığınızda, önceki paragrafta geçerli değildir. [!INCLUDE[crabout](../../../../includes/crabout-md.md)] durum bilgisi olan oturumlar, bkz: [nasıl yapılır: güvenli oturum açmak için bir güvenlik bağlamı belirteci oluşturma](../../../../docs/framework/wcf/feature-details/how-to-create-a-security-context-token-for-a-secure-session.md).  
+>  Durum bilgisi olan oturumlar kullandığınızda, önceki paragrafta geçerli değildir. Durum bilgisi olan oturumlar hakkında daha fazla bilgi için bkz: [nasıl yapılır: güvenli oturum açmak için bir güvenlik bağlamı belirteci oluşturma](../../../../docs/framework/wcf/feature-details/how-to-create-a-security-context-token-for-a-secure-session.md).  
   
  Bunu azaltmak için bir oturum için en uzun kullanım ömrünü ve en fazla etkin oturum sayısı sınırı ayarlamak için <xref:System.ServiceModel.Channels.SecurityBindingElement> özelliği <xref:System.ServiceModel.Channels.SecurityBindingElement> sınıfı.  
   

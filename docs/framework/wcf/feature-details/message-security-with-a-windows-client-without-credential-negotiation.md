@@ -1,27 +1,29 @@
 ---
-title: "Windows İstemcisi ile Kimlik Bilgileri Görüşmesi Olmadan İleti Güvenliği"
-ms.custom: 
+title: Windows İstemcisi ile Kimlik Bilgileri Görüşmesi Olmadan İleti Güvenliği
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - csharp
 - vb
 ms.assetid: fc07a26c-cbee-41c5-8fb0-329085fef749
-caps.latest.revision: "18"
+caps.latest.revision: 18
 author: BrucePerlerMS
 ms.author: bruceper
 manager: mbaldwin
-ms.workload: dotnet
-ms.openlocfilehash: f069ff100a2fba1f6bace1d9a81ed69314261eae
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 056e743ff1849457f8a0e8ee509a56475f09435c
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="message-security-with-a-windows-client-without-credential-negotiation"></a>Windows İstemcisi ile Kimlik Bilgileri Görüşmesi Olmadan İleti Güvenliği
 Aşağıdaki senaryoda gösterildiği bir [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] Kerberos protokolü tarafından güvenli hale getirilmiş hizmet ve istemci.  
@@ -61,7 +63,7 @@ Aşağıdaki senaryoda gösterildiği bir [!INCLUDE[indigo1](../../../../include
   
 2.  Hizmetinizi çalıştırmak için rasgele bir Active Directory etki alanı hesabı kullanın. Bu durumda, bu etki alanı hesabı için bir SPN oluşturmanız gerekir. Bunu yapmanın bir yolu, Setspn.exe yardımcı programı aracını kullanmaktır. Hizmet hesabı için SPN oluşturulduktan sonra yapılandırma [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] bu SPN hizmetin istemcileri meta verilerini (WSDL) aracılığıyla yayımlamak için. Bu uç nokta kimliği gösterilen uç noktası için ayarlayarak yapılır ya da bir uygulama yapılandırma dosyası veya kod. Aşağıdaki örnek kimliği programlı olarak yayımlar.  
   
- [!INCLUDE[crabout](../../../../includes/crabout-md.md)]SPN'ler, Kerberos protokolü ve Active Directory bkz [Kerberos teknik Eki'ni Windows için](http://go.microsoft.com/fwlink/?LinkId=88330). [!INCLUDE[crabout](../../../../includes/crabout-md.md)]uç nokta kimlikleri bkz [SecurityBindingElement kimlik doğrulama modları](../../../../docs/framework/wcf/feature-details/securitybindingelement-authentication-modes.md).  
+ SPN'ler hakkında daha fazla bilgi, Kerberos protokolü ve Active Directory için bkz: [Kerberos teknik Eki'ni Windows için](http://go.microsoft.com/fwlink/?LinkId=88330). Uç nokta kimlikler hakkında daha fazla bilgi için bkz: [SecurityBindingElement kimlik doğrulama modları](../../../../docs/framework/wcf/feature-details/securitybindingelement-authentication-modes.md).  
   
  [!code-csharp[C_SecurityScenarios#12](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_securityscenarios/cs/source.cs#12)]
  [!code-vb[C_SecurityScenarios#12](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_securityscenarios/vb/source.vb#12)]  
@@ -117,9 +119,9 @@ Aşağıdaki senaryoda gösterildiği bir [!INCLUDE[indigo1](../../../../include
  Aşağıdaki kod istemci yapılandırır. İletiye güvenlik modunu ayarlama ve istemci kimlik bilgisi türü Windows ayarlanır. Unutmayın <xref:System.ServiceModel.MessageSecurityOverHttp.NegotiateServiceCredential%2A> ve <xref:System.ServiceModel.NonDualMessageSecurityOverHttp.EstablishSecurityContext%2A> özelliklerinin `false`.  
   
 > [!NOTE]
->  Windows kimlik bilgisi türü anlaşma olmadan kullanmak için İstemci hizmet hesabı SPN hizmetiyle iletişim başlatmadan önce yapılandırılması gerekir. İstemci kimlik doğrulaması ve hizmeti ile iletişimi güvenli hale getirmek için Kerberos belirteci almak için SPN kullanır. Aşağıdaki örnek, sunucunun hizmetin SPN'si ile istemci yapılandırma gösterilmektedir. Kullanıyorsanız [ServiceModel meta veri yardımcı Programracı (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md) hizmetin meta veri içeriyorsa, istemci oluşturmak için sunucunun hizmetin SPN'si otomatik olarak istemciye hizmetin meta verilerini (WSDL) yayılır Bu bilgileri. [!INCLUDE[crabout](../../../../includes/crabout-md.md)]hizmetin meta verilerde kendi SPN eklemek için bu konunun devamındaki "Hizmet" bölümüne bakın hizmeti nasıl yapılandırılır.  
+>  Windows kimlik bilgisi türü anlaşma olmadan kullanmak için İstemci hizmet hesabı SPN hizmetiyle iletişim başlatmadan önce yapılandırılması gerekir. İstemci kimlik doğrulaması ve hizmeti ile iletişimi güvenli hale getirmek için Kerberos belirteci almak için SPN kullanır. Aşağıdaki örnek, sunucunun hizmetin SPN'si ile istemci yapılandırma gösterilmektedir. Kullanıyorsanız [ServiceModel meta veri yardımcı Programracı (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md) hizmetin meta veri içeriyorsa, istemci oluşturmak için sunucunun hizmetin SPN'si otomatik olarak istemciye hizmetin meta verilerini (WSDL) yayılır Bu bilgileri. Hizmetin meta verilerde kendi SPN içerecek şekilde hizmetin yapılandırma hakkında daha fazla bilgi için bu konunun devamındaki "Hizmet" bölümüne bakın.  
 >   
->  SPN'ler, Kerberos ve Active Directory hakkında daha fazla bilgi için bkz: [Kerberos teknik Eki'ni Windows için](http://go.microsoft.com/fwlink/?LinkId=88330). [!INCLUDE[crabout](../../../../includes/crabout-md.md)]uç nokta kimlikleri bkz [SecurityBindingElement kimlik doğrulama modları](../../../../docs/framework/wcf/feature-details/securitybindingelement-authentication-modes.md) konu.  
+>  SPN'ler, Kerberos ve Active Directory hakkında daha fazla bilgi için bkz: [Kerberos teknik Eki'ni Windows için](http://go.microsoft.com/fwlink/?LinkId=88330). Uç nokta kimlikler hakkında daha fazla bilgi için bkz: [SecurityBindingElement kimlik doğrulama modları](../../../../docs/framework/wcf/feature-details/securitybindingelement-authentication-modes.md) konu.  
   
  [!code-csharp[C_SecurityScenarios#19](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_securityscenarios/cs/source.cs#19)]
  [!code-vb[C_SecurityScenarios#19](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_securityscenarios/vb/source.vb#19)]  

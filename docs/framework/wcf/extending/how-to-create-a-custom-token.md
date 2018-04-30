@@ -1,12 +1,13 @@
 ---
-title: "Nasıl yapılır: Özel Belirteç Oluşturma"
-ms.custom: 
+title: 'Nasıl yapılır: Özel Belirteç Oluşturma'
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - csharp
@@ -17,31 +18,32 @@ helpviewer_keywords:
 - WSSecurityTokenSerializer class
 - SecurityToken class
 ms.assetid: 6d892973-1558-4115-a9e1-696777776125
-caps.latest.revision: "14"
+caps.latest.revision: 14
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 0aeed7e1beac1a290aebec46a356952ddf994ed7
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.workload:
+- dotnet
+ms.openlocfilehash: c270b63586809044f1bb3e56841ae8cf590e7bb1
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="how-to-create-a-custom-token"></a>Nasıl yapılır: Özel Belirteç Oluşturma
 Bu konuda kullanarak bir özel güvenlik belirteci oluşturmak nasıl gösterilmektedir <xref:System.IdentityModel.Tokens.SecurityToken> sınıfı ve bir özel güvenlik belirteci sağlayıcısı ile authenticator ile tümleştirme. Tam kod örneği için bkz: [özel belirteç](../../../../docs/framework/wcf/samples/custom-token.md) örnek.  
   
- A *güvenlik belirteci* temelde tarafından kullanılan bir XML öğesi [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] güvenlik framework SOAP iletisi içinde bir gönderici hakkında talepleri temsil eder. [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]Güvenlik sistem tarafından sağlanan kimlik doğrulama modları için çeşitli belirteçleri sağlar. Örnekler tarafından temsil edilen bir X.509 sertifikası güvenlik belirteci <xref:System.IdentityModel.Tokens.X509SecurityToken> sınıf veya bir kullanıcı adı güvenlik belirteci temsil ettiği <xref:System.IdentityModel.Tokens.UserNameSecurityToken> sınıfı.  
+ A *güvenlik belirteci* temelde tarafından kullanılan bir XML öğesi [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] güvenlik framework SOAP iletisi içinde bir gönderici hakkında talepleri temsil eder. [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] Güvenlik sistem tarafından sağlanan kimlik doğrulama modları için çeşitli belirteçleri sağlar. Örnekler tarafından temsil edilen bir X.509 sertifikası güvenlik belirteci <xref:System.IdentityModel.Tokens.X509SecurityToken> sınıf veya bir kullanıcı adı güvenlik belirteci temsil ettiği <xref:System.IdentityModel.Tokens.UserNameSecurityToken> sınıfı.  
   
  Bazen bir kimlik doğrulama modu veya kimlik bilgileri sağlanan türleri tarafından desteklenmiyor. Bu durumda, bir XML temsili SOAP iletisi içinde özel kimlik bilgileri sağlamak için bir özel güvenlik belirteci oluşturmak gereklidir.  
   
  Bir özel güvenlik belirteci oluşturma ve nasıl ile tümleştirmek aşağıdaki yordamları gösteren [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] güvenlik altyapısı. Bu konuda istemcinin kredi kartı bilgilerini sunucuya geçirmek için kullanılan bir kredi kartı belirteci oluşturur.  
   
- [!INCLUDE[crabout](../../../../includes/crabout-md.md)]Özel kimlik bilgileri ve güvenlik belirteci yöneticisi bkz [izlenecek yol: özel istemci oluşturma ve hizmet kimlik bilgilerini](../../../../docs/framework/wcf/extending/walkthrough-creating-custom-client-and-service-credentials.md).  
+ Özel kimlik bilgileri ve güvenlik belirteci Yöneticisi hakkında daha fazla bilgi için bkz: [izlenecek yol: özel istemci oluşturma ve hizmet kimlik bilgilerini](../../../../docs/framework/wcf/extending/walkthrough-creating-custom-client-and-service-credentials.md).  
   
  Bkz: <xref:System.IdentityModel.Tokens> güvenlik belirteçlerini temsil eden daha fazla sınıflar için ad alanı.  
   
- [!INCLUDE[crabout](../../../../includes/crabout-md.md)]kimlik bilgileri, güvenlik belirteci yöneticisi ve sağlayıcı ve Doğrulayıcı sınıfları, bkz: [güvenlik mimarisi](http://msdn.microsoft.com/library/16593476-d36a-408d-808c-ae6fd483e28f).  
+ Kimlik bilgileri, güvenlik belirteci yöneticisi ve sağlayıcı ve Doğrulayıcı sınıfları hakkında daha fazla bilgi için bkz: [güvenlik mimarisi](http://msdn.microsoft.com/library/16593476-d36a-408d-808c-ae6fd483e28f).  
   
 ## <a name="procedures"></a>Yordamlar  
  Bir istemci uygulaması, güvenlik altyapısı kredi kartı bilgilerini belirtmek için bir yol sağlanmalıdır. Bu bilgiler bir özel istemci kimlik bilgileri sınıf tarafından uygulamaya kullanılabilir hale getirilir. İlk adım, özel istemci kimlik bilgileri için kredi kartı bilgileri temsil eden bir sınıf oluşturmaktır.  
@@ -91,7 +93,7 @@ Bu konuda kullanarak bir özel güvenlik belirteci oluşturmak nasıl gösterilm
      [!code-csharp[c_CustomToken#2](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_customtoken/cs/source.cs#2)]
      [!code-vb[c_CustomToken#2](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_customtoken/vb/source.vb#2)]  
   
- Güvenlik belirteçleri, bellek içi güvenlik belirteci gösterimini ve üzerinde hat gösterimine arasında çeviri mekanizması gerektirir SOAP iletilerine içine aktarılır. [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]Bu görevi gerçekleştirmek için bir güvenlik belirteci seri hale getirici kullanır. Her özel belirteci seri hale getirmek ve SOAP iletisi özel güvenlik belirteci seri durumdan özel güvenlik belirteci seri hale getirici tarafından eklenmelidir.  
+ Güvenlik belirteçleri, bellek içi güvenlik belirteci gösterimini ve üzerinde hat gösterimine arasında çeviri mekanizması gerektirir SOAP iletilerine içine aktarılır. [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] Bu görevi gerçekleştirmek için bir güvenlik belirteci seri hale getirici kullanır. Her özel belirteci seri hale getirmek ve SOAP iletisi özel güvenlik belirteci seri durumdan özel güvenlik belirteci seri hale getirici tarafından eklenmelidir.  
   
 > [!NOTE]
 >  Türetilen anahtarları varsayılan olarak etkinleştirilir. Özel güvenlik belirteci oluştur ve birincil belirteç olarak kullanırsanız [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] bir anahtarı buradan türetilir. Bunu yaparken yazmak için özel güvenlik belirteci seri hale getirici çağırır <xref:System.IdentityModel.Tokens.SecurityKeyIdentifierClause> özel güvenlik belirteci seri hale getirme sırasında `DerivedKeyToken` kablo için. Alan uçta kablo kapalı belirteci seri durumdan çıkarılırken `DerivedKeyToken` seri hale getirici bekliyor bir `SecurityTokenReference` kendisini altında en üst düzey alt öğe. Özel güvenlik belirteci seri hale getirici eklemediğiniz varsa bir `SecurityTokenReference` yan tümcesi türü seri hale getirme sırasında öğesi, bir özel durum oluşur.  
@@ -115,14 +117,14 @@ Bu konuda kullanarak bir özel güvenlik belirteci oluşturmak nasıl gösterilm
   
 #### <a name="to-integrate-the-custom-security-token-with-a-security-token-provider"></a>Özel güvenlik belirteci bir güvenlik belirteci sağlayıcısı ile tümleştirmek için  
   
-1.  Güvenlik belirteci sağlayıcısı oluşturur, (gerekirse) değiştirir ve belirteç örneğini döndürür. Özel güvenlik belirteci için özel bir sağlayıcı oluşturmak için öğesinden devralınan bir sınıf oluşturun <xref:System.IdentityModel.Selectors.SecurityTokenProvider> sınıfı. Aşağıdaki örnekte geçersiz kılmaları <xref:System.IdentityModel.Selectors.SecurityTokenProvider.GetTokenCore%2A> örneği döndürülecek yöntemi `CreditCardToken`. [!INCLUDE[crabout](../../../../includes/crabout-md.md)]özel güvenlik belirteci sağlayıcıları Bkz [nasıl yapılır: özel bir güvenlik belirteci sağlayıcı oluşturma](../../../../docs/framework/wcf/extending/how-to-create-a-custom-security-token-provider.md).  
+1.  Güvenlik belirteci sağlayıcısı oluşturur, (gerekirse) değiştirir ve belirteç örneğini döndürür. Özel güvenlik belirteci için özel bir sağlayıcı oluşturmak için öğesinden devralınan bir sınıf oluşturun <xref:System.IdentityModel.Selectors.SecurityTokenProvider> sınıfı. Aşağıdaki örnekte geçersiz kılmaları <xref:System.IdentityModel.Selectors.SecurityTokenProvider.GetTokenCore%2A> örneği döndürülecek yöntemi `CreditCardToken`. Özel güvenlik belirteci sağlayıcıları hakkında daha fazla bilgi için bkz: [nasıl yapılır: özel bir güvenlik belirteci sağlayıcı oluşturma](../../../../docs/framework/wcf/extending/how-to-create-a-custom-security-token-provider.md).  
   
      [!code-csharp[c_CustomToken#6](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_customtoken/cs/source.cs#6)]
      [!code-vb[c_CustomToken#6](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_customtoken/vb/source.vb#6)]  
   
 #### <a name="to-integrate-the-custom-security-token-with-a-security-token-authenticator"></a>Özel güvenlik belirteci bir güvenlik belirteci kimlik doğrulayıcı ile tümleştirmek için  
   
-1.  Güvenlik belirteci kimlik doğrulayıcı iletiden ayıklandığında güvenlik belirteci içeriğini doğrular. Özel güvenlik belirteci için özel bir kimlik doğrulayıcısı oluşturmak için öğesinden devralınan bir sınıf oluşturun <xref:System.IdentityModel.Selectors.SecurityTokenAuthenticator> sınıfı. Aşağıdaki örnekte geçersiz kılmaları <xref:System.IdentityModel.Selectors.SecurityTokenAuthenticator.ValidateTokenCore%2A> yöntemi. [!INCLUDE[crabout](../../../../includes/crabout-md.md)]özel güvenlik belirteci Doğrulayıcı bkz [nasıl yapılır: bir özel güvenlik belirteci kimlik doğrulayıcı oluşturma](../../../../docs/framework/wcf/extending/how-to-create-a-custom-security-token-authenticator.md).  
+1.  Güvenlik belirteci kimlik doğrulayıcı iletiden ayıklandığında güvenlik belirteci içeriğini doğrular. Özel güvenlik belirteci için özel bir kimlik doğrulayıcısı oluşturmak için öğesinden devralınan bir sınıf oluşturun <xref:System.IdentityModel.Selectors.SecurityTokenAuthenticator> sınıfı. Aşağıdaki örnekte geçersiz kılmaları <xref:System.IdentityModel.Selectors.SecurityTokenAuthenticator.ValidateTokenCore%2A> yöntemi. Özel güvenlik belirteci Doğrulayıcı hakkında daha fazla bilgi için bkz: [nasıl yapılır: bir özel güvenlik belirteci kimlik doğrulayıcı oluşturma](../../../../docs/framework/wcf/extending/how-to-create-a-custom-security-token-authenticator.md).  
   
      [!code-csharp[c_CustomToken#7](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_customtoken/cs/source.cs#7)]
      [!code-vb[c_CustomToken#7](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_customtoken/vb/source.vb#7)]  
@@ -132,7 +134,7 @@ Bu konuda kullanarak bir özel güvenlik belirteci oluşturmak nasıl gösterilm
   
 #### <a name="to-integrate-the-custom-security-token-with-a-security-token-manager"></a>Özel güvenlik belirteci bir güvenlik belirteci yöneticisi ile tümleştirmek için  
   
-1.  Güvenlik belirteci yöneticisi uygun belirteç sağlayıcısı, güvenlik kimlik doğrulayıcısı ve belirteci seri hale getirici örneklerini oluşturur. Özel bir belirteci yöneticisi oluşturmak için öğesinden devralınan bir sınıf oluşturun <xref:System.ServiceModel.ClientCredentialsSecurityTokenManager> sınıfı. Sınıf kullanım birincil yöntemleri bir <xref:System.IdentityModel.Selectors.SecurityTokenRequirement> istemci veya hizmet kimlik bilgilerini ve uygun sağlayıcısı oluşturmak için. [!INCLUDE[crabout](../../../../includes/crabout-md.md)]özel güvenlik belirteci yöneticileri Bkz [izlenecek yol: özel istemci oluşturma ve hizmet kimlik bilgilerini](../../../../docs/framework/wcf/extending/walkthrough-creating-custom-client-and-service-credentials.md).  
+1.  Güvenlik belirteci yöneticisi uygun belirteç sağlayıcısı, güvenlik kimlik doğrulayıcısı ve belirteci seri hale getirici örneklerini oluşturur. Özel bir belirteci yöneticisi oluşturmak için öğesinden devralınan bir sınıf oluşturun <xref:System.ServiceModel.ClientCredentialsSecurityTokenManager> sınıfı. Sınıf kullanım birincil yöntemleri bir <xref:System.IdentityModel.Selectors.SecurityTokenRequirement> istemci veya hizmet kimlik bilgilerini ve uygun sağlayıcısı oluşturmak için. Özel güvenlik belirteci yöneticileri hakkında daha fazla bilgi için bkz: [izlenecek yol: özel istemci oluşturma ve hizmet kimlik bilgilerini](../../../../docs/framework/wcf/extending/walkthrough-creating-custom-client-and-service-credentials.md).  
   
      [!code-csharp[c_CustomToken#8](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_customtoken/cs/source.cs#8)]
      [!code-vb[c_CustomToken#8](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_customtoken/vb/source.vb#8)]  
@@ -142,7 +144,7 @@ Bu konuda kullanarak bir özel güvenlik belirteci oluşturmak nasıl gösterilm
   
 #### <a name="to-integrate-the-custom-security-token-with-custom-client-and-service-credentials"></a>Özel güvenlik belirteci özel istemci ve hizmet kimlik bilgileri ile tümleştirmek için  
   
-1.  Özel istemci ve hizmet kimlik bilgilerini sağlayın ve özel güvenlik kimlik doğrulaması yapmak için daha önce oluşturduğunuz özel güvenlik belirteci altyapısı tarafından kullanılan özel belirteç bilgileri belirtme izin vermek üzere uygulama için bir API sağlamak için eklenmesi gerekir belirteç içeriği. Aşağıdaki örnekler, bu nasıl yapılabilir gösterir. [!INCLUDE[crabout](../../../../includes/crabout-md.md)]Özel istemci ve hizmet kimlik bilgilerini görmek [izlenecek yol: özel istemci oluşturma ve hizmet kimlik bilgilerini](../../../../docs/framework/wcf/extending/walkthrough-creating-custom-client-and-service-credentials.md).  
+1.  Özel istemci ve hizmet kimlik bilgilerini sağlayın ve özel güvenlik kimlik doğrulaması yapmak için daha önce oluşturduğunuz özel güvenlik belirteci altyapısı tarafından kullanılan özel belirteç bilgileri belirtme izin vermek üzere uygulama için bir API sağlamak için eklenmesi gerekir belirteç içeriği. Aşağıdaki örnekler, bu nasıl yapılabilir gösterir. Özel istemci ve hizmet kimlik bilgileri hakkında daha fazla bilgi için bkz: [izlenecek yol: özel istemci oluşturma ve hizmet kimlik bilgilerini](../../../../docs/framework/wcf/extending/walkthrough-creating-custom-client-and-service-credentials.md).  
   
      [!code-csharp[c_CustomToken#10](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_customtoken/cs/source.cs#10)]
      [!code-vb[c_CustomToken#10](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_customtoken/vb/source.vb#10)]  

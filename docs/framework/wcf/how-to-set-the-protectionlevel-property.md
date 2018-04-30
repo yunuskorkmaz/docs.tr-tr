@@ -1,12 +1,13 @@
 ---
-title: "Nasıl yapılır: ProtectionLevel Özelliğini Ayarlama"
-ms.custom: 
+title: 'Nasıl yapılır: ProtectionLevel Özelliğini Ayarlama'
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - csharp
@@ -15,19 +16,20 @@ helpviewer_keywords:
 - WCF, security
 - ProtectionLevel property
 ms.assetid: 3d4e8f80-0f9e-4a26-9899-beb6584e78df
-caps.latest.revision: "10"
+caps.latest.revision: 10
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: a9b90df85259dfe48f071ca2b4b8404cfe8e673e
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: abb1d3cc64b7992b9983e81c5f8a5c30c2343f30
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="how-to-set-the-protectionlevel-property"></a>Nasıl yapılır: ProtectionLevel Özelliğini Ayarlama
-Uygun bir öznitelik uygulama ve özelliğini ayarlayarak koruma düzeyi ayarlayabilirsiniz. Her ileti tüm parçalarını etkilemek için hizmet düzeyinde koruma ayarlayabilirsiniz veya yöntemlerden ileti bölümleri için giderek daha çok parçalı düzeyde koruma ayarlayabilirsiniz. [!INCLUDE[crabout](../../../includes/crabout-md.md)]`ProtectionLevel` özelliği, bkz: [anlama koruma düzeyi](../../../docs/framework/wcf/understanding-protection-level.md).  
+Uygun bir öznitelik uygulama ve özelliğini ayarlayarak koruma düzeyi ayarlayabilirsiniz. Her ileti tüm parçalarını etkilemek için hizmet düzeyinde koruma ayarlayabilirsiniz veya yöntemlerden ileti bölümleri için giderek daha çok parçalı düzeyde koruma ayarlayabilirsiniz. Hakkında daha fazla bilgi için `ProtectionLevel` özelliği, bkz: [anlama koruma düzeyi](../../../docs/framework/wcf/understanding-protection-level.md).  
   
 > [!NOTE]
 >  Koruma düzeyleri yalnızca kodda, yapılandırmada yok ayarlayabilirsiniz.  
@@ -53,7 +55,7 @@ Uygun bir öznitelik uygulama ve özelliğini ayarlayarak koruma düzeyi ayarlay
      [!code-vb[C_ProtectionLevel#2](../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_protectionlevel/vb/source.vb#2)]  
   
 ## <a name="protecting-fault-messages"></a>Koruma hata iletileri  
- Bir hizmette oluşturulan özel durumlar SOAP hatalarının istemciye gönderilebilir. [!INCLUDE[crabout](../../../includes/crabout-md.md)]kesinlikle oluşturma yazılan hataları, bkz: [belirtme ve işleme hataları sözleşme ve hizmetlerde](../../../docs/framework/wcf/specifying-and-handling-faults-in-contracts-and-services.md) ve [nasıl yapılır: hizmet sözleşmelerinde hata bildirme](../../../docs/framework/wcf/how-to-declare-faults-in-service-contracts.md).  
+ Bir hizmette oluşturulan özel durumlar SOAP hatalarının istemciye gönderilebilir. Hataları kesinlikle oluşturma hakkında daha fazla bilgi yazılan için bkz: [belirtme ve işleme hataları sözleşme ve hizmetlerde](../../../docs/framework/wcf/specifying-and-handling-faults-in-contracts-and-services.md) ve [nasıl yapılır: hizmet sözleşmelerinde hata bildirme](../../../docs/framework/wcf/how-to-declare-faults-in-service-contracts.md).  
   
 #### <a name="to-protect-a-fault-message"></a>Bir hata iletisi koruma  
   
@@ -72,7 +74,7 @@ Uygun bir öznitelik uygulama ve özelliğini ayarlayarak koruma düzeyi ayarlay
      [!code-vb[C_ProtectionLevel#4](../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_protectionlevel/vb/source.vb#4)]  
   
 ## <a name="protecting-message-parts"></a>İleti bölümleri koruma  
- Bir ileti kısımlarını korumak için bir ileti sözleşmesi kullanın. [!INCLUDE[crabout](../../../includes/crabout-md.md)]ileti sözleşmeleri için bkz: [kullanarak ileti sözleşmeleri](../../../docs/framework/wcf/feature-details/using-message-contracts.md).  
+ Bir ileti kısımlarını korumak için bir ileti sözleşmesi kullanın. İleti sözleşmeleri hakkında daha fazla bilgi için bkz: [kullanarak ileti sözleşmeleri](../../../docs/framework/wcf/feature-details/using-message-contracts.md).  
   
 #### <a name="to-protect-a-message-body"></a>İleti gövdesi korumak için  
   

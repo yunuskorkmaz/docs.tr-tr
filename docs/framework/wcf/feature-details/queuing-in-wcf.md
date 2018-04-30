@@ -16,11 +16,11 @@ ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: 01dc36c73d9e668dd98cb5ba8b275d3d5177ba61
-ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
+ms.openlocfilehash: 8bf4a668fe882212da1c6626b66a4f55390a562f
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/28/2018
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="queuing-in-wcf"></a>WCF'de Kuyruğa Alma
 Bu bölümde, kuyruğa alınan iletişim kullanmayı açıklar [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)].  
@@ -51,7 +51,7 @@ Bu bölümde, kuyruğa alınan iletişim kullanmayı açıklar [!INCLUDE[indigo1
   
  MSMQ kuyrukları Ayrıca Active Directory dizin hizmetine kayıtlı bir Windows kimlik bilgileriniz kullanılarak güvenli hale getirilebilir. MSMQ yüklerken, bir Windows etki alanı ağına parçası olarak bilgisayar gerektirir Active Directory Tümleştirme yükleyebilirsiniz.  
   
- [!INCLUDE[crabout](../../../../includes/crabout-md.md)] MSMQ bkz [yükleme Message Queuing (MSMQ)](../../../../docs/framework/wcf/samples/installing-message-queuing-msmq.md).  
+ MSMQ hakkında daha fazla bilgi için bkz: [yükleme Message Queuing (MSMQ)](../../../../docs/framework/wcf/samples/installing-message-queuing-msmq.md).  
   
 ### <a name="netmsmqbinding"></a>NetMsmqBinding  
  [ \<NetMsmqBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/netmsmqbinding.md) sıraya alınan bağlama [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] için iki sağlar [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] MSMQ kullanarak iletişim kurmak için uç noktaları. Bağlama, bu nedenle, MSMQ için belirli özellikleri sunar. Ancak, tüm MSMQ özellikleri ve Özellikler sunulan `NetMsmqBinding`. Sıkıştırma `NetMsmqBinding` en iyi bir müşterilerin çoğu yeterli bulmalıdır özellikler kümesi ile tasarlanmıştır.  
@@ -79,12 +79,12 @@ Bu bölümde, kuyruğa alınan iletişim kullanmayı açıklar [!INCLUDE[indigo1
   
  Bağlama ilgilenilen iki özelliklere sahiptir:  
   
--   `DeadLetterQueue`: Bu özellik eski ileti sırası istenen olup olmadığını gösteren bir numaralandırma olur. Bir isteniyorsa numaralandırması sahipsiz sırayı türünü de içerir. Değerler `None`, `System`, ve `Custom`. [!INCLUDE[crabout](../../../../includes/crabout-md.md)] Bu özellikleri yorumu bkz [ileti aktarımı hatalarını işlemek için teslim edilemeyen iletiler sırası kullanma](../../../../docs/framework/wcf/feature-details/using-dead-letter-queues-to-handle-message-transfer-failures.md)  
+-   `DeadLetterQueue`: Bu özellik eski ileti sırası istenen olup olmadığını gösteren bir numaralandırma olur. Bir isteniyorsa numaralandırması sahipsiz sırayı türünü de içerir. Değerler `None`, `System`, ve `Custom`. Bu özellikleri yorumu hakkında daha fazla bilgi için bkz: [ileti aktarımı hatalarını işlemek için teslim edilemeyen iletiler sırası kullanma](../../../../docs/framework/wcf/feature-details/using-dead-letter-queues-to-handle-message-transfer-failures.md)  
   
 -   `CustomDeadLetterQueue`: Bu özellik uygulamaya özgü sahipsiz sırayı Tekdüzen Kaynak Tanımlayıcısı (URI) adresidir. Bu gereklidir `DeadLetterQueue`.`Custom` seçilir.  
   
 #### <a name="poison-message-handling-properties"></a>Zehirli ileti işleme özellikleri  
- Hizmet bir işlem altında hedef kuyruktan iletileri okuduğunda hizmet çeşitli nedenlerle iletiyi işlemek başarısız olabilir. İleti geri yeniden okumaya sıraya konur. Sürekli olarak, bir dizi poison ileti işleme başarısız iletilerle dağıtılacak bağlamasında özellikleri yapılandırılabilir. Dört özellikleri vardır: `ReceiveRetryCount`, `MaxRetryCycles`, `RetryCycleDelay`, ve `ReceiveErrorHandling`. [!INCLUDE[crabout](../../../../includes/crabout-md.md)] Bu özellikleri görmek [zehirli ileti işleme](../../../../docs/framework/wcf/feature-details/poison-message-handling.md).  
+ Hizmet bir işlem altında hedef kuyruktan iletileri okuduğunda hizmet çeşitli nedenlerle iletiyi işlemek başarısız olabilir. İleti geri yeniden okumaya sıraya konur. Sürekli olarak, bir dizi poison ileti işleme başarısız iletilerle dağıtılacak bağlamasında özellikleri yapılandırılabilir. Dört özellikleri vardır: `ReceiveRetryCount`, `MaxRetryCycles`, `RetryCycleDelay`, ve `ReceiveErrorHandling`. Bu özellikler hakkında daha fazla bilgi için bkz: [zehirli ileti işleme](../../../../docs/framework/wcf/feature-details/poison-message-handling.md).  
   
 #### <a name="security-properties"></a>Güvenlik özellikleri  
  Erişim denetim listeleri (ACL'ler) gibi MSMQ kendi güvenlik modeli, bulunan bir sıra kullanıma sunar. veya kimliği doğrulanmış iletilere gönderme. `NetMsmqBinding` Aktarım güvenlik ayarlarına bir parçası olarak bu güvenlik özellikleri sunar. Taşıma güvenliği bağlamasında iki özellik vardır: `MsmqAuthenticationMode` ve `MsmqProtectionLevel`. Bu özellikleri ayarlarında MSMQ nasıl yapılandırıldığına bağlıdır. Daha fazla bilgi için bkz: [taşıma güvenliği kullanarak iletileri güvenli hale getirme](../../../../docs/framework/wcf/feature-details/securing-messages-using-transport-security.md).  

@@ -1,13 +1,13 @@
 ---
-title: "Nasıl yapılır: Özel Bir Kullanıcı Adı ve Parola Doğrulayıcı Kullanma"
-ms.custom: 
+title: 'Nasıl yapılır: Özel Bir Kullanıcı Adı ve Parola Doğrulayıcı Kullanma'
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - dotnet-clr
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - csharp
@@ -15,17 +15,17 @@ dev_langs:
 helpviewer_keywords:
 - WCF, username and password
 ms.assetid: 8e08b74b-fa44-4018-b63d-0d0805f85e3f
-caps.latest.revision: 
+caps.latest.revision: 14
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: ee138c52c8cdd63137bf3c468ebbdd064d60d443
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 4ea4f4d7021f02d239b9e2e93a85b5baaf5a0317
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="how-to-use-a-custom-user-name-and-password-validator"></a>Nasıl yapılır: Özel Bir Kullanıcı Adı ve Parola Doğrulayıcı Kullanma
 Bir kullanıcı adı ve parola kullanıldığında kimlik doğrulaması için varsayılan olarak, [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] Windows kullanıcı adı ve parolayı doğrulamak için kullanır. Ancak, [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] özel kullanıcı adı ve parola kimlik doğrulaması düzeni için olarak da bilinen sağlar *doğrulayıcıları*. Özel kullanıcı adı ve parola Doğrulayıcı içerecek şekilde türeyen bir sınıf oluşturun <xref:System.IdentityModel.Selectors.UserNamePasswordValidator> ve ardından yapılandırın.  
@@ -64,7 +64,7 @@ Bir kullanıcı adı ve parola kullanıldığında kimlik doğrulaması için va
   
     1.  Yapılandırma dosyasında altında [ \<system.serviceModel >](../../../../docs/framework/configure-apps/file-schema/wcf/system-servicemodel.md) öğesi ekleme bir [ \<bağlamaları >](../../../../docs/framework/configure-apps/file-schema/wcf/bindings.md) öğesi.  
   
-    2.  Ekleme bir [ \<wsHttpBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/wshttpbinding.md) veya [ \<basicHttpBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/basichttpbinding.md) bağlamaları bölümüne öğesi. [!INCLUDE[crabout](../../../../includes/crabout-md.md)]oluşturma bir [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] bağlama öğesi, bkz: [nasıl yapılır: yapılandırmada hizmet bağlama belirtme](../../../../docs/framework/wcf/how-to-specify-a-service-binding-in-configuration.md).  
+    2.  Ekleme bir [ \<wsHttpBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/wshttpbinding.md) veya [ \<basicHttpBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/basichttpbinding.md) bağlamaları bölümüne öğesi. Oluşturma hakkında daha fazla bilgi için bir [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] bağlama öğesi, bkz: [nasıl yapılır: yapılandırmada hizmet bağlama belirtme](../../../../docs/framework/wcf/how-to-specify-a-service-binding-in-configuration.md).  
   
     3.  Ayarlama `mode` özniteliği [ \<Güvenlik >](../../../../docs/framework/configure-apps/file-schema/wcf/security-of-wshttpbinding.md) veya [ \<Güvenlik >](../../../../docs/framework/configure-apps/file-schema/wcf/security-of-basichttpbinding.md) için `Message`, `Transport`, `or``TransportWithMessageCredential`.  
   
@@ -77,7 +77,7 @@ Bir kullanıcı adı ve parola kullanıldığında kimlik doğrulaması için va
         > [!NOTE]
         >  Zaman bir [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] Internet Information Services (aktarım düzeyi güvenlik kullanarak IIS içinde) barındırılan hizmetin ve <xref:System.ServiceModel.Security.UserNamePasswordServiceCredential.UserNamePasswordValidationMode%2A> özelliği ayarlanmış <xref:System.ServiceModel.Security.UserNamePasswordValidationMode.Custom>, özel kimlik doğrulama şeması bir alt kümesini Windows kimlik doğrulaması kullanır. Bu senaryoda, IIS Windows kimlik doğrulaması öncesinde gerçekleştirdiğinden olan [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] özel Doğrulayıcı çağırma.  
   
-     [!INCLUDE[crabout](../../../../includes/crabout-md.md)]oluşturma bir [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] bağlama öğesi, bkz: [nasıl yapılır: yapılandırmada hizmet bağlama belirtme](../../../../docs/framework/wcf/how-to-specify-a-service-binding-in-configuration.md).  
+     Oluşturma hakkında daha fazla bilgi için bir [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] bağlama öğesi, bkz: [nasıl yapılır: yapılandırmada hizmet bağlama belirtme](../../../../docs/framework/wcf/how-to-specify-a-service-binding-in-configuration.md).  
   
      Aşağıdaki örnek, bağlama için yapılandırma kodu gösterir.  
   

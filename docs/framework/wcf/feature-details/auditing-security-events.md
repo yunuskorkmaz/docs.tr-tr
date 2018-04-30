@@ -18,18 +18,18 @@ ms.author: bruceper
 manager: mbaldwin
 ms.workload:
 - dotnet
-ms.openlocfilehash: 948ff11cf1b7ecacc6f9f5fdebfc3a0cbd1ef5b1
-ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
+ms.openlocfilehash: 69b013389511ac2cfb31e22f7a39e98eb22fb977
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/28/2018
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="auditing-security-events"></a>Güvenlik Etkinliklerini Denetleme
 İle oluşturulan uygulamaların [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] (başarı, hata veya her ikisi de) güvenlik olaylarını denetleme özelliği ile oturum açabilir. Olaylar için Windows sistem olay günlüğüne yazılır ve Olay Görüntüleyicisi'ni kullanarak incelenebilir.  
   
  Denetim bir yöneticinin zaten oluştu veya devam ediyor saldırının algılamak bir yol sağlar. Buna ek olarak, Denetim güvenlikle ilgili sorunların hatalarını ayıklamak için bir geliştirici yardımcı olabilir. Örneğin, yetkilendirme veya denetimi İlkesi yapılandırmasında bir hata için yetkili bir kullanıcı yanlışlıkla erişimini engellediği, bir geliştirici hızlı bir şekilde bulmak ve olay günlüğünü inceleyerek bu hatanın nedenini ortadan kaldırmak.  
   
- [!INCLUDE[crabout](../../../../includes/crabout-md.md)] [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] Güvenlik, bkz: [güvenliğine genel bakış](../../../../docs/framework/wcf/feature-details/security-overview.md). [!INCLUDE[crabout](../../../../includes/crabout-md.md)] programlama [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)], bkz: [temel WCF programlama](../../../../docs/framework/wcf/basic-wcf-programming.md).  
+ Hakkında daha fazla bilgi için [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] güvenlik, bkz: [güvenliğine genel bakış](../../../../docs/framework/wcf/feature-details/security-overview.md). Programlama hakkında daha fazla bilgi için [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)], bkz: [temel WCF programlama](../../../../docs/framework/wcf/basic-wcf-programming.md).  
   
 ## <a name="audit-level-and-behavior"></a>Denetim düzeyi ve davranışı  
  İki düzeyde güvenlik denetimleri mevcuttur:  

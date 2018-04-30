@@ -1,28 +1,28 @@
 ---
-title: "Windows Communication Foundation Bağlamaları Genel Bakış"
-ms.custom: 
+title: Windows Communication Foundation Bağlamaları Genel Bakış
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - dotnet-clr
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - bindings [WCF], overview
 ms.assetid: cfb5842f-e0f9-4c56-a015-f2b33f258232
-caps.latest.revision: 
+caps.latest.revision: 16
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: 4bc4fc7559872a808c2de87e4926075614351030
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 58b3691c186dc6a33c94d9f8a1af96be488d67df
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="windows-communication-foundation-bindings-overview"></a>Windows Communication Foundation Bağlamaları Genel Bakış
 Bağlamaları değil uç noktasına bağlanmak için gereken iletişim ayrıntılarını belirtmek için kullanılan nesneleri bir [!INCLUDE[indigo1](../../../includes/indigo1-md.md)] hizmet. İçindeki her bir uç nokta bir [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] hizmet bağlama iyi belirtilen olmasını gerektirir. Bu konu bağlamaları tanımlamak, iletişim ayrıntılarını hangi bağlamaları içinde yer alan bir bağlama öğelerini türlerini özetler [!INCLUDE[indigo2](../../../includes/indigo2-md.md)], ve bir bağlama için bir uç nokta nasıl belirtilebilir.  
@@ -40,7 +40,7 @@ Bağlamaları değil uç noktasına bağlanmak için gereken iletişim ayrıntı
  (Örneğin, TCP veya HTTP) kullanmak için temel Aktarım Protokolü belirler.  
   
 ## <a name="the-elements-of-a-binding"></a>Bağlama öğeleri  
- Bir bağlama neredeyse her biri bir hizmet uç noktasına bağlanmak için gereken iletişim bilgilerini parçası belirtir bağlama öğelerinin, bir sıralı yığın oluşur. Her ikisi de yığınında iki en düşük katman olan gerekli. Yığın tabanına aktarım bağlama öğe ve yalnızca bu belirtimleri kodlama iletisini içeren bir öğedir. Bir iletişim protokolü belirtmek isteğe bağlı bağlama öğeleri bu iki gerekli öğeler üzerinde katmanlanmış. [!INCLUDE[crabout](../../../includes/crabout-md.md)]Bu bağlama öğeleri ve bunların doğru sipariş, bkz: [özel bağlamaları](../../../docs/framework/wcf/extending/custom-bindings.md).  
+ Bir bağlama neredeyse her biri bir hizmet uç noktasına bağlanmak için gereken iletişim bilgilerini parçası belirtir bağlama öğelerinin, bir sıralı yığın oluşur. Her ikisi de yığınında iki en düşük katman olan gerekli. Yığın tabanına aktarım bağlama öğe ve yalnızca bu belirtimleri kodlama iletisini içeren bir öğedir. Bir iletişim protokolü belirtmek isteğe bağlı bağlama öğeleri bu iki gerekli öğeler üzerinde katmanlanmış. Bu bağlama öğeleri ve doğru sıralama hakkında daha fazla bilgi için bkz: [özel bağlamaları](../../../docs/framework/wcf/extending/custom-bindings.md).  
   
 ## <a name="system-provided-bindings"></a>Sistem Tarafından Sağlanan Bağlamalar  
  Bağlama bilgileri karmaşık olabilir ve bazı ayarları başkalarıyla uyumlu olmayabilir. Bu nedenle, [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] sistem tarafından sağlanan bağlamalar kümesi içerir. Bu bağlamaların çoğu uygulama gereksinimlerini karşılamak üzere tasarlanmıştır. Aşağıdaki sınıflar sistem tarafından sağlanan bağlamalar bazı örnekleri temsil eder:  
@@ -56,7 +56,7 @@ Bağlamaları değil uç noktasına bağlanmak için gereken iletişim ayrıntı
  Tüm açıklamalarını tam bir listesi için [!INCLUDE[indigo2](../../../includes/indigo2-md.md)]-bağlamaları, bkz: sağlanan [System-Provided bağlamaları](../../../docs/framework/wcf/system-provided-bindings.md).  
   
 ## <a name="using-your-own-bindings"></a>Kendi bağlamaları kullanma  
- Dahil edilen sistem tarafından sağlanan bağlamalar hiçbiri bir hizmet uygulaması gerektiren özellikleri doğru bileşimini varsa, kendi bağlama oluşturabilirsiniz. Bunu yapmanın iki yolu vardır. Oluşturabilir ya da yeni bir bağlama kullanarak bağlama öğeleri önceden varolan bir <xref:System.ServiceModel.Channels.CustomBinding> nesne veya oluşturabilir tamamen kullanıcı tanımlı bir bağlama türetme tarafından <xref:System.ServiceModel.Channels.Binding> bağlama. [!INCLUDE[crabout](../../../includes/crabout-md.md)]Bu iki yaklaşım kullanarak bağlama bkz kendi oluşturma [özel bağlamaları](../../../docs/framework/wcf/extending/custom-bindings.md) ve [Creating User-Defined bağlamaları](../../../docs/framework/wcf/extending/creating-user-defined-bindings.md).  
+ Dahil edilen sistem tarafından sağlanan bağlamalar hiçbiri bir hizmet uygulaması gerektiren özellikleri doğru bileşimini varsa, kendi bağlama oluşturabilirsiniz. Bunu yapmanın iki yolu vardır. Oluşturabilir ya da yeni bir bağlama kullanarak bağlama öğeleri önceden varolan bir <xref:System.ServiceModel.Channels.CustomBinding> nesne veya oluşturabilir tamamen kullanıcı tanımlı bir bağlama türetme tarafından <xref:System.ServiceModel.Channels.Binding> bağlama. Bu iki yaklaşım kullanarak kendi bağlama oluşturma hakkında daha fazla bilgi için bkz: [özel bağlamaları](../../../docs/framework/wcf/extending/custom-bindings.md) ve [Creating User-Defined bağlamaları](../../../docs/framework/wcf/extending/creating-user-defined-bindings.md).  
   
 ## <a name="using-bindings"></a>Bağlamaları kullanma  
  Bağlamalar kullanılarak iki temel adımları kapsar:  

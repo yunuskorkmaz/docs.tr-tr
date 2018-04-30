@@ -1,24 +1,26 @@
 ---
-title: "HTTP Taşıma Güvenliği"
-ms.custom: 
+title: HTTP Taşıma Güvenliği
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: d3439262-c58e-4d30-9f2b-a160170582bb
-caps.latest.revision: "14"
+caps.latest.revision: 14
 author: BrucePerlerMS
 ms.author: bruceper
 manager: mbaldwin
-ms.workload: dotnet
-ms.openlocfilehash: f81a95546d593cd5a0acb6a89edf2f6c763f07df
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 2787c38603fd0f88878596a809d7e3c5cfdfb350
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="http-transport-security"></a>HTTP Taşıma Güvenliği
 HTTP taşıma olarak kullanırken, güvenlik Güvenli Yuva Katmanı (SSL) uygulaması tarafından sağlanır. SSL yaygın olarak Internet'te bir hizmete bir istemci kimlik doğrulaması için kullanılır ve ardından kanal gizliliği (şifreleme) sağlamak için. Bu konuda SSL nasıl çalıştığı ve nasıl şu uygulanan açıklanmaktadır [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)].  
@@ -61,7 +63,7 @@ HTTP taşıma olarak kullanırken, güvenlik Güvenli Yuva Katmanı (SSL) uygula
 ### <a name="using-httpcfg-for-ssl"></a>SSL için HttpCfg kullanma  
  Kendini barındıran oluşturuyorsanız [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] uygulama adresinde HttpCfg.exe Aracı'nı indirme [Windows XP Service Pack 2 Destek Araçları site](http://go.microsoft.com/fwlink/?LinkId=29002).  
   
- [!INCLUDE[crabout](../../../../includes/crabout-md.md)]bir bağlantı noktası bir X.509 sertifikası ile ayarlamak için HttpCfg.exe aracını kullanarak bkz [nasıl yapılır: bir SSL sertifikası ile bir bağlantı noktası yapılandırın](../../../../docs/framework/wcf/feature-details/how-to-configure-a-port-with-an-ssl-certificate.md).  
+ X.509 sertifikası ile bir bağlantı ayarlamak için HttpCfg.exe aracını kullanma hakkında daha fazla bilgi için bkz: [nasıl yapılır: bir SSL sertifikası ile bir bağlantı noktası yapılandırın](../../../../docs/framework/wcf/feature-details/how-to-configure-a-port-with-an-ssl-certificate.md).  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
  [Aktarım Güvenliği](../../../../docs/framework/wcf/feature-details/transport-security.md)  

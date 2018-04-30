@@ -1,12 +1,13 @@
 ---
-title: "Akış özelleştirme (WCF Veri Hizmetleri)"
-ms.custom: 
+title: Akış özelleştirme (WCF Veri Hizmetleri)
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework-oob
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - csharp
@@ -17,19 +18,20 @@ helpviewer_keywords:
 - Atom Publishing Protocol [WCF Data Services]
 - WCF Data Services, customizing feeds
 ms.assetid: 0d1a39bc-6462-4683-bd7d-e74e0fd28a85
-caps.latest.revision: "11"
+caps.latest.revision: 11
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 2c5e33490a94346880986fdf66a4c5907084c8cd
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.workload:
+- dotnet
+ms.openlocfilehash: c59bfdd22125f10b8a35afc8c264b6b2869a3998
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="feed-customization-wcf-data-services"></a>Akış özelleştirme (WCF Veri Hizmetleri)
-[!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)]kullanan [!INCLUDE[ssODataFull](../../../../includes/ssodatafull-md.md)] veriyi bir akış olarak kullanıma sunmak için. [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)]veri akışları için hem Atom hem de JavaScript nesne gösterimi (JSON) biçimini destekler. Atom akışı, kullandığınızda [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] varlıkları ve ilişkileri HTTP iletisinin gövdesinde bulunan bir XML biçimine gibi verileri seri hale getirmek için standart bir yöntemini sağlar. [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)]bir varsayılan varlık özellik eşlemesi varlıklarda bulunan verileri Atom öğeler arasındaki tanımlar. Daha fazla bilgi için bkz: [OData: Atom biçimi](http://go.microsoft.com/fwlink/?LinkID=185794).  
+[!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] kullanan [!INCLUDE[ssODataFull](../../../../includes/ssodatafull-md.md)] veriyi bir akış olarak kullanıma sunmak için. [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] veri akışları için hem Atom hem de JavaScript nesne gösterimi (JSON) biçimini destekler. Atom akışı, kullandığınızda [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] varlıkları ve ilişkileri HTTP iletisinin gövdesinde bulunan bir XML biçimine gibi verileri seri hale getirmek için standart bir yöntemini sağlar. [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] bir varsayılan varlık özellik eşlemesi varlıklarda bulunan verileri Atom öğeler arasındaki tanımlar. Daha fazla bilgi için bkz: [OData: Atom biçimi](http://go.microsoft.com/fwlink/?LinkID=185794).  
   
  Veri Hizmeti tarafından döndürülen özelliği veri özelleştirilmiş bir şekilde yerine akış biçiminde standart seri hale gerektiren bir uygulama senaryosu olabilir. İle [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)], bir veri akışı serileştirmede kullanılmayan öğeleri ve özniteliklerinin girdinin veya akıştaki girdinin özel öğeleri için bir varlık özelliklerini eşlenebilir özelleştirebilirsiniz.  
   
@@ -53,19 +55,19 @@ ms.lasthandoff: 01/19/2018
  Daha fazla bilgi için bkz: [nasıl yapılır: özelleştirme akışları Entity Framework sağlayıcısı ile](../../../../docs/framework/data/wcf/how-to-customize-feeds-with-ef-provider-wcf-data-services.md).  
   
 > [!NOTE]
->  Veri modeli için Uzantılar Entity Designer tarafından desteklenmediği için veri modeli içeren XML dosyasını el ile değiştirmeniz gerekir. [!INCLUDE[crabout](../../../../includes/crabout-md.md)]tarafından oluşturulan .edmx dosyasının [!INCLUDE[adonet_edm](../../../../includes/adonet-edm-md.md)] araçları, bkz: [.edmx dosyasının genel bakış](http://msdn.microsoft.com/library/f4c8e7ce-1db6-417e-9759-15f8b55155d4).  
+>  Veri modeli için Uzantılar Entity Designer tarafından desteklenmediği için veri modeli içeren XML dosyasını el ile değiştirmeniz gerekir. Tarafından oluşturulan .edmx dosyasının hakkında daha fazla bilgi için [!INCLUDE[adonet_edm](../../../../includes/adonet-edm-md.md)] araçları, bkz: [.edmx dosyasının genel bakış](http://msdn.microsoft.com/library/f4c8e7ce-1db6-417e-9759-15f8b55155d4).  
   
 ### <a name="custom-feed-attributes"></a>Özel öznitelikler akışı  
  Aşağıdaki tabloda veri modeli tanımlayan kavramsal şema tanım dili için (CSDL) ekleyebileceğiniz akışları özelleştirme XML öznitelikleri gösterir. Bu öznitelikler özelliklerine eşdeğer <xref:System.Data.Services.Common.EntityPropertyMappingAttribute> yansıma sağlayıcı ile kullanılır.  
   
 |Öznitelik adı|Açıklama|  
 |--------------------|-----------------|  
-|`FC_ContentKind`|İçerik türünü belirtir. Aşağıdaki anahtar sözcükler dağıtım içerik türünü tanımlar.<br /><br /> `text:`Özellik değeri akışta metin olarak görüntülenir.<br /><br /> `html:`Özellik değeri akışta HTML olarak görüntülenir.<br /><br /> `xhtml:`Özellik değeri akışta XML biçimli HTML olarak görüntülenir.<br /><br /> Bu anahtar sözcükler değerleri eşdeğer <xref:System.Data.Services.Common.SyndicationTextContentKind> yansıma sağlayıcı ile kullanılan numaralandırması.<br /><br /> Bu öznitelik ne zaman desteklenen `FC_NsPrefix` ve `FC_NsUri` öznitelikler kullanılır.<br /><br /> Değerini belirttiğinizde `xhtml` için `FC_ContentKind` özniteliği sağlamanız özellik değeri düzgün şekilde biçimlendirilmemiş XML içeriyor. Veri Hizmeti, herhangi bir dönüştürme yapmadan değeri döndürür. Ayrıca tüm XML öğesi öneklerini döndürülen XML ad alanı URI'si ve eşlenen akışta tanımlanan önek sahip olduğundan emin olmalısınız.|  
+|`FC_ContentKind`|İçerik türünü belirtir. Aşağıdaki anahtar sözcükler dağıtım içerik türünü tanımlar.<br /><br /> `text:` Özellik değeri akışta metin olarak görüntülenir.<br /><br /> `html:` Özellik değeri akışta HTML olarak görüntülenir.<br /><br /> `xhtml:` Özellik değeri akışta XML biçimli HTML olarak görüntülenir.<br /><br /> Bu anahtar sözcükler değerleri eşdeğer <xref:System.Data.Services.Common.SyndicationTextContentKind> yansıma sağlayıcı ile kullanılan numaralandırması.<br /><br /> Bu öznitelik ne zaman desteklenen `FC_NsPrefix` ve `FC_NsUri` öznitelikler kullanılır.<br /><br /> Değerini belirttiğinizde `xhtml` için `FC_ContentKind` özniteliği sağlamanız özellik değeri düzgün şekilde biçimlendirilmemiş XML içeriyor. Veri Hizmeti, herhangi bir dönüştürme yapmadan değeri döndürür. Ayrıca tüm XML öğesi öneklerini döndürülen XML ad alanı URI'si ve eşlenen akışta tanımlanan önek sahip olduğundan emin olmalısınız.|  
 |`FC_KeepInContent`|Başvurulan özellik değeri akışın içerik bölümü hem eşleşen konumda eklenmesi gerektiğini gösterir. Geçerli değerler `true` ve `false`. Sonuçta elde edilen akış önceki sürümleriyle geriye dönük uyumlu olmak için [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)], değerini belirtin `true` değeri akış içeriği bölümünde bulunduğundan emin olmak için.|  
 |`FC_NsPrefix`|XML öğesi olmayan dağıtım eşlemeye ad alanı öneki. Bu öznitelik ile birlikte kullanılmalıdır `FC_NsUri` özniteliği ve kullanılamaz `FC_ContentKind` özniteliği.|  
 |`FC_NsUri`|Ad alanı URI'si dağıtım olmayan eşlemeye XML öğesi. Bu öznitelik ile birlikte kullanılmalıdır `FC_NsPrefix` özniteliği ve kullanılamaz `FC_ContentKind` özniteliği.|  
 |`FC_SourcePath`|Bu eşleme kuralı akış varlık özelliğinin yolu geçerlidir. İçinde kullanıldığında bu öznitelik yalnızca desteklenen bir `EntityType` öğesi.<br /><br /> <xref:System.Data.Services.Common.EntityPropertyMappingAttribute.SourcePath%2A> Özelliği bir karmaşık tür doğrudan başvuruda bulunamaz. Karmaşık türler için bir yol ifadesi özellik adları bir ters eğik çizgi ile ayrıldığı kullanmanız gerekir (`/`) karakter. Örneğin, aşağıdaki değerleri bir varlık türü için izin `Person` bir tamsayı özelliği ile `Age` ve karmaşık bir özellik<br /><br /> `Address`:<br /><br /> `Age`<br /><br /> `Address/Street`<br /><br /> <xref:System.Data.Services.Common.EntityPropertyMappingAttribute.SourcePath%2A> Özelliği, bir boşluk veya bir özellik adı geçerli değil herhangi bir karakter içeren bir değere ayarlanamaz.|  
-|`FC_TargetPath`|Sonuçta elde edilen akışın özelliği eşlemek istediğiniz hedef öğesinin adı. Bu öğe Atom belirtim tarafından tanımlanan bir öğe veya özel bir öğe olabilir.<br /><br /> Belirli bir konuma işaret önceden tanımlanmış dağıtım hedef yolu değerleri aşağıdaki sözcükler bir [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] akış.<br /><br /> `SyndicationAuthorEmail:``atom:email` Alt öğesi olan `atom:author` öğesi.<br /><br /> `SyndicationAuthorName:``atom:name` Alt öğesi olan `atom:author` öğesi.<br /><br /> `SyndicationAuthorUri:``atom:uri` Alt öğesi olan `atom:author` öğesi.<br /><br /> `SyndicationContributorEmail:``atom:email` Alt öğesi olan `atom:contributor` öğesi.<br /><br /> `SyndicationContributorName:``atom:name` Alt öğesi olan `atom:contributor` öğesi.<br /><br /> `SyndicationContributorUri:``atom:uri` Alt öğesi olan `atom:contributor` öğesi.<br /><br /> `SyndicationCustomProperty:`Bir özel özellik öğesi. Özel bir öğeye eşlerken hedef iç içe öğelerin bir ters eğik çizgi ile ayrılır yol ifadesi olmalıdır (`/`) ve öznitelikleri ampersan tarafından belirtilen (`@`). Aşağıdaki örnekte, dize `UnitsInStock/@ReorderLevel` adlı bir özniteliği için bir özellik değeri eşler `ReorderLevel` adlı bir alt öğesi üzerinde `UnitsInStock` kök giriş öğesinin.<br /><br /> `<Property Name="ReorderLevel" Type="Int16"               m:FC_TargetPath="UnitsInStock/@ReorderLevel"               m:FC_NsPrefix="Northwind"               m:FC_NsUri="http://schemas.examples.microsoft.com/dataservices"               m:FC_KeepInContent="false"               />`<br /><br /> Hedef bir özel öğe adı olduğunda `FC_NsPrefix` ve `FC_NsUri` öznitelikler de belirtilmesi gerekir.<br /><br /> `SyndicationPublished:``atom:published` Öğesi.<br /><br /> `SyndicationRights:``atom:rights` Öğesi.<br /><br /> `SyndicationSummary:``atom:summary` Öğesi.<br /><br /> `SyndicationTitle:``atom:title` Öğesi.<br /><br /> `SyndicationUpdated:``atom:updated` Öğesi.<br /><br /> Bu anahtar sözcükler değerleri eşdeğer <xref:System.Data.Services.Common.SyndicationItemProperty> yansıma sağlayıcı ile kullanılan numaralandırması.|  
+|`FC_TargetPath`|Sonuçta elde edilen akışın özelliği eşlemek istediğiniz hedef öğesinin adı. Bu öğe Atom belirtim tarafından tanımlanan bir öğe veya özel bir öğe olabilir.<br /><br /> Belirli bir konuma işaret önceden tanımlanmış dağıtım hedef yolu değerleri aşağıdaki sözcükler bir [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] akış.<br /><br /> `SyndicationAuthorEmail:` `atom:email` Alt öğesi olan `atom:author` öğesi.<br /><br /> `SyndicationAuthorName:` `atom:name` Alt öğesi olan `atom:author` öğesi.<br /><br /> `SyndicationAuthorUri:` `atom:uri` Alt öğesi olan `atom:author` öğesi.<br /><br /> `SyndicationContributorEmail:` `atom:email` Alt öğesi olan `atom:contributor` öğesi.<br /><br /> `SyndicationContributorName:` `atom:name` Alt öğesi olan `atom:contributor` öğesi.<br /><br /> `SyndicationContributorUri:` `atom:uri` Alt öğesi olan `atom:contributor` öğesi.<br /><br /> `SyndicationCustomProperty:` Bir özel özellik öğesi. Özel bir öğeye eşlerken hedef iç içe öğelerin bir ters eğik çizgi ile ayrılır yol ifadesi olmalıdır (`/`) ve öznitelikleri ampersan tarafından belirtilen (`@`). Aşağıdaki örnekte, dize `UnitsInStock/@ReorderLevel` adlı bir özniteliği için bir özellik değeri eşler `ReorderLevel` adlı bir alt öğesi üzerinde `UnitsInStock` kök giriş öğesinin.<br /><br /> `<Property Name="ReorderLevel" Type="Int16"               m:FC_TargetPath="UnitsInStock/@ReorderLevel"               m:FC_NsPrefix="Northwind"               m:FC_NsUri="http://schemas.examples.microsoft.com/dataservices"               m:FC_KeepInContent="false"               />`<br /><br /> Hedef bir özel öğe adı olduğunda `FC_NsPrefix` ve `FC_NsUri` öznitelikler de belirtilmesi gerekir.<br /><br /> `SyndicationPublished:` `atom:published` Öğesi.<br /><br /> `SyndicationRights:` `atom:rights` Öğesi.<br /><br /> `SyndicationSummary:` `atom:summary` Öğesi.<br /><br /> `SyndicationTitle:` `atom:title` Öğesi.<br /><br /> `SyndicationUpdated:` `atom:updated` Öğesi.<br /><br /> Bu anahtar sözcükler değerleri eşdeğer <xref:System.Data.Services.Common.SyndicationItemProperty> yansıma sağlayıcı ile kullanılan numaralandırması.|  
   
 > [!NOTE]
 >  Öznitelik adları ve değerleri büyük/küçük harf duyarlıdır. Öznitelikleri olabilir ya da uygulanan `EntityType` öğesi ya da bir veya daha fazla `Property` öğeleri, ancak her ikisi de.  

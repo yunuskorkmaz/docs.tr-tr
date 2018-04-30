@@ -1,33 +1,33 @@
 ---
-title: "AJAX Tümleştirme ve JSON Desteği"
-ms.custom: 
+title: AJAX Tümleştirme ve JSON Desteği
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - dotnet-clr
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - AJAX integration and JSON support [WCF]
 ms.assetid: 3851a8fc-d861-4ac1-873c-96af0343d3a7
-caps.latest.revision: 
+caps.latest.revision: 17
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: cd5c84250349f4adaaac68a302d771280328a4e1
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 0d62da8cf67fb8f996f341018c39146b51e308c3
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="ajax-integration-and-json-support"></a>AJAX Tümleştirme ve JSON Desteği
 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] ASP.NET zaman uyumsuz JavaScript ve XML (AJAX) ve JavaScript nesne gösterimi (JSON) veri biçimi izin vermek için destek [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] AJAX istemcilere işlemlerinin açığa Hizmetleri. AJAX istemcileridir Web JavaScript kodunu çalıştıran ve bunlara erişme sayfaları [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] HTTP isteklerini kullanarak hizmetleri. Bu bölümdeki konular, bunu gerçekleştirme ve bu destek hakkında bilgi sağlar.  
   
- [!INCLUDE[crabout](../../../../includes/crabout-md.md)]Bkz: ASP.NET AJAX ve ASP.NET 2.0 ile kendi tümleştirme [ASP.NET AJAX genel bakış](http://go.microsoft.com/fwlink/?LinkId=96725).  
+ ASP.NET AJAX hakkında daha fazla bilgi ve ASP.NET 2.0 ile tümleştirmesi için bkz: [ASP.NET AJAX genel bakış](http://go.microsoft.com/fwlink/?LinkId=96725).  
   
 ## <a name="in-this-section"></a>Bu Bölümde  
  [ASP.NET AJAX için WCF Hizmetleri Oluşturma](../../../../docs/framework/wcf/feature-details/creating-wcf-services-for-aspnet-ajax.md)  

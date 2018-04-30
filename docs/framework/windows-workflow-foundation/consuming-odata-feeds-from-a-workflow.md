@@ -14,11 +14,11 @@ ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: 09eb22c0c4bfaf549bd18cccae0c84957e730aa6
-ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
+ms.openlocfilehash: ce7d7812eadea2d9472a62bd007d2eca6ae07891
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/28/2018
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="consuming-odata-feeds-from-a-workflow"></a>Bir iş akışından akışları OData kullanma
 WCF Veri Hizmetleri bir bileşenidir [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] temsili durum aktarımı (REST) semantiği kullanarak Web veya intranet üzerinden verileri kullanmak ve kullanıma sunmak için açık veri Protokolü (OData) kullanan hizmetler oluşturmak etkinleştirir. OData veri URI tarafından adreslenebilir kaynaklar olarak kullanıma sunar. Bir HTTP isteği göndermek ve OData akışı işlem herhangi bir uygulama veri hizmeti döndürdüğünü bir OData tabanlı veri hizmetiyle etkileşim kurabilirsiniz. Ayrıca, WCF Veri Hizmetleri OData Akışları'kullandığında daha zengin bir programlama deneyimi sağlayan istemci kitaplıklarını içerir [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] uygulamalar. Bu konu, bir iş akışında istemci kitaplıkları kullanılarak ve kullanılmadan bir OData tüketen genel bir bakış akışı sağlar.  
@@ -78,7 +78,7 @@ WCF Veri Hizmetleri bir bileşenidir [!INCLUDE[dnprdnshort](../../../includes/dn
  Aşağıdaki örnekte, bir `ListCustomers` etkinlik tanımlanır. Bu etkinlik örnek Northwind veri hizmeti sorgular ve döndüren bir `List<Customer>` Northwind veritabanındaki tüm müşteriler içerir. Zaman uyumsuz iş tarafından gerçekleştirilen `GetCustomers` yöntemi. Bu yöntem hizmeti tüm müşteriler için sorgular ve bunların içine kopyalar bir `List<Customer>`. Ardından sonuçları havuzda olmadığını görmek için denetler. Bu nedenle, hizmet sonraki sonuç sayfasını için sorgular, listeye ekler ve tüm müşteri verilerinin alınamadı kadar devam eder.  
   
 > [!NOTE]
->  [!INCLUDE[crabout](../../../includes/crabout-md.md)] WCF Veri Hizmetleri, disk belleği bakın. [Nasıl yapılır: yük, sonuçları (WCF Veri Hizmetleri) disk belleğine alınan](http://go.microsoft.com/fwlink/?LinkId=193452).  
+>  WCF Veri Hizmetleri disk belleği hakkında daha fazla bilgi için bkz. [Nasıl yapılır: yük, sonuçları (WCF Veri Hizmetleri) disk belleğine alınan](http://go.microsoft.com/fwlink/?LinkId=193452).  
   
  Tüm müşteriler eklendikten sonra listesi döndürülür. `GetCustomers` Yöntemi etkinliğin içinde belirtilen <xref:System.Activities.AsyncCodeActivity.BeginExecute%2A> geçersiz kılar. Yöntemin dönüş değeri olduğundan bir `Func<string, List<Customer>>` yöntemini belirtmek için oluşturulur.  
   
@@ -143,4 +143,4 @@ WCF Veri Hizmetleri bir bileşenidir [!INCLUDE[dnprdnshort](../../../includes/dn
  **\<İlişki bağlantı "Düzenle" title = "Order" href="Orders(10643) =" / >**  
  **\<İlişki bağlantı = "http://schemas.microsoft.com/ado/2007/08/dataservices/related/Customer"**  
  **türü = "uygulama/atom + xml yazın; Giriş =" title = "Müşteri" href = "(10643) / müşteri sipariş" = / >**  
-**...**  Bu örnek iş akışı uygulama yazarları bir OData hizmetten döndürülen ham verileri kullanmak üzere kullanabileceğiniz bir yöntem sağlar. [!INCLUDE[crabout](../../../includes/crabout-md.md)] WCF veri URI'ler kullanarak hizmetlere erişme, bkz: [veri hizmeti kaynaklar (WCF Veri Hizmetleri) erişim](http://go.microsoft.com/fwlink/?LinkId=193397) ve [OData: URI kuralları](http://go.microsoft.com/fwlink/?LinkId=185564).
+**...**  Bu örnek iş akışı uygulama yazarları bir OData hizmetten döndürülen ham verileri kullanmak üzere kullanabileceğiniz bir yöntem sağlar. WCF veri URI'ler kullanarak hizmetlere erişme hakkında daha fazla bilgi için bkz: [veri hizmeti kaynaklar (WCF Veri Hizmetleri) erişim](http://go.microsoft.com/fwlink/?LinkId=193397) ve [OData: URI kuralları](http://go.microsoft.com/fwlink/?LinkId=185564).

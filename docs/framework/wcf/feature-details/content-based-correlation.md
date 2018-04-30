@@ -1,24 +1,26 @@
 ---
-title: "İçeriğe Dayalı Bağıntı"
-ms.custom: 
+title: İçeriğe Dayalı Bağıntı
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: f46a2b68-8d24-4122-bbee-9573fc3f9fb4
-caps.latest.revision: "17"
+caps.latest.revision: 17
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 72c7233a1c667b7ee3a1f00cc2fdf3c78f58e789
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 4b4ebd49fbed12f1e8120e67f32496cd782531da
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="content-based-correlation"></a>İçeriğe Dayalı Bağıntı
 İş akışı Hizmetleri istemcileri ve diğer hizmetleri ile iletişim kurarken, genellikle var. benzersiz bir ileti belirli bir örneği ile ilişkilendirir bazı veri alışverişi iletilerindeki İçeriğe dayalı bağıntı iletide, müşteri numarası veya sipariş kimliği iletileri yönlendirmek için uygun iş akışı örneği gibi bu verileri kullanır. Bu konuda, iş akışlarında içerik tabanlı bağıntı kullanımı açıklanmaktadır.  
@@ -27,7 +29,7 @@ ms.lasthandoff: 12/22/2017
  İçeriğe dayalı bağıntı bir iş akışı hizmeti tek bir istemci tarafından erişilen birden çok yöntemi vardır ve veri alışverişi iletilerindeki parçası istenen örneğini tanımlar olmadığında kullanılır.  
   
 > [!NOTE]
->  İçeriğe dayalı bağıntı, bağlama için desteklenen içerik exchange bağlamaları birini olmadığından bağlam bağıntı kullanılamaz yararlıdır. [!INCLUDE[crabout](../../../../includes/crabout-md.md)]bağlam bağıntı bkz [bağlam değişimi](../../../../docs/framework/wcf/feature-details/context-exchange-correlation.md).  
+>  İçeriğe dayalı bağıntı, bağlama için desteklenen içerik exchange bağlamaları birini olmadığından bağlam bağıntı kullanılamaz yararlıdır. Bağlam bağıntı hakkında daha fazla bilgi için bkz: [bağlam değişimi](../../../../docs/framework/wcf/feature-details/context-exchange-correlation.md).  
   
  Bu iletişimde kullanılan her Mesajlaşma etkinlik örneğini benzersiz şekilde tanımlar iletide verilerin konumu belirtmeniz gerekir. Bu sağlayarak gerçekleştirilir bir <xref:System.ServiceModel.MessageQuerySet>, kullanarak bir <xref:System.ServiceModel.Activities.QueryCorrelationInitializer> veya <xref:System.ServiceModel.Activities.Receive.CorrelatesOn%2A>, ileti parçanın veya örneğini benzersiz şekilde tanımlamak veri parçası için sorgular.  
   

@@ -1,24 +1,26 @@
 ---
-title: "Nasıl yapılır: Yapılandırma Dosyası Kullanarak Bir Hizmet için Meta Verileri Yayımlama"
-ms.custom: 
+title: 'Nasıl yapılır: Yapılandırma Dosyası Kullanarak Bir Hizmet için Meta Verileri Yayımlama'
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: f061443f-92df-4824-b36a-609c4cd14a17
-caps.latest.revision: "24"
+caps.latest.revision: 24
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 42f70cd34f65d5393d79b8ace4f9eb704f309d0f
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: d30031db590b424688cc0af6a573c1042099e64e
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="how-to-publish-metadata-for-a-service-using-a-configuration-file"></a>Nasıl yapılır: Yapılandırma Dosyası Kullanarak Bir Hizmet için Meta Verileri Yayımlama
 Bu meta veri yayımlama için gösteren iki nasıl yapılır konuları biridir bir [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] hizmet. Bir hizmeti bir yapılandırma dosyası kullanarak ve kod kullanarak meta verileri, nasıl yayınlamalıdır belirtmek için iki yolu vardır. Bu konuda, bir yapılandırma dosyası kullanarak bir hizmet için meta verileri yayımlama gösterilmektedir.  
@@ -26,7 +28,7 @@ Bu meta veri yayımlama için gösteren iki nasıl yapılır konuları biridir b
 > [!CAUTION]
 >  Bu konu, güvenli olmayan bir şekilde meta verileri yayımlama gösterilmektedir. Herhangi bir istemci hizmetinden meta verileri alabilir. Hizmetinizin meta verileri güvenli bir şekilde yayımlamak için gerekli olup olmadığını görmek [özel güvenli meta veri uç noktasının](../../../../docs/framework/wcf/samples/custom-secure-metadata-endpoint.md).  
   
- [!INCLUDE[crabout](../../../../includes/crabout-md.md)]bkz: kod içinde meta veri yayımlama [nasıl yapılır: meta verileri kullanarak bir hizmet kodu yayımlama](../../../../docs/framework/wcf/feature-details/how-to-publish-metadata-for-a-service-using-code.md). Meta veri yayımlama sağlayan bir WS-aktarımı GET isteği ya da bir HTTP/GET isteği kullanarak kullanarak meta verileri almak istemcileri `?wsdl` sorgu dizesi. Kod çalıştığından emin olmak için bir temel oluşturmak [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] hizmet. Kolaylık olması için temel bir kendi kendini barındıran hizmet aşağıdaki kodu sağlanır.  
+ Kodda meta veri yayımlama hakkında daha fazla bilgi için bkz: [nasıl yapılır: meta verilerini kullanarak bir hizmet kodu yayımlama](../../../../docs/framework/wcf/feature-details/how-to-publish-metadata-for-a-service-using-code.md). Meta veri yayımlama sağlayan bir WS-aktarımı GET isteği ya da bir HTTP/GET isteği kullanarak kullanarak meta verileri almak istemcileri `?wsdl` sorgu dizesi. Kod çalıştığından emin olmak için bir temel oluşturmak [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] hizmet. Kolaylık olması için temel bir kendi kendini barındıran hizmet aşağıdaki kodu sağlanır.  
   
 ```csharp  
 using System;  
@@ -115,7 +117,7 @@ namespace Metadata.Samples
   
   
   
-4.  Ekleme bir `<serviceMetadata>` öğesine `<behavior>` öğesi. Ayarlama `httpGetEnabled` özniteliğini `true` ve `policyVersion` özniteliği için Policy15. `httpGetEnabled`bir HTTP GET isteği tarafından yapılan meta veri isteklerine hizmet sağlar. `policyVersion`WS-Policy 1.5 meta verilerini oluştururken uygun hizmete bildirir.  
+4.  Ekleme bir `<serviceMetadata>` öğesine `<behavior>` öğesi. Ayarlama `httpGetEnabled` özniteliğini `true` ve `policyVersion` özniteliği için Policy15. `httpGetEnabled` bir HTTP GET isteği tarafından yapılan meta veri isteklerine hizmet sağlar. `policyVersion` WS-Policy 1.5 meta verilerini oluştururken uygun hizmete bildirir.  
   
   
   
@@ -159,13 +161,13 @@ namespace Metadata.Samples
   
 7.  Önceki adımda eklediğiniz meta veri uç noktaları için ayarlamak `binding` özniteliği şunlardan biri:  
   
-    -   `mexHttpBinding`için HTTP yayımlama.  
+    -   `mexHttpBinding` için HTTP yayımlama.  
   
-    -   `mexHttpsBinding`için HTTPS yayımlama.  
+    -   `mexHttpsBinding` için HTTPS yayımlama.  
   
-    -   `mexNamedPipeBinding`adlandırılmış kanal yayını için.  
+    -   `mexNamedPipeBinding` adlandırılmış kanal yayını için.  
   
-    -   `mexTcpBinding`için TCP yayımlama.  
+    -   `mexTcpBinding` için TCP yayımlama.  
   
 8.  Bir önceki adımda eklediğiniz meta veri uç noktaları için adres eşit olarak ayarlayın:  
   
@@ -177,7 +179,7 @@ namespace Metadata.Samples
   
 9. Derleme ve konsol uygulamasını çalıştırın.  
   
-10. (Bu örnekte, http://localhost:8001/MetadataSample) hizmetinin temel adresine göz atın ve meta veri yayımlama açık olduğunu doğrulamak için Internet Explorer'ı kullanın. Değilse, sayfanın üst kısmındaki ortaya çıkan bir ileti görüntüler: "Bu hizmet için meta veri yayımlama şu anda devre dışı."  
+10. Hizmetin taban adresine göz atmak için Internet Explorer kullanın (http://localhost:8001/MetadataSample Bu örnekte) ve meta veri yayımlama açık olduğunu doğrulayın. Değilse, sayfanın üst kısmındaki ortaya çıkan bir ileti görüntüler: "Bu hizmet için meta veri yayımlama şu anda devre dışı."  
   
 ### <a name="to-use-default-endpoints"></a>Varsayılan uç noktalar kullanmak için  
   
@@ -198,7 +200,7 @@ namespace Metadata.Samples
     </configuration>  
     ```  
   
-     Hizmetin sahip olduğu bir <xref:System.ServiceModel.Description.ServiceMetadataBehavior> ile `httpGetEnabled` kümesine `true`hizmeti etkin meta veri yayımlama sahiptir ve uç nokta yok açıkça eklenmiş olduğundan çalışma zamanı varsayılan uç noktaları ekler. [!INCLUDE[crabout](../../../../includes/crabout-md.md)]Varsayılan uç noktalar, bağlamaları ve davranışları, bkz: [Basitleştirilmiş yapılandırma](../../../../docs/framework/wcf/simplified-configuration.md) ve [WCF hizmetleri için Basitleştirilmiş yapılandırma](../../../../docs/framework/wcf/samples/simplified-configuration-for-wcf-services.md).  
+     Hizmetin sahip olduğu bir <xref:System.ServiceModel.Description.ServiceMetadataBehavior> ile `httpGetEnabled` kümesine `true`hizmeti etkin meta veri yayımlama sahiptir ve uç nokta yok açıkça eklenmiş olduğundan çalışma zamanı varsayılan uç noktaları ekler. Varsayılan uç noktalar, bağlamaları ve davranışları hakkında daha fazla bilgi için bkz: [Basitleştirilmiş yapılandırma](../../../../docs/framework/wcf/simplified-configuration.md) ve [WCF hizmetleri için Basitleştirilmiş yapılandırma](../../../../docs/framework/wcf/samples/simplified-configuration-for-wcf-services.md).  
   
 ## <a name="example"></a>Örnek  
  Aşağıdaki kod örneği temel bir gösterir [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] hizmet ve hizmet için meta verilerini yayımlayan yapılandırma dosyası.  

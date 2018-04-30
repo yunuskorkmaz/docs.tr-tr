@@ -19,18 +19,18 @@ helpviewer_keywords:
 - composite formatting
 - objects [.NET Framework], formatting multiple objects
 ms.assetid: 87b7d528-73f6-43c6-b71a-f23043039a49
-caps.latest.revision: ''
+caps.latest.revision: 36
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: 156ef0f063219f5e78084dd664b64699d33e6593
-ms.sourcegitcommit: 935d5267c44f9bce801468ef95f44572f1417e8c
+ms.openlocfilehash: 473669b4aaa0782fec32fb0e2d89875c4ab7a838
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/28/2018
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="composite-formatting"></a>Bileşik Biçimlendirme
 .NET bileşik biçimlendirme özelliği nesneleri ve bir bileşik biçim dizesi listesini girdi olarak alır. Bir bileşik biçimlendirme dizesi, sabit metinle karışık bir şekilde listedeki nesnelere karşılık gelen, biçim öğeleri adı verilen dizinli yer tutuculardan oluşur. Biçimlendirme işlemi sonuç olarak, orijinal sabit metin ve listedeki nesnelerin dize temsillerinin karışımından oluşan bir dize oluşturur.  
@@ -74,12 +74,12 @@ ms.lasthandoff: 03/28/2018
  [!code-csharp[Formatting.Composite#7](../../../samples/snippets/csharp/VS_Snippets_CLR/Formatting.Composite/cs/index1.cs#7)]
  [!code-vb[Formatting.Composite#7](../../../samples/snippets/visualbasic/VS_Snippets_CLR/Formatting.Composite/vb/index1.vb#7)]  
   
- Birden çok biçim öğesi, aynı parametre tanımlayıcısını belirterek nesne listesindeki aynı öğeye başvurabilir. Bileşik biçimlendirme dizesi belirterek aynı sayısal değer onaltılık, bilimsel ve sayı biçiminde örneğin biçimlendirebilirsiniz: "0 x {0: x} {0:E} {0: n}", aşağıdaki örnekte gösterildiği gibi.  
+ Birden çok biçim öğesi, aynı parametre tanımlayıcısını belirterek nesne listesindeki aynı öğeye başvurabilir. Bileşik biçimlendirme dizesi belirterek aynı sayısal değer onaltılık, bilimsel ve sayı biçiminde örneğin biçimlendirebilirsiniz: "0 x{0:X} {0:E} {0:N}", aşağıdaki örnekte gösterildiği gibi.  
   
  [!code-csharp[Formatting.Composite#10](../../../samples/snippets/csharp/VS_Snippets_CLR/Formatting.Composite/cs/index1.cs#10)]
  [!code-vb[Formatting.Composite#10](../../../samples/snippets/visualbasic/VS_Snippets_CLR/Formatting.Composite/vb/index1.vb#10)]  
   
- Her biçim öğesi listedeki herhangi bir nesneye başvurabilir. Örneğin, eğer iki nesne var ise, şu şekilde bir bileşik biçimlendirme dizesi belirterek ikinci, birince ve üçüncü nesneyi biçimlendirebilirsiniz: "{1} {0} {2}". Bir biçimlendirme nesnesi tarafından başvurulmayan nesneler yok sayılır. A <xref:System.FormatException> parametre belirleyici nesnelerin listesini sınırları dışındaki bir öğe belirlerse çalışma zamanında atılır.  
+ Her biçim öğesi listedeki herhangi bir nesneye başvurabilir. Örneğin, üç nesne varsa, biçimlendirmek ikinci, ilk ve üçüncü nesne şuna benzer bir bileşik biçim dizesi belirterek: "{1} {0} {2}". Bir biçimlendirme nesnesi tarafından başvurulmayan nesneler yok sayılır. A <xref:System.FormatException> parametre belirleyici nesnelerin listesini sınırları dışındaki bir öğe belirlerse çalışma zamanında atılır.  
   
 ### <a name="alignment-component"></a>Hizalama Bileşeni  
  İsteğe bağlı *hizalama* tercih edilen biçimlendirilmiş alan genişliğini belirten imzalı bir tamsayı bir bileşendir. Varsa değerini *hizalama* biçimlendirilmiş dize uzunluğu'dan küçük *hizalama* göz ardı edilir ve biçimlendirilmiş dize uzunluğu alan genişliği kullanılır. Biçimlendirilmiş verileri alanında sağ varsa hizalanır *hizalama* pozitif ve sola hizalı *hizalama* negatiftir. Eğer iç boşluk gerekliyse, boşluk kullanılır. Virgül gerekli ise *hizalama* belirtilir.  
@@ -105,7 +105,7 @@ ms.lasthandoff: 03/28/2018
 ### <a name="escaping-braces"></a>Çıkış Yapan Ayraçlar  
  Açma ve kapatma ayraçları bir biçim öğesinin başlangıcı ve bitişi olarak yorumlanır. Sonuç olarak, sabit bir açılış veya kapanış ayracını görüntülemek için bir kaçış dizisi kullanmanız gerekir. Bir açılış ayracı ("{") görüntülemek için sabit metinde iki açılış ayracı ("{{"), veya bir kapanış ayracı ("}") görüntülemek için sabit metinde iki kapanış ayracı ("}}") belirtin. Bir biçim öğesindeki ayraçlar, karşılaşıldıkları sırada sıralı olarak yorumlanır. İç içe ayraçları yorumlama desteklenmez.  
   
- Kaçırılan ayraçların yorumlanma şekli beklenmeyen sonuçlara neden olabilir. Örneğin; bir açılış ayracı, bir ondalık sayı olarak biçimlendirilmiş sayısal değer ve bir kapanış ayracı görüntülemeyi amaçlayan "{{{0:D}}}" biçim öğesini göz önüne alın. Ancak, biçim öğesi aslında şu şekilde yorumlanır:  
+ Kaçırılan ayraçların yorumlanma şekli beklenmeyen sonuçlara neden olabilir. Örneğin, öğeyi Biçimlendir göz önünde bulundurun "{{{0:D}}}" açılan parantez görüntülemek için hedeflenen, sayısal bir değer olarak biçimlendirilmiş bir ondalık sayı ve bir kapanış ayracı. Ancak, biçim öğesi aslında şu şekilde yorumlanır:  
   
 1.  İlk iki açılış ayracı ("{{") kaçırılır ve bir açılış ayracı olur.  
   
@@ -137,7 +137,7 @@ ms.lasthandoff: 03/28/2018
   
     -   Bir tarih ve saat değeri null olmayan bir yöntemle biçimlendirme bileşik varsa <xref:System.IFormatProvider> bağımsız değişkeni çağrılır, çalışma zamanı isteklerini bir <xref:System.Globalization.DateTimeFormatInfo> nesnesinin kendi <xref:System.IFormatProvider.GetFormat%2A?displayProperty=nameWithType> yöntemi. Bağımsız değişkenin değeri ise, bir sağlamak kaydedemediği `null`, veya bileşik yöntemi biçimlendirme yoksa bir <xref:System.IFormatProvider> parametresi <xref:System.Globalization.DateTimeFormatInfo> geçerli iş parçacığı kültürünü kullanılan nesne.  
   
-    -   Bileşik biçimlendirme ile çağrılırsa başka türden nesneler için bir <xref:System.IFormatProvider> bağımsız değişkeni, değeri (dahil olmak üzere bir `null`, yoksa <xref:System.IFormatProvider> nesne tarafından sağlanan) doğrudan geçirilen <xref:System.IFormattable.ToString%2A?displayProperty=nameWithType> uygulaması.  Aksi halde, bir <xref:System.Globalization.CultureInfo> geçerli iş parçacığı kültürünü temsil eden nesnesi iletilir <xref:System.IFormattable.ToString%2A?displayProperty=nameWithType> uygulaması.  
+    -   Diğer türleri nesneler için bileşik biçimlendirme varsa yöntemi çağrılır bir <xref:System.IFormatProvider> bağımsız değişken değerini doğrudan geçirilir <xref:System.IFormattable.ToString%2A?displayProperty=nameWithType> uygulaması. Aksi takdirde, `null` geçirilir <xref:System.IFormattable.ToString%2A?displayProperty=nameWithType> uygulaması.  
   
 4.  Türü parametresiz `ToString` yöntemi, ya da bir geçersiz kılma <xref:System.Object.ToString?displayProperty=nameWithType> veya devralınabilir. taban sınıf davranışını devralır, olarak adlandırılır. Bu durumda, biçim dizesi tarafından belirtilen *formatString* biçimi öğesinde bileşen varsa, göz ardı edilir.  
   

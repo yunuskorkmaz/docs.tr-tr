@@ -1,13 +1,13 @@
 ---
-title: "WCF İstemcisi Kullanarak Hizmetlere Erişme"
-ms.custom: 
+title: WCF İstemcisi Kullanarak Hizmetlere Erişme
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - dotnet-clr
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - csharp
@@ -15,17 +15,17 @@ dev_langs:
 helpviewer_keywords:
 - clients [WCF], consuming services
 ms.assetid: d780af9f-73c5-42db-9e52-077a5e4de7fe
-caps.latest.revision: 
+caps.latest.revision: 36
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: 1f33d64e9ec1881b1ef7b93ba29d233f2f580c29
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 69352ba5c12267f5075ae38c5bdcc0665b3fe050
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="accessing-services-using-a-wcf-client"></a>WCF İstemcisi Kullanarak Hizmetlere Erişme
 Bir hizmeti oluşturduktan sonra sonraki adıma oluşturmaktır bir [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] istemci proxy. Bir istemci uygulaması kullanan [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] hizmetiyle iletişim kurmak için istemci proxy. İstemci uygulamaları genellikle oluşturmak için bir hizmetin meta verileri içe aktarma [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] hizmetini çağırmak için kullanılan istemci kodu.  
@@ -61,7 +61,7 @@ Svcutil.exe <list of WSDL and XSD files on file system>
 Svcutil.exe <file1 [,file2]>  
 ```  
   
- Yalnızca bir dosya adı verilen, çıktı dosyası adını olmasıdır. İki dosya adları verilirse, ilk dosya içerikleri oluşturulan yapılandırmayla birleştirilmiş ve ikinci dosyaya yazılan bir giriş yapılandırma dosyası ise. [!INCLUDE[crabout](../../../includes/crabout-md.md)]yapılandırma, bkz: [hizmetler için bağlamaları yapılandırma](../../../docs/framework/wcf/configuring-bindings-for-wcf-services.md).  
+ Yalnızca bir dosya adı verilen, çıktı dosyası adını olmasıdır. İki dosya adları verilirse, ilk dosya içerikleri oluşturulan yapılandırmayla birleştirilmiş ve ikinci dosyaya yazılan bir giriş yapılandırma dosyası ise. Yapılandırma hakkında daha fazla bilgi için bkz: [hizmetler için bağlamaları yapılandırma](../../../docs/framework/wcf/configuring-bindings-for-wcf-services.md).  
   
 > [!IMPORTANT]
 >  Güvenli olmayan meta veri isteklerine yönelik bazı riskleri herhangi güvenli ağ isteği yapan aynı şekilde:, kurduğunuz endpoint kimin olduğu yazacaktır olduğundan emin değilseniz, aldığınız bilgiler kötü amaçlı bir hizmete meta verileri olabilir.  
@@ -194,7 +194,7 @@ Console.WriteLine("Add({0},{1}) = {2}", value1, value2, result)
   
 -   <xref:System.ServiceModel.CommunicationObjectAbortedException>: Yuva bağlantısı iptal edildi. Bu uzak ana bilgisayara veya bir arka plandaki ağ kaynağı sorunu aşılması alma zaman aşımı iletinizi işlenirken bir hata kaynaklanabilir.  
   
- Bu tür özel durumlar ortaya çıktığında, sorunu çözmek için en iyi hizmet tarafı izlemeyi etkinleştirmek ve hangi özel durumu var. oluştu belirlemek için yoludur. [!INCLUDE[crabout](../../../includes/crabout-md.md)]bkz: izleme, [izleme](../../../docs/framework/wcf/diagnostics/tracing/index.md) ve [uygulamanız sorun giderme kullanarak izlemeyi](../../../docs/framework/wcf/diagnostics/tracing/using-tracing-to-troubleshoot-your-application.md).  
+ Bu tür özel durumlar ortaya çıktığında, sorunu çözmek için en iyi hizmet tarafı izlemeyi etkinleştirmek ve hangi özel durumu var. oluştu belirlemek için yoludur. İzleme hakkında daha fazla bilgi için bkz: [izleme](../../../docs/framework/wcf/diagnostics/tracing/index.md) ve [uygulamanız sorun giderme kullanarak izlemeyi](../../../docs/framework/wcf/diagnostics/tracing/using-tracing-to-troubleshoot-your-application.md).  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
  [Nasıl yapılır: İstemci Oluşturma](../../../docs/framework/wcf/how-to-create-a-wcf-client.md)  

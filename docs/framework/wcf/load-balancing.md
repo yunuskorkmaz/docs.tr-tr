@@ -1,36 +1,36 @@
 ---
-title: "YükDengeleme"
-ms.custom: 
+title: YükDengeleme
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - dotnet-clr
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - load balancing [WCF]
 ms.assetid: 148e0168-c08d-4886-8769-776d0953b80f
-caps.latest.revision: 
+caps.latest.revision: 7
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: 5874d7237608331e5d8284a4ad1cd94ba6fb3451
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: fe13c4aee41cd7af188ccaea77b3c0af07603e2c
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="load-balancing"></a>YükDengeleme
-Tek yönlü kapasitesini artırmak için [!INCLUDE[indigo1](../../../includes/indigo1-md.md)] uygulamaları bunları bir yük dengeli sunucu grubunda dağıtarak ölçeğini etmektir. [!INCLUDE[indigo2](../../../includes/indigo2-md.md)]uygulamalar, donanım tabanlı Yük Dengeleme cihazları yanı sıra, standart Yük Dengeleme yazılım yük dengeleyici gibi Windows Ağ Yükü Dengelemesi dahil olmak üzere teknikler kullanılarak Yük Dengeleme olabilir.  
+Tek yönlü kapasitesini artırmak için [!INCLUDE[indigo1](../../../includes/indigo1-md.md)] uygulamaları bunları bir yük dengeli sunucu grubunda dağıtarak ölçeğini etmektir. [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] uygulamalar, donanım tabanlı Yük Dengeleme cihazları yanı sıra, standart Yük Dengeleme yazılım yük dengeleyici gibi Windows Ağ Yükü Dengelemesi dahil olmak üzere teknikler kullanılarak Yük Dengeleme olabilir.  
   
  Aşağıdaki bölümlerde Yük Dengeleme konuları ele [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] çeşitli sistem tarafından sağlanan bağlamalar kullanılarak oluşturulan uygulamalar.  
   
 ## <a name="load-balancing-with-the-basic-http-binding"></a>Yük Dengeleme ile temel HTTP bağlama  
- Yük Dengelemesi, açısından [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] kullanarak iletişim kuran uygulamaları <xref:System.ServiceModel.BasicHttpBinding> HTTP ortak başka türlerde ağ trafiği (statik HTML içeriğini, ASP.NET sayfaları veya ASMX Web Hizmetleri) daha hiç farklı değildir. [!INCLUDE[indigo2](../../../includes/indigo2-md.md)]Bu bağlamayı kullanan kanallar kendiliğinden durum bilgisiz ve kanal kapandığında kendi bağlantılarını sonlandırılacak. Bu nedenle, <xref:System.ServiceModel.BasicHttpBinding> teknikleri de var olan HTTP Yük Dengeleme ile çalışır.  
+ Yük Dengelemesi, açısından [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] kullanarak iletişim kuran uygulamaları <xref:System.ServiceModel.BasicHttpBinding> HTTP ortak başka türlerde ağ trafiği (statik HTML içeriğini, ASP.NET sayfaları veya ASMX Web Hizmetleri) daha hiç farklı değildir. [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] Bu bağlamayı kullanan kanallar kendiliğinden durum bilgisiz ve kanal kapandığında kendi bağlantılarını sonlandırılacak. Bu nedenle, <xref:System.ServiceModel.BasicHttpBinding> teknikleri de var olan HTTP Yük Dengeleme ile çalışır.  
   
  Varsayılan olarak, <xref:System.ServiceModel.BasicHttpBinding> iletileri ile bir bağlantı HTTP üstbilgisi gönderir bir `Keep-Alive` bunları destekleyen hizmetler kalıcı bağlantı için istemcileri etkinleştirir değeri. Bu yapılandırma, bağlantıları aynı sunucuya sonraki ileti göndermek için yeniden kullanılabilir daha önce kurulmuş olduğundan Gelişmiş üretimi sunar. Ancak, bağlantı yeniden istemcilerin hepsini bir kez deneme yük dengeleme verimliliğini azaltır yük dengeli grubu içindeki belirli bir sunucuya kesinlikle ilişkili hale gelmesine neden olabilir. Bu davranış istenmeyen, ise HTTP `Keep-Alive` kullanarak sunucu üzerinde devre dışı bırakılabilir <xref:System.ServiceModel.Channels.HttpTransportBindingElement.KeepAliveEnabled%2A> özelliği ile bir <xref:System.ServiceModel.Channels.CustomBinding> veya kullanıcı tanımlı <xref:System.ServiceModel.Channels.Binding>. Aşağıdaki örnek Yapılandırması'nı kullanarak bunu kullanmayı gösterir.  
   
@@ -90,7 +90,7 @@ Tek yönlü kapasitesini artırmak için [!INCLUDE[indigo1](../../../includes/in
 </configuration>  
 ```  
   
- [!INCLUDE[crabout](../../../includes/crabout-md.md)]Varsayılan uç noktalar, bağlamaları ve davranışları, bkz: [Basitleştirilmiş yapılandırma](../../../docs/framework/wcf/simplified-configuration.md) ve [WCF hizmetleri için Basitleştirilmiş yapılandırma](../../../docs/framework/wcf/samples/simplified-configuration-for-wcf-services.md).  
+ Varsayılan uç noktalar, bağlamaları ve davranışları hakkında daha fazla bilgi için bkz: [Basitleştirilmiş yapılandırma](../../../docs/framework/wcf/simplified-configuration.md) ve [WCF hizmetleri için Basitleştirilmiş yapılandırma](../../../docs/framework/wcf/samples/simplified-configuration-for-wcf-services.md).  
   
 ## <a name="load-balancing-with-the-wshttp-binding-and-the-wsdualhttp-binding"></a>Yük Dengeleme WSHttp bağlama ve WSDualHttp bağlama  
  Hem <xref:System.ServiceModel.WSHttpBinding> ve <xref:System.ServiceModel.WSDualHttpBinding> çeşitli değişiklikler yapılandırma bağlama varsayılan yapılan sağlanan HTTP Yük Dengeleme teknikler kullanılarak yük dengeli.  

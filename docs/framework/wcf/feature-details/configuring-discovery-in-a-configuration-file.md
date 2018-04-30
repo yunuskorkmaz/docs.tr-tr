@@ -1,24 +1,26 @@
 ---
-title: "Yapılandırma Dosyasındaki Bir Keşfi Yapılandırma"
-ms.custom: 
+title: Yapılandırma Dosyasındaki Bir Keşfi Yapılandırma
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: b9884c11-8011-4763-bc2c-c526b80175d0
-caps.latest.revision: "7"
+caps.latest.revision: 7
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 43344fc5411236fbb7420fd4d58526b3e0351d4f
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 4ba224bbf27e5a61168040c944bb940c3e6b0d8c
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="configuring-discovery-in-a-configuration-file"></a>Yapılandırma Dosyasındaki Bir Keşfi Yapılandırma
 Dört ana gruplarını bulmayı kullanılan yapılandırma ayarlarını vardır. Bu konuda kısaca açıklanmaktadır ve bunların nasıl yapılandırılacağı örnekleri gösterilmektedir. Her bölüm aşağıdaki her bir alan hakkında daha fazla ayrıntılı belgeler için bir bağlantı olacaktır.  
@@ -148,7 +150,7 @@ Dört ana gruplarını bulmayı kullanılan yapılandırma ayarlarını vardır.
 </behavior>  
 ```  
   
- [!INCLUDE[crabout](../../../../includes/crabout-md.md)]<xref:System.ServiceModel.Discovery.ServiceDiscoveryBehavior> ve <xref:System.ServiceModel.Discovery.EndpointDiscoveryBehavior> bkz [WCF keşif genel bakış](../../../../docs/framework/wcf/feature-details/wcf-discovery-overview.md).  
+ Hakkında daha fazla bilgi için <xref:System.ServiceModel.Discovery.ServiceDiscoveryBehavior> ve <xref:System.ServiceModel.Discovery.EndpointDiscoveryBehavior> bkz [WCF keşif genel bakış](../../../../docs/framework/wcf/feature-details/wcf-discovery-overview.md).  
   
 ## <a name="binding-element-configuration"></a>Bağlama öğesi yapılandırma  
  Öğesi yapılandırma bağlama istemci tarafında en ilginç olacaktır. Yapılandırma Hizmetleri bir WCF istemci uygulamasından bulmak için kullanılan Bul ölçütlerini belirtmek için kullanabilirsiniz.  Aşağıdaki örnek ile özel bağlama oluşturur <xref:System.ServiceModel.Discovery.DiscoveryClient> kanal ve türüne ve kapsamına içerir Bul ölçütlerini belirtir. Ayrıca için değerleri belirtir <xref:System.ServiceModel.Discovery.FindCriteria.Duration%2A> ve <xref:System.ServiceModel.Discovery.FindCriteria.MaxResults%2A> özellikleri.  
@@ -188,7 +190,7 @@ Dört ana gruplarını bulmayı kullanılan yapılandırma ayarlarını vardır.
     </client>  
 ```  
   
- [!INCLUDE[crabout](../../../../includes/crabout-md.md)]Bul ölçütlerini görmek [bulma bulma ve FindCriteria](../../../../docs/framework/wcf/feature-details/discovery-find-and-findcriteria.md). [!INCLUDE[crabout](../../../../includes/crabout-md.md)]bulma ve bağlama öğeleri bakın, [WCF keşif genel bakış](../../../../docs/framework/wcf/feature-details/wcf-discovery-overview.md)  
+ Bulma ölçütleri hakkında daha fazla bilgi için bkz: [bulma bulma ve FindCriteria](../../../../docs/framework/wcf/feature-details/discovery-find-and-findcriteria.md). Bulma ve bağlama öğeleri bakın, hakkında daha fazla bilgi için [WCF keşif genel bakış](../../../../docs/framework/wcf/feature-details/wcf-discovery-overview.md)  
   
 ## <a name="standard-endpoint-configuration"></a>Standart uç nokta yapılandırması  
  Standart uç noktaları, bir veya daha fazla özellikleri (adresi, bağlama veya sözleşme) veya değiştiremezsiniz bir veya daha fazla özellik değerleri için varsayılan değerleri olan önceden tanımlanmış noktalarıdır. .NET 4, 3 ile birlikte gelen bulma ilgili standart uç noktaları: <xref:System.ServiceModel.Discovery.UdpDiscoveryEndpoint>, <xref:System.ServiceModel.Discovery.UdpAnnouncementEndpoint>, ve <xref:System.ServiceModel.Discovery.DynamicEndpoint>.  <xref:System.ServiceModel.Discovery.UdpDiscoveryEndpoint> Olduğu için bulma işlemlerini UDP çok noktaya yayın önceden yapılandırılmış standart bir uç nokta bağlama. <xref:System.ServiceModel.Discovery.UdpAnnouncementEndpoint> UDP bağlama üzerinden duyuru iletileri göndermek üzere önceden yapılandırılmıştır standart bir uç noktası. <xref:System.ServiceModel.Discovery.DynamicEndpoint> Bulma bulunan hizmet uç noktası adresi çalışma zamanında dinamik olarak bulmak için kullandığı standart bir uç noktası.  Standart bağlamaları ile belirtilen bir <`endpoint`> öğesi eklemek için standart uç nokta türü belirtilen tür özniteliği içeriyor. Aşağıdaki örnekte nasıl ekleneceğini gösterir bir <xref:System.ServiceModel.Discovery.UdpDiscoveryEndpoint> ve <xref:System.ServiceModel.Discovery.UdpAnnouncementEndpoint>.  
@@ -280,4 +282,4 @@ Dört ana gruplarını bulmayı kullanılan yapılandırma ayarlarını vardır.
 </system.ServiceModel>  
 ```  
   
- [!INCLUDE[crabout](../../../../includes/crabout-md.md)]Standart uç noktaları görmek [standart uç noktaları](../../../../docs/framework/wcf/feature-details/standard-endpoints.md)
+ Standart uç noktaları hakkında daha fazla bilgi için bkz: [standart uç noktaları](../../../../docs/framework/wcf/feature-details/standard-endpoints.md)

@@ -14,11 +14,11 @@ ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: c81d05120f8cf0decc7c6036e2a722ba6271dab8
-ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
+ms.openlocfilehash: 66b11dda1b245fa88548cf70268a6ca10ee27708
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/27/2018
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="variables-and-arguments"></a>Değişkenleri ve bağımsız değişkenler
 Windows Workflow Foundation (WF) değişkenleri verilerin depolama alanı temsil eder ve bağımsız değişkenleri içine ve dışına aktivite veri akışını temsil eder. Bir etkinlik bir bağımsız değişkenler kümesine sahip ve etkinlik imza yapın. Ayrıca, aktivite Geliştirici ekleyebilir veya değişkenleri bir iş akışı tasarım sırasında kaldırma değişkenlerin listesini sağlayabilirsiniz. Bağımsız değişken bir değer döndüren bir ifadeye kullanarak bağlanır.  
@@ -152,4 +152,4 @@ public sealed class Add : CodeActivity<int>
 }  
 ```  
   
- [!INCLUDE[crabout](../../../includes/crabout-md.md)] bağımsız değişkenler, değişkenleri ve kodda ifadeleri ile çalışma, bkz: [geliştirme iş akışları, etkinlikler ve ifadeler kullanarak kesinliği kod](../../../docs/framework/windows-workflow-foundation/authoring-workflows-activities-and-expressions-using-imperative-code.md) ve [gerekli bağımsız değişkenleri ve aşırı grupları](../../../docs/framework/windows-workflow-foundation/required-arguments-and-overload-groups.md).
+ Bağımsız değişkenler, değişkenleri ve kodda ifadeleri ile çalışma hakkında daha fazla bilgi için bkz: [geliştirme iş akışları, etkinlikler ve ifadeler kullanarak kesinliği kod](../../../docs/framework/windows-workflow-foundation/authoring-workflows-activities-and-expressions-using-imperative-code.md) ve [gerekli bağımsız değişkenleri ve gruplarıaşırıyükleme](../../../docs/framework/windows-workflow-foundation/required-arguments-and-overload-groups.md).

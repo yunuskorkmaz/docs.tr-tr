@@ -18,18 +18,18 @@ ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: 46bafbb0063f72b56f647caaa9dd0fa2944f3298
-ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
+ms.openlocfilehash: 62a8774ab2843d0b1f0a19ad04fc0a76abb7cac5
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/28/2018
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="configuring-services-using-configuration-files"></a>Yapılandırma Dosyalarını Kullanarak Hizmetleri Yapılandırma
 Yapılandırma bir [!INCLUDE[indigo1](../../../includes/indigo1-md.md)] hizmeti bir yapılandırma dosyası ile tasarım zamanında yerine dağıtım noktasında uç noktası ve hizmet davranışı verileri sağlayan esnekliği sağlar. Bu konu, birincil teknikleri özetler.  
   
  A [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] hizmetidir yapılandırılabilir kullanarak [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] yapılandırma teknolojisi. XML öğeleri barındıran Internet Information Services (IIS) sitesi için Web.config dosyasının en yaygın olarak eklenen bir [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] hizmet. Öğeleri, uç nokta adresleri (hizmetiyle iletişim kurmak için kullanılan gerçek adresleri) gibi ayrıntılarını değiştirmek bir makine Makineli temelinde izin verin. Ayrıca, [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] hızlı bir şekilde bir hizmeti için en temel özellikleri seçmenize olanak birkaç sistem tarafından sağlanan öğeleri içerir. İle başlayarak [!INCLUDE[netfx40_long](../../../includes/netfx40-long-md.md)], [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] kolaylaştıran yeni bir varsayılan yapılandırma modeli ile birlikte gelen [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] yapılandırma gereksinimleri. Herhangi bir sağlamazsanız [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] yapılandırma çalışma zamanı belirli bir hizmet için bazı standart uç noktaları ve varsayılan bağlama/davranışı hizmetinizi otomatik olarak yapılandırır. Uygulamada, yazma yapılandırma programlama önemli bir parçası olan [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] uygulamalar.  
   
- Daha fazla bilgi için bkz: [hizmetler için bağlamaları yapılandırma](../../../docs/framework/wcf/configuring-bindings-for-wcf-services.md). Öğeleri listesini en sık kullanılan için bkz: [System-Provided bağlamaları](../../../docs/framework/wcf/system-provided-bindings.md). [!INCLUDE[crabout](../../../includes/crabout-md.md)] Varsayılan uç noktalar, bağlamaları ve davranışları, bkz: [Basitleştirilmiş yapılandırma](../../../docs/framework/wcf/simplified-configuration.md) ve [WCF hizmetleri için Basitleştirilmiş yapılandırma](../../../docs/framework/wcf/samples/simplified-configuration-for-wcf-services.md).  
+ Daha fazla bilgi için bkz: [hizmetler için bağlamaları yapılandırma](../../../docs/framework/wcf/configuring-bindings-for-wcf-services.md). Öğeleri listesini en sık kullanılan için bkz: [System-Provided bağlamaları](../../../docs/framework/wcf/system-provided-bindings.md). Varsayılan uç noktalar, bağlamaları ve davranışları hakkında daha fazla bilgi için bkz: [Basitleştirilmiş yapılandırma](../../../docs/framework/wcf/simplified-configuration.md) ve [WCF hizmetleri için Basitleştirilmiş yapılandırma](../../../docs/framework/wcf/samples/simplified-configuration-for-wcf-services.md).  
   
 > [!IMPORTANT]
 >  Bir hizmeti iki farklı sürümü dağıtıldığı yan yana senaryoları dağıtırken, yapılandırma dosyalarını başvurulan derlemelerin kısmi adını belirtmek gereklidir. Bu yapılandırma dosyası, bir hizmetin tüm sürümleri arasında paylaşılır ve altında .NET Framework'ün farklı sürümlerini çalıştıran kaynaklanır.  
@@ -41,7 +41,7 @@ Yapılandırma bir [!INCLUDE[indigo1](../../../includes/indigo1-md.md)] hizmeti 
   
  Visual Studio'da App.config adlı dosyayı son yapılandırma dosyası oluşturmak için kullanılır. Gerçekte yapılandırma için kullanılan son adı derleme adına bağlıdır. Örneğin, "Cohowinery.exe" adlı bir derleme "Cohowinery.exe.config" bir son yapılandırma dosya adına sahip. Ancak, yalnızca App.config dosyasını değiştirmeniz gerekir. Bu dosyada yapılan değişiklikler, derleme zamanında son uygulama yapılandırma dosyasına otomatik olarak yapılır.  
   
- Kullanarak bir App.config dosyası yapılandırma sistemi App.config dosyası Machine.config dosyasının içeriği ile uygulama başlar ve yapılandırmanın uygulanması birleştirir. Bu mekanizma Machine.config dosyasında tanımlanmış için makine genelinde ayarlarını sağlar. App.config dosyasını Machine.config dosyasının ayarlarını geçersiz kılmak için kullanılabilir; Böylece kullanılan Machine.config dosyasının ayarlarında kilitleyebilirsiniz. Web.config durumda uygulama dizinine uygulanan yapılandırmaya baştaki tüm dizinleri Web.config dosyalarında yapılandırma sistemi birleştirir. [!INCLUDE[crabout](../../../includes/crabout-md.md)] Yapılandırma ve ayarı öncelikleri bkz konularında <xref:System.Configuration> ad alanı.  
+ Kullanarak bir App.config dosyası yapılandırma sistemi App.config dosyası Machine.config dosyasının içeriği ile uygulama başlar ve yapılandırmanın uygulanması birleştirir. Bu mekanizma Machine.config dosyasında tanımlanmış için makine genelinde ayarlarını sağlar. App.config dosyasını Machine.config dosyasının ayarlarını geçersiz kılmak için kullanılabilir; Böylece kullanılan Machine.config dosyasının ayarlarında kilitleyebilirsiniz. Web.config durumda uygulama dizinine uygulanan yapılandırmaya baştaki tüm dizinleri Web.config dosyalarında yapılandırma sistemi birleştirir. Yapılandırma ve ayarı öncelikleri hakkında daha fazla bilgi için bkz <xref:System.Configuration> ad alanı.  
   
 ## <a name="major-sections-of-the-configuration-file"></a>Yapılandırma dosyasının ana bölümleri  
  Yapılandırma dosyasındaki ana bölümleri aşağıdaki öğeleri içerir.  
@@ -114,7 +114,7 @@ Yapılandırma bir [!INCLUDE[indigo1](../../../includes/indigo1-md.md)] hizmeti 
 ### <a name="the-binding-element"></a>\<Bağlama > öğesi  
  `binding` İçindeki öğe `bindings` öğesi, sistem tarafından sağlanan bağlamalar birini olabilir (bakın [System-Provided bağlamaları](../../../docs/framework/wcf/system-provided-bindings.md)) veya özel bağlama (bkz [özel bağlamalar](../../../docs/framework/wcf/extending/custom-bindings.md)). `binding` Öğeye sahip bir `name` belirtilen uç noktası ile bağlama karşılık gelen öznitelik `bindingConfiguration` özniteliği `endpoint` öğesi. Bu bağlama, bağlama türü varsayılan olarak karşılık gelen sonra ad belirtilmezse.  
   
- [!INCLUDE[crabout](../../../includes/crabout-md.md)] Hizmetler ve istemcileri yapılandırmak, bkz: [Windows Communication Foundation uygulamaları yapılandırma](http://msdn.microsoft.com/library/13cb368e-88d4-4c61-8eed-2af0361c6d7a).  
+ Hizmetler ve istemcileri yapılandırma hakkında daha fazla bilgi için bkz: [Windows Communication Foundation uygulamaları yapılandırma](http://msdn.microsoft.com/library/13cb368e-88d4-4c61-8eed-2af0361c6d7a).  
   
  [\<bağlama >](../../../docs/framework/misc/binding.md)  
   

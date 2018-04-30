@@ -1,13 +1,13 @@
 ---
-title: "Nasıl yapılır: Çift Yönlü Sözleşme Oluşturma"
-ms.custom: 
+title: 'Nasıl yapılır: Çift Yönlü Sözleşme Oluşturma'
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - dotnet-clr
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - csharp
@@ -15,20 +15,20 @@ dev_langs:
 helpviewer_keywords:
 - duplex contracts [WCF]
 ms.assetid: 500a75b6-998a-47d5-8e3b-24e3aba2a434
-caps.latest.revision: 
+caps.latest.revision: 28
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: 003b07326612f3b51390d691c7bba0ef1c1b85dc
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: c06bd4f050eda3c3374684b5401b8c85fb9e1df9
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="how-to-create-a-duplex-contract"></a>Nasıl yapılır: Çift Yönlü Sözleşme Oluşturma
-Bu konuda, çift yönlü (iki yönlü) sözleşme kullanan yöntemleri oluşturmak için temel adımlar gösterilmektedir. Çift yönlü sözleşme, istemciler ve sunucular ya da diğer çağrıları başlatmak için birbiriyle bağımsız olarak iletişim kurması sağlar. Çift yönlü sözleşme kullanılabilir üç ileti modelinden biridir [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] Hizmetleri. Diğer iki desenleri iletisi olan tek yönlü ve istek-yanıt. Çift yönlü sözleşme istemci ve sunucu arasında iki yönlü sözleşme oluşur ve yöntem çağrılarını ilintili olması gerekli değildir. Bu tür bir sözleşme hizmetiniz daha fazla bilgi için istemci sorgulamak veya açıkça istemci üzerindeki olaylara Yükselt kullanın. [!INCLUDE[crabout](../../../../includes/crabout-md.md)]bkz. çift yönlü bir sözleşme için bir istemci uygulaması oluşturma [nasıl yapılır: çift yönlü sözleşme ile Erişim Hizmetleri](../../../../docs/framework/wcf/feature-details/how-to-access-services-with-a-duplex-contract.md). Çalışma örnek için bkz: [çift yönlü](../../../../docs/framework/wcf/samples/duplex.md) örnek.  
+Bu konuda, çift yönlü (iki yönlü) sözleşme kullanan yöntemleri oluşturmak için temel adımlar gösterilmektedir. Çift yönlü sözleşme, istemciler ve sunucular ya da diğer çağrıları başlatmak için birbiriyle bağımsız olarak iletişim kurması sağlar. Çift yönlü sözleşme kullanılabilir üç ileti modelinden biridir [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] Hizmetleri. Diğer iki desenleri iletisi olan tek yönlü ve istek-yanıt. Çift yönlü sözleşme istemci ve sunucu arasında iki yönlü sözleşme oluşur ve yöntem çağrılarını ilintili olması gerekli değildir. Bu tür bir sözleşme hizmetiniz daha fazla bilgi için istemci sorgulamak veya açıkça istemci üzerindeki olaylara Yükselt kullanın. Bir istemci uygulaması için çift yönlü sözleşme oluşturma hakkında daha fazla bilgi için bkz: [nasıl yapılır: çift yönlü sözleşme ile Erişim Hizmetleri](../../../../docs/framework/wcf/feature-details/how-to-access-services-with-a-duplex-contract.md). Çalışma örnek için bkz: [çift yönlü](../../../../docs/framework/wcf/samples/duplex.md) örnek.  
   
 ### <a name="to-create-a-duplex-contract"></a>Çift yönlü sözleşme oluşturmak için  
   

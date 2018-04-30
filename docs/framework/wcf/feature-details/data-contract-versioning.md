@@ -23,11 +23,11 @@ ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: f232cb1cf98fe01aa0542c2a4b459fb7fc7b5089
-ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
+ms.openlocfilehash: fd1679bb50a0dc6ee4997f7ae427c1cbdc0948ef
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/28/2018
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="data-contract-versioning"></a>Veri Sözleşmesi Sürümü Oluşturma
 Uygulamaları geliştikçe, aynı zamanda değiştirmeniz gerekebilir Hizmetleri kullanım verileri sözleşme. Bu konuda açıklanmaktadır sürüm veri sözleşmeleri nasıl. Bu konuda veri sözleşmesi sürümü oluşturma mekanizmaları açıklanmaktadır. Tam genel bakış ve düzenleyici sürüm oluşturma yönergeleri için bkz: [en iyi uygulamalar: veri sözleşmesi sürümü oluşturma](../../../../docs/framework/wcf/best-practices-data-contract-versioning.md).  
@@ -125,7 +125,7 @@ Uygulamaları geliştikçe, aynı zamanda değiştirmeniz gerekebilir Hizmetleri
  Kesme ekleyerek veya kaldırarak bir numaralandırma üyesine farklıdır. Bir numaralandırma üyesine adının değiştirilmesi parçalamak, sözleşme adının eski sürüm ile aynı kullanarak tutulur sürece `EnumMemberAtttribute` özniteliği. Daha fazla bilgi için bkz: [veri sözleşmelerinde Numaralandırma türleri](../../../../docs/framework/wcf/feature-details/enumeration-types-in-data-contracts.md).  
   
 ## <a name="collections"></a>Koleksiyonlar  
- Çoğu koleksiyonu değişiklikler bölünemez çoğu koleksiyon türü veri sözleşmesi modelinde birbirleri ile karşılıklı olduğundan. Ancak, özelleştirilmiş bir noncustomized koleksiyon yapma veya tersi önemli bir değişiklik olabilir. Ayrıca, koleksiyonun özelleştirme ayarlarını değiştirmek önemli bir değişiklik, diğer bir deyişle, kendi veri sözleşme adına ve ad alanı, yinelenen öğe adı, anahtar öğe adı ve değeri öğe adı değiştirme. [!INCLUDE[crabout](../../../../includes/crabout-md.md)] Koleksiyon özelleştirme bkz [veri sözleşmelerinde koleksiyon türleri](../../../../docs/framework/wcf/feature-details/collection-types-in-data-contracts.md).  
+ Çoğu koleksiyonu değişiklikler bölünemez çoğu koleksiyon türü veri sözleşmesi modelinde birbirleri ile karşılıklı olduğundan. Ancak, özelleştirilmiş bir noncustomized koleksiyon yapma veya tersi önemli bir değişiklik olabilir. Ayrıca, koleksiyonun özelleştirme ayarlarını değiştirmek önemli bir değişiklik, diğer bir deyişle, kendi veri sözleşme adına ve ad alanı, yinelenen öğe adı, anahtar öğe adı ve değeri öğe adı değiştirme. Koleksiyon özelleştirme hakkında daha fazla bilgi için bkz: [veri sözleşmelerinde koleksiyon türleri](../../../../docs/framework/wcf/feature-details/collection-types-in-data-contracts.md).  
 Doğal olarak, koleksiyon (örneğin, bir tamsayı listesinden dizeleri listesine değiştirme) içeriğinin veri sözleşmesi değiştirmek önemli bir değişiklik.  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  

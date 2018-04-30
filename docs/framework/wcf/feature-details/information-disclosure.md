@@ -16,11 +16,11 @@ ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: c603032e175fd8390abea2db625321d3e3558c1a
-ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
+ms.openlocfilehash: 1b3da2dc36dca913c638ce269213903c2a024a04
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/28/2018
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="information-disclosure"></a>Bilgileri Açıklama
 Bilgilerin açığa çıkmasına bir sistemi hakkında değerli bilgiler sağlamasına olanak sağlar. Bu nedenle, her zaman ve ortaya bilgiler, kötü niyetli bir kullanıcı tarafından kullanılıp kullanılamayacağını göz önünde bulundurun. Aşağıdaki olası bilgileri açığa saldırıları listeler ve bunları azaltmanın yollarını her sağlar.  
@@ -29,7 +29,7 @@ Bilgilerin açığa çıkmasına bir sistemi hakkında değerli bilgiler sağlam
  Bir HTTP Aktarım katmanı üzerinden ileti düzeyi güvenlik kullanıyorsanız, ileti düzeyi güvenlik HTTP üstbilgileri korumaz unutmayın. HTTP üst bilgilerini korumak için tek yolu, HTTP yerine HTTPS aktarımı kullanmaktır. HTTPS aktarımı Güvenli Yuva Katmanı (SSL) protokolü kullanılarak şifrelenmesi için HTTP üstbilgileri dahil olmak üzere tüm iletinin neden olur.  
   
 ## <a name="policy-information"></a>İlke bilgilerini  
- İlke güvenliğini sağlamanın özellikle hassas verilen belirteç gereksinimleri veya belirteç verenin bilgileri ilkesinde Burada sunulan Federasyon senaryolarında önemlidir. Bu durumlarda verilen belirteç koymak için talep türü gibi hizmeti hakkında bilgi almak veya istemciler için kötü amaçlı belirteci verenler yönlendirme saldırganların önlemek için federasyon hizmetinin İlkesi uç nokta güvenliğini sağlamak için önerilir. Örneğin, bir saldırganın man-in--middle saldırı yürütülen bir veren sonlandırmak için federe güven zinciri yapılandırarak kullanıcı adı/parola çiftlerini bulmak. Ayrıca, bağlantıları ilke alma işlemi aracılığıyla elde Federasyon istemcileri edinilen federe güven zincirinde verenler güven doğrulamanız önerilir. [!INCLUDE[crabout](../../../../includes/crabout-md.md)] Federasyon senaryolarında bkz [Federasyon](../../../../docs/framework/wcf/feature-details/federation.md).  
+ İlke güvenliğini sağlamanın özellikle hassas verilen belirteç gereksinimleri veya belirteç verenin bilgileri ilkesinde Burada sunulan Federasyon senaryolarında önemlidir. Bu durumlarda verilen belirteç koymak için talep türü gibi hizmeti hakkında bilgi almak veya istemciler için kötü amaçlı belirteci verenler yönlendirme saldırganların önlemek için federasyon hizmetinin İlkesi uç nokta güvenliğini sağlamak için önerilir. Örneğin, bir saldırganın man-in--middle saldırı yürütülen bir veren sonlandırmak için federe güven zinciri yapılandırarak kullanıcı adı/parola çiftlerini bulmak. Ayrıca, bağlantıları ilke alma işlemi aracılığıyla elde Federasyon istemcileri edinilen federe güven zincirinde verenler güven doğrulamanız önerilir. Federasyon senaryoları hakkında daha fazla bilgi için bkz: [Federasyon](../../../../docs/framework/wcf/feature-details/federation.md).  
   
 ## <a name="memory-dumps-can-reveal-claim-information"></a>Bellek dökümlerini talep bilgilerini ortaya çıkarabilir  
  Bir uygulama başarısız olduğunda, günlük dosyalarını olanlar Dr tarafından üretilen gibi. Watson, talep bilgilerini içerebilir. Bu bilgileri destek ekiplerini gibi diğer varlıklar için verilebilir; Aksi takdirde, özel verileri içeren talep bilgileri de aktarılır. Bu günlük dosyaları için bilinmeyen varlıkların göndererek değil azaltabilirsiniz. Daha fazla bilgi için bkz: [Windows Server 2003](http://go.microsoft.com/fwlink/?LinkId=89160).  
@@ -67,7 +67,7 @@ MyChannelFactory.Credentials.Windows.ClientCredential = new System.Net.NetworkCr
   
  Kod bir etki alanı adı belirtmiyor ve bu nedenle NTLM kullanılır.  
   
- Etki alanı belirtildi, ancak geçersiz hizmet asıl adı uç noktası kimlik özelliği kullanılarak belirtilir NTLM kullanılır. [!INCLUDE[crabout](../../../../includes/crabout-md.md)] uç noktası kimlik belirtilen bkz [hizmet kimliği ve kimlik doğrulama](../../../../docs/framework/wcf/feature-details/service-identity-and-authentication.md).  
+ Etki alanı belirtildi, ancak geçersiz hizmet asıl adı uç noktası kimlik özelliği kullanılarak belirtilir NTLM kullanılır. Uç noktası kimlik nasıl belirtilen hakkında daha fazla bilgi için bkz: [hizmet kimliği ve kimlik doğrulama](../../../../docs/framework/wcf/feature-details/service-identity-and-authentication.md).  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
  [Güvenlik Konuları](../../../../docs/framework/wcf/feature-details/security-considerations-in-wcf.md)  
