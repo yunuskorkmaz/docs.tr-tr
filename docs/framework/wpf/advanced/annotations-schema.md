@@ -1,47 +1,49 @@
 ---
-title: "Ek Açıklamalar Şeması"
-ms.custom: 
+title: Ek Açıklamalar Şeması
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-wpf
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-wpf
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - XML schema definition (XSD)
 - Microsoft Annotations Framework [WPF]
 - documents [WPF], annotations
 ms.assetid: a893442b-e220-4603-bf6a-b01fefcb4b37
-caps.latest.revision: "14"
+caps.latest.revision: 14
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 7989269e8076eda1deef6384b7efdb51c2d279ec
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: a78e287065fb714878d4d97b037d44440d063a5a
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/30/2018
 ---
-# <a name="annotations-schema"></a><span data-ttu-id="7030b-102">Ek Açıklamalar Şeması</span><span class="sxs-lookup"><span data-stu-id="7030b-102">Annotations Schema</span></span>
-<span data-ttu-id="7030b-103">Bu konuda kaydedin ve kullanıcı ek açıklama verilerini almak için Microsoft ek açıklamalar çerçevesi tarafından kullanılan XML şema tanımı (XSD) açıklanmaktadır.</span><span class="sxs-lookup"><span data-stu-id="7030b-103">This topic describes the XML schema definition (XSD) used by the Microsoft Annotations Framework to save and retrieve user annotation data.</span></span>  
+# <a name="annotations-schema"></a><span data-ttu-id="bc62e-102">Ek Açıklamalar Şeması</span><span class="sxs-lookup"><span data-stu-id="bc62e-102">Annotations Schema</span></span>
+<span data-ttu-id="bc62e-103">Bu konuda kaydedin ve kullanıcı ek açıklama verilerini almak için Microsoft ek açıklamalar çerçevesi tarafından kullanılan XML şema tanımı (XSD) açıklanmaktadır.</span><span class="sxs-lookup"><span data-stu-id="bc62e-103">This topic describes the XML schema definition (XSD) used by the Microsoft Annotations Framework to save and retrieve user annotation data.</span></span>  
   
- <span data-ttu-id="7030b-104">[!INCLUDE[TLA2#tla_caf](../../../../includes/tla2sharptla-caf-md.md)] XML biçimine iç gösterimden ek verileri serileştirir.</span><span class="sxs-lookup"><span data-stu-id="7030b-104">The [!INCLUDE[TLA2#tla_caf](../../../../includes/tla2sharptla-caf-md.md)] serializes annotation data from an internal representation to an XML format.</span></span>  <span data-ttu-id="7030b-105">Bu dönüştürme için kullanılan XML biçimi tarafından açıklanan [!INCLUDE[TLA2#tla_caf](../../../../includes/tla2sharptla-caf-md.md)] XSD şema.</span><span class="sxs-lookup"><span data-stu-id="7030b-105">The XML format used for this conversion is described by the [!INCLUDE[TLA2#tla_caf](../../../../includes/tla2sharptla-caf-md.md)] XSD Schema.</span></span>  <span data-ttu-id="7030b-106">Şema, uygulamalar arasında ek açıklama veri değişimi için kullanılan uygulama bağımsız XML biçimini tanımlar.</span><span class="sxs-lookup"><span data-stu-id="7030b-106">The schema defines the implementation-independent XML format that can be used to exchange annotation data between applications.</span></span>  
+ <span data-ttu-id="bc62e-104">[!INCLUDE[TLA2#tla_caf](../../../../includes/tla2sharptla-caf-md.md)] XML biçimine iç gösterimden ek verileri serileştirir.</span><span class="sxs-lookup"><span data-stu-id="bc62e-104">The [!INCLUDE[TLA2#tla_caf](../../../../includes/tla2sharptla-caf-md.md)] serializes annotation data from an internal representation to an XML format.</span></span>  <span data-ttu-id="bc62e-105">Bu dönüştürme için kullanılan XML biçimi tarafından açıklanan [!INCLUDE[TLA2#tla_caf](../../../../includes/tla2sharptla-caf-md.md)] XSD şema.</span><span class="sxs-lookup"><span data-stu-id="bc62e-105">The XML format used for this conversion is described by the [!INCLUDE[TLA2#tla_caf](../../../../includes/tla2sharptla-caf-md.md)] XSD Schema.</span></span>  <span data-ttu-id="bc62e-106">Şema, uygulamalar arasında ek açıklama veri değişimi için kullanılan uygulama bağımsız XML biçimini tanımlar.</span><span class="sxs-lookup"><span data-stu-id="bc62e-106">The schema defines the implementation-independent XML format that can be used to exchange annotation data between applications.</span></span>  
   
- <span data-ttu-id="7030b-107">[!INCLUDE[TLA2#tla_caf](../../../../includes/tla2sharptla-caf-md.md)] XML şema tanımı iki alt şemadan oluşur</span><span class="sxs-lookup"><span data-stu-id="7030b-107">The [!INCLUDE[TLA2#tla_caf](../../../../includes/tla2sharptla-caf-md.md)] XML schema definition consists of two subschemas</span></span>  
+ <span data-ttu-id="bc62e-107">[!INCLUDE[TLA2#tla_caf](../../../../includes/tla2sharptla-caf-md.md)] XML şema tanımı iki alt şemadan oluşur</span><span class="sxs-lookup"><span data-stu-id="bc62e-107">The [!INCLUDE[TLA2#tla_caf](../../../../includes/tla2sharptla-caf-md.md)] XML schema definition consists of two subschemas</span></span>  
   
--   <span data-ttu-id="7030b-108">Ek Açıklamalar XML Çekirdek Şeması (çekirdek şema).</span><span class="sxs-lookup"><span data-stu-id="7030b-108">The Annotations XML Core Schema (Core Schema).</span></span>  
+-   <span data-ttu-id="bc62e-108">Ek Açıklamalar XML Çekirdek Şeması (çekirdek şema).</span><span class="sxs-lookup"><span data-stu-id="bc62e-108">The Annotations XML Core Schema (Core Schema).</span></span>  
   
--   <span data-ttu-id="7030b-109">Ek Açıklamalar XML Şeması (temel şema) tabanı.</span><span class="sxs-lookup"><span data-stu-id="7030b-109">The Annotations XML Base Schema (Base Schema).</span></span>  
+-   <span data-ttu-id="bc62e-109">Ek Açıklamalar XML Şeması (temel şema) tabanı.</span><span class="sxs-lookup"><span data-stu-id="bc62e-109">The Annotations XML Base Schema (Base Schema).</span></span>  
   
- <span data-ttu-id="7030b-110">Çekirdek Şema, birincil XML yapısını tanımlar. bir <xref:System.Windows.Annotations.Annotation>.</span><span class="sxs-lookup"><span data-stu-id="7030b-110">The Core Schema defines the primary XML structure of an <xref:System.Windows.Annotations.Annotation>.</span></span>  <span data-ttu-id="7030b-111">Çekirdek Şeması'nda tanımlanan XML öğelerinin çoğunluğu karşılık gelen türlerine <xref:System.Windows.Annotations> ad alanı.</span><span class="sxs-lookup"><span data-stu-id="7030b-111">The majority of XML elements defined in the Core Schema correspond to types in the <xref:System.Windows.Annotations> namespace.</span></span>  <span data-ttu-id="7030b-112">Çekirdek Şeması uygulamaları kendi XML verileri, ekleyebileceğiniz üç uzantı noktaları kullanıma sunar.</span><span class="sxs-lookup"><span data-stu-id="7030b-112">The Core Schema exposes three extension points where applications can add their own XML data.</span></span>  <span data-ttu-id="7030b-113">Bu uzantı noktaları dahil <xref:System.Windows.Annotations.Annotation.Authors%2A>, <xref:System.Windows.Annotations.ContentLocatorPart>ve "İçerik".</span><span class="sxs-lookup"><span data-stu-id="7030b-113">These extension points include the <xref:System.Windows.Annotations.Annotation.Authors%2A>, <xref:System.Windows.Annotations.ContentLocatorPart>, and "Content".</span></span>  <span data-ttu-id="7030b-114">(İçerik öğeleri biçiminde sağlanan bir <xref:System.Xml.XmlElement> listesi.)</span><span class="sxs-lookup"><span data-stu-id="7030b-114">(Content elements are provided in the form of an <xref:System.Xml.XmlElement> list.)</span></span>  
+ <span data-ttu-id="bc62e-110">Çekirdek Şema, birincil XML yapısını tanımlar. bir <xref:System.Windows.Annotations.Annotation>.</span><span class="sxs-lookup"><span data-stu-id="bc62e-110">The Core Schema defines the primary XML structure of an <xref:System.Windows.Annotations.Annotation>.</span></span>  <span data-ttu-id="bc62e-111">Çekirdek Şeması'nda tanımlanan XML öğelerinin çoğunluğu karşılık gelen türlerine <xref:System.Windows.Annotations> ad alanı.</span><span class="sxs-lookup"><span data-stu-id="bc62e-111">The majority of XML elements defined in the Core Schema correspond to types in the <xref:System.Windows.Annotations> namespace.</span></span>  <span data-ttu-id="bc62e-112">Çekirdek Şeması uygulamaları kendi XML verileri, ekleyebileceğiniz üç uzantı noktaları kullanıma sunar.</span><span class="sxs-lookup"><span data-stu-id="bc62e-112">The Core Schema exposes three extension points where applications can add their own XML data.</span></span>  <span data-ttu-id="bc62e-113">Bu uzantı noktaları dahil <xref:System.Windows.Annotations.Annotation.Authors%2A>, <xref:System.Windows.Annotations.ContentLocatorPart>ve "İçerik".</span><span class="sxs-lookup"><span data-stu-id="bc62e-113">These extension points include the <xref:System.Windows.Annotations.Annotation.Authors%2A>, <xref:System.Windows.Annotations.ContentLocatorPart>, and "Content".</span></span>  <span data-ttu-id="bc62e-114">(İçerik öğeleri biçiminde sağlanan bir <xref:System.Xml.XmlElement> listesi.)</span><span class="sxs-lookup"><span data-stu-id="bc62e-114">(Content elements are provided in the form of an <xref:System.Xml.XmlElement> list.)</span></span>  
   
- <span data-ttu-id="7030b-115">Bu konuda açıklanan Taban Şeması uzantıları tanımlar <xref:System.Windows.Annotations.Annotation.Authors%2A>, <xref:System.Windows.Annotations.ContentLocatorPart>ve içerik türlerine ilk dahil [!INCLUDE[TLA#tla_wpf](../../../../includes/tlasharptla-wpf-md.md)] serbest bırakın.</span><span class="sxs-lookup"><span data-stu-id="7030b-115">The Base Schema described in this topic defines the extensions for the <xref:System.Windows.Annotations.Annotation.Authors%2A>, <xref:System.Windows.Annotations.ContentLocatorPart>, and Content types included with the initial [!INCLUDE[TLA#tla_wpf](../../../../includes/tlasharptla-wpf-md.md)] release.</span></span>  
+ <span data-ttu-id="bc62e-115">Bu konuda açıklanan Taban Şeması uzantıları tanımlar <xref:System.Windows.Annotations.Annotation.Authors%2A>, <xref:System.Windows.Annotations.ContentLocatorPart>ve içerik türlerine ilk Windows Presentation Foundation (WPF) sürümüyle dahil.</span><span class="sxs-lookup"><span data-stu-id="bc62e-115">The Base Schema described in this topic defines the extensions for the <xref:System.Windows.Annotations.Annotation.Authors%2A>, <xref:System.Windows.Annotations.ContentLocatorPart>, and Content types included with the initial Windows Presentation Foundation (WPF) release.</span></span>  
   
 <a name="CoreSchema"></a>   
-## <a name="annotations-xml-core-schema"></a><span data-ttu-id="7030b-116">Ek Açıklamalar XML Çekirdek Şeması</span><span class="sxs-lookup"><span data-stu-id="7030b-116">Annotations XML Core Schema</span></span>  
- <span data-ttu-id="7030b-117">Ek Açıklamalar XML Çekirdek Şeması depolamak için kullanılan XML yapısını tanımlar <xref:System.Windows.Annotations.Annotation> nesneleri.</span><span class="sxs-lookup"><span data-stu-id="7030b-117">The Annotations XML Core Schema defines the XML structure that is used to store <xref:System.Windows.Annotations.Annotation> objects.</span></span>  
+## <a name="annotations-xml-core-schema"></a><span data-ttu-id="bc62e-116">Ek Açıklamalar XML Çekirdek Şeması</span><span class="sxs-lookup"><span data-stu-id="bc62e-116">Annotations XML Core Schema</span></span>  
+ <span data-ttu-id="bc62e-117">Ek Açıklamalar XML Çekirdek Şeması depolamak için kullanılan XML yapısını tanımlar <xref:System.Windows.Annotations.Annotation> nesneleri.</span><span class="sxs-lookup"><span data-stu-id="bc62e-117">The Annotations XML Core Schema defines the XML structure that is used to store <xref:System.Windows.Annotations.Annotation> objects.</span></span>  
   
 ```xml  
 <xsd:schema elementFormDefault="qualified" attributeFormDefault="unqualified"  
@@ -192,8 +194,8 @@ ms.lasthandoff: 12/22/2017
 ```  
   
 <a name="BaseSchema"></a>   
-## <a name="annotations-xml-base-schema"></a><span data-ttu-id="7030b-118">Ek Açıklamalar XML Taban Şeması</span><span class="sxs-lookup"><span data-stu-id="7030b-118">Annotations XML Base Schema</span></span>  
- <span data-ttu-id="7030b-119">Taban Şeması Çekirdek şemada – tanımlanan üç soyut öğeler için XML yapısını tanımlar <xref:System.Windows.Annotations.Annotation.Authors%2A>, <xref:System.Windows.Annotations.ContentLocatorPart>, ve <xref:System.Windows.Annotations.AnnotationResource.Contents%2A>.</span><span class="sxs-lookup"><span data-stu-id="7030b-119">The Base Schema defines the XML structure for the three abstract elements defined in the Core Schema – <xref:System.Windows.Annotations.Annotation.Authors%2A>, <xref:System.Windows.Annotations.ContentLocatorPart>, and <xref:System.Windows.Annotations.AnnotationResource.Contents%2A>.</span></span>  
+## <a name="annotations-xml-base-schema"></a><span data-ttu-id="bc62e-118">Ek Açıklamalar XML Taban Şeması</span><span class="sxs-lookup"><span data-stu-id="bc62e-118">Annotations XML Base Schema</span></span>  
+ <span data-ttu-id="bc62e-119">Taban Şeması Çekirdek şemada – tanımlanan üç soyut öğeler için XML yapısını tanımlar <xref:System.Windows.Annotations.Annotation.Authors%2A>, <xref:System.Windows.Annotations.ContentLocatorPart>, ve <xref:System.Windows.Annotations.AnnotationResource.Contents%2A>.</span><span class="sxs-lookup"><span data-stu-id="bc62e-119">The Base Schema defines the XML structure for the three abstract elements defined in the Core Schema – <xref:System.Windows.Annotations.Annotation.Authors%2A>, <xref:System.Windows.Annotations.ContentLocatorPart>, and <xref:System.Windows.Annotations.AnnotationResource.Contents%2A>.</span></span>  
   
 ```xml  
 <xsd:schema elementFormDefault="qualified" attributeFormDefault="unqualified"  
@@ -503,8 +505,8 @@ ms.lasthandoff: 12/22/2017
 ```  
   
 <a name="SampleXML"></a>   
-## <a name="sample-xml-produced-by-annotations-xmlstreamstore"></a><span data-ttu-id="7030b-120">Örnek ek açıklamalar XmlStreamStore tarafından üretilen XML</span><span class="sxs-lookup"><span data-stu-id="7030b-120">Sample XML Produced by Annotations XmlStreamStore</span></span>  
- <span data-ttu-id="7030b-121">Aşağıdaki XML ek açıklamalar çıktısını gösterir <xref:System.Windows.Annotations.Storage.XmlStreamStore> ve üç ek açıklama - Vurgu, bir metin yapışkan not ve bir mürekkep çubuğu Not içeren bir örnek dosyası kuruluş.</span><span class="sxs-lookup"><span data-stu-id="7030b-121">The XML that follows shows the output of an Annotations <xref:System.Windows.Annotations.Storage.XmlStreamStore> and the organization of a sample file that contains three annotations - a highlight, a text sticky-note, and an ink stick-note.</span></span>  
+## <a name="sample-xml-produced-by-annotations-xmlstreamstore"></a><span data-ttu-id="bc62e-120">Örnek ek açıklamalar XmlStreamStore tarafından üretilen XML</span><span class="sxs-lookup"><span data-stu-id="bc62e-120">Sample XML Produced by Annotations XmlStreamStore</span></span>  
+ <span data-ttu-id="bc62e-121">Aşağıdaki XML ek açıklamalar çıktısını gösterir <xref:System.Windows.Annotations.Storage.XmlStreamStore> ve üç ek açıklama - Vurgu, bir metin yapışkan not ve bir mürekkep çubuğu Not içeren bir örnek dosyası kuruluş.</span><span class="sxs-lookup"><span data-stu-id="bc62e-121">The XML that follows shows the output of an Annotations <xref:System.Windows.Annotations.Storage.XmlStreamStore> and the organization of a sample file that contains three annotations - a highlight, a text sticky-note, and an ink stick-note.</span></span>  
   
 ```xml  
 <?xml version="1.0" encoding="utf-8"?>  
@@ -592,10 +594,10 @@ ms.lasthandoff: 12/22/2017
 </anc:Annotations>  
 ```  
   
-## <a name="see-also"></a><span data-ttu-id="7030b-122">Ayrıca Bkz.</span><span class="sxs-lookup"><span data-stu-id="7030b-122">See Also</span></span>  
+## <a name="see-also"></a><span data-ttu-id="bc62e-122">Ayrıca Bkz.</span><span class="sxs-lookup"><span data-stu-id="bc62e-122">See Also</span></span>  
  <xref:System.Windows.Annotations>  
  <xref:System.Windows.Annotations.Storage>  
  <xref:System.Windows.Annotations.Annotation>  
  <xref:System.Windows.Annotations.Storage.AnnotationStore>  
  <xref:System.Windows.Annotations.Storage.XmlStreamStore>  
- [<span data-ttu-id="7030b-123">Ek Açıklamalara Genel Bakış</span><span class="sxs-lookup"><span data-stu-id="7030b-123">Annotations Overview</span></span>](../../../../docs/framework/wpf/advanced/annotations-overview.md)
+ [<span data-ttu-id="bc62e-123">Ek Açıklamalara Genel Bakış</span><span class="sxs-lookup"><span data-stu-id="bc62e-123">Annotations Overview</span></span>](../../../../docs/framework/wpf/advanced/annotations-overview.md)

@@ -16,18 +16,18 @@ ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: 5cf06b90169e3915af48396aa2f6c426f1329a95
-ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
+ms.openlocfilehash: a49b3d42e51ed7a0a57deb392f5728f407909b00
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/28/2018
+ms.lasthandoff: 04/30/2018
 ---
-# <a name="how-to-configure-workflow-unhandled-exception-behavior-with-workflowservicehost"></a><span data-ttu-id="21539-102">Nasıl yapılır: WorkflowServiceHost ile İş Akışı Tarafından İşlenmeyen Özel Durum Davranışını Yapılandırma</span><span class="sxs-lookup"><span data-stu-id="21539-102">How to: Configure Workflow Unhandled Exception Behavior with WorkflowServiceHost</span></span>
-<span data-ttu-id="21539-103"><xref:System.ServiceModel.Activities.Description.WorkflowUnhandledExceptionBehavior> Barındırılan bir iş akışı içinde işlenmeyen bir özel durum oluşursa, gerçekleştirilecek eylemi belirtmenize olanak tanıyan bir davranıştır <xref:System.ServiceModel.Activities.WorkflowServiceHost>.</span><span class="sxs-lookup"><span data-stu-id="21539-103">The <xref:System.ServiceModel.Activities.Description.WorkflowUnhandledExceptionBehavior> is a behavior that enables you to specify the action to take if an unhandled exception occurs within a workflow hosted in <xref:System.ServiceModel.Activities.WorkflowServiceHost>.</span></span> <span data-ttu-id="21539-104">Bu konuda, bir yapılandırma dosyasında bu davranışı yapılandırmak gösterilmiştir.</span><span class="sxs-lookup"><span data-stu-id="21539-104">This topic shows how to configure this behavior in a configuration file.</span></span>  
+# <a name="how-to-configure-workflow-unhandled-exception-behavior-with-workflowservicehost"></a><span data-ttu-id="dd498-102">Nasıl yapılır: WorkflowServiceHost ile İş Akışı Tarafından İşlenmeyen Özel Durum Davranışını Yapılandırma</span><span class="sxs-lookup"><span data-stu-id="dd498-102">How to: Configure Workflow Unhandled Exception Behavior with WorkflowServiceHost</span></span>
+<span data-ttu-id="dd498-103"><xref:System.ServiceModel.Activities.Description.WorkflowUnhandledExceptionBehavior> Barındırılan bir iş akışı içinde işlenmeyen bir özel durum oluşursa, gerçekleştirilecek eylemi belirtmenize olanak tanıyan bir davranıştır <xref:System.ServiceModel.Activities.WorkflowServiceHost>.</span><span class="sxs-lookup"><span data-stu-id="dd498-103">The <xref:System.ServiceModel.Activities.Description.WorkflowUnhandledExceptionBehavior> is a behavior that enables you to specify the action to take if an unhandled exception occurs within a workflow hosted in <xref:System.ServiceModel.Activities.WorkflowServiceHost>.</span></span> <span data-ttu-id="dd498-104">Bu konuda, bir yapılandırma dosyasında bu davranışı yapılandırmak gösterilmiştir.</span><span class="sxs-lookup"><span data-stu-id="dd498-104">This topic shows how to configure this behavior in a configuration file.</span></span>  
   
-### <a name="to-configure-workflowunhandledexceptionbehavior"></a><span data-ttu-id="21539-105">WorkflowUnhandledExceptionBehavior yapılandırmak için</span><span class="sxs-lookup"><span data-stu-id="21539-105">To configure WorkflowUnhandledExceptionBehavior</span></span>  
+### <a name="to-configure-workflowunhandledexceptionbehavior"></a><span data-ttu-id="dd498-105">WorkflowUnhandledExceptionBehavior yapılandırmak için</span><span class="sxs-lookup"><span data-stu-id="dd498-105">To configure WorkflowUnhandledExceptionBehavior</span></span>  
   
-1.  <span data-ttu-id="21539-106">Ekleme bir <`workflowUnhandledException`> öğesinde bir <`behavior`> öğesi içinde bir <`serviceBehaviors`> öğesini kullanarak `action` özniteliği aşağıdaki örnekte gösterildiği gibi işlenmeyen bir özel durum meydana geldiğinde eylemi belirtin.</span><span class="sxs-lookup"><span data-stu-id="21539-106">Add a <`workflowUnhandledException`> element in a <`behavior`> element within a <`serviceBehaviors`> element, using the `action` attribute to specify the action to take when an unhandled exception occurs as shown in the following example.</span></span>  
+1.  <span data-ttu-id="dd498-106">Ekleme bir <`workflowUnhandledException`> öğesinde bir <`behavior`> öğesi içinde bir <`serviceBehaviors`> öğesini kullanarak `action` özniteliği aşağıdaki örnekte gösterildiği gibi işlenmeyen bir özel durum meydana geldiğinde eylemi belirtin.</span><span class="sxs-lookup"><span data-stu-id="dd498-106">Add a <`workflowUnhandledException`> element in a <`behavior`> element within a <`serviceBehaviors`> element, using the `action` attribute to specify the action to take when an unhandled exception occurs as shown in the following example.</span></span>  
   
     ```xml  
     <behaviors>  
@@ -40,30 +40,30 @@ ms.lasthandoff: 04/28/2018
     ```  
   
     > [!NOTE]
-    >  <span data-ttu-id="21539-107">Önceki yapılandırma örneği Basitleştirilmiş yapılandırma kullanıyor.</span><span class="sxs-lookup"><span data-stu-id="21539-107">The preceding configuration sample is using simplified configuration.</span></span> <span data-ttu-id="21539-108">Daha fazla bilgi için bkz: [Basitleştirilmiş yapılandırma](../../../../docs/framework/wcf/simplified-configuration.md).</span><span class="sxs-lookup"><span data-stu-id="21539-108">For more information, see [Simplified Configuration](../../../../docs/framework/wcf/simplified-configuration.md).</span></span>  
+    >  <span data-ttu-id="dd498-107">Önceki yapılandırma örneği Basitleştirilmiş yapılandırma kullanıyor.</span><span class="sxs-lookup"><span data-stu-id="dd498-107">The preceding configuration sample is using simplified configuration.</span></span> <span data-ttu-id="dd498-108">Daha fazla bilgi için bkz: [Basitleştirilmiş yapılandırma](../../../../docs/framework/wcf/simplified-configuration.md).</span><span class="sxs-lookup"><span data-stu-id="dd498-108">For more information, see [Simplified Configuration](../../../../docs/framework/wcf/simplified-configuration.md).</span></span>  
   
-     <span data-ttu-id="21539-109">Bu davranış, aşağıdaki örnekte gösterildiği gibi kodda yapılandırılabilir.</span><span class="sxs-lookup"><span data-stu-id="21539-109">This behavior can be configured in code as shown in the following example.</span></span>  
+     <span data-ttu-id="dd498-109">Bu davranış, aşağıdaki örnekte gösterildiği gibi kodda yapılandırılabilir.</span><span class="sxs-lookup"><span data-stu-id="dd498-109">This behavior can be configured in code as shown in the following example.</span></span>  
   
     ```csharp  
     host.Description.Behaviors.Add(new WorkflowUnhandledExceptionBehavior { Action = WorkflowUnhandledExceptionAction.AbandonAndSuspend });  
     ```  
   
-     <span data-ttu-id="21539-110">`action` Özniteliği <`workflowUnhandledException`> öğesi aşağıdaki değerlerden birine ayarlanabilir:</span><span class="sxs-lookup"><span data-stu-id="21539-110">The `action` attribute of the <`workflowUnhandledException`> element can be set to one of the following values:</span></span>  
+     <span data-ttu-id="dd498-110">`action` Özniteliği <`workflowUnhandledException`> öğesi aşağıdaki değerlerden birine ayarlanabilir:</span><span class="sxs-lookup"><span data-stu-id="dd498-110">The `action` attribute of the <`workflowUnhandledException`> element can be set to one of the following values:</span></span>  
   
-     <span data-ttu-id="21539-111">**İptal Et**</span><span class="sxs-lookup"><span data-stu-id="21539-111">**abandon**</span></span>  
-     <span data-ttu-id="21539-112">(Bu son kalan noktasına geri olan) kalıcı örneği durumu dokunmadan bellek örneğinde durdurur.</span><span class="sxs-lookup"><span data-stu-id="21539-112">Aborts the instance in memory without touching the persisted instance state (that is, roll back to the last persist point).</span></span>  
+     <span data-ttu-id="dd498-111">**İptal Et**</span><span class="sxs-lookup"><span data-stu-id="dd498-111">**abandon**</span></span>  
+     <span data-ttu-id="dd498-112">(Bu son kalan noktasına geri olan) kalıcı örneği durumu dokunmadan bellek örneğinde durdurur.</span><span class="sxs-lookup"><span data-stu-id="dd498-112">Aborts the instance in memory without touching the persisted instance state (that is, roll back to the last persist point).</span></span>  
   
-     <span data-ttu-id="21539-113">**abandonAndSuspend**</span><span class="sxs-lookup"><span data-stu-id="21539-113">**abandonAndSuspend**</span></span>  
-     <span data-ttu-id="21539-114">Bellek örneğinde durdurur ve askıya alınmasına kalıcı örneğini güncelleştirir.</span><span class="sxs-lookup"><span data-stu-id="21539-114">Aborts the instance in memory and updates the persisted instance to be suspended.</span></span>  
+     <span data-ttu-id="dd498-113">**abandonAndSuspend**</span><span class="sxs-lookup"><span data-stu-id="dd498-113">**abandonAndSuspend**</span></span>  
+     <span data-ttu-id="dd498-114">Bellek örneğinde durdurur ve askıya alınmasına kalıcı örneğini güncelleştirir.</span><span class="sxs-lookup"><span data-stu-id="dd498-114">Aborts the instance in memory and updates the persisted instance to be suspended.</span></span>  
   
-     <span data-ttu-id="21539-115">**İptal**</span><span class="sxs-lookup"><span data-stu-id="21539-115">**cancel**</span></span>  
-     <span data-ttu-id="21539-116">İptal işleyicileri için örneği çağırır ve ayrıca örneği Mağazası'ndan kaldırabilir bellek örneğinde tamamlar</span><span class="sxs-lookup"><span data-stu-id="21539-116">Calls cancellation handlers for the instance and then completes the instance in memory, which may also remove it from the instance store</span></span>  
+     <span data-ttu-id="dd498-115">**İptal**</span><span class="sxs-lookup"><span data-stu-id="dd498-115">**cancel**</span></span>  
+     <span data-ttu-id="dd498-116">İptal işleyicileri için örneği çağırır ve ayrıca örneği Mağazası'ndan kaldırabilir bellek örneğinde tamamlar</span><span class="sxs-lookup"><span data-stu-id="dd498-116">Calls cancellation handlers for the instance and then completes the instance in memory, which may also remove it from the instance store</span></span>  
   
-     <span data-ttu-id="21539-117">**Sonlandırma**</span><span class="sxs-lookup"><span data-stu-id="21539-117">**terminate**</span></span>  
-     <span data-ttu-id="21539-118">Bellek örneğinde tamamlanır ve örnek deposundan kaldırır.</span><span class="sxs-lookup"><span data-stu-id="21539-118">Completes the instance in memory and removes it from the instance store.</span></span>  
+     <span data-ttu-id="dd498-117">**Sonlandırma**</span><span class="sxs-lookup"><span data-stu-id="dd498-117">**terminate**</span></span>  
+     <span data-ttu-id="dd498-118">Bellek örneğinde tamamlanır ve örnek deposundan kaldırır.</span><span class="sxs-lookup"><span data-stu-id="dd498-118">Completes the instance in memory and removes it from the instance store.</span></span>  
   
-     [!INCLUDE[crabout](../../../../includes/crabout-md.md)]<span data-ttu-id="21539-119"> <xref:System.ServiceModel.Activities.Description.WorkflowUnhandledExceptionBehavior>, bkz: [iş akışı hizmeti konak genişletilebilirliği](../../../../docs/framework/wcf/feature-details/workflow-service-host-extensibility.md).</span><span class="sxs-lookup"><span data-stu-id="21539-119"> <xref:System.ServiceModel.Activities.Description.WorkflowUnhandledExceptionBehavior>, see [Workflow Service Host Extensibility](../../../../docs/framework/wcf/feature-details/workflow-service-host-extensibility.md).</span></span>  
+     <span data-ttu-id="dd498-119">Hakkında daha fazla bilgi için <xref:System.ServiceModel.Activities.Description.WorkflowUnhandledExceptionBehavior>, bkz: [iş akışı hizmeti konak genişletilebilirliği](../../../../docs/framework/wcf/feature-details/workflow-service-host-extensibility.md).</span><span class="sxs-lookup"><span data-stu-id="dd498-119">For more information about <xref:System.ServiceModel.Activities.Description.WorkflowUnhandledExceptionBehavior>, see [Workflow Service Host Extensibility](../../../../docs/framework/wcf/feature-details/workflow-service-host-extensibility.md).</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="21539-120">Ayrıca Bkz.</span><span class="sxs-lookup"><span data-stu-id="21539-120">See Also</span></span>  
- [<span data-ttu-id="21539-121">İş Akışı Hizmeti Konak Genişletilebilirliği</span><span class="sxs-lookup"><span data-stu-id="21539-121">Workflow Service Host Extensibility</span></span>](../../../../docs/framework/wcf/feature-details/workflow-service-host-extensibility.md)  
- [<span data-ttu-id="21539-122">İş Akışı Hizmetleri</span><span class="sxs-lookup"><span data-stu-id="21539-122">Workflow Services</span></span>](../../../../docs/framework/wcf/feature-details/workflow-services.md)
+## <a name="see-also"></a><span data-ttu-id="dd498-120">Ayrıca Bkz.</span><span class="sxs-lookup"><span data-stu-id="dd498-120">See Also</span></span>  
+ [<span data-ttu-id="dd498-121">İş Akışı Hizmeti Konak Genişletilebilirliği</span><span class="sxs-lookup"><span data-stu-id="dd498-121">Workflow Service Host Extensibility</span></span>](../../../../docs/framework/wcf/feature-details/workflow-service-host-extensibility.md)  
+ [<span data-ttu-id="dd498-122">İş Akışı Hizmetleri</span><span class="sxs-lookup"><span data-stu-id="dd498-122">Workflow Services</span></span>](../../../../docs/framework/wcf/feature-details/workflow-services.md)

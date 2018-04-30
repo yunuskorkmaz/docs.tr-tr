@@ -1,36 +1,38 @@
 ---
-title: "WCF Web HTTP Hizmeti Yardım Sayfası"
-ms.custom: 
+title: WCF Web HTTP Hizmeti Yardım Sayfası
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 63c7c695-44b6-4f31-bb9c-00f2763f525e
-caps.latest.revision: "11"
+caps.latest.revision: 11
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: cdd05397990c2b1bfc89493235804e14f6d41a1f
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: dabb5e7a949cb26c619ad02dc73d0405222d08cf
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/30/2018
 ---
-# <a name="wcf-web-http-service-help-page"></a><span data-ttu-id="a01ea-102">WCF Web HTTP Hizmeti Yardım Sayfası</span><span class="sxs-lookup"><span data-stu-id="a01ea-102">WCF Web HTTP Service Help Page</span></span>
-[!INCLUDE[netfx_current_long](../../../../includes/netfx-current-long-md.md)]<span data-ttu-id="a01ea-103">bir otomatik Yardım sayfası için WCF WEB HTTP Hizmetleri sağlar.</span><span class="sxs-lookup"><span data-stu-id="a01ea-103"> provides an automatic help page for WCF WEB HTTP services.</span></span> <span data-ttu-id="a01ea-104">Bu Yardım sayfası, her işlem, istek ve yanıt formatları ve şemaları açıklamasını listeler.</span><span class="sxs-lookup"><span data-stu-id="a01ea-104">This help page lists a description of each operation, request and response formats, and schemas.</span></span> <span data-ttu-id="a01ea-105">Bu işlev varsayılan olarak kapalıdır.</span><span class="sxs-lookup"><span data-stu-id="a01ea-105">This functionality is turned off by default.</span></span> <span data-ttu-id="a01ea-106">Ne zaman bir kullanıcı için bir WCF WEB HTTP hizmeti gözatar ve ekler "/ Yardım" URL'si, örneğin 8000/müşteriler/Yardım, son açın aşağıdaki gibi bir Yardım sayfası görüntülenir.</span><span class="sxs-lookup"><span data-stu-id="a01ea-106">When a user browses to a WCF WEB HTTP service and appends "/Help" on to the end of the URL, for example http://localhost:8000/Customers/Help, a help page like the following is displayed.</span></span>  
+# <a name="wcf-web-http-service-help-page"></a><span data-ttu-id="701f9-102">WCF Web HTTP Hizmeti Yardım Sayfası</span><span class="sxs-lookup"><span data-stu-id="701f9-102">WCF Web HTTP Service Help Page</span></span>
+[!INCLUDE[netfx_current_long](../../../../includes/netfx-current-long-md.md)]<span data-ttu-id="701f9-103"> bir otomatik Yardım sayfası için WCF WEB HTTP Hizmetleri sağlar.</span><span class="sxs-lookup"><span data-stu-id="701f9-103"> provides an automatic help page for WCF WEB HTTP services.</span></span> <span data-ttu-id="701f9-104">Bu Yardım sayfası, her işlem, istek ve yanıt formatları ve şemaları açıklamasını listeler.</span><span class="sxs-lookup"><span data-stu-id="701f9-104">This help page lists a description of each operation, request and response formats, and schemas.</span></span> <span data-ttu-id="701f9-105">Bu işlev varsayılan olarak kapalıdır.</span><span class="sxs-lookup"><span data-stu-id="701f9-105">This functionality is turned off by default.</span></span> <span data-ttu-id="701f9-106">Ne zaman bir kullanıcı için bir WCF WEB HTTP hizmeti gözatar ve ekler "/ Yardım" Örneğin URL'nin sonuna açın http://localhost:8000/Customers/Help, aşağıda gösterilen gibi bir Yardım sayfası.</span><span class="sxs-lookup"><span data-stu-id="701f9-106">When a user browses to a WCF WEB HTTP service and appends "/Help" on to the end of the URL, for example http://localhost:8000/Customers/Help, a help page like the following is displayed.</span></span>  
   
- <span data-ttu-id="a01ea-107">![WCF REST Yardım sayfası](../../../../docs/framework/wcf/feature-details/media/wcfresthelppagemain.gif "WCFRESTHELPPAGEMAIN")</span><span class="sxs-lookup"><span data-stu-id="a01ea-107">![WCF REST Help Page](../../../../docs/framework/wcf/feature-details/media/wcfresthelppagemain.gif "WCFRESTHELPPAGEMAIN")</span></span>  
+ <span data-ttu-id="701f9-107">![WCF REST Yardım sayfası](../../../../docs/framework/wcf/feature-details/media/wcfresthelppagemain.gif "WCFRESTHELPPAGEMAIN")</span><span class="sxs-lookup"><span data-stu-id="701f9-107">![WCF REST Help Page](../../../../docs/framework/wcf/feature-details/media/wcfresthelppagemain.gif "WCFRESTHELPPAGEMAIN")</span></span>  
   
- <span data-ttu-id="a01ea-108">Kullanıcı daha sonra Yardım sayfasında listelenen herhangi bir yöntemini tıklatabilirsiniz ve ileti biçimleri ve örnek yanıtlar dahil olmak üzere bu yöntemi hakkında daha fazla bilgi gösteren bu işlem için ayrıntılı sayfası görüntülenir.</span><span class="sxs-lookup"><span data-stu-id="a01ea-108">The user can then click any method listed in the help page and detailed page for that operation is displayed showing more information about the method, including message formats and example responses.</span></span> <span data-ttu-id="a01ea-109">Aşağıdaki resimde bir yöntem için bir Yardım sayfası örneğidir.</span><span class="sxs-lookup"><span data-stu-id="a01ea-109">The following image is an example of a help page for a method.</span></span>  
+ <span data-ttu-id="701f9-108">Kullanıcı daha sonra Yardım sayfasında listelenen herhangi bir yöntemini tıklatabilirsiniz ve ileti biçimleri ve örnek yanıtlar dahil olmak üzere bu yöntemi hakkında daha fazla bilgi gösteren bu işlem için ayrıntılı sayfası görüntülenir.</span><span class="sxs-lookup"><span data-stu-id="701f9-108">The user can then click any method listed in the help page and detailed page for that operation is displayed showing more information about the method, including message formats and example responses.</span></span> <span data-ttu-id="701f9-109">Aşağıdaki resimde bir yöntem için bir Yardım sayfası örneğidir.</span><span class="sxs-lookup"><span data-stu-id="701f9-109">The following image is an example of a help page for a method.</span></span>  
   
- <span data-ttu-id="a01ea-110">![WCF REST Yardım sayfası ayrıntıları](../../../../docs/framework/wcf/feature-details/media/wcfresthelppagedetail2.gif "WCFRESTHELPPAGEDETAIL2")</span><span class="sxs-lookup"><span data-stu-id="a01ea-110">![WCF REST Help Page Details](../../../../docs/framework/wcf/feature-details/media/wcfresthelppagedetail2.gif "WCFRESTHELPPAGEDETAIL2")</span></span>  
+ <span data-ttu-id="701f9-110">![WCF REST Yardım sayfası ayrıntıları](../../../../docs/framework/wcf/feature-details/media/wcfresthelppagedetail2.gif "WCFRESTHELPPAGEDETAIL2")</span><span class="sxs-lookup"><span data-stu-id="701f9-110">![WCF REST Help Page Details](../../../../docs/framework/wcf/feature-details/media/wcfresthelppagedetail2.gif "WCFRESTHELPPAGEDETAIL2")</span></span>  
   
-## <a name="using-the-wcf-web-http-help-page"></a><span data-ttu-id="a01ea-111">WCF Web HTTP Yardım sayfası kullanma</span><span class="sxs-lookup"><span data-stu-id="a01ea-111">Using the WCF Web HTTP Help Page</span></span>  
- <span data-ttu-id="a01ea-112">WCF WEB HTTP Yardım sayfası kullanarak bir tane belirtin sağlanan her bir işlemin kısa bir açıklama görüntüler <xref:System.ComponentModel.DescriptionAttribute>.</span><span class="sxs-lookup"><span data-stu-id="a01ea-112">The WCF WEB HTTP Help page displays a short description for each operation provided that you specify one using the <xref:System.ComponentModel.DescriptionAttribute>.</span></span> <span data-ttu-id="a01ea-113">Bu öznitelik için uygulanan işlemi kısa bir açıklamasını içeren bir dize alır.</span><span class="sxs-lookup"><span data-stu-id="a01ea-113">This attribute takes a string that contains a short description of the operation it is applied to.</span></span> <span data-ttu-id="a01ea-114">Örneğin, aşağıdaki kodu nasıl kullanılacağını gösterir <xref:System.ComponentModel.DescriptionAttribute> kısa bir açıklama sağlamak için.</span><span class="sxs-lookup"><span data-stu-id="a01ea-114">For example, the following code shows how to use the <xref:System.ComponentModel.DescriptionAttribute> to provide a short description.</span></span>  
+## <a name="using-the-wcf-web-http-help-page"></a><span data-ttu-id="701f9-111">WCF Web HTTP Yardım sayfası kullanma</span><span class="sxs-lookup"><span data-stu-id="701f9-111">Using the WCF Web HTTP Help Page</span></span>  
+ <span data-ttu-id="701f9-112">WCF WEB HTTP Yardım sayfası kullanarak bir tane belirtin sağlanan her bir işlemin kısa bir açıklama görüntüler <xref:System.ComponentModel.DescriptionAttribute>.</span><span class="sxs-lookup"><span data-stu-id="701f9-112">The WCF WEB HTTP Help page displays a short description for each operation provided that you specify one using the <xref:System.ComponentModel.DescriptionAttribute>.</span></span> <span data-ttu-id="701f9-113">Bu öznitelik için uygulanan işlemi kısa bir açıklamasını içeren bir dize alır.</span><span class="sxs-lookup"><span data-stu-id="701f9-113">This attribute takes a string that contains a short description of the operation it is applied to.</span></span> <span data-ttu-id="701f9-114">Örneğin, aşağıdaki kodu nasıl kullanılacağını gösterir <xref:System.ComponentModel.DescriptionAttribute> kısa bir açıklama sağlamak için.</span><span class="sxs-lookup"><span data-stu-id="701f9-114">For example, the following code shows how to use the <xref:System.ComponentModel.DescriptionAttribute> to provide a short description.</span></span>  
   
 ```  
 [OperationContract]  
@@ -39,7 +41,7 @@ ms.lasthandoff: 12/22/2017
 SyndicationFeedFormatter GetTemplate1();  
 ```  
   
- <span data-ttu-id="a01ea-115">WCF WEB HTTP Yardım sayfasında açmak için bir uç noktası davranışı hizmetinizin Uç noktalara eklemeniz gerekir.</span><span class="sxs-lookup"><span data-stu-id="a01ea-115">To turn on the WCF WEB HTTP Help page, you must add an endpoint behavior to your service's endpoints.</span></span> <span data-ttu-id="a01ea-116">Bu, yapılandırma ve kodun içerisinde yapılabilir.</span><span class="sxs-lookup"><span data-stu-id="a01ea-116">This can be done in configuration or code.</span></span> <span data-ttu-id="a01ea-117">WCF WEB HTTP Yardımı yaş yapılandırmasında etkinleştirmek için bir uç nokta davranışa ekleyin bir `<webHttp>` öğe, ayarladığınız `enableHelp` için `true`, bir uç nokta ekleyin ve uç noktası davranışı kullanacak şekilde yapılandırın.</span><span class="sxs-lookup"><span data-stu-id="a01ea-117">To enable the WCF WEB HTTP Help age in configuration, add an endpoint behavior with a `<webHttp>` element, set `enableHelp` to `true`, and add an endpoint and configure it to use the endpoint behavior.</span></span> <span data-ttu-id="a01ea-118">Aşağıdaki yapılandırma kodunu bunun nasıl yapılacağı gösterilmektedir.</span><span class="sxs-lookup"><span data-stu-id="a01ea-118">The following configuration code shows how to do this.</span></span>  
+ <span data-ttu-id="701f9-115">WCF WEB HTTP Yardım sayfasında açmak için bir uç noktası davranışı hizmetinizin Uç noktalara eklemeniz gerekir.</span><span class="sxs-lookup"><span data-stu-id="701f9-115">To turn on the WCF WEB HTTP Help page, you must add an endpoint behavior to your service's endpoints.</span></span> <span data-ttu-id="701f9-116">Bu, yapılandırma ve kodun içerisinde yapılabilir.</span><span class="sxs-lookup"><span data-stu-id="701f9-116">This can be done in configuration or code.</span></span> <span data-ttu-id="701f9-117">WCF WEB HTTP Yardımı yaş yapılandırmasında etkinleştirmek için bir uç nokta davranışa ekleyin bir `<webHttp>` öğe, ayarladığınız `enableHelp` için `true`, bir uç nokta ekleyin ve uç noktası davranışı kullanacak şekilde yapılandırın.</span><span class="sxs-lookup"><span data-stu-id="701f9-117">To enable the WCF WEB HTTP Help age in configuration, add an endpoint behavior with a `<webHttp>` element, set `enableHelp` to `true`, and add an endpoint and configure it to use the endpoint behavior.</span></span> <span data-ttu-id="701f9-118">Aşağıdaki yapılandırma kodunu bunun nasıl yapılacağı gösterilmektedir.</span><span class="sxs-lookup"><span data-stu-id="701f9-118">The following configuration code shows how to do this.</span></span>  
   
 ```xml  
 <endpointBehaviors>  
@@ -56,7 +58,7 @@ SyndicationFeedFormatter GetTemplate1();
 </services>  
 ```  
   
- <span data-ttu-id="a01ea-119">Kodda WCF Web HTTP Yardım sayfasını etkinleştirmek için bir hizmet uç noktası ekleyin ve ekleyin bir <xref:System.ServiceModel.Description.WebHttpBehavior> endpoint ayarı <!--zz <xref:System.ServiceModel.Description.WebHttpBehavior.EnableHelp%2A>--> `EnableHelp` için `true`.</span><span class="sxs-lookup"><span data-stu-id="a01ea-119">To enable the WCF Web HTTP Help page in code, add a service endpoint and add a <xref:System.ServiceModel.Description.WebHttpBehavior> to the endpoint setting <!--zz <xref:System.ServiceModel.Description.WebHttpBehavior.EnableHelp%2A>--> `EnableHelp` to `true`.</span></span> <span data-ttu-id="a01ea-120">Aşağıdaki kod bunun nasıl yapılacağı gösterilmektedir.</span><span class="sxs-lookup"><span data-stu-id="a01ea-120">The following code shows how to do this.</span></span>  
+ <span data-ttu-id="701f9-119">Kodda WCF Web HTTP Yardım sayfasını etkinleştirmek için bir hizmet uç noktası ekleyin ve ekleyin bir <xref:System.ServiceModel.Description.WebHttpBehavior> endpoint ayarı <!--zz <xref:System.ServiceModel.Description.WebHttpBehavior.EnableHelp%2A>--> `EnableHelp` için `true`.</span><span class="sxs-lookup"><span data-stu-id="701f9-119">To enable the WCF Web HTTP Help page in code, add a service endpoint and add a <xref:System.ServiceModel.Description.WebHttpBehavior> to the endpoint setting <!--zz <xref:System.ServiceModel.Description.WebHttpBehavior.EnableHelp%2A>--> `EnableHelp` to `true`.</span></span> <span data-ttu-id="701f9-120">Aşağıdaki kod bunun nasıl yapılacağı gösterilmektedir.</span><span class="sxs-lookup"><span data-stu-id="701f9-120">The following code shows how to do this.</span></span>  
   
 ```  
 using (WebServiceHost host = new WebServiceHost(typeof(Service), new Uri("http://localhost:8000/Customers")))  
@@ -67,10 +69,10 @@ using (WebServiceHost host = new WebServiceHost(typeof(Service), new Uri("http:/
 }  
 ```  
   
- <span data-ttu-id="a01ea-121">Yardım sayfasının farklı bölümleri tanımlayan işaretleme ile temel XHTML sayfasıdır.</span><span class="sxs-lookup"><span data-stu-id="a01ea-121">The help page is XHTML based with mark-up that identifies the different parts of the page.</span></span> <span data-ttu-id="a01ea-122">Bu program aracılığıyla sayfasını kullanarak erişim istemcilerinin sağlar <xref:System.Xml.Linq.XElement> veya diğer XLinq API'leri.</span><span class="sxs-lookup"><span data-stu-id="a01ea-122">This enables clients to programmatically access the page using <xref:System.Xml.Linq.XElement> or other XLinq APIs.</span></span>  
+ <span data-ttu-id="701f9-121">Yardım sayfasının farklı bölümleri tanımlayan işaretleme ile temel XHTML sayfasıdır.</span><span class="sxs-lookup"><span data-stu-id="701f9-121">The help page is XHTML based with mark-up that identifies the different parts of the page.</span></span> <span data-ttu-id="701f9-122">Bu program aracılığıyla sayfasını kullanarak erişim istemcilerinin sağlar <xref:System.Xml.Linq.XElement> veya diğer XLinq API'leri.</span><span class="sxs-lookup"><span data-stu-id="701f9-122">This enables clients to programmatically access the page using <xref:System.Xml.Linq.XElement> or other XLinq APIs.</span></span>  
   
-## <a name="schemas-used-in-the-wcf-web-http-service-help-page"></a><span data-ttu-id="a01ea-123">WCF Web HTTP hizmeti kullanılan şemalar sayfası Yardım</span><span class="sxs-lookup"><span data-stu-id="a01ea-123">Schemas Used in the WCF Web HTTP Service Help Page</span></span>  
- <span data-ttu-id="a01ea-124">Şu şemalardan WCF Web HTTP hizmeti Yardım sayfası kullanılır.</span><span class="sxs-lookup"><span data-stu-id="a01ea-124">The following schemas are used in the WCF Web HTTP service help page.</span></span>  
+## <a name="schemas-used-in-the-wcf-web-http-service-help-page"></a><span data-ttu-id="701f9-123">WCF Web HTTP hizmeti kullanılan şemalar sayfası Yardım</span><span class="sxs-lookup"><span data-stu-id="701f9-123">Schemas Used in the WCF Web HTTP Service Help Page</span></span>  
+ <span data-ttu-id="701f9-124">Şu şemalardan WCF Web HTTP hizmeti Yardım sayfası kullanılır.</span><span class="sxs-lookup"><span data-stu-id="701f9-124">The following schemas are used in the WCF Web HTTP service help page.</span></span>  
   
 ```xml  
 <?xml version="1.0" encoding="utf-16"?>  
@@ -251,4 +253,4 @@ using (WebServiceHost host = new WebServiceHost(typeof(Service), new Uri("http:/
 </xs:schema>  
 ```  
   
- [!INCLUDE[crabout](../../../../includes/crabout-md.md)]<span data-ttu-id="a01ea-125">veri sözleşmesi seri hale getirme şeması bkz [veri sözleşmesi şema başvurusu](../../../../docs/framework/wcf/feature-details/data-contract-schema-reference.md).</span><span class="sxs-lookup"><span data-stu-id="a01ea-125"> the data contract serialization schema, see [Data Contract Schema Reference](../../../../docs/framework/wcf/feature-details/data-contract-schema-reference.md).</span></span>
+ <span data-ttu-id="701f9-125">Veri sözleşmesi seri hale getirme şeması hakkında daha fazla bilgi için bkz: [veri sözleşmesi şema başvurusu](../../../../docs/framework/wcf/feature-details/data-contract-schema-reference.md).</span><span class="sxs-lookup"><span data-stu-id="701f9-125">For more information about the data contract serialization schema, see [Data Contract Schema Reference](../../../../docs/framework/wcf/feature-details/data-contract-schema-reference.md).</span></span>
