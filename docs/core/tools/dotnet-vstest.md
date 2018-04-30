@@ -1,18 +1,19 @@
 ---
 title: DotNet vstest command - .NET Core CLI
-description: "Dotnet vstest komutu bir proje ve tüm bağımlılıkları oluşturur."
+description: Dotnet vstest komutu bir proje ve tüm bağımlılıkları oluşturur.
 author: guardrex
 ms.author: mairaw
 ms.date: 08/14/2017
-ms.topic: article
-ms.prod: .net-core
+ms.topic: conceptual
+ms.prod: dotnet-core
 ms.technology: dotnet-cli
-ms.workload: dotnetcore
-ms.openlocfilehash: f2ad875430b2dc7f0ffbadfb9a39dd83854557cb
-ms.sourcegitcommit: 2142a4732bb4ff519b9817db4c24a237b9810d4b
+ms.workload:
+- dotnetcore
+ms.openlocfilehash: e11b193ff7a8c639078c5cf279b7fbbeab553c92
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/05/2018
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="dotnet-vstest"></a>DotNet vstest
 
@@ -20,7 +21,7 @@ ms.lasthandoff: 01/05/2018
 
 ## <a name="name"></a>Ad
 
-`dotnet-vstest`-Belirtilen dosyalarından testleri çalıştırır.
+`dotnet-vstest` -Belirtilen dosyalarından testleri çalıştırır.
 
 ## <a name="synopsis"></a>Özet
 
@@ -64,7 +65,7 @@ Testler paralel olarak yürütün. Varsayılan olarak, tüm kullanılabilir çek
 
 `--TestCaseFilter|/TestCaseFilter:<Expression>`
 
-Verilen ifade eşleşen testleri çalıştırın. `<Expression>`biçimi `<property>Operator<value>[|&<Expression>]`, işleci biri burada `=`, `!=`, veya `~`.  İşleç `~` 'içeren' anlamsallarını sahiptir ve gibi dize özellikleri için geçerlidir `DisplayName`. Parantez `()` alt ifadeleri gruplamak için kullanılır.
+Verilen ifade eşleşen testleri çalıştırın. `<Expression>` biçimi `<property>Operator<value>[|&<Expression>]`, işleci biri burada `=`, `!=`, veya `~`.  İşleç `~` 'içeren' anlamsallarını sahiptir ve gibi dize özellikleri için geçerlidir `DisplayName`. Parantez `()` alt ifadeleri gruplamak için kullanılır.
 
 `-?|--Help|/?|/Help`
 

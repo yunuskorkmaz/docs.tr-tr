@@ -1,13 +1,13 @@
 ---
-title: "İzlenecek Yol: İstemci Uygulama Hizmetlerini Kullanma"
-ms.custom: 
+title: 'İzlenecek Yol: İstemci Uygulama Hizmetlerini Kullanma'
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - dotnet-clr
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - csharp
@@ -16,17 +16,17 @@ helpviewer_keywords:
 - application services host [client application services]
 - client application services, walkthroughs
 ms.assetid: bb7c8950-4517-4dae-b705-b74a14059b26
-caps.latest.revision: 
+caps.latest.revision: 47
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: 71eac85d07ac54cf15edcfcc3a86de58afef5004
-ms.sourcegitcommit: cf22b29db780e532e1090c6e755aa52d28273fa6
-ms.translationtype: MT
+ms.openlocfilehash: fe0e446a0005ffcbf296c2728fd93056c3e38f2a
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/01/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="walkthrough-using-client-application-services"></a>İzlenecek Yol: İstemci Uygulama Hizmetlerini Kullanma
 Bu konuda kullanıcıların kimliğini doğrulamak ve kullanıcı rolleri ve ayarları almak için istemci uygulama hizmetleri kullanan bir Windows uygulamasının nasıl oluşturulacağını açıklar.  
@@ -50,14 +50,14 @@ Bu konuda kullanıcıların kimliğini doğrulamak ve kullanıcı rolleri ve aya
 ## <a name="prerequisites"></a>Önkoşullar  
  Bu izlenecek yolu tamamlamak için aşağıdaki bileşenler gerekir:  
   
--   [!INCLUDE[vs_orcas_long](../../../includes/vs-orcas-long-md.md)]biçimindeki telefon numarasıdır.  
+-   [!INCLUDE[vs_orcas_long](../../../includes/vs-orcas-long-md.md)].  
   
 ## <a name="creating-the-client-application"></a>İstemci Uygulamasını Oluşturma  
  Ne yapacağını ilk şey, bir Windows Forms projesi oluşturun. Bu kılavuzda Windows Forms kullanır, çünkü daha fazla kişinin ile sahibiyseniz, ancak Windows Presentation Foundation (WPF) projeleri için benzer bir işlemdir.  
   
 #### <a name="to-create-a-client-application-and-enable-client-application-services"></a>Bir istemci uygulaması oluşturma ve istemci uygulama hizmetleri etkinleştirme  
   
-1.  İçinde [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)]seçin **dosyası &#124; Yeni &#124; Proje** menü seçeneği.  
+1.  İçinde [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)]seçin **dosya &#124; yeni &#124; proje** menü seçeneği.  
   
 2.  İçinde **yeni proje** iletişim kutusunda **proje türleri** bölmesinde genişletin **Visual Basic** veya **Visual C#** düğümü ve select **Windows** proje türü.  
   
@@ -75,7 +75,7 @@ Bu konuda kullanıcıların kimliğini doğrulamak ve kullanıcı rolleri ve aya
   
 7.  Olduğundan emin olun **formlar kimlik doğrulaması** seçilir ve ardından **kimlik doğrulama hizmeti konumu**, **rolleri hizmet konumu**, ve **Web ayarları hizmet konumu** için `http://localhost:55555/AppServices`.  
   
-8.  İçin [!INCLUDE[vbprvb](../../../includes/vbprvb-md.md)], **uygulama** sekmesinde, ayarlamak **kimlik doğrulama modu** için **uygulama tanımlı**.  
+8.  Visual Basic üzerinde **uygulama** sekmesinde, ayarlamak **kimlik doğrulama modu** için **uygulama tanımlı**.  
   
  Tasarımcı belirtilen ayarlar uygulamanın app.config dosyasında depolar.  
   
@@ -88,7 +88,7 @@ Bu konuda kullanıcıların kimliğini doğrulamak ve kullanıcı rolleri ve aya
   
 #### <a name="to-create-and-configure-the-application-services-host"></a>Oluşturma ve uygulama hizmetleri ana bilgisayarı yapılandırmak için  
   
-1.  İçinde **Çözüm Gezgini**, ClientAppServicesDemo çözümü seçin ve ardından **dosya** menüsünde, select **Ekle &#124; Yeni proje**.  
+1.  İçinde **Çözüm Gezgini**, ClientAppServicesDemo çözümü seçin ve ardından **dosya** menüsünde, select **Ekle &#124; yeni proje**.  
   
 2.  İçinde **Yeni Proje Ekle** iletişim kutusunda **proje türleri** bölmesinde genişletin **Visual Basic** veya **Visual C#** düğümü ve seçin **Web** proje türü.  
   
@@ -251,7 +251,7 @@ Bu konuda kullanıcıların kimliğini doğrulamak ve kullanıcı rolleri ve aya
   
 1.  İçinde **Çözüm Gezgini**, ClientAppServicesDemo projesinde System.Web derlemesine başvuru ekleyin.  
   
-2.  Form1 dosyasını seçin ve ardından **Görünüm &#124; Kod** gelen [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] ana menü.  
+2.  Form1 dosyasını seçin ve ardından **Görünüm &#124; kod** gelen [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] ana menü.  
   
 3.  Kod Düzenleyicisi'nde aşağıdaki deyimleri Form1 dosyasının üstüne ekleyin.  
   
@@ -316,7 +316,7 @@ Bu konuda kullanıcıların kimliğini doğrulamak ve kullanıcı rolleri ve aya
 ### <a name="creating-a-login-form"></a>Bir oturum açma formu oluşturma  
  Bir kimlik sağlayıcı uygulayan bir sınıftır <xref:System.Web.ClientServices.Providers.IClientFormsAuthenticationCredentialsProvider> arabirimi. Bu arabirim adlı tek bir yöntemi olan <xref:System.Web.ClientServices.Providers.IClientFormsAuthenticationCredentialsProvider.GetCredentials%2A> döndüren bir <xref:System.Web.ClientServices.Providers.ClientFormsAuthenticationCredentials> nesnesi. Aşağıdaki yordamlar uygulayan bir oturum açma iletişim kutusu oluşturma açıklar <xref:System.Web.ClientServices.Providers.IClientFormsAuthenticationCredentialsProvider.GetCredentials%2A> kendisini görüntülemek ve kullanıcı tarafından belirtilen kimlik bilgileri döndürmek için.  
   
- Ayrı yordamlar için sağlanan [!INCLUDE[vbprvb](../../../includes/vbprvb-md.md)] ve C# çünkü [!INCLUDE[vbprvb](../../../includes/vbprvb-md.md)] sağlayan bir **oturum açma formu** şablonu. Bu işlem biraz zaman ve çaba kodlama kaydeder.  
+ Ayrı yordamları sağlanan Visual Basic ve C# için Visual Basic sağladığından bir **oturum açma formu** şablonu. Bu işlem biraz zaman ve çaba kodlama kaydeder.  
   
 ##### <a name="to-create-a-login-dialog-box-as-a-credentials-provider-in-visual-basic"></a>Visual Basic'te kimlik sağlayıcısı olarak bir oturum açma iletişim kutusu oluşturmak için  
   
@@ -332,7 +332,7 @@ Bu konuda kullanıcıların kimliğini doğrulamak ve kullanıcı rolleri ve aya
   
 5.  İçinde **özellikleri** penceresinde belirtin bir **(ad)** değerini `rememberMeCheckBox` ve **metin** değerini `&Remember me`.  
   
-6.  Seçin **Görünüm &#124; Kod** gelen [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] ana menü.  
+6.  Seçin **Görünüm &#124; kod** gelen [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] ana menü.  
   
 7.  Kod Düzenleyicisi'nde, aşağıdaki kodu dosyanın üst kısmına ekleyin.  
   
@@ -372,7 +372,7 @@ Bu konuda kullanıcıların kimliğini doğrulamak ve kullanıcı rolleri ve aya
   
 #### <a name="to-change-the-user-interface-based-on-user-role"></a>Kullanıcı rolü tabanlı kullanıcı arabirimi değiştirmek için  
   
-1.  İçinde **Çözüm Gezgini**, ClientAppServicesDemo projede Form1 seçin ve ardından **Görünüm &#124; Tasarımcı** gelen [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] ana menü.  
+1.  İçinde **Çözüm Gezgini**, ClientAppServicesDemo projede Form1 seçin ve ardından **Görünüm &#124; Tasarımcısı** gelen [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] ana menü.  
   
 2.  Tasarımcıda eklemek bir <xref:System.Windows.Forms.Button> formdan denetimine **araç**.  
   
@@ -408,7 +408,7 @@ Bu konuda kullanıcıların kimliğini doğrulamak ve kullanıcı rolleri ve aya
  Şimdi uygulamayı çalıştırın ve düğmesi değil görünür ve düğmesini görmek için yönetici olarak oturum açın, görmek için çalışan olarak oturum açın.  
   
 ## <a name="accessing-web-settings"></a>Web ayarlarına erişme  
- Aşağıdaki yordamda forma bir metin kutusu ekleyin ve bir Web ayarı bağlayın. Kimlik doğrulama ve roller kullanan önceki kod gibi ayarları kodunuzu ayarları sağlayıcısı doğrudan erişmez. Bunun yerine, türü kesin belirlenmiş kullanır `Settings` sınıfı (olarak erişilen `Properties.Settings.Default` C# ve `My.Settings` içinde [!INCLUDE[vbprvb](../../../includes/vbprvb-md.md)]) için projeniz tarafından oluşturulan [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)].  
+ Aşağıdaki yordamda forma bir metin kutusu ekleyin ve bir Web ayarı bağlayın. Kimlik doğrulama ve roller kullanan önceki kod gibi ayarları kodunuzu ayarları sağlayıcısı doğrudan erişmez. Bunun yerine, türü kesin belirlenmiş kullanır `Settings` sınıfı (olarak erişilen `Properties.Settings.Default` C# ve `My.Settings` Visual Basic'te) için projeniz tarafından oluşturulan [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)].  
   
 #### <a name="to-use-web-settings-in-your-user-interface"></a>Kullanıcı arabiriminde Web ayarlarını kullanmak için  
   
@@ -426,7 +426,7 @@ Bu konuda kullanıcıların kimliğini doğrulamak ve kullanıcı rolleri ve aya
   
      `WebSettingsTestText` Ayar görünür, varsayılan değeriyle Tasarımcısı'nda `DefaultText`. Ayrıca, bir `Settings` içeren sınıf bir `WebSettingsTestText` özelliği, projeniz için oluşturulur.  
   
-5.  İçinde **Çözüm Gezgini**, ClientAppServicesDemo projede Form1 seçin ve ardından **Görünüm &#124; Tasarımcı** gelen [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] ana menü.  
+5.  İçinde **Çözüm Gezgini**, ClientAppServicesDemo projede Form1 seçin ve ardından **Görünüm &#124; Tasarımcısı** gelen [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] ana menü.  
   
 6.  Tasarımcıda eklemek bir <xref:System.Windows.Forms.TextBox> forma denetim.  
   
@@ -511,7 +511,7 @@ Bu konuda kullanıcıların kimliğini doğrulamak ve kullanıcı rolleri ve aya
   
 #### <a name="to-enable-offline-mode-in-your-application"></a>Uygulamanızı çevrimdışı modda etkinleştirmek için  
   
-1.  İçinde **Çözüm Gezgini**, ClientAppServicesDemo projede Form1 seçin ve ardından **Görünüm &#124; Tasarımcı** gelen [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] ana menü.  
+1.  İçinde **Çözüm Gezgini**, ClientAppServicesDemo projede Form1 seçin ve ardından **Görünüm &#124; Tasarımcısı** gelen [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] ana menü.  
   
 2.  Tasarımcıda eklemek bir <xref:System.Windows.Forms.CheckBox> forma denetim.  
   
@@ -528,7 +528,7 @@ Bu konuda kullanıcıların kimliğini doğrulamak ve kullanıcı rolleri ve aya
     > [!NOTE]
     >  <xref:System.Web.ClientServices.ClientFormsIdentity.RevalidateUser%2A> Yalnızca kolaylık sağlamak için bir yöntemdir. Dönüş değeri sahip olmadığından yeniden doğrulanması başarısız olup olmadığını belirtemez. Örneğin, kullanıcı kimlik bilgilerini sunucuda değiştirdiyseniz yeniden doğrulanması başarısız olabilir. Bu durumda, bir hizmeti çağrısı başarısız olduktan sonra kullanıcılar açıkça doğrulama kodu eklemek isteyebilirsiniz. Daha fazla bilgi için bu kılavuzda daha önce erişme Web ayarları bölümüne bakın.  
   
-     Yeniden doğrulanması sonra bu kodu değişiklikleri yerel Web ayarları çağırarak kaydeder `SaveSettings` daha önce eklediğiniz yöntemi. Çağırarak sonra sunucuda yeni değerleri alır <xref:System.Configuration.ApplicationSettingsBase.Reload%2A> projenin yöntemi `Settings` sınıfı (olarak erişilen `Properties.Settings.Default` C# ve `My.Settings` içinde [!INCLUDE[vbprvb](../../../includes/vbprvb-md.md)]).  
+     Yeniden doğrulanması sonra bu kodu değişiklikleri yerel Web ayarları çağırarak kaydeder `SaveSettings` daha önce eklediğiniz yöntemi. Çağırarak sonra sunucuda yeni değerleri alır <xref:System.Configuration.ApplicationSettingsBase.Reload%2A> projenin yöntemi `Settings` sınıfı (olarak erişilen `Properties.Settings.Default` C# ve `My.Settings` Visual Basic'te).  
   
      [!code-csharp[ClientApplicationServices#080](../../../samples/snippets/csharp/VS_Snippets_Winforms/ClientApplicationServices/CS/Form1.cs#080)]
      [!code-vb[ClientApplicationServices#080](../../../samples/snippets/visualbasic/VS_Snippets_Winforms/ClientApplicationServices/VB/Form1.vb#080)]  

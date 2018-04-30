@@ -6,14 +6,15 @@ ms.author: wiwagn
 ms.date: 10/07/2017
 ms.prod: .net-core
 ms.technology: dotnet-docker
+ms.topic: article
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: 230deb3869887fbcdd07e748d30601f19ec2be2a
-ms.sourcegitcommit: 9a4fe1a1c37b26532654b4bbe22d702237950009
+ms.openlocfilehash: 1a97bd393a4df080d9e2f9fc049165e4efbff852
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="develop-aspnet-core-mvc-apps"></a>ASP.NET Core MVC uygulamaları geliştirme
 
@@ -81,7 +82,7 @@ ASP.NET Core MVC Web API'leri destekleyen [ *içerik anlaşması*](https://docs.
 
 ## <a name="working-with-dependencies"></a>Bağımlılıkları ile çalışma
 
-ASP.NET Core için yerleşik destek varsa ve dahili olarak kullanır olarak bilinen bir tekniği [bağımlılık ekleme](https://docs.microsoft.com/aspnet/core/fundamentals/dependency-injection). Bağımlılık ekleme gevşek bağlantı uygulamanın farklı bölümleri arasında etkin bir tekniktir. Bazı bağlantı arzu çünkü sınama ya da değiştirme için izin vererek uygulama parçalarını yalıtmak üzere kolaylaştırır. Ayrıca, daha az büyük olasılıkla bir değişiklik uygulamanın bir parçası olarak uygulamada başka bir yere beklenmeyen etkisi olduğunu kılar. Bağımlılık ekleme bağımlılık ters çevirmeyi ilkeye dayanarak ve genellikle açık ve kapalı ilkesini ulaşmak için anahtarıdır. Uygulamanızı bağımlılıklarını ile nasıl çalıştığı değerlendirirken, dikkat [statik cling](http://deviq.com/static-cling/) kod kokusu ve aphorism unutmayın "[Birleştirici yeni](http://ardalis.com/new-is-glue)."
+ASP.NET Core için yerleşik destek varsa ve dahili olarak kullanır olarak bilinen bir tekniği [bağımlılık ekleme](https://docs.microsoft.com/aspnet/core/fundamentals/dependency-injection). Bağımlılık ekleme gevşek bağlantı uygulamanın farklı bölümleri arasında etkin bir tekniktir. Bazı bağlantı arzu çünkü sınama ya da değiştirme için izin vererek uygulama parçalarını yalıtmak üzere kolaylaştırır. Ayrıca, daha az büyük olasılıkla bir değişiklik uygulamanın bir parçası olarak uygulamada başka bir yere beklenmeyen etkisi olduğunu kılar. Bağımlılık ekleme bağımlılık ters çevirmeyi ilkeye dayanarak ve genellikle açık ve kapalı ilkesini ulaşmak için anahtarıdır. Uygulamanızı bağımlılıklarını ile nasıl çalıştığı değerlendirirken, dikkat [statik cling](http://deviq.com/static-cling/) kod kokusu ve aphorism unutmayın "[Birleştirici yeni](https://ardalis.com/new-is-glue)."
 
 Statik cling sınıflarınızı statik yöntemler çağrı yapmak veya yan etkileri veya bağımlılıkları altyapısına sahip statik özelliklerine erişim oluşur. Örneğin, sırayla bir veritabanına yazma, bir statik yöntemini çağıran bir yöntemi varsa yönteminizi sıkı şekilde veritabanına bağlı. Bu veritabanı çağrısı keser herhangi bir şey yönteminizi çalışmamasına neden olur. Bu tür sınamalar statik çağrıları mock için ticari mocking kitaplıkları gerektiren ya da yalnızca bir test veritabanı yerinde ile test edilebilir beri tür yöntem sınama notoriously zor olabilir. Altyapı, özellikle de tamamen durum bilgisiz herhangi bağımlılığı yok statik çağrıları arayıp bağ veya Test Edilebilirlik (ötesinde kod statik çağrısı kendisini Kuplaj) üzerinde hiçbir etkisi ince.
 
@@ -134,7 +135,7 @@ Uygulamanın nesne modeli ve arabirimleri ApplicationCore projesinde yerleştiri
 
 Kalıcılık nasıl gerçekleştirildiğini veya nasıl bir kullanıcı, bildirimleri gönderilebilir gibi uygulama ayrıntılarını altyapı projesinde tutulur. Bu projenin Entity Framework Çekirdek gibi uygulamaya özel paketleri başvurur, ancak proje dışında bu uygulamaların ayrıntılarını açığa çıkarmamalıdır. Altyapı hizmetleri ve depoları ApplicationCore proje tanımlanan arabirimi uygulamalıdır ve kendi kalıcılığı ApplicationCore içinde tanımlanan varlıklar saklama ve alma için sorumlu uygulamalarıdır.
 
-ASP.NET Core proje herhangi bir kullanıcı Arabirimi düzeyi endişelerini sorumlu olduğu, ancak iş mantığı ya da altyapı ayrıntıları içermemesi gerekir. Aslında, ideal olarak, hatta bir bağımlılık iki proje arasında hiçbir bağımlılık yanlışlıkla sunulan sağlamaya yardımcı olur altyapı projede sahip olmamalıdır. Bu kayıt defteri sınıfların her projede dı kuralları tanımlamanıza olanak verir StructureMap gibi üçüncü taraf bir dı kapsayıcı kullanılarak gerçekleştirilebilir.
+ASP.NET Core UI proje herhangi bir kullanıcı Arabirimi düzeyi endişelerini sorumlu olduğu, ancak iş mantığı ya da altyapı ayrıntıları içermemesi gerekir. Aslında, ideal olarak, hatta bir bağımlılık iki proje arasında hiçbir bağımlılık yanlışlıkla sunulan sağlamaya yardımcı olur altyapı projede sahip olmamalıdır. Bu kayıt defteri sınıfların her projede dı kuralları tanımlamanıza olanak verir StructureMap gibi üçüncü taraf bir dı kapsayıcı kullanılarak gerçekleştirilebilir.
 
 Uygulama Ayrıntıları uygulamasından kesilmesi için başka bir yaklaşım, tek tek Docker kapsayıcılarında belki de dağıtılan uygulamayı çağrısı mikro sağlamaktır. Bu sorunları ve iki projeleri arasında dı yararlanarak daha kesilmesi daha da büyük ayrımı sağlar, ancak ek karmaşıklık sahiptir.
 
@@ -294,7 +295,7 @@ Daha fazla bilgiyi filtreleri uygulama ve çalışma örnek MSDN makalesinden in
 
 Web uygulamalarının güvenliğini sağlama birçok göz önünde büyük bir konu ile ilgilidir. En temel düzeyde, belirtilen bir isteğin geldiği ve bu isteği yalnızca gerektiği kaynaklara erişimi olduğundan emin olduktan bildiğiniz sağlayarak güvenlik içerir. Kimlik doğrulama isteği bilinen bir varlıktan geliyormuş gibi değerlendirilip değerlendirilmeyeceğini görmek için bir istek bu güvenilir veri deposunda ile sağlanan kimlik bilgileri karşılaştırma işlemidir. Yetkilendirme kullanıcı kimliğine göre belirli kaynaklara erişimi kısıtlama işlemidir. Üçüncü güvenlik sorunu istekleri için size gereken en az üçüncü taraflar tarafından gizli dinleme koruma [SSL, uygulamanız tarafından kullanıldığından emin olun](https://docs.microsoft.com/aspnet/core/security/enforcing-ssl).
 
-### <a name="authentication"></a>Kimlik Doğrulama
+### <a name="authentication"></a>Kimlik doğrulaması
 
 ASP.NET Core, uygulamanız için oturum açma işlevleri desteklemek için kullanabileceğiniz bir üyelik sistemi kimliğidir. Yerel kullanıcı hesapları için destek ve aynı zamanda Microsoft Account, Twitter, Facebook, Google ve daha fazlası gibi sağlayıcılarından dış oturum açma sağlayıcısı destek vardır. ASP.NET Core kimliği ek olarak, windows kimlik doğrulaması, uygulamanızın kullanabilir veya bir üçüncü taraf kimlik sağlayıcısı ister [kimlik sunucusunu](https://github.com/IdentityServer/IdentityServer4).
 

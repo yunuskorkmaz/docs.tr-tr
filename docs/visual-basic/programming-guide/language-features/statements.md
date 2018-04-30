@@ -1,11 +1,12 @@
 ---
 title: Visual Basic'deki Deyimler
-ms.custom: 
+ms.custom: ''
 ms.date: 07/20/2015
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- devlang-visual-basic
 ms.topic: article
 helpviewer_keywords:
 - variables [Visual Basic], declaring
@@ -21,17 +22,17 @@ helpviewer_keywords:
 - variables [Visual Basic], defining
 - statements [Visual Basic], about statements
 ms.assetid: fcfdee1a-82b7-4846-98f7-9ca3f5160089
-caps.latest.revision: "30"
+caps.latest.revision: 30
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: 210637105e54244ba829dabd73feab0b43ec7c6c
-ms.sourcegitcommit: c2e216692ef7576a213ae16af2377cd98d1a67fa
+ms.openlocfilehash: beb33b8f2c30723158e41244cbb5c9cfca108a53
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/22/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="statements-in-visual-basic"></a>Visual Basic'deki Deyimler
-Bir deyimde [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] tam bir yönerge olması. Anahtar sözcükler, işleçler, değişkenleri, sabitleri ve ifadeleri içerebilir. Her deyimi aşağıdaki kategorilerde birine ait:  
+Visual Basic'de deyimini tam bir yönerge ' dir. Anahtar sözcükler, işleçler, değişkenleri, sabitleri ve ifadeleri içerebilir. Her deyimi aşağıdaki kategorilerde birine ait:  
   
 -   **Bildirim deyimleri**, bu değişken, sabit veya yordam adı ve bir veri türü de belirtebilirsiniz.  
   
@@ -53,7 +54,7 @@ Bir deyimde [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] tam bir yönerge olması
  Üçüncü bildirimi `Dim` değişkeni bildirir deyimi `thisWidget`. Veri türü belirli bir nesne, nesnenin oluşturulduğu öğesine `Widget` sınıfı. Herhangi bir başlangıç veri türü veya kullanmakta olduğunuz uygulamada gösterilen herhangi bir nesne türünün olması için bir değişken bildirebilirsiniz.  
   
 ### <a name="initial-values"></a>İlk değerleri  
- Bir bildirim deyimi içeren kod çalıştığında, [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] bildirilen öğe için gerekli bellek ayırır. Öğe bir değer tutuyorsa [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] kendi veri türü için varsayılan değere başlatır. Daha fazla bilgi için bkz: "Davranışı" [Dim deyimi](../../../visual-basic/language-reference/statements/dim-statement.md).  
+ Bir bildirim deyimi içeren kod çalıştığında, Visual Basic bildirilen öğe için gerekli bellek ayırır. Öğe bir değer barındırıyorsa, Visual Basic, kendi veri türü için varsayılan değer başlatır. Daha fazla bilgi için bkz: "Davranışı" [Dim deyimi](../../../visual-basic/language-reference/statements/dim-statement.md).  
   
  Aşağıdaki örnekte gösterildiği gibi bildirimindeki bir parçası olarak bir değişken için bir başlangıç değeri atayabilirsiniz.  
   
@@ -121,7 +122,7 @@ Bir deyimde [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] tam bir yönerge olması
 ### <a name="type-conversions-in-assignment-statements"></a>Atama deyimleri tür dönüşümleri  
  Değer bir değişkeni, özelliği veya dizi öğesi ata o hedef öğeye uygun bir veri türünde olmalıdır. Genel olarak, hedef öğeyle aynı veri türü değeri üretmek denemelisiniz. Ancak, bazı türleri, atama sırasında diğer türlerine dönüştürülebilir.  
   
- Veri türleri arasında dönüştürme hakkında daha fazla bilgi için bkz: [Visual Basic'de tür dönüştürmeleri](../../../visual-basic/programming-guide/language-features/data-types/type-conversions.md). Kısaca, [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] otomatik olarak belirli bir türde bir değer widens, başka bir türüne dönüştürür. A *dönüştürme genişletme* olduğu her zaman çalışma zamanında başarılı ve herhangi bir veri kesintisi olmaması, birinde. Örneğin, [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] dönüştüren bir `Integer` değeri `Double` , çünkü uygun olduğunda `Integer` için widens `Double`. Daha fazla bilgi için bkz: [Widening ve daraltma dönüşümleri](../../../visual-basic/programming-guide/language-features/data-types/widening-and-narrowing-conversions.md).  
+ Veri türleri arasında dönüştürme hakkında daha fazla bilgi için bkz: [Visual Basic'de tür dönüştürmeleri](../../../visual-basic/programming-guide/language-features/data-types/type-conversions.md). Kısaca, Visual Basic widens, diğer bir tür belirli bir türde bir değer otomatik olarak dönüştürür. A *dönüştürme genişletme* olduğu her zaman çalışma zamanında başarılı ve herhangi bir veri kesintisi olmaması, birinde. Örneğin, Visual Basic dönüştüren bir `Integer` değeri `Double` , çünkü uygun olduğunda `Integer` için widens `Double`. Daha fazla bilgi için bkz: [Widening ve daraltma dönüşümleri](../../../visual-basic/programming-guide/language-features/data-types/widening-and-narrowing-conversions.md).  
   
  *Daraltma dönüşümleri* (olanlar değil genişletme) çalışma zamanında hata veya veri kaybı riski uygulayın. Tür dönüştürme işlevi kullanarak daraltma dönüşümü açıkça gerçekleştirebilir veya tüm dönüştürmeler örtük olarak ayarlayarak gerçekleştirmek için derleyici doğrudan `Option Strict Off`. Daha fazla bilgi için bkz: [dolaylı ve açık dönüştürmeler](../../../visual-basic/programming-guide/language-features/data-types/implicit-and-explicit-conversions.md).  
   
@@ -158,7 +159,7 @@ Bir deyimde [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] tam bir yönerge olması
 |Sonra `From` koleksiyon Başlatıcısı anahtar sözcük.|[!code-vb[VbVbalrLineContinuation#13](../../../visual-basic/programming-guide/language-features/codesnippet/VisualBasic/statements_27.vb)]<br /><br /> Daha fazla bilgi için bkz: [koleksiyon başlatıcıları](../../../visual-basic/programming-guide/language-features/collection-initializers/index.md).|  
   
 ## <a name="adding-comments"></a>Açıklama ekleme  
- Kaynak kodu her zaman bile yazdığı Programcı açıklayıcı değil. Kendi kodlarını belge yardımcı olmak için bu nedenle, çoğu programcıları katıştırılmış açıklamaları serbest kullanılmasını sağlamak. Kod açıklamaları bir yordam veya herkese okuma veya ile daha sonra çalışan belirli bir yönerge açıklanır. [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]derleme sırasında açıklamaları yok sayar ve derlenen kod etkilemez.  
+ Kaynak kodu her zaman bile yazdığı Programcı açıklayıcı değil. Kendi kodlarını belge yardımcı olmak için bu nedenle, çoğu programcıları katıştırılmış açıklamaları serbest kullanılmasını sağlamak. Kod açıklamaları bir yordam veya herkese okuma veya ile daha sonra çalışan belirli bir yönerge açıklanır. Visual Basic derleme sırasında açıklamaları yok sayar ve derlenen kod etkilemez.  
   
  Yorum Satırları tırnak işaretiyle başlayan (`'`) veya `REM` bir boşluk bırakarak. Bunlar herhangi bir yerde kodda dışında bir dizede eklenebilir. Bir deyim için bir açıklama eklemek için bir kesme işareti ekleme veya `REM` ve ardından yorumun deyimi sonra. Açıklamalar, kendi ayrı bir satırda de gidebilirsiniz. Aşağıdaki örnek, bu olanakları gösterir.  
   
@@ -172,6 +173,6 @@ Bir deyimde [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] tam bir yönerge olması
 |Terim|Tanım|  
 |---|---|  
 |[Atama İşleçleri](../../../visual-basic/language-reference/operators/assignment-operators.md)|Atama İşleçleri gibi kapsayan dil başvurusu sayfalar için bağlantılar sağlar `=`, `*=`, ve `&=`.|  
-|[İşleçler ve ifadeler](../../../visual-basic/programming-guide/language-features/operators-and-expressions/index.md)|Yeni değerler verim işleçlerle öğeleri birleştirin gösterilmektedir.|  
-|[Nasıl yapılır: kodda deyimleri bölme ve birleştirme](../../../visual-basic/programming-guide/program-structure/how-to-break-and-combine-statements-in-code.md)|Tek bir deyimde birden çok çizgiye bölün ve aynı satıra birden çok deyime yerleştirin gösterir.|  
-|[Nasıl yapılır: Etiket deyimleri](../../../visual-basic/programming-guide/program-structure/how-to-label-statements.md)|Bir kod satırı etiket kullanmayı gösterir.|
+|[İşleçler ve İfadeler](../../../visual-basic/programming-guide/language-features/operators-and-expressions/index.md)|Yeni değerler verim işleçlerle öğeleri birleştirin gösterilmektedir.|  
+|[Nasıl yapılır: Kodda Deyimleri Bölme ve Birleştirme](../../../visual-basic/programming-guide/program-structure/how-to-break-and-combine-statements-in-code.md)|Tek bir deyimde birden çok çizgiye bölün ve aynı satıra birden çok deyime yerleştirin gösterir.|  
+|[Nasıl yapılır: Etiket Deyimleri](../../../visual-basic/programming-guide/program-structure/how-to-label-statements.md)|Bir kod satırı etiket kullanmayı gösterir.|

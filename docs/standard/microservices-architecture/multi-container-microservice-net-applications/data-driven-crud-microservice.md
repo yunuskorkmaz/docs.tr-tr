@@ -1,7 +1,7 @@
 ---
 title: Bir basit veri güdümlü CRUD mikro hizmet oluşturma
 description: Kapsayıcılı .NET uygulamaları için .NET mikro mimarisi | Bir basit veri güdümlü CRUD mikro hizmet oluşturma
-keywords: Docker, Microservices, ASP.NET, Container
+keywords: Docker, mikro, ASP.NET, kapsayıcı
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 12/11/2017
@@ -11,11 +11,11 @@ ms.topic: article
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: be8644e45be8db88c99332476e74c5c968764c74
-ms.sourcegitcommit: c883637b41ee028786edceece4fa872939d2e64c
+ms.openlocfilehash: ca4bfd31b505754b508555ff2771a6380ae023b4
+ms.sourcegitcommit: 2e8acae16ae802f2d6d04e3ce0a6dbf04e476513
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/26/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="creating-a-simple-data-driven-crud-microservice"></a>Bir basit veri güdümlü CRUD mikro hizmet oluşturma
 
@@ -35,7 +35,7 @@ Bu tür bir basit veri sürücüsü hizmet Kataloğu mikro hizmet eShopOnContain
 
 **Şekil 8-5**. Basit veri-güdümlü/CRUD mikro hizmet tasarım
 
-Bu tür bir hizmet geliştirirken, yalnızca ihtiyacınız [ASP.NET Core](https://docs.microsoft.com/aspnet/core/) ve veri erişimi API veya ORM gibi [Entity Framework Çekirdek](https://docs.microsoft.com/ef/core/index). Ayrıca üretebilir [Swagger](http://swagger.io/) meta verileri otomatik olarak ile [Swashbuckle](https://github.com/domaindrivendev/Swashbuckle.AspNetCore) ne hizmetiniz sunar, açıklaması bir sonraki bölümde açıklandığı gibi sağlamak için.
+Bu tür bir hizmet geliştirirken, yalnızca ihtiyacınız [ASP.NET Core](https://docs.microsoft.com/aspnet/core/) ve veri erişimi API veya ORM gibi [Entity Framework Çekirdek](https://docs.microsoft.com/ef/core/index). Ayrıca üretebilir [Swagger](https://swagger.io/) meta verileri otomatik olarak ile [Swashbuckle](https://github.com/domaindrivendev/Swashbuckle.AspNetCore) ne hizmetiniz sunar, açıklaması bir sonraki bölümde açıklandığı gibi sağlamak için.
 
 Tüm bağımlılıklarınızı sahip için SQL Server'ın bir Docker kapsayıcısı içinde geliştirme ortamları için harikadır gibi bir veritabanı sunucusunu çalıştıran ve bir veritabanı bulutta veya şirket içi sağlamak zorunda kalmadan çalışan unutmayın. Tümleştirme testleri, bu çok kullanışlı olur. Bu yaklaşım ile yüksek kullanılabilirlik genellikle almazsanız olduğundan ancak üretim ortamları için bir veritabanı sunucusu bir kapsayıcıda çalışan, önerilmez. Azure'da bir üretim ortamı için Azure SQL DB veya yüksek kullanılabilirlik ve yüksek ölçeklenebilirlik sağlayabilir herhangi bir veritabanı teknolojisini kullanmanız önerilir. Örneğin, bir NoSQL yaklaşım için DocumentDB seçebilirsiniz.
 
@@ -294,7 +294,7 @@ Bu sürüm oluşturma mekanizması basittir ve uygun uç noktasına istek yönle
 ### <a name="additional-resources"></a>Ek kaynaklar
 
 -   **Scott Hanselman. Kolay ASP.NET Core RESTful Web API'si sürüm oluşturma**
-    [*http://www.hanselman.com/blog/ASPNETCoreRESTfulWebAPIVersioningMadeEasy.aspx*](http://www.hanselman.com/blog/ASPNETCoreRESTfulWebAPIVersioningMadeEasy.aspx)
+    [*https://www.hanselman.com/blog/ASPNETCoreRESTfulWebAPIVersioningMadeEasy.aspx*](https://www.hanselman.com/blog/ASPNETCoreRESTfulWebAPIVersioningMadeEasy.aspx)
 
 -   **Sürüm oluşturma bir RESTful web API'si**
     [*https://docs.microsoft.com/azure/architecture/best-practices/api-design#versioning-a-restful-web-api*](https://docs.microsoft.com/azure/architecture/best-practices/api-design#versioning-a-restful-web-api)
@@ -304,23 +304,23 @@ Bu sürüm oluşturma mekanizması basittir ve uygun uç noktasına istek yönle
 
 ## <a name="generating-swagger-description-metadata-from-your-aspnet-core-web-api"></a>Oluşturma Swagger açıklama meta verilerini, ASP.NET çekirdek Web API 
 
-[Swagger](http://swagger.io/) olan yaygın olarak kullanılan açık kaynak framework tasarımı, yapı, belge yardımcı olan bir büyük ekosistemi araçları tarafından desteklenen ve RESTful API'lerini kullanma. API tanımı meta verileri etki alanı için standart durumundadır. Mikro hizmet, veri tabanlı mikro veya daha fazla etki alanı tabanlı mikro (aşağıdaki bölümde açıklandığı gibi) Gelişmiş herhangi bir tür ile Swagger açıklama meta verileri içermelidir.
+[Swagger](https://swagger.io/) olan yaygın olarak kullanılan açık kaynak framework tasarımı, yapı, belge yardımcı olan bir büyük ekosistemi araçları tarafından desteklenen ve RESTful API'lerini kullanma. API tanımı meta verileri etki alanı için standart durumundadır. Mikro hizmet, veri tabanlı mikro veya daha fazla etki alanı tabanlı mikro (aşağıdaki bölümde açıklandığı gibi) Gelişmiş herhangi bir tür ile Swagger açıklama meta verileri içermelidir.
 
 Swagger Kalp API açıklama meta veriler JSON veya YAML dosyasında Swagger belirtimidir. Belirtimi tüm kaynakları ve işlemleri hem bir biçimde İnsan ve machine readable kolay geliştirme, bulma ve tümleştirme için ayrıntılı API'nizi RESTful sözleşmesi oluşturur.
 
 Belirtimi OpenAPI belirtimi'nın (OAS) temelini ve RESTful arabirimlerinden tanımlanan şekilde standart hale getirmek için bir açık, saydam ve işbirliği topluluğuna geliştirilmiştir.
 
-Belirtimi nasıl bir hizmeti bulunan ve nasıl yeteneklerini anladım yapısını tanımlar. Daha fazla bilgi için bir web Düzenleyicisi'ni ve Swagger belirtimleri Spotify, Uber, boşluk ve Microsoft, gibi şirketlerden örnekleri dahil olmak üzere Swagger sitesine bakın (<http://swagger.io>).
+Belirtimi nasıl bir hizmeti bulunan ve nasıl yeteneklerini anladım yapısını tanımlar. Daha fazla bilgi için bir web Düzenleyicisi'ni ve Swagger belirtimleri Spotify, Uber, boşluk ve Microsoft, gibi şirketlerden örnekleri dahil olmak üzere Swagger sitesine bakın (<https://swagger.io/>).
 
 ### <a name="why-use-swagger"></a>Swagger neden kullanılır?
 
 API için Swagger meta verileri oluşturmak için nedenler şunlardır:
 
-**Otomatik olarak kullanabilir ve Apı'lerinizi tümleştirmek diğer ürünleri yeteneği**. Ürünler onlarca ve [ticari Araçları](http://swagger.io/commercial-tools/) ve birçok [kitaplıklarını ve çerçevelerini](http://swagger.io/open-source-integrations/) Swagger destekler. Microsoft, üst düzey ürünleri ve otomatik olarak aşağıdaki gibi Swagger tabanlı API'ler tüketebileceği araçlara sahiptir:
+**Otomatik olarak kullanabilir ve Apı'lerinizi tümleştirmek diğer ürünleri yeteneği**. Ürünler onlarca ve [ticari Araçları](https://swagger.io/commercial-tools/) ve birçok [kitaplıklarını ve çerçevelerini](https://swagger.io/open-source-integrations/) Swagger destekler. Microsoft, üst düzey ürünleri ve otomatik olarak aşağıdaki gibi Swagger tabanlı API'ler tüketebileceği araçlara sahiptir:
 
 -   [AutoRest](https://github.com/Azure/AutoRest). .NET istemci sınıfları Swagger çağırmak için otomatik olarak oluşturabilir. CLI üzerinden bu aracı kullanılabilir ve GUI aracılığıyla kolay kullanım için de Visual Studio ile tümleştirir.
 
--   [Microsoft Flow](https://flow.microsoft.com/en-us/). Otomatik olarak [kullanın ve API'nizi tümleştirme](https://flow.microsoft.com/en-us/blog/integrating-custom-api/) üst düzey bir Microsoft Flow akışına olmadan programlama gerekli niteliklere.
+-   [Microsoft Akış](https://flow.microsoft.com/en-us/). Otomatik olarak [kullanın ve API'nizi tümleştirme](https://flow.microsoft.com/en-us/blog/integrating-custom-api/) üst düzey bir Microsoft Flow akışına olmadan programlama gerekli niteliklere.
 
 -   [Microsoft PowerApps](https://powerapps.microsoft.com/en-us/). Otomatik olarak API öğesinden tüketebileceği [PowerApps mobil uygulamaları](https://powerapps.microsoft.com/en-us/blog/register-and-use-custom-apis-in-powerapps/) ile oluşturulan [PowerApps Studio](https://powerapps.microsoft.com/en-us/guided-learning/learning-powerapps-parts/), gerekli hiçbir programlama becerilerine sahip.
 
