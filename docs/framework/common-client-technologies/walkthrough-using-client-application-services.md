@@ -22,18 +22,18 @@ ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: fe0e446a0005ffcbf296c2728fd93056c3e38f2a
-ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
-ms.translationtype: HT
+ms.openlocfilehash: e67d4297ca0fe7028380b6d862f9f86c93bcaa61
+ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="walkthrough-using-client-application-services"></a>İzlenecek Yol: İstemci Uygulama Hizmetlerini Kullanma
 Bu konuda kullanıcıların kimliğini doğrulamak ve kullanıcı rolleri ve ayarları almak için istemci uygulama hizmetleri kullanan bir Windows uygulamasının nasıl oluşturulacağını açıklar.  
   
  Bu kılavuzda, aşağıdaki görevleri gerçekleştirin:  
   
--   Bir Windows Forms uygulaması oluşturma ve kullanma [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] Proje Tasarımcısı'etkinleştirmek ve istemci uygulama hizmetleri yapılandırmak için.  
+-   Bir Windows Forms uygulaması oluşturma ve Visual Studio Proje Tasarımcısı etkinleştirmek ve istemci uygulama hizmetleri yapılandırmak için kullanın.  
   
 -   Uygulama Hizmetleri ana bilgisayar ve istemci yapılandırmanızı test etmek için basit bir ASP.NET Web hizmeti uygulaması oluşturun.  
   
@@ -57,7 +57,7 @@ Bu konuda kullanıcıların kimliğini doğrulamak ve kullanıcı rolleri ve aya
   
 #### <a name="to-create-a-client-application-and-enable-client-application-services"></a>Bir istemci uygulaması oluşturma ve istemci uygulama hizmetleri etkinleştirme  
   
-1.  İçinde [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)]seçin **dosya &#124; yeni &#124; proje** menü seçeneği.  
+1.  Visual Studio'da seçin **dosya &#124; yeni &#124; proje** menü seçeneği.  
   
 2.  İçinde **yeni proje** iletişim kutusunda **proje türleri** bölmesinde genişletin **Visual Basic** veya **Visual C#** düğümü ve select **Windows** proje türü.  
   
@@ -65,7 +65,7 @@ Bu konuda kullanıcıların kimliğini doğrulamak ve kullanıcı rolleri ve aya
   
 4.  Proje değiştirme **adı** için `ClientAppServicesDemo`ve ardından **Tamam**.  
   
-     Yeni bir Windows Forms projesi açılır [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)].  
+     Visual Studio'da yeni bir Windows Forms projesi açılır.  
   
 5.  Üzerinde **proje** menüsünde, select **ClientAppServicesDemo özellikleri**.  
   
@@ -251,7 +251,7 @@ Bu konuda kullanıcıların kimliğini doğrulamak ve kullanıcı rolleri ve aya
   
 1.  İçinde **Çözüm Gezgini**, ClientAppServicesDemo projesinde System.Web derlemesine başvuru ekleyin.  
   
-2.  Form1 dosyasını seçin ve ardından **Görünüm &#124; kod** gelen [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] ana menü.  
+2.  Form1 dosyasını seçin ve ardından **Görünüm &#124; kod** Visual Studio ana menüden.  
   
 3.  Kod Düzenleyicisi'nde aşağıdaki deyimleri Form1 dosyasının üstüne ekleyin.  
   
@@ -332,7 +332,7 @@ Bu konuda kullanıcıların kimliğini doğrulamak ve kullanıcı rolleri ve aya
   
 5.  İçinde **özellikleri** penceresinde belirtin bir **(ad)** değerini `rememberMeCheckBox` ve **metin** değerini `&Remember me`.  
   
-6.  Seçin **Görünüm &#124; kod** gelen [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] ana menü.  
+6.  Seçin **Görünüm &#124; kod** Visual Studio ana menüden.  
   
 7.  Kod Düzenleyicisi'nde, aşağıdaki kodu dosyanın üst kısmına ekleyin.  
   
@@ -372,7 +372,7 @@ Bu konuda kullanıcıların kimliğini doğrulamak ve kullanıcı rolleri ve aya
   
 #### <a name="to-change-the-user-interface-based-on-user-role"></a>Kullanıcı rolü tabanlı kullanıcı arabirimi değiştirmek için  
   
-1.  İçinde **Çözüm Gezgini**, ClientAppServicesDemo projede Form1 seçin ve ardından **Görünüm &#124; Tasarımcısı** gelen [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] ana menü.  
+1.  İçinde **Çözüm Gezgini**, ClientAppServicesDemo projede Form1 seçin ve ardından **Görünüm &#124; Tasarımcısı** Visual Studio ana menüden.  
   
 2.  Tasarımcıda eklemek bir <xref:System.Windows.Forms.Button> formdan denetimine **araç**.  
   
@@ -408,7 +408,7 @@ Bu konuda kullanıcıların kimliğini doğrulamak ve kullanıcı rolleri ve aya
  Şimdi uygulamayı çalıştırın ve düğmesi değil görünür ve düğmesini görmek için yönetici olarak oturum açın, görmek için çalışan olarak oturum açın.  
   
 ## <a name="accessing-web-settings"></a>Web ayarlarına erişme  
- Aşağıdaki yordamda forma bir metin kutusu ekleyin ve bir Web ayarı bağlayın. Kimlik doğrulama ve roller kullanan önceki kod gibi ayarları kodunuzu ayarları sağlayıcısı doğrudan erişmez. Bunun yerine, türü kesin belirlenmiş kullanır `Settings` sınıfı (olarak erişilen `Properties.Settings.Default` C# ve `My.Settings` Visual Basic'te) için projeniz tarafından oluşturulan [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)].  
+ Aşağıdaki yordamda forma bir metin kutusu ekleyin ve bir Web ayarı bağlayın. Kimlik doğrulama ve roller kullanan önceki kod gibi ayarları kodunuzu ayarları sağlayıcısı doğrudan erişmez. Bunun yerine, türü kesin belirlenmiş kullanır `Settings` sınıfı (olarak erişilen `Properties.Settings.Default` C# ve `My.Settings` Visual Basic'te) projeniz için Visual Studio tarafından oluşturulur.  
   
 #### <a name="to-use-web-settings-in-your-user-interface"></a>Kullanıcı arabiriminde Web ayarlarını kullanmak için  
   
@@ -426,7 +426,7 @@ Bu konuda kullanıcıların kimliğini doğrulamak ve kullanıcı rolleri ve aya
   
      `WebSettingsTestText` Ayar görünür, varsayılan değeriyle Tasarımcısı'nda `DefaultText`. Ayrıca, bir `Settings` içeren sınıf bir `WebSettingsTestText` özelliği, projeniz için oluşturulur.  
   
-5.  İçinde **Çözüm Gezgini**, ClientAppServicesDemo projede Form1 seçin ve ardından **Görünüm &#124; Tasarımcısı** gelen [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] ana menü.  
+5.  İçinde **Çözüm Gezgini**, ClientAppServicesDemo projede Form1 seçin ve ardından **Görünüm &#124; Tasarımcısı** Visual Studio ana menüden.  
   
 6.  Tasarımcıda eklemek bir <xref:System.Windows.Forms.TextBox> forma denetim.  
   
@@ -511,7 +511,7 @@ Bu konuda kullanıcıların kimliğini doğrulamak ve kullanıcı rolleri ve aya
   
 #### <a name="to-enable-offline-mode-in-your-application"></a>Uygulamanızı çevrimdışı modda etkinleştirmek için  
   
-1.  İçinde **Çözüm Gezgini**, ClientAppServicesDemo projede Form1 seçin ve ardından **Görünüm &#124; Tasarımcısı** gelen [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] ana menü.  
+1.  İçinde **Çözüm Gezgini**, ClientAppServicesDemo projede Form1 seçin ve ardından **Görünüm &#124; Tasarımcısı** Visual Studio ana menüden.  
   
 2.  Tasarımcıda eklemek bir <xref:System.Windows.Forms.CheckBox> forma denetim.  
   
