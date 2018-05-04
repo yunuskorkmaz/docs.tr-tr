@@ -1,34 +1,22 @@
 ---
-title: "Verileri sıralama ve filtreleme"
-ms.custom: 
+title: Verileri sıralama ve filtreleme
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-ado
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
 ms.assetid: fdd9c753-39df-48cd-9822-2781afe76200
-caps.latest.revision: "4"
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
-ms.workload: dotnet
-ms.openlocfilehash: 2411307623c714ae521d00dcffca05d3569a656e
-ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
+ms.openlocfilehash: 02a67a490eb8339663aac08c97c665ffee09f0df
+ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="sorting-and-filtering-data"></a>Verileri sıralama ve filtreleme
 <xref:System.Data.DataView> Sıralama ve filtreleme verileri çeşitli yollar sağlar bir <xref:System.Data.DataTable>:  
   
 -   Kullanabileceğiniz <xref:System.Data.DataView.Sort%2A> tek belirtmek için özellik veya sıralama siparişleri ve ASC (artan) ve (Azalan) DESC parametreleri dahil birden fazla sütun.  
   
--   Kullanabileceğiniz <xref:System.Data.DataView.ApplyDefaultSort%2A> artan sırada bir sıralama düzeni otomatik olarak oluşturmak için özelliğini temel tablosunun sütunlarını ve birincil anahtar sütunu üzerinde. <xref:System.Data.DataView.ApplyDefaultSort%2A>yalnızca aşağıdaki durumlarda uygulanır **sıralama** özelliği olan bir null başvuru ya da boş bir dize ve ne zaman tablonun tanımlı bir birincil anahtara sahip.  
+-   Kullanabileceğiniz <xref:System.Data.DataView.ApplyDefaultSort%2A> artan sırada bir sıralama düzeni otomatik olarak oluşturmak için özelliğini temel tablosunun sütunlarını ve birincil anahtar sütunu üzerinde. <xref:System.Data.DataView.ApplyDefaultSort%2A> yalnızca aşağıdaki durumlarda uygulanır **sıralama** özelliği olan bir null başvuru ya da boş bir dize ve ne zaman tablonun tanımlı bir birincil anahtara sahip.  
   
 -   Kullanabileceğiniz <xref:System.Data.DataView.RowFilter%2A> satır kümelerine belirtmek üzere özelliğe dayalı sütun değerlerine göre. İçin geçerli ifadeler hakkında ayrıntılı bilgi için **RowFilter** özelliği, başvuru bilgileri için bkz <xref:System.Data.DataColumn.Expression%2A> özelliği <xref:System.Data.DataColumn> sınıfı.  
   
@@ -42,7 +30,7 @@ ms.lasthandoff: 01/17/2018
     |------------------------------|-----------------|  
     |**CurrentRows**|**Geçerli** tüm satır sürümü **Unchanged**, **eklenen**, ve **değiştirilen** satır. Bu varsayılandır.|  
     |**Eklenen**|**Geçerli** tüm satır sürümü **eklenen** satır.|  
-    |**Deleted**|**Özgün** tüm satır sürümü **silinmiş** satır.|  
+    |**silindi**|**Özgün** tüm satır sürümü **silinmiş** satır.|  
     |**ModifiedCurrent**|**Geçerli** tüm satır sürümü **değiştirilen** satır.|  
     |**ModifiedOriginal**|**Özgün** tüm satır sürümü **değiştirilen** satır.|  
     |**Yok**|Satır yok.|  

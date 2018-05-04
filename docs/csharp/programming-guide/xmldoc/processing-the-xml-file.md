@@ -12,11 +12,11 @@ ms.assetid: 60c71193-9dac-4cd3-98c5-100bd0edcc42
 caps.latest.revision: 16
 author: BillWagner
 ms.author: wiwagn
-ms.openlocfilehash: 1e6e983d4fc07aaadc294bc67e146ac600f4c5bc
-ms.sourcegitcommit: b750a8e3979749b214e7e10c82efb0a0524dfcb1
-ms.translationtype: MT
+ms.openlocfilehash: 605724874d952befceea0f89ae48e6151c97f363
+ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/09/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="processing-the-xml-file-c-programming-guide"></a>XML Dosyasını İşleme (C# Programlama Kılavuzu)
 Derleyici kodunuzda belgeleri oluşturmak için etiketli her yapı için bir kimlik dizesi oluşturur. (Kodunuzu etiketi hakkında daha fazla bilgi için bkz: [belge açıklamaları için önerilen etiketler](../../../csharp/programming-guide/xmldoc/recommended-tags-for-documentation-comments.md).) Kimlik dizesi, yapı benzersiz olarak tanımlar. XML dosyasını işleme programları kimlik dizesi belgelere uygulandığı karşılık gelen .NET Framework meta verileri/yansıma öğe tanımlamak için kullanabilirsiniz.  
@@ -77,7 +77,7 @@ Derleyici kodunuzda belgeleri oluşturmak için etiketli her yapı için bir kim
   
 -   Genel türler için türünün adı geri değer çizgilerinin ve ardından genel tür parametre sayısını belirten bir sayı tarafından izlenir.  Örneğin,  
   
-     `<member name="T:SampleClass`2" >` is the tag for a type that is defined as `ortak sınıfı SampleClass\<T, U >'.  
+     ``<member name="T:SampleClass`2">`` etiket olarak tanımlanan bir tür için `public class SampleClass<T, U>`.  
   
      Geri çizgilerine ile başlayan sayılar olarak belirtilen parametre olarak genel türler alma yöntemlerinin için genel tür parametreleri (örneğin \`0, 1').  Genel tür parametreleri için sıfır tabanlı bir dizi gösterimi gösteren her bir sayı.  
   

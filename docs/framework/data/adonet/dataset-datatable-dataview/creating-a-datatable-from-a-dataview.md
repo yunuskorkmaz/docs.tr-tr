@@ -1,27 +1,15 @@
 ---
-title: "DataView nesnesinden DataTable oluşturma"
-ms.custom: 
+title: DataView nesnesinden DataTable oluşturma
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-ado
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
 ms.assetid: 2d45cf41-d8ae-4409-af3e-a96a7e476d85
-caps.latest.revision: "3"
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
-ms.workload: dotnet
-ms.openlocfilehash: 1dff746ff4767f2d0f9a9ab66275ee4d9fc8d3e0
-ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
+ms.openlocfilehash: a389f75ca6516f8bad55934717bee056aca65f1f
+ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="creating-a-datatable-from-a-dataview"></a>DataView nesnesinden DataTable oluşturma
 Verileri veri kaynağından alınan ve doldurduktan sonra bir <xref:System.Data.DataTable> veriler, sıralama, filtre ya da aksi takdirde döndürülen verileri yeniden alma olmadan sınırlamak isteyebilirsiniz. <xref:System.Data.DataView> Sınıfı bu olanaklı kılar. Ayrıca, yeni bir oluşturmanız gerekiyorsa <xref:System.Data.DataTable> gelen <xref:System.Data.DataView>, kullanabileceğiniz <xref:System.Data.DataView.ToTable%2A> tüm satırları ve sütunları ya da bir veri alt kümesini yeni kopyalamak için yöntemi <xref:System.Data.DataTable>. <xref:System.Data.DataView.ToTable%2A> Yöntemi için aşırı sağlar:  

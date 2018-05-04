@@ -1,27 +1,17 @@
 ---
-title: "Uygulama Etki Alanları ve Derlemeler Nasıl Yapılır Konuları"
-ms.custom: 
+title: Uygulama Etki Alanları ve Derlemeler Nasıl Yapılır Konuları
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-bcl
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - assemblies [.NET Framework], how-tos
 - application domains, how-tos
 ms.assetid: 2264054e-712e-47e4-8657-1aa1cfec3e3d
-caps.latest.revision: "6"
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: c70e2f1fec079e12605cbf3b72c60c0830723948
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: b555ad88b90e48da39624686a37898f47d90c1e3
+ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="application-domains-and-assemblies-how-to-topics"></a>Uygulama Etki Alanları ve Derlemeler Nasıl Yapılır Konuları
 Aşağıdaki bölümler uygulama etki alanları ve derlemeler ile programlama kavramsal belgelerinde bulunan tüm yapılır konulara bağlantılar içerir.  
@@ -38,7 +28,7 @@ Aşağıdaki bölümler uygulama etki alanları ve derlemeler ile programlama ka
   
 -   [Nasıl yapılır: Bir Bütünleştirilmiş Koddan Tür ve Üye Bilgilerini Alma](../../../docs/framework/app-domains/how-to-obtain-type-and-member-information-from-an-assembly.md)  
   
- **Derlemeler**  
+ **Bütünleştirilmiş kodlar**  
   
 -   [Nasıl yapılır: Bir Bütünleştirilmiş Kodun Tam Adını Belirleme](../../../docs/framework/app-domains/how-to-determine-assembly-fully-qualified-name.md)  
   

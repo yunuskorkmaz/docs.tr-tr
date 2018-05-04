@@ -1,28 +1,16 @@
 ---
 title: '&lt;Filtre&gt;'
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 3266700b-904b-44e4-93a7-e06a1a445100
-caps.latest.revision: "3"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 186c511cd8a69cef5e30e369641628a10a0972d7
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 93d47fc6b25a75eedae43cd70582abc863a74e6c
+ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="ltfiltergt"></a>&lt;Filtre&gt;
 
-Türünü belirler yönlendirme filtre tanımlayan [!INCLUDE[indigo1](../../../../../includes/indigo1-md.md)] <xref:System.ServiceModel.Dispatcher.MessageFilter> gelen iletileri de tüm destekleyici veri veya filtre tarafından gerekli parametreleri olarak hesaplanırken kullanılacak.
+Windows Communication Foundation (WCF) türü belirler yönlendirme filtre tanımlayan<xref:System.ServiceModel.Dispatcher.MessageFilter> gelen iletileri de tüm destekleyici veri veya filtre tarafından gerekli parametreleri olarak hesaplanırken kullanılacak.
 
 \<system.serviceModel > \<yönlendirme > \<filtreleri > \<Filtre >
 
@@ -47,7 +35,7 @@ Türünü belirler yönlendirme filtre tanımlayan [!INCLUDE[indigo1](../../../.
 
 | Öznitelik  | Açıklama |
 | ---------- | ----------- |
-| customType | Filtre olarak kullanılacak özel türünün tam olarak nitelenmiş tür adını içeren dize. Varsa `filterType` ayarlanır `custom`, bu öznitelik sınıfı oluşturmak için tam olarak nitelenmiş tür adını içerir.  `filterData`Ayrıca özel türü filtresi değerlendirme sırasında kullanılacak değerler içerebilir. |
+| customType | Filtre olarak kullanılacak özel türünün tam olarak nitelenmiş tür adını içeren dize. Varsa `filterType` ayarlanır `custom`, bu öznitelik sınıfı oluşturmak için tam olarak nitelenmiş tür adını içerir.  `filterData` Ayrıca özel türü filtresi değerlendirme sırasında kullanılacak değerler içerebilir. |
 | Filtre veri | Filtre veri içeren bir dize. Bu öznitelik belirtme hakkında daha fazla bilgi için bkz: <xref:System.ServiceModel.Routing.Configuration.FilterElement.FilterData%2A>. |
 | filterType | Filtre türü içeren bir dize. Bu özniteliktir <xref:System.ServiceModel.Routing.Configuration.FilterType> türü.  Bunun ile işleyişi hakkında daha fazla bilgi için `filterData` özniteliği için bkz: <xref:System.ServiceModel.Routing.Configuration.FilterElement.FilterData%2A>. |
 | name       | Bu filtre öğesinin benzersiz adını içeren dize. |
@@ -60,7 +48,7 @@ Yok.
 
 | Öğe | Açıklama |
 | ------- | ----------- |
-| [\<Yönlendirme >](../../../../../docs/framework/configure-apps/file-schema/wcf/routing.md) | Türünü belirleme yönlendirme bir filtre kümesi tanımlamak için bir yapılandırma bölümü [!INCLUDE[ indigo1](../../../../../includes/indigo1-md.md)] <xref:System.ServiceModel.Dispatcher.MessageFilter> gelen iletileri hesaplanırken kullanılacak. |
+| [\<Yönlendirme >](../../../../../docs/framework/configure-apps/file-schema/wcf/routing.md) | Windows Communication Foundation (WCF) türü belirlenemiyor yönlendirme bir filtre kümesi tanımlamak için bir yapılandırma bölümü<xref:System.ServiceModel.Dispatcher.MessageFilter> gelen iletileri hesaplanırken kullanılacak. |
 
 ## <a name="see-also"></a>Ayrıca bkz.
 

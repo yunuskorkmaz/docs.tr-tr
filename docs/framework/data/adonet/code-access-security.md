@@ -1,27 +1,15 @@
 ---
-title: "Kod erişimi güvenliği ve ADO.NET"
-ms.custom: 
+title: Kod erişimi güvenliği ve ADO.NET
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-ado
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
 ms.assetid: 93e099eb-daa1-4f1e-b031-c1e10a996f88
-caps.latest.revision: "6"
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
-ms.workload: dotnet
-ms.openlocfilehash: e69073f757c07c5dd262900d4d8f7ad2cc83cdc4
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.openlocfilehash: ea5dbcc128f97ebbec72273378adb042bbe34e1e
+ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="code-access-security-and-adonet"></a>Kod erişimi güvenliği ve ADO.NET
 .NET Framework rol tabanlı güvenlik yanı sıra kod erişim güvenliği (CAS), her ikisi de ortak dil çalışma zamanı tarafından (CLR) sağlanan ortak bir altyapı kullanılarak uygulanan sunar. Yönetilmeyen kod dünyasında uygulamaların çoğu kullanıcı veya asıl izinlerle yürütün. Sonuç olarak, bilgisayar sistemleri kötü amaçlı olduğunda tehlikeye bozuk ve özel veri olabilir veya yazılım hatası doldurulmuş bir kullanıcı tarafından yükseltilmiş ayrıcalıklarla çalıştırın.  
@@ -38,11 +26,11 @@ ms.lasthandoff: 01/19/2018
   
  Kod erişim izinleri üç tür vardır:  
   
--   `Code access permissions`öğesinden türetilen <xref:System.Security.CodeAccessPermission> sınıfı. Dosyaları ve ortam değişkenleri gibi korunan kaynaklara erişim için ve yönetilmeyen koda erişme gibi korunan işlemlerini gerçekleştirmek için izinler gereklidir.  
+-   `Code access permissions` öğesinden türetilen <xref:System.Security.CodeAccessPermission> sınıfı. Dosyaları ve ortam değişkenleri gibi korunan kaynaklara erişim için ve yönetilmeyen koda erişme gibi korunan işlemlerini gerçekleştirmek için izinler gereklidir.  
   
--   `Identity permissions`bir derlemeyi tanımlamak özelliklerini temsil eder. İzinleri olan bir dijital imza gibi öğeleri içerebilir veya kod geldiği kanıt üzerinde temel bir derleme verilir. Kimlik izinleri de türetilen <xref:System.Security.CodeAccessPermission> temel sınıfı.  
+-   `Identity permissions` bir derlemeyi tanımlamak özelliklerini temsil eder. İzinleri olan bir dijital imza gibi öğeleri içerebilir veya kod geldiği kanıt üzerinde temel bir derleme verilir. Kimlik izinleri de türetilen <xref:System.Security.CodeAccessPermission> temel sınıfı.  
   
--   `Role-based security permissions`sorumlu belirtilen kimliğe sahip olup belirtilen bir rol üyesi olan üzerinde temel alır. <xref:System.Security.Permissions.PrincipalPermission> Sınıfı, her iki bildirim temelli ve kesinlik temelli izin denetimleri etkin sorumlunun karşı olanak tanır.  
+-   `Role-based security permissions` sorumlu belirtilen kimliğe sahip olup belirtilen bir rol üyesi olan üzerinde temel alır. <xref:System.Security.Permissions.PrincipalPermission> Sınıfı, her iki bildirim temelli ve kesinlik temelli izin denetimleri etkin sorumlunun karşı olanak tanır.  
   
  Kod bir kaynağa erişmek veya bir işlem gerçekleştirmek için yetkili olup olmadığını belirlemek için her çağıran talep izin verilen izinleri karşılaştırma çağrı yığını zamanının güvenlik sistemi erişir. Çağrı yığınında herhangi bir çağırıcı talep edilen izni yoksa bir <xref:System.Security.SecurityException> oluşturulur ve erişimi reddetti.  
   
@@ -84,7 +72,7 @@ ms.lasthandoff: 01/19/2018
 |`AllowBlankPassword`|Etkinleştirir veya bir bağlantı dizesi boş parola kullanımını devre dışı bırakır. Geçerli değerler `true` (boş parola kullanımını etkinleştirmek için) ve `false` (boş parola kullanımını devre dışı bırakmak için). Devralınan <xref:System.Data.Common.DBDataPermissionAttribute>.|  
 |`ConnectionString`|İzin verilen bağlantı dizesini tanımlar. Birden çok bağlantı dizeleri tanımlanabilir. **Not:** bir kullanıcı kimliği veya parola bağlantı dizenizi içermez. Bu sürümde .NET Framework yapılandırma aracını kullanarak bağlantı dizesi kısıtlamalarını değiştiremezsiniz. <br /><br /> Devralınan <xref:System.Data.Common.DBDataPermissionAttribute>.|  
 |`KeyRestrictions`|İzin verilen veya izin verilmeyen bağlantı dizesi parametreleri tanımlar. Bağlantı dizesi parametreleri biçiminde tanımlanan  *\<parametre adı > =*. Noktalı virgül (;) kullanarak ayrılmış birden çok parametre belirtilebilir. **Not:** belirtmezseniz, `KeyRestrictions`, ancak ayarladığınız `KeyRestrictionBehavior` özelliğine `AllowOnly` veya `PreventUsage`, hiçbir ek bağlantı dizesi parametresi izin verilir. Devralınan <xref:System.Data.Common.DBDataPermissionAttribute>.|  
-|`KeyRestrictionBehavior`|İzin verilen yalnızca ek parametreler olarak bağlantı dizesi parametreleri tanımlar (`AllowOnly`), ya da izin verilmeyen ek parametreleri tanımlar (`PreventUsage`). `AllowOnly`varsayılandır. Devralınan <xref:System.Data.Common.DBDataPermissionAttribute>.|  
+|`KeyRestrictionBehavior`|İzin verilen yalnızca ek parametreler olarak bağlantı dizesi parametreleri tanımlar (`AllowOnly`), ya da izin verilmeyen ek parametreleri tanımlar (`PreventUsage`). `AllowOnly` varsayılandır. Devralınan <xref:System.Data.Common.DBDataPermissionAttribute>.|  
 |`TypeID`|Türetilen bir sınıfta uygulandığında bu öznitelik için benzersiz bir tanımlayıcı alır. Devralınan <xref:System.Attribute>.|  
 |`Unrestricted`|Kaynak Kısıtlanmamış izni bildirilmiş olup olmadığını gösterir. Devralınan <xref:System.Security.Permissions.SecurityAttribute>.|  
   

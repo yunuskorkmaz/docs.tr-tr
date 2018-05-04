@@ -1,29 +1,17 @@
 ---
-title: "&lt;İssuermetadata&gt;"
-ms.custom: 
+title: '&lt;İssuermetadata&gt;'
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 120b3f37-7331-4816-b712-d6aab39655a4
-caps.latest.revision: "10"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: bac725e0c4fe590623ac82ec45bcf669a2e57179
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 550b3412b193b996b8de800856d6833369fc4bc7
+ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="ltissuedtokenparametersgt"></a>&lt;İssuermetadata&gt;
 Bir federe güvenlik senaryosunda verilen bir güvenlik belirteci için parametreleri belirtir.  
   
- \<system.serviceModel >  
+ \<system.serviceModel>  
 \<bağlamaları >  
 \<customBinding >  
 \<bağlama >  
@@ -64,7 +52,7 @@ Bir federe güvenlik senaryosunda verilen bir güvenlik belirteci için parametr
 |inclusionMode|Belirteç ekleme gereksinimleri belirtir. Bu öznitelik türünde <xref:System.ServiceModel.Security.Tokens.SecurityTokenInclusionMode>.|  
 |Anahtar boyutu|Belirteç anahtar boyutu belirten bir tamsayı. Varsayılan değer 256'dır.|  
 |keyType|Geçerli bir değeri <xref:System.IdentityModel.Tokens.SecurityKeyType> anahtar türünü belirtir. Varsayılan, `SymmetricKey` değeridir.|  
-|tokenType|Belirteç türü belirten bir dize. Varsayılan değer "http://docs.oasis-open.org/wss/oasis-wss-saml-token-profile-1.1#SAML" dir.|  
+|tokenType|Belirteç türü belirten bir dize. Varsayılan değer "http://docs.oasis-open.org/wss/oasis-wss-saml-token-profile-1.1#SAML".|  
   
 ### <a name="child-elements"></a>Alt Öğeler  
   

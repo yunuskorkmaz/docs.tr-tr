@@ -1,24 +1,12 @@
 ---
-title: "Sorgu planı (varlık SQL) önbelleğe alma"
-ms.custom: 
+title: Sorgu planı (varlık SQL) önbelleğe alma
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-ado
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 90b0c685-5ef2-461b-98b4-c3c0a2b253c7
-caps.latest.revision: "2"
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
-ms.workload: dotnet
-ms.openlocfilehash: f3ff908102671e2b22cb3ebb5af55e86bd791c43
-ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
+ms.openlocfilehash: 0e00d7f9382fca2af630a8e1d50a5cde5178da05
+ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="query-plan-caching-entity-sql"></a>Sorgu planı (varlık SQL) önbelleğe alma
 Sorgu yürütme denemesi yapıldığında, sorgu ardışık düzen tam sorgu önceden derlenmiş ve kullanılabilir olup olmadığını görmek için sorgu planı önbelleğini arar. Bu durumda, yeni bir tane oluşturmak yerine önbelleğe alınmış planı yeniden kullanır. Eşleşen bir sorgu planı önbelleğinde bulunmazsa, sorgu derlenmiş ve önbelleğe alınmış. Bir sorgu tarafından tanımlanan kendi [!INCLUDE[esql](../../../../../../includes/esql-md.md)] metin ve parametre koleksiyonu (adları ve türlerini). Tüm metin karşılaştırmaları büyük/küçük harfe duyarlıdır.  
@@ -47,7 +35,7 @@ Sorgu yürütme denemesi yapıldığında, sorgu ardışık düzen tam sorgu ön
   
 -   Sorgu metni sabit bir desen, tercihen bir sabit dize veya bir kaynağı olmalıdır.  
   
--   <xref:System.Data.EntityClient.EntityParameter>veya <xref:System.Data.Objects.ObjectParameter> bir kullanıcı tarafından sağlanan değer geçirilmelidir her yerde kullanılmalıdır.  
+-   <xref:System.Data.EntityClient.EntityParameter> veya <xref:System.Data.Objects.ObjectParameter> bir kullanıcı tarafından sağlanan değer geçirilmelidir her yerde kullanılmalıdır.  
   
  Gereksiz yere sorgu planı önbellek yuvalarında tüketen aşağıdaki sorgu desenlerine kaçınmanız gerekir:  
   

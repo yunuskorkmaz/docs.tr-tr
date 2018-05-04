@@ -1,27 +1,15 @@
 ---
-title: "Satır durumları ve satır sürümleri"
-ms.custom: 
+title: Satır durumları ve satır sürümleri
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-ado
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
 ms.assetid: 2e6642c9-bfc6-425c-b3a7-e4912ffa6c1f
-caps.latest.revision: "3"
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
-ms.workload: dotnet
-ms.openlocfilehash: 6c37c33f5deda2d16e24fab77f394d97749ae63e
-ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
+ms.openlocfilehash: d36556b62a95a7af1097d8fe88597569c81c0111
+ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="row-states-and-row-versions"></a>Satır durumları ve satır sürümleri
 ADO.NET satır durumları ve sürümleri kullanarak tablolardaki satırların yönetir. Bir satır durumu bir satır durumunu gösterir; Satır sürümleri, geçerli, özgün ve varsayılan değerler dahil olmak üzere değişiklik gibi bir satırda depolanan değerleri korur. Örneğin, bir satırda bir sütun yapılan bir değişikliği yaptıktan sonra satır satır durumunu olacaktır `Modified`, ve iki sürümleri satır: `Current`, geçerli satır değerleri içeren ve `Original`, sütun önce satır değerlerini içerir değiştirdi.  
@@ -34,7 +22,7 @@ ADO.NET satır durumları ve sürümleri kullanarak tablolardaki satırların y�
 |<xref:System.Data.DataRowState.Added>|Tabloya satır eklendi ancak `AcceptChanges` çağrılmadıysa.|  
 |<xref:System.Data.DataRowState.Modified>|Satırın bazı öğesi değiştirildi.|  
 |<xref:System.Data.DataRowState.Deleted>|Bir tablodan satır silindi ve `AcceptChanges` çağrılmadıysa.|  
-|<xref:System.Data.DataRowState.Detached>|Satırın herhangi bir parçası değil `DataRowCollection`. `RowState` Yeni oluşturulan bir satır kümesine `Detached`. Yeni sonra `DataRow` eklenen `DataRowCollection` çağırarak `Add` yöntemi, değeri `RowState` özelliği ayarlanmış `Added`.<br /><br /> `Detached`de kaldırıldığı bir satır için ayarlanmış bir `DataRowCollection` kullanarak `Remove` yöntemi, ya da `Delete` yöntemi arkasından `AcceptChanges` yöntemi.|  
+|<xref:System.Data.DataRowState.Detached>|Satırın herhangi bir parçası değil `DataRowCollection`. `RowState` Yeni oluşturulan bir satır kümesine `Detached`. Yeni sonra `DataRow` eklenen `DataRowCollection` çağırarak `Add` yöntemi, değeri `RowState` özelliği ayarlanmış `Added`.<br /><br /> `Detached` de kaldırıldığı bir satır için ayarlanmış bir `DataRowCollection` kullanarak `Remove` yöntemi, ya da `Delete` yöntemi arkasından `AcceptChanges` yöntemi.|  
   
  Zaman `AcceptChanges` üzerinde adlı bir <xref:System.Data.DataSet>, <xref:System.Data.DataTable> , veya <xref:System.Data.DataRow>, satır durumuna sahip tüm satırları `Deleted` kaldırılır. Kalan satırlar satır durumunu verilen `Unchanged`ve değerler `Original` satır sürümü ile yazılır `Current` satır sürüm değerleri. Zaman `RejectChanges` çağrılır, satır durumuna sahip tüm satırları `Added` kaldırılır. Kalan satırlar satır durumunu verilen `Unchanged`ve değerler `Current` satır sürümü ile yazılır `Original` satır sürüm değerleri.  
   
@@ -61,7 +49,7 @@ string custID = custRow["CustomerID", DataRowVersion.Original].ToString();
   
  Test edebilirsiniz olup bir `DataRow` çağırarak belirli bir satır sürümüne sahip <xref:System.Data.DataRow.HasVersion%2A> yöntemi ve geçirerek bir `DataRowVersion` bağımsız değişken olarak. Örneğin, `DataRow.HasVersion(DataRowVersion.Original)` döndürülecek `false` önce yeni eklenen satırların `AcceptChanges` çağrıldı.  
   
- Aşağıdaki kod örneğinde, silinen içindeki tüm satırların bir tablonun değerlerini görüntüler. `Deleted`Satır sahip bir `Current` geçmesi gereken şekilde satır sürümü `DataRowVersion.Original` sütun değerlerini erişirken.  
+ Aşağıdaki kod örneğinde, silinen içindeki tüm satırların bir tablonun değerlerini görüntüler. `Deleted` Satır sahip bir `Current` geçmesi gereken şekilde satır sürümü `DataRowVersion.Original` sütun değerlerini erişirken.  
   
 ```vb  
 Dim catTable As DataTable = catDS.Tables("Categories")  

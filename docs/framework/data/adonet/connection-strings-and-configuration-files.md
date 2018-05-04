@@ -1,27 +1,15 @@
 ---
-title: "Bağlantı dizeleri ve yapılandırma dosyaları"
-ms.custom: 
+title: Bağlantı dizeleri ve yapılandırma dosyaları
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-ado
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
 ms.assetid: 37df2641-661e-407a-a3fb-7bf9540f01e8
-caps.latest.revision: "4"
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
-ms.workload: dotnet
-ms.openlocfilehash: 447b2d6c0e5eeafeaff89aa1d6430eec72d59a4d
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.openlocfilehash: a4876d3b794282852b364f58cc84b58546567d80
+ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="connection-strings-and-configuration-files"></a>Bağlantı dizeleri ve yapılandırma dosyaları
 Uygulamanızın kodda bağlantı dizelerini katıştırma Güvenlik Açıkları ve Bakım sorunlarına yol açabilir. Bir uygulamanın kaynak koda derlenmiş şifrelenmemiş bir bağlantı dizeleri kullanılarak görüntülenebilir [Ildasm.exe (IL ayrıştırıcı)](../../../../docs/framework/tools/ildasm-exe-il-disassembler.md) aracı. Bağlantı dizesi hiç değişirse, ayrıca, uygulamanızı yeniden derlenmesi gerekiyor. Bu nedenlerle, bir uygulama yapılandırma dosyasında bağlantı dizeleri depolamanızı öneririz.  
@@ -78,7 +66,7 @@ Uygulamanızın kodda bağlantı dizelerini katıştırma Güvenlik Açıkları 
 >  **Machine.config** dosyasında bir **connectionStrings** bölümünde, Visual Studio tarafından kullanılan bağlantı dizeleri içerir. Bağlantı dizeleri sağlayıcı adı tarafından alınırken **app.config** bağlantı dizeleri olan bir Windows uygulaması dosyasında **machine.config** yüklenen ilk ve girişleri alma**app.config**. Ekleme **temizleyin** hemen sonra **connectionStrings** öğesi devralınan tüm başvuruları kaldırır, bellekte veri yapısından böylece yalnızca bağlantı dizeleri yerel tanımlanan**app.config** dosya olarak kabul edilir.  
   
 ### <a name="working-with-the-configuration-classes"></a>Yapılandırma sınıfları ile çalışma  
- .NET Framework 2.0 ile başlayan <xref:System.Configuration.ConfigurationManager> kullanım dışı değiştirerek yerel bilgisayarda yapılandırma dosyaları ile çalışırken kullanılan <xref:System.Configuration.ConfigurationSettings>. <xref:System.Web.Configuration.WebConfigurationManager>ASP.NET yapılandırma dosyaları ile çalışmak için kullanılır. Bir Web sunucusundaki yapılandırma dosyaları ile çalışmak üzere tasarlanmış ve yapılandırma dosyası bölümleri için programlı erişim gibi izin verir **system.web**.  
+ .NET Framework 2.0 ile başlayan <xref:System.Configuration.ConfigurationManager> kullanım dışı değiştirerek yerel bilgisayarda yapılandırma dosyaları ile çalışırken kullanılan <xref:System.Configuration.ConfigurationSettings>. <xref:System.Web.Configuration.WebConfigurationManager> ASP.NET yapılandırma dosyaları ile çalışmak için kullanılır. Bir Web sunucusundaki yapılandırma dosyaları ile çalışmak üzere tasarlanmış ve yapılandırma dosyası bölümleri için programlı erişim gibi izin verir **system.web**.  
   
 > [!NOTE]
 >  Yapılandırma dosyaları çalışma zamanında erişme izinleri çağırana verme gerektirir; gerekli izinleri uygulama ve yapılandırma dosyası konumu türüne bağlıdır. Daha fazla bilgi için bkz: [yapılandırma sınıfları kullanma](http://msdn.microsoft.com/library/98d2b386-baf6-4a17-974b-76e3b4c87acc) ve <xref:System.Web.Configuration.WebConfigurationManager> ASP.NET uygulamaları için ve <xref:System.Configuration.ConfigurationManager> Windows uygulamaları için.  

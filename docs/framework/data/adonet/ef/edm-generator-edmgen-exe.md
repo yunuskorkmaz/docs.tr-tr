@@ -1,24 +1,12 @@
 ---
-title: "EDM Oluşturucu (EdmGen.exe)"
-ms.custom: 
+title: EDM Oluşturucu (EdmGen.exe)
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-ado
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: fe8297a1-1fc3-48ce-8eeb-f70f63f857aa
-caps.latest.revision: "6"
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
-ms.workload: dotnet
-ms.openlocfilehash: 8d310786a12aa538a8a820c1c05788f30fe28c44
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.openlocfilehash: 90d67af0d2ba3ff04ee5c78b7d0a3f061a69bc1d
+ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="edm-generator-edmgenexe"></a>EDM Oluşturucu (EdmGen.exe)
 EdmGen.exe ile çalışmak için kullanılan bir komut satırı aracıdır [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] model ve dosyaları eşleme. Aşağıdakileri yapmak için EdmGen.exe Aracı'nı kullanabilirsiniz:  
@@ -71,9 +59,9 @@ EdmGen /mode:choice [options]
 |`/entitycontainer:`\<dize >|Uygulamak için adını belirtir `<EntityContainer>` eşleme dosyaları ve oluşturulmuş bir model öğesi.|  
 |`/pl[uralize]`|Singulars ve çoğul ekleri için İngilizce kuralları uygular `Entity`, `EntitySet`, ve `NavigationProperty` kavramsal modelde adları. Bu seçenek, aşağıdaki eylemleri gerçekleştirir:<br /><br /> -Tüm olun `EntityType` tekil adları.<br />-Tüm olun `EntitySet` adlarını çoğul.<br />-İçin her `NavigationProperty` en çok bir varlık döndüren, adı tekil yapın.<br />-İçin her `NavigationProperty` birden fazla varlık döndüren, adı çoğul olun.|  
 |`/SupressForeignKeyProperties or /nofk`|Yabancı anahtar sütunları, kavramsal modeldeki varlık türlerinde skaler özellik olarak sunulan engeller.|  
-|`/help`veya`?`|Araç için komut sözdizimini ve seçenekleri görüntüler.|  
+|`/help` Veya `?`|Araç için komut sözdizimini ve seçenekleri görüntüler.|  
 |`/nologo`|Telif Hakkı görüntüleme iletiden gizler.|  
-|`/targetversion:`\<dize >|Oluşturulan kod derlemek için kullanılan .NET Framework sürümü. Desteklenen sürümler 4 ve 4. 5 ' dir. Varsayılan olarak 4.|  
+|`/targetversion:` \<dize >|Oluşturulan kod derlemek için kullanılan .NET Framework sürümü. Desteklenen sürümler 4 ve 4. 5 ' dir. Varsayılan olarak 4.|  
   
 ## <a name="in-this-section"></a>Bu Bölümde  
  [Nasıl yapılır: EdmGen.exe kullanarak Model ve Eşleme Dosyaları Oluşturma](../../../../../docs/framework/data/adonet/ef/how-to-use-edmgen-exe-to-generate-the-model-and-mapping-files.md)  

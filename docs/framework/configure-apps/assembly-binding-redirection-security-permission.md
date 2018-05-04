@@ -1,27 +1,18 @@
 ---
-title: "Derleme Bağlama Yönlendirmesi Güvenlik İzni"
-ms.custom: 
+title: Derleme Bağlama Yönlendirmesi Güvenlik İzni
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - side-by-side execution, assembly binding redirection
 - assemblies [.NET Framework], binding redirection
 ms.assetid: 24a5cdff-7ed9-4195-93f3-edf6899019fc
-caps.latest.revision: "9"
 author: mcleblanc
 ms.author: markl
 manager: markl
-ms.workload: dotnet
-ms.openlocfilehash: d2593df04b93db17f9ca61a98b21aaec1d534d46
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.openlocfilehash: ef9295028aeb7bfcc6df88e9c8bb7f80e2a31368
+ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="assembly-binding-redirection-security-permission"></a>Derleme Bağlama Yönlendirmesi Güvenlik İzni
 Bir uygulama yapılandırma dosyasında açık derleme bağlama yeniden yönlendirmesi için bir güvenlik izni gerekir. Bu, .NET Framework derlemelerinin ve üçüncü tarafların derlemelerinin yeniden yönlendirilmesi için geçerlidir. Ayarlayarak iznine sahip <xref:System.Security.Permissions.SecurityPermissionFlag> üzerinde bayrak <xref:System.Security.Permissions.SecurityPermission>. Yönetilen derlemeler varsayılan olarak bir izniniz yok.  
@@ -36,8 +27,8 @@ Bir uygulama yapılandırma dosyasında açık derleme bağlama yeniden yönlend
 |----------|-----------------------------------|  
 |Güvenilir bölgeye (yerel makine)|**AÇIK**|  
 |İntranet bölgesi|**AÇIK**|  
-|Internet Bölgesi|**OFF**|  
-|Güvenilmeyen bölgeleri|**OFF**|  
+|Internet Bölgesi|**KAPALI**|  
+|Güvenilmeyen bölgeleri|**KAPALI**|  
   
  Bir yönetici veya kısıtlama verilen bir bilgisayardaki belirli senaryoları desteklemek üzere bu güvenlik ayarlarını değiştirebilirsiniz. Değiştirmek için hiçbir araç vardır **BindingRedirects** varsayılandan; ayarlama bayrağı yönetici el ile bir kullanıcının bilgisayarda Security.config dosyasını düzenlemeniz gerekir.  
   

@@ -1,24 +1,12 @@
 ---
-title: "Sütunları çıkarımını yapma"
-ms.custom: 
+title: Sütunları çıkarımını yapma
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-ado
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 0e022699-c922-454c-93e2-957dd7e7247a
-caps.latest.revision: "4"
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
-ms.workload: dotnet
-ms.openlocfilehash: 858a23fb8fec7b7f2eee95a1365d16e846beb548
-ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
+ms.openlocfilehash: da98bcbc4537e08a6f8565b36f8b84b476efd027
+ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="inferring-columns"></a>Sütunları çıkarımını yapma
 ADO.NET için tabloları olarak Infer hangi öğelerin bir XML belgesinden belirledi sonra bir <xref:System.Data.DataSet>, ardından bu tablo sütunlarını oluşturur. ADO.NET 2.0 sunulan her biri için kesin türü belirtilmiş veri türü oluşturur Yeni bir şema çıkarımı altyapısının **simpleType** öğesi. Önceki sürümlerde, veri türü bir oluşturulursa **simpleType** öğesi olan her zaman **xsd:string**.  
@@ -74,7 +62,7 @@ ADO.NET için tabloları olarak Infer hangi öğelerin bir XML belgesinden belir
   
 |ChildElement1|ChildElement2|  
 |-------------------|-------------------|  
-|Text1|Metin2|  
+|Metin1|Metin2|  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
  [XML’den DataSet İlişkisel Yapısını Çıkarma](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/inferring-dataset-relational-structure-from-xml.md)  

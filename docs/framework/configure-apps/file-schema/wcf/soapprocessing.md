@@ -1,24 +1,12 @@
 ---
 title: '&lt;soapProcessing&gt;'
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: e8707027-e6b8-4539-893d-3cd7c13fbc18
-caps.latest.revision: "4"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 1aeb100e1b8e160d30566cd43d67cbf49c6b5c4e
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
-ms.translationtype: MT
+ms.openlocfilehash: 780c0e9a1d88c9f00883753091b102fbe9d41aa5
+ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="ltsoapprocessinggt"></a>&lt;soapProcessing&gt;
 
@@ -60,7 +48,7 @@ Yok.
 
 SOAP işleme iletileri ileti sürümleri arasında burada dönüştürülür işlemidir.
 
-[!INCLUDE[indigo1](../../../../../includes/indigo1-md.md)] Yönlendirme hizmeti dönüştürebilir iletileri bir protokolünden diğerine. Gelen ve giden ileti sürümleri farklıysa, doğru sürümünün yeni bir ileti oluşturulur. İleti birinden işleme <!--zz <xref:System.ServiceModel.Channel.MessageVersion> --> `MessageVersion` başka bir yeni oluşturarak elde edilir [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)] gövde bölümü ve ilgili üstbilgi gelen içeren ileti [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)] ileti. Adresleme için belirli olan veya, anladım yönlendirici düzeyinde kullanılmaz yeni WCF ileti oluşturma sırasında bu üstbilgileri ya da (söz konusu olduğunda üstbilgileri adresleme) farklı bir sürüm olması veya bir parçası olarak işlenen üstbilgileri yönlendirici ile istemci arasındaki iletişim.
+Windows Communication Foundation (WCF) yönlendirme hizmeti, iletileri bir protokolünden dönüştürebilirsiniz. Gelen ve giden ileti sürümleri farklıysa, doğru sürümünün yeni bir ileti oluşturulur. İleti birinden işleme <!--zz <xref:System.ServiceModel.Channel.MessageVersion> --> `MessageVersion` başka bir yeni oluşturarak elde edilir [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)] gövde bölümü ve ilgili üstbilgi gelen içeren ileti [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)] ileti. Adresleme için belirli olan veya, anladım yönlendirici düzeyinde kullanılmaz yeni WCF ileti oluşturma sırasında bu üstbilgileri ya da (söz konusu olduğunda üstbilgileri adresleme) farklı bir sürüm olması veya bir parçası olarak işlenen üstbilgileri yönlendirici ile istemci arasındaki iletişim.
 
 Üstbilgi giden iletisinde olup bulunuyor olsun veya olmasın, gelen kanal katmanını geçti olarak anladım olarak işaretlendi tarafından belirlenir. (Özel üstbilgiler gibi) anlaşılmayan üstbilgileri kaldırılmıyor ve bu nedenle yönlendirme hizmeti aracılığıyla Giden iletiye kopyalanmasını tarafından geçirin. Giden iletinin ileti gövdesini kopyalanır. İleti Giden kanal çıkış gönderilir, tüm üstbilgiler ve belirli diğer Zarf verileri için iletişimin noktada, Protokolü/Aktarım oluşturulan eklendi ve.
 

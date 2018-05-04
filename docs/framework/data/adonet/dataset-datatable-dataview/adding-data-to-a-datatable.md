@@ -1,27 +1,15 @@
 ---
 title: DataTable tablosuna veri ekleme
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-ado
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
 ms.assetid: d6aa8474-7bde-48f7-949d-20dc38a1625b
-caps.latest.revision: "4"
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
-ms.workload: dotnet
-ms.openlocfilehash: 29ba4a62b2c896e4ce5fa01929307ee82753495f
-ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
+ms.openlocfilehash: c58f64dba0bceb4a35c67e16193a6627837436e0
+ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="adding-data-to-a-datatable"></a>DataTable tablosuna veri ekleme
 Oluşturduktan sonra bir <xref:System.Data.DataTable> ve sütunları ve kısıtlamaları kullanarak yapısını tanımlamak, yeni veri satırları tabloya ekleyebilirsiniz. Yeni bir satır eklemek için yeni bir değişken türü olarak bildirme <xref:System.Data.DataRow>. Yeni bir **DataRow** çağırdığınızda nesnesi döndürülen <xref:System.Data.DataTable.NewRow%2A> yöntemi. **DataTable** sonra oluşturur **DataRow** nesne tarafından tanımlanan tablosu yapısına bağlı <xref:System.Data.DataColumnCollection>.  

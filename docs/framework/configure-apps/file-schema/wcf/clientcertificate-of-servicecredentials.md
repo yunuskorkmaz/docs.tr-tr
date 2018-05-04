@@ -1,34 +1,22 @@
 ---
-title: "&lt;serviceCredentials&gt; için &lt;clientCertificate&gt;"
-ms.custom: 
+title: '&lt;serviceCredentials&gt; için &lt;clientCertificate&gt;'
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 90ad03aa-2317-43dd-8a72-6d24cdcad15c
-caps.latest.revision: "19"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: f0bd36f0c13aebb75bb9d2147e871224c162b862
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: c33c6d6a80625028b9d97ab486cf50e4970b8941
+ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="ltclientcertificategt-of-ltservicecredentialsgt"></a>&lt;serviceCredentials&gt; için &lt;clientCertificate&gt;
 Oturum açın ve bir istemci forma çift yönlü iletişim düzeni hizmetinde iletileri şifrelemek için kullanılan bir X.509 sertifikası tanımlar.  
   
- \<Sistem. ServiceModel >  
+ \<system.ServiceModel>  
 \<davranışları >  
-\<serviceBehaviors >  
-\<serviceBehaviors >  
+\<serviceBehaviors>  
+\<serviceBehaviors>  
 \<davranışı >  
-\<serviceCredentials >  
+\<serviceCredentials>  
 \<clientCertificate >  
   
 ## <a name="syntax"></a>Sözdizimi  

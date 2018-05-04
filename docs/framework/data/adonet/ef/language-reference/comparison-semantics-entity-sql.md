@@ -1,26 +1,12 @@
 ---
-title: "Karşılaştırma semantiği (varlık SQL)"
-ms.custom: 
+title: Karşılaştırma semantiği (varlık SQL)
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-ado
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: b36ce28a-2fe4-4236-b782-e5f7c054deae
-caps.latest.revision: 
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
-ms.workload:
-- dotnet
-ms.openlocfilehash: e20d47e0ae97067d2dcafcf929f717598d4e3e80
-ms.sourcegitcommit: 96cc82cac4650adfb65ba351506d8a8fbcd17b5c
+ms.openlocfilehash: 2184f86ee43f88b0c4cfc1b96e42e2486c17fe5f
+ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/19/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="comparison-semantics-entity-sql"></a>Karşılaştırma semantiği (varlık SQL)
 Aşağıdakilerden herhangi birini gerçekleştirme [!INCLUDE[esql](../../../../../../includes/esql-md.md)] işleçleri karşılaştırma türü örnekleri içerir:  
@@ -44,14 +30,14 @@ Aşağıdakilerden herhangi birini gerçekleştirme [!INCLUDE[esql](../../../../
   
  Null atanabilirlik işlemleri:  
   
--   IS NULL  
+-   NULL  
   
 -   NULL OLMAYAN  
   
 ## <a name="explicit-distinction"></a>Açık ayrım  
  Eşitlik fark:  
   
--   DISTINCT  
+-   FARKLI  
   
 -   GRUPLANDIRMA ÖLÇÜTÜ  
   
@@ -66,7 +52,7 @@ Aşağıdakilerden herhangi birini gerçekleştirme [!INCLUDE[esql](../../../../
   
 -   INTERSECT  
   
--   EXCEPT  
+-   DIŞINDA  
   
 -   AYARLAMA  
   
@@ -79,7 +65,7 @@ Aşağıdakilerden herhangi birini gerçekleştirme [!INCLUDE[esql](../../../../
 ## <a name="supported-combinations"></a>Desteklenen birleşimleri  
  Aşağıdaki tabloda her türde Karşılaştırma işleçleri tüm desteklenen birleşimleri gösterilmektedir:  
   
-|Türü|**=**<br /><br /> **!=**|**GROUP BY**<br /><br /> **DISTINCT**|**UNION**<br /><br /> **INTERSECT**<br /><br /> **EXCEPT**<br /><br /> **SET**<br /><br /> **OVERLAPS**|**IN**|**<   <=**<br /><br /> **>   >=**|**ORDER BY**|**IS NULL**<br /><br /> NULL OLMAYAN|  
+|**Türü**|**=**<br /><br /> **\!=**|**GROUP BY**<br /><br /> **FARKLI**|**UNION**<br /><br /> **INTERSECT**<br /><br /> **EXCEPT**<br /><br /> **SET**<br /><br /> **OVERLAPS**|**IN**|**<   <=**<br /><br /> **>   >=**|**ORDER BY**|**NULL**<br /><br /> **NULL OLMAYAN**|  
 |-|-|-|-|-|-|-|-|  
 |Varlık türü|Ref<sup>1</sup>|Tüm özellikleri<sup>2</sup>|Tüm özellikleri<sup>2</sup>|Tüm özellikleri<sup>2</sup>|Throw<sup>3</sup>|Throw<sup>3</sup>|Ref<sup>1</sup>|  
 |karmaşık türü|Throw<sup>3</sup>|Throw<sup>3</sup>|Throw<sup>3</sup>|Throw<sup>3</sup>|Throw<sup>3</sup>|Throw<sup>3</sup>|Throw<sup>3</sup>|  

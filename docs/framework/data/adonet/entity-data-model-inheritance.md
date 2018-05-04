@@ -1,24 +1,12 @@
 ---
-title: "Varlık veri modeli: devralma"
-ms.custom: 
+title: 'Varlık veri modeli: devralma'
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-ado
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 42c7ef24-710a-4af9-8493-cd41c399ecb0
-caps.latest.revision: "3"
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
-ms.workload: dotnet
-ms.openlocfilehash: 6e6207087524a1ec1201511a91a810f02449e610
-ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
+ms.openlocfilehash: c5c1b385ea72e48fd70ed5ec0cf8d1c42c1284e4
+ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="entity-data-model-inheritance"></a>Varlık veri modeli: devralma
 Varlık veri modeli (EDM) için devralma destekleyen [varlık türleri](../../../../docs/framework/data/adonet/entity-type.md). EDM devralma nesne odaklı programlama dillerinde sınıfları için devralma benzer. Nesne odaklı dillerde sınıflarıyla kavramsal modelde bir varlık türü tanımlayabilirsiniz gibi (bir *türetilen türün*) başka bir varlık türünden devralan ( *temel türü*). Ancak, nesne odaklı programlama sınıflarında, kavramsal modelde türetilmiş bir tür her zaman tüm devralır [özellikleri](../../../../docs/framework/data/adonet/property.md) ve [Gezinti özellikleri](../../../../docs/framework/data/adonet/navigation-property.md) temel türü. Türetilmiş bir tür devralınan özelliklerinde geçersiz kılamaz.  

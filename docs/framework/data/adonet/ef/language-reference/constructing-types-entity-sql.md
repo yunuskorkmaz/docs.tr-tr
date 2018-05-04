@@ -1,27 +1,15 @@
 ---
-title: "Türler (varlık SQL) oluşturma"
-ms.custom: 
+title: Türler (varlık SQL) oluşturma
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-ado
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 41fa7bde-8d20-4a3f-a3d2-fb791e128010
-caps.latest.revision: "2"
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
-ms.workload: dotnet
-ms.openlocfilehash: 8a6ae2334c879733e964014716c2b67e77f271d5
-ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
+ms.openlocfilehash: 91ed123132965353ff354282f6850e9ef9cba3d0
+ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="constructing-types-entity-sql"></a>Türler (varlık SQL) oluşturma
-[!INCLUDE[esql](../../../../../../includes/esql-md.md)]üç tür oluşturucular sağlar: satır Oluşturucular, adlandırılmış türü oluşturucuları ve koleksiyon oluşturucular.  
+[!INCLUDE[esql](../../../../../../includes/esql-md.md)] üç tür oluşturucular sağlar: satır Oluşturucular, adlandırılmış türü oluşturucuları ve koleksiyon oluşturucular.  
   
 ## <a name="row-constructors"></a>Satır oluşturucular  
  Satır kurucularda kullandığınız [!INCLUDE[esql](../../../../../../includes/esql-md.md)] bir veya daha fazla değer anonim, yapısal olarak yazılan kayıtları oluşturmak için. Bir satır oluşturucusunda sonuç türü, alan türlerini satır oluşturmak için kullanılan değerlerin türleri için karşılık gelen bir satır türüdür. Örneğin, aşağıdaki deyim türünde bir değer oluşturur `Record(a int, b string, c int)`:  
@@ -52,7 +40,7 @@ ms.lasthandoff: 01/17/2018
  Daha fazla bilgi için bkz: [MULTISET](../../../../../../docs/framework/data/adonet/ef/language-reference/multiset-entity-sql.md).  
   
 ## <a name="named-type-constructors-namedtype-initializers"></a>Adlandırılmış türü oluşturucuları (NamedType başlatıcıları)  
- [!INCLUDE[esql](../../../../../../includes/esql-md.md)]türü oluşturucuları (adlandırılmış karmaşık türlerin örnekleri oluşturmak için başlatıcıları) ve varlık türleri sağlar. Örneğin, aşağıdaki ifade bir örneğini oluşturur bir `Person` türü.  
+ [!INCLUDE[esql](../../../../../../includes/esql-md.md)] türü oluşturucuları (adlandırılmış karmaşık türlerin örnekleri oluşturmak için başlatıcıları) ve varlık türleri sağlar. Örneğin, aşağıdaki ifade bir örneğini oluşturur bir `Person` türü.  
   
  `Person("abc", 12)`  
   

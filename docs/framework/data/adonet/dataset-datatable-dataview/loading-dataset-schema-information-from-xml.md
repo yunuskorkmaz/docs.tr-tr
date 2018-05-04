@@ -1,27 +1,15 @@
 ---
-title: "XML'den veri kümesi şema bilgileri yükleniyor"
-ms.custom: 
+title: XML'den veri kümesi şema bilgileri yükleniyor
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-ado
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
 ms.assetid: 43dfb23b-5cef-46f2-8d87-78f0fba1eb8c
-caps.latest.revision: "4"
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
-ms.workload: dotnet
-ms.openlocfilehash: 8b814715782710994f18163ccfcd3db342199145
-ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
+ms.openlocfilehash: 4b212a7233e6eec93cdce3e521b58e08745e35e0
+ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="loading-dataset-schema-information-from-xml"></a>XML'den veri kümesi şema bilgileri yükleniyor
 Şeması bir <xref:System.Data.DataSet> (kendi tablolar, sütunlar, ilişkileri ve kısıtlamalar) programlı olarak tarafından oluşturulan tanımlanabilir **doldurun** veya **FillSchema** yöntemlerinin bir <xref:System.Data.Common.DataAdapter>, veya gelen yüklenen bir XML belgesi. Yüklemek için **DataSet** şema bilgileri bir XML belgesinden kullanabilirsiniz **ReadXmlSchema** veya **InferXmlSchema** yöntemi **DataSet**. **ReadXmlSchema** yüklemek veya Infer sağlayan **DataSet** XML Şeması Tanım Dili (XSD) şeması veya satır içi XML Şeması XML belgesiyle içeren belgedeki şema bilgileri. **InferXmlSchema** belirttiğiniz belirli XML ad alanları yoksayılıyor sırasında şemasını XML belgesinden olanak tanır.  
@@ -65,7 +53,7 @@ xmlStream.Close();
 ```  
   
 ## <a name="inferxmlschema"></a>InferXmlSchema  
- Ayrıca söyleyebilirsiniz **DataSet** bir XML belgesi kullanarak şemasına gerçekleştirip **InferXmlSchema** yöntemi **DataSet**. **InferXmlSchema** gibi her ikisi de aynı işlevleri **ReadXml** ile bir **XmlReadMode** , **InferSchema** (verileri yükler yanı sıra şema oluşturur) ve  **ReadXmlSchema** okunan belge hiçbir satır içi şema içeriyorsa. Ancak, **InferXmlSchema** şema çıkarıldığında yok sayılacak belirli XML ad alanları belirtmek için sağlayarak ek özelliği sağlar. **InferXmlSchema** iki gerekli bağımsız değişkeni alır: bir akış bir dosya adıyla belirtilen XML belgesinin konumu veya bir **XmlReader**; ve işlem tarafından yoksayılacak XML ad alanları bir dize dizisi.  
+ Ayrıca söyleyebilirsiniz **DataSet** bir XML belgesi kullanarak şemasına gerçekleştirip **InferXmlSchema** yöntemi **DataSet**. **InferXmlSchema** gibi her ikisi de aynı işlevleri **ReadXml** ile bir **XmlReadMode** , **InferSchema** (verileri yükler yanı sıra şema oluşturur) ve **ReadXmlSchema** okunan belge hiçbir satır içi şema içeriyorsa. Ancak, **InferXmlSchema** şema çıkarıldığında yok sayılacak belirli XML ad alanları belirtmek için sağlayarak ek özelliği sağlar. **InferXmlSchema** iki gerekli bağımsız değişkeni alır: bir akış bir dosya adıyla belirtilen XML belgesinin konumu veya bir **XmlReader**; ve işlem tarafından yoksayılacak XML ad alanları bir dize dizisi.  
   
  Örneğin, aşağıdaki XML göz önünde bulundurun:  
   

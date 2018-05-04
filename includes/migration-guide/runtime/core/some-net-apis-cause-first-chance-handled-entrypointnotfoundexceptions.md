@@ -2,7 +2,7 @@
 
 |   |   |
 |---|---|
-|Ayrıntılar|.NET Framework 4.5 ilk fırsat atma .NET yöntemleri az sayıda başlangıcından <xref:System.EntryPointNotFoundException?displayProperty=name>s. Bu özel durumları .net içinde işlenen Framework, ancak ilk fırsat özel durum beklememeniz test Otomasyonu bozar. HighVersionLie etkinleştirilmişse, bu aynı API'leri bazı ApiVerifier senaryolar bölün.|
+|Ayrıntılar|.NET Framework 4.5 ilk fırsat atma .NET yöntemleri az sayıda başlangıcından <xref:System.EntryPointNotFoundException?displayProperty=name>s. Bu özel durumları .NET Framework içinde işlenen, ancak ilk fırsat özel durum beklememeniz test Otomasyonu bozar. HighVersionLie etkinleştirilmişse, bu aynı API'leri bazı ApiVerifier senaryolar bölün.|
 |Öneri|Bu hata, .NET Framework 4.5.1 yükselterek önlenebilir. Alternatif olarak, test Otomasyonu ilk fırsat üzerinde sonu olmayan güncelleştirilebilir <xref:System.EntryPointNotFoundException?displayProperty=name>s.|
 |Kapsam|Kenar|
 |Sürüm|4,5|

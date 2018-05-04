@@ -1,24 +1,12 @@
 ---
-title: "&lt;netNamedPipeBinding&gt; &lt;taşıma&gt;"
-ms.custom: 
+title: '&lt;netNamedPipeBinding&gt; &lt;taşıma&gt;'
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: d9eff52d-4bde-4586-b56a-b0ec24611f8d
-caps.latest.revision: "12"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 84811c70f2f3608c10d8886900169f804a8c9b62
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.openlocfilehash: 9116532c8b4aae2f7539706b97d564444195c79d
+ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="lttransportgt-of-ltnetnamedpipebindinggt"></a>&lt;netNamedPipeBinding&gt; &lt;taşıma&gt;
 Bir adlandırılmış kanal taşıma güvenlik ayarlarını tanımlar.  
@@ -49,7 +37,7 @@ Bir adlandırılmış kanal taşıma güvenlik ayarlarını tanımlar.
   
 |Öznitelik|Açıklama|  
 |---------------|-----------------|  
-|protectionLevel|Adlandırılmış kanal koruma düzeyini tanımlar. İletileri imzalama bir üçüncü taraf onu aktarılırken iletiyle oynama riskini azaltır. Şifreleme, aktarım sırasında veri düzeyi gizliliği sağlar. Geçerli değerler şunlardır:<br /><br /> -Hiçbiri: Koruma yok.<br />-Oturum: İletileri imzalanmıştır.<br />-Da EncryptAndSign: İletileri şifrelenmiş ve imzalanmış.<br /><br /> Da EncryptAndSign varsayılan değerdir.|  
+|ProtectionLevel|Adlandırılmış kanal koruma düzeyini tanımlar. İletileri imzalama bir üçüncü taraf onu aktarılırken iletiyle oynama riskini azaltır. Şifreleme, aktarım sırasında veri düzeyi gizliliği sağlar. Geçerli değerler şunlardır:<br /><br /> -Hiçbiri: Koruma yok.<br />-Oturum: İletileri imzalanmıştır.<br />-Da EncryptAndSign: İletileri şifrelenmiş ve imzalanmış.<br /><br /> Da EncryptAndSign varsayılan değerdir.|  
   
 ### <a name="child-elements"></a>Alt Öğeler  
  Yok.  
