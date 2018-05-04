@@ -1,32 +1,20 @@
 ---
-title: "Tarih ve saat işlevleri"
-ms.custom: 
+title: Tarih ve saat işlevleri
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-ado
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 971762d0-663b-4b64-8c61-352a8e6d3949
-caps.latest.revision: "2"
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
-ms.workload: dotnet
-ms.openlocfilehash: e68a78a3a24bf6da4e9827cb17d4715b6d60d0b8
-ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
+ms.openlocfilehash: dbde1a2d19e9cf1559129adf8fe3dcc4fadddf0a
+ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="date-and-time-functions"></a>Tarih ve saat işlevleri
 SQL Server (SqlClient) için .NET Framework veri sağlayıcısı işlemleri yapmanız tarih ve saat işlevleri sağlayan bir `System.DateTime` giriş değeri ve dönüş bir `string`, sayısal ve veya `System.DateTime` sonuç değeri. Bu SqlServer ad alanında SqlClient kullandığınızda kullanılabilir olduğu işlevlerdir. Bir sağlayıcının ad özelliği, hangi önekin türler ve işlevler gibi belirli yapıları için bu sağlayıcı tarafından kullanılan bulmak Entity Framework sağlar. Aşağıdaki tabloda SqlClient tarih ve saat işlevleri gösterir.  
   
 |İşlev|Açıklama|  
 |--------------|-----------------|  
-|`DATEADD(` `datepart`, `number`, `date``)`|Yeni bir döndürür `DateTime` belirtilen tarihe bir aralık eklenmesine bağlı dayalı değeri.<br /><br /> **Bağımsız Değişkenler**<br /><br /> `datepart`: Bir `String` yeni bir değer döndürüleceğini tarih bölümünü temsil eder.<br /><br /> `number``Int32`, `Int64`, `Decimal`, Veya `Double` kullanılan değeri artırmak `datepart`.<br /><br /> `date:`Döndüren bir ifadeye bir `DateTime`, veya `DateTimeOffset`, veya `Time` [0-7], duyarlık ile = ya da tarih biçiminde bir karakter dizesi.<br /><br /> **Dönüş değeri**<br /><br /> Yeni bir `DateTime`, veya `DateTimeOffset`, veya `Time` duyarlık değerle = [0-7].<br /><br /> **Örnek**<br /><br /> `SqlServer.DATEADD('day', 22, cast('6/9/2006' as DateTime))`|  
-|`DATEDIFF(` `datepart`, `startdate`, `enddate``)`|Belirtilen iki tarih arasında geçilen tarih ve saat sınırlarının sayısını döndürür.<br /><br /> **Bağımsız Değişkenler**<br /><br /> `datepart`: Bir `String` farkını hesaplamak için tarih bölümünü temsil eder.<br /><br /> `startdate`: Döndüren bir ifadeye hesaplama için başlangıç tarihi olan bir `DateTime`, veya `DateTimeOffset`, veya `Time` duyarlık değerle = [0-7], ya da tarih biçiminde bir karakter dizesi.<br /><br /> `enddate:`Hesaplama için bir bitiş tarihi döndüren bir ifadedir bir `DateTime`, veya `DateTimeOffset`, veya `Time` duyarlık değerle = [0-7], ya da tarih biçiminde bir karakter dizesi.<br /><br /> **Dönüş değeri**<br /><br /> Bir `Int32`.<br /><br /> **Örnek**<br /><br /> `SqlServer.DATEDIFF('day', cast('6/9/2006' as DateTime),`<br /><br /> `cast('6/20/2006' as DateTime))`|  
+|`DATEADD(` `datepart`, `number`, `date``)`|Yeni bir döndürür `DateTime` belirtilen tarihe bir aralık eklenmesine bağlı dayalı değeri.<br /><br /> **Bağımsız Değişkenler**<br /><br /> `datepart`: Bir `String` yeni bir değer döndürüleceğini tarih bölümünü temsil eder.<br /><br /> `number``Int32`, `Int64`, `Decimal`, Veya `Double` kullanılan değeri artırmak `datepart`.<br /><br /> `date:` Döndüren bir ifadeye bir `DateTime`, veya `DateTimeOffset`, veya `Time` [0-7], duyarlık ile = ya da tarih biçiminde bir karakter dizesi.<br /><br /> **Dönüş değeri**<br /><br /> Yeni bir `DateTime`, veya `DateTimeOffset`, veya `Time` duyarlık değerle = [0-7].<br /><br /> **Örnek**<br /><br /> `SqlServer.DATEADD('day', 22, cast('6/9/2006' as DateTime))`|  
+|`DATEDIFF(` `datepart`, `startdate`, `enddate``)`|Belirtilen iki tarih arasında geçilen tarih ve saat sınırlarının sayısını döndürür.<br /><br /> **Bağımsız Değişkenler**<br /><br /> `datepart`: Bir `String` farkını hesaplamak için tarih bölümünü temsil eder.<br /><br /> `startdate`: Döndüren bir ifadeye hesaplama için başlangıç tarihi olan bir `DateTime`, veya `DateTimeOffset`, veya `Time` duyarlık değerle = [0-7], ya da tarih biçiminde bir karakter dizesi.<br /><br /> `enddate:` Hesaplama için bir bitiş tarihi döndüren bir ifadedir bir `DateTime`, veya `DateTimeOffset`, veya `Time` duyarlık değerle = [0-7], ya da tarih biçiminde bir karakter dizesi.<br /><br /> **Dönüş değeri**<br /><br /> Bir `Int32`.<br /><br /> **Örnek**<br /><br /> `SqlServer.DATEDIFF('day', cast('6/9/2006' as DateTime),`<br /><br /> `cast('6/20/2006' as DateTime))`|  
 |`DATENAME(` `datepart`, `date``)`|Belirtilen Date belirtilen datepart temsil eden bir karakter dizesi döndürür.<br /><br /> **Bağımsız Değişkenler**<br /><br /> `datepart`: Bir `String` yeni bir değer döndürüleceğini tarih bölümünü temsil eder.<br /><br /> `date`: Döndürür bir ifade bir `DateTime,` veya `DateTimeOffset`, veya `Time` duyarlık değerle = [0-7], ya da tarih biçiminde bir karakter dizesi.<br /><br /> **Dönüş değeri**<br /><br /> Belirtilen Date belirtilen datepart temsil eden karakter dizesi.<br /><br /> **Örnek**<br /><br /> `SqlServer.DATENAME('year', cast('6/9/2006' as DateTime))`|  
 |`DATEPART(` `datepart`, `date``)`|Belirtilen Date belirtilen datepart temsil eden bir tamsayı döndürür.<br /><br /> **Bağımsız Değişkenler**<br /><br /> `datepart`: Bir `String` yeni bir değer döndürüleceğini tarih bölümünü temsil eder.<br /><br /> `date`: Döndürür bir ifade bir `DateTime,` veya `DateTimeOffset,` veya `Time` duyarlık değerle = [0-7], ya da tarih biçiminde bir karakter dizesi.<br /><br /> **Dönüş değeri**<br /><br /> Belirtilen Date belirtilen datepart olarak bir `Int32`.<br /><br /> **Örnek**<br /><br /> `SqlServer.DATEPART('year', cast('6/9/2006' as DateTime))`|  
 |`DAY(` `date` `)`|Rreturns bir tamsayı olarak belirtilen tarihin gün.<br /><br /> **Bağımsız Değişkenler**<br /><br /> `date`: Bir ifade türü `DateTime` veya `DateTimeOffset` ile duyarlık = 0-7.<br /><br /> **Dönüş değeri**<br /><br /> Belirtilen tarih olarak gününü bir `Int32`.<br /><br /> **Örnek**<br /><br /> `SqlServer.DAY(cast('6/9/2006' as DateTime))`|  

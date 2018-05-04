@@ -1,29 +1,17 @@
 ---
 title: '&lt;channelPoolSettings&gt;'
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 4755f3d3-4213-4c68-ae7f-45b67d744459
-caps.latest.revision: "8"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 09496add0adcc11756b6aae01a0236fe590f819f
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: ad722fbc34617ef7f424d5f1c4418e1e1cb45344
+ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="ltchannelpoolsettingsgt"></a>&lt;channelPoolSettings&gt;
 Özel bağlama için kanal havuzu ayarlarını belirtir.  
   
- \<system.serviceModel >  
+ \<system.serviceModel>  
 \<bağlamaları >  
 \<customBinding >  
 \<bağlama >  
@@ -62,7 +50,7 @@ ms.lasthandoff: 12/22/2017
 ## <a name="remarks"></a>Açıklamalar  
  Kotalar aşırı kaynaklarının kullanımını engellemek için bir ilke mekanizması olarak kullanılır. Bunlar kötü amaçlı veya istenmeyen hizmet reddi (DOS) saldırılarını önler. Bu öğe kanal kotaları özel bir kanalda ayarlarken kullanın.  
   
- `ChannelPoolSettings`üç kotaları belirtir:  
+ `ChannelPoolSettings` üç kotaları belirtir:  
   
 -   `idleTimeout` Kota sunucusundaki kaynakları uzun bir süre için bağlamadan kullanan hizmet reddi (DOS) saldırıları azaltmak için kullanılır. İstemci üzerinde doğru değeri ayarı hizmetiyle bağlayan güvenilirliğini artırabilir. Varsayılan değer ölçülü uygun tahsis edilen kaynakların temel alır. Bir geliştirme ortamı ve küçük yükleme senaryoları için uygun olan. Hizmet yöneticileri, yüklemenin kaynakları tükendi çalıştırıyorsa veya ek kaynaklar kullanılabilirlik rağmen bağlantıları sınırlı değeri gözden geçirmelidir.  
   

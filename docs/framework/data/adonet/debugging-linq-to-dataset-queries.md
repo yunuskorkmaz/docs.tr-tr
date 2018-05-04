@@ -1,27 +1,15 @@
 ---
-title: "LINQ-DataSet sorguları hata ayıklama"
-ms.custom: 
+title: LINQ-DataSet sorguları hata ayıklama
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-ado
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: f4c54015-8ce2-4c5c-8d18-7038144cc66d
-caps.latest.revision: "3"
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
-ms.workload: dotnet
-ms.openlocfilehash: e1c8a518dd3f8bc4c1123099522ad4a4f452c78f
-ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
+ms.openlocfilehash: c0d3347358fa3417f8b73fd848b4091fe7d74a15
+ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="debugging-linq-to-dataset-queries"></a>LINQ-DataSet sorguları hata ayıklama
-[!INCLUDE[vs_current_long](../../../../includes/vs-current-long-md.md)]hata ayıklama destekleyen [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)] kodu. Ancak, hata ayıklama arasındaki bazı farklar vardır [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)] kod ve olmayan-[!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)] yönetilen kod. Hata ayıklama özelliklerinin çoğu çalışmak [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)] deyimleri, Adımlama, kesme noktalarını ayarlama ve hata ayıklayıcı pencerelerinde gösterilen sonuçları görüntüleme gibi. Ancak, sorgu yürütme hata ayıklama sırasında dikkate almanız gereken bazı yan etkileri olan ertelenmiş [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)] kod ve Düzenle ve devam et kullanmanın bazı sınırlamalar vardır. Bu konuda ele alınmıştır özgü hata ayıklama yönlerini [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)] karşılaştırıldığında olmayan[!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)] yönetilen kod.  
+[!INCLUDE[vs_current_long](../../../../includes/vs-current-long-md.md)] hata ayıklama destekleyen [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)] kodu. Ancak, hata ayıklama arasındaki bazı farklar vardır [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)] kod ve olmayan-[!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)] yönetilen kod. Hata ayıklama özelliklerinin çoğu çalışmak [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)] deyimleri, Adımlama, kesme noktalarını ayarlama ve hata ayıklayıcı pencerelerinde gösterilen sonuçları görüntüleme gibi. Ancak, sorgu yürütme hata ayıklama sırasında dikkate almanız gereken bazı yan etkileri olan ertelenmiş [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)] kod ve Düzenle ve devam et kullanmanın bazı sınırlamalar vardır. Bu konuda ele alınmıştır özgü hata ayıklama yönlerini [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)] karşılaştırıldığında olmayan[!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)] yönetilen kod.  
   
 ## <a name="viewing-results"></a>Sonuçları görüntüleme  
  Sonucu görüntüleyebileceğiniz bir [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)] DataTips, Gözcü penceresi ve QuickWatch iletişim kutusunu kullanarak deyimi. Bir kaynak penceresini kullanarak kaynak penceresini sorguda işaretçisini duraklatabilirsiniz ve bir DataTip görüntülenir. Kopyalayabilirsiniz bir [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)] değişkeni ve Gözcü penceresi veya QuickWatch iletişim kutusu yapıştırın. İçinde [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)], bir sorgu oluşturulduğunda veya bildirildi, ancak yalnızca sorgu çalıştırıldığında değerlendirilmez. Bu adlı *yürütme ertelenmiş*. Bu nedenle, onu değerlendirilir kadar sorgu değişkenine bir değer yok. Daha fazla bilgi için bkz: [LINQ-DataSet sorgularda](../../../../docs/framework/data/adonet/queries-in-linq-to-dataset.md).  

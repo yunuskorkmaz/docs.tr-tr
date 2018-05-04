@@ -1,24 +1,12 @@
 ---
-title: "(Varlık SQL)"
-ms.custom: 
+title: (Varlık SQL)
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-ado
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 4dcdd754-ae01-4e78-bf28-8a117fb2b73e
-caps.latest.revision: "3"
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
-ms.workload: dotnet
-ms.openlocfilehash: 3b27aee261e9195c2cb5f15e369cf26de4c0691a
-ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
+ms.openlocfilehash: bab31ca0a6fd37f5179412b7a4936d564620135e
+ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="between-entity-sql"></a>(Varlık SQL)
 Belirtilen aralıktaki bir değere bir ifade sonucu olup olmadığını belirler. [!INCLUDE[esql](../../../../../../includes/esql-md.md)] Arasındaki deyim arasında Transact-SQL ifadesi aynı işlevleri vardır.  
@@ -31,22 +19,22 @@ expression [ NOT ] BETWEEN begin_expression AND end_expression
   
 ## <a name="arguments"></a>Arguments  
  `expression`  
- Tarafından tanımlanan aralıktaki sınamak için herhangi bir geçerli ifadeler `begin_expression` ve `end_expression`. `expression`her ikisi de aynı türde olmalıdır `begin_expression` ve `end_expression`.  
+ Tarafından tanımlanan aralıktaki sınamak için herhangi bir geçerli ifadeler `begin_expression` ve `end_expression`. `expression` her ikisi de aynı türde olmalıdır `begin_expression` ve `end_expression`.  
   
  `begin_expression`  
- Herhangi bir geçerli ifade. `begin_expression`her ikisi de aynı türde olmalıdır `expression` ve `end_expression`. `begin_expression`olmalıdır değerinden `end_expression`, dönüş değeri tasarruflarını Aksi takdirde.  
+ Herhangi bir geçerli ifade. `begin_expression` her ikisi de aynı türde olmalıdır `expression` ve `end_expression`. `begin_expression` olmalıdır değerinden `end_expression`, dönüş değeri tasarruflarını Aksi takdirde.  
   
  `end_expression`  
- Herhangi bir geçerli ifade. `end_expression`her ikisi de aynı türde olmalıdır `expression` ve `begin_expression`.  
+ Herhangi bir geçerli ifade. `end_expression` her ikisi de aynı türde olmalıdır `expression` ve `begin_expression`.  
   
- NOT  
+ DEĞİL  
  BETWEEN sonucunu tasarruflarını gerektiğini belirtir.  
   
  AND  
  Gösteren yer tutucu olarak davranan `expression` tarafından belirtilen aralıkta olmalıdır `begin_expression` ve `end_expression`.  
   
 ## <a name="return-value"></a>Dönüş Değeri  
- `true`varsa `expression` tarafından belirtilen aralık arasında `begin_expression` ve `end_expression`; Aksi halde, `false`. `null`olursa döndürülür `expression` olan `null` veya `begin_expression` veya `end_expression` olan `null`.  
+ `true` varsa `expression` tarafından belirtilen aralık arasında `begin_expression` ve `end_expression`; Aksi halde, `false`. `null` olursa döndürülür `expression` olan `null` veya `begin_expression` veya `end_expression` olan `null`.  
   
 ## <a name="remarks"></a>Açıklamalar  
  Özel bir aralık belirtmek için yerine BETWEEN büyüktür (>) ve küçük (<) işleçleri kullanın.  

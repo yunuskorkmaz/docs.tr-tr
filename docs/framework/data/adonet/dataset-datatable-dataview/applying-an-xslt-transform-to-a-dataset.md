@@ -1,27 +1,15 @@
 ---
-title: "Bir veri kümesine bir XSLT dönüşümü uygulanarak"
-ms.custom: 
+title: Bir veri kümesine bir XSLT dönüşümü uygulanarak
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-ado
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
 ms.assetid: 09f2e4ee-1d08-4ba8-8936-83394fee319d
-caps.latest.revision: "4"
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
-ms.workload: dotnet
-ms.openlocfilehash: 0c2f5c50054be6254c472b8c161c4f9493132da7
-ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
+ms.openlocfilehash: 05894431f819b968877a4a971027850efe37126a
+ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="applying-an-xslt-transform-to-a-dataset"></a>Bir veri kümesine bir XSLT dönüşümü uygulanarak
 **WriteXml** yöntemi <xref:System.Data.DataSet> içeriğini yazmanızı sağlayan bir **DataSet** XML verileri olarak. Bu XML XSL Dönüşümleri (XSLT) kullanarak başka bir biçime Dönüştür ortak bir görevdir. Ancak, eşitleme bir **DataSet** ile bir <xref:System.Xml.XmlDataDocument> XSLT stil sayfası içeriği için uygulamanızı sağlar bir **DataSet** ilk içeriğini yazmak zorunda kalmadan  **Veri kümesi** XML verileri kullanarak olarak **WriteXml**.  

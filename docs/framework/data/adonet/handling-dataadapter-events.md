@@ -1,27 +1,15 @@
 ---
-title: "Olaylarını işleme"
-ms.custom: 
+title: Olaylarını işleme
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-ado
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
 ms.assetid: 11515b25-ee49-4b1d-9294-a142147c1ec5
-caps.latest.revision: "3"
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
-ms.workload: dotnet
-ms.openlocfilehash: 71524de2edbedb24cacc6727654aac5be0a48bb7
-ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
+ms.openlocfilehash: f2b07b8d42069fa98ba51dea75f9695e7adce0b0
+ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="handling-dataadapter-events"></a>Olaylarını işleme
 ADO.NET <xref:System.Data.Common.DataAdapter> veri kaynağında verilere yapılan değişiklikleri yanıt vermek için kullanabileceğiniz üç olayları gösterir. Aşağıdaki tabloda `DataAdapter` olaylar.  
@@ -33,7 +21,7 @@ ADO.NET <xref:System.Data.Common.DataAdapter> veri kaynağında verilere yapıla
 |`FillError`|Sırasında bir hata oluştu bir `Fill` işlemi.|  
   
 ## <a name="rowupdating-and-rowupdated"></a>RowUpdating ve RowUpdated  
- `RowUpdating`önce herhangi bir güncelleştirme satırdan tetiklenir <xref:System.Data.DataSet> veri kaynağında işlenir. `RowUpdated`herhangi bir satırı güncelleştirdikten sonra tetiklenir `DataSet` veri kaynağında işlenir. Sonuç olarak, kullanabileceğiniz `RowUpdating` , gerçekleşmeden önce bir güncelleştirme ortaya çıktığında ek işleme sağlamak üzere, geçerli güncelleştirme ve zamanlama için bir toplu işlem daha sonra işlenmek üzere iptal etmek için güncelleştirilmiş bir satıra bir başvuru korumak için güncelleştirme davranışını değiştirmek için , ve benzeri. `RowUpdated`hatalar ve güncelleştirme sırasında oluşan özel durumlar için yanıt için yararlıdır. Hata bilgilerini ekleyebilirsiniz `DataSet`, yanı sıra mantığı yeniden deneyin ve benzeri.  
+ `RowUpdating` önce herhangi bir güncelleştirme satırdan tetiklenir <xref:System.Data.DataSet> veri kaynağında işlenir. `RowUpdated` herhangi bir satırı güncelleştirdikten sonra tetiklenir `DataSet` veri kaynağında işlenir. Sonuç olarak, kullanabileceğiniz `RowUpdating` , gerçekleşmeden önce bir güncelleştirme ortaya çıktığında ek işleme sağlamak üzere, geçerli güncelleştirme ve zamanlama için bir toplu işlem daha sonra işlenmek üzere iptal etmek için güncelleştirilmiş bir satıra bir başvuru korumak için güncelleştirme davranışını değiştirmek için , ve benzeri. `RowUpdated` hatalar ve güncelleştirme sırasında oluşan özel durumlar için yanıt için yararlıdır. Hata bilgilerini ekleyebilirsiniz `DataSet`, yanı sıra mantığı yeniden deneyin ve benzeri.  
   
  <xref:System.Data.Common.RowUpdatingEventArgs> Ve <xref:System.Data.Common.RowUpdatedEventArgs> bağımsız değişkenleri geçirilen `RowUpdating` ve `RowUpdated` olaylar aşağıdakileri içerir: bir `Command` başvuruyor özelliği `Command` ; güncelleştirme gerçekleştirmek için kullanılan nesne bir `Row` başvuran özelliği `DataRow` güncelleştirilmiş bilgileri içeren bir nesne bir `StatementType` hangi güncelleştirme türünü gerçekleştirildiği; özelliği `TableMapping`, varsa; ve `Status` işlem.  
   

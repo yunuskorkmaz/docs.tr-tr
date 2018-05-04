@@ -1,24 +1,12 @@
 ---
-title: "Desteklenen ve desteklenmeyen LINQ yöntemleri (LINQ to Entities)"
-ms.custom: 
+title: Desteklenen ve desteklenmeyen LINQ yöntemleri (LINQ to Entities)
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-ado
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 7f3ffa5f-f819-4730-bcdb-09b23de3b6d0
-caps.latest.revision: "4"
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
-ms.workload: dotnet
-ms.openlocfilehash: 58fa10c62819979bfad15e4cae49118d25ed8670
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.openlocfilehash: 6994632c88b4ac67c9340fc95f07687d99917933
+ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="supported-and-unsupported-linq-methods-linq-to-entities"></a>Desteklenen ve desteklenmeyen LINQ yöntemleri (LINQ to Entities)
 Bu bölümde desteklenen veya içinde desteklenmeyen dil ile tümleşik sorgu (LINQ) standart sorgu işleçleri hakkında bilgi [!INCLUDE[linq_entities](../../../../../../includes/linq-entities-md.md)] sorgular. LINQ standart sorgu işleçleri birçoğu, tamsayı bağımsız değişken kabul aşırı yüklenmiş bir sürümüne sahipsiniz. Tamsayı bağımsız değişkeni sıfır tabanlı dizin üzerinde çalıştırıldığı sırada karşılık gelen bir <xref:System.Collections.Generic.IEqualityComparer%601>, veya <xref:System.Collections.Generic.IComparer%601>. Aksi belirtilmediği sürece, bu aşırı yüklenmiş LINQ standart sorgu işleçleri sürümleri desteklenmez ve bunları kullanmaya çalışırken bir özel durum oluşturur.  
@@ -161,7 +149,7 @@ Bu bölümde desteklenen veya içinde desteklenmeyen dil ile tümleşik sorgu (L
 |Yöntem|Destek|Visual Basic işlev imzası|C# yöntem imzası|  
 |------------|-------------|-------------------------------------|--------------------------|  
 |<xref:System.Linq.Queryable.Cast%2A>|EDM ilkel türlerinde destekleniyor|`Function Cast(Of TResult) ( _ source As IQueryable _ ) As IQueryable(Of TResult)`|`IQueryable<TResult> Cast<TResult>( this IQueryable source )`|  
-|<xref:System.Linq.Queryable.OfType%2A>|Desteklenen<xref:System.Data.Metadata.Edm.EntityType>|`Function OfType(Of TResult) ( _ source As IQueryable _ ) As IQueryable(Of TResult)`|`IQueryable<TResult> OfType<TResult>( this IQueryable source )`|  
+|<xref:System.Linq.Queryable.OfType%2A>|Desteklenen <xref:System.Data.Metadata.Edm.EntityType>|`Function OfType(Of TResult) ( _ source As IQueryable _ ) As IQueryable(Of TResult)`|`IQueryable<TResult> OfType<TResult>( this IQueryable source )`|  
   
 ## <a name="paging-methods"></a>Disk belleği yöntemleri  
  Çeşitli LINQ disk belleği yöntemler desteklenmez [!INCLUDE[linq_entities](../../../../../../includes/linq-entities-md.md)] sorgular. Daha fazla bilgi için bkz: [LINQ to Entities sorgularında standart sorgu işleçleri](../../../../../../docs/framework/data/adonet/ef/language-reference/standard-query-operators-in-linq-to-entities-queries.md). Aşağıdaki tabloda desteklenen ve desteklenmeyen disk belleği yöntemleri listelenmiştir.  

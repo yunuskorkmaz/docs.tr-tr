@@ -1,24 +1,12 @@
 ---
-title: "Veri sağlayıcıları ile çalışma"
-ms.custom: 
+title: Veri sağlayıcıları ile çalışma
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-ado
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: b6ae53f4-34f8-4510-ad98-ff1e46621526
-caps.latest.revision: "2"
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
-ms.workload: dotnet
-ms.openlocfilehash: 3c78170c01cbc0711f79ef554d2a3da585b41d6d
-ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
+ms.openlocfilehash: ba2ab5f277d9ffe7d240aede77f106acbbe3094a
+ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="working-with-data-providers"></a>Veri sağlayıcıları ile çalışma
 Bu bölümdeki konular, hizmetleri ve Entity Framework tarafından desteklenen bir veri kaynağında yerel sorgu kavramsal model sorguları dönüştürmek sağlayıcıları açıklanmaktadır.  

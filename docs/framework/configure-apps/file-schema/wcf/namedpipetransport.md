@@ -1,29 +1,17 @@
 ---
 title: '&lt;Connectionpoolsettings&gt;'
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 9fc3f42f-43e2-4ab1-8bc7-3c95a9220df1
-caps.latest.revision: "15"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 7802bff708cb081aa9f54f76a35ff5842ad60544
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 652cb551fb318d43d4284dbee48aeb994f056692
+ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="ltnamedpipetransportgt"></a>&lt;Connectionpoolsettings&gt;
 İçinde özel bağlama eklendiğinde adlandırılmış kanallar kullanarak ileti aktarılması için bir kanal neden olan bir taşıma tanımlar.  
   
-\<system.serviceModel >  
+\<system.serviceModel>  
 \<bağlamaları >  
 \<customBinding >  
 \<bağlama >  
@@ -68,7 +56,7 @@ Yok.
 |maxOutputDelay|Alır veya üst aralığı gönderilmeden önce bir ileti veya tam bir ileti öbeğini bellekte arabelleğe alınan kalabileceği süreyi ayarlar.|  
 |maxPendingAccepts|Alır veya bir hizmetin hizmetine gelen bağlantıları işlemek için bir dinleyici bekliyor olabilir kanalları sayısının üst sınırını ayarlar.|  
 |maxPendingConnections|Alır veya gönderme hizmeti üzerinde bekleyen bağlantı sayısının üst sınırını ayarlar.|  
-|MaxReceivedMessageSize|Alır ve izin verilen maksimum ileti boyutu alınabileceğini bayt cinsinden ayarlar.|  
+|maxReceivedMessageSize|Alır ve izin verilen maksimum ileti boyutu alınabileceğini bayt cinsinden ayarlar.|  
 |transferMode|Alır veya iletilerin ara belleğe veya ile bağlantı yönelimli aktarma akışı olup olmadığını belirten bir değer ayarlar.|  
 |[\<Tcptransport >, \<Connectionpoolsettings >](../../../../../docs/framework/configure-apps/file-schema/wcf/connectionpoolsettings.md)|Bir adlandırılmış kanal bağlama için ek bağlantı havuzu ayarlarını belirtir.|  
   

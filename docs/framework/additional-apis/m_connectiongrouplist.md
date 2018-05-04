@@ -1,9 +1,6 @@
 ---
 title: ServicePoint.m_ConnectionGroupList alan
 ms.date: 05/01/2017
-ms.prod: .net-framework
-ms.technology: 
-ms.topic: reference
 topic_type:
 - apiref
 api_name:
@@ -15,18 +12,15 @@ api_type:
 ms.assetid: df8afb59-f0f6-4ddc-b3c1-839b9fc601d8
 author: guardrex
 ms.author: mairaw
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: b116c2d56d6c0710f770b1c132029108a52e67da
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 25caec18f7d2c51f03028b52c1a4957bb1cd2589
+ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="servicepointmconnectiongrouplist-field"></a>ServicePoint.m\_ConnectionGroupList alan
 
-`ServicePoint.m_ConnectionGroupList`olan bir <xref:System.Collections.Hashtable> bağlantı grupları, her bir bağlantı için bulunduran <xref:System.Net.ServicePoint>ait URI.
+`ServicePoint.m_ConnectionGroupList` olan bir <xref:System.Collections.Hashtable> bağlantı grupları, her bir bağlantı için bulunduran <xref:System.Net.ServicePoint>ait URI.
 
 ## <a name="syntax"></a>Sözdizimi
   
@@ -41,7 +35,7 @@ private Hashtable m_ConnectionGroupList
 
 ## <a name="requirements"></a>Gereksinimler
 
-**Namespace:**<xref:System.Net>
+**Namespace:** <xref:System.Net>
 
 **Derleme:** sisteminde (System.dll)
 

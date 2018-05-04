@@ -1,29 +1,19 @@
 ---
 title: '&lt;AudienceUri&gt;'
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 7a3d8515-d756-4afe-a22d-07cbe2217ee3
-caps.latest.revision: "8"
 author: BrucePerlerMS
-ms.author: bruceper
 manager: mbaldwin
-ms.workload: dotnet
-ms.openlocfilehash: 69c96698b309a789b4527c76e1fe8b8b99811a19
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 7415cb3f1792d2de566161ae6c348ef591b4a0c3
+ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="ltaudienceurisgt"></a>&lt;AudienceUri&gt;
 Bağlı olan taraf (RP) kabul edilebilir tanımlayıcılardır URI'ler kümesini belirtir. İzin verilen kitle URI'ler biri için kapsamındaki sürece belirteçleri kabul edilmedi.  
   
- \<System.IdentityModel >  
+ \<system.identityModel>  
 \<identityConfiguration >  
 \<securityTokenHandlers >  
 \<securityTokenHandlerConfiguration >  
@@ -71,7 +61,7 @@ Bağlı olan taraf (RP) kabul edilebilir tanımlayıcılardır URI'ler kümesini
 |[\<securityTokenHandlerConfiguration >](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/securitytokenhandlerconfiguration.md)|Güvenlik bir koleksiyon için yapılandırma belirteci işleyicileri sağlar.|  
   
 ## <a name="remarks"></a>Açıklamalar  
- Varsayılan olarak, koleksiyon boştur; kullanmak `<add>`, `<clear>`, ve `<remove>` öğe koleksiyonunu Değiştir. <xref:System.IdentityModel.Tokens.SamlSecurityTokenHandler>ve <xref:System.IdentityModel.Tokens.Saml2SecurityTokenHandler> herhangi yapılandırmak için hedef kitleye URI koleksiyonu izin verilen değerler İzleyici URI kısıtlamaları kullanım nesneleri <xref:System.IdentityModel.Tokens.SamlSecurityTokenRequirement> nesneleri.  
+ Varsayılan olarak, koleksiyon boştur; kullanmak `<add>`, `<clear>`, ve `<remove>` öğe koleksiyonunu Değiştir. <xref:System.IdentityModel.Tokens.SamlSecurityTokenHandler> ve <xref:System.IdentityModel.Tokens.Saml2SecurityTokenHandler> herhangi yapılandırmak için hedef kitleye URI koleksiyonu izin verilen değerler İzleyici URI kısıtlamaları kullanım nesneleri <xref:System.IdentityModel.Tokens.SamlSecurityTokenRequirement> nesneleri.  
   
  `<audienceUris>` Öğesi ile temsil edilir <xref:System.IdentityModel.Configuration.AudienceUriElementCollection> sınıfı. Koleksiyona eklenen ayrı bir URI tarafından temsil edilen <xref:System.IdentityModel.Configuration.AudienceUriElement> sınıfı.  
   

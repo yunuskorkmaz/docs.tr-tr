@@ -1,27 +1,15 @@
 ---
-title: "Veri kümesi içeriği birleştirme"
-ms.custom: 
+title: Veri kümesi içeriği birleştirme
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-ado
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
 ms.assetid: e5e9309a-3ebb-4a9c-9d78-21c4e2bafc5b
-caps.latest.revision: "4"
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
-ms.workload: dotnet
-ms.openlocfilehash: 26b351b314d82c2b9e602d1ea629bbcf379d9284
-ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
+ms.openlocfilehash: c0cc0834dc087df89131a720f517cd34f757a0f3
+ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="merging-dataset-contents"></a>Veri kümesi içeriği birleştirme
 Kullanabileceğiniz <xref:System.Data.DataSet.Merge%2A> içeriğini birleştirmek için yöntemi bir <xref:System.Data.DataSet>, <xref:System.Data.DataTable>, veya <xref:System.Data.DataRow> içine var olan bir dizi `DataSet`. Çeşitli Etkenler ve seçenekleri yeni verilerin nasıl etkiler varolan içine birleştirilir `DataSet`.  
@@ -36,7 +24,7 @@ Kullanabileceğiniz <xref:System.Data.DataSet.Merge%2A> içeriğini birleştirme
  Birleştirmenin dışında yeni veri alma tablosunda birincil anahtar yok, gelen veri yeni satırları tabloda varolan satırları eşleştirilemiyor ve bunun yerine var olan tabloya eklenir.  
   
 ## <a name="table-names-and-namespaces"></a>Tablo adları ve ad alanları  
- <xref:System.Data.DataTable>nesneleri isteğe bağlı olarak atanabilir bir <xref:System.Data.DataTable.Namespace%2A> özellik değeri. Zaman <xref:System.Data.DataTable.Namespace%2A> değerler atanır, bir <xref:System.Data.DataSet> birden çok içerebilir <xref:System.Data.DataTable> aynı nesneleriyle <xref:System.Data.DataTable.TableName%2A> değeri. Birleştirme işlemleri sırasında hem de <xref:System.Data.DataTable.TableName%2A> ve <xref:System.Data.DataTable.Namespace%2A> bir birleştirme işleminin hedefi tanımlamak için kullanılır. Öyle değilse <xref:System.Data.DataTable.Namespace%2A> , yalnızca atanmış olan <xref:System.Data.DataTable.TableName%2A> bir birleştirme işleminin hedefi tanımlamak için kullanılır.  
+ <xref:System.Data.DataTable> nesneleri isteğe bağlı olarak atanabilir bir <xref:System.Data.DataTable.Namespace%2A> özellik değeri. Zaman <xref:System.Data.DataTable.Namespace%2A> değerler atanır, bir <xref:System.Data.DataSet> birden çok içerebilir <xref:System.Data.DataTable> aynı nesneleriyle <xref:System.Data.DataTable.TableName%2A> değeri. Birleştirme işlemleri sırasında hem de <xref:System.Data.DataTable.TableName%2A> ve <xref:System.Data.DataTable.Namespace%2A> bir birleştirme işleminin hedefi tanımlamak için kullanılır. Öyle değilse <xref:System.Data.DataTable.Namespace%2A> , yalnızca atanmış olan <xref:System.Data.DataTable.TableName%2A> bir birleştirme işleminin hedefi tanımlamak için kullanılır.  
   
 > [!NOTE]
 >  Bu davranış, .NET Framework 2.0 sürümünde değiştirildi. Sürüm 1.1, ad alanları desteklenen ancak birleştirme işlemleri sırasında yoksayıldı. Bu nedenle, bir <xref:System.Data.DataSet> kullanan <xref:System.Data.DataTable.Namespace%2A> özellik değerlerini çalıştırdığınız .NET Framework sürümüne bağlı olarak farklı davranışlar olacaktır. Örneğin, iki olduğunu varsayalım `DataSets` içeren `DataTables` aynı <xref:System.Data.DataTable.TableName%2A> özellik değerlerinin ancak farklı <xref:System.Data.DataTable.Namespace%2A> özellik değerleri. Farklı .NET Framework 1.1 sürümünde <xref:System.Data.DataTable.Namespace%2A> iki birleştirilirken adları yoksayılacak <xref:System.Data.DataSet> nesneleri. Ancak, nedenleri iki yeni birleştirme sürüm 2.0, ile başlayan `DataTables` hedef oluşturulacak <xref:System.Data.DataSet>. Özgün `DataTables` birleştirme ile etkilenmeyecek.  

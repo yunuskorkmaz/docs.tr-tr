@@ -1,26 +1,12 @@
 ---
 title: 'Nasıl yapılır: bağlantı dizesi tanımlayın'
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-ado
-ms.tgt_pltfrm: ''
-ms.topic: article
 ms.assetid: 6027335d-4e26-420d-9151-6523289b1989
-caps.latest.revision: 3
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
-ms.workload:
-- dotnet
-ms.openlocfilehash: 7cfde8d819a9b3a4eaeaed5f20c07130198714fd
-ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
+ms.openlocfilehash: 3f4de943392a8da9ebdf3743da2d6ef69d90d630
+ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/27/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="how-to-define-the-connection-string"></a>Nasıl yapılır: bağlantı dizesi tanımlayın
 Bu konu, kavramsal bir model bağlanırken kullanılan bağlantı dizesi tanımlayın gösterilmektedir. Bu konuda dayanır [AdventureWorks satış](http://msdn.microsoft.com/library/f16cd988-673f-4376-b034-129ca93c7832) kavramsal model. AdventureWorks satış modeli görevle ilgili konulara genelinde kullanılan [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] belgeleri. Bu konu, zaten yapılandırmış olduğunuz varsayılır, [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] ve AdventureWorks satış modeli tanımlanmış. Daha fazla bilgi için bkz: [nasıl yapılır: dosya eşleme ve Model el ile tanımlamak](http://msdn.microsoft.com/library/d4fd6864-f2a1-48f0-aa32-1e318775a99a). Bu konudaki yordamlar da yer alan [nasıl yapılır: bir Entity Framework projesi el ile yapılandırmanız](http://msdn.microsoft.com/library/73f6ae1d-b3b2-4577-aebd-ad5a75954e9e).  

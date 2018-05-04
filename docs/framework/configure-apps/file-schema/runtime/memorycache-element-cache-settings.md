@@ -1,37 +1,26 @@
 ---
 title: '&lt;memoryCache&gt; öğesi (önbellek ayarları)'
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 helpviewer_keywords:
 - <memoryCache> element
 - caching [.NET Framework], configuration
 - memoryCache element
 ms.assetid: 182a622f-f7cf-472d-9d0b-451d2fd94525
-caps.latest.revision: ''
 author: mcleblanc
 ms.author: markl
 manager: markl
-ms.workload:
-- dotnet
-ms.openlocfilehash: 8219607debb9f0f616895a57e0328b3785d5e84e
-ms.sourcegitcommit: 6f967c86dde55472440f0c8669b0e910ee3c53ba
+ms.openlocfilehash: 3d0d741fd8193c7d874d70248cbd149f11163ed0
+ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/22/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="ltmemorycachegt-element-cache-settings"></a>&lt;memoryCache&gt; öğesi (önbellek ayarları)
 Temel alan bir önbellek yapılandırmak için kullanılan bir öğe tanımlar <xref:System.Runtime.Caching.MemoryCache> sınıfı. <xref:System.Runtime.Caching.Configuration.MemoryCacheElement> Sınıfı tanımlayan bir [memoryCache](../../../../../docs/framework/configure-apps/file-schema/runtime/memorycache-element-cache-settings.md) önbelleğini yapılandırmak için kullanabileceğiniz öğesi. Birden çok örneğini <xref:System.Runtime.Caching.MemoryCache> sınıfı tek bir uygulamada kullanılabilir. Her `memoryCache` öğesi yapılandırma dosyasında bir adlandırılmış için ayarları içerebilir <xref:System.Runtime.Caching.MemoryCache> örneği.  
   
  \<Yapılandırma >  
-\<system.runtime.caching>  
-\<memoryCache>  
+\<System.Runtime.Caching >  
+\<memoryCache >  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -62,13 +51,13 @@ Temel alan bir önbellek yapılandırmak için kullanılan bir öğe tanımlar <
   
 |Öğe|Açıklama|  
 |-------------|-----------------|  
-|[\<namedCaches>](../../../../../docs/framework/configure-apps/file-schema/runtime/namedcaches-element-cache-settings.md)|Bir koleksiyon için yapılandırma ayarlarını içeren `namedCache` örneği.|  
+|[\<namedCaches >](../../../../../docs/framework/configure-apps/file-schema/runtime/namedcaches-element-cache-settings.md)|Bir koleksiyon için yapılandırma ayarlarını içeren `namedCache` örneği.|  
   
 ### <a name="parent-elements"></a>Üst Öğeler  
   
 |Öğe|Açıklama|  
 |-------------|-----------------|  
-|[\<system.runtime.caching>](../../../../../docs/framework/configure-apps/file-schema/runtime/system-runtime-caching-element-cache-settings.md)|Çıktı önbelleği içinde yerleşik olarak bulunan uygulamalarda uygulamanıza olanak sağlayan türleri içerir [!INCLUDE[dnprdnshort](../../../../../includes/dnprdnshort-md.md)].|  
+|[\<System.Runtime.Caching >](../../../../../docs/framework/configure-apps/file-schema/runtime/system-runtime-caching-element-cache-settings.md)|Çıktı önbelleği içinde yerleşik olarak bulunan uygulamalarda uygulamanıza olanak sağlayan türleri içerir [!INCLUDE[dnprdnshort](../../../../../includes/dnprdnshort-md.md)].|  
   
 ## <a name="remarks"></a>Açıklamalar  
  <xref:System.Runtime.Caching.MemoryCache> Sınıftır abstract somut uyarlamasını <xref:System.Runtime.Caching.ObjectCache> sınıfı. Örneklerini <xref:System.Runtime.Caching.MemoryCache> sınıfı sağlanan uygulama yapılandırma dosyaları yapılandırma bilgileriyle. [MemoryCache](../../../../../docs/framework/configure-apps/file-schema/runtime/memorycache-element-cache-settings.md) yapılandırma bölümünü içeren bir `namedCaches` yapılandırma koleksiyonu.  

@@ -1,0 +1,10 @@
+### <a name="wpf-focusvisual-for-radiobutton-and-checkbox-now-displays-correctly-when-the-controls-have-no-content"></a>WPF FocusVisual RadioButton ve onay kutusu şimdi için doğru denetimleri içerik olduğunda görüntüler
+
+|   |   |
+|---|---|
+|Ayrıntılar|.NET Framework 4.7.1 ve önceki sürümlerde, WPF <xref:System.Windows.Controls.CheckBox?displayProperty=nameWIthType> ve <xref:System.Windows.Controls.RadioButton?displayProperty=nameWIthType> tutarsız ve klasik ve yüksek karşıtlıklı tema, yanlış odak görselleri sahip.  Bu sorunlar, denetimleri herhangi bir içerik kümesi gerek duymayacağı durumlarda oluşur.  Bu karmaşık temalar ve odak görsel arasında geçiş görmek sabit yapabilirsiniz. .NET Framework 4.7.2'da, bu görsel temalar arasında daha tutarlı ve klasik ve yüksek karşıtlıklı tema daha kolay görünür.|
+|Öneri|.NET 4.7.1 davranışı geri dönmek için istediği .NET Framework'e 4.7.2 hedefleyen bir geliştirici aşağıdaki AppContext bayrağının ayarlanması gerekir.<pre><code class="lang-xml">&lt;configuration&gt;&#13;&#10;&lt;runtime&gt;&#13;&#10;&lt;AppContextSwitchOverrides value=&quot;Switch.UseLegacyAccessibilityFeatures.2=true;&quot;/&gt;&#13;&#10;&lt;/runtime&gt;&#13;&#10;&lt;/configuration&gt;&#13;&#10;</code></pre>Aşağıda 4.7.2 .NET framework sürümünü hedefleme sırasında bu değişikliği kullanmak isteyen bir geliştirici, aşağıdaki AppContext bayrakları ayarlamanız gerekir. Tüm bayraklar uygun şekilde ayarlamanız gerekir ve .NET Framework'ün yüklü olan sürüm 4.7.2 olmalıdır Not veya daha büyük. WPF uygulamaları en son geliştirmeleri almak için tüm önceki erişilebilirlik geliştirmeleri kabul için gereklidir. Bunu yapmak için 'Switch.UseLegacyAccessibilityFeatures' ve 'Switch.UseLegacyAccessibilityFeatures.2' false olarak ayarlanan iki AppContext anahtarları emin olun.<pre><code class="lang-xml">&lt;configuration&gt;&#13;&#10;&lt;runtime&gt;&#13;&#10;&lt;AppContextSwitchOverrides value=&quot;Switch.UseLegacyAccessibilityFeatures=false;Switch.UseLegacyAccessibilityFeatures.2=false;&quot;/&gt;&#13;&#10;&lt;/runtime&gt;&#13;&#10;&lt;/configuration&gt;&#13;&#10;</code></pre>|
+|Kapsam|Kenar|
+|Sürüm|4.7.2|
+|Tür|Yeniden hedefleme|
+

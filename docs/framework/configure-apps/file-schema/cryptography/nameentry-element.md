@@ -1,13 +1,6 @@
 ---
-title: "&lt;nameEntry&gt; öğesi"
-ms.custom: 
+title: '&lt;nameEntry&gt; öğesi'
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 f1_keywords:
 - http://schemas.microsoft.com/.NetConfiguration/v2.0#nameEntry
 - http://schemas.microsoft.com/.NetConfiguration/v2.0#configuration/mscorlib/cryptographySettings/cryptoNameMapping/nameEntry
@@ -15,16 +8,14 @@ helpviewer_keywords:
 - <nameEntry> element
 - nameEntry element
 ms.assetid: 7d7535e9-4b4a-4b8c-82e2-e40dff5a7821
-caps.latest.revision: "14"
 author: mcleblanc
 ms.author: markl
 manager: markl
-ms.workload: dotnet
-ms.openlocfilehash: 7c9a4b4532d98b7dfc2484dab1bb57e5a26fa392
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 1bffb72e7c68d10e2c0edd5ec3cb9bcff10cbc0a
+ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="ltnameentrygt-element"></a>&lt;nameEntry&gt; öğesi
 Çok sayıda kolay adlar sağlamak bir sınıf sağlar ve kolay algoritma adı için bir sınıf adı eşler.  
@@ -48,7 +39,7 @@ ms.lasthandoff: 12/22/2017
   
 |Öznitelik|Açıklama|  
 |---------------|-----------------|  
-|**adı**|Gerekli öznitelik.<br /><br /> Şifreleme sınıfı uygulayan algoritması kolay adı belirtir.|  
+|**Adı**|Gerekli öznitelik.<br /><br /> Şifreleme sınıfı uygulayan algoritması kolay adı belirtir.|  
 |**class**|Gerekli öznitelik.<br /><br /> Değerini belirtir **adı** özniteliğini [ \<cryptoClass >](../../../../../docs/framework/configure-apps/file-schema/cryptography/cryptoclass-element.md) öğesi.|  
   
 ### <a name="child-elements"></a>Alt Öğeler  

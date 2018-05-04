@@ -1,29 +1,17 @@
 ---
-title: "&lt;defaultCertificate&gt; Öğesi"
-ms.custom: 
+title: '&lt;defaultCertificate&gt; Öğesi'
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: f1ddf364-9a00-45d3-b989-ff381c154ce6
-caps.latest.revision: "11"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: eeb4c1b010e2d446303e780966668fc8a6f5ddb7
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: a4af1c6ec452b24634fa50162fa71f069e2451f5
+ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="ltdefaultcertificategt-element"></a>&lt;defaultCertificate&gt; Öğesi
 Kullanılacak bir X.509 sertifikası belirtir ne zaman bir hizmeti veya STS sağlamaz anlaşması protokolü aracılığıyla bir.  
   
- \<Sistem. ServiceModel >  
+ \<system.ServiceModel>  
 \<davranışları >  
 endpointBehaviors bölümü  
 \<davranışı >  
@@ -89,7 +77,7 @@ x509FindType="FindByThumbPrint/FindBySubjectName/FindBySubjectDistinguishedName/
  Sertifika tabanlı ileti güvenliği kullanan bağlamaları için bu yapılandırma öğesi tarafından belirtilen sertifika hizmet iletileri şifrelemek için kullanılır ve istemciye yanıt imzalama hizmeti tarafından kullanılacak beklenmektedir. Sertifika bir hizmet tarafından belirtildiğinde kullanılacak tek bir sertifika depolar.  
   
 ## <a name="example"></a>Örnek  
- Aşağıdaki örnek, URI http://www.contoso.com ile başlayan uç noktalar için kullanılacak bir sertifika ve sertifika anlaşmasını gerçekleştiren değil tüm diğer uç noktalar için kullanılacak bir sertifika belirtir.  
+ Aşağıdaki örnek, URI başlıyorsa uç noktalar için kullanılacak bir sertifika belirtir http://www.contoso.com ve sertifikası anlaşması gerçekleştiren değil tüm diğer uç noktalar için kullanılacak bir sertifika.  
   
 ```xml  
 <serviceCertificate>  

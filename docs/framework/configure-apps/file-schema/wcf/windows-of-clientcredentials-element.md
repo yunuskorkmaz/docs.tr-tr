@@ -1,29 +1,17 @@
 ---
-title: "&lt;clientCredentials&gt; Öğesi &lt;pencereleri&gt;"
-ms.custom: 
+title: '&lt;clientCredentials&gt; Öğesi &lt;pencereleri&gt;'
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 793e41c2-31ea-4159-abbc-2123bf097233
-caps.latest.revision: "13"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 6687f93be26dedcb34f08770708c072742fdd4de
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 9badcfafff4bc09a16b0b9a565a9ea5c01e26bb5
+ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="ltwindowsgt-of-ltclientcredentialsgt-element"></a>&lt;clientCredentials&gt; Öğesi &lt;pencereleri&gt;
 İstemci temsil etmek için kullanılacak bir Windows kimlik bilgileri ayarlarını belirtir.  
   
- \<Sistem. ServiceModel >  
+ \<system.ServiceModel>  
 \<davranışları >  
 \<endpointBehaviors >  
 \<davranışı >  
@@ -47,7 +35,7 @@ ms.lasthandoff: 12/22/2017
 |Öznitelik|Açıklama|  
 |---------------|-----------------|  
 |`allowedImpersonationLevel`|İstemci iletişim kuruyorsa kimliğe bürünme tercih sunucuya ayarlar. İstemcinin kimliğe bürünme modu sunucuda zorlanmaz. Geçerli değerler şunlardır:<br /><br /> -Kimliği: Sunucunun kimliğini ve istemci ayrıcalıkların alabilir, ancak istemci alınamıyor.<br />-Kimliğe bürünme: Sunucu istemcinin güvenlik bağlamı yerel sistemde kimliğine bürünebilir.<br />-Temsilci: Sunucu istemcinin güvenlik bağlamı uzak sistemlere kimliğine bürünebilir.<br />-Anonim: Sunucusu taklit veya istemci kimliği.<br />-Hiçbiri: Kimliğe bürünme düzeyi atanmadı.<br /><br /> Varsayılan kimliğidir. Bu öznitelik türünde <xref:System.Security.Principal.TokenImpersonationLevel>.|  
-|`allowNtlm`|Bu özelliği ayarlamak `true` Kerberos kullanılabilir değilse, NTLM olarak düşürmek için kimlik doğrulaması sağlar.<br /><br /> Bu özelliği ayarlamak `false` neden [!INCLUDE[indigo1](../../../../../includes/indigo1-md.md)] NTLM kullanılırsa, bir özel durum için bir en iyi çaba yapma. Bu özelliği ayarlamak Not `false` NTLM kimlik bilgileri kablo üzerinden gönderilen engelleyebilir değil.|  
+|`allowNtlm`|Bu özelliği ayarlamak `true` Kerberos kullanılabilir değilse, NTLM olarak düşürmek için kimlik doğrulaması sağlar.<br /><br /> Bu özelliği ayarlamak `false` NTLM kullanılırsa, bir özel durum için bir en iyi çaba yapmak için Windows Communication Foundation (WCF) neden olur. Bu özelliği ayarlamak Not `false` NTLM kimlik bilgileri kablo üzerinden gönderilen engelleyebilir değil.|  
   
 ### <a name="child-elements"></a>Alt Öğeler  
  Yok.  

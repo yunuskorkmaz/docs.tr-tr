@@ -1,24 +1,12 @@
 ---
-title: "IsNull (varlık SQL)"
-ms.custom: 
+title: IsNull (varlık SQL)
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-ado
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: dc7a0173-3664-4c90-a57b-5cbb0a8ed7ee
-caps.latest.revision: "3"
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
-ms.workload: dotnet
-ms.openlocfilehash: 57e90f013227f08ce365262da633a79d7abb5a8d
-ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
+ms.openlocfilehash: 70ec49fd4643c67c6ad08fdda9166eeb8a64d254
+ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="isnull-entity-sql"></a>IsNull (varlık SQL)
 Bir sorgu ifadesi null olup olmadığını belirler.  
@@ -33,11 +21,11 @@ expression IS [ NOT ] NULL
  `expression`  
  Herhangi bir geçerli sorgu ifade. Gönderilemiyor koleksiyonu, koleksiyon üyeleri veya bir kayıt türü ile toplama türü özellikleri vardır.  
   
- NOT  
+ DEĞİL  
  EDM üzerindeki geçersiz kılar. Boolean sonucu IS NULL.  
   
 ## <a name="return-value"></a>Dönüş Değeri  
- `true`varsa `expression` döndürür; tersi durumda, `false`.  
+ `true` varsa `expression` döndürür; tersi durumda, `false`.  
   
 ## <a name="remarks"></a>Açıklamalar  
  Kullanım `IS NULL` dış birleşim öğesi boş olup olmadığını belirlemek için:  
@@ -59,10 +47,10 @@ select c from LOB.Customer as c where c.DOB is not null
   
 |Desen|Davranış|  
 |-------------|--------------|  
-|null IS NULL|Döndürür `true`.|  
+|Is Null NULL|Döndürür `true`.|  
 |KABUL (null AS EntityType) IS NULL|Döndürür `true`.|  
 |KABUL (null AS ComplexType) IS NULL|Bir hata oluşturur.|  
-|TREAT (null AS RowType) IS NULL|Bir hata oluşturur.|  
+|KABUL (null AS RowType) IS NULL|Bir hata oluşturur.|  
 |EntityType NULL|Döndürür `true` veya `false`.|  
 |ComplexType NULL|Bir hata oluşturur.|  
 |RowType NULL|Bir hata oluşturur.|  

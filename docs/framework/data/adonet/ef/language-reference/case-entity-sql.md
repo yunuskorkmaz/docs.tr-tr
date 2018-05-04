@@ -1,24 +1,12 @@
 ---
-title: "Durum (varlık SQL)"
-ms.custom: 
+title: Durum (varlık SQL)
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-ado
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 26a47873-e87d-4ba2-9e2c-3787c21efe89
-caps.latest.revision: "5"
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
-ms.workload: dotnet
-ms.openlocfilehash: 9afc5e3bbf8e6fe732aca9e65c8ba5bd5f620c85
-ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
+ms.openlocfilehash: ee878409e7698300b7bebbdac760422013f3b7de
+ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="case-entity-sql"></a>Durum (varlık SQL)
 Bir dizi değerlendirir `Boolean` sonucu belirlemek için ifadeler.  
@@ -39,14 +27,14 @@ END
  `n`  
  Bu çoklu gösteren bir yer tutucudur zaman `Boolean_expression` sonra `result_expression` yan tümceleri kullanılabilir.  
   
- ARDINDAN`result_expression`  
- İfade ne zaman döndürülür `Boolean_expression` değerlendiren `true`. `result expression`Geçerli bir ifade değil.  
+ ARDINDAN `result_expression`  
+ İfade ne zaman döndürülür `Boolean_expression` değerlendiren `true`. `result expression` Geçerli bir ifade değil.  
   
  ELSE `else_result_expression`  
- İfade karşılaştırma işlemi için hesaplar, döndürülen `true`. Bu bağımsız değişkeni boş bırakılırsa ve karşılaştırma işlemi değerlendiren `true`, servis talebi null döndürür. `else_result_expression`Geçerli bir ifade değil. Veri türlerini `else_result_expression` ve tüm `result_expression` örtük bir dönüştürme olmalıdır veya aynı olmalıdır.  
+ İfade karşılaştırma işlemi için hesaplar, döndürülen `true`. Bu bağımsız değişkeni boş bırakılırsa ve karşılaştırma işlemi değerlendiren `true`, servis talebi null döndürür. `else_result_expression` Geçerli bir ifade değil. Veri türlerini `else_result_expression` ve tüm `result_expression` örtük bir dönüştürme olmalıdır veya aynı olmalıdır.  
   
- NE ZAMAN`Boolean_expression`  
- Olan `Boolean` Aranan servis talebi biçimi kullanıldığında değerlendirilen ifade. `Boolean_expression`Tüm geçerli `Boolean` ifade.  
+ NE ZAMAN `Boolean_expression`  
+ Olan `Boolean` Aranan servis talebi biçimi kullanıldığında değerlendirilen ifade. `Boolean_expression` Tüm geçerli `Boolean` ifade.  
   
 ## <a name="return-value"></a>Dönüş Değeri  
  En yüksek öncelik türüyle türlerinde kümesinden döndürür `result_expression` ve isteğe bağlı `else_result_expression`.  

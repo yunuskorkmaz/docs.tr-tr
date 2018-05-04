@@ -1,24 +1,12 @@
 ---
-title: "İzlenecek yol: SQL oluşturma"
-ms.custom: 
+title: 'İzlenecek yol: SQL oluşturma'
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-ado
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 16c38aaa-9927-4f3c-ab0f-81636cce57a3
-caps.latest.revision: "3"
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
-ms.workload: dotnet
-ms.openlocfilehash: 272d0b8bc58094737d157abfff9f3f026a0f5953
-ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
+ms.openlocfilehash: ab08b404dc60483a39e5c6ae56d82b63932c3f3e
+ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="walkthrough-sql-generation"></a>İzlenecek yol: SQL oluşturma
 Bu konuda SQL üretimi oluşuyor nasıl gösterilmektedir [örnek sağlayıcı](http://go.microsoft.com/fwlink/?LinkId=180616). Aşağıdaki varlık SQL sorgusunu örnek sağlayıcı ile birlikte modeli kullanır:  
@@ -145,7 +133,7 @@ LEFT OUTER JOIN [dbo].[InternationalOrders] AS [Extent5] ON [Extent4].[OrderID] 
   
  İşlenecek sonraki Join3, Join4 ikinci alt düğümdür. Sağ alt olduğu gibi "false" IsParentAJoin yığına gönderilir. Bu noktada ziyaretçi durumunu sonraki çizimde gösterilmiştir.  
   
- ![Diagram](../../../../../docs/framework/data/adonet/ef/media/1ec61ed3-fcdd-4649-9089-24385be7e423.gif "1ec61ed3-fcdd-4649-9089-24385be7e423")  
+ ![Diyagram](../../../../../docs/framework/data/adonet/ef/media/1ec61ed3-fcdd-4649-9089-24385be7e423.gif "1ec61ed3-fcdd-4649-9089-24385be7e423")  
   
  Join3, IsParentAJoin false değerini döndürür ve yeni SqlSelectStatement (SelectStatement1) başlatın ve yığında itme gerekiyor. Önceki birleştirmeler önceki ile mi, yeni bir kapsam yığına ve alt işlenen olarak devam ettirir. Sol alt bir uzantı (Extent3) ve sağ alt ayrıca yeni SqlSelectStatement başlatmak için gereken bir birleştirme (Join2): SelectStatement2. Alt Join2 üzerinde kapsam da olan ve SelectStatement2 toplanır.  
   

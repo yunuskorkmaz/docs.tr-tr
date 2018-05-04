@@ -1,29 +1,17 @@
 ---
 title: '&lt;transportConfigurationTypes&gt;'
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 929c8b0a-5460-4f66-a098-2cb8d4e10b69
-caps.latest.revision: "7"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 0a4f9396537446920b8976d1bd076fcd5ce5876c
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 422de17f4c1b42579eadc16c7ec1a0037903d1a9
+ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="lttransportconfigurationtypesgt"></a>&lt;transportConfigurationTypes&gt;
 Belirli bir tür belirleme yapılandırma öğelerinin koleksiyonunu temsil eder. Bu özel WAS protokoller eklemek için kullanılabilir.  
   
- \<Sistem. ServiceModel >  
+ \<system.ServiceModel>  
 \<ServiceHostingEnvironment >  
 \<transportConfigurationTypes >  
   

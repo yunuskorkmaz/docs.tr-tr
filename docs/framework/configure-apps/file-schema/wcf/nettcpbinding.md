@@ -1,28 +1,14 @@
 ---
 title: '&lt;netTcpBinding&gt;'
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 helpviewer_keywords:
 - netTcpBinding Element
 ms.assetid: 5c5104a7-8754-4335-8233-46a45322503e
-caps.latest.revision: ''
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 057baf6d18cba61c0ceeb7d5152edcf082392310
-ms.sourcegitcommit: c883637b41ee028786edceece4fa872939d2e64c
-ms.translationtype: MT
+ms.openlocfilehash: f6cbdbb7c5569851055102cfe5d413e0b94376f3
+ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/26/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="ltnettcpbindinggt"></a>&lt;netTcpBinding&gt;
 Güvenli, güvenilir ve en iyi duruma getirilmiş bağlama makineler arası iletişim için uygun belirtir. Varsayılan olarak, bir çalışma zamanı iletişim yığını Windows güvenliği ile ileti güvenliği ve kimlik doğrulama, ileti teslimi ve ikili ileti kodlama için TCP oluşturur.  
@@ -86,7 +72,7 @@ algorithmSuite="Basic128/Basic192/Basic256/Basic128Rsa15/Basic256Rsa15/TripleDes
 |receiveTimeout|A <xref:System.TimeSpan> bir alma işleminin tamamlanması için sağlanan zaman aralığı belirten değer. Bu değer sıfırdan büyük veya eşit olmalıdır <xref:System.TimeSpan.Zero>. Varsayılan değer 00:10: 00'dır.|  
 |sendTimeout|A <xref:System.TimeSpan> bir gönderme işleminin tamamlanması için sağlanan zaman aralığı belirten değer. Bu değer sıfırdan büyük veya eşit olmalıdır <xref:System.TimeSpan.Zero>. Varsayılan değer 00:01:00 ' dir.|  
 |transactionFlow|Bağlama boyunca WS-işlemleri destekleyip desteklemediğini belirten bir Boole değeri. Varsayılan, `false` değeridir.|  
-|transactionProtocol|Bu bağlama ile kullanılmak üzere işlem protokolü belirtir. Geçerli değerler:<br /><br /> -   OleTransactions<br />-   WSAtomicTransactionOctober2004<br /><br /> OleTransactions varsayılandır. Bu öznitelik türünde <xref:System.ServiceModel.TransactionProtocol>.|  
+|transactionProtocol|Bu bağlama ile kullanılmak üzere işlem protokolü belirtir. Geçerli değerler:<br /><br /> -OleTransactions<br />-WSAtomicTransactionOctober2004<br /><br /> OleTransactions varsayılandır. Bu öznitelik türünde <xref:System.ServiceModel.TransactionProtocol>.|  
 |transferMode|A <xref:System.ServiceModel.TransferMode> iletileri olup ara belleğe veya akışa veya istek belirten değeri veya yanıt.|  
   
 ### <a name="child-elements"></a>Alt Öğeler  
@@ -94,7 +80,7 @@ algorithmSuite="Basic128/Basic192/Basic256/Basic128Rsa15/Basic256Rsa15/TripleDes
 |Öğe|Açıklama|  
 |-------------|-----------------|  
 |[\<Güvenlik >](../../../../../docs/framework/configure-apps/file-schema/wcf/security-of-nettcpbinding.md)|Bağlama için güvenlik ayarlarını tanımlar. Bu öğe türünde <xref:System.ServiceModel.Configuration.NetTcpSecurityElement>.|  
-|[\<readerQuotas>](http://msdn.microsoft.com/library/3e5e42ff-cef8-478f-bf14-034449239bfd)|Bu bağlama ile yapılandırılan uç noktaları tarafından işlenen SOAP iletilerine karmaşıklığını kısıtlamalar tanımlar. Bu öğe türünde <xref:System.ServiceModel.Configuration.XmlDictionaryReaderQuotasElement>.|  
+|[\<readerQuotas >](http://msdn.microsoft.com/library/3e5e42ff-cef8-478f-bf14-034449239bfd)|Bu bağlama ile yapılandırılan uç noktaları tarafından işlenen SOAP iletilerine karmaşıklığını kısıtlamalar tanımlar. Bu öğe türünde <xref:System.ServiceModel.Configuration.XmlDictionaryReaderQuotasElement>.|  
 |[reliableSession](http://msdn.microsoft.com/library/9c93818a-7dfa-43d5-b3a1-1aafccf3a00b)|Güvenilir oturumlar kanal uç noktaları arasında kurulan olmadığını belirtir.|  
   
 ### <a name="parent-elements"></a>Üst Öğeler  
@@ -104,7 +90,7 @@ algorithmSuite="Basic128/Basic192/Basic256/Basic128Rsa15/Basic256Rsa15/TripleDes
 |[\<bağlamaları >](../../../../../docs/framework/configure-apps/file-schema/wcf/bindings.md)|Bu öğe, standart ve özel bağlamaları koleksiyonunu içerir.|  
   
 ## <a name="remarks"></a>Açıklamalar  
- Bu bağlama taşıma güvenliği, ileti teslimi için TCP ve ikili ileti kodlama kullanan varsayılan olarak, bir çalışma zamanı iletişim yığını oluşturur. Bu bağlamanın uygun olduğu [!INCLUDE[indigo1](../../../../../includes/indigo1-md.md)] Intranet üzerinden iletişim kurmak için sistem tarafından sağlanan seçimdir.  
+ Bu bağlama taşıma güvenliği, ileti teslimi için TCP ve ikili ileti kodlama kullanan varsayılan olarak, bir çalışma zamanı iletişim yığını oluşturur. Bu bağlama Intranet üzerinden iletişim için bir uygun Windows Communication Foundation (WCF) sistem tarafından sağlanan bir seçimdir.  
   
  İçin varsayılan yapılandırmayı `netTcpBinding` tarafından sağlanan yapılandırma daha hızlıdır `wsHttpBinding`, ancak yalnızca için hazırlanmıştır [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)]- için -[!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)] iletişim. Güvenlik davranıştır isteğe bağlı kullanılarak yapılandırılabilir `securityMode` özniteliği. WS-ReliableMessaging kullanımını isteğe bağlı kullanılarak yapılandırılabilir `reliableSessionEnabled` özniteliği. Ancak güvenilir Mesajlaşma varsayılan olarak kapalıdır. Daha fazla genel olarak, HTTP sistem tarafından sağlanan bağlamalar gibi `wsHttpBinding` ve `basicHttpBinding` varsayılan olarak, öğeleri açmak için kullanılabilirken yapılandırılmış olan `netTcpBinding` bağlama kapanmadan şeyler varsayılan olarak, destek, örneğin, aşağıdakilerden birini alınacak katılımı gerekir böylece WS-* belirtimleri. Bu, TCP için varsayılan yapılandırmayı varsayılan olarak HTTP bağlantıları için yapılandırılan olandan uç noktalar arasında ileti değiş tokuşu en hızlı olduğu anlamına gelir.  
   

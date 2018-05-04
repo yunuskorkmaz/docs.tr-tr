@@ -1,29 +1,17 @@
 ---
 title: '&lt;Tcptransport&gt;'
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 6fa7fa65-2c6e-4eab-b8cf-7690112c0be5
-caps.latest.revision: "6"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 11500830c7c5fd75a9e2880a5875bd21fb070634
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 87fcbf08d897cf8d9e1924a8a5ed2b5b20945638
+ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="ltconnectionpoolsettingsgt"></a>&lt;Tcptransport&gt;
 Bir adlandırılmış kanal bağlama için ek bağlantı havuzu ayarlarını belirtir.  
   
- \<system.serviceModel >  
+ \<system.serviceModel>  
 \<bağlamaları >  
 \<customBinding >  
 \<bağlama >  

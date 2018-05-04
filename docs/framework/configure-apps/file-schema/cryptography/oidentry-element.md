@@ -1,13 +1,6 @@
 ---
-title: "&lt;oidEntry&gt; öğesi"
-ms.custom: 
+title: '&lt;oidEntry&gt; öğesi'
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 f1_keywords:
 - http://schemas.microsoft.com/.NetConfiguration/v2.0#configuration/mscorlib/cryptographySettings/oidMap/oidEntry
 - http://schemas.microsoft.com/.NetConfiguration/v2.0#oidEntry
@@ -15,16 +8,14 @@ helpviewer_keywords:
 - <oidEntry> element
 - oidEntry element
 ms.assetid: 22fb88b0-bf27-489c-9ca0-e65950ac136c
-caps.latest.revision: "11"
 author: mcleblanc
 ms.author: markl
 manager: markl
-ms.workload: dotnet
-ms.openlocfilehash: 2d6dfe38f8e632a31f7a20191678f1fff7fd88ee
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: db209bac487ccbb98f7f0aeb272f51169e7a0148
+ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="ltoidentrygt-element"></a>&lt;oidEntry&gt; öğesi
 ASN.1 nesne tanımlayıcısı (OID) için bir kolay ad eşler.  
@@ -49,7 +40,7 @@ ASN.1 nesne tanımlayıcısı (OID) için bir kolay ad eşler.
 |Öznitelik|Açıklama|  
 |---------------|-----------------|  
 |**OID**|Gerekli öznitelik.<br /><br /> Sınıfı tarafından uygulanan algoritması karşılık gelen ASN.1 OID belirtir.|  
-|**adı**|Gerekli öznitelik.<br /><br /> Değerini belirtir **adı** özniteliğini [ \<nameEntry >](../../../../../docs/framework/configure-apps/file-schema/cryptography/nameentry-element.md) etiketi.|  
+|**Adı**|Gerekli öznitelik.<br /><br /> Değerini belirtir **adı** özniteliğini [ \<nameEntry >](../../../../../docs/framework/configure-apps/file-schema/cryptography/nameentry-element.md) etiketi.|  
   
 ### <a name="child-elements"></a>Alt Öğeler  
  Yok.  

@@ -1,29 +1,19 @@
 ---
 title: '&lt;sslStreamSecurity&gt;'
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 430a378b-a742-4858-8a12-9f9b235fd627
-caps.latest.revision: "11"
 author: BrucePerlerMS
-ms.author: bruceper
 manager: mbaldwin
-ms.workload: dotnet
-ms.openlocfilehash: 65233bf416080212a5c1447cffd329eca1b921f4
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: a86e1aae7ddd5389f098e532ae2c2cc67f4085e3
+ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="ltsslstreamsecuritygt"></a>&lt;sslStreamSecurity&gt;
 Bir SSL akışı kullanarak kanal güvenliği destekleyen bir özel bağlama öğeyi temsil eder.  
   
- \<system.serviceModel >  
+ \<system.serviceModel>  
 \<bağlamaları >  
 \<customBinding >  
 \<bağlama >  
@@ -43,7 +33,7 @@ Bir SSL akışı kullanarak kanal güvenliği destekleyen bir özel bağlama ö�
 |Öznitelik|Açıklama|  
 |---------------|-----------------|  
 |RequireClientCertificate|Bir istemci sertifikası Bu bağlama için gerekli olup olmadığını belirten bir Boole değeri. Varsayılan, `false` değeridir.|  
-|sslProtocols|Hangi SslProtocols belirten bir SslProtocols enum bayrak değeri desteklenir. Varsayılan değer: Ssl3 &#124; TLS &#124; Tls11 &#124; Tls12.|  
+|sslProtocols|Hangi SslProtocols belirten bir SslProtocols enum bayrak değeri desteklenir. Ssl3 varsayılandır&#124;Tls&#124;Tls11&#124;Tls12.|  
   
 ### <a name="child-elements"></a>Alt Öğeler  
  Yok.  

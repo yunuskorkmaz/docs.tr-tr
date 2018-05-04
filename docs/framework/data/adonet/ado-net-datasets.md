@@ -1,26 +1,12 @@
 ---
 title: ADO.NET veri kümeleri
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-ado
-ms.tgt_pltfrm: ''
-ms.topic: article
 ms.assetid: 82b641bb-6001-4512-bf1a-2830acdd92ab
-caps.latest.revision: 6
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
-ms.workload:
-- dotnet
-ms.openlocfilehash: 9458206ea7edfeba61f9805c2b601d6aa9198256
-ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
+ms.openlocfilehash: d7a73b11cae02abf8f61372c8d8684499781dda4
+ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/27/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="adonet-datasets"></a>ADO.NET veri kümeleri
 <xref:System.Data.DataSet> Dağıtılmış veri senaryoları ile bağlantısı kesildi, Destek Merkezi nesnesidir [!INCLUDE[vstecado](../../../../includes/vstecado-md.md)]. **DataSet** bir veri kaynağı bağımsız olarak tutarlı bir ilişkisel programlama modeli sağlar veri bellekte gösterimidir. Birden fazla ile kullanılabilir ve farklı veri kaynakları, XML verileriyle ya da uygulamaya yerel verileri yönetmek için. **DataSet** ilişkili tabloları, kısıtlamalar ve tablolar arasında ilişkiler gibi veriler, eksiksiz bir kümesini temsil eder. Aşağıdaki çizimde gösterildiği **DataSet** nesne modeli.  

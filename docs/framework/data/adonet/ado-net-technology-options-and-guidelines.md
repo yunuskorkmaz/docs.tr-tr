@@ -1,24 +1,12 @@
 ---
-title: "ADO.NET teknoloji seçenekleri ve yönergeleri"
-ms.custom: 
+title: ADO.NET teknoloji seçenekleri ve yönergeleri
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-ado
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: c8577281-38e6-4ce5-b036-572039a4c3d8
-caps.latest.revision: "6"
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
-ms.workload: dotnet
-ms.openlocfilehash: aa4cefb27ff3fde3f4f31d996a80b19b94ea57e2
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.openlocfilehash: 106fdbc121c3b1c15aaced5e0314e0651387cede
+ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="adonet-technology-options-and-guidelines"></a>ADO.NET teknoloji seçenekleri ve yönergeleri
 ADO.NET veri platformu, kodlama ve kavramsal varlık veri modellerde programlamak için bunları etkinleştirerek geliştiriciler için gerekli bakım miktarını azaltmak için bir çoklu yayın stratejidir. Bu platform ADO.NET Entity Framework ve ilgili teknolojileri içerir.  
@@ -29,7 +17,7 @@ ADO.NET veri platformu, kodlama ve kavramsal varlık veri modellerde programlama
 ### <a name="entity-data-model-edm"></a>Varlık Veri Modeli (EDM)  
  Varlık veri modeli (EDM) varlıkları ve ilişkileri ayarlar gibi uygulama verileri tanımlayan bir tasarım belirtimidir. Bu modelde veri nesne ilişkisel eşleme ve veri programlama uygulama sınırlarında destekler.  
   
-### <a name="object-services"></a>Object Services  
+### <a name="object-services"></a>Nesne Hizmetleri  
  Nesne Hizmetleri programcıların kavramsal model bir dizi ortak dil çalışma zamanı (CLR) sınıfları aracılığıyla etkileşim sağlar. Bu sınıfların kavramsal modelden otomatik olarak oluşturulabilir veya bağımsız olarak kavramsal model yapısını yansıtacak şekilde geliştirilebilir. Nesne hizmetleri de varlık durum yönetimi, değişiklik izleme, kimlik çözünürlüğü gibi hizmetleri dahil olmak üzere yüklemek ve ilişkileri, nesne değişiklikleri veritabanı değişikliklerine yayılıyor gezinme Framework için altyapı destek sağlar, ve varlık SQL desteği sorgu oluşturma. Daha fazla bilgi için bkz: [nesne Hizmetleri'ne Genel Bakış (Entity Framework)](http://msdn.microsoft.com/library/43014cf9-c9cb-4538-bfbb-197820b60038).  
   
 ### <a name="linq-to-entities"></a>LINQ - Varlıklar  
@@ -48,7 +36,7 @@ ADO.NET veri platformu, kodlama ve kavramsal varlık veri modellerde programlama
  LINQ-SQL olan bir nesne ilişkisel eşleme (veya / M) uygulamasında, .NET Framework sınıfları kullanarak bir SQL Server veritabanı modeli sağlar. LINQ-SQL LINQ, kullanarak veritabanınızı sorgu olanak tanır yanı sıra güncelleştirme, ekleme ve veri silmek. LINQ-SQL, veri doğrulama ve iş mantığı kuralları, veri modeline tümleştirmeniz için kolay bir yol sağlama işlemleri, görünümler ve saklı yordamlar destekler. Sınıflar ve bir veritabanındaki nesnelerde dayalı ilişkileri modellemek için Nesne İlişkisel Tasarımcısı (O/R Tasarımcısı) kullanabilirsiniz. Daha fazla bilgi için bkz: [LINQ-SQL Visual Studio Araçları](/visualstudio/data-tools/linq-to-sql-tools-in-visual-studio2).  
   
 ## <a name="wcf-data-services"></a>WCF Veri Hizmetleri  
- [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)]Veri Hizmetleri Web veya intranet üzerinde dağıtır. Veri varlıkları ve ilişkileri varlık veri modeli belirtimlerine uygun olarak yapılandırılmıştır. Bu modelde dağıtılan standart HTTP protokolü tarafından adreslenebilir verilerdir. Daha fazla bilgi için bkz: [WCF Veri Hizmetleri 4.5](../../../../docs/framework/data/wcf/index.md).  
+ [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] Veri Hizmetleri Web veya intranet üzerinde dağıtır. Veri varlıkları ve ilişkileri varlık veri modeli belirtimlerine uygun olarak yapılandırılmıştır. Bu modelde dağıtılan standart HTTP protokolü tarafından adreslenebilir verilerdir. Daha fazla bilgi için bkz: [WCF Veri Hizmetleri 4.5](../../../../docs/framework/data/wcf/index.md).  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
  [ADO.NET’e Genel Bakış](../../../../docs/framework/data/adonet/ado-net-overview.md)  

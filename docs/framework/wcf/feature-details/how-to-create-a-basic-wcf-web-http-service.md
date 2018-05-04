@@ -1,25 +1,27 @@
 ---
-title: "Nasıl yapılır: Temel Bir WCF Web HTTP Hizmeti Oluşturma"
-ms.custom: 
+title: 'Nasıl yapılır: Temel Bir WCF Web HTTP Hizmeti Oluşturma'
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - csharp
 - vb
 ms.assetid: 877662d3-d372-4e08-b417-51f66a0095cd
-caps.latest.revision: "26"
+caps.latest.revision: 26
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
+ms.workload:
+- dotnet
 ms.openlocfilehash: 4dc60bbb51bc573840d0d45356f0cd84fd32db2a
 ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 12/22/2017
 ---
@@ -87,7 +89,7 @@ ms.lasthandoff: 12/22/2017
   
 ### <a name="to-call-service-operations-mapped-to-get-in-internet-explorer"></a>Internet Explorer'da GET eşlenen hizmet işlemleri çağırmak için  
   
-1.  Açık Internet Explorer ve türü "`http://localhost:8000/EchoWithGet?s=Hello, world!`" ve ENTER tuşuna basın. Hizmetin taban adresi URL içerir ("8000 /"), bitiş noktasının göreli adresi (""), hizmet işlemi çağrı ("EchoWithGet") ve bir soru işareti adlandırılmış parametreleri ampersan tarafından ayrılmış bir listesi ve ardından (&).  
+1.  Açık Internet Explorer ve türü "`http://localhost:8000/EchoWithGet?s=Hello, world!`" ve ENTER tuşuna basın. Hizmetin taban adresi URL içerir ("http://localhost:8000/"), bitiş noktasının göreli adresi (""), hizmet işlemi çağrı ("EchoWithGet") ve bir soru işareti adlandırılmış parametreleri ampersan tarafından ayrılmış bir listesi ve ardından (&).  
   
 ### <a name="to-call-service-operations-in-code"></a>Kod içinde hizmet işlemleri çağırmak için  
   

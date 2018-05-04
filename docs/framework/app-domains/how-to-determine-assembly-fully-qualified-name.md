@@ -1,13 +1,6 @@
 ---
-title: "Nasıl yapılır: bir derlemeyi &#39;belirlemek; s tam adı"
-ms.custom: 
+title: 'Nasıl yapılır: bir derlemeyi belirlemek&#39;s tam adı'
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-bcl
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -17,18 +10,15 @@ helpviewer_keywords:
 - names [.NET Framework], assemblies
 - assemblies [.NET Framework], names
 ms.assetid: 009dae23-e1f6-4a64-9a9a-32e4c34802b0
-caps.latest.revision: "13"
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 841bec105f171f3450bfc33ee9052ddb85814a5e
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 663e7456337a2d9c413b15236e7ba1de33fbfa9b
+ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/03/2018
 ---
-# <a name="how-to-determine-an-assembly39s-fully-qualified-name"></a>Nasıl yapılır: bir derlemeyi &#39;belirlemek; s tam adı
+# <a name="how-to-determine-an-assembly39s-fully-qualified-name"></a>Nasıl yapılır: bir derlemeyi belirlemek&#39;s tam adı
 Bir derlemeyi genel derleme önbelleğinde tam adını bulmak için Genel Derleme Önbelleği aracı kullanın ([Gacutil.exe](../../../docs/framework/tools/gacutil-exe-gac-tool.md)). Bkz: [nasıl yapılır: genel derleme önbelleğinin içeriğini görüntüleme](../../../docs/framework/app-domains/how-to-view-the-contents-of-the-gac.md).  
   
  Genel derleme önbelleğinde olmayan derlemeler için çeşitli yollarla tam nitelikli derleme adı elde edebilirsiniz: kod konsol veya bir değişken için bilgileri çıkarmak için kullanabilir veya kullanabilirsiniz [Ildasm.exe (IL ayrıştırıcı)](../../../docs/framework/tools/ildasm-exe-il-disassembler.md)tam adı içeren derlemenin meta verilerini incelemek için.  

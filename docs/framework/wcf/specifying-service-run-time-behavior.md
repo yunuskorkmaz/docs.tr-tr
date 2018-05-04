@@ -19,11 +19,11 @@ ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: e45c35d0b19833b6fd43c7fd5794ecf8bd3a9769
-ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
-ms.translationtype: MT
+ms.openlocfilehash: 9733bb29701e4d1b46cc08c14b91e0357c935b42
+ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/30/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="specifying-service-run-time-behavior"></a>Hizmet Çalışma Zamanı Davranışını Belirtme
 Bir hizmet sözleşmesini tasarladıktan sonra ([Hizmet sözleşmeleri tasarlama](../../../docs/framework/wcf/designing-service-contracts.md)) ve hizmet sözleşmesini uygulanan ([hizmet sözleşmelerini uygulama](../../../docs/framework/wcf/implementing-service-contracts.md)) işlemi davranışını yapılandırabilirsiniz Hizmet çalışma zamanı. Bu konu, sistem tarafından sağlanan hizmet ve işlem davranışları açıklar ve yeni davranışlar oluşturma hakkında daha fazla bilgi bulmak nerede tanımlar. Bazı davranışları öznitelik olarak uygulanır, ancak çoğu uygulama yapılandırma dosyası kullanılarak uygulanır veya program aracılığıyla. Hizmet uygulamanızın yapılandırma hakkında daha fazla bilgi için bkz: [Hizmetleri'ni Yapılandırma](../../../docs/framework/wcf/configuring-services.md).  
@@ -31,7 +31,7 @@ Bir hizmet sözleşmesini tasarladıktan sonra ([Hizmet sözleşmeleri tasarlama
 ## <a name="overview"></a>Genel Bakış  
  Sözleşme Girişleri, çıktıları, veri türleri ve bu tür bir hizmet özelliklerini tanımlar. Bir hizmet sözleşmesini uygulama oluşturur bir sınıf, bir adresinde bir bağlama ile yapılandırıldığında bunu uygulayan sözleşme yerine getirir. Sözleşme, bağlama ve adres bilgilerini tüm istemci tarafından bilinen; bunları istemci yapamazsınız hizmetini kullanın.  
   
- Ancak, sorunları veya örnek yönetimi, iş parçacığı oluşturma gibi işlem özellikleri, istemcilere donuk değildir. Hizmet sözleşmesi uyguladıktan sonra kullanarak çok sayıda işlem özelliklerini yapılandırabilirsiniz *davranışları*. Davranışları olan değiştirme nesneler [!INCLUDE[indigo1](../../../includes/indigo1-md.md)] ya da bir çalışma zamanı özellik ayarlama veya özelleştirme türü çalışma zamanına ekleyerek çalışma zamanı. Çalışma zamanı kullanıcı tarafından tanımlanan davranışları oluşturarak değiştirme hakkında daha fazla bilgi için bkz: [genişletme ServiceHost ve hizmet modeli katmanını](../../../docs/framework/wcf/extending/extending-servicehost-and-the-service-model-layer.md).  
+ Ancak, sorunları veya örnek yönetimi, iş parçacığı oluşturma gibi işlem özellikleri, istemcilere donuk değildir. Hizmet sözleşmesi uyguladıktan sonra kullanarak çok sayıda işlem özelliklerini yapılandırabilirsiniz *davranışları*. Davranışlar çalışma zamanı özelliğini ayarlayarak veya çalışma zamanına özelleştirme türü ekleyerek Windows Communication Foundation (WCF) çalışma zamanı değiştirmek nesneleridir. Çalışma zamanı kullanıcı tarafından tanımlanan davranışları oluşturarak değiştirme hakkında daha fazla bilgi için bkz: [genişletme ServiceHost ve hizmet modeli katmanını](../../../docs/framework/wcf/extending/extending-servicehost-and-the-service-model-layer.md).  
   
  <xref:System.ServiceModel.ServiceBehaviorAttribute?displayProperty=nameWithType> Ve <xref:System.ServiceModel.OperationBehaviorAttribute?displayProperty=nameWithType> özniteliklerin en yaygın olarak yararlı davranışları ve sunmaya en sık istenen işlemi özellikleri. Öznitelikleri olduklarından, hizmet veya işlem uygulaması için geçerlidir. Diğer davranışları gibi <xref:System.ServiceModel.Description.ServiceMetadataBehavior?displayProperty=nameWithType> veya <xref:System.ServiceModel.Description.ServiceDebugBehavior?displayProperty=nameWithType>, program aracılığıyla kullanabilirsiniz ancak genellikle bir uygulama yapılandırma dosyası kullanılarak uygulanır.  
   
@@ -74,7 +74,7 @@ Bir hizmet sözleşmesini tasarladıktan sonra ([Hizmet sözleşmeleri tasarlama
   
  Kullanım <xref:System.ServiceModel.ServiceHost.%23ctor%28System.Object%2CSystem.Uri%5B%5D%29?displayProperty=nameWithType> gibi bir hizmet oluşturmak için Oluşturucusu. Özel bir uygulama için bir alternatif sağlayan <xref:System.ServiceModel.Dispatcher.IInstanceContextInitializer?displayProperty=nameWithType> belirli nesne örneği bir singleton hizmeti tarafından kullanım için sağlamak istediğiniz zaman. Hizmet uygulama türü (örneğin, bu parametreye sahip olmayan bir varsayılan ortak oluşturucu uygulamadığında) oluşturmak zor olduğu durumlarda, bu aşırı yüklemesini kullanabilirsiniz.  
   
- Bu oluşturucuya bir nesne sağlandığında, bazı özellikler için ilgili [!INCLUDE[indigo1](../../../includes/indigo1-md.md)] davranışı iş farklı depolamasına. Örneğin, arama <xref:System.ServiceModel.InstanceContext.ReleaseServiceInstance%2A?displayProperty=nameWithType> iyi bilinen nesne örneği sağlandığında hiçbir etkisi olmaz. Benzer şekilde, diğer bir örnek yayın mekanizması göz ardı edilir. <xref:System.ServiceModel.ServiceHost> Sınıfı her zaman davranır gibi <xref:System.ServiceModel.OperationBehaviorAttribute.ReleaseInstanceMode%2A?displayProperty=nameWithType> özelliği ayarlanmış <xref:System.ServiceModel.ReleaseInstanceMode.None?displayProperty=nameWithType> tüm işlemleri için.  
+ Bu oluşturucuya bir nesne sağlandığında, Windows Communication Foundation (davranışı depolamasına WCF için) ilgili bazı özellikler farklı şekilde çalıştığını unutmayın. Örneğin, arama <xref:System.ServiceModel.InstanceContext.ReleaseServiceInstance%2A?displayProperty=nameWithType> iyi bilinen nesne örneği sağlandığında hiçbir etkisi olmaz. Benzer şekilde, diğer bir örnek yayın mekanizması göz ardı edilir. <xref:System.ServiceModel.ServiceHost> Sınıfı her zaman davranır gibi <xref:System.ServiceModel.OperationBehaviorAttribute.ReleaseInstanceMode%2A?displayProperty=nameWithType> özelliği ayarlanmış <xref:System.ServiceModel.ReleaseInstanceMode.None?displayProperty=nameWithType> tüm işlemleri için.  
   
 ## <a name="other-service-endpoint-contract-and-operation-behaviors"></a>Diğer hizmet, uç nokta, sözleşme ve işlem davranışları  
  Davranışları gibi hizmet <xref:System.ServiceModel.ServiceBehaviorAttribute> öznitelik, bir tüm hizmet çalışır. Örneğin, ayarlarsanız <xref:System.ServiceModel.ServiceBehaviorAttribute.ConcurrencyMode%2A?displayProperty=nameWithType> özelliğine <xref:System.ServiceModel.ConcurrencyMode.Multiple?displayProperty=nameWithType> kendiniz hizmetin her bir işlemin içindeki iş parçacığı eşitleme sorunlarını işlemesi gerekir. Uç nokta davranışları bir uç nokta çalışır; çoğu sistem tarafından sağlanan uç nokta davranışları için istemci işlevsellik bulunur. Sözleşme davranışları sözleşme düzeyinde çalışır ve işlem teslim işlemi davranışları değiştirin.  

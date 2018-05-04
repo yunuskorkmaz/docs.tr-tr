@@ -1,34 +1,22 @@
 ---
-title: "DataView nesnesi (LINQ-DataSet) oluşturma"
-ms.custom: 
+title: DataView nesnesi (LINQ-DataSet) oluşturma
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-ado
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
 ms.assetid: 76057508-e12d-4779-a707-06a4c2568acf
-caps.latest.revision: "2"
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
-ms.workload: dotnet
-ms.openlocfilehash: 895f692bc07e8e48904e0829e322788f2aa45337
-ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
+ms.openlocfilehash: ee4005d6f7d8899b19b2bcc5c62501570165f03e
+ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="creating-a-dataview-object-linq-to-dataset"></a>DataView nesnesi (LINQ-DataSet) oluşturma
 Oluşturmanın iki yolu vardır bir <xref:System.Data.DataView> içinde [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)] bağlamı. Oluşturabileceğiniz bir <xref:System.Data.DataView> gelen bir [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)] üzerinden sorgu bir <xref:System.Data.DataTable>, veya bir yazılı veya türsüz oluşturabilirsiniz <xref:System.Data.DataTable>. Her iki durumda da, oluşturduğunuz <xref:System.Data.DataView> birini kullanarak <xref:System.Data.DataTableExtensions.AsDataView%2A> genişletme yöntemleri; <xref:System.Data.DataView> doğrudan oluşturulabilir değil [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)] bağlamı.  
   
  Sonra <xref:System.Data.DataView> bırakıldı oluşturulmuş bir Windows forms uygulaması veya ASP.NET uygulaması UI denetimi bağlamak veya için filtreleme ve sıralama ayarlarını değiştirin.  
   
- <xref:System.Data.DataView>Filtreleme ve sıralama gibi dizin kullanabilirsiniz işlemlerinin performansını önemli ölçüde artıran bir dizin oluşturur. Dizini bir <xref:System.Data.DataView> hem olduğunda yerleşik <xref:System.Data.DataView> oluşturulur ve sıralama veya filtreleme herhangi birinde bilgi değiştirilir. Oluşturma bir <xref:System.Data.DataView> ve en az iki kez oluşturulacak dizin sıralama ayarlama veya bilgileri daha sonra filtreleme neden olur: sonra zaman <xref:System.Data.DataView> oluşturulduğu ve yeniden sıralama veya filtre özelliklerden herhangi biri değiştirildiği.  
+ <xref:System.Data.DataView> Filtreleme ve sıralama gibi dizin kullanabilirsiniz işlemlerinin performansını önemli ölçüde artıran bir dizin oluşturur. Dizini bir <xref:System.Data.DataView> hem olduğunda yerleşik <xref:System.Data.DataView> oluşturulur ve sıralama veya filtreleme herhangi birinde bilgi değiştirilir. Oluşturma bir <xref:System.Data.DataView> ve en az iki kez oluşturulacak dizin sıralama ayarlama veya bilgileri daha sonra filtreleme neden olur: sonra zaman <xref:System.Data.DataView> oluşturulduğu ve yeniden sıralama veya filtre özelliklerden herhangi biri değiştirildiği.  
   
  Sıralama ve filtreleme hakkında daha fazla bilgi için <xref:System.Data.DataView>, bkz: [DataView ile filtreleme](../../../../docs/framework/data/adonet/filtering-with-dataview-linq-to-dataset.md) ve [DataView ile sıralama](../../../../docs/framework/data/adonet/sorting-with-dataview-linq-to-dataset.md).  
   

@@ -1,24 +1,12 @@
 ---
-title: "Oracle şema koleksiyonları"
-ms.custom: 
+title: Oracle şema koleksiyonları
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-ado
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 89a75de8-dee8-45e2-a97f-254d7e62e7e1
-caps.latest.revision: "3"
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
-ms.workload: dotnet
-ms.openlocfilehash: 4f199a0fc0939bd5fae4fefb7440c46bd471e4b6
-ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
+ms.openlocfilehash: b86de542e425d6fdc56f238f90063988bee95ffa
+ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="oracle-schema-collections"></a>Oracle şema koleksiyonları
 Oracle için Microsoft .NET Framework veri sağlayıcısı ortak şeması koleksiyonları ek olarak aşağıdaki belirli şeması koleksiyonları destekler:  
@@ -110,12 +98,12 @@ Oracle için Microsoft .NET Framework veri sağlayıcısı ortak şeması koleks
 |NUM_ROWS|Ondalık|Dizin içindeki satır sayısını belirtir.|  
 |SAMPLE_SIZE|Ondalık|Dizin çözümlemek için kullanılan örnek boyutu.|  
 |LAST_ANALYZED|DateTime|Bu dizin analiz edildi en son tarihi.|  
-|DEGREE|Dize|Dizin tarama için örnek başına iş parçacığı sayısı.|  
+|DERECE|Dize|Dizin tarama için örnek başına iş parçacığı sayısı.|  
 |ÖRNEKLERİ|Dize|Hangi örneklerinde sayısı taranacak dizinleri.|  
-|BÖLÜMLENMİŞ|Dize|Bu dizin olup bölümlenmiş (Evet &#124; HAYIR).|  
+|BÖLÜMLENMİŞ|Dize|Bu dizin olup bölümlenmiş (Evet &#124; Hayır).|  
 |GEÇİCİ|Dize|Dizin geçici bir tablo üzerinde olup olmadığı.|  
-|OLUŞTURULAN|Dize|Dizinin adını sistem olup olmadığını oluşturulan (Y &#124; N).|  
-|İKİNCİL|Dize|Dizin Oracle9i veri Kartuş ODCIIndexCreate yöntemi tarafından oluşturulan ikincil bir nesne olup (Y &#124; N).|  
+|OLUŞTURULAN|Dize|Dizin adı sistem tarafından oluşturulan olup (Y&#124;N).|  
+|İKİNCİL|Dize|Dizin Oracle9i veri Kartuş ODCIIndexCreate yöntemi tarafından oluşturulan ikincil bir nesne olup (Y&#124;N).|  
 |BUFFER_POOL|Dize|Dizin blokları için kullanılacak varsayılan arabellek havuzunun adı.|  
 |USER_STATS|Dize|Olup istatistikleri doğrudan kullanıcı tarafından girilen.|  
 |SÜRE|Dize|Geçici bir tablo süresini gösterir: 1) SYS$ oturum: satırları oturum süresi boyunca, 2) SYS$ işlem için korunur: satırları TAMAMLAMA, 3) Null kalıcı tablosu için sonra silinir.|  
@@ -153,7 +141,7 @@ Oracle için Microsoft .NET Framework veri sağlayıcısı ortak şeması koleks
 |OBJECT_ID|Ondalık|Nesne sözlük nesne sayısı.|  
 |DATA_OBJECT_ID|Ondalık|Nesne içeren kesim sözlük nesne sayısı.|  
 |LAST_DDL_TIME|DateTime|Son değiştirilme (verir ve kaldırılırlar dahil) bir DDL komutundan kaynaklanan nesnesinin için zaman damgası.|  
-|TIMESTAMP|Dize|Zaman damgası (karakter verileri) nesnesinin belirtimi için.|  
+|ZAMAN DAMGASI|Dize|Zaman damgası (karakter verileri) nesnesinin belirtimi için.|  
 |DURUMU|Dize|(Geçerli, geçersiz veya yok) nesnenin durumu.|  
 |GEÇİCİ|Dize|Nesne geçici olup (geçerli oturum bu nesnesinde yerleştirilen veri görebilirsiniz).|  
 |OLUŞTURULAN|Dize|Bu nesne sistem tarafından oluşturulan adı neydi? (Y &#124; N).|  
@@ -209,7 +197,7 @@ Oracle için Microsoft .NET Framework veri sağlayıcısı ortak şeması koleks
 |TEXT_LENGTH|Ondalık|Görünüm metnin uzunluğu.|  
 |METİN|Dize|Metni görüntüleyin.|  
 |TYPE_TEXT_LENGTH|Ondalık|Belirtilmiş görünüm türü yan tümcesi uzunluğu.|  
-|TYPE_TEXT|Dize|Yan tümcesi belirtilmiş görünüm türü.|  
+|METİN_TÜRÜ|Dize|Yan tümcesi belirtilmiş görünüm türü.|  
 |OID_TEXT_LENGTH|Ondalık|İLE OID yan tümcesinde belirtilmiş görünüm uzunluğu.|  
 |OID_TEXT|Dize|Türü belirtilmiş görünümü OID yan TÜMCESİYLE.|  
 |VIEW_TYPE_OWNER|Dize|Görünümü belirtilmiş görünüm ise görünüm türünü sahibi.|  
@@ -228,7 +216,7 @@ Oracle için Microsoft .NET Framework veri sağlayıcısı ortak şeması koleks
 |OBJECT_TYPE|Dize|Nesnenin türü.|  
 |OLUŞTURULAN|DateTime|Nesnenin oluşturulduğu tarih.|  
 |LAST_DDL_TIME|DateTime|Son değiştirilme (verir ve kaldırılırlar dahil) bir DDL komutundan kaynaklanan nesnesinin için zaman damgası.|  
-|TIMESTAMP|Dize|Nesne (karakter verileri) belirtimi için zaman damgası|  
+|ZAMAN DAMGASI|Dize|Nesne (karakter verileri) belirtimi için zaman damgası|  
 |DURUMU|Dize|(Geçerli, geçersiz veya yok) nesnenin durumu.|  
 |GEÇİCİ|Dize|Nesne geçici olup (geçerli oturum bu nesnesinde yerleştirilen veri görebilirsiniz).|  
 |OLUŞTURULAN|Dize|Bu nesne sistem tarafından oluşturulan adı neydi? (Y &#124; N).|  
@@ -244,7 +232,7 @@ Oracle için Microsoft .NET Framework veri sağlayıcısı ortak şeması koleks
 |OBJECT_ID|Ondalık|Nesne sözlük nesne sayısı.|  
 |DATA_OBJECT_ID|Ondalık|Nesne içeren kesim sözlük nesne sayısı.|  
 |LAST_DDL_TIME|DateTime|Son değiştirilme (verir ve kaldırılırlar dahil) bir DDL komutundan kaynaklanan nesnesinin için zaman damgası.|  
-|TIMESTAMP|Dize|Zaman damgası (karakter verileri) nesnesinin belirtimi için.|  
+|ZAMAN DAMGASI|Dize|Zaman damgası (karakter verileri) nesnesinin belirtimi için.|  
 |DURUMU|Dize|(Geçerli, geçersiz veya yok) nesnenin durumu.|  
 |GEÇİCİ|Dize|Nesne geçici olup (geçerli oturum bu nesnesinde yerleştirilen veri görebilirsiniz).|  
 |OLUŞTURULAN|Dize|Bu nesne sistem tarafından oluşturulan adı neydi? (Y &#124; N).|  
@@ -261,7 +249,7 @@ Oracle için Microsoft .NET Framework veri sağlayıcısı ortak şeması koleks
 |OBJECT_ID|Ondalık|Nesne sözlük nesne sayısı.|  
 |DATA_OBJECT_ID|Ondalık|Nesne içeren kesim sözlük nesne sayısı.|  
 |LAST_DDL_TIME|DateTime|Son değiştirilme (verir ve kaldırılırlar dahil) bir DDL komutundan kaynaklanan nesnesinin için zaman damgası.|  
-|TIMESTAMP|Dize|Zaman damgası (karakter verileri) nesnesinin belirtimi için.|  
+|ZAMAN DAMGASI|Dize|Zaman damgası (karakter verileri) nesnesinin belirtimi için.|  
 |DURUMU|Dize|(Geçerli, geçersiz veya yok) nesnenin durumu.|  
 |GEÇİCİ|Dize|Nesne geçici olup (geçerli oturum bu nesnesinde yerleştirilen veri görebilirsiniz).|  
 |OLUŞTURULAN|Dize|Bu nesne sistem tarafından oluşturulan adı neydi? (Y &#124; N).|  
@@ -368,7 +356,7 @@ Oracle için Microsoft .NET Framework veri sağlayıcısı ortak şeması koleks
 |OBJECT_NAME|Dize|Yordam veya işlev adı.|  
 |PACKAGE_NAME|Dize|Yordam veya işlev adı.|  
 |OBJECT_ID|Ondalık|Nesne nesne sayısı.|  
-|OVERLOAD|Dize|Benzersiz tanımlayıcı aşırı yükleme.|  
+|AŞIRI YÜKLEME|Dize|Benzersiz tanımlayıcı aşırı yükleme.|  
 |ARGUMENT_NAME|Dize|Bağımsız değişken adı.|  
 |KONUMU|Ondalık|Konum bağımsız değişken listesi veya bir işlevin dönüş değeri null.|  
 |SIRASI|Ondalık|Tüm iç içe geçme düzeyi de dahil olmak üzere, bağımsız değişken dizisi.|  
@@ -380,7 +368,7 @@ Oracle için Microsoft .NET Framework veri sağlayıcısı ortak şeması koleks
 |DATA_LENGTH|Ondalık|(Bayt cinsinden) sütun uzunluğu.|  
 |DATA_PRECISION|Ondalık|Ondalık sayılar (sayı) veya ikili basamak (kayan nokta) cinsinden uzunluğu.|  
 |DATA_SCALE|Ondalık|Basamaklı bir sayı ondalık konumun sağında.|  
-|RADIX|Ondalık|Bağımsız değişken taban sayısı için.|  
+|SAYI TABANINI|Ondalık|Bağımsız değişken taban sayısı için.|  
 |CHARACTER_SET_NAME|Dize|Karakter kümesi adı bağımsız değişkeni.|  
 |TYPE_OWNER|Dize|Bağımsız değişken türü sahibi.|  
 |TYPE_NAME|Dize|Bağımsız değişkenin türünün adı. Tür bir paket yerel türü ise (diğer bir deyişle, bu bir paket belirtiminde bildirilmiş), bu sütun paketinin adını görüntüler.|  

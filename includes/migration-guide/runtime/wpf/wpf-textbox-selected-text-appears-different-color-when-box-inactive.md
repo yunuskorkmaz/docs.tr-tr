@@ -2,8 +2,8 @@
 
 |   |   |
 |---|---|
-|Ayrıntılar|.NET 4.5, WPF metin kutusu denetiminin devre dışı olduğunda içinde (odak yok), seçili metin kutusunun içindeki denetim etkin olduğunda daha farklı bir renk görünür.|
-|Öneri|Önceki (.NET 4.0) davranışı geri ayarlayarak <xref:System.Windows.FrameworkCompatibilityPreferences.AreInactiveSelectionHighlightBrushKeysSupported> özelliğine <code>false</code>.|
+|Ayrıntılar|.NET Framework 4.5 WPF metin kutusu denetiminin devre dışı olduğunda içinde (odak yok), seçili metin kutusunun içindeki denetim etkin olduğunda daha farklı bir renk görünür.|
+|Öneri|Önceki (.NET Framework 4.0) davranışı ayarlayarak geri yüklenebilir <xref:System.Windows.FrameworkCompatibilityPreferences.AreInactiveSelectionHighlightBrushKeysSupported> özelliğine <code>false</code>.|
 |Kapsam|Kenar|
 |Sürüm|4,5|
 |Tür|Çalışma zamanı|

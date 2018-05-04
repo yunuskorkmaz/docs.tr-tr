@@ -1,13 +1,6 @@
 ---
-title: "Nasıl yapılır: Birden Fazla Dosya Derleme"
-ms.custom: 
+title: 'Nasıl yapılır: Birden Fazla Dosya Derleme'
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-bcl
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -24,16 +17,13 @@ helpviewer_keywords:
 - code modules
 - multifile assemblies
 ms.assetid: 261c5583-8a76-412d-bda7-9b8ee3b131e5
-caps.latest.revision: "15"
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: f77922d08ce17f8b8659eac0dba5a46ca33a7502
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 916db7ec9bee0c85db1f2fcf4db7a9f8a61f9be3
+ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="how-to-build-a-multifile-assembly"></a>Nasıl yapılır: Birden Fazla Dosya Derleme
 Bu makalede, birden fazla dosya derlemesi oluşturma açıklanmaktadır ve yordamda her adım gösterilmektedir kodu sağlar.  
@@ -93,7 +83,7 @@ Bu makalede, birden fazla dosya derlemesi oluşturma açıklanmaktadır ve yorda
   
      Komut satırında, aşağıdaki komutu yazın:  
   
-     **Al** \< *modül adı*> \<*modül adı*>... **/ main:**\<*yöntem adı*> **/out:**\<*dosya adı*> **/ Hedef:**\<*derleme dosya türü*>  
+     **Al** \< *modül adı*> \<*modül adı*>... **/ main:**\<*yöntem adı*> **/out:**\<*dosya adı*>   **/target :**\<*derleme dosya türü*>  
   
      Bu komutta *modül adı* bağımsız değişkenleri derlemeyi dahil etmek için her modül adı belirtin. **/Ana:** seçeneği derlemenin giriş noktası yöntem adını belirtir. **/Out:** seçeneği derleme meta verilerini içeren çıktı dosyası adını belirtir. **/Target:** seçeneği derleme bir konsol uygulama yürütülebilir dosyanın (.exe) dosyası, bir Windows yürütülebilir dosya (.win) dosyası ya da kitaplık (.lib) dosyası olduğunu belirtir.  
   

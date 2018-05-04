@@ -3,7 +3,7 @@
 |   |   |
 |---|---|
 |Ayrıntılar|.NET Framework 4.6, verilen özel durum iletisi başlayan bir <xref:System.Runtime.Serialization.DataContractSerializer?displayProperty=name> veya <xref:System.Runtime.Serialization.Json.DataContractJsonSerializer?displayProperty=name> serileştirmek veya seri durumdan 'bilinen türleri' eksik nedeniyle başarısız açıklamıştır.|
-|Öneri|Uygulamalar üzerinde herhangi bir özel durum iletileri bağlı olmaması gerekir. Bir uygulama bağlı olarak bu ileti, lütfen ya da yeni ileti beklediğiniz şekilde güncelleştirmek veya (tercihen) yalnızca özel durum türü'ne bağlı olarak değiştirin.|
+|Öneri|Uygulamalar üzerinde herhangi bir özel durum iletileri bağlı olmaması gerekir. Ya da bir uygulama bu iletide bağımlıysa (tercihen) yalnızca özel durum türü'ne bağlı olarak değiştirin ya da yeni ileti beklediğiniz şekilde güncelleştirin.|
 |Kapsam|Kenar|
 |Sürüm|4.6|
 |Tür|Çalışma zamanı|

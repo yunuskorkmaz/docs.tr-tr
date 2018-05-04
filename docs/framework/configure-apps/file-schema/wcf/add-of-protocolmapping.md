@@ -1,29 +1,17 @@
 ---
 title: '&lt;protocolMapping&gt; &lt;ekleme&gt;'
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 08e62249-1641-41d1-91b1-66d7b46244e4
-caps.latest.revision: "2"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 6a254b8a4de8f66cb0d051d246be2d07e905615a
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
-ms.translationtype: MT
+ms.openlocfilehash: b9559a6921bdededf760f54f58abadb46612b174
+ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="ltaddgt-of-ltprotocolmappinggt"></a>&lt;protocolMapping&gt; &lt;ekleme&gt;
-Bir Aktarım Protokolü düzeni (örn., http, net.tcp, net.pipe, vb.) arasındaki bir varsayılan protokolü eşlemeyi temsil eder ve bir [!INCLUDE[indigo1](../../../../../includes/indigo1-md.md)] bağlama. Varsayılan uç noktalar çalışma zamanında oluştururken [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)] yapılandırılmış eşlemelerin arar ve adresine göre hangi belirli bir için kullanılacak bağlama karar verir.  
+Bir Aktarım Protokolü düzeni (örn., http, net.tcp, net.pipe, vb.) ve bir Windows Communication Foundation (WCF) bağlama arasındaki varsayılan protokolü eşlemeyi temsil eder. Varsayılan uç noktalar çalışma zamanında oluştururken [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)] yapılandırılmış eşlemelerin arar ve adresine göre hangi belirli bir için kullanılacak bağlama karar verir.  
   
- \<system.serviceModel >  
+ \<system.serviceModel>  
 \<protocolMapping >  
 \<ekleme >  
   
@@ -51,7 +39,7 @@ Bir Aktarım Protokolü düzeni (örn., http, net.tcp, net.pipe, vb.) arasındak
   
 |Öğe|Açıklama|  
 |-------------|-----------------|  
-|[\<protocolMapping >](../../../../../docs/framework/configure-apps/file-schema/wcf/protocolmapping.md)|Aktarım Protokolü düzenleri (örn., http, net.tcp, net.pipe, vb.) arasındaki varsayılan protokolü eşlemeleri tanımlamak için yapılandırma bölümünü temsil eder ve [!INCLUDE[indigo1](../../../../../includes/indigo1-md.md)] bağlar.|  
+|[\<protocolMapping >](../../../../../docs/framework/configure-apps/file-schema/wcf/protocolmapping.md)|Aktarım Protokolü düzenleri (örn., http, net.tcp, net.pipe, vb.) ve Windows Communication Foundation (WCF) bağlamaları arasındaki varsayılan protokolü eşlemeleri tanımlamak için yapılandırma bölümünü temsil eder.|  
   
 ## <a name="example"></a>Örnek  
  Aşağıdaki yapılandırma örnek machine.config dosyasındaki varsayılan protokolü eşlemeyi gösterir. Machine.config dosyasının değiştirerek bu varsayılan eşleme makine düzeyinde geçersiz kılabilirsiniz. Veya yalnızca bir uygulama kapsamında geçersiz kılmak isterseniz, bu bölümde, uygulama yapılandırma dosyasında geçersiz kılmak ve tek protokol düzenleri için eşleme değiştirin.  

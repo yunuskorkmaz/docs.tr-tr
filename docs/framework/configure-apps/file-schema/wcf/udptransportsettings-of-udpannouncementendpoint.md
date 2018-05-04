@@ -1,29 +1,17 @@
 ---
-title: "&lt;udpAnnouncementEndpoint&gt; için &lt;udpTransportSettings&gt;"
-ms.custom: 
+title: '&lt;udpAnnouncementEndpoint&gt; için &lt;udpTransportSettings&gt;'
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: a7ddff1a-5eed-4bbc-8580-b95ef8890e1f
-caps.latest.revision: "5"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 3a5de8d55d34c2db0d0b1efd5a05024f1dbc4f42
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 624dbada56a609452310218d26c5c6ff0ca49d64
+ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="ltudptransportsettingsgt-of-ltudpannouncementendpointgt"></a>&lt;udpAnnouncementEndpoint&gt; için &lt;udpTransportSettings&gt;
 Bu yapılandırma öğesi için UDP taşıma ayarları gösteren [ \<udpAnnoucementEndpoint >](../../../../../docs/framework/configure-apps/file-schema/wcf/udpannoucementendpoint.md).  
   
-\<Sistem. ServiceModel >  
+\<system.ServiceModel>  
 \<standardEndpoints >  
 \<Udptransportsettings >  
   
@@ -60,7 +48,7 @@ Bu yapılandırma öğesi için UDP taşıma ayarları gösteren [ \<udpAnnoucem
 |maxBufferPoolSize|Arabellek havuzlarını aktarım tarafından kullanılan en büyük boyutunu belirten bir tamsayı.|  
 |maxMulticastRetransmitCount|En fazla kaç kez ileti (ilk gönderme ek olarak) iletilmelidir belirten bir tamsayı.<br /><br /> Varsayılan değer 2'dir.|  
 |maxPendingMessageCount|Aldı, ancak henüz bir tek kanal örneğinin InputQueue kaldırıldı iletilerinin sayısını belirten bir tamsayı.  InputQueue bekleyen ileti sayısı sınırına erişti, ileti bırakılır.<br /><br /> Varsayılan değer 32'dir.|  
-|MaxReceivedMessageSize|Bağlama tarafından işlenebilen bir ileti boyutu üst sınırı belirten bir tamsayı.<br /><br /> 65507 varsayılan değerdir.|  
+|maxReceivedMessageSize|Bağlama tarafından işlenebilen bir ileti boyutu üst sınırı belirten bir tamsayı.<br /><br /> 65507 varsayılan değerdir.|  
 |maxUnicastRetransmitCount|En fazla kaç kez ileti (ilk gönderme ek olarak) iletilmelidir belirten bir tamsayı.  İleti bir tek noktaya yayın adresine gönderilir ve karşılık gelen bir RelatesTo üstbilgiyle bir yanıt iletisi aldı, aktarım erken (yapılandırılmış kaç kez yeniden göndermeden önce) sonlandırabilir.<br /><br /> Varsayılan değer 1’dir.|  
 |multicastInterfaceId|Çok noktaya yayın trafiğine çok ana bilgisayarlı makinelerdeki gönderilip alınırken kullanılması gereken ağ bağdaştırıcısı benzersiz olarak tanımlayan bir dize. Çalışma zamanında, daha sonra ayarlamak için kullanılan arabirim dizinini aramak için bu öznitelik değeri aktarımını kullanacak `IP_MULTICAST_IF` ve `IPV6_MULTICAST_IF` yuva seçenekleri.  Aynı arabirim dizinini çok noktaya yayın grubu eklerken varsa kullanılır.<br /><br /> Varsayılan değer `null` şeklindedir.|  
 |socketReceiveBufferSize|Temel alınan WinSock yuvası üzerinde alış arabelleği boyutu belirten bir tamsayı.<br /><br /> Bir kullanıcı bir alıcı kanalının bu öznitelik veri aldığında sistem nasıl davranacağını denetlemek için bağlamada kullanın.  Örneğin, gelen WCF iletileri maksimum eşik kullanan bir uygulama göz önüne alındığında, bu öznitelik için daha yüksek bir değer kullanarak uygulamayı bunları işleyebilmesi için beklenirken WinSock arabellekte yığın iletileri olanak tanır.  Daha düşük bir değere aynı durumda kullanarak kesiliyor iletilerinde neden olur. Bu öznitelik temel WinSock gösterir `SO_RCVBUF` yuva seçeneği. Bu öznitelik değeri boyutu en az olmalıdır `maxReceivedMessageSize`.   Bir değere küçüktür ayarlamak `maxReceivedMessageSize` çalışma zamanı özel durumuna neden.<br /><br /> Varsayılan değer 65536'dır.|  

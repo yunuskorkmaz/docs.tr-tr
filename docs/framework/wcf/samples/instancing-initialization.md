@@ -1,24 +1,26 @@
 ---
-title: "Başlatmayı Örneklendirme"
-ms.custom: 
+title: Başlatmayı Örneklendirme
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 154d049f-2140-4696-b494-c7e53f6775ef
-caps.latest.revision: "31"
+caps.latest.revision: 31
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 0bc034028f8dacbac638c27e6fb8f48603cdcf2c
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
-ms.translationtype: MT
+ms.workload:
+- dotnet
+ms.openlocfilehash: f32b1c7159185bb9d4ccd99c916f00c552502748
+ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="instancing-initialization"></a>Başlatmayı Örneklendirme
 Bu örnek genişletir [toplama](../../../../docs/framework/wcf/samples/pooling.md) bir arabirim tanımlayarak örnek `IObjectControl`, etkinleştirme ve devre dışı bırakmadan nesneyi başlatma özelleştirir. İstemci, nesne havuza geri dönün ve, nesne havuzuna döndürmeyen yöntemleri çağırır.  
@@ -27,7 +29,7 @@ Bu örnek genişletir [toplama](../../../../docs/framework/wcf/samples/pooling.m
 >  Kurulum yordamı ve yapı yönergeleri Bu örnek için bu konunun sonunda yer alır.  
   
 ## <a name="extensibility-points"></a>Genişletilebilirlik noktaları  
- Oluşturmanın ilk adımı bir [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] uzantısıdır genişletilebilirlik noktasını kullanmak üzere karar vermek için. İçinde [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)], terimi *EndpointDispatcher* sorumlu kullanıcının hizmet üzerinde yöntem çağrılarına gelen iletileri dönüştürme ve o yöntemin dönüş değerleri dönüştürme için bir çalışma zamanı bileşeni başvurduğu bir Giden ileti. A [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] hizmeti her bitiş noktasıyla ilgili bir EndpointDispatcher oluşturur.  
+ Bir Windows Communication Foundation (WCF) uzantısı oluşturmanın ilk adımı, genişletilebilirlik noktasını kullanmak üzere karar vermektir. İçinde [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)], terimi *EndpointDispatcher* sorumlu kullanıcının hizmet üzerinde yöntem çağrılarına gelen iletileri dönüştürme ve o yöntemin dönüş değerleri dönüştürme için bir çalışma zamanı bileşeni başvurduğu bir Giden ileti. A [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] hizmeti her bitiş noktasıyla ilgili bir EndpointDispatcher oluşturur.  
   
  Uç nokta genişletilebilirlik kapsamı (alınan veya hizmet tarafından gönderilen tüm iletiler için) kullanarak EndpointDispatcher sunar <xref:System.ServiceModel.Dispatcher.EndpointDispatcher> sınıfı. Bu sınıf EndpointDispatcher davranışını denetleyen çeşitli özellikleri özelleştirmenizi sağlar. Bu örnek odaklanır <xref:System.ServiceModel.Dispatcher.DispatchRuntime.InstanceProvider%2A> hizmet sınıfının örnekleri sağlayan bir nesneye işaret etmiyor özelliği.  
   
@@ -165,7 +167,7 @@ if (activeObjectsCount == 0)
   
  Bu örnek özel bir öznitelik kullanır. Zaman <xref:System.ServiceModel.ServiceHost> olan oluşturulan, hizmetin tür tanımında kullanılan öznitelikler inceler ve kullanılabilir davranışları hizmet açıklaması 's davranışları koleksiyonuna ekler.  
   
- <xref:System.ServiceModel.Description.IServiceBehavior> Arabirim üç yöntem vardır: <xref:System.ServiceModel.Description.IServiceBehavior.Validate%2A> `,` <xref:System.ServiceModel.Description.IServiceBehavior.AddBindingParameters%2A> `,` ve <xref:System.ServiceModel.Description.IServiceBehavior.ApplyDispatchBehavior%2A>. Bu yöntemleri tarafından çağrılır [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] zaman <xref:System.ServiceModel.ServiceHost> başlatıldığını. <xref:System.ServiceModel.Description.IServiceBehavior.Validate%2A?displayProperty=nameWithType>ilk olarak adlandırılır; tutarsızlıkları denetlenecek hizmeti sağlar. <xref:System.ServiceModel.Description.IServiceBehavior.AddBindingParameters%2A?displayProperty=nameWithType>sonraki çağrılır; Bu yöntem yalnızca çok Gelişmiş senaryolarda gereklidir. <xref:System.ServiceModel.Description.IServiceBehavior.ApplyDispatchBehavior%2A?displayProperty=nameWithType>Son olarak adlandırılır ve çalışma zamanı yapılandırmak için sorumludur. Aşağıdaki parametreleri içine geçirilir <xref:System.ServiceModel.Description.IServiceBehavior.ApplyDispatchBehavior%2A?displayProperty=nameWithType>:  
+ <xref:System.ServiceModel.Description.IServiceBehavior> Arabirim üç yöntem vardır: <xref:System.ServiceModel.Description.IServiceBehavior.Validate%2A> `,` <xref:System.ServiceModel.Description.IServiceBehavior.AddBindingParameters%2A> `,` ve <xref:System.ServiceModel.Description.IServiceBehavior.ApplyDispatchBehavior%2A>. Bu yöntemleri tarafından çağrılır [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] zaman <xref:System.ServiceModel.ServiceHost> başlatıldığını. <xref:System.ServiceModel.Description.IServiceBehavior.Validate%2A?displayProperty=nameWithType> ilk olarak adlandırılır; tutarsızlıkları denetlenecek hizmeti sağlar. <xref:System.ServiceModel.Description.IServiceBehavior.AddBindingParameters%2A?displayProperty=nameWithType> sonraki çağrılır; Bu yöntem yalnızca çok Gelişmiş senaryolarda gereklidir. <xref:System.ServiceModel.Description.IServiceBehavior.ApplyDispatchBehavior%2A?displayProperty=nameWithType> Son olarak adlandırılır ve çalışma zamanı yapılandırmak için sorumludur. Aşağıdaki parametreleri içine geçirilir <xref:System.ServiceModel.Description.IServiceBehavior.ApplyDispatchBehavior%2A?displayProperty=nameWithType>:  
   
 -   `Description`: Bu parametre, tüm hizmet hizmet açıklamasını sağlar. Bu hizmetin uç noktaları, sözleşmeler, bağlamaları ve hizmeti ile ilişkili diğer veri hakkında açıklama verilerini incelemek için kullanılabilir.  
   
@@ -214,7 +216,7 @@ public class PoolService : IPoolService
 ## <a name="hooking-activation-and-deactivation"></a>Takma etkinleştirme ve devre dışı bırakma  
  Nesne havuzu oluşturma, birincil amacı, kısa süreli nesneler görece pahalı oluşturma ve başlatma ile en iyi duruma getirme sağlamaktır. Bu nedenle önemli ölçüde performans artışı düzgün kullandıysanız uygulamaya verebilirsiniz. Nesne havuzdan döndürdüğünden Oluşturucusu yalnızca bir kez çağrılır. Ancak, böylece bunlar başlatmak ve tek bir bağlam sırasında kullanılan kaynakları temizleme bazı uygulamalar belirli bir düzeyde denetimi gerektirir. Örneğin, bir hesaplama kümesi için kullanılan bir nesne, sonraki hesaplama işlemeden önce özel alanları sıfırlayabilirsiniz. Kurumsal Hizmetler geçersiz kılma nesne Geliştirici izin vererek bu tür bir bağlama özgü başlatma etkin `Activate` ve `Deactivate` yöntemleri <xref:System.EnterpriseServices.ServicedComponent> temel sınıfı.  
   
- Nesne havuzu çağrılarını `Activate` havuzdan nesnesi döndüren hemen önce yöntemi. `Deactivate`Nesne havuza geri döndüğünde adı verilir. <xref:System.EnterpriseServices.ServicedComponent> Temel sınıfı da sahip bir `boolean` adlı özellik `CanBePooled`, havuzu nesne daha fazla havuza olup olmadığını bildirmek için kullanılabilir.  
+ Nesne havuzu çağrılarını `Activate` havuzdan nesnesi döndüren hemen önce yöntemi. `Deactivate` Nesne havuza geri döndüğünde adı verilir. <xref:System.EnterpriseServices.ServicedComponent> Temel sınıfı da sahip bir `boolean` adlı özellik `CanBePooled`, havuzu nesne daha fazla havuza olup olmadığını bildirmek için kullanılabilir.  
   
  Bu işlev taklit etmek üzere ortak bir arabirim örnek bildirir (`IObjectControl`), daha önce bahsedilen üyeler içeriyor. Bu arabirim, ardından sınıfları bağlam belirli başlatma sağlamaya yönelik hizmeti tarafından uygulanır. <xref:System.ServiceModel.Dispatcher.IInstanceProvider> Uygulaması bu gereksinimleri karşılamak için değiştirilmesi gerekir. Şimdi, her zaman size bir nesne çağırarak `GetInstance` yöntemi, kontrol gerekir nesne uygulayan olup olmadığını `IObjectControl.` aşması durumunda çağırmalısınız `Activate` yöntemi uygun şekilde.  
   
@@ -272,7 +274,7 @@ else if (pool.Count < minPoolSize)
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  Bu dizin mevcut değilse, Git [Windows Communication Foundation (WCF) ve .NET Framework 4 için Windows Workflow Foundation (WF) örnek](http://go.microsoft.com/fwlink/?LinkId=150780) tüm indirmek için [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] ve [!INCLUDE[wf1](../../../../includes/wf1-md.md)] örnekleri. Bu örnek aşağıdaki dizinde bulunur.  
+>  Bu dizin mevcut değilse, Git [Windows Communication Foundation (WCF) ve .NET Framework 4 için Windows Workflow Foundation (WF) örnek](http://go.microsoft.com/fwlink/?LinkId=150780) tüm Windows Communication Foundation (WCF) indirmek için ve [!INCLUDE[wf1](../../../../includes/wf1-md.md)] örnekleri. Bu örnek aşağıdaki dizinde bulunur.  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Extensibility\Instancing\Initialization`  
   

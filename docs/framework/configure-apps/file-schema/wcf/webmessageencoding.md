@@ -1,29 +1,17 @@
 ---
 title: '&lt;webMessageEncoding&gt;'
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 892ca485-e21a-4a44-8e40-633161ef6796
-caps.latest.revision: "7"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: b3b5a8ff5fdf9e3da8824e7eb9443f71613899dc
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: fc1f83128dacb588d8179dea95c132da1ab2be91
+ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="ltwebmessageencodinggt"></a>&lt;webMessageEncoding&gt;
-Düz metin XML, JavaScript nesne gösterimi (JSON) ileti Kodlamalar ve okunabilir ve yazılabilir kullanıldığında "ham" ikili içeriğini sağlayan bir [!INCLUDE[indigo1](../../../../../includes/indigo1-md.md)] bağlama.  
+Düz metin XML, JavaScript nesne gösterimi (JSON) ileti Kodlamalar ve okunabilir ve yazılabilir bir Windows Communication Foundation (WCF) bağlama kullanıldığında için "ham" ikili içerik sağlar.  
   
- \<system.serviceModel >  
+ \<system.serviceModel>  
 \<bağlamaları >  
 \<customBinding >  
 \<bağlama >  
@@ -71,7 +59,7 @@ writeEncoding="UnicodeFffeTextEncoding/Utf16TextEncoding/Utf8TextEncoding" />
   
  Bağlama öğesi bir yazma karakter kullanarak kodlama ile yapılandırılabilir `writeEncoding` özniteliği. Sağlanan <xref:System.Text.Encoding> değeri JSON ve metin XML örnekleri için yazma davranışını belirtir. Üzerinde okuma, tüm geçerli ileti kodlama ve metin kodlaması anladım.  
   
- `maxReadPoolSize`ve `maxWritePoolSize` okuyucuları ve yazıcıları sırasıyla ayrılacak en fazla sayısını ayarlamak için de kullanılabilir. Varsayılan olarak, 64 okuyucuları ve 16 yazıcıları ayrılır.  
+ `maxReadPoolSize` ve `maxWritePoolSize` okuyucuları ve yazıcıları sırasıyla ayrılacak en fazla sayısını ayarlamak için de kullanılabilir. Varsayılan olarak, 64 okuyucuları ve 16 yazıcıları ayrılır.  
   
  Varsayılan karmaşıklık kısıtlamaları da ayarlanır kullanarak [ \<readerQuotas >](http://msdn.microsoft.com/library/3e5e42ff-cef8-478f-bf14-034449239bfd) öğesi (DOS) hizmet reddi sınıfının karşı korumak için uç nokta işlemeyi bağlamanın ileti karmaşıklık kullanmak için bu girişim saldırıları kaynaklar.  
   

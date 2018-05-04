@@ -1,24 +1,12 @@
 ---
-title: "Çıkarım sınırlamaları"
-ms.custom: 
+title: Çıkarım sınırlamaları
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-ado
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 78517994-5d57-44f8-9d20-38812977de09
-caps.latest.revision: "4"
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
-ms.workload: dotnet
-ms.openlocfilehash: af344055e511a2657007e216e1df304e2243362c
-ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
+ms.openlocfilehash: b3ad1e66a6a1a4cb2a2aab7b2f86f38e5c784876
+ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="inference-limitations"></a>Çıkarım sınırlamaları
 Çıkarımını yapma işlemi bir <xref:System.Data.DataSet> XML Şeması, her bir belgenin XML öğeleri bağlı olarak farklı şemalarda sonuçlanabilir. Örneğin, aşağıdaki XML belgelerini göz önünde bulundurun.  
@@ -48,7 +36,7 @@ ms.lasthandoff: 01/17/2018
   
 |Element1_Text|  
 |--------------------|  
-|Text1|  
+|Metin1|  
 |Metin2|  
   
  Ancak, "Document2 için" çıkarım işlem üreten bir **DataSet** "NewDataSet" ve "DocumentElement." adlı bir tablo adında Özniteliklere ve hiçbir alt öğeler içerdiğinden "Element1" bir sütun olarak algılanır.  
@@ -59,7 +47,7 @@ ms.lasthandoff: 01/17/2018
   
 |Element1|  
 |--------------|  
-|Text1|  
+|Metin1|  
   
  Bu iki XML belgeleri aynı şema üretmek için hedeflenen, ancak çıkarım işlemi her belgede bulunan öğeleri dayalı çok farklı sonuçlar üretir.  
   

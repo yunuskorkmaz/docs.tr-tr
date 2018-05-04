@@ -1,14 +1,6 @@
 ---
-title: "&lt;ekleme&gt; öğesi için &lt;dinleyicileri&gt; için &lt;izleme&gt;"
-ms.custom: 
+title: '&lt;ekleme&gt; öğesi için &lt;dinleyicileri&gt; için &lt;izleme&gt;'
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 f1_keywords:
 - http://schemas.microsoft.com/.NetConfiguration/v2.0#configuration/system.diagnostics/trace/listeners/add
 helpviewer_keywords:
@@ -16,17 +8,14 @@ helpviewer_keywords:
 - <add> element for <listeners>
 - add element for <listeners>
 ms.assetid: 81e804a3-ef11-4d39-bbde-bfa012c179e2
-caps.latest.revision: 
 author: mcleblanc
 ms.author: markl
 manager: markl
-ms.workload:
-- dotnet
-ms.openlocfilehash: eb624052c3638cb49abe143ebd4173a5ee85a054
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: e27187c05b49b7f73ef19243a3286e8c1de71579
+ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="ltaddgt-element-for-ltlistenersgt-for-lttracegt"></a>&lt;ekleme&gt; öğesi için &lt;dinleyicileri&gt; için &lt;izleme&gt;
 Bir dinleyici ekler **dinleyicileri** koleksiyonu.  
@@ -52,9 +41,9 @@ Bir dinleyici ekler **dinleyicileri** koleksiyonu.
   
 |Öznitelik|Açıklama|  
 |---------------|-----------------|  
-|**türü**|Gerekli öznitelik.<br /><br /> Dinleyici türünü belirtir. Belirtilen gereksinimleri karşılayan bir dize kullanmalısınız [belirtme tam olarak nitelenmiş tür adları](../../../../../docs/framework/reflection-and-codedom/specifying-fully-qualified-type-names.md).|  
+|**Türü**|Gerekli öznitelik.<br /><br /> Dinleyici türünü belirtir. Belirtilen gereksinimleri karşılayan bir dize kullanmalısınız [belirtme tam olarak nitelenmiş tür adları](../../../../../docs/framework/reflection-and-codedom/specifying-fully-qualified-type-names.md).|  
 |**initializeData**|İsteğe bağlı öznitelik.<br /><br /> Dize için belirtilen sınıf oluşturucuya geçirilen.|  
-|**adı**|İsteğe bağlı öznitelik.<br /><br /> Dinleyici adını belirtir.|  
+|**Adı**|İsteğe bağlı öznitelik.<br /><br /> Dinleyici adını belirtir.|  
   
 ### <a name="child-elements"></a>Alt Öğeler  
   
@@ -96,7 +85,7 @@ Bir dinleyici ekler **dinleyicileri** koleksiyonu.
 |<xref:System.Diagnostics.XmlWriterTraceListener?displayProperty=nameWithType>|Dosya adı, <xref:System.Diagnostics.XmlWriterTraceListener> yazar.|  
   
 ## <a name="example"></a>Örnek  
- Aşağıdaki örnekte nasıl kullanılacağını gösterir  **\<Ekle >** dinleyicileri eklemek için öğeleri `MyListener` ve `MyEventListener` için **dinleyicileri** koleksiyonu. `MyListener`adlı bir dosya oluşturur `MyListener.log` ve çıkış dosyasına yazar. `MyEventListener`olay günlüğünde bir giriş oluşturur.  
+ Aşağıdaki örnekte nasıl kullanılacağını gösterir  **\<Ekle >** dinleyicileri eklemek için öğeleri `MyListener` ve `MyEventListener` için **dinleyicileri** koleksiyonu. `MyListener` adlı bir dosya oluşturur `MyListener.log` ve çıkış dosyasına yazar. `MyEventListener` olay günlüğünde bir giriş oluşturur.  
   
 ```xml  
 <configuration>  

@@ -1,30 +1,18 @@
 ---
 title: '&lt;net.tcp&gt;'
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 8bc2f2be-11c1-4bab-9018-1d21ae568d94
-caps.latest.revision: "15"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 61b799afa1761e59c5cedf5b14eadcaf6fcaada0
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
-ms.translationtype: MT
+ms.openlocfilehash: 9312d5f7544a794f036f0a623df0d537eb96d145
+ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="ltnettcpgt"></a>&lt;net.tcp&gt;
 Ağ Yapılandırması ayarlarını belirtir. TCP bağlantı noktası paylaşımı aynı TCP bağlantı noktasını paylaşmak birden çok işlemlerinin sağlayan hizmet.  
   
  \<system.serviceModel.activation>  
-\<net.tcp>  
+\<NET.TCP >  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -63,7 +51,7 @@ Ağ Yapılandırması ayarlarını belirtir. TCP bağlantı noktası paylaşım�
   
 |Öznitelik|Açıklama|  
 |---------------|-----------------|  
-|`listenBacklog`|Paylaşılan bağlantı kabul edilir, ancak henüz için gönderilir değil en fazla bekleyen bağlantı belirten bir tamsayı [!INCLUDE[indigo1](../../../../../includes/indigo1-md.md)] Hizmetleri. Varsayılan değer 10'dur.|  
+|`listenBacklog`|Paylaşılan bağlantı kabul edilir, ancak henüz Windows Communication Foundation (WCF) hizmetlerini gönderilen değil en fazla bekleyen bağlantı belirten bir tamsayı. Varsayılan değer 10'dur.|  
 |`maxPendingAccepts`|Dinleme bitiş Paylaşım Hizmeti için en çok bekleyen eşzamanlı kabul iş parçacığı belirten bir tamsayı. Varsayılan değer 2'dir.|  
 |`MaxPendingConnections`|Uygulama tarafından kabul edilmesi için bekleyen dinleyicisi olabilir bağlantılarının maksimum sayısı. Bu kota değeri aşıldığında, yeni gelen bağlantıları bırakılan yerine kabul edilmesi için bekleniyor. İleti güvenliği gibi bağlantı özellikleri birden fazla bağlantı açmak bir istemci neden olabilir. Hizmet yöneticileri bu ek bağlantılar için bu kota değeri ayarlanırken dikkate. Varsayılan değer 10'dur.|  
 |`receiveTimeout`|A `TimeSpan` çerçeveleme veri okumak ve altı çizili bağlantılarından bağlantı gönderme gerçekleştirmek için zaman aşımını belirtir. Varsayılan değer "00: 00:10".|  

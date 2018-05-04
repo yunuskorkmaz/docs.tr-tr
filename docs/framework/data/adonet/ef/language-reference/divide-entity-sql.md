@@ -1,24 +1,12 @@
 ---
-title: "- (Bölme) (Varlık SQL)"
-ms.custom: 
+title: '- (Bölme) (Varlık SQL)'
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-ado
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: ef48c368-f3ed-4275-8ada-4e9649781262
-caps.latest.revision: "3"
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
-ms.workload: dotnet
-ms.openlocfilehash: 5f9f640d50ec24b30cedfe0d4d8d4982509efc35
-ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
+ms.openlocfilehash: 506553de78ce9fbdf5f3710805906ee8cd5b8757
+ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="-divide-entity-sql"></a>/ (Bölme (varlık SQL))
 Bir sayıyı bir başkası tarafından böler.  
@@ -31,10 +19,10 @@ dividend / divisor
   
 ## <a name="arguments"></a>Arguments  
  `dividend`  
- Bölmek için sayısal ifade. `dividend`sayısal veri türleri herhangi birinin geçerli bir ifade değil.  
+ Bölmek için sayısal ifade. `dividend` sayısal veri türleri herhangi birinin geçerli bir ifade değil.  
   
  `divisor`  
- Tarafından bölünen bölmek için sayısal ifade. `divisor`sayısal veri türleri herhangi birinin geçerli bir ifade değil.  
+ Tarafından bölünen bölmek için sayısal ifade. `divisor` sayısal veri türleri herhangi birinin geçerli bir ifade değil.  
   
 ## <a name="result-types"></a>Sonuç türleri  
  İki bağımsız değişken örtük tür yükseltme sonuçları veri türü. Örtük tür yükseltme hakkında daha fazla bilgi için bkz: [tür sistemi](../../../../../../docs/framework/data/adonet/ef/language-reference/type-system-entity-sql.md).  

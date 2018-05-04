@@ -1,24 +1,12 @@
 ---
 title: '&lt;knownType&gt;'
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: ee2b7be3-7148-4a3a-b861-48e7330615e5
-caps.latest.revision: "10"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 439d241d73df4db2820eac72c5e88e7d9023c6a5
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: b2445f12f1eaac03b3f3ab66f3d13a5f465a1133
+ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="ltknowntypegt"></a>&lt;knownType&gt;
 Tarafından kullanılmak üzere bir tür belirttiğinden <xref:System.Runtime.Serialization.DataContractSerializer> seri durumdan çıkarma sırasında. "Bilinen bir türe" öğesi belirttiğinden bir alan veya "bildirilen türü." özelliği tarafından döndürülen Daha fazla bilgi için bkz: [veri sözleşmesi bilinen türleri](../../../../../docs/framework/wcf/feature-details/data-contract-known-types.md).  
@@ -54,7 +42,7 @@ Tarafından kullanılmak üzere bir tür belirttiğinden <xref:System.Runtime.Se
   
 |Öğe|Açıklama|  
 |-------------|-----------------|  
-|[\<parametresi >](../../../../../docs/framework/configure-apps/file-schema/wcf/parameter.md)|Bildirilen tür genel bir tür olduğunda parametre dizini belirtir.|  
+|[\<Parametresi >](../../../../../docs/framework/configure-apps/file-schema/wcf/parameter.md)|Bildirilen tür genel bir tür olduğunda parametre dizini belirtir.|  
   
 ### <a name="parent-elements"></a>Üst Öğeler  
   

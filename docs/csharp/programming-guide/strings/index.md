@@ -12,11 +12,11 @@ ms.assetid: 21580405-cb25-4541-89d5-037846a38b07
 caps.latest.revision: 41
 author: BillWagner
 ms.author: wiwagn
-ms.openlocfilehash: 9478900be008588597c1dd9e75f704c751ebe344
-ms.sourcegitcommit: 935d5267c44f9bce801468ef95f44572f1417e8c
-ms.translationtype: MT
+ms.openlocfilehash: 5a888440a76119eae7e4c525942878e0aa6ddafc
+ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/28/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="strings-c-programming-guide"></a>Dizeler (C# Programlama Kılavuzu)
 Türünde bir nesne bir dizedir <xref:System.String> değeri metindir. Metin sıralı salt okunur bir koleksiyonu dahili olarak depolanan <xref:System.Char> nesneleri. Bir C# dizesi sonunda hiçbir null sonlandırma karakter yoktur; Bu nedenle bir C# dize herhangi bir sayıda katıştırılmış boş karakterler ('\0') içerebilir. <xref:System.String.Length%2A> Bir dize özelliği sayısını temsil eden `Char` içerdiği, Unicode karakter sayısını değil nesneleri. Bir dizede tek tek Unicode kod noktaları erişmek için <xref:System.Globalization.StringInfo> nesnesi.  
@@ -125,12 +125,14 @@ string s = String.Empty;
 |-----------|-----------------|  
 |[Nasıl yapılır: Dize İçeriklerini Değiştirme](../../how-to/modify-string-contents.md)|Dizeleri dönüştürme ve dizeleri içeriğini değiştirmek için teknikleri göstermektedir.|  
 |[Nasıl yapılır: Dizeleri Karşılaştırma](../../how-to/compare-strings.md)|Sıralı gerçekleştirme ve kültür belirli karşılaştırmaları dizisini gösterir.|  
-|[Nasıl yapılır: String.Split kullanarak dizeleri ayrıştırma ](../../how-to/parse-strings-using-split.md)|Nasıl kullanılacağını anlatan bir kod örneği içeren `String.Split` dizeleri ayrıştırma yöntemi.|  
+|[Nasıl yapılır: Birden Çok Dizeyi Birleştirme](../../how-to/concatenate-multiple-strings.md)|Birden çok dizenin birine katılmak için çeşitli yollar gösterir.|
+|[Nasıl yapılır: String.Split kullanarak dizeleri ayrıştırma ](../../how-to/parse-strings-using-split.md)|Nasıl kullanılacağını gösteren kod örnekleri içerir `String.Split` dizeleri ayrıştırma yöntemi.|  
 |[Nasıl yapılır: dizeleri arama](../../how-to/search-strings.md)|Belirli bir metin veya desenler için arama dizelerini kullanımı açıklanmaktadır.|  
 |[Nasıl yapılır: Bir Dizenin Sayısal bir Değeri Temsil Edip Etmediğini Belirleme](../../../csharp/programming-guide/strings/how-to-determine-whether-a-string-represents-a-numeric-value.md)|Güvenli bir şekilde geçerli bir sayısal değer olup olmadığını görmek için bir dizesi ayrıştırılamıyor gösterilmiştir.|  
-|[Nasıl yapılır: Bir Dizeyi DateTime Olarak Dönüştürme](../../../csharp/programming-guide/strings/how-to-convert-a-string-to-a-datetime.md)|İçin "24/01/2008" gibi bir dize dönüştürme gösteren bir <xref:System.DateTime?displayProperty=nameWithType> nesnesi.|  
+|[Dize ilişkilendirme](../../language-reference/tokens/interpolated.md)|Biçim dizeleri için kullanışlı bir sözdizimi sağlar ve dize ilişkilendirme özelliğini açıklar.|
 |[Temel Dize İşlemleri](../../../../docs/standard/base-types/basic-string-operations.md)|Kullanın konulara bağlantılar sağlanır <xref:System.String?displayProperty=nameWithType> ve <xref:System.Text.StringBuilder?displayProperty=nameWithType> temel dize işlemleri gerçekleştirmek için yöntemleri.|  
-|[Dizeleri Ayrıştırma](../../../../docs/standard/base-types/parsing-strings.md)|Karakter veya boş alanları bir dizeye nasıl ekleneceği açıklanmaktadır.|  
+|[Dizeleri Ayrıştırma](../../../standard/base-types/parsing-strings.md)|Karşılık gelen türlerine örneklerine dize Beyanları .NET temel türleri dönüştürme açıklar.|  
+|[Tarih ve saat dizelerini .NET ayrıştırma](../../../standard/base-types/parsing-datetime.md)|İçin "24/01/2008" gibi bir dize dönüştürme gösteren bir <xref:System.DateTime?displayProperty=nameWithType> nesnesi.|  
 |[Dizeleri Karşılaştırma](../../../../docs/standard/base-types/comparing.md)|Örnekler C# ve Visual Basic sağlar ve dizeleri karşılaştırmak hakkında bilgi içerir.|  
 |[StringBuilder Sınıfını Kullanma](../../../standard/base-types/stringbuilder.md)|Oluşturup kullanarak dinamik dize nesneleri değiştirmek açıklar <xref:System.Text.StringBuilder> sınıfı.|  
 |[LINQ ve Dizeler](../../../csharp/programming-guide/concepts/linq/linq-and-strings.md)|LINQ sorgularını kullanarak çeşitli dize işlemlerini gerçekleştirme hakkında bilgi sağlar.|  

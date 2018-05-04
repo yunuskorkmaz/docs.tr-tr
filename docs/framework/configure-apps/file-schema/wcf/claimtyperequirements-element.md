@@ -1,24 +1,12 @@
 ---
-title: "&lt;claimTypeRequirements&gt; öğesi"
-ms.custom: 
+title: '&lt;claimTypeRequirements&gt; öğesi'
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: a26efe73-4bad-4731-8cad-27f00d54354b
-caps.latest.revision: "6"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: ea3b62620788d108f9b2a35c94dab8ddc6463ada
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 3a8bacf4dad2140e3d162cca89c6bd3ecf54b41f
+ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="ltclaimtyperequirementsgt-element"></a>&lt;claimTypeRequirements&gt; öğesi
 Gerekli talep türleri koleksiyonunu belirtir.  

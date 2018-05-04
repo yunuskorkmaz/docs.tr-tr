@@ -1,13 +1,6 @@
 ---
-title: "&lt;Proxy&gt; öğesi (ağ ayarları)"
-ms.custom: 
+title: '&lt;Proxy&gt; öğesi (ağ ayarları)'
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 f1_keywords:
 - http://schemas.microsoft.com/.NetConfiguration/v2.0#configuration/system.net/defaultProxy/proxy
 - http://schemas.microsoft.com/.NetConfiguration/v2.0#proxy
@@ -15,22 +8,20 @@ helpviewer_keywords:
 - <proxy> element
 - proxy element
 ms.assetid: 37a548d8-fade-4ac5-82ec-b49b6c6cb22a
-caps.latest.revision: "20"
 author: mcleblanc
 ms.author: markl
 manager: markl
-ms.workload: dotnet
-ms.openlocfilehash: b0b397e66e0f73d10f482bc9151a6fbacf3e774d
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: b5ae716994f9b8222a633699367c94480179c97b
+ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="ltproxygt-element-network-settings"></a>&lt;Proxy&gt; öğesi (ağ ayarları)
 Bir proxy sunucu tanımlar.  
   
  \<Yapılandırma >  
-\<System.NET >  
+\<system.net>  
 \<defaultProxy >  
 \<Proxy >  
   
@@ -54,7 +45,7 @@ Bir proxy sunucu tanımlar.
 |**Özniteliği**|**Açıklama**|  
 |-------------------|---------------------|  
 |`autoDetect`|Proxy otomatik olarak algılanır olup olmadığını belirtir. Varsayılan değer `unspecified` şeklindedir.|  
-|`bypassonlocal`|Proxy için yerel kaynak atlanır olup olmadığını belirtir. Yerel kaynaklar yerel sunucunun (http://localhost, http://loopback veya http://127.0.0.1) ve bir süre (http://webserver) olmadan bir URI'yı içerir. Varsayılan değer `unspecified` şeklindedir.|  
+|`bypassonlocal`|Proxy için yerel kaynak atlanır olup olmadığını belirtir. Yerel kaynaklar dahil yerel sunucuyu (http://localhost, http://loopback, veya http://127.0.0.1) ve bir nokta olmadan bir URI (http://webserver). Varsayılan değer `unspecified` şeklindedir.|  
 |`proxyaddress`|Proxy kullanmak için URI belirtir.|  
 |`scriptLocation`|Yapılandırma komut dosyası konumunu belirtir.|  
 |`usesystemdefault`|Internet Explorer proxy ayarlarının kullanılıp kullanılmayacağını belirtir. Varsa kümesine `true`, sonraki öznitelikleri Internet Explorer proxy ayarları geçersiz kılar. Varsayılan değer `unspecified` şeklindedir.|  

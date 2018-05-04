@@ -1,31 +1,19 @@
 ---
-title: '&lt;netMsmqBinding&gt;'
-ms.custom: 
+title: '&lt;NetMsmqBinding&gt;'
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: a68b44d7-7799-43a3-9e63-f07c782810a6
-caps.latest.revision: "35"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: e8f18988568d9b634b3ae5ec92d746c08ff00e77
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.openlocfilehash: d4d28a799acecd335d8155a7ae67b6365b3f0023
+ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 05/03/2018
 ---
-# <a name="ltnetmsmqbindinggt"></a>&lt;netMsmqBinding&gt;
+# <a name="ltnetmsmqbindinggt"></a>&lt;NetMsmqBinding&gt;
 Makineler arası iletişim için uygun bir sıralı bağlama tanımlar.  
   
  \<system.ServiceModel>  
 \<bağlamaları >  
-\<netMsmqBinding>  
+\<netMsmqBinding >  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -90,7 +78,7 @@ Makineler arası iletişim için uygun bir sıralı bağlama tanımlar.
 |`retryCycleDelay`|Yeniden deneme arasındaki gecikme süresini belirten bir TimeSpan değeri hemen teslim edilemeyen bir ileti teslim çalışılırken geçiş yapar. En düşük bekleyin yalnızca zaman gerçek bekleme süresi uzun olabileceğinden değeri tanımlar. Varsayılan değer 00:10: 00'dır. Daha fazla bilgi için bkz. <xref:System.ServiceModel.MsmqBindingBase.RetryCycleDelay%2A>.|  
 |`sendTimeout`|A <xref:System.TimeSpan> bir gönderme işleminin tamamlanması için sağlanan zaman aralığı belirten değer. Bu değer sıfırdan büyük veya eşit olmalıdır <xref:System.TimeSpan.Zero>. Varsayılan değer 00:01:00 ' dir.|  
 |`timeToLive`|Ne kadar süreyle iletileri belirten bir TimeSpan değeri geçerli süresi ve teslim edilemeyen kuyruğuna önce. 1.00:00:00 varsayılandır.<br /><br /> Bu öznitelik, alıcı uygulamalar tarafından işlenmeden önce zamana duyarlı iletileri eski hale gelmediğinden emin olmak için ayarlanır. Belirtilen zaman aralığı içinde alıcı uygulama tarafından tüketilmeyen bir kuyruktaki ileti süresinin kabul edilir. Süresi dolan iletileri sahipsiz sıra adı verilen özel kuyruğuna gönderilir. Sahipsiz Sıra konumu ile ayarlanır `DeadLetterQueue` uygun varsayılana göre sağlandığına üzerinde veya öznitelik.|  
-|`usingActiveDirectory`|Active Directory kullanarak sıra adreslerini dönüştürülmesi gerekiyorsa belirten bir Boole değeri.<br /><br /> MSMQ sıra adreslerini yol adları veya doğrudan biçim adları oluşabilir. Bir doğrudan biçim adıyla MSMQ DNS, NetBIOS veya IP kullanarak bilgisayar adını çözümler. Bir yol adı ile MSMQ Active Directory kullanarak bilgisayar adını çözümler.<br /><br /> Varsayılan olarak, [!INCLUDE[indigo1](../../../../../includes/indigo1-md.md)] sıraya alınan aktarım, doğrudan biçim adına bir ileti sırası URI'sini dönüştürür. Ayarlayarak `UseActiveDirectory` özelliğinin true, bir uygulama belirtebilirsiniz sıraya alınan aktarım Active Directory yerine DNS, NetBIOS veya IP kullanarak bilgisayar adını çözümlenmelidir.|  
+|`usingActiveDirectory`|Active Directory kullanarak sıra adreslerini dönüştürülmesi gerekiyorsa belirten bir Boole değeri.<br /><br /> MSMQ sıra adreslerini yol adları veya doğrudan biçim adları oluşabilir. Bir doğrudan biçim adıyla MSMQ DNS, NetBIOS veya IP kullanarak bilgisayar adını çözümler. Bir yol adı ile MSMQ Active Directory kullanarak bilgisayar adını çözümler.<br /><br /> Varsayılan olarak, Windows Communication Foundation (WCF) aktarım dönüştürür doğrudan biçim adını ileti kuyruğuna URI'sini sıraya alındı. Ayarlayarak `UseActiveDirectory` özelliğinin true, bir uygulama belirtebilirsiniz sıraya alınan aktarım Active Directory yerine DNS, NetBIOS veya IP kullanarak bilgisayar adını çözümlenmelidir.|  
 |`useMsmqTracing`|Bu bağlama tarafından işlenen iletileri olup olmadığını belirten bir Boole değeri izlenen. Varsayılan, `false` değeridir. İzleme etkinleştirildiğinde Raporu iletilerini oluşturulur ve ileti ayrıldığında ya da bir Message Queuing bilgisayar ulaştığında her zaman rapor sırasına gönderilir.|  
 |`useSourceJournal`|Bu bağlama tarafından işlenen iletilerin kopyalarını belirten bir Boole değeri kaynak günlüğünde depolanması gerekir. Varsayılan, `false` değeridir.<br /><br /> Bilgisayarın giden sırasının bıraktıysanız iletileri kaydını tutmak istediğiniz sıraya alınan uygulamaları iletileri günlük kuyruğuna kopyalayabilirsiniz. Giden sırasının bir ileti bırakır ve ileti hedef bilgisayarda alındı bir bildirim alındıktan sonra iletinin bir kopyasını gönderen bilgisayarın sistem günlük sırasındaki tutulur.|  
   
@@ -98,7 +86,7 @@ Makineler arası iletişim için uygun bir sıralı bağlama tanımlar.
   
 |Öğe|Açıklama|  
 |-------------|-----------------|  
-|[\<readerQuotas>](http://msdn.microsoft.com/library/3e5e42ff-cef8-478f-bf14-034449239bfd)|Bu bağlama ile yapılandırılan uç noktaları tarafından işlenen SOAP iletilerine karmaşıklığını kısıtlamalar tanımlar. Bu öğe türünde <xref:System.ServiceModel.Configuration.XmlDictionaryReaderQuotasElement>.|  
+|[\<readerQuotas >](http://msdn.microsoft.com/library/3e5e42ff-cef8-478f-bf14-034449239bfd)|Bu bağlama ile yapılandırılan uç noktaları tarafından işlenen SOAP iletilerine karmaşıklığını kısıtlamalar tanımlar. Bu öğe türünde <xref:System.ServiceModel.Configuration.XmlDictionaryReaderQuotasElement>.|  
 |[\<Güvenlik >](../../../../../docs/framework/configure-apps/file-schema/wcf/security-of-netmsmqbinding.md)|Bağlama için güvenlik ayarlarını tanımlar. Bu öğe türünde <xref:System.ServiceModel.Configuration.NetMsmqSecurityElement>.|  
   
 ### <a name="parent-elements"></a>Üst Öğeler  

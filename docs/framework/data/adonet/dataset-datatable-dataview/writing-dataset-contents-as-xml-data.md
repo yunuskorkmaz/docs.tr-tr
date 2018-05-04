@@ -1,27 +1,15 @@
 ---
-title: "XML verileri olarak DataSet içeriğini yazma"
-ms.custom: 
+title: XML verileri olarak DataSet içeriğini yazma
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-ado
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
 ms.assetid: fd15f8a5-3b4c-46d0-a561-4559ab2a4705
-caps.latest.revision: "5"
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
-ms.workload: dotnet
-ms.openlocfilehash: 9b1250d616ad5835fccd1a3acbf0b8a759c34181
-ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
+ms.openlocfilehash: 44afa79d715ef62bcbd1c242a533876d911345c8
+ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="writing-dataset-contents-as-xml-data"></a>XML verileri olarak DataSet içeriğini yazma
 ADO.NET bir XML temsili yazabilen bir <xref:System.Data.DataSet>, ile veya olmadan şemasına. Şema bilgileri XML ile birlikte satır içi ise XML Şeması Tanım Dili (XSD) kullanılarak yazılır. Tablo tanımları bir şema içeriyor <xref:System.Data.DataSet> ilişki ve kısıtlama tanımları yanı sıra.  
@@ -82,7 +70,7 @@ xmlSW.Close();
 |**Öğesi**|Bu varsayılandır. Sütun, burada ColumnName öğenin adını ve sütun içeriğini öğesinin metin olarak yazılan bir XML öğesi olarak yazılır. Örneğin:<br /><br /> `<ColumnName>Column Contents</ColumnName>`|  
 |**Özniteliği**|Sütun XML öğesi burada ColumnName özniteliğin adını ve sütun içeriğini öznitelik değeri olarak yazılan geçerli satır için XML özniteliği olarak yazılır. Örneğin:<br /><br /> `<RowElement ColumnName="Column Contents" />`|  
 |**SimpleContent**|Sütunun içeriğine metin XML öğesi geçerli satır için olarak yazılır. Örneğin:<br /><br /> `<RowElement>Column Contents</RowElement>`<br /><br /> Unutmayın **SimpleContent** sahip bir tablo için bir sütun ayarlanamaz **öğesi** sütunları veya iç içe ilişkiler.|  
-|**Hidden**|Sütun XML çıktısında yazılmaz.|  
+|**Gizli**|Sütun XML çıktısında yazılmaz.|  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
  [DataSet içinde XML kullanma](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/using-xml-in-a-dataset.md)  

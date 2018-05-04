@@ -1,31 +1,19 @@
 ---
 title: '&lt;customBinding&gt;'
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 9da4f960-f64e-4d8a-894d-2b09eba5ce4b
-caps.latest.revision: "24"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: e5a95d677588beaa41e94f12550ba8647202ffe3
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.openlocfilehash: 5d423a29430284c904bcfe8eb11ec470a62ecf57
+ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="ltcustombindinggt"></a>&lt;customBinding&gt;
 Kullanıcı için Mesajlaşma yığın üzerinde tam denetim sağlar.  
   
  \<system.serviceModel>  
 \<bağlamaları >  
-\<customBinding>  
+\<customBinding >  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -203,12 +191,12 @@ Kullanıcı için Mesajlaşma yığın üzerinde tam denetim sağlar.
 |Öğe|Açıklama|  
 |-------------|-----------------|  
 |[\<compositeDuplex>](../../../../../docs/framework/configure-apps/file-schema/wcf/compositeduplex.md)|İki yönlü özel bağlama Mesajlaşma belirtir. Çift yönlü iletişimi yerel olarak, izin verme aktarımları ile Örneğin, HTTP kullanılır. TCP, bunun aksine, yerel olarak çift yönlü iletişimi sağlar ve bu bağlama öğesi iletileri bir istemciye geri gönderilecek hizmeti kullanımını gerektirmez.<br /><br /> İstemci hizmetinin başvurun ve bağlantı kurmak bir adres kullanıma gerekir. Bu istemci adresi tarafından sağlanan `ClientBaseAddress` özniteliği.<br /><br /> Bu öğe türünde <xref:System.ServiceModel.Configuration.CompositeDuplexElement>.|  
-|[\<pnrpPeerResolver>](../../../../../docs/framework/configure-apps/file-schema/wcf/pnrppeerresolver.md)|Eş Adı Çözümleme Protokolü (PNRP) eş ad çözümleyici belirtir. Bu öğe türünde <xref:System.ServiceModel.Configuration.PnrpPeerResolverElement>.|  
-|[\<reliableSession>](../../../../../docs/framework/configure-apps/file-schema/wcf/reliablesession.md)|WS güvenilir Mesajlaşma ayarını belirtir. Bu öğe için özel bağlama eklendiğinde, sonuçta elde edilen kanal tam olarak destekleyebilir-kere teslim Güvenceleri. Bu öğe türünde <xref:System.ServiceModel.Configuration.ReliableSessionElement>.|  
+|[\<pnrpPeerResolver >](../../../../../docs/framework/configure-apps/file-schema/wcf/pnrppeerresolver.md)|Eş Adı Çözümleme Protokolü (PNRP) eş ad çözümleyici belirtir. Bu öğe türünde <xref:System.ServiceModel.Configuration.PnrpPeerResolverElement>.|  
+|[\<reliableSession >](../../../../../docs/framework/configure-apps/file-schema/wcf/reliablesession.md)|WS güvenilir Mesajlaşma ayarını belirtir. Bu öğe için özel bağlama eklendiğinde, sonuçta elde edilen kanal tam olarak destekleyebilir-kere teslim Güvenceleri. Bu öğe türünde <xref:System.ServiceModel.Configuration.ReliableSessionElement>.|  
 |[\<Güvenlik >](../../../../../docs/framework/configure-apps/file-schema/wcf/security-of-custombinding.md)|Özel bağlama güvenlik seçeneklerini belirtir. Bu öğe türünde <xref:System.ServiceModel.Configuration.SecurityElement>.|  
-|[\<sslStreamSecurity>](../../../../../docs/framework/configure-apps/file-schema/wcf/sslstreamsecurity.md)|Bir SSL akış bağlama için güvenlik ayarlarını belirtir. Bu öğe türünde <xref:System.ServiceModel.Configuration.SslStreamSecurityElement>.|  
-|[\<transactionFlow>](../../../../../docs/framework/configure-apps/file-schema/wcf/transactionflow.md)|Bağlama tarafından kullanılacak protokolü ve işlem akışını desteklediğini belirtir `transactionProtocol` özniteliği. Bu öğe türünde <xref:System.ServiceModel.Configuration.TransactionFlowElement>.|  
-|[\<windowsStreamSecurity>](../../../../../docs/framework/configure-apps/file-schema/wcf/windowsstreamsecurity.md)|Özel bağlama güvenliği akış seçeneklerini belirtir. Bu öğe türünde <xref:System.ServiceModel.Configuration.WindowsStreamSecurityElement>.|  
+|[\<sslStreamSecurity >](../../../../../docs/framework/configure-apps/file-schema/wcf/sslstreamsecurity.md)|Bir SSL akış bağlama için güvenlik ayarlarını belirtir. Bu öğe türünde <xref:System.ServiceModel.Configuration.SslStreamSecurityElement>.|  
+|[\<transactionFlow >](../../../../../docs/framework/configure-apps/file-schema/wcf/transactionflow.md)|Bağlama tarafından kullanılacak protokolü ve işlem akışını desteklediğini belirtir `transactionProtocol` özniteliği. Bu öğe türünde <xref:System.ServiceModel.Configuration.TransactionFlowElement>.|  
+|[\<windowsStreamSecurity >](../../../../../docs/framework/configure-apps/file-schema/wcf/windowsstreamsecurity.md)|Özel bağlama güvenliği akış seçeneklerini belirtir. Bu öğe türünde <xref:System.ServiceModel.Configuration.WindowsStreamSecurityElement>.|  
   
 ### <a name="parent-elements"></a>Üst Öğeler  
   
@@ -241,7 +229,7 @@ Kullanıcı için Mesajlaşma yığın üzerinde tam denetim sağlar.
   
 -   Sonraki isteğe bağlı olduğu <xref:System.ServiceModel.Channels.ReliableSessionBindingElement> bir oturum ve WS-ReliableMessaging belirtiminde tanımlanan mekanizması sıralama sağlar. Bir oturum bu kavramı SOAP ve aktarım aracılar arası.  
   
--   Sonraki yetkilendirme, kimlik doğrulama, koruma ve gizliliği gibi güvenlik özellikleri sağlayan bir isteğe bağlı güvenlik bağlama öğedir. Aşağıdaki güvenlik bağlama öğeleri tarafından sağlanan [!INCLUDE[indigo1](../../../../../includes/indigo1-md.md)]:  
+-   Sonraki yetkilendirme, kimlik doğrulama, koruma ve gizliliği gibi güvenlik özellikleri sağlayan bir isteğe bağlı güvenlik bağlama öğedir. Aşağıdaki güvenlik bağlama öğeleri Windows Communication Foundation (WCF) tarafından sağlanır:  
   
     -   <xref:System.ServiceModel.Channels.SecurityBindingElement>  
   
@@ -271,7 +259,7 @@ Kullanıcı için Mesajlaşma yığın üzerinde tam denetim sağlar.
   
     -   <xref:System.ServiceModel.Channels.MtomMessageEncodingBindingElement>  
   
--   Pencerenin alt gerekli aktarım öğedir. Kendi aktarım kullanın ya da bağlama öğeleri tarafından sağlanan aktarım birini kullanın [!INCLUDE[indigo1](../../../../../includes/indigo1-md.md)]:  
+-   Pencerenin alt gerekli aktarım öğedir. Kendi aktarım kullanın veya Windows Communication Foundation (WCF) tarafından sağlanan öğelere bağlama taşıma birini kullanın:  
   
     -   <xref:System.ServiceModel.Channels.TcpTransportBindingElement>  
   
@@ -296,7 +284,7 @@ Kullanıcı için Mesajlaşma yığın üzerinde tam denetim sağlar.
 |Güvenlik|Simetrik, asimetrik, aktarım düzeyinde|Hayır|  
 |Şeklini değiştirme|<xref:System.ServiceModel.Channels.CompositeDuplexBindingElement>|Hayır|  
 |Aktarım yükseltmeleri|SSL stream, Windows stream, eş Çözümleyicisi|Hayır|  
-|Encoding|İkili, MTOM, özel bir metin|Evet|  
+|Kodlama|İkili, MTOM, özel bir metin|Evet|  
 |Taşıma|MSMQ, özel TCP ve adlandırılmış kanallar, HTTP, HTTPS özellikleri|Evet|  
   
  Ayrıca, kendi bağlama öğeleri tanımlamak ve herhangi bir önceki tanımlı katmanlar arasında ekleyin.  
@@ -314,7 +302,7 @@ Kullanıcı için Mesajlaşma yığın üzerinde tam denetim sağlar.
  [Bağlamalar](../../../../../docs/framework/wcf/bindings.md)  
  [Bağlamaları Genişletme](../../../../../docs/framework/wcf/extending/extending-bindings.md)  
  [Özel Bağlamalar](../../../../../docs/framework/wcf/extending/custom-bindings.md)  
- [customBinding Element](../../../../../docs/framework/configure-apps/file-schema/wcf/custombinding.md)  
+ [customBinding öğesi](../../../../../docs/framework/configure-apps/file-schema/wcf/custombinding.md)  
  [Bağlamalar](../../../../../docs/framework/wcf/bindings.md)  
  [Sistem Tarafından Sağlanan Bağlamaları Yapılandırma](../../../../../docs/framework/wcf/feature-details/configuring-system-provided-bindings.md)  
  [Windows Communication Foundation Hizmetleri ve istemcileri yapılandırmak için bağlamaları kullanma](http://msdn.microsoft.com/library/bd8b277b-932f-472f-a42a-b02bb5257dfb)

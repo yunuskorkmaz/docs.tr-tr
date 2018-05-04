@@ -1,33 +1,21 @@
 ---
 title: WCF &lt;cancelRequestedQuery&gt;
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: b690d870-02eb-4c56-8bc3-e5ca99d7097b
-caps.latest.revision: "3"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 2af49aab76e82a97aeee92b4799b91011f70c509
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 41964561a460babc41de755e213971593047b707
+ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="ltcancelrequestedquerygt-of-wcf"></a>WCF &lt;cancelRequestedQuery&gt;
 Üst etkinlik göre alt etkinlik iptal etme istekleri izlemek için kullanılan bir sorgu temsil eder. Sorgu isteği kaydı nesneleri iptal etmek için abone olmak izleme katılımcı için gereklidir.  
   
  Profil sorguları izleme ile ilgili daha fazla bilgi için bkz: [izleme profilleri](../../../../../docs/framework/windows-workflow-foundation/tracking-profiles.md).  
   
- \<system.serviceModel >  
+ \<system.serviceModel>  
 \<İzleme >  
-\<trackingProfile >  
+\<trackingProfile>  
 \<İş akışı >  
 \<cancelRequestedQueries >  
 \<cancelRequestedQuery >  

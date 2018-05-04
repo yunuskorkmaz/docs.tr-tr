@@ -1,13 +1,6 @@
 ---
-title: "&lt;ekleme&gt; öğesi authenticationModules (ağ ayarları) için"
-ms.custom: 
+title: '&lt;ekleme&gt; öğesi authenticationModules (ağ ayarları) için'
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 f1_keywords:
 - http://schemas.microsoft.com/.NetConfiguration/v2.0#add
 - http://schemas.microsoft.com/.NetConfiguration/v2.0#configuration/system.net/authenticationModules/add
@@ -17,22 +10,20 @@ helpviewer_keywords:
 - <authenticationModules>, add element
 - <add> element, authenticationModules
 ms.assetid: 333c5fb0-a2ab-4db8-8531-a7fe37bb9b5b
-caps.latest.revision: "15"
 author: mcleblanc
 ms.author: markl
 manager: markl
-ms.workload: dotnet
-ms.openlocfilehash: 8cba723d26ea0965ca3a55a5540e35b2e2297248
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 471e36bb584164b851e7a06c0e682ba9872f7910
+ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="ltaddgt-element-for-authenticationmodules-network-settings"></a>&lt;ekleme&gt; öğesi authenticationModules (ağ ayarları) için
 Bir kimlik doğrulama modülü uygulamaya ekler.  
   
  \<Yapılandırma >  
-\<System.NET >  
+\<system.net>  
 \<authenticationModules >  
 \<ekleme >  
   

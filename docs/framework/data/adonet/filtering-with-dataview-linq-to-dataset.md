@@ -1,30 +1,18 @@
 ---
 title: DataView (LINQ-DataSet) ile filtreleme
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-ado
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
 ms.assetid: 5632d74a-ff53-4ea7-9fe7-4a148eeb1c68
-caps.latest.revision: "2"
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
-ms.workload: dotnet
-ms.openlocfilehash: 2f1eb878bcc38d8bbeed42638cc5ccda230f60f1
-ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
+ms.openlocfilehash: b457eb925f636656455ef8f3f02f9d2a78558325
+ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="filtering-with-dataview-linq-to-dataset"></a>DataView (LINQ-DataSet) ile filtreleme
-Belirli bir ölçüte kullanarak veri filtreleme ve bir kullanıcı Arabirimi denetim üzerinden bir istemciye veri sunmak olanağı veri bağlama önemli bir yönüdür. <xref:System.Data.DataView>verileri filtreleme ve toplantı belirli filtre ölçütlerini veri satır kümelerine dönmek için çeşitli yöntemler sağlar. Dize tabanlı yanı sıra filtreleme yetenekleri <xref:System.Data.DataView> kullanma olanağı da sağlar [!INCLUDE[vbteclinq](../../../../includes/vbteclinq-md.md)] ifadeleri filtre ölçütlerini için. [!INCLUDE[vbteclinq](../../../../includes/vbteclinq-md.md)]ifadeler dize tabanlıdır filtreleme daha çok daha karmaşık ve güçlü filtreleme işlemleri için izin verin.  
+Belirli bir ölçüte kullanarak veri filtreleme ve bir kullanıcı Arabirimi denetim üzerinden bir istemciye veri sunmak olanağı veri bağlama önemli bir yönüdür. <xref:System.Data.DataView> verileri filtreleme ve toplantı belirli filtre ölçütlerini veri satır kümelerine dönmek için çeşitli yöntemler sağlar. Dize tabanlı yanı sıra filtreleme yetenekleri <xref:System.Data.DataView> kullanma olanağı da sağlar [!INCLUDE[vbteclinq](../../../../includes/vbteclinq-md.md)] ifadeleri filtre ölçütlerini için. [!INCLUDE[vbteclinq](../../../../includes/vbteclinq-md.md)] ifadeler dize tabanlıdır filtreleme daha çok daha karmaşık ve güçlü filtreleme işlemleri için izin verin.  
   
  İki yolla kullanarak filtre veri için bir <xref:System.Data.DataView>:  
   
@@ -64,7 +52,7 @@ Belirli bir ölçüte kullanarak veri filtreleme ve bir kullanıcı Arabirimi de
  [!code-csharp[DP DataView Samples#LDVSoundExFilter](../../../../samples/snippets/csharp/VS_Snippets_ADO.NET/DP DataView Samples/CS/Form1.cs#ldvsoundexfilter)]
  [!code-vb[DP DataView Samples#LDVSoundExFilter](../../../../samples/snippets/visualbasic/VS_Snippets_ADO.NET/DP DataView Samples/VB/Form1.vb#ldvsoundexfilter)]  
   
- SoundEx İngilizce, başlangıçta ABD ticaret geliştirilmiş belirgin olarak adları sesle, dizin oluşturma işlemi için kullanılan bir ses algoritmasıdır Census Bureau. SoundEx yöntemi bir İngilizce harfini üç numaralarına göre izleyen oluşan bir ad dört karakter kodunu döndürür. Harfi adının ilk harfi ve sayıları adında kalan ünsüzler kodlayın. Benzer görünen adları aynı SoundEx kodu paylaşır. Önceki örnekte SoundEx yönteminde kullanılan SoundEx uygulaması burada gösterilir:  
+ SoundEx İngilizce, başlangıçta ABD ticaret geliştirilmiş belirgin olarak adları sesle, dizin oluşturma işlemi için kullanılan bir ses algoritmasıdır Census kuruluşu. SoundEx yöntemi bir İngilizce harfini üç numaralarına göre izleyen oluşan bir ad dört karakter kodunu döndürür. Harfi adının ilk harfi ve sayıları adında kalan ünsüzler kodlayın. Benzer görünen adları aynı SoundEx kodu paylaşır. Önceki örnekte SoundEx yönteminde kullanılan SoundEx uygulaması burada gösterilir:  
   
  [!code-csharp[DP DataView Samples#SoundEx](../../../../samples/snippets/csharp/VS_Snippets_ADO.NET/DP DataView Samples/CS/Form1.cs#soundex)]
  [!code-vb[DP DataView Samples#SoundEx](../../../../samples/snippets/visualbasic/VS_Snippets_ADO.NET/DP DataView Samples/VB/Form1.vb#soundex)]  

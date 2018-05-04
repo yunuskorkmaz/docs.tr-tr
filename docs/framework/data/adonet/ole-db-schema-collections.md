@@ -1,24 +1,12 @@
 ---
-title: "OLE DB şeması koleksiyonları"
-ms.custom: 
+title: OLE DB şeması koleksiyonları
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-ado
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 6380c36b-658e-4d67-91e8-7131ef4a7c2c
-caps.latest.revision: "3"
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
-ms.workload: dotnet
-ms.openlocfilehash: 33e794559abd7f619f7431683f06e59705b57d41
-ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
+ms.openlocfilehash: f1cb5e1fe967088b44fa4045dfe50c1c57d963eb
+ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="ole-db-schema-collections"></a>OLE DB şeması koleksiyonları
 Bu bölümde, Microsoft SQL Server, Oracle ve Microsoft Jet için OLE DB sağlayıcıları şema koleksiyonu desteği açıklanmaktadır.  
@@ -110,7 +98,7 @@ Bu bölümde, Microsoft SQL Server, Oracle ve Microsoft Jet için OLE DB sağlay
 |PROCEDURE_CATALOG|Dize|  
 |PROCEDURE_SCHEMA|Dize|  
 |PROCEDURE_NAME|Dize|  
-|PARAMETER_NAME|Dize|  
+|PARAMETRE_ADÝ|Dize|  
 |ORDINAL_POSITION|Int32|  
 |PARAMETER_TYPE|Int32|  
 |PARAMETER_HASDEFAULT|Boole değeri|  
@@ -143,7 +131,7 @@ Bu bölümde, Microsoft SQL Server, Oracle ve Microsoft Jet için OLE DB sağlay
 |INDEX_SCHEMA|Dize|  
 |INDEX_NAME|Dize|  
 |PRIMARY_KEY|Boole değeri|  
-|UNIQUE|Boole değeri|  
+|BENZERSİZ|Boole değeri|  
 |CLUSTERED|Boole değeri|  
 |TÜRÜ|Int32|  
 |FILL_FACTOR|Int32|  
@@ -162,7 +150,7 @@ Bu bölümde, Microsoft SQL Server, Oracle ve Microsoft Jet için OLE DB sağlay
 |FILTER_CONDITION|Dize|  
 |TÜMLEŞİK|Boole değeri|  
   
-## <a name="microsoft-oracle-ole-db-provider"></a>Microsoft Oracle OLE DB Provider  
+## <a name="microsoft-oracle-ole-db-provider"></a>Microsoft Oracle OLE DB sağlayıcısı  
  Microsoft Oracle OLE DB sürücü ortak şeması koleksiyonları ek olarak aşağıdaki belirli şeması koleksiyonları destekler:  
   
 -   tabloları  
@@ -259,7 +247,7 @@ Bu bölümde, Microsoft SQL Server, Oracle ve Microsoft Jet için OLE DB sağlay
 |NUMERIC_PRECISION|Int32|  
 |NUMERIC_SCALE|Int16|  
 |AÇIKLAMA|Dize|  
-|OVERLOAD|Int16|  
+|AŞIRI YÜKLEME|Int16|  
   
 ### <a name="views"></a>Görünümler  
   
@@ -286,7 +274,7 @@ Bu bölümde, Microsoft SQL Server, Oracle ve Microsoft Jet için OLE DB sağlay
 |INDEX_SCHEMA|Dize|  
 |INDEX_NAME|Dize|  
 |PRIMARY_KEY|Boole değeri|  
-|UNIQUE|Boole değeri|  
+|BENZERSİZ|Boole değeri|  
 |CLUSTERED|Boole değeri|  
 |TÜRÜ|Int32|  
 |FILL_FACTOR|Int32|  
@@ -403,7 +391,7 @@ Bu bölümde, Microsoft SQL Server, Oracle ve Microsoft Jet için OLE DB sağlay
 |INDEX_SCHEMA|Dize|  
 |INDEX_NAME|Dize|  
 |PRIMARY_KEY|Boole değeri|  
-|UNIQUE|Boole değeri|  
+|BENZERSİZ|Boole değeri|  
 |CLUSTERED|Boole değeri|  
 |TÜRÜ|Int32|  
 |FILL_FACTOR|Int32|  

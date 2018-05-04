@@ -1,29 +1,17 @@
 ---
 title: '&lt;namespaceTable&gt; &lt;ekleme&gt;'
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: cf7b5b75-63bd-49a6-abac-4bfdab377e36
-caps.latest.revision: "2"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 394657abcebb42192fb7a8b57b0402bcacf37693
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 5ae672f12a2ef58efc9738624c113855e59e02b6
+ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="ltaddgt-of-ltnamespacetablegt"></a>&lt;namespaceTable&gt; &lt;ekleme&gt;
 Ardından yönlendirme XPath filtreleri kullanılabilir eşleme öneki için bir ad alanı içeren bir yapılandırma öğesi temsil eder.  
   
- \<system.serviceModel >  
+ \<system.serviceModel>  
 \<Yönlendirme >  
 \<namespaceTable >  
 \<ekleme >  

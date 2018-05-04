@@ -1,30 +1,16 @@
 ---
-title: '&lt;msmqIntegrationBinding&gt;'
-ms.custom: 
+title: '&lt;MsmqIntegrationBinding&gt;'
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - msmqIntegrationBinding Element
 ms.assetid: edf277f3-e3bf-4ed8-9f55-83b5788430a7
-caps.latest.revision: 
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 0715952077db755386a0381f68ccc6e33705a031
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.openlocfilehash: bae6b4e6bd11074b47c55bf310215f296394c90d
+ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 05/03/2018
 ---
-# <a name="ltmsmqintegrationbindinggt"></a>&lt;msmqIntegrationBinding&gt;
+# <a name="ltmsmqintegrationbindinggt"></a>&lt;MsmqIntegrationBinding&gt;
 MSMQ aracılığıyla yönlendirme ileti kuyruğa alma desteği sağlayan bir bağlama tanımlar.  
   
  \<system.ServiceModel>  
@@ -81,7 +67,7 @@ msmqIntegrationBinding
 |retryCycleDelay|Yeniden deneme arasındaki gecikme süresini belirten bir TimeSpan değeri hemen teslim edilemeyen bir ileti teslim çalışılırken geçiş yapar. En düşük bekleyin yalnızca zaman gerçek bekleme süresi uzun olabileceğinden değeri tanımlar. Varsayılan değer 00:30: 00'dır. Daha fazla bilgi için bkz. <xref:System.ServiceModel.MsmqBindingBase.RetryCycleDelay%2A>.|  
 |sendTimeout|A <xref:System.TimeSpan> bir gönderme işleminin tamamlanması için sağlanan zaman aralığı belirten değer. Bu değer sıfırdan büyük veya eşit olmalıdır <xref:System.TimeSpan.Zero>. Varsayılan değer 00:01:00 ' dir.|  
 |serializationFormat|İleti gövdesini serileştirmek için kullanılan biçim tanımlar. Bu öznitelik türünde <xref:System.ServiceModel.MsmqIntegration.MsmqMessageSerializationFormat>.|  
-|timeToLive|Ne kadar süreyle iletileri belirten bir TimeSpan değeri geçerli süresi ve teslim edilemeyen kuyruğuna önce. 1.00:00:00 varsayılandır.<br /><br /> Bu öznitelik, alıcı uygulamalar tarafından işlenmeden önce zamana duyarlı iletileri eski hale gelmediğinden emin olmak için ayarlanır. Belirtilen zaman aralığı içinde alıcı uygulama tarafından tüketilmeyen bir kuyruktaki ileti süresinin kabul edilir. Süresi dolan iletileri sahipsiz sıra adı verilen özel kuyruğuna gönderilir. Sahipsiz Sıra konumu ile ayarlanır `DeadLetterQueue` uygun varsayılana göre sağlandığına üzerinde veya öznitelik.|  
+|TimeToLive|Ne kadar süreyle iletileri belirten bir TimeSpan değeri geçerli süresi ve teslim edilemeyen kuyruğuna önce. 1.00:00:00 varsayılandır.<br /><br /> Bu öznitelik, alıcı uygulamalar tarafından işlenmeden önce zamana duyarlı iletileri eski hale gelmediğinden emin olmak için ayarlanır. Belirtilen zaman aralığı içinde alıcı uygulama tarafından tüketilmeyen bir kuyruktaki ileti süresinin kabul edilir. Süresi dolan iletileri sahipsiz sıra adı verilen özel kuyruğuna gönderilir. Sahipsiz Sıra konumu ile ayarlanır `DeadLetterQueue` uygun varsayılana göre sağlandığına üzerinde veya öznitelik.|  
 |useMsmqTracing|Bu bağlama tarafından işlenen iletileri olup olmadığını belirten bir Boole değeri izlenen. Varsayılan, `false` değeridir. İzleme etkinleştirildiğinde Raporu iletilerini oluşturulur ve ileti ayrıldığında ya da bir Message Queuing bilgisayar ulaştığında her zaman rapor sırasına gönderilir.|  
 |useSourceJournal|Bu bağlama tarafından işlenen iletilerin kopyalarını belirten bir Boole değeri kaynak günlüğünde depolanması gerekir. Varsayılan, `false` değeridir.<br /><br /> Bilgisayarın giden sırasının bıraktıysanız iletileri kaydını tutmak istediğiniz sıraya alınan uygulamaları iletileri günlük kuyruğuna kopyalayabilirsiniz. Giden sırasının bir ileti bırakır ve ileti hedef bilgisayarda alındı bir bildirim alındıktan sonra iletinin bir kopyasını gönderen bilgisayarın sistem günlük sırasındaki tutulur.|  
   

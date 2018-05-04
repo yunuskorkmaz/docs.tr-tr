@@ -1,27 +1,15 @@
 ---
-title: "Bir DataTable tablosundaki verileri görüntüleme"
-ms.custom: 
+title: Bir DataTable tablosundaki verileri görüntüleme
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-ado
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
 ms.assetid: 1d26e0fb-f6e0-4afa-9a9c-b8d55b8f20dc
-caps.latest.revision: "4"
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
-ms.workload: dotnet
-ms.openlocfilehash: 2576c95ad7739d28e2ca822fd13fb6f176900814
-ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
+ms.openlocfilehash: 5d39d2a856a40b5ea20832a544ede360313309d3
+ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="viewing-data-in-a-datatable"></a>Bir DataTable tablosundaki verileri görüntüleme
 İçeriğine erişmek için bir <xref:System.Data.DataTable> kullanarak **satırları** ve **sütunları** koleksiyonları **DataTable**. Aynı zamanda <xref:System.Data.DataTable.Select%2A> veri alt kümesi döndürülecek yöntemi bir **DataTable** arama ölçütleri gibi ölçütlere göre sıralama ve satır durumu. Ayrıca, kullanabileceğiniz <xref:System.Data.DataRowCollection.Find%2A> yöntemi **DataRowCollection** bir birincil anahtar değeri kullanarak belirli bir satır için arama yaparken.  
@@ -36,7 +24,7 @@ ms.lasthandoff: 01/17/2018
 |DataViewRowState değeri|Açıklama|  
 |----------------------------|-----------------|  
 |**CurrentRows**|Geçerli satır değişmeden, eklenen ve değiştirilen satırları dahil olmak üzere.|  
-|**Deleted**|Silinen satır.|  
+|**silindi**|Silinen satır.|  
 |**ModifiedCurrent**|Özgün veriler değiştirilmiş bir sürümünü olan bir geçerli sürümü. (Bkz **ModifiedOriginal**.)|  
 |**ModifiedOriginal**|Tüm değiştirilen satırları özgün sürümü. Geçerli sürümdür kullanılabilir kullanarak **ModifiedCurrent**.|  
 |**Eklenen**|Yeni bir satır.|  

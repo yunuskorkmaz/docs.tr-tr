@@ -2,8 +2,8 @@
 
 |   |   |
 |---|---|
-|Ayrıntılar|.NET 4.0, genel parametresini <code>T</code> , <code>ObjectContext.Translate</code> ve <code>ObjectContext.ExecuteStoreQuery</code> yöntemleri enum yüklenemedi. Bu senaryo artık desteklenmektedir.|
-|Öneri|Çeviri veya ExecuteStoreQuery .NET 4.0 enum türü üzerinde çağrıldı, '0' döndürüldü. Bu davranışı arzu olduysa, çağrıları sabiti 0 (veya bunu enum eşdeğeri) ile değiştirilmelidir.|
+|Ayrıntılar|.NET Framework 4.0, genel parametresini <code>T</code> , <code>ObjectContext.Translate</code> ve <code>ObjectContext.ExecuteStoreQuery</code> yöntemleri enum yüklenemedi. Bu senaryo artık desteklenmektedir.|
+|Öneri|.NET Framework 4. 0'ı enum türü üzerinde Çevir veya ExecuteStoreQuery çağrıldı, '0' döndürüldü. Bu davranışı arzu olduysa, çağrıları sabiti 0 (veya bunu enum eşdeğeri) ile değiştirilmelidir.|
 |Kapsam|Kenar|
 |Sürüm|4,5|
 |Tür|Çalışma zamanı|

@@ -1,28 +1,16 @@
 ---
-title: "&lt;yönlendirme&gt; &lt;filtreleri&gt;"
-ms.custom: 
+title: '&lt;yönlendirme&gt; &lt;filtreleri&gt;'
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 7993cf90-9afd-4c3c-9608-184d5da1105c
-caps.latest.revision: "3"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: b2687101aa868ae77ce0ae818afd9df906f8525c
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 9f0fa9bf51d264346738172f57a8efca7950fdb7
+ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="ltfiltersgt-of-ltroutinggt"></a>&lt;yönlendirme&gt; &lt;filtreleri&gt;
 
-Türünü belirleme yönlendirme bir filtre kümesi tanımlamak için yapılandırma bölümünü temsil eder [!INCLUDE[indigo1](../../../../../includes/indigo1-md.md)] <xref:System.ServiceModel.Dispatcher.MessageFilter> gelen iletileri hesaplanırken kullanılacak.
+Windows Communication Foundation (WCF) türü belirlenemiyor yönlendirme bir filtre kümesi tanımlamak için yapılandırma bölümünü temsil eder <xref:System.ServiceModel.Dispatcher.MessageFilter> gelen iletileri hesaplanırken kullanılacak.
 
 [**\<system.serviceModel >**](system-servicemodel.md)   
 &nbsp;&nbsp;[**\<Yönlendirme >**](routing.md)   
@@ -55,13 +43,13 @@ Yok.
 
 |     | Açıklama |
 | --- | ----------- |
-| [**\<Filtre >**](../../../../../docs/framework/configure-apps/file-schema/wcf/filter.md) | Türünü belirleyen bir yönlendirme filtre içeren [!INCLUDE[indigo1](../../../../../includes/indigo1-md.md)] <xref:System.ServiceModel.Dispatcher.MessageFilter> gelen iletileri hesaplanırken kullanılır. |
+| [**\<Filtre >**](../../../../../docs/framework/configure-apps/file-schema/wcf/filter.md) | Windows Communication Foundation (WCF) türünü belirleyen bir yönlendirme filtre içeren<xref:System.ServiceModel.Dispatcher.MessageFilter> gelen iletileri hesaplanırken kullanılır. |
 
 ### <a name="parent-elements"></a>Üst öğeler
 
 |     | Açıklama |
 | --- | ----------- |
-| [**\<Yönlendirme >**](../../../../../docs/framework/configure-apps/file-schema/wcf/routing.md) | Türünü belirleme yönlendirme bir filtre kümesi tanımlamak için yapılandırma bölümünü temsil eder [!INCLUDE[indigo1](../../../../../includes/indigo1-md.md)] <xref:System.ServiceModel.Dispatcher.MessageFilter> yönlendirme yanı sıra gelen iletileri değerlendirmek için ne zaman iletileri göndermek için hedef uç nokta tanımlayan tabloları yapılırken kullanılacak bir Filtre eşleşir. |
+| [**\<Yönlendirme >**](../../../../../docs/framework/configure-apps/file-schema/wcf/routing.md) | Windows Communication Foundation (WCF) türü belirlenemiyor yönlendirme bir filtre kümesi tanımlamak için yapılandırma bölümünü temsil eder<xref:System.ServiceModel.Dispatcher.MessageFilter> yönlendirme yanı sıra gelen iletileri değerlendirmek için hedef uç nokta tanımlayan tabloları yapılırken kullanılacak ne zaman bir filtre ile eşleşen için iletileri gönderir. |
 
 ## <a name="see-also"></a>Ayrıca bkz.
 

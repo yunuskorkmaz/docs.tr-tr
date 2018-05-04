@@ -1,27 +1,15 @@
 ---
-title: "Tanımlayıcılar (varlık SQL)"
-ms.custom: 
+title: Tanımlayıcılar (varlık SQL)
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-ado
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: d58a5edd-7b5c-48e1-b5d7-a326ff426aa4
-caps.latest.revision: "2"
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
-ms.workload: dotnet
-ms.openlocfilehash: 18bfb654a6f116f87ae7eeb6059fe994b9084c19
-ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
+ms.openlocfilehash: 55b9ac101c7849c5b348ba8e48c695c0fa328105
+ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="identifiers-entity-sql"></a>Tanımlayıcılar (varlık SQL)
-Tanımlayıcılar kullanılır [!INCLUDE[esql](../../../../../../includes/esql-md.md)] sorgu ifadesi diğer adlar, değişken başvuruları, nesneler, İşlevler ve benzeri özelliklerini temsil etmek için. [!INCLUDE[esql](../../../../../../includes/esql-md.md)]iki tür tanımlayıcıları sağlar: Basit tanımlayıcıları ve tırnak işaretli tanımlayıcılar.  
+Tanımlayıcılar kullanılır [!INCLUDE[esql](../../../../../../includes/esql-md.md)] sorgu ifadesi diğer adlar, değişken başvuruları, nesneler, İşlevler ve benzeri özelliklerini temsil etmek için. [!INCLUDE[esql](../../../../../../includes/esql-md.md)] iki tür tanımlayıcıları sağlar: Basit tanımlayıcıları ve tırnak işaretli tanımlayıcılar.  
   
 ## <a name="simple-identifiers"></a>Basit tanımlayıcıları  
  Basit bir tanımlayıcı [!INCLUDE[esql](../../../../../../includes/esql-md.md)] alfasayısal dizisini ve alt çizgi karakteri. Tanımlayıcı ilk karakteri bir alfabetik karakterler (a-z veya A-Z) olması gerekir.  
@@ -97,7 +85,7 @@ SELECT 1 AS X, 2 AS X …
 ```  
   
 ## <a name="scoping-rules"></a>Kapsam kuralları  
- [!INCLUDE[esql](../../../../../../includes/esql-md.md)]belirli değişkenleri sorgu dilde görünür olduğunda belirleyen ölçüm kuralları tanımlar. Bazı ifadeler veya deyimleri yeni adları tanıtır. Kapsam kuralları bu adlar kullanıldığı ve ne zaman veya burada başka aynı ada sahip yeni bir bildirimde öncülü gizleyebilirsiniz belirler.  
+ [!INCLUDE[esql](../../../../../../includes/esql-md.md)] belirli değişkenleri sorgu dilde görünür olduğunda belirleyen ölçüm kuralları tanımlar. Bazı ifadeler veya deyimleri yeni adları tanıtır. Kapsam kuralları bu adlar kullanıldığı ve ne zaman veya burada başka aynı ada sahip yeni bir bildirimde öncülü gizleyebilirsiniz belirler.  
   
  Ne zaman adları tanımlanmış bir [!INCLUDE[esql](../../../../../../includes/esql-md.md)] sorgu, bir kapsam içinde tanımlanan söylenir. Bir kapsam sorgunun tüm bir bölgeyi kapsar. Tüm ifadeler veya belirli bir kapsam adı başvurulara bu kapsam içinde tanımlanan adlarını görebilirsiniz. Bir kapsam başlamadan önce ve bittikten sonra kapsam içinde tanımlanan adları başvurulamaz.  
   
@@ -125,7 +113,7 @@ SELECT 1 AS X, 2 AS X …
 -   SELECT deyimi içinde yan tümceleri Değerlendirme sırasını adları kapsam içine sunulan sırasını belirler. FROM yan tümcesi, ilk olarak, WHERE yan tümcesi, GROUP BY yan tümcesi, HAVING yan tümcesi, SELECT yan tümcesi ve ORDER BY yan tümcesi tarafından son ardından değerlendirilir.  
   
 ### <a name="aggregate-handling"></a>İşleme toplama  
- [!INCLUDE[esql](../../../../../../includes/esql-md.md)]Toplamalar, iki biçimlerini destekler: Koleksiyon tabanlı toplamlar ve grup tabanlı toplar. Koleksiyon tabanlı toplamalar olan tercih edilen yapı [!INCLUDE[esql](../../../../../../includes/esql-md.md)], ve grup tabanlı toplamalar SQL Uyumluluk için desteklenir.  
+ [!INCLUDE[esql](../../../../../../includes/esql-md.md)] Toplamalar, iki biçimlerini destekler: Koleksiyon tabanlı toplamlar ve grup tabanlı toplar. Koleksiyon tabanlı toplamalar olan tercih edilen yapı [!INCLUDE[esql](../../../../../../includes/esql-md.md)], ve grup tabanlı toplamalar SQL Uyumluluk için desteklenir.  
   
  Bir toplama çözülürken [!INCLUDE[esql](../../../../../../includes/esql-md.md)] koleksiyon tabanlı bir toplama olarak işlemek önce çalışır. Başarısız olursa, [!INCLUDE[esql](../../../../../../includes/esql-md.md)] iç içe toplama başvuru birleşik giriş dönüştüren ve bu yeni ifade çözümlemek aşağıdaki örnekte gösterildiği gibi çalışır.  
   

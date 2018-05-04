@@ -1,29 +1,17 @@
 ---
-title: '&lt;announcementEndpoint&gt;'
-ms.custom: 
+title: '&lt;AnnouncementEndpoint&gt;'
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 034b7c69-a770-4502-8cef-38007bbcd025
-caps.latest.revision: "7"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: ae03b5d4a82c08978a3456e80428ba6ad8ac532a
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
-ms.translationtype: MT
+ms.openlocfilehash: 3ce141d70e17c14facd6aa8560c7b3424a8d9ae8
+ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/03/2018
 ---
-# <a name="ltannouncementendpointgt"></a>&lt;announcementEndpoint&gt;
-Bu yapılandırma öğesi, standart bir uç nokta sabit duyuru sözleşme ile tanımlar. Bir hizmet açıldığında veya sırasıyla kapalı bir çevrimiçi ve çevrimdışı duyuru iletisi göndererek, kullanılabilirlik isteğe bağlı olarak Duyurusu. A [!INCLUDE[indigo1](../../../../../includes/indigo1-md.md)] hizmeti belirtir duyuru uç noktalardan [ \<serviceDiscovery >](../../../../../docs/framework/configure-apps/file-schema/wcf/servicediscovery.md) öğesi ve duyuruları gerçekleştirmek için AnnouncementClient kullanır. Başka bir hizmet duyurudan gerçekten olarak davranan için dinleme isteyen bir istemci bir [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)] hizmet; böylece, bu istemci için duyuru uç noktaları yapılandırmak zorunda [ \<Hizmetleri >](../../../../../docs/framework/configure-apps/file-schema/wcf/services.md) bölümü.  
+# <a name="ltannouncementendpointgt"></a>&lt;AnnouncementEndpoint&gt;
+Bu yapılandırma öğesi, standart bir uç nokta sabit duyuru sözleşme ile tanımlar. Bir hizmet açıldığında veya sırasıyla kapalı bir çevrimiçi ve çevrimdışı duyuru iletisi göndererek, kullanılabilirlik isteğe bağlı olarak Duyurusu. Windows Communication Foundation (WCF) hizmetini duyuru uç noktalardan belirtir [ \<serviceDiscovery >](../../../../../docs/framework/configure-apps/file-schema/wcf/servicediscovery.md) öğesi ve duyuruları gerçekleştirmek için AnnouncementClient kullanır. Başka bir hizmet duyurudan gerçekten olarak davranan için dinleme isteyen bir istemci bir [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)] hizmet; böylece, bu istemci için duyuru uç noktaları yapılandırmak zorunda [ \<Hizmetleri >](../../../../../docs/framework/configure-apps/file-schema/wcf/services.md) bölümü.  
   
-\<Sistem. ServiceModel >  
+\<system.ServiceModel>  
 \<standardEndpoints >  
   
 ## <a name="syntax"></a>Sözdizimi  

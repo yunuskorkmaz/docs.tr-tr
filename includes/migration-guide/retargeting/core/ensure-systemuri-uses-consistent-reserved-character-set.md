@@ -1,0 +1,11 @@
+### <a name="ensure-systemuri-uses-a-consistent-reserved-character-set"></a>Tutarlı ayrılmış karakter kümesi System.Uri kullandığından emin olun
+
+|   |   |
+|---|---|
+|Ayrıntılar|İçinde <xref:System.Uri?displayProperty=fullName>bazı bazen kodu yüzde olarak kodlanmış karakter artık tutarlı bir şekilde sol kodlanır. Bu özellikleri ve URI yolu, sorgu, parça veya kullanıcı bilgisi bileşenlerinin erişim yöntemleri arasında oluşur. Yalnızca aşağıdakilerin her ikisi de true olduğunda davranışı değişir:<ul><li>Herhangi bir ayrılmış karakterlerini kodlanmış form URI içeriyor: <code>:</code>, <code>'</code>, <code>(</code>, <code>)</code>, <code>!</code> veya <code>*</code>.</li><li>URI veya ayrılmış olmayan karakter kodlanmış bir Unicode içerir. Yukarıdakilerin her ikisi de doğruysa kodlanmış ayrılmış karakterleri sol kodlanır. .NET Framework önceki sürümlerinde, bunlar çözülür.</li></ul>|
+|Öneri|.NET Framework ile 4.7.2 Başlangıç sürümlerini hedefleyen uygulamalar için yeni kod çözme davranışı varsayılan olarak etkindir. Bu değişiklik istenmeyen ise, onu aşağıdakileri ekleyerek devre dışı bırakabilirsiniz [AppContextSwitchOverrides](~/docs/framework/configure-apps/file-schema/runtime/appcontextswitchoverrides-element.md) geçiş <code>&lt;runtime&gt;</code> uygulama yapılandırma dosyasının:<pre><code class="lang-xml">&lt;runtime&gt;&#13;&#10;&lt;AppContextSwitchOverrides value=&quot;Switch.System.Uri.DontEnableStrictRFC3986ReservedCharacterSets=true&quot; /&gt;&#13;&#10;&lt;/runtime&gt;&#13;&#10;</code></pre>.NET Framework'ün önceki sürümlerini hedefleyen ancak 4.7.2 .NET Framework ile başlayan sürümleri altında çalışan uygulamalar için yeni kod çözme davranışı varsayılan olarak devre dışıdır. Aşağıdakileri ekleyerek etkinleştirebilirsiniz [AppContextSwitchOverrides](~/docs/framework/configure-apps/file-schema/runtime/appcontextswitchoverrides-element.md) geçiş <code>&lt;runtime&gt;</code> uygulama yapılandırma dosyasının::<pre><code class="lang-xml">&lt;runtime&gt;&#13;&#10;&lt;AppContextSwitchOverrides value=&quot;Switch.System.Uri.DontEnableStrictRFC3986ReservedCharacterSets=false&quot; /&gt;&#13;&#10;&lt;/runtime&gt;&#13;&#10;</code></pre>|
+|Kapsam|Küçük|
+|Sürüm|4.7.2|
+|Tür|Yeniden hedefleme|
+|Etkilenen API'leri|<ul><li><xref:System.Uri?displayProperty=nameWithType></li></ul>|
+

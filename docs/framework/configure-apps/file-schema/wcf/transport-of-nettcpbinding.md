@@ -1,24 +1,12 @@
 ---
-title: "&lt;netTcpBinding&gt; &lt;taşıma&gt;"
-ms.custom: 
+title: '&lt;netTcpBinding&gt; &lt;taşıma&gt;'
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 49462e0a-66e1-463f-b3e1-c83a441673c6
-caps.latest.revision: "18"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 5ad2271b86d37d9063ac54d9a4e45681d132eb1d
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.openlocfilehash: 9369351e4e197f321feb4ae56939bec2a8280a64
+ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="lttransportgt-of-ltnettcpbindinggt"></a>&lt;netTcpBinding&gt; &lt;taşıma&gt;
 İleti düzeyi güvenlik gereksinimleri ile yapılandırılmış bir uç nokta türünü tanımlar [ \<netTcpBinding >](../../../../../docs/framework/configure-apps/file-schema/wcf/nettcpbinding.md).  
@@ -58,8 +46,8 @@ ms.lasthandoff: 01/19/2018
 |Öznitelik|Açıklama|  
 |---------------|-----------------|  
 |clientCredentialType|İsteğe bağlı. Taşıma güvenliği kullanarak istemci kimlik doğrulaması yapılırken kullanılacak kimlik bilgileri türünü belirtir.<br /><br /> -Varsayılan değer `Windows`.<br />-Bu öznitelik türünde <xref:System.ServiceModel.TcpClientCredentialType>.|  
-|protectionLevel|İsteğe bağlı. TCP Aktarım düzeyinde güvenlik tanımlar. İletileri imzalama bir üçüncü taraf onu aktarılırken iletiyle oynama riskini azaltır. Şifreleme, aktarım sırasında veri düzeyi gizliliği sağlar.<br /><br /> Varsayılan değer `EncryptAndSign` şeklindedir.|  
-|sslProtocols|Hangi SslProtocols belirten bir SslProtocols enum bayrak değeri desteklenir. Varsayılan değer: Tls &#124; Tls11 &#124; Tls12.|  
+|ProtectionLevel|İsteğe bağlı. TCP Aktarım düzeyinde güvenlik tanımlar. İletileri imzalama bir üçüncü taraf onu aktarılırken iletiyle oynama riskini azaltır. Şifreleme, aktarım sırasında veri düzeyi gizliliği sağlar.<br /><br /> Varsayılan değer `EncryptAndSign` şeklindedir.|  
+|sslProtocols|Hangi SslProtocols belirten bir SslProtocols enum bayrak değeri desteklenir. Tls varsayılandır&#124;Tls11&#124;Tls12.|  
 |policyEnforcement|Bu numaralandırma ne zaman belirtir <xref:System.Security.Authentication.ExtendedProtection.ExtendedProtectionPolicy> zorunlu tutulmalıdır.<br /><br /> 1.  Hiçbir zaman – ilke hiçbir zaman zorlanır (genişletilmiş koruma devre dışı).<br />2.  Yalnızca istemci genişletilmiş koruma destekliyorsa WhenSupported – ilke uygulanır.<br />3.  Her zaman – ilke her zaman zorlanır. Genişletilmiş Koruma desteklemeyen istemcilerin kimliğini doğrulamak başarısız olur.|  
   
 ## <a name="clientcredentialtype-attribute"></a>clientCredentialType özniteliği  

@@ -1,26 +1,12 @@
 ---
 title: Bağlantı dizesi sözdizimi
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-ado
-ms.tgt_pltfrm: ''
-ms.topic: article
 ms.assetid: 0977aeee-04d1-4cce-bbed-750c77fce06e
-caps.latest.revision: 11
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
-ms.workload:
-- dotnet
-ms.openlocfilehash: 3939abaf376100e09d244afdb32662729a990ff7
-ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
+ms.openlocfilehash: ac7053d1b1b0865f33ae1bcd955493b4c62c7be6
+ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="connection-string-syntax"></a>Bağlantı dizesi sözdizimi
 Her .NET Framework veri sağlayıcısı sahip bir `Connection` devraldığı nesne <xref:System.Data.Common.DbConnection> sağlayıcıya özgü yanı sıra <xref:System.Data.Common.DbConnection.ConnectionString%2A> özelliği. Her bir sağlayıcı için belirli bağlantı dizesi sözdizimi belgelenen kendi `ConnectionString` özelliği. .NET Framework dahil dört veri sağlayıcıları aşağıdaki tabloda listelenmektedir.  
@@ -138,9 +124,9 @@ Ayrıca ayarlayabilirsiniz <xref:System.Data.SqlClient.SqlConnectionStringBuilde
  <xref:System.Data.OleDb.OleDbConnection.ConnectionString%2A> Özelliği bir <xref:System.Data.OleDb.OleDbConnection> almak veya Microsoft Access gibi bir OLE DB veri kaynağı için bir bağlantı dizesini ayarlamak sağlar. Ayrıca bir `OleDb` bağlantı dizesi kullanarak çalışma zamanında <xref:System.Data.OleDb.OleDbConnectionStringBuilder> sınıfı.  
   
 ### <a name="oledb-connection-string-syntax"></a>OleDb bağlantı dizesi sözdizimi  
- İçin bir sağlayıcı adı belirtmeniz gerekir bir <xref:System.Data.OleDb.OleDbConnection> bağlantı dizesi. Aşağıdaki bağlantı dizesi Jet sağlayıcısını kullanarak bir Microsoft Access veritabanına bağlar. Unutmayın `UserID` ve `Password` anahtar sözcükler (varsayılan) veritabanı güvenli, isteğe bağlı.  
+ İçin bir sağlayıcı adı belirtmeniz gerekir bir <xref:System.Data.OleDb.OleDbConnection> bağlantı dizesi. Aşağıdaki bağlantı dizesi Jet sağlayıcısını kullanarak bir Microsoft Access veritabanına bağlar. Unutmayın `User ID` ve `Password` anahtar sözcükler (varsayılan) veritabanı güvenli, isteğe bağlı.  
   
-```  
+```   
 Provider=Microsoft.Jet.OLEDB.4.0; Data Source=d:\Northwind.mdb;User ID=Admin;Password=;   
 ```  
   

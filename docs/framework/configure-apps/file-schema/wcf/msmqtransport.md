@@ -1,29 +1,17 @@
 ---
 title: '&lt;msmqTransport&gt;'
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 19d89f35-76ac-49dc-832b-e8bec2d5e33b
-caps.latest.revision: "14"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 441ec2cd07d46d44f527da7799e9df6d3bec4408
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 203c6dce4f88433852a54c618718e280152db897
+ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="ltmsmqtransportgt"></a>&lt;msmqTransport&gt;
 İçinde özel bağlama eklendiğinde aktarımları iletileri kanala MSMQ taşıma neden olur.  
   
- \<system.serviceModel >  
+ \<system.serviceModel>  
 \<bağlamaları >  
 \<customBinding >  
 \<bağlama >  
@@ -70,10 +58,10 @@ ms.lasthandoff: 12/22/2017
 |maxBufferPoolSize|Arabellek havuzu boyutunun üst sınırını belirtir pozitif bir tamsayı. 524288 varsayılandır.<br /><br /> WCF pek çok bölümü arabellekleri kullanın. Oluşturma ve her defa arabellek yok etme pahalıdır ve atık toplama arabellekleri için de pahalıdır. Arabellek havuzu ile havuzdan bir arabellek ayırın, kullanmak ve tamamladıktan sonra havuza geri dönemez. Bu nedenle oluşturma ve yok etme arabellekleri ek yük önlenmiş olur.|  
 |maxImmediateRetries|Uygulama sırasından okunan bir ileti üzerinde hemen yeniden deneme sayısını belirten bir tamsayı çalışır... Varsayılan değer 5'tir.<br /><br /> İleti için hemen yeniden deneme sayısı çalıştı ve ileti uygulama tarafından tüketilmeyen, daha sonraki bir noktada zamanında yeniden deneniyor için Yeniden Dene'yi kuyruğuna ileti gönderilir. Yeniden deneme döngüsü belirtilirse, ardından iletileri ya da gönderilir zehirli ileti kuyruğuna veya gönderene olumsuz bildirim gönderilir.|  
 |MaxPoolSize|Havuz boyutunun üst sınırını belirtir pozitif bir tamsayı. 524288 varsayılandır.|  
-|MaxReceivedMessageSize|Üst bilgileri de dahil olmak üzere bayt cinsinden maksimum ileti boyutu belirtir pozitif bir tamsayı. İleti alıcı için çok büyük olduğunda bir ileti gönderen bir SOAP hatasını alır. Alıcı iletiyi bırakır ve izleme günlüğüne olay bir giriş oluşturur. 65536 varsayılandır.|  
+|maxReceivedMessageSize|Üst bilgileri de dahil olmak üzere bayt cinsinden maksimum ileti boyutu belirtir pozitif bir tamsayı. İleti alıcı için çok büyük olduğunda bir ileti gönderen bir SOAP hatasını alır. Alıcı iletiyi bırakır ve izleme günlüğüne olay bir giriş oluşturur. 65536 varsayılandır.|  
 |maxRetryCycles|En fazla yeniden deneme sayısını belirten bir tamsayı iletileri teslim alma işlemini yapan uygulamanın için girişiminde geçiş yapar. Varsayılan, <xref:System.Int32.MaxValue> değeridir.<br /><br /> Bir ileti bir uygulamanın belirtilen sayıda sunmak tek bir yeniden deneme döngüsü çalışır. Gerçekleştirilen denemelerin sayısı belirlediği `maxImmediateRetries` özniteliği. İleti teslim girişimleri tüketmiş sonra kullanmak üzere uygulama başarısız olursa yeniden kuyruğa ileti gönderilir. Sonraki yeniden deneme döngüsü tarafından belirtilen bir gecikmeden sonra uygulamaya tekrar teslim denemek için yeniden deneme sıradan uygulama kuyruğuna döndürülen ileti oluşur `retryCycleDelay` özniteliği. `maxRetryCycles` Özniteliği, uygulamanın kullandığı teslim etmeyi denemek için yeniden deneme döngüsü sayısını belirtir.|  
 |QueueTransferProtocol|Bu bağlamayı kullanan kuyruğa alınan iletişim kanalı taşıma belirtir. Geçerli değerler:<br /><br /> -Yerel: yerel MSMQ protokolünü kullanır.<br />-Srmp: Soap güvenilir Mesajlaşma Protokolü (SRMP) kullanın.<br />-SrmpSecure: Soap güvenilir Mesajlaşma Protokolü güvenliğini (SRMPS) aktarım kullanın.<br /><br /> Bu öznitelik türünde <xref:System.ServiceModel.QueueTransferProtocol>.<br /><br /> MSMQ Active Directory SOAP Güvenilir Mesajlaşma Protokolü kullanılırken adresleme desteklemediğinden, bu öznitelik Srmp veya Srmps ayarlamalısınız değil, `u``seActiveDirectory` ayarlanır `true`.|  
-|rejectAfterLastRetry|Bir Boole değeri en fazla yeniden deneme sayısı denemelerinin sonra teslim başarısız oldu bir ileti için gerçekleştirilecek eylemi belirtir.<br /><br /> `true`olumsuz bildirim gönderene döndürülür ve ileti bırakılan anlamına gelir; `false` ileti zehirli ileti kuyruğa gönderilir anlamına gelir. Varsayılan, `false` değeridir.<br /><br /> Değer ise `false`, alma işlemini yapan uygulamanın zarar iletileri (diğer bir deyişle, teslim başarısız olmuş iletileri) işlemek için zehirli ileti sırası okuyabilirsiniz.<br /><br /> MSMQ 3.0 MSMQ 3. 0'bu öznitelik yoksayılacak şekilde olumsuz bildirim gönderene iade desteklemez.|  
+|rejectAfterLastRetry|Bir Boole değeri en fazla yeniden deneme sayısı denemelerinin sonra teslim başarısız oldu bir ileti için gerçekleştirilecek eylemi belirtir.<br /><br /> `true` olumsuz bildirim gönderene döndürülür ve ileti bırakılan anlamına gelir; `false` ileti zehirli ileti kuyruğa gönderilir anlamına gelir. Varsayılan, `false` değeridir.<br /><br /> Değer ise `false`, alma işlemini yapan uygulamanın zarar iletileri (diğer bir deyişle, teslim başarısız olmuş iletileri) işlemek için zehirli ileti sırası okuyabilirsiniz.<br /><br /> MSMQ 3.0 MSMQ 3. 0'bu öznitelik yoksayılacak şekilde olumsuz bildirim gönderene iade desteklemez.|  
 |retryCycleDelay|A <xref:System.TimeSpan> yeniden deneme döngüsü arasındaki gecikme süresini belirleyen hemen teslim edilemeyen bir ileti teslim çalışılırken. Varsayılan değer 00:10: 00'dır.<br /><br /> İleti alıcı uygulama tarafından belirtilen sayıda sunmak tek bir yeniden deneme döngüsü çalışır. Gerçekleştirilen denemelerin sayısı tarafından belirtilen `maxImmediateRetries` özniteliği. İleti belirtilen hemen yeniden deneme sayısı sonra kullanmak üzere uygulama başarısız olursa yeniden kuyruğa ileti gönderilir. Sonraki yeniden deneme döngüsü tarafından belirtilen bir gecikmeden sonra uygulamaya tekrar teslim denemek için yeniden deneme sıradan uygulama kuyruğuna döndürülen ileti oluşur `retryCycleDelay` özniteliği. Yeniden deneme döngüsü sayısını tarafından belirtilen `maxRetryCycles` özniteliği.|  
 |TimeToLive|A <xref:System.TimeSpan> iletileri süresi ve teslim edilemeyen Kuyruğa koymak önce ne kadar süreyle geçerlidir belirtir. 1 gün anlamına gelir 1.00:00:00 varsayılandır.<br /><br /> Bu öznitelik, alıcı uygulamalar tarafından işlenmeden önce zamana duyarlı iletileri eski hale gelmediğinden emin olmak için ayarlanır. Belirtilen zaman aralığı içinde alıcı uygulama tarafından tüketilmeyen bir kuyruktaki ileti süresinin kabul edilir. Süresi dolan iletileri sahipsiz sıra adı verilen özel kuyruğuna gönderilir. Sahipsiz Sıra konumu ile ayarlanır `customDeadLetterQueue` uygun varsayılana göre sağlandığına üzerinde veya öznitelik.|  
 |UseActiveDirectory|Active Directory kullanarak sıra adreslerini dönüştürülüp dönüştürülmeyeceğini belirten bir Boole değeri.<br /><br /> MSMQ sıra adreslerini yol adları veya doğrudan biçim adları oluşabilir. Bir doğrudan biçim adıyla MSMQ DNS, NetBIOS veya IP kullanarak bilgisayar adını çözümler. Bir yol adı ile MSMQ Active Directory kullanarak bilgisayar adını çözümler. Varsayılan olarak, Windows Communication Framework (WCF) aktarım dönüştürür doğrudan biçim adını ileti kuyruğuna URI'sini sıraya alındı. Bu öznitelik ayarlayarak `true`, bir uygulama sıraya alınan aktarım Active Directory yerine DNS, NetBIOS veya IP kullanarak bilgisayar adını çözümlemek belirtebilirsiniz.|  

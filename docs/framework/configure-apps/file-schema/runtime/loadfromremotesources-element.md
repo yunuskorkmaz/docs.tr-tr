@@ -1,37 +1,27 @@
 ---
-title: '&lt;loadFromRemoteSources&gt; Element'
-ms.custom: 
+title: '&lt;loadFromRemoteSources&gt; öğesi'
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - loadFromRemoteSources element
 - <loadFromRemoteSources> element
 ms.assetid: 006d1280-2ac3-4db6-a984-a3d4e275046a
-caps.latest.revision: "31"
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 13b42405a0faf721c46476aadaa0cff8163883c1
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.openlocfilehash: f0d442f71a0e2fc7deacd9aaa02cfba7b66f2349
+ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 05/03/2018
 ---
-# <a name="ltloadfromremotesourcesgt-element"></a>&lt;loadFromRemoteSources&gt; Element
+# <a name="ltloadfromremotesourcesgt-element"></a>&lt;loadFromRemoteSources&gt; öğesi
 Uzak kaynaklardan derlemeler tam güven verilip verilmeyeceğini belirtir.  
   
 > [!NOTE]
 >  Hata iletisinde Visual Studio Proje hata listesi veya bir derleme hatası nedeniyle bu konuya yönelik olup [nasıl yapılır: Visual Studio'da Web bir derleme kullanma](http://msdn.microsoft.com/library/d8635b63-89a0-41aa-90f4-f351b2111070).  
   
  \<Yapılandırma >  
-\<runtime>  
-\<loadFromRemoteSources>  
+\<çalışma zamanı >  
+\<loadFromRemoteSources >  
   
 ## <a name="syntax"></a>Sözdizimi  
   

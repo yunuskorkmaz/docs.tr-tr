@@ -1,13 +1,6 @@
 ---
-title: "Uygulama Etki Alanları"
-ms.custom: 
+title: Uygulama Etki Alanları
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-bcl
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - process boundaries for isolation
 - application isolation
@@ -19,16 +12,13 @@ helpviewer_keywords:
 - code, verification process
 - verification testing code
 ms.assetid: 113a8bbf-6875-4a72-a49d-ca2d92e19cc8
-caps.latest.revision: "18"
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: fe2d8ea8be2781e747398e18cc99cc6ce6cf6dc5
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.openlocfilehash: 04028a2b350493a3cc8f2c92bafafd9658fc7c58
+ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="application-domains"></a>Uygulama Etki Alanları
 İşletim sistemleri ve çalışma zamanı ortamları tipik olarak bazı form uygulamalar arasında yalıtım sağlar. Örneğin, Windows uygulamalarını yalıtmak için işlemleri kullanır. Bu yalıtım bir uygulamada çalışan kodu ilgisiz, diğer uygulamalar olumsuz etkileyemez sağlamak gereklidir.  
@@ -126,7 +116,7 @@ ms.lasthandoff: 01/19/2018
 |AppDomain Yöntemi|Açıklama|  
 |----------------------|-----------------|  
 |<xref:System.AppDomain.CreateDomain%2A>|Yeni bir uygulama etki alanı oluşturur. Bu yöntemin bir <xref:System.AppDomainSetup> nesnesi belirten bir aşırı yüklemesini kullanmanız önerilir. Bu; yeni bir etki alanının uygulama temel dizini veya uygulamanın kök dizini, etki alanı için yapılandırma dosyasının konumu ve ortak dil çalışma zamanının etki alanına yeni derlemeler yüklemek için kullanacağı arama yolu gibi özelliklerini ayarlamak için tercih edilen yöntemdir.|  
-|<xref:System.AppDomain.ExecuteAssembly%2A>ve<xref:System.AppDomain.ExecuteAssemblyByName%2A>|Uygulama etki alanındaki bir derlemeyi yürütür. Bu bir örnek yöntemi olduğundan, atıfta bulunduğunuz başka bir uygulama etki alanındaki kodu yürütmek için kullanılabilir.|  
+|<xref:System.AppDomain.ExecuteAssembly%2A> Ve <xref:System.AppDomain.ExecuteAssemblyByName%2A>|Uygulama etki alanındaki bir derlemeyi yürütür. Bu bir örnek yöntemi olduğundan, atıfta bulunduğunuz başka bir uygulama etki alanındaki kodu yürütmek için kullanılabilir.|  
 |<xref:System.AppDomain.CreateInstanceAndUnwrap%2A>|Uygulama etki alanında belirtilen bir türün bir örneğini oluşturur ve bir proxy döndürür. Oluşturulan türü içeren derlemenin, bu derlemeyi çağıran derlemeye yüklenmesini engellemek için kullanın.|  
 |<xref:System.AppDomain.Unload%2A>|Etki alanının düzgün bir şekilde kapatılmasını gerçekleştirir. Uygulama etki alanı, etki alanındaki tüm iş parçacıkları durmadan veya etki alanının dışında olmadan kaldırılmaz.|  
   

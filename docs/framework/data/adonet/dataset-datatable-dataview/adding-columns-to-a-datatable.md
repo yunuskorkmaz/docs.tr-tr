@@ -1,27 +1,15 @@
 ---
-title: "DataTable tablosuna sütun ekleme"
-ms.custom: 
+title: DataTable tablosuna sütun ekleme
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-ado
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
 ms.assetid: e85c4a0e-4f3f-458c-b58b-0ddbc06bf974
-caps.latest.revision: "4"
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
-ms.workload: dotnet
-ms.openlocfilehash: 6340baa434467ec4ccde501b4bb11d55a72c069b
-ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
+ms.openlocfilehash: 8ee47ddce273e564673d96d2b2e276b68879373f
+ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="adding-columns-to-a-datatable"></a>DataTable tablosuna sütun ekleme
 A <xref:System.Data.DataTable> bir koleksiyonu içerir <xref:System.Data.DataColumn> tarafından başvurulan nesneler **sütunları** tablosunun özelliği. Tüm kısıtlamaları birlikte sütun bu koleksiyonu şema veya tablo yapısını tanımlar.  
@@ -60,7 +48,7 @@ workTable.Columns.Add("Purchases", typeof(Double));
 > [!CAUTION]
 >  Bir sütun adı için bir sütun sağlanmazsa, sütun sütunun bir artımlı varsayılan adı verilen*N* "Column1" ile başlayarak, ne zaman eklenir **DataColumnCollection**. Adlandırma kuralı kaçınmanızı öneririz "sütun*N*" adı sağladığınız çünkü ne zaman bir sütun adı sağlayın mevcut bir varsayılan sütun adıyla çakışıyor olabilir **DataColumnCollection**. Sağlanan adı zaten varsa, özel durum oluşur.  
   
- Kullanıyorsanız <xref:System.Xml.Linq.XElement> olarak <xref:System.Data.DataColumn.DataType%2A> , bir <xref:System.Data.DataColumn> içinde <xref:System.Data.DataTable>, XML serileştirme verileri okurken çalışmaz. Örneğin, yazarsanız bir <xref:System.Xml.XmlDocument> kullanarak `DataTable.WriteXml` bir ek üst düğüm XML serileştirme sırasında yöntemi <xref:System.Xml.Linq.XElement>. Bu sorunu geçici olarak çözmek için kullanmak <xref:System.Data.SqlTypes.SqlXml> yerine tür <xref:System.Xml.Linq.XElement>. `ReadXml`ve `WriteXml` düzgün şekilde iş <xref:System.Data.SqlTypes.SqlXml>.  
+ Kullanıyorsanız <xref:System.Xml.Linq.XElement> olarak <xref:System.Data.DataColumn.DataType%2A> , bir <xref:System.Data.DataColumn> içinde <xref:System.Data.DataTable>, XML serileştirme verileri okurken çalışmaz. Örneğin, yazarsanız bir <xref:System.Xml.XmlDocument> kullanarak `DataTable.WriteXml` bir ek üst düğüm XML serileştirme sırasında yöntemi <xref:System.Xml.Linq.XElement>. Bu sorunu geçici olarak çözmek için kullanmak <xref:System.Data.SqlTypes.SqlXml> yerine tür <xref:System.Xml.Linq.XElement>. `ReadXml` ve `WriteXml` düzgün şekilde iş <xref:System.Data.SqlTypes.SqlXml>.  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
  <xref:System.Data.DataColumn>  

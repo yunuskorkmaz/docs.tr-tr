@@ -1,13 +1,6 @@
 ---
-title: "Nesne Tanımlayıcılarını Şifreleme Algoritmalarıyla Eşleştirme"
-ms.custom: 
+title: Nesne Tanımlayıcılarını Şifreleme Algoritmalarıyla Eşleştirme
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - digital signatures
 - identifiers, mapping object identifiers
@@ -15,16 +8,14 @@ helpviewer_keywords:
 - mapping object identifiers
 - cryptography, mapping object identifiers
 ms.assetid: c9673f81-bf9e-47fd-bc6f-6bc1c1c4c15e
-caps.latest.revision: "8"
 author: mcleblanc
 ms.author: markl
 manager: markl
-ms.workload: dotnet
-ms.openlocfilehash: bcde53450e3656ec958898864bb7d7200a4b03e2
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 7801c55cf6b3334347788013d9052038d5d2f3ec
+ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="mapping-object-identifiers-to-cryptography-algorithms"></a>Nesne Tanımlayıcılarını Şifreleme Algoritmalarıyla Eşleştirme
 Dijital imzalar, başka bir programda gönderildiğinde, veri değiştirilmiş değil emin olun. Genellikle dijital imza imzalanacak veri karmasını matematiksel işlevi uygulayarak hesaplanır. İmzalanması için bir karma değer biçimlendirme sırasında bazı dijital imza algoritmaları biçimlendirme işleminin bir parçası olarak ASN.1 nesne tanımlayıcısı (OID) ekleyin. OID karma hesaplamak için kullanılan algoritmayı tanımlar. Özel algoritmaları kullanmak için şifreleme mekanizması genişletmek için nesne tanımlayıcıları algoritmaları eşleyebilirsiniz. Aşağıdaki örnek, bir nesne tanımlayıcı yeni bir karma algoritma eşleme gösterilmektedir.  

@@ -1,31 +1,20 @@
 ---
-title: "&lt;dinleyicileri&gt; öğesi için &lt;izleme&gt;"
-ms.custom: 
+title: '&lt;dinleyicileri&gt; öğesi için &lt;izleme&gt;'
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 f1_keywords:
 - http://schemas.microsoft.com/.NetConfiguration/v2.0#configuration/system.diagnostics/trace/listeners
 helpviewer_keywords:
 - <listeners> element
 - listeners element
 ms.assetid: 1394c2c3-6304-46db-87c1-8e8b16f5ad5b
-caps.latest.revision: 
 author: mcleblanc
 ms.author: markl
 manager: markl
-ms.workload:
-- dotnet
-ms.openlocfilehash: b9c1f52f880a38791a9a8d5b5372b2ad53c5569f
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 2f0d795d6a8789772ff3fd46648fbc0d683c66e5
+ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="ltlistenersgt-element-for-lttracegt"></a>&lt;dinleyicileri&gt; öğesi için &lt;izleme&gt;
 Toplar, depolar, bir dinleyici belirtir ve iletileri yönlendirir. Dinleyicileri uygun hedef İzleme çıkışı yönlendirir.  
@@ -74,7 +63,7 @@ Toplar, depolar, bir dinleyici belirtir ve iletileri yönlendirir. Dinleyicileri
  Bu öğe makine yapılandırma dosyası (Machine.config) ve uygulama yapılandırma dosyasında kullanılabilir.  
   
 ## <a name="example"></a>Örnek  
- Aşağıdaki örnekte nasıl kullanılacağını gösterir  **\<dinleyicileri >** dinleyicileri eklemek için öğesi `MyListener` ve `MyEventListener` için **dinleyicileri** koleksiyonu. `MyListener`adlı bir dosya oluşturur `MyListener.log` ve çıkış dosyasına yazar. `MyEventListener`olay günlüğünde bir giriş oluşturur.  
+ Aşağıdaki örnekte nasıl kullanılacağını gösterir  **\<dinleyicileri >** dinleyicileri eklemek için öğesi `MyListener` ve `MyEventListener` için **dinleyicileri** koleksiyonu. `MyListener` adlı bir dosya oluşturur `MyListener.log` ve çıkış dosyasına yazar. `MyEventListener` olay günlüğünde bir giriş oluşturur.  
   
 ```xml  
 <configuration>  

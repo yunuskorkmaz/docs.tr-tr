@@ -1,32 +1,20 @@
 ---
 title: DataRow silme
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-ado
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
 ms.assetid: c34f531d-4b9b-4071-b2d7-342c402aa586
-caps.latest.revision: "5"
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
-ms.workload: dotnet
-ms.openlocfilehash: 5102e1e2d95bd6adc29d5f2a2317bc15f8386cdc
-ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
+ms.openlocfilehash: 128c41e1906b17e7f42458e8a5f1b3d3ec9cc449
+ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="datarow-deletion"></a>DataRow silme
 Silmek için kullanabileceğiniz iki yöntem vardır bir <xref:System.Data.DataRow> nesnesinin bir <xref:System.Data.DataTable> nesne: **kaldırmak** yöntemi <xref:System.Data.DataRowCollection> nesnesi ve <xref:System.Data.DataRow.Delete%2A> yöntemi **DataRow**nesnesi. Oysa <xref:System.Data.DataRowCollection.Remove%2A> yöntemi siler bir **DataRow** gelen **DataRowCollection**, <xref:System.Data.DataRow.Delete%2A> yöntemi yalnızca satır silme işlemi için işaretler. Uygulama çağırdığında gerçek kaldırma oluşur **AcceptChanges** yöntemi. Kullanarak <xref:System.Data.DataRow.Delete%2A>, hangi satırların gerçekten kaldırmadan önce silinmek üzere işaretlenmiş program aracılığıyla kontrol edebilirsiniz. Bir satır silinmek üzere işaretli olduğunda, <xref:System.Data.DataRow.RowState%2A> özelliği ayarlanmış <xref:System.Data.DataRow.Delete%2A>.  
   
- Ne <xref:System.Data.DataRow.Delete%2A> ya da <xref:System.Data.DataRowCollection.Remove%2A> üzerinden yineleme sırasında bir foreach döngüsü çağrılmalıdır bir <xref:System.Data.DataRowCollection> nesnesi. <xref:System.Data.DataRow.Delete%2A>ya da <xref:System.Data.DataRowCollection.Remove%2A> koleksiyon durumunu değiştirin.  
+ Ne <xref:System.Data.DataRow.Delete%2A> ya da <xref:System.Data.DataRowCollection.Remove%2A> üzerinden yineleme sırasında bir foreach döngüsü çağrılmalıdır bir <xref:System.Data.DataRowCollection> nesnesi. <xref:System.Data.DataRow.Delete%2A> ya da <xref:System.Data.DataRowCollection.Remove%2A> koleksiyon durumunu değiştirin.  
   
  Kullanırken bir <xref:System.Data.DataSet> veya **DataTable** ile birlikte bir **DataAdapter** ve kullanmak, bir ilişkisel veri kaynağı **silmek** yöntemi  **DataRow** satır kaldırmak için. **Silmek** yöntemi satır olarak işaretler **silinmiş** içinde **DataSet** veya **DataTable** ancak onu kaldırmaz. Bunun yerine, **DataAdapter** olarak işaretlenmiş bir satır karşılaştığında **silinmiş**, yürütülmeden kendi **DeleteCommand** veri kaynağında satır silme yöntemi. Satır sonra kalıcı olarak kullanılarak kaldırılabilir **AcceptChanges** yöntemi. Kullanırsanız **kaldırmak** satırı silmek için Satırı tablosundan tamamen kaldırılır ancak **DataAdapter** veri kaynağında satır silmez.  
   

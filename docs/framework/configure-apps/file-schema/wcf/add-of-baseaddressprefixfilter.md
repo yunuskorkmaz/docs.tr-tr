@@ -1,29 +1,17 @@
 ---
 title: '&lt;baseAddressPrefixFilter&gt; &lt;ekleme&gt;'
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: b226bede-8459-4de9-b2ac-3d39604ce2bc
-caps.latest.revision: "10"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: ad6ad6f71ef015ad97a2688a7334e8a0c6e5af44
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
-ms.translationtype: MT
+ms.openlocfilehash: 549574d0d6585a857f3e0979e814c827139c7536
+ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="ltaddgt-of-ltbaseaddressprefixfiltergt"></a>&lt;baseAddressPrefixFilter&gt; &lt;ekleme&gt;
-Uygun Internet Information Services (IIS) bağları barındırırken seçmek için bir mekanizma sağlar bir geçiş filtre belirten bir yapılandırma öğesi temsil eden bir [!INCLUDE[indigo1](../../../../../includes/indigo1-md.md)] IIS'de uygulama.  
+IIS Windows Communication Foundation (WCF) uygulamasında barındırdığında uygun Internet Information Services (IIS) bağlamaları seçmek için bir mekanizma sağlar bir geçiş filtre belirten bir yapılandırma öğesi temsil eder.  
   
- \<Sistem. ServiceModel >  
+ \<system.ServiceModel>  
 \<ServiceHostingEnvironment >  
 \<baseAddressPrefixFilters >  
 \<ekleme >  
@@ -54,7 +42,7 @@ Uygun Internet Information Services (IIS) bağları barındırırken seçmek iç
   
 |Öğe|Açıklama|  
 |-------------|-----------------|  
-|[\<baseAddressPrefixFilters >](../../../../../docs/framework/configure-apps/file-schema/wcf/baseaddressprefixfilters.md)|Uygun IIS bağları barındırırken seçmek için bir mekanizma sağlar geçiş filtrelerini belirtme yapılandırma öğeleri koleksiyonu bir [!INCLUDE[indigo1](../../../../../includes/indigo1-md.md)] IIS'de uygulama.|  
+|[\<baseAddressPrefixFilters >](../../../../../docs/framework/configure-apps/file-schema/wcf/baseaddressprefixfilters.md)|IIS Windows Communication Foundation (WCF) uygulamasında barındırdığında uygun IIS bağlamaları seçmek için bir mekanizma sağlar geçiş filtrelerini belirtme yapılandırma öğeleri koleksiyonu.|  
   
 ## <a name="remarks"></a>Açıklamalar  
  Bir önek filtre, hangi URI'ler olan hizmet tarafından kullanılmak üzere belirtmek paylaşılan barındırma hizmeti sağlayıcıları için bir yol sağlar. Birden çok uygulama aynı sitedeki aynı düzeni için farklı temel adresleriyle barındırmak paylaşılan konakları sağlar.  

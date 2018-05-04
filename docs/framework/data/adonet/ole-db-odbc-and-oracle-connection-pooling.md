@@ -1,24 +1,12 @@
 ---
-title: "OLE DB, ODBC ve Oracle bağlantı havuzu"
-ms.custom: 
+title: OLE DB, ODBC ve Oracle bağlantı havuzu
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-ado
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 2bd83b1e-3ea9-43c4-bade-d9cdb9bbbb04
-caps.latest.revision: "3"
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
-ms.workload: dotnet
-ms.openlocfilehash: d30b28e2a875e64e2c0d1cad43f101cf5fa2f489
-ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
+ms.openlocfilehash: 2e42b52bb75008fd34f3e4bef1788626d96368bc
+ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="ole-db-odbc-and-oracle-connection-pooling"></a>OLE DB, ODBC ve Oracle bağlantı havuzu
 Bağlantı havuzu önemli ölçüde performans ve ölçeklenebilirlik, uygulamanızın geliştirebilirsiniz. Bu bölümde, bağlantı için OLE DB, ODBC ve Oracle için .NET Framework veri sağlayıcıları havuzu anlatılmaktadır.  

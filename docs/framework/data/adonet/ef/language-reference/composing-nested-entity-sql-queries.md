@@ -1,27 +1,15 @@
 ---
-title: "İç içe geçmiş varlık SQL sorguları oluşturma"
-ms.custom: 
+title: İç içe geçmiş varlık SQL sorguları oluşturma
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-ado
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 685d4cd3-2c1f-419f-bb46-c9d97a351eeb
-caps.latest.revision: "4"
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
-ms.workload: dotnet
-ms.openlocfilehash: 29f1f4f22a48aed1020b8e7ea42fe5ffd5b9f566
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.openlocfilehash: 92e3153350787ef75c48ee52f1b6c68e09e15b4b
+ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="composing-nested-entity-sql-queries"></a>İç içe geçmiş varlık SQL sorguları oluşturma
-[!INCLUDE[esql](../../../../../../includes/esql-md.md)]bir zengin işlevsel dilidir. Yapı bloğu [!INCLUDE[esql](../../../../../../includes/esql-md.md)] bir ifadedir. Geleneksel SQL aksine [!INCLUDE[esql](../../../../../../includes/esql-md.md)] bir tablo sonuç kümesi sınırlı değildir: [!INCLUDE[esql](../../../../../../includes/esql-md.md)] değişmez değerleri, parametre veya iç içe geçmiş ifadeler olabilir karmaşık ifadeler oluşturmayı destekler. İfade bir değer parametreli veya diğer bazı ifadesi oluşur.  
+[!INCLUDE[esql](../../../../../../includes/esql-md.md)] bir zengin işlevsel dilidir. Yapı bloğu [!INCLUDE[esql](../../../../../../includes/esql-md.md)] bir ifadedir. Geleneksel SQL aksine [!INCLUDE[esql](../../../../../../includes/esql-md.md)] bir tablo sonuç kümesi sınırlı değildir: [!INCLUDE[esql](../../../../../../includes/esql-md.md)] değişmez değerleri, parametre veya iç içe geçmiş ifadeler olabilir karmaşık ifadeler oluşturmayı destekler. İfade bir değer parametreli veya diğer bazı ifadesi oluşur.  
   
 ## <a name="nested-expressions"></a>İç içe geçmiş ifadeler  
  İç içe geçmiş bir ifade, kabul edilen döndürür türünde bir değer herhangi bir yere yerleştirilebilir. Örneğin:  

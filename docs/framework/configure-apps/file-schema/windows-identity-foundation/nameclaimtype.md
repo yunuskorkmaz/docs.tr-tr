@@ -1,29 +1,19 @@
 ---
 title: '&lt;nameClaimType&gt;'
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 17514d95-f0f5-4789-8e28-346640dc227c
-caps.latest.revision: "4"
 author: BrucePerlerMS
-ms.author: bruceper
 manager: mbaldwin
-ms.workload: dotnet
-ms.openlocfilehash: 2c53886458b4c6e2867e1f9fddd4ab50b199c660
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: e403667f16e316004f766b8476e20eca9bd1c988
+ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="ltnameclaimtypegt"></a>&lt;nameClaimType&gt;
 Belirtir talep türünü ayarlar <xref:System.Security.Principal.IIdentity.Name%2A> özelliği. Talep türü aramak için kullanılan bir <xref:System.Security.Claims.Claim> koleksiyonunda <xref:System.Security.Claims.ClaimsIdentity> tarafından döndürülen nesne <xref:System.IdentityModel.Tokens.SecurityTokenHandler.ValidateToken%2A> Bu belirteci işleyicisi yöntemi. Eşleşen talep değerinin sonra adı olarak ayarlandığını <xref:System.Security.Principal.IIdentity> Bu belirteci işleyiciden oluşturulur.  
   
- \<System.IdentityModel >  
+ \<system.identityModel>  
 \<identityConfiguration >  
 \<securityTokenHandlers >  
 \<ekleme >  

@@ -9,11 +9,11 @@ ms.prod: dotnet-core
 ms.devlang: dotnet
 ms.workload:
 - dotnetcore
-ms.openlocfilehash: 21e824e6092b0d30e0499ff05c5471a291c8d269
-ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
-ms.translationtype: MT
+ms.openlocfilehash: cc243dba7182c9df451fa4bef286af2b49c6fa77
+ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/28/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="deploying-net-core-apps-with-command-line-interface-cli-tools"></a>Komut satırı arabirimi (CLI) araçları ile .NET Core uygulamaları dağıtma
 
@@ -63,11 +63,15 @@ Hiçbir üçüncü taraf bağımlılıkları framework bağımlı dağıtım da�
       ```
    Bu sürüm (bir hata ayıklama yerine) oluşturur, uygulamanızın sürümü. Ortaya çıkan dosyalar adlı bir dizinde yerleştirilir *yayımlama* projenizin bir alt dizin olan *bin* dizin.
 
-Uygulamanızın dosyaları yanı sıra, yayımlama işlemi uygulamanız ile ilgili hata ayıklama bilgilerini içeren bir program veritabanı (.pdb) dosyası yayar. Dosya, öncelikle özel durumları hata ayıklama için kullanışlıdır. Uygulamanızın dosyalarıyla dağıtmak değil seçebilirsiniz. Uygulamanızın yayın derleme hatalarını ayıklamak istediğiniz olay, ancak kaydedin gerekir.
+   Uygulamanızın dosyaları yanı sıra, yayımlama işlemi uygulamanız ile ilgili hata ayıklama bilgilerini içeren bir program veritabanı (.pdb) dosyası yayar. Dosya, öncelikle özel durumları hata ayıklama için kullanışlıdır. Uygulamanızın dosyalarıyla dağıtmak değil seçebilirsiniz. Uygulamanızın yayın derleme hatalarını ayıklamak istediğiniz olay, ancak kaydedin gerekir.
 
-İstediğiniz şekilde uygulama dosyalarında tamamını dağıtabilirsiniz. Örneğin, bir ZIP dosyası paketini, basit bir kullanmak `copy` komutunu veya tercih ettiğiniz herhangi bir yükleme paketi ile dağıtabilirsiniz. Yüklendikten sonra kullanıcılar, uygulamanızın kullanarak yürütebilirsiniz `dotnet` komutu ve uygulama filename gibi sağlayarak `dotnet fdd.dll`.
+   İstediğiniz şekilde uygulama dosyalarında tamamını dağıtabilirsiniz. Örneğin, bir ZIP dosyası paketini, basit bir kullanmak `copy` komutunu veya tercih ettiğiniz herhangi bir yükleme paketi ile dağıtabilirsiniz.
 
-Uygulama ikili dosyaların yanı sıra, yükleyici de paylaşılan framework Yükleyici paketini ya da için uygulama yüklemesinin bir parçası olarak bir önkoşul olarak denetleyin.  Paylaşılan framework yüklemesi yönetici/kök erişimi gerektirir.
+1. Uygulamanızı çalıştırma
+
+   Yüklendikten sonra kullanıcılar, uygulamanızın kullanarak yürütebilirsiniz `dotnet` komutu ve uygulama filename gibi sağlayarak `dotnet fdd.dll`.
+
+   Uygulama ikili dosyaların yanı sıra, yükleyici de paylaşılan framework Yükleyici paketini ya da için uygulama yüklemesinin bir parçası olarak bir önkoşul olarak denetleyin.  Paylaşılan framework yüklemesi yönetici/kök erişimi gerektirir.
 
 ## <a name="framework-dependent-deployment-with-third-party-dependencies"></a>Üçüncü taraf bağımlılıkları Framework bağımlı dağıtım
 

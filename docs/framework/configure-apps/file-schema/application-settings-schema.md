@@ -1,29 +1,20 @@
 ---
-title: "Uygulama Ayarları Şeması"
-ms.custom: 
+title: Uygulama Ayarları Şeması
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - schema application settings
 - application settings, schema [Windows Forms]
 - Windows Forms, application settings schema
 - configuration schema [.NET Framework], application settings
 ms.assetid: 5797fcff-6081-4e8c-bebf-63d9c70cf14b
-caps.latest.revision: "3"
 author: mcleblanc
 ms.author: markl
 manager: markl
-ms.workload: dotnet
-ms.openlocfilehash: 3581c8079132de5f1faad4a01e6b43c8e4833316
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 7af6342e9c05fc4e6c1bf4daac59db14ccdf22c7
+ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="application-settings-schema"></a>Uygulama Ayarları Şeması
 
@@ -54,7 +45,7 @@ Bu öğe bir ayar tanımlar. Aşağıdaki özniteliklere sahiptir.
 
 | Öznitelik        | Açıklama |
 | ---------------- | ----------- |
-| **adı**         | Gerekli. Ayar benzersiz kimliği. Visual Studio oluşturulan ayarları adıyla kaydedilir `ProjectName.Properties.Settings`. |
+| **Adı**         | Gerekli. Ayar benzersiz kimliği. Visual Studio oluşturulan ayarları adıyla kaydedilir `ProjectName.Properties.Settings`. |
 | **serializedAs** | Gerekli. Metin değeri serileştirmek için kullanılacak biçimi. Geçerli değerler şunlardır:<br><br>- `string`. Değer olarak dizesi kullanılarak serileştirilmiş bir <xref:System.ComponentModel.TypeConverter>.<br>- `xml`. Değer XML serileştirme kullanarak serileştirilir.<br>- `binary`. Değer ikili serileştirme kullanılarak metin ile kodlanmış ikili olarak serileştirilir.<br />- `custom`. Ayarlar sağlayıcısı serileştiren bilgiyi bu ayarın sahiptir ve XML'deki serileştirir. |
 
 ## <a name="value-element"></a>\<Değer > öğesi

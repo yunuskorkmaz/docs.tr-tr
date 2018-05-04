@@ -1,14 +1,6 @@
 ---
-title: "&lt;assemblyBinding&gt; öğesi için &lt;çalışma zamanı&gt;"
-ms.custom: 
+title: '&lt;assemblyBinding&gt; öğesi için &lt;çalışma zamanı&gt;'
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 f1_keywords:
 - http://schemas.microsoft.com/.NetConfiguration/v2.0#configuration/runtime/assemblyBinding
 helpviewer_keywords:
@@ -16,17 +8,13 @@ helpviewer_keywords:
 - assemblyBinding element
 - container tags, <assemblyBinding> element
 ms.assetid: 964cbb35-ab49-4498-8471-209689e5dada
-caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: d5ef09f5d7b2dce366c605c8d8f4e6c456920b35
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: d84c134b8e2b048f39836bbc10af06039e96719e
+ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="ltassemblybindinggt-element-for-ltruntimegt"></a>&lt;assemblyBinding&gt; öğesi için &lt;çalışma zamanı&gt;
 Derleme sürümü yeniden yönlendirmesi ve derlemelerin konumları hakkında bilgi içerir.  
@@ -50,7 +38,7 @@ Derleme sürümü yeniden yönlendirmesi ve derlemelerin konumları hakkında bi
   
 |Öznitelik|Açıklama|  
 |---------------|-----------------|  
-|**xmlns**|Gerekli öznitelik.<br /><br /> Derleme bağlama için gereken XML ad alanı belirtir. Dize kullanma "urn: şemaları-microsoft-com:asm.v1" değeri olarak.|  
+|**Xmlns**|Gerekli öznitelik.<br /><br /> Derleme bağlama için gereken XML ad alanı belirtir. Dize kullanma "urn: şemaları-microsoft-com:asm.v1" değeri olarak.|  
 |**appliesTo**|.NET Framework derleme yeniden yönlendirme uygulandığı çalışma zamanı sürümü belirtir. Bu isteğe bağlı öznitelik uygulandığı hangi sürümünün belirtmek için bir .NET Framework sürüm numarası kullanır. Öyle değilse **appliesTo** özniteliği belirtilirse  **\<assemblyBinding >** öğesi tüm .NET Framework sürümleri için geçerlidir. **AppliesTo** özniteliği, .NET Framework sürüm 1.1 sunulmuştur; .NET Framework sürüm 1.0 göz ardı edilir. Bunun anlamı tüm  **\<assemblyBinding >** öğeleri kullanırken bile, .NET Framework sürüm 1.0 uygulanır bir **appliesTo** özniteliği belirtildi.|  
   
 ### <a name="child-elements"></a>Alt Öğeler  

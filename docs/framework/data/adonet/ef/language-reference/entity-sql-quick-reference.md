@@ -1,24 +1,12 @@
 ---
-title: "Varlık SQL hızlı başvuru"
-ms.custom: 
+title: Varlık SQL hızlı başvuru
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-ado
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: e53dad9e-5e83-426e-abb4-be3e78e3d6dc
-caps.latest.revision: "2"
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
-ms.workload: dotnet
-ms.openlocfilehash: 81fd76d09f9cc02e89ac34d5f8fa74bd7f9d92f9
-ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
+ms.openlocfilehash: 0617ce96acaf5a6eafb2658cfe218cc8f4135f6e
+ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="entity-sql-quick-reference"></a>Varlık SQL hızlı başvuru
 Bu konu, hızlı başvuru sağlar [!INCLUDE[esql](../../../../../../includes/esql-md.md)] sorgular. Bu konuda sorgularda AdventureWorks satış model üzerinde temel alır.  
@@ -83,7 +71,7 @@ DATETIME '2006-12-25 01:01'
 ## <a name="type-constructors"></a>Türü oluşturucuları  
   
 ### <a name="row"></a>SATIR  
- [Satır](../../../../../../docs/framework/data/adonet/ef/language-reference/row-entity-sql.md) gibi bir anonim, yapısal olarak yazılan (kayıt) değeri oluşturur:`ROW(1 AS myNumber, ‘Name’ AS myName).`  
+ [Satır](../../../../../../docs/framework/data/adonet/ef/language-reference/row-entity-sql.md) gibi bir anonim, yapısal olarak yazılan (kayıt) değeri oluşturur: `ROW(1 AS myNumber, ‘Name’ AS myName).`  
   
  Örnek:  
   
@@ -116,7 +104,7 @@ SELECT VALUE product FROM AdventureWorksEntities.Product AS product WHERE produc
   
 |ProductID|Ad|ProductNumber|…|  
 |---------------|----------|-------------------|-------|  
-|842|Tur Panniers, büyük|PA-T100|…|  
+|842|Tur Panniers, büyük|PA T100|…|  
   
 ### <a name="object"></a>Nesne  
  [Tür oluşturucu adlı](../../../../../../docs/framework/data/adonet/ef/language-reference/named-type-constructor-entity-sql.md) gibi kullanıcı tanımlı (adlandırılmış) nesneleri oluşturur `person("abc", 12)`.  
@@ -327,7 +315,7 @@ SELECT a.AddressID, (SELECT VALUE DEREF(v) FROM
 ## <a name="select-value-and-select"></a>DEĞER SEÇİP SEÇİN  
   
 ### <a name="select-value"></a>DEĞERİNİ SEÇİN  
- [!INCLUDE[esql](../../../../../../includes/esql-md.md)]örtük satır yapım atlamak için SELECT VALUE yan tümcesi sağlar. SELECT VALUE yan tümcesinde yalnızca bir öğe belirtilebilir. Bu tür bir yan tümcesi kullanıldığında, hiçbir satır sarmalayıcı SELECT yan tümcesinde öğelerin etrafında oluşturulur ve istediğiniz şekli koleksiyonu, örneğin üretilmiş olabilecek: `SELECT VALUE a`.  
+ [!INCLUDE[esql](../../../../../../includes/esql-md.md)] örtük satır yapım atlamak için SELECT VALUE yan tümcesi sağlar. SELECT VALUE yan tümcesinde yalnızca bir öğe belirtilebilir. Bu tür bir yan tümcesi kullanıldığında, hiçbir satır sarmalayıcı SELECT yan tümcesinde öğelerin etrafında oluşturulur ve istediğiniz şekli koleksiyonu, örneğin üretilmiş olabilecek: `SELECT VALUE a`.  
   
  Örnek:  
   
@@ -345,7 +333,7 @@ SELECT VALUE p.Name FROM AdventureWorksEntities.Product as p
 |...|  
   
 ### <a name="select"></a>SEÇ  
- [!INCLUDE[esql](../../../../../../includes/esql-md.md)]row Oluşturucusu rasgele satırları oluşturmak için de sağlar. SELECT yansıtma bir veya daha fazla öğe ve bir veri kaydını alanları ile sonuçlanır örneğin alır: `SELECT a, b, c`.  
+ [!INCLUDE[esql](../../../../../../includes/esql-md.md)] row Oluşturucusu rasgele satırları oluşturmak için de sağlar. SELECT yansıtma bir veya daha fazla öğe ve bir veri kaydını alanları ile sonuçlanır örneğin alır: `SELECT a, b, c`.  
   
  Örnek:  
   

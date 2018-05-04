@@ -1,29 +1,17 @@
 ---
-title: "&lt;scopedCertificates&gt; Öğesi"
-ms.custom: 
+title: '&lt;scopedCertificates&gt; Öğesi'
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: c7b6fc35-d4b2-4c18-98bd-83e09591f1d3
-caps.latest.revision: "12"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 719a52fb1a0f558bda2b337e1402f8aecafc6b8d
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: d95e608fa9b94086dac72341eb599f258dae6097
+ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="ltscopedcertificatesgt-element"></a>&lt;scopedCertificates&gt; Öğesi
 X.509 sertifikaları (kimlik doğrulaması için kapsamlı) belirli hizmetleri tarafından sağlanan bir koleksiyonunu temsil eder. Bu koleksiyon, genellikle bir Federasyon senaryosunda için güvenlik belirteci Hizmetleri hizmet sertifikalarını belirtmek için kullanılır.  
   
- \<Sistem. ServiceModel >  
+ \<system.ServiceModel>  
 \<davranışları >  
 endpointBehaviors bölümü  
 \<davranışı >  
@@ -70,7 +58,7 @@ endpointBehaviors bölümü
  Daha fazla bilgi için "Sertifikalar kapsamlı" bölümüne bakın [nasıl yapılır: federe istemci oluşturma](../../../../../docs/framework/wcf/feature-details/how-to-create-a-federated-client.md).  
   
 ## <a name="example"></a>Örnek  
- Aşağıdaki örnek istemcinin etki alanı adı HTTP protokolü üzerinden http://www.contoso.com olan uç noktaları ile iletişim kurarken kullanması bir hizmet sertifikası belirtir.  
+ Aşağıdaki örnek etki alanı adı uç ile iletişim kurmasını olduğunda kullanılacak istemci için bir hizmet sertifikası belirtir http://www.contoso.com HTTP protokolü üzerinden.  
   
 ```xml  
 <serviceCertificate>  

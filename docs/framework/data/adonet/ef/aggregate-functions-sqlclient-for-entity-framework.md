@@ -1,24 +1,12 @@
 ---
-title: "Toplama işlevleri (SqlClient Entity Framework)"
-ms.custom: 
+title: Toplama işlevleri (SqlClient Entity Framework)
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-ado
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 03303f01-b591-4efc-9875-f9c608edff0b
-caps.latest.revision: "2"
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
-ms.workload: dotnet
-ms.openlocfilehash: 11779c07661edb8bfecda3b8ef955c35989294be
-ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
+ms.openlocfilehash: 558e9f8480dd69e2277603e9bb1013acfbc29467
+ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="aggregate-functions-sqlclient-for-entity-framework"></a>Toplama işlevleri (SqlClient Entity Framework)
 SQL Server (SqlClient) için .NET Framework veri sağlayıcısı toplama işlevleri sağlar. Toplama işlevleri giriş değerleri kümesine göre hesaplamalar ve bir değer döndürür. Bu SqlServer ad alanında SqlClient kullandığınızda kullanılabilir olduğu işlevlerdir. Bir sağlayıcının ad özelliği, hangi önekin türler ve işlevler gibi belirli yapıları için bu sağlayıcı tarafından kullanılan bulmak Entity Framework sağlar.  
@@ -31,9 +19,9 @@ SQL Server (SqlClient) için .NET Framework veri sağlayıcısı toplama işlevl
  [!code-sql[DP EntityServices Concepts#SQLSERVER_AVG](../../../../../samples/snippets/tsql/VS_Snippets_Data/dp entityservices concepts/tsql/entitysql.sql#sqlserver_avg)]|  
 |`CHECKSUM_AGG(` `collection` `)`|Bir koleksiyonda bulunan değerlerin toplamını döndürür.<br /><br /> Null değerler göz ardı edilir.<br /><br /> **Bağımsız Değişkenler**<br /><br /> Bir koleksiyon (`Int32`).<br /><br /> **Dönüş değeri**<br /><br /> Bir `Int32`.<br /><br /> **Örnek**<br /><br /> [!code-csharp[DP EntityServices Concepts#SQLSERVER_CHECKSUM](../../../../../samples/snippets/csharp/VS_Snippets_Data/dp entityservices concepts/cs/entitysql.cs#sqlserver_checksum)]
  [!code-sql[DP EntityServices Concepts#SQLSERVER_CHECKSUM](../../../../../samples/snippets/tsql/VS_Snippets_Data/dp entityservices concepts/tsql/entitysql.sql#sqlserver_checksum)]|  
-|`COUNT(` `expression` `)`|Bir koleksiyon olarak öğe sayısını döndürür bir `Int32`.<br /><br /> **Bağımsız Değişkenler**<br /><br /> Bir koleksiyon (T aşağıdaki türlerden biri olduğu T):<br /><br /> `Guid`(SQL Server 2000'de döndürülen değil),<br /><br /> `Boolean`, `Double`, `DateTime`, `DateTimeOffset`, `Time`, `String`, veya `Binary`.<br /><br /> **Dönüş değeri**<br /><br /> Bir `Int32`.<br /><br /> **Örnek**<br /><br /> [!code-csharp[DP EntityServices Concepts#SQLSERVER_COUNT](../../../../../samples/snippets/csharp/VS_Snippets_Data/dp entityservices concepts/cs/entitysql.cs#sqlserver_count)]
+|`COUNT(` `expression` `)`|Bir koleksiyon olarak öğe sayısını döndürür bir `Int32`.<br /><br /> **Bağımsız Değişkenler**<br /><br /> Bir koleksiyon (T aşağıdaki türlerden biri olduğu T):<br /><br /> `Guid` (SQL Server 2000'de döndürülen değil),<br /><br /> `Boolean`, `Double`, `DateTime`, `DateTimeOffset`, `Time`, `String`, veya `Binary`.<br /><br /> **Dönüş değeri**<br /><br /> Bir `Int32`.<br /><br /> **Örnek**<br /><br /> [!code-csharp[DP EntityServices Concepts#SQLSERVER_COUNT](../../../../../samples/snippets/csharp/VS_Snippets_Data/dp entityservices concepts/cs/entitysql.cs#sqlserver_count)]
  [!code-sql[DP EntityServices Concepts#SQLSERVER_COUNT](../../../../../samples/snippets/tsql/VS_Snippets_Data/dp entityservices concepts/tsql/entitysql.sql#sqlserver_count)]|  
-|`COUNT_BIG(` `expression` `)`|Bir koleksiyon olarak öğe sayısını döndürür bir `bigint`.<br /><br /> **Bağımsız Değişkenler**<br /><br /> Bir koleksiyon (T aşağıdaki türlerden biri olduğu T):<br /><br /> `Guid`(SQL Server 2000'de döndürülen değil), `Boolean`, `Double`, `DateTime`, `DateTimeOffset`, `Time`, `String`, veya `Binary`.<br /><br /> **Dönüş değeri**<br /><br /> Bir `Int64`.<br /><br /> **Örnek**<br /><br /> [!code-csharp[DP EntityServices Concepts#SQLSERVER_COUNTBIG](../../../../../samples/snippets/csharp/VS_Snippets_Data/dp entityservices concepts/cs/entitysql.cs#sqlserver_countbig)]
+|`COUNT_BIG(` `expression` `)`|Bir koleksiyon olarak öğe sayısını döndürür bir `bigint`.<br /><br /> **Bağımsız Değişkenler**<br /><br /> Bir koleksiyon (T aşağıdaki türlerden biri olduğu T):<br /><br /> `Guid` (SQL Server 2000'de döndürülen değil), `Boolean`, `Double`, `DateTime`, `DateTimeOffset`, `Time`, `String`, veya `Binary`.<br /><br /> **Dönüş değeri**<br /><br /> Bir `Int64`.<br /><br /> **Örnek**<br /><br /> [!code-csharp[DP EntityServices Concepts#SQLSERVER_COUNTBIG](../../../../../samples/snippets/csharp/VS_Snippets_Data/dp entityservices concepts/cs/entitysql.cs#sqlserver_countbig)]
  [!code-sql[DP EntityServices Concepts#SQLSERVER_COUNTBIG](../../../../../samples/snippets/tsql/VS_Snippets_Data/dp entityservices concepts/tsql/entitysql.sql#sqlserver_countbig)]|  
 |`MAX(` `expression` `)`|En büyük değer koleksiyonunu döndürür.<br /><br /> **Bağımsız Değişkenler**<br /><br /> Bir koleksiyon (T olduğu aşağıdaki türlerden biri T): `Byte`, `Int16`, `Int32`, `Int64`, `Byte`, `Single`, `Double`, `Decimal`, `DateTime`, `DateTimeOffset`, `Time` , `String`, `Binary`.<br /><br /> **Dönüş değeri**<br /><br /> Türü `expression`.<br /><br /> **Örnek**<br /><br /> [!code-csharp[DP EntityServices Concepts#SQLSERVER_MAX](../../../../../samples/snippets/csharp/VS_Snippets_Data/dp entityservices concepts/cs/entitysql.cs#sqlserver_max)]
  [!code-sql[DP EntityServices Concepts#SQLSERVER_MAX](../../../../../samples/snippets/tsql/VS_Snippets_Data/dp entityservices concepts/tsql/entitysql.sql#sqlserver_max)]|  

@@ -1,13 +1,6 @@
 ---
-title: "Ardışık Düzen Geliştirme"
-ms.custom: 
+title: Ardışık Düzen Geliştirme
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - add-in pipeline [.NET Framework], segments
 - activation path for add-ins [.NET Framework]
@@ -16,23 +9,20 @@ helpviewer_keywords:
 - add-in pipeline [.NET Framework], about
 - add-ins [.NET Framework], pipeline development
 ms.assetid: 932788f2-b87d-44cf-82f9-04492a8b2722
-caps.latest.revision: "31"
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 33646bbd7b0043cb5fc036b9b11aa4cf37cd537f
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.openlocfilehash: 2d889b7de4bc766deda9b91877ceefb4aebfc551
+ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="pipeline-development"></a>Ardışık Düzen Geliştirme
 Eklenti ardışık düzeni konak uygulama ve onun eklenti birbirleri ile iletişim kurmak için kullanması gereken ardışık düzeni kesimlerini yoludur.  
   
  Aşağıdaki çizimde, iletişim ardışık düzeni ve onun parçalarını gösterir.  
   
- ![Ekleme &#45; ardışık düzen modeli. ] (../../../docs/framework/add-ins/media/addin1.png "AddIn1")  
+ ![Ekleme&#45;kanal modeli. ] (../../../docs/framework/add-ins/media/addin1.png "AddIn1")  
 Eklenti ardışık düzeni  
   
  Ana bilgisayar uygulaması bir ardışık düzen sonunda ve diğer sonunda eklentidir. Her sonundan başlayarak ve orta doğru taşıma, hem ana bilgisayar uygulamasını ve eklenti her ikisi de paylaşmak nesne modeli görünümünü tanımlayan Özet temel sınıf sahiptir. Bu tür (sınıflar) eklenti görünümü ardışık düzen segmenti ve Eklenti ardışık düzen segmenti konak görünümünü yapın. Eklenti görünümü ardışık düzen segmenti genellikle birden fazla soyut sınıf içerir ancak eklenti devraldığı sınıfı eklenti temel olarak bilinir.  
@@ -45,7 +35,7 @@ Eklenti ardışık düzeni
   
  Aşağıdaki çizimde, ardışık düzen segmentlerini yapmak türleri gösterilmektedir. Çizimde gösterilen türlerinin adlarını rasgele, ancak bilgi deposu oluşturmak yöntemler tarafından bulunabilmeleri için konak ve konak hariç tüm türleri eklenti iste özniteliklerini görüntüleyin.  
   
- ![Ekleme &#45; türlerinde gerekli öznitelikler modeliyle. ] (../../../docs/framework/add-ins/media/addin-model.png "AddIn_Model")  
+ ![Ekleme&#45;türlerinde gerekli özniteliklerle modelindeki. ] (../../../docs/framework/add-ins/media/addin-model.png "AddIn_Model")  
 Eklenti ardışık düzeni türleriyle  
   
  Aşağıdaki tabloda bir eklentiyi etkinleştirmek için ardışık düzeni kesimlerini açıklanmaktadır. Bu kesimler hakkında daha fazla bilgi için bkz: [sözleşmeler, görünümler ve bağdaştırıcıları](http://msdn.microsoft.com/library/a6460173-9507-4b87-8c07-d4ee245d715c).  
@@ -63,7 +53,7 @@ Eklenti ardışık düzeni türleriyle
 ## <a name="pipeline-activation-path"></a>Ardışık Düzen etkinleştirme yolu  
  Bir eklenti etkinleştirildiğinde etkinleştirme türleri aşağıda gösterilmektedir. Ayrıca bir hesaplama veya nesneler koleksiyonunu sonuçlarını gibi bir konağa nesneleri geçirme gösterir. Bu en tipik bir senaryodur.  
   
- ![Ekleme &#45; modelinde etkinleştirme yolu ile. ] (../../../docs/framework/add-ins/media/addin6.png "AddIn6")  
+ ![Ekleme&#45;modelinde etkinleştirme yolu ile. ] (../../../docs/framework/add-ins/media/addin6.png "AddIn6")  
 Ana bilgisayar için etkinleştirme yolu bileşeninden Ekle  
   
  Ardışık düzenin etkinleştirme yolu aşağıdaki gibidir:  

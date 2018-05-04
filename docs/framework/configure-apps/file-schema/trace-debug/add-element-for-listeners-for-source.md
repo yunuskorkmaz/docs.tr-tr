@@ -1,14 +1,6 @@
 ---
-title: "&lt;ekleme&gt; öğesi için &lt;dinleyicileri&gt; için &lt;kaynağı&gt;"
-ms.custom: 
+title: '&lt;ekleme&gt; öğesi için &lt;dinleyicileri&gt; için &lt;kaynağı&gt;'
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 f1_keywords:
 - http://schemas.microsoft.com/.NetConfiguration/v2.0#configuration/system.diagnostics/sources/source/listeners/add
 helpviewer_keywords:
@@ -16,17 +8,14 @@ helpviewer_keywords:
 - add element for <listeners> for <source>
 - <add> element for <listeners> for <source>
 ms.assetid: 4ce36ac1-81ef-48e8-b8b2-b5a5b0e2adcb
-caps.latest.revision: 
 author: mcleblanc
 ms.author: markl
 manager: markl
-ms.workload:
-- dotnet
-ms.openlocfilehash: 86177010d8ed70302b51ec9c416a3295009e7394
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: ba8ff652003a9167ec370643797ac9300b83889a
+ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="ltaddgt-element-for-ltlistenersgt-for-ltsourcegt"></a>&lt;ekleme&gt; öğesi için &lt;dinleyicileri&gt; için &lt;kaynağı&gt;
 Bir dinleyici ekler `Listeners` koleksiyonu için bir izleme kaynağı.  
@@ -57,7 +46,7 @@ Bir dinleyici ekler `Listeners` koleksiyonu için bir izleme kaynağı.
 |`initializeData`|İsteğe bağlı öznitelik.<br /><br /> Dize için belirtilen sınıf oluşturucuya geçirilen. A <xref:System.Configuration.ConfigurationException> sınıfı bir dize alır bir oluşturucuya sahip değilse oluşturulur.|  
 |`name`|İsteğe bağlı öznitelik.<br /><br /> Dinleyici adını belirtir.|  
 |`traceOutputOptions`|İsteğe bağlı öznitelik.<br /><br /> Belirtir <xref:System.Diagnostics.TraceListener.TraceOutputOptions%2A> İzleme dinleyicisi için özellik değeri.|  
-|[özel öznitelikler]|İsteğe bağlı öznitelik.<br /><br /> Tarafından tanımlanan dinleyici özel öznitelikleri için değer belirtir <xref:System.Diagnostics.TraceListener.GetSupportedAttributes%2A> bu dinleyici için yöntem. <xref:System.Diagnostics.DelimitedListTraceListener.Delimiter%2A>ek bir öznitelik için benzersiz örneğidir <xref:System.Diagnostics.DelimitedListTraceListener> sınıfı.|  
+|[özel öznitelikler]|İsteğe bağlı öznitelik.<br /><br /> Tarafından tanımlanan dinleyici özel öznitelikleri için değer belirtir <xref:System.Diagnostics.TraceListener.GetSupportedAttributes%2A> bu dinleyici için yöntem. <xref:System.Diagnostics.DelimitedListTraceListener.Delimiter%2A> ek bir öznitelik için benzersiz örneğidir <xref:System.Diagnostics.DelimitedListTraceListener> sınıfı.|  
   
 ### <a name="child-elements"></a>Alt Öğeler  
   

@@ -1,24 +1,12 @@
 ---
-title: "(Varlık SQL) kullanma"
-ms.custom: 
+title: (Varlık SQL) kullanma
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-ado
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 20f58b8f-6070-4456-b7e8-5ff3d6269273
-caps.latest.revision: "2"
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
-ms.workload: dotnet
-ms.openlocfilehash: d1a47102c7057918c981b53f920afef09b20afad
-ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
+ms.openlocfilehash: 89306c8b4c317ebaba0d964869c4fe9e1028631a
+ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="using-entity-sql"></a>(Varlık SQL) kullanma
 Ad alanları sorgu ifadesinde kullanılan belirtir.  

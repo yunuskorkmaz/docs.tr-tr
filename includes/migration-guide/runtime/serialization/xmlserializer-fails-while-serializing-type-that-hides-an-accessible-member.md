@@ -3,7 +3,7 @@
 |   |   |
 |---|---|
 |Ayrıntılar|Türetilmiş bir tür serileştirilirken <xref:System.Xml.Serialization.XmlSerializer?displayProperty=name> türü bir erişilemez alan veya ('new' anahtar sözcüğü) temel türde bir alan veya özellik, daha önce erişilebilir (Genel, örneğin) aynı ada sahip gizler özelliği içeriyorsa başarısız olabilir.|
-|Öneri|Yeni, gizleme üye için erişilebilir hale getirerek bu sorun çözülebilir <xref:System.Xml.Serialization.XmlSerializer?displayProperty=name> (göre ortak, örneğin işaretleme). Alternatif olarak, aşağıdaki yapılandırma ayarı 4.0 döner <xref:System.Xml.Serialization.XmlSerializer?displayProperty=name> sorunu düzeltir davranışı:<pre><code class="language-xml">&lt;system.xml.serialization&gt;&#13;&#10;&lt;xmlSerializer useLegacySerializerGeneration=&quot;true&quot; /&gt;&#13;&#10;&lt;/system.xml.serialization&gt;&#13;&#10;</code></pre>|
+|Öneri|Yeni, gizleme üye için erişilebilir hale getirerek bu sorun çözülebilir <xref:System.Xml.Serialization.XmlSerializer?displayProperty=name> (göre ortak, örneğin işaretleme). Alternatif olarak, aşağıdaki yapılandırma ayarı 4.0 döner <xref:System.Xml.Serialization.XmlSerializer?displayProperty=name> sorunu düzeltir davranışı:<pre><code class="lang-xml">&lt;system.xml.serialization&gt;&#13;&#10;&lt;xmlSerializer useLegacySerializerGeneration=&quot;true&quot; /&gt;&#13;&#10;&lt;/system.xml.serialization&gt;&#13;&#10;</code></pre>|
 |Kapsam|Küçük|
 |Sürüm|4,5|
 |Tür|Çalışma zamanı|

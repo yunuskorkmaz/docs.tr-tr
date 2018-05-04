@@ -1,28 +1,14 @@
 ---
 title: '&lt;wsFederationHttpBinding&gt;'
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 helpviewer_keywords:
 - wsFederationBinding element
 ms.assetid: 9c3312b4-2137-4e71-bf3f-de1cf8e9be79
-caps.latest.revision: ''
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: f5d4e55f7ad2d4a347d51c3cd79647c070c11e2d
-ms.sourcegitcommit: c883637b41ee028786edceece4fa872939d2e64c
+ms.openlocfilehash: d89d0aeb68aed91b28ca7358a6140e171d3b36b2
+ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/26/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="ltwsfederationhttpbindinggt"></a>&lt;wsFederationHttpBinding&gt;
 WS-Federasyon destekleyen bir bağlama tanımlar.  
@@ -140,7 +126,7 @@ wsFederationBinding öğesi
 |Öğe|Açıklama|  
 |-------------|-----------------|  
 |[\<Güvenlik >](../../../../../docs/framework/configure-apps/file-schema/wcf/security-of-wsfederationhttpbinding.md)|İleti için güvenlik ayarlarını tanımlar. Bu öğe türünde <xref:System.ServiceModel.Configuration.WSFederationHttpSecurityElement>.|  
-|[\<readerQuotas>](http://msdn.microsoft.com/library/3e5e42ff-cef8-478f-bf14-034449239bfd)|Bu bağlama ile yapılandırılan uç noktaları tarafından işlenen SOAP iletilerine karmaşıklığını kısıtlamalar tanımlar. Bu öğe türünde <xref:System.ServiceModel.Configuration.XmlDictionaryReaderQuotasElement>.|  
+|[\<readerQuotas >](http://msdn.microsoft.com/library/3e5e42ff-cef8-478f-bf14-034449239bfd)|Bu bağlama ile yapılandırılan uç noktaları tarafından işlenen SOAP iletilerine karmaşıklığını kısıtlamalar tanımlar. Bu öğe türünde <xref:System.ServiceModel.Configuration.XmlDictionaryReaderQuotasElement>.|  
 |[reliableSession](http://msdn.microsoft.com/library/9c93818a-7dfa-43d5-b3a1-1aafccf3a00b)|Güvenilir oturumlar kanal uç noktaları arasında kurulan olmadığını belirtir.|  
   
 ### <a name="parent-elements"></a>Üst Öğeler  
@@ -150,7 +136,7 @@ wsFederationBinding öğesi
 |[\<bağlamaları >](../../../../../docs/framework/configure-apps/file-schema/wcf/bindings.md)|Bu öğe, standart ve özel bağlamaları koleksiyonunu içerir.|  
   
 ## <a name="remarks"></a>Açıklamalar  
- Federasyon kimlikleri kimlik doğrulama ve yetkilendirme için birden çok sistemler arasında paylaşmak için yeteneğidir. Bu kimlikleri, kullanıcılar veya makinelerin başvurabilir. Karma mod güvenliği yanı sıra SOAP Güvenliği Federasyon HTTP destekler, ancak özel olarak taşıma güvenliği kullanımını desteklemez. Bu bağlama sağlar [!INCLUDE[indigo1](../../../../../includes/indigo1-md.md)] desteklemek için WS-Federasyon protokolü. Bu bağlama ile yapılandırılan hizmetler HTTP aktarımı kullanmanız gerekir.  
+ Federasyon kimlikleri kimlik doğrulama ve yetkilendirme için birden çok sistemler arasında paylaşmak için yeteneğidir. Bu kimlikleri, kullanıcılar veya makinelerin başvurabilir. Karma mod güvenliği yanı sıra SOAP Güvenliği Federasyon HTTP destekler, ancak özel olarak taşıma güvenliği kullanımını desteklemez. Bu bağlama WS-Federasyon protokolü için Windows Communication Foundation (WCF) desteği sağlar. Bu bağlama ile yapılandırılan hizmetler HTTP aktarımı kullanmanız gerekir.  
   
  Bağlamaları bağlama öğelerinin yığınını oluşur. Yığın öğelerini bağlama  
   

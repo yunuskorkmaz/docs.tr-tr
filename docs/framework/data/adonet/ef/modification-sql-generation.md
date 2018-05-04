@@ -1,24 +1,12 @@
 ---
-title: "Değişiklik SQL oluşturma"
-ms.custom: 
+title: Değişiklik SQL oluşturma
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-ado
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 2188a39d-46ed-4a8b-906a-c9f15e6fefd1
-caps.latest.revision: "3"
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
-ms.workload: dotnet
-ms.openlocfilehash: 6696d80246d61cc2eac47266837d79661141b9b0
-ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
+ms.openlocfilehash: b7bb390fd4e221c70d5ed8da5873c557fcde3c98
+ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="modification-sql-generation"></a>Değişiklik SQL oluşturma
 Bu bölüm için değiştirme SQL oluşturma modülü geliştirmek nasıl anlatır, (SQL:1999-uyumlu bir veritabanına) sağlayıcısı. Bu modül, uygun SQL INSERT, UPDATE veya DELETE deyimleri değişikliği komut ağacı çevirmek için sorumludur.  
@@ -38,9 +26,9 @@ Bu bölüm için değiştirme SQL oluşturma modülü geliştirmek nasıl anlat�
   
  DbModificationCommandTree ve tarafından üretilen bunun uygulamalarını [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] her zaman tek bir satır işlemi temsil eder. Bu bölümde, bu tür, .NET Framework sürüm 3.5 kısıtlamalar ile açıklanmaktadır.  
   
- ![Diagram](../../../../../docs/framework/data/adonet/ef/media/558ba7b3-dd19-48d0-b91e-30a76415bf5f.gif "558ba7b3-dd19-48d0-b91e-30a76415bf5f")  
+ ![Diyagram](../../../../../docs/framework/data/adonet/ef/media/558ba7b3-dd19-48d0-b91e-30a76415bf5f.gif "558ba7b3-dd19-48d0-b91e-30a76415bf5f")  
   
- DbModificationCommandTree has a Target property that represents the target set for the modification operation. Giriş kümesi tanımlar hedefin ifade özelliği her zaman DbScanExpression olur.  Bir DbScanExpression ya da bir tablo veya Görünüm gösterebilir veya meta veri özelliği, hedef "sorgu tanımlama" ise, bir veri kümesi null olmayan bir sorgu ile tanımlanan.  
+ DbModificationCommandTree değiştirme işlemi için ayarlanmış hedef temsil eden bir hedef özelliğine sahiptir. Giriş kümesi tanımlar hedefin ifade özelliği her zaman DbScanExpression olur.  Bir DbScanExpression ya da bir tablo veya Görünüm gösterebilir veya meta veri özelliği, hedef "sorgu tanımlama" ise, bir veri kümesi null olmayan bir sorgu ile tanımlanan.  
   
  Bir sorgu temsil eden bir DbScanExpression yalnızca bir sağlayıcı değiştirme hedefi olarak belirlenen modelde tanımlayan bir sorgu kullanarak tanımlandı, ancak hiçbir işlev karşılık gelen değiştirme işlemi için sağlanan ulaşabilir. Sağlayıcıları (SqlClient, örneğin, desteklemez) senaryosunu destekleyecek mümkün olmayabilir.  
   
@@ -76,7 +64,7 @@ The elements of the list are specified as type DbModificationClause, which speci
   
  Değer yeni değer özelliği güncelleştirileceği ile belirtir. Türü ya da DbConstantExpression veya DbNullExpression.  
   
-#### <a name="predicate-in-dbupdatecommandtree-and-dbdeletecommandtree"></a>Predicate in DbUpdateCommandTree and DbDeleteCommandTree  
+#### <a name="predicate-in-dbupdatecommandtree-and-dbdeletecommandtree"></a>DbUpdateCommandTree ve DbDeleteCommandTree karşılaştırma  
  Koşulu, hangi hedef koleksiyonun üyeleri güncelleştirilemez veya belirlemek için kullanılan koşulu belirtir. DbExpressions aşağıdaki alt kümesini yerleşik bir ifade ağacına şöyledir:  
   
 -   DbComparisonExpression tür aşağıda kısıtlı olarak DbPropertyExression olan sağ alt ve sol alt bir DbConstantExpression ile eşittir.  
@@ -85,7 +73,7 @@ The elements of the list are specified as type DbModificationClause, which speci
   
 -   Bir DbPropertyExpresison kısıtlı olarak üzerinden DbIsNullExpression  
   
--   DbPropertyExpression over a DbVariableReferenceExpression representing a reference to the Target of the corresponding DbModificationCommandTree.  
+-   Karşılık gelen DbModificationCommandTree hedef başvuru temsil eden bir DbVariableReferenceExpression üzerinden DbPropertyExpression.  
   
 -   DbAndExpression  
   
@@ -98,7 +86,7 @@ The elements of the list are specified as type DbModificationClause, which speci
   
  (SQL Generation\DmlSqlGenerator.cs dosyasında bulunur) örnek sağlayıcısı'nın değişikliği SQL oluşturma modülü giriş DbModificationCommandTree alır ve tek bir değişiklik büyük olasılıkla döndürmek için bir select deyimi tarafından izlenen SQL deyimini üreten bir DbModificationCommandTree tarafından belirtilen okuyucu. Hedef SQL Server veritabanı tarafından oluşturulan komutları şeklini etkileyeceğini unutmayın.  
   
-### <a name="helper-classes-expressiontranslator"></a>Helper Classes: ExpressionTranslator  
+### <a name="helper-classes-expressiontranslator"></a>Yardımcı sınıfları: ExpressionTranslator  
  Tüm değişiklik komut ağacı özelliklerinin DbExpression türünde bir ortak basit Çeviricisi ExpressionTranslator görür. Yalnızca değişikliği komut ağacı özelliklerini kısıtlı ifade türleri çevrilmesi destekler ve aklınızda belirli kısıtlamalar ile yapılandırılır.  
   
  Aşağıdaki bilgiler, belirli ifade türleri (Önemsiz çevirileri düğümleriyle göz ardı edilir) ziyaret açıklanır.  
@@ -115,7 +103,7 @@ The elements of the list are specified as type DbModificationClause, which speci
 ## <a name="generating-an-insert-sql-command"></a>Bir INSERT SQL komutu oluşturuluyor  
  Örnek Sağlayıcısı'nda belirtilen DbInsertCommandTree için oluşturulan INSERT komutu aşağıdaki iki Ekle şablonlarından birini izler.  
   
- İlk şablon SetClauses listesinde değerlerine göre Ekle gerçekleştirmek için bir komut var ve döndürme özelliği null olmayan, eklenen satır için döndürme özelliğinde belirtilen özellikleri döndürmek için bir SELECT deyimi. Koşul öğesi "@@ROWCOUNT > 0" bir satır eklediyseniz doğrudur. Koşul öğesi "keyMemberI = keyValueI &#124; SCOPE_IDENTITY() "şeklini alır" keyMemberI SCOPE_IDENTITY() = "yalnızca keyMemeberI depoda üretilmiş bir anahtarı ise çünkü SCOPE_IDENTITY() (depoda üretilmiş) bir kimlik sütununa eklenen son kimlik değeri döndürür.  
+ İlk şablon SetClauses listesinde değerlerine göre Ekle gerçekleştirmek için bir komut var ve döndürme özelliği null olmayan, eklenen satır için döndürme özelliğinde belirtilen özellikleri döndürmek için bir SELECT deyimi. Koşul öğesi "@@ROWCOUNT > 0" bir satır eklediyseniz doğrudur. Koşul öğesi "keyMemberI keyValueI = &#124; SCOPE_IDENTITY()" şeklini alır "keyMemberI SCOPE_IDENTITY() =" yalnızca SCOPE_IDENTITY() bir kimlik (eklenen son kimlik değer döndürdüğünden keyMemeberI depoda üretilmiş bir anahtarı ise depoda üretilmiş) sütun.  
   
 ```  
 -- first insert Template  

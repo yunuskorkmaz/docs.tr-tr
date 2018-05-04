@@ -1,13 +1,6 @@
 ---
-title: "&lt;system.Net&gt; öğesi (ağ ayarları)"
-ms.custom: 
+title: '&lt;system.Net&gt; öğesi (ağ ayarları)'
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 f1_keywords:
 - http://schemas.microsoft.com/.NetConfiguration/v2.0#system.Net
 - http://schemas.microsoft.com/.NetConfiguration/v2.0#configuration/system.Net
@@ -15,22 +8,20 @@ helpviewer_keywords:
 - system.Net element
 - <system.Net> element
 ms.assetid: 52de4d6c-b24d-44aa-ba7d-6b5061f1357e
-caps.latest.revision: "14"
 author: mcleblanc
 ms.author: markl
 manager: markl
-ms.workload: dotnet
-ms.openlocfilehash: 6140a5a66d39cbee3c2a8477dcab88aaa717e745
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: f9098ce379cbaf12f589270729018da399f282b0
+ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="ltsystemnetgt-element-network-settings"></a>&lt;system.Net&gt; öğesi (ağ ayarları)
 .NET Framework ağa nasıl bağlanacağını belirtin ayarları içerir.  
   
  \<Yapılandırma >  
-\<System.NET >  
+\<system.net>  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -61,7 +52,7 @@ ms.lasthandoff: 12/22/2017
   
 |**Öğesi**|**Açıklama**|  
 |-----------------|---------------------|  
-|[yapılandırma](../../../../../docs/framework/configure-apps/file-schema/configuration-element.md)|Tüm ad alanlarını ayarlarını içerir.|  
+|[Yapılandırma](../../../../../docs/framework/configure-apps/file-schema/configuration-element.md)|Tüm ad alanlarını ayarlarını içerir.|  
   
 ## <a name="remarks"></a>Açıklamalar  
  [ \<System.net >](../../../../../docs/framework/configure-apps/file-schema/network/system-net-element-network-settings.md) öğesi sınıfları için ayarları içeren <xref:System.Net> ve ilgili alt ad alanları. Kimlik doğrulama modülleri, bağlantı yönetimi, posta ayarları, proxy sunucusu ve Internet isteği modülleri Internet ana bilgisayarlardan bilgi almasına için ayarları yapılandırın.  

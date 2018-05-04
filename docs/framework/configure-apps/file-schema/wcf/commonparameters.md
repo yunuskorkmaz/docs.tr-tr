@@ -1,34 +1,22 @@
 ---
-title: '&lt;commonParameters&gt;'
-ms.custom: 
+title: '&lt;CommonParameters&gt;'
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: ffc20832-34d6-4622-8174-81924fd53514
-caps.latest.revision: "6"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: dcce701d8c051381317173b37fd37b840bcfa89d
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.openlocfilehash: 881a7d0890991aa4f542ff92c2a721b9d9cb7b29
+ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 05/03/2018
 ---
-# <a name="ltcommonparametersgt"></a>&lt;commonParameters&gt;
+# <a name="ltcommonparametersgt"></a>&lt;CommonParameters&gt;
 Birden fazla hizmet genel olarak kullanılan parametreleri koleksiyonunu temsil eder. Bu koleksiyon genellikle sürekli hizmetler tarafından paylaşılan veritabanı bağlantı dizesi içerir.  
   
  \<system.ServiceModel>  
 \<davranışları >  
 \<serviceBehaviors>  
-\<behavior>  
+\<davranışı >  
 \<İş akışı workflowRuntime >  
-\<commonParameters>  
+\<commonParameters >  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -50,13 +38,13 @@ Birden fazla hizmet genel olarak kullanılan parametreleri koleksiyonunu temsil 
   
 |Öğe|Açıklama|  
 |-------------|-----------------|  
-|[\<add>](../../../../../docs/framework/configure-apps/file-schema/wcf/add-of-commonparameters.md)|Bir ad-değer çifti koleksiyonuna Hizmetleri tarafından kullanılan ortak parametreler ekler.|  
+|[\<ekleme >](../../../../../docs/framework/configure-apps/file-schema/wcf/add-of-commonparameters.md)|Bir ad-değer çifti koleksiyonuna Hizmetleri tarafından kullanılan ortak parametreler ekler.|  
   
 ### <a name="parent-elements"></a>Üst Öğeler  
   
 |Öğe|Açıklama|  
 |-------------|-----------------|  
-|[\<İş akışı workflowRuntime >](../../../../../docs/framework/configure-apps/file-schema/wcf/workflowruntime.md)|Öğesinin bir örneği için ayarları belirtir <xref:System.Workflow.Runtime.WorkflowRuntime> iş akışı tabanlı barındırmak için [!INCLUDE[indigo1](../../../../../includes/indigo1-md.md)] Hizmetleri.|  
+|[\<İş akışı workflowRuntime >](../../../../../docs/framework/configure-apps/file-schema/wcf/workflowruntime.md)|Öğesinin bir örneği için ayarları belirtir <xref:System.Workflow.Runtime.WorkflowRuntime> iş akışı tabanlı Windows Communication Foundation (WCF) hizmetlerini barındıran için.|  
   
 ## <a name="remarks"></a>Açıklamalar  
  `<commonParameters>` Öğesi genel olarak birden fazla hizmet, örneğin kullanılan parametreleri tanımlar `ConnectionString` kullanırken <xref:System.Workflow.Runtime.Hosting.SharedConnectionWorkflowCommitWorkBatchService>.  
@@ -114,4 +102,4 @@ config.Save();
  <xref:System.Workflow.Runtime.Hosting.DefaultWorkflowCommitWorkBatchService>  
  <xref:System.Workflow.Runtime.Hosting.SqlWorkflowPersistenceService>  
  [İş akışı yapılandırma dosyaları](http://msdn.microsoft.com/library/ada4bb90-6c9d-4f3d-a9d0-b559bb0f9909)  
- [\<add>](../../../../../docs/framework/configure-apps/file-schema/wcf/add-of-commonparameters.md)
+ [\<ekleme >](../../../../../docs/framework/configure-apps/file-schema/wcf/add-of-commonparameters.md)

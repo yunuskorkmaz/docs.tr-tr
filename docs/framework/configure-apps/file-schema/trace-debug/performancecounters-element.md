@@ -1,13 +1,6 @@
 ---
-title: "&lt;performans sayaçları&gt; öğesi"
-ms.custom: 
+title: '&lt;performans sayaçları&gt; öğesi'
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 f1_keywords:
 - http://schemas.microsoft.com/.NetConfiguration/v2.0#configuration/system.diagnostics/performanceCounters
 - http://schemas.microsoft.com/.NetConfiguration/v2.0#performanceCounters
@@ -15,16 +8,14 @@ helpviewer_keywords:
 - performanceCounters element
 - <perfomanceCounters> element
 ms.assetid: a71f605b-c7d9-4501-a5c3-abcbb964a43f
-caps.latest.revision: "10"
 author: mcleblanc
 ms.author: markl
 manager: markl
-ms.workload: dotnet
-ms.openlocfilehash: 64afd62c6eeca7bce14e331fdc65fccfa3d02bce
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: cb4af08095c14c0c748a79f53104d8454d3dcd47
+ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="ltperformancecountersgt-element"></a>&lt;performans sayaçları&gt; öğesi
 Performans sayaçları tarafından paylaşılan genel bellek boyutunu belirtir.  
@@ -63,7 +54,7 @@ Performans sayaçları tarafından paylaşılan genel bellek boyutunu belirtir.
   
  Genel paylaşılan bellek boyutu yalnızca bir yapılandırma dosyası ile ayarlayabilirsiniz.  Varsayılan boyutu 524.288 bEvet en büyük boyutu 33,554,432 bayt ve minimum boyut 32.768 bayttır.  Genel paylaşılan bellek tüm işlemleri ve kategorileri tarafından paylaşılan olduğundan, ilk oluşturan boyutunu belirtir.  Uygulama yapılandırma dosyasında boyutu tanımlarsanız, uygulamanız yürütmek performans sayaçları neden olan ilk uygulama ise bu boyut yalnızca kullanılır.  Bu nedenle belirtmek için doğru konuma `filemappingsize` Machine.config dosyasının bir değerdir.  Genel paylaşılan bellek bellek performans sayacı örnekleri farklı adlara sahip çok sayıda oluşturduysanız genel paylaşılan bellek tükendi tek tek performans sayaçları tarafından sonuç bırakılamıyor.  
   
- Ayrı bir paylaşılan bellek boyutu için anahtar DWORD FileMappingSize değeri kayıt defterinde HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\\*\<kategori adı >*\Performance başvurusu ilk olarak, genel paylaşılan bellek yapılandırma dosyası için belirtilen değer arkasından. FileMappingSize değer yok sonra bir dördüncü kümesi ayrı bir paylaşılan bellek boyutu (1/4) yapılandırma dosyasında genel ayar.  
+ Ayrı bir paylaşılan bellek boyutu için anahtar DWORD FileMappingSize değeri kayıt defterinde HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\\*\<kategori adı >* \Performance başvurusu ilk olarak, genel paylaşılan bellek yapılandırma dosyası için belirtilen değer arkasından. FileMappingSize değer yok sonra bir dördüncü kümesi ayrı bir paylaşılan bellek boyutu (1/4) yapılandırma dosyasında genel ayar.  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
  <xref:System.Diagnostics.PerformanceCounter>  

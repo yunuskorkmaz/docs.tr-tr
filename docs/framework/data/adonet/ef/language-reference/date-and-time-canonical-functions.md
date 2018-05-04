@@ -1,30 +1,18 @@
 ---
-title: "Tarih ve saat kurallı işlevleri"
-ms.custom: 
+title: Tarih ve saat kurallı işlevleri
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-ado
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 9628b74f-1585-436a-b385-8b02ed0cdd63
-caps.latest.revision: "3"
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
-ms.workload: dotnet
-ms.openlocfilehash: 143962ec91ebd8b24141b94af522585dd572d7f0
-ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
+ms.openlocfilehash: 2e97d9f174b8b4dcb3a4b3ab12a57251548333a1
+ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="date-and-time-canonical-functions"></a>Tarih ve saat kurallı işlevleri
-[!INCLUDE[esql](../../../../../../includes/esql-md.md)]Tarih ve saat kurallı işlevler içerir.  
+[!INCLUDE[esql](../../../../../../includes/esql-md.md)] Tarih ve saat kurallı işlevler içerir.  
   
 ## <a name="remarks"></a>Açıklamalar  
- Aşağıdaki tablo tarih ve saati gösterir [!INCLUDE[esql](../../../../../../includes/esql-md.md)] kurallı işlevleri. `datetime`olan bir <xref:System.DateTime> değeri.  
+ Aşağıdaki tablo tarih ve saati gösterir [!INCLUDE[esql](../../../../../../includes/esql-md.md)] kurallı işlevleri. `datetime` olan bir <xref:System.DateTime> değeri.  
   
 |İşlev|Açıklama|  
 |--------------|-----------------|  
@@ -39,21 +27,21 @@ ms.lasthandoff: 01/17/2018
 |`AddYears(` `expression`, `number``)`|Belirtilen ekler `number` için yıllık `expression`.<br /><br /> **Bağımsız Değişkenler**<br /><br /> `expression`: `DateTime` veya `DateTimeOffset`.<br /><br /> `number`: `Int32`.<br /><br /> **Dönüş değeri**<br /><br /> Türü `expression`.|  
 |`CreateDateTime(` `year`, `month`, `day`, `hour`, `minute`, `second``)`|Yeni bir döndürür `DateTime` değeri geçerli tarih ve saat sunucunun saat diliminde sunucunun olarak.<br /><br /> **Bağımsız Değişkenler**<br /><br /> `year`, `month`, `day`, `hour`, `minute`: `Int16` ve `Int32`.<br /><br /> `second`: `Double`.<br /><br /> **Dönüş değeri**<br /><br /> A `DateTime`.|  
 |`CreateDateTimeOffset(` `year`, `month`, `day`, `hour`, `minute`, `second`, `tzoffset``)`|Yeni bir döndürür `DateTimeOffset` değeri olarak geçerli tarih ve saat sunucunun göre Eşgüdümlü Evrensel Saat (UTC).<br /><br /> **Bağımsız Değişkenler**<br /><br /> `year`, `month`, `day`, `hour`, `minute`, `tzoffset`: `Int32`.<br /><br /> `second`: `Double`.<br /><br /> **Dönüş değeri**<br /><br /> A `DateTimeOffset`.|  
-|`CreateTime(` `hour`, `minute`, `second``)`|Yeni bir döndürür `Time` değeri geçerli saati olarak.<br /><br /> **Bağımsız Değişkenler**<br /><br /> `hour`ve `minute`: `Int32`.<br /><br /> `second`: `Double`.<br /><br /> **Dönüş değeri**<br /><br /> A `Time`.|  
+|`CreateTime(` `hour`, `minute`, `second``)`|Yeni bir döndürür `Time` değeri geçerli saati olarak.<br /><br /> **Bağımsız Değişkenler**<br /><br /> `hour` ve `minute`: `Int32`.<br /><br /> `second`: `Double`.<br /><br /> **Dönüş değeri**<br /><br /> A `Time`.|  
 |`CurrentDateTime()`|Döndürür bir `DateTime` değeri geçerli tarih ve saat sunucunun saat diliminde sunucunun olarak.<br /><br /> **Dönüş değeri**<br /><br /> A `DateTime`.|  
 |`CurrentDateTimeOffset()`|Geçerli tarih, saat ve uygun şekilde döndüren bir `DateTimeOffset`.<br /><br /> **Dönüş değeri**<br /><br /> A `DateTimeOffset`.|  
 |`CurrentUtcDateTime()`|Döndürür bir <xref:System.DateTime> değeri geçerli tarih ve saat ZGİLERİ saat diliminde sunucunun olarak.<br /><br /> **Dönüş değeri**<br /><br /> A `DateTime`.|  
 |`Day(` `expression` `)`|Gün kısmını döndürür `expression` olarak bir `Int32` 1 ile 31 arasında.<br /><br /> **Bağımsız Değişkenler**<br /><br /> A `DateTime` ve `DateTimeOffset`.<br /><br /> **Dönüş değeri**<br /><br /> Bir `Int32`.<br /><br /> **Örnek**<br /><br /> `-- The following example returns 12.`<br /><br /> `Day(cast('03/12/1998' as DateTime))`|  
 |`DayOfYear(` `expression` `)`|Gün kısmını döndürür `expression` olarak bir `Int32` 1 ile 366 artık yıl son gündür döndürülen burada 366 arasında.<br /><br /> **Bağımsız Değişkenler**<br /><br /> A `DateTime` veya `DateTimeOffset`.<br /><br /> **Dönüş değeri**<br /><br /> Bir `Int32`.|  
-|`DiffNanoseconds(` `startExpression`, `endExpression``)`|Nanosaniye, fark arasında döndürür `startExpression` ve `endExpression`.<br /><br /> **Bağımsız Değişkenler**<br /><br /> `startExpression`, `endExpression`: `DateTime`, `DateTimeOffset`, veya `Time`. **Not:** `startExpression` ve `endExpression` aynı türde olmalıdır. <br /><br /> **Dönüş değeri**<br /><br /> Bir `Int32`.|  
-|`DiffMilliseconds(` `startExpression`, `endExpression``)`|Milisaniye cinsinden fark arasında döndürür `startExpression` ve `endExpression`.<br /><br /> **Bağımsız Değişkenler**<br /><br /> `startExpression`, `endExpression`: `DateTime`, `DateTimeOffset`, veya `Time`. **Not:** `startExpression` ve `endExpression` aynı türde olmalıdır. <br /><br /> **Dönüş değeri**<br /><br /> Bir `Int32`.|  
-|`DiffMicroseconds(` `startExpression`, `endExpression``)`|Mikrosaniye, fark arasında döndürür `startExpression` ve `endExpression`.<br /><br /> **Bağımsız Değişkenler**<br /><br /> `startExpression`, `endExpression`: `DateTime`, `DateTimeOffset`, veya `Time`. **Not:** `startExpression` ve `endExpression` aynı türde olmalıdır. <br /><br /> **Dönüş değeri**<br /><br /> Bir `Int32`.|  
-|`DiffSeconds(` `startExpression`, `endExpression``)`|Saniye cinsinden fark arasında döndürür `startExpression` ve `endExpression`.<br /><br /> **Bağımsız Değişkenler**<br /><br /> `startExpression`, `endExpression`: `DateTime`, `DateTimeOffset`, veya `Time`. **Not:** `startExpression` ve `endExpression` aynı türde olmalıdır. <br /><br /> **Dönüş değeri**<br /><br /> Bir `Int32`.|  
-|`DiffMinutes(` `startExpression`, `endExpression``)`|Dakika cinsinden fark arasında döndürür `startExpression` ve `endExpression`.<br /><br /> **Bağımsız Değişkenler**<br /><br /> `startExpression`, `endExpression`: `DateTime`, `DateTimeOffset`, veya `Time`. **Not:** `startExpression` ve `endExpression` aynı türde olmalıdır. <br /><br /> **Dönüş değeri**<br /><br /> Bir `Int32`.|  
-|`DiffHours(` `startExpression`, `endExpression``)`|Saat olarak fark arasında döndürür `startExpression` ve `endExpression`.<br /><br /> **Bağımsız Değişkenler**<br /><br /> `startExpression`, `endExpression`: `DateTime`, `DateTimeOffset`, veya `Time`. **Not:** `startExpression` ve `endExpression` aynı türde olmalıdır. <br /><br /> **Dönüş değeri**<br /><br /> Bir `Int32`.|  
-|`DiffDays(` `startExpression`, `endExpression``)`|Gün cinsinden fark arasında döndürür `startExpression` ve `endExpression`.<br /><br /> **Bağımsız Değişkenler**<br /><br /> `startExpression`, `endExpression`: `DateTime` veya `DateTimeOffset`. **Not:** `startExpression` ve `endExpression` aynı türde olmalıdır. <br /><br /> **Dönüş değeri**<br /><br /> Bir `Int32`.|  
-|`DiffMonths(` `startExpression`, `endExpression``)`|Ay içinde fark arasında döndürür `startExpression` ve `endExpression`.<br /><br /> **Bağımsız Değişkenler**<br /><br /> `startExpression`, `endExpression`: `DateTime` veya `DateTimeOffset`. **Not:** `startExpression` ve `endExpression` aynı türde olmalıdır. <br /><br /> **Dönüş değeri**<br /><br /> Bir `Int32`.|  
-|`DiffYears(` `startExpression`, `endExpression``)`|Yıllarda fark arasında döndürür `startExpression` ve `endExpression`.<br /><br /> **Bağımsız Değişkenler**<br /><br /> `startExpression`, `endExpression`: `DateTime` veya `DateTimeOffset`. **Not:** `startExpression` ve `endExpression` aynı türde olmalıdır. <br /><br /> **Dönüş değeri**<br /><br /> Bir `Int32`.|  
+|`DiffNanoseconds(` `startExpression`, `endExpression``)`|Nanosaniye, fark arasında döndürür `startExpression` ve `endExpression`.<br /><br /> **Bağımsız Değişkenler**<br /><br /> `startExpression`, `endExpression`: `DateTime`, `DateTimeOffset`, veya `Time`. **Not:** `startExpression` ve `endExpression` aynı türde olmalıdır.   <br /><br /> **Dönüş değeri**<br /><br /> Bir `Int32`.|  
+|`DiffMilliseconds(` `startExpression`, `endExpression``)`|Milisaniye cinsinden fark arasında döndürür `startExpression` ve `endExpression`.<br /><br /> **Bağımsız Değişkenler**<br /><br /> `startExpression`, `endExpression`: `DateTime`, `DateTimeOffset`, veya `Time`. **Not:** `startExpression` ve `endExpression` aynı türde olmalıdır.   <br /><br /> **Dönüş değeri**<br /><br /> Bir `Int32`.|  
+|`DiffMicroseconds(` `startExpression`, `endExpression``)`|Mikrosaniye, fark arasında döndürür `startExpression` ve `endExpression`.<br /><br /> **Bağımsız Değişkenler**<br /><br /> `startExpression`, `endExpression`: `DateTime`, `DateTimeOffset`, veya `Time`. **Not:** `startExpression` ve `endExpression` aynı türde olmalıdır.   <br /><br /> **Dönüş değeri**<br /><br /> Bir `Int32`.|  
+|`DiffSeconds(` `startExpression`, `endExpression``)`|Saniye cinsinden fark arasında döndürür `startExpression` ve `endExpression`.<br /><br /> **Bağımsız Değişkenler**<br /><br /> `startExpression`, `endExpression`: `DateTime`, `DateTimeOffset`, veya `Time`. **Not:** `startExpression` ve `endExpression` aynı türde olmalıdır.   <br /><br /> **Dönüş değeri**<br /><br /> Bir `Int32`.|  
+|`DiffMinutes(` `startExpression`, `endExpression``)`|Dakika cinsinden fark arasında döndürür `startExpression` ve `endExpression`.<br /><br /> **Bağımsız Değişkenler**<br /><br /> `startExpression`, `endExpression`: `DateTime`, `DateTimeOffset`, veya `Time`. **Not:** `startExpression` ve `endExpression` aynı türde olmalıdır.   <br /><br /> **Dönüş değeri**<br /><br /> Bir `Int32`.|  
+|`DiffHours(` `startExpression`, `endExpression``)`|Saat olarak fark arasında döndürür `startExpression` ve `endExpression`.<br /><br /> **Bağımsız Değişkenler**<br /><br /> `startExpression`, `endExpression`: `DateTime`, `DateTimeOffset`, veya `Time`. **Not:** `startExpression` ve `endExpression` aynı türde olmalıdır.   <br /><br /> **Dönüş değeri**<br /><br /> Bir `Int32`.|  
+|`DiffDays(` `startExpression`, `endExpression``)`|Gün cinsinden fark arasında döndürür `startExpression` ve `endExpression`.<br /><br /> **Bağımsız Değişkenler**<br /><br /> `startExpression`, `endExpression`: `DateTime` veya `DateTimeOffset`. **Not:** `startExpression` ve `endExpression` aynı türde olmalıdır.   <br /><br /> **Dönüş değeri**<br /><br /> Bir `Int32`.|  
+|`DiffMonths(` `startExpression`, `endExpression``)`|Ay içinde fark arasında döndürür `startExpression` ve `endExpression`.<br /><br /> **Bağımsız Değişkenler**<br /><br /> `startExpression`, `endExpression`: `DateTime` veya `DateTimeOffset`. **Not:** `startExpression` ve `endExpression` aynı türde olmalıdır.   <br /><br /> **Dönüş değeri**<br /><br /> Bir `Int32`.|  
+|`DiffYears(` `startExpression`, `endExpression``)`|Yıllarda fark arasında döndürür `startExpression` ve `endExpression`.<br /><br /> **Bağımsız Değişkenler**<br /><br /> `startExpression`, `endExpression`: `DateTime` veya `DateTimeOffset`. **Not:** `startExpression` ve `endExpression` aynı türde olmalıdır.   <br /><br /> **Dönüş değeri**<br /><br /> Bir `Int32`.|  
 |`GetTotalOffsetMinutes(` `datetimeoffset` `)`|Dakika sayısını döndürür `datetimeoffset` GMT uzaklığı. Bu, genellikle +780 ve-780 arasında. (+ veya - 13 SA). **Not:** bu işlev yalnızca SQL Server 2008'de desteklenir. <br /><br /> **Bağımsız Değişkenler**<br /><br /> A `DateTimeOffset`.<br /><br /> **Dönüş değeri**<br /><br /> Bir `Int32`.|  
 |`Hour (` `expression` `)`|Saat bölümünü döndürür `expression` olarak bir `Int32` 0 ile 23 arasında.<br /><br /> **Bağımsız Değişkenler**<br /><br /> A `DateTime, Time` ve `DateTimeOffset`.<br /><br /> **Örnek**<br /><br /> `-- The following example returns 22.`<br /><br /> `Hour(cast('22:35:5' as DateTime))`|  
 |`Millisecond(` `expression` `)`|Milisaniye bölümünü döndürür `expression` olarak bir `Int32` 0-999 arasında.<br /><br /> **Bağımsız Değişkenler**<br /><br /> A `DateTime, Time` ve `DateTimeOffset`.<br /><br /> **Dönüş değeri**<br /><br /> Bir `Int32`.|  

@@ -1,31 +1,20 @@
 ---
-title: "&lt;Clear&gt; öğesi için &lt;dinleyicileri&gt; için &lt;izleme&gt;"
-ms.custom: 
+title: '&lt;Clear&gt; öğesi için &lt;dinleyicileri&gt; için &lt;izleme&gt;'
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 f1_keywords:
 - http://schemas.microsoft.com/.NetConfiguration/v2.0#configuration/system.diagnostics/trace/listeners/clear
 helpviewer_keywords:
 - clear element for <listeners> for <trace>
 - <clear> element for <listeners> for <trace>
 ms.assetid: b44732a8-271f-4a06-ba9e-fe3298d6f192
-caps.latest.revision: 
 author: mcleblanc
 ms.author: markl
 manager: markl
-ms.workload:
-- dotnet
-ms.openlocfilehash: b2739cc5eaa6a1e43c06849e1b00f7ac8bd531e7
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 1705ed7cc847d60ecf8b42f4615d77f2cc569e21
+ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="ltcleargt-element-for-ltlistenersgt-for-lttracegt"></a>&lt;Clear&gt; öğesi için &lt;dinleyicileri&gt; için &lt;izleme&gt;
 Temizler `Listeners` izleme için koleksiyonu.  

@@ -1,24 +1,12 @@
 ---
-title: "&lt;messageSenderAuthentication&gt; öğesi"
-ms.custom: 
+title: '&lt;messageSenderAuthentication&gt; öğesi'
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 8d979dfc-a6f9-42ec-96d5-7fbc13a48118
-caps.latest.revision: "6"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 20d452a6aa9047032d989d62d6c1121d7edc5ee3
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.openlocfilehash: 898569796c65a7999583f4faba9f11a6172a5af8
+ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="ltmessagesenderauthenticationgt-element"></a>&lt;messageSenderAuthentication&gt; öğesi
 Eşler arası ileti gönderenler için kimlik doğrulama seçeneklerini belirtir.  
@@ -27,11 +15,11 @@ Eşler arası ileti gönderenler için kimlik doğrulama seçeneklerini belirtir
   
  \<system.ServiceModel>  
 \<davranışları >  
-\<endpointBehaviors>  
-\<behavior>  
-\<clientCredentials>  
+\<endpointBehaviors >  
+\<davranışı >  
+\<clientCredentials >  
 \<Eş >  
-\<messageSenderAuthentication>  
+\<messageSenderAuthentication >  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -56,7 +44,7 @@ trustedStoreLocation="CurrentUser/LocalMachine"
 |revocationMode|İptal edilen sertifika (CRL) listeler denetlemek için kullanılan modlarından birini.|  
 |trustedStoreLocation|İki sistem deposu konumlardan birini: `LocalMachine` veya `CurrentUser`. Bu değer, bir hizmet sertifikası istemciye anlaşıldığında kullanılır. Doğrulama işlemi gerçekleştirildiğinde karşı **güvenilir kişiler** belirtilen depo konumda saklayın.|  
   
-## <a name="customcertificatevalidatortype-attribute"></a>customCertificateValidatorType Attribute  
+## <a name="customcertificatevalidatortype-attribute"></a>customCertificateValidatorType özniteliği  
   
 |Değer|Açıklama|  
 |-----------|-----------------|  
@@ -74,7 +62,7 @@ trustedStoreLocation="CurrentUser/LocalMachine"
 |-----------|-----------------|  
 |Sabit Listesi|Aşağıdaki değerlerden birini: `NoCheck`, `Online`, `Offline`. Varsayılan, `Online` değeridir.<br /><br /> Daha fazla bilgi için bkz: [sertifikalarla çalışma](../../../../../docs/framework/wcf/feature-details/working-with-certificates.md).|  
   
-## <a name="trustedstorelocation-attribute"></a>trustedStoreLocation Attribute  
+## <a name="trustedstorelocation-attribute"></a>trustedStoreLocation özniteliği  
   
 |Değer|Açıklama|  
 |-----------|-----------------|  

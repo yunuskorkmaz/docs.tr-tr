@@ -1,35 +1,23 @@
 ---
-title: "Toplama işlevleri (varlık SQL)"
-ms.custom: 
+title: Toplama işlevleri (varlık SQL)
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-ado
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: acfd3149-f519-4c6e-8fe1-b21d243a0e58
-caps.latest.revision: "2"
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
-ms.workload: dotnet
-ms.openlocfilehash: e1ed9a7532269a149f6f522e8fe9c6161e1aae27
-ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
+ms.openlocfilehash: 63e366f323b38a24c4d067681b47d8a8b96125b2
+ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="aggregate-functions-entity-sql"></a>Toplama işlevleri (varlık SQL)
-Bir toplama skaler bir koleksiyona bir grup işleminin bir parçası olarak toplar bir dil yapıdır. [!INCLUDE[esql](../../../../../../includes/esql-md.md)]Toplamlar iki biçimde getirir:  
+Bir toplama skaler bir koleksiyona bir grup işleminin bir parçası olarak toplar bir dil yapıdır. [!INCLUDE[esql](../../../../../../includes/esql-md.md)] Toplamlar iki biçimde getirir:  
   
--   [!INCLUDE[esql](../../../../../../includes/esql-md.md)]bir ifadede herhangi bir yerde kullanılan işlevler koleksiyonu. Bu toplama işlevleri tahminleri ve hareket koşulları üzerinde koleksiyonları kullanarak içerir. Koleksiyon işlevlerdir Toplamaların belirtme tercih edilen modu [!INCLUDE[esql](../../../../../../includes/esql-md.md)].  
+-   [!INCLUDE[esql](../../../../../../includes/esql-md.md)] bir ifadede herhangi bir yerde kullanılan işlevler koleksiyonu. Bu toplama işlevleri tahminleri ve hareket koşulları üzerinde koleksiyonları kullanarak içerir. Koleksiyon işlevlerdir Toplamaların belirtme tercih edilen modu [!INCLUDE[esql](../../../../../../includes/esql-md.md)].  
   
 -   GROUP BY yan tümcesi bulunan sorgu ifadelerinde Grup toplar. Olarak [!INCLUDE[tsql](../../../../../../includes/tsql-md.md)], Grup toplamalar DISTINCT ve tüm değiştiricileri birleşik giriş olarak kabul edin.  
   
- [!INCLUDE[esql](../../../../../../includes/esql-md.md)]İlk ifade bir toplama işlevi olarak yorumlamaya çalışır ve ifade bir SELECT deyimi bağlamında, yorumlar, bir grup toplama olarak.  
+ [!INCLUDE[esql](../../../../../../includes/esql-md.md)] İlk ifade bir toplama işlevi olarak yorumlamaya çalışır ve ifade bir SELECT deyimi bağlamında, yorumlar, bir grup toplama olarak.  
   
- [!INCLUDE[esql](../../../../../../includes/esql-md.md)]adlı özel bir toplama işleci tanımlar [GROUPPARTITION](../../../../../../docs/framework/data/adonet/ef/language-reference/grouppartition-entity-sql.md). Bu işleç gruplandırılmış giriş ayarlamak için bir başvuru sağlar. GROUP BY yan tümcesi sonuçlarını Grup toplama veya toplama işlevleri başka yerde kullanıldığı bu sorgular, gruplandırma daha gelişmiş sağlar.  
+ [!INCLUDE[esql](../../../../../../includes/esql-md.md)] adlı özel bir toplama işleci tanımlar [GROUPPARTITION](../../../../../../docs/framework/data/adonet/ef/language-reference/grouppartition-entity-sql.md). Bu işleç gruplandırılmış giriş ayarlamak için bir başvuru sağlar. GROUP BY yan tümcesi sonuçlarını Grup toplama veya toplama işlevleri başka yerde kullanıldığı bu sorgular, gruplandırma daha gelişmiş sağlar.  
   
 ## <a name="collection-functions"></a>Toplama işlevleri  
  Toplama işlevleri koleksiyonlar üzerinde çalışır ve skaler bir değer döndürür. Örneğin, varsa `orders` tüm oluşan bir koleksiyondur `orders`, aşağıdaki ifade en erken sevk tarihi hesaplayabilirsiniz:  

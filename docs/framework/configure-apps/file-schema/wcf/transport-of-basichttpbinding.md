@@ -1,31 +1,19 @@
 ---
-title: "&lt;basicHttpBinding&gt; &lt;taşıma&gt;"
-ms.custom: 
+title: '&lt;basicHttpBinding&gt; &lt;taşıma&gt;'
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 4c5ba293-3d7e-47a6-b84e-e9022857b7e5
-caps.latest.revision: "18"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 7c6c0cf1b6eef441958931e4d722ba97980e5682
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.openlocfilehash: 0111a1f0b7697caa584cd7fc45ad6347207100ea
+ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="lttransportgt-of-ltbasichttpbindinggt"></a>&lt;basicHttpBinding&gt; &lt;taşıma&gt;
 HTTP taşıma için kimlik doğrulama parametrelerini denetleyen özellikler tanımlar.  
   
  \<system.ServiceModel>  
 \<bağlamaları >  
-\<basicHttpBinding>  
+\<basicHttpBinding >  
 \<bağlama >  
 \<Güvenlik >  
 \<taşıma >  
@@ -70,7 +58,7 @@ HTTP taşıma için kimlik doğrulama parametrelerini denetleyen özellikler tan
 |Yok.|İleti aktarımı sırasında sağlanmaz.|  
 |Temel|Temel kimlik doğrulaması belirtir.|  
 |Özet|Özet kimlik doğrulaması belirtir.|  
-|Ntlm|NTLM kimlik doğrulaması, mümkün olduğunda ve Windows kimlik doğrulaması başarısız olursa belirtir.|  
+|NTLM|NTLM kimlik doğrulaması, mümkün olduğunda ve Windows kimlik doğrulaması başarısız olursa belirtir.|  
 |Windows|Windows tümleşik kimlik doğrulaması belirtir.|  
   
 ## <a name="proxycredentialtype-attribute"></a>proxyCredentialType özniteliği  
@@ -80,7 +68,7 @@ HTTP taşıma için kimlik doğrulama parametrelerini denetleyen özellikler tan
 |Yok.|-Aktarım sırasında iletileri güvenli değil.|  
 |Temel|Temel kimlik doğrulaması RFC 2617 – HTTP kimlik doğrulaması tarafından tanımlandığı şekilde belirtir: temel ve Özet kimlik doğrulaması.|  
 |Özet|Özet kimlik doğrulaması RFC 2617 – HTTP kimlik doğrulaması tarafından tanımlandığı şekilde belirtir: temel ve Özet kimlik doğrulaması.|  
-|Ntlm|NTLM kimlik doğrulaması, mümkün olduğunda ve Windows kimlik doğrulaması başarısız olursa belirtir.|  
+|NTLM|NTLM kimlik doğrulaması, mümkün olduğunda ve Windows kimlik doğrulaması başarısız olursa belirtir.|  
 |Windows|Windows tümleşik kimlik doğrulaması belirtir.|  
 |Sertifika|Bir sertifika kullanarak istemci kimlik doğrulaması gerçekleştirir. Bu seçenek yalnızca çalışır `Mode` üst öznitelik `security` öğesi taşıma için ayarlanır ve TransportCredentialOnly için ayarlarsanız çalışmaz.|  
   

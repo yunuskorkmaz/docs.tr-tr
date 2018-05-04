@@ -1,27 +1,18 @@
 ---
-title: "&lt;applicationPool&gt; öğesi (Web Ayarları)"
-ms.custom: 
+title: '&lt;applicationPool&gt; öğesi (Web Ayarları)'
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - applicationPool element
 - <applicationPool> element
 ms.assetid: 46d1baaa-e343-4639-b70d-2a43a9f62b2a
-caps.latest.revision: "12"
 author: mcleblanc
 ms.author: markl
 manager: markl
-ms.workload: dotnet
-ms.openlocfilehash: d75e9eedf42523301b3c1745c05d90bcdafbdbf5
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.openlocfilehash: a2eafc6b5ad1446fd07518f877a8ec001ad8dbd6
+ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="ltapplicationpoolgt-element-web-settings"></a>&lt;applicationPool&gt; öğesi (Web Ayarları)
 Bir ASP.NET uygulaması Tümleşik modunda çalışan işlem genelinde yönetmek için ASP.NET tarafından kullanılan yapılandırma ayarlarını belirtir [!INCLUDE[iisver](../../../../../includes/iisver-md.md)] veya sonraki bir sürümü.  
@@ -60,7 +51,7 @@ Bir ASP.NET uygulaması Tümleşik modunda çalışan işlem genelinde yönetmek
   
 |Öğe|Açıklama|  
 |-------------|-----------------|  
-|[\<system.web>](../../../../../docs/framework/configure-apps/file-schema/web/system-web-element-web-settings.md)|ASP.NET ana bilgisayar uygulaması ile nasıl etkileşim kurduğunu hakkında bilgi içerir.|  
+|[\<System.Web >](../../../../../docs/framework/configure-apps/file-schema/web/system-web-element-web-settings.md)|ASP.NET ana bilgisayar uygulaması ile nasıl etkileşim kurduğunu hakkında bilgi içerir.|  
   
 ## <a name="remarks"></a>Açıklamalar  
  Çalıştırdığınızda [!INCLUDE[iisver](../../../../../includes/iisver-md.md)] veya sonraki bir sürümünü tümleşik modda bu öğe birleşimi, bir IIS uygulama havuzunda uygulama barındırıldığında ASP.NET iş parçacıkları ve Kuyruklar istekleri nasıl yönettiğini yapılandırmanıza olanak sağlar. IIS 6 çalıştırmak veya çalıştırdığınız [!INCLUDE[iisver](../../../../../includes/iisver-md.md)] bu ayarlar, Klasik modda veya ISAPI modunu göz ardı edilir.  
@@ -79,7 +70,7 @@ Bir ASP.NET uygulaması Tümleşik modunda çalışan işlem genelinde yönetmek
   
 -   Uygulama içinde barındırılan bir [!INCLUDE[iisver](../../../../../includes/iisver-md.md)] uygulama havuzu.  
   
--   [!INCLUDE[iisver](../../../../../includes/iisver-md.md)]Tümleşik modda çalışıyor.  
+-   [!INCLUDE[iisver](../../../../../includes/iisver-md.md)] Tümleşik modda çalışıyor.  
   
 -   Uygulamayı kullanarak [!INCLUDE[net_v35SP1_short](../../../../../includes/net-v35sp1-short-md.md)] veya sonraki bir sürümü.  
   

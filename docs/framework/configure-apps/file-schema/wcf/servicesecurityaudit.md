@@ -1,26 +1,14 @@
 ---
 title: '&lt;serviceSecurityAudit&gt;'
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: ba517369-a034-4f8e-a2c4-66517716062b
-caps.latest.revision: 
 author: BrucePerlerMS
-ms.author: bruceper
 manager: mbaldwin
-ms.workload:
-- dotnet
-ms.openlocfilehash: 25355acfd7bc82ccff33f68a690f3f02d1235438
-ms.sourcegitcommit: d3cfda0943364aaf6ccd574f55f584576c8a4fee
+ms.openlocfilehash: 293cd3118ace2e073933e4c124664c775902e7d8
+ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="ltservicesecurityauditgt"></a>&lt;serviceSecurityAudit&gt;
 Hizmet işlemleri sırasında güvenlik olaylarının denetlenmesini etkinleştirme ayarlarını belirtir.  
@@ -28,8 +16,8 @@ Hizmet işlemleri sırasında güvenlik olaylarının denetlenmesini etkinleşti
  \<system.ServiceModel>  
 \<davranışları >  
 \<serviceBehaviors>  
-\<behavior>  
-\<serviceSecurityAudit>  
+\<davranışı >  
+\<serviceSecurityAudit >  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -60,10 +48,10 @@ Hizmet işlemleri sırasında güvenlik olaylarının denetlenmesini etkinleşti
   
 |Öğe|Açıklama|  
 |-------------|-----------------|  
-|[\<behavior>](../../../../../docs/framework/configure-apps/file-schema/wcf/behavior-of-endpointbehaviors.md)|Bir davranış öğesi belirtir.|  
+|[\<davranışı >](../../../../../docs/framework/configure-apps/file-schema/wcf/behavior-of-endpointbehaviors.md)|Bir davranış öğesi belirtir.|  
   
 ## <a name="remarks"></a>Açıklamalar  
- Bu yapılandırma öğesi denetlemek için kullanılan [!INCLUDE[indigo1](../../../../../includes/indigo1-md.md)] kimlik doğrulama olayları. Denetim etkin olduğunda başarılı veya başarısız kimlik doğrulama girişimleri (ya da her ikisi de) denetlenebilir. Üç olay günlüklerini birine yazılır: uygulama, güvenlik veya işletim sistemi sürümü için varsayılan günlük. Olay günlüklerini tüm Windows Olay Görüntüleyicisi'ni kullanarak görüntülenebilir.  
+ Bu yapılandırma öğesi, Windows Communication Foundation (WCF) kimlik doğrulama olayları denetlemek için kullanılır. Denetim etkin olduğunda başarılı veya başarısız kimlik doğrulama girişimleri (ya da her ikisi de) denetlenebilir. Üç olay günlüklerini birine yazılır: uygulama, güvenlik veya işletim sistemi sürümü için varsayılan günlük. Olay günlüklerini tüm Windows Olay Görüntüleyicisi'ni kullanarak görüntülenebilir.  
   
  Bu yapılandırma öğesini kullanarak bir ayrıntılı örnek için bkz: [hizmet denetleme davranışı](../../../../../docs/framework/wcf/samples/service-auditing-behavior.md).  
   

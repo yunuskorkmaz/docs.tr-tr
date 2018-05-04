@@ -1,13 +1,6 @@
 ---
-title: "Nasıl yapılır: Tanımlayıcı Adlı Bir Derlemeye Başvurma"
-ms.custom: 
+title: 'Nasıl yapılır: Tanımlayıcı Adlı Bir Derlemeye Başvurma'
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-bcl
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -18,16 +11,13 @@ helpviewer_keywords:
 - assemblies [.NET Framework], strong-named
 - assembly binding, strong-named
 ms.assetid: 4c6a406a-b5eb-44fa-b4ed-4e95bb95a813
-caps.latest.revision: "14"
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: a5934f67387e29bfbd4f011ad2ba47f50d81b983
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 7f78fff50d1a227061076790ad77f17debe3f690
+ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="how-to-reference-a-strong-named-assembly"></a>Nasıl yapılır: Tanımlayıcı Adlı Bir Derlemeye Başvurma
 Başvuran türleri veya kesin adlandırılmış bir derleme kaynaklarında işlemi genellikle saydamdır. Başvuru (erken bağlama) derleme zamanında ya da çalışma zamanında yapabilirsiniz.  
@@ -55,7 +45,7 @@ csc /t:library myAssembly.cs /reference:myLibAssembly.dll
   
 1.  Tanımlayıcı adlı bir derleme çalışma zamanı başvuru yaptığınızda (kullanarak örneğin, <xref:System.Reflection.Assembly.Load%2A?displayProperty=nameWithType> veya <xref:System.Reflection.Assembly.GetType%2A?displayProperty=nameWithType> yöntemi), başvurulan derlemeyi tanımlayıcı adlı görünen adını kullanmanız gerekir. Bir görünen ad söz dizimi aşağıdaki gibidir:  
   
-     \<*derleme adı*>**,** \< *sürüm numarası*>**,** \<  *kültür*>**,** \< *ortak anahtar belirteci*>  
+     \<*derleme adı*>**,** \< *sürüm numarası*>**,** \< *kültür*  > **,** \< *ortak anahtar belirteci*>  
   
      Örneğin:  
   
@@ -73,11 +63,11 @@ csc /t:library myAssembly.cs /reference:myLibAssembly.dll
   
  Aşağıdaki kullanarak belirli bir derleme için ortak anahtar ve ortak anahtar belirteci, onaltılık biçimde yazdırabilirsiniz [tanımlayıcı ad (Sn.exe)](../../../docs/framework/tools/sn-exe-strong-name-tool.md) komutu:  
   
- **sn - Tp \<**  *derleme***>**  
+ **sn - Tp \<**  *derleme* **>**  
   
  Ortak bir anahtar dosyası varsa, bunun yerine aşağıdaki komutu kullanın (komut satırı seçeneğini kasasındaki fark unutmayın):  
   
- **sn - tp \<**  *derleme***>**  
+ **sn - tp \<**  *derleme* **>**  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
  [Kesin Adlandırılmış Bütünleştirilmiş Kodlar Oluşturma ve Kullanma](../../../docs/framework/app-domains/create-and-use-strong-named-assemblies.md)

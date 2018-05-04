@@ -1,13 +1,6 @@
 ---
-title: "Nasıl Yapılır: İstemci Uygulama Hizmetleri ile Kullanıcı Oturum Açma Adını Uygulama"
-ms.custom: 
+title: 'Nasıl Yapılır: İstemci Uygulama Hizmetleri ile Kullanıcı Oturum Açma Adını Uygulama'
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -16,16 +9,11 @@ helpviewer_keywords:
 - validation [.NET Framework], client application services
 - client application services, authenticate users
 ms.assetid: 5431a671-eb02-4e18-a651-24764fccec9a
-caps.latest.revision: "11"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 2bf073b6db0a69cfda0c69ae34df0396f5dea35c
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 1b1c5bebb5bd94f0a56dc6da303ef2503ab6dd4f
+ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="how-to-implement-user-login-with-client-application-services"></a>Nasıl Yapılır: İstemci Uygulama Hizmetleri ile Kullanıcı Oturum Açma Adını Uygulama
 İstemci uygulama hizmetleri varolan aracılığıyla kullanıcıları doğrulamak için kullanabileceğiniz [!INCLUDE[ajax_current_short](../../../includes/ajax-current-short-md.md)] profil hizmeti. Nasıl ayarlandığı hakkında bilgi için [!INCLUDE[ajax_current_short](../../../includes/ajax-current-short-md.md)] profil hizmet için bkz: [Microsoft Ajax ile form kimlik doğrulaması kullanarak](http://msdn.microsoft.com/library/c50f7dc5-323c-4c63-b4f3-96edfc1e815e).  

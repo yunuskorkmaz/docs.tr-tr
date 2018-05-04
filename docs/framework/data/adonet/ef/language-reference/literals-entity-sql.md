@@ -1,24 +1,12 @@
 ---
-title: "Değişmez değerler (varlık SQL)"
-ms.custom: 
+title: Değişmez değerler (varlık SQL)
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-ado
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 092ef693-6e5f-41b4-b868-5b9e82928abf
-caps.latest.revision: "4"
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
-ms.workload: dotnet
-ms.openlocfilehash: 7665d0cb2e3c0a3cff5f602e7b02c572a3dc341d
-ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
+ms.openlocfilehash: 90c065dff0f81a743cd66e224885de01f6129b56
+ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="literals-entity-sql"></a>Değişmez değerler (varlık SQL)
 Bu konuda açıklanmaktadır [!INCLUDE[esql](../../../../../../includes/esql-md.md)] desteklemek için hazır.  
@@ -78,7 +66,7 @@ TIME‘01:01:00.1234567’
 ```  
   
 ## <a name="datetimeoffset"></a>DateTimeOffset  
- Datetimeoffset sabit değeri yerel bağımsızdır ve oluşan bir tarih bölümü, bir saat bölümünü ve uzaklık bir parçası olur. Tüm tarih, saat ve uzaklık bölümleri zorunludur ve varsayılan değer yok. Bölümü YYYY-AA-YYYY 0001 ile 9999 arasında dört rakamlı yıl değeri olduğu, gg biçiminde olmalıdır tarih dd 1 ile 12 arasında ayı ve GG verilen ayı için geçerli olduğu gün değerdir. Saat bölümünü ss: dd biçiminde olmalıdır [: SS [.fffffff]] HH MM 0 ve 23 arasında saat değeri 0 ile 59, SS arasındaki dakika değerdir ikinci değer 0 ile 59 arasında olduğu ve fffffff olan 0 ile 9999999 arasında kesirli ikinci değer. Tüm değer aralıklar dahildir. Kesirli saniye isteğe bağlıdır. Kesirli saniye belirtilmedikçe saniye isteğe bağlıdır; Bu durumda, saniye gereklidir. Saniye veya kesir belirtilmezse, varsayılan değerin sıfır yerine kullanılır. Uzaklık bölümü biçiminde olmalıdır {+ &#124;-} ss: dd ss ve MM sahip olduğu saat bölümünü olduğu gibi aynı anlama. Uzaklık, ancak dizi-14 arasında olması gerekir: 00 ve + 14:00  
+ Datetimeoffset sabit değeri yerel bağımsızdır ve oluşan bir tarih bölümü, bir saat bölümünü ve uzaklık bir parçası olur. Tüm tarih, saat ve uzaklık bölümleri zorunludur ve varsayılan değer yok. Bölümü YYYY-AA-YYYY 0001 ile 9999 arasında dört rakamlı yıl değeri olduğu, gg biçiminde olmalıdır tarih dd 1 ile 12 arasında ayı ve GG verilen ayı için geçerli olduğu gün değerdir. Saat bölümünü ss: dd biçiminde olmalıdır [: SS [.fffffff]] HH MM 0 ve 23 arasında saat değeri 0 ile 59, SS arasındaki dakika değerdir ikinci değer 0 ile 59 arasında olduğu ve fffffff olan 0 ile 9999999 arasında kesirli ikinci değer. Tüm değer aralıklar dahildir. Kesirli saniye isteğe bağlıdır. Kesirli saniye belirtilmedikçe saniye isteğe bağlıdır; Bu durumda, saniye gereklidir. Saniye veya kesir belirtilmezse, varsayılan değerin sıfır yerine kullanılır. Uzaklık bölümü biçiminde olmalıdır {+&#124;-} ss: dd ss ve MM sahip olduğu saat bölümünü olduğu gibi aynı anlama. Uzaklık, ancak dizi-14 arasında olması gerekir: 00 ve + 14:00  
   
  DATETIMEOFFSET simgesi ve hazır değer yükü, ancak hiç yeni satır arasında boşluk herhangi bir sayıda olabilir.  
   

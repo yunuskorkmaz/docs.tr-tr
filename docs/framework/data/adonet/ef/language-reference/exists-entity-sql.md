@@ -1,24 +1,12 @@
 ---
-title: "(Varlık SQL) var."
-ms.custom: 
+title: (Varlık SQL) var.
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-ado
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: d28ead43-4afb-4bdc-af64-efd2e05005d7
-caps.latest.revision: "3"
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
-ms.workload: dotnet
-ms.openlocfilehash: 225487f6a0d7ec29689c01dd6355e7ba1aa6883e
-ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
+ms.openlocfilehash: d42b1c227362b13124f4bb21e55b6fda07f9c5ff
+ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="exists-entity-sql"></a>(Varlık SQL) var.
 Bir koleksiyonu boş olup olmadığını belirler.  
@@ -33,11 +21,11 @@ Bir koleksiyonu boş olup olmadığını belirler.
  `expression`  
  Bir koleksiyonu döndüren herhangi geçerli bir ifade.  
   
- NOT  
+ DEĞİL  
  EXISTS sonucunu tasarruflarını belirtir.  
   
 ## <a name="return-value"></a>Dönüş Değeri  
- `true`koleksiyon boş değilse; Aksi takdirde `false`.  
+ `true` koleksiyon boş değilse; Aksi takdirde `false`.  
   
 ## <a name="remarks"></a>Açıklamalar  
  EXISTS biridir [!INCLUDE[esql](../../../../../../includes/esql-md.md)] işleçleri ayarlayın. Tüm [!INCLUDE[esql](../../../../../../includes/esql-md.md)] kümesi işleçleri soldan sağa değerlendirilir. Öncelik bilgilerini [!INCLUDE[esql](../../../../../../includes/esql-md.md)] işleçleri, bakın [EXCEPT](../../../../../../docs/framework/data/adonet/ef/language-reference/except-entity-sql.md).  

@@ -1,26 +1,17 @@
 ---
-title: "Windows Forms yapılandırma öğesi Ekle"
-ms.custom: 
+title: Windows Forms yapılandırma öğesi Ekle
 ms.date: 04/07/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - Windows Forms Add configuration element
 - configuring Windows Forms applications
 ms.assetid: 3e3e04de-99d1-4658-b716-44cb669d9589
-caps.latest.revision: "10"
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 331b2238ae87776938422484d34bb68b4653a56e
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 529dbccd5ddb4dd1f1456fb9a6043f3c5f7b378d
+ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="windows-forms-add-configuration-element"></a>Windows Forms yapılandırma öğesi Ekle
 
@@ -45,19 +36,19 @@ ms.lasthandoff: 12/22/2017
 | `key`     | Gerekli öznitelik. Belirli bir Windows Forms özelleştirilebilir özellik karşılık gelen önceden tanımlanmış bir anahtar adı. |
 | `value`   | Gerekli öznitelik. Değer atamak için `key`. |
 
-### <a name="key-attribute-names-and-associated-values"></a>`key`öznitelik adları ve ilişkili değerleri
+### <a name="key-attribute-names-and-associated-values"></a>`key` öznitelik adları ve ilişkili değerleri
 
-| `key`adı | Değerler | Açıklama |
+| `key` Adı | Değerler | Açıklama |
 | ---------- | ------ | ----------- |
-| "AnchorLayout.DisableSinglePassControlScaling" | "true" &#124;" false" | Bağlantılı denetimleri tek geçişte ölçeklenir olup olmadığını gösterir. tek devre dışı bırakmak için "true" ölçeklendirme geçirin; Aksi takdirde false. "Tek geçirmek ölçeklendirme" bölümüne bakın [açıklamalar](#Remarks) daha fazla bilgi için. |
-| "DpiAwareness" | "PerMonitorV2" &#124;" false" | Bir uygulama DPI olup olmadığını gösterir. DPI tanıma; desteklemek için "PerMonitorV2" anahtarına ayarlayın Aksi takdirde, "false" olarak ayarlanmış. DPI tanıma, bir katılımı özelliğidir; Windows Forms yüksek DPI desteğinin yararlanmak için "PerMonitorV2" değerine ayarlamanız gerekir. Bkz: [açıklamalar](#remarks) daha fazla bilgi için bölüm. |
-| "CheckedListBox.DisableHighDpiImprovements" | "true" &#124;" false" | Gösterir olup olmadığını <xref:System.Windows.Forms.CheckedListBox> denetim .NET Framework 4.7 sunulan ölçekleme ve düzeni geliştirmeleri avantajlarından yararlanır. "true" caling ve düzeni geliştirmeleri dışında kabul etmek için; Aksi durumda, "false". |
-| "DataGridView.DisableHighDpiImprovements" | "true" &#124;" false" | Gösterir olup olmadığını <xref:System.Windows.Forms.DataGridView> denetlemek .NET Framework 4.7 sunulan ölçekleme ve düzeni geliştirmeleri. "true" DPI tanıma dışında kabul etmek için; "false" Aksi takdirde. |
-| "DisableDpiChangedMessageHandling" | "true" &#124;" false" | "true" değişiklikleri ölçeklendirme DPI ilgili iletileri alma dışında kabul etmek için; "false" Aksi takdirde. Bkz: [açıklamalar](#remarks) daha fazla bilgi için bölüm. |
-| "EnableWindowsFormsHighDpiAutoResizing" | "true" &#124;" false" | Bir Windows Forms uygulaması DPI ölçeklendirme değişiklikler nedeniyle otomatik olarak yeniden boyutlandırılır olup olmadığını gösterir. "true" otomatik yeniden boyutlandırma etkinleştirmek için; Aksi takdirde false. |
-| "Form.DisableSinglePassControlScaling" | "true" &#124;" false" | Gösterir olup olmadığını <xref:System.Windows.Forms.Form> tek geçişte ölçeklendirilir. devre dışı bırakmak için "true" tek ölçeklendirme geçiş; Aksi takdirde false. "Tek geçirmek ölçeklendirme" bölümüne bakın [açıklamalar](#Remarks) daha fazla bilgi için. |
-| "MonthCalendar.DisableSinglePassControlScaling" | "true" &#124;" false" | Gösterir olup olmadığını <xref:System.Windows.Forms.MonthCalendar> denetim tek geçişte ölçeklendirilebilir. devre dışı bırakmak için "true" tek ölçeklendirme geçiş; Aksi takdirde false. "Tek geçirmek ölçeklendirme" bölümüne bakın [açıklamalar](#Remarks) daha fazla bilgi için. |
-| "Toolstrip.DisableHighDpiImprovements" | "true" &#124;" false" | Gösterir olup olmadığını <xref:System.Windows.Forms.ToolStrip> denetim .NET Framework 4.7 sunulan ölçekleme ve düzeni geliştirmeleri avantajlarından yararlanır. "true" DPI tanıma dışında kabul etmek için; "false" Aksi takdirde. |
+| "AnchorLayout.DisableSinglePassControlScaling" | "true"&#124;"false" | Bağlantılı denetimleri tek geçişte ölçeklenir olup olmadığını gösterir. tek devre dışı bırakmak için "true" ölçeklendirme geçirin; Aksi takdirde false. "Tek geçirmek ölçeklendirme" bölümüne bakın [açıklamalar](#Remarks) daha fazla bilgi için. |
+| "DpiAwareness" | "PerMonitorV2"&#124;"false" | Bir uygulama DPI olup olmadığını gösterir. DPI tanıma; desteklemek için "PerMonitorV2" anahtarına ayarlayın Aksi takdirde, "false" olarak ayarlanmış. DPI tanıma, bir katılımı özelliğidir; Windows Forms yüksek DPI desteğinin yararlanmak için "PerMonitorV2" değerine ayarlamanız gerekir. Bkz: [açıklamalar](#remarks) daha fazla bilgi için bölüm. |
+| "CheckedListBox.DisableHighDpiImprovements" | "true"&#124;"false" | Gösterir olup olmadığını <xref:System.Windows.Forms.CheckedListBox> denetim .NET Framework 4.7 sunulan ölçekleme ve düzeni geliştirmeleri avantajlarından yararlanır. "true" caling ve düzeni geliştirmeleri dışında kabul etmek için; Aksi durumda, "false". |
+| "DataGridView.DisableHighDpiImprovements" | "true"&#124;"false" | Gösterir olup olmadığını <xref:System.Windows.Forms.DataGridView> denetlemek .NET Framework 4.7 sunulan ölçekleme ve düzeni geliştirmeleri. "true" DPI tanıma dışında kabul etmek için; "false" Aksi takdirde. |
+| "DisableDpiChangedMessageHandling" | "true"&#124;"false" | "true" değişiklikleri ölçeklendirme DPI ilgili iletileri alma dışında kabul etmek için; "false" Aksi takdirde. Bkz: [açıklamalar](#remarks) daha fazla bilgi için bölüm. |
+| "EnableWindowsFormsHighDpiAutoResizing" | "true"&#124;"false" | Bir Windows Forms uygulaması DPI ölçeklendirme değişiklikler nedeniyle otomatik olarak yeniden boyutlandırılır olup olmadığını gösterir. "true" otomatik yeniden boyutlandırma etkinleştirmek için; Aksi takdirde false. |
+| "Form.DisableSinglePassControlScaling" | "true"&#124;"false" | Gösterir olup olmadığını <xref:System.Windows.Forms.Form> tek geçişte ölçeklendirilir. devre dışı bırakmak için "true" tek ölçeklendirme geçiş; Aksi takdirde false. "Tek geçirmek ölçeklendirme" bölümüne bakın [açıklamalar](#Remarks) daha fazla bilgi için. |
+| "MonthCalendar.DisableSinglePassControlScaling" | "true"&#124;"false" | Gösterir olup olmadığını <xref:System.Windows.Forms.MonthCalendar> denetim tek geçişte ölçeklendirilebilir. devre dışı bırakmak için "true" tek ölçeklendirme geçiş; Aksi takdirde false. "Tek geçirmek ölçeklendirme" bölümüne bakın [açıklamalar](#Remarks) daha fazla bilgi için. |
+| "Toolstrip.DisableHighDpiImprovements" | "true"&#124;"false" | Gösterir olup olmadığını <xref:System.Windows.Forms.ToolStrip> denetim .NET Framework 4.7 sunulan ölçekleme ve düzeni geliştirmeleri avantajlarından yararlanır. "true" DPI tanıma dışında kabul etmek için; "false" Aksi takdirde. |
 
 ### <a name="child-elements"></a>Alt öğeleri
 
@@ -69,7 +60,7 @@ Yok.
 | ------- | ----------- |
 | [`<System.Windows.Forms.ApplicationConfigurationSection>`](../../../../../docs/framework/configure-apps/file-schema/winforms/index.md) | Yeni Windows Forms uygulaması özellikleri için destek yapılandırır. |
 
-## <a name="a-nameremarks--remarks"></a><a name="remarks" />Açıklamalar
+## <a name="a-nameremarks--remarks"></a><a name="remarks" /> Açıklamalar
 
 .NET Framework 4.7 ile başlayan `<System.Windows.Forms.ApplicationConfigurationSection>` öğesi, .NET Framework'ün en son sürümlerde eklenen özelliklerden yararlanmak için Windows Forms uygulamaları yapılandırmanıza olanak sağlar. 
 

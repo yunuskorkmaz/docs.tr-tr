@@ -1,24 +1,12 @@
 ---
-title: "(Varlık gibi SQL)"
-ms.custom: 
+title: (Varlık gibi SQL)
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-ado
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 8300e6d2-875b-481e-9ef4-e1e7c12d46fa
-caps.latest.revision: "4"
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
-ms.workload: dotnet
-ms.openlocfilehash: 021a999e79239e3da5c874cb459ac7f03fdb5661
-ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
+ms.openlocfilehash: f2d06b364c577b581bb64af0436c133ca830bb2b
+ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="like-entity-sql"></a>(Varlık gibi SQL)
 Belirli bir karakteri olup olmadığını belirleyen `String` belirtilen desenle eşleşir.  
@@ -39,23 +27,23 @@ match [NOT] LIKE pattern [ESCAPE escape]
  `escape`  
  Bir kaçış karakteri.  
   
- NOT  
+ DEĞİL  
  BENZER sonucunu tasarruflarını belirtir.  
   
 ## <a name="return-value"></a>Dönüş Değeri  
- `true`varsa `string` desenle eşleşen; Aksi halde, `false`.  
+ `true` varsa `string` desenle eşleşen; Aksi halde, `false`.  
   
 ## <a name="remarks"></a>Açıklamalar  
- [!INCLUDE[esql](../../../../../../includes/esql-md.md)]LIKE işleci kullanan ifadeler çok eşitlik filtre ölçütü olarak kullanan ifadeler aynı şekilde değerlendirilir. Ancak, [!INCLUDE[esql](../../../../../../includes/esql-md.md)] LIKE işleci kullanan ifadeler değişmez değerleri ve joker karakterleri içerebilir.  
+ [!INCLUDE[esql](../../../../../../includes/esql-md.md)] LIKE işleci kullanan ifadeler çok eşitlik filtre ölçütü olarak kullanan ifadeler aynı şekilde değerlendirilir. Ancak, [!INCLUDE[esql](../../../../../../includes/esql-md.md)] LIKE işleci kullanan ifadeler değişmez değerleri ve joker karakterleri içerebilir.  
   
  Aşağıdaki tablo düzeni söz dizimi açıklanmıştır `string`.  
   
 |Joker Karakter|Açıklama|Örnek|  
 |------------------------|-----------------|-------------|  
-|%|Tüm `string` sıfır veya daha fazla karakter.|`title like '%computer%'`word sahip tüm başlıkları bulur `"computer"` başlığı başka bir yerindeki.|  
-|_ (alt çizgi)|Herhangi bir tek karakteri.|`firstname like '_ean'`tüm dört harfli ilk ile biten adlarını bulur `"ean`, "Deniz veya Gamze gibi.|  
-|[ ]|Tüm tek belirtilen aralıkta ([a-f]) karakter veya ([abcdef]) ayarlayın.|`lastname like '[C-P]arsen'`bulur, "arsen" ile biten ve Carsen veya Etikan gibi P ile C arasındaki herhangi bir tek karakteri ile başlayan son adları.|  
-|[^]|Tek bir karakter belirtilen aralık içinde değil ([^ a-f]) veya ayarlayın ([^ abcdef]).|`lastname like 'de[^l]%'`"de" ile başlamalı ve şu harfini olarak "m" dahil etmeyin, tüm son adlarını bulur.|  
+|%|Tüm `string` sıfır veya daha fazla karakter.|`title like '%computer%'` word sahip tüm başlıkları bulur `"computer"` başlığı başka bir yerindeki.|  
+|_ (alt çizgi)|Herhangi bir tek karakteri.|`firstname like '_ean'` tüm dört harfli ilk ile biten adlarını bulur `"ean`, "Deniz veya Gamze gibi.|  
+|[ ]|Tüm tek belirtilen aralıkta ([a-f]) karakter veya ([abcdef]) ayarlayın.|`lastname like '[C-P]arsen'` bulur, "arsen" ile biten ve Carsen veya Etikan gibi P ile C arasındaki herhangi bir tek karakteri ile başlayan son adları.|  
+|[^]|Tek bir karakter belirtilen aralık içinde değil ([^ a-f]) veya ayarlayın ([^ abcdef]).|`lastname like 'de[^l]%'` "de" ile başlamalı ve şu harfini olarak "m" dahil etmeyin, tüm son adlarını bulur.|  
   
 > [!NOTE]
 >  [!INCLUDE[esql](../../../../../../includes/esql-md.md)] İşleci ve çıkış yan tümcesi uygulanamaz gibi `System.DateTime` veya `System.Guid` değerleri.  

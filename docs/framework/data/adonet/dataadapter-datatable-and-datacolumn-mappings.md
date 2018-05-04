@@ -1,27 +1,15 @@
 ---
-title: "DataAdapter DataTable ve DataColumn eşlemeleri"
-ms.custom: 
+title: DataAdapter DataTable ve DataColumn eşlemeleri
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-ado
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
 ms.assetid: d023260a-a66a-4c39-b8f4-090cd130e730
-caps.latest.revision: "3"
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
-ms.workload: dotnet
-ms.openlocfilehash: e104ba75026c2ff387eb7c74b11c505e34085f41
-ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
+ms.openlocfilehash: 1b426dbcdc78ecfddeac003616993849ce60b89c
+ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="dataadapter-datatable-and-datacolumn-mappings"></a>DataAdapter DataTable ve DataColumn eşlemeleri
 A **DataAdapter** sıfır veya daha fazla koleksiyonu içeren <xref:System.Data.Common.DataTableMapping> nesnelerini kendi **TableMappings** özelliği. A **DataTableMapping** bir veri kaynağına karşı sorgu sağlayıcıdan döndürülen verileri arasında ana bir eşleme sağlar ve bir <xref:System.Data.DataTable>. **DataTableMapping** adı yerine geçirilebilir **DataTable** için ad **doldurun** yöntemi **DataAdapter**. Aşağıdaki örnekte bir **DataTableMapping** adlı **AuthorsMapping** için **yazarlar** tablo.  

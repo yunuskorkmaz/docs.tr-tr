@@ -1,24 +1,12 @@
 ---
-title: "CREATEREF (varlık SQL)"
-ms.custom: 
+title: CREATEREF (varlık SQL)
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-ado
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 489828cf-a335-4449-9360-b0d92eec5481
-caps.latest.revision: "3"
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
-ms.workload: dotnet
-ms.openlocfilehash: 8de4266277be31fd51411d4b994f1b5de45f13df
-ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
+ms.openlocfilehash: 44954dcc1f3407a768ba23fe87ac4b4abcf1bac5
+ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="createref-entity-sql"></a>CREATEREF (varlık SQL)
 Bir entityset varlık başvuruları fabricates.  
@@ -37,7 +25,7 @@ CreateRef(entityset_identifier, row_typed_expression)
  Varlık türünün temel özelliklerine karşılık gelen bir satır yazılan bir ifade.  
   
 ## <a name="remarks"></a>Açıklamalar  
- `row_typed_expression`varlık için anahtar türü yapısal olarak eşdeğer olmalıdır. Diğer bir deyişle, aynı sayısı ve türleri alanları varlık anahtarları aynı sırada olmalıdır.  
+ `row_typed_expression` varlık için anahtar türü yapısal olarak eşdeğer olmalıdır. Diğer bir deyişle, aynı sayısı ve türleri alanları varlık anahtarları aynı sırada olmalıdır.  
   
  Aşağıdaki örnekte, siparişler ve BadOrders her iki entityset'i sipariş türünde olan ve kimliği sipariş tek anahtar özelliği olarak kabul edilir. Örnek nasıl biz BadOrders içinde bir varlığa bir başvuru üretebilir gösterir. Başvuru sarkan unutmayın.  Diğer bir deyişle, başvuru gerçekte belirli bir varlık tanımlayabilir değil. Bu durumlarda, bir `DEREF` bu başvuruyu işlemi null döndürür.  
   

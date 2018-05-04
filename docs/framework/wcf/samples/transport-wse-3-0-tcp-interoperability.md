@@ -16,14 +16,14 @@ ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: 510d523cea78aa16a16adc8572c839e95059c068
-ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
-ms.translationtype: MT
+ms.openlocfilehash: 9ce948a9239e7a8171424fa9f1cf0fa8624d0156
+ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/28/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="transport-wse-30-tcp-interoperability"></a>Taşıma: WSE 3.0 TCP Birlikte Çalışabilirlik
-WSE 3.0 TCP birlikte çalışabilirlik aktarım örnek TCP çift yönlü oturum özel olarak uygulamak gösterilmiştir [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] taşıma. Kanal katmanını genişletilebilirlik arabirimine varolan dağıtılan sistemleriyle kablo üzerinden nasıl kullanabileceğinizi gösterir. Aşağıdaki adımlar, bu özel nasıl oluşturulacağını gösterir [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] taşıma:  
+WSE 3.0 TCP birlikte çalışabilirlik taşıma örneği, TCP çift yönlü oturum özel bir Windows Communication Foundation (WCF) taşıma olarak uygulamak gösterilmiştir. Kanal katmanını genişletilebilirlik arabirimine varolan dağıtılan sistemleriyle kablo üzerinden nasıl kullanabileceğinizi gösterir. Aşağıdaki adımlar, bu özel nasıl oluşturulacağını gösterir [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] taşıma:  
   
 1.  Bir TCP yuvası ile başlayarak, istemci ve sunucu uygulamaları oluşturma <xref:System.ServiceModel.Channels.IDuplexSessionChannel> , DIME çerçeveleme ileti sınırlarını tanımlamak için kullanın.  
   

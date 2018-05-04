@@ -1,24 +1,12 @@
 ---
-title: "Grup (varlığıyla, SQL)"
-ms.custom: 
+title: Grup (varlığıyla, SQL)
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-ado
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: cf4f4972-4724-4945-ba44-943a08549139
-caps.latest.revision: "3"
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
-ms.workload: dotnet
-ms.openlocfilehash: ae83bfdadc9952cb8c3f8307fc8042c8e5d35b54
-ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
+ms.openlocfilehash: 3b5edee08afef8418f19df433223818218ae909d
+ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="group-by-entity-sql"></a>Grup (varlığıyla, SQL)
 Bir sorgu tarafından döndürülen hangi nesneleri içine grupları belirtir ([seçin](../../../../../../docs/framework/data/adonet/ef/language-reference/select-entity-sql.md)) ifade olan yerleştirilecek.  
@@ -31,7 +19,7 @@ Bir sorgu tarafından döndürülen hangi nesneleri içine grupları belirtir ([
   
 ## <a name="arguments"></a>Arguments  
  `aliasedExpression`  
- Herhangi bir geçerli sorgu ifade gruplandırma gerçekleştirildiği. `expression`bir özellik ya da FROM yan tümcesi tarafından döndürülen bir özelliğe başvuruyor toplama olmayan bir ifade olabilir. Her bir GROUP BY yan tümcesi ifadesinde eşitlik için karşılaştırılabilir bir türe değerlendirmeniz gerekir. Bu sayı, dizeleri ve tarihleri gibi genellikle skaler temelleri türleridir. Bir koleksiyona göre gruplandırma yapamazsınız.  
+ Herhangi bir geçerli sorgu ifade gruplandırma gerçekleştirildiği. `expression` bir özellik ya da FROM yan tümcesi tarafından döndürülen bir özelliğe başvuruyor toplama olmayan bir ifade olabilir. Her bir GROUP BY yan tümcesi ifadesinde eşitlik için karşılaştırılabilir bir türe değerlendirmeniz gerekir. Bu sayı, dizeleri ve tarihleri gibi genellikle skaler temelleri türleridir. Bir koleksiyona göre gruplandırma yapamazsınız.  
   
 ## <a name="remarks"></a>Açıklamalar  
  SELECT yan tümcesinde toplama işlevleri eklenirse \<seçim listesi >, GROUP BY her grup için bir Özet değer hesaplar. GROUP BY belirtildiğinde, her özellik adı seçim listesindeki herhangi bir zorunluluğu ifade GROUP BY listesinde eklenmesi veya GROUP BY ifadesi seçim listesi ifade tam olarak eşleşmelidir.  

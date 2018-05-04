@@ -1,24 +1,12 @@
 ---
-title: "Dağıtılmış işlemler"
-ms.custom: 
+title: Dağıtılmış işlemler
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-ado
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 718b257c-bcb2-408e-b004-a7b0adb1c176
-caps.latest.revision: "7"
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
-ms.workload: dotnet
-ms.openlocfilehash: c2de777dbd8bf6ac18db95a1cf647d259a252f8d
-ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
+ms.openlocfilehash: 7792a719a73ca5183d57bcecc5d346153d824570
+ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="distributed-transactions"></a>Dağıtılmış işlemler
 Bir işlem (kaydetme) başarılı ya da başka şeylerin bir birim olarak (iptal için) başarısız ilgili görevleri kümesidir. A *dağıtılmış işlem* birkaç kaynakları etkileyen bir işlem. Yürütme dağıtılmış işlem için veri herhangi bir değişiklik kalıcı olacağını tüm katılımcılar güvence altına almalıdır. Sistem kilitlenme veya diğer öngörülemeyen olayları rağmen değişiklikleri kalıcı gerekir. Bu garantisi yapmak tek bir katılımcı başarısız olursa, tüm işlem başarısız olur ve işlem kapsamı içinde veri değişiklikler geri alınır.  
@@ -44,13 +32,13 @@ Bir işlem (kaydetme) başarılı ya da başka şeylerin bir birim olarak (iptal
   
  Dağıtılmış işlemlere kaydetme iş nesneleri havuzu olduğunda özellikle geçerlidir. Bir iş nesnesi ile açık bir bağlantı havuza varsa, bu bağlantı açıldığında otomatik işlem kaydı yalnızca oluşur. Birden çok işlem havuza alınmış iş nesnesini kullanarak gerçekleştirdiyseniz, bu nesne için açık bağlantı otomatik olarak yeni başlatılan işlemlerde listesine değil. Bu durumda, bağlantı için otomatik işlem kaydı devre dışı bırakın ve işlemleri kullanarak bağlantı listeleme `EnlistTransaction`.  
   
- `EnlistTransaction`tek bir bağımsız değişken türü <xref:System.Transactions.Transaction> diğer bir deyişle mevcut işlem başvuru. Bağlantının çağrıldıktan sonra `EnlistTransaction` yöntemi, veri kaynağı bağlantısı işlemde dahil kullanarak yapılan tüm değişiklikler. Bir null değer geçirme, geçerli bir dağıtılmış işlem kaydı bağlantısından unenlists. Çağırmadan önce bağlantıyı açılmalıdır Not `EnlistTransaction`.  
+ `EnlistTransaction` tek bir bağımsız değişken türü <xref:System.Transactions.Transaction> diğer bir deyişle mevcut işlem başvuru. Bağlantının çağrıldıktan sonra `EnlistTransaction` yöntemi, veri kaynağı bağlantısı işlemde dahil kullanarak yapılan tüm değişiklikler. Bir null değer geçirme, geçerli bir dağıtılmış işlem kaydı bağlantısından unenlists. Çağırmadan önce bağlantıyı açılmalıdır Not `EnlistTransaction`.  
   
 > [!NOTE]
 >  Bağlantı bir işleme açıkça kayıtlı sonra ilk işlem tamamlanana kadar beklemediğiniz kayıtlı veya başka bir işlemde kayıtlı olamaz.  
   
 > [!CAUTION]
->  `EnlistTransaction`bağlantı bağlantı kullanarak bir işlem zaten başlamış bir özel durum döndürürse <xref:System.Data.Common.DbConnection.BeginTransaction%2A> yöntemi. Ancak, işlem veri kaynağında başlatılan yerel bir işlem olup olmadığını (örneğin, açıkça kullanarak BEGIN TRANSACTION deyimi yürütme bir <xref:System.Data.SqlClient.SqlCommand>), `EnlistTransaction` yerel işlem geri alma ve dağıtılmış varolan listeleme İstenen işlem. Yerel işlem geri alındı bildirimi almaz ve kullanmaya değil yerel işlemler yönetmelisiniz <xref:System.Data.Common.DbConnection.BeginTransaction%2A>. SQL Server için .NET Framework veri sağlayıcısı kullanıyorsanız (`SqlClient`) SQL Server ile listeleme girişimi bir özel durum oluşturur. Diğer tüm durumlarda algılanmayan geçer.  
+>  `EnlistTransaction` bağlantı bağlantı kullanarak bir işlem zaten başlamış bir özel durum döndürürse <xref:System.Data.Common.DbConnection.BeginTransaction%2A> yöntemi. Ancak, işlem veri kaynağında başlatılan yerel bir işlem olup olmadığını (örneğin, açıkça kullanarak BEGIN TRANSACTION deyimi yürütme bir <xref:System.Data.SqlClient.SqlCommand>), `EnlistTransaction` yerel işlem geri alma ve dağıtılmış varolan listeleme İstenen işlem. Yerel işlem geri alındı bildirimi almaz ve kullanmaya değil yerel işlemler yönetmelisiniz <xref:System.Data.Common.DbConnection.BeginTransaction%2A>. SQL Server için .NET Framework veri sağlayıcısı kullanıyorsanız (`SqlClient`) SQL Server ile listeleme girişimi bir özel durum oluşturur. Diğer tüm durumlarda algılanmayan geçer.  
   
 ## <a name="promotable-transactions-in-sql-server"></a>SQL Server'ın yükseltilebilir işlemleri  
  SQL Server, yalnızca gerekli olduğunda, yerel bir basit işlem otomatik olarak bir dağıtılmış işlem yükseltilebilir yükseltilebilir işlemleri destekler. Yükseltilebilir işlem eklenen çağrılmaz işlemlerinin ek yükü dağıtılmış işlem eklenen ek yükü gerekli olmadığı sürece. Daha fazla bilgi ve bir kod örneği için bkz: [SQL Server ile System.Transactions tümleştirme](../../../../docs/framework/data/adonet/system-transactions-integration-with-sql-server.md).  

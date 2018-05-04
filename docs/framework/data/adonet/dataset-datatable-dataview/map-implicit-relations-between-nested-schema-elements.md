@@ -1,24 +1,12 @@
 ---
-title: "İç içe geçmiş şema öğeleri arasında örtük ilişkileri eşleme"
-ms.custom: 
+title: İç içe geçmiş şema öğeleri arasında örtük ilişkileri eşleme
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-ado
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 6b25002a-352e-4d9b-bae3-15129458a355
-caps.latest.revision: "4"
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
-ms.workload: dotnet
-ms.openlocfilehash: 740d45c47f46c311ed703fa11ec86a9739930944
-ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
+ms.openlocfilehash: 1bce0c2815ac94787055794942807777232df295
+ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="map-implicit-relations-between-nested-schema-elements"></a>İç içe geçmiş şema öğeleri arasında örtük ilişkileri eşleme
 Bir XML Şeması Tanım Dili (XSD) şeması, karmaşık türler başka içinde iç içe geçmiş olabilir. Bu durumda eşleme işlemi varsayılan eşleme uygulanır ve aşağıdakileri oluşturur <xref:System.Data.DataSet>:  
@@ -27,7 +15,7 @@ Bir XML Şeması Tanım Dili (XSD) şeması, karmaşık türler başka içinde i
   
 -   Hiçbir kısıtlama üst öğede varsa, bir ek birincil anahtar sütununun tablo tanımının başına adlı *TableName*_ıd nerede *TableName* üst tablo adıdır.  
   
--   Ek sütun birincil anahtar olarak tanımlayan üst tablo bir birincil anahtar kısıtlaması (ayarlayarak **IsPrimaryKey** özelliğine **True**). Kısıtlama kısıtlaması adlı *#*  nerede  *#*  1, 2, 3 ve benzeri. Örneğin, varsayılan ilk kısıtlaması için Constraint1 adıdır.  
+-   Ek sütun birincil anahtar olarak tanımlayan üst tablo bir birincil anahtar kısıtlaması (ayarlayarak **IsPrimaryKey** özelliğine **True**). Kısıtlama kısıtlaması adlı*#* nerede *#* 1, 2, 3 ve benzeri. Örneğin, varsayılan ilk kısıtlaması için Constraint1 adıdır.  
   
 -   Alt tablonun ek sütun üst tablonun birincil anahtarı için başvuran yabancı anahtar olarak tanımlayan bir yabancı anahtar kısıtlaması. Kısıtlama adlı *ParentTable_ChildTable* nerede *ParentTable* üst tablo adıdır ve *geldiği* alt tablo adıdır.  
   

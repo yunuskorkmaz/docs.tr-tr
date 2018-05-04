@@ -1,28 +1,18 @@
 ---
-title: "&lt;davranışları&gt; iş akışı"
-ms.custom: 
+title: '&lt;davranışları&gt; iş akışı'
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
 ms.topic: reference
 ms.assetid: 3c6017b6-0c4f-4192-bd67-9515f5d1ec82
-caps.latest.revision: "2"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 83c1bf4beb244b72d2fe3d82d749ff6ae6723baf
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 762fd1ff0de7980848ac3921706f406932c7f35d
+ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="ltbehaviorsgt-of-workflow"></a>&lt;davranışları&gt; iş akışı
 Bu öğeyi içeren **serviceBehaviors** koleksiyonu.  Koleksiyondaki her öğe iş akışı hizmetler tarafından kullanılan davranışı öğeleri tanımlar. Her davranış öğesi kendi benzersiz tanımlanır **adı** özniteliği.  
   
- \<Sistem. ServiceModel >  
+ \<system.ServiceModel>  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -49,7 +39,7 @@ Bu öğeyi içeren **serviceBehaviors** koleksiyonu.  Koleksiyondaki her öğe i
   
 |Öğe|Açıklama|  
 |-------------|-----------------|  
-|[\<system.serviceModel >](../../../../../docs/framework/configure-apps/file-schema/wcf/system-servicemodel.md)|Tüm iş akışı yapılandırma öğelerinin kök öğe.|  
+|[\<system.serviceModel>](../../../../../docs/framework/configure-apps/file-schema/wcf/system-servicemodel.md)|Tüm iş akışı yapılandırma öğelerinin kök öğe.|  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
  <xref:System.ServiceModel.Configuration.BehaviorsSection>  

@@ -1,24 +1,12 @@
 ---
-title: "ilişki türü"
-ms.custom: 
+title: ilişki türü
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-ado
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 26c409f6-06e8-4441-ac78-1b1076a3c005
-caps.latest.revision: "3"
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
-ms.workload: dotnet
-ms.openlocfilehash: 5349889017ea23701a17a92947d9750610a52f59
-ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
+ms.openlocfilehash: 7a16b4447c9ba35f1a81a8ff837abd984985b097
+ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="association-type"></a>ilişki türü
 Bir *ilişkilendirme türü* (bir ilişki olarak da bilinir) ilişkileri varlık veri modeli (EDM) açıklamak için temel yapı bloğu. Bir kavramsal modelde ilişkilendirme iki arasındaki bir ilişkiyi temsil eder. [varlık türleri](../../../../docs/framework/data/adonet/entity-type.md) (gibi `Customer` ve `Order`). Bir uygulamada belirli bir ilişki ilişkilendirme örneğini temsil eder (bir örneği arasında bir ilişki gibi `Customer` bir örneği ile `Order`). İlişkilendirme örnekleri mantıksal olarak gruplandırılmış bir [ilişkilendirme kümesi](../../../../docs/framework/data/adonet/association-set.md).  

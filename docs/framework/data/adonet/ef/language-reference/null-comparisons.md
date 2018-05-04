@@ -1,27 +1,15 @@
 ---
-title: "Null karşılaştırmaları"
-ms.custom: 
+title: Null karşılaştırmaları
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-ado
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
 ms.assetid: ef88af8c-8dfe-4556-8b56-81df960a900b
-caps.latest.revision: "2"
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
-ms.workload: dotnet
-ms.openlocfilehash: 9168051a87b1cd2c0cccaa54f1d688aca018b731
-ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
+ms.openlocfilehash: f4d4f6cdbb5ac6bae3af66d46599ec65aaae22f4
+ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="null-comparisons"></a>Null karşılaştırmaları
 A `null` veri kaynağındaki değer, değer bilinmeyen olduğunu gösterir. İçinde [!INCLUDE[linq_entities](../../../../../../includes/linq-entities-md.md)] sorgular, kontrol edebilirsiniz null değerleri bu nedenle, bazı hesaplamalar veya karşılaştırmaları yalnızca geçerli veya boş olan satırlar üzerinde gerçekleştirilen veri. CLR null semantiği, ancak veri kaynağı null semantiği farklı olabilir. Çoğu veritabanları, null karşılaştırma işlemek için üç değerli mantığı sürümünü kullanın. Diğer bir deyişle, bir null değer karşılaştırmak için değerlendirmez `true` veya `false`, için değerlendirir `unknown`. Genellikle bu ANSI null değerlere uygulamasıdır, ancak bu her zaman geçerli değildir.  

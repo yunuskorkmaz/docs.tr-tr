@@ -2,7 +2,7 @@
 
 |   |   |
 |---|---|
-|Ayrıntılar|<xref:System.Runtime.Serialization.Formatters.Soap.SoapFormatter?displayProperty=name> Nesneleri'nin altında bir .NET Framework sürüm seri hale getirilmiş garantisi başarıyla altında farklı bir sürüm serisini yapar. Özellikle, bazı koleksiyonları sıralı (gibi <xref:System.Collections.Hashtable?displayProperty=name>) ile .NET 4.5 sıralanmış varsa bu tür nesneler .NET 4.0 ile seri durumdan çıkarılamıyor, üyeleri 4.0 ve 4.5 arasında eklendi. Serileştirilmiş verilerini seri hale getirilmiş hem aynı .NET Framework sürümü ile seri halinde sorun ortaya çıkar unutmayın.|
+|Ayrıntılar|<xref:System.Runtime.Serialization.Formatters.Soap.SoapFormatter?displayProperty=name> Nesneleri'nin altında bir .NET Framework sürüm seri hale getirilmiş garantisi başarıyla altında farklı bir sürüm serisini yapar. Özellikle, bazı koleksiyonları sıralı (gibi <xref:System.Collections.Hashtable?displayProperty=name>) .NET Framework 4. 5'ile sıralanmış varsa bu tür nesneler ile .NET Framework 4.0 seri durumdan çıkarılamıyor, üyeleri 4.0 ve 4.5 arasında eklendi. Serileştirilmiş verilerini seri hale getirilmiş hem aynı .NET Framework sürümü ile seri halinde sorun ortaya çıkar unutmayın.|
 |Öneri|<xref:System.Runtime.Serialization.Formatters.Soap.SoapFormatter?displayProperty=name> seri hale getirme yerine <xref:System.Runtime.Serialization.Formatters.Binary.BinaryFormatter?displayProperty=name> seri hale getirme veya <xref:System.Runtime.Serialization.NetDataContractSerializer?displayProperty=name> .NET Framework değişiklikler dayanıklı olması.|
 |Kapsam|Küçük|
 |Sürüm|4,5|

@@ -1,9 +1,6 @@
 ---
-title: CoreResponseData.m_StatusCode Field
+title: CoreResponseData.m_StatusCode alan
 ms.date: 01/29/2018
-ms.prod: .net-framework
-ms.technology: 
-ms.topic: reference
 topic_type:
 - apiref
 api_name:
@@ -13,19 +10,15 @@ api_location:
 api_type:
 - Assembly
 author: stevewhims
-ms.author: stwhi
-manager: markl
-ms.workload:
-- dotnet
-ms.openlocfilehash: 1630fe66152925120f5459276899b1d3e581f05e
-ms.sourcegitcommit: cf22b29db780e532e1090c6e755aa52d28273fa6
+ms.openlocfilehash: 53338c75d31cef3ab89879632710dba3e52091ad
+ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/01/2018
+ms.lasthandoff: 05/03/2018
 ---
-# <a name="coreresponsedatamstatuscode-field"></a>CoreResponseData.m\_StatusCode Field
+# <a name="coreresponsedatamstatuscode-field"></a>CoreResponseData.m\_StatusCode alan
 
-`CoreResponseData.m_StatusCode`olan bir <xref:System.Net.HttpStatusCode> yanıt durumunu içeren.
+`CoreResponseData.m_StatusCode` olan bir <xref:System.Net.HttpStatusCode> yanıt durumunu içeren.
 
 ## <a name="syntax"></a>Sözdizimi
   
@@ -40,7 +33,7 @@ public HttpStatusCode m_StatusCode
 
 ## <a name="requirements"></a>Gereksinimler
 
-**Namespace:**<xref:System.Net>
+**Namespace:** <xref:System.Net>
 
 **Derleme:** sisteminde (System.dll)
 

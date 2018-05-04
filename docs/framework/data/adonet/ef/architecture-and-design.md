@@ -1,24 +1,12 @@
 ---
-title: "Mimari ve tasarım"
-ms.custom: 
+title: Mimari ve tasarım
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-ado
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: bd738d39-00e2-4bab-b387-90aac1a014bd
-caps.latest.revision: "3"
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
-ms.workload: dotnet
-ms.openlocfilehash: ce16e89e697a7865a65d86b408e49b5ad671bae1
-ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
+ms.openlocfilehash: c2e8ff5f21a2941d75b21915552e6935a1423978
+ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="architecture-and-design"></a>Mimari ve tasarım
 SQL nesil modülünde [örnek sağlayıcı](http://go.microsoft.com/fwlink/?LinkId=180616) ziyaretçisi komut ağacı temsil eden ifade ağaç olarak uygulanır. Nesil tek geçişte ifade ağacına yapılır.  
@@ -29,7 +17,7 @@ SQL nesil modülünde [örnek sağlayıcı](http://go.microsoft.com/fwlink/?Link
   
 -   Diğer adlar yeniden adlandırmak için yeniden adlandırma sırasında çakışmaları önlemek için tüm kullanılan diğer adlarını tanımlamanız gerekir. SqlBuilder içinde yeniden adlandırma seçenekler erteleme simgenin nesneleri yeniden adlandırmak için adaylar sütunları göstermek için kullanın.  
   
- ![Diagram](../../../../../docs/framework/data/adonet/ef/media/de1ca705-4f7c-4d2d-ace5-afefc6d3cefa.gif "de1ca705-4f7c-4d2d-ace5-afefc6d3cefa")  
+ ![Diyagram](../../../../../docs/framework/data/adonet/ef/media/de1ca705-4f7c-4d2d-ace5-afefc6d3cefa.gif "de1ca705-4f7c-4d2d-ace5-afefc6d3cefa")  
   
  İfade ağacına ziyaret sırasında ilk aşamasında, ifadeleri SqlSelectStatements gruplandırılır, birleştirmeler düzleştirilmiş ve birleştirme diğer adlar düzleştirilmiş. Bu geçişi sırasında simgesi nesneleri, sütunları veya adlandırılabilir giriş diğer adı temsil eder.  
   
@@ -359,7 +347,7 @@ ORDER BY sk1, sk2, ...
   
  Dbnewınstanceexpression koleksiyonu dönüş türü olan ve yeni bir bağımsız değişken olarak sağlanan ifadeleri koleksiyonunu tanımlar, aşağıdaki üç durumda ayrı olarak ele alınmıştır:  
   
--   If DbNewInstanceExpression has DbElementExpression as the only argument, it is translated as follows:  
+-   Dbnewınstanceexpression tek bağımsız değişken olarak DbElementExpression varsa, aşağıdaki gibi çevrilir:  
   
     ```  
     NewInstance(Element(X)) =>  SELECT TOP 1 …FROM X  

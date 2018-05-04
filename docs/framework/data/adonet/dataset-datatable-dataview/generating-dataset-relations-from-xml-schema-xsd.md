@@ -1,24 +1,12 @@
 ---
-title: "DataSet ilişkileri XML Schema (XSD) oluşturma"
-ms.custom: 
+title: DataSet ilişkileri XML Schema (XSD) oluşturma
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-ado
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 1c9a1413-c0d2-4447-88ba-9a2b0cbc0aa8
-caps.latest.revision: "4"
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
-ms.workload: dotnet
-ms.openlocfilehash: 4634e54c620fdd206582af94b825210331d11c14
-ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
+ms.openlocfilehash: fdf22c311ef7b4267f4a4da8566e4ea59504b103
+ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="generating-dataset-relations-from-xml-schema-xsd"></a>DataSet ilişkileri XML Schema (XSD) oluşturma
 İçinde bir <xref:System.Data.DataSet>, bir üst-alt ilişkisi oluşturarak iki veya daha fazla sütun arasında bir ilişki oluşturur. Göstermek için üç yolu bir **DataSet** ilişkisi bir XML Şeması Tanım Dili (XSD) şeması içinde:  
@@ -44,9 +32,9 @@ ms.lasthandoff: 01/17/2018
 </xs:element>  
 ```  
   
- XML şema eşleme işlemi tablolarda oluşturur **DataSet** , karşılık gelen şema iç içe geçmiş karmaşık türler için. Ayrıca üst öğe olarak kullanılan ek sütunlar oluşturur**-**alt sütunları oluşturulan tablolar için. Bu üst Not**-**alt sütunları birincil anahtarı/yabancı anahtar kısıtlamaları belirtme aynı olmayan ilişkiler belirtin.  
+ XML şema eşleme işlemi tablolarda oluşturur **DataSet** , karşılık gelen şema iç içe geçmiş karmaşık türler için. Ayrıca üst öğe olarak kullanılan ek sütunlar oluşturur**-** alt sütunları oluşturulan tablolar için. Bu üst Not**-** alt sütunları birincil anahtarı/yabancı anahtar kısıtlamaları belirtme aynı olmayan ilişkiler belirtin.  
   
-## <a name="msdatarelationship-annotation"></a>msdata:Relationship Annotation  
+## <a name="msdatarelationship-annotation"></a>MSDATA:Relationship ek açıklaması  
  **Msdata:Relationship** ek açıklama açıkça şemadaki değil iç içe öğeler arasındaki üst-alt ilişkileri belirtmenize olanak verir. Aşağıdaki örnek, yapısını gösterir **ilişki** öğesi.  
   
 ```xml  

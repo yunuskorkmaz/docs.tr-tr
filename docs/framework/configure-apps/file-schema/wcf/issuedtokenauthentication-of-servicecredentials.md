@@ -1,33 +1,21 @@
 ---
-title: "&lt;serviceCredentials&gt; için &lt;issuedTokenAuthentication&gt;"
-ms.custom: 
+title: '&lt;serviceCredentials&gt; için &lt;issuedTokenAuthentication&gt;'
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 5c2e288f-f603-4d13-839a-0fd6d1981bec
-caps.latest.revision: "14"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 1007abbb91787ed7be4fe3a7f8c1b0173191d60e
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 87e96e5942a02069371462b8c6301e03f681d5ce
+ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="ltissuedtokenauthenticationgt-of-ltservicecredentialsgt"></a>&lt;serviceCredentials&gt; için &lt;issuedTokenAuthentication&gt;
 Bir hizmeti kimlik bilgileri özel bir belirteç belirtir.  
   
- \<Sistem. ServiceModel >  
+ \<system.ServiceModel>  
 \<davranışları >  
-\<serviceBehaviors >  
+\<serviceBehaviors>  
 \<davranışı >  
-\<serviceCredentials >  
+\<serviceCredentials>  
 \<issuedTokenAuthentication >  
   
 ## <a name="syntax"></a>Sözdizimi  

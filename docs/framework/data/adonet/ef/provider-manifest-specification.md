@@ -1,24 +1,12 @@
 ---
-title: "Sağlayıcı bildirimi belirtimi"
-ms.custom: 
+title: Sağlayıcı bildirimi belirtimi
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-ado
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: bb450b47-8951-4f99-9350-26f05a4d4e46
-caps.latest.revision: "4"
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
-ms.workload: dotnet
-ms.openlocfilehash: 85096406ae8996713d4861c805d75af42d8c1813
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.openlocfilehash: 02faee9ad69bd75f4df608b9a4767560945c7bb3
+ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="provider-manifest-specification"></a>Sağlayıcı bildirimi belirtimi
 Bu bölümde, nasıl bir veri deposu sağlayıcısı türler ve İşlevler veri deposunda destekleyebilir anlatılmaktadır.  
@@ -72,7 +60,7 @@ Bu bölümde, nasıl bir veri deposu sağlayıcısı türler ve İşlevler veri 
 ## <a name="provider-manifest-discoverability"></a>Sağlayıcı bildirimi bulunabilirliği  
  Bildirim varlık Hizmetleri (örneğin araçları veya sorgu) birkaç bileşen türü tarafından dolaylı olarak kullanılır, ancak daha fazla meta veri kullanımı ile tarafından doğrudan işlevden meta verileri yükleyicisi depolayın.  
   
- ![dfb3d02b&#45;7a8c&#45;4d51&#45;ac5a&#45;a73d8aa145e6](../../../../../docs/framework/data/adonet/ef/media/dfb3d02b-7a8c-4d51-ac5a-a73d8aa145e6.gif "dfb3d02b-7a8c-4d51-ac5a-a73d8aa145e6")  
+ ![dfb3d02b&#45;7a8c&#45;4d 51&#45;ac5a&#45;a73d8aa145e6](../../../../../docs/framework/data/adonet/ef/media/dfb3d02b-7a8c-4d51-ac5a-a73d8aa145e6.gif "dfb3d02b-7a8c-4d51-ac5a-a73d8aa145e6")  
   
  Ancak, belirli bir sağlayıcı mağazaya veya aynı deponun farklı sürümlerini destekleyebilir. Bu nedenle, bir sağlayıcı her desteklenen veri deposu için farklı bir bildirim bildirilmesi gerekir.  
   
@@ -88,7 +76,7 @@ Bu bölümde, nasıl bir veri deposu sağlayıcısı türler ve İşlevler veri 
 ## <a name="provider-manifest-programming-model"></a>Sağlayıcı bildirimi programlama modeli  
  Sağlayıcıları türetilen <xref:System.Data.Common.DbXmlEnabledProviderManifest>, bunları kendi bildirimleri bildirimli olarak belirtmek veren. Aşağıdaki çizimde bir sağlayıcısının sınıf hiyerarşisi gösterir:  
   
- ![None](../../../../../docs/framework/data/adonet/ef/media/d541eba3-2ee6-4cd1-88f5-89d0b2582a6c.gif "d541eba3-2ee6-4cd1-88f5-89d0b2582a6c")  
+ ![Hiçbiri](../../../../../docs/framework/data/adonet/ef/media/d541eba3-2ee6-4cd1-88f5-89d0b2582a6c.gif "d541eba3-2ee6-4cd1-88f5-89d0b2582a6c")  
   
 ### <a name="discoverability-api"></a>Bulunabilirliği API  
  Sağlayıcı bildirimi (Storeıtemcollection) depolamak meta verileri yükleyicisi tarafından yüklenen, veri kullanarak ya da bağlantı veya sağlayıcı bildirim belirteci depolar.  
@@ -272,10 +260,10 @@ public DbProviderManifest GetProviderManifest(string manifestToken);
 |Ad|Dize|Evet|yok|İşlevin tanımlayıcı/adı|  
 |ReturnType|Dize|Hayır|Geçersiz kılma|İşlevin EDM dönüş türü|  
 |Toplama|Boole değeri|Hayır|False|İşlevi bir toplama işlevinde ise true|  
-|BuiltIn|Boole değeri|Hayır|Doğru|Veri deposuna işlevi oluşturulursa true|  
+|Yerleşik|Boole değeri|Hayır|Doğru|Veri deposuna işlevi oluşturulursa true|  
 |StoreFunctionName|Dize|Hayır|\<Adı >|Veri deposunda işlev adı.  Bir işlev adlarını yeniden yönlendirilmesini düzeyi için sağlar.|  
 |NiladicFunction|Boole değeri|Hayır|False|İşlev parametreleri gerektirmez ve hiçbir parametre olmadan çağrılırsa true|  
-|ParameterType<br /><br /> Semantiği|ParameterSemantics|Hayır|AllowImplicit<br /><br /> Dönüştürme|Sorgu ardışık düzen parametre türü değiştirme ile nasıl ele alması gerektiğini seçeneği:<br /><br /> -   ExactMatchOnly<br />-   AllowImplicitPromotion<br />-   AllowImplicitConversion|  
+|ParameterType<br /><br /> Semantiği|ParameterSemantics|Hayır|AllowImplicit<br /><br /> Dönüştürme|Sorgu ardışık düzen parametre türü değiştirme ile nasıl ele alması gerektiğini seçeneği:<br /><br /> -ExactMatchOnly<br />-Allowımplicitpromotion<br />-Allowımplicitconversion|  
   
  **Parametreleri düğümü**  
   
@@ -285,7 +273,7 @@ public DbProviderManifest GetProviderManifest(string manifestToken);
 |--------------------|---------------|--------------|-------------------|-----------------|  
 |Ad|Dize|Evet|yok|Tanımlayıcı/parametrenin adı.|  
 |Tür|Dize|Evet|yok|Parametrenin EDM türü.|  
-|Mod|Parametre<br /><br /> Yön|Evet|yok|Parametre yönü:<br /><br /> -   in<br />-out<br />-ınout|  
+|Mod|Parametre<br /><br /> Yön|Evet|yok|Parametre yönü:<br /><br /> -içinde<br />-out<br />-ınout|  
   
 ##### <a name="namespace-attribute"></a>Namespace özniteliği  
  Her bir veri deposu sağlayıcısı, bir ad alanı veya grup bildiriminde tanımlanan bilgileri için ad alanları tanımlamanız gerekir. Bu ad alanı varlık SQL sorgularında işlevlerini ve türlerini adlarını çözmek için kullanılabilir. Örneğin: SqlServer. Bu ad alanı varlık SQL sorguları tarafından desteklenen standart işlevleri için varlık Hizmetleri tarafından tanımlanan kurallı ad alanı, EDM, farklı olmalıdır.  

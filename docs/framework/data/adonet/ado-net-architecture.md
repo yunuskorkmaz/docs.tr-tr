@@ -1,24 +1,12 @@
 ---
 title: ADO.NET mimarisi
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-ado
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: fcd45b99-ae8f-45ab-8b97-d887beda734e
-caps.latest.revision: "7"
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
-ms.workload: dotnet
-ms.openlocfilehash: d1f09901ef6eb30fe3f43ee19ab17ceaaa2b78e8
-ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
+ms.openlocfilehash: 384f2397e0e2794c4326d635db9f81fe1078f374
+ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="adonet-architecture"></a>ADO.NET mimarisi
 Veri işleme, geleneksel öncelikle tabanlı bağlantısı, iki katmanlı model üzerinde dayanıyordu. Veri işleme çok katmanlı mimarileri giderek kullanır gibi kendi uygulamaları için daha iyi ölçeklenebilirlik sağlamak için bağlantısı kesik bir yaklaşım için programcıları geçiliyor.  
@@ -34,7 +22,7 @@ Veri işleme, geleneksel öncelikle tabanlı bağlantısı, iki katmanlı model 
   
  Aşağıdaki diyagram arasındaki ilişkiyi gösterir bir [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] veri sağlayıcısı ve `DataSet`.  
   
- ![ADO.Net graphic](../../../../docs/framework/data/adonet/media/ado-1-bpuedev11.png "ado_1_bpuedev11")  
+ ![ADO.Net grafiği](../../../../docs/framework/data/adonet/media/ado-1-bpuedev11.png "ado_1_bpuedev11")  
 ADO.NET mimarisi  
   
 ### <a name="choosing-a-datareader-or-a-dataset"></a>DataReader veya bir veri kümesi seçme  
@@ -60,12 +48,12 @@ ADO.NET mimarisi
  ADO.NET Entity Framework, doğrudan bir ilişkisel depolama şema karşı programlama yerine kavramsal uygulama modeli karşı programlama geliştiricilerin veri erişimi uygulamaları oluşturmalarına olanak sağlamak için tasarlanmıştır. Kod ve veri odaklı uygulamalar için gereken bakım miktarını azaltmak için belirtilir. Daha fazla bilgi için bkz: [ADO.NET Entity Framework](../../../../docs/framework/data/adonet/ef/index.md).  
   
 ## <a name="wcf-data-services"></a>WCF Veri Hizmetleri  
- [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)]Veri Hizmetleri Web ya da intranet üzerinde dağıtmak için kullanılır. Veri varlıkları ve ilişkileri varlık veri modeli belirtimlerine uygun olarak yapılandırılmıştır. Bu modelde dağıtılan standart HTTP protokolü tarafından adreslenebilir verilerdir. Daha fazla bilgi için bkz: [WCF Veri Hizmetleri 4.5](../../../../docs/framework/data/wcf/index.md).  
+ [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] Veri Hizmetleri Web ya da intranet üzerinde dağıtmak için kullanılır. Veri varlıkları ve ilişkileri varlık veri modeli belirtimlerine uygun olarak yapılandırılmıştır. Bu modelde dağıtılan standart HTTP protokolü tarafından adreslenebilir verilerdir. Daha fazla bilgi için bkz: [WCF Veri Hizmetleri 4.5](../../../../docs/framework/data/wcf/index.md).  
   
 ## <a name="xml-and-adonet"></a>XML ve ADO.NET  
- [!INCLUDE[vstecado](../../../../includes/vstecado-md.md)]veri bağlantısı kesilmiş erişim sağlamak için XML gücünü yararlanır. [!INCLUDE[vstecado](../../../../includes/vstecado-md.md)]tasarlanmış el el ile XML sınıflarda edildi [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)]; her ikisi de tek bir mimari bileşenleridir.  
+ [!INCLUDE[vstecado](../../../../includes/vstecado-md.md)] veri bağlantısı kesilmiş erişim sağlamak için XML gücünü yararlanır. [!INCLUDE[vstecado](../../../../includes/vstecado-md.md)] tasarlanmış el el ile XML sınıflarda edildi [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)]; her ikisi de tek bir mimari bileşenleridir.  
   
- [!INCLUDE[vstecado](../../../../includes/vstecado-md.md)]ve XML sınıflarda [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] içinde yakınsama `DataSet` nesnesi. `DataSet` Bir dosya veya bir XML akışı olup, bir XML kaynağı verilerle doldurulabilir. `DataSet` XML Şeması Tanım Dili (XSD) şeması, veri kaynağını bakılmaksızın olarak şemasına içeren World Wide Web Konsorsiyumu (W3C) uyumlu XML olarak yazılmış `DataSet`. Yerel seri hale getirme biçimi nedeniyle `DataSet` XML, yapmadan katmanlar arasında verileri taşımak için mükemmel bir medium'dur `DataSet` remoting veri ve şema bağlamı için bir en iyi seçim XML Web hizmetleri gelen ve giden. Daha fazla bilgi için bkz: [XML belgeler ve veriler](../../../../docs/standard/data/xml/index.md).  
+ [!INCLUDE[vstecado](../../../../includes/vstecado-md.md)] ve XML sınıflarda [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] içinde yakınsama `DataSet` nesnesi. `DataSet` Bir dosya veya bir XML akışı olup, bir XML kaynağı verilerle doldurulabilir. `DataSet` XML Şeması Tanım Dili (XSD) şeması, veri kaynağını bakılmaksızın olarak şemasına içeren World Wide Web Konsorsiyumu (W3C) uyumlu XML olarak yazılmış `DataSet`. Yerel seri hale getirme biçimi nedeniyle `DataSet` XML, yapmadan katmanlar arasında verileri taşımak için mükemmel bir medium'dur `DataSet` remoting veri ve şema bağlamı için bir en iyi seçim XML Web hizmetleri gelen ve giden. Daha fazla bilgi için bkz: [XML belgeler ve veriler](../../../../docs/standard/data/xml/index.md).  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
  [ADO.NET’e Genel Bakış](../../../../docs/framework/data/adonet/ado-net-overview.md)  

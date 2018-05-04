@@ -1,32 +1,20 @@
 ---
 title: '&lt;baseAddressPrefixFilters&gt;'
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 8cab2a9a-c51f-4283-bb60-2ad0c274fd46
-caps.latest.revision: "10"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 0a1c2e5e887ceaadf3db6f51991d53c3db8fb6ba
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
-ms.translationtype: MT
+ms.openlocfilehash: 8fffcd02b1c08172b184225f13a1852414cf429a
+ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="ltbaseaddressprefixfiltersgt"></a>&lt;baseAddressPrefixFilters&gt;
-Yapılandırma öğesi uygun Internet Information Services (IIS) bağları barındırırken seçmek için bir mekanizma sağlar filtrelerden geçişi belirten bir koleksiyonunu temsil eder [!INCLUDE[indigo1](../../../../../includes/indigo1-md.md)] IIS'de uygulama.  
+Yapılandırma öğesi belirten uygun Internet Information Services (IIS) bağlamaları IIS Windows Communication Foundation (WCF) uygulamasında barındırdığında seçmek için bir mekanizma sağlar filtreleri geçirir koleksiyonunu temsil eder.  
   
 > [!WARNING]
 >  \<baseAddressPrefixFilters > yok "localhost" tanımak, bunun yerine tam makine adı kullanın.  
   
- \<Sistem. ServiceModel >  
+ \<system.ServiceModel>  
 \<ServiceHostingEnvironment >  
   
 ## <a name="syntax"></a>Sözdizimi  

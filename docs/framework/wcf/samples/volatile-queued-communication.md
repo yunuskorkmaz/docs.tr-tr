@@ -16,11 +16,11 @@ ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: 01dc48d7df85051449c92f4e91e5d1e58d6ddb91
-ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
-ms.translationtype: MT
+ms.openlocfilehash: 34febeb054d572286ccdf64ef9e2108ac605a36f
+ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/27/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="volatile-queued-communication"></a>Geçici Kuyruğa Alınmış İletişim
 Bu örnek, Message Queuing (MSMQ) aktarımı üzerinden geçici kuyruğa alınan iletişim gerçekleştirmek gösterilmiştir. Bu örnekte <xref:System.ServiceModel.NetMsmqBinding>. Bu durumda, sıraya alınan iletileri alma hizmeti izlemek etkinleştirmek için bir kendi kendini barındıran konsol uygulaması hizmetidir.  
@@ -95,7 +95,7 @@ public static void Main()
  Yapılandırma dosyasının appSettings bölümünde belirtilen MSMQ sırası adı. Hizmeti için uç noktaya yapılandırma dosyası system.serviceModel bölümünde tanımlanan ve belirten `netMsmqBinding` bağlama.  
   
 > [!NOTE]
->  Kuyruk adı bir nokta (.) için yerel makine ve eğik çizgi ayırıcıları yolundaki kullanarak bir sıra oluştururken kullandığı <xref:System.Messaging>. [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] Uç noktası adresi bir net.msmq belirtir: Düzen, LocalMachine ve eğik yolundaki "localhost" kullanır.  
+>  Kuyruk adı bir nokta (.) için yerel makine ve eğik çizgi ayırıcıları yolundaki kullanarak bir sıra oluştururken kullandığı <xref:System.Messaging>. Windows Communication Foundation (WCF) uç noktası adresi bir net.msmq belirtir: Düzen, LocalMachine ve eğik yolundaki "localhost" kullanır.  
   
  Çıkışların ve dayanıklılık veya iletilerinin volatilite de yapılandırmada belirtilmedi.  
   
@@ -236,7 +236,7 @@ Stock Tick zzz9:43.3
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  Bu dizin mevcut değilse, Git [Windows Communication Foundation (WCF) ve .NET Framework 4 için Windows Workflow Foundation (WF) örnek](http://go.microsoft.com/fwlink/?LinkId=150780) tüm indirmek için [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] ve [!INCLUDE[wf1](../../../../includes/wf1-md.md)] örnekleri. Bu örnek aşağıdaki dizinde bulunur.  
+>  Bu dizin mevcut değilse, Git [Windows Communication Foundation (WCF) ve .NET Framework 4 için Windows Workflow Foundation (WF) örnek](http://go.microsoft.com/fwlink/?LinkId=150780) tüm Windows Communication Foundation (WCF) indirmek için ve [!INCLUDE[wf1](../../../../includes/wf1-md.md)] örnekleri. Bu örnek aşağıdaki dizinde bulunur.  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Binding\Net\MSMQ\Volatile`  
   

@@ -3,7 +3,7 @@
 |   |   |
 |---|---|
 |Ayrıntılar|.NET framework 4.6.2 ve önceki sürümlerde, <xref:System.Runtime.Serialization.Json.DataContractJsonSerializer?displayProperty=name> \b, \f ve ECMAScript V6 ve V8 standartlarla uyumlu bir şekilde \t gibi bazı özel denetim karakterleri seri değildir. .NET Framework 4.7 ile başlayarak, bu denetim karakterleri serileştirmek ECMAScript V6 ve V8 ile uyumludur.|
-|Öneri|.NET Framework 4.7 hedef uygulamaları için bu özellik varsayılan olarak etkindir. Bu davranış arzu değilse, aşağıdaki satırı ekleyerek dışında bu özellik seçebilirsiniz <code>&lt;runtime&gt;</code> app.config veya web.config dosyasının:<pre><code class="language-xml">&lt;runtime&gt;&#13;&#10;&lt;AppContextSwitchOverrides value=&quot;Switch.System.Runtime.Serialization.DoNotUseECMAScriptV6EscapeControlCharacter=false&quot; /&gt;&#13;&#10;&lt;/runtime&gt;&#13;&#10;</code></pre>|
+|Öneri|.NET Framework 4.7 hedef uygulamaları için bu özellik varsayılan olarak etkindir. Bu davranış arzu değilse, aşağıdaki satırı ekleyerek dışında bu özellik seçebilirsiniz <code>&lt;runtime&gt;</code> app.config veya web.config dosyasının:<pre><code class="lang-xml">&lt;runtime&gt;&#13;&#10;&lt;AppContextSwitchOverrides value=&quot;Switch.System.Runtime.Serialization.DoNotUseECMAScriptV6EscapeControlCharacter=false&quot; /&gt;&#13;&#10;&lt;/runtime&gt;&#13;&#10;</code></pre>|
 |Kapsam|Kenar|
 |Sürüm|4.7|
 |Tür|Yeniden hedefleme|

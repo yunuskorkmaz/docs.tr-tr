@@ -1,13 +1,6 @@
 ---
-title: "Nasıl yapılır: Derlemeyi Tanımlayıcı Adla İmzalama"
-ms.custom: 
+title: 'Nasıl yapılır: Derlemeyi Tanımlayıcı Adla İmzalama'
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-bcl
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -18,16 +11,13 @@ helpviewer_keywords:
 - assemblies [.NET Framework], signing
 - assemblies [.NET Framework], strong-named
 ms.assetid: 2c30799a-a826-46b4-a25d-c584027a6c67
-caps.latest.revision: "23"
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 6fe5fbb5299c8e9c130538f99fe13081f8f26a55
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 45f8ad3bd9226ffd821fc792cdd4d0a6dac1a414
+ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="how-to-sign-an-assembly-with-a-strong-name"></a>Nasıl yapılır: Derlemeyi Tanımlayıcı Adla İmzalama
 Bir derlemeyi katı bir adla imzalamak için çeşitli yollar vardır:  
@@ -50,7 +40,7 @@ Bir derlemeyi katı bir adla imzalamak için çeşitli yollar vardır:
   
 3.  Seçin **derlemeyi imzalamak** kutusu.  
   
-4.  İçinde **güçlü ad anahtar dosyası seçin** kutusunda, seçin  **\<Gözat... >**ve ardından anahtar dosyasına gidin. Yeni bir anahtar dosyası oluşturmak için seçtiğiniz  **\<yeni... >** ve adını girin **güçlü ad anahtarı oluştur** iletişim kutusu.  
+4.  İçinde **güçlü ad anahtar dosyası seçin** kutusunda, seçin  **\<Gözat... >** ve ardından anahtar dosyasına gidin. Yeni bir anahtar dosyası oluşturmak için seçtiğiniz  **\<yeni... >** ve adını girin **güçlü ad anahtarı oluştur** iletişim kutusu.  
   
 ### <a name="to-create-and-sign-an-assembly-with-a-strong-name-by-using-the-assembly-linker"></a>Derleme Bağlayıcısı'nı kullanarak bir derleme oluşturmak ve derlemeyi güçlü bir adla imzalamak için  
   
@@ -60,7 +50,7 @@ Bir derlemeyi katı bir adla imzalamak için çeşitli yollar vardır:
   
      burada:  
   
-     *assemblyName*  
+     *AssemblyName*  
      Assembly Linker'in yayacağı katı imzalı derlemenin (.dll veya .exe dosyası) adı.  
   
      *Modül adı*  

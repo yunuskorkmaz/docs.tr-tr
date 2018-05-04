@@ -1,13 +1,6 @@
 ---
-title: "Nasıl yapılır: Derleme İçeriklerini Görüntüleme"
-ms.custom: 
+title: 'Nasıl yapılır: Derleme İçeriklerini Görüntüleme'
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-bcl
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -21,16 +14,13 @@ helpviewer_keywords:
 - MSIL
 - viewing MSIL information
 ms.assetid: fb7baaab-4c0d-47ad-8fd3-4591cf834709
-caps.latest.revision: "11"
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: b9c12c4811e8b23e86fca3960acdb4da06e38fbe
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.openlocfilehash: eadc320483d46503e7331ef57b0cc29b08f13f4c
+ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="how-to-view-assembly-contents"></a>Nasıl yapılır: Derleme İçeriklerini Görüntüleme
 Kullanabileceğiniz [Ildasm.exe (IL ayrıştırıcı)](../../../docs/framework/tools/ildasm-exe-il-disassembler.md) bir dosyada Microsoft Ara dili (MSIL) bilgilerini görüntülemek için. İncelenmesi dosyanın derleme olup, bu bilgileri derlemenin öznitelikleri yanı sıra diğer modüller ve derleme başvurularını ekleyebilirsiniz. Bu bilgiler bir dosyayı bir derleme veya derleme parçası olmasına ve dosya derlemeleri veya diğer modüller başvurular olup saptamanıza yardımcı olabilir.  
@@ -85,14 +75,14 @@ Kullanabileceğiniz [Ildasm.exe (IL ayrıştırıcı)](../../../docs/framework/t
   
 |Yönergesi|Açıklama|  
 |---------------|-----------------|  
-|**.Assembly extern \<**  *derleme adı***>**|Geçerli bir modül tarafından başvurulan öğeleri içeren başka bir derleme belirtir (Bu örnekte, `mscorlib`).|  
-|**.PublicKeyToken \<**  *belirteci***>**|Başvurulan derlemeyi gerçek anahtarı belirteci belirtir.|  
-|**.ver \<**  *sürüm numarası***>**|Başvurulan derlemeyi sürüm numarasını belirtir.|  
-|**.Assembly \<**  *derleme adı***>**|Derleme adı belirtir.|  
-|**.hash algoritması \<**  *Int32 değeri***>**|Kullanılan karma algoritmasını belirtir.|  
-|**.ver \<**  *sürüm numarası***>**|Derlemenin sürüm numarasını belirtir.|  
-|**.Module \<**  *dosya adı***>**|Derlemeyi oluşturan modüllerin adını belirtir. Bu örnekte, yalnızca bir dosyasından derleme oluşur.|  
-|**.Subsystem \<**  *değeri***>**|Program için gereken uygulama ortamı belirtir. Bu örnekte, bu yürütülebilir dosya bir konsoldan çalıştırıldığını 3 değeri gösterir.|  
+|**.Assembly extern \<**  *derleme adı* **>**|Geçerli bir modül tarafından başvurulan öğeleri içeren başka bir derleme belirtir (Bu örnekte, `mscorlib`).|  
+|**.PublicKeyToken \<**  *belirteci* **>**|Başvurulan derlemeyi gerçek anahtarı belirteci belirtir.|  
+|**.ver \<**  *sürüm numarası* **>**|Başvurulan derlemeyi sürüm numarasını belirtir.|  
+|**.Assembly \<**  *derleme adı* **>**|Derleme adı belirtir.|  
+|**.hash algoritması \<**  *Int32 değeri* **>**|Kullanılan karma algoritmasını belirtir.|  
+|**.ver \<**  *sürüm numarası* **>**|Derlemenin sürüm numarasını belirtir.|  
+|**.Module \<**  *dosya adı* **>**|Derlemeyi oluşturan modüllerin adını belirtir. Bu örnekte, yalnızca bir dosyasından derleme oluşur.|  
+|**.Subsystem \<**  *değeri* **>**|Program için gereken uygulama ortamı belirtir. Bu örnekte, bu yürütülebilir dosya bir konsoldan çalıştırıldığını 3 değeri gösterir.|  
 |**.corflags**|Şu anda ayrılmış alan meta veriler.|  
   
  Derleme bildirimi derleme içeriğini bağlı olarak farklı yönergeleri sayısı içerebilir. Derleme bildirimi yönergeleri kapsamlı bir listesi için "özellikle Bölüm II: meta veri tanım ve semantik" ve "Bölüm III: CIL yönerge kümesi" ECMA belgelerine bakın. Belge çevrimiçi kullanılabilir; bkz: [ECMA C# ve ortak dil altyapısı standartları](http://go.microsoft.com/fwlink/?LinkID=99212) MSDN'de ve [standart ECMA-335 - ortak dil altyapısı (CLI)](http://go.microsoft.com/fwlink/?LinkID=65552) Ecma uluslararası Web sitesinde.  

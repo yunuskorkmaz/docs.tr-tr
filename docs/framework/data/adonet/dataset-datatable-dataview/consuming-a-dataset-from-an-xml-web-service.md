@@ -1,29 +1,15 @@
 ---
 title: XML Web hizmetinden veri kümesi kullanma
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-ado
-ms.tgt_pltfrm: ''
-ms.topic: article
 dev_langs:
 - csharp
 - vb
 ms.assetid: 9edd6b71-0fa5-4649-ae1d-ac1c12541019
-caps.latest.revision: ''
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
-ms.workload:
-- dotnet
-ms.openlocfilehash: 9bfcd4d8dca38c9438c072c143cf7ba0eafd6ecf
-ms.sourcegitcommit: 498799639937c89de777361aab74261efe7b79ea
+ms.openlocfilehash: da3eca875df9b80f66241a2ecb72c5ba5c1df309
+ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/22/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="consuming-a-dataset-from-an-xml-web-service"></a>XML Web hizmetinden veri kümesi kullanma
 <xref:System.Data.DataSet> Kısmen Kolay Aktarım verilerin Internet üzerinden kolaylaştırmak için bağlantısı kesik bir tasarım, tasarlanmış. **DataSet** bir girdi olarak belirtilebilir veya ek bir kodlama olmadan XML Web Hizmetleri çıktısını gerekli içeriğini akışını sağlamak için "seri hale getirilebilir" olan **DataSet** bir XML Web hizmeti bir istemci ve geri. **DataSet** biçimini kullanarak bir XML akışı örtük olarak dönüştürülen, ağ üzerinden gönderilen ve XML akışından yeniden bir **DataSet** alan uçta. Bu, çok basit ve esnek bir yöntemdir iletmek ve XML Web Hizmetleri ile ilişkisel veri döndürmek için sunar. Biçimini hakkında daha fazla bilgi için bkz: [DiffGrams](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/diffgrams.md).  
@@ -176,7 +162,7 @@ ms.lasthandoff: 03/22/2018
   
      XML Web hizmetinin istemciler sunulan yöntemleri kullanmak için bir SOAP proxy gerektirir. Visual Studio sizin için bu proxy oluşturmak olabilir. Bir varolan Web hizmetinden Visual Studio'dan bir Web başvuru ayarlayarak, bu adımda açıklanan tüm davranış şeffaf bir şekilde gerçekleşir. Proxy sınıfı kendiniz oluşturmak istiyorsanız, bu tartışma ile devam edin. Çoğu durumda, ancak, istemci uygulaması proxy sınıfı oluşturmak için Visual Studio kullanarak yeterli olur.  
   
-     Bir proxy Web Hizmetleri Açıklama Dili aracını kullanarak oluşturulabilir. XML Web hizmeti URL'si http://myserver/data/DataSetSample.asmx açılırsa, örneğin, bir Visual Basic .NET proxy bir ad alanı oluşturmak için bir komut aşağıdaki gibi sorun **WebData.DSSample** ve dosyasında depolamak Sample.vb.  
+     Bir proxy Web Hizmetleri Açıklama Dili aracını kullanarak oluşturulabilir. XML Web hizmeti URL'de açılırsa örneğin http://myserver/data/DataSetSample.asmx, ad alanı ile bir Visual Basic .NET proxy oluşturmak için komutu aşağıdaki gibi **WebData.DSSample** ve dosya sample.vb saklayın.  
   
     ```console
     wsdl /l:VB -out:sample.vb http://myserver/data/DataSetSample.asmx /n:WebData.DSSample  

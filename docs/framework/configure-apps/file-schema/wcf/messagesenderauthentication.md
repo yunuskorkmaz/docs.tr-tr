@@ -1,24 +1,12 @@
 ---
 title: '&lt;messageSenderAuthentication&gt;'
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: ea62fc06-55fb-42e0-aa2b-8867bdf4b415
-caps.latest.revision: "10"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 734deddc2924814b081ce80b8504fb77e78c095c
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
-ms.translationtype: MT
+ms.openlocfilehash: 656543ee1908c8fa332e373863aa4dc7ddecaba7
+ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="ltmessagesenderauthenticationgt"></a>&lt;messageSenderAuthentication&gt;
 Eş sertifikanın bir ileti gönderen tarafından kullanılan kimlik doğrulama ayarlarını belirtir.  
@@ -26,10 +14,10 @@ Eş sertifikanın bir ileti gönderen tarafından kullanılan kimlik doğrulama 
  \<system.ServiceModel>  
 \<davranışları >  
 \<serviceBehaviors>  
-\<behavior>  
+\<davranışı >  
 \<serviceCredentials>  
 \<Eş >  
-\<messageSenderAuthentication>  
+\<messageSenderAuthentication >  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -50,7 +38,7 @@ Eş sertifikanın bir ileti gönderen tarafından kullanılan kimlik doğrulama 
 |Öznitelik|Açıklama|  
 |---------------|-----------------|  
 |`certificateValidationMode`|İsteğe bağlı numaralandırması. Kimlik bilgilerini doğrulamak için kullanılan beş modlarından birini belirtir. Bu öznitelik türünde <xref:System.ServiceModel.Security.X509CertificateValidationMode>. Varsa kümesine `Custom`, sonra bir `customCertificateValidator` de sağlanmalıdır.|  
-|`customCertificateValidatorType`|İsteğe bağlı dize. Bir türü ve bir özel tür doğrulamak için kullanılan derleme belirtir. Bu öznitelik ne zaman ayarlanmalıdır `certificateValidationMode` ayarlanır `Custom`. Bu öznitelik türünde <xref:System.IdentityModel.Selectors.X509CertificateValidator>. [!INCLUDE[indigo1](../../../../../includes/indigo1-md.md)]Varsayılan eş eş sertifikayı güvenilir kişiler deposunda karşı doğrular sertifika Doğrulayıcı sağlar. Sertifika geçerli bir kök zincir olduğunu doğrular. Farklı bir davranışı belirtmek ve bu öznitelik için özel Doğrulayıcı işaret edecek şekilde kullanmak için özel bir doğrulayıcı uygulayabilirsiniz.|  
+|`customCertificateValidatorType`|İsteğe bağlı dize. Bir türü ve bir özel tür doğrulamak için kullanılan derleme belirtir. Bu öznitelik ne zaman ayarlanmalıdır `certificateValidationMode` ayarlanır `Custom`. Bu öznitelik türünde <xref:System.IdentityModel.Selectors.X509CertificateValidator>. Windows Communication Foundation (WCF) varsayılan eş eş sertifikayı güvenilir kişiler deposunda karşı doğrular sertifika Doğrulayıcı sağlar. Sertifika geçerli bir kök zincir olduğunu doğrular. Farklı bir davranışı belirtmek ve bu öznitelik için özel Doğrulayıcı işaret edecek şekilde kullanmak için özel bir doğrulayıcı uygulayabilirsiniz.|  
 |`revocationMode`|İsteğe bağlı numaralandırması. Sertifika iptal modunu belirtir. Bu öznitelik türünde <xref:System.Security.Cryptography.X509Certificates.X509RevocationMode>. Sistem eş sertifika tarafından iptal edildi olduğunu doğrular iptal edilen sertifika listesinde bakan. Bu onay çevrimiçi denetleyerek ya da bir önbelleğe alınan iptal listesi karşı gerçekleştirilebilir. İptal denetimi NoCheck için bu öznitelik ayarlayarak kapatılabilir.|  
 |`trustedStoreLocation`|İsteğe bağlı numaralandırması. Burada eş sertifika doğrulanmış tarafından güvenilen depolama konumu belirtir [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)] güvenlik sistemi. Bu öznitelik türünde <xref:System.Security.Cryptography.X509Certificates.StoreLocation>.|  
   

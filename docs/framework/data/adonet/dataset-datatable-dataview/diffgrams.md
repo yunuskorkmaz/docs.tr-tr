@@ -1,24 +1,12 @@
 ---
 title: DiffGrams
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-ado
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 037f3991-7bbc-424b-b52e-8b03585d3e34
-caps.latest.revision: "4"
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
-ms.workload: dotnet
-ms.openlocfilehash: 81cf30367808a3f198514c0d72fa86a617a5ff13
-ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
+ms.openlocfilehash: 2b04fd69af94ce49fb5973af5ac74c2933fe58bf
+ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="diffgrams"></a>DiffGrams
 Bir DiffGram veri öğeleri geçerli ve özgün sürümleri tanımlayan bir XML biçimidir. <xref:System.Data.DataSet> Yükleme ve içeriği kalır ve içeriğini taşıma için bir ağ bağlantısı üzerinden serileştirmek için biçimini kullanır. Zaman bir <xref:System.Data.DataSet> yazılmış bir DiffGram doğru bir şekilde içeriği ancak şema değil, yeniden oluşturmak için gerekli tüm bilgileri DiffGram doldurur <xref:System.Data.DataSet>, hem sütun değerleri dahil olmak üzere **özgün** ve **geçerli** satır sürümleri, satır hata bilgilerini ve satır sırası.  
@@ -81,10 +69,10 @@ Bir DiffGram veri öğeleri geçerli ve özgün sürümleri tanımlayan bir XML 
  **\<**  ***DataInstance***  **>**  
  Bu öğenin adını ***DataInstance***, bu belgede açıklama amacıyla kullanılır. A ***DataInstance*** öğesinin temsil ettiği bir <xref:System.Data.DataSet> veya bir satır bir <xref:System.Data.DataTable>. Yerine *DataInstance*, öğe adı içerecektir <xref:System.Data.DataSet> veya <xref:System.Data.DataTable>. Veya değiştirilmiş olup olmadığını biçimini bu bloğunu geçerli verileri içerir. Bir öğe veya değiştirilmiş olan satır ile tanımlanır **diffgr:hasChanges** ek açıklama.  
   
- **\<diffgr:before>**  
+ **\<diffgr: önce >**  
  Bu biçimini bloğunu bir satır özgün sürümünü içerir. Bu bloğu öğelerinde öğelerine eşleştirilir ***DataInstance*** kullanarak engelleme **diffgr:id** ek açıklama.  
   
- **\<diffgr:errors>**  
+ **\<diffgr:Errors >**  
  Belirli bir satır için hata bilgilerini biçimini bu bloğunu içeren ***DataInstance*** bloğu. Bu bloğu öğelerinde öğelerine eşleştirilir ***DataInstance*** kullanarak engelleme **diffgr:id** ek açıklama.  
   
 ## <a name="diffgram-annotations"></a>DiffGram ek açıklamaları  
@@ -94,10 +82,10 @@ Bir DiffGram veri öğeleri geçerli ve özgün sürümleri tanımlayan bir XML 
   
 |Ek Açıklama|Açıklama|  
 |----------------|-----------------|  
-|**id**|Öğeleri kullanmak üzere kullanılan  **\<diffgr: önce >** ve  **\<diffgr:errors >** öğelerine blokları  **\<**  ***DataInstance***  **>**  bloğu. İle değerleri **diffgr:id** ek açıklama biçiminde olan *[TableName] [RowIdentifier]*. Örneğin: `<Customers diffgr:id="Customers1">`.|  
-|**parentId**|Hangi öğeyi tanımlayan  **\<**  ***DataInstance***  **>**  bloğu, geçerli öğenin üst öğesidir. İle değerleri **diffgr:parentId** ek açıklama biçiminde olan *[TableName] [RowIdentifier]*. Örneğin: `<Orders diffgr:parentId="Customers1">`.|  
-|**hasChanges**|Bir satırda tanımlayan  **\<**  ***DataInstance***  **>**  değiştirilmiş olarak engelleyin. **HasChanges** ek açıklama aşağıdaki iki değerden biri olabilir:<br /><br /> **inserted**<br /> Tanımlayan bir **eklenen** satır.<br /><br /> **değiştiren**<br /> Tanımlayan bir **değiştirilen** içeren satır bir **özgün** satır sürümünde  **\<diffgr: önce >** bloğu. Unutmayın **silinmiş** satırları sahip olacak bir **özgün** satır sürümünde  **\<diffgr: önce >** bloğu, ancak hiçbir ek açıklama öğesi içindeolmasıoradaolacaktır **\<**  ***DataInstance***  **>**  bloğu.|  
-|**hasErrors**|Bir satırda tanımlayan  **\<**  ***DataInstance***  **>**  ile engelleme bir **RowError**. Hata yerleştirilmemiş  **\<diffgr:errors >** bloğu.|  
+|**id**|Öğeleri kullanmak üzere kullanılan  **\<diffgr: önce >** ve  **\<diffgr:errors >** öğelerine blokları **\<** ***DataInstance*** **>** bloğu. İle değerleri **diffgr:id** ek açıklama biçiminde olan *[TableName] [RowIdentifier]*. Örneğin: `<Customers diffgr:id="Customers1">`.|  
+|**parentId**|Hangi öğeyi tanımlayan **\<** ***DataInstance*** **>** bloğu, geçerli öğenin üst öğesidir. İle değerleri **diffgr:parentId** ek açıklama biçiminde olan *[TableName] [RowIdentifier]*. Örneğin: `<Orders diffgr:parentId="Customers1">`.|  
+|**hasChanges**|Bir satırda tanımlayan **\<** ***DataInstance*** **>** değiştirilmiş olarak engelleyin. **HasChanges** ek açıklama aşağıdaki iki değerden biri olabilir:<br /><br /> **eklenen**<br /> Tanımlayan bir **eklenen** satır.<br /><br /> **Değiştiren**<br /> Tanımlayan bir **değiştirilen** içeren satır bir **özgün** satır sürümünde  **\<diffgr: önce >** bloğu. Unutmayın **silinmiş** satırları sahip olacak bir **özgün** satır sürümünde  **\<diffgr: önce >** bloğu, ancak hiçbir ek açıklama öğesi içindeolmasıoradaolacaktır**\<** ***DataInstance*** **>** bloğu.|  
+|**hasErrors**|Bir satırda tanımlayan **\<** ***DataInstance*** **>** ile engelleme bir **RowError**. Hata yerleştirilmemiş  **\<diffgr:errors >** bloğu.|  
 |**Hata:**|Metnini içeren **RowError** belirli bir öğe için  **\<diffgr:errors >** bloğu.|  
   
  <xref:System.Data.DataSet> Okunurken ya da bir DiffGram içeriğini yazma ek ek açıklamaları içerir. Aşağıdaki tabloda ad alanında tanımlı bu ek açıklama açıklanmaktadır **urn: şemaları-microsoft-com: xml-msdata**.  
@@ -105,10 +93,10 @@ Bir DiffGram veri öğeleri geçerli ve özgün sürümleri tanımlayan bir XML 
 |Ek Açıklama|Açıklama|  
 |----------------|-----------------|  
 |**RowOrder**|Özgün veriler satır sırasını korur ve belirli bir satırın dizini tanımlayan <xref:System.Data.DataTable>.|  
-|**Hidden**|Sahip olarak bir sütun tanımlayan bir **ColumnMapping** özelliğini **MappingType.Hidden**. Öznitelik biçiminde yazılır **msdata: gizli** *[ColumnName]*= "*değeri*". Örneğin: `<Customers diffgr:id="Customers1" msdata:hiddenContactTitle="Owner">`.<br /><br /> Veri içeriyorsa, gizli sütunlar yalnızca DiffGram özniteliği olarak yazıldığını unutmayın. Aksi takdirde, bunlar yoksayılır.|  
+|**Gizli**|Sahip olarak bir sütun tanımlayan bir **ColumnMapping** özelliğini **MappingType.Hidden**. Öznitelik biçiminde yazılır **msdata: gizli** *[ColumnName]*= "*değeri*". Örneğin: `<Customers diffgr:id="Customers1" msdata:hiddenContactTitle="Owner">`.<br /><br /> Veri içeriyorsa, gizli sütunlar yalnızca DiffGram özniteliği olarak yazıldığını unutmayın. Aksi takdirde, bunlar yoksayılır.|  
   
 ## <a name="sample-diffgram"></a>Örnek DiffGram  
- Biçimini örneği aşağıda verilmiştir. Değişiklikler kaydedildi önce bu örnek bir tablodaki bir satır için bir güncelleştirme sonucunu gösterir. "ALFKI" ile bir CustomerID satırının değiştirildi, ancak güncelleştirilmez. Sonuç olarak, var olan bir **geçerli** ile satırın bir **diffgr:id** "Customers1",  **\<**  ***DataInstance***  **>**  bloğu ve bir **özgün** ile satırın bir **diffgr:id** "Customers1",  **\<diffgr: önce >**bloğu. "ANATR" ile bir CustomerID satırının içeren bir **RowError**, ile açıklanan şekilde `diffgr:hasErrors="true"` ve ilgili öğesinde  **\<diffgr:errors >** bloğu.  
+ Biçimini örneği aşağıda verilmiştir. Değişiklikler kaydedildi önce bu örnek bir tablodaki bir satır için bir güncelleştirme sonucunu gösterir. "ALFKI" ile bir CustomerID satırının değiştirildi, ancak güncelleştirilmez. Sonuç olarak, var olan bir **geçerli** ile satırın bir **diffgr:id** "Customers1", **\<** ***DataInstance*** **>** bloğu ve bir **özgün** ile satırın bir **diffgr:id** "Customers1",  **\<diffgr: önce >** bloğu. "ANATR" ile bir CustomerID satırının içeren bir **RowError**, ile açıklanan şekilde `diffgr:hasErrors="true"` ve ilgili öğesinde  **\<diffgr:errors >** bloğu.  
   
 ```xml  
 <diffgr:diffgram xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:diffgr="urn:schemas-microsoft-com:xml-diffgram-v1">  

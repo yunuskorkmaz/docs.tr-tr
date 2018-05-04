@@ -1,26 +1,12 @@
 ---
 title: OLE DB veri türü eşlemeleri
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-ado
-ms.tgt_pltfrm: ''
-ms.topic: article
 ms.assetid: 04bcb259-59d3-4fd7-894d-4f0dd0c68069
-caps.latest.revision: ''
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
-ms.workload:
-- dotnet
-ms.openlocfilehash: 407f194a8530f9b9e4241a6bdb4d26a4b891aa46
-ms.sourcegitcommit: c883637b41ee028786edceece4fa872939d2e64c
+ms.openlocfilehash: 4287b125b26bc0c7233f59322c84e2ac27c0c594
+ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/26/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="ole-db-data-type-mappings"></a>OLE DB veri türü eşlemeleri
 Aşağıdaki tabloda oluşturulursa gösterilmektedir [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] ADO ve OLE DB için .NET Framework Veri Sağlayıcısı'ndan veri türleri için türü (<xref:System.Data.OleDb>). Yazılı erişimci yöntemleri <xref:System.Data.OleDb.OleDbDataReader> da listelenir.  
@@ -43,8 +29,8 @@ Aşağıdaki tabloda oluşturulursa gösterilmektedir [!INCLUDE[dnprdnshort](../
 |adError|DBTYPE_ERROR|ExternalException|GetValue()|  
 |adFileTime|DBTYPE_FILETIME|DateTime|GetDateTime()|  
 |adGUID|DBTYPE_GUID|Guid|GetGuid()|  
-|adIDispatch|DBTYPE_IDISPATCH *|Nesne|GetValue()|  
-|adInteger|DBTYPE_I4|Int32|GetInt32()|  
+|adDispatch|DBTYPE_IDISPATCH *|Nesne|GetValue()|  
+|imzalanmam ış olanı|DBTYPE_I4|Int32|GetInt32()|  
 |adUnknown|DBTYPE_IUNKNOWN *|Nesne|GetValue()|  
 |adNumeric|DBTYPE_NUMERIC|Ondalık|GetDecimal()|  
 |adPropVariant|DBTYPE_PROPVARIANT|Nesne|GetValue()|  

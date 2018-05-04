@@ -9,11 +9,11 @@ ms.assetid: 9bcf896a-5826-4189-8c1a-3e35fa08243a
 caps.latest.revision: 5
 author: BillWagner
 ms.author: wiwagn
-ms.openlocfilehash: 70dd5606ba81619658eda24f8c4bfd4970d29308
-ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
-ms.translationtype: MT
+ms.openlocfilehash: 3f8df58503fe0dd4c3096250c920db250b06046b
+ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="asynchronous-programming-with-async-and-await-c"></a>Zaman uyumsuz programlama ile async ve await (C#)
 Zaman uyumsuz programlama kullanarak performans sorunlarını önleyebilir ve uygulamanızın genel yanıt verme becerisini geliştirebilirsiniz. Ancak, zaman uyumsuz uygulamalar yazmaya yönelik geleneksel teknikler karmaşık olabilir ve bu nedenle yazılmaları, hataların ayıklanması ve bakım yapılması zorlaşabilir.  
@@ -153,7 +153,7 @@ Zaman uyumsuz yöntemlerin engelleyici olmayan işlemler olmaları amaçlanmış
   
 `async` Ve `await` anahtar sözcükleri oluşturulacak ek iş parçacığı neden yoktur. Zaman uyumsuz yöntem kendi iş parçacığı üzerinde çalışmadığı için zaman uyumsuz yöntemler çoklu iş parçacığı kullanımı gerektirmez. Yöntem geçerli eşitleme kapsamının üzerinde çalışır ve yalnızca yöntem etkin olduğunda iş parçacığındaki zamanı kullanır. Kullanabileceğiniz <xref:System.Threading.Tasks.Task.Run%2A?displayProperty=nameWithType> arka plan iş parçacığı, ancak bir arka plan için CPU bağımlı iş taşımak için iş parçacığı kullanılabilir hale gelmesi için sonuçları yalnızca bekleyen bir işlem yardımcı değil.  
   
-Zaman uyumsuz programlamaya zaman uyumsuz yaklaşım, hemen hemen her durumda varolan yaklaşımlara tercih edilir. Özellikle, bu daha iyi yaklaşımdır <xref:System.ComponentModel.BackgroundWorker> sınıf g/ç işlemleri için kodu daha basit olduğundan ve yarış durumları karşı koruma sağlamak zorunda değilsiniz. İle birlikte <xref:System.Threading.Tasks.Task.Run%2A?displayProperty=nameWithType> yöntemi, zaman uyumsuz programlama daha iyi <xref:System.ComponentModel.BackgroundWorker> CPU bağımlı işlemler için zaman uyumsuz programlama işten kodunuzu çalıştıran koordinasyon ayrıntılarını ayırdığından `Task.Run` aktarır iş parçacığı havuzu.  
+Zaman uyumsuz programlamaya zaman uyumsuz yaklaşım, hemen hemen her durumda varolan yaklaşımlara tercih edilir. Özellikle, bu daha iyi yaklaşımdır <xref:System.ComponentModel.BackgroundWorker> sınıf g/Ç işlemleri için kodu daha basit olduğundan ve yarış durumları karşı koruma sağlamak zorunda değilsiniz. İle birlikte <xref:System.Threading.Tasks.Task.Run%2A?displayProperty=nameWithType> yöntemi, zaman uyumsuz programlama daha iyi <xref:System.ComponentModel.BackgroundWorker> CPU bağımlı işlemler için zaman uyumsuz programlama işten kodunuzu çalıştıran koordinasyon ayrıntılarını ayırdığından `Task.Run` aktarır iş parçacığı havuzu.  
   
 ##  <a name="BKMK_AsyncandAwait"></a> Async ve await  
  Bir yöntemi kullanarak bir zaman uyumsuz yöntem olup belirtirseniz [zaman uyumsuz](../../../../csharp/language-reference/keywords/async.md) değiştiricisi, aşağıdaki iki özelliklerini etkinleştirin.  

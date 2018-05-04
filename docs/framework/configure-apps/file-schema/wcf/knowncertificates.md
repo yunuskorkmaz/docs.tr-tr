@@ -1,33 +1,21 @@
 ---
 title: '&lt;knownCertificates&gt;'
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 678e21b4-6493-47c3-8359-fcf0d37e2138
-caps.latest.revision: "17"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 85043317c42d60d9a56ceb1e5678ad3b8222df79
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 394ae246ad29a0747f3814b36fae2557b04c235a
+ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="ltknowncertificatesgt"></a>&lt;knownCertificates&gt;
 Bir güvenlik belirteci hizmeti (STS) gelen verilen güvenlik kimlik bilgilerini doğrulamak için sağlanan X.509 sertifikalarını koleksiyonunu temsil eder.  
   
- \<Sistem. ServiceModel >  
+ \<system.ServiceModel>  
 \<davranışları >  
-\<serviceBehaviors >  
+\<serviceBehaviors>  
 \<davranışı >  
-\<serviceCredentials >  
+\<serviceCredentials>  
 \<issuedTokenAuthentication >  
 \<knownCertificates >  
   

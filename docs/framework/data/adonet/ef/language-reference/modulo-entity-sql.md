@@ -1,24 +1,12 @@
 ---
-title: "(Modül) (Varlık SQL)"
-ms.custom: 
+title: (Modül) (Varlık SQL)
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-ado
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 243ddc4f-3c4e-41e1-a3ef-4ed39e36248b
-caps.latest.revision: "3"
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
-ms.workload: dotnet
-ms.openlocfilehash: e204612904aa55b4a0ae9aa65f2bbfd644bbc396
-ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
+ms.openlocfilehash: ad7b76c1479906e9dcd875407e75475b55d5ae16
+ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="modulo-entity-sql"></a>(Modül) (Varlık SQL)
 Bir başkası tarafından ayrılmış bir ifade kalanı döndürür.  
@@ -31,10 +19,10 @@ dividend % divisor
   
 ## <a name="arguments"></a>Arguments  
  `dividend`  
- Bölmek için sayısal ifade. `dividend`sayısal veri türleri herhangi birinin geçerli bir ifade değil.  
+ Bölmek için sayısal ifade. `dividend` sayısal veri türleri herhangi birinin geçerli bir ifade değil.  
   
  `divisor`  
- Tarafından bölünen bölmek için sayısal ifade. `divisor`sayısal veri türleri herhangi birinin geçerli bir ifade değil.  
+ Tarafından bölünen bölmek için sayısal ifade. `divisor` sayısal veri türleri herhangi birinin geçerli bir ifade değil.  
   
 ## <a name="result-types"></a>Sonuç türleri  
  Edm.Int32  

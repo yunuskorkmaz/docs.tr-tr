@@ -1,31 +1,19 @@
 ---
-title: "Bağlantı dizeleri"
-ms.custom: 
+title: Bağlantı dizeleri
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-ado
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 78d516bc-c99f-4865-8ff1-d856bc1a01c0
-caps.latest.revision: "3"
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
-ms.workload: dotnet
-ms.openlocfilehash: d582383d59928d72c15aabba37b50ed878b67ca5
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.openlocfilehash: ac2c618272044ac9aaaba697f6583c9a814aa79f
+ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="connection-strings"></a>Bağlantı dizeleri
 Bir bağlantı dizesi, parametre olarak bir veri kaynağına veri sağlayıcıdan geçen başlatma bilgileri içerir. Sözdizimi veri sağlayıcısına bağlıdır ve bağlantı dizesini bir bağlantı açmak için girişimi sırasında ayrıştırılır. Entity Framework tarafından kullanılan bağlantı dizeleri Entity Framework destekleyen temel ADO.NET veri sağlayıcısına bağlanmak için kullanılan bilgileri içerir. Ayrıca gerekli modeli ve eşleme dosyaları hakkındaki bilgileri içerir.  
   
  Bağlantı dizesi modeli ve eşleme meta veri erişirken EntityClient sağlayıcı tarafından kullanılır ve veri kaynağına bağlanma. Bağlantı dizesi erişilen veya aracılığıyla ayarlanabilir <xref:System.Data.EntityClient.EntityConnection.ConnectionString%2A> özelliği <xref:System.Data.EntityClient.EntityConnection>. <xref:System.Data.EntityClient.EntityConnectionStringBuilder> Sınıfı, programlı olarak oluşturmanıza veya bağlantı dizesi parametrelerinde erişmek için kullanılabilir. Daha fazla bilgi için bkz: [nasıl yapılır: bir EntityConnection bağlantı dizesi oluşturma](../../../../../docs/framework/data/adonet/ef/how-to-build-an-entityconnection-connection-string.md).  
   
- [Varlık veri modeli Araçları](http://msdn.microsoft.com/library/91076853-0881-421b-837a-f582f36be527) uygulamanın yapılandırma dosyasında depolanan bağlantı dizesi oluşturun. <xref:System.Data.Objects.ObjectContext>Bu bağlantı bilgisini nesne sorgular oluştururken otomatik olarak alır. <xref:System.Data.EntityClient.EntityConnection> Tarafından kullanılan bir <xref:System.Data.Objects.ObjectContext> örneği erişilebilir gelen <xref:System.Data.Objects.ObjectContext.Connection%2A> özelliği. Daha fazla bilgi için bkz: [bağlantıları yönetme ve işlemleri](http://msdn.microsoft.com/library/b6659d2a-9a45-4e98-acaa-d7a8029e5b99).  
+ [Varlık veri modeli Araçları](http://msdn.microsoft.com/library/91076853-0881-421b-837a-f582f36be527) uygulamanın yapılandırma dosyasında depolanan bağlantı dizesi oluşturun. <xref:System.Data.Objects.ObjectContext> Bu bağlantı bilgisini nesne sorgular oluştururken otomatik olarak alır. <xref:System.Data.EntityClient.EntityConnection> Tarafından kullanılan bir <xref:System.Data.Objects.ObjectContext> örneği erişilebilir gelen <xref:System.Data.Objects.ObjectContext.Connection%2A> özelliği. Daha fazla bilgi için bkz: [bağlantıları yönetme ve işlemleri](http://msdn.microsoft.com/library/b6659d2a-9a45-4e98-acaa-d7a8029e5b99).  
   
 ## <a name="connection-string-parameters"></a>Bağlantı dizesi parametreleri  
  Bir bağlantı dizesi biçimi anahtar/değer parametresi çifti noktalı virgülle ayrılmış bir listesi verilmiştir:  
@@ -59,7 +47,7 @@ Metadata=res://<assemblyFullName>/<resourceName>.
 |Seçenek|Açıklama|  
 |-|-|  
 |`assemblyFullName`|Katıştırılmış kaynak ile bir derlemeyi tam adı. Adı gibi basit bir ad, sürüm adı, desteklenen bir kültür ve ortak anahtarı içerir:<br /><br /> `ResourceLib, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null`<br /><br /> Kaynaklar uygulama tarafından erişilebilen herhangi bir derlemede katıştırılabilir.<br /><br /> Joker karakter belirtirseniz (\*) için `assemblyFullName`, Entity Framework çalışma zamanı kaynakların bu sırada aşağıdaki konumlarda arar:<br /><br /> 1.  Çağrıyı yapan derlemeyi.<br />2.  Başvurulan derlemeler.<br />3.  Bir uygulamanın bin dizinindeki derlemeler.<br /><br /> Dosyaları aşağıdaki konumlardan birinde değilse, bir özel durum. **Not:** joker karakter (*) kullandığınızda, doğru ada sahip kaynaklar için tüm derlemeler üzerinden aramak Entity Framework sahiptir. Performansı artırmak için joker karakter yerine derleme adı belirtin.|  
-|`resourceName`|AdvendtureWorksModel.csdl gibi birlikte kaynağın adı. Meta Veri Hizmetleri yalnızca dosyaları ve kaynakları aşağıdaki uzantılardan birine sahip arar: .csdl, .ssdl veya .msl. Varsa `resourceName` belirtilmezse, tüm meta veri kaynakları yüklenecek. Kaynakları bir derlemeyi içinde benzersiz adlara sahip olmalıdır. Aynı ada sahip birden fazla dosya derleme farklı dizinlerde tanımlanmışsa, `resourceName` kaynağının adını, örneğin FolderName.FileName.csdl önce klasör yapısı eklemeniz gerekir.<br /><br /> `resourceName`joker karakter (*) belirttiğinizde için gerekli değildir `assemblyFullName`.|  
+|`resourceName`|AdvendtureWorksModel.csdl gibi birlikte kaynağın adı. Meta Veri Hizmetleri yalnızca dosyaları ve kaynakları aşağıdaki uzantılardan birine sahip arar: .csdl, .ssdl veya .msl. Varsa `resourceName` belirtilmezse, tüm meta veri kaynakları yüklenecek. Kaynakları bir derlemeyi içinde benzersiz adlara sahip olmalıdır. Aynı ada sahip birden fazla dosya derleme farklı dizinlerde tanımlanmışsa, `resourceName` kaynağının adını, örneğin FolderName.FileName.csdl önce klasör yapısı eklemeniz gerekir.<br /><br /> `resourceName` joker karakter (*) belirttiğinizde için gerekli değildir `assemblyFullName`.|  
   
 > [!NOTE]
 >  Performansı artırmak için çağrıyı yapan derlemeyi kaynaklarında dışında Web olmayan senaryolarda katıştırmak hiçbir başvurusu çağrıyı yapan derlemeyi temel eşleme ve meta veri dosyalarında olduğu.  
@@ -102,19 +90,19 @@ Metadata=datadir\metadata\
 Metadata=.\  
 ```  
   
-## <a name="support-for-the-124datadirectory124-substitution-string-and-the-web-application-root-operator-"></a>Desteği &#124; DataDirectory &#124; Değiştirme dizesi ve Web uygulaması kök işleci (~)  
- `DataDirectory`ve ~ işleci kullanıldığı <xref:System.Data.EntityClient.EntityConnection.ConnectionString%2A> parçası olarak `Metadata` ve `Provider Connection String` anahtar sözcükler. <xref:System.Data.EntityClient.EntityConnection> İletir `DataDirectory` ve ~ işleci <xref:System.Data.Metadata.Edm.MetadataWorkspace> ve depo sağlayıcısı sırasıyla.  
+## <a name="support-for-the-124datadirectory124-substitution-string-and-the-web-application-root-operator-"></a>Desteği &#124;DataDirectory&#124; değiştirme dizesi ve Web uygulaması kök işleci (~)  
+ `DataDirectory` ve ~ işleci kullanıldığı <xref:System.Data.EntityClient.EntityConnection.ConnectionString%2A> parçası olarak `Metadata` ve `Provider Connection String` anahtar sözcükler. <xref:System.Data.EntityClient.EntityConnection> İletir `DataDirectory` ve ~ işleci <xref:System.Data.Metadata.Edm.MetadataWorkspace> ve depo sağlayıcısı sırasıyla.  
   
 |Terim|Açıklama|  
 |----------|-----------------|  
-|`&#124;DataDirectory&#124;`|Bir eşleme ve meta veri dosyaları için göreli bir yol çözümler. Bu aracılığıyla ayarlanan değerdir `AppDomain.SetData("DataDirectory", objValue)` yöntemi. `DataDirectory` Kanal karakterleriyle değiştirme dizesi çevrelenen ve adını ve kanal karakter arasında bir boşluk olamaz. `DataDirectory` Adı büyük küçük harfe duyarlı değil.<br /><br /> Boşluk gereken yan ya da iki tarafı da adı, örneğin "DataDirectory" adlı bir fiziksel dizini meta verileri yollar listesi bir üyesi olarak geçirilecek varsa, ekleyebilir: `Metadata="DataDirectory1 &#124; DataDirectory &#124; DataDirectory2"`. Bir ASP.NET uygulaması çözümler &#124; DataDirectory &#124; için "\<uygulama kökü > / app_data" klasörü.|  
+|`&#124;DataDirectory&#124;`|Bir eşleme ve meta veri dosyaları için göreli bir yol çözümler. Bu aracılığıyla ayarlanan değerdir `AppDomain.SetData("DataDirectory", objValue)` yöntemi. `DataDirectory` Kanal karakterleriyle değiştirme dizesi çevrelenen ve adını ve kanal karakter arasında bir boşluk olamaz. `DataDirectory` Adı büyük küçük harfe duyarlı değil.<br /><br /> Boşluk gereken yan ya da iki tarafı da adı, örneğin "DataDirectory" adlı bir fiziksel dizini meta verileri yollar listesi bir üyesi olarak geçirilecek varsa, ekleyebilir: `Metadata="DataDirectory1 &#124; DataDirectory &#124; DataDirectory2"`. Bir ASP.NET uygulaması çözümler &#124;DataDirectory&#124; için "\<uygulama kökü > / app_data" klasörü.|  
 |~|Web uygulaması kök çözümler. ~ Geçerli bir yerel alt gösterebilir rağmen başında konumunda karakter Web uygulaması kök işleci (~) her zaman yorumlanır. İçin yerel alt başvurmak için kullanıcı açıkça geçirmelisiniz `./~`.|  
   
- `DataDirectory`ve ~ işleci yalnızca bir yol başında belirtilmelidir, bunlar başka bir konumda çözümlenmeyen. Entity Framework çözümlemeye çalışır `~/data`, ancak kabul eder `/data/~` fiziksel bir yol olarak.  
+ `DataDirectory` ve ~ işleci yalnızca bir yol başında belirtilmelidir, bunlar başka bir konumda çözümlenmeyen. Entity Framework çözümlemeye çalışır `~/data`, ancak kabul eder `/data/~` fiziksel bir yol olarak.  
   
  İle başlayan bir yol `DataDirectory` veya ~ işleci dalı dışında fiziksel bir yola çözmek olamaz `DataDirectory` ve ~ işleci. Örneğin, aşağıdaki yollardan çözer: `~` , `~/data` , `~/bin/Model/SqlServer`. Aşağıdaki yolları çözümlemek başarısız olur: `~/..`, `~/../other`.  
   
- `DataDirectory`ve ~ işleci uzatabilirsiniz. alt dizinlerde, aşağıdaki gibi eklemek için: `|DataDirectory|\Model`,`~/bin/Model`  
+ `DataDirectory` ve ~ işleci uzatabilirsiniz. alt dizinlerde, aşağıdaki gibi eklemek için: `|DataDirectory|\Model`, `~/bin/Model`  
   
  Çözünürlüğünü `DataDirectory` değiştirme dizesi ve ~ özyinelemeli olmayan işlecidir. Örneğin, `DataDirectory` içeren `~` karakter, bir özel durum meydana gelir. Sonsuz özyineleme engeller.  
   

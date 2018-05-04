@@ -1,24 +1,12 @@
 ---
-title: "GROUPPARTITION (varlık SQL)"
-ms.custom: 
+title: GROUPPARTITION (varlık SQL)
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-ado
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: d0482e9b-086c-451c-9dfa-ccb024a9efb6
-caps.latest.revision: "3"
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
-ms.workload: dotnet
-ms.openlocfilehash: 09d4d1e6d2e69d805c316f60e6d6e91d094e68cb
-ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
+ms.openlocfilehash: 9f0f917380e6422da753282216529580f87f1a1a
+ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="grouppartition-entity-sql"></a>GROUPPARTITION (varlık SQL)
 Toplama ilişkili olduğunu geçerli Grup bölümünün öngörülen bağımsız değişken değerleri koleksiyonunu döndürür. `GroupPartition` Toplama bir grup tabanlı toplama olduğundan ve hiçbir koleksiyon tabanlı bir biçime sahip.  
@@ -52,7 +40,7 @@ select p, Sum(ol.Quantity) from LOB.OrderLines as ol
   
  `GROUPPARTITION` İşleci, kullanıcı tanımlı toplama işlevleri ile birlikte kullanılabilir.  
   
- `GROUPPARTITION`Gruplandırılmış giriş kümesine başvuru tutan bir özel toplama işlecidir. Bu başvuru, sorguya grupla kapsam içinde olduğu herhangi bir yerde kullanılabilir. Örneğin,  
+ `GROUPPARTITION` Gruplandırılmış giriş kümesine başvuru tutan bir özel toplama işlecidir. Bu başvuru, sorguya grupla kapsam içinde olduğu herhangi bir yerde kullanılabilir. Örneğin,  
   
 ```  
 select p, GroupPartition(ol.Quantity) from LOB.OrderLines as ol group by ol.Product as p  

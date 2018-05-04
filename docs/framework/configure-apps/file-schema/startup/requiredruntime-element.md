@@ -1,13 +1,6 @@
 ---
-title: "&lt;requiredRuntime&gt; öğesi"
-ms.custom: 
+title: '&lt;requiredRuntime&gt; öğesi'
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 f1_keywords:
 - http://schemas.microsoft.com/.NetConfiguration/v2.0#requiredRuntime
 - http://schemas.microsoft.com/.NetConfiguration/v2.0#configuration/startup/requiredRuntime
@@ -16,22 +9,20 @@ helpviewer_keywords:
 - <requiredRuntime> element
 - container tags, <requiredRuntime> element
 ms.assetid: 9fa1639e-beb8-43be-b7a4-12f7b229c34b
-caps.latest.revision: "11"
 author: mcleblanc
 ms.author: markl
 manager: markl
-ms.workload: dotnet
-ms.openlocfilehash: 2e864eec2ddf51d5cc88110654f6c23f146938d5
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.openlocfilehash: 184547dd47e728f17f28105e74b2ca67c1436efc
+ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="ltrequiredruntimegt-element"></a>&lt;requiredRuntime&gt; öğesi
 Uygulamanın yalnızca sürüm 1.0 ortak dil çalışma zamanı desteklediğini belirtir. Bu öğe kullanım dışıdır ve artık kullanılmalıdır. [ `supportedRuntime` ](supportedruntime-element.md) Öğesi bunun yerine kullanılmalıdır.
   
  \<Yapılandırma >  
-\<startup>  
+\<Başlangıç >  
 \<requiredRuntime >  
   
 ## <a name="syntax"></a>Sözdizimi  

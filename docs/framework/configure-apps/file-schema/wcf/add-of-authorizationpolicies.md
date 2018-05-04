@@ -1,29 +1,17 @@
 ---
 title: '&lt;authorizationPolicies&gt; &lt;ekleme&gt;'
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 613a03d8-4384-4556-bce2-8c23286c0bb0
-caps.latest.revision: "8"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 72af0529cea2e6810bdb7a518874a313e3ceab40
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 008f465134860141293776130ebd75cd39120f5e
+ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="ltaddgt-of-ltauthorizationpoliciesgt"></a>&lt;authorizationPolicies&gt; &lt;ekleme&gt;
 Talep dönüştürme için bir yetkilendirme ilkesi belirtir.  
   
- \<Sistem. ServiceModel >  
+ \<system.ServiceModel>  
 \<davranışları >  
 \<davranışı >  
 \<serviceAuthorization >  
@@ -48,7 +36,7 @@ Talep dönüştürme için bir yetkilendirme ilkesi belirtir.
   
 |Öznitelik|Açıklama|  
 |---------------|-----------------|  
-|`policyType`|Gerekli bir dize özniteliği.<br /><br /> [!INCLUDE[indigo1](../../../../../includes/indigo1-md.md)] Erişim denetimi modelini destekleyen türler olarak yetkilendirme ilkeleri kümesini sağlama. Bu öznitelik, bir giriş talep kümesini bir dönüştürme talep başka bir dizi içine sağlayan bir yetkilendirme ilkesi belirtir. Erişim denetimi verilen veya reddedilen oturum tabanlı.|  
+|`policyType`|Gerekli bir dize özniteliği.<br /><br /> Windows Communication Foundation (WCF) erişim denetimi modeli, sağlama türü olarak yetkilendirme ilkeleri kümesini destekler. Bu öznitelik, bir giriş talep kümesini bir dönüştürme talep başka bir dizi içine sağlayan bir yetkilendirme ilkesi belirtir. Erişim denetimi verilen veya reddedilen oturum tabanlı.|  
   
 ### <a name="child-elements"></a>Alt Öğeler  
  Yok.  

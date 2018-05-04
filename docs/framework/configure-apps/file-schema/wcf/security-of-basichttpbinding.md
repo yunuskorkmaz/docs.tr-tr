@@ -1,31 +1,21 @@
 ---
-title: "&lt;basicHttpBinding&gt; &lt;güvenliği&gt;"
-ms.custom: 
+title: '&lt;basicHttpBinding&gt; &lt;güvenliği&gt;'
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 6432708d-5465-4bd9-bfc2-466742db99cb
-caps.latest.revision: "16"
 author: BrucePerlerMS
-ms.author: bruceper
 manager: mbaldwin
-ms.workload: dotnet
-ms.openlocfilehash: 8d61075bc96427736f7e6f5a39302bbd59d434f9
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
-ms.translationtype: MT
+ms.openlocfilehash: ddf120d5462c7fcb0774e29fa18e80b71727acd8
+ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="ltsecuritygt-of-ltbasichttpbindinggt"></a>&lt;basicHttpBinding&gt; &lt;güvenliği&gt;
 Güvenlik özelliklerini tanımlayan [ \<basicHttpBinding >](../../../../../docs/framework/configure-apps/file-schema/wcf/basichttpbinding.md).  
   
  \<system.ServiceModel>  
 \<bağlamaları >  
-\<basicHttpBinding>  
+\<basicHttpBinding >  
 \<bağlama >  
 \<Güvenlik >  
   

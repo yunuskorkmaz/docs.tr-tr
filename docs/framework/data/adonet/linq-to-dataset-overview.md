@@ -1,26 +1,12 @@
 ---
 title: LINQ-DataSet genel bakış
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-ado
-ms.tgt_pltfrm: ''
-ms.topic: article
 ms.assetid: dc20a8fb-03f6-4b68-9c2b-7f7299e3070b
-caps.latest.revision: 3
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
-ms.workload:
-- dotnet
-ms.openlocfilehash: 3e030ca62625e2b8870cf0eeb5694f4b889b3a7e
-ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
+ms.openlocfilehash: d269ea2899ffd8005aad9912cf9273a012e13edd
+ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/27/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="linq-to-dataset-overview"></a>LINQ-DataSet genel bakış
 <xref:System.Data.DataSet> Daha yaygın olarak kullanılan bileşenlerden biri [!INCLUDE[vstecado](../../../../includes/vstecado-md.md)]. Anahtar öğesi bağlantısı kesilmiş olan programlama modeli [!INCLUDE[vstecado](../../../../includes/vstecado-md.md)] , temel alır ve bunu, farklı veri kaynaklarından açıkça Önbellek verileri olanak tanır. Sunu katmanı için <xref:System.Data.DataSet> veri bağlama için GUI denetimleri ile tümleşiktir. Orta katman için veri ilişkisel şeklini korur ve hızlı Basit Sorgu ve hiyerarşi Gezinti hizmetleri içeren bir önbellek sağlar. Bir veritabanı isteklerinde sayısını azaltmak için kullanılan ortak kullanmak için bir tekniktir <xref:System.Data.DataSet> orta katman önbelleğe alma için. Örneğin, veri güdümlü göz önünde bulundurun [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] Web uygulaması. Genellikle, uygulama verilerini önemli bir kısmını sık değişmeyen ve oturumlar veya kullanıcılar arasında ortak olan. Bu veriler veritabanında istek sayısını azaltan ve kullanıcının etkileşimleri hızlandırır Web sunucusu üzerindeki bellekte tutulabilir. Başka bir yararlı yönünü <xref:System.Data.DataSet> veri alt kümesi uygulama alanına bir veya daha fazla veri kaynağından getirmek bir uygulama tanımasıdır. Uygulama, ilişkisel şeklini koruyarak veri bellek içi, ardından yönetebilirsiniz.  

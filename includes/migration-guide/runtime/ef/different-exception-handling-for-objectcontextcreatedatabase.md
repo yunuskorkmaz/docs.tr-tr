@@ -2,7 +2,7 @@
 
 |   |   |
 |---|---|
-|Ayrıntılar|Veritabanı oluşturma başarısız olursa, .NET 4.5 içinde başlayarak <code>CreateDatabase</code> yöntemleri boş veritabanı bırakma deneyecek. Bu işlem başarılı olursa, özgün <xref:System.Data.SqlClient.SqlException?displayProperty=name> yayılır (yerine <xref:System.InvalidOperationException?displayProperty=name> , her zaman oluşturuldu .NET 4. 0 ')|
+|Ayrıntılar|Veritabanı oluşturma başarısız olursa, .NET Framework 4.5 içinde başlayarak <code>CreateDatabase</code> yöntemleri boş veritabanı bırakma deneyecek. Bu işlem başarılı olursa, özgün <xref:System.Data.SqlClient.SqlException?displayProperty=name> yayılır (yerine <xref:System.InvalidOperationException?displayProperty=name> , her zaman oluşturuldu .NET Framework 4. 0 ')|
 |Öneri|Yakalama zaman bir <xref:System.InvalidOperationException?displayProperty=name> yürütülürken <xref:System.Data.Objects.ObjectContext.CreateDatabase> veya <xref:System.Data.Common.DbProviderServices.CreateDatabase(System.Data.Common.DbConnection,System.Nullable{System.Int32},System.Data.Metadata.Edm.StoreItemCollection)>, SQLExceptions şimdi de yakalandı.|
 |Kapsam|Küçük|
 |Sürüm|4,5|

@@ -1,24 +1,12 @@
 ---
 title: '&lt;issuerChannelBehaviors&gt; &lt;ekleme&gt;'
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 50710506-e28f-45dd-ab7e-bff6f44173db
-caps.latest.revision: "5"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: bf66b3d3b531ae41329aade6a416c330957d83c6
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 75531e8ed50ae89f379db23d228804612f4bfccb
+ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="ltaddgt-of-ltissuerchannelbehaviorsgt"></a>&lt;issuerChannelBehaviors&gt; &lt;ekleme&gt;
 Bir STS ile iletişim kurarken kullanılacak bir uç noktası davranışı ekler.  
@@ -26,7 +14,7 @@ Bir STS ile iletişim kurarken kullanılacak bir uç noktası davranışı ekler
 > [!NOTE]
 >  Uç noktası davranışı içeriyorsa bir [ \<clientCredentials >](../../../../../docs/framework/configure-apps/file-schema/wcf/clientcredentials.md) öğesi, bir özel durum.  
   
- \<Sistem. ServiceModel >  
+ \<system.ServiceModel>  
 \<davranışları >  
 endpointBehaviors bölümü  
 \<davranışı >  
@@ -59,10 +47,10 @@ endpointBehaviors bölümü
   
 |Öğe|Açıklama|  
 |-------------|-----------------|  
-|[\<issuerChannelBehaviors >](../../../../../docs/framework/configure-apps/file-schema/wcf/issuerchannelbehaviors-element.md)|Bir koleksiyonu içerir [!INCLUDE[indigo1](../../../../../includes/indigo1-md.md)] istemci uç nokta davranışları belirtilen hizmet belirteci Hizmetleri ile iletişim kurarken kullanılacak.|  
+|[\<issuerChannelBehaviors >](../../../../../docs/framework/configure-apps/file-schema/wcf/issuerchannelbehaviors-element.md)|Belirtilen hizmet belirteci Hizmetleri ile iletişim kurarken kullanılacak Windows Communication Foundation (WCF) istemci uç nokta davranışları koleksiyonunu içerir.|  
   
 ## <a name="remarks"></a>Açıklamalar  
- `issuerAddress`istemci ile iletişim kurmak istediği güvenlik belirteci hizmeti URI içeriyor. `behaviorConfiguration`uygulama tarafından oluşturulan kanaldaki kullanan bir uç noktası davranışı işaret [!INCLUDE[indigo1](../../../../../includes/indigo1-md.md)] verilen belirteçler güvenlik belirteci hizmetlerinden almak için.  
+ `issuerAddress` istemci ile iletişim kurmak istediği güvenlik belirteci hizmeti URI içeriyor. `behaviorConfiguration` verilen belirteçler güvenlik belirteci hizmetlerinden almak için Windows Communication Foundation (WCF) tarafından oluşturulan kanaldaki uygulama kullanan bir uç noktası davranışı noktalarına.  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
  <xref:System.ServiceModel.Configuration.IssuedTokenClientElement.IssuerChannelBehaviors%2A>  

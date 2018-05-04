@@ -1,24 +1,14 @@
 ---
-title: '&lt;Federationconfiguration''a&gt;'
-ms.custom: 
+title: "&lt;Federationconfiguration'a&gt;"
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 8b14054c-6d07-46ab-ab58-03f14beac0f2
-caps.latest.revision: "9"
 author: BrucePerlerMS
-ms.author: bruceper
 manager: mbaldwin
-ms.workload: dotnet
-ms.openlocfilehash: 0014e0224221cd5143709ba0a5b38f10e457b494
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 44014d620dcd03e055eb58b50a1428b8e1b41186
+ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="ltfederationconfigurationgt"></a>&lt;Federationconfiguration'a&gt;
 Yapılandırır <xref:System.IdentityModel.Services.WSFederationAuthenticationModule> (WSFAM) ve <xref:System.IdentityModel.Services.SessionAuthenticationModule> (SAM) kullanırken federe kimlik doğrulaması WS-Federasyon protokolü aracılığıyla. Yapılandırır <xref:System.Security.Claims.ClaimsAuthorizationManager> kullanırken <xref:System.IdentityModel.Services.ClaimsPrincipalPermission> veya <xref:System.IdentityModel.Services.ClaimsPrincipalPermissionAttribute> talep tabanlı erişim denetimi sağlamak için sınıf.  
@@ -76,7 +66,7 @@ Yapılandırır <xref:System.IdentityModel.Services.WSFederationAuthenticationMo
   
 4.  Birden çok adlandırırsanız `<federationConfiguration>` öğeleri mevcut ve Hayır adlandırılmamış `<federationConfiguration>` öğesi mevcutsa, bir özel durum.  
   
- Genellikle, yalnızca tek bir `<federationConfiguration>` bölümünde tanımlanır. Bu bölümde varsayılan Federasyon yapılandırmadır. Birden çok, benzersiz olarak adlandırılmış belirtebilir `<federationConfiguration>` öğeleri; adlandırılmamış farklı bir Federasyon yapılandırma yüklemek istiyorsanız, ancak bu durumda, bir işleyici sağlamanız gerekir. <xref:System.IdentityModel.Services.FederatedAuthentication.FederationConfigurationCreated>Olay ve kümesi <xref:System.IdentityModel.Services.Configuration.FederationConfigurationCreatedEventArgs.FederationConfiguration%2A?displayProperty=nameWithType> özelliği işleyicisine içinde bir <xref:System.IdentityModel.Services.Configuration.FederationConfiguration> uygun değerlerle başlatılan nesne `<federationConfiguration>` yapılandırma dosyası öğesi.  
+ Genellikle, yalnızca tek bir `<federationConfiguration>` bölümünde tanımlanır. Bu bölümde varsayılan Federasyon yapılandırmadır. Birden çok, benzersiz olarak adlandırılmış belirtebilir `<federationConfiguration>` öğeleri; adlandırılmamış farklı bir Federasyon yapılandırma yüklemek istiyorsanız, ancak bu durumda, bir işleyici sağlamanız gerekir. <xref:System.IdentityModel.Services.FederatedAuthentication.FederationConfigurationCreated> Olay ve kümesi <xref:System.IdentityModel.Services.Configuration.FederationConfigurationCreatedEventArgs.FederationConfiguration%2A?displayProperty=nameWithType> özelliği işleyicisine içinde bir <xref:System.IdentityModel.Services.Configuration.FederationConfiguration> uygun değerlerle başlatılan nesne `<federationConfiguration>` yapılandırma dosyası öğesi.  
   
  `<federationConfiguration>` Öğesi ile temsil edilir <xref:System.IdentityModel.Services.Configuration.FederationConfigurationElement> sınıfı. Yapılandırma nesnesi tarafından temsil edilen <xref:System.IdentityModel.Services.Configuration.FederationConfiguration> sınıfı. Tek bir <xref:System.IdentityModel.Services.Configuration.FederationConfiguration> örneği ayarlanmış <xref:System.IdentityModel.Services.FederatedAuthentication.FederationConfiguration%2A?displayProperty=nameWithType> özelliği ve uygulama için Federasyon yapılandırma sağlar.  
   
