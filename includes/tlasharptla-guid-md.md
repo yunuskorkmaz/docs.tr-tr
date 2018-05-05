@@ -1,1 +1,0 @@
-genel benzersiz tanımlayıcı (GUID)

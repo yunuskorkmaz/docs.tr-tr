@@ -1,2 +1,0 @@
-> [!NOTE]
->  Bu kod örneği, bu aşırı yüklenmiş metodun bu başlık altında açıklanan aşırı yüklemeden farklı bir aşırı yüklemesini kullanır. Örneği burada açıklanan konuya genişletmek için kaynak sıradaki öğelerin yerine uygun sayısal türün öğelerini ekleyin.

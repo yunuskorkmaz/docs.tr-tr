@@ -1,1 +1,0 @@
-cihazdan bağımsız birim (1/96 inç)

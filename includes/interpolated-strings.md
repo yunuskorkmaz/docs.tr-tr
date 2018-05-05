@@ -1,3 +1,0 @@
-
-> [!IMPORTANT] 
-> Çağırmak yerine **String.Format** yöntemi veya kullanarak [bileşik biçim dizeleri](~/docs/standard/base-types/composite-formatting.md), kullanabileceğiniz *Ara değerli dizeler* dilinizi bunları destekliyorsa. Ara değerli bir dize içeren bir dizedir *Ara değerli ifadeleri*. Ara değerli her ifade ifadenin değeri ile çözümlendi ve dize atandığında sonuç dizesinde yer. Daha fazla bilgi için bkz: [dize ilişkilendirme (C# Başvurusu)](~/docs/csharp/language-reference/tokens/interpolated.md) ve [Ara değerli dizeler (Visual Basic Başvurusu)](~/docs/visual-basic/programming-guide/language-features/strings/interpolated-strings.md). 

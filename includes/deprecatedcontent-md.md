@@ -1,1 +1,0 @@
-Bu yazıda, artık kullanılmayan türler ve ad alanları tartışılmaktadır. Daha fazla bilgi için bkz: [Windows Workflow Foundation 4. 5 kullanım dışı türlerinde](http://aka.ms/wfdeprecatedtypes).

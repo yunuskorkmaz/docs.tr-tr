@@ -1,1 +1,0 @@
-Zengin Metin Biçimi (RTF)

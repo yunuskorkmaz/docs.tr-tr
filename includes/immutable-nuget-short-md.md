@@ -1,1 +1,0 @@
-**NuGet paketi**: [System.Collections.Immutable](http://go.microsoft.com/fwlink/?LinkId=318047) ([değişmez koleksiyonlar ve nasıl yükleneceği hakkında](/dotnet/api/system.collections.immutable#Remarks))

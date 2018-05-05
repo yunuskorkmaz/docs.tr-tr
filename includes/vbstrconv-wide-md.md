@@ -1,1 +1,0 @@
-Bir giriş karakter zaten tam genişlikli olsa bile dönüştürme normalleştirme Form C kullanabilir. Örneğin, "(zaten olan tam genişlikli) dize は゛", "ば" normalleştirilmiş. Bkz: [Unicode normalleştirme formları](http://unicode.org/reports/tr15).

@@ -1,1 +1,0 @@
-Ters eğik çizgi (\\) bir mutex ad ayrılmış bir karakter değil. Ters eğik çizgi kullanmayın (\\) terminal sunucusu oturumları zaman uyumu sağlayıcılar kullanma Not belirtildiği gibi dışında bir mutex ad. Aksi halde, bir <xref:System.IO.DirectoryNotFoundException> mutex adını varolan bir dosyayı temsil eden olsa da, durum oluşturulabilir.

@@ -1,1 +1,0 @@
-Bu sınıfın temsil ettiği öğe hakkında daha fazla bilgi için şu belirtime bakın: [onaylar ve protokoller için OASIS güvenlik onaylama işlemi biçimlendirme dili (SAML) V2.0](http://docs.oasis-open.org/security/saml/v2.0/saml-core-2.0-os.pdf).

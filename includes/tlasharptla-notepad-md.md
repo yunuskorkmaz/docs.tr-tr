@@ -1,1 +1,0 @@
-Microsoft Not Defteri

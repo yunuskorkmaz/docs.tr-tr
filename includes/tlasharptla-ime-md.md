@@ -1,1 +1,0 @@
-Giriş Yöntemi Düzenleyicisi (IME)

@@ -1,1 +1,0 @@
-ADO.NET için Microsoft Eşitleme Hizmetleri

@@ -1,2 +1,0 @@
-> [!NOTE]
->  Bu kod örneği, bu aşırı yüklenmiş metodun bu başlık altında açıklanan aşırı yüklemeden farklı bir aşırı yüklemesini kullanır. Örneği bu konuyu içerecek şekilde genişletmek için `selector` işlevinin gövdesini değiştirin.

@@ -1,4 +1,0 @@
-
-Ancak, çağrılırken **String.Format** yöntemi, bunu gerekli olmadığı aramak istediğiniz belirli aşırı odaklanmak. Bunun yerine, yöntemiyle çağırabilirsiniz bir [bileşik biçim dizesi](~/docs/standard/base-types/composite-formatting.md) bir veya daha fazla biçimi öğeleri içerir. Her biçim öğesi sayısal bir dizindir atamak; ilk dizin 0'da başlar. Başlangıç dizesi yanı sıra, yöntem çağrısı dizin değerlere sahip kadar ek bağımsız değişken olmalıdır. Örneğin, 0 ve 1 dizinlerini biçimi öğelerinin sahip bir dize 2 bağımsız olması gerekir; bir dizin 0 ile 5 ile 6 bağımsız olması gerekir. Dil derleyici ardından, belirli bir aşırı yüklemesini yöntemi çağrısına çözümleyecek **String.Format** yöntemi.   
- 
-Belgeleri kullanma hakkında daha ayrıntılı için **String.Format** yöntemi, bkz: [String.Format yöntemi ile çalışmaya başlama](#Starting) ve [hangi yöntemi ı çağırma?](#FTaskList).    

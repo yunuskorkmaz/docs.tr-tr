@@ -1,1 +1,0 @@
-Görüntü Renk Yönetimi (ICM)

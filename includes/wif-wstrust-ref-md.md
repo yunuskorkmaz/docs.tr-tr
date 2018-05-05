@@ -1,1 +1,0 @@
-Bu sınıfın temsil ettiği öğe hakkında daha fazla bilgi için senaryonuza geçerlidir WS-Trust belirtimine bakın: [WS-Trust Şubat 2005](http://schemas.xmlsoap.org/ws/2005/02/trust/), [WS-Trust 1.3](http://docs.oasis-open.org/ws-sx/ws-trust/200512/ws-trust-1.3-os.html), veya [WS-Trust 1.4](http://docs.oasis-open.org/ws-sx/ws-trust/v1.4/os/ws-trust-1.4-spec-os.html).

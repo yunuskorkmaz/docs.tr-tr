@@ -1,1 +1,0 @@
-bağımsız yazılım satıcısı (ISV)

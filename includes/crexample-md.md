@@ -1,1 +1,0 @@
-Şunun örneği için
