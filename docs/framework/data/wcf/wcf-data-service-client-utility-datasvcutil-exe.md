@@ -1,28 +1,16 @@
 ---
-title: "WCF veri hizmeti istemci yardımcı programı (DataSvcUtil.exe)"
-ms.custom: 
+title: WCF veri hizmeti istemci yardımcı programı (DataSvcUtil.exe)
 ms.date: 03/30/2017
-ms.prod: .net-framework-oob
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - WCF Data Services, generating client data classes
 - WCF Data Services, client library
 - WCF Data Services, consuming
 ms.assetid: 9d0af606-929b-4c03-b307-3ef5f705afce
-caps.latest.revision: "2"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: fcbbbe5180acaf943956310d4837a105d8d049d7
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 3206947d06a1736116674b70e469c20f8f4fca86
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="wcf-data-service-client-utility-datasvcutilexe"></a>WCF veri hizmeti istemci yardımcı programı (DataSvcUtil.exe)
 DataSvcUtil.exe tarafından sağlanan bir komut satırı aracıdır [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] , tüketir bir [!INCLUDE[ssODataFull](../../../../includes/ssodatafull-md.md)] akış ve veri hizmeti .NET Framework istemci uygulamasından erişmek için gerekli istemci veri hizmeti sınıfları oluşturur. Bu yardımcı programı, aşağıdaki meta veri kaynakları kullanarak veri sınıfları oluşturabilirsiniz:  
@@ -48,11 +36,11 @@ datasvcutil /out:file [/in:file | /uri:serviceuri] [/dataservicecollection] [/la
 |Seçenek|Açıklama|  
 |------------|-----------------|  
 |`/dataservicecollection`|Denetimlere nesneleri bağlamak için gereken kod ayrıca oluşturulan belirtir.|  
-|`/help`<br /><br /> veya<br /><br /> `/?`|Araç için komut sözdizimini ve seçenekleri görüntüler.|  
-|`/in:` *\<dosyası >*|.Csdl veya .edmx dosyasının veya dosyanın bulunduğu dizini belirtir.|  
-|`/language:`[VB &#124; CSharp]|Oluşturulan kaynak kodu dosyaları dilini belirtir. C# dil Varsayılanları.|  
+|`/help`<br /><br /> -veya-<br /><br /> `/?`|Araç için komut sözdizimini ve seçenekleri görüntüler.|  
+|`/in:` *\<Dosya >*|.Csdl veya .edmx dosyasının veya dosyanın bulunduğu dizini belirtir.|  
+|`/language:`[VB&#124;CSharp]|Oluşturulan kaynak kodu dosyaları dilini belirtir. C# dil Varsayılanları.|  
 |`/nologo`|Telif Hakkı görüntüleme iletiden gizler.|  
-|`/out:` *\<dosyası >*|Oluşturulan istemci veri hizmeti sınıfları içeren kaynak kodu dosyasının adını belirtir.|  
+|`/out:` *\<Dosya >*|Oluşturulan istemci veri hizmeti sınıfları içeren kaynak kodu dosyasının adını belirtir.|  
 |`/uri:` *\<dize >*|URI'sini [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] akış.|  
 |`/version:`[1.0&#124;2.0]|En yüksek kabul edilen sürümünü belirtir [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)]. Sürüm göre belirlenir `DataServiceVersion` döndürülen veri hizmeti meta verilerde DataService öğesinin özniteliği. Daha fazla bilgi için bkz: [veri hizmeti sürüm](../../../../docs/framework/data/wcf/data-service-versioning-wcf-data-services.md). Belirttiğinizde `/dataservicecollection` parametresini de belirtmeniz gerekir `/version:2.0` veri bağlamasını etkinleştirmek için.|  
   

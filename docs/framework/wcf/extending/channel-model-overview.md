@@ -1,34 +1,20 @@
 ---
-title: "Kanal Modeli Genel Bakış"
-ms.custom: 
+title: Kanal Modeli Genel Bakış
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - channel model [WCF]
 ms.assetid: 07a81e11-3911-4632-90d2-cca99825b5bd
-caps.latest.revision: 
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 7f6f45b788d825fed3c8f5d627190dd8911ec4c9
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
-ms.translationtype: MT
+ms.openlocfilehash: df2993d9ba25c043aa66029aa00fae945d5cec9d
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="channel-model-overview"></a>Kanal Modeli Genel Bakış
-[!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] Kanal yığını olduğundan işlem iletileri bir veya daha fazla kanallar katmanlı iletişim yığını. Yığının sonuna (örneğin, TCP, HTTP, SMTP ve diğer türleri aktarım.) temel aktarımı kanal yığına uyarlamak için sorumlu bir aktarım kanalıdır. Kanallar ileti gönderme ve alma için alt düzey bir programlama modeli sağlar. Birkaç arabirimleri ve diğer türleri topluca olarak bilinen bu programlama modeli dayanan [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] kanal modeli. Bu konuda, kanal şekil, temel kanal dinleyicisi (hizmette) ve (istemcide) kanal fabrikası yapımı anlatılmaktadır.  
+Windows Communication Foundation (WCF) kanal yığını katmanlı iletişim yığını iletileri işleyen bir veya daha fazla kanallar ' dir. Yığının sonuna (örneğin, TCP, HTTP, SMTP ve diğer türleri aktarım.) temel aktarımı kanal yığına uyarlamak için sorumlu bir aktarım kanalıdır. Kanallar ileti gönderme ve alma için alt düzey bir programlama modeli sağlar. Birkaç arabirimleri ve diğer türleri topluca olarak bilinen bu programlama modeli dayanan [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] kanal modeli. Bu konuda, kanal şekil, temel kanal dinleyicisi (hizmette) ve (istemcide) kanal fabrikası yapımı anlatılmaktadır.  
   
 ## <a name="channel-stack"></a>Kanal yığını  
- [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]uç noktaları kanal yığını adlı bir iletişim yığını kullanarak dünya ile iletişim kurar. Aşağıdaki diyagramda kanal yığınını diğer iletişim yığınları, örneğin TCP/IP ile karşılaştırır.  
+ [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] uç noktaları kanal yığını adlı bir iletişim yığını kullanarak dünya ile iletişim kurar. Aşağıdaki diyagramda kanal yığınını diğer iletişim yığınları, örneğin TCP/IP ile karşılaştırır.  
   
  ![Kanal modeli](../../../../docs/framework/wcf/extending/media/wcfc-channelstackhighlevelc.gif "wcfc_ChannelStackHighLevelc")  
   
@@ -77,7 +63,7 @@ ms.lasthandoff: 12/22/2017
   
  Kanal fabrikaları ileti göndermek için kullanılan kanalları oluşturmaktan sorumlu olan ve kanal fabrikası kapatıldığı zaman tüm kanalları kapatma için bunlar oluşturulur.  
   
- <xref:System.ServiceModel.ICommunicationObject>Tüm iletişimi nesneleri uygulamak temel durum makinesinin tanımlar çekirdek arabirimidir. <xref:System.ServiceModel.Channels.CommunicationObject>diğer kanal sınıfları arabirimi yeniden uygulamak yerine türetilen bu çekirdek arabirim uygulaması sağlar. Ancak, bu gerekli değildir: özel bir kanalda uygulayabilirsiniz <xref:System.ServiceModel.ICommunicationObject> doğrudan ve devralınmalıdır değil <xref:System.ServiceModel.Channels.CommunicationObject>. Şekil 3'te sınıfları hiçbiri kanal modelin parçası olarak kabul edilir; Bunlar kanallar oluşturmak istediğiniz özel kanal Implementers kullanılabilir yardımcılardır.  
+ <xref:System.ServiceModel.ICommunicationObject> Tüm iletişimi nesneleri uygulamak temel durum makinesinin tanımlar çekirdek arabirimidir. <xref:System.ServiceModel.Channels.CommunicationObject> diğer kanal sınıfları arabirimi yeniden uygulamak yerine türetilen bu çekirdek arabirim uygulaması sağlar. Ancak, bu gerekli değildir: özel bir kanalda uygulayabilirsiniz <xref:System.ServiceModel.ICommunicationObject> doğrudan ve devralınmalıdır değil <xref:System.ServiceModel.Channels.CommunicationObject>. Şekil 3'te sınıfları hiçbiri kanal modelin parçası olarak kabul edilir; Bunlar kanallar oluşturmak istediğiniz özel kanal Implementers kullanılabilir yardımcılardır.  
   
  ![Kanal modeli](../../../../docs/framework/wcf/extending/media/wcfc-wcfcchannelsigure3omumtreec.gif "wcfc_WCFCChannelsigure3OMUMTreec")  
   

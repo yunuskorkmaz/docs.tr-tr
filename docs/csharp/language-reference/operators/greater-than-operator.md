@@ -1,26 +1,19 @@
 ---
-title: '&gt;İşleci (C# Başvurusu)'
+title: '&gt; İşleci (C# Başvurusu)'
 ms.date: 07/20/2015
-ms.prod: .net
-ms.technology:
-- devlang-csharp
-ms.topic: article
 f1_keywords:
 - '>_CSharpKeyword'
 helpviewer_keywords:
 - '> operator [C#]'
 - greater than operator (>) [C#]
 ms.assetid: 26d3cb69-9c0b-4cc5-858b-5be1abd6659d
-caps.latest.revision: 16
-author: BillWagner
-ms.author: wiwagn
-ms.openlocfilehash: fc7c173ecc97bd3ca3b76a92ccbabc0f40062ac7
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 1589c5e785b33db6106a0ef0a58202e771db9fa0
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
-# <a name="gt-operator-c-reference"></a>&gt;İşleci (C# Başvurusu)
+# <a name="gt-operator-c-reference"></a>&gt; İşleci (C# Başvurusu)
 Tüm sayısal ve numaralandırma türlerinin bir "büyüktür" ilişkisel işleci tanımlama (`>`) döndüren `true` ilk işlenen saniyeden büyükse, `false` Aksi takdirde.  
   
 ## <a name="remarks"></a>Açıklamalar  
@@ -31,6 +24,6 @@ Tüm sayısal ve numaralandırma türlerinin bir "büyüktür" ilişkisel işlec
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
  [C# başvurusu](../../../csharp/language-reference/index.md)  
- [C# programlama kılavuzu](../../../csharp/programming-guide/index.md)  
- [C# işleçleri](../../../csharp/language-reference/operators/index.md)  
- [açık](../../../csharp/language-reference/keywords/explicit.md)
+ [C# Programlama Kılavuzu](../../../csharp/programming-guide/index.md)  
+ [C# İşleçleri](../../../csharp/language-reference/operators/index.md)  
+ [explicit](../../../csharp/language-reference/keywords/explicit.md)

@@ -1,28 +1,19 @@
 ---
-title: "UI Otomasyon Çağırma Denetim Düzenini Uygulama"
-ms.custom: 
+title: UI Otomasyon Çağırma Denetim Düzenini Uygulama
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-bcl
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - UI Automation, Invoke control pattern
 - control patterns, Invoke
 - Invoke control pattern
 ms.assetid: e5b1e239-49f8-468e-bfec-1fba02ec9ac4
-caps.latest.revision: "31"
 author: Xansky
 ms.author: mhopkins
 manager: markl
-ms.workload: dotnet
-ms.openlocfilehash: 1d40bc94887df604577c025181ae7f5f2776cdc1
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 8ac28b481dc9e0749762a411502c8f9660cd0cd2
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="implementing-the-ui-automation-invoke-control-pattern"></a>UI Otomasyon Çağırma Denetim Düzenini Uygulama
 > [!NOTE]
@@ -40,7 +31,7 @@ ms.lasthandoff: 12/22/2017
   
 -   Denetim harekete tıklatarak veya çift veya ENTER, önceden tanımlanmış klavye kısayolu veya alternatif bir bileşimi tuş vuruşları tuşuna basarak genellikle gerçekleştirilir.  
   
--   <xref:System.Windows.Automation.InvokePatternIdentifiers.InvokedEvent>(olarak ilişkili eyleme taşıyan bir denetim yanıta) etkinleştirilmiş bir denetimi tetiklenir. Mümkünse, Olay denetimi eylemi tamamladıktan ve engellenmeden döndürülen sonra oluşmalıdır. Aşağıdaki senaryolarda Invoke isteği bakım önce Invoked olay gerçekleşti:  
+-   <xref:System.Windows.Automation.InvokePatternIdentifiers.InvokedEvent> (olarak ilişkili eyleme taşıyan bir denetim yanıta) etkinleştirilmiş bir denetimi tetiklenir. Mümkünse, Olay denetimi eylemi tamamladıktan ve engellenmeden döndürülen sonra oluşmalıdır. Aşağıdaki senaryolarda Invoke isteği bakım önce Invoked olay gerçekleşti:  
   
     -   Bu olası veya eylem tamamlanana kadar beklemesini kullanışlı değildir.  
   
@@ -59,7 +50,7 @@ ms.lasthandoff: 12/22/2017
   
 -   Bir öğenin kaldırılmasını [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] çağrılan hemen sonra ağacı. Olay geri çağırmasının tarafından sağlanan öğeden bilgilerini isteyen sonucunda başarısız olabilir. Önbelleğe alınan bilgileri önceden getirme önerilen geçici bir çözüm değildir.  
   
--   Denetimleri birden çok denetim düzenleri uygulayabilirsiniz. Örneğin, dolgu rengi denetiminde [!INCLUDE[TLA#tla_xl](../../../includes/tlasharptla-xl-md.md)] araç uygulayan her ikisi de <xref:System.Windows.Automation.InvokePattern> ve <xref:System.Windows.Automation.ExpandCollapsePattern> denetim düzenleri. <xref:System.Windows.Automation.ExpandCollapsePattern>Menü kullanıma sunar ve <xref:System.Windows.Automation.InvokePattern> etkin seçimi seçilen renkle doldurur.  
+-   Denetimleri birden çok denetim düzenleri uygulayabilirsiniz. Örneğin, dolgu rengi denetiminde [!INCLUDE[TLA#tla_xl](../../../includes/tlasharptla-xl-md.md)] araç uygulayan her ikisi de <xref:System.Windows.Automation.InvokePattern> ve <xref:System.Windows.Automation.ExpandCollapsePattern> denetim düzenleri. <xref:System.Windows.Automation.ExpandCollapsePattern> Menü kullanıma sunar ve <xref:System.Windows.Automation.InvokePattern> etkin seçimi seçilen renkle doldurur.  
   
 <a name="Required_Members_for_the_IValueProvider_Interface"></a>   
 ## <a name="required-members-for-iinvokeprovider"></a>Gerekli üyeleri IInvokeProvider için  
@@ -67,7 +58,7 @@ ms.lasthandoff: 12/22/2017
   
 |Gerekli üyeleri|Üye türü|Notlar|  
 |----------------------|-----------------|-----------|  
-|<xref:System.Windows.Automation.Provider.IInvokeProvider.Invoke%2A>|yöntemi|<xref:System.Windows.Automation.Provider.IInvokeProvider.Invoke%2A>zaman uyumsuz bir çağrı ve hemen engellenmeden döndürmesi gerekir.<br /><br /> Bu davranış, doğrudan veya dolaylı olarak çağrıldığında kalıcı bir iletişim kutusu başlatma denetimleri için özellikle önemlidir. Kalıcı iletişim kapatılana kadar olay instigated herhangi bir UI Otomasyonu istemci engellenen kalır.|  
+|<xref:System.Windows.Automation.Provider.IInvokeProvider.Invoke%2A>|yöntemi|<xref:System.Windows.Automation.Provider.IInvokeProvider.Invoke%2A> zaman uyumsuz bir çağrı ve hemen engellenmeden döndürmesi gerekir.<br /><br /> Bu davranış, doğrudan veya dolaylı olarak çağrıldığında kalıcı bir iletişim kutusu başlatma denetimleri için özellikle önemlidir. Kalıcı iletişim kapatılana kadar olay instigated herhangi bir UI Otomasyonu istemci engellenen kalır.|  
   
 <a name="Exceptions"></a>   
 ## <a name="exceptions"></a>Özel Durumlar  

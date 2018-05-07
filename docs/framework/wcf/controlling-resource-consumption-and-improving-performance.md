@@ -1,32 +1,18 @@
 ---
 title: Kaynak Tüketimini Denetleme ve Performansı Geliştirme
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 ms.assetid: 9a829669-5f76-4c88-80ec-92d0c62c0660
-caps.latest.revision: 18
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 6e864e0a90dbb46f440e2eba2b676413c72e0da9
-ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
-ms.translationtype: MT
+ms.openlocfilehash: 031261f50a0615efa7227d3655c90c3423e77796
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/30/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="controlling-resource-consumption-and-improving-performance"></a>Kaynak Tüketimini Denetleme ve Performansı Geliştirme
-Bu konu, farklı bölgelerdeki çeşitli özellikleri açıklar [!INCLUDE[indigo1](../../../includes/indigo1-md.md)] kaynak tüketimini denetleme ve performans ölçümleri etkileyen iş mimarisi.  
+Bu konuda iş denetim kaynak tüketimini ve performans ölçümleri etkileyen farklı alanlarda Windows Communication Foundation (WCF) mimarisinin çeşitli özellikleri açıklanmaktadır.  
   
 ## <a name="properties-that-constrain-resource-consumption-in-wcf"></a>WCF kaynak tüketimini sınırlamak özellikleri  
- [!INCLUDE[indigo1](../../../includes/indigo1-md.md)] belirli türde bir işlemler güvenlik veya performans amacıyla kısıtlamalar geçerlidir. Bu kısıtlamaların iki ana biçimde, kotaları ve kısıtlamaları gelir. *Kotalar* ulaştı veya aşıldı sistemde belirli bir noktada hemen bir özel durum harekete kısıtlamalardır. *Kısıtlar* hemen bir özel durum oluşturulmasına neden olmaz kısıtlamalardır. Bunun yerine, bir kısıtlama sınırına ulaşıldığında, işleme devam eder ancak sınırlarda tarafından kısıtlama değeri ayarlayın. Sınırlı bu işlem başka bir yerde bir özel durum harekete, ancak bu uygulamanın bağlıdır.  
+ Windows Communication Foundation (WCF), belirli türde bir işlemler güvenlik veya performans amacıyla kısıtlamalar geçerlidir. Bu kısıtlamaların iki ana biçimde, kotaları ve kısıtlamaları gelir. *Kotalar* ulaştı veya aşıldı sistemde belirli bir noktada hemen bir özel durum harekete kısıtlamalardır. *Kısıtlar* hemen bir özel durum oluşturulmasına neden olmaz kısıtlamalardır. Bunun yerine, bir kısıtlama sınırına ulaşıldığında, işleme devam eder ancak sınırlarda tarafından kısıtlama değeri ayarlayın. Sınırlı bu işlem başka bir yerde bir özel durum harekete, ancak bu uygulamanın bağlıdır.  
   
  Kotaları ve kısıtlamaları arasında ayrım yanı sıra kısıtlayan bazı özellikleri seri hale getirme düzeyinde, bazı aktarım düzeyinde ve bazı uygulama düzeyinde bulunur. Örneğin, kota <xref:System.ServiceModel.Channels.TransportBindingElement.MaxReceivedMessageSize%2A?displayProperty=nameWithType>, tüm sistem tarafından sağlanan aktarım bağlama öğeleri tarafından uygulanan ayarlanmış 65,536 bayt varsayılan olarak hizmet reddi saldırılarına karşı bir hizmet olarak aşırı bellek neden olarak yapmasının kötü amaçlı istemcileri azaltabilir Tüketim. (Tipik olarak, performans bu değeri azaltarak artırabilirsiniz.)  
   

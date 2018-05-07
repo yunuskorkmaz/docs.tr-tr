@@ -1,29 +1,15 @@
 ---
 title: 'Nasıl yapılır: Bir WCF Hizmeti ve İstemcisine Programlı Bir Şekilde Keşfedilebilirlik Ekleme'
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 ms.assetid: 4f7ae7ab-6fc8-4769-9730-c14d43f7b9b1
-caps.latest.revision: 13
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 3c0da3598b115df4f135ac3fab516447df85e258
-ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
+ms.openlocfilehash: 0685694db8f67ed690cf2a8002bf70a05695a192
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/30/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-programmatically-add-discoverability-to-a-wcf-service-and-client"></a>Nasıl yapılır: Bir WCF Hizmeti ve İstemcisine Programlı Bir Şekilde Keşfedilebilirlik Ekleme
-Bu konu nasıl yapılacağını açıklar bir [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] hizmet bulunabilir. Bağlı olduğu [kendini barındırma](http://go.microsoft.com/fwlink/?LinkId=145523) örnek.  
+Bu konuda, Windows Communication Foundation (WCF) hizmetini bulunabilirlik nasıl oluşturulacağı açıklanmaktadır. Bağlı olduğu [kendini barındırma](http://go.microsoft.com/fwlink/?LinkId=145523) örnek.  
   
 ### <a name="to-configure-the-existing-self-host-service-sample-for-discovery"></a>Bulma için var olan kendi kendini barındıran hizmet örneği yapılandırmak için  
   
@@ -105,7 +91,7 @@ Bu konu nasıl yapılacağını açıklar bir [!INCLUDE[indigo1](../../../../inc
     }  
     ```  
   
-     Bu söyler [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] , <xref:System.ServiceModel.Discovery.DiscoveryClient> sınıfı bulma ileti gönderme ve alma için standart UDP bulma uç noktası kullanmalıdır.  
+     Bu, WCF söyler <xref:System.ServiceModel.Discovery.DiscoveryClient> sınıfı bulma ileti gönderme ve alma için standart UDP bulma uç noktası kullanmalıdır.  
   
 8.  Sonraki satırında, çağrı <xref:System.ServiceModel.Discovery.DiscoveryClient.Find%2A> yöntemi ve belirtin bir <xref:System.ServiceModel.Discovery.FindCriteria> aramak istediğiniz hizmet sözleşmesini içeren örneği. Bu durumda, belirtin `ICalculator`.  
   

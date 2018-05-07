@@ -1,26 +1,12 @@
 ---
-title: "SystemWebRouting Tümleştirme Örneği"
-ms.custom: 
+title: SystemWebRouting Tümleştirme Örneği
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: f1c94802-95c4-49e4-b1e2-ee9dd126ff93
-caps.latest.revision: 
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: de8869956a59cb47623dbc4d84763e19d6f181bf
-ms.sourcegitcommit: 3a96c706e4dbb4667bf3bf37edac9e1666646f93
-ms.translationtype: MT
+ms.openlocfilehash: 43785f84cb3852a35f1ed3bd555287842455a89b
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="systemwebrouting-integration-sample"></a>SystemWebRouting Tümleştirme Örneği
 Bu örnek sınıflar ile barındırma katmanın tümleştirme gösterir <xref:System.Web.Routing> ad alanı. Sınıflarda <xref:System.Web.Routing> ad alanı izin doğrudan fiziksel bir kaynağa karşılık gelmeyen URL'leri kullanmak bir uygulama. Web yönlendirme kullanarak sağlar sonra geri gerçek eşlenen HTTP için sanal adres oluşturmak üzere Geliştirici [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] Hizmetleri. Bu, bir WCF Hizmeti gerektirmeden fiziksel dosya veya kaynak barındırılan gerekir ya da hizmetleri .html veya .aspx gibi dosya içermediğini URL'ler ile erişilmesi gerektiğinde kullanışlıdır. Bu örnek nasıl kullanılacağını gösteren <xref:System.Web.Routing.RouteTable> sanal URI'ler global.asax dosyasında tanımlanmış hizmetlerini çalıştırmak için bu harita oluşturmak için sınıfı. 
@@ -39,7 +25,7 @@ Bu örnek, bilgisayarınızda yüklü. Devam etmeden önce aşağıdaki (varsay�
    
 `<InstallDrive>:\WF_WCF_Samples`  
    
- Bu dizin mevcut değilse, Git [Windows Communication Foundation (WCF) ve .NET Framework 4 için Windows Workflow Foundation (WF) örnek](http://go.microsoft.com/fwlink/?LinkId=150780) tüm indirmek için [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] ve [!INCLUDE[wf1](../../../../includes/wf1-md.md)] örnekleri. Bu örnek aşağıdaki dizinde bulunur.  
+ Bu dizin mevcut değilse, Git [Windows Communication Foundation (WCF) ve .NET Framework 4 için Windows Workflow Foundation (WF) örnek](http://go.microsoft.com/fwlink/?LinkId=150780) tüm Windows Communication Foundation (WCF) indirmek için ve [!INCLUDE[wf1](../../../../includes/wf1-md.md)] örnekleri. Bu örnek aşağıdaki dizinde bulunur.  
    
 `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Services\Hosting\WebRoutingIntegration`  
   
@@ -51,11 +37,11 @@ Bu örnek, bilgisayarınızda yüklü. Devam etmeden önce aşağıdaki (varsay�
   
      Bir dizin için örnek listesi görüntülenir. Hiçbir dosya .svc dosya uzantısına sahip olduğuna dikkat edin.  
   
-3.  Adres çubuğunda eklemek `movies` URL'si, bu nedenle, BT'nin okur http://localhost: [bağlantı noktası] / filmler ve ENTER tuşuna BASIN.  
+3.  Adres çubuğunda eklemek `movies` URL'si, bu nedenle, BT'nin okur http://localhost:[bağlantı noktası] / filmler ve ENTER tuşuna BASIN.  
   
      Film akış tarayıcısında görüntülenir.  
   
-4.  Adres çubuğunda eklemek `channels` URL'si, bu nedenle olan okuma http://localhost: [bağlantı noktası] / Kanallar ve ENTER tuşuna basın.  
+4.  Adres çubuğunda eklemek `channels` URL'si, bu nedenle olan okuma http://localhost:[bağlantı noktası] / Kanallar ve ENTER tuşuna basın.  
   
      Kanallar akış tarayıcısında görüntülenir.  
   
@@ -81,11 +67,11 @@ Bu örnek, bilgisayarınızda yüklü. Devam etmeden önce aşağıdaki (varsay�
   
 4.  Web uygulaması sağ tıklayıp seçerek uygulamayı başlatmak **yönetmek uygulama** ve ardından **Gözat**.  
   
-5.  Adres çubuğunda eklemek `movies` URL'si, bu nedenle olan okuma http://localhost: [bağlantı noktası] / filmler ve ENTER tuşuna BASIN.  
+5.  Adres çubuğunda eklemek `movies` URL'si, bu nedenle olan okuma http://localhost:[bağlantı noktası] / filmler ve ENTER tuşuna BASIN.  
   
      Film akış tarayıcısında görüntülenir.  
   
-6.  Adres çubuğunda eklemek `channels` URL'si, bu nedenle olan okuma http://localhost: [bağlantı noktası] / Kanallar ve ENTER tuşuna basın.  
+6.  Adres çubuğunda eklemek `channels` URL'si, bu nedenle olan okuma http://localhost:[bağlantı noktası] / Kanallar ve ENTER tuşuna basın.  
   
      Kanallar akış tarayıcısında görüntülenir.  
   

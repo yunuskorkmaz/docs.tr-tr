@@ -1,24 +1,12 @@
 ---
-title: "İş Akışı Keşif Örneği"
-ms.custom: 
+title: İş Akışı Keşif Örneği
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 82cc43f1-3c8f-4771-ac19-a75ac936e2c3
-caps.latest.revision: "6"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 3cf150562beaacb56596b90e1680adca97dd24a9
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: ec4b956a28048c0c30a4eadb0473adb34334fa92
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="workflow-discovery-sample"></a>İş Akışı Keşif Örneği
 Bu örnek bir iş akışı hizmeti bulunabilirlik yapma ve belirli bir hizmet için arar özel kod etkinlik yazmak nasıl gösterilir.  
@@ -33,13 +21,13 @@ Bu örnek bir iş akışı hizmeti bulunabilirlik yapma ve belirli bir hizmet i�
   
 1.  Bu örneği çalıştırmak için doğru URL ACL olmalıdır HTTP uç noktaları kullanır (bkz [yapılandırma HTTP ve HTTPS](http://go.microsoft.com/fwlink/?LinkId=70353) Ayrıntılar için). Yükseltilmiş bir komut isteminde aşağıdaki komutu yürütülürken uygun ACL'ler eklemeniz gerekir. Kabuğunuzu değişken biçimi anlamıyorsa etki alanı ve kullanıcı adı şu bağımsız değişkenleri değiştirin.  
   
-     **Netsh http add urlacl url = http: / / +: 8000 / kullanıcı etki alanı % =\\% UserName %**  
+     **Netsh http add urlacl url =http://+:8000/ kullanıcı etki alanı % =\\% UserName %**  
   
 > [!IMPORTANT]
 >  Örnekler, makinenizde zaten yüklü olabilir. Devam etmeden önce aşağıdaki (varsayılan) dizin denetleyin.  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  Bu dizin mevcut değilse, Git [Windows Communication Foundation (WCF) ve .NET Framework 4 için Windows Workflow Foundation (WF) örnek](http://go.microsoft.com/fwlink/?LinkId=150780) tüm indirmek için [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] ve [!INCLUDE[wf1](../../../../includes/wf1-md.md)] örnekleri. Bu örnek aşağıdaki dizinde bulunur.  
+>  Bu dizin mevcut değilse, Git [Windows Communication Foundation (WCF) ve .NET Framework 4 için Windows Workflow Foundation (WF) örnek](http://go.microsoft.com/fwlink/?LinkId=150780) tüm Windows Communication Foundation (WCF) indirmek için ve [!INCLUDE[wf1](../../../../includes/wf1-md.md)] örnekleri. Bu örnek aşağıdaki dizinde bulunur.  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Discovery\WorkflowDiscovery`

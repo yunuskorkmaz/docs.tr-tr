@@ -1,21 +1,15 @@
 ---
-title: "Özel Durumlar Kullanma (C# Programlama Kılavuzu)"
+title: Özel Durumlar Kullanma (C# Programlama Kılavuzu)
 ms.date: 07/20/2015
-ms.prod: .net
-ms.technology: devlang-csharp
-ms.topic: article
 helpviewer_keywords:
 - exception handling [C#], about exception handling
 - exceptions [C#], about exceptions
 ms.assetid: 71472c62-320a-470a-97d2-67995180389d
-caps.latest.revision: "15"
-author: BillWagner
-ms.author: wiwagn
-ms.openlocfilehash: 55c2cc0c6a1f852bd286b98927cc69f81119aeee
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 43012ec1190117b1905b5e44010d5f57a1e543aa
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="using-exceptions-c-programming-guide"></a>Özel Durumlar Kullanma (C# Programlama Kılavuzu)
 C# ' ta çalışma zamanında programında hataları program aracılığıyla özel durumlar olarak adlandırılan bir mekanizma kullanılarak dağıtılır. Özel durumlar hatayla karşılaştığında kodla oluşturulur ve hatayı düzeltmek için kullanabileceğiniz kodla yakalandı. .NET Framework ortak dil çalışma zamanı (CLR) veya kod içinde bir program tarafından özel durum. Bir özel durum oluşturulduktan sonra çağrı yığını kadar yukarı yayar bir `catch` özel durum bildirimi bulundu. Yakalanmayan Özel durumlar iletişim kutusu görüntüler sistem tarafından sağlanan bir genel özel durum işleyicisi tarafından işlenir.  
@@ -24,7 +18,7 @@ C# ' ta çalışma zamanında programında hataları program aracılığıyla ö
   
  [!code-csharp[csProgGuideExceptions#1](../../../csharp/programming-guide/exceptions/codesnippet/CSharp/using-exceptions_1.cs)]  
   
- Bir özel durum oluşturulduktan sonra çalışma zamanı geçerli deyimi içinde olup olmadığını denetler. bir `try` bloğu. Bunu varsa, `catch` ilişkili blokları `try` bloğu, bunlar özel durum catch olup olmadığını görmek için denetlenir. `Catch`blokları genellikle özel durum türleri belirtin; varsa türünü `catch` bloğu özel durum ya da bir taban sınıf özel durum, aynı türde `catch` blok yöntemi işleyebilir. Örneğin:  
+ Bir özel durum oluşturulduktan sonra çalışma zamanı geçerli deyimi içinde olup olmadığını denetler. bir `try` bloğu. Bunu varsa, `catch` ilişkili blokları `try` bloğu, bunlar özel durum catch olup olmadığını görmek için denetlenir. `Catch` blokları genellikle özel durum türleri belirtin; varsa türünü `catch` bloğu özel durum ya da bir taban sınıf özel durum, aynı türde `catch` blok yöntemi işleyebilir. Örneğin:  
   
  [!code-csharp[csProgGuideExceptions#2](../../../csharp/programming-guide/exceptions/codesnippet/CSharp/using-exceptions_2.cs)]  
   
@@ -34,7 +28,7 @@ C# ' ta çalışma zamanında programında hataları program aracılığıyla ö
   
  [!code-csharp[csProgGuideExceptions#3](../../../csharp/programming-guide/exceptions/codesnippet/CSharp/using-exceptions_3.cs)]  
   
- Önce `catch` blok yürütüldüğünde, çalışma zamanı denetler `finally` engeller. `Finally`blokları etkinleştirmek durdurulan kalabilir herhangi bir belirsiz durumu temizlemek Programcı `try` bloğu veya herhangi bir dış kaynağa (örneğin, grafik tanıtıcıları, veritabanı bağlantılarını veya dosya akışları) için çöp beklemeden serbest bırakmak için nesneleri sonlandırmaya Toplayıcı çalışma zamanında. Örneğin:  
+ Önce `catch` blok yürütüldüğünde, çalışma zamanı denetler `finally` engeller. `Finally` blokları etkinleştirmek durdurulan kalabilir herhangi bir belirsiz durumu temizlemek Programcı `try` bloğu veya herhangi bir dış kaynağa (örneğin, grafik tanıtıcıları, veritabanı bağlantılarını veya dosya akışları) için çöp beklemeden serbest bırakmak için nesneleri sonlandırmaya Toplayıcı çalışma zamanında. Örneğin:  
   
  [!code-csharp[csProgGuideExceptions#4](../../../csharp/programming-guide/exceptions/codesnippet/CSharp/using-exceptions_4.cs)]  
   
@@ -49,5 +43,5 @@ C# ' ta çalışma zamanında programında hataları program aracılığıyla ö
 -   İş parçacığının başlangıcını ulaştıysanız, iş parçacığı sonlandırılır.  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [C# programlama kılavuzu](../../../csharp/programming-guide/index.md)  
- [Özel durumlar ve özel durum işleme](../../../csharp/programming-guide/exceptions/index.md)
+ [C# Programlama Kılavuzu](../../../csharp/programming-guide/index.md)  
+ [Özel Durumlar ve Özel Durum İşleme](../../../csharp/programming-guide/exceptions/index.md)

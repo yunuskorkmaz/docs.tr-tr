@@ -1,10 +1,6 @@
 ---
 title: .NET framework 4.7, 4.6 ve 4.5
-ms.date: 10/17/2017
-ms.prod: .net-framework
-ms.technology:
-- dotnet-clr
-ms.topic: article
+ms.date: 04/10/2018
 ms.custom: updateeachrelease
 f1_keywords:
 - f61f02f2-2f20-483d-8f56-a9c8f3a54986
@@ -14,19 +10,16 @@ helpviewer_keywords:
 ms.assetid: f61f02f2-2f20-483d-8f56-a9c8f3a54986
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 34402e74bb0cb560d213760c38ce4b936d712eb4
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 85bb386f2adbf02a8fde891c65c78b8e8d4537b2
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="net-framework-guide"></a>.NET framework Kılavuzu
 
 > [!NOTE]
-> Bu .NET Framework İçerik kümesi için .NET Framework sürüm 4.5 ve 4.5.1, 4.5.2, 4.6, 4.6.1, 4.6.2, 4.7 ve 4.7.1 bilgileri içerir. .NET Framework indirmek için bkz: [.NET Framework yükleme](../../docs/framework/install/guide-for-developers.md). Yeni özellikler ve NET Framework 4.5, değişikliklerin bir listesi için [!INCLUDE[net_v46](../../includes/net-v46-md.md)], kendi noktası serbest bırakır ve .NET Framework 4.7 ve 4.7.1, bkz: [.NET Framework'teki yenilikler](../../docs/framework/whats-new/index.md). Desteklenen platformlar listesi için bkz: [.NET Framework sistem gereksinimleri](../../docs/framework/get-started/system-requirements.md). 
+> Bu .NET Framework İçerik kümesi için .NET Framework sürüm 4.5 ve 4.5.1, 4.5.2, 4.6, 4.6.1, 4.6.2, 4.7, 4.7.1 ve 4.7.2 bilgileri içerir. .NET Framework indirmek için bkz: [.NET Framework yükleme](../../docs/framework/install/guide-for-developers.md). Yeni özellikler ve NET Framework 4.5, değişikliklerin bir listesi için [!INCLUDE[net_v46](../../includes/net-v46-md.md)], kendi noktası sürümleri ve 4.7, 4.7.1 ve 4.7.2, .NET Framework bkz [.NET Framework'teki yenilikler](../../docs/framework/whats-new/index.md). Desteklenen platformlar listesi için bkz: [.NET Framework sistem gereksinimleri](../../docs/framework/get-started/system-requirements.md). 
 
 .NET Framework, web, Windows, Windows Phone, Windows Server ve Microsoft Azure için uygulamaları oluşturmaya yönelik bir geliştirme platformudur. Ortak dil çalışma zamanı (CLR) ve çok çeşitli işlevleri ve çoğu endüstri standartları için destek içerir .NET Framework sınıf kitaplığı oluşur.
 
@@ -61,7 +54,7 @@ Dinamik programlama, birlikte çalışabilirlik, genişletilebilirlik, bellek y�
 [Araçlar](../../docs/framework/tools/index.md)  
 .NET Framework teknolojilerini kullanarak uygulamalar geliştirmenize, yapılandırmanıza ve dağıtmanıza yardımcı olacak araçları açıklar.  
   
-[.NET framework sınıf kitaplığı](/dotnet/api/?view=netframework-4.7.1)   
+[.NET framework sınıf kitaplığı](/dotnet/api/?view=netframework-4.7.2)   
 Sözdizimi, kod örnekleri ve .NET Framework isim uzaylarında bulunan her sınıf için ilgili bilgi sağlar.  
   
 [Ek sınıf kitaplıkları ve API'ler](../../docs/framework/additional-apis/index.md)  

@@ -1,9 +1,6 @@
 ---
-title: "Nasıl yapılır: Tür için Değer Eşitliği Tanımlama (C# Programlama Kılavuzu)"
+title: 'Nasıl yapılır: Tür için Değer Eşitliği Tanımlama (C# Programlama Kılavuzu)'
 ms.date: 07/20/2015
-ms.prod: .net
-ms.technology: devlang-csharp
-ms.topic: article
 helpviewer_keywords:
 - overriding Equals method [C#]
 - object equivalence [C#]
@@ -11,14 +8,11 @@ helpviewer_keywords:
 - value equality [C#]
 - equivalence [C#]
 ms.assetid: 4084581e-b931-498b-9534-cf7ef5b68690
-caps.latest.revision: "15"
-author: BillWagner
-ms.author: wiwagn
-ms.openlocfilehash: 933be6aa27b5720a9a9d8d7b45e1eed73f9cd60b
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: c0105371bd39c3999aafca867a7bb7a59fd367c1
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-define-value-equality-for-a-type-c-programming-guide"></a>Nasıl yapılır: Tür için Değer Eşitliği Tanımlama (C# Programlama Kılavuzu)
 Sınıfta veya yapı tanımladığınızda, türü için değer eşitliği (veya eşdeğer) özel bir tanımı oluşturmak için bir anlam olup olmadığını karar. Genellikle, değer eşitliği bazı sıralama koleksiyona eklenecek nesne türü beklenirken ya da kendi birincil amacı, alan veya özellikler kümesi depolamaktır uygulayın. Tüm alanlar ve türü özelliklerinde karşılaştırması için değer eşitliği tanımınız temel ya da bir alt tanımını temel alabilir. Ancak her iki durumda da ve sınıflar ve yapılar, uygulamanızı eşdeğer beş garanti izlemelisiniz:  
@@ -68,5 +62,5 @@ Sınıfta veya yapı tanımladığınızda, türü için değer eşitliği (veya
  [ == ](../../../csharp/language-reference/operators/equality-comparison-operator.md) Ve [! =](../../../csharp/language-reference/operators/not-equal-operator.md) yapısı açıkça bunları overloads sürece işleçleri üzerinde bir yapı çalışamıyor.  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [Eşitlik karşılaştırmaları](../../../csharp/programming-guide/statements-expressions-operators/equality-comparisons.md)  
- [C# programlama kılavuzu](../../../csharp/programming-guide/index.md)
+ [Eşitlik Karşılaştırmaları](../../../csharp/programming-guide/statements-expressions-operators/equality-comparisons.md)  
+ [C# Programlama Kılavuzu](../../../csharp/programming-guide/index.md)

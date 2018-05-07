@@ -1,21 +1,12 @@
 ---
-title: "Nasıl yapılır: ifade ağaçlarını (C#) yürütme"
-ms.custom: 
+title: 'Nasıl yapılır: ifade ağaçlarını (C#) yürütme'
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-csharp
-ms.topic: get-started-article
 ms.assetid: b8c40db5-2464-4bb9-9001-8c2bc7f006c5
-caps.latest.revision: "3"
-author: BillWagner
-ms.author: wiwagn
-ms.openlocfilehash: 9a87c9893de2b70c47f0ed78a92adc6bce10db7b
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 0ebdcb603a1adf3602e897db284faa2f75b7de7a
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-execute-expression-trees-c"></a>Nasıl yapılır: ifade ağaçlarını (C#) yürütme
 Bu konuda bir ifade ağacına yürütme gösterilmiştir. Bir ifade ağacına yürütülürken bir değer döndürebilir ya da yalnızca bir yöntemi çağırma gibi bir eylem gerçekleştirebilir.  

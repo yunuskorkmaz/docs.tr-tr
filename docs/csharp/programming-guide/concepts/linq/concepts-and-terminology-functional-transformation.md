@@ -1,21 +1,12 @@
 ---
-title: "Kavramları ve terminolojiyi (işlev dönüştürme) (C#)"
-ms.custom: 
+title: Kavramları ve terminolojiyi (işlev dönüştürme) (C#)
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-csharp
-ms.topic: article
 ms.assetid: 03defb3a-7e17-4ab1-8efa-4dd66621e860
-caps.latest.revision: "3"
-author: BillWagner
-ms.author: wiwagn
-ms.openlocfilehash: c62aadc84f9c62429ffe59b78de386aac0f5cf63
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: f0d09f8846556dfa0ce70f253d59ddd41f254363
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="concepts-and-terminology-functional-transformation-c"></a>Kavramları ve terminolojiyi (işlev dönüştürme) (C#)
 Bu konu, kavramları ve terminolojiyi saf işlevsel Dönüşümlerin tanıtır. Veri dönüştürme işlev dönüştürme yaklaşım program, daha açıklayıcı ve daha kolay hata ayıklama ve sürdürmek daha geleneksel, kesinlik temelli programlama için genellikle hızlıdır kodunu üretir.  
@@ -81,4 +72,4 @@ Bu konu, kavramları ve terminolojiyi saf işlevsel Dönüşümlerin tanıtır. 
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
  [Giriş saf işlevsel Dönüşümleri (C#)](../../../../csharp/programming-guide/concepts/linq/introduction-to-pure-functional-transformations.md)  
- [İşlevsel Programlama vs. Kesinlik temelli programlama (C#)](../../../../csharp/programming-guide/concepts/linq/functional-programming-vs-imperative-programming.md)
+ [İşlevsel Programlama ve Kesinlik temelli programlama (C#)](../../../../csharp/programming-guide/concepts/linq/functional-programming-vs-imperative-programming.md)

@@ -1,9 +1,6 @@
 ---
-title: "select tümcesi (C# Başvurusu)"
+title: select tümcesi (C# Başvurusu)
 ms.date: 07/20/2015
-ms.prod: .net
-ms.technology: devlang-csharp
-ms.topic: article
 f1_keywords:
 - select_CSharpKeyword
 - select
@@ -11,14 +8,11 @@ helpviewer_keywords:
 - select keyword [C#]
 - select clause [C#]
 ms.assetid: df01e266-5781-4aaa-80c4-67cf28ea093f
-caps.latest.revision: "19"
-author: BillWagner
-ms.author: wiwagn
-ms.openlocfilehash: f40bc26d1812e76ac618c5a0ddf23c4cef2700d0
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 6e7277b5d714e48059fe1ed7e8b85e46a14a840c
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="select-clause-c-reference"></a>select tümcesi (C# Başvurusu)
 Bir sorgu ifadesinde `select` yan tümcesi sorgu yürütüldüğünde, üretilecek değerleri türünü belirtir. Sonuç önceki tüm yan tümceleri değerlendirmesi ve tüm ifadelerinde dayalı `select` yan tümcesi kendisi. Bir sorgu ifadesi ile bitmesi bir `select` yan tümcesinin veya bir [grup](../../../csharp/language-reference/keywords/group-clause.md) yan tümcesi.  
@@ -44,6 +38,6 @@ Bir sorgu ifadesinde `select` yan tümcesi sorgu yürütüldüğünde, üretilec
  [Sorgu anahtar sözcükleri (LINQ)](../../../csharp/language-reference/keywords/query-keywords.md)  
  [from yan tümcesi](../../../csharp/language-reference/keywords/from-clause.md)  
  [partial (yöntem) (C# Başvurusu)](../../../csharp/language-reference/keywords/partial-method.md)  
- [Anonim türler](../../../csharp/programming-guide/classes-and-structs/anonymous-types.md)  
+ [Anonim Tipler](../../../csharp/programming-guide/classes-and-structs/anonymous-types.md)  
  [LINQ Sorgu ifadeleri](../../../csharp/programming-guide/linq-query-expressions/index.md)  
- [C# üzerinde LINQ ile çalışmaya başlama](../../../csharp/programming-guide/concepts/linq/getting-started-with-linq.md)
+ [C#'de LINQ Kullanmaya Başlama](../../../csharp/programming-guide/concepts/linq/getting-started-with-linq.md)

@@ -1,34 +1,22 @@
 ---
 title: 'Nasıl yapılır: Kanal Güvenliği Kimlik Bilgilerini Belirtme'
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 ms.assetid: f8e03f47-9c4f-4dd5-8f85-429e6d876119
-caps.latest.revision: ''
 author: BrucePerlerMS
-ms.author: bruceper
 manager: mbaldwin
-ms.workload:
-- dotnet
-ms.openlocfilehash: e2aedb06ec694f6c7dfb12b70ab919ae23eed17e
-ms.sourcegitcommit: c883637b41ee028786edceece4fa872939d2e64c
+ms.openlocfilehash: f25089f7f5ffa16bb46e0833b15b4cbc4a7735ac
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/23/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-specify-channel-security-credentials"></a>Nasıl yapılır: Kanal Güvenliği Kimlik Bilgilerini Belirtme
-[!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] Hizmet bilinen adı verir çağırmak COM uygulamaları [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] Hizmetleri. Çoğu [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] Hizmetleri istemci kimlik doğrulaması ve yetkilendirme kimlik bilgilerini belirtmenizi gerektirir. Çağrılırken bir [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] gelen hizmet bir [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] istemci, bu kimlik bilgileri yönetilen kod veya uygulama yapılandırma dosyası belirtebilirsiniz. Çağrılırken bir [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] hizmeti bir COM uygulamasından kullandığınız <xref:System.ServiceModel.ComIntegration.IChannelCredentials> kimlik bilgilerini belirtmek için arabirim. Bu konuda kullanarak kimlik bilgilerini belirtmek için çeşitli şekillerde gösterecektir <xref:System.ServiceModel.ComIntegration.IChannelCredentials> arabirimi.  
+Windows Communication Foundation (WCF) hizmet adının COM uygulamalarının WCF hizmetleri çağırmasına olanak sağlar. Çoğu WCF hizmetlerini istemci kimlik doğrulaması ve yetkilendirme için kimlik bilgilerini belirtmeniz gerekir. Bir WCF hizmeti bir WCF istemciden çağrılırken, yönetilen kod veya bir uygulama yapılandırma dosyasında bu kimlik bilgileri belirtebilirsiniz. Bir WCF hizmeti bir COM uygulamasından çağrılırken kullanabileceğiniz <xref:System.ServiceModel.ComIntegration.IChannelCredentials> kimlik bilgilerini belirtmek için arabirim. Bu konuda kullanarak kimlik bilgilerini belirtmek için çeşitli şekillerde gösterecektir <xref:System.ServiceModel.ComIntegration.IChannelCredentials> arabirimi.  
   
 > [!NOTE]
 >  <xref:System.ServiceModel.ComIntegration.IChannelCredentials> IDispatch tabanlı bir arabirim ve Visual Studio ortamında IntelliSense işlevselliği almazsınız.  
   
- Bu makalede kullanacağı [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] tanımlanan hizmet [ileti güvenliği örneği](../../../../docs/framework/wcf/samples/message-security-sample.md).  
+ Bu makalede tanımlanan WCF hizmetini kullanacak olan [ileti güvenliği örneği](../../../../docs/framework/wcf/samples/message-security-sample.md).  
   
 ### <a name="to-specify-a-client-certificate"></a>Bir istemci sertifikasını belirtmek için  
   
@@ -40,7 +28,7 @@ ms.lasthandoff: 03/23/2018
   
 4.  Ekleme `bindingNamespace=``http://Microsoft.ServiceModel.Samples` App.config hizmeti için uç nokta etiketinde için.  
   
-5.  İleti güvenliği örneği oluşturun ve Service.exe çalıştırın. Internet Explorer'ı kullanın ve hizmetin çalıştığından emin olmak için hizmetin URI (8000/ServiceModelSamples/hizmet) göz atın.  
+5.  İleti güvenliği örneği oluşturun ve Service.exe çalıştırın. Internet Explorer'ı kullanın ve hizmetin URI göz atın (http://localhost:8000/ServiceModelSamples/Service) hizmetinin çalıştığından emin olmak için.  
   
 6.  Visual Basic 6.0 açın ve yeni bir standart .exe dosyası oluşturun. Aşağıdaki kod tıklatın işleyicisine eklemek için düğmesini çift tıklayın ve forma düğme ekleme:  
   

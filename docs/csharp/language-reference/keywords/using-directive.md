@@ -1,21 +1,14 @@
 ---
 title: using Yönergesi (C# Başvurusu)
 ms.date: 07/20/2015
-ms.prod: .net
-ms.technology:
-- devlang-csharp
-ms.topic: article
 helpviewer_keywords:
 - using directive [C#]
 ms.assetid: b42b8e61-5e7e-439c-bb71-370094b44ae8
-caps.latest.revision: 31
-author: BillWagner
-ms.author: wiwagn
-ms.openlocfilehash: 02c50b1e7a54d776985b60570c898e7d0739c44c
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 180c038987e7de6b39a8eae0e86871eea41a40bb
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="using-directive-c-reference"></a>using Yönergesi (C# Başvurusu)
 `using` Yönergesi sahip üç kullanır:  
@@ -87,9 +80,9 @@ class Program
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
  [C# başvurusu](../../../csharp/language-reference/index.md)  
- [C# programlama kılavuzu](../../../csharp/programming-guide/index.md)  
- [Ad alanlarını kullanma](../../../csharp/programming-guide/namespaces/using-namespaces.md)  
- [C# anahtar sözcükleri](../../../csharp/language-reference/keywords/index.md)  
- [Namespace anahtar sözcükler](../../../csharp/language-reference/keywords/namespace-keywords.md)  
- [Ad alanları](../../../csharp/programming-guide/namespaces/index.md)  
- [using deyimi](../../../csharp/language-reference/keywords/using-statement.md)
+ [C# Programlama Kılavuzu](../../../csharp/programming-guide/index.md)  
+ [Ad Alanlarını Kullanma](../../../csharp/programming-guide/namespaces/using-namespaces.md)  
+ [C# Anahtar Sözcükleri](../../../csharp/language-reference/keywords/index.md)  
+ [Ad Alanı Anahtar Sözcükleri](../../../csharp/language-reference/keywords/namespace-keywords.md)  
+ [Ad Alanları](../../../csharp/programming-guide/namespaces/index.md)  
+ [using Deyimi](../../../csharp/language-reference/keywords/using-statement.md)

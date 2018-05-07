@@ -1,21 +1,12 @@
 ---
-title: "Veri kaynağı için LINQ Querying1 etkinleştirme"
-ms.custom: 
+title: Veri kaynağı için LINQ Querying1 etkinleştirme
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-csharp
-ms.topic: article
 ms.assetid: d2ef04a5-31a6-45cb-af9a-a5ce7732662c
-caps.latest.revision: "3"
-author: BillWagner
-ms.author: wiwagn
-ms.openlocfilehash: bbb21c5cc0367e0bdc0dd935a5c91538c18c071b
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 5b67995f40bc0cb703003aa80b511268f21da8b8
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="enabling-a-data-source-for-linq-querying"></a>LINQ Sorgusu için Veri Kaynağı Etkinleştirme
 Genişletmek için çeşitli yolları vardır [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] içinde Sorgulanacak herhangi bir veri kaynağı etkinleştirmek için [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] düzeni. Veri kaynağı örneğin bir veri yapısı, Web hizmeti, dosya sistemi veya veritabanı olabilir. [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] Düzeni istemcilerin bir veri kaynağı için sorgu kolaylaştırır [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] sorgulama etkin olduğunda, sözdizimi ve sorgu modelini değiştirmez çünkü. Hangi yollarla [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] Genişletilebilir bu veri kaynakları şunları içerir:  
@@ -39,7 +30,7 @@ Genişletmek için çeşitli yolları vardır [!INCLUDE[vbteclinq](~/includes/vb
  Etkinleştirme için en iyi seçenek [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] uzak veri kaynağını sorgulaması olduğu uygulamak için <xref:System.Linq.IQueryable%601> arabirimi. Ancak, bu sağlayıcı gibi genişletme farklıdır [!INCLUDE[vbtecdlinq](~/includes/vbtecdlinq-md.md)] bir veri kaynağı için. Varolan genişletmek için hiçbir sağlayıcı modeli [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] teknolojileri gibi [!INCLUDE[vbtecdlinq](~/includes/vbtecdlinq-md.md)], veri kaynağının diğer türleri kullanılabilir [!INCLUDE[vs_orcas_long](~/includes/vs-orcas-long-md.md)].  
   
 ## <a name="iqueryable-linq-providers"></a>IQueryable LINQ Sağlayıcıları  
- [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)]uygulayan sağlayıcılar <xref:System.Linq.IQueryable%601> kendi karmaşıklık yaygın olarak değişebilir. Bu bölümde, farklı karmaşıklık düzeyleri açıklanmaktadır.  
+ [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] uygulayan sağlayıcılar <xref:System.Linq.IQueryable%601> kendi karmaşıklık yaygın olarak değişebilir. Bu bölümde, farklı karmaşıklık düzeyleri açıklanmaktadır.  
   
  Daha az karmaşık `IQueryable` sağlayıcısı tek bir Web hizmeti yöntem ile arabirim. Bu türden bir sağlayıcı, işlediği sorgularda belirli bilgiler beklediği için çok özeldir. Muhtemelen tek bir sonuç türü ortaya çıkaran kapalı bir tür sistemi vardır. Örneğin kullanarak sorgunun yürütülmesi, çoğu yerel olarak oluşur <xref:System.Linq.Enumerable> standart sorgu işleçleri uygulamaları. Daha az karmaşık olan bir sağlayıcı, sorguyu temsil eden ifade ağacında yalnızca bir yöntem çağrısı ifadesi inceleyebilir ve kalan sorgu mantığının başka bir yerde işlenmesine izin verebilir.  
   

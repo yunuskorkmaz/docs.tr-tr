@@ -1,41 +1,27 @@
 ---
 title: "Nasıl yapılır: AJAX Etkinleştirilmiş ASP.NET Web Hizmetlerini WCF'ye Taşıma"
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 ms.assetid: 1428df4d-b18f-4e6d-bd4d-79ab3dd5147c
-caps.latest.revision: 17
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 2b728e6283a2f038b7e5ef4c535da41f4eb8ebef
-ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
+ms.openlocfilehash: 048408adf8678c243a225a233cb1173c9b7f869f
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/30/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-migrate-ajax-enabled-aspnet-web-services-to-wcf"></a>Nasıl yapılır: AJAX Etkinleştirilmiş ASP.NET Web Hizmetlerini WCF'ye Taşıma
-Bu konu için eşdeğer bir temel ASP.NET AJAX hizmeti geçirme yordamları özetler AJAX etkinleştirilmiş [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] hizmet. İşlevsel olarak eşdeğer oluşturulacağını gösterir [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] ASP.NET AJAX hizmeti sürümü. İki hizmet daha sonra bir yan yana kullanılabilir veya [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] hizmet, ASP.NET AJAX hizmeti değiştirmek için kullanılabilir.  
+Bu konu, temel ASP.NET AJAX hizmeti eşdeğer bir AJAX etkinleştirilmiş Windows Communication Foundation (WCF) hizmetine geçirme yordamları özetler. Bir ASP.NET AJAX Hizmeti işlevsel olarak eşdeğer bir WCF sürümü oluşturulacağını gösterir. İki hizmet daha sonra bir yan yana kullanılabilir veya WCF hizmeti, ASP.NET AJAX hizmeti değiştirmek için kullanılabilir.  
   
- Mevcut bir ASP.NET AJAX hizmeti geçirme bir [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] AJAX hizmeti aşağıdaki avantajları sağlar:  
+ Mevcut bir ASP.NET AJAX geçiş hizmetine bir WCF AJAX hizmeti, aşağıdaki avantajları sunar:  
   
 -   Minimal ek yapılandırma ile SOAP hizmet olarak AJAX hizmetinizi getirebilir.  
   
--   Konumdan yararlanabilirsiniz [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] izleme vb. gibi özellikleri.  
+-   İzleme gibi WCF özelliklerinden yararlanır ve benzeri.  
   
  Aşağıdaki yordamlar, kullandığınızı varsayar [!INCLUDE[vs_current_long](../../../../includes/vs-current-long-md.md)].  
   
  Bu konuda anlatılan yordamlar oluşur kod yordamları aşağıdaki örnekte sağlanır.  
   
- Gösterme hakkında daha fazla bilgi için bir [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] hizmet AJAX etkinleştirilmiş uç noktası için bkz: [nasıl yapılır: ASP.NET AJAX uç noktası eklemek için yapılandırma kullan](../../../../docs/framework/wcf/feature-details/how-to-use-configuration-to-add-an-aspnet-ajax-endpoint.md) konu.  
+ Bir WCF hizmeti bir AJAX etkinleştirilmiş uç nokta aracılığıyla gösterme hakkında daha fazla bilgi için bkz: [nasıl yapılır: ASP.NET AJAX uç noktası eklemek için yapılandırma kullan](../../../../docs/framework/wcf/feature-details/how-to-use-configuration-to-add-an-aspnet-ajax-endpoint.md) konu.  
   
 ### <a name="to-create-and-test-the-aspnet-web-service-application"></a>Oluşturmak ve ASP.NET Web hizmeti uygulamasını sınamak için  
   
@@ -62,7 +48,7 @@ Bu konu için eşdeğer bir temel ASP.NET AJAX hizmeti geçirme yordamları öze
   
 9. Bu yanıt işlevsel bir ASP.NET AJAX hizmeti artık vardır ve özellikle, hizmet, bir HTTP POST yanıt Service1.asmx/HelloWorld uçta şimdi kullanıma ve istekleri XML döndürür, onaylar.  
   
-     Bu hizmeti kullanmak için dönüştürmek artık bir [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] AJAX hizmeti.  
+     Artık bir WCF AJAX hizmeti kullanmak için bu hizmet dönüştürmek hazırsınız.  
   
 ### <a name="to-create-an-equivalent-wcf-ajax-service-application"></a>Bir eşdeğer WCF AJAX hizmet uygulaması oluşturmak için  
   
@@ -190,11 +176,11 @@ namespace ASPHello
   
  <xref:System.Xml.XmlDocument> Türü tarafından desteklenmiyor <xref:System.Runtime.Serialization.Json.DataContractJsonSerializer> tarafından seri hale getirilebilir olmadığından <xref:System.Xml.Serialization.XmlSerializer>. Ya da kullanabileceğiniz bir <xref:System.Xml.Linq.XDocument> yazın veya seri <xref:System.Xml.XmlDocument.DocumentElement%2A> yerine.  
   
- ASMX Web Hizmetleri yükseltilen ve yana birimi için geçişi [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] Hizmetleri, istemci üzerinde aynı adı eşlemesi iki tür kaçının. Aynı türde kullanılıyorsa bu bir özel durum serileştiricileri neden olan bir <xref:System.Web.Services.WebMethodAttribute> ve <xref:System.ServiceModel.ServiceContractAttribute>:  
+ ASMX Web Hizmetleri yükseltilen ve yan yana WCF hizmetlerine geçirilir, istemcideki aynı adı için iki tür eşleme kaçının. Aynı türde kullanılıyorsa bu bir özel durum serileştiricileri neden olan bir <xref:System.Web.Services.WebMethodAttribute> ve <xref:System.ServiceModel.ServiceContractAttribute>:  
   
--   Varsa [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] hizmet ilk eklenir, neden olan özel durum ASMX Web hizmeti yöntemi çağırma <xref:System.Web.UI.ObjectConverter.ConvertValue%28System.Object%2CSystem.Type%2CSystem.String%29> çünkü [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] proxy sırayla stil tanımını önceliklidir.  
+-   WCF Hizmeti önce eklediyseniz, özel durum ASMX Web hizmeti yöntemi çağırma neden <xref:System.Web.UI.ObjectConverter.ConvertValue%28System.Object%2CSystem.Type%2CSystem.String%29> proxy sırayla WCF stil tanımını öncelikli olduğundan.  
   
--   ASMX Web hizmeti önce eklediyseniz, yöntem harekete [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] hizmeti neden olan özel durum <xref:System.Runtime.Serialization.Json.DataContractJsonSerializer> proxy sırayla Web hizmeti stil tanımını öncelikli olduğundan.  
+-   ASMX Web hizmeti önce eklediyseniz, WCF Hizmeti üzerinde yöntemi çağrılırken özel durum neden <xref:System.Runtime.Serialization.Json.DataContractJsonSerializer> proxy sırayla Web hizmeti stil tanımını öncelikli olduğundan.  
   
  Davranış önemli farklılıkları vardır <xref:System.Runtime.Serialization.Json.DataContractJsonSerializer> ve ASP.NET AJAX <xref:System.Web.Script.Serialization.JavaScriptSerializer>. Örneğin, <xref:System.Runtime.Serialization.Json.DataContractJsonSerializer> bir sözlüğü ancak temsil eden bir anahtar/değer çiftleri dizisi olarak ASP.NET AJAX <xref:System.Web.Script.Serialization.JavaScriptSerializer> bir sözlük gerçek JSON nesnelerini temsil eder. Aşağıdaki ASP.NET AJAX ' temsil sözlük gelir.  
   

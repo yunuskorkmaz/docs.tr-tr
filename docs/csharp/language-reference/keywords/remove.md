@@ -1,23 +1,16 @@
 ---
 title: remove (C# Başvurusu)
 ms.date: 07/20/2015
-ms.prod: .net
-ms.technology:
-- devlang-csharp
-ms.topic: article
 f1_keywords:
 - remove_CSharpKeyword
 helpviewer_keywords:
 - remove event accessor [C#]
 ms.assetid: c8223426-c17b-4fe2-8406-01564cf1dd2b
-caps.latest.revision: 8
-author: BillWagner
-ms.author: wiwagn
-ms.openlocfilehash: 66647dee0c4cc728ae5e19457a4a5ef0e7f72248
-ms.sourcegitcommit: 7e99f66ef09d2903e22c789c67ff5a10aa953b2f
+ms.openlocfilehash: 16a169ce1a0ef5dbc29739b2d808acb19737669e
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/18/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="remove-c-reference"></a>remove (C# Başvurusu)
 `remove` Bağlamsal anahtar sözcüğü gelen istemci kodu işlemleri olduğunda çağrılan bir özel olay erişimcisi tanımlamak için kullanılır, [olay](../../../csharp/language-reference/keywords/event.md). Özel bir sağlarsanız `remove` erişimci de sağlamanız bir [ekleme](../../../csharp/language-reference/keywords/add.md) erişimcisi.  
@@ -30,4 +23,4 @@ ms.lasthandoff: 11/18/2017
  Genellikle, kendi özel olay erişimcilerini sağlamanız gerekmez. Bir olay bildirirken derleyici tarafından otomatik olarak oluşturulan erişimciler çoğu senaryoları için yeterlidir.  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [Olayları](../../../csharp/programming-guide/events/index.md)
+ [Olaylar](../../../csharp/programming-guide/events/index.md)

@@ -1,29 +1,15 @@
 ---
 title: Tek toplu kopyalama işlemleri
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-ado
-ms.tgt_pltfrm: ''
-ms.topic: article
 dev_langs:
 - csharp
 - vb
 ms.assetid: 5e7ff0be-3f23-4996-a92c-bd54d65c3836
-caps.latest.revision: 5
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
-ms.workload:
-- dotnet
-ms.openlocfilehash: 37402672a6df808cb5e1c2424817fd9ce749cc82
-ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
+ms.openlocfilehash: 47f89feb90efbafb6c43bbad78f05292213a0c58
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="single-bulk-copy-operations"></a>Tek toplu kopyalama işlemleri
 Bir SQL Server toplu kopyalama işlemi gerçekleştirmenin en kolay yaklaşım, tek bir işlemde bir veritabanında gerçekleştirmektir. Varsayılan olarak, yalıtılmış bir işlem olarak bir toplu kopyalama işlemi gerçekleştirilir: Bu çalışırken için fırsat ile geri işlem temelli olmayan bir şekilde, kopyalama işlemi gerçekleşir.  

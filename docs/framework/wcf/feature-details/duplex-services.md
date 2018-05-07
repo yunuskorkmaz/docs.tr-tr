@@ -1,27 +1,15 @@
 ---
-title: "Çift Yönlü Hizmetler"
-ms.custom: 
+title: Çift Yönlü Hizmetler
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
 ms.assetid: 396b875a-d203-4ebe-a3a1-6a330d962e95
-caps.latest.revision: "17"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 08fcb852977272d593229abea426abc8bf9b7e48
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: afe72b01fe3ec38cc34b0a7ff4d28ff714cf3dd2
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="duplex-services"></a>Çift Yönlü Hizmetler
 Çift yönlü hizmet sözleşmesi, her iki uç nokta ileti diğer bağımsız olarak gönderebilirsiniz bir ileti değişim deseni değil. Çift yönlü bir hizmet, bu nedenle, olay benzeri davranışı sağlama geri istemci uç noktaya iletileri gönderebilir. Çift yönlü iletişimi bir istemci bir hizmetine bağlanır ve hizmet üzerinde hizmet istemciye iletiler gönderebilir bir kanal sağlar oluşur. Çift yönlü hizmetler olay benzeri davranışını yalnızca bir oturumunda çalıştığını unutmayın.  
@@ -43,7 +31,7 @@ ms.lasthandoff: 12/22/2017
  [!code-csharp[c_DuplexServices#2](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_duplexservices/cs/client.cs#2)]
  [!code-vb[c_DuplexServices#2](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_duplexservices/vb/client.vb#2)]  
   
- [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] Çift yönlü sözleşme gerektirir oluşturan istemci bir <xref:System.ServiceModel.InstanceContext> yapım sağlanacak sınıfı. Bu <xref:System.ServiceModel.InstanceContext> sınıfı, geri çağırma arabirimini uygulayan ve geri hizmetinden gönderilen iletileri işleyen bir nesne için site olarak kullanılır. Bir <xref:System.ServiceModel.InstanceContext> sınıfı örneği ile oluşturulan `CallbackHandler` sınıfı. Bu nesne hizmetinden geri çağırma arabirimi istemciye gönderilen iletileri işler.  
+ Çift yönlü sözleşme gerektirir oluşturan WCF istemcisini bir <xref:System.ServiceModel.InstanceContext> yapım sağlanacak sınıfı. Bu <xref:System.ServiceModel.InstanceContext> sınıfı, geri çağırma arabirimini uygulayan ve geri hizmetinden gönderilen iletileri işleyen bir nesne için site olarak kullanılır. Bir <xref:System.ServiceModel.InstanceContext> sınıfı örneği ile oluşturulan `CallbackHandler` sınıfı. Bu nesne hizmetinden geri çağırma arabirimi istemciye gönderilen iletileri işler.  
   
  [!code-csharp[c_DuplexServices#3](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_duplexservices/cs/client.cs#3)]
  [!code-vb[c_DuplexServices#3](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_duplexservices/vb/client.vb#3)]  

@@ -1,14 +1,6 @@
 ---
-title: "StrongNameKeyGenEx İşlevi"
-ms.custom: 
+title: StrongNameKeyGenEx İşlevi
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: reference
 api_name:
 - StrongNameKeyGenEx
 api_location:
@@ -22,17 +14,13 @@ helpviewer_keywords:
 ms.assetid: 36bd10b9-9857-45f3-8d3b-0da091d6169e
 topic_type:
 - apiref
-caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: ae564f7c4e8333e33b2f2f6229034c3a1396a687
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 5e65e962d099e944fe243b3acc0a7c25a3bb960c
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="strongnamekeygenex-function"></a>StrongNameKeyGenEx İşlevi
 Güçlü ad kullanım için belirtilen anahtar boyutu ile yeni bir ortak/özel anahtar çifti oluşturur.  
@@ -53,7 +41,7 @@ BOOLEAN StrongNameKeyGenEx (
   
 #### <a name="parameters"></a>Parametreler  
  `wszKeyContainer`  
- [in] İstenen anahtar kapsayıcısı adı. `wszKeyContainer`gereken boş olmayan bir dize olabilir veya geçici bir ad oluşturmak için null.  
+ [in] İstenen anahtar kapsayıcısı adı. `wszKeyContainer` gereken boş olmayan bir dize olabilir veya geçici bir ad oluşturmak için null.  
   
  `dwFlags`  
  [in] Kayıtlı anahtarı bırakın belirtir. Aşağıdaki değerleri desteklenir:  
@@ -72,7 +60,7 @@ BOOLEAN StrongNameKeyGenEx (
  [out] Bayt olarak boyutu, `ppbKeyBlob`.  
   
 ## <a name="return-value"></a>Dönüş Değeri  
- `true`başarılı tamamlanma; Aksi takdirde `false`.  
+ `true` başarılı tamamlanma; Aksi takdirde `false`.  
   
 ## <a name="remarks"></a>Açıklamalar  
  .NET Framework sürüm 1.0 ve 1.1 gerektiren bir `dwKeySize` derlemeyi tanımlayıcı adla; imzalamak için 1024 bit 2048 bit anahtar için desteklenen sürüm 2.0 ekler.  
@@ -88,7 +76,7 @@ BOOLEAN StrongNameKeyGenEx (
   
  **Kitaplığı:** bir kaynak olarak MsCorEE.dll dahil  
   
- **.NET framework sürümleri:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET framework sürümleri:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
  [StrongNameKeyGenEx Yöntemi](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-strongnamekeygenex-method.md)  

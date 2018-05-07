@@ -1,24 +1,12 @@
 ---
-title: "Özel Bulma Ölçütleri"
-ms.custom: 
+title: Özel Bulma Ölçütleri
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: b2723929-8829-424d-8015-a37ba2ab4f68
-caps.latest.revision: "10"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: b57a9535b34441a8f1c86beeffa94046cf8944f7
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 6c9363add13e38ded75685e4115a5084629d6505
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="custom-find-criteria"></a>Özel Bulma Ölçütleri
 Bu örnek mantığı kullanarak özel kapsam eşleşme oluşturma ve özel bulma hizmeti uygulama gösterir. İstemciler işlevselliği eşleşen özel kapsam daraltın ve WCF bulma sistem tarafından sağlanan Bul işlevselliği üzerinde daha fazla yapı için kullanır. Bu örnek kapsayan senaryo aşağıdaki gibidir:  
@@ -56,7 +44,7 @@ Bu örnek mantığı kullanarak özel kapsam eşleşme oluşturma ve özel bulma
   
      Bu özel mantık tüm kapsamlar her hizmet uç noktaları gider. Herhangi bir uç noktanın kapsamları herhangi bir istemci tarafından sağlanan kapsamları eşleşiyorsa, bulma hizmeti bu uç istemciye gönderilen yanıta ekler.  
   
-3.  **CustomDiscoveryExtension.cs**: bulma hizmeti uygulama son adımı özel bu uygulama bağlamaktır hizmet ana bilgisayar hizmetine keşfedin. Burada kullanılan Yardımcısı sınıfı, `CustomDiscoveryExtension` sınıfı. Bu sınıfını genişleten <xref:System.ServiceModel.Discovery.DiscoveryServiceExtension> sınıfı. Kullanıcı geçersiz kılmanız gerekir <xref:System.ServiceModel.Discovery.DiscoveryServiceExtension.GetDiscoveryService%2A> yöntemi. Bu durumda, yöntem önce oluşturulan özel bulma Hizmeti'nin bir örneğini döndürür. `PublishedEndpoints`olan bir <xref:System.Collections.ObjectModel.ReadOnlyCollection%601> eklenir uygulama bitiş noktalarının tümü içeren <xref:System.ServiceModel.ServiceHost>. Özel bulma hizmeti bu kendi iç listeyi doldurmak için kullanır. Bir kullanıcı de diğer uç nokta meta verileri eklemek için kullanabilirsiniz.  
+3.  **CustomDiscoveryExtension.cs**: bulma hizmeti uygulama son adımı özel bu uygulama bağlamaktır hizmet ana bilgisayar hizmetine keşfedin. Burada kullanılan Yardımcısı sınıfı, `CustomDiscoveryExtension` sınıfı. Bu sınıfını genişleten <xref:System.ServiceModel.Discovery.DiscoveryServiceExtension> sınıfı. Kullanıcı geçersiz kılmanız gerekir <xref:System.ServiceModel.Discovery.DiscoveryServiceExtension.GetDiscoveryService%2A> yöntemi. Bu durumda, yöntem önce oluşturulan özel bulma Hizmeti'nin bir örneğini döndürür. `PublishedEndpoints` olan bir <xref:System.Collections.ObjectModel.ReadOnlyCollection%601> eklenir uygulama bitiş noktalarının tümü içeren <xref:System.ServiceModel.ServiceHost>. Özel bulma hizmeti bu kendi iç listeyi doldurmak için kullanır. Bir kullanıcı de diğer uç nokta meta verileri eklemek için kullanabilirsiniz.  
   
  Son olarak, Program.cs açın. Unutmayın hem <xref:System.ServiceModel.Discovery.ServiceDiscoveryBehavior> ve `CustomDiscoveryExtension` ana bilgisayara eklenir. Bu yapılır ve ana bilgisayar üzerinden bulma iletileri almak bir uç nokta sonra uygulama için özel bulma hizmetini kullanabilirsiniz.  
   
@@ -77,6 +65,6 @@ Bu örnek mantığı kullanarak özel kapsam eşleşme oluşturma ve özel bulma
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  Bu dizin mevcut değilse, Git [Windows Communication Foundation (WCF) ve .NET Framework 4 için Windows Workflow Foundation (WF) örnek](http://go.microsoft.com/fwlink/?LinkId=150780) tüm indirmek için [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] ve [!INCLUDE[wf1](../../../../includes/wf1-md.md)] örnekleri. Bu örnek aşağıdaki dizinde bulunur.  
+>  Bu dizin mevcut değilse, Git [Windows Communication Foundation (WCF) ve .NET Framework 4 için Windows Workflow Foundation (WF) örnek](http://go.microsoft.com/fwlink/?LinkId=150780) tüm Windows Communication Foundation (WCF) indirmek için ve [!INCLUDE[wf1](../../../../includes/wf1-md.md)] örnekleri. Bu örnek aşağıdaki dizinde bulunur.  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Discovery\CustomFindCriteria`

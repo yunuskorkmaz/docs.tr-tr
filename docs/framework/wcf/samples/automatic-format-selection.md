@@ -1,27 +1,15 @@
 ---
-title: "Otomatik Biçim Seçimi"
-ms.custom: 
+title: Otomatik Biçim Seçimi
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: dab51e56-8517-4a6a-bb54-b55b15ab37bb
-caps.latest.revision: "8"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: da09df968bffee9a07f1c03d5b771271a9d44129
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
-ms.translationtype: MT
+ms.openlocfilehash: 9b9b4da4d5d3bdb3892feb49c033fbe4fc640cb0
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="automatic-format-selection"></a>Otomatik Biçim Seçimi
-Bu örnek Otomatik Biçim Seçimi (XML veya JSON) etkinleştirmek ile gösterilmiştir [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] REST programlama modeli yanı sıra biçim işlemi kodda açıkça ayarlamak üzere nasıl.  
+Bu örnek Otomatik Biçim Seçimi (XML veya JSON) etkinleştirmek Windows Communication Foundation (WCF) REST biçimini işlemi kodda açıkça ayarlamak nasıl yanı sıra, model programlama ile gösterilmiştir.  
   
 ## <a name="sample-details"></a>Örnek Ayrıntıları  
  Örnek hizmete istek yaptığında istemci kodu ile birlikte bir servis oluşur. Tek bir HTTP hizmeti destekler `GET` işlemi (`EchoWithGet`) ve tek bir HTTP `POST` işlemi (`EchoWithPost`). İki işlem bir dize beklediğiniz ve sonra yanıtta dize döndürür. İle `GET` işlemi, dize URI sorgu dizesi parametresi sağlanır. İle `POST` işlemi, dize XML serileştirilmiş istek gövdesinde sağlanır. Hizmet XML veya JSON, kesinlik temelli Biçim Seçimi özellikleri ve yeni Otomatik Biçim Seçimi kullanılarak yanıtları döndürün yapabiliyor [!INCLUDE[netfx40_long](../../../../includes/netfx40-long-md.md)].  
@@ -47,7 +35,7 @@ Bu örnek Otomatik Biçim Seçimi (XML veya JSON) etkinleştirmek ile gösterilm
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  Bu dizin mevcut değilse, Git [Windows Communication Foundation (WCF) ve .NET Framework 4 için Windows Workflow Foundation (WF) örnek](http://go.microsoft.com/fwlink/?LinkId=150780) tüm indirmek için [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] ve [!INCLUDE[wf1](../../../../includes/wf1-md.md)] örnekleri. Bu örnek aşağıdaki dizinde bulunur.  
+>  Bu dizin mevcut değilse, Git [Windows Communication Foundation (WCF) ve .NET Framework 4 için Windows Workflow Foundation (WF) örnek](http://go.microsoft.com/fwlink/?LinkId=150780) tüm Windows Communication Foundation (WCF) indirmek için ve [!INCLUDE[wf1](../../../../includes/wf1-md.md)] örnekleri. Bu örnek aşağıdaki dizinde bulunur.  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Web\AutomaticFormatSelection`  
   

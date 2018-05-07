@@ -1,13 +1,6 @@
 ---
 title: TabControl Denetimi (Windows Forms)
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-winforms
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - TabControl control [Windows Forms]
 - tab controls
@@ -17,16 +10,11 @@ helpviewer_keywords:
 - property pages [Windows Forms], creating
 - tab dialog boxes
 ms.assetid: 915091af-93ac-4d3d-8283-738dd2d21ea7
-caps.latest.revision: "14"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 705f9dbb8ea7f4d462a2b19cc0c6b845ae8f578b
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 91a9930a3678e08fc0e46335f1eb95330bd171a8
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="tabcontrol-control-windows-forms"></a>TabControl Denetimi (Windows Forms)
 Windows Forms `TabControl` etiketler, bir dosya dolabı klasörlerde kümesi ya da bir not defteri Bölücü gibi birden fazla sekme görüntüler. Sekmeleri resimleri ve diğer denetimlerin içerebilir. Kullanım `TabControl` özellik sayfaları oluşturmak için.  
@@ -50,7 +38,7 @@ Windows Forms `TabControl` etiketler, bir dosya dolabı klasörlerde kümesi ya 
  Ayrıca bkz. [nasıl yapılır: ekleme ve kaldırma sekmeleri Windows Formları TabControl kullanarak ile Tasarımcı](http://msdn.microsoft.com/library/ms233654\(v=vs.110\)), [nasıl yapılır: sekme sayfası kullanarak bir Tasarımcı denetim ekleme](http://msdn.microsoft.com/library/ms233668\(v=vs.110\))  
   
 ## <a name="reference"></a>Başvuru  
- <xref:System.Windows.Forms.TabControl>sınıfı  
+ <xref:System.Windows.Forms.TabControl> sınıfı  
  Bu sınıf tanımlar ve tüm üyeleri bağlantılar içerir.  
   
 ## <a name="related-sections"></a>İlgili Bölümler  

@@ -1,31 +1,17 @@
 ---
-title: "Dönüştürme Sırası Neden Önemlidir"
-ms.custom: 
+title: Dönüştürme Sırası Neden Önemlidir
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-winforms
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
 helpviewer_keywords:
 - transformations [Windows Forms], order signficance
 ms.assetid: 37d5f9dc-a5cf-4475-aa5d-34d714e808a9
-caps.latest.revision: 
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: cd3363a1afb8658ed3bb27359259cb752464507d
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 943bfa73b54a1ac5d68d21d2bb6e271133db595a
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="why-transformation-order-is-significant"></a>Dönüştürme Sırası Neden Önemlidir
 Tek bir <xref:System.Drawing.Drawing2D.Matrix> nesnesi, tek bir dönüştürmeyi veya bir dizi dönüştürmeyi depolayabilir. İkinci bileşik dönüştürme adı verilir. Bileşik bir dönüştürme matrisi tek dönüştürmeler matrisleri çarpılarak elde edilir.  
@@ -35,7 +21,7 @@ Tek bir <xref:System.Drawing.Drawing2D.Matrix> nesnesi, tek bir dönüştürmeyi
   
  Sırası önemlidir bir döndürme ve ölçekleme gibi dönüştürmeleri koordinat sistemi kaynağa göre yapılır nedenidir. Kaynağa ortalanmış bir nesneyi ölçekleme kaynağını çıktığınızda taşınan bir nesneyi ölçekleme daha farklı bir sonuç oluşturur. Benzer şekilde, kaynak ortalanmış bir nesne döndürme kaynağını çıktığınızda taşınmış olan bir nesne döndürme daha farklı bir sonuç oluşturur.  
   
- Aşağıdaki örnek, bileşik bir dönüşüm oluşturmak için ölçeklendirme, çevirme ve döndürme (sırayla) birleştirir. Bağımsız değişken <xref:System.Drawing.Drawing2D.MatrixOrder.Append> geçirilen <xref:System.Drawing.Graphics.RotateTransform%2A> yöntemi gösterir döndürme ölçeklendirme izler. Benzer şekilde, bağımsız değişkeni <xref:System.Drawing.Drawing2D.MatrixOrder.Append> geçirilen <xref:System.Drawing.Graphics.TranslateTransform%2A> yöntemi gösterir çeviri döndürme izler. <xref:System.Drawing.Drawing2D.MatrixOrder.Append>ve <xref:System.Drawing.Drawing2D.MatrixOrder.Prepend> üyeleri olan <xref:System.Drawing.Drawing2D.MatrixOrder> numaralandırması.  
+ Aşağıdaki örnek, bileşik bir dönüşüm oluşturmak için ölçeklendirme, çevirme ve döndürme (sırayla) birleştirir. Bağımsız değişken <xref:System.Drawing.Drawing2D.MatrixOrder.Append> geçirilen <xref:System.Drawing.Graphics.RotateTransform%2A> yöntemi gösterir döndürme ölçeklendirme izler. Benzer şekilde, bağımsız değişkeni <xref:System.Drawing.Drawing2D.MatrixOrder.Append> geçirilen <xref:System.Drawing.Graphics.TranslateTransform%2A> yöntemi gösterir çeviri döndürme izler. <xref:System.Drawing.Drawing2D.MatrixOrder.Append> ve <xref:System.Drawing.Drawing2D.MatrixOrder.Prepend> üyeleri olan <xref:System.Drawing.Drawing2D.MatrixOrder> numaralandırması.  
   
  [!code-csharp[System.Drawing.MiscLegacyTopics#21](../../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.MiscLegacyTopics/CS/Class1.cs#21)]
  [!code-vb[System.Drawing.MiscLegacyTopics#21](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.MiscLegacyTopics/VB/Class1.vb#21)]  

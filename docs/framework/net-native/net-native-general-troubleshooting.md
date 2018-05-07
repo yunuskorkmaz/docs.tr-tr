@@ -1,24 +1,14 @@
 ---
 title: .NET Yerel Genel Sorun Giderme
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: ee8c5e17-35ea-48a1-8767-83298caac1e8
-caps.latest.revision: "8"
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 9e92e99b978d12c32cc46b9133621875f35af634
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 0b53150c90e473e7c4ed32991c43ff0b8ca5b75b
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="net-native-general-troubleshooting"></a>.NET Yerel Genel Sorun Giderme
 Bu konu ile uygulamaları geliştirirken karşılaşabileceğiniz olası sorunları gidermek nasıl açıklar [!INCLUDE[net_native](../../../includes/net-native-md.md)].  
@@ -41,7 +31,7 @@ Bu konu ile uygulamaları geliştirirken karşılaşabileceğiniz olası sorunla
   
      Projenizi ile başarıyla yapı sonra [!INCLUDE[net_native](../../../includes/net-native-md.md)], çıktı obj altında bulabilirsiniz\\*config*\ *arch* \\  *ProjectName*. ilc\out.  Son Yerel Paket içeriğini depo altında bulunabilir\\*arch*\\*config*\AppX. Son Yerel Paket içeriğini \bin altında olan\\*arch*\\*config*uygulamayı dağıttıysanız \AppX.  
   
--   **Sorun:** .NET yerel koda derlenmiş uygulama çalışma zamanı özel durumları atma (genellikle [MissingMetadataException](../../../docs/framework/net-native/missingmetadataexception-class-net-native.md) veya [MissingRuntimeArtifactException](../../../docs/framework/net-native/missingruntimeartifactexception-class-net-native.md) özel durumlar), onu belirtmiyor .NET yerel derlendiğinde atar.  
+-   **Sorun:** .NET yerel koda derlenmiş uygulama çalışma zamanı özel durumları atma (genellikle [MissingMetadataException](../../../docs/framework/net-native/missingmetadataexception-class-net-native.md) veya [MissingRuntimeArtifactException](../../../docs/framework/net-native/missingruntimeartifactexception-class-net-native.md) özel durumlar), değil throw .NET yerel derlendiğinde.  
   
      **Çözüm:** .NET yerel meta verileri veya aksi halde yansıma yoluyla kullanılabilir uygulama kodu sağlamadığından özel durumlar. (Daha fazla bilgi için bkz: [.NET yerel ve derleme](../../../docs/framework/net-native/net-native-and-compilation.md).) Bir giriş eklemek zorunda özel ortadan kaldırmak için [çalışma zamanı yönergeleri (rd.xml) dosya](../../../docs/framework/net-native/runtime-directives-rd-xml-configuration-file-reference.md) .NET yerel araç zinciri meta veri veya uygulama kodunu kullanılabilir çalışma zamanında böylece yapabilirsiniz. İki sorun gidericileri kullanılabilir çalışma zamanı yönergeleri dosyasına eklemek için gerekli giriş üretir:  
   

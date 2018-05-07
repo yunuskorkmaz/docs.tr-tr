@@ -1,27 +1,15 @@
 ---
-title: "COM+ Hizmet Modeli Yapılandırma Aracı (ComSvcConfig.exe)"
-ms.custom: 
+title: COM+ Hizmet Modeli Yapılandırma Aracı (ComSvcConfig.exe)
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - Windows Communication Foundation, COM+ integration
 - WCF, COM+ integration
 ms.assetid: 7717c6c2-85fc-418b-a8ed-bad8e61cec5c
-caps.latest.revision: "15"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 40e7644ade32f245772a8971cf0693683b980952
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: db4518a66c54574f498c4657e25a29676f0f720a
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="com-service-model-configuration-tool-comsvcconfigexe"></a>COM+ Hizmet Modeli Yapılandırma Aracı (ComSvcConfig.exe)
 COM + hizmet modeli yapılandırma komut satırı aracı (ComSvcConfig.exe), Web Hizmetleri olarak açığa çıkarılması COM + arabirimleri yapılandırmanıza olanak sağlar.  
@@ -55,11 +43,11 @@ ComSvcConfig.exe /install | /uninstall | /list [/application:<ApplicationID | Ap
   
 |Seçenek|Açıklama|  
 |------------|-----------------|  
-|`/application:`\< *ApplicationId* &#124; *ApplicationName*\>|Yapılandırmak için COM + uygulamasını belirtir.<br /><br /> Kısa form `/a`.|  
-|`/contract:`\< *ClassID* &#124; *ProgID* &#124; \*,*InterfaceId* &#124; *InterfaceName* &#124;\*\>|COM + bileşeni ve hizmet sözleşmesini olarak yapılandırılacak arabirimi belirtir.<br /><br /> Kısa form `/c`.<br /><br /> While joker karakter (\*) bileşeni ve arabirim adlarını belirttiğinizde kullanılabilir, istemediğiniz arabirimleri doğurabilir, kullanmamanızı öneririz.|  
-|`/hosting:`\< *complus* &#124; *edildi*\>|COM + modu veya Web barındırma modu barındırma kullanılıp kullanılmayacağını belirtir.<br /><br /> Kısa form `/h`.<br /><br /> COM + kullanma modu barındırma COM + uygulamasının açık etkinleştirme gerektirir. Web barındırma modu otomatik olarak etkinleştirilecek COM + uygulaması verir kullanarak gerekli. COM + uygulaması bir kitaplık uygulaması varsa, Internet Information Services (IIS) işleminde çalışır. COM + uygulaması bir sunucu uygulaması ise, Dllhost.exe işleminde çalışır.|  
-|`/webSite:`\< *WebsiteName*\>|Ne zaman modu barındırma Web barındırma için Web sitesi kullanılır belirtir (bkz `/hosting` bayrağı).<br /><br /> Kısa form `/w`.<br /><br /> Web sitesi belirtilmezse, varsayılan Web sitesi kullanılır.|  
-|`/webDirectory:`\< *WebDirectoryName*\>|Web barındırma kullanıldığında barındırmak için sanal dizini belirtir (bkz `/hosting` bayrağı).<br /><br /> Kısa form `/d`.|  
+|`/application:` \<*ApplicationId* &#124; *ApplicationName*\>|Yapılandırmak için COM + uygulamasını belirtir.<br /><br /> Kısa form `/a`.|  
+|`/contract:` \<*ClassId* &#124; *ProgID* &#124; \*,*InterfaceId* &#124; *InterfaceName*    &#124; \*\>|COM + bileşeni ve hizmet sözleşmesini olarak yapılandırılacak arabirimi belirtir.<br /><br /> Kısa form `/c`.<br /><br /> While joker karakter (\*) bileşeni ve arabirim adlarını belirttiğinizde kullanılabilir, istemediğiniz arabirimleri doğurabilir, kullanmamanızı öneririz.|  
+|`/hosting:` \<*ComPlus* &#124; *edildi* \>|COM + modu veya Web barındırma modu barındırma kullanılıp kullanılmayacağını belirtir.<br /><br /> Kısa form `/h`.<br /><br /> COM + kullanma modu barındırma COM + uygulamasının açık etkinleştirme gerektirir. Web barındırma modu otomatik olarak etkinleştirilecek COM + uygulaması verir kullanarak gerekli. COM + uygulaması bir kitaplık uygulaması varsa, Internet Information Services (IIS) işleminde çalışır. COM + uygulaması bir sunucu uygulaması ise, Dllhost.exe işleminde çalışır.|  
+|`/webSite:` \<*WebsiteName*\>|Ne zaman modu barındırma Web barındırma için Web sitesi kullanılır belirtir (bkz `/hosting` bayrağı).<br /><br /> Kısa form `/w`.<br /><br /> Web sitesi belirtilmezse, varsayılan Web sitesi kullanılır.|  
+|`/webDirectory:` \<*WebDirectoryName*\>|Web barındırma kullanıldığında barındırmak için sanal dizini belirtir (bkz `/hosting` bayrağı).<br /><br /> Kısa form `/d`.|  
 |`/mex`|Bir sözleşme tanımı hizmetinden almak istediğiniz istemcileri desteklemek için varsayılan hizmet yapılandırması için bir meta veri değişimi (MEX) Hizmeti uç noktası ekler.<br /><br /> Kısa form `/x`.|  
 |`/id`|Uygulama bileşeni ve arabirim bilgilerini kimlikleri olarak görüntüler.<br /><br /> Kısa form `/k`.|  
 |`/nologo`|ComSvcConfig.exe kendi logo görüntülemesini engeller.<br /><br /> Kısa form `/n`.|  

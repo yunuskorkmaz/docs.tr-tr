@@ -1,13 +1,6 @@
 ---
-title: "Nasıl yapılır: Yansıma Yayma ile Genel Tür Tanımlama"
-ms.custom: 
+title: 'Nasıl yapılır: Yansıma Yayma ile Genel Tür Tanımlama'
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -17,16 +10,13 @@ helpviewer_keywords:
 - generics [.NET Framework], dynamic types
 - reflection emit, generic types
 ms.assetid: 07d5f01a-7b5b-40ea-9b15-f21561098fe4
-caps.latest.revision: "14"
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: d6096a54c6a530035bd32c24d427ba047f905476
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.openlocfilehash: 34ed0d4752eb42f0bd3df8167d498b99d7af1080
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-define-a-generic-type-with-reflection-emit"></a>Nasıl yapılır: Yansıma Yayma ile Genel Tür Tanımlama
 Bu konuda iki tür parametreleri ile basit bir genel tür oluşturma, tür parametreleri sınıf kısıtlamaları, arabirim kısıtlamaları ve özel kısıtlamalar uygulamak nasıl ve parametre türleri olarak sınıfın türü parametreleri kullanma üyeleri oluşturmak üzere nasıl gösterir ve dönüş türleri.  
@@ -74,7 +64,7 @@ Bu konuda iki tür parametreleri ile basit bir genel tür oluşturma, tür param
      [!code-csharp[EmitGenericType#7](../../../samples/snippets/csharp/VS_Snippets_CLR/EmitGenericType/CS/source.cs#7)]
      [!code-vb[EmitGenericType#7](../../../samples/snippets/visualbasic/VS_Snippets_CLR/EmitGenericType/VB/source.vb#7)]  
   
-7.  Bir alan tanımlayın. Bu örnekte, alan türü tür parametresi tarafından belirtilen `TFirst`. <xref:System.Reflection.Emit.GenericTypeParameterBuilder>türetilen <xref:System.Type>, genel tür parametreleri bir türü kullanılabilir herhangi bir yerde kullanabilirsiniz.  
+7.  Bir alan tanımlayın. Bu örnekte, alan türü tür parametresi tarafından belirtilen `TFirst`. <xref:System.Reflection.Emit.GenericTypeParameterBuilder> türetilen <xref:System.Type>, genel tür parametreleri bir türü kullanılabilir herhangi bir yerde kullanabilirsiniz.  
   
      [!code-cpp[EmitGenericType#21](../../../samples/snippets/cpp/VS_Snippets_CLR/EmitGenericType/CPP/source.cpp#21)]
      [!code-csharp[EmitGenericType#21](../../../samples/snippets/csharp/VS_Snippets_CLR/EmitGenericType/CS/source.cs#21)]
@@ -107,7 +97,7 @@ Bu konuda iki tür parametreleri ile basit bir genel tür oluşturma, tür param
      [!code-csharp[EmitGenericType#8](../../../samples/snippets/csharp/VS_Snippets_CLR/EmitGenericType/CS/source.cs#8)]
      [!code-vb[EmitGenericType#8](../../../samples/snippets/visualbasic/VS_Snippets_CLR/EmitGenericType/VB/source.vb#8)]  
   
-11. Invoke yöntemi. `ExampleMethod`Genel, değil ancak ait olduğu için tür böylece alabilmek için genel bir <xref:System.Reflection.MethodInfo> , çağrılabilir yapılandırılmış bir tür için tür tanımı oluşturmak gerekli olan `Sample`. Yapılandırılmış bir tür kullanıyor `Example` üzerindeki kısıtlamaları karşılayan sınıfı `TFirst` bir başvuru türü olduğundan ve varsayılan parametresiz oluşturucusu olan ve `ExampleDerived` üzerindeki kısıtlamaları karşılayan sınıfı `TSecond`. (Kodunu `ExampleDerived` örnek kod bölümünde bulunabilir.) Bu iki tür geçirilecek <xref:System.Type.MakeGenericType%2A> oluşturulan türü oluşturun. <xref:System.Reflection.MethodInfo> Kullanılarak elde edilir <xref:System.Type.GetMethod%2A> yöntemi.  
+11. Invoke yöntemi. `ExampleMethod` Genel, değil ancak ait olduğu için tür böylece alabilmek için genel bir <xref:System.Reflection.MethodInfo> , çağrılabilir yapılandırılmış bir tür için tür tanımı oluşturmak gerekli olan `Sample`. Yapılandırılmış bir tür kullanıyor `Example` üzerindeki kısıtlamaları karşılayan sınıfı `TFirst` bir başvuru türü olduğundan ve varsayılan parametresiz oluşturucusu olan ve `ExampleDerived` üzerindeki kısıtlamaları karşılayan sınıfı `TSecond`. (Kodunu `ExampleDerived` örnek kod bölümünde bulunabilir.) Bu iki tür geçirilecek <xref:System.Type.MakeGenericType%2A> oluşturulan türü oluşturun. <xref:System.Reflection.MethodInfo> Kullanılarak elde edilir <xref:System.Type.GetMethod%2A> yöntemi.  
   
      [!code-cpp[EmitGenericType#9](../../../samples/snippets/cpp/VS_Snippets_CLR/EmitGenericType/CPP/source.cpp#9)]
      [!code-csharp[EmitGenericType#9](../../../samples/snippets/csharp/VS_Snippets_CLR/EmitGenericType/CS/source.cs#9)]

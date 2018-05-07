@@ -1,27 +1,15 @@
 ---
-title: "WCF Hizmetleri için Basitleştirilmiş Yapılandırma"
-ms.custom: 
+title: WCF Hizmetleri için Basitleştirilmiş Yapılandırma
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 1e39ec25-18a3-4fdc-b6a3-9dfafbd60112
-caps.latest.revision: "11"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 02611dc44b98c1b8b5ef5ae74559f9f370483792
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 80e2ac83ec0e07176d6afe6d34c63fb4d8e836d1
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="simplified-configuration-for-wcf-services"></a>WCF Hizmetleri için Basitleştirilmiş Yapılandırma
-Bu örnek, uygulama ve tipik hizmeti ve kullanarak istemci yapılandırma gösterilmiştir [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)]. Bu örnek diğer tüm temel teknoloji örnekleri temelini oluşturur.  
+Bu örnek, uygulama ve tipik hizmeti ve Windows Communication Foundation (WCF) kullanan istemci yapılandırma gösterilmektedir. Bu örnek diğer tüm temel teknoloji örnekleri temelini oluşturur.  
   
  Basitleştirilmiş yapılandırmada hizmet ile iletişim için bir uç noktasını kullanıma sunar, bu hizmeti kullanan [!INCLUDE[netfx40_long](../../../../includes/netfx40-long-md.md)]. Öncesinde [!INCLUDE[netfx40_short](../../../../includes/netfx40-short-md.md)], uç nokta yapılandırma dosyasında (Web.config) aşağıdaki örnek yapılandırma kodda gösterildiği gibi tanımlanır.  
   
@@ -48,7 +36,7 @@ Bu örnek, uygulama ve tipik hizmeti ve kullanarak istemci yapılandırma göste
 </configuration>  
 ```  
   
- İçinde [!INCLUDE[netfx40_short](../../../../includes/netfx40-short-md.md)], `<service>` öğesidir isteğe bağlıdır. Ne zaman bir hizmet tanımlamıyor uç nokta, her bir temel adres ve uygulanan sözleşme için bir uç nokta eklenir hizmete. Temel adres uç nokta belirlemek için sözleşme ada eklenir ve bağlama adres düzeni tarafından belirlenir. Aşağıdaki kod örneğinde bir Basitleştirilmiş yapılandırma dosyası gösterir. Yapılandırıldığı şekilde hizmet http://localhost/servicemodelsamples/service.svc aynı bilgisayara bir istemci tarafından erişilebilir. Hizmete erişmek istemciler için uzak bilgisayarlarda, localhost yerine bir tam etki alanı adı belirtilmelidir. Hizmet meta verileri varsayılan olarak kullanıma sunmuyor. Bu nedenle, hizmetin açar <xref:System.ServiceModel.Description.ServiceMetadataBehavior> davranışı.  
+ İçinde [!INCLUDE[netfx40_short](../../../../includes/netfx40-short-md.md)], `<service>` öğesidir isteğe bağlıdır. Ne zaman bir hizmet tanımlamıyor uç nokta, her bir temel adres ve uygulanan sözleşme için bir uç nokta eklenir hizmete. Temel adres uç nokta belirlemek için sözleşme ada eklenir ve bağlama adres düzeni tarafından belirlenir. Aşağıdaki kod örneğinde bir Basitleştirilmiş yapılandırma dosyası gösterir. Konumundaki yapılandırıldığı şekilde hizmet erişilebilir http://localhost/servicemodelsamples/service.svc aynı bilgisayara bir istemci tarafından. Hizmete erişmek istemciler için uzak bilgisayarlarda, localhost yerine bir tam etki alanı adı belirtilmelidir. Hizmet meta verileri varsayılan olarak kullanıma sunmuyor. Bu nedenle, hizmetin açar <xref:System.ServiceModel.Description.ServiceMetadataBehavior> davranışı.  
   
 ```xml  
 <?xml version="1.0" encoding="utf-8" ?>  
@@ -85,7 +73,7 @@ Bu örnek, uygulama ve tipik hizmeti ve kullanarak istemci yapılandırma göste
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  Bu dizin mevcut değilse, Git [Windows Communication Foundation (WCF) ve .NET Framework 4 için Windows Workflow Foundation (WF) örnek](http://go.microsoft.com/fwlink/?LinkId=150780) tüm indirmek için [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] ve [!INCLUDE[wf1](../../../../includes/wf1-md.md)] örnekleri. Bu örnek aşağıdaki dizinde bulunur.  
+>  Bu dizin mevcut değilse, Git [Windows Communication Foundation (WCF) ve .NET Framework 4 için Windows Workflow Foundation (WF) örnek](http://go.microsoft.com/fwlink/?LinkId=150780) tüm Windows Communication Foundation (WCF) indirmek için ve [!INCLUDE[wf1](../../../../includes/wf1-md.md)] örnekleri. Bu örnek aşağıdaki dizinde bulunur.  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Services\ConfigSimplificationIn40`  
   

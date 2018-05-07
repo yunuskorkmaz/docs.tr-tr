@@ -1,13 +1,6 @@
 ---
-title: "Zamanlama Olaylarına Genel Bakış"
-ms.custom: 
+title: Zamanlama Olaylarına Genel Bakış
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-wpf
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -15,16 +8,11 @@ helpviewer_keywords:
 - timelines [WPF]
 - timing events [WPF]
 ms.assetid: 597e3280-0867-4359-a97b-5b2f4149e350
-caps.latest.revision: "14"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 79669bdc4b5f9cfb8bdac92efa07e932cc14ac57
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: a48d1621e5568d556a1177578cc662813d70a283
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="timing-events-overview"></a>Zamanlama Olaylarına Genel Bakış
 Bu konu, üzerinde kullanılabilir beş zamanlama olayları kullanmayı açıklar <xref:System.Windows.Media.Animation.Timeline> ve <xref:System.Windows.Media.Animation.Clock> nesneleri.  
@@ -67,7 +55,7 @@ Bu konu, üzerinde kullanılabilir beş zamanlama olayları kullanmayı açıkla
   
 |Olay|Tetikleyici etkileşimli işlemi|Diğer Tetikleyicileri|  
 |-----------|--------------------------------------|--------------------|  
-|**Tamamlandı**|Doldurmak için Atla|Saatin tamamlar.|  
+|**tamamlandı**|Doldurmak için Atla|Saatin tamamlar.|  
 |**CurrentGlobalSpeedInvalidated**|Duraklatma, sürdürme, arama, hız oranını ayarlamak, Atla doldurun, durdurmak için|Saatin tersine çevirir hızlandırır başlatır veya durdurur.|  
 |**CurrentStateInvalidated**|Başlamak için Atla doldurun, durdurmak için|Saatin, durdurur, başlatır veya doldurur.|  
 |**CurrentTimeInvalidated**|Başlamak için arama, Atla doldurun, durdurmak için|Saat ilerler.|  

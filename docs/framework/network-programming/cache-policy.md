@@ -1,12 +1,6 @@
 ---
-title: "Önbellek İlkesi"
-ms.custom: 
+title: Önbellek İlkesi
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - time-based cache policies
 - location-based cache policies
@@ -16,21 +10,19 @@ helpviewer_keywords:
 - content cache policies
 - expired content
 ms.assetid: 1a7e04ec-7872-41c2-96c6-52566dcb412b
-caps.latest.revision: "11"
 author: mcleblanc
 ms.author: markl
 manager: markl
-ms.workload: dotnet
-ms.openlocfilehash: bafad45e6b6b546707c4f805f857e85549f0f071
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 36cf61982bb5a83e6031c35a19ba8ebf0b94aa6d
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="cache-policy"></a>Önbellek İlkesi
 Önbellek İlkesi, istenen kaynak önbelleğe alınmış bir kopyasını kullanarak bir istek yerine olup olmadığını belirlemek için kullanılan kuralları tanımlar. İstemci önbellek gereksinimleri yenilik uygulamaları belirtin, ancak etkili önbellek ilkesini istemci önbellek gereksinimleri, sunucunun içerik sona erme gereksinimleri ve sunucunun yeniden doğrulanması gereksinimleri tarafından belirlenir. İstemci önbellek İlkesi ve sunucu gereksinimleri etkileşimini her zaman en yeni içerik istemci uygulamaya döndürülür sağlamaya yardımcı olmak üzere en koruyucu önbellek İlkesi sonuçlanır.  
   
- Önbellek konumu tabanlı ya da zaman tabanlı ilkelerdir. Konum temelli önbellek İlkesi, istenen kaynak gelen gerçekleştirilebilecek göre önbelleğe alınan girdileri yenilik tanımlar. Bir zamana dayalı önbellek İlkesi üstbilgileri kaynak ve geçerli saati ile döndürülen kaynak alındı, saat kullanarak önbelleğe alınmış girişleri yenilik tanımlar. Çoğu uygulama RFC 2616, adresinde belirtilen önbellek İlkesi uygulayan varsayılan zamana dayalı önbellek ilkesini kullanabilirsiniz [http://www.ietf.org](http://www.ietf.org/).  
+ Önbellek konumu tabanlı ya da zaman tabanlı ilkelerdir. Konum temelli önbellek İlkesi, istenen kaynak gelen gerçekleştirilebilecek göre önbelleğe alınan girdileri yenilik tanımlar. Bir zamana dayalı önbellek İlkesi üstbilgileri kaynak ve geçerli saati ile döndürülen kaynak alındı, saat kullanarak önbelleğe alınmış girişleri yenilik tanımlar. Çoğu uygulama RFC 2616, adresinde belirtilen önbellek İlkesi uygulayan varsayılan zamana dayalı önbellek ilkesini kullanabilirsiniz [ http://www.ietf.org ](http://www.ietf.org/).  
   
  Aşağıdaki tabloda açıklanan sınıfları önbellek ilkeleri belirtmek için kullanılır.  
   

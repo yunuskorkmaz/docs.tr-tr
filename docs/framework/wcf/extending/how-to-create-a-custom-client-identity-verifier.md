@@ -1,30 +1,18 @@
 ---
-title: "Nasıl yapılır: Özel İstemci Kimliği Doğrulayıcı Oluşturma"
-ms.custom: 
+title: 'Nasıl yapılır: Özel İstemci Kimliği Doğrulayıcı Oluşturma'
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
 ms.assetid: f2d34e43-fa8b-46d2-91cf-d2960e13e16b
-caps.latest.revision: "15"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: b10dd9be996369385ca323b0409145a9cde46a1e
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
-ms.translationtype: MT
+ms.openlocfilehash: 99d46b19e744190c50a2ba316fe0f59a8f6cf07b
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-create-a-custom-client-identity-verifier"></a>Nasıl yapılır: Özel İstemci Kimliği Doğrulayıcı Oluşturma
-*Kimlik* özelliği [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] önceden hizmet beklenen kimliğini belirtmek bir istemci sağlar. Sunucu istemciye kendi kimliğini doğrular her kimliği beklenen kimliğini karşı denetlenir. (Kimlik ve nasıl çalıştığı bir açıklaması için bkz: [hizmet kimliği ve kimlik doğrulama](../../../../docs/framework/wcf/feature-details/service-identity-and-authentication.md).)  
+*Kimlik* özelliği Windows Communication Foundation (WCF) önceden hizmet beklenen kimliğini belirtmek bir istemci sağlar. Sunucu istemciye kendi kimliğini doğrular her kimliği beklenen kimliğini karşı denetlenir. (Kimlik ve nasıl çalıştığı bir açıklaması için bkz: [hizmet kimliği ve kimlik doğrulama](../../../../docs/framework/wcf/feature-details/service-identity-and-authentication.md).)  
   
  Gerekirse, doğrulama özel kimlik doğrulama kullanılarak özelleştirilebilir. Örneğin, ek hizmet kimlik doğrulama denetimleri gerçekleştirebilirsiniz. Bu örnekte, özel kimlik doğrulayıcı sunucusundan döndürülen X.509 sertifikası ek Taleplerde denetler. Örnek bir uygulama için bkz: [hizmet kimliği örneği](../../../../docs/framework/wcf/samples/service-identity-sample.md).  
   

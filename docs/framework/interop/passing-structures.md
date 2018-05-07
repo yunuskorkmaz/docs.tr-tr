@@ -1,31 +1,19 @@
 ---
-title: "Yapıları Geçirme"
-ms.custom: 
+title: Yapıları Geçirme
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
 helpviewer_keywords:
 - platform invoke, calling unmanaged functions
 ms.assetid: 9b92ac73-32b7-4e1b-862e-6d8d950cf169
-caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: a30905fdcf7063f6ecdae0346c9c5ee39b450be9
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 3764916263f6f88615d61badaf2c32807bcc09b8
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="passing-structures"></a>Yapıları Geçirme
 Birçok yönetilmeyen işlevleri, işlevi parametre olarak yapıları (Visual Basic'te türleri kullanıcı tanımlı) veya yönetilen kod içinde tanımlanan sınıflar üyesi geçirmek için bekler. Yapıları geçirme veya platformu kullanılarak yönetilmeyen kod sınıflarına çağırdığınızda özgün düzeni ve hizalama korumak için ek bilgi sağlamanız gerekir. Bu konu tanıtır <xref:System.Runtime.InteropServices.StructLayoutAttribute> biçimlendirilmiş türlerini tanımlamak için kullandığınız özniteliği. Yönetilen yapılar ve sınıflar için tarafından sağlanan bazı tahmin edilebilir düzeni davranışları aralarından seçim yapabileceğiniz **LayoutKind** numaralandırması.  

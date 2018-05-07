@@ -1,13 +1,6 @@
 ---
-title: "Özelleştirilebilir Görünümü olan Denetim Oluşturma"
-ms.custom: 
+title: Özelleştirilebilir Görünümü olan Denetim Oluşturma
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-wpf
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -20,20 +13,15 @@ helpviewer_keywords:
 - managing control states [WPF], VisualStateManager
 - VisualStateManager [WPF], best practice
 ms.assetid: 9e356d3d-a3d0-4b01-a25f-2d43e4d53fe5
-caps.latest.revision: "10"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 4da96c3e33c6f7827619b408568fbbfe96c50a11
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 9f539e7dbb105591375857122d738fddd87f6776
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="creating-a-control-that-has-a-customizable-appearance"></a>Özelleştirilebilir Görünümü olan Denetim Oluşturma
 <a name="introduction"></a>
-[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]görünümünü özelleştirilebilir bir denetim oluşturma olanağı sağlar. Örneğin, görünümünü değiştirebilirsiniz bir <xref:System.Windows.Controls.CheckBox> ötesinde hangi ayar özellikleri yeni oluşturarak ne yapacağını <xref:System.Windows.Controls.ControlTemplate>. Aşağıdaki çizimde gösterildiği bir <xref:System.Windows.Controls.CheckBox> varsayılan kullanan <xref:System.Windows.Controls.ControlTemplate> ve <xref:System.Windows.Controls.CheckBox> özel kullanan <xref:System.Windows.Controls.ControlTemplate>.  
+[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] görünümünü özelleştirilebilir bir denetim oluşturma olanağı sağlar. Örneğin, görünümünü değiştirebilirsiniz bir <xref:System.Windows.Controls.CheckBox> ötesinde hangi ayar özellikleri yeni oluşturarak ne yapacağını <xref:System.Windows.Controls.ControlTemplate>. Aşağıdaki çizimde gösterildiği bir <xref:System.Windows.Controls.CheckBox> varsayılan kullanan <xref:System.Windows.Controls.ControlTemplate> ve <xref:System.Windows.Controls.CheckBox> özel kullanan <xref:System.Windows.Controls.ControlTemplate>.  
   
  ![Bir onay kutusu varsayılan denetim şablonu ile. ] (../../../../docs/framework/wpf/controls/media/ndp-checkboxdefault.png "NDP_CheckBoxDefault")  
 Varsayılan denetim şablonunu kullanan bir onay kutusu  
@@ -89,7 +77,7 @@ Bir özel denetim şablonu kullanan bir onay kutusu
   
  [!code-xaml[VSMCustomControl#VisualStructure](../../../../samples/snippets/csharp/VS_Snippets_Wpf/vsmcustomcontrol/csharp/window1.xaml#visualstructure)]  
   
- Görsel davranışını `NumericUpDown` denetimidir negatif ise değer kırmızı yazı tipinde olmasıdır.  Değiştirirseniz <xref:System.Windows.Controls.TextBlock.Foreground%2A> , <xref:System.Windows.Controls.TextBlock> buna kod ne zaman `Value` negatif `NumericUpDown` kırmızı bir negatif değer her zaman gösterir. Denetimin görsel davranışını belirtin <xref:System.Windows.Controls.ControlTemplate> ekleyerek <xref:System.Windows.VisualState> nesneleri <xref:System.Windows.Controls.ControlTemplate>.  Aşağıdaki örnekte gösterildiği <xref:System.Windows.VisualState> için nesneleri `Positive` ve `Negative` durumları.  `Positive`ve `Negative` olan birbirini dışlayan (denetimidir her zaman tam olarak iki birinde), bu nedenle örnek koyar <xref:System.Windows.VisualState> nesnelerini tek <xref:System.Windows.VisualStateGroup>.  Denetim gittiğinde içine `Negative` durumu, <xref:System.Windows.Controls.TextBlock.Foreground%2A> , <xref:System.Windows.Controls.TextBlock> kırmızı kapatır.  Denetim olduğunda `Positive` durumu, <xref:System.Windows.Controls.TextBlock.Foreground%2A> geri döndüğünde özgün değeri.  Tanımlama <xref:System.Windows.VisualState> nesnelerini bir <xref:System.Windows.Controls.ControlTemplate> daha ayrıntılı olarak ele alınmıştır [ControlTemplate oluşturarak varolan denetiminin görünümünü özelleştirme](../../../../docs/framework/wpf/controls/customizing-the-appearance-of-an-existing-control.md).  
+ Görsel davranışını `NumericUpDown` denetimidir negatif ise değer kırmızı yazı tipinde olmasıdır.  Değiştirirseniz <xref:System.Windows.Controls.TextBlock.Foreground%2A> , <xref:System.Windows.Controls.TextBlock> buna kod ne zaman `Value` negatif `NumericUpDown` kırmızı bir negatif değer her zaman gösterir. Denetimin görsel davranışını belirtin <xref:System.Windows.Controls.ControlTemplate> ekleyerek <xref:System.Windows.VisualState> nesneleri <xref:System.Windows.Controls.ControlTemplate>.  Aşağıdaki örnekte gösterildiği <xref:System.Windows.VisualState> için nesneleri `Positive` ve `Negative` durumları.  `Positive` ve `Negative` olan birbirini dışlayan (denetimidir her zaman tam olarak iki birinde), bu nedenle örnek koyar <xref:System.Windows.VisualState> nesnelerini tek <xref:System.Windows.VisualStateGroup>.  Denetim gittiğinde içine `Negative` durumu, <xref:System.Windows.Controls.TextBlock.Foreground%2A> , <xref:System.Windows.Controls.TextBlock> kırmızı kapatır.  Denetim olduğunda `Positive` durumu, <xref:System.Windows.Controls.TextBlock.Foreground%2A> geri döndüğünde özgün değeri.  Tanımlama <xref:System.Windows.VisualState> nesnelerini bir <xref:System.Windows.Controls.ControlTemplate> daha ayrıntılı olarak ele alınmıştır [ControlTemplate oluşturarak varolan denetiminin görünümünü özelleştirme](../../../../docs/framework/wpf/controls/customizing-the-appearance-of-an-existing-control.md).  
   
 > [!NOTE]
 >  Ayarladığınızdan emin olun <xref:System.Windows.VisualStateManager.VisualStateGroups%2A?displayProperty=nameWithType> özelliği eklenmiş kök üzerinde <xref:System.Windows.FrameworkElement> , <xref:System.Windows.Controls.ControlTemplate>.  
@@ -212,17 +200,17 @@ Bir özel denetim şablonu kullanan bir onay kutusu
   
 -   A <xref:System.Windows.Controls.Primitives.RepeatButton> adlı `UpButton`.  
   
--   A <xref:System.Windows.Controls.Primitives.RepeatButton> çağrılır`DownButton.`  
+-   A <xref:System.Windows.Controls.Primitives.RepeatButton> çağrılır `DownButton.`  
   
  Denetimi şu durumlarda olabilir:  
   
--   İçinde`ValueStates`<xref:System.Windows.VisualStateGroup>  
+-   İçinde `ValueStates`<xref:System.Windows.VisualStateGroup>  
   
     -   `Positive`  
   
     -   `Negative`  
   
--   İçinde`FocusStates`<xref:System.Windows.VisualStateGroup>  
+-   İçinde `FocusStates`<xref:System.Windows.VisualStateGroup>  
   
     -   `Focused`  
   

@@ -1,13 +1,6 @@
 ---
-title: "Gacutil.exe (Genel Derleme Önbelleği Aracı)"
-ms.custom: 
+title: Gacutil.exe (Genel Derleme Önbelleği Aracı)
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - assemblies [.NET Framework], global assembly cache
 - global assembly cache, viewing contents
@@ -24,16 +17,13 @@ helpviewer_keywords:
 - global assembly cache, Gacutil.exe
 - Global Assembly Cache tool
 ms.assetid: 4c7be9c8-72ae-481f-a01c-1a4716806e99
-caps.latest.revision: "17"
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: f802abf6ed90a60b057b01589dcf32c2aa495676
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 98423e6c103f7eb93b4bfa35ef19b6551c0df0e0
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="gacutilexe-global-assembly-cache-tool"></a>Gacutil.exe (Genel Derleme Önbelleği Aracı)
 Genel Bütünleştirilmiş Kod Önbelleği aracı genel bütünleştirilmiş kod önbelleğinin ve indirme önbelleğinin içeriğini görüntülemenize ve değiştirmenize olanak sağlar.  
@@ -52,8 +42,8 @@ gacutil [options] [assemblyName | assemblyPath | assemblyListFile]
   
 |Bağımsız Değişken|Açıklama|  
 |--------------|-----------------|  
-|*assemblyName*|Bir derlemenin adı. Bir kısmen belirtilen derleme adı gibi sağlayabilir `myAssembly` veya belirtilen derlemenin tam adı gibi `myAssembly, Version=2.0.0.0, Culture=neutral, PublicKeyToken=0038abc9deabfle5`.|  
-|*assemblyPath*|Bir derleme bildirimi içeren dosyanın adı.|  
+|*AssemblyName*|Bir derlemenin adı. Bir kısmen belirtilen derleme adı gibi sağlayabilir `myAssembly` veya belirtilen derlemenin tam adı gibi `myAssembly, Version=2.0.0.0, Culture=neutral, PublicKeyToken=0038abc9deabfle5`.|  
+|*AssemblyPath*|Bir derleme bildirimi içeren dosyanın adı.|  
 |*assemblyListFile*|Yüklenecek veya kaldırılacak derlemeleri listeleyen bir ANSI metin dosyasının yolu. Derlemeleri yüklemek üzere metin dosyası kullanmak için, dosyada her derleme için ayrı bir satırda yolu belirtin. Aracı göreli yollara, konumunu yorumlar *assemblyListFile*. Derlemeleri kaldırmak üzere bir metin dosyası kullanmak için, dosyada her derleme için ayrı bir satırda tam derleme adını belirtin. Bkz: *assemblyListFile* içeriği daha sonra bu konudaki örnekler.|  
   
 |Seçenek|Açıklama|  
@@ -64,18 +54,18 @@ gacutil [options] [assemblyName | assemblyPath | assemblyListFile]
 |**/ı** *assemblyPath*|Genel bütünleştirilmiş kod önbelleğine bir derleme yükler.|  
 |**/if***assemblyPath* |Genel bütünleştirilmiş kod önbelleğine bir derleme yükler. Eğer genel bütünleştirilmiş kod önbelleğinde aynı ada sahip bir derleme zaten bulunuyorsa, araç onun üzerine yazar.<br /><br /> Bu seçeneğin belirtilmesi belirtmeye eşdeğer **/i** ve **/f** birlikte seçenekleri.|  
 |**/İl** *assemblyListFile*|Belirtilen bir veya daha fazla derlemeleri yükler *assemblyListFile* genel derleme önbelleğine.|  
-|**/iR***assemblyPath* <br /><br /> *düzeni*<br /><br /> *id*<br /><br /> *Açıklama*|Bir derlemeyi genel bütünleştirilmiş kod önbelleğine yükler ve derlemeyi saymak için bir başvuru ekler. Belirtmeniz gerekir *assemblyPath*, *düzeni*, *kimliği*, ve *açıklama* bu seçenekle parametreleri. Bu parametreler için belirtebilirsiniz geçerli değerler açıklaması için bkz: **/r** seçeneği.<br /><br /> Bu seçeneğin belirtilmesi belirtmeye eşdeğer **/i** ve **/r** birlikte seçenekleri.|  
+|**/iR***assemblyPath* <br /><br /> *Düzeni*<br /><br /> *id*<br /><br /> *Açıklama*|Bir derlemeyi genel bütünleştirilmiş kod önbelleğine yükler ve derlemeyi saymak için bir başvuru ekler. Belirtmeniz gerekir *assemblyPath*, *düzeni*, *kimliği*, ve *açıklama* bu seçenekle parametreleri. Bu parametreler için belirtebilirsiniz geçerli değerler açıklaması için bkz: **/r** seçeneği.<br /><br /> Bu seçeneğin belirtilmesi belirtmeye eşdeğer **/i** ve **/r** birlikte seçenekleri.|  
 |**/l** [*assemblyName*]|Genel bütünleştirilmiş kod önbelleğinin içeriğini listeler. Belirtirseniz *assemblyName* parametresi, aracı, yalnızca o adla eşleşen derlemeleri listeler.|  
 |**/ldl**|İndirilen dosyalar önbelleğinin içeriğini listeler.|  
 |**/lr** [*assemblyName*]|Tüm derlemeleri ve karşılık gelen başvuru sayılarını listeler. Belirtirseniz *assemblyName* parametresi, araç yalnızca adı eşleşen derlemeleri listeler ve bunların karşılık gelen başvuru sayar.|  
 |**/nologo**|Microsoft başlangıç başlığı görüntüsünü bastırır.|  
-|**/r** [*assemblyName &#124; assemblyPath*]<br /><br /> *düzeni*<br /><br /> *id*<br /><br /> *Açıklama*|Yüklenecek veya kaldırılacak bir derleme veya derlemeler için izlenen bir başvuru belirtir. Bu seçenek ile belirtin **/i**, **/il**, **/u**, veya **/ul** seçenekleri.<br /><br /> Bir derlemeyi yüklemek için belirtmeniz *assemblyPath*, *düzeni*, *kimliği*, ve *açıklama* bu seçenekle parametreleri. Bir derlemeyi kaldırmak için belirtin *assemblyName*, *düzeni*, *kimliği*, ve *açıklama* parametreleri.<br /><br /> Derleme başvurusunu kaldırmak için aynı belirtmelisiniz *düzeni*, *kimliği*, ve *açıklama* ile belirtilen parametreleri **/i** ve **/r** (veya **/ir**) seçenekleri derleme yüklendiğinde. Eğer bir derlemeyi kaldırıyorsanız, eğer kaldırılacak son başvuruysa ve Windows Installer'ın o derlemeye hiçbir başvurusu yok ise araç derlemeyi genel bütünleştirilmiş kod önbelleğinden de kaldırır.<br /><br /> *Düzeni* parametresi yükleme düzeni türünü belirtir. Aşağıdaki değerlerden birini belirleyebilirsiniz.<br /><br /> -UNINSTALL_KEY: yükleyici Microsoft Windows'daki Program Ekle/Kaldır uygulamaya ekler, bu değeri belirtin. Uygulamalar HKLM\Software\Microsoft\Windows\CurrentVersion içine bir kayıt defteri anahtarı ekleyerek kendilerini Program Ekle/Kaldır'a ekler.<br />-FILEPATH: yükleyici Program Ekle/Kaldır uygulamaya eklemez, bu değeri belirtin.<br />-OPAK: bir kayıt defteri anahtarı sağlayarak, bu değeri belirtin veya dosya yolu yükleme senaryonuz için geçerli değildir. Bu değer için bir özel bilgiyi belirtmenize olanak tanır *kimliği* parametresi.<br /><br /> Belirtmek için değer *kimliği* parametresi için belirtilen değer bağımlı *düzeni* parametre:<br /><br /> -UNINSTALL_KEY için belirtirseniz, *düzeni* parametresi HKLM\Software\Microsoft\Windows\CurrentVersion kayıt defteri anahtarında ayarlama uygulamanın adını belirtin. Uygulamam için kayıt defteri anahtarı HKLM\Software\Microsoft\Windows\CurrentVersion\MyApp ise, örneğin, belirtin *kimliği* parametresi.<br />-İçin FILEPATH belirtirseniz, *düzeni* parametresi olarak derleme yükler yürütülebilir dosyanın tam yolunu belirtmeniz *kimliği* parametresi.<br />-İçin OPAK belirtirseniz, *düzeni* parametresi, herhangi bir parçası veri sağlamak *kimliği* parametresi. Belirttiğiniz veri tırnak işaretleri ("") arasına alınmalıdır.<br /><br /> *Açıklama* parametresi yüklemek için uygulamayla ilgili açıklayıcı metin belirtmenize olanak verir. Bu bilgi başvurular numaralandığında görüntülenir.|  
+|**/r** [*assemblyName &#124; assemblyPath*]<br /><br /> *Düzeni*<br /><br /> *id*<br /><br /> *Açıklama*|Yüklenecek veya kaldırılacak bir derleme veya derlemeler için izlenen bir başvuru belirtir. Bu seçenek ile belirtin **/i**, **/il**, **/u**, veya **/ul** seçenekleri.<br /><br /> Bir derlemeyi yüklemek için belirtmeniz *assemblyPath*, *düzeni*, *kimliği*, ve *açıklama* bu seçenekle parametreleri. Bir derlemeyi kaldırmak için belirtin *assemblyName*, *düzeni*, *kimliği*, ve *açıklama* parametreleri.<br /><br /> Derleme başvurusunu kaldırmak için aynı belirtmelisiniz *düzeni*, *kimliği*, ve *açıklama* ile belirtilen parametreleri **/i** ve **/r** (veya **/ir**) seçenekleri derleme yüklendiğinde. Eğer bir derlemeyi kaldırıyorsanız, eğer kaldırılacak son başvuruysa ve Windows Installer'ın o derlemeye hiçbir başvurusu yok ise araç derlemeyi genel bütünleştirilmiş kod önbelleğinden de kaldırır.<br /><br /> *Düzeni* parametresi yükleme düzeni türünü belirtir. Aşağıdaki değerlerden birini belirleyebilirsiniz.<br /><br /> -UNINSTALL_KEY: yükleyici Microsoft Windows'daki Program Ekle/Kaldır uygulamaya ekler, bu değeri belirtin. Uygulamalar HKLM\Software\Microsoft\Windows\CurrentVersion içine bir kayıt defteri anahtarı ekleyerek kendilerini Program Ekle/Kaldır'a ekler.<br />-FILEPATH: yükleyici Program Ekle/Kaldır uygulamaya eklemez, bu değeri belirtin.<br />-OPAK: bir kayıt defteri anahtarı sağlayarak, bu değeri belirtin veya dosya yolu yükleme senaryonuz için geçerli değildir. Bu değer için bir özel bilgiyi belirtmenize olanak tanır *kimliği* parametresi.<br /><br /> Belirtmek için değer *kimliği* parametresi için belirtilen değer bağımlı *düzeni* parametre:<br /><br /> -UNINSTALL_KEY için belirtirseniz, *düzeni* parametresi HKLM\Software\Microsoft\Windows\CurrentVersion kayıt defteri anahtarında ayarlama uygulamanın adını belirtin. Uygulamam için kayıt defteri anahtarı HKLM\Software\Microsoft\Windows\CurrentVersion\MyApp ise, örneğin, belirtin *kimliği* parametresi.<br />-İçin FILEPATH belirtirseniz, *düzeni* parametresi olarak derleme yükler yürütülebilir dosyanın tam yolunu belirtmeniz *kimliği* parametresi.<br />-İçin OPAK belirtirseniz, *düzeni* parametresi, herhangi bir parçası veri sağlamak *kimliği* parametresi. Belirttiğiniz veri tırnak işaretleri ("") arasına alınmalıdır.<br /><br /> *Açıklama* parametresi yüklemek için uygulamayla ilgili açıklayıcı metin belirtmenize olanak verir. Bu bilgi başvurular numaralandığında görüntülenir.|  
 |**/silent**|Tüm çıktıların görüntülenmesini bastırır.|  
 |**/u***assemblyName* |Genel bütünleştirilmiş kod önbelleğinden bir derlemeyi kaldırır.|  
 |**/UF***assemblyName* |Belirtilen bir derlemenin tüm başvurularını kaldırarak derlemeyi kaldırmaya zorlar.<br /><br /> Bu seçeneğin belirtilmesi belirtmeye eşdeğer **/u** ve **/f** birlikte seçenekleri. **Not:** Microsoft Windows Installer kullanılarak yüklenmiş bir derlemeyi kaldırmak için bu seçeneği kullanamazsınız. Eğer bu işlemi yapmayı denerseniz, araç bir hata iletisi görüntüler.|  
 |**/UL** *assemblyListFile*|Belirtilen bir veya daha fazla derlemeleri kaldırır *assemblyListFile* genel derleme önbelleğinden.|  
 |**/u**[**ngen**] *assemblyName*|Belirtilen bir derlemeyi genel bütünleştirilmiş kod önbelleğinden kaldırır. Eğer belirtilen derlemenin varolan başvuru sayısı varsa, araç başvuru sayılarını görüntüler ve derlemeyi genel bütünleştirilmiş kod önbelleğinden kaldırmaz. **Not:** .NET Framework sürüm 2.0, `/ungen` desteklenmiyor. Bunun yerine, kullanın `uninstall` komutu [Ngen.exe (yerel Görüntü Oluşturucu)](../../../docs/framework/tools/ngen-exe-native-image-generator.md). <br /><br /> .NET Framework sürüm 1.0 ve 1.1 belirtme **/ ungen** derleme yerel görüntü önbellekten kaldırmak Gacutil.exe neden olur. Bu önbellek yerel görüntüler için kullanılarak oluşturulan derlemeleri depolar [Ngen.exe (yerel Görüntü Oluşturucu)](../../../docs/framework/tools/ngen-exe-native-image-generator.md).|  
-|**/ur***assemblyName* <br /><br /> *düzeni*<br /><br /> *id*<br /><br /> *Açıklama*|Belirtilen bir derleme için genel bütünleştirilmiş kod önbelleğinden bir başvuru kaldırır. Derleme başvurusunu kaldırmak için aynı belirtmelisiniz *düzeni*, *kimliği*, ve *açıklama* ile belirtilen parametreleri **/i** ve **/r** (veya **/ir)** seçenekleri derleme yüklendiğinde. Bu parametreler için belirtebilirsiniz geçerli değerler açıklaması için bkz: **/r** seçeneği.<br /><br /> Bu seçeneğin belirtilmesi belirtmeye eşdeğer **/u** ve **/r** birlikte seçenekleri.|  
+|**/ur***assemblyName* <br /><br /> *Düzeni*<br /><br /> *id*<br /><br /> *Açıklama*|Belirtilen bir derleme için genel bütünleştirilmiş kod önbelleğinden bir başvuru kaldırır. Derleme başvurusunu kaldırmak için aynı belirtmelisiniz *düzeni*, *kimliği*, ve *açıklama* ile belirtilen parametreleri **/i** ve **/r** (veya **/ir)** seçenekleri derleme yüklendiğinde. Bu parametreler için belirtebilirsiniz geçerli değerler açıklaması için bkz: **/r** seçeneği.<br /><br /> Bu seçeneğin belirtilmesi belirtmeye eşdeğer **/u** ve **/r** birlikte seçenekleri.|  
 |**/?**|Araç için komut sözdizimini ve seçenekleri görüntüler.|  
   
 ## <a name="remarks"></a>Açıklamalar  

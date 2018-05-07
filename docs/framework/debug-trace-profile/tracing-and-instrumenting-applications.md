@@ -1,13 +1,6 @@
 ---
-title: "İzleme Uygulamaları"
-ms.custom: 
+title: İzleme Uygulamaları
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -20,16 +13,13 @@ helpviewer_keywords:
 - performance monitoring, tracing code
 - Trace class, instrumentation for .NET applications
 ms.assetid: 773b6fc4-9013-4322-b728-5dec7a72e743
-caps.latest.revision: "21"
 author: mairaw
 ms.author: mairaw
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 20eea5ed6f69c17466aeb33617f418ac71a3e1b2
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 33d940a051c3185d8a3a04e77ea5899de0475ffc
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="tracing-and-instrumenting-applications"></a>İzleme Uygulamaları
 İzleme, çalışırken, uygulamanızın yürütülmesini izlemek bir yoldur. Bunu geliştirmek ve uygulama geliştirirken hem dağıttıktan sonra bu araçları kullanabilirsiniz, .NET Framework uygulamasını izleme ve hata ayıklama araçları ekleyebilirsiniz. Kullanabileceğiniz <xref:System.Diagnostics.Trace?displayProperty=nameWithType>, <xref:System.Diagnostics.Debug?displayProperty=nameWithType>, ve <xref:System.Diagnostics.TraceSource?displayProperty=nameWithType> hatalar ve uygulama yürütme günlükleri, metin dosyaları veya daha sonraki analizler için diğer aygıtlar hakkındaki bilgileri kaydetmek için sınıflar.  
@@ -102,7 +92,7 @@ System.Diagnostics.Debug.WriteLine("Hello World!");
   
     -   Kullanım **yapı** menüsü ile birlikte **hata ayıklama** sayfasında **özellik sayfaları** iletişim kutusunda **Çözüm Gezgini**. Bu, Visual Studio'da derlerken kullanın.  
   
-         \-veya -  
+         \- veya -  
   
     -   Kullanım **izleme** ve **hata ayıklama** derleyici yönergeleri derleme komut satırı yöntemi için. Daha fazla bilgi için bkz: [izleme ve hata ayıklama ile koşullu derleme](../../../docs/framework/debug-trace-profile/how-to-compile-conditionally-with-trace-and-debug.md). Bu komut satırından derlerken kullanın.  
   
@@ -133,7 +123,7 @@ System.Diagnostics.Debug.WriteLine("Hello World!");
 |------------|------------|  
 |**Assert**|Belirtilen metni; ya da belirtilmemişse, çağrı yığınını. Çıktı, yalnızca koşul bir bağımsız değişken olarak belirttiyseniz yazılır **Assert** ifadesi **false**.|  
 |**Başarısız**|Belirtilen metni; ya da belirtilmemişse, çağrı yığınını.|  
-|**Yazma**|Belirtilen metin.|  
+|**yazma**|Belirtilen metin.|  
 |**Writeıf**|Belirtilen metni koşul bir bağımsız değişken olarak belirtilmişse, **Writeıf** deyimi karşılandığında.|  
 |**WriteLine**|Belirtilen metni ve bir satır başı karakteri.|  
 |**Writelineıf**|Koşul bir bağımsız değişken olarak belirtilmişse Belirtilen metni ve bir satır başlarını, döndürür **Writelineıf** deyimi karşılandığında.|  
@@ -145,7 +135,7 @@ System.Diagnostics.Debug.WriteLine("Hello World!");
 > [!NOTE]
 >  İçinde [!INCLUDE[vbprvblong](../../../includes/vbprvblong-md.md)], **Debug.Write**, **Debug.WriteIf**, **Debug.WriteLine**, ve **Debug.WriteLineIf** yöntemleri değiştirildi **Debug.Print** Visual Basic önceki sürümlerinde kullanılabilir yöntemi.  
   
- **Yazma** ve **WriteLine** yöntemleri her zaman, belirttiğiniz metin yazma. **Assert**, **Writeıf**, ve **Writelineıf** olsun veya olmasın, belirtilen metnin yazma denetimleri Boolean bir bağımsız değişken gerektirir; bunlar ifade ise yalnızca belirtilen metin yazma **true** (için **Writeıf** ve **Writelineıf**), veya **false** (için **Assert**). **Başarısız** yöntemi, belirtilen metnin her zaman yazar. Daha fazla bilgi için bkz: [nasıl yapılır: uygulama koduna izleme deyimleri ekleme](../../../docs/framework/debug-trace-profile/how-to-add-trace-statements-to-application-code.md) ve .NET Framework başvurusu.  
+ **Yazma** ve **WriteLine** yöntemleri her zaman, belirttiğiniz metin yazma. **Assert**, **Writeıf**, ve **Writelineıf** olsun veya olmasın, belirtilen metnin yazma denetimleri Boolean bir bağımsız değişken gerektirir; bunlar ifade olupolmadığınıyalnızcabelirtilenmetinyazma**true** (için **Writeıf** ve **Writelineıf**), veya **false** (için **Assert**). **Başarısız** yöntemi, belirtilen metnin her zaman yazar. Daha fazla bilgi için bkz: [nasıl yapılır: uygulama koduna izleme deyimleri ekleme](../../../docs/framework/debug-trace-profile/how-to-add-trace-statements-to-application-code.md) ve .NET Framework başvurusu.  
   
 ## <a name="security-concerns"></a>Güvenlik sorunları  
  Uygulamanız, izleme ve ASP.NET uygulamasını dağıtmadan önce hata ayıklama devre dışı bırakmayın, kötü amaçlı bir program tarafından yararlanılabilir kendi hakkında bilgileri olduğunu gösterebilir. Daha fazla bilgi için bkz: [nasıl yapılır: izleme ve hata ayıklama ile koşullu derleme](../../../docs/framework/debug-trace-profile/how-to-compile-conditionally-with-trace-and-debug.md), [derlemek ve oluşturmak](/visualstudio/ide/compiling-and-building-in-visual-studio), ve [nasıl yapılır: oluşturma, başlatma ve yapılandırma izleme anahtarları](../../../docs/framework/debug-trace-profile/how-to-create-initialize-and-configure-trace-switches.md) . Hata ayıklama aynı zamanda Internet Information Services (IIS) aracılığıyla yapılandırılabilir.  

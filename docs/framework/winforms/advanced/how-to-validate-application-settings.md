@@ -1,13 +1,6 @@
 ---
-title: "Nasıl yapılır: Uygulama Ayarlarını Doğrulama"
-ms.custom: 
+title: 'Nasıl yapılır: Uygulama Ayarlarını Doğrulama'
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-winforms
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -16,16 +9,11 @@ helpviewer_keywords:
 - application settings [Windows Forms], Windows Forms
 - application settings [Windows Forms], validating
 ms.assetid: 9f145ada-4267-436a-aa4c-c4dcffd0afb7
-caps.latest.revision: "17"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: e12620a5079efaba4faa9101253a3a586965b7e5
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: aa8877150d654bf9659dbb34b91436c0ee9ff8b8
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-validate-application-settings"></a>Nasıl yapılır: Uygulama Ayarlarını Doğrulama
 Bu konu, kalıcı yapılan önce uygulama ayarlarını doğrulama gösterilmiştir.  
@@ -69,11 +57,11 @@ Bu konu, kalıcı yapılan önce uygulama ayarlarını doğrulama gösterilmişt
         MySettings.Default   
         ```  
   
-         veya  
+         -veya-  
   
     -   Visual Basic Geliştirici misiniz ve uygulama ayarlarınızı, Proje Tasarımcısı'nı kullanarak oluşturduğunuz, kullanarak ayarlarınızı alabilirsiniz [My.Settings nesnesi](~/docs/visual-basic/language-reference/objects/my-settings-object.md).  
   
-         veya  
+         -veya-  
   
     -   Türetme tarafından ayarlarınızı oluşturduysanız <xref:System.Configuration.ApplicationSettingsBase> doğrudan sınıfınız el ile örneği gerekir.  
   
@@ -91,7 +79,7 @@ Bu konu, kalıcı yapılan önce uygulama ayarlarını doğrulama gösterilmişt
   
 1.  C# Geliştirici, form veya denetimin olup olmadığını `Load` olayı için bir olay işleyicisi ekleme <xref:System.Configuration.ApplicationSettingsBase.SettingChanging> olay.  
   
-     veya  
+     -veya-  
   
      Visual Basic Geliştirici olup, bildirmelidir `Settings` değişken kullanarak `WithEvents` anahtar sözcüğü.  
   

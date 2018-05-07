@@ -1,24 +1,12 @@
 ---
-title: "Tek Yönlü"
-ms.custom: 
+title: Tek Yönlü
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 74e3e03d-cd15-4191-a6a5-1efa2dcb9e73
-caps.latest.revision: "26"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: a781963205f260c82d3db316680c9e8c33045434
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 5cb3619d56720333f23d933a8f356e8b0268c4d9
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="one-way"></a>Tek Yönlü
 Bu örnek bir tek yönlü hizmet işlemleri hizmet kişiyle gösterir. İstemci, hizmet işlemlerinin çift yönlü hizmet işlemleri ile olduğu gibi tamamlamak beklemez. Bu örnek dayanır [Başlarken](../../../../docs/framework/wcf/samples/getting-started-sample.md) ve kullandığı `wsHttpBinding` bağlama. Bu örnekte, alan ve istekleri işleyen hizmet izlemek etkinleştirmek için bir kendi kendini barındıran konsol uygulaması hizmetidir. İstemci ayrıca bir konsol uygulamasıdır.  
@@ -95,7 +83,7 @@ Processing Divide(22,7) - result: 3.14285714285714
 ```  
   
 > [!NOTE]
->  HTTP, tanım olarak, bir istek/yanıt protokoldür; bir istek yapıldığında, bir yanıt döndürdü. Bu, hatta HTTP üzerinden kullanıma sunulan bir tek yönlü hizmet işlemi için geçerlidir. İşlemi çağrıldığında, hizmet işlemi yürütüldü önce hizmet 202 bir HTTP durum kodunu döndürür. Bu durum kodu istek işleme için kabul edildi ancak işlem henüz tamamlanmadı anlamına gelir. İşlemi blokları kadar adlı istemci hizmetinden 202 yanıtı alır. Oturumları kullanmak üzere yapılandırılmış bir bağlamayı kullanarak birden fazla tek yönlü ileti gönderildiğinde bu bazı beklenmeyen davranışlara neden olabilir. `wsHttpBinding` Bu örnekte kullanılan bağlama oturumları kullanmak için bir güvenlik bağlamı oluşturmak için varsayılan olarak yapılandırılır. Varsayılan olarak, bir oturumdaki iletilerin gönderilmiş sıraya ulaşması garanti. Bir oturumda ikinci bir ileti gönderildiğinde, ilk iletiyi işleyene kadar bu nedenle, onu işlenmedi. Bu önceki iletisinin işlem tamamlanana kadar istemci 202 yanıt iletisi için almaz sonucudur. İstemci bu nedenle görünüyor her sonraki işlem çağrısı blok. Bu davranışı önlemek için bu örnek çalışma zamanının eşzamanlı olarak işlemek için ayrı örneklerini iletileri gönderme yapılandırır. Örnek kümeleri <xref:System.ServiceModel.ServiceBehaviorAttribute.InstanceContextMode%2A> için `PerCall` böylece her ileti başka bir örneği tarafından işlenebilir. <xref:System.ServiceModel.ServiceBehaviorAttribute.ConcurrencyMode%2A>ayarlanmış `Multiple` iletileri gönderme aynı anda birden çok iş parçacığı izin vermek için.  
+>  HTTP, tanım olarak, bir istek/yanıt protokoldür; bir istek yapıldığında, bir yanıt döndürdü. Bu, hatta HTTP üzerinden kullanıma sunulan bir tek yönlü hizmet işlemi için geçerlidir. İşlemi çağrıldığında, hizmet işlemi yürütüldü önce hizmet 202 bir HTTP durum kodunu döndürür. Bu durum kodu istek işleme için kabul edildi ancak işlem henüz tamamlanmadı anlamına gelir. İşlemi blokları kadar adlı istemci hizmetinden 202 yanıtı alır. Oturumları kullanmak üzere yapılandırılmış bir bağlamayı kullanarak birden fazla tek yönlü ileti gönderildiğinde bu bazı beklenmeyen davranışlara neden olabilir. `wsHttpBinding` Bu örnekte kullanılan bağlama oturumları kullanmak için bir güvenlik bağlamı oluşturmak için varsayılan olarak yapılandırılır. Varsayılan olarak, bir oturumdaki iletilerin gönderilmiş sıraya ulaşması garanti. Bir oturumda ikinci bir ileti gönderildiğinde, ilk iletiyi işleyene kadar bu nedenle, onu işlenmedi. Bu önceki iletisinin işlem tamamlanana kadar istemci 202 yanıt iletisi için almaz sonucudur. İstemci bu nedenle görünüyor her sonraki işlem çağrısı blok. Bu davranışı önlemek için bu örnek çalışma zamanının eşzamanlı olarak işlemek için ayrı örneklerini iletileri gönderme yapılandırır. Örnek kümeleri <xref:System.ServiceModel.ServiceBehaviorAttribute.InstanceContextMode%2A> için `PerCall` böylece her ileti başka bir örneği tarafından işlenebilir. <xref:System.ServiceModel.ServiceBehaviorAttribute.ConcurrencyMode%2A> ayarlanmış `Multiple` iletileri gönderme aynı anda birden çok iş parçacığı izin vermek için.  
   
 ### <a name="to-set-up-build-and-run-the-sample"></a>Ayarlamak için derleme ve örnek çalıştırın  
   
@@ -113,7 +101,7 @@ Processing Divide(22,7) - result: 3.14285714285714
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  Bu dizin mevcut değilse, Git [Windows Communication Foundation (WCF) ve .NET Framework 4 için Windows Workflow Foundation (WF) örnek](http://go.microsoft.com/fwlink/?LinkId=150780) tüm indirmek için [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] ve [!INCLUDE[wf1](../../../../includes/wf1-md.md)] örnekleri. Bu örnek aşağıdaki dizinde bulunur.  
+>  Bu dizin mevcut değilse, Git [Windows Communication Foundation (WCF) ve .NET Framework 4 için Windows Workflow Foundation (WF) örnek](http://go.microsoft.com/fwlink/?LinkId=150780) tüm Windows Communication Foundation (WCF) indirmek için ve [!INCLUDE[wf1](../../../../includes/wf1-md.md)] örnekleri. Bu örnek aşağıdaki dizinde bulunur.  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Contract\Service\Oneway`  
   

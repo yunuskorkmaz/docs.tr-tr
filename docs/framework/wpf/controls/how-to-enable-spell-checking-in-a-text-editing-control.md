@@ -1,13 +1,6 @@
 ---
-title: "Nasıl yapılır: Metin Düzenleme Denetiminde Yazım Denetimini Etkinleştirme"
-ms.custom: 
+title: 'Nasıl yapılır: Metin Düzenleme Denetiminde Yazım Denetimini Etkinleştirme'
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-wpf
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -18,16 +11,11 @@ helpviewer_keywords:
 - spelling checker [WPF]
 - checking spelling [WPF]
 ms.assetid: 6f953d2b-67e8-4012-84ce-53c0e958da47
-caps.latest.revision: "7"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 1951bc20dd1e67591399c5358b88fa438d4482b0
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 9b987b673a6d4c9eb6d28ce697e004d49f612d88
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-enable-spell-checking-in-a-text-editing-control"></a>Nasıl yapılır: Metin Düzenleme Denetiminde Yazım Denetimini Etkinleştirme
 Aşağıdaki örnek, gerçek zamanlı yazım denetimi etkinleştirmek gösterilmiştir bir <xref:System.Windows.Controls.TextBox> kullanarak <xref:System.Windows.Controls.SpellCheck.IsEnabled%2A> özelliği <xref:System.Windows.Controls.SpellCheck> sınıfı.  

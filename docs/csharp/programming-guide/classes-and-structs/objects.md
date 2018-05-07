@@ -1,21 +1,15 @@
 ---
-title: "Nesneler (C# Programlama Kılavuzu)"
+title: Nesneler (C# Programlama Kılavuzu)
 ms.date: 07/20/2015
-ms.prod: .net
-ms.technology: devlang-csharp
-ms.topic: article
 helpviewer_keywords:
 - objects [C#], about objects
 - variables [C#]
 ms.assetid: af4a5230-fbf3-4eea-95e1-8b883c2f845c
-caps.latest.revision: "26"
-author: BillWagner
-ms.author: wiwagn
-ms.openlocfilehash: f8a8e283b42b27a40780068be42c03fc5047a511
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 553b0a5e75364bc5c294867852265575fb9271b6
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="objects-c-programming-guide"></a>Nesneler (C# Programlama Kılavuzu)
 Bir sınıf veya yapı türü neler yapabileceğinizi belirten şeması gibi tanımıdır. Bir nesne temelde ayrılmış ve şeması göre yapılandırılmış bellek bloğudur. Bir program aynı sınıfın birçok nesne oluşturabilir. Nesnelerin örneklerini de denir ve bir adlandırılmış değişkeninde veya bir dizi ya da koleksiyon depolanabilir. İstemci, bu değişkenleri yöntemlerini çağırın ve nesneyi genel özelliklerine erişmek için kullandığı kodu kodudur. Bir nesne yönelimli dil C# gibi tipik bir program dinamik olarak etkileşim birden çok nesnelerin oluşur.  
@@ -55,7 +49,7 @@ Bir sınıf veya yapı türü neler yapabileceğinizi belirten şeması gibi tan
 ## <a name="related-sections"></a>İlgili Bölümler  
  Daha fazla bilgi için:  
   
--   [Sınıfları](../../../csharp/programming-guide/classes-and-structs/classes.md)  
+-   [Sınıflar](../../../csharp/programming-guide/classes-and-structs/classes.md)  
   
 -   [Yapılar](../../../csharp/programming-guide/classes-and-structs/structs.md)  
   
@@ -63,13 +57,13 @@ Bir sınıf veya yapı türü neler yapabileceğinizi belirten şeması gibi tan
   
 -   [Sonlandırıcılar](../../../csharp/programming-guide/classes-and-structs/destructors.md)  
   
--   [Olayları](../../../csharp/programming-guide/events/index.md)  
+-   [Olaylar](../../../csharp/programming-guide/events/index.md)  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [C# programlama kılavuzu](../../../csharp/programming-guide/index.md)  
- [Nesne](../../../csharp/language-reference/keywords/object.md)  
+ [C# Programlama Kılavuzu](../../../csharp/programming-guide/index.md)  
+ [object](../../../csharp/language-reference/keywords/object.md)  
  [Devralma](../../../csharp/programming-guide/classes-and-structs/inheritance.md)  
- [sınıfı](../../../csharp/language-reference/keywords/class.md)  
- [yapısı](../../../csharp/language-reference/keywords/struct.md)  
- [New işleci](../../../csharp/language-reference/keywords/new-operator.md)  
- [Ortak tür sistemi](../../../standard/base-types/common-type-system.md)
+ [class](../../../csharp/language-reference/keywords/class.md)  
+ [struct](../../../csharp/language-reference/keywords/struct.md)  
+ [new İşleci](../../../csharp/language-reference/keywords/new-operator.md)  
+ [Ortak Tür Sistemi](../../../standard/base-types/common-type-system.md)

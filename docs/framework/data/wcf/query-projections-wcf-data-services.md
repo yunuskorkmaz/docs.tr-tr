@@ -1,13 +1,6 @@
 ---
 title: Sorgu projeksiyonlar (WCF Veri Hizmetleri)
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework-oob
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -17,16 +10,11 @@ helpviewer_keywords:
 - query projection [WCF Data Services]
 - WCF Data Services, querying
 ms.assetid: a09f4985-9f0d-48c8-b183-83d67a3dfe5f
-caps.latest.revision: "3"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 6cd775ed31d0457308f86b3d5b6f40092bfa9690
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 903acaa7493dc83fd6bf50f5a578a067c15e6294
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="query-projections-wcf-data-services"></a>Sorgu projeksiyonlar (WCF Veri Hizmetleri)
 Projeksiyon bir mekanizma sağlar [!INCLUDE[ssODataFull](../../../../includes/ssodatafull-md.md)] yalnızca belirli özellikleri bir varlığın yanıtta döndürülen belirterek bir sorgu tarafından döndürülen akıştaki veri miktarını azaltmak için. Daha fazla bilgi için bkz: [OData: Sistem sorgusu seçeneği ($select)](http://go.microsoft.com/fwlink/?LinkId=186076).  
@@ -65,7 +53,7 @@ Projeksiyon bir mekanizma sağlar [!INCLUDE[ssODataFull](../../../../includes/ss
   
  Ayrıca, verileri `Customer` türü örneğini öngörülen `CustomerAddress` anonim bir tür yerine varlık türü. Anonim türler içine projeksiyon desteklenir, ancak anonim türler, varlık olmayan türleri olarak değerlendirildiğinden veriler salt okunur.  
   
- <xref:System.Data.Services.Client.MergeOption> Ayarlarını <xref:System.Data.Services.Client.DataServiceContext> kimlik çözümlemesi için sorgu projeksiyon sırasında kullanılır. Bu örneği olması durumunda gelir `Customer` türü zaten <xref:System.Data.Services.Client.DataServiceContext>, örneği `CustomerAddress` aynı kimlikle tarafından belirlenen kuralları kimlik çözümleme izler<xref:System.Data.Services.Client.MergeOption>  
+ <xref:System.Data.Services.Client.MergeOption> Ayarlarını <xref:System.Data.Services.Client.DataServiceContext> kimlik çözümlemesi için sorgu projeksiyon sırasında kullanılır. Bu örneği olması durumunda gelir `Customer` türü zaten <xref:System.Data.Services.Client.DataServiceContext>, örneği `CustomerAddress` aynı kimlikle tarafından belirlenen kuralları kimlik çözümleme izler <xref:System.Data.Services.Client.MergeOption>  
   
  Aşağıdaki tabloda, varlık ve varlık olmayan türlerine sonuçları yansıtılırken davranışları açıklanmaktadır:  
   

@@ -1,27 +1,18 @@
 ---
-title: "UI Otomasyon Özelliklerine Genel Bakış"
-ms.custom: 
+title: UI Otomasyon Özelliklerine Genel Bakış
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-bcl
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - UI Automation, properties
 - properties, UI Automation
 ms.assetid: a6c31d7b-b33e-49b3-b5c1-31a345f9b7c8
-caps.latest.revision: "17"
 author: Xansky
 ms.author: mhopkins
 manager: markl
-ms.workload: dotnet
-ms.openlocfilehash: 38237dd1885047eed5be06aba092c261f56f6da3
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: b3fe06a0cd07979a14f2029ac3ece590496ecf74
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="ui-automation-properties-overview"></a>UI Otomasyon Özelliklerine Genel Bakış
 > [!NOTE]
@@ -39,7 +30,7 @@ ms.lasthandoff: 12/22/2017
 ## <a name="property-identifiers"></a>Özellik tanımlayıcıları  
  Her özellik, bir sayı ve bir ad tarafından tanımlanır. Özellik adlarını yalnızca hata ayıklama ve tanılama için kullanılır. Sağlayıcıları kullanan sayısal [!INCLUDE[TLA2#tla_id#plural](../../../includes/tla2sharptla-idsharpplural-md.md)] gelen özellik istekleri belirlemek için. İstemci uygulamaları, ancak yalnızca kullanmanız <xref:System.Windows.Automation.AutomationProperty>sayısını ve ad saklar, özellikleri belirlemek için alınacak istedikleri.  
   
- <xref:System.Windows.Automation.AutomationProperty>belirli özellikleri temsil eden nesneler, çeşitli sınıfları alanlar olarak kullanılabilir. Güvenlik nedenleriyle, UI Otomasyon sağlayıcılar UIAutomationTypes.dll içinde bulunan sınıflar ayrı kümesinden bu nesneler edinin.  
+ <xref:System.Windows.Automation.AutomationProperty> belirli özellikleri temsil eden nesneler, çeşitli sınıfları alanlar olarak kullanılabilir. Güvenlik nedenleriyle, UI Otomasyon sağlayıcılar UIAutomationTypes.dll içinde bulunan sınıflar ayrı kümesinden bu nesneler edinin.  
   
  Aşağıdaki tabloda özellikleri içeren sınıfları tarafından kategorilere ayıran <xref:System.Windows.Automation.AutomationProperty> [!INCLUDE[TLA2#tla_id#plural](../../../includes/tla2sharptla-idsharpplural-md.md)].  
   
@@ -148,7 +139,7 @@ ms.lasthandoff: 12/22/2017
   
 <a name="Localization"></a>   
 ## <a name="localization"></a>Yerelleştirme  
- [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]Aşağıdaki özellikler işletim sisteminin dilinde sağlayıcılardan:  
+ [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] Aşağıdaki özellikler işletim sisteminin dilinde sağlayıcılardan:  
   
 -   <xref:System.Windows.Automation.AutomationElementIdentifiers.AcceleratorKeyProperty>  
   

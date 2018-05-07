@@ -1,38 +1,24 @@
 ---
-title: WCF Data Services 4.5
-ms.custom: ''
+title: WCF Veri Hizmetleri 4.5
 ms.date: 03/30/2017
-ms.prod: .net-framework-oob
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 helpviewer_keywords:
 - Astoria
 - WCF Data Services, getting started
 ms.assetid: 73d2bec3-7c92-4110-b905-11bb0462357a
-caps.latest.revision: 6
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: b5b27a51dcec17f72b86e77a7ee2ab773aec1dc3
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.openlocfilehash: 148e6e50e81552b2418abba9f6655234fc023c4c
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 05/04/2018
 ---
-# <a name="wcf-data-services-45"></a>WCF Data Services 4.5
-[!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)](eski adıyla "ADO.NET Veri Hizmetleri") kullanan hizmetler oluşturmanızı sağlayan .NET Framework'ün bir bileşen olan [!INCLUDE[ssODataFull](../../../../includes/ssodatafull-md.md)] semantiği kullanarak Web veya intranet üzerinden verileri kullanmak ve kullanıma sunmak için [temsili durum Transfer (REST)](http://go.microsoft.com/fwlink/?LinkId=113919). [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)]Veri URI tarafından adreslenebilir kaynakları olarak kullanıma sunar. Veriler erişilen ve GET, PUT, POST ve DELETE standart HTTP fiillerini kullanarak değiştirildi. [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)]Varlık ilişkisi kuralları kullanan [varlık veri modeli](../../../../docs/framework/data/adonet/entity-data-model.md) kaynaklara göre ilişkileri ilişkili varlık kümesi olarak kullanıma sunmak için.  
+# <a name="wcf-data-services-45"></a>WCF Veri Hizmetleri 4.5
+[!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] (eski adıyla "ADO.NET Veri Hizmetleri") kullanan hizmetler oluşturmanızı sağlayan .NET Framework'ün bir bileşen olan [!INCLUDE[ssODataFull](../../../../includes/ssodatafull-md.md)] semantiği kullanarak Web veya intranet üzerinden verileri kullanmak ve kullanıma sunmak için [temsili durum Transfer (REST)](http://go.microsoft.com/fwlink/?LinkId=113919). [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] Veri URI tarafından adreslenebilir kaynakları olarak kullanıma sunar. Veriler erişilen ve GET, PUT, POST ve DELETE standart HTTP fiillerini kullanarak değiştirildi. [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] Varlık ilişkisi kuralları kullanan [varlık veri modeli](../../../../docs/framework/data/adonet/entity-data-model.md) kaynaklara göre ilişkileri ilişkili varlık kümesi olarak kullanıma sunmak için.  
   
- [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)]kullanan [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] adresleme ve kaynakları güncelleştirmek için protokol. Bu şekilde, bu hizmetleri destekleyen herhangi bir istemciden erişebilirsiniz [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)]. [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)]İstek ve bilinen aktarımı biçimlerini kullanarak veri kaynaklarına yazma sağlar: Atom, değişim ve verileri XML ve JavaScript nesne gösterimi (JSON) güncelleştirme standartlarını kümesi AJAX uygulamada yaygın olarak kullanılan metin tabanlı veri exchange biçimi.  
+ [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] kullanan [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] adresleme ve kaynakları güncelleştirmek için protokol. Bu şekilde, bu hizmetleri destekleyen herhangi bir istemciden erişebilirsiniz [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)]. [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] İstek ve bilinen aktarımı biçimlerini kullanarak veri kaynaklarına yazma sağlar: Atom, değişim ve verileri XML ve JavaScript nesne gösterimi (JSON) güncelleştirme standartlarını kümesi AJAX uygulamada yaygın olarak kullanılan metin tabanlı veri exchange biçimi.  
   
- [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)]çeşitli kaynaklardan kaynaklanan veri getirebilir [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] akışları. Visual Studio Araçları kolaylaştırmak oluşturmak için bir [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)]-bir ADO.NET Entity Framework veri modeli kullanarak hizmet tabanlı. Ayrıca oluşturabilirsiniz [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] ortak dil çalışma zamanı (CLR) sınıfları ve hatta geç bağlama veya türsüz veri akışları bağlı.  
+ [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] çeşitli kaynaklardan kaynaklanan veri getirebilir [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] akışları. Visual Studio Araçları kolaylaştırmak oluşturmak için bir [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)]-bir ADO.NET Entity Framework veri modeli kullanarak hizmet tabanlı. Ayrıca oluşturabilirsiniz [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] ortak dil çalışma zamanı (CLR) sınıfları ve hatta geç bağlama veya türsüz veri akışları bağlı.  
   
- [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)]Ayrıca istemci kitaplıkları, biri genel .NET Framework istemci uygulamaları için diğeri Silverlight tabanlı uygulamalar için özel olarak bir dizi içerir. Siz eriştiğinizde, bu istemci kitaplıkları, nesne tabanlı programlama modeli sağlar. bir [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] .NET Framework ve Silverlight gibi ortamlarından akış.  
+ [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] Ayrıca istemci kitaplıkları, biri genel .NET Framework istemci uygulamaları için diğeri Silverlight tabanlı uygulamalar için özel olarak bir dizi içerir. Siz eriştiğinizde, bu istemci kitaplıkları, nesne tabanlı programlama modeli sağlar. bir [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] .NET Framework ve Silverlight gibi ortamlarından akış.  
   
 ## <a name="where-should-i-start"></a>Nereden başlamalıyım?  
  İle çalışmaya başlama alanlarınızı bağlı olarak göz önünde bulundurun [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] aşağıdaki konulardan birindeki.  

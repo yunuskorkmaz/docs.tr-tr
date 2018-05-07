@@ -1,30 +1,20 @@
 ---
-title: "İş Parçacığı Havuzu ETW Olayları"
-ms.custom: 
+title: İş Parçacığı Havuzu ETW Olayları
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - thread pool events [.NET Framework]
 - ETW, thread pool events (CLR)
 ms.assetid: f2a21e3a-3b6c-4433-97f3-47ff16855ecc
-caps.latest.revision: "8"
 author: mairaw
 ms.author: mairaw
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 2a68f35dc5abb653514034cf0d30b62457b933de
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 41a37fa34b9d75eb8cfc1bdcb55b237faf137cad
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="thread-pool-etw-events"></a>İş Parçacığı Havuzu ETW Olayları
-<a name="top"></a>Bu olaylar çalışan ve g/ç iş parçacıkları hakkında bilgi toplayın.  
+<a name="top"></a> Bu olaylar çalışan ve g/ç iş parçacıkları hakkında bilgi toplayın.  
   
  İş parçacığı havuzu olayları iki grupları vardır:  
   
@@ -41,7 +31,7 @@ ms.lasthandoff: 12/22/2017
   
 |Olay oluşturma için anahtar sözcüğü|Düzey|  
 |-----------------------------------|-----------|  
-|`ThreadingKeyword`(0x10000)|Bilgilendirici (4)|  
+|`ThreadingKeyword` (0x10000)|Bilgilendirici (4)|  
   
  Aşağıdaki tabloda olay bilgilerini gösterir.  
   
@@ -68,7 +58,7 @@ ms.lasthandoff: 12/22/2017
   
 |Olay oluşturma için anahtar sözcüğü|Düzey|  
 |-----------------------------------|-----------|  
-|`ThreadingKeyword`(0x10000)|Bilgilendirici (4)|  
+|`ThreadingKeyword` (0x10000)|Bilgilendirici (4)|  
   
  Aşağıdaki tabloda olay bilgilerini gösterir.  
   
@@ -88,7 +78,7 @@ ms.lasthandoff: 12/22/2017
   
 |Olay oluşturma için anahtar sözcüğü|Düzey|  
 |-----------------------------------|-----------|  
-|`ThreadingKeyword`(0x10000)|Bilgilendirici (4)|  
+|`ThreadingKeyword` (0x10000)|Bilgilendirici (4)|  
   
  Aşağıdaki tabloda olay bilgilerini gösterir.  
   
@@ -110,7 +100,7 @@ ms.lasthandoff: 12/22/2017
   
 |Olay oluşturma için anahtar sözcüğü|Düzey|  
 |-----------------------------------|-----------|  
-|`ThreadingKeyword`(0x10000)|Bilgilendirici (4)|  
+|`ThreadingKeyword` (0x10000)|Bilgilendirici (4)|  
   
  Aşağıdaki tabloda olay bilgilerini gösterir.  
   
@@ -145,7 +135,7 @@ ms.lasthandoff: 12/22/2017
   
 |Olay oluşturma için anahtar sözcüğü|Düzey|  
 |-----------------------------------|-----------|  
-|`ThreadingKeyword`(0x10000)|Bilgilendirici (4)|  
+|`ThreadingKeyword` (0x10000)|Bilgilendirici (4)|  
   
  Aşağıdaki tabloda olay bilgilerini gösterir.  
   
@@ -166,7 +156,7 @@ ms.lasthandoff: 12/22/2017
   
 |Olay oluşturma için anahtar sözcüğü|Düzey|  
 |-----------------------------------|-----------|  
-|`ThreadingKeyword`(0x10000)|Bilgilendirici (4)|  
+|`ThreadingKeyword` (0x10000)|Bilgilendirici (4)|  
   
  Aşağıdaki tabloda olay bilgilerini gösterir.  
   
@@ -187,7 +177,7 @@ ms.lasthandoff: 12/22/2017
   
 |Olay oluşturma için anahtar sözcüğü|Düzey|  
 |-----------------------------------|-----------|  
-|`ThreadingKeyword`(0x10000)|Bilgilendirici (4)|  
+|`ThreadingKeyword` (0x10000)|Bilgilendirici (4)|  
   
  Aşağıdaki tabloda olay bilgilerini gösterir.  
   
@@ -208,7 +198,7 @@ ms.lasthandoff: 12/22/2017
   
 |Olay oluşturma için anahtar sözcüğü|Düzey|  
 |-----------------------------------|-----------|  
-|`ThreadingKeyword`(0x10000)|Bilgilendirici (4)|  
+|`ThreadingKeyword` (0x10000)|Bilgilendirici (4)|  
   
  Aşağıdaki tabloda olay bilgilerini gösterir.  
   

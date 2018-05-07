@@ -1,13 +1,6 @@
 ---
-title: "Mgmtclassgen.exe (Yönetim Türü Kesin Belirlenmiş Sınıf Oluşturucu)"
-ms.custom: 
+title: Mgmtclassgen.exe (Yönetim Türü Kesin Belirlenmiş Sınıf Oluşturucu)
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -18,16 +11,13 @@ helpviewer_keywords:
 - Mgmtclassgen.exe
 - early-bound managed classes
 ms.assetid: 02ce6699-49b5-4a0b-b0d5-1003c491232e
-caps.latest.revision: "21"
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 05ab4874d025eff3eb1aba6b7a336f562159b6ad
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 282d6376b434121ed6d59297be2ce36ce361c589
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="mgmtclassgenexe-management-strongly-typed-class-generator"></a>Mgmtclassgen.exe (Yönetim Türü Kesin Belirlenmiş Sınıf Oluşturucu)
 Yönetim Kesin Belirlenmiş Sınıf Üreticisi aracı, belirtilen bir Windows Yönetim Araçları (WMI) sınıfı için erken bağlı yönetilen bir sınıfı hızlı bir şekilde üretmenize olanak tanır. Oluşturulan sınıf, WMI sınıfının bir örneğine erişmek için yazmanız gereken kodu basitleştirir.  
@@ -47,7 +37,7 @@ WMIClass [options]
 |------------|-----------------|  
 |**/l***dili* |Erken bağlı yönetilen sınıfın oluşturulacağı dili belirtir. Belirleyebileceğiniz **CS** (C#; varsayılan), **VB** (Visual Basic) **MC** (C++) veya **JS** (JScript) dil bağımsız olarak.|  
 |**/m***makine* |WMI sınıfının bulunduğu, bağlanılacak bilgisayarı belirtir. Varsayılan, yerel bilgisayardır.|  
-|**/n**  *yol*|WMI sınıfını içeren WMI ad alanına giden yolu belirtir. Bu seçeneği belirtmezseniz, araç için kod oluşturur *WMIClass* varsayılan **Root\cimv2** ad alanı.|  
+|**/n***yolu* |WMI sınıfını içeren WMI ad alanına giden yolu belirtir. Bu seçeneği belirtmezseniz, araç için kod oluşturur *WMIClass* varsayılan **Root\cimv2** ad alanı.|  
 |**/o***classnamespace* |Yönetilen kod sınıfının içinde üretileceği .NET ad alanını belirtir. Bu seçeneği belirtmezseniz, araç ad alanını WMI ad alanını ve şema önekini kullanarak üretir. Şema öneki, sınıf adının alt çizgi karakterinden önce gelen parçasıdır. Örneğin, **Win32_OperatingSystem** sınıfını **Root\cimv2** ad alanı, oluşturma aracı sınıfında **kök. CIMV2. Win32**.|  
 |**/p***filepath* |Üretilen kodun içinde kaydedileceği dosyanın yolunu belirtir. Bu seçeneği belirtmezseniz, araç dosyayı geçerli dizinde oluşturur. Oluşturur sınıfını kullanarak dosya ve sınıf adları *WMIClass* bağımsız değişkeni. Sınıf ve dosya adını adı aynı olan *WMIClass.* Varsa *WMIClass* bir alt çizgi karakteri içeren alt çizgi karakterini izleyen sınıf adı bölümü Aracı'nı kullanır. Örneğin, varsa *WMIClass* adıdır biçiminde **Win32_LogicalDisk**, oluşturulan sınıf ve dosya "MantıksalDisk" olarak adlandırılır. Bir dosya zaten varsa, araç varolan dosyanın üzerine yazar.|  
 |**/pw***parola* |Tarafından belirtilen bir bilgisayara oturum açarken kullanılacak parolayı belirtir **/m** seçeneği.|  
@@ -77,7 +67,7 @@ WMIClass [options]
 |CIM_String|**Dize**|  
 |CIM_DATETIME|**DateTime** veya **TimeSpan**|  
 |CIM_REFERENCE|**ManagementPath'i**|  
-|CIM_CHAR16|**Char**|  
+|CIM_CHAR16|**char**|  
 |CIM_OBJECT|**ManagementBaseObject**|  
 |CIM_IUNKNOWN|**Nesne**|  
 |CIM_ARRAY|Yukarıda sözü edilen nesnelerin dizisi|  
@@ -109,7 +99,7 @@ WMIClass [options]
 mgmtclassgen Win32_LogicalDisk /n root\cimv2 /l CS /p c:\disk.cs  
 ```  
   
- Aşağıdaki kod örneği, oluşturulan bir sınıfın programsal olarak nasıl kullanılacağını göstermektedir. İlk olarak, sınıfın bir örneği numaralandırılır ve yol yazdırılır. Ardından, başlatılacak oluşturulan sınıfın bir örneği bir WMI örneğiyle oluşturulur. `Process`oluşturulan sınıf **Win32_Process** ve `LogicalDisk` için oluşturulan sınıf **Win32_LogicalDisk** içinde **Root\cimv2** ad alanı.  
+ Aşağıdaki kod örneği, oluşturulan bir sınıfın programsal olarak nasıl kullanılacağını göstermektedir. İlk olarak, sınıfın bir örneği numaralandırılır ve yol yazdırılır. Ardından, başlatılacak oluşturulan sınıfın bir örneği bir WMI örneğiyle oluşturulur. `Process` oluşturulan sınıf **Win32_Process** ve `LogicalDisk` için oluşturulan sınıf **Win32_LogicalDisk** içinde **Root\cimv2** ad alanı.  
   
 ```vb  
 Imports System  

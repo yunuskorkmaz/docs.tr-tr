@@ -1,33 +1,21 @@
 ---
-title: "Sunucu tarafı davranışı uygulamak için Eylemler kullanma"
-ms.custom: 
+title: Sunucu tarafı davranışı uygulamak için Eylemler kullanma
 ms.date: 03/30/2017
-ms.prod: .net-framework-oob
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 11a372db-7168-498b-80d2-9419ff557ba5
-caps.latest.revision: "3"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 9d8ca19a5a49815130103672f43452ebbfedfae3
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: d4be2aa42c667460232f6aa3cd8dc707805750e0
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="using-actions-to-implement-server-side-behavior"></a>Sunucu tarafı davranışı uygulamak için Eylemler kullanma
-OData eylemlerinin bir OData hizmetinden alınan bir kaynağa bağlı görevi gören bir davranış uygulamak için bir yol sağlar.  Örneğin bir kaynak olarak dijital bir filmi göz önünde bulundurun, dijital bir filmi yapabilir pek çok şey vardır: kullanıma, oranı/açıklama veya iade etme. Bunlar tüm dijital filmler yöneten bir WCF veri hizmeti tarafından uygulanan eylemler örneğidir. Eylem çağrılabilen bir kaynağı içeren bir OData yanıtında eylemler açıklanmaktadır. Bir kullanıcının dijital film temsil eden bir kaynak istediğinde WCF veri hizmetinden döndürülen yanıt bu kaynak için kullanılabilir olan eylemler hakkında bilgi içerir. Bir eylem kullanılabilirliğini veri hizmet ya da kaynak durumuna bağlı olabilir. Dijital film teslim iade edildikten sonra örnek başka bir kullanıcı tarafından kullanıma alınamıyor için. İstemciler, bir URL belirterek bir eylem çağırabilirsiniz. Örneğin http://MyServer/MovieService.svc/Movies (6) belirli bir dijital film belirleyin ve http://MyServer/MovieService.svc/Movies (6) / Checkout belirli film eylemini çağıracaktır. Eylemler izin verir, kullanıma sunmak veri modelinizi gösterme olmadan hizmet modeli. Film hizmet örnekle devam edersek, film derecelendirme, ancak bir kaynak olarak derecelendirme verileri doğrudan açığa yapmalarına izin vermek isteyebilirsiniz. Film derecelendirme ancak derecelendirme veri kaynağı olarak doğrudan erişmek kullanıcı izin vermek için bir oran eylem uygulamanız.  
+OData eylemlerinin bir OData hizmetinden alınan bir kaynağa bağlı görevi gören bir davranış uygulamak için bir yol sağlar.  Örneğin bir kaynak olarak dijital bir filmi göz önünde bulundurun, dijital bir filmi yapabilir pek çok şey vardır: kullanıma, oranı/açıklama veya iade etme. Bunlar tüm dijital filmler yöneten bir WCF veri hizmeti tarafından uygulanan eylemler örneğidir. Eylem çağrılabilen bir kaynağı içeren bir OData yanıtında eylemler açıklanmaktadır. Bir kullanıcının dijital film temsil eden bir kaynak istediğinde WCF veri hizmetinden döndürülen yanıt bu kaynak için kullanılabilir olan eylemler hakkında bilgi içerir. Bir eylem kullanılabilirliğini veri hizmet ya da kaynak durumuna bağlı olabilir. Dijital film teslim iade edildikten sonra örnek başka bir kullanıcı tarafından kullanıma alınamıyor için. İstemciler, bir URL belirterek bir eylem çağırabilirsiniz. Örneğin http://MyServer/MovieService.svc/Movies(6) belirli dijital film tanımlamak ve http://MyServer/MovieService.svc/Movies(6)/Checkout belirli film eylemini çağıracaktır. Eylemler izin verir, kullanıma sunmak veri modelinizi gösterme olmadan hizmet modeli. Film hizmet örnekle devam edersek, film derecelendirme, ancak bir kaynak olarak derecelendirme verileri doğrudan açığa yapmalarına izin vermek isteyebilirsiniz. Film derecelendirme ancak derecelendirme veri kaynağı olarak doğrudan erişmek kullanıcı izin vermek için bir oran eylem uygulamanız.  
   
 ## <a name="implementing-an-action"></a>Bir eylem uygulama  
- Uygulaması gerekiyor bir hizmet eylemi uygulamak için <xref:System.IServiceProvider>, [IDataServiceActionProvider](https://msdn.microsoft.com/library/system.data.services.providers.idataserviceactionprovider(v=vs.113).aspx), ve [IDataServiceInvokable](https://msdn.microsoft.com/library/system.data.services.providers.idataserviceinvokable(v=vs.113).aspx) arabirimleri. <xref:System.IServiceProvider>uygulamanıza almak WCF veri hizmetleri sağlayan [IDataServiceActionProvider](https://msdn.microsoft.com/library/system.data.services.providers.idataserviceactionprovider(v=vs.113).aspx). [IDataServiceActionProvider](https://msdn.microsoft.com/library/system.data.services.providers.idataserviceactionprovider(v=vs.113).aspx) oluşturmak WCF veri hizmetleri sağlayan bulmak, açıklar ve hizmet eylemleri çağırma. [IDataServiceInvokable](https://msdn.microsoft.com/library/system.data.services.providers.idataserviceinvokable(v=vs.113).aspx) varsa hizmet eylemleri davranışı uygulayan kod çağırabilir ve sonuçları elde olanak tanır. WCF Veri Hizmetleri çağrı başına WCF hizmetleri, hizmetin yeni bir örneğini olduğunu unutmayın, hizmetin her çağrıldığında oluşturulur.  Hizmet oluşturulduğunda gereksiz çalışma yapıldığından emin olun.  
+ Uygulaması gerekiyor bir hizmet eylemi uygulamak için <xref:System.IServiceProvider>, [IDataServiceActionProvider](https://msdn.microsoft.com/library/system.data.services.providers.idataserviceactionprovider(v=vs.113).aspx), ve [IDataServiceInvokable](https://msdn.microsoft.com/library/system.data.services.providers.idataserviceinvokable(v=vs.113).aspx) arabirimleri. <xref:System.IServiceProvider> uygulamanıza almak WCF veri hizmetleri sağlayan [IDataServiceActionProvider](https://msdn.microsoft.com/library/system.data.services.providers.idataserviceactionprovider(v=vs.113).aspx). [IDataServiceActionProvider](https://msdn.microsoft.com/library/system.data.services.providers.idataserviceactionprovider(v=vs.113).aspx) oluşturmak WCF veri hizmetleri sağlayan bulmak, açıklar ve hizmet eylemleri çağırma. [IDataServiceInvokable](https://msdn.microsoft.com/library/system.data.services.providers.idataserviceinvokable(v=vs.113).aspx) varsa hizmet eylemleri davranışı uygulayan kod çağırabilir ve sonuçları elde olanak tanır. WCF Veri Hizmetleri çağrı başına WCF hizmetleri, hizmetin yeni bir örneğini olduğunu unutmayın, hizmetin her çağrıldığında oluşturulur.  Hizmet oluşturulduğunda gereksiz çalışma yapıldığından emin olun.  
   
 ### <a name="iserviceprovider"></a>IServiceProvider  
- <xref:System.IServiceProvider>adlı bir yöntem içerir <xref:System.IServiceProvider.GetService%2A>. Bu yöntem, bir dizi hizmet sağlayıcılarının, meta veri hizmet sağlayıcıları ve veri sağlayıcılarını eylem dahil almak için WCF Veri Hizmetleri tarafından çağrılır. Bir veri hizmeti eylem sağlayıcısı için sorulduğunda, dönüş, [IDataServiceActionProvider](https://msdn.microsoft.com/library/system.data.services.providers.idataserviceactionprovider(v=vs.113).aspx) uygulaması.  
+ <xref:System.IServiceProvider> adlı bir yöntem içerir <xref:System.IServiceProvider.GetService%2A>. Bu yöntem, bir dizi hizmet sağlayıcılarının, meta veri hizmet sağlayıcıları ve veri sağlayıcılarını eylem dahil almak için WCF Veri Hizmetleri tarafından çağrılır. Bir veri hizmeti eylem sağlayıcısı için sorulduğunda, dönüş, [IDataServiceActionProvider](https://msdn.microsoft.com/library/system.data.services.providers.idataserviceactionprovider(v=vs.113).aspx) uygulaması.  
   
 ### <a name="idataserviceactionprovider"></a>IDataServiceActionProvider  
  [IDataServiceActionProvider](https://msdn.microsoft.com/library/system.data.services.providers.idataserviceactionprovider(v=vs.113).aspx) kullanılabilir eylemler hakkında bilgi almak sağlayan yöntemler içerir. Ne zaman uygulamanız [IDataServiceActionProvider](https://msdn.microsoft.com/library/system.data.services.providers.idataserviceactionprovider(v=vs.113).aspx) hizmetinizin uygulama tarafından tanımlanan hizmetiniz için meta veriler program.cs'ye [IDataServiceActionProvider](https://msdn.microsoft.com/library/system.data.services.providers.idataserviceactionprovider(v=vs.113).aspx) eylemlerle ve Bu eylemleri gerektiği için gönderme işleme.  
@@ -63,7 +51,7 @@ OData eylemlerinin bir OData hizmetinden alınan bir kaynağa bağlı görevi g�
 ## <a name="invoking-a-wcf-data-service-action"></a>WCF veri hizmeti eylemi çağırma  
  Eylemler HTTP POST isteği kullanarak çağrılır. URL, eylem adından kaynağı belirtir. Parametreler istek gövdesinde iletilir. Örneğin, oranı çağrılan bir eylem kullanıma MovieService adlı bir hizmet ise. Belirli bir filmi oranı eylemi çağırmak için aşağıdaki URL'yi kullanabilirsiniz:  
   
- http://MovieServer/MovieService.svc/Movies (1) / oranı  
+ http://MovieServer/MovieService.svc/Movies(1)/Rate  
   
  Movies(1) hızı ve hızı istediğiniz film oranı eylemi belirtir. Derecelendirme gerçek değerini HTTP istek gövdesinde aşağıdaki örnekte gösterildiği gibi olacaktır:  
   

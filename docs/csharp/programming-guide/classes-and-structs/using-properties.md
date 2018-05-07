@@ -1,23 +1,16 @@
 ---
-title: "Özellikleri Kullanma (C# Programlama Kılavuzu)"
+title: Özellikleri Kullanma (C# Programlama Kılavuzu)
 ms.date: 07/20/2015
-ms.prod: .net
-ms.technology:
-- devlang-csharp
-ms.topic: article
 helpviewer_keywords:
 - set accessor [C#]
 - get accessor [C#]
 - properties [C#], about properties
 ms.assetid: f7f67b05-0983-4cdb-96af-1855d24c967c
-caps.latest.revision: 
-author: BillWagner
-ms.author: wiwagn
-ms.openlocfilehash: 36345748e514f0e0a4c945d8ead149c7d8ca9a19
-ms.sourcegitcommit: 83dd5ec003e788ccb3e33f3412a7af39ae347646
+ms.openlocfilehash: f0d470d2c38a07db9a936fc645b7a97aa12a7f84
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/15/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="using-properties-c-programming-guide"></a>Özellikleri Kullanma (C# Programlama Kılavuzu)
 Özellikler alanları ve yöntemleri yönlerini birleştirin. Bir nesne kullanıcıya bir özelliği bir alan görünüyor özelliği erişme aynı sözdizimini gerektirir. Bir sınıf uygulayan için temsil eden bir veya iki kod blokları bir özelliği olan bir [almak](../../../csharp/language-reference/keywords/get.md) erişimcisi ve/veya bir [ayarlamak](../../../csharp/language-reference/keywords/set.md) erişimcisi. Kod bloğunu `get` erişimci özelliği okunduğunda yürütüldüğünde; kodu engellemek için `set` erişimci özelliği yeni bir değer atandığında yürütüldüğünde. Bir özelliği olmadan bir `set` erişimci salt okunur değerlendirilir. Bir özelliği olmadan bir `get` erişimci salt yazılır değerlendirilir. Her iki erişimciler sahip okuma-yazma özelliği değildir.  

@@ -1,24 +1,12 @@
 ---
-title: "SQL Server verileri şifreleme"
-ms.custom: 
+title: SQL Server verileri şifreleme
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-ado
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 83b992f7-b351-4678-b4b9-f4ffd58134cc
-caps.latest.revision: "6"
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
-ms.workload: dotnet
-ms.openlocfilehash: e7784ac319785babbc4d7715e13fb157b3b15b04
-ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
+ms.openlocfilehash: 9e2924dc9f2f2954f6690ad5009c4143d1b9a44f
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="data-encryption-in-sql-server"></a>SQL Server verileri şifreleme
 SQL Server şifrelemek ve bir sertifika, asimetrik anahtar veya simetrik anahtarı kullanarak verilerin şifresini çözmek için işlevleri sağlar. Tüm bunların bir iç sertifika deposunda yönetir. Sertifikaları ve anahtarları üstündeki katman hiyerarşideki bir düzeyde güvenlik altına alan bir şifreleme hiyerarşisi deposunu kullanır. Bu özellik alanı SQL Server'ın gizliliği depolama adı verilir.  

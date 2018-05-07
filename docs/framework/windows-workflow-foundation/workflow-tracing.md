@@ -1,23 +1,12 @@
 ---
-title: "İş akışı izleme"
-ms.custom: 
+title: İş akışı izleme
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 18737989-0502-4367-b5f6-617ebfb77c96
-caps.latest.revision: "12"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: b07dda940e35746a4d57c0cd300375692c6ab2f1
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: f4ce25efae0e42fa7c95ce5dffe8da8e31db05a6
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="workflow-tracing"></a>İş akışı izleme
 İş akışı izleme .NET Framework izleme dinleyicilerini kullanarak tanılama bilgileri yakalamak için bir yol sunar. İzleme uygulama ile ilgili bir sorun algılandığında, etkin ve sorun çözüldükten sonra yeniden devre dışı bırakıldı. İş akışları için hata ayıklama izlemeyi etkinleştirebilir iki yolu vardır. Olay İzleme Görüntüleyicisi'ni kullanarak yapılandırabilirsiniz ya da kullanabilirsiniz <xref:System.Diagnostics> izleme olayları bir dosya göndermek için.  
@@ -33,7 +22,7 @@ ms.lasthandoff: 12/22/2017
   
 4.  Yalnızca 4 kilobayt (KB); varsayılan çözümleme izleme arabellek boyutu değil 32 KB boyutunu artırmak için önerilir. Bunu yapmak için aşağıdaki adımları gerçekleştirin.  
   
-    1.  Geçerli framework dizinde (örneğin, C:\Windows\Microsoft.NET\Framework\v4.0.21203) şu komutu çalıştırın:`wevtutil um Microsoft.Windows.ApplicationServer.Applications.man`  
+    1.  Geçerli framework dizinde (örneğin, C:\Windows\Microsoft.NET\Framework\v4.0.21203) şu komutu çalıştırın: `wevtutil um Microsoft.Windows.ApplicationServer.Applications.man`  
   
     2.  Değişiklik \<bufferSize > 32 Windows.ApplicationServer.Applications.man dosyasındaki değeri.  
   
@@ -45,10 +34,10 @@ ms.lasthandoff: 12/22/2017
                   </channel>  
         ```  
   
-    3.  Geçerli framework dizinde (örneğin, C:\Windows\Microsoft.NET\Framework\v4.0.21203) şu komutu çalıştırın:`wevtutil im Microsoft.Windows.ApplicationServer.Applications.man`  
+    3.  Geçerli framework dizinde (örneğin, C:\Windows\Microsoft.NET\Framework\v4.0.21203) şu komutu çalıştırın: `wevtutil im Microsoft.Windows.ApplicationServer.Applications.man`  
   
 > [!NOTE]
->  .NET Framework 4 istemci profili kullanıyorsanız, önce ETW bildirimi .NET Framework 4 dizininden aşağıdaki komutu çalıştırarak kaydetmeniz gerekir:`ServiceModelReg.exe –i –c:etw`  
+>  .NET Framework 4 istemci profili kullanıyorsanız, önce ETW bildirimi .NET Framework 4 dizininden aşağıdaki komutu çalıştırarak kaydetmeniz gerekir: `ServiceModelReg.exe –i –c:etw`  
   
 ## <a name="enabling-debug-tracing-using-systemdiagnostics"></a>Hata ayıklama System.Diagnostics kullanarak izlemeyi etkinleştirme  
  Bu dinleyicileri bir iş akışı hizmeti için iş akışı uygulamanın Web.config veya App.config dosyasında yapılandırılabilir. Bu örnekte, bir [olmalıdır](http://go.microsoft.com/fwlink/?LinkId=165424) MyTraceLog.txt dosyası geçerli dizinde izleme bilgilerini kaydetmek için yapılandırılır.  

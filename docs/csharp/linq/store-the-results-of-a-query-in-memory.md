@@ -1,20 +1,13 @@
 ---
-title: "Bellekte sorgunun sonuçlarını depolama"
-description: "Sonuçları deposunu yapma."
-keywords: .NET, .NET core, C#
-author: BillWagner
-manager: wpickett
-ms.author: wiwagn
+title: Bellekte sorgunun sonuçlarını depolama
+description: Sonuçları deposunu yapma.
 ms.date: 11/30/2016
-ms.topic: article
-ms.prod: .net
-ms.technology: devlang-csharp
 ms.assetid: 5b863961-1750-4cf9-9607-acea5054d15a
-ms.openlocfilehash: 86a9c2d464eac83cabb5faa68987ad580fc31248
-ms.sourcegitcommit: 7e99f66ef09d2903e22c789c67ff5a10aa953b2f
+ms.openlocfilehash: c125d134d7c1db98363844c12fc8abd3faa9c868
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/18/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="store-the-results-of-a-query-in-memory"></a>Bellekte sorgunun sonuçlarını depolama
 

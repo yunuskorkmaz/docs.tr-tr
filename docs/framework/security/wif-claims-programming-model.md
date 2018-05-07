@@ -1,26 +1,14 @@
 ---
 title: WIF talep programlama modeli
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 149cb875-9b1c-4695-b88a-fbf1725a02f9
-caps.latest.revision: 
 author: BrucePerlerMS
-ms.author: bruceper
 manager: mbaldwin
-ms.workload:
-- dotnet
-ms.openlocfilehash: 1bd84e6a1e6fb0d4808dca42af2e2916be1133a3
-ms.sourcegitcommit: cf22b29db780e532e1090c6e755aa52d28273fa6
+ms.openlocfilehash: 71327fb5a86c30d15ff060eff5cce170695e86a9
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/01/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="wif-claims-programming-model"></a>WIF talep programlama modeli
 ASP.NET ve Windows Communication Foundation (WCF) geliştiriciler kimlik ve IPrincipal arabirimleri kullanıcının kimlik bilgileri ile çalışmak için normalde kullanın. Talep şimdi her zaman aşağıdaki çizimde gösterildiği gibi herhangi bir asıl için mevcut olduğundan .NET 4.5, Windows Identity Foundation (WIF) entegre edilmiş:  
@@ -31,19 +19,19 @@ ASP.NET ve Windows Communication Foundation (WCF) geliştiriciler kimlik ve IPri
   
  Bir talep tarafından temsil edilen <xref:System.Security.Claims.Claim> sınıfı. Bu sınıf aşağıdaki önemli özelliklere sahiptir:  
   
--   <xref:System.Security.Claims.Claim.Type%2A>talep türünü temsil eder ve genellikle bir URI'dır. Örneğin, e-posta adresi talep olarak temsil edilir `http://schemas.microsoft.com/ws/2008/06/identity/claims/email`.  
+-   <xref:System.Security.Claims.Claim.Type%2A> talep türünü temsil eder ve genellikle bir URI'dır. Örneğin, e-posta adresi talep olarak temsil edilir `http://schemas.microsoft.com/ws/2008/06/identity/claims/email`.  
   
--   <xref:System.Security.Claims.Claim.Value%2A>Talep değerini içerir ve bir dize olarak temsil edilir. Örneğin, e-posta adresi olarak temsil edilebilir "someone@contoso.com".  
+-   <xref:System.Security.Claims.Claim.Value%2A> Talep değerini içerir ve bir dize olarak temsil edilir. Örneğin, e-posta adresi olarak temsil edilebilir "someone@contoso.com".  
   
--   <xref:System.Security.Claims.Claim.ValueType%2A>Talep değeri türünü temsil eder ve genellikle bir URI'dır. Örneğin, dize türü olarak temsil edilir `http://www.w3.org/2001/XMLSchema#string`. Değer türü QName XML şemasına göre olması gerekir. Değer biçiminde olmalıdır `namespace#format` geçerli bir QName değer çıktı WIF etkinleştirmek için. Ad alanı iyi tanımlanmış bir ad değil, olmayacaktır çünkü bu ad alanı için yayımlanan bir XSD dosyası oluşturulmuş XML büyük olasılıkla doğrulandığında, şema olamaz. Varsayılan değer türü `http://www.w3.org/2001/XMLSchema#string`. Lütfen bakın [http://www.w3.org/2001/XMLSchema](http://go.microsoft.com/fwlink/?LinkId=209155) iyi bilinen değer türleri için güvenli bir şekilde kullanabilirsiniz.  
+-   <xref:System.Security.Claims.Claim.ValueType%2A> Talep değeri türünü temsil eder ve genellikle bir URI'dır. Örneğin, dize türü olarak temsil edilir `http://www.w3.org/2001/XMLSchema#string`. Değer türü QName XML şemasına göre olması gerekir. Değer biçiminde olmalıdır `namespace#format` geçerli bir QName değer çıktı WIF etkinleştirmek için. Ad alanı iyi tanımlanmış bir ad değil, olmayacaktır çünkü bu ad alanı için yayımlanan bir XSD dosyası oluşturulmuş XML büyük olasılıkla doğrulandığında, şema olamaz. Varsayılan değer türü `http://www.w3.org/2001/XMLSchema#string`. Lütfen bakın [ http://www.w3.org/2001/XMLSchema ](http://go.microsoft.com/fwlink/?LinkId=209155) iyi bilinen değer türleri için güvenli bir şekilde kullanabilirsiniz.  
   
--   <xref:System.Security.Claims.Claim.Issuer%2A>Talep veren güvenlik belirteci hizmeti (STS) tanımlayıcısıdır. Bu URL STS veya STS gibi temsil eden bir ad olarak temsil edilebilir `https://sts1.contoso.com/sts`.  
+-   <xref:System.Security.Claims.Claim.Issuer%2A> Talep veren güvenlik belirteci hizmeti (STS) tanımlayıcısıdır. Bu URL STS veya STS gibi temsil eden bir ad olarak temsil edilebilir `https://sts1.contoso.com/sts`.  
   
--   <xref:System.Security.Claims.Claim.OriginalIssuer%2A>ilk olarak kaç Sts'ler bağımsız olarak Talep veren STS tanıtıcısı zincirinde'dır. Bu tıpkı temsil edilen <xref:System.Security.Claims.Claim.Issuer%2A>.  
+-   <xref:System.Security.Claims.Claim.OriginalIssuer%2A> ilk olarak kaç Sts'ler bağımsız olarak Talep veren STS tanıtıcısı zincirinde'dır. Bu tıpkı temsil edilen <xref:System.Security.Claims.Claim.Issuer%2A>.  
   
--   <xref:System.Security.Claims.Claim.Subject%2A>Kimliğe incelenir konusudur. İçerdiği bir <xref:System.Security.Claims.ClaimsIdentity>.  
+-   <xref:System.Security.Claims.Claim.Subject%2A> Kimliğe incelenir konusudur. İçerdiği bir <xref:System.Security.Claims.ClaimsIdentity>.  
   
--   <xref:System.Security.Claims.Claim.Properties%2A>Geliştirici olanak sağlayan bir sözlük diğer özelliklerle birlikte hattaki aktarılması için uygulamaya özgü verileri sağlamak ve özel doğrulama için kullanılabilir.  
+-   <xref:System.Security.Claims.Claim.Properties%2A> Geliştirici olanak sağlayan bir sözlük diğer özelliklerle birlikte hattaki aktarılması için uygulamaya özgü verileri sağlamak ve özel doğrulama için kullanılabilir.  
   
 ## <a name="identity-delegation"></a>Kimlik temsilcisi seçme  
  Önemli bir özelliği <xref:System.Security.Claims.ClaimsIdentity> olan <xref:System.Security.Claims.ClaimsIdentity.Actor%2A>. Bu özelliği, orta katman istemci isteklerini bir arka uç hizmetinde yapmak için olarak davranan çok katmanlı sistemindeki kimlik bilgilerinin temsili sağlar.  

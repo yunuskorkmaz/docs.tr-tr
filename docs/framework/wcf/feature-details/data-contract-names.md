@@ -1,34 +1,20 @@
 ---
-title: "Veri Sözleşmesi Adları"
-ms.custom: 
+title: Veri Sözleşmesi Adları
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
 helpviewer_keywords:
 - data contracts [WCF], naming
 ms.assetid: 31f87e6c-247b-48f5-8e94-b9e1e33d8d09
-caps.latest.revision: 
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 56744318e6ea29350fd02d1cb35e49e566894a23
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 18ba9aa1f7af3733acd60924d0aa24ceb1b5126c
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="data-contract-names"></a>Veri Sözleşmesi Adları
-Bazen bir istemci ve hizmet aynı türlerini paylaşmayın. Veri sözleşmeleri iki tarafta da eşdeğer sürece bunlar hala veri birbirlerine geçirebilirsiniz. [Veri sözleşmesi eşitliği](../../../../docs/framework/wcf/feature-details/data-contract-equivalence.md) veri sözleşmesi ve veri üye adları, temel alır ve bu nedenle türleri ve üyeleri bu adlarıyla eşlemek için bir mekanizma sağlanır. Bu konuda varsayılan davranışını yanı sıra veri sözleşmeleri adlandırma kuralları açıklanır [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] adları oluşturulurken altyapı.  
+Bazen bir istemci ve hizmet aynı türlerini paylaşmayın. Veri sözleşmeleri iki tarafta da eşdeğer sürece bunlar hala veri birbirlerine geçirebilirsiniz. [Veri sözleşmesi eşitliği](../../../../docs/framework/wcf/feature-details/data-contract-equivalence.md) veri sözleşmesi ve veri üye adları, temel alır ve bu nedenle türleri ve üyeleri bu adlarıyla eşlemek için bir mekanizma sağlanır. Bu konu, Windows Communication Foundation (WCF) Altyapısı'nın varsayılan davranışını yanı sıra veri sözleşmeleri adları oluşturulurken adlandırma kurallarını açıklar.  
   
 ## <a name="basic-rules"></a>Temel kurallar  
  Sözleşmeler dahil adlandırma veri ilgili temel kurallarını:  
@@ -37,15 +23,15 @@ Bazen bir istemci ve hizmet aynı türlerini paylaşmayın. Veri sözleşmeleri 
   
 -   Veri üyeleri yalnızca adlarını, ancak ad alanı vardır.  
   
--   Veri sözleşmeleri işlerken [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] altyapı büyük küçük harfe duyarlı hem ad hem de veri sözleşmeleri ve veri üyeleri adları.  
+-   Veri sözleşmeleri işlerken WCF altyapı hem ad hem de veri sözleşmeleri ve veri üyeleri adları küçük harf duyarlıdır.  
   
 ## <a name="data-contract-namespaces"></a>Veri sözleşmesi ad alanları  
  Veri sözleşmesi ad formun Tekdüzen Kaynak Tanımlayıcısı (URI) alır. URI mutlak veya göreli olabilir. Varsayılan olarak, belirli bir tür için veri sözleşmeleri ortak dil çalışma zamanı (CLR) ad Türü alanından gelen bir ad alanı atanır.  
   
- Varsayılan olarak, tüm belirtilen CLR ad alanı (biçimde *Clr.Namespace*) "http://schemas.datacontract.org/2004/07/Clr.Namespace" ad alanına eşlenir. Bu varsayılanı geçersiz kılmak için uygulama <xref:System.Runtime.Serialization.ContractNamespaceAttribute> tüm modüle ya da derleme özniteliği. Alternatif olarak, her tür için veri sözleşmesi ad denetlemek için ayarlanmış <xref:System.Runtime.Serialization.DataContractAttribute.Namespace%2A> özelliği <xref:System.Runtime.Serialization.DataContractAttribute>.  
+ Varsayılan olarak, tüm belirtilen CLR ad alanı (biçimde *Clr.Namespace*) ad alanına eşlenir "http://schemas.datacontract.org/2004/07/Clr.Namespace". Bu varsayılanı geçersiz kılmak için uygulama <xref:System.Runtime.Serialization.ContractNamespaceAttribute> tüm modüle ya da derleme özniteliği. Alternatif olarak, her tür için veri sözleşmesi ad denetlemek için ayarlanmış <xref:System.Runtime.Serialization.DataContractAttribute.Namespace%2A> özelliği <xref:System.Runtime.Serialization.DataContractAttribute>.  
   
 > [!NOTE]
->  "Http://schemas.microsoft.com/2003/10/Serialization" ad alanı ayrılmıştır ve bir veri sözleşmesi ad kullanılamaz.  
+>  "http://schemas.microsoft.com/2003/10/Serialization"Ad alanı ayrılmıştır ve bir veri sözleşmesi ad kullanılamaz.  
   
 > [!NOTE]
 >  Varsayılan ad alanını içeren veri sözleşme türleri geçersiz kılamaz `delegate` bildirimleri.  

@@ -1,42 +1,30 @@
 ---
-title: ".NET Framework'te Yan Yana Yürütme"
-ms.custom: 
+title: .NET Framework'te Yan Yana Yürütme
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - side-by-side execution
 ms.assetid: 649f1342-766b-49e6-a90d-5b019a751e11
-caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 75ee159f45932f6130db2ce47c6923c24b38ca99
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: ea7a26a5b8ce0f30893e9ca66873ad61f82ff8df
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="side-by-side-execution-in-the-net-framework"></a>.NET Framework'te Yan Yana Yürütme
 Yan yana yürütme uygulamanın veya bileşenin birden çok sürümünü aynı bilgisayarda çalıştırma yeteneğidir. Bir bilgisayar üzerinde ortak dil çalışma zamanı sürümünün ve bir uygulamanın ve çalışma zamanının bir sürümünü kullanan bileşenin çeşitli sürümlerine aynı anda sahip olabilirsiniz.  
   
  Aynı bilgisayar üzerinde çalışma zamanının farklı iki versiyonunu kullanan çeşitli uygulamaların gösterildiği örnek aşağıdadır. D uygulaması çalışma zamanı sürüm 1.1 kullanırken A, B ve C uygulamaları çalışma zamanı sürüm 1.0 kullanıyor.  
   
- ![Yan &#45; tarafından &#45; yan yürütme](../../../docs/framework/deployment/media/simplesbs.gif "simplesbs")  
+ ![Yan&#45;tarafından&#45;yan yürütme](../../../docs/framework/deployment/media/simplesbs.gif "simplesbs")  
 Çalışma zamanının iki sürümünü yan yana yürütme  
   
  .NET Framework, ortak dil çalışma zamanı ve API türlerini içeren bir derleme koleksiyonundan oluşur. Çalışma zamanı ve .Net Framework derlemeleri ayrı ayrı uyarlandı. Örneğin, .Net Framework derleme sürümü 4.0 aslında sürüm 1.0.3300.0 iken, çalışma zamanı sürüm 1.0 aslında 4.0.319 sürümüdür.  
   
  Aşağıdaki örnek çeşitli uygulamaların aynı bilgisayarda bir bileşenin iki farklı sürümünü kullandığını göstermektedir. Uygulama A ve B bileşenin 1.0 sürümünü kullanırken Uygulama C aynı bileşenin 2.0 sürümünü kullanır.  
   
- ![Yan &#45; tarafından &#45; yan yürütme](../../../docs/framework/deployment/media/compsbs.gif "compsbs")  
+ ![Yan&#45;tarafından&#45;yan yürütme](../../../docs/framework/deployment/media/compsbs.gif "compsbs")  
 Bir bileşenin iki sürümünün yan yana yürütülmesi  
   
  Yan yana yürütme size bir bileşenin sürümüne bağlı olan uygulama ve uygulamanın kullandığı çalışma zamanı üzerinde daha fazla denetim, kontrol sağlar.  

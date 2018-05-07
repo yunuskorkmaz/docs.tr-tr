@@ -1,14 +1,6 @@
 ---
-title: "StrongNameGetBlobFromImage İşlevi"
-ms.custom: 
+title: StrongNameGetBlobFromImage İşlevi
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: reference
 api_name:
 - StrongNameGetBlobFromImage
 api_location:
@@ -22,17 +14,13 @@ helpviewer_keywords:
 ms.assetid: 1de658e6-da32-4d01-9097-6f43c92222e1
 topic_type:
 - apiref
-caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 3dd5fa1838517baa97079f5d7f75a789384255a2
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 9d562aef58c1e3b5bbbe690b54eb08384052c657
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="strongnamegetblobfromimage-function"></a>StrongNameGetBlobFromImage İşlevi
 Belirtilen bellek adresinde derleme görüntü ikili bir gösterimini alır.  
@@ -64,7 +52,7 @@ BOOLEAN StrongNameGetBlobFromImage (
  [içinde out] Bayt cinsinden en büyük boyutu, istenen `pbBlob`. Return, bayt cinsinden gerçek boyutu bağlı, `pbBlob`.  
   
 ## <a name="return-value"></a>Dönüş Değeri  
- `true`başarılı tamamlanma; Aksi takdirde `false`.  
+ `true` başarılı tamamlanma; Aksi takdirde `false`.  
   
 ## <a name="remarks"></a>Açıklamalar  
  Varsa `StrongNameGetBlobFromImage` işlevi yok başarıyla tamamlanması, çağrı [Strongnameerrorınfo](../../../../docs/framework/unmanaged-api/strong-naming/strongnameerrorinfo-function.md) son oluşturulan hata alınacak işlev.  
@@ -76,7 +64,7 @@ BOOLEAN StrongNameGetBlobFromImage (
   
  **Kitaplığı:** bir kaynak olarak MsCorEE.dll dahil  
   
- **.NET framework sürümleri:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET framework sürümleri:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
  [StrongNameGetBlobFromImage Yöntemi](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-strongnamegetblobfromimage-method.md)  

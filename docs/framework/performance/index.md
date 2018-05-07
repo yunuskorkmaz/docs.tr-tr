@@ -1,29 +1,17 @@
 ---
 title: .NET Framework Performansı
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 helpviewer_keywords:
 - performance [.NET Framework]
 - reliability [.NET Framework]
 ms.assetid: c1676cca-3f1a-41ec-b469-9029566074fc
-caps.latest.revision: 20
 author: mairaw
 ms.author: mairaw
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: aa4db0e3e136eee1d2037ad6041ac6945d313776
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: ebfe03ea99f7a9c66fb46f01b37f85daf9e919d5
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="net-framework-performance"></a>.NET Framework Performansı
 Uygulamaları ile harika performans oluşturmak istiyorsanız, tasarım ve performans için yalnızca planlamanız gerekir, uygulamanızın herhangi bir özellik tasarlarken. Size Microsoft tarafından sağlanan araçları, uygulamanızın performansını ölçmek için kullanıp, gerekirse, bellek kullanımı, kod verimlilik ve yanıt hızını iyileştirmeler sağlar. Bu konu, Microsoft sağlar ve performans için uygulama geliştirme belirli alanlarında kapak diğer konulara bağlantılar sağlanır performans çözümleme araçları listeler.  
@@ -57,7 +45,7 @@ Uygulamaları ile harika performans oluşturmak istiyorsanız, tasarım ve perfo
 |Uygulama türü|Bkz. |  
 |--------------|---------|  
 |Tüm platformlar için .NET framework uygulamaları|[Atık Toplama ve Performans](../../../docs/standard/garbage-collection/performance.md)<br /><br /> [Performans İpuçları](../../../docs/framework/performance/performance-tips.md)|  
-|[!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)]C++, C# ve Visual Basic içinde yazılmış uygulamalar|[C++, C# ve Visual Basic kullanarak Windows mağazası uygulamaları için performansı en iyi yöntemler](http://msdn.microsoft.com/library/windows/apps/hh750313.aspx)|  
+|[!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)] C++, C# ve Visual Basic içinde yazılmış uygulamalar|[C++, C# ve Visual Basic kullanarak Windows mağazası uygulamaları için performansı en iyi yöntemler](http://msdn.microsoft.com/library/windows/apps/hh750313.aspx)|  
 |Windows Phone|[Windows Phone için uygulama başarım düşünceleri](http://msdn.microsoft.com/library/windowsphone/develop/ff967560\(v=vs.105\).aspx)<br /><br /> [Windows Phone Uygulama analizi](http://msdn.microsoft.com/library/windowsphone/develop/hh202934\(v=vs.105\).aspx)<br /><br /> [Windows Phone uygulamalarınızı daha hızlı Market Al](http://msdn.microsoft.com/magazine/hh781024.aspx)|  
 |Windows Presentation Foundation (WPF)|[WPF Performans paketi](http://msdn.microsoft.com/library/67cafaad-57ad-4ecb-9c08-57fac144393e)|  
 |Silverlight|[Performans İpuçları](http://msdn.microsoft.com/library/cc189071\(v=vs.95\).aspx)|  

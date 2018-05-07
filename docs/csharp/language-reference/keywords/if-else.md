@@ -1,9 +1,6 @@
 ---
-title: "if-else (C# Başvurusu)"
+title: if-else (C# Başvurusu)
 ms.date: 07/20/2015
-ms.prod: .net
-ms.technology: devlang-csharp
-ms.topic: article
 f1_keywords:
 - if_CSharpKeyword
 - else
@@ -13,14 +10,11 @@ helpviewer_keywords:
 - else keyword [C#]
 - if keyword [C#]
 ms.assetid: d9a1d562-8cf5-4bd4-9ba7-8ad970cd25b2
-caps.latest.revision: "32"
-author: BillWagner
-ms.author: wiwagn
-ms.openlocfilehash: a0ecc915af00caffeba92a8308a60bc24198d477
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: eb8fe4c3a02cab8f8c887ec37244bede04b8a663
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="if-else-c-reference"></a>if-else (C# Başvurusu)
 Bir `if` deyimi tanımlayan çalıştırmak için hangi deyimi değeri temel alınarak bir `Boolean` ifade. Aşağıdaki örnekte, `Boolean` değişkeni `result` ayarlanır `true` ve ardından iade `if` deyimi. Çıktı `The condition is true`.  
@@ -65,7 +59,7 @@ if (condition)
   
  [!code-csharp[csrefKeywordsSelection#3](../../../csharp/language-reference/keywords/codesnippet/CSharp/if-else_3.cs)]  
   
- `Result2`görünür koşul `(m > 10)` yanlış olarak değerlendirilir.  
+ `Result2` görünür koşul `(m > 10)` yanlış olarak değerlendirilir.  
   
 ## <a name="example"></a>Örnek  
  Aşağıdaki örnekte, klavyeden bir karakter girin ve programı bir iç içe kullanır `if` giriş karakter alfasayısal bir karakter olup olmadığını belirlemek için deyimi. Giriş karakter alfasayısal bir karakter ise, program giriş karakteri küçük harfler veya büyük olup olmadığını denetler. Her örneği için bir ileti görüntülenir.  
@@ -82,7 +76,7 @@ if (condition)
   
  [!code-csharp[csrefKeywordsSelection#6](../../../csharp/language-reference/keywords/codesnippet/CSharp/if-else_6.cs)]  
   
- Herhangi bir geçerli ifadesi başka blok veya sonra blok deyiminde yalnızca olabildiği kadar koşul için geçerli bir Boolean ifadesini kullanabilirsiniz. Mantıksal işleçler gibi kullanabilir [ && ](../../../csharp/language-reference/operators/conditional-and-operator.md), [ & ](../../../csharp/language-reference/operators/and-operator.md), [&#124; &#124;](../../../csharp/language-reference/operators/conditional-or-operator.md), [&#124;](../../../csharp/language-reference/operators/or-operator.md) ve [!](../../../csharp/language-reference/operators/logical-negation-operator.md) Bileşik koşullar yapma. Aşağıdaki kod örnekleri gösterir.  
+ Herhangi bir geçerli ifadesi başka blok veya sonra blok deyiminde yalnızca olabildiği kadar koşul için geçerli bir Boolean ifadesini kullanabilirsiniz. Mantıksal işleçler gibi kullanabilir [ && ](../../../csharp/language-reference/operators/conditional-and-operator.md), [ & ](../../../csharp/language-reference/operators/and-operator.md), [ &#124; &#124; ](../../../csharp/language-reference/operators/conditional-or-operator.md), [ &#124; ](../../../csharp/language-reference/operators/or-operator.md) ve [!](../../../csharp/language-reference/operators/logical-negation-operator.md) Bileşik koşullar yapma. Aşağıdaki kod örnekleri gösterir.  
   
 ```csharp  
 // NOT  
@@ -136,8 +130,8 @@ if (!(m >= n || m >= p))
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
  [C# başvurusu](../../../csharp/language-reference/index.md)  
- [C# programlama kılavuzu](../../../csharp/programming-guide/index.md)  
- [C# anahtar sözcükleri](../../../csharp/language-reference/keywords/index.md)  
+ [C# Programlama Kılavuzu](../../../csharp/programming-guide/index.md)  
+ [C# Anahtar Sözcükleri](../../../csharp/language-reference/keywords/index.md)  
  [?: İşleci](../../../csharp/language-reference/operators/conditional-operator.md)  
- [if-else deyimi (C++)](/cpp/cpp/if-else-statement-cpp)  
- [geçiş](../../../csharp/language-reference/keywords/switch.md)
+ [if-else Deyimi (C++)](/cpp/cpp/if-else-statement-cpp)  
+ [switch](../../../csharp/language-reference/keywords/switch.md)

@@ -1,30 +1,20 @@
 ---
-title: "Yöntem ETW Olayları"
-ms.custom: 
+title: Yöntem ETW Olayları
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - ETW, method events (CLR)
 - method events [.NET Framework]
 ms.assetid: 167a4459-bb6e-476c-9046-7920880f2bb5
-caps.latest.revision: "9"
 author: mairaw
 ms.author: mairaw
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: ea7214e284754b1a2f5c8a7a68f19b1b94e02a13
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 578aed02d5d44ae94763b6a254420a4976320f13
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="method-etw-events"></a>Yöntem ETW Olayları
-<a name="top"></a>Bu olaylar yöntemlerine özgüdür bilgi toplayın. Bu olaylar yükü simge çözünürlüğü için gereklidir. Ek olarak, bu olayları bir yöntem çağrıldı sayısı gibi yararlı bilgileri sağlar.  
+<a name="top"></a> Bu olaylar yöntemlerine özgüdür bilgi toplayın. Bu olaylar yükü simge çözünürlüğü için gereklidir. Ek olarak, bu olayları bir yöntem çağrıldı sayısı gibi yararlı bilgileri sağlar.  
   
  Tüm yöntem olayları "Bilgilendirici (4)" düzeyine sahip. Tüm yöntemi ayrıntılı olayları "Verbose (5)" düzeyine sahip.  
   
@@ -46,10 +36,10 @@ ms.lasthandoff: 12/22/2017
   
 |Olay oluşturma için anahtar sözcüğü|Düzey|  
 |-----------------------------------|-----------|  
-|`JITKeyword`(0x10) çalışma zamanı sağlayıcısı|Bilgilendirici (4)|  
-|`NGenKeyword`(0x20) çalışma zamanı sağlayıcısı|Bilgilendirici (4)|  
-|`JitRundownKeyword`(0x10) özeti sağlayıcısı|Bilgilendirici (4)|  
-|`NGENRundownKeyword`(0x20) özeti sağlayıcısı|Bilgilendirici (4)|  
+|`JITKeyword` (0x10) çalışma zamanı sağlayıcısı|Bilgilendirici (4)|  
+|`NGenKeyword` (0x20) çalışma zamanı sağlayıcısı|Bilgilendirici (4)|  
+|`JitRundownKeyword` (0x10) özeti sağlayıcısı|Bilgilendirici (4)|  
+|`NGENRundownKeyword` (0x20) özeti sağlayıcısı|Bilgilendirici (4)|  
   
  Aşağıdaki tabloda olay bilgilerini gösterir.  
   
@@ -82,9 +72,9 @@ ms.lasthandoff: 12/22/2017
   
 |Olay oluşturma için anahtar sözcüğü|Düzey|  
 |-----------------------------------|-----------|  
-|`AppDomainResourceManagementRundownKeyword`(0x800) özeti sağlayıcısı|Bilgilendirici (4)|  
-|`JitRundownKeyword`(0x10) özeti sağlayıcısı|Bilgilendirici (4)|  
-|`NGENRundownKeyword`(0x20) özeti sağlayıcısı|Bilgilendirici (4)|  
+|`AppDomainResourceManagementRundownKeyword` (0x800) özeti sağlayıcısı|Bilgilendirici (4)|  
+|`JitRundownKeyword` (0x10) özeti sağlayıcısı|Bilgilendirici (4)|  
+|`NGENRundownKeyword` (0x20) özeti sağlayıcısı|Bilgilendirici (4)|  
   
  Aşağıdaki tabloda olay bilgilerini gösterir.  
   
@@ -109,10 +99,10 @@ ms.lasthandoff: 12/22/2017
   
 |Olay oluşturma için anahtar sözcüğü|Düzey|  
 |-----------------------------------|-----------|  
-|`JITKeyword`(0x10) çalışma zamanı sağlayıcısı|Verbose (5)|  
-|`NGenKeyword`(0x20) çalışma zamanı sağlayıcısı|Verbose (5)|  
-|`JitRundownKeyword`(0x10) özeti sağlayıcısı|Verbose (5)|  
-|`NGENRundownKeyword`(0x20) özeti sağlayıcısı|Verbose (5)|  
+|`JITKeyword` (0x10) çalışma zamanı sağlayıcısı|Verbose (5)|  
+|`NGenKeyword` (0x20) çalışma zamanı sağlayıcısı|Verbose (5)|  
+|`JitRundownKeyword` (0x10) özeti sağlayıcısı|Verbose (5)|  
+|`NGENRundownKeyword` (0x20) özeti sağlayıcısı|Verbose (5)|  
   
  Aşağıdaki tabloda olay bilgilerini gösterir.  
   
@@ -146,10 +136,10 @@ ms.lasthandoff: 12/22/2017
   
 |Olay oluşturma için anahtar sözcüğü|Düzey|  
 |-----------------------------------|-----------|  
-|`JITKeyword`(0x10) çalışma zamanı sağlayıcısı|Verbose (5)|  
-|`NGenKeyword`(0x20) çalışma zamanı sağlayıcısı|Verbose (5)|  
-|`JitRundownKeyword`(0x10) özeti sağlayıcısı|Verbose (5)|  
-|`NGENRundownKeyword`(0x20) özeti sağlayıcısı|Verbose (5)|  
+|`JITKeyword` (0x10) çalışma zamanı sağlayıcısı|Verbose (5)|  
+|`NGenKeyword` (0x20) çalışma zamanı sağlayıcısı|Verbose (5)|  
+|`JitRundownKeyword` (0x10) özeti sağlayıcısı|Verbose (5)|  
+|`NGENRundownKeyword` (0x20) özeti sağlayıcısı|Verbose (5)|  
   
  Aşağıdaki tabloda olay bilgilerini gösterir.  
   

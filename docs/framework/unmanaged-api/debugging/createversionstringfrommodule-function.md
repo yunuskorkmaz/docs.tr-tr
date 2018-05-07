@@ -1,14 +1,6 @@
 ---
-title: "CreateVersionStringFromModule İşlevi"
-ms.custom: 
+title: CreateVersionStringFromModule İşlevi
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: reference
 api_name:
 - CreateVersionStringFromModule
 api_location:
@@ -24,17 +16,13 @@ helpviewer_keywords:
 ms.assetid: 3d2fe9bd-75ef-4364-84a6-da1e1994ac1a
 topic_type:
 - apiref
-caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 9d7d545256393cfbe37216f0d6db064d5e7cb410
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 0988b2c4471cb5449f7c7fac82c6e94bcd537b7e
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="createversionstringfrommodule-function"></a>CreateVersionStringFromModule İşlevi
 Ortak dil çalışma zamanı (CLR) yolu bir hedef işlemde bir sürüm dizesi oluşturur.  
@@ -73,16 +61,16 @@ HRESULT CreateVersionStringFromModule (
  Hedef CLR sürüm dizesi başarıyla döndürüldü `pBuffer`.  
   
  E_INVALIDARG  
- `szModuleName`olan null ya da `pBuffer` veya `cchBuffer` null. `pBuffer`ve `cchBuffer` her ikisi de null veya boş olmayan olmalıdır.  
+ `szModuleName` olan null ya da `pBuffer` veya `cchBuffer` null. `pBuffer` ve `cchBuffer` her ikisi de null veya boş olmayan olmalıdır.  
   
  HRESULT_FROM_WIN32(ERROR_INSUFFICIENT_BUFFER)  
- `pdwLength`Daha fazla `cchBuffer`. Her ikisi için null geçtiğinde, bu beklenen bir sonucu olabilir `pBuffer` ve `cchBuffer`ve gerekli arabellek boyutu kullanarak sorgulanan `pdwLength`.  
+ `pdwLength` Daha fazla `cchBuffer`. Her ikisi için null geçtiğinde, bu beklenen bir sonucu olabilir `pBuffer` ve `cchBuffer`ve gerekli arabellek boyutu kullanarak sorgulanan `pdwLength`.  
   
  HRESULT_FROM_WIN32(ERROR_MOD_NOT_FOUND)  
- `szModuleName`Hedef işlemin geçerli bir CLR yoluna sahip değil.  
+ `szModuleName` Hedef işlemin geçerli bir CLR yoluna sahip değil.  
   
  E_FAIL (veya diğer E_ dönüş kodları)  
- `pidDebuggee`Geçerli bir işlem veya diğer hata başvurmuyor.  
+ `pidDebuggee` Geçerli bir işlem veya diğer hata başvurmuyor.  
   
 ## <a name="remarks"></a>Açıklamalar  
  Bu işlev tarafından tanımlanan bir CLR işlem kabul `pidDebuggee` tarafından belirtilen bir dize yol `szModuleName`. Sürüm dizesi arabellekte döndürülür, `pBuffer` işaret eder. Bu dize işlevi kullanıcıya donuk; diğer bir deyişle, sürüm dizesindeki iç hiçbir anlamı yoktur. Yalnızca bu işlev bağlamda kullanılır ve [Createdebuggingınterfacefromversion işlevi](../../../../docs/framework/unmanaged-api/debugging/createdebugginginterfacefromversion-function-for-silverlight.md).  

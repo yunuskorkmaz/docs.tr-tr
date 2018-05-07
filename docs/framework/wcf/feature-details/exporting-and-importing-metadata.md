@@ -1,34 +1,20 @@
 ---
-title: "Meta Verileri Dışarı ve İçeri Aktarma"
-ms.custom: 
+title: Meta Verileri Dışarı ve İçeri Aktarma
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - metadata [WCF], exporting and importing
 ms.assetid: 614a75bb-e0b0-4c95-b6d8-02cb5e5ddb38
-caps.latest.revision: 
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: a2785f74d9a07b267d836a9f6e6749d259a1ab21
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 497feb80d5930a784022877cfaa6e6c76a3047a1
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="exporting-and-importing-metadata"></a>Meta Verileri Dışarı ve İçeri Aktarma
-İçinde [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)], meta verileri dışarı aktarma işlemidir hizmet uç noktaları açıklayan ve istemcilerin Hizmeti'nin nasıl kullanılacağını anlamak için kullanabileceği bir paralel, standartlaştırılmış gösterimine yansıtma. Hizmet meta verilerini alma işlemidir oluşturmanın <xref:System.ServiceModel.Description.ServiceEndpoint> örneği veya hizmet meta verilerini parçalarını.  
+Windows Communication Foundation (WCF) meta verileri dışarı aktarma hizmeti uç noktalarını tanımlayan ve istemcilerin Hizmeti'nin nasıl kullanılacağını anlamak için kullanabileceği bir paralel, standartlaştırılmış gösterimine yansıtma işlemidir. Hizmet meta verilerini alma işlemidir oluşturmanın <xref:System.ServiceModel.Description.ServiceEndpoint> örneği veya hizmet meta verilerini parçalarını.  
   
 ## <a name="exporting-metadata"></a>Meta verileri dışarı aktarma  
- Meta verilerini dışa aktarmak için <xref:System.ServiceModel.Description.ServiceEndpoint?displayProperty=nameWithType> örnekleri, kullanın uygulaması <xref:System.ServiceModel.Description.MetadataExporter> soyut sınıf. <xref:System.ServiceModel.Description.WsdlExporter> Türü uygulamasıdır <xref:System.ServiceModel.Description.MetadataExporter> soyut sınıf ile birlikte gelen [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)].  
+ Meta verilerini dışa aktarmak için <xref:System.ServiceModel.Description.ServiceEndpoint?displayProperty=nameWithType> örnekleri, kullanın uygulaması <xref:System.ServiceModel.Description.MetadataExporter> soyut sınıf. <xref:System.ServiceModel.Description.WsdlExporter> Türü uygulamasıdır <xref:System.ServiceModel.Description.MetadataExporter> soyut WCF ile dahil sınıfı.  
   
  <xref:System.ServiceModel.Description.WsdlExporter?displayProperty=nameWithType> Türü olarak kapsüllenmiş iliştirilmiş ilke ifadelerle Web Hizmetleri Açıklama Dili (WSDL) meta veri oluşturur bir <xref:System.ServiceModel.Description.MetadataSet> örneği. Kullanabileceğiniz bir <xref:System.ServiceModel.Description.WsdlExporter?displayProperty=nameWithType> tekrarlayarak meta verilerini dışa aktarmak için örnek <xref:System.ServiceModel.Description.ContractDescription> nesneleri ve <xref:System.ServiceModel.Description.ServiceEndpoint> nesneleri. Bir koleksiyonu dışarı aktarabilirsiniz <xref:System.ServiceModel.Description.ServiceEndpoint> nesneleri ve belirli hizmet adı ile ilişkilendirin.  
   
@@ -38,7 +24,7 @@ ms.lasthandoff: 12/22/2017
 ## <a name="importing-metadata"></a>Meta verileri içe aktarma  
   
 ### <a name="importing-wsdl-documents"></a>WSDL belge alma  
- Hizmet meta verilerde almak için [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)], uygulaması kullanmak <xref:System.ServiceModel.Description.MetadataImporter> soyut sınıf. <xref:System.ServiceModel.Description.WsdlImporter?displayProperty=nameWithType> Türü uygulamasıdır <xref:System.ServiceModel.Description.MetadataImporter> soyut sınıf ile birlikte gelen [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]. <xref:System.ServiceModel.Description.WsdlImporter> Yazın WSDL meta verilerini bağlı ilkeleri ile birlikte içeri aktarmalar bir <xref:System.ServiceModel.Description.MetadataSet> nesnesi.  
+ WCF'de hizmet meta verilerini almak için uygulaması kullanın <xref:System.ServiceModel.Description.MetadataImporter> soyut sınıf. <xref:System.ServiceModel.Description.WsdlImporter?displayProperty=nameWithType> Türü uygulamasıdır <xref:System.ServiceModel.Description.MetadataImporter> soyut WCF ile dahil sınıfı. <xref:System.ServiceModel.Description.WsdlImporter> Yazın WSDL meta verilerini bağlı ilkeleri ile birlikte içeri aktarmalar bir <xref:System.ServiceModel.Description.MetadataSet> nesnesi.  
   
  <xref:System.ServiceModel.Description.WsdlImporter> Meta verileri içeri aktarma üzerinden denetim türü sağlar. Tüm bağlamaları veya tüm sözleşmelerin bitiş noktalarının tümü içeri aktarabilirsiniz. Özel WSDL hizmeti, bağlama veya bağlantı noktası türü ile ilişkili bitiş noktalarının tümü içeri aktarabilirsiniz. Belirli bir WSDL bağlantı noktasını, belirli bir WSDL bağlama için bağlama veya özel bir WSDL bağlantı türü için anlaşma için uç noktaya da içeri aktarabilirsiniz.  
   

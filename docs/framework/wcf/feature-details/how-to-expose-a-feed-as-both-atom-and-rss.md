@@ -1,32 +1,18 @@
 ---
 title: 'Nasıl yapılır: Bir Akışı Hem Atom Hem de RSS Olarak Kullanıma Sunma'
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 dev_langs:
 - csharp
 - vb
 ms.assetid: fe374932-67f5-487d-9325-f868812b92e4
-caps.latest.revision: 23
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 14059ebc3efe57a38a093faed9cfbd254c372920
-ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
+ms.openlocfilehash: 4780e43679d461509911a4abda689a0c16112e4a
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/30/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-expose-a-feed-as-both-atom-and-rss"></a>Nasıl yapılır: Bir Akışı Hem Atom Hem de RSS Olarak Kullanıma Sunma
-[!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] Akış bir dağıtım kullanıma sunan bir hizmet oluşturmanıza olanak sağlar. Bu konu akışı hem Atom 1.0 hem de RSS 2.0 kullanarak bir dağıtım gösteren bir dağıtım hizmetin nasıl oluşturulacağını açıklar. Bu hizmet ya da yayınlama biçimi döndürebilir bir uç noktasını kullanıma sunar. Kolaylık olması için bu örnekte kullanılan self barındırılan hizmetidir. Bir üretim ortamında bu türde bir hizmet IIS ya da WAS altında barındırılması. Farklı hakkında daha fazla bilgi için [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] seçenekleri barındırma, bkz: [barındırma](../../../../docs/framework/wcf/feature-details/hosting.md).  
+Windows Communication Foundation (WCF), akışı bir dağıtım kullanıma sunan bir hizmet oluşturmanıza olanak sağlar. Bu konu akışı hem Atom 1.0 hem de RSS 2.0 kullanarak bir dağıtım gösteren bir dağıtım hizmetin nasıl oluşturulacağını açıklar. Bu hizmet ya da yayınlama biçimi döndürebilir bir uç noktasını kullanıma sunar. Kolaylık olması için bu örnekte kullanılan self barındırılan hizmetidir. Bir üretim ortamında bu türde bir hizmet IIS ya da WAS altında barındırılması. Seçenekler barındırma farklı WCF hakkında daha fazla bilgi için bkz: [barındırma](../../../../docs/framework/wcf/feature-details/hosting.md).  
   
 ### <a name="to-create-a-basic-syndication-service"></a>Bir temel dağıtım hizmet oluşturmak için  
   

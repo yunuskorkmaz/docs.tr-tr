@@ -1,27 +1,17 @@
 ---
-title: "SignTool.exe (İmza Aracı)"
-ms.custom: 
+title: SignTool.exe (İmza Aracı)
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - Sign tool
 - SignTool.exe
 ms.assetid: 0c25ff6c-bff3-422e-b017-146a3ee86cb9
-caps.latest.revision: "33"
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 326b952b742dc3400b7a84ba35594b61aeaabb6c
-ms.sourcegitcommit: 2142a4732bb4ff519b9817db4c24a237b9810d4b
+ms.openlocfilehash: 1728dee4d0d8d90b8a1e2b2a3f92fc256c6267c6
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/05/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="signtoolexe-sign-tool"></a>SignTool.exe (İmza Aracı)
 İmza aracı, dosyaları dijital imzalayan, dosyalardaki imzaları doğrulayan ve dosyalara zaman damgası veren bir komut satırı aracıdır.  
@@ -68,7 +58,7 @@ signtool [command] [options] [file_name | ...]
 |Catdb seçeneği|Açıklama|  
 |------------------|-----------------|  
 |`/d`|Varsayılan katalog veritabanının güncellendiğini belirtir. Ne `/d` veya `/g` seçeneği kullanıldığında, imza aracı sistem bileşeni ve sürücü veritabanını güncelleştirir.|  
-|`/g`*GUID*|Katalog veritabanına genel benzersiz tanımlayıcı tarafından tanımlanan belirtir *GUID* güncelleştirilir.|  
+|`/g` *GUID*|Katalog veritabanına genel benzersiz tanımlayıcı tarafından tanımlanan belirtir *GUID* güncelleştirilir.|  
 |`/r`|Belirtilen katalogları katalog veritabanından kaldırır. Bu seçenek belirtilmezse, İmza Aracı belirtilen katalogları katalog veritabanına ekler.|  
 |`/u`|Benzersiz bir adın eklenen katalog dosyaları için otomatik olarak oluşturulduğunu belirtir. Gerekirse, katalog dosyaları var olan katalog dosyaları ile ad çakışmalarını önlemek için yeniden adlandırılır. Bu seçenek belirtilmezse, İmza Aracı eklenmekte olan katalogla aynı ada sahip tüm var olan katalogların üzerine yazar.|  
   
@@ -83,7 +73,7 @@ signtool [command] [options] [file_name | ...]
 |`/as`|Bu imzayı ekler. Birincil bir imza yoksa, bunun yerine bu imza birincil imza yapılır.|  
 |`/c`  *CertTemplateName*|İmzalama sertifikasının Sertifika Şablon Adını (Microsoft uzantılı) belirtir.|  
 |`/csp`  *CSPAdı*|Özel anahtar kapsayıcısı içeren şifreleme hizmet sağlayıcısını (CSP) belirtir.|  
-|`/d`  *Desc*|İmzalı içeriğin açıklamasını belirtir.|  
+|`/d`  *desc*|İmzalı içeriğin açıklamasını belirtir.|  
 |`/du`  *URL*|İmzalanmış içeriğin genişletilmiş açıklaması için Tek Düzen Kaynak Konum Belirleyicisi (URL) belirtir.|  
 |`/f`  *SignCertFile*|Bir dosyadaki imza sertifikanı belirtir. Dosya kişisel bilgi değişimi (PFX) biçiminde ve bir parolayla korunan, kullanın `/p` seçeneği parolayı belirtin. Dosyayı özel anahtar içermiyor kullanırsanız `/csp` ve `/kc` CSP ve özel anahtar kapsayıcı adı belirtmek için Seçenekler.|  
 |`/fd`|Dosya imzalarını oluşturmak için kullanılacak dosya özet algoritmasını belirtir. Varsayılan, SHA1 değeridir.|  
@@ -92,12 +82,12 @@ signtool [command] [options] [file_name | ...]
 |`/n`  *SubjectName*|İmzalayan sertifika konusunun adını belirtir. Bu değer, tam konu adının bir alt dizesi olabilir.|  
 |`/nph`|Destekleniyorsa, yürütülebilir dosyalar için sayfa karmalarını gizler. Varsayılan, wintrust.dll sürümü ve SIGNTOOL_PAGE_HASHES ortam değişkeni tarafından belirlenir. PE olmayan dosyalar için bu seçenek göz ardı edilir.|  
 |`/p`  *Parola*|PFX dosyası açılırken kullanılacak parolayı belirtir. (Kullanım `/f` seçeneği bir PFX dosyası belirtin.)|  
-|`/p7`*Yolu*|Bir Ortak Anahtar Şifreleme Standartları (PKCS) #7 dosyasının belirtilen her içerik dosyası için üretildiğini belirtir. PKCS #7 dosyaları adlı *yolu*\\*filename*.p7.|  
-|`/p7ce`*Değeri*|İmzalanmış PKCS #7 içeriği için seçenekleri belirtir. Ayarlama *değeri* imzalanmış içerik PKCS #7 dosyası eklemek için "katıştırılmış" veya "ayrılmış bir PKCS #7 dosyası imzalı veri bölümü üretmek için DetachedSignedData". Varsa `/p7ce` seçeneği kullanılmaz, imzalanmış içerik varsayılan olarak katıştırılır.|  
-|`/p7co` *\<OID >*|İmzalanmış PKCS #7 içeriğini tanımlayan nesne tanımlayıcısını (OID) belirtir.|  
+|`/p7` *Yol*|Bir Ortak Anahtar Şifreleme Standartları (PKCS) #7 dosyasının belirtilen her içerik dosyası için üretildiğini belirtir. PKCS #7 dosyaları adlı *yolu*\\*filename*.p7.|  
+|`/p7ce` *Değer*|İmzalanmış PKCS #7 içeriği için seçenekleri belirtir. Ayarlama *değeri* imzalanmış içerik PKCS #7 dosyası eklemek için "katıştırılmış" veya "ayrılmış bir PKCS #7 dosyası imzalı veri bölümü üretmek için DetachedSignedData". Varsa `/p7ce` seçeneği kullanılmaz, imzalanmış içerik varsayılan olarak katıştırılır.|  
+|`/p7co` *\<OID &GT;*|İmzalanmış PKCS #7 içeriğini tanımlayan nesne tanımlayıcısını (OID) belirtir.|  
 |`/ph`|Destekleniyorsa, yürütülebilir dosyalar için sayfa karmaları oluşturur.|  
 |`/r`  *RootSubjectName*|İmzalama sertifikasının bağlanması gerektiği kök sertifikası konusunun adını belirtir. Bu değer, kök sertifikasının tam konu adının bir alt dizesi olabilir.|  
-|`/s`  *StoreName*|Sertifika için arama yaparken açılacak depoyu belirtir. Bu seçenek belirtilmezse, `My` deposu açılır.|  
+|`/s`  *storeName*|Sertifika için arama yaparken açılacak depoyu belirtir. Bu seçenek belirtilmezse, `My` deposu açılır.|  
 |`/sha1`  *Karma*|İmza sertifikanın SHA1 karmasını belirtir. Kalan anahtarlar tarafından belirtilen ölçütlere uygun birden çok sertifika olduğunda genellikle SHA1 karması belirtilir.|  
 |`/sm`|Bir kullanıcı deposu yerine, makine deposu kullanıldığını belirtir.|  
 |`/t`  *URL*|Zaman damgası sunucusunun URL'sini belirtir. Varsa bu seçeneği (veya `/tr`) olan mevcut değil, imzalanmış dosya zaman damgalı olmaz. Zaman damgası başarısız olduğunda bir uyarı üretilir. Bu seçenek kullanılamaz `/tr` seçeneği.|  
@@ -116,8 +106,8 @@ signtool [command] [options] [file_name | ...]
 |----------------------|-----------------|  
 |`/p7`|Zaman damgaları PKCS #7 dosyaları.|  
 |`/t`  *URL*|Zaman damgası sunucusunun URL'sini belirtir. Zaman damgası vurulan dosyanın önceden imzalanmış olması gerekir. Ya da `/t` veya `/tr` seçeneği gereklidir.|  
-|`/td`  *algoritma*|RFC 3161 zaman damgası sunucusu tarafından kullanılan bir özet algoritması ister. `/td`ile birlikte kullanılan `/tr` seçeneği.|  
-|`/tp`*dizini*|Zaman damgaları İmza *dizin*.|  
+|`/td`  *algoritma*|RFC 3161 zaman damgası sunucusu tarafından kullanılan bir özet algoritması ister. `/td` ile birlikte kullanılan `/tr` seçeneği.|  
+|`/tp` *Dizin*|Zaman damgaları İmza *dizin*.|  
 |`/tr`  *URL*|RFC 3161 zaman damgası sunucusunun URL'sini belirtir. Zaman damgası vurulan dosyanın önceden imzalanmış olması gerekir. Ya da `/tr` veya `/t` seçeneği gereklidir.|  
   
  Bir kullanım örnek için bkz: [ekleme zaman damgaları daha önce imzalanmış dosyalar için](http://msdn.microsoft.com/library/windows/desktop/aa375542.aspx).  
@@ -129,21 +119,21 @@ signtool [command] [options] [file_name | ...]
 |-------------------|-----------------|  
 |`/a`|Tüm yöntemlerin dosyayı doğrulamak için kullanılabileceğini belirtir. İlk olarak, dosyanın bir katalogda imzalanmış olup olmadığını belirlemek için katalog veritabanları aranır. Dosya herhangi bir katalogda imzalanmamışsa, İmza Aracı dosyanın katıştırılmış imzasını doğrulamayı dener. Katalogda oturum açmış veya açmamış dosyalar doğrulanırken bu seçenek önerilir. Bu dosyaların örnekleri arasında Windows dosyaları veya sürücüleri yer alır.|  
 |`/ad`|Varsayılan katalog veritabanını kullanarak kataloğu bulur.|  
-|`/ag`*CatDBGUID*|Tarafından tanımlanan katalog veritabanındaki katalog bulur *CatDBGUID*.|  
+|`/ag` *CatDBGUID*|Tarafından tanımlanan katalog veritabanındaki katalog bulur *CatDBGUID*.|  
 |`/all`|Birden çok imza içeren bir dosyadaki tüm imzaları doğrular.|  
 |`/as`|Sistem bileşeni (sürücü) katalog veritabanını kullanarak kataloğu bulur.|  
-|`/c`*CatFile*|Katalog dosyası adını belirtir.|  
+|`/c` *CatFile*|Katalog dosyası adını belirtir.|  
 |`/d`|İmza Aracı'nın açıklama ve açıklama URL'sini yazdırması gerektiğini belirtir.|  
 |`/ds`  *Dizin*|Belirtilen bir konumda imzayı doğrular.|  
 |`/hash` (`SHA1`&#124;`SHA256`)|Katalogdaki bir dosya ararken kullanmak için bir isteğe bağlı karma algoritmasını belirtir.|  
 |`/kp`|Çekirdek modu sürücü imzalama ilkesi ile doğrulama gerçekleştirilmesi gerektiğini belirtir.|  
 |`/ms`|Birden çok doğrulama mantığı kullanır. Bu, varsayılan davranıştır bir [WinVerifyTrust](http://msdn.microsoft.com/library/windows/desktop/aa388208.aspx) çağırmak [!INCLUDE[win8](../../../includes/win8-md.md)] ve üstü.|  
-|`/o`*Sürüm*|İşletim sistemi sürümüne göre dosyayı doğrular. *Sürüm* aşağıdaki biçime sahiptir: *sistemi PlatformId*:*VerMajor*. *VerMinor*. *BuildNumber*. *Sistemi PlatformId* alttaki değerini temsil eden bir <xref:System.PlatformID> numaralandırma üyesi. **Önemli:** kullanımını `/o` anahtar önerilir. Varsa `/o` belirtilmezse, SignTool.exe beklenmeyen sonuçlar döndürebilir. Örneğin, dahil `/o` anahtar, daha eski bir işletim sisteminde doğru doğrulamak sistem kataloglarında doğrulanmadı doğru daha yeni bir işletim sisteminde.|  
+|`/o` *Sürüm*|İşletim sistemi sürümüne göre dosyayı doğrular. *Sürüm* aşağıdaki biçime sahiptir: *sistemi PlatformId*:*VerMajor*. *VerMinor*. *BuildNumber*. *Sistemi PlatformId* alttaki değerini temsil eden bir <xref:System.PlatformID> numaralandırma üyesi. **Önemli:** kullanımını `/o` anahtar önerilir. Varsa `/o` belirtilmezse, SignTool.exe beklenmeyen sonuçlar döndürebilir. Örneğin, dahil `/o` anahtar, daha eski bir işletim sisteminde doğru doğrulamak sistem kataloglarında doğrulanmadı doğru daha yeni bir işletim sisteminde.|  
 |`/p7`|PKCS #7 dosyalarını doğrular. Varolan ilkeler PKCS #7 doğrulaması için kullanılmaz. İmza denetlenir ve imzalama sertifikası zincir oluşturulur.|  
 |`/pa`|Varsayılan Authenticode Doğrulama İlkesi kullanılması gerektiğini belirtir. Varsa `/pa` seçeneği belirtilmezse, imza aracı Windows sürücü doğrulama İlkesi kullanır. Bu seçenek kullanılamaz `catdb` seçenekleri.|  
-|`/pg`*PolicyGUID*|GUID'ye göre doğrulama ilkesi belirtir. *PolicyGUID* doğrulama İlkesi ActionId için karşılık gelir. Bu seçenek kullanılamaz `catdb` seçenekleri.|  
+|`/pg` *PolicyGUID*|GUID'ye göre doğrulama ilkesi belirtir. *PolicyGUID* doğrulama İlkesi ActionId için karşılık gelir. Bu seçenek kullanılamaz `catdb` seçenekleri.|  
 |`/ph`|İmza Aracı'nın sayfa karma değerlerini yazdırması ve doğrulaması gerektiğini belirtir.|  
-|`/r`*RootSubjectName*|İmzalama sertifikasının bağlanması gerektiği kök sertifikası konusunun adını belirtir. Bu değer, kök sertifikasının tam konu adının bir alt dizesi olabilir.|  
+|`/r` *RootSubjectName*|İmzalama sertifikasının bağlanması gerektiği kök sertifikası konusunun adını belirtir. Bu değer, kök sertifikasının tam konu adının bir alt dizesi olabilir.|  
 |`/tw`|İmza zaman damgalı değilse bir uyarı oluşturulacağını belirtir.|  
   
  Kullanım örnekleri için bkz: [kullanarak bir dosya imzayı doğrulamak için SignTool](http://msdn.microsoft.com/library/windows/desktop/aa388171.aspx).  

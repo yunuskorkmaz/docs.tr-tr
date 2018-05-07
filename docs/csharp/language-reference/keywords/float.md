@@ -1,9 +1,6 @@
 ---
-title: "float (C# Başvurusu)"
+title: float (C# Başvurusu)
 ms.date: 07/20/2015
-ms.prod: .net
-ms.technology: devlang-csharp
-ms.topic: article
 f1_keywords:
 - float
 - float_CSharpKeyword
@@ -11,14 +8,11 @@ helpviewer_keywords:
 - float keyword [C#]
 - floating-point numbers [C#], float keyword
 ms.assetid: 1e77db7b-dedb-48b7-8dd1-b055e96a9258
-caps.latest.revision: "24"
-author: BillWagner
-ms.author: wiwagn
-ms.openlocfilehash: 846f132812fe90a285c81a020d440fc846f88b5b
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: edeed59da26c7007b23e1eec8c05fbd2e6d34d36
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="float-c-reference"></a>float (C# Başvurusu)
 `float` Anahtar sözcüğü 32 bit kayan nokta değerlerini depolayan basit bir tür belirtir. Aşağıdaki tabloda duyarlık ve yaklaşık aralığının gösterir `float` türü.  
@@ -66,10 +60,10 @@ float x = 3.5F;
 ## <a name="see-also"></a>Ayrıca Bkz.  
  <xref:System.Single>  
  [C# başvurusu](../../../csharp/language-reference/index.md)  
- [C# programlama kılavuzu](../../../csharp/programming-guide/index.md)  
- [Atama ve tür dönüşümleri](../../../csharp/programming-guide/types/casting-and-type-conversions.md)  
- [C# anahtar sözcükleri](index.md)  
- [Tam sayı türleri tablosu](integral-types-table.md)  
- [Yerleşik türler tablosu](built-in-types-table.md)  
- [Örtük sayısal dönüşümler tablosu](implicit-numeric-conversions-table.md)  
- [Açık sayısal dönüşümler tablosu](explicit-numeric-conversions-table.md)
+ [C# Programlama Kılavuzu](../../../csharp/programming-guide/index.md)  
+ [Tür Değiştirme ve Tür Dönüştürmeler](../../../csharp/programming-guide/types/casting-and-type-conversions.md)  
+ [C# Anahtar Sözcükleri](index.md)  
+ [Tam Sayı Türleri Tablosu](integral-types-table.md)  
+ [Yerleşik Türler Tablosu](built-in-types-table.md)  
+ [Örtük Sayısal Dönüştürmeler Tablosu](implicit-numeric-conversions-table.md)  
+ [Açık Sayısal Dönüştürmeler Tablosu](explicit-numeric-conversions-table.md)

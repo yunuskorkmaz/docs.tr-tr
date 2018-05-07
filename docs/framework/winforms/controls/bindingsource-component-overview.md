@@ -1,29 +1,17 @@
 ---
-title: "BindingSource Bileşenine Genel Bakış"
-ms.custom: 
+title: BindingSource Bileşenine Genel Bakış
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-winforms
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - Windows Forms, data binding
 - controls [Windows Forms], binding to data
 - BindingSource component [Windows Forms], about BindingSource component
 - data binding [Windows Forms], BindingSource component
 ms.assetid: be838caf-fcb0-4b68-827f-58b2c04b747f
-caps.latest.revision: "26"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 291ceb32d7128a63ba9a251ce916c18adb100100
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 047df677ade3837e167845ace2bdc6ca14738c3c
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="bindingsource-component-overview"></a>BindingSource Bileşenine Genel Bakış
 <xref:System.Windows.Forms.BindingSource> Bileşen denetimleri için temel bir veri kaynağına bağlama işlemini basitleştirmek için tasarlanmıştır. <xref:System.Windows.Forms.BindingSource> Bileşen bir conduit ve bağlamak diğer denetimler için bir veri kaynağı olarak davranır. Temel alınan veri listesine komutları geçirme sırasında formun veri bağlantısı için bir Özet sağlar. Böylece bir veri kaynağı olarak bileşen işlevleri Ayrıca, veri doğrudan bu onu ekleyebilirsiniz.  
@@ -51,22 +39,22 @@ ms.lasthandoff: 12/22/2017
   
 |Üye|Açıklama|  
 |------------|-----------------|  
-|<xref:System.Windows.Forms.BindingSource.Current%2A>özelliği|Veri kaynağı geçerli öğesini alır.|  
-|<xref:System.Windows.Forms.BindingSource.Position%2A>özelliği|Alır veya arka plandaki listesinde geçerli konumunu ayarlar.|  
-|<xref:System.Windows.Forms.BindingSource.List%2A>özelliği|Değerlendirmesi listesinde alır <xref:System.Windows.Forms.BindingSource.DataSource%2A> ve <xref:System.Windows.Forms.BindingSource.DataMember%2A> değerlendirme. Varsa <xref:System.Windows.Forms.BindingSource.DataMember%2A> ayarlı değildir, tarafından belirtilen listesini döndürür <xref:System.Windows.Forms.BindingSource.DataSource%2A>.|  
-|<xref:System.Windows.Forms.BindingSource.Insert%2A>yöntemi|Belirtilen dizindeki listedeki bir öğe ekler.|  
-|<xref:System.Windows.Forms.BindingSource.RemoveCurrent%2A>yöntemi|Geçerli öğeyi listeden kaldırır.|  
-|<xref:System.Windows.Forms.BindingSource.EndEdit%2A>yöntemi|Bekleyen değişiklikler, temel alınan veri kaynağı için geçerlidir.|  
-|<xref:System.Windows.Forms.BindingSource.CancelEdit%2A>yöntemi|Geçerli düzenleme işlemi iptal eder.|  
-|<xref:System.Windows.Forms.BindingSource.AddNew%2A>yöntemi|Yeni bir öğe altta yatan listeye ekler. Implements veri kaynağı, <xref:System.ComponentModel.IBindingList> ve bir öğeyi döndürür <xref:System.Windows.Forms.BindingSource.AddingNew> olay, bu öğe ekler. Aksi takdirde, istek listesine ait geçirilir <xref:System.ComponentModel.IBindingList.AddNew%2A> yöntemi. Alttaki listede değilse, bir <xref:System.ComponentModel.IBindingList>, öğesi kendi ortak varsayılan oluşturucu kullanılarak otomatik olarak oluşturulur.|  
+|<xref:System.Windows.Forms.BindingSource.Current%2A> Özelliği|Veri kaynağı geçerli öğesini alır.|  
+|<xref:System.Windows.Forms.BindingSource.Position%2A> Özelliği|Alır veya arka plandaki listesinde geçerli konumunu ayarlar.|  
+|<xref:System.Windows.Forms.BindingSource.List%2A> Özelliği|Değerlendirmesi listesinde alır <xref:System.Windows.Forms.BindingSource.DataSource%2A> ve <xref:System.Windows.Forms.BindingSource.DataMember%2A> değerlendirme. Varsa <xref:System.Windows.Forms.BindingSource.DataMember%2A> ayarlı değildir, tarafından belirtilen listesini döndürür <xref:System.Windows.Forms.BindingSource.DataSource%2A>.|  
+|<xref:System.Windows.Forms.BindingSource.Insert%2A> Yöntemi|Belirtilen dizindeki listedeki bir öğe ekler.|  
+|<xref:System.Windows.Forms.BindingSource.RemoveCurrent%2A> Yöntemi|Geçerli öğeyi listeden kaldırır.|  
+|<xref:System.Windows.Forms.BindingSource.EndEdit%2A> Yöntemi|Bekleyen değişiklikler, temel alınan veri kaynağı için geçerlidir.|  
+|<xref:System.Windows.Forms.BindingSource.CancelEdit%2A> Yöntemi|Geçerli düzenleme işlemi iptal eder.|  
+|<xref:System.Windows.Forms.BindingSource.AddNew%2A> Yöntemi|Yeni bir öğe altta yatan listeye ekler. Implements veri kaynağı, <xref:System.ComponentModel.IBindingList> ve bir öğeyi döndürür <xref:System.Windows.Forms.BindingSource.AddingNew> olay, bu öğe ekler. Aksi takdirde, istek listesine ait geçirilir <xref:System.ComponentModel.IBindingList.AddNew%2A> yöntemi. Alttaki listede değilse, bir <xref:System.ComponentModel.IBindingList>, öğesi kendi ortak varsayılan oluşturucu kullanılarak otomatik olarak oluşturulur.|  
   
 ## <a name="sorting-and-filtering"></a>Sıralama ve filtreleme  
  Genellikle, bir veri kaynağı sıralı veya filtrelenmiş görünüm ile çalışması gerekir. Üyeleri, aşağıdaki tabloda gösterilmektedir <xref:System.Windows.Forms.BindingSource> bileşen veri kaynağı sağlar.  
   
 |Üye|Açıklama|  
 |------------|-----------------|  
-|<xref:System.Windows.Forms.BindingSource.Sort%2A>özelliği|Veri kaynağı ise bir <xref:System.ComponentModel.IBindingList>, alır veya ayarlar sıralama ve sıralama sipariş bilgilerini için kullanılan bir sütun adı. Veri kaynağı ise bir <xref:System.ComponentModel.IBindingListView> ve sıralama, Gelişmiş destekler, sıralama ve sıralama sipariş bilgilerini için kullanılan birden fazla sütun adlarını alır|  
-|<xref:System.Windows.Forms.BindingSource.Filter%2A>özelliği|Veri kaynağı ise bir <xref:System.ComponentModel.IBindingListView>, alır veya ayarlar hangi satırların görüntülenen filtre uygulamak için kullanılan ifade.|  
+|<xref:System.Windows.Forms.BindingSource.Sort%2A> Özelliği|Veri kaynağı ise bir <xref:System.ComponentModel.IBindingList>, alır veya ayarlar sıralama ve sıralama sipariş bilgilerini için kullanılan bir sütun adı. Veri kaynağı ise bir <xref:System.ComponentModel.IBindingListView> ve sıralama, Gelişmiş destekler, sıralama ve sıralama sipariş bilgilerini için kullanılan birden fazla sütun adlarını alır|  
+|<xref:System.Windows.Forms.BindingSource.Filter%2A> Özelliği|Veri kaynağı ise bir <xref:System.ComponentModel.IBindingListView>, alır veya ayarlar hangi satırların görüntülenen filtre uygulamak için kullanılan ifade.|  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
  <xref:System.Windows.Forms.BindingSource>  

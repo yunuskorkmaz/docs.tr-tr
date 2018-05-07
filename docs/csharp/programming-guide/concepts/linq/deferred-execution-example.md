@@ -1,21 +1,12 @@
 ---
-title: "Ertelenmiş yürütme örneği (C#)"
-ms.custom: 
+title: Ertelenmiş yürütme örneği (C#)
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-csharp
-ms.topic: article
 ms.assetid: 50f4fbac-81fe-4f26-aedf-506e21419b19
-caps.latest.revision: "3"
-author: BillWagner
-ms.author: wiwagn
-ms.openlocfilehash: b902c58f801a6e157a971335895670e8a8bf2181
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.openlocfilehash: 8613f2335e5b3cb2a012f5309307e081b9400709
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="deferred-execution-example-c"></a>Ertelenmiş yürütme örneği (C#)
 Geç değerlendirme, LINQ to XML sorgularını yürütme etkiler ve bu konuda nasıl ertelenmiş yürütme gösterir.  

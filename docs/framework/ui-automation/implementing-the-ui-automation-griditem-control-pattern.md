@@ -1,28 +1,19 @@
 ---
-title: "UI Otomasyon GridItem Denetim Düzeni Uygulama"
-ms.custom: 
+title: UI Otomasyon GridItem Denetim Düzeni Uygulama
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-bcl
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - control patterns, GridItem
 - UI Automation GridItem control pattern
 - GridItem control pattern
 ms.assetid: bffbae08-fe2a-42fd-ab84-f37187518916
-caps.latest.revision: "15"
 author: Xansky
 ms.author: mhopkins
 manager: markl
-ms.workload: dotnet
-ms.openlocfilehash: d234ea6f15706a47f6a758528dbe4eda0f3b778a
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: bfe7fb8ab64f148d8ca5af0e419ca60690a1acce
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="implementing-the-ui-automation-griditem-control-pattern"></a>UI Otomasyon GridItem Denetim Düzeni Uygulama
 > [!NOTE]
@@ -40,7 +31,7 @@ ms.lasthandoff: 12/22/2017
   
 -   Birleştirilmiş hücreler bildirir kendi <xref:System.Windows.Automation.Provider.IGridItemProvider.Row%2A> ve <xref:System.Windows.Automation.Provider.IGridItemProvider.Column%2A> özelliklerine bağlı bunların temel bağlantı hücrede UI Otomasyon sağlayıcı tarafından tanımlandığı şekilde. Genellikle, en üstteki ve en soldaki satır veya sütun olacaktır.  
   
--   <xref:System.Windows.Automation.Provider.IGridItemProvider>birleştirme veya hücreleri bölme gibi kılavuzunun etkin işleme için sağlamaz.  
+-   <xref:System.Windows.Automation.Provider.IGridItemProvider> birleştirme veya hücreleri bölme gibi kılavuzunun etkin işleme için sağlamaz.  
   
 -   Denetimleri uygulayan <xref:System.Windows.Automation.Provider.IGridItemProvider> genellikle geçiş (diğer bir deyişle, UI Otomasyonu istemci bitişik denetimlere taşıyabilirsiniz) klavyeyi kullanarak.  
   

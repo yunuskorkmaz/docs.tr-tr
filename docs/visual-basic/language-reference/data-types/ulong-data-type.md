@@ -1,11 +1,6 @@
 ---
-title: "ULong Veri Türü (Visual Basic)"
+title: ULong Veri Türü (Visual Basic)
 ms.date: 01/31/2018
-ms.prod: .net
-ms.suite: 
-ms.technology:
-- devlang-visual-basic
-ms.topic: article
 f1_keywords:
 - vb.ulong
 helpviewer_keywords:
@@ -23,11 +18,11 @@ helpviewer_keywords:
 ms.assetid: 017e0702-774e-44ae-bedc-786b424ca84e
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 606e0ef87b209bb2e75e28223f27d081713c1b7e
-ms.sourcegitcommit: d2da0142247ef42a219a5d2907f153e62dc6ea0d
+ms.openlocfilehash: 1b0137f0f33abfdb3f03758323edeaa63ac60117
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/01/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="ulong-data-type-visual-basic"></a>ULong veri türü (Visual Basic)
 
@@ -80,7 +75,7 @@ Dim number = &H_00_00_0A_96_2F_AC_14_D7ul
   
 -   **Genişletme.** `ULong` Veri türü widens için `Decimal`, `Single`, ve `Double`. Bu dönüştürebilirsiniz anlamına gelir `ULong` karşılaşmadan olmadan bu türdeki herhangi bir <xref:System.OverflowException?displayProperty=nameWithType> hata.  
   
--   **Karakterleri yazın.** Değişmez değer türü karakterleri ekleme `UL` bir hazır değer zorlar `ULong` veri türü. `ULong`hiçbir tanımlayıcı türü karakteri var.
+-   **Karakterleri yazın.** Değişmez değer türü karakterleri ekleme `UL` bir hazır değer zorlar `ULong` veri türü. `ULong` hiçbir tanımlayıcı türü karakteri var.
   
 -   **Framework türü.** .NET Framework'teki karşılık gelen tür <xref:System.UInt64?displayProperty=nameWithType> yapısı.  
   

@@ -1,24 +1,17 @@
 ---
 title: while (C# Başvurusu)
 ms.date: 07/20/2015
-ms.prod: .net
-ms.technology:
-- devlang-csharp
-ms.topic: article
 f1_keywords:
 - while_CSharpKeyword
 - while
 helpviewer_keywords:
 - while keyword [C#]
 ms.assetid: 72a0765c-6852-4aca-b327-4a11cb7f5c59
-caps.latest.revision: 22
-author: BillWagner
-ms.author: wiwagn
-ms.openlocfilehash: 420b409689d877c3e1ac744e8d7a65500cf8f964
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 23c5ca3bb7dc401a894a6c3918fbaec9a9306153
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="while-c-reference"></a>while (C# Başvurusu)
 `while` Deyimi, bir deyim veya ifadeleri bir blok için belirtilen ifadeyi değerlendirir kadar yürütür `false`.  
@@ -41,7 +34,7 @@ ms.lasthandoff: 11/21/2017
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
  [C# başvurusu](../../../csharp/language-reference/index.md)  
- [C# programlama kılavuzu](../../../csharp/programming-guide/index.md)  
- [C# anahtar sözcükleri](../../../csharp/language-reference/keywords/index.md)  
- [while deyimi (C++)](/cpp/cpp/while-statement-cpp)  
- [Yineleme deyimleri](../../../csharp/language-reference/keywords/iteration-statements.md)
+ [C# Programlama Kılavuzu](../../../csharp/programming-guide/index.md)  
+ [C# Anahtar Sözcükleri](../../../csharp/language-reference/keywords/index.md)  
+ [while Deyimi (C++)](/cpp/cpp/while-statement-cpp)  
+ [Yineleme Deyimleri](../../../csharp/language-reference/keywords/iteration-statements.md)

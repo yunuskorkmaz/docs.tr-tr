@@ -1,10 +1,6 @@
 ---
 title: COM için Derlemeyi Paketleme
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.technology:
-- dotnet-clr
-ms.topic: article
 helpviewer_keywords:
 - exposing .NET Framework components to COM
 - COM interop, packaging assemblies
@@ -22,14 +18,11 @@ helpviewer_keywords:
 ms.assetid: 39dc55aa-f2a1-4093-87bb-f1c0edb6e761
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 5c1e3ee38f98eae46c09ec2175f3c9af01288bd2
-ms.sourcegitcommit: 9a4fe1a1c37b26532654b4bbe22d702237950009
+ms.openlocfilehash: f2906159c7474b42f81bdf066855072466b6be63
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="packaging-an-assembly-for-com"></a>COM için Derlemeyi Paketleme
 COM geliştiricilerin uygulamalarında eklemenizi planladıkları yönetilen türleri hakkında aşağıdaki bilgileri yararlı:  
@@ -86,7 +79,7 @@ COM geliştiricilerin uygulamalarında eklemenizi planladıkları yönetilen tü
 ## <a name="net-services-installation-tool"></a>.NET Hizmetleri Yükleme aracı  
  [.NET Hizmetleri Yükleme aracı (Regsvcs.exe)](../tools/regsvcs-exe-net-services-installation-tool.md) yönetilen sınıflar Windows 2000 Bileşen Hizmetleri'ne ekler ve tek bir aracı içindeki çeşitli görevleri birleştirir. Yükleme ve bir derlemeyi kaydetme ek olarak, Regsvcs.exe oluşturmak, kaydetme ve var olan bir COM + 1.0 uygulamasına tür kitaplığı yükleyin.  
   
-## <a name="see-also"></a>Ayrıca bkz.  
+## <a name="see-also"></a>Ayrıca Bkz.  
  <xref:System.Runtime.InteropServices.TypeLibConverter>  
  <xref:System.Runtime.InteropServices.ITypeLibConverter>  
  [.NET Framework Bileşenlerini COM'da Gösterme](exposing-dotnet-components-to-com.md)  

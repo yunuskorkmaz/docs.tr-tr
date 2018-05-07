@@ -1,13 +1,7 @@
 ---
-title: "Görev Tabanlı Zaman Uyumsuz Desen (TAP)"
-ms.custom: 
+title: Görev Tabanlı Zaman Uyumsuz Desen (TAP)
 ms.date: 03/30/2017
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
 ms.technology: dotnet-standard
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -18,18 +12,13 @@ helpviewer_keywords:
 - Task-based Asynchronous Pattern, .NET Framework support for
 - .NET Framework, asynchronous design patterns
 ms.assetid: 8cef1fcf-6f9f-417c-b21f-3fd8bac75007
-caps.latest.revision: "15"
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-- dotnetcore
-ms.openlocfilehash: 3c3d768414a5cd8a8a9fd4a7e120f74d70827729
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: fe69943a6f87bbbb7f29d1e4d6d30c26709725d8
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="task-based-asynchronous-pattern-tap"></a>Görev Tabanlı Zaman Uyumsuz Desen (TAP)
 Görev tabanlı zaman uyumsuz desen (TAP) dayanır <xref:System.Threading.Tasks.Task?displayProperty=nameWithType> ve <xref:System.Threading.Tasks.Task%601?displayProperty=nameWithType> türlerini <xref:System.Threading.Tasks?displayProperty=nameWithType> rasgele zaman uyumsuz işlemleri temsil etmek için kullanılan ad. TAP yeni geliştirme için önerilen zaman uyumsuz tasarım desenidir.  
@@ -77,7 +66,7 @@ Görev tabanlı zaman uyumsuz desen (TAP) dayanır <xref:System.Threading.Tasks.
   
  Bir iptal belirteci iptal belirtecini çağrılır kabul DOKUNUN yöntemi önce varsa istedi, DOKUNUN yöntem döndürmelidir bir <xref:System.Threading.Tasks.TaskStatus.Canceled> görev.  Ancak, eğer zaman uyumsuz işlem yürütülüyorken bir iptal istenirse, zaman uyumsuz işlem iptal isteğini kabul etmek zorunda değildir.  Döndürülen görev sona erdirmelisiniz <xref:System.Threading.Tasks.TaskStatus.Canceled> yalnızca işlemi sonucunda iptal isteğini bitip bitmediğini belirtin. İptal istendi, ancak bir sonuç veya bir özel durum hala üretilen görev içinde bitmelidir <xref:System.Threading.Tasks.TaskStatus.RanToCompletion> veya <xref:System.Threading.Tasks.TaskStatus.Faulted> durumu. 
  
- İlk iptal yeteneği kullanıma sunmak istediğiniz zaman uyumsuz yöntemleri için bir iptal belirteci kabul etmez bir aşırı sağlamak zorunda değilsiniz. İptal edilemeyen yöntemler için iptal belirteci kabul eden bir aşırı yükleme sağlamayın; bu çağırana hedef yöntemin iptal edilip edilemez olduğunu belirtmeye yardımcı olur.  İptal işlemleriniz değil tüketici kodu kabul eden bir yöntem çağrısı bir <xref:System.Threading.CancellationToken> ve sağlamak <xref:System.Threading.CancellationToken.None%2A> bağımsız değişken değeri olarak. <xref:System.Threading.CancellationToken.None%2A>Varsayılan işlevsel olarak eşdeğerdir <xref:System.Threading.CancellationToken>.  
+ İlk iptal yeteneği kullanıma sunmak istediğiniz zaman uyumsuz yöntemleri için bir iptal belirteci kabul etmez bir aşırı sağlamak zorunda değilsiniz. İptal edilemeyen yöntemler için iptal belirteci kabul eden bir aşırı yükleme sağlamayın; bu çağırana hedef yöntemin iptal edilip edilemez olduğunu belirtmeye yardımcı olur.  İptal işlemleriniz değil tüketici kodu kabul eden bir yöntem çağrısı bir <xref:System.Threading.CancellationToken> ve sağlamak <xref:System.Threading.CancellationToken.None%2A> bağımsız değişken değeri olarak. <xref:System.Threading.CancellationToken.None%2A> Varsayılan işlevsel olarak eşdeğerdir <xref:System.Threading.CancellationToken>.  
   
 ## <a name="progress-reporting-optional"></a>İlerleme Raporlama (İsteğe Bağlı)  
  Bazı zaman uyumsuz işlemler ilerleme bildirimlerinden faydalanır; bunlar genel olarak kullanıcı arayüzünü zaman uyumsuz işlemin ilerlemesi ile ilgili bilgiyle güncelleştirmekte kullanılır. 

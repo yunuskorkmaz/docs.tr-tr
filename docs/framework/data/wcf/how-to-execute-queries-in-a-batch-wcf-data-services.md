@@ -1,31 +1,17 @@
 ---
-title: "Nasıl yapılır: bir toplu işlemi (WCF Veri Hizmetleri) sorgularını Yürüt"
-ms.custom: 
+title: 'Nasıl yapılır: bir toplu işlemi (WCF Veri Hizmetleri) sorgularını Yürüt'
 ms.date: 03/30/2017
-ms.prod: .net-framework-oob
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
 helpviewer_keywords:
 - WCF Data Services, batch requests
 ms.assetid: 3b4db7df-bd33-43a1-8ea4-63a18e131f97
-caps.latest.revision: 
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 01dfb1ac10bdc54f682df4b8af66ba4fd507b705
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: d710d6539cf465624aa985ce19a67a6d8fb8ee8d
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-execute-queries-in-a-batch-wcf-data-services"></a>Nasıl yapılır: bir toplu işlemi (WCF Veri Hizmetleri) sorgularını Yürüt
 Kullanarak [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] istemci kitaplığı, tek bir toplu işlemde birden fazla sorgu veri hizmeti karşı çalıştırabilirsiniz. Daha fazla bilgi için bkz: [toplu işlemleri](../../../../docs/framework/data/wcf/batching-operations-wcf-data-services.md).  

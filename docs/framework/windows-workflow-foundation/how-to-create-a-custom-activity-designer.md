@@ -1,30 +1,19 @@
 ---
-title: "Nasıl yapılır: Özel Etkinlik Tasarımcısı oluşturma"
-ms.custom: 
+title: 'Nasıl yapılır: Özel Etkinlik Tasarımcısı oluşturma'
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 2f3aade6-facc-44ef-9657-a407ef8b9b31
-caps.latest.revision: "25"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 10fc7461c077d73fedb1e326f88156e4a816cdee
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: e4aab60a598be2d6df5546ab1c98a289b4aef04a
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-create-a-custom-activity-designer"></a>Nasıl yapılır: Özel Etkinlik Tasarımcısı oluşturma
 Özel Etkinlik tasarımcıları, bunların ilişkili etkinliklerini onlarla tasarım yüzeyi açın, tasarımcıları bırakılabilir diğer etkinlikleri ile birleştirilebilir; böylece genellikle uygulanır. Bu işlev bir özel etkinlik Tasarımcısı "isteğe bağlı bir etkinlik nereye yerleştirileceğini bırakma bölgesi" ve ayrıca tasarım yüzeyine öğelerde elde edilen koleksiyonunu yönetmenizi anlamına gelir sağlaması gerekir. Bu konuda, bu tür bir bırakma bölgesi içeren bir özel etkinlik Tasarımcısı oluşturma ve düzenleme işlevi Tasarımcı öğe koleksiyonunu yönetmek gerekli olduğunu sağlayan bir özel etkinlik Tasarımcısı oluşturma açıklanmaktadır.  
   
  Özel Etkinlik tasarımcıları genellikle devral <xref:System.Activities.Presentation.ActivityDesigner> belirli bir tasarımcı olmadan tüm etkinlikler için varsayılan taban etkinlik Tasarımcısı türü değil. Bu tür özellik Kılavuzu ile etkileşim ve renkleri ve simgeleri yönetme gibi temel özelliklerini yapılandırma tasarım zamanı deneyimi sağlar.  
   
- <xref:System.Activities.Presentation.ActivityDesigner>iki Yardımcısı denetimleri kullanan <xref:System.Activities.Presentation.WorkflowItemPresenter> ve <xref:System.Activities.Presentation.WorkflowItemsPresenter> özel etkinlik tasarımcıları geliştirmek daha kolay. Bunlar, alt öğelerini, silme, seçim ve ayrıca bu alt öğelerini sürükleyip gibi ortak işlevselliği işleyin. <xref:System.Activities.Presentation.WorkflowItemPresenter> "Açılan bölge", sağlayarak kullanıcı Arabirimi öğesi içinde tek bir alt sağlar, çalışırken <xref:System.Activities.Presentation.WorkflowItemsPresenter> destekleyen birden çok kullanıcı Arabirimi öğeleri, sıralama gibi dahil olmak üzere ek işlevsellik sağlayabilir, taşıma, silme ve alt öğeleri ekleme.  
+ <xref:System.Activities.Presentation.ActivityDesigner> iki Yardımcısı denetimleri kullanan <xref:System.Activities.Presentation.WorkflowItemPresenter> ve <xref:System.Activities.Presentation.WorkflowItemsPresenter> özel etkinlik tasarımcıları geliştirmek daha kolay. Bunlar, alt öğelerini, silme, seçim ve ayrıca bu alt öğelerini sürükleyip gibi ortak işlevselliği işleyin. <xref:System.Activities.Presentation.WorkflowItemPresenter> "Açılan bölge", sağlayarak kullanıcı Arabirimi öğesi içinde tek bir alt sağlar, çalışırken <xref:System.Activities.Presentation.WorkflowItemsPresenter> destekleyen birden çok kullanıcı Arabirimi öğeleri, sıralama gibi dahil olmak üzere ek işlevsellik sağlayabilir, taşıma, silme ve alt öğeleri ekleme.  
   
  Özel Etkinlik Tasarımcısı uygulamasında vurgulama gereken Öykü diğer anahtar parçası içinde visual düzenlemeleri bağlı kullanarak şekliyle ilgilidir [!INCLUDE[avalon2](../../../includes/avalon2-md.md)] ne biz Tasarımcısı'nda düzenliyorsanız, bellekte örnek veri bağlama. Bu, ayrıca değişiklik bildirimi ve olayları durumları değişiklikleri gibi izlenmesini etkinleştirmek için sorumlu olan Model öğesi ağacı tarafından gerçekleştirilir.  
   

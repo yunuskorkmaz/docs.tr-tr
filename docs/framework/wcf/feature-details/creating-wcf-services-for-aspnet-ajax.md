@@ -1,33 +1,19 @@
 ---
 title: ASP.NET AJAX için WCF Hizmetleri Oluşturma
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 ms.assetid: 04c0402c-e617-4ba5-aedf-d17692234776
-caps.latest.revision: 18
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 64ab5c6bf4b555504562dbf68a60d032743df865
-ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
+ms.openlocfilehash: c2d56380b626cd0eafc178b4db3584883b00a6bf
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/28/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="creating-wcf-services-for-aspnet-ajax"></a>ASP.NET AJAX için WCF Hizmetleri Oluşturma
 Microsoft ASP.NET AJAX, esnek ve tanıdık kullanıcı arabirimi öğeleri ile zengin kullanıcı deneyimi içeren Web sayfaları hızlı bir şekilde oluşturmanızı sağlar. ASP.NET AJAX tarayıcılar arası ECMAScript (JavaScript) ve dinamik HTML (DHTML) teknolojilerini istemci-komut dosyası kitaplıkları sağlar ve onu ASP.NET 2.0 sunucu tabanlı geliştirme platformu ile tümleştirir. ASP.NET AJAX'ı kullanarak, kullanıcı deneyimi ve Web uygulamalarınızın verimliliğini artırabilir.  
   
  ASP.NET AJAX istemci betik kitaplıkları ve sağlam geliştirme çerçeve sağlamak üzere tümleşik sunucu bileşenlerinin oluşur. Bir ASP.NET sayfasından bir hizmete erişmek için: hizmet URL'si sayfasındaki ASP.NET betik Yöneticisi denetime eklendikten sonra hizmet işlemleri kullanarak tam olarak normal JavaScript işlevi çağrısı gibi görünüyor JavaScript kodu çağrılabilir. Bkz: [ASP.NET AJAX'ı öğrenin](http://go.microsoft.com/fwlink/?LinkId=186475) Web Hizmetleri içinde AJAX framework kullanımıyla ilgili.  
   
- Çoğu [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] Hizmetleri gösterilebilir ASP.NET AJAX ile uyumlu bir hizmet olarak uygun bir ASP.NET AJAX uç noktası ekleyerek.  
+ Çoğu Windows Communication Foundation (WCF) hizmetlerini ASP.NET AJAX ile uyumlu bir hizmet olarak uygun bir ASP.NET AJAX uç noktası ekleyerek açık olabilir.  
   
  Visual Studio kullanıyorsanız, AJAX etkinleştirilmiş WCF hizmetleri, kullanılabilir için önceden oluşturulmuş bir şablonu kullanabilir **Yeni Öğe Ekle** ASP.NET Web siteleri veya Web uygulamaları ile çalışırken iletişim.  
   
@@ -35,7 +21,7 @@ Microsoft ASP.NET AJAX, esnek ve tanıdık kullanıcı arabirimi öğeleri ile z
   
 -   Herhangi bir yapılandırma kullanmadan dinamik ana bilgisayar etkinleştirmesi uç noktası oluşturun. WCF yapılandırma sistemiyle tanımıyorsanız bu en temel bir yaklaşımdır. Daha fazla bilgi için bkz: [nasıl yapılır: ASP.NET AJAX uç nokta olmadan kullanarak Yapılandırması Ekle](../../../../docs/framework/wcf/feature-details/how-to-add-an-aspnet-ajax-endpoint-without-using-configuration.md).  
   
--   Bir AJAX etkinleştirilmiş uç nokta ekleyin bir [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] Yapılandırması kullanılarak hizmet. Daha fazla bilgi için bkz: [nasıl yapılır: ASP.NET AJAX uç noktası eklemek için yapılandırma kullan](../../../../docs/framework/wcf/feature-details/how-to-use-configuration-to-add-an-aspnet-ajax-endpoint.md).  
+-   Bir AJAX etkinleştirilmiş uç nokta Yapılandırması'nı kullanarak bir WCF hizmetine ekleyin. Daha fazla bilgi için bkz: [nasıl yapılır: ASP.NET AJAX uç noktası eklemek için yapılandırma kullan](../../../../docs/framework/wcf/feature-details/how-to-use-configuration-to-add-an-aspnet-ajax-endpoint.md).  
   
  Açıklanan Web programlama modeli [WCF Web HTTP programlama modeline genel bakış](../../../../docs/framework/wcf/feature-details/wcf-web-http-programming-model-overview.md) ASP.NET AJAX Hizmetleri ile kullanılabilir. Özellikle:  
   
@@ -62,13 +48,13 @@ Microsoft ASP.NET AJAX, esnek ve tanıdık kullanıcı arabirimi öğeleri ile z
   
 -   Bulunan diğer özelliklerden <xref:System.ServiceModel.Web.WebGetAttribute> ve <xref:System.ServiceModel.Web.WebInvokeAttribute> öznitelikleri, ASP.NET AJAX ile uyumluluk gerekirse değiştirilebilir. ASP.NET AJAX çağırma kurallarını ihlal etti değil sürece Web programlama modeli diğer yönlerini kullanılabilir.  
   
- Daha Gelişmiş senaryolar gerektiren bazı ek ayrıntıları AJAX Destek [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] anladım:  
+ Daha Gelişmiş senaryolar bazı ek ayrıntıları WCF AJAX desteğinin anlaşılmasını gerektirir:  
   
--   Bir AJAX sayfa istemci arasında aktarılan verileri nasıl anlamak ve bir [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] JavaScript kullanarak hizmet ve nasıl .NET Framework türleri JavaScript türlerine eşlenir hakkında daha fazla bilgi için bkz: [JSON ve diğer veri aktarma biçimleri için destek](../../../../docs/framework/wcf/feature-details/support-for-json-and-other-data-transfer-formats.md) .  
+-   Nasıl veriler arasında bir AJAX sayfa istemcisi ve JavaScript kullanarak bir WCF hizmeti ve Ayrıntılar için .NET Framework türleri JavaScript türlerine nasıl eşlenir aktarılır anlamak için bkz: [JSON ve diğer veri aktarma biçimleri için destek](../../../../docs/framework/wcf/feature-details/support-for-json-and-other-data-transfer-formats.md).  
   
 -   ASP.NET özelliklerden yararlanmak için örneğin, URL tabanlı kimlik doğrulaması ve ASP.NET oturum bilgilerine erişme, ASP.NET uyumluluk modu yapılandırma yoluyla etkinleştirmek isteyebilirsiniz.  
   
- AJAX uç noktalarını [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] kullanmadan ASP.NET AJAX framework bile tüketilebilir. Bunun yapılması AJAX desteği destek mimarisini bilinmesini gerektirir [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]. Bu mimarinin bir tartışma için bkz: [WCF Web HTTP programlama nesnesi modeli](../../../../docs/framework/wcf/feature-details/wcf-web-http-programming-object-model.md). Bu yaklaşım gösteren bir kod örneği için bkz: [JSON ve XML ile AJAX hizmeti](../../../../docs/framework/wcf/samples/ajax-service-with-json-and-xml-sample.md).  
+ WCF'de AJAX uç noktaları bile kullanmadan ASP.NET AJAX framework tüketilebilir. Bunun yapılması, WCF AJAX desteği destek mimarisini bilinmesini gerektirir. Bu mimarinin bir tartışma için bkz: [WCF Web HTTP programlama nesnesi modeli](../../../../docs/framework/wcf/feature-details/wcf-web-http-programming-object-model.md). Bu yaklaşım gösteren bir kod örneği için bkz: [JSON ve XML ile AJAX hizmeti](../../../../docs/framework/wcf/samples/ajax-service-with-json-and-xml-sample.md).  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
  [WCF Web HTTP Programlama Modeli](../../../../docs/framework/wcf/feature-details/wcf-web-http-programming-model.md)  

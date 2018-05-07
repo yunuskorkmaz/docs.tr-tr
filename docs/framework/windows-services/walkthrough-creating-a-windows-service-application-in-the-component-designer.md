@@ -1,9 +1,6 @@
 ---
-title: "İzlenecek Yol: Bileşen Tasarımcısında Windows Hizmet Uygulaması Oluşturma"
+title: 'İzlenecek Yol: Bileşen Tasarımcısında Windows Hizmet Uygulaması Oluşturma'
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.technology: dotnet-clr
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -11,16 +8,13 @@ helpviewer_keywords:
 - Windows Service applications, walkthroughs
 - Windows Service applications, creating
 ms.assetid: e24d8a3d-edc6-485c-b6e0-5672d91fb607
-caps.latest.revision: "57"
 author: ghogen
-ms.author: ghogen
 manager: douge
-ms.workload: dotnet
-ms.openlocfilehash: 42fc5f27f1c78e243ff1d3a705c61a20ff459937
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: c33b8badcacd4e228d70f8e770d4bf27144c29eb
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="walkthrough-creating-a-windows-service-application-in-the-component-designer"></a>İzlenecek Yol: Bileşen Tasarımcısında Windows Hizmet Uygulaması Oluşturma
 Bu makalede, bir olay günlüğü iletileri Yazar Visual Studio'da basit bir Windows hizmet uygulaması oluşturmak gösterilmiştir. Hizmetinizi oluşturmak için gerçekleştirdiğiniz temel adımlar şunlardır:  
@@ -64,7 +58,7 @@ Bu makalede, bir olay günlüğü iletileri Yazar Visual Studio'da basit bir Win
   
 3.  Üzerinde **Düzenle** menüsünde seçin **bulma ve değiştirme**, **dosyalarda Bul** (klavye: Ctrl + Shift + F). Tüm oluşumlarını değiştirme `Service1` için `MyNewService`. Örnekleri service1.cs dosyasını, Program.cs ve Service1.Designer.cs (veya .vb eşdeğerlerine) bulabilirsiniz.  
   
-4.  İçinde **özellikleri** penceresi **service1.cs dosyasını [tasarım]** veya **Service1.vb [tasarım]**ayarlayın <xref:System.ServiceProcess.ServiceBase.ServiceName%2A> ve **(ad)** özelliği için `Service1` için **MyNewService**, zaten ayarlanmışsa.  
+4.  İçinde **özellikleri** penceresi **service1.cs dosyasını [tasarım]** veya **Service1.vb [tasarım]** ayarlayın <xref:System.ServiceProcess.ServiceBase.ServiceName%2A> ve **(ad)** özelliği için `Service1` için **MyNewService**, zaten ayarlanmışsa.  
   
 5.  Çözüm Gezgini'nde, yeniden adlandırma **service1.cs dosyasını** için **MyNewService.cs**, veya **Service1.vb** için **MyNewService.vb**.  
   

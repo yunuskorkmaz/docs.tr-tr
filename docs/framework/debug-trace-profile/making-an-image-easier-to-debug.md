@@ -1,28 +1,18 @@
 ---
-title: "Görüntüde Hata Ayıklamayı Kolaylaştırma"
-ms.custom: 
+title: Görüntüde Hata Ayıklamayı Kolaylaştırma
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - images [.NET Framework], debugging
 - executable image for debugging
 - debugging [.NET Framework], executable images for
 ms.assetid: 7d90ea7a-150f-4f97-98a7-f9c26541b9a3
-caps.latest.revision: "13"
 author: mairaw
 ms.author: mairaw
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: e05af51010e92586a9f1de423f6304ea8db78168
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.openlocfilehash: c58008bc621ea95fbb2e4cc5e7d4521576aca37c
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="making-an-image-easier-to-debug"></a>Görüntüde Hata Ayıklamayı Kolaylaştırma
 Yönetilmeyen kod derlerken ayar IDE anahtarları veya komut satırı seçenekleri tarafından hata ayıklama için yürütülebilir görüntü yapılandırabilirsiniz. Örneğin, kullanabileceğiniz /**Zi** Visual c++ komut satırı seçeneği, hata ayıklama simge dosyaları (dosya uzantısı .pdb) yaymak üzere isteyebilir. Benzer şekilde, /**Od** iyileştirme devre dışı bırakmak için derleyici komut satırı seçeneği söyler. Ortaya çıkan kodu daha yavaş çalışır, ancak bu gerekli olmalıdır hata ayıklamak daha kolay olur.  

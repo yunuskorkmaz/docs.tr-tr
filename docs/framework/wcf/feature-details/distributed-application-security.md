@@ -1,43 +1,31 @@
 ---
 title: Dağıtılan Uygulama Güvenliği
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 helpviewer_keywords:
 - distributed application security [WCF]
 - security [WCF], transfer
 ms.assetid: 53928a10-e474-46d0-ab90-5f98f8d7b668
-caps.latest.revision: 32
 author: BrucePerlerMS
-ms.author: bruceper
 manager: mbaldwin
-ms.workload:
-- dotnet
-ms.openlocfilehash: 8b5bc311262aae1110f7d0249be60135e318785e
-ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
+ms.openlocfilehash: d8f34d0c6b0269cc4837313d6613e3cee0eb26c9
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/30/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="distributed-application-security"></a>Dağıtılan Uygulama Güvenliği
-[!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] Güvenlik üç ana işlevsel alanlara bölünmüş: güvenlik, erişim denetimi ve denetim aktarın. Aktarım güvenlik bütünlüğü, gizlilik ve kimlik doğrulaması sağlar. Aktarım güvenlik şunlardan biri tarafından sağlanır: aktarım güvenliği, ileti güvenliği veya `TransportWithMessageCredential`.  
+Windows Communication Foundation (WCF) güvenlik üç ana işlevsel alanlara bölünmüş: güvenlik, erişim denetimi ve denetim aktarın. Aktarım güvenlik bütünlüğü, gizlilik ve kimlik doğrulaması sağlar. Aktarım güvenlik şunlardan biri tarafından sağlanır: aktarım güvenliği, ileti güvenliği veya `TransportWithMessageCredential`.  
   
- Genel Bakış [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] ileti güvenlik için bkz: [güvenliğine genel bakış](../../../../docs/framework/wcf/feature-details/security-overview.md). Diğer iki parça hakkında daha fazla bilgi için [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] güvenlik, bkz: [yetkilendirme](../../../../docs/framework/wcf/feature-details/authorization-in-wcf.md) ve [denetim](../../../../docs/framework/wcf/feature-details/auditing-security-events.md).  
+ WCF ileti güvenliği genel bakış için bkz: [güvenliğine genel bakış](../../../../docs/framework/wcf/feature-details/security-overview.md). Diğer iki parça WCF güvenlik hakkında daha fazla bilgi için bkz: [yetkilendirme](../../../../docs/framework/wcf/feature-details/authorization-in-wcf.md) ve [denetim](../../../../docs/framework/wcf/feature-details/auditing-security-events.md).  
   
 ## <a name="transfer-security-scenarios"></a>Aktarım güvenlik senaryoları  
- Uygulamadığınız yaygın senaryolar [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] aktarımı güvenlik aşağıdakileri içerir:  
+ WCF aktarımı güvenlik uygulamadığınız yaygın senaryolar aşağıdakileri içerir:  
   
--   Güvenli aktarım Windows kullanma. A [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] hizmet ve istemci bir Windows etki alanı (veya bir Windows ormanı) dağıtılır. İstemci ve hizmet, ileti bütünlüğü ve ileti gizliliği karşılıklı kimlik doğrulama gereksinimleri içerir şekilde iletileri kişisel veriler içerir. Ayrıca, gerekli korumalıdır belirli bir işlem, örneğin, ileti alıcısı imza bilgilerini kaydetmek ortaya çıktığını.  
+-   Güvenli aktarım Windows kullanma. Bir WCF istemcisi ve hizmeti bir Windows etki alanı (veya bir Windows ormanı) dağıtılır. İstemci ve hizmet, ileti bütünlüğü ve ileti gizliliği karşılıklı kimlik doğrulama gereksinimleri içerir şekilde iletileri kişisel veriler içerir. Ayrıca, gerekli korumalıdır belirli bir işlem, örneğin, ileti alıcısı imza bilgilerini kaydetmek ortaya çıktığını.  
   
--   Güvenli aktarımı kullanarak `UserName` ve HTTPS. A [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] istemci ve hizmet Internet üzerinden çalışmak için geliştirilmiş gerekir. İstemci kimlik bilgileri kullanıcı adı/parola çiftleri veritabanına karşı kimlik doğrulaması. Hizmet, güvenilen bir Güvenli Yuva Katmanı (SSL) sertifikası kullanarak HTTPS adresi sırasında dağıtılır. Internet üzerinden iletileri seyahat olduğundan istemci ve hizmet karşılıklı kimlik doğrulaması gerekir ve aktarım sırasında ileti gizliliği ve bütünlük korunması gerekir.  
+-   Güvenli aktarımı kullanarak `UserName` ve HTTPS. Bir WCF istemcisi ve hizmet Internet üzerinden çalışmak için geliştirilmiş gerekir. İstemci kimlik bilgileri kullanıcı adı/parola çiftleri veritabanına karşı kimlik doğrulaması. Hizmet, güvenilen bir Güvenli Yuva Katmanı (SSL) sertifikası kullanarak HTTPS adresi sırasında dağıtılır. Internet üzerinden iletileri seyahat olduğundan istemci ve hizmet karşılıklı kimlik doğrulaması gerekir ve aktarım sırasında ileti gizliliği ve bütünlük korunması gerekir.  
   
--   Sertifikaları kullanılarak güvenli aktarma. A [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] istemci ve hizmet ortak internet üzerinden çalışmak için geliştirilmiş gerekir. Hem istemci hem hizmet iletileri güvenli hale getirmek için kullanılan sertifikaları sahiptir. Hizmet ve istemci Internet birbirleri ile iletişim kurmak ve ileti bütünlüğü ve gizliliği karşılıklı kimlik doğrulaması gerektiren yüksek değerli işlemleri gerçekleştirmek için kullanın.  
+-   Sertifikaları kullanılarak güvenli aktarma. Bir WCF istemcisi ve hizmet ortak internet üzerinden çalışmak için geliştirilmiş gerekir. Hem istemci hem hizmet iletileri güvenli hale getirmek için kullanılan sertifikaları sahiptir. Hizmet ve istemci Internet birbirleri ile iletişim kurmak ve ileti bütünlüğü ve gizliliği karşılıklı kimlik doğrulaması gerektiren yüksek değerli işlemleri gerçekleştirmek için kullanın.  
   
 ## <a name="integrity-confidentiality-and-authentication"></a>Bütünlük, gizlilik ve kimlik doğrulama  
  Üç işlevleri — bütünlüğü, gizlilik ve kimlik doğrulaması — aktarımı güvenlik birlikte çağrılır. Aktarım güvenlik dağıtılmış uygulama tehditlerin azaltılmasına yardımcı işlevleri sağlar. Aşağıdaki tabloda, aktarım güvenliği olun üç işlevleri kısaca açıklanmaktadır.  
@@ -49,7 +37,7 @@ ms.lasthandoff: 04/30/2018
 |Kimlik doğrulaması|*Kimlik doğrulama* talep edilen kimlik doğrulama. Örneğin, bir banka hesabı kullanırken, bu hesap yalnızca gerçek sahibi fon programdan çıkın izin verileceğini zorunludur. Kimlik doğrulama anlamına gelir, çeşitli tarafından sağlanabilir. Bir ortak yöntemi kullanıcı/parola sistemidir. İkinci, üçüncü taraf tarafından sağlanan bir X.509 sertifikası kullanılır.|  
   
 ## <a name="security-modes"></a>Güvenlik modu  
- [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] Aşağıdaki tabloda açıklanan birkaç aktarımı güvenlik modu vardır.  
+ WCF aşağıdaki tabloda açıklanan birkaç aktarımı güvenlik modu vardır.  
   
 |Mod|Açıklama|  
 |----------|-----------------|  
@@ -60,11 +48,11 @@ ms.lasthandoff: 04/30/2018
 |Her ikisi|Koruma ve kimlik doğrulama, iki düzeyde gerçekleştirir. Bu modu yalnızca kullanılabilir [ \<netMsmqBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/netmsmqbinding.md) öğesi.|  
   
 ## <a name="credentials-and-transfer-security"></a>Kimlik bilgileri ve Aktarım güvenlik  
- A *kimlik bilgisi* bir talep kimliği veya özellikleri oluşturmak için sunulan veriler. Bir kimlik bilgisi sunan hem veri hem de veri kanıtını sunan içerir. [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] çeşitli güvenlik düzeyleri taşıma ve ileti kimlik bilgisi türlerini destekler. İçin kimlik bilgisi türünü belirtebilirsiniz bir [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] bağlama.  
+ A *kimlik bilgisi* bir talep kimliği veya özellikleri oluşturmak için sunulan veriler. Bir kimlik bilgisi sunan hem veri hem de veri kanıtını sunan içerir. WCF çeşitli güvenlik düzeyleri taşıma ve ileti kimlik bilgisi türlerini destekler. Bir WCF bağlama için kimlik bilgisi türünü belirtebilirsiniz.  
   
  Birçok ülke veya bölgelerde, bir sürücünün lisans bir kimlik bilgisi örneğidir. Bir lisans birinin kimlik ve özellikleri temsil eden veri içeriyor. Sahibi'nın resmi biçiminde kanıtını içerir. Lisans, genellikle kamu bir lisans bölüm gibi güvenilir bir yetkili tarafından verilir. Lisans korumalı ve değil değiştirilmiş veya bırakıldığı sahtesi olduğunu gösteren bir hologramı içerebilir.  
   
- Örnek olarak, iki tür desteklenen kimlik bilgileri göz önünde bulundurun [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]: sertifika kimlik bilgileri kullanıcı adı ve (X.509).  
+ Örnek olarak, iki tür WCF'de desteklenen kimlik bilgileri göz önünde bulundurun: sertifika kimlik bilgileri kullanıcı adı ve (X.509).  
   
  Kullanıcı adı kimlik bilgisi için kullanıcı adı talep kimliğini temsil eder ve parola kanıtını sunar. Güvenilir yetkili bu durumda kullanıcı adını ve parolayı doğrular sistemidir.  
   
@@ -91,16 +79,16 @@ ms.lasthandoff: 04/30/2018
 |-------------|-----------------|  
 |Yok.|Hizmetin anonim istemcilerle etkileşime girmesine izin verir.|  
 |Windows|Windows kimlik bilgisi kimliği doğrulanmış bağlamı altında gerçekleşmesi SOAP ileti alışverişlerinde sağlar. Kerberos protokolü veya NTLM kimlik doğrulama hizmeti olarak seçmek için SSPI anlaşması mekanizması kullanır.|  
-|Kullanıcı adı|Hizmetinin istemci sahip bir kullanıcı adı kimlik bilgisi doğrulanmasını gerektiren izin verir. Unutmayın [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] imza oluşturulurken veya veri şifreleme gibi kullanıcı adıyla şifreleme işlemleri izin vermiyor. Bu nedenle, [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] taşıma kullanıcı adı kimlik bilgileri kullanırken güvenli zorlar.|  
+|Kullanıcı adı|Hizmetinin istemci sahip bir kullanıcı adı kimlik bilgisi doğrulanmasını gerektiren izin verir. WCF şifreleme işlemleri imza oluşturulurken veya veri şifreleme gibi kullanıcı adı, izin verme unutmayın. Bu nedenle, WCF taşıma kullanıcı adı kimlik bilgileri kullanırken güvenli zorlar.|  
 |Sertifika|Hizmetinin gerektiren izin verir, istemci kimlik doğrulaması kullanarak bir sertifika.|  
 |[!INCLUDE[infocard](../../../../includes/infocard-md.md)]|Hizmetinin gerektiren izin verir, istemci kimlik doğrulaması kullanarak bir [!INCLUDE[infocard](../../../../includes/infocard-md.md)].|  
   
 ### <a name="programming-credentials"></a>Kimlik bilgileri programlama  
- İstemci kimlik bilgisi türlerinin her biri için [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] programlama modeli kimlik bilgileri değerlerini belirtmenize olanak verir ve kimlik bilgisi doğrulayıcılar kullanarak hizmet davranışları ve kanal davranışları.  
+ Her istemci kimlik bilgisi türü WCF programlama modeli, kimlik bilgileri değerlerini belirtme ve hizmet davranışları ve kanal davranışları kullanarak doğrulayıcılar kimlik bilgisi olanak sağlar.  
   
- [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] güvenlik kimlik bilgileri iki tür vardır: Hizmet kimlik bilgisi davranışları ve kanal kimlik bilgisi davranışları. Kimlik bilgisi davranışlarının [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] kimlik bilgileri kullanılan bağlamaları ifade güvenlik gereksinimlerini karşılayacak biçimde, gerçek veri öğesine belirtin. İçinde [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)], işlem çağırma ve iletileri arasında dönüştürür çalışma zamanı bileşeni bir istemci sınıftır. Tüm istemcilerin devralınmalıdır <xref:System.ServiceModel.ClientBase%601> sınıfı. <xref:System.ServiceModel.ClientBase%601.ClientCredentials%2A> Temel sınıf özelliği çeşitli değerleri istemci kimlik bilgileri belirtmenize olanak verir.  
+ WCF güvenlik kimlik bilgileri iki tür vardır: Hizmet kimlik bilgisi davranışları ve kanal kimlik bilgisi davranışları. Wcf'de kimlik bilgisi davranışları gerçek verileri, yani, bağlamaları ifade güvenlik gereksinimlerini karşılamak için kullanılan kimlik bilgilerini belirtin. WCF'de, işlem çağırma ve iletileri arasında dönüştürür çalışma zamanı bileşeni bir istemci sınıftır. Tüm istemcilerin devralınmalıdır <xref:System.ServiceModel.ClientBase%601> sınıfı. <xref:System.ServiceModel.ClientBase%601.ClientCredentials%2A> Temel sınıf özelliği çeşitli değerleri istemci kimlik bilgileri belirtmenize olanak verir.  
   
- İçinde [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)], hizmet davranışları olan hizmet programlı olarak denetlemek için bir hizmet sözleşmesini (arabirimi) uygulama sınıfına uygulanan öznitelikleri. <xref:System.ServiceModel.Description.ServiceCredentials> Sınıfı Sertifikalar çeşitli istemci kimlik bilgisi türlerinin hizmeti kimlik bilgileri ve istemci doğrulama ayarları belirtmenize olanak verir.  
+ WCF'de, hizmet davranışları hizmeti programlı olarak denetlemek için bir hizmet sözleşmesini (arabirimi) uygulama sınıfına uygulanan öznitelikleri görüntülenir. <xref:System.ServiceModel.Description.ServiceCredentials> Sınıfı Sertifikalar çeşitli istemci kimlik bilgisi türlerinin hizmeti kimlik bilgileri ve istemci doğrulama ayarları belirtmenize olanak verir.  
   
 ### <a name="negotiation-model-for-message-security"></a>İleti güvenliği için anlaşma modeli  
  İleti güvenlik modu istemcide bant dışı hizmet kimlik bilgilerini yapılandırılmasını sağlamak amacıyla aktarımı güvenlik işlemleri yapmanıza olanak tanır. Örneğin, Windows sertifika deposunda depolanan bir sertifika kullanıyorsanız, bir Microsoft Yönetim Konsolu (MMC) ek bileşeni gibi bir araç kullanmanız gerekir.  

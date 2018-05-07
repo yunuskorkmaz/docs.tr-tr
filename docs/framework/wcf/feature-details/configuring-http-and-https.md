@@ -1,28 +1,14 @@
 ---
 title: HTTP ve HTTPS Yapılandırma
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 helpviewer_keywords:
 - configuring HTTP [WCF]
 ms.assetid: b0c29a86-bc0c-41b3-bc1e-4eb5bb5714d4
-caps.latest.revision: 17
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 8d3317cd4bba7c9935bd7555f16599dc94725fbd
-ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
+ms.openlocfilehash: 70c947724abf8da68ec8f7e6d858e26fec62dce5
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/28/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="configuring-http-and-https"></a>HTTP ve HTTPS Yapılandırma
 WCF hizmetleri ve istemcilerin HTTP ve HTTPS iletişim kurabilir. HTTP/HTTPS ayarları, Internet Information Services (IIS) kullanarak veya bir komut satırı aracı kullanılarak yapılandırılır. Bir WCF Hizmeti IIS HTTP veya HTTPS ayarları altında olduğunda barındırılan (inetmgr.exe Aracı'nı kullanarak) IIS içinde yapılandırılabilir. Bir WCF Hizmeti kendini barındıran ise, bir komut satırı aracını kullanarak HTTP veya HTTPS ayarları yapılandırılır.  
@@ -79,7 +65,7 @@ netsh http add urlacl url=http://+:80/MyUri user=DOMAIN\user
  Adım adım yönergeler için bkz: [nasıl yapılır: bir SSL sertifikası ile bir bağlantı noktası yapılandırın](../../../../docs/framework/wcf/feature-details/how-to-configure-a-port-with-an-ssl-certificate.md).  
   
 ## <a name="configuring-the-ip-listen-list"></a>IP dinleme listesi yapılandırma  
- Bir kullanıcı bir URL kaydeder sonra HTTP sunucu API'sini yalnızca bir IP adresi ve bağlantı noktasına bağlar. Varsayılan olarak, HTTP sunucu API'sini tüm makinenin IP adresleri için URL'de bağlantı noktasına bağlar. HTTP Sunucusu API kullanmayan bir uygulama bu IP adresi ve bağlantı noktası bileşimi için daha önce bağlı bir çakışma ortaya çıkar. IP dinleme listesi verir [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] bazı makinenin IP adresleri için bir bağlantı noktası kullanan uygulamalar ile bir arada Hizmetleri. IP dinleme listesi herhangi bir giriş içeriyorsa, HTTP sunucu API'sini listesini belirtir bu IP adreslerinden yalnızca bağlar. IP dinleme listesi değiştirme yönetici ayrıcalıkları gerektirir.  
+ Bir kullanıcı bir URL kaydeder sonra HTTP sunucu API'sini yalnızca bir IP adresi ve bağlantı noktasına bağlar. Varsayılan olarak, HTTP sunucu API'sini tüm makinenin IP adresleri için URL'de bağlantı noktasına bağlar. HTTP Sunucusu API kullanmayan bir uygulama bu IP adresi ve bağlantı noktası bileşimi için daha önce bağlı bir çakışma ortaya çıkar. IP dinleme listesinde bazı makinenin IP adresleri için bir bağlantı noktası kullanan uygulamalar ile bir arada WCF hizmetleri sağlar. IP dinleme listesi herhangi bir giriş içeriyorsa, HTTP sunucu API'sini listesini belirtir bu IP adreslerinden yalnızca bağlar. IP dinleme listesi değiştirme yönetici ayrıcalıkları gerektirir.  
   
 ### <a name="running-windows-xp-or-server-2003"></a>Çalışan Windows XP veya Server 2003  
  Aşağıdaki örnekte gösterildiği gibi IP dinleme listesi değiştirmek için httpcfg Aracı'nı kullanın. [Windows Destek Araçları belgeleri](http://go.microsoft.com/fwlink/?LinkId=94840) httpcfg.exe araç söz dizimi açıklanmıştır.  
@@ -101,7 +87,7 @@ netsh http add iplisten ipaddress=0.0.0.0:8000
  HTTP Sunucusu API HttpCfg kullanılabilir olmayan bazı gelişmiş yapılandırma ayarları vardır. Bu ayarlar kayıt defterinde saklanır ve HTTP sunucusu API'lerini kullanan sistemleri üzerinde çalışan tüm uygulamaları için geçerlidir. Bu ayarlar hakkında daha fazla bilgi için bkz: [IIS için Http.sys kayıt defteri ayarları](http://go.microsoft.com/fwlink/?LinkId=94843). Çoğu kullanıcı bu ayarları değiştirmek gerekmez.  
   
 ## <a name="issues-specific-to-windows-xp"></a>Windows XP özgü sorunlar  
- IIS üzerinde bağlantı noktası paylaşımı desteklemiyor [!INCLUDE[wxp](../../../../includes/wxp-md.md)]. IIS çalışıyorsa ve bir [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] hizmeti çalışır aynı bağlantı noktası ile bir ad alanını kullanmak [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] hizmet başarısız başlatmak. IIS ve [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] her ikisi de 80 numaralı bağlantı noktasını kullanarak varsayılan. Hizmetlerden biri için bağlantı noktası atamasını değiştirin veya atamak için IP dinleme listesi kullanmaya [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] IIS tarafından kullanılmayan bir ağ bağdaştırıcısı için hizmet. IIS 6.0 ve sonraki HTTP Sunucusu API'ları kullanmak için tasarlanmıştır.  
+ IIS üzerinde bağlantı noktası paylaşımı desteklemiyor [!INCLUDE[wxp](../../../../includes/wxp-md.md)]. IIS çalıştıran ve bir WCF hizmeti bir ad alanı ile aynı bağlantı noktasını kullanmayı dener WCF hizmetini başlatmak başarısız olur. 80 numaralı bağlantı noktasını kullanarak her ikisi de varsayılan IIS ve WCF. Hizmetlerden biri için bağlantı noktası atamasını değiştirin veya WCF Hizmeti IIS tarafından kullanılmayan bir ağ bağdaştırıcısı atamak için IP dinleme listesi kullanın. IIS 6.0 ve sonraki HTTP Sunucusu API'ları kullanmak için tasarlanmıştır.  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
  <xref:System.ServiceModel.WSDualHttpBinding>  

@@ -1,29 +1,15 @@
 ---
 title: İş Akışı Hizmetlerini Barındırma
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 ms.assetid: 2d55217e-8697-4113-94ce-10b60863342e
-caps.latest.revision: 12
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 21c4ba6a85c2da655b3d0988917165bf84ae64d1
-ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
+ms.openlocfilehash: 02d77b851dcd35108668ee6a42022e9721b84bd8
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/30/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="hosting-workflow-services"></a>İş Akışı Hizmetlerini Barındırma
-Bir iş akışı hizmeti, gelen iletilere yanıt vermesi için barındırılması gerekir. İş akışı hizmetleri kullanım [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] altyapı ve bu nedenle Mesajlaşma barındırılan benzer şekilde. Gibi [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] Hizmetleri, iş akışı hizmetleri yönetilen bir uygulamada, Internet Information Services (IIS) altında ya da Windows İşlem Etkinleştirme Hizmetleri (WAS) altında barındırılması. Ayrıca iş akışı Hizmetleri Windows Server App Fabric altında barındırılabilir. Windows Server App Fabric hakkında daha fazla bilgi için bkz: [Windows Server App Fabric belgelerine](http://go.microsoft.com/fwlink/?LinkId=193037), [AppFabric barındırma özellikleri](http://go.microsoft.com/fwlink/?LinkId=196494), ve [AppFabric barındırma kavramları](http://go.microsoft.com/fwlink/?LinkId=196495). Ana bilgisayar için çeşitli yollar hakkında daha fazla bilgi için [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] Hizmetleri bakın [barındırma hizmetleri](../../../../docs/framework/wcf/hosting-services.md).  
+Bir iş akışı hizmeti, gelen iletilere yanıt vermesi için barındırılması gerekir. İş akışı hizmetleri WCF Mesajlaşma altyapısını kullanan ve bu nedenle benzer şekilde barındırılır. WCF hizmetleri gibi iş akışı hizmetleri yönetilen bir uygulamada, Internet Information Services (IIS) altında ya da Windows İşlem Etkinleştirme Hizmetleri (WAS) altında barındırılabilir. Ayrıca iş akışı Hizmetleri Windows Server App Fabric altında barındırılabilir. Windows Server App Fabric hakkında daha fazla bilgi için bkz: [Windows Server App Fabric belgelerine](http://go.microsoft.com/fwlink/?LinkId=193037), [AppFabric barındırma özellikleri](http://go.microsoft.com/fwlink/?LinkId=196494), ve [AppFabric barındırma kavramları](http://go.microsoft.com/fwlink/?LinkId=196495). Bkz: WCF barındırmak için çeşitli yollar hakkında daha fazla bilgi hizmetleri için [barındırma hizmetleri](../../../../docs/framework/wcf/hosting-services.md).  
   
 ## <a name="hosting-in-a-managed-application"></a>Yönetilen bir uygulamada barındırma  
  Yönetilen bir uygulamada bir iş akışı hizmeti barındırmak için kullandığınız <xref:System.ServiceModel.Activities.WorkflowServiceHost> sınıfı. <xref:System.ServiceModel.Activities.WorkflowServiceHost> Oluşturucusu bir singleton iş akışı hizmet örneği, bir iş akışı hizmeti tanımı veya Mesajlaşma etkinlikleriyle iş akışının kullandığı bir etkinlik belirtmenize olanak verir. Çağırma <<!--zz xref:System.ServiceModel.Activities.WorkflowServiceHost.Open%2A--> `System.ServiceModel.Activities.WorkflowServiceHost.Open`> gelen iletiler için dinleme başlatmak hizmetinin neden olur.  

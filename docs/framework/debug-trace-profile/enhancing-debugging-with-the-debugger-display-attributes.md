@@ -1,13 +1,6 @@
 ---
-title: "Hata Ayıklayıcı Görüntü Öznitelikleriyle Hata Ayıklamayı Geliştirme"
-ms.custom: 
+title: Hata Ayıklayıcı Görüntü Öznitelikleriyle Hata Ayıklamayı Geliştirme
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -20,19 +13,16 @@ helpviewer_keywords:
 - display attributes for debugger
 - DebuggerBrowsableAttribute attribute
 ms.assetid: 72bb7aa9-459b-42c4-9163-9312fab4c410
-caps.latest.revision: "7"
 author: mairaw
 ms.author: mairaw
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: ac5097326ae76a8790569c13fd8b1285b0cfeec0
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 2efa8cfb2b196d6f5a26354161e42c1f376e43b1
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="enhancing-debugging-with-the-debugger-display-attributes"></a>Hata Ayıklayıcı Görüntü Öznitelikleriyle Hata Ayıklamayı Geliştirme
-Hata ayıklayıcı görüntü öznitelikleri izin Geliştirici belirtir ve bu tür çalışma zamanı davranışını anlayabilmesi gerekir, tür, ne de belirtmek için bu tür bir hata ayıklayıcıda zaman görüntülendiği gibi görünür. Ayrıca, hata ayıklayıcı görüntüleme sağlamak öznitelikleri bir `Target` özelliği kaynak kodunun bilgisi olmadan kullanıcılar tarafından derleme düzeyinde uygulanabilir. <xref:System.Diagnostics.DebuggerDisplayAttribute> Özniteliği denetleyen bir tür veya üye hata ayıklayıcı değişken pencerelerini de nasıl görüntülenir. <xref:System.Diagnostics.DebuggerBrowsableAttribute> Özniteliği varsa ve bir alanın nasıl belirler veya özelliği hata ayıklayıcı değişken pencerelerini de görüntülenir. <xref:System.Diagnostics.DebuggerTypeProxyAttribute> Öznitelik türü hata ayıklayıcı Windows'da görüntülenme şeklini değiştirir ve bir yedek türü ya da bir tür için bir proxy belirtir. Bir proxy veya yedek türüne sahip bir değişken görüntülediğinizde, proxy hata ayıklayıcı görüntü penceresinde özgün türünün anlamına gelir**.** Hata ayıklayıcı değişken windowdisplays yalnızca Genel üyeler proxy'sinin yazın. Özel üyelerin görüntülenmez.  
+Hata ayıklayıcı görüntü öznitelikleri izin Geliştirici belirtir ve bu tür çalışma zamanı davranışını anlayabilmesi gerekir, tür, ne de belirtmek için bu tür bir hata ayıklayıcıda zaman görüntülendiği gibi görünür. Ayrıca, hata ayıklayıcı görüntüleme sağlamak öznitelikleri bir `Target` özelliği kaynak kodunun bilgisi olmadan kullanıcılar tarafından derleme düzeyinde uygulanabilir. <xref:System.Diagnostics.DebuggerDisplayAttribute> Özniteliği denetleyen bir tür veya üye hata ayıklayıcı değişken pencerelerini de nasıl görüntülenir. <xref:System.Diagnostics.DebuggerBrowsableAttribute> Özniteliği varsa ve bir alanın nasıl belirler veya özelliği hata ayıklayıcı değişken pencerelerini de görüntülenir. <xref:System.Diagnostics.DebuggerTypeProxyAttribute> Öznitelik türü hata ayıklayıcı Windows'da görüntülenme şeklini değiştirir ve bir yedek türü ya da bir tür için bir proxy belirtir. Bir proxy veya yedek türüne sahip bir değişken görüntülediğinizde, proxy hata ayıklayıcı görüntü penceresinde özgün türünün anlamına gelir **.** Hata ayıklayıcı değişken windowdisplays yalnızca Genel üyeler proxy'sinin yazın. Özel üyelerin görüntülenmez.  
   
 ## <a name="using-the-debuggerdisplayattribute"></a>DebuggerDisplayAttribute kullanma  
  <xref:System.Diagnostics.DebuggerDisplayAttribute.%23ctor%2A> Bir oluşturucuya sahip tek bir bağımsız değişken: için değer sütununda görüntülenecek bir dize türü örnekleri. Bu dize köşeli parantez içerebilir ({ve}). Bir çift köşeli parantez içindeki metni bir ifade olarak değerlendirilir. Örneğin, aşağıdaki C# kod neden "Count = 4" örneği için hata ayıklayıcı görüntü genişletmek için artı (+) seçildiğinde görüntülenecek `MyHashtable`.  
@@ -52,11 +42,11 @@ class MyHashtable
 ## <a name="using-the-debuggerbrowsableattribute"></a>DebuggerBrowsableAttribute kullanma  
  Uygulama <xref:System.Diagnostics.DebuggerBrowsableAttribute> bir alan veya nasıl alanı veya özelliği hata ayıklayıcı penceresinde görüntülenecek belirtmek için özellik. Bu öznitelik Oluşturucusu birini alır <xref:System.Diagnostics.DebuggerBrowsableState> şu durumlardan birini belirten numaralandırma değerlerinin:  
   
--   <xref:System.Diagnostics.DebuggerBrowsableState.Never>Üye verileri penceresinde görüntülenmez gösterir.  Örneğin, bu değer için kullanarak <xref:System.Diagnostics.DebuggerBrowsableAttribute> üzerinde bir alan alan hiyerarşiden kaldırır; türü örneği için artı işareti (+) tıklatarak kendilerini kapsayan türle genişlettiğinizde alanı görüntülenmez.  
+-   <xref:System.Diagnostics.DebuggerBrowsableState.Never> Üye verileri penceresinde görüntülenmez gösterir.  Örneğin, bu değer için kullanarak <xref:System.Diagnostics.DebuggerBrowsableAttribute> üzerinde bir alan alan hiyerarşiden kaldırır; türü örneği için artı işareti (+) tıklatarak kendilerini kapsayan türle genişlettiğinizde alanı görüntülenmez.  
   
--   <xref:System.Diagnostics.DebuggerBrowsableState.Collapsed>üye görüntülenen ancak varsayılan olarak genişletilmiş değil belirtir.  Bu varsayılan davranıştır.  
+-   <xref:System.Diagnostics.DebuggerBrowsableState.Collapsed> üye görüntülenen ancak varsayılan olarak genişletilmiş değil belirtir.  Bu varsayılan davranıştır.  
   
--   <xref:System.Diagnostics.DebuggerBrowsableState.RootHidden>üye gösterilmez, ancak bir dizi veya koleksiyon ise, bağlı olan nesneler görüntülenir gösterir.  
+-   <xref:System.Diagnostics.DebuggerBrowsableState.RootHidden> üye gösterilmez, ancak bir dizi veya koleksiyon ise, bağlı olan nesneler görüntülenir gösterir.  
   
 > [!NOTE]
 >  <xref:System.Diagnostics.DebuggerBrowsableAttribute> Visual Basic'te .NET Framework sürüm 2.0 tarafından desteklenmez.  

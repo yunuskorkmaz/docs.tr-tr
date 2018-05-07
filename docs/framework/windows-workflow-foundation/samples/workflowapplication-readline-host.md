@@ -1,23 +1,12 @@
 ---
 title: WorkflowApplication ReadLine ana bilgisayar
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: f7b362be-cb42-40d7-b9ef-cfc4aed2455b
-caps.latest.revision: "14"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: f8426dd3835f53eeb85711a691c878ce2b877d09
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 8da8a5bb4c80a86fe5ae9e133ea545c00ee17fba
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="workflowapplication-readline-host"></a>WorkflowApplication ReadLine ana bilgisayar
 Bu örnek bir genel ReadLine ana bilgisayardır. Yük ve birlikte kullanarak tüm iş akışını çalıştırma `ReadLine` etkinlik (veya bu gibi veri yer işaretleri dizelerle sürdürüldü almanız diğer etkinlikler). Çıktı `WriteLine` etkinlik veya herhangi bir şeyi yazma <xref:System.Activities.Statements.WriteLine.TextWriter%2A> uzantısı konak penceresine yönlendirilir. Bir örnek boşta olduğunda, bu örnek için kullanılabilir yer işaretleri açılan kutuda görünür. Yer işareti seçerek, bazı metinleri giriş yapma ve sürdürme yer işareti düğmesine basarak iş akışının yürütülmesini devam eder. İptal etmek, iptal etmek veya seçili bir iş akışı sonlandırılmak. Kalıcılık varsayılan olarak açık – konak kapatın ve geri getirmek ve örnek listesi veritabanında depolanan örnekleri ile doldurulur. İzleme kullanılır çıktıya <xref:System.Activities.WorkflowApplication>-düzeyinde etkinlik düzeyinde ayrıntılı izleme ekleme seçeneğine sahip bir konağa olayları.  
@@ -66,6 +55,6 @@ Bu örnek bir genel ReadLine ana bilgisayardır. Yük ve birlikte kullanarak tü
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  Bu dizin mevcut değilse, Git [Windows Communication Foundation (WCF) ve .NET Framework 4 için Windows Workflow Foundation (WF) örnek](http://go.microsoft.com/fwlink/?LinkId=150780) tüm indirmek için [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] ve [!INCLUDE[wf1](../../../../includes/wf1-md.md)] örnekleri. Bu örnek aşağıdaki dizinde bulunur.  
+>  Bu dizin mevcut değilse, Git [Windows Communication Foundation (WCF) ve .NET Framework 4 için Windows Workflow Foundation (WF) örnek](http://go.microsoft.com/fwlink/?LinkId=150780) tüm Windows Communication Foundation (WCF) indirmek için ve [!INCLUDE[wf1](../../../../includes/wf1-md.md)] örnekleri. Bu örnek aşağıdaki dizinde bulunur.  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WF\Basic\Execution\ControllingWorkflowApplications`

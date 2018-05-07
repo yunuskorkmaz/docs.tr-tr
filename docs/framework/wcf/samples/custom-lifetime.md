@@ -1,33 +1,21 @@
 ---
-title: "Özel Yaşam Süresi"
-ms.custom: 
+title: Özel Yaşam Süresi
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 52806c07-b91c-48fe-b992-88a41924f51f
-caps.latest.revision: "5"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 1cbe73468e2ce1c8a4fe81a676c819b04d2ef760
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
-ms.translationtype: MT
+ms.openlocfilehash: 1d9baa2d6eab476d5c8428208576f341e71fef2f
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="custom-lifetime"></a>Özel Yaşam Süresi
-Bu örnek nasıl yazılacağını göstermektedir bir [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] paylaşılan için özel yaşam süresi hizmetleri sağlamak için uzantı [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] hizmet örnekleri.  
+Bu örnek, paylaşılan için özel yaşam süresi hizmetleri sağlayan bir Windows Communication Foundation (WCF) uzantısı yazmak gösterilmiştir [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] hizmet örnekleri.  
   
 > [!NOTE]
 >  Kurulum yordamı ve yapı yönergeleri Bu örnek için bu konunun sonunda yer alır.  
   
 ## <a name="shared-instancing"></a>Paylaşılan örnek oluşturma  
- [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]Hizmet örneği için birkaç örneklemesini modu sunar. Bu konuda ele paylaşılan örnek oluşturma modu, bir hizmet örneği birden çok kanaldan arasında paylaşmak için bir yöntem sağlar. İstemcileri örneğinin uç noktası adresi yerel olarak gidermek veya hizmet uç noktası adresini çalışan bir örneği elde etmek için Üreteç yöntemi başvurun. Uç nokta adresi olduğunda, bunu yeni bir kanal oluşturmak ve iletişim başlatın. Aşağıdaki kod parçacığını bir istemci uygulaması var olan bir hizmet örneği için yeni bir kanal nasıl oluşturduğunu gösterir.  
+ [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] Hizmet örneği için birkaç örneklemesini modu sunar. Bu konuda ele paylaşılan örnek oluşturma modu, bir hizmet örneği birden çok kanaldan arasında paylaşmak için bir yöntem sağlar. İstemcileri örneğinin uç noktası adresi yerel olarak gidermek veya hizmet uç noktası adresini çalışan bir örneği elde etmek için Üreteç yöntemi başvurun. Uç nokta adresi olduğunda, bunu yeni bir kanal oluşturmak ve iletişim başlatın. Aşağıdaki kod parçacığını bir istemci uygulaması var olan bir hizmet örneği için yeni bir kanal nasıl oluşturduğunu gösterir.  
   
 ```  
 // Create the first channel.  
@@ -51,7 +39,7 @@ IEchoService proxy2 = channelFactory2.CreateChannel();
  Varsayılan olarak, boşta kalma zaman aşımı değeri <xref:System.ServiceModel.InstanceContext> bir dakikadır. Ancak bu örnek, bu özel bir uzantısı kullanılarak nasıl genişletebilirsiniz gösterir.  
   
 ## <a name="extending-the-instancecontext"></a>InstanceContext genişletme  
- İçinde [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)], <xref:System.ServiceModel.InstanceContext> hizmet örneği arasında bağlantı ve `Dispatcher`. [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]Yeni bir durum veya davranışı, Genişletilebilir nesne desenine kullanarak ekleyerek bu çalışma zamanı bileşeni genişletmenizi sağlar. Genişletilebilir object deseni kullanılan [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] ya da mevcut çalışma zamanı sınıflarını yeni işlevselliği ile genişletmek veya yeni durumu özellik için bir nesne eklemek için. Genişletilebilir nesne modelinde üç arabirimi vardır: `IExtensibleObject<T>`, `IExtension<T>`, ve `IExtensionCollection<T>`.  
+ İçinde [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)], <xref:System.ServiceModel.InstanceContext> hizmet örneği arasında bağlantı ve `Dispatcher`. [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] Yeni bir durum veya davranışı, Genişletilebilir nesne desenine kullanarak ekleyerek bu çalışma zamanı bileşeni genişletmenizi sağlar. Genişletilebilir object deseni kullanılan [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] ya da mevcut çalışma zamanı sınıflarını yeni işlevselliği ile genişletmek veya yeni durumu özellik için bir nesne eklemek için. Genişletilebilir nesne modelinde üç arabirimi vardır: `IExtensibleObject<T>`, `IExtension<T>`, ve `IExtensionCollection<T>`.  
   
  `IExtensibleObject<T>` Arabirimi işlevleriyle özelleştirme uzantılarına izin vermek için nesneler tarafından gerçekleştirilir.  
   
@@ -229,7 +217,7 @@ public class EchoService : IEchoService
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  Bu dizin mevcut değilse, Git [Windows Communication Foundation (WCF) ve .NET Framework 4 için Windows Workflow Foundation (WF) örnek](http://go.microsoft.com/fwlink/?LinkId=150780) tüm indirmek için [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] ve [!INCLUDE[wf1](../../../../includes/wf1-md.md)] örnekleri. Bu örnek aşağıdaki dizinde bulunur.  
+>  Bu dizin mevcut değilse, Git [Windows Communication Foundation (WCF) ve .NET Framework 4 için Windows Workflow Foundation (WF) örnek](http://go.microsoft.com/fwlink/?LinkId=150780) tüm Windows Communication Foundation (WCF) indirmek için ve [!INCLUDE[wf1](../../../../includes/wf1-md.md)] örnekleri. Bu örnek aşağıdaki dizinde bulunur.  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Extensibility\Instancing\Lifetime`  
   

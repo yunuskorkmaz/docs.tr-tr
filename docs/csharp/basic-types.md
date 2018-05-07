@@ -1,20 +1,13 @@
 ---
-title: "Temel türler - C# Kılavuzu"
-description: "Tüm C# programları çekirdek türler (sayısal türler, dizeler ve nesne) hakkında bilgi edinin"
-keywords: .NET, .NET core, C#
-author: BillWagner
-ms.author: wiwagn
+title: Temel türler - C# Kılavuzu
+description: Tüm C# programları çekirdek türler (sayısal türler, dizeler ve nesne) hakkında bilgi edinin
 ms.date: 10/10/2016
-ms.topic: article
-ms.prod: .net
-ms.technology: devlang-csharp
-ms.devlang: csharp
 ms.assetid: 95c686ba-ae4f-440e-8e94-0dbd6e04d11f
-ms.openlocfilehash: 398a73f72a9a31c6b2a19a626f704f65564f4fbd
-ms.sourcegitcommit: bbde43da655ae7bea1977f7af7345eb87bd7fd5f
+ms.openlocfilehash: 2e62a461e41f4172bd6dd512a71babb998924978
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="types-variables-and-values"></a>Türleri, değişkenler ve değerleri  
 C# bir kesin türü belirtilmiş bir dildir. Bir değer veren her ifade yaptığı gibi her değişken ve sabit bir türe sahip. Her yöntem imzası her giriş parametre ve dönüş değeri için bir türünü belirtir. .NET Framework sınıf kitaplığı çok çeşitli dosya sistemi, ağ bağlantıları, koleksiyonları ve nesneleri ve tarihleri dizileri gibi mantıksal yapıları temsil eden daha karmaşık türlerin yanı sıra yerleşik sayısal türler kümesini tanımlar. Tipik bir C# programı sınıf kitaplığı türlerinden yanı sıra kullanıcı tanımlı türler, programın sorunu etki alanına özgü kavramları modeli kullanır.  

@@ -1,28 +1,19 @@
 ---
-title: "UI Otomasyon MultipleView Denetim Düzeni Uygulama"
-ms.custom: 
+title: UI Otomasyon MultipleView Denetim Düzeni Uygulama
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-bcl
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - UI Automation, MultipleView control pattern
 - MultipleView control pattern
 - control patterns, MultipleView
 ms.assetid: 5bf1b248-ffee-48c8-9613-0b134bbe9f6a
-caps.latest.revision: "15"
 author: Xansky
 ms.author: mhopkins
 manager: markl
-ms.workload: dotnet
-ms.openlocfilehash: 5ff185ddb145d51fe8bc32ac10f3a45b57ec954c
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 777f529b3b925a965b24cf1a4b38b9d3b9adae7b
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="implementing-the-ui-automation-multipleview-control-pattern"></a>UI Otomasyon MultipleView Denetim Düzeni Uygulama
 > [!NOTE]
@@ -38,7 +29,7 @@ ms.lasthandoff: 12/22/2017
 ## <a name="implementation-guidelines-and-conventions"></a>Uygulama rehberi ve kuralları  
  Birden çok görünüm denetim düzenini uygulama, aşağıdaki yönergeleri ve kuralları dikkat edin:  
   
--   <xref:System.Windows.Automation.Provider.IMultipleViewProvider>Ayrıca geçerli görünümü sağlayan denetimden farklıysa, geçerli görünümü yöneten bir kapsayıcısı üzerinde uygulanmalıdır. Örneğin, denetimin görünümünü Windows Explorer uygulamasından yönetilen sırasında Windows Explorer geçerli klasör içerik için bir liste denetimini içerir.  
+-   <xref:System.Windows.Automation.Provider.IMultipleViewProvider> Ayrıca geçerli görünümü sağlayan denetimden farklıysa, geçerli görünümü yöneten bir kapsayıcısı üzerinde uygulanmalıdır. Örneğin, denetimin görünümünü Windows Explorer uygulamasından yönetilen sırasında Windows Explorer geçerli klasör içerik için bir liste denetimini içerir.  
   
 -   İçeriğini sıralama yapabiliyor bir denetim, birden çok görünüm desteklemek için dikkate alınmaz.  
   

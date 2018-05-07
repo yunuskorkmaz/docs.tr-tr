@@ -1,27 +1,15 @@
 ---
-title: "Sorgu bildirimleri etkinleştirme"
-ms.custom: 
+title: Sorgu bildirimleri etkinleştirme
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-ado
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
 ms.assetid: a5333e19-8e55-4aa9-82dc-ca8745e516ed
-caps.latest.revision: "6"
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
-ms.workload: dotnet
-ms.openlocfilehash: c7b02ba7959a5cfc2205222655460026847c3098
-ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
+ms.openlocfilehash: 4cda3ce3bcae7741df66496c87ba6654e0bbfe6e
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="enabling-query-notifications"></a>Sorgu bildirimleri etkinleştirme
 Sorgu bildirimleri kullanmasına uygulamalarının ortak bir dizi gereksinim vardır. Veri kaynağınızı SQL sorgu bildirimleri desteklemek için doğru şekilde yapılandırılmalıdır ve kullanıcı doğru istemci ve sunucu tarafı izinlerine sahip olmalıdır.  
@@ -39,7 +27,7 @@ Sorgu bildirimleri kullanmasına uygulamalarının ortak bir dizi gereksinim var
 ## <a name="query-notifications-requirements"></a>Sorgu bildirimleri gereksinimleri  
  Sorgu bildirimleri yalnızca belirli bir gereksinimler listesini karşılayan SELECT deyimleri için desteklenir. Aşağıdaki tablo, SQL Server Çevrimiçi Kitaplar'da Service Broker ve Sorgu Bildirimleri belgelerine bağlantılar sağlar.  
   
- **SQL Server Books Online**  
+ **SQL Server Çevrimiçi Kitapları**  
   
 -   [Bildirim için sorgu oluşturma](http://msdn.microsoft.com/library/ms181122.aspx)  
   
@@ -55,7 +43,7 @@ Sorgu bildirimleri kullanmasına uygulamalarının ortak bir dizi gereksinim var
   
 -   [Çözüm tasarım konuları (hizmet Aracısı)](http://msdn.microsoft.com/library/bb522899.aspx)  
   
--   [Service Broker Developer InfoCenter](http://msdn.microsoft.com/library/ms166100.aspx)  
+-   [Hizmet aracısı geliştirici Bilgi Merkezi](http://msdn.microsoft.com/library/ms166100.aspx)  
   
 -   [Geliştirici Kılavuzu (hizmet Aracısı)](http://msdn.microsoft.com/library/bb522908.aspx)  
   
@@ -90,7 +78,7 @@ CREATE SERVICE ContactChangeNotifications
 ### <a name="using-sqldependency"></a>SqlDependency kullanma  
  Kullanılacak <xref:System.Data.SqlClient.SqlDependency>, hizmet Aracısı kullanılan SQL Server veritabanı için etkin olması ve kullanıcıların bildirimleri almak için izinlere sahip olması gerekir. Bildirim sırası gibi hizmet Aracısı nesnelerini önceden tanımlanmıştır.  
   
- Ayrıca, <xref:System.Data.SqlClient.SqlDependency> otomatik olarak başlatır bir çalışan iş parçacığı kuyruğa gönderilen bildirimleri işleme için; ayrıca bilgileri olay bağımsız değişken veri olarak gösterme hizmet Aracısı ileti ayrıştırır. <xref:System.Data.SqlClient.SqlDependency>çağırarak başlatılmalıdır `Start` veritabanı için bir bağımlılık oluşturmak için yöntem. Bu yalnızca bir kez gerekli her veritabanı bağlantısı için uygulama başlatma sırasında çağrılması gereken statik bir yöntemdir. `Stop` Yöntemi uygulama sonlandırma yapılan her bağımlılık bağlantı sırasında çağrılabilir.  
+ Ayrıca, <xref:System.Data.SqlClient.SqlDependency> otomatik olarak başlatır bir çalışan iş parçacığı kuyruğa gönderilen bildirimleri işleme için; ayrıca bilgileri olay bağımsız değişken veri olarak gösterme hizmet Aracısı ileti ayrıştırır. <xref:System.Data.SqlClient.SqlDependency> çağırarak başlatılmalıdır `Start` veritabanı için bir bağımlılık oluşturmak için yöntem. Bu yalnızca bir kez gerekli her veritabanı bağlantısı için uygulama başlatma sırasında çağrılması gereken statik bir yöntemdir. `Stop` Yöntemi uygulama sonlandırma yapılan her bağımlılık bağlantı sırasında çağrılabilir.  
   
 ### <a name="using-sqlnotificationrequest"></a>SqlNotificationRequest kullanma  
  Buna karşılık, <xref:System.Data.Sql.SqlNotificationRequest> tüm dinleme altyapısında kendiniz uygulamak gerektirir. Ayrıca, sıra, hizmet ve ileti sıra tarafından desteklenen türleri gibi tüm destekleyici hizmet Aracısı nesneleri tanımlanmalıdır. El ile bu yaklaşım uygulamanız özel bildirim iletilerini veya bildirim davranışları gerektiriyorsa veya uygulamanızın daha büyük bir hizmet Aracısı uygulamanın parçası ise yararlıdır.  

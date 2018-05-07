@@ -1,27 +1,15 @@
 ---
-title: "Boş değerler işleme"
-ms.custom: 
+title: Boş değerler işleme
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-ado
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
 ms.assetid: f18b288f-b265-4bbe-957f-c6833c0645ef
-caps.latest.revision: "6"
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
-ms.workload: dotnet
-ms.openlocfilehash: 23a502cc3a286ed5cb47c7bbe21253f312722409
-ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
+ms.openlocfilehash: 9c0b6d250dcedc9b5996c50ccdb2f183707e54e4
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="handling-null-values"></a>Boş değerler işleme
 Bir sütundaki değeri bilinmeyen ya da eksik olduğunda ilişkisel bir veritabanındaki bir null değer kullanılır. Bir null, boş bir dize (karakter veya tarih/saat veri türleri) ne (sayısal veri türleri için) sıfır değeri olur. Böylece tüm null değerlere tutarlı bir şekilde işlenir ANSI SQL-92 belirtimi null tüm veri türleri için aynı olması gerektiğini belirtir. <xref:System.Data.SqlTypes> Ad alanı uygulayarak null semantiği sağlar <xref:System.Data.SqlTypes.INullable> arabirimi. Her veri türlerini <xref:System.Data.SqlTypes> kendi `IsNull` özelliği ve `Null` bu veri türünün bir örneğine atanan değer.  
@@ -43,10 +31,10 @@ Bir sütundaki değeri bilinmeyen ya da eksik olduğunda ilişkisel bir veritaba
 ## <a name="nulls-and-sqlboolean"></a>Null değerler ve SqlBoolean  
  Herhangi bir karşılaştırması <xref:System.Data.SqlTypes> döndürülecek bir <xref:System.Data.SqlTypes.SqlBoolean>. `IsNull` İşlevi her `SqlType` döndüren bir <xref:System.Data.SqlTypes.SqlBoolean> ve null değerler için denetlemek için kullanılabilir. Aşağıdaki gerçekte Göster nasıl tabloları ve OR ve NOT işleçleri işlevi null değeri varlığında. (T = true, F = false ve U = bilinmeyen ya da null.)  
   
- ![Truth Table](../../../../../docs/framework/data/adonet/sql/media/truthtable-bpuedev11.gif "TruthTable_bpuedev11")  
+ ![Doğru tablosu](../../../../../docs/framework/data/adonet/sql/media/truthtable-bpuedev11.gif "TruthTable_bpuedev11")  
   
 ### <a name="understanding-the-ansinulls-option"></a>ANSI_NULLS seçeneği anlama  
- <xref:System.Data.SqlTypes>ANSI_NULLS seçeneği açık SQL Server'da ayarlandığında olarak aynı semantiği sağlar. Tüm aritmetik işleçler (+, -, *, /, %), bit düzeyinde işleçler (~ &, &#124;), ve çoğu işlevler işlenen veya bağımsız değişkenler hariç özelliği null ise null döndürür `IsNull`.  
+ <xref:System.Data.SqlTypes> ANSI_NULLS seçeneği açık SQL Server'da ayarlandığında olarak aynı semantiği sağlar. Tüm aritmetik işleçler (+, -, *, /, %), bit düzeyinde işleçler (~ &, &#124;), ve çoğu işlevler işlenen veya bağımsız değişkenler hariç özelliği null ise null döndürür `IsNull`.  
   
  ANSI SQL-92 standart desteklemediği *columnName* WHERE yan tümcesinde = NULL. SQL Server'da ANSI_NULLS seçeneği hem varsayılan NULL atanabilirlik veritabanı ve değerlendirme karşılaştırma null değerler karşı denetler. ANSI_NULLS (varsayılan) etkinleştirdiyseniz, IS NULL işleci için null değerler sınarken ifadelerinde kullanılmalıdır. Örneğin, ANSI_NULLS açık olduğunda aşağıdaki karşılaştırmaya her zaman bilinmeyen verir:  
   

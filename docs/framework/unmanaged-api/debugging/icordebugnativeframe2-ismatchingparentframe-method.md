@@ -1,14 +1,6 @@
 ---
-title: "ICorDebugNativeFrame2::IsMatchingParentFrame Yöntemi"
-ms.custom: 
+title: ICorDebugNativeFrame2::IsMatchingParentFrame Yöntemi
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: reference
 api_name:
 - ICorDebugNativeFrame2.IsMatchingParentFrame Method
 api_location:
@@ -23,17 +15,13 @@ helpviewer_keywords:
 ms.assetid: d2ca20db-df22-4528-a0dd-a09ea62c8998
 topic_type:
 - apiref
-caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: fc2d8eacb05e861290ad19a34c261943dc2959a1
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 39c0ea69a0922f5e0d25c98c21ec17a872b2f421
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="icordebugnativeframe2ismatchingparentframe-method"></a>ICorDebugNativeFrame2::IsMatchingParentFrame Yöntemi
 Belirtilen çerçeve geçerli çerçevenin üst olup olmadığını belirler.  
@@ -60,12 +48,12 @@ HRESULT IsMatchingParentFrame([in] ICorDebugNativeFrame2
 |-------------|-----------------|  
 |S_OK|Üst durumu başarıyla döndürüldü.|  
 |E_FAIL|Üst durumu döndürülemedi.|  
-|E_INVALIDARG|`pPotentialParentFrame`veya `pIsParent` null.|  
+|E_INVALIDARG|`pPotentialParentFrame` veya `pIsParent` null.|  
   
 ## <a name="exceptions"></a>Özel Durumlar  
   
 ## <a name="remarks"></a>Açıklamalar  
- `IsMatchingParentFrame`döndürür `true` yöntemine geçirdiğiniz çerçeve nesnesi yöntemi çağrıldı çerçeve nesnenin üst olup olmadığını. Belirtilen çerçeve alt olmayan bir çerçeve yöntemini çağırırsanız, hata döndürür.  
+ `IsMatchingParentFrame` döndürür `true` yöntemine geçirdiğiniz çerçeve nesnesi yöntemi çağrıldı çerçeve nesnenin üst olup olmadığını. Belirtilen çerçeve alt olmayan bir çerçeve yöntemini çağırırsanız, hata döndürür.  
   
 ## <a name="requirements"></a>Gereksinimler  
  **Platformlar:** bkz [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
@@ -74,7 +62,7 @@ HRESULT IsMatchingParentFrame([in] ICorDebugNativeFrame2
   
  **Kitaplığı:** CorGuids.lib  
   
- **.NET framework sürümleri:**[!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
+ **.NET framework sürümleri:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
  [ICorDebugNativeFrame2 Arabirimi](../../../../docs/framework/unmanaged-api/debugging/icordebugnativeframe2-interface.md)  

@@ -1,38 +1,29 @@
 ---
 title: Genel arabirimler (C#) varyans
-ms.custom: 
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-csharp
-ms.topic: article
 ms.assetid: 4828a8f9-48c0-4128-9749-7fcd6bf19a06
-caps.latest.revision: "3"
-author: BillWagner
-ms.author: wiwagn
-ms.openlocfilehash: cc3fe009e89d5d8f6619b406c8c08f47620a881d
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: fdcfd13a645ffc9b596beed65b74f8e593c642f7
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="variance-in-generic-interfaces-c"></a>Genel arabirimler (C#) varyans
 .NET framework 4 birkaç mevcut genel arabirimler sapma desteği sunmuştur. Bu arabirimleri uygulayan sınıflar örtük dönüştürme sapma desteği sağlar. Aşağıdaki arabirimleri şimdi değişken şunlardır:  
   
--   <xref:System.Collections.Generic.IEnumerable%601>(T değişkendir)  
+-   <xref:System.Collections.Generic.IEnumerable%601> (T değişkendir)  
   
--   <xref:System.Collections.Generic.IEnumerator%601>(T değişkendir)  
+-   <xref:System.Collections.Generic.IEnumerator%601> (T değişkendir)  
   
--   <xref:System.Linq.IQueryable%601>(T değişkendir)  
+-   <xref:System.Linq.IQueryable%601> (T değişkendir)  
   
--   <xref:System.Linq.IGrouping%602>(`TKey` ve `TElement` eşdeğişken olan)  
+-   <xref:System.Linq.IGrouping%602> (`TKey` ve `TElement` eşdeğişken olan)  
   
--   <xref:System.Collections.Generic.IComparer%601>(T karşıtıdır)  
+-   <xref:System.Collections.Generic.IComparer%601> (T karşıtıdır)  
   
--   <xref:System.Collections.Generic.IEqualityComparer%601>(T karşıtıdır)  
+-   <xref:System.Collections.Generic.IEqualityComparer%601> (T karşıtıdır)  
   
--   <xref:System.IComparable%601>(T karşıtıdır)  
+-   <xref:System.IComparable%601> (T karşıtıdır)  
   
  Kovaryans arabirimi genel tür parametresi tarafından tanımlanan daha fazla türetilmiş bir dönüş türüne sahip bir yöntem izin verir. Kovaryans özelliği göstermek için bu genel arabirimler göz önünde bulundurun: `IEnumerable<Object>` ve `IEnumerable<String>`. `IEnumerable<String>` Arabirimi devralmaz `IEnumerable<Object>` arabirimi. Ancak, `String` türü devral `Object` türü ve bazı durumlarda bu arabirimleri nesnelerin birbirlerine atamak isteyebilirsiniz. Bu, aşağıdaki kod örneğinde gösterilir.  
   
@@ -100,5 +91,5 @@ IEnumerable<Object> listObjects = new List<String>();
 ## <a name="see-also"></a>Ayrıca Bkz.  
  [Genel koleksiyonlar için (C#) arabirimlerde varyans kullanma](../../../../csharp/programming-guide/concepts/covariance-contravariance/using-variance-in-interfaces-for-generic-collections.md)  
  [Değişken genel arabirimler oluşturma (C#)](../../../../csharp/programming-guide/concepts/covariance-contravariance/creating-variant-generic-interfaces.md)  
- [Genel arabirimler](../../../../standard/generics/interfaces.md)  
+ [Genel Arabirimler](../../../../standard/generics/interfaces.md)  
  [Temsilcilerde varyans (C#)](../../../../csharp/programming-guide/concepts/covariance-contravariance/variance-in-delegates.md)

@@ -1,38 +1,24 @@
 ---
-title: "COM Uygulamaları ile Tümleştirme Genel Bakış"
-ms.custom: 
+title: COM Uygulamaları ile Tümleştirme Genel Bakış
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - COM [WCF], integration overview
 ms.assetid: 02c5697f-6e2e-47d6-b715-f3a28aebfbd5
-caps.latest.revision: 
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 5b20ae5329f08e9391fd7b93218c44c3c1978a48
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: c789d4a52da9b2785fb5919a674bf19f23d23509
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="integrating-with-com-applications-overview"></a>COM Uygulamaları ile Tümleştirme Genel Bakış
-[!INCLUDE[indigo1](../../../../includes/indigo1-md.md)]yönetilen kod Geliştirici bağlı uygulamaları oluşturmak için zengin bir ortam sağlar. Ancak, yönetilmeyen COM tabanlı kodunda önemli ölçüde yatırımınız varsa ve geçirmek istemediğiniz hala tümleştirebilirsiniz [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] Web Hizmetleri doğrudan varolan kodunuza kullanarak [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] hizmet bilinen adı. Hizmet adının Office VBA, Visual Basic 6.0 veya Visual C++ 6.0 gibi bir geniş aralığı, COM tabanlı geliştirme ortamlarından kullanılabilir.  
+Windows Communication Foundation (WCF) yönetilen kod developer ile bağlı uygulamaları oluşturmak için zengin bir ortam sağlar. COM tabanlı yönetilmeyen kodunda önemli ölçüde yatırımınız varsa ve geçirmek istediğiniz değil, ancak, hala WCF Web Hizmetleri doğrudan varolan kodunuza WCF Hizmeti bilinen adını kullanarak tümleştirebilirsiniz. Hizmet adının Office VBA, Visual Basic 6.0 veya Visual C++ 6.0 gibi bir geniş aralığı, COM tabanlı geliştirme ortamlarından kullanılabilir.  
   
 > [!NOTE]
->  Hizmet bilinen adı kullanan bir [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] tüm iletişimi için iletişim kanalı. Bu kanal için güvenlik ve kimlik mekanizmaları standart COM ve DCOM proxy'leri kullanılanlardan farklı. Ayrıca, hizmet adının kullandığından bir [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] iletişim kanalını varsayılan zaman aşımı süresi olan tüm çağrıları için bir dakika.  
+>  Hizmet adının tüm iletişimi için bir WCF iletişim kanalı kullanır. Bu kanal için güvenlik ve kimlik mekanizmaları standart COM ve DCOM proxy'leri kullanılanlardan farklı. Ayrıca, hizmet adının varsayılan zaman aşımı süresi bir WCF iletişim kanalı kullandığından bir dakikalık tüm çağrıları için kullanılır.  
   
- Hizmet bilinen adı ile birlikte kullanılan `GetObject` yönetilmeyen Geliştirici kesin türü belirtilmiş, COM özgü bir yaklaşım için arama sağlamak için işlevi [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] Web Hizmetleri. Bu yerel, COM görünür tanımının gerektirir [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] Web hizmet sözleşmesini ve kullanılacak bağlama. Gibi diğer [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] bu kanal oluşturma ilk yöntemi çağrıda COM programcıları saydam oluşmamasına rağmen istemciler, hizmet adının hizmetine yazılan bir kanal oluşturmak gerekir.  
+ Hizmet bilinen adı ile birlikte kullanılan `GetObject` işlevi WCF Web hizmetlerini çağırmak için kesin tür belirtilmiş, COM özgü bir yaklaşım ile yönetilmeyen Geliştirici sağlayın. Bu bir yerel, WCF Web hizmeti sözleşme ve kullanılacak bağlama COM görünür tanımını gerektirir. Bu kanal oluşturma ilk yöntemi çağrıda COM programcıları saydam oluşur ancak diğer WCF istemcileri gibi hizmet adının hizmetine yazılan kanal oluşturmalıdır.  
   
- Diğer ortak [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] istemciler, ad kullanırken uygulamaları belirtin adresi, bağlama ve hizmet ile iletişim kurmak için sözleşme. Sözleşme aşağıdaki yollardan biri belirtilebilir:  
+ Ad kullanırken diğer WCF istemciler ortak, adresi, bağlama ve hizmet ile iletişim kurmak için sözleşme uygulamaları belirtin. Sözleşme aşağıdaki yollardan biri belirtilebilir:  
   
 -   Yazılı Sözleşme – Sözleşme COM görünebilir tür istemci makinesinde olarak kaydedilir.  
   
@@ -64,7 +50,7 @@ ms.lasthandoff: 12/22/2017
 |`serializer`|"Xml" veya "datacontract" seri hale getirici belirtin.|  
   
 > [!NOTE]
->  Tamamen COM tabanlı istemcilerle bile kullanıldığında, hizmet adının gerektirir [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] ve istemci bilgisayarda yüklü olmasını destekleyen .NET Framework 2.0. Hizmet bilinen adı kullanma istemci uygulamaları .NET Framework çalışma zamanının uygun sürümünü yükleme önemlidir. Office uygulamaları içinde ad kullanırken, bir yapılandırma dosyası doğru framework sürümü yüklendiğinden emin olmak için gerekli olabilir. Örneğin, Excel ile Excel.exe dosyası ile aynı dizinde Excel.exe.config adlı bir dosyada aşağıdaki metni yerleştirilmelidir:  
+>  Tamamen COM tabanlı istemcilerle bile kullanıldığında, hizmet adının WCF ve destekleyen .NET Framework 2.0 istemci bilgisayarda yüklü olmasını gerektirir. Hizmet bilinen adı kullanma istemci uygulamaları .NET Framework çalışma zamanının uygun sürümünü yükleme önemlidir. Office uygulamaları içinde ad kullanırken, bir yapılandırma dosyası doğru framework sürümü yüklendiğinden emin olmak için gerekli olabilir. Örneğin, Excel ile Excel.exe dosyası ile aynı dizinde Excel.exe.config adlı bir dosyada aşağıdaki metni yerleştirilmelidir:  
 >   
 >  `<?xml version="1.0" encoding="utf-8"?>`  
 >   

@@ -1,28 +1,17 @@
 ---
-title: "İşlem yönetimi yükseltme"
-ms.custom: 
+title: İşlem yönetimi yükseltme
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 1e96331e-31b6-4272-bbbd-29ed1e110460
-caps.latest.revision: "3"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 5d076b93774282fbfa52acfacb6a1c9f3231a972
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 2a5592cc9ebf0ddfc49f38da9404c81d11a29cf8
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="transaction-management-escalation"></a>İşlem yönetimi yükseltme
 Windows Hizmetleri ve birlikte bir işlem yöneticisi oluşturan modüllerin kümesi barındırır. İşlem yönetimi yükseltme bir işlem İşlem Yöneticisi'nin bileşenleri birinden diğerine geçiş işlemini açıklar.  
   
- <xref:System.Transactions>en fazla tek dayanıklı kaynak ya da birden çok volatile kaynakları içeren bir işlem koordine eden bir işlem yöneticisi bileşeni içerir. İşlem Yöneticisi yalnızca içi uygulama etki alanı çağrıları kullandığından, en iyi performansı verir. Geliştiriciler işlem yöneticisi ile doğrudan etkileşim değil. Bunun yerine, arabirimleri, ortak davranışı ve yardımcı sınıfları tanımlar ortak bir altyapısı tarafından sağlanan <xref:System.Transactions> ad alanı.  
+ <xref:System.Transactions> en fazla tek dayanıklı kaynak ya da birden çok volatile kaynakları içeren bir işlem koordine eden bir işlem yöneticisi bileşeni içerir. İşlem Yöneticisi yalnızca içi uygulama etki alanı çağrıları kullandığından, en iyi performansı verir. Geliştiriciler işlem yöneticisi ile doğrudan etkileşim değil. Bunun yerine, arabirimleri, ortak davranışı ve yardımcı sınıfları tanımlar ortak bir altyapısı tarafından sağlanan <xref:System.Transactions> ad alanı.  
   
  İşlem (işlem ve makine sınırları içinde dahil) başka bir uygulama etki alanındaki bir nesneye aynı bilgisayara sağlamak istediğinizde <xref:System.Transactions> altyapı otomatik olarak Microsoft tarafından yönetilecek işlem iletir Dağıtılmış İşlem Düzenleyicisi (MSDTC). Başka bir kalıcı Kaynak Yöneticisi listeleme yükseltme de oluşur. İlerletilen işlemin yükseltilmiş durumundayken kendi tamamlanana kadar yönetilen kalır.  
   

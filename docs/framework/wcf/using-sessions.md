@@ -1,34 +1,20 @@
 ---
 title: Oturumları Kullanma
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 dev_langs:
 - csharp
 - vb
 helpviewer_keywords:
 - sessions [WCF]
 ms.assetid: 864ba12f-3331-4359-a359-6d6d387f1035
-caps.latest.revision: 32
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 172ef71bd3ae09e3c9f15cb0bdb48728a587605e
-ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
-ms.translationtype: MT
+ms.openlocfilehash: e826e0952f95608fd8d85a5b1fad6b17d3fdacb3
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/30/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="using-sessions"></a>Oturumları Kullanma
-İçinde [!INCLUDE[indigo1](../../../includes/indigo1-md.md)] uygulamalar, bir *oturum* iletileri bir grup konuşma karşılık gelen. [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] oturumları bulunan oturum nesnesi farklı [!INCLUDE[vstecasp](../../../includes/vstecasp-md.md)] uygulamaları, farklı davranışlar desteklemek ve farklı şekillerde denetlenir. Bu konu içinde oturumları etkinleştir özellikleri açıklar [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] uygulamaları ve bunların nasıl kullanılacağını.  
+Windows Communication Foundation (WCF) uygulamalarında bir *oturum* iletileri bir grup konuşma karşılık gelen. [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] oturumları bulunan oturum nesnesi farklı [!INCLUDE[vstecasp](../../../includes/vstecasp-md.md)] uygulamaları, farklı davranışlar desteklemek ve farklı şekillerde denetlenir. Bu konu içinde oturumları etkinleştir özellikleri açıklar [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] uygulamaları ve bunların nasıl kullanılacağını.  
   
 ## <a name="sessions-in-windows-communication-foundation-applications"></a>Windows Communication Foundation uygulamaları oturumlarında  
  Bir oturum gerektiren bir hizmet sözleşmesini belirtir, bu sözleşme tüm çağrıları (çağrıları destekleyen başka bir deyişle, temel alınan ileti alışverişlerinde) aynı konuşmada parçası olmalıdır belirtme. Bir sözleşme oturumları sağlar ancak bir gerektirmez, istemcilerin bağlanabileceği ya da bir oturumu belirtirse veya bir oturumu değil. Sona ererse ve bir ileti bir özel durum aynı kanal gönderilir.  

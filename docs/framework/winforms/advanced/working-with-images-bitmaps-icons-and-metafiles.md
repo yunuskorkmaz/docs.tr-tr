@@ -1,13 +1,6 @@
 ---
-title: "Görüntüler, Bit Eşlemler, Simgeler ve Meta Dosyaları ile Çalışma"
-ms.custom: 
+title: Görüntüler, Bit Eşlemler, Simgeler ve Meta Dosyaları ile Çalışma
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-winforms
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - metafiles [Windows Forms], working with
 - examples [Windows Forms], bitmaps
@@ -16,19 +9,14 @@ helpviewer_keywords:
 - images [Windows Forms], working with
 - examples [Windows Forms], metafiles
 ms.assetid: a626d701-bd99-4fd8-b92f-7b8f794e042b
-caps.latest.revision: "17"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 29c8a4ef0a495d63c0263262857002f09d8c885a
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 6d2f0a2f4acebaac59f2d8180f2de4ccb88b2965
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="working-with-images-bitmaps-icons-and-metafiles"></a>Görüntüler, Bit Eşlemler, Simgeler ve Meta Dosyaları ile Çalışma
-[!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)]sağlar `Bitmap` ızgara görüntüleri ile çalışmak için sınıf ve `Metafile` vektör görüntülerle çalışma sınıfı. `Bitmap` Ve `Metafile` sınıflarının her ikisi de devral `Image` sınıfı.  
+[!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] sağlar `Bitmap` ızgara görüntüleri ile çalışmak için sınıf ve `Metafile` vektör görüntülerle çalışma sınıfı. `Bitmap` Ve `Metafile` sınıflarının her ikisi de devral `Image` sınıfı.  
   
 ## <a name="in-this-section"></a>Bu Bölümde  
  [Nasıl yapılır: Ekrana Mevcut bir Bit Eşlemi Çizme](../../../../docs/framework/winforms/advanced/how-to-draw-an-existing-bitmap-to-the-screen.md)  

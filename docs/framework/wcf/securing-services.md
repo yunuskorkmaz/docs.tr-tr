@@ -1,33 +1,21 @@
 ---
 title: Hizmetleri Güvenli Hale Getirme
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 helpviewer_keywords:
 - configuration [WCF], securing services
 - WCF security
 - WCF, security
 ms.assetid: f0ecc6f7-f4b5-42a4-9cb1-b02e28e26620
-caps.latest.revision: 28
 author: BrucePerlerMS
-ms.author: bruceper
 manager: mbaldwin
-ms.workload:
-- dotnet
-ms.openlocfilehash: ffc985d528bfdcdd9b62772a8a8ba61823c95e76
-ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
-ms.translationtype: MT
+ms.openlocfilehash: 6bdac5a65c51ff08cfa170c1a6e556c3532ee7c9
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/30/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="securing-services"></a>Hizmetleri Güvenli Hale Getirme
-Güvenlik bir [!INCLUDE[indigo1](../../../includes/indigo1-md.md)] servis oluşur iki birincil gereksinimlerini: güvenlik ve yetkilendirme aktarın. (Üçüncü bir gereksinim güvenlik olaylarının denetlenmesini açıklanan [denetim](../../../docs/framework/wcf/feature-details/auditing-security-events.md).) Kısaca, Aktarım güvenlik (hem hizmet hem de istemci kimliğini doğrulama) kimlik doğrulama, gizliliği (ileti şifreleme) ve bütünlüğü (oynama algılamak imzalama sayısal) içerir. Yetkilendirme kaynaklarına, örneğin, bir dosyayı okumak yalnızca ayrıcalıklı kullanıcıların erişim denetimdir. Özelliklerini kullanarak [!INCLUDE[indigo2](../../../includes/indigo2-md.md)], iki birincil gereksinimlerini kolayca uygulanır.  
+Windows Communication Foundation (WCF) hizmetini güvenliğinin iki birincil gereksinimlerini oluşur: güvenlik ve yetkilendirme aktarın. (Üçüncü bir gereksinim güvenlik olaylarının denetlenmesini açıklanan [denetim](../../../docs/framework/wcf/feature-details/auditing-security-events.md).) Kısaca, Aktarım güvenlik (hem hizmet hem de istemci kimliğini doğrulama) kimlik doğrulama, gizliliği (ileti şifreleme) ve bütünlüğü (oynama algılamak imzalama sayısal) içerir. Yetkilendirme kaynaklarına, örneğin, bir dosyayı okumak yalnızca ayrıcalıklı kullanıcıların erişim denetimdir. Özelliklerini kullanarak [!INCLUDE[indigo2](../../../includes/indigo2-md.md)], iki birincil gereksinimlerini kolayca uygulanır.  
   
  Dışında <xref:System.ServiceModel.BasicHttpBinding> sınıfı (veya [ \<basicHttpBinding >](../../../docs/framework/configure-apps/file-schema/wcf/basichttpbinding.md) yapılandırma öğesinde), Aktarım güvenlik tüm önceden tanımlanmış bağlamaları için varsayılan olarak etkinleştirilir. Bu bölümdeki konular, iki temel senaryo kapsar: Internet Information Services (IIS) üzerinde barındırılan bir intranet hizmeti üzerinde aktarımı güvenlik ve yetkilendirme uygulayarak ve IIS üzerinde barındırılan bir hizmete aktarımı güvenlik ve yetkilendirme uygulama.  
   

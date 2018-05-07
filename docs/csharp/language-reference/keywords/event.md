@@ -1,10 +1,6 @@
 ---
 title: event (C# Başvurusu)
 ms.date: 07/20/2015
-ms.prod: .net
-ms.technology:
-- devlang-csharp
-ms.topic: article
 f1_keywords:
 - event
 - remove
@@ -13,14 +9,11 @@ f1_keywords:
 helpviewer_keywords:
 - event keyword [C#]
 ms.assetid: 7858fd85-153b-4259-85d0-6aa13c35f174
-caps.latest.revision: 28
-author: BillWagner
-ms.author: wiwagn
-ms.openlocfilehash: f7e7f9f96714f8988eb91d77c63cc4f017d040f5
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 55ccabaea4fcb7716378d92964030f7025202e05
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="event-c-reference"></a>event (C# Başvurusu)
 `event` Anahtar sözcüğü bir yayımcı sınıfı bir olayı bildirmek için kullanılır.  
@@ -39,10 +32,10 @@ ms.lasthandoff: 11/21/2017
   
 |Anahtar sözcüğü|Açıklama|Daha fazla bilgi için|  
 |-------------|-----------------|--------------------------|  
-|[statik](../../../csharp/language-reference/keywords/static.md)|Sınıfının hiçbir örneği varsa bile olay arayanlara herhangi bir zamanda kullanılabilmesini sağlar.|[Statik sınıflar ve statik sınıf üyeleri](../../../csharp/programming-guide/classes-and-structs/static-classes-and-static-class-members.md)|  
-|[sanal](../../../csharp/language-reference/keywords/virtual.md)|Kullanarak olay davranışını geçersiz kılmak türetilen sınıflar sağlar [geçersiz kılma](../../../csharp/language-reference/keywords/override.md) anahtar sözcüğü.|[Devralma](../../../csharp/programming-guide/classes-and-structs/inheritance.md)|  
-|[korumalı](../../../csharp/language-reference/keywords/sealed.md)|İçin türetilen sınıflar, artık sanal olduğunu belirtir.||  
-|[Özet](../../../csharp/language-reference/keywords/abstract.md)|Derleyici değil oluşturacak `add` ve `remove` olay erişimci blokları ve bu nedenle türetilen sınıflar, kendi uygulama sağlamalıdır.||  
+|[static](../../../csharp/language-reference/keywords/static.md)|Sınıfının hiçbir örneği varsa bile olay arayanlara herhangi bir zamanda kullanılabilmesini sağlar.|[Statik Sınıflar ve Statik Sınıf Üyeleri](../../../csharp/programming-guide/classes-and-structs/static-classes-and-static-class-members.md)|  
+|[virtual](../../../csharp/language-reference/keywords/virtual.md)|Kullanarak olay davranışını geçersiz kılmak türetilen sınıflar sağlar [geçersiz kılma](../../../csharp/language-reference/keywords/override.md) anahtar sözcüğü.|[Devralma](../../../csharp/programming-guide/classes-and-structs/inheritance.md)|  
+|[sealed](../../../csharp/language-reference/keywords/sealed.md)|İçin türetilen sınıflar, artık sanal olduğunu belirtir.||  
+|[abstract](../../../csharp/language-reference/keywords/abstract.md)|Derleyici değil oluşturacak `add` ve `remove` olay erişimci blokları ve bu nedenle türetilen sınıflar, kendi uygulama sağlamalıdır.||  
   
  Bir olay kullanarak statik bir olay olarak bildirilmelidir [statik](../../../csharp/language-reference/keywords/static.md) anahtar sözcüğü. Sınıfının hiçbir örneği mevcut olsa bile bu olay arayanlara herhangi bir zamanda kullanılabilmesini sağlar. Daha fazla bilgi için bkz: [statik sınıflar ve statik sınıf üyeleri](../../../csharp/programming-guide/classes-and-structs/static-classes-and-static-class-members.md).  
   
@@ -53,9 +46,9 @@ ms.lasthandoff: 11/21/2017
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
  [C# başvurusu](../../../csharp/language-reference/index.md)  
- [C# programlama kılavuzu](../../../csharp/programming-guide/index.md)  
- [C# anahtar sözcükleri](../../../csharp/language-reference/keywords/index.md)  
- [ekleme](../../../csharp/language-reference/keywords/add.md)  
- [Kaldır](../../../csharp/language-reference/keywords/remove.md)  
+ [C# Programlama Kılavuzu](../../../csharp/programming-guide/index.md)  
+ [C# Anahtar Sözcükleri](../../../csharp/language-reference/keywords/index.md)  
+ [add](../../../csharp/language-reference/keywords/add.md)  
+ [remove](../../../csharp/language-reference/keywords/remove.md)  
  [Değiştiriciler](../../../csharp/language-reference/keywords/modifiers.md)  
  [Nasıl yapılır: temsilcileri (çok noktaya yayın temsilcileri) birleştirme](../../../csharp/programming-guide/delegates/how-to-combine-delegates-multicast-delegates.md)

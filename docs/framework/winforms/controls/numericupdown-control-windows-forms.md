@@ -1,13 +1,6 @@
 ---
 title: NumericUpDown Denetimi (Windows Forms)
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-winforms
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - Windows Forms controls, NumericUpDown control
 - spin button control [Windows Forms], up-down controls
@@ -16,16 +9,11 @@ helpviewer_keywords:
 - spin button control
 - NumericUpDown control [Windows Forms]
 ms.assetid: 32b0c20d-4f37-4aea-873d-faded741d2db
-caps.latest.revision: "13"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 0d57bccb12bfa9b0b193967a5a2ce3830dd6ef7f
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 24e2464eaa94f104d167add1f5fe696b7622ee09
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="numericupdown-control-windows-forms"></a>NumericUpDown Denetimi (Windows Forms)
 Windows Forms `NumericUpDown` denetimi kullanıcının bir değer ayarlamak için tıklatabileceği okları çifti ve bir metin kutusu birleşimini gibi görünüyor. Denetim görüntüler ve seçenekler listesinden tek bir sayısal değer ayarlar. Kullanıcı artırın ve yukarı ve aşağı düğmeleri tıklatarak yukarı ve aşağı ok tuşlarına basarak veya bir sayı yazarak sayısını azaltın. Yukarı Ok tuşuna tıklayarak, en doğru değeri taşır; Aşağı Ok tuşuna tıklayarak en düşük doğru konuma taşır. Müzik çalar üzerinde bir birim denetimi için burada bu tür bir denetim yararlı olabilecek bir örnek verilmiştir. Sayısal yukarı-aşağı denetimleri bazı Windows Denetim Masası uygulamalarda kullanılır.  

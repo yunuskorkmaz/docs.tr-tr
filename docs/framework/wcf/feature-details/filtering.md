@@ -1,36 +1,24 @@
 ---
 title: Filtreleme
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 4002946c-e34a-4356-8cfb-e25912a4be63
-caps.latest.revision: "9"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 6f67a7f6ac423bd66d9d25b834edc9cf55a5d6a8
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 5f599ac74aa63951f59c5e5c79d3fe37b2ab5100
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="filtering"></a>Filtreleme
-[!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] Sistem filtreleme bildirim temelli filtreleri iletileri eşleşmiyor ve işletimsel kararları için kullanabilirsiniz. Yapılacaklar içeren bir ileti iletinin parçası inceleyerek belirlemek için filtreleri kullanabilirsiniz. Sıraya alma işlemi, örneğin, bir ileti sıranın önünü taşınıp taşınmayacağını belirlemek için bilinen bir üstbilgi öncelik öğesinin denetlemek için XPath 1.0 sorgusu kullanabilirsiniz.  
+Sistem filtreleme Windows Communication Foundation (WCF) iletileri eşleşmiyor ve işletimsel kararları için bildirim temelli filtreleri kullanabilirsiniz. Yapılacaklar içeren bir ileti iletinin parçası inceleyerek belirlemek için filtreleri kullanabilirsiniz. Sıraya alma işlemi, örneğin, bir ileti sıranın önünü taşınıp taşınmayacağını belirlemek için bilinen bir üstbilgi öncelik öğesinin denetlemek için XPath 1.0 sorgusu kullanabilirsiniz.  
   
- Filtreleme sistem verimli bir şekilde yapabilirsiniz sınıfları kümesinden oluşan bir filtre kümesi hangisinin belirlemek `true` belirli bir [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] ileti.  
+ Filtreleme sistem verimli bir şekilde yapabilirsiniz sınıfları kümesinden oluşan bir filtre kümesi hangisinin belirlemek `true` belirli bir WCF ileti.  
   
- Bir çekirdek bileşenidir filtreleme sistem [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] Mesajlaşma; bu son derece hızlı şekilde tasarlanmıştır. Her filtre uygulama belirli bir tür eşleştirme için optimize edilmiştir [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] iletileri.  
+ Filtreleme sistem WCF Mesajlaşma çekirdek bileşenidir; son derece hızlı çalışacak şekilde tasarlanmıştır. Her filtre uygulama belirli bir tür WCF iletileri karşı eşleştirme için optimize edilmiştir.  
   
  Filtreleme sistemi iş parçacığı içinde korumalı değil. Uygulama, kilitleme tüm söz dizimini işlemesi gerekir. Ancak, çok Okuyucu, tek bir yazıcı destekler.  
   
 ## <a name="where-filtering-fits"></a>Burada filtreleme uygun  
- Bir ileti alındı ve uygun uygulama bileşeni için ileti gönderilirken işleminin parçası sonra filtreleme gerçekleştirilir. Filtreleme sistem tasarımını birkaç gereksinimlerini ele [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] Mesajlaşma, yönlendirme, güvenlik, olay işleme ve sistem yönetimi gibi alt sistemleri.  
+ Bir ileti alındı ve uygun uygulama bileşeni için ileti gönderilirken işleminin parçası sonra filtreleme gerçekleştirilir. Filtreleme sistem tasarımını Mesajlaşma, yönlendirme, güvenlik, olay işleme ve sistem yönetimi dahil olmak üzere çeşitli WCF alt gereksinimlerini ele alır.  
   
 ## <a name="filters"></a>FilTReleri  
  Filtre Altyapısı filtreleri ve filtre tabloları olmak üzere iki birincil bileşenleri içerir. Bir filtre kullanıcı tarafından belirtilen mantıksal koşullara göre bir ileti hakkında Boolean kararlarını verir. Filtreler uygulamasına <xref:System.ServiceModel.Dispatcher.MessageFilter> sınıfı.  
@@ -53,7 +41,7 @@ ms.lasthandoff: 12/22/2017
   
 ### <a name="prefix-endpoint-address-filters"></a>Uç nokta adresi filtreleri önek  
   
-1.  <xref:System.ServiceModel.Dispatcher.PrefixEndpointAddressMessageFilter> İşlevleri olduğu gibi <xref:System.ServiceModel.Dispatcher.EndpointAddressMessageFilter> eşleşme URI ileti ön ekini temel olabilir ancak bu filtre. Örneğin, adres http://www.adatum.com belirten bir filtre için http://www.adatum.com/userA gönderilen iletiler eşleşir.  
+1.  <xref:System.ServiceModel.Dispatcher.PrefixEndpointAddressMessageFilter> İşlevleri olduğu gibi <xref:System.ServiceModel.Dispatcher.EndpointAddressMessageFilter> eşleşme URI ileti ön ekini temel olabilir ancak bu filtre. Örneğin, adres belirten bir filtre http://www.adatum.com eşleşen gönderilen iletileri http://www.adatum.com/userA.  
   
 ### <a name="xpath-message-filters"></a>XPath ileti filtreleri  
  Bir <xref:System.ServiceModel.Dispatcher.XPathMessageFilter> bir XPath ifadesi bir XML belgesi içeriyor belirli öğeleri, öznitelikleri, metin veya diğer XML söz dizimi oluşturur olup olmadığını belirlemek için kullanır. Filtre XPath katı bir kısmı için son derece etkili olması için optimize edilmiştir. XML Path dili açıklanan [W3C XML yol dili 1.0 belirtimi](http://go.microsoft.com/fwlink/?LinkId=94779).  
@@ -79,7 +67,7 @@ ms.lasthandoff: 12/22/2017
   
  <xref:System.ServiceModel.Dispatcher.XPathMessageFilterTable%601> Sınıfı iyileştirir ileti senaryolarının çoğunu kapsar ve ayrıca tam XPath 1.0 dilbilgisi destekleyen XPath bir kısmı için eşleşen. Verimli paralel eşleme algoritmaları optimize etti.  
   
- Bu tablo vardır özelleştirilmiş `Match` üzerinden çalışan yöntemleri bir <xref:System.Xml.XPath.XPathNavigator> ve <xref:System.ServiceModel.Dispatcher.SeekableXPathNavigator>. A <xref:System.ServiceModel.Dispatcher.SeekableXPathNavigator> genişletir <xref:System.Xml.XPath.XPathNavigator> ekleyerek sınıfı bir <xref:System.ServiceModel.Dispatcher.SeekableXPathNavigator.CurrentPosition%2A> özelliği. Bu özellik kaydedilebilir ve pahalı bellek ayırma Gezgini kopyalama gerek kalmadan hızlı bir şekilde yüklenebilir için XML belgesi içindeki konumlarına izin verir, <xref:System.Xml.XPath.XPathNavigator> için böyle bir işlem gerektirir. [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] XPath altyapısı sorgular XML belgelerinde, yürütme esnasında imleç konumu sık kayıt gerekir böylece <xref:System.ServiceModel.Dispatcher.SeekableXPathNavigator> ileti işleme için önemli bir iyileştirme sağlar.  
+ Bu tablo vardır özelleştirilmiş `Match` üzerinden çalışan yöntemleri bir <xref:System.Xml.XPath.XPathNavigator> ve <xref:System.ServiceModel.Dispatcher.SeekableXPathNavigator>. A <xref:System.ServiceModel.Dispatcher.SeekableXPathNavigator> genişletir <xref:System.Xml.XPath.XPathNavigator> ekleyerek sınıfı bir <xref:System.ServiceModel.Dispatcher.SeekableXPathNavigator.CurrentPosition%2A> özelliği. Bu özellik kaydedilebilir ve pahalı bellek ayırma Gezgini kopyalama gerek kalmadan hızlı bir şekilde yüklenebilir için XML belgesi içindeki konumlarına izin verir, <xref:System.Xml.XPath.XPathNavigator> için böyle bir işlem gerektirir. WCF XPath altyapısı sık sorgular XML belgelerinde, yürütme esnasında imleç konumu kaydetmeniz gerekir böylece <xref:System.ServiceModel.Dispatcher.SeekableXPathNavigator> ileti işleme için önemli bir iyileştirme sağlar.  
   
 ## <a name="customer-scenarios"></a>Müşteri senaryoları  
  İletinin içerdiği verilere bağlı olarak farklı işleme modülleri bir ileti göndermek için istediğiniz zaman filtresini kullanabilir. İki tipik senaryolar, eylem koduna göre ve iletileri uç nokta adresine dayalı iletilerinin bir akış XML'deki çoğullama bir ileti yönlendirme.  

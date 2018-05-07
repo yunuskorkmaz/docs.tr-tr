@@ -1,31 +1,19 @@
 ---
-title: "Kod Sözleşmeleri"
-ms.custom: 
+title: Kod Sözleşmeleri
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
 helpviewer_keywords:
 - Code contracts
 ms.assetid: 84526045-496f-489d-8517-a258cf76f040
-caps.latest.revision: 
 author: mairaw
 ms.author: mairaw
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 4a7f6dd2f97f7d57cdaa59d1420a34409804f9dd
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 09bfa08589bda68258883e6f080392f534e8c5df
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="code-contracts"></a>Kod Sözleşmeleri
 Kod sözleşmeleri önkoşulları, Sonkoşullar ve nesne invariants kodunuzda belirtmek için bir yol sağlar. Önkoşulları yöntemi veya özelliği girerken karşılanması gereken gereksinimleri verilmiştir. Sonkoşullar beklentilerini yöntemi veya özelliği kod çıkar aynı anda açıklanmaktadır. Nesne invariants iyi bir durumda bir sınıfı için beklenen durumu açıklanmaktadır.  
@@ -131,7 +119,7 @@ Contract.EndContractBlock(); // All previous "if" checks are preconditions
         Method( ... (T t) => Contract.OldValue(... t ...) ... ); // ERROR  
         ```  
   
-    -   `Out`parametreleri mevcut bir sorun sözleşmeleri yönteminin gövdesi önce görünür ve çoğu derleyicileri başvurular izin verme çünkü `out` Sonkoşullar parametreleri. Bu sorunu çözmek için <xref:System.Diagnostics.Contracts.Contract> SAX <xref:System.Diagnostics.Contracts.Contract.ValueAtReturn%2A> göre Sonkoşul sağlayan yöntemi bir `out` parametresi.  
+    -   `Out` parametreleri mevcut bir sorun sözleşmeleri yönteminin gövdesi önce görünür ve çoğu derleyicileri başvurular izin verme çünkü `out` Sonkoşullar parametreleri. Bu sorunu çözmek için <xref:System.Diagnostics.Contracts.Contract> SAX <xref:System.Diagnostics.Contracts.Contract.ValueAtReturn%2A> göre Sonkoşul sağlayan yöntemi bir `out` parametresi.  
   
         ```  
         public void OutParam(out int x) f  

@@ -1,10 +1,6 @@
 ---
-title: "Değer Türleri (C# Başvurusu)"
+title: Değer Türleri (C# Başvurusu)
 ms.date: 07/20/2015
-ms.prod: .net
-ms.technology:
-- devlang-csharp
-ms.topic: article
 f1_keywords:
 - cs.valuetypes
 helpviewer_keywords:
@@ -12,21 +8,18 @@ helpviewer_keywords:
 - types [C#], value types
 - C# language, value types
 ms.assetid: 471eb994-2958-49d5-a6be-19b4313f80a3
-caps.latest.revision: 
-author: BillWagner
-ms.author: wiwagn
-ms.openlocfilehash: 281b811f2a8a1f2c364405b563f9f103899b492c
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: fdda6942c6883baaaea5e305a1e699a01e707d2b
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="value-types-c-reference"></a>Değer Türleri (C# Başvurusu)
 Değer türleri iki ana kategoriye oluşur:  
   
 -   [Yapılar](../../../csharp/language-reference/keywords/struct.md)  
   
--   [Numaralandırmalar](../../../csharp/language-reference/keywords/enum.md)  
+-   [Sabit Listeleri](../../../csharp/language-reference/keywords/enum.md)  
   
  Yapılar kategorileri şunlardır:  
   
@@ -36,7 +29,7 @@ Değer türleri iki ana kategoriye oluşur:
   
     -   [Kayan nokta türleri](../../../csharp/language-reference/keywords/floating-point-types-table.md)  
   
-    -   [ondalık](../../../csharp/language-reference/keywords/decimal.md)  
+    -   [decimal](../../../csharp/language-reference/keywords/decimal.md)  
   
 -   [bool](../../../csharp/language-reference/keywords/bool.md)  
   
@@ -107,8 +100,8 @@ Point p = new Point(); // Invoke default constructor for the struct.
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
  [C# başvurusu](../../../csharp/language-reference/index.md)  
- [C# programlama kılavuzu](../../../csharp/programming-guide/index.md)  
- [C# anahtar sözcükleri](../../../csharp/language-reference/keywords/index.md)  
+ [C# Programlama Kılavuzu](../../../csharp/programming-guide/index.md)  
+ [C# Anahtar Sözcükleri](../../../csharp/language-reference/keywords/index.md)  
  [Türler](../../../csharp/language-reference/keywords/types.md)  
- [Türler için başvuru tabloları](../../../csharp/language-reference/keywords/reference-tables-for-types.md)  
- [Başvuru türleri](../../../csharp/language-reference/keywords/reference-types.md)
+ [Türler için Başvuru Tabloları](../../../csharp/language-reference/keywords/reference-tables-for-types.md)  
+ [Başvuru Türleri](../../../csharp/language-reference/keywords/reference-types.md)

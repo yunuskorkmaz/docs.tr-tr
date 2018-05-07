@@ -1,24 +1,17 @@
 ---
 title: partial (Tür) (C# Başvurusu)
 ms.date: 07/20/2015
-ms.prod: .net
-ms.technology:
-- devlang-csharp
-ms.topic: article
 f1_keywords:
 - partialtype
 - partialtype_CSharpKeyword
 helpviewer_keywords:
 - partial types [C#]
 ms.assetid: 27320743-a22e-4c7b-b0b3-53afe3607334
-caps.latest.revision: 24
-author: BillWagner
-ms.author: wiwagn
-ms.openlocfilehash: 5212984cc577ce05fc4697e0d648fb5545528562
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 4f57149dd18deb08aa11b72d0a6d5f71b3838bd1
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="partial-type-c-reference"></a>partial (Tür) (C# Başvurusu)
 Kısmi türü tanımları bir sınıf, yapı veya arabirim tanımı için birden çok dosyaya bölme izin verir.  
@@ -39,6 +32,6 @@ Kısmi türü tanımları bir sınıf, yapı veya arabirim tanımı için birden
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
  [C# başvurusu](../../../csharp/language-reference/index.md)  
- [C# programlama kılavuzu](../../../csharp/programming-guide/index.md)  
+ [C# Programlama Kılavuzu](../../../csharp/programming-guide/index.md)  
  [Değiştiriciler](../../../csharp/language-reference/keywords/modifiers.md)  
- [Genel türlere giriş](../../../csharp/programming-guide/generics/introduction-to-generics.md)
+ [Genel Türlere Giriş](../../../csharp/programming-guide/generics/introduction-to-generics.md)

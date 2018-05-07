@@ -1,41 +1,27 @@
 ---
 title: İleti Sözleşmeleri Kullanılıyor
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 dev_langs:
 - csharp
 - vb
 helpviewer_keywords:
 - message contracts [WCF]
 ms.assetid: 1e19c64a-ae84-4c2f-9155-91c54a77c249
-caps.latest.revision: 46
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 600d938b8981ddfabcb79028ae66b5b9d02107b7
-ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
+ms.openlocfilehash: ea0a107a67753e919439a6be2035ab77001641ff
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/30/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="using-message-contracts"></a>İleti Sözleşmeleri Kullanılıyor
-Genellikle oluştururken [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] uygulamaları, geliştiricilerin serileştirme sorunları ve veri yapıları Kapat dikkat ve kendilerini içinde veri yazımının iletileri yapısıyla ilgilendiren gerekmez. Bu uygulamalar için parametreleri veya dönüş değerleri için veri sözleşmeleri oluşturma basittir. (Daha fazla bilgi için bkz: [hizmet sözleşmelerinde veri aktarımı belirtme](../../../../docs/framework/wcf/feature-details/specifying-data-transfer-in-service-contracts.md).)  
+Genellikle Windows Communication Foundation (WCF) uygulamaları oluştururken geliştiriciler serileştirme sorunları ve veri yapıları Kapat dikkat ve kendilerini veri taşınan iletileri yapısıyla ilgilendiren gerekmez. Bu uygulamalar için parametreleri veya dönüş değerleri için veri sözleşmeleri oluşturma basittir. (Daha fazla bilgi için bkz: [hizmet sözleşmelerinde veri aktarımı belirtme](../../../../docs/framework/wcf/feature-details/specifying-data-transfer-in-service-contracts.md).)  
   
  Ancak, bir SOAP iletisi yapısını bazen tam kontrole yalnızca, içeriğini üzerinde denetim olarak önem taşır. Birlikte çalışabilirlik önemli veya özellikle güvenlik denetlemek için ileti veya ileti bölümü düzeyinde sorunları olduğunda özellikle geçerlidir. Bu durumlarda, oluşturduğunuz bir *ileti sözleşmesi* gerekli kesin SOAP iletisi yapısını belirtmenize olanak sağlar.  
   
  Bu konu çeşitli ileti sözleşmesi öznitelikleri belirli ileti sözleşmesi işleminiz oluşturmak için nasıl kullanıldığını açıklar.  
   
 ## <a name="using-message-contracts-in-operations"></a>İleti sözleşmeleri işlemlerinde kullanma  
- [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] hakkında ya da Modellenen işlemlerini destekleyen *uzak yordam çağrısı (RPC) stili* veya *stili Mesajlaşma*. Bir RPC-style işleminde serializable bir tür kullanabilirsiniz ve birden çok parametre gibi yerel aramalar için kullanılabilen özellikleri erişimi ve `ref` ve `out` parametreleri. Bu stilde seçilen serileştirme form temel alınan iletilerde verilerin yapısını denetler ve [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] çalışma zamanı işlemi desteklemek için iletileri oluşturur. Bu, SOAP ile tanıdık olmayan ve iletileri kolayca SOAP ve kolayca oluşturup hizmet uygulamaları kullanın geliştiriciler sağlar.  
+ WCF üzerinde Modellenen işlemlerini destekleyen *uzak yordam çağrısı (RPC) stili* veya *stili Mesajlaşma*. Bir RPC-style işleminde serializable bir tür kullanabilirsiniz ve birden çok parametre gibi yerel aramalar için kullanılabilen özellikleri erişimi ve `ref` ve `out` parametreleri. Bu stili temel alınan iletilerde verilerin yapısını seçilen serileştirme form denetimlerini ve WCF çalışma zamanı işlemi desteklemek için iletileri oluşturur. Bu, SOAP ile tanıdık olmayan ve iletileri kolayca SOAP ve kolayca oluşturup hizmet uygulamaları kullanın geliştiriciler sağlar.  
   
  Aşağıdaki kod örneğinde RPC stilini Modellenen bir hizmet işlemi gösterilmektedir.  
   
@@ -263,7 +249,7 @@ public class PatientRecord
   
 -   `Relay`  
   
- `Actor` Veya `Role` özniteliği, verili bir üstbilginin amaçlanmıştır düğümü Tekdüzen Kaynak Tanımlayıcısı'nı (URI) belirtir. `MustUnderstand` Özniteliği, üst bilgi işlem düğümü, anlamak olup olmadığını belirtir. `Relay` Özniteliği, üstbilgi aşağı akış düğümlerine geçirilmesine izin olup olmadığını belirtir. [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] dışında bu özniteliklerin gelen iletileri üzerinde herhangi bir işlem gerçekleştirmez `MustUnderstand` özniteliği, bu konunun devamındaki "İleti sözleşmesi sürümü oluşturma" bölümünde belirtildiği gibi. Ancak, gerekirse aşağıdaki açıklama olduğu gibi bu öznitelikler okumasına ve yazmasına sağlar.  
+ `Actor` Veya `Role` özniteliği, verili bir üstbilginin amaçlanmıştır düğümü Tekdüzen Kaynak Tanımlayıcısı'nı (URI) belirtir. `MustUnderstand` Özniteliği, üst bilgi işlem düğümü, anlamak olup olmadığını belirtir. `Relay` Özniteliği, üstbilgi aşağı akış düğümlerine geçirilmesine izin olup olmadığını belirtir. WCF gerçekleştirmez bu özniteliklerin gelen iletileri üzerinde herhangi bir işlem dışında `MustUnderstand` özniteliği, bu konunun devamındaki "İleti sözleşmesi sürümü oluşturma" bölümünde belirtildiği gibi. Ancak, gerekirse aşağıdaki açıklama olduğu gibi bu öznitelikler okumasına ve yazmasına sağlar.  
   
  İleti gönderirken bu öznitelikler varsayılan olarak gösterilen değil. Bunu iki şekilde değiştirebilirsiniz. İlk olarak, statik olarak öznitelikleri için istenen tüm değerleri değiştirerek ayarladığınız <xref:System.ServiceModel.MessageHeaderAttribute.Actor%2A?displayProperty=nameWithType>, <xref:System.ServiceModel.MessageHeaderAttribute.MustUnderstand%2A?displayProperty=nameWithType>, ve <xref:System.ServiceModel.MessageHeaderAttribute.Relay%2A?displayProperty=nameWithType> aşağıdaki kod örneğinde gösterildiği gibi özellikler. (Unutmayın hiçbir `Role` özellik; ayarı <xref:System.ServiceModel.MessageHeaderAttribute.Actor%2A> özelliği yayar `Role` SOAP 1.2 kullanıyorsanız özniteliği).  
   
@@ -336,9 +322,9 @@ public class BankingTransaction
   
  Sürüm üstbilgilerini aşağıdaki kurallar geçerli olur:  
   
--   [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] eksik üstbilgileri nesne değildir — varsayılan değerlerine karşılık gelen üyeleri bırakılır.  
+-   WCF eksik üstbilgileri nesne değildir — varsayılan değerlerine karşılık gelen üyeleri bırakılır.  
   
--   [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] Ayrıca beklenmeyen fazladan üstbilgiler yoksayar. Ek üstbilgi varsa bu kuralın tek özel durum olan bir `MustUnderstand` özniteliğini `true` gelen SOAP iletisi — anlaşılmalıdır bir üstbilgi işlenemediği için bu durumda, bir özel durum oluşur.  
+-   WCF da beklenmeyen fazladan üstbilgiler yok sayar. Ek üstbilgi varsa bu kuralın tek özel durum olan bir `MustUnderstand` özniteliğini `true` gelen SOAP iletisi — anlaşılmalıdır bir üstbilgi işlenemediği için bu durumda, bir özel durum oluşur.  
   
  İleti gövdeleri sahip benzer sürüm oluşturma kuralları — eksik ve ek İleti gövde bölümü yok sayılır.  
   
@@ -383,7 +369,7 @@ public class PatientRecord : PersonRecord
 -   Birden çok işlemlerinde aynı iletiyi kullanarak sözleşme, birden çok ileti türlerini WSDL belgesinde üretilir. Adları "3", numaraları "2" ekleyerek ve benzeri sonraki kullanımlar için benzersiz yapılır. Geri WSDL içe aktarırken, birden çok ileti sözleşme türleri oluşturulur ve adlarını dışında aynıdır.  
   
 ## <a name="soap-encoding-considerations"></a>SOAP konuları kodlama  
- [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] eski SOAP kodlama stilini XML kullanmanıza olanak tanır ancak kullanımı önerilmez. Bu stili kullanırken (ayarlayarak `Use` özelliğine `Encoded` üzerinde <xref:System.ServiceModel.XmlSerializerFormatAttribute?displayProperty=nameWithType> hizmet sözleşmesini uygulanan), aşağıdaki ek maddeler geçerlidir:  
+ WCF eski SOAP kodlama stilini XML kullanmanıza olanak tanır ancak kullanımı önerilmez. Bu stili kullanırken (ayarlayarak `Use` özelliğine `Encoded` üzerinde <xref:System.ServiceModel.XmlSerializerFormatAttribute?displayProperty=nameWithType> hizmet sözleşmesini uygulanan), aşağıdaki ek maddeler geçerlidir:  
   
 -   İleti üstbilgilerini desteklenmez; Bu öznitelik anlamına <xref:System.ServiceModel.MessageHeaderAttribute> ve dizi öznitelik <xref:System.ServiceModel.MessageHeaderArrayAttribute> SOAP kodlama ile uyumlu değil.  
   

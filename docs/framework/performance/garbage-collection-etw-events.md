@@ -1,31 +1,21 @@
 ---
-title: "Çöp Toplama ETW Olayları"
-ms.custom: 
+title: Çöp Toplama ETW Olayları
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - GC events
 - garbage collection events [.NET Framework]
 - ETW, garbage collection events (CLR)
 ms.assetid: f14b6fd7-0966-4d87-bc89-54ef3a44a94a
-caps.latest.revision: "21"
 author: mairaw
 ms.author: mairaw
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 133d48baa9613ea698b6d6a21f0dfe88a798859c
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 13f7e935ab999ccc3cd3ea1e308e8d686bed4171
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="garbage-collection-etw-events"></a>Çöp Toplama ETW Olayları
-<a name="top"></a>Bu olaylar çöp toplama ilgili bilgi toplayın. Tanılamada yardımcı olurlar ve hata ayıklama, atık toplama kaç kez belirleme dahil olmak üzere gerçekleştirildiyse, ne kadar bellek çöp toplama ve benzeri sırasında bırakılmış.  
+<a name="top"></a> Bu olaylar çöp toplama ilgili bilgi toplayın. Tanılamada yardımcı olurlar ve hata ayıklama, atık toplama kaç kez belirleme dahil olmak üzere gerçekleştirildiyse, ne kadar bellek çöp toplama ve benzeri sırasında bırakılmış.  
   
  Bu kategori aşağıdaki olaylar oluşur:  
   
@@ -63,7 +53,7 @@ ms.lasthandoff: 12/22/2017
   
 |Olay oluşturma için anahtar sözcüğü|Düzey|  
 |-----------------------------------|-----------|  
-|`GCKeyword`(0x1)|Bilgilendirici (4)|  
+|`GCKeyword` (0x1)|Bilgilendirici (4)|  
   
  Aşağıdaki tabloda olay bilgilerini gösterir.  
   
@@ -75,7 +65,7 @@ ms.lasthandoff: 12/22/2017
   
 |Alan adı|Veri türü|Açıklama|  
 |----------------|---------------|-----------------|  
-|Sayısı|Win: UInt32| *n* Th atık toplama.|  
+|Sayısı|Win: UInt32|*n*th atık toplama.|  
 |Derinliği|Win: UInt32|Toplanacak oluşturma.|  
 |Neden|Win: UInt32|Çöp toplama neden tetiklendi:<br /><br /> 0x0 - küçük nesne yığın ayırma.<br /><br /> 0x1 - kopyaladığınızda.<br /><br /> 0x2 - bellek yetersiz.<br /><br /> 0x3 - boş.<br /><br /> 0x4 - büyük nesne yığın ayırma.<br /><br /> 0x5 - (için küçük nesne yığın) alanı yetersiz.<br /><br /> 0x6 - (için büyük nesne yığın) alanı yetersiz.<br /><br /> 0x7 - kopyaladığınızda ancak engelleme olarak zorunlu değildir.|  
 |Tür|Win: UInt32|0x0 - arka plan çöp toplama dışında engelleme çöp toplama oluştu.<br /><br /> 0x1 - arka plan çöp toplama.<br /><br /> 0x2 - engelleme çöp toplama arka plan çöp toplama sırasında oluştu.|  
@@ -89,7 +79,7 @@ ms.lasthandoff: 12/22/2017
   
 |Olay oluşturma için anahtar sözcüğü|Düzey|  
 |-----------------------------------|-----------|  
-|`GCKeyword`(0x1)|Bilgilendirici (4)|  
+|`GCKeyword` (0x1)|Bilgilendirici (4)|  
   
  Aşağıdaki tabloda olay bilgilerini gösterir.  
   
@@ -101,7 +91,7 @@ ms.lasthandoff: 12/22/2017
   
 |Alan adı|Veri türü|Açıklama|  
 |----------------|---------------|-----------------|  
-|Sayısı|Win: UInt32| *n* Th atık toplama.|  
+|Sayısı|Win: UInt32|*n*th atık toplama.|  
 |Derinliği|Win: UInt32|Toplanan oluşturma.|  
 |ClrInstanceID|Win: UInt16|CLR veya CoreCLR örneği için benzersiz kimlik.|  
   
@@ -113,7 +103,7 @@ ms.lasthandoff: 12/22/2017
   
 |Olay oluşturma için anahtar sözcüğü|Düzey|  
 |-----------------------------------|-----------|  
-|`GCKeyword`(0x1)|Bilgilendirici (4)|  
+|`GCKeyword` (0x1)|Bilgilendirici (4)|  
   
  Aşağıdaki tabloda olay bilgilerini gösterir.  
   
@@ -148,7 +138,7 @@ ms.lasthandoff: 12/22/2017
   
 |Olay oluşturma için anahtar sözcüğü|Düzey|  
 |-----------------------------------|-----------|  
-|`GCKeyword`(0x1)|Bilgilendirici (4)|  
+|`GCKeyword` (0x1)|Bilgilendirici (4)|  
   
  Aşağıdaki tabloda olay bilgilerini gösterir.  
   
@@ -175,7 +165,7 @@ ms.lasthandoff: 12/22/2017
   
 |Olay oluşturma için anahtar sözcüğü|Düzey|  
 |-----------------------------------|-----------|  
-|`GCKeyword`(0x1)|Bilgilendirici (4)|  
+|`GCKeyword` (0x1)|Bilgilendirici (4)|  
   
  Aşağıdaki tabloda olay bilgilerini gösterir.  
   
@@ -198,7 +188,7 @@ ms.lasthandoff: 12/22/2017
   
 |Olay oluşturma için anahtar sözcüğü|Düzey|  
 |-----------------------------------|-----------|  
-|`GCKeyword`(0x1)|Bilgilendirici (4)|  
+|`GCKeyword` (0x1)|Bilgilendirici (4)|  
   
  Aşağıdaki tabloda olay bilgilerini gösterir.  
   
@@ -216,7 +206,7 @@ ms.lasthandoff: 12/22/2017
   
 |Olay oluşturma için anahtar sözcüğü|Düzey|  
 |-----------------------------------|-----------|  
-|`GCKeyword`(0x1)|Bilgilendirici (4)|  
+|`GCKeyword` (0x1)|Bilgilendirici (4)|  
   
  Aşağıdaki tabloda olay bilgilerini gösterir.  
   
@@ -234,7 +224,7 @@ ms.lasthandoff: 12/22/2017
   
 |Olay oluşturma için anahtar sözcüğü|Düzey|  
 |-----------------------------------|-----------|  
-|`GCKeyword`(0x1)|Bilgilendirici (4)|  
+|`GCKeyword` (0x1)|Bilgilendirici (4)|  
   
  Aşağıdaki tabloda olay bilgilerini gösterir.  
   
@@ -258,7 +248,7 @@ ms.lasthandoff: 12/22/2017
   
 |Olay oluşturma için anahtar sözcüğü|Düzey|  
 |-----------------------------------|-----------|  
-|`GCKeyword`(0x1)|Bilgilendirici (4)|  
+|`GCKeyword` (0x1)|Bilgilendirici (4)|  
   
  Aşağıdaki tabloda olay bilgileri gösterir:  
   
@@ -276,7 +266,7 @@ ms.lasthandoff: 12/22/2017
   
 |Olay oluşturma için anahtar sözcüğü|Düzey|  
 |-----------------------------------|-----------|  
-|`GCKeyword`(0x1)|Bilgilendirici (4)|  
+|`GCKeyword` (0x1)|Bilgilendirici (4)|  
   
  Aşağıdaki tabloda olay bilgilerini gösterir.  
   
@@ -304,7 +294,7 @@ ms.lasthandoff: 12/22/2017
   
 |Olay oluşturma için anahtar sözcüğü|Düzey|  
 |-----------------------------------|-----------|  
-|`GCKeyword`(0x1)|Bilgilendirici (4)|  
+|`GCKeyword` (0x1)|Bilgilendirici (4)|  
   
  Aşağıdaki tabloda olay bilgilerini gösterir.  
   
@@ -322,7 +312,7 @@ ms.lasthandoff: 12/22/2017
   
 |Olay oluşturma için anahtar sözcüğü|Düzey|  
 |-----------------------------------|-----------|  
-|`GCKeyword`(0x1)|Bilgilendirici (4)|  
+|`GCKeyword` (0x1)|Bilgilendirici (4)|  
   
  Aşağıdaki tabloda olay bilgilerini gösterir.  
   
@@ -345,8 +335,8 @@ ms.lasthandoff: 12/22/2017
   
 |Olay oluşturma için anahtar sözcüğü|Düzey|  
 |-----------------------------------|-----------|  
-|`GCKeyword`(0x1)|Bilgilendirici (4)|  
-|`ThreadingKeyword`(0x10000)|Bilgilendirici (4)|  
+|`GCKeyword` (0x1)|Bilgilendirici (4)|  
+|`ThreadingKeyword` (0x10000)|Bilgilendirici (4)|  
   
  Aşağıdaki tabloda olay bilgilerini gösterir.  
   
@@ -364,8 +354,8 @@ ms.lasthandoff: 12/22/2017
   
 |Olay oluşturma için anahtar sözcüğü|Düzey|  
 |-----------------------------------|-----------|  
-|`GCKeyword`(0x1)|Bilgilendirici (4)|  
-|`ThreadingKeyword`(0x10000)|Bilgilendirici (4)|  
+|`GCKeyword` (0x1)|Bilgilendirici (4)|  
+|`ThreadingKeyword` (0x10000)|Bilgilendirici (4)|  
   
  Aşağıdaki tabloda olay bilgilerini gösterir.  
   

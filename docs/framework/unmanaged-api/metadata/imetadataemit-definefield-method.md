@@ -1,14 +1,6 @@
 ---
-title: "IMetaDataEmit::DefineField Yöntemi"
-ms.custom: 
+title: IMetaDataEmit::DefineField Yöntemi
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: reference
 api_name:
 - IMetaDataEmit.DefineField
 api_location:
@@ -23,17 +15,13 @@ helpviewer_keywords:
 ms.assetid: 6b5be4fc-2e86-499c-8b09-833160bca767
 topic_type:
 - apiref
-caps.latest.revision: 
 author: mairaw
 ms.author: mairaw
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: e2c4b5604c3daec78744eb8902a30750571b9f82
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: fd0ddda898911da2c96a53d941c4290af9028154
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="imetadataemitdefinefield-method"></a>IMetaDataEmit::DefineField Yöntemi
 Belirtilen meta veri imzayla bir alan için bir tanım oluşturur ve bu alan tanımı için bir belirteç alır.  
@@ -71,7 +59,7 @@ HRESULT DefineField (
  [in] Bayt sayısı `pvSigBlob`.  
   
  `dwCPlusTypeFlage`  
- [in] `ELEMENT_TYPE_`  *\**  Sabit değer. Bu bir `CorElementType` değeri. Alan için sabit bir değer tanımlama değil kullanırsanız `ELEMENT_TYPE_END`.  
+ [in] `ELEMENT_TYPE_` *\** Sabit değer. Bu bir `CorElementType` değeri. Alan için sabit bir değer tanımlama değil kullanırsanız `ELEMENT_TYPE_END`.  
   
  `pValue`  
  [in] Alan için sabit bir değer.  
@@ -89,7 +77,7 @@ HRESULT DefineField (
   
  **Kitaplığı:** MSCorEE.dll kaynak olarak kullanılır  
   
- **.NET framework sürümleri:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET framework sürümleri:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
  [IMetaDataEmit Arabirimi](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-interface.md)  

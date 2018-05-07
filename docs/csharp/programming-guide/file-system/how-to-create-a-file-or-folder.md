@@ -1,23 +1,17 @@
 ---
-title: "Nasıl yapılır: Dosya ve Klasör Oluşturma (C# Programlama Kılavuzu)"
+title: 'Nasıl yapılır: Dosya ve Klasör Oluşturma (C# Programlama Kılavuzu)'
 ms.date: 07/20/2015
-ms.prod: .net
-ms.technology: devlang-csharp
-ms.topic: article
 helpviewer_keywords:
 - folders [C#]
 - creating files [C#]
 - files [C#]
 - creating folders [C#]
 ms.assetid: 4582ee2d-d72d-4687-bcb9-08d336c62c25
-caps.latest.revision: "22"
-author: BillWagner
-ms.author: wiwagn
-ms.openlocfilehash: f7eb2c6386a8433c025a9f2abea4b03f6ab271d6
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: d69885b420d28878072a70dfd2288905cf13de1f
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-create-a-file-or-folder-c-programming-guide"></a>Nasıl yapılır: Dosya ve Klasör Oluşturma (C# Programlama Kılavuzu)
 Programlı olarak bilgisayarınızda bir klasör oluşturun, bir alt klasör oluşturun alt klasöründe bir dosya oluşturun ve veri dosyasına yazma.  
@@ -74,5 +68,5 @@ Programlı olarak bilgisayarınızda bir klasör oluşturun, bir alt klasör olu
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
  <xref:System.IO?displayProperty=nameWithType>  
- [C# programlama kılavuzu](../../../csharp/programming-guide/index.md)  
+ [C# Programlama Kılavuzu](../../../csharp/programming-guide/index.md)  
  [Dosya sistemi ve kayıt defteri (C# programlama Kılavuzu)](../../../csharp/programming-guide/file-system/index.md)

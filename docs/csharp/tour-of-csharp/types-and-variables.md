@@ -1,20 +1,13 @@
 ---
-title: "C# türleri ve değişkenleri - C# dili turu"
-description: "Türlerini tanımlama ve C# değişkenleri bildirme hakkında bilgi edinin"
-keywords: ".NET, csharp, türü, türü, değer türü başvurusu"
-author: BillWagner
-ms.author: wiwagn
+title: C# türleri ve değişkenleri - C# dili turu
+description: Türlerini tanımlama ve C# değişkenleri bildirme hakkında bilgi edinin
 ms.date: 08/10/2016
-ms.topic: article
-ms.prod: .net
-ms.technology: devlang-csharp
-ms.devlang: csharp
 ms.assetid: f8a8051e-0049-43f1-b594-9c84cc7b1224
-ms.openlocfilehash: 1f1031384520b9ed37246361da8bbc1b42addb0b
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.openlocfilehash: 752ff490ec91919dc54539c3e39f6d0c527d6260
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="types-and-variables"></a>Türleri ve değişkenler
 
@@ -26,29 +19,29 @@ C# ' ın tür sistemi genel bir bakış sağlar.
 
 * Değer türleri
     - Basit türler
-        * İntegral imzalı: `sbyte`, `short`, `int`,`long`
-        * İmzasız integral: `byte`, `ushort`, `uint`,`ulong`
-        * Unicode karakter sayısı:`char`
-        * IEEE kayan nokta: `float`,`double`
-        * Yüksek duyarlıklı ondalık:`decimal`
-        * Mantıksal değer:`bool`
+        * İntegral imzalı: `sbyte`, `short`, `int`, `long`
+        * İmzasız integral: `byte`, `ushort`, `uint`, `ulong`
+        * Unicode karakter sayısı: `char`
+        * IEEE kayan nokta: `float`, `double`
+        * Yüksek duyarlıklı ondalık: `decimal`
+        * Mantıksal değer: `bool`
     - Numaralandırma türleri
-        * Formun kullanıcı tanımlı türler`enum E {...}`
+        * Formun kullanıcı tanımlı türler `enum E {...}`
     - Struct türleri
-        * Formun kullanıcı tanımlı türler`struct S {...}`
+        * Formun kullanıcı tanımlı türler `struct S {...}`
     - boş değer atanabilen değer türleri
         * Diğer tüm değer türlerinde uzantılarını bir `null` değeri
 * Başvuru türleri
     - Sınıf türleri
-        * Tüm diğer türleri Ultimate temel sınıfını:`object`
-        * Unicode dizelerini:`string`
-        * Formun kullanıcı tanımlı türler`class C {...}`
+        * Tüm diğer türleri Ultimate temel sınıfını: `object`
+        * Unicode dizelerini: `string`
+        * Formun kullanıcı tanımlı türler `class C {...}`
     - Arabirim türleri
-        * Formun kullanıcı tanımlı türler`interface I {...}`
+        * Formun kullanıcı tanımlı türler `interface I {...}`
     - Dizi türleri
-        * Tek ve örneğin, çok boyutlu `int[]` ve`int[,]`
+        * Tek ve örneğin, çok boyutlu `int[]` ve `int[,]`
     - Temsilci türleri
-        * Formun kullanıcı tanımlı türler`delegate int D(...)`
+        * Formun kullanıcı tanımlı türler `delegate int D(...)`
 
 Sekiz tam sayı türleri, 8 bit, 16 bit, 32 bit ve 64-bit işaretli veya işaretsiz formdaki değerler için destek sağlar.
 
@@ -65,18 +58,18 @@ C# ' ın sayısal türler özetler.
 * İmzalı tam sayıdan kaymaya
     - `sbyte`: 8 bit, aralığı -128 127'den
     - `short`: 16 bit, -32.768 32.767 arasındadır
-    - `int`: 32 bit, -2.147.483.648 2.147.483.647 arasındadır
-    - `long`: 64 bit, 9,223,372,036,854,775,807 ile –9,223,372,036,854,775,808 arasındadır
+    - `int`  : 32 bit, -2.147.483.648 2.147.483.647 arasındadır
+    - `long` : 64 bit, 9,223,372,036,854,775,807 ile –9,223,372,036,854,775,808 arasındadır
 * İmzasız tam sayıdan kaymaya
-    - `byte`: 8 bit aralık 0 - 255
-    - `ushort`: 16 bit aralığı 0'dan - 65.535
-    - `uint`: 32 bit aralığı 0'dan - 4.294.967.295
-    - `ulong`: 64 bit aralığı 0'dan - 18,446,744,073,709,551,615
+    - `byte`   : 8 bit aralık 0 - 255
+    - `ushort` : 16 bit aralığı 0'dan - 65.535
+    - `uint`   : 32 bit aralığı 0'dan - 4.294.967.295
+    - `ulong`  : 64 bit aralığı 0'dan - 18,446,744,073,709,551,615
 * Kayan nokta
-    - `float`: 32 bit arasında 1.5 × 10'dan<sup>−45</sup> -3.4 × 10<sup>38</sup>, 7 basamaklı duyarlık
-    - `double`: 64 bit arasında 5.0 × 10'dan<sup>−324</sup> -1.7 × 10<sup>308</sup>, 15 basamaklı duyarlık
+    - `float`  : 32 bit arasında 1.5 × 10'dan<sup>−45</sup> -3.4 × 10<sup>38</sup>, 7 basamaklı duyarlık
+    - `double` : 64 bit arasında 5.0 × 10'dan<sup>−324</sup> -1.7 × 10<sup>308</sup>, 15 basamaklı duyarlık
 * Ondalık
-    - `decimal`: 128 bit, aralığı olan en az –7.9 × 10<sup>−28</sup> -7,9 × 10<sup>28</sup>, en az 28 basamaklı duyarlık ile
+    - `decimal` : 128 bit, aralığı olan en az –7.9 × 10<sup>−28</sup> -7,9 × 10<sup>28</sup>, en az 28 basamaklı duyarlık ile
     
 C# programları kullanım *yazın bildirimleri* yeni türleri oluşturmak için. Tür bildirimi adını ve yeni türün üyeleri belirtir. Beş türleri kategorilerini C# ' ın kullanıcı tanımlanabilir: Sınıf türleri, yapı türleri, arabirim türleri, numaralandırma türleri ve temsilci türleri.
 

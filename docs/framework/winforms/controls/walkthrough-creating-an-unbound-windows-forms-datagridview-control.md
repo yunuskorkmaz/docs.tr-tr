@@ -1,13 +1,6 @@
 ---
-title: "İzlenecek yol: Bağlantısız Bir Windows Forms DataGridView Denetimi Oluşturma"
-ms.custom: 
+title: 'İzlenecek yol: Bağlantısız Bir Windows Forms DataGridView Denetimi Oluşturma'
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-winforms
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -18,16 +11,11 @@ helpviewer_keywords:
 - data [Windows Forms], unbound
 - walkthroughs [Windows Forms], DataGridView control
 ms.assetid: 5a8d6afa-1b4b-4b24-8db8-501086ffdebe
-caps.latest.revision: "18"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: d737959ee0ecab4c611cebf996741516fc7be031
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 26c2241f4b0a3b23255de15b3d0c9f8bdd15de02
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="walkthrough-creating-an-unbound-windows-forms-datagridview-control"></a>İzlenecek yol: Bağlantısız Bir Windows Forms DataGridView Denetimi Oluşturma
 Sık veritabanından kaynaklanmayan tablo verileri görüntülemek isteyebilirsiniz. Örneğin, iki boyutlu bir dize dizisi içeriğini göster isteyebilirsiniz. <xref:System.Windows.Forms.DataGridView> Sınıfı bir veri kaynağına bağlama olmadan verileri görüntülemek için kolay ve yüksek oranda özelleştirilebilir bir yol sağlar. Bu anlatımda doldurmak nasıl gösterilir bir <xref:System.Windows.Forms.DataGridView> denetlemek ve eklenmesini ve "bağlantısız" modunda satırların silinmesi yönetin. Varsayılan olarak, kullanıcı yeni satırlar ekleyebilirsiniz. Satır ekleme engelleyecek şekilde ayarlanmışsa <xref:System.Windows.Forms.DataGridView.AllowUserToAddRows%2A> özelliği `false`.  

@@ -1,42 +1,28 @@
 ---
 title: 'Nasıl yapılır: WCF Aracısı ile WSE 3.0 Hizmetine Erişme'
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 dev_langs:
 - csharp
 - vb
 ms.assetid: 1f9bcd9b-8f8f-47fa-8f1e-0d47236eb800
-caps.latest.revision: 12
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 382762917e790d54dca31158f2b7ffde560c1427
-ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
+ms.openlocfilehash: 54d795858b85bd72a01f619b3603c9927df655d5
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/30/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-access-a-wse-30-service-with-a-wcf-client"></a>Nasıl yapılır: WCF Aracısı ile WSE 3.0 Hizmetine Erişme
-[!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] istemcileridir hat düzeyinde uyumlu Web Services Enhancements (WSE) 3.0 ile ne zaman Microsoft .NET hizmetleri için [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] istemcileri WS adresleme belirtimi Ağustos 2004 sürümünü kullanacak şekilde yapılandırılır. Ancak, WSE 3.0 hizmetlerini meta veri değişimi (MEX) protokolü, bu nedenle desteklemeyen kullandığınızda [ServiceModel meta veri yardımcı Programracı (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md) oluşturmak için bir [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] istemci sınıfı, güvenlik ayarları uygulanmaz için oluşturulan [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] istemci. Bu nedenle, sonra WSE 3.0 hizmet gerektiren güvenlik ayarlarını belirtmeniz gerekir [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] istemci oluşturulur.  
+WCF istemcileri WS adresleme belirtimi Ağustos 2004 sürümünü kullanacak şekilde yapılandırıldıklarında Windows Communication Foundation (WCF) istemcileri hat düzeyinde Web Services Enhancements (WSE) 3.0 ile Microsoft .NET hizmetleri için uyumludur. Ancak, WSE 3.0 hizmetlerini meta veri değişimi (MEX) protokolü, bu nedenle desteklemeyen kullandığınızda [ServiceModel meta veri yardımcı Programracı (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md) bir WCF istemcisi sınıfı oluşturmak için güvenlik ayarları uygulanmaz oluşturulan WCF istemcisi. Bu nedenle, güvenlik ayarlarını belirtmeniz gerekir WCF istemcisini oluşturulduktan sonra WSE 3.0 hizmetini gerektirir.  
   
- WSE 3.0 hizmetin gereksinimleri ve WSE 3.0 hizmet arasındaki birlikte çalışabilir gereksinimlerini dikkate almanız özel bağlama kullanarak bu güvenlik ayarlarını uygulayabilirsiniz ve [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] istemci. Bu birlikte çalışabilirlik gereksinimleri Ağustos 2004 daha önce bahsedilen kullanımını içerir belirtimi WS adresleme ve 3.0default WSE iletisi korumasını <xref:System.ServiceModel.Security.MessageProtectionOrder.SignBeforeEncrypt>. Varsayılan ileti koruması [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] olan <xref:System.ServiceModel.Security.MessageProtectionOrder.SignBeforeEncryptAndEncryptSignature>. Bu konuda oluşturma ayrıntıları bir [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] bağlaması WSE 3.0 hizmeti ile birlikte çalışır. [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] Ayrıca bu bağlamayı içeren bir örnek sağlar. Bu örnek hakkında daha fazla bilgi için bkz: [ASMX Web Hizmetleri ile birlikte çalışma](../../../../docs/framework/wcf/samples/interoperating-with-asmx-web-services.md).  
+ WSE 3.0 hizmetin gereksinimleri ve bir WSE 3.0 hizmetine bir WCF istemcisi arasındaki birlikte çalışabilir gereksinimlerini dikkate almanız özel bağlama kullanarak, bu güvenlik ayarlarını uygulayabilirsiniz. Bu birlikte çalışabilirlik gereksinimleri Ağustos 2004 daha önce bahsedilen kullanımını içerir belirtimi WS adresleme ve 3.0default WSE iletisi korumasını <xref:System.ServiceModel.Security.MessageProtectionOrder.SignBeforeEncrypt>. WCF için varsayılan ileti korumadır <xref:System.ServiceModel.Security.MessageProtectionOrder.SignBeforeEncryptAndEncryptSignature>. Bu konuda WSE 3.0 hizmeti ile birlikte çalışır bir WCF bağlama oluşturma ayrıntılarını verir. WCF de bu bağlamayı içeren bir örnek sağlar. Bu örnek hakkında daha fazla bilgi için bkz: [ASMX Web Hizmetleri ile birlikte çalışma](../../../../docs/framework/wcf/samples/interoperating-with-asmx-web-services.md).  
   
 ### <a name="to-access-a-wse-30-web-service-with-a-wcf-client"></a>Bir WCF istemcisi ile WSE 3.0 Web hizmetine erişmek için  
   
-1.  Çalıştırma [ServiceModel meta veri yardımcı Programracı (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md) oluşturmak için bir [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] WSE 3.0 Web hizmeti istemci.  
+1.  Çalıştırma [ServiceModel meta veri yardımcı Programracı (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md) WSE 3.0 Web hizmeti için bir WCF istemcisi oluşturmak için.  
   
-     WSE 3.0 Web hizmeti için bir [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] istemci oluşturulur. WSE 3.0 MEX Protokolü desteklemediğinden, Web hizmeti için güvenlik gereksinimlerini almak için Aracı'nı kullanamazsınız. Uygulama geliştiricisi istemcisi için güvenlik ayarları eklemeniz gerekir.  
+     WSE 3.0 Web hizmeti için bir WCF istemcisi oluşturulur. WSE 3.0 MEX Protokolü desteklemediğinden, Web hizmeti için güvenlik gereksinimlerini almak için Aracı'nı kullanamazsınız. Uygulama geliştiricisi istemcisi için güvenlik ayarları eklemeniz gerekir.  
   
-     Oluşturma hakkında daha fazla bilgi için bir [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] istemci, bkz: [nasıl yapılır: bir istemci oluşturmak](../../../../docs/framework/wcf/how-to-create-a-wcf-client.md).  
+     Bir WCF istemcisi oluşturma hakkında daha fazla bilgi için bkz: [nasıl yapılır: bir istemci oluşturmak](../../../../docs/framework/wcf/how-to-create-a-wcf-client.md).  
   
 2.  WSE 3.0 Web Hizmetleri ile iletişim kurabilen bir bağlama temsil eden bir sınıf oluşturun.  
   
@@ -49,7 +35,7 @@ ms.lasthandoff: 04/30/2018
          [!code-csharp[c_WCFClientToWSEService#1](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_wcfclienttowseservice/cs/wsehttpbinding.cs#1)]
          [!code-vb[c_WCFClientToWSEService#1](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_wcfclienttowseservice/vb/wsehttpbinding.vb#1)]  
   
-    2.  Özellikler WSE hizmeti, türetilmiş anahtar gerekli olup, güvenli oturumlar kullanılıp, imza onayı gerekli olup ve ileti koruma ayarları tarafından kullanılan WSE anahtar teslimi onaylama belirtin sınıfına ekleyin. WSE 3.0 sürümünde, bir anahtar teslimi onaylama bir istemci veya Web hizmeti için güvenlik gereksinimlerini belirtir — bir bağlamanın kimlik doğrulama modu için benzer [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)].  
+    2.  Özellikler WSE hizmeti, türetilmiş anahtar gerekli olup, güvenli oturumlar kullanılıp, imza onayı gerekli olup ve ileti koruma ayarları tarafından kullanılan WSE anahtar teslimi onaylama belirtin sınıfına ekleyin. WSE 3.0 sürümünde, bir anahtar teslimi onaylama bir istemci veya Web hizmeti için güvenlik gereksinimlerini belirtir — bir bağlama wcf'de kimlik doğrulama modunu benzer.  
   
          Aşağıdaki kod örneğinde tanımlar `SecurityAssertion`, `RequireDerivedKeys`, `EstablishSecurityContext`, ve `MessageProtectionOrder` WSE anahtar teslimi onaylama güvenli oturumlar, olup kullanılıp kullanılmayacağını türetilmiş anahtar gerekli olup olmadığını belirten özellikleri imza onayı gereklidir ve ileti koruma ayarları sırasıyla.  
   
@@ -65,13 +51,13 @@ ms.lasthandoff: 04/30/2018
   
 3.  İstemci uygulaması kodu bağlama özelliklerini ayarlamak için kodu ekleyin.  
   
-     Aşağıdaki kod örneğinde belirleyen [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] istemci kullanmalıdır ileti koruma ve kimlik doğrulama WSE 3.0 tarafından tanımlandığı şekilde `AnonymousForCertificate` anahtar teslimi güvenlik onaylama işlemi. Ayrıca, güvenli oturumlar ve türetilmiş anahtar gereklidir.  
+     Aşağıdaki kod örneğinde WCF istemcisini ileti koruma ve kimlik doğrulama WSE 3.0 tarafından tanımlandığı şekilde kullanması gerektiğini belirtir `AnonymousForCertificate` anahtar teslimi güvenlik onaylama işlemi. Ayrıca, güvenli oturumlar ve türetilmiş anahtar gereklidir.  
   
      [!code-csharp[c_WCFClientToWSEService#4](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_wcfclienttowseservice/cs/client.cs#4)]
      [!code-vb[c_WCFClientToWSEService#4](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_wcfclienttowseservice/vb/client.vb#4)]  
   
 ## <a name="example"></a>Örnek  
- Aşağıdaki kod örneğinde WSE 3.0 anahtar teslimi güvenlik onaylama işlemi özelliklerine karşılık özellikleri kullanıma sunan özel bir bağlama tanımlar. Adlı bu özel bağlama `WseHttpBinding`, ardından bağlama özelliklerini belirtmek için kullanılan bir [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] WSSecurityAnonymous WSE 3.0 QuickStart örnek ile iletişim kuran istemci.  
+ Aşağıdaki kod örneğinde WSE 3.0 anahtar teslimi güvenlik onaylama işlemi özelliklerine karşılık özellikleri kullanıma sunan özel bir bağlama tanımlar. Adlı bu özel bağlama `WseHttpBinding`, ardından WSSecurityAnonymous WSE 3.0 QuickStart örnek ile iletişim kuran bir WCF istemcisi için bağlama özelliklerini belirtmek için kullanılır.  
   
   
   

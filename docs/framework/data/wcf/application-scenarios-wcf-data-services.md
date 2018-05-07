@@ -1,30 +1,18 @@
 ---
-title: "Uygulama senaryoları (WCF Veri Hizmetleri)"
-ms.custom: 
+title: Uygulama senaryoları (WCF Veri Hizmetleri)
 ms.date: 03/30/2017
-ms.prod: .net-framework-oob
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - WCF Data Services, learn more
 - WCF Data Services, scenarios
 ms.assetid: 7c82658f-e7c0-46b6-834d-6592f67ab5ea
-caps.latest.revision: "2"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: ba83265b8bd533101fcde785566b9774df588c46
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.openlocfilehash: 81a75007f1d4a13828867e6419412ea9f4c28906
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="application-scenarios-wcf-data-services"></a>Uygulama senaryoları (WCF Veri Hizmetleri)
-[!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)]gösterme ve olarak verinin tüketimi için senaryolar, bir çekirdek kümesini destekler [!INCLUDE[ssODataFull](../../../../includes/ssodatafull-md.md)] akışları. Bu konuda aşağıdaki senaryolar için ilgili konulara işaret eder.  
+[!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] gösterme ve olarak verinin tüketimi için senaryolar, bir çekirdek kümesini destekler [!INCLUDE[ssODataFull](../../../../includes/ssodatafull-md.md)] akışları. Bu konuda aşağıdaki senaryolar için ilgili konulara işaret eder.  
   
  İlişkisel verileri veritabanından olarak açığa bir [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] akış.  
  -   [Hızlı başlangıç](../../../../docs/framework/data/wcf/quickstart-wcf-data-services.md)  

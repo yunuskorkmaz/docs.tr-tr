@@ -1,24 +1,12 @@
 ---
-title: "Hizmet Çerçevesi Meta Verileri"
-ms.custom: 
+title: Hizmet Çerçevesi Meta Verileri
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 76afc73a-0770-4084-93f3-6701a757911e
-caps.latest.revision: "5"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 5cab33ec4a3f3e42c4ec373073e171a7dcfeace2
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: f65f53ff99202275876fb6e3c431bc49ae2bd38b
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="service-framework-metadata"></a>Hizmet Çerçevesi Meta Verileri
 Bu konu hizmet çerçevesi meta verileri tarafından oluşturulan tüm özel durumları listeler.  

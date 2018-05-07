@@ -1,31 +1,17 @@
 ---
 title: WCF Performans Sayaçları
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 helpviewer_keywords:
 - performance counters [WCF]
 ms.assetid: f559b2bd-ed83-4988-97a1-e88f06646609
-caps.latest.revision: 37
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: be4ffac8444f6365dacb2b20db6abbb6792c2239
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
-ms.translationtype: MT
+ms.openlocfilehash: 74bf11779e6ccf032f2c8c920b62b2f0e5d0625d
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="wcf-performance-counters"></a>WCF Performans Sayaçları
-[!INCLUDE[indigo1](../../../../../includes/indigo1-md.md)]çok sayıda uygulamanızın performansını ölçmek yardımcı olması için performans sayaçları içerir.  
+Windows Communication Foundation (WCF) çok sayıda uygulamanızın performansını ölçmek yardımcı olması için performans sayaçları içerir.  
   
 ## <a name="enabling-performance-counters"></a>Performans sayaçları etkinleştirme  
  İçin performans sayaçları etkinleştirebilirsiniz bir [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)] app.config yapılandırma dosyası aracılığıyla hizmet [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)] gibi hizmet:  
@@ -70,7 +56,7 @@ config.Save();
 >  Performans sayacı örnekleri son iletileri uç nokta gönderici tarafından işlenen önce yayınlanan. Bu performans verileri için birkaç iletileri yakalanan değil neden olabilir.  
   
 ## <a name="increasing-memory-size-for-performance-counters"></a>Performans sayaçları için bellek boyutunu artırma  
- [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)]kullanır, performans sayacı kategorileri için paylaşılan bellek ayırın.  
+ [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)] kullanır, performans sayacı kategorileri için paylaşılan bellek ayırın.  
   
  Varsayılan olarak, ayrı bir paylaşılan bellek bir üç aylık dönem için genel performans sayacı bellek boyutu ayarlanır. Varsayılan genel performans sayacı bellek 524.288 bayttır. Bu nedenle, üç [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)] performans sayacı kategorileri yaklaşık 128 KB her varsayılan boyutuna sahip. Çalışma zamanı özelliklerine bağlı olarak [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)] uygulamaları bir makineye performans sayacı bellek tükendi. Bu gerçekleştiğinde, [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)] bir hata uygulama olay günlüğüne yazar. Bir performans sayacı yüklenmedi ve özel durum girdisini içeriyor hata içeriğini durumlarını "System.InvalidOperationException: özel sayaçlar dosya görünümdür, bellek yetersiz." Hata düzeyinde izleme etkinleştirilirse, bu hata Ayrıca izlenen. Performans sayacı bellek biterse, çalışmaya devam eder, [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)] performans sayaçları etkinleştirilmiş uygulamalarla performans düşüşüne neden. Makinenin yöneticisiyseniz, herhangi bir anda var olabilen performans sayaçları en fazla sayısını desteklemek için yeterli bellek ayıramadı şekilde yapılandırmanız gerekir.  
   

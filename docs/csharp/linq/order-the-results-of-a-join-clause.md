@@ -1,20 +1,13 @@
 ---
-title: "Join tümcesinin sonuçlarını sıralama"
-description: "Join tümcesinin sonuçlarını sıralama yapma."
-keywords: .NET, .NET core, C#
-author: BillWagner
-manager: wpickett
-ms.author: wiwagn
+title: Join tümcesinin sonuçlarını sıralama
+description: Join tümcesinin sonuçlarını sıralama yapma.
 ms.date: 12/1/2016
-ms.topic: article
-ms.prod: .net
-ms.technology: devlang-csharp
 ms.assetid: a7458901-1201-4c25-b8d9-c04ca52e0eb9
-ms.openlocfilehash: f948c18fb16a4f3ac02945b4a63583f1b01cad40
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: f426152e614ed9a9c4aa41d7ba7cb8ddf1cd3063
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="order-the-results-of-a-join-clause"></a>Join tümcesinin sonuçlarını sıralama
 Bu örnek, bir birleştirme işlemi sonuçlarını sıralama gösterilmektedir. Sıralama birleştirme sonrasında gerçekleştirildiğini unutmayın. Kullanabilirsiniz ancak bir `orderby` yan tümcesi bir veya daha fazla kaynak ile dizilerinin birleştirme öncesinde, genellikle bunu önermiyoruz. Bazı LINQ sağlayıcıları bu birleştirme sonrasında sıralama koruyabilir değil.  
@@ -26,5 +19,5 @@ Bu örnek, bir birleştirme işlemi sonuçlarını sıralama gösterilmektedir. 
  
 ## <a name="see-also"></a>Ayrıca bkz.  
  [LINQ Sorgu ifadeleri](index.md)  
- [OrderBy yan tümcesi](../language-reference/keywords/orderby-clause.md)  
- [Join tümcesi](../language-reference/keywords/join-clause.md) 
+ [orderby yan tümcesi](../language-reference/keywords/orderby-clause.md)  
+ [join yan tümcesi](../language-reference/keywords/join-clause.md) 

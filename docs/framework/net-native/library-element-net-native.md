@@ -1,24 +1,14 @@
 ---
-title: "&lt;Library&gt; Öğesi (.NET Yerel)"
-ms.custom: 
+title: '&lt;Library&gt; Öğesi (.NET Yerel)'
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: f642276b-33fb-4a81-b882-8808c31ba69e
-caps.latest.revision: "14"
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: bd2663bbd5ca93341455b7bd036469d25d91f4a6
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: f867d6f65a28c36037ff6617cce9d18bc39a67d6
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="ltlibrarygt-element-net-native"></a>&lt;Library&gt; Öğesi (.NET Yerel)
 Türleri ve tür üyeleri olan meta verilerini yansıma çalışma zamanında yüklenebilir içeren derlemenin tanımlar.  
@@ -51,9 +41,9 @@ Türleri ve tür üyeleri olan meta verilerini yansıma çalışma zamanında y�
   
 |Öğe|Açıklama|  
 |-------------|-----------------|  
-|[\<Derleme >](../../../docs/framework/net-native/assembly-element-net-native.md)|Belirli bir derleme içindeki tüm türler için ilke uygulanır.|  
+|[\<derleme >](../../../docs/framework/net-native/assembly-element-net-native.md)|Belirli bir derleme içindeki tüm türler için ilke uygulanır.|  
 |[\<Namespace >](../../../docs/framework/net-native/namespace-element-net-native.md)|Belirli bir ad alanı içindeki tüm türler için ilke uygulanır.|  
-|[\<Türü >](../../../docs/framework/net-native/type-element-net-native.md)|Bir sınıf veya yapı gibi belirli türde bir ilke uygulanır.|  
+|[\<türü >](../../../docs/framework/net-native/type-element-net-native.md)|Bir sınıf veya yapı gibi belirli türde bir ilke uygulanır.|  
 |[\<Typeınstantiation >](../../../docs/framework/net-native/typeinstantiation-element-net-native.md)|İlke oluşturulan genel bir tür için geçerlidir. Örneğin, bir [ \<Typeınstantiation >](../../../docs/framework/net-native/typeinstantiation-element-net-native.md) öğesi için ilke tanımlamak için kullanılan bir `List<String>` türü.|  
   
 ### <a name="parent-elements"></a>Üst Öğeler  
@@ -67,7 +57,7 @@ Türleri ve tür üyeleri olan meta verilerini yansıma çalışma zamanında y�
   
  `<Library>` Olan meta veri çalışma zamanında gereken program öğeleri tanımlamak için bir kapsayıcı öğe görür; bu öğe ilkesini ifade değil. Derleme zamanında arama derleyici araçları yalnızca belirlenen kitaplık `<Library>` öğesi alt öğeleri tarafından tanıtılan program öğeleri için. Buna karşılık, derleyici arama araçları tüm kitaplıkları, alt öğeleri tarafından tanımlanan programı öğelerin including.NET Framework core kitaplıkları [ \<uygulama >](../../../docs/framework/net-native/application-element-net-native.md) öğesi.  
   
- `<Library>`yönergeleri koşullu yararlı. Varsa adını `<Library>` öğesi başlar ve biter yıldız işareti (*) ile `<Library>` yönergesi yalnızca yıldız arasında belirtilen derlemesi uygulama tarafından başvurulduğunda bir etkisi vardır. Örneğin, yalnızca Utillities.dll derleme uygulama tarafından başvurulduğunda aşağıdaki çalışma zamanı yönerge geçerlidir.  
+ `<Library>` yönergeleri koşullu yararlı. Varsa adını `<Library>` öğesi başlar ve biter yıldız işareti (*) ile `<Library>` yönergesi yalnızca yıldız arasında belirtilen derlemesi uygulama tarafından başvurulduğunda bir etkisi vardır. Örneğin, yalnızca Utillities.dll derleme uygulama tarafından başvurulduğunda aşağıdaki çalışma zamanı yönerge geçerlidir.  
   
 ```xml  
 <Directives xmlns="http://schemas.microsoft.com/netfx/2013/01/metadata">  

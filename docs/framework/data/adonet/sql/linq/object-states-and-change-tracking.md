@@ -1,27 +1,15 @@
 ---
-title: "Nesne durumlarını ve değişiklik izleme"
-ms.custom: 
+title: Nesne durumlarını ve değişiklik izleme
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-ado
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 7a808b00-9c3c-479a-aa94-717280fefd71
-caps.latest.revision: "2"
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
-ms.workload: dotnet
-ms.openlocfilehash: f7eb1a8afe87caece18432c66a8d8a268ce9fbd2
-ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
+ms.openlocfilehash: 482299f90a92acec9307649ec04a89f8ce6be414
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="object-states-and-change-tracking"></a>Nesne durumlarını ve değişiklik izleme
-[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]nesneler her zaman katılmak bazı durumlarda *durumu*. Örneğin, [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] yeni bir nesne oluşturur nesne `Unchanged` durumu. Kendi başınıza oluşturduğunuz yeni bir nesne için bilinmeyen <xref:System.Data.Linq.DataContext> ve `Untracked` durumu. Başarılı yürütülmesinin <xref:System.Data.Linq.DataContext.SubmitChanges%2A>, bilinen tüm nesneleri [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] bulunan `Unchanged` durumu. (Tek istisnası, başarılı bir şekilde olan veritabanından silinmiş tarafından temsil edilen `Deleted` durum ve, kullanılamaz <xref:System.Data.Linq.DataContext> örneğinin.)  
+[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] nesneler her zaman katılmak bazı durumlarda *durumu*. Örneğin, [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] yeni bir nesne oluşturur nesne `Unchanged` durumu. Kendi başınıza oluşturduğunuz yeni bir nesne için bilinmeyen <xref:System.Data.Linq.DataContext> ve `Untracked` durumu. Başarılı yürütülmesinin <xref:System.Data.Linq.DataContext.SubmitChanges%2A>, bilinen tüm nesneleri [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] bulunan `Unchanged` durumu. (Tek istisnası, başarılı bir şekilde olan veritabanından silinmiş tarafından temsil edilen `Deleted` durum ve, kullanılamaz <xref:System.Data.Linq.DataContext> örneğinin.)  
   
 ## <a name="object-states"></a>Nesne durumlarını  
  Olası durumlar için aşağıdaki tabloda listelenmektedir [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] nesneleri.  
@@ -45,9 +33,9 @@ ms.lasthandoff: 01/17/2018
 >  Eklenecek nesne bir `Table` kimlik önbellekte değil. Kimlik önbellek yalnızca ne veritabanından alınır yansıtır. Çağrı sonra <xref:System.Data.Linq.Table%601.InsertOnSubmit%2A>, eklenen varlık kadar veritabanı sorguları görünmez <xref:System.Data.Linq.DataContext.SubmitChanges%2A> başarıyla tamamlandı.  
   
 ## <a name="deleting-objects"></a>Nesneleri silme  
- İzlenen nesne işaretlemek `o` çağırarak silinmek <xref:System.Data.Linq.Table%601.DeleteOnSubmit%2A>(o) uygun <xref:System.Data.Linq.Table%601>. [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]bir nesneden kaldırılmasını göz önünde bulundurur bir <xref:System.Data.Linq.EntitySet%601> bir güncelleştirme olarak işlemi ve ilgili yabancı anahtar değeri ayarlanmış null. İşlemin hedefi olan (`o`) kendi tablosundan silinmez. Örneğin, `cust.Orders.DeleteOnSubmit(ord)` güncelleştirmeyi belirten burada arasındaki ilişkiyi `cust` ve `ord` yabancı anahtarı ayarlanarak zarar görmesi `ord.CustomerID` null. Karşılık gelen satırın silinmesi neden olmaz `ord`.  
+ İzlenen nesne işaretlemek `o` çağırarak silinmek <xref:System.Data.Linq.Table%601.DeleteOnSubmit%2A>(o) uygun <xref:System.Data.Linq.Table%601>. [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] bir nesneden kaldırılmasını göz önünde bulundurur bir <xref:System.Data.Linq.EntitySet%601> bir güncelleştirme olarak işlemi ve ilgili yabancı anahtar değeri ayarlanmış null. İşlemin hedefi olan (`o`) kendi tablosundan silinmez. Örneğin, `cust.Orders.DeleteOnSubmit(ord)` güncelleştirmeyi belirten burada arasındaki ilişkiyi `cust` ve `ord` yabancı anahtarı ayarlanarak zarar görmesi `ord.CustomerID` null. Karşılık gelen satırın silinmesi neden olmaz `ord`.  
   
- [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]bir nesnesi silindiğinde aşağıdaki işleme gerçekleştirir (<xref:System.Data.Linq.Table%601.DeleteOnSubmit%2A>) kendi tablosundan:  
+ [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] bir nesnesi silindiğinde aşağıdaki işleme gerçekleştirir (<xref:System.Data.Linq.Table%601.DeleteOnSubmit%2A>) kendi tablosundan:  
   
 -   Zaman <xref:System.Data.Linq.DataContext.SubmitChanges%2A> olarak adlandırılan bir `DELETE` işlemi, bu nesne için gerçekleştirilir.  
   

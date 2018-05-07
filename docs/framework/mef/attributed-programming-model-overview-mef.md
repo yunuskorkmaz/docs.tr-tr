@@ -1,9 +1,6 @@
 ---
-title: "Öznitelikli Programlama Modeline Genel Bakış (MEF)"
+title: Öznitelikli Programlama Modeline Genel Bakış (MEF)
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.technology: dotnet-clr
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -11,16 +8,13 @@ helpviewer_keywords:
 - MEF, attributed programming model
 - attributed programming model [MEF]
 ms.assetid: 49b787ff-2741-4836-ad51-c3017dc592d4
-caps.latest.revision: "24"
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 565cd9384e150f707b2e5e72342579d95c3a096e
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: baa66f11404e2cee83b4d4b32ba02544c9438d7f
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="attributed-programming-model-overview-mef"></a>Öznitelikli Programlama Modeline Genel Bakış (MEF)
 İçinde Yönetilen Genişletilebilirlik Çerçevesi (MEF), bir *programlama modeli* MEF faaliyet kavramsal nesneler kümesini tanımlayan belirli bir yöntemdir. Bu kavramsal nesneler bölümleri, içeri aktarmalar ve dışarı aktarma içerir. MEF bu nesneleri kullanır, ancak nasıl temsil belirtmiyor. Bu nedenle, çok çeşitli programlama modelleri programlama modelleri de dahil olmak üzere özelleştirilebilir mümkün.  
@@ -407,7 +401,7 @@ public class MyClass
 ## <a name="avoiding-discovery"></a>Keşif Önleme  
  Bazı durumlarda, bir katalog bir parçası olarak bulunan bir bölümü önlemek isteyebilirsiniz. Örneğin, bir parçası kaynağından devralındı düşünülen ama kullanılmayan bir temel sınıf olabilir. Bunu yapmanın iki yolu vardır. İlk olarak, kullanabileceğiniz `abstract` bölümü sınıfı anahtar sözcüğü. Bunlardan türeyen sınıflar devralınan dışarı sağlayabilirse soyut sınıflar dışarı aktarmalar, hiçbir zaman sağlar.  
   
- Sınıfı Özet yapılamazsa, kendisiyle tasarlayabilirsiniz `PartNotDiscoverable` özniteliği. Bu öznitelik ile donatılmış bir bölümü hiçbir katalog içine dahil edilmez. Aşağıdaki örnekte bu düzenleri gösterir. `DataOne`katalog tarafından bulunacaktır. Bu yana `DataTwo` olan Özet, onu bulunmaz. Bu yana `DataThree` kullanılan `PartNotDiscoverable` özniteliği değil bulunacaktır.  
+ Sınıfı Özet yapılamazsa, kendisiyle tasarlayabilirsiniz `PartNotDiscoverable` özniteliği. Bu öznitelik ile donatılmış bir bölümü hiçbir katalog içine dahil edilmez. Aşağıdaki örnekte bu düzenleri gösterir. `DataOne` katalog tarafından bulunacaktır. Bu yana `DataTwo` olan Özet, onu bulunmaz. Bu yana `DataThree` kullanılan `PartNotDiscoverable` özniteliği değil bulunacaktır.  
   
 ```vb  
 <Export()>  
@@ -588,7 +582,7 @@ public class User
   
  Dışarı aktarma bildirilen kullanarak `Export` özniteliği olmayan alt sınıflar tarafından devralınır. Ancak, bir kendisini kullanarak dışarı aktarabilir `InheritedExport` özniteliği. Alt sınıfların bölümünün devralır ve sözleşme adı ve sözleşme türü dahil olmak üzere aynı verme sağlayın. Farklı bir `Export` özniteliği `InheritedExport` yalnızca sınıf düzeyinde ve üye düzeyinde uygulanabilir. Bu nedenle, hiçbir zaman üye düzeyi dışarı devralınabilir.  
   
- Aşağıdaki dört sınıfları alma ilkeleri göstermek ve devralma verin. `NumTwo`öğesinden devralınan `NumOne`, bu nedenle `NumTwo` alacak `IMyData`. Sıradan dışarı devralınmaz, bu nedenle `NumTwo` herhangi bir şey aktarmaz. `NumFour`öğesinden devralınan `NumThree`. Çünkü `NumThree` kullanılan `InheritedExport`, `NumFour` sözleşme türüne sahip bir dışa aktarma sahip `NumThree`. Üye düzeyi dışarı hiçbir zaman devralınan, bu nedenle `IMyData` aktarılmaz.  
+ Aşağıdaki dört sınıfları alma ilkeleri göstermek ve devralma verin. `NumTwo` öğesinden devralınan `NumOne`, bu nedenle `NumTwo` alacak `IMyData`. Sıradan dışarı devralınmaz, bu nedenle `NumTwo` herhangi bir şey aktarmaz. `NumFour` öğesinden devralınan `NumThree`. Çünkü `NumThree` kullanılan `InheritedExport`, `NumFour` sözleşme türüne sahip bir dışa aktarma sahip `NumThree`. Üye düzeyi dışarı hiçbir zaman devralınan, bu nedenle `IMyData` aktarılmaz.  
   
 ```vb  
 <Export()>  
@@ -812,7 +806,7 @@ public MyAddin myAddin { get; set; }
   
  İçeri aktarma ve dışarı aktarma değerlerinden bir bölümün oluşturma ilkesi belirleyebilirsiniz `Shared`, `NonShared`, veya `Any`. Varsayılan değer `Any` her ikisi için alır ve verir. Belirleyen bir dışarı aktarım `Shared` veya `NonShared` yalnızca aynısını belirten ya da belirten bir içeri aktarma ile eşleşir `Any`. Benzer şekilde, belirten alma `Shared` veya `NonShared` yalnızca aynısını belirten ya da belirten bir dışarı aktarma ile eşleşir `Any`. İçeri ve dışarı aktarmalar uyumsuz oluşturma ilkeleri ile bir eşleşme bir içeri aktarma ve dışarı aktarma, sözleşme adı veya sözleşme türü bir eşleşme olmayan aynı şekilde dikkate alınmaz. İçeri ve dışarı aktarma belirtirseniz, `Any`, değil oluşturma ilkesi belirtin veya varsayılan `Any`, oluşturma ilkesi paylaşılan varsayılan olur.  
   
- Aşağıdaki örnek, içeri ve dışarı aktarma oluşturma ilkeleri belirtme gösterir. `PartOne`Varsayılan değer olacak şekilde bir oluşturma ilkesi belirtmiyor `Any`. `PartTwo`Varsayılan değer olacak şekilde bir oluşturma ilkesi belirtmiyor `Any`. Her ikisi de içeri ve varsayılan olarak dışarı aktarma beri `Any`, `PartOne` paylaşılır. `PartThree`belirten bir `Shared` oluşturma ilkesi, bu nedenle `PartTwo` ve `PartThree` aynı kopyasını paylaşır `PartOne`. `PartFour`belirten bir `NonShared` oluşturma ilkesi, bu nedenle `PartFour` içinde paylaşılmayan olacaktır `PartFive`. `PartSix`belirten bir `NonShared` oluşturma ilkesi. `PartFive`ve `PartSix` her ayrı kopyası alacak `PartFour`. `PartSeven`belirten bir `Shared` oluşturma ilkesi. Olduğundan dışarı aktarılan `PartFour` oluşturma ilkesi ile `Shared`, `PartSeven` alma şeyle eşleşmez ve doldurulmaz.  
+ Aşağıdaki örnek, içeri ve dışarı aktarma oluşturma ilkeleri belirtme gösterir. `PartOne` Varsayılan değer olacak şekilde bir oluşturma ilkesi belirtmiyor `Any`. `PartTwo` Varsayılan değer olacak şekilde bir oluşturma ilkesi belirtmiyor `Any`. Her ikisi de içeri ve varsayılan olarak dışarı aktarma beri `Any`, `PartOne` paylaşılır. `PartThree` belirten bir `Shared` oluşturma ilkesi, bu nedenle `PartTwo` ve `PartThree` aynı kopyasını paylaşır `PartOne`. `PartFour` belirten bir `NonShared` oluşturma ilkesi, bu nedenle `PartFour` içinde paylaşılmayan olacaktır `PartFive`. `PartSix` belirten bir `NonShared` oluşturma ilkesi. `PartFive` ve `PartSix` her ayrı kopyası alacak `PartFour`. `PartSeven` belirten bir `Shared` oluşturma ilkesi. Olduğundan dışarı aktarılan `PartFour` oluşturma ilkesi ile `Shared`, `PartSeven` alma şeyle eşleşmez ve doldurulmaz.  
   
 ```vb  
 <Export()>  
@@ -959,7 +953,7 @@ public class PartSeven
   
  Uzun dönemli bileşim kapsayıcılar için paylaşılmayan oluşturma ilkesi ile bölümleri bellek tüketimi bir sorun olabilir. Paylaşılmayan bölümleri birden çok kez oluşturulabilir ve kapsayıcı bırakılana kadar silinecek değil. Bu işlem için kapsayıcı sağlar `ReleaseExport` yöntemi. Paylaşılmayan bir dışarı aktarma üzerinde bu yöntemi çağırmadan birleşim kapsayıcıdan bu dışarı kaldırır ve siler. Yalnızca ağaç aşağı ve benzeri kaldırılan dışarı aktarım tarafından kullanılan bölümleri da kaldırılır ve atıldı. Bu şekilde, kapsayıcının kendisini atma olmadan kaynakları istenemiyor.  
   
- `IPartImportsSatisfiedNotification`adlı bir yöntem içerir `OnImportsSatisfied`. Bu yöntem, kapsayıcının birleşim tamamlandı ve bölümünün içeri aktarmalar kullanıma hazır olduğunda arabirimini uygulayan tüm bölümleri tarafından çağrılır. Bölümleri diğer bölümleri Imports doldurmak için bileşim motoru tarafından oluşturulur. İçeri aktarmalar bir bölümü ayarlamadan önce dayanan veya bu değerleri kullanarak önkoşul olarak belirtilmiş sürece bölüm oluşturucusu içerisinde içeri aktarılan değerlerini işleyen hiçbir başlangıç gerçekleştiremezsiniz `ImportingConstructor` özniteliği. Bu genellikle tercih edilen yöntemdir, ancak bazı durumlarda Oluşturucu ekleme kullanılamayabilir. Bu gibi durumlarda başlatma gerçekleştirilebilecek `OnImportsSatisfied`, ve bölümü uygulamalıdır `IPartImportsSatisfiedNotification`.  
+ `IPartImportsSatisfiedNotification` adlı bir yöntem içerir `OnImportsSatisfied`. Bu yöntem, kapsayıcının birleşim tamamlandı ve bölümünün içeri aktarmalar kullanıma hazır olduğunda arabirimini uygulayan tüm bölümleri tarafından çağrılır. Bölümleri diğer bölümleri Imports doldurmak için bileşim motoru tarafından oluşturulur. İçeri aktarmalar bir bölümü ayarlamadan önce dayanan veya bu değerleri kullanarak önkoşul olarak belirtilmiş sürece bölüm oluşturucusu içerisinde içeri aktarılan değerlerini işleyen hiçbir başlangıç gerçekleştiremezsiniz `ImportingConstructor` özniteliği. Bu genellikle tercih edilen yöntemdir, ancak bazı durumlarda Oluşturucu ekleme kullanılamayabilir. Bu gibi durumlarda başlatma gerçekleştirilebilecek `OnImportsSatisfied`, ve bölümü uygulamalıdır `IPartImportsSatisfiedNotification`.  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
  [Kanal 9 Video: Yönetilen Genişletilebilirlik Çerçevesi uygulamalarınızla açın](http://channel9.msdn.com/events/TechEd/NorthAmerica/2009/DTL328)  

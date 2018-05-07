@@ -1,34 +1,22 @@
 ---
-title: "WCF'de Kimlik Doğrulama"
-ms.custom: 
+title: WCF'de Kimlik Doğrulama
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - authentication [WCF]
 - security [WCF], authentication
 ms.assetid: 9254d873-843d-4c6e-bea4-8184ac3e44f4
-caps.latest.revision: "15"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 432ed9debeffad82125b567508ed46b46d4b8821
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: a4f9b719024db1334b599f0f02fe01bc083bf3c8
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="authentication-in-wcf"></a>WCF'de Kimlik Doğrulama
-Aşağıdaki konular de farklı mekanizmaları sayısını gösterir [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] kimlik doğrulama, örneğin, Windows kimlik doğrulaması, X.509 sertifikaları ve kullanıcı adı ve parola sağlayın.  
+Aşağıdaki konular, kimlik doğrulama, örneğin sağlayan Windows Communication Foundation (WCF), Windows kimlik doğrulaması, X.509 sertifikaları ve kullanıcı adı ve parolaları farklı mekanizmaları sayısını gösterir.  
   
 ## <a name="in-this-section"></a>Bu Bölümde  
  [Nasıl yapılır: ASP.NET Üyelik Sağlayıcısını Kullanma](../../../../docs/framework/wcf/feature-details/how-to-use-the-aspnet-membership-provider.md)  
- ASP.NET özellikleri, kullanıcı adı/parola çiftleri kimlik doğrulaması ve yetkilendirme için kullanıcı rollerini depolamak için bir üyelik ve rol sağlayıcısı, bir veritabanı içerir. Bu konuda açıklanmaktadır nasıl [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] Hizmetleri kimliğini doğrulamak ve kullanıcılara yetki vermek için aynı veritabanını kullanabilirsiniz.  
+ ASP.NET özellikleri, kullanıcı adı/parola çiftleri kimlik doğrulaması ve yetkilendirme için kullanıcı rollerini depolamak için bir üyelik ve rol sağlayıcısı, bir veritabanı içerir. Bu konu, WCF hizmetleri kimlik doğrulaması ve kullanıcılara yetki vermek için aynı veritabanını nasıl kullanabileceğinizi açıklar.  
   
  [Nasıl yapılır: Özel Bir Kullanıcı Adı ve Parola Doğrulayıcı Kullanma](../../../../docs/framework/wcf/feature-details/how-to-use-a-custom-user-name-and-password-validator.md)  
  Özel kullanıcı adı/parola Doğrulayıcı tümleştirmek gösterilmiştir.  

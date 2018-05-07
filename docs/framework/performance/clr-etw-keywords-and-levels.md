@@ -1,32 +1,22 @@
 ---
-title: "CLR ETW Anahtar Sözcükleri ve Düzeyler"
-ms.custom: 
+title: CLR ETW Anahtar Sözcükleri ve Düzeyler
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - CLR ETW keywords
 - CLR ETW levels
 - ETW, CLR keywords
 - ETW, CLR levels
 ms.assetid: fdf5856d-516b-4042-849d-911c4518a6cb
-caps.latest.revision: "15"
 author: mairaw
 ms.author: mairaw
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 72775d4cb478b6d9c9d2e65119c63f8a34ae47d1
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 8332eba909c3ebe475e3f364f81a676733e4e3d7
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="clr-etw-keywords-and-levels"></a>CLR ETW Anahtar Sözcükleri ve Düzeyler
-<a name="top"></a>Windows (ETW) olayları için olay izleme, kategori ve düzey göre filtrelenebilir. Olay [CLR ETW anahtar sözcükleri](#keywords) olayları kategoriye göre filtrelemeyi sağlamak; çalışma zamanı ve özeti sağlayıcıları bileşimlerde kullanılır. [Olay düzeyleri](#levels) bayrakları tarafından tanımlanır.  
+<a name="top"></a> Windows (ETW) olayları için olay izleme, kategori ve düzey göre filtrelenebilir. Olay [CLR ETW anahtar sözcükleri](#keywords) olayları kategoriye göre filtrelemeyi sağlamak; çalışma zamanı ve özeti sağlayıcıları bileşimlerde kullanılır. [Olay düzeyleri](#levels) bayrakları tarafından tanımlanır.  
   
 <a name="keywords"></a>   
 ## <a name="clr-etw-keywords"></a>CLR ETW anahtar sözcükleri  
@@ -104,12 +94,12 @@ ms.lasthandoff: 12/22/2017
   
 |Anahtar sözcükler ve bayrakları|Uygulama etki alanı, derleme, modül DCStart/DCEnd olayları|Yöntem DCStart/DCEnd olayları (dinamik yöntem olayları dahil)|  
 |------------------------|----------------------------------------------------------------|----------------------------------------------------------------------|  
-|`LoaderRundownKeyword` +<br /><br /> `StartRundownKeyword`|`DCStart`olaylar.|Yok.|  
-|`LoaderRundownKeyword` +<br /><br /> `EndRundownKeyword`|`DCEnd`olaylar.|Yok.|  
-|`JITKeyword` +<br /><br /> `StartRundownKeyword`|Yok.|`DCStart`olaylar.|  
-|`JITKeyword` +<br /><br /> `EndRundownKeyword`|Yok.|`DCEnd`olaylar.|  
-|`NGenKeyword` +<br /><br /> `StartRundownKeyword`|Yok.|`DCStart`olaylar.|  
-|`NGenKeyword` +<br /><br /> `EndRundownKeyword`|Yok.|`DCEnd`olaylar.|  
+|`LoaderRundownKeyword` +<br /><br /> `StartRundownKeyword`|`DCStart` olaylar.|Yok.|  
+|`LoaderRundownKeyword` +<br /><br /> `EndRundownKeyword`|`DCEnd` olaylar.|Yok.|  
+|`JITKeyword` +<br /><br /> `StartRundownKeyword`|Yok.|`DCStart` olaylar.|  
+|`JITKeyword` +<br /><br /> `EndRundownKeyword`|Yok.|`DCEnd` olaylar.|  
+|`NGenKeyword` +<br /><br /> `StartRundownKeyword`|Yok.|`DCStart` olaylar.|  
+|`NGenKeyword` +<br /><br /> `EndRundownKeyword`|Yok.|`DCEnd` olaylar.|  
   
  [Başa dön](#top)  
   

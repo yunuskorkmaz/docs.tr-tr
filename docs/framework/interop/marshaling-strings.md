@@ -1,10 +1,6 @@
 ---
 title: Dizeleri Hazırlama
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.technology:
-- dotnet-clr
-ms.topic: article
 helpviewer_keywords:
 - marshaling, samples
 - platform invoke, marshaling data
@@ -15,17 +11,13 @@ helpviewer_keywords:
 - marshaling, platform invoke
 - sample applications [.NET Framework], marshaling strings
 ms.assetid: e21b078b-70fb-4905-be26-c097ab2433ff
-caps.latest.revision: 9
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: adcdf55f3e33a48c4fd10ea243bb0ce3497f522f
-ms.sourcegitcommit: 9a4fe1a1c37b26532654b4bbe22d702237950009
+ms.openlocfilehash: 52a78e0c3969e879bf2fd1b1f5c41b2caac2ba11
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="marshaling-strings"></a>Dizeleri Hazırlama
 Platform çağırma bunları .NET Framework biçimden (Unicode) yönetilmeyen biçimi (ANSI), gerekirse dönüştürme kopyaları dizesi parametreleri. Yönetilen dizeleri değişmez olduğundan, platform çağırma işlevi döndüğünde bunları yönetilmeyen bellekten yönetilen bellek kopyalamaz.  
@@ -45,7 +37,7 @@ Platform çağırma bunları .NET Framework biçimden (Unicode) yönetilmeyen bi
 |Değere göre bir dizeler dizisi.|Değeri tarafından geçirilen bir dizeler dizisi oluşturur.|[Diziler](marshaling-different-types-of-arrays.md)|  
 |Değere göre dizelerini içeren yapıları dizisi.|Yapıları dizisi oluşturan dizeler içeriyor ve dizi değere göre geçirilir.|[Diziler](marshaling-different-types-of-arrays.md)|  
   
-## <a name="see-also"></a>Ayrıca bkz.  
+## <a name="see-also"></a>Ayrıca Bkz.  
  [Platform Çağırma ile Veri Hazırlama](marshaling-data-with-platform-invoke.md)  
  [Platform çağırma veri türleri](https://msdn.microsoft.com/library/16014d9f-d6bd-481e-83f0-df11377c550f(v=vs.100))  
  [Sınıflar, Yapılar ve Birleşimleri Hazırlama](marshaling-classes-structures-and-unions.md)  

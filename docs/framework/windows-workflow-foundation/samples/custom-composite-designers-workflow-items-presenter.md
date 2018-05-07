@@ -1,26 +1,15 @@
 ---
-title: "Özel bileşik tasarımcıları - iş akışı öğeleri sunum"
-ms.custom: 
+title: Özel bileşik tasarımcıları - iş akışı öğeleri sunum
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
 ms.assetid: 70055c4b-1173-47a3-be80-b5bce6f59e9a
-caps.latest.revision: "14"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 78f21887ab4a43e13984f2460435e862dfb702f7
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: e78a738bf74f49eaa192b45324db5e4bb7a3e872
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="custom-composite-designers---workflow-items-presenter"></a>Özel bileşik tasarımcıları - iş akışı öğeleri sunum
 <xref:System.Activities.Presentation.WorkflowItemsPresenter?displayProperty=nameWithType> İçerilen öğelerin bir koleksiyonu düzenleme için izin veren WF Tasarımcı programlama modeli anahtar türü. Bu örnek düzenlenebilir bir koleksiyonu ortaya çıkarır bir etkinlik Tasarımcısı nasıl oluşturulacağını gösterir.  
@@ -42,15 +31,15 @@ ms.lasthandoff: 12/22/2017
 ## <a name="sample-highlights"></a>Örnek öne çıkan özellikleri  
  Bu örnek kod aşağıda gösterilmiştir:  
   
--   Bir tasarımcı etkinlik için yerleşik olarak bulunur:`Parallel`  
+-   Bir tasarımcı etkinlik için yerleşik olarak bulunur:  `Parallel`  
   
 -   Özel Etkinlik Tasarımcısı ile oluşturma bir <xref:System.Activities.Presentation.WorkflowItemsPresenter?displayProperty=nameWithType>. İşaret etmek için bazı noktalar:  
   
-    -   WPF veri bağlama bağlamak için kullanımına dikkat edin `ModelItem.Branches`. `ModelItem`özelliği açıktır `WorkflowElementDesigner` Tasarımcı kullanılıyor olduğu için bu durumda, temel alınan nesnesine başvuruyor bizim `Parallel`.  
+    -   WPF veri bağlama bağlamak için kullanımına dikkat edin `ModelItem.Branches`. `ModelItem` özelliği açıktır `WorkflowElementDesigner` Tasarımcı kullanılıyor olduğu için bu durumda, temel alınan nesnesine başvuruyor bizim `Parallel`.  
   
     -   <xref:System.Activities.Presentation.WorkflowItemsPresenter.SpacerTemplate?displayProperty=nameWithType> Koleksiyonunda tek tek öğeler arasındaki görüntülemek için bir görsel yerleştirme için kullanılabilir.  
   
-    -   <xref:System.Activities.Presentation.WorkflowItemsPresenter.ItemsPanel?displayProperty=nameWithType>koleksiyondaki öğelerin düzenini belirlemek için sağlanan bir şablondur. Bu durumda, yatay yığın paneli kullanılır.  
+    -   <xref:System.Activities.Presentation.WorkflowItemsPresenter.ItemsPanel?displayProperty=nameWithType> koleksiyondaki öğelerin düzenini belirlemek için sağlanan bir şablondur. Bu durumda, yatay yığın paneli kullanılır.  
   
  Bu aşağıdaki kod örneği bu gösterir.  
   
@@ -163,7 +152,7 @@ End Sub
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  Bu dizin mevcut değilse, Git [Windows Communication Foundation (WCF) ve .NET Framework 4 için Windows Workflow Foundation (WF) örnek](http://go.microsoft.com/fwlink/?LinkId=150780) tüm indirmek için [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] ve [!INCLUDE[wf1](../../../../includes/wf1-md.md)] örnekleri. Bu örnek aşağıdaki dizinde bulunur.  
+>  Bu dizin mevcut değilse, Git [Windows Communication Foundation (WCF) ve .NET Framework 4 için Windows Workflow Foundation (WF) örnek](http://go.microsoft.com/fwlink/?LinkId=150780) tüm Windows Communication Foundation (WCF) indirmek için ve [!INCLUDE[wf1](../../../../includes/wf1-md.md)] örnekleri. Bu örnek aşağıdaki dizinde bulunur.  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WF\Basic\CustomActivities\CustomActivityDesigners\WorkflowItemsPresenter`  
   

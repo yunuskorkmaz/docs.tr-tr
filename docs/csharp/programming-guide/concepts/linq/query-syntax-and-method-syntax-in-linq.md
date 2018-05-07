@@ -1,24 +1,15 @@
 ---
-title: "LINQ'te Sorgu Sözdizimi ve Yöntem Sözdizimi (C#)"
-ms.custom: 
+title: LINQ'te Sorgu Sözdizimi ve Yöntem Sözdizimi (C#)
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-csharp
-ms.topic: article
 helpviewer_keywords:
 - LINQ [C#], query syntax vs. method syntax
 - queries [LINQ in C#], syntax comparisons
 ms.assetid: eedd6dd9-fec2-428c-9581-5b8783810ded
-caps.latest.revision: "30"
-author: BillWagner
-ms.author: wiwagn
-ms.openlocfilehash: 0127ee0815c4ba6a697456fe45bd373bcf9ba4e4
-ms.sourcegitcommit: 7e99f66ef09d2903e22c789c67ff5a10aa953b2f
+ms.openlocfilehash: 6b943da442d2ec1210911cb9f4b6a0d56c7216d7
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/18/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="query-syntax-and-method-syntax-in-linq-c"></a>LINQ'te Sorgu Sözdizimi ve Yöntem Sözdizimi (C#)
 Çoğu sorgularda giriş dil ile tümleşik sorgu ([!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)]) belgeleri LINQ bildirim temelli sorgu sözdizimi kullanılarak yazılır. Bununla birlikte, kod derlendiğinde sorgu söz dizimi .NET ortak dil çalışma zamanı (CLR) için yöntem çağrılarını içine çevrilmelidir. Bu yöntem çağrılarını gibi adlara sahip standart sorgu işleçleri çağırma `Where`, `Select`, `GroupBy`, `Join`, `Max`, ve `Average`. Sorgu sözdizimi yerine doğrudan yöntemi sözdizimini kullanarak bunları çağırabilirsiniz.  
@@ -48,7 +39,7 @@ ms.lasthandoff: 11/18/2017
  Kullanmaya başlamak için [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)], Lambda'lar yaygın kullanmak zorunda değil. Ancak, bazı sorgular yalnızca yöntemi sözdiziminde ifade ve bazıları lambda ifadeleri gerektirir. Lambda'lar ile daha tanıdık sonra güçlü ve esnek aracında olduğunu göreceksiniz, [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] araç. Daha fazla bilgi için bkz: [Lambda ifadeleri](../../../../csharp/programming-guide/statements-expressions-operators/lambda-expressions.md).  
   
 ## <a name="composability-of-queries"></a>Sorgu Oluşturabilirliği  
- Önceki kod örneğinde unutmayın `OrderBy` yöntemi çağrılır çağrıda dot işleci kullanılarak `Where`. `Where`Filtre uygulanmış bir sıra oluşturur ve ardından `Orderby` sıralama tarafından bu dizisi üzerinde çalışır. Sorguları döndürür çünkü bir `IEnumerable`, siz bunları yöntemi sözdiziminde yöntem çağrılarını birlikte zincirleme tarafından oluştur. Sorgu sözdizimi kullanılarak sorguları yazdığınızda derleyici arka planda ne yaptığını budur. Ve bir sorgu değişkeni sorgu sonuçlarını depolamaz çünkü değiştirin veya hatta yürütüldükten sonra herhangi bir zamanda yeni bir sorgu için temel olarak kullanmak.  
+ Önceki kod örneğinde unutmayın `OrderBy` yöntemi çağrılır çağrıda dot işleci kullanılarak `Where`. `Where` Filtre uygulanmış bir sıra oluşturur ve ardından `Orderby` sıralama tarafından bu dizisi üzerinde çalışır. Sorguları döndürür çünkü bir `IEnumerable`, siz bunları yöntemi sözdiziminde yöntem çağrılarını birlikte zincirleme tarafından oluştur. Sorgu sözdizimi kullanılarak sorguları yazdığınızda derleyici arka planda ne yaptığını budur. Ve bir sorgu değişkeni sorgu sonuçlarını depolamaz çünkü değiştirin veya hatta yürütüldükten sonra herhangi bir zamanda yeni bir sorgu için temel olarak kullanmak.  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [C# üzerinde LINQ ile çalışmaya başlama](../../../../csharp/programming-guide/concepts/linq/getting-started-with-linq.md)
+ [C#'de LINQ Kullanmaya Başlama](../../../../csharp/programming-guide/concepts/linq/getting-started-with-linq.md)

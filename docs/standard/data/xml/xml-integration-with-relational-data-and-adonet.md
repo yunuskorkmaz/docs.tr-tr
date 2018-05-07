@@ -1,26 +1,15 @@
 ---
-title: "İlişkisel veri ve ADO.NET XML tümleştirme"
-ms.custom: 
+title: İlişkisel veri ve ADO.NET XML tümleştirme
 ms.date: 03/30/2017
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
 ms.technology: dotnet-standard
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: f6ebb1a1-f2ca-49b9-92c9-0150940cf6e6
-caps.latest.revision: "4"
 author: mairaw
 ms.author: mairaw
-manager: wpickett
-ms.workload:
-- dotnet
-- dotnetcore
-ms.openlocfilehash: d0728ff5d695ccc5fc5912631d29c89b7cc36ca5
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: 3e9bdb9b88d51e5435609bbab8bbe21a985505a0
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="xml-integration-with-relational-data-and-adonet"></a>İlişkisel veri ve ADO.NET XML tümleştirme
 **XmlDataDocument** sınıftır türetilen bir sınıftan **XmlDocument**ve XML verileri içerir. Avantajı **XmlDataDocument** ilişkisel ve hiyerarşik veri arasında bir köprü sağlamasıdır. Bu bir **XmlDocument** için bağlanabilir bir **DataSet** ve her iki sınıfları iki sınıflarında bulunan verilere yapılan değişiklikleri eşitleyebilirsiniz. Bir **XmlDocument** için bağlı bir **DataSet** ilişkisel veri ile tümleştirmek XML sağlar ve her iki XML olarak veya ilişkisel bir biçimde gösterilen verilerinizi gerekmez. Her ikisini birden yapın ve verileri tek bir gösterimini kısıtlanacak değil.  

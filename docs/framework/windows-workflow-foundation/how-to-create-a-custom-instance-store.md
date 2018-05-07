@@ -1,26 +1,15 @@
 ---
-title: "Nasıl yapılır: özel örneği deposu oluşturma"
-ms.custom: 
+title: 'Nasıl yapılır: özel örneği deposu oluşturma'
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 593c4e9d-8a49-4e12-8257-cee5e6b4c075
-caps.latest.revision: "11"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: db9f09236764697aff4e57ace593827193c6e07d
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 96f713765178011b9122afcb31e4721e9184d1d3
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-create-a-custom-instance-store"></a>Nasıl yapılır: özel örneği deposu oluşturma
-[!INCLUDE[netfx_current_long](../../../includes/netfx-current-long-md.md)]içeren <xref:System.Activities.DurableInstancing.SqlWorkflowInstanceStore>, iş akışı verilerinin sürdürülmesi için SQL Server kullanan bir örnek deposu. Uygulamanızı akışı verileri farklı bir veritabanı veya bir dosya sistemi gibi başka bir orta kalıcı hale getirmek için gerekli olduğunda özel örnek deposuna uygulayabilirsiniz. Özel örnek deposuna abstract genişletilerek oluşturulur <xref:System.Runtime.DurableInstancing.InstanceStore> sınıfı ve uygulama için gerekli yöntemleri uygulama. Özel örnek deposuna tam bir uygulama için bkz: [şirket satın alma işlemi](../../../docs/framework/windows-workflow-foundation/samples/corporate-purchase-process.md) örnek.  
+[!INCLUDE[netfx_current_long](../../../includes/netfx-current-long-md.md)] içeren <xref:System.Activities.DurableInstancing.SqlWorkflowInstanceStore>, iş akışı verilerinin sürdürülmesi için SQL Server kullanan bir örnek deposu. Uygulamanızı akışı verileri farklı bir veritabanı veya bir dosya sistemi gibi başka bir orta kalıcı hale getirmek için gerekli olduğunda özel örnek deposuna uygulayabilirsiniz. Özel örnek deposuna abstract genişletilerek oluşturulur <xref:System.Runtime.DurableInstancing.InstanceStore> sınıfı ve uygulama için gerekli yöntemleri uygulama. Özel örnek deposuna tam bir uygulama için bkz: [şirket satın alma işlemi](../../../docs/framework/windows-workflow-foundation/samples/corporate-purchase-process.md) örnek.  
   
 ## <a name="implementing-the-begintrycommand-method"></a>BeginTryCommand yöntemi uygulama  
  <xref:System.Runtime.DurableInstancing.InstanceStore.BeginTryCommand%2A> Örnek deposuna Kalıcılık altyapısı tarafından gönderilir. Türü `command` parametresi gösterir hangi komutun yürütülen; Bu parametre aşağıdaki türde olabilir:  

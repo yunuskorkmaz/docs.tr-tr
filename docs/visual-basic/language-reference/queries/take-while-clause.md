@@ -1,12 +1,6 @@
 ---
-title: "Take While Tümcesi (Visual Basic)"
+title: Take While Tümcesi (Visual Basic)
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- devlang-visual-basic
-ms.topic: article
 f1_keywords:
 - vb.QueryTakeWhile
 helpviewer_keywords:
@@ -14,14 +8,11 @@ helpviewer_keywords:
 - Take While clause [Visual Basic]
 - Take While statement [Visual Basic]
 ms.assetid: db8f9f2f-fc9f-4a6c-b0b8-1bf048147e11
-caps.latest.revision: 
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: 5c8add6c55bb9353bac3489e68f497cb32785aad
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 7e0a6bd77ca2594e9d74e669fcd9cddf91ee1cad
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="take-while-clause-visual-basic"></a>Take While Tümcesi (Visual Basic)
 Belirtilen bir koşul olduğu sürece bir koleksiyondaki öğeleri içeren `true` ve kalan öğeleri atlar.  
@@ -50,9 +41,9 @@ Take While expression
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
  [Visual Basic'de LINQ'e giriş](../../../visual-basic/programming-guide/language-features/linq/introduction-to-linq.md)  
- [Sorguları](../../../visual-basic/language-reference/queries/queries.md)  
- [Select tümcesi](../../../visual-basic/language-reference/queries/select-clause.md)  
- [From yan tümcesi](../../../visual-basic/language-reference/queries/from-clause.md)  
- [Take tümcesi](../../../visual-basic/language-reference/queries/take-clause.md)  
- [Skip While tümcesi](../../../visual-basic/language-reference/queries/skip-while-clause.md)  
- [Burada yan tümcesi](../../../visual-basic/language-reference/queries/where-clause.md)
+ [Sorgular](../../../visual-basic/language-reference/queries/queries.md)  
+ [Select Yan Tümcesi](../../../visual-basic/language-reference/queries/select-clause.md)  
+ [From Yan Tümcesi](../../../visual-basic/language-reference/queries/from-clause.md)  
+ [Take Yan Tümcesi](../../../visual-basic/language-reference/queries/take-clause.md)  
+ [Skip While Yan Tümcesi](../../../visual-basic/language-reference/queries/skip-while-clause.md)  
+ [Where Yan Tümcesi](../../../visual-basic/language-reference/queries/where-clause.md)

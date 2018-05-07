@@ -1,31 +1,17 @@
 ---
-title: "Yansıma sağlayıcısı (WCF Veri Hizmetleri)"
-ms.custom: 
+title: Yansıma sağlayıcısı (WCF Veri Hizmetleri)
 ms.date: 03/30/2017
-ms.prod: .net-framework-oob
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - WCF Data Services, providers
 ms.assetid: ef5ba300-6d7c-455e-a7bd-d0cc6d211ad4
-caps.latest.revision: 
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 617754fcd9515f080dc6cf8ae923c2c6fc34ad3a
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 3c6885ee7976461379513e8e579f58160146769a
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="reflection-provider-wcf-data-services"></a>Yansıma sağlayıcısı (WCF Veri Hizmetleri)
-Bir veri modeli aracılığıyla Entity Framework verileri gösterme yanı sıra [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] kesinlikle bir varlık tabanlı modelde tanımlı değil veri hale getirebilir. Dönüş uygulama türleri sınıflardaki yansıma sağlayıcısı kullanıma sunan <xref:System.Linq.IQueryable%601> arabirimi. [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)]Bu sınıf için bir veri modeli gerçekleştirip yansıma kullanır ve adresi tabanlı sorgular kaynaklara karşı dil ile tümleşik sorgu (LINQ) çevirebilir-gösterilen sorguları temel <xref:System.Linq.IQueryable%601> türleri.  
+Bir veri modeli aracılığıyla Entity Framework verileri gösterme yanı sıra [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] kesinlikle bir varlık tabanlı modelde tanımlı değil veri hale getirebilir. Dönüş uygulama türleri sınıflardaki yansıma sağlayıcısı kullanıma sunan <xref:System.Linq.IQueryable%601> arabirimi. [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] Bu sınıf için bir veri modeli gerçekleştirip yansıma kullanır ve adresi tabanlı sorgular kaynaklara karşı dil ile tümleşik sorgu (LINQ) çevirebilir-gösterilen sorguları temel <xref:System.Linq.IQueryable%601> türleri.  
   
 > [!NOTE]
 >  Kullanabileceğiniz <xref:System.Linq.Queryable.AsQueryable%2A> döndürülecek yöntemi bir <xref:System.Linq.IQueryable%601> arabirimini uygulayan herhangi bir sınıftan <xref:System.Collections.Generic.IEnumerable%601> arabirimi. Bu veri hizmetiniz için bir veri kaynağı olarak kullanılacak en genel koleksiyon türleri sağlar.  
@@ -102,7 +88,7 @@ Bir veri modeli aracılığıyla Entity Framework verileri gösterme yanı sıra
 |<xref:System.Data.Services.IUpdatable.SetValue%2A>|Bir kaynak özelliğinin değeri ayarlamak için işlevsellik sağlar.|  
   
 ## <a name="handling-concurrency"></a>Eşzamanlılık işleme  
- [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)]bir varlık için bir eşzamanlılık belirteci tanımlamanıza olanak sağlayarak bir iyimser eşzamanlılık modelini destekler. Bir veya daha fazla özellik varlık içerir, bu eşzamanlılık belirteci veri hizmeti tarafından bir değişiklik, güncellenen veya silinen istenen verilerde oluşup oluşmadığını belirlemek için kullanılır. Simge değerlerini istekte eTag alınan varlık geçerli değerlerden farklı bir özel durum veri hizmeti tarafından tetiklenir. <xref:System.Data.Services.ETagAttribute> Yansıma sağlayıcısında bir eşzamanlılık belirteci tanımlamak için bir varlık türü için uygulanır. Eşzamanlılık belirteci bir anahtar özellik veya bir gezinti özelliği içeremez. Daha fazla bilgi için bkz: [veri hizmeti güncelleştirme](../../../../docs/framework/data/wcf/updating-the-data-service-wcf-data-services.md).  
+ [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] bir varlık için bir eşzamanlılık belirteci tanımlamanıza olanak sağlayarak bir iyimser eşzamanlılık modelini destekler. Bir veya daha fazla özellik varlık içerir, bu eşzamanlılık belirteci veri hizmeti tarafından bir değişiklik, güncellenen veya silinen istenen verilerde oluşup oluşmadığını belirlemek için kullanılır. Simge değerlerini istekte eTag alınan varlık geçerli değerlerden farklı bir özel durum veri hizmeti tarafından tetiklenir. <xref:System.Data.Services.ETagAttribute> Yansıma sağlayıcısında bir eşzamanlılık belirteci tanımlamak için bir varlık türü için uygulanır. Eşzamanlılık belirteci bir anahtar özellik veya bir gezinti özelliği içeremez. Daha fazla bilgi için bkz: [veri hizmeti güncelleştirme](../../../../docs/framework/data/wcf/updating-the-data-service-wcf-data-services.md).  
   
 ## <a name="using-linq-to-sql-with-the-reflection-provider"></a>LINQ-SQL ile yansıma sağlayıcısını kullanma  
  Entity Framework varsayılan olarak yerel olarak desteklendiğinden ilişkisel veri ile kullanmak için önerilen veri sağlayıcısı olduğu [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)]. Ancak, bir veri hizmeti ile SQL sınıfları LINQ kullanmasını yansıma Sağlayıcısı'nı kullanabilirsiniz. <xref:System.Data.Linq.Table%601> Neden üzerinde yöntemleri tarafından döndürülen kümeleri <xref:System.Data.Linq.DataContext> LINQ to SQL Nesne İlişkisel Tasarımcısı (O/R Tasarımcısı) uygulama tarafından üretilen <xref:System.Linq.IQueryable%601> arabirimi. Bu, bu yöntemleri erişmek ve varlık verilerini SQL Server'dan SQL sınıfları için oluşturulan LINQ kullanarak dönmek yansıma sağlayıcı sağlar. Ancak, LINQ to SQL uygulamayan çünkü <xref:System.Data.Services.IUpdatable> arabirimi, ihtiyacınız var olan genişleten bir parçalı sınıf eklemek <xref:System.Data.Linq.DataContext> eklemek için kısmi sınıfı <xref:System.Data.Services.IUpdatable> uygulama. Daha fazla bilgi için bkz: [nasıl yapılır: bir LINQ to SQL veri kaynağı kullanarak bir veri hizmeti oluşturmak](../../../../docs/framework/data/wcf/create-a-data-service-using-linq-to-sql-wcf.md).  

@@ -1,21 +1,15 @@
 ---
-title: "Nasıl yapılır: ToString Yöntemini Geçersiz Kılma (C# Programlama Kılavuzu)"
+title: 'Nasıl yapılır: ToString Yöntemini Geçersiz Kılma (C# Programlama Kılavuzu)'
 ms.date: 07/20/2015
-ms.prod: .net
-ms.technology: devlang-csharp
-ms.topic: article
 helpviewer_keywords:
 - ToString method, overriding in C#
 - inheritance [C#], overriding OnPaint and ToString
 ms.assetid: 8016db69-1f19-420c-8e17-98e8bebb7749
-caps.latest.revision: "21"
-author: BillWagner
-ms.author: wiwagn
-ms.openlocfilehash: 5b0f7bf35e5bd565e0bfa46fe91cf86aedcd2d8e
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 86394f5fed55f57df8928648548fcfca117b00d8
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-override-the-tostring-method-c-programming-guide"></a>Nasıl yapılır: ToString Yöntemini Geçersiz Kılma (C# Programlama Kılavuzu)
 Her sınıf veya yapı C# örtük olarak devralır <xref:System.Object> sınıfı. Bu nedenle, her nesne C# alır <xref:System.Object.ToString%2A> yöntemi nesnenin dize gösterimini döndürür. Örneğin, tüm değişkenler türü `int` sahip bir `ToString` bunları içeriklerini bir dize döndürecek şekilde etkinleştirir yöntemi:  
@@ -49,11 +43,11 @@ Her sınıf veya yapı C# örtük olarak devralır <xref:System.Object> sınıf�
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
  <xref:System.IFormattable>  
- [C# programlama kılavuzu](../../../csharp/programming-guide/index.md)  
- [Sınıflar ve yapılar](../../../csharp/programming-guide/classes-and-structs/index.md)  
- [Dizeleri](../../../csharp/programming-guide/strings/index.md)  
- [dize](../../../csharp/language-reference/keywords/string.md)  
- [Yeni](../../../csharp/language-reference/keywords/new.md)  
- [geçersiz kılma](../../../csharp/language-reference/keywords/override.md)  
- [sanal](../../../csharp/language-reference/keywords/virtual.md)  
- [Biçimlendirme türleri](../../../standard/base-types/formatting-types.md)
+ [C# Programlama Kılavuzu](../../../csharp/programming-guide/index.md)  
+ [Sınıflar ve Yapılar](../../../csharp/programming-guide/classes-and-structs/index.md)  
+ [Dizeler](../../../csharp/programming-guide/strings/index.md)  
+ [string](../../../csharp/language-reference/keywords/string.md)  
+ [new](../../../csharp/language-reference/keywords/new.md)  
+ [override](../../../csharp/language-reference/keywords/override.md)  
+ [virtual](../../../csharp/language-reference/keywords/virtual.md)  
+ [Biçimlendirme Türleri](../../../standard/base-types/formatting-types.md)

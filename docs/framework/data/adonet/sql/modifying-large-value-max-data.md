@@ -1,27 +1,15 @@
 ---
-title: "ADO.NET büyük değer (Maks) verileri değiştirme"
-ms.custom: 
+title: ADO.NET büyük değer (Maks) verileri değiştirme
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-ado
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
 ms.assetid: 8aca5f00-d80e-4320-81b3-016d0466f7ee
-caps.latest.revision: "6"
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
-ms.workload: dotnet
-ms.openlocfilehash: e42ff73cda8fc63d9b8ae6061cfbdb9749a0a864
-ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
+ms.openlocfilehash: 285803d92474efd3268816d1af06eb3ff4abbc79
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="modifying-large-value-max-data-in-adonet"></a>ADO.NET büyük değer (Maks) verileri değiştirme
 Büyük nesne (LOB) veri türleri 8 kilobayt (KB) en fazla satır boyutunu aşan olanlardır. SQL Server sağlayan bir `max` tanımlayıcısı için `varchar`, `nvarchar`, ve `varbinary` değerlerin depolama 2 büyüklüğünde izin vermek için veri türleri ^ 32 bayt. Tablo sütunları ve Transact-SQL değişkenleri belirtebilir `varchar(max)`, `nvarchar(max)`, veya `varbinary(max)` veri türleri. ADO.NET, `max` veri türleri getirilen tarafından bir `DataReader`ve herhangi bir özel işleme yapılmadan hem giriş ve çıkış parametresi değerleri olarak belirtilebilir. İçin büyük `varchar` veri türleri, veri alınır ve artımlı olarak güncelleştirildi.  
@@ -30,7 +18,7 @@ Büyük nesne (LOB) veri türleri 8 kilobayt (KB) en fazla satır boyutunu aşan
   
  Aşağıdaki tabloda, SQL Server Books Online'da belgelere bağlantılar sağlar.  
   
- **SQL Server Books Online**  
+ **SQL Server Çevrimiçi Kitapları**  
   
 1.  [Değer büyük veri türlerini kullanma](http://go.microsoft.com/fwlink/?LinkId=120498)  
   
@@ -44,7 +32,7 @@ Büyük nesne (LOB) veri türleri 8 kilobayt (KB) en fazla satır boyutunu aşan
 -   Büyük `varchar` sütunlar anahtar sütunlarını bölümleme olarak kullanılamaz.  
   
 ## <a name="working-with-large-value-types-in-transact-sql"></a>Transact-SQL büyük değer türleri ile çalışma  
- Transact-SQL `OPENROWSET` işlevidir bağlanma ve uzak veri erişim tek seferlik bir yöntem. Tüm bir OLE DB veri kaynağından uzak verilere erişmek gerekli bağlantı bilgilerini içerir. `OPENROWSET`dizinindeymiş gibi bir tablo adı bir sorgu FROM yan tümcesinde başvuruda bulunulabilir. Ayrıca bir INSERT, UPDATE, hedef tablo olarak başvurulabilir veya OLE DB sağlayıcısı yeteneklerine tabi deyimi SİLİN.  
+ Transact-SQL `OPENROWSET` işlevidir bağlanma ve uzak veri erişim tek seferlik bir yöntem. Tüm bir OLE DB veri kaynağından uzak verilere erişmek gerekli bağlantı bilgilerini içerir. `OPENROWSET` dizinindeymiş gibi bir tablo adı bir sorgu FROM yan tümcesinde başvuruda bulunulabilir. Ayrıca bir INSERT, UPDATE, hedef tablo olarak başvurulabilir veya OLE DB sağlayıcısı yeteneklerine tabi deyimi SİLİN.  
   
  `OPENROWSET` İşlevi içeren `BULK` doğrudan bir dosyadan bir hedef tabloya veri yüklemeden okumaya izin veren satır kümesi sağlayıcısı. Bu kullanmanızı sağlayan `OPENROWSET` basit INSERT SELECT deyimi içinde.  
   
@@ -78,10 +66,10 @@ FROM OPENROWSET
   
 |Eğer|Ardından|  
 |--------|----------|  
-|İfade NULL olarak ayarlandı|`@Length`göz ardı edilir ve değer *column_name* kesilir belirtilen `@Offset`.|  
-|`@Offset` is NULL|Güncelleştirme işlemi var olan sonunda ifade ekler *column_name* değeri ve `@Length` göz ardı edilir.|  
-|`@Offset`column_name değeri uzunluğundan daha büyük|SQL Server hata döndürür.|  
-|`@Length` is NULL|Güncelleştirme işlemi tüm verileri kaldırır `@Offset` sonuna `column_name` değeri.|  
+|İfade NULL olarak ayarlandı|`@Length` göz ardı edilir ve değer *column_name* kesilir belirtilen `@Offset`.|  
+|`@Offset` NULL.|Güncelleştirme işlemi var olan sonunda ifade ekler *column_name* değeri ve `@Length` göz ardı edilir.|  
+|`@Offset` column_name değeri uzunluğundan daha büyük|SQL Server hata döndürür.|  
+|`@Length` NULL.|Güncelleştirme işlemi tüm verileri kaldırır `@Offset` sonuna `column_name` değeri.|  
   
 > [!NOTE]
 >  Ne `@Offset` ya da `@Length` negatif bir sayı olabilir.  

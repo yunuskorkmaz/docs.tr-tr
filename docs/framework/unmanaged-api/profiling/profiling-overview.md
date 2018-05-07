@@ -1,13 +1,6 @@
 ---
-title: "Profil Oluşturmaya Genel Bakış"
-ms.custom: 
+title: Profil Oluşturmaya Genel Bakış
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: reference
 helpviewer_keywords:
 - managed code, profiling API support
 - unmanaged code, combining with managed code in profiling
@@ -34,19 +27,16 @@ helpviewer_keywords:
 - security, profiling API considerations
 - stack depth [.NET Framework profiling]
 ms.assetid: 864c2344-71dc-46f9-96b2-ed59fb6427a8
-caps.latest.revision: "27"
 author: mairaw
 ms.author: mairaw
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 84688ed80d0cb1b802290176400eb45998052a34
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: b38b64e1c86174bea11086e722ed86b0a0046e2c
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="profiling-overview"></a>Profil Oluşturmaya Genel Bakış
-<a name="top"></a>Bir profil oluşturucu başka bir uygulamanın yürütülmesini izleyen bir araçtır. Ortak dil çalışma zamanı (CLR) profil oluşturucu ileti almak ve profil oluşturma API kullanarak için CLR iletileri göndermek işlevler oluşan bir dinamik bağlantı kitaplığı (DLL) olur. Profil Oluşturucu DLL çalışma zamanında CLR tarafından yüklenir.  
+<a name="top"></a> Bir profil oluşturucu başka bir uygulamanın yürütülmesini izleyen bir araçtır. Ortak dil çalışma zamanı (CLR) profil oluşturucu ileti almak ve profil oluşturma API kullanarak için CLR iletileri göndermek işlevler oluşan bir dinamik bağlantı kitaplığı (DLL) olur. Profil Oluşturucu DLL çalışma zamanında CLR tarafından yüklenir.  
   
  Geleneksel profil oluşturma araçları, uygulamanın yürütülmesini ölçmeye odaklanın. Diğer bir deyişle, her işlev veya uygulama zamanla bellek kullanımını harcanan süreyi ölçer. Profil oluşturma API kod kapsamı yardımcı programları gibi tanılama araçları daha geniş bir sınıfı hedefler ve hatta yardımları hata ayıklama Gelişmiş. Bu kullanımları doğası gereği tüm tanılama. Profil oluşturma API yalnızca ölçer ancak bir uygulamanın yürütmesini de izler. Bu nedenle, profil oluşturma API hiçbir zaman uygulama tarafından kullanılmamalıdır ve uygulamanın yürütme üzerinde bağımlı olmamalıdır (veya tarafından etkilenen) profil oluşturucu.  
   

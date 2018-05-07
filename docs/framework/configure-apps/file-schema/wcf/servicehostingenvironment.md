@@ -2,11 +2,11 @@
 title: '&lt;serviceHostingEnvironment&gt;'
 ms.date: 03/30/2017
 ms.assetid: 4f8a7c4f-e735-4987-979a-b74fcdae2652
-ms.openlocfilehash: e6c69e06b691e40b6b2c39a54be83d7bdbe3a650
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
-ms.translationtype: HT
+ms.openlocfilehash: 1d9edec2c5bbddefe575952d591416353d603d33
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="ltservicehostingenvironmentgt"></a>&lt;serviceHostingEnvironment&gt;
 Bu öğe için belirli bir barındırma ortamı hizmeti başlatır türü tanımlar. Bu öğe boş ise, varsayılan türü kullanılır. Bu öğe yalnızca uygulama veya makine düzeyi yapılandırma dosyaları kullanılır.  
@@ -40,7 +40,7 @@ Bu öğe için belirli bir barındırma ortamı hizmeti başlatır türü tanım
 |Öznitelik|Açıklama|  
 |---------------|-----------------|  
 |aspNetCompatibilityEnabled|ASP.NET uyumluluğu modu geçerli uygulama için açık durumda olup olmadığını gösteren bir Boole değeri. Varsayılan, `false` değeridir.<br /><br /> Bu öznitelik ayarlandığında `true`, Windows Communication Foundation (WCF) hizmetlerini isteklerine ASP.NET HTTP ardışık düzen üzerinden akış ve HTTP olmayan protokolleri üzerinden iletişim yasaktır. Daha fazla bilgi için bkz: [WCF hizmetleri ve ASP.NET](../../../../../docs/framework/wcf/feature-details/wcf-services-and-aspnet.md).|  
-|minFreeMemoryPercentageToActivateService|En az önce sisteme kullanılabilir olması gerektiğini boş bellek miktarını belirten bir tamsayı bir [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)] hizmeti etkinleştirilebilir. **Dikkat:** web.config dosyasındaki kısmi güven yanı sıra bu öznitelik belirten bir [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)] hizmeti neden olur bir <xref:System.Security.SecurityException> hizmet çalıştırıldığında.|  
+|minFreeMemoryPercentageToActivateService|En az bir WCF hizmeti etkin hale getirilmeden önce sistemi için kullanılabilir olması gereken boş bellek miktarını belirten bir tamsayı. **Dikkat:** bu öznitelik bir WCF Hizmeti web.config dosyasında kısmi güven birlikte belirtme neden olur bir <xref:System.Security.SecurityException> hizmet çalıştırıldığında.|  
 |multipleSiteBindingsEnabled|Site başına birden çok IIS bağlamaları etkinleştirilip etkinleştirilmediğini belirten bir Boole değeri.<br /><br /> Sanal dizinler içeren sanal uygulamalar için kapsayıcılardır web siteleri, IIS oluşur. Uygulama bir sitedeki bir veya daha fazla IIS bağlama aracılığıyla erişilebilir. Bir IIS bağlaması iki parça bilgi sağlar: bir bağlama protokolü ve bağlama bilgileri. Bağlama protokolü üzerinden iletişimin şeması tanımlar ve bağlama bilgileri siteye erişmek için kullanılan bilgilerdir. Bağlama bilgileri bir IP adresi içerebilir oysa bağlama Protokolü örneği HTTP olabilir bağlantı noktası, ana bilgisayar üstbilgisi.<br /><br /> IIS, düzeni başına birden çok taban adresi sonuçlanır site başına birden çok IIS bağlamaları belirtmeyi destekler. Ancak, bir site altında barındırılan bir Windows Communication Foundation (WCF) hizmetini düzeni başına yalnızca bir baseAddress bağlama sağlar.<br /><br /> Site başına birden çok IIS bağlamaları Windows Communication Foundation (WCF) hizmetini etkinleştirmek için bu öznitelik ayarlamak `true`. Birden çok site bağlaması yalnızca HTTP protokolü için desteklendiğini unutmayın. Uç noktaları yapılandırma dosyasındaki adresi tam bir URI olması gerekir.|  
   
 ### <a name="child-elements"></a>Alt Öğeler  

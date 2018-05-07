@@ -1,23 +1,12 @@
 ---
-title: "Veritabanı erişimi etkinlikleri"
-ms.custom: 
+title: Veritabanı erişimi etkinlikleri
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 174a381e-1343-46a8-a62c-7c2ae2c4f0b2
-caps.latest.revision: "8"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: dfc99593e1c705cff5069b5dd864d372f8afda8e
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: e9c7627738d3c5313a4f3e6e4451daf78b87839a
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="database-access-activities"></a>Veritabanı erişimi etkinlikleri
 Veritabanı erişimi etkinliklerini, bir iş akışındaki bir veritabanına erişmek izin verir. Bu etkinliklerin almak veya bilgileri değiştirin ve kullanmak için veritabanlarına erişim ver [ADO.NET](http://go.microsoft.com/fwlink/?LinkId=166081) veritabanına erişmek için.  
@@ -27,7 +16,7 @@ Veritabanı erişimi etkinliklerini, bir iş akışındaki bir veritabanına eri
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  Bu dizin mevcut değilse (indirme) gidin tüm indirmek için [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] ve [!INCLUDE[wf1](../../../../includes/wf1-md.md)] örnekleri. Bu örnek aşağıdaki dizinde bulunur.  
+>  Bu dizin mevcut değilse (indirme) gidin tüm Windows Communication Foundation (WCF) indirmek için ve [!INCLUDE[wf1](../../../../includes/wf1-md.md)] örnekleri. Bu örnek aşağıdaki dizinde bulunur.  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WF\Scenario\ActivityLibrary\DbActivities`  
   
@@ -252,7 +241,7 @@ public class DbQueryDataSet : AsyncCodeActivity<DataSet>
 |CommandType|Tür <xref:System.Data.Common.DbCommand> yürütülecek.|  
 |SQL|Çalıştırılacak SQL komutu.|  
 |Parametreler|SQL sorgu parametreleri topluluğu.|  
-|Sonuç|<xref:System.Data.DataSet>Sorgu yürütüldükten sonra elde edilir.|  
+|Sonuç|<xref:System.Data.DataSet> Sorgu yürütüldükten sonra elde edilir.|  
   
 ## <a name="configuring-connection-information"></a>Bağlantı bilgilerini yapılandırma  
  Tüm DbActivities aynı yapılandırma parametreleri paylaşır. İki şekilde yapılandırılabilir:  
@@ -324,7 +313,7 @@ public class DbQueryDataSet : AsyncCodeActivity<DataSet>
   
 ##### <a name="to-run-the-sample"></a>Örnek çalıştırmak için  
   
-1.  Bir çözüm açın[!INCLUDE[vs2010](../../../../includes/vs2010-md.md)]  
+1.  Bir çözüm açın [!INCLUDE[vs2010](../../../../includes/vs2010-md.md)]  
   
 2.  Çözümü derlemek için CTRL + SHIFT + B tuşuna basın.  
   
@@ -335,6 +324,6 @@ public class DbQueryDataSet : AsyncCodeActivity<DataSet>
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  Bu dizin mevcut değilse, Git [Windows Communication Foundation (WCF) ve .NET Framework 4 için Windows Workflow Foundation (WF) örnek](http://go.microsoft.com/fwlink/?LinkId=150780) tüm indirmek için [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] ve [!INCLUDE[wf1](../../../../includes/wf1-md.md)] örnekleri. Bu örnek aşağıdaki dizinde bulunur.  
+>  Bu dizin mevcut değilse, Git [Windows Communication Foundation (WCF) ve .NET Framework 4 için Windows Workflow Foundation (WF) örnek](http://go.microsoft.com/fwlink/?LinkId=150780) tüm Windows Communication Foundation (WCF) indirmek için ve [!INCLUDE[wf1](../../../../includes/wf1-md.md)] örnekleri. Bu örnek aşağıdaki dizinde bulunur.  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WF\Scenario\ActivityLibrary\DbActivities`

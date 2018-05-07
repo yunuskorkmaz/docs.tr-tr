@@ -1,18 +1,13 @@
 ---
 title: Yerel ortamdaki Öğreticisi - C# yerel quickstarts
 description: Bu hızlı başlangıç quickstarts yerel olarak çalıştırmak için temel bilgileri sağlar.
-author: billwagner
-ms.topic: article
 ms.date: 12/07/2017
-ms.prod: .net
-ms.technology: devlang-csharp
-ms.devlang: csharp
 ms.custom: mvc
-ms.openlocfilehash: ec70b6bca55d370d90e912793cfec82a45141c51
-ms.sourcegitcommit: 2e8acae16ae802f2d6d04e3ce0a6dbf04e476513
+ms.openlocfilehash: ad8405bf9d453bd2cc5fad8af4b7897654368a9b
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="local-environment"></a>Yerel ortamı
 

@@ -1,31 +1,17 @@
 ---
-title: "Biçimlendirme Uzantısı Bağlama"
-ms.custom: 
+title: Biçimlendirme Uzantısı Bağlama
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-wpf
-ms.tgt_pltfrm: 
-ms.topic: article
 f1_keywords:
 - Binding
 helpviewer_keywords:
 - Binding markup extensions [WPF]
 - XAML [WPF], Binding markup extension
 ms.assetid: 83d6e2a4-1b0c-4fc8-bd96-b5e98800ab63
-caps.latest.revision: 
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: cc6a0616c6b462ffe6aca0a9adf27ac2ac7b7828
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 8fc860f52f8fde2aed3cae224c05bbcf08b864d3
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="binding-markup-extension"></a>Biçimlendirme Uzantısı Bağlama
 Bir ara ifade nesnesi oluşturma ve öğesi ve kendi bağlama çalışma zamanında uygulanır veri bağlamı yorumlama verilere bağlı değeri, özellik değeri erteler.  
@@ -125,15 +111,15 @@ Bir ara ifade nesnesi oluşturma ve öğesi ve kendi bağlama çalışma zamanı
  Veri bağlama temel düzeyde açıklayan bu konuda ele alınmamıştır. Bkz: [veri genel bakış bağlama](../../../../docs/framework/wpf/data/data-binding-overview.md).  
   
 > [!NOTE]
->  <xref:System.Windows.Data.MultiBinding>ve <xref:System.Windows.Data.PriorityBinding> desteklemeyen bir [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] uzantısı sözdizimi. Bunun yerine özellik öğelerini kullanırsınız. Başvuru konuları için bkz: <xref:System.Windows.Data.MultiBinding> ve <xref:System.Windows.Data.PriorityBinding>.  
+>  <xref:System.Windows.Data.MultiBinding> ve <xref:System.Windows.Data.PriorityBinding> desteklemeyen bir [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] uzantısı sözdizimi. Bunun yerine özellik öğelerini kullanırsınız. Başvuru konuları için bkz: <xref:System.Windows.Data.MultiBinding> ve <xref:System.Windows.Data.PriorityBinding>.  
   
  XAML için Boole değerleri büyük küçük harfe duyarlı. Örneğin şunları belirtebilirsiniz `{Binding NotifyOnValidationError=true}` veya `{Binding NotifyOnValidationError=True}`.  
   
  Veri doğrulama içeren bağlar genellikle açık bir tarafından belirtilir `Binding` öğesi yerine bir `{Binding ...}` ifadesi ve ayar <xref:System.Windows.Data.Binding.ValidatesOnDataErrors%2A> veya <xref:System.Windows.Data.Binding.ValidatesOnExceptions%2A> bir ifadede seyrek değil. Bunun nedeni, eşlik özelliği <xref:System.Windows.Data.Binding.ValidationRules%2A> taşımalarına ifade formunda olacak şekilde ayarlanamaz. Daha fazla bilgi için bkz: [uygulama bağlama doğrulama](../../../../docs/framework/wpf/data/how-to-implement-binding-validation.md).  
   
- `Binding`bir biçimlendirme uzantısıdır. Biçimlendirme uzantıları genellikle değişmez değerler veya işleyici dışında adları öznitelik değerleri kaçınmak için bir gereksinimi yoktur ve belirli türler veya özellikler öznitelikli tür dönüştürücüleri daha genel bir gereksinimdir uygulanır. XAML Kullanımdaki tüm biçimlendirme uzantıları `{` ve `}` olarak XAML işlemci tanıdığı biçimlendirme uzantısı dize içeriklerini işlemelidir kuralı kendi öznitelik sözdiziminde karakterler. Daha fazla bilgi için bkz: [biçimlendirme uzantıları ve WPF XAML](../../../../docs/framework/wpf/advanced/markup-extensions-and-wpf-xaml.md).  
+ `Binding` bir biçimlendirme uzantısıdır. Biçimlendirme uzantıları genellikle değişmez değerler veya işleyici dışında adları öznitelik değerleri kaçınmak için bir gereksinimi yoktur ve belirli türler veya özellikler öznitelikli tür dönüştürücüleri daha genel bir gereksinimdir uygulanır. XAML Kullanımdaki tüm biçimlendirme uzantıları `{` ve `}` olarak XAML işlemci tanıdığı biçimlendirme uzantısı dize içeriklerini işlemelidir kuralı kendi öznitelik sözdiziminde karakterler. Daha fazla bilgi için bkz: [biçimlendirme uzantıları ve WPF XAML](../../../../docs/framework/wpf/advanced/markup-extensions-and-wpf-xaml.md).  
   
- `Binding`uygulamasındaki alışılmadık biçimlendirme uzantısı <xref:System.Windows.Data.Binding> WPF'ın XAML uygulama uzantısı işlevselliğini uygulayan sınıf de diğer çeşitli yöntemleri ve XAML ile ilgili olmayan özellikler uygular. Diğer üyeler sağlamak üzere tasarlanmıştır <xref:System.Windows.Data.Binding> XAML biçimlendirme uzantısı olarak işlev ek olarak, birçok veri bağlama senaryosu olan çok yönlü ve kendi başına bir sınıf.  
+ `Binding` uygulamasındaki alışılmadık biçimlendirme uzantısı <xref:System.Windows.Data.Binding> WPF'ın XAML uygulama uzantısı işlevselliğini uygulayan sınıf de diğer çeşitli yöntemleri ve XAML ile ilgili olmayan özellikler uygular. Diğer üyeler sağlamak üzere tasarlanmıştır <xref:System.Windows.Data.Binding> XAML biçimlendirme uzantısı olarak işlev ek olarak, birçok veri bağlama senaryosu olan çok yönlü ve kendi başına bir sınıf.  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
  <xref:System.Windows.Data.Binding>  

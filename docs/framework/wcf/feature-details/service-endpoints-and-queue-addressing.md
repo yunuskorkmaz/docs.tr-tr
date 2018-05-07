@@ -1,33 +1,19 @@
 ---
 title: Hizmet Uç Noktaları ve Kuyruk İşleme
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 ms.assetid: 7d2d59d7-f08b-44ed-bd31-913908b83d97
-caps.latest.revision: 18
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: f2244ccb1637f944f9e3349cf0d94caa2f6676bf
-ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
+ms.openlocfilehash: a2f4807e447482ee790f2ca9a2ab4dbde531b1c8
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/30/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="service-endpoints-and-queue-addressing"></a>Hizmet Uç Noktaları ve Kuyruk İşleme
-Bu konuda ele alınmıştır nasıl istemcileri adresi sıralarından okuma Hizmetleri ve hizmet uç noktaları sıralara nasıl eşleyin. Bir anımsatıcı Klasik aşağıda gösterilmiştir [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] uygulama dağıtımı sıraya alındı.  
+Bu konuda ele alınmıştır nasıl istemcileri adresi sıralarından okuma Hizmetleri ve hizmet uç noktaları sıralara nasıl eşleyin. Bir anımsatıcı, Windows Communication Foundation (WCF) uygulama dağıtımı sıraya Klasik aşağıda gösterilmektedir.  
   
  ![Sıraya alınan uygulama diyagramı](../../../../docs/framework/wcf/feature-details/media/distributed-queue-figure.jpg "dağıtılmış-sıra-Şekil")  
   
- İstemci hizmete ileti göndermek istemci iletinin hedef sıraya giderir. Sıradaki iletileri okumak için hizmeti, hedef sıra dinleme adresini ayarlar. İçinde adresleme [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] Message Queuing (MSMQ) sıra adları URI tabanlı değildir; ancak Tekdüzen Kaynak Tanımlayıcısı URI tabanlıdır. Bu nedenle MSMQ kullanılarak oluşturulan sıraları adres öğrenmek için gerekli olan [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)].  
+ İstemci hizmete ileti göndermek istemci iletinin hedef sıraya giderir. Sıradaki iletileri okumak için hizmeti, hedef sıra dinleme adresini ayarlar. Message Queuing (MSMQ) sıra adları URI tabanlı değildir; ancak içinde WCF adresleme Tekdüzen Kaynak Tanımlayıcısı URI tabanlıdır. Bu nedenle, MSMQ WCF kullanılarak oluşturulan kuyruklar adres nasıl anlamak için önemlidir.  
   
 ## <a name="msmq-addressing"></a>MSMQ adresleme  
  MSMQ yolları ve biçim adları bir sırayı tanımlamak için kullanır. Yollar bir ana bilgisayar adı belirtin ve bir `QueueName`. İsteğe bağlı olarak, olabilir bir `Private$` ana bilgisayar adı arasında ve `QueueName` Active Directory dizin hizmetinde yayımlanmamış özel bir sıra belirtmek için.  
@@ -37,11 +23,11 @@ Bu konuda ele alınmıştır nasıl istemcileri adresi sıralarından okuma Hizm
  MSMQ yolu ve biçim adları hakkında daha fazla bilgi için bkz: [hakkında Message Queuing](http://go.microsoft.com/fwlink/?LinkId=94837).  
   
 ## <a name="netmsmqbinding-and-service-addressing"></a>NetMsmqBinding ve hizmet adresleme  
- Bir hizmet için bir ileti belirtirken, URI düzeni iletişim için kullanılan aktarım göre seçilir. Her aktarım [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] benzersiz şemasına sahip. Düzeni iletişim için kullanılan aktarım yapısını yansıtması gerekir. Örneğin, net.tcp, net.pipe, HTTP ve benzeri.  
+ Bir hizmet için bir ileti belirtirken, URI düzeni iletişim için kullanılan aktarım göre seçilir. WCF'de her aktarım benzersiz bir şeması vardır. Düzeni iletişim için kullanılan aktarım yapısını yansıtması gerekir. Örneğin, net.tcp, net.pipe, HTTP ve benzeri.  
   
- MSMQ sıraya taşımasına [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] net.msmq şeması kullanıma sunar. Net.msmq şeması kullanarak ele alınan ileti kullanılarak gönderilen `NetMsmqBinding` MSMQ sıraya alınan aktarım kanalı üzerinden.  
+ MSMQ WCF çıkarır taşımasına net.msmq şeması sıraya alındı. Net.msmq şeması kullanarak ele alınan ileti kullanılarak gönderilen `NetMsmqBinding` MSMQ sıraya alınan aktarım kanalı üzerinden.  
   
- Bir kuyruktaki adresleme [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] şu deseni temel alınarak:  
+ WCF kuyrukta adresleme aşağıdaki desenine dayanır:  
   
  NET.MSMQ: / / \< *ana bilgisayar adı*> / [özel /] \< *sıra adı*>  
   
@@ -49,7 +35,7 @@ Bu konuda ele alınmıştır nasıl istemcileri adresi sıralarından okuma Hizm
   
 -   \<*ana bilgisayar adı*> hedef sıra barındıran bilgisayarın adıdır.  
   
--   [özel] isteğe bağlıdır. Bir özel sıra bir hedef sıra adresleme olduğunda kullanılır. Bir genel sıra gidermek için özel belirtmelisiniz değil. MSMQ yolları farklı olarak, hiçbir "$" içindeki yoktur [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] URI formu.  
+-   [özel] isteğe bağlıdır. Bir özel sıra bir hedef sıra adresleme olduğunda kullanılır. Bir genel sıra gidermek için özel belirtmelisiniz değil. MSMQ yolları farklı olarak, hiçbir "$" WCF URI biçiminde yoktur.  
   
 -   \<*Kuyruk adı*> sıranın adıdır. Kuyruk adı da iletiler alt kuyruğuna başvurabilir. Bu nedenle, \< *sıra adı*> = \< *kuyruk adı*> [; *alt queue adı*].  
   
@@ -102,10 +88,10 @@ Bu konuda ele alınmıştır nasıl istemcileri adresi sıralarından okuma Hizm
   
  NET.MSMQ: //localhost/ [özel /] \< *özel-atılacak-letter-sıra-name*>.  
   
- A [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] hizmet doğrular aldığı tüm iletileri dinleme üzerinde belirli bir sıraya ele alınan. İletinin hedef sıraya içinde bulunan sıra eşleşmiyorsa, hizmet ileti işlemez. Bu teslim edilemeyen sırasındaki herhangi bir iletisi başka bir yerde teslim gerektiği bulunduğundan atılacak için dinleme Hizmetleri çözülmesi gereken bir sorundur. Sahipsiz Sıra ya da zararlı bir kuyruktan iletileri okumak için bir `ServiceBehavior` ile <xref:System.ServiceModel.AddressFilterMode.Any> parametresi kullanılmalıdır. Bir örnek için bkz: [teslim edilemeyen iletiler sırası](../../../../docs/framework/wcf/samples/dead-letter-queues.md).  
+ Bir WCF Hizmeti aldığı tüm iletileri dinlemede belirli kuyruğa ele alınan doğrular. İletinin hedef sıraya içinde bulunan sıra eşleşmiyorsa, hizmet ileti işlemez. Bu teslim edilemeyen sırasındaki herhangi bir iletisi başka bir yerde teslim gerektiği bulunduğundan atılacak için dinleme Hizmetleri çözülmesi gereken bir sorundur. Sahipsiz Sıra ya da zararlı bir kuyruktan iletileri okumak için bir `ServiceBehavior` ile <xref:System.ServiceModel.AddressFilterMode.Any> parametresi kullanılmalıdır. Bir örnek için bkz: [teslim edilemeyen iletiler sırası](../../../../docs/framework/wcf/samples/dead-letter-queues.md).  
   
 ## <a name="msmqintegrationbinding-and-service-addressing"></a>MsmqIntegrationBinding ve hizmet adresleme  
- `MsmqIntegrationBinding` Geleneksel MSMQ uygulamaları ile iletişim için kullanılır. Varolan bir MSMQ uygulaması ile birlikte çalışma kolaylaştırmak için [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] destekler yalnızca biçim adı adresleme. Bu nedenle, bu bağlama kullanılarak gönderilen iletileri için kullanılacak URI düzeni uygun olmalıdır:  
+ `MsmqIntegrationBinding` Geleneksel MSMQ uygulamaları ile iletişim için kullanılır. Varolan bir MSMQ uygulama ile birlikte çalışma kolaylaştırmak için yalnızca biçim adı adresleme WCF destekler. Bu nedenle, bu bağlama kullanılarak gönderilen iletileri için kullanılacak URI düzeni uygun olmalıdır:  
   
  MSMQ.FormatName:\<*MSMQ biçim adı*>>  
   
@@ -115,7 +101,7 @@ Bu konuda ele alınmıştır nasıl istemcileri adresi sıralarından okuma Hizm
   
  SRMP kullanarak belirtirken `MsmqIntegrationBinding`, /msmq/ göndermeyi ile Internet Information Services (IIS) yardımcı olmak için doğrudan biçim adını eklemek için gereksinimi yoktur. Örneğin: abc SRMP kullanarak protokolü, yerine doğrudan bir sıra belirtirken =http://adatum.com/msmq/private$/ abc, kullanmanız gereken doğrudan =http://adatum.com/private$/ abc.  
   
- Net.msmq:// adresleme kullanamayacağınızı unutmayın `MsmqIntegrationBinding`. Çünkü `MsmqIntegrationBinding` serbest biçimli MSMQ adı biçimi adresleme, destekler kullanabileceğiniz bir [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] MSMQ çok noktaya yayın ve dağıtım listesi özellikleri kullanmak için bu bağlamayı kullanan hizmet. Yöntemi bir özel durum belirtme `CustomDeadLetterQueue` kullanırken `MsmqIntegrationBinding`. Bunu nasıl olduğu için benzer form net.msmq:// olmalıdır kullanarak belirtilen `NetMsmqBinding`.  
+ Net.msmq:// adresleme kullanamayacağınızı unutmayın `MsmqIntegrationBinding`. Çünkü `MsmqIntegrationBinding` serbest biçimli MSMQ adı biçimi adresleme, destekler MSMQ çok noktaya yayın ve dağıtım listesi özellikleri kullanmak için bu bağlamayı kullanan bir WCF hizmetini kullanabilirsiniz. Yöntemi bir özel durum belirtme `CustomDeadLetterQueue` kullanırken `MsmqIntegrationBinding`. Bunu nasıl olduğu için benzer form net.msmq:// olmalıdır kullanarak belirtilen `NetMsmqBinding`.  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
  [Kuyruğa Alınan Bir Uygulamayı Web'de Barındırma](../../../../docs/framework/wcf/feature-details/web-hosting-a-queued-application.md)

@@ -1,11 +1,7 @@
 ---
-title: "BeginEnumeration işlevi (yönetilmeyen API Başvurusu)"
-description: "BeginEnumeration işlevi bir numaralandırıcı numaralandırması başlangıcına sıfırlar."
+title: BeginEnumeration işlevi (yönetilmeyen API Başvurusu)
+description: BeginEnumeration işlevi bir numaralandırıcı numaralandırması başlangıcına sıfırlar.
 ms.date: 11/06/2017
-ms.prod: .net-framework
-ms.technology:
-- dotnet-clr
-ms.topic: reference
 api_name:
 - BeginEnumeration
 api_location:
@@ -20,14 +16,11 @@ topic_type:
 - Reference
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 90c3e8448a61145290ea4a75b1d38f7ae010cb9f
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 9699f0cfc4e9fdb989337681b164cc1e703c1e60
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="beginenumeration-function"></a>BeginEnumeration işlevi
 Bir numaralandırıcı geri numaralandırması başlangıç durumuna sıfırlar.  
@@ -49,7 +42,7 @@ HRESULT BeginEnumeration (
 `vFunc`  
 [in] Bu parametre kullanılmıyor.
 
-`ptr`[in] Bir işaretçi bir [IWbemClassObject](https://msdn.microsoft.com/library/aa391433%28v=vs.85%29.aspx) örneği.
+`ptr` [in] Bir işaretçi bir [IWbemClassObject](https://msdn.microsoft.com/library/aa391433%28v=vs.85%29.aspx) örneği.
 
 `lEnumFlags`  
 [in] Bayrakları veya açıklanan değerlerinin Bitsel bir birleşimi [açıklamalar](#remarks) numaralandırmada bulunan özellikler denetimleri bölümü.
@@ -108,7 +101,7 @@ Sabit  |Değer  |Açıklama  |
   
  **Başlık:** WMINet_Utils.idl  
   
- **.NET framework sürümleri:**[!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]  
+ **.NET framework sürümleri:** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.  
 [WMI ve performans sayaçları (yönetilmeyen API Başvurusu)](index.md)

@@ -1,21 +1,12 @@
 ---
-title: "Nasıl yapılır: öğeleri Namespace (XPath-LINQ-XML) Bul (C#)"
-ms.custom: 
+title: 'Nasıl yapılır: öğeleri Namespace (XPath-LINQ-XML) Bul (C#)'
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-csharp
-ms.topic: article
 ms.assetid: cae1c4ac-6cd5-46cf-9b1c-bd85bc9b7ea9
-caps.latest.revision: "3"
-author: BillWagner
-ms.author: wiwagn
-ms.openlocfilehash: f1804731a39eebce74a38a4e8b296747e535c0b8
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.openlocfilehash: 5c5c8e20195bf7c676b9df7e9db54e79bbb0ca06
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-find-elements-in-a-namespace-xpath-linq-to-xml-c"></a>Nasıl yapılır: öğeleri Namespace (XPath-LINQ-XML) Bul (C#)
 XPath ifadeleri düğümleri belirli bir ad alanında bulabilirsiniz. XPath ifadelerinde ad alanı öneklerini ad alanları belirtmek için kullanın. Ad alanı öneklerini içeriyor bir XPath ifadesi ayrıştırmak için bir nesne uygulayan XPath yöntemleri için geçmesi gereken <xref:System.Xml.IXmlNamespaceResolver>. Bu örnekte <xref:System.Xml.XmlNamespaceManager>.  

@@ -1,34 +1,22 @@
 ---
-title: "Veri alma ve CUD işlemleri N katmanlı uygulamalarda (LINQ-SQL)"
-ms.custom: 
+title: Veri alma ve CUD işlemleri N katmanlı uygulamalarda (LINQ-SQL)
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-ado
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
 ms.assetid: c3133d53-83ed-4a4d-af8b-82edcf3831db
-caps.latest.revision: "2"
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
-ms.workload: dotnet
-ms.openlocfilehash: 6cdf1a859595c82b8eea60311c3c96353849e3dc
-ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
+ms.openlocfilehash: ea27d6406ed588f2046dc938f5167a6c0200329e
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="data-retrieval-and-cud-operations-in-n-tier-applications-linq-to-sql"></a>Veri alma ve CUD işlemleri N katmanlı uygulamalarda (LINQ-SQL)
 Bir ağ üzerinden bir istemciye müşteriler veya siparişler gibi varlık nesnesi seri hale olduğunda bu varlıkların kendi veri bağlamından ayrılır. Veri bağlamı artık kendi değişiklikler veya diğer nesnelerle ilişkilendirmelerinin izler. İstemcileri yalnızca verileri okuma sürece, bir sorun değildir. Bunu ayrıca bir yeni satırları eklemek istemcileri etkinleştirmek oldukça basittir. Uygulamanızı istemcileri güncelleştirin veya verilerini silmek mümkün gerektiriyorsa, çağırmadan önce ancak, daha sonra varlıklar için yeni bir veri bağlamı eklemeniz gerekir <xref:System.Data.Linq.DataContext.SubmitChanges%2A?displayProperty=nameWithType>. Özgün değerleriyle iyimser eşzamanlılık kontrolü kullanıyorsanız, ek olarak, ardından da veritabanını orijinal varlık ve varlık değiştirilmiş olarak sağlamak için bir yol gerekir. `Attach` Yöntemleri ayrılmış eklendikten sonra yeni bir veri bağlamına varlıklar put olanak sağlanır.  
   
  Yerine proxy nesneleri seri hale getirme olsa bile [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] varlıkları devam veri erişim katmanı'nı (DAL) üzerinde bir varlık oluşturun ve yeni bir eklemek <xref:System.Data.Linq.DataContext?displayProperty=nameWithType>veritabanı veri göndermek için.  
   
- [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]varlıkları nasıl serileştirilir hakkında tamamen ilgisiz olur. Nasıl kullanılacağı hakkında daha fazla bilgi için [!INCLUDE[vs_ordesigner_long](../../../../../../includes/vs-ordesigner-long-md.md)] ve Windows Communication Foundation (WCF) kullanarak serileştirilebilir sınıflar oluşturmak için SQLMetal araçları görmek [nasıl yapılır: varlıklar serileştirilebilir olun](../../../../../../docs/framework/data/adonet/sql/linq/how-to-make-entities-serializable.md).  
+ [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] varlıkları nasıl serileştirilir hakkında tamamen ilgisiz olur. Nasıl kullanılacağı hakkında daha fazla bilgi için [!INCLUDE[vs_ordesigner_long](../../../../../../includes/vs-ordesigner-long-md.md)] ve Windows Communication Foundation (WCF) kullanarak serileştirilebilir sınıflar oluşturmak için SQLMetal araçları görmek [nasıl yapılır: varlıklar serileştirilebilir olun](../../../../../../docs/framework/data/adonet/sql/linq/how-to-make-entities-serializable.md).  
   
 > [!NOTE]
 >  Yalnızca arama `Attach` yeni veya seri durumdan çıkarılmış varlık yöntemleri. Yalnızca kendi özgün veri bağlamından ayrılmış olması bir varlık için seri hale getirilebilmesi için yoludur. Yeni bir veri bağlamı undetached bir varlık eklemek denerseniz ve varlık önceki kendi veri bağlamından yükleyicilerini ertelenmiş [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] bir özel durum olacaktır. INSERT, update ve bu varlıkta silme işlemleri gerçekleştirdiğinizde iki farklı veri bağlamları gelen ertelenmiş yükleyicilerini sahip bir varlık istenmeyen sonuçlara neden olabilir. Ertelenmiş yükleyicilerini hakkında daha fazla bilgi için bkz: [hemen yüklenirken karşı ertelenmiş](../../../../../../docs/framework/data/adonet/sql/linq/deferred-versus-immediate-loading.md).  
@@ -219,7 +207,7 @@ public void DeleteOrder(Order order)
 ```  
   
 ## <a name="updating-data"></a>Verileri güncelleştirme  
- [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]güncelleştirmeleri iyimser eşzamanlılık içeren bu senaryolarda destekler:  
+ [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] güncelleştirmeleri iyimser eşzamanlılık içeren bu senaryolarda destekler:  
   
 -   İyimser eşzamanlılık zaman damgaları veya RowVersion numaraları bağlı.  
   

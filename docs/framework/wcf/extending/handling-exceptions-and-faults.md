@@ -1,30 +1,18 @@
 ---
-title: "Özel Durum ve Hataları İşleme"
-ms.custom: 
+title: Özel Durum ve Hataları İşleme
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: a64d01c6-f221-4f58-93e5-da4e87a5682e
-caps.latest.revision: "12"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: ae8d16db6fefccf01692088e29676f6bfeace0e3
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
-ms.translationtype: MT
+ms.openlocfilehash: a7fb7b5dd5755b9d534d9a96af3db598a44b42b0
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="handling-exceptions-and-faults"></a>Özel Durum ve Hataları İşleme
 Özel durumlar, yerel hizmet veya istemci uygulaması içindeki hataları iletişim kurmak için kullanılır. Hataları, diğer yandan hataları hizmet sınırları boyunca gibi istemci (veya tersi) sunucusundan iletişim kurmak için kullanılır. Hataları yanı sıra, taşıma kanalları çoğunlukla aktarım özgü mekanizmaları aktarım düzeyi hataları iletişim kurmak için kullanır. Örneğin, HTTP taşıma (bir arıza geri gönderilecek bitiş noktası yoktur) bir var olmayan uç nokta URL'si iletişim kurmak için durum kodları 404 gibi kullanır. Özel kanal yazarları için kılavuzluk üç bölüm, bu belgede oluşur. İlk bölümde, ne zaman ve nasıl tanımlamak ve özel durumlar oluşturma yönergeler sağlanmaktadır. İkinci bölümde oluşturma ve hatalarını tüketen etrafında yönergeler sağlanmaktadır. Üçüncü bölüm özel kanal kullanıcı çalışan uygulamalarda sorun gidermede yardımcı olmak için izleme bilgilerini sağlamayı açıklar.  
   
 ## <a name="exceptions"></a>Özel Durumlar  
- Bir özel durum atma zaman göz önünde bulundurmanız gereken iki nokta vardır: önce kullanıcıların özel durumu uygun şekilde tepki gösterebilmesi doğru kod yazmanıza olanak veren bir türde olması gerekir. İkinci olarak, nelerin yanlış gittiğini anlamak için kullanıcıyı, hata etkisi ve nasıl düzeltileceği için yeterli bilgi sağlamak vardır. Aşağıdaki bölümlerde özel durum türleri ve iletiler için yönergeler vermek [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] kanalları. Özel durumlar belge için tasarım yönergeleri .NET özel durumları genel yönergeler bulunmaktadır.  
+ Bir özel durum atma zaman göz önünde bulundurmanız gereken iki nokta vardır: önce kullanıcıların özel durumu uygun şekilde tepki gösterebilmesi doğru kod yazmanıza olanak veren bir türde olması gerekir. İkinci olarak, nelerin yanlış gittiğini anlamak için kullanıcıyı, hata etkisi ve nasıl düzeltileceği için yeterli bilgi sağlamak vardır. Aşağıdaki bölümlerde, özel durum türleri ve Windows Communication Foundation (WCF) kanalları iletileri geçici rehberlik sağlar. Özel durumlar belge için tasarım yönergeleri .NET özel durumları genel yönergeler bulunmaktadır.  
   
 ### <a name="exception-types"></a>Özel Durum Türleri  
  Kanalları tarafından oluşturulan tüm özel durumları ya da olmalıdır bir <xref:System.TimeoutException?displayProperty=nameWithType>, <xref:System.ServiceModel.CommunicationException?displayProperty=nameWithType>, veya türetilmiş bir tür <xref:System.ServiceModel.CommunicationException>. (Özel durumlar gibi <xref:System.ObjectDisposedException> de, ancak yalnızca çağıran kodu kanal kötüye kullanımını göstermek için durum oluşturulabilir. Bir kanal doğru kullandıysanız, yalnızca belirli özel durumlar oluşturma gerekir.) [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] öğesinden türetilen yedi özel durum türleri sağlar <xref:System.ServiceModel.CommunicationException> ve kanalları tarafından kullanılmak üzere tasarlanmıştır. Diğer vardır <xref:System.ServiceModel.CommunicationException>-sisteminin diğer bölümleriyle tarafından kullanılmak üzere tasarlanmış özel durumlar türetilmiş. Bu özel durum türleri şunlardır:  
@@ -127,7 +115,7 @@ public class FaultReason
 ### <a name="generating-faults"></a>Oluşturma hataları  
  Bu bölümde bir kanal veya kanal tarafından oluşturulan bir ileti özelliği algılanan bir hata koşulu yanıtta bir arıza oluşturma işlemi açıklanmaktadır. Tipik bir örnek, geçersiz veri içeren bir istek iletisine yanıt olarak bir hata geri gönderiyor.  
   
- Bir arıza oluşturulurken özel kanal hataya doğrudan göndermemelisiniz, bunun yerine, bir özel durum ve üzerindeki başka bir özel durum bir hata dönüştürülüp dönüştürülmeyeceğini ve göndermek nasıl karar katmanı sağlar. Bu dönüştürme yardımcı olmak için kanal sağlamalıdır bir `FaultConverter` uygulamasında, uygun hataya özel kanal tarafından oluşturulan özel durum dönüştürebilirsiniz. `FaultConverter`olarak tanımlanır:  
+ Bir arıza oluşturulurken özel kanal hataya doğrudan göndermemelisiniz, bunun yerine, bir özel durum ve üzerindeki başka bir özel durum bir hata dönüştürülüp dönüştürülmeyeceğini ve göndermek nasıl karar katmanı sağlar. Bu dönüştürme yardımcı olmak için kanal sağlamalıdır bir `FaultConverter` uygulamasında, uygun hataya özel kanal tarafından oluşturulan özel durum dönüştürebilirsiniz. `FaultConverter` olarak tanımlanır:  
   
 ```  
 public class FaultConverter  
@@ -313,7 +301,7 @@ public class MessageFault
 }  
 ```  
   
- `IsMustUnderstandFault`döndürür `true` arıza olması durumunda bir `mustUnderstand` hatası. `WasHeaderNotUnderstood`döndürür `true` üstbilgisi belirtilen ad ve ad alanı ile NotUnderstood üstbilgisi olarak hataya dahil değilse.  Aksi takdirde, döndürür `false`.  
+ `IsMustUnderstandFault` döndürür `true` arıza olması durumunda bir `mustUnderstand` hatası. `WasHeaderNotUnderstood` döndürür `true` üstbilgisi belirtilen ad ve ad alanı ile NotUnderstood üstbilgisi olarak hataya dahil değilse.  Aksi takdirde, döndürür `false`.  
   
  Bir kanal MustUnderstand olarak işaretlenmiş bir üstbilgi yayar katman özel durum oluşturma API'si düzeni de uygulamanız gerekir ve dönüştürmeniz gerekir. ardından, = true `mustUnderstand` bu başlığı için daha önce açıklandığı gibi daha kullanışlı bir özel nedeni hataları.  
   
@@ -379,7 +367,7 @@ udpsource.TraceInformation("UdpInputChannel received a message");
 ```  
   
 #### <a name="tracing-structured-data"></a>İzleme yapılandırılmış verileri  
- <xref:System.Diagnostics.TraceSource?displayProperty=nameWithType>sahip bir <xref:System.Diagnostics.TraceSource.TraceData%2A> bir veya daha fazla nesne alan yöntemi olan izleme girişi dahil edilecek. Genel olarak, <xref:System.Object.ToString%2A?displayProperty=nameWithType> yöntemi, her nesne üzerinde çağrılır ve sonuç dizesini izleme girişi bir parçası olarak yazılır. Kullanırken <xref:System.Diagnostics.XmlWriterTraceListener?displayProperty=nameWithType> izlemeleri çıktısını almak için geçirebilirsiniz bir <xref:System.Xml.XPath.IXPathNavigable?displayProperty=nameWithType> veri nesnesi olarak <xref:System.Diagnostics.TraceSource.TraceData%2A>. Sonuçta elde edilen izleme girişi tarafından sağlanan XML içeren <xref:System.Xml.XPath.XPathNavigator?displayProperty=nameWithType>. Bir örnek girdi XML uygulama verilerle şöyledir:  
+ <xref:System.Diagnostics.TraceSource?displayProperty=nameWithType> sahip bir <xref:System.Diagnostics.TraceSource.TraceData%2A> bir veya daha fazla nesne alan yöntemi olan izleme girişi dahil edilecek. Genel olarak, <xref:System.Object.ToString%2A?displayProperty=nameWithType> yöntemi, her nesne üzerinde çağrılır ve sonuç dizesini izleme girişi bir parçası olarak yazılır. Kullanırken <xref:System.Diagnostics.XmlWriterTraceListener?displayProperty=nameWithType> izlemeleri çıktısını almak için geçirebilirsiniz bir <xref:System.Xml.XPath.IXPathNavigable?displayProperty=nameWithType> veri nesnesi olarak <xref:System.Diagnostics.TraceSource.TraceData%2A>. Sonuçta elde edilen izleme girişi tarafından sağlanan XML içeren <xref:System.Xml.XPath.XPathNavigator?displayProperty=nameWithType>. Bir örnek girdi XML uygulama verilerle şöyledir:  
   
 ```xml  
 <E2ETraceEvent xmlns="http://schemas.microsoft.com/2004/06/E2ETraceEvent">  

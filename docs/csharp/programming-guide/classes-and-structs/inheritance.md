@@ -1,9 +1,6 @@
 ---
-title: "Devralma (C# Programlama Kılavuzu)"
+title: Devralma (C# Programlama Kılavuzu)
 ms.date: 07/20/2015
-ms.prod: .net
-ms.technology: devlang-csharp
-ms.topic: article
 helpviewer_keywords:
 - abstract methods [C#]
 - abstract classes [C#]
@@ -12,14 +9,11 @@ helpviewer_keywords:
 - virtual methods [C#]
 - C# language, inheritance
 ms.assetid: 81d64ee4-50f9-4d6c-a8dc-257c348d2eea
-caps.latest.revision: "38"
-author: BillWagner
-ms.author: wiwagn
-ms.openlocfilehash: dc3d448d311fe0a67839757fa43a209d92141214
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 6294669a05f5cc6c52de5164d89e29062ceb6bdd
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="inheritance-c-programming-guide"></a>Devralma (C# Programlama Kılavuzu)
 
@@ -32,7 +26,7 @@ Saklama ve çok biçimlilik, birlikte devralma nesne odaklı programlama üç bi
   
  Başka bir sınıftan türeyen bir sınıf tanımladığınızda, türetilmiş sınıf oluşturucular ve sonlandırıcılar dışında temel sınıfın tüm üyeleri örtük olarak kazanır. Türetilmiş sınıf yeniden uygulamak zorunda kalmadan temel sınıfı kodda böylece yeniden kullanabilirsiniz. Türetilen sınıfta daha fazla üye ekleyebilir. Bu şekilde, türetilen sınıfın temel sınıf işlevselliğini genişletir.  
   
- Aşağıdaki çizimde bir sınıfı göstermektedir `WorkItem` , bazı iş sürecini iş bir öğeyi temsil eder. Öğesinden türetilen tüm sınıflar gibi <xref:System.Object?displayProperty=nameWithType> ve tüm yöntemleri devralır. `WorkItem`beş üyeleri kendi ekler. Oluşturucular devralınmaz çünkü bunlar bir oluşturucu içerir. Sınıf `ChangeRequest` devraldığı `WorkItem` ve belirli bir iş öğesi türünü temsil eder. `ChangeRequest`öğesinden devralınan üyeler iki daha fazla üye ekler `WorkItem` ve <xref:System.Object>. Kendi Oluşturucusu eklemeniz gerekir ve ayrıca ekler `originalItemID`. Özellik `originalItemID` sağlayan `ChangeRequest` özgün ile ilişkilendirilecek örneği `WorkItem` değişiklik isteğini geçerli olduğu için.  
+ Aşağıdaki çizimde bir sınıfı göstermektedir `WorkItem` , bazı iş sürecini iş bir öğeyi temsil eder. Öğesinden türetilen tüm sınıflar gibi <xref:System.Object?displayProperty=nameWithType> ve tüm yöntemleri devralır. `WorkItem` beş üyeleri kendi ekler. Oluşturucular devralınmaz çünkü bunlar bir oluşturucu içerir. Sınıf `ChangeRequest` devraldığı `WorkItem` ve belirli bir iş öğesi türünü temsil eder. `ChangeRequest` öğesinden devralınan üyeler iki daha fazla üye ekler `WorkItem` ve <xref:System.Object>. Kendi Oluşturucusu eklemeniz gerekir ve ayrıca ekler `originalItemID`. Özellik `originalItemID` sağlayan `ChangeRequest` özgün ile ilişkilendirilecek örneği `WorkItem` değişiklik isteğini geçerli olduğu için.  
   
  ![Sınıf devralma](../../../csharp/programming-guide/classes-and-structs/media/class_inheritance.png "Class_Inheritance")  
 Sınıf devralma  
@@ -50,7 +44,7 @@ Sınıf devralma
 ## <a name="interfaces"></a>Arabirimler  
  Bir *arabirimi* yalnızca soyut üyeleri oluşan bir Özet temel sınıf için biraz benzer bir başvuru türüdür. Bir sınıf bir arabirimini uygulayan, arabirimin tüm üyeleri için bir uygulama sağlaması gerekir. Bu yalnızca bir tek doğrudan taban sınıfından türetilen olsa da bir sınıf birden çok arabirimi uygulayabilirsiniz.  
   
- Arabirimleri mutlaka olmadığı sınıfları için belirli özelliklerini tanımlamak için kullanılan bir "olan bir" ilişki. Örneğin, <xref:System.IEquatable%601?displayProperty=nameWithType> arabirimi herhangi bir sınıf veya (ancak türü eşdeğer tanımlar) türde iki nesne eşdeğer olup olmadığını belirlemek istemci kodu etkinleştirmek için sahip yapısı tarafından uygulanabilir. <xref:System.IEquatable%601>aynı tür göstermez "olan bir" temel sınıf ve türetilmiş bir sınıf arasında var ilişkisi (örneğin, bir `Mammal` olan bir `Animal`). Daha fazla bilgi için bkz: [arabirimleri](../../../csharp/programming-guide/interfaces/index.md).  
+ Arabirimleri mutlaka olmadığı sınıfları için belirli özelliklerini tanımlamak için kullanılan bir "olan bir" ilişki. Örneğin, <xref:System.IEquatable%601?displayProperty=nameWithType> arabirimi herhangi bir sınıf veya (ancak türü eşdeğer tanımlar) türde iki nesne eşdeğer olup olmadığını belirlemek istemci kodu etkinleştirmek için sahip yapısı tarafından uygulanabilir. <xref:System.IEquatable%601> aynı tür göstermez "olan bir" temel sınıf ve türetilmiş bir sınıf arasında var ilişkisi (örneğin, bir `Mammal` olan bir `Animal`). Daha fazla bilgi için bkz: [arabirimleri](../../../csharp/programming-guide/interfaces/index.md).  
   
 ## <a name="preventing-further-derivation"></a>Daha fazla türetme önleme  
  Bir sınıf dışarı ya da, bu grubun üyeleri herhangi kendisini veya üye olarak bildirerek öğesinden devralan diğer sınıflara engelleyebilirsiniz [korumalı](../../../csharp/language-reference/keywords/sealed.md). Daha fazla bilgi için bkz: [soyut ve korumalı sınıflar ve sınıf üyeleri](../../../csharp/programming-guide/classes-and-structs/abstract-and-sealed-classes-and-class-members.md).  
@@ -59,7 +53,7 @@ Sınıf devralma
  Türetilmiş bir sınıf, aynı ad ve imza üyeleriyle bildirerek taban sınıfı üyeleri gizleyebilirsiniz. [Yeni](../../../csharp/language-reference/keywords/new.md) değiştiricisi üye bir geçersiz kılma temel üyesinin olması amaçlanmamıştır açıkça belirtmek için kullanılabilir. Kullanımını [yeni](../../../csharp/language-reference/keywords/new.md) gerekli değildir ancak derleyici uyarısı oluşturulan [yeni](../../../csharp/language-reference/keywords/new.md) kullanılmaz. Daha fazla bilgi için bkz: [geçersiz kılma ve yeni anahtar sözcüklerle sürüm oluşturma](../../../csharp/programming-guide/classes-and-structs/versioning-with-the-override-and-new-keywords.md) ve [kullanımı geçersiz kılma ve yeni anahtar sözcüklerin için bilerek olduğunda](../../../csharp/programming-guide/classes-and-structs/knowing-when-to-use-override-and-new-keywords.md).  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [C# programlama kılavuzu](../../../csharp/programming-guide/index.md)  
- [Sınıflar ve yapılar](../../../csharp/programming-guide/classes-and-structs/index.md)  
- [sınıfı](../../../csharp/language-reference/keywords/class.md)  
- [yapısı](../../../csharp/language-reference/keywords/struct.md)
+ [C# Programlama Kılavuzu](../../../csharp/programming-guide/index.md)  
+ [Sınıflar ve Yapılar](../../../csharp/programming-guide/classes-and-structs/index.md)  
+ [class](../../../csharp/language-reference/keywords/class.md)  
+ [struct](../../../csharp/language-reference/keywords/struct.md)

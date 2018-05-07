@@ -1,28 +1,16 @@
 ---
-title: "İstemci Kimliğine Bürünme"
-ms.custom: 
+title: İstemci Kimliğine Bürünme
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - service behaviors, impersonation sample
 - Impersonating the Client Sample [Windows Communication Foundation]
 - impersonation, Windows Communication Foundation sample
 ms.assetid: 8bd974e1-90db-4152-95a3-1d4b1a7734f8
-caps.latest.revision: "25"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: a17a3631b781e6a96eb8aec17b20e8ddca52890d
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 4c5d911bfbfcd33248e15b9fc822abdc9cf4046c
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="impersonating-the-client"></a>İstemci Kimliğine Bürünme
 Kimliğe bürünme örneği, hizmetin sistem kaynaklarını arayan adına erişebilmesi için hizmet çağıran uygulamayı taklit gösterilmiştir.  
@@ -113,7 +101,7 @@ client.ClientCredentials.Windows.AllowedImpersonationLevel = TokenImpersonationL
  Örneği çalıştırdığınızda, işlem isteklerini ve yanıtlarını hem hizmet hem de istemci konsol pencerelerinde görüntülenir. Her konsol penceresinde hizmet ve istemci kapatmak için ENTER tuşuna basın.  
   
 > [!NOTE]
->  Hizmeti ya da bir yönetici hesabı altında çalışmalıdır veya altında çalıştığı hesabın 8000/ServiceModelSamples URI HTTP katmanla kaydetme hakkı verilmesi gerekir. Ayarlama işlemleri tarafından gibi haklar verilebilir bir [Namespace ayırma](http://go.microsoft.com/fwlink/?LinkId=95012) kullanarak [Httpcfg.exe aracı](http://go.microsoft.com/fwlink/?LinkId=95010).  
+>  Hizmet bir yönetici hesabı altında ya da Çalıştır gerekir ya da altında çalıştığı hesabın kaydetmek için hakları verilmelidir http://localhost:8000/ServiceModelSamples URI HTTP katmanı ile. Ayarlama işlemleri tarafından gibi haklar verilebilir bir [Namespace ayırma](http://go.microsoft.com/fwlink/?LinkId=95012) kullanarak [Httpcfg.exe aracı](http://go.microsoft.com/fwlink/?LinkId=95010).  
   
 > [!NOTE]
 >  Çalıştıran bilgisayarlarda [!INCLUDE[ws2003](../../../../includes/ws2003-md.md)], kimliğe bürünme yalnızca Host.exe uygulama kimliğe bürünme ayrıcalığı varsa desteklenir. (Varsayılan olarak, yalnızca Yöneticiler bu izne sahip.) Hizmet olarak çalıştığı bir hesabın bu ayrıcalık eklemek için Git **Yönetimsel Araçlar**açın **yerel güvenlik ilkesi**, açık **yerel ilkeler**, tıklatın**Kullanıcı hakları ataması**seçip **kimlik doğrulamasından sonra istemcinin** çift tıklayın ve **özellikleri** bir kullanıcı veya grup eklemek için.  

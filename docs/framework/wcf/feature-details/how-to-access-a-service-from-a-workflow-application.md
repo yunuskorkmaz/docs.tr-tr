@@ -1,27 +1,15 @@
 ---
-title: "Nasıl yapılır: Bir İş Akışı Uygulamasından Bir Hizmete Erişme"
-ms.custom: 
+title: 'Nasıl yapılır: Bir İş Akışı Uygulamasından Bir Hizmete Erişme'
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 925ef8ea-5550-4c9d-bb7b-209e20c280ad
-caps.latest.revision: "8"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 0ffac399e3f7cb3f860128b072251131ac356a2a
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 5f1ef07d92eea2b526259cd11caf56e45c83675d
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-access-a-service-from-a-workflow-application"></a>Nasıl yapılır: Bir İş Akışı Uygulamasından Bir Hizmete Erişme
-Bu konuda, bir iş akışı konsol uygulamasından bir iş akışı hizmeti çağırma açıklar. Tamamlanma bağlı olduğu [nasıl yapılır: Mesajlaşma etkinlikleriyle iş akışı hizmeti oluşturma](../../../../docs/framework/wcf/feature-details/how-to-create-a-workflow-service-with-messaging-activities.md) konu. Herhangi bir çağrıda için bu konu bir iş akışı uygulamasından bir iş akışı hizmeti nasıl açıklansa da, aynı yöntemleri kullanılabilir [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] bir iş akışı uygulamasından service.  
+Bu konuda, bir iş akışı konsol uygulamasından bir iş akışı hizmeti çağırma açıklar. Tamamlanma bağlı olduğu [nasıl yapılır: Mesajlaşma etkinlikleriyle iş akışı hizmeti oluşturma](../../../../docs/framework/wcf/feature-details/how-to-create-a-workflow-service-with-messaging-activities.md) konu. Bu konu bir iş akışı uygulamasından bir iş akışı hizmeti nasıl açıklansa da, bir iş akışı uygulamasından bir Windows Communication Foundation (WCF) hizmetini çağırmak için aynı yöntemleri kullanılabilir.  
   
 ### <a name="create-a-workflow-console-application-project"></a>Bir iş akışı konsol uygulama projesi oluşturma  
   

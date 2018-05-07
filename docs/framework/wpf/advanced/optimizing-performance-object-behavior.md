@@ -1,13 +1,6 @@
 ---
-title: "Performansı İyileştirme: Nesne Davranışı"
-ms.custom: 
+title: 'Performansı İyileştirme: Nesne Davranışı'
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-wpf
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -18,16 +11,11 @@ helpviewer_keywords:
 - object performance considerations [WPF]
 - Freezable objects [WPF], performance
 ms.assetid: 73aa2f47-1d73-439a-be1f-78dc4ba2b5bd
-caps.latest.revision: "12"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 12c4dc202ac4db2c21b0a45b61608f5c03c24ac9
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 2e1f56dec87de7a22aa8a0bfefe84222d74ba085
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="optimizing-performance-object-behavior"></a>Performansı İyileştirme: Nesne Davranışı
 İç davranışını anlama [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] nesneleri işlevselliği ve performans arasındaki doğru avantajları yapmanıza yardımcı olur.  
@@ -38,7 +26,7 @@ ms.lasthandoff: 12/22/2017
 ## <a name="not-removing-event-handlers-on-objects-may-keep-objects-alive"></a>Olay işleyicileri nesneler üzerinde nesneleri canlı olabilir  
  Bir nesne, olay geçirdiği temsilci etkili bir şekilde söz konusu nesne başvurusudur. Bu nedenle, olay işleyicileri nesneleri beklenenden daha uzun canlı tutar. Bir nesnenin olayını dinlemek için kayıtlı olan bir nesnenin temizlenmesini gerçekleştirirken nesneyi serbest bırakmadan önce o temsilciyi kaldırmak için gereklidir. Gereksiz nesneleri canlı tutma uygulamanın bellek kullanımını artırır. Bu, özellikle nesne bir mantıksal ağaç veya görsel ağaç kökü olduğunda geçerlidir.  
   
- [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]Kaynak ve dinleyici arasındaki nesne ömür ilişkilerini izlemenin zor olduğu durumlarda yararlı olabilir olaylar için zayıf olay dinleyici düzenini tanıtır. Var olan bazı [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] olayları bu deseni kullanır. Özel olaylarla nesneleri uyguluyorsanız, bu deseni size kullanımı olabilir. Ayrıntılar için bkz [zayıf olay desenleri](../../../../docs/framework/wpf/advanced/weak-event-patterns.md).  
+ [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] Kaynak ve dinleyici arasındaki nesne ömür ilişkilerini izlemenin zor olduğu durumlarda yararlı olabilir olaylar için zayıf olay dinleyici düzenini tanıtır. Var olan bazı [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] olayları bu deseni kullanır. Özel olaylarla nesneleri uyguluyorsanız, bu deseni size kullanımı olabilir. Ayrıntılar için bkz [zayıf olay desenleri](../../../../docs/framework/wpf/advanced/weak-event-patterns.md).  
   
  CLR Profil Oluşturucu ve çalışma kümesi belirtilen işlemin bellek kullanımı hakkında bilgi sağlayan Görüntüleyicisi, gibi çeşitli araçlar vardır. CLR Profil oluşturucu ayrılmış türleri, ayırma ve çağrı grafikleri, çöp koleksiyonları çeşitli nesli ve sonra yönetilen yığın sonuç durumunu gösteren bir zaman çizgisi histogram dahil olmak üzere ayırma profil çok kullanışlı görünümlerini içerir Bu koleksiyon ve yöntem başına yüklemeleri ve derleme yüklerini gösteren bir çağrı ağacı. Daha fazla bilgi için bkz: [.NET Framework Geliştirici Merkezi](http://go.microsoft.com/fwlink/?LinkId=117435).  
   
@@ -80,8 +68,8 @@ ms.lasthandoff: 12/22/2017
   
 |**Durum**|**Boyutu**|  
 |---------------|--------------|  
-|Dondurulmuş<xref:System.Windows.Media.SolidColorBrush>|212 bayt|  
-|Olmayan dondurulmuş<xref:System.Windows.Media.SolidColorBrush>|972 bayt|  
+|Dondurulmuş <xref:System.Windows.Media.SolidColorBrush>|212 bayt|  
+|Olmayan dondurulmuş <xref:System.Windows.Media.SolidColorBrush>|972 bayt|  
   
  Aşağıdaki kod örneği, bu kavramı gösterir:  
   
@@ -91,7 +79,7 @@ ms.lasthandoff: 12/22/2017
 ### <a name="changed-handlers-on-unfrozen-freezables-may-keep-objects-alive"></a>Çözülmüş Freezables üzerinde değiştirilen işleyiciler nesneleri canlı olabilir  
  Bir nesne geçirir temsilci bir <xref:System.Windows.Freezable> nesnenin <xref:System.Windows.Freezable.Changed> olaydır etkili bir şekilde bu nesneye bir başvurusu. Bu nedenle, <xref:System.Windows.Freezable.Changed> olay işleyicileri etkin tutma nesneleri beklenenden daha uzun. Temizleme dinlemek için kayıtlı olan bir nesnenin gerçekleştirirken bir <xref:System.Windows.Freezable> nesnenin <xref:System.Windows.Freezable.Changed> olay, bu nesne serbest bırakmadan önce bu temsilciyi kaldırmak için gerekli.  
   
- [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]Ayrıca <xref:System.Windows.Freezable.Changed> olayları dahili olarak. Örneğin, ele tüm bağımlılık özellikleri <xref:System.Windows.Freezable> için bir değer dinleyecek şekilde <xref:System.Windows.Freezable.Changed> olayları otomatik olarak. <xref:System.Windows.Shapes.Shape.Fill%2A> Geçen özelliği bir <xref:System.Windows.Media.Brush>, bu kavramı gösterir.  
+ [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] Ayrıca <xref:System.Windows.Freezable.Changed> olayları dahili olarak. Örneğin, ele tüm bağımlılık özellikleri <xref:System.Windows.Freezable> için bir değer dinleyecek şekilde <xref:System.Windows.Freezable.Changed> olayları otomatik olarak. <xref:System.Windows.Shapes.Shape.Fill%2A> Geçen özelliği bir <xref:System.Windows.Media.Brush>, bu kavramı gösterir.  
   
  [!code-csharp[Performance#PerformanceSnippet4](../../../../samples/snippets/csharp/VS_Snippets_Wpf/Performance/CSharp/Window1.xaml.cs#performancesnippet4)]
  [!code-vb[Performance#PerformanceSnippet4](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/Performance/visualbasic/window1.xaml.vb#performancesnippet4)]  
@@ -110,7 +98,7 @@ ms.lasthandoff: 12/22/2017
   
 <a name="User_Interface_Virtualization"></a>   
 ## <a name="user-interface-virtualization"></a>Kullanıcı arabirimi sanallaştırma  
- [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]Ayrıca bir çeşitlemesi sağlar <xref:System.Windows.Controls.StackPanel> otomatik olarak "veri bağlama alt içeriğini sanallaştıran" öğesi. Bu bağlamda word sanallaştırmak olarak bir alt nesnelerinin oluşturulduğu çok sayıda veri öğeleri hangi öğelerin ekranda görülebilir olduğuna dayalı bir tekniği anlamına gelir. Hem bellek ve sadece birkaç ekranda belirli bir zamanda olabilir, çok sayıda kullanıcı Arabirimi öğeleri oluşturmak için işlemci bakımından yoğun. <xref:System.Windows.Controls.VirtualizingStackPanel>(tarafından sağlanan işlevsellik aracılığıyla <xref:System.Windows.Controls.VirtualizingPanel>) görünen öğeleri hesaplar ve birlikte çalıştığı <xref:System.Windows.Controls.ItemContainerGenerator> gelen bir <xref:System.Windows.Controls.ItemsControl> (gibi <xref:System.Windows.Controls.ListBox> veya <xref:System.Windows.Controls.ListView>) yalnızca görünür öğeler için oluşturmak için.  
+ [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] Ayrıca bir çeşitlemesi sağlar <xref:System.Windows.Controls.StackPanel> otomatik olarak "veri bağlama alt içeriğini sanallaştıran" öğesi. Bu bağlamda word sanallaştırmak olarak bir alt nesnelerinin oluşturulduğu çok sayıda veri öğeleri hangi öğelerin ekranda görülebilir olduğuna dayalı bir tekniği anlamına gelir. Hem bellek ve sadece birkaç ekranda belirli bir zamanda olabilir, çok sayıda kullanıcı Arabirimi öğeleri oluşturmak için işlemci bakımından yoğun. <xref:System.Windows.Controls.VirtualizingStackPanel> (tarafından sağlanan işlevsellik aracılığıyla <xref:System.Windows.Controls.VirtualizingPanel>) görünen öğeleri hesaplar ve birlikte çalıştığı <xref:System.Windows.Controls.ItemContainerGenerator> gelen bir <xref:System.Windows.Controls.ItemsControl> (gibi <xref:System.Windows.Controls.ListBox> veya <xref:System.Windows.Controls.ListView>) yalnızca görünür öğeler için oluşturmak için.  
   
  Performansı iyileştirme bu öğeler için görsel nesneler yalnızca oluşturulan veya ekranda görünür durumdaysa Canlı tutulur. Artık denetimin görüntülenebilir alanında olduklarında, görsel nesneler kaldırılabilir. Burada veri nesneleri yerel koleksiyon yerine gerektiği gibi akışla-tüm mevcut olmayan veri sanallaştırma ile karıştırılmamalıdır budur.  
   

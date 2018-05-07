@@ -1,13 +1,6 @@
 ---
-title: "Nasıl yapılır: Bir Windows Formdan Bip Sesi Çalma"
-ms.custom: 
+title: 'Nasıl yapılır: Bir Windows Formdan Bip Sesi Çalma'
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-winforms
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -18,16 +11,11 @@ helpviewer_keywords:
 - forms [Windows Forms], sounds
 - examples [Windows Forms], sounds
 ms.assetid: 7ea5cded-4888-4f35-8f28-5cab1a55c973
-caps.latest.revision: "15"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: c0c0c369756547231c0f8171bdfa940cb353544b
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 460309d853f2b3b423d14a820771e0230358e3c7
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-play-a-beep-from-a-windows-form"></a>Nasıl yapılır: Bir Windows Formdan Bip Sesi Çalma
 Bu örnek çalışma zamanında bip sesi çalar.  

@@ -1,14 +1,6 @@
 ---
-title: "IMetaDataAssemblyEmit::DefineExportedType Yöntemi"
-ms.custom: 
+title: IMetaDataAssemblyEmit::DefineExportedType Yöntemi
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: reference
 api_name:
 - IMetaDataAssemblyEmit.DefineExportedType
 api_location:
@@ -23,17 +15,13 @@ helpviewer_keywords:
 ms.assetid: fad01d7a-3178-4c8c-9f0a-4641e3701c9b
 topic_type:
 - apiref
-caps.latest.revision: 
 author: mairaw
 ms.author: mairaw
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 59aae188e404ebc717a140fb7918e3fbf69f3f70
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: a2eb894a8bac702c30826d1e965c91cae9b259ee
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="imetadataassemblyemitdefineexportedtype-method"></a>IMetaDataAssemblyEmit::DefineExportedType Yöntemi
 Oluşturur bir `ExportedType` belirtilen türü dışarı ve ilişkili meta veri simgesi döndürür için meta verileri içeren yapısı.  
@@ -57,13 +45,13 @@ HRESULT DefineExportedType (
  `tkImplementation`  
  [in] Burada verilen tür uygulanan belirten bir simge. İlişkili anlamlarını ve geçerli değerler şunlardır:  
   
--   `mdFile`Bu derleme içinde farklı bir dosya türü uygulanır.  
+-   `mdFile` Bu derleme içinde farklı bir dosya türü uygulanır.  
   
--   `mdAssemblyRef`Türü farklı bir derlemede uygulanır.  
+-   `mdAssemblyRef` Türü farklı bir derlemede uygulanır.  
   
--   `mdExportedTYpe`Türü, başka bir türü içinde yer alıyor.  
+-   `mdExportedTYpe` Türü, başka bir türü içinde yer alıyor.  
   
--   `mdFileNil`Türü bildirimi aynı dosyasındaki ve iç içe geçmiş bir tür değil.  
+-   `mdFileNil` Türü bildirimi aynı dosyasındaki ve iç içe geçmiş bir tür değil.  
   
  `tkTypeDef`  
  [in] Bir belirteç meta verilerinin verilecek türünü belirtir. Bu değer girildiğini `TypeDef` türü uygulayan ve yalnızca bu dosya bu derlemede olduğunda geçerlidir dosya tablosunda.  
@@ -84,7 +72,7 @@ HRESULT DefineExportedType (
   
  **Kitaplığı:** MsCorEE.dll kaynak olarak kullanılır  
   
- **.NET framework sürümleri:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET framework sürümleri:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
  [IMetaDataAssemblyEmit Arabirimi](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyemit-interface.md)

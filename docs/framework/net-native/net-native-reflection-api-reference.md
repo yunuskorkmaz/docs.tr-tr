@@ -1,27 +1,17 @@
 ---
-title: ".NET Native Yansıtma API'si Başvurusu"
-ms.custom: 
+title: .NET Native Yansıtma API'si Başvurusu
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 0429c049-22a3-4ba1-9cc8-f6ee91e31d9c
-caps.latest.revision: "4"
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: ae0037377e9cf092888febb4d74f353ddd8234cc
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 3ea47b8402f1bd2f66c957ff9126c8dff094a7ac
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="net-native-reflection-api-reference"></a>.NET Native Yansıtma API'si Başvurusu
-[!INCLUDE[net_native](../../../includes/net-native-md.md)]üç yeni özel durum türleri içerir: [System.Runtime.CompilerServices.MissingInteropDataException](../../../docs/framework/net-native/missinginteropdataexception-class-net-native.md), [System.Reflection.MissingMetadataException](../../../docs/framework/net-native/missingmetadataexception-class-net-native.md), ve [ System.Reflection.MissingRuntimeArtifactException](../../../docs/framework/net-native/missingruntimeartifactexception-class-net-native.md). Tüm üç özel durum türleri hakkında aşağıdakileri unutmayın:  
+[!INCLUDE[net_native](../../../includes/net-native-md.md)] üç yeni özel durum türleri içerir: [System.Runtime.CompilerServices.MissingInteropDataException](../../../docs/framework/net-native/missinginteropdataexception-class-net-native.md), [System.Reflection.MissingMetadataException](../../../docs/framework/net-native/missingmetadataexception-class-net-native.md), ve [ System.Reflection.MissingRuntimeArtifactException](../../../docs/framework/net-native/missingruntimeartifactexception-class-net-native.md). Tüm üç özel durum türleri hakkında aşağıdakileri unutmayın:  
   
  Bu tür yalnızca dahili kullanım içindir.  
  Bu üç özel durum türleri için kullanımı olan [!INCLUDE[net_native](../../../includes/net-native-md.md)] aracı yalnızca zinciri. Ne zaman özel durumlar [!INCLUDE[net_native](../../../includes/net-native-md.md)] araç zinciri program yürütme devam etmek izin verme eksik veri algılar.  

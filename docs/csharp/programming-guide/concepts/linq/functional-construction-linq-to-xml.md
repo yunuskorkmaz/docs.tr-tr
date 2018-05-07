@@ -1,24 +1,15 @@
 ---
-title: "İşlev yapımı (LINQ-XML) (C#)"
-ms.custom: 
+title: İşlev yapımı (LINQ-XML) (C#)
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-csharp
-ms.topic: article
 ms.assetid: 57a82bcf-de03-4f1c-a0c8-9a76e989d542
-caps.latest.revision: "3"
-author: BillWagner
-ms.author: wiwagn
-ms.openlocfilehash: f357de98fae60b3d0b6548ef195b462b4e2f6a5a
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.openlocfilehash: c837660adf9c62c8f4304b92d37f732795c981c9
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="functional-construction-linq-to-xml-c"></a>İşlev yapımı (LINQ-XML) (C#)
-[!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)]adlı XML öğeleri oluşturmak için güçlü bir yol sağlar *işlevsel yapım*. Bir XML ağacı tek bir deyimde oluşturabilme işlevsel yapıdır.  
+[!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] adlı XML öğeleri oluşturmak için güçlü bir yol sağlar *işlevsel yapım*. Bir XML ağacı tek bir deyimde oluşturabilme işlevsel yapıdır.  
   
  Birkaç temel özellikleri vardır [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] işlevsel yapım etkinleştirmek programlama arabirimi:  
   

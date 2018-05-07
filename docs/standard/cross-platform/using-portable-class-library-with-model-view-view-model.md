@@ -1,13 +1,7 @@
 ---
-title: "Model-Görünüm-Görünüm Model ile Taşınabilir Sınıf Kitaplığı Kullanma"
-ms.custom: 
+title: Model-Görünüm-Görünüm Model ile Taşınabilir Sınıf Kitaplığı Kullanma
 ms.date: 03/30/2017
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
 ms.technology: dotnet-standard
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -15,18 +9,13 @@ helpviewer_keywords:
 - Portable Class Library [.NET Framework], and MVVM
 - MVVM, and Portable Class Library
 ms.assetid: 41a0b9f8-15a2-431a-bc35-e310b2953b03
-caps.latest.revision: "17"
 author: mairaw
 ms.author: mairaw
-manager: wpickett
-ms.workload:
-- dotnet
-- dotnetcore
-ms.openlocfilehash: cc12a90025a1862fc6c588fe4425f3f8341da313
-ms.sourcegitcommit: 91691981897cf8451033cb01071d8f5d94017f97
+ms.openlocfilehash: aa8423c5c9453a9edb1058f0d5bdf4c494ece088
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/09/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="using-portable-class-library-with-model-view-view-model"></a>Model-Görünüm-Görünüm Model ile Taşınabilir Sınıf Kitaplığı Kullanma
 .NET Framework kullanabilirsiniz [taşınabilir sınıf kitaplığı](../../../docs/standard/cross-platform/cross-platform-development-with-the-portable-class-library.md) Model-görünüm-görünüm Model (MVVM) desen uygulamak ve birden çok platform genelinde derlemeleri paylaşmak için.  
@@ -40,25 +29,25 @@ ms.lasthandoff: 01/09/2018
 ## <a name="classes-that-support-mvvm"></a>MVVM destekleyen sınıfları  
  Hedeflediğinizde [!INCLUDE[net_v45](../../../includes/net-v45-md.md)], [!INCLUDE[net_win8_profile](../../../includes/net-win8-profile-md.md)], Silverlight ya da için Windows Phone 7.5, [!INCLUDE[net_portable](../../../includes/net-portable-md.md)] proje, aşağıdaki sınıflar MVVM desen uygulamak için kullanılabilir:  
   
--   <xref:System.Collections.ObjectModel.ObservableCollection%601?displayProperty=nameWithType>sınıfı  
+-   <xref:System.Collections.ObjectModel.ObservableCollection%601?displayProperty=nameWithType> sınıfı  
   
--   <xref:System.Collections.ObjectModel.ReadOnlyObservableCollection%601?displayProperty=nameWithType>sınıfı  
+-   <xref:System.Collections.ObjectModel.ReadOnlyObservableCollection%601?displayProperty=nameWithType> sınıfı  
   
--   <xref:System.Collections.Specialized.INotifyCollectionChanged?displayProperty=nameWithType>sınıfı  
+-   <xref:System.Collections.Specialized.INotifyCollectionChanged?displayProperty=nameWithType> sınıfı  
   
--   <xref:System.Collections.Specialized.NotifyCollectionChangedAction?displayProperty=nameWithType>sınıfı  
+-   <xref:System.Collections.Specialized.NotifyCollectionChangedAction?displayProperty=nameWithType> sınıfı  
   
--   <xref:System.Collections.Specialized.NotifyCollectionChangedEventArgs?displayProperty=nameWithType>sınıfı  
+-   <xref:System.Collections.Specialized.NotifyCollectionChangedEventArgs?displayProperty=nameWithType> sınıfı  
   
--   <xref:System.Collections.Specialized.NotifyCollectionChangedEventHandler?displayProperty=nameWithType>sınıfı  
+-   <xref:System.Collections.Specialized.NotifyCollectionChangedEventHandler?displayProperty=nameWithType> sınıfı  
   
--   <xref:System.ComponentModel.DataErrorsChangedEventArgs?displayProperty=nameWithType>sınıfı  
+-   <xref:System.ComponentModel.DataErrorsChangedEventArgs?displayProperty=nameWithType> sınıfı  
   
--   <xref:System.ComponentModel.INotifyDataErrorInfo?displayProperty=nameWithType>sınıfı  
+-   <xref:System.ComponentModel.INotifyDataErrorInfo?displayProperty=nameWithType> sınıfı  
   
--   <xref:System.ComponentModel.INotifyPropertyChanged?displayProperty=nameWithType>sınıfı  
+-   <xref:System.ComponentModel.INotifyPropertyChanged?displayProperty=nameWithType> sınıfı  
   
--   <xref:System.Windows.Input.ICommand?displayProperty=nameWithType>sınıfı  
+-   <xref:System.Windows.Input.ICommand?displayProperty=nameWithType> sınıfı  
   
 -   Tüm sınıflarda <xref:System.ComponentModel.DataAnnotations?displayProperty=nameWithType> ad alanı  
   

@@ -1,13 +1,6 @@
 ---
-title: "3B Grafiklere Genel Bakış"
-ms.custom: 
+title: 3B Grafiklere Genel Bakış
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-wpf
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -15,24 +8,19 @@ helpviewer_keywords:
 - 3-D graphics [WPF]
 - graphics [WPF], 3-D
 ms.assetid: 67f31ed4-e36b-4b02-9889-dcce245d7afc
-caps.latest.revision: "21"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 58b756c24c1ca7e3f5b6b3f13c314363daf35443
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 6d44f27ccd82d535436be03092c3864e3155d1d8
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="3-d-graphics-overview"></a>3B Grafiklere Genel Bakış
-<a name="introduction"></a>[!INCLUDE[TLA2#tla_3d](../../../../includes/tla2sharptla-3d-md.md)] İşlevindeki [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] geliştiricilerin çizim, dönüştürme ve 3-b grafik işaretleme ve yordam kodunda animasyon sağlar. Geliştiriciler birleştirebilirsiniz [!INCLUDE[TLA#tla_2d](../../../../includes/tlasharptla-2d-md.md)] ve [!INCLUDE[TLA2#tla_3d](../../../../includes/tla2sharptla-3d-md.md)] zengin denetimleri oluşturmak, veri karmaşık çizimleri sağlayın veya kullanıcı geliştirmek için grafik deneyimi bir uygulamanın arabirimi. [!INCLUDE[TLA2#tla_3d](../../../../includes/tla2sharptla-3d-md.md)]desteklemek [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] tam özellikli bir oyun geliştirme platformu sağlamak üzere tasarlanmamıştır. Bu konu genel bir bakış sağlar [!INCLUDE[TLA#tla_3d](../../../../includes/tlasharptla-3d-md.md)] işlevindeki [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] grafik sistemi.  
+<a name="introduction"></a> [!INCLUDE[TLA2#tla_3d](../../../../includes/tla2sharptla-3d-md.md)] İşlevindeki [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] geliştiricilerin çizim, dönüştürme ve 3-b grafik işaretleme ve yordam kodunda animasyon sağlar. Geliştiriciler birleştirebilirsiniz [!INCLUDE[TLA#tla_2d](../../../../includes/tlasharptla-2d-md.md)] ve [!INCLUDE[TLA2#tla_3d](../../../../includes/tla2sharptla-3d-md.md)] zengin denetimleri oluşturmak, veri karmaşık çizimleri sağlayın veya kullanıcı geliştirmek için grafik deneyimi bir uygulamanın arabirimi. [!INCLUDE[TLA2#tla_3d](../../../../includes/tla2sharptla-3d-md.md)] desteklemek [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] tam özellikli bir oyun geliştirme platformu sağlamak üzere tasarlanmamıştır. Bu konu genel bir bakış sağlar [!INCLUDE[TLA#tla_3d](../../../../includes/tlasharptla-3d-md.md)] işlevindeki [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] grafik sistemi.  
  
   
 <a name="threed_in_2d"></a>   
 ## <a name="3-d-in-a-2-d-container"></a>2-D kapsayıcısında 3-b  
- [!INCLUDE[TLA2#tla_3d](../../../../includes/tla2sharptla-3d-md.md)]grafik içeriği [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] bir öğedeki kapsüllenmiş <xref:System.Windows.Controls.Viewport3D>, iki boyutlu öğe yapısında katılmak. Grafik sistemi değerlendirir <xref:System.Windows.Controls.Viewport3D> diğer birçok gibi iki boyutlu bir görsel öğe olarak [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]. <xref:System.Windows.Controls.Viewport3D>bir pencere olarak çalışır — bir görünüm penceresinin — üç boyutlu Sahne içine. Daha doğru bir şekilde bir yüzeyine olan bir [!INCLUDE[TLA2#tla_3d](../../../../includes/tla2sharptla-3d-md.md)] Sahne öngörülen.  
+ [!INCLUDE[TLA2#tla_3d](../../../../includes/tla2sharptla-3d-md.md)] grafik içeriği [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] bir öğedeki kapsüllenmiş <xref:System.Windows.Controls.Viewport3D>, iki boyutlu öğe yapısında katılmak. Grafik sistemi değerlendirir <xref:System.Windows.Controls.Viewport3D> diğer birçok gibi iki boyutlu bir görsel öğe olarak [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]. <xref:System.Windows.Controls.Viewport3D> bir pencere olarak çalışır — bir görünüm penceresinin — üç boyutlu Sahne içine. Daha doğru bir şekilde bir yüzeyine olan bir [!INCLUDE[TLA2#tla_3d](../../../../includes/tla2sharptla-3d-md.md)] Sahne öngörülen.  
   
  Geleneksel olarak [!INCLUDE[TLA2#tla_2d](../../../../includes/tla2sharptla-2d-md.md)] uygulama, kullanım <xref:System.Windows.Controls.Viewport3D> ızgara veya tuvale gibi başka bir kapsayıcı öğe gibi.  Kullanabilirsiniz ancak <xref:System.Windows.Controls.Viewport3D> diğer [!INCLUDE[TLA2#tla_2d](../../../../includes/tla2sharptla-2d-md.md)] aynı Sahne grafiği çizim nesneleri, size işleyemezsiniz [!INCLUDE[TLA2#tla_2d](../../../../includes/tla2sharptla-2d-md.md)] ve [!INCLUDE[TLA2#tla_3d](../../../../includes/tla2sharptla-3d-md.md)] içindeki nesneleri bir <xref:System.Windows.Controls.Viewport3D>.  Bu konuda çizin nasıl odaklanacaktır [!INCLUDE[TLA2#tla_3d](../../../../includes/tla2sharptla-3d-md.md)] grafik içinde <xref:System.Windows.Controls.Viewport3D>.  
   
@@ -51,12 +39,12 @@ Geleneksel 2 ve 3 boyutlu koordinat sistemi temsili
   
  Anlamak için başka bir şekilde nasıl bir [!INCLUDE[TLA2#tla_3d](../../../../includes/tla2sharptla-3d-md.md)] Sahne temsil üzerinde bir [!INCLUDE[TLA2#tla_2d](../../../../includes/tla2sharptla-2d-md.md)] yüzeyini olan bir yansıtma görüntüleme yüzeyine olarak Sahne açıklayarak. <xref:System.Windows.Media.Media3D.ProjectionCamera> Farklı tahminleri ve özelliklerinin nasıl izleyicisinin göreceğini değiştirmek için belirtmenize olanak tanır [!INCLUDE[TLA2#tla_3d](../../../../includes/tla2sharptla-3d-md.md)] modeller. A <xref:System.Windows.Media.Media3D.PerspectiveCamera> Sahne foreshortens bir yansıtma belirtir.  Diğer bir deyişle, <xref:System.Windows.Media.Media3D.PerspectiveCamera> kaybolmasını noktası perspektif sağlar.  Koordinat Sahne, yön ve görünüm alanı kamera ve görünüm yönünü "yedekleme" tanımlayan vektör kamera konumu belirtebilirsiniz. Aşağıdaki diyagramda gösterilmektedir <xref:System.Windows.Media.Media3D.PerspectiveCamera>'s projeksiyon.  
   
- <xref:System.Windows.Media.Media3D.ProjectionCamera.NearPlaneDistance%2A> Ve <xref:System.Windows.Media.Media3D.ProjectionCamera.FarPlaneDistance%2A> özelliklerini <xref:System.Windows.Media.Media3D.ProjectionCamera> kameranın projeksiyon aralığını sınırlayın. Kameralar Sahne bir yerde bulunan olabileceğinden, aslında bir model içinde ya da nesneleri düzgün ayırt etmek sabit yapmadan çok bir model yanına konumlandırılması kamera mümkündür.  <xref:System.Windows.Media.Media3D.ProjectionCamera.NearPlaneDistance%2A>en az uzaklığı sonrasında nesneleri değil çizileceğini kameradan belirtmenize olanak tanır.  Buna karşılık, <xref:System.Windows.Media.Media3D.ProjectionCamera.FarPlaneDistance%2A> tanınabilir olmasını çok uzakta nesneleri Sahne eklenmeyecek sağlayan nesneleri değil çizilen, kamera mesafe belirtmenize olanak sağlar.  
+ <xref:System.Windows.Media.Media3D.ProjectionCamera.NearPlaneDistance%2A> Ve <xref:System.Windows.Media.Media3D.ProjectionCamera.FarPlaneDistance%2A> özelliklerini <xref:System.Windows.Media.Media3D.ProjectionCamera> kameranın projeksiyon aralığını sınırlayın. Kameralar Sahne bir yerde bulunan olabileceğinden, aslında bir model içinde ya da nesneleri düzgün ayırt etmek sabit yapmadan çok bir model yanına konumlandırılması kamera mümkündür.  <xref:System.Windows.Media.Media3D.ProjectionCamera.NearPlaneDistance%2A> en az uzaklığı sonrasında nesneleri değil çizileceğini kameradan belirtmenize olanak tanır.  Buna karşılık, <xref:System.Windows.Media.Media3D.ProjectionCamera.FarPlaneDistance%2A> tanınabilir olmasını çok uzakta nesneleri Sahne eklenmeyecek sağlayan nesneleri değil çizilen, kamera mesafe belirtmenize olanak sağlar.  
   
  ![Kamera Kurulum](../../../../docs/framework/wpf/graphics-multimedia/media/coordsystem-6.png "CoordSystem-6")  
 Kamera konumu  
   
- <xref:System.Windows.Media.Media3D.OrthographicCamera>orthogonal projeksiyon çekirdeğinin belirten bir [!INCLUDE[TLA2#tla_3d](../../../../includes/tla2sharptla-3d-md.md)] model için bir [!INCLUDE[TLA2#tla_2d](../../../../includes/tla2sharptla-2d-md.md)] visual yüzeyini. Diğer kameralar gibi yönü ve "yukarı" yönü görüntüleme bir konum belirtir. Farklı <xref:System.Windows.Media.Media3D.PerspectiveCamera>, ancak <xref:System.Windows.Media.Media3D.OrthographicCamera> perspektif foreshortening içermeyen bir yansıtma açıklar. Diğer bir deyişle, <xref:System.Windows.Media.Media3D.OrthographicCamera> , kenarı bir, iki tarafı da karşılayan kamera bir noktada içinde yerine paralel görüntüleme kutusunu açıklar. Aşağıdaki görüntüde aynı modeli kullanarak görüntülendiği şekilde gösterilmektedir <xref:System.Windows.Media.Media3D.PerspectiveCamera> ve <xref:System.Windows.Media.Media3D.OrthographicCamera>.  
+ <xref:System.Windows.Media.Media3D.OrthographicCamera> orthogonal projeksiyon çekirdeğinin belirten bir [!INCLUDE[TLA2#tla_3d](../../../../includes/tla2sharptla-3d-md.md)] model için bir [!INCLUDE[TLA2#tla_2d](../../../../includes/tla2sharptla-2d-md.md)] visual yüzeyini. Diğer kameralar gibi yönü ve "yukarı" yönü görüntüleme bir konum belirtir. Farklı <xref:System.Windows.Media.Media3D.PerspectiveCamera>, ancak <xref:System.Windows.Media.Media3D.OrthographicCamera> perspektif foreshortening içermeyen bir yansıtma açıklar. Diğer bir deyişle, <xref:System.Windows.Media.Media3D.OrthographicCamera> , kenarı bir, iki tarafı da karşılayan kamera bir noktada içinde yerine paralel görüntüleme kutusunu açıklar. Aşağıdaki görüntüde aynı modeli kullanarak görüntülendiği şekilde gösterilmektedir <xref:System.Windows.Media.Media3D.PerspectiveCamera> ve <xref:System.Windows.Media.Media3D.OrthographicCamera>.  
   
  ![Ortografik ve perspektif projeksiyon](../../../../docs/framework/wpf/graphics-multimedia/media/camera-projections4.png "Camera_projections4")  
 Perspektif ve Dikçizgisel projeksiyonu  
@@ -69,7 +57,7 @@ Perspektif ve Dikçizgisel projeksiyonu
 <a name="models_meshes"></a>   
 ## <a name="model-and-mesh-primitives"></a>Model ve kafes temelleri  
   
- <xref:System.Windows.Media.Media3D.Model3D>Genel temsil eden Özet temel sınıf [!INCLUDE[TLA2#tla_3d](../../../../includes/tla2sharptla-3d-md.md)] nesnesi. Derleme için bir [!INCLUDE[TLA2#tla_3d](../../../../includes/tla2sharptla-3d-md.md)] Sahne, görüntülemek için bazı nesneler gerekir ve Sahne grafiğin nesnelerini türetin <xref:System.Windows.Media.Media3D.Model3D>. Şu anda [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] ile geometri modelleme destekler <xref:System.Windows.Media.Media3D.GeometryModel3D>. <xref:System.Windows.Media.Media3D.GeometryModel3D.Geometry%2A> Özelliği bu modelin kafes temel alır.  
+ <xref:System.Windows.Media.Media3D.Model3D> Genel temsil eden Özet temel sınıf [!INCLUDE[TLA2#tla_3d](../../../../includes/tla2sharptla-3d-md.md)] nesnesi. Derleme için bir [!INCLUDE[TLA2#tla_3d](../../../../includes/tla2sharptla-3d-md.md)] Sahne, görüntülemek için bazı nesneler gerekir ve Sahne grafiğin nesnelerini türetin <xref:System.Windows.Media.Media3D.Model3D>. Şu anda [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] ile geometri modelleme destekler <xref:System.Windows.Media.Media3D.GeometryModel3D>. <xref:System.Windows.Media.Media3D.GeometryModel3D.Geometry%2A> Özelliği bu modelin kafes temel alır.  
   
  Bir model oluşturmak için bir temel oluşturarak başlayın veya kafes. A [!INCLUDE[TLA2#tla_3d](../../../../includes/tla2sharptla-3d-md.md)] tek bir form köşeleri ilkel koleksiyonudur [!INCLUDE[TLA2#tla_3d](../../../../includes/tla2sharptla-3d-md.md)] varlık. Çoğu [!INCLUDE[TLA2#tla_3d](../../../../includes/tla2sharptla-3d-md.md)] sistemleri, en basit kapalı şekil Modellenen temelleri sağlar: üç köşeleri tarafından tanımlanan bir üçgen.  Üç nokta bir üçgen coplanar olduğundan, daha fazla model için üçgenler eklemeye devam edebilirsiniz karmaşık şekiller, kafesleri çağrılır.  
   
@@ -81,7 +69,7 @@ Perspektif ve Dikçizgisel projeksiyonu
   
  Model için değerleri belirtilerek tanımlama devam <xref:System.Windows.Media.Media3D.MeshGeometry3D.Normals%2A> ve <xref:System.Windows.Media.Media3D.MeshGeometry3D.TextureCoordinates%2A> özellikleri.  Model yüzeyinin işlemek için grafik sistemi herhangi verilen üçgen karşılıklı yönü yüzeyini hakkında bilgi gerekiyor. Modelin aydınlatma hesaplamaları yapmak için bu bilgileri kullanır: doğrudan ışık kaynağının doğru yüz yüzeyleri çıktığınızda ışık açılı olandan daha açık görünür. Ancak [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] varsayılan normal vektörlerinin belirleyebilirsiniz konumu koordinatları kullanarak eğri yüzeyleri görünümünü yaklaşık için farklı normal vektörlerinin de belirtebilirsiniz.  
   
- <xref:System.Windows.Media.Media3D.MeshGeometry3D.TextureCoordinates%2A> Özellik koleksiyonu belirtir <xref:System.Windows.Point>grafik sistemi doku kafes köşe için nasıl çizilir belirlemek koordinatları eşlemek nasıl anlatın s. <xref:System.Windows.Media.Media3D.MeshGeometry3D.TextureCoordinates%2A>sıfır ve 1 ' (dahil) arasında bir değer olarak belirtilir.  İle <xref:System.Windows.Media.Media3D.MeshGeometry3D.Normals%2A> özelliği, grafik sistemi hesaplamak varsayılan doku koordinatları, ancak örneğin yinelenen bir desen bölümünü içeren bir doku eşleme denetlemek için farklı doku koordinatlarını ayarlamak isteyebilirsiniz. Sonraki konularda veya yönetilen Direct3D SDK doku koordinatları hakkında daha fazla bilgi bulunabilir.  
+ <xref:System.Windows.Media.Media3D.MeshGeometry3D.TextureCoordinates%2A> Özellik koleksiyonu belirtir <xref:System.Windows.Point>grafik sistemi doku kafes köşe için nasıl çizilir belirlemek koordinatları eşlemek nasıl anlatın s. <xref:System.Windows.Media.Media3D.MeshGeometry3D.TextureCoordinates%2A> sıfır ve 1 ' (dahil) arasında bir değer olarak belirtilir.  İle <xref:System.Windows.Media.Media3D.MeshGeometry3D.Normals%2A> özelliği, grafik sistemi hesaplamak varsayılan doku koordinatları, ancak örneğin yinelenen bir desen bölümünü içeren bir doku eşleme denetlemek için farklı doku koordinatlarını ayarlamak isteyebilirsiniz. Sonraki konularda veya yönetilen Direct3D SDK doku koordinatları hakkında daha fazla bilgi bulunabilir.  
   
  Aşağıdaki örnek yordam kodda bir yazıtipi küp modelinin oluşturulacağını gösterir. Tek bir GeometryModel3D olarak tüm küp çizebilirsiniz unutmayın; Bu örnek daha sonra ayrı dokuları her yüz uygulamak için ayrı bir model olarak küpün yüz çizer.  
   
@@ -98,11 +86,11 @@ Perspektif ve Dikçizgisel projeksiyonu
   
  Bir modelin yüzey özelliklerini tanımlamak için [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] kullanan <xref:System.Windows.Media.Media3D.Material> soyut sınıf. Somut alt sınıfları malzeme bazı modelin yüzey görünüm özelliklerini belirlemek ve her SolidColorBrush, TileBrush veya VisualBrush geçirebilirsiniz fırça özelliği de sağlar.  
   
--   <xref:System.Windows.Media.Media3D.DiffuseMaterial>Bu model aydınlatma gibi sorgulamanıza diffusely fırça modele uygulanır belirtir. DiffuseMaterial en kullanarak benzer Fırçalar doğrudan üzerinde kullanarak [!INCLUDE[TLA2#tla_2d](../../../../includes/tla2sharptla-2d-md.md)] modelleri; ancak parlak olarak açık yansıtacak değil modeli yüzeyleri yapın.  
+-   <xref:System.Windows.Media.Media3D.DiffuseMaterial> Bu model aydınlatma gibi sorgulamanıza diffusely fırça modele uygulanır belirtir. DiffuseMaterial en kullanarak benzer Fırçalar doğrudan üzerinde kullanarak [!INCLUDE[TLA2#tla_2d](../../../../includes/tla2sharptla-2d-md.md)] modelleri; ancak parlak olarak açık yansıtacak değil modeli yüzeyleri yapın.  
   
--   <xref:System.Windows.Media.Media3D.SpecularMaterial>modelin yüzey gibi davranarak sabit veya parlak, vurgular yansıtma yeteneğine fırça modele uygulanır belirtir. İçin bir değer belirterek, doku önermek bu yansıtıcı kalitesini ya da "bekliyoruz," derece ayarlayabilirsiniz <xref:System.Windows.Media.Media3D.SpecularMaterial.SpecularPower%2A> özelliği.  
+-   <xref:System.Windows.Media.Media3D.SpecularMaterial> modelin yüzey gibi davranarak sabit veya parlak, vurgular yansıtma yeteneğine fırça modele uygulanır belirtir. İçin bir değer belirterek, doku önermek bu yansıtıcı kalitesini ya da "bekliyoruz," derece ayarlayabilirsiniz <xref:System.Windows.Media.Media3D.SpecularMaterial.SpecularPower%2A> özelliği.  
   
--   <xref:System.Windows.Media.Media3D.EmissiveMaterial>Doku olan model yayma gibi sorgulamanıza fırça rengi hafif eşit uygulanacak belirtmenize olanak tanır. Bu model ışık yapmaz; Ancak, bunu paylaştıklarında DiffuseMaterial veya SpecularMaterial ile doku durumunda olduğu gölgeleme içinde farklı almayacak.  
+-   <xref:System.Windows.Media.Media3D.EmissiveMaterial> Doku olan model yayma gibi sorgulamanıza fırça rengi hafif eşit uygulanacak belirtmenize olanak tanır. Bu model ışık yapmaz; Ancak, bunu paylaştıklarında DiffuseMaterial veya SpecularMaterial ile doku durumunda olduğu gölgeleme içinde farklı almayacak.  
   
  Daha iyi performans için arka yüzeyleri, bir <xref:System.Windows.Media.Media3D.GeometryModel3D> (Görünüm dışında kamera modelden karşı tarafındaki oldukları için olan bu yazıtipleri) Sahne culled.  Belirtmek için bir <xref:System.Windows.Media.Media3D.Material> düzlem gibi bir modelin backface uygulamak için modelin ayarlamak <xref:System.Windows.Media.Media3D.GeometryModel3D.BackMaterial%2A> özelliği.  
   
@@ -127,7 +115,7 @@ Perspektif ve Dikçizgisel projeksiyonu
   
 -   <xref:System.Windows.Media.Media3D.DirectionalLight>: Bir uzak ışık kaynağının gibi gösterir.  Tek yönlü ışık sahip bir <xref:System.Windows.Media.Media3D.DirectionalLight.Direction%2A> belirtilmiş bir Vector3D, ancak belirtilen konumu yok.  
   
--   <xref:System.Windows.Media.Media3D.PointLight>: Yakındaki bir açık kaynak gibi gösterir. PointLights bir konuma sahip ve bu konumdan açık atama. Sahne nesneler, bağlı olarak, konum ve açık göre uzaklığı ışıklı. <xref:System.Windows.Media.Media3D.PointLightBase>kullanıma sunan bir <xref:System.Windows.Media.Media3D.PointLightBase.Range%2A> sonrasında modelleri değil ışıklı tarafından açık bir uzaklık belirler özelliği. PointLight de nasıl ışık 's yoğunluğu mesafeli düşer belirleyen Zayıflatma özellikleri sunar. Açık 's Zayıflatma sabit, doğrusal veya ikinci derece ilişkilendirme belirtebilirsiniz.  
+-   <xref:System.Windows.Media.Media3D.PointLight>: Yakındaki bir açık kaynak gibi gösterir. PointLights bir konuma sahip ve bu konumdan açık atama. Sahne nesneler, bağlı olarak, konum ve açık göre uzaklığı ışıklı. <xref:System.Windows.Media.Media3D.PointLightBase> kullanıma sunan bir <xref:System.Windows.Media.Media3D.PointLightBase.Range%2A> sonrasında modelleri değil ışıklı tarafından açık bir uzaklık belirler özelliği. PointLight de nasıl ışık 's yoğunluğu mesafeli düşer belirleyen Zayıflatma özellikleri sunar. Açık 's Zayıflatma sabit, doğrusal veya ikinci derece ilişkilendirme belirtebilirsiniz.  
   
 -   <xref:System.Windows.Media.Media3D.SpotLight>: Devralınan <xref:System.Windows.Media.Media3D.PointLight>. Projektör gibi PointLight karanl ve konum ve yön vardır. Tarafından belirlenen Koni şeklinde alanında açık proje <xref:System.Windows.Media.Media3D.SpotLight.InnerConeAngle%2A> ve <xref:System.Windows.Media.Media3D.SpotLight.OuterConeAngle%2A> özellikler, derece cinsinden belirtilmiş.  
   

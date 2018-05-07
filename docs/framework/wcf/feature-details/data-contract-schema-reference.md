@@ -1,34 +1,20 @@
 ---
 title: Veri Sözleşmesi Şema Başvurusu
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 helpviewer_keywords:
 - data contracts [WCF], schema reference
 ms.assetid: 9ebb0ebe-8166-4c93-980a-7c8f1f38f7c0
-caps.latest.revision: 24
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 075f8d89caccd7723f3a1dc54fde695a8fb624ab
-ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
+ms.openlocfilehash: 06bc79e059300d448ababa87974b590f54f7984c
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/30/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="data-contract-schema-reference"></a>Veri Sözleşmesi Şema Başvurusu
 Bu konu, XML Şeması (tarafından kullanılan XSD) alt açıklar <xref:System.Runtime.Serialization.DataContractSerializer> ortak dil tanımlamak için XML serileştirmesi için çalışma zamanı (CLR) türleri.  
   
 ## <a name="datacontractserializer-mappings"></a>DataContractSerializer eşlemeleri  
- `DataContractSerializer` Gelen meta verileri verildiğinde CLR türleri için XSD eşleyen bir [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] bir meta veri uç noktası kullanarak hizmet veya [ServiceModel meta veri yardımcı Programracı (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md). Daha fazla bilgi için bkz: [veri sözleşmesi seri hale getirici](../../../../docs/framework/wcf/feature-details/data-contract-serializer.md).  
+ `DataContractSerializer` Meta verileri bir meta veri uç noktası kullanarak bir Windows Communication Foundation (WCF) hizmetinden verildiğinde CLR türleri için XSD eşler veya [ServiceModel meta veri yardımcı Programracı (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md). Daha fazla bilgi için bkz: [veri sözleşmesi seri hale getirici](../../../../docs/framework/wcf/feature-details/data-contract-serializer.md).  
   
  `DataContractSerializer` Ayrıca Web Hizmetleri Açıklama Dili (WSDL) veya XSD belgelere erişmek ve Hizmetleri veya istemciler için veri sözleşmeleri oluşturmak için Svcutil.exe kullanıldığında XSD CLR Türleri ile eşleştirir.  
   
@@ -105,7 +91,7 @@ Bu konu, XML Şeması (tarafından kullanılan XSD) alt açıklar <xref:System.R
 |`choice`|Yasak|  
 |`sequence`|Desteklenen bir veri sözleşmesi veri üyeleri eşlenir.|  
 |`attribute`|Yasak, olsa bile kullanın (bir özel durumla) = "prohibited". Yalnızca isteğe bağlı öznitelik standart seri hale getirme şeması ad alanından desteklenir. Programlama modeli veri sözleşmesi veri üyeleri için harita değil. Şu anda yalnızca bir öznitelik anlama sahiptir ve ISerializable bölümünde ele alınmıştır. Diğerleri yoksayılır.|  
-|`attributeGroup`|Alınamaz. İçinde [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] v1 yayın `DataContractSerializer` varlığını yoksayar `attributeGroup` içinde `xs:complexType`.|  
+|`attributeGroup`|Alınamaz. WCF v1 sürümdeki `DataContractSerializer` varlığını yoksayar `attributeGroup` içinde `xs:complexType`.|  
 |`anyAttribute`|Alınamaz.|  
 |(boş)|Veri sözleşmesi hiçbir veri üyeleri ile eşlenir.|  
   
@@ -215,7 +201,7 @@ Bu konu, XML Şeması (tarafından kullanılan XSD) alt açıklar <xref:System.R
   
  \* Kullanırken `simpleType` ve `complexType,` anonim türler için eşleme olduğundan, anonim olmayan türleri ile aynıdır, hiçbir anonim veri sözleşmeleri olmasını dışında ve bir adlandırılmış veri sözleşmesi öğesi adından türetilen oluşturulan bir ad ile oluşturulur. Anonim türler için kurallar aşağıdaki listede yer almaktadır:  
   
--   [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] uygulama ayrıntılarını: varsa `xs:element` adı nokta içeremez, dış veri sözleşmesi türü için bir iç türü anonim tür eşler. Nokta adı içeriyorsa, sonuçta ortaya çıkan veri sözleşmesi türü bağımsızdır (iç bir tür değil).  
+-   WCF uygulaması ayrıntı: varsa `xs:element` adı nokta içeremez, dış veri sözleşmesi türü için bir iç türü anonim tür eşler. Nokta adı içeriyorsa, sonuçta ortaya çıkan veri sözleşmesi türü bağımsızdır (iç bir tür değil).  
   
 -   İç türü üretilen veri sözleşme adı noktayla, öğeyi ve "Türü" dize adını ve ardından dış türü veri sözleşmesi adıdır.  
   

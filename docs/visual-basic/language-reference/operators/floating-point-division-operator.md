@@ -1,12 +1,6 @@
 ---
-title: "/ İşleci (Visual Basic)"
+title: / İşleci (Visual Basic)
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- devlang-visual-basic
-ms.topic: article
 f1_keywords:
 - vb./
 helpviewer_keywords:
@@ -22,14 +16,11 @@ helpviewer_keywords:
 - / operator [Visual Basic]
 - math operators [Visual Basic]
 ms.assetid: 335e97f2-c434-439e-9064-76973a051101
-caps.latest.revision: 
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: 2f221e863725b9aeb0b3fa3219b3a881541e2be0
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 17eb3eddfae3cf7c818514a2fee20f646876a6ec
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="-operator-visual-basic"></a>/ İşleci (Visual Basic)
 İki sayıyı böler ve kayan noktalı bir sonuç döndürür.  
@@ -75,8 +66,8 @@ expression1 / expression2
 |İşlenen veri türleri|Davranış, `expression2` sıfır|  
 |------------------------|---------------------------------------|  
 |Kayan nokta (`Single` veya `Double`)|Sonsuz döndürür (<xref:System.Double.PositiveInfinity> veya <xref:System.Double.NegativeInfinity>), veya <xref:System.Double.NaN> (sayı değil), `expression1` de sıfırdır|  
-|`Decimal`|Oluşturur<xref:System.DivideByZeroException>|  
-|İntegral (imzalı veya imzasız)|Tam sayı türü atar geri dönüştürme yapılmaya <xref:System.OverflowException> tam sayı türleri kabul edemiyor çünkü <xref:System.Double.PositiveInfinity>, <xref:System.Double.NegativeInfinity>, veya<xref:System.Double.NaN>|  
+|`Decimal`|Oluşturur <xref:System.DivideByZeroException>|  
+|İntegral (imzalı veya imzasız)|Tam sayı türü atar geri dönüştürme yapılmaya <xref:System.OverflowException> tam sayı türleri kabul edemiyor çünkü <xref:System.Double.PositiveInfinity>, <xref:System.Double.NegativeInfinity>, veya <xref:System.Double.NaN>|  
   
 > [!NOTE]
 >  `/` İşleci olabilir *aşırı*, işleneni, sınıf veya yapı türüne sahip olduğunda bir sınıf veya yapı davranışını tanımlayabilirsiniz, anlamına gelir. Bu tür bir sınıf veya yapı üzerinde kodunuzu bu işleç kullanıyorsa, yeniden tanımlanan davranışını anladığınızdan emin olun. Daha fazla bilgi için bkz: [işleç yordamları](../../../visual-basic/programming-guide/language-features/procedures/operator-procedures.md).  
@@ -91,8 +82,8 @@ expression1 / expression2
 ## <a name="see-also"></a>Ayrıca Bkz.  
  [/ = İşleci (Visual Basic)](../../../visual-basic/language-reference/operators/floating-point-division-assignment-operator.md)  
  [\ İşleci (Visual Basic)](../../../visual-basic/language-reference/operators/integer-division-operator.md)  
- [İşleç sonuçlarının veri türleri](../../../visual-basic/language-reference/operators/data-types-of-operator-results.md)  
- [Aritmetik işleçler](../../../visual-basic/language-reference/operators/arithmetic-operators.md)  
+ [İşleç Sonuçlarının Veri Türleri](../../../visual-basic/language-reference/operators/data-types-of-operator-results.md)  
+ [Aritmetik İşleçler](../../../visual-basic/language-reference/operators/arithmetic-operators.md)  
  [Visual Basic'de İşleç önceliği](../../../visual-basic/language-reference/operators/operator-precedence.md)  
- [İşlevselliğe göre listelenmiş işleçler](../../../visual-basic/language-reference/operators/operators-listed-by-functionality.md)  
+ [İşlevselliğe Göre Listelenmiş İşleçler](../../../visual-basic/language-reference/operators/operators-listed-by-functionality.md)  
  [Visual Basic'de aritmetik işleçler](../../../visual-basic/programming-guide/language-features/operators-and-expressions/arithmetic-operators.md)

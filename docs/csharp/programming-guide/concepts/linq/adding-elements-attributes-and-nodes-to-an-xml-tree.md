@@ -1,21 +1,12 @@
 ---
-title: "Bir XML ağacına (C#) öğeleri, öznitelikleri ve düğümler ekleme"
-ms.custom: 
+title: Bir XML ağacına (C#) öğeleri, öznitelikleri ve düğümler ekleme
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-csharp
-ms.topic: article
 ms.assetid: db911e4f-40aa-499a-9500-a9763bb6df56
-caps.latest.revision: "3"
-author: BillWagner
-ms.author: wiwagn
-ms.openlocfilehash: bbe7d00dc1a0b0ad5dcc7cbbedb1f2886f6ff2de
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.openlocfilehash: 2996b4f24b421e7a818381817e598804f9199d38
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="adding-elements-attributes-and-nodes-to-an-xml-tree-c"></a>Bir XML ağacına (C#) öğeleri, öznitelikleri ve düğümler ekleme
 Varolan bir XML ağacına içerik (öğeleri, öznitelikleri, yorumlar, işleme yönergeleri, metin ve CDATA) ekleyebilirsiniz.  

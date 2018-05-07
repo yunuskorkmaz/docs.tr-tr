@@ -1,28 +1,16 @@
 ---
-title: "x:Arguments Yönergesi"
-ms.custom: 
+title: x:Arguments Yönergesi
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-wpf
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - x:Arguments directive [XAML Services]
 - Arguments directive in XAML [XAML Services]
 - XAML [XAML Services], x:Arguments directive
 ms.assetid: 87cc10b0-b610-4025-b6b0-ab27ca27c92e
-caps.latest.revision: "12"
-author: wadepickett
-ms.author: wpickett
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: bb1f5986a0d9f9eb69ade0228925ec06164cee4d
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: e0e7f380ec176e80d2422878a2e676d64985d660
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="xarguments-directive"></a>x:Arguments Yönergesi
 Paketler yapı değişkenleri XAML varsayılan olmayan Oluşturucusu nesne öğesi bildiriminde ya da bir fabrika yöntemi nesne bildirimi.  
@@ -55,7 +43,7 @@ Paketler yapı değişkenleri XAML varsayılan olmayan Oluşturucusu nesne öğe
 |`methodName`|Herhangi bir işlem Fabrika yöntemin adını `x:Arguments` bağımsız değişkenler.|  
   
 ## <a name="dependencies"></a>Bağımlılıklar  
- `x:FactoryMethod`kapsam ve davranışını değiştirebilirsiniz nerede `x:Arguments` uygular.  
+ `x:FactoryMethod` kapsam ve davranışını değiştirebilirsiniz nerede `x:Arguments` uygular.  
   
  Öyle değilse `x:FactoryMethod` belirtilirse, `x:Arguments` yedekleme oluşturucular alternatif (varsayılan olmayan) imzalar için geçerlidir.  
   
@@ -66,7 +54,7 @@ Paketler yapı değişkenleri XAML varsayılan olmayan Oluşturucusu nesne öğe
   
  `x:Arguments` XAML kullanımı tipik herkese açık özellik öğesi kullanımı yönerge biçimlendirme içeren nesne öğenin türü başvurmuyor olmadığından değil. Gibi diğer yönergeleri benzer daha fazla `x:Code` burada öğesi demarks içinde işaretleme kabul varsayılandan gibi alt içeriği için bir aralığı. Bu durumda, her nesne öğesi XAML tür XAML ayrıştırıcıları göre hangi belirli Oluşturucusu fabrika yöntemi imza belirlemek için kullanılan bağımsız değişken türleri hakkında bilgi iletişim kuran bir `x:Arguments` kullanım başvurmak çalışıyor.  
   
- `x:Arguments`bir nesne öğesi için yapılandırılan herhangi diğer özellik öğelerinin, içerik, iç metni veya başlatma dizeleri nesne öğesinin gelmelidir. İçinde nesne öğelerin `x:Arguments` öznitelikleri ve başlatma dizeleri XAML türü ve yedekleme Oluşturucusu veya Fabrika yöntemi tarafından izin verildiği şekilde içerebilir. Nesne veya bağımsız değişkenler için özel XAML türler veya aksi takdirde varsayılan XAML ad uzayı dışında kurulan önek eşlemeleri başvurarak XAML türlerini belirtebilirsiniz.  
+ `x:Arguments` bir nesne öğesi için yapılandırılan herhangi diğer özellik öğelerinin, içerik, iç metni veya başlatma dizeleri nesne öğesinin gelmelidir. İçinde nesne öğelerin `x:Arguments` öznitelikleri ve başlatma dizeleri XAML türü ve yedekleme Oluşturucusu veya Fabrika yöntemi tarafından izin verildiği şekilde içerebilir. Nesne veya bağımsız değişkenler için özel XAML türler veya aksi takdirde varsayılan XAML ad uzayı dışında kurulan önek eşlemeleri başvurarak XAML türlerini belirtebilirsiniz.  
   
  XAML işlemcileri bağımsız değişkenleri nasıl belirtilen belirlemek için aşağıdaki kılavuzları kullanın `x:Arguments` bir nesne oluşturmak için kullanılmalıdır. Varsa `x:FactoryMethod` belirtilirse, bilgi karşılaştırıldığı belirtilen `x:FactoryMethod` (unutmayın değerini `x:FactoryMethod` yöntem adı ve adlandırılmış yöntemi aşırı olabilir. Varsa `x:FactoryMethod` belirtilmezse, bilgi nesnesinin tüm ortak oluşturucu aşırı kümesine karşılaştırılan. XAML işleme mantığı sonra parametrelerin sayısı karşılaştırır ve eşleşen parametre ile aşırı seçer. Birden fazla eşleşme varsa XAML işlemci sağlanan nesne öğeleri XAML türlerine göre parametre türlerini karşılaştırmanız gerekir. XAML işlemci davranış hala birden fazla eşleşme varsa, tanımlanmamıştır. Varsa bir `x:FactoryMethod` belirtildi, ancak yöntem çözümlenemiyor, XAML işlemci bir özel durum oluşturması gerekir.  
   

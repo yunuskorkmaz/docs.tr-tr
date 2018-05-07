@@ -1,22 +1,15 @@
 ---
 title: Anonim Türler (C# Programlama Kılavuzu)
 ms.date: 07/20/2015
-ms.prod: .net
-ms.technology:
-- devlang-csharp
-ms.topic: article
 helpviewer_keywords:
 - anonymous types [C#]
 - C# Language, anonymous types
 ms.assetid: 59c9d7a4-3b0e-475e-b620-0ab86c088e9b
-caps.latest.revision: 28
-author: BillWagner
-ms.author: wiwagn
-ms.openlocfilehash: 24ebf1c98e14eaf74572a6143ea6865d89735a6e
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 40c709e8a68f3a095672a9d4b7aacde5c62e12af
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="anonymous-types-c-programming-guide"></a>Anonim Türler (C# Programlama Kılavuzu)
 Anonim türleri açıkça bir tür ilk tanımlamak zorunda kalmadan bir salt okunur özellikler kümesi tek bir nesnede kapsüllemek için kolay bir yol sağlamak. Tür adı derleyici tarafından üretilen ve kaynak kodu düzeyinde kullanılabilir değildir. Her bir özellik türü derleyici tarafından algılanır.  
@@ -61,7 +54,7 @@ var anonArray = new[] { new { name = "apple", diam = 4 }, new { name = "grape", 
  Çünkü <xref:System.Object.Equals%2A> ve <xref:System.Object.GetHashCode%2A> anonim türler yöntemlere cinsinden tanımlanır `Equals` ve `GetHashCode` özellikleri, aynı anonim tür iki örneğini yöntemlerdir yalnızca tüm özelliklerini eşitse eşit.  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [C# programlama kılavuzu](../../../csharp/programming-guide/index.md)  
- [Nesne ve koleksiyon başlatıcıları](../../../csharp/programming-guide/classes-and-structs/object-and-collection-initializers.md)  
- [C# üzerinde LINQ ile çalışmaya başlama](../../../csharp/programming-guide/concepts/linq/getting-started-with-linq.md)  
+ [C# Programlama Kılavuzu](../../../csharp/programming-guide/index.md)  
+ [Nesne ve Koleksiyon Başlatıcıları](../../../csharp/programming-guide/classes-and-structs/object-and-collection-initializers.md)  
+ [C#'de LINQ Kullanmaya Başlama](../../../csharp/programming-guide/concepts/linq/getting-started-with-linq.md)  
  [LINQ Sorgu ifadeleri](../../../csharp/programming-guide/linq-query-expressions/index.md)

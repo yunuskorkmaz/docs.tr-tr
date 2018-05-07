@@ -1,13 +1,6 @@
 ---
-title: "Nasıl yapılır: Yerel Yayımlayan Yapılandırma"
-ms.custom: 
+title: 'Nasıl yapılır: Yerel Yayımlayan Yapılandırma'
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -15,30 +8,25 @@ helpviewer_keywords:
 - WCF, federation
 - federation
 ms.assetid: 15263371-514e-4ea6-90fb-14b4939154cd
-caps.latest.revision: "11"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: c24b039709a013f210a42d67c744c03489e4cf73
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 2b227398af3ea0dfd7cd866f1110ccc1737553c3
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-configure-a-local-issuer"></a>Nasıl yapılır: Yerel Yayımlayan Yapılandırma
 Bu konu, istemciyi yerel yayımlayan verilen belirteçleri kullanacak şekilde yapılandırmak açıklar.  
   
  Genellikle, bir istemci bir Federasyon Hizmeti ile iletişim kurduğunda, hizmet istemci belirteci vermek için beklenen belirteci hizmeti kendisini Federasyon Hizmeti için kimlik doğrulaması için kullanacağınız güvenlik adresini belirtir. Belirli durumlarda, istemci kullanmak için yapılandırılabilir bir *yerel yayımlayan*.  
   
- [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)]Yerel yayımlayan bir federe bağlama veren adresini http://schemas.microsoft.com/2005/12/ServiceModel/Addressing/Anonymous olduğu durumlarda kullanır veya `null`. Böyle durumlarda, yapılandırmalısınız <xref:System.ServiceModel.Description.ClientCredentials> adresi bu veren ile iletişim kurmak için kullanılacak yerel yayımlayan ve bağlama ile.  
+ Windows Communication Foundation (WCF) kullanan yerel yayımlayan bir federe bağlama veren adresini olduğu durumlarda http://schemas.microsoft.com/2005/12/ServiceModel/Addressing/Anonymous veya `null`. Böyle durumlarda, yapılandırmalısınız <xref:System.ServiceModel.Description.ClientCredentials> adresi bu veren ile iletişim kurmak için kullanılacak yerel yayımlayan ve bağlama ile.  
   
 > [!NOTE]
->  Varsa <xref:System.ServiceModel.Description.ClientCredentials.SupportInteractive%2A> özelliği `ClientCredentials` sınıfı ayarlanmış `true`, yerel veren adresi belirtilmedi ve veren adresi tarafından belirtilen [ \<wsFederationHttpBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/wsfederationhttpbinding.md) veya diğer Federe bağlama olduğu http://schemas.xmlsoap.org/ws/2005/05/identity/issuer/self, http://schemas.microsoft.com/2005/12/ServiceModel/Addressing/Anonymous, veya `null`, sonra Windows [!INCLUDE[infocard](../../../../includes/infocard-md.md)] veren kullanılır.  
+>  Varsa <xref:System.ServiceModel.Description.ClientCredentials.SupportInteractive%2A> özelliği `ClientCredentials` sınıfı ayarlanmış `true`, yerel veren adresi belirtilmedi ve veren adresi tarafından belirtilen [ \<wsFederationHttpBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/wsfederationhttpbinding.md) veya diğer Federe bağlama http://schemas.xmlsoap.org/ws/2005/05/identity/issuer/self, http://schemas.microsoft.com/2005/12/ServiceModel/Addressing/Anonymous, veya `null`, sonra Windows [!INCLUDE[infocard](../../../../includes/infocard-md.md)] veren kullanılır.  
   
 ### <a name="to-configure-the-local-issuer-in-code"></a>Yerel yayımlayan yapılandırma  
   
-1.  Türünde bir değişken oluşturma<xref:System.ServiceModel.Security.IssuedTokenClientCredential>  
+1.  Türünde bir değişken oluşturma <xref:System.ServiceModel.Security.IssuedTokenClientCredential>  
   
 2.  Döndürülen örneğine değişkenini <xref:System.ServiceModel.Description.ClientCredentials.IssuedToken%2A> özelliği `ClientCredentials` sınıfı. Bu örnek tarafından döndürülen <xref:System.ServiceModel.ClientBase%601.ClientCredentials%2A> özelliği istemcinin (devralınan <xref:System.ServiceModel.ClientBase%601>) veya <xref:System.ServiceModel.ChannelFactory.Credentials%2A> özelliği <xref:System.ServiceModel.ChannelFactory>:  
   

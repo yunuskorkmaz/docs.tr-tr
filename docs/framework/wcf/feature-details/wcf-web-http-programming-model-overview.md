@@ -1,42 +1,28 @@
 ---
 title: WCF Web HTTP Programlama Modeli Genel Bakış
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 ms.assetid: 381fdc3a-6e6c-4890-87fe-91cca6f4b476
-caps.latest.revision: 45
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: f617aa68a052b60933db2dc4b2051c910af6b9b9
-ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
+ms.openlocfilehash: 2c3498857c7c0e69c3678ba03f94c14f9b6d8e67
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/30/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="wcf-web-http-programming-model-overview"></a>WCF Web HTTP Programlama Modeli Genel Bakış
-[!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] WEB HTTP programlama modeli sağlar WEB HTTP Hizmetleri oluşturmak için gereken temel öğeleri [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]. [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] WEB HTTP Hizmetleri yelpazedeki Web tarayıcıları gibi olası istemcileri tarafından erişilecek tasarlanmıştır ve aşağıdaki benzersiz gereksinimlere sahiptir:  
+Windows Communication Foundation (WCF) WEB HTTP programlama modeli WCF WEB HTTP Hizmetleri oluşturmak için gereken temel öğeleri sağlar. WCF WEB HTTP Hizmetleri yelpazedeki Web tarayıcıları gibi olası istemcileri tarafından erişilecek tasarlanmıştır ve aşağıdaki benzersiz gereksinimlere sahiptir:  
   
--   **URI ve URI İşleme** URI'ler WEB HTTP Hizmetleri tasarımında merkezi bir rol oynar. [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] WEB HTTP programlama modeli kullanır <xref:System.UriTemplate> ve <xref:System.UriTemplateTable> sınıfları URI işleme özellikleri sağlar.  
+-   **URI ve URI İşleme** URI'ler WEB HTTP Hizmetleri tasarımında merkezi bir rol oynar. WCF WEB HTTP programlama modeli kullanır <xref:System.UriTemplate> ve <xref:System.UriTemplateTable> sınıfları URI işleme özellikleri sağlar.  
   
--   **GET ve POST işlemleri için destek** WEB HTTP Hizmetleri GET fiili kullanım çeşitli yanı sıra veri alma için veri değişikliği ve Uzaktan çağırma fiiller çağırma. [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] WEB HTTP programlama modeli kullanır <xref:System.ServiceModel.Web.WebGetAttribute> ve <xref:System.ServiceModel.Web.WebInvokeAttribute> hizmet işlemleri hem GET hem de diğer HTTP fiilleri gibi PUT, POST ilişkilendirmek ve silmek için.  
+-   **GET ve POST işlemleri için destek** WEB HTTP Hizmetleri GET fiili kullanım çeşitli yanı sıra veri alma için veri değişikliği ve Uzaktan çağırma fiiller çağırma. WCF WEB HTTP programlama modeli kullanır <xref:System.ServiceModel.Web.WebGetAttribute> ve <xref:System.ServiceModel.Web.WebInvokeAttribute> hizmet işlemleri hem GET hem de diğer HTTP fiilleri gibi PUT, POST ilişkilendirmek ve silmek için.  
   
--   **Birden çok veri biçimleri** Web stili Hizmetleri'ni birçok tür SOAP iletilerine ek veri işleme. [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] WEB HTTP programlama modeli kullanır <xref:System.ServiceModel.WebHttpBinding> ve <xref:System.ServiceModel.Description.WebHttpBehavior> XML belgeleri, JSON veri nesnesi ve ikili içerik görüntü, video dosyaları veya düz metin gibi akışları da dahil olmak üzere birçok farklı veri biçimleri desteklemek için.  
+-   **Birden çok veri biçimleri** Web stili Hizmetleri'ni birçok tür SOAP iletilerine ek veri işleme. WCF WEB HTTP programlama modeli kullanır <xref:System.ServiceModel.WebHttpBinding> ve <xref:System.ServiceModel.Description.WebHttpBehavior> XML belgeleri, JSON veri nesnesi ve ikili içerik görüntü, video dosyaları veya düz metin gibi akışları da dahil olmak üzere birçok farklı veri biçimleri desteklemek için.  
   
- [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] WEB HTTP programlama modeli genişletir ulaşabileceği [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] WEB HTTP Hizmetleri, AJAX ve JSON Hizmetleri ve dağıtım (ATOM/RSS) akışları içeren Web stili senaryoları için. AJAX ve JSON hizmetleri hakkında daha fazla bilgi için bkz: [AJAX tümleştirme ve JSON desteği](../../../../docs/framework/wcf/feature-details/ajax-integration-and-json-support.md). Dağıtım hakkında daha fazla bilgi için bkz: [WCF dağıtımı genel bakış](../../../../docs/framework/wcf/feature-details/wcf-syndication-overview.md).  
+ WCF WEB HTTP programlama modeli WCF WEB HTTP Hizmetleri, AJAX ve JSON hizmetlerini ve dağıtım (ATOM/RSS) akışları içeren Web stili senaryolarını kapsamak üzere ulaşabileceği genişletir. AJAX ve JSON hizmetleri hakkında daha fazla bilgi için bkz: [AJAX tümleştirme ve JSON desteği](../../../../docs/framework/wcf/feature-details/ajax-integration-and-json-support.md). Dağıtım hakkında daha fazla bilgi için bkz: [WCF dağıtımı genel bakış](../../../../docs/framework/wcf/feature-details/wcf-syndication-overview.md).  
   
  Bir WEB HTTP hizmetinden döndürülen veri türleri hakkında ek bir kısıtlama yoktur. Bir WEB HTTP hizmeti işleminin serializable bir tür döndürülebilir. Hangi veri türleri bir URL belirtilebilir bir sınırlama yoktur bir web tarayıcısı tarafından WEB HTTP hizmeti işlemleri olabileceğinden çağırır. Varsayılan olarak desteklenen hangi türleri hakkında daha fazla bilgi için bkz: **UriTemplate sorgu dizesi parametreleri ve URL'leri** bölümüne bakın. Varsayılan davranış, gerçek parametre türü için bir URL içinde belirtilen parametreler dönüştürme belirten kendi T:System.ServiceModel.Dispatcher.QueryStringConverter uygulamasını sağlayarak değiştirilebilir. Daha fazla bilgi için bkz: <xref:System.ServiceModel.Dispatcher.QueryStringConverter>  
   
 > [!CAUTION]
->  İle yazılmış Hizmetler [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] WEB HTTP programlama modeli SOAP iletilerine kullanmayın. SOAP kullanılmadığı için güvenlik özellikleri tarafından sağlanan [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] kullanılamaz. Ancak taşıma tabanlı güvenlik hizmetiniz HTTPS ile barındırarak kullanabilirsiniz. Hakkında daha fazla bilgi için [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] güvenlik, bkz: [güvenliğine genel bakış](../../../../docs/framework/wcf/feature-details/security-overview.md)  
+>  WCF WEB HTTP programlama modeli ile yazılmış hizmetler SOAP iletilerine kullanmayın. SOAP kullanılmadığı için WCF tarafından sağlanan güvenlik özellikleri kullanılamaz. Ancak taşıma tabanlı güvenlik hizmetiniz HTTPS ile barındırarak kullanabilirsiniz. WCF güvenlik hakkında daha fazla bilgi için bkz: [güvenliğine genel bakış](../../../../docs/framework/wcf/feature-details/security-overview.md)  
   
 > [!WARNING]
 >  WebDAV uzantısının IIS yüklemek, tüm PUT isteklerini işlemek için uzantı çalışır WebDAV bir HTTP 405 hata dönmek Web HTTP Hizmetleri neden olabilir. Bu sorunu çözmek için WebDAV uzantısının kaldırın veya WebDAV uzantısı, web siteniz için devre dışı bırakabilirsiniz. Daha fazla bilgi için bkz: [IIS ve WebDav](http://learn.iis.net/page.aspx/357/webdav-for-iis-70/)  
@@ -64,12 +50,12 @@ ms.lasthandoff: 04/30/2018
   
 -   `Bind`() ve `Match`(), böylece çağırabilirsiniz inverses olan `Match`( `Bind`(x)) ve başlattığınız ile aynı ortamı geri dönün.  
   
- (Bir istek URİ'SİNDE tabanlı bir hizmet işlemi için gönderme olduğu gerekli özellikle sunucuda) birçok kez olan bir dizi izlemek istediğiniz <xref:System.UriTemplate> bağımsız olarak her kapsanan bir adresi bir veri yapısı nesneleri Şablonlar. <xref:System.UriTemplateTable> URI şablonları kümesini temsil eder ve bir dizi şablonları ve bir aday URI verilen en iyi eşleşmeyi seçer. Bu belirli ağ yığınını ile bağlı değil ([!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] dahil) için gerekli olan her yerde kullanabilirsiniz.  
+ (Bir istek URİ'SİNDE tabanlı bir hizmet işlemi için gönderme olduğu gerekli özellikle sunucuda) birçok kez olan bir dizi izlemek istediğiniz <xref:System.UriTemplate> bağımsız olarak her kapsanan bir adresi bir veri yapısı nesneleri Şablonlar. <xref:System.UriTemplateTable> URI şablonları kümesini temsil eder ve bir dizi şablonları ve bir aday URI verilen en iyi eşleşmeyi seçer. Gerekli olan her yerde kullanabilmek için bu (WCF dahil) herhangi belirli ağ yığınını ile bağlı değil.  
   
- [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] Hizmet modeli kullanır <xref:System.UriTemplate> ve <xref:System.UriTemplateTable> URI tarafından tanımlanan bir dizi hizmet işlemleri ilişkilendirmek üzere bir <xref:System.UriTemplate>. Bir hizmet işlemi ile ilişkili bir <xref:System.UriTemplate>, kullanarak <xref:System.ServiceModel.Web.WebGetAttribute> veya <xref:System.ServiceModel.Web.WebInvokeAttribute>. Hakkında daha fazla bilgi için <xref:System.UriTemplate> ve <xref:System.UriTemplateTable>, bkz: [UriTemplate ve UriTemplateTable](../../../../docs/framework/wcf/feature-details/uritemplate-and-uritemplatetable.md)  
+ WCF hizmet modeli kullanır <xref:System.UriTemplate> ve <xref:System.UriTemplateTable> URI tarafından tanımlanan bir dizi hizmet işlemleri ilişkilendirmek üzere bir <xref:System.UriTemplate>. Bir hizmet işlemi ile ilişkili bir <xref:System.UriTemplate>, kullanarak <xref:System.ServiceModel.Web.WebGetAttribute> veya <xref:System.ServiceModel.Web.WebInvokeAttribute>. Hakkında daha fazla bilgi için <xref:System.UriTemplate> ve <xref:System.UriTemplateTable>, bkz: [UriTemplate ve UriTemplateTable](../../../../docs/framework/wcf/feature-details/uritemplate-and-uritemplatetable.md)  
   
 ## <a name="webget-and-webinvoke-attributes"></a>WebGet ve Webınvoke öznitelikleri  
- [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] WEB HTTP Hizmetleri alma fiilleri (örneğin HTTP GET) ek olarak çeşitli kullanın (örneğin HTTP POST, PUT ve Sil) fiillerini çağırma. [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] WEB HTTP programlama modeli sağlayan hizmet geliştiricileri denetim hem URI şablonunu ve kendi hizmet işlemleriyle ilişkili fiil <xref:System.ServiceModel.Web.WebGetAttribute> ve <xref:System.ServiceModel.Web.WebInvokeAttribute>. <xref:System.ServiceModel.Web.WebGetAttribute> Ve <xref:System.ServiceModel.Web.WebInvokeAttribute> nasıl tek tek işlemleri denetlemenizi URI'ler için bağlanan ve HTTP yöntemleri bu URI ile ilişkili izin verir. Örneğin, ekleme <xref:System.ServiceModel.Web.WebGetAttribute> ve <xref:System.ServiceModel.Web.WebInvokeAttribute> aşağıdaki kodda.  
+ WCF WEB HTTP Hizmetleri alma fiilleri (örneğin HTTP GET) ek olarak çeşitli kullanın (örneğin HTTP POST, PUT ve Sil) fiillerini çağırma. WCF WEB HTTP programlama modeli denetimi hem URI şablonunu ve kendi hizmet işlemleriyle ilişkili fiil hizmet geliştiricilere olanağı tanır <xref:System.ServiceModel.Web.WebGetAttribute> ve <xref:System.ServiceModel.Web.WebInvokeAttribute>. <xref:System.ServiceModel.Web.WebGetAttribute> Ve <xref:System.ServiceModel.Web.WebInvokeAttribute> nasıl tek tek işlemleri denetlemenizi URI'ler için bağlanan ve HTTP yöntemleri bu URI ile ilişkili izin verir. Örneğin, ekleme <xref:System.ServiceModel.Web.WebGetAttribute> ve <xref:System.ServiceModel.Web.WebInvokeAttribute> aşağıdaki kodda.  
   
 ```  
 [ServiceContract]  
@@ -109,7 +95,7 @@ interface ICustomer
 }  
 ```  
   
- Tam bir örnek görmek için bir [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] kullanan hizmet [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] WEB HTTP programlama modeli, bkz: [nasıl yapılır: temel bir WCF Web HTTP hizmeti oluşturma](../../../../docs/framework/wcf/feature-details/how-to-create-a-basic-wcf-web-http-service.md)  
+ WCF WEB HTTP programlama modelini kullanan bir WCF Hizmeti tam bir örnek görmek için [nasıl yapılır: temel bir WCF Web HTTP hizmeti oluşturma](../../../../docs/framework/wcf/feature-details/how-to-create-a-basic-wcf-web-http-service.md)  
   
 ## <a name="uritemplate-query-string-parameters-and-urls"></a>UriTemplate sorgu dizesi parametreleri ve URL'leri  
  Web stili Hizmetleri hizmet işlemle ilişkili bir URL yazarak bir Web tarayıcısından çağrılabilir. Bu hizmet işlemleri URL'de dize biçimindeki belirtilmelidir sorgu dizesi parametreleri sürebilir. Aşağıdaki tabloda bir URL ve kullanılan biçimi içinde geçirilen türleri gösterilmektedir.  
@@ -138,7 +124,7 @@ interface ICustomer
 |Türleri bir `TypeConverterAttribute` , dönüştürebilir türü için ve bir dize gösterimi.|Tür dönüştürücü bağlıdır.|  
   
 ## <a name="formats-and-the-wcf-web-http-programming-model"></a>Biçimleri ve WCF WEB HTTP programlama modeli  
- [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] WEB HTTP programlama modeli birçok farklı veri biçimleri ile çalışmak için yeni özelliklere sahiptir. Bağlama katmanında <xref:System.ServiceModel.WebHttpBinding> okuma ve yazma aşağıdaki farklı veri türleri:  
+ WCF WEB HTTP programlama modeli birçok farklı veri biçimleri ile çalışmak için yeni özellikler vardır. Bağlama katmanında <xref:System.ServiceModel.WebHttpBinding> okuma ve yazma aşağıdaki farklı veri türleri:  
   
 -   XML  
   
@@ -146,12 +132,12 @@ interface ICustomer
   
 -   Donuk ikili akışlar  
   
- Yani [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] WEB HTTP programlama modeli, istediğiniz türde veriyi işleyebilen ancak karşı programlama <xref:System.IO.Stream>.  
+ Bu herhangi bir veri türü WCF WEB HTTP programlama modeli işleyebilir ancak karşı programlama gelir <xref:System.IO.Stream>.  
   
  [!INCLUDE[netfx35_short](../../../../includes/netfx35-short-md.md)] JSON verilerini (AJAX) yanı sıra dağıtım akışlarını (ATOM ve RSS dahil) destekler. Bu özellikler hakkında daha fazla bilgi için bkz: [WCF Web HTTP biçimlendirme](../../../../docs/framework/wcf/feature-details/wcf-web-http-formatting.md)[WCF dağıtımı genel bakış](../../../../docs/framework/wcf/feature-details/wcf-syndication-overview.md) ve [AJAX tümleştirme ve JSON desteği](../../../../docs/framework/wcf/feature-details/ajax-integration-and-json-support.md).  
   
 ## <a name="wcf-web-http-programming-model-and-security"></a>WCF WEB HTTP programlama modeli ve güvenlik  
- Çünkü [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] WEB HTTP programlama modeli desteklemez WS-* protokoller, güvenli hale getirmek için tek yolu bir [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] WEB HTTP hizmeti hizmeti SSL ile HTTPS üzerinden kullanıma etmektir. SSL ile ayarlama hakkında daha fazla bilgi için [!INCLUDE[iisver](../../../../includes/iisver-md.md)], bkz: [IIS'te SSL uygulama](http://go.microsoft.com/fwlink/?LinkId=131613)  
+ WCF WEB HTTP programlama modeli WS - desteklemediğinden * protokoller, güvenli bir WCF WEB HTTP hizmeti için tek yoludur hizmeti SSL ile HTTPS üzerinden kullanıma. SSL ile ayarlama hakkında daha fazla bilgi için [!INCLUDE[iisver](../../../../includes/iisver-md.md)], bkz: [IIS'te SSL uygulama](http://go.microsoft.com/fwlink/?LinkId=131613)  
   
 ## <a name="troubleshooting-the-wcf-web-http-programming-model"></a>WCF WEB HTTP programlama modeli sorunlarını giderme  
  WCF WEB HTTP çağırma zaman Hizmetleri kullanarak bir <xref:System.ServiceModel.Channels.ChannelFactoryBase%601> bir kanal oluşturmak için <xref:System.ServiceModel.Description.WebHttpBehavior> kullanan <xref:System.ServiceModel.EndpointAddress> dosya olsa bile farklı bir ayarla <xref:System.ServiceModel.EndpointAddress> geçirilir <xref:System.ServiceModel.Channels.ChannelFactoryBase%601>.  

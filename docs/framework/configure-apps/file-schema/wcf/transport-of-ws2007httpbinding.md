@@ -1,24 +1,12 @@
 ---
-title: "&lt;ws2007HttpBinding&gt; &lt;taşıma&gt;"
-ms.custom: 
+title: '&lt;ws2007HttpBinding&gt; &lt;taşıma&gt;'
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 692befa3-8b0b-4ec5-b601-755874e98eb0
-caps.latest.revision: "10"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: d3a0aa0e4dacafc4c81fa324529dfa3551fcc9c8
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.openlocfilehash: 3be9d4e64e63b32156cb64257f5bed8230cee3aa
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="lttransportgt-of-ltws2007httpbindinggt"></a>&lt;ws2007HttpBinding&gt; &lt;taşıma&gt;
 HTTP taşıma için kimlik doğrulama ayarlarını tanımlar.  
@@ -60,7 +48,7 @@ transport clientCredentialType =
 |Yok.|Güvenliği devre dışı bırakıldı.|  
 |Temel|Temel kimlik doğrulaması kullanır.|  
 |Özet|Özet kimlik doğrulaması kullanır.|  
-|Ntlm|Bir Windows etki alanı ile bir geri dönüş olarak NTLM kimlik doğrulaması kullanır.|  
+|NTLM|Bir Windows etki alanı ile bir geri dönüş olarak NTLM kimlik doğrulaması kullanır.|  
 |Windows|Tümleşik Windows kimlik doğrulaması kullanır.|  
 |Sertifika|İstemci kimlik doğrulaması için X.509 sertifikaları kullanır.|  
   
@@ -71,7 +59,7 @@ transport clientCredentialType =
 |Yok.|Güvenliği devre dışı bırakıldı.|  
 |Temel|Temel kimlik doğrulaması kullanır.|  
 |Özet|Özet kimlik doğrulaması kullanır.|  
-|Ntlm|Bir Windows etki alanı ile bir geri dönüş olarak NTLM kullanır.|  
+|NTLM|Bir Windows etki alanı ile bir geri dönüş olarak NTLM kullanır.|  
 |Windows|Tümleşik Windows kimlik doğrulaması kullanır.|  
 |Sertifika|İstemci kimlik doğrulaması için X.509 sertifikaları kullanır.|  
   

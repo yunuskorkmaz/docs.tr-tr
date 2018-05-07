@@ -1,22 +1,12 @@
 ---
 title: Seri hale getirme (C#)
-ms.custom: ''
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- devlang-csharp
-ms.topic: article
 ms.assetid: 704ff2bf-02ab-4fea-94ea-594107825645
-caps.latest.revision: 3
-author: BillWagner
-ms.author: wiwagn
-ms.openlocfilehash: b045f092bef837d1345b5f3b31df0a5ec22fc010
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.openlocfilehash: 1f1b7fde18b59133088d83e3bf948e26b7a7b6aa
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="serialization-c-"></a>Seri hale getirme (C#)
 Seri hale getirme bir nesne, nesne depolamak veya bellek, bir veritabanı veya dosya aktarmak için baytı bir akışa dönüştürme işlemidir. Asıl amacı, gerektiğinde yeniden oluşturmak için bir nesnenin durumu tasarruf etmektir. Ters işlemi seri durumdan çıkarma adı verilir.  
@@ -32,7 +22,7 @@ Seri hale getirme bir nesne, nesne depolamak veya bellek, bir veritabanı veya d
  Seri hale getirme bir nesnenin durumunu kaydetmek ve gerekirse, veri değişimi yanı sıra nesneleri depolama sağlama yeniden oluşturmak geliştiricinin sağlar. Seri hale getirme bir geliştirici nesne uzak uygulama için bir Web hizmeti aracılığıyla gönderme, bir nesne bir etki alanından diğerine geçirme, bir nesne bir güvenlik duvarı üzerinden XML dizesi olarak geçirme veya güvenliğini sağlama gibi eylemleri gerçekleştirebilir veya uygulamalar arasında kullanıcıya özgü bilgileri.  
   
 ### <a name="making-an-object-serializable"></a>Bir nesne seri hale getirilebilir yapma  
- Nesnenin seri hale getirilebilmesi için ihtiyacınız nesneyi serileştirmek için akış serileştirilmiş nesne içeren bir ve bir <xref:System.Runtime.Serialization.Formatter>. <xref:System.Runtime.Serialization>seri hale getirme ve nesneleri seri durumdan çıkarmak için gerekli olan sınıflar içerir.  
+ Nesnenin seri hale getirilebilmesi için ihtiyacınız nesneyi serileştirmek için akış serileştirilmiş nesne içeren bir ve bir <xref:System.Runtime.Serialization.Formatter>. <xref:System.Runtime.Serialization> seri hale getirme ve nesneleri seri durumdan çıkarmak için gerekli olan sınıflar içerir.  
   
  Uygulama <xref:System.SerializableAttribute> özniteliği, bu türdeki örneklerin serileştirilebilir belirtmek için bir tür. A <xref:System.Runtime.Serialization.SerializationException> serileştirmek girişiminde bulunan ancak türüne sahip değil, özel durum <xref:System.SerializableAttribute> özniteliği.  
   
@@ -47,7 +37,7 @@ Seri hale getirme bir nesne, nesne depolamak veya bellek, bir veritabanı veya d
  İkili seri hale getirme, depolama veya ağ yuva tabanlı akışları gibi kullanımlar için compact serileştirme üretmek için ikili kodlama kullanır.  
   
 ### <a name="xml-serialization"></a>XML seri hale getirme  
- XML serileştirme, belirli bir XML Şeması Tanım Dili (XSD) belge uyan bir XML akışı içine genel alanlar ve bir nesne veya özelliklerini parametreler ve dönüş değerleri yöntemlerden serileştirir. XML serileştirme sonuçlarında genel özellikleri ve XML biçimine dönüştürülür alanları sınıflarıyla kesin türü belirtilmiş. <xref:System.Xml.Serialization>seri hale getirme ve XML seri durumdan çıkarmak için gerekli olan sınıflar içerir.  
+ XML serileştirme, belirli bir XML Şeması Tanım Dili (XSD) belge uyan bir XML akışı içine genel alanlar ve bir nesne veya özelliklerini parametreler ve dönüş değerleri yöntemlerden serileştirir. XML serileştirme sonuçlarında genel özellikleri ve XML biçimine dönüştürülür alanları sınıflarıyla kesin türü belirtilmiş. <xref:System.Xml.Serialization> seri hale getirme ve XML seri durumdan çıkarmak için gerekli olan sınıflar içerir.  
   
  Öznitelikler sınıflar ve sınıf üyeleri için şeklini denetlemek için uygulayabileceğiniz <xref:System.Xml.Serialization.XmlSerializer> serileştiren veya sınıfının bir örneği seri durumdan çıkarır.  
   
@@ -67,7 +57,7 @@ Seri hale getirme bir nesne, nesne depolamak veya bellek, bir veritabanı veya d
 ## <a name="designer-serialization"></a>Tasarımcı seri hale getirme  
  Tasarımcı serileştirme genellikle geliştirme araçları ile ilişkilendirilmiş nesne Kalıcılık türü içerir serileştirme özel biçimidir. Tasarımcı serileştirme bir nesne grafiğinin nesne grafiğinin kurtarmak için daha sonra kullanılabilir bir kaynak dosyasına dönüştürme işlemidir. Bir kaynak dosyası kodu, biçimlendirme veya hatta SQL tablo bilgileri içerebilir.  
   
-##  <a name="BKMK_RelatedTopics"></a>İlgili Konular ve örnekler  
+##  <a name="BKMK_RelatedTopics"></a> İlgili Konular ve örnekler  
  [İzlenecek yol: Visual Studio'da (C#) bir nesneyi kalıcı kılma](../../../../csharp/programming-guide/concepts/serialization/walkthrough-persisting-an-object-in-visual-studio.md)  
  Bir nesnenin veri değerlerini depolamak ve nesne örneği sonraki açışınızda almak sağlayarak örnekleri arasında kalıcı hale getirmek için seri hale getirme'nın nasıl kullanılabileceğini gösterir.  
   

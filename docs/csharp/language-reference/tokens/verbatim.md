@@ -1,10 +1,6 @@
 ---
-title: "(, C# Başvurusu)"
+title: (, C# Başvurusu)
 ms.date: 02/09/2017
-ms.prod: .net
-ms.technology:
-- devlang-csharp
-ms.topic: article
 f1_keywords:
 - '@_CSharpKeyword'
 - '@'
@@ -14,11 +10,11 @@ helpviewer_keywords:
 ms.assetid: 89bc7e53-85f5-478a-866d-1cca003c4e8c
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 2b62231afc3014f9fc2b9ac7bd39168f40e12c8d
-ms.sourcegitcommit: 83dd5ec003e788ccb3e33f3412a7af39ae347646
+ms.openlocfilehash: bdf8735894594acab31586e539f90e426db97f24
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/15/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="-c-reference"></a>(, C# Başvurusu)
 
@@ -28,7 +24,7 @@ ms.lasthandoff: 03/15/2018
 
    [!code-csharp[verbatim1](../../../../samples/snippets/csharp/language-reference/keywords/verbatim1.cs#1)]
 
-1. Bir dize sabit değeri aynen yorumlanacağını olduğunu belirtmek için. `@` Bu örnekte karakter tanımlayan bir *verbatim dize sabit değeri*. Basit kaçış sıraları (gibi `"\\"` bir ters eğik çizgi için), onaltılık kaçış dizilerine (gibi `"\x0041"` bir büyük harf A ve Unicode için çıkış sıraları, gibi `"\u0041"` büyük bir için tam anlamıyla yorumlanır. Yalnızca bir teklif kaçış sırası (`""`) yorumlanmaması tam anlamıyla; tek tırnak işareti üretir. Aşağıdaki örnek, iki özdeş dosya yollarını kullanarak bir tane normal dize sabit değeri ve diğer verbatim dize sabit değeri kullanarak tanımlar. Bu, verbatim dize değişmez değerleri daha yaygın kullanımları biridir.
+1. Bir dize sabit değeri aynen yorumlanacağını olduğunu belirtmek için. `@` Bu örnekte karakter tanımlayan bir *verbatim dize sabit değeri*. Basit kaçış sıraları (gibi `"\\"` bir ters eğik çizgi için), onaltılık kaçış dizilerine (gibi `"\x0041"` bir büyük harf a) ve Unicode kaçış sıraları (gibi `"\u0041"` bir büyük harf A için) tam anlamıyla yorumlanır. Yalnızca bir teklif kaçış sırası (`""`) yorumlanmaması tam anlamıyla; tek tırnak işareti üretir. Ayrıca, durumunda bir verbatim [Ara değerli dize](interpolated.md) parantezi kaçış dizilerine (`{{` ve `}}`) değil yorumlanır tek ayracı karakterleri tam anlamıyla; oluşturdukları. Aşağıdaki örnek, iki özdeş dosya yollarını kullanarak bir tane normal dize sabit değeri ve diğer verbatim dize sabit değeri kullanarak tanımlar. Bu, verbatim dize değişmez değerleri daha yaygın kullanımları biridir.
 
    [!code-csharp[verbatim2](../../../../samples/snippets/csharp/language-reference/keywords/verbatim1.cs#2)]
 

@@ -1,29 +1,19 @@
 ---
-title: "Regasm.exe (Derleme Kayıt Aracı)"
-ms.custom: 
+title: Regasm.exe (Derleme Kayıt Aracı)
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - Assembly Registration tool
 - assemblies [.NET Framework], registering
 - Regasm.exe
 - registering assemblies
 ms.assetid: e190e342-36ef-4651-a0b4-0e8c2c0281cb
-caps.latest.revision: "20"
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: b2762080c66c3c9451e7c7c3d4621d8cb9d4846e
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 11ccdb4c75af2b37595d9be977f2ab881ebe1184
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="regasmexe-assembly-registration-tool"></a>Regasm.exe (Derleme Kayıt Aracı)
 Derleme Kayıt aracı, derleme içindeki meta verileri okur ve kayıt defterine gerekli girişleri ekler, bu da COM istemcilerinin şeffaf olarak .NET Framework sınıfları oluşturmalarına izin verir. Sınıf kaydettirildikten sonra, COM istemcileri artık sınıfı bir COM sınıfıymış gibi kullanabilir. Sınıf yalnızca bir defa, derleme yüklenirken kaydettirilir. Derleme içindeki sınıf örnekleri gerçekten kaydettirilene kadar COM'dan oluşturulamaz.  
@@ -42,7 +32,7 @@ regasm assemblyFile [options]
   
 |Parametre|Açıklama|  
 |---------------|-----------------|  
-|*assemblyFile*|COM ile kaydettirilecek derleme.|  
+|*AssemblyFile*|COM ile kaydettirilecek derleme.|  
   
 |Seçenek|Açıklama|  
 |------------|-----------------|  
@@ -58,7 +48,7 @@ regasm assemblyFile [options]
 |**/?** veya   **/Yardım**|Araç için komut sözdizimini ve seçenekleri görüntüler.|  
   
 > [!NOTE]
->  Regasm.exe komut satırı seçenekleri büyük/küçük harfe duyarsızdır. Seçeneğin, yalnızca onu benzersiz şekilde tanımlamaya yetecek kadarını sağlamanız yeterlidir. Örneğin,  **/n**  eşdeğerdir **/nologo** ve **/t:** *outfile.tlb* eşdeğerdir **TLB:**  *outfile.tlb*.  
+>  Regasm.exe komut satırı seçenekleri büyük/küçük harfe duyarsızdır. Seçeneğin, yalnızca onu benzersiz şekilde tanımlamaya yetecek kadarını sağlamanız yeterlidir. Örneğin, **/n** eşdeğerdir **/nologo** ve **/t:** *outfile.tlb* eşdeğerdir **TLB:**  *OutFile.tlb*.  
   
 ## <a name="remarks"></a>Açıklamalar  
  Kullanabileceğiniz **/regfile** değişiklikleri doğrudan kayıt defterinde değişiklik yapmadan yerine kayıt defteri girdileri içeren bir .reg dosyasını oluşturmak için seçeneği. Kayıt Defteri Düzenleyicisi (Regedit.exe) aracı ile .reg dosyasını içe aktararak, bir bilgisayarda kayıt defterini güncelleştirebilirsiniz. .reg dosyasının, kullanıcı tarafından tanımlanan kayıt işlevleriyle yapılabilen kayıt defteri güncelleştirmelerini içermediğini unutmayın.  Unutmayın **/regfile** seçeneği yalnızca yönetilen sınıflar için kayıt defteri girdileri yayar.  Bu seçenek girişlerinde yayma değil `TypeLibID`s veya `InterfaceID`s.  

@@ -2,22 +2,15 @@
 title: Sınıflar (C# Programlama Kılavuzu)
 description: Sınıf türleri ve bunların nasıl oluşturulacağı hakkında bilgi edinin
 ms.date: 04/05/2018
-ms.prod: .net
-ms.technology:
-- devlang-csharp
-ms.topic: article
 helpviewer_keywords:
 - classes [C#]
 - C# language, classes
 ms.assetid: e8848524-7273-429f-8aba-c658d5eff5ad
-caps.latest.revision: 40
-author: BillWagner
-ms.author: wiwagn
-ms.openlocfilehash: 1909623d3d8f6110a5fb466575bdab2d45495c2a
-ms.sourcegitcommit: 9a4fe1a1c37b26532654b4bbe22d702237950009
+ms.openlocfilehash: 808e25315b0010fd55112f2ed237485c3d0c40d4
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="classes-c-programming-guide"></a>Sınıflar (C# Programlama Kılavuzu)
 A *sınıfı* değişkenleri diğer türleri, yöntemleri ve olayları bir arada gruplandırma tarafından kendi özel türler oluşturmanızı sağlayan bir yapıdır. Şeması gibi bir sınıftır. Veri ve türü davranışını tanımlar. Sınıf static olarak bildirilmedi, istemci kodu oluşturabilirsiniz *örnekleri* bunu. Bu örnekleri *nesneleri* bir değişkene atanır. Bir sınıf örneği kapsamının dışında tüm başvuruları oluncaya kadar bellekte kalır. O anda CLR, atık toplama için uygun olarak işaretler. Sınıf olarak bildirilirse [statik](../../../csharp/language-reference/keywords/static.md)örnekleri oluşturulamıyor ve istemci kodu yalnızca erişebileceği sınıfı aracılığıyla. Daha fazla bilgi için bkz: [statik sınıflar ve statik sınıf üyeleri](../../../csharp/programming-guide/classes-and-structs/static-classes-and-static-class-members.md).  
@@ -99,7 +92,7 @@ Nesne oluşturulduğunda, bellek yönetilen yığında ayrılan ve yalnızca bir
 ## <a name="c-language-specification"></a>C# Dil Belirtimi  
  [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]  
   
-## <a name="see-also"></a>Ayrıca bkz.  
+## <a name="see-also"></a>Ayrıca Bkz.  
  [C# Programlama Kılavuzu](../../../csharp/programming-guide/index.md)  
  [Nesne Odaklı Programlama](../concepts/object-oriented-programming.md)  
  [Çok biçimlilik](../../../csharp/programming-guide/classes-and-structs/polymorphism.md)  

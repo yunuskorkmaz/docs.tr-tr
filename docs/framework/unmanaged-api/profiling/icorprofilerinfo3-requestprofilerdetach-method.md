@@ -1,14 +1,6 @@
 ---
-title: "ICorProfilerInfo3::RequestProfilerDetach Yöntemi"
-ms.custom: 
+title: ICorProfilerInfo3::RequestProfilerDetach Yöntemi
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: reference
 api_name:
 - ICorProfilerInfo3.RequestProfilerDetach Method
 api_location:
@@ -23,17 +15,13 @@ helpviewer_keywords:
 ms.assetid: ea102e62-0454-4477-bcf3-126773acd184
 topic_type:
 - apiref
-caps.latest.revision: 
 author: mairaw
 ms.author: mairaw
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 33a5c45bbb64029177a0a680243dd39a825683e3
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: e69a15d70b8f1b9e271571be92f1f6717a9f196c
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="icorprofilerinfo3requestprofilerdetach-method"></a>ICorProfilerInfo3::RequestProfilerDetach Yöntemi
 Profil Oluşturucu ayırmak için çalışma zamanı bildirir.  
@@ -59,7 +47,7 @@ HRESULT RequestProfilerDetach(
 |CORPROF_E_IMMUTABLE_FLAGS_SET|Profil Oluşturucu başlangıçta değişmez bayrakları çünkü ayrılmayı mümkün değildir. Ayrılmayı denendi değil; Profil Oluşturucu hala tam olarak eklenir.|  
 |CORPROF_E_IRREVERSIBLE_INSTRUMENTATION_PRESENT|Ayrılmayı Microsoft Ara dili (MSIL) kod kullanılan profil oluşturucu izleme eklenmiş olduğundan imkansız veya eklenen `enter` / `leave` kancaları. Ayrılmayı denendi değil; Profil Oluşturucu hala tam olarak eklenir.<br /><br /> **Not** MSIL izlenmiş olan kodu kullanarak profil oluşturucu tarafından sağlanan kodudur [Setılfunctionbody](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-setilfunctionbody-method.md) yöntemi.|  
 |CORPROF_E_RUNTIME_UNINITIALIZED|Çalışma zamanı, yönetilen bir uygulamada henüz başlatılmadı. (Diğer bir deyişle, çalışma zamanı tamamen yüklendi değil.) Profil Oluşturucu geri çağırma içinde 's ayrılmayı istendiğinde bu hata kodu döndürülebilir [Icorprofilercallback::Initialize](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-initialize-method.md) yöntemi.|  
-|CORPROF_E_UNSUPPORTED_CALL_SEQUENCE|`RequestProfilerDetach`desteklenmeyen bir zamanda çağrıldı. Yönetilen iş parçacığı üzerinde ancak içinden değil yöntem çağrıldığında bu saptanmışsa bir [Icorprofilercallback](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-interface.md) yöntemi veya içinden bir [Icorprofilercallback](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-interface.md) çöp toplama genişliğinin kullanılmasını yöntemi. Daha fazla bilgi için bkz: [CORPROF_E_UNSUPPORTED_CALL_SEQUENCE HRESULT](../../../../docs/framework/unmanaged-api/profiling/corprof-e-unsupported-call-sequence-hresult.md).|  
+|CORPROF_E_UNSUPPORTED_CALL_SEQUENCE|`RequestProfilerDetach` desteklenmeyen bir zamanda çağrıldı. Yönetilen iş parçacığı üzerinde ancak içinden değil yöntem çağrıldığında bu saptanmışsa bir [Icorprofilercallback](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-interface.md) yöntemi veya içinden bir [Icorprofilercallback](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-interface.md) çöp toplama genişliğinin kullanılmasını yöntemi. Daha fazla bilgi için bkz: [CORPROF_E_UNSUPPORTED_CALL_SEQUENCE HRESULT](../../../../docs/framework/unmanaged-api/profiling/corprof-e-unsupported-call-sequence-hresult.md).|  
   
 ## <a name="remarks"></a>Açıklamalar  
  Ayırma iş parçacığı (özel profil oluşturucu ayırmak için oluşturulan iş parçacığı) ayırma yordamı sırasında bazen tüm iş parçacıklarının Profil Oluşturucu'nın kod çıkış olup olmadığını denetler. Profil Oluşturucu nasıl bu aracılığıyla sürmesi gerektiğini, tahmini sağlamalıdır `dwExpectedCompletionMilliseconds` parametresi. Tipik profil oluşturucu ayırdığı herhangi bir iç verilen süre miktarını kullanmak için iyi bir değer olan `ICorProfilerCallback*` yöntemi; bu değer, bu profil oluşturucu bekliyor harcadığınız için en uzun süreyi değerinden yarısı olmamalıdır.  
@@ -75,7 +63,7 @@ HRESULT RequestProfilerDetach(
   
  **Kitaplığı:** CorGuids.lib  
   
- **.NET framework sürümleri:**[!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
+ **.NET framework sürümleri:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
  [ICorProfilerInfo3 Yöntemi](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo3-interface.md)  

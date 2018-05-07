@@ -1,30 +1,20 @@
 ---
-title: ".NET Framework 1.1'den Geçiş"
-ms.custom: 
+title: .NET Framework 1.1'den Geçiş
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - .NET Framework 4.5, migrating from 1.1
 - .NET Framework 1.1, migrating to .NET Framework 4.5
 ms.assetid: 7ead0cb3-3b19-414a-8417-a1c1fa198d9e
-caps.latest.revision: "12"
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 7d54fac935e7b1fad6b07a3a6cf2031dbca702cb
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: bc181d0aecd6a0c7c0800544ea00a818573c954c
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="migrating-from-the-net-framework-11"></a>.NET Framework 1.1'den Geçiş
-[!INCLUDE[win7](../../../includes/win7-md.md)]ve Windows işletim sisteminin sonraki sürümlerini desteklemez [!INCLUDE[net_v11_long](../../../includes/net-v11-long-md.md)]. Sonuç olarak, hedef uygulamalar [!INCLUDE[net_v11_short](../../../includes/net-v11-short-md.md)] değişiklik yapmadan çalışmaz [!INCLUDE[win7](../../../includes/win7-md.md)] veya sonraki işletim sistemi sürümleri. Bu konuda hedefleyen bir uygulamayı çalıştırmak için gereken adımlar açıklanmaktadır [!INCLUDE[net_v11_short](../../../includes/net-v11-short-md.md)] altında [!INCLUDE[win7](../../../includes/win7-md.md)] ve Windows işletim sisteminin sonraki sürümleri. Hakkında daha fazla bilgi için [!INCLUDE[net_v11_long](../../../includes/net-v11-long-md.md)] ve [!INCLUDE[win8](../../../includes/win8-md.md)], bkz: [.NET Framework 1.1 uygulamalarını çalıştıran Windows 8 ve sonraki sürümlerde](../../../docs/framework/install/run-net-framework-1-1-apps.md).  
+[!INCLUDE[win7](../../../includes/win7-md.md)] ve Windows işletim sisteminin sonraki sürümlerini desteklemez [!INCLUDE[net_v11_long](../../../includes/net-v11-long-md.md)]. Sonuç olarak, hedef uygulamalar [!INCLUDE[net_v11_short](../../../includes/net-v11-short-md.md)] değişiklik yapmadan çalışmaz [!INCLUDE[win7](../../../includes/win7-md.md)] veya sonraki işletim sistemi sürümleri. Bu konuda hedefleyen bir uygulamayı çalıştırmak için gereken adımlar açıklanmaktadır [!INCLUDE[net_v11_short](../../../includes/net-v11-short-md.md)] altında [!INCLUDE[win7](../../../includes/win7-md.md)] ve Windows işletim sisteminin sonraki sürümleri. Hakkında daha fazla bilgi için [!INCLUDE[net_v11_long](../../../includes/net-v11-long-md.md)] ve [!INCLUDE[win8](../../../includes/win8-md.md)], bkz: [.NET Framework 1.1 uygulamalarını çalıştıran Windows 8 ve sonraki sürümlerde](../../../docs/framework/install/run-net-framework-1-1-apps.md).  
   
 ## <a name="retargeting-or-recompiling"></a>Yeniden hedefleme veya yeniden derlenmesi  
  Kullanarak derlenen bir uygulamayı almanın iki yolu vardır [!INCLUDE[net_v11_short](../../../includes/net-v11-short-md.md)] çalıştırmak için [!INCLUDE[win7](../../../includes/win7-md.md)] veya sonraki bir Windows işletim sistemi:  

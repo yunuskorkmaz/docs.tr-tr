@@ -1,24 +1,12 @@
 ---
-title: "ADO.NET yan yana yürütme"
-ms.custom: 
+title: ADO.NET yan yana yürütme
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-ado
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 9f9ba96d-9f89-4f65-bb2f-6860879f4393
-caps.latest.revision: "6"
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
-ms.workload: dotnet
-ms.openlocfilehash: bdb12ce6f697bbc42052e35c252c9cad6a5e962e
-ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
+ms.openlocfilehash: 793a48966192326e2a1273c6ea4b9c9eddda76fa
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="side-by-side-execution-in-adonet"></a>ADO.NET yan yana yürütme
 Yan yana yürütme [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] bir uygulama birden fazla sürümünü olan bir bilgisayarda yürütmek için özelliği [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] yüklü, özel olarak uygulama derlenmiş kendisi için sürüm kullanıyordur. Yan yana yürütme yapılandırma hakkında ayrıntılı bilgi için bkz: [yan yana yürütme](../../../../docs/framework/deployment/side-by-side-execution.md).  
@@ -26,7 +14,7 @@ Yan yana yürütme [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md
  Derlenmiş bir sürümünü kullanarak bir uygulamanın [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] farklı bir sürümü üzerinde çalıştırabilirsiniz [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)]. Ancak, bir sürümü yüklü her sürümü için uygulama derlemek öneririz [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)]ve ayrı ayrı çalıştırın. Her iki durumda da, değişikliklerin farkında olmalıdır [!INCLUDE[vstecado](../../../../includes/vstecado-md.md)] ileriye dönük uyumluluğu veya uygulamanızın geriye dönük uyumluluk etkileyebilir sürümler arasında.  
   
 ## <a name="forward-compatibility-and-backward-compatibility"></a>İleriye dönük uyumluluğu ve geriye dönük uyumluluk  
- İleriye dönük uyumluluğu anlamına gelir uygulamanın önceki bir sürümü ile derlenebilir [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)], ancak hala daha sonraki bir sürümü üzerinde başarıyla çalışır [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)]. [!INCLUDE[vstecado](../../../../includes/vstecado-md.md)]için yazılan kod [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] sürüm 1.1 sonraki sürümleri ile ileri doğru uyumlu değil.  
+ İleriye dönük uyumluluğu anlamına gelir uygulamanın önceki bir sürümü ile derlenebilir [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)], ancak hala daha sonraki bir sürümü üzerinde başarıyla çalışır [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)]. [!INCLUDE[vstecado](../../../../includes/vstecado-md.md)] için yazılan kod [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] sürüm 1.1 sonraki sürümleri ile ileri doğru uyumlu değil.  
   
  Geriye dönük uyumluluk anlamına gelir uygulamanın daha yeni bir sürümü için derlenmiş olan [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)], ancak önceki sürümlerinde çalıştırmaya devam [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] işlev kaybı olmadan. Elbette, bu durumda, yeni bir sürümünde sunulan özellikler için olmayacaktır [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)].  
   

@@ -1,10 +1,6 @@
 ---
-title: "-addmodule (C# Derleyici Seçenekleri)"
+title: -addmodule (C# Derleyici Seçenekleri)
 ms.date: 07/20/2015
-ms.prod: .net
-ms.technology:
-- devlang-csharp
-ms.topic: article
 f1_keywords:
 - /addmodule
 helpviewer_keywords:
@@ -12,14 +8,11 @@ helpviewer_keywords:
 - -addmodule compiler option [C#]
 - addmodule compiler option [C#]
 ms.assetid: ed604546-0dc2-4bd4-9a3e-610a8d973e58
-caps.latest.revision: 
-author: BillWagner
-ms.author: wiwagn
-ms.openlocfilehash: db440b58862e372e443c9c51961b0c3cc2dd211e
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.openlocfilehash: a5b0824774dabd4e0dd26dd1753eaba658299fbc
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="-addmodule-c-compiler-options"></a>-addmodule (C# Derleyici Seçenekleri)
 Bu seçenek geçerli derlemeye target: module anahtarıyla oluşturulan bir modül ekler.  
@@ -37,7 +30,7 @@ Bu seçenek geçerli derlemeye target: module anahtarıyla oluşturulan bir mod�
 ## <a name="remarks"></a>Açıklamalar  
  İle eklenen tüm modüller **- addmodule** çalışma zamanında çıktı dosyası ile aynı dizinde olmalıdır. Diğer bir deyişle, derleme zamanında herhangi bir dizinde bir modül belirtebilirsiniz ancak modülü çalışma zamanında uygulama dizininde olması gerekir. Modül uygulama dizininde çalışma zamanında değil alırsa bir <xref:System.TypeLoadException>.  
   
- `file`derleme içeremez. Örneğin, çıktı dosyası oluşturulmuşsa [-target: module](../../../csharp/language-reference/compiler-options/target-module-compiler-option.md), ile meta verilerini içe **- addmodule**.  
+ `file` derleme içeremez. Örneğin, çıktı dosyası oluşturulmuşsa [-target: module](../../../csharp/language-reference/compiler-options/target-module-compiler-option.md), ile meta verilerini içe **- addmodule**.  
   
  Çıktı dosyası oluşturulmuşsa bir **-hedef** dışında seçeneği **-target: module**, ile meta verilerini içeri aktarılamıyor **- addmodule** ancak ileiçeriaktarılabilir[-başvuru](../../../csharp/language-reference/compiler-options/reference-compiler-option.md).  
   

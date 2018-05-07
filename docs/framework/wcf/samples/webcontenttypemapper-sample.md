@@ -1,31 +1,19 @@
 ---
-title: "WebContentTypeMapper Örneği"
-ms.custom: 
+title: WebContentTypeMapper Örneği
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: a4fe59e7-44d8-43c6-a1f8-40c45223adca
-caps.latest.revision: "15"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 34adf191d3edbff33fe989cf036c32104a6754ae
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
-ms.translationtype: MT
+ms.openlocfilehash: 3b3d53b0fe619c74c5e7f3533194f4b5e7c18a16
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="webcontenttypemapper-sample"></a>WebContentTypeMapper Örneği
-Bu örnek, yeni içerik türlerine eşlemek gösterilmiştir [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] ileti gövdesi biçimleri.  
+Bu örnek, Windows Communication Foundation (WCF) ileti gövdesi biçimleri için yeni içerik türlerine eşlemek gösterilmiştir.  
   
  <xref:System.ServiceModel.Description.WebHttpEndpoint> Öğesi takılan sağlayan Web ileti Kodlayıcı içinde [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] JSON, XML veya aynı uç noktada ham ikili iletileri almak için. Kodlayıcı HTTP content-type, isteğin bakarak ileti gövdesinin biçimi belirler. Bu örnek tanıtır <xref:System.ServiceModel.Channels.WebContentTypeMapper> kullanıcının içerik türü ve gövde biçimi arasında eşleme denetlemesine olanak sağlayan sınıf.  
   
- [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]içerik türleri için varsayılan eşlemeleri kümesi sağlar. Örneğin, `application/json` eşler için JSON ve `text/xml` XML eşler. Ham ikili biçime JSON veya XML eşlenmemiş herhangi bir içerik türüne eşlenir.  
+ [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] içerik türleri için varsayılan eşlemeleri kümesi sağlar. Örneğin, `application/json` eşler için JSON ve `text/xml` XML eşler. Ham ikili biçime JSON veya XML eşlenmemiş herhangi bir içerik türüne eşlenir.  
   
  Bazı senaryolarda (örneğin, anında iletme stili API), istemci tarafından döndürülen içerik türü hizmet Geliştirici denetlemez. Örneğin, istemcilerin JSON olarak döndürebilir `text/javascript` yerine `application/json`. Bu durumda, hizmet Geliştirici türeyen bir tür sağlamalısınız <xref:System.ServiceModel.Channels.WebContentTypeMapper> belirtilen içerik türü aşağıdaki örnek kodda gösterildiği gibi doğru şekilde işlemek için.  
   
@@ -69,14 +57,14 @@ public class JsonContentTypeMapper : WebContentTypeMapper
   
 2.  Çözüm WebContentTypeMapperSample.sln açıklandığı gibi yapı [Windows Communication Foundation örnekleri derleme](../../../../docs/framework/wcf/samples/building-the-samples.md).  
   
-3.  İçin http://localhost/ServiceModelSamples/JCTMClientPage.htm gidin (JCTMClientPage.htm tarayıcıda proje dizininde açık değil).  
+3.  Gidin http://localhost/ServiceModelSamples/JCTMClientPage.htm (JCTMClientPage.htm tarayıcıda proje dizininde açık değil).  
   
 > [!IMPORTANT]
 >  Örnekler, makinenizde zaten yüklü olabilir. Devam etmeden önce aşağıdaki (varsayılan) dizin denetleyin.  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  Bu dizin mevcut değilse, Git [Windows Communication Foundation (WCF) ve .NET Framework 4 için Windows Workflow Foundation (WF) örnek](http://go.microsoft.com/fwlink/?LinkId=150780) tüm indirmek için [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] ve [!INCLUDE[wf1](../../../../includes/wf1-md.md)] örnekleri. Bu örnek aşağıdaki dizinde bulunur.  
+>  Bu dizin mevcut değilse, Git [Windows Communication Foundation (WCF) ve .NET Framework 4 için Windows Workflow Foundation (WF) örnek](http://go.microsoft.com/fwlink/?LinkId=150780) tüm Windows Communication Foundation (WCF) indirmek için ve [!INCLUDE[wf1](../../../../includes/wf1-md.md)] örnekleri. Bu örnek aşağıdaki dizinde bulunur.  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Extensibility\Ajax\WebContentTypeMapper`  
   

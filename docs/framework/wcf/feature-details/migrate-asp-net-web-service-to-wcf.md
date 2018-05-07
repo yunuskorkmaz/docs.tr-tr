@@ -1,27 +1,15 @@
 ---
 title: "Nasıl yapılır: ASP.NET Web Hizmeti Kodunu Windows Communication Foundation'a Taşıma"
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: e528c64f-c027-4f2e-ada6-d8f3994cf8d6
-caps.latest.revision: "8"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: e56d2481785a9a8486174e611001b9d800c7c869
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 90a6109a56299ec1bcaff4a35141abc194484772
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-migrate-aspnet-web-service-code-to-the-windows-communication-foundation"></a>Nasıl yapılır: ASP.NET Web Hizmeti Kodunu Windows Communication Foundation'a Taşıma
-Aşağıdaki yordam, ASP.NET Web hizmeti için geçirmeyi açıklar [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)].  
+Aşağıdaki yordam, Windows Communication Foundation (WCF) için bir ASP.NET Web hizmeti geçirmeyi açıklar.  
   
 ## <a name="procedure"></a>Yordam  
   
@@ -85,9 +73,9 @@ Aşağıdaki yordam, ASP.NET Web hizmeti için geçirmeyi açıklar [!INCLUDE[in
   
 7.  Değişiklik sınayın.  
   
-8.  Başvurular ekleyin [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] derlemelere System.ServiceModel ve System.Runtime.Serialization ASP.NET Web hizmeti projesi.  
+8.  WCF derlemelerine System.ServiceModel ve System.Runtime.Serialization başvurular ASP.NET Web hizmeti projeye ekleyin.  
   
-9. Çalıştırma [ServiceModel meta veri yardımcı Programracı (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md) oluşturmak için bir [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] WSDL istemci sınıfından. Oluşturulan sınıf modülü çözüme ekleyin.  
+9. Çalıştırma [ServiceModel meta veri yardımcı Programracı (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md) WSDL WCF istemci sınıfı oluşturmak için. Oluşturulan sınıf modülü çözüme ekleyin.  
   
 10. Önceki adımda oluşturulan sınıf modülü bir arabirim tanımını içerir.  
   
@@ -145,7 +133,7 @@ Aşağıdaki yordam, ASP.NET Web hizmeti için geçirmeyi açıklar [!INCLUDE[in
     }  
     ```  
   
-13. Artık sınıfını Yapılandır bir [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] hizmet gerektirecek şekilde türünü [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] ASP.NET Web hizmeti aşağıdakilerden birini dayanıyordu, ASP.NET uyumluluk modu:  
+13. ASP.NET Web hizmeti aşağıdakilerden birini dayanıyordu, WCF ASP.NET uyumluluk modu gerektirecek şekilde bir WCF hizmeti türü sunulmuştur sınıfı yapılandırın:  
   
     -   <xref:System.Web.HttpContext> Sınıfı.  
   
@@ -167,14 +155,14 @@ Aşağıdaki yordam, ASP.NET Web hizmeti için geçirmeyi açıklar [!INCLUDE[in
   
 14. Özgün .asmx dosyayı yeniden adlandırın. asmx.old.  
   
-15. Oluşturma bir [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] hizmet hizmet için dosya, uzantısı verin, .asmx ve IIS uygulama kökü içine kaydedin.  
+15. Hizmet için bir WCF hizmeti dosya oluşturma, uzantısı verin, .asmx ve IIS uygulama kökü içine kaydedin.  
   
     ```xml  
     <%@Service Class="MyOrganization.Adder" %>  
     <%@Assembly Name="MyServiceAssembly" %>   
     ```  
   
-16. Ekleme bir [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] , Web.config dosyasında hizmeti için yapılandırma. Hizmetini kullanacak şekilde yapılandırmanız [ \<basicHttpBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/basichttpbinding.md), önceki adımlarda oluşturduğunuz .asmx uzantısı ile hizmet dosyası kullanılacak ve WSDL kendisi için değil oluşturulacak, ancak iki adımdan WSDL kullanılacak. Ayrıca gerekirse, ASP.NET uyumluluğu modunu kullanacak şekilde yapılandırın.  
+16. Bir WCF Yapılandırma hizmeti için Web.config dosyasına ekleyin. Hizmetini kullanacak şekilde yapılandırmanız [ \<basicHttpBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/basichttpbinding.md), önceki adımlarda oluşturduğunuz .asmx uzantısı ile hizmet dosyası kullanılacak ve WSDL kendisi için değil oluşturulacak, ancak iki adımdan WSDL kullanılacak. Ayrıca gerekirse, ASP.NET uyumluluğu modunu kullanacak şekilde yapılandırın.  
   
     ```xml  
     <?xml version="1.0" encoding="utf-8" ?>  

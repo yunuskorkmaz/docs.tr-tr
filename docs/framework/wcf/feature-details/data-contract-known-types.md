@@ -1,14 +1,6 @@
 ---
 title: Veri Sözleşmesi Bilinen Türler
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -17,17 +9,11 @@ helpviewer_keywords:
 - KnownTypeAttribute [WCF]
 - KnownTypes [WCF]
 ms.assetid: 1a0baea1-27b7-470d-9136-5bbad86c4337
-caps.latest.revision: 42
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: c9c180a0f1544fa187ddb53ec79a47f908c298d7
-ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
+ms.openlocfilehash: 00ae32ff394b1ce2acb38fb237527e934934b935
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/28/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="data-contract-known-types"></a>Veri Sözleşmesi Bilinen Türler
 <xref:System.Runtime.Serialization.KnownTypeAttribute> Sınıfı, öncelikli göz önünde bulundurarak seri durumdan çıkarma sırasında için dahil edilecek türleri belirtmenize olanak verir. Çalışan bir örnek için bkz: [bilinen türleri](../../../../docs/framework/wcf/samples/known-types.md) örnek.  
@@ -43,7 +29,7 @@ ms.lasthandoff: 04/28/2018
 -   Dahil bazı türleri [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] türleri, önceki üç kategoriden birinde üyelerin sahiptir. Örneğin, <xref:System.Collections.Hashtable> kullanan <xref:System.Object> karma tablosunda gerçek nesneleri depolamak için. Bu tür serileştirme, alma tarafı önceden bu üyeler için veri sözleşmesi belirleyemiyor.  
   
 ## <a name="the-knowntypeattribute-class"></a>KnownTypeAttribute sınıfı  
- Veri alma bir bitiş noktasına ulaştığında [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] çalışma zamanı verileri bir ortak dil çalışma zamanı (CLR) türünün bir örneği seri durumdan dener. İlk veri belirlemek için gelen ileti sözleşme iletinin içeriğini uygun olması inceleyerek çıkarma için örneği türü seçilir. Seri durumdan çıkarma altyapısı sonra ileti içeriği ile uyumlu bir veri sözleşmesi uygulayan bir CLR türü bulmaya çalışır. Bu işlem sırasında seri durumdan çıkarma altyapısı izin veren adayı türleri kümesi "bilinen türler." seri kaldırıcı'nın kümesi verilir  
+ Veri alma bitiş noktasına ulaştığında, WCF çalışma zamanı verileri bir ortak dil çalışma zamanı (CLR) türünün bir örneği seri durumdan dener. İlk veri belirlemek için gelen ileti sözleşme iletinin içeriğini uygun olması inceleyerek çıkarma için örneği türü seçilir. Seri durumdan çıkarma altyapısı sonra ileti içeriği ile uyumlu bir veri sözleşmesi uygulayan bir CLR türü bulmaya çalışır. Bu işlem sırasında seri durumdan çıkarma altyapısı izin veren adayı türleri kümesi "bilinen türler." seri kaldırıcı'nın kümesi verilir  
   
  Türü hakkında bilmeniz seri durumdan çıkarma altyapısı izin vermek için bir yoldur kullanarak <xref:System.Runtime.Serialization.KnownTypeAttribute>. Öznitelik, yalnızca tüm veri sözleşme türleri için ayrı veri üyelerine uygulanamaz. Öznitelik uygulanan bir *dış türü* bir sınıf veya bir yapı olabilir. En temel kullanımını öznitelik uygulama türü "bilinen bir tür olarak." belirtir Bu bilinen türleri dış türünde bir nesne her bir parçası olarak bilinen türü neden olur veya üyeleri başvurulan herhangi bir nesne seri durumdan çıkarılmakta olan. Birden fazla <xref:System.Runtime.Serialization.KnownTypeAttribute> özniteliği aynı türüne uygulanabilir.  
   
@@ -144,7 +130,7 @@ ms.lasthandoff: 04/28/2018
  [!code-vb[C_KnownTypeAttribute#10](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_knowntypeattribute/vb/source.vb#10)]  
   
 ## <a name="additional-ways-to-add-known-types"></a>Bilinen türler eklemek için başka bir yolu  
- Ayrıca, bilinen türleri bir yapılandırma dosyası eklenebilir. Uygun seri durumdan çıkarma üçüncü taraf kullanarak yazdığınızda kitaplıklarıyla gibi bilinen türleri gerektiren türü kontrol etmez gerektiğinde bu faydalıdır [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)].  
+ Ayrıca, bilinen türleri bir yapılandırma dosyası eklenebilir. Bu, uygun seri durumdan çıkarma üçüncü taraf kullanarak yazdığınızda kitaplıkları ile Windows Communication Foundation (WCF) gibi bilinen türleri gerektiren türü kontrol etmez durumunda faydalı olur.  
   
  Aşağıdaki yapılandırma dosyası, bilinen bir türe bir yapılandırma dosyası belirtmek gösterilmiştir.  
   

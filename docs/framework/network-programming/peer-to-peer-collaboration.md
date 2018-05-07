@@ -1,24 +1,15 @@
 ---
-title: "Eşler arası işbirliği"
-ms.custom: 
+title: Eşler arası işbirliği
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: b6216d88-bccb-4a59-9f1c-9f751708e811
-caps.latest.revision: 
 author: mcleblanc
 ms.author: markl
 manager: markl
-ms.workload:
-- dotnet
-ms.openlocfilehash: 5060e12fb6a9fcc1bac1dfe6ccdcbaea9f2e6385
-ms.sourcegitcommit: cf22b29db780e532e1090c6e755aa52d28273fa6
+ms.openlocfilehash: a933c81105399a9411fcb749a06e47bf769cf532
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/01/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="peer-to-peer-collaboration"></a>Eşler arası işbirliği
 Eşler arası, birden fazla yalnızca istemci tabanlı bilgi işlem görevleri için Internet kenarında mevcut oldukça güçlü bilgisayarların (kişisel bilgisayarlar) kullanımını ağdır. Modern kişisel bilgisayar (PC) çok hızlı bir işlemciye, büyük bellek ve hangi hiçbiri tam e-posta ve Web'e gözatma gibi ortak bilgi işlem görevler gerçekleştirirken göstermesi büyük sabit disk vardır. Modern PC kolayca hem istemci hem de birçok türdeki uygulamayı (bir eş) sunucusu olarak çalışabilir.  

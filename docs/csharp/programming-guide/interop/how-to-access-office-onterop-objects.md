@@ -1,10 +1,6 @@
 ---
-title: "Nasıl yapılır: Visual C# Özelliklerini Kullanarak Office Birlikte Çalışma Nesnelerine Erişim (C# Programlama Kılavuzu)"
+title: 'Nasıl yapılır: Visual C# Özelliklerini Kullanarak Office Birlikte Çalışma Nesnelerine Erişim (C# Programlama Kılavuzu)'
 ms.date: 07/20/2015
-ms.prod: .net
-ms.technology:
-- devlang-csharp
-ms.topic: article
 helpviewer_keywords:
 - optional parameters [C#], Office programming
 - named and optional arguments [C#], Office programming
@@ -13,14 +9,11 @@ helpviewer_keywords:
 - named arguments [C#], Office programming
 - Office programming [C#]
 ms.assetid: 041b25c2-3512-4e0f-a4ea-ceb2999e4d5e
-caps.latest.revision: 
-author: BillWagner
-ms.author: wiwagn
-ms.openlocfilehash: 751e8240c9385f516315ff3b53221d1e1348ae58
-ms.sourcegitcommit: d2da0142247ef42a219a5d2907f153e62dc6ea0d
+ms.openlocfilehash: 4e2599f34e80f70a36d6f497f908887aa6853121
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/01/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-access-office-interop-objects-by-using-visual-c-features-c-programming-guide"></a>Nasıl yapılır: Visual C# Özelliklerini Kullanarak Office Birlikte Çalışma Nesnelerine Erişim (C# Programlama Kılavuzu)
 Visual C# Office API nesnelerine erişimi basitleştiren özellikleri vardır. Adlandırılmış ve isteğe bağlı bağımsız değişkenler, yeni özellikleri yeni bir tür olarak adlandırılan `dynamic`ve değer parametreleri değilmiş gibi COM yöntemleri başvuru parametrelere bağımsız değişkenleri geçirme özelliği.  
@@ -39,7 +32,7 @@ Visual C# Office API nesnelerine erişimi basitleştiren özellikleri vardır. A
   
 2.  Üzerinde **dosya** menüsündeki **yeni**ve ardından **proje**. **Yeni proje** iletişim kutusu görüntülenir.  
   
-3.  İçinde **yüklü şablonlar** bölmesini genişletin **Visual C#**ve ardından **Windows**.  
+3.  İçinde **yüklü şablonlar** bölmesini genişletin **Visual C#** ve ardından **Windows**.  
   
 4.  Ara en üstünde **yeni proje** emin olmak için iletişim kutusu **.NET Framework 4** (veya sonraki bir sürümü) bir hedef çerçeve olarak seçildiğinden.  
   
@@ -117,7 +110,7 @@ Visual C# Office API nesnelerine erişimi basitleştiren özellikleri vardır. A
   
 1.  Ek yolla göstermeye [!INCLUDE[csharp_dev10_long](~/includes/csharp-dev10-long-md.md)]ve sonraki sürümlerinde, Office geliştirir programlama, aşağıdaki kod bir Word uygulamasını açar ve Excel çalışma bağlanan bir simge oluşturur.  
   
-     Yapıştırma yöntemi `CreateIconInWordDoc`, daha sonra bu adımda, sağlanan içine `Program` sınıfı. `CreateIconInWordDoc`Yöntem çağrıları için karmaşıklığını azaltmak için adlandırılmış ve isteğe bağlı bağımsız değişkenler kullanan [Ekle](https://msdn.microsoft.com/library/microsoft.office.interop.word.documents.add.aspx) ve [denetlemeye](https://msdn.microsoft.com/library/microsoft.office.interop.word.selection.pastespecial.aspx). Sürümünde sunulan diğer iki yeni özellik bu çağrıları dahil [!INCLUDE[csharp_dev10_long](~/includes/csharp-dev10-long-md.md)] başvuru parametrelere sahip COM yöntemleri çağrıları basitleştirin. İlk olarak, değer parametreleri değilmiş gibi başvuru parametreleri bağımsız değişkenler gönderebilirsiniz. Diğer bir deyişle, her bir başvuru parametre için bir değişken oluşturmak zorunda kalmadan değerleri doğrudan gönderebilirsiniz. Derleyici bağımsız değişken değerleri tutmak için geçici değişkenleri oluşturur ve çağrısından döndüğünüzde değişkenleri atar. İkinci olarak, atlayabilirsiniz `ref` anahtar sözcüğü bağımsız değişken listesinde.  
+     Yapıştırma yöntemi `CreateIconInWordDoc`, daha sonra bu adımda, sağlanan içine `Program` sınıfı. `CreateIconInWordDoc` Yöntem çağrıları için karmaşıklığını azaltmak için adlandırılmış ve isteğe bağlı bağımsız değişkenler kullanan [Ekle](https://msdn.microsoft.com/library/microsoft.office.interop.word.documents.add.aspx) ve [denetlemeye](https://msdn.microsoft.com/library/microsoft.office.interop.word.selection.pastespecial.aspx). Sürümünde sunulan diğer iki yeni özellik bu çağrıları dahil [!INCLUDE[csharp_dev10_long](~/includes/csharp-dev10-long-md.md)] başvuru parametrelere sahip COM yöntemleri çağrıları basitleştirin. İlk olarak, değer parametreleri değilmiş gibi başvuru parametreleri bağımsız değişkenler gönderebilirsiniz. Diğer bir deyişle, her bir başvuru parametre için bir değişken oluşturmak zorunda kalmadan değerleri doğrudan gönderebilirsiniz. Derleyici bağımsız değişken değerleri tutmak için geçici değişkenleri oluşturur ve çağrısından döndüğünüzde değişkenleri atar. İkinci olarak, atlayabilirsiniz `ref` anahtar sözcüğü bağımsız değişken listesinde.  
   
      `Add` Yöntemi tümü isteğe bağlı dört başvuru parametre vardır. İçinde [!INCLUDE[csharp_dev10_long](~/includes/csharp-dev10-long-md.md)], veya sonraki sürümlerinde, çıkarın bağımsız değişkenleri herhangi parametrelerden biri veya tümü için varsayılan değerleri kullanmak istiyorsanız. İçinde [!INCLUDE[csharp_orcas_long](~/includes/csharp-orcas-long-md.md)] ve önceki sürümleri, her parametre için bir bağımsız değişken sağlanmalıdır ve parametreleri başvuru parametreleri olduğundan bağımsız değişkeni bir değişken olmalıdır.  
   

@@ -1,13 +1,6 @@
 ---
-title: "3B Dönüşümlere Genel Bakış"
-ms.custom: 
+title: 3B Dönüşümlere Genel Bakış
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-wpf
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -15,16 +8,11 @@ helpviewer_keywords:
 - 3-D transformations
 - transformations [WPF], 3-D
 ms.assetid: e45e555d-ac1e-4b36-aced-e433afe7f27f
-caps.latest.revision: "18"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 7b45c2c12393f296f916eaf8ea3f912958b54b09
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: f0fb859905327b30c0ea509e5d07072b81dcf30e
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="3-d-transformations-overview"></a>3B Dönüşümlere Genel Bakış
 Bu konu, 3-b modellerinde dönüştürmeleri uygulamak açıklar [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] grafik sistemi. Dönüşümleri geliştiricinin yeniden konumlandırmak, yeniden boyutlandırma ve bunları tanımlayan temel değerleri değiştirmeden modelleri yeniden yönlendirmesine izin verin.  
@@ -49,7 +37,7 @@ Koordinat sistemi karşılaştırma
 ## <a name="translation-transformations"></a>Çeviri Dönüşümleri  
  3B dönüşümler soyut taban sınıfından devralan <xref:System.Windows.Media.Media3D.Transform3D>; bunlar afin dönüşüm sınıflarını içerir <xref:System.Windows.Media.Media3D.TranslateTransform3D>, <xref:System.Windows.Media.Media3D.ScaleTransform3D>, ve <xref:System.Windows.Media.Media3D.RotateTransform3D>. [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 3-b sistemi de sağlayan bir <xref:System.Windows.Media.Media3D.MatrixTransform3D> olanak sağlayan sınıf daha kısa matris işlemlerinde aynı dönüşümleri belirtin.  
   
- <xref:System.Windows.Media.Media3D.TranslateTransform3D>Model3D ile belirttiğiniz uzaklık vektör yönünü içinde olan tüm noktaları taşır <xref:System.Windows.Media.Media3D.TranslateTransform3D.OffsetX%2A>, <xref:System.Windows.Media.Media3D.TranslateTransform3D.OffsetY%2A>, ve <xref:System.Windows.Media.Media3D.TranslateTransform3D.OffsetZ%2A> özellikleri. Örneğin, bir küp bir köşesinin (2,2,2) göz önüne alındığında, (0,1.6,1) bir uzaklık vektörü bu (2,2,2) köşesini (2,3.6,3) taşıyabilir. Küpün köşe hala (2,2,2) içinde model alanı olmakla birlikte, böylece (2,2,2) içinde model alanı (köşesini 2,3.6,3) artık bu modeli alanı world alanı ilişkisini world alanı değiştirilmiştir.  
+ <xref:System.Windows.Media.Media3D.TranslateTransform3D> Model3D ile belirttiğiniz uzaklık vektör yönünü içinde olan tüm noktaları taşır <xref:System.Windows.Media.Media3D.TranslateTransform3D.OffsetX%2A>, <xref:System.Windows.Media.Media3D.TranslateTransform3D.OffsetY%2A>, ve <xref:System.Windows.Media.Media3D.TranslateTransform3D.OffsetZ%2A> özellikleri. Örneğin, bir küp bir köşesinin (2,2,2) göz önüne alındığında, (0,1.6,1) bir uzaklık vektörü bu (2,2,2) köşesini (2,3.6,3) taşıyabilir. Küpün köşe hala (2,2,2) içinde model alanı olmakla birlikte, böylece (2,2,2) içinde model alanı (köşesini 2,3.6,3) artık bu modeli alanı world alanı ilişkisini world alanı değiştirilmiştir.  
   
  ![Çeviri şekil](../../../../docs/framework/wpf/graphics-multimedia/media/transforms-translate.png "dönüşümler Çevir")  
 Uzaklık ile  
@@ -59,7 +47,7 @@ Uzaklık ile
  [!code-xaml[animation3dgallery_snip#Translation3DAnimationExampleWholePage](../../../../samples/snippets/csharp/VS_Snippets_Wpf/Animation3DGallery_snip/CS/Translation3DAnimationExample.xaml#translation3danimationexamplewholepage)]  
   
 ## <a name="scale-transformations"></a>Ölçeklendirme dönüşümleri  
- <xref:System.Windows.Media.Media3D.ScaleTransform3D>Merkez nokta başvuru içeren bir belirtilen ölçek vektörü tarafından modelin ölçeğini değiştirir. Modelin boyutunu orantılı olarak değiştirmek için X, Y ve Z eksenleri, aynı değeri model ölçeklendirir Tekdüzen bir ölçek belirtin. Örneğin, dönüşümün ayarlama <xref:System.Windows.Media.ScaleTransform.ScaleX%2A>, <xref:System.Windows.Media.ScaleTransform.ScaleY%2A>, ve <xref:System.Windows.Media.Media3D.ScaleTransform3D.ScaleZ%2A> 0,5 özelliklerine halves model boyutunu; 2'ye aynı özelliklerini ayarlama, tüm üç eksen kendi ölçek iki katına çıkar.  
+ <xref:System.Windows.Media.Media3D.ScaleTransform3D> Merkez nokta başvuru içeren bir belirtilen ölçek vektörü tarafından modelin ölçeğini değiştirir. Modelin boyutunu orantılı olarak değiştirmek için X, Y ve Z eksenleri, aynı değeri model ölçeklendirir Tekdüzen bir ölçek belirtin. Örneğin, dönüşümün ayarlama <xref:System.Windows.Media.ScaleTransform.ScaleX%2A>, <xref:System.Windows.Media.ScaleTransform.ScaleY%2A>, ve <xref:System.Windows.Media.Media3D.ScaleTransform3D.ScaleZ%2A> 0,5 özelliklerine halves model boyutunu; 2'ye aynı özelliklerini ayarlama, tüm üç eksen kendi ölçek iki katına çıkar.  
   
  ![Tekdüzen ScaleTransform3D](../../../../docs/framework/wpf/graphics-multimedia/media/threecubes-uniformscale-1.png "threecubes_uniformscale_1")  
 ScaleVector Örneği  
@@ -87,7 +75,7 @@ Belirtilen yeni Merkezi ile döndürme
   
  Modeli "yerinde" döndürmek için modelin fiili orta döndürme merkezi olarak belirtin. Geometri genellikle kaynak modellenir olduğundan, en sık dönüşümleri kümesi beklenen sonucu (ölçeklendirme) modeli, ilk boyutlandırma sonra yönünü (döndürme) ayarlayarak ve taşımak için istenen konumu (son alabilirsiniz Bu çevirme).  
   
- ![X 60 derece &#45;döndürme; y &#45; ve eksenleri](../../../../docs/framework/wpf/graphics-multimedia/media/twocubes-rotation2axes-1.png "twocubes_rotation2axes_1")  
+ ![X 60 derece döndürme&#45; ve y&#45;eksenleri](../../../../docs/framework/wpf/graphics-multimedia/media/twocubes-rotation2axes-1.png "twocubes_rotation2axes_1")  
 Döndürme örneği  
   
  Eksen-açı döndürmeleri statik dönüşümler ve bazı animasyonları için iyi çalışır. Ancak, bir küp modelini 60 derece sonra 45 dereceyi Z ekseni etrafında X ekseni etrafında döndürme göz önünde bulundurun. Bu dönüşüm iki ayrı afin dönüşümler veya bir matris olarak tanımlayabilirsiniz. Ancak, bu şekilde tanımlanan bir döndürmeyi sorunsuz hale getirmeyi zor olabilir. Başlangıç ve bitiş her iki yaklaşım tarafından hesaplanmış modeli konumlarını aynı olsa da, model tarafından gerçekleştirilen ara konumlar kesin değildir. Dördey başlangıç ve bitiş bir döndürme arasında ilişkilendirme hesaplamak için alternatif bir yol gösterir.  

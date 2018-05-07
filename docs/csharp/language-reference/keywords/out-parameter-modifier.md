@@ -1,20 +1,14 @@
 ---
 title: out parametresi değiştiricisi (C# Başvurusu)
 ms.date: 03/06/2018
-ms.prod: .net
-ms.technology:
-- devlang-csharp
-ms.topic: article
 helpviewer_keywords:
 - parameters [C#], out
 - out parameters [C#]
-author: BillWagner
-ms.author: wiwagn
-ms.openlocfilehash: 052416f97c1fe9ed3aa1a3bafa7410e602096991
-ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
+ms.openlocfilehash: 76c2c27d4575918bb2ed4209a7ff7d2b0517b6f1
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="out-parameter-modifier-c-reference"></a>out parametresi değiştiricisi (C# Başvurusu)
 `out` Anahtar sözcüğü başvuruya göre geçirilecek bağımsız değişkenler neden olur. Benzer; [ref](ref.md) hariç anahtar sözcüğü `ref` değişkenin kendisine geçirilen önce başlatılması gerekir. Aynı zamanda gibi olan [içinde](in-parameter-modifier.md) hariç anahtar sözcüğü `in` bağımsız değişken değeri değiştirmek çağrılan yöntemine izin vermiyor. Kullanılacak bir `out` parametresi, yöntem tanımı ve arama yöntemi açıkça kullanmalıdır `out` anahtar sözcüğü. Örneğin:  

@@ -1,34 +1,20 @@
 ---
-title: "Nasıl yapılır: COM+ Hizmet Ayarlarını Yapılandırma"
-ms.custom: 
+title: 'Nasıl yapılır: COM+ Hizmet Ayarlarını Yapılandırma'
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - COM+ [WCF], configuring service settings
 ms.assetid: f42a55a8-3af8-4394-9fdd-bf12a93780eb
-caps.latest.revision: 
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 1bdbdbae857685ddb447843fd704896de018b1c1
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 43964331f6728db0f094eaceb63e2c306d2dd3ac
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-configure-com-service-settings"></a>Nasıl yapılır: COM+ Hizmet Ayarlarını Yapılandırma
 Bir uygulama arabirimi eklendiğinde veya COM + hizmet yapılandırması aracını kullanarak kaldırıldığında, Web hizmeti yapılandırması uygulamanın yapılandırma dosyasında güncelleştirilir. COM + barındırılan modunda uygulama kök dizininde Application.config dosya yerleştirilir (%PROGRAMFILES%\ComPlus uygulamaları\\{AppID} varsayılandır). Ya da Web barındırılan modları, Web.config dosyasında belirtilen vroot dizininde yer alır.  
   
 > [!NOTE]
->  İleti imzalama iletilerinin bir istemci ve sunucu arasındaki kurcalanmaya karşı korumak için kullanılmalıdır. Ayrıca, ileti veya Aktarım katmanı şifreleme iletilerden bir istemci ve sunucu arasında bilginin açığa çıkmasına karşı korumak için kullanılmalıdır. İle [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] Hizmetleri için kullanmanız gereken azaltma eşzamanlı çağrıları, bağlantıları, örnekler ve bekleyen işlemler sayısını sınırlandırın. Bu kaynakların fazla tüketimi önlemeye yardımcı olur. Davranış azaltma hizmet yapılandırma dosyası ayarları aracılığıyla belirtilir.  
+>  İleti imzalama iletilerinin bir istemci ve sunucu arasındaki kurcalanmaya karşı korumak için kullanılmalıdır. Ayrıca, ileti veya Aktarım katmanı şifreleme iletilerden bir istemci ve sunucu arasında bilginin açığa çıkmasına karşı korumak için kullanılmalıdır. Windows Communication Foundation (WCF) hizmetlerini gibi ile azaltma eşzamanlı çağrıları, bağlantıları, örnekler ve bekleyen işlemler sınırlamak için kullanmanız gerekir. Bu kaynakların fazla tüketimi önlemeye yardımcı olur. Davranış azaltma hizmet yapılandırma dosyası ayarları aracılığıyla belirtilir.  
   
 ## <a name="example"></a>Örnek  
  Aşağıdaki arabirimini uygulayan bir bileşeni göz önünde bulundurun:  
@@ -62,13 +48,13 @@ public interface IFinancesContract : IDisposable
   
  Bu hizmeti kullanan istemci uygulamaları, uygulama yapılandırmasında belirtilen bir ile uyumlu bir bağlamayı kullanarak yanı sıra bu sözleşme, uygun olması gerekir.  
   
- Aşağıdaki kod örneği, varsayılan yapılandırma dosyası gösterir. Olan bir [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] Web hizmeti, bu standart hizmet modeli yapılandırma şemasıyla uyumlu ve aynı şekilde diğer düzenlenebilir [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] yapılandırma dosyalarını Hizmetleri.  
+ Aşağıdaki kod örneği, varsayılan yapılandırma dosyası gösterir. Bir Windows Communication Foundation (WCF) Web hizmeti, bu standart hizmet modeli yapılandırma şemasıyla uyumlu ve diğer WCF hizmetleri yapılandırma dosyaları aynı şekilde düzenlenebilir.  
   
  Tipik değişiklikler aşağıdakileri içerir:  
   
 -   Uç nokta adresi varsayılan ComponentName/ApplicationName/InterfaceName formundan daha kullanışlı bir forma değiştirme.  
   
--   Varsayılan "http://tempuri.org/InterfaceID" form hizmetinden daha ilgili bir form için ad alanı değiştirme.  
+-   Varsayılan hizmet ad alanı değiştirme "http://tempuri.org/InterfaceID" daha ilgili bir form için form.  
   
 -   Farklı bir aktarım bağlama kullanmak için uç nokta değiştirme.  
   

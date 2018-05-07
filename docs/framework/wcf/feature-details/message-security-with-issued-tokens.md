@@ -1,27 +1,17 @@
 ---
-title: "Verilen Belirteçlerle İleti Güvenliği"
-ms.custom: 
+title: Verilen Belirteçlerle İleti Güvenliği
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 731fc871-54d0-4689-90fd-1c9415c45621
-caps.latest.revision: "10"
 author: BrucePerlerMS
-ms.author: bruceper
 manager: mbaldwin
-ms.workload: dotnet
-ms.openlocfilehash: 5badab7ed0773be30ba72045ebf97974e062629c
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 237c56c74afe3c1e9bbdf2002011e76a9eeec5ce
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="message-security-with-issued-tokens"></a>Verilen Belirteçlerle İleti Güvenliği
-Verilen belirteç istemci federe güvenlik senaryoda sağlayan [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)].  
+Verilen belirteç istemci federe güvenlik senaryosu Windows Communication Foundation (WCF) sağlar.  
   
  Federasyon güvenlik bağımsız etki alanları arasında güven kurulması olanak tanır. Her etki alanı kimlik doğrulama ve yetkilendirme bir güvenlik belirteci hizmeti merkezi hale getirir. İki tür hizmet arasında güven oluşturulduğunda, her etki alanı üyeleri, diğer Hizmetleri'ni kullanabilirsiniz.  
   

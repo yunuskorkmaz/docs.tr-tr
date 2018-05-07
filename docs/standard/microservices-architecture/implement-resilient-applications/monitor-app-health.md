@@ -1,21 +1,14 @@
 ---
 title: Sistem durumu izleme
-description: "Kapsayıcılı .NET uygulamaları için .NET mikro mimarisi | Sistem durumu izleme"
-keywords: Docker, Microservices, ASP.NET, Container
+description: Kapsayıcılı .NET uygulamaları için .NET mikro mimarisi | Sistem durumu izleme
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 12/11/2017
-ms.prod: .net-core
-ms.technology: dotnet-docker
-ms.topic: article
-ms.workload:
-- dotnet
-- dotnetcore
-ms.openlocfilehash: 76821e27613335609527b867a6b94dac551f6235
-ms.sourcegitcommit: 15316053918995cc1380163a7d7e7edd5c44e6d7
+ms.openlocfilehash: 81c4fc7662212bb3c6586a590d87e731220b7b7c
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/19/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="health-monitoring"></a>Sistem durumu izleme
 
@@ -27,7 +20,7 @@ Tipik modelinde Hizmetleri durumları hakkında rapor gönderme ve sistem durumu
 
 ## <a name="implementing-health-checks-in-aspnet-core-services"></a>Sistem durumu uygulama ASP.NET Core Hizmetleri'nde denetler
 
-Bir ASP.NET Core mikro hizmet veya web uygulaması geliştirilirken adlı bir kitaplık kullanabilirsiniz `HealthChecks` ASP.NET ekibinden. Önceki sürümü şu anda kullanılabilir [GitHub deposuna](https://github.com/dotnet-architecture/HealthChecks).
+Bir ASP.NET Core mikro hizmet veya web uygulama geliştirirken, bir bant dışı kitaplığını kullanabilirsiniz (değil resmi ASP.NETCore bir parçası olarak) adlı `HealthChecks` ASP.NET ekibinden. Şu anda kullanılabilir [GitHub deposuna](https://github.com/dotnet-architecture/HealthChecks).
 
 Bu kitaplık kullanımı kolaydır ve uygulamanız (örneğin, bir SQL Server veritabanı veya Uzak API) için gerekli herhangi belirli bir dış kaynağa düzgün çalıştığını doğrulamak olanak sağlayan özellikleri sağlar. Bu kitaplık kullandığınızda, daha sonra anlatıldığı şekilde kaynağın sistem durumunun iyi olduğundan anlamını da karar verebilirsiniz.
 

@@ -1,29 +1,17 @@
 ---
-title: "XAML'de Boşluk İşleme"
-ms.custom: 
+title: XAML'de Boşluk İşleme
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-wpf
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - East Asian characters [XAML Services]
 - XAML [XAML Services], whitespace processing
 - whitespace processing in XAML [XAML Services]
 - characters [XAML Services], East Asian
 ms.assetid: cc9cc377-7544-4fd0-b65b-117b90bb0b23
-caps.latest.revision: "20"
-author: wadepickett
-ms.author: wpickett
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: c382be7dabca90ef201fa24cfb79472955347eef
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 9f7d7ca900955b8899322533f9d69338042d88ab
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="whitespace-processing-in-xaml"></a>XAML'de Boşluk İşleme
 Bu önemli boşluk işlenen, tarafından XAML dil kuralları durum bir [!INCLUDE[TLA2#tla_xaml](../../../includes/tla2sharptla-xaml-md.md)] işlemci uygulama. Bu bölümde, XAML dili kurallar listelenmiştir. Ayrıca tarafından tanımlanan ek boşluk işleme belgeleri [!INCLUDE[TLA#tla_winclient](../../../includes/tlasharptla-winclient-md.md)] XAML işlemci ve seri hale getirme için XAML yazıcı uygulamasıdır.  
@@ -70,7 +58,7 @@ Bu önemli boşluk işlenen, tarafından XAML dil kuralları durum bir [!INCLUDE
   
 <a name="east_asian_characters"></a>   
 ## <a name="east-asian-characters"></a>Doğu Asya karakterler  
- "Doğu Asya karakterler" bir dizi tanımlanmış [!INCLUDE[TLA2#tla_unicode](../../../includes/tla2sharptla-unicode-md.md)] U + U + 2FFFD 20000 ve U + U + 3FFFD 30000 karakter aralığı. Bu alt bazen "CJK İdeogramlar" adlandırılır. Daha fazla bilgi için bkz: [http://www.unicode.org](http://www.unicode.org/).  
+ "Doğu Asya karakterler" bir dizi tanımlanmış [!INCLUDE[TLA2#tla_unicode](../../../includes/tla2sharptla-unicode-md.md)] U + U + 2FFFD 20000 ve U + U + 3FFFD 30000 karakter aralığı. Bu alt bazen "CJK İdeogramlar" adlandırılır. Daha fazla bilgi için bkz. [http://www.unicode.org](http://www.unicode.org/).  
   
 <a name="whitespace_and_text_content_models"></a>   
 ## <a name="whitespace-and-text-content-models"></a>Boşluk ve metin içerik modelleri  

@@ -1,30 +1,19 @@
 ---
-title: "Köprü Denetim Türü İçin UI Otomasyon Desteği"
-ms.custom: 
+title: Köprü Denetim Türü İçin UI Otomasyon Desteği
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-bcl
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - Hyperlink control type
 - UI Automation, Hyperlink control type
 - control types, Hyperlink
 ms.assetid: 110cceea-5932-4955-a1a6-13afc51422b2
-caps.latest.revision: 
 author: Xansky
 ms.author: mhopkins
 manager: markl
-ms.workload:
-- dotnet
-ms.openlocfilehash: 2cc63513214f43220ef26b479be353949fa89fa4
-ms.sourcegitcommit: 15316053918995cc1380163a7d7e7edd5c44e6d7
+ms.openlocfilehash: c8eb7bfc56b4dddaf352477e3817864700460db7
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/19/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="ui-automation-support-for-the-hyperlink-control-type"></a>Köprü Denetim Türü İçin UI Otomasyon Desteği
 > [!NOTE]
@@ -70,7 +59,7 @@ ms.lasthandoff: 03/19/2018
 |---------------------------------------|--------------------|-----------|  
 |<xref:System.Windows.Automation.Provider.IInvokeProvider>|Evet|Tüm Köprü denetimleri Invoke düzeni desteklemesi gerekir.|  
 |<xref:System.Windows.Automation.Provider.IValueProvider>|Bağlıdır|Bağlantıyı kullanılabilir ve kullanıcıya anlamlı bilgiler içerdiğinde Köprü denetimleri değer denetim düzenini desteklemelidir.|  
-|<xref:System.Windows.Automation.Provider.IValueProvider.Value>|Örneğin, "http://www..."|Bir Internet veya Intranet adresi için bir URL, kullanıcı için anlamlı bilgileri içeren bir köprü örneğidir. Programlı bir bağlantı, ancak yalnızca bir uygulamaya anlamlı ve değer özelliği için önerilmez.|  
+|<xref:System.Windows.Automation.Provider.IValueProvider.Value>|Örneğin, "http://www...."|Bir Internet veya Intranet adresi için bir URL, kullanıcı için anlamlı bilgileri içeren bir köprü örneğidir. Programlı bir bağlantı, ancak yalnızca bir uygulamaya anlamlı ve değer özelliği için önerilmez.|  
   
 <a name="Required_UI_Automation_Events"></a>   
 ## <a name="required-ui-automation-events"></a>Gerekli UI Otomasyon olayları  

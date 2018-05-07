@@ -1,27 +1,18 @@
 ---
-title: "İstemciler İçin UI Otomasyon Olayları"
-ms.custom: 
+title: İstemciler İçin UI Otomasyon Olayları
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-bcl
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - UI Automation, events for clients
 - events, UI Automation clients
 ms.assetid: b909e388-3f24-4997-b6d4-bd9c35c2dc27
-caps.latest.revision: "32"
 author: Xansky
 ms.author: mhopkins
 manager: markl
-ms.workload: dotnet
-ms.openlocfilehash: 8486f8c8eaa586f6f81ea895fd22c96801b3594b
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.openlocfilehash: d471ee08f60d6fdd029b2057d629ad824ae9fdcf
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="ui-automation-events-for-clients"></a>İstemciler İçin UI Otomasyon Olayları
 > [!NOTE]
@@ -29,7 +20,7 @@ ms.lasthandoff: 01/19/2018
   
  Bu konuda açıklanmaktadır nasıl [!INCLUDE[TLA#tla_uiautomation](../../../includes/tlasharptla-uiautomation-md.md)] olayları UI Otomasyon istemcileri tarafından kullanılır.  
   
- [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]istemcilerin ilgi olaylarına abone olma olanak sağlar. Bu özellik, sürekli olarak tüm yoklamak için gereksinimini ortadan kaldırarak performansı artırır [!INCLUDE[TLA2#tla_ui](../../../includes/tla2sharptla-ui-md.md)] tüm bilgileri, yapı veya durumu değişip değişmediğini görmek için sistemdeki öğeleri.  
+ [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] istemcilerin ilgi olaylarına abone olma olanak sağlar. Bu özellik, sürekli olarak tüm yoklamak için gereksinimini ortadan kaldırarak performansı artırır [!INCLUDE[TLA2#tla_ui](../../../includes/tla2sharptla-ui-md.md)] tüm bilgileri, yapı veya durumu değişip değişmediğini görmek için sistemdeki öğeleri.  
   
  Verimliliği de yalnızca tanımlı bir kapsamdaki olayları dinler özelliği tarafından geliştirilmiştir. Örneğin, tüm odak değişikliği olaylarını istemci dinlediği [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] öğeleri ağacında ya da tek bir öğe ve alt öğeleri.  
   
@@ -47,7 +38,7 @@ ms.lasthandoff: 01/19/2018
 |<xref:System.Windows.Automation.Automation.AddAutomationFocusChangedEventHandler%2A>|Odağı Değiştir|<xref:System.Windows.Automation.AutomationFocusChangedEventArgs>|<xref:System.Windows.Automation.AutomationFocusChangedEventHandler>|  
 |<xref:System.Windows.Automation.Automation.AddAutomationPropertyChangedEventHandler%2A>|Özellik değişikliği|<xref:System.Windows.Automation.AutomationPropertyChangedEventArgs>|<xref:System.Windows.Automation.AutomationPropertyChangedEventHandler>|  
 |<xref:System.Windows.Automation.Automation.AddStructureChangedEventHandler%2A>|Yapı değişikliğine|<xref:System.Windows.Automation.StructureChangedEventArgs>|<xref:System.Windows.Automation.StructureChangedEventHandler>|  
-|<xref:System.Windows.Automation.Automation.AddAutomationEventHandler%2A>|Tarafından tanımlanan tüm diğer olaylar, bir<xref:System.Windows.Automation.AutomationEvent>|<xref:System.Windows.Automation.AutomationEventArgs>veya<xref:System.Windows.Automation.WindowClosedEventArgs>|<xref:System.Windows.Automation.AutomationEventHandler>|  
+|<xref:System.Windows.Automation.Automation.AddAutomationEventHandler%2A>|Tarafından tanımlanan tüm diğer olaylar, bir <xref:System.Windows.Automation.AutomationEvent>|<xref:System.Windows.Automation.AutomationEventArgs> Veya <xref:System.Windows.Automation.WindowClosedEventArgs>|<xref:System.Windows.Automation.AutomationEventHandler>|  
   
  Bir yöntemini çağırmadan önce olayını işlemek için temsilci yöntemi oluşturmanız gerekir. İsterseniz, farklı türde tek bir yöntem olayları işlemek ve bu yöntem tablosundaki yöntemlerini birine birden fazla çağrı geçirin. Örneğin, bir tek <xref:System.Windows.Automation.AutomationEventHandler> farklı aşağıdakilere göre çeşitli olayları işlemek için ayarlanabilir <xref:System.Windows.Automation.AutomationEventArgs.EventId%2A>.  
   

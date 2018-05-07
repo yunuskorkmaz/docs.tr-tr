@@ -1,24 +1,12 @@
 ---
-title: "Standart Uç Noktaları"
-ms.custom: 
+title: Standart Uç Noktaları
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 3fcb4225-addc-44f2-935d-30e4943a8812
-caps.latest.revision: "11"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: de5f1c858b9018071489354441cab197bf5db6e2
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 395d910ddabc553cca47dcdd038f44b1470b3455
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="standard-endpoints"></a>Standart Uç Noktaları
 Uç noktaları bir adresi, bağlama ve bir sözleşme belirterek tanımlanır. Bir noktadaki ayarlanabilir diğer parametreler URI'ler dinleme ve davranış yapılandırmasını, üstbilgiler, içerir.  Belirli uç noktaları türleri bu değerleri değiştirmeyin. Örneğin, meta veri exchange uç noktalarını her zaman kullanın <xref:System.ServiceModel.Description.IMetadataExchange> sözleşme. Diğer uç noktaları gibi <xref:System.ServiceModel.Description.WebHttpEndpoint> her zaman bir belirtilen uç nokta davranışını gerektirir. Bir uç nokta kullanılabilirliğini uç ile sık kullanılan endpoint özelliklerinin varsayılan değerlerini sağlayarak geliştirilebilir. Standart uç noktaları varsayılan değerlerine sahip bir uç nokta tanımlamak bir geliştirici etkinleştirmek veya burada bir veya daha fazla uç noktanın özellikleri değiştirmez.  Bu uç noktaları gibi bir uç nokta statik yapısı bilgilerinin belirtmek zorunda kalmadan kullanmanızı sağlar. Standart uç noktaları için altyapı ve uygulama uç noktaları kullanılabilir.  

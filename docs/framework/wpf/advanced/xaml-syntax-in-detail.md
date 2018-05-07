@@ -1,13 +1,6 @@
 ---
-title: "Ayrıntılı XAML Sözdizimi"
-ms.custom: 
+title: Ayrıntılı XAML Sözdizimi
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-wpf
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - XML [WPF], namespaces
 - XAML [WPF], parsing of attributes
@@ -36,16 +29,11 @@ helpviewer_keywords:
 - attribute syntax [XAML]
 - XAML [WPF], property element syntax
 ms.assetid: 67cce290-ca26-4c41-a797-b68aabc45479
-caps.latest.revision: "26"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 88e66210fd8066e82a11d07ea0cfeb83808d646c
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: d98141c0ad96ef1bd3958ae8d3166aedde76f535
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="xaml-syntax-in-detail"></a>Ayrıntılı XAML Sözdizimi
 Bu konuda XAML sözdizimi öğeleri tanımlamak için kullanılan terimleri tanımlar. Bu koşulları sık bu belge, WPF belgeleri için her ikisini de geri kalanı boyunca özellikle ve XAML ya da XAML dil desteği System.Xaml düzeyinde etkinleştirilir temel XAML kavramları kullanan diğer çerçeveleri için kullanılır. Konu başlığı altında tanıtılan temel terimler bu konuda genişletir. [XAML genel bakış (WPF)](../../../../docs/framework/wpf/advanced/xaml-overview-wpf.md).  
@@ -134,7 +122,7 @@ Bu konuda XAML sözdizimi öğeleri tanımlamak için kullanılan terimleri tan�
 ...  
 ```  
   
- XAML'de ayarlanabilir öznitelikleri destek flagwise numaralandırmalar WPF'de seyrek kullanılır. Ancak, bu tür bir numaralandırma olduğu <xref:System.Windows.Media.StyleSimulations>. Örneğin, virgülle ayrılmış flagwise öznitelik sözdizimi açıklamalar için sağlanan örnek değiştirmek için kullanabilirsiniz <xref:System.Windows.Documents.Glyphs> sınıfı; `StyleSimulations = "BoldSimulation"` hale gelebilir `StyleSimulations = "BoldSimulation,ItalicSimulation"`. <xref:System.Windows.Input.KeyBinding.Modifiers%2A?displayProperty=nameWithType>Burada birden fazla numaralandırma değeri belirtilebilir başka bir özelliktir. Ancak, bu özellik özel bir durum olabilir çünkü olacağını <xref:System.Windows.Input.ModifierKeys> numaralandırma kendi türü dönüştürücü destekler. Değiştiriciler için tür dönüştürücüsünü ayırıcı virgül (,) yerine bir artı işareti (+) kullanır. Bu dönüştürme "Ctrl + Alt" gibi Microsoft Windows programlamada tuş bileşimlerini temsil etmek için daha geleneksel sözdizimini destekler.  
+ XAML'de ayarlanabilir öznitelikleri destek flagwise numaralandırmalar WPF'de seyrek kullanılır. Ancak, bu tür bir numaralandırma olduğu <xref:System.Windows.Media.StyleSimulations>. Örneğin, virgülle ayrılmış flagwise öznitelik sözdizimi açıklamalar için sağlanan örnek değiştirmek için kullanabilirsiniz <xref:System.Windows.Documents.Glyphs> sınıfı; `StyleSimulations = "BoldSimulation"` hale gelebilir `StyleSimulations = "BoldSimulation,ItalicSimulation"`. <xref:System.Windows.Input.KeyBinding.Modifiers%2A?displayProperty=nameWithType> Burada birden fazla numaralandırma değeri belirtilebilir başka bir özelliktir. Ancak, bu özellik özel bir durum olabilir çünkü olacağını <xref:System.Windows.Input.ModifierKeys> numaralandırma kendi türü dönüştürücü destekler. Değiştiriciler için tür dönüştürücüsünü ayırıcı virgül (,) yerine bir artı işareti (+) kullanır. Bu dönüştürme "Ctrl + Alt" gibi Microsoft Windows programlamada tuş bileşimlerini temsil etmek için daha geleneksel sözdizimini destekler.  
   
 ### <a name="properties-and-event-member-name-references"></a>Özellikler ve olay üye adı başvuruları  
  Bir öznitelik belirtirken, herhangi bir özelliği veya içeren nesne öğesi için örneği CLR türünün bir üyesi olarak mevcut olay başvuruda bulunabilir.  
@@ -267,7 +255,7 @@ Bu konuda XAML sözdizimi öğeleri tanımlamak için kullanılan terimleri tan�
   
  `<Button Style="{StaticResource MyStyle}">My button</Button>`  
   
- Burada, `StaticResource` tanımlayan <xref:System.Windows.StaticResourceExtension> biçimlendirme uzantısı uygulama sağlayan sınıf. Sonraki dize `MyStyle` giriş olarak varsayılan olmayan için kullanılan <xref:System.Windows.StaticResourceExtension> burada uzantı dizeden gerçekleştirilecek şekilde parametrenin bildirir istenen Oluşturucusu <xref:System.Windows.ResourceKey>. `MyStyle`olması bekleniyor [x: Key](../../../../docs/framework/xaml-services/x-key-directive.md) değerini bir <xref:System.Windows.Style> bir kaynak olarak tanımlanmış. [StaticResource biçimlendirme uzantısı](../../../../docs/framework/wpf/advanced/staticresource-markup-extension.md) kullanım istekleri kaynak sağlamak için kullanılan <xref:System.Windows.Style> statik kaynak arama mantığını yükleme zamanında aracılığıyla özellik değeri.  
+ Burada, `StaticResource` tanımlayan <xref:System.Windows.StaticResourceExtension> biçimlendirme uzantısı uygulama sağlayan sınıf. Sonraki dize `MyStyle` giriş olarak varsayılan olmayan için kullanılan <xref:System.Windows.StaticResourceExtension> burada uzantı dizeden gerçekleştirilecek şekilde parametrenin bildirir istenen Oluşturucusu <xref:System.Windows.ResourceKey>. `MyStyle` olması bekleniyor [x: Key](../../../../docs/framework/xaml-services/x-key-directive.md) değerini bir <xref:System.Windows.Style> bir kaynak olarak tanımlanmış. [StaticResource biçimlendirme uzantısı](../../../../docs/framework/wpf/advanced/staticresource-markup-extension.md) kullanım istekleri kaynak sağlamak için kullanılan <xref:System.Windows.Style> statik kaynak arama mantığını yükleme zamanında aracılığıyla özellik değeri.  
   
  Biçimlendirme uzantıları hakkında daha fazla bilgi için bkz: [biçimlendirme uzantıları ve WPF XAML](../../../../docs/framework/wpf/advanced/markup-extensions-and-wpf-xaml.md). Biçimlendirme uzantıları ve özellikleri genel .NET XAML uygulamasında etkin programlama diğer XAML başvuru için bkz: [XAML Namespace (x:) Dil özellikleri](../../../../docs/framework/xaml-services/xaml-namespace-x-language-features.md). WPF özgü biçimlendirme uzantıları için bkz: [WPF XAML uzantıları](../../../../docs/framework/wpf/advanced/wpf-xaml-extensions.md).  
   
@@ -309,13 +297,13 @@ Bu konuda XAML sözdizimi öğeleri tanımlamak için kullanılan terimleri tan�
   
  [!code-xaml[XAMLOvwSupport#TypeNameProp](../../../../samples/snippets/csharp/VS_Snippets_Wpf/XAMLOvwSupport/CSharp/page8.xaml#typenameprop)]  
   
- `Button.Background`çalışır çünkü bu özellik için tam arama <xref:System.Windows.Controls.Button> başarılı (<xref:System.Windows.Controls.Control.Background%2A> denetiminden devralındı) ve <xref:System.Windows.Controls.Button> object öğesi sınıf ya da bir taban sınıfı. `Control.Background`çalışır çünkü <xref:System.Windows.Controls.Control> sınıfı gerçekten tanımlayan <xref:System.Windows.Controls.Control.Background%2A> ve <xref:System.Windows.Controls.Control> olan bir <xref:System.Windows.Controls.Button> temel sınıfı.  
+ `Button.Background` çalışır çünkü bu özellik için tam arama <xref:System.Windows.Controls.Button> başarılı (<xref:System.Windows.Controls.Control.Background%2A> denetiminden devralındı) ve <xref:System.Windows.Controls.Button> object öğesi sınıf ya da bir taban sınıfı. `Control.Background` çalışır çünkü <xref:System.Windows.Controls.Control> sınıfı gerçekten tanımlayan <xref:System.Windows.Controls.Control.Background%2A> ve <xref:System.Windows.Controls.Control> olan bir <xref:System.Windows.Controls.Button> temel sınıfı.  
   
  Ancak, aşağıdaki *typeName*. *memberName* form örneği çalışmaz ve bu nedenle açıklamalı gösterilir:  
   
  [!code-xaml[XAMLOvwSupport#TypeNameBadProp](../../../../samples/snippets/csharp/VS_Snippets_Wpf/XAMLOvwSupport/CSharp/page8.xaml#typenamebadprop)]  
   
- <xref:System.Windows.Controls.Label>başka bir türetilmiş sınıf <xref:System.Windows.Controls.Control>, ve belirtilmişse `Label.Background` içinde bir <xref:System.Windows.Controls.Label> object öğesi, bu kullanım çalışılan. Ancak, çünkü <xref:System.Windows.Controls.Label> sınıfı veya temel sınıfını değil <xref:System.Windows.Controls.Button>, belirtilen XAML işlemci sonra işlemek üzere davranıştır `Label.Background` eklenen bir özellik olarak. `Label.Background`kullanılabilir iliştirilmiş bir özellik değildir ve bu kullanım başarısız olur.  
+ <xref:System.Windows.Controls.Label> başka bir türetilmiş sınıf <xref:System.Windows.Controls.Control>, ve belirtilmişse `Label.Background` içinde bir <xref:System.Windows.Controls.Label> object öğesi, bu kullanım çalışılan. Ancak, çünkü <xref:System.Windows.Controls.Label> sınıfı veya temel sınıfını değil <xref:System.Windows.Controls.Button>, belirtilen XAML işlemci sonra işlemek üzere davranıştır `Label.Background` eklenen bir özellik olarak. `Label.Background` kullanılabilir iliştirilmiş bir özellik değildir ve bu kullanım başarısız olur.  
   
 ### <a name="basetypenamemembername-property-elements"></a>baseTypeName.memberName özelliği öğeleri  
  Benzer bir şekilde nasıl *typeName*. *memberName* form çalışır öznitelik sözdizimi için bir *baseTypeName*. *memberName* sözdizimi özellik öğesi sözdizimi için çalışır. Örneğin, aşağıdaki söz dizimini çalışır:  

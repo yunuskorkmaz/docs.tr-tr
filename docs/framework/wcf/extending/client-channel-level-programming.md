@@ -1,30 +1,18 @@
 ---
-title: "İstemci Kanal Düzeyi Programlama"
-ms.custom: 
+title: İstemci Kanal Düzeyi Programlama
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
 ms.assetid: 3b787719-4e77-4e77-96a6-5b15a11b995a
-caps.latest.revision: "6"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 4c3d9bc1819045c8261f003cbab52dd71c4da408
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: ff399a2f3a4b86404695502fb002ee6920bea758
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="client-channel-level-programming"></a>İstemci Kanal Düzeyi Programlama
-Bu konuda nasıl yazılacağını açıklar bir [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] kullanmadan istemci uygulaması <xref:System.ServiceModel.ClientBase%601?displayProperty=nameWithType> sınıfı ve onun ilişkili nesne modeli.  
+Bu konu, bir Windows Communication Foundation (WCF) istemci uygulaması kullanmadan yazmak açıklar <xref:System.ServiceModel.ClientBase%601?displayProperty=nameWithType> sınıfı ve onun ilişkili nesne modeli.  
   
 ## <a name="sending-messages"></a>İleti gönderme  
  İletileri göndermek ve almak ve yanıtları işlemek hazır olması için aşağıdaki adımlar gereklidir:  

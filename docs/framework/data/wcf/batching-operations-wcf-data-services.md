@@ -1,28 +1,14 @@
 ---
-title: "Toplu işlemler (WCF Veri Hizmetleri)"
-ms.custom: 
+title: Toplu işlemler (WCF Veri Hizmetleri)
 ms.date: 03/30/2017
-ms.prod: .net-framework-oob
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - WCF Data Services, client library
 ms.assetid: 962a49d1-cc11-4b96-bc7d-071dd6607d6c
-caps.latest.revision: 
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 65bf6bfd0bd437848137506605a958f5f2e8d750
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 5284d1a3c2ea95e26eddd9c5617f09f299bda4f3
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="batching-operations-wcf-data-services"></a>Toplu işlemler (WCF Veri Hizmetleri)
 [!INCLUDE[ssODataFull](../../../../includes/ssodatafull-md.md)] Destekler toplu işleme isteklerinin bir [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)]-hizmet tabanlı. Daha fazla bilgi için bkz: [OData: toplu işleme](http://go.microsoft.com/fwlink/?LinkId=186075). İçinde [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)], kullanan her bir işlemin <xref:System.Data.Services.Client.DataServiceContext>bir sorgu yürütülürken veya değişiklikleri, veri hizmetine gönderilen ayrı bir istek sonuçlarında kaydetme gibi. İşlem kümesi için mantıksal bir kapsam korumak için açıkça işletimsel toplu tanımlayabilirsiniz. Bu toplu işlemdeki tüm işlemleri tek bir HTTP istek veri hizmeti gönderilir, server'ın otomatik olarak işlemlerini sağlar ve veri hizmetine gidiş dönüş sayısını azaltan sağlar.  

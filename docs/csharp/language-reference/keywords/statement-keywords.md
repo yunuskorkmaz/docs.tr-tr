@@ -1,21 +1,15 @@
 ---
-title: "Deyim Anahtar Sözcükleri (C# Başvurusu)"
+title: Deyim Anahtar Sözcükleri (C# Başvurusu)
 ms.date: 07/20/2015
-ms.prod: .net
-ms.technology: devlang-csharp
-ms.topic: article
 helpviewer_keywords:
 - keywords [C#], statements
 - statements [C#]
 ms.assetid: fad0c004-e282-4ec8-a127-bca7fd7a0b6f
-caps.latest.revision: "12"
-author: BillWagner
-ms.author: wiwagn
-ms.openlocfilehash: 0a882d7c0e88f325d4a0bf471b5b38844b2b13f3
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 2485a6258913b1dae04c093fa74a8acf1aaa3ca3
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="statement-keywords-c-reference"></a>Deyim Anahtar Sözcükleri (C# Başvurusu)
 Deyimleri program yönergelerdir. Dışında aşağıdaki tabloda başvurulan konularda açıklandığı gibi deyimleri sırada yürütülür. Aşağıdaki tabloda, C# deyim anahtar sözcükleri listeler. Herhangi bir anahtar sözcük ile değil belirtilmiştir deyimler hakkında daha fazla bilgi için bkz: [deyimleri](../../../csharp/programming-guide/statements-expressions-operators/statements.md).  
@@ -27,10 +21,10 @@ Deyimleri program yönergelerdir. Dışında aşağıdaki tabloda başvurulan ko
 |[Atlama deyimleri](../../../csharp/language-reference/keywords/jump-statements.md)|[BREAK](../../../csharp/language-reference/keywords/break.md), [devam](../../../csharp/language-reference/keywords/continue.md), [varsayılan](../../../csharp/language-reference/keywords/switch.md), [goto](../../../csharp/language-reference/keywords/goto.md), [dönmek](../../../csharp/language-reference/keywords/return.md), [verim](../../../csharp/language-reference/keywords/yield.md)|  
 |[Özel durum işleme deyimleri](../../../csharp/language-reference/keywords/exception-handling-statements.md)|[throw](../../../csharp/language-reference/keywords/throw.md), [try-catch](../../../csharp/language-reference/keywords/try-catch.md), [try-finally](../../../csharp/language-reference/keywords/try-finally.md), [try-catch-finally](../../../csharp/language-reference/keywords/try-catch-finally.md)|  
 |[Checked ve unchecked](../../../csharp/language-reference/keywords/checked-and-unchecked.md)|[işaretli](../../../csharp/language-reference/keywords/checked.md), [seçeneği işaretli değil](../../../csharp/language-reference/keywords/unchecked.md)|  
-[fixed deyimi](../../../csharp/language-reference/keywords/fixed-statement.md)|[Sabit](../../../csharp/language-reference/keywords/fixed-statement.md)|  
-|[lock deyimi](../../../csharp/language-reference/keywords/lock-statement.md)|[kilitleme](../../../csharp/language-reference/keywords/lock-statement.md)|  
+[fixed Deyimi](../../../csharp/language-reference/keywords/fixed-statement.md)|[Sabit](../../../csharp/language-reference/keywords/fixed-statement.md)|  
+|[lock Deyimi](../../../csharp/language-reference/keywords/lock-statement.md)|[lock](../../../csharp/language-reference/keywords/lock-statement.md)|  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
  [C# başvurusu](../../../csharp/language-reference/index.md)  
- [Deyimleri](../../../csharp/programming-guide/statements-expressions-operators/statements.md)  
- [C# anahtar sözcükleri](../../../csharp/language-reference/keywords/index.md)
+ [Deyimler](../../../csharp/programming-guide/statements-expressions-operators/statements.md)  
+ [C# Anahtar Sözcükleri](../../../csharp/language-reference/keywords/index.md)

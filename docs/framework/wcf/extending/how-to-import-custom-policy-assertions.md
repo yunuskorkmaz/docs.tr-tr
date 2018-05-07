@@ -1,27 +1,15 @@
 ---
-title: "Nasıl yapılır: Özel İlke Onaylamalarını İçe Aktarma"
-ms.custom: 
+title: 'Nasıl yapılır: Özel İlke Onaylamalarını İçe Aktarma'
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
 ms.assetid: 1f41d787-accb-4a10-bfc6-a807671d1581
-caps.latest.revision: "8"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 916f5b820ce9e1c30c13a9834548c83e32bc3579
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: b6155296e264bb3ae90aac2ee6b83797e632962e
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-import-custom-policy-assertions"></a>Nasıl yapılır: Özel İlke Onaylamalarını İçe Aktarma
 İlke onaylamalarını hizmet uç noktası gereksinimlerini ve özelliklerini açıklar.  İstemci uygulamaları ilke onaylamalarını hizmeti meta verilerde bağlama istemcisini yapılandırmak için veya bir hizmet uç noktası için hizmet sözleşmesini özelleştirmek için kullanabilirsiniz.  
@@ -51,7 +39,7 @@ ms.lasthandoff: 12/22/2017
   
 3.  Bağlama veya yetenek veya ilke onaylama işlemi tarafından belirtilen gereksinim destekleyen sözleşme özelleştirme gerçekleştirin. Genellikle bir bağlama belirli bir yapılandırma veya belirli bağlama öğesi gerektiriyor onaylar gösterir. Erişerek bu değişiklikleri yapmak <xref:System.ServiceModel.Description.PolicyConversionContext.BindingElements%2A?displayProperty=nameWithType> özelliği. Diğer onaylar sözleşme değiştirmeniz gerekir.  Erişim ve sözleşme kullanarak değiştirme <xref:System.ServiceModel.Description.PolicyConversionContext.Contract%2A?displayProperty=nameWithType> özelliği.  İlke içeri Aktarıcı birden çok kez aynı bağlama ve sözleşme için çağrılmadığı, ancak bir ilke alternatif alınıyorsa farklı ilke alternatifleri başarısız unutmayın. Kodunuzu bu davranış dayanıklı olması gerekir.  
   
-4.  Özel ilke onaylama onaylama koleksiyondan kaldırın. Onaylama işlemi kaldırmazsanız [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] ilke alma işlemi başarısız oldu ve ilişkili bağlama almaz varsayar. Kullandıysanız <xref:System.ServiceModel.Description.PolicyAssertionCollection.Remove%2A?displayProperty=nameWithType> özel ilke onaylama bulun ve bu adımı gerçekleştirmeniz gerekmez tek bir adımda koleksiyondan kaldırmak için yöntem.  
+4.  Özel ilke onaylama onaylama koleksiyondan kaldırın. Onaylama işlemi kaldırmazsanız Windows Communication Foundation (WCF) ilkesi alma başarısız oldu ve ilişkili bağlama almaz varsayar. Kullandıysanız <xref:System.ServiceModel.Description.PolicyAssertionCollection.Remove%2A?displayProperty=nameWithType> özel ilke onaylama bulun ve bu adımı gerçekleştirmeniz gerekmez tek bir adımda koleksiyondan kaldırmak için yöntem.  
   
 ### <a name="to-insert-the-custom-policy-importer-into-the-metadata-system-using-a-configuration-file"></a>Bir yapılandırma dosyası kullanarak sistem meta veri özel ilkesine içeri Aktarıcı eklemek için  
   

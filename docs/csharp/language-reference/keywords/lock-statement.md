@@ -1,24 +1,17 @@
 ---
 title: lock Deyimi (C# Başvurusu)
 ms.date: 07/20/2015
-ms.prod: .net
-ms.technology:
-- devlang-csharp
-ms.topic: article
 f1_keywords:
 - lock_CSharpKeyword
 - lock
 helpviewer_keywords:
 - lock keyword [C#]
 ms.assetid: 656da1a4-707e-4ef6-9c6e-6d13b646af42
-caps.latest.revision: 43
-author: BillWagner
-ms.author: wiwagn
-ms.openlocfilehash: eb48c2b1554ad2817406eaef42b4cb336ea46862
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 2ce870e8caa67d780ce603a6f1dbcc7cd303b842
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="lock-statement-c-reference"></a>lock Deyimi (C# Başvurusu)
 `lock` Anahtar sözcüğü belirli nesne karşılıklı dışlama kilidi alma, bir deyimi yürütme ve kilidin açılması bu deyimi blok önemli bir bölümü işaretler. Aşağıdaki örnek içeren bir `lock` deyimi.  
@@ -54,11 +47,11 @@ class Account
   
  Genel olarak, üzerinde kilitleme kaçının bir `public` türü ya da kodunuzu ait denetim ötesinde örnekleri. Ortak yapıları `lock (this)`, `lock (typeof (MyType))`, ve `lock ("myLock")` bu kılavuz ihlal:  
   
--   `lock (this)`örnek genel olarak erişilebiliyorsa bir sorundur.  
+-   `lock (this)` örnek genel olarak erişilebiliyorsa bir sorundur.  
   
--   `lock (typeof (MyType))`bir sorun ise `MyType` genel olarak erişilebilir.  
+-   `lock (typeof (MyType))` bir sorun ise `MyType` genel olarak erişilebilir.  
   
--   `lock("myLock")`aynı dize kullanarak işlemdeki başka bir kod paylaşır çünkü aynı kilit bir sorundur.  
+-   `lock("myLock")` aynı dize kullanarak işlemdeki başka bir kod paylaşır çünkü aynı kilit bir sorundur.  
   
  En iyi uygulamadır tanımlamak için bir `private` , kilitlemek için nesne veya `private static` için tüm örnekleri ortak verileri korumak için nesne değişkeni.  
   
@@ -81,11 +74,11 @@ class Account
  <xref:System.Reflection.MethodImplAttributes>  
  <xref:System.Threading.Mutex>  
  [C# başvurusu](../../../csharp/language-reference/index.md)  
- [C# programlama kılavuzu](../../../csharp/programming-guide/index.md)  
+ [C# Programlama Kılavuzu](../../../csharp/programming-guide/index.md)  
  [İş parçacığı oluşturma](../../programming-guide/concepts/threading/index.md)  
- [C# anahtar sözcükleri](../../../csharp/language-reference/keywords/index.md)  
- [Deyim anahtar sözcükleri](../../../csharp/language-reference/keywords/statement-keywords.md)  
+ [C# Anahtar Sözcükleri](../../../csharp/language-reference/keywords/index.md)  
+ [Deyim Anahtar Sözcükleri](../../../csharp/language-reference/keywords/statement-keywords.md)  
  <xref:System.Threading.Monitor>  
- [Birbirine kenetlenmiş işlemler](../../../standard/threading/interlocked-operations.md)  
+ [Birbirine Kenetlenmiş İşlemler](../../../standard/threading/interlocked-operations.md)  
  [AutoResetEvent](../../../standard/threading/autoresetevent.md)  
- [İş parçacığı eşitleme](../../programming-guide/concepts/threading/thread-synchronization.md)
+ [İş Parçacığı Eşitleme](../../programming-guide/concepts/threading/thread-synchronization.md)

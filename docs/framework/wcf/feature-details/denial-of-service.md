@@ -1,28 +1,14 @@
 ---
 title: Hizmet Reddi
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 helpviewer_keywords:
 - denial of service [WCF]
 ms.assetid: dfb150f3-d598-4697-a5e6-6779e4f9b600
-caps.latest.revision: 12
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 4734407868d9dae2acc422c0f07aad57d42d4566
-ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
+ms.openlocfilehash: 52a22d96e981ff10d444569465d8e74ddf890836
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/30/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="denial-of-service"></a>Hizmet Reddi
 Hizmet reddi oluşur. bir sistem iletileri işlenemiyor veya çok yavaş işlenene bir şekilde doludur.  
@@ -62,15 +48,15 @@ Hizmet reddi oluşur. bir sistem iletileri işlenemiyor veya çok yavaş işlene
 ## <a name="invalid-implementations-of-iauthorizationpolicy-can-cause-service-hangs"></a>Geçersiz uygulamaları IAuthorizationPolicy Can neden Hizmeti kilitleniyor  
  Çağırma <xref:System.IdentityModel.Policy.IAuthorizationPolicy.Evaluate%2A> hatalı uyarlamasını yöntemi <xref:System.IdentityModel.Policy.IAuthorizationPolicy> arabirimi hizmet askıda kalmasına neden olabilir.  
   
- Azaltma: yalnızca güvenilir kodunu kullanın. Diğer bir deyişle, kullanan yazılmış ve test kod veya güvenilen bir sağlayıcı gelir. Güvenilmeyen uzantılarını izin verme <xref:System.IdentityModel.Policy.IAuthorizationPolicy> kodunuzu son olmadan takılı için göz önünde bulundurarak. Bu, bir hizmet uygulamasında kullanılan tüm uzantıları uygular. [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] Genişletilebilirlik noktaları kullanarak uygulama kodu ve takılı yabancı kodu arasında hiçbir ayrım yapmaz.  
+ Azaltma: yalnızca güvenilir kodunu kullanın. Diğer bir deyişle, kullanan yazılmış ve test kod veya güvenilen bir sağlayıcı gelir. Güvenilmeyen uzantılarını izin verme <xref:System.IdentityModel.Policy.IAuthorizationPolicy> kodunuzu son olmadan takılı için göz önünde bulundurarak. Bu, bir hizmet uygulamasında kullanılan tüm uzantıları uygular. WCF, genişletilebilirlik noktaları kullanarak uygulama kodu ve takılı yabancı kodu arasında hiçbir ayrım yapmaz.  
   
 ## <a name="kerberos-maximum-token-size-may-need-resizing"></a>Yeniden boyutlandırma Kerberos en büyük simge boyutu gerekebilir  
- Bir istemci çok sayıda grupları ait olup olmadığını (yaklaşık 900 gerçek sayı grupları bağlı olarak değişir rağmen), ileti üst bilginin blok 64 kilobayt aştığında bir sorun ortaya çıkabilir. Bu durumda, Microsoft Support makalesini içinde açıklandığı gibi en yüksek Kerberos belirteci boyutunu artırabilirsiniz "[Internet Explorer Kerberos kimlik doğrulaması için IIS bağlanan bir yetersiz arabellek nedeniyle çalışmıyor](http://go.microsoft.com/fwlink/?LinkId=89176)." Ayrıca en fazla artırmanız gerekebilir [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] ileti büyük Kerberos belirteci uyum sağlayacak şekilde boyutu.  
+ Bir istemci çok sayıda grupları ait olup olmadığını (yaklaşık 900 gerçek sayı grupları bağlı olarak değişir rağmen), ileti üst bilginin blok 64 kilobayt aştığında bir sorun ortaya çıkabilir. Bu durumda, Microsoft Support makalesini içinde açıklandığı gibi en yüksek Kerberos belirteci boyutunu artırabilirsiniz "[Internet Explorer Kerberos kimlik doğrulaması için IIS bağlanan bir yetersiz arabellek nedeniyle çalışmıyor](http://go.microsoft.com/fwlink/?LinkId=89176)." Büyük Kerberos belirteci uyum sağlamak için WCF ileti sınırını artırmak gerekebilir.  
   
 ## <a name="autoenrollment-results-in-multiple-certificates-with-same-subject-name-for-machine"></a>Makine için aynı konu adına sahip birden çok sertifika otomatik kaydını sonuçları  
  *Otomatik kayıt* yeteneğini olduğu [!INCLUDE[ws2003](../../../../includes/ws2003-md.md)] kullanıcıları ve bilgisayarları sertifikalar için otomatik olarak kaydedilecek. Bir makine özelliği etkinleştirilmiş bir etki alanında olduğunda, istemci kimlik doğrulaması hedeflenen amacı olan bir X.509 sertifikası otomatik olarak oluşturulur ve yeni bir makine katıldığı her yerel bilgisayarın kişisel sertifika deposuna eklendi Ağ. Ancak, otomatik kayıt önbellekte oluşturduğu tüm sertifikalar aynı konu adı kullanır.  
   
- Etkisi olan [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] Hizmetleri autoenrollment etki alanlarıyla açmak başarısız olabilir. Bu durum, makine tam olarak nitelenmiş etki alanı adı sistemi (DNS) adıyla birden fazla sertifika var olduğundan varsayılan hizmet X.509 kimlik bilgisi arama ölçütlerini belirsiz olabilir kaynaklanır. Bir sertifika otomatik kaydını kaynaklanan; diğer bir kendi kendine sertifikayı olabilir.  
+ WCF hizmetleri autoenrollment etki alanlarıyla açmak başlatılamayabilir etkisidir. Bu durum, makine tam olarak nitelenmiş etki alanı adı sistemi (DNS) adıyla birden fazla sertifika var olduğundan varsayılan hizmet X.509 kimlik bilgisi arama ölçütlerini belirsiz olabilir kaynaklanır. Bir sertifika otomatik kaydını kaynaklanan; diğer bir kendi kendine sertifikayı olabilir.  
   
  Bunu azaltmak için üzerinde daha kesin bir arama ölçütü kullanarak tam sertifika başvuru [ \<serviceCredentials >](../../../../docs/framework/configure-apps/file-schema/wcf/servicecredentials.md). Örneğin, <xref:System.Security.Cryptography.X509Certificates.X509FindType.FindByThumbprint> seçeneği ve kendi benzersiz parmak izi tarafından (karma) sertifikasını belirtin.  
   
@@ -82,7 +68,7 @@ Hizmet reddi oluşur. bir sistem iletileri işlenemiyor veya çok yavaş işlene
 ## <a name="protect-configuration-files-with-acls"></a>ACL'ler ile yapılandırma dosyalarını koruyun  
  Kod ve yapılandırma dosyaları için gerekli ve isteğe bağlı talep belirtebilirsiniz [!INCLUDE[infocard](../../../../includes/infocard-md.md)] verilen belirteçler. Bu ilgili öğeleri de gösterilmesini sonuçlanır `RequestSecurityToken` güvenlik gönderilen iletileri hizmet belirteci. Bir saldırgan kod veya yapılandırma gerekli veya isteğe bağlı talep kaldırmak için potansiyel olarak hedef hizmete erişim izni olmayan bir belirteç vermek için güvenlik belirteci hizmeti alma değişiklik yapabilirsiniz.  
   
- Azaltmak için: yapılandırma dosyasını değiştirmek için bilgisayara erişimi gerektirir. Dosya erişimi denetimi kullan yapılandırma dosyalarını güvenli hale getirmek için listeleri (ACL'ler). [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] yapılandırmasından yüklenmesi gibi kodu sağlayacak önce kodu uygulama dizini veya genel derleme önbelleği olmasını gerektirir. Dizin ACL dizinleri güvenliğini sağlamak için kullanın.  
+ Azaltmak için: yapılandırma dosyasını değiştirmek için bilgisayara erişimi gerektirir. Dosya erişimi denetimi kullan yapılandırma dosyalarını güvenli hale getirmek için listeleri (ACL'ler). WCF yapılandırmasından yüklenmesi gibi kodu sağlayacak önce kodu uygulama dizini veya genel derleme önbelleği olmasını gerektirir. Dizin ACL dizinleri güvenliğini sağlamak için kullanın.  
   
 ## <a name="maximum-number-of-secure-sessions-for-a-service-is-reached"></a>Bir hizmet için güvenli oturumlar sayısı üst sınırına  
  Bir istemci bir hizmet tarafından başarıyla doğrulandıktan ve güvenli bir oturum hizmetiyle kurulan hizmeti istemci iptal eder veya oturum süresinin sona kadar oturum izler. Her kurulan oturum sınırınızı için en fazla bir hizmetle etkin eşzamanlı oturum sayısını sayar. Bu sınıra ulaşıldığında, yeni bir oturum hizmetle oluşturma denemesi istemcileri kadar reddedilir veya fazla etkin oturum sona veya istemci tarafından iptal edildi. Bir istemci bir hizmet ile birden çok oturumu olabilir ve her biri bu oturumlar, sınırında sayılır.  

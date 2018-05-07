@@ -1,24 +1,12 @@
 ---
 title: 'Hizmet: Kanal Dinleyicileri ve Kanallar'
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 8ccbe0e8-7e55-441d-80de-5765f67542fa
-caps.latest.revision: "8"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: b6f0eeb0d859f6fe508019085709464fab806ea2
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
-ms.translationtype: MT
+ms.openlocfilehash: 5f5acff6ca933006707a863ea5ba04cd01cfb93e
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="service-channel-listeners-and-channels"></a>Hizmet: Kanal Dinleyicileri ve Kanallar
 Kanal nesneleri üç kategorisi vardır: kanalları, kanal dinleyicileri ve kanal fabrikaları. Kanallar uygulama ve kanal yığını arasındaki arabirim olan. Kanal dinleyicileri alma (veya dinleme) tarafında, genellikle yeni gelen ileti veya bağlantısı yanıtında kanalları oluşturmaktan sorumlu. Kanal fabrikaları bir uç nokta ile iletişim başlatmasını gönderme tarafında kanalları oluşturmaktan sorumlu.  
@@ -33,7 +21,7 @@ Kanal nesneleri üç kategorisi vardır: kanalları, kanal dinleyicileri ve kana
   
  Uygulama bir sıra gerçekte kullanamazsınız olsa da her kanal içinde bir sıra olarak kavramsal olarak işlem modellenebilir. Kanal dinleyicisi katmandan alıcı iletileri veya ağ ve sıraya koyma sorumludur. Kanal sıradan ileti alma ve bunları ne zaman katman soran bir ileti için örneğin çağırarak yukarıda katmana gönderdikten sorumludur `Receive` kanalda.  
   
- [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]Bu işlem için temel sınıfı Yardımcıları sağlar. (Bu konuda tartışılan kanal yardımcı sınıfları diyagramı için bkz: [kanal modeli genel bakış](../../../../docs/framework/wcf/extending/channel-model-overview.md).)  
+ [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] Bu işlem için temel sınıfı Yardımcıları sağlar. (Bu konuda tartışılan kanal yardımcı sınıfları diyagramı için bkz: [kanal modeli genel bakış](../../../../docs/framework/wcf/extending/channel-model-overview.md).)  
   
 -   <xref:System.ServiceModel.Channels.CommunicationObject> Uygulayan sınıf <xref:System.ServiceModel.ICommunicationObject> ve 2. adımda açıklanan durum makinesinin zorlar [geliştirme kanalları](../../../../docs/framework/wcf/extending/developing-channels.md).  
   

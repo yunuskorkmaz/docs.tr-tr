@@ -1,14 +1,6 @@
 ---
 title: IMetaDataEmit::MergeEnd Metodu
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: reference
 api_name:
 - IMetaDataEmit.MergeEnd
 api_location:
@@ -23,17 +15,13 @@ helpviewer_keywords:
 ms.assetid: 2d64315a-1af1-4c60-aedf-f8a781914aea
 topic_type:
 - apiref
-caps.latest.revision: 
 author: mairaw
 ms.author: mairaw
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 265fc007b5817e8dffd5846738a7a0003bbddf9d
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: b794a62a0ac0d253f1431be29b43101816dc7233
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="imetadataemitmergeend-method"></a>IMetaDataEmit::MergeEnd Metodu
 Birleştirmeler geçerli kapsam için bir veya daha fazla önceki çağrıları tarafından belirtilen tüm meta veri kapsamları [Imetadataemit::Merge](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-merge-method.md).  
@@ -58,7 +46,7 @@ HRESULT MergeEnd ();
   
      Modülü özellikleri zaten geçerli kapsam için ayarlandıysa, hiçbir modülü özellikleri içeri aktarılır. Modülü özellikleri geçerli kapsamda ayarlanmamış, yalnızca zaman ilk karşılaşılan sonra ancak bunlar içeri aktarılır. Bu modülü özellikleri yeniden aldıysanız, yinelenen oldukları. (MVID dışında) tüm modülü özelliklerinin değerlerini karşılaştırılır ve yinelenen bulunan, bir hata oluştu.  
   
--   Tür tanımları için (`TypeDef`), yinelenen geçerli kapsam birleştirilir. `TypeDef`nesneleri her karşı çoğaltmaları denetlenir *tam nesne adı* + *GUID* + *sürüm numarası*. Adı veya GUID bir eşleşme yoktur ve herhangi bir diğer iki farklı ise, bir hata oluştu. Aksi durumda, tüm üç öğe eşleşiyorsa `MergeEnd` girişleri gerçekten Tekrarların; sağlamak için basit bir denetim gerçekleştirir değilse, bir hata oluşur. Bu basit onay arar:  
+-   Tür tanımları için (`TypeDef`), yinelenen geçerli kapsam birleştirilir. `TypeDef` nesneleri her karşı çoğaltmaları denetlenir *tam nesne adı* + *GUID* + *sürüm numarası*. Adı veya GUID bir eşleşme yoktur ve herhangi bir diğer iki farklı ise, bir hata oluştu. Aksi durumda, tüm üç öğe eşleşiyorsa `MergeEnd` girişleri gerçekten Tekrarların; sağlamak için basit bir denetim gerçekleştirir değilse, bir hata oluşur. Bu basit onay arar:  
   
     -   Aynı sırada gerçekleşen aynı üye bildirimleri. Olarak işaretlenmiş üyeleri `mdPrivateScope` (bkz [CorMethodAttr](../../../../docs/framework/unmanaged-api/metadata/cormethodattr-enumeration.md) numaralandırması) bu iade; bulunmayan özel birleştirilir.  
   
@@ -79,7 +67,7 @@ HRESULT MergeEnd ();
   
  **Kitaplığı:** MSCorEE.dll kaynak olarak kullanılır  
   
- **.NET framework sürümleri:**[!INCLUDE[net_current_v11plus](../../../../includes/net-current-v11plus-md.md)]  
+ **.NET framework sürümleri:** [!INCLUDE[net_current_v11plus](../../../../includes/net-current-v11plus-md.md)]  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
  [IMetaDataEmit Arabirimi](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-interface.md)  

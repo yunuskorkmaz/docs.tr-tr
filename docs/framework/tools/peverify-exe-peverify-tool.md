@@ -1,13 +1,6 @@
 ---
-title: "Peverify.exe (PEVerify Aracı)"
-ms.custom: 
+title: Peverify.exe (PEVerify Aracı)
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - portable executable files, PEVerify
 - verifying MSIL and metadata
@@ -17,16 +10,13 @@ helpviewer_keywords:
 - PEverify.exe
 - PE files, PEVerify
 ms.assetid: f4f46f9e-8d08-4e66-a94b-0c69c9b0bbfa
-caps.latest.revision: "18"
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 5acb6da7c68f899daa4144e897e9ec31fcfa868a
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.openlocfilehash: e70324192f56214d273ae2a819a9c08be7d49b1e
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="peverifyexe-peverify-tool"></a>Peverify.exe (PEVerify Aracı)
 PEVerify aracı, Microsoft ara dili (MSIL) (derleyici yazıcıları, betik motor geliştiricileri vb.) oluşturan geliştiricilere, MSIL kodlarının ve ilişkili meta verilerinin güvenlik koşullarına uygun olup olmadığını belirlemede yardımcı olur. Bazı derleyiciler yalnızca belirli dil yapılarını kullanmaktan kaçındığınızda doğrulanabilir şekilde tür kullanımı uyumlu kod üretir. Bir geliştirici olarak, bilgisayar kullanıyorsanız, kodunuzun tür güvenliğini tehlikeye atmadığınızı doğrulamak isteyebilirsiniz. Bu durumda, MSIL ve meta verileri denetlemek için dosyalarınızda PEVerify aracını çalıştırabilirsiniz.  
@@ -53,10 +43,10 @@ peverify filename [options]
 |**/Clock**|Milisaniye olarak aşağıdaki doğrulama zamanlarını ölçer ve bildirir:<br /><br /> **MD elden döngüsü**<br /> Meta veri doğrulama döngüsü<br /><br /> **MD elden saf**<br /> Meta veri doğrulama safı<br /><br /> **IL sürüm döngüsü**<br /> Microsoft ara dili (MSIL) doğrulama döngüsü<br /><br /> **Saf IL Ver**<br /> MSIL doğrulaması saf<br /><br /> **MD elden döngüsü** ve **IL sürüm döngüsü** kez dahil etmeniz gereken başlatma ve kapatma işlemleri gerçekleştirmek için gereken süre. **MD elden saf** ve **IL Ver saf** saatler doğrulama veya yalnızca doğrulama gerçekleştirmek için gereken süreyi yansıtır.|  
 |**/ Help**|Araç için komut sözdizimini ve seçenekleri görüntüler.|  
 |**/HRESULT**|Onaltılık biçimde hata kodlarını görüntüler.|  
-|**/ignore=** *hex.code* [, *hex.code*]|Belirtilen hata kodlarını dikkate almaz.|  
+|**Yoksay =** *hex.code* [, *hex.code*]|Belirtilen hata kodlarını dikkate almaz.|  
 |**Yoksay = @** *responseFile*|Belirtilen yanıt dosyasında listelenen hata kodlarını dikkate almaz.|  
-|**/il**|Belirtilen derleme uygulanan yöntemleri için MSIL tür güvenlik doğrulama denetimleri gerçekleştirir *filename*. Belirtmediğiniz sürece bulunan her sorun için ayrıntılı açıklamalar aracı döndürür **/quiet** seçeneği.|  
-|**/md**|Tarafından belirtilen derlemedeki meta veri doğrulama denetimlerini gerçekleştiren *filename*. Bu, dosya içindeki tüm meta veri yapısını ölçer ve karşılaşılan tüm doğrulama sorunlarını rapor eder.|  
+|**/İl**|Belirtilen derleme uygulanan yöntemleri için MSIL tür güvenlik doğrulama denetimleri gerçekleştirir *filename*. Belirtmediğiniz sürece bulunan her sorun için ayrıntılı açıklamalar aracı döndürür **/quiet** seçeneği.|  
+|**/MD**|Tarafından belirtilen derlemedeki meta veri doğrulama denetimlerini gerçekleştiren *filename*. Bu, dosya içindeki tüm meta veri yapısını ölçer ve karşılaşılan tüm doğrulama sorunlarını rapor eder.|  
 |**/nologo**|Ürün sürümü ve telif hakkı bilgilerinin görüntülenmesini önler.|  
 |**/nosymbols**|.NET Framework sürüm 2.0'da, geriye doğru uyumluluk için satır numaralarını gizler.|  
 |**/quiet**|Sessiz mod kullanılacağını belirtir; doğrulama sorunu raporlarının çıkışını önler. Peverify.exe dosyanın tür kullanımı uyumlu olup olmadığını bildirmeye devam eder, ancak tür güvenliği doğrulamasını önleyen sorunlar hakkında bilgi vermez.|  

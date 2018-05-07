@@ -1,31 +1,17 @@
 ---
-title: "Veri Sözleşmelerinde Numaralandırma Türleri"
-ms.custom: 
+title: Veri Sözleşmelerinde Numaralandırma Türleri
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
 helpviewer_keywords:
 - data contracts [WCF], enumeration types
 ms.assetid: b5d694da-68cb-4b74-a5fb-75108a68ec3b
-caps.latest.revision: 
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 7989996f7ed64ba4b85ddc1ca01538ec05e99e1a
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: ed4a0c572f651793a40cb5ffcaa32aef884c1cec
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="enumeration-types-in-data-contracts"></a>Veri Sözleşmelerinde Numaralandırma Türleri
 Numaralandırmalar veri sözleşmesi modelinde ifade edilebilir. Bu konuda programlama modeli açıklayan birkaç örneklerle anlatılmaktadır.  
@@ -43,7 +29,7 @@ Numaralandırmalar veri sözleşmesi modelinde ifade edilebilir. Bu konuda progr
  Kullanabileceğiniz <xref:System.Runtime.Serialization.DataContractAttribute> özellikleri (<xref:System.Runtime.Serialization.DataContractAttribute.Name%2A> ve <xref:System.Runtime.Serialization.DataContractAttribute.Namespace%2A>) numaralandırma veri sözleşmeleri için her zamanki gibi.  
   
 ### <a name="enumeration-member-values"></a>Numaralandırma üye değerleri  
- Genellikle veri sözleşmesi Numaralandırma üye adları, sayısal değerleri içerir. Ancak, ne zaman verileri kullanarak sözleşme modeli, alma tarafı ise bir [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] istemci, dışarı aktarılan şema sayısal değerleri korur. Bu durum kullanırken olmadığını unutmayın [XmlSerializer sınıfını kullanma](../../../../docs/framework/wcf/feature-details/using-the-xmlserializer-class.md).  
+ Genellikle veri sözleşmesi Numaralandırma üye adları, sayısal değerleri içerir. Ancak, alma tarafı bir WCF istemcisi ise veri sözleşmesi modelini kullanırken, dışarı aktarılan şema sayısal değerleri korur. Bu durum kullanırken olmadığını unutmayın [XmlSerializer sınıfını kullanma](../../../../docs/framework/wcf/feature-details/using-the-xmlserializer-class.md).  
   
  Önceki örnekte, `condition` ayarlanır `Used` ve verileri seri için sonuçta elde edilen XML XML'dir `<condition>Used</condition>` ve `<condition>1</condition>`. Bu nedenle, aşağıdaki veri sözleşmesi veri sözleşmesi eşdeğerdir `CarConditionEnum`.  
   

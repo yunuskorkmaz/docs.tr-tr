@@ -1,28 +1,16 @@
 ---
-title: "Windows Forms DataGridView Denetimindeki Hücre Stilleri"
-ms.custom: 
+title: Windows Forms DataGridView Denetimindeki Hücre Stilleri
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-winforms
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - DataGridView control [Windows Forms], cell styles
 - cells [Windows Forms], styles
 - data grids [Windows Forms], cell styles
 ms.assetid: dbb75ed6-8804-4232-8382-f9920c2e380c
-caps.latest.revision: "33"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 915aba380b6fe35299de94720f216cda5ab66721
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 463fbbffe1e88991934f08fbe7e7445b2e233081
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="cell-styles-in-the-windows-forms-datagridview-control"></a>Windows Forms DataGridView Denetimindeki Hücre Stilleri
 Her hücrede <xref:System.Windows.Forms.DataGridView> denetim metin biçimi, arka plan rengi, ön plan renk ve yazı tipi gibi kendi stil sahip olabilir. Genellikle, ancak, birden çok hücreyi belirli stil özellikleri paylaşır.  
@@ -32,17 +20,17 @@ Her hücrede <xref:System.Windows.Forms.DataGridView> denetim metin biçimi, ark
 ## <a name="the-datagridviewcellstyle-class"></a>DataGridViewCellStyle sınıfı  
  <xref:System.Windows.Forms.DataGridViewCellStyle> Sınıfı için görsel stil ilgili aşağıdaki özellikleri içerir:  
   
--   <xref:System.Windows.Forms.DataGridViewCellStyle.BackColor%2A>ve<xref:System.Windows.Forms.DataGridViewCellStyle.ForeColor%2A>  
+-   <xref:System.Windows.Forms.DataGridViewCellStyle.BackColor%2A> Ve <xref:System.Windows.Forms.DataGridViewCellStyle.ForeColor%2A>  
   
--   <xref:System.Windows.Forms.DataGridViewCellStyle.SelectionBackColor%2A>ve<xref:System.Windows.Forms.DataGridViewCellStyle.SelectionForeColor%2A>  
+-   <xref:System.Windows.Forms.DataGridViewCellStyle.SelectionBackColor%2A> Ve <xref:System.Windows.Forms.DataGridViewCellStyle.SelectionForeColor%2A>  
   
 -   <xref:System.Windows.Forms.DataGridViewCellStyle.Font%2A>  
   
  Ayrıca bu sınıf, biçimlendirme için ilgili aşağıdaki özellikleri içerir:  
   
--   <xref:System.Windows.Forms.DataGridViewCellStyle.Format%2A>ve<xref:System.Windows.Forms.DataGridViewCellStyle.FormatProvider%2A>  
+-   <xref:System.Windows.Forms.DataGridViewCellStyle.Format%2A> Ve <xref:System.Windows.Forms.DataGridViewCellStyle.FormatProvider%2A>  
   
--   <xref:System.Windows.Forms.DataGridViewCellStyle.NullValue%2A>ve<xref:System.Windows.Forms.DataGridViewCellStyle.DataSourceNullValue%2A>  
+-   <xref:System.Windows.Forms.DataGridViewCellStyle.NullValue%2A> Ve <xref:System.Windows.Forms.DataGridViewCellStyle.DataSourceNullValue%2A>  
   
 -   <xref:System.Windows.Forms.DataGridViewCellStyle.WrapMode%2A>  
   
@@ -66,7 +54,7 @@ Her hücrede <xref:System.Windows.Forms.DataGridView> denetim metin biçimi, ark
 |<xref:System.Windows.Forms.DataGridView.AlternatingRowsDefaultCellStyle%2A>|<xref:System.Windows.Forms.DataGridView>|Alır veya denetiminde satırların değişerek tarafından kullanılan varsayılan hücre stillerini ayarlar. Büyük defter benzeri efekti oluşturmak için kullanılır.|  
 |<xref:System.Windows.Forms.DataGridView.RowHeadersDefaultCellStyle%2A>|<xref:System.Windows.Forms.DataGridView>|Alır veya denetimin satır üstbilgilerinin tarafından kullanılan varsayılan hücre stillerini ayarlar. Görsel stiller etkinleştirilirse geçerli tema tarafından geçersiz kılındı.|  
 |<xref:System.Windows.Forms.DataGridView.ColumnHeadersDefaultCellStyle%2A>|<xref:System.Windows.Forms.DataGridView>|Alır veya denetimin sütun üstbilgileri tarafından kullanılan varsayılan hücre stillerini ayarlar. Görsel stiller etkinleştirilirse geçerli tema tarafından geçersiz kılındı.|  
-|<xref:System.Windows.Forms.DataGridViewCell.Style%2A>|<xref:System.Windows.Forms.DataGridViewCell>ve türetilen sınıflar|Alır veya hücre düzeyinde belirtilen stilini ayarlar. Bu stiller yüksek düzeylerinden devralınan geçersiz kılar.|  
+|<xref:System.Windows.Forms.DataGridViewCell.Style%2A>|<xref:System.Windows.Forms.DataGridViewCell> ve türetilen sınıflar|Alır veya hücre düzeyinde belirtilen stilini ayarlar. Bu stiller yüksek düzeylerinden devralınan geçersiz kılar.|  
 |`InheritedStyle`|<xref:System.Windows.Forms.DataGridViewCell>, <xref:System.Windows.Forms.DataGridViewRow>, <xref:System.Windows.Forms.DataGridViewColumn>ve türetilmiş sınıflar|Hücre, satır veya sütun, daha yüksek düzeylerinden devralınan stilleri dahil olmak üzere uygulanan tüm stilleri alır.|  
   
  Yukarıda belirtildiği gibi bir stil özelliğinin değeri otomatik olarak alma yeni bir örneğini oluşturur <xref:System.Windows.Forms.DataGridViewCellStyle> özelliği daha önce ayarlanmamışsa, nesne. Bu nesneler gereksiz yere oluşturmamak için satır ve sütun sınıfları sahip bir <xref:System.Windows.Forms.DataGridViewBand.HasDefaultCellStyle%2A> belirlemek için kontrol edebilirsiniz özelliği olup olmadığını <xref:System.Windows.Forms.DataGridViewBand.DefaultCellStyle%2A> özelliğini ayarlayın. Benzer şekilde, hücre sınıfları sahip bir <xref:System.Windows.Forms.DataGridViewCell.HasStyle%2A> gösteren özellik olup olmadığını <xref:System.Windows.Forms.DataGridViewCell.Style%2A> özelliğini ayarlayın.  
@@ -80,7 +68,7 @@ Her hücrede <xref:System.Windows.Forms.DataGridView> denetim metin biçimi, ark
   
 2.  <xref:System.Windows.Forms.DataGridViewRow.DefaultCellStyle%2A?displayProperty=nameWithType>  
   
-3.  <xref:System.Windows.Forms.DataGridView.AlternatingRowsDefaultCellStyle%2A?displayProperty=nameWithType>(yalnızca hücrelerde için tek dizin numaralarını bulunan satırlar)  
+3.  <xref:System.Windows.Forms.DataGridView.AlternatingRowsDefaultCellStyle%2A?displayProperty=nameWithType> (yalnızca hücrelerde için tek dizin numaralarını bulunan satırlar)  
   
 4.  <xref:System.Windows.Forms.DataGridView.RowsDefaultCellStyle%2A?displayProperty=nameWithType>  
   
@@ -92,7 +80,7 @@ Her hücrede <xref:System.Windows.Forms.DataGridView> denetim metin biçimi, ark
   
 1.  <xref:System.Windows.Forms.DataGridViewCell.Style%2A?displayProperty=nameWithType>  
   
-2.  <xref:System.Windows.Forms.DataGridView.ColumnHeadersDefaultCellStyle%2A?displayProperty=nameWithType>veya<xref:System.Windows.Forms.DataGridView.RowHeadersDefaultCellStyle%2A?displayProperty=nameWithType>  
+2.  <xref:System.Windows.Forms.DataGridView.ColumnHeadersDefaultCellStyle%2A?displayProperty=nameWithType> Veya <xref:System.Windows.Forms.DataGridView.RowHeadersDefaultCellStyle%2A?displayProperty=nameWithType>  
   
 3.  <xref:System.Windows.Forms.DataGridView.DefaultCellStyle%2A?displayProperty=nameWithType>  
   
@@ -110,7 +98,7 @@ Her hücrede <xref:System.Windows.Forms.DataGridView> denetim metin biçimi, ark
   
 1.  <xref:System.Windows.Forms.DataGridViewRow.DefaultCellStyle%2A?displayProperty=nameWithType>  
   
-2.  <xref:System.Windows.Forms.DataGridView.AlternatingRowsDefaultCellStyle%2A?displayProperty=nameWithType>(yalnızca hücrelerde için tek dizin numaralarını bulunan satırlar)  
+2.  <xref:System.Windows.Forms.DataGridView.AlternatingRowsDefaultCellStyle%2A?displayProperty=nameWithType> (yalnızca hücrelerde için tek dizin numaralarını bulunan satırlar)  
   
 3.  <xref:System.Windows.Forms.DataGridView.RowsDefaultCellStyle%2A?displayProperty=nameWithType>  
   
@@ -120,7 +108,7 @@ Her hücrede <xref:System.Windows.Forms.DataGridView> denetim metin biçimi, ark
   
  Aşağıdaki tabloda gösterilmektedir nasıl <xref:System.Windows.Forms.DataGridViewCellStyle.ForeColor%2A> bir örnek hücre için özellik değeri içeren sütundan devralınır.  
   
-|Özellik türü`DataGridViewCellStyle`|Örnek `ForeColor` alınan nesne için değer|  
+|özellik türü `DataGridViewCellStyle`|Örnek `ForeColor` alınan nesne için değer|  
 |----------------------------------------------|----------------------------------------------------|  
 |<xref:System.Windows.Forms.DataGridViewCell.Style%2A?displayProperty=nameWithType>|<xref:System.Drawing.Color.Empty?displayProperty=nameWithType>|  
 |<xref:System.Windows.Forms.DataGridViewRow.DefaultCellStyle%2A?displayProperty=nameWithType>|<xref:System.Drawing.Color.Red%2A?displayProperty=nameWithType>|  
@@ -133,7 +121,7 @@ Her hücrede <xref:System.Windows.Forms.DataGridView> denetim metin biçimi, ark
   
  Aşağıdaki diyagramda gösterilmektedir nasıl farklı <xref:System.Windows.Forms.DataGridViewCellStyle> özellikleri farklı yerlerden değerlerine devral.  
   
- ![DataGridView özelliği &#45; değer devralma](../../../../docs/framework/winforms/controls/media/datagridviewcells2.gif "DataGridViewCells2")  
+ ![DataGridView özellik&#45;değer devralma](../../../../docs/framework/winforms/controls/media/datagridviewcells2.gif "DataGridViewCells2")  
   
  Stil devralma yararlanarak, aynı bilgilerin birden fazla yerde belirtmek zorunda kalmadan için tüm denetim uygun stiller sağlayabilir.  
   

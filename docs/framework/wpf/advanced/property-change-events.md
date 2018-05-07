@@ -1,13 +1,6 @@
 ---
-title: "Özellik Değiştirme Olayları"
-ms.custom: 
+title: Özellik Değiştirme Olayları
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-wpf
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - dependency properties [WPF], change events
 - property value changes [WPF]
@@ -20,19 +13,14 @@ helpviewer_keywords:
 - identifying changed property events [WPF]
 - property triggers [WPF], definition of
 ms.assetid: 0a7989df-9674-4cc1-bc50-5d8ef5d9c055
-caps.latest.revision: "10"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 46a11b072731daf420e35bc9c9cfd7d4fced1fe5
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: ac2a44eb92e384851bbe6ac860fd9b46d3377a06
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="property-change-events"></a>Özellik Değiştirme Olayları
-[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]yanıt olarak bir özellik değerinde bir değişiklik ortaya çeşitli olaylarını tanımlar. Genellikle bir bağımlılık özelliği özelliğidir. Olay bazen yönlendirilmiş olay ve bazı durumlarda standart bir [!INCLUDE[TLA#tla_clr](../../../../includes/tlasharptla-clr-md.md)] olay. Diğer özellik değişikliklerini genellikle ise bazı özellik değişikliklerini daha uygun bir öğe ağacı üzerinden yönlendirilir çünkü olay tanımını senaryo bağlı olarak değişir sorun nerede özelliği değiştirildi nesnesine yalnızca biri.  
+[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] yanıt olarak bir özellik değerinde bir değişiklik ortaya çeşitli olaylarını tanımlar. Genellikle bir bağımlılık özelliği özelliğidir. Olay bazen yönlendirilmiş olay ve bazı durumlarda standart bir [!INCLUDE[TLA#tla_clr](../../../../includes/tlasharptla-clr-md.md)] olay. Diğer özellik değişikliklerini genellikle ise bazı özellik değişikliklerini daha uygun bir öğe ağacı üzerinden yönlendirilir çünkü olay tanımını senaryo bağlı olarak değişir sorun nerede özelliği değiştirildi nesnesine yalnızca biri.  
   
 ## <a name="identifying-a-property-change-event"></a>Bir özellik değişim olayı tanımlama  
  Özellik değişikliği rapor olayların tümü açıkça ya da bir imza desen veya bir adlandırma deseni, bir özellik değişti olayı olarak tanımlanır. Genellikle, Olay açıklaması [!INCLUDE[TLA#tla_sdk](../../../../includes/tlasharptla-sdk-md.md)] belgelerine gösteren olay doğrudan bir özellik değeri değişiklik bağlıdır ve özelliğe ve olaya arasında çapraz başvuru sağlar.  
@@ -47,7 +35,7 @@ ms.lasthandoff: 12/22/2017
  Özel bir bağımlılık özelliği özelliğinizi ise veya örneklemesi kod tanımlandığı türetilmiş bir sınıf ile çalışıyorsanız, içinde yerleşik olan özellik değişikliklerini izleme için bir daha iyi bir düzenek yoktur [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] özellik sistemi: özellik sistem geri çağırmaları <xref:System.Windows.CoerceValueCallback> ve <xref:System.Windows.PropertyChangedCallback>. Nasıl kullanabileceğiniz hakkında daha fazla ayrıntı için [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] özellik sistemi doğrulama ve zorlama, için bkz: [bağımlılık özelliği geri çağrıları ve doğrulama](../../../../docs/framework/wpf/advanced/dependency-property-callbacks-and-validation.md) ve [özel bağımlılık özellikleri](../../../../docs/framework/wpf/advanced/custom-dependency-properties.md).  
   
 ### <a name="dependencypropertychanged-events"></a>DependencyPropertyChanged olayları  
- Özellik değişti olayını senaryosunun bir parçası olan türlerini başka bir çiftidir <xref:System.Windows.DependencyPropertyChangedEventArgs> ve <xref:System.Windows.DependencyPropertyChangedEventHandler>. Bu özellik değişiklikleri olaylarını yönlendirilmeyen; Standart [!INCLUDE[TLA2#tla_clr](../../../../includes/tla2sharptla-clr-md.md)] olaylar. <xref:System.Windows.DependencyPropertyChangedEventArgs>türünden türemez çünkü raporlama türü olağan dışı olay verisi <xref:System.EventArgs>; <xref:System.Windows.DependencyPropertyChangedEventArgs> yapısı, bir sınıf.  
+ Özellik değişti olayını senaryosunun bir parçası olan türlerini başka bir çiftidir <xref:System.Windows.DependencyPropertyChangedEventArgs> ve <xref:System.Windows.DependencyPropertyChangedEventHandler>. Bu özellik değişiklikleri olaylarını yönlendirilmeyen; Standart [!INCLUDE[TLA2#tla_clr](../../../../includes/tla2sharptla-clr-md.md)] olaylar. <xref:System.Windows.DependencyPropertyChangedEventArgs> türünden türemez çünkü raporlama türü olağan dışı olay verisi <xref:System.EventArgs>; <xref:System.Windows.DependencyPropertyChangedEventArgs> yapısı, bir sınıf.  
   
  Kullanın olayları <xref:System.Windows.DependencyPropertyChangedEventArgs> ve <xref:System.Windows.DependencyPropertyChangedEventHandler> biraz daha ortak olan `RoutedPropertyChanged` olaylar. Bu türlerini kullanan bir olay örneğidir <xref:System.Windows.UIElement.IsMouseCapturedChanged>.  
   

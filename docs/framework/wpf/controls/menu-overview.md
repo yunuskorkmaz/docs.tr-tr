@@ -1,27 +1,15 @@
 ---
-title: "Menüye Genel Bakış"
-ms.custom: 
+title: Menüye Genel Bakış
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-wpf
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - Menu control [WPF]
 - controls [WPF], Menu
 ms.assetid: 67df6de5-db96-4c71-b752-af90729a6537
-caps.latest.revision: "19"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 8ab5092b1bc9db22390a18b2c1cb1ad5725a2037
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 4c3e8398ad058c50df535fea88dd9f366b7f24ec
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="menu-overview"></a>Menüye Genel Bakış
 <xref:System.Windows.Controls.Menu> Sınıfı komutlar ve hiyerarşik sırada olay işleyicileri ile ilişkili öğeleri düzenlemenizi sağlar. Her <xref:System.Windows.Controls.Menu> öğesi içeren bir koleksiyonu <xref:System.Windows.Controls.MenuItem> öğeleri.  

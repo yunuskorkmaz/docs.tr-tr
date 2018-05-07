@@ -1,31 +1,17 @@
 ---
-title: "Kuyruklar Genel Bakış"
-ms.custom: 
+title: Kuyruklar Genel Bakış
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - queues [WCF], MSMQ integration
 ms.assetid: b8757992-ffce-40ad-9e9b-3243f6d0fce1
-caps.latest.revision: 
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: eb5d0f51fbbb6c8bad9bfbbfd9977368fdbd0666
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.openlocfilehash: 85c8cb1fbbda9be14754174c7cb7c76513bd94c7
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="queues-overview"></a>Kuyruklar Genel Bakış
-Bu bölümde genel tanıtır ve temel kavramları kuyruğa alınmış iletişim. Sonraki bölümlerde Git nasıl, burada açıklanan queuing kavramları bildirilmiş hakkında ayrıntılar içine [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)].  
+Bu bölümde genel tanıtır ve temel kavramları kuyruğa alınmış iletişim. Burada açıklanan queuing kavramları Windows Communication Foundation (WCF) nasıl bildirilmiş hakkında ayrıntılar sonraki bölümlerde yerleştirilmesini.  
   
 ## <a name="basic-queuing-concepts"></a>Sıraya alma ilişkin temel kavramlar  
  Dağıtılmış bir uygulama tasarlarken, hizmetleri ve istemciler arasında iletişim için doğru taşıma önemlidir seçme. Pek çok etken kullanılacak aktarım türünü etkiler. Önemli bir etken — hizmeti, istemci ile taşıma arasında yalıtım — sıraya alınan aktarım veya TCP veya HTTP gibi doğrudan bir aktarım kullanımını belirler. TCP ve HTTP gibi doğrudan taşımaları yapısı nedeniyle, iletişim durdurur tamamen hizmet ya da istemci çalışmayı durdurmasına veya ağ başarısız olur. Hizmet, istemci ve ağ uygulamanın çalışması aynı anda çalıştırması gerekir. Sıraya alınan taşımaları hizmet ya da istemci başarısız olursa veya aralarında iletişim bağlantıları başarısız olursa, istemci ve hizmet çalışmaya devam edebilirsiniz yalıtımı sağlar.  

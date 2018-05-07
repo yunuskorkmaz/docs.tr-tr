@@ -1,34 +1,24 @@
 ---
-title: "Taşıma Güvenliği"
-ms.custom: 
+title: Taşıma Güvenliği
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 86c94153-e48d-4539-b6cf-cd8060582e7f
-caps.latest.revision: "7"
 author: BrucePerlerMS
-ms.author: bruceper
 manager: mbaldwin
-ms.workload: dotnet
-ms.openlocfilehash: 364326e2ded11f7174adc891a5fd9bcdd3c98334
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: e7f804d34a47c5508839636a6fe5045ebce3972e
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="transport-security"></a>Taşıma Güvenliği
-Taşıma güvenliği [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] seçili bağlama bağlıdır. Bağlama uygulayan taşıma gerçek güvenlik mekanizması belirler. Bu bölümdeki konular, uygulanan mekanizmaları ve bunların seçenekleri açıklanmaktadır.  
+Taşıma güvenliği Windows Communication Foundation (WCF) seçili bağlama bağlıdır. Bağlama uygulayan taşıma gerçek güvenlik mekanizması belirler. Bu bölümdeki konular, uygulanan mekanizmaları ve bunların seçenekleri açıklanmaktadır.  
   
 ## <a name="in-this-section"></a>Bu Bölümde  
  [Aktarım Güvenliğine Genel Bakış](../../../../docs/framework/wcf/feature-details/transport-security-overview.md)  
- Taşıma güvenliği temelleri açıklanır [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)].  
+ WCF'de taşıma güvenliği temelleri açıklanır.  
   
  [HTTP Aktarım Güvenliği](../../../../docs/framework/wcf/feature-details/http-transport-security.md)  
- Açıklar nasıl [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] Güvenli Yuva Katmanı (SSL veya HTTPS) uygular.  
+ WCF Güvenli Yuva Katmanı (SSL veya HTTPS) nasıl uyguladığını açıklanmaktadır.  
   
  [HTTP Kimlik Doğrulamasını Anlama](../../../../docs/framework/wcf/feature-details/understanding-http-authentication.md)  
  Temel, Özet, NT LAN Yöneticisi (NTLM) ve diğerleri gibi HTTP kimlik doğrulama şemasını açıklar.  

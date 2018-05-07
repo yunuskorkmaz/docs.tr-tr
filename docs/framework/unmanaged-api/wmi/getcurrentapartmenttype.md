@@ -1,11 +1,7 @@
 ---
-title: "GetCurrentApartmentType işlevi (yönetilmeyen API Başvurusu)"
-description: "GetCurrentApartmentType işlevi çağıran yürütülmekte olduğu Grup türünü alır."
+title: GetCurrentApartmentType işlevi (yönetilmeyen API Başvurusu)
+description: GetCurrentApartmentType işlevi çağıran yürütülmekte olduğu Grup türünü alır.
 ms.date: 11/06/2017
-ms.prod: .net-framework
-ms.technology:
-- dotnet-clr
-ms.topic: reference
 api_name:
 - GetCurrentApartmentType
 api_location:
@@ -20,14 +16,11 @@ topic_type:
 - Reference
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: a42c6c3c778dbdefd4b83621e65b81741b940ebe
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: ca7b5fa5bf6d845d542d3e80c0571e59f3d4c1e0
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="getcurrentapartmenttype-function"></a>GetCurrentApartmentType işlevi
 Arayan yürütülmekte olduğu Grup türünü alır.   
@@ -72,7 +65,7 @@ Bu işlev çağrısı sarmalar [IComThreadingInfo::GetCurrentApartmentType](http
   
  **Başlık:** WMINet_Utils.idl  
   
- **.NET framework sürümleri:**[!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]  
+ **.NET framework sürümleri:** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.  
 [WMI ve performans sayaçları (yönetilmeyen API Başvurusu)](index.md)

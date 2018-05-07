@@ -1,18 +1,13 @@
 ---
 title: Visual Studio'da Roslyn sözdizimi Görselleştirici ile kod keşfetme
 description: Sözdizimi Görselleştirici .NET derleyici Platform SDK'sı için kod oluşturur modelleri araştırmak için görsel bir araç sağlar.
-author: billwagner
-ms.author: wiwagn
 ms.date: 03/07/2018
-ms.topic: conceptual
-ms.prod: .net
-ms.devlang: devlang-csharp
 ms.custom: mvc
-ms.openlocfilehash: 04452159c759a0c7236c1b93dc966e5e9c54574a
-ms.sourcegitcommit: b750a8e3979749b214e7e10c82efb0a0524dfcb1
+ms.openlocfilehash: 3029c868ad9b0384cf11e57a00b123acd1177806
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/09/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="explore-code-with-the-roslyn-syntax-visualizer-in-visual-studio"></a>Visual Studio'da Roslyn sözdizimi Görselleştirici ile kod keşfetme
 

@@ -1,13 +1,6 @@
 ---
-title: "OpenType Yazı Tipi Özellikleri"
-ms.custom: 
+title: OpenType Yazı Tipi Özellikleri
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-wpf
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -16,16 +9,11 @@ helpviewer_keywords:
 - typography [WPF], OpenType font technology
 - OpenType font technology [WPF]
 ms.assetid: 4061a9d1-fe8b-4921-9e17-18ec7d2e3ea2
-caps.latest.revision: "38"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 6344fed6cf480e3d3f91a559c99b79f438afa985
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: a8ee4107ee7db20f2948ea9a33ef853815a22665
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="opentype-font-features"></a>OpenType Yazı Tipi Özellikleri
 Bu konu önemli özelliklerinden bazıları bir bakış sunar [!INCLUDE[TLA#tla_opentype](../../../../includes/tlasharptla-opentype-md.md)] yazı tipi teknolojisinde [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)].  
@@ -34,7 +22,7 @@ Bu konu önemli özelliklerinden bazıları bir bakış sunar [!INCLUDE[TLA#tla_
   
 <a name="overview"></a>   
 ## <a name="opentype-font-format"></a>OpenType yazı tipi biçimi  
- [!INCLUDE[TLA#tla_opentype](../../../../includes/tlasharptla-opentype-md.md)] Yazı tipi biçimi uzantısıdır [!INCLUDE[TLA#tla_truetype](../../../../includes/tlasharptla-truetype-md.md)] PostScript'i yazı tipi verisi için destek ekleyen yazı tipi biçimi. [!INCLUDE[TLA#tla_opentype](../../../../includes/tlasharptla-opentype-md.md)] Yazı tipi biçimi ortaklaşa tarafından geliştirilen [!INCLUDE[TLA#tla_ms](../../../../includes/tlasharptla-ms-md.md)] ve Adobe Corporation. [!INCLUDE[TLA#tla_opentype](../../../../includes/tlasharptla-opentype-md.md)]yazı tipleri ve işletim sistemi hizmetleri destekleyen [!INCLUDE[TLA#tla_opentype](../../../../includes/tlasharptla-opentype-md.md)] yazı tipleri sağlar yüklemek ve yazı tipleri kullanmak için basit bir yol kullanıcılarla yazı tipleri içeren olup olmadığını [!INCLUDE[TLA2#tla_truetype](../../../../includes/tla2sharptla-truetype-md.md)] anahatları veya CFF (PostScript'i) aşağıda ana hatlarıyla verilmiştir.  
+ [!INCLUDE[TLA#tla_opentype](../../../../includes/tlasharptla-opentype-md.md)] Yazı tipi biçimi uzantısıdır [!INCLUDE[TLA#tla_truetype](../../../../includes/tlasharptla-truetype-md.md)] PostScript'i yazı tipi verisi için destek ekleyen yazı tipi biçimi. [!INCLUDE[TLA#tla_opentype](../../../../includes/tlasharptla-opentype-md.md)] Yazı tipi biçimi ortaklaşa tarafından geliştirilen [!INCLUDE[TLA#tla_ms](../../../../includes/tlasharptla-ms-md.md)] ve Adobe Corporation. [!INCLUDE[TLA#tla_opentype](../../../../includes/tlasharptla-opentype-md.md)] yazı tipleri ve işletim sistemi hizmetleri destekleyen [!INCLUDE[TLA#tla_opentype](../../../../includes/tlasharptla-opentype-md.md)] yazı tipleri sağlar yüklemek ve yazı tipleri kullanmak için basit bir yol kullanıcılarla yazı tipleri içeren olup olmadığını [!INCLUDE[TLA2#tla_truetype](../../../../includes/tla2sharptla-truetype-md.md)] anahatları veya CFF (PostScript'i) aşağıda ana hatlarıyla verilmiştir.  
   
  [!INCLUDE[TLA#tla_opentype](../../../../includes/tlasharptla-opentype-md.md)] Yazı tipi biçimi aşağıdaki Geliştirici sorunları giderir:  
   
@@ -54,7 +42,7 @@ Bu konu önemli özelliklerinden bazıları bir bakış sunar [!INCLUDE[TLA#tla_
  Bkz: [OpenType Belirtimi](http://go.microsoft.com/fwlink/?LinkId=96731) ilgili ayrıntılar için [!INCLUDE[TLA#tla_opentype](../../../../includes/tlasharptla-opentype-md.md)] yazı tipi biçimi.  
   
 ### <a name="advanced-typographic-extensions"></a>Gelişmiş tipografik uzantılar  
- Gelişmiş tipografik tablolar ([!INCLUDE[TLA#tla_opentype](../../../../includes/tlasharptla-opentype-md.md)] Düzen tabloları) ya da yazıtipleriyle işlevselliğini genişletmek [!INCLUDE[TLA2#tla_truetype](../../../../includes/tla2sharptla-truetype-md.md)] veya CFF anahatları. [!INCLUDE[TLA#tla_opentype](../../../../includes/tlasharptla-opentype-md.md)]Düzen yazı tipleri yüksek kaliteli uluslararası tipografi desteklemek için yazı tiplerini özelliklerini genişletir ek bilgi içerir. Çoğu [!INCLUDE[TLA#tla_opentype](../../../../includes/tlasharptla-opentype-md.md)] yazı tiplerini kullanıma yalnızca bir alt toplam [!INCLUDE[TLA#tla_opentype](../../../../includes/tlasharptla-opentype-md.md)] özellikleri kullanılabilir. [!INCLUDE[TLA#tla_opentype](../../../../includes/tlasharptla-opentype-md.md)]yazı tipleri aşağıdaki özellikleri sağlar.  
+ Gelişmiş tipografik tablolar ([!INCLUDE[TLA#tla_opentype](../../../../includes/tlasharptla-opentype-md.md)] Düzen tabloları) ya da yazıtipleriyle işlevselliğini genişletmek [!INCLUDE[TLA2#tla_truetype](../../../../includes/tla2sharptla-truetype-md.md)] veya CFF anahatları. [!INCLUDE[TLA#tla_opentype](../../../../includes/tlasharptla-opentype-md.md)] Düzen yazı tipleri yüksek kaliteli uluslararası tipografi desteklemek için yazı tiplerini özelliklerini genişletir ek bilgi içerir. Çoğu [!INCLUDE[TLA#tla_opentype](../../../../includes/tlasharptla-opentype-md.md)] yazı tiplerini kullanıma yalnızca bir alt toplam [!INCLUDE[TLA#tla_opentype](../../../../includes/tlasharptla-opentype-md.md)] özellikleri kullanılabilir. [!INCLUDE[TLA#tla_opentype](../../../../includes/tlasharptla-opentype-md.md)] yazı tipleri aşağıdaki özellikleri sağlar.  
   
 -   Karakterler ve ligatürleri, konumsal formlar, alternatifler ve diğer yazı tipi değişimler destek karakter arasında zengin eşleme.  
   
@@ -103,7 +91,7 @@ OpenType üst ve alt simgelerin kullanarak metin
   
 <a name="capitals"></a>   
 ## <a name="capitals"></a>Büyük harf  
- Büyük harfler, büyük stilde karakterlerin metinde işlemek tipografik biçimler kümesidir. Metin tüm büyük harf olarak işlendiğinde, genellikle, harfler arasındaki aralığı çok sıkı görünebilir ağırlığı ve çok yoğun harflerin doğru orantılıdır. [!INCLUDE[TLA#tla_opentype](../../../../includes/tlasharptla-opentype-md.md)]büyük harfler, büyük harfler küçük dahil olmak üzere, çok küçük büyük harf, titling ve büyük harf aralığı için stil biçimlerinin destekler. Bu stil biçimleri, büyük harflerin görünümünü denetlemenize olanak tanır.  
+ Büyük harfler, büyük stilde karakterlerin metinde işlemek tipografik biçimler kümesidir. Metin tüm büyük harf olarak işlendiğinde, genellikle, harfler arasındaki aralığı çok sıkı görünebilir ağırlığı ve çok yoğun harflerin doğru orantılıdır. [!INCLUDE[TLA#tla_opentype](../../../../includes/tlasharptla-opentype-md.md)] büyük harfler, büyük harfler küçük dahil olmak üzere, çok küçük büyük harf, titling ve büyük harf aralığı için stil biçimlerinin destekler. Bu stil biçimleri, büyük harflerin görünümünü denetlemenize olanak tanır.  
   
  Aşağıdaki metni "SmallCaps" ve "AllSmallCaps" biçimlendirilmiş ve ardından Palatino yazı tipi için standart büyük harfleri görüntüler. Bu durumda, aynı yazı tipi boyutu tüm üç kelime için kullanılır.  
   
@@ -136,7 +124,7 @@ OpenType büyük harf aralığı kullanarak metin
   
 <a name="ligatures"></a>   
 ## <a name="ligatures"></a>Ligatürleri  
- Bitişik bir tek karakteri daha okunabilir veya çekici metin oluşturmak için oluşturulmuş iki veya daha fazla karakterlerdir. [!INCLUDE[TLA#tla_opentype](../../../../includes/tlasharptla-opentype-md.md)]yazı tipleri ligatürleri dört türlerini destekler:  
+ Bitişik bir tek karakteri daha okunabilir veya çekici metin oluşturmak için oluşturulmuş iki veya daha fazla karakterlerdir. [!INCLUDE[TLA#tla_opentype](../../../../includes/tlasharptla-opentype-md.md)] yazı tipleri ligatürleri dört türlerini destekler:  
   
 -   **Standart ligatürleri**. Okunabilirliğini artırmak için tasarlanmıştır. Standart ligatürleri "fi", "fl" ve "ff" içerir.  
   
@@ -206,7 +194,7 @@ OpenType bağlamsal dalgalı karakterler kullanarak metin
   
 <a name="alternates"></a>   
 ## <a name="alternates"></a>Alternatifler  
- Alternatifler standart karaktere yerine karakterlerdir. [!INCLUDE[TLA#tla_opentype](../../../../includes/tlasharptla-opentype-md.md)]yazı tipleri, aşağıdaki örneklerde kullanılan Pericles yazı tipi gibi metin için farklı görünümler oluşturmak için kullanabileceğiniz diğer karakterleri içerebilir. Aşağıdaki metin Pericles yazı tipi için standart karakterleri görüntüler.  
+ Alternatifler standart karaktere yerine karakterlerdir. [!INCLUDE[TLA#tla_opentype](../../../../includes/tlasharptla-opentype-md.md)] yazı tipleri, aşağıdaki örneklerde kullanılan Pericles yazı tipi gibi metin için farklı görünümler oluşturmak için kullanabileceğiniz diğer karakterleri içerebilir. Aşağıdaki metin Pericles yazı tipi için standart karakterleri görüntüler.  
   
  ![OpenType standart karakterlerinin kullanarak metin](../../../../docs/framework/wpf/advanced/media/opentypefont01.gif "opentypefont01")  
 OpenType standart karakterlerinin kullanarak metin  
@@ -254,7 +242,7 @@ OpenType tarihsel biçimleri kullanarak metin
  OpenType yazıtipleriyle çok sayıda metin içinde sayısal değerler ile kullanılan özellikleri destekler.  
   
 ### <a name="fractions"></a>Kesirler  
- [!INCLUDE[TLA#tla_opentype](../../../../includes/tlasharptla-opentype-md.md)]yazı tipi stillerini eğik çizgili ve Yığılmış dahil olmak üzere kesirler için destekler.  
+ [!INCLUDE[TLA#tla_opentype](../../../../includes/tlasharptla-opentype-md.md)] yazı tipi stillerini eğik çizgili ve Yığılmış dahil olmak üzere kesirler için destekler.  
   
  Aşağıdaki metin Palatino Linotype yazı tipi için kesir stiller görüntüler.  
   
@@ -266,7 +254,7 @@ OpenType kullanarak metin çizgili ve kesirler Yığılmış
  [!code-xaml[OpenTypeFontSamples#10](../../../../samples/snippets/csharp/VS_Snippets_Wpf/OpenTypeFontSamples/CS/PageOne.xaml#10)]  
   
 ### <a name="old-style-numerals"></a>Eski stil sayılar  
- [!INCLUDE[TLA#tla_opentype](../../../../includes/tlasharptla-opentype-md.md)]yazı tipleri eski stil sayısal biçimi destekler. Bu biçim, artık standart stillerde rakamları görüntülemek için yararlıdır. Aşağıdaki metin Palatino Linotype yazı tipi için standart ve eski stil sayısal biçimler 18 tarihi görüntüler.  
+ [!INCLUDE[TLA#tla_opentype](../../../../includes/tlasharptla-opentype-md.md)] yazı tipleri eski stil sayısal biçimi destekler. Bu biçim, artık standart stillerde rakamları görüntülemek için yararlıdır. Aşağıdaki metin Palatino Linotype yazı tipi için standart ve eski stil sayısal biçimler 18 tarihi görüntüler.  
   
  ![OpenType eski stil sayılar kullanarak metin](../../../../docs/framework/wpf/advanced/media/opentypefont24.gif "OpenTypeFont24")  
 OpenType eski stil sayılar kullanarak metin  
@@ -281,7 +269,7 @@ OpenType eski stil rakam kümelerinin kullanarak metin
  [!code-xaml[OpenTypeFontSamples#11](../../../../samples/snippets/csharp/VS_Snippets_Wpf/OpenTypeFontSamples/CS/PageOne.xaml#11)]  
   
 ### <a name="proportional-and-tabular-figures"></a>Orantılı ve sekmeli şekiller  
- [!INCLUDE[TLA#tla_opentype](../../../../includes/tlasharptla-opentype-md.md)]yazı tipleri rakamları kullanırken genişliklerin denetlemek için orantılı ve sekmeli şekil özelliğini destekler. Farklı bir genişliğine sahip olacak şekilde her rakamı kabul orantılı rakamları — "1" "5"'ten daha dar. Tablo rakamlarını eşit genişlikte rakamları olarak kabul edilir. böylece bunlar dikey, finansal türü bilgilerin okunabilirliğini artıran hizalayın.  
+ [!INCLUDE[TLA#tla_opentype](../../../../includes/tlasharptla-opentype-md.md)] yazı tipleri rakamları kullanırken genişliklerin denetlemek için orantılı ve sekmeli şekil özelliğini destekler. Farklı bir genişliğine sahip olacak şekilde her rakamı kabul orantılı rakamları — "1" "5"'ten daha dar. Tablo rakamlarını eşit genişlikte rakamları olarak kabul edilir. böylece bunlar dikey, finansal türü bilgilerin okunabilirliğini artıran hizalayın.  
   
  Aşağıdaki metni iki orantılı rakamları Miramonte yazı tipi kullanarak ilk sütununda görüntülenir. Genişlik "5" ve "1" sayı arasındaki farkı unutmayın. İkinci sütun sekmeli şekil özelliğini kullanarak ayarlanan genişlikler ile aynı iki sayı değerini gösterir.  
   
@@ -293,7 +281,7 @@ OpenType orantılı ve tablo rakamlarını kullanarak metin
  [!code-xaml[OpenTypeFontSamples#OpenTypeFontSnippet19](../../../../samples/snippets/csharp/VS_Snippets_Wpf/OpenTypeFontSamples/CS/Window1.xaml#opentypefontsnippet19)]  
   
 ### <a name="slashed-zero"></a>Eğik çizgili sıfır  
- [!INCLUDE[TLA#tla_opentype](../../../../includes/tlasharptla-opentype-md.md)]yazı tipleri destekleyen bir eğik çizgili harf "O" ve "0" sayı arasındaki farkı vurgulamak için sıfır sayısal biçimi. Eğik çizgili sıfır rakamı genellikle finansal ve iş bilgilerini tanımlayıcıları için kullanılır.  
+ [!INCLUDE[TLA#tla_opentype](../../../../includes/tlasharptla-opentype-md.md)] yazı tipleri destekleyen bir eğik çizgili harf "O" ve "0" sayı arasındaki farkı vurgulamak için sıfır sayısal biçimi. Eğik çizgili sıfır rakamı genellikle finansal ve iş bilgilerini tanımlayıcıları için kullanılır.  
   
  Aşağıdaki metin Miramonte yazı tipi kullanarak örnek sıra tanımlayıcısını görüntüler. İlk satırı standart sayıları kullanır. Kullanılan ikinci satır eğik çizgili sıfır sayılarının büyük "O" harfle daha iyi karşıtlık sağlamak için.  
   

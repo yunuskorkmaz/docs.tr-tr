@@ -1,27 +1,15 @@
 ---
-title: "Hizmet İzleme Görüntüleyicisi Aracı (SvcTraceViewer.exe)"
-ms.custom: 
+title: Hizmet İzleme Görüntüleyicisi Aracı (SvcTraceViewer.exe)
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 9027efd3-df8d-47ed-8bcd-f53d55ed803c
-caps.latest.revision: "55"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 7526f5cda302618b2f240e5ae1c126e60b9ab5e6
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
-ms.translationtype: MT
+ms.openlocfilehash: d9cd87bba52297d37683127ece3dd9c31e9a9a70
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="service-trace-viewer-tool-svctraceviewerexe"></a>Hizmet İzleme Görüntüleyicisi Aracı (SvcTraceViewer.exe)
-[!INCLUDE[indigo1](../../../includes/indigo1-md.md)]Hizmet izleme Görüntüleyicisi aracı tarafından oluşturulan tanılama izlemeleri çözümlemenize yardımcı [!INCLUDE[indigo2](../../../includes/indigo2-md.md)]. Hizmet izleme görüntüleyicisini kolayca birleştirmek, görüntülemek ve böylece, tanılama, onarım doğrulayın ve izleme iletilerini günlüğüne filtrelemek için bir yöntem sunar [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] hizmet sorunları.  
+Windows Communication Foundation (WCF) hizmet izleme Görüntüleyicisi aracı tarafından oluşturulan tanılama izlemeleri çözümlemenize yardımcı [!INCLUDE[indigo2](../../../includes/indigo2-md.md)]. Hizmet izleme görüntüleyicisini kolayca birleştirmek, görüntülemek ve böylece, tanılama, onarım doğrulayın ve izleme iletilerini günlüğüne filtrelemek için bir yöntem sunar [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] hizmet sorunları.  
   
 ## <a name="configuring-tracing"></a>İzlemeyi Yapılandırma  
  Tanılama izlemeleri uygulamanızın işlemi neler olduğunu gösteren bilgiler sağlar. Adından da anlaşılacağı gibi işlemleri kendi kaynaktan hedef ve Ara noktaları da üzerinden izleyebilirsiniz.  
@@ -67,7 +55,7 @@ ms.lasthandoff: 01/19/2018
 ### <a name="opening-and-viewing-wcf-trace-files"></a>Açma ve WCF izleme dosyalarını görüntüleme  
  Hizmet izleme görüntüleyicisini üç dosya türlerini destekler:  
   
--   [!INCLUDE[indigo2](../../../includes/indigo2-md.md)]Dosya (.svcLog) izleme  
+-   [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] Dosya (.svcLog) izleme  
   
 -   Dosya (.etl) izleme olayı  
   
@@ -116,7 +104,7 @@ ms.lasthandoff: 01/19/2018
 -   İçinde **proje** sekmesi, projeye dosyaları ekleyebilirsiniz.  
   
 ### <a name="viewing-wcf-traces"></a>WCF izlemeleri görüntüleme  
- [!INCLUDE[indigo2](../../../includes/indigo2-md.md)]Etkinlik izleme biçimi kullanarak izlemeleri yayar. Etkinlik izleme modelinde, tek tek izlemeleri etkinliklerde amaçlarına göre gruplandırılır. Mantıksal denetim akışı etkinlikleri aktarılır. Örneğin, bir uygulamanın yaşam süresi sırasında birçok "iletisi gönder etkinliği" görünür ve kaybolur. İzlemeleri ve etkinlikleri ve hizmet izleme görüntüleyicisini kullanıcı arabiriminin çok görüntüleme hakkında daha fazla bilgi için bkz: [bağıntılı izlemeleri görüntüleme ve sorun giderme için hizmet izleme görüntüleyicisini kullanma](../../../docs/framework/wcf/diagnostics/tracing/using-service-trace-viewer-for-viewing-correlated-traces-and-troubleshooting.md).  
+ [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] Etkinlik izleme biçimi kullanarak izlemeleri yayar. Etkinlik izleme modelinde, tek tek izlemeleri etkinliklerde amaçlarına göre gruplandırılır. Mantıksal denetim akışı etkinlikleri aktarılır. Örneğin, bir uygulamanın yaşam süresi sırasında birçok "iletisi gönder etkinliği" görünür ve kaybolur. İzlemeleri ve etkinlikleri ve hizmet izleme görüntüleyicisini kullanıcı arabiriminin çok görüntüleme hakkında daha fazla bilgi için bkz: [bağıntılı izlemeleri görüntüleme ve sorun giderme için hizmet izleme görüntüleyicisini kullanma](../../../docs/framework/wcf/diagnostics/tracing/using-service-trace-viewer-for-viewing-correlated-traces-and-troubleshooting.md).  
   
 #### <a name="switching-to-different-views"></a>Farklı görünümleri değiştirme  
  Hizmet izleme görüntüleyicisini aşağıdaki farklı görünümleri sağlar. Görüntüleyicisi'nin sol bölmesinde sekmelerinde olarak görüntülenir ve ayrıca erişilebilen **Görünüm** menüsü.  
@@ -272,7 +260,7 @@ ms.lasthandoff: 01/19/2018
   
 4.  1. adımda seçtiğiniz izleme kaydı yapısını soldaki ağaç görünümünü görüntüler. İçin bir koşul oluşturmak istediğiniz öğesine göz atın. Bu örnekte, XPath bulunmasını ThreadID göz atın: /E2ETraceEvent/System/Execution/@ThreadID düğümü. Ağaç görünümünde ThreadID özniteliğini çift tıklatın. Bu öznitelik için bir ifade iletişim kutusunun sağında oluşturur.  
   
-5.  '{0}' yok'tan ThreadID koşul için parametre alanını değiştirin. Bu adım, filtre uygulandığında yapılandırılacak ThreadID değeri etkinleştirir. (Nasıl Uygula filtresi bölümüne bakın) En fazla dört parametreleri tanımlayabilirsiniz. Koşullar veya işlecini kullanarak birleştirilir.  
+5.  ThreadID koşul için parametre alan Yok'a çıkarılıp '{0}'. Bu adım, filtre uygulandığında yapılandırılacak ThreadID değeri etkinleştirir. (Nasıl Uygula filtresi bölümüne bakın) En fazla dört parametreleri tanımlayabilirsiniz. Koşullar veya işlecini kullanarak birleştirilir.  
   
 6.  Tıklatın **Tamam** filtre oluşturmak için.  
   
@@ -297,7 +285,7 @@ ms.lasthandoff: 01/19/2018
   
 2.  Tıklatın **şimdi filtre**, işleminin sonucu olduğunu gözleyin.  
   
- Filtre birden çok parametre kullanıyorsa, bunları girmeniz kullanarak ';' ayırıcı olarak **Aranan** alan. Örneğin, aşağıdaki dizeyi 3 parametrelerini tanımlar: '1; findValue; metin'. Görüntüleyici '1' filtresi {0} parametresi için geçerlidir. 'findValue' ve 'text' {1} ve {2} sırasıyla uygulanır.  
+ Filtre birden çok parametre kullanıyorsa, bunları girmeniz kullanarak ';' ayırıcı olarak **Aranan** alan. Örneğin, aşağıdaki dizeyi 3 parametrelerini tanımlar: '1; findValue; metin'. Görüntüleyici '1' uygulandığı {0} filtre parametresi. 'findValue' ve 'text' uygulanır {1} ve {2} sırasıyla.  
   
 ###### <a name="sharing-custom-filters"></a>Özel Filtreler paylaşımı  
  Özel Filtreler, farklı oturumlar ve farklı kullanıcılar arasında paylaşılabilir. Filtre tanımı dosyasına aktarın ve bu dosya başka bir konumda içe aktarabilirsiniz.  
@@ -421,7 +409,7 @@ ms.lasthandoff: 01/19/2018
 |![Etkinlik İzlemeyi Durdur](../../../docs/framework/wcf/media/a0493e95-653e-4af8-84a4-4d09a400bc31.gif "a0493e95-653e-4af8-84a4-4d09a400bc31")|Etkinlik İzlemeyi Durdur: Etkinliğin sonunu işaretleyen izleme. biçimindeki telefon numarasıdır. Bu etkinliğin adını içerir. Uygulama Tasarımcısı ya da geliştiricisi olarak, bir etkinliğin etkinlik kimliği izleme kaynağı başına başına İzlemeyi Durdur tanımlamanız gerekir. Hiçbir izlemeleri belirtilen izleme kaynağına izleme zaman ayrıntı yeterince küçük değilse dışında bu izleme kaynağı tarafından gösterilen Dur etkinlikten sonra görünür. Bu durum oluştuğunda bir Dur birlikte aynı anda ile iki izlemeleri görüntülendiğinde araya. Etkinlik Kimliği izleme bağıntı izleme kaynakları arasında yayılır aynı etkinlik kimliği (izleme kaynak her bir) için birden çok durdurulur görebilirsiniz. ActivityTracing izleme kaynağı etkinse, İzlemeyi Durdur yayınlanır.|  
 |![Etkinlik askıya alma izleme](../../../docs/framework/wcf/media/6f7f4191-df2b-4592-8998-8379769e2d32.gif "6f7f4191-df2b-4592-8998-8379769e2d32")|Etkinlik askıya alma izleme: bir etkinlik duraklatıldı zaman işaretleyen izleme. Etkinlik yeniden devam edene dek hiçbir izlemeleri askıya alınmış bir etkinlik gösterilen. Askıya alınmış bir etkinlik hiçbir işlem izleme kaynağı kapsamı içinde bu etkinlikte gerçekleşmekte olduğunu gösterir. Askıya alma Sürdür izlemeleri, profil için faydalıdır. ActivityTracing izleme kaynağı etkinse, askıya alma izleme yayınlanır.|  
 |![Etkinlik izleme sürdürmek](../../../docs/framework/wcf/media/1060d9d2-c9c8-4e0a-9988-cdc2f7030f17.gif "1060d9d2-c9c8-4e0a-9988-cdc2f7030f17")|Etkinlik izleme Sürdür: askıya alınmış sonra bir etkinlik sürdürüldü zaman işaretleyen izleme. Bu etkinlikte izlemeleri yeniden yayılan. Askıya alma Sürdür izlemeleri, profil için faydalıdır. İzleme kaynağı ActivityTracing etkinleştirilirse Sürdür izleme yayınlanır.|  
-|![Transfer](../../../docs/framework/wcf/media/b2d9850e-f362-4ae5-bb8d-9f6f3ca036a5.gif "b2d9850e-f362-4ae5-bb8d-9f6f3ca036a5")|Aktarım: mantıksal denetim akışı bir etkinlikten diğerine aktarılırken yayılan bir izleme. Aktarımı kaynaklandığı etkinlik aktarımı gider etkinliğine paralel iş gerçekleştirmeye devam edebilir. İzleme kaynağı ActivityTracing etkinleştirilirse aktarım izleme yayınlanır.|  
+|![Aktarım](../../../docs/framework/wcf/media/b2d9850e-f362-4ae5-bb8d-9f6f3ca036a5.gif "b2d9850e-f362-4ae5-bb8d-9f6f3ca036a5")|Aktarım: mantıksal denetim akışı bir etkinlikten diğerine aktarılırken yayılan bir izleme. Aktarımı kaynaklandığı etkinlik aktarımı gider etkinliğine paralel iş gerçekleştirmeye devam edebilir. İzleme kaynağı ActivityTracing etkinleştirilirse aktarım izleme yayınlanır.|  
 |![Aktarımı](../../../docs/framework/wcf/media/1df215cb-b344-4f36-a20d-195999bda741.gif "1df215cb-b344-4f36-a20d-195999bda741")|Aktarımı: başka bir etkinliğin geçerli etkinliği bir aktarımı tanımlayan bir izleme.|  
 |![Transfer](../../../docs/framework/wcf/media/74255b6e-7c47-46ef-8e53-870c76b04c3f.gif "74255b6e-7c47-46ef-8e53-870c76b04c3f")|Aktarım için: bir aktarımını mantıksal denetim akışı geçerli etkinliğinden başka bir etkinliğin tanımlayan bir izleme.|  
   

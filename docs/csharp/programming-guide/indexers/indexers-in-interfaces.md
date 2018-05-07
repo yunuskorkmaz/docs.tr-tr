@@ -1,22 +1,15 @@
 ---
 title: Arabirimlerdeki Dizin Oluşturucular (C# Programlama Kılavuzu)
 ms.date: 07/20/2015
-ms.prod: .net
-ms.technology:
-- devlang-csharp
-ms.topic: article
 helpviewer_keywords:
 - indexers [C#], in interfaces
 - accessors [C#], indexers
 ms.assetid: e16b54bd-4a83-4f52-bd75-65819fca79e8
-caps.latest.revision: 18
-author: BillWagner
-ms.author: wiwagn
-ms.openlocfilehash: 478920b5c1dea489db48caa48c045c4bd3da66ec
-ms.sourcegitcommit: 9a4fe1a1c37b26532654b4bbe22d702237950009
+ms.openlocfilehash: cb039755b7440cbfd1f782cc118d11a03b47da04
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="indexers-in-interfaces-c-programming-guide"></a>Arabirimlerdeki Dizin Oluşturucular (C# Programlama Kılavuzu)
 Dizin oluşturucular bildirilebilir bir [arabirimi](../../../csharp/language-reference/keywords/interface.md). Arabirim Dizinleyicileri erişimciler erişimci farklı [sınıfı](../../../csharp/language-reference/keywords/class.md) dizin oluşturucular aşağıdaki yollarla:  
@@ -64,7 +57,7 @@ public string ICitizen.this[int index]
   
  üzerine dizinleyici uygulayan `ICitizen` arabirimi.  
   
-## <a name="see-also"></a>Ayrıca bkz.  
+## <a name="see-also"></a>Ayrıca Bkz.  
  [C# Programlama Kılavuzu](../../../csharp/programming-guide/index.md)  
  [Dizin Oluşturucular](../../../csharp/programming-guide/indexers/index.md)  
  [Özellikler](../../../csharp/programming-guide/classes-and-structs/properties.md)  

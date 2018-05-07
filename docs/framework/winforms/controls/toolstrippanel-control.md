@@ -1,13 +1,6 @@
 ---
 title: ToolStripPanel Denetimi
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-winforms
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - ToolStripPanel control [Windows Forms]
 - horizontal space
@@ -15,19 +8,14 @@ helpviewer_keywords:
 - tool area [Windows Forms]
 - vertical space
 ms.assetid: aa47af39-1e71-40ee-bb75-2d2478f81bd0
-caps.latest.revision: "6"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: d062e46ce0cb8d6ce6fa7189377735a4c480e030
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 14ddd56540d8649a3705ef2d19726499fbfcaf9e
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="toolstrippanel-control"></a>ToolStripPanel Denetimi
-`ToolStripPanel`yatay veya dikey boşluk yerleştirildiğinde aracı alanda paylaşımı ve, düzenleme denetimi etkinleştirir <xref:System.Windows.Forms.ToolStrip> dört paneller ve merkezi panelini gerektiğinde değil denetleyen bir <xref:System.Windows.Forms.ToolStripContainer>.  
+`ToolStripPanel` yatay veya dikey boşluk yerleştirildiğinde aracı alanda paylaşımı ve, düzenleme denetimi etkinleştirir <xref:System.Windows.Forms.ToolStrip> dört paneller ve merkezi panelini gerektiğinde değil denetleyen bir <xref:System.Windows.Forms.ToolStripContainer>.  
   
  Bu bölümdeki konular, kavramlar ve oluşturmak için kullanabileceğiniz teknikleri açıklar `ToolStripPanel` , uygulamalara özellikleri.  
   

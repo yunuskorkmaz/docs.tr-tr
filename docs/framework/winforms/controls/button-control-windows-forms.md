@@ -1,27 +1,15 @@
 ---
-title: "Düğme Denetimi (Windows Forms)"
-ms.custom: 
+title: Düğme Denetimi (Windows Forms)
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-winforms
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - buttons
 - Button control [Windows Forms]
 ms.assetid: d38bc40c-8040-4f19-9e88-2c665b0ab80b
-caps.latest.revision: "17"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: e4f9720f26458f3dd9cb2411d123fa830b20f3fd
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.openlocfilehash: d7eef53967962804033334750b9f3230b95a949d
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="button-control-windows-forms"></a>Düğme Denetimi (Windows Forms)
 Windows Forms `Button` denetimi sağlar kullanıcıya bir eylemi gerçekleştirmek için tıklatın. `Button` Denetim metin ve görüntüler görüntüleyebilir. Düğme tıklatıldığında, düğmeye gibi durur ve yayımlandı.  
@@ -45,7 +33,7 @@ Windows Forms `Button` denetimi sağlar kullanıcıya bir eylemi gerçekleştirm
  Ayrıca bkz. [nasıl yapılır: Tasarımcı kabul düğmesini kullanarak bir Windows Formları düğmesi atama](../../../../docs/framework/winforms/controls/designate-a-wf-button-as-the-accept-button-using-the-designer.md) ve [nasıl yapılır: Windows Forms düğmesini iptal düğmesi kullanılarak Tasarımcı belirtme](../../../../docs/framework/winforms/controls/designate-a-wf-button-as-the-cancel-button-using-the-designer.md).  
   
 ## <a name="reference"></a>Başvuru  
- <xref:System.Windows.Forms.Button>sınıfı  
+ <xref:System.Windows.Forms.Button> sınıfı  
  Bu sınıf tanımlar ve tüm üyeleri bağlantılar içerir.  
   
 ## <a name="related-sections"></a>İlgili Bölümler  

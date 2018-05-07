@@ -1,14 +1,6 @@
 ---
 title: Masaüstü Uygulamalarında Kaynakları Alma
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-bcl
-ms.tgt_pltfrm: ''
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -26,17 +18,13 @@ helpviewer_keywords:
 - translating resources into languages
 - localizing resources
 ms.assetid: eca16922-1c46-4f68-aefe-e7a12283641f
-caps.latest.revision: ''
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: a02d9efcadcc4c7066dba4e55268ab898b6790e8
-ms.sourcegitcommit: 498799639937c89de777361aab74261efe7b79ea
+ms.openlocfilehash: 40eec7c03de616b22ae7b20c56cd5a05237ec759
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/22/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="retrieving-resources-in-desktop-apps"></a>Masaüstü Uygulamalarında Kaynakları Alma
 .NET Framework masaüstü uygulamalarında yerelleştirilmiş kaynaklar ile çalışırken, ideal olarak varsayılan veya bağımsız kültür için kaynakları ana bütünleştirilmiş kod ile paketini ve her dil veya uygulamanızın destekleyen kültür için ayrı uydu derlemesi oluşturmanız. Daha sonra <xref:System.Resources.ResourceManager> sınıfı adlandırılmış kaynaklara erişmek için sonraki bölümde açıklandığı gibi. Ana derleme ve uydu derlemelerini kaynaklarınızı katıştırmak değil seçerseniz, ayrıca ikili .resources dosyaları doğrudan, bölümünde açıklandığı gibi erişebilirsiniz [.resources dosyaları alma kaynaklardan](#from_file) daha sonra bu makale.  Kaynaklarında almak için [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)] uygulamaları bkz [oluşturma ve Windows mağazası uygulamalarında kaynakları alma](http://go.microsoft.com/fwlink/p/?LinkID=241674) Windows geliştirme Merkezi'ndeki.  

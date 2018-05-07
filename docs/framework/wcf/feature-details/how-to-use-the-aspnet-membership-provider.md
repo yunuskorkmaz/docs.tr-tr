@@ -1,30 +1,16 @@
 ---
 title: 'Nasıl yapılır: ASP.NET Üyelik Sağlayıcısını Kullanma'
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 helpviewer_keywords:
 - WCF and ASP.NET
 - WCF, authorization
 - WCF, security
 ms.assetid: 322c56e0-938f-4f19-a981-7b6530045b90
-caps.latest.revision: 15
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 19fb83d21c77f3206c314a2e6c40562fcb75f151
-ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
+ms.openlocfilehash: d71e3679f4bf395b240c330fc573d6f613d1be07
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/30/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-use-the-aspnet-membership-provider"></a>Nasıl yapılır: ASP.NET Üyelik Sağlayıcısını Kullanma
 [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] Üyelik sağlayıcısı sağlayan bir özelliktir [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] kullanıcıların benzersiz bir kullanıcı adı ve parola birleşimlerini oluşturmasına izin Web siteleri oluşturmak için geliştiriciler. Bu özelliği sayesinde, herhangi bir kullanıcı sitesi olan bir hesap oluşturun ve site ve hizmetlerini özel erişim için oturum açın. Kullanıcıların bir Windows etki alanında hesaplarına sahip olmasını gerektiren Windows güvenliği aksine budur. Bunun yerine, kendi kimlik bilgilerini (kullanıcı adı/parola birleşimini) sağlayan herhangi bir kullanıcı site ve hizmetlerini kullanabilirsiniz.  
@@ -33,10 +19,10 @@ ms.lasthandoff: 04/30/2018
   
  Kullanıcı bilgilerini depolamak için bir SQL Server veritabanı kullanma üyelik özellik gerektirir. Özelliği de parolalarını unutmuş olan tüm kullanıcılar ile bir soru sormak için yöntemler içerir.  
   
- [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] Geliştiriciler güvenlik amacıyla bu özelliklerden yararlanabilir. Tümleşik olduğunda bir [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] uygulama, kullanıcıların gerekir sağlamak için bir kullanıcı adı/parola birleşimini [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] istemci uygulaması. Veri aktarmasına izin [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] hizmet, kullanıcı adı/parola kimlik bilgileri gibi destekleyen bir bağlama kullanmak <xref:System.ServiceModel.WSHttpBinding> (yapılandırmada, [ \<wsHttpBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/wshttpbinding.md)) ve istemci kimlik bilgileri Ayarla için yazın `UserName`. Hizmetinde [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] güvenlik kullanıcı adı ve parolaya göre kullanıcının kimliğini doğrular ve ayrıca tarafından belirtilen rol atar [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] rol.  
+ Windows Communication Foundation (WCF) geliştiriciler güvenlik amacıyla bu özelliklerden yararlanabilir. Bir WCF uygulamaya tümleştirildiğinde, kullanıcıların bir kullanıcı adı/parola birleşimini WCF istemci uygulaması için sağlamanız gerekir. WCF hizmetine veri aktarmak için kullanıcı adı/parola kimlik bilgileri gibi destekleyen bir bağlama kullanmak <xref:System.ServiceModel.WSHttpBinding> (yapılandırma, [ \<wsHttpBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/wshttpbinding.md)) ve istemci kimlik bilgisi türü olarakayarlayın`UserName`. Hizmeti, WCF güvenlik kullanıcı adı ve parolaya göre kullanıcının kimliğini doğrular ve ayrıca tarafından belirtilen rol atar [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] rol.  
   
 > [!NOTE]
->  [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] Kullanıcı adı/parola birleşimleri veritabanıyla veya diğer kullanıcı bilgilerini doldurmak için yöntem sağlamaz.  
+>  WCF veritabanı kullanıcı adı/parola birleşimleri ile veya diğer kullanıcı bilgilerini doldurmak için yöntem sağlamaz.  
   
 ### <a name="to-configure-the-membership-provider"></a>Üyelik sağlayıcısı yapılandırmak için  
   
@@ -73,7 +59,7 @@ ms.lasthandoff: 04/30/2018
   
 1.  Yapılandırma dosyasında altında [ \<system.serviceModel >](../../../../docs/framework/configure-apps/file-schema/wcf/system-servicemodel.md) öğesi ekleme bir [ \<bağlamaları >](../../../../docs/framework/configure-apps/file-schema/wcf/bindings.md) öğesi.  
   
-2.  Ekleme bir [ \<wsHttpBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/wshttpbinding.md) bağlamaları bölümüne. Oluşturma hakkında daha fazla bilgi için bir [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] bağlama öğesi, bkz: [nasıl yapılır: yapılandırmada hizmet bağlama belirtme](../../../../docs/framework/wcf/how-to-specify-a-service-binding-in-configuration.md).  
+2.  Ekleme bir [ \<wsHttpBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/wshttpbinding.md) bağlamaları bölümüne. Bir WCF bağlama öğesi oluşturma hakkında daha fazla bilgi için bkz: [nasıl yapılır: yapılandırmada hizmet bağlama belirtme](../../../../docs/framework/wcf/how-to-specify-a-service-binding-in-configuration.md).  
   
 3.  Ayarlama `mode` özniteliği `<security>` öğesine `Message`.  
   
@@ -111,7 +97,7 @@ ms.lasthandoff: 04/30/2018
 6.  Ayarlama `userNamePasswordValidationMode` özniteliğini `MembershipProvider`.  
   
     > [!IMPORTANT]
-    >  Varsa `userNamePasswordValidationMode` değeri ayarlanmazsa, [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] yerine Windows kimlik doğrulamasını kullanan [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] üyelik sağlayıcısı.  
+    >  Varsa `userNamePasswordValidationMode` değeri ayarlanmazsa, WCF kullanan Windows kimlik doğrulaması yerine [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] üyelik sağlayıcısı.  
   
 7.  Ayarlama `membershipProviderName` (sağlayıcıyı bu konunun ilk yordamda eklerken belirtilir) sağlayıcısının adı özniteliği. Aşağıdaki örnekte gösterildiği `<serviceCredentials>` bu noktaya parça.  
   

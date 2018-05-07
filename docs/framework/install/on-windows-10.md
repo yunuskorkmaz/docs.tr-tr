@@ -1,52 +1,49 @@
 ---
-title: ".NET Framework Windows 10 yükleyin"
-description: ".NET Framework Windows 10 veya Windows Server 2016 üzerinde nasıl yükleneceğini öğrenin."
+title: .NET Framework Windows 10 yükleyin
+description: .NET Framework Windows 10 veya Windows Server 2016 üzerinde nasıl yükleneceğini öğrenin.
 author: rlander
 ms.author: mairaw
-keywords: ".NET framework, yükleme"
-ms.date: 12/20/2017
-ms.topic: article
+ms.date: 04/10/2018
 ms.custom: updateeachrelease
-ms.prod: .net-framework
-ms.workload: dotnet
-ms.openlocfilehash: bd588dff62e5d4ac1c1059e697a07598ba272042
-ms.sourcegitcommit: 2142a4732bb4ff519b9817db4c24a237b9810d4b
+ms.openlocfilehash: f069686866c4fd0e8e380af3ef448d282df34801
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/05/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="install-the-net-framework-on-windows-10-and-windows-server-2016"></a>.NET Framework Windows 10 ve Windows Server 2016 yükleyin
 
-.NET Framework Windows birçok uygulamaları çalıştırmak için gereklidir. Bu makaledeki yönergeleri, ihtiyacınız olan .NET Framework sürümleri yüklemenize yardımcı olmalıdır. [.NET Framework 4.7.1](https://www.microsoft.com/download/details.aspx?id=56115&desc=dotnet47) en son kullanılabilir sürümüdür.
+.NET Framework Windows birçok uygulamaları çalıştırmak için gereklidir. Bu makaledeki yönergeleri, ihtiyacınız olan .NET Framework sürümleri yüklemenize yardımcı olmalıdır. [.NET Framework 4.7.2](http://go.microsoft.com/fwlink/?LinkID=863255) en son kullanılabilir sürümüdür.
 
 Bir uygulamayı çalıştırmak çalışıyor ve makinenizde aşağıdakine benzer bir iletişim kutusu görmesini sonra bu sayfada gelmedi:
 
 ![Bu uygulama başlatılamadı](./media/this-application-could-not-be-started.png)
 
-## <a name="net-framework-471"></a>.NET framework 4.7.1
+## <a name="net-framework-472"></a>.NET framework 4.7.2
 
-.NET Framework 4.7.1 bulunur:
+.NET Framework 4.7.2 bulunur:
 
-* [Windows 10 sonbaharda oluşturucuları güncelleştirme (sürüm 1709)](https://www.microsoft.com/software-download/windows10)
-* [Windows Server, sürüm 1709](https://docs.microsoft.com/windows-server/get-started/get-started-with-1709)
+* [Windows 10 Nisan 2018 güncelleştirme](https://www.microsoft.com/software-download/windows10)
 
 > [!div class="button"]
-[.NET Framework 4.7.1 indirin](https://www.microsoft.com/net/download/thank-you/net471?utm_source=ms-docs&utm_medium=referral)
+[.NET Framework 4.7.2 indirin](https://www.microsoft.com/net/download/thank-you/net472?utm_source=ms-docs&utm_medium=referral)
 
-[.NET Framework 4.7.1](https://www.microsoft.com/download/details.aspx?id=56115&desc=dotnet47) .NET Framework 4. 0 ' 4.7.1 aracılığıyla oluşturulmuş uygulamaları çalıştırmak için kullanılabilir.
+[.NET Framework 4.7.2](http://go.microsoft.com/fwlink/?LinkID=863255) .NET Framework 4. 0 ' 4.7.1 aracılığıyla oluşturulmuş uygulamaları çalıştırmak için kullanılabilir.
 
-Yükleyebileceğiniz [.NET Framework 4.7.1](https://www.microsoft.com/en-us/download/details.aspx?id=56115&desc=dotnet47) üzerinde:
+Yükleyebileceğiniz [.NET Framework 4.7.2](http://go.microsoft.com/fwlink/?LinkID=863255) üzerinde:
 
+* Windows 10 sonbaharda oluşturucuları güncelleştirme (sürüm 1709)
 * Windows 10 oluşturucuları güncelleştirme (sürüm 1703)
 * Windows 10 Anniversary güncelleştirme (sürüm 1607)
+* Windows Server, sürüm 1709
 * Windows Server 2016
 
-.NET Framework 4.7.1 desteklenmiyor:
+.NET Framework 4.7.2 desteklenmiyor:
 
 * Windows 10 1507
 * Windows 10 1511
 
-Windows 10 1507 veya 1511 kullanmakta olduğunuz ve .NET Framework'ü 4.7.1 yüklemek istiyorsanız, önce daha sonraki bir Windows 10 sürüm yükseltme yapmanız gerekir.
+Windows 10 1507 veya 1511 kullanmakta olduğunuz ve .NET Framework'ü 4.7.2 yüklemek istiyorsanız, önce daha sonraki bir Windows 10 sürüm yükseltme yapmanız gerekir.
 
 ## <a name="net-framework-462"></a>.NET Framework 4.6.2
 

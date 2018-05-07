@@ -1,28 +1,16 @@
 ---
-title: "Nasıl yapılır: XMLDataProvider ve XPath Sorgularını Kullanarak XML Verilerine Bağlama"
-ms.custom: 
+title: 'Nasıl yapılır: XMLDataProvider ve XPath Sorgularını Kullanarak XML Verilerine Bağlama'
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-wpf
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - XmlDataProvider [WPF], binding to XML data
 - data binding [WPF], binding to XML data using XmlDataProvider queries
 - binding [WPF], to XML data using XmlDataProvider queries
 ms.assetid: 7dcd018f-16aa-4870-8e47-c1b4ea31e574
-caps.latest.revision: "22"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 92037be2280eaa248951ff9bad82b7a1581a4fd9
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: bb8eb727fb6614440721c4d34a7d1828182d2f14
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-bind-to-xml-data-using-an-xmldataprovider-and-xpath-queries"></a>Nasıl yapılır: XMLDataProvider ve XPath Sorgularını Kullanarak XML Verilerine Bağlama
 Bu örnek nasıl bağlanacağını gösterir [!INCLUDE[TLA#tla_xml](../../../../includes/tlasharptla-xml-md.md)] verileri kullanarak bir <xref:System.Windows.Data.XmlDataProvider>.  
@@ -47,15 +35,15 @@ Bu örnek nasıl bağlanacağını gösterir [!INCLUDE[TLA#tla_xml](../../../../
   
  **XPath** özelliklerinde [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] XmlNode.SelectNodes yöntemi tarafından işlenir. Değiştirebileceğiniz **XPath** farklı sonuçlar almak için sorgular. İşte bazı örnekler için <xref:System.Windows.Data.Binding.XPath%2A> sorgu sınır <xref:System.Windows.Controls.ListBox> önceki örnekten:  
   
--   `XPath="Book[1]"`ilk kitap öğesini ("XML Eylemde") döndürür. Unutmayın **XPath** dizinlerinin 1, 0 temel.  
+-   `XPath="Book[1]"` ilk kitap öğesini ("XML Eylemde") döndürür. Unutmayın **XPath** dizinlerinin 1, 0 temel.  
   
--   `XPath="Book[@*]"`tüm öznitelikleri olan tüm kitap öğelerini döndürür.  
+-   `XPath="Book[@*]"` tüm öznitelikleri olan tüm kitap öğelerini döndürür.  
   
--   `XPath="Book[last()-1]"`İkinci ("Tanıtımı Microsoft .NET") son kitap öğesini döndürür.  
+-   `XPath="Book[last()-1]"` İkinci ("Tanıtımı Microsoft .NET") son kitap öğesini döndürür.  
   
--   `XPath="*[position()>3]"`ilk 3 dışında tüm kitap öğeleri döndürür.  
+-   `XPath="*[position()>3]"` ilk 3 dışında tüm kitap öğeleri döndürür.  
   
- Çalıştırdığınızda bir **XPath** değerini döndürür, sorgu bir <xref:System.Xml.XmlNode> veya XmlNodes listesi. <xref:System.Xml.XmlNode>olan bir [!INCLUDE[TLA#tla_clr](../../../../includes/tlasharptla-clr-md.md)] kullanabileceğiniz anlamına gelir nesne <xref:System.Windows.Data.Binding.Path%2A> özelliğine bağlamak için [!INCLUDE[TLA#tla_clr](../../../../includes/tlasharptla-clr-md.md)] özellikleri. Önceki örneği yeniden göz önünde bulundurun. Örneğin geri kalanı aynı kalır ve değiştirirseniz <xref:System.Windows.Controls.TextBlock> aşağıdaki bağlama, döndürülen XmlNodes içinde adlarını görürsünüz <xref:System.Windows.Controls.ListBox>. Bu durumda, döndürülen tüm düğümlerin adıdır "*defteri*".  
+ Çalıştırdığınızda bir **XPath** değerini döndürür, sorgu bir <xref:System.Xml.XmlNode> veya XmlNodes listesi. <xref:System.Xml.XmlNode> olan bir [!INCLUDE[TLA#tla_clr](../../../../includes/tlasharptla-clr-md.md)] kullanabileceğiniz anlamına gelir nesne <xref:System.Windows.Data.Binding.Path%2A> özelliğine bağlamak için [!INCLUDE[TLA#tla_clr](../../../../includes/tlasharptla-clr-md.md)] özellikleri. Önceki örneği yeniden göz önünde bulundurun. Örneğin geri kalanı aynı kalır ve değiştirirseniz <xref:System.Windows.Controls.TextBlock> aşağıdaki bağlama, döndürülen XmlNodes içinde adlarını görürsünüz <xref:System.Windows.Controls.ListBox>. Bu durumda, döndürülen tüm düğümlerin adıdır "*defteri*".  
   
  [!code-xaml[XmlDataSourceVariation#XmlNodePath](../../../../samples/snippets/csharp/VS_Snippets_Wpf/XmlDataSourceVariation/CS/Page1.xaml#xmlnodepath)]  
   

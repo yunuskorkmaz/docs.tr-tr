@@ -1,24 +1,12 @@
 ---
-title: "Seri Hale Getirilebilir Türler"
-ms.custom: 
+title: Seri Hale Getirilebilir Türler
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: f1c8539a-6a79-4413-b294-896f0957b2cd
-caps.latest.revision: "9"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 2bf272e785968f9116cea20ad0c3f40eb786d1f2
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: e54fd860ce757257253dad097a52e634dbb5d8bc
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="serializable-types"></a>Seri Hale Getirilebilir Türler
 Varsayılan olarak, <xref:System.Runtime.Serialization.DataContractSerializer> tüm herkese görünür türleri serileştirir. Tüm ortak okuma/yazma özellikleri ve türünde alanlar serileştirilir.  
@@ -38,7 +26,7 @@ Varsayılan olarak, <xref:System.Runtime.Serialization.DataContractSerializer> t
   
 -   Salt okunur alan, özellikleri olmadan bir `get` veya `set` yöntemi ve iç veya özel özelliklerle `set` veya `get` yöntemleri sıralanmış değildir. Bu tür özelliklerini göz ardı edilir ve hiçbir özel durum, söz konusu olduğunda yalnızca get koleksiyonları hariç.  
   
--   <xref:System.Xml.Serialization.XmlSerializer>öznitelikler (gibi `XmlElement`, `XmlAttribute`, `XmlIgnore`, `XmlInclude`, vb.) göz ardı edilir.  
+-   <xref:System.Xml.Serialization.XmlSerializer> öznitelikler (gibi `XmlElement`, `XmlAttribute`, `XmlIgnore`, `XmlInclude`, vb.) göz ardı edilir.  
   
 -   Geçerli <xref:System.Runtime.Serialization.DataContractAttribute> seri hale getirici belirli bir türde özniteliği, bu türün herhangi bir üye göz ardı eder <xref:System.Runtime.Serialization.DataMemberAttribute> özniteliği uygulanır.  
   

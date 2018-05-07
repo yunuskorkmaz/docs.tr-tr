@@ -1,13 +1,6 @@
 ---
-title: "Veri Üyesi Varsayılan Değerler"
-ms.custom: 
+title: Veri Üyesi Varsayılan Değerler
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -15,16 +8,11 @@ helpviewer_keywords:
 - data members [WCF], default values
 - data members [WCF]
 ms.assetid: 53a3b505-4b27-444b-b079-0eb84a97cfd8
-caps.latest.revision: "10"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 33f093beb022804bbdbccf1177404e128d198dd1
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 477921069411bb4b7ac32a5e93cc409bc7fbdec2
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="data-member-default-values"></a>Veri Üyesi Varsayılan Değerler
 İçinde [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)], türlerine sahip bir kavramı *varsayılan değerlerin*. Örneğin, varsayılan değer tüm başvuru türündeki `null`, ve isteğe bağlı olarak bir tamsayı türü için sıfır olduğunda. Varsayılan değer olarak ayarlandığında serileştirilmiş verilerinden bir veri üyesi atlamak için bazen istenen bir durumdur. Üye varsayılan değeri olduğundan, gerçek bir değer serileştirilmesi değil; Bu performans avantajı vardır.  
@@ -61,11 +49,11 @@ ms.lasthandoff: 12/22/2017
 ### <a name="schema-representation"></a>Şema gösterimi  
  Veri üyeleri XML Şeması Tanım Dili (XSD) şema gösterimini ayrıntılarını zaman `EmitDefaultValue` özelliği ayarlanmış `false` ele alınmıştır [veri sözleşmesi şema başvurusu](../../../../docs/framework/wcf/feature-details/data-contract-schema-reference.md). Ancak, kısa bir genel bakış verilmiştir:  
   
--   Zaman <xref:System.Runtime.Serialization.DataMemberAttribute.EmitDefaultValue%2A> ayarlanır `false`, özel ek açıklama olarak şemada gösterilir [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)]. Bu bilgileri temsil eden birlikte çalışabilir yolu yoktur. Şemadaki "varsayılan" özniteliği özellikle bu amaç için kullanılan değil `minOccurs` özniteliği yalnızca etkilenen <xref:System.Runtime.Serialization.DataMemberAttribute.IsRequired%2A> ayarı ve `nillable` özniteliği, yalnızca veri üyesi türü tarafından etkilenir.  
+-   Zaman <xref:System.Runtime.Serialization.DataMemberAttribute.EmitDefaultValue%2A> ayarlanır `false`, şemada, Windows Communication Foundation (WCF) için belirli bir ek açıklama olarak temsil edilir. Bu bilgileri temsil eden birlikte çalışabilir yolu yoktur. Şemadaki "varsayılan" özniteliği özellikle bu amaç için kullanılan değil `minOccurs` özniteliği yalnızca etkilenen <xref:System.Runtime.Serialization.DataMemberAttribute.IsRequired%2A> ayarı ve `nillable` özniteliği, yalnızca veri üyesi türü tarafından etkilenir.  
   
 -   Şemada kullanmak üzere gerçek varsayılan değeri yok. Bu öğe eksik uygun şekilde yorumlamaya kadar alıcı uç noktadır.  
   
- Şema alma <xref:System.Runtime.Serialization.DataMemberAttribute.EmitDefaultValue%2A> özelliği ayarlanmış otomatik olarak `false` her [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]-belirtilen özel ek açıklama önceden algılandı. Ayrıca ayarlanır `false` başvuru türleri için `nillable` özelliğini `false` kullanırken sık oluşan özel birlikte çalışabilirlik senaryoları desteklemek için [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] Web Hizmetleri.  
+ Şema alma <xref:System.Runtime.Serialization.DataMemberAttribute.EmitDefaultValue%2A> özelliği ayarlanmış otomatik olarak `false` her bahsedilen WCF özgü ek açıklama önceden algılandı. Ayrıca ayarlanır `false` başvuru türleri için `nillable` özelliğini `false` kullanırken sık oluşan özel birlikte çalışabilirlik senaryoları desteklemek için [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] Web Hizmetleri.  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
  <xref:System.Runtime.Serialization.DataMemberAttribute.EmitDefaultValue%2A>  

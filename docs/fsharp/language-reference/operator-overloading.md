@@ -1,20 +1,17 @@
 ---
-title: "İşleç Aşırı Yüklemesi (F#)"
-description: "Aritmetik işleçler bir sınıf veya kayıt türü ve F # içinde genel düzeyde aşırı yüklemeyi öğrenin."
-keywords: "Visual f #, f # işlevsel programlama"
+title: İşleç Aşırı Yüklemesi (F#)
+description: 'Aritmetik işleçler bir sınıf veya kayıt türü ve F # içinde genel düzeyde aşırı yüklemeyi öğrenin.'
 author: cartermp
 ms.author: phcart
 ms.date: 05/16/2016
 ms.topic: language-reference
-ms.prod: .net
-ms.technology: devlang-fsharp
+ms.prod: dotnet-fsharp
 ms.devlang: fsharp
-ms.assetid: 019277ed-f649-4fa5-ad43-097865f449d9
-ms.openlocfilehash: 76ddab5339e11d71bb326b60d727017eb838ccf4
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
-ms.translationtype: MT
+ms.openlocfilehash: 45fcb4d2acce29caa6b38d08ae4f166884f20147
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="operator-overloading"></a>İşleç Aşırı Yüklemesi
 
@@ -49,7 +46,7 @@ Tüm standart işleçleri aşırı yüklenebilir, ancak belirli karakter diziler
 
 Kullandığınız tam karakter dizisi bağlı olarak, belirli bir öncelik ve birleşim operatörünüze sahip olur. Birleşim sağdan sola veya sağa ya da bırakılabilir ve parantezler olmadan sırası aynı öncelik düzeyine operatörleri görünür olduğunda kullanılır.
 
-İşleç karakter `.` Örneğin, gibiişleçlerinoluşturmakaynıöncelikvebirleşimsıradançarpmaolaraksahipçarpmakendisürümünütanımlamakistiyorsanız,böyleceönceliği,etkilemez `.*`.
+İşleç karakter `.` Örneğin, gibiişleçlerinoluşturmakaynıöncelikvebirleşimsıradançarpmaolaraksahipçarpmakendisürümünütanımlamakistiyorsanız,böyleceönceliği,etkilemez.`.*`.
 
 Yalnızca işleçleri `?` ve `?<-` ile başlayabilir `?`.
 
@@ -163,4 +160,4 @@ Kapsam kuralları F # için yeni tanımlanan işleçleri yerleşik işleçleri �
 Anahtar sözcüğü `inline` çoğunlukla genellikle en iyi arama koda tümleşik küçük işlevlerdir genel işleçleri ile kullanılır. Yapma işleci işlevler satır içi bunları statik olarak çözümlenmiş genel kod üretmek için statik olarak çözümlenmiş tür parametreleri ile çalışmak etkinleştirir. Daha fazla bilgi için bkz: [satır içi işlevler](functions/inline-functions.md) ve [statik olarak çözümlenmiş tür parametreleri](generics/statically-resolved-type-parameters.md).
 
 ## <a name="see-also"></a>Ayrıca Bkz.
-[Üyeleri](members/index.md)
+[Üyeler](members/index.md)

@@ -1,29 +1,19 @@
 ---
-title: ".NET Framework'e Genel Bakış"
-ms.custom: 
+title: .NET Framework'e Genel Bakış
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - application development [.NET Framework]
 - common language runtime
 - common language runtime, about
 - common language runtime, overview
 ms.assetid: 29848c96-fc36-462d-8072-ba223a40b697
-caps.latest.revision: "34"
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: ffe4670ef07b0a9b541bf2099958aa943bba2f68
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.openlocfilehash: 0c844a81da036c5e96c2c619e3a3aae85f70f8ad
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="overview-of-the-net-framework"></a>.NET Framework'e Genel Bakış
 
@@ -105,6 +95,6 @@ Windows Forms, böylelikle Windows GUI geliştirmeyi kolaylaştıran yeniden kul
 [Sistem gereksinimleri](../../../docs/framework/get-started/system-requirements.md)   
 [Yükleme Kılavuzu](../../../docs/framework/install/index.md)   
 [Geliştirme Kılavuzu](../../../docs/framework/development-guide.md)   
-[Araçları](../../../docs/framework/tools/index.md)   
+[Araçlar](../../../docs/framework/tools/index.md)   
 [.NET framework örnekleri](http://msdn.microsoft.com/library/177055f8-4a1f-43e7-aee6-995c196079b1)   
 [.NET framework sınıf kitaplığı](http://go.microsoft.com/fwlink/?LinkID=227195)

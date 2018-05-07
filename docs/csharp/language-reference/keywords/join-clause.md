@@ -1,9 +1,6 @@
 ---
-title: "join tümcesi (C# Başvurusu)"
+title: join tümcesi (C# Başvurusu)
 ms.date: 07/20/2015
-ms.prod: .net
-ms.technology: devlang-csharp
-ms.topic: article
 f1_keywords:
 - join
 - join_CSharpKeyword
@@ -11,14 +8,11 @@ helpviewer_keywords:
 - join clause [C#]
 - join keyword [C#]
 ms.assetid: 76e9df84-092c-41a6-9537-c3f1cbd7f0fb
-caps.latest.revision: "29"
-author: BillWagner
-ms.author: wiwagn
-ms.openlocfilehash: 17c8f7f5ff6d1266421cdb87ae562028c61ae97f
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: a868c52cf753b1e4285586ec41c1993f519299d7
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="join-clause-c-reference"></a>join tümcesi (C# Başvurusu)
 `join` Yan tümcesi nesne modelinde hiçbir doğrudan ilişkisine sahip farklı kaynak sıraları öğelerinden ilişkilendirmek için yararlıdır. Her kaynak öğelerinde eşitlik için karşılaştırılması gereken bazı değeri paylaşmak tek gereksinimdir. Örneğin, belirli bir ürünü tedarikçileri listesini ve alıcıların listesi yemek dağıtıcı olabilir. A `join` yan tümcesi, örneğin, satıcılar listesini oluşturmak için kullanılabilir ve tüm aynı olan alıcılar söz konusu ürünün belirtilen bölge.  
@@ -87,8 +81,8 @@ ms.lasthandoff: 11/21/2017
 ## <a name="see-also"></a>Ayrıca Bkz.  
  [Sorgu anahtar sözcükleri (LINQ)](../../../csharp/language-reference/keywords/query-keywords.md)  
  [LINQ Sorgu ifadeleri](../../../csharp/programming-guide/linq-query-expressions/index.md)  
- [Birleştirme işlemleri](../../programming-guide/concepts/linq/join-operations.md)  
- [Group tümcesi](../../../csharp/language-reference/keywords/group-clause.md)  
+ [Birleştirme İşlemleri](../../programming-guide/concepts/linq/join-operations.md)  
+ [group yan tümcesi](../../../csharp/language-reference/keywords/group-clause.md)  
  [Nasıl yapılır: sol dış birleştirmeler gerçekleştirme](../../../csharp/programming-guide/linq-query-expressions/how-to-perform-left-outer-joins.md)  
  [Nasıl yapılır: iç birleştirmeler gerçekleştirme](../../../csharp/programming-guide/linq-query-expressions/how-to-perform-inner-joins.md)  
  [Nasıl yapılır: gruplandırılmış birleştirmeler gerçekleştirme](../../../csharp/programming-guide/linq-query-expressions/how-to-perform-grouped-joins.md)  

@@ -1,31 +1,19 @@
 ---
-title: "Yavaş Başlatma"
-ms.custom: 
+title: Yavaş Başlatma
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
 helpviewer_keywords:
 - lazy initialization in .NET, introduction
 ms.assetid: 56b4ae5c-4745-44ff-ad78-ffe4fcde6b9b
-caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: f4998cc0c836cf46d79d854ad9a85e7eacf70d7f
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: a826121a7f22d1db7287171c5add28e5fcd690cc
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="lazy-initialization"></a>Yavaş Başlatma
 *Geç başlatma* bir nesnenin anlamına gelir oluşturulduktan ilk kullanılan kadar ertelenir. (Bu konu için koşulları *geç başlatma* ve *yavaş örneklemesi* eşanlamlıdır.) Geç Başlatma öncelikle performansı, kayıp hesaplama önlemek ve program bellek gereksinimlerini azaltmak için kullanılır. En yaygın senaryolar şunlardır:  
@@ -34,7 +22,7 @@ ms.lasthandoff: 12/22/2017
   
 -   Ne zaman oluşturulacağını pahalı bir nesne varsa ve pahalı diğer işlemleri tamamlandıktan sonra oluşturulduktan kadar erteleme istiyorsanız. Örneğin, programınız başlar, ancak bazı yalnızca hemen gereken birkaç nesne örneklerini yükler varsayın. Gerekli nesnelerden oluşturana kadar gerekli olmayan nesnelerin başlatılması ertelemeyi tarafından program başlatma performansını artırabilir.  
   
- Geç Başlatma gerçekleştirmek için kendi kodunuzu yazabilirsiniz rağmen kullanmanız önerilir <xref:System.Lazy%601> yerine. <xref:System.Lazy%601>ve ilgili türlerinden de iş parçacığı güvenliği desteklemek ve tutarlı bir özel durum yayma İlkesi sağlayın.  
+ Geç Başlatma gerçekleştirmek için kendi kodunuzu yazabilirsiniz rağmen kullanmanız önerilir <xref:System.Lazy%601> yerine. <xref:System.Lazy%601> ve ilgili türlerinden de iş parçacığı güvenliği desteklemek ve tutarlı bir özel durum yayma İlkesi sağlayın.  
   
  Aşağıdaki tabloda farklı senaryolar yavaş başlatma etkinleştirmek için .NET Framework sürüm 4 sağlar türlerini listeler.  
   
@@ -86,7 +74,7 @@ ms.lasthandoff: 12/22/2017
   
  Bazı <xref:System.Lazy%601> oluşturucular sahip bir <xref:System.Threading.LazyThreadSafetyMode> adlı parametre `mode`. Bu oluşturucu ek iş parçacığı güvenliği modu sağlar. Aşağıdaki tabloda nasıl, iş parçacığı güvenliği bir <xref:System.Lazy%601> nesnesi, iş parçacığı güvenliği belirtin Oluşturucu parametreleri tarafından etkilenir. Her Oluşturucusu en çok bir tür parametresi var.  
   
-|Nesnenin iş parçacığı güvenliği|`LazyThreadSafetyMode``mode` parametresi|Boolean `isThreadSafe` parametresi|Hiçbir iş parçacığı güvenliği parametreleri|  
+|Nesnenin iş parçacığı güvenliği|`LazyThreadSafetyMode` `mode` Parametre|Boolean `isThreadSafe` parametresi|Hiçbir iş parçacığı güvenliği parametreleri|  
 |---------------------------------|---------------------------------------------|--------------------------------------|---------------------------------|  
 |Tam olarak iş parçacığı açısından güvenli; bir seferde yalnızca bir iş parçacığı değeriyle dener.|<xref:System.Threading.LazyThreadSafetyMode.ExecutionAndPublication>|`true`|Evet.|  
 |İş parçacığı-güvenli değil.|<xref:System.Threading.LazyThreadSafetyMode.None>|`false`|Yok.|  
@@ -113,8 +101,8 @@ ms.lasthandoff: 12/22/2017
 |-----------------|------------------------|--------------------------------|---------------------------|  
 |Lazy(T)()|(<xref:System.Threading.LazyThreadSafetyMode.ExecutionAndPublication>)|Hayır|Hayır|  
 |Lazy(T)(FUNC(T))|(<xref:System.Threading.LazyThreadSafetyMode.ExecutionAndPublication>)|Evet|Evet|  
-|Lazy(T)(Boolean)|`True`(<xref:System.Threading.LazyThreadSafetyMode.ExecutionAndPublication>) veya `false` (<xref:System.Threading.LazyThreadSafetyMode.None>)|Hayır|Hayır|  
-|Lazy(T)(FUNC(T), Boolean)|`True`(<xref:System.Threading.LazyThreadSafetyMode.ExecutionAndPublication>) veya `false` (<xref:System.Threading.LazyThreadSafetyMode.None>)|Evet|Evet|  
+|Lazy(T)(Boolean)|`True` (<xref:System.Threading.LazyThreadSafetyMode.ExecutionAndPublication>) veya `false` (<xref:System.Threading.LazyThreadSafetyMode.None>)|Hayır|Hayır|  
+|Lazy(T)(FUNC(T), Boolean)|`True` (<xref:System.Threading.LazyThreadSafetyMode.ExecutionAndPublication>) veya `false` (<xref:System.Threading.LazyThreadSafetyMode.None>)|Evet|Evet|  
 |Lazy(T)(LazyThreadSafetyMode)|Kullanıcı tanımlı|Hayır|Hayır|  
 |Lazy(T)(FUNC(T), LazyThreadSafetyMode)|Kullanıcı tanımlı|Evet|Kullanıcı belirtiyorsa Hayır <xref:System.Threading.LazyThreadSafetyMode.PublicationOnly>; Aksi halde, Evet.|  
   
@@ -137,7 +125,7 @@ ms.lasthandoff: 12/22/2017
  [!code-csharp[Lazy#7](../../../samples/snippets/csharp/VS_Snippets_Misc/lazy/cs/cs_lazycodefile.cs#7)]
  [!code-vb[Lazy#7](../../../samples/snippets/visualbasic/VS_Snippets_Misc/lazy/vb/lazy_vb.vb#7)]  
   
- <xref:System.Threading.ThreadLocal%601>çok aynı şekilde kendi nesne sarmalar <xref:System.Lazy%601>, bu temel farklılıklar ile:  
+ <xref:System.Threading.ThreadLocal%601> çok aynı şekilde kendi nesne sarmalar <xref:System.Lazy%601>, bu temel farklılıklar ile:  
   
 -   Her iş parçacığı, diğer iş parçacığı tarafından erişilebilir durumda değil, kendi özel veri kullanarak iş parçacığı yerel değişken başlatır.  
   

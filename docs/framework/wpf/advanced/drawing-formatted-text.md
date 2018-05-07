@@ -1,13 +1,6 @@
 ---
-title: "Biçimlendirilmiş Metin Çizme"
-ms.custom: 
+title: Biçimlendirilmiş Metin Çizme
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-wpf
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -17,16 +10,11 @@ helpviewer_keywords:
 - formatted text [WPF]
 - drawing [WPF], formatted text
 ms.assetid: b1d851c1-331c-4814-9964-6fe769db6f1f
-caps.latest.revision: "14"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 364362e8377f02b5d6518e6ae4d71b6dd1eafc02
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.openlocfilehash: 978c97b8cae24bff4ebdea8f4e56a940e5907fa6
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="drawing-formatted-text"></a>Biçimlendirilmiş Metin Çizme
 Bu konuda özelliklerini genel bakış sağlar <xref:System.Windows.Media.FormattedText> nesnesi. Bu nesne, metin çizim için alt düzey denetim sağlar. [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] uygulamalar.  
@@ -42,11 +30,11 @@ FormattedText metodu kullanılarak görüntülenen metin
 >  Geçiş bu geliştiriciler için [!INCLUDE[TLA#tla_win32](../../../../includes/tlasharptla-win32-md.md)] API, tabloda [Win32 geçiş](#win32_migration) bölümünde listeleri [!INCLUDE[TLA#tla_win32](../../../../includes/tlasharptla-win32-md.md)] DrawText bayrakları ve içindeki yaklaşık eşdeğerleri [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)].  
   
 ### <a name="reasons-for-using-formatted-text"></a>Biçimlendirilmiş metin kullanma nedenleri  
- [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]ekrana metin çizme için birden çok denetim içerir. Her denetim için farklı bir senaryo hedeflenen ve kendi listesi özellikleri ve sınırlamaları vardır. Genel olarak, <xref:System.Windows.Controls.TextBlock> öğesi sınırlı metin desteği içindeki kısa tümce gibi gerekli olduğunda kullanılmalıdır bir [!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)]. <xref:System.Windows.Controls.Label>en az metin desteği gerekli olduğunda kullanılabilir. Daha fazla bilgi için bkz: [WPF belgelerde](../../../../docs/framework/wpf/advanced/documents-in-wpf.md).  
+ [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] ekrana metin çizme için birden çok denetim içerir. Her denetim için farklı bir senaryo hedeflenen ve kendi listesi özellikleri ve sınırlamaları vardır. Genel olarak, <xref:System.Windows.Controls.TextBlock> öğesi sınırlı metin desteği içindeki kısa tümce gibi gerekli olduğunda kullanılmalıdır bir [!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)]. <xref:System.Windows.Controls.Label> en az metin desteği gerekli olduğunda kullanılabilir. Daha fazla bilgi için bkz: [WPF belgelerde](../../../../docs/framework/wpf/advanced/documents-in-wpf.md).  
   
  <xref:System.Windows.Media.FormattedText> Nesnesi sağlar biçimlendirme özellikleri daha büyük metin [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] metin denetimleri ve metin dekoratif bir öğe olarak kullanmak istediğiniz durumlarda yararlı olabilir. Daha fazla bilgi için aşağıdaki bölüme bakın [biçimlendirilmiş metni geometriye dönüştürme](#converting_formatted_text).  
   
- Ayrıca, <xref:System.Windows.Media.FormattedText> nesnesidir metin odaklı oluşturmak için yararlı <xref:System.Windows.Media.DrawingVisual>-türetilmiş nesneleri. <xref:System.Windows.Media.DrawingVisual>Şekil, görüntü veya metin işlemek için kullanılan bir basit çizim sınıfıdır. Daha fazla bilgi için bkz: [Test kullanarak isabet sınaması örneği isabet](http://go.microsoft.com/fwlink/?LinkID=159994).  
+ Ayrıca, <xref:System.Windows.Media.FormattedText> nesnesidir metin odaklı oluşturmak için yararlı <xref:System.Windows.Media.DrawingVisual>-türetilmiş nesneleri. <xref:System.Windows.Media.DrawingVisual> Şekil, görüntü veya metin işlemek için kullanılan bir basit çizim sınıfıdır. Daha fazla bilgi için bkz: [Test kullanarak isabet sınaması örneği isabet](http://go.microsoft.com/fwlink/?LinkID=159994).  
   
 ## <a name="using-the-formattedtext-object"></a>BiçimlendirilmişMetin nesnesi kullanma  
  Biçimlendirilmiş metin oluşturmak için arama <xref:System.Windows.Media.FormattedText.%23ctor%2A> Oluşturucusu oluşturmak için bir <xref:System.Windows.Media.FormattedText> nesnesi. İlk biçimlendirilmiş metin dizesi oluşturduktan sonra bir aralık stilleri biçimlendirme uygulayabilirsiniz.  
@@ -127,7 +115,7 @@ Metnin yol geometri video görüntüleme
 |DT_PREFIXONLY|Yok.|Desteklenmez.|  
 |DT_RIGHT|<xref:System.Windows.Media.FormattedText.TextAlignment%2A>|Kullanım <xref:System.Windows.Media.FormattedText.TextAlignment%2A> ayarlamak değere sahip özelliği <xref:System.Windows.TextAlignment.Right>. (Yalnızca WPF)|  
 |DT_RTLREADING|<xref:System.Windows.Media.FormattedText.FlowDirection%2A>|Ayarlama <xref:System.Windows.Media.FormattedText.FlowDirection%2A> özelliğine <xref:System.Windows.FlowDirection.RightToLeft>.|  
-|DT_SINGLELINE|Yok.|Gerekli değildir. <xref:System.Windows.Media.FormattedText>nesneleri sürece tek satır denetimi gibi davranır ya da <xref:System.Windows.Media.FormattedText.MaxTextWidth%2A> özelliği ayarlanmış veya satır başı/satır besleme (CR/LF) metni içerir.|  
+|DT_SINGLELINE|Yok.|Gerekli değildir. <xref:System.Windows.Media.FormattedText> nesneleri sürece tek satır denetimi gibi davranır ya da <xref:System.Windows.Media.FormattedText.MaxTextWidth%2A> özelliği ayarlanmış veya satır başı/satır besleme (CR/LF) metni içerir.|  
 |DT_TABSTOP|Yok.|Kullanıcı tanımlı sekme Dur konumlar için destek yok.|  
 |DT_TOP|<xref:System.Windows.Media.FormattedText.Height%2A>|Gerekli değildir. Üst gerekçe varsayılandır. Diğer dikey konumlandırma değerleri kullanılarak tanımlanabilir <xref:System.Windows.Media.FormattedText.Height%2A> uygun bir işlem için özellik [!INCLUDE[TLA#tla_win32](../../../../includes/tlasharptla-win32-md.md)] DrawText 'y' konumu.|  
 |DT_VCENTER|<xref:System.Windows.Media.FormattedText.Height%2A>|Kullanım <xref:System.Windows.Media.FormattedText.Height%2A> uygun bir işlem için özellik [!INCLUDE[TLA#tla_win32](../../../../includes/tlasharptla-win32-md.md)] DrawText 'y' konumu.|  

@@ -1,14 +1,6 @@
 ---
-title: "Yönetilen Hata Ayıklama Yardımcıları ile Hataları Tanılama"
-ms.custom: 
+title: Yönetilen Hata Ayıklama Yardımcıları ile Hataları Tanılama
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 f1_keywords:
 - EHMDA
 helpviewer_keywords:
@@ -37,17 +29,13 @@ helpviewer_keywords:
 - output, managed debugging assistants
 - errors [.NET Framework], managed debugging assistants
 ms.assetid: 76994ee6-9fa9-4059-b813-26578d24427c
-caps.latest.revision: 
 author: mairaw
 ms.author: mairaw
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 12a96068412f05d48b8b006385c66f3efbbf9870
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 16a039a5edb0e1023551f97deefbf7874a19638b
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="diagnosing-errors-with-managed-debugging-assistants"></a>Yönetilen Hata Ayıklama Yardımcıları ile Hataları Tanılama
 Yönetilen hata ayıklama yardımcıları (MDAs), çalışma zamanı durum bilgilerini sağlamak için ortak dil çalışma zamanı (CLR) ile birlikte çalışan yardımlarda hata ayıklar. Yardımcılar, aksi takdirde yakalayamayacağınız çalışma zamanı olayları hakkında bilgi iletileri oluşturur. Yönetilen ve yönetilmeyen kod arasında geçiş yaparken ortaya çıkan bulması zor uygulama hatalarını yalıtmak için MDA'leri kullanabilirsiniz. Windows kayıt defterine bir anahtar ekleyerek veya bir ortam değişkenini ayarlayarak bütün MDA'leri etkinleştirebilir ya da devre dışı bırakabilirsiniz. Uygulama yapılandırma ayarlarını kullanarak belirli MDA'leri etkinleştirebilirsiniz. Uygulamanın yapılandırma dosyasındaki bazı tek MDA'ler için ek yapılandırma ayarları ayarlayabilirsiniz. Çalışma zamanı yüklendiğinde bu yapılandırma dosyaları ayrıştırıldığı için yönetilen uygulama başlamadan önce MDA'i etkinleştirmeniz gerekir. Zaten başlatılmış uygulamalar için MDA'i etkinleştiremezsiniz.  
@@ -136,7 +124,7 @@ Windows Registry Editor Version 5.00
   
 -   `0` - Tüm MDA'leri devre dışı bırakır.  
   
--   `1`-MDA ayarlarından okur *ApplicationName*. mda.config.  
+-   `1` -MDA ayarlarından okur *ApplicationName*. mda.config.  
   
 -   `managedDebugger` - Yönetilen bir yürütülebilir dosya hata ayıklayıcı altında başlatıldığında dolaylı olarak etkinleştirilmiş tüm MDA'leri açıkça etkinleştirir.  
   

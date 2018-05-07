@@ -1,38 +1,24 @@
 ---
 title: Kısmi Güven Özelliği Uyumluluğu
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 ms.assetid: a36a540b-1606-4e63-88e0-b7c59e0e6ab7
-caps.latest.revision: 75
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 20cb6c1cd7a3b06b57bce02d5c3caacc7e2e42b7
-ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
+ms.openlocfilehash: f8c63079161e6be16e2d36f721aeb98937f72097
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/27/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="partial-trust-feature-compatibility"></a>Kısmi Güven Özelliği Uyumluluğu
-[!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] kısmen güvenilen bir ortamda çalışan sınırlı işlevlerinin bir alt kümesini destekler. Kısmi güvende desteklenen özellikler senaryoları belirli bir dizi açıklandığı şekilde tasarlanmış [desteklenen dağıtım senaryoları](../../../../docs/framework/wcf/feature-details/supported-deployment-scenarios.md) konu.  
+Kısmen güvenilen bir ortamda çalışan kullandığınızda, Windows Communication Foundation (WCF) sınırlı işlevlerinin bir alt kümesini destekler. Kısmi güvende desteklenen özellikler senaryoları belirli bir dizi açıklandığı şekilde tasarlanmış [desteklenen dağıtım senaryoları](../../../../docs/framework/wcf/feature-details/supported-deployment-scenarios.md) konu.  
   
 ## <a name="minimum-permission-requirements"></a>Minimum izin gereksinimleri  
- [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] özelliklerinin bir kısmı ya da aşağıdaki standart adlandırılmış izin kümeleri altında çalışan uygulamaları destekler:  
+ WCF özelliklerinin bir kısmı ya da aşağıdaki standart adlandırılmış izin kümeleri altında çalışan uygulamaları destekler:  
   
 -   Orta güven izinleri  
   
 -   Internet bölgesi izinleri  
   
- Kullanılmaya çalışılıyor [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] daha kısıtlayıcı izinler ile kısmen güvenilir uygulamalar çalışma zamanında güvenlik özel durumlarda neden olabilir.  
+ Kısmen güvenilir uygulamalar daha kısıtlayıcı izinlerle WCF kullanmayı denemeden güvenlik özel durumları çalışma zamanında neden olabilir.  
   
 ## <a name="contracts"></a>Sözleşmeler  
  Sözleşmeler, kısmi güven altında çalışırken aşağıdaki kısıtlamalar geçerlidir:  
@@ -66,7 +52,7 @@ ms.lasthandoff: 04/27/2018
  İleti iletim en iyi duruma getirme mekanizmasını (MTOM) kodlayıcılar desteklenmez.  
   
 ### <a name="security"></a>Güvenlik  
- Kısmen güvenilir uygulamalar kullanabilir [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]'s aktarım düzeyinde iletişimin güvenliğini sağlamak için güvenlik özellikleri. İleti düzeyi güvenlik desteklenmez. Çalışma zamanında bir özel durum iletisi düzeyi güvenlik kullanmak için bir bağlama yapılandırma sonuçlanır.  
+ Kısmen güvenilir uygulamalar WCF'ın aktarım düzeyinde güvenlik özellikleri, iletişimin güvenliğini sağlamak için kullanabilirsiniz. İleti düzeyi güvenlik desteklenmez. Çalışma zamanında bir özel durum iletisi düzeyi güvenlik kullanmak için bir bağlama yapılandırma sonuçlanır.  
   
 ### <a name="unsupported-bindings"></a>Desteklenmeyen bağlamaları  
  Güvenilir Mesajlaşma, işlemler veya ileti düzeyi güvenlik bağlamaları desteklenmez.  
@@ -76,7 +62,7 @@ ms.lasthandoff: 04/27/2018
   
 -   Tüm serileştirilebilir `[DataContract]` türleri olmalıdır `public`.  
   
--   Tüm serileştirilebilir `[DataMember]` alanları veya özelliklerinde bir `[DataContract]` türü ortak ve gerekir okuma/yazma. Seri hale getirme ve seri durumdan çıkarma işlemi [readonly](http://go.microsoft.com/fwlink/?LinkID=98854) çalıştırırken alanları desteklenmiyor [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] kısmen güvenilen uygulamada.  
+-   Tüm serileştirilebilir `[DataMember]` alanları veya özelliklerinde bir `[DataContract]` türü ortak ve gerekir okuma/yazma. Seri hale getirme ve seri durumdan çıkarma işlemi [readonly](http://go.microsoft.com/fwlink/?LinkID=98854) WCF kısmen güvenilen bir uygulamada çalıştırırken alanları desteklenmiyor.  
   
 -   `[Serializable]` /ISerializable programlama modeli bir kısmi güven ortamında desteklenmez.  
   
@@ -89,7 +75,7 @@ ms.lasthandoff: 04/27/2018
 ### <a name="collection-types"></a>Koleksiyon türleri  
  Bazı koleksiyon türleri her ikisini de uygulamak <xref:System.Collections.Generic.IEnumerable%601> ve <xref:System.Collections.IEnumerable>. Örnekler uygulama türleri <xref:System.Collections.Generic.ICollection%601>. Gibi türler uygulayabileceğiniz bir `public` uyarlamasını `GetEnumerator()`ve açık uygulaması `GetEnumerator()`. Bu durumda, <xref:System.Runtime.Serialization.DataContractSerializer> çağırır `public` uyarlamasını `GetEnumerator()`ve açık uyarlamasını `GetEnumerator()`. Hiçbiri `GetEnumerator()` uygulamalarıdır `public` ve tüm açık, ardından uygulamalarıdır <xref:System.Runtime.Serialization.DataContractSerializer> çağırır `IEnumerable.GetEnumerator()`.  
   
- Koleksiyon için türleri [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] bir kısmi güven ortamında hiçbiri çalışan `GetEnumerator()` uygulamalarıdır `public`, veya bunların hiçbiri açık arabirim uygulamaları olan ve sonra bir güvenlik özel durum.  
+ WCF bir kısmi güven ortamında hiçbiri çalışırken koleksiyon türleri için `GetEnumerator()` uygulamalarıdır `public`, veya bunların hiçbiri açık arabirim uygulamaları olan ve sonra bir güvenlik özel durum.  
   
 ### <a name="netdatacontractserializer"></a>NetDataContractSerializer  
  Birçok .NET Framework koleksiyon türleri gibi <xref:System.Collections.Generic.List%601>, <xref:System.Collections.ArrayList>, <xref:System.Collections.Generic.Dictionary%602> ve <xref:System.Collections.Hashtable> tarafından desteklenmeyen <xref:System.Runtime.Serialization.NetDataContractSerializer> kısmi güvende. Bu tür sahip `[Serializable]` özniteliği olarak ayarlanmış ve bu özniteliğin serileştirme bölümünde daha önce belirtildiği gibi kısmi güvende desteklenmiyor. <xref:System.Runtime.Serialization.DataContractSerializer> Özel bir yolla koleksiyonları değerlendirir ve bu nedenle bu kısıtlamaya alabilir ancak <xref:System.Runtime.Serialization.NetDataContractSerializer> bu kısıtlamayı aşmak için bu tür mekanizması vardır.  
@@ -108,7 +94,7 @@ ms.lasthandoff: 04/27/2018
  Bir ortak davranışı örneği için bkz: [nasıl yapılır: Lock aşağı Enterprise uç noktalarını](../../../../docs/framework/wcf/extending/how-to-lock-down-endpoints-in-the-enterprise.md).  
   
 ## <a name="configuration"></a>Yapılandırma  
- Bunun tek istisnası kısmen güvenilen kod yalnızca yükleyebilir [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] yerel yapılandırma bölümlerinin `app.config` dosya. Yüklemek için [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] yapılandırma bölümler bu başvuruyu [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] bölümleri machine.config veya kök web.config dosyasında ConfigurationPermission(Unrestricted) gerektirir. Bu izin olmadan başvurular [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] yapılandırma yüklendiğinde bir özel durum yerel yapılandırma dosyası sonuçlarında dışında yapılandırma bölümlerinin (davranışları, bağlamaları).  
+ Bunun tek istisnası kısmen güvenilen kod yalnızca yerel WCF yapılandırma bölümlerinin yükleyebilir `app.config` dosya. WCF bölümleri machine.config veya bir kök başvuru WCF yapılandırma bölümlerinin yüklemek için web.config dosyasının ConfigurationPermission(Unrestricted) gerektirir. Yapılandırma yüklendiğinde bu izin olmadan WCF yapılandırma bölümlerinin (davranışları, bağlamaları) bir özel durum yerel yapılandırma dosyası sonuçlarında dışında başvuruda bulunuyor.  
   
  Bir özel durum bilinen türü seri hale getirme, bu konunun serileştirme bölümünde açıklandığı gibi yapılandırmadır.  
   
@@ -121,7 +107,7 @@ ms.lasthandoff: 04/27/2018
  Sınırlı olay günlüğü altında kısmi güven desteklenir. Etkinleştirme hataları yalnızca hizmet ve izleme/ileti günlüğe kaydetme hatalarının olay günlüğüne kaydedilir. En fazla bir işlem tarafından günlüğe olayları olay günlüğüne aşırı iletileri yazılmasını engellemek için 5, sayısıdır.  
   
 ### <a name="message-logging"></a>İleti Günlüğe Kaydetme  
- Günlük kaydı olduğunda çalışmaz ileti [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] kısmi güven bir ortamda çalıştırılabilir. Kısmi güven altında etkinleştirilirse, hizmeti etkinleştirme başlayabildiğinden, ancak hiçbir ileti günlüğe kaydedilir.  
+ WCF bir kısmi güven ortamında çalıştırdığınızda ileti günlüğe kaydetme çalışmaz. Kısmi güven altında etkinleştirilirse, hizmeti etkinleştirme başlayabildiğinden, ancak hiçbir ileti günlüğe kaydedilir.  
   
 ### <a name="tracing"></a>İzleme  
  Kısıtlı izleme işlevselliği, kısmi güven ortamında çalışan olduğunda kullanılabilir. İçinde <`listeners`> öğesi yapılandırma dosyasında ekleyebileceğiniz yalnızca türleridir <xref:System.Diagnostics.TextWriterTraceListener> ve yeni <xref:System.Diagnostics.EventSchemaTraceListener>. Standart kullanımını <xref:System.Diagnostics.XmlWriterTraceListener> eksik veya hatalı günlüklerinde neden olabilir.  
@@ -151,13 +137,13 @@ ms.lasthandoff: 04/27/2018
  İzleme bir kısmi güven ortamında kullanırken, uygulama İzleme dinleyicisi çıktısını depolamak için yeterli izinlere sahip olduğundan emin olun. Örneğin, kullanırken <xref:System.Diagnostics.TextWriterTraceListener> İzleme çıktısı bir metin dosyasına yazma için uygulama başarıyla izleme dosyaya yazmak için gerekli gerekli FileIOPermission olduğundan emin olun.  
   
 > [!NOTE]
->  İzleme dosyaları yinelenen hatalarla taşmasını önlemek için [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] kaynak ya da ilk güvenlik hatasından sonra işlem izlemeyi devre dışı bırakır. Kaynağa erişim veya eylemi gerçekleştirmek için bir girişimde ilk kez her başarısız kaynak erişimi için bir özel durum izleme yoktur.  
+>  İzleme dosyaları yinelenen hatalarla taşmasını önlemek için kaynağın veya ilk güvenlik hatasından sonra işlem izleme WCF devre dışı bırakır. Kaynağa erişim veya eylemi gerçekleştirmek için bir girişimde ilk kez her başarısız kaynak erişimi için bir özel durum izleme yoktur.  
   
 ## <a name="wcf-service-host"></a>WCF hizmet konağı  
- [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] hizmet ana bilgisayarı, kısmi güven desteklemez. Kullanmak istiyorsanız bir [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] hizmet kısmi güvende, kullanmayın [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] hizmetinizi oluşturmak için Visual Studio'da hizmet kitaplığı proje şablonu. Bunun yerine, Visual Studio'da oluşturma seçerek yeni bir Web sitesi [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] bir Web sunucusunda hizmetinde barındırabilir Hizmet Web sitesi şablonu [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] kısmi güven desteklenir.  
+ WCF hizmet ana bilgisayarı, kısmi güven desteklemez. Kısmi güvende bir WCF hizmetini kullanmak istiyorsanız, WCF Hizmeti kitaplığı proje şablonu Visual Studio'da hizmet oluşturmak için kullanmayın. Bunun yerine, WCF kısmi güven desteklendiği bir Web sunucusu hizmeti barındıran WCF Hizmeti Web sitesi şablonu seçerek Visual Studio'da yeni bir Web sitesi oluşturun.  
   
 ## <a name="other-limitations"></a>Diğer sınırlamaları  
- [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] genellikle üzerine barındırma uygulaması tarafından uygulanan güvenlik konuları sınırlıdır. Örneğin, varsa [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] barındırılan bir XAML tarayıcısı uygulaması (XBAP içinde), XBAP sınırlamalara tabi açıklandığı gibi olmasından [Windows Presentation Foundation kısmi güven Security](http://go.microsoft.com/fwlink/?LinkId=89138).  
+ WCF, onun üzerinde barındırma uygulaması tarafından uygulanan güvenlik konuları genellikle sınırlıdır. WCF bir XAML tarayıcısı uygulaması (XBAP) barındırılıyorsa, örneğin, XBAP sınırlamalara tabi açıklandığı gibi olmasından [Windows Presentation Foundation kısmi güven Security](http://go.microsoft.com/fwlink/?LinkId=89138).  
   
  İndigo2 bir kısmi güven ortamında çalıştırırken aşağıdaki ek özellikler etkin değil:  
   
@@ -167,10 +153,10 @@ ms.lasthandoff: 04/27/2018
   
 -   Performans sayaçları  
   
- Kullanımı [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] bir kısmi güven ortamında desteklenmeyen özellikler çalışma zamanında özel durumlara neden olabilir.  
+ Kısmi güven ortamında desteklenmez WCF özellikleri kullanımıyla çalışma zamanında özel durumlara neden olabilir.  
   
 ## <a name="unlisted-features"></a>Listede bulunmayan özellikleri  
- Kısmi güven ortamında çalışan kaynağa erişim veya bir işlem içinde denemek için olduğunda bir bilgi veya eylem kullanılamaz bulmak için en iyi yolu bir `try` bloğu ve ardından `catch` hatası. İzleme dosyaları yinelenen hatalarla taşmasını önlemek için [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] kaynak ya da ilk güvenlik hatasından sonra işlem izlemeyi devre dışı bırakır. Kaynağa erişim veya eylemi gerçekleştirmek için bir girişimde ilk kez her başarısız kaynak erişimi için bir özel durum izleme yoktur.  
+ Kısmi güven ortamında çalışan kaynağa erişim veya bir işlem içinde denemek için olduğunda bir bilgi veya eylem kullanılamaz bulmak için en iyi yolu bir `try` bloğu ve ardından `catch` hatası. İzleme dosyaları yinelenen hatalarla taşmasını önlemek için kaynağın veya ilk güvenlik hatasından sonra işlem izleme WCF devre dışı bırakır. Kaynağa erişim veya eylemi gerçekleştirmek için bir girişimde ilk kez her başarısız kaynak erişimi için bir özel durum izleme yoktur.  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
  <xref:System.ServiceModel.Channels.HttpTransportBindingElement>  

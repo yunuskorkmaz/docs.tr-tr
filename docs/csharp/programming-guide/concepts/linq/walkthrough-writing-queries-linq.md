@@ -1,26 +1,17 @@
 ---
 title: "İzlenecek yol: C#'de Sorgu Yazma (LINQ)"
-ms.custom: 
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-csharp
-ms.topic: get-started-article
 helpviewer_keywords:
 - LINQ [C#], walkthroughs
 - LINQ [C#], writing queries
 - queries [LINQ in C#], writing
 - writing LINQ queries
 ms.assetid: 2962a610-419a-4276-9ec8-4b7f2af0c081
-caps.latest.revision: "32"
-author: BillWagner
-ms.author: wiwagn
-ms.openlocfilehash: 8db1b59bd8de523ae74ca198302f814c2d43f25a
-ms.sourcegitcommit: 685143b62385500f59bc36274b8adb191f573a16
+ms.openlocfilehash: 10ffdbd6430c0ad55b0a5d71f217a7cb18163741
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/09/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="walkthrough-writing-queries-in-c-linq"></a>İzlenecek yol: C#'de Sorgu Yazma (LINQ)
 Bu kılavuzda LINQ Sorgu ifadeleri yazmak için kullanılan C# dili özelliklerini gösterir.  
@@ -38,7 +29,7 @@ Bu kılavuzda LINQ Sorgu ifadeleri yazmak için kullanılan C# dili özellikleri
   
      **Yeni proje** iletişim kutusu açılır.  
   
-3.  Genişletme **yüklü**, genişletin **şablonları**, genişletin **Visual C#**ve ardından **konsol uygulaması**.  
+3.  Genişletme **yüklü**, genişletin **şablonları**, genişletin **Visual C#** ve ardından **konsol uygulaması**.  
   
 4.  İçinde **adı** metin kutusunda, farklı bir ad girin veya varsayılan adı kabul edin ve ardından **Tamam** düğmesi.  
   
@@ -182,9 +173,9 @@ Bu kılavuzda LINQ Sorgu ifadeleri yazmak için kullanılan C# dili özellikleri
 ## <a name="next-steps"></a>Sonraki Adımlar  
  Temel sorguları C# ile çalışma yönlerini aşina olduktan sonra belgeler ve örnekler LINQ sağlayıcısının ilgilendiğiniz belirli türü için okumaya hazırsınız:  
   
- [LINQ-SQL](../../../../../docs/framework/data/adonet/sql/linq/index.md)  
+ [LINQ to SQL](../../../../../docs/framework/data/adonet/sql/linq/index.md)  
   
- [LINQ-DataSet](../../../../framework/data/adonet/linq-to-dataset.md)  
+ [LINQ to DataSet](../../../../framework/data/adonet/linq-to-dataset.md)  
   
  [LINQ-XML (C#)](../../../../csharp/programming-guide/concepts/linq/linq-to-xml.md)  
   
@@ -192,5 +183,5 @@ Bu kılavuzda LINQ Sorgu ifadeleri yazmak için kullanılan C# dili özellikleri
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
  [Dil ile tümleşik sorgu (LINQ) (C#)](../../../../csharp/programming-guide/concepts/linq/index.md)  
- [C# üzerinde LINQ ile çalışmaya başlama](../../../../csharp/programming-guide/concepts/linq/getting-started-with-linq.md)  
+ [C#'de LINQ Kullanmaya Başlama](../../../../csharp/programming-guide/concepts/linq/getting-started-with-linq.md)  
  [LINQ Sorgu ifadeleri](../../../../csharp/programming-guide/linq-query-expressions/index.md)

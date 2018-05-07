@@ -1,27 +1,15 @@
 ---
-title: "Bağlam Değişimi Protokolü"
-ms.custom: 
+title: Bağlam Değişimi Protokolü
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 3dfd38e0-ae52-491c-94f4-7a862b9843d4
-caps.latest.revision: "6"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 8f19b228eadcf8dabfaba2fc31f4f49f1b4d149b
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: a682b94b1ab659515e618e79230d94f57f140717
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="context-exchange-protocol"></a>Bağlam Değişimi Protokolü
-Bu bölümde sunulan bağlam değişimi protokolü açıklar [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] [!INCLUDE[netfx35_long](../../../../includes/netfx35-long-md.md)] serbest bırakın. Bu protokol hizmeti tarafından sağlanan bir bağlam kabul etmek ve tüm istekler aynı istemci kanal örneği gönderilen bu hizmete uygulamak istemci kanal sağlar. Bağlam değişimi Protokolü aşağıdaki iki mekanizmalardan biri sunucu ve istemci arasındaki bağlam yaymak için kullanabilirsiniz: HTTP tanımlama bilgilerini veya SOAP üstbilgisi.  
+Bu bölümde, .NET Framework sürüm 3.5 Windows Communication Foundation (WCF) sürümünde tanıtılan bağlam değişimi protokolü açıklar. Bu protokol hizmeti tarafından sağlanan bir bağlam kabul etmek ve tüm istekler aynı istemci kanal örneği gönderilen bu hizmete uygulamak istemci kanal sağlar. Bağlam değişimi Protokolü aşağıdaki iki mekanizmalardan biri sunucu ve istemci arasındaki bağlam yaymak için kullanabilirsiniz: HTTP tanımlama bilgilerini veya SOAP üstbilgisi.  
   
  Bağlam değişimi protokolü özel kanal katmanında uygulanır. Kanal bağlamı uygulama katmanı kullanarak gelen ve giden iletişim kuran bir <xref:System.ServiceModel.Channels.ContextMessageProperty> özelliği. Uç noktalar arasında aktarım için context değeri SOAP üstbilgi kanal katmanında olarak serileştirilmiş, veya için veya bir HTTP istek ve yanıt temsil eden ileti özelliklerinin dönüştürülür. İkinci durumda, kanal katmanlarda birini HTTP istek ve yanıt ileti özelliklerini HTTP tanımlama bilgileri, gelen ve giden sırasıyla dönüştürdüğü beklenir. Bağlam değişimi için kullanılan mekanizma seçimi yapılır kullanarak <xref:System.ServiceModel.Channels.ContextExchangeMechanism> özelliği <xref:System.ServiceModel.Channels.ContextBindingElement>. Geçerli değerler `HttpCookie` veya `SoapHeader`.  
   

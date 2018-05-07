@@ -1,14 +1,6 @@
 ---
 title: Masaüstü Uygulamalarında Paketleme ve Dağıtma Kaynakları
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-bcl
-ms.tgt_pltfrm: ''
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -34,17 +26,13 @@ helpviewer_keywords:
 - localizing resources
 - neutral cultures
 ms.assetid: b224d7c0-35f8-4e82-a705-dd76795e8d16
-caps.latest.revision: ''
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 479ab530ddf02fa3701a7f6f3699258d0eab727e
-ms.sourcegitcommit: 498799639937c89de777361aab74261efe7b79ea
+ms.openlocfilehash: 0a6e6219d6449fedabe6e7cb0b349efb6fc74ee6
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/22/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="packaging-and-deploying-resources-in-desktop-apps"></a>Masaüstü Uygulamalarında Paketleme ve Dağıtma Kaynakları
 Uygulamaları kullanan üzerinde .NET Framework kaynak tarafından temsil edilen Yöneticisi, <xref:System.Resources.ResourceManager> yerelleştirilmiş kaynaklar almak için sınıf. Kaynak Yöneticisi'ni bir hub ve bağlı bileşen modeli paketini ve kaynakları dağıtmak için kullanıldığını varsayar. Hub nonlocalizable yürütülebilir kod ve bağımsız olarak adlandırılan tek bir kültür için kaynakları içeren ana derlemedir veya varsayılan kültür. Geri dönüş kültürü uygulama için varsayılan kültürdür; Bu kültürdür yerelleştirilmiş kaynaklar bulunamazsa, kaynakları kullanılır. Her bağlı bileşen tek bir kültür için kaynakları içerir, ancak herhangi bir kod içermiyor bir uydu derleme bağlanır.  
@@ -156,19 +144,19 @@ Greeting=Добрый день
   
  Bu iki dosyayı .resources dosyaları çalıştırarak derlenen [kaynak dosya oluşturucu (Resgen.exe)](../../../docs/framework/tools/resgen-exe-resource-file-generator.md) komut satırından.  Fransızca Dil kaynağı için bir komut şöyledir:  
   
- **resgen.exe resources.fr.txt**  
+ **Resgen.exe resources.fr.txt**  
   
  Rusça Dil kaynağı için bir komut şöyledir:  
   
- **resgen.exe resources.ru.txt**  
+ **Resgen.exe resources.ru.txt**  
   
  .Resources dosyaları çalıştırarak dinamik bağlantı kitaplıkları katıştırılan [derleme bağlayıcı (Al.exe)](../../../docs/framework/tools/al-exe-assembly-linker.md) komuttan satır Fransızca Dil kaynağı için şu şekilde:  
   
- **al /t:lib /embed:resources.fr.resources /culture:fr /out:fr\Example1.resources.dll**  
+ **Al /t:lib /embed:resources.fr.resources /culture:fr /out:fr\Example1.resources.dll**  
   
  ve aşağıdaki gibi Rusça Dil kaynak için:  
   
- **al /t:lib /embed:resources.ru.resources /culture:ru /out:ru\Example1.resources.dll**  
+ **Al /t:lib /embed:resources.ru.resources /culture:ru /out:ru\Example1.resources.dll**  
   
  Uygulama kaynak koduna Example1.cs veya Example1.vb adındaki bir dosyada yer alıyor. İçerdiği <xref:System.Resources.NeutralResourcesLanguageAttribute> varsayılan uygulama kaynağı fr alt dizinindeki olduğunu belirtmek için öznitelik. Kaynak Yöneticisi'ni başlatır, değerini alır `Greeting` kaynak ve konsola görüntüler.  
   

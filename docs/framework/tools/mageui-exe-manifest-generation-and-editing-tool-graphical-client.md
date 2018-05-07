@@ -1,27 +1,15 @@
 ---
-title: "MageUI.exe (Bildirim Üretme ve Düzenleme Aracı, Grafik İstemci)"
-ms.custom: 
+title: MageUI.exe (Bildirim Üretme ve Düzenleme Aracı, Grafik İstemci)
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - Manifest Generation and Editing tool
 - MageUI.exe
 ms.assetid: f9e130a6-8117-49c4-839c-c988f641dc14
-caps.latest.revision: "38"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: ec4ac8d89d2d3a7d0dce11e5057db80190e7b963
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.openlocfilehash: 0772fcb32ce4d7500b358db312241e489b3a24c1
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="mageuiexe-manifest-generation-and-editing-tool-graphical-client"></a>MageUI.exe (Bildirim Üretme ve Düzenleme Aracı, Grafik İstemci)
 MageUI.exe, komut satırı aracı Mage.exe ile aynı işlevselliği, ancak Windows tabanlı kullanıcı arabirimi (UI) ile destekler. Bu araçla, dağıtım ve uygulama bildirimleri oluşturabilir, düzenleyebilir ve imzalayabilirsiniz. MageUI.exe hedefle oluşturulan yeni bildirimleri [!INCLUDE[net_client_v40_long](../../../includes/net-client-v40-long-md.md)]. Önceki .NET Framework sürümlerini hedeflemek için MageUI.exe'nin önceki sürümleri kullanılmalıdır. Ekleme ya da bir bildirim veya varolan bildirimlerini yeniden imzalama derlemeleri kaldırma MageUI.exe bildirim hedefe güncelleştirmez [!INCLUDE[net_client_v40_long](../../../includes/net-client-v40-long-md.md)]. Daha fazla bilgi için bkz: [Mage.exe (bildirim üretme ve düzenleme aracı)](../../../docs/framework/tools/mage-exe-manifest-generation-and-editing-tool.md).  
@@ -52,7 +40,7 @@ MageUI.exe, komut satırı aracı Mage.exe ile aynı işlevselliği, ancak Windo
 |**Yapıştır**|**Düzenle**|CTRL+V|Sistem Pano'sundaki metni etkin durumdaki metin öğesinin içine yapıştırır.|  
 |**Sil**|**Düzenle**||Şu anda bir güven lisans gibi bir listesinde seçili öğenin siler **dağıtım bildirimi** sekmesi.|  
 |**Tümünü Kapat**|**Pencere**||MageUI.exe'de açık durumdaki tüm dosyaları kapatır. Bir veya daha fazla dosyanın kaydedilmesi gerekiyorsa, gereksinimi MageUI.exe sizden onları kaydetmenizi ister. MageUI.exe ayrıca imzalanmamış veya değiştirilmiş her dosya için bir imzalama anahtarı seçmenizi de ister.|  
-|**Hakkında**|**Yardım**||MageUI.exe'nin sürüm ve telif hakkı bilgilerini görüntüler.|  
+|**hakkında**|**Yardım**||MageUI.exe'nin sürüm ve telif hakkı bilgilerini görüntüler.|  
   
 ## <a name="preferences-dialog-box"></a>Tercihler İletişim Kutusu  
  **Tercihler** iletişim kutusu aşağıdaki öğeleri içerir.  
@@ -92,7 +80,7 @@ MageUI.exe, komut satırı aracı Mage.exe ile aynı işlevselliği, ancak Windo
 |**Ad**|Bu dağıtım hakkında tanımlayıcı bilgileri belirtir.|  
 |**Açıklama**|Yayımcı, ürün ve Destek belirten bilgi.|  
 |**Uygulama Seçenekleri**|Bu tarayıcı uygulaması olduğunu ve bu bildirim güven bilgilerin kaynağına ait olup olmadığını belirtir.|  
-|**Dosyaları**|Bu dağıtım oluşturan dosyaların tamamını belirtir.|  
+|**Dosyalar**|Bu dağıtım oluşturan dosyaların tamamını belirtir.|  
 |**Gerekli izinler**|Uygulamayı bir istemci üzerinde çalıştırmak için gerekli minimum izin kümesi belirtir.|  
   
 ### <a name="name-tab"></a>Adı sekmesi  
@@ -111,7 +99,7 @@ MageUI.exe, komut satırı aracı Mage.exe ile aynı işlevselliği, ancak Windo
   
 |Arabirim Öğesi|Açıklama|  
 |----------------|-----------------|  
-|**Publisher**|Kişinin veya kuruluşun uygulamadan sorumlu adı. Bu değer Başlat menüsü klasör adı olarak kullanılır.|  
+|**Yayımcı**|Kişinin veya kuruluşun uygulamadan sorumlu adı. Bu değer Başlat menüsü klasör adı olarak kullanılır.|  
 |**Ürün**|Tam ürün adı. Seçtiyseniz **yerel olarak yüklemek** için **uygulama türü** öğede **dağıtım seçenekleri** dağıtım bildirimi, bu ad sekmesinde görünür ne olur **Başlat** menü bağlantısı ve **Program Ekle veya Kaldır** bu uygulama için.|  
 |**Destek konumu**|Müşteriler elde edebilirsiniz URL yardımcı olmak ve uygulama için destek.|  
   
@@ -167,7 +155,7 @@ MageUI.exe, komut satırı aracı Mage.exe ile aynı işlevselliği, ancak Windo
   
 |Arabirim Öğesi|Açıklama|  
 |----------------|-----------------|  
-|**Publisher**|Gerekli. Kişinin veya kuruluşun uygulamadan sorumlu adı. Bu değer Başlat menüsü klasör adı olarak kullanılır.|  
+|**Yayımcı**|Gerekli. Kişinin veya kuruluşun uygulamadan sorumlu adı. Bu değer Başlat menüsü klasör adı olarak kullanılır.|  
 |**Ürün**|Gerekli. Tam ürün adı. Seçtiyseniz **yerel olarak yüklemek** için **uygulama türü** öğede **dağıtım seçenekleri** sekmesinde, bu adı ne görünür olacaktır **Başlat** menü bağlantısı ve **Program Ekle veya Kaldır** bu uygulama için.|  
 |**Destek konumu**|İsteğe bağlı. Müşteriler elde edebilirsiniz URL yardımcı olmak ve uygulama için destek.|  
   
@@ -189,7 +177,7 @@ MageUI.exe, komut satırı aracı Mage.exe ile aynı işlevselliği, ancak Windo
 |----------------|-----------------|  
 |**Bu uygulama güncelleştirmeleri denetleyeceğini**|Belirtir olup olmadığını [!INCLUDE[ndptecclick](../../../includes/ndptecclick-md.md)] uygulama güncelleştirmelerini denetlemeniz gerekir. Bu onay kutusu seçili değilse, bu program aracılığıyla API'leri kullanarak güncelleştirme sürece uygulama güncelleştirmeleri denetlemez <xref:System.Deployment.Application> ad alanı.|  
 |**Uygulama güncelleştirmeleri denetleyeceğini seçin**|Güncelleştirme denetimleri için iki seçenek sunar:<br /><br /> -   **Uygulama başlatılmadan önce**. Uygulamanın yürütülmesini önce güncelleştirme denetimi gerçekleştirilir.<br />-   **Uygulama başlatıldıktan sonra**. Güncelleştirme denetimi, uygulamanın ana form başlatıldı ve uygulamayı bir sonraki başlatılışında çalışır sonra başlar.|  
-|**Güncelleştirme denetimi sıklığı**|Ne sıklıkta belirler [!INCLUDE[ndptecclick](../../../includes/ndptecclick-md.md)] Güncelleştirmeleri denetle:<br /><br /> -   **Uygulama her çalıştığında denetleyin**. [!INCLUDE[ndptecclick](../../../includes/ndptecclick-md.md)]Kullanıcı uygulamayı açar her zaman bir güncelleştirme denetimi gerçekleştirir.<br />-   **Denetleme her**: bir zaman aralığı ve güncelleştirmeleri denetlemeden önce geçmesi gereken bir birimi (saat, gün veya hafta) seçin.|  
+|**Güncelleştirme denetimi sıklığı**|Ne sıklıkta belirler [!INCLUDE[ndptecclick](../../../includes/ndptecclick-md.md)] Güncelleştirmeleri denetle:<br /><br /> -   **Uygulama her çalıştığında denetleyin**. [!INCLUDE[ndptecclick](../../../includes/ndptecclick-md.md)] Kullanıcı uygulamayı açar her zaman bir güncelleştirme denetimi gerçekleştirir.<br />-   **Denetleme her**: bir zaman aralığı ve güncelleştirmeleri denetlemeden önce geçmesi gereken bir birimi (saat, gün veya hafta) seçin.|  
 |**Bu uygulama için gerekli en düşük bir sürüm belirtin**|İsteğe bağlı. Uygulamanızı belirli bir sürümünü daha önceki bir sürümüyle çalışamıyor kullanıcılarınızın gerekli bir yükleme olduğunu belirtir.|  
 |**Sürüm**|Gerekli olursa **bu uygulama için gerekli en düşük bir sürüm belirtin** onay kutusu seçilidir. Sağlanan sürüm numarası biçiminde olmalıdır *N.N.N.N*. Yalnızca ilk ana yapı numarası gereklidir. Örneğin, bir uygulamanın sürümü için 1.0, geçerli değerler arasında `1`, `1.0`, `1.0.0`, ve `1.0.0.0`.|  
   

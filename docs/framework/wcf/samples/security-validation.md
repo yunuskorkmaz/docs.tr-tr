@@ -1,24 +1,14 @@
 ---
-title: "Güvenlik Doğrulaması"
-ms.custom: 
+title: Güvenlik Doğrulaması
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 48dcd496-0c4f-48ce-8b9b-0e25b77ffa58
-caps.latest.revision: "35"
 author: BrucePerlerMS
-ms.author: bruceper
 manager: mbaldwin
-ms.workload: dotnet
-ms.openlocfilehash: 86a10a4117a5bbeb48e9d1d15b1ce8da9d7c7751
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: f77b01633f214d3a8c4ad8d7226375c3ed2368fa
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="security-validation"></a>Güvenlik Doğrulaması
 Bu örnek özel bir davranış Hizmetleri belirli ölçütlere uyan emin olmak için bir bilgisayar üzerinde doğrulamak için nasıl kullanılacağını gösterir. Bu örnekte, Hizmetleri hizmetinin her uç nokta aracılığıyla tarama ve güvenli bağlama öğelerini içeren denetleniyor özel davranış tarafından doğrulanır. Bu örnek dayanır [Başlarken](../../../../docs/framework/wcf/samples/getting-started-sample.md).  
@@ -88,7 +78,7 @@ public void Validate(ServiceDescription serviceDescription,
 > [!NOTE]
 >  Davranış tüm hizmetlere eklerken, herhangi bir değişiklik yapmadan önce Machine.config dosyasının yedeklemek için önerilir.  
   
- Şimdi bu örnek client\bin dizininde sağlanan istemci çalıştırın. Bir özel durum olan aşağıdaki iletiyle oluşur: "İstenen hizmet 'http://localhost/servicemodelsamples/service.svc' etkinleştirilemedi." Bu bir uç nokta davranışını doğrulama uç noktası tarafından güvenli olduğu kabul edildiği için beklenen ve hizmetin başlatılmasını engeller. Davranış Ayrıca hangi uç noktası güvenli olmayan ve "System.ServiceModel 4.0.0.0" kaynak ve "WebHost" kategorisi altında Sistem Olay Görüntüleyicisi'ni bir ileti yazar açıklayan iç özel durum oluşturur. Bu örnek hizmetinde izlemeyi etkinleştirmek mümkündür. Kullanıcının hizmet izleme Görüntüleyicisi aracı kullanılarak elde edilen hizmet izlemeleri açarak uç nokta doğrulama davranışı tarafından oluşturulan özel durumları görüntülemesine izin verir.  
+ Şimdi bu örnek client\bin dizininde sağlanan istemci çalıştırın. Bir özel durum olan aşağıdaki iletiyle oluşur: "İstenen hizmet 'http://localhost/servicemodelsamples/service.svc' etkinleştirilemediğini." Bu bir uç nokta davranışını doğrulama uç noktası tarafından güvenli olduğu kabul edildiği için beklenen ve hizmetin başlatılmasını engeller. Davranış Ayrıca hangi uç noktası güvenli olmayan ve "System.ServiceModel 4.0.0.0" kaynak ve "WebHost" kategorisi altında Sistem Olay Görüntüleyicisi'ni bir ileti yazar açıklayan iç özel durum oluşturur. Bu örnek hizmetinde izlemeyi etkinleştirmek mümkündür. Kullanıcının hizmet izleme Görüntüleyicisi aracı kullanılarak elde edilen hizmet izlemeleri açarak uç nokta doğrulama davranışı tarafından oluşturulan özel durumları görüntülemesine izin verir.  
   
 #### <a name="to-view-failed-endpoint-validation-exception-messages-in-the-event-viewer"></a>Görüntülemek için uç nokta doğrulama özel durum iletilerinin Olay Görüntüleyicisi'nde başarısız oldu  
   
@@ -113,7 +103,7 @@ public void Validate(ServiceDescription serviceDescription,
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  Bu dizin mevcut değilse, Git [Windows Communication Foundation (WCF) ve .NET Framework 4 için Windows Workflow Foundation (WF) örnek](http://go.microsoft.com/fwlink/?LinkId=150780) tüm indirmek için [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] ve [!INCLUDE[wf1](../../../../includes/wf1-md.md)] örnekleri. Bu örnek aşağıdaki dizinde bulunur.  
+>  Bu dizin mevcut değilse, Git [Windows Communication Foundation (WCF) ve .NET Framework 4 için Windows Workflow Foundation (WF) örnek](http://go.microsoft.com/fwlink/?LinkId=150780) tüm Windows Communication Foundation (WCF) indirmek için ve [!INCLUDE[wf1](../../../../includes/wf1-md.md)] örnekleri. Bu örnek aşağıdaki dizinde bulunur.  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Management\ServiceValidation`  
   

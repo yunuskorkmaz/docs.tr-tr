@@ -1,13 +1,7 @@
 ---
-title: "Nasıl yapılır: Günlük Dosyasını Açma ve Sonuna Ekleme"
-ms.custom: 
+title: 'Nasıl yapılır: Günlük Dosyasını Açma ve Sonuna Ekleme'
 ms.date: 03/30/2017
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
 ms.technology: dotnet-standard
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -17,21 +11,16 @@ helpviewer_keywords:
 - log files, appending to
 - I/O [.NET Framework], log files
 ms.assetid: 74423362-1721-49cb-aa0a-e04005f72a06
-caps.latest.revision: "15"
 author: mairaw
 ms.author: mairaw
-manager: wpickett
-ms.workload:
-- dotnet
-- dotnetcore
-ms.openlocfilehash: 333b20adee4ea2826a1fc6795a39490dca1af843
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: cd2d13a49d9b696541ac278b9f1847c8e4a48cf1
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-open-and-append-to-a-log-file"></a>Nasıl yapılır: Günlük Dosyasını Açma ve Sonuna Ekleme
-<xref:System.IO.StreamWriter>ve <xref:System.IO.StreamReader> karakterleri yazmak ve akışlardan karakterleri okuma. Aşağıdaki kod örnek açılır `log.txt` dosya için giriş veya zaten mevcut değilse ve bilgi dosyasının sonuna ekler dosyası oluşturur. Ardından dosyasının içeriğini görüntülemek için standart çıktı yazılır. Bu örnek için alternatif olarak, bilgileri tek bir dize veya dize dizisi olarak depolanabilir ve <xref:System.IO.File.WriteAllText%2A> veya <xref:System.IO.File.WriteAllLines%2A> yöntemi aynı işlevselliği elde etmek için kullanılabilir.  
+<xref:System.IO.StreamWriter> ve <xref:System.IO.StreamReader> karakterleri yazmak ve akışlardan karakterleri okuma. Aşağıdaki kod örnek açılır `log.txt` dosya için giriş veya zaten mevcut değilse ve bilgi dosyasının sonuna ekler dosyası oluşturur. Ardından dosyasının içeriğini görüntülemek için standart çıktı yazılır. Bu örnek için alternatif olarak, bilgileri tek bir dize veya dize dizisi olarak depolanabilir ve <xref:System.IO.File.WriteAllText%2A> veya <xref:System.IO.File.WriteAllLines%2A> yöntemi aynı işlevselliği elde etmek için kullanılabilir.  
   
 > [!NOTE]
 >  Visual Basic kullanıcıları tarafından sağlanan özellikler ve yöntemler kullanmayı seçebilir <xref:Microsoft.VisualBasic.Logging.Log> sınıfı veya <xref:Microsoft.VisualBasic.FileIO.FileSystem> oluşturmak veya günlük dosyaları yazma sınıfı.  
@@ -52,4 +41,4 @@ ms.lasthandoff: 12/23/2017
  [Nasıl yapılır: Bir Dosyaya Metin Yazma](../../../docs/standard/io/how-to-write-text-to-a-file.md)  
  [Nasıl yapılır: Dizeden Karakterleri Okuma](../../../docs/standard/io/how-to-read-characters-from-a-string.md)  
  [Nasıl yapılır: Bir Dizeye Karakter Yazma](../../../docs/standard/io/how-to-write-characters-to-a-string.md)  
- [Dosya ve akış t-O](../../../docs/standard/io/index.md)
+ [Dosya ve Akış G/Ç'si](../../../docs/standard/io/index.md)

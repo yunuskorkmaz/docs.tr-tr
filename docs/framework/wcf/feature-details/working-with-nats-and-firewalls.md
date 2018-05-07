@@ -1,34 +1,20 @@
 ---
 title: NAT ve Güvenlik Duvarlarıyla Çalışma
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 helpviewer_keywords:
 - firewalls [WCF]
 - NATs [WCF]
 ms.assetid: 74db0632-1bf0-428b-89c8-bd53b64332e7
-caps.latest.revision: 12
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: fe74b4bd86a25a8e6b769be1abe5fd81e5ffe5f9
-ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
+ms.openlocfilehash: 72582af358d363038d09b313632c023f3c054dbe
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/28/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="working-with-nats-and-firewalls"></a>NAT ve Güvenlik Duvarlarıyla Çalışma
 İstemci ve sunucunun ağ bağlantısı sık değil doğrudan bir sahip ve iletişim için yol açın. Paket filtre, yönlendirilmiş, analiz ve uç nokta makinelerde hem ağ ara makineler tarafından dönüştürülmüş. Ağ adresi çevirisi (NAT) ve güvenlik duvarları ağ iletişiminde katılabilir Ara uygulamaları için ortak örnekleridir.  
   
- [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] farklı bir çok aktarımları ve iletinizi (MEPs) exchange düzenleri NAT ve güvenlik duvarlarıyla varlığını tepki. Bu konuda nasıl NAT ve güvenlik duvarlarıyla ortak ağ topolojileri işlev açıklanmaktadır. Belirli bir kombinasyonu için öneriler [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] aktarımları ve MEPs verilir, uygulamalarınızı NAT ve güvenlik duvarlarıyla ağdaki için daha sağlam hale Yardım.  
+ Windows Communication Foundation (WCF) aktarımları ve iletinizi (MEPs) exchange düzenleri farklı bir şekilde, NAT ve güvenlik duvarlarıyla varlığını tepki. Bu konuda nasıl NAT ve güvenlik duvarlarıyla ortak ağ topolojileri işlev açıklanmaktadır. WCF aktarımları ve MEPs belirli birleşimleri için öneriler, belirtilen olduğundan uygulamalarınızı NAT ve güvenlik duvarlarıyla ağdaki için daha sağlam hale Yardım.  
   
 ## <a name="how-nats-affect-communication"></a>NAT iletişimi nasıl etkiler  
  NAT, tek bir dış IP adresi paylaşmak çeşitli makineler etkinleştirmek için oluşturuldu. Bir bağlantı noktası yeniden eşleme NAT bir iç IP adresi ve bağlantı için bağlantı noktası dış IP adresi yeni bir bağlantı noktası numarası ile eşleştirir. Yeni bağlantı noktası numarasını dönüş trafiği özgün iletişimi ilişkilendirmek NAT sağlar. Birçok ev kullanıcıları artık yalnızca özel olarak yönlendirilebilir bir IP adresine sahip ve genel paketlerin yönlendirilmesini sağlamak için bir NAT kullanır.  
@@ -45,7 +31,7 @@ ms.lasthandoff: 04/28/2018
  Bir ortak bir ev kullanıcısı Güvenlik Duvarı için giden bir bağlantı bu makineye daha önce yapıldı sürece gelen bağlantıları engellemek için bir yapılandırmadır. Bir ortak iş kullanıcı güvenlik duvarı için özel olarak tanımlanan bir grubu dışındaki tüm bağlantı noktalarından gelen bağlantıları engellemek için bir yapılandırmadır. Tüm bağlantı noktaları 80 ve 443 HTTP ve HTTPS hizmet sağlamak için bağlantı noktalarını dışında bağlantılarında yasaklar bir güvenlik duvarı örneğidir. Güvenilen kullanıcı veya işlem güvenlik duvarı yapılandırmasını değiştirmek için makinede izin ev ve iş kullanıcıları için yönetilen güvenlik duvarları yok. Yönetilen güvenlik duvarları Ev kullanıcıları için daha sık olması durumunda ağ kullanımını denetleme şirket ilkesi yok.  
   
 ## <a name="using-teredo"></a>Teredo kullanma  
- Bir NAT arkasında makinelerin doğrudan çözümlenebilme sağlayan bir IPv6 geçiş teknolojisi teredo'dur Teredo olası bağlantıları bildirmek için genel ve genel olarak yönlendirilebilir bir sunucu kullanılmasına dayanır. Teredo sunucusu uygulama istemci ve sunucu, bunlar bağlantı bilgilerini exchange ortak bir toplantı noktası sağlar. Makineler sonra geçici bir Teredo adresi isteyin ve paketleri mevcut bir ağ tünel. Teredo desteği [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] işletim sisteminde IPv6 ve Teredo desteğini etkinleştirme gerektirir. [!INCLUDE[wxp](../../../../includes/wxp-md.md)] ve sonraki işletim sistemlerinde Teredo destekler. [!INCLUDE[wv](../../../../includes/wv-md.md)] ve sonraki işletim sistemlerinde varsayılan olarak IPv6'yı destekleyen ve yalnızca Teredo'yu etkinleştirmek kullanıcının gerektiren. [!INCLUDE[wxpsp2](../../../../includes/wxpsp2-md.md)] ve [!INCLUDE[ws2003](../../../../includes/ws2003-md.md)] hem IPv6 hem de Teredo'yu etkinleştirmek kullanıcının gerektirir. Daha fazla bilgi için bkz: [Teredo genel bakış](http://go.microsoft.com/fwlink/?LinkId=87571).  
+ Bir NAT arkasında makinelerin doğrudan çözümlenebilme sağlayan bir IPv6 geçiş teknolojisi teredo'dur Teredo olası bağlantıları bildirmek için genel ve genel olarak yönlendirilebilir bir sunucu kullanılmasına dayanır. Teredo sunucusu uygulama istemci ve sunucu, bunlar bağlantı bilgilerini exchange ortak bir toplantı noktası sağlar. Makineler sonra geçici bir Teredo adresi isteyin ve paketleri mevcut bir ağ tünel. İşletim sistemindeki IPv6 ve Teredo desteğini etkinleştirme WCF Teredo desteği gerektirir. [!INCLUDE[wxp](../../../../includes/wxp-md.md)] ve sonraki işletim sistemlerinde Teredo destekler. [!INCLUDE[wv](../../../../includes/wv-md.md)] ve sonraki işletim sistemlerinde varsayılan olarak IPv6'yı destekleyen ve yalnızca Teredo'yu etkinleştirmek kullanıcının gerektiren. [!INCLUDE[wxpsp2](../../../../includes/wxpsp2-md.md)] ve [!INCLUDE[ws2003](../../../../includes/ws2003-md.md)] hem IPv6 hem de Teredo'yu etkinleştirmek kullanıcının gerektirir. Daha fazla bilgi için bkz: [Teredo genel bakış](http://go.microsoft.com/fwlink/?LinkId=87571).  
   
 ## <a name="choosing-a-transport-and-message-exchange-pattern"></a>Taşıma ve ileti değişim deseni seçme  
  Taşıma ve MEP seçerek üç adımlık bir işlemdir:  
@@ -64,7 +50,7 @@ ms.lasthandoff: 04/28/2018
   
 -   Uç noktaları kaydetme veya trafiği geçişi için erişilebilir bir hizmet kullanın. Bir Teredo sunucusu gibi bir genel olarak erişilebilir bağlantı hizmetini kullanarak ağ topolojisini kısıtlayıcı veya bilinmeyen olduğunda başarıyla bağlanma ihtimalini büyük ölçüde artırır.  
   
- Aşağıdaki tablolarda tek yönlü, istek-yanıt ve çift yönlü MEPs ve standart TCP, TCP ile Teredo ve standart ve çift HTTP taşımaları inceleyin [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)].  
+ Tek yönlü, istek-yanıt ve çift yönlü MEPs ve standart TCP, TCP ile Teredo, aşağıdaki tablolarda inceleyin ve WCF'de standart ve çift HTTP taşımaları.  
   
 |Çözümlenebilme|Sunucu doğrudan|Sunucu doğrudan NAT geçişi ile|Sunucu NAT|NAT geçişi NAT sunucusuyla|  
 |--------------------|-------------------|--------------------------------------|----------------|-----------------------------------|  

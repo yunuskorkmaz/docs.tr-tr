@@ -1,20 +1,12 @@
 ---
-title: "WCF Web HTTP biçimlendirme"
+title: WCF Web HTTP biçimlendirme
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.technology: dotnet-clr
-ms.topic: article
 ms.assetid: e2414896-5463-41cd-b0a6-026a713eac2c
-caps.latest.revision: "8"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: ab18e739b061ac6d28877eaac23c258a79f07a2d
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: abbfc74f33ddb676c8ac85eb712757615a2972ab
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="wcf-web-http-formatting"></a>WCF Web HTTP biçimlendirme
 WCF Web HTTP programlama modeli yanıt olarak döndürmek bir hizmet işlemi için en iyi biçimi dinamik olarak belirlemenize olanak tanır. Uygun bir biçim belirlemek için iki yöntem desteklenir: otomatik ve açık.  
@@ -30,7 +22,7 @@ WCF Web HTTP programlama modeli yanıt olarak döndürmek bir hizmet işlemi iç
   
 4.  WebHttpBehavior ayarı varsayılan biçimi.  
   
- İstek iletisinde bir Accept üstbilgisi içeriyorsa [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] desteklediği bir tür altyapı arar. Varsa `Accept` ayardaki, üstbilgi medya türlerinden öncelikleri belirtir. Uygun bir biçim bulunursa `Accept` üstbilgisi, istek iletisi içerik türü kullanılır. Uygun içerik türü belirtilirse, varsayılan biçimi işlem için ayarını kullanılır. Varsayılan biçimi ile ayarlanır `ResponseFormat` parametresinin <xref:System.ServiceModel.Web.WebGetAttribute> ve <xref:System.ServiceModel.Web.WebInvokeAttribute> öznitelikleri. Varsayılan biçimi işlemi, değerini belirttiyseniz, <xref:System.ServiceModel.Description.WebHttpBehavior.DefaultOutgoingResponseFormat%2A> özelliği kullanılır. Otomatik biçimlendirme kullanır <xref:System.ServiceModel.Description.WebHttpBehavior.AutomaticFormatSelectionEnabled%2A> özelliği. Bu özellik ayarlandığında `true`, [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] altyapı kullanmak için en iyi biçim belirler. Otomatik Biçim Seçimi varsayılan olarak devre dışıdır için geriye dönük uyumluluk. Otomatik Biçim Seçimi program aracılığıyla veya yapılandırma yoluyla etkinleştirilebilir. Aşağıdaki örnek kodda Otomatik Biçim Seçimi etkinleştirme gösterir.  
+ İstek iletisinde bir Accept üstbilgisi içeriyorsa, Windows Communication Foundation (WCF) altyapısı onu destekleyen bir türü arar. Varsa `Accept` ayardaki, üstbilgi medya türlerinden öncelikleri belirtir. Uygun bir biçim bulunursa `Accept` üstbilgisi, istek iletisi içerik türü kullanılır. Uygun içerik türü belirtilirse, varsayılan biçimi işlem için ayarını kullanılır. Varsayılan biçimi ile ayarlanır `ResponseFormat` parametresinin <xref:System.ServiceModel.Web.WebGetAttribute> ve <xref:System.ServiceModel.Web.WebInvokeAttribute> öznitelikleri. Varsayılan biçimi işlemi, değerini belirttiyseniz, <xref:System.ServiceModel.Description.WebHttpBehavior.DefaultOutgoingResponseFormat%2A> özelliği kullanılır. Otomatik biçimlendirme kullanır <xref:System.ServiceModel.Description.WebHttpBehavior.AutomaticFormatSelectionEnabled%2A> özelliği. Bu özellik ayarlandığında `true`, WCF altyapı kullanmak için en iyi biçimini belirler. Otomatik Biçim Seçimi varsayılan olarak devre dışıdır için geriye dönük uyumluluk. Otomatik Biçim Seçimi program aracılığıyla veya yapılandırma yoluyla etkinleştirilebilir. Aşağıdaki örnek kodda Otomatik Biçim Seçimi etkinleştirme gösterir.  
   
 ```csharp
 // This code assumes the service name is MyService and the service contract is IMyContract     

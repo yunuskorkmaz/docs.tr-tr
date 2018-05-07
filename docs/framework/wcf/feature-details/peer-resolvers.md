@@ -1,24 +1,12 @@
 ---
-title: "Eş Çözücüler"
-ms.custom: 
+title: Eş Çözücüler
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: d86d12a1-7358-450f-9727-b6afb95adb9c
-caps.latest.revision: "11"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 79c26ca9e167455dfbd664ea96e574c130cdc3d2
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.openlocfilehash: 760011dda4a3059a217dcfbfc3fddaa67edc9995
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="peer-resolvers"></a>Eş Çözücüler
 Bir kafes bağlanmak için diğer düğümlere IP adreslerini Eş düğüm gerektirmez. IP adreslerini kafes kimliği alır ve bu belirli kafes kimliği ile kayıtlı düğümler için karşılık gelen adresleri listesi döndüren bir çözümleyici hizmeti ile iletişim kurarak elde edilir Çözümleyici hizmete kaydolmak her düğümünde kafes sağlayarak oluşturur kayıtlı adreslerinin bir listesini tutar.  
@@ -28,7 +16,7 @@ Bir kafes bağlanmak için diğer düğümlere IP adreslerini Eş düğüm gerek
 ## <a name="supported-peer-resolvers"></a>Desteklenen eş çözücüler  
  Eş kanal çözümleyiciler iki tür destekler: Eş Adı Çözümleme Protokolü (PNRP) ve özel Çözücü Hizmetleri.  
   
- Varsayılan olarak, eş kanalı kafes PNRP eş çözümleyicisini eşler ve komşuları bulma için kullanır. PNRP olduğu kullanılabilir veya uygun durumlarda/platformlar için [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] bir alternatif, sunucu tabanlı bulma hizmeti - sağlar <xref:System.ServiceModel.PeerResolvers.CustomPeerResolverService>. Uygulayan bir sınıf yazarak da açıkça özel çözümleyicisini tanımlayabilirsiniz <xref:System.ServiceModel.PeerResolvers.IPeerResolverContract> arabirimi.  
+ Varsayılan olarak, eş kanalı kafes PNRP eş çözümleyicisini eşler ve komşuları bulma için kullanır. Durumlar/PNRP olduğu kullanılabilir veya uygulanabilir platformlar için bir alternatif, sunucu tabanlı bulma hizmeti - Windows Communication Foundation (WCF) sağlayan <xref:System.ServiceModel.PeerResolvers.CustomPeerResolverService>. Uygulayan bir sınıf yazarak da açıkça özel çözümleyicisini tanımlayabilirsiniz <xref:System.ServiceModel.PeerResolvers.IPeerResolverContract> arabirimi.  
   
 ### <a name="peer-name-resolution-protocol-pnrp"></a>Eş Adı Çözümleme Protokolü (PNRP)  
  PNRP, varsayılan çözümleyicisini [!INCLUDE[wv](../../../../includes/wv-md.md)], bir dağıtılmış, sunucusuz ad çözümleyici hizmetidir. PNRP de kullanılabilir üzerinde [!INCLUDE[wxpsp2](../../../../includes/wxpsp2-md.md)] Gelişmiş ağ paketi yükleyerek. Belirli koşullar (örneğin, ilgili Kurumsal güvenlik duvarı yetersizliği) karşıladıklarından sağlanan PNRP aynı sürümünü çalıştıran herhangi iki istemcileri birbirine bu protokolü kullanarak bulabilir. PNRP sürümü ile birlikte olduğunu unutmayın [!INCLUDE[wv](../../../../includes/wv-md.md)] Gelişmiş ağ paketinde bulunan sürümden daha yeni. Microsoft Download Center PNRP için Güncelleştirmeleri denetle [!INCLUDE[wxpsp2](../../../../includes/wxpsp2-md.md)].  

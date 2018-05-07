@@ -1,13 +1,6 @@
 ---
-title: "mc:Ignorable Özniteliği"
-ms.custom: 
+title: mc:Ignorable Özniteliği
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-wpf
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - mc XML namespace prefix [WPF]
 - mc:Ignorable attribute
@@ -16,16 +9,11 @@ helpviewer_keywords:
 - mc:ProcessContent attribute
 - XAML [WPF], mc:ProcessContent attribute
 ms.assetid: acd9a6ef-b7ca-4146-abb6-60f3b366e9ec
-caps.latest.revision: "8"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 9767b721321b34030a2f276a90c618c658645207
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 7b8a2ef6e27bc6b25776157e59bef04b883fcb1a
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="mcignorable-attribute"></a>mc:Ignorable Özniteliği
 Belirten [!INCLUDE[TLA2#tla_xml](../../../../includes/tla2sharptla-xml-md.md)] biçimlendirme dosyasında karşılaşılan ad alanı öneklerini dikkate tarafından bir [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] işlemci. `mc:Ignorable` Özniteliği, hem hem de özel ad alanı eşlemesi için biçimlendirme uyumluluğunu destekler [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] sürüm oluşturma.  
@@ -66,7 +54,7 @@ Belirten [!INCLUDE[TLA2#tla_xml](../../../../includes/tla2sharptla-xml-md.md)] b
   
  Öğeleri veya burada öğesi adının öneki bölümü olarak tanımlandığında öznitelikleri `mc:Ignorable` tarafından işlendiğinde hata oluşturmaz bir [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] işlemci. Bir temel alınan tür veya programlama yapı bu öznitelik çözümlenemedi, o öğeye göz ardı edilir. Ancak yoksayılan öğelerin işlenmeyen o öğenin yan etkileri olan ek öğe gereksinimleri için ek ayrıştırma hataları oluşturabilir unutmayın. Örneğin, belirli bir öğenin içerik modeli belirtilen alt öğe içinde olup olmadığını ancak tam olarak bir alt öğe gerektirebilir bir `mc:Ignorable` öneki ve belirtilen alt öğe bir türe çözümlenemedi sonra [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] işlemci olabilir bir hata oluştur.  
   
- `mc:Ignorable`yalnızca ad alanı tanımlayıcı dizelere eşlemeleri için geçerlidir. `mc:Ignorable`ad alanı eşlemesi belirtmek derlemeye uygulanmaz bir [!INCLUDE[TLA2#tla_clr](../../../../includes/tla2sharptla-clr-md.md)] ad alanı ve bir derleme (veya varsayılan derleme gibi geçerli yürütülebilir).  
+ `mc:Ignorable` yalnızca ad alanı tanımlayıcı dizelere eşlemeleri için geçerlidir. `mc:Ignorable` ad alanı eşlemesi belirtmek derlemeye uygulanmaz bir [!INCLUDE[TLA2#tla_clr](../../../../includes/tla2sharptla-clr-md.md)] ad alanı ve bir derleme (veya varsayılan derleme gibi geçerli yürütülebilir).  
   
  Uyguluyorsanız bir [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] işlemci, işlemci uygulamanız gerekir değil Yükselt ayrıştırma veya herhangi bir öğe veya olarak tanımlanan bir önek nitelenen öznitelik türü çözümlenmek hatalarda işlem `mc:Ignorable`. Ancak, işlemci uygulamanız yüklenemiyor veya daha önce verilen bir alt öğe örneği gibi işlenmesi başarısız olan bir öğenin ikincil sonucunda oluşan özel durumlar ortaya çıkarabilir.  
   

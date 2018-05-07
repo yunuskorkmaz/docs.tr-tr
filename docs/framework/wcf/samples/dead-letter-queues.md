@@ -1,26 +1,12 @@
 ---
 title: Teslim Edilemeyen İletiler Sırası
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 ms.assetid: ff664f33-ad02-422c-9041-bab6d993f9cc
-caps.latest.revision: 35
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 9892579633103f1e7a6612c09865c91c559df34c
-ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
+ms.openlocfilehash: 9f92aeb02d997820fa2955419a3cdcf1c4369b45
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/27/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="dead-letter-queues"></a>Teslim Edilemeyen İletiler Sırası
 Bu örnek, işler ve işlem teslim başarısız olmuş iletileri gösterilmiştir. Bağlı olduğu [işlem yapılan işlem MSMQ bağlama](../../../../docs/framework/wcf/samples/transacted-msmq-binding.md) örnek. Bu örnekte `netMsmqBinding` bağlama. Hizmeti, sıraya alınan iletileri alma hizmeti izlemek etkinleştirmek için bir kendi kendini barındıran konsol uygulamasıdır.  
@@ -182,7 +168,7 @@ public void SubmitPurchaseOrder(PurchaseOrder po)
 }
 ```
 
- İletileri teslim edilemeyen sırasındaki ileti işlenirken hizmetine gönderilen iletiler ' dir. Bu nedenle, ne zaman teslim edilemeyen ileti hizmeti okur iletileri sıradan [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] kanal katmanını uyuşmazlığı uç noktalarını bulur ve ileti göndermez. Bu durumda, ileti hizmeti işlem sırasını ele ancak teslim edilemeyen ileti hizmeti tarafından alınan. Farklı bir uç noktası için gönderilen bir ileti almak için bir adres filtresinin eşleşen herhangi bir adres için belirtilen `ServiceBehavior`. Bu, başarılı bir şekilde teslim edilemeyen kuyruktan okunmak iletileri işlemek için gereklidir.  
+ İletileri teslim edilemeyen sırasındaki ileti işlenirken hizmetine gönderilen iletiler ' dir. Bu nedenle, kuyruktan iletileri teslim edilemeyen ileti hizmeti okur, Windows Communication Foundation (WCF) kanal katmanını uyuşmazlığı uç noktalarını bulur ve ileti göndermez. Bu durumda, ileti hizmeti işlem sırasını ele ancak teslim edilemeyen ileti hizmeti tarafından alınan. Farklı bir uç noktası için gönderilen bir ileti almak için bir adres filtresinin eşleşen herhangi bir adres için belirtilen `ServiceBehavior`. Bu, başarılı bir şekilde teslim edilemeyen kuyruktan okunmak iletileri işlemek için gereklidir.  
   
  Başarısızlık nedeni ise, bu örnekte, teslim edilemeyen ileti hizmeti ileti iletinin zaman aşımına uğradı düzenini yeniden gönderir. Diğer nedenlerle, aşağıdaki örnek kodda gösterildiği gibi teslim hatası gösterir:  
 
@@ -370,7 +356,7 @@ Processing Purchase Order: 97897eff-f926-4057-a32b-af8fb11b9bf9
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  Bu dizin mevcut değilse, Git [Windows Communication Foundation (WCF) ve .NET Framework 4 için Windows Workflow Foundation (WF) örnek](http://go.microsoft.com/fwlink/?LinkId=150780) tüm indirmek için [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] ve [!INCLUDE[wf1](../../../../includes/wf1-md.md)] örnekleri. Bu örnek aşağıdaki dizinde bulunur.  
+>  Bu dizin mevcut değilse, Git [Windows Communication Foundation (WCF) ve .NET Framework 4 için Windows Workflow Foundation (WF) örnek](http://go.microsoft.com/fwlink/?LinkId=150780) tüm Windows Communication Foundation (WCF) indirmek için ve [!INCLUDE[wf1](../../../../includes/wf1-md.md)] örnekleri. Bu örnek aşağıdaki dizinde bulunur.  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Binding\Net\MSMQ\DeadLetter`  
   

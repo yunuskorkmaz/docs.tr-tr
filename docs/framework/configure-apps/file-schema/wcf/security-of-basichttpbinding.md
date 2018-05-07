@@ -4,11 +4,11 @@ ms.date: 03/30/2017
 ms.assetid: 6432708d-5465-4bd9-bfc2-466742db99cb
 author: BrucePerlerMS
 manager: mbaldwin
-ms.openlocfilehash: ddf120d5462c7fcb0774e29fa18e80b71727acd8
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
-ms.translationtype: HT
+ms.openlocfilehash: e39d32a9cc689905bed42f56e4f998bbd8c6e038
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="ltsecuritygt-of-ltbasichttpbindinggt"></a>&lt;basicHttpBinding&gt; &lt;güvenliği&gt;
 Güvenlik özelliklerini tanımlayan [ \<basicHttpBinding >](../../../../../docs/framework/configure-apps/file-schema/wcf/basichttpbinding.md).  
@@ -50,7 +50,7 @@ Güvenlik özelliklerini tanımlayan [ \<basicHttpBinding >](../../../../../docs
 |Taşıma|Güvenlik, HTTPS aktarımı kullanılarak sağlanır. SOAP iletilerine HTTPS kullanan güvenli hale getirilir. Hizmet, hizmetin X.509 sertifikası kullanarak istemci kimlik doğrulaması yapılır. İstemci tarafından sağlanan ClientCredentialType kullanılarak doğrulanır. Bkz: [ \<aktarım >](../../../../../docs/framework/configure-apps/file-schema/wcf/transport-of-basichttpbinding.md).|  
 |İleti|Güvenlik SOAP ileti güvenliği sağlanır. Varsayılan olarak, gövde imzalı ve şifrelenir. Bu bağlama için sunucu sertifikası, bant dışı istemciye sağlanması sistemi gerektirir. Yalnızca geçerli `ClientCredentialType` Bu bağlama için `Certificate`.|  
 |TransportWithMessageCredential|Bütünlük, gizlilik ve sunucu kimlik doğrulama ile taşıma güvenliği sağlanır. İstemci kimlik doğrulaması SOAP iletisi güvenlik yoluyla sağlanır. Bu mod, kullanıcının kullanıcı adı/parola kullanarak kimlik doğrulaması ve ileti aktarma güvenliğini sağlamak için var olan bir HTTP dağıtım olduğunda geçerlidir.|  
-|TransportCredentialOnly|Bu mod, ileti bütünlüğü ve gizliliği sağlamaz. Http tabanlı istemci kimlik doğrulaması sağlar. Bu mod dikkatli kullanılmalıdır. Burada taşıma güvenliği (IPSec gibi) diğer yollarla sağlanmaktadır ve yalnızca istemci kimlik doğrulaması tarafından sağlanan ortamlarda kullanılmalıdır [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)] altyapı.|  
+|TransportCredentialOnly|Bu mod, ileti bütünlüğü ve gizliliği sağlamaz. Http tabanlı istemci kimlik doğrulaması sağlar. Bu mod dikkatli kullanılmalıdır. Burada taşıma güvenliği (IPSec gibi) diğer yollarla sağlanmaktadır ve yalnızca istemci kimlik doğrulaması WCF altyapısı tarafından sağlanan ortamlarda kullanılmalıdır.|  
   
 ### <a name="child-elements"></a>Alt Öğeler  
   

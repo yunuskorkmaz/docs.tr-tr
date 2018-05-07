@@ -1,22 +1,16 @@
 ---
-title: "#varsa önişlemci yönergesi (C# Başvurusu)"
+title: '#varsa önişlemci yönergesi (C# Başvurusu)'
 ms.date: 02/13/2017
-ms.prod: .net
-ms.technology:
-- devlang-csharp
-ms.topic: article
 f1_keywords:
 - '#if'
 helpviewer_keywords:
 - '#if directive [C#]'
 ms.assetid: 48cabbff-ca82-491f-a56a-eeccd528c7c2
-author: BillWagner
-ms.author: wiwagn
-ms.openlocfilehash: 710452d6fddea239cb2e65901fd5ce56d6be699f
-ms.sourcegitcommit: 08684dd61444c2f072b89b926370f750e456fca1
+ms.openlocfilehash: 2ae0af6971dbf549b52e8168e035d8582bdab61d
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="if-c-reference"></a>#if (C# Başvurusu)
 
@@ -28,7 +22,7 @@ C# Derleyici karşılaştığında bir `#if` yönergesi, ardından sonunda göre
 #endif
 ```
 
-İşleçleri kullanabilirsiniz [ == ](../operators/equality-comparison-operator.md) (eşitlik) ve [! =](../operators/not-equal-operator.md) (yalnızca sınamak için eşitsizlik) [true](../keywords/true.md) veya [false](../keywords/false.md). TRUE simgenin tanımlanan anlamına gelir. Deyim `#if DEBUG` aynı anlamı taşır `#if (DEBUG == true)`. İşleçleri kullanabilirsiniz [ && ](../operators/conditional-and-operator.md) (ve) [&#124; &#124;](../operators/conditional-or-operator.md) (veya) ve [!](../operators/logical-negation-operator.md) (birden çok simgeleri tanımlı olup olmadığını değerlendirmek için değil). Ayrıca, simgeler ve parantez işleçlerle de gruplandırabilirsiniz.
+İşleçleri kullanabilirsiniz [ == ](../operators/equality-comparison-operator.md) (eşitlik) ve [! =](../operators/not-equal-operator.md) (yalnızca sınamak için eşitsizlik) [true](../keywords/true.md) veya [false](../keywords/false.md). TRUE simgenin tanımlanan anlamına gelir. Deyim `#if DEBUG` aynı anlamı taşır `#if (DEBUG == true)`. İşleçleri kullanabilirsiniz [ && ](../operators/conditional-and-operator.md) (ve) [ &#124; &#124; ](../operators/conditional-or-operator.md) (veya) ve [!](../operators/logical-negation-operator.md) (birden çok simgeleri tanımlı olup olmadığını değerlendirmek için değil). Ayrıca, simgeler ve parantez işleçlerle de gruplandırabilirsiniz.
 
 ## <a name="remarks"></a>Açıklamalar
 

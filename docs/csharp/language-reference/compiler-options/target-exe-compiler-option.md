@@ -1,10 +1,6 @@
 ---
-title: -target:exe (C# Compiler Options)
+title: '-target: exe (C# Derleyici Seçenekleri)'
 ms.date: 07/20/2015
-ms.prod: .net
-ms.technology:
-- devlang-csharp
-ms.topic: article
 f1_keywords:
 - /exe
 helpviewer_keywords:
@@ -12,16 +8,13 @@ helpviewer_keywords:
 - /target compiler options [C#], /target:exe
 - -target compiler options [C#], /target:exe
 ms.assetid: bda5717d-1b91-4848-956b-fcf85c30e432
-caps.latest.revision: 
-author: BillWagner
-ms.author: wiwagn
-ms.openlocfilehash: 515359b7a8a76e20896389b308df34db03f3798d
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.openlocfilehash: 194e4f7efaebd9523791090bcab09c019f8554a4
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 05/04/2018
 ---
-# <a name="-targetexe-c-compiler-options"></a>-target:exe (C# Compiler Options)
+# <a name="-targetexe-c-compiler-options"></a>-target: exe (C# Derleyici Seçenekleri)
 **-Target: exe** seçeneği bir yürütülebilir dosya (EXE) oluşturmak için konsol uygulaması derleyicinin neden olur.  
   
 ## <a name="syntax"></a>Sözdizimi  

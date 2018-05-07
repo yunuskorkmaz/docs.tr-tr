@@ -1,34 +1,22 @@
 ---
 title: 'Nasıl yapılır: Windows Communication Foundation Güvenlik Olaylarını Denetleme'
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 dev_langs:
 - csharp
 - vb
 helpviewer_keywords:
 - security [WCF], auditing events
 ms.assetid: e71e9587-3336-46a2-9a9e-d72a1743ecec
-caps.latest.revision: 19
 author: BrucePerlerMS
-ms.author: bruceper
 manager: mbaldwin
-ms.workload:
-- dotnet
-ms.openlocfilehash: 72eff4af38636577dc9e3b35af1f1155d5ed892c
-ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
+ms.openlocfilehash: ad1cf3dd598a2ec76302c48ae36b45fd0310d69d
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/30/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-audit-windows-communication-foundation-security-events"></a>Nasıl yapılır: Windows Communication Foundation Güvenlik Olaylarını Denetleme
-[!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] güvenlik olaylarını Windows olay Windows Olay Görüntüleyicisi'ni kullanarak görüntülenebilen, günlüğüne olanak sağlar. Bu konuda, güvenlik olayları günlüğe kaydeder, böylece uygulama ayarlama açıklanmaktadır. Hakkında daha fazla bilgi için [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] denetleme, bkz: [denetim](../../../../docs/framework/wcf/feature-details/auditing-security-events.md).  
+Windows Communication Foundation (WCF), güvenlik olaylarını Windows olay Windows Olay Görüntüleyicisi'ni kullanarak görüntülenebilen, günlüğüne olanak sağlar. Bu konuda, güvenlik olayları günlüğe kaydeder, böylece uygulama ayarlama açıklanmaktadır. WCF denetimi hakkında daha fazla bilgi için bkz: [denetim](../../../../docs/framework/wcf/feature-details/auditing-security-events.md).  
   
 ### <a name="to-audit-security-events-in-code"></a>Kodda güvenlik olaylarını denetleme  
   

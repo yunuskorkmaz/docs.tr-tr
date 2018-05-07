@@ -1,34 +1,20 @@
 ---
 title: İstemci Yapılandırması
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 ms.assetid: 5da5bd3b-65d9-43b7-91b9-cc9e989b1350
-caps.latest.revision: 8
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: c2c0d17c7274cc9fdaf1b5080950ddb4f69f539a
-ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
+ms.openlocfilehash: 0fd3d1a15164447275ef488ac91b9a8bd240032d
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/30/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="client-configuration"></a>İstemci Yapılandırması
-Kullanabileceğiniz [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] , bağlama davranışı adresi belirtin ve sözleşme istemci yapılandırmasını, hizmet uç noktalarına bağlanmak için istemcileri kullanın istemci uç nokta "ABC" özelliklerini. [ \<İstemci >](../../../../docs/framework/configure-apps/file-schema/wcf/client.md) öğeye sahip bir [ \<uç noktası >](http://msdn.microsoft.com/library/13aa23b7-2f08-4add-8dbf-a99f8127c017) öğesi özniteliklerini ABC uç noktası yapılandırmak için kullanılır. Bu öznitelikler, bu konunun "Uç noktaları yapılandırma" bölümünde ele alınmıştır.  
+Windows Communication Foundation (WCF) istemci yapılandırması adresi, bağlama, davranış ve Sözleşme, hizmet uç noktalarına bağlanmak için hangi istemcilerin kullanın istemci uç noktası "ABC" özelliklerini belirtmek için kullanabilirsiniz. [ \<İstemci >](../../../../docs/framework/configure-apps/file-schema/wcf/client.md) öğeye sahip bir [ \<uç noktası >](http://msdn.microsoft.com/library/13aa23b7-2f08-4add-8dbf-a99f8127c017) öğesi özniteliklerini ABC uç noktası yapılandırmak için kullanılır. Bu öznitelikler, bu konunun "Uç noktaları yapılandırma" bölümünde ele alınmıştır.  
   
  [ \<Uç noktası >](http://msdn.microsoft.com/library/13aa23b7-2f08-4add-8dbf-a99f8127c017) öğesi de içerir bir [ \<meta verileri >](../../../../docs/framework/configure-apps/file-schema/wcf/metadata.md) içeri ve dışarı aktarma meta veriler için ayarları belirtmek için kullanılan öğesi bir [ \<üstbilgiler >](../../../../docs/framework/configure-apps/file-schema/wcf/headers.md) özel adres üstbilgileri koleksiyonunu içeren öğe ve bir [ \<kimliği >](../../../../docs/framework/configure-apps/file-schema/wcf/identity.md) bir uç nokta diğer uç noktaları tarafından kimlik doğrulamasına olanak tanıyan öğe iletileri bu adla değişimi. [ \<Üstbilgiler >](../../../../docs/framework/configure-apps/file-schema/wcf/headers.md) ve [ \<kimliği >](../../../../docs/framework/configure-apps/file-schema/wcf/identity.md) öğeleri parçası olan <xref:System.ServiceModel.EndpointAddress> ve ele alınmıştır [adresleri](../../../../docs/framework/wcf/feature-details/endpoint-addresses.md) konu. Bu konunun yapılandırma meta verilerini alt kısmında meta verileri uzantıları kullanımını açıklayan konulara bağlantılar sağlanmaktadır.  
   
 ## <a name="configuring-endpoints"></a>Uç noktalarını yapılandırma  
- İstemci yapılandırması bir tane belirtmek istemcinin sağlamak için tasarlanmıştır veya daha fazla uç noktalar, her biri kendi adına sahip adres ve Sözleşme, her başvuran ile [ \<bağlamaları >](../../../../docs/framework/configure-apps/file-schema/wcf/bindings.md) ve [ \< davranışları >](../../../../docs/framework/configure-apps/file-schema/wcf/behaviors.md) Bu uç yapılandırmak için kullanılan istemci yapılandırma öğeleri. Bu adı olduğundan istemci yapılandırma dosyası "App.config" adlı olmalıdır, [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] çalışma zamanı bekliyor. Aşağıdaki örnek, bir istemci yapılandırma dosyası gösterir.  
+ İstemci yapılandırması bir tane belirtmek istemcinin sağlamak için tasarlanmıştır veya daha fazla uç noktalar, her biri kendi adına sahip adres ve Sözleşme, her başvuran ile [ \<bağlamaları >](../../../../docs/framework/configure-apps/file-schema/wcf/bindings.md) ve [ \< davranışları >](../../../../docs/framework/configure-apps/file-schema/wcf/behaviors.md) Bu uç yapılandırmak için kullanılan istemci yapılandırma öğeleri. Bu WCF çalışma zamanı bekliyor adı olduğundan istemci yapılandırma dosyası "App.config" adlı olmalıdır. Aşağıdaki örnek, bir istemci yapılandırma dosyası gösterir.  
   
 ```xml  
 <?xml version="1.0" encoding="utf-8"?>  

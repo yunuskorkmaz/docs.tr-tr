@@ -1,31 +1,17 @@
 ---
 title: SQL Server ve ADO.NET
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-ado
-ms.tgt_pltfrm: ''
-ms.topic: article
 ms.assetid: c18b1fb1-2af1-4de7-80a4-95e56fd976cb
-caps.latest.revision: 7
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
-ms.workload:
-- dotnet
-ms.openlocfilehash: de9480855038afea9f8c7f26e73818846961d633
-ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
+ms.openlocfilehash: 87e46ad9e83929e40daecc3e3af2eb1281c5ced9
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="sql-server-and-adonet"></a>SQL Server ve ADO.NET
 Bu bölümde özellikleri ve SQL Server için .NET Framework veri sağlayıcısı için belirli davranışları açıklanmaktadır (<xref:System.Data.SqlClient>).  
   
- <xref:System.Data.SqlClient>Veritabanı özgü protokoller yalıtır SQL Server sürümleri erişim sağlar. Veri sağlayıcısı işlevselliğini OLE DB, ODBC ve Oracle için .NET Framework veri sağlayıcısı benzer şekilde tasarlanmıştır. <xref:System.Data.SqlClient>doğrudan SQL Server ile iletişim kurmak için bir tablo veri akışı (TDS) ayrıştırıcısı içerir.  
+ <xref:System.Data.SqlClient> Veritabanı özgü protokoller yalıtır SQL Server sürümleri erişim sağlar. Veri sağlayıcısı işlevselliğini OLE DB, ODBC ve Oracle için .NET Framework veri sağlayıcısı benzer şekilde tasarlanmıştır. <xref:System.Data.SqlClient> doğrudan SQL Server ile iletişim kurmak için bir tablo veri akışı (TDS) ayrıştırıcısı içerir.  
   
 > [!NOTE]
 >  SQL Server için .NET Framework veri sağlayıcısı kullanmak için bir uygulama başvurmalıdır <xref:System.Data.SqlClient> ad alanı.  
@@ -51,7 +37,7 @@ Bu bölümde özellikleri ve SQL Server için .NET Framework veri sağlayıcıs�
   
  Kullanmakta olduğunuz SQL Server sürümü için SQL Server Books Online SQL Server veritabanı altyapısı tam belgelerine bakın.  
   
- [SQL Server Books Online](http://msdn.microsoft.com/library/ms130214.aspx)  
+ [SQL Server Çevrimiçi Kitapları](http://msdn.microsoft.com/library/ms130214.aspx)  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
  [ADO.NET Uygulamalarının Güvenliğini Sağlama](../../../../../docs/framework/data/adonet/securing-ado-net-applications.md)  

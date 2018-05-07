@@ -1,14 +1,6 @@
 ---
 title: ICorDebugGuidToTypeEnum Arabirimi
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: reference
 api_name:
 - ICorDebugGuidToTypeEnum
 api_location:
@@ -22,17 +14,13 @@ helpviewer_keywords:
 ms.assetid: aa32b12b-05fc-4ea8-a904-adae25034269
 topic_type:
 - apiref
-caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 9993a5aaaef3d5b83d21e3641029af12119188da
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 91d653587d5b7c35a2a43c7eed7c4bf33e5401f6
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="icordebugguidtotypeenum-interface"></a>ICorDebugGuidToTypeEnum Arabirimi
 Icordebugtype örnekleri tarafından temsil edilen bunların karşılık gelen türlerine ve GUID'ler kümesi arasında eşleme tanımlayan bir numaralandırıcı sağlar. Bu arabirim yöntemleri Icordebugenum arabiriminden devralır.  
@@ -47,13 +35,13 @@ Icordebugtype örnekleri tarafından temsil edilen bunların karşılık gelen t
  Bir `ICorDebugGuidToTypeEnum` arabirimi nesnesi çağırarak alınabilir [Icordebugappdomain3::getcachedwinrttypes](../../../../docs/framework/unmanaged-api/debugging/icordebugappdomain3-getcachedwinrttypes-method.md) yöntemi. Bir hata ayıklayıcısı bu arabirimin çağırabilirsiniz [sonraki](../../../../docs/framework/unmanaged-api/debugging/icordebugguidtotypeenum-next-method.md) alma yöntemi [CorDebugGuidToTypeMapping](../../../../docs/framework/unmanaged-api/debugging/cordebugguidtotypemapping-structure.md) eşleşmelerini temsil eden nesneler yönetilen gösterimlerini [!INCLUDE[wrt](../../../../includes/wrt-md.md)] türleri yüklendi uygulama etki alanı çağrısı için kullanılan [Icordebugappdomain3::getcachedwinrttypes](../../../../docs/framework/unmanaged-api/debugging/icordebugappdomain3-getcachedwinrttypes-method.md) yöntemi.  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platformlar:**[!INCLUDE[wrt](../../../../includes/wrt-md.md)]  
+ **Platform:** [!INCLUDE[wrt](../../../../includes/wrt-md.md)]  
   
  **Başlık:** CorDebug.idl, CorDebug.h  
   
  **Kitaplığı:** CorGuids.lib  
   
- **.NET framework sürümleri:**[!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]  
+ **.NET framework sürümleri:** [!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
  [Hata Ayıklama Arabirimleri](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)

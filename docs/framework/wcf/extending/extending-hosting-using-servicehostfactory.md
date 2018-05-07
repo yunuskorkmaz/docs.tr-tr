@@ -1,27 +1,15 @@
 ---
-title: "ServiceHostFactory Kullanarak Barındırmayı Genişletme"
-ms.custom: 
+title: ServiceHostFactory Kullanarak Barındırmayı Genişletme
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: bcc5ae1b-21ce-4e0e-a184-17fad74a441e
-caps.latest.revision: "12"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 4a7bcd2e0ba68499cad63ec47918fd2bd6bd80d7
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
-ms.translationtype: MT
+ms.openlocfilehash: 3773ca50111f609489b95145f1005cd005922b9b
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="extending-hosting-using-servicehostfactory"></a>ServiceHostFactory Kullanarak Barındırmayı Genişletme
-Standart <xref:System.ServiceModel.ServiceHost> Hizmetleri'nde barındırmak için API [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] bir genişletilebilirlik noktasıdır [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] mimarisi. Kullanıcılar kendi ana bilgisayar sınıftan türetilen <xref:System.ServiceModel.ServiceHost>, genellikle geçersiz kılmak için <xref:System.ServiceModel.Channels.CommunicationObject.OnOpening> kullanmak için <xref:System.ServiceModel.Description.ServiceDescription> imperatively varsayılan uç noktaları eklemek veya hizmet açmadan önce davranışları değiştirmek için.  
+Standart <xref:System.ServiceModel.ServiceHost> Windows Communication Foundation (WCF) hizmetlerini barındıran için API, içinde bir genişletilebilirlik noktasıdır [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] mimarisi. Kullanıcılar kendi ana bilgisayar sınıftan türetilen <xref:System.ServiceModel.ServiceHost>, genellikle geçersiz kılmak için <xref:System.ServiceModel.Channels.CommunicationObject.OnOpening> kullanmak için <xref:System.ServiceModel.Description.ServiceDescription> imperatively varsayılan uç noktaları eklemek veya hizmet açmadan önce davranışları değiştirmek için.  
   
  Kendini barındırma ortamında bir özel Oluştur gerekmez <xref:System.ServiceModel.ServiceHost> ana bilgisayarı başlatır kodu yazın ve ardından çağırın çünkü <xref:System.ServiceModel.ICommunicationObject.Open> Bu örneği sonra üzerinde. Bu iki adımları arasında istediğiniz yapabilirsiniz. Örneğin, yeni bir ekleyebilirsiniz <xref:System.ServiceModel.Description.IServiceBehavior>:  
   
@@ -91,4 +79,4 @@ public class DerivedFactory : ServiceHostFactory
   
  Varken teknik sınır için istediğiniz yapmayı <xref:System.ServiceModel.ServiceHost> döndürmek, <xref:System.ServiceModel.Activation.ServiceHostFactory.CreateServiceHost%2A>, Fabrika uygulamaları olabildiğince basit tutmak öneririz. Çok sayıda özel mantık varsa, yeniden kullanılabilir olması için bu mantığı, ana bilgisayar yerine içinde Fabrika yerleştirilecek daha iyidir.  
   
- Burada belirtilen barındırma API bir daha fazla katmana yoktur. [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]Ayrıca <xref:System.ServiceModel.ServiceHostBase> ve <xref:System.ServiceModel.Activation.ServiceHostFactoryBase>, içinden <xref:System.ServiceModel.ServiceHost> ve <xref:System.ServiceModel.Activation.ServiceHostFactory> sırasıyla türetilir. Bu, kendi özelleştirilmiş oluşturmaları ile meta veri sistem büyük bölümlerini burada takas gerekir daha Gelişmiş senaryolar için mevcut.
+ Burada belirtilen barındırma API bir daha fazla katmana yoktur. [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] Ayrıca <xref:System.ServiceModel.ServiceHostBase> ve <xref:System.ServiceModel.Activation.ServiceHostFactoryBase>, içinden <xref:System.ServiceModel.ServiceHost> ve <xref:System.ServiceModel.Activation.ServiceHostFactory> sırasıyla türetilir. Bu, kendi özelleştirilmiş oluşturmaları ile meta veri sistem büyük bölümlerini burada takas gerekir daha Gelişmiş senaryolar için mevcut.

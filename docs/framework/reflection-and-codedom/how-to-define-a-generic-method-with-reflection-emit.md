@@ -1,13 +1,6 @@
 ---
-title: "Nasıl yapılır: Yansıma Yayma ile Genel Yöntem Tanımlama"
-ms.custom: 
+title: 'Nasıl yapılır: Yansıma Yayma ile Genel Yöntem Tanımlama'
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -16,16 +9,13 @@ helpviewer_keywords:
 - reflection emit, generic methods
 - generics [.NET Framework], dynamic types
 ms.assetid: 93892fa4-90b3-4ec4-b147-4bec9880de2b
-caps.latest.revision: "13"
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 307347a1209a74c76e71c42a4cb9e3c3f814dee6
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 49531945b073a909ba49b2b0865b96f9658fba50
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-define-a-generic-method-with-reflection-emit"></a>Nasıl yapılır: Yansıma Yayma ile Genel Yöntem Tanımlama
 İlk yordam, iki tür parametreleri ile basit bir genel yöntem oluşturma ve tür parametreleri sınıf kısıtlamaları, arabirim kısıtlamaları ve özel kısıtlamalar uygulamak nasıl gösterir.  
@@ -104,7 +94,7 @@ ms.lasthandoff: 12/22/2017
      [!code-csharp[GenericMethodHowTo#10](../../../samples/snippets/csharp/VS_Snippets_CLR/GenericMethodHowTo/CS/source.cs#10)]
      [!code-vb[GenericMethodHowTo#10](../../../samples/snippets/visualbasic/VS_Snippets_CLR/GenericMethodHowTo/VB/source.vb#10)]  
   
-2.  Örneği oluşturmak için kod yayma `TOutput`, genel yöntemi aşırı yüklemesini kullanarak <xref:System.Activator.CreateInstance%2A?displayProperty=nameWithType> yöntemi. Bu aşırı yüklemeleri kullanarak belirtilen türün parametresiz bir oluşturucuya sahip olması gerektirir, kısıtlama eklemek için neden olduğu `TOutput`. Oluşturulan genel yöntem geçirerek oluşturma `TOutput` için <xref:System.Reflection.MethodInfo.MakeGenericMethod%2A>. Yöntemini çağırmak için kod yayma sonra yerel değişkende depolamak üzere kod yayma `retVal` kullanma<xref:System.Reflection.Emit.OpCodes.Stloc_S>  
+2.  Örneği oluşturmak için kod yayma `TOutput`, genel yöntemi aşırı yüklemesini kullanarak <xref:System.Activator.CreateInstance%2A?displayProperty=nameWithType> yöntemi. Bu aşırı yüklemeleri kullanarak belirtilen türün parametresiz bir oluşturucuya sahip olması gerektirir, kısıtlama eklemek için neden olduğu `TOutput`. Oluşturulan genel yöntem geçirerek oluşturma `TOutput` için <xref:System.Reflection.MethodInfo.MakeGenericMethod%2A>. Yöntemini çağırmak için kod yayma sonra yerel değişkende depolamak üzere kod yayma `retVal` kullanma <xref:System.Reflection.Emit.OpCodes.Stloc_S>  
   
      [!code-csharp[GenericMethodHowTo#11](../../../samples/snippets/csharp/VS_Snippets_CLR/GenericMethodHowTo/CS/source.cs#11)]
      [!code-vb[GenericMethodHowTo#11](../../../samples/snippets/visualbasic/VS_Snippets_CLR/GenericMethodHowTo/VB/source.vb#11)]  
@@ -126,7 +116,7 @@ ms.lasthandoff: 12/22/2017
   
 6.  Döngünün kod yayma. Döngü üstündeki çağırarak işaretlemek için ilk adımdır <xref:System.Reflection.Emit.ILGenerator.MarkLabel%2A> ile `loopAgain` etiketi. Etiket branch deyimleri artık bu noktaya kodda dal. Göndermek için sonraki adımdır `TOutput` için cast nesne `ICollection(Of TInput)`, yığına. Hemen gerekli değildir, ancak çağırma konumda olması gereken `Add` yöntemi. Giriş dizisi yığına gönderilen sonraki sonra `index` diziye geçerli dizini içeren değişken. <xref:System.Reflection.Emit.OpCodes.Ldelem> Opcode dizin ve dizi yığından POP ve dizinlenmiş dizi öğesi yığına iter. Yığın çağrısı için hazır <xref:System.Collections.Generic.ICollection%601.Add%2A?displayProperty=nameWithType> yöntemi, koleksiyon ve yeni bir öğesi yığından POP ve öğeyi koleksiyona ekler.  
   
-     Döngü kodda kalan döngü tamamlanmış olup olmadığını görmek için sınar ve dizin artırır: dizin ve 32 bit tamsayı 1 yığına gönderilir ve eklenen, yığında; toplam bırakarak sum depolanan `index`. <xref:System.Reflection.Emit.ILGenerator.MarkLabel%2A>döngü için giriş noktası olarak bu noktasını ayarlamak için çağrılır. Dizini yeniden yüklenir. Giriş dizisi yığında gönderilir ve <xref:System.Reflection.Emit.OpCodes.Ldlen> uzunluğu almak için yayınlanır. Dizin ve uzunluk yığında sunulmuştur ve <xref:System.Reflection.Emit.OpCodes.Clt> bunları Karşılaştırılacak yayınlanır. Dizinin uzunluğundan az ise <xref:System.Reflection.Emit.OpCodes.Brtrue_S> dalları geri döngü başlangıcı.  
+     Döngü kodda kalan döngü tamamlanmış olup olmadığını görmek için sınar ve dizin artırır: dizin ve 32 bit tamsayı 1 yığına gönderilir ve eklenen, yığında; toplam bırakarak sum depolanan `index`. <xref:System.Reflection.Emit.ILGenerator.MarkLabel%2A> döngü için giriş noktası olarak bu noktasını ayarlamak için çağrılır. Dizini yeniden yüklenir. Giriş dizisi yığında gönderilir ve <xref:System.Reflection.Emit.OpCodes.Ldlen> uzunluğu almak için yayınlanır. Dizin ve uzunluk yığında sunulmuştur ve <xref:System.Reflection.Emit.OpCodes.Clt> bunları Karşılaştırılacak yayınlanır. Dizinin uzunluğundan az ise <xref:System.Reflection.Emit.OpCodes.Brtrue_S> dalları geri döngü başlangıcı.  
   
      [!code-csharp[GenericMethodHowTo#13](../../../samples/snippets/csharp/VS_Snippets_CLR/GenericMethodHowTo/CS/source.cs#13)]
      [!code-vb[GenericMethodHowTo#13](../../../samples/snippets/visualbasic/VS_Snippets_CLR/GenericMethodHowTo/VB/source.vb#13)]  
@@ -139,7 +129,7 @@ ms.lasthandoff: 12/22/2017
 <a name="procedureSection2"></a>   
 ### <a name="to-invoke-the-generic-method"></a>Genel yöntemi çağırma  
   
-1.  `Factory`bir genel yöntem tanımıdır. Bunu çağırmak için türleri için genel tür parametreleri atamanız gerekir. Kullanım <xref:System.Reflection.MethodInfo.MakeGenericMethod%2A> Bunu yapmak için yöntem. Aşağıdaki kod bir oluşturulmuş genel yöntem oluşturur belirtme <xref:System.String> için `TInput` ve `List(Of String)` (`List<string>` C#) için `TOutput`ve yönteminin bir dize gösterimi görüntüler.  
+1.  `Factory` bir genel yöntem tanımıdır. Bunu çağırmak için türleri için genel tür parametreleri atamanız gerekir. Kullanım <xref:System.Reflection.MethodInfo.MakeGenericMethod%2A> Bunu yapmak için yöntem. Aşağıdaki kod bir oluşturulmuş genel yöntem oluşturur belirtme <xref:System.String> için `TInput` ve `List(Of String)` (`List<string>` C#) için `TOutput`ve yönteminin bir dize gösterimi görüntüler.  
   
      [!code-csharp[GenericMethodHowTo#21](../../../samples/snippets/csharp/VS_Snippets_CLR/GenericMethodHowTo/CS/source.cs#21)]
      [!code-vb[GenericMethodHowTo#21](../../../samples/snippets/visualbasic/VS_Snippets_CLR/GenericMethodHowTo/VB/source.vb#21)]  
@@ -159,7 +149,7 @@ ms.lasthandoff: 12/22/2017
 ## <a name="example"></a>Örnek  
  Aşağıdaki kod örneğinde bir nongeneric türü oluşturur `DemoType`, genel bir yöntem `Factory`. Bu yöntem iki genel tür parametreleri olan `TInput` giriş türünü belirtin ve `TOutput` çıkış türünü belirtmek için. `TOutput` Uygulamak için tür parametresi kısıtlı `ICollection<TInput>` (`ICollection(Of TInput)` Visual Basic'te), bir başvuru türü olması ve parametresiz bir oluşturucuya sahip.  
   
- Bir dizi bir biçimsel parametresi yöntemi vardır, `TInput`. Yöntem örneği döndürür `TOutput` giriş dizinin tüm öğeleri içerir. `TOutput`uygulayan herhangi bir genel koleksiyon türü olabilir <xref:System.Collections.Generic.ICollection%601> genel arabirim.  
+ Bir dizi bir biçimsel parametresi yöntemi vardır, `TInput`. Yöntem örneği döndürür `TOutput` giriş dizinin tüm öğeleri içerir. `TOutput` uygulayan herhangi bir genel koleksiyon türü olabilir <xref:System.Collections.Generic.ICollection%601> genel arabirim.  
   
  Kod çalıştırıldığında dinamik derleme DemoGenericMethod1.dll kaydedilir ve kullanarak incelenebilir [Ildasm.exe (IL ayrıştırıcı)](../../../docs/framework/tools/ildasm-exe-il-disassembler.md).  
   

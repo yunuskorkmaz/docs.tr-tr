@@ -1,21 +1,15 @@
 ---
-title: "Sabitler (C# Programlama Kılavuzu)"
+title: Sabitler (C# Programlama Kılavuzu)
 ms.date: 07/20/2015
-ms.prod: .net
-ms.technology: devlang-csharp
-ms.topic: article
 helpviewer_keywords:
 - C# language, constants
 - constants [C#]
 ms.assetid: 1fb39621-1738-49b1-a1b3-8587f109123f
-caps.latest.revision: "24"
-author: BillWagner
-ms.author: wiwagn
-ms.openlocfilehash: 86c9371a6a82c4034b7bdf279e7b205cfcc84bea
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.openlocfilehash: 90423c868ca303f8e94c16f44bc5e0b23615fc17
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="constants-c-programming-guide"></a>Sabitler (C# Programlama Kılavuzu)
 Derleme zamanında bilinen ve program ömrü için değiştirmeyin değişmez değerler sabittir. Sabitler ile bildirildiğinde [const](../../../csharp/language-reference/keywords/const.md) değiştiricisi. Yalnızca C# yerleşik türleri (hariç <xref:System.Object?displayProperty=nameWithType>) olarak bildirilmelidir `const`. Yerleşik türler listesi için bkz: [yerleşik türler tablosu](../../../csharp/language-reference/keywords/built-in-types-table.md). Sınıflar, yapılar ve diziler dahil olmak üzere, kullanıcı tanımlı türler olamaz `const`. Kullanım [readonly](../../../csharp/language-reference/keywords/readonly.md) sınıf, yapı veya çalışma zamanında (örneğin, bir kurucu) ve bundan sonra bir kez başlatılan dizi oluşturmak için değiştiricisi değiştirilemez.  

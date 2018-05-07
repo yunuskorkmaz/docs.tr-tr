@@ -1,13 +1,6 @@
 ---
-title: "Bit Eşlem Türleri"
-ms.custom: 
+title: Bit Eşlem Türleri
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-winforms
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - jpeg files
 - TIFF files
@@ -27,16 +20,11 @@ helpviewer_keywords:
 - bitmaps [Windows Forms], file format
 - Exchangeable Image File
 ms.assetid: 6be085a2-2c13-47c8-b80a-c18b32777d8d
-caps.latest.revision: "14"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 6af28e7b50cb7e4a2a90153a053a83931c738214
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 1a79f34daac4238093693947f5fb5e73bb56213d
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="types-of-bitmaps"></a>Bit Eşlem Türleri
 Bir bit eşlem her piksel rengi piksel dikdörtgen bir dizi belirtin BITS dizisidir. BITS için tek bir piksel hoşlanıyorsanız sayısını o piksel atanabilir renk sayısını belirler. Her piksel 4 BITS tarafından temsil edilen, örneğin, ardından belirli bir piksel 16 farklı renk biri atanabilir (2 ^ 4 = 16). Aşağıdaki tabloda, BITS, verilen sayıda tarafından temsil edilen bir piksel atanabilir renklerin sayısı birkaç örneği gösterilmektedir.  
@@ -64,7 +52,7 @@ Bir bit eşlem her piksel rengi piksel dikdörtgen bir dizi belirtin BITS dizisi
  ![Bit eşlem örnek](../../../../docs/framework/winforms/advanced/media/aboutgdip03-art02.gif "AboutGdip03_Art02")  
   
 ## <a name="graphics-file-formats"></a>Grafik dosya biçimleri  
- Disk dosyalarında bit eşlemleri kaydetme için birçok standart biçimlerini vardır. [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)]Aşağıdaki paragrafta açıklanan biçimleri grafik dosya destekler.  
+ Disk dosyalarında bit eşlemleri kaydetme için birçok standart biçimlerini vardır. [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] Aşağıdaki paragrafta açıklanan biçimleri grafik dosya destekler.  
   
 ### <a name="bmp"></a>BMP  
  BMP, cihaz ve uygulama bağımsız görüntüleri saklamak için Windows tarafından kullanılan standart bir biçimidir. Bit / piksel (1, 4, 8, 15, 24, 32 veya 64) için belirli bir BMP dosya sayısı, bir dosya üstbilgisi belirtilir. BMP dosyaları 24 bit / piksel ile yaygındır. BMP dosyaları genellikle değil sıkıştırılır ve bu nedenle, Internet'te aktarımı için uygun değildir.  

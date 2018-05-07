@@ -1,24 +1,15 @@
 ---
 title: AttributeUsage (C#)
-ms.custom: 
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-csharp
-ms.topic: article
 ms.assetid: 22c45568-9a6a-4c2f-8480-f38c1caa0a99
-caps.latest.revision: "3"
-author: BillWagner
-ms.author: wiwagn
-ms.openlocfilehash: e9351ee10b523145ace1249bf17388da0cdba277
-ms.sourcegitcommit: 685143b62385500f59bc36274b8adb191f573a16
+ms.openlocfilehash: f8add9de7f472703048f81ec7f34b601611c2e63
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/09/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="attributeusage-c"></a>AttributeUsage (C#)
-Özel bir öznitelik sınıfı nasıl kullanılabileceğini belirler. `AttributeUsage`Yeni öznitelik nasıl uygulanabilir denetlemek için özel öznitelik tanımlarını uygulanabilir bir özniteliktir. Varsayılan ayarları açıkça uygulandığında şöyle:  
+Özel bir öznitelik sınıfı nasıl kullanılabileceğini belirler. `AttributeUsage` Yeni öznitelik nasıl uygulanabilir denetlemek için özel öznitelik tanımlarını uygulanabilir bir özniteliktir. Varsayılan ayarları açıkça uygulandığında şöyle:  
   
 ```csharp  
 [System.AttributeUsage(System.AttributeTargets.All,  
@@ -80,7 +71,7 @@ class DClass : BClass { }
  Bu durumda `Attr1` uygulanmaz `DClass` devralma aracılığıyla.  
   
 ## <a name="remarks"></a>Açıklamalar  
- `AttributeUsage` Özniteliktir tek kullanımlık özniteliği--birden çok kez aynı sınıfa uygulanamaz. `AttributeUsage`bir diğer adı için <xref:System.AttributeUsageAttribute>.  
+ `AttributeUsage` Özniteliktir tek kullanımlık özniteliği--birden çok kez aynı sınıfa uygulanamaz. `AttributeUsage` bir diğer adı için <xref:System.AttributeUsageAttribute>.  
   
  Daha fazla bilgi için bkz: [yansıma (C#) kullanarak erişme özniteliklerle](../../../../csharp/programming-guide/concepts/attributes/accessing-attributes-by-using-reflection.md).  
   
@@ -147,9 +138,9 @@ A2
 ## <a name="see-also"></a>Ayrıca Bkz.  
  <xref:System.Attribute>  
  <xref:System.Reflection>  
- [C# programlama kılavuzu](../../../../csharp/programming-guide/index.md)  
- [Öznitelikleri](../../../../../docs/standard/attributes/index.md)  
+ [C# Programlama Kılavuzu](../../../../csharp/programming-guide/index.md)  
+ [Öznitelikler](../../../../../docs/standard/attributes/index.md)  
  [Yansıma (C#)](../../../../csharp/programming-guide/concepts/reflection.md)  
- [Öznitelikleri](../../../../csharp/programming-guide/concepts/attributes/index.md)  
+ [Öznitelikler](../../../../csharp/programming-guide/concepts/attributes/index.md)  
  [Özel öznitelikler (C#) oluşturma](../../../../csharp/programming-guide/concepts/attributes/creating-custom-attributes.md)  
  [Yansıma (C#) kullanarak özniteliklere erişme](../../../../csharp/programming-guide/concepts/attributes/accessing-attributes-by-using-reflection.md)

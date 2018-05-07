@@ -1,24 +1,14 @@
 ---
-title: "Keşif Güvenliği Örneği"
-ms.custom: 
+title: Keşif Güvenliği Örneği
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: b8db01f4-b4a1-43fe-8e31-26d4e9304a65
-caps.latest.revision: "13"
 author: BrucePerlerMS
-ms.author: bruceper
 manager: mbaldwin
-ms.workload: dotnet
-ms.openlocfilehash: f50334c8477b8823ef1dfb6abcae640e439d5ddd
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: a701a516a93cf94f76950b7b1b1c7f3a9b41214e
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="discovery-security-sample"></a>Keşif Güvenliği Örneği
 Bulma belirtiminin olmasını bulma işlemi katılmak uç noktalarını güvenli gerektirmez. Bulma iletileri ile güvenliği artırmaya azaltır saldırıları çeşitli türlerde (ileti değişikliğinin, hizmet reddi, yeniden yürütme, kimlik sahtekarlığı). Bu örnek, işlem ve (WS-bulma belirtimi bölüm 8.2 içinde açıklanan) compact imza biçimini kullanarak ileti imzaları doğrulamak özel kanalları uygular. Örnek destekler [2005 bulma belirtimi](http://go.microsoft.com/fwlink/?LinkId=177912) ve [1.1 sürümünü](http://go.microsoft.com/fwlink/?LinkId=179677).  
@@ -48,7 +38,7 @@ Bulma belirtiminin olmasını bulma işlemi katılmak uç noktalarını güvenli
 > [!NOTE]
 >  `PrefixList` 2008 bulma sürüm protokolünde eklendi.  
   
- İmza işlem için örnek genişletilmiş imza öğeleri belirler. Bir XML imzası (`SignedInfo`), kullanılarak oluşturulan `ds` WS-bulma belirtimine göre gerektiği gibi ad alanı öneki. İle değiştirilmemesi şekilde gövdesi ve bulma ve ad alanları adresleme tüm üstbilgileri imzada başvurulur. Başvurulan her öğenin özel Standartlaştırma (http://www.w3.org/2001/10/xml-exc-c14n#) kullanılarak dönüştürülen ve ardından SHA-1 Özet hesaplanan (http://www.w3.org/2000/09/xmldsig#sha1) bir değerdir. Tüm başvurulan öğelerin ve Özet değerlerine bağlı olarak, imza değeri (http://www.w3.org/2000/09/xmldsig#rsa-sha1) RSA algoritması kullanılarak hesaplanır.  
+ İmza işlem için örnek genişletilmiş imza öğeleri belirler. Bir XML imzası (`SignedInfo`), kullanılarak oluşturulan `ds` WS-bulma belirtimine göre gerektiği gibi ad alanı öneki. İle değiştirilmemesi şekilde gövdesi ve bulma ve ad alanları adresleme tüm üstbilgileri imzada başvurulur. Başvurulan her öğenin özel Standartlaştırma kullanılarak dönüştürülen (http://www.w3.org/2001/10/xml-exc-c14n# ), ve ardından bunu hesaplanan bir SHA-1 Özet değer (http://www.w3.org/2000/09/xmldsig#sha1 ). Tüm başvurulan öğelerin ve Özet değerlerine bağlı olarak, imza değeri RSA algoritması kullanılarak hesaplanır (http://www.w3.org/2000/09/xmldsig#rsa-sha1 ).  
   
  İstemci tarafından belirtilen bir sertifikayla imzalı iletiler. Bağlama öğesi oluşturulduğunda, depolama konumu, adı ve sertifika konu adı belirtilmelidir. `KeyId` Compact imzada imzalama belirteci anahtar tanımlayıcısını temsil eder ve imzalama belirtecinin konu anahtarı tanımlayıcısı (SKI) olan veya (SKI yoksa) imzalama belirtecinin ortak anahtarın SHA-1 karması.  
   
@@ -82,7 +72,7 @@ Bulma belirtiminin olmasını bulma işlemi katılmak uç noktalarını güvenli
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  Bu dizin mevcut değilse, Git [Windows Communication Foundation (WCF) ve .NET Framework 4 için Windows Workflow Foundation (WF) örnek](http://go.microsoft.com/fwlink/?LinkId=150780) tüm indirmek için [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] ve [!INCLUDE[wf1](../../../../includes/wf1-md.md)] örnekleri. Bu örnek aşağıdaki dizinde bulunur.  
+>  Bu dizin mevcut değilse, Git [Windows Communication Foundation (WCF) ve .NET Framework 4 için Windows Workflow Foundation (WF) örnek](http://go.microsoft.com/fwlink/?LinkId=150780) tüm Windows Communication Foundation (WCF) indirmek için ve [!INCLUDE[wf1](../../../../includes/wf1-md.md)] örnekleri. Bu örnek aşağıdaki dizinde bulunur.  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Scenario\DiscoveryScenario`  
   

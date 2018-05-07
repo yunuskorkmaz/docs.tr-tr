@@ -1,13 +1,6 @@
 ---
 title: Ilasm.exe (IL Derleyici)
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - MSIL generators
 - metadata, MSIL Assembler
@@ -18,16 +11,13 @@ helpviewer_keywords:
 - Ilasm.exe
 - verifying MSIL performance
 ms.assetid: 4ca3a4f0-4400-47ce-8936-8e219961c76f
-caps.latest.revision: "41"
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 2507acc7ddf41d921af0b86622b1e85208191767
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 4009fe4910af81c685ee015c7801b040a90c25aa
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="ilasmexe-il-assembler"></a>Ilasm.exe (IL Derleyici)
 
@@ -52,38 +42,38 @@ ilasm [options] filename [[options]filename...]
 | Seçenek | Açıklama |
 | ------ | ----------- |
 |**/32bitpreferred**|32 bit tercih edilen bir görüntü (PE32) oluşturur.|
-|**/ alignment:**`integer`|FileAlignment tarafından belirtilen değere ayarlar `integer` NT isteğe bağlı üstbilgisinde. Eğer .alignment IL yönergesi dosyada belirtiliyorsa, bu seçenek onu geçersiz kılar.|
+|**/ alignment:** `integer`|FileAlignment tarafından belirtilen değere ayarlar `integer` NT isteğe bağlı üstbilgisinde. Eğer .alignment IL yönergesi dosyada belirtiliyorsa, bu seçenek onu geçersiz kılar.|
 |**/appcontainer**|Üreten bir *.dll* veya *.exe* Windows uygulama kapsayıcısında çıktı olarak çalışan dosya.|
 |**/ARM**|Hedef işlemci olarak Gelişmiş RISC Makinesi (ARM) belirtir.<br /><br /> Hiçbir görüntü verileri belirtilmezse, varsayılan değer **/32bitpreferred**.|
-|**/ temel:**`integer`|ImageBase tarafından belirtilen değere ayarlar `integer` NT isteğe bağlı üstbilgisinde. Eğer .imagebase IL yönergesi dosyada belirtiliyorsa, bu seçenek onu geçersiz kılar.|
+|**/Base:** `integer`|ImageBase tarafından belirtilen değere ayarlar `integer` NT isteğe bağlı üstbilgisinde. Eğer .imagebase IL yönergesi dosyada belirtiliyorsa, bu seçenek onu geçersiz kılar.|
 |**/Clock**|Belirtilen .il kaynak dosyası için aşağıdaki derleme sürelerini milisaniye cinsinden ölçer ve raporlar:<br /><br /> **Toplam çalışma**: harcanan toplam zamanı izleyin belirli işlemlerini gerçekleştirme.<br /><br /> **Başlangıç**: yükleme ve dosyayı açma.<br /><br /> **MD yayma**: meta veri yayma.<br /><br /> **Ref Def çözümleme**: dosya tanımlarında başvuruları çözümleme.<br /><br /> **CEE dosyası oluşturma**: bellekte dosya görüntüsü oluşturuluyor.<br /><br /> **PE dosya yazma**: görüntünün PE dosyaya yazma.|
-|**/ debug**[:**IMPL**&#124; **OPT**]|Hata ayıklama bilgisi içerir (yerel değişken ve bağımsız değişken adları ve satır numaraları). Bir PDB dosyası oluşturur.<br /><br /> **/ debug** JIT iyileştirmesi hiçbir ek değerle devre dışı bırakır ve sıralama noktaları PDB dosyasından kullanır.<br /><br /> **IMPL** JIT iyileştirmesi devre dışı bırakır ve örtük sıralama noktaları kullanır.<br /><br /> **OPT** JIT iyileştirmesi sağlar ve örtük sıralama noktaları kullanır.|
+|**/ debug**[:**IMPL**&#124;**OPT**]|Hata ayıklama bilgisi içerir (yerel değişken ve bağımsız değişken adları ve satır numaraları). Bir PDB dosyası oluşturur.<br /><br /> **/ debug** JIT iyileştirmesi hiçbir ek değerle devre dışı bırakır ve sıralama noktaları PDB dosyasından kullanır.<br /><br /> **IMPL** JIT iyileştirmesi devre dışı bırakır ve örtük sıralama noktaları kullanır.<br /><br /> **OPT** JIT iyileştirmesi sağlar ve örtük sıralama noktaları kullanır.|
 |**/ dll**|Üreten bir *.dll* çıktı olarak dosya.|
-|**/ENC:**`file`|Belirtilen kaynak dosyasından Düzenle ve Devam Et deltaları oluşturur.<br /><br /> Bu bağımsız değişken yalnızca akademik amaçlıdır ve ticari kullanım için desteklenmez.|
+|**/ENC:** `file`|Belirtilen kaynak dosyasından Düzenle ve Devam Et deltaları oluşturur.<br /><br /> Bu bağımsız değişken yalnızca akademik amaçlıdır ve ticari kullanım için desteklenmez.|
 |**/ exe**|Çıktı olarak bir yürütülebilir dosya oluşturur. Bu varsayılandır.|
-|**/ bayraklar:**`integer`|ImageFlags tarafından belirtilen değere ayarlar `integer` ortak dil çalışma zamanı üst bilgisindeki. Eğer .corflags IL yönergesi dosyada belirtiliyorsa, bu seçenek onu geçersiz kılar. CorHdr.h, COMIMAGE_FLAGS için geçerli değerler listesi için bkz: *tamsayı*.|
+|**/ Flags:** `integer`|ImageFlags tarafından belirtilen değere ayarlar `integer` ortak dil çalışma zamanı üst bilgisindeki. Eğer .corflags IL yönergesi dosyada belirtiliyorsa, bu seçenek onu geçersiz kılar. CorHdr.h, COMIMAGE_FLAGS için geçerli değerler listesi için bkz: *tamsayı*.|
 |**/fold**|Eşdeğer metot gövdelerini tek bir gövde olarak katlar.|
 |/**hıghentropyva**|Yüksek entropili adres alanı düzenini (ASLR) destekleyen bir çıktı çalıştırılabilir dosyası oluşturur. (İçin varsayılan **/appcontainer**.)|
-|**/ içerir:**`includePath`|Bulunan dosyalar aramak için bir yol ayarlar `#include`.|
+|**/ içerir:** `includePath`|Bulunan dosyalar aramak için bir yol ayarlar `#include`.|
 |**/itanium**|Hedef işlemci olarak Intel Itanium belirtir.<br /><br /> Hiçbir görüntü verileri belirtilmezse, varsayılan değer **/pe64**.|
-|**/ Anahtar:**`keyFile`|Derlenen `filename` bulunan özel anahtar kullanarak güçlü bir imza ile `keyFile`.|
+|**/Key:** `keyFile`|Derlenen `filename` bulunan özel anahtar kullanarak güçlü bir imza ile `keyFile`.|
 |**/Key:** @`keySource`|Derlenen `filename` üretilen en güçlü bir imza ile özel anahtarını kullanarak `keySource`.|
 |**/ listeleme**|Standart çıktıda bir listeleme dosyası oluşturur. Eğer bu seçeneği koymazsanız, listeleme dosyası oluşturulmaz.<br /><br /> Bu parametre .NET Framework 2.0 ve sonrasında desteklenmez.|
-|**/MDV:**`versionString`|Meta veri sürümü dizesini ayarlar.|
+|**/MDV:** `versionString`|Meta veri sürümü dizesini ayarlar.|
 |**/msv:** `major`.`minor`|Meta veri akışı sürümü ayarlar nerede `major` ve `minor` tamsayı olduğunu.|
 |**/noautoinherit**|Devre dışı bırakır varsayılan devralmadan <xref:System.Object> hiçbir temel sınıf belirtildiğinde.|
 |**/nocorstub**|CORExeMain taslağının oluşturulmasını bastırır.|
 |**/nologo**|Microsoft başlangıç başlığı görüntüsünü bastırır.|
-|**/ Çıktı:**`file.ext`|Çıktı dosyası adını ve uzantısını belirtir. Varsayılan olarak, çıktı dosyası adı ilk kaynak dosyasının adıyla aynıdır. Varsayılan uzantısı *.exe*. Belirtirseniz **/dll** seçeneği, varsayılan uzantısıdır *.dll*. **Not:** belirtme **/çıkış**: dosyam.dll ayarlı değil **/dll** seçeneği. Belirtmezseniz, **/dll**, sonucu adlı bir yürütülebilir dosya olacaktır *dosyam.dll*.|
+|**/ Output:** `file.ext`|Çıktı dosyası adını ve uzantısını belirtir. Varsayılan olarak, çıktı dosyası adı ilk kaynak dosyasının adıyla aynıdır. Varsayılan uzantısı *.exe*. Belirtirseniz **/dll** seçeneği, varsayılan uzantısıdır *.dll*. **Not:** belirtme **/çıkış**: dosyam.dll ayarlı değil **/dll** seçeneği. Belirtmezseniz, **/dll**, sonucu adlı bir yürütülebilir dosya olacaktır *dosyam.dll*.|
 |**/optimize**|Uzun yönergeleri kısa olarak iyileştirir. Örneğin, `br` için `br.s`.|
 |**/pe64**|64 bitlik bir görüntü oluşturur (PE32+).<br /><br /> Hiçbir hedef işlemci belirtilmezse, varsayılan değer `/itanium`.|
 |**/ pdb**|Hata ayıklama bilgisi izlemeyi etkinleştirmeden bir PDB dosyası oluşturur.|
 |**/quiet**|Sessiz modu belirtir; hiçbir derleme ilerlemesini bildirmez.|
-|**/ Resource:**`file.res`|Belirtilen kaynak dosyası içeren \*elde edilen içinde .res biçimi *.exe* veya *.dll* dosya. Yalnızca bir .res dosyası ile belirtilebilir **/Resource** seçeneği.|
+|**/ Resource:** `file.res`|Belirtilen kaynak dosyası içeren \*elde edilen içinde .res biçimi *.exe* veya *.dll* dosya. Yalnızca bir .res dosyası ile belirtilebilir **/Resource** seçeneği.|
 |**/ssver:** `int`.`int`|NT isteğe bağlı üst bilgisinde alt sistem sürümünü ayarlar. İçin **/appcontainer** ve **/arm** 6.02 en düşük sürüm numarasıdır.|
-|**/ stack:**`stackSize`|NT isteğe bağlı üstbilgi SizeOfStackReserve değeri ayarlar `stackSize`.|
+|**/Stack:** `stackSize`|NT isteğe bağlı üstbilgi SizeOfStackReserve değeri ayarlar `stackSize`.|
 |**/stripreloc**|Temel yeniden konumlandırmanın gerekmediğini belirtir.|
-|**/Subsystem:**`integer`|Alt sistemi tarafından belirtilen değere ayarlar `integer` NT isteğe bağlı üstbilgisinde. Eğer .subsystem IL yönergesi dosyada belirtiliyorsa, bu komut onu geçersiz kılar. Winnt.h, IMAGE_SUBSYSTEM için geçerli değerler listesi için bkz: `integer`.|
+|**/Subsystem:** `integer`|Alt sistemi tarafından belirtilen değere ayarlar `integer` NT isteğe bağlı üstbilgisinde. Eğer .subsystem IL yönergesi dosyada belirtiliyorsa, bu komut onu geçersiz kılar. Winnt.h, IMAGE_SUBSYSTEM için geçerli değerler listesi için bkz: `integer`.|
 |**/x64**|Hedef işlemci olarak bir 64 bitlik AMD işlemci belirtir.<br /><br /> Hiçbir görüntü verileri belirtilmezse, varsayılan değer **/pe64**.|
 |**/?**|Araç için komut sözdizimini ve seçenekleri görüntüler.|
 

@@ -1,14 +1,6 @@
 ---
-title: "IHostMemoryManager::RegisterMemoryNotificationCallback Yöntemi"
-ms.custom: 
+title: IHostMemoryManager::RegisterMemoryNotificationCallback Yöntemi
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: reference
 api_name:
 - IHostMemoryManager.RegisterMemoryNotificationCallback
 api_location:
@@ -23,17 +15,13 @@ helpviewer_keywords:
 ms.assetid: 65d301f6-4dbb-4b5f-8eff-82540e2b6465
 topic_type:
 - apiref
-caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: a59de95ea671b6f568ade81005c718cac00350e8
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: d68790cdb671efdd0761ceef59196e8646654d5f
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="ihostmemorymanagerregistermemorynotificationcallback-method"></a>IHostMemoryManager::RegisterMemoryNotificationCallback Yöntemi
 Bilgisayarda geçerli bellek yükünün bir işaretçi ortak dil çalışma zamanı (CLR) bilgilendirmek için ana bilgisayar çağıran bir geri çağırma işlevini kaydeder.  
@@ -54,7 +42,7 @@ HRESULT RegisterMemoryNotificationCallback (
   
 |HRESULT|Açıklama|  
 |-------------|-----------------|  
-|S_OK|`RegisterMemoryNotificationCallback`başarıyla döndürüldü.|  
+|S_OK|`RegisterMemoryNotificationCallback` başarıyla döndürüldü.|  
 |HOST_E_CLRNOTAVAILABLE|CLR süreç içine yüklü değil veya CLR içinde yönetilen kod çalıştıramaz veya çağrı başarılı bir şekilde işlemek bir durumda.|  
 |HOST_E_TIMEOUT|Arama zaman aşımına uğradı.|  
 |HOST_E_NOT_OWNER|Arayan kilidi kendisine ait değil.|  
@@ -74,7 +62,7 @@ HRESULT RegisterMemoryNotificationCallback (
   
  **Kitaplığı:** bir kaynak olarak MSCorEE.dll dahil  
   
- **.NET framework sürümleri:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET framework sürümleri:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
  [ICLRMemoryNotificationCallback Arabirimi](../../../../docs/framework/unmanaged-api/hosting/iclrmemorynotificationcallback-interface.md)  

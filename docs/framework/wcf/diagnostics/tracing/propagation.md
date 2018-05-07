@@ -1,27 +1,15 @@
 ---
 title: Yayma
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: f8181e75-d693-48d1-b333-a776ad3b382a
-caps.latest.revision: "8"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 17b20b76d4932272c8e2a9e26603dc8483505242
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
-ms.translationtype: MT
+ms.openlocfilehash: 5d848a2b74402d0adf125488481f5b82e0b09781
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="propagation"></a>Yayma
-Bu konu, Etkinlik yayma açıklar [!INCLUDE[indigo1](../../../../../includes/indigo1-md.md)] izleme modeli.  
+Bu konu Windows Communication Foundation (WCF) izleme modelindeki Etkinlik yayma açıklar.  
   
 ## <a name="using-propagation-to-correlate-activities-across-endpoints"></a>Uç noktalar arasında etkinliklerini ilişkilendirmek için yayma kullanma  
  Yayma hatasının doğrudan bağıntı kullanıcıyla aynı işleme birimi için uygulama uç noktalar arasında Örneğin, bir istek izler sağlar. Farklı uç noktada aynı işleme birimi için gösterilen hatalar bile uygulama etki alanları arasında aynı etkinlik içindeki gruplandırılır. Bu ileti üstbilgisinde etkinlik kimliği yayma yoluyla yapılır. Bu nedenle, sunucu bir iç hata nedeniyle bir istemci zaman aşımına uğrarsa, her iki hata doğrudan bağıntı aynı etkinliği görünür.  

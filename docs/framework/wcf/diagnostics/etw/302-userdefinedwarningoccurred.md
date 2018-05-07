@@ -1,26 +1,12 @@
 ---
 title: 302 - UserDefinedWarningOccurred
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 ms.assetid: 8d1f0bf1-0151-45e6-be92-573d397b54de
-caps.latest.revision: ''
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: ae455c9eec2335fcf6eb5473932bd8d9e5d2db95
-ms.sourcegitcommit: c883637b41ee028786edceece4fa872939d2e64c
+ms.openlocfilehash: c70857951309ef54ba460e96e948c9320269d30f
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/23/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="302---userdefinedwarningoccurred"></a>302 - UserDefinedWarningOccurred
 ## <a name="properties"></a>Özellikler  
@@ -36,7 +22,7 @@ ms.lasthandoff: 03/23/2018
  Bu olay, kullanıcı kodundan yayınlanır. Geliştiriciler kendi hizmetinde özel tanımlanmış uyarı olayı meydana geldiğinde bu olay yayma. Bu yapılabilir kullanarak <xref:System.Diagnostics.Eventing> API'leri. Ayrıca, bu API sarmalar ve bu olay düzgün bir şekilde yayma yapmayı gösteren bir WCF örneği yoktur.  
   
 ## <a name="message"></a>İleti  
- Name:'%1', Reference:'%2', Payload:%3  
+ Ad: '%1', başvuru: '%2', yük: % 3  
   
 ## <a name="details"></a>Ayrıntılar  
   

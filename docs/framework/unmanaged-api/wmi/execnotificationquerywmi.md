@@ -1,11 +1,7 @@
 ---
-title: "ExecNotificationQueryWmi işlevi (yönetilmeyen API Başvurusu)"
-description: "ExecNotificationQueryWmi işlevi olaylarını almak için bir sorgu yürütür."
+title: ExecNotificationQueryWmi işlevi (yönetilmeyen API Başvurusu)
+description: ExecNotificationQueryWmi işlevi olaylarını almak için bir sorgu yürütür.
 ms.date: 11/06/2017
-ms.prod: .net-framework
-ms.technology:
-- dotnet-clr
-ms.topic: reference
 api_name:
 - ExecNotificationQueryWmi
 api_location:
@@ -20,14 +16,11 @@ topic_type:
 - Reference
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: d6dd0926d2262f8d0aa125b86755017a65a95a7f
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 4b5c26ab9c273b134915eea39078a83f569bcd32
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="execnotificationquerywmi-function"></a>ExecNotificationQueryWmi işlevi
 Olaylarını almak için bir sorgu yürütür. Çağrı hemen döndürür ve geldikçe çağıran olayları için döndürülen Numaralandırıcı yoklaması. Döndürülen Numaralandırıcı serbest sorguyu iptal eder.  
@@ -77,7 +70,7 @@ HRESULT ExecNotificationQueryWmi (
 `authLevel`  
 [in] Kimlik doğrulama düzeyi.
 
-`impLevel`[in] Kimliğe bürünme düzeyi.
+`impLevel` [in] Kimliğe bürünme düzeyi.
 
 `pCurrentNamespace`   
 [in] Bir işaretçi bir [IWbemServices](https://msdn.microsoft.com/library/aa392093(v=vs.85).aspx) geçerli ad alanını temsil eden nesne.
@@ -127,7 +120,7 @@ Sayısıyla sınırlar vardır `AND` ve `OR` WQL sorguları kullanılabilir anah
   
  **Başlık:** WMINet_Utils.idl  
   
- **.NET framework sürümleri:**[!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]  
+ **.NET framework sürümleri:** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.  
 [WMI ve performans sayaçları (yönetilmeyen API Başvurusu)](index.md)

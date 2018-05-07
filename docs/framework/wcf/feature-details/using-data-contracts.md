@@ -1,14 +1,6 @@
 ---
 title: Veri Sözleşmelerini Kullanma
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -17,23 +9,17 @@ helpviewer_keywords:
 - WCF, data
 - data contracts [WCF]
 ms.assetid: a3ae7b21-c15c-4c05-abd8-f483bcbf31af
-caps.latest.revision: 38
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 839227e9a67d904ea4613f841deac5a9a3f6f9ea
-ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
+ms.openlocfilehash: 992f35a9f7406ac161ddb5e31fdaf85756bfe31f
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/28/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="using-data-contracts"></a>Veri Sözleşmelerini Kullanma
 A *veri sözleşmesi* hizmet bağlamalarında değiştirilebilmesi için verileri tanımlayan bir istemci arasındaki resmi anlaşması. Diğer bir deyişle, iletişim kurmak için istemci ve hizmet aynı türleri, yalnızca aynı veri sözleşmeleri paylaşmak gerekmez. Veri sözleşmesi tam olarak, hangi verilerin (XML içinde açık) serileştirilmiş her parametresi ya da döndürme türü için tanımlar değiştirilmek üzere.  
   
 ## <a name="data-contract-basics"></a>Veri sözleşmesi temelleri  
- [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] seri hale getirmek ve (XML gelen ve giden dönüştürmeden) veri serisi için varsayılan olarak veri sözleşmesi seri hale getirici adlı bir seri hale getirme altyapısı kullanır. Tüm [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] tamsayılar ve dizeler gibi ilkel türler ve bunun yanı sıra belirli türleri gibi temel olarak kabul <xref:System.DateTime> ve <xref:System.Xml.XmlElement>ile başka bir hazırlık olmadan seri hale ve varsayılan veri sözleşmeleri sahip olarak kabul edilir. Birçok [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] türleri mevcut veri sözleşmeleri de. Seri hale getirilebilir türlerinin tam listesi için bkz: [veri sözleşmesi seri hale getirici tarafından desteklenen türleri](../../../../docs/framework/wcf/feature-details/types-supported-by-the-data-contract-serializer.md).  
+ Windows Communication Foundation (WCF) varsayılan olarak veri sözleşmesi seri hale getirici adlı bir seri hale getirme altyapısı seri hale getirmek ve (XML gelen ve giden dönüştürmeden) veri serisi için kullanır. Tüm [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] tamsayılar ve dizeler gibi ilkel türler ve bunun yanı sıra belirli türleri gibi temel olarak kabul <xref:System.DateTime> ve <xref:System.Xml.XmlElement>ile başka bir hazırlık olmadan seri hale ve varsayılan veri sözleşmeleri sahip olarak kabul edilir. Birçok [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] türleri mevcut veri sözleşmeleri de. Seri hale getirilebilir türlerinin tam listesi için bkz: [veri sözleşmesi seri hale getirici tarafından desteklenen türleri](../../../../docs/framework/wcf/feature-details/types-supported-by-the-data-contract-serializer.md).  
   
  Oluşturduğunuz yeni karmaşık türleri seri hale getirilebilir kendileri için tanımlanmış bir veri sözleşmesi olması gerekir. Varsayılan olarak, <xref:System.Runtime.Serialization.DataContractSerializer> veri sözleşmesi oluşturur ve tüm herkese görünür türleri serileştirir. Tüm ortak okuma/yazma özellikleri ve türünde alanlar serileştirilir. Seri hale getirme üyelerinden çıkışı kullanarak seçebilirsiniz <xref:System.Runtime.Serialization.IgnoreDataMemberAttribute>. Kullanarak bir veri sözleşmesi açıkça oluşturabilirsiniz <xref:System.Runtime.Serialization.DataContractAttribute> ve <xref:System.Runtime.Serialization.DataMemberAttribute> öznitelikleri. Bu normalde uygulanarak yapılır <xref:System.Runtime.Serialization.DataContractAttribute> öznitelik türü. Bu öznitelik, sınıflar, yapılar ve numaralandırmaları uygulanabilir. <xref:System.Runtime.Serialization.DataMemberAttribute> Özniteliği her bir üyesi olduğunu belirtmek için veri sözleşmesi türü sonra uygulanmalıdır bir *veri üyesi*, diğer bir deyişle, serileştirilmelidir. Daha fazla bilgi için bkz: [seri hale getirilebilir türler](../../../../docs/framework/wcf/feature-details/serializable-types.md).  
   

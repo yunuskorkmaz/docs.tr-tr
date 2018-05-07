@@ -1,13 +1,6 @@
 ---
-title: "Windows Forms'ta Güç Yönetimi"
-ms.custom: 
+title: Windows Forms'ta Güç Yönetimi
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-winforms
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -15,16 +8,11 @@ helpviewer_keywords:
 - battery states
 - power states
 ms.assetid: ad04a801-5682-4d88-92c5-26eb9cdb209a
-caps.latest.revision: "18"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: a7600ae42194b3333c404d217c2605a226df99e7
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 845cc9c910d63dfc7460bba0d5368b5b1e63efcd
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="power-management-in-windows-forms"></a>Windows Forms'ta Güç Yönetimi
 Windows Forms uygulamaları güç yönetimi özellikleri Windows işletim sisteminde yararlanabilir. Uygulamalarınızı, bir bilgisayarın güç durumunu izlemek ve bir durum değişikliği oluştuğunda eylemi gerçekleştirin. Örneğin, uygulamanızın taşınabilir bir bilgisayarda çalışıyorsa, bilgisayarın pili belirli bir düzey altında düştüğünde, uygulamanızın belirli özelliklerini devre dışı bırakmak isteyebilirsiniz.  

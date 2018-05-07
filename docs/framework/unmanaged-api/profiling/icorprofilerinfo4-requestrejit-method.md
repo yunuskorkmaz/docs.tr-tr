@@ -1,14 +1,6 @@
 ---
-title: "ICorProfilerInfo4::RequestReJIT Yöntemi"
-ms.custom: 
+title: ICorProfilerInfo4::RequestReJIT Yöntemi
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: reference
 api_name:
 - ICorProfilerInfo4.RequestReJIT
 api_location:
@@ -23,17 +15,13 @@ helpviewer_keywords:
 ms.assetid: 781ed736-f30c-4816-920e-3552e36542c6
 topic_type:
 - apiref
-caps.latest.revision: 
 author: mairaw
 ms.author: mairaw
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 4da57e95813afa1135482bef7cf6ab50ee6365cf
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: be7184e07815ebe222b8ff8736c26fd3879c8777
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="icorprofilerinfo4requestrejit-method"></a>ICorProfilerInfo4::RequestReJIT Yöntemi
 JIT derleme belirtilen işlevler tüm örneklerinin ister.  
@@ -65,14 +53,14 @@ HRESULT RequestReJIT (
 |S_OK|JIT derleme için tüm yöntemlerini işaretlemek için girişimde bulunuldu. Profil Oluşturucu uygulamalıdır [Icorprofilercallback4::rejıterror](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback4-rejiterror-method.md) hangi yöntemlerin JIT yeniden derlenmek üzere başarıyla işaretlenen belirlemek amacıyla yöntemi.|  
 |CORPROF_E_CALLBACK4_REQUIRED|Profil Oluşturucu uygulamalıdır [Icorprofilercallback4](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback4-interface.md) desteklenmesi için bu çağrı için arabirim.|  
 |CORPROF_E_REJIT_NOT_ENABLED|JIT derleme etkin değil. JIT derleme başlatma sırasında kullanarak etkinleştirmelisiniz [Icorprofilerınfo::seteventmask](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-seteventmask-method.md) ayarlamak için yöntemin `COR_PRF_ENABLE_REJIT` bayrağı.|  
-|E_INVALIDARG|`cFunctions`0 ' dır veya `moduleIds` veya `methodIds` olan `NULL`.|  
+|E_INVALIDARG|`cFunctions` 0 ' dır veya `moduleIds` veya `methodIds` olan `NULL`.|  
 |||  
 |E_OUTOFMEMORY|Bellek yetersiz çalıştırdığınız için CLR isteği tamamlayamıyor.|  
   
 ## <a name="remarks"></a>Açıklamalar  
  Çağrı `RequestReJIT` belirtilen sayıda işlevi yeniden derleyin çalışma zamanı için. Kod profil oluşturucu sonra kullanabileceğiniz [Icorprofilerfunctioncontrol](../../../../docs/framework/unmanaged-api/profiling/icorprofilerfunctioncontrol-interface.md) işlevleri derlenir olduğunda oluşturulan kodu ayarlamak için arabirim. Bu, şu anda yürütülen İşlevler, yalnızca gelecekteki işlev çağrılarını etkilemez. Belirtilen işlevler birini daha önce yapılmışsa JIT yeniden derlenmesi, bir derleme isteyen dönüştürülüyor ve işlevi yeniden derlenmesi için eşdeğerdir. JIT Derleyici bir işlev özgün sürümü derlediğinde reversibility, korumak için yalnızca özgün sürümleri satır içi kullanım kararları için kendi callees dikkate alır. JIT derleme işlevi yeniden derler, geçerli sürümleri (derlenmiş veya özgün) için kendi callees dikkate satır içi kullanım.  
   
- Bir profil oluşturucu genellikle çağırır `RequestReJIT` profil oluşturucuyu bir veya daha fazla yöntemleri izleme isteyen kullanıcı girişine yanıt. `RequestReJIT`genellikle kendi iş bazıları yapın ve potansiyel olarak tetikleyici çöp toplama olabilir için çalışma zamanı askıya alır. Bu nedenle, profil oluşturucu çağırmalıdır `RequestReJIT` bir iş parçacığından, daha önce oluşturduğunuz ve bir CLR oluşturulan iş parçacığından, şu anda bir profil oluşturucu geri yürütülmüyor.  
+ Bir profil oluşturucu genellikle çağırır `RequestReJIT` profil oluşturucuyu bir veya daha fazla yöntemleri izleme isteyen kullanıcı girişine yanıt. `RequestReJIT` genellikle kendi iş bazıları yapın ve potansiyel olarak tetikleyici çöp toplama olabilir için çalışma zamanı askıya alır. Bu nedenle, profil oluşturucu çağırmalıdır `RequestReJIT` bir iş parçacığından, daha önce oluşturduğunuz ve bir CLR oluşturulan iş parçacığından, şu anda bir profil oluşturucu geri yürütülmüyor.  
   
 ## <a name="requirements"></a>Gereksinimler  
  **Platformlar:** bkz [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
@@ -81,7 +69,7 @@ HRESULT RequestReJIT (
   
  **Kitaplığı:** CorGuids.lib  
   
- **.NET framework sürümleri:**[!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]  
+ **.NET framework sürümleri:** [!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
  [ICorProfilerInfo4 Arabirimi](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo4-interface.md)  

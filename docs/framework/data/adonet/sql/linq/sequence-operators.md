@@ -1,24 +1,12 @@
 ---
-title: "Dizisi işleçleri"
-ms.custom: 
+title: Dizisi işleçleri
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-ado
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 4d332d32-3806-4451-b7af-25af269194ae
-caps.latest.revision: "2"
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
-ms.workload: dotnet
-ms.openlocfilehash: d5e18a0c0ae959f83192ca6b50c16234eccb0629
-ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
+ms.openlocfilehash: 01807e48c06bce1d451961bb6204d1f8e49d53f6
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="sequence-operators"></a>Dizisi işleçleri
 Genel olarak bakıldığında, [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] bir veya daha fazla aşağıdaki nitelikleri dizisi işleçleri desteklemez:  
@@ -54,7 +42,7 @@ Genel olarak bakıldığında, [!INCLUDE[vbtecdlinq](../../../../../../includes/
 |<xref:System.Linq.Enumerable.SequenceEqual%2A?displayProperty=nameWithType>|  
   
 ## <a name="differences-from-net"></a>.NET arasındaki farklar  
- Tüm desteklenen dizisi işleçleri iş dışındaki (CLR) ortak dil çalışma zamanında beklendiği gibi `Average`. `Average`Oysa ortalaması türü ile aynı türde bir değer döndürür CLR'de `Average` döndürür her zaman bir <xref:System.Double> veya <xref:System.Decimal>. Kaynak bağımsız değişken açıkça ise çift / ondalık dönüştürme veya seçicisini çift / ondalık çevirir, sonuçta elde edilen SQL da böyle bir dönüştürme sahip olur ve sonuç beklendiği gibi olacaktır.  
+ Tüm desteklenen dizisi işleçleri iş dışındaki (CLR) ortak dil çalışma zamanında beklendiği gibi `Average`. `Average` Oysa ortalaması türü ile aynı türde bir değer döndürür CLR'de `Average` döndürür her zaman bir <xref:System.Double> veya <xref:System.Decimal>. Kaynak bağımsız değişken açıkça ise çift / ondalık dönüştürme veya seçicisini çift / ondalık çevirir, sonuçta elde edilen SQL da böyle bir dönüştürme sahip olur ve sonuç beklendiği gibi olacaktır.  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
  [Veri Türleri ve İşlevleri](../../../../../../docs/framework/data/adonet/sql/linq/data-types-and-functions.md)

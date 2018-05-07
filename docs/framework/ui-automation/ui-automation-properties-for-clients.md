@@ -1,13 +1,6 @@
 ---
-title: "İstemciler İçin UI Otomasyon Özellikleri"
-ms.custom: 
+title: İstemciler İçin UI Otomasyon Özellikleri
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-bcl
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -15,16 +8,14 @@ helpviewer_keywords:
 - properties, UI Automation clients
 - UI Automation, client properties
 ms.assetid: 255905af-0b17-485c-93d4-8a2db2a6524b
-caps.latest.revision: "17"
 author: Xansky
 ms.author: mhopkins
 manager: markl
-ms.workload: dotnet
-ms.openlocfilehash: fdd748da4bb414726e2eae88dcab59cf60259a13
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 66ae453a8b82ea78acfb0dc423bce546324f901f
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="ui-automation-properties-for-clients"></a>İstemciler İçin UI Otomasyon Özellikleri
 > [!NOTE]
@@ -36,7 +27,7 @@ ms.lasthandoff: 12/22/2017
   
  Denetim desenleri de özelliklere sahiptir. Denetim desenleri özelliklerini desen özgüdür. Örneğin, <xref:System.Windows.Automation.ScrollPattern> bir pencere dikey veya yatay olarak kaydırılabilir olup ve geçerli görünümü boyutları ve kaydırma konumlar neler olduğunu bulmak bir istemci uygulamasını etkinleştirecek özelliklere sahiptir. Denetim desenleri tüm özelliklerinin bir yapı aracılığıyla kullanıma; Örneğin, <xref:System.Windows.Automation.ScrollPattern.ScrollPatternInformation>.  
   
- [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]özellikleri salt okunurdur. Bir denetimin özelliklerini ayarlamak için uygun denetim düzeni yöntemlerini kullanmanız gerekir. Örneğin, <xref:System.Windows.Automation.ScrollPattern.Scroll%2A> kayan bir pencere konumunu değerlerini değiştirmek için.  
+ [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] özellikleri salt okunurdur. Bir denetimin özelliklerini ayarlamak için uygun denetim düzeni yöntemlerini kullanmanız gerekir. Örneğin, <xref:System.Windows.Automation.ScrollPattern.Scroll%2A> kayan bir pencere konumunu değerlerini değiştirmek için.  
   
  Performans, özellik değerlerini denetimler ve denetim desenlerini geliştirmek için ne zaman önbelleğe alınabilir <xref:System.Windows.Automation.AutomationElement> nesneleri alınır. Daha fazla bilgi için bkz: [UI otomasyonda önbelleğe alma](../../../docs/framework/ui-automation/caching-in-ui-automation-clients.md).  
   

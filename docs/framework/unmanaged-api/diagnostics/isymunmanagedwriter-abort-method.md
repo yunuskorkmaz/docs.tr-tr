@@ -1,14 +1,6 @@
 ---
-title: "ISymUnmanagedWriter::Abort Yöntemi"
-ms.custom: 
+title: ISymUnmanagedWriter::Abort Yöntemi
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: reference
 api_name:
 - ISymUnmanagedWriter.Abort
 api_location:
@@ -23,17 +15,13 @@ helpviewer_keywords:
 ms.assetid: 416b220f-38d4-48e0-bb49-d2faa7366702
 topic_type:
 - apiref
-caps.latest.revision: 
 author: mairaw
 ms.author: mairaw
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 8013bf2118a73a8b5eb8a5b160f2655a83382efc
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: eb6a3e65b1f1d59cde3bff99e491bcf09816c8ad
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="isymunmanagedwriterabort-method"></a>ISymUnmanagedWriter::Abort Yöntemi
 Sembol yazan sembol deposu simgeleri kaydetmeden kapatır. Bu çağrısından sonra simge yazan güncelleştirmeler için daha fazla geçersiz hale gelir. Simgeler tamamlama ve sembol yazıcı kapatmak için kullanın [Isymunmanagedwriter::Close](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedwriter-close-method.md) yöntemi yerine.  

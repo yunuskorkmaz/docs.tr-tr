@@ -1,13 +1,6 @@
 ---
-title: "Güvenilirlik En İyi Yöntemleri"
-ms.custom: 
+title: Güvenilirlik En İyi Yöntemleri
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - marking locks
 - rebooting databases
@@ -45,16 +38,13 @@ helpviewer_keywords:
 - STA-dependent features
 - fibers
 ms.assetid: cf624c1f-c160-46a1-bb2b-213587688da7
-caps.latest.revision: "11"
 author: mairaw
 ms.author: mairaw
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: ad218e8f87c2a04a9df6f67a918097de20296d0c
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: d6f29d15297fc7faff6bb3bb07ee535647c2bb7a
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="reliability-best-practices"></a>Güvenilirlik En İyi Yöntemleri
 Aşağıdaki güvenilirlik kurallar SQL Server'a yerleştirilir; Ancak, bunlar da herhangi bir ana bilgisayar tabanlı sunucu uygulama için geçerlidir. SQL Server gibi sunucu kaynakları sızıntısı değil ve duruma getirilmesi değil, son derece önemlidir.  Ancak, bir nesnenin durumu değiştirir her yöntemi için geri çekme kodu yazarak yapılamaz.  Hedef geri çekme kodu her konumdaki tüm hataları kurtarır yüzde 100 güvenilir yönetilen kodu değil yazmaktır.  Çok az fırsat başarı ile zorlu bir görev olabilir.  Ortak dil çalışma zamanı (CLR), yönetilen kod için yeterince güçlü garanti kusursuz kod uygun yazma yapmak için kolayca sağlayamaz.  ASP.NET farklı olarak, SQL Server veritabanı edilemeyecek uzunlukta bir süre boyunca sürüyor olmadan geri dönüştürüldüğünde olamaz yalnızca bir işlem kullandığını unutmayın.  
@@ -89,7 +79,7 @@ Aşağıdaki güvenilirlik kurallar SQL Server'a yerleştirilir; Ancak, bunlar d
  Ölü kilit ya da kaynak kısıtlama karşısında SQL Server bir iş parçacığı iptal etmek veya kesmeden bir <xref:System.AppDomain>.  Bu durumda, yalnızca geri çekme kodu kısıtlı yürütme bölgede (CER) çalıştırılması sağlanır.  
   
 ### <a name="use-safehandle-to-avoid-resource-leaks"></a>Kaynak sızıntıları önlemek için SafeHandle kullanın  
- Durumunda bir <xref:System.AppDomain> kaldırma, size olamaz bağlı `finally` blokları veya tüm işletim sistemi kaynak erişimi aracılığıyla soyut önemlidir, yürütülen sonlandırıcılar <xref:System.Runtime.InteropServices.SafeHandle> sınıfı yerine <xref:System.IntPtr>, <xref:System.Runtime.InteropServices.HandleRef>, veya benzer sınıflar. Böylece, izlemek ve kullandığınız bile tanıtıcıları kapatmak CLR <xref:System.AppDomain> kapatmayı aşağı durumu.  <xref:System.Runtime.InteropServices.SafeHandle>CLR her zaman çalışacak bir kritik Sonlandırıcı kullanacak.  
+ Durumunda bir <xref:System.AppDomain> kaldırma, size olamaz bağlı `finally` blokları veya tüm işletim sistemi kaynak erişimi aracılığıyla soyut önemlidir, yürütülen sonlandırıcılar <xref:System.Runtime.InteropServices.SafeHandle> sınıfı yerine <xref:System.IntPtr>, <xref:System.Runtime.InteropServices.HandleRef>, veya benzer sınıflar. Böylece, izlemek ve kullandığınız bile tanıtıcıları kapatmak CLR <xref:System.AppDomain> kapatmayı aşağı durumu.  <xref:System.Runtime.InteropServices.SafeHandle> CLR her zaman çalışacak bir kritik Sonlandırıcı kullanacak.  
   
  İşletim sistemi tanıtıcı yayınlanmasından şu kadar oluşturulan andan güvenli tanıtıcı depolanır.  Penceresi yok sırasında bir <xref:System.Threading.ThreadAbortException> bir tanıtıcı sızıntısı için oluşabilir.  Ayrıca, platform çağırma başvuru-count yakın bir yarış durumu arasında bir güvenlik sorunu önleme tanıtıcının kullanım ömrü, izleme sağlayan tanıtıcı `Dispose` ve şu anda tanıtıcısını kullanarak bir yöntem.  
   
@@ -97,11 +87,11 @@ Aşağıdaki güvenilirlik kurallar SQL Server'a yerleştirilir; Ancak, bunlar d
   
  Unutmayın <xref:System.Runtime.InteropServices.SafeHandle> için yenileme değildir <xref:System.IDisposable.Dispose%2A?displayProperty=nameWithType>.  Açıkça işletim sistemi kaynaklarını silmek için Çekişme ve performans avantajı hala olası kaynak vardır.  Yalnızca fark `finally` açıkça kaynaklarını silmek blokları tamamlanıncaya kadar değil yürütme.  
   
- <xref:System.Runtime.InteropServices.SafeHandle>uygulama kendi sayesinde <xref:System.Runtime.InteropServices.SafeHandle.ReleaseHandle%2A> yordamı boşaltma veya döngü tanıtıcıları kümesi boşaltma bir işletim sistemi tanıtıcısı geçirme durumuna gibi tanıtıcı boşaltmak için çalışma gerçekleştirir yöntemi.  CLR bu yöntem çalıştırıldığını güvence altına alır.  Yazarı sorumluluğundadır <xref:System.Runtime.InteropServices.SafeHandle.ReleaseHandle%2A> tanıtıcı her koşulda yayımlanan emin olmak için uygulama. Bunun Sağlanamaması, genellikle tanıtıcı ile ilişkili yerel kaynakları sızıntısını sonuçlanır sızmasını tanıtıcı neden olur. Bu nedenle yapısına kritik <xref:System.Runtime.InteropServices.SafeHandle> türetilmiş sınıfları şekilde <xref:System.Runtime.InteropServices.SafeHandle.ReleaseHandle%2A> uygulama çağırma aynı anda kullanılamayabilir herhangi bir kaynağa ayırma gerektirmez. İzin verilen uygulanması içinde başlatılamayabilir çağrısı yöntemlerine olduğuna dikkat edin <xref:System.Runtime.InteropServices.SafeHandle.ReleaseHandle%2A> koşuluyla kodunuzu böyle hataları işlemek ve yerel işleyici yayımlamayı sözleşme tamamlayın. Hata ayıklama amacıyla, <xref:System.Runtime.InteropServices.SafeHandle.ReleaseHandle%2A> sahip bir <xref:System.Boolean> dönmek için ayarlanabilir değeri `false` kaynak sürümü önleyen işlemi yıkıcı hatayla karşılaşılırsa. Bunun yapılması etkinleşir [releaseHandleFailed](../../../docs/framework/debug-trace-profile/releasehandlefailed-mda.md) sorun tanımlanmasına yardımcı olmak için etkinleştirilirse, MDA. Çalışma zamanı başka bir şekilde etkilemez; <xref:System.Runtime.InteropServices.SafeHandle.ReleaseHandle%2A> yeniden için aynı kaynak çağrılmaz ve tanıtıcı sızmasını sonuç.  
+ <xref:System.Runtime.InteropServices.SafeHandle> uygulama kendi sayesinde <xref:System.Runtime.InteropServices.SafeHandle.ReleaseHandle%2A> yordamı boşaltma veya döngü tanıtıcıları kümesi boşaltma bir işletim sistemi tanıtıcısı geçirme durumuna gibi tanıtıcı boşaltmak için çalışma gerçekleştirir yöntemi.  CLR bu yöntem çalıştırıldığını güvence altına alır.  Yazarı sorumluluğundadır <xref:System.Runtime.InteropServices.SafeHandle.ReleaseHandle%2A> tanıtıcı her koşulda yayımlanan emin olmak için uygulama. Bunun Sağlanamaması, genellikle tanıtıcı ile ilişkili yerel kaynakları sızıntısını sonuçlanır sızmasını tanıtıcı neden olur. Bu nedenle yapısına kritik <xref:System.Runtime.InteropServices.SafeHandle> türetilmiş sınıfları şekilde <xref:System.Runtime.InteropServices.SafeHandle.ReleaseHandle%2A> uygulama çağırma aynı anda kullanılamayabilir herhangi bir kaynağa ayırma gerektirmez. İzin verilen uygulanması içinde başlatılamayabilir çağrısı yöntemlerine olduğuna dikkat edin <xref:System.Runtime.InteropServices.SafeHandle.ReleaseHandle%2A> koşuluyla kodunuzu böyle hataları işlemek ve yerel işleyici yayımlamayı sözleşme tamamlayın. Hata ayıklama amacıyla, <xref:System.Runtime.InteropServices.SafeHandle.ReleaseHandle%2A> sahip bir <xref:System.Boolean> dönmek için ayarlanabilir değeri `false` kaynak sürümü önleyen işlemi yıkıcı hatayla karşılaşılırsa. Bunun yapılması etkinleşir [releaseHandleFailed](../../../docs/framework/debug-trace-profile/releasehandlefailed-mda.md) sorun tanımlanmasına yardımcı olmak için etkinleştirilirse, MDA. Çalışma zamanı başka bir şekilde etkilemez; <xref:System.Runtime.InteropServices.SafeHandle.ReleaseHandle%2A> yeniden için aynı kaynak çağrılmaz ve tanıtıcı sızmasını sonuç.  
   
- <xref:System.Runtime.InteropServices.SafeHandle>Bazı bağlamlarda uygun değil.  Bu yana <xref:System.Runtime.InteropServices.SafeHandle.ReleaseHandle%2A> yöntemi, çalıştırılabilir bir <xref:System.GC> sonlandırıcıyı iş parçacığı, belirli bir iş parçacığı üzerinde boşaltılması için gerekli olan tanıtıcıları değil Sarmalanan içinde bir <xref:System.Runtime.InteropServices.SafeHandle>.  
+ <xref:System.Runtime.InteropServices.SafeHandle> Bazı bağlamlarda uygun değil.  Bu yana <xref:System.Runtime.InteropServices.SafeHandle.ReleaseHandle%2A> yöntemi, çalıştırılabilir bir <xref:System.GC> sonlandırıcıyı iş parçacığı, belirli bir iş parçacığı üzerinde boşaltılması için gerekli olan tanıtıcıları değil Sarmalanan içinde bir <xref:System.Runtime.InteropServices.SafeHandle>.  
   
- Çalışma zamanı aranabilir sarmalayıcıları (RCWs) ek kod olmadan CLR tarafından temizlenebilir.  Platform çağırma ve bir COM nesnesi değerlendirir kullanan kodu için bir `IUnknown*` veya bir <xref:System.IntPtr>, bir RCW kullanmak için kodu yazılması.  <xref:System.Runtime.InteropServices.SafeHandle>yönetilen kod geri çağırma bir yönetilmeyen yayın yöntemi olasılığı nedeniyle bu senaryo için yeterli olmayabilir.  
+ Çalışma zamanı aranabilir sarmalayıcıları (RCWs) ek kod olmadan CLR tarafından temizlenebilir.  Platform çağırma ve bir COM nesnesi değerlendirir kullanan kodu için bir `IUnknown*` veya bir <xref:System.IntPtr>, bir RCW kullanmak için kodu yazılması.  <xref:System.Runtime.InteropServices.SafeHandle> yönetilen kod geri çağırma bir yönetilmeyen yayın yöntemi olasılığı nedeniyle bu senaryo için yeterli olmayabilir.  
   
 #### <a name="code-analysis-rule"></a>Kod Analizi kural  
  Kullanım <xref:System.Runtime.InteropServices.SafeHandle> işletim sistemi kaynakları için. Kullanmayın <xref:System.Runtime.InteropServices.HandleRef> veya türünde alanlar <xref:System.IntPtr>.  
@@ -110,7 +100,7 @@ Aşağıdaki güvenilirlik kurallar SQL Server'a yerleştirilir; Ancak, bunlar d
  Dikkatle bunlar çalıştırmayın olsa bile, kritik işletim sistemi kaynağı sızdırılmaz emin olmak için sonlandırıcılar gözden geçirin.  Normal bir aksine <xref:System.AppDomain> uygulama kararlı bir duruma veya SQL Server kapatır gibi bir sunucu değil kesin bir ani sırasında nesneleri yürütülürken unload <xref:System.AppDomain> kaldırın.  Kaynakları ani bir unload söz konusu olduğunda, bir uygulamanın doğruluğu garanti edilemez, ancak sunucu bütünlüğünü kaynakları sızmasını değil tarafından korunmalıdır beri sızdırılmaz emin olun.  Kullanım <xref:System.Runtime.InteropServices.SafeHandle> işletim sistemi kaynakları serbest bırakma olanağı.  
   
 ### <a name="ensure-that-finally-clauses-do-not-have-to-run-to-prevent-leaking-operating-system-resources"></a>Son olarak bu yan tümceleri sızmasını işletim sistemi kaynaklarını önlemek için çalışma gerekmez emin olun  
- `finally`yan tümceleri garanti edilmez CERs dışında çalıştırma kitaplığı geliştiricilerin içindeki kod kalmamanız gerektiren bir `finally` yönetilmeyen kaynakları serbest bloğu.  Kullanarak <xref:System.Runtime.InteropServices.SafeHandle> önerilen çözümdür.  
+ `finally` yan tümceleri garanti edilmez CERs dışında çalıştırma kitaplığı geliştiricilerin içindeki kod kalmamanız gerektiren bir `finally` yönetilmeyen kaynakları serbest bloğu.  Kullanarak <xref:System.Runtime.InteropServices.SafeHandle> önerilen çözümdür.  
   
 #### <a name="code-analysis-rule"></a>Kod Analizi kural  
  Kullanım <xref:System.Runtime.InteropServices.SafeHandle> yerine işletim sistemi kaynakları Temizleme için `Finalize`. Kullanmayın <xref:System.IntPtr>; kullanın <xref:System.Runtime.InteropServices.SafeHandle> kaynakları için. Varsa yan tümcesi son gerekir, çalıştırmak bir CER yerleştirin.  
@@ -118,7 +108,7 @@ Aşağıdaki güvenilirlik kurallar SQL Server'a yerleştirilir; Ancak, bunlar d
 ### <a name="all-locks-should-go-through-existing-managed-locking-code"></a>Tüm kilitleri mevcut yönetilen kilitleme kod üzerinden gitmesi gereken  
  CLR kesmeden bilmesini kod bir kilit olduğunda bilmelisiniz <xref:System.AppDomain> yerine yalnızca iş parçacığı durduruluyor.  Üzerinde iş parçacığı tarafından işletilen veri tutarsız bir durumda bıraktığınız iş parçacığı durduruluyor tehlikeli olabilir. Bu nedenle, tüm <xref:System.AppDomain> geri dönüştürülmesi gerekiyor.  Kilit tanımlamak başarısız olan sonuçlarıyla kilitlenmeleri veya hatalı sonuçları olabilir. Yöntemleri kullanın <xref:System.Threading.Thread.BeginCriticalRegion%2A> ve <xref:System.Threading.Thread.EndCriticalRegion%2A> kilit bölgeleri tanımlamak için.  Üzerinde statik yöntemler olduğu <xref:System.Threading.Thread> yalnızca tek bir iş parçacığı başka bir iş parçacığının kilit sayısı düzenleme engellemeye yardımcı olacak geçerli iş parçacığının uygulamak sınıfı.  
   
- <xref:System.Threading.Monitor.Enter%2A>ve <xref:System.Threading.Monitor.Exit%2A> kullanımları yanı sıra kullanılması önerilir, yerleşik bu CLR bildirim sahip [lock deyimi](~/docs/csharp/language-reference/keywords/lock-statement.md), bu yöntemleri kullanır.  
+ <xref:System.Threading.Monitor.Enter%2A> ve <xref:System.Threading.Monitor.Exit%2A> kullanımları yanı sıra kullanılması önerilir, yerleşik bu CLR bildirim sahip [lock deyimi](~/docs/csharp/language-reference/keywords/lock-statement.md), bu yöntemleri kullanır.  
   
  Döndürme kilitleri gibi diğer kilitleme mekanizmaları ve <xref:System.Threading.AutoResetEvent> önemli bir bölümü giriliyor CLR bildirmek için bu yöntemleri çağırmanız gerekir.  Bu yöntemler kilitleri almayan; kod kritik bölümünde yürütüyor CLR bildirin ve iş parçacığı durduruluyor paylaşılan durum tutarsız bırakabilir.  Özel bir gibi kendi kilit türü tanımlı değilse <xref:System.Threading.ReaderWriterLock> sınıfı, bu kilit sayısı yöntemlerini kullanın.  
   
@@ -131,7 +121,7 @@ Aşağıdaki güvenilirlik kurallar SQL Server'a yerleştirilir; Ancak, bunlar d
  Rağmen <xref:System.AppDomain> geri dönüştürülüyor temiz sonlandırıcıyı iş parçacığı üzerinde kaynakları, kodu temizleme doğru yerleştirdiniz hala önem taşır.  Bir iş parçacığı bir zaman uyumsuz özel bir kilit tutmadan alırsa, CLR geri dönüşüm gerek kalmadan iş parçacığının kendi bitiş denemesi Not <xref:System.AppDomain>.  Kaynakları daha erken yerine sonraki yardımcı daha fazla kaynağı kullanılabilir hale getirme ve yaşam süresini daha iyi yönetme temizlendiğinden emin olma.  Bazı hata kodu yolda bir dosya için bir tanıtıcı açıkça kapatmazsanız sonra bekleyin <xref:System.Runtime.InteropServices.SafeHandle> ilk kez kodunuzu çalıştığında, temizlemek için sonlandırıcıyı Sonlandırıcı olmayan zaten çalıştırıldıysa tam aynı dosyaya erişmeye başarısız olabilir.  Bu nedenle, kodu temizleme var olduğundan ve doğru bir şekilde çalıştığından emin olduktan yardımcı olacak kesinlikle gerekli olmasa da hatalarından daha düzgün bir şekilde ve hızlı kurtarma.  
   
 #### <a name="code-analysis-rule"></a>Kod Analizi kural  
- Temizleme koddan sonra `catch` olması gereken bir `finally` bloğu. Aramayı içinde silmek için bir son engelleyin.  `catch`Bloklar içinde bir throw bitiş veya yeniden oluşturulması gerekir.  Özel durumlar olacaktır karşın, ağ bağlantı kurulamıyor algılama kodu gibi herhangi bir sayıda özel durumlar, normal koşullar altında özel durum sayısı yakalama gerektiren herhangi bir kod burada alabilirsiniz vermelidir bir kod olmalıdır göstergesi başarılı olur, görmek için test.  
+ Temizleme koddan sonra `catch` olması gereken bir `finally` bloğu. Aramayı içinde silmek için bir son engelleyin.  `catch` Bloklar içinde bir throw bitiş veya yeniden oluşturulması gerekir.  Özel durumlar olacaktır karşın, ağ bağlantı kurulamıyor algılama kodu gibi herhangi bir sayıda özel durumlar, normal koşullar altında özel durum sayısı yakalama gerektiren herhangi bir kod burada alabilirsiniz vermelidir bir kod olmalıdır göstergesi başarılı olur, görmek için test.  
   
 ### <a name="process-wide-mutable-shared-state-between-application-domains-should-be-eliminated-or-use-a-constrained-execution-region"></a>Uygulama etki alanları arasında değişebilir paylaşılan durumu işlem genelinde ortadan veya kısıtlı yürütme bölge kullanın  
  Girişte açıklandığı gibi işlem genelinde paylaşılan durum uygulama etki alanları arasında güvenilir bir şekilde izler yönetilen kod yazmak oldukça zor olabilir.  İşlem genelinde paylaşılan durumu uygulama etki alanları arasında Win32 kod, CLR içinde ya da remoting kullanarak yönetilen kodda ya da paylaşılan veri yapısı herhangi bir tür değil.  Durum paylaşılmasını değişebilir doğru yönetilen kodda yazma çok zordur ve herhangi bir statik paylaşılan durum yalnızca çok dikkatli ile yapılabilir.  İşlem genelinde veya makine genelinde paylaşılan durum varsa, bunu kaldırın veya kısıtlanmış yürütme bölgesi (CER) kullanarak paylaşılan durumunu korumak için bazı yol bulun.  Tanımlanan düzeltildi değilse ve paylaşılan durumu ile herhangi bir kitaplığı temiz gerektiren SQL Server gibi bir konak sağlayabilir Not <xref:System.AppDomain> çökmesine kaldırma.  
@@ -266,7 +256,7 @@ public static MyClass SingletonProperty
  Güvenli bir şekilde durumu çoğunu yönetilen üzerinde kullanabilirsiniz <xref:System.Threading.Thread> yönetilen iş parçacığı yerel depolaması ve iş parçacığının geçerli UI kültürü içeren nesne.  Aynı zamanda <xref:System.ThreadStaticAttribute>, hangi yapar mevcut bir statik değişken değerini erişilebilir (Bu, yerel depolama CLR fiber yapmanın bir başka yolu) yalnızca geçerli yönetilen iş parçacığı tarafından.  Programlama modeli nedenleri, geçerli bir iş parçacığı kültürünü SQL'de çalıştırırken değiştirilemiyor.  
   
 #### <a name="code-analysis-rule"></a>Kod Analizi kural  
- SQL Server fiber modunda çalışır; iş parçacığı yerel depolaması kullanmayın. Platform kaçının çağrıları çağırma `TlsAlloc`, `TlsFree`, `TlsGetValue`, ve`TlsSetValue.`  
+ SQL Server fiber modunda çalışır; iş parçacığı yerel depolaması kullanmayın. Platform kaçının çağrıları çağırma `TlsAlloc`, `TlsFree`, `TlsGetValue`, ve `TlsSetValue.`  
   
 ### <a name="let-sql-server-handle-impersonation"></a>SQL Server tanıtıcı kimliğe bürünme sağlar  
  Kimliğe bürünme iş parçacığı düzeyinde çalışır ve SQL fiber modunda çalıştırmak için yönetilen kod kullanıcıların kimliğine bürüneceği değil ve değil çağırmalıdır `RevertToSelf`.  
@@ -275,7 +265,7 @@ public static MyClass SingletonProperty
  SQL Server kimliğe bürünme işlemesine olanak sağlar. Kullanmayın `RevertToSelf`, `ImpersonateAnonymousToken`, `DdeImpersonateClient`, `ImpersonateDdeClientWindow`, `ImpersonateLoggedOnUser`, `ImpersonateNamedPipeClient`, `ImpersonateSelf`, `RpcImpersonateClient`, `RpcRevertToSelf`, `RpcRevertToSelfEx`, veya `SetThreadToken`.  
   
 ### <a name="do-not-call-threadsuspend"></a>Thread::suspend çağırmayın  
- Bir iş parçacığı askıya alabilme basit bir işlemle görünebilir, ancak kilitlenmeleri neden olabilir.  Kilit ikinci bir iş parçacığı ve ardından ikinci bir iş parçacığı tarafından askıya bulunduran bir iş parçacığı aynı kilidi alma çalışırsa, bir kilitlenme oluşur.  <xref:System.Threading.Thread.Suspend%2A>Güvenlik, sınıf yükleme, remoting ve yansıma ile şu anda etkileyebilir.  
+ Bir iş parçacığı askıya alabilme basit bir işlemle görünebilir, ancak kilitlenmeleri neden olabilir.  Kilit ikinci bir iş parçacığı ve ardından ikinci bir iş parçacığı tarafından askıya bulunduran bir iş parçacığı aynı kilidi alma çalışırsa, bir kilitlenme oluşur.  <xref:System.Threading.Thread.Suspend%2A> Güvenlik, sınıf yükleme, remoting ve yansıma ile şu anda etkileyebilir.  
   
 #### <a name="code-analysis-rule"></a>Kod Analizi kural  
  Çağırmayın <xref:System.Threading.Thread.Suspend%2A>. Gerçek bir eşitleme kullanmayı bunun yerine, gibi basit bir <xref:System.Threading.Semaphore> veya <xref:System.Threading.ManualResetEvent> .  

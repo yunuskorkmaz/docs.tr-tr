@@ -1,11 +1,7 @@
 ---
-title: "Delete işlevi (yönetilmeyen API Başvurusu)"
-description: "Silme işlevini belirtilen özellik ve tüm alt niteleyicileri bir CIM sınıfı tanımından siler."
+title: Delete işlevi (yönetilmeyen API Başvurusu)
+description: Silme işlevini belirtilen özellik ve tüm alt niteleyicileri bir CIM sınıfı tanımından siler.
 ms.date: 11/06/2017
-ms.prod: .net-framework
-ms.technology:
-- dotnet-clr
-ms.topic: reference
 api_name:
 - Delete
 api_location:
@@ -20,14 +16,11 @@ topic_type:
 - Reference
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 30f5bf651990cafe06811019cf2b3d92f866f646
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: e7fcf5cff9f95b06a834d73df4090bd1edfca61b
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="delete-function"></a>İşlev Sil
 Belirtilen özellik ve tüm alt niteleyicileri bir CIM sınıfı tanımından siler.
@@ -53,7 +46,7 @@ HRESULT Delete (
 [in] Bir işaretçi bir [IWbemClassObject](https://msdn.microsoft.com/library/aa391433%28v=vs.85%29.aspx) örneği.
 
 `wszName`  
-[in] Silinecek özelliğinin adı. `wszName`Geçerli bir işaretçi olmalıdır `LPCWSTR`.
+[in] Silinecek özelliğinin adı. `wszName` Geçerli bir işaretçi olmalıdır `LPCWSTR`.
 
 ## <a name="return-value"></a>Dönüş değeri
 
@@ -80,7 +73,7 @@ Bu işlev çağrısı sarmalar [IWbemClassObject::Delete](https://msdn.microsoft
   
  **Başlık:** WMINet_Utils.idl  
   
- **.NET framework sürümleri:**[!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]  
+ **.NET framework sürümleri:** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.  
 [WMI ve performans sayaçları (yönetilmeyen API Başvurusu)](index.md)

@@ -1,26 +1,20 @@
 ---
-title: "Deyimler (C# Programlama Kılavuzu)"
+title: Deyimler (C# Programlama Kılavuzu)
 ms.date: 07/20/2015
-ms.prod: .net
-ms.technology: devlang-csharp
-ms.topic: article
 helpviewer_keywords:
 - statements [C#], about statements
 - C# language, statements
 ms.assetid: 901bcde7-87de-4e15-833c-f9cfd40c8ce3
-caps.latest.revision: "28"
-author: BillWagner
-ms.author: wiwagn
-ms.openlocfilehash: 166130ca7a63127d0bd1df8328dc08b4a8cd7845
-ms.sourcegitcommit: 7e99f66ef09d2903e22c789c67ff5a10aa953b2f
+ms.openlocfilehash: 68f7f799ebbfe52c99820083eb22761c79f66483
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/18/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="statements-c-programming-guide"></a>Deyimler (C# Programlama Kılavuzu)
 Bir programın sürüyor Eylemler deyimlerinde ifade edilir. Ortak Eylemler değişkenleri bildirme, değerler atama, koleksiyonlar üzerinden döngü oluşturma ve verilen bir koşul bağlı olarak kod bloğu bir ya da başka bir dal oluşturma yöntemleri çağırma içerir. Deyimleri bir programda yürütülme sırasını denetim akışı veya akışını çağrılır. Denetim akışını nasıl programın çalışma zamanında aldığını giriş tepki verdiğini bağlı olarak bir program çalıştırıldığında her zaman değişebilir.  
   
- Bir deyim tek satırlık bir noktalı virgül ile biten kod veya tek satırlık ifadeleri bir blok içinde bir dizi oluşabilir. Bir ifade bloğu {} ayraçlar içinde bulunan ve iç içe geçmiş blokları içerebilir. Aşağıdaki kod iki örnek tek satırlı deyimlerinin ve çok satırlı deyimi bloğu gösterir:  
+ Bir deyim tek satırlık bir noktalı virgül ile biten kod veya tek satırlık ifadeleri bir blok içinde bir dizi oluşabilir. Bir ifade bloğu sınırlanan {} köşeli ayraçlar ve iç içe geçmiş blokları içerebilir. Aşağıdaki kod iki örnek tek satırlı deyimlerinin ve çok satırlı deyimi bloğu gösterir:  
   
  [!code-csharp[csProgGuideStatements#1](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/statements_1.cs)]  
   
@@ -44,11 +38,11 @@ Bir programın sürüyor Eylemler deyimlerinde ifade edilir. Ortak Eylemler değ
 |Boş deyim|Boş deyim, tek bir noktalı virgül oluşur. Hiçbir şey yapmaz ve burada bir deyim gereklidir ancak herhangi bir işlem yapılması gerekiyor yerde kullanılabilir. Aşağıdaki örnekler, boş bir deyimi iki kullanımları gösterir:<br /><br /> [!code-csharp[csProgGuideStatements#25](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/statements_4.cs)]|  
   
 ## <a name="embedded-statements"></a>Katıştırılmış ifadeler  
- Dahil olmak üzere bazı deyimleri [yapmak](../../../csharp/language-reference/keywords/do.md), [sırada](../../../csharp/language-reference/keywords/while.md), [için](../../../csharp/language-reference/keywords/for.md), ve [foreach](../../../csharp/language-reference/keywords/foreach-in.md), onları izleyen bir katıştırılmış deyimi her zaman vardır. Bu katıştırılmış deyimi, tek bir deyimde veya birden çok deyime deyimi blok {} köşeli kapsadığı olabilir. Tek satırlı bile katıştırılmış ifadeler {}, aşağıdaki örnekte gösterildiği gibi ayraç:  
+ Dahil olmak üzere bazı deyimleri [yapmak](../../../csharp/language-reference/keywords/do.md), [sırada](../../../csharp/language-reference/keywords/while.md), [için](../../../csharp/language-reference/keywords/for.md), ve [foreach](../../../csharp/language-reference/keywords/foreach-in.md), onları izleyen bir katıştırılmış deyimi her zaman vardır. Bu katıştırılmış deyimi tek bir deyimde veya birden çok deyime kapsadığı olabilir {} deyimi blok köşeli. Tek satırlı bile katıştırılmış ifadeler içine {} , aşağıdaki örnekte gösterildiği gibi köşeli ayraçlar:  
   
  [!code-csharp[csProgGuideStatements#26](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/statements_5.cs)]  
   
- {} Köşeli ayraç içine alınmamış bir katıştırılmış deyimi bildirimi deyimi veya etiketli deyim olamaz. Bu aşağıdaki örnekte gösterilmiştir:  
+ İçinde içine alınmamış bir katıştırılmış deyimi {} köşeli bildirimi deyimi veya etiketli deyim olamaz. Bu aşağıdaki örnekte gösterilmiştir:  
   
  [!code-csharp[csProgGuideStatements#27](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/statements_6.cs)]  
   
@@ -68,7 +62,7 @@ Bir programın sürüyor Eylemler deyimlerinde ifade edilir. Ortak Eylemler değ
   
 ## <a name="related-sections"></a>İlgili Bölümler  
   
--   [Deyim anahtar sözcükleri](../../../csharp/language-reference/keywords/statement-keywords.md)  
+-   [Deyim Anahtar Sözcükleri](../../../csharp/language-reference/keywords/statement-keywords.md)  
   
 -   [İfadeler](../../../csharp/programming-guide/statements-expressions-operators/expressions.md)  
   
@@ -78,4 +72,4 @@ Bir programın sürüyor Eylemler deyimlerinde ifade edilir. Ortak Eylemler değ
  [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [C# programlama kılavuzu](../../../csharp/programming-guide/index.md)
+ [C# Programlama Kılavuzu](../../../csharp/programming-guide/index.md)

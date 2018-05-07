@@ -1,29 +1,15 @@
 ---
 title: Windows Forms Uygulamalarını Geliştirme
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-winforms
-ms.tgt_pltfrm: ''
-ms.topic: article
 helpviewer_keywords:
 - Windows Forms, enhancing
 - Windows Forms, adding features
 ms.assetid: 733d1219-d6ad-4256-a55b-9eccf47f5a06
-caps.latest.revision: 13
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 77bd9884681c632f0faa9279f63aea6eabfe076e
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 750d94caf08776ae457dbff153afbc8ec9368f07
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="enhancing-windows-forms-applications"></a>Windows Forms Uygulamalarını Geliştirme
 Windows Forms, kullanıcılarınızın özel ihtiyaçlarını karşılamak için Windows tabanlı uygulamalar geliştirmek için kullanabileceğiniz birçok özellik içerir. Aşağıdaki konular bu özellikleri ve bunların nasıl kullanılacağını açıklar.  

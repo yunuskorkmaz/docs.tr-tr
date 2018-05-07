@@ -1,24 +1,14 @@
 ---
-title: "Çalışma Zamanı Yönerge Öğeleri"
-ms.custom: 
+title: Çalışma Zamanı Yönerge Öğeleri
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 3fe5848c-ecd7-4136-970b-8e48d250bde6
-caps.latest.revision: "12"
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: e2566c5ebe8c94610c8f7e258da7c77adb86a49f
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 2b4e8f0902e0d3ebd010ff639b329707881c29fd
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="runtime-directive-elements"></a>Çalışma Zamanı Yönerge Öğeleri
 Çalışma zamanı yönergeleri (rd.xml) dosya biçimi şu çalışma zamanı yönerge öğeleri destekler. Bkz: [çalışma zamanı yönergeleri (rd.xml) yapılandırma dosyası başvurusu](../../../docs/framework/net-native/runtime-directives-rd-xml-configuration-file-reference.md) hiyerarşik bir gösterim için.  
@@ -26,7 +16,7 @@ ms.lasthandoff: 12/22/2017
  [\<Uygulama >](../../../docs/framework/net-native/application-element-net-native.md)  
  Çalışma zamanı yansıma ilke uygulama tarafından kullanılan tüm türleri için geçerlidir ve uygulama genelinde türleri ve tür üyeleri olan meta verilerini yansıma çalışma zamanında yüklenebilir için kapsayıcı görevi görür. Bu bir alt öğesi değil [ \<yönergeleri >](../../../docs/framework/net-native/directives-element-net-native.md) öğesi.  
   
- [\<Derleme >](../../../docs/framework/net-native/assembly-element-net-native.md)  
+ [\<derleme >](../../../docs/framework/net-native/assembly-element-net-native.md)  
  Derlemedeki tüm türleri runnntime ilke uygulanır. Bu bir alt öğesi değil [ \<uygulama >](../../../docs/framework/net-native/application-element-net-native.md) ve [ \<kitaplığı >](../../../docs/framework/net-native/library-element-net-native.md) öğeleri.  
   
  [\<Attributeımplies >](../../../docs/framework/net-native/attributeimplies-element-net-native.md)  
@@ -68,7 +58,7 @@ ms.lasthandoff: 12/22/2017
  [\<Subtypes >](../../../docs/framework/net-native/subtypes-element-net-native.md)  
  Çalışma zamanı ilkesi içeren türünden devralınan tüm sınıflar için geçerlidir.  
   
- [\<Türü >](../../../docs/framework/net-native/type-element-net-native.md)  
+ [\<türü >](../../../docs/framework/net-native/type-element-net-native.md)  
  Çalışma zamanı ilke türü için geçerlidir.  
   
  [\<Typeınstantiation >](../../../docs/framework/net-native/typeinstantiation-element-net-native.md)  

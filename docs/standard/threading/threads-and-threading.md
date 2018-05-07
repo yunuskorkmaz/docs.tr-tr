@@ -1,30 +1,19 @@
 ---
 title: İş Parçacıkları ve İş Parçacığı Oluşturma
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net
-ms.reviewer: ''
-ms.suite: ''
 ms.technology: dotnet-standard
-ms.tgt_pltfrm: ''
-ms.topic: article
 helpviewer_keywords:
 - multiple threads
 - threading [.NET Framework]
 - threading [.NET Framework], multiple threads
 ms.assetid: 5baac3aa-e603-4fa6-9f89-0f2c1084e6b1
-caps.latest.revision: 14
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-- dotnetcore
-ms.openlocfilehash: 02c676e3bb6c0dcc9e65858367d13f41adc797e8
-ms.sourcegitcommit: 2e8acae16ae802f2d6d04e3ce0a6dbf04e476513
+ms.openlocfilehash: 4380c509a08ebe59f9561a9e6fc596458768917f
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="threads-and-threading"></a>İş Parçacıkları ve İş Parçacığı Oluşturma
 İşletim sistemleri işlemleri yürütülmekte olduğunu farklı uygulamaları ayırmak için kullanır. İş parçacığı bir işletim sistemi işlemci zamanı tarafından ayrılan temel birimi olan ve birden çok iş parçacığı işlem içinde kod yürütme. Her iş parçacığı, özel durum işleyicileri, bir zamanlama önceliği ve sistem zamanlandığı süreye kadar iş parçacığı içeriği kaydetmek için kullandığı yapıları kümesi tutar. İş parçacığı bağlamını sorunsuz bir şekilde yürütme iş parçacığının ana bilgisayar işlemi adres alanında CPU kaydeder ve yığını, iş parçacığının kümesi de dahil olmak üzere, devam etmek için iş parçacığı gereken tüm bilgileri içerir.  

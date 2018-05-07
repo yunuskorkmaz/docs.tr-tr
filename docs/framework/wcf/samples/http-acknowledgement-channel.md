@@ -1,24 +1,12 @@
 ---
-title: "HTTP Doğrulama Kanalı"
-ms.custom: 
+title: HTTP Doğrulama Kanalı
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 469f3056-5ef2-4753-8acf-b574d23d83cf
-caps.latest.revision: "10"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: d07a17c5ed4302657671e0247e44ac0ef6e75518
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: c56b2fbe9d0bac3143ee7d234fd36a75f7b8071c
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="http-acknowledgement-channel"></a>HTTP Doğrulama Kanalı
 HTTP doğrulama kanalı tek yönlü Mesajlaşma düzeni, onaylayabilir veya gelen iletileri reddetmek bir hizmet veren otomatik olarak bir bildirim alındığında göndermek yerine değişiklikleri katmanlı bir kanal örneğidir. İleti işleme, iş düzeyi garantisi yapabilirsiniz kadar HTTP doğrulama kanalı gecikme bildirim hizmete de sağlar.  
@@ -29,7 +17,7 @@ HTTP doğrulama kanalı tek yönlü Mesajlaşma düzeni, onaylayabilir veya gele
 ## <a name="discussion"></a>Tartışma  
  HTTP doğrulama kanalı uygulayan <xref:System.ServiceModel.Channels.ReceiveContext> Gecikmeli bildirim ile tek yönlü bir desenle HTTP istek-yanıt Mesajlaşma düzeni yeniden şekillendirmek için. Bu yeni desenini kullanarak, bir hizmet ileti işleme ileti işleme tamamlanana veya bir hata iletisi biçiminde bir HTTP istemci gönderebilirsiniz kadar istemci engellenmeden bir HTTP Tamam durum kodu 200 biçiminde bir bildirim göndererek emin olabilirsiniz İç sunucu hatası durum kodu 500. Örneğin, bir hizmet bir sıraya bir ileti yazdıktan sonra bir bildirim göndermek ve iletisini zaman uyumsuz olarak işleme devam. Bir bildirim hizmetinden alınan kadar her ileti yeniden göndermeden, bu senaryoda, bir istemci kendi iletileri en az bir kez hizmeti tarafından işlenen gösterilmeyeceği. Bir hizmeti hızlı zaman uyumsuz ileti işleme garantileri, herhangi bir iletisi HTTP üzerinden işleme gerektiriyorsa, Not sonra <xref:System.ServiceModel.Channels.OneWayBindingElement> daha uygun bir seçimdir.  
   
- <xref:System.ServiceModel.Channels.ReceiveContext>iletinin ileti hizmeti işleme alınacak belirlenir yerinde tutarken için kullanılır. Bir hizmeti başarıyla ileti işleme yeteneği üzerinde tam çağrılarak gösterilen <xref:System.ServiceModel.Channels.ReceiveContext> gönderdiği Tamam HTTP durum kodu ve hizmet iletisi olup olmadığını işleyebilir nesne çağırarak belirtilir <xref:System.ServiceModel.Channels.ReceiveContext>'s `Abandon` yöntemini <xref:System.ServiceModel.Channels.ReceiveContext> bir HTTP iç sunucu hatası durum kodu gönderir nesnesi.  
+ <xref:System.ServiceModel.Channels.ReceiveContext> iletinin ileti hizmeti işleme alınacak belirlenir yerinde tutarken için kullanılır. Bir hizmeti başarıyla ileti işleme yeteneği üzerinde tam çağrılarak gösterilen <xref:System.ServiceModel.Channels.ReceiveContext> gönderdiği Tamam HTTP durum kodu ve hizmet iletisi olup olmadığını işleyebilir nesne çağırarak belirtilir <xref:System.ServiceModel.Channels.ReceiveContext>'s `Abandon` yöntemini <xref:System.ServiceModel.Channels.ReceiveContext> bir HTTP iç sunucu hatası durum kodu gönderir nesnesi.  
   
  Bu örnekte, bir çalışan kimliği göndererek işleme bilgileri istemci istekleri Hizmet uç alınan çalışan kimliği 50'den büyükse hizmeti bir HTTP durum kodu 500 (Dahili Sunucu hatası) istemciye geri gönderir, aksi takdirde bu işlem başarıyla yapılabilir ve bir HTTP durum kodu 200 (gönderir varsayılır Başarılı) istemciye.  
   
@@ -54,6 +42,6 @@ HTTP doğrulama kanalı tek yönlü Mesajlaşma düzeni, onaylayabilir veya gele
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  Bu dizin mevcut değilse, Git [Windows Communication Foundation (WCF) ve .NET Framework 4 için Windows Workflow Foundation (WF) örnek](http://go.microsoft.com/fwlink/?LinkId=150780) tüm indirmek için [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] ve [!INCLUDE[wf1](../../../../includes/wf1-md.md)] örnekleri. Bu örnek aşağıdaki dizinde bulunur.  
+>  Bu dizin mevcut değilse, Git [Windows Communication Foundation (WCF) ve .NET Framework 4 için Windows Workflow Foundation (WF) örnek](http://go.microsoft.com/fwlink/?LinkId=150780) tüm Windows Communication Foundation (WCF) indirmek için ve [!INCLUDE[wf1](../../../../includes/wf1-md.md)] örnekleri. Bu örnek aşağıdaki dizinde bulunur.  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Extensibility\Channels\HttpAckChannel`

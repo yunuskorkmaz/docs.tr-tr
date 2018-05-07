@@ -1,21 +1,12 @@
 ---
-title: "Geçerli içerik XElement ve XDocument Objects3"
-ms.custom: 
+title: Geçerli içerik XElement ve XDocument Objects3
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-csharp
-ms.topic: article
 ms.assetid: 0d253586-2b97-459f-b1a7-f30f38f3ed9f
-caps.latest.revision: "5"
-author: BillWagner
-ms.author: wiwagn
-ms.openlocfilehash: 113a187c9a852420ffcef3893a415a24bae2c655
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.openlocfilehash: 32521941bacdf8d689a81f6136d427307481ddc9
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="valid-content-of-xelement-and-xdocument-objects"></a>Geçerli içerik XElement ve XDocument nesneleri
 Bu konuda oluşturucular ve içerik öğelerini ve belgeleri eklemek için kullandığınız yöntemleri için geçirilen geçerli bağımsız değişkenler açıklanmaktadır.  
@@ -53,7 +44,7 @@ Bu konuda oluşturucular ve içerik öğelerini ve belgeleri eklemek için kulla
   
 -   <xref:System.Xml.Linq.XAttribute>  
   
--   Uygulayan herhangi bir türü<xref:System.Collections.Generic.IEnumerable%601>  
+-   Uygulayan herhangi bir türü <xref:System.Collections.Generic.IEnumerable%601>  
   
  Bir nesne uyguluyorsa <xref:System.Collections.Generic.IEnumerable%601>nesne koleksiyonunda numaralandırılan ve koleksiyondaki tüm öğeleri eklenir. Koleksiyon içeriyorsa <xref:System.Xml.Linq.XNode> veya <xref:System.Xml.Linq.XAttribute> nesneleri, koleksiyondaki her öğe ayrı olarak eklenir. Koleksiyon metin (ya da metne dönüştürülecek nesneleri) içeriyorsa, koleksiyon metinde birleştirilmiş ve tek bir metin düğümü olarak eklenir.  
   

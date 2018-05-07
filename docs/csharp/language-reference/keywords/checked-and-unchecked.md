@@ -1,9 +1,6 @@
 ---
-title: "Checked ve Unchecked (C# Başvurusu)"
+title: Checked ve Unchecked (C# Başvurusu)
 ms.date: 07/20/2015
-ms.prod: .net
-ms.technology: devlang-csharp
-ms.topic: article
 helpviewer_keywords:
 - operators [C#], checked and unchecked
 - exceptions [C#], overflow checking
@@ -12,14 +9,11 @@ helpviewer_keywords:
 - unchecked statement [C#]
 - statements [C#], checked and unchecked
 ms.assetid: a84bc877-2c7f-4396-8735-1ce97c42f35e
-caps.latest.revision: "17"
-author: BillWagner
-ms.author: wiwagn
-ms.openlocfilehash: 4b7b18b39dbfa7ed0818d9ea6e9e62ef79a9f5b7
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 26ea8a7864d93b8d64661db2b0dc1df6634f989a
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="checked-and-unchecked-c-reference"></a>Checked ve Unchecked (C# Başvurusu)
 C# ifadelerinin işaretli veya işaretsiz bağlamda çalıştırabilirsiniz. Checked bir bağlamda aritmetik taşma bir özel durum oluşturur. İşaretli bir bağlamda aritmetik taşma göz ardı edilir ve sonuç kesilmiş.  
@@ -34,7 +28,7 @@ C# ifadelerinin işaretli veya işaretsiz bağlamda çalıştırabilirsiniz. Che
   
 -   Tam sayı türleri üzerinde aşağıdaki önceden tanımlanmış işleçleri kullanarak ifadeler:  
   
-     `++``--` -(tekli) `+`  -    `*``/`  
+     `++` `--` -(tekli)   `+` -   `*` `/`  
   
 -   Açık sayısal dönüşümler tam sayı türleri arasında.  
   
@@ -42,6 +36,6 @@ C# ifadelerinin işaretli veya işaretsiz bağlamda çalıştırabilirsiniz. Che
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
  [C# başvurusu](../../../csharp/language-reference/index.md)  
- [C# programlama kılavuzu](../../../csharp/programming-guide/index.md)  
- [C# anahtar sözcükleri](../../../csharp/language-reference/keywords/index.md)  
- [Deyim anahtar sözcükleri](../../../csharp/language-reference/keywords/statement-keywords.md)
+ [C# Programlama Kılavuzu](../../../csharp/programming-guide/index.md)  
+ [C# Anahtar Sözcükleri](../../../csharp/language-reference/keywords/index.md)  
+ [Deyim Anahtar Sözcükleri](../../../csharp/language-reference/keywords/statement-keywords.md)

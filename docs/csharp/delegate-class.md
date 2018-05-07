@@ -1,20 +1,13 @@
 ---
-title: "System.Delegate ve 'temsilci' anahtar sözcüğü"
-description: ".NET Framework'teki temsilcileri ve nasıl olanlar 'temsilci' anahtar sözcüğü eşleme desteği sınıfları hakkında bilgi edinin."
-keywords: .NET, .NET core
-author: BillWagner
-ms.author: wiwagn
+title: System.Delegate ve `delegate` anahtar sözcüğü
+description: .NET Framework'teki temsilcileri ve nasıl olanlar 'temsilci' anahtar sözcüğü eşleme desteği sınıfları hakkında bilgi edinin.
 ms.date: 06/20/2016
-ms.topic: article
-ms.prod: .net
-ms.technology: devlang-csharp
-ms.devlang: csharp
 ms.assetid: f3742fda-13c2-4283-8966-9e21c2674393
-ms.openlocfilehash: 09c7da7c780389d3819cf23a533cc425b43ad5ff
-ms.sourcegitcommit: bbde43da655ae7bea1977f7af7345eb87bd7fd5f
+ms.openlocfilehash: 2265d081b884a19cda6fc9d80a0f621a30c87e2a
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="systemdelegate-and-the-delegate-keyword"></a>System.Delegate ve `delegate` anahtar sözcüğü
 
@@ -136,8 +129,8 @@ Türetilen sınıflar doğrudan oluşturamaz olsa da, bu sınıflara tanımlanan
 
 Anımsaması ilk ve en önemli ile çalışırsınız her temsilci türetilmiş gerçeğidir `MulticastDelegate`. Çok noktaya yayın temsilci bir temsilci çağrılırken, birden fazla yöntem hedef çağrılabilir anlamına gelir. Özgün Tasarım olarak kabul burada yalnızca bir hedef yönteme bağlı çağrılır ve yüklenemedi Temsilciler ve burada birden çok hedef yöntemi bağlı çağrılır ve yüklenemedi temsilciler arasında ayrım yapma. Bu ayrım başlangıçta zorlayıcı daha uygulamada daha az kullanışlı olması için oluyor uygulamasına yol açıyordu. Farklı iki sınıf zaten oluşturulmuş ve framework ilk sürülmeden itibaren kapatıldı.
 
-En temsilciler ile kullanacağınız yöntemler `Invoke()` ve `BeginInvoke()`  /  `EndInvoke()`. `Invoke()`belirli temsilci örneğine bağlı tüm yöntemleri çağırır. Yukarıda gördüğünüz gibi genellikle temsilcileri temsilci değişkeni yöntemi çağrı sözdizimini kullanarak çağırır. Gördüğünüz gibi [bu serideki sonraki](delegates-patterns.md), doğrudan bu yöntemlerle iş desenleri vardır.
+En temsilciler ile kullanacağınız yöntemler `Invoke()` ve `BeginInvoke()`  /  `EndInvoke()`. `Invoke()` belirli temsilci örneğine bağlı tüm yöntemleri çağırır. Yukarıda gördüğünüz gibi genellikle temsilcileri temsilci değişkeni yöntemi çağrı sözdizimini kullanarak çağırır. Gördüğünüz gibi [bu serideki sonraki](delegates-patterns.md), doğrudan bu yöntemlerle iş desenleri vardır.
 
 Dili sözdizimi ve temsilciler destekleyen sınıfları gördüğünüze göre nasıl kesin türü belirtilmiş temsilciler inceleyelim, oluşturulan çağrılır ve kullanıldığını.
 
-[Sonraki](delegates-strongly-typed.md)
+[Next](delegates-strongly-typed.md)

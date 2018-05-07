@@ -1,24 +1,12 @@
 ---
-title: "SQL CLR türü eşlemesi"
-ms.custom: 
+title: SQL CLR türü eşlemesi
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-ado
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 4ed76327-54a7-414b-82a9-7579bfcec04b
-caps.latest.revision: "4"
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
-ms.workload: dotnet
-ms.openlocfilehash: cc6a3d38b8534c9727562cb3fb82f96fa60db7ec
-ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
+ms.openlocfilehash: 5437529d9293951ad34abda435b538b4f404c600
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="sql-clr-type-mapping"></a>SQL CLR türü eşlemesi
 LINQ-SQL, tercih ettiğiniz programlama dilini ifade edilen bir nesne modeli ilişkisel veritabanı veri modelinin eşler. Uygulama çalıştırıldığında LINQ-SQL dil ile tümleşik sorgu nesne modelinde SQL'e çevirir ve bunları yürütme için veritabanı gönderir. LINQ-SQL veritabanı sonuçları döndürdüğünde, geri kendi programlama dilinde çalışabileceğiniz nesneleri sonuçları çevirir.  
@@ -113,7 +101,7 @@ LINQ-SQL, tercih ettiğiniz programlama dilini ifade edilen bir nesne modeli ili
   
  Sonraki tabloda tarafından kullanılan varsayılan türü eşlemeleri gösterir <xref:System.Data.Linq.DataContext.CreateDatabase%2A?displayProperty=nameWithType> yöntemi SQL sütun türünü tanımlamak için nesne modeli veya dış eşleme dosyası içinde tanımlanan CLR türlerine eşlemek için oluşturulur.  
   
-|CLR türü|Varsayılan SQL Server tarafından kullanılan türü<xref:System.Data.Linq.DataContext.CreateDatabase%2A?displayProperty=nameWithType>|  
+|CLR türü|Varsayılan SQL Server tarafından kullanılan türü <xref:System.Data.Linq.DataContext.CreateDatabase%2A?displayProperty=nameWithType>|  
 |--------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|  
 |<xref:System.Boolean?displayProperty=nameWithType>|`BIT`|  
 |<xref:System.Byte?displayProperty=nameWithType>|`TINYINT`|  
@@ -151,12 +139,12 @@ LINQ-SQL, tercih ettiğiniz programlama dilini ifade edilen bir nesne modeli ili
   
  Sonraki tabloda tarafından kullanılan varsayılan türü eşlemeleri gösterir <xref:System.Data.Linq.DataContext.CreateDatabase%2A?displayProperty=nameWithType> yöntemi SQL sütun türünü tanımlamak için nesne modeli veya dış eşleme dosyası içinde tanımlanan CLR türlerine eşlemek için oluşturulur.  
   
-|CLR türü|Varsayılan SQL Server tarafından kullanılan türü<xref:System.Data.Linq.DataContext.CreateDatabase%2A?displayProperty=nameWithType>|  
+|CLR türü|Varsayılan SQL Server tarafından kullanılan türü <xref:System.Data.Linq.DataContext.CreateDatabase%2A?displayProperty=nameWithType>|  
 |--------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|  
 |<xref:System.Char?displayProperty=nameWithType>|`NCHAR(1)`|  
 |<xref:System.String?displayProperty=nameWithType>|`NVARCHAR(4000)`|  
 |<xref:System.Char?displayProperty=nameWithType>[]|`NVARCHAR(4000)`|  
-|Özel tür uygulama `Parse()` ve`ToString()`|`NVARCHAR(MAX)`|  
+|Özel tür uygulama `Parse()` ve `ToString()`|`NVARCHAR(MAX)`|  
   
  Birçok diğer metin tabanlı vardır ve XML eşlemeleri seçtiğiniz, ancak bazı taşması veya veri kaybı özel durumlar için veya veritabanından çevrilirken neden olabilir. Daha fazla bilgi için bkz: [türü eşleme çalıştırma zamanı davranışı matris](#BehaviorMatrix).  
   
@@ -194,7 +182,7 @@ LINQ-SQL, tercih ettiğiniz programlama dilini ifade edilen bir nesne modeli ili
   
  Sonraki tabloda tarafından kullanılan varsayılan türü eşlemeleri gösterir <xref:System.Data.Linq.DataContext.CreateDatabase%2A?displayProperty=nameWithType> yöntemi SQL sütun türünü tanımlamak için nesne modeli veya dış eşleme dosyası içinde tanımlanan CLR türlerine eşlemek için oluşturulur.  
   
-|CLR türü|Varsayılan SQL Server tarafından kullanılan türü<xref:System.Data.Linq.DataContext.CreateDatabase%2A?displayProperty=nameWithType>|  
+|CLR türü|Varsayılan SQL Server tarafından kullanılan türü <xref:System.Data.Linq.DataContext.CreateDatabase%2A?displayProperty=nameWithType>|  
 |--------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|  
 |<xref:System.DateTime?displayProperty=nameWithType>|`DATETIME`|  
 |<xref:System.DateTimeOffset?displayProperty=nameWithType>|`DATETIMEOFFSET`|  
@@ -206,9 +194,9 @@ LINQ-SQL, tercih ettiğiniz programlama dilini ifade edilen bir nesne modeli ili
 >  SQL Server türleri `DATETIME2`, `DATETIMEOFFSET`, `DATE`, ve `TIME` Microsoft SQL Server 2008 ile başlayarak kullanılabilir. LINQ-SQL .NET Framework sürüm 3.5 SP1 ile başlayarak bu yeni türler için eşleme destekler.  
   
 ### <a name="systemdatetime"></a>System.Datetime  
- Aralık ve CLR kesinliğini <xref:System.DateTime?displayProperty=nameWithType> türü aralık ve SQL Server'ın duyarlık büyük olan `DATETIME` türü, hangi olan varsayılan türünü eşlemek için <xref:System.Data.Linq.DataContext.CreateDatabase%2A?displayProperty=nameWithType> yöntemi. Tarih aralığı dışında ilgili özel durumları önlemeye yardımcı olmak için `DATETIME`, kullanmak `DATETIME2`, Microsoft SQL Server 2008 ile başlayarak kullanılabilir olduğu. `DATETIME2`Aralık ve CLR kesinliğini eşleştirebilirsiniz <xref:System.DateTime?displayProperty=nameWithType>.  
+ Aralık ve CLR kesinliğini <xref:System.DateTime?displayProperty=nameWithType> türü aralık ve SQL Server'ın duyarlık büyük olan `DATETIME` türü, hangi olan varsayılan türünü eşlemek için <xref:System.Data.Linq.DataContext.CreateDatabase%2A?displayProperty=nameWithType> yöntemi. Tarih aralığı dışında ilgili özel durumları önlemeye yardımcı olmak için `DATETIME`, kullanmak `DATETIME2`, Microsoft SQL Server 2008 ile başlayarak kullanılabilir olduğu. `DATETIME2` Aralık ve CLR kesinliğini eşleştirebilirsiniz <xref:System.DateTime?displayProperty=nameWithType>.  
   
- SQL Server tarihleri kavramına sahip <xref:System.TimeZone>, CLR zengin desteklenen bir özellik. <xref:System.TimeZone>değerleri veritabanı olarak kaydedilir <xref:System.TimeZone> özgün bakılmaksızın dönüştürme <xref:System.DateTimeKind> bilgi. Zaman <xref:System.DateTime> değerleri veritabanından alınır, değerlerine içine olarak yüklenen bir <xref:System.DateTime> ile bir <xref:System.DateTimeKind> , <xref:System.DateTimeKind.Unspecified>. Hakkında daha fazla bilgi için desteklenen <xref:System.DateTime?displayProperty=nameWithType> yöntemleri bkz [System.DateTime yöntemleri](../../../../../../docs/framework/data/adonet/sql/linq/system-datetime-methods.md).  
+ SQL Server tarihleri kavramına sahip <xref:System.TimeZone>, CLR zengin desteklenen bir özellik. <xref:System.TimeZone> değerleri veritabanı olarak kaydedilir <xref:System.TimeZone> özgün bakılmaksızın dönüştürme <xref:System.DateTimeKind> bilgi. Zaman <xref:System.DateTime> değerleri veritabanından alınır, değerlerine içine olarak yüklenen bir <xref:System.DateTime> ile bir <xref:System.DateTimeKind> , <xref:System.DateTimeKind.Unspecified>. Hakkında daha fazla bilgi için desteklenen <xref:System.DateTime?displayProperty=nameWithType> yöntemleri bkz [System.DateTime yöntemleri](../../../../../../docs/framework/data/adonet/sql/linq/system-datetime-methods.md).  
   
 ### <a name="systemtimespan"></a>System.TimeSpan  
  Microsoft SQL Server 2008 ve .NET Framework 3.5 SP1 CLR eşlemenize olanak <xref:System.TimeSpan?displayProperty=nameWithType> türü SQL Server `TIME` türü. Ancak, aralık arasında büyük farklar yoktur, CLR <xref:System.TimeSpan?displayProperty=nameWithType> destekler ve hangi SQL Server `TIME` yazın destekler. Değerler 0'den küçük ya da 23:59:59.9999999 saatten büyük SQL eşleme `TIME` taşma özel duruma neden olur. Daha fazla bilgi için bkz: [System.TimeSpan yöntemleri](../../../../../../docs/framework/data/adonet/sql/linq/system-timespan-methods.md).  
@@ -224,13 +212,13 @@ LINQ-SQL, tercih ettiğiniz programlama dilini ifade edilen bir nesne modeli ili
 |`BINARY(50)`|<xref:System.Data.Linq.Binary?displayProperty=nameWithType>|  
 |`VARBINARY(50)`|<xref:System.Data.Linq.Binary?displayProperty=nameWithType>|  
 |`VARBINARY(MAX)`|<xref:System.Data.Linq.Binary?displayProperty=nameWithType>|  
-|`VARBINARY(MAX)`ile `FILESTREAM` özniteliği|<xref:System.Data.Linq.Binary?displayProperty=nameWithType>|  
+|`VARBINARY(MAX)` ile `FILESTREAM` özniteliği|<xref:System.Data.Linq.Binary?displayProperty=nameWithType>|  
 |`IMAGE`|<xref:System.Data.Linq.Binary?displayProperty=nameWithType>|  
 |`TIMESTAMP`|<xref:System.Data.Linq.Binary?displayProperty=nameWithType>|  
   
  Sonraki tabloda tarafından kullanılan varsayılan türü eşlemeleri gösterir <xref:System.Data.Linq.DataContext.CreateDatabase%2A?displayProperty=nameWithType> yöntemi SQL sütun türünü tanımlamak için nesne modeli veya dış eşleme dosyası içinde tanımlanan CLR türlerine eşlemek için oluşturulur.  
   
-|CLR türü|Varsayılan SQL Server tarafından kullanılan türü<xref:System.Data.Linq.DataContext.CreateDatabase%2A?displayProperty=nameWithType>|  
+|CLR türü|Varsayılan SQL Server tarafından kullanılan türü <xref:System.Data.Linq.DataContext.CreateDatabase%2A?displayProperty=nameWithType>|  
 |--------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|  
 |<xref:System.Data.Linq.Binary?displayProperty=nameWithType>|`VARBINARY(MAX)`|  
 |<xref:System.Byte?displayProperty=nameWithType>|`VARBINARY(MAX)`|  
@@ -258,7 +246,7 @@ LINQ-SQL, tercih ettiğiniz programlama dilini ifade edilen bir nesne modeli ili
   
  Sonraki tabloda tarafından kullanılan varsayılan türü eşlemeleri gösterir <xref:System.Data.Linq.DataContext.CreateDatabase%2A?displayProperty=nameWithType> yöntemi SQL sütun türünü tanımlamak için nesne modeli veya dış eşleme dosyası içinde tanımlanan CLR türlerine eşlemek için oluşturulur.  
   
-|CLR türü|Varsayılan SQL Server tarafından kullanılan türü<xref:System.Data.Linq.DataContext.CreateDatabase%2A?displayProperty=nameWithType>|  
+|CLR türü|Varsayılan SQL Server tarafından kullanılan türü <xref:System.Data.Linq.DataContext.CreateDatabase%2A?displayProperty=nameWithType>|  
 |--------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|  
 |<xref:System.Guid?displayProperty=nameWithType>|`UNIQUEIDENTIFIER`|  
 |<xref:System.Object?displayProperty=nameWithType>|`SQL_VARIANT`|  

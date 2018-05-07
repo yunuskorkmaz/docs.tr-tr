@@ -1,13 +1,6 @@
 ---
-title: "(WCF Veri Hizmetleri) denetimlere veri bağlama"
-ms.custom: 
+title: (WCF Veri Hizmetleri) denetimlere veri bağlama
 ms.date: 03/30/2017
-ms.prod: .net-framework-oob
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -16,16 +9,11 @@ helpviewer_keywords:
 - WCF Data Services, client library
 - data binding, WCF Data Services
 ms.assetid: b32e1d49-c214-4cb1-867e-88fbb3d08c8d
-caps.latest.revision: "3"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: a4f6c4d7fb657cf091c5637f110d115059055c42
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 85a50d5425b8eec0166c839440f15e31500f3984
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="binding-data-to-controls-wcf-data-services"></a>(WCF Veri Hizmetleri) denetimlere veri bağlama
 İle [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)], denetimleri gibi bağlayabilirsiniz `ComboBox` ve `ListView` örneği denetimlere <xref:System.Data.Services.Client.DataServiceCollection%601> sınıfı. Öğesinden devralınan bu koleksiyonu <xref:System.Collections.ObjectModel.ObservableCollection%601> sınıfı, verileri içeren bir [!INCLUDE[ssODataFull](../../../../includes/ssodatafull-md.md)] akış. Bu sınıf bildirimleri öğeleri eklendiğinde veya kaldırılan sağlayan dinamik veri koleksiyonunu temsil eder. Bir örneğini kullandığınızda <xref:System.Data.Services.Client.DataServiceCollection%601> veri bağlama için [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] istemci kitaplıkları tarafından izlenen nesneleri emin olmak için bu olayları işleme <xref:System.Data.Services.Client.DataServiceContext> ilişkili kullanıcı Arabirimi öğesi verilerle eşitlenmiş olarak kalır.  
@@ -92,12 +80,12 @@ ms.lasthandoff: 12/22/2017
   
  Yeni bir örneğini oluştururken <xref:System.Data.Services.Client.DataServiceCollection%601>, ilişkili nesneleri değiştirildiğinde başlatılan olayları işlemek yöntemleri temsilciler tanımlamak aşağıdaki parametreleri belirtmeniz seçeneğiniz vardır:  
   
--   `entityChanged`-bir ilişkili nesne özelliği değiştiğinde çağrılan bir yöntem. Bu <xref:System.Func%602> temsilci kabul bir <xref:System.Data.Services.Client.EntityChangedParams> nesne ve gösteren bir Boole değeri döndürür olup olmadığını çağırmak için varsayılan davranış, <xref:System.Data.Services.Client.DataServiceContext.UpdateObject%2A> üzerinde <xref:System.Data.Services.Client.DataServiceContext>, oluşmaya.  
+-   `entityChanged` -bir ilişkili nesne özelliği değiştiğinde çağrılan bir yöntem. Bu <xref:System.Func%602> temsilci kabul bir <xref:System.Data.Services.Client.EntityChangedParams> nesne ve gösteren bir Boole değeri döndürür olup olmadığını çağırmak için varsayılan davranış, <xref:System.Data.Services.Client.DataServiceContext.UpdateObject%2A> üzerinde <xref:System.Data.Services.Client.DataServiceContext>, oluşmaya.  
   
--   `entityCollectionChanged`-bir nesne eklendiğinde veya bağlama koleksiyondan kaldırıldı çağrılan bir yöntem. Bu <xref:System.Func%602> temsilci kabul bir <xref:System.Data.Services.Client.EntityCollectionChangedParams> nesne ve gösteren bir Boole değeri döndürür olup olmadığını çağırmak için varsayılan davranış, <xref:System.Data.Services.Client.DataServiceContext.AddObject%2A> için bir <xref:System.Collections.Specialized.NotifyCollectionChangedAction.Add> eylem veya <xref:System.Data.Services.Client.DataServiceContext.DeleteObject%2A> için bir <xref:System.Collections.Specialized.NotifyCollectionChangedAction.Remove> eylemini<xref:System.Data.Services.Client.DataServiceContext>, oluşmaya.  
+-   `entityCollectionChanged` -bir nesne eklendiğinde veya bağlama koleksiyondan kaldırıldı çağrılan bir yöntem. Bu <xref:System.Func%602> temsilci kabul bir <xref:System.Data.Services.Client.EntityCollectionChangedParams> nesne ve gösteren bir Boole değeri döndürür olup olmadığını çağırmak için varsayılan davranış, <xref:System.Data.Services.Client.DataServiceContext.AddObject%2A> için bir <xref:System.Collections.Specialized.NotifyCollectionChangedAction.Add> eylem veya <xref:System.Data.Services.Client.DataServiceContext.DeleteObject%2A> için bir <xref:System.Collections.Specialized.NotifyCollectionChangedAction.Remove> eylemini<xref:System.Data.Services.Client.DataServiceContext>, oluşmaya.  
   
 > [!NOTE]
->  [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)]Bu temsilci uygulayan özel davranışları hiçbir doğrulama gerçekleştirir.  
+>  [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] Bu temsilci uygulayan özel davranışları hiçbir doğrulama gerçekleştirir.  
   
  Aşağıdaki örnekte, <xref:System.Collections.Specialized.NotifyCollectionChangedAction.Remove> çağrılacak eylem özelleştirilmiş <xref:System.Data.Services.Client.DataServiceContext.DeleteLink%2A> ve <xref:System.Data.Services.Client.DataServiceContext.DeleteObject%2A> kaldırmak için yöntemi `Orders_Details` silinmiş bir ait varlıklar `Orders` varlık. Üst varlık silindiğinde bağımlı varlıkları otomatik olarak silinmez çünkü bu özel eylem gerçekleştirilir.  
   
@@ -112,15 +100,15 @@ ms.lasthandoff: 12/22/2017
 ## <a name="data-binding-with-custom-client-data-classes"></a>Veri bağlama ile özel istemci veri sınıfları  
  Nesneleri yüklemek için bir <xref:System.Data.Services.Client.DataServiceCollection%601>, nesnelerinin kendilerini uygulamalıdır <xref:System.ComponentModel.INotifyPropertyChanged> arabirimi. Veri Hizmeti kullandığınızda, oluşturulan istemci sınıfları **hizmet Başvurusu Ekle** iletişim kutusu veya [DataSvcUtil.exe](../../../../docs/framework/data/wcf/wcf-data-service-client-utility-datasvcutil-exe.md) aracı bu arabirim uygulama. Kendi istemci veri sınıfları sağlarsanız, veri bağlama için başka türde bir koleksiyonu kullanmanız gerekir. Nesneleri değiştirdiğinizde, aşağıdaki yöntemleri çağırmak için veri bağlama denetimleri olayları işlemelidir <xref:System.Data.Services.Client.DataServiceContext> sınıfı:  
   
--   <xref:System.Data.Services.Client.DataServiceContext.AddObject%2A>-Yeni bir nesne koleksiyona eklendiğinde.  
+-   <xref:System.Data.Services.Client.DataServiceContext.AddObject%2A> -Yeni bir nesne koleksiyona eklendiğinde.  
   
--   <xref:System.Data.Services.Client.DataServiceContext.DeleteObject%2A>-bir nesne koleksiyondan kaldırıldığında.  
+-   <xref:System.Data.Services.Client.DataServiceContext.DeleteObject%2A> -bir nesne koleksiyondan kaldırıldığında.  
   
--   <xref:System.Data.Services.Client.DataServiceContext.UpdateObject%2A>-ne zaman bir özelliği değiştirildiğinde koleksiyondaki bir nesne üzerinde.  
+-   <xref:System.Data.Services.Client.DataServiceContext.UpdateObject%2A> -ne zaman bir özelliği değiştirildiğinde koleksiyondaki bir nesne üzerinde.  
   
--   <xref:System.Data.Services.Client.DataServiceContext.AddLink%2A>-ilgili nesne koleksiyonu için bir nesne eklendiğinde.  
+-   <xref:System.Data.Services.Client.DataServiceContext.AddLink%2A> -ilgili nesne koleksiyonu için bir nesne eklendiğinde.  
   
--   <xref:System.Data.Services.Client.DataServiceContext.SetLink%2A>-ilgili nesneleri bir koleksiyon için bir nesne eklendiğinde.  
+-   <xref:System.Data.Services.Client.DataServiceContext.SetLink%2A> -ilgili nesneleri bir koleksiyon için bir nesne eklendiğinde.  
   
  Daha fazla bilgi için bkz: [veri hizmeti güncelleştirme](../../../../docs/framework/data/wcf/updating-the-data-service-wcf-data-services.md).  
   

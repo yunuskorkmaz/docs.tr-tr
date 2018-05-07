@@ -1,13 +1,6 @@
 ---
-title: "İz Dinleyicileri"
-ms.custom: 
+title: İz Dinleyicileri
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -21,16 +14,13 @@ helpviewer_keywords:
 - tracing [.NET Framework], trace listeners
 - logs, trace listeners
 ms.assetid: 444b0d33-67ea-4c36-9e94-79c50f839025
-caps.latest.revision: "13"
 author: mairaw
 ms.author: mairaw
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 042b8a6f7c25c34fc06d5d0bfd4ebce6417b920f
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 457310fbf12ef2d6143586116f76df1720b59a6f
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="trace-listeners"></a>İz Dinleyicileri
 Kullanırken **izleme**, **hata ayıklama** ve <xref:System.Diagnostics.TraceSource>, toplama ve gönderilen iletileri kaydetmek için bir mekanizma olması gerekir. İzleme iletileri tarafından alınan *dinleyicileri*. Toplamak, depolamak ve izleme iletilerini yönlendirmek için bir dinleyici amacı budur. Dinleyicileri İzleme çıktısı günlüğü, pencere veya metin dosyası gibi uygun bir hedefe yönlendirir.  
@@ -41,7 +31,7 @@ Kullanırken **izleme**, **hata ayıklama** ve <xref:System.Diagnostics.TraceSou
   
 -   Bir <xref:System.Diagnostics.EventLogTraceListener> çıkış için bir olay günlüğü yeniden yönlendirir.  
   
--   A <xref:System.Diagnostics.DefaultTraceListener> yayar **yazma** ve **WriteLine** iletileri için **OutputDebugString** ve **Debugger.Log** yöntemi. Visual Studio'da bu çıkış penceresinde görüntülenecek hata ayıklama iletilerini neden olur. **Başarısız** ve başarısız **Assert** iletileri de yayma için **OutputDebugString** Windows API ve **Debugger.Log** yöntemi ve ayrıca bir ileti kutusunu nedeni gösterilecek. Bu davranış için varsayılan davranıştır **hata ayıklama** ve **izleme** , çünkü iletileri **DefaultTraceListener** otomatik olarak dahil her `Listeners` Koleksiyon ve tek dinleyicisi otomatik olarak eklenir.  
+-   A <xref:System.Diagnostics.DefaultTraceListener> yayar **yazma** ve **WriteLine** iletileri için **OutputDebugString** ve **Debugger.Log** yöntemi. Visual Studio'da bu çıkış penceresinde görüntülenecek hata ayıklama iletilerini neden olur. **Başarısız** ve başarısız **Assert** iletileri de yayma için **OutputDebugString** Windows API ve **Debugger.Log** yöntemi ve ayrıca bir ileti kutusu olması neden görüntülenir. Bu davranış için varsayılan davranıştır **hata ayıklama** ve **izleme** , çünkü iletileri **DefaultTraceListener** otomatik olarak dahil her `Listeners` Koleksiyon ve tek dinleyicisi otomatik olarak eklenir.  
   
 -   A <xref:System.Diagnostics.ConsoleTraceListener> izleme veya hata ayıklama çıkışını standart çıktı veya standart hata akışı yönlendirir.  
   

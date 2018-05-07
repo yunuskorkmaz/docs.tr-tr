@@ -1,14 +1,6 @@
 ---
-title: "IMetaDataImport::EnumProperties Yöntemi"
-ms.custom: 
+title: IMetaDataImport::EnumProperties Yöntemi
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: reference
 api_name:
 - IMetaDataImport.EnumProperties
 api_location:
@@ -23,17 +15,13 @@ helpviewer_keywords:
 ms.assetid: 60573ad7-8821-4721-a068-3f7a6d25926a
 topic_type:
 - apiref
-caps.latest.revision: 
 author: mairaw
 ms.author: mairaw
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 63ff10904440f55ec3fe6fb6aa581fbf560763e0
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: ad29204e445bc61b6dc9753d594f0e4bf62930fa
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="imetadataimportenumproperties-method"></a>IMetaDataImport::EnumProperties Yöntemi
 Belirtilen TypeDef belirteç tarafından başvurulan türünün özelliklerini temsil eden PropertyDef belirteçleri numaralandırır.  
@@ -70,7 +58,7 @@ HRESULT EnumProperties (
   
 |HRESULT|Açıklama|  
 |-------------|-----------------|  
-|`S_OK`|`EnumProperties`başarıyla döndürüldü.|  
+|`S_OK`|`EnumProperties` başarıyla döndürüldü.|  
 |`S_FALSE`|Numaralandırılacak hiçbir belirteçleri vardır. Bu durumda, `pcProperties` sıfırdır.|  
   
 ## <a name="requirements"></a>Gereksinimler  
@@ -80,7 +68,7 @@ HRESULT EnumProperties (
   
  **Kitaplığı:** bir kaynak olarak MsCorEE.dll dahil  
   
- **.NET framework sürümleri:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET framework sürümleri:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
  [IMetaDataImport Arabirimi](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)  

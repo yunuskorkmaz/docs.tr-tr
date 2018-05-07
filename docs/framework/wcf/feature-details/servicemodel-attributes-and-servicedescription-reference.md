@@ -1,36 +1,22 @@
 ---
 title: ServiceModel Öznitelikleri ve ServiceDescription Başvurusu
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 ms.assetid: 4ab86b17-eab9-4846-a881-0099f9a7cc64
-caps.latest.revision: 13
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: ba8888c2a1bd3c16ab6d216c365870c0df0e499a
-ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
+ms.openlocfilehash: cc7c36ff7a1c81227f118ee7113be8f7f9eb2e9f
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/30/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="servicemodel-attributes-and-servicedescription-reference"></a>ServiceModel Öznitelikleri ve ServiceDescription Başvurusu
-*Açıklama ağaç* türleri hiyerarşisidir (ile başlayan <xref:System.ServiceModel.Description.ServiceDescription?displayProperty=nameWithType> sınıfı), bir hizmetin her açıdan birlikte açıklanmaktadır. [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] Web Hizmetleri Açıklama Dili (WSDL), XML Şeması Tanım Dili (XSD) ve ilke onaylamalarını (meta verileri) ve istemcilerin bağlanmak ve hizmeti kullanmak için kullandığı hizmet hakkında yayımlamak için geçerli bir hizmet çalışma zamanı oluşturmak için kullandığı bir açıklama ağacı çeşitli kod ve yapılandırma dosyası gösterimlerini açıklama ağaç değerleri oluşturur.  
+*Açıklama ağaç* türleri hiyerarşisidir (ile başlayan <xref:System.ServiceModel.Description.ServiceDescription?displayProperty=nameWithType> sınıfı), bir hizmetin her açıdan birlikte açıklanmaktadır. Windows Communication Foundation (WCF), Web Hizmetleri Açıklama Dili (WSDL), XML Şeması Tanım Dili (XSD) ve istemciler için kullanabilir hizmetiyle ilgili ilke onaylamalarını (meta verileri) yayımlamak için bir geçerli hizmet çalışma zamanı oluşturmak için bir açıklama ağacı kullanır. bağlanır ve hizmet kullanın ve çeşitli kod ve yapılandırma dosyası gösterimlerini açıklama ağaç değerleri oluşturmak için.  
   
  Bu konuda, nasıl sözleşme ilgili özellikler açıklanmaktadır. hizmet sözleşmesi ve nasıl uygulanan ve açıklama ağacına eklenen elde edilir. Bazı durumlarda, öznitelik değerleri davranış özelliklerine dönüştürülür ve davranışı ardından açıklama ağacına eklenir. Açıklama ağaç değerler meta verileri nasıl dönüştürülür hakkında daha fazla bilgi için bkz: [ServiceDescription ve WSDL başvurusu](../../../../docs/framework/wcf/feature-details/servicedescription-and-wsdl-reference.md).  
   
 ## <a name="mapping-operations-to-the-description-tree"></a>Açıklama ağacına işlemleri eşleme  
- İçinde [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] uygulamalar, hizmet sözleşmelerini Modellenen arabirimlerine (veya sınıflar), öznitelikler arabirimi veya sınıf ve yöntemlerinden işlemleri gruplandırması olarak işaretlemek için kullanın. Zaman bir <xref:System.ServiceModel.ServiceHost> sınıfı açıldığında, hizmet sözleşmeleri ve uygulamaları üzerinden yansıtılır ve yapılandırma bilgilerini bir açıklama ağacında birleştirilen.  
+ WCF uygulamalarında hizmet sözleşmeleri arabirimlerine (veya sınıfları) tarafından modellenir, öznitelikler arabirimi veya sınıf ve yöntemlerinden işlemleri gruplandırması olarak işaretlemek için kullanın. Zaman bir <xref:System.ServiceModel.ServiceHost> sınıfı açıldığında, hizmet sözleşmeleri ve uygulamaları üzerinden yansıtılır ve yapılandırma bilgilerini bir açıklama ağacında birleştirilen.  
   
- İşlem modelleri iki tür vardır: *parametresi* modeli ve *ileti sözleşmesi* modeli. Bir parametre veya tarafından işaretlenen dönüş değeri türü olmayan yönetilen yöntemleri parametresi modelini kullanan <xref:System.ServiceModel.MessageContractAttribute?displayProperty=nameWithType> sınıfı. Bu model, geliştiriciler, parametreleri serileştirmek denetlemek ve dönüş değerleri, ancak [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] hizmeti ve sözleşmesi için açıklama ağacı doldurmak için kullanılan değerleri oluşturur.  
+ İşlem modelleri iki tür vardır: *parametresi* modeli ve *ileti sözleşmesi* modeli. Bir parametre veya tarafından işaretlenen dönüş değeri türü olmayan yönetilen yöntemleri parametresi modelini kullanan <xref:System.ServiceModel.MessageContractAttribute?displayProperty=nameWithType> sınıfı. Bu modelde, geliştiricilerin parametreleri serileştirmek denetlemek ve dönüş değerleri, ancak WCF hizmeti ve sözleşmesi için açıklama ağacı doldurmak için kullanılan değerleri oluşturur.  
   
  Yapılandırma dosyalarında belirtilen bağlamaları yüklenirler doğrudan <xref:System.ServiceModel.Description.ServiceEndpoint.Binding%2A?displayProperty=nameWithType> özelliği.  
   

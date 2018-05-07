@@ -1,27 +1,15 @@
 ---
-title: "PropertyPath XAML Sözdizimi"
-ms.custom: 
+title: PropertyPath XAML Sözdizimi
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-wpf
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - PropertyPath object [WPF]
 - XAML [WPF], PropertyPath object
 ms.assetid: 0e3cdf07-abe6-460a-a9af-3764b4fd707f
-caps.latest.revision: "24"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 9778094eb098d1e119ef4ef0c25dd022130a11ae
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 547c7d009d2fecf863284324c7ea45006d20d20c
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="propertypath-xaml-syntax"></a>PropertyPath XAML Sözdizimi
 <xref:System.Windows.PropertyPath> Nesnesi destekler karmaşık bir satır içi [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] ele çeşitli özelliklerini ayarlamak için sözdizimi <xref:System.Windows.PropertyPath> değer türü. Bu konuda belgeleri <xref:System.Windows.PropertyPath> bağlama ve animasyon sözdizimleri uygulanan olarak sözdizimi.  
@@ -29,7 +17,7 @@ ms.lasthandoff: 12/22/2017
   
 <a name="where"></a>   
 ## <a name="where-propertypath-is-used"></a>PropertyPath nerede kullanılır  
- <xref:System.Windows.PropertyPath>birkaç içinde kullanılan yaygın bir nesnedir [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] özellikleri. Ortak kullanarak rağmen <xref:System.Windows.PropertyPath> her kullanımları özelliği yol bilgileri iletmek için alan özellik nerede <xref:System.Windows.PropertyPath> farklı bir tür olarak kullanılır. Bu nedenle, özellik başına temelinde sözdizimleri belge daha pratik olur.  
+ <xref:System.Windows.PropertyPath> birkaç içinde kullanılan yaygın bir nesnedir [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] özellikleri. Ortak kullanarak rağmen <xref:System.Windows.PropertyPath> her kullanımları özelliği yol bilgileri iletmek için alan özellik nerede <xref:System.Windows.PropertyPath> farklı bir tür olarak kullanılır. Bu nedenle, özellik başına temelinde sözdizimleri belge daha pratik olur.  
   
  Öncelikle, [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] kullandığı <xref:System.Windows.PropertyPath> nesne veri kaynağının özelliklerini geçiş için nesne modeli yollarını açıklar ve hedeflenen animasyonları hedef yolu açıklamak için.  
   
@@ -39,7 +27,7 @@ ms.lasthandoff: 12/22/2017
 ## <a name="propertypath-for-objects-in-data-binding"></a>Veri bağlama nesneler için PropertyPath  
  Veri bağlama bir [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] herhangi bir bağımlılık özelliğinin hedef değer bağlayabilirsiniz aslına özelliği. Ancak, böyle bir veri bağlama kaynağı bağımlılık özelliği olması gerekmez; Geçerli veri sağlayıcısı tarafından tanınan herhangi bir özellik türü olabilir. Özellik yolları için kullanılan özellikle <xref:System.Windows.Data.ObjectDataProvider>, bağlama kaynaklardan almak için kullanılan [!INCLUDE[TLA#tla_clr](../../../../includes/tlasharptla-clr-md.md)] nesneler ve onların özellikleri.  
   
- Bu veri bağlama Not [!INCLUDE[TLA#tla_xml](../../../../includes/tlasharptla-xml-md.md)] kullanmayan <xref:System.Windows.PropertyPath>kullanmaz çünkü <xref:System.Windows.Data.Binding.Path%2A> içinde <xref:System.Windows.Data.Binding>. Bunun yerine, kullandığınız <xref:System.Windows.Data.Binding.XPath%2A> ve geçerli XPath sözdizimine belirtin [!INCLUDE[TLA#tla_xmldom](../../../../includes/tlasharptla-xmldom-md.md)] verileri. <xref:System.Windows.Data.Binding.XPath%2A>bir dize olarak da belirtilmiş, ancak burada belgelenmemiştir; bkz: [XML verileri kullanarak bir XMLDataProvider ve XPath sorguları bağlamak](../../../../docs/framework/wpf/data/how-to-bind-to-xml-data-using-an-xmldataprovider-and-xpath-queries.md).  
+ Bu veri bağlama Not [!INCLUDE[TLA#tla_xml](../../../../includes/tlasharptla-xml-md.md)] kullanmayan <xref:System.Windows.PropertyPath>kullanmaz çünkü <xref:System.Windows.Data.Binding.Path%2A> içinde <xref:System.Windows.Data.Binding>. Bunun yerine, kullandığınız <xref:System.Windows.Data.Binding.XPath%2A> ve geçerli XPath sözdizimine belirtin [!INCLUDE[TLA#tla_xmldom](../../../../includes/tlasharptla-xmldom-md.md)] verileri. <xref:System.Windows.Data.Binding.XPath%2A> bir dize olarak da belirtilmiş, ancak burada belgelenmemiştir; bkz: [XML verileri kullanarak bir XMLDataProvider ve XPath sorguları bağlamak](../../../../docs/framework/wpf/data/how-to-bind-to-xml-data-using-an-xmldataprovider-and-xpath-queries.md).  
   
  Veri bağlama özelliği yollarında anlamak için bir tek bir özellik değerine bağlamayı hedefleyebilirsiniz veya bunun yerine listeler veya koleksiyonlar alan hedef özellikleri bağlayabilirsiniz anahtardır. Koleksiyonları bağlanıyorsanız, örneğin bağlama bir <xref:System.Windows.Controls.ListBox> , genişletin kaç tane veri öğelerini koleksiyonda yer alan bağlı olarak, sonra da özellik yolu başvurması gereken bireysel koleksiyon öğeleri, koleksiyon nesnesi. Veri bağlama altyapısı veri bağlama hedefi türünü otomatik olarak doldurma gibi davranış kaynaklanan kaynağı olarak kullanılan koleksiyonu eşleşir bir <xref:System.Windows.Controls.ListBox> ile öğeleri dizi.  
   
@@ -59,7 +47,7 @@ ms.lasthandoff: 12/22/2017
 <Binding Path="[key]" .../>  
 ```  
   
- `key`bir sözlük veya karma tablosu yazılan dizine veya tamsayı dizini dizi olması gerekir. Ayrıca, anahtarın değerini uygulanmış burada özellik için doğrudan bağlanabilir bir türü olmalıdır. Örneğin, dize anahtarları ve dize değerlerini içeren bir karma tablosu bu şekilde için metin bağlamak için kullanılabilir bir <xref:System.Windows.Controls.TextBox>. Veya, bir toplama veya alt dizin anahtarı işaret ediyorsa, bir hedef koleksiyon özelliğine bağlamak için bu söz dizimini kullanabilirsiniz. Aksi halde, bir söz dizimi aracılığıyla belirli bir özellik gibi başvurmanız gerekir `<Binding Path="[``key``].``propertyName``" .../>`.  
+ `key` bir sözlük veya karma tablosu yazılan dizine veya tamsayı dizini dizi olması gerekir. Ayrıca, anahtarın değerini uygulanmış burada özellik için doğrudan bağlanabilir bir türü olmalıdır. Örneğin, dize anahtarları ve dize değerlerini içeren bir karma tablosu bu şekilde için metin bağlamak için kullanılabilir bir <xref:System.Windows.Controls.TextBox>. Veya, bir toplama veya alt dizin anahtarı işaret ediyorsa, bir hedef koleksiyon özelliğine bağlamak için bu söz dizimini kullanabilirsiniz. Aksi halde, bir söz dizimi aracılığıyla belirli bir özellik gibi başvurmanız gerekir `<Binding Path="[``key``].``propertyName``" .../>`.  
   
  Gerekirse dizin türünü belirtebilirsiniz. Bir dizin oluşturulmuş özellik yolunun bu yönünün hakkında daha fazla bilgi için bkz: <xref:System.Windows.Data.Binding.Path%2A?displayProperty=nameWithType>.  
   
@@ -70,7 +58,7 @@ ms.lasthandoff: 12/22/2017
 <Binding Path="propertyName.propertyName2" .../>  
 ```  
   
- `propertyName`Geçerli bir özellik adı çözülmesi gerekir <xref:System.Windows.FrameworkElement.DataContext%2A>. Yol özellikleri `propertyName` ve `propertyName2` bir ilişkide mevcut herhangi bir özellik olabilir nerede `propertyName2` değeri türünde bulunan bir özelliktir `propertyName`.  
+ `propertyName` Geçerli bir özellik adı çözülmesi gerekir <xref:System.Windows.FrameworkElement.DataContext%2A>. Yol özellikleri `propertyName` ve `propertyName2` bir ilişkide mevcut herhangi bir özellik olabilir nerede `propertyName2` değeri türünde bulunan bir özelliktir `propertyName`.  
   
 <a name="singleattached"></a>   
 ### <a name="single-property-attached-or-otherwise-type-qualified"></a>Ekli veya yetkili türde tek özelliği  
@@ -79,7 +67,7 @@ ms.lasthandoff: 12/22/2017
 <object property="(ownerType.propertyName)" .../>  
 ```  
   
- Parantez belirtmek bu özellikte bir <xref:System.Windows.PropertyPath> kısmi nitelik kullanılarak oluşturulması. Bir XML ad alanı, uygun bir eşleşme türüyle bulmak için kullanabilirsiniz. `ownerType` Aramaları türleri bir [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] işlemciye sahip erişimi ile <xref:System.Windows.Markup.XmlnsDefinitionAttribute> her derleme bildirimlerinde. Çoğu uygulama eşlenmiş varsayılan XML ad alanına sahip [!INCLUDE[TLA#tla_wpfxmlnsv1](../../../../includes/tlasharptla-wpfxmlnsv1-md.md)] bir önek genellikle yalnızca özel türleri için gerekli olan veya aksi halde bu ad alanı dışında türleri için ad.  `propertyName`Mevcut bir özellik adı çözülmesi gerekir `ownerType`. Bu sözdizimi genellikle aşağıdaki durumlardan biri için kullanılır:  
+ Parantez belirtmek bu özellikte bir <xref:System.Windows.PropertyPath> kısmi nitelik kullanılarak oluşturulması. Bir XML ad alanı, uygun bir eşleşme türüyle bulmak için kullanabilirsiniz. `ownerType` Aramaları türleri bir [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] işlemciye sahip erişimi ile <xref:System.Windows.Markup.XmlnsDefinitionAttribute> her derleme bildirimlerinde. Çoğu uygulama eşlenmiş varsayılan XML ad alanına sahip [!INCLUDE[TLA#tla_wpfxmlnsv1](../../../../includes/tlasharptla-wpfxmlnsv1-md.md)] bir önek genellikle yalnızca özel türleri için gerekli olan veya aksi halde bu ad alanı dışında türleri için ad.  `propertyName` Mevcut bir özellik adı çözülmesi gerekir `ownerType`. Bu sözdizimi genellikle aşağıdaki durumlardan biri için kullanılır:  
   
 -   Yolun belirtilen [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] bir stil veya belirtilen bir hedef türü yok şablonda olmasıdır. Tam bir kullanım stil olmayan, şablon olmayan durumlarda bir örneği, bir türde bir özellik var olmadığından genellikle Bunun dışındaki durumlarda geçerli değil.  
   
@@ -166,7 +154,7 @@ or
 <animation Storyboard.TargetProperty="propertyName" .../>  
 ```  
   
- `propertyName`Belirtilen adda bir bağımlılık özelliğinin adını çözülmesi gerekir <xref:System.Windows.Media.Animation.Storyboard.TargetName%2A> türü.  
+ `propertyName` Belirtilen adda bir bağımlılık özelliğinin adını çözülmesi gerekir <xref:System.Windows.Media.Animation.Storyboard.TargetName%2A> türü.  
   
 <a name="indirectanim"></a>   
 ### <a name="indirect-property-targeting"></a>Dolaylı özellik hedeflemesi  
@@ -175,9 +163,9 @@ or
 <animation Storyboard.TargetProperty="propertyName.propertyName2" .../>  
 ```  
   
- `propertyName`herhangi bir özellik olmalıdır bir <xref:System.Windows.Freezable> değer türü veya belirtilen mevcut bir temel <xref:System.Windows.Media.Animation.Storyboard.TargetName%2A> türü.  
+ `propertyName` herhangi bir özellik olmalıdır bir <xref:System.Windows.Freezable> değer türü veya belirtilen mevcut bir temel <xref:System.Windows.Media.Animation.Storyboard.TargetName%2A> türü.  
   
- `propertyName2`değeri olan nesnede bulunan bir bağımlılık özelliği adı olmalıdır `propertyName`. Diğer bir deyişle, `propertyName2` türü üzerinde bir bağımlılık özelliği olarak mevcut olmalıdır `propertyName` <xref:System.Windows.DependencyProperty.PropertyType%2A>.  
+ `propertyName2` değeri olan nesnede bulunan bir bağımlılık özelliği adı olmalıdır `propertyName`. Diğer bir deyişle, `propertyName2` türü üzerinde bir bağımlılık özelliği olarak mevcut olmalıdır `propertyName` <xref:System.Windows.DependencyProperty.PropertyType%2A>.  
   
  Animasyonların dolaylı hedeflemesi uygulanan stiller ve şablonları nedeniyle gereklidir. Bir animasyon hedeflemek için gereksinim duyduğunuz bir <xref:System.Windows.Media.Animation.Storyboard.TargetName%2A> hedef nesne ve, ad tarafından oluşturulur [x: Name](../../../../docs/framework/xaml-services/x-name-directive.md) veya <xref:System.Windows.FrameworkElement.Name%2A>. Şablon ve stil öğeleri de adlara sahip olsa da, bu adları yalnızca stil ve şablon isim alanı içinde geçerlidir. (Şablonlar ve stiller uygulama biçimlendirmesi ile ad kapsamları paylaşıyorsa, adlarının benzersiz olması uygulanamadı. Stilleri ve şablonları tam anlamıyla örnekleri arasında paylaşılır ve yinelenen adlara neden olabilir.) Ayrı ayrı özellikler animasyon eklemek istediğiniz bir öğenin bir stil veya şablondan geliyorsa, bu nedenle, bir stil şablonundan olmayan adlandırılmış öğesi örnek ile başlayın ve özellik gelmesi stili veya şablon görsel ağaç içine hedef yapmanız animasyon istiyor.  
   
@@ -190,7 +178,7 @@ or
 <animation Storyboard.TargetProperty="(ownerType.propertyName)" .../>  
 ```  
   
- Parantez belirtmek bu özellikte bir <xref:System.Windows.PropertyPath> kısmi nitelik kullanılarak oluşturulması. Bir XML ad alanı, tür bulmak için kullanabilirsiniz. `ownerType` Aramaları türleri bir [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] işlemciye sahip erişimi ile <xref:System.Windows.Markup.XmlnsDefinitionAttribute> her derleme bildirimlerinde. Çoğu uygulama eşlenmiş varsayılan XML ad alanına sahip [!INCLUDE[TLA#tla_wpfxmlnsv1](../../../../includes/tlasharptla-wpfxmlnsv1-md.md)] bir önek genellikle yalnızca özel türleri için gerekli olan veya aksi halde bu ad alanı dışında türleri için ad. `propertyName`Mevcut bir özellik adı çözülmesi gerekir `ownerType`. Olarak belirtilen özellik `propertyName` olmalıdır bir <xref:System.Windows.DependencyProperty>. (Tüm [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] Bu sorun yalnızca özel ekli özellikler kaygısı, böylece ekli özellikler bağımlılık özelliği olarak uygulanır.)  
+ Parantez belirtmek bu özellikte bir <xref:System.Windows.PropertyPath> kısmi nitelik kullanılarak oluşturulması. Bir XML ad alanı, tür bulmak için kullanabilirsiniz. `ownerType` Aramaları türleri bir [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] işlemciye sahip erişimi ile <xref:System.Windows.Markup.XmlnsDefinitionAttribute> her derleme bildirimlerinde. Çoğu uygulama eşlenmiş varsayılan XML ad alanına sahip [!INCLUDE[TLA#tla_wpfxmlnsv1](../../../../includes/tlasharptla-wpfxmlnsv1-md.md)] bir önek genellikle yalnızca özel türleri için gerekli olan veya aksi halde bu ad alanı dışında türleri için ad. `propertyName` Mevcut bir özellik adı çözülmesi gerekir `ownerType`. Olarak belirtilen özellik `propertyName` olmalıdır bir <xref:System.Windows.DependencyProperty>. (Tüm [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] Bu sorun yalnızca özel ekli özellikler kaygısı, böylece ekli özellikler bağımlılık özelliği olarak uygulanır.)  
   
 <a name="indexanim"></a>   
 ### <a name="indexers"></a>Dizin Oluşturucular  

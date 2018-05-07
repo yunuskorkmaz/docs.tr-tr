@@ -1,21 +1,15 @@
 ---
-title: "İfadeler (C# Programlama Kılavuzu)"
+title: İfadeler (C# Programlama Kılavuzu)
 ms.date: 05/11/2017
-ms.prod: .net
-ms.technology: devlang-csharp
-ms.topic: article
 helpviewer_keywords:
 - expressions [C#]
 - C# language, expressions
 ms.assetid: c7d8feb0-0e58-4f94-8bf6-4d070550a832
-caps.latest.revision: "22"
-author: BillWagner
-ms.author: wiwagn
-ms.openlocfilehash: 579851b8c72595ffa5b4cf8267fdc73cd2823d0f
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 830c68e6857e72fe19099753ba57a7e22491af2c
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="expressions-c-programming-guide"></a>İfadeler (C# Programlama Kılavuzu)
 Bir *ifade* bir veya daha fazla işlenenler ve tek bir değer, nesne, yöntemi veya ad alanı için değerlendirilen sıfır veya daha fazla işleçleri dizisidir. Değişmez değer, bir yöntem çağrısının, bir işleç ve kendi işlenenler ifadeleri oluşabilir veya *basit bir ad*. Basit adları bir değişken, türü üyesinin, yöntem parametresi, ad alanı veya türü adı olabilir.  
@@ -77,8 +71,8 @@ C# destekler *ifade bodied üyeleri*, yöntemleri, Oluşturucular, sonlandırıc
  Değişken, nesnenin özellik veya nesne dizin oluşturucu erişimi ifadeden tanımlanır olduğunda, bu öğenin değeri ifade değeri olarak kullanılır. Bir ifade C bir değer veya nesne gerekli olduğu # içinde herhangi bir yere deyimi için gerekli tür sonuçta değerlendirir sürece yerleştirilebilir.  
 
 ## <a name="see-also"></a>Ayrıca bkz.  
- [C# programlama kılavuzu](../../../csharp/programming-guide/index.md)  
- [Yöntemleri](../../../csharp/programming-guide/classes-and-structs/methods.md)  
+ [C# Programlama Kılavuzu](../../../csharp/programming-guide/index.md)  
+ [Yöntemler](../../../csharp/programming-guide/classes-and-structs/methods.md)  
  [Temsilciler](../../../csharp/programming-guide/delegates/index.md)  
  [İşleçler](../../../csharp/programming-guide/statements-expressions-operators/operators.md)  
  [Türler](../../../csharp/programming-guide/types/index.md)  

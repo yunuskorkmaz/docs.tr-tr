@@ -1,34 +1,22 @@
 ---
-title: "Nasıl yapılır: WCF Hizmetini ASP.NET Web Hizmeti İstemcileriyle Birlikte Çalışmak için Yapılandırma"
-ms.custom: 
+title: 'Nasıl yapılır: WCF Hizmetini ASP.NET Web Hizmeti İstemcileriyle Birlikte Çalışmak için Yapılandırma'
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
 ms.assetid: 48e1cd90-de80-4d6c-846e-631878955762
-caps.latest.revision: "11"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: b4bd1dce4128e6f25294525f10226d98f732cd4e
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 12c5645b53e8e931edabc1a13fc1749e40538044
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-configure-wcf-service-to-interoperate-with-aspnet-web-service-clients"></a>Nasıl yapılır: WCF Hizmetini ASP.NET Web Hizmeti İstemcileriyle Birlikte Çalışmak için Yapılandırma
-Yapılandırmak için bir [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] birlikte çalışabilir olmasını Hizmeti uç noktası [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] Web hizmeti istemcileri, kullanın <xref:System.ServiceModel.BasicHttpBinding?displayProperty=nameWithType> türü olarak hizmet uç noktası için bağlama türü.  
+Birlikte çalışabilir olması için bir Windows Communication Foundation (WCF) Hizmeti uç noktası yapılandırmak için [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] Web hizmeti istemcileri, kullanın <xref:System.ServiceModel.BasicHttpBinding?displayProperty=nameWithType> türü olarak hizmet uç noktası için bağlama türü.  
   
- İsteğe bağlı olarak, HTTPS ve bağlama üzerinde aktarım düzeyinde istemci kimlik doğrulaması için destek de etkinleştirebilirsiniz. [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)]Web hizmeti istemcileri desteklemediği ileti MTOM kodlama, böylece <xref:System.ServiceModel.BasicHttpBinding.MessageEncoding%2A?displayProperty=nameWithType> özelliği olan varsayılan değer olarak sol <xref:System.ServiceModel.WSMessageEncoding.Text?displayProperty=nameWithType>. ASP.Net Web hizmeti istemcileri desteklemediği WS-Security, böylece <xref:System.ServiceModel.BasicHttpBinding.Security%2A?displayProperty=nameWithType> ayarlanmalı <xref:System.ServiceModel.BasicHttpSecurityMode.Transport>.  
+ İsteğe bağlı olarak, HTTPS ve bağlama üzerinde aktarım düzeyinde istemci kimlik doğrulaması için destek de etkinleştirebilirsiniz. [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] Web hizmeti istemcileri desteklemediği ileti MTOM kodlama, böylece <xref:System.ServiceModel.BasicHttpBinding.MessageEncoding%2A?displayProperty=nameWithType> özelliği olan varsayılan değer olarak sol <xref:System.ServiceModel.WSMessageEncoding.Text?displayProperty=nameWithType>. ASP.Net Web hizmeti istemcileri desteklemediği WS-Security, böylece <xref:System.ServiceModel.BasicHttpBinding.Security%2A?displayProperty=nameWithType> ayarlanmalı <xref:System.ServiceModel.BasicHttpSecurityMode.Transport>.  
   
- İçin meta verileri oluşturmak için bir [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] hizmeti için kullanılabilir [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] Web hizmeti proxy üretimi Araçları (diğer bir deyişle, [Web Hizmetleri Açıklama Dili Aracı (Wsdl.exe)](http://go.microsoft.com/fwlink/?LinkId=73833), [Web Hizmetleri bulma Aracı () Disco.exe)](http://go.microsoft.com/fwlink/?LinkId=73834)ve Visual Studio Web Başvuru Ekle özelliğinde), bir HTTP/GET meta veri uç noktasının maruz bırakmamalısınız.  
+ Bir WCF hizmeti için meta veriler kullanılabilir hale getirmek için [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] Web hizmeti proxy üretimi Araçları (diğer bir deyişle, [Web Hizmetleri Açıklama Dili Aracı (Wsdl.exe)](http://go.microsoft.com/fwlink/?LinkId=73833), [Web Hizmetleri bulma Aracı (Disco.exe)](http://go.microsoft.com/fwlink/?LinkId=73834)ve Visual Studio Web Başvuru Ekle özelliğinde), bir HTTP/GET meta veri uç noktasının maruz bırakmamalısınız.  
   
 ### <a name="to-add-a-wcf-endpoint-that-is-compatible-with-aspnet-web-service-clients-in-code"></a>ASP.NET Web hizmeti istemcileri kodda ile uyumlu bir WCF uç noktası eklemek için  
   
@@ -51,7 +39,7 @@ Yapılandırmak için bir [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)
 4.  Hizmetiniz için bir HTTP/GET meta veri uç nokta etkinleştirin. Ayrıntılar için bkz: [nasıl yapılır: bir yapılandırma dosyası kullanarak bir hizmet için meta veri yayımlama](../../../../docs/framework/wcf/feature-details/how-to-publish-metadata-for-a-service-using-a-configuration-file.md).  
   
 ## <a name="example"></a>Örnek  
- Aşağıdaki kod örneği nasıl ekleneceği gösterilmektedir bir [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] ile uyumlu uç nokta [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] Web hizmeti istemcileri kodda ve alternatif olarak yapılandırma dosyalarında.  
+ Aşağıdaki kod örneği ile uyumlu bir WCF uç noktası eklemek gösterilmiştir [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] Web hizmeti istemcileri kodda ve alternatif olarak yapılandırma dosyalarında.  
   
  [!code-csharp[C_HowTo-WCFServiceAndASMXClient#0](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_howto-wcfserviceandasmxclient/cs/program.cs#0)] 
  [!code-vb[C_HowTo-WCFServiceAndASMXClient#0](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_howto-wcfserviceandasmxclient/vb/program.vb#0)] 

@@ -1,35 +1,28 @@
 ---
 title: Erişim Değiştiricileri (C# Programlama Kılavuzu)
 ms.date: 07/20/2015
-ms.prod: .net
-ms.technology:
-- devlang-csharp
-ms.topic: article
 helpviewer_keywords:
 - C# Language, access modifiers
 - access modifiers [C#], about
 ms.assetid: 6e81ee82-224f-4a12-9baf-a0dca2656c5b
-caps.latest.revision: 32
-author: BillWagner
-ms.author: wiwagn
-ms.openlocfilehash: a567dea6418ff9cfc94c8180a88c872bcf4c96a4
-ms.sourcegitcommit: 39b65a49271e082add68cb737b48fdbe09d24718
+ms.openlocfilehash: ec275d4782fee047b16fd114c4d22ceb03eecb11
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/30/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="access-modifiers-c-programming-guide"></a>Erişim Değiştiricileri (C# Programlama Kılavuzu)
 Tüm türleri ve tür üyeleri derlemenizi veya diğer derlemelerden diğer koddan kullanılabilmesi için olup olmadığını denetleyen bir erişilebilirlik düzeyi vardır. Aşağıdaki erişim değiştiricileri bildirirken ne zaman bir tür veya üye erişilebilirliğini belirtmek için kullanabilirsiniz:  
   
- [Ortak](../../../csharp/language-reference/keywords/public.md)  
+ [public](../../../csharp/language-reference/keywords/public.md)  
  Tür veya üye, başka bir kod aynı bütünleştirilmiş kodda ya da başvurduğu başka bir derleme tarafından erişilebilir. 
   
- [Özel](../../../csharp/language-reference/keywords/private.md)  
+ [private](../../../csharp/language-reference/keywords/private.md)  
  Tür veya üye, yalnızca aynı sınıfta veya yapı kodda tarafından erişilebilir.  
   
- [korumalı](../../../csharp/language-reference/keywords/protected.md)  
+ [protected](../../../csharp/language-reference/keywords/protected.md)  
  Tür veya üye yalnızca kodu aynı sınıfın veya bu sınıftan türetilmiş bir sınıf tarafından erişilebilir.  
- [İç](../../../csharp/language-reference/keywords/internal.md)  
+ [internal](../../../csharp/language-reference/keywords/internal.md)  
  Tür veya üye, herhangi bir kod aynı bütünleştirilmiş kodda değiştirebilir, ancak başka bir derleme tarafından erişilebilir.  
   
  [İç korumalı](../../../csharp/language-reference/keywords/protected-internal.md) tür veya üye, bildirildiği veya içinden bütünleştirilmiş kod tarafından erişilebilecek başka bir derleme türetilen bir sınıfta. 
@@ -80,15 +73,15 @@ Tüm türleri ve tür üyeleri derlemenizi veya diğer derlemelerden diğer kodd
  [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [C# programlama kılavuzu](../../../csharp/programming-guide/index.md)  
- [Sınıflar ve yapılar](../../../csharp/programming-guide/classes-and-structs/index.md)  
- [Arabirimleri](../../../csharp/programming-guide/interfaces/index.md)  
- [Özel](../../../csharp/language-reference/keywords/private.md)  
- [Ortak](../../../csharp/language-reference/keywords/public.md)  
- [İç](../../../csharp/language-reference/keywords/internal.md)  
- [korumalı](../../../csharp/language-reference/keywords/protected.md)  
- [İç korumalı](../../../csharp/language-reference/keywords/protected-internal.md)  
- [Özel korumalı](../../../csharp/language-reference/keywords/private-protected.md)  
- [sınıfı](../../../csharp/language-reference/keywords/class.md)  
- [yapısı](../../../csharp/language-reference/keywords/struct.md)  
- [arabirimi](../../../csharp/language-reference/keywords/interface.md)
+ [C# Programlama Kılavuzu](../../../csharp/programming-guide/index.md)  
+ [Sınıflar ve Yapılar](../../../csharp/programming-guide/classes-and-structs/index.md)  
+ [Arabirimler](../../../csharp/programming-guide/interfaces/index.md)  
+ [private](../../../csharp/language-reference/keywords/private.md)  
+ [public](../../../csharp/language-reference/keywords/public.md)  
+ [internal](../../../csharp/language-reference/keywords/internal.md)  
+ [protected](../../../csharp/language-reference/keywords/protected.md)  
+ [protected internal](../../../csharp/language-reference/keywords/protected-internal.md)  
+ [private protected](../../../csharp/language-reference/keywords/private-protected.md)  
+ [class](../../../csharp/language-reference/keywords/class.md)  
+ [struct](../../../csharp/language-reference/keywords/struct.md)  
+ [interface](../../../csharp/language-reference/keywords/interface.md)

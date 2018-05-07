@@ -1,36 +1,22 @@
 ---
 title: Araçlar
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 ms.assetid: 89c907f9-313f-408c-992a-631f1eadf1da
-caps.latest.revision: ''
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 5badbb9142261fc1dc6c2b2d5af3c89c7af776b6
-ms.sourcegitcommit: c883637b41ee028786edceece4fa872939d2e64c
+ms.openlocfilehash: 6c4ada74c2fc6aba84eb1fe46f4d7cdee9978d13
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/26/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="tools"></a>Araçlar
-Bu konu tarafından oluşturulan tüm özel durumları listeler [!INCLUDE[indigo1](../../../../../includes/indigo1-md.md)] araçları.  
+Bu konu, Windows Communication Foundation (WCF) araçları tarafından oluşturulan tüm özel durumları listeler.  
   
 ## <a name="exception-list"></a>Özel durum listesi  
   
 |Kaynak kodu|Kaynak dizesi|  
 |-------------------|---------------------|  
 |ParametersTarget|\<Enum >|  
-|ParametersToolConfig|\<configFile>|  
+|ParametersToolConfig|\<configFile >|  
 |ErrInvalidPath|Belirtilen geçersiz bir yol değil. Belirtilen bağımsız değişken denetleyin.|  
 |ParametersReference|\<dosya yolu >|  
 |WrnCannotLoadConfigFileForValidation|Yapılandırma dosyası işleme belirtilen konumdan yüklenirken bir hata oluştu. Bu yapılandırma dosyasında tanımlanan Hizmetleri doğrulanamıyor.|  
@@ -64,7 +50,7 @@ Bu konu tarafından oluşturulan tüm özel durumları listeler [!INCLUDE[indigo
 |ErrCannotCreateDirectory|Belirtilen dizin oluşturulamıyor.|  
 |ErrCouldNotLoadTypesFromAssemblyAt|Belirtilen derlemedeki herhangi bir türü yüklenemiyor.|  
 |ErrUnknownSwitch|Belirtilen anahtarı tanınmayan bir seçenek değil.|  
-|Logo|Aracı logosu "Microsoft® hizmet modeli meta verileri" sürümüyle aracıdır.|  
+|logosu|Aracı logosu "Microsoft® hizmet modeli meta verileri" sürümüyle aracıdır.|  
 |NoCodeWasGenerated|Hiçbir kod oluşturuldu.<br /><br /> Bir istemci oluşturmaya çalışıyorsanız, meta veri belgelerini herhangi bir geçerli sözleşme veya Hizmetleri içermiyordu olmasından kaynaklanabilir<br /><br /> veya tüm sözleşmeleri/Hizmetleri başvuru derlemelerde mevcut bulunan olduğundan. Tüm meta veri belgelerini aracına geçirilen doğrulayın.|  
 |WrnUnableToLoadContractForSGen|Bir sözleşme türü yüklenirken bir hata oluştu. Bu sözleşme XmlSerializer türü üretilemiyor. Türünü ve ayrıntılarını belirtilir.|  
 |WrnOptionConflictsWithInput|Belirtilen seçenek birden çok giriş derlemeleri ile kullanılamaz. Belirtilen seçenek göz ardı edilir.|  
@@ -88,7 +74,7 @@ Bu konu tarafından oluşturulan tüm özel durumları listeler [!INCLUDE[indigo
 |ErrInputConflictsWithMode|Belirtilen okuma giriş diğer seçenekleri ile tutarsız.|  
 |ErrDuplicateValuePassedToTypeArg|Belirtilen değer belirtilen seçeneğine birden çok kez geçirildi. Her tür yalnızca bir kez belirtilebilir.|  
 |ErrInputEPRFileParseError|Bitiş noktası başvurusu belirtilen okuyamaz. XML doğru biçimlendirilmiş ve geçerli olduğunu doğrulayın.|  
-|ErrCouldNotCreateCodeProvider|Kod sağlayıcının /{1} bağımsız değişken geçirildi belirtilen değeri, oluşturulamıyor. Kod sağlayıcının düzgün yüklenmiş ve yapılandırılmış olduğundan emin olun.|  
+|ErrCouldNotCreateCodeProvider|Kod sağlayıcının geçirilmedi belirtilen değeri, oluşturulamıyor /{1} bağımsız değişkeni. Kod sağlayıcının düzgün yüklenmiş ve yapılandırılmış olduğundan emin olun.|  
 |ErrPathTooLongDirOnly|Sonuç belirtilen yol çok uzun. Belirtilen bağımsız değişken gözden geçirin.|  
 |HelpDataContractSerializer|Serileştirme ve seri durumundan çıkarma için DataContract seri hale getirici kullanın veri türleri oluşturur.|  
 |ErrUnableToExportEndpoint|Derleme için yüklenen yapılandırma dosyasında bulunan belirtilen hizmet türü belirtilen ad alanında belirtilen uç nokta adı dışarı aktarılırken bir hata oluştu.|  
@@ -100,7 +86,7 @@ Bu konu tarafından oluşturulan tüm özel durumları listeler [!INCLUDE[indigo
 |ErrDirectoryNotFound|Belirtilen dizin bulunamıyor. Dizinin var olduğunu ve okumak için uygun izinlere sahip olduğunu doğrulayın.|  
 |ErrUnableToLoadFile|Belirtilen dosya okunamıyor.|  
 |ErrNoFilesFound|Belirtilen giriş yol mevcut dosyaların başvurmak için görünmez.|  
-|ParametersConfig|\<configFile>|  
+|ParametersConfig|\<configFile >|  
 |ErrDirectoryInsteadOfFile|Belirtilen giriş yol bir dizin gibi görünüyor. Giriş URL'leri veya dosya yolları olmalıdır.|  
 |HelpConfig|Sağlanan adda bir yapılandırma dosyası oluşturmak için Araçlar bildirir. Varsayılan: output.config.|  
 |ErrSingleUseSwitch|Belirtilen seçenek birden çok kez belirtilemez.|  

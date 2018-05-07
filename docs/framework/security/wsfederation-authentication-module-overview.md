@@ -1,24 +1,14 @@
 ---
-title: "WSFederation kimlik doğrulama Modülü'ne genel bakış"
-ms.custom: 
+title: WSFederation kimlik doğrulama Modülü'ne genel bakış
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 02c4d5e8-f0a7-49ee-9cf5-3647578510ad
-caps.latest.revision: "6"
 author: BrucePerlerMS
-ms.author: bruceper
 manager: mbaldwin
-ms.workload: dotnet
-ms.openlocfilehash: b9e76cbfc0afc682f6a7cd0bc95c254d25f77954
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: abfd211629c3c77c87cbefbc27c6b18ab6872977
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="wsfederation-authentication-module-overview"></a>WSFederation kimlik doğrulama Modülü'ne genel bakış
 Windows Identity Foundation (WIF) WS-Federated kimlik doğrulama Modülü (WS-FAM) aracılığıyla ASP.NET uygulamalarında federe kimlik doğrulaması için destek içerir. Bu konu, nasıl federe kimlik doğrulaması çalışır ve nasıl kullanılacağını anlamanıza yardımcı olur.  
@@ -41,7 +31,7 @@ Windows Identity Foundation (WIF) WS-Federated kimlik doğrulama Modülü (WS-FA
 6.  RP güvenlik belirteci istemcinin talep ayıklar ve bir yetkilendirme kararı verir.  
   
 ### <a name="using-the-federated-authentication-module-with-aspnet"></a>ASP.NET ile federe kimlik doğrulama modülünü kullanma  
- <xref:System.IdentityModel.Services.WSFederationAuthenticationModule>Federe kimlik doğrulaması eklemenize olanak sağlayan bir HTTP modülü (WS-FAM) olan bir [!INCLUDE[vstecasp](../../../includes/vstecasp-md.md)] uygulama. Federe kimlik doğrulama iş mantığı yazma odaklanmanıza olanak tanır ve STS tarafından işlenen kimlik doğrulama mantığı sağlar.  
+ <xref:System.IdentityModel.Services.WSFederationAuthenticationModule> Federe kimlik doğrulaması eklemenize olanak sağlayan bir HTTP modülü (WS-FAM) olan bir [!INCLUDE[vstecasp](../../../includes/vstecasp-md.md)] uygulama. Federe kimlik doğrulama iş mantığı yazma odaklanmanıza olanak tanır ve STS tarafından işlenen kimlik doğrulama mantığı sağlar.  
   
  WS-STS doğrulanmamış istekler yönlendirilmesi belirtmek için FAM yapılandırın. WIF iki yolla kullanıcı kimlik doğrulaması sağlar:  
   
@@ -60,7 +50,7 @@ Windows Identity Foundation (WIF) WS-Federated kimlik doğrulama Modülü (WS-FA
   
  Aşağıdaki diyagramda pasif yeniden yönlendirme durumunda genel bilgi akışını gösterir. İstek, kimlik bilgileri olmadan oturum açma sayfasına kurmaya STS aracılığıyla otomatik olarak yönlendirilir:  
   
- ![Zamanlama diyagramı oturum &#45; pasif yeniden yönlendirme oturum](../../../docs/framework/security/media/signinusingpassiveredirect.gif "SignInUsingPassiveRedirect")  
+ ![Oturum için zamanlama diyagramı&#45;pasif yeniden yönlendirme oturum](../../../docs/framework/security/media/signinusingpassiveredirect.gif "SignInUsingPassiveRedirect")  
   
  Kullanıcı kimlik doğrulaması için STS ne olur hakkında daha fazla ayrıntı Aşağıdaki diyagramda gösterilmiştir ve kendi güvenlik belirteçlerini tarafından işlenen <xref:System.IdentityModel.Services.WSFederationAuthenticationModule>:  
   
@@ -68,7 +58,7 @@ Windows Identity Foundation (WIF) WS-Federated kimlik doğrulama Modülü (WS-FA
   
  Kullanıcının güvenlik belirteçleri tanımlama bilgisine ayrılır serileştirilmiş ve tarafından müdahale ne olur hakkında daha fazla ayrıntı Aşağıdaki diyagramda gösterilmiştir <xref:System.IdentityModel.Services.SessionAuthenticationModule>:  
   
- ![Oturum &#45; gösteren SAM zamanlama diyagram denetimleri kullanarak](../../../docs/framework/security/media/signinusingconrols-sam.gif "SignInUsingConrols_SAM")  
+ ![Oturum açma gösteren SAM zamanlama diyagramı&#45;denetimleri kullanarak](../../../docs/framework/security/media/signinusingconrols-sam.gif "SignInUsingConrols_SAM")  
   
 ### <a name="events"></a>Olaylar  
  <xref:System.IdentityModel.Services.WSFederationAuthenticationModule>, <xref:System.IdentityModel.Services.SessionAuthenticationModule>ve kendi üst sınıfı <xref:System.IdentityModel.Services.HttpModuleBase>, bir HTTP isteğinin işlenmesi çeşitli aşamalarında olayları Yükselt. Bu olayları işleyebilir `global.asax` dosyası, [!INCLUDE[vstecasp](../../../includes/vstecasp-md.md)] uygulama.  

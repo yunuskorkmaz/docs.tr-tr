@@ -1,26 +1,12 @@
 ---
 title: Bilgileri Açıklama
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 ms.assetid: 4064c89f-afa6-444a-aa7e-807ef072131c
-caps.latest.revision: 11
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 1b3da2dc36dca913c638ce269213903c2a024a04
-ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
+ms.openlocfilehash: 1f6c33787f920fbe7e795e27ff10d7a0c83db21e
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/30/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="information-disclosure"></a>Bilgileri Açıklama
 Bilgilerin açığa çıkmasına bir sistemi hakkında değerli bilgiler sağlamasına olanak sağlar. Bu nedenle, her zaman ve ortaya bilgiler, kötü niyetli bir kullanıcı tarafından kullanılıp kullanılamayacağını göz önünde bulundurun. Aşağıdaki olası bilgileri açığa saldırıları listeler ve bunları azaltmanın yollarını her sağlar.  
@@ -47,7 +33,7 @@ Bilgilerin açığa çıkmasına bir sistemi hakkında değerli bilgiler sağlam
   
 -   Hizmet başvuruları güvenilir olarak kabul edilir. Bunlar ile oynanmadığını emin olmak için hizmet başvurusu örnekleri aktarma zaman dikkatli olun.  
   
--   Bazı uygulamalar, uzak ana bilgisayar tarafından kanıtlanmış hizmet başvurusu ve güven verilerini dayalı güvenin etkileşimli kurma izin veren bir kullanıcı deneyimi sunabilir. [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] Genişletilebilirlik noktaları gibi bir tesis ancak kullanıcı için gereken bunları uygulanan sağlar.  
+-   Bazı uygulamalar, uzak ana bilgisayar tarafından kanıtlanmış hizmet başvurusu ve güven verilerini dayalı güvenin etkileşimli kurma izin veren bir kullanıcı deneyimi sunabilir. WCF böyle olanağını genişletilebilirlik noktaları sağlar, ancak kullanıcı bunları uygulanması gerekir.  
   
 ## <a name="ntlm"></a>NTLM  
  Varsayılan olarak, Windows etki alanı ortamında kimliğini doğrulamak ve kullanıcılara yetki vermek için Kerberos protokolünü Windows kimlik doğrulaması kullanır. Kerberos protokolü için herhangi bir nedenle kullanılamaz, NT LAN Yöneticisi (NTLM) bir geri dönüş olarak kullanılır. Ayarlayarak bu davranışı devre dışı bırakabilirsiniz <xref:System.ServiceModel.Security.WindowsClientCredential.AllowNtlm%2A> özelliğine `false`. NTLM izin verirken dikkat edilmesi gereken konular şunlardır:  

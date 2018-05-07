@@ -1,34 +1,20 @@
 ---
 title: ServiceModel İşlem Yapılandırması
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 helpviewer_keywords:
 - transactions [WCF], ServiceModel configuration
 ms.assetid: 5636067a-7fbd-4485-aaa2-8141c502acf3
-caps.latest.revision: 8
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 96cf83be06949160cf3efa73344e4a7680d24e09
-ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
+ms.openlocfilehash: 2c724e3f67bbf6554abffb44f101d2f28f748023
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/30/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="servicemodel-transaction-configuration"></a>ServiceModel İşlem Yapılandırması
-[!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] bir hizmet için işlemleri yapılandırmak için üç öznitelikleri sağlar: `transactionFlow`, `transactionProtocol`, ve `transactionTimeout`.  
+Windows Communication Foundation (WCF) işlemleri için bir hizmeti yapılandırmak için üç öznitelikleri sağlar: `transactionFlow`, `transactionProtocol`, ve `transactionTimeout`.  
   
 ## <a name="configuring-transactionflow"></a>TransactionFlow yapılandırma  
- Önceden tanımlanmış bağlamaları çoğu [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] sağlar içeren `transactionFlow` ve `transactionProtocol` öznitelikleri böylece bağlama belirli işlem akışı protokolünü kullanarak belirli bir uç noktası için gelen işlemler kabul edecek şekilde yapılandırabilirsiniz. Ayrıca, `transactionFlow` öğesi ve kendi `transactionProtocol` kendi özel bağlama oluşturmak için öznitelik. Yapılandırma öğelerini ayarlama hakkında daha fazla bilgi için bkz: [ \<bağlama >](../../../../docs/framework/misc/binding.md) ve [WCF yapılandırma şeması](../../../../docs/framework/configure-apps/file-schema/wcf/index.md).  
+ WCF sağlar içeren önceden tanımlanmış bağlamaları çoğu `transactionFlow` ve `transactionProtocol` öznitelikleri böylece bağlama belirli işlem akışı protokolünü kullanarak belirli bir uç noktası için gelen işlemler kabul edecek şekilde yapılandırabilirsiniz. Ayrıca, `transactionFlow` öğesi ve kendi `transactionProtocol` kendi özel bağlama oluşturmak için öznitelik. Yapılandırma öğelerini ayarlama hakkında daha fazla bilgi için bkz: [ \<bağlama >](../../../../docs/framework/misc/binding.md) ve [WCF yapılandırma şeması](../../../../docs/framework/configure-apps/file-schema/wcf/index.md).  
   
  `transactionFlow` Özniteliği, işlem akışını bağlamayı kullanan hizmet uç noktaları için etkinleştirilip etkinleştirilmeyeceğini belirtir.  
   
@@ -55,7 +41,7 @@ ms.lasthandoff: 04/30/2018
 ```  
   
 ## <a name="configuring-transactiontimeout"></a>TransactionTimeout yapılandırma  
- Yapılandırabileceğiniz `transactionTimeout` için özniteliği, [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] hizmeti `behavior` yapılandırma dosyası öğesi. Aşağıdaki kod bunun nasıl yapılacağı gösterilmektedir.  
+ Yapılandırabileceğiniz `transactionTimeout` WCF hizmetiniz için öznitelik `behavior` yapılandırma dosyası öğesi. Aşağıdaki kod bunun nasıl yapılacağı gösterilmektedir.  
   
 ```xml  
 <configuration>  

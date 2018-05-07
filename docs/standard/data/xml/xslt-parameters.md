@@ -1,29 +1,18 @@
 ---
 title: XSLT parametreleri
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
 ms.technology: dotnet-standard
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
 ms.assetid: fe60aaa0-ae43-4b1c-9be1-426af66ba757
-caps.latest.revision: "2"
 author: mairaw
 ms.author: mairaw
-manager: wpickett
-ms.workload:
-- dotnet
-- dotnetcore
-ms.openlocfilehash: b16ad921e5b16ab7564b2ceedab91c6b6073537d
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: ef57d16c52100398919563205a97205be3c5dd7c
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="xslt-parameters"></a>XSLT parametreleri
 XSLT parametreleri eklenir <xref:System.Xml.Xsl.XsltArgumentList> kullanarak <xref:System.Xml.Xsl.XsltArgumentList.AddParam%2A> yöntemi. Bir tam adı ve ad alanı URI'si o anda parametre nesnesi ile ilişkilendirilmiş.  
@@ -50,7 +39,7 @@ XSLT parametreleri eklenir <xref:System.Xml.Xsl.XsltArgumentList> kullanarak <xr
   
  * Bu, tek bir düğüm içeren düğüm kümesi eşdeğerdir.  
   
- Parametre nesnesi yukarıdaki sınıflarından biri değilse, aşağıdaki kurallara göre dönüştürülür. Ortak dil çalışma zamanı (CLR) sayısal türler dönüştürülür <xref:System.Double>. <xref:System.DateTime> Türü için dönüştürülür <xref:System.String>. <xref:System.Xml.XPath.IXPathNavigable>türlerine dönüştürülür <xref:System.Xml.XPath.XPathNavigator>. **XPathNavigator []** dönüştürülür <xref:System.Xml.XPath.XPathNodeIterator>.  
+ Parametre nesnesi yukarıdaki sınıflarından biri değilse, aşağıdaki kurallara göre dönüştürülür. Ortak dil çalışma zamanı (CLR) sayısal türler dönüştürülür <xref:System.Double>. <xref:System.DateTime> Türü için dönüştürülür <xref:System.String>. <xref:System.Xml.XPath.IXPathNavigable> türlerine dönüştürülür <xref:System.Xml.XPath.XPathNavigator>. **XPathNavigator []** dönüştürülür <xref:System.Xml.XPath.XPathNodeIterator>.  
   
  Tüm diğer türleri hata atar.  
   

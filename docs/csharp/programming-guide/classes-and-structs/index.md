@@ -1,12 +1,7 @@
 ---
 title: Sınıflar ve Yapılar (C# Programlama Kılavuzu)
 description: Sınıflar ve yapılar (yapılar) C# kullanımını açıklar.
-keywords: sınıflar (C#), yapılar (C#), yapıları (yapı) (C#) başvuru türleri (C#) değer türleri (C#)
 ms.date: 01/17/2016
-ms.prod: .net
-ms.technology:
-- devlang-csharp
-ms.topic: article
 helpviewer_keywords:
 - structs [C#], about structs
 - classes [C#], overview
@@ -15,14 +10,11 @@ helpviewer_keywords:
 - objects [C#]
 - C# language, classes
 ms.assetid: cc39dbda-8754-423e-b5b1-16a1db0734c0
-caps.latest.revision: 48
-author: BillWagner
-ms.author: wiwagn
-ms.openlocfilehash: 8c4cbbdd0384c0c0e97d6a7c655e798d0562d9a8
-ms.sourcegitcommit: 7e99f66ef09d2903e22c789c67ff5a10aa953b2f
+ms.openlocfilehash: 801f8e64bf64ee55651521ba53915000cc326303
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/18/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="classes-and-structs-c-programming-guide"></a>Sınıflar ve Yapılar (C# Programlama Kılavuzu)
 Sınıflar ve yapılar .NET Framework'teki ortak tür sistemi temel yapıları ikisidir. Her bir veri kümesini ve birlikte bir mantıksal birim olarak ait davranışları yalıtan aslında bir veri yapısıdır. Veri ve davranışları *üyeleri* sınıf veya yapı, ve yöntemleri, özellikleri ve olayları ve benzeri, bu konunun ilerleyen bölümlerinde listelendiği gibi içerirler.  
@@ -50,25 +42,25 @@ Sınıflar ve yapılar .NET Framework'teki ortak tür sistemi temel yapıları i
 ### <a name="members"></a>Üyeler  
  Tüm yöntemleri, alanları, sabitleri, özellikleri ve olayları içinde bir tür bildirilmelidir; Bunlar adlandırılır *üyeleri* türü. C# ' ta genel değişkenler veya yok yöntemleri gibi diğer bazı dillerde. Bile bir programın giriş noktası `Main` yöntemi, bir sınıf veya yapı içinde bildirilmelidir. Aşağıdaki listede, bir sınıf veya yapı biriminde bildirilmelidir üyeleri tüm çeşitli türleri içerir.  
   
--   [Alanları](../../../csharp/programming-guide/classes-and-structs/fields.md)  
+-   [Alanlar](../../../csharp/programming-guide/classes-and-structs/fields.md)  
   
--   [Sabitleri](../../../csharp/programming-guide/classes-and-structs/constants.md)  
+-   [Sabitler](../../../csharp/programming-guide/classes-and-structs/constants.md)  
   
--   [Özellikleri](../../../csharp/programming-guide/classes-and-structs/properties.md)  
+-   [Özellikler](../../../csharp/programming-guide/classes-and-structs/properties.md)  
   
--   [Yöntemleri](../../../csharp/programming-guide/classes-and-structs/methods.md)  
+-   [Yöntemler](../../../csharp/programming-guide/classes-and-structs/methods.md)  
   
 -   [Oluşturucular](../../../csharp/programming-guide/classes-and-structs/constructors.md)  
   
--   [Olayları](../../../csharp/programming-guide/events/index.md)  
+-   [Olaylar](../../../csharp/programming-guide/events/index.md)  
   
 -   [Sonlandırıcılar](../../../csharp/programming-guide/classes-and-structs/destructors.md)  
   
--   [Dizin oluşturucular](../../../csharp/programming-guide/indexers/index.md)  
+-   [Dizin Oluşturucular](../../../csharp/programming-guide/indexers/index.md)  
   
 -   [İşleçler](../../../csharp/programming-guide/statements-expressions-operators/operators.md)  
   
--   [İç içe geçmiş türler](../../../csharp/programming-guide/classes-and-structs/nested-types.md)  
+-   [İç içe Geçmiş Türler](../../../csharp/programming-guide/classes-and-structs/nested-types.md)  
   
 ### <a name="accessibility"></a>Erişilebilirlik  
  Bazı yöntemleri ve özellikleri adlı veya sınıf veya yapı olarak bilinen, dışındaki koddan erişilen yöneliktir *istemci kodu*. Diğer yöntemleri ve özellikleri yalnızca sınıfta veya yapı kendisini kullanmak için olabilir. Yalnızca hedeflenen istemci kodu erişebilmesi kodunuzu erişilebilirliğini sınırlamak önemlidir. Nasıl, türleri ve üyeleri için istemci kodu erişim değiştiricileri kullanarak erişilebilir belirttiğiniz [ortak](../../../csharp/language-reference/keywords/public.md), [korumalı](../../../csharp/language-reference/keywords/protected.md), [iç](../../../csharp/language-reference/keywords/internal.md), [ İç korumalı](../../../csharp/language-reference/keywords/protected-internal.md), [özel](../../../csharp/language-reference/keywords/private.md) ve [korumalı özel](../../../csharp/language-reference/keywords/private-protected.md). Varsayılan erişilebilirlik olduğu `private`. Daha fazla bilgi için bkz: [erişim değiştiricileri](../../../csharp/programming-guide/classes-and-structs/access-modifiers.md).  
@@ -109,4 +101,4 @@ Sınıflar ve yapılar .NET Framework'teki ortak tür sistemi temel yapıları i
  [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [C# programlama kılavuzu](../../../csharp/programming-guide/index.md)
+ [C# Programlama Kılavuzu](../../../csharp/programming-guide/index.md)

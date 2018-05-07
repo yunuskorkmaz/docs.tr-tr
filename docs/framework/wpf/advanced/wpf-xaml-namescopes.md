@@ -1,13 +1,6 @@
 ---
-title: "WPF XAML Ad Kapsamları"
-ms.custom: 
+title: WPF XAML Ad Kapsamları
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-wpf
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - namescopes [WPF]
 - styles [WPF], namescopes in
@@ -17,16 +10,11 @@ helpviewer_keywords:
 - XAML [WPF], namescopes
 - classes [WPF], FrameworkContentElement
 ms.assetid: 52bbf4f2-15fc-40d4-837b-bb4c21ead7d4
-caps.latest.revision: "19"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: c4caaa9453cb3cec76a8606afb5601919eba607a
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: c13dba48d21235c57be64d90b6547902e0428a6e
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="wpf-xaml-namescopes"></a>WPF XAML Ad Kapsamları
 XAML ad kapsamları tanımlayan bir kavram XAML içinde tanımlanan nesneler var. XAML isim alanı adları, bir nesne ağacında nesneleri XAML tanımlanan adlarını ve örnek eşdeğerlerine arasındaki ilişkileri oluşturmak için kullanılabilir. Genellikle, XAML ad kapsamları içinde [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] yönetilen kod XAML uygulama için ayrı ayrı XAML sayfası yükleniyor kökleri olduğunda oluşturulur. XAML ad kapsamları programlama nesnesi olarak tarafından tanımlanan <xref:System.Windows.Markup.INameScope> arabirim ve ayrıca pratik sınıfı tarafından uygulanan <xref:System.Windows.NameScope>.  
@@ -47,7 +35,7 @@ XAML ad kapsamları tanımlayan bir kavram XAML içinde tanımlanan nesneler var
 ### <a name="adding-objects-to-runtime-object-trees"></a>Çalışma zamanı nesne ağaçları nesneler ekleme  
  XAML ayrıştırılır şu anda bir WPF XAML isim alanı oluşturulup tanımlı zaman birazdan temsil eder. Bir nesne bir nesne ağacına bir noktada ağacı üretilen XAML ayrıştırıldığında sonra zamanında eklerseniz bir `Name` veya `x:Name` yeni bir nesne değeri XAML isim alanı bilgileri otomatik olarak güncelleştirilmez. XAML yüklendikten sonra bir WPF XAML isim alanı bir nesne için bir ad eklemek için uygun uygulanması çağrı <xref:System.Windows.Markup.INameScope.RegisterName%2A> XAML isim alanı tanımlar nesnede olduğu genellikle XAML sayfası kök. Adı kayıtlı değilse, eklenen nesne adına göre yöntemlerle gibi başvurulamaz <xref:System.Windows.FrameworkElement.FindName%2A>, ve animasyon hedefleme için bu adı kullanamazsınız.  
   
- Uygulama geliştiricilerinin en yaygın bir senaryo, kullanmasıdır <xref:System.Windows.FrameworkElement.RegisterName%2A> sayfasının geçerli kökündeki XAML isim alanı içine adlarını kaydetmek için. <xref:System.Windows.FrameworkElement.RegisterName%2A>Bu hedef nesneler için animasyonları film şeritleri için önemli bir senaryo parçasıdır. Daha fazla bilgi için bkz: [film şeritleri genel bakış](../../../../docs/framework/wpf/graphics-multimedia/storyboards-overview.md).  
+ Uygulama geliştiricilerinin en yaygın bir senaryo, kullanmasıdır <xref:System.Windows.FrameworkElement.RegisterName%2A> sayfasının geçerli kökündeki XAML isim alanı içine adlarını kaydetmek için. <xref:System.Windows.FrameworkElement.RegisterName%2A> Bu hedef nesneler için animasyonları film şeritleri için önemli bir senaryo parçasıdır. Daha fazla bilgi için bkz: [film şeritleri genel bakış](../../../../docs/framework/wpf/graphics-multimedia/storyboards-overview.md).  
   
  Çağırırsanız <xref:System.Windows.FrameworkElement.RegisterName%2A> çağrısı yaptığını sanki XAML isim alanı tanımlayan nesnesi başka bir nesnede adı hala çağıran nesne içinde tutulur XAML isim alanı için kayıtlı <xref:System.Windows.FrameworkElement.RegisterName%2A> nesnesi tanımlayarak XAML isim alanı üzerinde.  
   
@@ -82,9 +70,9 @@ XAML ad kapsamları tanımlayan bir kavram XAML içinde tanımlanan nesneler var
   
 <a name="Namescopes_and_Name_related_APIs"></a>   
 ## <a name="xaml-namescopes-and-name-related-apis"></a>XAML ad kapsamları ve ad ile ilgili API'ler  
- <xref:System.Windows.FrameworkElement>sahip <xref:System.Windows.FrameworkElement.FindName%2A>, <xref:System.Windows.FrameworkElement.RegisterName%2A> ve <xref:System.Windows.FrameworkElement.UnregisterName%2A> yöntemleri. Bu yöntemleri çağırmak nesne XAML isim alanı sahipse, ilgili XAML isim alanı yöntemlerin içine yöntemlerini çağırın. Aksi takdirde, üst öğenin XAML isim alanı sahibi ve XAML isim alanı bulunana kadar yinelemeli olarak bu işlem devam görmek için kontrol edilir (XAML işlemci davranışı nedeniyle var bir XAML isim alanı kökünde olması garanti). <xref:System.Windows.FrameworkContentElement>özel durum ile benzer davranışları sahip, hiçbir <xref:System.Windows.FrameworkContentElement> hiç XAML isim alanı sahibi. Yöntemleri mevcut <xref:System.Windows.FrameworkContentElement> çağrıları sonunda çok iletilebilir böylece bir <xref:System.Windows.FrameworkElement> üst öğesi.  
+ <xref:System.Windows.FrameworkElement> sahip <xref:System.Windows.FrameworkElement.FindName%2A>, <xref:System.Windows.FrameworkElement.RegisterName%2A> ve <xref:System.Windows.FrameworkElement.UnregisterName%2A> yöntemleri. Bu yöntemleri çağırmak nesne XAML isim alanı sahipse, ilgili XAML isim alanı yöntemlerin içine yöntemlerini çağırın. Aksi takdirde, üst öğenin XAML isim alanı sahibi ve XAML isim alanı bulunana kadar yinelemeli olarak bu işlem devam görmek için kontrol edilir (XAML işlemci davranışı nedeniyle var bir XAML isim alanı kökünde olması garanti). <xref:System.Windows.FrameworkContentElement> özel durum ile benzer davranışları sahip, hiçbir <xref:System.Windows.FrameworkContentElement> hiç XAML isim alanı sahibi. Yöntemleri mevcut <xref:System.Windows.FrameworkContentElement> çağrıları sonunda çok iletilebilir böylece bir <xref:System.Windows.FrameworkElement> üst öğesi.  
   
- <xref:System.Windows.NameScope.SetNameScope%2A>var olan bir nesne için yeni bir XAML isim alanı eşlemek için kullanılır. Çağırabilirsiniz <xref:System.Windows.NameScope.SetNameScope%2A> birden çok kez sıfırlama veya XAML temizlemek için isim alanı değildir, ancak, ortak kullanım. Ayrıca, <xref:System.Windows.NameScope.GetNameScope%2A> koddan genellikle kullanılmaz.  
+ <xref:System.Windows.NameScope.SetNameScope%2A> var olan bir nesne için yeni bir XAML isim alanı eşlemek için kullanılır. Çağırabilirsiniz <xref:System.Windows.NameScope.SetNameScope%2A> birden çok kez sıfırlama veya XAML temizlemek için isim alanı değildir, ancak, ortak kullanım. Ayrıca, <xref:System.Windows.NameScope.GetNameScope%2A> koddan genellikle kullanılmaz.  
   
 ### <a name="xaml-namescope-implementations"></a>XAML isim alanı uygulamaları  
  Aşağıdaki sınıflar uygulama <xref:System.Windows.Markup.INameScope> doğrudan:  
@@ -97,9 +85,9 @@ XAML ad kapsamları tanımlayan bir kavram XAML içinde tanımlanan nesneler var
   
 -   <xref:System.Windows.FrameworkTemplate>  
   
- <xref:System.Windows.ResourceDictionary>XAML adları veya ad kapsamları kullanmaz; bir sözlük uygulaması olduğu için bunun yerine, anahtarları kullanır. Yalnızca neden <xref:System.Windows.ResourceDictionary> uygulayan <xref:System.Windows.Markup.INameScope> true XAML isim alanı arasında ayrım açıklamak yardımcı özel durumlar kullanıcı kodu oluşturabilir ve nasıl olduğu bir <xref:System.Windows.ResourceDictionary> anahtarları, işler ve ayrıca XAML ad kapsamları için uygulanmaz güvence altına almak için bir <xref:System.Windows.ResourceDictionary> üst öğeler tarafından.  
+ <xref:System.Windows.ResourceDictionary> XAML adları veya ad kapsamları kullanmaz; bir sözlük uygulaması olduğu için bunun yerine, anahtarları kullanır. Yalnızca neden <xref:System.Windows.ResourceDictionary> uygulayan <xref:System.Windows.Markup.INameScope> true XAML isim alanı arasında ayrım açıklamak yardımcı özel durumlar kullanıcı kodu oluşturabilir ve nasıl olduğu bir <xref:System.Windows.ResourceDictionary> anahtarları, işler ve ayrıca XAML ad kapsamları için uygulanmaz güvence altına almak için bir <xref:System.Windows.ResourceDictionary> üst öğeler tarafından.  
   
- <xref:System.Windows.FrameworkTemplate>ve <xref:System.Windows.Style> uygulamak <xref:System.Windows.Markup.INameScope> açık arabirim tanımları aracılığıyla. Açık uygulamaları bu XAML ad kapsamları üzerinden zaman erişilen standart olarak davranmasına izin <xref:System.Windows.Markup.INameScope> XAML ad kapsamları nasıl bildirilir olduğu arabirimi tarafından [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] iç işlemler. Ancak açık arabirim tanımları geleneksel API yüzeyi parçası olmayan <xref:System.Windows.FrameworkTemplate> ve <xref:System.Windows.Style>, nadiren çağırmanız gerekir çünkü <xref:System.Windows.Markup.INameScope> yöntemlere <xref:System.Windows.FrameworkTemplate> ve <xref:System.Windows.Style> doğrudan ve bunun yerine diğer API kullanır gibi <xref:System.Windows.FrameworkElement.GetTemplateChild%2A>.  
+ <xref:System.Windows.FrameworkTemplate> ve <xref:System.Windows.Style> uygulamak <xref:System.Windows.Markup.INameScope> açık arabirim tanımları aracılığıyla. Açık uygulamaları bu XAML ad kapsamları üzerinden zaman erişilen standart olarak davranmasına izin <xref:System.Windows.Markup.INameScope> XAML ad kapsamları nasıl bildirilir olduğu arabirimi tarafından [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] iç işlemler. Ancak açık arabirim tanımları geleneksel API yüzeyi parçası olmayan <xref:System.Windows.FrameworkTemplate> ve <xref:System.Windows.Style>, nadiren çağırmanız gerekir çünkü <xref:System.Windows.Markup.INameScope> yöntemlere <xref:System.Windows.FrameworkTemplate> ve <xref:System.Windows.Style> doğrudan ve bunun yerine diğer API kullanır gibi <xref:System.Windows.FrameworkElement.GetTemplateChild%2A>.  
   
  Aşağıdaki sınıflar kullanarak kendi XAML isim alanı tanımlayın <xref:System.Windows.NameScope?displayProperty=nameWithType> yardımcı sınıfı ve XAML isim alanı uygulaması bağlanma <xref:System.Windows.NameScope.NameScope%2A?displayProperty=nameWithType> özelliği eklenmiş:  
   

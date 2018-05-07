@@ -1,24 +1,12 @@
 ---
 title: WSStreamedHttpBinding
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 97ce4d3d-ca6f-45fa-b33b-2429bb84e65b
-caps.latest.revision: "27"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 7d6259640bae2b4be4fac73883df8945bf1db7ff
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
-ms.translationtype: MT
+ms.openlocfilehash: f146e469a323dffa2cdb9b76b6956be97747b2de
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="wsstreamedhttpbinding"></a>WSStreamedHttpBinding
 Örnek, HTTP taşıma kullanıldığında akış senaryoları desteklemek üzere tasarlanmış bir bağlama oluşturun gösterilmiştir.  
@@ -31,7 +19,7 @@ ms.lasthandoff: 12/22/2017
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  Bu dizin mevcut değilse, Git [Windows Communication Foundation (WCF) ve .NET Framework 4 için Windows Workflow Foundation (WF) örnek](http://go.microsoft.com/fwlink/?LinkId=150780) tüm indirmek için [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] ve [!INCLUDE[wf1](../../../../includes/wf1-md.md)] örnekleri. Bu örnek aşağıdaki dizinde bulunur.  
+>  Bu dizin mevcut değilse, Git [Windows Communication Foundation (WCF) ve .NET Framework 4 için Windows Workflow Foundation (WF) örnek](http://go.microsoft.com/fwlink/?LinkId=150780) tüm Windows Communication Foundation (WCF) indirmek için ve [!INCLUDE[wf1](../../../../includes/wf1-md.md)] örnekleri. Bu örnek aşağıdaki dizinde bulunur.  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Extensibility\Binding\WSStreamedHttpBinding`  
   
@@ -39,7 +27,7 @@ ms.lasthandoff: 12/22/2017
   
 1.  Yeni bir standart bağlama oluşturma  
   
-     Standart bağlamaları [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] gibi basicHttpBinding ve netTcpBinding arka plandaki aktarım ve kanal yığını belirli gereksinimleri için yapılandırın. Bu örnekte `WSStreamedHttpBinding` akış desteklemek için kanal yığın yapılandırır. Varsayılan olarak, her iki özellik akış tarafından desteklenmediğinden WS güvenliği ve güvenilir Mesajlaşma kanalı yığına eklenmez. Yeni bağlamanın sınıfında uygulanır `WSStreamedHttpBinding` , türetilen <xref:System.ServiceModel.Channels.Binding>. `WSStreamedHttpBinding` Aşağıdaki bağlama öğeleri içerir: <xref:System.ServiceModel.Channels.HttpTransportBindingElement>, <xref:System.ServiceModel.Channels.HttpsTransportBindingElement>, <xref:System.ServiceModel.Channels.TransactionFlowBindingElement>, ve <xref:System.ServiceModel.Channels.TextMessageEncodingBindingElement>. Bu sınıf sağladığı bir `CreateBindingElements()` yöntemi aşağıdaki örnek kodda gösterildiği gibi sonuçta elde edilen bağlama yığını yapılandırmak için.  
+     Arka plandaki aktarım ve belirli gereksinimleri için kanal yığını basicHttpBinding ve netTcpBinding gibi standart bağlamaları Windows Communication Foundation (WCF) yapılandırın. Bu örnekte `WSStreamedHttpBinding` akış desteklemek için kanal yığın yapılandırır. Varsayılan olarak, her iki özellik akış tarafından desteklenmediğinden WS güvenliği ve güvenilir Mesajlaşma kanalı yığına eklenmez. Yeni bağlamanın sınıfında uygulanır `WSStreamedHttpBinding` , türetilen <xref:System.ServiceModel.Channels.Binding>. `WSStreamedHttpBinding` Aşağıdaki bağlama öğeleri içerir: <xref:System.ServiceModel.Channels.HttpTransportBindingElement>, <xref:System.ServiceModel.Channels.HttpsTransportBindingElement>, <xref:System.ServiceModel.Channels.TransactionFlowBindingElement>, ve <xref:System.ServiceModel.Channels.TextMessageEncodingBindingElement>. Bu sınıf sağladığı bir `CreateBindingElements()` yöntemi aşağıdaki örnek kodda gösterildiği gibi sonuçta elde edilen bağlama yığını yapılandırmak için.  
   
     ```  
     public override BindingElementCollection CreateBindingElements()  
@@ -145,7 +133,7 @@ public class StreamedEchoService : IStreamedEchoService
 ```  
   
 ## <a name="the-wsstreamedhttpbinding-sample-client"></a>WSStreamedHttpBinding örnek istemcisi  
- Hizmetini kullanarak ile kullanılan etkileşim kurmak için istemci `WSStreamedHttpBinding` istemci alt dizininde bulunur. Bu örnekte kullanılan sertifikanın Makecert.exe ile oluşturulan bir test sertifikası olduğundan, bir HTTPS adresi https://localhost/servicemodelsamples/service.svc gibi tarayıcınızda erişmeyi denediğinde bir güvenlik uyarısı görüntüler. İzin vermek için [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] istemci, yerinde bir test sertifikası ile çalışmak için bazı ek kod güvenlik uyarıyı gizlemek için istemciye eklendi. Kod ve eşlik eden sınıfı üretim sertifikaları kullanırken gerekli değildir.  
+ Hizmetini kullanarak ile kullanılan etkileşim kurmak için istemci `WSStreamedHttpBinding` istemci alt dizininde bulunur. Bu örnekte kullanılan sertifikanın Makecert.exe ile oluşturulan bir test sertifikası olduğundan, bir HTTPS adresi tarayıcınızda gibi erişmeye çalıştığınızda bir güvenlik uyarısı görüntüler https://localhost/servicemodelsamples/service.svc. İzin vermek için [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] istemci, yerinde bir test sertifikası ile çalışmak için bazı ek kod güvenlik uyarıyı gizlemek için istemciye eklendi. Kod ve eşlik eden sınıfı üretim sertifikaları kullanırken gerekli değildir.  
   
 ```  
 // WARNING: This code is only required for test certificates such as those created by makecert. It is   

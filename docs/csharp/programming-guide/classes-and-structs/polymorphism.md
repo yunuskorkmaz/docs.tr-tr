@@ -1,21 +1,15 @@
 ---
-title: "Çok Biçimlilik (C# Programlama Kılavuzu)"
+title: Çok Biçimlilik (C# Programlama Kılavuzu)
 ms.date: 07/20/2015
-ms.prod: .net
-ms.technology: devlang-csharp
-ms.topic: article
 helpviewer_keywords:
 - C# language, polymorphism
 - polymorphism [C#]
 ms.assetid: 086af969-29a5-4ce8-a993-0b7d53839dab
-caps.latest.revision: "31"
-author: BillWagner
-ms.author: wiwagn
-ms.openlocfilehash: 601c8cf626c846ca6c5d6bc2338e271e6b93544a
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 8bbf93d14a16b06441ba48b9d4e19cfd249e9146
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="polymorphism-c-programming-guide"></a>Çok Biçimlilik (C# Programlama Kılavuzu)
 Çok biçimlilik genellikle kapsülleme ve devralma sonra nesne odaklı programlama üçüncü sütun olarak adlandırılır. Çok biçimlilik "çok şekillendirilmiş" anlamına gelir Yunanca bir sözcüktür ve iki ayrı görünüşlere sahiptir:  
@@ -93,19 +87,19 @@ ms.lasthandoff: 11/21/2017
   
 ## <a name="in-this-section"></a>Bu Bölümde  
   
--   [Geçersiz kılma ve yeni anahtar sözcüklerle sürüm oluşturma](../../../csharp/programming-guide/classes-and-structs/versioning-with-the-override-and-new-keywords.md)  
+-   [Geçersiz Kılma ve Yeni Anahtar Sözcüklerle Sürüm Oluşturma](../../../csharp/programming-guide/classes-and-structs/versioning-with-the-override-and-new-keywords.md)  
   
--   [Geçersiz kılma ve yeni anahtar sözcüklerin ne zaman kullanılacağını bilme](../../../csharp/programming-guide/classes-and-structs/knowing-when-to-use-override-and-new-keywords.md)  
+-   [Geçersiz Kılmanın ve Yeni Anahtar Sözcüklerin Ne Zaman Kullanılacağını Bilme](../../../csharp/programming-guide/classes-and-structs/knowing-when-to-use-override-and-new-keywords.md)  
   
--   [Nasıl yapılır: ToString yöntemini geçersiz kılma](../../../csharp/programming-guide/classes-and-structs/how-to-override-the-tostring-method.md)  
+-   [Nasıl yapılır: ToString Yöntemini Geçersiz Kılma](../../../csharp/programming-guide/classes-and-structs/how-to-override-the-tostring-method.md)  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [C# programlama kılavuzu](../../../csharp/programming-guide/index.md)  
- [C# programlama kılavuzu](../../../csharp/programming-guide/index.md)  
+ [C# Programlama Kılavuzu](../../../csharp/programming-guide/index.md)  
+ [C# Programlama Kılavuzu](../../../csharp/programming-guide/index.md)  
  [Devralma](../../../csharp/programming-guide/classes-and-structs/inheritance.md)  
- [Soyut ve korumalı sınıflar ve sınıf üyeleri](../../../csharp/programming-guide/classes-and-structs/abstract-and-sealed-classes-and-class-members.md)  
- [Yöntemleri](../../../csharp/programming-guide/classes-and-structs/methods.md)  
- [Olayları](../../../csharp/programming-guide/events/index.md)  
- [Özellikleri](../../../csharp/programming-guide/classes-and-structs/properties.md)  
- [Dizin oluşturucular](../../../csharp/programming-guide/indexers/index.md)  
+ [Soyut ve Korumalı Sınıflar ve Sınıf Üyeleri](../../../csharp/programming-guide/classes-and-structs/abstract-and-sealed-classes-and-class-members.md)  
+ [Yöntemler](../../../csharp/programming-guide/classes-and-structs/methods.md)  
+ [Olaylar](../../../csharp/programming-guide/events/index.md)  
+ [Özellikler](../../../csharp/programming-guide/classes-and-structs/properties.md)  
+ [Dizin Oluşturucular](../../../csharp/programming-guide/indexers/index.md)  
  [Türler](../../../csharp/programming-guide/types/index.md)

@@ -1,13 +1,6 @@
 ---
-title: "Mürekkep Giriş Denetimi Oluşturma"
-ms.custom: 
+title: Mürekkep Giriş Denetimi Oluşturma
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-wpf
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - ink strokes [WPF], managing
 - managing ink strokes [WPF]
@@ -21,16 +14,11 @@ helpviewer_keywords:
 - DynamicRenderer objects [WPF]
 - StylusPlugIn objects [WPF]
 ms.assetid: c31f3a67-cb3f-4ded-af9e-ed21f6575b26
-caps.latest.revision: "14"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 7054728e8bf54a7cf7b71ea1224cab6a352176d4
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: b3dc71182b7553a429bb17e1888a4108ceb3e286
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="creating-an-ink-input-control"></a>Mürekkep Giriş Denetimi Oluşturma
 Statik olarak mürekkep işler ve özel bir denetim, dinamik olarak oluşturabilir. Diğer bir deyişle, "tablet kalem akışı" ve sonra mürekkep görüntülemek için eklenir denetimine tablet kalem aracılığıyla ya da panodan yapıştırılan veya bir dosyasından yüklenen görünmesi mürekkep neden olan bir kullanıcı bir vuruş çizer gibi mürekkep işler. Dinamik olarak mürekkep işlemek için denetiminizin kullanmalısınız bir <xref:System.Windows.Input.StylusPlugIns.DynamicRenderer>. Statik olarak mürekkep işlemek için Kalem olay yöntemleri geçersiz kılmanız gerekir (<xref:System.Windows.UIElement.OnStylusDown%2A>, <xref:System.Windows.UIElement.OnStylusMove%2A>, ve <xref:System.Windows.UIElement.OnStylusUp%2A>) toplamak için <xref:System.Windows.Input.StylusPoint> verileri, vuruş oluşturmak ve bunları Ekle bir <xref:System.Windows.Controls.InkPresenter> (denetimindeki mürekkep işleyen).  

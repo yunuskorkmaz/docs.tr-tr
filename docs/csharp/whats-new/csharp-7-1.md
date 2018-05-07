@@ -1,18 +1,12 @@
 ---
 title: C# 7.1 yenilikler nelerdir?
-description: "C# 7.1 içindeki yeni özelliklere genel bakış."
-keywords: "C# dil tasarımında, 7.1, Visual Studio 2017,"
-author: billwagner
-ms.author: wiwagn
+description: C# 7.1 içindeki yeni özelliklere genel bakış.
 ms.date: 08/16/2017
-ms.topic: article
-ms.prod: .net
-ms.devlang: devlang-csharp
-ms.openlocfilehash: 02f1f8fc8f0a3221e00e2a3c43ce06423ca43672
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.openlocfilehash: 00baec45d7582d3ac12c7b0865241f5cd8159246
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="whats-new-in-c-71"></a>C# 7.1 yenilikler nelerdir?
 
@@ -22,9 +16,9 @@ C# 7.1 ekler [dil sürümü seçimi](#language-version-selection) yapılandırma
 
 Bu sürümdeki yeni diz özellikleri şunlardır:
 
-* [`async``Main` yöntemi](#async-main)
+* [`async` `Main` Yöntemi](#async-main)
   - Bir uygulama için giriş noktası olabilir `async` değiştiricisi.
-* [`default`Sabit ifadeleri](#default-literal-expressions)
+* [`default` Sabit ifadeleri](#default-literal-expressions)
   - Hedef türü çıkarsanabileceği olduğunda, varsayılan değeri ifadelerinde varsayılan değişmez değer ifadeleri kullanabilirsiniz.
 * [Çıkarsanan tanımlama grubu öğe adları](#inferred-tuple-element-names)
   - Başlığın öğeleri adlarını, çoğu durumda tanımlama grubu başlatılmasından çıkarsanabileceği.

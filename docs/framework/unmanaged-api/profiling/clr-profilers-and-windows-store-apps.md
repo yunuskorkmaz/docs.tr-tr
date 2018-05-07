@@ -1,14 +1,6 @@
 ---
-title: "CLR Profil oluşturucular ve Windows mağazası uygulamaları"
-ms.custom: 
+title: CLR Profil oluşturucular ve Windows mağazası uygulamaları
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 applies_to:
@@ -20,17 +12,13 @@ helpviewer_keywords:
 - profiling managed code
 - profiling managed code [Windows Store Apps]
 ms.assetid: 1c8eb2e7-f20a-42f9-a795-71503486a0f5
-caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: d884b80ba8ccc42d1b6acc671db408305a095a7d
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 20a1ed9b6b613b1e4d3e5363ab9995cc81295091
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="clr-profilers-and-windows-store-apps"></a>CLR Profil oluşturucular ve Windows mağazası uygulamaları
 Bu konuda, ne zaman analiz yazma tanılama araçları içinde Windows mağazası uygulaması çalıştıran yönetilen kodu hakkında düşünmek için gerekenler açıklanmaktadır.  Ayrıca, Windows mağazası uygulamaları karşı çalıştırdığınızda çalışmaya devam etmek için mevcut geliştirme araçları değiştirmek için yönergeler sağlar.  Bu bilgileri anlamak için ortak dil çalışma zamanı profil oluşturma API'si ile sahibiyseniz, zaten bu API Windows Masaüstü uygulamaları için ve karşı düzgün çalışır şimdi aracı değiştirme ilgileniyor, bir tanı aracı olarak kullandığınız en iyisidir Windows mağazası uygulamaları karşı doğru çalışması için.  
@@ -154,7 +142,7 @@ NET Runtime version 4.0.30319.17929 - Loading profiler failed during CoCreateIns
  **Profil için Windows mağazası uygulaması seçme**  
  İlk olarak, hangi Windows mağazası uygulamasını başlatmak için profil oluşturucu kullanıcıya sor istersiniz.  Masaüstü uygulamaları için belki de dosya göz atma iletişim Göster ve kullanıcı bulma ve bir .exe dosyası seçin.  Windows mağazası uygulamaları farklı ve göz atma iletişim kullanarak doesn't make Sense ancak.  Bunun yerine, kullanıcı seçmek bu kullanıcı için yüklenen Windows mağazası uygulamalarının listesini göstermek iyidir.  
   
- Kullanabileceğiniz [PackageManager sınıfı](https://msdn.microsoft.com/library/windows/apps/windows.management.deployment.packagemanager.aspx) bu listesini oluşturmak için.  `PackageManager`Masaüstü uygulamaları için kullanılabilir bir Windows çalışma zamanı sınıf ve hatta şeklindedir *yalnızca* Masaüstü uygulamaları için kullanılabilir.  
+ Kullanabileceğiniz [PackageManager sınıfı](https://msdn.microsoft.com/library/windows/apps/windows.management.deployment.packagemanager.aspx) bu listesini oluşturmak için.  `PackageManager` Masaüstü uygulamaları için kullanılabilir bir Windows çalışma zamanı sınıf ve hatta şeklindedir *yalnızca* Masaüstü uygulamaları için kullanılabilir.  
   
  C# yses masaüstü uygulamasında olarak yazılmış kuramsal bir profil oluşturucu UI aşağıdaki kodu örnekten `PackageManager` Windows uygulamaların bir listesini oluşturmak için:  
   
@@ -178,9 +166,9 @@ pkgDebugSettings.EnableDebugging(packgeFullName, debuggerCommandLine,
   
  Birkaç sağ almak için gerekli öğeleri şunlardır:  
   
--   `packageFullName`paketler yineleme yapma ve ele geçirme sırasında belirlenen `package.Id.FullName`.  
+-   `packageFullName` paketler yineleme yapma ve ele geçirme sırasında belirlenen `package.Id.FullName`.  
   
--   `debuggerCommandLine`biraz daha ilginç olacaktır.  Windows mağazası uygulaması için özel ortam blok geçirmek için kendi simplistic Kukla hata ayıklayıcı yazmanız gerekir.  Windows spawns Windows mağazası uygulaması askıya ve ardından, hata ayıklayıcı bu örnekteki gibi bir komut satırı ile başlatarak, hata ayıklayıcı ekler:  
+-   `debuggerCommandLine` biraz daha ilginç olacaktır.  Windows mağazası uygulaması için özel ortam blok geçirmek için kendi simplistic Kukla hata ayıklayıcı yazmanız gerekir.  Windows spawns Windows mağazası uygulaması askıya ve ardından, hata ayıklayıcı bu örnekteki gibi bir komut satırı ile başlatarak, hata ayıklayıcı ekler:  
   
     ```Output  
     MyDummyDebugger.exe -p 1336 -tid 1424  
@@ -341,7 +329,7 @@ CreateEventEx(
   
  `AppContainerNamedObjects\<acSid>\MyNamedEvent`  
   
- `<acSid>`Windows mağazası uygulamanızın Appcontaıner SID ' dir.  Bu konuda daha önceki bir bölümünü geçerli kullanıcı için yüklenen paketler üzerinden yinelemek nasıl oluşturulacağını gösterir.  Bu örnek koddan PackageId elde edebilirsiniz.  Ve PackageId elde edebilirsiniz `<acSid>` kodu aşağıdakine benzer:  
+ `<acSid>` Windows mağazası uygulamanızın Appcontaıner SID ' dir.  Bu konuda daha önceki bir bölümünü geçerli kullanıcı için yüklenen paketler üzerinden yinelemek nasıl oluşturulacağını gösterir.  Bu örnek koddan PackageId elde edebilirsiniz.  Ve PackageId elde edebilirsiniz `<acSid>` kodu aşağıdakine benzer:  
   
 ```csharp  
 IntPtr acPSID;  

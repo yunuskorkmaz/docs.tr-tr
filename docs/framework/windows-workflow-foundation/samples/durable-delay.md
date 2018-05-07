@@ -1,23 +1,12 @@
 ---
-title: "Dayanıklı gecikmesi"
-ms.custom: 
+title: Dayanıklı gecikmesi
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 220ec240-b958-430c-81ff-b734a6aa97ae
-caps.latest.revision: "11"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: f8313bfafa66e012eea65f1c4d9b50a9ce37908f
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 5307b8144e17f91cd3ba8c2e385492f86c167820
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="durable-delay"></a>Dayanıklı gecikmesi
 Bu örnek, sağlam bir aygıt için iş akışı sırasında gecikme devam ederse gecikme dayanıklı bir gecikme kullanımı gösterilmiştir. Örnek iş akışı tarafından bir gecikme ayrılmış iki iletilerini konsola içerir. Gecikme tetiklendiğinde, iş akışı kaldırılır ve iş akışı örneği deposundaki 5 bellekte yeniden yükleniyor önce saniye bekler.  
@@ -27,7 +16,7 @@ Bu örnek, sağlam bir aygıt için iş akışı sırasında gecikme devam eders
   
  Aşağıdaki listede iş akışı hizmeti ana bilgisayarı tarafından Kurulum başlatma sırasında Ayrıntılar verilmiştir.  
   
-1.  Bir Hizmet Konağı (http://localhost: 8080/istemci) olan bir adresi oluşturur.  
+1.  Hizmet ana bilgisayarı olan bir adresi oluşturur (http://localhost:8080/Client).  
   
 2.  Hizmet ana bilgisayarı ile iletişimi etkinleştirmek için bir uç nokta oluşturuyor <xref:System.ServiceModel.Activities.Receive> etkinliği iş akışı içinde.  
   
@@ -76,6 +65,6 @@ Bu örnek, sağlam bir aygıt için iş akışı sırasında gecikme devam eders
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  Bu dizin mevcut değilse, Git [Windows Communication Foundation (WCF) ve .NET Framework 4 için Windows Workflow Foundation (WF) örnek](http://go.microsoft.com/fwlink/?LinkId=150780) tüm indirmek için [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] ve [!INCLUDE[wf1](../../../../includes/wf1-md.md)] örnekleri. Bu örnek aşağıdaki dizinde bulunur.  
+>  Bu dizin mevcut değilse, Git [Windows Communication Foundation (WCF) ve .NET Framework 4 için Windows Workflow Foundation (WF) örnek](http://go.microsoft.com/fwlink/?LinkId=150780) tüm Windows Communication Foundation (WCF) indirmek için ve [!INCLUDE[wf1](../../../../includes/wf1-md.md)] örnekleri. Bu örnek aşağıdaki dizinde bulunur.  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WF\Basic\Services\DurableDelay`

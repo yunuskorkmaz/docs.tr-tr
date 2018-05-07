@@ -1,21 +1,12 @@
 ---
-title: "XAttribute sınıfına genel bakış (C#)"
-ms.custom: 
+title: XAttribute sınıfına genel bakış (C#)
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-csharp
-ms.topic: article
 ms.assetid: 5a630f24-f9ad-400e-831e-c14ebfc9e142
-caps.latest.revision: "3"
-author: BillWagner
-ms.author: wiwagn
-ms.openlocfilehash: e9cfedb476f44ef8c3eaeb45bac571d17802d525
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.openlocfilehash: e0020a8cd8841ef9a35781b534c82db5e15c257f
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="xattribute-class-overview-c"></a>XAttribute sınıfına genel bakış (C#)
 Öznitelikleri bir öğesiyle ilişkilendirilmiş olan ad/değer çiftleridir. <xref:System.Xml.Linq.XAttribute> Sınıfı, XML öznitelikleri temsil eder.  
@@ -83,7 +74,7 @@ Console.WriteLine(c);
 ```  
   
 ### <a name="attributes-are-not-nodes"></a>Öznitelikleri düğümleri olmayan  
- Öznitelikler ve öğeler arasındaki bazı farklar vardır. <xref:System.Xml.Linq.XAttribute>nesneler düğüm XML ağacında değildir. Bunlar bir XML öğesi ile ilişkili ad/değer çiftleridir. Belge nesne modeli (DOM) aksine bu daha yakından XML yapısını yansıtır. Ancak <xref:System.Xml.Linq.XAttribute> nesneleri gerçekten çalışmaya XML Ağaçtaki düğümler olmayan <xref:System.Xml.Linq.XAttribute> nesneleri ile çalışmaya çok benzer <xref:System.Xml.Linq.XElement> nesneleri.  
+ Öznitelikler ve öğeler arasındaki bazı farklar vardır. <xref:System.Xml.Linq.XAttribute> nesneler düğüm XML ağacında değildir. Bunlar bir XML öğesi ile ilişkili ad/değer çiftleridir. Belge nesne modeli (DOM) aksine bu daha yakından XML yapısını yansıtır. Ancak <xref:System.Xml.Linq.XAttribute> nesneleri gerçekten çalışmaya XML Ağaçtaki düğümler olmayan <xref:System.Xml.Linq.XAttribute> nesneleri ile çalışmaya çok benzer <xref:System.Xml.Linq.XElement> nesneleri.  
   
  Bu ayrım, yalnızca XML ağaçlar olan düğüm düzeyinde çalışır kod yazma geliştiriciler öncelikle önemlidir. Geliştiricilerin çoğu Bu ayrım ile ilgilenen olmaz.  
   

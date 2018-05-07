@@ -1,23 +1,16 @@
 ---
 title: add (C# Başvurusu)
 ms.date: 07/20/2015
-ms.prod: .net
-ms.technology:
-- devlang-csharp
-ms.topic: article
 f1_keywords:
 - add_CSharpKeyword
 helpviewer_keywords:
 - add event accessor [C#]
 ms.assetid: faf30b99-10e8-45cd-ab9a-57585d4d1d8d
-caps.latest.revision: 7
-author: BillWagner
-ms.author: wiwagn
-ms.openlocfilehash: cab77ad5a990cf85075455e347a4b1c02645af37
-ms.sourcegitcommit: 7e99f66ef09d2903e22c789c67ff5a10aa953b2f
+ms.openlocfilehash: c1fa8c130475a67ac175205fe3491a32654ea475
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/18/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="add-c-reference"></a>add (C# Başvurusu)
 `add` Bağlamsal anahtar sözcüğü için istemci kodu abone olduğunda çağrılan bir özel olay erişimcisi tanımlamak için kullanılır, [olay](../../../csharp/language-reference/keywords/event.md). Özel bir sağlarsanız `add` erişimci de sağlamanız bir [kaldırmak](../../../csharp/language-reference/keywords/remove.md) erişimcisi.  
@@ -30,4 +23,4 @@ ms.lasthandoff: 11/18/2017
  Genellikle, kendi özel olay erişimcilerini sağlamanız gerekmez. Bir olay bildirirken derleyici tarafından otomatik olarak oluşturulan erişimciler çoğu senaryoları için yeterlidir.  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [Olayları](../../../csharp/programming-guide/events/index.md)
+ [Olaylar](../../../csharp/programming-guide/events/index.md)

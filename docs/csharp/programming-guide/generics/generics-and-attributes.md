@@ -1,21 +1,15 @@
 ---
-title: "Genel Türler ve Öznitelikler (C# Programlama Kılavuzu)"
+title: Genel Türler ve Öznitelikler (C# Programlama Kılavuzu)
 ms.date: 07/20/2015
-ms.prod: .net
-ms.technology: devlang-csharp
-ms.topic: article
 helpviewer_keywords:
 - generics [C#], attributes
 - attributes [C#], with generics
 ms.assetid: da9fc326-4648-454a-8e13-3911a2edefd7
-caps.latest.revision: "13"
-author: BillWagner
-ms.author: wiwagn
-ms.openlocfilehash: e6fdd32fb41c3bda83e848952f70cbd736a0fc60
-ms.sourcegitcommit: 685143b62385500f59bc36274b8adb191f573a16
+ms.openlocfilehash: 3bfb4028fb5efce693abd83b40636b0149962e3b
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/09/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="generics-and-attributes-c-programming-guide"></a>Genel Türler ve Öznitelikler (C# Programlama Kılavuzu)
 Öznitelikler genel türleri için genel olmayan türleri aynı şekilde uygulanabilir. Öznitelikleri uygulama ile ilgili daha fazla bilgi için bkz: [öznitelikleri](../../../csharp/programming-guide/concepts/attributes/index.md).  
@@ -49,6 +43,6 @@ ms.lasthandoff: 12/09/2017
  Çalışma zamanında bir genel tür veya tür parametresi hakkında bilgi almak için yöntemleri kullanabilirsiniz <xref:System.Reflection>. Daha fazla bilgi için bkz: [genel türler ve yansıma](../../../csharp/programming-guide/generics/generics-and-reflection.md)  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [C# programlama kılavuzu](../../../csharp/programming-guide/index.md)  
- [Genel türler](../../../csharp/programming-guide/generics/index.md)  
- [Öznitelikleri](../../../../docs/standard/attributes/index.md)
+ [C# Programlama Kılavuzu](../../../csharp/programming-guide/index.md)  
+ [Genel Türler](../../../csharp/programming-guide/generics/index.md)  
+ [Öznitelikler](../../../../docs/standard/attributes/index.md)

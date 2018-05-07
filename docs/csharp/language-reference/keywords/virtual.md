@@ -1,24 +1,17 @@
 ---
 title: virtual (C# Başvurusu)
 ms.date: 07/20/2015
-ms.prod: .net
-ms.technology:
-- devlang-csharp
-ms.topic: article
 f1_keywords:
 - virtual_CSharpKeyword
 - virtual
 helpviewer_keywords:
 - virtual keyword [C#]
 ms.assetid: 5da9abae-bc1e-434f-8bea-3601b8dcb3b2
-caps.latest.revision: 26
-author: BillWagner
-ms.author: wiwagn
-ms.openlocfilehash: dce3333646bca6f558e3760849b6cffdb34a6c0b
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 4e1a65455df9b0a9272bc5cef257f0d00b36b500
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="virtual-c-reference"></a>virtual (C# Başvurusu)
 `virtual` Anahtar sözcüğü bir yöntemi, özelliği, dizin oluşturucu veya olay bildiriminin değiştirebilir ve türetilen bir sınıfta geçersiz kılınmak üzere izin için kullanılır. Örneğin, bu yöntem, devralınan herhangi bir sınıf tarafından geçersiz kılınabilir:  
@@ -65,10 +58,10 @@ public Cylinder(double r, double h): base(r, h) {}
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
  [C# başvurusu](../../../csharp/language-reference/index.md)  
- [C# programlama kılavuzu](../../../csharp/programming-guide/index.md)  
+ [C# Programlama Kılavuzu](../../../csharp/programming-guide/index.md)  
  [Değiştiriciler](../../../csharp/language-reference/keywords/modifiers.md)  
- [C# anahtar sözcükleri](../../../csharp/language-reference/keywords/index.md)  
+ [C# Anahtar Sözcükleri](../../../csharp/language-reference/keywords/index.md)  
  [Çok biçimlilik](../../../csharp/programming-guide/classes-and-structs/polymorphism.md)  
- [Özet](../../../csharp/language-reference/keywords/abstract.md)  
- [geçersiz kılma](../../../csharp/language-reference/keywords/override.md)  
- [Yeni](../../../csharp/language-reference/keywords/new.md)
+ [abstract](../../../csharp/language-reference/keywords/abstract.md)  
+ [override](../../../csharp/language-reference/keywords/override.md)  
+ [new](../../../csharp/language-reference/keywords/new.md)

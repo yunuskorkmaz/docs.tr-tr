@@ -1,10 +1,6 @@
 ---
-title: "-recurse (C# Derleyici Seçenekleri)"
+title: -recurse (C# Derleyici Seçenekleri)
 ms.date: 07/20/2015
-ms.prod: .net
-ms.technology:
-- devlang-csharp
-ms.topic: article
 f1_keywords:
 - /recurse
 helpviewer_keywords:
@@ -12,14 +8,11 @@ helpviewer_keywords:
 - recurse compiler option [C#]
 - -recurse compiler option [C#]
 ms.assetid: 4e8212e5-04e3-45b1-8a42-41bc50e683b0
-caps.latest.revision: 
-author: BillWagner
-ms.author: wiwagn
-ms.openlocfilehash: b50454112bc7aee6c3e0f8fe674e8727ca9e49be
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.openlocfilehash: 7d18fb2b1710e074653e054d003be762d947d1be
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="-recurse-c-compiler-options"></a>-recurse (C# Derleyici Seçenekleri)
 Recurse seçeneği, belirtilen dizin (dir) veya proje dizininin tüm alt dizinlerdeki kaynak kodu dosyaları derlemek sağlar.  
@@ -31,7 +24,7 @@ Recurse seçeneği, belirtilen dizin (dir) veya proje dizininin tüm alt dizinle
 ```  
   
 ## <a name="arguments"></a>Arguments  
- `dir`(isteğe bağlı)  
+ `dir` (isteğe bağlı)  
  Aramayı başlatmak istediğiniz dizin. Bu belirtilmezse arama proje dizininde başlar.  
   
  `file`  

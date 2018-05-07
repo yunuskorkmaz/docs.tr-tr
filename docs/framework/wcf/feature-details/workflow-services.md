@@ -1,27 +1,15 @@
 ---
-title: "İş Akışı Hizmetleri"
-ms.custom: 
+title: İş Akışı Hizmetleri
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 7b05c766-f181-425d-9a3d-2a5e150c85f7
-caps.latest.revision: "20"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 0e33915105ca9ff095f09bcd52431212e7c8e927
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: a8871685007cdb81848848da5c6b3483d014bb20
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="workflow-services"></a>İş Akışı Hizmetleri
-[!INCLUDE[netfx_current_long](../../../../includes/netfx-current-long-md.md)]tam olarak bir iş akışı tabanlı hizmet bildirimli olarak XAML'de açıklamak sağlar. Hizmetinizi uygulayan bir iş akışı tanımlayın ve hizmet sunan tüm tamamen XAML'de uç noktaları açıklar. Bu bölümdeki konular, bildirimli olarak yazma hizmetleri destekleyen programlama modeli ayrıntılı olarak açıklanmaktadır.  
+[!INCLUDE[netfx_current_long](../../../../includes/netfx-current-long-md.md)] tam olarak bir iş akışı tabanlı hizmet bildirimli olarak XAML'de açıklamak sağlar. Hizmetinizi uygulayan bir iş akışı tanımlayın ve hizmet sunan tüm tamamen XAML'de uç noktaları açıklar. Bu bölümdeki konular, bildirimli olarak yazma hizmetleri destekleyen programlama modeli ayrıntılı olarak açıklanmaktadır.  
   
 ## <a name="in-this-section"></a>Bu Bölümde  
  [İş Akışı Hizmetlerine Genel Bakış](../../../../docs/framework/wcf/feature-details/workflow-services-overview.md)  

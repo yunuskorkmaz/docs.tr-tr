@@ -1,28 +1,14 @@
 ---
-title: "İleti İzleme ve Kaydetme"
-ms.custom: 
+title: İleti İzleme ve Kaydetme
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - Tracing and logging
 ms.assetid: a4f39bfc-3c5e-4d51-a312-71c5c3ce0afd
-caps.latest.revision: 
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: cae7d806ce68f6804f97195c9bf2571328af6dff
-ms.sourcegitcommit: f28752eab00d2bd97e971542c0f49ce63cfbc239
-ms.translationtype: MT
+ms.openlocfilehash: 5f0cca66798a9d84b01c9fde1147c28f14a953db
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/29/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="tracing-and-message-logging"></a>İleti İzleme ve Kaydetme
 Bu örnek, ileti izleme ve kaydetme etkinleştirmek gösterilmiştir. Sonuçta elde edilen izlemeleri ve ileti günlüklerini kullanarak görüntülenen [hizmet izleme Görüntüleyicisi aracı (SvcTraceViewer.exe)](../../../../docs/framework/wcf/service-trace-viewer-tool-svctraceviewer-exe.md). Bu örnek dayanır [Başlarken](../../../../docs/framework/wcf/samples/getting-started-sample.md).  
@@ -31,7 +17,7 @@ Bu örnek, ileti izleme ve kaydetme etkinleştirmek gösterilmiştir. Sonuçta e
 >  Kurulum yordamı ve yapı yönergeleri Bu örnek için bu konunun sonunda yer alır.  
   
 ## <a name="tracing"></a>İzleme  
- [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)]tanımlanan izleme mekanizması kullanır <xref:System.Diagnostics> ad alanı. Bu izleme modelde izleme verilerini uygulamalarını uygulamak izleme kaynaklar tarafından oluşturulur. Her kaynak adına göre tanımlanır. İzleme dinleyicileri bilgilerini almak istediği izleme kaynakları için izleme tüketicileri oluşturun. İzleme verilerini almak için izleme kaynağı için bir dinleyici oluşturmanız gerekir. İçinde [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)], bu iki hizmetin için aşağıdaki kodu ekleyerek yapılabilir veya istemcinin yapılandırma dosyası hizmet modeli izleme kaynağı ayarlayarak `switchValue`:  
+ Windows Communication Foundation (WCF) kullanan tanımlanan izleme mekanizmasını <xref:System.Diagnostics> ad alanı. Bu izleme modelde izleme verilerini uygulamalarını uygulamak izleme kaynaklar tarafından oluşturulur. Her kaynak adına göre tanımlanır. İzleme dinleyicileri bilgilerini almak istediği izleme kaynakları için izleme tüketicileri oluşturun. İzleme verilerini almak için izleme kaynağı için bir dinleyici oluşturmanız gerekir. İçinde [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)], bu iki hizmetin için aşağıdaki kodu ekleyerek yapılabilir veya istemcinin yapılandırma dosyası hizmet modeli izleme kaynağı ayarlayarak `switchValue`:  
   
 ```xml  
 <system.diagnostics>  
@@ -141,7 +127,7 @@ Bu örnek, ileti izleme ve kaydetme etkinleştirmek gösterilmiştir. Sonuçta e
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  Bu dizin mevcut değilse, Git [Windows Communication Foundation (WCF) ve .NET Framework 4 için Windows Workflow Foundation (WF) örnek](http://go.microsoft.com/fwlink/?LinkId=150780) tüm indirmek için [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] ve [!INCLUDE[wf1](../../../../includes/wf1-md.md)] örnekleri. Bu örnek aşağıdaki dizinde bulunur.  
+>  Bu dizin mevcut değilse, Git [Windows Communication Foundation (WCF) ve .NET Framework 4 için Windows Workflow Foundation (WF) örnek](http://go.microsoft.com/fwlink/?LinkId=150780) tüm Windows Communication Foundation (WCF) indirmek için ve [!INCLUDE[wf1](../../../../includes/wf1-md.md)] örnekleri. Bu örnek aşağıdaki dizinde bulunur.  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Management\TracingAndLogging`  
   

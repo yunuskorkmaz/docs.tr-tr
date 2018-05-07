@@ -4,11 +4,11 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - netTcpBinding Element
 ms.assetid: 5c5104a7-8754-4335-8233-46a45322503e
-ms.openlocfilehash: f6cbdbb7c5569851055102cfe5d413e0b94376f3
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
-ms.translationtype: HT
+ms.openlocfilehash: 0be428ef3b37222e1e8472591d2b54d950bef59f
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="ltnettcpbindinggt"></a>&lt;netTcpBinding&gt;
 Güvenli, güvenilir ve en iyi duruma getirilmiş bağlama makineler arası iletişim için uygun belirtir. Varsayılan olarak, bir çalışma zamanı iletişim yığını Windows güvenliği ile ileti güvenliği ve kimlik doğrulama, ileti teslimi ve ikili ileti kodlama için TCP oluşturur.  
@@ -92,7 +92,7 @@ algorithmSuite="Basic128/Basic192/Basic256/Basic128Rsa15/Basic256Rsa15/TripleDes
 ## <a name="remarks"></a>Açıklamalar  
  Bu bağlama taşıma güvenliği, ileti teslimi için TCP ve ikili ileti kodlama kullanan varsayılan olarak, bir çalışma zamanı iletişim yığını oluşturur. Bu bağlama Intranet üzerinden iletişim için bir uygun Windows Communication Foundation (WCF) sistem tarafından sağlanan bir seçimdir.  
   
- İçin varsayılan yapılandırmayı `netTcpBinding` tarafından sağlanan yapılandırma daha hızlıdır `wsHttpBinding`, ancak yalnızca için hazırlanmıştır [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)]- için -[!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)] iletişim. Güvenlik davranıştır isteğe bağlı kullanılarak yapılandırılabilir `securityMode` özniteliği. WS-ReliableMessaging kullanımını isteğe bağlı kullanılarak yapılandırılabilir `reliableSessionEnabled` özniteliği. Ancak güvenilir Mesajlaşma varsayılan olarak kapalıdır. Daha fazla genel olarak, HTTP sistem tarafından sağlanan bağlamalar gibi `wsHttpBinding` ve `basicHttpBinding` varsayılan olarak, öğeleri açmak için kullanılabilirken yapılandırılmış olan `netTcpBinding` bağlama kapanmadan şeyler varsayılan olarak, destek, örneğin, aşağıdakilerden birini alınacak katılımı gerekir böylece WS-* belirtimleri. Bu, TCP için varsayılan yapılandırmayı varsayılan olarak HTTP bağlantıları için yapılandırılan olandan uç noktalar arasında ileti değiş tokuşu en hızlı olduğu anlamına gelir.  
+ İçin varsayılan yapılandırmayı `netTcpBinding` tarafından sağlanan yapılandırma daha hızlıdır `wsHttpBinding`, ancak yalnızca WCF iletişimi için tasarlanmıştır. Güvenlik davranıştır isteğe bağlı kullanılarak yapılandırılabilir `securityMode` özniteliği. WS-ReliableMessaging kullanımını isteğe bağlı kullanılarak yapılandırılabilir `reliableSessionEnabled` özniteliği. Ancak güvenilir Mesajlaşma varsayılan olarak kapalıdır. Daha fazla genel olarak, HTTP sistem tarafından sağlanan bağlamalar gibi `wsHttpBinding` ve `basicHttpBinding` varsayılan olarak, öğeleri açmak için kullanılabilirken yapılandırılmış olan `netTcpBinding` bağlama kapanmadan şeyler varsayılan olarak, destek, örneğin, aşağıdakilerden birini alınacak katılımı gerekir böylece WS-* belirtimleri. Bu, TCP için varsayılan yapılandırmayı varsayılan olarak HTTP bağlantıları için yapılandırılan olandan uç noktalar arasında ileti değiş tokuşu en hızlı olduğu anlamına gelir.  
   
 ## <a name="example"></a>Örnek  
  Bağlama, istemci ve hizmet için yapılandırma dosyalarında belirtilir. Bağlama türü belirtilen `binding` özniteliği `<endpoint>` öğesi. NetTcpBinding bağını yapılandırmak ve bazı ayarlarını değiştirmek istiyorsanız, bir bağlama yapılandırması tanımlamak gereklidir. Uç nokta ile bağlama yapılandırması başvurmalıdır bir `bindingConfiguration` özniteliği. Aşağıdaki örnekte, bir bağlama yapılandırması tanımlanır.  

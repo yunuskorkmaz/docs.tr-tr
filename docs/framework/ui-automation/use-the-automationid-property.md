@@ -1,13 +1,6 @@
 ---
-title: "AutomationID Özelliğini Kullanma"
-ms.custom: 
+title: AutomationID Özelliğini Kullanma
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-bcl
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -16,16 +9,14 @@ helpviewer_keywords:
 - UI Automation, AutomationId property
 - properties, AutomationId
 ms.assetid: a24e807b-d7c3-4e93-ac48-80094c4e1c90
-caps.latest.revision: "21"
 author: Xansky
 ms.author: mhopkins
 manager: markl
-ms.workload: dotnet
-ms.openlocfilehash: fdd26f335fb2f9b8072103def5b00d91a6740817
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.openlocfilehash: bd5985dd531b13ca91efd9c0aa7987ff6a57e56a
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="use-the-automationid-property"></a>AutomationID Özelliğini Kullanma
 > [!NOTE]
@@ -33,16 +24,16 @@ ms.lasthandoff: 01/19/2018
   
  Bu konu, senaryolarını ve ne zaman ve nasıl Göster örnek kod içerir <xref:System.Windows.Automation.AutomationElement.AutomationIdProperty> bir öğenin içine bulmak için kullanılan [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] ağacı.  
   
- <xref:System.Windows.Automation.AutomationElement.AutomationIdProperty>UI Otomasyon öğesi eşdüzey düğümünden benzersiz olarak tanımlar. Kimlik denetlemek için ilgili özellik tanımlayıcıları hakkında daha fazla bilgi için bkz: [UI Otomasyon özelliklerine genel bakış](../../../docs/framework/ui-automation/ui-automation-properties-overview.md).  
+ <xref:System.Windows.Automation.AutomationElement.AutomationIdProperty> UI Otomasyon öğesi eşdüzey düğümünden benzersiz olarak tanımlar. Kimlik denetlemek için ilgili özellik tanımlayıcıları hakkında daha fazla bilgi için bkz: [UI Otomasyon özelliklerine genel bakış](../../../docs/framework/ui-automation/ui-automation-properties-overview.md).  
   
 > [!NOTE]
->  <xref:System.Windows.Automation.AutomationElement.AutomationIdProperty>Ağaç genelinde benzersiz bir kimlik garanti etmez; Genellikle, kapsayıcı ve kullanışlı olması için kapsam bilgileri de gerekir. Örneğin, bir uygulama olan, buna karşılık, birden çok alt menü öğesi birden çok üst düzey menü öğesi ile bir menü denetimi içerebilir. Bu ikincil menü öğeleri, "Item1", "2 öğesinin" gibi genel bir şema tarafından tanımlanan ve benzeri, yinelenen tanımlayıcıları çocuklar için üst düzey menü öğeleri arasında izin verme.  
+>  <xref:System.Windows.Automation.AutomationElement.AutomationIdProperty> Ağaç genelinde benzersiz bir kimlik garanti etmez; Genellikle, kapsayıcı ve kullanışlı olması için kapsam bilgileri de gerekir. Örneğin, bir uygulama olan, buna karşılık, birden çok alt menü öğesi birden çok üst düzey menü öğesi ile bir menü denetimi içerebilir. Bu ikincil menü öğeleri, "Item1", "2 öğesinin" gibi genel bir şema tarafından tanımlanan ve benzeri, yinelenen tanımlayıcıları çocuklar için üst düzey menü öğeleri arasında izin verme.  
   
 ## <a name="scenarios"></a>Senaryolar  
  Üç birincil UI Otomasyonu istemci uygulaması senaryoları kullanımını gerektiren belirlenmiştir <xref:System.Windows.Automation.AutomationElement.AutomationIdProperty> için öğeleri ararken doğru ve tutarlı sonuçlar elde etmek için.  
   
 > [!NOTE]
->  <xref:System.Windows.Automation.AutomationElement.AutomationIdProperty>Denetim görünümünde üst düzey uygulama windows, türetilen UI Otomasyon öğeleri dışındaki tüm UI Otomasyon öğeleri tarafından desteklenen [!INCLUDE[TLA#tla_winclient](../../../includes/tlasharptla-winclient-md.md)] bir kimlik veya x: Uid ve türetilen UI Otomasyon öğeleri yok denetimleri [!INCLUDE[TLA#tla_win32](../../../includes/tlasharptla-win32-md.md)] denetleyen bir denetim kimliği yok  
+>  <xref:System.Windows.Automation.AutomationElement.AutomationIdProperty> Denetim görünümünde üst düzey uygulama windows, türetilen UI Otomasyon öğeleri dışındaki tüm UI Otomasyon öğeleri tarafından desteklenen [!INCLUDE[TLA#tla_winclient](../../../includes/tlasharptla-winclient-md.md)] bir kimlik veya x: Uid ve türetilen UI Otomasyon öğeleri yok denetimleri [!INCLUDE[TLA#tla_win32](../../../includes/tlasharptla-win32-md.md)] denetleyen bir denetim kimliği yok  
   
 #### <a name="use-a-unique-and-discoverable-automationid-to-locate-a-specific-element-in-the-ui-automation-tree"></a>UI Otomasyonu ağacında belirli bir öğeyi bulmak için benzersiz ve bulunabilirlik Automationıd kullanın  
   

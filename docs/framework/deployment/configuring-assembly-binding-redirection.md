@@ -1,27 +1,17 @@
 ---
-title: "Derleme Bağlama Yönlendirmesini Yapılandırma"
-ms.custom: 
+title: Derleme Bağlama Yönlendirmesini Yapılandırma
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - side-by-side execution, assembly binding redirection
 - assemblies [.NET Framework], binding redirection
 ms.assetid: d266cbd8-bf91-41d1-baf0-afbc481a741f
-caps.latest.revision: "8"
 author: mairaw
 ms.author: mairaw
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: b53673d1ddb1de7fed087b4c5cb125e50f11b918
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 04743dc7a0fc821f2e3b94929e2384eb25c69f2c
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="configuring-assembly-binding-redirection"></a>Derleme Bağlama Yönlendirmesini Yapılandırma
 Varsayılan olarak, uygulamaların uygulama derlemek için kullanılan çalışma zamanı sürümü ile birlikte gelen .NET Framework derlemeler kümesini kullanın. Kullanabileceğiniz **appliesTo** özniteliği [ \<assemblyBinding >](../../../docs/framework/configure-apps/file-schema/runtime/assemblybinding-element-for-runtime.md) derleme bağlama başvuruları .NET belirli bir sürümüne yeniden yönlendirmek için bir uygulama yapılandırma dosyasında öğesi Framework'te derleme. Bu isteğe bağlı öznitelik uygulandığı hangi sürüm belirtmek için bir .NET Framework sürüm numarası kullanır. Öyle değilse **appliesTo** özniteliği belirtilirse  **\<assemblyBinding >** öğesi tüm .NET Framework sürümleri için geçerlidir.  
@@ -43,7 +33,7 @@ Varsayılan olarak, uygulamaların uygulama derlemek için kullanılan çalışm
 </runtime>  
 ```  
   
-  **\<AssemblyBinding >** sipariş duyarlı öğeleridir. Derleme bağlaması yeniden yönlendirme bilgilerini tüm .NET Framework sürüm 1.1 derlemeler için arkasından Derleme bağlaması yeniden yönlendirme bilgilerini tüm .NET Framework sürüm 1.0 derlemeler için ilk olarak, girmeniz gerekir. Son olarak, Derleme bağlaması yeniden yönlendirme bilgilerini kullanmayan tüm .NET Framework derleme yeniden yönlendirme için girin **appliesTo** özniteliği ve bu nedenle, .NET Framework'ün tüm sürümleri için geçerlidir. Yeniden yönlendirme bir çakışma durumunda ilk eşleşen yeniden yönlendirme deyiminde yapılandırma dosyası kullanılır.  
+ **\<AssemblyBinding >** sipariş duyarlı öğeleridir. Derleme bağlaması yeniden yönlendirme bilgilerini tüm .NET Framework sürüm 1.1 derlemeler için arkasından Derleme bağlaması yeniden yönlendirme bilgilerini tüm .NET Framework sürüm 1.0 derlemeler için ilk olarak, girmeniz gerekir. Son olarak, Derleme bağlaması yeniden yönlendirme bilgilerini kullanmayan tüm .NET Framework derleme yeniden yönlendirme için girin **appliesTo** özniteliği ve bu nedenle, .NET Framework'ün tüm sürümleri için geçerlidir. Yeniden yönlendirme bir çakışma durumunda ilk eşleşen yeniden yönlendirme deyiminde yapılandırma dosyası kullanılır.  
   
  Örneğin, bir .NET Framework sürüm 1.0 derleme bir başvuru ve bir .NET Framework sürüm 1.1 derleme başka bir başvuru yeniden yönlendirmek için aşağıdaki yarı kodu içinde gösterilen düzeni kullanırsınız.  
   

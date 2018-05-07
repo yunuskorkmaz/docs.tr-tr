@@ -1,29 +1,15 @@
 ---
 title: UriTemplate ve UriTemplateTable
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 ms.assetid: 5cbbe03f-4a9e-4d44-9e02-c5773239cf52
-caps.latest.revision: 24
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: b0fedb812cee5cfa1e4c2ff921a78beb2a6c1beb
-ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
+ms.openlocfilehash: 09726af0a124723de025f29927954a2100aebcb4
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/28/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="uritemplate-and-uritemplatetable"></a>UriTemplate ve UriTemplateTable
-Web geliştiricileri şekli ve kendi Hizmetleri yanıt URI düzeni tanımlamak için gerektirir. [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] Geliştiriciler kendi URI'ler üzerinde denetime iki yeni sınıflar eklendi. <xref:System.UriTemplate> ve <xref:System.UriTemplateTable> URI tabanlı gönderme altyapısında temelini [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]. Bu sınıfların de kendi izin geliştiricilere şablonları ve URI eşleme mekanizması uygulamadan yararlanmak için kullanılabilir bir [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] hizmet.  
+Web geliştiricileri şekli ve kendi Hizmetleri yanıt URI düzeni tanımlamak için gerektirir. Windows Communication Foundation (WCF) iki yeni sınıflar geliştiricilerin kendi URI'ler üzerinde denetime eklendi. <xref:System.UriTemplate> ve <xref:System.UriTemplateTable> URI tabanlı gönderme altyapısı içinde WCF temelini oluşturur. Bu sınıfları, kendi şablonlarını ve URI yararlanmak geliştiricilere izin verme eşleme mekanizması bir WCF Hizmeti uygulama olmadan da kullanılabilir.  
   
 ## <a name="templates"></a>Şablonlar  
  Bir şablon göreli URI'ler kümesini tanımlamak için bir yoldur. Aşağıdaki tabloda URI şablonları kümesini çeşitli hava durumu bilgi türlerini alır. bir sistem nasıl tanımlanabilir gösterir.  
@@ -35,7 +21,7 @@ Web geliştiricileri şekli ve kendi Hizmetleri yanıt URI düzeni tanımlamak i
 |Şehir tahmin|hava durumu / {state} / {Şehir}|  
 |Etkinlik tahmin|hava durumu / {state} / {Şehir} / {etkinliği}|  
   
- Bu tablo bir yapısal olarak benzer URI'ler açıklar. Her girişin bir URI şablonudur. Süslü ayraçlar segmentlerinde değişkenleri tanımlayın. Süslü ayraçlar içinde değil kesimleri değişmez değer dizeleri açıklanmaktadır. [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] Şablon sınıfları, örneğin, "/ hava durumu/wa/seattle/dönüşüm", bir gelen URI alıp, açıklayan bir şablona eşleşen bir geliştirici izin ver "/weather/ {state} / {Şehir} / {etkinlik}".  
+ Bu tablo bir yapısal olarak benzer URI'ler açıklar. Her girişin bir URI şablonudur. Süslü ayraçlar segmentlerinde değişkenleri tanımlayın. Süslü ayraçlar içinde değil kesimleri değişmez değer dizeleri açıklanmaktadır. Örneğin, "/ hava durumu/wa/seattle/dönüşüm", bir gelen URI alıp, açıklayan bir şablona eşleşen bir geliştirici WCF şablon sınıfları izin ver "/weather/ {state} / {Şehir} / {etkinlik}".  
   
 ## <a name="uritemplate"></a>UriTemplate  
  <xref:System.UriTemplate> bir URI şablonu kapsülleyen bir sınıftır. Oluşturucusu şablon tanımlayan bir dize parametresi alan. Bu dize sonraki bölümde açıklanan biçimde şablonu içerir. <xref:System.UriTemplate> Sınıfı sağlar izin yöntemleri eşleşen bir şablon için gelen bir URI, bir şablondan bir URI oluşturmayı, şablonda kullanılan değişken adları topluluğu almak, iki şablonları eşdeğerdir ve şablonun dönüş olup olmadığını belirler dize.  

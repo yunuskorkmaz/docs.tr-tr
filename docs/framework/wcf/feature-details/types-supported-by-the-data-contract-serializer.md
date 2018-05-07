@@ -1,31 +1,17 @@
 ---
 title: Veri Sözleşmesi Seri Hale Getirici Tarafından Desteklenen Türler
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 helpviewer_keywords:
 - serialization [WCF], supported types
 ms.assetid: 7381b200-437a-4506-9556-d77bf1bc3f34
-caps.latest.revision: 24
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: c53a11408254dc3c5f2abfb7d5d45305d3429280
-ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
+ms.openlocfilehash: 9a6279b9850ce5cd3d23cffeaf233dec1b360deb
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/28/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="types-supported-by-the-data-contract-serializer"></a>Veri Sözleşmesi Seri Hale Getirici Tarafından Desteklenen Türler
-[!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] kullanan <xref:System.Runtime.Serialization.DataContractSerializer> veri XML'e dönüştürecek ve XML verilerine geri dönüştürmek için kendi varsayılan seri hale getirme altyapısı olarak. <xref:System.Runtime.Serialization.DataContractSerializer> Serileştirmek için tasarlanmış *veri sözleşmesi* türleri. Ancak, bir örtük veri sözleşmesi sahip olarak düşünülebilir birçok diğer türleri, destekler. Seri hale getirilebilir türlerinin tam bir listesi verilmiştir:  
+Windows Communication Foundation (WCF) kullanan <xref:System.Runtime.Serialization.DataContractSerializer> veri XML'e dönüştürecek ve XML verilerine geri dönüştürmek için kendi varsayılan seri hale getirme altyapısı olarak. <xref:System.Runtime.Serialization.DataContractSerializer> Serileştirmek için tasarlanmış *veri sözleşmesi* türleri. Ancak, bir örtük veri sözleşmesi sahip olarak düşünülebilir birçok diğer türleri, destekler. Seri hale getirilebilir türlerinin tam bir listesi verilmiştir:  
   
 -   Parametrelere sahip olmayan bir oluşturucuya sahip tüm herkese görünür türleri.  
   
@@ -51,13 +37,13 @@ ms.lasthandoff: 04/28/2018
   
 -   Serileştirmek veya seri durumdan uygulayan bir tür için <xref:System.Runtime.Serialization.ISerializable> kısmen güvenilen kod kullanarak <xref:System.Runtime.Serialization.DataContractSerializer> gerektirir <xref:System.Security.Permissions.SecurityPermissionAttribute.SerializationFormatter%2A> ve <xref:System.Security.Permissions.SecurityPermissionAttribute.UnmanagedCode%2A> izinleri.  
   
--   Çalıştırırken [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] kod [kısmi güven](../../../../docs/framework/wcf/feature-details/partial-trust.md) modu, seri hale getirme ve seri durumdan çıkarma işlemi `readonly` alanlar (her ikisi de `public` ve `private`) desteklenmiyor. Oluşturulan IL doğrulanamaz olduğundan ve bu nedenle, yükseltilmiş izinler gerektirir budur.  
+-   WCF kod çalıştırılırken [kısmi güven](../../../../docs/framework/wcf/feature-details/partial-trust.md) modu, seri hale getirme ve seri durumdan çıkarma işlemi `readonly` alanlar (her ikisi de `public` ve `private`) desteklenmiyor. Oluşturulan IL doğrulanamaz olduğundan ve bu nedenle, yükseltilmiş izinler gerektirir budur.  
   
 -   Hem <xref:System.Runtime.Serialization.DataContractSerializer> ve <xref:System.Xml.Serialization.XmlSerializer> bir kısmi güven ortamında desteklenir. Ancak, kullanım <xref:System.Runtime.Serialization.DataContractSerializer> aşağıdaki koşullara tabi olan:  
   
     -   Tüm serileştirilebilir `[DataContract]` türleri ortak olmalıdır.  
   
-    -   Tüm serileştirilebilir `[DataMember]` alanları veya özelliklerinde bir `[DataContract]` türü ortak ve gerekir okuma/yazma. Seri hale getirme ve seri durumdan çıkarma işlemi `readonly` çalıştırırken alanları desteklenmiyor [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] kısmen güvenilen uygulamada.  
+    -   Tüm serileştirilebilir `[DataMember]` alanları veya özelliklerinde bir `[DataContract]` türü ortak ve gerekir okuma/yazma. Seri hale getirme ve seri durumdan çıkarma işlemi `readonly` WCF kısmen güvenilen bir uygulamada çalıştırırken alanları desteklenmiyor.  
   
     -   `[Serializable]` / `ISerializable]` Programlama modeli bir kısmi güven ortamında desteklenmez.  
   
@@ -76,7 +62,7 @@ ms.lasthandoff: 04/28/2018
   
 -   Yapılar ve sınıflar desteklenir.  
   
--   <xref:System.Runtime.Serialization.DataContractSerializer> Tarafından kullanılan programlama modelini desteklemiyor <xref:System.Xml.Serialization.XmlSerializer> ve [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] Web Hizmetleri. Özellikle, gibi öznitelikleri desteklemiyor <xref:System.Xml.Serialization.XmlElementAttribute> ve <xref:System.Xml.Serialization.XmlAttributeAttribute>. Bu programlama modeli desteğini etkinleştirmek için [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] kullanmak geçirilmesi gerekiyor <xref:System.Xml.Serialization.XmlSerializer> yerine <xref:System.Runtime.Serialization.DataContractSerializer>.  
+-   <xref:System.Runtime.Serialization.DataContractSerializer> Tarafından kullanılan programlama modelini desteklemiyor <xref:System.Xml.Serialization.XmlSerializer> ve [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] Web Hizmetleri. Özellikle, gibi öznitelikleri desteklemiyor <xref:System.Xml.Serialization.XmlElementAttribute> ve <xref:System.Xml.Serialization.XmlAttributeAttribute>. Bu programlama modeli desteğini etkinleştirmek için WCF kullanmak geçirilmesi gerekiyor <xref:System.Xml.Serialization.XmlSerializer> yerine <xref:System.Runtime.Serialization.DataContractSerializer>.  
   
 -   <xref:System.DBNull> Türü, özel bir yolla değerlendirilir. Bir singleton türü ise ve seri durumdan çıkarma sırasında seri durumdan çıkarıcının singleton kısıtlamayla uyar ve tüm işaret `DBNull` singleton örneğine başvuru. Çünkü `DBNull` , talep serializable bir tür olduğundan <xref:System.Security.Permissions.SecurityPermissionAttribute.SerializationFormatter%2A> izni.  
   

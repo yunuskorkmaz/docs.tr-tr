@@ -1,24 +1,14 @@
 ---
-title: "Çalışma Zamanı Yönerge İlkesi Ayarları"
-ms.custom: 
+title: Çalışma Zamanı Yönerge İlkesi Ayarları
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: cb52b1ef-47fd-4609-b69d-0586c818ac9e
-caps.latest.revision: "10"
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 698e8ef926740f33f8a0a192680b5cebb45c9d79
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 51a0538670a834435aff8d2b6c81b78450fe47f1
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="runtime-directive-policy-settings"></a>Çalışma Zamanı Yönerge İlkesi Ayarları
 > [!NOTE]
@@ -33,18 +23,18 @@ ms.lasthandoff: 12/22/2017
   
 -   Yansıma ilke türleri, hangi meta verilerini yansıma için çalışma zamanında sunulacağını belirleyin:  
   
-    -   `Activate`örneklerinin etkinleştirmesi Oluşturucular, çalışma zamanı erişimi kontrol eder.  
+    -   `Activate` Örneklerinin etkinleştirmesi Oluşturucular, çalışma zamanı erişimi kontrol eder.  
   
-    -   `Browse`denetimleri hakkında bilgi için sorgulama öğeleri program.  
+    -   `Browse` denetimleri hakkında bilgi için sorgulama öğeleri program.  
   
-    -   `Dynamic`programlama tüm türleri ve üyeleri dinamik etkinleştirmek için çalışma zamanı erişimi kontrol eder.  
+    -   `Dynamic` programlama tüm türleri ve üyeleri dinamik etkinleştirmek için çalışma zamanı erişimi kontrol eder.  
   
      Aşağıdaki tabloda, yansıma ilke türleri ve hangi kullanılabilmesi için program öğeleri listeler.  
   
     |Öğe|Etkinleştirme|Gözat|Dinamik|  
     |-------------|--------------|------------|-------------|  
     |[\<Uygulama >](../../../docs/framework/net-native/application-element-net-native.md)|✓|✓|✓|  
-    |[\<Derleme >](../../../docs/framework/net-native/assembly-element-net-native.md)|✓|✓|✓|  
+    |[\<derleme >](../../../docs/framework/net-native/assembly-element-net-native.md)|✓|✓|✓|  
     |[\<Attributeımplies >](../../../docs/framework/net-native/attributeimplies-element-net-native.md)|✓|✓|✓|  
     |[\<Olay >](../../../docs/framework/net-native/event-element-net-native.md)||✓|✓|  
     |[\<Alanı >](../../../docs/framework/net-native/field-element-net-native.md)||✓|✓|  
@@ -56,26 +46,26 @@ ms.lasthandoff: 12/22/2017
     |[\<Parametresi >](../../../docs/framework/net-native/parameter-element-net-native.md)|✓|✓|✓|  
     |[\<Özellik >](../../../docs/framework/net-native/property-element-net-native.md)||✓|✓|  
     |[\<Subtypes >](../../../docs/framework/net-native/subtypes-element-net-native.md)|✓|✓|✓|  
-    |[\<Türü >](../../../docs/framework/net-native/type-element-net-native.md)|✓|✓|✓|  
+    |[\<türü >](../../../docs/framework/net-native/type-element-net-native.md)|✓|✓|✓|  
     |[\<Typeınstantiation >](../../../docs/framework/net-native/typeinstantiation-element-net-native.md)|✓|✓|✓|  
     |[\<TypeParameter >](../../../docs/framework/net-native/typeparameter-element-net-native.md)|✓|✓|✓|  
   
 -   Seri hale getirme ilke türleri, hangi meta verileri seri hale getirme ve seri durumundan çıkarma için çalışma zamanında sunulacağını belirleyin:  
   
-    -   `Serialize`Oluşturucular, alanları ve üçüncü taraf kitaplıklar gibi Newtonsoft JSON seri hale getirici tarafından sıralanmasına türü örnekleri etkinleştirmek için özellikleri, çalışma zamanı erişimi denetler.  
+    -   `Serialize` Oluşturucular, alanları ve üçüncü taraf kitaplıklar gibi Newtonsoft JSON seri hale getirici tarafından sıralanmasına türü örnekleri etkinleştirmek için özellikleri, çalışma zamanı erişimi denetler.  
   
-    -   `DataContractSerializer`Oluşturucular, alanları ve türü örnekleri tarafından seri hale etkinleştirmek için özellikleri, çalışma zamanı erişimi denetleyen <xref:System.Runtime.Serialization.DataContractSerializer> sınıfı.  
+    -   `DataContractSerializer` Oluşturucular, alanları ve türü örnekleri tarafından seri hale etkinleştirmek için özellikleri, çalışma zamanı erişimi denetleyen <xref:System.Runtime.Serialization.DataContractSerializer> sınıfı.  
   
-    -   `DataContractJsonSerializer`Oluşturucular, alanları ve türü örnekleri tarafından seri hale etkinleştirmek için özellikleri, çalışma zamanı erişimi denetleyen <xref:System.Runtime.Serialization.Json.DataContractJsonSerializer> sınıfı.  
+    -   `DataContractJsonSerializer` Oluşturucular, alanları ve türü örnekleri tarafından seri hale etkinleştirmek için özellikleri, çalışma zamanı erişimi denetleyen <xref:System.Runtime.Serialization.Json.DataContractJsonSerializer> sınıfı.  
   
-    -   `XmlSerializer`Oluşturucular, alanları ve türü örnekleri tarafından seri hale etkinleştirmek için özellikleri, çalışma zamanı erişimi denetleyen <xref:System.Xml.Serialization.XmlSerializer> sınıfı.  
+    -   `XmlSerializer` Oluşturucular, alanları ve türü örnekleri tarafından seri hale etkinleştirmek için özellikleri, çalışma zamanı erişimi denetleyen <xref:System.Xml.Serialization.XmlSerializer> sınıfı.  
   
      Aşağıdaki tabloda, serileştirme ilke türleri ve hangi kullanılabilmesi için program öğeleri listeler.  
   
     |Öğe|Serileştirme|DataContractSerializer|DataContractJsonSerializer|XmlSerializer|  
     |-------------|---------------|----------------------------|--------------------------------|-------------------|  
     |[\<Uygulama >](../../../docs/framework/net-native/application-element-net-native.md)|✓|✓|✓|✓|  
-    |[\<Derleme >](../../../docs/framework/net-native/assembly-element-net-native.md)|✓|✓|✓|✓|  
+    |[\<derleme >](../../../docs/framework/net-native/assembly-element-net-native.md)|✓|✓|✓|✓|  
     |[\<Attributeımplies >](../../../docs/framework/net-native/attributeimplies-element-net-native.md)|✓|✓|✓|✓|  
     |[\<Olay >](../../../docs/framework/net-native/event-element-net-native.md)|||||  
     |[\<Alanı >](../../../docs/framework/net-native/field-element-net-native.md)|✓||||  
@@ -87,24 +77,24 @@ ms.lasthandoff: 12/22/2017
     |[\<Parametresi >](../../../docs/framework/net-native/parameter-element-net-native.md)|✓|✓|✓|✓|  
     |[\<Özellik >](../../../docs/framework/net-native/property-element-net-native.md)|✓||||  
     |[\<Subtypes >](../../../docs/framework/net-native/subtypes-element-net-native.md)|✓|✓|✓|✓|  
-    |[\<Türü >](../../../docs/framework/net-native/type-element-net-native.md)|✓|✓|✓|✓|  
+    |[\<türü >](../../../docs/framework/net-native/type-element-net-native.md)|✓|✓|✓|✓|  
     |[\<Typeınstantiation >](../../../docs/framework/net-native/typeinstantiation-element-net-native.md)|✓|✓|✓|✓|  
     |[\<TypeParameter >](../../../docs/framework/net-native/typeparameter-element-net-native.md)|✓|✓|✓|✓|  
   
 -   Birlikte çalışma ilke türleri, hangi meta verilerin zamanında başvuruları türleri, değer türleri ve işlev işaretçileri COM ve Windows çalışma zamanı geçirmek için kullanılabilir hale getirileceğini belirleyin:  
   
-    -   `MarshalObject`COM ve başvuru türleri için Windows çalışma zamanı için yerel hazırlama denetler.  
+    -   `MarshalObject` COM ve başvuru türleri için Windows çalışma zamanı için yerel hazırlama denetler.  
   
-    -   `MarshalDelegate`işlev işaretçileri olarak temsilci türleri yerel hazırlama denetler.  
+    -   `MarshalDelegate` işlev işaretçileri olarak temsilci türleri yerel hazırlama denetler.  
   
-    -   `MarshalStructure`COM ve Windows çalışma zamanı değer türleri için yerel hazırlama denetler.  
+    -   `MarshalStructure` COM ve Windows çalışma zamanı değer türleri için yerel hazırlama denetler.  
   
      Aşağıdaki tabloda birlikte çalışabilirlik ilke türleri ve hangi kullanılabilmesi için program öğeleri listeler.  
   
     |Öğe|MarshalObject|MarshalDelegate|MarshalStructure|  
     |-------------|-------------------|---------------------|----------------------|  
     |[\<Uygulama >](../../../docs/framework/net-native/application-element-net-native.md)|✓|✓|✓|  
-    |[\<Derleme >](../../../docs/framework/net-native/assembly-element-net-native.md)|✓|✓|✓|  
+    |[\<derleme >](../../../docs/framework/net-native/assembly-element-net-native.md)|✓|✓|✓|  
     |[\<Attributeımplies >](../../../docs/framework/net-native/attributeimplies-element-net-native.md)|✓|✓|✓|  
     |[\<Olay >](../../../docs/framework/net-native/event-element-net-native.md)||||  
     |[\<Alanı >](../../../docs/framework/net-native/field-element-net-native.md)||||  
@@ -116,7 +106,7 @@ ms.lasthandoff: 12/22/2017
     |[\<Parametresi >](../../../docs/framework/net-native/parameter-element-net-native.md)|✓|✓|✓|  
     |[\<Özellik >](../../../docs/framework/net-native/property-element-net-native.md)||||  
     |[\<Subtypes >](../../../docs/framework/net-native/subtypes-element-net-native.md)|✓|✓|✓|  
-    |[\<Türü >](../../../docs/framework/net-native/type-element-net-native.md)|✓|✓|✓|  
+    |[\<türü >](../../../docs/framework/net-native/type-element-net-native.md)|✓|✓|✓|  
     |[\<Typeınstantiation >](../../../docs/framework/net-native/typeinstantiation-element-net-native.md)|✓|✓|✓|  
     |[\<TypeParameter >](../../../docs/framework/net-native/typeparameter-element-net-native.md)|✓|✓|✓|  
   
@@ -126,7 +116,7 @@ ms.lasthandoff: 12/22/2017
 |İlke ayarı|Açıklama|`Assembly`, `Namespace`, `Type`, ve `TypeInstantiation` öğeleri|`Event`, `Field`, `Method`, `MethodInstantiation`, ve `Property` öğeleri|  
 |--------------------|-----------------|-----------------------------------------------------------------------|--------------------------------------------------------------------------------|  
 |`All`|İlke tüm türleri ve .NET yerel araç zinciri kaldırmaz üyeleri için etkinleştirir.|✓||  
-|`Auto`|Bu program öğesi için ilke türü için varsayılan ilke kullanılması gerektiğini belirtir. Bu, bu ilke türü için bir ilke atlama için aynıdır. `Auto`genellikle ilkeyi bir üst öğeden devralındı belirtmek için kullanılır.|✓|✓|  
+|`Auto`|Bu program öğesi için ilke türü için varsayılan ilke kullanılması gerektiğini belirtir. Bu, bu ilke türü için bir ilke atlama için aynıdır. `Auto` genellikle ilkeyi bir üst öğeden devralındı belirtmek için kullanılır.|✓|✓|  
 |`Excluded`|İlkenin belirli bir program öğesi için devre dışı olduğunu belirtir. Örneğin, çalışma zamanı yönerge:<br /><br /> `<Type Name="BusinessClasses.Person" Browse="Excluded" Dynamic="Excluded" />`<br /><br /> Bu meta verileri için belirtir `BusinessClasses.Person` sınıfı değil ya da göz atmak için veya dinamik olarak oluşturmak ve değiştirmek kullanılabilir `Person` nesneleri.|✓|✓|  
 |`Included`|Üst türü için meta verileri varsa bir ilke etkinleştirir.||✓|  
 |`Public`|Tür veya üye gerekli değildir ve bu nedenle kaldırır ve aracı zincir belirler sürece genel türleri veya üyeler için ilke sağlar. Bu ayar farklıdır `Required Public`, araç zinciri gereksiz olduğunu belirlerse bile, bu meta veri genel türleri ve üyeleri için sağlar her zaman kullanılabilir olur.|✓||  

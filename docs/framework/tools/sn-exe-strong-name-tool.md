@@ -1,13 +1,6 @@
 ---
-title: "Sn.exe (Tanımlayıcı Ad Aracı)"
-ms.custom: 
+title: Sn.exe (Tanımlayıcı Ad Aracı)
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - public keys, signing files
 - Strong Name tool
@@ -17,16 +10,13 @@ helpviewer_keywords:
 - strong-named assemblies, signing files
 - key pairs for signing files
 ms.assetid: c1d2b532-1b8e-4c7a-8ac5-53b801135ec6
-caps.latest.revision: "44"
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: ff7036bce069aa24742f7ead7bb0735fed0f3678
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: c7e58d14eb29939ea1b91b5bdb75f691f5233d8c
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="snexe-strong-name-tool"></a>Sn.exe (Tanımlayıcı Ad Aracı)
 Tanımlayıcı ad Aracı (Sn.exe) oturum Derlemelerle yardımcı [tanımlayıcı adlar](../../../docs/framework/app-domains/strong-named-assemblies.md). Sn.exe; temel yönetim, imza oluşturma ve imza doğrulaması için seçenekler sağlar.  
@@ -59,11 +49,11 @@ sn [-quiet][option [parameter(s)]]
 |**-h**|Araç için komut sözdizimini ve seçenekleri görüntüler.|  
 |**-i** *GirişDosyası kapsayıcısı*|Gelen anahtar çifti yükler *GirişDosyası* içinde belirtilen anahtar kapsayıcısı. Anahtar kapsayıcısı, tanımlayıcı ad CSP'sinde bulunur.|  
 |**-k** [*anahtar boyutu*] *outfile*|Yeni bir oluşturur <xref:System.Security.Cryptography.RSACryptoServiceProvider> belirtilen boyuttaki anahtar ve belirtilen dosyaya yazar.  Hem ortak hem de özel anahtar dosyaya yazılır.<br /><br /> Bir anahtar boyutu belirtmezseniz, makinenizde Microsoft gelişmiş şifreleme sağlayıcısı yüklü ise varsayılan olarak 1,024-bit bir anahtar oluşturulur, yüklü değilse 512-bit anahtar oluşturulur.<br /><br /> *Anahtar boyutu* parametresi yüklü Microsoft Gelişmiş Şifreleme Sağlayıcısı varsa bu 384 bitten anahtar uzunluklarını 16.384 BITS 8 bit artışlarla destekler.  Makinenizde Microsoft temel şifreleme sağlayıcısı yüklüyse, 8 bitlik artışlarla 384 bit'ten 512 bit'e kadar olan anahtar uzunluklarını destekler.|  
-|**-m** [**y** *&#124;* **n**]|Anahtar kapsayıcılarının bilgisayara özgü mi yoksa kullanıcıya özgü mü olduğunu belirtir. Belirtirseniz *y*, anahtar kapsayıcıları bilgisayara özel. Belirtirseniz  *n* , anahtar kapsayıcıları kullanıcıya özgü.<br /><br /> y ne n öğelerinden hiçbirini belirtmezseniz, bu seçenek geçerli ayarı görüntüler.|  
-|**-o***GirişDosyası* [*outfile*]|Ortak anahtarı ile ayıklar *GirişDosyası* ve bir .csv dosyasında depolar. Ortak anahtarın her baytı virgülle ayrılır. Bu biçim, kaynak kodunda başlatılmış diziler olarak anahtarlara ilişkin sabit kodlama başvuruları için yararlıdır. Belirtmezseniz, bir *outfile*, bu seçenek çıktı panoya yerleştirir. **Not:** bu seçenek giriş yalnızca bir ortak anahtar olduğunu doğrulamaz. Varsa `infile` anahtar çiftini içeren özel bir anahtarla özel anahtarı da ayıklanır.|  
+|**-m** [**y** *&#124;* **n**]|Anahtar kapsayıcılarının bilgisayara özgü mi yoksa kullanıcıya özgü mü olduğunu belirtir. Belirtirseniz *y*, anahtar kapsayıcıları bilgisayara özel. Belirtirseniz *n*, anahtar kapsayıcıları kullanıcıya özgü.<br /><br /> y ne n öğelerinden hiçbirini belirtmezseniz, bu seçenek geçerli ayarı görüntüler.|  
+|**-o***GirişDosyası* [*outfile*]  |Ortak anahtarı ile ayıklar *GirişDosyası* ve bir .csv dosyasında depolar. Ortak anahtarın her baytı virgülle ayrılır. Bu biçim, kaynak kodunda başlatılmış diziler olarak anahtarlara ilişkin sabit kodlama başvuruları için yararlıdır. Belirtmezseniz, bir *outfile*, bu seçenek çıktı panoya yerleştirir. **Not:** bu seçenek giriş yalnızca bir ortak anahtar olduğunu doğrulamaz. Varsa `infile` anahtar çiftini içeren özel bir anahtarla özel anahtarı da ayıklanır.|  
 |**-p** *GirişDosyası ÇıkışDosyası* [*KarmaAlgoritma*]|Anahtar çiftini gelen ortak anahtarı ayıklar *GirişDosyası* ve depolar *outfile*, isteğe bağlı olarak tarafından belirtilen RSA algoritmasını kullanarak *KarmaAlgoritma*. Bu ortak anahtar olabilir kullanarak bir derlemeye geciktirin için kullanılan **/delaysign+** ve **/keyfile** seçeneklerini [derleme bağlayıcı (Al.exe)](../../../docs/framework/tools/al-exe-assembly-linker.md). Derleme gecikmeli imzalanmış olduğunda, yalnızca ortak anahtar derleme zamanında ayarlanır ve özel anahtarı bulunduğunda, daha sonra eklenecek bir imza için dosyada alan ayrılır.|  
-|**-pc***kapsayıcı* *outfile* [*KarmaAlgoritma*]|Anahtar çiftini gelen ortak anahtarı ayıklar *kapsayıcı* ve depolar *outfile*. Kullanırsanız *KarmaAlgoritma* seçeneği, RSA algoritması, ortak anahtar ayıklamak için kullanılır.|  
-|**-Pb** [**y** *&#124;* **n**]|Tanımlayıcı ad atlama ilkesinin uygulatılıp uygulatılmayacağı belirtir. Belirtirseniz *y*, güçlü tam güven derlemeler tam güvene yüklendiğinde doğrulanmaz için adları <xref:System.AppDomain>. Belirtirseniz  *n* , tanımlayıcı adlar doğruluğunu ancak belirli bir güçlü ad için doğrulanır. <xref:System.Security.Permissions.StrongNameIdentityPermission> Tam güven derlemeleri üzerinde hiçbir etkisi olmaz. Bir tanımlayıcı ad eşleştirmesi için kendi denetiminizi gerçekleştirmeniz gerekir.<br /><br /> Ne `y` ya da `n` belirtilirse, bu seçenek geçerli ayarı görüntüler. Varsayılan, `y` değeridir. **Not:** 64-bit bilgisayarlarda, bu parametre hem 32 bit hem de Sn.exe 64-bit örneklerini ayarlamanız gerekir.|  
+|**-pc***kapsayıcı* *outfile* [*KarmaAlgoritma*]  |Anahtar çiftini gelen ortak anahtarı ayıklar *kapsayıcı* ve depolar *outfile*. Kullanırsanız *KarmaAlgoritma* seçeneği, RSA algoritması, ortak anahtar ayıklamak için kullanılır.|  
+|**-Pb** [**y** *&#124;* **n**]|Tanımlayıcı ad atlama ilkesinin uygulatılıp uygulatılmayacağı belirtir. Belirtirseniz *y*, güçlü tam güven derlemeler tam güvene yüklendiğinde doğrulanmaz için adları <xref:System.AppDomain>. Belirtirseniz *n*, tanımlayıcı adlar doğruluğunu ancak belirli bir güçlü ad için doğrulanır. <xref:System.Security.Permissions.StrongNameIdentityPermission> Tam güven derlemeleri üzerinde hiçbir etkisi olmaz. Bir tanımlayıcı ad eşleştirmesi için kendi denetiminizi gerçekleştirmeniz gerekir.<br /><br /> Ne `y` ya da `n` belirtilirse, bu seçenek geçerli ayarı görüntüler. Varsayılan, `y` değeridir. **Not:** 64-bit bilgisayarlarda, bu parametre hem 32 bit hem de Sn.exe 64-bit örneklerini ayarlamanız gerekir.|  
 |**-q**[**uiet**]|Sessiz mod kullanılacağını belirtir; başarı iletilerinin görüntülenmesini engeller.|  
 |**-R**[**bir**] *derleme* *GirişDosyası*|Bir anahtar çifti daha önce imzalanmış veya gecikmeli imzalanmış derleme yeniden oturum açtığında *GirişDosyası*.<br /><br /> Varsa **-Ra** olan kullanıldığında, karmaları derlemedeki tüm dosyalar için yeniden.|  
 |**-Rc**[**bir**] *derleme kapsayıcısı*|Bir anahtar çifti daha önce imzalanmış veya gecikmeli imzalanmış derleme yeniden oturum açtığında *kapsayıcı*.<br /><br /> Varsa **- Rca** olan kullanıldığında, karmaları derlemedeki tüm dosyalar için yeniden.|  
@@ -74,9 +64,9 @@ sn [-quiet][option [parameter(s)]]
 |-`TSc``assembly``container`|Test-işaretlerini imzalı veya kısmen imzalı `assembly` anahtar kapsayıcısında anahtar çifti ile `container`.|  
 |**-v** *derleme*|Tanımlayıcı ad doğrular *derleme*, burada *derleme* bir derleme bildirimi içeren bir dosya adıdır.|  
 |**-vf***derleme* |Tanımlayıcı ad doğrular *derleme.* Farklı **- v** seçeneği **-vf** kullanarak devre dışı olsa bile doğrulama zorlar **- Vr** seçeneği.|  
-|**-Vk***regfile.reg* *derleme* [*userlist*] [*GirişDosyası*]|Doğrulamayı atlama için belirtilen derlemeyi kaydetmek üzere kullanabileceğiniz bir kayıt girdileri (.reg) dosyası oluşturur. Adlandırma derleme için geçerli kuralları **- Vr** seçeneğini uygulamak için **– Vk** de. Hakkında bilgi için *userlist* ve *GirişDosyası* seçenekleri bkz **– Vr** seçeneği.|  
+|**-Vk***regfile.reg* *derleme* [*userlist*] [*GirişDosyası*]  |Doğrulamayı atlama için belirtilen derlemeyi kaydetmek üzere kullanabileceğiniz bir kayıt girdileri (.reg) dosyası oluşturur. Adlandırma derleme için geçerli kuralları **- Vr** seçeneğini uygulamak için **– Vk** de. Hakkında bilgi için *userlist* ve *GirişDosyası* seçenekleri bkz **– Vr** seçeneği.|  
 |**-Toplu Lisans**|Bu bilgisayardaki tanımlayıcı ad doğrulamasının geçerli ayarlarını listeler.|  
-|**-Vr***derleme* [*userlist*] [*GirişDosyası*]|Kaydeder *derleme* doğrulaması atlanıyor. İsteğe bağlı olarak, doğrulama atlamanın geçerli olacağı kullanıcı adlarının virgülle ayrılmış listesini belirtebilirsiniz. Belirtirseniz *GirişDosyası*, etkin doğrulama kalır, ancak ortak anahtar *GirişDosyası* doğrulama işlemlerinde kullanılır. Belirleyebileceğiniz *derleme* biçiminde  *\*, strongname* tüm derlemelerde belirtilen tanımlayıcı ad ile kaydetmek için. İçin *strongname*, onaltılık basamak parçalanmış formun ortak anahtarın temsil eden dizeyi belirtin. Bkz: **-t** ve **-T** ortak anahtar belirteci görüntülemek için Seçenekler. **Dikkat:** yalnızca geliştirme sırasında bu seçeneği kullanın. Doğrulama atlama listesine bir derleme eklemek güvenlik açığı oluşturur. Kötü amaçlı bir derleme, kimliğini gizlemek için doğrulama atlama listesine eklenmiş derlemenin tam olarak belirtilmiş derleme adını (derleme adı, sürüm, kültür ve ortak anahtar belirteci) kullanabilir. Bu, kötü amaçlı derlemenin de doğrulamayı atlamasına izin verir.|  
+|**-Vr***derleme* [*userlist*] [*GirişDosyası*]  |Kaydeder *derleme* doğrulaması atlanıyor. İsteğe bağlı olarak, doğrulama atlamanın geçerli olacağı kullanıcı adlarının virgülle ayrılmış listesini belirtebilirsiniz. Belirtirseniz *GirişDosyası*, etkin doğrulama kalır, ancak ortak anahtar *GirişDosyası* doğrulama işlemlerinde kullanılır. Belirleyebileceğiniz *derleme* biçiminde  *\*, strongname* tüm derlemelerde belirtilen tanımlayıcı ad ile kaydetmek için. İçin *strongname*, onaltılık basamak parçalanmış formun ortak anahtarın temsil eden dizeyi belirtin. Bkz: **-t** ve **-T** ortak anahtar belirteci görüntülemek için Seçenekler. **Dikkat:** yalnızca geliştirme sırasında bu seçeneği kullanın. Doğrulama atlama listesine bir derleme eklemek güvenlik açığı oluşturur. Kötü amaçlı bir derleme, kimliğini gizlemek için doğrulama atlama listesine eklenmiş derlemenin tam olarak belirtilmiş derleme adını (derleme adı, sürüm, kültür ve ortak anahtar belirteci) kullanabilir. Bu, kötü amaçlı derlemenin de doğrulamayı atlamasına izin verir.|  
 |||  
 |**-Vu***derleme* |Kaydını siler *derleme* doğrulaması atlanıyor. Aynı kuralları, adlandırma derleme uygulamak için **- Vr** uygulamak **- Vu**.|  
 |**-Vx**|Doğrulama atlama girişlerinin tümünü kaldırır.|  

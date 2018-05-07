@@ -1,27 +1,15 @@
 ---
 title: Custom Message Formatters
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: c07435f3-5214-4791-8961-2c2b61306d71
-caps.latest.revision: "4"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: ea32656db90907ae523502fc1796466442ef4a4d
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 301c508a0c639985e226dc55f62431ad8bb9c12b
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="custom-message-formatters"></a>Custom Message Formatters
-Bir ileti içeriği XML biçiminde, genellikle bir uygulama için uygun bir biçim değil görülür. Uygulamaları alma ve bunların özelliklerini ayarlama nesnelerini yönetme. [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)]kullanan *veri sözleşmesi* dönüştürmek için bir <xref:System.ServiceModel.Channels.Message> nesnesine kolayca bir uygulama tarafından işlenen bir nesne. Bu işlemler, seri hale getirme ve seri durumdan çıkarma denir. Bu aynı koşulları serileştirme tanımlamak ve Aktarım katmanı ilişkisiz bir işlemdir ileti gönderme biçimini gelen ve giden yapılır seri durumundan çıkarma için kullanıldığını unutmayın.  
+Bir ileti içeriği XML biçiminde, genellikle bir uygulama için uygun bir biçim değil görülür. Uygulamaları alma ve bunların özelliklerini ayarlama nesnelerini yönetme. Windows Communication Foundation (WCF) kullanan *veri sözleşmesi* dönüştürmek için bir <xref:System.ServiceModel.Channels.Message> nesnesine kolayca bir uygulama tarafından işlenen bir nesne. Bu işlemler, seri hale getirme ve seri durumdan çıkarma denir. Bu aynı koşulları serileştirme tanımlamak ve Aktarım katmanı ilişkisiz bir işlemdir ileti gönderme biçimini gelen ve giden yapılır seri durumundan çıkarma için kullanıldığını unutmayın.  
   
  İletileri ve bir veri sözleşmesi yoluyla yapamayacağınız nesneler arasında özel bir dönüştürme uygulamanız gerekiyorsa, özel ileti biçimlendirici kullanabilirsiniz. Bunu, değiştirerek veya bir istemci veya hizmet belirli sözleşme işlemi yürütme davranışını genişletme yapabilirsiniz.  
   

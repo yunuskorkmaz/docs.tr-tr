@@ -1,14 +1,6 @@
 ---
 title: Platform Çağırma ile Veri Hazırlama
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 dev_langs:
 - cpp
 helpviewer_keywords:
@@ -16,17 +8,13 @@ helpviewer_keywords:
 - data marshaling, platform invoke
 - marshaling, platform invoke
 ms.assetid: dc5c76cf-7b12-406f-b79c-d1a023ec245d
-caps.latest.revision: ''
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 24ae6da0b32cf15ee9104bd10ba5fe6bb03a9763
-ms.sourcegitcommit: c883637b41ee028786edceece4fa872939d2e64c
+ms.openlocfilehash: 2eb55d8490eae64e909ada68223983c570ef9afa
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/26/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="marshaling-data-with-platform-invoke"></a>Platform Çağırma ile Veri Hazırlama
 Yönetilmeyen Kitaplığı'ndan dışarı aktarılan işlevleri çağırmak için bir işlev prototipi yönetilmeyen işlevi temsil eden yönetilen kodda .NET Framework uygulamasını gerektirir. Platform sağlayan prototip oluşturmak için veri doğru sıralamakta çağırma, aşağıdakileri yapmanız gerekir:  
@@ -44,7 +32,7 @@ Yönetilmeyen Kitaplığı'ndan dışarı aktarılan işlevleri çağırmak içi
   
 |Wtypes.h yönetilmeyen türü|Yönetilmeyen C dil türü|Yönetilen sınıf adı|Açıklama|  
 |--------------------------------|-------------------------------|------------------------|-----------------|  
-|**İŞLEME**|**void\***|<xref:System.IntPtr?displayProperty=nameWithType>|32 bit 32-bit Windows işletim sistemlerinde, 64-bit Windows işletim sistemlerinde 64 bit.|  
+|**İŞLEME**|**Geçersiz kılma\***|<xref:System.IntPtr?displayProperty=nameWithType>|32 bit 32-bit Windows işletim sistemlerinde, 64-bit Windows işletim sistemlerinde 64 bit.|  
 |**BAYT**|**İmzasız char**|<xref:System.Byte?displayProperty=nameWithType>|8 bit|  
 |**KISA**|**short**|<xref:System.Int16?displayProperty=nameWithType>|16 bit|  
 |**WORD**|**İmzasız short**|<xref:System.UInt16?displayProperty=nameWithType>|16 bit|  

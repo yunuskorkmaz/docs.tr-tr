@@ -1,36 +1,22 @@
 ---
-title: "Taşıma Kotaları"
-ms.custom: 
+title: Taşıma Kotaları
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - transport quotas [WCF]
 ms.assetid: 3e71dd3d-f981-4d9c-9c06-ff8abb61b717
-caps.latest.revision: 
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 5e9d7fbf42f2ed9b8f68b1faf2e2425050b62eaa
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: b6322bada88c6aef65b609f43fe92dda8dbab206
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="transport-quotas"></a>Taşıma Kotaları
 Taşıma kotaları bağlantı aşırı kaynakları zaman tüketen karar verme bir ilke sistemdir. Bir kota kota değeri aşıldı sonra ek kaynakların kullanımını engelleyen bir sınıra sahiptir. Taşıma kotaları kötü amaçlı veya istenmeyen hizmet reddi saldırılarını önler.  
   
- [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)]taşımalar koruyucu tahsis edilen kaynakların dayalı varsayılan kota değerlerini vardır. Bu varsayılan değerler, geliştirme ortamları ve küçük yükleme senaryoları için uygundur. Hizmet yöneticileri, taşıma kotaları gözden geçirin ve yüklemenin kaynakları tükendi çalıştırıyorsa veya ek kaynaklar kullanılabilirlik rağmen bağlantıları sınırlı tek tek kota değerlerini ayarlayın.  
+ Windows Communication Foundation (WCF) taşımaları koruyucu tahsis edilen kaynakların dayalı varsayılan kota değerlerini vardır. Bu varsayılan değerler, geliştirme ortamları ve küçük yükleme senaryoları için uygundur. Hizmet yöneticileri, taşıma kotaları gözden geçirin ve yüklemenin kaynakları tükendi çalıştırıyorsa veya ek kaynaklar kullanılabilirlik rağmen bağlantıları sınırlı tek tek kota değerlerini ayarlayın.  
   
 ## <a name="types-of-transport-quotas"></a>Taşıma kotaları türleri  
- [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]taşıma kotaları üç tür vardır:  
+ WCF taşımaları kotaları üç tür vardır:  
   
 -   *Zaman aşımları* kaynakları uzun bir süre için bağlamadan kullanan hizmet reddi saldırılarını etkisini azaltır.  
   
@@ -39,7 +25,7 @@ Taşıma kotaları bağlantı aşırı kaynakları zaman tüketen karar verme bi
 -   *Koleksiyon boyutu sınırları* sınırlı tedarike dolaylı olarak bellek ayırma ya da kaynaklarının kullanımını bağlı.  
   
 ## <a name="transport-quota-descriptions"></a>Aktarım kotası açıklamaları  
- Bu bölüm için standart kullanılabilir taşıma kotaları açıklar [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] taşımaları: HTTP (S), TCP/IP ve adlandırılmış kanallar. Özel taşımaları bu listede yer almayan kendi yapılandırılabilir kotalar getirebilir. Kotalarını hakkında bilgi almak özel bir taşıma için belgelere bakın.  
+ Bu bölümde standart WCF aktarımları için kullanılabilir taşıma kotaları açıklar: HTTP (S), TCP/IP ve adlandırılmış kanallar. Özel taşımaları bu listede yer almayan kendi yapılandırılabilir kotalar getirebilir. Kotalarını hakkında bilgi almak özel bir taşıma için belgelere bakın.  
   
  Her kota ayarı türü, minimum değer ve varsayılan değer var. Bir kota en büyük değerini kendi türüne göre sınırlıdır. Makine sınırlamaları nedeniyle, her zaman bir kota için maksimum değeri ayarlamak mümkün değildir.  
   

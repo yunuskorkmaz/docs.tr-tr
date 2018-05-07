@@ -1,23 +1,15 @@
 ---
-title: "NTLM kimlik doğrulaması için HttpWebRequest sürüm 3.5 SP1'deki değişiklikler"
-ms.custom: 
+title: NTLM kimlik doğrulaması için HttpWebRequest sürüm 3.5 SP1'deki değişiklikler
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 8bf0b428-5a21-4299-8d6e-bf8251fd978a
-caps.latest.revision: "8"
 author: mcleblanc
 ms.author: markl
 manager: markl
-ms.workload: dotnet
-ms.openlocfilehash: 239834a732fe3bc1cb3e8e7f1d126d26c210d1f6
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: f5affc15607ddae76ec90a90928cb42fa0ad49e1
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="changes-to-ntlm-authentication-for-httpwebrequest-in-version-35-sp1"></a>NTLM kimlik doğrulaması için HttpWebRequest sürüm 3.5 SP1'deki değişiklikler
 Güvenlik değişiklikleri, .NET Framework sürüm 3.5 SP1 yapıldı ve daha sonra bir etkisi nasıl tümleşik Windows kimlik doğrulaması tarafından işlenir <xref:System.Net.HttpWebRequest>, <xref:System.Net.HttpListener>, <xref:System.Net.Security.NegotiateStream>, ve ilgili System.Net ad alanındaki sınıflar. Bu değişiklikler, NTLM tabanlı Tümleşik Windows kimlik doğrulaması kullanıldığı web isteği yapmak ve yanıtları almak için bu sınıfları kullanan uygulamaları etkileyebilir. Bu değişiklik, web sunucuları ve tümleşik Windows kimlik doğrulaması kullanmak üzere yapılandırılmış istemci uygulamaları etkileyebilir.  
@@ -30,7 +22,7 @@ Güvenlik değişiklikleri, .NET Framework sürüm 3.5 SP1 yapıldı ve daha son
 ## <a name="changes"></a>Değişiklikler  
  Tümleşik Windows kimlik doğrulaması ile kullanılan NTLM kimlik doğrulama işlemi, hedef bilgisayar tarafından verilen ve istemci bilgisayarına geri gönderilen bir sınama içerir. Bir bilgisayarın kendisi oluşturulan bir sınama aldığında, bağlantıyı döngü geri bağlantı (127.0.0.1, örneğin IPv4 adresi) olmadıkça kimlik doğrulaması başarısız olur.  
   
- Bir iç Web sunucusunda çalışan bir hizmete erişirken http://contoso/service veya https://contoso/service benzer bir URL'yi kullanarak hizmete erişmek için yaygın bir sorundur. "contoso" adı genellikle hizmet dağıtıldığı bilgisayarın bilgisayar adı değil. <xref:System.Net> Ve ilgili ad alanlarını destek Active Directory, DNS, NetBIOS kullanarak, yerel bilgisayarın ana bilgisayar (genellikle WINDOWS\system32\drivers\etc\hosts, örneğin) dosyası veya (genellikle WINDOWS\system32\ yerel bilgisayarın lmhosts dosyası Örneğin drivers\etc\lmhosts) adreslerine adları çözümlemek için. Adı "contoso", "contoso" gönderilen istekleri uygun sunucu bilgisayarına gönderilen böylece çözümlenir.  
+ Bir iç Web sunucusunda çalışan bir hizmete erişirken, benzer bir URL'yi kullanarak hizmete erişmek için ortak http://contoso/service veya https://contoso/service. "contoso" adı genellikle hizmet dağıtıldığı bilgisayarın bilgisayar adı değil. <xref:System.Net> Ve ilgili ad alanlarını destek Active Directory, DNS, NetBIOS kullanarak, yerel bilgisayarın ana bilgisayar (genellikle WINDOWS\system32\drivers\etc\hosts, örneğin) dosyası veya (genellikle WINDOWS\system32\ yerel bilgisayarın lmhosts dosyası Örneğin drivers\etc\lmhosts) adreslerine adları çözümlemek için. Adı "contoso", "contoso" gönderilen istekleri uygun sunucu bilgisayarına gönderilen böylece çözümlenir.  
   
  Büyük dağıtımlar için yapılandırıldığında, ayrıca dağıtım için hiç istemci uygulamaları ve son kullanıcılar tarafından kullanılan temel makine adlarıyla verilecek bir tek bir sanal sunucu adı için yaygındır. Örneğin, sunucu www.contoso.com çağrı ancak iç ağda yalnızca "contoso" kullanın. Bu ad istemci web istek ana bilgisayar üstbilgisi adı verilir. Belirtildiği gibi HTTP protokolü tarafından ana bilgisayar istek üstbilgisi alanı istenen kaynak Internet ana bilgisayarı ve bağlantı noktası sayısını belirtir. Bu bilgiler kullanıcı veya başvuran kaynak (genellikle bir HTTP URL'si) tarafından verilen özgün uri'den elde edilir. .NET Framework sürüm 4, bu bilgiler ayrıca kullanarak yeni istemci tarafından ayarlanabilir <xref:System.Net.HttpWebRequest.Host%2A> özelliği.  
   
@@ -58,7 +50,7 @@ Güvenlik değişiklikleri, .NET Framework sürüm 3.5 SP1 yapıldı ve daha son
   
  7. Kayıt Defteri Düzenleyicisi'nden çıkın ve IISAdmin hizmetini yeniden başlatın ve Iısreset'i çalıştırın.  
   
- Daha az güvenli çalışma yaklaşık döngü geri denetimi devre dışı bırakmak için açıklandığı gibi olan [http://support.microsoft.com/kb/896861](http://go.microsoft.com/fwlink/?LinkID=179657). Bu yansıma saldırılara karşı koruma devre dışı bırakır. Bu nedenle yalnızca gerçekten kullandığınız için makine beklediğiniz için diğer adlar kümesi sınırlamak iyidir.  
+ Daha az güvenli çalışma yaklaşık döngü geri denetimi devre dışı bırakmak için açıklandığı gibi olan [ http://support.microsoft.com/kb/896861 ](http://go.microsoft.com/fwlink/?LinkID=179657). Bu yansıma saldırılara karşı koruma devre dışı bırakır. Bu nedenle yalnızca gerçekten kullandığınız için makine beklediğiniz için diğer adlar kümesi sınırlamak iyidir.  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
  <xref:System.Net.AuthenticationManager.CustomTargetNameDictionary%2A?displayProperty=nameWithType>  

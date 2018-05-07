@@ -1,31 +1,17 @@
 ---
-title: "WCF Hizmet Performansını Denetlemek için ServiceThrottlingBehavior Kullanma"
-ms.custom: 
+title: WCF Hizmet Performansını Denetlemek için ServiceThrottlingBehavior Kullanma
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - behavior [WCF], service performance
 ms.assetid: f9dc120c-dc24-49d5-930e-b22f5bc73423
-caps.latest.revision: 
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 2b7e00e70bab0c5652bbc721d582a1b276e6a3fa
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: b54d1d6146b9751fdd12502771de01fe52854c07
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="using-servicethrottlingbehavior-to-control-wcf-service-performance"></a>WCF Hizmet Performansını Denetlemek için ServiceThrottlingBehavior Kullanma
-<xref:System.ServiceModel.Description.ServiceThrottlingBehavior> Sınıfı kaç örnekleri sınırlandırmak için kullanabilir ya da oturumları uygulama düzeyinde oluşturduğunuz özellikler sunar. Bu davranış kullanarak performansını ayrıntılandırabilirsiniz, [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] uygulama.  
+<xref:System.ServiceModel.Description.ServiceThrottlingBehavior> Sınıfı kaç örnekleri sınırlandırmak için kullanabilir ya da oturumları uygulama düzeyinde oluşturduğunuz özellikler sunar. Bu davranış kullanarak, Windows Communication Foundation (WCF) uygulamanızın performansını ince ayar yapabilirsiniz.  
   
 ## <a name="controlling-service-instances-and-concurrent-calls"></a>Hizmet örneği ve eşzamanlı çağrıları denetleme  
  Kullanım <xref:System.ServiceModel.Description.ServiceThrottlingBehavior.MaxConcurrentCalls%2A> özelliği etkin olarak işleme iletileri en fazla sayısını belirtmek için bir <xref:System.ServiceModel.ServiceHost> sınıfı ve <xref:System.ServiceModel.Description.ServiceThrottlingBehavior.MaxConcurrentInstances%2A> en fazla sayısını belirtmek için özellik <xref:System.ServiceModel.InstanceContext> hizmet nesneleri.  

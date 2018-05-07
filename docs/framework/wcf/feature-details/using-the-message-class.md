@@ -1,34 +1,20 @@
 ---
 title: İleti Sınıfını Kullanma
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 dev_langs:
 - csharp
 - vb
 ms.assetid: d1d62bfb-2aa3-4170-b6f8-c93d3afdbbed
-caps.latest.revision: 14
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: c63a0a88997a1c35b24562bcca3e0fdb40ebfd41
-ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
+ms.openlocfilehash: 0ff65d9173838a8eb8850253e62d822f06942f26
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/28/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="using-the-message-class"></a>İleti Sınıfını Kullanma
-<xref:System.ServiceModel.Channels.Message> Sınıfı için temel [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)]. İstemciler ve hizmetler arasındaki tüm iletişimi sonuçta sonuçlanır <xref:System.ServiceModel.Channels.Message> örnekleri gönderilen ve alınan.  
+<xref:System.ServiceModel.Channels.Message> Windows Communication Foundation (WCF) için temel sınıf. İstemciler ve hizmetler arasındaki tüm iletişimi sonuçta sonuçlanır <xref:System.ServiceModel.Channels.Message> örnekleri gönderilen ve alınan.  
   
- Genellikle ile etkileşime geçmez <xref:System.ServiceModel.Channels.Message> doğrudan sınıfı. Bunun yerine, [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] hizmet modeli oluşturur, gibi verileri sözleşmeleri, ileti sözleşmeleri ve işlemi sözleşmeleri gelen ve giden iletiler açıklamak için kullanılır. Ancak, bazı Gelişmiş senaryolar program kullanarak <xref:System.ServiceModel.Channels.Message> doğrudan sınıfı. Örneğin, kullanmak isteyebilirsiniz <xref:System.ServiceModel.Channels.Message> sınıfı:  
+ Genellikle ile etkileşime geçmez <xref:System.ServiceModel.Channels.Message> doğrudan sınıfı. Bunun yerine, veri sözleşmeleri, ileti sözleşmeleri ve işlem sözleşmeleri gibi WCF hizmet modeli yapıları, gelen ve giden iletiler tanımlamak için kullanılır. Ancak, bazı Gelişmiş senaryolar program kullanarak <xref:System.ServiceModel.Channels.Message> doğrudan sınıfı. Örneğin, kullanmak isteyebilirsiniz <xref:System.ServiceModel.Channels.Message> sınıfı:  
   
 -   Seri hale getirme yerine giden ileti içeriği (örneğin, disk üzerindeki bir dosyadan doğrudan bir ileti oluşturma) oluşturma alternatif bir yol gerektiğinde [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] nesneleri.  
   
@@ -36,7 +22,7 @@ ms.lasthandoff: 04/28/2018
   
 -   İleti içeriği ne olursa olsun genel bir şekilde iletilerle dağıtılacak gerektiğinde (örneğin, yönlendirme veya yönlendirici, yük dengeleyici veya bir yayımlama oluştururken İletileri iletirken-sistem abone).  
   
- Kullanmadan önce <xref:System.ServiceModel.Channels.Message> sınıfı, ile öğrenmeniz [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] veri aktarımı mimarisinde [veri aktarımı mimarisine genel bakış](../../../../docs/framework/wcf/feature-details/data-transfer-architectural-overview.md).  
+ Kullanmadan önce <xref:System.ServiceModel.Channels.Message> sınıfı, WCF veri aktarımı mimarisi tanıyın [veri aktarımı mimarisine genel bakış](../../../../docs/framework/wcf/feature-details/data-transfer-architectural-overview.md).  
   
  A <xref:System.ServiceModel.Channels.Message> veriler için genel amaçlı bir kapsayıcı olmakla birlikte, tasarımı tasarım SOAP protokolü iletinin yakından izler. Gibi bir ileti gövdesi ve üstbilgileri SOAP içinde bir ileti vardır. Üstbilgileri ek adlandırılmış veri kapsayıcıları içerirken ileti gövdesi gerçek yükü verilerini içerir. Gövde ve üst bilgileri okumak ve yazmak için kuralları farklı, örneğin üstbilgileri bellekte her zaman arabelleğe ve içinde erişilebilir gövdesi okuma yalnızca bir kez ve veri akışı ancak zaman, herhangi bir sayıda sipariş. Normalde, SOAP kullanırken, ileti gövdesi SOAP gövdesi eşlenen ve ileti üstbilgilerini SOAP üstbilgileri eşlenir.  
   
@@ -181,7 +167,7 @@ ms.lasthandoff: 04/28/2018
  Üstbilgi XML verilerine erişmek için çağırabilirsiniz <xref:System.ServiceModel.Channels.MessageHeaders.GetReaderAtHeader%2A> ve özel üstbilgi dizini için bir XML okuyucu döndür. Üst bilgi içeriği nesne seri durumdan istiyorsanız kullanın <xref:System.ServiceModel.Channels.MessageHeaders.GetHeader%60%601%28System.Int32%29> veya diğer aşırı yüklemeler biri. En temel alan aşırı kullanarak üstbilgileri seri durumdan <xref:System.Runtime.Serialization.DataContractSerializer> varsayılan olarak yapılandırılmış yolu. Farklı bir seri hale getirici veya farklı bir yapılandırmasını kullanmak isteyip istemediğinizi `DataContractSerializer`, ele alan aşırı birini kullanın bir `XmlObjectSerializer`. Ayrıca üstbilgi adı, ad ve isteğe bağlı olarak bir listesini alın aşırı olan `Actor` değerleri yerine bir dizin; bu bir birleşimidir `FindHeader` ve `GetHeader`.  
   
 ## <a name="working-with-properties"></a>Özellikleri ile çalışma  
- A `Message` örneği rasgele bir rastgele türler adlandırılmış nesnelerin sayısı içerebilir. Bu koleksiyon üzerinden erişilen `Properties` türündeki özelliği `MessageProperties`. Koleksiyon uygulayan <xref:System.Collections.Generic.IDictionary%602> arabirim ve eşlemeyi gibi davranır <xref:System.String> için <xref:System.Object>. Genellikle özellik değerlerini doğrudan ileti hattaki herhangi bir kısmını eşlemek değil, ancak bunun yerine çeşitli kanallar için çeşitli ileti işleme ipuçları sağlayan [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] kanal yığın veya <xref:System.ServiceModel.Channels.MessageHeaders.CopyTo%28System.ServiceModel.Channels.MessageHeaderInfo%5B%5D%2CSystem.Int32%29> hizmet çerçevesi. Bir örnek için bkz: [veri aktarımına mimari genel bakış](../../../../docs/framework/wcf/feature-details/data-transfer-architectural-overview.md).  
+ A `Message` örneği rasgele bir rastgele türler adlandırılmış nesnelerin sayısı içerebilir. Bu koleksiyon üzerinden erişilen `Properties` türündeki özelliği `MessageProperties`. Koleksiyon uygulayan <xref:System.Collections.Generic.IDictionary%602> arabirim ve eşlemeyi gibi davranır <xref:System.String> için <xref:System.Object>. Normalde, özellik değerlerini doğrudan ileti hattaki herhangi bir kısmını eşlemek değil, ancak bunun yerine çeşitli ileti işleme ipuçları WCF kanalı yığını ya da çok çeşitli kanallar için sağlar <xref:System.ServiceModel.Channels.MessageHeaders.CopyTo%28System.ServiceModel.Channels.MessageHeaderInfo%5B%5D%2CSystem.Int32%29> hizmet çerçevesi. Bir örnek için bkz: [veri aktarımına mimari genel bakış](../../../../docs/framework/wcf/feature-details/data-transfer-architectural-overview.md).  
   
 ## <a name="inheriting-from-the-message-class"></a>İleti sınıfından devralma  
  Yerleşik türler kullanılarak oluşturulan olursa `CreateMessage` değil gereksinimlerinizi karşılayacak, türeyen bir sınıf oluşturun `Message` sınıfı.  

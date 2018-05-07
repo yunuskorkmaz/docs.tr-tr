@@ -1,27 +1,15 @@
 ---
-title: "Güvenilir Alt Sistem"
-ms.custom: 
+title: Güvenilir Alt Sistem
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
 ms.assetid: 1f5ce46b-e259-4bc9-a0b9-89d06fc9341c
-caps.latest.revision: "10"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: ca07db06d4bff9660760c5abf8c9bc2f1f9f2944
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 59c44609017ab18a176624b7ef6d409005151c3f
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="trusted-subsystem"></a>Güvenilir Alt Sistem
 Bir istemci bir ağ üzerinden dağıtılan bir veya daha fazla Web Hizmetleri erişir. Web Hizmetleri, bu erişim için ek kaynaklar (örneğin, veritabanları veya diğer Web Hizmetleri) Web hizmeti iş mantığı kapsüllenir şekilde tasarlanmıştır. Bu kaynakların yetkisiz erişime karşı korunması gerekir. Aşağıdaki çizimde bir güvenilir alt sistem işlemi gösterilmektedir.  
@@ -43,13 +31,13 @@ Bir istemci bir ağ üzerinden dağıtılan bir veya daha fazla Web Hizmetleri e
 |Özelliği|Açıklama|  
 |--------------------|-----------------|  
 |Güvenlik modu|İleti|  
-|Birlikte Çalışabilirlik|[!INCLUDE[indigo1](../../../../includes/indigo1-md.md)]yalnızca.|  
+|Birlikte Çalışabilirlik|Windows Communication Foundation (WCF) yalnızca.|  
 |Kimlik doğrulaması (hizmeti)|Güvenlik belirteci hizmeti kimliğini doğrular ve istemcilerin yetkilendirir.|  
 |Kimlik doğrulaması (istemci)|Güvenilir alt sistem istemcinin kimliğini doğrular ve güvenilir alt sistem hizmeti kaynak kimliğini doğrular.|  
 |Bütünlük|Evet|  
 |Gizliliği|Evet|  
 |Taşıma|HTTP istemci ve güvenilir alt sistem hizmeti arasında.<br /><br /> NET. Güvenilir alt sistem hizmeti ve kaynak (arka uç hizmeti) arasında TCP.|  
-|Bağlama|<xref:System.ServiceModel.WSHttpBinding>ve <xref:System.ServiceModel.NetTcpBinding> [ \<wsFederationHttpBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/wsfederationhttpbinding.md)|  
+|Bağlama|<xref:System.ServiceModel.WSHttpBinding> ve <xref:System.ServiceModel.NetTcpBinding> [ \<wsFederationHttpBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/wsfederationhttpbinding.md)|  
   
 ## <a name="resource-back-end-service"></a>Kaynak (arka uç hizmeti)  
   

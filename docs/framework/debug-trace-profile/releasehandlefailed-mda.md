@@ -1,13 +1,6 @@
 ---
 title: releaseHandleFailed MDA
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - managed debugging assistants (MDAs), handles
 - release handle failed
@@ -17,16 +10,13 @@ helpviewer_keywords:
 - SafeHandle class, run-time errors
 - MDAs (managed debugging assistants), handles
 ms.assetid: 44cd98ba-95e5-40a1-874d-e8e163612c51
-caps.latest.revision: "14"
 author: mairaw
 ms.author: mairaw
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 2deefc4626bf8382c7de806eb3d687d468580bf4
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: b3e2c39416a3d09eb1b1197dbec81f40ce318a43
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="releasehandlefailed-mda"></a>releaseHandleFailed MDA
 `releaseHandleFailed` Yönetilen hata ayıklama Yardımcısı (MDA) etkinleştirilmiş ise geliştiriciler bildirmek için zaman <xref:System.Runtime.InteropServices.SafeHandle.ReleaseHandle%2A> yöntemi bir sınıfın türetilen <xref:System.Runtime.InteropServices.SafeHandle> veya <xref:System.Runtime.InteropServices.CriticalHandle> döndürür `false`.  
@@ -37,7 +27,7 @@ ms.lasthandoff: 12/22/2017
 ## <a name="cause"></a>Sebep  
  Kullanıcılar, uygulama sağlamalıdır <xref:System.Runtime.InteropServices.SafeHandle.ReleaseHandle%2A> , sınıfları oluşturursanız, yöntemi türetilen <xref:System.Runtime.InteropServices.SafeHandle> veya <xref:System.Runtime.InteropServices.CriticalHandle>; bu nedenle, koşullar tek tek kaynak için belirli. Ancak, gereksinimleri şunlardır:  
   
--   <xref:System.Runtime.InteropServices.SafeHandle>ve <xref:System.Runtime.InteropServices.CriticalHandle> türleri önemli işlem kaynakları çevresinde sarmalayıcıları temsil eder. Bellek sızıntısı işlemi zamanla kullanılamamasına neden.  
+-   <xref:System.Runtime.InteropServices.SafeHandle> ve <xref:System.Runtime.InteropServices.CriticalHandle> türleri önemli işlem kaynakları çevresinde sarmalayıcıları temsil eder. Bellek sızıntısı işlemi zamanla kullanılamamasına neden.  
   
 -   <xref:System.Runtime.InteropServices.SafeHandle.ReleaseHandle%2A> Yöntemi kendi işlevini gerçekleştirmesi başarısız olmalıdır. Böyle bir kaynak işlemi aldıktan sonra <xref:System.Runtime.InteropServices.SafeHandle.ReleaseHandle%2A> serbest tek yoludur. Bu nedenle, hata kaynak sızıntıları anlamına gelir.  
   

@@ -1,14 +1,6 @@
 ---
-title: "Nasıl yapılır: Geri Çağırma İşlevlerini Uygulama"
-ms.custom: 
+title: 'Nasıl yapılır: Geri Çağırma İşlevlerini Uygulama'
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -16,17 +8,13 @@ dev_langs:
 helpviewer_keywords:
 - callback function, implementing
 ms.assetid: e55b3712-b9ea-4453-bd9a-ad5cfa2f6bfa
-caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 819861f9bf13f9af3fab7a1ea7ffc697c1d98926
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: e081347129ce367cf6b46ca29c07a016bb64ab95
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-implement-callback-functions"></a>Nasıl yapılır: Geri Çağırma İşlevlerini Uygulama
 Aşağıdaki yordamı ve örnek platformu kullanılarak yönetilen bir uygulamanın nasıl çağırma göstermek, her pencere tanıtıcısı değeri yerel bilgisayarda yazdırabilirsiniz. Özellikle, yordam ve örnek kullanım **EnumWindows** işlev adıma windows ve yönetilen geri çağırma işlevi adlandırılmış (bir pencere tanıtıcının değerini yazdırmak için geri çağırma) listesi aracılığıyla.  

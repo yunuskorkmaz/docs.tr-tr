@@ -1,11 +1,6 @@
 ---
-title: "Byte Veri Türü (Visual Basic)"
+title: Byte Veri Türü (Visual Basic)
 ms.date: 01/31/2018
-ms.prod: .net
-ms.suite: 
-ms.technology:
-- devlang-visual-basic
-ms.topic: article
 f1_keywords:
 - vb.Byte
 helpviewer_keywords:
@@ -14,11 +9,11 @@ helpviewer_keywords:
 ms.assetid: eed44dff-eaee-4937-a89f-444e418e74f6
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 02234afc0dc51a2c1338cdd16d1f97765f64b45e
-ms.sourcegitcommit: d2da0142247ef42a219a5d2907f153e62dc6ea0d
+ms.openlocfilehash: 28189ab4ab1a9be9265d1cca020039b5302fb5d8
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/01/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="byte-data-type-visual-basic"></a>Byte veri türü (Visual Basic)
 Değeri 0 ile 255 arasında imzalanmamış 8 bit (1-bayt) tamsayıları tutar.
@@ -60,7 +55,7 @@ Dim number As Byte = &H_6A
 
 -   **Genişletme.** `Byte` Veri türü widens için `Short`, `UShort`, `Integer`, `UInteger`, `Long`, `ULong`, `Decimal`, `Single`, veya `Double`. Bu dönüştürebilirsiniz anlamına gelir `Byte` karşılaşmadan olmadan bu türdeki herhangi bir <xref:System.OverflowException?displayProperty=nameWithType> hata.
   
--   **Karakterleri yazın.** `Byte`değişmez değer türü karakteri ya da tanımlayıcı türü karakteri içeriyor.
+-   **Karakterleri yazın.** `Byte` değişmez değer türü karakteri ya da tanımlayıcı türü karakteri içeriyor.
 
 -   **Framework türü.** .NET Framework'teki karşılık gelen tür <xref:System.Byte?displayProperty=nameWithType> yapısı.
 

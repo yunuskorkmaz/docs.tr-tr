@@ -1,21 +1,12 @@
 ---
-title: "Nasıl yapılır: nesne verilerini bir XML dosyasından (C#) okuma"
-ms.custom: 
+title: 'Nasıl yapılır: nesne verilerini bir XML dosyasından (C#) okuma'
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-csharp
-ms.topic: article
 ms.assetid: 6ad60d96-a4d9-48e6-a8b0-d7f6f803cafa
-caps.latest.revision: "3"
-author: BillWagner
-ms.author: wiwagn
-ms.openlocfilehash: 6a3389de2f3272a546a7380ef386f5d88666e6d1
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 59110a5bd0fe738239c0ca8b177a8c775db99ccf
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-read-object-data-from-an-xml-file-c"></a>Nasıl yapılır: nesne verilerini bir XML dosyasından (C#) okuma
 Bu örnek daha önce bir XML dosyası kullanmaya yazıldı nesne verilerini okur <xref:System.Xml.Serialization.XmlSerializer> sınıfı.  
@@ -72,5 +63,5 @@ public void ReadXML()
 ## <a name="see-also"></a>Ayrıca Bkz.  
  <xref:System.IO.StreamWriter>  
  [Nasıl yapılır: nesne verilerini bir XML dosyasına (C#) yazma](../../../../csharp/programming-guide/concepts/serialization/how-to-write-object-data-to-an-xml-file.md)  
- [Seri hale getirme (C#)](../../../../csharp/programming-guide/concepts/serialization/index.md)  
- [C# programlama kılavuzu](../../../../csharp/programming-guide/index.md)
+ [Serileştirme (C# )](../../../../csharp/programming-guide/concepts/serialization/index.md)  
+ [C# Programlama Kılavuzu](../../../../csharp/programming-guide/index.md)

@@ -1,31 +1,19 @@
 ---
-title: "SQL Server özellikleri ve ADO.NET"
-ms.custom: 
+title: SQL Server özellikleri ve ADO.NET
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-ado
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 2839529b-a79b-4450-be5d-07a98dbc7a0f
-caps.latest.revision: "9"
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
-ms.workload: dotnet
-ms.openlocfilehash: 5bf12958034aca0cca4300f3122c16528dcad322
-ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
+ms.openlocfilehash: e19cec01cb749968b051541e78ee8c9af5cbb333
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="sql-server-features-and-adonet"></a>SQL Server özellikleri ve ADO.NET
 Bu bölümdeki konular, SQL Server veritabanı uygulamaları ADO.NET kullanarak geliştirme sırasında hedeflenen ele alınmaktadır.  
   
  Daha fazla bilgi için SQL Server Books Online kullanarak, SQL Server sürümü için aşağıdaki tabloda listelendiği gibi bakın.  
   
- **SQL Server Books Online**  
+ **SQL Server Çevrimiçi Kitapları**  
   
 1.  [Geliştirme (veritabanı altyapısı)](http://go.microsoft.com/fwlink/?LinkId=115245)  
   

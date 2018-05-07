@@ -1,27 +1,15 @@
 ---
 title: "Nasıl yapılır: ASP.NET Web Hizmeti İstemci Kodunu Windows Communication Foundation'a Taşıma"
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 2e0a22a7-e1d5-4718-8997-4319a7cd9027
-caps.latest.revision: "6"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: baf43f2bfa2175062c57f73e45835c251ac5769e
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: cb60f9cb2e8f35ee703b049eae9e3d99c1ec7d49
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-migrate-aspnet-web-service-client-code-to-the-windows-communication-foundation"></a>Nasıl yapılır: ASP.NET Web Hizmeti İstemci Kodunu Windows Communication Foundation'a Taşıma
-ASP.NET Web hizmeti istemci kodunu geçirmek için izlenmesi gereken genel adımlar aşağıdaki yordamda açıklanmıştır [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)].  
+Aşağıdaki yordamda, ASP.NET Web hizmeti istemci kodunu WCF'ye taşıma için izlenmesi gereken genel adımlar açıklanmaktadır.  
   
 ## <a name="procedure"></a>Yordam  
   
@@ -33,9 +21,9 @@ ASP.NET Web hizmeti istemci kodunu geçirmek için izlenmesi gereken genel adım
   
 3.  ASP.NET istemci kodu istemci projeden kaldırın. Kod modülleri WSDL.exe aracı kullanılarak oluşturulan olduğunu.  
   
-4.  Oluştur [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] istemci kodu kullanarak [ServiceModel meta veri yardımcı Programracı (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md). Bu kod istemci projenize ekleyin ve istemcinin var olan yapılandırma dosyasına yapılandırma çıktısını birleştirin.  
+4.  WCF istemci kodu kullanarak Oluştur [ServiceModel meta veri yardımcı Programracı (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md). Bu kod istemci projenize ekleyin ve istemcinin var olan yapılandırma dosyasına yapılandırma çıktısını birleştirin.  
   
-5.  Uygulamayı derleyin. Yeni başvuruları eski ASP.NET istemci tür başvuruları değiştirerek derleme hataları onarmak [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] istemci türü.  
+5.  Uygulamayı derleyin. Derleme hataları yeni WCF istemci türlerini başvuruları eski ASP.NET istemci tür başvuruları değiştirerek onarın.  
   
 6.  Test kümesini çalıştırın.  
   

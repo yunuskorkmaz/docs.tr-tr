@@ -1,13 +1,6 @@
 ---
 title: LinkLabel Denetimi (Windows Forms)
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-winforms
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - Label control [Windows Forms]
 - links [Windows Forms], adding to Windows Forms
@@ -15,16 +8,11 @@ helpviewer_keywords:
 - Web page link control
 - LinkLabel control [Windows Forms]
 ms.assetid: af1fd04e-e126-4fd7-9a4e-13b49010c5ca
-caps.latest.revision: "12"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 5231813096413b66272b87aabd9adf0643c6e26d
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: ea472636402b650b6e8d0352bd151d3bcf9e3bfd
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="linklabel-control-windows-forms"></a>LinkLabel Denetimi (Windows Forms)
 Windows Forms `LinkLabel` denetimi Web stili bağlantılar için Windows Forms uygulamaları eklemenize olanak sağlar. Kullanabileceğiniz `LinkLabel` denetimi için kullanabileceğiniz her şeyi <xref:System.Windows.Forms.Label> için kontrol; bir nesneye veya Web sayfası bağlantısı olarak metnin bir bölümünü de ayarlayabilirsiniz.  
@@ -43,7 +31,7 @@ Windows Forms `LinkLabel` denetimi Web stili bağlantılar için Windows Forms u
  Bir kullanıcı bir Windows Forms tıkladığında bir Web sayfasında varsayılan tarayıcıda görüntülemek nasıl gösterir `LinkLabel` denetim.  
   
 ## <a name="reference"></a>Başvuru  
- <xref:System.Windows.Forms.LinkLabel>sınıfı  
+ <xref:System.Windows.Forms.LinkLabel> sınıfı  
  Bu sınıf tanımlar ve tüm üyeleri bağlantılar içerir.  
   
 ## <a name="related-sections"></a>İlgili Bölümler  

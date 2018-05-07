@@ -1,21 +1,14 @@
 ---
-title: "C++ Şablonları ve C# Genel Türleri Arasındaki Farklar (C# Programlama Kılavuzu)"
+title: C++ Şablonları ve C# Genel Türleri Arasındaki Farklar (C# Programlama Kılavuzu)
 ms.date: 07/20/2015
-ms.prod: .net
-ms.technology:
-- devlang-csharp
-ms.topic: article
 helpviewer_keywords:
 - generics [C#], vs. C++ templates
 ms.assetid: 1da6beeb-d4a4-4da0-87b7-0cfbe04920b7
-caps.latest.revision: 
-author: BillWagner
-ms.author: wiwagn
-ms.openlocfilehash: aea1b51c26a8f3de56ea66b9cf89e75bfeb59d81
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: db3311c7fa81d48137c542f320d0abef791e5116
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="differences-between-c-templates-and-c-generics-c-programming-guide"></a>C++ Şablonları ve C# Genel Türleri Arasındaki Farklar (C# Programlama Kılavuzu)
 C# genel türleri ve C++ şablonları parametreli türleri için destek sağlayan iki dil özellikleridir. Bununla birlikte, ikisi arasındaki birçok farklılıklar vardır. Sözdizimi, C# genel türleri C++ şablonlarının KARMAŞASIZ parametreli türler için basit bir yaklaşım düzeyindedir. Ayrıca, C# tüm C++ şablonları sağlar işlevselliği sağlamak denemez. Uygulama düzeyinde birincil çalışma zamanında C# genel tür kısaltmaları gerçekleştirilir ve genel tür bilgileri için örnek nesneleri böylece korunur farktır. Daha fazla bilgi için bkz: [çalışma zamanı'nda genel türler](../../../csharp/programming-guide/generics/generics-in-the-run-time.md).  
@@ -39,6 +32,6 @@ C# genel türleri ve C++ şablonları parametreli türleri için destek sağlaya
 -   C++ tür parametresi kullanılan belirli türünün sonra kullanıma şablondaki tüm tür parametreleri için geçerli olmayabilir kodu sağlar. C# kod kısıtlamaları karşılayan herhangi bir türü ile çalışacağını şekilde yazılması için bir sınıf gerektirir. Örneğin, c++'ta aritmetik işleçler kullanan bir işlev yazmak mümkündür `+` ve `-` tür parametresi nesnelerde hangi oluşturacak bir hata şablonu örneklemesi bu desteklemeyen türüne sahip zaman işleçler. C# bu izin vermez; izin verilen tek dil yapıları kısıtlamaları anlaşılan izinlerdir.  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [C# programlama kılavuzu](../../../csharp/programming-guide/index.md)  
- [Genel türlere giriş](../../../csharp/programming-guide/generics/introduction-to-generics.md)  
- [Şablonları](/cpp/cpp/templates-cpp)
+ [C# Programlama Kılavuzu](../../../csharp/programming-guide/index.md)  
+ [Genel Türlere Giriş](../../../csharp/programming-guide/generics/introduction-to-generics.md)  
+ [Şablonlar](/cpp/cpp/templates-cpp)

@@ -1,10 +1,6 @@
 ---
 title: 'Nasıl yapılır: HRESULTs ve Özel Durumları Eşleme'
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.technology:
-- dotnet-clr
-ms.topic: article
 dev_langs:
 - cpp
 helpviewer_keywords:
@@ -15,17 +11,13 @@ helpviewer_keywords:
 - COM interop, HRESULTs
 - COM interop, exceptions
 ms.assetid: 610b364b-2761-429d-9c4a-afbc3e66f1b9
-caps.latest.revision: 8
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: a79cae30237fb631728bf036d9bf8d7679179d3f
-ms.sourcegitcommit: 9a4fe1a1c37b26532654b4bbe22d702237950009
+ms.openlocfilehash: 0d9825deae22e856cf520e6173d53278539c576c
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-map-hresults-and-exceptions"></a>Nasıl yapılır: HRESULTs ve Özel Durumları Eşleme
 COM yöntemleri HRESULTs döndürerek hata raporu; .NET yöntemleri bunları özel durumları atma tarafından rapor. Çalışma zamanı iki arasında geçiş işler. .NET Framework'teki her özel durum sınıfı bir HRESULT eşler.  
@@ -149,6 +141,6 @@ CMyClass::MethodThatThrows
   
  Özel alanlar, gibi **ileti**, **kaynak**, ve **StackTrace** kullanılamaz **StackOverflowException**.  
   
-## <a name="see-also"></a>Ayrıca bkz.  
+## <a name="see-also"></a>Ayrıca Bkz.  
  [Gelişmiş COM birlikte çalışabilirliği](https://msdn.microsoft.com/library/3ada36e5-2390-4d70-b490-6ad8de92f2fb(v=vs.100))  
  [Özel Durumlar](../../standard/exceptions/index.md)

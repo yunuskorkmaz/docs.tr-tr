@@ -1,29 +1,15 @@
 ---
 title: 'Nasıl yapılır: Enterprise Uç Noktalarını Kilitleme'
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 ms.assetid: 1b7eaab7-da60-4cf7-9d6a-ec02709cf75d
-caps.latest.revision: 21
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: e5b10665e9a820c7057231c684769bddf9cb0c79
-ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
-ms.translationtype: MT
+ms.openlocfilehash: c91faf201c9a7cb0e5dd810059dbaa39b1e8eb05
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/28/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-lock-down-endpoints-in-the-enterprise"></a>Nasıl yapılır: Enterprise Uç Noktalarını Kilitleme
-Büyük ölçekli işletmeler genellikle Kurumsal güvenlik ilkeleriyle uyumlu uygulamalar geliştirilir gerektirir. Aşağıdaki konu geliştirmek ve tüm doğrulamak için kullanılan bir istemci uç nokta Doğrulayıcı yüklemek nasıl ele [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] istemci uygulamaları bilgisayarlarda yüklü.  
+Büyük ölçekli işletmeler genellikle Kurumsal güvenlik ilkeleriyle uyumlu uygulamalar geliştirilir gerektirir. Aşağıdaki konu geliştirmek ve bilgisayarlarda yüklü tüm Windows Communication Foundation (WCF) istemci uygulamaları doğrulamak için kullanılan bir istemci uç nokta Doğrulayıcı yüklenmesinin nasıl yapılacağı açıklanır.  
   
  Bu uç noktası davranışı istemciye eklendiği bu durumda, bir istemci Doğrulayıcı doğrulayıcıdır [ \<commonBehaviors >](../../../../docs/framework/configure-apps/file-schema/wcf/commonbehaviors.md) machine.config dosyasının bölümünde. [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] yalnızca istemci uygulamaları için ortak uç nokta davranışları yükler ve yalnızca hizmet uygulamaları için ortak hizmet davranışları yükler. Hizmet uygulamaları için aynı bu Doğrulayıcı yüklemek için Doğrulayıcı hizmet davranışı olması gerekir. Daha fazla bilgi için bkz: [ \<commonBehaviors >](../../../../docs/framework/configure-apps/file-schema/wcf/commonbehaviors.md) bölümü.  
   

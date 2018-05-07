@@ -1,26 +1,19 @@
 ---
 title: '#pragma Uyarısı (C# Başvurusu)'
 ms.date: 07/20/2015
-ms.prod: .net
-ms.technology:
-- devlang-csharp
-ms.topic: article
 f1_keywords:
 - '#pragma warning'
 helpviewer_keywords:
 - '#pragma warning [C#]'
 ms.assetid: 723493d5-9753-4cec-babb-54e2b8eb36b6
-caps.latest.revision: 17
-author: BillWagner
-ms.author: wiwagn
-ms.openlocfilehash: 5330b448dc2b328992b2d29699557d20df56dee4
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 079045f4eb52f03afa8733620029396d80cb75fe
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="pragma-warning-c-reference"></a>#pragma uyarısı (C# Başvurusu)
-`#pragma warning`etkinleştirmek veya belirli uyarıları devre dışı bırakabilirsiniz.  
+`#pragma warning` etkinleştirmek veya belirli uyarıları devre dışı bırakabilirsiniz.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -66,6 +59,6 @@ public class D
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
  [C# başvurusu](../../../csharp/language-reference/index.md)  
- [C# programlama kılavuzu](../../../csharp/programming-guide/index.md)  
- [C# önişlemci yönergeleri](../../../csharp/language-reference/preprocessor-directives/index.md)  
- [C# derleyici hataları](../../../csharp/language-reference/compiler-messages/index.md)
+ [C# Programlama Kılavuzu](../../../csharp/programming-guide/index.md)  
+ [C# Ön İşlemci Yönergeleri](../../../csharp/language-reference/preprocessor-directives/index.md)  
+ [C# Derleyici Hataları](../../../csharp/language-reference/compiler-messages/index.md)

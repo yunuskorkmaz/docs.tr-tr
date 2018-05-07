@@ -1,12 +1,6 @@
 ---
-title: "Takılabilir Protokol Tanıtımı"
-ms.custom: 
+title: Takılabilir Protokol Tanıtımı
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - data requests, pluggable protocols
 - WebRequest class, pluggable protocols
@@ -28,16 +22,14 @@ helpviewer_keywords:
 - server identifiers
 - scheme identifiers
 ms.assetid: 4b48e22d-e4e5-48f0-be80-d549bda97415
-caps.latest.revision: "12"
 author: mcleblanc
 ms.author: markl
 manager: markl
-ms.workload: dotnet
-ms.openlocfilehash: 3cc7ad6b6270b74e2eb6aa4a2cc3a540175d540b
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: ef674855d1b9d6538e08ea2bb95f1f63e602d61d
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="introducing-pluggable-protocols"></a>Takılabilir Protokol Tanıtımı
 Microsoft .NET Framework uygulamalarınıza hızla ve kolayca tümleştirilebilir Internet Hizmetleri katmanlı, genişletilebilir ve yönetilen bir uygulamasını sağlar. Internet erişimi sınıfları <xref:System.Net> ve <xref:System.Net.Sockets> ad alanları, hem Web hem de Internet tabanlı uygulamalarını uygulamak için kullanılabilir.  
@@ -50,7 +42,7 @@ Microsoft .NET Framework uygulamalarınıza hızla ve kolayca tümleştirilebili
  İstemci uygulama, istenen Internet kaynağının ve istek ve yanıt için kullanılacak iletişim protokolü belirleyerek isteğinde bulunur. Gerekirse, istemci proxy konumu veya kimlik bilgilerini (kullanıcı adı, parola ve benzeri) gibi bir isteği tamamlamak için gereken herhangi bir ek veriyi de sağlar. İstek biçimlendirilmiş sonra istek sunucuya gönderilebilir.  
   
 ## <a name="identifying-resources"></a>Kaynakları tanımlama  
- .NET Framework Tekdüzen Kaynak Tanımlayıcısı (URI) istenen Internet kaynak ve iletişim kurallarını tanımlamak için kullanır. En az üç ve muhtemelen dört, parçalarını URI oluşur: istek ve yanıt; için iletişim protokolü tanımlayan düzen tanımlayıcısı bir etki alanı adı sistemi (DNS) ana bilgisayar adı veya sunucunun Internet üzerindeki benzersiz olarak tanıtan bir TCP adresi oluşan sunucu tanımlayıcısı; sunucuda istenen bilgileri bulur yolu tanımlayıcısı; ve bilgileri istemciden sunucuya geçirir bir isteğe bağlı sorgu dizesi. Örneğin, "http://www.contoso.com/whatsnew.aspx?date=today" URI oluşur düzeni tanımlayıcı "http", "www.contoso.com" Sunucu tanımlayıcısı, yol "/ whatsnew.aspx" ve sorgu dizesi "? tarihi bugün =".  
+ .NET Framework Tekdüzen Kaynak Tanımlayıcısı (URI) istenen Internet kaynak ve iletişim kurallarını tanımlamak için kullanır. En az üç ve muhtemelen dört, parçalarını URI oluşur: istek ve yanıt; için iletişim protokolü tanımlayan düzen tanımlayıcısı bir etki alanı adı sistemi (DNS) ana bilgisayar adı veya sunucunun Internet üzerindeki benzersiz olarak tanıtan bir TCP adresi oluşan sunucu tanımlayıcısı; sunucuda istenen bilgileri bulur yolu tanımlayıcısı; ve bilgileri istemciden sunucuya geçirir bir isteğe bağlı sorgu dizesi. Örneğin, URI "http://www.contoso.com/whatsnew.aspx?date=today" oluşur düzeni tanımlayıcı "http", "www.contoso.com" Sunucu tanımlayıcısı, yol "/ whatsnew.aspx" ve sorgu dizesi "? tarihi bugün =".  
   
  Sunucu isteği aldı ve yanıt işlenen sonra istemci uygulaması yanıtı döndürür. Yanıt (ham metni veya örnek için XML verileri) içerik türü gibi ek bilgileri içerir.  
   

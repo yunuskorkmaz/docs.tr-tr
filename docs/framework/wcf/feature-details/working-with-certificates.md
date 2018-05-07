@@ -1,36 +1,22 @@
 ---
 title: Sertifikalarla Çalışma
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 dev_langs:
 - csharp
 - vb
 helpviewer_keywords:
 - certificates [WCF]
 ms.assetid: 6ffb8682-8f07-4a45-afbb-8d2487e9dbc3
-caps.latest.revision: 26
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 3c023b27ace10919c51aa13e2635040d9d5b812b
-ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
+ms.openlocfilehash: f5566eacaabb5d3eb5579d015fad8149a2ed4f3c
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/30/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="working-with-certificates"></a>Sertifikalarla Çalışma
-Programa [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] güvenlik, X.509 dijital sertifikalar genellikle istemcilerin ve sunucuların kimliğini doğrulamak için kullanılan, şifrelemek ve iletileri dijital olarak imzala. Bu konu kısaca X.509 dijital sertifika özelliklerini ve bunların içinde nasıl kullanılacağını açıklamaktadır [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]ve bu kavramları daha fazla açıklamak veya kullanarak ortak görevleri gerçekleştirmek nasıl Göster konulara bağlantılar içerir [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] ve sertifikalar.  
+Windows Communication Foundation (WCF) güvenlik programlamak için X.509 dijital sertifikalar yaygın olarak istemciler ve sunucular kimlik doğrulaması, şifrelemek ve iletileri dijital olarak imzalamak için kullanılır. Bu konuda kısaca X.509 dijital sertifika özelliklerini ve bunların içinde WCF nasıl kullanılacağını açıklar ve WCF ve sertifikaları kullanarak ortak görevleri gerçekleştirmek nasıl göstermek veya bu kavramları daha ayrıntılı biçimde açıklayan konulara bağlantılar içerir.  
   
- Kısaca, bir dijital sertifika bir parçası olan bir *ortak anahtar altyapısı* (PKI) sistemi dijital sertifikalar, sertifika yetkililerini ve geçerliliğini doğrulayan ve diğer yetkililerden olduğu Ortak anahtar şifrelemesi kullanılarak bir elektronik işlemde taraf her. Bir sertifika yetkilisi sertifikaları dağıtır ve her sertifikası gibi verileri içeren alanlar kümesi *konu* (sertifikanın verildiği varlık) geçerlilik tarihleri, veren ((sertifikanın olduğunda geçerli) Sertifikayı veren varlık) ve ortak anahtar. İçinde [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)], bu özelliklerin her biri olarak işlenir bir <xref:System.IdentityModel.Claims.Claim>, ve her talep daha iki türlerine ayrılır: kimlik ve sağa. X.509 hakkında daha fazla bilgi için bkz: sertifikalar [X.509 ortak anahtar sertifikaları](http://go.microsoft.com/fwlink/?LinkId=209952)WCF görüyor talep yetkilendirme hakkında daha fazla bilgi için [yönetme beyanlar ve yetkilendirmeyi kimlik modeliyle](../../../../docs/framework/wcf/feature-details/managing-claims-and-authorization-with-the-identity-model.md). Bir PKI uygulama hakkında daha fazla bilgi için bkz: [Windows Server 2008 R2 - Sertifika Hizmetleri](http://go.microsoft.com/fwlink/?LinkId=209949).  
+ Kısaca, bir dijital sertifika bir parçası olan bir *ortak anahtar altyapısı* (PKI) sistemi dijital sertifikalar, sertifika yetkililerini ve geçerliliğini doğrulayan ve diğer yetkililerden olduğu Ortak anahtar şifrelemesi kullanılarak bir elektronik işlemde taraf her. Bir sertifika yetkilisi sertifikaları dağıtır ve her sertifikası gibi verileri içeren alanlar kümesi *konu* (sertifikanın verildiği varlık) geçerlilik tarihleri, veren ((sertifikanın olduğunda geçerli) Sertifikayı veren varlık) ve ortak anahtar. WCF'de, bu özelliklerin her biri olarak işlenir bir <xref:System.IdentityModel.Claims.Claim>, ve her talep daha iki türlerine ayrılır: kimlik ve sağa. X.509 hakkında daha fazla bilgi için bkz: sertifikalar [X.509 ortak anahtar sertifikaları](http://go.microsoft.com/fwlink/?LinkId=209952)WCF görüyor talep yetkilendirme hakkında daha fazla bilgi için [yönetme beyanlar ve yetkilendirmeyi kimlik modeliyle](../../../../docs/framework/wcf/feature-details/managing-claims-and-authorization-with-the-identity-model.md). Bir PKI uygulama hakkında daha fazla bilgi için bkz: [Windows Server 2008 R2 - Sertifika Hizmetleri](http://go.microsoft.com/fwlink/?LinkId=209949).  
   
  Bir birincil sertifikanın başkalarına sertifika sahibinin kimliğini doğrulamak için işlevdir. Bir sertifikayı içeren *ortak anahtar* sahibi özel anahtarı tutarken sahibinin. Ortak anahtar sertifika sahibinin gönderilen iletileri şifrelemek için kullanılabilir. Sahibi özel anahtar erişimi yalnızca sahibi bu iletilerin şifresini çözebilir yalnızca bunu.  
   
@@ -46,7 +32,7 @@ Programa [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] güvenlik, X.50
   
 -   **Geçerli kullanıcı deposunda**. Etkileşimli uygulamalar genellikle burada bilgisayarın geçerli kullanıcı için sertifikalar yerleştirin. Bir istemci uygulaması oluşturuyorsanız, genellikle bir kullanıcı bir hizmete kimlik doğrulaması sertifikaları nereye budur.  
   
- Bu iki depoları daha fazla alt depoları ayrılır. En fazla ile programlama olduğunda önemli bu [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] içerir:  
+ Bu iki depoları daha fazla alt depoları ayrılır. Bunlardan en önemli zaman WCF ile programlama içerir:  
   
 -   **Güvenilen kök sertifika yetkilileri**. Sertifika yetkilisi sertifikası bu deposundaki geri izlenebilir sertifika zinciri oluşturmak için bu depolama alanındaki sertifikaları kullanabilirsiniz.  
   
@@ -99,7 +85,7 @@ Programa [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] güvenlik, X.50
  Özel bir kimlik doğrulayıcı oluştururken, geçersiz kılmak için en önemli yöntemdir <xref:System.IdentityModel.Selectors.X509CertificateValidator.Validate%2A> yöntemi. Özel kimlik doğrulama bir örnek için bkz: [X.509 Sertifika Doğrulayıcı](../../../../docs/framework/wcf/samples/x-509-certificate-validator.md) örnek. Daha fazla bilgi için bkz: [özel kimlik bilgisi ve kimlik bilgileri doğrulaması](../../../../docs/framework/wcf/extending/custom-credential-and-credential-validation.md).  
   
 ## <a name="using-makecertexe-to-build-a-certificate-chain"></a>Bir sertifika zinciri oluşturmak için MakeCert.exe kullanma  
- Sertifika Oluşturma Aracı'nı (Makecert.exe) X.509 sertifikaları ve özel anahtarı/ortak anahtar çifti oluşturur. Disk ve vermek ve yeni sertifikaları imzalamak için kullanmak üzere özel anahtarı böylece zincirleme sertifika hiyerarşisini benzetimi kaydedebilirsiniz. Hizmetleri ve hiçbir zaman gerçek dağıtım sertifikalarını oluşturmak için kullanılması gereken geliştirme aracı yalnızca bir yardımcı olarak kullanıma yöneliktir. Geliştirirken bir [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] hizmet, bir Makecert.exe ile güven zinciri oluşturmak için aşağıdaki adımları kullanın.  
+ Sertifika Oluşturma Aracı'nı (Makecert.exe) X.509 sertifikaları ve özel anahtarı/ortak anahtar çifti oluşturur. Disk ve vermek ve yeni sertifikaları imzalamak için kullanmak üzere özel anahtarı böylece zincirleme sertifika hiyerarşisini benzetimi kaydedebilirsiniz. Hizmetleri ve hiçbir zaman gerçek dağıtım sertifikalarını oluşturmak için kullanılması gereken geliştirme aracı yalnızca bir yardımcı olarak kullanıma yöneliktir. Bir WCF Hizmeti geliştirirken Makecert.exe ile güven zinciri oluşturmak için aşağıdaki adımları kullanın.  
   
 #### <a name="to-build-a-chain-of-trust-with-makecertexe"></a>Makecert.exe ile güven zinciri oluşturmak için  
   
@@ -137,7 +123,7 @@ Programa [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] güvenlik, X.50
  Kullanılarak yapılandırma modu da ayarlayabilirsiniz `revocationMode` her iki öznitelik [ \<kimlik doğrulama >](../../../../docs/framework/configure-apps/file-schema/wcf/authentication-of-clientcertificate-element.md) (biri [ \<serviceBehaviors >](../../../../docs/framework/configure-apps/file-schema/wcf/servicebehaviors.md)) ve [ \<kimlik doğrulama >](../../../../docs/framework/configure-apps/file-schema/wcf/authentication-of-clientcertificate-element.md) (biri [ \<endpointBehaviors >](../../../../docs/framework/configure-apps/file-schema/wcf/endpointbehaviors.md)).  
   
 ## <a name="the-setcertificate-method"></a>SetCertificate yöntemi  
- İçinde [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)], çoğunlukla bir sertifika belirtin veya bir hizmet sertifikalarının ayarlayın veya istemcidir şifrelemek veya bir ileti dijital olarak imzala doğrulamak için kullanılacak. Program aracılığıyla kullanarak bunu yapabilirsiniz `SetCertificate` X.509 sertifikalarını temsil eden çeşitli sınıflar yöntemi. Aşağıdaki sınıflar kullanım `SetCertificate` yöntemi bir sertifika belirtin.  
+ WCF, çoğunlukla bir sertifika belirtin veya bir hizmet sertifikalarının ayarlayın veya istemci kimlik doğrulaması, şifrelemek veya bir ileti dijital olarak imzala kullanmaktır. Program aracılığıyla kullanarak bunu yapabilirsiniz `SetCertificate` X.509 sertifikalarını temsil eden çeşitli sınıflar yöntemi. Aşağıdaki sınıflar kullanım `SetCertificate` yöntemi bir sertifika belirtin.  
   
 |örneği|Yöntem|  
 |-----------|------------|  
@@ -179,9 +165,9 @@ Programa [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] güvenlik, X.50
   
  Bir Windows kullanıcı hesabı temsil eden belirteci için bir X.509 sertifikası eşleme, korunan kaynaklara erişim kazanmak için eşlenen sonra Windows belirteci kullanılabilir olduğundan, bir ayrıcalık kabul edilir. Bu nedenle, etki alanı ilkesi eşleme önce kendi ilkesiyle uyumlu uymak için X.509 sertifikası gerektirir. *SChannel* güvenlik paketi bu gereksinim zorlar.  
   
- Kullanırken [!INCLUDE[netfx35_long](../../../../includes/netfx35-long-md.md)] veya sonraki sürümlerde, [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] sertifika için bir Windows hesabı eşlenen önce etki alanı ilkesi uyumlu sağlar.  
+ Kullanırken [!INCLUDE[netfx35_long](../../../../includes/netfx35-long-md.md)] veya daha sonra sertifikayı bir Windows hesabı eşlenen önce etki alanı ilkesi uyumlu WCF sağlar.  
   
- İlk sürümünde [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)], eşleme, etki alanı ilkesi danışmanlık olmadan yapılır. Bu nedenle ilk sürüm altında çalışırken çalışmak için kullanılan eski uygulamaları eşleme etkinleştirilmişse ve X.509 sertifikası etki alanı ilkesi karşılamadığı başarısız mümkündür.  
+ WCF ilk sürümünde, etki alanı ilkesi danışmanlık olmadan eşleme yapılır. Bu nedenle ilk sürüm altında çalışırken çalışmak için kullanılan eski uygulamaları eşleme etkinleştirilmişse ve X.509 sertifikası etki alanı ilkesi karşılamadığı başarısız mümkündür.  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
  <xref:System.ServiceModel.Channels>  

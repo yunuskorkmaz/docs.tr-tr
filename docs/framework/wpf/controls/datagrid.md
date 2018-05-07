@@ -1,13 +1,6 @@
 ---
 title: DataGrid
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-wpf
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - DataGrid column types [WPF]
 - DataGrid scenarios [WPF]
@@ -17,16 +10,11 @@ helpviewer_keywords:
 - DataGrid [WPF], customizing the appearance of
 - DataGrid columns [WPF], using
 ms.assetid: bf89ea63-79b6-422b-bc9f-0485ad803216
-caps.latest.revision: "9"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: daea7d382d64e768c9ec681e1c2041c4c80c255e
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: a8f267706c1ace02b091329360779711981d01e3
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="datagrid"></a>DataGrid
 <xref:System.Windows.Controls.DataGrid> Denetimi görüntülemek ve bir SQL veritabanı, LINQ sorgusu veya diğer bir bağlanabilir veri kaynağından gibi birçok farklı kaynaklardan gelen verileri düzenlemenize olanak sağlar. Daha fazla bilgi için bkz: [bağlama kaynaklarına genel bakış](../../../../docs/framework/wpf/data/binding-sources-overview.md).  
@@ -40,7 +28,7 @@ ms.lasthandoff: 12/22/2017
 |<xref:System.Windows.Controls.DataGridComboBoxColumn>|<xref:System.Enum>|  
 |<xref:System.Windows.Controls.DataGridHyperlinkColumn>|<xref:System.Uri>|  
   
- <xref:System.Windows.Controls.DataGrid>hücre yazı tipi, renk ve boyutu gibi görünümü özelleştirilebilir. <xref:System.Windows.Controls.DataGrid>diğer WPF denetimlerinin tüm stil ve şablon işlevlerini destekler. <xref:System.Windows.Controls.DataGrid>Ayrıca varsayılan ve düzenleme, sıralama ve doğrulama için özelleştirilebilir davranışları içerir.  
+ <xref:System.Windows.Controls.DataGrid> hücre yazı tipi, renk ve boyutu gibi görünümü özelleştirilebilir. <xref:System.Windows.Controls.DataGrid> diğer WPF denetimlerinin tüm stil ve şablon işlevlerini destekler. <xref:System.Windows.Controls.DataGrid> Ayrıca varsayılan ve düzenleme, sıralama ve doğrulama için özelleştirilebilir davranışları içerir.  
   
  Aşağıdaki tabloda bazı için ortak görevleri listeler <xref:System.Windows.Controls.DataGrid> ve bunların nasıl yapılacağını. İlgili API'ye görüntüleyerek, daha fazla bilgi ve örnek kod bulabilirsiniz.  
   

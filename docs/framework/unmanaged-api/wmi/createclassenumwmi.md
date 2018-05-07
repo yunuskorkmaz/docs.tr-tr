@@ -1,11 +1,7 @@
 ---
-title: "CreateClassEnumWmi işlevi (yönetilmeyen API Başvurusu)"
-description: "CreateClassEnumWmi işlevi belirtilen ölçütleri karşılayan tüm sınıflar için bir numaralandırıcı döndürür."
+title: CreateClassEnumWmi işlevi (yönetilmeyen API Başvurusu)
+description: CreateClassEnumWmi işlevi belirtilen ölçütleri karşılayan tüm sınıflar için bir numaralandırıcı döndürür.
 ms.date: 11/06/2017
-ms.prod: .net-framework
-ms.technology:
-- dotnet-clr
-ms.topic: reference
 api_name:
 - CreateClassEnumWmi
 api_location:
@@ -20,14 +16,11 @@ topic_type:
 - Reference
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 2058bad61af79244d211afb6a7661ca1642db070
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 3f84902586a2b940d52eb6365a141af61af802dd
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="createclassenumwmi-function"></a>CreateClassEnumWmi işlevi
 Belirtilen seçim ölçütü karşılayan tüm sınıflar için bir numaralandırıcı döndürür.  
@@ -79,7 +72,7 @@ HRESULT CreateClassEnumWmi (
 `authLevel`  
 [in] Kimlik doğrulama düzeyi.
 
-`impLevel`[in] Kimliğe bürünme düzeyi.
+`impLevel` [in] Kimliğe bürünme düzeyi.
 
 `pCurrentNamespace`   
 [in] Bir işaretçi bir [IWbemServices](https://msdn.microsoft.com/library/aa392093(v=vs.85).aspx) geçerli ad alanını temsil eden nesne.
@@ -101,7 +94,7 @@ Bu işlev tarafından döndürülen aşağıdaki değerleri tanımlanan *WbemCli
 |---------|---------|---------|
 | `WBEM_E_ACCESS_DENIED` | 0x80041003 | Kullanıcı, bir veya daha fazla işlev döndürebilir sınıfları görüntüleme izni yok. |
 | `WBEM_E_FAILED` | 0x80041001 | Belirlenemeyen bir hata oluştu. |
-| `WBEM_E_INVALID_CLASS` | 0x80041010 | `strSuperClass`mevcut değil. |
+| `WBEM_E_INVALID_CLASS` | 0x80041010 | `strSuperClass` mevcut değil. |
 | `WBEM_E_INVALID_PARAMETER` | 0x80041008 | Parametre geçerli değil. |
 | `WBEM_E_OUT_OF_MEMORY` | 0x80041006 | İşlemi tamamlamak yeterli bellek yok. |
 | `WBEM_E_SHUTTING_DOWN` | 0x80041033 | WMI, büyük olasılıkla durduruldu ve yeniden başlatma. Çağrı [ConnectServerWmi](connectserverwmi.md) yeniden. |
@@ -119,7 +112,7 @@ Bu işlev çağrısı sarmalar [IWbemServices::CreateClassEnum](https://msdn.mic
   
  **Başlık:** WMINet_Utils.idl  
   
- **.NET framework sürümleri:**[!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]  
+ **.NET framework sürümleri:** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.  
 [WMI ve performans sayaçları (yönetilmeyen API Başvurusu)](index.md)

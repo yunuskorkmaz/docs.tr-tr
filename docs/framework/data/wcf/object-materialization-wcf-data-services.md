@@ -1,32 +1,20 @@
 ---
 title: Nesne Materialization (WCF Veri Hizmetleri)
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework-oob
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - WCF Data Services, client library
 - WCF Data Services, querying
 ms.assetid: f0dbf7b0-0292-4e31-9ae4-b98288336dc1
-caps.latest.revision: "4"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: b093fce50de6a0437456f4fb0e025e3c853777e4
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 54f8cc876b373fcfa8e8e514abf50111942de88c
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="object-materialization-wcf-data-services"></a>Nesne Materialization (WCF Veri Hizmetleri)
 Kullandığınızda **hizmet Başvurusu Ekle** iletişim kullanmak için bir [!INCLUDE[ssODataFull](../../../../includes/ssodatafull-md.md)] bir .NET Framework tabanlı istemci uygulamasında akış, eşdeğer veri sınıfları için akış tarafından kullanıma sunulan veri modelindeki her bir varlık türü oluşturulur. Daha fazla bilgi için bkz: [veri hizmeti istemci kitaplığı oluşturma](../../../../docs/framework/data/wcf/generating-the-data-service-client-library-wcf-data-services.md). Bir sorgu tarafından döndürülen varlık verilerini bu oluşturulan istemci veri hizmeti sınıfları birinin bir örneğine gerçekleştirildiği. Birleştirme seçeneklerini ve izlenen nesneler için kimlik çözümleme hakkında daha fazla bilgi için bkz: [veri Hizmet bağlamı yönetme](../../../../docs/framework/data/wcf/managing-the-data-service-context-wcf-data-services.md).  
   
- [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)]Ayrıca, aracı tarafından oluşturulan veri sınıflarını kullanmak yerine, kendi istemci veri hizmeti sınıfları tanımlamanıza olanak sağlar. Bu, kendi veri sınıfları olarak da bilinen "düz eski CLR nesnesi" kullanmanızı sağlar (POCO) veri sınıfları. Bu tür özel veri sınıflarını kullanırken ya da veri sınıfı özniteliği <xref:System.Data.Services.Common.DataServiceKeyAttribute> veya <xref:System.Data.Services.Common.DataServiceEntityAttribute> ve türü veri hizmetinin veri modelindeki istemci eşleşme türü adları adları emin olun.  
+ [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] Ayrıca, aracı tarafından oluşturulan veri sınıflarını kullanmak yerine, kendi istemci veri hizmeti sınıfları tanımlamanıza olanak sağlar. Bu, kendi veri sınıfları olarak da bilinen "düz eski CLR nesnesi" kullanmanızı sağlar (POCO) veri sınıfları. Bu tür özel veri sınıflarını kullanırken ya da veri sınıfı özniteliği <xref:System.Data.Services.Common.DataServiceKeyAttribute> veya <xref:System.Data.Services.Common.DataServiceEntityAttribute> ve türü veri hizmetinin veri modelindeki istemci eşleşme türü adları adları emin olun.  
   
  Kitaplık sorgu yanıt iletisini aldıktan sonra döndürülen veriler gerçeğe [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] istemci verilerini örneğine sorgu türlerinin hizmet sınıfları akış. Bu nesneler gerçekleştirilmesini için genel işlem aşağıdaki gibidir:  
   

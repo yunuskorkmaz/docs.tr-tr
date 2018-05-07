@@ -1,30 +1,20 @@
 ---
-title: "Intranet Güvenli Olmayan Hizmet ve İstemci"
-ms.custom: 
+title: Intranet Güvenli Olmayan Hizmet ve İstemci
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
 ms.assetid: f450f5d4-3547-47ec-9320-2809e6a12634
-caps.latest.revision: "20"
 author: BrucePerlerMS
-ms.author: bruceper
 manager: mbaldwin
-ms.workload: dotnet
-ms.openlocfilehash: 0cfd98d401921c47bd85f8d4089e3efb437ca6b7
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: d08e8b5f9a22fc558af6f8f7c2ca3049e4a692ba
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="intranet-unsecured-client-and-service"></a>Intranet Güvenli Olmayan Hizmet ve İstemci
-Basit bir aşağıdaki çizimde gösterilmektedir [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] hizmet geliştirilen özel bir ağda güvenli için bilgi sağlamak için bir [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] uygulama. Güvenlik gerekli değildir veri düşük önem düzeyi olduğundan, ağ doğası gereği güvenli olması bekleniyor veya güvenlik bir katman tarafından sağlanan [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] altyapı.  
+Özel bir ağda güvenli bir WCF uygulaması için bilgi sağlamak için geliştirilmiş basit bir Windows Communication Foundation (WCF) hizmetini aşağıda gösterilmektedir. Düşük önem derecesi veri olduğundan, ağ doğası gereği güvenli olması bekleniyor veya güvenlik WCF altyapı altına bir katman tarafından sağlanan güvenlik gerekli değildir.  
   
  ![Intranet güvenli olmayan istemci ve hizmet senaryo](../../../../docs/framework/wcf/feature-details/media/unsecuredwebservice.gif "UnsecuredWebService")  
   
@@ -33,7 +23,7 @@ Basit bir aşağıdaki çizimde gösterilmektedir [!INCLUDE[indigo1](../../../..
 |Güvenlik modu|Yok.|  
 |Taşıma|TCP|  
 |Bağlama|<xref:System.ServiceModel.NetTcpBinding>|  
-|Birlikte Çalışabilirlik|[!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]yalnızca|  
+|Birlikte Çalışabilirlik|WCF yalnızca|  
 |Kimlik doğrulaması|Yok.|  
 |Bütünlük|Yok.|  
 |Gizliliği|Yok.|  
@@ -92,7 +82,7 @@ Basit bir aşağıdaki çizimde gösterilmektedir [!INCLUDE[indigo1](../../../..
      [!code-vb[C_SecurityScenarios#0](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_securityscenarios/vb/source.vb#0)]  
   
 ### <a name="code"></a>Kod  
- Aşağıdaki kod temel gösterir [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] TCP protokolü kullanılarak güvenli olmayan bir uç nokta erişen istemci.  
+ Aşağıdaki kod TCP protokolü kullanarak güvenli bir uç nokta erişen temel bir WCF istemcisi gösterir.  
   
  [!code-csharp[C_UnsecuredClient#2](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_unsecuredclient/cs/source.cs#2)]
  [!code-vb[C_UnsecuredClient#2](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_unsecuredclient/vb/source.vb#2)]  

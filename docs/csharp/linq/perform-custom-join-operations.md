@@ -1,20 +1,13 @@
 ---
-title: "Özel birleştirme işlemleri gerçekleştirme"
-description: "Özel birleştirme işlemleri gerçekleştirme."
-keywords: .NET, .NET core, C#
-author: BillWagner
-manager: wpickett
-ms.author: wiwagn
+title: Özel birleştirme işlemleri gerçekleştirme
+description: Özel birleştirme işlemleri gerçekleştirme.
 ms.date: 12/1/2016
-ms.topic: article
-ms.prod: .net
-ms.technology: devlang-csharp
 ms.assetid: 56a2a4a5-7299-497d-b3c3-23c848678911
-ms.openlocfilehash: fef146c92a5cbbf21f8f1688f221c2bd45c99de7
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: df80f4382ad5fa96fcdc41b338cbb53a3d8e6cb9
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="perform-custom-join-operations"></a>Özel birleştirme işlemleri gerçekleştirme
 
@@ -47,5 +40,5 @@ Bu örnek ile mümkün olmayan birleştirme işlemleri gerçekleştirme gösteri
   
 ## <a name="see-also"></a>Ayrıca bkz.  
  [LINQ Sorgu ifadeleri](index.md)  
- [Join tümcesi](../language-reference/keywords/join-clause.md)  
- [Join tümcesinin sonuçlarını sıralama](order-the-results-of-a-join-clause.md)
+ [join yan tümcesi](../language-reference/keywords/join-clause.md)  
+ [Join yan tümcesinin sonuçlarını sıralama](order-the-results-of-a-join-clause.md)

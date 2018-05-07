@@ -1,14 +1,6 @@
 ---
-title: "StrongNameKeyGen İşlevi"
-ms.custom: 
+title: StrongNameKeyGen İşlevi
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: reference
 api_name:
 - StrongNameKeyGen
 api_location:
@@ -22,17 +14,13 @@ helpviewer_keywords:
 ms.assetid: 883e413a-ad2f-4f7f-b1b9-aeb8fe5b65f8
 topic_type:
 - apiref
-caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: e3bb9530884f61345d439ec8662a088e1d152de7
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 5fce08434cb8864350fd333dcfcaa388a8031c09
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="strongnamekeygen-function"></a>StrongNameKeyGen İşlevi
 Güçlü ad kullanmak için yeni bir ortak/özel anahtar çifti oluşturur.  
@@ -52,7 +40,7 @@ BOOLEAN StrongNameKeyGen (
   
 #### <a name="parameters"></a>Parametreler  
  `wszKeyContainer`  
- [in] İstenen anahtar kapsayıcısı adı. `wszKeyContainer`gereken boş olmayan bir dize olabilir veya geçici bir ad oluşturmak için null.  
+ [in] İstenen anahtar kapsayıcısı adı. `wszKeyContainer` gereken boş olmayan bir dize olabilir veya geçici bir ad oluşturmak için null.  
   
  `dwFlags`  
  [in] Kayıtlı anahtarı bırakın belirtir. Aşağıdaki değerleri desteklenir:  
@@ -68,7 +56,7 @@ BOOLEAN StrongNameKeyGen (
  [out] Bayt olarak boyutu, `ppbKeyBlob`.  
   
 ## <a name="return-value"></a>Dönüş Değeri  
- `true`başarılı tamamlanma; Aksi takdirde `false`.  
+ `true` başarılı tamamlanma; Aksi takdirde `false`.  
   
 ## <a name="remarks"></a>Açıklamalar  
  `StrongNameKeyGen` İşlevi 1024 bit anahtar oluşturur. Anahtarı aldıktan sonra çağırmalıdır [StrongNameFreeBuffer](../../../../docs/framework/unmanaged-api/strong-naming/strongnamefreebuffer-function.md) ayrılmış bellek yayımlamayı işlevi.  
@@ -82,7 +70,7 @@ BOOLEAN StrongNameKeyGen (
   
  **Kitaplığı:** bir kaynak olarak MsCorEE.dll dahil  
   
- **.NET framework sürümleri:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET framework sürümleri:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
  [StrongNameKeyGen Yöntemi](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-strongnamekeygen-method.md)  

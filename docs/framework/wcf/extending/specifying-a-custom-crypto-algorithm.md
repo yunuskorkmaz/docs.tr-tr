@@ -1,29 +1,17 @@
 ---
-title: "Özel Bir Şifreleme Algoritması Belirtme"
-ms.custom: 
+title: Özel Bir Şifreleme Algoritması Belirtme
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: d662a305-8e09-451d-9a59-b0f12b012f1d
-caps.latest.revision: "2"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 965f121faa851722e6e2e7f92e805252f7e927c5
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: d8fb22daac66c3ef80f148db03703fc5024d3438
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="specifying-a-custom-crypto-algorithm"></a>Özel Bir Şifreleme Algoritması Belirtme
 WCF kullanmak üzere özel bir şifreleme algoritması belirtmenize olanak verir veri şifrelemek veya dijital imzalar bilgi işlem. Bu, aşağıdaki adımlarla gerçekleştirilir:  
   
-1.  Öğesinden bir sınıf türetin<xref:System.ServiceModel.Security.SecurityAlgorithmSuite>  
+1.  Öğesinden bir sınıf türetin <xref:System.ServiceModel.Security.SecurityAlgorithmSuite>  
   
 2.  Algoritma kaydetme  
   
@@ -116,7 +104,7 @@ public class MyCustomAlgorithmSuite : SecurityAlgorithmSuite
 </configuration>  
 ```  
   
- Bölümü altında <`cryptoClasses`> öğesi SHA256CryptoServiceProvider ve diğer adı "SHA256CSP" arasında eşleme oluşturur. <`nameEntry`> Öğesi "SHA256CSP" diğer adını ve belirtilen URL'yi (http://constoso.com/CustomAlgorithms/CustomHashAlgorithm) arasındaki eşleştirmeyi oluşturur.  
+ Bölümü altında <`cryptoClasses`> öğesi SHA256CryptoServiceProvider ve diğer adı "SHA256CSP" arasında eşleme oluşturur. <`nameEntry`> Öğesi "SHA256CSP" diğer adını ve belirtilen URL'yi arasında eşleme oluşturur (http://constoso.com/CustomAlgorithms/CustomHashAlgorithm ).  
   
  Özel algoritması kodu kullanımda kaydetmek için <xref:System.Security.Cryptography.CryptoConfig.AddAlgorithm(System.Type,System.String[])> yöntemi. Bu yöntem, her iki eşlemeleri oluşturur. Aşağıdaki örnek, bu yöntemin nasıl çağrılacağını gösterir:  
   

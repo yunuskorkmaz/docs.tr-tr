@@ -1,14 +1,6 @@
 ---
 title: .NET Framework ve Uygulamaları Dağıtma
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 helpviewer_keywords:
 - deploying applications [.NET Framework], packaging
 - deploying applications [.NET Framework]
@@ -17,17 +9,13 @@ helpviewer_keywords:
 - .NET Framework, deploying
 - .NET Framework application deployment
 ms.assetid: 238d8284-6042-4a38-a7f6-1ee8efd719da
-caps.latest.revision: 56
 author: mairaw
 ms.author: mairaw
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: c88aabf046ac720d14db3e68c8e04092188a7ef1
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 2686d0db966192606656167d6e505f34ded333f6
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="deploying-the-net-framework-and-applications"></a>.NET Framework ve Uygulamaları Dağıtma
 Bu makale .NET Framework ile uygulamanızı dağıtımına başlamak yardımcı olur. Bilgilerin çoğunu geliştiriciler, OEM'ler ve kuruluş yöneticileri için tasarlanmıştır. .NET Framework'ü bilgisayarlarında yüklemek istediğiniz kullanıcıları kimler [.NET Framework yükleme](~/docs/framework/install/index.md).  
@@ -73,7 +61,7 @@ Bu makale .NET Framework ile uygulamanızı dağıtımına başlamak yardımcı 
   
     -   [Yönetici Kılavuzu](../../../docs/framework/deployment/guide-for-administrators.md)  
   
- **Hizmet verme**  
+ **Bakım**  
   
 -   Genel bilgi için bkz: [.NET Framework blogu](http://go.microsoft.com/fwlink/p/?LinkId=254977)  
   

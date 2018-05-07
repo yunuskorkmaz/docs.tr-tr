@@ -1,12 +1,6 @@
 ---
-title: "Temel LINQ Sorgu İşlemleri (C#)"
-ms.custom: 
+title: Temel LINQ Sorgu İşlemleri (C#)
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-csharp
-ms.topic: article
 helpviewer_keywords:
 - orderby clause [LINQ in C#]
 - ordering data [LINQ in C#]
@@ -23,14 +17,11 @@ helpviewer_keywords:
 - join clause [LINQ in C#]
 - group clause [LINQ in C#]
 ms.assetid: a7ea3421-1cf4-4df7-832a-aa22fe6379e9
-caps.latest.revision: "39"
-author: BillWagner
-ms.author: wiwagn
-ms.openlocfilehash: c7a258ae8d85425abb6d1474d2cb01b02f6deb2e
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 2825b79c9638fff050522da43184a8d95a3fe02f
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="basic-linq-query-operations-c"></a>Temel LINQ Sorgu İşlemleri (C#)
 Bu konuda kısa bir giriş sağlar [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] sorgu ifadeleri ve bazı tipik türleri sorguda gerçekleştirdiğiniz işlem. Daha ayrıntılı bilgi aşağıdaki konularda verilmiştir:  
@@ -108,8 +99,8 @@ from order in Customer.Orders...
  `select` Yan tümcesi sorgu sonuçlarını üretir ve "Şekil" ya da her döndürülen öğe türünü belirtir. Örneğin, sonuçlarınızı, tam oluşacağını belirtebilirsiniz `Customer` nesneleri, yalnızca bir üye, üyelerin bir alt kümesini veya bazı tamamen farklı bir sonuç türü göre bir hesaplama veya yeni nesne oluşturma. Zaman `select` yan tümcesi üreten bir kopyasını kaynak öğenin dışında işlemi adlı bir *projeksiyon*. Verileri dönüştürmek için tahminleri güçlü kullanımıdır [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] sorgu ifadeleri. Daha fazla bilgi için bkz: [LINQ (C#) ile veri dönüştürmeler](../../../../csharp/programming-guide/concepts/linq/data-transformations-with-linq.md) ve [select yan tümcesi](../../../../csharp/language-reference/keywords/select-clause.md).  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [C# üzerinde LINQ ile çalışmaya başlama](../../../../csharp/programming-guide/concepts/linq/getting-started-with-linq.md)  
+ [C#'de LINQ Kullanmaya Başlama](../../../../csharp/programming-guide/concepts/linq/getting-started-with-linq.md)  
  [LINQ Sorgu ifadeleri](../../../../csharp/programming-guide/linq-query-expressions/index.md)  
  [İzlenecek yol: Sorguları C# ile yazma](../../../../csharp/programming-guide/concepts/linq/walkthrough-writing-queries-linq.md)  
  [Sorgu anahtar sözcükleri (LINQ)](../../../../csharp/language-reference/keywords/query-keywords.md)  
- [Anonim türler](../../../../csharp/programming-guide/classes-and-structs/anonymous-types.md)
+ [Anonim Tipler](../../../../csharp/programming-guide/classes-and-structs/anonymous-types.md)

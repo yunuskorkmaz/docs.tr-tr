@@ -1,23 +1,12 @@
 ---
 title: Bookmarks1
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 9b51a346-09ae-455c-a70a-e2264ddeb9e2
-caps.latest.revision: "8"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: bd30abdb158f07724e7acdf172546111e3330713
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 8b7ca9549327087e30d6c72a8b784aa37ad09f3c
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="bookmarks"></a>Yer işaretleri
 Yer işaretleri pasif olarak giriş için bir iş akışı iş parçacığı tutmadan beklemek için bir etkinlik sağlayan sistemdir. Bir etkinlik için stimulus beklediğini bildirir, bir yer işareti oluşturabilirsiniz. Bu etkinliğin yürütme tam düşünülmemelidir, çalışma zamanı gösterir bile şu anda yürütülen yöntemi (oluşturulduğu <xref:System.Activities.Bookmark>) döndürür.  
@@ -124,4 +113,4 @@ syncEvent.WaitOne();
  Zaman `ReadLine` etkinlik yürütülürse, oluşturduğu bir <xref:System.Activities.Bookmark> adlı `UserName` ve yer işareti devam ettirilebilir bekler. Ana bilgisayar istenen verileri toplar ve ardından sürdürür <xref:System.Activities.Bookmark>. İş akışını sürdürür, adını görüntüler ve sonra tamamlar. Hiçbir eşitleme kodu yer işareti sürdürme açısından gerekli olduğunu unutmayın. A <xref:System.Activities.Bookmark> iş akışı boştayken ettirilebilir ve iş akışı değilse, boşta, çağrısı <xref:System.Activities.WorkflowApplication.ResumeBookmark%2A> iş akışı boşta olana kadar engeller.  
   
 ## <a name="bookmark-resumption-result"></a>Yer işareti sürdürme sonucu  
- <xref:System.Activities.WorkflowApplication.ResumeBookmark%2A>döndüren bir <xref:System.Activities.BookmarkResumptionResult> yer işareti sürdürme isteği sonuçlarını göstermek için numaralandırma değeri. Olası dönüş değerleri <xref:System.Activities.BookmarkResumptionResult.Success>, <xref:System.Activities.BookmarkResumptionResult.NotReady>, ve <xref:System.Activities.BookmarkResumptionResult.NotFound>. Konaklar ve uzantıları bu değerin nasıl ilerleyeceğiniz belirlemek için kullanabilirsiniz.
+ <xref:System.Activities.WorkflowApplication.ResumeBookmark%2A> döndüren bir <xref:System.Activities.BookmarkResumptionResult> yer işareti sürdürme isteği sonuçlarını göstermek için numaralandırma değeri. Olası dönüş değerleri <xref:System.Activities.BookmarkResumptionResult.Success>, <xref:System.Activities.BookmarkResumptionResult.NotReady>, ve <xref:System.Activities.BookmarkResumptionResult.NotFound>. Konaklar ve uzantıları bu değerin nasıl ilerleyeceğiniz belirlemek için kullanabilirsiniz.

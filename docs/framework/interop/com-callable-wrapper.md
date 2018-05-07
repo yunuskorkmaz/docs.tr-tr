@@ -1,10 +1,6 @@
 ---
 title: COM Aranabilir Sarmalayıcısı
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.technology:
-- dotnet-clr
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -18,14 +14,11 @@ helpviewer_keywords:
 ms.assetid: d04be3b5-27b9-4f5b-8469-a44149fabf78
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 270d7e85491f0f4ada797910d4fc12c1a14be625
-ms.sourcegitcommit: 9a4fe1a1c37b26532654b4bbe22d702237950009
+ms.openlocfilehash: 21f7b0d56a788b4161fb7e99899b4dd15a434152
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="com-callable-wrapper"></a>COM Aranabilir Sarmalayıcısı
 COM istemcisi .NET nesnesi aradığında, ortak dil çalışma zamanı yönetilen nesneyi ve nesne için bir COM aranabilir sarmalayıcısı (saat) oluşturur. Bir .NET nesnesine başvuru için doğrudan COM istemcileri saatin tersi YÖNDE bir proxy olarak yönetilen nesne için kullanın.  
@@ -183,7 +176,7 @@ public class LoanApp : IAnother {
   
  Otomatik olarak oluşturulan bir çift arabirim nadir durumlarda uygun olabilir; Ancak, daha sık bu sürümüyle ilgili karmaşıklık oluşturur. Örneğin, bir türetilmiş sınıfta sınıfı arabirimini kullanarak COM istemcileri için temel sınıf kolayca değişikliklerle bozulabilir. Bir üçüncü taraf temel sınıf sağlar sınıfı arabiriminin düzenini dışında denetiminiz olur. Daha fazla, yalnızca gönderme arabirimi çift arabirim (**ClassInterface.AutoDual**) verilen tür kitaplığı sınıfı arabiriminde açıklamasını sağlar. Bu tür bir açıklama önbellek DISPID değerleri geç bağlama istemcilere çalışma zamanında önerir.  
   
-## <a name="see-also"></a>Ayrıca bkz.  
+## <a name="see-also"></a>Ayrıca Bkz.  
  <xref:System.Runtime.InteropServices.ClassInterfaceAttribute>  
  [COM Sarmalayıcıları](com-wrappers.md)  
  [.NET Framework Bileşenlerini COM'da Gösterme](exposing-dotnet-components-to-com.md)  

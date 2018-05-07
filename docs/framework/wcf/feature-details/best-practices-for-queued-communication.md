@@ -1,32 +1,18 @@
 ---
 title: Kuyruğa Alınan İletişim için En İyi Uygulamalar
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 helpviewer_keywords:
 - queues [WCF], best practices
 - best practices [WCF], queued communication
 ms.assetid: 446a6383-cae3-4338-b193-a33c14a49948
-caps.latest.revision: 14
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 082fa083dbba601cefc00e40bad7b91e14a45d44
-ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
+ms.openlocfilehash: b54569ad3d11c3b9b1b96e2738bdf0582b63b0b7
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/28/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="best-practices-for-queued-communication"></a>Kuyruğa Alınan İletişim için En İyi Uygulamalar
-Bu konu içinde kuyruğa alınan iletişim için önerilen yöntemler sağlar [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)]. Aşağıdaki bölümlerde bir senaryo açısından önerilen yöntemler açıklanmaktadır.  
+Bu konu, kuyruğa alınan iletişim Windows Communication Foundation (WCF) için önerilen yöntemler sağlar. Aşağıdaki bölümlerde bir senaryo açısından önerilen yöntemler açıklanmaktadır.  
   
 ## <a name="fast-best-effort-queued-messaging"></a>Hızlı ve en yüksek çaba ileti kuyruğa  
  İleti kuyruğa ayrımı sağlar gerektiren senaryolar ve hızlı, yüksek performanslı en yüksek çaba çıkışların ile Mesajlaşma, işlemsel olmayan bir sıraya kullanın ve ayarlayın <xref:System.ServiceModel.MsmqBindingBase.ExactlyOnce%2A> özelliğine `false`.  
@@ -69,7 +55,7 @@ Bu konu içinde kuyruğa alınan iletişim için önerilen yöntemler sağlar [!
   
  Toplu işleme kullanırken, eşzamanlılık ve azaltma için eş zamanlı toplu Çevir unutmayın.  
   
- Daha yüksek performans ve kullanılabilirlik elde etmek için bir grubu kullanmak [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] kuyruktan okunmak Hizmetleri. Bu, tüm bu hizmetleri aynı sözleşme aynı uç noktada kullanıma gerektirir. Grup yaklaşım iletileri yüksek üretim oranları tüm hizmetlerin sayısı sağladığından olan uygulamalar için en iyi çalışır aynı kuyruktan okuyun.  
+ Daha yüksek performans ve kullanılabilirlik elde etmek için bir grubu kuyruktan okunmak WCF hizmetleri kullanın. Bu, tüm bu hizmetleri aynı sözleşme aynı uç noktada kullanıma gerektirir. Grup yaklaşım iletileri yüksek üretim oranları tüm hizmetlerin sayısı sağladığından olan uygulamalar için en iyi çalışır aynı kuyruktan okuyun.  
   
  Grupları kullanırken, MSMQ 3.0 uzak işlem temelli okuma desteklemediğini unutmayın. MSMQ 4.0 uzaktan hizmetteki okuma desteklemiyor.  
   
@@ -84,11 +70,11 @@ Bu konu içinde kuyruğa alınan iletişim için önerilen yöntemler sağlar [!
  Kuyruklar genellikle tek yönlü olmakla birlikte, bazı senaryolarda daha önce gönderilen bir istek aldı bir Yanıtla ilişkilendirmek isteyebilirsiniz. Bu tür bağıntı gerektiriyorsa, iletinin bağıntı bilgilerle içeren kendi SOAP iletisi üstbilgisi uygulamanız önerilir. Genellikle, bu iletiyi başlığıyla gönderen ekler ve iletiyi işlemeyi ve yanıt sırası üzerinde yeni bir ileti ile geri yanıtlama alıcı, böylece gönderenin bağıntı bilgilerini içeren gönderenin ileti üstbilgisi ekler İstek iletisi yanıt iletisiyle tanımlayın.  
   
 ## <a name="integrating-with-non-wcf-applications"></a>WCF olmayan uygulamaları ile tümleştirme  
- Kullanım `MsmqIntegrationBinding` tümleştirdiğinizde [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] Hizmetleri veya istemcileriyle olmayan[!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] Hizmetleri veya istemciler. Olmayan[!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] uygulama System.Messaging, COM +, Visual Basic ya da C++ kullanılarak yazılmış bir MSMQ uygulama olabilir.  
+ Kullanım `MsmqIntegrationBinding` WCF hizmetleri veya istemcileri olmayan WCF hizmetleri veya istemcileri ile tümleştirdiğinizde. WCF olmayan uygulama System.Messaging, COM +, Visual Basic ya da C++ kullanılarak yazılmış bir MSMQ uygulama olabilir.  
   
  Kullanırken `MsmqIntegrationBinding`, aşağıdakilere dikkat edin:  
   
--   A [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] ileti gövdesi MSMQ İleti gövdesi ile aynı değil. Gönderirken bir [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] sıraya alınmış bir bağlamayı kullanarak ileti [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] ileti gövdesi içinde MSMQ iletisi yerleştirilir. Bu ek bilgiler oblivious MSMQ altyapısıdır; yalnızca MSMQ iletisi görür.  
+-   WCF ileti gövdesi MSMQ İleti gövdesi aynı değil. Sıraya alınan bağlama kullanarak bir WCF ileti gönderirken, WCF ileti gövdesi içinde MSMQ iletisi yerleştirilir. Bu ek bilgiler oblivious MSMQ altyapısıdır; yalnızca MSMQ iletisi görür.  
   
 -   `MsmqIntegrationBinding` popüler serileştirme türlerini destekler. Genel ileti gövdesi türü seri hale getirme türüne göre <xref:System.ServiceModel.MsmqIntegration.MsmqMessage%601>, farklı tür parametreleri alır. Örneğin, <xref:System.ServiceModel.MsmqIntegration.MsmqMessageSerializationFormat.ByteArray> gerektirir `MsmqMessage\<byte[]>` ve <xref:System.ServiceModel.MsmqIntegration.MsmqMessageSerializationFormat.Stream> gerektirir `MsmqMessage<Stream>`.  
   

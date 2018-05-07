@@ -1,9 +1,6 @@
 ---
-title: "orderby tümcesi (C# Başvurusu)"
+title: orderby tümcesi (C# Başvurusu)
 ms.date: 07/20/2015
-ms.prod: .net
-ms.technology: devlang-csharp
-ms.topic: article
 f1_keywords:
 - orderby
 - orderby_CSharpKeyword
@@ -11,14 +8,11 @@ helpviewer_keywords:
 - orderby clause [C#]
 - orderby keyword [C#]
 ms.assetid: 21f87f48-d69d-4e95-9a52-6fec47b37e1f
-caps.latest.revision: "17"
-author: BillWagner
-ms.author: wiwagn
-ms.openlocfilehash: dc688e7ba164dcca71d13b2d79d30f1373c4778e
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 1fd0036e8bd3c838fe92ca27635cd7638d59ef1d
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="orderby-clause-c-reference"></a>orderby tümcesi (C# Başvurusu)
 Bir sorgu ifadesinde `orderby` yan tümcesi döndürülen dizi veya değişkene (artan veya azalan düzende sıralanmış grup) neden olur. Birden çok anahtar, bir veya daha fazla ikincil sıralama işlemi gerçekleştirmek için belirtilebilir. Sıralama öğesi türü için varsayılan karşılaştırıcı tarafından gerçekleştirilir. Varsayılan sıralama düzeni artan. Özel bir karşılaştırıcı de belirtebilirsiniz. Ancak, yalnızca yöntemi tabanlı sözdizimini kullanarak kullanılabilir. Daha fazla bilgi için bkz: [veri sıralama](../../programming-guide/concepts/linq/sorting-data.md).  
@@ -40,5 +34,5 @@ Bir sorgu ifadesinde `orderby` yan tümcesi döndürülen dizi veya değişkene 
  [C# başvurusu](../../../csharp/language-reference/index.md)  
  [Sorgu anahtar sözcükleri (LINQ)](../../../csharp/language-reference/keywords/query-keywords.md)  
  [LINQ Sorgu ifadeleri](../../../csharp/programming-guide/linq-query-expressions/index.md)  
- [Group tümcesi](../../../csharp/language-reference/keywords/group-clause.md)  
- [C# üzerinde LINQ ile çalışmaya başlama](../../../csharp/programming-guide/concepts/linq/getting-started-with-linq.md)
+ [group yan tümcesi](../../../csharp/language-reference/keywords/group-clause.md)  
+ [C#'de LINQ Kullanmaya Başlama](../../../csharp/programming-guide/concepts/linq/getting-started-with-linq.md)

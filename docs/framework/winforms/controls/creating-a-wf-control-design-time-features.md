@@ -1,13 +1,6 @@
 ---
 title: "İzlenecek yol: Visual Studio Tasarım-Zamanı Özellikleri'nden Faydalanan Windows Forms Denetimi Oluşturma"
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-winforms
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -17,16 +10,11 @@ helpviewer_keywords:
 - DocumentDesigner class [Windows Forms]
 - walkthroughs [Windows Forms], controls
 ms.assetid: 6f487c59-cb38-4afa-ad2e-95edacb1d626
-caps.latest.revision: "46"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: a4e84c665897159d08cec36b0f35b4f5f2674445
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.openlocfilehash: 10905df76f2b638c10b14c1dd8c181b9652ea963
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="walkthrough-creating-a-windows-forms-control-that-takes-advantage-of-visual-studio-design-time-features"></a>İzlenecek yol: Visual Studio Tasarım-Zamanı Özellikleri'nden Faydalanan Windows Forms Denetimi Oluşturma
 Özel bir denetim için tasarım zamanı deneyimi ilişkili bir özel Tasarımcısı yazarak geliştirilebilir.  
@@ -230,7 +218,7 @@ using MarqueeControlLibrary;
 ## <a name="creating-a-child-control-for-your-custom-control"></a>Özel denetim için bir alt denetimi oluşturma  
  `MarqueeControl` Alt denetim iki tür barındıracak: `MarqueeBorder` denetim ve `MarqueeText` denetim.  
   
--   `MarqueeBorder`: Bu denetim "ışık" kendi köşelerindeki kenarlığın boyar. Kenarlığın taşıma göründükleri şekilde ışık sırayla, flash. Hangi ışık flash hızı adlı bir özellik tarafından denetlenen `UpdatePeriod`. Several other custom properties determine other aspects of the control's appearance. Adlı iki yöntem `StartMarquee` ve `StopMarquee`, ne zaman animasyon başlatır ve durdurur denetim.  
+-   `MarqueeBorder`: Bu denetim "ışık" kendi köşelerindeki kenarlığın boyar. Kenarlığın taşıma göründükleri şekilde ışık sırayla, flash. Hangi ışık flash hızı adlı bir özellik tarafından denetlenen `UpdatePeriod`. Diğer özel bazı özellikleri denetimin görünümünü diğer yönlerini belirler. Adlı iki yöntem `StartMarquee` ve `StopMarquee`, ne zaman animasyon başlatır ve durdurur denetim.  
   
 -   `MarqueeText`: Bu denetim yanıp sönen bir dize boyar. Gibi `MarqueeBorder` denetim, hangi metni yanıp sönen hızı tarafından denetlenir `UpdatePeriod` özelliği. `MarqueeText` Denetimi de sahip `StartMarquee` ve `StopMarquee` yöntemleri common ile `MarqueeBorder` denetim.  
   
@@ -481,7 +469,7 @@ using MarqueeControlLibrary;
      [!code-csharp[System.Windows.Forms.Design.DocumentDesigner#570](../../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.Design.DocumentDesigner/CS/marqueecontrolrootdesigner.cs#570)]
      [!code-vb[System.Windows.Forms.Design.DocumentDesigner#570](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.Design.DocumentDesigner/VB/marqueecontrolrootdesigner.vb#570)]  
   
-2.  Bu olay işleyicileri için karşılık gelen kendi tasarımcısı fiilleri bağlayın. `MarqueeControlRootDesigner`devralınan bir <xref:System.ComponentModel.Design.DesignerVerbCollection> kendi taban sınıfından. İki yeni oluşturacak <xref:System.ComponentModel.Design.DesignerVerb> nesneleri ve bunları bu koleksiyonda ekleyin <xref:System.Windows.Forms.Design.DocumentDesigner.Initialize%2A> yöntemi.  
+2.  Bu olay işleyicileri için karşılık gelen kendi tasarımcısı fiilleri bağlayın. `MarqueeControlRootDesigner` devralınan bir <xref:System.ComponentModel.Design.DesignerVerbCollection> kendi taban sınıfından. İki yeni oluşturacak <xref:System.ComponentModel.Design.DesignerVerb> nesneleri ve bunları bu koleksiyonda ekleyin <xref:System.Windows.Forms.Design.DocumentDesigner.Initialize%2A> yöntemi.  
   
      [!code-csharp[System.Windows.Forms.Design.DocumentDesigner#590](../../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.Design.DocumentDesigner/CS/marqueecontrolrootdesigner.cs#590)]
      [!code-vb[System.Windows.Forms.Design.DocumentDesigner#590](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.Design.DocumentDesigner/VB/marqueecontrolrootdesigner.vb#590)]  

@@ -1,27 +1,15 @@
 ---
-title: "Veri kaynakları ile DataAdapters güncelleştiriliyor"
-ms.custom: 
+title: Veri kaynakları ile DataAdapters güncelleştiriliyor
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-ado
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
 ms.assetid: d1bd9a8c-0e29-40e3-bda8-d89176b72fb1
-caps.latest.revision: "8"
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
-ms.workload: dotnet
-ms.openlocfilehash: e99ff801894149a2324638bfacbc1d32ee937e0a
-ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
+ms.openlocfilehash: 9d9eeb93cf0360f321c124bb6bce6ed02a9ea253
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="updating-data-sources-with-dataadapters"></a>Veri kaynakları ile DataAdapters güncelleştiriliyor
 `Update` Yöntemi <xref:System.Data.Common.DataAdapter> değişikliklerden çözümlemek için çağrılan bir <xref:System.Data.DataSet> veri kaynağına geri. `Update` Yöntemi gibi `Fill` yöntemi örneği bağımsız değişken olarak alan bir `DataSet`ve isteğe bağlı bir <xref:System.Data.DataTable> nesne veya `DataTable` adı. `DataSet` Örneği `DataSet` yapıldı, değişiklikler içeriyor ve `DataTable` değişiklikleri alınacağı tabloyu tanımlar. Öyle değilse `DataTable` belirtilirse, ilk `DataTable` içinde `DataSet` kullanılır.  
@@ -57,7 +45,7 @@ ms.lasthandoff: 01/17/2018
   
  Çağırma sırasında meydana gelebilecek özel durumları işleme `Update` yöntemini kullanabilirsiniz `RowUpdated` göründüklerinde satır güncelleştirme hataları yanıtlamasını olay (bkz [olaylarını işleme](../../../../docs/framework/data/adonet/handling-dataadapter-events.md)), veya ayarlayabilirsiniz `DataAdapter.ContinueUpdateOnError` için`true` çağırmadan önce `Update`ve depolanan hata bilgilerini yanıtlar `RowError` güncelleştirme tamamlandığında, belirli bir satır özelliği (bkz [satır hata bilgilerini](../../../../docs/framework/data/adonet/dataset-datatable-dataview/row-error-information.md)).  
   
- **Not** çağırma `AcceptChanges` üzerinde `DataSet`, `DataTable`, veya `DataRow` tüm neden olacak `Original` değerleri bir `DataRow` ile üzerine yazılmasını `Current` değerleri `DataRow`. Çağrıldıktan sonra satırı benzersiz olarak tanımlayan alan değerlerini değiştirilmişse, `AcceptChanges` `Original` değerleri artık değerleri veri kaynağında eşleşmeyen. `AcceptChanges`Her satır için güncelleştirme yöntemine bir çağrı sırasında otomatik olarak çağrılır bir `DataAdapter`. İlk ayarlayarak güncelleştirme yöntemine bir çağrı sırasında orijinal değerleri koruyabilir `AcceptChangesDuringUpdate` özelliği `DataAdapter` false ya da bir olay işleyicisi oluşturarak `RowUpdated` olay ve ayarı <xref:System.Data.Common.RowUpdatedEventArgs.Status%2A> için <xref:System.Data.UpdateStatus.SkipCurrentRow>. Daha fazla bilgi için bkz: [birleştirme DataSet içeriği](../../../../docs/framework/data/adonet/dataset-datatable-dataview/merging-dataset-contents.md) ve [olaylarını işleme](../../../../docs/framework/data/adonet/handling-dataadapter-events.md).  
+ **Not** çağırma `AcceptChanges` üzerinde `DataSet`, `DataTable`, veya `DataRow` tüm neden olacak `Original` değerleri bir `DataRow` ile üzerine yazılmasını `Current` değerleri `DataRow`. Çağrıldıktan sonra satırı benzersiz olarak tanımlayan alan değerlerini değiştirilmişse, `AcceptChanges` `Original` değerleri artık değerleri veri kaynağında eşleşmeyen. `AcceptChanges` Her satır için güncelleştirme yöntemine bir çağrı sırasında otomatik olarak çağrılır bir `DataAdapter`. İlk ayarlayarak güncelleştirme yöntemine bir çağrı sırasında orijinal değerleri koruyabilir `AcceptChangesDuringUpdate` özelliği `DataAdapter` false ya da bir olay işleyicisi oluşturarak `RowUpdated` olay ve ayarı <xref:System.Data.Common.RowUpdatedEventArgs.Status%2A> için <xref:System.Data.UpdateStatus.SkipCurrentRow>. Daha fazla bilgi için bkz: [birleştirme DataSet içeriği](../../../../docs/framework/data/adonet/dataset-datatable-dataview/merging-dataset-contents.md) ve [olaylarını işleme](../../../../docs/framework/data/adonet/handling-dataadapter-events.md).  
   
 ## <a name="example"></a>Örnek  
  Aşağıdaki örnekler açıkça ayarlayarak değiştirilmiş satırlara güncelleştirmeleri gerçekleştirmek nasıl göstermektedir `UpdateCommand` , bir `DataAdapter` ve çağırma kendi `Update` yöntemi. Parametre güncelleştirme WHERE yan tümcesinde deyimi kullanmak üzere ayarlanmış belirtilen bildirimi `Original` değerini `SourceColumn`. Bu önemlidir çünkü `Current` değeri değiştirilmiş olabilir ve veri kaynağındaki değer eşleşmeyebilir. `Original` Değerdir doldurmak için kullanılan değer `DataTable` veri kaynağından.  

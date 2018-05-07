@@ -1,34 +1,22 @@
 ---
-title: "Yapılandırma Temelli Etkinleştirme"
-ms.custom: 
+title: Yapılandırma Temelli Etkinleştirme
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 21bb762e-c43e-4b0c-887b-5e434d665838
-caps.latest.revision: "26"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: d520a46bc3380fc5dff76f5df866ae3411d5a6a7
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
-ms.translationtype: MT
+ms.openlocfilehash: 2829458d40e3efb180699122570b2775a90be9e6
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="configuration-based-activation"></a>Yapılandırma Temelli Etkinleştirme
-Bu örnek nasıl etkinleştirileceği gösteren [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] .svc dosya gerektirmeden Hizmetleri.  
+Bu örnek, bir .svc dosya gerek kalmadan Windows Communication Foundation (WCF) hizmetlerini etkinleştirmek gösterilmiştir.  
   
 > [!IMPORTANT]
 >  Örnekler, bilgisayarınızda yüklü. Devam etmeden önce aşağıdaki (varsayılan) dizin denetleyin.  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  Bu dizin mevcut değilse, Git [Windows Communication Foundation (WCF) ve .NET Framework 4 için Windows Workflow Foundation (WF) örnek](http://go.microsoft.com/fwlink/?LinkId=150780) tüm indirmek için [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] ve [!INCLUDE[wf1](../../../../includes/wf1-md.md)] örnekleri. Bu örnek aşağıdaki dizinde bulunur.  
+>  Bu dizin mevcut değilse, Git [Windows Communication Foundation (WCF) ve .NET Framework 4 için Windows Workflow Foundation (WF) örnek](http://go.microsoft.com/fwlink/?LinkId=150780) tüm Windows Communication Foundation (WCF) indirmek için ve [!INCLUDE[wf1](../../../../includes/wf1-md.md)] örnekleri. Bu örnek aşağıdaki dizinde bulunur.  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Services\Hosting\ConfigBasedActivation`  
   
@@ -41,7 +29,7 @@ Bu örnek nasıl etkinleştirileceği gösteren [!INCLUDE[indigo1](../../../../i
 ### <a name="activation-of-services-without-requiring-a-svc-file"></a>.Svc dosya gerektirmeden hizmetlerin etkinleştirme  
  İçinde [!INCLUDE[netfx35_short](../../../../includes/netfx35-short-md.md)], .svc dosyasındaki bir hizmeti etkinleştirmek için gerekli. Ek dosya dağıtılması ve uygulamayı ile birlikte saklanır için gerekli olduğu için bu ek yönetim yükünü neden oldu. Sürümü ile [!INCLUDE[netfx40_long](../../../../includes/netfx40-long-md.md)], etkinleştirme bileşenleri uygulama yapılandırma dosyası kullanılarak yapılandırılabilir.  
   
- [!INCLUDE[netfx40_short](../../../../includes/netfx40-short-md.md)]Yeni bir yapılandırma öğesi sunar (<xref:System.ServiceModel.Configuration.ServiceActivationElement>), <xref:System.ServiceModel.Configuration.ServiceHostingEnvironmentSection> uygulama yapılandırma dosyasının. <xref:System.ServiceModel.Configuration.ServiceHostingEnvironmentSection> Koleksiyonu aşağıdaki kod örneğinde gösterildiği gibi etkinleştirmek için hizmetler koleksiyonu kabul eder.  
+ [!INCLUDE[netfx40_short](../../../../includes/netfx40-short-md.md)] Yeni bir yapılandırma öğesi sunar (<xref:System.ServiceModel.Configuration.ServiceActivationElement>), <xref:System.ServiceModel.Configuration.ServiceHostingEnvironmentSection> uygulama yapılandırma dosyasının. <xref:System.ServiceModel.Configuration.ServiceHostingEnvironmentSection> Koleksiyonu aşağıdaki kod örneğinde gösterildiği gibi etkinleştirmek için hizmetler koleksiyonu kabul eder.  
   
 ```xml  
 <serviceActivations>  
@@ -71,7 +59,7 @@ Bu örnek nasıl etkinleştirileceği gösteren [!INCLUDE[indigo1](../../../../i
   
 7.  Hizmet adresini ayarlamak için CTRL + SHIFT + A basın.  
   
-8.  Adres için http://localhost/ServiceModelSamples/Calculator.svc ayarlayın.  
+8.  Adres kümesine http://localhost/ServiceModelSamples/Calculator.svc.  
   
 9. Gerçekleştirmek `Add` işlemi. Değeri ayarlayın `n1` 10 ve ayarlanmış değeri parametresi `n2` 15 parametresi.  
   

@@ -1,27 +1,17 @@
 ---
-title: "PII Güvenlik Kilidi"
-ms.custom: 
+title: PII Güvenlik Kilidi
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: c44fb338-9527-4dd0-8607-b8787d15acb4
-caps.latest.revision: "25"
 author: BrucePerlerMS
-ms.author: bruceper
 manager: mbaldwin
-ms.workload: dotnet
-ms.openlocfilehash: 39f805da7570b81ff1f6593e82f5d0a9310ee9c6
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
-ms.translationtype: MT
+ms.openlocfilehash: 81fc656784dadf0706e2ae3feda09cd08b886560
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="pii-security-lockdown"></a>PII Güvenlik Kilidi
-Bu örnek, güvenlikle ilgili çeşitli özellikleri denetlemek nasıl gösteren bir [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] tarafından hizmet:  
+Bu örnek, bir Windows Communication Foundation (WCF) hizmetiyle güvenlikle ilgili çeşitli özelliklerini denetlemek gösterilmiştir:  
   
 -   Bir hizmetin yapılandırma dosyasındaki hassas bilgilere şifreleme.  
   
@@ -34,7 +24,7 @@ Bu örnek, güvenlikle ilgili çeşitli özellikleri denetlemek nasıl gösteren
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  Bu dizin mevcut değilse, Git [Windows Communication Foundation (WCF) ve .NET Framework 4 için Windows Workflow Foundation (WF) örnek](http://go.microsoft.com/fwlink/?LinkId=150780) tüm indirmek için [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] ve [!INCLUDE[wf1](../../../../includes/wf1-md.md)] örnekleri. Bu örnek aşağıdaki dizinde bulunur.  
+>  Bu dizin mevcut değilse, Git [Windows Communication Foundation (WCF) ve .NET Framework 4 için Windows Workflow Foundation (WF) örnek](http://go.microsoft.com/fwlink/?LinkId=150780) tüm Windows Communication Foundation (WCF) indirmek için ve [!INCLUDE[wf1](../../../../includes/wf1-md.md)] örnekleri. Bu örnek aşağıdaki dizinde bulunur.  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Management\SecurityLockdown`  
   
@@ -43,7 +33,7 @@ Bu örnek, güvenlikle ilgili çeşitli özellikleri denetlemek nasıl gösteren
   
  .NET Framework yapılandırma dosyalarını veritabanlarına bağlanmak için bağlantı dizelerini gibi hassas bilgiler içerebilir. Paylaşılan ve Web barındırılan senaryolarda yapılandırma dosyasının içinde bulunan veriler için günlük görüntüleme dayanıklı olmasını sağlamak için bir hizmet yapılandırma dosyasında bu bilgileri şifrelemek için istenebilir. .NET framework 2.0 ve sonraki Windows veri koruma uygulama programlama arabirimi (DPAPI) veya RSA şifreleme sağlayıcısı kullanarak yapılandırma dosyasını bölümlerini şifreleme olanağı vardır. DPAPI veya RSA kullanarak aspnet_regiis.exe bir yapılandırma dosyası seçme bölümlerini şifreleyebilirsiniz.  
   
- Web barındırılan senaryolarda hizmetler diğer hizmetlere dizinlerde olması mümkündür. Varsayılan yapılandırma değerlerini belirlemek için anlamsal üst dizinindeki yapılandırma değerleri geçersiz kılmak için iç içe geçmiş dizinlerdeki yapılandırma dosyaları sağlar. Belirli durumlarda bu çeşitli nedenlerle için istenmeyen olabilir. [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]iç içe geçmiş bir hizmet kullanarak çalıştırıldığında yapılandırma değerlerini, böylece yapılandırma iç içe geçmiş kilitleme özel durumları oluşturur hizmet yapılandırma destekler yapılandırma değerleri geçersiz.  
+ Web barındırılan senaryolarda hizmetler diğer hizmetlere dizinlerde olması mümkündür. Varsayılan yapılandırma değerlerini belirlemek için anlamsal üst dizinindeki yapılandırma değerleri geçersiz kılmak için iç içe geçmiş dizinlerdeki yapılandırma dosyaları sağlar. Belirli durumlarda bu çeşitli nedenlerle için istenmeyen olabilir. [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] iç içe geçmiş bir hizmet kullanarak çalıştırıldığında yapılandırma değerlerini, böylece yapılandırma iç içe geçmiş kilitleme özel durumları oluşturur hizmet yapılandırma destekler yapılandırma değerleri geçersiz.  
   
  Bu örnek, bilinen kişisel bilgilerin (PII) kullanıcı adı ve parola gibi izleme ve ileti günlüklerinde günlük denetim gösterilmiştir. Belirli durumlarda PII günlüğe bir uygulamada hata ayıklama önemli olabilir ancak varsayılan olarak bilinen PII günlüğünü devre dışıdır. Bu örnek dayanır [Başlarken](../../../../docs/framework/wcf/samples/getting-started-sample.md). Ayrıca, bu örnek, ileti izleme ve kaydetme kullanır. Daha fazla bilgi için bkz: [izleme ve ileti günlüğe kaydetme](../../../../docs/framework/wcf/samples/tracing-and-message-logging.md) örnek.  
   

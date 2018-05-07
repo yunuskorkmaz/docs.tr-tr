@@ -1,36 +1,24 @@
 ---
-title: "Nasıl yapılır: Özel Güvenlik Belirteci Kimlik Doğrulayıcı Oluşturma"
-ms.custom: 
+title: 'Nasıl yapılır: Özel Güvenlik Belirteci Kimlik Doğrulayıcı Oluşturma'
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
 helpviewer_keywords:
 - WCF, authentication
 ms.assetid: 10e245f7-d31e-42e7-82a2-d5780325d372
-caps.latest.revision: 
 author: BrucePerlerMS
-ms.author: bruceper
 manager: mbaldwin
-ms.workload:
-- dotnet
-ms.openlocfilehash: 4415edbe9f04cb56cefadcb3ae521994fac28ffb
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
-ms.translationtype: MT
+ms.openlocfilehash: 41936b407dfdb3fecee80b2513b557016cdcfe5e
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-create-a-custom-security-token-authenticator"></a>Nasıl yapılır: Özel Güvenlik Belirteci Kimlik Doğrulayıcı Oluşturma
 Bu konuda bir özel güvenlik belirteci kimlik doğrulayıcı oluşturma ve bir özel güvenlik belirteci manager ile tümleştirerek gösterilmektedir. Bir güvenlik belirteci kimlik doğrulayıcı gelen ileti ile sağlanan bir güvenlik belirteci içeriğini doğrular. Doğrulama başarılı olursa, Doğrulayıcı koleksiyonunu döndürür <xref:System.IdentityModel.Policy.IAuthorizationPolicy> , değerlendirildiğinde, örnekler talep kümesini döndürür.  
   
- İçinde bir özel güvenlik belirteci kimlik doğrulayıcı kullanmak için [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)], önce özel kimlik bilgileri ve güvenlik belirteci Yöneticisi uygulamaları oluşturmanız gerekir. Özel kimlik bilgileri ve bir güvenlik belirteci yöneticisi oluşturma hakkında daha fazla bilgi için bkz: [izlenecek yol: özel istemci oluşturma ve hizmet kimlik bilgilerini](../../../../docs/framework/wcf/extending/walkthrough-creating-custom-client-and-service-credentials.md). Kimlik bilgileri, güvenlik belirteci yöneticisi ve sağlayıcı ve Doğrulayıcı sınıfları hakkında daha fazla bilgi için bkz: [güvenlik mimarisi](http://msdn.microsoft.com/library/16593476-d36a-408d-808c-ae6fd483e28f).  
+ Windows Communication Foundation (WCF) bir özel güvenlik belirteci kimlik doğrulayıcı kullanmak için ilk özel kimlik bilgileri ve güvenlik belirteci Yöneticisi uygulamaları oluşturmanız gerekir. Özel kimlik bilgileri ve bir güvenlik belirteci yöneticisi oluşturma hakkında daha fazla bilgi için bkz: [izlenecek yol: özel istemci oluşturma ve hizmet kimlik bilgilerini](../../../../docs/framework/wcf/extending/walkthrough-creating-custom-client-and-service-credentials.md). Kimlik bilgileri, güvenlik belirteci yöneticisi ve sağlayıcı ve Doğrulayıcı sınıfları hakkında daha fazla bilgi için bkz: [güvenlik mimarisi](http://msdn.microsoft.com/library/16593476-d36a-408d-808c-ae6fd483e28f).  
   
 ## <a name="procedures"></a>Yordamlar  
   
@@ -45,7 +33,7 @@ Bu konuda bir özel güvenlik belirteci kimlik doğrulayıcı oluşturma ve bir 
      [!code-csharp[C_CustomTokenAuthenticator#1](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_customtokenauthenticator/cs/source.cs#1)]
      [!code-vb[C_CustomTokenAuthenticator#1](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_customtokenauthenticator/vb/source.vb#1)]  
   
- Önceki kod Yetkilendirme İlkeleri koleksiyonunu döndürür <xref:System.IdentityModel.Selectors.SecurityTokenAuthenticator.CanValidateToken%28System.IdentityModel.Tokens.SecurityToken%29> yöntemi. [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]Bu arabirimin ortak bir uygulama sağlamaz. Aşağıdaki yordamda, kendi gereksinimlerinizi için bunu gösterilmiştir.  
+ Önceki kod Yetkilendirme İlkeleri koleksiyonunu döndürür <xref:System.IdentityModel.Selectors.SecurityTokenAuthenticator.CanValidateToken%28System.IdentityModel.Tokens.SecurityToken%29> yöntemi. [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] Bu arabirimin ortak bir uygulama sağlamaz. Aşağıdaki yordamda, kendi gereksinimlerinizi için bunu gösterilmiştir.  
   
 #### <a name="to-create-a-custom-authorization-policy"></a>Bir özel yetkilendirme ilkesi oluşturmak için  
   

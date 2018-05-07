@@ -1,31 +1,17 @@
 ---
 title: 'Nasıl yapılır: Meta Verileri Alma ve Uyumlu Bir Hizmet Ekleme'
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 ms.assetid: f6f3a2b9-c8aa-4b0b-832c-ec2927bf1163
-caps.latest.revision: ''
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: ac7654fa041688bbd703d564f6703df9671fbaea
-ms.sourcegitcommit: c883637b41ee028786edceece4fa872939d2e64c
+ms.openlocfilehash: 9ae888f5a9569ef51be52b91ea019fea897597b8
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/26/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-retrieve-metadata-and-implement-a-compliant-service"></a>Nasıl yapılır: Meta Verileri Alma ve Uyumlu Bir Hizmet Ekleme
-Genellikle, aynı kişi değildir tasarlayıp Hizmetleri. Birlikte çalışma uygulamaları önemli olduğu ortamlarda sözleşmeleri tasarlanmış ya da Web Hizmetleri Açıklama Dili (WSDL) açıklanan ve geliştirici sağlanan sözleşme ile uyumlu bir hizmet uygulamalıdır. Varolan bir hizmete geçirmek isteyebilirsiniz [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] ancak kablo biçimini korumak. Ayrıca, çift yönlü sözleşmeler da bir geri çağırma sözleşmesini uygulama arayanlar gerektirir.  
+Genellikle, aynı kişi değildir tasarlayıp Hizmetleri. Birlikte çalışma uygulamaları önemli olduğu ortamlarda sözleşmeleri tasarlanmış ya da Web Hizmetleri Açıklama Dili (WSDL) açıklanan ve geliştirici sağlanan sözleşme ile uyumlu bir hizmet uygulamalıdır. Windows Communication Foundation (WCF) için bir hizmetiniz geçirmek ancak kablo biçimini korumak isteyebilirsiniz. Ayrıca, çift yönlü sözleşmeler da bir geri çağırma sözleşmesini uygulama arayanlar gerektirir.  
   
- Bu durumlarda, kullanmalısınız [ServiceModel meta veri yardımcı Programracı (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md) (veya eşdeğer bir aracı) gereksinimlerini karşılamak için uygulayabileceğiniz yönetilen bir dilde hizmet sözleşme arabirimi oluşturmak için Sözleşme. Genellikle [ServiceModel meta veri yardımcı Programracı (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md) bir kanal fabrikası ile kullanılan bir hizmet sözleşmesini almak için kullanılan veya bir [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] ayarlayan bir istemci yapılandırma dosyası olarak ile yanı istemci türü doğru bağlama ve adres. Oluşturulan yapılandırma dosyası kullanmak için bir hizmet yapılandırma dosyasına değiştirmeniz gerekir. Hizmet sözleşmesi değiştirmeniz gerekebilir.  
+ Bu durumlarda, kullanmalısınız [ServiceModel meta veri yardımcı Programracı (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md) (veya eşdeğer bir aracı) gereksinimlerini karşılamak için uygulayabileceğiniz yönetilen bir dilde hizmet sözleşme arabirimi oluşturmak için Sözleşme. Genellikle [ServiceModel meta veri yardımcı Programracı (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md) kanal fabrikası ya da bir WCF istemcisi türü ile yanı sıra yukarı doğru bağlama ayarlar istemci yapılandırma dosyası ile kullanılan bir hizmet sözleşmesini almak için kullanılır ve adres. Oluşturulan yapılandırma dosyası kullanmak için bir hizmet yapılandırma dosyasına değiştirmeniz gerekir. Hizmet sözleşmesi değiştirmeniz gerekebilir.  
   
 ### <a name="to-retrieve-data-and-implement-a-compliant-service"></a>Veri almak ve uyumlu bir hizmet ekleme  
   

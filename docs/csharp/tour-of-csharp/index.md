@@ -1,20 +1,13 @@
 ---
 title: C# ' ta - turu bir C# Kılavuzu
 description: C# yeni misiniz? Dil temelleri öğrenin.
-keywords: .NET, .NET core, C#, C# Primer, C# Kılavuzu
-author: BillWagner
-ms.author: wiwagn
 ms.date: 08/10/2016
-ms.topic: article
-ms.prod: .net
-ms.technology: devlang-csharp
-ms.devlang: csharp
 ms.assetid: ebc727cd-8112-42e7-b59c-3c2873ad661c
-ms.openlocfilehash: 0fa7f9f906ba72b114fc59c8026b4b6c79586dd2
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.openlocfilehash: bdb8a84083b391c27d39f5c566a01b2db318123f
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="a-tour-of-the-c-language"></a>C# dili turu  
 
@@ -58,13 +51,13 @@ Programın çıkışı tarafından üretilen `WriteLine` yöntemi `Console` sın
 
 C# hakkında bilgi edinmek için çok daha fazla yoktur.  Aşağıdaki konular, C# dili öğelerini genel bir bakış sağlar. Bu genel bakışlar dilin tüm öğeler hakkında temel bilgiler sağlar ve C# dili elemanlara daha derin çalışmak gerekli bilgileri verin:
 
-* [Program yapısı](program-structure.md)
+* [Program Yapısı](program-structure.md)
     - C# dilinde anahtar kuruluş kavramları öğrenin: ***programları***, ***ad alanları***, ***türleri***, ***üyeleri***, ve  ***derlemeleri***.
-* [Türleri ve değişkenler](types-and-variables.md)
+* [Türler ve Değişkenler](types-and-variables.md)
     - Hakkında bilgi edinin ***değer türleri***, ***başvuru türleri***, ve ***değişkenleri*** C# dilinde.
 * [İfadeler](expressions.md)
     - ***İfadeleri*** gelen oluşturulan ***işlenenler*** ve ***işleçleri***. İfadeler bir değer oluşturur.
-* [Deyimleri](statements.md)
+* [Deyimler](statements.md)
     - Kullandığınız ***deyimleri*** bir programın Eylemler ifade etmek için.
 * [Sınıflar ve nesneler](classes-and-objects.md)
     - ***Sınıfları*** olan en temel C# ' ın türü. ***Nesneleri*** sınıfının örnekleridir. Sınıfları kullanarak yerleşiktir ***üyeleri***, hangi da ele alınmıştır bu konuda.
@@ -72,14 +65,14 @@ C# hakkında bilgi edinmek için çok daha fazla yoktur.  Aşağıdaki konular, 
     - ***Yapılar*** olan, sınıflar, aksine değer türleri veri yapılarını.
 * [Diziler](arrays.md)
     - Bir ***dizi*** içeren bir dizi hesaplanan dizinlerini erişilen değişken bir veri yapısıdır.
-* [Arabirimleri](interfaces.md)
+* [Arabirimler](interfaces.md)
     - Bir ***arabirimi*** sınıflar ve yapılar tarafından uygulanan bir sözleşme tanımlar. Arabirim yöntemleri, özellikleri, olayları ve dizin oluşturucular içerebilir. Arabirim uygulamaları tanımladığı üyelerinin sağlamaz — yalnızca bir sınıf ya da arabirimini uygulayan yapının tarafından sağlanmalıdır üyeleri belirtir.
-* [Numaralandırmaları](enums.md)
+* [Sabit listeleri](enums.md)
     - Bir ***enum türü*** adlandırılmış sabitler kümesiyle ayrı değer türüdür.
 * [Temsilciler](delegates.md)
     - A ***temsilci türü*** belirli bir parametre yöntemleriyle temsil başvuruları listesinde ve dönüş türü. Temsilciler yöntemleri değişkenleri için atanan ve parametre olarak geçirilen varlıklar olarak değerlendirmek mümkün kılar. Temsilciler diğer bazı dillerde bulunan işlev işaretçileri kavramı benzer, ancak işlev işaretçileri, nesne yönelimli ve tür kullanımı uyumlu temsilciler.
-* [Öznitelikleri](attributes.md)
+* [Öznitelikler](attributes.md)
     * ***Öznitelikleri*** türleri, üyeleri ve diğer varlıklar hakkında ek tanımlayıcı bilgileri belirtmek programları etkinleştirin.
 
 >[!div class="step-by-step"]
-[Sonraki](program-structure.md)
+[Next](program-structure.md)

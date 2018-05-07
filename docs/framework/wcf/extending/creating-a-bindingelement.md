@@ -1,30 +1,18 @@
 ---
-title: "BindingElement Oluşturma"
-ms.custom: 
+title: BindingElement Oluşturma
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 01a35307-a41f-4ef6-a3db-322af40afc99
-caps.latest.revision: "12"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 0184d07210322e6ed04441f7190857cf07205b15
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
-ms.translationtype: MT
+ms.openlocfilehash: fdc3ec1fef86ad31434ea372740497969c7ae6a7
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="creating-a-bindingelement"></a>BindingElement Oluşturma
-Bağlamalar ve bağlama öğeleri (genişletmek nesneleri <xref:System.ServiceModel.Channels.Binding?displayProperty=nameWithType> ve <xref:System.ServiceModel.Channels.BindingElement?displayProperty=nameWithType>sırasıyla) yerlerdir nerede [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] uygulama modeli, kanal fabrikaları ve kanal dinleyicileri ile ilişkilendirilmiş. Bağlamaları, özel kanalları kullanılarak programlama kanal düzeyinde açıklandığı gibi gerektirir [hizmet kanal düzeyi programlama](../../../../docs/framework/wcf/extending/service-channel-level-programming.md) ve [istemci kanal düzeyi programlama](../../../../docs/framework/wcf/extending/client-channel-level-programming.md). Bu konuda, kanalda kullanarak etkinleştirmek için en düşük gereksinim ele alınmıştır [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)], geliştirilmesi bir <xref:System.ServiceModel.Channels.BindingElement> kanal ve 4. adımda açıklandığı gibi uygulama etkinleştir kullanımdan [geliştirme kanalları](../../../../docs/framework/wcf/extending/developing-channels.md).  
+Bağlamalar ve bağlama öğeleri (genişletmek nesneleri <xref:System.ServiceModel.Channels.Binding?displayProperty=nameWithType> ve <xref:System.ServiceModel.Channels.BindingElement?displayProperty=nameWithType>sırasıyla) Windows Communication Foundation (WCF) uygulama modeli olduğu kanal fabrikaları ve kanal dinleyicileri ile ilişkili yerdir. Bağlamaları, özel kanalları kullanılarak programlama kanal düzeyinde açıklandığı gibi gerektirir [hizmet kanal düzeyi programlama](../../../../docs/framework/wcf/extending/service-channel-level-programming.md) ve [istemci kanal düzeyi programlama](../../../../docs/framework/wcf/extending/client-channel-level-programming.md). Bu konuda, kanalda kullanarak etkinleştirmek için en düşük gereksinim ele alınmıştır [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)], geliştirilmesi bir <xref:System.ServiceModel.Channels.BindingElement> kanal ve 4. adımda açıklandığı gibi uygulama etkinleştir kullanımdan [geliştirme kanalları](../../../../docs/framework/wcf/extending/developing-channels.md).  
   
 ## <a name="overview"></a>Genel Bakış  
- Oluşturma bir <xref:System.ServiceModel.Channels.BindingElement> kanalınızı kullanmayı geliştiricilerinin için bir [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] uygulama. <xref:System.ServiceModel.Channels.BindingElement>nesneleri, gelen kullanılabilir <xref:System.ServiceModel.ServiceHost?displayProperty=nameWithType> bağlanmak için sınıf bir [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] kanalınızı kesin türü bilgilerinin kalmadan kanalınızı uygulamaya.  
+ Oluşturma bir <xref:System.ServiceModel.Channels.BindingElement> kanalınızı kullanmayı geliştiricilerinin için bir [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] uygulama. <xref:System.ServiceModel.Channels.BindingElement> nesneleri, gelen kullanılabilir <xref:System.ServiceModel.ServiceHost?displayProperty=nameWithType> bağlanmak için sınıf bir [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] kanalınızı kesin türü bilgilerinin kalmadan kanalınızı uygulamaya.  
   
  Bir kez bir <xref:System.ServiceModel.Channels.BindingElement> bırakıldı oluşturulan, kalan kanal geliştirme adımları açıklanan izleyerek, gereksinimlerinize bağlı olarak daha fazla işlevsellik etkinleştirebilirsiniz [geliştirme kanalları](../../../../docs/framework/wcf/extending/developing-channels.md).  
   
@@ -33,9 +21,9 @@ Bağlamalar ve bağlama öğeleri (genişletmek nesneleri <xref:System.ServiceMo
   
  A `ChunkingBindingElement` oluşturmaktan sorumlu `ChunkingChannelFactory` ve `ChunkingChannelListener`. Bu geçersiz kılar <xref:System.ServiceModel.Channels.BindingElement.CanBuildChannelFactory%2A> ve <xref:System.ServiceModel.Channels.BindingElement.CanBuildChannelListener%2A> uygulamaları ve tür parametresi olup olmadığını denetler <xref:System.ServiceModel.Channels.IDuplexSessionChannel> (örneğimizde tarafından desteklenen tek kanal şekli budur `ChunkingChannel`) ve bağlamayı diğer bağlama öğeleri bu destek Kanal şekli.  
   
- <xref:System.ServiceModel.Channels.BindingElement.BuildChannelFactory%2A>ilk denetler istenen kanal şekli oluşturulabilir ve öbekli için ileti eylemlerin bir listesini alır. Ardından yeni bir oluşturur `ChunkingChannelFactory`, iç kanal fabrikası geçirme. (Bir aktarım bağlama öğesi oluşturuyorsanız, o öğeye bağlama yığınında son sunucudur ve bu nedenle kanal dinleyicisi veya kanal fabrikası oluşturmanız gerekir.)  
+ <xref:System.ServiceModel.Channels.BindingElement.BuildChannelFactory%2A> ilk denetler istenen kanal şekli oluşturulabilir ve öbekli için ileti eylemlerin bir listesini alır. Ardından yeni bir oluşturur `ChunkingChannelFactory`, iç kanal fabrikası geçirme. (Bir aktarım bağlama öğesi oluşturuyorsanız, o öğeye bağlama yığınında son sunucudur ve bu nedenle kanal dinleyicisi veya kanal fabrikası oluşturmanız gerekir.)  
   
- <xref:System.ServiceModel.Channels.BindingElement.BuildChannelListener%2A>oluşturma için benzer bir uygulamaya sahip `ChunkingChannelListener` ve iç kanal dinleyicisi geçirme.  
+ <xref:System.ServiceModel.Channels.BindingElement.BuildChannelListener%2A> oluşturma için benzer bir uygulamaya sahip `ChunkingChannelListener` ve iç kanal dinleyicisi geçirme.  
   
  Bir taşıma kanalı kullanılarak başka bir örnek olarak [taşıma: UDP](../../../../docs/framework/wcf/samples/transport-udp.md) örneği aşağıdaki geçersiz kılma sağlar.  
   
@@ -58,14 +46,14 @@ public IChannelListener<TChannel> BuildChannelListener<TChannel>(BindingContext 
 #### <a name="protocol-binding-elements"></a>Protokol bağlama öğeleri  
  Yeni bağlama öğeleri değiştirin veya herhangi bir yeni aktarımlar, kodlamaları veya üst düzey iletişim kuralları ekleme içerdiği bağlama öğelerinin kullanmasıdır. Genişleterek bağlama yeni bir protokol öğesi oluşturmak için başlangıç <xref:System.ServiceModel.Channels.BindingElement> sınıfı. En azından, ardından uygulamalıdır <xref:System.ServiceModel.Channels.BindingElement.Clone%2A?displayProperty=nameWithType> ve uygulamanıza `ChannelProtectionRequirements` kullanarak <xref:System.ServiceModel.Channels.IChannel.GetProperty%2A?displayProperty=nameWithType>. Bu döndürür <xref:System.ServiceModel.Security.ChannelProtectionRequirements> Bu bağlama öğesi için.  Daha fazla bilgi için bkz. <xref:System.ServiceModel.Security.ChannelProtectionRequirements>.  
   
- <xref:System.ServiceModel.Channels.BindingElement.Clone%2A>Bu bağlama öğesi yeni bir kopyasını döndürmelidir. En iyi uygulama, bu bağlama öğesi yazarlarına uygulama olan öneririz <xref:System.ServiceModel.Channels.BindingElement.Clone%2A> temel kopya Oluşturucu çağıran kopya Oluşturucu kullanarak, daha sonra bu sınıftaki ek alanlar klonlar.  
+ <xref:System.ServiceModel.Channels.BindingElement.Clone%2A> Bu bağlama öğesi yeni bir kopyasını döndürmelidir. En iyi uygulama, bu bağlama öğesi yazarlarına uygulama olan öneririz <xref:System.ServiceModel.Channels.BindingElement.Clone%2A> temel kopya Oluşturucu çağıran kopya Oluşturucu kullanarak, daha sonra bu sınıftaki ek alanlar klonlar.  
   
 #### <a name="transport-binding-elements"></a>Bağlama öğeleri taşıma  
  Yeni bir aktarım bağlama öğesi oluşturmak için genişletme <xref:System.ServiceModel.Channels.TransportBindingElement> arabirimi. En azından, ardından uygulamalıdır <xref:System.ServiceModel.Channels.BindingElement.Clone%2A> yöntemi ve <xref:System.ServiceModel.Channels.TransportBindingElement.Scheme%2A?displayProperty=nameWithType> özelliği.  
   
- <xref:System.ServiceModel.Channels.BindingElement.Clone%2A>– Bu bağlama öğesinin yeni bir kopya döndürmelidir.  En iyi uygulama, bağlama öğesi yazarların temel kopya oluşturucu çağırır ve ardından bu sınıftaki ek alanlar klonlar kopya Oluşturucu yapmamanız kopya uygulamak öneririz.  
+ <xref:System.ServiceModel.Channels.BindingElement.Clone%2A> – Bu bağlama öğesinin yeni bir kopya döndürmelidir.  En iyi uygulama, bağlama öğesi yazarların temel kopya oluşturucu çağırır ve ardından bu sınıftaki ek alanlar klonlar kopya Oluşturucu yapmamanız kopya uygulamak öneririz.  
   
- <xref:System.ServiceModel.Channels.TransportBindingElement.Scheme%2A>– <xref:System.ServiceModel.Channels.TransportBindingElement.Scheme%2A> Bağlama öğesi tarafından temsil edilen aktarım protokolü için URI şeması özelliği döndürür alın. Örneğin, <xref:System.ServiceModel.Channels.HttpTransportBindingElement?displayProperty=nameWithType> ve <xref:System.ServiceModel.Channels.TcpTransportBindingElement?displayProperty=nameWithType> döndürmek "http" ve "net.tcp" kendi ilgili <xref:System.ServiceModel.Channels.TransportBindingElement.Scheme%2A> özellikleri.  
+ <xref:System.ServiceModel.Channels.TransportBindingElement.Scheme%2A> – <xref:System.ServiceModel.Channels.TransportBindingElement.Scheme%2A> Bağlama öğesi tarafından temsil edilen aktarım protokolü için URI şeması özelliği döndürür alın. Örneğin, <xref:System.ServiceModel.Channels.HttpTransportBindingElement?displayProperty=nameWithType> ve <xref:System.ServiceModel.Channels.TcpTransportBindingElement?displayProperty=nameWithType> döndürmek "http" ve "net.tcp" kendi ilgili <xref:System.ServiceModel.Channels.TransportBindingElement.Scheme%2A> özellikleri.  
   
 #### <a name="encoding-binding-elements"></a>Kodlama bağlama öğeleri  
  Genişleterek yeni kodlama bağlama öğeleri oluşturmak için başlangıç <xref:System.ServiceModel.Channels.BindingElement> sınıfı ve uygulama <xref:System.ServiceModel.Channels.MessageEncodingBindingElement?displayProperty=nameWithType> sınıfı. En azından, ardından uygulamalıdır <xref:System.ServiceModel.Channels.BindingElement.Clone%2A>, <xref:System.ServiceModel.Channels.MessageEncodingBindingElement.CreateMessageEncoderFactory%2A?displayProperty=nameWithType> yöntemleri ve <xref:System.ServiceModel.Channels.MessageEncodingBindingElement.MessageVersion%2A?displayProperty=nameWithType> özelliği.  

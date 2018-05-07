@@ -1,20 +1,13 @@
 ---
-title: "Çalışma zamanında koşul filtrelerini dinamik olarak belirtme"
-description: "Çalışma zamanında koşul filtrelerini dinamik olarak belirleme konusunda."
-keywords: .NET, .NET core, C#
-author: BillWagner
-manager: wpickett
-ms.author: wiwagn
+title: Çalışma zamanında koşul filtrelerini dinamik olarak belirtme
+description: Çalışma zamanında koşul filtrelerini dinamik olarak belirleme konusunda.
 ms.date: 12/1/2016
-ms.topic: article
-ms.prod: .net
-ms.technology: devlang-csharp
 ms.assetid: 90238470-0767-497c-916c-52d0d16845e0
-ms.openlocfilehash: 06bc594ac1357e7dca6c182fa28310559a79875c
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: fa3426a513758d8c30bf381ec480b9b8d12a5f81
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="dynamically-specify-predicate-filters-at-runtime"></a>Çalışma zamanında koşul filtrelerini dinamik olarak belirtme
 
@@ -24,7 +17,7 @@ Bazı durumlarda, çalışma zamanına kadar sahip kaynak öğelerine uygulamak 
   
 1.  Yeni bir konsol uygulaması açın ve adını `PredicateFilters`.  
   
-2.  Kopya `StudentClass` sınıfıyla [nesneler koleksiyonunu sorgulama](query-a-collection-of-objects.md) ve ad alanına yapıştırın `PredicateFilters` sınıfı altında `Program`. `StudentClass`bir listesini sağlar `Student` nesneleri.  
+2.  Kopya `StudentClass` sınıfıyla [nesneler koleksiyonunu sorgulama](query-a-collection-of-objects.md) ve ad alanına yapıştırın `PredicateFilters` sınıfı altında `Program`. `StudentClass` bir listesini sağlar `Student` nesneleri.  
   
 3.  Out açıklama `Main` yönteminde `StudentClass`.  
   
@@ -77,4 +70,4 @@ Bazı durumlarda, çalışma zamanına kadar sahip kaynak öğelerine uygulamak 
  
 ## <a name="see-also"></a>Ayrıca Bkz.  
  [LINQ Sorgu ifadeleri](index.md)  
- [Burada yan tümcesi](../language-reference/keywords/where-clause.md)
+ [where yan tümcesi](../language-reference/keywords/where-clause.md)

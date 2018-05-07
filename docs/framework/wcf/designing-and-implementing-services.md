@@ -1,33 +1,19 @@
 ---
 title: Hizmetleri Tasarlama ve Uygulama
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 helpviewer_keywords:
 - defining service contracts [WCF]
 ms.assetid: 036fae20-7c55-4002-b71d-ac4466e167a3
-caps.latest.revision: 37
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 9b954a8ac4f8507b095eb97d0724095cecc7b75b
-ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
-ms.translationtype: MT
+ms.openlocfilehash: 02117b95cbf5a2ee16267a7b991ea9f854b813c8
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="designing-and-implementing-services"></a>Hizmetleri Tasarlama ve Uygulama
 Bu bölümde tanımlamak ve uygulamak gösterilmiştir [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] sözleşmeleri. Bir hizmet sözleşmesini ne bir uç nokta için dış dünya iletişim kurar belirtir. Daha somut bir düzeyde, bu temel ileti exchange desenleri (MEPs) düzenlenmiştir belirli iletileri kümesi hakkında istek/yanıt gibi tek yönlü ve çift yönlü açıklamadır. Bir hizmet sözleşmesini ileti alışverişlerinde mantıksal olarak ilişkili bir dizi, bir hizmet işlemi tek bir ileti exchange ise. Örneğin, bir `Hello` işlemi (arayan Tebrik Duyurusu şekilde) açıkça bir ileti kabul etmeniz gerekir ve olabilir veya (işlemi geçici kullanım bağlı olarak) bir ileti döndürmeyebilir.  
   
- Sözleşmeler ve diğer temel hakkında daha fazla bilgi için [!INCLUDE[indigo1](../../../includes/indigo1-md.md)] bkz, [temel Windows Communication Foundation kavramları](../../../docs/framework/wcf/fundamental-concepts.md). Bu konu, hizmet sözleşmelerini anlamaya odaklanır. Hizmet sözleşmeleri hizmetlerine bağlanmak için kullanan istemciler oluşturma hakkında daha fazla bilgi için bkz: [WCF istemcisi genel bakış](../../../docs/framework/wcf/wcf-client-overview.md).  
+ Sözleşmeler ve diğer temel Windows Communication Foundation (WCF) kavramlar hakkında daha fazla bilgi için bkz: [temel Windows Communication Foundation kavramları](../../../docs/framework/wcf/fundamental-concepts.md). Bu konu, hizmet sözleşmelerini anlamaya odaklanır. Hizmet sözleşmeleri hizmetlerine bağlanmak için kullanan istemciler oluşturma hakkında daha fazla bilgi için bkz: [WCF istemcisi genel bakış](../../../docs/framework/wcf/wcf-client-overview.md).  
   
 ## <a name="overview"></a>Genel Bakış  
  Bu konu, tasarlama ve uygulama için bir üst düzey kavramsal yönlendirmesini sağlar [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] Hizmetleri. Konuları tasarım ve uygulama özellikleri hakkında daha ayrıntılı bilgi sağlar. Önce tasarlama ve uygulama, [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] uygulama önerilir doğrulayın:  
@@ -77,7 +63,7 @@ Bu bölümde tanımlamak ve uygulamak gösterilmiştir [!INCLUDE[indigo2](../../
   
  Sözleşme davranışı eklemek için belirli konular hizmet sözleşmesini uygulama ve çalışma zamanı yapılandırma gerektirir şekilde dikkat edin. Bir hizmeti kullanmak için kullanıma sunmak için karşılanması gereken gereksinimleri kümesi gereksinimleri önceki kümesinde oluşturur. Bir sözleşme uygulama gereksinimlerini yaparsa, bir uygulama henüz gerektirebilir için yapılandırma ve çalıştırmak hizmeti etkinleştirmek bağlamaları daha fazla. Son olarak, konak uygulama hizmet yapılandırması bağlamaları Ekle ve herhangi bir gereksinimi desteklemelidir.  
   
- Bu ek gereksinim işlem tasarlama, uygulama, yapılandırma ve barındırma çalışırken göz önünde bulundurmanız önemlidir bir [!INCLUDE[indigo1](../../../includes/indigo1-md.md)] hizmet uygulaması. Örneğin, sözleşmenin bir oturum desteklemek gerektiğini belirtebilirsiniz. Bu durumda, bağlama sözleşme bu gereksinimi desteklemek için yapılandırmanız gerekir ya da hizmet uygulaması çalışmaz. Veya hizmet Windows tümleşik kimlik doğrulaması gerektiriyorsa ve Internet Information Services (IIS) barındırılan hizmetin bulunduğu Web uygulaması Windows tümleşik kimlik açık ve kapalı anonim destek olması gerekir. Farklı hizmet ana uygulama türleri etkisini ve özellikler hakkında daha fazla bilgi için bkz: [barındırma hizmetleri](../../../docs/framework/wcf/hosting-services.md).  
+ Bu ek gereksinim işlem tasarlama, uygulama, yapılandırma ve bir Windows Communication Foundation (WCF) hizmeti uygulamasını barındıran çalışırken göz önünde bulundurmanız önemlidir. Örneğin, sözleşmenin bir oturum desteklemek gerektiğini belirtebilirsiniz. Bu durumda, bağlama sözleşme bu gereksinimi desteklemek için yapılandırmanız gerekir ya da hizmet uygulaması çalışmaz. Veya hizmet Windows tümleşik kimlik doğrulaması gerektiriyorsa ve Internet Information Services (IIS) barındırılan hizmetin bulunduğu Web uygulaması Windows tümleşik kimlik açık ve kapalı anonim destek olması gerekir. Farklı hizmet ana uygulama türleri etkisini ve özellikler hakkında daha fazla bilgi için bkz: [barındırma hizmetleri](../../../docs/framework/wcf/hosting-services.md).  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
  [Hizmet Sözleşmeleri Tasarlama](../../../docs/framework/wcf/designing-service-contracts.md)  

@@ -1,31 +1,20 @@
 ---
 title: EventWaitHandle
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
 ms.technology: dotnet-standard
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - threading [.NET Framework], EventWaitHandle class
 - EventWaitHandle class
 - event wait handles [.NET Framework]
 - threading [.NET Framework], cross-process synchronization
 ms.assetid: 11ee0b38-d663-4617-b793-35eb6c64e9fc
-caps.latest.revision: "9"
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-- dotnetcore
-ms.openlocfilehash: 665676a25aea48388ba01b8028af00049b113f2b
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: 697820b01bd629baa306d96002a98d92e44dab51
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="eventwaithandle"></a>EventWaitHandle
 <xref:System.Threading.EventWaitHandle> Sınıfı, sinyal ve sinyalleri için bekleyen birbirleri ile iletişim kurmak için iş parçacığı olanak tanır. Olay bekleme tanıtıcıları (sadece olayları olarak da bilinir) bir veya daha fazla bekleyen iş parçacıklarının yayın için sinyal bekleme tanıtıcılarıdır. İşareti verilen sonra bir olay bekleme tanıtıcısı el ile veya otomatik olarak sıfırlanır. <xref:System.Threading.EventWaitHandle> Sınıfı ya da bir yerel olay bekleme tanıtıcısı (yerel olay) temsil eden veya bir adlandırılmış sistem olayı (olayı veya sistem olayı, tüm işlemler görünür olarak adlandırılır) tanıtıcısı bekleyin.  
@@ -55,7 +44,7 @@ ms.lasthandoff: 12/23/2017
 ## <a name="features-common-to-automatic-and-manual-events"></a>Otomatik ve el ile olayları ortak özellikler  
  Genellikle, bir veya daha fazla iş parçacığı engelleme üzerinde bir <xref:System.Threading.EventWaitHandle> engellenmemiş bir iş parçacığı çağırır kadar <xref:System.Threading.EventWaitHandle.Set%2A> bekleyen iş parçacıkları (durumunda otomatik sıfırlama olayları) birini veya bunların tümünün bırakır yöntemi (el ile söz konusu olduğunda olayları sıfırlama). Bir iş parçacığı sinyal bir <xref:System.Threading.EventWaitHandle> ve daha sonra bunun üzerinde atomik bir işlem olarak statik çağırarak engelleyebilirsiniz <xref:System.Threading.WaitHandle.SignalAndWait%2A?displayProperty=nameWithType> yöntemi.  
   
- <xref:System.Threading.EventWaitHandle>nesneleri ile statik kullanılabilir <xref:System.Threading.WaitHandle.WaitAll%2A?displayProperty=nameWithType> ve <xref:System.Threading.WaitHandle.WaitAny%2A?displayProperty=nameWithType> yöntemleri. Çünkü <xref:System.Threading.EventWaitHandle> ve <xref:System.Threading.Mutex> sınıflarının her ikisi de türetilen <xref:System.Threading.WaitHandle>, her iki sınıf ile bu yöntemleri kullanabilirsiniz.  
+ <xref:System.Threading.EventWaitHandle> nesneleri ile statik kullanılabilir <xref:System.Threading.WaitHandle.WaitAll%2A?displayProperty=nameWithType> ve <xref:System.Threading.WaitHandle.WaitAny%2A?displayProperty=nameWithType> yöntemleri. Çünkü <xref:System.Threading.EventWaitHandle> ve <xref:System.Threading.Mutex> sınıflarının her ikisi de türetilen <xref:System.Threading.WaitHandle>, her iki sınıf ile bu yöntemleri kullanabilirsiniz.  
   
 ### <a name="named-events"></a>Adlandırılmış olayları  
  Windows işletim sistemi olay bekleme tanıtıcıları adları olmasını sağlar. Sistem genelinde bir adlandırılmış olayıdır. Diğer bir deyişle, adlandırılmış olay oluşturulduktan sonra tüm iş parçacıkları, tüm işlemler için görünür durumdadır. Bu nedenle, adlandırılmış olayları etkinlikleri, işlemleri ve bunun yanı sıra iş parçacıklarını eşitleme için kullanılabilir.  

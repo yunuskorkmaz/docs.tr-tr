@@ -1,27 +1,18 @@
 ---
-title: "Nasıl yapılır: Kullanıcı Adı ve Parolayla Kimlik Doğrulama"
+title: 'Nasıl yapılır: Kullanıcı Adı ve Parolayla Kimlik Doğrulama'
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.technology:
-- dotnet-clr
-ms.topic: article
 helpviewer_keywords:
 - authentication [WCF], user name and password
 ms.assetid: a5415be2-0ef3-464c-9f76-c255cb8165a4
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 194a84ef7c2af3bfce6af3625eabf07d4d0b06fb
-ms.sourcegitcommit: 15316053918995cc1380163a7d7e7edd5c44e6d7
+ms.openlocfilehash: b37d296312be4c7694a2db55d85dd618e3252f14
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/19/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-authenticate-with-a-user-name-and-password"></a>Nasıl yapılır: Kullanıcı Adı ve Parolayla Kimlik Doğrulama
 
-Bu konuda etkinleştirmeye gösterilmiştir bir [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] bir Windows etki alanı kullanıcı adı ve parola ile bir istemci kimlik doğrulaması için hizmet. Bu, bir çalışma, kendi kendini barındıran WCF Hizmeti varsayar. Bir temel kendini barındıran WCF Hizmeti bakın, oluşturmanın bir örneği için [başlangıç Öğreticisi](../../../../docs/framework/wcf/getting-started-tutorial.md). Bu konu, hizmet kodunda yapılandırılan varsayar. Bir yapılandırma dosyası kullanarak benzer bir hizmet yapılandırma bir örnek görmek istiyorsanız bkz [ileti güvenliği kullanıcı adı](../../../../docs/framework/wcf/samples/message-security-user-name.md)  
+Bu konuda, bir Windows etki alanı kullanıcı adı ve parola ile bir istemci kimlik doğrulaması bir Windows Communication Foundation (WCF) hizmetini etkinleştirmek gösterilmiştir. Bu, bir çalışma, kendi kendini barındıran WCF Hizmeti varsayar. Bir temel kendini barındıran WCF Hizmeti bakın, oluşturmanın bir örneği için [başlangıç Öğreticisi](../../../../docs/framework/wcf/getting-started-tutorial.md). Bu konu, hizmet kodunda yapılandırılan varsayar. Bir yapılandırma dosyası kullanarak benzer bir hizmet yapılandırma bir örnek görmek istiyorsanız bkz [ileti güvenliği kullanıcı adı](../../../../docs/framework/wcf/samples/message-security-user-name.md)  
   
  Windows etki alanı kullanıcı adı ve parola kullanarak, istemcilerin kimliğini doğrulamak için bir hizmeti yapılandırmak için <xref:System.ServiceModel.WSHttpBinding> ve kendi `Security.Mode` özelliğine `Message`. Ayrıca, bir X509 belirtmelisiniz istemciden hizmete gönderildiğinde kullanıcı adı ve parola şifrelemek için kullanılan sertifika.  
   

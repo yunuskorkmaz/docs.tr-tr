@@ -1,27 +1,15 @@
 ---
-title: "Kurumsal Hizmetler İşlemsel Bileşenlerini Tümleştirme"
-ms.custom: 
+title: Kurumsal Hizmetler İşlemsel Bileşenlerini Tümleştirme
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 05dab277-b8b2-48cf-b40c-826be128b175
-caps.latest.revision: "8"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: b6ce82d100341fec4415cf9fdb7159706b2accc4
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 8453b4199f5e6eae263ebc3fc1c457429c868d7f
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="integrating-enterprise-services-transactional-components"></a>Kurumsal Hizmetler İşlemsel Bileşenlerini Tümleştirme
-[!INCLUDE[indigo1](../../../../includes/indigo1-md.md)]Kurumsal Hizmetler ile tümleştirmek için otomatik bir mekanizma sağlar (bkz [COM + uygulamaları ile tümleştirme](../../../../docs/framework/wcf/feature-details/integrating-with-com-plus-applications.md)). Ancak, dahili Kurumsal Hizmetler içinde barındırılan işlemsel bileşenlerini kullanan hizmetler geliştirmek için esneklik isteyebilirsiniz. Çünkü [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] işlemleri özelliği üzerinde oluşturulan <xref:System.Transactions> altyapısı, Kuruluş Hizmetleri ile tümleştirme için işlem [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] arasında birlikte çalışabilirlik belirtmek için aynı olan <xref:System.Transactions> ve Enterprise Kısmında özetlendiği gibi hizmetleri [Kurumsal Hizmetler ve COM + işlemleri ile birlikte çalışabilirlik](http://go.microsoft.com/fwlink/?LinkId=94949).  
+Windows Communication Foundation (WCF) Kuruluş Hizmetleri ile tümleştirme için otomatik bir mekanizma sağlar (bkz [COM + uygulamaları ile tümleştirme](../../../../docs/framework/wcf/feature-details/integrating-with-com-plus-applications.md)). Ancak, dahili Kurumsal Hizmetler içinde barındırılan işlemsel bileşenlerini kullanan hizmetler geliştirmek için esneklik isteyebilirsiniz. WCF işlemleri özelliği oluşturulduğundan <xref:System.Transactions> altyapı, Kurumsal Hizmetler WCF ile tümleştirmek için işlemidir arasında birlikte çalışabilirlik belirtmek için aynı <xref:System.Transactions> ve kurumsal kısmında özetlendiği gibi hizmetler [Kurumsal Hizmetler ve COM + işlemleri ile birlikte çalışabilirlik](http://go.microsoft.com/fwlink/?LinkId=94949).  
   
  Gelen akışlı işlem ve COM + bağlam işlemi arasında birlikte çalışabilirlik istenen düzeyini sağlamak için hizmet uygulaması oluşturmanız gerekir bir <xref:System.Transactions.TransactionScope> örneği ve uygun değerini kullanın <xref:System.Transactions.EnterpriseServicesInteropOption> numaralandırması.  
   

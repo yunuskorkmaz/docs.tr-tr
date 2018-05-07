@@ -1,21 +1,14 @@
 ---
-title: "Ana() Dönüş Değerleri (C# Programlama Kılavuzu)"
+title: Ana() Dönüş Değerleri (C# Programlama Kılavuzu)
 ms.date: 08/02/2017
-ms.prod: .net
-ms.technology:
-- devlang-csharp
-ms.topic: article
 helpviewer_keywords:
 - Main method [C#], return values
 ms.assetid: c2f5a1d8-1676-4bea-bc7e-44a97e72d5bc
-caps.latest.revision: 
-author: BillWagner
-ms.author: wiwagn
-ms.openlocfilehash: 9f317879a4941adfd3d125c7697226f8a510254c
-ms.sourcegitcommit: 7e99f66ef09d2903e22c789c67ff5a10aa953b2f
+ms.openlocfilehash: 51a7d821b5705c0ddda96a34663ba0288e0f1da9
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/18/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="main-return-values-c-programming-guide"></a>Ana() dönüş değerleri (C# programlama Kılavuzu)
 
@@ -90,10 +83,10 @@ Yeni sözdizimini avantajlarından derleyici her zaman doğru kod oluşturur bir
 
 Uygulama giriş noktası döndüğünde bir `Task` veya `Task<int>`, derleyici uygulama kodunda bildirilen giriş noktası yöntemini çağıran yeni bir giriş noktası oluşturur. Bu giriş noktası çağrıldı varsayılarak `$GeneratedMain`, bu giriş noktaları için aşağıdaki kod derleyici oluşturur:
 
-- `static Task Main()`denk yayma derleyici sonuçları`private static void $GeneratedMain() => Main().GetAwaiter().GetResult();`
-- `static Task Main(string[])`denk yayma derleyici sonuçları`private static void $GeneratedMain(string[] args) => Main(args).GetAwaiter().GetResult();`
-- `static Task<int> Main()`denk yayma derleyici sonuçları`private static int $GeneratedMain() => Main().GetAwaiter().GetResult();`
-- `static Task<int> Main(string[])`denk yayma derleyici sonuçları`private static int $GeneratedMain(string[] args) => Main(args).GetAwaiter().GetResult();`
+- `static Task Main()` denk yayma derleyici sonuçları `private static void $GeneratedMain() => Main().GetAwaiter().GetResult();`
+- `static Task Main(string[])` denk yayma derleyici sonuçları `private static void $GeneratedMain(string[] args) => Main(args).GetAwaiter().GetResult();`
+- `static Task<int> Main()` denk yayma derleyici sonuçları `private static int $GeneratedMain() => Main().GetAwaiter().GetResult();`
+- `static Task<int> Main(string[])` denk yayma derleyici sonuçları `private static int $GeneratedMain(string[] args) => Main(args).GetAwaiter().GetResult();`
 
 > [!NOTE]
 >Örnekler kullandıysanız `async` değiştirici `Main` yöntemi derleyici aynı kodu oluşturur.

@@ -1,26 +1,15 @@
 ---
-title: "WF etkinlik yazma seçenekleri"
-ms.custom: 
+title: WF etkinlik yazma seçenekleri
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: b9061f5f-12c3-47f0-adbe-1330e2714c94
-caps.latest.revision: "20"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 0422b7b433c8c2a6889e00d559207d25ed42eff1
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: f91c74b4e3dc002ed2abf979619b84a81db65e78
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="activity-authoring-options-in-wf"></a>WF etkinlik yazma seçenekleri
-[!INCLUDE[netfx_current_long](../../../includes/netfx-current-long-md.md)]özel etkinlikler oluşturmak için çeşitli seçenekler sağlar. Belirli bir etkinlik yazmak için kullanılacak doğru yöntemi hangi çalışma zamanı özellikleri gerekli bağlıdır.  
+[!INCLUDE[netfx_current_long](../../../includes/netfx-current-long-md.md)] özel etkinlikler oluşturmak için çeşitli seçenekler sağlar. Belirli bir etkinlik yazmak için kullanılacak doğru yöntemi hangi çalışma zamanı özellikleri gerekli bağlıdır.  
   
 ## <a name="deciding-which-base-activity-class-to-use-for-authoring-custom-activities"></a>Temel hangi etkinliğin sınıf özel etkinlikler yazma kullanmaya karar verme  
  Özel Etkinlik temel sınıflarda kullanılabilir özellikler aşağıdaki tabloda listelenmektedir.  

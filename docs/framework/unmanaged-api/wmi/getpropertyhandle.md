@@ -1,11 +1,7 @@
 ---
-title: "GetPropertyHandle işlevi (yönetilmeyen API Başvurusu)"
-description: "GetPropertyHandle işlevi bu identies bir özelliği bir benzersiz tanıtıcı döndürür."
+title: GetPropertyHandle işlevi (yönetilmeyen API Başvurusu)
+description: GetPropertyHandle işlevi bu identies bir özelliği bir benzersiz tanıtıcı döndürür.
 ms.date: 11/06/2017
-ms.prod: .net-framework
-ms.technology:
-- dotnet-clr
-ms.topic: reference
 api_name:
 - GetPropertyHandle
 api_location:
@@ -20,14 +16,11 @@ topic_type:
 - Reference
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 3af852fb4b9899a7937f288ffb65d8ca84e4aef1
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 103e81dfa0e455157cfce5914b711347b15b578d
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="getpropertyhandle-function"></a>GetPropertyHandle işlevi
 Bir özelliği tanımlayan benzersiz bir tanıtıcı döndürür.
@@ -87,7 +80,7 @@ Tanıtıcıları alınabilir tüm veri türlerinin özelliklerini dışında `CI
   
  **Başlık:** WMINet_Utils.idl  
   
- **.NET framework sürümleri:**[!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]  
+ **.NET framework sürümleri:** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.  
 [WMI ve performans sayaçları (yönetilmeyen API Başvurusu)](index.md)

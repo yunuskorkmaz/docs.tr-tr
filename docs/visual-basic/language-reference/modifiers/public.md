@@ -1,11 +1,6 @@
 ---
 title: Public (Visual Basic)
 ms.date: 07/20/2015
-ms.prod: .net
-ms.suite: ''
-ms.technology:
-- devlang-visual-basic
-ms.topic: article
 f1_keywords:
 - vb.Public
 helpviewer_keywords:
@@ -13,14 +8,11 @@ helpviewer_keywords:
 - Public keyword [Visual Basic], syntax
 - Public access modifier
 ms.assetid: 284c9e1b-ed23-499b-9bc9-ad87c11485a5
-caps.latest.revision: 13
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: e6cd70adf6ec31c56f39d0443d320dd1b00b00d3
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: f6c18ecb748f62dd47a9689edb23089ca306dbe2
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="public-visual-basic"></a>Public (Visual Basic)
 Bir veya daha fazla bildirilen programlama öğeleri hiçbir erişim kısıtlaması olduğunu belirtir.  
@@ -44,39 +36,39 @@ Bir veya daha fazla bildirilen programlama öğeleri hiçbir erişim kısıtlama
   
  `Public` Değiştiricisi bu bağlamlarında kullanılabilir:  
   
- [Class deyimi](../../../visual-basic/language-reference/statements/class-statement.md)  
+ [Class Deyimi](../../../visual-basic/language-reference/statements/class-statement.md)  
   
- [Const deyimi](../../../visual-basic/language-reference/statements/const-statement.md)  
+ [Const Deyimi](../../../visual-basic/language-reference/statements/const-statement.md)  
   
- [Declare deyimi](../../../visual-basic/language-reference/statements/declare-statement.md)  
+ [Declare Deyimi](../../../visual-basic/language-reference/statements/declare-statement.md)  
   
- [Delegate deyimi](../../../visual-basic/language-reference/statements/delegate-statement.md)  
+ [Delegate Deyimi](../../../visual-basic/language-reference/statements/delegate-statement.md)  
   
- [Dim deyimi](../../../visual-basic/language-reference/statements/dim-statement.md)  
+ [Dim Deyimi](../../../visual-basic/language-reference/statements/dim-statement.md)  
   
- [Enum deyimi](../../../visual-basic/language-reference/statements/enum-statement.md)  
+ [Enum Deyimi](../../../visual-basic/language-reference/statements/enum-statement.md)  
   
- [Event deyimi](../../../visual-basic/language-reference/statements/event-statement.md)  
+ [Event Deyimi](../../../visual-basic/language-reference/statements/event-statement.md)  
   
- [Function deyimi](../../../visual-basic/language-reference/statements/function-statement.md)  
+ [Function Deyimi](../../../visual-basic/language-reference/statements/function-statement.md)  
   
- [Interface deyimi](../../../visual-basic/language-reference/statements/interface-statement.md)  
+ [Interface Deyimi](../../../visual-basic/language-reference/statements/interface-statement.md)  
   
- [Module deyimi](../../../visual-basic/language-reference/statements/module-statement.md)  
+ [Module Deyimi](../../../visual-basic/language-reference/statements/module-statement.md)  
   
- [Operator deyimi](../../../visual-basic/language-reference/statements/operator-statement.md)  
+ [Operator Deyimi](../../../visual-basic/language-reference/statements/operator-statement.md)  
   
- [Property deyimi](../../../visual-basic/language-reference/statements/property-statement.md)  
+ [Property Deyimi](../../../visual-basic/language-reference/statements/property-statement.md)  
   
- [Structure deyimi](../../../visual-basic/language-reference/statements/structure-statement.md)  
+ [Structure Deyimi](../../../visual-basic/language-reference/statements/structure-statement.md)  
   
- [Sub deyimi](../../../visual-basic/language-reference/statements/sub-statement.md)  
+ [Sub Deyimi](../../../visual-basic/language-reference/statements/sub-statement.md)  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [Korumalı](../../../visual-basic/language-reference/modifiers/protected.md)  
- [Arkadaş](../../../visual-basic/language-reference/modifiers/friend.md)  
- [Özel](../../../visual-basic/language-reference/modifiers/private.md)  
+ [Protected](../../../visual-basic/language-reference/modifiers/protected.md)  
+ [Friend](../../../visual-basic/language-reference/modifiers/friend.md)  
+ [Private](../../../visual-basic/language-reference/modifiers/private.md)  
  [Visual Basic'de erişim düzeyleri](../../../visual-basic/programming-guide/language-features/declared-elements/access-levels.md)  
- [Yordamları](../../../visual-basic/programming-guide/language-features/procedures/index.md)  
- [Yapıları](../../../visual-basic/programming-guide/language-features/data-types/structures.md)  
- [Nesneler ve sınıflar](../../../visual-basic/programming-guide/language-features/objects-and-classes/index.md)
+ [Yordamlar](../../../visual-basic/programming-guide/language-features/procedures/index.md)  
+ [Yapılar](../../../visual-basic/programming-guide/language-features/data-types/structures.md)  
+ [Nesneler ve Sınıflar](../../../visual-basic/programming-guide/language-features/objects-and-classes/index.md)

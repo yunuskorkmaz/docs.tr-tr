@@ -1,21 +1,14 @@
 ---
-title: "Genel Yöntemler (C# Programlama Kılavuzu)"
+title: Genel Yöntemler (C# Programlama Kılavuzu)
 ms.date: 07/20/2015
-ms.prod: .net
-ms.technology:
-- devlang-csharp
-ms.topic: article
 helpviewer_keywords:
 - generics [C#], methods
 ms.assetid: 673eeea2-4b48-4faa-9c4e-2e89449221b9
-caps.latest.revision: 
-author: BillWagner
-ms.author: wiwagn
-ms.openlocfilehash: 63252dbe4307889f57d35e23eb0575f84358d737
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 04bc59d41eb7883e08138382b396bc737c7f11bb
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="generic-methods-c-programming-guide"></a>Genel Yöntemler (C# Programlama Kılavuzu)
 Genel yöntem tür parametreleri ile aşağıdaki gibi bildirilmiş bir yöntemdir:  
@@ -53,6 +46,6 @@ Genel yöntem tür parametreleri ile aşağıdaki gibi bildirilmiş bir yöntemd
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
  <xref:System.Collections.Generic>  
- [C# programlama kılavuzu](../../../csharp/programming-guide/index.md)  
- [Genel türlere giriş](../../../csharp/programming-guide/generics/introduction-to-generics.md)  
- [Yöntemleri](../../../csharp/programming-guide/classes-and-structs/methods.md)
+ [C# Programlama Kılavuzu](../../../csharp/programming-guide/index.md)  
+ [Genel Türlere Giriş](../../../csharp/programming-guide/generics/introduction-to-generics.md)  
+ [Yöntemler](../../../csharp/programming-guide/classes-and-structs/methods.md)

@@ -1,31 +1,20 @@
 ---
-title: "Yönetilen İş Parçacıklarında İptal"
-ms.custom: 
+title: Yönetilen İş Parçacıklarında İptal
 ms.date: 03/30/2017
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
 ms.technology: dotnet-standard
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
 helpviewer_keywords:
 - cancellation in .NET, overview
 ms.assetid: eea11fe5-d8b0-4314-bb5d-8a58166fb1c3
-caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-- dotnetcore
-ms.openlocfilehash: 5407beba999ede6131adbc17f56d139396429597
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: a764912e46707b6f10e720f95a7d971ec4fc8e15
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="cancellation-in-managed-threads"></a>Yönetilen İş Parçacıklarında İptal
 İle başlayarak [!INCLUDE[net_v40_long](../../../includes/net-v40-long-md.md)], .NET Framework zaman uyumsuz veya uzun süre çalışan zaman uyumlu işlemler işbirlikçi iptali için birleşik bir modeli kullanır. Bu model, bir iptal belirteci adlı basit bir nesne üzerinde temel alır. Yeni iş parçacıkları veya görevleri oluşturarak iptal edilebilen işlemleri, bir veya daha fazla örneğin çağırır nesnesi belirteç her işleme iletir. Tek tek işlemleri, diğer işlemler için belirteç kopyalarını sırayla geçirebilirsiniz. Bazı daha sonra belirteç oluşturulan nesne bu işlemleri ne yaptıklarını durdurmanızı için kullanabilirsiniz. Yalnızca isteyen nesnesi iptal isteğini verebilir ve her dinleyicisi istek haberiniz bile ve uygun ve güncel bir şekilde yanıt sorumludur.  
@@ -156,7 +145,7 @@ ms.lasthandoff: 12/23/2017
   
 -   Kullanıcı temsilcileri kitaplık koddan zamanında iptal isteklerini yanıtlamasını denemelidir.  
   
- <xref:System.Threading.Tasks.Task?displayProperty=nameWithType>ve <xref:System.Linq.ParallelEnumerable?displayProperty=nameWithType> bu yönergeleri aşağıdaki sınıflar olarak gösterilebilir. Daha fazla bilgi için bkz: [görev iptali](../../../docs/standard/parallel-programming/task-cancellation.md)ve [nasıl yapılır: PLINQ sorgusunu iptal](../../../docs/standard/parallel-programming/how-to-cancel-a-plinq-query.md).  
+ <xref:System.Threading.Tasks.Task?displayProperty=nameWithType> ve <xref:System.Linq.ParallelEnumerable?displayProperty=nameWithType> bu yönergeleri aşağıdaki sınıflar olarak gösterilebilir. Daha fazla bilgi için bkz: [görev iptali](../../../docs/standard/parallel-programming/task-cancellation.md)ve [nasıl yapılır: PLINQ sorgusunu iptal](../../../docs/standard/parallel-programming/how-to-cancel-a-plinq-query.md).  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
  [Yönetilen İş Parçacığı Oluşturma Temelleri](../../../docs/standard/threading/managed-threading-basics.md)

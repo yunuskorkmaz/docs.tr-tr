@@ -1,30 +1,18 @@
 ---
-title: "Özel Kanal Dağıtıcı"
-ms.custom: 
+title: Özel Kanal Dağıtıcı
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 813acf03-9661-4d57-a3c7-eeab497321c6
-caps.latest.revision: "7"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 1c67425c67625fcfcfaac5ec689f4f70dbd3d64f
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
-ms.translationtype: MT
+ms.openlocfilehash: 7cd27d485efe7fe91e7c59627bf14e188e85f386
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="custom-channel-dispatcher"></a>Özel Kanal Dağıtıcı
 Bu örnek kanal yığını özel bir şekilde uygulayarak nasıl oluşturulacağını gösterir <xref:System.ServiceModel.ServiceHostBase> doğrudan ve Web ana bilgisayar ortamında özel kanal dağıtıcı oluşturma. Kanal dağıtıcı etkileşimde <xref:System.ServiceModel.Channels.IChannelListener> kanal yığından Kanallar ve alır iletileri kabul etmesini. Bu örnek ayrıca kullanarak bir Web ana bilgisayar ortamının kanal yığınında yapı göstermek için temel bir örnek sağlar <xref:System.ServiceModel.Activation.VirtualPathExtension>.  
   
 ## <a name="custom-servicehostbase"></a>Özel ServiceHostBase  
- Bu örnek temel türü uygulayan <xref:System.ServiceModel.ServiceHostBase> yerine <xref:System.ServiceModel.ServiceHost> nasıl değiştirileceğini göstermek için [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] kanal yığının en üstünde katman işleme özel bir ileti ile uygulama yığın. Sanal yöntemi geçersiz kılma <xref:System.ServiceModel.ServiceHostBase.InitializeRuntime%2A> kanal dinleyicileri ve kanal dağıtıcı oluşturmak için.  
+ Bu örnek temel türü uygulayan <xref:System.ServiceModel.ServiceHostBase> yerine <xref:System.ServiceModel.ServiceHost> kanal yığının en üstünde katman işleme özel bir ileti ile Windows Communication Foundation (WCF) yığın uygulama değiştirme göstermek için. Sanal yöntemi geçersiz kılma <xref:System.ServiceModel.ServiceHostBase.InitializeRuntime%2A> kanal dinleyicileri ve kanal dağıtıcı oluşturmak için.  
   
  Web barındırılan bir hizmete uygulamak için hizmeti uzantı alınmaya <xref:System.ServiceModel.Activation.VirtualPathExtension> gelen <xref:System.ServiceModel.ServiceHostBase.Extensions%2A> koleksiyonu ve ekleyin <xref:System.ServiceModel.Channels.BindingParameterCollection> böylece aktarım katmanı barındırma ortamı ayarlarına dayanarak kanal dinleyicisi yapılandırmak nasıl bilir, İş, Internet Information Services (IIS) / Windows İşlem Etkinleştirme Hizmeti (WAS) ayarlar.  
   
@@ -34,7 +22,7 @@ Bu örnek kanal yığını özel bir şekilde uygulayarak nasıl oluşturulacağ
  Dağıtıcı ilk kanal dinleyicisi açar ve bir singleton yanıt kanalına kabul eder. Kanal ile sonsuz bir döngüde iletileri (istek) göndermek başlar. Her istek için bir yanıt iletisi oluşturur ve istemciye geri gönderir.  
   
 ## <a name="creating-a-response-message"></a>Bir yanıt iletisi oluşturma  
- İleti işleme türünü uygulanır `MyServiceManager`. İçinde `HandleRequest` yöntemi, `Action` iletinin üstbilgisi isteği desteklenip desteklenmediğini görmek için önce denetlenir. Önceden tanımlanmış bir SOAP eylemi "http://tempuri.org/HelloWorld/Hello" ileti filtreleme sağlamak için tanımlanır. Bu hizmet sözleşmesi kavram olarak benzerdir [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] uyarlamasını <xref:System.ServiceModel.ServiceHost>.  
+ İleti işleme türünü uygulanır `MyServiceManager`. İçinde `HandleRequest` yöntemi, `Action` iletinin üstbilgisi isteği desteklenip desteklenmediğini görmek için önce denetlenir. Bir SOAP eylemi önceden tanımlanmış "http://tempuri.org/HelloWorld/Hello" ileti filtreleme sağlamak için tanımlanmış. Bu hizmet sözleşmesi kavram olarak benzerdir [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] uyarlamasını <xref:System.ServiceModel.ServiceHost>.  
   
  Doğru SOAP eylemi çalışması için örnek istenen ileti verileri alır ve ne de görülen için benzer isteğine karşılık gelen bir yanıt oluşturur <xref:System.ServiceModel.ServiceHost> durumda.  
   
@@ -62,6 +50,6 @@ Server replied: You said: Howdy. Message id: 5
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  Bu dizin mevcut değilse, Git [Windows Communication Foundation (WCF) ve .NET Framework 4 için Windows Workflow Foundation (WF) örnek](http://go.microsoft.com/fwlink/?LinkId=150780) tüm indirmek için [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] ve [!INCLUDE[wf1](../../../../includes/wf1-md.md)] örnekleri. Bu örnek aşağıdaki dizinde bulunur.  
+>  Bu dizin mevcut değilse, Git [Windows Communication Foundation (WCF) ve .NET Framework 4 için Windows Workflow Foundation (WF) örnek](http://go.microsoft.com/fwlink/?LinkId=150780) tüm Windows Communication Foundation (WCF) indirmek için ve [!INCLUDE[wf1](../../../../includes/wf1-md.md)] örnekleri. Bu örnek aşağıdaki dizinde bulunur.  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Extensibility\Channels\CustomChannelDispatcher`

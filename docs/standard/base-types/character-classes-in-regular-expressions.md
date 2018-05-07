@@ -1,12 +1,12 @@
 ---
-title: "Normal İfadelerdeki Karakter Sınıfları"
-ms.custom: 
+title: Normal İfadelerdeki Karakter Sınıfları
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology: dotnet-standard
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - csharp
@@ -17,18 +17,18 @@ helpviewer_keywords:
 - characters, matching syntax
 - .NET Framework regular expressions, character classes
 ms.assetid: 0f8bffab-ee0d-4e0e-9a96-2b4a252bb7e4
-caps.latest.revision: 
+caps.latest.revision: 58
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: 98aaa5c7bbd28facf9cc06fd0d0898b72ea7dbc2
-ms.sourcegitcommit: 83dd5ec003e788ccb3e33f3412a7af39ae347646
-ms.translationtype: MT
+ms.openlocfilehash: 538aa21712f1e2290fb009c24774059098c60c1e
+ms.sourcegitcommit: 2e8acae16ae802f2d6d04e3ce0a6dbf04e476513
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/15/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="character-classes-in-regular-expressions"></a>Normal İfadelerdeki Karakter Sınıfları
 <a name="Top"></a> Karakter sınıfı herhangi biri başarılı olması bir eşleştirme için giriş dizesi içinde oluşabilir karakter kümesini tanımlar. .NET normal ifade dilde şu karakter sınıflarından destekler:  
@@ -58,7 +58,7 @@ ms.lasthandoff: 03/15/2018
  .NET karakter sınıfı çıkarma ifadeleri, başka bir karakter sınıftan bir karakter sınıfı hariç sonucu olarak bir karakter kümesi tanımlamanıza olanak sağlayan destekler. Daha fazla bilgi için bkz: [karakter sınıfı çıkarma](#CharacterClassSubtraction).  
   
 > [!NOTE]
->  Karakter karakterlerle kategoriye göre gibi eşleşen sınıfları [\w](#WordCharacter) word karakteri eşleştirmek için veya [\p {}](#CategoryOrBlock) Unicode kategorisine eşleşecek şekilde Bel <xref:System.Globalization.CharUnicodeInfo> karakter hakkında bilgi sağlamak için sınıfı Kategoriler.  İle başlayarak [!INCLUDE[net_v462](../../../includes/net-v462-md.md)], karakter kategorileri temel [Unicode standart, sürüm 8.0.0](http://www.unicode.org/versions/Unicode8.0.0/). İçinde [!INCLUDE[net_v40_long](../../../includes/net-v40-long-md.md)] aracılığıyla [!INCLUDE[net_v461](../../../includes/net-v461-md.md)], esas alan [Unicode standart, sürüm 6.3.0](http://www.unicode.org/versions/Unicode6.3.0/).  
+>  Karakter karakterlerle kategoriye göre gibi eşleşen sınıfları [\w](#WordCharacter) word karakteri eşleştirmek için veya [\p {}](#CategoryOrBlock) Unicode kategorisine eşleşecek şekilde Bel <xref:System.Globalization.CharUnicodeInfo> karakter hakkında bilgi sağlamak için sınıfı Kategoriler.  İle başlayarak [!INCLUDE[net_v462](../../../includes/net-v462-md.md)], karakter kategorileri temel [Unicode standart, sürüm 8.0.0](https://www.unicode.org/versions/Unicode8.0.0/). İçinde [!INCLUDE[net_v40_long](../../../includes/net-v40-long-md.md)] aracılığıyla [!INCLUDE[net_v461](../../../includes/net-v461-md.md)], esas alan [Unicode standart, sürüm 6.3.0](https://www.unicode.org/versions/Unicode6.3.0/).  
   
 <a name="PositiveGroup"></a>   
 ## <a name="positive-character-group--"></a>Pozitif Karakter Grubu: [ ]  
@@ -123,7 +123,7 @@ ms.lasthandoff: 03/15/2018
   
  Karakterlerin tek tek bulunduğu bir listeyi belirtmek için kullanılan söz dizimi aşağıdaki gibidir:  
   
- [*^character_group*]  
+ [*^ character_group*]  
   
  Burada *character_group* başarılı olması bir eşleştirme için giriş dizesi görünemez karakterleri tek tek bir listesi verilmiştir. *character_group* bir veya daha fazla sabit karakterleri, herhangi bir birleşimini içerebilir [kaçış karakterleri](../../../docs/standard/base-types/character-escapes-in-regular-expressions.md), ya da karakter sınıfları.  
   
@@ -408,7 +408,7 @@ ms.lasthandoff: 03/15/2018
   
 <a name="SupportedUnicodeGeneralCategories"></a>   
 ## <a name="supported-unicode-general-categories"></a>Desteklenen Unicode Genel Kategorileri  
- Unicode aşağıdaki tabloda listelenen genel kategorileri tanımlar. Konumundaki "UCD dosya biçimi" ve "Genel kategori değerler" konuları daha fazla bilgi için bkz: [Unicode karakter veritabanı](http://www.unicode.org/reports/tr44/).  
+ Unicode aşağıdaki tabloda listelenen genel kategorileri tanımlar. Konumundaki "UCD dosya biçimi" ve "Genel kategori değerler" konuları daha fazla bilgi için bkz: [Unicode karakter veritabanı](https://www.unicode.org/reports/tr44/).  
   
 |Kategori|Açıklama|  
 |--------------|-----------------|  
@@ -470,7 +470,7 @@ ms.lasthandoff: 03/15/2018
 |0250 - 02AF|`IsIPAExtensions`|  
 |02B0 - 02FF|`IsSpacingModifierLetters`|  
 |0300 - 036F|`IsCombiningDiacriticalMarks`|  
-|0370 - 03FF|`IsGreek`<br /><br /> veya<br /><br /> `IsGreekandCoptic`|  
+|0370 - 03FF|`IsGreek`<br /><br /> -veya-<br /><br /> `IsGreekandCoptic`|  
 |0400 - 04FF|`IsCyrillic`|  
 |0500 - 052F|`IsCyrillicSupplement`|  
 |0530 - 058F|`IsArmenian`|  
@@ -514,7 +514,7 @@ ms.lasthandoff: 03/15/2018
 |2000 - 206F|`IsGeneralPunctuation`|  
 |2070 - 209F|`IsSuperscriptsandSubscripts`|  
 |20A0 - 20CF|`IsCurrencySymbols`|  
-|20D0 - 20FF|`IsCombiningDiacriticalMarksforSymbols`<br /><br /> veya<br /><br /> `IsCombiningMarksforSymbols`|  
+|20D0 - 20FF|`IsCombiningDiacriticalMarksforSymbols`<br /><br /> -veya-<br /><br /> `IsCombiningMarksforSymbols`|  
 |2100 - 214F|`IsLetterlikeSymbols`|  
 |2150 - 218F|`IsNumberForms`|  
 |2190 - 21FF|`IsArrows`|  

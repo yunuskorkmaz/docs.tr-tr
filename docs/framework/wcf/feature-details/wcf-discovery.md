@@ -1,41 +1,29 @@
 ---
-title: "WCF Keşfetme"
-ms.custom: 
+title: WCF Keşfetme
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - WCF [WCF], discovery
 - Windows Communication Foundation [WCF], discovery
 - discovery [WCF]
 ms.assetid: 462c4913-f388-45a9-9042-28ae96a4e735
-caps.latest.revision: "10"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: c11daa14a3897b05947dd6f8c3f3be99eb69c377
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 175f79096d2bbda81a602d38e027d5a6d871fa12
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="wcf-discovery"></a>WCF Keşfetme
-[!INCLUDE[indigo1](../../../../includes/indigo1-md.md)]WS bulma protokolünü kullanarak bir birlikte çalışabilen şekilde çalışma zamanında bulunabilir olması hizmetleri etkinleştirmek için destek sağlar. [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]Hizmetleri kullanılabilirliklerini bir çok noktaya yayın ileti kullanarak ağ veya bulma proxy sunucu duyurusu. İstemci uygulamaları, ağ veya bir ölçüt kümesine uyan Hizmetleri bulmak için bulma proxy sunucusu arama yapabilirsiniz. Bu bölümdeki konular, genel bir bakış sağlar ve bu özellik ayrıntılı için programlama modelini tanımlar.  
+Windows Communication Foundation (WCF) hizmetlerini birlikte çalışabilir bir şekilde WS bulma protokolünü kullanarak çalışma zamanında bulunabilir etkinleştirmek için destek sağlar. WCF hizmetleri kullanılabilirliklerini bir çok noktaya yayın ileti kullanarak ağ veya bulma proxy sunucu duyurusu. İstemci uygulamaları, ağ veya bir ölçüt kümesine uyan Hizmetleri bulmak için bulma proxy sunucusu arama yapabilirsiniz. Bu bölümdeki konular, genel bir bakış sağlar ve bu özellik ayrıntılı için programlama modelini tanımlar.  
   
 ## <a name="in-this-section"></a>Bu Bölümde  
  [WCF Bulmaya Genel Bakış](../../../../docs/framework/wcf/feature-details/wcf-discovery-overview.md)  
- WS-bulma desteği tarafından sağlanan genel bir bakış sağlar [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)].  
+ WS-bulma desteği WCF tarafından sağlanan genel bir bakış sağlar.  
   
  [WCF Bulma Nesne Modeli](../../../../docs/framework/wcf/feature-details/wcf-discovery-object-model.md)  
  Nesne modeli ve genişletilebilirlik WS-bulma destek sınıflarında açıklar.  
   
  [Nasıl yapılır: Bir WCF Hizmeti ve İstemcisine Programlı Bir Şekilde Keşfedilebilirlik Ekleme](../../../../docs/framework/wcf/feature-details/how-to-programmatically-add-discoverability-to-a-wcf-service-and-client.md)  
- Nasıl yapılacağını gösteren bir [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] hizmet bulunabilir.  
+ Windows Communication Foundation (WCF) hizmetini bulunabilirlik nasıl oluşturulacağı gösterilmektedir.  
   
  [Keşif Proxy'si Ekleme](../../../../docs/framework/wcf/feature-details/implementing-a-discovery-proxy.md)  
  Keşif proxy'si, Keşif proxy'sine kayıtlı bir bulunabilir hizmet ve bulunabilir hizmet bulmak için keşif proxy'si kullanan istemci uygulamak için gereken adımları açıklar.  
@@ -47,4 +35,4 @@ ms.lasthandoff: 12/22/2017
  Bulma yapılandırmasını gösterilmektedir.  
   
  [Keşif İstemcisi Kanalını Kullanma](../../../../docs/framework/wcf/feature-details/using-the-discovery-client-channel.md)  
- Keşif istemcisi kanalını yazılırken kullanılacak gösterilmiştir bir [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] istemci uygulaması.
+ Bir WCF istemcisi uygulama yazarken keşif istemcisi kanalını kullanmayı gösterir.

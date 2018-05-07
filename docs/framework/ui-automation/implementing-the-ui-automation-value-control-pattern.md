@@ -1,28 +1,19 @@
 ---
-title: "UI Otomasyonu Değer Denetim Düzenini Uygulama"
-ms.custom: 
+title: UI Otomasyonu Değer Denetim Düzenini Uygulama
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-bcl
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - control patterns, Value
 - UI Automation, Value control pattern
 - Value control pattern
 ms.assetid: b0fcdd87-3add-4345-bca9-e891205e02ba
-caps.latest.revision: "25"
 author: Xansky
 ms.author: mhopkins
 manager: markl
-ms.workload: dotnet
-ms.openlocfilehash: 5f74b103092032e35cce47d893f9e3b6e9d7727b
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.openlocfilehash: b9c748ccc695ae67306c293c10248c4f3f22c043
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="implementing-the-ui-automation-value-control-pattern"></a>UI Otomasyonu Değer Denetim Düzenini Uygulama
 > [!NOTE]
@@ -45,9 +36,9 @@ Düzenlenebilir bir liste öğesi örneği
   
 -   Çok satırlı düzenleme denetimi metin içeriğini almak için Denetim uygulamalıdır <xref:System.Windows.Automation.Provider.ITextProvider>. Ancak, <xref:System.Windows.Automation.Provider.ITextProvider> bir denetimin değeri ayarını desteklemiyor.  
   
--   <xref:System.Windows.Automation.Provider.IValueProvider>bilgi veya alt dize değerleri biçimlendirme alma desteklemez. Uygulama <xref:System.Windows.Automation.Provider.ITextProvider> bu senaryolarda.  
+-   <xref:System.Windows.Automation.Provider.IValueProvider> bilgi veya alt dize değerleri biçimlendirme alma desteklemez. Uygulama <xref:System.Windows.Automation.Provider.ITextProvider> bu senaryolarda.  
   
--   <xref:System.Windows.Automation.Provider.IValueProvider>denetimleri tarafından gibi uygulanmalı **Renk Seçici** Seçim denetiminden [!INCLUDE[TLA#tla_word](../../../includes/tlasharptla-word-md.md)] (aşağıda Resimli), bir renk değeri (örneğin, "Sarı") ile eşdeğer bir iç arasındadizeeşlemedestekleyen[!INCLUDE[TLA#tla_rgb](../../../includes/tlasharptla-rgb-md.md)]yapısı.  
+-   <xref:System.Windows.Automation.Provider.IValueProvider> denetimleri tarafından gibi uygulanmalı **Renk Seçici** Seçim denetiminden [!INCLUDE[TLA#tla_word](../../../includes/tlasharptla-word-md.md)] (aşağıda Resimli), bir renk değeri (örneğin, "Sarı") ile eşdeğer bir iç arasındadizeeşlemedestekleyen[!INCLUDE[TLA#tla_rgb](../../../includes/tlasharptla-rgb-md.md)]yapısı.  
   
  ![Renk Seçici vurgulanan sarı ile. ] (../../../docs/framework/ui-automation/media/uia-valuepattern-colorpicker.png "UIA_ValuePattern_ColorPicker")  
 Renk örneği dize eşleme örneği  

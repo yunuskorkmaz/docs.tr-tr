@@ -1,21 +1,15 @@
 ---
-title: "Tek Boyutlu Diziler (C# Programlama Kılavuzu)"
+title: Tek Boyutlu Diziler (C# Programlama Kılavuzu)
 ms.date: 07/20/2015
-ms.prod: .net
-ms.technology: devlang-csharp
-ms.topic: article
 helpviewer_keywords:
 - single-dimensional arrays [C#]
 - arrays [C#], single-dimensional
 ms.assetid: 2cec1196-1de0-49d2-baf2-c607c33310e8
-caps.latest.revision: "18"
-author: BillWagner
-ms.author: wiwagn
-ms.openlocfilehash: fed9042ba37164927bb8073bc669fafeb5d40598
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 2f5dcb032c5dea764cdd212bbcd02e1640089d96
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="single-dimensional-arrays-c-programming-guide"></a>Tek Boyutlu Diziler (C# Programlama Kılavuzu)
 Aşağıdaki örnekte gösterildiği gibi beş tamsayıların tek boyutlu bir dizi bildirebilirsiniz:  
@@ -58,7 +52,7 @@ Aşağıdaki örnekte gösterildiği gibi beş tamsayıların tek boyutlu bir di
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
  <xref:System.Array>  
- [C# programlama kılavuzu](../../../csharp/programming-guide/index.md)  
+ [C# Programlama Kılavuzu](../../../csharp/programming-guide/index.md)  
  [Diziler](../../../csharp/programming-guide/arrays/index.md)  
- [Çok boyutlu diziler](../../../csharp/programming-guide/arrays/multidimensional-arrays.md)  
- [Basit diziler](../../../csharp/programming-guide/arrays/jagged-arrays.md)
+ [Çok Boyutlu Diziler](../../../csharp/programming-guide/arrays/multidimensional-arrays.md)  
+ [Düzensiz Diziler](../../../csharp/programming-guide/arrays/jagged-arrays.md)

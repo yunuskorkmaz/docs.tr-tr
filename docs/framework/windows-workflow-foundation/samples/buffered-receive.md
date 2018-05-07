@@ -1,24 +1,12 @@
 ---
 title: Arabelleğe alma
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.tgt_pltfrm: ''
-ms.topic: article
 ms.assetid: 9d46d9b9-96c9-4531-9695-ab526b4d704a
-caps.latest.revision: 7
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: abec64433d10a23dca6186c6c9a553bbed12a017
-ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
+ms.openlocfilehash: ee53edafc94fd5efd4e412b1b9198a8763b79462
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/27/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="buffered-receive"></a>Arabelleğe alma
 Bu örnek, ayarlama ve Windows Workflow Foundation (WF) arabellekli alma özelliği yapılandırma gösterilmektedir. Arabelleğe alma iletilerin alındığını sırası hakkında endişelenmenize gerek olmadan bir iş akışı oluşturmak iş akışı Yazar verir. Arabellekli alma özelliği, yerel olarak iletileri arabelleğe alır ve iş akışı almaya hazır olduğunda bunları sunar.  
@@ -31,12 +19,12 @@ Bu örnek, ayarlama ve Windows Workflow Foundation (WF) arabellekli alma özelli
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  Bu dizin mevcut değilse, Git [Windows Communication Foundation (WCF) ve .NET Framework 4 için Windows Workflow Foundation (WF) örnek](http://go.microsoft.com/fwlink/?LinkId=150780) tüm indirmek için [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] ve [!INCLUDE[wf1](../../../../includes/wf1-md.md)] örnekleri. Bu örnek aşağıdaki dizinde bulunur.  
+>  Bu dizin mevcut değilse, Git [Windows Communication Foundation (WCF) ve .NET Framework 4 için Windows Workflow Foundation (WF) örnek](http://go.microsoft.com/fwlink/?LinkId=150780) tüm Windows Communication Foundation (WCF) indirmek için ve [!INCLUDE[wf1](../../../../includes/wf1-md.md)] örnekleri. Bu örnek aşağıdaki dizinde bulunur.  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WF\Basic\Services\BufferedReceive`  
   
 ## <a name="discussion"></a>Tartışma  
- Bu örnekte, bir [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] hizmeti kullanılarak gerçekleştirilir [!INCLUDE[wf1](../../../../includes/wf1-md.md)] ve bir dizi <xref:System.ServiceModel.Activities.Receive> etkinlikler. Bu iş akışını iş akışı bir kredi onaylanması için üç bildirimleri burada bekliyor basit kredi onay işlemi modeller. A [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] istemci uygulaması ne hizmet bekliyor ters sırada üç bağlantılı bildirim gönderir. Arabellekli alma özelliği hizmeti açık olduğu için her düzen dışı ileti hizmeti arabelleğe ve iş akışı, almaya hazır olduğunda işlenebilir.  
+ Bu örnekte, bir Windows Communication Foundation (WCF) hizmetini kullanılarak uygulanan [!INCLUDE[wf1](../../../../includes/wf1-md.md)] ve bir dizi <xref:System.ServiceModel.Activities.Receive> etkinlikler. Bu iş akışını iş akışı bir kredi onaylanması için üç bildirimleri burada bekliyor basit kredi onay işlemi modeller. Bir Windows Communication Foundation (WCF) istemci uygulaması ne hizmet bekliyor ters sırada üç bağlantılı bildirim gönderir. Arabellekli alma özelliği hizmeti açık olduğu için her düzen dışı ileti hizmeti arabelleğe ve iş akışı, almaya hazır olduğunda işlenebilir.  
   
  Arabellekli alma özellik gerektirir <xref:System.ServiceModel.Activities.ReceiveContent> bağlama, bu nedenle hizmet Destek'ten kullanan <xref:System.ServiceModel.NetMsmqBinding>. Varsayılanların kullanıldığı şekilde özel yapılandırma bağlama için gereklidir.  
   
@@ -115,6 +103,6 @@ Bu örnek, ayarlama ve Windows Workflow Foundation (WF) arabellekli alma özelli
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  Bu dizin mevcut değilse, Git [Windows Communication Foundation (WCF) ve .NET Framework 4 için Windows Workflow Foundation (WF) örnek](http://go.microsoft.com/fwlink/?LinkId=150780) tüm indirmek için [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] ve [!INCLUDE[wf1](../../../../includes/wf1-md.md)] örnekleri. Bu örnek aşağıdaki dizinde bulunur.  
+>  Bu dizin mevcut değilse, Git [Windows Communication Foundation (WCF) ve .NET Framework 4 için Windows Workflow Foundation (WF) örnek](http://go.microsoft.com/fwlink/?LinkId=150780) tüm Windows Communication Foundation (WCF) indirmek için ve [!INCLUDE[wf1](../../../../includes/wf1-md.md)] örnekleri. Bu örnek aşağıdaki dizinde bulunur.  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WF\Basic\Services\BufferedReceive`

@@ -1,27 +1,15 @@
 ---
-title: "Güvenlik Duvarı Yönergeleri"
-ms.custom: 
+title: Güvenlik Duvarı Yönergeleri
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: a7dc429f-65ac-4faf-974a-77d5fb977fe1
-caps.latest.revision: "32"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 270df09f709dfdfeb78b9bd72bc3744c6614bc5e
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 7ae7adcb773167a6af190355dd595f0f063fedc8
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="firewall-instructions"></a>Güvenlik Duvarı Yönergeleri
-Birkaç bağlantı noktalarını etkinleştirmeniz gerekir ya da Güvenlik Duvarı'nda böylece programları [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] örnekleri işlev görebilir. Birçok örnekleri 8000-8003 aralığında bağlantı noktasını kullanarak iletişim kurmak ve 9000 bağlantı noktası. Güvenlik Duvarı varsayılan olarak açıktır ve bu bağlantı noktalarına erişimi engeller. Örnekler için Güvenlik Duvarı'nı etkinleştirmek için gereksinimler ve güvenlik ortamı bağlı olarak aşağıdaki yordamlardan birini tamamlayın:  
+Windows Communication Foundation (WCF) örnekleri çalışabilmesi için çeşitli Güvenlik Duvarı'nda Program veya bağlantı noktalarını etkinleştirmeniz gerekir. Birçok örnekleri 8000-8003 aralığında bağlantı noktasını kullanarak iletişim kurmak ve 9000 bağlantı noktası. Güvenlik Duvarı varsayılan olarak açıktır ve bu bağlantı noktalarına erişimi engeller. Örnekler için Güvenlik Duvarı'nı etkinleştirmek için gereksinimler ve güvenlik ortamı bağlı olarak aşağıdaki yordamlardan birini tamamlayın:  
   
 -   Seçenek 1: Etkileşimli olarak çalıştırırken örnekleri etkinleştirin. Güvenlik duvarı yapılandırmanızı hiçbir öncelikli değişiklik ve oluşturma ve çalıştırma örnekleri başlatmak için devam edin. Bir örneği çalıştırdığınızda, bir **Windows Güvenlik Uyarısı** iletişim kutusu görüntülenir. Örnek program söz konusu ardından etkileşimli olarak engeli listesine eklenebilir. Bu yordamı kullanarak, örnek yeniden başlatmanız gerekebilir.  
   

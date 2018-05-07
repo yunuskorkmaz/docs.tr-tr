@@ -1,32 +1,20 @@
 ---
-title: "Yazılan veri kümeleri sorgulama"
-ms.custom: 
+title: Yazılan veri kümeleri sorgulama
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-ado
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
 ms.assetid: ad712fa1-2baf-462a-b163-574cce6d376a
-caps.latest.revision: "2"
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
-ms.workload: dotnet
-ms.openlocfilehash: fff678a54416e72f4be8c3fdfdcacec5a7d90af7
-ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
+ms.openlocfilehash: 30a6512202615590a4b399b8ce7173b213a8873c
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="querying-typed-datasets"></a>Yazılan veri kümeleri sorgulama
 Varsa şeması <xref:System.Data.DataSet> bilinen uygulama tasarım zamanında yazılmış kullanmanızı öneririz <xref:System.Data.DataSet> kullanırken [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)]. Yazılmış bir <xref:System.Data.DataSet> türeyen bir sınıf bir <xref:System.Data.DataSet>. Bu nedenle, tüm yöntemleri, olayları ve özelliklerini devralır bir <xref:System.Data.DataSet>. Ayrıca, yazılı <xref:System.Data.DataSet> kesin türü belirtilmiş yöntemleri, olayları ve özellikleri sağlar. Bu, tablolar ve sütunlar adıyla koleksiyon tabanlı yöntemleri kullanmak yerine erişebileceğiniz anlamına gelir. Bu sorgular daha basit ve daha okunabilir yapar. Daha fazla bilgi için bkz: [yazılan veri kümeleri](../../../../docs/framework/data/adonet/dataset-datatable-dataview/typed-datasets.md).  
   
- [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)]Ayrıca yazılmış sorgulama destekler <xref:System.Data.DataSet>. İle yazılmış bir <xref:System.Data.DataSet>, genel kullanmak zorunda değil <xref:System.Data.DataRowExtensions.Field%2A> yöntemi veya <xref:System.Data.DataRowExtensions.SetField%2A> yöntemi sütun verilere erişme.  Özellik adları kullanılabilir derleme zamanında tür bilgiler dahil edilir çünkü <xref:System.Data.DataSet>. [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)]böylece kodu yerine çalışma zamanında derlenen türü uyuşmazlığı hataları yakalanan sütun değerlerini erişim doğru türü olarak sağlar.  
+ [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)] Ayrıca yazılmış sorgulama destekler <xref:System.Data.DataSet>. İle yazılmış bir <xref:System.Data.DataSet>, genel kullanmak zorunda değil <xref:System.Data.DataRowExtensions.Field%2A> yöntemi veya <xref:System.Data.DataRowExtensions.SetField%2A> yöntemi sütun verilere erişme.  Özellik adları kullanılabilir derleme zamanında tür bilgiler dahil edilir çünkü <xref:System.Data.DataSet>. [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)] böylece kodu yerine çalışma zamanında derlenen türü uyuşmazlığı hataları yakalanan sütun değerlerini erişim doğru türü olarak sağlar.  
   
  Yazılmış bir sorgulama başlamadan önce <xref:System.Data.DataSet>, veri kümesi Tasarımcısı'nda kullanarak sınıfı oluşturmalıdır [!INCLUDE[vs_orcas_long](../../../../includes/vs-orcas-long-md.md)].  Daha fazla bilgi için bkz: [oluşturma ve veri kümelerini yapılandırma](/visualstudio/data-tools/create-and-configure-datasets-in-visual-studio).  
   

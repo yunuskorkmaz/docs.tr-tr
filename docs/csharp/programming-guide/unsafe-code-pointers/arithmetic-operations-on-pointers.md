@@ -1,24 +1,17 @@
 ---
 title: İşaretçilerde Aritmetik İşlemler (C# Programlama Kılavuzu)
 ms.date: 07/20/2015
-ms.prod: .net
-ms.technology:
-- devlang-csharp
-ms.topic: article
 helpviewer_keywords:
 - pointers [C#], arithmetic operations
 ms.assetid: d4f0b623-827e-45ce-8649-cfcebc8692aa
-caps.latest.revision: 18
-author: BillWagner
-ms.author: wiwagn
-ms.openlocfilehash: 54c439aab8b6cd34a796db8d31f9eabeefddf9f8
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: c40b125e42649093aa1f1fe860a3e8f5d2690359
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="arithmetic-operations-on-pointers-c-programming-guide"></a>İşaretçilerde Aritmetik İşlemler (C# Programlama Kılavuzu)
-Aritmetik işleçler kullanarak bu konuda ele alınmıştır `+` ve  **-**  işaretçileri yönlendirebilir.  
+Aritmetik işleçler kullanarak bu konuda ele alınmıştır `+` ve **-** işaretçileri yönlendirebilir.  
   
 > [!NOTE]
 >  Void işaretçileri hiçbir aritmetik işlemler gerçekleştirilemiyor.  
@@ -42,13 +35,13 @@ Aritmetik işleçler kullanarak bu konuda ele alınmıştır `+` ve  **-**  işa
  [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [C# programlama kılavuzu](../../../csharp/programming-guide/index.md)  
- [Güvenli olmayan kod ve işaretçiler](../../../csharp/programming-guide/unsafe-code-pointers/index.md)  
- [İşaretçi ifadeleri](../../../csharp/programming-guide/unsafe-code-pointers/pointer-expressions.md)  
- [C# işleçleri](../../../csharp/language-reference/operators/index.md)  
- [İşaretçileri işleme](../../../csharp/programming-guide/unsafe-code-pointers/manipulating-pointers.md)  
+ [C# Programlama Kılavuzu](../../../csharp/programming-guide/index.md)  
+ [Güvenli Olmayan Kod ve İşaretçiler](../../../csharp/programming-guide/unsafe-code-pointers/index.md)  
+ [İşaretçi İfadeleri](../../../csharp/programming-guide/unsafe-code-pointers/pointer-expressions.md)  
+ [C# İşleçleri](../../../csharp/language-reference/operators/index.md)  
+ [İşaretçileri İşleme](../../../csharp/programming-guide/unsafe-code-pointers/manipulating-pointers.md)  
  [İşaretçi türleri](../../../csharp/programming-guide/unsafe-code-pointers/pointer-types.md)  
  [Türler](../../../csharp/language-reference/keywords/types.md)  
- [güvenli olmayan](../../../csharp/language-reference/keywords/unsafe.md)  
- [fixed deyimi](../../../csharp/language-reference/keywords/fixed-statement.md)  
+ [unsafe](../../../csharp/language-reference/keywords/unsafe.md)  
+ [fixed Deyimi](../../../csharp/language-reference/keywords/fixed-statement.md)  
  [stackalloc](../../../csharp/language-reference/keywords/stackalloc.md)

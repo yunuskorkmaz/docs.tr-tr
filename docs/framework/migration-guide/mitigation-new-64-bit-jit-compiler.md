@@ -1,30 +1,18 @@
 ---
 title: 'Azaltma: Yeni 64-bit JIT derleme'
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-bcl
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - JIT compiler, 64-bit
 - JIT compilation, 64-bit
 - RyuJIT compiler
 ms.assetid: 0332dabc-72c5-4bdc-8975-20d717802b17
-caps.latest.revision: "6"
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 1ea1f5a832e2db63590fe5cbc3425078e17d3825
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 4edce9558cdbdd5937aa12866077210a91ee8494
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="mitigation-new-64-bit-jit-compiler"></a>Azaltma: Yeni 64-bit JIT derleme
 .NET Framework 4.6 ile başlayarak, çalışma zamanı tam zamanında derleme için yeni bir 64-bit JIT Derleyici içerir. Bu değişiklik, 32-bit JIT derleyicisi ile derleme etkilemez.  

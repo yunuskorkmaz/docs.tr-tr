@@ -1,20 +1,13 @@
 ---
 title: Docker içinde - C# barındırılan mikro
 description: ASP.NET Docker kapsayıcılarında çalıştırmak Çekirdek Hizmetleri oluşturmayı öğrenin
-keywords: .NET, .NET Core, Docker, C#, ASP.NET, Microservice
-author: BillWagner
-ms.author: wiwagn
 ms.date: 02/03/2017
-ms.topic: article
-ms.prod: .net-core
-ms.technology: dotnet-docker
-ms.devlang: csharp
 ms.assetid: 87e93838-a363-4813-b859-7356023d98ed
-ms.openlocfilehash: 253b622618ef62c28ac13a287c34b9d9049dd066
-ms.sourcegitcommit: b750a8e3979749b214e7e10c82efb0a0524dfcb1
+ms.openlocfilehash: eacfa87e465e5f7737dbd2bfc4c6a77ffc5531c3
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/09/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="microservices-hosted-in-docker"></a>Docker içinde barındırılan mikro
 
@@ -71,9 +64,9 @@ Bu komutun ne tür bir uygulama oluşturmak istediğiniz seçmenizi ister. Bu mi
 * ASP.NET Core uygulamaları için özelleştirilmiş bir .gitignore.
 * Haline dosya. Bu uygulamanın temel içerir.
 * Program.cs dosyasının. Bu uygulama giriş noktasını içerir.
-* A WeatherMicroservice.csproj file. Bu uygulama için yapı dosyasıdır.
-* A Dockerfile. Bu komut, uygulama için bir Docker görüntü oluşturur.
-* A README.md. Bu, diğer ASP.NET Core kaynaklarına bağlantılar içerir.
+* Bir WeatherMicroservice.csproj dosyası. Bu uygulama için yapı dosyasıdır.
+* Bir Dockerfile. Bu komut, uygulama için bir Docker görüntü oluşturur.
+* Bir README.md. Bu, diğer ASP.NET Core kaynaklarına bağlantılar içerir.
 * Bir web.config dosyası. Bu, temel yapılandırma bilgilerini içerir.
 * Bir runtimeconfig.template.json dosyası. IDE tarafından kullanılan hata ayıklama ayarları içerir.
 

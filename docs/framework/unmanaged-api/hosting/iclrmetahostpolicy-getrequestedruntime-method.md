@@ -1,14 +1,6 @@
 ---
 title: ICLRMetaHostPolicy::GetRequestedRuntime Metodu
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: reference
 api_name:
 - ICLRMetaHostPolicy.GetRequestedRuntime
 api_location:
@@ -23,17 +15,13 @@ helpviewer_keywords:
 ms.assetid: 59ec1832-9cc1-4b5c-983d-03407e51de56
 topic_type:
 - apiref
-caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 0501e104b2ed74656de125e668b7234efcbc9997
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: e01affb5edb8b0766edf8548ae34cf8220bcc62d
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="iclrmetahostpolicygetrequestedruntime-method"></a>ICLRMetaHostPolicy::GetRequestedRuntime Metodu
 Ortak dil çalışma zamanı (CLR) tercih edilen bir sürümünü barındırma İlkesi, yönetilen derleme, sürüm dizesi ve yapılandırma akış temel alan bir arabirim sağlar. Bu yöntem gerçekten yüklemek veya yalnızca verir ancak CLR etkinleştirme [Iclrruntimeınfo](../../../../docs/framework/unmanaged-api/hosting/iclrruntimeinfo-interface.md) İlkesi sonucu temsil eden arabirim. Bu yöntem yerini [Getrequestedruntimeınfo](../../../../docs/framework/unmanaged-api/hosting/getrequestedruntimeinfo-function.md), [GetRequestedRuntimeVersion](../../../../docs/framework/unmanaged-api/hosting/getrequestedruntimeversion-function.md), [CorBindToRuntimeHost](../../../../docs/framework/unmanaged-api/hosting/corbindtoruntimehost-function.md), [CorBindToRuntimeByCfg](../../../../docs/framework/unmanaged-api/hosting/corbindtoruntimebycfg-function.md), ve [GetCORRequiredVersion](../../../../docs/framework/unmanaged-api/hosting/getcorrequiredversion-function.md) yöntemleri.  
@@ -72,11 +60,11 @@ HRESULT GetRequestedRuntime(
 ## <a name="remarks"></a>Açıklamalar  
  Bu yöntem başarılı olduğunda içinde yapılandırma akışında bir veya daha fazla aşağıdaki öğeleri yok ve yalnızca, bu ek bayrakları geçerli varsayılan başlangıç bayrağı döndürülen çalışma zamanı arabiriminin ile birleştirme yan etkisi vardır `<configuration><runtime>` Bölüm:  
   
--   `<gcServer enabled="true"/>`neden `STARTUP_SERVER_GC` ayarlanmalıdır.  
+-   `<gcServer enabled="true"/>` neden `STARTUP_SERVER_GC` ayarlanmalıdır.  
   
--   `<etwEnable enabled="true"/>`neden `STARTUP_ETW` ayarlanmalıdır.  
+-   `<etwEnable enabled="true"/>` neden `STARTUP_ETW` ayarlanmalıdır.  
   
--   `<appDomainResourceMonitoring enabled="true"/>`neden `STARTUP_ARM` ayarlanmalıdır.  
+-   `<appDomainResourceMonitoring enabled="true"/>` neden `STARTUP_ARM` ayarlanmalıdır.  
   
  Sonuçta elde edilen varsayılan `STARTUP_FLAGS` varsayılan başlangıç bayraklarla yukarıdaki listede kümeden değerlerin Bitsel veya birleşimi bir değerdir.  
   
@@ -86,10 +74,10 @@ HRESULT GetRequestedRuntime(
 |HRESULT|Açıklama|  
 |-------------|-----------------|  
 |S_OK|Yöntem başarıyla tamamlandı.|  
-|E_POINTER|`pwzVersion`NULL olmayan ve `pcchVersion` null.<br /><br /> veya<br /><br /> `pwzImageVersion`NULL olmayan ve `pcchImageVersion` null.|  
-|E_INVALIDARG|`dwPolicyFlags`belirtmediği `METAHOST_POLICY_HIGHCOMPAT`.|  
-|ERROR_INSUFFICIENT_BUFFER|Bellek tahsis `pwzVerison` yeterli değildir.<br /><br /> veya<br /><br /> Bellek tahsis `pwzImageVerison` yeterli değildir.|  
-|CLR_E_SHIM_RUNTIMELOAD|`dwPolicyFlags`METAHOST_POLICY_APPLY_UPGRADE_POLICY ve her ikisi de içeren `pwzVersion` ve `pcchVersion` null.|  
+|E_POINTER|`pwzVersion` NULL olmayan ve `pcchVersion` null.<br /><br /> -veya-<br /><br /> `pwzImageVersion` NULL olmayan ve `pcchImageVersion` null.|  
+|E_INVALIDARG|`dwPolicyFlags` belirtmediği `METAHOST_POLICY_HIGHCOMPAT`.|  
+|ERROR_INSUFFICIENT_BUFFER|Bellek tahsis `pwzVerison` yeterli değildir.<br /><br /> -veya-<br /><br /> Bellek tahsis `pwzImageVerison` yeterli değildir.|  
+|CLR_E_SHIM_RUNTIMELOAD|`dwPolicyFlags` METAHOST_POLICY_APPLY_UPGRADE_POLICY ve her ikisi de içeren `pwzVersion` ve `pcchVersion` null.|  
   
 ## <a name="requirements"></a>Gereksinimler  
  **Platformlar:** bkz [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
@@ -98,7 +86,7 @@ HRESULT GetRequestedRuntime(
   
  **Kitaplığı:** bir kaynak olarak MSCorEE.dll dahil  
   
- **.NET framework sürümleri:**[!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
+ **.NET framework sürümleri:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
  [ICLRMetaHostPolicy Arabirimi](../../../../docs/framework/unmanaged-api/hosting/iclrmetahostpolicy-interface.md)  

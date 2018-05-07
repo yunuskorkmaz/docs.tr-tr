@@ -1,13 +1,6 @@
 ---
 title: Dinleyiciler (WCF Veri Hizmetleri)
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework-oob
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -15,19 +8,14 @@ helpviewer_keywords:
 - WCF Data Services, customizing
 - query interceptors [WCF Data Services]
 ms.assetid: e33ae8dc-8069-41d0-99a0-75ff28db7050
-caps.latest.revision: "2"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 8c72d4ba56859e0afec4b26d7ce81668b443a4ba
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: f3ff08dd4cd20e7ce226750a386cfddb27731923
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="interceptors-wcf-data-services"></a>Dinleyiciler (WCF Veri Hizmetleri)
-[!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)]bir uygulama için bir işlem Özel mantık ekleyebilmeleri istek iletilerini müdahale sağlar. Gelen iletilere verileri doğrulamak için bu özel mantık kullanabilirsiniz. Daha fazla kapsamı bir sorgu isteği gibi bir istek başına temelinde özel yetkilendirme ilkesi eklemek için kısıtlamak için de kullanabilirsiniz.  
+[!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] bir uygulama için bir işlem Özel mantık ekleyebilmeleri istek iletilerini müdahale sağlar. Gelen iletilere verileri doğrulamak için bu özel mantık kullanabilirsiniz. Daha fazla kapsamı bir sorgu isteği gibi bir istek başına temelinde özel yetkilendirme ilkesi eklemek için kısıtlamak için de kullanabilirsiniz.  
   
  Kişiler tarafından ele özel öznitelikli yöntemlerinde veri hizmeti tarafından gerçekleştirilir. Bu yöntemleri tarafından çağrılır [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] ileti işleme uygun noktasında. Tek başına varlık kümesi temelinde dinleyiciler tanımlanır ve hizmet işlemleri gibi dinleyiciyi yöntemleri İstek parametreleri kabul edemez. Bir HTTP GET isteği işlerken, sorgu dinleyiciyi yöntemleri, sorgu sonuçları tarafından ayarlanan dinleyiciyi'nın varlık örneği olup olmadığını belirleyen bir lambda ifadesi döndürülmelidir döndürmesi gerekir. Bu ifade, istenen işlem daha fazla daraltmak için veri hizmeti tarafından kullanılır. Aşağıda bir örnek sorgu dinleyiciyi tanımıdır.  
   

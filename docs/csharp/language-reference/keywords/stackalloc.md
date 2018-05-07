@@ -1,22 +1,16 @@
 ---
 title: stackalloc (C# Başvurusu)
 ms.date: 04/12/2018
-ms.prod: .net
-ms.technology:
-- devlang-csharp
-ms.topic: article
 f1_keywords:
 - stackalloc_CSharpKeyword
 - stackalloc
 helpviewer_keywords:
 - stackalloc keyword [C#]
-author: BillWagner
-ms.author: wiwagn
-ms.openlocfilehash: c4cde254bb6a5601d10619c4a3bd2f00f1f146d3
-ms.sourcegitcommit: 9a4fe1a1c37b26532654b4bbe22d702237950009
+ms.openlocfilehash: 905873cf7f576ff35a9bc1c182ce7ebe17920288
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="stackalloc-c-reference"></a>stackalloc (C# Başvurusu)
 `stackalloc` Anahtar sözcüğü bir güvenli olmayan kod bağlamında kullanılan yığında bir bellek bloğu ayrılamadı.
@@ -67,7 +61,7 @@ Güvenli olmayan kod güvenli alternatifler daha az güvenlidir. Ancak, kullanı
 ## <a name="c-language-specification"></a>C# Dil Belirtimi
  [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]
 
-## <a name="see-also"></a>Ayrıca bkz.
+## <a name="see-also"></a>Ayrıca Bkz.
  [C# başvurusu](../../../csharp/language-reference/index.md)  
  [C# Programlama Kılavuzu](../../../csharp/programming-guide/index.md)  
  [C# Anahtar Sözcükleri](../../../csharp/language-reference/keywords/index.md)  

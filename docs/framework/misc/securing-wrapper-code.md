@@ -1,29 +1,19 @@
 ---
-title: "Sarmalayıcı Kodunun Güvenliğini Sağlama"
-ms.custom: 
+title: Sarmalayıcı Kodunun Güvenliğini Sağlama
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - security [.NET Framework], wrapper code
 - wrapper code, securing
 - secure coding, wrapper code
 - code security, wrapper code
 ms.assetid: 1df6c516-5bba-48bd-b450-1070e04b7389
-caps.latest.revision: "11"
 author: mairaw
 ms.author: mairaw
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 5e29a2bdd0bfa338d0266c0841e11aa2ac366529
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: ac278a4a3b06e0611e1cf57d079516a1dccf606b
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="securing-wrapper-code"></a>Sarmalayıcı Kodunun Güvenliğini Sağlama
 [!INCLUDE[net_security_note](../../../includes/net-security-note-md.md)]  
@@ -80,7 +70,7 @@ ms.lasthandoff: 12/22/2017
   
  Bildirimsel güvenliği aşağıdaki güvenlik denetimlerini sunar:  
   
--   <xref:System.Security.Permissions.SecurityAction.Demand>kod erişim güvenliği yığın ilerlemesi belirtir. Yığında tüm arayanlar belirtilen izni veya kimlik geçirmek için olması gerekir. **İsteğe bağlı** yığın farklı arayanlar içerebileceğinden her çağrıda oluşur. Sürekli bir yöntemini çağırırsanız, bu güvenlik denetimi her zaman oluşur. **İsteğe bağlı** saldırıları; luring karşı iyi korumadır üzerinden alınmaya çalışılırken yetkisiz kod algılandı.  
+-   <xref:System.Security.Permissions.SecurityAction.Demand> kod erişim güvenliği yığın ilerlemesi belirtir. Yığında tüm arayanlar belirtilen izni veya kimlik geçirmek için olması gerekir. **İsteğe bağlı** yığın farklı arayanlar içerebileceğinden her çağrıda oluşur. Sürekli bir yöntemini çağırırsanız, bu güvenlik denetimi her zaman oluşur. **İsteğe bağlı** saldırıları; luring karşı iyi korumadır üzerinden alınmaya çalışılırken yetkisiz kod algılandı.  
   
 -   [LinkDemand](../../../docs/framework/misc/link-demands.md) tam zamanında (JIT) derleme zamanında olur ve yalnızca ilk çağıran denetler. Bu güvenlik denetimini arayanın çağıran denetlemez. Bu onay geçirmeden sonra ek güvenlik yükü çağıran çağırabilirsiniz kaç kez olsun yoktur. Ancak, aynı zamanda saldırıları luring gelen koruması yoktur. İle **LinkDemand**, test geçirir ve kodunuzu başvurabilir herhangi bir kod olası güvenlik yetkili kod kullanarak çağırmak kötü amaçlı kod vererek bölünebilir. Bu nedenle, kullanmayın **LinkDemand** sürece tüm olası zayıf baştan sona önlenebilir.  
   

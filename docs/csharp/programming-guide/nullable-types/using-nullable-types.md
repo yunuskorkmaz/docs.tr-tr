@@ -1,32 +1,25 @@
 ---
-title: "Boş Değer Atanabilir Türleri Kullanma (C# Programlama Kılavuzu)"
+title: Boş Değer Atanabilir Türleri Kullanma (C# Programlama Kılavuzu)
 ms.date: 07/20/2015
-ms.prod: .net
-ms.technology:
-- devlang-csharp
-ms.topic: article
 helpviewer_keywords:
 - nullable types [C#], about nullable types
 ms.assetid: 0bacbe72-ce15-4b14-83e1-9c14e6380c28
-caps.latest.revision: 
-author: BillWagner
-ms.author: wiwagn
-ms.openlocfilehash: c8a42392bbcd2e53c54ff4c13bf98c048262ae4d
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: d2fe0f34c45d3de0516a71ca5ed4dc807df4bf93
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="using-nullable-types-c-programming-guide"></a>Boş Değer Atanabilir Türleri Kullanma (C# Programlama Kılavuzu)
 Boş değer atanabilir türleri bir temel alınan tür ve ek bir tüm değerleri temsil eden [null](../../../csharp/language-reference/keywords/null.md) değeri. Boş değer atanabilir türler iki yoldan biriyle bildirilir:  
   
  `System.Nullable<T> variable`  
   
- veya  
+ -veya-  
   
  `T? variable`  
   
- `T`boş değer atanabilir tür temel türde değil. `T`olması dahil herhangi bir değer türü `struct`; bir başvuru türü olamaz.  
+ `T` boş değer atanabilir tür temel türde değil. `T` olması dahil herhangi bir değer türü `struct`; bir başvuru türü olamaz.  
   
  Boş değer atanabilir bir tür kullandığınızda, bir örnek için nasıl sıradan bir Boolean değişken iki değerlere sahip olabilir göz önünde bulundurun: true ve false. "Tanımsız" belirten değer yoktur. Birçok programlama uygulamalarda değişkenleri tanımlanmamış bir durumda oluşabilir etkileşimleri, özellikle veritabanı. Örneğin, bir veritabanında bir alan true veya false değerleri içerebilir, ancak hiçbir değer hiç ayrıca içerebilir. Başvuru türleri benzer şekilde, ayarlanabilir `null` bunlar başlatılmaz belirtmek için.  
   
@@ -42,11 +35,11 @@ Boş değer atanabilir türleri bir temel alınan tür ve ek bir tüm değerleri
   
 -   `HasValue`  
   
-     `HasValue`tür `bool`. Ayarlanır `true` değişkeni boş olmayan bir değer içerdiğinde.  
+     `HasValue` tür `bool`. Ayarlanır `true` değişkeni boş olmayan bir değer içerdiğinde.  
   
 -   `Value`  
   
-     `Value`temel alınan türü olarak aynı türde değil. Varsa `HasValue` olan `true`, `Value` anlamlı bir değer içeriyor. Varsa `HasValue` olan `false`, erişilirken `Value` özel durum oluşturacak bir <xref:System.InvalidOperationException>.  
+     `Value` temel alınan türü olarak aynı türde değil. Varsa `HasValue` olan `true`, `Value` anlamlı bir değer içeriyor. Varsa `HasValue` olan `false`, erişilirken `Value` özel durum oluşturacak bir <xref:System.InvalidOperationException>.  
   
  Bu örnekte, `HasValue` üye değişkeni bir değeri içerip görüntülenecek denemeden önce test etmek için kullanılır.  
   
@@ -103,7 +96,7 @@ Boş değer atanabilir türleri bir temel alınan tür ve ek bir tüm değerleri
   
  Bu işleçlere sonuçları aşağıdaki tabloda listelenmiştir:  
   
-|X|y|x ve y|x &#124; y|  
+|X|y|x ve y|x&#124;y|  
 |-------|-------|---------|--------------|  
 |true|true|true|true|  
 |true|false|false|true|  
@@ -116,7 +109,7 @@ Boş değer atanabilir türleri bir temel alınan tür ve ek bir tüm değerleri
 |null|null|null|null|  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [C# programlama kılavuzu](../../../csharp/programming-guide/index.md)  
- [Boş değer atanabilir türler](../../../csharp/programming-guide/nullable-types/index.md)  
- [Boş değer atanabilir türleri kutulama](../../../csharp/programming-guide/nullable-types/boxing-nullable-types.md)  
- [Boş değer atanabilen değer türleri](../../../visual-basic/programming-guide/language-features/data-types/nullable-value-types.md)
+ [C# Programlama Kılavuzu](../../../csharp/programming-guide/index.md)  
+ [Boş Değer Atanabilir Tipler](../../../csharp/programming-guide/nullable-types/index.md)  
+ [Boş Değer Atanabilir Tipleri Kutulama](../../../csharp/programming-guide/nullable-types/boxing-nullable-types.md)  
+ [Boş Değer Atanabilen Değer Türleri](../../../visual-basic/programming-guide/language-features/data-types/nullable-value-types.md)

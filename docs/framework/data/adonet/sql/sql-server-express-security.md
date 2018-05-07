@@ -1,24 +1,12 @@
 ---
 title: SQL Server Express Security
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-ado
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: cf9cf6d9-4b05-43e9-ac7b-6cefbfcd6d4e
-caps.latest.revision: "6"
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
-ms.workload: dotnet
-ms.openlocfilehash: 6593e075d1a9d672f414cfa0cd8652f760b084e1
-ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
+ms.openlocfilehash: 7bc0fdf218f8fca1f904505c552df6986c47e4de
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="sql-server-express-security"></a>SQL Server Express Security
 Microsoft SQL Server Express Edition (SQL Server Express) Microsoft SQL Sunucusu'nu temel alır ve Veritabanı Altyapısı'nın özelliklerin çoğunu destekler. Böylece gereksiz özellikleri ve ağ bağlantısını varsayılan olarak kapalı olan tasarlanmıştır. Bu saldırı kötü niyetli bir kullanıcı tarafından kullanılabilir yüzey alanını azaltır.  
@@ -42,7 +30,7 @@ Microsoft SQL Server Express Edition (SQL Server Express) Microsoft SQL Sunucusu
   
 |||  
 |-|-|  
-|[SQL Server Books Online](http://msdn.microsoft.com/library/bb543165.aspx)|SQL Server Express için belgelerini içerir.|  
+|[SQL Server Çevrimiçi Kitapları](http://msdn.microsoft.com/library/bb543165.aspx)|SQL Server Express için belgelerini içerir.|  
 |[SQL Server Express'e bağlanma](http://msdn.microsoft.com/library/ms165679.aspx) SQL Server Çevrimiçi Kitapları'nda|Bir ağ üzerinde SQL Server Express Edition kullanmayı açıklar.|  
 |[Microsoft SQL Server 2005 Express Edition Çevrimiçi Kitapları](http://msdn.microsoft.com/library/ms165706.aspx)|SQL Server 2005 Express Edition için belgeleri tamamlayın.|  
 |[Yönetici olmayanlar için kullanıcı örnekleri](http://msdn.microsoft.com/library/ms143684.aspx) SQL Server Çevrimiçi Kitapları'nda|Kullanıcı örnekleri oluşturup açıklar.|  

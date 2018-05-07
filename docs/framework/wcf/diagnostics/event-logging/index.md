@@ -1,31 +1,17 @@
 ---
 title: WCF'de Etkinlikleri Günlüğe Kaydetme
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 helpviewer_keywords:
 - event logging [WCF]
 ms.assetid: aac0530d-f44c-45a1-bada-e30e0677b41f
-caps.latest.revision: 22
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 4028772caef8e5c0301ab3a6a0bde2f180d821ca
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
-ms.translationtype: MT
+ms.openlocfilehash: 78ad80188b8428bb718251045ef04ab803862a0f
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="event-logging-in-wcf"></a>WCF'de Etkinlikleri Günlüğe Kaydetme
-[!INCLUDE[indigo1](../../../../../includes/indigo1-md.md)]Windows Olay Günlüğü'nde iç olayları izler.  
+Windows Communication Foundation (WCF) Windows Olay Günlüğü'nde iç olayları izler.  
   
 ## <a name="viewing-event-logs"></a>Olay günlüklerini görüntüleme  
  Olay günlüğü varsayılan olarak otomatik olarak etkinleştirilir ve devre dışı bırakmak için bir mekanizma yoktur. Tarafından kaydedilen olayları [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)] Olay Görüntüleyicisi'ni kullanarak görüntülenebilir. Bu aracı başlatmak için tıklatın **Başlat**, tıklatın **Denetim Masası**, çift **Yönetimsel Araçlar**, çift tıklayın ve ardından **Olay Görüntüleyicisi'ni**.  

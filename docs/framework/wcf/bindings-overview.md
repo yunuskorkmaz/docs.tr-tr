@@ -1,31 +1,17 @@
 ---
 title: Windows Communication Foundation Bağlamaları Genel Bakış
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 helpviewer_keywords:
 - bindings [WCF], overview
 ms.assetid: cfb5842f-e0f9-4c56-a015-f2b33f258232
-caps.latest.revision: 16
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 58b3691c186dc6a33c94d9f8a1af96be488d67df
-ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
-ms.translationtype: MT
+ms.openlocfilehash: 38661c2ca0e3329f508e2740dfcdf69c0d5e4105
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/30/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="windows-communication-foundation-bindings-overview"></a>Windows Communication Foundation Bağlamaları Genel Bakış
-Bağlamaları değil uç noktasına bağlanmak için gereken iletişim ayrıntılarını belirtmek için kullanılan nesneleri bir [!INCLUDE[indigo1](../../../includes/indigo1-md.md)] hizmet. İçindeki her bir uç nokta bir [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] hizmet bağlama iyi belirtilen olmasını gerektirir. Bu konu bağlamaları tanımlamak, iletişim ayrıntılarını hangi bağlamaları içinde yer alan bir bağlama öğelerini türlerini özetler [!INCLUDE[indigo2](../../../includes/indigo2-md.md)], ve bir bağlama için bir uç nokta nasıl belirtilebilir.  
+Bağlamaları bir Windows Communication Foundation (WCF) Hizmeti uç noktasına bağlanmak için gereken iletişim ayrıntılarını belirtmek için kullanılan nesneleridir. İçindeki her bir uç nokta bir [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] hizmet bağlama iyi belirtilen olmasını gerektirir. Bu konu bağlamaları tanımlamak, iletişim ayrıntılarını hangi bağlamaları içinde yer alan bir bağlama öğelerini türlerini özetler [!INCLUDE[indigo2](../../../includes/indigo2-md.md)], ve bir bağlama için bir uç nokta nasıl belirtilebilir.  
   
 ## <a name="what-a-binding-defines"></a>Hangi bağlama tanımlar  
  Bağlama bilgileri çok basit ya da çok karmaşık olabilir. En temel bağlama bitiş noktasına bağlanmak için kullanılması gereken Aktarım Protokolü (HTTP gibi) belirtir. Daha fazla genel olarak, bir bağlama içeren bir uç noktasını bağlamak hakkında bilgi aşağıdaki kategoriden döner.  

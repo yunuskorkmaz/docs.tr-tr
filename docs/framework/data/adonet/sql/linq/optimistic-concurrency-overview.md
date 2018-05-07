@@ -1,27 +1,15 @@
 ---
-title: "İyimser eşzamanlılık: genel bakış"
-ms.custom: 
+title: 'İyimser eşzamanlılık: genel bakış'
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-ado
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: c2e38512-d0c8-4807-b30a-cb7e30338694
-caps.latest.revision: "2"
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
-ms.workload: dotnet
-ms.openlocfilehash: 616b035096dd636c65dba65bfe6b371db75bec8e
-ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
+ms.openlocfilehash: 5b4603526896364285cb3c85d12568ed9031ed47
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="optimistic-concurrency-overview"></a>İyimser eşzamanlılık: genel bakış
-[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]İyimser eşzamanlılık denetimini destekler. Aşağıdaki tabloda iyimser eşzamanlılık uygulamak terimler açıklanmıştır [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] belgeleri:  
+[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] İyimser eşzamanlılık denetimini destekler. Aşağıdaki tabloda iyimser eşzamanlılık uygulamak terimler açıklanmıştır [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] belgeleri:  
   
 |Koşulları|Açıklama|  
 |-----------|-----------------|  
@@ -29,7 +17,7 @@ ms.lasthandoff: 01/17/2018
 |Eşzamanlılık çakışması|İki veya daha fazla kullanıcı aynı anda bir veya daha fazla sütun satır için çakışan değerleri gönderme deneyin durum.|  
 |eşzamanlılık denetimi|Eşzamanlılık çakışmalarını çözmek için kullanılan yöntem.|  
 |İyimser eşzamanlılık denetimi|İlk gönderilecek değişiklikleri sorgulamasına önce diğer işlemleri bir satır değerleri değişip değişmediğini araştırır yöntemi.<br /><br /> İle karşılaştırın *eşzamanlılık denetim*, eşzamanlılık çakışmaları önlemek için kayıt kilitler.<br /><br /> *İyimser* denetim bir işlem başka bir işlemle tahmin edilemez olmalıdır engellemesini olasılığını algıladığından bu nedenle ifade.|  
-|çakışma çözümü|Veritabanını yeniden sorgulama ve farkları mutabık kılma çakışan öğe yenileme işlemi.<br /><br /> Bir nesne yenilendiğinde [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] değişikliği İzleyicisi aşağıdaki veriler tutar:<br /><br /> -İlk olarak veritabanından alınır ve güncelleştirme için kullanılan değerlerini denetleyin.<br />-Yeni veritabanı değerlerini kullanarak sonraki sorgu.<br /><br /> [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]ardından nesne (diğer bir deyişle, bir veya daha fazla üye değerlerinin değiştirilip) çakışma olup olmadığını belirler. Nesne, çakışma ise [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] sonraki çakışma üyeleri olan belirler.<br /><br /> Herhangi bir üyenin çakışma [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] bulur çakışma listesine eklenir.|  
+|çakışma çözümü|Veritabanını yeniden sorgulama ve farkları mutabık kılma çakışan öğe yenileme işlemi.<br /><br /> Bir nesne yenilendiğinde [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] değişikliği İzleyicisi aşağıdaki veriler tutar:<br /><br /> -İlk olarak veritabanından alınır ve güncelleştirme için kullanılan değerlerini denetleyin.<br />-Yeni veritabanı değerlerini kullanarak sonraki sorgu.<br /><br /> [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] ardından nesne (diğer bir deyişle, bir veya daha fazla üye değerlerinin değiştirilip) çakışma olup olmadığını belirler. Nesne, çakışma ise [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] sonraki çakışma üyeleri olan belirler.<br /><br /> Herhangi bir üyenin çakışma [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] bulur çakışma listesine eklenir.|  
   
  İçinde [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] nesne modeli, bir *iyimser eşzamanlılık çakışması* aşağıdaki koşulların her ikisi de doğruysa oluşur:  
   

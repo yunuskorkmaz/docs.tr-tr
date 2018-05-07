@@ -1,28 +1,14 @@
 ---
-title: "WPF 3B Performansını En Üst Düzeye Çıkarma"
-ms.custom: 
+title: WPF 3B Performansını En Üst Düzeye Çıkarma
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-wpf
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - 3-D graphics [WPF]
 ms.assetid: 4bcf949d-d92f-4d8d-8a9b-1e4c61b25bf6
-caps.latest.revision: 
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 45053762a4782544531a09c92531b26f99663016
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 6677ee3a6d17ea38636d49327d7af22b53bc900e
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="maximize-wpf-3d-performance"></a>WPF 3B Performansını En Üst Düzeye Çıkarma
 Kullandığınız gibi [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 3B denetimleri oluşturmak ve 3B Sahne uygulamalarınızda dahil etmek için performans en iyi duruma getirme göz önünde bulundurmanız önemlidir. Bu konu, 3B sınıfları ve performans etkileri birlikte kullanıldıklarında performansını iyileştirmek için önerilerini uygulamanız için sahip özellikler listesini sağlar.  
@@ -33,15 +19,15 @@ Kullandığınız gibi [!INCLUDE[TLA#tla_winclient](../../../../includes/tlashar
   
 |Özellik|Öneri|  
 |-|-|  
-|<xref:System.Windows.Media.Brush>|Fırça hızı (yavaş için hızlı):<br /><br /> <xref:System.Windows.Media.SolidColorBrush><br /><br /> <xref:System.Windows.Media.LinearGradientBrush><br /><br /> <xref:System.Windows.Media.ImageBrush><br /><br /> <xref:System.Windows.Media.DrawingBrush>(önbelleğe alınmış)<br /><br /> <xref:System.Windows.Media.VisualBrush>(önbelleğe alınmış)<br /><br /> <xref:System.Windows.Media.RadialGradientBrush><br /><br /> <xref:System.Windows.Media.DrawingBrush>(önbelleğe alınmamış)<br /><br /> <xref:System.Windows.Media.VisualBrush>(önbelleğe alınmamış)|  
-|<xref:System.Windows.UIElement.ClipToBoundsProperty>|Ayarlama `Viewport3D.ClipToBounds` olması gerekmez olduğunca false [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] açıkça içeriğini küçük bir <xref:System.Windows.Controls.Viewport3D> Viewport3D'ın dikdörtgen için. [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]antialiased kırpma çok yavaş olabilir ve `ClipToBounds` (yavaş) varsayılan olarak etkin <xref:System.Windows.Controls.Viewport3D>.|  
-|<xref:System.Windows.UIElement.IsHitTestVisible%2A>|Ayarlama `Viewport3D.IsHitTestVisible` yüklemeniz gerekmez olduğunca false [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] içeriğini dikkate alınması gereken bir <xref:System.Windows.Controls.Viewport3D> zaman gerçekleştirme Fare isabet testi.  İsabet testi 3D içerik yazılımda yapılır ve büyük kafesleri yavaş olabilir. <xref:System.Windows.UIElement.IsHitTestVisible%2A>(yavaş) varsayılan olarak etkin <xref:System.Windows.Controls.Viewport3D>.|  
+|<xref:System.Windows.Media.Brush>|Fırça hızı (yavaş için hızlı):<br /><br /> <xref:System.Windows.Media.SolidColorBrush><br /><br /> <xref:System.Windows.Media.LinearGradientBrush><br /><br /> <xref:System.Windows.Media.ImageBrush><br /><br /> <xref:System.Windows.Media.DrawingBrush> (önbelleğe alınmış)<br /><br /> <xref:System.Windows.Media.VisualBrush> (önbelleğe alınmış)<br /><br /> <xref:System.Windows.Media.RadialGradientBrush><br /><br /> <xref:System.Windows.Media.DrawingBrush> (önbelleğe alınmamış)<br /><br /> <xref:System.Windows.Media.VisualBrush> (önbelleğe alınmamış)|  
+|<xref:System.Windows.UIElement.ClipToBoundsProperty>|Ayarlama `Viewport3D.ClipToBounds` olması gerekmez olduğunca false [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] açıkça içeriğini küçük bir <xref:System.Windows.Controls.Viewport3D> Viewport3D'ın dikdörtgen için. [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] antialiased kırpma çok yavaş olabilir ve `ClipToBounds` (yavaş) varsayılan olarak etkin <xref:System.Windows.Controls.Viewport3D>.|  
+|<xref:System.Windows.UIElement.IsHitTestVisible%2A>|Ayarlama `Viewport3D.IsHitTestVisible` yüklemeniz gerekmez olduğunca false [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] içeriğini dikkate alınması gereken bir <xref:System.Windows.Controls.Viewport3D> zaman gerçekleştirme Fare isabet testi.  İsabet testi 3D içerik yazılımda yapılır ve büyük kafesleri yavaş olabilir. <xref:System.Windows.UIElement.IsHitTestVisible%2A> (yavaş) varsayılan olarak etkin <xref:System.Windows.Controls.Viewport3D>.|  
 |<xref:System.Windows.Media.Media3D.GeometryModel3D>|Yalnızca bunlar farklı malzeme ya da dönüşümler gerektirdiğinde farklı modelleri oluşturun.  Aksi takdirde, birçok birleşim çalıştığınızda <xref:System.Windows.Media.Media3D.GeometryModel3D> aynı malzemeler ve dönüşümler örnekleriyle birkaç büyük içine <xref:System.Windows.Media.Media3D.GeometryModel3D> ve <xref:System.Windows.Media.Media3D.MeshGeometry3D> örnekleri.|  
 |<xref:System.Windows.Media.Media3D.MeshGeometry3D>|Animasyon kafes — çerçeve başına temelinde kafes tek tek köşe değiştirme — her zaman içinde etkin değilse [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)].  Her köşe değiştirildiğinde değişiklik bildirimleri performans etkisini en aza indirmek için köşe başına değişiklik yapmadan önce görsel ağaç kafes kullanımdan çıkarın.  Mesh değiştirilmiş sonra görsel ağacına yeniden bağlayın.  Ayrıca, bu şekilde animasyonlu kafesleri boyutunu küçültmeyi deneyin.|  
 |3B düzgünleştirme|İşleme hızını artırmak için düzgünleştirmek çoklu örnekleme devre dışı bir <xref:System.Windows.Controls.Viewport3D> ekli özellik ayarlayarak <xref:System.Windows.Media.RenderOptions.EdgeMode%2A> için `Aliased`.  Varsayılan olarak, 3B düzgünleştirme devre dışı bırakıldı [!INCLUDE[TLA#tla_winxp](../../../../includes/tlasharptla-winxp-md.md)] ve etkin [!INCLUDE[TLA#tla_longhorn](../../../../includes/tlasharptla-longhorn-md.md)] piksel başına 4 örnekleri ile.|  
 |Metin|3B Sahne metin Canlı (olduğu için Canlı bir <xref:System.Windows.Media.DrawingBrush> veya <xref:System.Windows.Media.VisualBrush>) yavaş olabilir. Metin görüntülerini kullanmayı deneyin (aracılığıyla <xref:System.Windows.Media.Imaging.RenderTargetBitmap>) sürece metin değişir.|  
 |<xref:System.Windows.Media.TileBrush>|Kullanmanız gerekiyorsa bir <xref:System.Windows.Media.VisualBrush> veya <xref:System.Windows.Media.DrawingBrush> fırça içeriği statik olduğundan, 3B Sahne fırça önbelleğe almayı deneyin (ekli özellik ayarı <xref:System.Windows.Media.RenderOptions.CachingHint%2A> için `Cache`).  Minimum ve maksimum ölçek geçersiz kılma eşikleri ayarlayın (ekli özellikler ile <xref:System.Windows.Media.RenderOptions.CacheInvalidationThresholdMinimum%2A> ve <xref:System.Windows.Media.RenderOptions.CacheInvalidationThresholdMaximum%2A>) böylece önbelleğe alınmış Fırçalar çok sık istenen, kalite düzeyini hala koruyarak yeniden olmaz.  Varsayılan olarak, <xref:System.Windows.Media.DrawingBrush> ve <xref:System.Windows.Media.VisualBrush> , her zaman bir şey fırça ile boyandığında yeniden oluşturulmuş olması gerekir, fırça tüm içeriğini ilk ara yüzeye yeniden oluşturulması gerekir, yani önbelleğe alınmaz.|  
-|<xref:System.Windows.Media.Effects.BitmapEffect>|<xref:System.Windows.Media.Effects.BitmapEffect>donanım hızlandırma işlenmek üzere tüm etkilenen içeriği zorlar.  En iyi performans için kullanmayın <xref:System.Windows.Media.Effects.BitmapEffect>.|  
+|<xref:System.Windows.Media.Effects.BitmapEffect>|<xref:System.Windows.Media.Effects.BitmapEffect> donanım hızlandırma işlenmek üzere tüm etkilenen içeriği zorlar.  En iyi performans için kullanmayın <xref:System.Windows.Media.Effects.BitmapEffect>.|  
   
 ## <a name="performance-impact-medium"></a>Performans etkisi: Orta  
   
@@ -58,7 +44,7 @@ Kullandığınız gibi [!INCLUDE[TLA#tla_winclient](../../../../includes/tlashar
 |<xref:System.Windows.Media.Media3D.Light>|Hafif hızı (yavaş için hızlı):<br /><br /> <xref:System.Windows.Media.Media3D.AmbientLight><br /><br /> <xref:System.Windows.Media.Media3D.DirectionalLight><br /><br /> <xref:System.Windows.Media.Media3D.PointLight><br /><br /> <xref:System.Windows.Media.Media3D.SpotLight>|  
 |<xref:System.Windows.Media.Media3D.MeshGeometry3D>|Bu sınırlar kafes boyutları tutmaya çalışın:<br /><br /> <xref:System.Windows.Media.Media3D.MeshGeometry3D.Positions%2A>: 20,001 <xref:System.Windows.Media.Media3D.Point3D> örnekleri<br /><br /> <xref:System.Windows.Media.Media3D.MeshGeometry3D.TriangleIndices%2A>: 60,003 <xref:System.Int32> örnekleri|  
 |<xref:System.Windows.Media.Media3D.Material>|Malzeme hızı (yavaş için hızlı):<br /><br /> <xref:System.Windows.Media.Media3D.EmissiveMaterial><br /><br /> <xref:System.Windows.Media.Media3D.DiffuseMaterial><br /><br /> <xref:System.Windows.Media.Media3D.SpecularMaterial>|  
-|<xref:System.Windows.Media.Brush>|[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]3B görünmez Fırçalar dışında (siyah ortam Fırçalar, Temizle Fırçalar, vb.) tutarlı bir şekilde kabul etmez.  Bu, Sahne atlama göz önünde bulundurun.|  
+|<xref:System.Windows.Media.Brush>|[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 3B görünmez Fırçalar dışında (siyah ortam Fırçalar, Temizle Fırçalar, vb.) tutarlı bir şekilde kabul etmez.  Bu, Sahne atlama göz önünde bulundurun.|  
 |<xref:System.Windows.Media.Media3D.MaterialGroup>|Her <xref:System.Windows.Media.Media3D.Material> içinde bir <xref:System.Windows.Media.Media3D.MaterialGroup> kadar birçok malzemeleri dahil olmak üzere başka bir işleme geçişini neden bile basit malzemeler, dolgu taleplerine, GPU göre önemli ölçüde artırabilir.  İçinde malzemeleri sayısını en aza indirmek için <xref:System.Windows.Media.Media3D.MaterialGroup>.|  
   
 ## <a name="performance-impact-low"></a>Performans etkisi: düşük  

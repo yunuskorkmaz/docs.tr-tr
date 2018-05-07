@@ -1,32 +1,18 @@
 ---
-title: "Nasıl yapılır: Bir Windows Communication Foundation İstemcisi Oluşturma"
-ms.custom: 
+title: 'Nasıl yapılır: Bir Windows Communication Foundation İstemcisi Oluşturma'
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - clients [WCF], running
 - WCF clients [WCF], running
 ms.assetid: a67884cc-1c4b-416b-8c96-5c954099f19f
-caps.latest.revision: 
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 2591cad6354ec40f1fb6ead265c84a67adf3eec8
-ms.sourcegitcommit: 15316053918995cc1380163a7d7e7edd5c44e6d7
-ms.translationtype: MT
+ms.openlocfilehash: 962f1255f3c759d623850678005eff138353cc80
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/19/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-create-a-windows-communication-foundation-client"></a>Nasıl yapılır: Bir Windows Communication Foundation İstemcisi Oluşturma
-Bu dördüncü altı görev oluşturmak için gerekli olan bir [!INCLUDE[indigo1](../../../includes/indigo1-md.md)] uygulama. Tüm altı görevlerinin genel bakış için bkz: [başlangıç Öğreticisi](../../../docs/framework/wcf/getting-started-tutorial.md) konu.  
+Bir Windows Communication Foundation (WCF) uygulaması oluşturmak için gereken altı görevleri dördüncü budur. Tüm altı görevlerinin genel bakış için bkz: [başlangıç Öğreticisi](../../../docs/framework/wcf/getting-started-tutorial.md) konu.  
   
  Bu konu, meta verilerini almak açıklar bir [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] oluşturmak için kullanın ve hizmeti bir [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] hizmete erişim proxy. Bu görev, Visual Studio tarafından sağlanan hizmet Başvurusu Ekle işlevini kullanarak tamamlanır. Bu araç hizmetin MEX uç noktasından meta verileri alır ve yönetilen kaynak kodu dosyasının oluşturur istemci proxy dilinde (C# varsayılan olarak) seçtiniz. İstemci proxy oluşturma, yanı sıra aracı ayrıca oluşturur veya kendi uç noktaları birinde hizmetine bağlanmak için istemci uygulaması sağlayan istemci yapılandırma dosyası güncelleştirir.  
   
@@ -48,7 +34,7 @@ Bu dördüncü altı görev oluşturmak için gerekli olan bir [!INCLUDE[indigo1
   
 3.  System.ServiceModel başvuru GettingStartedClient projeye sağ tıklayarak ekleyin **başvuru** klasörü altında Çözüm Gezgini'nde ve select GettingStartedClient proje **Ekle** Başvuru. İçinde **Başvuru Ekle** iletişim kutusunda **Framework** iletişim kutusunun sol taraftaki. Arama derlemeleri metin kutusuna yazın `System.ServiceModel`. İletişim kutusunun Orta kısım seçin **System.ServiceModel**, tıklatın **Ekle** düğmesine tıklayın ve **Kapat** düğmesi. Tıklayarak çözümü kaydetmek **Tümünü Kaydet** aşağıda ana menü düğmesi.  
   
-4.  Sonraki wlll hesaplayıcı hizmetine hizmet başvurusu ekleyin. Bunu yapmadan önce GettingStartedHost konsol uygulamasını başlatmanız gerekir. Ana bilgisayar çalışmaya başladıktan sonra başvuruları klasörü altında Çözüm Gezgini'nde GettingStartedClient projeye sağ tıklayın ve hizmet Başvurusu Ekle iletişim kutusunun adres kutusuna aşağıdaki URL'de hizmet Başvurusu Ekle ve türünü seçin: HYPERLINK "http:/ / localhost:8000/ServiceModelSamples/hizmet "ServiceModelSamples/8000/hizmet ve tıklatın **Git** düğmesi. CalculatorService sonra hizmetleri liste kutusunda çift tıklatın CalculatorService görüntülenmesi gerekir ve onu genişletin ve hizmeti tarafından uygulanan Hizmet sözleşmeleri göster. Varsayılan ad olan ve'ı tıklatın bırakın **Tamam** düğmesi.  
+4.  Sonraki wlll hesaplayıcı hizmetine hizmet başvurusu ekleyin. Bunu yapmadan önce GettingStartedHost konsol uygulamasını başlatmanız gerekir. Ana bilgisayar çalışmaya başladıktan sonra başvuruları klasörü altında Çözüm Gezgini'nde GettingStartedClient projeye sağ tıklayın ve hizmet Başvurusu Ekle iletişim kutusunun adres kutusuna aşağıdaki URL'de hizmet Başvurusu Ekle ve türünü seçin: HYPERLINK "http://localhost:8000/ServiceModelSamples/Service" http://localhost:8000/ServiceModelSamples/Service tıklatıp **Git** düğmesi. CalculatorService sonra hizmetleri liste kutusunda çift tıklatın CalculatorService görüntülenmesi gerekir ve onu genişletin ve hizmeti tarafından uygulanan Hizmet sözleşmeleri göster. Varsayılan ad olan ve'ı tıklatın bırakın **Tamam** düğmesi.  
   
      Visual Studio yeni bir öğe kullanarak bir hizmet için bir başvuru GettingStartedClient projesinin altındaki hizmeti başvuruları klasörü altında Çözüm Gezgini'nde görünecektir eklediğinizde.  Kullanırsanız [ServiceModel meta veri yardımcı Programracı (Svcutil.exe)](../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md) aracı bir kaynak kodu dosyasının ve app.config dosyası oluşturulur.  
   

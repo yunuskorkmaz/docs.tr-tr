@@ -1,31 +1,19 @@
 ---
-title: "Nasıl yapılır: WCF Hizmetlerini WSE 3.0 İstemcileriyle Birlikte Çalışmak için Yapılandırma"
-ms.custom: 
+title: 'Nasıl yapılır: WCF Hizmetlerini WSE 3.0 İstemcileriyle Birlikte Çalışmak için Yapılandırma'
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 0f38c4a0-49a6-437c-bdde-ad1d138d3c4a
-caps.latest.revision: "8"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: c93b91123c7622bea125bfa702c53a697b1ac84c
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 174ecd279f9380136532ce0d5105b7a71b6d88da
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-configure-wcf-services-to-interoperate-with-wse-30-clients"></a>Nasıl yapılır: WCF Hizmetlerini WSE 3.0 İstemcileriyle Birlikte Çalışmak için Yapılandırma
-[!INCLUDE[indigo1](../../../../includes/indigo1-md.md)]Services, Microsoft .NET (WSE) istemciler için Web Hizmetleri geliştirmeleri 3.0 ile hat düzeyinde uyumlu zaman [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] Hizmetleri WS adresleme belirtimi Ağustos 2004 sürümünü kullanacak şekilde yapılandırılır.  
+WCF hizmetleri WS adresleme belirtimi Ağustos 2004 sürümünü kullanacak şekilde yapılandırıldıklarında Windows Communication Foundation (WCF) hizmetlerini hat düzeyinde Web Hizmetleri geliştirmeleri 3.0 ile Microsoft .NET (WSE) istemciler için uyumludur.  
   
 ### <a name="to-enable-a-wcf-service-to-interoperate-with-wse-30-clients"></a>WSE 3.0 istemcileriyle birlikte çalışmak bir WCF hizmeti etkinleştirmek için  
   
-1.  Özel bağlama için tanımlamak [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] hizmet.  
+1.  WCF hizmeti için özel bir bağlama tanımlayın.  
   
      WS-adresleme belirtimi Ağustos 2004 sürümü ileti kodlama için kullanıldığını belirtmek için özel bağlama oluşturulması gerekir.  
   
@@ -35,7 +23,7 @@ ms.lasthandoff: 12/22/2017
   
     3.  Bir kimlik doğrulama modu ve WSE 3.0 ile uyumlu olan bir alt ekleyerek iletileri güvenli hale getirmek için kullanılan WS-güvenlik belirtimleri sürümünü belirtin [ \<Güvenlik >](../../../../docs/framework/configure-apps/file-schema/wcf/security-of-custombinding.md) için [ \<bağlama >](../../../../docs/framework/misc/binding.md).  
   
-         Kimlik doğrulama modu ayarlamak için ayarlayın `authenicationMode` özniteliği [ \<Güvenlik >](../../../../docs/framework/configure-apps/file-schema/wcf/security-of-custombinding.md). Bir kimlik doğrulama modu, bir anahtar teslimi güvenlik onaylama işlemi WSE 3.0 kabaca eşdeğerdir. Aşağıdaki tabloda kimlik doğrulama modu eşlemeleri [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] anahtar teslimi güvenlik onaylar WSE 3.0 için.  
+         Kimlik doğrulama modu ayarlamak için ayarlayın `authenicationMode` özniteliği [ \<Güvenlik >](../../../../docs/framework/configure-apps/file-schema/wcf/security-of-custombinding.md). Bir kimlik doğrulama modu, bir anahtar teslimi güvenlik onaylama işlemi WSE 3.0 kabaca eşdeğerdir. Aşağıdaki tabloda wcf'de kimlik doğrulama modları anahtar teslimi güvenlik onaylar WSE 3.0 eşler.  
   
         |WCF kimlik doğrulama modu|WSE 3.0 anahtar teslimi güvenlik onaylama işlemi|  
         |-----------------------------|----------------------------------------|  
@@ -46,11 +34,11 @@ ms.lasthandoff: 12/22/2017
         |<xref:System.ServiceModel.Configuration.AuthenticationMode.UserNameOverTransport>|`usernameOverTransportSecurity`|  
         |<xref:System.ServiceModel.Configuration.AuthenticationMode.UserNameForCertificate>|`usernameForCertificateSecurity`|  
   
-         \*Birincil farklarını birini `mutualCertificate10Security` ve `mutualCertificate11Security` anahtar teslimi güvenlik onaylar SOAP iletileri güvenli hale getirmek için WSE kullanan WS-Security belirtimi sürümüdür. İçin `mutualCertificate10Security`, WS-Security 1.0 kullanılır, WS-güvenlik 1.1 kullanılırken `mutualCertificate11Security`. İçin [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)], WS-Security belirtimi sürümünü belirtilen `messageSecurityVersion` özniteliği [ \<Güvenlik >](../../../../docs/framework/configure-apps/file-schema/wcf/security-of-custombinding.md).  
+         \* Birincil farklarını birini `mutualCertificate10Security` ve `mutualCertificate11Security` anahtar teslimi güvenlik onaylar SOAP iletileri güvenli hale getirmek için WSE kullanan WS-Security belirtimi sürümüdür. İçin `mutualCertificate10Security`, WS-Security 1.0 kullanılır, WS-güvenlik 1.1 kullanılırken `mutualCertificate11Security`. WCF için WS-Security belirtimi sürümünü belirtilen `messageSecurityVersion` özniteliği [ \<Güvenlik >](../../../../docs/framework/configure-apps/file-schema/wcf/security-of-custombinding.md).  
   
          SOAP iletilerine güvenliğini sağlamak için kullanılan WS-Security belirtimi sürümünü ayarlamak için ayarlayın `messageSecurityVersion` özniteliği [ \<Güvenlik >](../../../../docs/framework/configure-apps/file-schema/wcf/security-of-custombinding.md). WSE 3.0 ile birlikte çalışmak üzere değerini ayarlamak `messageSecurityVersion` özniteliğini <xref:System.ServiceModel.MessageSecurityVersion.WSSecurity11WSTrustFebruary2005WSSecureConversationFebruary2005WSSecurityPolicy11BasicSecurityProfile10%2A>.  
   
-    4.  WS-adresleme belirtimi Ağustos 2004 sürümü kullandığı belirtin [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] ekleyerek bir [ \<textMessageEncoding >](../../../../docs/framework/configure-apps/file-schema/wcf/textmessageencoding.md) ve `messageVersion` kendi değerine <xref:System.ServiceModel.Channels.MessageVersion.Soap11WSAddressingAugust2004%2A>.  
+    4.  WS-adresleme belirtimi Ağustos 2004 sürümü ekleyerek WCF tarafından kullanıldığını belirtmek bir [ \<textMessageEncoding >](../../../../docs/framework/configure-apps/file-schema/wcf/textmessageencoding.md) ve `messageVersion` kendi değerine <xref:System.ServiceModel.Channels.MessageVersion.Soap11WSAddressingAugust2004%2A>.  
   
         > [!NOTE]
         >  SOAP 1.2 kullanırken ayarlayın `messageVersion` özniteliğini <xref:System.ServiceModel.Channels.MessageVersion.Soap12WSAddressingAugust2004%2A>.  

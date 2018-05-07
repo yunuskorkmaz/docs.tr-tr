@@ -1,13 +1,6 @@
 ---
-title: "Derleme Yükleme için En İyi Yöntemler"
-ms.custom: 
+title: Derleme Yükleme için En İyi Yöntemler
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - assemblies,binding
 - LoadFrom method
@@ -19,16 +12,13 @@ helpviewer_keywords:
 - LoadWithPartialName method
 - load-from context
 ms.assetid: 68d1c539-6a47-4614-ab59-4b071c9d4b4c
-caps.latest.revision: "10"
 author: mairaw
 ms.author: mairaw
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: cb6671af34c22d824368de014362452ac9014279
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: b05ec604f8493ba773d9de9af19acc70c023b8bf
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="best-practices-for-assembly-loading"></a>Derleme Yükleme için En İyi Yöntemler
 Yol açabilir türü kimliğinin sorunları önlemek için bu makalede ele <xref:System.InvalidCastException>, <xref:System.MissingMethodException>ve diğer hataları. Makaleyi aşağıdaki öneriler ele alınmıştır:  
@@ -79,7 +69,7 @@ Yol açabilir türü kimliğinin sorunları önlemek için bu makalede ele <xref
   
 -   Bütünleştirilmiş ile yüklenmiş ise <xref:System.Reflection.Assembly.LoadFrom%2A>, ve aynı kimliğe sahip ancak farklı bir konumda bir derleme yoklama yolunu içeren bir <xref:System.InvalidCastException>, <xref:System.MissingMethodException>, veya diğer beklenmeyen davranışları ortaya çıkabilir.  
   
--   <xref:System.Reflection.Assembly.LoadFrom%2A>taleplerin <xref:System.Security.Permissions.FileIOPermissionAccess.Read?displayProperty=nameWithType> ve <xref:System.Security.Permissions.FileIOPermissionAccess.PathDiscovery?displayProperty=nameWithType>, veya <xref:System.Net.WebPermission>, belirtilen yol üzerinde.  
+-   <xref:System.Reflection.Assembly.LoadFrom%2A> taleplerin <xref:System.Security.Permissions.FileIOPermissionAccess.Read?displayProperty=nameWithType> ve <xref:System.Security.Permissions.FileIOPermissionAccess.PathDiscovery?displayProperty=nameWithType>, veya <xref:System.Net.WebPermission>, belirtilen yol üzerinde.  
   
 -   Yerel görüntü derleme için zaten varsa, kullanılmaz.  
   

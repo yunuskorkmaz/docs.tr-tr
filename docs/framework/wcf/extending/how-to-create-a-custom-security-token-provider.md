@@ -1,31 +1,19 @@
 ---
-title: "Nasıl yapılır: Özel Güvenlik Belirteci Sağlayıcı Oluşturma"
-ms.custom: 
+title: 'Nasıl yapılır: Özel Güvenlik Belirteci Sağlayıcı Oluşturma'
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
 helpviewer_keywords:
 - security [WCF], providing credentials
 ms.assetid: db8cb478-aa43-478b-bf97-c6489ad7c7fd
-caps.latest.revision: 
 author: BrucePerlerMS
-ms.author: bruceper
 manager: mbaldwin
-ms.workload:
-- dotnet
-ms.openlocfilehash: 37e7f9541457c475bfe187485520df63a84f7555
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
-ms.translationtype: MT
+ms.openlocfilehash: 480b968a15193bccb84ba491347dbba69e16fb52
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-create-a-custom-security-token-provider"></a>Nasıl yapılır: Özel Güvenlik Belirteci Sağlayıcı Oluşturma
 Bu konu, yeni belirteç türleri sahip bir özel güvenlik belirteci sağlayıcı oluşturma ve sağlayıcı özel güvenlik belirteci yöneticisi ile tümleştirmek nasıl gösterir.  
@@ -33,7 +21,7 @@ Bu konu, yeni belirteç türleri sahip bir özel güvenlik belirteci sağlayıc�
 > [!NOTE]
 >  Sistem tarafından sağlanan belirteçleri bulunan özel bir belirteç sağlayıcısı oluşturun <xref:System.IdentityModel.Tokens> ad alanı gereksinimlerinizi eşleşmiyor.  
   
- Güvenlik belirteci sağlayıcısı istemci veya hizmet kimlik bilgileri temel alarak bir güvenlik belirteci temsilini oluşturur. Özel güvenlik belirteci sağlayıcı kullanacak şekilde [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] güvenlik, özel kimlik bilgileri ve güvenlik belirteci Yöneticisi uygulamaları oluşturmalısınız.  
+ Güvenlik belirteci sağlayıcısı istemci veya hizmet kimlik bilgileri temel alarak bir güvenlik belirteci temsilini oluşturur. Windows Communication Foundation (WCF) güvenlik özel güvenlik belirteci sağlayıcısı kullanmak için özel kimlik bilgileri ve güvenlik belirteci Yöneticisi uygulamaları oluşturmanız gerekir.  
   
  Özel kimlik bilgileri ve güvenlik belirteci Yöneticisi hakkında daha fazla bilgi için bkz: [izlenecek yol: özel istemci oluşturma ve hizmet kimlik bilgilerini](../../../../docs/framework/wcf/extending/walkthrough-creating-custom-client-and-service-credentials.md).  
   

@@ -1,20 +1,13 @@
 ---
 title: C# ifadelerinin - C# dili turu
-description: "Using deyimleri C# programının eylemler oluşturun"
-keywords: ".NET, csharp, deyimleri, sözdizimi"
-author: BillWagner
-ms.author: wiwagn
+description: Using deyimleri C# programının eylemler oluşturun
 ms.date: 11/06/2016
-ms.topic: article
-ms.prod: .net
-ms.technology: devlang-csharp
-ms.devlang: csharp
 ms.assetid: 5409c379-5622-4fae-88b5-1654276ea8d4
-ms.openlocfilehash: 99ec2489daf89926da9b8c4e148965412826a8a6
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.openlocfilehash: 2f25c07ccc0af27a503465b9414bf607c61d1b2e
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="statements"></a>Deyimler
 
@@ -54,63 +47,63 @@ Aşağıda, her biri için bir örnek sağlar ve kullanılabilir deyimleri türl
 
  [!code-csharp[Expressions](../../../samples/snippets/csharp/tour/statements/Program.cs#L24-L31)]
 
-* `if`bildirimi:
+* `if` bildirimi:
 
  [!code-csharp[IfStatement](../../../samples/snippets/csharp/tour/statements/Program.cs#L33-L43)]
 
-* `switch`bildirimi:
+* `switch` bildirimi:
 
  [!code-csharp[SwitchStatement](../../../samples/snippets/csharp/tour/statements/Program.cs#L45-L60)]
 
-* `while`bildirimi:
+* `while` bildirimi:
 
  [!code-csharp[WhileStatement](../../../samples/snippets/csharp/tour/statements/Program.cs#L62-L70)]
 
-* `do`bildirimi:
+* `do` bildirimi:
 
  [!code-csharp[DoStatement](../../../samples/snippets/csharp/tour/statements/Program.cs#L72-L81)]
 
-* `for`bildirimi:
+* `for` bildirimi:
 
  [!code-csharp[ForStatement](../../../samples/snippets/csharp/tour/statements/Program.cs#L83-L89)]
 
-* `foreach`bildirimi:
+* `foreach` bildirimi:
 
  [!code-csharp[ForEachStatement](../../../samples/snippets/csharp/tour/statements/Program.cs#L91-L97)]
 
-* `break`bildirimi:
+* `break` bildirimi:
 
  [!code-csharp[BreakStatement](../../../samples/snippets/csharp/tour/statements/Program.cs#L99-L108)]
 
-* `continue`bildirimi:
+* `continue` bildirimi:
 
  [!code-csharp[ContinueStatement](../../../samples/snippets/csharp/tour/statements/Program.cs#L110-L118)]
 
-* `goto`bildirimi:
+* `goto` bildirimi:
 
  [!code-csharp[GotoStatement](../../../samples/snippets/csharp/tour/statements/Program.cs#L120-L129)]
 
-* `return`bildirimi:
+* `return` bildirimi:
 
  [!code-csharp[ReturnStatement](../../../samples/snippets/csharp/tour/statements/Program.cs#L131-L139)]
 
-* `yield`bildirimi:
+* `yield` bildirimi:
 
  [!code-csharp[YieldStatement](../../../samples/snippets/csharp/tour/statements/Program.cs#L141-L155)]
 
-* `throw`deyimleri ve `try` deyimleri:
+* `throw` deyimleri ve `try` deyimleri:
 
  [!code-csharp[TryThrow](../../../samples/snippets/csharp/tour/statements/Program.cs#L157-L183)]
 
-* `checked`ve `unchecked` deyimleri:
+* `checked` ve `unchecked` deyimleri:
 
  [!code-csharp[CheckedUncheckedStatement](../../../samples/snippets/csharp/tour/statements/Program.cs#L185-L196)]
 
-* `lock`bildirimi:
+* `lock` bildirimi:
 
  [!code-csharp[LockStatement](../../../samples/snippets/csharp/tour/statements/Program.cs#L257-L273)]
 
-* `using`bildirimi:
+* `using` bildirimi:
 
  [!code-csharp[UsingStatement](../../../samples/snippets/csharp/tour/statements/Program.cs#L198-L206)]
 

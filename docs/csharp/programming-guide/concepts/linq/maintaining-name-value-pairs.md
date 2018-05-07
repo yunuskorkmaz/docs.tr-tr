@@ -1,31 +1,22 @@
 ---
-title: "Bakımı ad-değer çiftleri (C#)"
-ms.custom: 
+title: Bakımı ad-değer çiftleri (C#)
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-csharp
-ms.topic: article
 ms.assetid: 7b04b0f1-af64-42eb-8737-83f8861b5915
-caps.latest.revision: "3"
-author: BillWagner
-ms.author: wiwagn
-ms.openlocfilehash: 998cfad22c28248eb22fef5141caa96035d2d0b8
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: ac1e6464618c00cba4ded92492fe4a687e1a25f6
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="maintaining-namevalue-pairs-c"></a>Bakımı ad/değer çiftleri (C#)
-Birçok uygulama, ad/değer çiftleri olarak en iyi şekilde tutulur Bilgi korumanız gerekir. Bu bilgiler, yapılandırma bilgileri veya genel ayarlar olabilir. [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)]kolaylaştıran bir ad/değer çifti kümesi tutmak bazı yöntemler içerir. Öğeleri öznitelikler veya alt kümesi olarak bilgi ya da koruyabilir.  
+Birçok uygulama, ad/değer çiftleri olarak en iyi şekilde tutulur Bilgi korumanız gerekir. Bu bilgiler, yapılandırma bilgileri veya genel ayarlar olabilir. [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] kolaylaştıran bir ad/değer çifti kümesi tutmak bazı yöntemler içerir. Öğeleri öznitelikler veya alt kümesi olarak bilgi ya da koruyabilir.  
   
  Öznitelikler veya alt öğeleri olarak bilgi tutma arasındaki tek fark öznitelikleri yalnızca bir özniteliği olan bir öğe için belirli bir ad olabilir kısıtlaması olmasıdır. Bu sınırlama alt öğeler için geçerli değildir.  
   
 ## <a name="setattributevalue-and-setelementvalue"></a>SetAttributeValue ve SetElementValue  
  Tutma kolaylaştırmak iki yöntem ad/değer çiftlerine olan <xref:System.Xml.Linq.XElement.SetAttributeValue%2A> ve <xref:System.Xml.Linq.XElement.SetElementValue%2A>. Bu iki yöntem benzer bir semantik vardır.  
   
- <xref:System.Xml.Linq.XElement.SetAttributeValue%2A>ekleyebilir, değiştirme veya bir öğenin öznitelikleri kaldırabilirsiniz.  
+ <xref:System.Xml.Linq.XElement.SetAttributeValue%2A> ekleyebilir, değiştirme veya bir öğenin öznitelikleri kaldırabilirsiniz.  
   
 -   Çağırırsanız <xref:System.Xml.Linq.XElement.SetAttributeValue%2A> var olmayan bir öznitelik adı, yöntem yeni bir öznitelik oluşturur ve belirtilen öğeyi ekler.  
   
@@ -33,7 +24,7 @@ Birçok uygulama, ad/değer çiftleri olarak en iyi şekilde tutulur Bilgi korum
   
 -   Çağırırsanız <xref:System.Xml.Linq.XElement.SetAttributeValue%2A> varolan bir adla özniteliği ve belirtmek içerik için null öznitelik üst öğesinden da kaldırılır.  
   
- <xref:System.Xml.Linq.XElement.SetElementValue%2A>ekleme, değiştirme ve bir öğenin alt öğeleri kaldırın.  
+ <xref:System.Xml.Linq.XElement.SetElementValue%2A> ekleme, değiştirme ve bir öğenin alt öğeleri kaldırın.  
   
 -   Çağırırsanız <xref:System.Xml.Linq.XElement.SetElementValue%2A> yöntemi var olmayan bir alt öğesi olan bir adla yeni bir öğesi oluşturur ve belirtilen öğeyi ekler.  
   

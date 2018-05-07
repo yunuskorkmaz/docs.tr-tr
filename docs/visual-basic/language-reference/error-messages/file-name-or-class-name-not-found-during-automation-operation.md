@@ -1,23 +1,14 @@
 ---
-title: "Otomasyon işlemi sırasında dosya adı veya sınıf adı bulunamadı (Visual Basic)"
+title: Otomasyon işlemi sırasında dosya adı veya sınıf adı bulunamadı (Visual Basic)
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- devlang-visual-basic
-ms.topic: article
 f1_keywords:
 - vbrID432
 ms.assetid: 6883c208-de5e-44da-a525-b50122e5a170
-caps.latest.revision: 
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: 6215ea41d7a02342df9d44e00e37864c04c98d29
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.openlocfilehash: 44706779abd005ee35bcd6d28b12ad2f889f6215
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="file-name-or-class-name-not-found-during-automation-operation-visual-basic"></a>Otomasyon işlemi sırasında dosya adı veya sınıf adı bulunamadı (Visual Basic)
 Dosya adı veya bir çağrı sınıfında için belirtilen ad `GetObject` işlevi bulunamadı.  
@@ -27,4 +18,4 @@ Dosya adı veya bir çağrı sınıfında için belirtilen ad `GetObject` işlev
 -   Adları Denetle ve yeniden deneyin. İçin kullanılan ad emin olun `class` parametre sistemiyle kayıtlı eşleşiyor.  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [Hata türleri](../../../visual-basic/programming-guide/language-features/error-types.md)
+ [Hata Türleri](../../../visual-basic/programming-guide/language-features/error-types.md)

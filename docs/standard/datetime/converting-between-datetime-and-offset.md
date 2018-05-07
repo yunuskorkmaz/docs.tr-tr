@@ -1,13 +1,7 @@
 ---
-title: "DateTime ve DateTimeOffset arasında dönüştürme"
-ms.custom: 
+title: DateTime ve DateTimeOffset arasında dönüştürme
 ms.date: 04/10/2017
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
 ms.technology: dotnet-standard
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -22,25 +16,20 @@ helpviewer_keywords:
 - Date data type, converting
 - local time conversions
 ms.assetid: b605ff97-0c45-4c24-833f-4c6a3e8be64c
-caps.latest.revision: "8"
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-- dotnetcore
-ms.openlocfilehash: 2055df26618664ee130be417599f4ec46e439444
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: dec0e5138ecf08783f11d21cd28d7291d27ea68d
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="converting-between-datetime-and-datetimeoffset"></a>DateTime ve DateTimeOffset arasında dönüştürme
 
 Ancak <xref:System.DateTimeOffset> yapısı sağlayan bir saat dilimi tanıma daha büyük ölçüde <xref:System.DateTime> yapısı, <xref:System.DateTime> parametreleri içindeki yöntem çağrılarının daha yaygın olarak kullanılır. Bu nedenle, dönüştürme yeteneği <xref:System.DateTimeOffset> değerler <xref:System.DateTime> değerleri ve bunun tersi de özellikle önemlidir. Bu konu, mümkün olduğunca fazla saat dilimi bilgi korur şekilde dönüştürmeler gerçekleştirme gösterir.
 
 > [!NOTE]
-> Hem <xref:System.DateTime> ve <xref:System.DateTimeOffset> saat diliminde saatleri temsil eden olduğunda türlerine sahip bazı sınırlamalar uygulanır. İle <xref:System.DateTime.Kind%2A> özelliği, <xref:System.DateTime> yalnızca Eşgüdümlü Evrensel Saat (UTC) ve sistemin yerel saat dilimini yansıtacak şekilde yapamaz. <xref:System.DateTimeOffset>bir süre UTC uzaklığı, ancak uzaklık, gerçek saat dilimi ait yansıtmaz yansıtır. Saat değerleri ve saat dilimleri için destek hakkında daha fazla ayrıntı için bkz: [seçme arasında DateTime, DateTimeOffset, TimeSpan ve Timezoneınfo](../../../docs/standard/datetime/choosing-between-datetime.md).
+> Hem <xref:System.DateTime> ve <xref:System.DateTimeOffset> saat diliminde saatleri temsil eden olduğunda türlerine sahip bazı sınırlamalar uygulanır. İle <xref:System.DateTime.Kind%2A> özelliği, <xref:System.DateTime> yalnızca Eşgüdümlü Evrensel Saat (UTC) ve sistemin yerel saat dilimini yansıtacak şekilde yapamaz. <xref:System.DateTimeOffset> bir süre UTC uzaklığı, ancak uzaklık, gerçek saat dilimi ait yansıtmaz yansıtır. Saat değerleri ve saat dilimleri için destek hakkında daha fazla ayrıntı için bkz: [seçme arasında DateTime, DateTimeOffset, TimeSpan ve Timezoneınfo](../../../docs/standard/datetime/choosing-between-datetime.md).
 
 ## <a name="conversions-from-datetime-to-datetimeoffset"></a>DateTimeOffset DateTime gelen dönüştürme
 

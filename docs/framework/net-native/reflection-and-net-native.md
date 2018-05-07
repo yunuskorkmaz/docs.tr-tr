@@ -1,24 +1,14 @@
 ---
-title: "Yansıma ve .NET Yerel"
-ms.custom: 
+title: Yansıma ve .NET Yerel
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 91c9eae4-c641-476c-a06e-d7ce39709763
-caps.latest.revision: "16"
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 9e248071a0d35c5552976e5e4663094b76ee162e
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: ee56107c5d8760f69a29d9e4ad6e1bd445d4831d
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="reflection-and-net-native"></a>Yansıma ve .NET Yerel
 .NET Framework geliştirme destekler API yansıma yoluyla meta yönetilen. Yansıma uygulama nesneleri inceleyin, inceleme bulunan nesnelerin yöntemleri çağırmak, çalışma zamanında yeni türleri oluşturmak olanak tanır ve diğer birçok dinamik kodu senaryolarını destekler. Seri hale getirme ve kalıcı ve daha sonra geri nesnenin alan değerlerini sağlayan seri durumdan çıkarma de destekler. Bu senaryolar tüm kullanılabilir meta verileri temel alarak yerel kodu oluşturmak için .NET Framework tam zamanında (JIT) derleyici gerektirir.  

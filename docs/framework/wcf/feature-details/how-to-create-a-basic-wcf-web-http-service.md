@@ -1,32 +1,18 @@
 ---
 title: 'Nasıl yapılır: Temel Bir WCF Web HTTP Hizmeti Oluşturma'
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 dev_langs:
 - csharp
 - vb
 ms.assetid: 877662d3-d372-4e08-b417-51f66a0095cd
-caps.latest.revision: 26
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 4dc60bbb51bc573840d0d45356f0cd84fd32db2a
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
-ms.translationtype: HT
+ms.openlocfilehash: d147286fd2f8fe3f4f5e822598a07b51ae6d9791
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-create-a-basic-wcf-web-http-service"></a>Nasıl yapılır: Temel Bir WCF Web HTTP Hizmeti Oluşturma
-[!INCLUDE[indigo1](../../../../includes/indigo1-md.md)]bir Web uç noktası kullanıma sunan bir hizmet oluşturmanıza olanak sağlar. Web uç noktaları XML veya JSON veri gönderme, SOAP Zarfı. Bu konu, bu tür bir uç nokta kullanıma gösterilmiştir.  
+Windows Communication Foundation (WCF), bir Web uç noktası kullanıma sunan bir hizmet oluşturmanıza olanak sağlar. Web uç noktaları XML veya JSON veri gönderme, SOAP Zarfı. Bu konu, bu tür bir uç nokta kullanıma gösterilmiştir.  
   
 > [!NOTE]
 >  Taşıma güvenliği kullanarak, HTTPS kullanıma sunmak için yalnızca bir Web uç noktası güvenli şekilde denetleyebilirsiniz. İleti tabanlı güvenlik kullanırken, güvenlik bilgileri genellikle SOAP üstbilgileri yerleştirilir ve gönderilen iletiler için hiç SOAP Zarfı olmayan SOAP uç noktaları içeren, saklanıyorsa güvenlik bilgilerini yerleştirmek için yoktur ve aktarım güvenliğe güvenmesi gerekir.  
@@ -39,7 +25,7 @@ ms.lasthandoff: 12/22/2017
      [!code-vb[htBasicService#0](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/htbasicservice/vb/service.vb#0)]  
   
     > [!NOTE]
-    >  Varsayılan olarak, <xref:System.ServiceModel.Web.WebInvokeAttribute> işlemi POST çağrıları eşler. Bununla birlikte, çalışması için belirterek eşleştirmek için HTTP yöntemini (örneğin, HEAD, PUT veya Sil) belirleyebilirsiniz bir "yöntemi =" parametresi. <xref:System.ServiceModel.Web.WebGetAttribute>sahip olmayan bir "yöntemi =" GET parametre ve yalnızca eşlemeleri hizmet işlemini çağırır.  
+    >  Varsayılan olarak, <xref:System.ServiceModel.Web.WebInvokeAttribute> işlemi POST çağrıları eşler. Bununla birlikte, çalışması için belirterek eşleştirmek için HTTP yöntemini (örneğin, HEAD, PUT veya Sil) belirleyebilirsiniz bir "yöntemi =" parametresi. <xref:System.ServiceModel.Web.WebGetAttribute> sahip olmayan bir "yöntemi =" GET parametre ve yalnızca eşlemeleri hizmet işlemini çağırır.  
   
 2.  Hizmet sözleşmesini uygulama.  
   
@@ -59,9 +45,9 @@ ms.lasthandoff: 12/22/2017
      [!code-vb[htBasicService#3](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/htbasicservice/vb/service.vb#3)]  
   
     > [!NOTE]
-    >  Bir uç nokta eklemezseniz <xref:System.ServiceModel.Web.WebServiceHost> otomatik olarak varsayılan uç noktası oluşturur. <xref:System.ServiceModel.Web.WebServiceHost>Ayrıca ekler <xref:System.ServiceModel.Description.WebHttpBehavior> ve meta veri uç noktasının varsayılan HTTP uç noktası ile etkilemediğinden için HTTP yardım sayfasına ve Web Hizmetleri Açıklama Dili (WSDL) alma işlevini devre dışı bırakır.  
+    >  Bir uç nokta eklemezseniz <xref:System.ServiceModel.Web.WebServiceHost> otomatik olarak varsayılan uç noktası oluşturur. <xref:System.ServiceModel.Web.WebServiceHost> Ayrıca ekler <xref:System.ServiceModel.Description.WebHttpBehavior> ve meta veri uç noktasının varsayılan HTTP uç noktası ile etkilemediğinden için HTTP yardım sayfasına ve Web Hizmetleri Açıklama Dili (WSDL) alma işlevini devre dışı bırakır.  
     >   
-    >  SOAP olmayan uç nokta URL'si ile ekleme "" uç nokta üzerinde bir işlemi çağırmak için bir girişimde beklenmeyen davranışlara neden olur. Bu uç nokta URI'sini dinleme aynıdır yardım sayfasına URI'sini nedeni (temel adresine göz atarken görüntülenen sayfa bir [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] hizmeti).  
+    >  SOAP olmayan uç nokta URL'si ile ekleme "" uç nokta üzerinde bir işlemi çağırmak için bir girişimde beklenmeyen davranışlara neden olur. Bunun nedeni, uç nokta URI'sini (bir WCF Hizmeti temel adresine göz atarken görüntülenen sayfa) Yardım sayfası için URI ile aynıdır dinleme ' dir.  
   
      Bunun olmaması için aşağıdaki işlemlerden birini yapabilirsiniz:  
   

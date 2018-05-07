@@ -1,24 +1,12 @@
 ---
-title: "IdentityModel Özel Durumları"
-ms.custom: 
+title: IdentityModel Özel Durumları
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 4ef34497-8ff5-4621-b773-7731cc721231
-caps.latest.revision: "7"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 26bf6cb88d77fc9890a23c482913514f1dc856aa
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: ee0b5537a415e1ea53c653ae8e8485e94cc713fd
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="identitymodel-exceptions"></a>IdentityModel Özel Durumları
 Bu konuda IdentityModel tarafından oluşturulan tüm özel durumlar listelenir.  
@@ -91,8 +79,8 @@ Bu konuda IdentityModel tarafından oluşturulan tüm özel durumlar listelenir.
 |SAMLSignatureAlreadyRead|İmza zaten SAML onayı okuyun.|  
 |AlgorithmAndPrivateKeyMisMatch|Belirtilen algoritma ve özel anahtar eşleşmiyor.|  
 |EmptyTransformChainNotSupported|Boş dönüştürme zinciri desteklenmez.|  
-|SspiWrapperEncryptDecryptAssert1|SSPIWrapper::EncryptDecryptHelper &#124;' uzaklık ' aralık dışında.|  
-|SspiWrapperEncryptDecryptAssert2|SSPIWrapper::EncryptDecryptHelper &#124;' Boyut ' aralık dışında. SecurityTokenManagerCannotCreateAuthenticatorForRequirement = güvenlik belirteci yöneticisi, bir belirteç kimlik doğrulayıcısı belirli gereksinimi oluşturamıyor.|  
+|SspiWrapperEncryptDecryptAssert1|SSPIWrapper::EncryptDecryptHelper&#124;' uzaklığı ' aralık dışında.|  
+|SspiWrapperEncryptDecryptAssert2|SSPIWrapper::EncryptDecryptHelper&#124;' boyutudur ' aralık dışında. SecurityTokenManagerCannotCreateAuthenticatorForRequirement = güvenlik belirteci yöneticisi, bir belirteç kimlik doğrulayıcısı belirli gereksinimi oluşturamıyor.|  
 |UnableToCreateKeyedHashAlgorithm|Belirli imza algoritması için belirli değerinden bir KeyedHashAlgorithm oluşturulamıyor.|  
 |SAMLUnableToLoadAssertion|\<Saml:assertion > öğesi yüklenemedi.|  
 |X509FindValueMismatchMulti|Belirli X509FindType 2 değerlerden biri için değişken findValue türü gerektirir. Bağımsız değişken findValue başka bir türde değil.|  

@@ -1,10 +1,6 @@
 ---
 title: ICLRSyncManager Arabirimi
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.technology:
-- dotnet-clr
-ms.topic: reference
 api_name:
 - ICLRSyncManager
 api_location:
@@ -20,14 +16,11 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 17a1e3073713b54cb7a68e6ba3ef2562d4fbcaeb
-ms.sourcegitcommit: 9a4fe1a1c37b26532654b4bbe22d702237950009
+ms.openlocfilehash: 1b87ccc3d6c3e957d0384499048032e35247093a
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="iclrsyncmanager-interface"></a>ICLRSyncManager Arabirimi
 İstenen görevler hakkında bilgi almak ve kendi eşitleme uygulamasında kilitlenmeleri algılamak için konak izin yöntemleri tanımlar.  
@@ -50,7 +43,7 @@ ms.lasthandoff: 04/16/2018
   
  **.NET framework sürümleri:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>Ayrıca bkz.  
+## <a name="see-also"></a>Ayrıca Bkz.  
  <xref:System.Threading.Thread>  
  [IHostSyncManager Arabirimi](ihostsyncmanager-interface.md)  
  [Yönetilen ve yönetilmeyen iş parçacığı oluşturma](https://msdn.microsoft.com/library/db425c20-4b2f-4433-bf96-76071c7881e5(v=vs.100))  

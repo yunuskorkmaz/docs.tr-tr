@@ -1,20 +1,13 @@
 ---
 title: C# ifadeleri - C# dili turu
-description: "C# dili yapı taşlarını şunlardır: ifadeleri, işlenen ve işleçler"
-keywords: ".NET, csharp, ifade, işleç, işleç"
-author: BillWagner
-ms.author: wiwagn
+description: 'C# dili yapı taşlarını şunlardır: ifadeleri, işlenen ve işleçler'
 ms.date: 11/06/2016
-ms.topic: article
-ms.prod: .net
-ms.technology: devlang-csharp
-ms.devlang: csharp
 ms.assetid: 20d5eb10-7381-47b9-ad90-f1cc895aa27e
-ms.openlocfilehash: 7b7e321e6554818924a8a2b68afa4c787807bcba
-ms.sourcegitcommit: bbde43da655ae7bea1977f7af7345eb87bd7fd5f
+ms.openlocfilehash: 8fa1c5d0464644b26eb457bca8ecaf007c288f42
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="expressions"></a>İfadeler
 
@@ -43,10 +36,10 @@ Yüksekten en düşüğe öncelik sırasına işleci kategorilerini liste C# ' �
     - `new T(...){...}`: Başlatıcısı ile nesne oluşturma
     - `new {...}`: Anonim nesne Başlatıcı
     - `new T[...]`: Dizi oluşturma
-    - `typeof(T)`: Elde <xref:System.Type> nesnesi`T`
+    - `typeof(T)`: Elde <xref:System.Type> nesnesi `T`
     - `checked(x)`: Checked bağlamda ifade değerlendirme
     - `unchecked(x)`: Denetlenmeyen bağlamda ifade değerlendirme
-    - `default(T)`: Türü varsayılan değerini edinme`T`
+    - `default(T)`: Türü varsayılan değerini edinme `T`
     - `delegate {...}`: Anonim işlevi (anonim yöntemi)
 * Birli
     - `+x`: Kimlik
@@ -55,7 +48,7 @@ Yüksekten en düşüğe öncelik sırasına işleci kategorilerini liste C# ' �
     - `~x`: Bit tabanlı değil işlecini
     - `++x`: Ön artırma
     - `--x`: Ön azaltma
-    - `(T)x`: Açıkça dönüştürme `x` yazmak için`T`
+    - `(T)x`: Açıkça dönüştürme `x` yazmak için `T`
     - `await x`: Zaman uyumsuz olarak bekleyin `x` tamamlamak için
 * Çarpma
     - `x * y`: Çarpma
@@ -73,7 +66,7 @@ Yüksekten en düşüğe öncelik sırasına işleci kategorilerini liste C# ' �
     - `x <= y`: Küçüktür veya eşittir
     - `x >= y`: Büyüktür veya eşittir
     - `x is T`: Dönüş `true` varsa `x` olan bir `T`, `false` Aksi takdirde
-    - `x as T`: Dönüş `x` olarak yazılan `T`, veya `null` varsa `x` değil bir`T`
+    - `x as T`: Dönüş `x` olarak yazılan `T`, veya `null` varsa `x` değil bir `T`
 * Eşitlik
     - `x == y`: Eşit
     - `x != y`: Eşit değil
@@ -84,13 +77,13 @@ Yüksekten en düşüğe öncelik sırasına işleci kategorilerini liste C# ' �
 * Mantıksal VEYA
     - `x | y`: Tamsayı Bitsel veya boolean mantıksal OR
 * Koşullu VE
-    - `x && y`: Hesaplar `y` yalnızca `x` değil`false`
+    - `x && y`: Hesaplar `y` yalnızca `x` değil `false`
 * Koşullu VEYA
-    - `x || y`: Hesaplar `y` yalnızca `x` değil`true`
+    - `x || y`: Hesaplar `y` yalnızca `x` değil `true`
 * Null birleşim
     - `x ?? y`: Değerlendiren `y` varsa `x` için null `x` Aksi takdirde
 * Koşullu
-    - `x ? y : z`: Hesaplar `y` varsa `x` olan `true`, `z` varsa `x` olduğu`false`
+    - `x ? y : z`: Hesaplar `y` varsa `x` olan `true`, `z` varsa `x` olduğu `false`
 * Atama veya anonim işlevi
     - `x = y`: Atama
     - `x op= y`: Bileşik atama; desteklenen işleçler şunlardır:

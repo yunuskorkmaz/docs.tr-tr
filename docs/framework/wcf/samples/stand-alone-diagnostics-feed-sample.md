@@ -1,29 +1,17 @@
 ---
-title: "Bağımsız Tanılama Akış Örneği"
-ms.custom: 
+title: Bağımsız Tanılama Akış Örneği
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: d31c6c1f-292c-4d95-8e23-ed8565970ea5
-caps.latest.revision: "26"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 7cf6bb08dc6607bf6c5b9e283ce449b603cb38d3
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
-ms.translationtype: MT
+ms.openlocfilehash: 1edd1c2184dde368fbd16299a836f1811dd24ba6
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="stand-alone-diagnostics-feed-sample"></a>Bağımsız Tanılama Akış Örneği
-Bu örnek nasıl ile dağıtım için akış RSS/Atom oluşturulduğunu gösteren [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)]. Nesne modeli ve üzerinde ayarlamak nasıl temelleri gösterilmektedir temel bir "Hello World" programı olan bir [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] hizmet.  
+Bu örnek nasıl dağıtım Windows Communication Foundation (WCF) için akış RSS/Atom oluşturulacağını gösterir. Bu nesne modeli temelleri ve Windows Communication Foundation (WCF) hizmetini üzerinde ayarlamak nasıl gösteren temel bir "Hello World" programıdır.  
   
- [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]bir özel veri türü döndüren hizmet işlemleri dağıtım akışlarını modeller <xref:System.ServiceModel.Syndication.SyndicationFeedFormatter>. Örneklerini <xref:System.ServiceModel.Syndication.SyndicationFeedFormatter> RSS 2.0 ve Atom 1.0 biçimleri akışa seri hale getirebilir. Aşağıdaki örnek kod kullanılan sözleşme gösterir.  
+ [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] bir özel veri türü döndüren hizmet işlemleri dağıtım akışlarını modeller <xref:System.ServiceModel.Syndication.SyndicationFeedFormatter>. Örneklerini <xref:System.ServiceModel.Syndication.SyndicationFeedFormatter> RSS 2.0 ve Atom 1.0 biçimleri akışa seri hale getirebilir. Aşağıdaki örnek kod kullanılan sözleşme gösterir.  
   
 ```  
 [ServiceContract(Namespace = "")]  
@@ -60,7 +48,7 @@ WebServiceHost host = new WebServiceHost(typeof(ProcessService), new Uri("http:/
 <%@ ServiceHost Language="C#|VB" Debug="true" Service="ProcessService" %>  
 ```  
   
- Bu hizmeti kullanan standart HTTP GET istekleri aldığından, hizmete erişmek için herhangi bir RSS veya ATOM algılayan İstemcisi'ni kullanabilirsiniz. Örneğin, bu hizmet çıktısını tanılama/8000/akışı giderek görüntüleyebileceğiniz /? biçimi atom veya tanılama/8000/akışı = /? biçimi = Internet Explorer 7 gibi RSS uyumlu bir tarayıcıda rss.  
+ Bu hizmeti kullanan standart HTTP GET istekleri aldığından, hizmete erişmek için herhangi bir RSS veya ATOM algılayan İstemcisi'ni kullanabilirsiniz. Örneğin, bu hizmet çıktısını giderek görüntüleyebileceğiniz http://localhost:8000/diagnostics/feed/?format=atom veya http://localhost:8000/diagnostics/feed/?format=rss Internet Explorer 7 gibi RSS uyumlu bir tarayıcıda.  
   
  Aynı zamanda [nasıl WCF dağıtım nesnesi modeli eşlemeleri Atom ve RSS](../../../../docs/framework/wcf/feature-details/how-the-wcf-syndication-object-model-maps-to-atom-and-rss.md) Dağıtılmış veri okumak ve kesinlik temelli kodu kullanarak işlemek için.  
   
@@ -93,14 +81,14 @@ foreach (SyndicationItem i in feed.Items)
   
 3.  Konsol uygulamasını çalıştırın.  
   
-4.  Konsol uygulaması çalışırken, tanılama/8000/akışı gidin /? biçimi atom veya tanılama/8000/akışı = /? format = RSS uyumlu bir tarayıcı kullanarak rss.  
+4.  Konsol uygulaması çalışırken gidin http://localhost:8000/diagnostics/feed/?format=atom veya http://localhost:8000/diagnostics/feed/?format=rss RSS uyumlu bir tarayıcı kullanarak.  
   
 > [!IMPORTANT]
 >  Örnekler, bilgisayarınızda yüklü. Devam etmeden önce aşağıdaki (varsayılan) dizin denetleyin.  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  Bu dizin mevcut değilse, Git [Windows Communication Foundation (WCF) ve .NET Framework 4 için Windows Workflow Foundation (WF) örnek](http://go.microsoft.com/fwlink/?LinkId=150780) tüm indirmek için [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] ve [!INCLUDE[wf1](../../../../includes/wf1-md.md)] örnekleri. Bu örnek aşağıdaki dizinde bulunur.  
+>  Bu dizin mevcut değilse, Git [Windows Communication Foundation (WCF) ve .NET Framework 4 için Windows Workflow Foundation (WF) örnek](http://go.microsoft.com/fwlink/?LinkId=150780) tüm Windows Communication Foundation (WCF) indirmek için ve [!INCLUDE[wf1](../../../../includes/wf1-md.md)] örnekleri. Bu örnek aşağıdaki dizinde bulunur.  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Syndication\DiagnosticsFeed`  
   

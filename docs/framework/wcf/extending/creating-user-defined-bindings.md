@@ -1,28 +1,14 @@
 ---
 title: Kullanıcı Tanımlı Bağlamalar Oluşturma
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 helpviewer_keywords:
 - user-defined bindings [WCF]
 ms.assetid: c4960675-d701-4bc9-b400-36a752fdd08b
-caps.latest.revision: 19
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 05476adccca0deb5fd82b62f99f06939664cc876
-ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
-ms.translationtype: MT
+ms.openlocfilehash: 82fe3baada73b89291311a891069c6ee3f19cf20
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/30/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="creating-user-defined-bindings"></a>Kullanıcı Tanımlı Bağlamalar Oluşturma
 Sistem tarafından sağlanmayan bağlamaları oluşturmanın birkaç yolu vardır:  
@@ -38,7 +24,7 @@ Sistem tarafından sağlanmayan bağlamaları oluşturmanın birkaç yolu vardı
   
  Bağlama öğeleri üç ana türü vardır: Protokolü bağlama öğeleri, kodlama bağlama öğeleri ve aktarım bağlama öğeleriyle.  
   
- Protokol bağlama öğeleri – iletileri hareket üst düzey işlem adımları bu öğeleri temsil eder. Kanallar ve dinleyiciler Bu bağlama öğeleri tarafından oluşturulan eklemek, kaldırmak veya ileti içeriği değiştirmek için. Belirtilen bağlama Protokolü bağlama öğeleri, her içinden devralma rastgele sayıda olabilir <xref:System.ServiceModel.Channels.BindingElement>. [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] dahil olmak üzere, çeşitli protokol bağlama öğeleri içeren <xref:System.ServiceModel.Channels.ReliableSessionBindingElement> ve <xref:System.ServiceModel.Channels.SymmetricSecurityBindingElement>.  
+ Protokol bağlama öğeleri – iletileri hareket üst düzey işlem adımları bu öğeleri temsil eder. Kanallar ve dinleyiciler Bu bağlama öğeleri tarafından oluşturulan eklemek, kaldırmak veya ileti içeriği değiştirmek için. Belirtilen bağlama Protokolü bağlama öğeleri, her içinden devralma rastgele sayıda olabilir <xref:System.ServiceModel.Channels.BindingElement>. Windows Communication Foundation (WCF) dahil olmak üzere, çeşitli protokol bağlama öğeleri içerir <xref:System.ServiceModel.Channels.ReliableSessionBindingElement> ve <xref:System.ServiceModel.Channels.SymmetricSecurityBindingElement>.  
   
  Kodlama bağlama öğesi – hattaki iletim için bir ileti arasındaki bir kodlama dönüşümleri hazır bu öğeleri temsil eder. Tipik [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] bağlamaları tam olarak bir kodlama bağlama öğesi içerir. Bağlama öğeleri kodlama örnekler <xref:System.ServiceModel.Channels.MtomMessageEncodingBindingElement>, <xref:System.ServiceModel.Channels.BinaryMessageEncodingBindingElement>ve <xref:System.ServiceModel.Channels.TextMessageEncodingBindingElement>. Bir kodlama bağlama öğesi için bir bağlama belirtilmezse, kodlama varsayılan kullanılır. Taşıma HTTP ve ikili Aksi takdirde varsayılan metin olur.  
   

@@ -1,20 +1,13 @@
 ---
-title: "Grup sorgu sonuçları"
-description: "Sonuçları gruplandırmak nasıl."
-keywords: .NET, .NET core, C#
-author: BillWagner
-manager: wpickett
-ms.author: wiwagn
+title: Grup sorgu sonuçları
+description: Sonuçları gruplandırmak nasıl.
 ms.date: 12/1/2016
-ms.topic: article
-ms.prod: .net
-ms.technology: devlang-csharp
 ms.assetid: 2e4ec27f-06fb-4de7-8973-0189906d4520
-ms.openlocfilehash: ca68cf96a2c27bbd1999d5445c14fc93e8e2566c
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: cb7808bfdd86dd23882d0722b87b1e013a84141e
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="group-query-results"></a>Grup sorgu sonuçları
 
@@ -52,7 +45,7 @@ Gruplandırma LINQ en güçlü özelliklerinden biridir. Aşağıdaki örnekler,
  [!code-csharp[csProgGuideLINQ#18](../../../samples/snippets/csharp/concepts/linq/how-to-group-query-results_3.cs)]  
   
 ## <a name="example"></a>Örnek  
- Aşağıdaki örnek, sayısal bir aralık bir Grup anahtarı kullanarak kaynağı öğeleri gruplandırmak gösterilmiştir. Sorgu sonuçları yalnızca ilk ve son adı ve Öğrenci ait olduğu yüzdebirlik aralığı içeren bir anonim tür sonra projeleri. Anonim bir tür tam kullanmak için gerekli olmadığı için kullanılan `Student` sonuçları görüntülemek için nesne. `GetPercentile`bir yüzde birlik hesaplar yardımcı bir işlev öğrencinin ortalama puanı üzerinde temel alır. Yöntemi, 0 ile 10 arasında bir tamsayı döndürür.  
+ Aşağıdaki örnek, sayısal bir aralık bir Grup anahtarı kullanarak kaynağı öğeleri gruplandırmak gösterilmiştir. Sorgu sonuçları yalnızca ilk ve son adı ve Öğrenci ait olduğu yüzdebirlik aralığı içeren bir anonim tür sonra projeleri. Anonim bir tür tam kullanmak için gerekli olmadığı için kullanılan `Student` sonuçları görüntülemek için nesne. `GetPercentile` bir yüzde birlik hesaplar yardımcı bir işlev öğrencinin ortalama puanı üzerinde temel alır. Yöntemi, 0 ile 10 arasında bir tamsayı döndürür.  
   
  [!code-csharp[csProgGuideLINQ#50](../../../samples/snippets/csharp/concepts/linq/how-to-group-query-results_4.cs)]  
   
@@ -78,8 +71,8 @@ Gruplandırma LINQ en güçlü özelliklerinden biridir. Aşağıdaki örnekler,
  <xref:System.Linq.Enumerable.GroupBy%2A>  
  <xref:System.Linq.IGrouping%602>  
  [LINQ Sorgu ifadeleri](index.md)  
- [Group tümcesi](../language-reference/keywords/group-clause.md)  
- [Anonim türler](../programming-guide/classes-and-structs/anonymous-types.md)  
+ [group yan tümcesi](../language-reference/keywords/group-clause.md)  
+ [Anonim Tipler](../programming-guide/classes-and-structs/anonymous-types.md)  
  [Gruplandırma işleminde alt sorgu gerçekleştirme](perform-a-subquery-on-a-grouping-operation.md)  
  [İç içe geçmiş grup oluşturma](create-a-nested-group.md)  
- [Verileri gruplandırma](../programming-guide/concepts/linq/grouping-data.md)
+ [Verileri Gruplandırma](../programming-guide/concepts/linq/grouping-data.md)

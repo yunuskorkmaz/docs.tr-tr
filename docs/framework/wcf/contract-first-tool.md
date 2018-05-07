@@ -1,24 +1,12 @@
 ---
-title: "Önce Anlaşma Aracı"
-ms.custom: 
+title: Önce Anlaşma Aracı
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 0a880690-f460-4475-a5f4-9f91ce08fcc6
-caps.latest.revision: "8"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 5079a4b45c7adf0cfd4d9ae1069379184422dc98
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
-ms.translationtype: MT
+ms.openlocfilehash: b8d38cc31eacf1d8eb29aaaf7d6ef29056ff9b79
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="contract-first-tool"></a>Önce Anlaşma Aracı
 Hizmet sözleşmeleri genellikle varolan Hizmetleri'nden oluşturulması gerekir. İçinde [!INCLUDE[net_v45](../../../includes/net-v45-md.md)], veri sözleşmesi sınıfları oluşturulabilir otomatik olarak önce anlaşma aracı kullanarak mevcut Hizmetleri'nden. Önce anlaşma aracı kullanmak için XML şeması tanım dosyası (XSD) yerel olarak yüklenmelidir; Aracı, HTTP üzerinden uzak veri sözleşmeleri içeri aktarılamıyor.  
@@ -72,11 +60,11 @@ Hizmet sözleşmeleri genellikle varolan Hizmetleri'nden oluşturulması gerekir
 ## <a name="configuring-contract-first-options"></a>Önce anlaşma seçeneklerini yapılandırma  
  Önce anlaşma seçenekleri özellikler menüsünde yapılandırılabilir bir [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] projesi. Önce anlaşma geliştirme etkinleştirmek için seçin **etkinleştirmek XSD türü tanım dili olarak** onay kutusunu proje penceresinin WCF sayfasındaki.  
   
- ![WCF proje sözleşme &#45;gösteren seçenekleri; ilk](../../../docs/framework/wcf/media/contractfirstoptions.png "ContractFirstOptions")  
+ ![WCF proje seçenekleri gösteren sözleşme&#45;ilk](../../../docs/framework/wcf/media/contractfirstoptions.png "ContractFirstOptions")  
   
  Gelişmiş özelliklerini yapılandırmak için Gelişmiş düğmesini tıklatın.  
   
- ![Gelişmiş sözleşme &#45; İlk özellikleri](../../../docs/framework/wcf/media/contractfirstadvanced.png "ContractFirstAdvanced")  
+ ![Sözleşme Gelişmiş&#45;ilk özellikleri](../../../docs/framework/wcf/media/contractfirstadvanced.png "ContractFirstAdvanced")  
   
  Gelişmiş ayarlar aşağıdaki sözleşmeleri kod oluşturma için yapılandırılabilir. Ayarları, yalnızca tüm projedeki dosyaları için yapılandırılabilir; ayarları için tek tek dosyalar şu anda yapılandırılamaz.  
   

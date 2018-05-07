@@ -1,24 +1,12 @@
 ---
-title: "WCF Keşif Nesnesi Modeli"
-ms.custom: 
+title: WCF Keşif Nesnesi Modeli
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 8365a152-eacd-4779-9130-bbc48fa5c5d9
-caps.latest.revision: "13"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 68d6e156612ce707aa678b6589510b710b73e38a
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: a325ee0fd6376f101ca8ccc6097e79c30198a011
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="wcf-discovery-object-model"></a>WCF Keşif Nesnesi Modeli
 WCF keşif çalışma zamanı ve bulmak ve bu hizmetleri kullanan istemciler bulunabilirlik Hizmetleri yazmanızı sağlayan birleşik bir programlama modeli sağlayan türleri kümesi oluşur.  
@@ -83,10 +71,10 @@ WCF keşif çalışma zamanı ve bulmak ve bu hizmetleri kullanan istemciler bul
  <xref:System.ServiceModel.Discovery.AnnouncementClient> Sınıfı duyuru iletileri göndermek için zaman uyumlu ve zaman uyumsuz yöntemleri sağlar. Duyuru iletileri, Hello ve Bye iki tür vardır. Merhaba ileti, bir hizmet kullanılabilir hale gelmiştir ve var olan bir hizmeti kullanılamıyor belirtmek için Bye iletiye gönderilen göstermek için gönderilir. Geliştirici oluşturur bir <xref:System.ServiceModel.Discovery.AnnouncementClient> örneğini geçirerek örneği <xref:System.ServiceModel.Discovery.AnnouncementEndpoint> Oluşturucusu parametre olarak.  
   
 ## <a name="announcementendpoint"></a>AnnouncementEndpoint  
- <xref:System.ServiceModel.Discovery.AnnouncementEndpoint>bir sabit duyuru sözleşme ile standart bir uç noktasını temsil eder. Duyurunun ileti gönderme ve alma için bunu bir hizmet veya istemci tarafından kullanılır. Varsayılan olarak, <xref:System.ServiceModel.Discovery.AnnouncementEndpoint> sınıfı WS_Discovery 11 protokol sürümünü kullanacak şekilde ayarlanır.  
+ <xref:System.ServiceModel.Discovery.AnnouncementEndpoint> bir sabit duyuru sözleşme ile standart bir uç noktasını temsil eder. Duyurunun ileti gönderme ve alma için bunu bir hizmet veya istemci tarafından kullanılır. Varsayılan olarak, <xref:System.ServiceModel.Discovery.AnnouncementEndpoint> sınıfı WS_Discovery 11 protokol sürümünü kullanacak şekilde ayarlanır.  
   
 ## <a name="announcementservice"></a>AnnouncementService  
- <xref:System.ServiceModel.Discovery.AnnouncementService>bir sistem tarafından sağlanan duyuru iletilerini alan ve işleyen bir duyuru hizmet uygulamasıdır. Merhaba veya Bye bir ileti alındığında <xref:System.ServiceModel.Discovery.AnnouncementService> örneği uygun sanal yöntemini çağırır <xref:System.ServiceModel.Discovery.AnnouncementService.OnBeginOnlineAnnouncement%2A> veya <xref:System.ServiceModel.Discovery.AnnouncementService.OnBeginOfflineAnnouncement%2A>, duyuru olayları başlatır.  
+ <xref:System.ServiceModel.Discovery.AnnouncementService> bir sistem tarafından sağlanan duyuru iletilerini alan ve işleyen bir duyuru hizmet uygulamasıdır. Merhaba veya Bye bir ileti alındığında <xref:System.ServiceModel.Discovery.AnnouncementService> örneği uygun sanal yöntemini çağırır <xref:System.ServiceModel.Discovery.AnnouncementService.OnBeginOnlineAnnouncement%2A> veya <xref:System.ServiceModel.Discovery.AnnouncementService.OnBeginOfflineAnnouncement%2A>, duyuru olayları başlatır.  
   
 ## <a name="discoveryclient"></a>DiscoveryClient  
  <xref:System.ServiceModel.Discovery.DiscoveryClient> Sınıfı bulun ve kullanılabilir hizmetler çözümlemek için bir istemci uygulaması tarafından kullanılır. Bulma ve belirtilen temel Hizmetleri çözme için zaman uyumlu ve zaman uyumsuz yöntemleri sağlar <xref:System.ServiceModel.Discovery.FindCriteria> ve <xref:System.ServiceModel.Discovery.ResolveCriteria> sırasıyla. Geliştirici oluşturur bir <xref:System.ServiceModel.Discovery.DiscoveryClient> örneği ve bir örneğini sağlar <xref:System.ServiceModel.Discovery.DiscoveryEndpoint> Oluşturucusu parametre olarak.  
@@ -98,10 +86,10 @@ WCF keşif çalışma zamanı ve bulmak ve bu hizmetleri kullanan istemciler bul
  Ağ üzerinde keşif proxy'si varsa ve <!--zz <xref:System.ServiceModel.Discover.DiscoveryClient> --> `DiscoveryClient` bulma isteği bir çok noktaya yayın biçimde keşif proxy'si ile çok noktaya yayın gizleme selamlama iletisine yanıt gönderir. <!--zz <xref:System.ServiceModel.Discover.DiscoveryClient> --> `DiscoveryClient` Başlatır `ProxyAvailable` yanıt olarak bekleyen Merhaba iletileri aldığında, olay `Find` veya `Resolve` istekleri. `ProxyAvailable` Olayı içeren <xref:System.ServiceModel.Discovery.EndpointDiscoveryMetadata> keşif proxy'si hakkında. Geçici yönetilen moduna geçmek için bu bilgileri kullanmak için geliştirici kadar olur.  
   
 ## <a name="discoveryendpoint"></a>DiscoveryEndpoint  
- <xref:System.ServiceModel.Discovery.DiscoveryEndpoint>bir sabit bulma sözleşme ile standart bir uç noktasını temsil eder. Bu bulma ileti göndermek veya almak için bir hizmet veya istemci tarafından kullanılır. Varsayılan olarak, <xref:System.ServiceModel.Discovery.DiscoveryEndpoint> kullanmak üzere ayarlanmış <!--zz <xref:System.ServiceModel.Discovery.DiscoveryMode.Managed>--> `Managed` modu ve WSDiscovery11 WS-bulma sürümü.  
+ <xref:System.ServiceModel.Discovery.DiscoveryEndpoint> bir sabit bulma sözleşme ile standart bir uç noktasını temsil eder. Bu bulma ileti göndermek veya almak için bir hizmet veya istemci tarafından kullanılır. Varsayılan olarak, <xref:System.ServiceModel.Discovery.DiscoveryEndpoint> kullanmak üzere ayarlanmış <!--zz <xref:System.ServiceModel.Discovery.DiscoveryMode.Managed>--> `Managed` modu ve WSDiscovery11 WS-bulma sürümü.  
   
 ## <a name="discoverymessagesequencegenerator"></a>DiscoveryMessageSequenceGenerator  
- <xref:System.ServiceModel.Discovery.DiscoveryMessageSequenceGenerator>oluşturmak için kullanılan bir <xref:System.ServiceModel.Discovery.DiscoveryMessageSequence> hizmet bulma veya duyuru iletilerini göndermeyi zaman.  
+ <xref:System.ServiceModel.Discovery.DiscoveryMessageSequenceGenerator> oluşturmak için kullanılan bir <xref:System.ServiceModel.Discovery.DiscoveryMessageSequence> hizmet bulma veya duyuru iletilerini göndermeyi zaman.  
   
 ## <a name="discoveryservice"></a>DiscoveryService  
  <xref:System.ServiceModel.Discovery.DiscoveryService> Soyut sınıf alınması ve işlenmesi için bir çerçeve sağlar `Probe` ve `Resolve` iletileri. Zaman bir `Probe` iletisi alındığında, <xref:System.ServiceModel.Discovery.DiscoveryService> bir örneğini oluşturur <xref:System.ServiceModel.Discovery.FindRequestContext> gelen iletisini temel alarak ve çağırır <xref:System.ServiceModel.Discovery.DiscoveryService.OnBeginFind%2A> sanal yöntemi. Zaman bir `Resolve` iletisi alındığında, <xref:System.ServiceModel.Discovery.DiscoveryService> çağırır <xref:System.ServiceModel.Discovery.DiscoveryService.OnBeginResolve%2A> sanal yöntemi. Özel bir bulma hizmeti uygulama sağlamak için bu sınıfı devralabilirsiniz.  

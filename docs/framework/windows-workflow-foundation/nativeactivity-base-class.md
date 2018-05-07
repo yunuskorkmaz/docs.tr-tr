@@ -1,33 +1,22 @@
 ---
-title: "NativeActivity taban sınıfı"
-ms.custom: 
+title: NativeActivity taban sınıfı
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 254a4c50-425b-426d-a32f-0f7234925bac
-caps.latest.revision: "8"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: e53471a2d0245b1547ae5ee3c3a147e024aedefb
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: ca4a497f1e78989f9488507015526214ead6cae7
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="nativeactivity-base-class"></a>NativeActivity taban sınıfı
-<xref:System.Activities.NativeActivity>soyut bir sınıf korumalı Oluşturucu ile ilgilidir. Gibi <xref:System.Activities.CodeActivity>, <xref:System.Activities.NativeActivity> uygulayarak kesinlik temelli davranışı yazmak için kullanılan bir <xref:System.Activities.NativeActivity.Execute%2A> yöntemi. Farklı <xref:System.Activities.CodeActivity>, <xref:System.Activities.NativeActivity> tüm iş akışı çalışma zamanı sunulan özelliklerini erişimi <xref:System.Activities.NativeActivityContext> nesne geçirilen <xref:System.Activities.NativeActivity.Execute%2A> yöntemi.  
+<xref:System.Activities.NativeActivity> soyut bir sınıf korumalı Oluşturucu ile ilgilidir. Gibi <xref:System.Activities.CodeActivity>, <xref:System.Activities.NativeActivity> uygulayarak kesinlik temelli davranışı yazmak için kullanılan bir <xref:System.Activities.NativeActivity.Execute%2A> yöntemi. Farklı <xref:System.Activities.CodeActivity>, <xref:System.Activities.NativeActivity> tüm iş akışı çalışma zamanı sunulan özelliklerini erişimi <xref:System.Activities.NativeActivityContext> nesne geçirilen <xref:System.Activities.NativeActivity.Execute%2A> yöntemi.  
   
 ## <a name="using-nativeactivitycontext"></a>NativeActivityContext kullanma  
  İş akışı çalışma zamanı özelliklerini erişilebilir içinden <xref:System.Activities.NativeActivity.Execute%2A> üyeleri kullanarak yöntemi `context` parametresinin türü <xref:System.Activities.NativeActivityContext>. Aracılığıyla kullanılabilen özelliklerin <xref:System.Activities.NativeActivityContext> şunları içerir:  
   
 -   Alma ve bağımsız değişkenleri ve değişkenleri ayarlama.  
   
--   Bağımlı etkinliklerle planlama<xref:System.Activities.NativeActivityContext.ScheduleActivity%2A>  
+-   Bağımlı etkinliklerle planlama <xref:System.Activities.NativeActivityContext.ScheduleActivity%2A>  
   
 -   Durduruluyor etkinlik kullanılarak yürütme <xref:System.Activities.NativeActivityContext.Abort%2A>.  
   

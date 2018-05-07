@@ -2,11 +2,11 @@
 title: '&lt;endpointBehaviors&gt; &lt;davranışı&gt;'
 ms.date: 03/30/2017
 ms.assetid: b90ca3bc-3c22-4174-b903-e3a39898bd27
-ms.openlocfilehash: 0619d14444d835ed959a1a1db7cd37aaf0429728
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
-ms.translationtype: HT
+ms.openlocfilehash: e275fbc1b14469553094a4df838930be53937de2
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="ltbehaviorgt-of-ltendpointbehaviorsgt"></a>&lt;endpointBehaviors&gt; &lt;davranışı&gt;
 `behavior` Öğesi içeren bir uç nokta davranışını için ayarlar koleksiyonu. Her davranış tarafından dizine kendi `name`. Uç noktaları bu adı aracılığıyla her davranışını bağlayabilirsiniz. İle başlayarak [!INCLUDE[netfx40_short](../../../../../includes/netfx40-short-md.md)], bağlamalar ve davranışları olmayan bir adı olması için gereklidir. Varsayılan yapılandırma ve adsız bağlamalar ve davranışları hakkında daha fazla bilgi için bkz: [Basitleştirilmiş yapılandırma](../../../../../docs/framework/wcf/simplified-configuration.md) ve [WCF hizmetleri için Basitleştirilmiş yapılandırma](../../../../../docs/framework/wcf/samples/simplified-configuration-for-wcf-services.md).  
@@ -52,7 +52,7 @@ ms.lasthandoff: 05/03/2018
 |[\<soapProcessing >](../../../../../docs/framework/configure-apps/file-schema/wcf/soapprocessing.md)|Farklı bağlama türleri ve ileti sürümleri arasında iletileri sıralama için kullanılan istemci uç nokta davranışını tanımlar.|  
 |[\<synchronousReceive >](../../../../../docs/framework/configure-apps/file-schema/wcf/synchronousreceive-element.md)|Bir hizmet veya istemci uygulamasında iletileri almak için çalışma zamanı davranışını belirtir. Herhangi bir öznitelik veya alt öğe yok.|  
 |[\<transactedBatching >](../../../../../docs/framework/configure-apps/file-schema/wcf/transactedbatching.md)|İşlem toplu işlerin desteklenip desteklenmediğini belirtir alma işlemleri.|  
-|[\<webHttp >](../../../../../docs/framework/configure-apps/file-schema/wcf/webhttp.md)|Yapılandırma yoluyla bir uç noktada WebHttpBehavior belirtir. İle birlikte kullanıldığında bu davranış, \<webHttpBinding > standart bağlama sağlayan Web programlama modeli için bir [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)] hizmet.|  
+|[\<webHttp >](../../../../../docs/framework/configure-apps/file-schema/wcf/webhttp.md)|Yapılandırma yoluyla bir uç noktada WebHttpBehavior belirtir. İle birlikte kullanıldığında bu davranış, \<webHttpBinding > standart bağlama bir WCF hizmeti için Web programlama modeli sağlar.|  
   
 ### <a name="parent-elements"></a>Üst Öğeler  
   

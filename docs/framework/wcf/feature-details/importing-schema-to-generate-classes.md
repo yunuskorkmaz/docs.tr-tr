@@ -1,14 +1,6 @@
 ---
 title: Sınıf Oluşturmak için Şemayı İçe Aktarma
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -16,20 +8,14 @@ helpviewer_keywords:
 - WCF, schema import and export
 - XsdDataContractImporter class
 ms.assetid: b9170583-8c34-43bd-97bb-6c0c8dddeee0
-caps.latest.revision: 15
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 4d7988630e2eba3e6d5ebdc8b15b23aeb280a66f
-ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
+ms.openlocfilehash: 338daa031ac2c1b31a121908643a15449c5401a1
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/28/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="importing-schema-to-generate-classes"></a>Sınıf Oluşturmak için Şemayı İçe Aktarma
-İle kullanılabilen şemaları sınıfları oluşturmak için [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)], kullanın <xref:System.Runtime.Serialization.XsdDataContractImporter> sınıfı. Bu konu işlemini ve farklılıkları açıklar.  
+Windows Communication Foundation (WCF) ile kullanılabilir şemaları sınıfları oluşturmak için kullanın <xref:System.Runtime.Serialization.XsdDataContractImporter> sınıfı. Bu konu işlemini ve farklılıkları açıklar.  
   
 ## <a name="the-import-process"></a>İçeri aktarma işlemi  
  Şema alma işlemi ile başlayan bir <xref:System.Xml.Schema.XmlSchemaSet> ve üreten bir <xref:System.CodeDom.CodeCompileUnit>.  
@@ -114,7 +100,7 @@ ms.lasthandoff: 04/28/2018
  [!code-xml[C_SchemaImportExport#12](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_schemaimportexport/common/source.config#12)]  
   
 > [!NOTE]
->  Herhangi bir ilişkisi de listesini değerlendirilebilir. Örneğin, karmaşık bir liste olarak önceki ilişkilendirmesini görüntüleyebilirsiniz `city` (bir dize alanı ve tamsayı alan) iki alan sahipse nesneleri. İki desen gösterimi XSD şemasına sahip. Bir liste arasında bir ilişki sürece desenler her zaman listeleri davranılır şekilde ayırt etmek için bir yolu yoktur bir özel ek açıklama özgü [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] şemada mevcuttur. Ek açıklamanın belirli bir desen bir ilişkiyi temsil ettiğini gösterir. Daha fazla bilgi için bkz: [veri sözleşmesi şema başvurusu](../../../../docs/framework/wcf/feature-details/data-contract-schema-reference.md).  
+>  Herhangi bir ilişkisi de listesini değerlendirilebilir. Örneğin, karmaşık bir liste olarak önceki ilişkilendirmesini görüntüleyebilirsiniz `city` (bir dize alanı ve tamsayı alan) iki alan sahipse nesneleri. İki desen gösterimi XSD şemasına sahip. Bir özel ek açıklama için WCF belirli şemada olmadıkça desenler her zaman listeleri kabul edilir şekilde listesini arasında bir ilişki ayırt etmek için bir yolu yoktur. Ek açıklamanın belirli bir desen bir ilişkiyi temsil ettiğini gösterir. Daha fazla bilgi için bkz: [veri sözleşmesi şema başvurusu](../../../../docs/framework/wcf/feature-details/data-contract-schema-reference.md).  
   
  Genel bir listeden veya olarak türetilen bir koleksiyon veri sözleşmesi olarak listesini normalde, alınan bir [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] olsun veya olmasın koleksiyonlar için standart adlandırma deseni bir şemayı izlediğinden bağlı olarak, dizi. Bu daha ayrıntılı olarak açıklanmıştır [veri sözleşmelerinde koleksiyon türleri](../../../../docs/framework/wcf/feature-details/collection-types-in-data-contracts.md). İlişkilendirmeleri ya da normal olarak içeri aktarılan bir <xref:System.Collections.Generic.Dictionary%602> veya sözlük nesnesinden türer bir koleksiyonu veri sözleşme. Örneğin, aşağıdaki şema göz önünde bulundurun.  
   

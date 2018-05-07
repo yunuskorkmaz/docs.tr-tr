@@ -1,27 +1,15 @@
 ---
 title: Etkinlik Listesi
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 5540e185-ce8e-4db3-83b0-2b9f5bf71829
-caps.latest.revision: "6"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 5e7a371d43237b795536711cf1745030e14d6eca
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
-ms.translationtype: MT
+ms.openlocfilehash: dc504c37b21a2d457f270331ab917747bafbb022
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="activity-list"></a>Etkinlik Listesi
-Bu konuda tarafından tanımlanan tüm etkinlikleri listeler [!INCLUDE[indigo1](../../../../../includes/indigo1-md.md)].  
+Bu konu, Windows Communication Foundation (WCF) tarafından tanımlanan tüm etkinlikleri listeler.  
   
 > [!NOTE]
 >  Etkinlikler de program aracılığıyla ve grup kullanıcı izlemeleri tanımlayabilirsiniz. Daha fazla bilgi için bkz: [kullanıcı kodu izleri yayma](../../../../../docs/framework/wcf/diagnostics/tracing/emitting-user-code-traces.md).  
@@ -33,8 +21,8 @@ Bu konuda tarafından tanımlanan tüm etkinlikleri listeler [!INCLUDE[indigo1](
 |-----------|-------------------|-------------------|-----------------|  
 |BİR, M|Ortam etkinliği|(Bu ServiceModel tarafından denetlenmeyen) yok|Etkinlik Kimliğine ServiceModel kodu (istemci tarafı veya sunucu tarafı) yapılan her çağrı önce TLS ayarlanır.<br /><br /> Örnek: Burada açık adlı üzerinde bir etkinlik [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)] istemci veya serviceHost.open çağrılır.|  
 |B|Oluştur<br /><br /> ChannelFactory. ContractType: '[türü]'.|Oluştur||  
-|C|Open<br /><br /> [ClientBase &#124; ChannelFactory]. ContractType: '[türü]'.|Open||  
-|I|[ClientBase &#124; Kapat ChannelFactory]. ContractType: '[türü]'.|Close||  
+|C|Open<br /><br /> [ClientBase&#124;ChannelFactory]. ContractType: '[türü]'.|Open||  
+|I|Kapat [ClientBase&#124;ChannelFactory]. ContractType: '[türü]'.|Close||  
 |M|ServiceHost oluşturun. ServiceType: '[türü]'.|Oluştur||  
 |N|ServiceHost'ni açın. ServiceType: '[türü]'.|Open||  
 |Z|ServiceHost kapatın. ServiceType: '[türü]'.|Close||  

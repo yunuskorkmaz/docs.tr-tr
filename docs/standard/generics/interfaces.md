@@ -1,31 +1,20 @@
 ---
 title: Genel Arabirimler
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
 ms.technology: dotnet-standard
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - generic interfaces [.NET Framework]
 - equality comparisons [.NET Framework]
 - generics [.NET Framework], interfaces
 - ordering comparisons [.NET Framework]
 ms.assetid: 88bf5b04-d371-4edb-ba38-01ec7cabaacf
-caps.latest.revision: "9"
 author: mairaw
 ms.author: mairaw
-manager: wpickett
-ms.workload:
-- dotnet
-- dotnetcore
-ms.openlocfilehash: b0735718db6317716055b9ee59cf90e869f2015c
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: cf9d1323918d42884f5e2fdf8a5905d13283c74c
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="generic-interfaces"></a>Genel Arabirimler
 Bu konu genel türler aileleri arasında ortak işlevsellik sağlayan genel arabirimler genel bir bakış sağlar.  
@@ -44,7 +33,7 @@ Bu konu genel türler aileleri arasında ortak işlevsellik sağlayan genel arab
  <xref:System.Collections.Generic.Comparer%601> Ve <xref:System.Collections.Generic.EqualityComparer%601> genel sınıfları uygulamaları için temel sınıfları sağlar <xref:System.Collections.Generic.IComparer%601> ve <xref:System.Collections.Generic.IEqualityComparer%601> genel arabirimler ve ayrıca varsayılan sıralama ve eşitlik karşılaştırmaları kendi ilgili aracılığıyla sağlamak <xref:System.Collections.Generic.Comparer%601.Default%2A?displayProperty=nameWithType> ve <xref:System.Collections.Generic.EqualityComparer%601.Default%2A?displayProperty=nameWithType> özellikleri.  
   
 ### <a name="collection-functionality"></a>Toplama işlevleri  
- <xref:System.Collections.Generic.ICollection%601> Genel arabirimidir genel koleksiyon türleri için temel arabirimi. Ekleme, kaldırma, kopyalama ve toplamının öğelerini numaralandırma için temel işlevleri sağlar. <xref:System.Collections.Generic.ICollection%601>Her iki genel devralır <xref:System.Collections.Generic.IEnumerable%601> ve nongeneric <xref:System.Collections.IEnumerable>.  
+ <xref:System.Collections.Generic.ICollection%601> Genel arabirimidir genel koleksiyon türleri için temel arabirimi. Ekleme, kaldırma, kopyalama ve toplamının öğelerini numaralandırma için temel işlevleri sağlar. <xref:System.Collections.Generic.ICollection%601> Her iki genel devralır <xref:System.Collections.Generic.IEnumerable%601> ve nongeneric <xref:System.Collections.IEnumerable>.  
   
  <xref:System.Collections.Generic.IList%601> Genel arabirimi genişletiyor <xref:System.Collections.Generic.ICollection%601> dizinli alma yöntemleriyle genel arabirim.  
   

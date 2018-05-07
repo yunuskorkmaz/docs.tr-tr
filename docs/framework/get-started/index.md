@@ -1,25 +1,18 @@
 ---
 title: .NET Framework ile çalışmaya başlama
 ms.custom: updateeachrelease
-ms.date: 10/17/2017
-ms.prod: .net-framework
-ms.technology:
-- dotnet-clr
-ms.topic: article
+ms.date: 04/10/2018
 helpviewer_keywords:
 - .NET Framework, getting started
 - getting started [.NET Framework]
 ms.assetid: c693fd34-88fe-4d90-b332-19eeadf3b7e7
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 3295d17b0ef4650c38f264dfc785eee7a452be86
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: d62ae73c9a2789087785e1fba6b227245ee08a10
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="get-started-with-the-net-framework"></a>.NET Framework ile çalışmaya başlama
 
@@ -60,7 +53,7 @@ Genel olarak, bilgisayarınızda yüklü .NET Framework sürümlerini kaldırman
 
 - Belirli bir .NET Framework sürümünü kullandığınız uygulama bağımlı olması durumunda, bu uygulama bu sürümü kaldırılırsa kesilebilir.
 
-- .NET Framework'ün bazı sürümlerinde, önceki sürümlerin yerinde güncelleştirmelerdir. Örneğin, [!INCLUDE[net_v35_short](../../../includes/net-v35-short-md.md)] sürüm 2.0 bir yerinde güncelleştirmesidir ve 4.7.1 .NET Framework sürüm 4, 4.5, 4.5.1, 4.5.2, 4.6, 4.6.1, 4.6.2 ve 4.7 için bir yerinde güncelleştirmesidir. Daha fazla bilgi için bkz: [.NET Framework sürümleri ve bağımlılıkları](../../../docs/framework/migration-guide/versions-and-dependencies.md).
+- .NET Framework'ün bazı sürümlerinde, önceki sürümlerin yerinde güncelleştirmelerdir. Örneğin, [!INCLUDE[net_v35_short](../../../includes/net-v35-short-md.md)] bir yerinde güncelleştirmesidir sürüm 2.0 ve .NET Framework 4.7.2 sürümlere 4 4.7.1 aracılığıyla bir yerinde güncelleştirmesidir. Daha fazla bilgi için bkz: [.NET Framework sürümleri ve bağımlılıkları](../../../docs/framework/migration-guide/versions-and-dependencies.md).
 
 Windows 8 önce Windows sürümlerinde .NET Framework'ü seçerseniz, her zaman kullan **programlar ve Özellikler** kaldırmak için Denetim Masası'ndan. Hiçbir zaman, .NET Framework sürümünü el ile kaldırın. Windows 8 ve üzeri, .NET Framework bir işletim sistemi bileşenidir ve bağımsız olarak kaldırılamaz.
 
@@ -73,7 +66,7 @@ Bir geliştirici değilseniz, uygulamalarınızı oluşturmak için .NET Framewo
 
 .NET Framework uygulamaları veya bileşenleri geliştirmek için aşağıdakileri yapın:
 
-1. İşletim sisteminizde önceden değil, uygulamanızı hedeflediğini .NET Framework sürümünü yükleyin. En son ürün sürümü .NET Windows 10 sonbaharda oluşturucuları Update'te önceden yüklenmiş ve Windows işletim sisteminin önceki sürümlerinde indirilebilir 4.7.1, altyapısıdır. .NET Framework sistem gereksinimleri için bkz: [sistem gereksinimleri](../../../docs/framework/get-started/system-requirements.md). Diğer .NET Framework sürümlerini yükleme hakkında daha fazla bilgi için bkz: [Yükleme Kılavuzu](../../../docs/framework/install/guide-for-developers.md). Ek .NET Framework paketler herhangi normal veya zamanlanmış yayın döngüsü dışında çalışırken temelinde kullanıma, yani bant dışı bırakılır. Bu paketleri hakkında daha fazla bilgi için bkz: [.NET Framework ve bant dışı sürümler](../../../docs/framework/get-started/the-net-framework-and-out-of-band-releases.md).
+1. İşletim sisteminizde önceden değil, uygulamanızı hedeflediğini .NET Framework sürümünü yükleyin. .NET Windows üzerinde önceden Framework 4.7.2, en son üretim sürümüdür 10 Nisan 2018 güncelleştirmesi ve Windows işletim sisteminin önceki sürümlerinde indirilebilir. .NET Framework sistem gereksinimleri için bkz: [sistem gereksinimleri](../../../docs/framework/get-started/system-requirements.md). Diğer .NET Framework sürümlerini yükleme hakkında daha fazla bilgi için bkz: [Yükleme Kılavuzu](../../../docs/framework/install/guide-for-developers.md). Ek .NET Framework paketler herhangi normal veya zamanlanmış yayın döngüsü dışında çalışırken temelinde kullanıma, yani bant dışı bırakılır. Bu paketleri hakkında daha fazla bilgi için bkz: [.NET Framework ve bant dışı sürümler](../../../docs/framework/get-started/the-net-framework-and-out-of-band-releases.md).
 
 2. Dil veya uygulamalarınızı geliştirmek için kullanmak istediğiniz .NET Framework tarafından desteklenen dilleri seçin. Dilleri sayısı dahil olmak üzere, kullanılabilir [Visual Basic](../../visual-basic/index.md), [C#](../../csharp/index.md), [F #](../../fsharp/index.md)ve C + +/ CLI Microsoft'tan. (.NET Framework aynılarını için uygulamalar geliştirmenize olanak tanıyan bir programlama dili [ortak dil altyapısı (CLI) belirtimi](http://go.microsoft.com/fwlink/?LinkId=199862).)
 

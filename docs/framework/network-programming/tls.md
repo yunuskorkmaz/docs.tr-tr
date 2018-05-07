@@ -2,8 +2,6 @@
 title: .NET Framework ile Aktarım Katmanı Güvenliği (TLS) en iyi uygulamalar
 description: Aktarım Katmanı Güvenliği (TLS) kullanarak .NET Framework ile en iyi uygulamaları açıklar
 ms.date: 03/15/2018
-ms.prod: .net-framework
-ms.topic: article
 helpviewer_keywords:
 - sending data, Internet security
 - protocols, Internet security
@@ -15,15 +13,11 @@ helpviewer_keywords:
 - security [.NET Framework], Internet
 - permissions [.NET Framework], Internet
 author: blowdart
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 7298c87c3e61103577d4262ab2dc2645d7e6265a
-ms.sourcegitcommit: b750a8e3979749b214e7e10c82efb0a0524dfcb1
+ms.openlocfilehash: 41814129d038f8cb1ab98db0c7a4e0cbd7e7cd54
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/09/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="transport-layer-security-tls-best-practices-with-the-net-framework"></a>.NET Framework ile Aktarım Katmanı Güvenliği (TLS) en iyi uygulamalar
 
@@ -240,7 +234,7 @@ Windows Registry Editor Version 5.00
 
 İle başlayan `HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\SecurityProviders\SCHANNEL\Protocols` kayıt defteri anahtarı. Bu anahtarın altında tüm alt kümesinde oluşturabilirsiniz `SSL 2.0`, `SSL 3.0`, `TLS 1.0`, `TLS 1.1`, ve `TLS 1.2`. Her bu anahtarlarını altında alt anahtarları oluşturabilirsiniz `Client` ve/veya `Server`. Altında `Client` ve `Server`, DWORD değerlerini oluşturabilirsiniz `DisabledByDefault` (0 veya 1) ve `Enabled` (0 veya 0xFFFFFFFF).
 
-## <a name="the-schusestrongcrypto-flag"></a>The SCH_USE_STRONG_CRYPTO flag
+## <a name="the-schusestrongcrypto-flag"></a>SCH_USE_STRONG_CRYPTO bayrağı
 
 Bu etkinleştirildiğinde (varsayılan olarak, tarafından bir `AppContext` geçiş, veya Windows kayıt defteri tarafından), .NET Framework kullanan `SCH_USE_STRONG_CRYPTO` TLS güvenlik protokolü, uygulamanız istediğinde, bayrak. `SCH_USE_STRONG_CRYPTO` Bayrağı ile varsayılan olarak, etkinleştirilebilir `AppContext` geçiş, veya kayıt defteri ile. İşletim sistemi bayrak geçirir `Schannel`bilinen zayıf şifreleme algoritmalarını devre dışı bırakmak için talimatını için paketleri ve aksi durumda daha iyi birlikte çalışabilirlik için etkinleştirilebilir TLS/SSL protokol sürümleri şifre. Daha fazla bilgi için bkz.:
 
@@ -271,7 +265,7 @@ TLS 1.2, işletim sistemi ve .NET Framework sürümünü anlaşmak üzere uygula
 
 Etkinleştirmek veya TLS 1.2 ve/veya TLS 1.1 onları destekleyen bir sistemde yeniden etkinleştirmek için bkz: [Aktarım Katmanı Güvenliği (TLS) kayıt defteri ayarları](/windows-server/security/tls/tls-registry-settings).
 
-| **OS** | **TLS 1.2 desteği** |
+| **İŞLETİM SİSTEMİ** | **TLS 1.2 desteği** |
 | --- | --- |
 | Windows 10</br>Windows Server 2016 | Desteklenen ve varsayılan olarak etkindir. |
 | Windows 8.1</br>Windows Server 2012 R2 | Desteklenen ve varsayılan olarak etkindir. |
@@ -286,7 +280,7 @@ Hangi TLS/SSL protokolleri etkin her Windows sürümü varsayılan olarak daha f
 
 Bu tablo, TLS 1.2 .NET Framework 3.5 ile desteklemek gereken işletim sistemi güncelleştirme gösterir. Tüm işletim sistemi güncelleştirmeleri uygulamanızı öneririz.
 
-| **OS** | **TLS 1.2 .NET Framework 3.5 ile desteklemek için gereken en düşük güncelleştirme** |
+| **İŞLETİM SİSTEMİ** | **TLS 1.2 .NET Framework 3.5 ile desteklemek için gereken en düşük güncelleştirme** |
 | --- | --- |
 | Windows 10</br>Windows Server 2016 | [Windows 10 sürüm 1511 için toplu güncelleştirme ve Windows Server 2016 Technical Preview 4: 10 Mayıs 2016](https://support.microsoft.com/help/3156421/cumulative-update-for-windows-10-version-1511-and-windows-server-2016) |
 | Windows 8.1</br>Windows Server 2012 R2 | [TLS sistem varsayılan Windows 8.1 ve Windows Server 2012 R2 üzerinde .NET Framework 3.5 dahil sürümleri için destek](https://support.microsoft.com/help/3154520/support-for-tls-system-default-versions-included-in-the--net-framework) |
@@ -295,7 +289,7 @@ Bu tablo, TLS 1.2 .NET Framework 3.5 ile desteklemek gereken işletim sistemi g�
 | Windows Server 2008 | [TLS sistem varsayılan Windows Vista SP2 ve Server 2008 SP2 üzerinde .NET Framework 2.0 SP2 dahil sürümleri için destek](https://support.microsoft.com/help/3154517/support-for-tls-system-default-versions-included-in-the--net-framework) |
 | Windows Vista | Desteklenmez |
 
-## <a name="azure-cloud-services"></a>Azure Cloud Services
+## <a name="azure-cloud-services"></a>Azure bulut Hizmetleri
 
 Kullanıyorsanız [Azure Cloud Services](https://azure.microsoft.com/services/cloud-services/) barındırmak ve uygulamanızı çalıştırmak için Web ve çalışan rolleri desteklemek için TLS 1.2 dikkate almanız gereken bazı noktalar vardır.
 

@@ -1,29 +1,17 @@
 ---
-title: "DataGrid Denetiminde Varsayılan Klavye ve Fare Davranışı"
-ms.custom: 
+title: DataGrid Denetiminde Varsayılan Klavye ve Fare Davranışı
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-wpf
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - DataGrid [WPF], keyboard behavior
 - DataGrid [WPF], mouse behavior
 - keyboard behavior [WPF], DataGrid
 - mouse behavior [WPF], DataGrid
 ms.assetid: 563b8854-ca39-4d97-8235-17eaa0f93c8d
-caps.latest.revision: "7"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 28cb1b02e67d076f9190e2d8e36b72c20cc5c4e2
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 559b84d3e6b5ece6c71f17e6766cac4ec14824cb
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="default-keyboard-and-mouse-behavior-in-the-datagrid-control"></a>DataGrid Denetiminde Varsayılan Klavye ve Fare Davranışı
 Bu konuda, kullanıcıların ile nasıl etkileşim kurabileceğine açıklanmaktadır <xref:System.Windows.Controls.DataGrid> klavye ve fare kullanarak denetim.  
@@ -96,7 +84,7 @@ Bu konuda, kullanıcıların ile nasıl etkileşim kurabileceğine açıklanmakt
 |CTRL + bir satıra tıklayın|Varsa <xref:System.Windows.Controls.DataGrid.SelectionMode%2A> ayarlanır <xref:System.Windows.Controls.DataGridSelectionMode.Extended>, bitişik olmayan birden çok satır seçimi değiştirir.<br /><br /> Satır zaten seçili ise, satır seçimini kaldırır.|  
 |SHIFT + bir satıra tıklayın|Varsa <xref:System.Windows.Controls.DataGrid.SelectionMode%2A> ayarlanır <xref:System.Windows.Controls.DataGridSelectionMode.Extended>, bitişik çok satır seçimi değiştirir.|  
 |Bir satır grubu başlığını tıklatın|Genişletir veya grup daraltır.|  
-|Sol üst köşesinde Tümünü Seç düğmesini tıklatın<xref:System.Windows.Controls.DataGrid>|Varsa <xref:System.Windows.Controls.DataGrid.SelectionMode%2A> ayarlanır <xref:System.Windows.Controls.DataGridSelectionMode.Extended>, tüm satırları seçer <xref:System.Windows.Controls.DataGrid>.|  
+|Sol üst köşesinde Tümünü Seç düğmesini tıklatın <xref:System.Windows.Controls.DataGrid>|Varsa <xref:System.Windows.Controls.DataGrid.SelectionMode%2A> ayarlanır <xref:System.Windows.Controls.DataGridSelectionMode.Extended>, tüm satırları seçer <xref:System.Windows.Controls.DataGrid>.|  
   
 ## <a name="mouse-selection"></a>Fare seçimi  
  Varsa <xref:System.Windows.Controls.DataGrid.SelectionMode%2A> özelliği ayarlanmış <xref:System.Windows.Controls.DataGridSelectionMode.Extended>, CTRL veya SHIFT tuşuna basarak çalışırken bir satıra tıklayarak birden çok satır seçimi değiştirir.  

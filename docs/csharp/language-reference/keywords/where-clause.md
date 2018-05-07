@@ -1,24 +1,17 @@
 ---
 title: where tümcesi (C# Başvurusu)
 ms.date: 07/20/2015
-ms.prod: .net
-ms.technology:
-- devlang-csharp
-ms.topic: article
 f1_keywords:
 - whereclause_CSharpKeyword
 helpviewer_keywords:
 - where keyword [C#]
 - where clause [C#]
 ms.assetid: 7f9bf952-7744-4f91-b676-cddb55d107c3
-caps.latest.revision: 16
-author: BillWagner
-ms.author: wiwagn
-ms.openlocfilehash: 0324346ee5e214bf467fcb522ef781c91fa1b76f
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: bc040e17f5c612b9fc43a9ef24fb6f15f0942b8e
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="where-clause-c-reference"></a>where tümcesi (C# Başvurusu)
 `where` Yan tümcesi, veri kaynağından hangi öğelerin sorgu ifadesinde döndürülecek belirtmek için bir sorgu ifadesinde kullanılır. Bir Boole koşulu geçerlidir (*koşulu*) (aralık değişkeni tarafından başvurulan) her kaynak öğesine ve bunlar belirtilen koşulu olduğu true döndürür. Tek bir sorgu ifade birden çok içerebilir `where` yan tümceleri ve tek bir yan tümce birden çok koşul alt ifadelerin içerebilir.  
@@ -29,7 +22,7 @@ ms.lasthandoff: 11/21/2017
  [!code-csharp[cscsrefQueryKeywords#5](../../../csharp/language-reference/keywords/codesnippet/CSharp/where-clause_1.cs)]  
   
 ## <a name="example"></a>Örnek  
- Tek bir `where` yan tümcesi sayıda koşulları gerektiği gibi kullanarak belirleyebileceğiniz [ && ](../../../csharp/language-reference/operators/conditional-and-operator.md) ve [&#124; &#124;](../../../csharp/language-reference/operators/conditional-or-operator.md) işleçler. Aşağıdaki örnekte, sorgunun yalnızca en az beş olan çift sayı seçmek için iki koşulları belirtir.  
+ Tek bir `where` yan tümcesi sayıda koşulları gerektiği gibi kullanarak belirleyebileceğiniz [ && ](../../../csharp/language-reference/operators/conditional-and-operator.md) ve [ &#124; &#124; ](../../../csharp/language-reference/operators/conditional-or-operator.md) işleçler. Aşağıdaki örnekte, sorgunun yalnızca en az beş olan çift sayı seçmek için iki koşulları belirtir.  
   
  [!code-csharp[cscsrefQueryKeywords#6](../../../csharp/language-reference/keywords/codesnippet/CSharp/where-clause_2.cs)]  
   
@@ -48,7 +41,7 @@ ms.lasthandoff: 11/21/2017
 ## <a name="see-also"></a>Ayrıca Bkz.  
  [Sorgu anahtar sözcükleri (LINQ)](../../../csharp/language-reference/keywords/query-keywords.md)  
  [from yan tümcesi](../../../csharp/language-reference/keywords/from-clause.md)  
- [select tümcesi](../../../csharp/language-reference/keywords/select-clause.md)  
- [Verileri filtreleme](../../programming-guide/concepts/linq/filtering-data.md)  
+ [select yan tümcesi](../../../csharp/language-reference/keywords/select-clause.md)  
+ [Verileri Filtreleme](../../programming-guide/concepts/linq/filtering-data.md)  
  [LINQ Sorgu ifadeleri](../../../csharp/programming-guide/linq-query-expressions/index.md)  
- [C# üzerinde LINQ ile çalışmaya başlama](../../../csharp/programming-guide/concepts/linq/getting-started-with-linq.md)
+ [C#'de LINQ Kullanmaya Başlama](../../../csharp/programming-guide/concepts/linq/getting-started-with-linq.md)

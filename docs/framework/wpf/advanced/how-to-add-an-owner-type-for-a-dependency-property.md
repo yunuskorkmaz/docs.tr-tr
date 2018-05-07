@@ -1,13 +1,6 @@
 ---
-title: "Nasıl yapılır: Bağımlılık Özelliği için Sahip Türü Ekleme"
-ms.custom: 
+title: 'Nasıl yapılır: Bağımlılık Özelliği için Sahip Türü Ekleme'
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-wpf
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -15,16 +8,11 @@ helpviewer_keywords:
 - classes [WPF], adding as owners of dependency properties
 - dependency properties [WPF], adding classes as owners of
 ms.assetid: edcce050-0576-4edb-a31a-3f909637b452
-caps.latest.revision: "11"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: b93934c8f84a7257445b530e27896342bdd73aea
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: bf3f73743d1c76145bf520ed859c27c4d3aaf662
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-add-an-owner-type-for-a-dependency-property"></a>Nasıl yapılır: Bağımlılık Özelliği için Sahip Türü Ekleme
 Bu örnekte, farklı bir tür için kayıtlı bir bağımlılık özelliğinin sahibi olarak bir sınıf eklemek gösterilmiştir. Bunu yaparak [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] okuyucu ve özellik sisteminin olan her ikisi de ek bir özellik sahibi olarak sınıfı tanıyabilir. Sahibi olarak isteğe bağlı olarak ekleme, türe özgü meta verilerini sağlamak ekleme sınıfına olanak tanır.  

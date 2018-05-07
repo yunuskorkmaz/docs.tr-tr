@@ -1,28 +1,17 @@
 ---
-title: "Yönetilen İş Parçacığı Durumları"
-ms.custom: 
+title: Yönetilen İş Parçacığı Durumları
 ms.date: 03/30/2017
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
 ms.technology: dotnet-standard
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - threading [.NET Framework], states
 ms.assetid: 63890d5e-6025-4a7c-aaf0-d8bfd54b455f
-caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-- dotnetcore
-ms.openlocfilehash: 956472ef0e3b0bab85a4eb0b5585f1a4d1e0a991
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: 4266aea9bf206d127e2837955dcc00cc23f4119b
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="managed-thread-states"></a>Yönetilen İş Parçacığı Durumları
 Özellik <xref:System.Threading.Thread.ThreadState%2A?displayProperty=nameWithType> iş parçacığının geçerli durumunu belirten bir bit maskesi sağlar. Bir iş parçacığı her zaman en az bir olası durumlarda bulunduğu <xref:System.Threading.ThreadState> numaralandırma ve aynı anda birden çok durumda olabilir.  
@@ -46,7 +35,7 @@ ms.lasthandoff: 12/23/2017
 |İş parçacığı yanıtlaması bir <xref:System.Threading.Thread.Suspend%2A?displayProperty=nameWithType> isteği.|<xref:System.Threading.ThreadState.Suspended>|  
 |Başka bir iş parçacığı çağrıları <xref:System.Threading.Thread.Resume%2A?displayProperty=nameWithType>.|<xref:System.Threading.ThreadState.Running>|  
 |Başka bir iş parçacığı çağrıları <xref:System.Threading.Thread.Abort%2A?displayProperty=nameWithType>.|<xref:System.Threading.ThreadState.AbortRequested>|  
-|İş parçacığı yanıtlaması bir <xref:System.Threading.Thread.Abort%2A?displayProperty=nameWithType>.|<xref:System.Threading.ThreadState.Aborted>, ardından<xref:System.Threading.ThreadState.Stopped>|  
+|İş parçacığı yanıtlaması bir <xref:System.Threading.Thread.Abort%2A?displayProperty=nameWithType>.|<xref:System.Threading.ThreadState.Aborted>, ardından <xref:System.Threading.ThreadState.Stopped>|  
   
  Çünkü <xref:System.Threading.ThreadState.Running> durumu 0 değerine sahip, bu durum bulmak için bir bit testi yapmak mümkün değildir. Bunun yerine, aşağıdaki testte (sözde kodu) kullanılabilir:  
   

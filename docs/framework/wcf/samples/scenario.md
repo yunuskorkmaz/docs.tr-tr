@@ -1,27 +1,15 @@
 ---
 title: Scenario2
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 816557e0-f676-4731-95c5-b02cbef3d8d7
-caps.latest.revision: "6"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 94ff7c693824e721b17c79b921f4380dba7d04e4
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
-ms.translationtype: MT
+ms.openlocfilehash: f241bf6d4fb2d5f463b85cadf093ab308015c6a2
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="scenario"></a>Senaryo
-Bu bölümde gösteren örnekleri içeren [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] senaryoları.  
+Bu bölüm, Windows Communication Foundation (WCF) senaryolar gösterilmektedir örnekleri içerir.  
   
 ## <a name="in-this-section"></a>Bu Bölümde  
  [Veri Bağlama Senaryoları](../../../../docs/framework/wcf/samples/data-binding-scenarios.md)  
@@ -40,4 +28,4 @@ Bu bölümde gösteren örnekleri içeren [!INCLUDE[indigo1](../../../../include
  Bir hizmeti Arayanın kimlik bilgilerini kullanarak başka bir akış yapmayı gösteren [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] güvenlik altyapısı.  
   
  [Tasarım Desenleri: Liste Tabanlı Yayımlama-Abone Olma](../../../../docs/framework/wcf/samples/design-patterns-list-based-publish-subscribe.md)  
- Liste tabanlı yayımlama-abone olma deseni olarak uygulanan gösteren bir [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] program.
+ Windows Communication Foundation (WCF) programı olarak uygulanan liste tabanlı yayımlama-abone olma deseni gösterir.

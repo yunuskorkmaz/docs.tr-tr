@@ -1,31 +1,17 @@
 ---
 title: Windows Communication Foundation'da Kuyruklar
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 helpviewer_keywords:
 - queues [WCF]
 ms.assetid: 43008409-1bb4-4bd4-85d7-862c8f10ae20
-caps.latest.revision: 17
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 82eb421b86f57cfe7c9a23de3ab24de2d4c470cb
-ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
+ms.openlocfilehash: 96dfee3304369c300c40d595860898c51ff728aa
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/30/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="queues-in-windows-communication-foundation"></a>Windows Communication Foundation'da Kuyruklar
-Bu bölümdeki konular ele [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] desteklemek için sıralar. [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] bir taşıma olarak (daha önce MSMQ da bilinir) Microsoft Message Queuing yararlanarak queuing için destek sağlar ve aşağıdaki senaryolara olanak sağlar:  
+Bu bölümdeki konular, Windows Communication Foundation (WCF) desteğine sıraların tartışın. WCF yararlanmayı Microsoft Message (daha önce MSMQ da bilinir) Queuing tarafından bir taşıma olarak queuing için destek sağlar ve aşağıdaki senaryolara olanak sağlar:  
   
 -   Gevşek bağlı uygulamalar. Gönderen uygulamaların, sıraya alma işlemini yapan uygulamanın iletiyi işlemek kullanılabilir olup olmadığını bilmenize gerek olmadan iletileri gönderebilir. Sıranın kuyruğa alma uygulamaları iletileri ne kadar hızlı işleyebilir bağlı olmayan bir hızda iletileri göndermek gönderen bir uygulama sağlar işleme bağımsızlığı sağlar. Kuyruğa ileti gönderme sıkı bir şekilde ileti işleme değil birleştirildiğinde genel sistem kullanılabilirliğini artırır.  
   
@@ -35,20 +21,20 @@ Bu bölümdeki konular ele [!INCLUDE[indigo1](../../../../includes/indigo1-md.md
   
 -   Bağlantısı kesilmiş işlemleri. Gönderme, alma ve işlemlerinde gibi yüksek Gecikmeli ağlarda veya sınırlı kullanılabilirlik, mobil cihazlar söz konusu olduğunda iletişim kurarken kaybedebilir. Kuyruklar devam etmek bile zaman uç noktalar bağlantısı kesilen bu işlemler sağlar. Bağlantı kurulduğunda, sıraya alma işlemini yapan uygulamanın iletileri iletir.  
   
- Kuyruklar özelliğini kullanmak için bir [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] uygulama standart bağlamaları birini kullanabilirsiniz veya standart bağlamaları biri, gereksinimlerinize uygun değil, özel bir bağlama oluşturabilirsiniz. İlgili standart bağlamalar ve bir seçim yapma hakkında daha fazla bilgi için bkz: [nasıl yapılır: WCF uç noktaları ve Message Queuing uygulamaları ile Exchange iletileri](../../../../docs/framework/wcf/feature-details/how-to-exchange-messages-with-wcf-endpoints-and-message-queuing-applications.md). Özel bağlama oluşturma hakkında daha fazla bilgi için bkz: [özel bağlamalar](../../../../docs/framework/wcf/extending/custom-bindings.md).  
+ Bir WCF uygulamasında sıraları özelliği kullanmak için standart bağlamaları birini kullanabilirsiniz veya standart bağlamaları birini gereksinimlerinizi karşılamadığı varsa özel bağlama oluşturabilirsiniz. İlgili standart bağlamalar ve bir seçim yapma hakkında daha fazla bilgi için bkz: [nasıl yapılır: WCF uç noktaları ve Message Queuing uygulamaları ile Exchange iletileri](../../../../docs/framework/wcf/feature-details/how-to-exchange-messages-with-wcf-endpoints-and-message-queuing-applications.md). Özel bağlama oluşturma hakkında daha fazla bilgi için bkz: [özel bağlamalar](../../../../docs/framework/wcf/extending/custom-bindings.md).  
   
 ## <a name="in-this-section"></a>Bu Bölümde  
  [Kuyruklara Genel Bakış](../../../../docs/framework/wcf/feature-details/queues-overview.md)  
  Message queuing kavramları genel bakış.  
   
  [WCF'de Kuyruğa Alma](../../../../docs/framework/wcf/feature-details/queuing-in-wcf.md)  
- Genel bir bakış [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] sıraya desteği.  
+ WCF sıra destek genel bakış.  
   
  [Nasıl yapılır: WCF Uç Noktaları ile Kuyruğa Alınan İletileri Gönderme ve Alma](../../../../docs/framework/wcf/feature-details/how-to-exchange-queued-messages-with-wcf-endpoints.md)  
- Nasıl kullanılacağı açıklanmaktadır <xref:System.ServiceModel.NetMsmqBinding> arasında iletişim kurmak için sınıf bir [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] istemci ve [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] hizmet.  
+ Nasıl kullanılacağı açıklanmaktadır <xref:System.ServiceModel.NetMsmqBinding> bir WCF istemcisi ile WCF hizmeti arasında iletişim kurmak için sınıf.  
   
  [Nasıl yapılır: WCF Uç Noktaları ve İleti Kuyruğa Alma Uygulamaları ile İleti Alma ve Gönderme](../../../../docs/framework/wcf/feature-details/how-to-exchange-messages-with-wcf-endpoints-and-message-queuing-applications.md)  
- Nasıl kullanılacağı açıklanmaktadır <xref:System.ServiceModel.MsmqIntegration.MsmqIntegrationBinding> arasında iletişim kurmak için [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] ve Message Queuing uygulamaları.  
+ Nasıl kullanılacağı açıklanmaktadır <xref:System.ServiceModel.MsmqIntegration.MsmqIntegrationBinding> WCF ve Message Queuing uygulamalar arasında iletişim kurmak için.  
   
  [Oturumda Kuyruğa Alınmış İletileri Gruplandırma](../../../../docs/framework/wcf/feature-details/grouping-queued-messages-in-a-session.md)  
  Tek bir alıcı uygulamayla ilişkili ileti işleme kolaylaştırmak için bir sıradaki iletiler Grup açıklanmaktadır.  
@@ -63,7 +49,7 @@ Bu bölümdeki konular ele [!INCLUDE[indigo1](../../../../includes/indigo1-md.md
  Zehirli ileti (teslim alma işlemini yapan uygulamanın girişimleri üst sınırını aştınız iletileri) nasıl ele alınacağını açıklar.  
   
  [Windows Vista, Windows Server 2003 ve Windows XP'de Kuyruğa Alma Özelliği Arasındaki Farklar](../../../../docs/framework/wcf/feature-details/diff-in-queue-in-vista-server-2003-windows-xp.md)  
- Farkları özetler [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] sıraları özellik arasında [!INCLUDE[wv](../../../../includes/wv-md.md)], [!INCLUDE[ws2003](../../../../includes/ws2003-md.md)], ve [!INCLUDE[wxp](../../../../includes/wxp-md.md)].  
+ WCF sıraları özelliği farklar özetlenmektedir [!INCLUDE[wv](../../../../includes/wv-md.md)], [!INCLUDE[ws2003](../../../../includes/ws2003-md.md)], ve [!INCLUDE[wxp](../../../../includes/wxp-md.md)].  
   
  [Aktarım Güvenliği Kullanarak İletileri Güvenli Hale Getirme](../../../../docs/framework/wcf/feature-details/securing-messages-using-transport-security.md)  
  Taşıma güvenliği sıraya alınan iletileri güvenli hale getirmek için nasıl kullanılacağını açıklar.  
@@ -75,7 +61,7 @@ Bu bölümdeki konular ele [!INCLUDE[indigo1](../../../../includes/indigo1-md.md
  Genel sıraya alma sorunlarının nasıl giderileceği açıklanmaktadır.  
   
  [Kuyruğa Alınan İletişim için En İyi Uygulamalar](../../../../docs/framework/wcf/feature-details/best-practices-for-queued-communication.md)  
- Kullanmak için en iyi uygulamalar açıklanmaktadır [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] kuyruğa alınmış iletişim.  
+ WCF kullanmak için en iyi uygulamalar kuyruğa alınmış iletişim açıklanmaktadır.  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
  [Message Queuing](http://msdn.microsoft.com/library/ff917e87-05d5-478f-9430-0f560675ece1)

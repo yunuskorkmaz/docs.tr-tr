@@ -1,42 +1,31 @@
 ---
-title: "XslCompiledTransform sınıfı girişleri"
-ms.custom: 
+title: XslCompiledTransform sınıfı girişleri
 ms.date: 03/30/2017
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
 ms.technology: dotnet-standard
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
 ms.assetid: 834049f1-ab41-449e-9f10-4a1d0701bc48
-caps.latest.revision: "2"
 author: mairaw
 ms.author: mairaw
-manager: wpickett
-ms.workload:
-- dotnet
-- dotnetcore
-ms.openlocfilehash: 7aac1e85bdc27c9c8394eadcae841069115b369d
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: bc909b666b90d8c8825e7dbef33e48b6126bd7c2
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="inputs-to-the-xslcompiledtransform-class"></a>XslCompiledTransform sınıfı girişleri
 <xref:System.Xml.Xsl.XslCompiledTransform.Transform%2A> Yöntemi kabul türleri kaynak belge için üç giriş: uygulayan bir nesne <xref:System.Xml.XPath.IXPathNavigable> arabirimi, bir <xref:System.Xml.XmlReader> kaynak belge ya da bir dize URI okur nesnesi.  
   
 > [!NOTE]
->  <xref:System.Xml.Xsl.XslCompiledTransform> Sınıfı, varsayılan olarak boşluk korur. Bu W3C XSLT 1.0 öneri (Bölüm 3.4, http://www.w3.org/TR/xslt.html#strip) uygun şekilde 3.4 bölümüdür.  
+>  <xref:System.Xml.Xsl.XslCompiledTransform> Sınıfı, varsayılan olarak boşluk korur. Bu W3C XSLT 1.0 öneri uygun olarak 3.4 bölümüdür (3.4, bölüm http://www.w3.org/TR/xslt.html#strip).  
   
 ## <a name="ixpathnavigable-interface"></a>IXPathNavigable arabirimi  
  <xref:System.Xml.XPath.IXPathNavigable> Arabirimi uygulandığına <xref:System.Xml.XmlNode> ve <xref:System.Xml.XPath.XPathDocument> sınıfları. Bu sınıfların XML verileri, bir bellek içi önbelleğini temsil eder.  
   
 -   <xref:System.Xml.XmlNode> Sınıfı W3C belge nesne modeli (DOM) üzerinde temel alır ve düzenleme özellikleri içerir.  
   
--   <xref:System.Xml.XPath.XPathDocument> XPath veri modelini temel alan bir salt okunur veri deposu bir sınıftır. <xref:System.Xml.XPath.XPathDocument>XSLT için önerilen sınıf işliyor. Karşılaştırıldığında daha hızlı performans sağlar <xref:System.Xml.XmlNode> sınıfı.  
+-   <xref:System.Xml.XPath.XPathDocument> XPath veri modelini temel alan bir salt okunur veri deposu bir sınıftır. <xref:System.Xml.XPath.XPathDocument> XSLT için önerilen sınıf işliyor. Karşılaştırıldığında daha hızlı performans sağlar <xref:System.Xml.XmlNode> sınıfı.  
   
 > [!NOTE]
 >  Dönüşümleri belgeye bir bütün olarak uygulayın. Belge kök düğümü dışında bir düğümünde geçirirseniz, diğer bir deyişle, bu dönüştürme süreci yüklenen belgedeki tüm düğümleri erişmesini engellemez. Bir düğüm parça dönüştürmek için yalnızca düğüm parçasını içeren bir nesne oluşturmak ve gerekir, nesneyi geçirmek <xref:System.Xml.Xsl.XslCompiledTransform.Transform%2A> yöntemi. Daha fazla bilgi için bkz: [nasıl yapılır: bir düğümü parça dönüştürme](../../../../docs/standard/data/xml/how-to-transform-a-node-fragment.md).  

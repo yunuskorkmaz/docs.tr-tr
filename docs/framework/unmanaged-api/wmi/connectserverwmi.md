@@ -1,11 +1,7 @@
 ---
-title: "ConnectServerWmi işlevi (yönetilmeyen API Başvurusu)"
-description: "ConnectServerWmi işlevi bir WMI ad alanı için bir bağlantı oluşturmak için DCOM kullanır."
+title: ConnectServerWmi işlevi (yönetilmeyen API Başvurusu)
+description: ConnectServerWmi işlevi bir WMI ad alanı için bir bağlantı oluşturmak için DCOM kullanır.
 ms.date: 11/06/2017
-ms.prod: .net-framework
-ms.technology:
-- dotnet-clr
-ms.topic: reference
 api_name:
 - ConnectServerWmi
 api_location:
@@ -20,14 +16,11 @@ topic_type:
 - Reference
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: dc821bddf1d33ea1144fef0821b81cf027d8f92f
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: de8447b9b090fc7f53df23346d61932bcb4dd6ea
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="connectserverwmi-function"></a>ConnectServerWmi işlevi
 Belirtilen bir bilgisayardaki bir WMI ad alanı için DCOM aracılığıyla yapılan bağlantı oluşturur.  
@@ -52,22 +45,22 @@ HRESULT ConnectServerWmi (
 ```  
 ## <a name="parameters"></a>Parametreler
 
-`strNetworkResource`[in] Geçerli bir işaretçi `BSTR` doğru WMI ad alanının nesne yolu içerir. Bkz: [açıklamalar](#remarks) daha fazla bilgi için bölüm.
+`strNetworkResource` [in] Geçerli bir işaretçi `BSTR` doğru WMI ad alanının nesne yolu içerir. Bkz: [açıklamalar](#remarks) daha fazla bilgi için bölüm.
 
-`strUser`[in] Geçerli bir işaretçi `BSTR` kullanıcı adını içerir. A `null` değeri geçerli güvenlik bağlamı gösterir. Kullanıcı mevcut olandan farklı bir etki alanından ise `strUser` ters eğik çizgi ile ayrılmış etki alanı ve kullanıcı adı da içerebilir. `strUser`Ayrıca olması kullanıcı asıl adı (UPN) biçimlendirebilir, suhc olarak  *userName@domainName* . Bkz: [açıklamalar](#remarks) daha fazla bilgi için bölüm.
+`strUser` [in] Geçerli bir işaretçi `BSTR` kullanıcı adını içerir. A `null` değeri geçerli güvenlik bağlamı gösterir. Kullanıcı mevcut olandan farklı bir etki alanından ise `strUser` ters eğik çizgi ile ayrılmış etki alanı ve kullanıcı adı da içerebilir. `strUser` Ayrıca olması kullanıcı asıl adı (UPN) biçimlendirebilir, suhc olarak *userName@domainName*. Bkz: [açıklamalar](#remarks) daha fazla bilgi için bölüm.
 
-`strPassword`[in] Geçerli bir işaretçi `BSTR` parola içeriyor. A `null` geçerli güvenlik bağlamı gösterir. Boş bir dize ("") geçerli sıfır uzunlukta bir parola belirtir.
+`strPassword` [in] Geçerli bir işaretçi `BSTR` parola içeriyor. A `null` geçerli güvenlik bağlamı gösterir. Boş bir dize ("") geçerli sıfır uzunlukta bir parola belirtir.
 
-`strLocale`[in] Geçerli bir işaretçi `BSTR` bilgileri alma doğru yerel gösterir. Microsoft yerel ayar tanımlayıcılarını için dizesinin biçimi olan "MS\_*xxx*", burada *xxx* yerel ayar kimliği (LCID) gösteren onaltılık biçimde bir dizedir. Bu yöntem geçersiz bir yerel belirtilmiş olup olmadığını döndürür `WBEM_E_INVALID_PARAMETER` dışındaki Windows 7 sunucusunun varsayılan yerel ayar kullanıldığı bunun yerine,. Varsa ' null1, geçerli yerel ayar kullanılır. 
+`strLocale` [in] Geçerli bir işaretçi `BSTR` bilgileri alma doğru yerel gösterir. Microsoft yerel ayar tanımlayıcılarını için dizesinin biçimi olan "MS\_*xxx*", burada *xxx* yerel ayar kimliği (LCID) gösteren onaltılık biçimde bir dizedir. Bu yöntem geçersiz bir yerel belirtilmiş olup olmadığını döndürür `WBEM_E_INVALID_PARAMETER` dışındaki Windows 7 sunucusunun varsayılan yerel ayar kullanıldığı bunun yerine,. Varsa ' null1, geçerli yerel ayar kullanılır. 
  
-`lSecurityFlags`[in] Geçirilecek bayrakları `ConnectServerWmi` yöntemi. Bu parametre için sıfır (0) değeri sonuçları çağrısında `ConnectServerWmi` yalnızca bir sunucu bağlantısı kurulduktan sonra döndürüyor. Bu süresiz olarak sunucunun bozuk olup olmadığını yanıt vermeyen bir uygulamada neden olabilir. Diğer geçerli değerler şunlardır:
+`lSecurityFlags` [in] Geçirilecek bayrakları `ConnectServerWmi` yöntemi. Bu parametre için sıfır (0) değeri sonuçları çağrısında `ConnectServerWmi` yalnızca bir sunucu bağlantısı kurulduktan sonra döndürüyor. Bu süresiz olarak sunucunun bozuk olup olmadığını yanıt vermeyen bir uygulamada neden olabilir. Diğer geçerli değerler şunlardır:
 
 | Sabit  | Değer  | Açıklama  |
 |---------|---------|---------|
 | `CONNECT_REPOSITORY_ONLY` | 0x40 | İç kullanım için ayrılmıştır. Kullanmayın. |
-| `WBEM_FLAG_CONNECT_USE_MAX_WAIT` | 0x80 | `ConnectServerWmi`iki dakika veya daha az döndürür. |
+| `WBEM_FLAG_CONNECT_USE_MAX_WAIT` | 0x80 | `ConnectServerWmi` iki dakika veya daha az döndürür. |
 
-`strAuthority`[in] Kullanıcının etki alanı adı. Aşağıdaki değerlere sahip olabilir:
+`strAuthority` [in] Kullanıcının etki alanı adı. Aşağıdaki değerlere sahip olabilir:
 
 | Değer | Açıklama |
 |---------|---------|
@@ -104,7 +97,7 @@ Bu işlev çağrısı sarmalar [IWbemLocator::ConnectServer](https://msdn.micros
 
  Varsayılan ad alanı yerel erişimi için `strNetworkResource` basit bir nesne yolu: "kök\varsayılan" veya "\\.\root\default". İçin uzak bir bilgisayarda varsayılan ad alanına erişimi COM veya Microsoft uyumlu ağ kullanarak içerecek bilgisayar adı: "\\myserver\root\default". Bilgisayar adı, ayrıca bir DNS adı veya IP adresi olabilir. `ConnectServerWmi` İşlevi IPv6 çalıştıran bilgisayarlarla da bağlanabileceği bir IPv6 adresi kullanarak.
 
-`strUser`boş bir dize olamaz. Etki alanında belirtilmişse, `strAuthority`, ayrıca dahil gerekir değil `strUser`, veya işlevi döndürür `WBEM_E_INVALID_PARAMETER`.
+`strUser` boş bir dize olamaz. Etki alanında belirtilmişse, `strAuthority`, ayrıca dahil gerekir değil `strUser`, veya işlevi döndürür `WBEM_E_INVALID_PARAMETER`.
 
 
 ## <a name="requirements"></a>Gereksinimler  
@@ -112,7 +105,7 @@ Bu işlev çağrısı sarmalar [IWbemLocator::ConnectServer](https://msdn.micros
   
  **Başlık:** WMINet_Utils.idl  
   
- **.NET framework sürümleri:**[!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]  
+ **.NET framework sürümleri:** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.  
 [WMI ve performans sayaçları (yönetilmeyen API Başvurusu)](index.md)

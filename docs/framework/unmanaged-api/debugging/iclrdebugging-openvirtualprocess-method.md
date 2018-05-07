@@ -1,14 +1,6 @@
 ---
-title: "ICLRDebugging::OpenVirtualProcess Yöntemi"
-ms.custom: 
+title: ICLRDebugging::OpenVirtualProcess Yöntemi
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: reference
 api_name:
 - ICLRDebugging.OpenVirtualProcess
 api_location:
@@ -23,17 +15,13 @@ helpviewer_keywords:
 ms.assetid: e8ab7c41-d508-4ed9-8a31-ead072b5a314
 topic_type:
 - apiref
-caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: f1f71f42f10c3d25714998d1697b20a5ee13e055
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 51b5a9ecd85f0d40ac2fe2826cbbe7a56a6228d1
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="iclrdebuggingopenvirtualprocess-method"></a>ICLRDebugging::OpenVirtualProcess Yöntemi
 Bir ortak dil çalışma zamanı (CLR) modülü işleminde yüklenen karşılık gelen Icordebugprocess arabirimi alır.  
@@ -85,9 +73,9 @@ HRESULT OpenVirtualProcess(
 |HRESULT|Açıklama|  
 |-------------|-----------------|  
 |S_OK|Yöntem başarıyla tamamlandı.|  
-|E_POINTER|`pDataTarget`olan `null`.|  
+|E_POINTER|`pDataTarget` olan `null`.|  
 |CORDBG_E_LIBRARY_PROVIDER_ERROR|[Iclrdebugginglibraryprovider](../../../../docs/framework/unmanaged-api/debugging/iclrdebugginglibraryprovider-interface.md) geri çağırma bir hata döndürür veya geçerli bir tanıtıcı sağlamaz.|  
-|CORDBG_E_MISSING_DATA_TARGET_INTERFACE|`pDataTarget`çalışma zamanı bu sürümü için gerekli verileri hedef arabirimleri uygulamıyor.|  
+|CORDBG_E_MISSING_DATA_TARGET_INTERFACE|`pDataTarget` çalışma zamanı bu sürümü için gerekli verileri hedef arabirimleri uygulamıyor.|  
 |CORDBG_E_NOT_CLR|Belirtilen modül bir CLR modül değil. Bir CLR modül bozuk belleği, modülü kullanılamıyor veya CLR sürümü dolgusu sürümünden daha yeni olduğundan algılanamıyor olduğunda bu HRESULT da döndürülür.|  
 |CORDBG_E_UNSUPPORTED_DEBUGGING_MODEL|Bu çalışma zamanı sürümü bu hata ayıklama modelini desteklemiyor. Şu anda, hata ayıklama model CLR sürümlerinden önce tarafından desteklenmiyor [!INCLUDE[net_v40_long](../../../../includes/net-v40-long-md.md)]. `pwszVersion` Çıktı parametresi hala olarak bu hatadan sonra doğru değerine ayarlanır.|  
 |CORDBG_E_UNSUPPORTED_FORWARD_COMPAT|Bu hata ayıklayıcı desteği iddia sürümünden büyük CLR sürümüdür. `pwszVersion` Çıktı parametresi hala olarak bu hatadan sonra doğru değerine ayarlanır.|  
@@ -105,7 +93,7 @@ HRESULT OpenVirtualProcess(
   
  **Kitaplığı:** CorGuids.lib  
   
- **.NET framework sürümleri:**[!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
+ **.NET framework sürümleri:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
  [Hata Ayıklama Arabirimleri](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)  

@@ -1,28 +1,19 @@
 ---
-title: "UI Otomasyon Yerleştirme Denetim Düzenini Uygulama"
-ms.custom: 
+title: UI Otomasyon Yerleştirme Denetim Düzenini Uygulama
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-bcl
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - control patterns, dock
 - dock control pattern
 - UI Automation, dock control pattern
 ms.assetid: ea3d2212-7c8e-4dd7-bf08-73141ca2d4fb
-caps.latest.revision: "23"
 author: Xansky
 ms.author: mhopkins
 manager: markl
-ms.workload: dotnet
-ms.openlocfilehash: 136d4ec56cf0c78aac03d1b3f44a18cd268d3bc9
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 9e04814885ae0963d4da99acecf00dc646ecc96f
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="implementing-the-ui-automation-dock-control-pattern"></a>UI Otomasyon Yerleştirme Denetim Düzenini Uygulama
 > [!NOTE]
@@ -39,7 +30,7 @@ DockPosition.Bottom olan "Sınıf Görünümü" penceresi DockPosition.Right ve 
 ## <a name="implementation-guidelines-and-conventions"></a>Uygulama rehberi ve kuralları  
  Yerleştirme denetim düzenini uygulama, aşağıdaki yönergeleri ve kuralları dikkat edin:  
   
--   <xref:System.Windows.Automation.Provider.IDockProvider>yerleştirme kapsayıcının herhangi bir özellik veya takma kapsayıcı içindeki geçerli denetim bitişik yerleştirilmiş denetimlerinin herhangi bir özellik kullanıma sunmuyor.  
+-   <xref:System.Windows.Automation.Provider.IDockProvider> yerleştirme kapsayıcının herhangi bir özellik veya takma kapsayıcı içindeki geçerli denetim bitişik yerleştirilmiş denetimlerinin herhangi bir özellik kullanıma sunmuyor.  
   
 -   Denetimleri birbirine geçerli kendi z-sırasına göre yerleştirilmiş; en yüksek takma kapsayıcı belirtilen kenarından yerleştirilen bunlar z düzeni yatırımlarından, uzağa.  
   

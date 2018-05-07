@@ -1,38 +1,24 @@
 ---
 title: 'Nasıl yapılır: Çift Yönlü Sözleşme ile Hizmetlere Erişme'
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 dev_langs:
 - csharp
 - vb
 helpviewer_keywords:
 - duplex contracts [WCF]
 ms.assetid: 746a9d64-f21c-426c-b85d-972e916ec6c5
-caps.latest.revision: 18
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: c80980ff5a5b1011c021bcaf0688747178ec5b9b
-ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
+ms.openlocfilehash: c0022e6ce3a63c1f497eeee82ca959cec1046cec
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/30/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-access-services-with-a-duplex-contract"></a>Nasıl yapılır: Çift Yönlü Sözleşme ile Hizmetlere Erişme
-Bir özelliği [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] çift yönlü bir Mesajlaşma düzeni kullanan bir hizmet oluşturma yeteneği. Bu desen bir geri çağırma istemcinize ile iletişim kurmak bir hizmet sağlar. Bu konuda oluşturmaya yönelik adımlar gösterilmektedir bir [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] geri çağırma arabirimini uygulayan bir istemci sınıfı istemcisinde.  
+Bir Windows Communication Foundation (WCF) çift yönlü bir Mesajlaşma düzeni kullanan bir hizmet oluşturma yeteneği özelliğidir. Bu desen bir geri çağırma istemcinize ile iletişim kurmak bir hizmet sağlar. Bu konu geri çağırma arabirimini uygulayan bir istemci sınıfta bir WCF istemcisi oluşturma adımlarını gösterir.  
   
  Bir çift bağlama hizmeti istemcinin IP adresini gösterir. İstemci, yalnızca Hizmetleri için güvenleri bağladığı emin olmak için güvenlik kullanmanız gerekir.  
   
- Temel bir oluşturma bir öğretici için [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] hizmet ve istemci, bkz: [başlangıç Öğreticisi](../../../../docs/framework/wcf/getting-started-tutorial.md).  
+ Temel WCF hizmeti ve istemci oluşturma bir öğretici için bkz: [başlangıç Öğreticisi](../../../../docs/framework/wcf/getting-started-tutorial.md).  
   
 ### <a name="to-access-a-duplex-service"></a>Çift yönlü bir hizmete erişmek için  
   
@@ -80,7 +66,7 @@ Bir özelliği [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] çift yö
     Dim site As InstanceContext = New InstanceContext(new CallbackHandler())  
     ```  
   
-6.  Bir örneğini oluşturmak [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] gerektirir Oluşturucusu kullanılarak istemci bir <xref:System.ServiceModel.InstanceContext> nesnesi. Öğesinin ikinci parametresi oluşturucusu, yapılandırma dosyasında bulunan bir uç nokta adıdır.  
+6.  Gerektirir Oluşturucusu kullanarak WCF istemci örneğini oluşturmak bir <xref:System.ServiceModel.InstanceContext> nesnesi. Öğesinin ikinci parametresi oluşturucusu, yapılandırma dosyasında bulunan bir uç nokta adıdır.  
   
     ```csharp  
     CalculatorDuplexClient wcfClient =   
@@ -91,7 +77,7 @@ Bir özelliği [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] çift yö
     Dim wcfClient As New CalculatorDuplexClient(site, "default")  
     ```  
   
-7.  Yöntemleri çağırma [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] gerektiği gibi istemci.  
+7.  WCF istemcisi gerekli olarak yöntemlerini çağırın.  
   
 ## <a name="example"></a>Örnek  
  Aşağıdaki kod örneğinde, çift yönlü sözleşme erişen istemci sınıfın nasıl oluşturulacağı gösterilmektedir.  

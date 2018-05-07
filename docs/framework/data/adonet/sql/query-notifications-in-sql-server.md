@@ -1,24 +1,12 @@
 ---
 title: SQL Server'da sorgu bildirimleri
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-ado
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 0f0ba1a1-3180-4af8-87f7-c795dc8f8f55
-caps.latest.revision: "6"
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
-ms.workload: dotnet
-ms.openlocfilehash: 376f2cfefcaf53affe5a20a5812a02839dd5d4a9
-ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
+ms.openlocfilehash: 60ab686437f764a006fca5a2043d02288ea46d0e
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="query-notifications-in-sql-server"></a>SQL Server'da sorgu bildirimleri
 Hizmet Aracısı altyapı inşa edilen sorgu bildirimleri veriler değiştiğinde bildirim almak uygulamaların olanak tanır. Bu özellik, bilgileri bir veritabanından, bir Web uygulaması gibi bir önbellekte sağlamak ve veri kaynağını değiştiğinde bildirim almak gereken uygulamalar için özellikle yararlıdır.  
@@ -37,15 +25,15 @@ Hizmet Aracısı altyapı inşa edilen sorgu bildirimleri veriler değiştiğind
   
  Veriler değiştiğinde güvenilir saniyeden bildirimleri ihtiyaç duyacağınız bir uygulama geliştiriyorsanız, bölümleri gözden **verimli bir sorgu bildirimleri stratejisi planlama** ve **sorgu alternatifleri Bildirimleri** içinde [bildirimleri için planlama](http://go.microsoft.com/fwlink/?LinkId=211984) SQL Server Books Online konusu. Sorgu bildirimleri ve SQL Server hizmet Aracısı hakkında daha fazla bilgi için SQL Server Books Online'da konular için aşağıdaki bağlantılara bakın.  
   
- **SQL Server Books Online**  
+ **SQL Server Çevrimiçi Kitapları**  
   
 -   [Sorgu bildirimleri kullanma](http://msdn.microsoft.com/library/ms175110.aspx)  
   
 -   [Bildirim için sorgu oluşturma](http://msdn.microsoft.com/library/ms181122.aspx)  
   
--   [Service Broker](http://msdn.microsoft.com/library/bb522889.aspx)  
+-   [Hizmet Aracısı](http://msdn.microsoft.com/library/bb522889.aspx)  
   
--   [Service Broker Developer InfoCenter](http://msdn.microsoft.com/library/ms166100.aspx)  
+-   [Hizmet aracısı geliştirici Bilgi Merkezi](http://msdn.microsoft.com/library/ms166100.aspx)  
   
 -   [Geliştirme (hizmet Aracısı)](http://msdn.microsoft.com/library/bb522908.aspx)  
   

@@ -1,28 +1,18 @@
 ---
-title: ".NET Framework Başlatma Hataları: Kullanıcı Deneyimini Yönetme"
-ms.custom: 
+title: '.NET Framework Başlatma Hataları: Kullanıcı Deneyimini Yönetme'
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - no framework found experience
 - initialization errors [.NET Framework]
 - .NET Framework, initialization errors
 ms.assetid: 680a7382-957f-4f6e-b178-4e866004a07e
-caps.latest.revision: "5"
 author: mairaw
 ms.author: mairaw
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: d8679e930b1f12119211a6463289fb37a18692d6
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 6fe59075f04443ba40c209b6cda5a5071d16c79e
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="net-framework-initialization-errors-managing-the-user-experience"></a>.NET Framework Başlatma Hataları: Kullanıcı Deneyimini Yönetme
 Ortak dil çalışma zamanı (CLR) etkinleştirme sistemi yönetilen uygulama kodu çalıştırmak için kullanılan CLR sürümü belirler. Bazı durumlarda, etkinleştirme sistemine yüklemek için CLR sürümü bulunamıyor mümkün olmayabilir. Bu durum genellikle uygulamanın belirli bir bilgisayarda yüklü değil veya geçersiz bir CLR sürümü gerektirdiğinde oluşur. İstenen sürüm bulunamazsa, CLR etkinleştirme sistemine HRESULT hata kodu işlev veya çağrıldı ve uygulama çalıştıran kullanıcı bir hata iletisi görüntülenebilir arabirimi döndürür. Bu makalede HRESULT kodlarının listesini sağlar ve nasıl görüntülenmesini hata iletisini önlemek açıklanmaktadır.  
@@ -79,11 +69,11 @@ Başlatma hataları için normal hata iletisi
 |--------------|-----------------|--------------------------|------------------------------------|  
 |Yönetilen EXE konağı|Başlatır exe yönetilen.|Eksik bir .NET Framework sürüm durumunda gösterilir|Hayır|  
 |Yönetilen COM konağı|Yükleri COM bileşenlerini süreç içine yönetilen.|Eksik bir .NET Framework sürüm durumunda gösterilir|Evet, SEM_FAILCRITICALERRORS ayarlayarak bayrak|  
-|ClickOnce ana bilgisayar|ClickOnce uygulamaları başlatır.|İle başlayan eksik bir .NET Framework sürüm durumunda gösterilir[!INCLUDE[net_v45](../../../includes/net-v45-md.md)]|Hayır|  
-|XBAP ana bilgisayar|WPF XBAP uygulamaları başlatır.|İle başlayan eksik bir .NET Framework sürüm durumunda gösterilir[!INCLUDE[net_v45](../../../includes/net-v45-md.md)]|Hayır|  
+|ClickOnce ana bilgisayar|ClickOnce uygulamaları başlatır.|İle başlayan eksik bir .NET Framework sürüm durumunda gösterilir [!INCLUDE[net_v45](../../../includes/net-v45-md.md)]|Hayır|  
+|XBAP ana bilgisayar|WPF XBAP uygulamaları başlatır.|İle başlayan eksik bir .NET Framework sürüm durumunda gösterilir [!INCLUDE[net_v45](../../../includes/net-v45-md.md)]|Hayır|  
   
-## <a name="includewin8includeswin8-mdmd-behavior-and-ui"></a>[!INCLUDE[win8](../../../includes/win8-md.md)]Davranışını ve kullanıcı Arabirimi  
- CLR etkinleştirme sistem üzerinde aynı davranışı ve kullanıcı Arabirimi sağlayan [!INCLUDE[win8](../../../includes/win8-md.md)] diğer Windows işletim sistemi sürümlerinde olduğu gibi CLR 2.0 yükleme sorunları karşılaştığında dışındaki. [!INCLUDE[win8](../../../includes/win8-md.md)]içeren [!INCLUDE[net_v45](../../../includes/net-v45-md.md)], CLR 4.5 kullanır. Ancak, [!INCLUDE[win8](../../../includes/win8-md.md)] .NET Framework 2.0, 3.0 veya 3.5, tüm CLR 2.0 kullanan içermez. Sonuç olarak, CLR 2.0 bağımlı olan uygulamalar çalıştırmayın [!INCLUDE[win8](../../../includes/win8-md.md)] varsayılan olarak. Bunun yerine, kullanıcıların .NET Framework 3.5 yüklemek aşağıdaki iletişim kutusunu görüntüleyin. Kullanıcılar, .NET Framework 3.5 Denetim Masası'nda etkinleştirebilirsiniz. Her iki seçenek makalede açıklanan [Windows 10, Windows 8.1 ve Windows 8 .NET Framework 3.5 yüklemek](../../../docs/framework/install/dotnet-35-windows-10.md).  
+## <a name="includewin8includeswin8-mdmd-behavior-and-ui"></a>[!INCLUDE[win8](../../../includes/win8-md.md)] Davranışını ve kullanıcı Arabirimi  
+ CLR etkinleştirme sistem üzerinde aynı davranışı ve kullanıcı Arabirimi sağlayan [!INCLUDE[win8](../../../includes/win8-md.md)] diğer Windows işletim sistemi sürümlerinde olduğu gibi CLR 2.0 yükleme sorunları karşılaştığında dışındaki. [!INCLUDE[win8](../../../includes/win8-md.md)] içeren [!INCLUDE[net_v45](../../../includes/net-v45-md.md)], CLR 4.5 kullanır. Ancak, [!INCLUDE[win8](../../../includes/win8-md.md)] .NET Framework 2.0, 3.0 veya 3.5, tüm CLR 2.0 kullanan içermez. Sonuç olarak, CLR 2.0 bağımlı olan uygulamalar çalıştırmayın [!INCLUDE[win8](../../../includes/win8-md.md)] varsayılan olarak. Bunun yerine, kullanıcıların .NET Framework 3.5 yüklemek aşağıdaki iletişim kutusunu görüntüleyin. Kullanıcılar, .NET Framework 3.5 Denetim Masası'nda etkinleştirebilirsiniz. Her iki seçenek makalede açıklanan [Windows 10, Windows 8.1 ve Windows 8 .NET Framework 3.5 yüklemek](../../../docs/framework/install/dotnet-35-windows-10.md).  
   
  ![Windows 8 3.5 Yükle iletişim kutusunu](../../../docs/framework/deployment/media/installdialog.png "installdialog")  
 İsteğe bağlı olarak .NET Framework 3.5 yüklemek için istemleri  

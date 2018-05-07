@@ -1,24 +1,17 @@
 ---
-title: "typeof (C# Başvurusu)"
+title: typeof (C# Başvurusu)
 ms.date: 07/20/2015
-ms.prod: .net
-ms.technology:
-- devlang-csharp
-ms.topic: article
 f1_keywords:
 - typeof
 - typeof_CSharpKeyword
 helpviewer_keywords:
 - typeof keyword [C#]
 ms.assetid: 0c08d880-515e-46bb-8cd2-48b8dd62c08d
-caps.latest.revision: 
-author: BillWagner
-ms.author: wiwagn
-ms.openlocfilehash: be24740ea7f6fbe8780dd9cac58b7dea9aaf6872
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: be79fa4f2cfb1119a50201bf6c18a144726f2f21
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="typeof-c-reference"></a>typeof (C# Başvurusu)
 Elde etmek için kullanılan `System.Type` nesne türü için. A `typeof` ifade aşağıdaki formu alır:  
@@ -58,7 +51,7 @@ string s = method.ReturnType.GetInterface
 ## <a name="see-also"></a>Ayrıca Bkz.  
  <xref:System.Type?displayProperty=nameWithType>  
  [C# başvurusu](../../../csharp/language-reference/index.md)  
- [C# programlama kılavuzu](../../../csharp/programming-guide/index.md)  
- [C# anahtar sözcükleri](../../../csharp/language-reference/keywords/index.md)  
- [değil](../../../csharp/language-reference/keywords/is.md)  
- [İşleç anahtar sözcükleri](../../../csharp/language-reference/keywords/operator-keywords.md)
+ [C# Programlama Kılavuzu](../../../csharp/programming-guide/index.md)  
+ [C# Anahtar Sözcükleri](../../../csharp/language-reference/keywords/index.md)  
+ [is](../../../csharp/language-reference/keywords/is.md)  
+ [İşleç Anahtar Sözcükleri](../../../csharp/language-reference/keywords/operator-keywords.md)

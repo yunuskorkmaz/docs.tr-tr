@@ -1,29 +1,22 @@
 ---
-title: "await (C# Başvurusu)"
+title: await (C# Başvurusu)
 ms.date: 05/22/2017
-ms.prod: .net
-ms.technology:
-- devlang-csharp
-ms.topic: article
 f1_keywords:
 - await_CSharpKeyword
 helpviewer_keywords:
 - await keyword [C#]
 - await [C#]
 ms.assetid: 50725c24-ac76-4ca7-bca1-dd57642ffedb
-caps.latest.revision: 
-author: BillWagner
-ms.author: wiwagn
-ms.openlocfilehash: 23a3299492c538963e9a5dceaadc81a44d386b19
-ms.sourcegitcommit: 401c4427a3ec0d1263543033b3084039278509dc
+ms.openlocfilehash: e32c7007ca98ce2153386665b60c45ff9e90cc3b
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/06/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="await-c-reference"></a>await (C# Başvurusu)
 `await` İşleci awaited görevi tamamlanana kadar yönteminin yürütülmesi askıya noktası eklemek için zaman uyumsuz bir yöntem göreve uygulanır. Görev devam eden iş temsil eder.  
   
-`await`yalnızca zaman uyumsuz bir yöntem değiştiren kullanılabilir [zaman uyumsuz](../../../csharp/language-reference/keywords/async.md) anahtar sözcüğü. Kullanılarak tanımlanmış böyle bir yöntemi, `async` değiştiricisini ve genellikle bir veya daha fazla içeren `await` ifadeleri olarak adlandırılır bir *async yöntemi*.  
+`await` yalnızca zaman uyumsuz bir yöntem değiştiren kullanılabilir [zaman uyumsuz](../../../csharp/language-reference/keywords/async.md) anahtar sözcüğü. Kullanılarak tanımlanmış böyle bir yöntemi, `async` değiştiricisini ve genellikle bir veya daha fazla içeren `await` ifadeleri olarak adlandırılır bir *async yöntemi*.  
   
 > [!NOTE]
 >  `async` Ve `await` anahtar sözcükler, C# 5'te sunulmuştu. Zaman uyumsuz programlamaya giriş için bkz: [zaman uyumsuz programlama ile async ve await](../../../csharp/programming-guide/concepts/async/index.md).  
@@ -76,4 +69,4 @@ Aşağıdaki örnek, URL'leri için komut satırı bağımsız değişken olarak
 ## <a name="see-also"></a>Ayrıca bkz.  
 [Zaman uyumsuz programlama ile zaman uyumsuz ve bekleme](../../../csharp/programming-guide/concepts/async/index.md)   
 [İzlenecek yol: Async kullanarak Web'e erişme ve bekler](../../../csharp/programming-guide/concepts/async/walkthrough-accessing-the-web-by-using-async-and-await.md)   
-[zaman uyumsuz](../../../csharp/language-reference/keywords/async.md)
+[async](../../../csharp/language-reference/keywords/async.md)

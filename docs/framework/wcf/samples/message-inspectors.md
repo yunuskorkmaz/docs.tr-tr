@@ -1,24 +1,12 @@
 ---
-title: "İleti Denetçileri"
-ms.custom: 
+title: İleti Denetçileri
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 9bd1f305-ad03-4dd7-971f-fa1014b97c9b
-caps.latest.revision: "19"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 7ed4f31e004ddeb69a29568b3892ab7379715457
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 05dbee820a002feb1f2a1672220be0c4a397f952
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="message-inspectors"></a>İleti Denetçileri
 Bu örnek, uygulama ve hizmet ve istemci ileti denetçileri yapılandırma gösterilmektedir.  
@@ -52,7 +40,7 @@ public class SchemaValidationMessageInspector : IClientMessageInspector, IDispat
   
  Tüm hizmet (gönderen) iletiyi denetçisi iki uygulamalıdır <xref:System.ServiceModel.Dispatcher.IDispatchMessageInspector> yöntemleri <xref:System.ServiceModel.Dispatcher.IDispatchMessageInspector.AfterReceiveRequest%2A> ve <xref:System.ServiceModel.Dispatcher.IDispatchMessageInspector.BeforeSendReply%28System.ServiceModel.Channels.Message%40%2CSystem.Object%29>.  
   
- <xref:System.ServiceModel.Dispatcher.IDispatchMessageInspector.AfterReceiveRequest%2A>seri durumdan ve işlem için gönderilen önce bir ileti alındı, kanal yığını tarafından işlenen ve bir hizmete atanan olduğunda, ancak gönderici tarafından çağrılır. Gelen ileti şifrelenmişse, ileti denetçisi ulaştığında, ileti zaten şifresi çözülür. Yöntemi alır `request` ileti geçirilen Denetlenmekte, yönetilebilir veya gerektiğinde yerini iletiye sağlayan bir başvuru parametre olarak. Dönüş değeri gibi herhangi bir nesne olabilir ve geçirilen bağıntı durumu nesnesi olarak kullanılan <xref:System.ServiceModel.Dispatcher.IDispatchMessageInspector.BeforeSendReply%2A> hizmeti geçerli iletiye yanıt döndüğünde. Bu örnekte <xref:System.ServiceModel.Dispatcher.IDispatchMessageInspector.AfterReceiveRequest%2A> özel, yerel yöntemine iletisinin denetleme (doğrulama) Temsilciler `ValidateMessageBody` ve hiçbir bağıntı durum nesnesi döndürür. Bu yöntem geçersiz ileti hizmete geçmesini sağlar.  
+ <xref:System.ServiceModel.Dispatcher.IDispatchMessageInspector.AfterReceiveRequest%2A> seri durumdan ve işlem için gönderilen önce bir ileti alındı, kanal yığını tarafından işlenen ve bir hizmete atanan olduğunda, ancak gönderici tarafından çağrılır. Gelen ileti şifrelenmişse, ileti denetçisi ulaştığında, ileti zaten şifresi çözülür. Yöntemi alır `request` ileti geçirilen Denetlenmekte, yönetilebilir veya gerektiğinde yerini iletiye sağlayan bir başvuru parametre olarak. Dönüş değeri gibi herhangi bir nesne olabilir ve geçirilen bağıntı durumu nesnesi olarak kullanılan <xref:System.ServiceModel.Dispatcher.IDispatchMessageInspector.BeforeSendReply%2A> hizmeti geçerli iletiye yanıt döndüğünde. Bu örnekte <xref:System.ServiceModel.Dispatcher.IDispatchMessageInspector.AfterReceiveRequest%2A> özel, yerel yöntemine iletisinin denetleme (doğrulama) Temsilciler `ValidateMessageBody` ve hiçbir bağıntı durum nesnesi döndürür. Bu yöntem geçersiz ileti hizmete geçmesini sağlar.  
   
 ```  
 object IDispatchMessageInspector.AfterReceiveRequest(ref System.ServiceModel.Channels.Message request, System.ServiceModel.IClientChannel channel, System.ServiceModel.InstanceContext instanceContext)  
@@ -67,7 +55,7 @@ object IDispatchMessageInspector.AfterReceiveRequest(ref System.ServiceModel.Cha
 }  
 ```  
   
- <xref:System.ServiceModel.Dispatcher.IDispatchMessageInspector.BeforeSendReply%28System.ServiceModel.Channels.Message%40%2CSystem.Object%29>bir yanıt gelen ileti işlendiğinde bir istemciye ya da tek yönlü iletileri, söz konusu olduğunda gönderilmek üzere hazır olduğunda çağrılır. Bu bağımsız olarak MEP simetrik, çağrılan saymak uzantılar sağlar. İle <xref:System.ServiceModel.Dispatcher.IDispatchMessageInspector.AfterReceiveRequest%2A>, ileti başvuru parametre olarak geçirilir ve Denetlenmekte, değiştirilebilir veya değiştirildi. Bu örnekte gerçekleştirilen ileti doğrulama yeniden için temsilci `ValidMessageBody` yöntemi, ancak doğrulama hatalarının işlenmesini biraz farklı bu durumda.  
+ <xref:System.ServiceModel.Dispatcher.IDispatchMessageInspector.BeforeSendReply%28System.ServiceModel.Channels.Message%40%2CSystem.Object%29> bir yanıt gelen ileti işlendiğinde bir istemciye ya da tek yönlü iletileri, söz konusu olduğunda gönderilmek üzere hazır olduğunda çağrılır. Bu bağımsız olarak MEP simetrik, çağrılan saymak uzantılar sağlar. İle <xref:System.ServiceModel.Dispatcher.IDispatchMessageInspector.AfterReceiveRequest%2A>, ileti başvuru parametre olarak geçirilir ve Denetlenmekte, değiştirilebilir veya değiştirildi. Bu örnekte gerçekleştirilen ileti doğrulama yeniden için temsilci `ValidMessageBody` yöntemi, ancak doğrulama hatalarının işlenmesini biraz farklı bu durumda.  
   
  Hizmette bir doğrulama hatası oluşursa, `ValidateMessageBody` yöntemi atar <xref:System.ServiceModel.FaultException>-özel durumları türetilmiş. İçinde <xref:System.ServiceModel.Dispatcher.IDispatchMessageInspector.AfterReceiveRequest%2A>, bu özel durumlar burada bunlar otomatik olarak SOAP hataları dönüştürülen ve istemciye geçişli hizmet modeli altyapısı içine koyabilirsiniz. İçinde <xref:System.ServiceModel.Dispatcher.IDispatchMessageInspector.BeforeSendReply%2A>, <xref:System.ServiceModel.FaultException> özel durumlar gerekir değil put altyapısını, ileti denetçisi çağrılmadan önce hizmeti tarafından oluşturulan hataya özel durumları dönüştürme oluştuğundan. Bu nedenle aşağıdaki uygulama bilinen yakalar `ReplyValidationFault` özel durumu ve yanıt iletisi bir açık hata iletisi ile değiştirir. Bu yöntem geçersiz ileti hizmeti uygulaması tarafından döndürülür sağlar.  
   
@@ -93,7 +81,7 @@ void IDispatchMessageInspector.BeforeSendReply(ref System.ServiceModel.Channels.
   
  İstemci ileti denetçisi çok benzer. Gelen uygulanmalı iki yöntem <xref:System.ServiceModel.Dispatcher.IClientMessageInspector> olan <xref:System.ServiceModel.Dispatcher.IClientMessageInspector.AfterReceiveReply%2A> ve <xref:System.ServiceModel.Dispatcher.IClientMessageInspector.BeforeSendRequest%2A>.  
   
- <xref:System.ServiceModel.Dispatcher.IClientMessageInspector.BeforeSendRequest%2A>ileti istemci uygulaması veya işlem biçimlendirici tarafından oluşan olduğunda çağrılır. İleti dağıtıcısı ileti denetçileri ile henüz olarak Denetlenmekte veya tamamen değiştirilir. Bu örnekte, denetçisi temsilciler aynı yerel `ValidateMessageBody` gönderme ileti denetçileri için de kullanılır yardımcı yöntemi.  
+ <xref:System.ServiceModel.Dispatcher.IClientMessageInspector.BeforeSendRequest%2A> ileti istemci uygulaması veya işlem biçimlendirici tarafından oluşan olduğunda çağrılır. İleti dağıtıcısı ileti denetçileri ile henüz olarak Denetlenmekte veya tamamen değiştirilir. Bu örnekte, denetçisi temsilciler aynı yerel `ValidateMessageBody` gönderme ileti denetçileri için de kullanılır yardımcı yöntemi.  
   
  Davranış (oluşturucuda belirtildiği şekilde) istemci ve hizmet doğrulama arasında istemci doğrulama kullanıcı koda yerel olarak gerçekleştirildiği için ve bir hizmet hatası nedeniyle değil put yerel özel durumları oluşturur farktır. Genellikle, hizmet dağıtıcısı denetçiler hataları throw ve istemci denetçiler özel durumlar oluşturma kuralıdır.  
   
@@ -420,7 +408,7 @@ catch (Exception e)
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  Bu dizin mevcut değilse, Git [Windows Communication Foundation (WCF) ve .NET Framework 4 için Windows Workflow Foundation (WF) örnek](http://go.microsoft.com/fwlink/?LinkId=150780) tüm indirmek için [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] ve [!INCLUDE[wf1](../../../../includes/wf1-md.md)] örnekleri. Bu örnek aşağıdaki dizinde bulunur.  
+>  Bu dizin mevcut değilse, Git [Windows Communication Foundation (WCF) ve .NET Framework 4 için Windows Workflow Foundation (WF) örnek](http://go.microsoft.com/fwlink/?LinkId=150780) tüm Windows Communication Foundation (WCF) indirmek için ve [!INCLUDE[wf1](../../../../includes/wf1-md.md)] örnekleri. Bu örnek aşağıdaki dizinde bulunur.  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Extensibility\MessageInspectors`  
   

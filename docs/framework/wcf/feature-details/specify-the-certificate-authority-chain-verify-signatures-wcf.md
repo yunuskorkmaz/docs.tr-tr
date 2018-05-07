@@ -1,38 +1,24 @@
 ---
 title: 'Nasıl yapılır: İmzaları Doğrulamak için Kullanılan Sertifika Yetkilendirme Sertifika Zincirini Belirtme (WCF)'
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 helpviewer_keywords:
 - certificates [WCF], specifying the certificate authority certificate chain
 - certificates [WCF], verifying signatures
 ms.assetid: 7c719355-aa41-4567-80d0-5115a8cf73fd
-caps.latest.revision: 6
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 29637ea7f0a1e533a6735ebfa6f428fe20039e48
-ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
+ms.openlocfilehash: 14f7691046f9512e25006bd6cd02749eed825003
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/30/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-specify-the-certificate-authority-certificate-chain-used-to-verify-signatures-wcf"></a>Nasıl yapılır: İmzaları Doğrulamak için Kullanılan Sertifika Yetkilendirme Sertifika Zincirini Belirtme (WCF)
-Zaman [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] varsayılan doğrular X.509 sertifikası güvenilen bir sertifika yetkilisi tarafından verilmiş bir X.509 sertifikası ile imzalanmış bir SOAP iletisi alır. Bu sertifika deposunda bakarak ve sertifika, sertifika yetkilisi olarak belirlendiyse için güvenilir belirleme gerçekleştirilir. Sırayla [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] bunun belirlenmesi için sertifika yetkilendirme sertifika zincirini doğru sertifika depolama alanına yüklenmelidir.  
+Windows Communication Foundation (WCF) bir X.509 sertifikası ile imzalanmış bir SOAP iletisi aldığında, varsayılan olarak, X.509 sertifikası güvenilen bir sertifika yetkilisi tarafından verilmiş olduğunu doğrular. Bu sertifika deposunda bakarak ve sertifika, sertifika yetkilisi olarak belirlendiyse için güvenilir belirleme gerçekleştirilir. Bunun belirlenmesi WCF için sırayla sertifika yetkilendirme sertifika zincirini doğru sertifika deposuna yüklenmesi gerekir.  
   
 ### <a name="to-install-a-certification-authority-certificate-chain"></a>Bir sertifika yetkilendirme sertifika zincirini yüklemek için  
   
--   SOAP ileti alıcısı X.509 sertifikaları veren güven amaçlayan her sertifika yetkilisi için yükleme sertifikanın sertifika yetkilisi sertifikası zincirine depolamak, [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] X.509 sertifikaları almak için yapılandırılmış Kaynak.  
+-   Bir SOAP iletisi alıcı güven amaçlayan her sertifika yetkilisi için verilen X.509 sertifikalarının yükleyin sertifika yetkilendirme sertifika zincirini sertifika deposuna WCF X.509 sertifikaları almak için yapılandırılır.  
   
-     Örneğin, bir SOAP iletisi alıcı Microsoft tarafından verilen X.509 sertifikalarının güvenmeyi çalışırsa, sertifika yetkilendirme sertifika zincirini Microsoft Sertifika yüklenmelidir için depolanacak, [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] X.509 sertifikalarını aramak için ayarlama Kaynak. Sertifika deposunda [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] X.509 sertifikalarını kod veya yapılandırma belirtilen için arar. Örneğin, bu kodu kullanarak belirtilebilir <xref:System.ServiceModel.Security.X509CertificateInitiatorClientCredential.SetCertificate%2A> yöntemi ya da dahil olmak üzere birkaç şekilde yapılandırmasında [ \<serviceCertificate >](../../../../docs/framework/configure-apps/file-schema/wcf/servicecertificate-of-clientcredentials-element.md) .  
+     Örneği için bir SOAP iletisi alıcı Microsoft tarafından verilen X.509 sertifikalarının güvenmeyi çalışırsa, Microsoft Sertifika Yetkilendirme sertifika zincirini X.509 sertifikaları aramak için WCF ayarlamak sertifika deposuna yüklenmelidir. WCF X.509 sertifikalarını arar sertifika deposu, kod veya yapılandırma belirtilebilir. Örneğin, bu kodu kullanarak belirtilebilir <xref:System.ServiceModel.Security.X509CertificateInitiatorClientCredential.SetCertificate%2A> yöntemi ya da dahil olmak üzere birkaç şekilde yapılandırmasında [ \<serviceCertificate >](../../../../docs/framework/configure-apps/file-schema/wcf/servicecertificate-of-clientcredentials-element.md) .  
   
      Varsayılan Sertifika zincirleri güvenilen sertifika yetkilileri için bir dizi Windows birlikte olduğundan, tüm sertifika yetkilileri sertifika zinciri yüklemek gerekli olmayabilir.  
   
@@ -42,7 +28,7 @@ Zaman [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] varsayılan doğru
   
     2.  Sertifika Yetkilendirme sertifika zincirini içeri aktarın.  
   
-         Microsoft Yönetim Konsolu (MMC)'da, Sertifikalar ek bileşenini açın. Sertifika için depolama [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] seçin, X.509 sertifikaları almak için yapılandırılmış **güvenilen kök** **sertifika yetkilileri**klasör. Altında **güvenilen kök sertifika yetkilileri** klasörünü sağ tıklatın **sertifikaları**klasörünü **tüm görevler**ve ardından **alma** . Adımda dışarı dosyası sağlamanız bir.  
+         Microsoft Yönetim Konsolu (MMC)'da, Sertifikalar ek bileşenini açın. İçin sertifika deposu seçin, X.509 sertifikaları almak için bu WCF yapılandırılmış **güvenilen kök** **sertifika yetkilileri**klasör. Altında **güvenilen kök sertifika yetkilileri** klasörünü sağ tıklatın **sertifikaları**klasörünü **tüm görevler**ve ardından **alma** . Adımda dışarı dosyası sağlamanız bir.  
   
          Sertifikalar ek bileşenini MMC ile kullanma hakkında daha fazla bilgi için bkz: [nasıl yapılır: MMC ek bileşeni ile sertifikaları görüntüleme](../../../../docs/framework/wcf/feature-details/how-to-view-certificates-with-the-mmc-snap-in.md).  
   

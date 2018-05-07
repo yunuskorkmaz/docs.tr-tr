@@ -1,9 +1,6 @@
 ---
-title: "Görev Tabanlı Zaman Uyumsuz Deseni Uygulama"
+title: Görev Tabanlı Zaman Uyumsuz Deseni Uygulama
 ms.date: 06/14/2017
-ms.prod: .net
-ms.technology: dotnet-clr
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -14,18 +11,13 @@ helpviewer_keywords:
 - Task-based Asynchronous Pattern, .NET Framework support for
 - .NET Framework, asynchronous design patterns
 ms.assetid: fab6bd41-91bd-44ad-86f9-d8319988aa78
-caps.latest.revision: "14"
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-- dotnetcore
-ms.openlocfilehash: 238f164fec78fe5e6dae9e7880fabc0a386bf399
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: 0ed73e8d7279d5371c305e7bd29c08ac00f6a329
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="implementing-the-task-based-asynchronous-pattern"></a>Görev Tabanlı Zaman Uyumsuz Deseni Uygulama
 Görev tabanlı zaman uyumsuz desen (TAP) üç yolla uygulayabilirsiniz: C# ve Visual Basic derleyicileri Visual Studio kullanarak el ile veya derleyici ve el ile yöntemlerinin bir birleşimini yoluyla. Aşağıdaki bölümlerde her yöntemin ayrıntılı açıklanmaktadır. İşlem bağlama ve g/Ç-bağlı zaman uyumsuz işlemleri uygulamak için DOKUNUN desen kullanabilirsiniz. [İş yükleri](#workloads) bölüm işlemi her türünü açıklar.
@@ -50,7 +42,7 @@ Uygulama üzerinde daha iyi denetim için el ile DOKUNUN düzeni uygulayabilir. 
  Hızlı yolu iyileştirme uygulama ve önbelleğe alınan görev döndürmek istediğinizde bu tür temsilci yararlı olduğu başka bir durumdur.
 
 ## <a name="workloads"></a>İş yükleri
-İşlem bağlama ve g/Ç-bağlı zaman uyumsuz işlemleri DOKUNUN yöntemleri olarak uygulayabilir. Ancak, bunlar DOKUNUN yöntemleri kitaplıktan genel olarak kullanıma sunulan zaman (bunlar da hesaplama içerebilir, ancak tamamen hesaplama olmamalıdır) g/Ç işlemleri ile ilgili yalnızca iş yükleri için sağlanmalıdır. Bir yöntem tamamen işlem bağlı ise, yalnızca zaman uyumlu bir uygulama açılmamalıdır. İçereceği tükettiği kod bir o zaman uyumlu yöntemi çağrısını başka bir iş parçacığı çalışmaya boşaltma veya paralellik elde etmek için bir görev olarak kaydırmak seçebilirsiniz. Ve bir yöntem GÇ bağlı ise, onu yalnızca zaman uyumsuz bir uygulama açılmamalıdır.
+İşlem bağlama ve g/Ç-bağlı zaman uyumsuz işlemleri DOKUNUN yöntemleri olarak uygulayabilir. Ancak, bunlar DOKUNUN yöntemleri kitaplıktan genel olarak kullanıma sunulan zaman (bunlar da hesaplama içerebilir, ancak tamamen hesaplama olmamalıdır) g/Ç işlemleri ile ilgili yalnızca iş yükleri için sağlanmalıdır. Bir yöntem tamamen işlem bağlı ise, yalnızca zaman uyumlu bir uygulama açılmamalıdır. İçereceği tükettiği kod bir o zaman uyumlu yöntemi çağrısını başka bir iş parçacığı çalışmaya boşaltma veya paralellik elde etmek için bir görev olarak kaydırmak seçebilirsiniz. Ve bir yöntem g/Ç-bağlı ise, onu yalnızca zaman uyumsuz bir uygulama açılmamalıdır.
 
 ### <a name="compute-bound-tasks"></a>İşlem bağlı görevler
 <xref:System.Threading.Tasks.Task?displayProperty=nameWithType> Sınıfı ideal olarak uygun hesaplama yoğunluklu işlemlerdir temsil etmek için. Varsayılan olarak, bu özel destek içinde yararlanır <xref:System.Threading.ThreadPool> verimli yürütme sağlamak için sınıf de önemli denetim zaman, nerede ve nasıl sağlar ve zaman uyumsuz hesapları yürütün.

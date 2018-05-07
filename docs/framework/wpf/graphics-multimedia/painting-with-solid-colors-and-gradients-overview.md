@@ -1,13 +1,6 @@
 ---
-title: "Düz Renkler ve Gradyanlar ile Boyamaya Genel Bakış"
-ms.custom: 
+title: Düz Renkler ve Gradyanlar ile Boyamaya Genel Bakış
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-wpf
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - solid colors [WPF], painting with
 - painting with gradients [WPF]
@@ -16,16 +9,11 @@ helpviewer_keywords:
 - brushes [WPF], painting with gradients
 - painting with solid colors [WPF]
 ms.assetid: f5b182f3-c5c7-4cbe-9f2f-65e690d08255
-caps.latest.revision: "21"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: bb71a1ae52b35b421474954410869f20fa004eb7
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: cea4b2dbd17178a6943b0f4a84182e65232330fb
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="painting-with-solid-colors-and-gradients-overview"></a>Düz Renkler ve Gradyanlar ile Boyamaya Genel Bakış
 Bu konuda nasıl kullanılacağını açıklar <xref:System.Windows.Media.SolidColorBrush>, <xref:System.Windows.Media.LinearGradientBrush>, ve <xref:System.Windows.Media.RadialGradientBrush> düz renkler, doğrusal gradyanlar ve radyal gradyanlar ile boyamak için nesneleri.  
@@ -74,7 +62,7 @@ Bu konuda nasıl kullanılacağını açıklar <xref:System.Windows.Media.SolidC
   
 <a name="gradient"></a>   
 ## <a name="painting-an-area-with-a-gradient"></a>Gradyan ile bir alanı boyama  
- Gradyan fırçası bir alanı başka bir eksen boyunca blend birden çok renkleri boyar. Üç boyutlu hissini denetimlerinizi vermiş izlenim ışık ve gölge oluşturmak için kullanabilirsiniz. Ayrıca bunları cam, chrome, su ve diğer kesintisiz yüzeyleri benzetimini yapmak için kullanabilirsiniz.  [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]iki tür gradyan fırçası sağlar: <xref:System.Windows.Media.LinearGradientBrush> ve <xref:System.Windows.Media.RadialGradientBrush>.  
+ Gradyan fırçası bir alanı başka bir eksen boyunca blend birden çok renkleri boyar. Üç boyutlu hissini denetimlerinizi vermiş izlenim ışık ve gölge oluşturmak için kullanabilirsiniz. Ayrıca bunları cam, chrome, su ve diğer kesintisiz yüzeyleri benzetimini yapmak için kullanabilirsiniz.  [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] iki tür gradyan fırçası sağlar: <xref:System.Windows.Media.LinearGradientBrush> ve <xref:System.Windows.Media.RadialGradientBrush>.  
   
 <a name="lineargradientbrush"></a>   
 ## <a name="linear-gradients"></a>Doğrusal gradyanlar  
@@ -159,9 +147,9 @@ RadialGradientBrushes farklı GradientOrigin, merkezi, RadiusX ve RadiusY ayarla
   
 <a name="argbsyntax"></a>   
 ### <a name="specifying-color-opacity-in-xaml"></a>"XAML" içinde Renk Geçirgenliği Belirtme  
- İçinde [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)], kullandığınız [!INCLUDE[TLA2#tla_argb](../../../../includes/tla2sharptla-argb-md.md)] tek tek renkleri geçirgenliğini belirtmek için onaltılık gösterimi. [!INCLUDE[TLA2#tla_argb](../../../../includes/tla2sharptla-argb-md.md)]onaltılık gösterimi aşağıdaki söz dizimini kullanır:  
+ İçinde [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)], kullandığınız [!INCLUDE[TLA2#tla_argb](../../../../includes/tla2sharptla-argb-md.md)] tek tek renkleri geçirgenliğini belirtmek için onaltılık gösterimi. [!INCLUDE[TLA2#tla_argb](../../../../includes/tla2sharptla-argb-md.md)] onaltılık gösterimi aşağıdaki söz dizimini kullanır:  
   
- `#`**aa** *rrggbb*  
+ `#` **aa** *rrggbb*  
   
  *Aa* önceki satırda rengin geçirgenliğini belirtmek için kullanılan iki basamaklı onaltılık değeri temsil eder. *Rr*, *gg*, ve *bb* her rengi kırmızı, yeşil ve mavi miktarını belirtmek için kullanılan iki basamaklı onaltılık değeri temsil eder. Her bir onaltılık değerinin 0-9 veya A-f arasında olabilir 0 en küçük değerdir ve F en büyük değerdir. 00 alfa değeri FF alfa değeri bir renk oluştururken, tamamen saydam olacak bir renk tamamıyla opak belirtir.  Aşağıdaki örnekte, onaltılık [!INCLUDE[TLA2#tla_argb](../../../../includes/tla2sharptla-argb-md.md)] gösterimi iki rengi belirtmek için kullanılır. İlk (bunu sahip x20 alfa değeri), kısmen saydamdır ikinci tamamen opak olsa.  
   

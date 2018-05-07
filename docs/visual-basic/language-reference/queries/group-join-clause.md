@@ -1,11 +1,6 @@
 ---
-title: "Group Join Tümcesi (Visual Basic)"
+title: Group Join Tümcesi (Visual Basic)
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
-ms.topic: article
 f1_keywords:
 - vb.QueryGroupJoinIn
 - vb.QueryGroupJoinOn
@@ -16,14 +11,11 @@ helpviewer_keywords:
 - Group Join statement [Visual Basic]
 - queries [Visual Basic], Group Join
 ms.assetid: 37dbf79c-7b5c-421b-bbb7-dadfd2b92a1c
-caps.latest.revision: "24"
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: c43b41336393b40684aee79f88c1e6999ebda674
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 094281b0afb34451ae8539e4eb967043b21d379c
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="group-join-clause-visual-basic"></a>Group Join Tümcesi (Visual Basic)
 Tek bir hiyerarşik koleksiyon iki koleksiyonlara birleştirir. Birleştirme işlemi eşleşen anahtarlarla temel alır.  
@@ -64,9 +56,9 @@ Group Join element [As type] In collection _
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
  [Visual Basic'de LINQ'e giriş](../../../visual-basic/programming-guide/language-features/linq/introduction-to-linq.md)  
- [Sorguları](../../../visual-basic/language-reference/queries/queries.md)  
- [Select tümcesi](../../../visual-basic/language-reference/queries/select-clause.md)  
- [From yan tümcesi](../../../visual-basic/language-reference/queries/from-clause.md)  
- [Join tümcesi](../../../visual-basic/language-reference/queries/join-clause.md)  
- [Burada yan tümcesi](../../../visual-basic/language-reference/queries/where-clause.md)  
- [Group By tümcesi](../../../visual-basic/language-reference/queries/group-by-clause.md)
+ [Sorgular](../../../visual-basic/language-reference/queries/queries.md)  
+ [Select Yan Tümcesi](../../../visual-basic/language-reference/queries/select-clause.md)  
+ [From Yan Tümcesi](../../../visual-basic/language-reference/queries/from-clause.md)  
+ [Join Yan Tümcesi](../../../visual-basic/language-reference/queries/join-clause.md)  
+ [Where Yan Tümcesi](../../../visual-basic/language-reference/queries/where-clause.md)  
+ [Group By Yan Tümcesi](../../../visual-basic/language-reference/queries/group-by-clause.md)

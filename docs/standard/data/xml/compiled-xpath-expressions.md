@@ -1,29 +1,18 @@
 ---
-title: "Derlenmiş XPath ifadeleri"
-ms.custom: 
+title: Derlenmiş XPath ifadeleri
 ms.date: 03/30/2017
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
 ms.technology: dotnet-standard
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
 ms.assetid: e25dd95f-b64c-4d8b-a3a4-379e1aa0ad55
-caps.latest.revision: "2"
 author: mairaw
 ms.author: mairaw
-manager: wpickett
-ms.workload:
-- dotnet
-- dotnetcore
-ms.openlocfilehash: e6ff5661a7e78f9b37f16acc86834561fc697bcc
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: 80bee210b12c588163a3e11dfdab4dadda9ec0c1
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="compiled-xpath-expressions"></a>Derlenmiş XPath ifadeleri
 Bir <xref:System.Xml.XPath.XPathExpression> nesneyi temsil ediyor herhangi birinden statik döndürülen derlenmiş bir XPath sorgusu <xref:System.Xml.XPath.XPathExpression.Compile%2A> yöntemi <xref:System.Xml.XPath.XPathExpression> sınıfı veya <xref:System.Xml.XPath.XPathNavigator.Compile%2A> yöntemi <xref:System.Xml.XPath.XPathNavigator> sınıfı.  
@@ -49,8 +38,8 @@ Bir <xref:System.Xml.XPath.XPathExpression> nesneyi temsil ediyor herhangi birin
   
 |W3C XPath dönüş türü|.NET framework eşdeğeri türü|Açıklama|Yöntemler|  
 |---------------------------|------------------------------------|-----------------|-------------|  
-|`Node set`|<xref:System.Xml.XPath.XPathNodeIterator>|Belge sırada oluşturulan çoğaltmaları olmadan düğümler sırasız bir koleksiyonu.|<xref:System.Xml.XPath.XPathNavigator.Select%2A>veya<xref:System.Xml.XPath.XPathNavigator.Evaluate%2A>|  
-|`Boolean`|<xref:System.Boolean>|A `true` veya `false` değeri.|<xref:System.Xml.XPath.XPathNavigator.Evaluate%2A>veya<br /><br /> <xref:System.Xml.XPath.XPathNavigator.Matches%2A>|  
+|`Node set`|<xref:System.Xml.XPath.XPathNodeIterator>|Belge sırada oluşturulan çoğaltmaları olmadan düğümler sırasız bir koleksiyonu.|<xref:System.Xml.XPath.XPathNavigator.Select%2A> Veya <xref:System.Xml.XPath.XPathNavigator.Evaluate%2A>|  
+|`Boolean`|<xref:System.Boolean>|A `true` veya `false` değeri.|<xref:System.Xml.XPath.XPathNavigator.Evaluate%2A> Veya<br /><br /> <xref:System.Xml.XPath.XPathNavigator.Matches%2A>|  
 |`Number`|<xref:System.Double>|Bir kayan noktalı sayı.|<xref:System.Xml.XPath.XPathNavigator.Evaluate%2A>|  
 |`String`|<xref:System.String>|UCS bir karakter dizisi.|<xref:System.Xml.XPath.XPathNavigator.Evaluate%2A>|  
   

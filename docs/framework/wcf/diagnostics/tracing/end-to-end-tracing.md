@@ -1,36 +1,24 @@
 ---
-title: "Uçtan Uca İzleme"
-ms.custom: 
+title: Uçtan Uca İzleme
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: f5ac7fc7-f97c-4313-b068-54e0c471b2aa
-caps.latest.revision: "6"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 8a2127c8dda26c376d7d722a24d72d2330174027
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 733ea0724fdbaea9c7d28ed2a94aba25f67ef87c
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="end-to-end-tracing"></a>Uçtan Uca İzleme
-Uçtan uca kodun yürütülmesini izlemek geliştiricilere (e2e) izleme sağlar [!INCLUDE[indigo1](../../../../../includes/indigo1-md.md)] bir kod yolu neden başarısız oldu araştırmak veya kapasite planlama ve performans analizi için ayrıntılı izleme sağlamak için altyapı. [!INCLUDE[indigo1](../../../../../includes/indigo1-md.md)]bir hatanın nedenini tanılamaya yardımcı olmak için üç bağıntı mekanizmalar sağlar: etkinlikleri, aktarımları ve yayma.  
+Uçtan uca bir kod yolu neden başarısız oldu araştırmak veya kapasite planlama ve performans analizi için ayrıntılı izleme sağlamak için Windows Communication Foundation (WCF) altyapısında kodun yürütülmesini izlemek geliştiricilerin (e2e) izleme sağlar. Windows Communication Foundation (WCF) bir hatanın nedenini tanılamaya yardımcı olmak için üç bağıntı mekanizma sağlar: etkinlikleri, aktarımları ve yayma.  
   
  Bkz: [uçtan uca izleme senaryoları](../../../../../docs/framework/wcf/diagnostics/tracing/end-to-end-tracing-scenarios.md) uçtan uca izleme senaryoları ve bunların ilgili etkinliği ve tasarım izleme listesi.  
   
 ## <a name="in-this-section"></a>Bu Bölümde  
- [Etkinlik](../../../../../docs/framework/wcf/diagnostics/tracing/activity.md): etkinlik izlemeleri açıklar [!INCLUDE[indigo1](../../../../../includes/indigo1-md.md)] izleme modeli.  
+ [Etkinlik](../../../../../docs/framework/wcf/diagnostics/tracing/activity.md): Windows Communication Foundation (WCF) izleme modelinde etkinlik izlemeleri açıklar.  
   
- [Aktarım](../../../../../docs/framework/wcf/diagnostics/tracing/transfer.md): aktarımı açıklar [!INCLUDE[indigo1](../../../../../includes/indigo1-md.md)] modeli izleme ve uç noktaları'nda etkinlikler ilişkilendirmek için Aktarım kullanma.  
+ [Aktarım](../../../../../docs/framework/wcf/diagnostics/tracing/transfer.md): Windows Communication Foundation (WCF) izleme modelinde aktarımı açıklar ve kullanılarak aktarılmaz uç noktaları'nda etkinlikler ilişkilendirmek için.  
   
- [Yayma](../../../../../docs/framework/wcf/diagnostics/tracing/propagation.md): Etkinlik yayma açıklar [!INCLUDE[indigo1](../../../../../includes/indigo1-md.md)] modeli izleme ve yayma uç noktalar arasında etkinliklerini ilişkilendirmek için kullanma.  
+ [Yayma](../../../../../docs/framework/wcf/diagnostics/tracing/propagation.md): Etkinlik yayma içinde Windows Communication Foundation (modeli izleme ve uç noktalar arasında etkinliklerini ilişkilendirmek için yayma kullanarak WCF) açıklar.  
   
  [İzleme Türü Özeti](../../../../../docs/framework/wcf/diagnostics/tracing/trace-type-summary.md)  
   

@@ -1,21 +1,12 @@
 ---
-title: "Ortak öznitelikler (C#)"
-ms.custom: 
+title: Ortak öznitelikler (C#)
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-csharp
-ms.topic: article
 ms.assetid: 785a0526-6c0e-4599-8c61-ccdc88dd9965
-caps.latest.revision: "3"
-author: BillWagner
-ms.author: wiwagn
-ms.openlocfilehash: 4e0a8912aa60e4c2918bb812963d83fae8d529f1
-ms.sourcegitcommit: 685143b62385500f59bc36274b8adb191f573a16
+ms.openlocfilehash: 771460f8547252448be1b74526ec2babb719c3fa
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/09/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="common-attributes-c"></a>Ortak öznitelikler (C#)
 Bu konuda, C# programlarında en yaygın olarak kullanılan öznitelikler açıklanmaktadır.  
@@ -28,7 +19,7 @@ Bu konuda, C# programlarında en yaygın olarak kullanılan öznitelikler açık
   
 -   [Arayan bilgileri öznitelikleri](#CallerInfo)  
   
-##  <a name="Global"></a>Genel Öznitelikler  
+##  <a name="Global"></a> Genel Öznitelikler  
  Çoğu öznitelik sınıfları veya yöntemleri gibi belirli bir dil öğeleri uygulanır; Ancak, bazı öznitelikler genel — tüm derleme veya modülü için geçerlidir. Örneğin, <xref:System.Reflection.AssemblyVersionAttribute> özniteliği, böyle bir bütünleştirilmiş sürüm bilgilerini eklemek için kullanılabilir:  
   
 ```csharp  
@@ -80,7 +71,7 @@ Bu konuda, C# programlarında en yaygın olarak kullanılan öznitelikler açık
 |<xref:System.Reflection.AssemblyConfigurationAttribute>|Bir derleme yapılandırmasını (örneğin, tekil veya hata ayıklama) belirten özel bir öznitelik için bir derleme bildirimi tanımlar.|  
 |<xref:System.Reflection.AssemblyDefaultAliasAttribute>|Derleme bildirimi için bir kolay varsayılan diğer adı tanımlar|  
   
-##  <a name="Obsolete"></a>Artık kullanılmayan özniteliği  
+##  <a name="Obsolete"></a> Artık kullanılmayan özniteliği  
  `Obsolete` Özniteliği bir program varlık artık kullanım için önerilen biri olarak işaretler. Artık kullanılmayan olarak işaretlenmiş bir varlığın her kullanın, daha sonra bir uyarı veya öznitelik nasıl yapılandırıldığına bağlı olarak bir hata oluşturur. Örneğin:  
   
 ```csharp  
@@ -117,9 +108,9 @@ b.NewMethod();
   
  `Obsolete` Öznitelik bağımsız değişkenler olmadan kullanılabilir, ancak neden bir açıklaması da dahil olmak üzere öğe kullanılmıyor ve ne kullanmanız önerilir.  
   
- `Obsolete` Özniteliği bir tek kullanımlık özniteliği ve öznitelikleri veren herhangi bir varlık için uygulanabilir. `Obsolete`bir diğer adı için <xref:System.ObsoleteAttribute>.  
+ `Obsolete` Özniteliği bir tek kullanımlık özniteliği ve öznitelikleri veren herhangi bir varlık için uygulanabilir. `Obsolete` bir diğer adı için <xref:System.ObsoleteAttribute>.  
   
-##  <a name="Conditional"></a>Koşul özniteliği  
+##  <a name="Conditional"></a> Koşul özniteliği  
  `Conditional` Özniteliği bir yönteminin yürütülmesi üzerinde önişlem tanımlayıcısını bağımlı yapar. `Conditional` Özniteliktir için diğer ad <xref:System.Diagnostics.ConditionalAttribute>ve bir yöntem veya öznitelik sınıfı için uygulanabilir.  
   
  Bu örnekte, `Conditional` etkinleştirmek veya programa özgü tanı bilgilerini görüntülemeyi devre dışı bırakmak için bir yönteme uygulanır:  
@@ -224,7 +215,7 @@ class SampleClass
 }  
 ```  
   
-##  <a name="CallerInfo"></a>Arayan bilgileri öznitelikleri  
+##  <a name="CallerInfo"></a> Arayan bilgileri öznitelikleri  
  Arayan Bilgisi özniteliklerini kullanarak bir yöntemin arayanı hakkında bilgi edinebilirsiniz. Kaynak kodu dosya yolu, kaynak kodu ve arayan üye adı satır numarasını edinebilirsiniz.  
   
  Üye arayan bilgileri almak için isteğe bağlı parametreler uygulanan öznitelikleri kullanın. Her isteğe bağlı bir parametre varsayılan bir değer belirtir. Aşağıdaki tabloda tanımlanan arayan bilgileri öznitelikleri listeler <xref:System.Runtime.CompilerServices?displayProperty=nameWithType> ad alanı:  
@@ -240,7 +231,7 @@ class SampleClass
 ## <a name="see-also"></a>Ayrıca Bkz.  
  <xref:System.Reflection>  
  <xref:System.Attribute>  
- [C# programlama kılavuzu](../../../../csharp/programming-guide/index.md)  
- [Öznitelikleri](../../../../../docs/standard/attributes/index.md)  
+ [C# Programlama Kılavuzu](../../../../csharp/programming-guide/index.md)  
+ [Öznitelikler](../../../../../docs/standard/attributes/index.md)  
  [Yansıma (C#)](../../../../csharp/programming-guide/concepts/reflection.md)  
  [Yansıma (C#) kullanarak özniteliklere erişme](../../../../csharp/programming-guide/concepts/attributes/accessing-attributes-by-using-reflection.md)

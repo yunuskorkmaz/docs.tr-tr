@@ -1,13 +1,6 @@
 ---
-title: "Düzen"
-ms.custom: 
+title: Düzen
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-wpf
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -16,16 +9,11 @@ helpviewer_keywords:
 - controls [WPF], layout system
 - layout system [WPF]
 ms.assetid: 3eecdced-3623-403a-a077-7595453a9221
-caps.latest.revision: "31"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: c9a5f33ab22779002e85d7a73b29ae74dac81c26
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 00c2b2bcb58e60c1a60d2d360f25089c079c0704
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="layout"></a>Düzen
 Bu konuda açıklanmaktadır [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] düzen sistemi. Düzen hesaplamaları nasıl ve ne zaman meydana anlamak, kullanıcı arabirimi oluşturmak için temel [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)].  
@@ -97,7 +85,7 @@ Bu konuda açıklanmaktadır [!INCLUDE[TLA#tla_winclient](../../../../includes/t
   
  İlk, yerel boyutu özelliklerini <xref:System.Windows.UIElement> , aşağıdaki gibi değerlendirilir <xref:System.Windows.UIElement.Clip%2A> ve <xref:System.Windows.UIElement.Visibility%2A>. Bu adlı bir değer oluşturur `constraintSize` için geçirilen <xref:System.Windows.FrameworkElement.MeasureCore%2A>.  
   
- İkincisi, üzerinde framework özellikleri tanımlanan <xref:System.Windows.FrameworkElement> işlenir, değerini etkiler `constraintSize`. Bu özellikleri genellikle temel boyutlandırma özelliklerini açıklayan <xref:System.Windows.UIElement>, gibi kendi <xref:System.Windows.FrameworkElement.Height%2A>, <xref:System.Windows.FrameworkElement.Width%2A>, <xref:System.Windows.FrameworkElement.Margin%2A>, ve <xref:System.Windows.FrameworkElement.Style%2A>. Bu özelliklerin her biri öğeyi görüntülemek için gerekli alanı değiştirebilirsiniz. <xref:System.Windows.FrameworkElement.MeasureOverride%2A>sonra çağrılır `constraintSize` bir parametre olarak.  
+ İkincisi, üzerinde framework özellikleri tanımlanan <xref:System.Windows.FrameworkElement> işlenir, değerini etkiler `constraintSize`. Bu özellikleri genellikle temel boyutlandırma özelliklerini açıklayan <xref:System.Windows.UIElement>, gibi kendi <xref:System.Windows.FrameworkElement.Height%2A>, <xref:System.Windows.FrameworkElement.Width%2A>, <xref:System.Windows.FrameworkElement.Margin%2A>, ve <xref:System.Windows.FrameworkElement.Style%2A>. Bu özelliklerin her biri öğeyi görüntülemek için gerekli alanı değiştirebilirsiniz. <xref:System.Windows.FrameworkElement.MeasureOverride%2A> sonra çağrılır `constraintSize` bir parametre olarak.  
   
 > [!NOTE]
 >  Özellikleri arasında bir fark <xref:System.Windows.FrameworkElement.Height%2A> ve <xref:System.Windows.FrameworkElement.Width%2A> ve <xref:System.Windows.FrameworkElement.ActualHeight%2A> ve <xref:System.Windows.FrameworkElement.ActualWidth%2A>. Örneğin, <xref:System.Windows.FrameworkElement.ActualHeight%2A> diğer yükseklik girişleri ve Düzen sistemine dayalı bir hesaplanan değer bir özelliktir. Değer bir gerçek işleme geçişte, düzen sistem tabanlı kendisi tarafından ayarlanır ve bu nedenle biraz özellikleri değerini ayarlayın gibi geri kalabilir <xref:System.Windows.FrameworkElement.Height%2A>, giriş değiştirme temeli olan.  
@@ -108,11 +96,11 @@ Bu konuda açıklanmaktadır [!INCLUDE[TLA#tla_winclient](../../../../includes/t
   
  Düzenleme geçişi yapılan bir çağrı ile başlayan <xref:System.Windows.UIElement.Arrange%2A> yöntemi. Yerleştir geçişi sırasında üst <xref:System.Windows.Controls.Panel> alt sınırlarını temsil eden bir dikdörtgen öğesi oluşturur. Bu değer geçirilir <xref:System.Windows.FrameworkElement.ArrangeCore%2A> işleme yöntemi.  
   
- <xref:System.Windows.FrameworkElement.ArrangeCore%2A> Yöntemi değerlendirir <xref:System.Windows.UIElement.DesiredSize%2A> alt ve öğe işlenmiş boyutunu etkileyebilecek herhangi ek kenar boşluklarını değerlendirir. <xref:System.Windows.FrameworkElement.ArrangeCore%2A>oluşturan bir `arrangeSize`, için geçirilen <xref:System.Windows.FrameworkElement.ArrangeOverride%2A> yöntemi <xref:System.Windows.Controls.Panel> bir parametre olarak. <xref:System.Windows.FrameworkElement.ArrangeOverride%2A>oluşturur `finalSize` alt. Son olarak, <xref:System.Windows.FrameworkElement.ArrangeCore%2A> yöntemi kenar boşluğu ve hizalama gibi uzaklık özelliklerinin son değerlendirme yapar ve kendi düzeni yuvası içinde alt koyar. Alt yok (ve sık desteklemez) ayrılmış alanı tüm doldurun. Denetim üst sonra döndürülen <xref:System.Windows.Controls.Panel> ve düzeni işlemi tamamlanır.  
+ <xref:System.Windows.FrameworkElement.ArrangeCore%2A> Yöntemi değerlendirir <xref:System.Windows.UIElement.DesiredSize%2A> alt ve öğe işlenmiş boyutunu etkileyebilecek herhangi ek kenar boşluklarını değerlendirir. <xref:System.Windows.FrameworkElement.ArrangeCore%2A> oluşturan bir `arrangeSize`, için geçirilen <xref:System.Windows.FrameworkElement.ArrangeOverride%2A> yöntemi <xref:System.Windows.Controls.Panel> bir parametre olarak. <xref:System.Windows.FrameworkElement.ArrangeOverride%2A> oluşturur `finalSize` alt. Son olarak, <xref:System.Windows.FrameworkElement.ArrangeCore%2A> yöntemi kenar boşluğu ve hizalama gibi uzaklık özelliklerinin son değerlendirme yapar ve kendi düzeni yuvası içinde alt koyar. Alt yok (ve sık desteklemez) ayrılmış alanı tüm doldurun. Denetim üst sonra döndürülen <xref:System.Windows.Controls.Panel> ve düzeni işlemi tamamlanır.  
   
 <a name="LayoutSystem_PanelsCustom"></a>   
 ## <a name="panel-elements-and-custom-layout-behaviors"></a>Panel öğeleri ve özel yerleşim davranışları  
- [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]öğesinden türetilen öğeleri grubunu içeren <xref:System.Windows.Controls.Panel>. Bunlar <xref:System.Windows.Controls.Panel> öğeleri çok karmaşık düzenleri etkinleştirin. Örneğin, öğeleri yığma kolayca kullanarak elde edilebilir <xref:System.Windows.Controls.StackPanel> kullanarak daha karmaşık ve ücretsiz boyunca düzenleri olası sırada öğesi, bir <xref:System.Windows.Controls.Canvas>.  
+ [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] öğesinden türetilen öğeleri grubunu içeren <xref:System.Windows.Controls.Panel>. Bunlar <xref:System.Windows.Controls.Panel> öğeleri çok karmaşık düzenleri etkinleştirin. Örneğin, öğeleri yığma kolayca kullanarak elde edilebilir <xref:System.Windows.Controls.StackPanel> kullanarak daha karmaşık ve ücretsiz boyunca düzenleri olası sırada öğesi, bir <xref:System.Windows.Controls.Canvas>.  
   
  Aşağıdaki tabloda kullanılabilir düzeni özetler <xref:System.Windows.Controls.Panel> öğeleri.  
   
@@ -133,11 +121,11 @@ Bu konuda açıklanmaktadır [!INCLUDE[TLA#tla_winclient](../../../../includes/t
   
 -   Hangi özellik değeri değişiklikleri özyinelemeli güncelleştirme düzen sistemi tarafından zorlayacağı dikkat edin.  
   
-     Bağımlılık özellikleri değerleri başlatılması düzen sistemi neden olabilir, ortak bayrakları ile işaretlenir. <xref:System.Windows.FrameworkPropertyMetadata.AffectsMeasure%2A>ve <xref:System.Windows.FrameworkPropertyMetadata.AffectsArrange%2A> hangi özelliği için değer değişikliklerini bir özyinelemeli zorlayacak yararlı ipuçları güncelleştirme düzen sistemi tarafından sağlayın. Genel olarak, bir öğenin sınırlayıcı kutu boyutunu etkileyebilecek herhangi bir özellik olmalıdır bir <xref:System.Windows.FrameworkPropertyMetadata.AffectsMeasure%2A> bayrağı true olarak ayarlanmış. Daha fazla bilgi için bkz: [bağımlılık özelliklerine genel bakış](../../../../docs/framework/wpf/advanced/dependency-properties-overview.md).  
+     Bağımlılık özellikleri değerleri başlatılması düzen sistemi neden olabilir, ortak bayrakları ile işaretlenir. <xref:System.Windows.FrameworkPropertyMetadata.AffectsMeasure%2A> ve <xref:System.Windows.FrameworkPropertyMetadata.AffectsArrange%2A> hangi özelliği için değer değişikliklerini bir özyinelemeli zorlayacak yararlı ipuçları güncelleştirme düzen sistemi tarafından sağlayın. Genel olarak, bir öğenin sınırlayıcı kutu boyutunu etkileyebilecek herhangi bir özellik olmalıdır bir <xref:System.Windows.FrameworkPropertyMetadata.AffectsMeasure%2A> bayrağı true olarak ayarlanmış. Daha fazla bilgi için bkz: [bağımlılık özelliklerine genel bakış](../../../../docs/framework/wpf/advanced/dependency-properties-overview.md).  
   
 -   Mümkün olduğunda kullanın bir <xref:System.Windows.UIElement.RenderTransform%2A> yerine bir <xref:System.Windows.FrameworkElement.LayoutTransform%2A>.  
   
-     A <xref:System.Windows.FrameworkElement.LayoutTransform%2A> içeriğini etkilemek için çok kullanışlı bir yoldur bir [!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)]. Dönüştürme etkisini diğer öğeleri konumunu etkileyen gerekmez, ancak kullanmak en iyisidir bir <xref:System.Windows.UIElement.RenderTransform%2A> bunun yerine, çünkü <xref:System.Windows.UIElement.RenderTransform%2A> düzen sistemi çağrılmaz. <xref:System.Windows.FrameworkElement.LayoutTransform%2A>kendi dönüştürmesi uygular ve etkilenen öğesinin yeni konumu için hesap için bir özyinelemeli Düzen güncelleştirmesini zorlar.  
+     A <xref:System.Windows.FrameworkElement.LayoutTransform%2A> içeriğini etkilemek için çok kullanışlı bir yoldur bir [!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)]. Dönüştürme etkisini diğer öğeleri konumunu etkileyen gerekmez, ancak kullanmak en iyisidir bir <xref:System.Windows.UIElement.RenderTransform%2A> bunun yerine, çünkü <xref:System.Windows.UIElement.RenderTransform%2A> düzen sistemi çağrılmaz. <xref:System.Windows.FrameworkElement.LayoutTransform%2A> kendi dönüştürmesi uygular ve etkilenen öğesinin yeni konumu için hesap için bir özyinelemeli Düzen güncelleştirmesini zorlar.  
   
 -   Gereksiz çağrıları kaçının <xref:System.Windows.UIElement.UpdateLayout%2A>.  
   

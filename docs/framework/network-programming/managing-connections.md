@@ -1,12 +1,6 @@
 ---
-title: "Bağlantıları yönetme"
-ms.custom: 
+title: Bağlantıları yönetme
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -23,23 +17,21 @@ helpviewer_keywords:
 - downloading Internet resources, connections
 - ServicePointManager class, about ServicePointManager class
 ms.assetid: 9b3d3de7-189f-4f7d-81ae-9c29c441aaaa
-caps.latest.revision: "9"
 author: mcleblanc
 ms.author: markl
 manager: markl
-ms.workload: dotnet
-ms.openlocfilehash: a4d0ca3b6aed1213405dc24f322b53a21dbd4fbe
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 8702f2329b262fc5c5965ae49365d46ba34091d6
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="managing-connections"></a>Bağlantıları yönetme
 Veri kaynaklarına bağlanmak için HTTP kullanan uygulamalar, .NET Framework'ün kullanabileceğiniz <xref:System.Net.ServicePoint> ve <xref:System.Net.ServicePointManager> sınıfları internet bağlantıları yönetmek ve bunları en uygun ölçek ve performans elde etmek amacıyla.  
   
  **ServicePoint** sınıfı, bir uygulama için uygulama bağlanabilir Internet kaynaklarına erişmek için bir uç nokta ile sağlar. Her **ServicePoint** yardımcı performansını artırmak için bağlantıları arasında en iyi duruma getirme bilgilerini paylaşarak bir Internet sunucusu ile bağlantı iyileştirmek bilgileri içerir.  
   
- Her **ServicePoint** bir Tekdüzen Kaynak Tanımlayıcısı (URI) tarafından tanımlanır ve düzeni tanımlayıcısı ve ana bilgisayar parçaları URI'sinin göre kategorilere ayrılmıştır. Örneğin, aynı **ServicePoint** örneği aynı düzen tanımlayıcısı (http) ve ana bilgisayar olduğundan URI'ler http://www.contoso.com/index.htm ve http://www.contoso.com/news.htm?date=today isteklerine sağlamak parçaları (www.contoso.com). Uygulama zaten sunucu www.contoso.com kalıcı bir bağlantı varsa, iki bağlantı oluşturmak için gereken önleme hem istekleri almak için bu bağlantıyı kullanır.  
+ Her **ServicePoint** bir Tekdüzen Kaynak Tanımlayıcısı (URI) tarafından tanımlanır ve düzeni tanımlayıcısı ve ana bilgisayar parçaları URI'sinin göre kategorilere ayrılmıştır. Örneğin, aynı **ServicePoint** örneği için URI istekleri sağlamak http://www.contoso.com/index.htm ve http://www.contoso.com/news.htm?date=today aynı düzen tanımlayıcısı (http) ve ana bilgisayar parçaları (www.contoso.com) sahip olduğundan. Uygulama zaten sunucu www.contoso.com kalıcı bir bağlantı varsa, iki bağlantı oluşturmak için gereken önleme hem istekleri almak için bu bağlantıyı kullanır.  
   
  **ServicePointManager** oluşturma ve yok etme yöneten statik bir sınıftır **ServicePoint** örnekleri. **ServicePointManager** oluşturur bir **ServicePoint** koleksiyonunda var olmayan bir Internet kaynağına uygulama isteğinde bulunduğunda **ServicePoint** örnekleri. **ServicePoint** örnekleri kendi maksimum boşta kalma süresi aştığınızda veya sayısı yok varolan **ServicePoint** örnekleri üst sınırını aşıyor **ServicePoint**uygulama örneği. Varsayılan en fazla boşta kalma süresi ve en fazla sayısını kontrol edebilirsiniz **ServicePoint** ayarlayarak örnekleri <xref:System.Net.ServicePointManager.MaxServicePointIdleTime%2A> ve <xref:System.Net.ServicePointManager.MaxServicePoints%2A> özellikleri **ServicePointManager**.  
   
@@ -60,7 +52,7 @@ ServicePointManager.DefaultConnectionLimit = 4;
 ServicePointManager.DefaultConnectionLimit = 4  
 ```  
   
- Değiştirme **ServicePointManager.DefaultConnectionLimit** özelliği daha önce başlatılmış etkilemez **ServicePoint** örnekleri. Aşağıdaki kod, var olan üzerinde bağlantı sınırı değiştirme gösterir **ServicePoint** depolanan değerine sunucu http://www.contoso.com için `newLimit`.  
+ Değiştirme **ServicePointManager.DefaultConnectionLimit** özelliği daha önce başlatılmış etkilemez **ServicePoint** örnekleri. Aşağıdaki kod, var olan üzerinde bağlantı sınırı değiştirme gösterir **ServicePoint** sunucusu http://www.contoso.com depolanan değerine `newLimit`.  
   
 ```csharp  
 Uri uri = new Uri("http://www.contoso.com/");  

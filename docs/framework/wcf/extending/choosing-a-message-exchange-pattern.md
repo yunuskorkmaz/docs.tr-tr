@@ -1,24 +1,12 @@
 ---
-title: "Bir İleti Değişim Deseni seçin"
-ms.custom: 
+title: Bir İleti Değişim Deseni seçin
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 0f502ca1-6a8e-4607-ba15-59198c0e6146
-caps.latest.revision: "11"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 961f5e84fb46a791127a9d80c0f03d2b87fdea77
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
-ms.translationtype: MT
+ms.openlocfilehash: 3466be98522eef0ebec6f6613f51566700a7cdb7
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="choosing-a-message-exchange-pattern"></a>Bir İleti Değişim Deseni seçin
 Özel bir taşıma yazma ilk adımı, karar vermektir *ileti exchange desenleri* (veya MEPs) geliştirme kanalı gereklidir. Bu konuda seçenekleri açıklar ve çeşitli gereksinimleri açıklanır. Bu ilk bölümünde açıklanan kanal geliştirme görev listesindeki bir görevdir [geliştirme kanalları](../../../../docs/framework/wcf/extending/developing-channels.md).  
@@ -59,7 +47,7 @@ ms.lasthandoff: 12/22/2017
 >  UDP kendiliğinden yangın olduğundan ve protokolü unuttunuz UDP taşıma için desteklenen tek MEP veri birimi, ' dir.  
   
 ## <a name="sessions-and-sessionful-channels"></a>Oturumlar ve Sessionful kanalları  
- Ağ dünyada bağlantı yönelimli protokolleri (örneğin, TCP) ve bağlantı daha az protokolleri (örneğin, UDP) vardır. [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]bir bağlantı gibi mantıksal soyutlama anlamına gelir terim oturumu kullanır. Süre sonuyla WCF protokolleri bağlantı odaklı ağ protokolleri benzer ve oturumsuz WCF protokolleri bağlantı daha az ağ protokolleri benzer.  
+ Ağ dünyada bağlantı yönelimli protokolleri (örneğin, TCP) ve bağlantı daha az protokolleri (örneğin, UDP) vardır. [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] bir bağlantı gibi mantıksal soyutlama anlamına gelir terim oturumu kullanır. Süre sonuyla WCF protokolleri bağlantı odaklı ağ protokolleri benzer ve oturumsuz WCF protokolleri bağlantı daha az ağ protokolleri benzer.  
   
  Kanal nesne modelinde, her mantıksal oturum süre sonuyla kanal örneği bildirimleri. Bu nedenle istemci tarafından oluşturulan ve hizmette kabul her yeni oturumun her tarafında yeni bir süre sonuyla kanal karşılık gelir. Aşağıdaki diyagramda gösterildiği, oturumsuz kanalları yapısını üst ve alt, süre sonuyla kanalları yapısı.  
   

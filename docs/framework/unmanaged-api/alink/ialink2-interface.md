@@ -1,30 +1,18 @@
 ---
 title: IALink2 Arabirimi
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: reference
 f1_keywords:
 - IALink2
 helpviewer_keywords:
 - IALink2 interface
 ms.assetid: fba62a55-36bd-401e-bcd2-5be8e2d34891
-caps.latest.revision: 
 author: mairaw
 ms.author: mairaw
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: de0ff924e2c9ae20b9796fbcae2df0fd858295dd
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 0ddc2f50b42ba8adf7aa5f4d7fa0dc68469e7344
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="ialink2-interface"></a>IALink2 Arabirimi
 Hazırlandı [Ialink arabirimi](../../../../docs/framework/unmanaged-api/alink/ialink-interface.md) gibi daha yeni meta veri arabirimleri üzerinde çalışan yöntemleri bildirme tarafından [Imetadataemit2 arabirimi](../../../../docs/framework/unmanaged-api/metadata/imetadataemit2-interface.md). Ayrıca, özgün Ialink arabirimi ek kullanım esnekliği sağlama yöntemleri Ialink2 bildirir.  

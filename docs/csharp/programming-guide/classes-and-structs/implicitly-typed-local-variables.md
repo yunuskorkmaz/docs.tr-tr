@@ -1,21 +1,15 @@
 ---
-title: "Örtülü Olarak Yazılan Yerel Değişkenler (C# Programlama Kılavuzu)"
+title: Örtülü Olarak Yazılan Yerel Değişkenler (C# Programlama Kılavuzu)
 ms.date: 07/20/2015
-ms.prod: .net
-ms.technology: devlang-csharp
-ms.topic: article
 helpviewer_keywords:
 - implicitly-typed local variables [C#]
 - var [C#]
 ms.assetid: b9218fb2-ef5d-4814-8a8e-2bc29b0bbc9b
-caps.latest.revision: "23"
-author: BillWagner
-ms.author: wiwagn
-ms.openlocfilehash: 26a4460acf70ff3748f12d74442f0ca568a587b5
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: a3cb2490247a6e9fdb51b73d405173d29263393c
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="implicitly-typed-local-variables-c-programming-guide"></a>Örtülü Olarak Yazılan Yerel Değişkenler (C# Programlama Kılavuzu)
 Yerel değişkenler bir açık tür vermeden bildirilebilir. `var` Anahtar sözcüğü başlatma ifadesinin sağ tarafında ifadesinden değişkeninin türü gerçekleştirip derleyici bildirir. Çıkarılan türü, yerleşik bir tür, anonim bir tür, kullanıcı tanımlı bir tür veya .NET Framework Sınıf Kitaplığı'nda tanımlanan bir türü olabilir. Dizilerle başlatma hakkında daha fazla bilgi için `var`, bkz: [örtük olarak yazılan diziler](../../../csharp/programming-guide/arrays/implicitly-typed-arrays.md).  
@@ -60,11 +54,11 @@ Yerel değişkenler bir açık tür vermeden bildirilebilir. `var` Anahtar sözc
 ## <a name="remarks"></a>Açıklamalar  
  Değişken bildirimleri örtük olarak yazılan aşağıdaki kısıtlamalar geçerlidir:  
   
--   `var`yerel bir değişken bildirilen ve aynı deyiminde başlatılmış yalnızca kullanılabilir; Değişken null ya da bir yöntem Grup ya da adsız bir işlev başlatılamaz.  
+-   `var` yerel bir değişken bildirilen ve aynı deyiminde başlatılmış yalnızca kullanılabilir; Değişken null ya da bir yöntem Grup ya da adsız bir işlev başlatılamaz.  
   
--   `var`sınıf kapsamı alanlarını kullanılamaz.  
+-   `var` sınıf kapsamı alanlarını kullanılamaz.  
   
--   Kullanarak bildirilen değişkenlerin `var` başlatma ifadede kullanılamaz. Bu ifade başka bir deyişle, yasal`: int i = (i = 20);` ancak bu ifade bir derleme zamanı hatası oluşturur:`var i = (i = 20);`  
+-   Kullanarak bildirilen değişkenlerin `var` başlatma ifadede kullanılamaz. Bu ifade başka bir deyişle, yasal`: int i = (i = 20);` ancak bu ifade bir derleme zamanı hatası oluşturur: `var i = (i = 20);`  
   
 -   Birden çok örtük olarak yazılan değişkenler aynı deyiminde başlatılamaz.  
   
@@ -80,13 +74,13 @@ Yerel değişkenler bir açık tür vermeden bildirilebilir. `var` Anahtar sözc
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
  [C# başvurusu](../../../csharp/language-reference/index.md)  
- [Örtük olarak yazılan diziler](../../../csharp/programming-guide/arrays/implicitly-typed-arrays.md)  
- [Nasıl yapılır: Kullanım türü örtük olarak belirlenmiş yerel değişkenleri ve dizileri sorgu ifadesinde](../../../csharp/programming-guide/classes-and-structs/how-to-use-implicitly-typed-local-variables-and-arrays-in-a-query-expression.md)  
- [Anonim türler](../../../csharp/programming-guide/classes-and-structs/anonymous-types.md)  
- [Nesne ve koleksiyon başlatıcıları](../../../csharp/programming-guide/classes-and-structs/object-and-collection-initializers.md)  
+ [Örtük Olarak Yazılan Diziler](../../../csharp/programming-guide/arrays/implicitly-typed-arrays.md)  
+ [Nasıl yapılır: Sorgu İfadesinde Türü Örtük Olarak Belirlenmiş Yerel Değişkenleri ve Dizileri Kullanma](../../../csharp/programming-guide/classes-and-structs/how-to-use-implicitly-typed-local-variables-and-arrays-in-a-query-expression.md)  
+ [Anonim Tipler](../../../csharp/programming-guide/classes-and-structs/anonymous-types.md)  
+ [Nesne ve Koleksiyon Başlatıcıları](../../../csharp/programming-guide/classes-and-structs/object-and-collection-initializers.md)  
  [var](../../../csharp/language-reference/keywords/var.md)  
  [LINQ Sorgu ifadeleri](../../../csharp/programming-guide/linq-query-expressions/index.md)  
  [LINQ (dil ile tümleşik sorgu)](http://msdn.microsoft.com/library/a73c4aec-5d15-4e98-b962-1274021ea93d)  
- [için](../../../csharp/language-reference/keywords/for.md)  
- [foreach,](../../../csharp/language-reference/keywords/foreach-in.md)  
- [using deyimi](../../../csharp/language-reference/keywords/using-statement.md)
+ [for](../../../csharp/language-reference/keywords/for.md)  
+ [foreach, in](../../../csharp/language-reference/keywords/foreach-in.md)  
+ [using Deyimi](../../../csharp/language-reference/keywords/using-statement.md)

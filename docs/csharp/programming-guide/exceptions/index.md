@@ -1,23 +1,16 @@
 ---
 title: Özel Durumlar ve Özel Durum İşleme (C# Programlama Kılavuzu)
 ms.date: 07/20/2015
-ms.prod: .net
-ms.technology:
-- devlang-csharp
-ms.topic: article
 helpviewer_keywords:
 - exception handling [C#]
 - exceptions [C#]
 - C# language, exceptions
 ms.assetid: 0001887f-4fa2-47e2-8034-2819477e2344
-caps.latest.revision: 33
-author: BillWagner
-ms.author: wiwagn
-ms.openlocfilehash: 3c4ff558f2b850e195138dcc8901d6d860365cfc
-ms.sourcegitcommit: 75a180acb5d8a2dbd4a52915ce8e980749fb1d05
+ms.openlocfilehash: de396ca4da2e115d221036d3ec49fb7b43d3d21d
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/24/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="exceptions-and-exception-handling-c-programming-guide"></a>Özel Durumlar ve Özel Durum İşleme (C# Programlama Kılavuzu)
 C# dil özel durum özellikleri Yardım işleme ile bir program çalışırken oluşan beklenmeyen veya olağanüstü durumlara ilgilenir. Özel durum işleme kullanan `try`, `catch`, ve `finally` başarılı olmayabilir Eylemler denemek için bunu yapmak için ve daha sonra kaynakları temizlemek için makul karar verirken hataları işlemek için anahtar sözcükler. Özel durumlar ortak dil çalışma zamanı tarafından (CLR), .NET Framework veya herhangi bir üçüncü taraf kitaplıklar veya uygulama kodu tarafından oluşturulabilir. Özel durumlar kullanarak oluşturulur `throw` anahtar sözcüğü.  

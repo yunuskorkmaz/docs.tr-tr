@@ -2,16 +2,16 @@
 title: WCF Yapılandırma Şeması
 ms.date: 03/30/2017
 ms.assetid: c282aeb5-91f0-4522-8e2f-704c1ef3651f
-ms.openlocfilehash: 147df2200017224bd20ad7eaca283f4dbcd08fb2
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
-ms.translationtype: HT
+ms.openlocfilehash: bcbc12d35dae59fcd43d5fbf2d4c936c8e4a4423
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="wcf-configuration-schema"></a>WCF Yapılandırma Şeması
-Windows Communication Foundation (WCF) yapılandırma öğeleri etkinleştirmek, yapılandırmak [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)] hizmet ve istemci uygulamaları. Kullanabileceğiniz [Yapılandırma Aracı (SvcConfigEditor.exe)](../../../../../docs/framework/wcf/configuration-editor-tool-svcconfigeditor-exe.md) oluşturmak ve istemciler ve hizmetler için yapılandırma dosyaları değiştirmek için. Yapılandırma dosyaları XML olarak biçimlendirilir olduğundan, el ile bir metin düzenleyicisi kullanarak bunları düzenlemek istiyorsanız XML ile bilgi sahibi olmanız gerekir. Aksi halde, bir sınıfı XML öğesi etiketi veya öznitelik gibi sorunları içine çalışabilir. Bunun nedeni, XML öğesi etiketleri ve öznitelikleri küçük harfe duyarlıdır.  
+Windows Communication Foundation (WCF) yapılandırma öğeleri WCF hizmeti ve istemci uygulamaları yapılandırmanıza olanak sağlar. Kullanabileceğiniz [Yapılandırma Aracı (SvcConfigEditor.exe)](../../../../../docs/framework/wcf/configuration-editor-tool-svcconfigeditor-exe.md) oluşturmak ve istemciler ve hizmetler için yapılandırma dosyaları değiştirmek için. Yapılandırma dosyaları XML olarak biçimlendirilir olduğundan, el ile bir metin düzenleyicisi kullanarak bunları düzenlemek istiyorsanız XML ile bilgi sahibi olmanız gerekir. Aksi halde, bir sınıfı XML öğesi etiketi veya öznitelik gibi sorunları içine çalışabilir. Bunun nedeni, XML öğesi etiketleri ve öznitelikleri küçük harfe duyarlıdır.  
   
- [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)] Yapılandırma sistemi temel <xref:System.Configuration> ad alanı. Bu nedenle, tarafından sağlanan tüm standart özellikleri kullanabilirsiniz <xref:System.Configuration> kilitleme, şifreleme ve uygulamanızı ve yapılandırmasıyla güvenliğini artırmak için birleştirme yapılandırması gibi bir ad alanı. Bu kavramlarla ilgili daha fazla bilgi için aşağıdaki konulara bakın.  
+ WCF yapılandırma sistemi dayanır <xref:System.Configuration> ad alanı. Bu nedenle, tarafından sağlanan tüm standart özellikleri kullanabilirsiniz <xref:System.Configuration> kilitleme, şifreleme ve uygulamanızı ve yapılandırmasıyla güvenliğini artırmak için birleştirme yapılandırması gibi bir ad alanı. Bu kavramlarla ilgili daha fazla bilgi için aşağıdaki konulara bakın.  
   
  [Yapılandırma bilgilerini şifreleme](http://go.microsoft.com/fwlink/?LinkId=95337)  
   
@@ -22,7 +22,7 @@ Windows Communication Foundation (WCF) yapılandırma öğeleri etkinleştirmek,
  ![WCF yapılandırma şeması](../../../../../docs/framework/configure-apps/file-schema/wcf/media/orcasconfigschema.gif "OrcasConfigSchema")  
   
 > [!CAUTION]
->  Korumanız gerekir [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)] yapılandırma bölümlerinin, uygulama yapılandırma dosyaları (app.config) ile ilgili erişim denetim listeleri (tüm olası güvenlik tehditlerini önlemek için ACL).  Örneğin, yalnızca uygun kişilerin erişmek veya uygulama bağlamaları ya da hizmet modeli bölümü yapılandırma dosyasının bir hizmet için güvenlik ayarlarını değiştirme emin olmanız gerekir.  
+>  Uygulama yapılandırma dosyalarını (app.config) ile ilgili erişim denetim listeleri (tüm olası güvenlik tehditlerini önlemek için ACL) WCF yapılandırma bölümlerinin korumanız gerekir.  Örneğin, yalnızca uygun kişilerin erişmek veya uygulama bağlamaları ya da hizmet modeli bölümü yapılandırma dosyasının bir hizmet için güvenlik ayarlarını değiştirme emin olmanız gerekir.  
   
 ## <a name="in-this-section"></a>Bu Bölümde  
  [\<system.serviceModel>](../../../../../docs/framework/configure-apps/file-schema/wcf/system-servicemodel.md)  
@@ -36,4 +36,4 @@ Windows Communication Foundation (WCF) yapılandırma öğeleri etkinleştirmek,
   
 ## <a name="related-sections"></a>İlgili Bölümler  
  [Windows Communication Foundation uygulamaları yapılandırma](http://msdn.microsoft.com/library/13cb368e-88d4-4c61-8eed-2af0361c6d7a)  
- Nasıl yapılandırılacağını açıklar [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)] hizmetler ve istemcileri.
+ WCF hizmetleri ve istemcilerin nasıl yapılandırılacağını açıklar.

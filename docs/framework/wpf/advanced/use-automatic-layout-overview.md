@@ -1,27 +1,15 @@
 ---
-title: "Otomatik Düzen Kullanımına Genel Bakış"
-ms.custom: 
+title: Otomatik Düzen Kullanımına Genel Bakış
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-wpf
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - layout [WPF], automatic
 - automatic layout [WPF]
 ms.assetid: 6fed9264-18bb-4d05-8867-1fe356c6f687
-caps.latest.revision: "22"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 75066b59d0f3a686c66fdbdd187ba4c18e786e6d
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 8693150099559ca09541eb790c134ca3d5277e78
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="use-automatic-layout-overview"></a>Otomatik Düzen Kullanımına Genel Bakış
 Bu konu yazma konusunda geliştiricilere yönelik yönergeleri tanıtır [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] yerelleştirilebilir uygulamalarla [!INCLUDE[TLA#tla_ui#plural](../../../../includes/tlasharptla-uisharpplural-md.md)]. Geçmişte, yerelleştirme bir [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] uzun süren bir işlem. Her dil, [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] piksel piksel ayarlama gerekli uyarlanmıştır. Bugün doğru tasarım ve doğru kodlama standartları ile [!INCLUDE[TLA2#tla_ui#plural](../../../../includes/tla2sharptla-uisharpplural-md.md)] çevirmenler küçük yapmak için yeniden konumlandırma ve yeniden boyutlandırma böylece oluşturulabilir. Daha kolay yeniden boyutlandırılan ve konumlandırılabilir uygulamaları yazma yaklaşımına otomatik düzeni olarak adlandırılır ve kullanarak elde edilebilir [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] uygulama tasarımı.  
@@ -30,13 +18,13 @@ Bu konu yazma konusunda geliştiricilere yönelik yönergeleri tanıtır [!INCLU
 ## <a name="advantages-of-using-automatic-layout"></a>Otomatik düzeni kullanmanın yararları  
  Çünkü [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] sunum sistemi güçlü ve esnek, farklı diller gereksinimlerine uyacak şekilde ayarlanmış bir uygulamada düzen öğelerini olanağı sağlar. Aşağıdaki listede bazı otomatik düzen avantajları işaret eder.  
   
--   [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)]herhangi bir dilde de görüntüler.  
+-   [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] herhangi bir dilde de görüntüler.  
   
 -   Metin çevrilen sonra konum ve boyut denetimlerini yeniden ayarlama gereksinimini azaltır.  
   
 -   Pencere boyutunu yeniden ayarlama gereksinimini azaltır.  
   
--   [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)]düzeni herhangi bir dilde düzgün bir şekilde işler.  
+-   [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] düzeni herhangi bir dilde düzgün bir şekilde işler.  
   
 -   Yerelleştirme, dize çeviri biraz daha fazla noktasına azaltılabilir.  
   
@@ -63,7 +51,7 @@ Otomatik yeniden boyutlandırılabilir düğmesi
 |----------------------|-----------------|  
 |Mutlak Konumlar kullanmayın.|-Kullanmayın <xref:System.Windows.Controls.Canvas> çünkü öğeleri mutlak konumlandırır.<br />-Kullanın <xref:System.Windows.Controls.DockPanel>, <xref:System.Windows.Controls.StackPanel>, ve <xref:System.Windows.Controls.Grid> denetimleri konumlandırmak için.<br />-Bir hakkında tartışma için çeşitli türlerde panolar, bkz: [paneller genel bakış](../../../../docs/framework/wpf/controls/panels-overview.md).|  
 |Bir pencere için sabit bir boyut ayarlamayın.|-Kullanın <xref:System.Windows.Window.SizeToContent%2A>.<br />-Örneğin:<br /><br /> [!code-xaml[LocalizationGrid#2](../../../../samples/snippets/csharp/VS_Snippets_Wpf/LocalizationGrid/CS/Pane1.xaml#2)]|  
-|Ekleme bir <xref:System.Windows.FrameworkElement.FlowDirection%2A>.|<ul><li>Ekleme bir <xref:System.Windows.FrameworkElement.FlowDirection%2A> , uygulamanızın kök öğesi için.</li><li>[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]Yatay desteklemek için kullanışlı bir yol, çift yönlü ve dikey düzenleri sağlar. Sunum çerçevesinde <xref:System.Windows.FrameworkElement.FlowDirection%2A> özelliği düzeni tanımlamak için kullanılabilir. Akış yönü modelleri şunlardır:<br /><br /> <ul><li><xref:System.Windows.FlowDirection.LeftToRight>(LrTb) — Latin, Doğu Asya ve benzeri için yatay düzen.</li><li><xref:System.Windows.FlowDirection.RightToLeft>(RlTb) — Arapça, İbranice ve benzeri için çift yönlü.</li></ul></li></ul>|  
+|Ekleme bir <xref:System.Windows.FrameworkElement.FlowDirection%2A>.|<ul><li>Ekleme bir <xref:System.Windows.FrameworkElement.FlowDirection%2A> , uygulamanızın kök öğesi için.</li><li>[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] Yatay desteklemek için kullanışlı bir yol, çift yönlü ve dikey düzenleri sağlar. Sunum çerçevesinde <xref:System.Windows.FrameworkElement.FlowDirection%2A> özelliği düzeni tanımlamak için kullanılabilir. Akış yönü modelleri şunlardır:<br /><br /> <ul><li><xref:System.Windows.FlowDirection.LeftToRight> (LrTb) — Latin, Doğu Asya ve benzeri için yatay düzen.</li><li><xref:System.Windows.FlowDirection.RightToLeft> (RlTb) — Arapça, İbranice ve benzeri için çift yönlü.</li></ul></li></ul>|  
 |Bileşik yazı tiplerini yerine fiziksel yazı tipleri kullanın.|<ul><li>Bileşik yazı tipleriyle <xref:System.Windows.Controls.Control.FontFamily%2A> özellik yerelleştirilmesi gerekmez.</li><li>Geliştiriciler, aşağıdaki yazı tipleri kullanın veya kendi oluşturun.<br /><br /> <ul><li>Genel kullanıcı arabirimi</li><li>Genel San Serif</li><li>Genel Serif</li></ul></li></ul>|  
 |XML: lang ekleyin.|-Add `xml:lang` kök öğesinin özniteliğinde, [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)], gibi `xml:lang="en-US"` İngilizce bir uygulama için.<br />-Bileşik yazı tipleri kullandığından `xml:lang` hangi yazı tipinin kullanılacağını belirlemek için çok dilli senaryoları desteklemek için bu özelliği ayarlayın.|  
   

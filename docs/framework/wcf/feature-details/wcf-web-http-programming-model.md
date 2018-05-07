@@ -1,38 +1,26 @@
 ---
 title: WCF Web HTTP Programlama Modeli
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - web services programming model [WCF]
 - POX
 - REST
 ms.assetid: 2312a8d3-b66e-4623-ba42-978434300c7f
-caps.latest.revision: "17"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: f008cfe874ae9e38a71eb3cf5d6b2ed4e6cbdf7c
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: e063cdba74af9ee90b41d829a2a8b251a5cc96e7
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="wcf-web-http-programming-model"></a>WCF Web HTTP Programlama Modeli
-[!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] Web HTTP programlama modeli sağlar kullanıma sunmak geliştiricilere [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] hizmet dışı SOAP uç noktası işlemleri. Bu bölümdeki konularda ayrıntılı özelliğini inceleyin.  
+Windows Communication Foundation (WCF) Web HTTP programlama modeli, geliştiricilerin WCF Hizmeti işlemlerini olmayan SOAP uç noktalara kullanıma olanak tanır. Bu bölümdeki konularda ayrıntılı özelliğini inceleyin.  
   
 ## <a name="in-this-section"></a>Bu Bölümde  
  [WCF Web HTTP Programlama Modeli Genel Bakış](../../../../docs/framework/wcf/feature-details/wcf-web-http-programming-model-overview.md)  
- Genel bir bakış sağlar [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] Web HTTP programlama modeli.  
+ Windows Communication Foundation (WCF) Web HTTP programlama modeli genel bir bakış sağlar.  
   
  [WCF Web HTTP Programlama Nesnesi Modeli](../../../../docs/framework/wcf/feature-details/wcf-web-http-programming-object-model.md)  
- Anlatılmaktadır [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] Web HTTP programlama modeli ve nasıl çalışır.  
+ Windows Communication Foundation (WCF) Web HTTP programlama modeli ve nasıl çalıştığı açıklanmaktadır.  
   
  [Nasıl yapılır: Temel Bir WCF Web HTTP Hizmeti Oluşturma](../../../../docs/framework/wcf/feature-details/how-to-create-a-basic-wcf-web-http-service.md)  
  SOAP olmayan uç noktasını kullanıma sunar temel bir hizmet yazma açıklar.  

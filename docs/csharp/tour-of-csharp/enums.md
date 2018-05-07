@@ -1,20 +1,13 @@
 ---
-title: "C# numaralandırmaları - C# dili turu"
-description: "C# sabitleri adlı numaralandırmalar, ayrık hakkında bilgi edinin"
-keywords: .NET, csharp
-author: BillWagner
-ms.author: wiwagn
+title: C# numaralandırmaları - C# dili turu
+description: C# sabitleri adlı numaralandırmalar, ayrık hakkında bilgi edinin
 ms.date: 08/10/2016
-ms.topic: article
-ms.prod: .net
-ms.technology: devlang-csharp
-ms.devlang: csharp
 ms.assetid: 7faba1cc-6ea9-4a19-adb9-0335e4b132e5
-ms.openlocfilehash: 77d315dd87d9cab32605de415674d146eb9115fa
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.openlocfilehash: 7fe2626381cb90e55842e3be17dd450eb73d5a5b
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="enums"></a>Numaralandırmalar
 
@@ -32,7 +25,7 @@ Aşağıdaki örnek bildiren bir `enum` adlı türü `Alignment` bir temel alın
 
 Önceki örnekte gösterildiği gibi bir `enum` üye bildirimi üyesinin değerini belirten bir sabit ifadesine içerebilir. Her sabit değer `enum` üye, temel alınan türü aralığında olmalıdır `enum`. Zaman bir `enum` üye bildirimi açıkça bir değer belirtmiyor, üye sıfır değeri verilir (ilk üyesiyse `enum` türü) veya textually önceki değeri `enum` yanı sıra bir üyesi.
 
-`Enum`değerler dönüştürülür tam sayı değerleri ve tersi tür atamaları kullanarak olabilir. Örneğin:
+`Enum` değerler dönüştürülür tam sayı değerleri ve tersi tür atamaları kullanarak olabilir. Örneğin:
 
 [!code-csharp[EnumStorage](../../../samples/snippets/csharp/tour/enums/Program.cs#L49-L50)]
 

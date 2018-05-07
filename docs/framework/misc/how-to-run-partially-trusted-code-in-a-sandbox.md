@@ -1,13 +1,6 @@
 ---
-title: "Nasıl yapılır: Korumalı Alanda Kısmen Güvenilen Kodu Çalıştırma"
-ms.custom: 
+title: 'Nasıl yapılır: Korumalı Alanda Kısmen Güvenilen Kodu Çalıştırma'
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - partially trusted code
 - sandboxing
@@ -15,16 +8,13 @@ helpviewer_keywords:
 - restricted security environment
 - code security, sandboxing
 ms.assetid: d1ad722b-5b49-4040-bff3-431b94bb8095
-caps.latest.revision: "27"
 author: mairaw
 ms.author: mairaw
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: fc335bfef4993f6e730dca93cd645d886a9d13b4
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 05ab0874c980d9e6138ae2bfd720c6d89628613c
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-run-partially-trusted-code-in-a-sandbox"></a>Nasıl yapılır: Korumalı Alanda Kısmen Güvenilen Kodu Çalıştırma
 [!INCLUDE[net_security_note](../../../includes/net-security-note-md.md)]  
@@ -72,7 +62,7 @@ AppDomain.CreateDomain( string friendlyName,
     PermissionSet internetPS = SecurityManager.GetStandardSandbox(ev);  
     ```  
   
-     <xref:System.Security.SecurityManager.GetStandardSandbox%2A> Yöntemi döndürür ya da bir `Internet` izin kümesi veya `LocalIntranet` izni kanıt bölge bağlı olarak ayarlandı. <xref:System.Security.SecurityManager.GetStandardSandbox%2A>Ayrıca bazı başvuru olarak geçirilen kanıt nesneler kimlik izinlerini oluşturur.  
+     <xref:System.Security.SecurityManager.GetStandardSandbox%2A> Yöntemi döndürür ya da bir `Internet` izin kümesi veya `LocalIntranet` izni kanıt bölge bağlı olarak ayarlandı. <xref:System.Security.SecurityManager.GetStandardSandbox%2A> Ayrıca bazı başvuru olarak geçirilen kanıt nesneler kimlik izinlerini oluşturur.  
   
 2.  Barındırma sınıfı içeren bütünleştirilmiş kodun oturum (adlı `Sandboxer` Bu örnekte) güvenilmeyen kod çağırır. Ekleme <xref:System.Security.Policy.StrongName> derlemeye imzalamak için kullanılan <xref:System.Security.Policy.StrongName> dizisi `fullTrustAssemblies` parametresinin <xref:System.AppDomain.CreateDomain%2A> çağırın. Barındırma sınıfı çalıştırmalısınız, kısmi güven kodunun yürütülmesini etkinleştirmek veya kısmi güven uygulama hizmet sunmak için tam olarak güvenilir olarak. Nasıl okuma budur <xref:System.Security.Policy.StrongName> derleme:  
   
@@ -176,7 +166,7 @@ AppDomain.CreateDomain( string friendlyName,
         }  
     ```  
   
-     <xref:System.Reflection>kısmen güvenilen bütünleştirilmiş kodunda bir yöntem tanıtıcısı almak için kullanılır. Tanıtıcı minimum izinleri ile güvenli bir şekilde kod yürütmek için kullanılabilir.  
+     <xref:System.Reflection> kısmen güvenilen bütünleştirilmiş kodunda bir yöntem tanıtıcısı almak için kullanılır. Tanıtıcı minimum izinleri ile güvenli bir şekilde kod yürütmek için kullanılabilir.  
   
      Önceki kodda Not <xref:System.Security.PermissionSet.Assert%2A> yazdırma önce tam güven izni <xref:System.Security.SecurityException>.  
   

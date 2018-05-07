@@ -1,23 +1,12 @@
 ---
-title: "Tek aşaması kaydetmek ve yükseltilebilir tek aşaması bildirim kullanarak en iyi duruma getirme"
-ms.custom: 
+title: Tek aşaması kaydetmek ve yükseltilebilir tek aşaması bildirim kullanarak en iyi duruma getirme
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 57beaf1a-fb4d-441a-ab1d-bc0c14ce7899
-caps.latest.revision: "3"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 6f85dabc8a447db13173a672db37b327ba4a9fe6
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 093dfb793d5a8c8dc59eaabab09f2e5b6c81c352
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="optimization-using-single-phase-commit-and-promotable-single-phase-notification"></a>Tek aşaması kaydetmek ve yükseltilebilir tek aşaması bildirim kullanarak en iyi duruma getirme
 Bu konu, tarafından sağlanan mekanizmaları açıklar <xref:System.Transactions> performansını iyileştirmek için altyapı.  
@@ -57,7 +46,7 @@ Bu konu, tarafından sağlanan mekanizmaları açıklar <xref:System.Transaction
   
 4.  Bu noktada, SQL 2005'e belirli bazı mekanizmasını kullanarak CN1 işlem iletir ve <xref:System.Data>.  
   
-5.  Dönüş değerini <xref:System.Transactions.ITransactionPromoter.Promote%2A> yöntemdir işlem için bir yayma belirteci içeren bayt dizisi. <xref:System.Transactions>Yerel harekete dahil edebilirsiniz DTC işlem oluşturmak için bu propagaition belirtecini kullanır.  
+5.  Dönüş değerini <xref:System.Transactions.ITransactionPromoter.Promote%2A> yöntemdir işlem için bir yayma belirteci içeren bayt dizisi. <xref:System.Transactions> Yerel harekete dahil edebilirsiniz DTC işlem oluşturmak için bu propagaition belirtecini kullanır.  
   
 6.  Bu noktada, CN2 tarafından yöntemlerden birini çağırma alınan verileri kullanabilirsiniz <xref:System.Transactions.TransactionInterop> SQL işlem geçirmek için.  
   

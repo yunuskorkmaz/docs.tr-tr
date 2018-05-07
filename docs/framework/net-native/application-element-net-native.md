@@ -1,24 +1,14 @@
 ---
-title: "&lt;Application&gt; Öğesi (.NET Yerel)"
-ms.custom: 
+title: '&lt;Application&gt; Öğesi (.NET Yerel)'
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: b4e9b37a-059b-4076-8f56-cb3f9cef0cd9
-caps.latest.revision: "21"
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: c486faf43a1109b0391f40072ab267b72e1d07d8
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 60145611981b53d4778e7c52c6138b6a9b58a592
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="ltapplicationgt-element-net-native"></a>&lt;Application&gt; Öğesi (.NET Yerel)
 Uygulama çapında türleri ve, meta verileri yansıma çalışma zamanında yüklenebilir ve bir uygulamadaki tüm program öğelerinin çalışma zamanı yansıma ilkenin uygulandığı tür üyeleri için bir kapsayıcı görevi görür.  
@@ -69,9 +59,9 @@ Uygulama çapında türleri ve, meta verileri yansıma çalışma zamanında yü
   
 |Öğe|Açıklama|  
 |-------------|-----------------|  
-|[\<Derleme >](../../../docs/framework/net-native/assembly-element-net-native.md)|Belirli bir derleme içindeki tüm türler için ilke uygulanır.|  
+|[\<derleme >](../../../docs/framework/net-native/assembly-element-net-native.md)|Belirli bir derleme içindeki tüm türler için ilke uygulanır.|  
 |[\<Namespace >](../../../docs/framework/net-native/namespace-element-net-native.md)|Belirli bir ad alanı içindeki tüm türler için ilke uygulanır.|  
-|[\<Türü >](../../../docs/framework/net-native/type-element-net-native.md)|Bir sınıf veya yapı gibi belirli türde bir ilke uygulanır.|  
+|[\<türü >](../../../docs/framework/net-native/type-element-net-native.md)|Bir sınıf veya yapı gibi belirli türde bir ilke uygulanır.|  
 |[\<Typeınstantiation >](../../../docs/framework/net-native/typeinstantiation-element-net-native.md)|İlke oluşturulan genel bir tür için geçerlidir. Örneğin, bir [ \<Typeınstantiation >](../../../docs/framework/net-native/typeinstantiation-element-net-native.md) öğesi için ilke tanımlamak için kullanılan bir `List<String>` türü.|  
 |[\<Yöntem >](../../../docs/framework/net-native/method-element-net-native.md)|Belirli bir türün bir yöntem ilke uygulanır.|  
 |[\<Methodınstantiation >](../../../docs/framework/net-native/methodinstantiation-element-net-native.md)|İlke için yapılandırılmış bir genel yöntem uygulanır.|  

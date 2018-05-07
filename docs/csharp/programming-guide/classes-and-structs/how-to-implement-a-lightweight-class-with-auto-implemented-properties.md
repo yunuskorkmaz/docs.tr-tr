@@ -1,21 +1,15 @@
 ---
-title: "Nasıl yapılır: Otomatik Uygulanan Özelliklerle Hafif bir Sınıf Uygulama (C# Programlama Kılavuzu)"
+title: 'Nasıl yapılır: Otomatik Uygulanan Özelliklerle Hafif bir Sınıf Uygulama (C# Programlama Kılavuzu)'
 ms.date: 07/20/2015
-ms.prod: .net
-ms.technology: devlang-csharp
-ms.topic: article
 helpviewer_keywords:
 - auto-implemented properties [C#]
 - properties [C#], auto-implemented
 ms.assetid: 1dc5a8ad-a4f7-4f32-8506-3fc6d8c8bfed
-caps.latest.revision: "11"
-author: BillWagner
-ms.author: wiwagn
-ms.openlocfilehash: f43dfaffe6ff696387573729dc25cabe33c1fede
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 9612ec916481776691e85a84503ce5063c20b099
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-implement-a-lightweight-class-with-auto-implemented-properties-c-programming-guide"></a>Nasıl yapılır: Otomatik Uygulanan Özelliklerle Hafif bir Sınıf Uygulama (C# Programlama Kılavuzu)
 Bu örnek yalnızca otomatik uygulanan özellikler kümesi kapsülleyen hizmet veren değişmez hafif bir sınıf oluşturulacağını gösterir. Başvuru türü anlamları kullandığınızda, bu tür bir yapı yapı yerine kullanın.  
@@ -119,6 +113,6 @@ Bu örnek yalnızca otomatik uygulanan özellikler kümesi kapsülleyen hizmet v
  Derleyici her otomatik uygulanan bir özellik için yedekleme alanları oluşturur. Alanlar doğrudan kaynak kodundan erişilebilir değildir.  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [Özellikleri](../../../csharp/programming-guide/classes-and-structs/properties.md)  
- [yapısı](../../../csharp/language-reference/keywords/struct.md)  
- [Nesne ve koleksiyon başlatıcıları](../../../csharp/programming-guide/classes-and-structs/object-and-collection-initializers.md)
+ [Özellikler](../../../csharp/programming-guide/classes-and-structs/properties.md)  
+ [struct](../../../csharp/language-reference/keywords/struct.md)  
+ [Nesne ve Koleksiyon Başlatıcıları](../../../csharp/programming-guide/classes-and-structs/object-and-collection-initializers.md)

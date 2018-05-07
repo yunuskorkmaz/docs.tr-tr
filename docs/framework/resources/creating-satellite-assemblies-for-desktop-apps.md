@@ -1,14 +1,6 @@
 ---
 title: Masaüstü Uygulamaları için Uydu Derlemeleri Oluşturma
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-bcl
-ms.tgt_pltfrm: ''
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -31,17 +23,13 @@ helpviewer_keywords:
 - compiling satellite assemblies
 - re-signing assemblies
 ms.assetid: 8d5c6044-2919-41d2-8321-274706b295ac
-caps.latest.revision: ''
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 2f75da3332c8172a6a888e6f40c66383866799ea
-ms.sourcegitcommit: 498799639937c89de777361aab74261efe7b79ea
+ms.openlocfilehash: c308c7e16f106d00e5fd1b5ad820f8b330f4bbbf
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/22/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="creating-satellite-assemblies-for-desktop-apps"></a>Masaüstü Uygulamaları için Uydu Derlemeleri Oluşturma
 Kaynak dosyaları yerelleştirilmiş uygulamalarda merkezi bir rol oynar. Bunlar, bir uygulama kullanıcının kendi dil ve kültür dizeleri, resimleri ve diğer verileri görüntülemek ve kullanıcının kendi dilini veya kültür için kaynaklar kullanılamıyorsa alternatif veri sağlamak için etkinleştirin. .NET Framework bulun ve yerelleştirilmiş kaynaklar almak için bir hub ve bağlı bileşen modeli kullanır. Hub yerelleştirilemeyen yürütülebilir kod ve bağımsız olarak adlandırılan tek bir kültür için kaynakları içeren ana derlemedir veya varsayılan kültür. Geri dönüş kültürü uygulama için varsayılan kültürdür; hiçbir yerelleştirilmiş kaynaklar kullanılabilir olduğunda kullanılır. Kullandığınız <xref:System.Resources.NeutralResourcesLanguageAttribute> uygulamanın varsayılan kültürü kültürünü atamak özniteliği. Her bağlı bileşen tek bir yerelleştirilmiş kültür için kaynakları içerir, ancak herhangi bir kod içermiyor bir uydu derleme bağlanır. Uydu derlemeleri ana derleme parçası olmadığından, kolayca güncelleştirme veya uygulama için ana derleme değiştirmeden belirli bir kültür karşılık kaynakları değiştirin.  
@@ -87,11 +75,11 @@ al -target:lib -embed:strings.de.resources -culture:de -out:Example.resources.dl
   
 |Seçenek|Açıklama|  
 |------------|-----------------|  
-|**-Hedef:**lib|Uydu derlemenizi kitaplığı (.dll) dosyasına derlenir belirtir. Uydu derlemesi yürütülebilir kod içermiyor ve bir uygulamanın ana derleme olmadığından uydu derlemelerini DLL'ler olarak kaydetmeniz gerekir.|  
-|**-katıştırmak:**strings.de.resources|Al.exe derleme derlediğinde katıştırmak için kaynak dosya adını belirtir. Uydu bütünleştirilmiş kodunda birden fazla .resources dosyaları eklenebilir, ancak hub ve bağlı bileşen modeli izliyorsanız, her kültür için bir uydu derlemesi derlemeniz gerekir. Ancak, dizeleri ve nesneler için ayrı .resources dosyaları oluşturabilirsiniz.|  
-|**-kültür:**Gizle|Derlemek için kaynak kültürü belirtir. Belirtilen kültür için kaynakları için aradığında ortak dil çalışma zamanı bu bilgileri kullanır. Bu seçeneği atlayın, Al.exe kaynak derleme, ancak çalışma zamanı bir kullanıcı bulmak mümkün olmaz ister.|  
-|**-out:**Example.resources.dll|Çıktı dosyası adını belirtir. Ad adlandırma standardı izlemelidir *baseName*.resources. *Uzantı*, burada *baseName* ana derleme adıdır ve *uzantısı* geçerli dosya adı uzantısıdır (örneğin, .dll). Çalışma zamanı, çıkış dosyasının adına dayanarak bir uydu derleme kültürünü belirlemek mümkün olmadığını unutmayın; kullanmalısınız **/kültür** belirlemek için seçeneği.|  
-|**-Şablon:**Example.dll|Uydu derlemesi kültür alanı dışında tüm derleme meta verilerini devralır derleme belirtir. Bu seçenek, uydu derlemelerini etkiler, yalnızca sahip bir derleme belirtirseniz bir [güçlü ad](../../../docs/framework/app-domains/strong-named-assemblies.md).|  
+|**-Hedef:** lib|Uydu derlemenizi kitaplığı (.dll) dosyasına derlenir belirtir. Uydu derlemesi yürütülebilir kod içermiyor ve bir uygulamanın ana derleme olmadığından uydu derlemelerini DLL'ler olarak kaydetmeniz gerekir.|  
+|**-katıştırmak:** strings.de.resources|Al.exe derleme derlediğinde katıştırmak için kaynak dosya adını belirtir. Uydu bütünleştirilmiş kodunda birden fazla .resources dosyaları eklenebilir, ancak hub ve bağlı bileşen modeli izliyorsanız, her kültür için bir uydu derlemesi derlemeniz gerekir. Ancak, dizeleri ve nesneler için ayrı .resources dosyaları oluşturabilirsiniz.|  
+|**-kültür:** Gizle|Derlemek için kaynak kültürü belirtir. Belirtilen kültür için kaynakları için aradığında ortak dil çalışma zamanı bu bilgileri kullanır. Bu seçeneği atlayın, Al.exe kaynak derleme, ancak çalışma zamanı bir kullanıcı bulmak mümkün olmaz ister.|  
+|**-out:** Example.resources.dll|Çıktı dosyası adını belirtir. Ad adlandırma standardı izlemelidir *baseName*.resources. *Uzantı*, burada *baseName* ana derleme adıdır ve *uzantısı* geçerli dosya adı uzantısıdır (örneğin, .dll). Çalışma zamanı, çıkış dosyasının adına dayanarak bir uydu derleme kültürünü belirlemek mümkün olmadığını unutmayın; kullanmalısınız **/kültür** belirlemek için seçeneği.|  
+|**-Şablon:** Example.dll|Uydu derlemesi kültür alanı dışında tüm derleme meta verilerini devralır derleme belirtir. Bu seçenek, uydu derlemelerini etkiler, yalnızca sahip bir derleme belirtirseniz bir [güçlü ad](../../../docs/framework/app-domains/strong-named-assemblies.md).|  
   
  Al.exe ile kullanılabilir seçenekler tam bir listesi için bkz: [derleme bağlayıcı (Al.exe)](../../../docs/framework/tools/al-exe-assembly-linker.md).  
   

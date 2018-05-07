@@ -1,28 +1,14 @@
 ---
-title: "Bağlamalar ve Bağlama Öğeleri"
-ms.custom: 
+title: Bağlamalar ve Bağlama Öğeleri
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - binding elements [WCF]
 ms.assetid: 765ff77b-7682-4ea3-90eb-e4d751e37379
-caps.latest.revision: 
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 232d2d23ea88c834d2e28bae99cd2e001f6efac6
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
-ms.translationtype: MT
+ms.openlocfilehash: 32b8b9e1fbb3ae16f4dd81620658569a9408057b
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="bindings-and-binding-elements"></a>Bağlamalar ve Bağlama Öğeleri
 Bağlamaları olan koleksiyonları adlı özel bir yapılandırma öğelerinin *bağlama öğeleri*, hizmet çalışma zamanı tarafından bir istemci her değerlendirilir veya hizmet uç noktası oluşturulur. İçinde bir bağlaması bağlama öğelerin sırasını ve türünü, seçim ve bir uç noktanın kanal yığınında protokolü ve taşıma kanalları yığınlama sırasını belirler.  
@@ -32,7 +18,7 @@ Bağlamaları olan koleksiyonları adlı özel bir yapılandırma öğelerinin *
  Bir bağlama tam olarak bir aktarım bağlama öğesi içermelidir. Her aktarım bağlama öğesi, en çok bir ileti bağlama öğesi bağlama için kodlama ekleyerek kılınabilir bağlama öğesi kodlama varsayılan bir ileti gösterir. Taşıma ve Kodlayıcı bağlama öğeleri ek olarak, bağlama herhangi bir sayıda birlikte hizmet ve bir uç noktasından bir SOAP iletisi göndermek için gerekli işlevselliği uygulamak Protokolü bağlama öğeleri içerebilir. Ayrıntılar için bkz [kullanarak bağlamaları yapılandırma hizmetler ve istemcileri için](../../../../docs/framework/wcf/using-bindings-to-configure-services-and-clients.md).  
   
 ## <a name="extending-bindings-and-binding-elements"></a>Bağlamaları genişletme ve bağlama öğeleri  
- [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)]kadar çeşitli senaryoları kapak sistem tarafından sağlanan bağlamaları içerir. (Daha fazla bilgi için bkz: [System-Provided bağlamaları](../../../../docs/framework/wcf/system-provided-bindings.md).) Oluşturma ve kullanma dahil değilse bir bağlama gerektiğinde zamanlar olabilir [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]. Aşağıdaki senaryolar, yeni bir bağlama oluşturulmasını gerektirir.  
+ Windows Communication Foundation (WCF) kadar çeşitli senaryoları kapak sistem tarafından sağlanan bağlamaları içerir. (Daha fazla bilgi için bkz: [System-Provided bağlamaları](../../../../docs/framework/wcf/system-provided-bindings.md).) Oluşturma ve kullanma dahil değilse bir bağlama gerektiğinde zamanlar olabilir [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]. Aşağıdaki senaryolar, yeni bir bağlama oluşturulmasını gerektirir.  
   
 -   Yeni bir bağlama öğesi (örneğin, bir yeni taşıma, kodlama veya protokolü bağlama öğesi) kullanmak için bu bağlama öğesini içeren yeni bir bağlama oluşturmanız gerekir. Örneğin, özel bir eklediyseniz `UdpTransportBindingElement` UDP taşıma için yapmak için yeni bir bağlama oluşturmanız gerekecek bunu kullanın. Bu davranış kullanarak gerçekleştirme hakkında bilgi için <xref:System.ServiceModel.Channels.CustomBinding?displayProperty=nameWithType> yazın, bkz: [özel bağlamaları](../../../../docs/framework/wcf/extending/custom-bindings.md).  
   

@@ -1,10 +1,7 @@
 ---
-title: "Bağımlılık özelliklerine genel bakış"
-description: "WPF özellik sistemi tarafından yedeklenen bir özellik bağımlılık özelliği olarak bilinir. Bu genel bakışta, WPF özellik sistemi ve bağımlılık özelliği özelliklerini açıklar."
+title: Bağımlılık özelliklerine genel bakış
+description: WPF özellik sistemi tarafından yedeklenen bir özellik bağımlılık özelliği olarak bilinir. Bu genel bakışta, WPF özellik sistemi ve bağımlılık özelliği özelliklerini açıklar.
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.technology: dotnet-wpf
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -17,20 +14,15 @@ helpviewer_keywords:
 - dependency properties [WPF]
 - resources [WPF], references to
 ms.assetid: d119d00c-3afb-48d6-87a0-c4da4f83dee5
-caps.latest.revision: "30"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: d90e47c400f24eb10f2d262f9cb0e757ff472f0a
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 196e858c52c06c96d652209e86039bfcc81a785a
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="dependency-properties-overview"></a>Bağımlılık özelliklerine genel bakış
 
-[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]işlevlerini genişletmek için kullanılan hizmetleri kümesi sağlayan bir [!INCLUDE[TLA#tla_clr](../../../../includes/tlasharptla-clr-md.md)] özelliği. Toplu olarak, bu hizmetler genellikle denir [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] özellik sistemi. Tarafından yedeklenen bir özellik [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] özellik sistemi, bir bağımlılık özelliği olarak bilinir. Bu genel bakış açıklanmaktadır [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] özellik sistemi ve bağımlılık özelliği özelliklerini. XAML ve kod varolan bağımlılık özellikleri kullanmayı içerir. Bu genel bakışta, aynı zamanda özelleştirilmiş yönlerini bağımlılık özelliği meta verileri ve özel bir sınıf içinde kendi bağımlılık özelliği yaratmayı gibi bağımlılık özellikleri sunar.
+[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] işlevlerini genişletmek için kullanılan hizmetleri kümesi sağlayan bir [!INCLUDE[TLA#tla_clr](../../../../includes/tlasharptla-clr-md.md)] özelliği. Toplu olarak, bu hizmetler genellikle denir [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] özellik sistemi. Tarafından yedeklenen bir özellik [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] özellik sistemi, bir bağımlılık özelliği olarak bilinir. Bu genel bakış açıklanmaktadır [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] özellik sistemi ve bağımlılık özelliği özelliklerini. XAML ve kod varolan bağımlılık özellikleri kullanmayı içerir. Bu genel bakışta, aynı zamanda özelleştirilmiş yönlerini bağımlılık özelliği meta verileri ve özel bir sınıf içinde kendi bağımlılık özelliği yaratmayı gibi bağımlılık özellikleri sunar.
 
 ## <a name="prerequisites"></a>Önkoşullar
 Bu konu bazı temel bilgiye sahip olduğunuzu varsayar [!INCLUDE[TLA2#tla_clr](../../../../includes/tla2sharptla-clr-md.md)] ve nesne odaklı programlama. Bu konudaki örnekleri takip etmek için ayrıca anlamanız gereken [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] ve nasıl yazıldığını bilmeniz [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] uygulamalar. Daha fazla bilgi için bkz: [gözden geçirme: ilk WPF Masaüstü Uygulamam](../../../../docs/framework/wpf/getting-started/walkthrough-my-first-wpf-desktop-application.md).  
@@ -43,7 +35,7 @@ Bağımlılık özellikleri amacı, diğer girişlerini değere göre bir özell
 SDK Başvurusu'nda, bağımlılık özelliği bu özellik için yönetilen başvuru sayfasındaki bağımlılık özelliği bilgileri bölümünden varlığını tarafından hangi özelliktir tanımlayabilirsiniz. Bağımlılık özelliği bilgileri bölümüne bir bağlantı içerir <xref:System.Windows.DependencyProperty> tanımlayıcı alan bu bağımlılık özelliği için ve ayrıca bu özellik, sınıf başına geçersiz kılma bilgilerini ve diğer ayrıntılar için ayarlanan meta verileri seçeneklerinin bir listesini içerir.
 
 ## <a name="dependency-properties-back-clr-properties"></a>Bağımlılık özellikleri, CLR özelliklerini yedekler.
-Bağımlılık özellikleri ve [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] özellik sistemi bir özel alan özelliğiyle yedekleme standart deseni için alternatif bir uygulama olarak bir özellik yedekleyen bir tür sağlayarak özellik işlevselliğini genişletir. Bu tür adı <xref:System.Windows.DependencyProperty>. Tanımlayan diğer önemli tür [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] özelliği sistem <xref:System.Windows.DependencyObject>. <xref:System.Windows.DependencyObject>kaydeden ve bir bağımlılık özelliği kendi temel sınıf tanımlar.
+Bağımlılık özellikleri ve [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] özellik sistemi bir özel alan özelliğiyle yedekleme standart deseni için alternatif bir uygulama olarak bir özellik yedekleyen bir tür sağlayarak özellik işlevselliğini genişletir. Bu tür adı <xref:System.Windows.DependencyProperty>. Tanımlayan diğer önemli tür [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] özelliği sistem <xref:System.Windows.DependencyObject>. <xref:System.Windows.DependencyObject> kaydeden ve bir bağımlılık özelliği kendi temel sınıf tanımlar.
 
 Bu konuda kullanılan terminolojiyi özetlemesi [!INCLUDE[TLA#tla_sdk](../../../../includes/tlasharptla-sdk-md.md)] bağımlılık özellikleri ele alırken belgeleri:
 
@@ -96,7 +88,7 @@ Bir özelliğe karşı işlevselliğini genişleten işlevselliği bir alan tara
 
 - [Veri bağlama](#data-binding)
 
-- [Stilleri](#styles)
+- [Stiller](#styles)
 
 - [Animasyonlar](#animations)
 

@@ -1,31 +1,17 @@
 ---
 title: Yönlendirme Hizmeti
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 ms.assetid: ca7c216a-5141-4132-8193-102c181d2eba
-caps.latest.revision: 13
-author: wadepickett
-ms.author: wpickett
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 8ff2a99bc06ab0de2aedce98ea029f484e47053f
-ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
+ms.openlocfilehash: e3170108ae190c08a42cc7d80d66576a7b4f8a8e
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/30/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="routing-service"></a>Yönlendirme Hizmeti
 Yönlendirme iletisi yönlendirici olarak davranan genel bir SOAP aracı hizmetidir. Yönlendirme hizmeti çekirdek işlevselliğini iletisini üstbilgisinde veya ileti gövdesi içinde bir değere göre bir istemci uç noktası iletilmesi için bir ileti verir ileti içeriği göre iletileri yönlendirmek için yeteneğidir.  
   
- <xref:System.ServiceModel.Routing.RoutingService> Olarak uygulanan bir [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] hizmeti <xref:System.ServiceModel.Routing> ad alanı. Yönlendirme hizmeti iletilerini bir veya daha fazla hizmet uç noktaları kullanıma sunar ve ardından yollar her ileti bir veya daha fazla istemci uç noktaları için ileti içeriğine göre. Hizmet aşağıdaki özellikleri sağlar:  
+ <xref:System.ServiceModel.Routing.RoutingService> Bir Windows Communication Foundation (WCF) hizmet olarak uygulanan <xref:System.ServiceModel.Routing> ad alanı. Yönlendirme hizmeti iletilerini bir veya daha fazla hizmet uç noktaları kullanıma sunar ve ardından yollar her ileti bir veya daha fazla istemci uç noktaları için ileti içeriğine göre. Hizmet aşağıdaki özellikleri sağlar:  
   
 -   İçerik tabanlı yönlendirme  
   
@@ -47,10 +33,10 @@ Yönlendirme iletisi yönlendirici olarak davranan genel bir SOAP aracı hizmeti
   
  Bir veya daha fazla bu hedefleri gerçekleştirir bir aracı hizmeti oluşturmak mümkün olsa da, genellikle gibi bir uygulama belirli bir senaryoyu ya da çözüm bağlıdır ve kolayca yeni uygulamalara uygulanamaz.  
   
- Yönlendirme hizmeti ile uyumlu bir genel, dinamik olarak yapılandırılabilir, takılabilir SOAP aracıyı sağlar [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] hizmet ve kanal modeller ve SOAP tabanlı iletilerin içerik tabanlı yönlendirme gerçekleştirmenizi sağlar.  
+ Yönlendirme hizmeti ile WCF hizmeti ve kanal modelleri uyumlu olan ve SOAP tabanlı iletilerin içerik tabanlı yönlendirme gerçekleştirmenize olanak tanıyan bir genel, dinamik olarak yapılandırılabilir, takılabilir SOAP aracı sağlar.  
   
 > [!NOTE]
->  Yönlendirme yönlendirme hizmeti şu anda desteklemiyor [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] REST Hizmetleri.  REST çağrılarını yönlendirmek için kullanmayı <xref:System.Web.Routing> veya [uygulama isteği yönlendirme](http://go.microsoft.com/fwlink/?LinkId=164589) (http://go.microsoft.com/fwlink/?LinkId=164589).  
+>  Yönlendirme hizmeti, WCF REST Hizmetleri yönlendirmeyi şu anda desteklemiyor.  REST çağrılarını yönlendirmek için kullanmayı <xref:System.Web.Routing> veya [uygulama isteği yönlendirme](http://go.microsoft.com/fwlink/?LinkId=164589) (http://go.microsoft.com/fwlink/?LinkId=164589).  
   
 ## <a name="content-based-routing"></a>İçerik tabanlı yönlendirme  
  İçerik tabanlı yönlendirme iletisi içinde yer alan bir veya daha fazla değerlere göre bir ileti yönlendirmek için yeteneğidir. Yönlendirme hizmeti her ileti ve hedef uç nokta için ileti içeriği ve oluşturduğunuz yönlendirme mantığı göre yolları olup olmadığını denetler. İçerik tabanlı yönlendirme temel hizmet toplama, hizmet sürümü oluşturma ve öncelik yönlendirme sağlar.  

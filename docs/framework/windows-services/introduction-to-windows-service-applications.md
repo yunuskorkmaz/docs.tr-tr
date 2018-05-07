@@ -1,14 +1,6 @@
 ---
-title: "Windows Hizmet Uygulamalarına Giriş"
-ms.custom: 
+title: Windows Hizmet Uygulamalarına Giriş
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 f1_keywords:
 - ServiceController
 helpviewer_keywords:
@@ -29,17 +21,13 @@ helpviewer_keywords:
 - Win32ShareProcess service type
 - Windows Service applications, lifetime
 ms.assetid: 1b1b5e67-3ff3-40c0-8154-322cfd6ef0ae
-caps.latest.revision: 
 author: ghogen
-ms.author: ghogen
 manager: douge
-ms.workload:
-- dotnet
-ms.openlocfilehash: 613107a13820ad71b854dcba93f21c41f2a5fa5f
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: e0720b90d89e5117cbac15ce7e38a41071f1c13e
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="introduction-to-windows-service-applications"></a>Windows Hizmet Uygulamalarına Giriş
 Microsoft Windows Hizmetleri, önceden NT hizmeti olarak bilinen kendi Windows oturumlarında çalışan uzun süre çalışan yürütülebilir uygulamalar oluşturmanıza olanak sağlar. Bilgisayar önyükleme yaptığında, bu hizmetler otomatik olarak yeniden başlatılabilir duraklatıldı ve yeniden başlatılabilir ve herhangi bir kullanıcı arabirimi gösterme. Bu özellikler Hizmetleri sunucusunda veya aynı bilgisayarda çalışan diğer kullanıcılarla etkilemediğinden uzun süre çalışan işlevselliğe gereksinim duyduğunuzda kullanım için ideal hale getirir. Oturum açmış olan kullanıcının farklı belirli bir kullanıcı hesabı veya varsayılan bilgisayar hesabının güvenlik bağlamı hizmetleri de çalıştırabilirsiniz. Hizmetleri ve Windows oturumları hakkında daha fazla bilgi için Windows SDK belgelerine bakın.  

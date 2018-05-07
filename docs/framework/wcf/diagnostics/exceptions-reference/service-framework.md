@@ -1,26 +1,12 @@
 ---
 title: Hizmet Çerçevesi
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 ms.assetid: 75f60b87-f80e-4377-ba7c-8e6becaa2b28
-caps.latest.revision: ''
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 67e856aff583513fa8a16d289cf5190a9698c52c
-ms.sourcegitcommit: c883637b41ee028786edceece4fa872939d2e64c
+ms.openlocfilehash: 859e718a56ab63c8e012e1851c0730f53cb707be
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/26/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="service-framework"></a>Hizmet Çerçevesi
 Bu konu hizmet çerçevesi verileri tarafından oluşturulan tüm özel durumları listeler.  
@@ -49,8 +35,8 @@ Bu konu hizmet çerçevesi verileri tarafından oluşturulan tüm özel durumlar
 |channelDoesNotHaveADuplexSession0|Geçerli kanal çıktı oturumunu kapatmayı desteklemez. Bu kanal ISessionChannel uygulamıyor\<IDuplexSession >.|  
 |ClientRuntimeRequiresFormatter0|SerializeRequest ve DeserializeReply değerlerinin her ikisini de olmadığından belirtilen ClientOperation bir biçimlendirici gerektirir false.|  
 |CommunicationObjectAborted1|Durmuş olduğu için belirtilen iletişim nesnesi iletişimi için kullanılamaz.|  
-|CommunicationObjectAbortedStack2|Belirtilen iletişim nesnesi durdurulduğunu iletişimi için kullanılamıyor: {1}|  
-|CommunicationObjectBaseClassMethodNotCalled|Belirtilen iletişim nesnesi sanal işlev {1} kılınmış ancak taban sınıf içinde tanımlanan sürümü çağırmaz.|  
+|CommunicationObjectAbortedStack2|Durmuş olduğu için belirtilen iletişim nesnesi iletişimi için kullanılamaz: {1}|  
+|CommunicationObjectBaseClassMethodNotCalled|Belirtilen iletişim nesnesi sanal işlevi geçersiz kılınmış {1} ancak taban sınıf içinde tanımlanan sürümü çağırmaz.|  
 |ContractIsNotSelfConsistentItHasOneOrMore2|Belirtilen sözleşme bir veya daha fazla IsTerminating ya da IsInitiating olmayan işlemler vardır. SessionMode.Required için ayarlanan SessionMode özelliği yok. IsInitiating ve IsTerminating öznitelikleri yalnızca oturum bağlamında kullanılabilir.|  
 |CouldnTCreateChannelForChannelType2|Belirtilen kanal türü istendi, ancak belirtilen bağlama bunu desteklemiyorsa veya desteklemek için düzgün yapılandırılmamış.|  
 |DispatchRuntimeRequiresFormatter0|DeserializeRequest ve SerializeReply değerlerinin her ikisini de olmadığından belirtilen DispatchOperation bir biçimlendirici gerektirir false.|  

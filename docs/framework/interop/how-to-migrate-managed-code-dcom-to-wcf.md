@@ -1,24 +1,14 @@
 ---
-title: "Nasıl yapılır: Yönetilen Kodu DCOM’dan WCF’ye Geçirme"
-ms.custom: 
+title: 'Nasıl yapılır: Yönetilen Kodu DCOM’dan WCF’ye Geçirme'
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 52961ffc-d1c7-4f83-832c-786444b951ba
-caps.latest.revision: "6"
 author: mairaw
 ms.author: mairaw
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: d97a7d855d6c5ccd0545d8bf95ebe7bcece88656
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 187bff7c75ba2a0887e3c5728a484a9231936511
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-migrate-managed-code-dcom-to-wcf"></a>Nasıl yapılır: Yönetilen Kodu DCOM’dan WCF’ye Geçirme
 Windows Communication Foundation (WCF), güvenli ve önerilen seçenek yönetilen kod çağrıları sunucular ve istemciler dağıtılmış bir ortama arasında Dağıtılmış Bileşen Nesne Modeli (DCOM) üzerinden içindir. Bu makalede gösterilmektedir nasıl kod DCOM'dan WCF'ye aşağıdaki senaryolar için geçirme için.  
@@ -311,7 +301,7 @@ public interface ISessionBoundObject
     }  
 ```  
   
- Bu hizmet uygulaması aşağıdadır. Bu uygulama süre sonuyla nesneleri oluşturmak için bir singleton kanal fabrikası tutar.  Zaman `GetInstanceAddress` olan adlı bir kanal oluşturur ve oluşturur bir <xref:System.ServiceModel.EndpointAddress10> bu kanal ile ilişkili uzak adresine işaret eden nesne.   <xref:System.ServiceModel.EndpointAddress10>İstemci tarafından değerinin döndürülen bir veri türüdür.  
+ Bu hizmet uygulaması aşağıdadır. Bu uygulama süre sonuyla nesneleri oluşturmak için bir singleton kanal fabrikası tutar.  Zaman `GetInstanceAddress` olan adlı bir kanal oluşturur ve oluşturur bir <xref:System.ServiceModel.EndpointAddress10> bu kanal ile ilişkili uzak adresine işaret eden nesne.   <xref:System.ServiceModel.EndpointAddress10> İstemci tarafından değerinin döndürülen bir veri türüdür.  
   
 ```  
 public class SessionBoundFactory : ISessionBoundFactory  

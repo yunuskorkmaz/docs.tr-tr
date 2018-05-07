@@ -1,23 +1,12 @@
 ---
-title: "Yeniden barındırma Tasarımcısı"
-ms.custom: 
+title: Yeniden barındırma Tasarımcısı
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: b676ad31-5f64-4d84-9a36-b4d7113a2f4d
-caps.latest.revision: "9"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 44577450bb81e255caf22f306dcd0276821d262c
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 3caff782dcb7ce2434960e24c4586877788da653
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="designer-rehosting"></a>Yeniden barındırma Tasarımcısı
 Tasarımcı yeniden barındırılmasını başvuruda bulunan özel bir uygulama içinde iş akışı tasarım tuvale barındırmak için ortak bir senaryodur. Çoğu kişi bilginiz barındırma Visual Studio, ancak bir dizi vardır burada bir uygulamada iş akışı Tasarımcısı'nı gösteren yararlı olabilir senaryoları uygulamadır:  
@@ -50,7 +39,7 @@ Tasarımcı yeniden barındırılmasını başvuruda bulunan özel bir uygulama 
 </Grid>  
 ```  
   
- Sonraki örnek Tasarımcı oluşturur ve birincil ilişkilendirir <xref:System.Activities.Presentation.WorkflowDesigner.View%2A> ve <xref:System.Activities.Presentation.WorkflowDesigner.PropertyInspectorView%2A> kullanıcı arabiriminde uygun bir kapsayıcı ile. Aşağıdaki örnek kod bazı açıklama belirlenmiştir birkaç ek satırları vardır. <xref:System.Activities.Core.Presentation.DesignerMetadata.Register%2A> Çağrıdır etkinlikleri ile birlikte gelen için varsayılan etkinlik tasarımcıları ilişkilendirmek için gerekli [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)]. <xref:System.Activities.Presentation.WorkflowDesigner.Load%2A>Düzenlenecek WF öğesinde geçirmek için çağrılır. Son olarak, <xref:System.Activities.Presentation.WorkflowDesigner.View%2A> (birincil tuvale) ve <xref:System.Activities.Presentation.WorkflowDesigner.PropertyInspectorView%2A> (özellik Kılavuzu) kullanıcı arabirimi yüzeyine yerleştirilir.  
+ Sonraki örnek Tasarımcı oluşturur ve birincil ilişkilendirir <xref:System.Activities.Presentation.WorkflowDesigner.View%2A> ve <xref:System.Activities.Presentation.WorkflowDesigner.PropertyInspectorView%2A> kullanıcı arabiriminde uygun bir kapsayıcı ile. Aşağıdaki örnek kod bazı açıklama belirlenmiştir birkaç ek satırları vardır. <xref:System.Activities.Core.Presentation.DesignerMetadata.Register%2A> Çağrıdır etkinlikleri ile birlikte gelen için varsayılan etkinlik tasarımcıları ilişkilendirmek için gerekli [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)]. <xref:System.Activities.Presentation.WorkflowDesigner.Load%2A> Düzenlenecek WF öğesinde geçirmek için çağrılır. Son olarak, <xref:System.Activities.Presentation.WorkflowDesigner.View%2A> (birincil tuvale) ve <xref:System.Activities.Presentation.WorkflowDesigner.PropertyInspectorView%2A> (özellik Kılavuzu) kullanıcı arabirimi yüzeyine yerleştirilir.  
   
 ```csharp  
 protected override void OnInitialized(EventArgs e)  
@@ -135,6 +124,6 @@ protected override void OnInitialized(EventArgs e)
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  Bu dizin mevcut değilse, Git [Windows Communication Foundation (WCF) ve .NET Framework 4 için Windows Workflow Foundation (WF) örnek](http://go.microsoft.com/fwlink/?LinkId=150780) tüm indirmek için [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] ve [!INCLUDE[wf1](../../../../includes/wf1-md.md)] örnekleri. Bu örnek aşağıdaki dizinde bulunur.  
+>  Bu dizin mevcut değilse, Git [Windows Communication Foundation (WCF) ve .NET Framework 4 için Windows Workflow Foundation (WF) örnek](http://go.microsoft.com/fwlink/?LinkId=150780) tüm Windows Communication Foundation (WCF) indirmek için ve [!INCLUDE[wf1](../../../../includes/wf1-md.md)] örnekleri. Bu örnek aşağıdaki dizinde bulunur.  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WF\Basic\DesignerRehosting\Basic`

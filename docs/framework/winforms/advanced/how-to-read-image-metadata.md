@@ -1,13 +1,6 @@
 ---
-title: "Nasıl yapılır: Görüntü Meta Verilerini Okuma"
-ms.custom: 
+title: 'Nasıl yapılır: Görüntü Meta Verilerini Okuma'
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-winforms
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -15,21 +8,16 @@ helpviewer_keywords:
 - metadata [Windows Forms], property item
 - metadata [Windows Forms], reading image
 ms.assetid: 72ec0b31-0be7-444a-9575-1dbcb864e0be
-caps.latest.revision: "15"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: b610e499ff980d2e705ad855ae98c1d54ff412e7
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 92ce4eb8d51fbd25f9a129a629dc47bfb9941f34
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-read-image-metadata"></a>Nasıl yapılır: Görüntü Meta Verilerini Okuma
 Bazı resim dosyaları görüntü özelliklerini belirlemek için okuyabilir meta veriler içerir. Örneğin, dijital bir fotoğraf marka ve model görüntüsünü yakalamak için kullanılan kamera belirlemek için okuyabilir meta verileri içerebilir. İle [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)], var olan meta verileri okuyabilir ve resim dosyaları için yeni meta verileri de yazabilirsiniz.  
   
- [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)]meta verilerde tek bir parçasını depolayan bir <xref:System.Drawing.Imaging.PropertyItem> nesnesi. Okuyabilirsiniz <xref:System.Drawing.Image.PropertyItems%2A> özelliği bir <xref:System.Drawing.Image> bir dosyanın tüm meta verilerini almak için nesne. <xref:System.Drawing.Image.PropertyItems%2A> Özelliği bir dizi döndürür <xref:System.Drawing.Imaging.PropertyItem> nesneleri.  
+ [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] meta verilerde tek bir parçasını depolayan bir <xref:System.Drawing.Imaging.PropertyItem> nesnesi. Okuyabilirsiniz <xref:System.Drawing.Image.PropertyItems%2A> özelliği bir <xref:System.Drawing.Image> bir dosyanın tüm meta verilerini almak için nesne. <xref:System.Drawing.Image.PropertyItems%2A> Özelliği bir dizi döndürür <xref:System.Drawing.Imaging.PropertyItem> nesneleri.  
   
  A <xref:System.Drawing.Imaging.PropertyItem> nesnesi aşağıdaki dört özelliklere sahiptir: `Id`, `Value`, `Len`, ve `Type`.  
   
@@ -51,7 +39,7 @@ Bazı resim dosyaları görüntü özelliklerini belirlemek için okuyabilir met
   
 |Sayısal değer|Açıklama|  
 |-------------------|-----------------|  
-|1.|A`Byte`|  
+|1.|BİR `Byte`|  
 |2|Bir dizi `Byte` ASCII olarak kodlanmış nesneleri|  
 |3|Bir 16 bit tam sayı|  
 |4|Bir 32 bit tamsayı|  

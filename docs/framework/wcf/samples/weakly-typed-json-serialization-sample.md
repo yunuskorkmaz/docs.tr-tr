@@ -1,31 +1,17 @@
 ---
 title: Zayıf yazılmış JSON Seri Hale Getirme Örneği
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 ms.assetid: 0b30e501-4ef5-474d-9fad-a9d559cf9c52
-caps.latest.revision: 13
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 4cc75ff1078c35c177f0809d25cd32ca3b2b8e16
-ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
-ms.translationtype: MT
+ms.openlocfilehash: 66e68985da94df11a81ba6d387438fe29dd96d56
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/28/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="weakly-typed-json-serialization-sample"></a>Zayıf yazılmış JSON Seri Hale Getirme Örneği
 Kullanıcı tanımlı bir tür verilen kablo biçiminde veya kablo biçiminde geri bir kullanıcı tanımlı tür seri durumdan serileştirilirken verilen kullanıcı tanımlı tür hem hizmet hem de istemci kullanılabilir olması gerekir. Genellikle Bunu başarmak için <xref:System.Runtime.Serialization.DataContractAttribute> özniteliği, bu kullanıcı tanımlı türler uygulanır ve <xref:System.Runtime.Serialization.DataMemberAttribute> öznitelik üyeleri için uygulanır. Bu düzenek de JavaScript nesne gösterimi (JSON) nesneleriyle çalışırken konu başlığı altında açıklandığı gibi geçerlidir [nasıl yapılır: seri hale getirmek ve seri durumdan JSON verilerini](../../../../docs/framework/wcf/feature-details/how-to-serialize-and-deserialize-json-data.md).  
   
- Bazı senaryolarda bir [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] hizmet veya istemci bir hizmet veya Geliştirici denetimi dışında olan istemci tarafından oluşturulan JSON nesnelerine erişim gerekir. Daha fazla Web Hizmetleri, JSON API'leri genel olarak kullanıma sunmak gibi için pratik olabilir [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] geliştirici, rastgele JSON nesneleri seri durumdan çıkarılacak içine yerel kullanıcı tanımlı türler oluşturmak için. Bu örnek sağlayan bir mekanizma sağlar [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] geliştiricilerin kullanıcı tanımlı türler oluşturmadan seri durumdan çıkarılmış, rastgele JSON nesneleriyle çalışma. Bu olarak bilinir *zayıf yazılmış serileştirme* JSON nesnelerin içine bir JSON nesnesi seri durumdan çıkarır türü olmadığından derleme zamanında bilinir.  
+ Bazı senaryolarda, bir Windows Communication Foundation (WCF) hizmetini veya istemci bir hizmet veya Geliştirici denetimi dışında olan istemci tarafından oluşturulan JSON nesnelerinin erişmeniz gerekir. Daha fazla Web Hizmetleri, JSON API'leri genel olarak kullanıma sunmak gibi için pratik olabilir [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] geliştirici, rastgele JSON nesneleri seri durumdan çıkarılacak içine yerel kullanıcı tanımlı türler oluşturmak için. Bu örnek sağlayan bir mekanizma sağlar [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] geliştiricilerin kullanıcı tanımlı türler oluşturmadan seri durumdan çıkarılmış, rastgele JSON nesneleriyle çalışma. Bu olarak bilinir *zayıf yazılmış serileştirme* JSON nesnelerin içine bir JSON nesnesi seri durumdan çıkarır türü olmadığından derleme zamanında bilinir.  
   
 > [!NOTE]
 >  Kurulum yordamı ve yapı yönergeleri Bu örnek için bu konunun sonunda yer alır.  
@@ -149,7 +135,7 @@ My favorite bands are Band ABC and Band XYZ.
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  Bu dizin mevcut değilse, Git [Windows Communication Foundation (WCF) ve .NET Framework 4 için Windows Workflow Foundation (WF) örnek](http://go.microsoft.com/fwlink/?LinkId=150780) tüm indirmek için [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] ve [!INCLUDE[wf1](../../../../includes/wf1-md.md)] örnekleri. Bu örnek aşağıdaki dizinde bulunur.  
+>  Bu dizin mevcut değilse, Git [Windows Communication Foundation (WCF) ve .NET Framework 4 için Windows Workflow Foundation (WF) örnek](http://go.microsoft.com/fwlink/?LinkId=150780) tüm Windows Communication Foundation (WCF) indirmek için ve [!INCLUDE[wf1](../../../../includes/wf1-md.md)] örnekleri. Bu örnek aşağıdaki dizinde bulunur.  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Scenario\Ajax\WeaklyTypedJson`  
   

@@ -1,30 +1,18 @@
 ---
-title: "Yerelleştirme Öznitelikleri ve Yorumlar"
-ms.custom: 
+title: Yerelleştirme Öznitelikleri ve Yorumlar
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-wpf
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - localization [WPF], attributes
 - localization [WPF], comments
 ms.assetid: ead2d9ac-b709-4ec1-a924-39927a29d02f
-caps.latest.revision: "15"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 85584c17675167d374c595aa26288f550a033efb
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 7cfcc9fa4dc3bc1450febb39500b7d96f92beac6
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="localization-attributes-and-comments"></a>Yerelleştirme Öznitelikleri ve Yorumlar
-[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]Yerelleştirme açıklamalarını özelliklerdir, içinde [!INCLUDE[TLA#tla_titlexaml](../../../../includes/tlasharptla-titlexaml-md.md)] kaynak kod yerelleştirme için kurallar ve ipuçları sağlamak için geliştiriciler tarafından sağlanan,. [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]Yerelleştirme açıklamalarını içeren iki bilgi kümesi: Yerelleştirme öznitelikleri ve serbest biçimli yerelleştirme açıklamalarını. Yerelleştirme öznitelikleri tarafından kullanılan [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] yerelleştirme hangi kaynakların yerelleştirilmesi belirtmek için API. Serbest biçimli açıklamalar dahil etmek için uygulama yazarı istediği herhangi bilgilerdir.  
+[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] Yerelleştirme açıklamalarını özelliklerdir, içinde [!INCLUDE[TLA#tla_titlexaml](../../../../includes/tlasharptla-titlexaml-md.md)] kaynak kod yerelleştirme için kurallar ve ipuçları sağlamak için geliştiriciler tarafından sağlanan,. [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] Yerelleştirme açıklamalarını içeren iki bilgi kümesi: Yerelleştirme öznitelikleri ve serbest biçimli yerelleştirme açıklamalarını. Yerelleştirme öznitelikleri tarafından kullanılan [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] yerelleştirme hangi kaynakların yerelleştirilmesi belirtmek için API. Serbest biçimli açıklamalar dahil etmek için uygulama yazarı istediği herhangi bilgilerdir.  
   
 
   
@@ -36,7 +24,7 @@ ms.lasthandoff: 12/22/2017
   
 2.  Derleme işlemi sırasında derleme, Yorumlar parçası çıkışı Şerit ya da tüm açıklamaları Şerit serbest biçimli yerelleştirme açıklamalarını bırakmak mı yoksa .proj dosyasında belirtebilirsiniz. Çıkarılan yorumlar ayrı bir dosyada yer alır. Seçeneğini kullanarak belirttiğiniz bir `LocalizationDirectivesToLocFile` etiketi, örneğin:  
   
-     `<LocalizationDirectivesToLocFile>`*değeri*`</LocalizationDirectivesToLocFile>`  
+     `<LocalizationDirectivesToLocFile>` *Değer* `</LocalizationDirectivesToLocFile>`  
   
 3.  Atanabilir değerler şunlardır:  
   

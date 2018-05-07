@@ -1,28 +1,16 @@
 ---
-title: "Nasıl yapılır: Windows Formları için Denetimler Yazma"
-ms.custom: 
+title: 'Nasıl yapılır: Windows Formları için Denetimler Yazma'
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-winforms
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - controls [Windows Forms], creating
 - UserControl class [Windows Forms], Windows Forms
 - custom controls [Windows Forms], creating
 ms.assetid: 7570e982-545b-4c3a-a7c7-55581d313400
-caps.latest.revision: "14"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 125e3f1c32c5186cce0b28aa3f8d1eff1ef95a09
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.openlocfilehash: 0793193060bb3a21753b98d4772b53d347f567bb
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-author-controls-for-windows-forms"></a>Nasıl yapılır: Windows Formları için Denetimler Yazma
 Bir denetim kullanıcı ve program arasındaki grafik bağlantısını temsil eder. Bir denetim sağlayın veya verileri işlemek, kullanıcı girişi kabul, olaylara yanıt veya herhangi bir sayıda kullanıcı ve uygulama bağlanan diğer işlevleri gerçekleştirmek. Bir denetim bir bileşen aslında bir grafik arabirimle olduğundan, bir bileşen yapar, yanı sıra kullanıcı etkileşimi sağlayan herhangi bir işlev görebilir. Denetimleri belirli amaçlara hizmet için oluşturulan ve denetimleri yazma başka bir programlama bir görevdir. Aklınızda aşağıdaki adımları işlem yazma denetimine genel bakış temsil eder. Bağlantılar tek tek adımları ek bilgi sağlar.  

@@ -1,11 +1,7 @@
 ---
-title: "PUT işlevi (yönetilmeyen API Başvurusu)"
-description: "Put işlevi adlı bir özellik için yeni bir değer atar."
+title: PUT işlevi (yönetilmeyen API Başvurusu)
+description: Put işlevi adlı bir özellik için yeni bir değer atar.
 ms.date: 11/06/2017
-ms.prod: .net-framework
-ms.technology:
-- dotnet-clr
-ms.topic: reference
 api_name:
 - Put
 api_location:
@@ -20,14 +16,11 @@ topic_type:
 - Reference
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 09d3edc74b34688d5cc36e688f634850cfb60910
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 9f3ffe27bef6583b733fc04f2f25903d545daa74
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="put-function"></a>PUT işlevi
 Adlandırılmış bir özelliği için yeni bir değer ayarlar.
@@ -93,7 +86,7 @@ Kullanıcı özellikleri başlayamaz veya bitemez bir alt çizgi ("_") adlarla o
 
 Özelliği ayarlarsanız `Put` üst sınıfında exists işlevi, özellik türü üst sınıf türü eşleşmiyor sürece özelliğinin varsayılan değeri değiştirilir. Özelliği yok ve tür uyuşmazlığı değilse ceated özelliğidir.
 
-Kullanım `vtType` yalnızca yeni özellikleri bir CIM sınıfı tanımında oluşturulurken parametre ve `pVal` olan `null` veya işaret eden bir `VARIANT` türü `VT_NULL`. Bu durumda, `vType` parametresi özelliği CIM türünü belirtir. Diğer her durumda `vtType` 0 olmalıdır. `vtType`temel alınan nesnede bir örneğiyse 0 olmalıdır (olsa bile `Val` olan `null`) çünkü özelliğinin türü sabittir ve değiştirilemez.   
+Kullanım `vtType` yalnızca yeni özellikleri bir CIM sınıfı tanımında oluşturulurken parametre ve `pVal` olan `null` veya işaret eden bir `VARIANT` türü `VT_NULL`. Bu durumda, `vType` parametresi özelliği CIM türünü belirtir. Diğer her durumda `vtType` 0 olmalıdır. `vtType` temel alınan nesnede bir örneğiyse 0 olmalıdır (olsa bile `Val` olan `null`) çünkü özelliğinin türü sabittir ve değiştirilemez.   
 
 ## <a name="example"></a>Örnek
 
@@ -104,7 +97,7 @@ Bir örnek için bkz: [IWbemClassObject::Put](https://msdn.microsoft.com/library
   
  **Başlık:** WMINet_Utils.idl  
   
- **.NET framework sürümleri:**[!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]  
+ **.NET framework sürümleri:** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.  
 [WMI ve performans sayaçları (yönetilmeyen API Başvurusu)](index.md)

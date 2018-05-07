@@ -1,35 +1,21 @@
 ---
 title: POX Uygulamaları ile Birlikte Çalışabilirlik
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 ms.assetid: 449276b8-4633-46f0-85c9-81f01d127636
-caps.latest.revision: 15
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 42f6bbb1a5605bd0a604f5cfe31ce5ea48d9bb10
-ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
+ms.openlocfilehash: 7522233723b6b91d5a7b27d3f82ca328e29ce3f7
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/30/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="interoperability-with-pox-applications"></a>POX Uygulamaları ile Birlikte Çalışabilirlik
-"Düz eski XML" (POX) uygulamalar, yalnızca bir SOAP Zarfı içinde içine alınmamış XML uygulama verileri içeren ham HTTP ileti değiş tokuşu ile iletişim. [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] Hizmetleri ve POX iletileri kullanan istemciler sağlayabilir. Hizmetinde [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] Web tarayıcıları ve POX ileti gönderme ve alma komut dosyası dilleri gibi istemcilere uç noktalarını kullanıma sunar Hizmetleri uygulamak için kullanılabilir. İstemci üzerindeki [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] programlama modeli, POX tabanlı Hizmetleri ile iletişim kuran istemciler uygulamak için kullanılabilir.  
+"Düz eski XML" (POX) uygulamalar, yalnızca bir SOAP Zarfı içinde içine alınmamış XML uygulama verileri içeren ham HTTP ileti değiş tokuşu ile iletişim. Windows Communication Foundation (WCF) hizmetlerini ve POX iletileri kullanan istemciler sağlayabilir. Hizmeti, WCF Hizmetleri Web tarayıcıları gibi istemcilere uç noktalarını kullanıma sunar ve POX ileti gönderme ve alma komut dosyası dillerini uygulamak için kullanılabilir. İstemcide, WCF programlama modeli POX tabanlı Hizmetleri ile iletişim kuran istemciler uygulamak için kullanılabilir.  
   
 > [!NOTE]
 >  Bu belge için ilk olarak yazılmıştır [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] 3.0.  [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] 3.5 POX uygulamaları ile çalışmak için yerleşik desteğe sahiptir. Bkz: hakkında daha fazla bilgi için [WCF Web HTTP programlama modeli](../../../../docs/framework/wcf/feature-details/wcf-web-http-programming-model.md)  
   
 ## <a name="pox-programming-with-wcf"></a>WCF ile POX programlama  
- [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] POX iletileri kullanarak HTTP üzerinden iletişim kuracak Hizmetleri bir [ \<customBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/custombinding.md).  
+ POX iletileri kullanarak HTTP üzerinden iletişim kuracak WCF hizmetleri bir [ \<customBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/custombinding.md).  
   
 ```xml  
 <customBinding>  
@@ -46,9 +32,9 @@ ms.lasthandoff: 04/30/2018
   
 -   [ \<TextMessageEncoding >](../../../../docs/framework/configure-apps/file-schema/wcf/textmessageencoding.md).  
   
- Standart [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] metin ileti Kodlayıcı kullanacak şekilde yapılandırılmış özel <xref:System.ServiceModel.Channels.MessageVersion.None%2A> SAOP zarfına Sarmalanan değil gelen XML ileti yükü işlemek imkan tanıyan değeri.  
+ WCF metin ileti Kodlayıcı kullanacak şekilde yapılandırılmış özel standart <xref:System.ServiceModel.Channels.MessageVersion.None%2A> SAOP zarfına Sarmalanan değil gelen XML ileti yükü işlemek imkan tanıyan değeri.  
   
- [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] POX iletileri kullanarak HTTP üzerinden iletişim kuran istemciler (aşağıdaki kesinlik temelli kodda gösterildiği) benzer bir bağlama kullanın.  
+ POX iletileri kullanarak HTTP üzerinden iletişim kuracak WCF istemcileri (aşağıdaki kesinlik temelli kodda gösterildiği) benzer bir bağlama kullanın.  
   
 ```  
 private static Binding CreatePoxBinding()  
@@ -63,7 +49,7 @@ private static Binding CreatePoxBinding()
   
  POX istemcileri iletileri için gönderdikleri URI'ler açıkça belirtmeniz gerekir çünkü bunlar genellikle yapılandırmalısınız <xref:System.ServiceModel.Channels.HttpTransportBindingElement> ayarlayarak el ile adresleme modu için <xref:System.ServiceModel.Channels.TransportBindingElement.ManualAddressing%2A> özelliğine `true` öğesindeki. Bu uygulama kodu tarafından açıkça ele alınması gereken iletileri sağlar ve yeni bir oluşturmak için gerekli değil <xref:System.ServiceModel.ChannelFactory> her zaman bir uygulama için farklı bir HTTP URI ileti gönderir.  
   
- POX iletileri önemli protokol bilgileri iletmek için SOAP üstbilgileri kullanmadığından, POX istemcileri ve Hizmetleri genellikle göndermek veya bir ileti almak için kullanılan temel alınan HTTP isteği parçalarını yönetme gerekir. HTTP üstbilgilerine ve durum kodları gibi HTTP özgü protokol bilgileri ortaya içinde [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] iki sınıflarıyla programlama modeli:  
+ POX iletileri önemli protokol bilgileri iletmek için SOAP üstbilgileri kullanmadığından, POX istemcileri ve Hizmetleri genellikle göndermek veya bir ileti almak için kullanılan temel alınan HTTP isteği parçalarını yönetme gerekir. HTTP üstbilgilerine ve durum kodları gibi HTTP özgü protokol bilgileri ortaya iki sınıflarıyla WCF programlama modeli:  
   
 -   <xref:System.ServiceModel.Channels.HttpRequestMessageProperty>, HTTP yöntemi ve istek üstbilgileri gibi bir HTTP isteğiyle ilgili bilgileri içerir.  
   

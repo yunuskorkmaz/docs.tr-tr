@@ -1,27 +1,18 @@
 ---
-title: "XPath ve LINQ to XML2 karşılaştırması"
-ms.custom: 
+title: XPath ve LINQ to XML2 karşılaştırması
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-csharp
-ms.topic: article
 ms.assetid: 87d361b1-daa9-4fd4-a53a-cbfa40111ad3
-caps.latest.revision: "3"
-author: BillWagner
-ms.author: wiwagn
-ms.openlocfilehash: 0890bd7d8edb19a16c864d0b845558d3302d6139
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.openlocfilehash: 64860ab538105e7e3826b29f83b8e713ca525e21
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="comparison-of-xpath-and-linq-to-xml"></a>XPath ve LINQ-XML karşılaştırması
 XPath ve [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] bazı benzer bir işlevsellik sağlar. Her ikisi de bu tür sonuçları öğe koleksiyonunu özniteliklerin bir koleksiyonu düğümlerinin bir koleksiyonu veya bir öğe veya öznitelik değeri olarak döndüren bir XML ağacı sorgulamak için kullanılabilir. Ancak, aynı zamanda bazı farklar vardır.  
   
 ## <a name="differences-between-xpath-and-linq-to-xml"></a>XML XPath ve LINQ arasındaki farklar  
- XPath yeni türleri projeksiyon izin vermiyor. Bunu yalnızca düğümlerin koleksiyonları ağacından ancak döndürebilir [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] sorgu yürütme ve bir nesne grafiğinin veya yeni bir şekil XML ağacında proje. [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)]sorguları kapsayan çok daha fazla işlevsellik ve XPath ifadeleri çok daha güçlü.  
+ XPath yeni türleri projeksiyon izin vermiyor. Bunu yalnızca düğümlerin koleksiyonları ağacından ancak döndürebilir [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] sorgu yürütme ve bir nesne grafiğinin veya yeni bir şekil XML ağacında proje. [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] sorguları kapsayan çok daha fazla işlevsellik ve XPath ifadeleri çok daha güçlü.  
   
  XPath ifadeleri yalıtım dize içinde yer alır. C# Derleyici derleme zamanında XPath ifadesi ayrıştırma yardımcı olamaz. Bunun aksine, [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] sorguları ayrıştırılır ve C# Derleyici tarafından derlenir. Derleyici birçok sorgu hatalarını yakalama yapabiliyor.  
   

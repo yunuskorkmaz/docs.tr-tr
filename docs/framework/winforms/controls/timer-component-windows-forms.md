@@ -1,28 +1,16 @@
 ---
-title: "Süreölçer Bileşeni (Windows Forms)"
-ms.custom: 
+title: Süreölçer Bileşeni (Windows Forms)
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-winforms
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - Timer component [Windows Forms]
 - timers
 - timers [Windows Forms], creating
 ms.assetid: 6700e534-6382-43d5-98ed-14205435fff7
-caps.latest.revision: "13"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: cdb8d96b6d58afa86463243a385799950fb0fda0
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.openlocfilehash: 77ff87bcb8c325e87564dfbadf87729ed8a28209
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="timer-component-windows-forms"></a>Süreölçer Bileşeni (Windows Forms)
 Windows Forms <xref:System.Windows.Forms.Timer> düzenli aralıklarla bir olay başlatır bir bileşenidir. Bu bileşen, bir Windows Forms ortamı için tasarlanmıştır.  
@@ -38,10 +26,10 @@ Windows Forms <xref:System.Windows.Forms.Timer> düzenli aralıklarla bir olay b
  Zaman aşımına Windows tabanlı uygulamalar aralıkları tepki açıklar.  
   
 ## <a name="reference"></a>Başvuru  
- <xref:System.Windows.Forms.Timer?displayProperty=nameWithType>sınıfı  
+ <xref:System.Windows.Forms.Timer?displayProperty=nameWithType> sınıfı  
  Windows Forms süreölçer ve üyeleri için kullanılan bir sınıf üzerinde başvuru bilgileri sağlar.  
   
- <xref:System.Timers.Timer?displayProperty=nameWithType>sınıfı  
+ <xref:System.Timers.Timer?displayProperty=nameWithType> sınıfı  
  Başvuru bilgileri sağlar <xref:System.Timers.Timer?displayProperty=nameWithType> sunucu tabanlı zamanlayıcılar tarafından kullanılan sınıfı.  
   
 ## <a name="related-sections"></a>İlgili Bölümler  

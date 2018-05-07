@@ -1,14 +1,6 @@
 ---
 title: Icordebugcode Interface1
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: reference
 api_name:
 - ICorDebugCode
 api_location:
@@ -22,17 +14,13 @@ helpviewer_keywords:
 ms.assetid: 7bd14fb6-8b54-4484-a891-e3c21859c019
 topic_type:
 - apiref
-caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 86659b624ef01922b6c5d1db9b3ae3697d0128b3
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 37917577c802514fcebc3ea0792cbce9bb8a7345
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="icordebugcode-interface1"></a>Icordebugcode Interface1
 Microsoft ara dili (MSIL) kodunun veya yerel kodun bir kesimini temsil eder.  
@@ -52,7 +40,7 @@ Microsoft ara dili (MSIL) kodunun veya yerel kodun bir kesimini temsil eder.
 |[IsIL Yöntemi](../../../../docs/framework/unmanaged-api/debugging/icordebugcode-isil-method.md)|Gösteren bir değer alır olup olmadığını bu `ICorDebugCode` MSIL içinde derlenir.|  
   
 ## <a name="remarks"></a>Açıklamalar  
- `ICorDebugCode`MSIL veya yerel koda temsil edebilir. MSIL kodunu temsil eden bir "ICorDebugFunction" nesne sıfır veya bir olabilir `ICorDebugCode` ilişkili nesneleri. Yerel kod temsil eden bir "ICorDebugFunction" nesne herhangi bir sayıda olabilir `ICorDebugCode` ilişkili nesneleri.  
+ `ICorDebugCode` MSIL veya yerel koda temsil edebilir. MSIL kodunu temsil eden bir "ICorDebugFunction" nesne sıfır veya bir olabilir `ICorDebugCode` ilişkili nesneleri. Yerel kod temsil eden bir "ICorDebugFunction" nesne herhangi bir sayıda olabilir `ICorDebugCode` ilişkili nesneleri.  
   
 > [!NOTE]
 >  Bu arabirim, makineler arası veya çapraz işlem uzaktan çağrılan desteklemez.  
@@ -64,7 +52,7 @@ Microsoft ara dili (MSIL) kodunun veya yerel kodun bir kesimini temsil eder.
   
  **Kitaplığı:** CorGuids.lib  
   
- **.NET framework sürümleri:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET framework sürümleri:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
     

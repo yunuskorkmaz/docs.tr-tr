@@ -1,13 +1,6 @@
 ---
-title: "Denetimleri Görsel Stilde İşleme"
-ms.custom: 
+title: Denetimleri Görsel Stilde İşleme
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-winforms
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - professional appearance [Windows Forms], rendering Windows Forms controls
 - themes [Windows Forms], XP visual styles in Window Forms
@@ -17,16 +10,11 @@ helpviewer_keywords:
 - user controls [Windows Forms], painting
 - visual styles [Windows Forms], rendering Windows Forms controls
 ms.assetid: a5b178ba-610e-46c4-a6c0-509c0886a744
-caps.latest.revision: "19"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 127e3c411b4c75e5a2bd9f133defc447992b95f6
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: a7f2d810567d37021d5d4473204d9950d6834b9a
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="rendering-controls-with-visual-styles"></a>Denetimleri Görsel Stilde İşleme
 [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] İşletim sistemlerinde desteklemek görsel stiller kullanarak arabirimi (UI) öğeleri işleme denetimleri ve başka bir Windows kullanıcı için destek sağlar. Bu konuda destek birkaç düzeyini ele alınmıştır [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] işleme denetimleri ve işletim sisteminin geçerli görsel stil ile diğer kullanıcı Arabirimi öğeleri için.  
@@ -65,9 +53,9 @@ ms.lasthandoff: 12/22/2017
 ## <a name="visual-style-element-and-rendering-classes"></a>Görsel stilde öğe ve sınıfları oluşturma  
  <xref:System.Windows.Forms.VisualStyles?displayProperty=nameWithType> Ad alanı, çizme ve herhangi bir denetim veya görsel stiller tarafından desteklenen kullanıcı Arabirimi öğesi hakkında bilgi almak için kullanılan sınıfları içerir. Desteklenen denetimleri içerir işleme sınıfı olmayan ortak denetimler <xref:System.Windows.Forms?displayProperty=nameWithType> ad alanı (önceki bölüme bakın), sekme denetimleri ve rebar denetimleri gibi diğer denetimleri yanı sıra. Desteklenen diğer kullanıcı Arabirimi öğeleri içeren bölümlerini **Başlat** menüsü, görev ve windows nonclient alanı.  
   
- Ana sınıflarını <xref:System.Windows.Forms.VisualStyles?displayProperty=nameWithType> ad <xref:System.Windows.Forms.VisualStyles.VisualStyleElement> ve <xref:System.Windows.Forms.VisualStyles.VisualStyleRenderer>. <xref:System.Windows.Forms.VisualStyles.VisualStyleElement>görsel stiller tarafından desteklenen tüm denetim veya kullanıcı arabirimi öğesi tanımlamak için bir foundation sınıftır. Ek olarak <xref:System.Windows.Forms.VisualStyles.VisualStyleElement> kendisini <xref:System.Windows.Forms.VisualStyles?displayProperty=nameWithType> ad alanı, çok sayıda iç içe geçmiş sınıflar içerir <xref:System.Windows.Forms.VisualStyles.VisualStyleElement> ile `static` döndüren özellikleri bir <xref:System.Windows.Forms.VisualStyles.VisualStyleElement> bir denetim, Denetim bölümü ya da visual tarafından desteklenen diğer kullanıcı Arabirimi öğesi her durum için stilleri.  
+ Ana sınıflarını <xref:System.Windows.Forms.VisualStyles?displayProperty=nameWithType> ad <xref:System.Windows.Forms.VisualStyles.VisualStyleElement> ve <xref:System.Windows.Forms.VisualStyles.VisualStyleRenderer>. <xref:System.Windows.Forms.VisualStyles.VisualStyleElement> görsel stiller tarafından desteklenen tüm denetim veya kullanıcı arabirimi öğesi tanımlamak için bir foundation sınıftır. Ek olarak <xref:System.Windows.Forms.VisualStyles.VisualStyleElement> kendisini <xref:System.Windows.Forms.VisualStyles?displayProperty=nameWithType> ad alanı, çok sayıda iç içe geçmiş sınıflar içerir <xref:System.Windows.Forms.VisualStyles.VisualStyleElement> ile `static` döndüren özellikleri bir <xref:System.Windows.Forms.VisualStyles.VisualStyleElement> bir denetim, Denetim bölümü ya da visual tarafından desteklenen diğer kullanıcı Arabirimi öğesi her durum için stilleri.  
   
- <xref:System.Windows.Forms.VisualStyles.VisualStyleRenderer>Çizim ve her hakkında bilgi alın yöntemleri sağlayan <xref:System.Windows.Forms.VisualStyles.VisualStyleElement> işletim sistemi geçerli görsel stil tarafından tanımlanan. Varsayılan boyut, arka plan türü ve renk tanımlarını alınabilmesi için bir öğe hakkında bilgi içerir. <xref:System.Windows.Forms.VisualStyles.VisualStyleRenderer>görsel stiller (UxTheme) API Windows Platform SDK'ın Windows Kabuğu bölümünden işlevi sarmalar. Daha fazla bilgi için bkz: [Windows XP görsel stilleri kullanarak](https://msdn.microsoft.com/library/ms997649.aspx).  
+ <xref:System.Windows.Forms.VisualStyles.VisualStyleRenderer> Çizim ve her hakkında bilgi alın yöntemleri sağlayan <xref:System.Windows.Forms.VisualStyles.VisualStyleElement> işletim sistemi geçerli görsel stil tarafından tanımlanan. Varsayılan boyut, arka plan türü ve renk tanımlarını alınabilmesi için bir öğe hakkında bilgi içerir. <xref:System.Windows.Forms.VisualStyles.VisualStyleRenderer> görsel stiller (UxTheme) API Windows Platform SDK'ın Windows Kabuğu bölümünden işlevi sarmalar. Daha fazla bilgi için bkz: [Windows XP görsel stilleri kullanarak](https://msdn.microsoft.com/library/ms997649.aspx).  
   
  Kullanma hakkında daha fazla bilgi için <xref:System.Windows.Forms.VisualStyles.VisualStyleRenderer> ve <xref:System.Windows.Forms.VisualStyles.VisualStyleElement>, bkz: [nasıl yapılır: görsel stilde öğe işleme](../../../../docs/framework/winforms/controls/how-to-render-a-visual-style-element.md).  
   

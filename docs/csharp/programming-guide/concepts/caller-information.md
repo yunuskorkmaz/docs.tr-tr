@@ -1,18 +1,12 @@
 ---
 title: Arayan bilgileri (C#)
 ms.date: 07/20/2015
-ms.prod: .net
-ms.technology: devlang-csharp
-ms.topic: article
 ms.assetid: ffad3d24-2fb7-4641-9124-53b5bc91d339
-caps.latest.revision: "3"
-author: BillWagner
-ms.author: wiwagn
-ms.openlocfilehash: 05c153afd502da1f290b3bc36460ded27789e21c
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 6f0cd4d9d8fc85cb15431ccb4c76eee14b3f67c7
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="caller-information-c"></a>Arayan bilgileri (C#)
 Arayan Bilgisi özniteliklerini kullanarak bir yöntemin arayanı hakkında bilgi edinebilirsiniz. Kaynak kodunun dosya yolunu, kaynak kodundaki satır numarasını ve arayanın üye adını alabilirsiniz. Bu bilgiler, tanılama araçlarının izlenmesine, oluşturulmasına ve bu araçlarda hata ayıklanmasına yardımcı olur.  
@@ -61,7 +55,7 @@ public void TraceMessage(string message,
   
  Arayan bilgisini denetlemek veya gizlemek için isteğe bağlı bağımsız değişkenleri açıkça sağlayabilirsiniz.  
   
-###  <a name="MEMBERNAMES"></a>Üye adlarının  
+###  <a name="MEMBERNAMES"></a> Üye adlarının  
  Kullanabileceğiniz `CallerMemberName` özniteliği üye adı olarak belirtmekten kaçının bir `String` çağrılan yöntemin bağımsız değişkeni. Bu yöntemi kullanarak, bir sorunu önlemenize, **yeniden adlandırma yeniden düzenleme** değiştirmez `String` değerleri. Bu, özellikle aşağıdaki görevler için yararlı olur:  
   
 -   İzleme ve tanılama yordamlarını kullanma.  
@@ -83,5 +77,5 @@ public void TraceMessage(string message,
 ## <a name="see-also"></a>Ayrıca Bkz.  
  [Öznitelikler (C#)](../../../csharp/programming-guide/concepts/attributes/index.md)  
  [Ortak öznitelikler (C#)](../../../csharp/programming-guide/concepts/attributes/common-attributes.md)  
- [Adlandırılmış ve isteğe bağlı bağımsız değişkenler](../../../csharp/programming-guide/classes-and-structs/named-and-optional-arguments.md)  
+ [Adlandırılmış ve İsteğe Bağlı Bağımsız Değişkenler](../../../csharp/programming-guide/classes-and-structs/named-and-optional-arguments.md)  
  [Programlama Kavramları (C#)](../../../csharp/programming-guide/concepts/index.md)

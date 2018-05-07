@@ -1,11 +1,7 @@
 ---
-title: "Geterrorınfo işlevi (yönetilmeyen API Başvurusu)"
-description: "Geterrorınfo işlevi önceki işlev çağrısında hata bilgilerini alır."
+title: Geterrorınfo işlevi (yönetilmeyen API Başvurusu)
+description: Geterrorınfo işlevi önceki işlev çağrısında hata bilgilerini alır.
 ms.date: 11/06/2017
-ms.prod: .net-framework
-ms.technology:
-- dotnet-clr
-ms.topic: reference
 api_name:
 - GetErrorInfo
 api_location:
@@ -20,14 +16,11 @@ topic_type:
 - Reference
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: d4b4acde080c61fbfd5cec319c1986b8c86352c4
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: ef52a4e503597e08eae407571f02bf63adafc4e4
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="geterrorinfo-function"></a>Geterrorınfo işlevi
 Önceki işlev çağrısında hata bilgilerini alır.  
@@ -53,7 +46,7 @@ Bu işlev çağrısı sarmalar [IComThreadingInfo::GetErrorInfo](https://msdn.mi
   
  **Başlık:** WMINet_Utils.def  
   
- **.NET framework sürümleri:**[!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]  
+ **.NET framework sürümleri:** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.  
 [WMI ve performans sayaçları (yönetilmeyen API Başvurusu)](index.md)

@@ -1,13 +1,6 @@
 ---
-title: "İzlenecek yol: Tasarımcıyı Kullanarak ListView ve TreeView Denetimleri ile Gezgin Stilinde bir Arabirim Oluşturma"
-ms.custom: 
+title: 'İzlenecek yol: Tasarımcıyı Kullanarak ListView ve TreeView Denetimleri ile Gezgin Stilinde bir Arabirim Oluşturma'
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-winforms
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -20,16 +13,11 @@ helpviewer_keywords:
 - ListView control [Windows Forms], explorer style interface
 - ListView control [Windows Forms], explorer-style interface
 ms.assetid: 9e5e7721-19e2-4890-b273-a43589fe99ff
-caps.latest.revision: "19"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 1d8d7991f706f8098e4ac475ae057771de200197
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.openlocfilehash: 0a0208194bd6cf24f61c58ece88e41b674e924fc
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="walkthrough-creating-an-explorer-style-interface-with-the-listview-and-treeview-controls-using-the-designer"></a>İzlenecek yol: Tasarımcıyı Kullanarak ListView ve TreeView Denetimleri ile Gezgin Stilinde bir Arabirim Oluşturma
 Visual Studio avantajlarından biri kısa bir süre, profesyonel görünümlü Windows Forms uygulamaları oluşturmak için yeteneğidir. Yaygın bir senaryo, bir kullanıcı arabirimi (UI) ile oluşturuyor <xref:System.Windows.Forms.ListView> ve <xref:System.Windows.Forms.TreeView> Windows işletim sistemlerinin Windows Explorer özelliğine benzer kontrol eder. Windows Gezgini, bir kullanıcının bilgisayarda dosya ve klasörlerin hiyerarşik bir yapı görüntüler.  
@@ -57,7 +45,7 @@ Visual Studio avantajlarından biri kısa bir süre, profesyonel görünümlü W
   
     1.  Ayarlama <xref:System.Windows.Forms.Control.Dock%2A> özelliğine <xref:System.Windows.Forms.DockStyle.Fill>.  
   
-    2.  Ayarlama <xref:System.Windows.Forms.TreeView.ImageList%2A> özelliği`imagelist1.`  
+    2.  Ayarlama <xref:System.Windows.Forms.TreeView.ImageList%2A> özelliği `imagelist1.`  
   
 7.  Ekleme bir <xref:System.Windows.Forms.ListView> adlı Denetim `listView1` forma ve sağ tarafında Yerleştir <xref:System.Windows.Forms.SplitContainer> denetim. Özellikler penceresinde `listview1` aşağıdakileri yapın:  
   
@@ -65,9 +53,9 @@ Visual Studio avantajlarından biri kısa bir süre, profesyonel görünümlü W
   
     2.  Ayarlama <xref:System.Windows.Forms.ListView.View%2A> özelliğine <xref:System.Windows.Forms.View.Details>.  
   
-    3.  Üç nokta düğmesine tıklayarak sütun üstbilgisi Koleksiyonu Düzenleyicisi'ni açın (![VisualStudioEllipsesButton ekran](../../../../docs/framework/winforms/media/vbellipsesbutton.png "vbEllipsesButton")) içinde <xref:System.Windows.Forms.ListView.Columns%2A> özelliği**.** Üç sütun ekleyin ve ayarlayın kendi <xref:System.Windows.Forms.ColumnHeader.Text%2A> özelliğine `Name`, `Type`, ve `Last Modified`sırasıyla. İletişim kutusunu kapatmak için **Tamam** 'ı tıklatın.  
+    3.  Üç nokta düğmesine tıklayarak sütun üstbilgisi Koleksiyonu Düzenleyicisi'ni açın (![VisualStudioEllipsesButton ekran](../../../../docs/framework/winforms/media/vbellipsesbutton.png "vbEllipsesButton")) içinde <xref:System.Windows.Forms.ListView.Columns%2A> özelliği **.** Üç sütun ekleyin ve ayarlayın kendi <xref:System.Windows.Forms.ColumnHeader.Text%2A> özelliğine `Name`, `Type`, ve `Last Modified`sırasıyla. İletişim kutusunu kapatmak için **Tamam** 'ı tıklatın.  
   
-    4.  Ayarlama <xref:System.Windows.Forms.ListView.SmallImageList%2A> özelliği`imageList1.`  
+    4.  Ayarlama <xref:System.Windows.Forms.ListView.SmallImageList%2A> özelliği `imageList1.`  
   
 8.  Doldurmak için kodu uygulamak <xref:System.Windows.Forms.TreeView> düğümler ve alt düğümleri. Bu kodu ekleyin `Form1` sınıfı.  
   

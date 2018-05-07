@@ -1,13 +1,6 @@
 ---
-title: "TextElement İçerik Modeline Genel Bakış"
-ms.custom: 
+title: TextElement İçerik Modeline Genel Bakış
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-wpf
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -16,16 +9,11 @@ helpviewer_keywords:
 - TextElement content model [WPF]
 - flow content elements [WPF], TextElement content model
 ms.assetid: d0a7791c-b090-438c-812f-b9d009d83ee9
-caps.latest.revision: "11"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 95d25ff6819ba913b7e9270bc2d87dd77032c5c6
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 4a50e8a10563fdc5e16ee2e2a46389e13b51e447
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="textelement-content-model-overview"></a>TextElement İçerik Modeline Genel Bakış
 Bu içerik modeli genel bakış için desteklenen içeriğini açıklayan bir <xref:System.Windows.Documents.TextElement>. <xref:System.Windows.Documents.Paragraph> Sınıfı, bir tür <xref:System.Windows.Documents.TextElement>. İçerik modeli, hangi nesnelerin/öğelerin bazılarında bulunabilir açıklar. Bu genel bakışta türetilen nesneler için kullanılan içerik modelini özetler <xref:System.Windows.Documents.TextElement>. Daha fazla bilgi için bkz: [akış belge genel bakış](../../../../docs/framework/wpf/advanced/flow-document-overview.md).  
@@ -49,7 +37,7 @@ Bu içerik modeli genel bakış için desteklenen içeriğini açıklayan bir <x
   
 2.  Aşağıdaki diyagramda göre birkaç yolu vardır <xref:System.Windows.Documents.Block> dahil olmak üzere seçmek için öğeleri <xref:System.Windows.Documents.Paragraph>, <xref:System.Windows.Documents.Section>, <xref:System.Windows.Documents.Table>, <xref:System.Windows.Documents.List>, ve <xref:System.Windows.Documents.BlockUIContainer> (önceki diyagramda blok türetilmiş sınıflara bakın). İstiyoruz diyelim bir <xref:System.Windows.Documents.Table>. Önceki diyagramda göre bir <xref:System.Windows.Documents.Table> içeren bir <xref:System.Windows.Documents.TableRowGroup> içeren <xref:System.Windows.Documents.TableRow> içeren öğeleri <xref:System.Windows.Documents.TableCell> içeren öğeleri bir <xref:System.Windows.Documents.Block>-türetilmiş bir nesne içermelidir. İçin karşılık gelen kesim aşağıdadır <xref:System.Windows.Documents.Table> önceki diyagramdan gerçekleştirilecek.  
   
-     ![Diyagram: Üst &#47;/; alt tablo için şema](../../../../docs/framework/wpf/advanced/media/flow-ovw-schemawalkthrough2.png "Flow_Ovw_SchemaWalkThrough2")  
+     ![Diyagram: Üst&#47;alt tablo için şema](../../../../docs/framework/wpf/advanced/media/flow-ovw-schemawalkthrough2.png "Flow_Ovw_SchemaWalkThrough2")  
   
      Karşılık gelen biçimlendirme aşağıdadır.  
   
@@ -57,9 +45,9 @@ Bu içerik modeli genel bakış için desteklenen içeriğini açıklayan bir <x
   
 3.  Yeniden, bir veya daha fazla <xref:System.Windows.Documents.Block> altında gerekli öğelerden bir <xref:System.Windows.Documents.TableCell>. Basit hale getirmek için şirketinizdeki bazı metinleri hücresinin içine koyun. Bu kullanarak yapabiliriz bir <xref:System.Windows.Documents.Paragraph> ile bir <xref:System.Windows.Documents.Run> öğesi. Gösteren diyagramdan karşılık gelen kesim aşağıdadır bir <xref:System.Windows.Documents.Paragraph> gerçekleştirebileceğiniz bir <xref:System.Windows.Documents.Inline> öğesi ve, bir <xref:System.Windows.Documents.Run> (bir <xref:System.Windows.Documents.Inline> öğesi) yalnızca düz metin alabilir.  
   
-     ![Diyagram: Üst &#47;/; paragraf için alt şema](../../../../docs/framework/wpf/advanced/media/flow-ovw-schemawalkthrough3.png "Flow_Ovw_SchemaWalkThrough3")  
+     ![Diyagram: Üst&#47;paragraf için alt şema](../../../../docs/framework/wpf/advanced/media/flow-ovw-schemawalkthrough3.png "Flow_Ovw_SchemaWalkThrough3")  
   
-     ![Diyagram: Üst &#47; Çalışma için alt şema](../../../../docs/framework/wpf/advanced/media/flow-ovw-schemawalkthrough4.png "Flow_Ovw_SchemaWalkThrough4")  
+     ![Diyagram: Üst&#47;çalıştırma için alt şema](../../../../docs/framework/wpf/advanced/media/flow-ovw-schemawalkthrough4.png "Flow_Ovw_SchemaWalkThrough4")  
   
  Tüm biçimlendirme örneği verilmiştir.  
   
@@ -69,9 +57,9 @@ Bu içerik modeli genel bakış için desteklenen içeriğini açıklayan bir <x
 ## <a name="working-with-textelement-content-programmatically"></a>TextElement içerikle program aracılığıyla çalışma  
  İçeriği bir <xref:System.Windows.Documents.TextElement> koleksiyonları ve bunu programlı olarak içeriğini düzenleme oluşur <xref:System.Windows.Documents.TextElement> nesneler, bu koleksiyonlarla çalışarak yapılır. Tarafından kullanılan üç farklı koleksiyon vardır <xref:System.Windows.Documents.TextElement> -türetilmiş sınıfları:  
   
--   <xref:System.Windows.Documents.InlineCollection>: Bir koleksiyonunu temsil eder <xref:System.Windows.Documents.Inline> öğeleri. <xref:System.Windows.Documents.InlineCollection>izin verilen alt öğe içeriğini tanımlar <xref:System.Windows.Documents.Paragraph>, <xref:System.Windows.Documents.Span>, ve <xref:System.Windows.Controls.TextBlock> öğeleri.  
+-   <xref:System.Windows.Documents.InlineCollection>: Bir koleksiyonunu temsil eder <xref:System.Windows.Documents.Inline> öğeleri. <xref:System.Windows.Documents.InlineCollection> izin verilen alt öğe içeriğini tanımlar <xref:System.Windows.Documents.Paragraph>, <xref:System.Windows.Documents.Span>, ve <xref:System.Windows.Controls.TextBlock> öğeleri.  
   
--   <xref:System.Windows.Documents.BlockCollection>: Bir koleksiyonunu temsil eder <xref:System.Windows.Documents.Block> öğeleri. <xref:System.Windows.Documents.BlockCollection>izin verilen alt öğe içeriğini tanımlar <xref:System.Windows.Documents.FlowDocument>, <xref:System.Windows.Documents.Section>, <xref:System.Windows.Documents.ListItem>, <xref:System.Windows.Documents.TableCell>, <xref:System.Windows.Documents.Floater>, ve <xref:System.Windows.Documents.Figure> öğeleri.  
+-   <xref:System.Windows.Documents.BlockCollection>: Bir koleksiyonunu temsil eder <xref:System.Windows.Documents.Block> öğeleri. <xref:System.Windows.Documents.BlockCollection> izin verilen alt öğe içeriğini tanımlar <xref:System.Windows.Documents.FlowDocument>, <xref:System.Windows.Documents.Section>, <xref:System.Windows.Documents.ListItem>, <xref:System.Windows.Documents.TableCell>, <xref:System.Windows.Documents.Floater>, ve <xref:System.Windows.Documents.Figure> öğeleri.  
   
 -   <xref:System.Windows.Documents.ListItemCollection>: Sıralı içindeki belirli bir içerik öğesini temsil eder bir akış içerik öğesi veya sırasız <xref:System.Windows.Documents.List>.  
   

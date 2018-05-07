@@ -1,23 +1,15 @@
 ---
-title: "System.Uri ad alanında sürümü 2.0 yapılan değişiklikler"
-ms.custom: 
+title: System.Uri ad alanında sürümü 2.0 yapılan değişiklikler
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 35883fe9-2d09-4d8b-80ca-cf23a941e459
-caps.latest.revision: "9"
 author: mcleblanc
 ms.author: markl
 manager: markl
-ms.workload: dotnet
-ms.openlocfilehash: 3ebf74fbe7f2e207af8bf861efece58026148e2f
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 169454edd04bfdb55affcc2be12140f42dd2f7ff
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="changes-to-the-systemuri-namespace-in-version-20"></a>System.Uri ad alanında sürümü 2.0 yapılan değişiklikler
 Birkaç değişiklik yapılan <xref:System.Uri?displayProperty=nameWithType> sınıfı. Bu değişiklikler yanlış davranışa sabit, kullanılabilirlik ve geliştirilmiş Gelişmiş Güvenlik.  
@@ -53,19 +45,19 @@ Birkaç değişiklik yapılan <xref:System.Uri?displayProperty=nameWithType> sı
   
 -   UNC hostname Desteği kaldırılmıştır; Uluslararası ana bilgisayar adları temsil etmek için IDN belirtimi benimsenen.  
   
--   <xref:System.Uri.LocalPath%2A>her zaman tamamen atlanmayan bir dize döndürür.  
+-   <xref:System.Uri.LocalPath%2A> her zaman tamamen atlanmayan bir dize döndürür.  
   
--   <xref:System.Uri.ToString%2A>bir kaçış karakterli '%', unescape değil '?', veya '#' karakteri.  
+-   <xref:System.Uri.ToString%2A> bir kaçış karakterli '%', unescape değil '?', veya '#' karakteri.  
   
--   <xref:System.Uri.Equals%2A>artık içerir <xref:System.Uri.Query%2A> eşitlik kontrolüne bölümün.  
+-   <xref:System.Uri.Equals%2A> artık içerir <xref:System.Uri.Query%2A> eşitlik kontrolüne bölümün.  
   
 -   İşleçler "=="ve"! =" geçersiz kılındı ve bağlantılı <xref:System.Uri.Equals%2A> yöntemi.  
   
--   <xref:System.Uri.IsLoopback%2A>Şimdi tutarlı sonuçlar üretir.  
+-   <xref:System.Uri.IsLoopback%2A> Şimdi tutarlı sonuçlar üretir.  
   
 -   URI "`file:///path`" "file://path" artık çevrilir.  
   
--   "#" şimdi bir ana bilgisayar adı Sonlandırıcı kabul edilir. Diğer bir deyişle, "http://consoto.com#fragment" Şimdi "http://contoso.com/#fragment" dönüştürülür.  
+-   "#" şimdi bir ana bilgisayar adı Sonlandırıcı kabul edilir. Diğer bir deyişle, "http://consoto.com#fragment"şimdi dönüştürülür"http://contoso.com/#fragment".  
   
 -   Taban URI ile bir parça birleştirilirken hata düzeltildi.  
   

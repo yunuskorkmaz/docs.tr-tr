@@ -1,20 +1,13 @@
 ---
-title: "Yapılar - C# Kılavuzu"
-description: "Yapı türü ve bunları oluşturma hakkında bilgi edinin"
-keywords: .NET, .NET core, C#
-author: BillWagner
-ms.author: wiwagn
+title: Yapılar - C# Kılavuzu
+description: Yapı türü ve bunları oluşturma hakkında bilgi edinin
 ms.date: 10/12/2016
-ms.topic: article
-ms.prod: .net
-ms.technology: devlang-csharp
-ms.devlang: csharp
 ms.assetid: a7094b8c-7229-4b6f-82fc-824d0ea0ec40
-ms.openlocfilehash: 4c12e886ec388671fc47f08f8df6d6f2af8aac62
-ms.sourcegitcommit: bbde43da655ae7bea1977f7af7345eb87bd7fd5f
+ms.openlocfilehash: 9fe4e0278ecf46f762a93aa489030c0a9e5563b3
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="structs"></a>Yapılar
 A *yapısı* değer türü değil. Yapı oluşturulurken yapı atandığı değişkeni yapının gerçek veri tutar. Yapı için yeni bir değişken atandığında, kopyalanır. Bu nedenle yeni değişken ve özgün değişkeni iki ayrı bir kopyasını aynı verileri içerir. Bir kopya için yapılan değişiklikler diğer kopya etkilemez.
@@ -68,10 +61,10 @@ Son iki örnekler C# 7. 0'sunulan dil özellikleri gösterir. İlk olarak bir al
 
 İkinci gösterir *ikili değişmez değerleri*, onaltılık gösterim kullanılarak yerine doğrudan bit desenlerini belirtmek sağlar.
 
-## <a name="nullable-types"></a>Boş değer atanabilir türler  
+## <a name="nullable-types"></a>Boş değer atanabilir tipler  
 Sıradan değer türleri değerine sahip olamaz [null](./language-reference/keywords/null.md). Ancak, boş değer atanabilen değer türleri affixing tarafından oluşturabileceğiniz bir **?** sonra türü. Örneğin, **int?** olan bir **int** değerini de alabilir türü [null](./language-reference/keywords/null.md). CTS boş değer atanabilir türler genel yapı türünün örnekleridir <xref:System.Nullable%601>. Boş değer atanabilir türler için ve sayısal değerleri null olabilir veritabanlarından veri geçirilirken özellikle yararlıdır. Daha fazla bilgi için bkz: [boş değer atanabilir türler (C# programlama Kılavuzu)](./programming-guide/nullable-types/index.md).
 
 ## <a name="see-also"></a>Ayrıca bkz.
-[Sınıfları](classes.md)
+[Sınıflar](classes.md)
 
-[Temel türleri](basic-types.md)
+[Temel Türler](basic-types.md)

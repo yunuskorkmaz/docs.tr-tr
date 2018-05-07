@@ -1,36 +1,22 @@
 ---
 title: 'Nasıl yapılır: Hizmet Bilinen Adını Kaydetme ve Yapılandırma'
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 helpviewer_keywords:
 - COM [WCF], configure service monikers
 - COM [WCF], register service monikers
 ms.assetid: e5e16c80-8a8e-4eef-af53-564933b651ef
-caps.latest.revision: 20
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 52b3ec27560ca2dc47b7951cb209f33f307fa7ea
-ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
+ms.openlocfilehash: 1d245327c1e7d53de9a88c93ff0399d8e231a1df
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/28/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-register-and-configure-a-service-moniker"></a>Nasıl yapılır: Hizmet Bilinen Adını Kaydetme ve Yapılandırma
-Kullanmadan önce [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] hizmet bilinen adı yazılı sözleşme ile COM uygulama içinde gerekli öznitelikli türleri COM ile kaydetme ve COM uygulama ve ad gerekli bağlama yapılandırması ile yapılandırmanız gerekir.  
+Windows Communication Foundation (WCF) hizmet bilinen adını COM uygulama içinde yazılı sözleşme kullanmadan önce gerekli öznitelikli türleri COM ile kaydetme ve COM uygulama ve ad gerekli bağlama ile yapılandırmanız gerekir yapılandırma.  
   
 ### <a name="to-register-the-required-attributed-types-with-com"></a>Gerekli öznitelikli türleri COM ile kaydetmek için  
   
-1.  Kullanım [ServiceModel meta veri yardımcı Programracı (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md) meta verileri sözleşmeden almak için aracı [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] hizmet. Bu kaynak kodunu oluşturur bir [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] istemci derleme ve bir istemci uygulama yapılandırma dosyası.  
+1.  Kullanım [ServiceModel meta veri yardımcı Programracı (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md) meta veri sözleşmesi WCF hizmetinden almak için aracı. Bir WCF istemcisi derleme ve bir istemci uygulama yapılandırma dosyası için kaynak kodunu oluşturur.  
   
 2.  Derlemedeki türleri olarak işaretlenmediğinden emin olun `ComVisible`. Bunu yapmak için Visual Studio projenizi AssemblyInfo.cs dosyasında şu özniteliği ekleyin.  
   
@@ -38,7 +24,7 @@ Kullanmadan önce [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] hizmet
     [assembly: ComVisible(true)]  
     ```  
   
-3.  Yönetilen derleme [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] istemci tanımlayıcı adlı bir derleme olarak. Bu, bir şifreleme anahtar çifti ile imzalama gerektirir. Daha fazla bilgi için bkz: [bir derlemeyi tanımlayıcı adla imzalama](http://go.microsoft.com/fwlink/?LinkId=94874) .NET Geliştirici Kılavuzu.  
+3.  Tanımlayıcı adlı bir derleme olarak yönetilen WCF istemcisini derleyin. Bu, bir şifreleme anahtar çifti ile imzalama gerektirir. Daha fazla bilgi için bkz: [bir derlemeyi tanımlayıcı adla imzalama](http://go.microsoft.com/fwlink/?LinkId=94874) .NET Geliştirici Kılavuzu.  
   
 4.  Derleme kaydı (Regasm.exe) aracıyla kullanın `/tlb` türleri com derlemesine kaydetmek için seçeneği  
   
@@ -49,7 +35,7 @@ Kullanmadan önce [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] hizmet
   
 ### <a name="to-configure-the-com-application-and-the-moniker-with-the-required-binding-configuration"></a>COM uygulama ve ad ile gerekli bağlama yapılandırması yapılandırmak için  
   
--   Bağlama tanımları yerleştirin (tarafından oluşturulan [ServiceModel meta veri yardımcı Programracı (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md) oluşturulan istemci uygulama yapılandırma dosyasında) istemci uygulamanın yapılandırma dosyasında. Örneğin, bir Visual Basic CallCenterClient.exe adlı 6.0 için yürütülebilir, yapılandırma, yürütülebilir dosya ile aynı dizinde içinde CallCenterConfig.exe.config adlı bir dosyaya yerleştirilmelidir. İstemci uygulaması artık bilinen ad olarak kullanabilirsiniz. Bağlama yapılandırması tarafından sağlanan türleri bağlama standart birini kullanarak gerekli değilse Not [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)].  
+-   Bağlama tanımları yerleştirin (tarafından oluşturulan [ServiceModel meta veri yardımcı Programracı (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md) oluşturulan istemci uygulama yapılandırma dosyasında) istemci uygulamanın yapılandırma dosyasında. Örneğin, bir Visual Basic CallCenterClient.exe adlı 6.0 için yürütülebilir, yapılandırma, yürütülebilir dosya ile aynı dizinde içinde CallCenterConfig.exe.config adlı bir dosyaya yerleştirilmelidir. İstemci uygulaması artık bilinen ad olarak kullanabilirsiniz. Bağlama yapılandırması WCF tarafından sağlanan türleri bağlama standart birini kullanıyorsanız, gerekli olmadığına dikkat edin.  
   
      Aşağıdaki türü kaydedilir.  
   

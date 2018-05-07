@@ -1,10 +1,6 @@
 ---
 title: '&amp; İşleci (C# Başvurusu)'
 ms.date: 04/04/2018
-ms.prod: .net
-ms.technology:
-- devlang-csharp
-ms.topic: article
 f1_keywords:
 - '&_CSharpKeyword'
 helpviewer_keywords:
@@ -13,14 +9,11 @@ helpviewer_keywords:
 - '& operator [C#]'
 - AND operator (&) [C#]
 ms.assetid: afa346d5-90ec-4b1f-a2c8-3881f018741d
-caps.latest.revision: 19
-author: BillWagner
-ms.author: wiwagn
-ms.openlocfilehash: f26305bfa1e8c9ba45493ad2ab4937d554590911
-ms.sourcegitcommit: b750a8e3979749b214e7e10c82efb0a0524dfcb1
+ms.openlocfilehash: 59813b4bc5781776c9f9741c3e49e660c684bff9
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/09/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="amp-operator-c-reference"></a>&amp; İşleci (C# Başvurusu)
 `&` İşleci bir birli ya da bir ikili işleç olarak işlev görebilir.  
@@ -39,7 +32,7 @@ ms.lasthandoff: 04/09/2018
 ## <a name="example"></a>Örnek  
  [!code-csharp[csRefOperators#38](../../../csharp/language-reference/operators/codesnippet/CSharp/and-operator_2.cs)]  
   
-## <a name="see-also"></a>Ayrıca bkz.  
+## <a name="see-also"></a>Ayrıca Bkz.  
  [C# başvurusu](../../../csharp/language-reference/index.md)  
  [C# Programlama Kılavuzu](../../../csharp/programming-guide/index.md)  
  [C# İşleçleri](../../../csharp/language-reference/operators/index.md)

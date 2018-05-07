@@ -1,21 +1,14 @@
 ---
-title: "Dizileri Bağımsız Değişkenler Olarak Geçirme (C# Programlama Kılavuzu)"
+title: Dizileri Bağımsız Değişkenler Olarak Geçirme (C# Programlama Kılavuzu)
 ms.date: 07/20/2015
-ms.prod: .net
-ms.technology:
-- devlang-csharp
-ms.topic: article
 helpviewer_keywords:
 - arrays [C#], passing as arguments
 ms.assetid: f3a0971e-c87c-4a1f-8262-bc0a3b712772
-caps.latest.revision: 
-author: BillWagner
-ms.author: wiwagn
-ms.openlocfilehash: f152173b747a171052ab99f261ed91ced9465fdc
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: d863cdc33a8a1a844aabbea9ba5876614e6e8dba
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="passing-arrays-as-arguments-c-programming-guide"></a>Dizileri Bağımsız Değişkenler Olarak Geçirme (C# Programlama Kılavuzu)
 Dizileri bağımsız değişkenler olarak yöntemi parametrelerine geçirilebilir. Diziler başvuru türleri olduğundan, yöntemi öğelerinin değerini değiştirebilirsiniz.  
@@ -63,8 +56,8 @@ Dizileri bağımsız değişkenler olarak yöntemi parametrelerine geçirilebili
  [!code-csharp[csProgGuideArrays#31](../../../csharp/programming-guide/arrays/codesnippet/CSharp/passing-arrays-as-arguments_8.cs)]  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [C# programlama kılavuzu](../../../csharp/programming-guide/index.md)  
+ [C# Programlama Kılavuzu](../../../csharp/programming-guide/index.md)  
  [Diziler](../../../csharp/programming-guide/arrays/index.md)  
- [Tek boyutlu diziler](../../../csharp/programming-guide/arrays/single-dimensional-arrays.md)  
- [Çok boyutlu diziler](../../../csharp/programming-guide/arrays/multidimensional-arrays.md)  
- [Basit diziler](../../../csharp/programming-guide/arrays/jagged-arrays.md)
+ [Tek Boyutlu Diziler](../../../csharp/programming-guide/arrays/single-dimensional-arrays.md)  
+ [Çok Boyutlu Diziler](../../../csharp/programming-guide/arrays/multidimensional-arrays.md)  
+ [Düzensiz Diziler](../../../csharp/programming-guide/arrays/jagged-arrays.md)

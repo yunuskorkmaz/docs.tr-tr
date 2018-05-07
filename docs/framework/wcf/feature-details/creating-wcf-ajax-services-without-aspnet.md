@@ -1,33 +1,19 @@
 ---
 title: ASP.NET Olmadan WCF AJAX Hizmetleri Oluşturma
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 ms.assetid: ba4a7d1b-e277-4978-9f62-37684e6dc934
-caps.latest.revision: 7
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: b652bcd522a8eea81b3d1218fbd054ee0b2caea8
-ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
+ms.openlocfilehash: 77a850408c3d952dbd4f682ea704d3248ae17c3e
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/28/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="creating-wcf-ajax-services-without-aspnet"></a>ASP.NET Olmadan WCF AJAX Hizmetleri Oluşturma
-[!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] AJAX Hizmetleri, ASP.NET AJAX gerek kalmadan tüm JavaScript etkin Web sayfasından erişilebilir. Bu konuda gibi oluşturmayı açıklar bir [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] hizmet.  
+Windows Communication Foundation (WCF) AJAX Hizmetleri, ASP.NET AJAX gerek kalmadan tüm JavaScript etkin Web sayfasından erişilebilir. Bu konu, bu tür bir WCF hizmeti oluşturma açıklar.  
   
- Kullanma yönergeleri için [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] ASP.NET AJAX ile bkz [ASP.NET AJAX için WCF hizmetleri oluşturma](../../../../docs/framework/wcf/feature-details/creating-wcf-services-for-aspnet-ajax.md).  
+ WCF ile ASP.NET AJAX kullanılarak ile ilgili yönergeler için bkz: [ASP.NET AJAX için WCF hizmetleri oluşturma](../../../../docs/framework/wcf/feature-details/creating-wcf-services-for-aspnet-ajax.md).  
   
- Bir oluşturma üç bölümden oluşur bir [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] AJAX hizmeti:  
+ Bir WCF AJAX hizmet oluşturmak için üç bölümden oluşur:  
   
 -   AJAX uç noktası oluşturma, tarayıcıdan erişilebilir.  
   
@@ -36,7 +22,7 @@ ms.lasthandoff: 04/28/2018
 -   WCF AJAX Hizmetleri erişme.  
   
 ## <a name="creating-an-ajax-endpoint"></a>AJAX uç noktası oluşturma  
- AJAX desteğini etkinleştirmek için en temel yolu bir [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] hizmetidir kullanmak için <xref:System.ServiceModel.Activation.WebServiceHostFactory> aşağıdaki örnekteki gibi hizmeti ile ilişkilendirilen .svc dosyasındaki.  
+ Bir WCF hizmetindeki AJAX desteğini etkinleştirmek için en temel yolu kullanmaktır <xref:System.ServiceModel.Activation.WebServiceHostFactory> aşağıdaki örnekteki gibi hizmeti ile ilişkilendirilen .svc dosyasındaki.  
   
 ```  
 <%ServiceHost   
@@ -115,7 +101,7 @@ string[] GetCities(string firstLetters, int maxNumber);
 ```  
   
 ## <a name="accessing-ajax-services"></a>AJAX hizmetlere erişme  
- [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] AJAX uç noktaları her zaman JSON ve XML isteklerini kabul edin.  
+ WCF AJAX uç noktaları her zaman JSON ve XML isteklerini kabul edin.  
   
  HTTP POST istekleri bir içerik türü "application/json" JSON olarak kabul edilir ve XML (örneğin, "text/xml") gösteren içerik türü olan XML olarak kabul edilir.  
   

@@ -1,14 +1,6 @@
 ---
-title: "ICeeGen::GenerateCeeFile Yöntemi"
-ms.custom: 
+title: ICeeGen::GenerateCeeFile Yöntemi
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: reference
 api_name:
 - ICeeGen.GenerateCeeFile
 api_location:
@@ -23,17 +15,13 @@ helpviewer_keywords:
 ms.assetid: cca4a9a1-731b-4411-9e04-00cffe7a56d8
 topic_type:
 - apiref
-caps.latest.revision: 
 author: mairaw
 ms.author: mairaw
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 10b579a3d0ff8cbe02a3b47231114521486d8e2b
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: d82952e34195ee813d4cd0217c904a5253859f99
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="iceegengenerateceefile-method"></a>ICeeGen::GenerateCeeFile Yöntemi
 Şu anda bu yüklenmiş kod tabanını içeren bir kod temeli dosyası oluşturur [Iceegen](../../../../docs/framework/unmanaged-api/metadata/iceegen-interface.md) arabirimi.  
@@ -47,7 +35,7 @@ HRESULT GenerateCeeFile ();
 ```  
   
 #### <a name="parameters"></a>Parametreler  
- `GenerateCeeFile`parametre almaz.  
+ `GenerateCeeFile` parametre almaz.  
   
 ## <a name="requirements"></a>Gereksinimler  
  **Platformlar:** bkz [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
@@ -56,7 +44,7 @@ HRESULT GenerateCeeFile ();
   
  **Kitaplığı:** MsCorEE.dll kaynak olarak kullanılır  
   
- **.NET framework sürümleri:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET framework sürümleri:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
  [ICeeGen Arabirimi](../../../../docs/framework/unmanaged-api/metadata/iceegen-interface.md)

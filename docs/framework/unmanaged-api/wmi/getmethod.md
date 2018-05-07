@@ -1,11 +1,7 @@
 ---
-title: "GetMethod işlevi (yönetilmeyen API Başvurusu)"
-description: "GetMethod işlevi bir yöntem hakkında bilgi alır."
+title: GetMethod işlevi (yönetilmeyen API Başvurusu)
+description: GetMethod işlevi bir yöntem hakkında bilgi alır.
 ms.date: 11/06/2017
-ms.prod: .net-framework
-ms.technology:
-- dotnet-clr
-ms.topic: reference
 api_name:
 - GetMethod
 api_location:
@@ -20,14 +16,11 @@ topic_type:
 - Reference
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: f22a2dfa7aae411cac960cbad2017718df8057e1
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 65b8cb74a028892a3494e818f2b523f75e8766a1
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="getmethod-function"></a>GetMethod işlevi
 Belirtilen yöntem bilgilerini alır.
@@ -83,14 +76,14 @@ Bu işlev çağrısı sarmalar [IWbemClassObject::GetMethod](https://msdn.micros
 
 Windows Yönetim ayarlayabilirsiniz [IWbemClassObject](https://msdn.microsoft.com/library/aa391433%28v=vs.85%29.aspx) işaretçi `null` yöntemi hiçbir parametreleri varsa.
 
-İçinde `ppInSignature` ve `ppOutSignature` ve out parametreleri, sırasıyla özellikleri olarak açıklayan bir `IWbemClassObject` sistem sınıfının örneği [_Parameters](https://msdn.microsoft.com/library/aa394667(v=vs.85).aspx). Özelliklerinde `ppInsignature` adlandırıldığı **Param***n*, burada  *n*  yöntem imzası (örneğin parametresi konumunda olarak `Param1`, `Param2`vb..). Özelliklerinde `ppOutSignature` olarak da adlandırılır **Param***n*, ve dönüş değeri adlı **ReturnValue**. Daha fazla bilgi ve bir örnek için bkz: [IWbemClassObject::GetMethod yöntemi](https://msdn.microsoft.com/library/aa391443(v=vs.85).aspx).
+İçinde `ppInSignature` ve `ppOutSignature` ve out parametreleri, sırasıyla özellikleri olarak açıklayan bir `IWbemClassObject` sistem sınıfının örneği [_Parameters](https://msdn.microsoft.com/library/aa394667(v=vs.85).aspx). Özelliklerinde `ppInsignature` adlandırıldığı **Param *** n*, burada *n* parametresi yöntem imzası konumdur (gibi `Param1`, `Param2`vb..). Özelliklerinde `ppOutSignature` olarak da adlandırılır **Param *** n*, ve dönüş değeri adlı **ReturnValue**. Daha fazla bilgi ve bir örnek için bkz: [IWbemClassObject::GetMethod yöntemi](https://msdn.microsoft.com/library/aa391443(v=vs.85).aspx).
 
 ## <a name="requirements"></a>Gereksinimler  
 **Platformlar:** bkz [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Başlık:** WMINet_Utils.idl  
   
- **.NET framework sürümleri:**[!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]  
+ **.NET framework sürümleri:** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.  
 [WMI ve performans sayaçları (yönetilmeyen API Başvurusu)](index.md)

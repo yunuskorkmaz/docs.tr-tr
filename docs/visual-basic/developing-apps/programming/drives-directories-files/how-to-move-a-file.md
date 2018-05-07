@@ -1,24 +1,14 @@
 ---
 title: "Nasıl Yapılır: Visual Basic'te Dosya Taşıma"
-ms.custom: 
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- devlang-visual-basic
-ms.topic: article
 helpviewer_keywords:
 - files [Visual Basic], moving
 ms.assetid: 53a7457b-5815-41ad-b37d-28537c1fb77a
-caps.latest.revision: 
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: 96c6d1d89c0dfe4720637202b42414047e96f146
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 95a7deeec7c5f5d997a99ba9aa4bae8d7f972b5e
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-move-a-file-in-visual-basic"></a>Nasıl Yapılır: Visual Basic'te Dosya Taşıma
 `My.Computer.FileSystem.MoveFile` Yöntemi, bir dosyayı başka bir klasöre taşımak için kullanılabilir. Hedef yapı mevcut değilse oluşturulur.  
@@ -42,7 +32,7 @@ ms.lasthandoff: 11/21/2017
   
 -   Çünkü yolu geçerli değil `Nothing` (<xref:System.ArgumentNullException>).  
   
--   `destinationFileName`olan `Nothing` ya da boş bir dize (<xref:System.ArgumentNullException>).  
+-   `destinationFileName` olan `Nothing` ya da boş bir dize (<xref:System.ArgumentNullException>).  
   
 -   Kaynak dosyası geçerli değil veya yok (<xref:System.IO.FileNotFoundException>).  
   
@@ -50,7 +40,7 @@ ms.lasthandoff: 11/21/2017
   
 -   Yolda bir dosya veya dizin adı biçimi geçersiz veya iki nokta üst üste (:) içerir (<xref:System.NotSupportedException>).  
   
--   `showUI`ayarlanmış `True`, `onUserCancel` ayarlanır `ThrowException`ve her iki kullanıcı işlemi iptal etti veya belirtilmemiş bir g/ç hatası oluştuğunda (<xref:System.OperationCanceledException>).  
+-   `showUI` ayarlanmış `True`, `onUserCancel` ayarlanır `ThrowException`ve her iki kullanıcı işlemi iptal etti veya belirtilmemiş bir g/ç hatası oluştuğunda (<xref:System.OperationCanceledException>).  
   
 -   Yolu sistem tarafından tanımlanan uzunluk üst sınırını aşıyor (<xref:System.IO.PathTooLongException>).  
   
@@ -60,6 +50,6 @@ ms.lasthandoff: 11/21/2017
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
  <xref:Microsoft.VisualBasic.FileIO.FileSystem.MoveFile%2A>  
- [Nasıl yapılır: bir dosyayı yeniden adlandırın](../../../../visual-basic/developing-apps/programming/drives-directories-files/how-to-rename-a-file.md)  
- [Nasıl yapılır: farklı dizinde dosya kopyası oluşturma](../../../../visual-basic/developing-apps/programming/drives-directories-files/how-to-create-a-copy-of-a-file-in-a-different-directory.md)  
- [Nasıl yapılır: dosya yollarını ayrıştırma](../../../../visual-basic/developing-apps/programming/drives-directories-files/how-to-parse-file-paths.md)
+ [Nasıl Yapılır: Dosyayı Yeniden Adlandırma](../../../../visual-basic/developing-apps/programming/drives-directories-files/how-to-rename-a-file.md)  
+ [Nasıl Yapılır: Farklı Dizinde Dosya Kopyası Oluşturma](../../../../visual-basic/developing-apps/programming/drives-directories-files/how-to-create-a-copy-of-a-file-in-a-different-directory.md)  
+ [Nasıl Yapılır: Dosya Yollarını Ayrıştırma](../../../../visual-basic/developing-apps/programming/drives-directories-files/how-to-parse-file-paths.md)

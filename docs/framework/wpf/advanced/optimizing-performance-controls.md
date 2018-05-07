@@ -1,31 +1,19 @@
 ---
-title: "Performansı İyileştirme: Denetimler"
-ms.custom: 
+title: 'Performansı İyileştirme: Denetimler'
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-wpf
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - controls [WPF], improving performance
 - container recycling [WPF]
 - user interface virtualization [WPF]
 ms.assetid: 45a31c43-ea8a-4546-96c8-0631b9934179
-caps.latest.revision: "22"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 1b8008d104437454f36f6f425634c40968d5481a
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 9e4ceee26263a1d047aeda0881b955070de4326d
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="optimizing-performance-controls"></a>Performansı İyileştirme: Denetimler
-[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]çok kullanılan ortak kullanıcı arabirimi (UI) bileşenlerinin çoğu Windows uygulamalarında içerir. Bu konu, kullanıcı Arabirimi performansını iyileştirme tekniklerini içerir.  
+[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] çok kullanılan ortak kullanıcı arabirimi (UI) bileşenlerinin çoğu Windows uygulamalarında içerir. Bu konu, kullanıcı Arabirimi performansını iyileştirme tekniklerini içerir.  
   
  
   
@@ -35,7 +23,7 @@ ms.lasthandoff: 12/22/2017
   
  UI sanallaştırma liste denetimleri önemli bir yönüdür. UI sanallaştırma veri sanallaştırma ile karıştırılmamalıdır. UI sanallaştırma depoları yalnızca görünen öğeleri bellek ancak veri bağlama senaryosu tüm veri yapısı bellekte depolar. Buna karşılık, veri sanallaştırma bellekte ekranında görünür olan veri öğeleri depolar.  
   
- Varsayılan olarak UI sanallaştırma için etkin <xref:System.Windows.Controls.ListView> ve <xref:System.Windows.Controls.ListBox> , liste öğelerini veriye bağlıyken denetler. <xref:System.Windows.Controls.TreeView>Sanallaştırma ayarlayarak etkinleştirilebilir <!--zz <xref:System.Windows.Controls.VirtualizingStackPanel.IsVirtualizing%2A?displayProperty=nameWithType> --> `IsVirtualizing` özelliğine bağlı `true`. Öğesinden türetilen özel denetimler için UI sanallaştırma etkinleştirmek isteyip istemediğinizi <xref:System.Windows.Controls.ItemsControl> ya da var olan öğeyi denetimleri kullanan <xref:System.Windows.Controls.StackPanel> gibi sınıfı <xref:System.Windows.Controls.ComboBox>, ayarlayabileceğiniz <xref:System.Windows.Controls.ItemsControl.ItemsPanel%2A> için <xref:System.Windows.Controls.VirtualizingStackPanel> ve <xref:System.Windows.Controls.VirtualizingPanel.IsVirtualizing%2A> için`true`. Ne yazık ki, bu denetimler için UI sanallaştırma kullanıldıklarını olmadan devre dışı bırakabilirsiniz. Bir kullanıcı Arabirimi sanallaştırmayı devre dışı koşullar listesi verilmiştir.  
+ Varsayılan olarak UI sanallaştırma için etkin <xref:System.Windows.Controls.ListView> ve <xref:System.Windows.Controls.ListBox> , liste öğelerini veriye bağlıyken denetler. <xref:System.Windows.Controls.TreeView> Sanallaştırma ayarlayarak etkinleştirilebilir <!--zz <xref:System.Windows.Controls.VirtualizingStackPanel.IsVirtualizing%2A?displayProperty=nameWithType> --> `IsVirtualizing` özelliğine bağlı `true`. Öğesinden türetilen özel denetimler için UI sanallaştırma etkinleştirmek isteyip istemediğinizi <xref:System.Windows.Controls.ItemsControl> ya da var olan öğeyi denetimleri kullanan <xref:System.Windows.Controls.StackPanel> gibi sınıfı <xref:System.Windows.Controls.ComboBox>, ayarlayabileceğiniz <xref:System.Windows.Controls.ItemsControl.ItemsPanel%2A> için <xref:System.Windows.Controls.VirtualizingStackPanel> ve <xref:System.Windows.Controls.VirtualizingPanel.IsVirtualizing%2A> için`true`. Ne yazık ki, bu denetimler için UI sanallaştırma kullanıldıklarını olmadan devre dışı bırakabilirsiniz. Bir kullanıcı Arabirimi sanallaştırmayı devre dışı koşullar listesi verilmiştir.  
   
 -   Öğe kapsayıcılarını doğrudan eklenir <xref:System.Windows.Controls.ItemsControl>. Örneğin, bir uygulama açıkça eklerse <xref:System.Windows.Controls.ListBoxItem> nesneleri için bir <xref:System.Windows.Controls.ListBox>, <xref:System.Windows.Controls.ListBox> değil sanallaştırmak <xref:System.Windows.Controls.ListBoxItem> nesneleri.  
   
@@ -57,7 +45,7 @@ ms.lasthandoff: 12/22/2017
   
 <a name="Supporting"></a>   
 ## <a name="supporting-bidirectional-virtualization"></a>Çift yönlü sanallaştırma destekleme  
- <xref:System.Windows.Controls.VirtualizingStackPanel>yatay veya dikey bir yönde UI sanallaştırma için yerleşik destek sunar. Çift yönlü sanallaştırma denetimleriniz için kullanmak istiyorsanız, genişleten bir özel panel uygulamalıdır <xref:System.Windows.Controls.VirtualizingStackPanel> sınıfı. <xref:System.Windows.Controls.VirtualizingStackPanel> Sınıfı sunar sanal yöntemler gibi <xref:System.Windows.Controls.VirtualizingStackPanel.OnViewportSizeChanged%2A>, <xref:System.Windows.Controls.VirtualizingStackPanel.LineUp%2A>, <xref:System.Windows.Controls.VirtualizingStackPanel.PageUp%2A>, ve <xref:System.Windows.Controls.VirtualizingStackPanel.MouseWheelUp%2A>. Bu sanal yöntemleri bir liste görünür bölümünde bir değişikliği algılar ve uygun şekilde işlemesine olanak sağlar.  
+ <xref:System.Windows.Controls.VirtualizingStackPanel> yatay veya dikey bir yönde UI sanallaştırma için yerleşik destek sunar. Çift yönlü sanallaştırma denetimleriniz için kullanmak istiyorsanız, genişleten bir özel panel uygulamalıdır <xref:System.Windows.Controls.VirtualizingStackPanel> sınıfı. <xref:System.Windows.Controls.VirtualizingStackPanel> Sınıfı sunar sanal yöntemler gibi <xref:System.Windows.Controls.VirtualizingStackPanel.OnViewportSizeChanged%2A>, <xref:System.Windows.Controls.VirtualizingStackPanel.LineUp%2A>, <xref:System.Windows.Controls.VirtualizingStackPanel.PageUp%2A>, ve <xref:System.Windows.Controls.VirtualizingStackPanel.MouseWheelUp%2A>. Bu sanal yöntemleri bir liste görünür bölümünde bir değişikliği algılar ve uygun şekilde işlemesine olanak sağlar.  
   
 <a name="Optimizing"></a>   
 ## <a name="optimizing-templates"></a>Şablonları en iyi duruma getirme  
@@ -67,7 +55,7 @@ ms.lasthandoff: 12/22/2017
 ## <a name="deferred-scrolling"></a>Kaydırma ertelenmiş  
  Kullanıcı bir kaydırma çubuğu üzerinde kaydırma sürüklendiğinde varsayılan olarak, içerik görünümü sürekli olarak güncelleştirir.  Kaydırma, denetiminde yavaşsa, kullanarak kaydırma ertelenmiş göz önünde bulundurun.  Yalnızca kullanıcı kaydırma bıraktığında ertelenmiş kaydırma içinde içerik güncelleştirilir.  
   
- Ertelenmiş kaydırma uygulamak için ayarlanmış <xref:System.Windows.Controls.ScrollViewer.IsDeferredScrollingEnabled%2A> özelliğine `true`.  <xref:System.Windows.Controls.ScrollViewer.IsDeferredScrollingEnabled%2A>bağlı bir özelliktir ve ayarlanabilen <xref:System.Windows.Controls.ScrollViewer> ve sahip herhangi bir denetimi bir <xref:System.Windows.Controls.ScrollViewer> , Denetim şablondaki.  
+ Ertelenmiş kaydırma uygulamak için ayarlanmış <xref:System.Windows.Controls.ScrollViewer.IsDeferredScrollingEnabled%2A> özelliğine `true`.  <xref:System.Windows.Controls.ScrollViewer.IsDeferredScrollingEnabled%2A> bağlı bir özelliktir ve ayarlanabilen <xref:System.Windows.Controls.ScrollViewer> ve sahip herhangi bir denetimi bir <xref:System.Windows.Controls.ScrollViewer> , Denetim şablondaki.  
   
 <a name="Controls"></a>   
 ## <a name="controls-that-implement-performance-features"></a>Performans özellikleri uygulamak denetimleri  

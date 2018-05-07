@@ -1,32 +1,21 @@
 ---
-title: "Dönüşümleri XPathNodeIterator"
-ms.custom: 
+title: Dönüşümleri XPathNodeIterator
 ms.date: 03/30/2017
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
 ms.technology: dotnet-standard
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
 ms.assetid: 2bc6ddc6-674a-4f75-b264-abc35e4e5857
-caps.latest.revision: "4"
 author: mairaw
 ms.author: mairaw
-manager: wpickett
-ms.workload:
-- dotnet
-- dotnetcore
-ms.openlocfilehash: 523a4774de9975812838b22bbb5193e59cd58130
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: 0d30760ef018c9b2d1264b323b57172417e4ef0c
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="xpathnodeiterator-in-transformations"></a>Dönüşümleri XPathNodeIterator
-<xref:System.Xml.XPath.XPathNodeIterator> Küme düğümlerinin bir XML Path dili (XPath) sorgusu veya bir düğüme dönüştürülen sonuç ağacı parçası sonucu olarak oluşturulan üzerinde yinelemek için yöntemler kümesi düğüm kümesi yöntemi kullanarak sağlar. <xref:System.Xml.XPath.XPathNodeIterator> Bu düğüm kümesi içindeki düğümler üzerinden yineleme olanak tanır. Bir düğüm kümesi alındıktan sonra <xref:System.Xml.XPath.XPathNodeIterator> sınıfı düğümleri seçilen kümesi için salt okunur, yalnızca ileri yönlü bir imleç sağlar. Bu yöntemin çağrılması belge sırayla bir sonraki düğüme taşınmasını düğüm kümesi belge sırayla oluşturulur. <xref:System.Xml.XPath.XPathNodeIterator>Kümedeki tüm düğümler düğüm ağacının oluşmuyor. Bunun yerine, ağacında hareket etme gibi işaret temel düğüm gösterme veri, bir tek düğümlü pencere sağlar. Kullanılabilir özellikler ve yöntemler <xref:System.Xml.XPath.XPathNodeIterator> sınıfı, geçerli düğümden bilgi almak etkinleştirin. Kullanılabilir yöntemleri ve özellikleri listesi için bkz: <xref:System.Windows.Forms.ToolBar>.  
+<xref:System.Xml.XPath.XPathNodeIterator> Küme düğümlerinin bir XML Path dili (XPath) sorgusu veya bir düğüme dönüştürülen sonuç ağacı parçası sonucu olarak oluşturulan üzerinde yinelemek için yöntemler kümesi düğüm kümesi yöntemi kullanarak sağlar. <xref:System.Xml.XPath.XPathNodeIterator> Bu düğüm kümesi içindeki düğümler üzerinden yineleme olanak tanır. Bir düğüm kümesi alındıktan sonra <xref:System.Xml.XPath.XPathNodeIterator> sınıfı düğümleri seçilen kümesi için salt okunur, yalnızca ileri yönlü bir imleç sağlar. Bu yöntemin çağrılması belge sırayla bir sonraki düğüme taşınmasını düğüm kümesi belge sırayla oluşturulur. <xref:System.Xml.XPath.XPathNodeIterator> Kümedeki tüm düğümler düğüm ağacının oluşmuyor. Bunun yerine, ağacında hareket etme gibi işaret temel düğüm gösterme veri, bir tek düğümlü pencere sağlar. Kullanılabilir özellikler ve yöntemler <xref:System.Xml.XPath.XPathNodeIterator> sınıfı, geçerli düğümden bilgi almak etkinleştirin. Kullanılabilir yöntemleri ve özellikleri listesi için bkz: <xref:System.Windows.Forms.ToolBar>.  
   
  Bu yana bir <xref:System.Xml.XPath.XPathNodeIterator> taşır küme düğümleri üzerinde oluşturulan bir XPath sorgusu ve taşır iletmek yalnızca, taşıma kullanarak yoludur <xref:System.Xml.XPath.XPathNodeIterator.MoveNext%2A> yöntemi. Bu yöntemin dönüş türü `Boolean`, döndürme `true` sonraki Seçili düğüme geçerse ve `false` artık seçili düğümler varsa. Döndürürse `true`, aşağıdaki listede kullanılabilir özellikleri gösterir:  
   

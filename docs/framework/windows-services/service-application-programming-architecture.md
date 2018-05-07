@@ -1,13 +1,6 @@
 ---
-title: "Hizmet Uygulaması Programlama Mimarisi"
-ms.custom: 
+title: Hizmet Uygulaması Programlama Mimarisi
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -21,25 +14,22 @@ helpviewer_keywords:
 - ServiceProcessInstaller class, service application code model
 - Windows Service applications, states
 ms.assetid: 83230026-d068-4174-97ff-e264c896eb2f
-caps.latest.revision: "15"
 author: ghogen
-ms.author: ghogen
 manager: douge
-ms.workload: dotnet
-ms.openlocfilehash: 2d44ee323040346437261b51fddb707a30d1de6c
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: f0c760d0f9b65fc9b612a8bee8abb68fa5b4ecae
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="service-application-programming-architecture"></a>Hizmet Uygulaması Programlama Mimarisi
 Windows hizmet uygulamaları öğesinden devralınan bir sınıf temel <xref:System.ServiceProcess.ServiceBase?displayProperty=nameWithType> sınıfı. Bu sınıftan yöntemleri geçersiz kılmak ve bunları hizmetinizin nasıl davranacağını belirlemek işlevsellik tanımlayın.  
   
  Hizmet oluşturulmasında yer ana sınıfları şunlardır:  
   
--   <xref:System.ServiceProcess.ServiceBase?displayProperty=nameWithType>— Yöntemleri geçersiz kılar <xref:System.ServiceProcess.ServiceBase> hizmet oluştururken, sınıf ve nasıl hizmetinizin Bu sınıf devralınan belirlemek için kod tanımlayın.  
+-   <xref:System.ServiceProcess.ServiceBase?displayProperty=nameWithType> — Yöntemleri geçersiz kılar <xref:System.ServiceProcess.ServiceBase> hizmet oluştururken, sınıf ve nasıl hizmetinizin Bu sınıf devralınan belirlemek için kod tanımlayın.  
   
--   <xref:System.ServiceProcess.ServiceProcessInstaller?displayProperty=nameWithType>ve <xref:System.ServiceProcess.ServiceInstaller?displayProperty=nameWithType> — bu sınıfların yüklemek ve hizmetinizi kaldırmak için kullanın.  
+-   <xref:System.ServiceProcess.ServiceProcessInstaller?displayProperty=nameWithType> ve <xref:System.ServiceProcess.ServiceInstaller?displayProperty=nameWithType> — bu sınıfların yüklemek ve hizmetinizi kaldırmak için kullanın.  
   
  Ayrıca, adlı bir sınıf <xref:System.ServiceProcess.ServiceController> hizmeti işlemek için kullanılabilir. Bu sınıf bir hizmet oluşturmada yer alan değildir, ancak başlatmak ve hizmetini durdurun, komutları ona geçirmek ve numaralandırmalar bir dizi dönmek için kullanılabilir.  
   

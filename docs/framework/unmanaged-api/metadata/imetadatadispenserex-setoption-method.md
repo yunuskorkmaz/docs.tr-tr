@@ -1,14 +1,6 @@
 ---
-title: "IMetaDataDispenserEx::SetOption Yöntemi"
-ms.custom: 
+title: IMetaDataDispenserEx::SetOption Yöntemi
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: reference
 api_name:
 - IMetaDataDispenserEx.SetOption
 api_location:
@@ -23,17 +15,13 @@ helpviewer_keywords:
 ms.assetid: 9f1c7ccd-7fb2-41d8-aa00-24b823376527
 topic_type:
 - apiref
-caps.latest.revision: 
 author: mairaw
 ms.author: mairaw
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 96810ba0eab99d1df58f0b68b85ef4da8ce7084e
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: cfe600b54eb03a07ea01375355c5ff94190e5d9d
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="imetadatadispenserexsetoption-method"></a>IMetaDataDispenserEx::SetOption Yöntemi
 Belirtilen seçenek geçerli meta veri kapsam için belirli bir değeri ayarlar. Seçeneği geçerli bir meta veri kapsama çağrıları işlenme denetler.  
@@ -57,7 +45,7 @@ HRESULT SetOption (
 ## <a name="remarks"></a>Açıklamalar  
  Aşağıdaki tabloda kullanılabilir GUID'ler listeler, `optionId` parametresi ' in üzerine gelin ve karşılık gelen geçerli değerler `pValue` parametresi.  
   
-|GUID|Açıklama|`pValue`Parametre|  
+|GUID|Açıklama|`pValue` Parametre|  
 |----------|-----------------|------------------------|  
 |MetaDataCheckDuplicatesFor|Hangi öğelerin çoğaltmaları denetlenir denetler. Her çağırdığında bir [Imetadataemit](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-interface.md) yeni bir öğe oluşturan yöntemi, öğesi geçerli kapsamda zaten var olup olmadığını denetlemek için yöntemin sorun. Örneğin, varlığını kontrol edebilirsiniz `mdMethodDef` öğelerini; çağırdığınızda, bu durumda [Imetadataemit::definemethod](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-definemethod-method.md), yöntemi geçerli kapsamda zaten yok kontrol eder. Bu onay belirli bir yöntemin benzersiz olarak tanımlayan anahtar kullanır: üst türü, ad ve imza.|UI4 türünde bir değişken olmalıdır ve değerlerini bileşimini içermelidir [CorCheckDuplicatesFor](../../../../docs/framework/unmanaged-api/metadata/corcheckduplicatesfor-enumeration.md) numaralandırması.|  
 |MetaDataRefToDefCheck|Öğeleri başvuran denetimleri tanımlarını dönüştürülür. Varsayılan olarak, meta veri altyapısı, kod başvuru yapılan öğe geçerli kapsamda tanımlanırsa öğenin tanımına başvuruda bulunulan öğe dönüştürerek iyileştirin.|UI4 türünde bir değişken olmalıdır ve değerlerini bileşimini içermelidir [CorRefToDefCheck](../../../../docs/framework/unmanaged-api/metadata/correftodefcheck-enumeration.md) numaralandırması.|  
@@ -80,7 +68,7 @@ HRESULT SetOption (
   
  **Kitaplığı:** MsCorEE.dll kaynak olarak kullanılır  
   
- **.NET framework sürümleri:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET framework sürümleri:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
  [IMetaDataDispenserEx Arabirimi](../../../../docs/framework/unmanaged-api/metadata/imetadatadispenserex-interface.md)  

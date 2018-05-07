@@ -1,10 +1,6 @@
 ---
 title: ':: İşleci (C# Başvurusu)'
 ms.date: 07/20/2015
-ms.prod: .net
-ms.technology:
-- devlang-csharp
-ms.topic: article
 f1_keywords:
 - ::_CSharpKeyword
 helpviewer_keywords:
@@ -12,14 +8,11 @@ helpviewer_keywords:
 - 'namespaces [C#], :: operator'
 - namespace alias qualifier operator (::) [C#]
 ms.assetid: 698b5a73-85cf-4e0e-9e8e-6496887f8527
-caps.latest.revision: 21
-author: BillWagner
-ms.author: wiwagn
-ms.openlocfilehash: 6b4f1683e1250ed745e15ced88203ca942c75ff8
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 668799a2d846d0f0bf1b3743e202602250a57ae5
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="-operator-c-reference"></a>:: İşleci (C# Başvurusu)
 Ad alanı diğer ad niteleyicisi (`::`) tanımlayıcıları aramak için kullanılır. Bu örnekte olduğu gibi iki tanımlayıcı arasında her zaman yerleştirilir:  
@@ -32,15 +25,15 @@ Ad alanı diğer ad niteleyicisi (`::`) tanımlayıcıları aramak için kullan�
 ## <a name="for-more-information"></a>Daha Fazla Bilgi İçin  
  Bir örnek için nasıl kullanılacağını `::` işleci, aşağıdaki bölümüne bakın:  
   
--   [Nasıl yapılır: Genel Namespace diğer adlarını kullanma](../../../csharp/programming-guide/namespaces/how-to-use-the-global-namespace-alias.md)  
+-   [Nasıl yapılır: Genel Ad Alanı Diğer Adlarını Kullanma](../../../csharp/programming-guide/namespaces/how-to-use-the-global-namespace-alias.md)  
   
 ## <a name="c-language-specification"></a>C# Dil Belirtimi  
  [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
  [C# başvurusu](../../../csharp/language-reference/index.md)  
- [C# programlama kılavuzu](../../../csharp/programming-guide/index.md)  
- [C# işleçleri](../../../csharp/language-reference/operators/index.md)  
- [Namespace anahtar sözcükler](../../../csharp/language-reference/keywords/namespace-keywords.md)  
- [. İşleci](../../../csharp/language-reference/operators/member-access-operator.md)  
- [extern alias](../../../csharp/language-reference/keywords/extern-alias.md)
+ [C# Programlama Kılavuzu](../../../csharp/programming-guide/index.md)  
+ [C# İşleçleri](../../../csharp/language-reference/operators/index.md)  
+ [Ad Alanı Anahtar Sözcükleri](../../../csharp/language-reference/keywords/namespace-keywords.md)  
+ [. İşleç](../../../csharp/language-reference/operators/member-access-operator.md)  
+ [extern diğer adı](../../../csharp/language-reference/keywords/extern-alias.md)

@@ -1,23 +1,17 @@
 ---
-title: "Soyut ve Korumalı Sınıflar ve Sınıf Üyeleri (C# Programlama Kılavuzu)"
+title: Soyut ve Korumalı Sınıflar ve Sınıf Üyeleri (C# Programlama Kılavuzu)
 ms.date: 07/20/2015
-ms.prod: .net
-ms.technology: devlang-csharp
-ms.topic: article
 helpviewer_keywords:
 - abstract classes [C#]
 - sealed classes [C#]
 - C# language, abstract classes
 - C# language, sealed
 ms.assetid: 99aa52f7-b435-43f9-936e-2470af734c4e
-caps.latest.revision: "14"
-author: BillWagner
-ms.author: wiwagn
-ms.openlocfilehash: dac7570c018bd577faac4540e4d800cc11143578
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: aa7c951acadd2e7b60f6da17cd7bf357fbd02d95
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="abstract-and-sealed-classes-and-class-members-c-programming-guide"></a>Soyut ve Korumalı Sınıflar ve Sınıf Üyeleri (C# Programlama Kılavuzu)
 [Soyut](../../../csharp/language-reference/keywords/abstract.md) anahtar sözcüğü sınıfları oluşturmanıza olanak sağlar ve [sınıfı](../../../csharp/language-reference/keywords/class.md) tamamlanmamış ve türetilen bir sınıfta uygulanmalı üyeleri.  
@@ -53,9 +47,9 @@ ms.lasthandoff: 11/21/2017
  [!code-csharp[csProgGuideInheritance#17](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/abstract-and-sealed-classes-and-class-members_5.cs)]  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [C# programlama kılavuzu](../../../csharp/programming-guide/index.md)  
- [Sınıflar ve yapılar](../../../csharp/programming-guide/classes-and-structs/index.md)  
+ [C# Programlama Kılavuzu](../../../csharp/programming-guide/index.md)  
+ [Sınıflar ve Yapılar](../../../csharp/programming-guide/classes-and-structs/index.md)  
  [Devralma](../../../csharp/programming-guide/classes-and-structs/inheritance.md)  
- [Yöntemleri](../../../csharp/programming-guide/classes-and-structs/methods.md)  
- [Alanları](../../../csharp/programming-guide/classes-and-structs/fields.md)  
- [Nasıl yapılır: soyut özellikleri tanımlama](../../../csharp/programming-guide/classes-and-structs/how-to-define-abstract-properties.md)
+ [Yöntemler](../../../csharp/programming-guide/classes-and-structs/methods.md)  
+ [Alanlar](../../../csharp/programming-guide/classes-and-structs/fields.md)  
+ [Nasıl yapılır: Soyut Özellikleri Tanımlama](../../../csharp/programming-guide/classes-and-structs/how-to-define-abstract-properties.md)

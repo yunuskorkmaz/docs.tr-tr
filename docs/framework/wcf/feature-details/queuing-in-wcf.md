@@ -1,49 +1,35 @@
 ---
 title: WCF'de Kuyruğa Alma
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 ms.assetid: e98d76ba-1acf-42cd-b137-0f8214661112
-caps.latest.revision: 21
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 8bf4a668fe882212da1c6626b66a4f55390a562f
-ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
+ms.openlocfilehash: 7f0a6700dba8eb844cc471704095b29c2a2c7937
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/30/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="queuing-in-wcf"></a>WCF'de Kuyruğa Alma
-Bu bölümde, kuyruğa alınan iletişim kullanmayı açıklar [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)].  
+Bu bölüm, Windows Communication Foundation (WCF) kuyruğa alınan iletişim kullanmayı açıklar.  
   
 ## <a name="queues-as-a-wcf-transport-binding"></a>Bağlama sırası bir WCF olarak taşıma  
- İçinde [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)], ne alınıp sözleşmeleri belirtin. Sözleşmelerin iş bağımlı veya uygulamaya özel ileti alışverişlerinde durumda. İleti değiş tokuşu için kullanılan mekanizma (veya "nasıl") bağlamalar belirtildi. Bağlama [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] ileti değişimi ayrıntılarını kapsüller. Bunlar kullanıcının aktarım veya bağlamaları temsil Protokolü çeşitli yönlerini denetlemek yapılandırma düğmelerini kullanıma sunar. İçinde queuing [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] birçok kuyruğa alma uygulamaları için büyük bir avantajı herhangi diğer aktarım bağlama gibi işlem görür. Bugün, çok sayıda kuyruğa alma uygulamaları diğer uzak yordam çağrısı (RPC) farklı şekilde yazılır-stil dağıtılan uygulamalar izleyin ve sürdürmek daha zor hale getirme. İle [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)], dağıtılmış bir uygulamayı yazma stili çok benzer, izleyin ve bakımını kolaylaştırır. Ayrıca, iş mantığı ayrı olarak Exchange'den mekanizması çıkışı Finansman tarafından taşıma yapılandırmak veya uygulamanın belirli bir kod etkilemeden değişiklik daha kolay olur. Aşağıdaki şekilde bir WCF hizmeti ve bir taşıma olarak MSMQ kullanan istemci yapısını gösterilmektedir.  
+ WCF içinde ne alınıp sözleşmeleri belirtin. Sözleşmelerin iş bağımlı veya uygulamaya özel ileti alışverişlerinde durumda. İleti değiş tokuşu için kullanılan mekanizma (veya "nasıl") bağlamalar belirtildi. WCF bağlamaları ileti değişimi ayrıntılarını kapsüller. Bunlar kullanıcının aktarım veya bağlamaları temsil Protokolü çeşitli yönlerini denetlemek yapılandırma düğmelerini kullanıma sunar. WCF'de kuyruğa alma, çok sayıda kuyruğa alma uygulamaları için büyük bir avantajı herhangi diğer aktarım bağlama gibi değerlendirilir. Bugün, çok sayıda kuyruğa alma uygulamaları diğer uzak yordam çağrısı (RPC) farklı şekilde yazılır-stil dağıtılan uygulamalar izleyin ve sürdürmek daha zor hale getirme. WCF ile dağıtılmış bir uygulamayı yazma stili çok izleyin ve bakımını kolaylaştırır aynıdır. Ayrıca, iş mantığı ayrı olarak Exchange'den mekanizması çıkışı Finansman tarafından taşıma yapılandırmak veya uygulamanın belirli bir kod etkilemeden değişiklik daha kolay olur. Aşağıdaki şekilde bir WCF hizmeti ve bir taşıma olarak MSMQ kullanan istemci yapısını gösterilmektedir.  
   
  ![Sıraya alınan uygulama diyagramı](../../../../docs/framework/wcf/feature-details/media/distributed-queue-figure.jpg "dağıtılmış-sıra-Şekil")  
   
- Önceki rakamdan görüldüğü gibi istemci ve hizmet yalnızca uygulama semantiğini, diğer bir deyişle, sözleşme ve uygulama tanımlamanız gerekir. Hizmet bir sıralı bağlama ile tercih edilen ayarları yapılandırır. İstemcinin kullandığı [ServiceModel meta veri yardımcı Programracı (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md) oluşturmak için bir [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] istemci hizmeti ve hizmete iletileri göndermek için kullanılacak bağlamaları açıklayan bir yapılandırma dosyası oluşturmak üzere. Bu nedenle, sıraya alınan ileti göndermek için istemci başlatır bir [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] istemci ve bunun üzerinde bir işlemi çağırır. Bu ileti iletim kuyruğuna gönderilen ve hedef sıra aktarılan neden olur. Kuyruğa alınan iletişim tüm karmaşıklığını ileti gönderme ve alma uygulamadan gizli.  
+ Önceki rakamdan görüldüğü gibi istemci ve hizmet yalnızca uygulama semantiğini, diğer bir deyişle, sözleşme ve uygulama tanımlamanız gerekir. Hizmet bir sıralı bağlama ile tercih edilen ayarları yapılandırır. İstemcinin kullandığı [ServiceModel meta veri yardımcı Programracı (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md) hizmetine bir WCF istemcisi oluşturmak için ve hizmete iletileri göndermek için kullanılacak bağlamaları açıklayan bir yapılandırma dosyası oluşturmak için. Bu nedenle, sıraya alınan ileti göndermek için istemci bir WCF istemcisi oluşturur ve bunu üzerinde bir işlemi çağırır. Bu ileti iletim kuyruğuna gönderilen ve hedef sıra aktarılan neden olur. Kuyruğa alınan iletişim tüm karmaşıklığını ileti gönderme ve alma uygulamadan gizli.  
   
- Uyarılar hakkında bağlayıcı sıraya [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] içerir:  
+ Wcf'de kuyruğa alınan bağlama hakkında uyarılar şunları içerir:  
   
--   Varsayılan olarak bağlayıcı sıraya çünkü tüm hizmet işlemleri tek yönlü olmalıdır [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] kuyrukları kullanma çift yönlü iletişimi desteklemez. İki yönlü iletişim örnek ([iki yönlü iletişim](../../../../docs/framework/wcf/samples/two-way-communication.md)) iki yönlü sözleşmeleri kuyrukları kullanma çift yönlü iletişimi uygulamak için nasıl kullanılacağı gösterilmektedir.  
+-   WCF'de bağlama varsayılan sıraya çünkü işlemlerini tek yönlü olmalıdır tüm Hizmet Kuyrukları kullanma çift yönlü iletişimi desteklemez. İki yönlü iletişim örnek ([iki yönlü iletişim](../../../../docs/framework/wcf/samples/two-way-communication.md)) iki yönlü sözleşmeleri kuyrukları kullanma çift yönlü iletişimi uygulamak için nasıl kullanılacağı gösterilmektedir.  
   
--   Oluşturmak için bir [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] meta veri değişimi kullanan istemci gerektirdiğini hizmetine ek bir HTTP uç noktası doğrudan oluşturmak için sorgulanabilir şekilde [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] istemci ve uygun şekilde yapılandırmak için bağlama bilgileri elde sıraya alındı iletişim.  
+-   WCF istemcisi oluşturma ve kuyruğa alınan iletişim uygun şekilde yapılandırmak için bağlama bilgilerini elde etmek için doğrudan sorgulanabilir bir WCF oluşturmak için meta veri değişimi kullanan istemci hizmeti hakkında ek bir HTTP uç noktası gerektirir.  
   
--   Sıraya alınan bağlama, ek yapılandırma dışında göre [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] gereklidir. Örneğin, <xref:System.ServiceModel.NetMsmqBinding> ile birlikte gelen sınıfı [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] yanı sıra bağlamalar yapılandırmak en düşük düzeyde Message Queuing (MSMQ) yapılandırma gerektirir.  
+-   Üzerinde sıraya alınan bağlama bağlı olarak, WCF dışında ek yapılandırma gerekli değildir. Örneğin, <xref:System.ServiceModel.NetMsmqBinding> WCF ile birlikte gelen sınıfı yanı sıra bağlamalar yapılandırmak en düşük düzeyde Message Queuing (MSMQ) yapılandırma gerektirir.  
   
- Aşağıdaki bölümlerde ile birlikte gelen belirli sıraya alınan bağlamaları [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)], MSMQ üzerinde dayalı.  
+ Aşağıdaki bölümlerde MSMQ üzerinde temel WCF ile birlikte gelen belirli sıraya alınan bağlamaları açıklanmaktadır.  
   
 ### <a name="msmq"></a>MSMQ  
- Sıraya alınan aktarım [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] MSMQ kendi kuyruğa alınan iletişim için kullanır.  
+ WCF'de sıraya alınan aktarım MSMQ kendi kuyruğa alınan iletişim için kullanır.  
   
  MSMQ Windows ile isteğe bağlı bir bileşen olarak gelir ve bir NT hizmeti olarak çalışır. İletileri iletim sırası iletim ve bir hedef sıraya teslim yakalar. Böylece iletiler iletim kayboluyor değil MSMQ sırası yöneticilerini güvenilir ileti aktarma protokolü kullanır. Protokol, yerel ya da SOAP tabanlı gibi SOAP güvenilir ileti Protokolü (SRMP) olabilir.  
   
@@ -54,7 +40,7 @@ Bu bölümde, kuyruğa alınan iletişim kullanmayı açıklar [!INCLUDE[indigo1
  MSMQ hakkında daha fazla bilgi için bkz: [yükleme Message Queuing (MSMQ)](../../../../docs/framework/wcf/samples/installing-message-queuing-msmq.md).  
   
 ### <a name="netmsmqbinding"></a>NetMsmqBinding  
- [ \<NetMsmqBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/netmsmqbinding.md) sıraya alınan bağlama [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] için iki sağlar [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] MSMQ kullanarak iletişim kurmak için uç noktaları. Bağlama, bu nedenle, MSMQ için belirli özellikleri sunar. Ancak, tüm MSMQ özellikleri ve Özellikler sunulan `NetMsmqBinding`. Sıkıştırma `NetMsmqBinding` en iyi bir müşterilerin çoğu yeterli bulmalıdır özellikler kümesi ile tasarlanmıştır.  
+ [ \<NetMsmqBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/netmsmqbinding.md) WCF sağlar MSMQ kullanarak iletişim kurmak iki WCF uç noktaları için sıraya alınan bağlama. Bağlama, bu nedenle, MSMQ için belirli özellikleri sunar. Ancak, tüm MSMQ özellikleri ve Özellikler sunulan `NetMsmqBinding`. Sıkıştırma `NetMsmqBinding` en iyi bir müşterilerin çoğu yeterli bulmalıdır özellikler kümesi ile tasarlanmıştır.  
   
  `NetMsmqBinding` Bugüne kadarki özellikleri formunda bağlantılarına açıklanan çekirdek queuing kavramları bildirimleri. Bu özellikler için MSMQ sırayla aktarmak ve iletileri sunmak nasıl iletişim kurar. Özellik kategorileri tartışması aşağıdaki bölümlerde ' dir. Daha fazla bilgi için belirli özellikleri daha tamamen açıklayan kavramsal konulara bakın.  
   
@@ -75,7 +61,7 @@ Bu bölümde, kuyruğa alınan iletişim kullanmayı açıklar [!INCLUDE[indigo1
   
  Birçok queuing sistemi için sistem genelinde bir sahipsiz sırayı sağlar. Bir sistem genelinde işlemsel olmayan eski ileti sırası işlem olmayan sıralar için teslim başarısız iletileri için ve bir sistem genelinde işlem eski ileti sırası işleme uygun sıralarda için teslim başarısız iletileri için MSMQ sağlar.  
   
- Birden çok istemci iletileri farklı bir hedef sıraya göndermek için MSMQ hizmeti paylaşıyorsanız, istemciler tarafından gönderilen tüm iletiler için aynı sahipsiz sırayı gidin. Bu her zaman tercih değildir. Daha iyi yalıtım [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] ve MSMQ [!INCLUDE[wv](../../../../includes/wv-md.md)] özel sahipsiz sırayı (veya uygulamaya özgü sahipsiz sırayı) sağlayan kullanıcı teslimi başarısız iletileri depolamak için belirtebilirsiniz. Bu nedenle, farklı istemciler aynı sahipsiz sırayı paylaşmayın.  
+ Birden çok istemci iletileri farklı bir hedef sıraya göndermek için MSMQ hizmeti paylaşıyorsanız, istemciler tarafından gönderilen tüm iletiler için aynı sahipsiz sırayı gidin. Bu her zaman tercih değildir. WCF ve MSMQ daha iyi yalıtım [!INCLUDE[wv](../../../../includes/wv-md.md)] özel sahipsiz sırayı (veya uygulamaya özgü sahipsiz sırayı) sağlamak kullanıcı teslimi başarısız iletileri depolamak için belirtebilirsiniz. Bu nedenle, farklı istemciler aynı sahipsiz sırayı paylaşmayın.  
   
  Bağlama ilgilenilen iki özelliklere sahiptir:  
   
@@ -105,7 +91,7 @@ Bu bölümde, kuyruğa alınan iletişim kullanmayı açıklar [!INCLUDE[indigo1
 -   `UseActiveDirectory`: Active Directory sıra adres çözümlemesi için kullanılıp kullanılmayacağını belirtmek için bir Boole değeri. Varsayılan olarak, bu kapalıdır. Daha fazla bilgi için bkz: [hizmet uç noktaları ve kuyruk işleme](../../../../docs/framework/wcf/feature-details/service-endpoints-and-queue-addressing.md).  
   
 ### <a name="msmqintegrationbinding"></a>MsmqIntegrationBinding  
- `MsmqIntegrationBinding` İstediğiniz kullanıldığında bir [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] C, C++, COM veya System.Messaging API'leri ile yazılmış varolan bir MSMQ uygulamayla iletişim kurmak için uç nokta.  
+ `MsmqIntegrationBinding` C, C++, COM veya System.Messaging API'leri ile yazılmış varolan bir MSMQ uygulamasıyla iletişim kurmak için bir WCF uç noktası istediğinizde kullanılır.  
   
  Bağlama özellikleri aynıdır `NetMsmqBinding`. Ancak, aşağıdaki farkları Uygula:  
   

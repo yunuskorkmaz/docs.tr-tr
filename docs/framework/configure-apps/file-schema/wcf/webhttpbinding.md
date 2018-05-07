@@ -2,11 +2,11 @@
 title: '&lt;webHttpBinding&gt;'
 ms.date: 03/30/2017
 ms.assetid: 84179d77-825d-44b9-895a-ab08e7aa044d
-ms.openlocfilehash: abc08f81ac05aa42ff7247edf662f8dd4482fd4a
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
-ms.translationtype: HT
+ms.openlocfilehash: 3a5a0844da401607b2049069e7195fa996c62fba
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="ltwebhttpbindinggt"></a>&lt;webHttpBinding&gt;
 SOAP iletilerine yerine HTTP isteklerine yanıt veren Windows Communication Foundation (WCF) Web Hizmetleri için uç noktalar yapılandırmak için kullanılan bir bağlama öğesi tanımlar.  
@@ -86,9 +86,9 @@ SOAP iletilerine yerine HTTP isteklerine yanıt veren Windows Communication Foun
 |[\<bağlamaları >](../../../../../docs/framework/configure-apps/file-schema/wcf/bindings.md)|Bu öğe, standart ve özel bağlamaları koleksiyonunu içerir.|  
   
 ## <a name="remarks"></a>Açıklamalar  
- [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)] Web programlama modeli sağlar kullanıma sunmak geliştiricilere [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)] Web Hizmetleri aracılığıyla "düz eski XML" kullanan HTTP isteklerinin SOAP tabanlı ileti alma yerine Mesajlaşma (POX) stili. İstemcilerin HTTP isteklerini kullanarak bir hizmet ile iletişim kurmak için hizmetin bir uç nokta ile yapılandırılmalıdır [ \<webHttpBinding >](../../../../../docs/framework/configure-apps/file-schema/wcf/webhttpbinding.md) olan \<WebHttpBehavior > ekli.  
+ WCF Web hizmetlerini "düz eski XML" kullanan HTTP isteklerinin aracılığıyla kullanıma sunmak geliştiricilerin WCF Web programlama modeli sağlar (POX) stili SOAP tabanlı ileti alma yerine ileti. İstemcilerin HTTP isteklerini kullanarak bir hizmet ile iletişim kurmak için hizmetin bir uç nokta ile yapılandırılmalıdır [ \<webHttpBinding >](../../../../../docs/framework/configure-apps/file-schema/wcf/webhttpbinding.md) olan \<WebHttpBehavior > ekli.  
   
- Desteklemek [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)] dağıtım ve ASP. AJAX tümleştirme hem yerleşik Web programlama modeli üstünde. Model hakkında daha fazla bilgi için bkz: [WCF Web HTTP programlama modeli](../../../../../docs/framework/wcf/feature-details/wcf-web-http-programming-model.md).  
+ WCF'de dağıtım ve ASP desteği. AJAX tümleştirme hem yerleşik Web programlama modeli üstünde. Model hakkında daha fazla bilgi için bkz: [WCF Web HTTP programlama modeli](../../../../../docs/framework/wcf/feature-details/wcf-web-http-programming-model.md).  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
  <xref:System.ServiceModel.WebHttpBinding>  

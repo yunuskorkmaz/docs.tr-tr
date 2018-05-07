@@ -1,20 +1,13 @@
 ---
 title: Temsilciler ve olaylar
-description: "Temsilciler ve olaylar hakkında bilgi .NET Core belgeleri nerede bulacağını bakın."
-keywords: .NET, .NET core
-author: BillWagner
-ms.author: wiwagn
+description: Temsilciler ve olaylar hakkında bilgi .NET Core belgeleri nerede bulacağını bakın.
 ms.date: 06/20/2016
-ms.topic: article
-ms.prod: .net
-ms.technology: devlang-csharp
-ms.devlang: csharp
 ms.assetid: 4e80e053-8022-4987-a8a0-209caec0315d
-ms.openlocfilehash: e511b5057cb83119819a1403d56f23f738488a3f
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.openlocfilehash: 939bb0f441e5a18b1ae8d48fe9a8021bd2dad3f2
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="delegates--events"></a>Temsilciler ve olaylar
 
@@ -28,11 +21,11 @@ Bu konu altında aşağıdaki makalelere ele alınacaktır:
 
     Bu makalede .NET Core Framework sınıflarda, bu destek temsilcileri ve,'ye nasıl eşlendiğini kapsar. `delegate` anahtar sözcüğü.
 
-3. [Kesin türü belirtilmiş temsilciler](delegates-strongly-typed.md)
+3. [Kesin Tür Belirtilmiş Temsilciler](delegates-strongly-typed.md)
 
     Bu makalede türleri yer almaktadır ve temsilciler CurrentUICulture özelliğini teknikleri belirtilmiş.
 
-4. [Temsilciler için ortak desenler](delegates-patterns.md)
+4. [Temsilciler için Ortak Desenler](delegates-patterns.md)
 
     Bu makale ortak yöntemler için temsilciler kapsar.
 
@@ -44,7 +37,7 @@ Bu konu altında aşağıdaki makalelere ele alınacaktır:
 
     Bu makalede .NET standart olay desende kapsar.
 
-7. [Güncelleştirilmiş .NET olay düzeni](modern-events.md)
+7. [Güncelleştirilmiş .NET Olay Deseni](modern-events.md)
 
     Bu makalede son sürümlerde .NET olay düzeni için birkaç güncelleştirme içerir.
 

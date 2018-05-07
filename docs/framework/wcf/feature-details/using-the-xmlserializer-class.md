@@ -1,37 +1,23 @@
 ---
 title: XmlSerializer Sınıfını Kullanma
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 dev_langs:
 - csharp
 - vb
 helpviewer_keywords:
 - XmlSerializer [WCF], using
 ms.assetid: c680602d-39d3-44f1-bf22-8e6654ad5069
-caps.latest.revision: 26
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 5a628215848d46ec3fe24030dfb1dd55fc3383bf
-ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
+ms.openlocfilehash: 72b08a58b8ed62a5db2bb210e73357cb3b5dab8e
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/30/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="using-the-xmlserializer-class"></a>XmlSerializer Sınıfını Kullanma
-[!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] iki farklı serileştirme teknolojileri, istemciler ve hizmetler, serileştirme adlı bir işlem arasında iletilir XML uygulamanıza içinde veri kapatmak için kullanabilirsiniz.  
+Windows Communication Foundation (WCF), istemciler ve hizmetler, serileştirme adlı bir işlem arasında iletilir XML uygulamanıza içinde veri kapatmak için iki farklı serileştirme teknolojileri kullanabilirsiniz.  
   
 ## <a name="datacontractserializer-as-the-default"></a>Varsayılan olarak DataContractSerializer  
- Varsayılan olarak [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] kullanan <xref:System.Runtime.Serialization.DataContractSerializer> veri türleri serileştirmek için sınıfı. Bu serileştiricinin aşağıdaki türlerini destekler:  
+ Varsayılan olarak WCF kullanır <xref:System.Runtime.Serialization.DataContractSerializer> veri türleri serileştirmek için sınıfı. Bu serileştiricinin aşağıdaki türlerini destekler:  
   
 -   Temel (örneğin, tamsayı, dizeleri ve bayt dizileri için) gibi bazı özel türleri yanı sıra türler <xref:System.Xml.XmlElement> ve <xref:System.DateTime>, hangi temel olarak kabul edilir.  
   
@@ -45,17 +31,17 @@ ms.lasthandoff: 04/30/2018
   
  Birçok [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] türleri ikinci iki kategoriye ayrılır ve böylece seri hale getirilebilir. Seri hale getirilebilir türlerin dizileri de seri hale getirilebilir. Tam bir listesi için bkz: [hizmet sözleşmelerinde veri aktarımı belirtme](../../../../docs/framework/wcf/feature-details/specifying-data-transfer-in-service-contracts.md).  
   
- <xref:System.Runtime.Serialization.DataContractSerializer>, Anlaşma türleri verileri ile birlikte kullanılan, yeni yazmak için önerilen yöntem [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] Hizmetleri. Daha fazla bilgi için bkz: [kullanarak veri sözleşmeleri](../../../../docs/framework/wcf/feature-details/using-data-contracts.md).  
+ <xref:System.Runtime.Serialization.DataContractSerializer>, Anlaşma türleri verileri ile birlikte kullanılan, yeni WCF hizmetleri yazmak için önerilen yoldur. Daha fazla bilgi için bkz: [kullanarak veri sözleşmeleri](../../../../docs/framework/wcf/feature-details/using-data-contracts.md).  
   
 ## <a name="when-to-use-the-xmlserializer-class"></a>XmlSerializer sınıfını kullanma zamanı  
- [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] Ayrıca destekler <xref:System.Xml.Serialization.XmlSerializer> sınıfı. <xref:System.Xml.Serialization.XmlSerializer> Sınıfı için benzersiz değil [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]. Aynı seri hale getirme altyapısı olan [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] Web Hizmetleri kullanın. <xref:System.Xml.Serialization.XmlSerializer> Sınıfı bir kadar dar kümesini destekler türlerinden daha <xref:System.Runtime.Serialization.DataContractSerializer> sınıfı, ancak sonuç XML üzerinde daha fazla denetim olanağı sağlar ve XML Şeması Tanım Dili (XSD) standart çok daha fazla destekler. Seri hale getirilebilir türler bildirim temelli öznitelikleri de gerektirmez. Daha fazla bilgi için XML serileştirme konusuna [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] belgeleri. <xref:System.Xml.Serialization.XmlSerializer> Sınıf veri sözleşme türleri desteklemez.  
+ WCF de destekler <xref:System.Xml.Serialization.XmlSerializer> sınıfı. <xref:System.Xml.Serialization.XmlSerializer> Sınıfı için WCF benzersiz değil. Aynı seri hale getirme altyapısı olan [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] Web Hizmetleri kullanın. <xref:System.Xml.Serialization.XmlSerializer> Sınıfı bir kadar dar kümesini destekler türlerinden daha <xref:System.Runtime.Serialization.DataContractSerializer> sınıfı, ancak sonuç XML üzerinde daha fazla denetim olanağı sağlar ve XML Şeması Tanım Dili (XSD) standart çok daha fazla destekler. Seri hale getirilebilir türler bildirim temelli öznitelikleri de gerektirmez. Daha fazla bilgi için XML serileştirme konusuna [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] belgeleri. <xref:System.Xml.Serialization.XmlSerializer> Sınıf veri sözleşme türleri desteklemez.  
   
  Svcutil.exe kullanırken veya **hizmet Başvurusu Ekle** özelliği bir üçüncü taraf hizmeti için istemci kodu oluşturmak veya bir üçüncü taraf şeması, uygun bir seri hale getirici erişmek için Visual Studio otomatik olarak seçilir sizin için. Şema ile uyumlu değilse, <xref:System.Runtime.Serialization.DataContractSerializer>, <xref:System.Xml.Serialization.XmlSerializer> seçilir.  
   
 ## <a name="manually-switching-to-the-xmlserializer"></a>XmlSerializer el ile geçiş  
  Bazen, el ile geçmek zorunda kalabilirsiniz <xref:System.Xml.Serialization.XmlSerializer>. Bu, örneğin, aşağıdaki durumlarda gerçekleşir:  
   
--   Bir uygulamadan geçirirken [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] Web Hizmetleri için [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)], varolan, yeniden isteyebilirsiniz <xref:System.Xml.Serialization.XmlSerializer>-yeni veri oluşturmak yerine uyumlu türleri sözleşme türleri.  
+-   Bir uygulamadan geçirirken [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] Web hizmetlerini wcf'ye varolan, yeniden isteyebilirsiniz <xref:System.Xml.Serialization.XmlSerializer>-yeni veri oluşturmak yerine uyumlu türleri sözleşme türleri.  
   
 -   Kesin bir denetim iletileri görünür XML üzerinden önemlidir, ancak bir Web Hizmetleri Açıklama Dili (WSDL) belgesi kullanılabilir değil, örneğin, bir hizmet bir belirli yöntem için uyması gereken türleriyle oluşturulurken yayımlanan şema tutulduğunda DataContractSerializer ile uyumlu değildir.  
   
@@ -82,7 +68,7 @@ ms.lasthandoff: 04/30/2018
   
  Hizmeti için kullanılan seri hale getirici sözleşme ayrılmaz bir parçasıdır ve diğer yapılandırma ayarlarını değiştirerek veya başka bir bağlama seçerek değiştirilemez.  
   
- Diğer önemli güvenlik konuları uygulamak <xref:System.Xml.Serialization.XmlSerializer> sınıfı. İlk olarak, herhangi bir önerilir [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] kullanan uygulama <xref:System.Xml.Serialization.XmlSerializer> sınıfı ifşaatına karşı korunması bir anahtarı ile imzalanmış. Bu öneri hem el ile bir anahtara geçerlidir <xref:System.Xml.Serialization.XmlSerializer> gerçekleştirilir ve ne zaman otomatik anahtar gerçekleştirildiğini (Svcutil.exe, hizmet Başvurusu Ekle veya benzer bir aracı tarafından). Bunun nedeni, <xref:System.Xml.Serialization.XmlSerializer> serileştirme motoruna yüklenmesini destekler *serileştirme derlemelerini'önceden oluşturulan* uygulamayla aynı anahtar ile imzalanmış sürece. İmzasız uygulamanın uygulama klasörü veya genel derleme önbelleği yerleştirilen önceden oluşturulmuş serileştirme derlemenin beklenen adıyla eşleşen bir kötü amaçlı derleme olasılığını gelen tamamen korumasız kalır. Elbette, bir saldırganın ilk yazma Bu eylem denemek için bu iki konumlardan birine erişim gerekir.  
+ Diğer önemli güvenlik konuları uygulamak <xref:System.Xml.Serialization.XmlSerializer> sınıfı. İlk olarak, herhangi bir WCF uygulaması kullanan önerilir <xref:System.Xml.Serialization.XmlSerializer> sınıfı ifşaatına karşı korunması bir anahtarı ile imzalanmış. Bu öneri hem el ile bir anahtara geçerlidir <xref:System.Xml.Serialization.XmlSerializer> gerçekleştirilir ve ne zaman otomatik anahtar gerçekleştirildiğini (Svcutil.exe, hizmet Başvurusu Ekle veya benzer bir aracı tarafından). Bunun nedeni, <xref:System.Xml.Serialization.XmlSerializer> serileştirme motoruna yüklenmesini destekler *serileştirme derlemelerini'önceden oluşturulan* uygulamayla aynı anahtar ile imzalanmış sürece. İmzasız uygulamanın uygulama klasörü veya genel derleme önbelleği yerleştirilen önceden oluşturulmuş serileştirme derlemenin beklenen adıyla eşleşen bir kötü amaçlı derleme olasılığını gelen tamamen korumasız kalır. Elbette, bir saldırganın ilk yazma Bu eylem denemek için bu iki konumlardan birine erişim gerekir.  
   
  Kullandığınız zaman, mevcut başka bir tehdit <xref:System.Xml.Serialization.XmlSerializer> sistem geçici klasöre yazma erişimi ile ilgilidir. <xref:System.Xml.Serialization.XmlSerializer> Serileştirme motoruna oluşturur ve geçici kullanır *serileştirme derlemelerini* bu klasörde. Geçici klasöre yazma erişimi olan herhangi bir işlem, kötü amaçlı kod kullanarak bu serileştirme derlemelerini üzerine olduğunu bilmeniz gerekir.  
   
@@ -100,11 +86,11 @@ ms.lasthandoff: 04/30/2018
  <xref:System.ServiceModel.MessageHeaderArrayAttribute> Kullanırken özniteliği desteklenmiyor <xref:System.Xml.Serialization.XmlSerializer>.  
   
 > [!NOTE]
->  Bu durumda, <xref:System.Xml.Serialization.XmlSerializer> öncesinde yayımlanan bir aşağıdaki durum oluşturduğunda [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]: "bir şema en üst düzeyde bildirilen bir öğe olamaz `maxOccurs` > 1. İçin bir kapsayıcı öğe sağlamak 'daha fazla' kullanarak `XmlArray` veya `XmlArrayItem` yerine `XmlElementAttribute`, paketlenmiş parametre stilini kullanarak veya. "  
+>  Bu durumda, <xref:System.Xml.Serialization.XmlSerializer> WCF öncesinde yayımlanan bir aşağıdaki durum oluşturduğunda: "bir şema en üst düzeyde bildirilen bir öğe olamaz `maxOccurs` > 1. İçin bir kapsayıcı öğe sağlamak 'daha fazla' kullanarak `XmlArray` veya `XmlArrayItem` yerine `XmlElementAttribute`, paketlenmiş parametre stilini kullanarak veya. "  
 >   
 >  Bu tür bir özel durum almaya devam ederseniz, bu durum geçerli olup olmadığını araştırın.  
   
- [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] desteklemediği <xref:System.Xml.Serialization.SoapIncludeAttribute> ve <xref:System.Xml.Serialization.XmlIncludeAttribute> ileti sözleşmeleri ve işlem özniteliklere sözleşmeler; kullanın <xref:System.Runtime.Serialization.KnownTypeAttribute> yerine özniteliği.  
+ WCF desteklemiyor <xref:System.Xml.Serialization.SoapIncludeAttribute> ve <xref:System.Xml.Serialization.XmlIncludeAttribute> ileti sözleşmeleri ve işlem özniteliklere sözleşmeler; kullanın <xref:System.Runtime.Serialization.KnownTypeAttribute> yerine özniteliği.  
   
 ## <a name="types-that-implement-the-ixmlserializable-interface"></a>IXmlSerializable arabirimini uygulama türleri  
  Türleri uygulayan `IXmlSerializable` arabirimi tarafından tam olarak desteklenmektedir `DataContractSerializer`. <xref:System.Xml.Serialization.XmlSchemaProviderAttribute> Özniteliği her zaman uygulanamaz kendi şema denetlemek için bu tür.  
@@ -125,7 +111,7 @@ ms.lasthandoff: 04/30/2018
   
  Veri üyesi uygulayan bir tür çıkarılırken `IXmlSerializable` ve önceden tanımlanan bir içerik türü olan, seri durumdan çıkarıcının XML okuyucusu sarmalayıcı öğede veri üyesi için yerleştirir ve geçişleri denetlemek için <xref:System.Xml.Serialization.IXmlSerializable.ReadXml%2A> yöntemi. Yöntemi başlangıç ve bitiş etiketleri de dahil olmak üzere tüm öğeyi okumalısınız. Emin olun, `ReadXml` kodu nereye öğe boş durumu işler. Ayrıca, `ReadXml` uygulama belirli bir şekilde adın geçmesi sarmalayıcı öğede değil kullanan. Adı tarafından seçilen seri hale getirici değişebilir.  
   
- Atamak için izin `IXmlSerializable` içerik türleri polymorphically, örneğin, veri türü üyeleri <xref:System.Object>. Ayrıca türü örnekleri boş olmasına izin verilir. Son olarak, kullanmak mümkün `IXmlSerializable` türleri ile etkin nesne grafiği koruma ile <xref:System.Runtime.Serialization.NetDataContractSerializer>. Bu özelliklerin tümü gerektiren [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] sarmalayıcı öğesine belirli öznitelikler eklemek için seri hale getirici ("nil" ve XML şema örneği ad ve "Id", "Ref", "Tür" ve "Derlemesindeki" "type" bir [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]-belirli bir ad alanı).  
+ Atamak için izin `IXmlSerializable` içerik türleri polymorphically, örneğin, veri türü üyeleri <xref:System.Object>. Ayrıca türü örnekleri boş olmasına izin verilir. Son olarak, kullanmak mümkün `IXmlSerializable` türleri ile etkin nesne grafiği koruma ile <xref:System.Runtime.Serialization.NetDataContractSerializer>. Bu özelliklerin tümü sarmalayıcı öğesine belirli öznitelikler eklemek WCF seri hale getirici gerektirir ("nil" ve bir WCF özgü ad alanındaki XML şema örneği ad ve "Id", "Ref", "Tür" ve "Derlemesi" "type").  
   
 #### <a name="attributes-to-ignore-when-implementing-readxml"></a>ReadXml uygularken yoksaymak için öznitelikler  
  Denetime geçirmeden önce `ReadXml` kodu, seri durumdan çıkarıcının XML öğesi inceler, bu özel XML öznitelikleri algılar ve bunlar üzerinde çalışır. Örneğin, "nil" ise `true`, bir null değer serisi ve `ReadXml` çağrılmaz. Çok biçimlilik algılanırsa, öğenin içeriğini farklı bir tür boşmuş gibi serisi. Polymorphically atanan tür uyarlamasını `ReadXml` olarak adlandırılır. Herhangi bir durumda, bir `ReadXml` uygulaması tarafından seri durumdan çıkarıcının işlenir çünkü bu özel öznitelikler yoksay.  

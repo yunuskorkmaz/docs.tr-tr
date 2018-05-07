@@ -1,14 +1,6 @@
 ---
 title: Federasyon
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -16,25 +8,19 @@ helpviewer_keywords:
 - WCF, federation
 - federation [WCF]
 ms.assetid: 2f1e646f-8361-48d4-9d5d-1b961f31ede4
-caps.latest.revision: 26
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 0e7aef1f53675089ee311aa79a54abf60441b728
-ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
+ms.openlocfilehash: d69de8c01a23eff5314220a10a51f6487080df41
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/28/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="federation"></a>Federasyon
-Bu konu, Federasyon güvenlik kavramı kısa bir genel bakış sağlar. Ayrıca açıklanır [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] destek federe güvenlik mimarileri dağıtmak için. Federasyon gösteren örnek bir uygulama için bkz: [Federasyon örnek](../../../../docs/framework/wcf/samples/federation-sample.md).  
+Bu konu, Federasyon güvenlik kavramı kısa bir genel bakış sağlar. Ayrıca, Federasyon güvenlik mimarileri dağıtmak için Windows Communication Foundation (WCF) destek açıklanır. Federasyon gösteren örnek bir uygulama için bkz: [Federasyon örnek](../../../../docs/framework/wcf/samples/federation-sample.md).  
   
 ## <a name="definition-of-federated-security"></a>Federasyon güvenlik tanımı  
  Bir istemci erişim hizmeti ile ilişkili kimlik doğrulama ve yetkilendirme yordamları arasında temiz ayırmayı federe güvenlik sağlar. Federasyon güvenlik işbirliği birden çok sistemler, ağlar ve farklı güven bölgelerinde kuruluşlarda üzerinden de sağlar.  
   
- [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] oluşturma ve dağıtma federe güvenlik işe dağıtılmış sistemler için destek sağlar.  
+ WCF oluşturma ve dağıtma federe güvenlik işe dağıtılmış sistemler için destek sağlar.  
   
 ### <a name="elements-of-a-federated-security-architecture"></a>Öğeleri bir federe güvenlik mimarisi  
  Federasyon güvenlik mimarisi aşağıdaki tabloda açıklandığı gibi üç temel öğeleri vardır.  
@@ -80,7 +66,7 @@ Bu konu, Federasyon güvenlik kavramı kısa bir genel bakış sağlar. Ayrıca 
  Kullanıcılar bir güvenlik belirteci STS A'dan edindikten sonra kullanıcıların isteklerin yetkilendirme gerçekleştirmek üzere STS B. kuruluş B kazançlar belirtece sunmak ve kullanıcılara kendi güvenlik belirteçlerini kümesinden bir güvenlik belirteci verir. Kullanıcılar kendi belirteci kaynağa B kuruluştan sunmak ve hizmete erişim.  
   
 ## <a name="support-for-federated-security-in-wcf"></a>Wcf'de güvenlik desteği  
- [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] Federasyon güvenlik mimarileri üzerinden dağıtmak için anahtar teslimi desteği sağlar [ \<wsFederationHttpBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/wsfederationhttpbinding.md).  
+ WCF federe güvenlik mimarileri üzerinden dağıtmak için anahtar teslimi desteği sağlar [ \<wsFederationHttpBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/wsfederationhttpbinding.md).  
   
  [ \<WsFederationHttpBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/wsfederationhttpbinding.md) istek-yanıt iletişim stili temelindeki iletim mekanizması olarak HTTP kullanımını kapsar güvenli, güvenilir ve birlikte çalışabilir bağlama öğesi sağlar metin ve XML kodlama için kablo biçimi olarak kullanan.  
   
@@ -98,10 +84,10 @@ Bu konu, Federasyon güvenlik kavramı kısa bir genel bakış sağlar. Ayrıca 
 -   Belirteç hizmetine erişmek için hizmet sunar.  
   
 ### <a name="phase-2-run-time-phase"></a>2. Aşama: Çalışma zamanında aşaması  
- Çalışma zamanı aşamasında, istemci bir nesneyi başlatır [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] istemci sınıfı ve kullanarak bir çağrı yapar [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] istemci. Temel alınan çerçevesinin [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] federe güvenlik iletişim düzeni yukarıda açıklanan adımları işler ve sorunsuz bir şekilde hizmeti kullanmak istemci sağlar.  
+ Çalışma zamanı aşamasında, istemci WCF istemci sınıfın bir nesnesi oluşturur ve WCF istemcisi kullanarak bir çağrı yapar. WCF temel çerçevesinde federe güvenlik iletişim düzeni yukarıda açıklanan adımları işler ve sorunsuz bir şekilde hizmeti kullanmak istemci sağlar.  
   
 ## <a name="sample-implementation-using-wcf"></a>WCF kullanarak örnek uygulama  
- Yerel Destek'ten kullanarak bir Federasyon güvenlik mimarisi için bir örnek uygulama aşağıda gösterilmiştir [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)].  
+ Aşağıdaki çizimde WCF yerel Destek'ten kullanarak bir Federasyon güvenlik mimarisi için bir örnek uygulama gösterir.  
   
  ![WCF güvenliğinde Federasyon](../../../../docs/framework/wcf/feature-details/media/federatedsecurityinwcf.gif "FederatedSecurityInWCF")  
   
@@ -300,7 +286,7 @@ operationRequirementType="FederationSample.MyServiceOperationRequirement, MyServ
  ![Federasyon](../../../../docs/framework/wcf/feature-details/media/federationclienta.gif "FederationClientA")  
   
 ## <a name="summary"></a>Özet  
- Federasyon güvenlik sorumluluk temiz bölme sağlar ve güvenli, ölçeklenebilir hizmet mimarileri oluşturmaya yardımcı olur. Derleme ve dağıtılmış uygulamaları dağıtmak için bir platform olarak [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] federe güvenlik uygulamak için yerel destek sağlar.  
+ Federasyon güvenlik sorumluluk temiz bölme sağlar ve güvenli, ölçeklenebilir hizmet mimarileri oluşturmaya yardımcı olur. Dağıtılmış uygulamaları geliştirmek ve dağıtılmak için platform WCF federe güvenlik uygulamak için yerel destek sağlar.  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
  [Güvenlik](../../../../docs/framework/wcf/feature-details/security.md)

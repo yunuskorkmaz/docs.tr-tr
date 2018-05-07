@@ -1,30 +1,18 @@
 ---
-title: "Arama hizmet işlemleri (WCF Veri Hizmetleri)"
-ms.custom: 
+title: Arama hizmet işlemleri (WCF Veri Hizmetleri)
 ms.date: 03/30/2017
-ms.prod: .net-framework-oob
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
 ms.assetid: 1767f3a7-29d2-4834-a763-7d169693fa8b
-caps.latest.revision: "4"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 3411cec01295986438664cf0d51d3f15e960e411
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 82bba149f06fc68f2f01e0e7641d98ebb861dbe6
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="calling-service-operations-wcf-data-services"></a>Arama hizmet işlemleri (WCF Veri Hizmetleri)
-[!INCLUDE[ssODataFull](../../../../includes/ssodatafull-md.md)] Veri hizmeti için hizmet işlemleri tanımlar. [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)]veri hizmeti yöntemi olarak gibi işlemleri tanımlamanızı sağlar. Veri Hizmeti kaynaklar gibi hizmet işlemlerini URI kullanılarak ele alınır. Bir hizmet işlemi, varlık türleri, tek bir varlık türü örnekleri ve tamsayı ve dize gibi basit türler koleksiyonlarının geri dönebilirsiniz. Bir hizmet işlemi de döndürebilir `null` (`Nothing` Visual Basic'te). [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] İstemci kitaplığı, HTTP GET isteklerini destekleyen hizmet işlemleri erişmek için kullanılabilir. Bu tür hizmet işlemleri sahip yöntemleri olarak tanımlanan <xref:System.ServiceModel.Web.WebGetAttribute> uygulanır. Daha fazla bilgi için bkz: [hizmet işlemleri](../../../../docs/framework/data/wcf/service-operations-wcf-data-services.md).  
+[!INCLUDE[ssODataFull](../../../../includes/ssodatafull-md.md)] Veri hizmeti için hizmet işlemleri tanımlar. [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] veri hizmeti yöntemi olarak gibi işlemleri tanımlamanızı sağlar. Veri Hizmeti kaynaklar gibi hizmet işlemlerini URI kullanılarak ele alınır. Bir hizmet işlemi, varlık türleri, tek bir varlık türü örnekleri ve tamsayı ve dize gibi basit türler koleksiyonlarının geri dönebilirsiniz. Bir hizmet işlemi de döndürebilir `null` (`Nothing` Visual Basic'te). [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] İstemci kitaplığı, HTTP GET isteklerini destekleyen hizmet işlemleri erişmek için kullanılabilir. Bu tür hizmet işlemleri sahip yöntemleri olarak tanımlanan <xref:System.ServiceModel.Web.WebGetAttribute> uygulanır. Daha fazla bilgi için bkz: [hizmet işlemleri](../../../../docs/framework/data/wcf/service-operations-wcf-data-services.md).  
   
  Hizmet işlemleri uygulayan bir veri hizmeti tarafından döndürülen meta verilerde açığa [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)]. Meta verilerde hizmet işlemleri olarak temsil edilir `FunctionImport` öğeleri. Kesin türü belirtilmiş oluştururken <xref:System.Data.Services.Client.DataServiceContext>, bu öğe hizmet Başvurusu Ekle ve DataSvcUtil.exe araçları yoksay. Bu nedenle, bir yöntem bir hizmet işlemi doğrudan çağırmak için kullanılabilecek bağlamda bulamaz. Ancak, kullanmaya devam edebilirsiniz [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] bu iki yoldan biriyle hizmet işlemlerini çağırma istemci:  
   

@@ -1,13 +1,6 @@
 ---
-title: "UI Otomasyonu Olaylarına Genel Bakış"
-ms.custom: 
+title: UI Otomasyonu Olaylarına Genel Bakış
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-bcl
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - UI Automation, providers
 - UI Automation, events
@@ -16,28 +9,26 @@ helpviewer_keywords:
 - providers, UI Automation
 - UI Automation, clients
 ms.assetid: 69eebd8b-39ed-40e7-93cc-4457c4caf746
-caps.latest.revision: "22"
 author: Xansky
 ms.author: mhopkins
 manager: markl
-ms.workload: dotnet
-ms.openlocfilehash: 8b28d6aafc0e9680123859ee0e9a28dd71a2249c
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 2190e404479a940e638d6ee8b9fd7135d8fc0109
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="ui-automation-events-overview"></a>UI Otomasyonu Olaylarına Genel Bakış
 > [!NOTE]
 >  Bu belge yönetilen kullanmak isteyen .NET Framework için tasarlanan [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] tanımlanan sınıflar <xref:System.Windows.Automation> ad alanı. Hakkında en yeni bilgiler için [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)], bkz: [Windows Otomasyon API: UI Otomasyonu](http://go.microsoft.com/fwlink/?LinkID=156746).  
   
- [!INCLUDE[TLA#tla_uiautomation](../../../includes/tlasharptla-uiautomation-md.md)]olay bildirimi, ekran okuyucuların ve ekran büyüteçleri gibi yardımcı teknolojiler için önemli bir özelliktir. Bu UI Otomasyonu istemcileri izleme şey olduğunda UI Otomasyon sağlayıcıları tarafından oluşturulan olayları [!INCLUDE[TLA2#tla_ui](../../../includes/tla2sharptla-ui-md.md)] ve son kullanıcılara bildirmek için bilgileri kullanın.  
+ [!INCLUDE[TLA#tla_uiautomation](../../../includes/tlasharptla-uiautomation-md.md)] olay bildirimi, ekran okuyucuların ve ekran büyüteçleri gibi yardımcı teknolojiler için önemli bir özelliktir. Bu UI Otomasyonu istemcileri izleme şey olduğunda UI Otomasyon sağlayıcıları tarafından oluşturulan olayları [!INCLUDE[TLA2#tla_ui](../../../includes/tla2sharptla-ui-md.md)] ve son kullanıcılara bildirmek için bilgileri kullanın.  
   
  Verimlilik olayları, seçmeli olarak, hiçbir istemci için tüm olayları dinleme yapıyorsanız olup tüm istemciler bu olayları veya hiç, abone olduğunuz bağlı olarak yükseltmek sağlayıcı uygulamaları olanak sağlayarak geliştirilmiştir.  
   
 <a name="Types_of_Events"></a>   
 ## <a name="types-of-events"></a>Olay türleri  
- [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]olayları aşağıdaki kategorilere ayrılır.  
+ [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] olayları aşağıdaki kategorilere ayrılır.  
   
 |Olay|Açıklama|  
 |-----------|-----------------|  
@@ -50,7 +41,7 @@ ms.lasthandoff: 12/22/2017
   
  Aşağıdaki olaylar tetiklenir bile UI durumu değişmediğini.  
   
--   `AutomationPropertyChangedEvent`(değişti özelliği bağlı olarak)  
+-   `AutomationPropertyChangedEvent` (değişti özelliği bağlı olarak)  
   
 -   `ElementSelectedEvent`  
   
@@ -60,7 +51,7 @@ ms.lasthandoff: 12/22/2017
   
 <a name="UI_Automation_Event_Identifiers"></a>   
 ## <a name="ui-automation-event-identifiers"></a>UI Otomasyon olay tanımlayıcıları  
- [!INCLUDE[TLA#tla_uiautomation](../../../includes/tlasharptla-uiautomation-md.md)]olayları tanımlanır <xref:System.Windows.Automation.AutomationEvent> nesneleri. <xref:System.Windows.Automation.AutomationIdentifier.Id%2A> Özelliği, olay türü benzersiz olarak tanımlayan bir değer içerir.  
+ [!INCLUDE[TLA#tla_uiautomation](../../../includes/tlasharptla-uiautomation-md.md)] olayları tanımlanır <xref:System.Windows.Automation.AutomationEvent> nesneleri. <xref:System.Windows.Automation.AutomationIdentifier.Id%2A> Özelliği, olay türü benzersiz olarak tanımlayan bir değer içerir.  
   
  Olası değerler için <xref:System.Windows.Automation.AutomationIdentifier.Id%2A> aşağıdaki tabloda, olay değişkenlerini kullanılan türü ile birlikte verilir. İstemcileri ve sağlayıcıları tarafından kullanılan tanımlayıcıları farklı sınıflardan alanları aynı adlı unutmayın.  
   

@@ -1,19 +1,13 @@
 ---
 title: .NET derleme Platform SDK'si (Roslyn API)
 description: .NET kodu, nokta hataları anlamak ve bu hataları düzeltmek için .NET derleyici Platform (Roslyn API'ları olarak da bilinir) SDK kullanmayı öğrenin.
-keywords: roslyn, analyzer, kod düzeltme
-author: billwagner
-ms.author: wiwagn
 ms.date: 10/10/2017
-ms.topic: conceptual
-ms.prod: .net
-ms.devlang: devlang-csharp
 ms.custom: mvc
-ms.openlocfilehash: aad6b06748b02e2ea3003ca339d8a5a0b15583f8
-ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
+ms.openlocfilehash: e524cb8f2fcb5c59550932243b6586019ea7139b
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="the-net-compiler-platform-sdk"></a>.NET derleme Platform SDK'si
 

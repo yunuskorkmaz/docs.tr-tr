@@ -1,31 +1,19 @@
 ---
 title: CLR Tetikleyiciler
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-ado
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: defe379c-30c7-487f-9abd-9c5e12ff49be
-caps.latest.revision: "4"
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
-ms.workload: dotnet
-ms.openlocfilehash: d1630226701dae8ddb51f939cebb38bf04f524c2
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.openlocfilehash: f7a009af7a343a0dbc2003eb76b30318f4d2830a
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="clr-triggers"></a>CLR Tetikleyiciler
 Bir tetikleyici bir dil olayı yürüttüğünde otomatik olarak çalıştırılan saklı yordamı özel bir türde değil. .NET Framework ortak dil çalışma zamanı (CLR) ile Microsoft SQL Server Tümleştirme nedeniyle CLR Tetikleyiciler oluşturmak için herhangi bir .NET Framework dil kullanabilirsiniz.  
   
  Daha ayrıntılı bilgi için SQL Server Books Online'nın sürümü, kullanmakta olduğunuz SQL Server sürümü için bkz.  
   
- **SQL Server Books Online**  
+ **SQL Server Çevrimiçi Kitapları**  
   
 1.  [CLR Tetikleyicileri](http://go.microsoft.com/fwlink/?LinkId=115397)  
   

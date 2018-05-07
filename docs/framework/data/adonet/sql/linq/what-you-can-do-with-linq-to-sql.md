@@ -1,33 +1,21 @@
 ---
 title: LINQ-SQL ile yapabilecekleriniz
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-ado
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
 ms.assetid: 061d98b2-baa7-4336-8ad2-c14de8134d91
-caps.latest.revision: "3"
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
-ms.workload: dotnet
-ms.openlocfilehash: d8393866d8a13121913348404edd8e356f691b7e
-ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
+ms.openlocfilehash: 719c2e5c97d3f8c64de53831ac50b2e7156a38fc
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="what-you-can-do-with-linq-to-sql"></a>LINQ-SQL ile yapabilecekleriniz
-[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]SQL geliştirici olarak beklediğiniz tüm anahtar özelliklerini destekler. Bilgi için sorgu ve Ekle, Güncelleştir ve bilgileri tablodan silin.  
+[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] SQL geliştirici olarak beklediğiniz tüm anahtar özelliklerini destekler. Bilgi için sorgu ve Ekle, Güncelleştir ve bilgileri tablodan silin.  
   
 ## <a name="selecting"></a>Seçme  
- Seçme (*projeksiyon*) yalnızca yazarak elde edilen bir [!INCLUDE[vbteclinq](../../../../../../includes/vbteclinq-md.md)] sorgu kendi programlama dilinde ve sonuçları almak için sorgu yürütme. [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]kendisini bilginiz gerekli SQL işlemleri gerekli tüm işlemlere çevirir. Daha fazla bilgi için bkz: [LINQ-SQL](../../../../../../docs/framework/data/adonet/sql/linq/index.md).  
+ Seçme (*projeksiyon*) yalnızca yazarak elde edilen bir [!INCLUDE[vbteclinq](../../../../../../includes/vbteclinq-md.md)] sorgu kendi programlama dilinde ve sonuçları almak için sorgu yürütme. [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] kendisini bilginiz gerekli SQL işlemleri gerekli tüm işlemlere çevirir. Daha fazla bilgi için bkz: [LINQ-SQL](../../../../../../docs/framework/data/adonet/sql/linq/index.md).  
   
  Aşağıdaki örnekte, Londra müşterilerden şirket adlarını alınır ve konsol penceresinde görüntülenir.  
   
@@ -54,7 +42,7 @@ ms.lasthandoff: 01/17/2018
  İçin `Delete` bir öğe öğenin ait olduğu koleksiyonu ve ardından arama kaldırın <xref:System.Data.Linq.DataContext.SubmitChanges%2A> üzerinde <xref:System.Data.Linq.DataContext> değişikliği kaydetmek için.  
   
 > [!NOTE]
->  [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]Art arda silme işlemleri tanımıyor. Tablodaki satır silmek istiyorsanız, bunu karşı kısıtlamalarına sahip, bkz: [nasıl yapılır: Sil satırları veritabanından](../../../../../../docs/framework/data/adonet/sql/linq/how-to-delete-rows-from-the-database.md).  
+>  [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] Art arda silme işlemleri tanımıyor. Tablodaki satır silmek istiyorsanız, bunu karşı kısıtlamalarına sahip, bkz: [nasıl yapılır: Sil satırları veritabanından](../../../../../../docs/framework/data/adonet/sql/linq/how-to-delete-rows-from-the-database.md).  
   
  Aşağıdaki örnekte, olan müşteri `CustomerID` , `98128` veritabanından alınır. Ardından, müşteri satır alındığını onaylayan sonra <xref:System.Data.Linq.Table%601.DeleteOnSubmit%2A> söz konusu nesne koleksiyondan kaldırmak için çağrılır. Son olarak, <xref:System.Data.Linq.DataContext.SubmitChanges%2A> veritabanı silme iletmek için çağrılır.  
   

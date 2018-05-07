@@ -1,13 +1,6 @@
 ---
-title: "Performansı İyileştirme: Metin"
-ms.custom: 
+title: 'Performansı İyileştirme: Metin'
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-wpf
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -18,19 +11,14 @@ helpviewer_keywords:
 - text [WPF], performance
 - glyphs [WPF]
 ms.assetid: 66b1b9a7-8618-48db-b616-c57ea4327b98
-caps.latest.revision: "10"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: f345893ca79d820ebb066d920cb49c6c46c47297
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 177f42dfa1c1be2b12d7e9e5283cf57f14c0880c
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="optimizing-performance-text"></a>Performansı İyileştirme: Metin
-[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]sunu özelliklerini kullanarak zengin metin içeriği için destek içerir [!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)] kontrol eder. Genel olarak üç katmanı metin oluşturma işlemi:  
+[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] sunu özelliklerini kullanarak zengin metin içeriği için destek içerir [!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)] kontrol eder. Genel olarak üç katmanı metin oluşturma işlemi:  
   
 1.  Kullanarak <xref:System.Windows.Documents.Glyphs> ve <xref:System.Windows.Media.GlyphRun> nesnelerini doğrudan.  
   
@@ -43,13 +31,13 @@ ms.lasthandoff: 12/22/2017
   
 <a name="Glyph_Level"></a>   
 ## <a name="rendering-text-at-the-glyph-level"></a>Karakter düzeyinde metin oluşturma  
- [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]doğrudan erişimli karakter düzeyinde biçimlendirme dahil olmak üzere Gelişmiş metin desteği sağlar <xref:System.Windows.Documents.Glyphs> kesecek ve metin biçimlendirme sonra devam etmek isteyen müşteriler için. Bu özellikler, işleme gereksinimleri aşağıdaki senaryoların her biri için farklı metin kritik destek sağlar.  
+ [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] doğrudan erişimli karakter düzeyinde biçimlendirme dahil olmak üzere Gelişmiş metin desteği sağlar <xref:System.Windows.Documents.Glyphs> kesecek ve metin biçimlendirme sonra devam etmek isteyen müşteriler için. Bu özellikler, işleme gereksinimleri aşağıdaki senaryoların her biri için farklı metin kritik destek sağlar.  
   
 -   Sabit biçimli belgelerin ekran görüntüsü.  
   
 -   Yazdırma senaryoları.  
   
-    -   [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)]bir aygıt yazıcı dili olarak.  
+    -   [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)] bir aygıt yazıcı dili olarak.  
   
     -   [!INCLUDE[TLA#tla_mxdw](../../../../includes/tlasharptla-mxdw-md.md)].  
   
@@ -60,7 +48,7 @@ ms.lasthandoff: 12/22/2017
 -   Önceki sürümlerinde istemciler dahil olmak üzere sabit biçimli belge gösterimi [!INCLUDE[TLA#tla_mswin](../../../../includes/tlasharptla-mswin-md.md)] ve diğer programlama cihazları.  
   
 > [!NOTE]
->  <xref:System.Windows.Documents.Glyphs>ve <xref:System.Windows.Media.GlyphRun> sabit biçimli belge sunumları ve yazdırma senaryoları için tasarlanmıştır. [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]Çeşitli öğeleri için genel yerleşimi sağlar ve [!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)] gibi senaryoları <xref:System.Windows.Controls.Label> ve <xref:System.Windows.Controls.TextBlock>. Düzen hakkında daha fazla bilgi ve [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] senaryoları bkz [WPF'de tipografi](../../../../docs/framework/wpf/advanced/typography-in-wpf.md).  
+>  <xref:System.Windows.Documents.Glyphs> ve <xref:System.Windows.Media.GlyphRun> sabit biçimli belge sunumları ve yazdırma senaryoları için tasarlanmıştır. [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] Çeşitli öğeleri için genel yerleşimi sağlar ve [!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)] gibi senaryoları <xref:System.Windows.Controls.Label> ve <xref:System.Windows.Controls.TextBlock>. Düzen hakkında daha fazla bilgi ve [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] senaryoları bkz [WPF'de tipografi](../../../../docs/framework/wpf/advanced/typography-in-wpf.md).  
   
  Aşağıdaki örnekler özelliklerini tanımlamak nasıl bir <xref:System.Windows.Documents.Glyphs> nesnesinde [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)]. <xref:System.Windows.Documents.Glyphs> Nesneyi temsil ediyor çıktısını bir <xref:System.Windows.Media.GlyphRun> içinde [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]. Örneklerde, Arial, Courier New ve kez yeni Latin yazı tipleri yüklenir varsayılmaktadır **C:\WINDOWS\Fonts** yerel bilgisayardaki klasör.  
   
@@ -69,7 +57,7 @@ ms.lasthandoff: 12/22/2017
 ### <a name="using-drawglyphrun"></a>DrawGlyphRun Kullanma  
  Özel denetim sahibi ve karakterleri işlemek, kullanmak istediğiniz <xref:System.Windows.Media.DrawingContext.DrawGlyphRun%2A> yöntemi.  
   
- [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]Özel metin kullanılarak biçimlendirme için alt düzey hizmetleri de sağlar <xref:System.Windows.Media.FormattedText> nesnesi. İşleme metinde en verimli şekilde [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] karakter kullanarak düzeyinde metin içeriği oluşturarak olan <xref:System.Windows.Documents.Glyphs> ve <xref:System.Windows.Media.GlyphRun>. Ancak, bu verimliliği yerleşik özellikleri olan, kullanımı kolay zengin metin biçimlendirmesini kaybı maliyetidir, [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] denetimleri gibi <xref:System.Windows.Controls.TextBlock> ve <xref:System.Windows.Documents.FlowDocument>.  
+ [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] Özel metin kullanılarak biçimlendirme için alt düzey hizmetleri de sağlar <xref:System.Windows.Media.FormattedText> nesnesi. İşleme metinde en verimli şekilde [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] karakter kullanarak düzeyinde metin içeriği oluşturarak olan <xref:System.Windows.Documents.Glyphs> ve <xref:System.Windows.Media.GlyphRun>. Ancak, bu verimliliği yerleşik özellikleri olan, kullanımı kolay zengin metin biçimlendirmesini kaybı maliyetidir, [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] denetimleri gibi <xref:System.Windows.Controls.TextBlock> ve <xref:System.Windows.Documents.FlowDocument>.  
   
 <a name="FormattedText_Object"></a>   
 ## <a name="formattedtext-object"></a>FormattedText nesnesi  
@@ -86,10 +74,10 @@ ms.lasthandoff: 12/22/2017
   
 <a name="FlowDocument_TextBlock_Label"></a>   
 ## <a name="flowdocument-textblock-and-label-controls"></a>FlowDocument, TextBlock ve etiket denetimleri  
- [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]ekrana metin çizme için birden çok denetim içerir. Her denetim için farklı bir senaryo hedeflenen ve kendi listesi özellikleri ve sınırlamaları vardır.  
+ [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] ekrana metin çizme için birden çok denetim içerir. Her denetim için farklı bir senaryo hedeflenen ve kendi listesi özellikleri ve sınırlamaları vardır.  
   
 ### <a name="flowdocument-impacts-performance-more-than-textblock-or-label"></a>FlowDocument etkiler performans birden fazla TextBlock veya etiketi  
- Genel olarak, <xref:System.Windows.Controls.TextBlock> öğesi sınırlı metin desteği içindeki kısa tümce gibi gerekli olduğunda kullanılmalıdır bir [!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)]. <xref:System.Windows.Controls.Label>en az metin desteği gerekli olduğunda kullanılabilir. <xref:System.Windows.Documents.FlowDocument> Öğesi, zengin içerik sunusu destekleyen yeniden akışkan olabilen belgeler için bir kapsayıcı olduğunu ve bu nedenle, kullanmaktan daha büyük bir performans etkisi <xref:System.Windows.Controls.TextBlock> veya <xref:System.Windows.Controls.Label> kontrol eder.  
+ Genel olarak, <xref:System.Windows.Controls.TextBlock> öğesi sınırlı metin desteği içindeki kısa tümce gibi gerekli olduğunda kullanılmalıdır bir [!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)]. <xref:System.Windows.Controls.Label> en az metin desteği gerekli olduğunda kullanılabilir. <xref:System.Windows.Documents.FlowDocument> Öğesi, zengin içerik sunusu destekleyen yeniden akışkan olabilen belgeler için bir kapsayıcı olduğunu ve bu nedenle, kullanmaktan daha büyük bir performans etkisi <xref:System.Windows.Controls.TextBlock> veya <xref:System.Windows.Controls.Label> kontrol eder.  
   
  Daha fazla bilgi için <xref:System.Windows.Documents.FlowDocument>, bkz: [akış belge genel bakış](../../../../docs/framework/wpf/advanced/flow-document-overview.md).  
   
@@ -160,7 +148,7 @@ MouseEnter üzerinde köprü
   
 <a name="Text_Formatting_Features"></a>   
 ## <a name="text-formatting-features"></a>Metin biçimlendirme özellikleri  
- [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]Zengin metin biçimlendirme otomatik hecelere ayırma gibi hizmetleri sağlar. Bu hizmetler, uygulama performansını etkileyebilir ve yalnızca gerekli olduğunda kullanılmalıdır.  
+ [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] Zengin metin biçimlendirme otomatik hecelere ayırma gibi hizmetleri sağlar. Bu hizmetler, uygulama performansını etkileyebilir ve yalnızca gerekli olduğunda kullanılmalıdır.  
   
 ### <a name="avoid-unnecessary-use-of-hyphenation"></a>Tireleme gereksiz kullanmaktan kaçının  
  Otomatik tireleme satırlık metin için kısa çizgi kesme noktalarını bulur ve satırlar için ek kesme konumlarına izin verir <xref:System.Windows.Controls.TextBlock> ve <xref:System.Windows.Documents.FlowDocument> nesneleri. Varsayılan olarak, bu nesneleri Otomatik heceleme özelliğini devre dışıdır. Nesnenin IsHyphenationEnabled özelliğini ayarlayarak bu özelliği etkinleştirmek `true`. Ancak, bu özelliği etkinleştirmek neden [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] başlatmak için [!INCLUDE[TLA#tla_com](../../../../includes/tlasharptla-com-md.md)] uygulama performansını etkileyebilir birlikte çalışabilirlik. Gerekmedikçe Otomatik heceleme kullanmamanız önerilir.  

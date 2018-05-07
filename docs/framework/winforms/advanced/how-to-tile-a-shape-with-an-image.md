@@ -1,13 +1,6 @@
 ---
-title: "Nasıl yapılır: Bir Şekli Bir Görüntüyle Döşeme"
-ms.custom: 
+title: 'Nasıl yapılır: Bir Şekli Bir Görüntüyle Döşeme'
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-winforms
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -17,16 +10,11 @@ helpviewer_keywords:
 - shapes [Windows Forms], tiling with images
 - bitmaps [Windows Forms], filling shapes with
 ms.assetid: 6d407891-6e5c-4495-a546-3da5604e9fb8
-caps.latest.revision: "14"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: d8726322e9443042b76c28e7b4b22ebc51c871bb
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 0905f29b0f74c72979e252cf94e677d1c7e0525d
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-tile-a-shape-with-an-image"></a>Nasıl yapılır: Bir Şekli Bir Görüntüyle Döşeme
 Dikdörtgen görüntüleri yalnızca döşeme birbirinin yanına kat kapsayacak şekilde yerleştirilebilir gibi diğer yanındaki dolgu (döşeme) bir şekli yerleştirilebilir. Bir şekli iç döşeme için doku fırça kullanın. Oluşturduğunuzda bir <xref:System.Drawing.TextureBrush> nesne oluşturucuya geçirdiğiniz bağımsız değişkenlerden biri olan bir <xref:System.Drawing.Image> nesnesi. İç bir şekli kısmını boyamak için doku fırça kullandığınızda, şekil bu görüntüyü yinelenen kopyalarını dolu.  

@@ -1,30 +1,16 @@
 ---
 title: .NET Framework'te Veri ve Modelleme
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 helpviewer_keywords:
 - .NET Framework, data access
 - data access [.NET Framework], about .NET Framework data access
 - data [.NET Framework], accessing
 ms.assetid: 8c37635d-e2c1-4b64-a258-61d9e87405e6
-caps.latest.revision: 17
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: cfeacc0d4fb736c523538896246b0f406f995fa7
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.openlocfilehash: 4ad0b287aa37104e01015ef0a44cf500bc885c29
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="data-and-modeling-in-the-net-framework"></a>.NET Framework'te Veri ve Modelleme
 Bu bölümde, ADO.NET, dil tümleşik sorgu (LINQ), WCF Veri Hizmetleri ve XML kullanarak veri erişim hakkında bilgi sağlar.  
@@ -33,7 +19,7 @@ Bu bölümde, ADO.NET, dil tümleşik sorgu (LINQ), WCF Veri Hizmetleri ve XML k
  [ADO.NET](../../../docs/framework/data/adonet/index.md)  
  ADO.NET mimarisi ve ADO.NET sınıflarını uygulama verilerini yönetmek ve Microsoft SQL Server, OLE DB veri kaynakları ve XML gibi veri kaynakları ile etkileşim kurmak için nasıl kullanılacağını açıklar.  
   
- [LINQ Portal](http://msdn.microsoft.com/library/6eb15c76-4ee6-4146-981e-b3429a945e6f)  
+ [LINQ portalı](http://msdn.microsoft.com/library/6eb15c76-4ee6-4146-981e-b3429a945e6f)  
  İlgili belgeler için dil tümleşik sorgu (LINQ) bağlantılar sağlar.  
   
  [İşlem Gerçekleştirme](../../../docs/framework/data/transactions/index.md)  

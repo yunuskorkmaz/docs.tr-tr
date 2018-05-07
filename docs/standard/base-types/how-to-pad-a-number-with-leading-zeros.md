@@ -1,13 +1,7 @@
 ---
-title: "Nasıl yapılır: Bir Sayıyı Baştaki Sıfırlarla Doldurma"
-ms.custom: 
+title: 'Nasıl yapılır: Bir Sayıyı Baştaki Sıfırlarla Doldurma'
 ms.date: 03/30/2017
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
 ms.technology: dotnet-standard
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -17,18 +11,13 @@ helpviewer_keywords:
 - number formatting [.NET Framework]
 - numbers [.NET Framework], format strings
 ms.assetid: 0b2c2cb5-c580-4891-8d81-cb632f5ec384
-caps.latest.revision: "10"
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-- dotnetcore
-ms.openlocfilehash: 7ea854f69e59c614d03f10ff546bd3181f5b51ff
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: 8ce3b59db027ffebf616a035b018629cb7aed30c
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-pad-a-number-with-leading-zeros"></a>Nasıl yapılır: Bir Sayıyı Baştaki Sıfırlarla Doldurma
 "D" kullanarak bir tamsayı baştaki sıfırlarla ekleyebilirsiniz [standart sayısal biçim dizesi](../../../docs/standard/base-types/standard-numeric-format-strings.md) duyarlık Belirleyicisi ile. Tamsayı ve kayan nokta sayıları baştaki sıfırlarla kullanarak ekleyebileceğiniz bir [özel sayısal biçim dizesi](../../../docs/standard/base-types/custom-numeric-format-strings.md). Bu konu, her iki yöntem sayıyı baştaki sıfırlarla paneli için nasıl kullanılacağını gösterir.  
@@ -39,9 +28,9 @@ ms.lasthandoff: 12/23/2017
   
 2.  Tamsayı ondalık bir değer veya bir onaltılık değer olarak görüntülemek isteyip istemediğinizi belirleyin.  
   
-    -   Tamsayı ondalık bir değeri görüntülemek için arama kendi `ToString(String)` yöntemi ve geçişi dizesi "D*n*" değeri olarak `format` parametresi, burada  *n*  en az dize uzunluğu temsil eder.  
+    -   Tamsayı ondalık bir değeri görüntülemek için arama kendi `ToString(String)` yöntemi ve geçişi dizesi "D*n*" değeri olarak `format` parametresi, burada *n* en az dize uzunluğu temsil eder.  
   
-    -   Tamsayı bir onaltılık değer olarak görüntülemek için arama kendi `ToString(String)` yöntemi ve geçişi dizesi "X*n*" değeri olarak `format` parametresi, burada  *n*  en az dize uzunluğu temsil eder.  
+    -   Tamsayı bir onaltılık değer olarak görüntülemek için arama kendi `ToString(String)` yöntemi ve geçişi dizesi "X*n*" değeri olarak `format` parametresi, burada *n* minimum uzunluğu temsil eder dize.  
   
      Biçim dizesi bir yöntemde gibi kullanabilirsiniz <xref:System.String.Format%2A> veya <xref:System.Console.WriteLine%2A>, kullanan [bileşik biçimlendirme](../../../docs/standard/base-types/composite-formatting.md).  
   
@@ -60,7 +49,7 @@ ms.lasthandoff: 12/23/2017
   
 4.  Unpadded sayısal dize uzunluğu biçimlendirilmiş dizeye dahil etmek istediğiniz öndeki sıfırların sayısı ekleyin. Bu, toplam doldurulan dize uzunluğu tanımlar.  
   
-5.  Tamsayı değerinin çağrısı `ToString(String)` yöntemi ve geçişi dizesi "D*n*" ondalık dizeleri ve "X*n*" onaltılık dizeler için burada  *n*  doldurulan dize toplam uzunluğu temsil eder. Aynı zamanda "D*n*" veya "X*n*" format dize bileşik biçimlendirme destekleyen bir yöntem.  
+5.  Tamsayı değerinin çağrısı `ToString(String)` yöntemi ve geçişi dizesi "D*n*" ondalık dizeleri ve "X*n*" onaltılık dizeler için burada *n* toplam temsil eder doldurulan dize uzunluğu. Aynı zamanda "D*n*" veya "X*n*" format dize bileşik biçimlendirme destekleyen bir yöntem.  
   
  Aşağıdaki örnek, bir tamsayı değeri beş baştaki sıfırlarla pads.  
   
@@ -90,7 +79,7 @@ ms.lasthandoff: 12/23/2017
   
     2.  Bir ondalık ayırıcısı simge dahil ederseniz, Ondalık ayırıcının solundaki karakter sayısını belirler.  
   
-         veya  
+         -veya-  
   
          Bir ondalık ayırıcısı simge içermiyorsa dizenin uzunluğunu belirler.  
   
