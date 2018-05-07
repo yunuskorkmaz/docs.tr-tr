@@ -1,27 +1,15 @@
 ---
-title: "Belirteç Kimlik Doğrulayıcı"
-ms.custom: 
+title: Belirteç Kimlik Doğrulayıcı
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 84382f2c-f6b1-4c32-82fa-aebc8f6064db
-caps.latest.revision: "22"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 76f3913f5cf6166793cb6f95ef3658c24e2453b4
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
-ms.translationtype: MT
+ms.openlocfilehash: 35bba0b6a81ff11164636e906440db7e9b2ca25b
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="token-authenticator"></a>Belirteç Kimlik Doğrulayıcı
-Bu örnek, özel bir belirteç kimlik doğrulayıcı uygulama gösterilmiştir. İçinde bir belirteç kimlik doğrulayıcısı [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] self tutarlı ve kimliğinin doğrulanması belirteçle ilişkili doğrulama ileti ile kullanılan belirteci doğrulamak için kullanılır.  
+Bu örnek, özel bir belirteç kimlik doğrulayıcı uygulama gösterilmiştir. Belirteç kimlik doğrulayıcı Windows Communication Foundation (WCF) ileti ile kullanılan belirteci doğrulamak için kendi kendine tutarlı ve kimliğinin doğrulanması belirteçle ilişkili doğrulama kullanılır.  
   
  Özel belirteç kimlik doğrulayan gibi çeşitli durumlarda yararlı olur:  
   

@@ -1,23 +1,14 @@
 ---
-title: "Dosya bulunamadı (Visual Basic Çalışma Süresi Hatası)"
+title: Dosya bulunamadı (Visual Basic Çalışma Süresi Hatası)
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- devlang-visual-basic
-ms.topic: article
 f1_keywords:
 - vbrID53
 ms.assetid: 57addb16-6f9a-444d-8af8-dda52431daca
-caps.latest.revision: 
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: 410c19d740275917225108d9173d9635fd211040
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.openlocfilehash: b8c4471222f2353e6303d43ad319031ac4491a2b
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="file-not-found-visual-basic-run-time-error"></a>Dosya bulunamadı (Visual Basic Çalışma Süresi Hatası)
 Dosyanın belirtilen konumda bulunamadı. Hata aşağıdaki olası nedenleri vardır:  
@@ -33,4 +24,4 @@ Dosyanın belirtilen konumda bulunamadı. Hata aşağıdaki olası nedenleri var
 1.  Dosya adını ve yolunu yazımını denetleyin.  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [Declare deyimi](../../../visual-basic/language-reference/statements/declare-statement.md)
+ [Declare Deyimi](../../../visual-basic/language-reference/statements/declare-statement.md)

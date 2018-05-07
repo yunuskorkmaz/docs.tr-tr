@@ -1,11 +1,7 @@
 ---
-title: "SpawnInstance işlevi (yönetilmeyen API Başvurusu)"
-description: "SpawnInstance işlevi bir sınıfının yeni bir örneğini oluşturur."
+title: SpawnInstance işlevi (yönetilmeyen API Başvurusu)
+description: SpawnInstance işlevi bir sınıfının yeni bir örneğini oluşturur.
 ms.date: 11/06/2017
-ms.prod: .net-framework
-ms.technology:
-- dotnet-clr
-ms.topic: reference
 api_name:
 - SpawnInstance
 api_location:
@@ -20,14 +16,11 @@ topic_type:
 - Reference
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 68508f3000e7f4ac481f940ef4c715366c37125c
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 3f8189f0adb62aa32cd0b85ca5a653aa466c7032
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="spawninstance-function"></a>SpawnInstance işlevi
 Bir sınıfın yeni bir örneğini oluşturur.    
@@ -64,16 +57,16 @@ Bu işlev tarafından döndürülen aşağıdaki değerleri tanımlanan *WbemCli
 
 |Sabit  |Değer  |Açıklama  |
 |---------|---------|---------|
-| `WBEM_E_INCOMPLETE_CLASS` | 0x80041020 | `ptr`Geçerli bir sınıf tanımı değil ve yeni örnekleri oluşturma olamaz. Eksik ya da, Windows yönetimiyle çağırarak kaydedilmedi [PutClassWmi](putclasswmi.md). |
+| `WBEM_E_INCOMPLETE_CLASS` | 0x80041020 | `ptr` Geçerli bir sınıf tanımı değil ve yeni örnekleri oluşturma olamaz. Eksik ya da, Windows yönetimiyle çağırarak kaydedilmedi [PutClassWmi](putclasswmi.md). |
 | `WBEM_E_OUT_OF_MEMORY` | 0x80041006 | İşlemi tamamlamak yeterli bellek yok. |
-| `WBEM_E_INVALID_PARAMETER` | 0x80041008 | `ppNewClass`olan `null`. |
+| `WBEM_E_INVALID_PARAMETER` | 0x80041008 | `ppNewClass` olan `null`. |
 | `WBEM_S_NO_ERROR` | 0 | İşlev çağrısı başarısız oldu.  |
   
 ## <a name="remarks"></a>Açıklamalar
 
 Bu işlev çağrısı sarmalar [IWbemclassObject::SpawnInstance](https://msdn.microsoft.com/library/aa391458(v=vs.85).aspx) yöntemi.
 
-`ptr`bir sınıf tanımı Windows Yönetimi'nden alınması gerekir. (Örneğini örneğinden oluşturma desteklenir, ancak döndürülen örneği boştur unutmayın.) Ardından yeni örnekleri oluşturmak için bu sınıf tanımını kullanın. Çağrı [PutInstanceWmi](putinstancewmi.md) işlevi, Windows Yönetimi için örnek yazmak istiyorsanız gereklidir.
+`ptr` bir sınıf tanımı Windows Yönetimi'nden alınması gerekir. (Örneğini örneğinden oluşturma desteklenir, ancak döndürülen örneği boştur unutmayın.) Ardından yeni örnekleri oluşturmak için bu sınıf tanımını kullanın. Çağrı [PutInstanceWmi](putinstancewmi.md) işlevi, Windows Yönetimi için örnek yazmak istiyorsanız gereklidir.
 
 
 
@@ -85,7 +78,7 @@ Döndürülen yeni nesne `ppNewClass` otomatik olarak geçerli nesnenin bir alt 
   
  **Başlık:** WMINet_Utils.idl  
   
- **.NET framework sürümleri:**[!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]  
+ **.NET framework sürümleri:** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.  
 [WMI ve performans sayaçları (yönetilmeyen API Başvurusu)](index.md)

@@ -1,27 +1,15 @@
 ---
-title: "Hata İşleme ve Bildirme Denetimini Genişletme"
-ms.custom: 
+title: Hata İşleme ve Bildirme Denetimini Genişletme
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 45f996a7-fa00-45cb-9d6f-b368f5778aaa
-caps.latest.revision: "28"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 0ab2e105c9055760bbeaeef5e56a8cb18c538306
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 83df5ffb790ee69ab290ad703c46b421cd6a02e6
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="extending-control-over-error-handling-and-reporting"></a>Hata İşleme ve Bildirme Denetimini Genişletme
-Bu örnek hata işleme ve içinde hata bildirimi üzerinden denetimini genişletme yapmayı gösteren bir [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] kullanarak hizmet <xref:System.ServiceModel.Dispatcher.IErrorHandler> arabirimi. Örnek dayanır [Başlarken](../../../../docs/framework/wcf/samples/getting-started-sample.md) hataları işlemek için hizmetine eklenen bazı ek kod. İstemci birkaç hata koşulları zorlar. Hizmet hataları yakalar ve bunları bir dosyasına kaydeder.  
+Bu örnek, hata işleme ve hata raporlama kullanarak bir Windows Communication Foundation (WCF) hizmetini üzerinde denetim genişletmek gösterilmiştir <xref:System.ServiceModel.Dispatcher.IErrorHandler> arabirimi. Örnek dayanır [Başlarken](../../../../docs/framework/wcf/samples/getting-started-sample.md) hataları işlemek için hizmetine eklenen bazı ek kod. İstemci birkaç hata koşulları zorlar. Hizmet hataları yakalar ve bunları bir dosyasına kaydeder.  
   
 > [!NOTE]
 >  Kurulum yordamı ve yapı yönergeleri Bu örnek için bu konunun sonunda yer alır.  
@@ -30,7 +18,7 @@ Bu örnek hata işleme ve içinde hata bildirimi üzerinden denetimini genişlet
   
  Bu örnekte `CalculatorErrorHandler` yazın uygulayan <xref:System.ServiceModel.Dispatcher.IErrorHandler> arabirimi. İçinde  
   
- <xref:System.ServiceModel.Dispatcher.IErrorHandler.HandleError%2A>yöntemi, `CalculatorErrorHandler` c:\logs Error.txt metin dosyasında hata günlüğünü yazar. Örnek Hata günlüklerini ve, istemciye geri bildirilmesini izin veren engelleme unutmayın.  
+ <xref:System.ServiceModel.Dispatcher.IErrorHandler.HandleError%2A> yöntemi, `CalculatorErrorHandler` c:\logs Error.txt metin dosyasında hata günlüğünü yazar. Örnek Hata günlüklerini ve, istemciye geri bildirilmesini izin veren engelleme unutmayın.  
   
 ```  
 public class CalculatorErrorHandler : IErrorHandler  
@@ -165,7 +153,7 @@ Fault: Reason = Invalid Argument: The argument must be greater than zero.
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  Bu dizin mevcut değilse, Git [Windows Communication Foundation (WCF) ve .NET Framework 4 için Windows Workflow Foundation (WF) örnek](http://go.microsoft.com/fwlink/?LinkId=150780) tüm indirmek için [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] ve [!INCLUDE[wf1](../../../../includes/wf1-md.md)] örnekleri. Bu örnek aşağıdaki dizinde bulunur.  
+>  Bu dizin mevcut değilse, Git [Windows Communication Foundation (WCF) ve .NET Framework 4 için Windows Workflow Foundation (WF) örnek](http://go.microsoft.com/fwlink/?LinkId=150780) tüm Windows Communication Foundation (WCF) indirmek için ve [!INCLUDE[wf1](../../../../includes/wf1-md.md)] örnekleri. Bu örnek aşağıdaki dizinde bulunur.  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Extensibility\ErrorHandling`  
   

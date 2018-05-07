@@ -1,24 +1,17 @@
 ---
 title: /= İşleci (C# Başvurusu)
 ms.date: 07/20/2015
-ms.prod: .net
-ms.technology:
-- devlang-csharp
-ms.topic: article
 f1_keywords:
 - /=_CSharpKeyword
 helpviewer_keywords:
 - division assignment operator (/=) [C#]
 - /= (division assignment operator) [C#]
 ms.assetid: 50fc02b0-ee9c-4c3e-b58d-d591282caf1c
-caps.latest.revision: 17
-author: BillWagner
-ms.author: wiwagn
-ms.openlocfilehash: 26096d9b5dfc565c9933f1ed8ffb241dc900d9ed
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 1d9b918c66ce361067d906a055df5adb25a5a308
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="-operator-c-reference"></a>/= İşleci (C# Başvurusu)
 Bölme atama işleci.  
@@ -45,5 +38,5 @@ x = x / y
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
  [C# başvurusu](../../../csharp/language-reference/index.md)  
- [C# programlama kılavuzu](../../../csharp/programming-guide/index.md)  
- [C# işleçleri](../../../csharp/language-reference/operators/index.md)
+ [C# Programlama Kılavuzu](../../../csharp/programming-guide/index.md)  
+ [C# İşleçleri](../../../csharp/language-reference/operators/index.md)

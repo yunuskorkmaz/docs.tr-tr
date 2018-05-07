@@ -1,21 +1,14 @@
 ---
-title: "Gizli üretim aynı anda korumak için Azure anahtar kasası kullanma"
-description: "Kapsayıcılı .NET uygulamaları için .NET mikro mimarisi | Gizli üretim aynı anda korumak için Azure anahtar kasası kullanma"
-keywords: "Docker, mikro, ASP.NET, kapsayıcı"
+title: Gizli üretim aynı anda korumak için Azure anahtar kasası kullanma
+description: Kapsayıcılı .NET uygulamaları için .NET mikro mimarisi | Gizli üretim aynı anda korumak için Azure anahtar kasası kullanma
 author: mjrousos
 ms.author: wiwagn
 ms.date: 05/26/2017
-ms.prod: .net-core
-ms.technology: dotnet-docker
-ms.topic: article
-ms.workload:
-- dotnet
-- dotnetcore
-ms.openlocfilehash: cb289c7361362c225eac8b9898bac276c4b623b4
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: 5ad5686909c29eba5916cbcc4b7115a16108a004
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="using-azure-key-vault-to-protect-secrets-at-production-time"></a>Gizli üretim aynı anda korumak için Azure anahtar kasası kullanma
 
@@ -65,7 +58,7 @@ Bu örnekte, yapılandırma sağlayıcısı kaydını sonunda AddAzureKeyVault �
 
 ## <a name="additional-resources"></a>Ek kaynaklar
 
--   **Uygulama parolaları korumak için Azure anahtar kasası kullanarak**
+-   **Uygulama parolaları korumak için Azure anahtar kasası kullanma**
     [*https://docs.microsoft.com/azure/guidance/guidance-multitenant-identity-keyvault*](https://docs.microsoft.com/azure/guidance/guidance-multitenant-identity-keyvault)
 
 -   **Geliştirme sırasında uygulama sırrı güvenli depolama**
@@ -78,7 +71,7 @@ Bu örnekte, yapılandırma sağlayıcısı kaydını sonunda AddAzureKeyVault �
     [*https://docs.microsoft.com/aspnet/core/security/data-protection/configuration/default-settings\#veri koruması varsayılan ayarları*](https://docs.microsoft.com/aspnet/core/security/data-protection/configuration/default-settings#data-protection-default-settings)
 
 -   **Microsoft.Extensions.Configuration.DockerSecrets.** GitHub depo.
-    [*https://github.com/ASPNET/Configuration/Tree/dev/src/Microsoft.Extensions.Configuration.DockerSecrets*](https://github.com/aspnet/Configuration/tree/dev/src/Microsoft.Extensions.Configuration.DockerSecrets)
+    [*https://github.com/aspnet/Configuration/tree/dev/src/Microsoft.Extensions.Configuration.DockerSecrets*](https://github.com/aspnet/Configuration/tree/dev/src/Microsoft.Extensions.Configuration.DockerSecrets)
 
 >[!div class="step-by-step"]
 [Önceki] (Geliştirici-app-gizli-storage.md) [sonraki] (.. / anahtar takeaways.md)

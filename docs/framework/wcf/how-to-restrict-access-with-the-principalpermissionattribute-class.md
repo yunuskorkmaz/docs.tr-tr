@@ -1,14 +1,6 @@
 ---
 title: 'Nasıl yapılır: PrincipalPermissionAttribute Sınıfı ile Erişimi Kısıtlama'
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -17,17 +9,11 @@ helpviewer_keywords:
 - WCF, authorization
 - WCF, security
 ms.assetid: 5162f5c4-8781-4cc4-9425-bb7620eaeaf4
-caps.latest.revision: 23
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: dffeae6a114563ea6b030c303bd3ed3f3a27f4f5
-ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
-ms.translationtype: MT
+ms.openlocfilehash: a93726598b31ee57d583aca16012d615e90441f4
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/30/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-restrict-access-with-the-principalpermissionattribute-class"></a>Nasıl yapılır: PrincipalPermissionAttribute Sınıfı ile Erişimi Kısıtlama
 Bir Windows etki alanına bilgisayar üzerindeki kaynaklara erişimi denetleme temel güvenlik bir görevdir. Örneğin, yalnızca belirli kullanıcılar bordro bilgileri gibi hassas verileri görüntüleyebilir olmalıdır. Bu konuda, yoğun tarafından bir yöntemi kullanıcının önceden tanımlanmış bir gruba ait erişimini kısıtlamak açıklanmaktadır. Çalışma örnek için bkz: [hizmet işlemlerine erişimi yetkilendirme](../../../docs/framework/wcf/samples/authorizing-access-to-service-operations.md).  
@@ -52,7 +38,7 @@ Bir Windows etki alanına bilgisayar üzerindeki kaynaklara erişimi denetleme t
   
 ### <a name="to-demand-user-membership"></a>İsteğe bağlı kullanıcı üyeliği  
   
-1.  Açık [!INCLUDE[indigo1](../../../includes/indigo1-md.md)] uygulanan hizmet sözleşme kodu içeren kod dosyası. Bir sözleşme uygulama hakkında daha fazla bilgi için bkz: [hizmet sözleşmelerini uygulama](../../../docs/framework/wcf/implementing-service-contracts.md).  
+1.  Uygulanan hizmet sözleşme kodu içeren Windows Communication Foundation (WCF) kod dosyasını açın. Bir sözleşme uygulama hakkında daha fazla bilgi için bkz: [hizmet sözleşmelerini uygulama](../../../docs/framework/wcf/implementing-service-contracts.md).  
   
 2.  Uygulama <xref:System.Security.Permissions.PrincipalPermissionAttribute> özniteliği her yöntemine, belirli bir gruba kısıtlanmalıdır. Ayarlama <xref:System.Security.Permissions.SecurityAttribute.Action%2A> özelliğine <xref:System.Security.Permissions.SecurityAction.Demand> ve <xref:System.Security.Permissions.PrincipalPermissionAttribute.Role%2A> özelliğini grubunun adı. Örneğin:  
   

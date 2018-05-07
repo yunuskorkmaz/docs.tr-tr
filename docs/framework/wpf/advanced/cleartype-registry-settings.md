@@ -1,27 +1,15 @@
 ---
-title: "ClearType Kayıt Defteri Ayarları"
-ms.custom: 
+title: ClearType Kayıt Defteri Ayarları
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-wpf
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - ClearType [WPF], registry settings
 - typography [WPF], ClearType registry settings
 ms.assetid: 56f314bb-b30b-4f67-8492-8b8a9fa432ae
-caps.latest.revision: "18"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: d915af4ee436bb6c661a7b412b0e36702191339a
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: cacdc47a35bfd197bcac29edc6f7c780d3b8578f
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="cleartype-registry-settings"></a>ClearType Kayıt Defteri Ayarları
 Bu konu genel bir bakış sağlar [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] [!INCLUDE[TLA#tla_ct](../../../../includes/tlasharptla-ct-md.md)] tarafından kullanılan kayıt defteri ayarları [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] uygulamalar.  
@@ -29,7 +17,7 @@ Bu konu genel bir bakış sağlar [!INCLUDE[TLA2#tla_winclient](../../../../incl
   
 <a name="overview"></a>   
 ## <a name="technology-overview"></a>Teknoloji genel bakış  
- [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]bir görüntü Aygıt kullanımı metne işleme uygulamaları [!INCLUDE[TLA2#tla_ct](../../../../includes/tla2sharptla-ct-md.md)] geliştirilmiş okuma deneyimi sağlamak için özellikler. [!INCLUDE[TLA2#tla_ct](../../../../includes/tla2sharptla-ct-md.md)]bir yazılım teknoloji tarafından geliştirilen [!INCLUDE[TLA#tla_ms](../../../../includes/tlasharptla-ms-md.md)] dizüstü ekranları, Pocket PC ekranları ve düz panel monitörler gibi varolan LCDler (Sıvı Crystal görüntüler) üzerinde metnin okunabilirliğini artırır. [!INCLUDE[TLA2#tla_ct](../../../../includes/tla2sharptla-ct-md.md)]her piksel LCD ekranının tek dikey renk Şerit öğelerine erişerek çalışır. Daha fazla bilgi için [!INCLUDE[TLA2#tla_ct](../../../../includes/tla2sharptla-ct-md.md)], bkz: [ClearType genel bakış](../../../../docs/framework/wpf/advanced/cleartype-overview.md).  
+ [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] bir görüntü Aygıt kullanımı metne işleme uygulamaları [!INCLUDE[TLA2#tla_ct](../../../../includes/tla2sharptla-ct-md.md)] geliştirilmiş okuma deneyimi sağlamak için özellikler. [!INCLUDE[TLA2#tla_ct](../../../../includes/tla2sharptla-ct-md.md)] bir yazılım teknoloji tarafından geliştirilen [!INCLUDE[TLA#tla_ms](../../../../includes/tlasharptla-ms-md.md)] dizüstü ekranları, Pocket PC ekranları ve düz panel monitörler gibi varolan LCDler (Sıvı Crystal görüntüler) üzerinde metnin okunabilirliğini artırır. [!INCLUDE[TLA2#tla_ct](../../../../includes/tla2sharptla-ct-md.md)] her piksel LCD ekranının tek dikey renk Şerit öğelerine erişerek çalışır. Daha fazla bilgi için [!INCLUDE[TLA2#tla_ct](../../../../includes/tla2sharptla-ct-md.md)], bkz: [ClearType genel bakış](../../../../docs/framework/wpf/advanced/cleartype-overview.md).  
   
  İle işlenen metin [!INCLUDE[TLA2#tla_ct](../../../../includes/tla2sharptla-ct-md.md)] çeşitli görüntü cihazlarda görüntülendiğinde önemli ölçüde farklı görünebilir. Örneğin, izleyicileri az sayıda uygulama renk Şerit öğelerine mavi, yeşil, kırmızı sırayla yerine daha yaygın kırmızı, yeşil, mavi ( [!INCLUDE[TLA#tla_rgb](../../../../includes/tlasharptla-rgb-md.md)]) sırası.  
   
@@ -39,11 +27,11 @@ Bu konu genel bir bakış sağlar [!INCLUDE[TLA2#tla_winclient](../../../../incl
   
 <a name="registry_settings"></a>   
 ## <a name="registry-settings"></a>Kayıt defteri ayarları  
- [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]dört kayıt defteri ayarlarını denetlemek için belirtir [!INCLUDE[TLA2#tla_ct](../../../../includes/tla2sharptla-ct-md.md)] özellikleri:  
+ [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] dört kayıt defteri ayarlarını denetlemek için belirtir [!INCLUDE[TLA2#tla_ct](../../../../includes/tla2sharptla-ct-md.md)] özellikleri:  
   
 |Ayar|Açıklama|  
 |-------------|-----------------|  
-|[!INCLUDE[TLA2#tla_ct](../../../../includes/tla2sharptla-ct-md.md)]düzeyi|Düzeyini açıklayan [!INCLUDE[TLA2#tla_ct](../../../../includes/tla2sharptla-ct-md.md)] renk daha anlaşılır olması.|  
+|[!INCLUDE[TLA2#tla_ct](../../../../includes/tla2sharptla-ct-md.md)] düzeyi|Düzeyini açıklayan [!INCLUDE[TLA2#tla_ct](../../../../includes/tla2sharptla-ct-md.md)] renk daha anlaşılır olması.|  
 |Gama düzeyi|Görüntüleme cihazı için piksel renk bileşeni düzeyini açıklar.|  
 |Piksel yapısı|Piksel düzenlemeyi görüntüleme cihazı için açıklar.|  
 |Metin Karşıtlık düzeyi|Görüntülenen metin karşıtlık düzeyini açıklar.|  
@@ -71,7 +59,7 @@ Bu konu genel bir bakış sağlar [!INCLUDE[TLA2#tla_winclient](../../../../incl
  ![Kayıt Defteri Düzenleyicisi'nde ClearType ayarları](../../../../docs/framework/wpf/advanced/media/cleartyperegistry01.png "ClearTypeRegistry01")  
   
 > [!NOTE]
->  [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]uygulamaları işlemek olan ve olmayan ya da iki moddan birini metinde [!INCLUDE[TLA2#tla_ct](../../../../includes/tla2sharptla-ct-md.md)]. Ne zaman metin işlenen olmadan [!INCLUDE[TLA2#tla_ct](../../../../includes/tla2sharptla-ct-md.md)], bunun için gri ölçekli işleme olarak adlandırılır.  
+>  [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] uygulamaları işlemek olan ve olmayan ya da iki moddan birini metinde [!INCLUDE[TLA2#tla_ct](../../../../includes/tla2sharptla-ct-md.md)]. Ne zaman metin işlenen olmadan [!INCLUDE[TLA2#tla_ct](../../../../includes/tla2sharptla-ct-md.md)], bunun için gri ölçekli işleme olarak adlandırılır.  
   
 <a name="gamma_level"></a>   
 ## <a name="gamma-level"></a>Gama düzeyi  
@@ -94,9 +82,9 @@ Bu konu genel bir bakış sağlar [!INCLUDE[TLA2#tla_winclient](../../../../incl
   
 |Tür|Değer|Açıklama|  
 |----------|-----------|-----------------|  
-|Düz|0|Görüntü aygıtı hiçbir piksel yapısına sahip olabilir. Bu açık kaynakları her renk için piksel alana eşit olarak yayılır anlamına gelir — bu gri ölçekli işleme olarak adlandırılır. Bir standart aygıt works görüntülenme budur. [!INCLUDE[TLA2#tla_ct](../../../../includes/tla2sharptla-ct-md.md)]hiçbir zaman İşlenmiş metin uygulanır.|  
-|RGB|1.|Aşağıdaki sırayla üç şeritler oluşur piksel görüntü aygıtın: kırmızı, yeşil ve mavi. [!INCLUDE[TLA2#tla_ct](../../../../includes/tla2sharptla-ct-md.md)]İşlenmiş metin uygulanır.|  
-|BGR|2|Aşağıdaki sırayla üç şeritler oluşur piksel görüntü aygıtın: yeşil, mavi ve kırmızı. [!INCLUDE[TLA2#tla_ct](../../../../includes/tla2sharptla-ct-md.md)]İşlenmiş metin uygulanır. Sipariş RGB türünden nasıl ters dikkat edin.|  
+|Düz|0|Görüntü aygıtı hiçbir piksel yapısına sahip olabilir. Bu açık kaynakları her renk için piksel alana eşit olarak yayılır anlamına gelir — bu gri ölçekli işleme olarak adlandırılır. Bir standart aygıt works görüntülenme budur. [!INCLUDE[TLA2#tla_ct](../../../../includes/tla2sharptla-ct-md.md)] hiçbir zaman İşlenmiş metin uygulanır.|  
+|RGB|1.|Aşağıdaki sırayla üç şeritler oluşur piksel görüntü aygıtın: kırmızı, yeşil ve mavi. [!INCLUDE[TLA2#tla_ct](../../../../includes/tla2sharptla-ct-md.md)] İşlenmiş metin uygulanır.|  
+|BGR|2|Aşağıdaki sırayla üç şeritler oluşur piksel görüntü aygıtın: yeşil, mavi ve kırmızı. [!INCLUDE[TLA2#tla_ct](../../../../includes/tla2sharptla-ct-md.md)] İşlenmiş metin uygulanır. Sipariş RGB türünden nasıl ters dikkat edin.|  
   
  Piksel yapısı, 0 ile 2'ye değişen bir tam sayı değerine karşılık gelir. Varsayılan düzeyini düz piksel yapısını temsil eden 0 ' dır.  
   

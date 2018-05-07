@@ -1,21 +1,14 @@
 ---
-title: "Nasıl yapılır: Sorgu İfadesinde Türü Örtük Olarak Belirlenmiş Yerel Değişkenleri Kullanma (C# Programlama Kılavuzu)"
+title: 'Nasıl yapılır: Sorgu İfadesinde Türü Örtük Olarak Belirlenmiş Yerel Değişkenleri Kullanma (C# Programlama Kılavuzu)'
 ms.date: 07/20/2015
-ms.prod: .net
-ms.technology:
-- devlang-csharp
-ms.topic: article
 helpviewer_keywords:
 - implicitly-typed local variables [C#], how to use
 ms.assetid: 6b7354d2-af79-427a-b6a8-f74eb8fd0b91
-caps.latest.revision: 
-author: BillWagner
-ms.author: wiwagn
-ms.openlocfilehash: 754698fc423fb2dfc9bf50ed15be610831cefeda
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: c2bc990f9dda4b91928c176cf7f10bfb349ba343
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-use-implicitly-typed-local-variables-and-arrays-in-a-query-expression-c-programming-guide"></a>Nasıl yapılır: Sorgu İfadesinde Türü Örtük Olarak Belirlenmiş Yerel Değişkenleri Kullanma (C# Programlama Kılavuzu)
 Yerel bir değişken türünü belirlemek için derleyici istediğinizde türü örtük olarak belirlenmiş yerel değişkenleri kullanabilirsiniz. Sorgu ifadelerinde sık kullanılan anonim türler depolamak için örtük olarak yazılan yerel değişkenler kullanmanız gerekir. Aşağıdaki örnekler sorgularda örtük olarak yazılan yerel değişkenler isteğe bağlıdır ve gerekli kullanımını gösterir.  
@@ -33,8 +26,8 @@ Yerel bir değişken türünü belirlemek için derleyici istediğinizde türü 
  [!code-csharp[csProgGuideLINQ#33](../../../csharp/programming-guide/arrays/codesnippet/CSharp/how-to-use-implicitly-typed-local-variables-and-arrays-in-a-query-expression_2.cs)]  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [C# programlama kılavuzu](../../../csharp/programming-guide/index.md)  
- [Genişletme yöntemleri](../../../csharp/programming-guide/classes-and-structs/extension-methods.md)  
+ [C# Programlama Kılavuzu](../../../csharp/programming-guide/index.md)  
+ [Genişletme Yöntemleri](../../../csharp/programming-guide/classes-and-structs/extension-methods.md)  
  [LINQ (dil ile tümleşik sorgu)](http://msdn.microsoft.com/library/a73c4aec-5d15-4e98-b962-1274021ea93d)  
  [var](../../../csharp/language-reference/keywords/var.md)  
  [LINQ Sorgu ifadeleri](../../../csharp/programming-guide/linq-query-expressions/index.md)

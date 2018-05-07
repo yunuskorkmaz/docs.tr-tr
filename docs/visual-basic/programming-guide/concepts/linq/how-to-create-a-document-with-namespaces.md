@@ -1,22 +1,12 @@
 ---
-title: "Nasıl yapılır: ad alanları (LINQ-XML) ile bir belge oluşturma (Visual Basic)"
-ms.custom: 
+title: 'Nasıl yapılır: ad alanları (LINQ-XML) ile bir belge oluşturma (Visual Basic)'
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: cc5b0d4d-360c-4ada-94fa-2d2916e989be
-caps.latest.revision: "3"
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: 038e2924603eba7250620bc2792ec87b8e978787
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.openlocfilehash: 204d8a9cbb6ce47c6334c7309d27910c75b90ae0
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-create-a-document-with-namespaces-linq-to-xml-visual-basic"></a>Nasıl yapılır: ad alanları (LINQ-XML) ile bir belge oluşturma (Visual Basic)
 Bu konu, Visual Basic'de ad alanları ile bir belge oluşturulacağını gösterir.  

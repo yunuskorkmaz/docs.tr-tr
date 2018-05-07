@@ -1,13 +1,6 @@
 ---
-title: "UI Otomasyonu Kullanarak Katıştırılmış Nesnelere Erişme"
-ms.custom: 
+title: UI Otomasyonu Kullanarak Katıştırılmış Nesnelere Erişme
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-bcl
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -16,16 +9,14 @@ helpviewer_keywords:
 - accessing embedded objects
 - UI Automation, accessing embedded objects
 ms.assetid: a5b513ec-7fa6-4460-869f-c18ff04f7cf2
-caps.latest.revision: "17"
 author: Xansky
 ms.author: mhopkins
 manager: markl
-ms.workload: dotnet
-ms.openlocfilehash: 37110708efa49912d0ed9c81746d125167e17985
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: dc6426276d354dc3334013235cda45df8e7bb383
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="access-embedded-objects-using-ui-automation"></a>UI Otomasyonu Kullanarak Katıştırılmış Nesnelere Erişme
 > [!NOTE]
@@ -58,7 +49,7 @@ ms.lasthandoff: 12/22/2017
  Aşağıdaki kod örneğinde içinde katıştırılmış bir nesneden bir metin aralığını edinme gösteren bir [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] metin sağlayıcısı. Alınan metin boş bir aralığın başlangıç endpoint izleyen "... burada aralığı Okyanusu. (boşluk) "ve kapanış bitiş endpoint önündeki". "katıştırılmış köprüyü temsil eden (giriş sağlanan görüntüsü gösterildiği gibi). Bu boş bir aralığın olsa da, sıfır olmayan span içerdiğinden, bozuk bir aralığı dikkate alınmaz.  
   
 > [!NOTE]
->  <xref:System.Windows.Automation.TextPattern>bir metin tabanlı katıştırılmış nesne bir köprü gibi alabilirsiniz; Ancak, ikincil bir <xref:System.Windows.Automation.TextPattern> tam işlevselliğini kullanıma sunmak için katıştırılmış nesneden alınması gerekir.  
+>  <xref:System.Windows.Automation.TextPattern> bir metin tabanlı katıştırılmış nesne bir köprü gibi alabilirsiniz; Ancak, ikincil bir <xref:System.Windows.Automation.TextPattern> tam işlevselliğini kullanıma sunmak için katıştırılmış nesneden alınması gerekir.  
   
  [!code-csharp[UIATextPattern_snip#GetRangeFromChild](../../../samples/snippets/csharp/VS_Snippets_Wpf/UIATextPattern_snip/CSharp/SearchWindow.cs#getrangefromchild)]
  [!code-vb[UIATextPattern_snip#GetRangeFromChild](../../../samples/snippets/visualbasic/VS_Snippets_Wpf/UIATextPattern_snip/VisualBasic/SearchWindow.vb#getrangefromchild)]  

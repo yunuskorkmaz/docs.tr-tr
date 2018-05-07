@@ -1,21 +1,14 @@
 ---
 title: Docker uygulamalar için geliştirme iş akışı
 description: Kapsayıcılı .NET uygulamaları için .NET mikro mimarisi | Docker uygulamalar için geliştirme iş akışı
-keywords: Docker, Microservices, ASP.NET, Container
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 10/18/2017
-ms.prod: .net-core
-ms.technology: dotnet-docker
-ms.topic: article
-ms.workload:
-- dotnet
-- dotnetcore
-ms.openlocfilehash: 73d4ad82ef8c48f57aa4cceceedba862a2c9ffa4
-ms.sourcegitcommit: b750a8e3979749b214e7e10c82efb0a0524dfcb1
+ms.openlocfilehash: 2eb205e85300f22108b866e8446d6730d89ae6cb
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/09/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="development-workflow-for-docker-apps"></a>Docker uygulamalar için geliştirme iş akışı
 
@@ -139,17 +132,17 @@ Tek bir depodaki Linux görüntüsü ve bir Windows görüntüsü gibi platform 
 
 Açık bir platform desteği bir etiket belirtirseniz aşağıdaki durumlarda ister:
 
--   **microsoft/aspnetcore:2.0.0-jessie**
+-   **Microsoft/aspnetcore:2.0.0-jessie**
 
         .NET Core 2.0 runtime-only on Linux 
 
--   **microsoft/aspnetcore:2.0.0-nanoserver**
+-   **Microsoft/aspnetcore:2.0.0-nanoserver**
 
         .NET Core 2.0 runtime-only on Windows Nano Server
 
 Ancak ve belirtirseniz, bu yeni mid-2017 itibaren bile aynı etiketi ile aynı görüntü adı, Linux veya Windows sürümü dağıttığınız Docker ana bilgisayar işletim sistemi bağlı olarak yeni çok yay görüntüleri (gibi çok arch destekleyen aspnetcore görüntü) kullanır , aşağıdaki örnekte gösterildiği gibi:
 
--   **microsoft/aspnetcore:2.0**
+-   **Microsoft / aspnetcore:2.0**
 
         Multi-arch: .NET Core 2.0 runtime-only on Linux or Windows Nano Server depending on the Docker host OS
 
@@ -398,7 +391,7 @@ Ayrıca, adım 2 (Docker destek eklenmesi projelerinize) yalnızca bir kez gerç
 -   **Steve Lasker. Visual Studio 2017 ile .NET docker geliştirme**
     [*https://channel9.msdn.com/Events/Visual-Studio/Visual-Studio-2017-Launch/T111*](https://channel9.msdn.com/Events/Visual-Studio/Visual-Studio-2017-Launch/T111)
 
--   **Jeffrey T. Fritz. .NET Core uygulaması bir kapsayıcıda yeni Docker araçları ile Visual Studio için yerleştirin.**
+-   **Gamze T. Fritz. .NET Core uygulaması bir kapsayıcıda yeni Docker araçları ile Visual Studio için yerleştirin.**
     [*https://blogs.msdn.microsoft.com/webdev/2016/11/16/new-docker-tools-for-visual-studio/*](https://blogs.msdn.microsoft.com/webdev/2016/11/16/new-docker-tools-for-visual-studio/)
 
 ## <a name="using-powershell-commands-in-a-dockerfile-to-set-up-windows-containers"></a>Windows kapsayıcıları ayarlamak için bir Dockerfile PowerShell komutlarını kullanma 

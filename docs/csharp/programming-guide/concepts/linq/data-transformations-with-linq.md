@@ -1,12 +1,6 @@
 ---
-title: "LINQ ile Veri Dönüştürmeler (C#)"
-ms.custom: 
+title: LINQ ile Veri Dönüştürmeler (C#)
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-csharp
-ms.topic: article
 helpviewer_keywords:
 - LINQ [C#], data transformations
 - source elements [LINQ in C#]
@@ -16,17 +10,14 @@ helpviewer_keywords:
 - data sources [LINQ in C#], data transformations
 - data transformations [LINQ in C#]
 ms.assetid: 674eae9e-bc72-4a88-aed3-802b45b25811
-caps.latest.revision: "17"
-author: BillWagner
-ms.author: wiwagn
-ms.openlocfilehash: 0633e348c762879caa4e3f72a3662722b3894e4c
-ms.sourcegitcommit: 685143b62385500f59bc36274b8adb191f573a16
+ms.openlocfilehash: c165f78c53cec0417d39320580b812ff01fef68b
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/09/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="data-transformations-with-linq-c"></a>LINQ ile Veri Dönüştürmeler (C#)
-[!INCLUDE[vbteclinqext](~/includes/vbteclinqext-md.md)]yalnızca veri alma hakkında değil. Veri dönüştürme için de güçlü bir araçtır. Kullanarak bir [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] sorgu olarak giriş ve yeni bir çıkış sırası oluşturmak için birçok yolla değiştirme kaynağı sırası kullanabilirsiniz. Öğeleri sıralama ve Gruplama değiştirmeden dizisi kendisini değiştirebilirsiniz. Ancak, belki de en güçlü özelliği [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] sorgudur yeni türleri oluşturma yeteneği. Bu, gerçekleştirilir [seçin](../../../../csharp/language-reference/keywords/select-clause.md) yan tümcesi. Örneğin, aşağıdaki görevleri gerçekleştirebilirsiniz:  
+[!INCLUDE[vbteclinqext](~/includes/vbteclinqext-md.md)] yalnızca veri alma hakkında değil. Veri dönüştürme için de güçlü bir araçtır. Kullanarak bir [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] sorgu olarak giriş ve yeni bir çıkış sırası oluşturmak için birçok yolla değiştirme kaynağı sırası kullanabilirsiniz. Öğeleri sıralama ve Gruplama değiştirmeden dizisi kendisini değiştirebilirsiniz. Ancak, belki de en güçlü özelliği [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] sorgudur yeni türleri oluşturma yeteneği. Bu, gerçekleştirilir [seçin](../../../../csharp/language-reference/keywords/select-clause.md) yan tümcesi. Örneğin, aşağıdaki görevleri gerçekleştirebilirsiniz:  
   
 -   Birden çok giriş dizilerini yeni bir türe sahip bir tek bir çıkış sırası birleştirin.  
   
@@ -69,7 +60,7 @@ ms.lasthandoff: 12/09/2017
  Daha fazla bilgi için bkz: [nesne ve koleksiyon başlatıcıları](../../../../csharp/programming-guide/classes-and-structs/object-and-collection-initializers.md) ve [anonim türler](../../../../csharp/programming-guide/classes-and-structs/anonymous-types.md).  
   
 ## <a name="transforming-in-memory-objects-into-xml"></a>Bellek İçi Nesneleri XML'e dönüştürme  
- [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)]sorguları bellek içi veri yapılarını, SQL veritabanları arasında verileri dönüştürmek kolaylaştırır [!INCLUDE[vstecado](~/includes/vstecado-md.md)] veri kümelerini ve XML akışları ya da belgeler. Aşağıdaki örnekte bir bellek içi veri yapısı nesneleri XML elemanlara dönüştürür.  
+ [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] sorguları bellek içi veri yapılarını, SQL veritabanları arasında verileri dönüştürmek kolaylaştırır [!INCLUDE[vstecado](~/includes/vstecado-md.md)] veri kümelerini ve XML akışları ya da belgeler. Aşağıdaki örnekte bir bellek içi veri yapısı nesneleri XML elemanlara dönüştürür.  
   
  [!code-csharp[CsLINQGettingStarted#9](../../../../csharp/programming-guide/concepts/linq/codesnippet/CSharp/data-transformations-with-linq_3.cs)]  
   
@@ -107,8 +98,8 @@ ms.lasthandoff: 12/09/2017
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
  [Dil ile tümleşik sorgu (LINQ) (C#)](../../../../csharp/programming-guide/concepts/linq/index.md)  
- [LINQ-SQL](../../../../../docs/framework/data/adonet/sql/linq/index.md)  
- [LINQ-DataSet](../../../../framework/data/adonet/linq-to-dataset.md)  
+ [LINQ to SQL](../../../../../docs/framework/data/adonet/sql/linq/index.md)  
+ [LINQ to DataSet](../../../../framework/data/adonet/linq-to-dataset.md)  
  [LINQ-XML (C#)](../../../../csharp/programming-guide/concepts/linq/linq-to-xml.md)  
  [LINQ Sorgu ifadeleri](../../../../csharp/programming-guide/linq-query-expressions/index.md)  
- [select tümcesi](../../../../csharp/language-reference/keywords/select-clause.md)
+ [select yan tümcesi](../../../../csharp/language-reference/keywords/select-clause.md)

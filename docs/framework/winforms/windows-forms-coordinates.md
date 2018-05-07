@@ -1,29 +1,17 @@
 ---
-title: "Windows Forms Koordinatları"
-ms.custom: 
+title: Windows Forms Koordinatları
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-winforms
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - Windows Forms coordinates
 - screen coordinates
 - client coordinates
 - coordinates [Windows Forms], Windows Forms
 ms.assetid: cc06e61f-43b6-4408-a676-2542dcfcd96e
-caps.latest.revision: "5"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 8f4b42fd71dacb0071013067dc3c14add96c8aca
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: ba6bf8c1a8ae5ab14a9b33ae431e34310046b2a9
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="windows-forms-coordinates"></a>Windows Forms Koordinatları
 Bir Windows formunda koordinat sistemi aygıt koordinatlarına göre ve temel ölçü Windows Forms'ta çizerken (genellikle piksel) cihaz birimdir. Ekran noktalarında x ve y koordinatını çiftlerinden sağa ve üstten alta artırma y koordinatları artırma x koordinatları ile açıklanmaktadır. Başlangıç ekranı göreli konumunu ekran veya istemci koordinatları olup belirtiyorsanız bağlı olarak değişir.  

@@ -1,28 +1,19 @@
 ---
-title: "Namespace veya içeri aktarmalar &#39;belirtilen türü; &lt;qualifiedelementname&gt;&#39; mevcut değil &#39; t ortak üye içermiyor ya da bulunamıyor"
+title: Namespace veya türü içeri aktarmalar içinde belirtilen &#39; &lt;qualifiedelementname&gt; &#39; mevcut değil&#39;t ortak üye içermiyor ya da bulunamıyor
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- devlang-visual-basic
-ms.topic: article
 f1_keywords:
 - bc40056
 - vbc40056
 helpviewer_keywords:
 - BC40056
 ms.assetid: b59f5754-444f-4378-9272-9678b437e84a
-caps.latest.revision: 
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: 49cd9fa5d5182b2cf2d7fc4623bc8e9aa02bf85e
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 8be0df5cbe4b8d4a640c9b6c2e126b3828254fd6
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
-# <a name="namespace-or-type-specified-in-the-imports-39ltqualifiedelementnamegt39-doesn39t-contain-any-public-member-or-cannot-be-found"></a>Namespace veya içeri aktarmalar &#39;belirtilen türü; &lt;qualifiedelementname&gt;&#39; mevcut değil &#39; t ortak üye içermiyor ya da bulunamıyor
+# <a name="namespace-or-type-specified-in-the-imports-39ltqualifiedelementnamegt39-doesn39t-contain-any-public-member-or-cannot-be-found"></a>Namespace veya türü içeri aktarmalar içinde belirtilen &#39; &lt;qualifiedelementname&gt; &#39; mevcut değil&#39;t ortak üye içermiyor ya da bulunamıyor
 Namespace veya türü belirtilen içeri aktarmalar içinde\<qualifiedelementname >' ortak üye içermiyor veya bulunamıyor. Ad alanı veya tür tanımlanır ve en az bir ortak üye içerdiğinden emin olun. Diğer ad başka diğer adlar içermediğinden emin olun.  
   
  Bir `Imports` deyimi belirtir bulunamıyor veya herhangi bir tanımlamıyor içeren bir öğeyi `Public` üyeleri.  
@@ -52,8 +43,8 @@ Namespace veya türü belirtilen içeri aktarmalar içinde\<qualifiedelementname
 3.  İçeren öğesi en az bir gösterir doğrulayın `Public` üyesi.  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [Imports deyimi (.NET Namespace ve türü)](../../../visual-basic/language-reference/statements/imports-statement-net-namespace-and-type.md)  
- [Namespace deyimi](../../../visual-basic/language-reference/statements/namespace-statement.md)  
- [Ortak](../../../visual-basic/language-reference/modifiers/public.md)  
+ [Imports Deyimi (.NET Ad Alanı ve Türü)](../../../visual-basic/language-reference/statements/imports-statement-net-namespace-and-type.md)  
+ [Namespace Deyimi](../../../visual-basic/language-reference/statements/namespace-statement.md)  
+ [Public](../../../visual-basic/language-reference/modifiers/public.md)  
  [Visual Basic'de ad alanları](../../../visual-basic/programming-guide/program-structure/namespaces.md)  
- [Bildirilmiş öğelere başvurular](../../../visual-basic/programming-guide/language-features/declared-elements/references-to-declared-elements.md)
+ [Bildirilmiş Öğelere Başvurular](../../../visual-basic/programming-guide/language-features/declared-elements/references-to-declared-elements.md)

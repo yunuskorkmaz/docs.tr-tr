@@ -1,27 +1,15 @@
 ---
-title: "Veritabanı SQL Server yansıtma"
-ms.custom: 
+title: Veritabanı SQL Server yansıtma
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-ado
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
 ms.assetid: 89befaff-bb46-4290-8382-e67cdb0e3de9
-caps.latest.revision: "6"
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
-ms.workload: dotnet
-ms.openlocfilehash: 8a955f62aa1e7b2f025a621840753e2213fcefe7
-ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
+ms.openlocfilehash: cbb4b729475c8f77c204c3a9250d48d4b0cd3bc5
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="database-mirroring-in-sql-server"></a>Veritabanı SQL Server yansıtma
 SQL Server veritabanı yansıtma kopyalama veya yansıtma, bir SQL Server veritabanının bir yedek sunucu üzerinde tutmanızı sağlar. Yansıtma, verilerin iki ayrı kopyalarının süreleri ve yüksek düzeyde kullanılabilirlik sağladığınızdan hiç var ve veri artıklığı tamamlamak sağlar. Geliştirici herhangi bir eylemde veya SQL Server veritabanı için yapılandırıldıktan sonra herhangi bir kod yazmaya gerek yoktur, böylece SQL Server için .NET veri sağlayıcısı, veritabanı yansıtması için örtülü destek sağlar. Ayrıca, <xref:System.Data.SqlClient.SqlConnection> nesne destekleyen bir yük devretme iş ortağı sunucu adı sağladığını sağlayan bir açık bir bağlantı modu <xref:System.Data.SqlClient.SqlConnection.ConnectionString%2A>.  

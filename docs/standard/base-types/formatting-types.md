@@ -1,13 +1,7 @@
 ---
-title: ".NET biçimlendirme türleri"
-ms.custom: 
+title: .NET biçimlendirme türleri
 ms.date: 03/30/2017
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
 ms.technology: dotnet-standard
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -31,21 +25,16 @@ helpviewer_keywords:
 - custom formatting [.NET Framework]
 - strings [.NET Framework], formatting
 ms.assetid: 0d1364da-5b30-4d42-8e6b-03378343343f
-caps.latest.revision: "43"
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-- dotnetcore
-ms.openlocfilehash: 201212251bf99e5a5bab7685544079968bbebdb1
-ms.sourcegitcommit: 6a9030eb5bd0f00e1d144f81958adb195cfb1f6f
+ms.openlocfilehash: 10dd7e007ecd24ec3f127ab9c102cd758dfc7d75
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/10/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="formatting-types-in-net"></a>.NET biçimlendirme türleri
-<a name="Introduction"></a>Biçimlendirme Sonuç dizesini kullanıcılara görüntülenen ya da özgün veri türü geri yüklemek için seri, dize gösterimi için genellikle bir sınıf, yapı veya sabit listesi değeri örneği dönüştürme işlemidir. Bu dönüştürme belirli zorluklar oluşturabilir:  
+<a name="Introduction"></a> Biçimlendirme Sonuç dizesini kullanıcılara görüntülenen ya da özgün veri türü geri yüklemek için seri, dize gösterimi için genellikle bir sınıf, yapı veya sabit listesi değeri örneği dönüştürme işlemidir. Bu dönüştürme belirli zorluklar oluşturabilir:  
   
 -   Değerleri dahili olarak depolanma şeklini, kullanıcılar bunları görüntülemek istediğiniz şekilde yansıtmayabilir. Örneğin, bir telefon numarası kullanıcı dostu olmayan biçiminde 8009999999, depolanabilir. Bunun yerine 800-999-9999 görüntülenmelidir. Bkz: [özel biçim dizeleri](#customStrings) bu şekilde bir sayıyı biçimlendirir bir örnek bölüm.  
   
@@ -277,21 +266,21 @@ ms.lasthandoff: 01/10/2018
   
 <a name="FormatProviders"></a>   
 ## <a name="culture-sensitive-formatting-with-format-providers-and-the-iformatprovider-interface"></a>Biçim Sağlayıcıları ve IFormatProvider Arabirimi ile Kültüre Duyarlı Biçimlendirme  
- Biçim belirticiler nesnelerin biçimlendirme özelleştirmenize olanak tanır ancak genellikle anlamlı dize gösterimi nesnelerin oluşturan ek biçimlendirme bilgi gerektirir. Örneğin, "C" standart biçim dizesi veya özel bir biçim dizesi gibi kullanarak bir sayı bir para birimi değeri olarak biçimlendirme "$ #, #. 00" gerektirir, en azından doğru para birimi simgesini, Grup ayırıcısı ve olmasını ondalık ayırıcı hakkında bilgi biçimlendirilmiş dizesini dahil etmek kullanılabilir. .NET içinde bu ek biçimlendirme bilgiler kullanılabilir hale <xref:System.IFormatProvider> bir veya daha fazla aşırı parametre olarak sağlanan arabirimi `ToString` sayısal türler ve tarih ve saat türlerinin yöntemi. <xref:System.IFormatProvider>uygulamaları .NET kültüre özgü biçimlendirme desteklemek için kullanılır. Aşağıdaki örnek, bir nesnenin dize gösterimini üç biçimlendirildiğinde nasıl değiştiğini gösterir <xref:System.IFormatProvider> farklı kültürler temsil eden nesne.  
+ Biçim belirticiler nesnelerin biçimlendirme özelleştirmenize olanak tanır ancak genellikle anlamlı dize gösterimi nesnelerin oluşturan ek biçimlendirme bilgi gerektirir. Örneğin, "C" standart biçim dizesi veya özel bir biçim dizesi gibi kullanarak bir sayı bir para birimi değeri olarak biçimlendirme "$ #, #. 00" gerektirir, en azından doğru para birimi simgesini, Grup ayırıcısı ve olmasını ondalık ayırıcı hakkında bilgi biçimlendirilmiş dizesini dahil etmek kullanılabilir. .NET içinde bu ek biçimlendirme bilgiler kullanılabilir hale <xref:System.IFormatProvider> bir veya daha fazla aşırı parametre olarak sağlanan arabirimi `ToString` sayısal türler ve tarih ve saat türlerinin yöntemi. <xref:System.IFormatProvider> uygulamaları .NET kültüre özgü biçimlendirme desteklemek için kullanılır. Aşağıdaki örnek, bir nesnenin dize gösterimini üç biçimlendirildiğinde nasıl değiştiğini gösterir <xref:System.IFormatProvider> farklı kültürler temsil eden nesne.  
   
  [!code-csharp[Conceptual.Formatting.Overview#11](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.formatting.overview/cs/iformatprovider1.cs#11)]
  [!code-vb[Conceptual.Formatting.Overview#11](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.formatting.overview/vb/iformatprovider1.vb#11)]  
   
  <xref:System.IFormatProvider> Arabirimi içeren bir yöntem <xref:System.IFormatProvider.GetFormat%28System.Type%29>, biçimlendirme bilgileri sağlayan nesne türünü belirten tek bir parametre vardır. Yöntemi bu türde bir nesne sağlarsanız, döndürür. Aksi takdirde null bir başvuru döndürür (`Nothing` Visual Basic'te).  
   
- <xref:System.IFormatProvider.GetFormat%2A?displayProperty=nameWithType>bir geri çağırma yöntemidir. Çağırdığınızda bir `ToString` içeren yöntemi aşırı yüklemesini bir <xref:System.IFormatProvider> parametresi çağırır <xref:System.IFormatProvider.GetFormat%2A> yöntemi, <xref:System.IFormatProvider> nesnesi. <xref:System.IFormatProvider.GetFormat%2A> Yöntemi tarafından belirtilen gerekli biçimlendirme bilgileri sağlayan bir nesne döndürmek için sorumlu kendi `formatType` parametresi, `ToString` yöntemi.  
+ <xref:System.IFormatProvider.GetFormat%2A?displayProperty=nameWithType> bir geri çağırma yöntemidir. Çağırdığınızda bir `ToString` içeren yöntemi aşırı yüklemesini bir <xref:System.IFormatProvider> parametresi çağırır <xref:System.IFormatProvider.GetFormat%2A> yöntemi, <xref:System.IFormatProvider> nesnesi. <xref:System.IFormatProvider.GetFormat%2A> Yöntemi tarafından belirtilen gerekli biçimlendirme bilgileri sağlayan bir nesne döndürmek için sorumlu kendi `formatType` parametresi, `ToString` yöntemi.  
   
  Biçimlendirme veya dize dönüştürme yöntemleri sayısı dahil türünde bir parametre <xref:System.IFormatProvider>, ancak birçok durumda yöntemi çağrıldığında parametresinin değeri yoksayılır. Aşağıdaki tabloda, parametre ve türünü kullanan biçimlendirme yöntemlerin bazıları listeler <xref:System.Type> için geçirirler nesne <xref:System.IFormatProvider.GetFormat%2A?displayProperty=nameWithType> yöntemi.  
   
 |Yöntem|Tür `formatType` parametresi|  
 |------------|------------------------------------|  
-|`ToString`sayısal türler yöntemi|<xref:System.Globalization.NumberFormatInfo?displayProperty=nameWithType>|  
-|`ToString`Tarih ve saat türlerinin yöntemi|<xref:System.Globalization.DateTimeFormatInfo?displayProperty=nameWithType>|  
+|`ToString` sayısal türler yöntemi|<xref:System.Globalization.NumberFormatInfo?displayProperty=nameWithType>|  
+|`ToString` Tarih ve saat türlerinin yöntemi|<xref:System.Globalization.DateTimeFormatInfo?displayProperty=nameWithType>|  
 |<xref:System.String.Format%2A?displayProperty=nameWithType>|<xref:System.ICustomFormatter?displayProperty=nameWithType>|  
 |<xref:System.Text.StringBuilder.AppendFormat%2A?displayProperty=nameWithType>|<xref:System.ICustomFormatter?displayProperty=nameWithType>|  
   

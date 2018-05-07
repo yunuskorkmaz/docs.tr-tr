@@ -1,13 +1,6 @@
 ---
 title: 'Nasıl yapılır: İşleçleri Tanımlayan Bir Sınıf Kullanma (Visual Basic)'
-ms.custom: ''
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- devlang-visual-basic
-ms.topic: article
 helpviewer_keywords:
 - operator procedures [Visual Basic], calling
 - procedures [Visual Basic], operator
@@ -18,14 +11,11 @@ helpviewer_keywords:
 - return values [Visual Basic], Operator procedures
 - operator overloading
 ms.assetid: 7ccce94a-6ca0-47d1-9f3f-13385d34f5d5
-caps.latest.revision: 21
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: 7e0bcfaeca638dfabb841a9e935b872f76fdf957
-ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
+ms.openlocfilehash: 7e1d5698c1e83f0adf1be67245e0726aecaabdac
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-use-a-class-that-defines-operators-visual-basic"></a>Nasıl yapılır: İşleçleri Tanımlayan Bir Sınıf Kullanma (Visual Basic)
 Bir sınıf veya kendi işleçleri tanımlayan yapı kullanıyorsanız, bu işleçler Visual Basic'ten erişebilir.  

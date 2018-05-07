@@ -1,12 +1,6 @@
 ---
 title: Sub Deyimi (Visual Basic)
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- devlang-visual-basic
-ms.topic: article
 f1_keywords:
 - vb.Sub
 helpviewer_keywords:
@@ -35,14 +29,11 @@ helpviewer_keywords:
 - ByVal keyword [Visual Basic], Sub statements
 - Visual Basic code, Sub procedures
 ms.assetid: e347d700-d06c-405b-b302-e9b1edb57dfc
-caps.latest.revision: 
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: 0a2d0d5ffdca857a3a5ca58cd38b0930f254526f
-ms.sourcegitcommit: 8ed4ebc15b5ef89d06a7507dc9d5e306e30accf7
+ms.openlocfilehash: 9a806f2ec979699f7ccf4012c6477bee11301b0f
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/14/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="sub-statement-visual-basic"></a>Sub Deyimi (Visual Basic)
 Ad, parametreleri ve tanımlama kodu bildiren bir `Sub` yordamı.  
@@ -178,7 +169,7 @@ End Sub
 ## <a name="defining-a-sub-procedure"></a>Bir alt yordam tanımlama  
  Tanımlayabileceğiniz bir `Sub` yordamı yalnızca modülü düzeyinde. Bildirimi bağlam alt yordamı için bu nedenle, bir sınıf, bir yapı, bir modül veya bir arabirim olmalıdır ve kaynak dosyası, bir ad alanı, bir yordam veya bir blok olamaz. Daha fazla bilgi için bkz: [bildirim bağlamları ve varsayılan erişim düzeyleri](declaration-contexts-and-default-access-levels.md).  
   
- `Sub`Genel erişim varsayılan yordamlar. Erişim değiştiricileri kullanarak bunların erişim düzeyleri ayarlayabilirsiniz.  
+ `Sub` Genel erişim varsayılan yordamlar. Erişim değiştiricileri kullanarak bunların erişim düzeyleri ayarlayabilirsiniz.  
   
  Yordam kullanıyorsa `Implements` anahtar sözcüğü, içeren sınıf veya yapı olmalıdır bir `Implements` hemen izleyen deyimi kendi `Class` veya `Structure` deyimi. `Implements` Deyim, belirtilen her bir arabirime içermelidir `implementslist`. Ancak, bir arabirim tarafından tanımlayan ad `Sub` (içinde `definedname`) bu yordamı adıyla eşleşmesi gerekmez (içinde `name`).  
   
@@ -214,7 +205,7 @@ End Sub
   
  Ayrıca işaretleyebilirsiniz bir [Function deyimi](function-statement.md) ile `Async` değiştiricisi. Bir `Async` işlevi dönüş türüne sahip <xref:System.Threading.Tasks.Task%601> veya <xref:System.Threading.Tasks.Task>. Bu konuda gösterilmektedir örnek daha sonra da bir `Async` dönüş türüne sahip işlevi <xref:System.Threading.Tasks.Task%601>.  
   
- `Async``Sub` yordamları öncelikle kullanılan olay işleyicileri için bir değer nerede iade edilemez. Bir `Async``Sub` yordamı beklemenin olamaz ve çağıran bir `Async``Sub` yordamı catch özel durumları olamaz, `Sub` yordamı atar.  
+ `Async` `Sub` yordamlar, burada bir değer döndürülemiyor olay işleyicileri için öncelikle kullanılır. Bir `Async``Sub` yordamı beklemenin olamaz ve çağıran bir `Async``Sub` yordamı catch özel durumları olamaz, `Sub` yordamı atar.  
   
  Bir `Async` yordam herhangi bildiremez [ByRef](../modifiers/byref.md) parametreleri.  
   
@@ -226,7 +217,7 @@ End Sub
  [!code-vb[VbVbalrStatements#58](../../../visual-basic/language-reference/error-messages/codesnippet/VisualBasic/sub-statement_1.vb)]  
   
 ## <a name="example"></a>Örnek  
- Aşağıdaki örnekte, `DelayAsync` olan bir `Async``Function` dönüş türüne sahip <xref:System.Threading.Tasks.Task%601>. `DelayAsync`sahip bir `Return` deyimi bir tamsayı döndürür. Bu nedenle, işlevi bildirimi `DelayAsync` dönüş türüne sahip olmalıdır `Task(Of Integer)`. Dönüş türü olduğundan `Task(Of Integer)`, değerlendirmesi `Await` ifadesinde `DoSomethingAsync` aşağıdaki deyimi gösterildiği gibi bir tamsayı üretir: `Dim result As Integer = Await delayTask`.  
+ Aşağıdaki örnekte, `DelayAsync` olan bir `Async``Function` dönüş türüne sahip <xref:System.Threading.Tasks.Task%601>. `DelayAsync` sahip bir `Return` deyimi bir tamsayı döndürür. Bu nedenle, işlevi bildirimi `DelayAsync` dönüş türüne sahip olmalıdır `Task(Of Integer)`. Dönüş türü olduğundan `Task(Of Integer)`, değerlendirmesi `Await` ifadesinde `DoSomethingAsync` aşağıdaki deyimi gösterildiği gibi bir tamsayı üretir: `Dim result As Integer = Await delayTask`.  
   
  `startButton_Click` Yordamdır örneği bir `Async Sub` yordamı. Çünkü `DoSomethingAsync` olan bir `Async` işlevi, görev çağrısı için `DoSomethingAsync` , aşağıdaki deyimi gösterildiği beklemenin gerekir: `Await DoSomethingAsync()`. `startButton_Click``Sub` Yordamı tanımlı, ile `Async` değiştiricisi içerdiğinden bir `Await` ifade.  
   

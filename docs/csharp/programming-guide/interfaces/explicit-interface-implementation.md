@@ -1,21 +1,15 @@
 ---
-title: "Açık Arabirim Uygulaması (C# Programlama Kılavuzu)"
+title: Açık Arabirim Uygulaması (C# Programlama Kılavuzu)
 ms.date: 07/20/2015
-ms.prod: .net
-ms.technology: devlang-csharp
-ms.topic: article
 helpviewer_keywords:
 - explicit interfaces [C#]
 - interfaces [C#], explicit
 ms.assetid: 181c901f-0d4c-4f29-97fc-895079617bf2
-caps.latest.revision: "14"
-author: BillWagner
-ms.author: wiwagn
-ms.openlocfilehash: b746a69484b73a4212c729e02a1256ee1c83ea41
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 7494f7d6a3897d56419f9d3aa96668fd9dab5f35
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="explicit-interface-implementation-c-programming-guide"></a>Açık Arabirim Uygulaması (C# Programlama Kılavuzu)
 Varsa bir [sınıfı](../../../csharp/language-reference/keywords/class.md) bu üye sınıfını uygulama bu üye olarak kendi uygulaması kullanmak her iki arabirimde neden olmaz üyesi aynı imzayla içeren iki arabirimlerini uygular. Aşağıdaki örnekte, tüm çağrıları `Paint` aynı yöntemini çağırma.  
@@ -39,7 +33,7 @@ Varsa bir [sınıfı](../../../csharp/language-reference/keywords/class.md) bu �
  [!code-csharp[csProgGuideInheritance#43](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/explicit-interface-implementation_5.cs)]  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [C# programlama kılavuzu](../../../csharp/programming-guide/index.md)  
- [Sınıflar ve yapılar](../../../csharp/programming-guide/classes-and-structs/index.md)  
- [Arabirimleri](../../../csharp/programming-guide/interfaces/index.md)  
+ [C# Programlama Kılavuzu](../../../csharp/programming-guide/index.md)  
+ [Sınıflar ve Yapılar](../../../csharp/programming-guide/classes-and-structs/index.md)  
+ [Arabirimler](../../../csharp/programming-guide/interfaces/index.md)  
  [Devralma](../../../csharp/programming-guide/classes-and-structs/inheritance.md)

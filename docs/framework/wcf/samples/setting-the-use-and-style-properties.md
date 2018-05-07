@@ -1,24 +1,12 @@
 ---
-title: "Kullanım ve Stil Özelliklerini Ayarlama"
-ms.custom: 
+title: Kullanım ve Stil Özelliklerini Ayarlama
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: c09a0600-116f-41cf-900a-1b7e4ea4e300
-caps.latest.revision: "28"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 6f69ce60e6c9ab98ef773fa54b1c057d3c2b3b48
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 74d5baca77fd1af6260def762094b3ce01816179
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="setting-the-use-and-style-properties"></a>Kullanım ve Stil Özelliklerini Ayarlama
 Bu örnek kullanım ve stil özelliklerini kullanmak gösterilmiştir <xref:System.ServiceModel.XmlSerializerFormatAttribute> ve <xref:System.ServiceModel.DataContractFormatAttribute>. Bu özellikler, iletileri nasıl biçimlendirileceğini etkiler. Varsayılan olarak, ileti gövdesi kümesine stiliyle biçimlendirilmiş <xref:System.ServiceModel.OperationFormatStyle.Document>. Bu ayarlar, hizmet sözleşmesi düzeyi veya işlemi sözleşme düzeyinde ya da belirtilebilir.  
@@ -84,7 +72,7 @@ public interface IUseAndStyleCalculator
 }  
 ```  
   
- Farklı arasındaki farkı görmek için <xref:System.ServiceModel.XmlSerializerFormatAttribute.Use%2A> ve <xref:System.ServiceModel.XmlSerializerFormatAttribute.Style%2A> ayarları hizmetinde değiştirmek, istemci yeniden, örneği çalıştırmak ve hizmet izleme Görüntüleyicisi aracı ile c:\logs\message.logs dosyasını inceleyin. Ayrıca meta veriler üzerindeki etkisini http://localhost/ServiceModelSamples/service.svc?wsdl görüntüleyerek inceleyin. Hizmetler için meta verileri genellikle birden çok sayfaya bozuk. Ana wsdl sayfa WSDL bağlamalar içeriyor, ancak ileti tanımları izlemek için http://localhost/ServiceModelSamples/service.svc?wsdl=wsdl0 görüntüleyin.  
+ Farklı arasındaki farkı görmek için <xref:System.ServiceModel.XmlSerializerFormatAttribute.Use%2A> ve <xref:System.ServiceModel.XmlSerializerFormatAttribute.Style%2A> ayarları hizmetinde değiştirmek, istemci yeniden, örneği çalıştırmak ve hizmet izleme Görüntüleyicisi aracı ile c:\logs\message.logs dosyasını inceleyin. Ayrıca meta veriler üzerindeki etkisini görüntüleyerek gözlemlemek http://localhost/ServiceModelSamples/service.svc?wsdl. Hizmetler için meta verileri genellikle birden çok sayfaya bozuk. Ana wsdl sayfa WSDL bağlamalar içeriyor, ancak görüntülemek http://localhost/ServiceModelSamples/service.svc?wsdl=wsdl0 ileti tanımları izlemek için.  
   
 ### <a name="to-set-up-build-and-run-the-sample"></a>Ayarlamak için derleme ve örnek çalıştırın  
   
@@ -101,7 +89,7 @@ public interface IUseAndStyleCalculator
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  Bu dizin mevcut değilse, Git [Windows Communication Foundation (WCF) ve .NET Framework 4 için Windows Workflow Foundation (WF) örnek](http://go.microsoft.com/fwlink/?LinkId=150780) tüm indirmek için [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] ve [!INCLUDE[wf1](../../../../includes/wf1-md.md)] örnekleri. Bu örnek aşağıdaki dizinde bulunur.  
+>  Bu dizin mevcut değilse, Git [Windows Communication Foundation (WCF) ve .NET Framework 4 için Windows Workflow Foundation (WF) örnek](http://go.microsoft.com/fwlink/?LinkId=150780) tüm Windows Communication Foundation (WCF) indirmek için ve [!INCLUDE[wf1](../../../../includes/wf1-md.md)] örnekleri. Bu örnek aşağıdaki dizinde bulunur.  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Contract\Message\UseAndStyle`  
   

@@ -1,21 +1,12 @@
 ---
 title: "İzlenecek yol: Visual Studio'da (C#) bir nesneyi kalıcı kılma"
-ms.custom: 
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-csharp
-ms.topic: get-started-article
 ms.assetid: a544ce46-ee25-49da-afd4-457a3d59bf63
-caps.latest.revision: "3"
-author: BillWagner
-ms.author: wiwagn
-ms.openlocfilehash: 7b1a3fc377875ee25baa0718a25b5ac509822154
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.openlocfilehash: d2d839d651341e5b40441412c07415c80dfa2c6e
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="walkthrough-persisting-an-object-in-visual-studio-c"></a>İzlenecek yol: Visual Studio'da (C#) bir nesneyi kalıcı kılma
 Tasarım zamanında varsayılan değerlere nesnenin özellikleri belirlenebiliyor olsa da, çalışma zamanında girdiğiniz değerleri nesne bozulduğunda kaybolur. Bir nesnenin veri değerlerini depolamak ve nesne örneği bir sonraki başlatılışında almak sağlar örnekleri arasında kalıcı hale getirmek için seri hale getirme kullanabilirsiniz.  

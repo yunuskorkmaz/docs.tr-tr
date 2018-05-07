@@ -1,35 +1,23 @@
 ---
-title: "Bir hizmet (WCF Veri Hizmetleri) olarak verilerinizi gösterme"
-ms.custom: 
+title: Bir hizmet (WCF Veri Hizmetleri) olarak verilerinizi gösterme
 ms.date: 03/30/2017
-ms.prod: .net-framework-oob
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - WCF Data Services, configuring
 - getting started, WCF Data Services
 - WCF Data Services, getting started
 ms.assetid: df0bbcee-f66f-4a88-abb4-4e73c8b9c908
-caps.latest.revision: "2"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 55e0bc058b92540c9b11965854d38e8d124e205c
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 1ab349125419a0589d68ccb821009f8227c942e8
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="exposing-your-data-as-a-service-wcf-data-services"></a>Bir hizmet (WCF Veri Hizmetleri) olarak verilerinizi gösterme
-[!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)]Verilerinizi olarak kullanıma sunmak için hizmetleri daha kolay tanımlamak etkinleştirmek için Visual Studio ile tümleşir [!INCLUDE[ssODataFull](../../../../includes/ssodatafull-md.md)] akışları. Veri hizmeti oluşturma kullanıma sunan bir [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] akış aşağıdaki temel adımları içerir:  
+[!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] Verilerinizi olarak kullanıma sunmak için hizmetleri daha kolay tanımlamak etkinleştirmek için Visual Studio ile tümleşir [!INCLUDE[ssODataFull](../../../../includes/ssodatafull-md.md)] akışları. Veri hizmeti oluşturma kullanıma sunan bir [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] akış aşağıdaki temel adımları içerir:  
   
-1.  **Tanımlamak** **veri modeli**. [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)]yerel olarak temel alan veri modelleri destekleyen [ADO.NET Entity Framework](../../../../docs/framework/data/adonet/ef/index.md). Daha fazla bilgi için bkz: [nasıl yapılır: bir ADO.NET Entity Framework veri kaynağına veri kullanarak hizmet oluşturma](../../../../docs/framework/data/wcf/create-a-data-service-using-an-adonet-ef-data-wcf.md).  
+1.  **Tanımlamak** **veri modeli**. [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] yerel olarak temel alan veri modelleri destekleyen [ADO.NET Entity Framework](../../../../docs/framework/data/adonet/ef/index.md). Daha fazla bilgi için bkz: [nasıl yapılır: bir ADO.NET Entity Framework veri kaynağına veri kullanarak hizmet oluşturma](../../../../docs/framework/data/wcf/create-a-data-service-using-an-adonet-ef-data-wcf.md).  
   
-     [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)]Ayrıca bir örneğini döndüren ortak dil çalışma zamanı (CLR) nesnelere bağlı veri modelleri destekler <xref:System.Linq.IQueryable%601> arabirimi. Bu, listeler, dizileri ve .NET Framework koleksiyonlarda temelinde Veri Hizmetleri dağıtmanıza olanak tanır. Etkinleştirmek için oluşturma, güncelleştirme ve silme işlemleri de uygulamalıdır bu veri yapıları <xref:System.Data.Services.IUpdatable> arabirimi. Daha fazla bilgi için bkz: [nasıl yapılır: yansıma sağlayıcı veri kullanarak hizmet oluşturma](../../../../docs/framework/data/wcf/create-a-data-service-using-rp-wcf-data-services.md).  
+     [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] Ayrıca bir örneğini döndüren ortak dil çalışma zamanı (CLR) nesnelere bağlı veri modelleri destekler <xref:System.Linq.IQueryable%601> arabirimi. Bu, listeler, dizileri ve .NET Framework koleksiyonlarda temelinde Veri Hizmetleri dağıtmanıza olanak tanır. Etkinleştirmek için oluşturma, güncelleştirme ve silme işlemleri de uygulamalıdır bu veri yapıları <xref:System.Data.Services.IUpdatable> arabirimi. Daha fazla bilgi için bkz: [nasıl yapılır: yansıma sağlayıcı veri kullanarak hizmet oluşturma](../../../../docs/framework/data/wcf/create-a-data-service-using-rp-wcf-data-services.md).  
   
      Daha Gelişmiş senaryolar için [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] geç bağlama veri türlerine bağlı bir veri modeli tanımlamanıza olanak sağlayan sağlayıcıları kümesi içerir. Daha fazla bilgi için bkz: [özel veri hizmeti sağlayıcıları](../../../../docs/framework/data/wcf/custom-data-service-providers-wcf-data-services.md).  
   

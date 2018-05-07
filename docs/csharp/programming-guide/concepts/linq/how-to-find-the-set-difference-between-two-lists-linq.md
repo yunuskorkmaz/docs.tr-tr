@@ -1,21 +1,12 @@
 ---
-title: "Nasıl yapılır: (LINQ) (C#) iki liste arasında ayarlanmış farkı bulma"
-ms.custom: 
+title: 'Nasıl yapılır: (LINQ) (C#) iki liste arasında ayarlanmış farkı bulma'
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-csharp
-ms.topic: article
 ms.assetid: 8e8945f0-4aba-439d-8d5d-c8d1eeef4e71
-caps.latest.revision: "3"
-author: BillWagner
-ms.author: wiwagn
-ms.openlocfilehash: d3987063a039b53b1e9ea7b39958835b0617aa2d
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.openlocfilehash: 8a0f7a06a226c0fee1f0174e187060e4b25faea2
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-find-the-set-difference-between-two-lists-linq-c"></a>Nasıl yapılır: (LINQ) (C#) iki liste arasında ayarlanmış farkı bulma
 Bu örnek LINQ listelerini dizeleri karşılaştırmak ve names1.txt ancak names2.txt olan satırlar çıkış için nasıl kullanılacağını gösterir.  

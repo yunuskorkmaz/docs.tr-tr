@@ -1,14 +1,6 @@
 ---
-title: "ICLRTaskManager::SetLocale Yöntemi"
-ms.custom: 
+title: ICLRTaskManager::SetLocale Yöntemi
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: reference
 api_name:
 - ICLRTaskManager.SetLocale
 api_location:
@@ -23,17 +15,13 @@ helpviewer_keywords:
 ms.assetid: ed16bb7f-4206-43a8-b9e9-c5737b69e3af
 topic_type:
 - apiref
-caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: bbed6bff52d7ccad38eb45d12a31d08dc8b1b774
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: ab6b13c6b7dba34f5ea82d05f483b36bf96aab1d
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="iclrtaskmanagersetlocale-method"></a>ICLRTaskManager::SetLocale Yöntemi
 Ortak dil çalışma zamanı (CLR) ana bilgisayar (coğrafi kültür ve dil eşler) yerel ayar tanımlayıcısı şu anda yürütülen görevde değerini değiştirdi bildirir.  
@@ -62,7 +50,7 @@ HRESULT SetLocale (
 |E_FAIL|Bilinmeyen yıkıcı bir hata oluştu. Bir yöntem E_FAIL döndüğünde, CLR artık işlemi içinde kullanılamaz. Yöntemleri barındırma sonraki çağrılar HOST_E_CLRNOTAVAILABLE döndürür.|  
   
 ## <a name="remarks"></a>Açıklamalar  
- `SetLocale`ana bilgisayar sahip olabilirsiniz herhangi bir mekanizması yerel ayarlar eşitlemesine yürütmek için fırsatı sunar.  
+ `SetLocale` ana bilgisayar sahip olabilirsiniz herhangi bir mekanizması yerel ayarlar eşitlemesine yürütmek için fırsatı sunar.  
   
 ## <a name="requirements"></a>Gereksinimler  
  **Platformlar:** bkz [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
@@ -71,7 +59,7 @@ HRESULT SetLocale (
   
  **Kitaplığı:** bir kaynak olarak MSCorEE.dll dahil  
   
- **.NET framework sürümleri:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET framework sürümleri:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
  [ICLRTask Arabirimi](../../../../docs/framework/unmanaged-api/hosting/iclrtask-interface.md)  

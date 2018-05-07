@@ -1,32 +1,21 @@
 ---
-title: "Zaman uyumsuz etkinlikleri WF içinde oluşturma"
-ms.custom: 
+title: Zaman uyumsuz etkinlikleri WF içinde oluşturma
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 497e81ed-5eef-460c-ba55-fae73c05824f
-caps.latest.revision: "9"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 1d06f825b96f66e35bdd30db272b99bb4e2e3e1e
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 8df876c9be020ece29683d1c101a4045b1c76322
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="creating-asynchronous-activities-in-wf"></a>Zaman uyumsuz etkinlikleri WF içinde oluşturma
-<xref:System.Activities.AsyncCodeActivity>Etkinlik yazarlar etkinleştirir ve zaman uyumsuz yürütme mantığını uygulamak için etkinlikler türetilmiş kullanmak için bir temel sınıf sağlar. Bu, zaman uyumsuz iş akışı Zamanlayıcı iş parçacığı tutan ve paralel olarak çalıştırılabilmesi için hiç etkinlik engelleme olmadan gerçekleştirmelisiniz özel etkinlikler için kullanışlıdır. Bu konu kullanarak zaman uyumsuz özel etkinlikler oluşturmak nasıl bir bakış sunar <xref:System.Activities.AsyncCodeActivity>.  
+<xref:System.Activities.AsyncCodeActivity> Etkinlik yazarlar etkinleştirir ve zaman uyumsuz yürütme mantığını uygulamak için etkinlikler türetilmiş kullanmak için bir temel sınıf sağlar. Bu, zaman uyumsuz iş akışı Zamanlayıcı iş parçacığı tutan ve paralel olarak çalıştırılabilmesi için hiç etkinlik engelleme olmadan gerçekleştirmelisiniz özel etkinlikler için kullanışlıdır. Bu konu kullanarak zaman uyumsuz özel etkinlikler oluşturmak nasıl bir bakış sunar <xref:System.Activities.AsyncCodeActivity>.  
   
 ## <a name="using-asynccodeactivity"></a>AsyncCodeActivity kullanma  
- <xref:System.Activities?displayProperty=nameWithType>Özel Etkinlik yazarlar farklı temel sınıflarının farklı etkinlik yazma gereksinimlerini sağlar. Her biri belirli bir anlam taşır ve iş akışı yazarı (ve etkinlik çalışma zamanı) karşılık gelen bir sözleşme sağlar. Bir <xref:System.Activities.AsyncCodeActivity> tabanlı etkinliktir iş Zamanlayıcı göre zaman uyumsuz olarak gerçekleştirdiği etkinlik yönetilen kodda iş parçacığı ve, yürütme mantığını cinsinden ifade edilir. Zaman uyumsuz, giden sonucunda bir <xref:System.Activities.AsyncCodeActivity> boşta noktanız yürütme sırasında anlamına. Zaman uyumsuz iş volatile doğası nedeniyle bir <xref:System.Activities.AsyncCodeActivity> her zaman etkinliğin yürütme süresi için hiçbir kalan bloğu oluşturur. Bu iş akışı çalışma zamanı iş akışı örneği zaman uyumsuz iş ortasında kalıcı ve ayrıca kaldırma sırada'den zaman uyumsuz kod yürütme iş akışı örneği engeller.  
+ <xref:System.Activities?displayProperty=nameWithType> Özel Etkinlik yazarlar farklı temel sınıflarının farklı etkinlik yazma gereksinimlerini sağlar. Her biri belirli bir anlam taşır ve iş akışı yazarı (ve etkinlik çalışma zamanı) karşılık gelen bir sözleşme sağlar. Bir <xref:System.Activities.AsyncCodeActivity> tabanlı etkinliktir iş Zamanlayıcı göre zaman uyumsuz olarak gerçekleştirdiği etkinlik yönetilen kodda iş parçacığı ve, yürütme mantığını cinsinden ifade edilir. Zaman uyumsuz, giden sonucunda bir <xref:System.Activities.AsyncCodeActivity> boşta noktanız yürütme sırasında anlamına. Zaman uyumsuz iş volatile doğası nedeniyle bir <xref:System.Activities.AsyncCodeActivity> her zaman etkinliğin yürütme süresi için hiçbir kalan bloğu oluşturur. Bu iş akışı çalışma zamanı iş akışı örneği zaman uyumsuz iş ortasında kalıcı ve ayrıca kaldırma sırada'den zaman uyumsuz kod yürütme iş akışı örneği engeller.  
   
 ### <a name="asynccodeactivity-methods"></a>AsyncCodeActivity yöntemleri  
- Öğesinden türetilen etkinlikleri <xref:System.Activities.AsyncCodeActivity> zaman uyumsuz yürütme mantığını kılarak oluşturabilirsiniz <xref:System.Activities.AsyncCodeActivity.BeginExecute%2A> ve <xref:System.Activities.AsyncCodeActivity.EndExecute%2A> özel kod yöntemleriyle. Çalışma zamanı tarafından çağrıldığında, bu yöntemleri geçirilen bir <xref:System.Activities.AsyncCodeActivityContext>. <xref:System.Activities.AsyncCodeActivityContext>Paylaşılan durum arasında sağlamak üzere etkinlik Yazar verir <xref:System.Activities.AsyncCodeActivity.BeginExecute%2A> /  <xref:System.Activities.AsyncCodeActivity.EndExecute%2A> bağlamın içinde <xref:System.Activities.AsyncCodeActivityContext.UserState%2A> özelliği. Aşağıdaki örnekte, bir `GenerateRandom` etkinlik rastgele bir sayı zaman uyumsuz olarak oluşturur.  
+ Öğesinden türetilen etkinlikleri <xref:System.Activities.AsyncCodeActivity> zaman uyumsuz yürütme mantığını kılarak oluşturabilirsiniz <xref:System.Activities.AsyncCodeActivity.BeginExecute%2A> ve <xref:System.Activities.AsyncCodeActivity.EndExecute%2A> özel kod yöntemleriyle. Çalışma zamanı tarafından çağrıldığında, bu yöntemleri geçirilen bir <xref:System.Activities.AsyncCodeActivityContext>. <xref:System.Activities.AsyncCodeActivityContext> Paylaşılan durum arasında sağlamak üzere etkinlik Yazar verir <xref:System.Activities.AsyncCodeActivity.BeginExecute%2A> /  <xref:System.Activities.AsyncCodeActivity.EndExecute%2A> bağlamın içinde <xref:System.Activities.AsyncCodeActivityContext.UserState%2A> özelliği. Aşağıdaki örnekte, bir `GenerateRandom` etkinlik rastgele bir sayı zaman uyumsuz olarak oluşturur.  
   
  [!code-csharp[CFX_ActivityExample#8](../../../samples/snippets/csharp/VS_Snippets_CFX/CFX_ActivityExample/cs/Program.cs#8)]  
   
@@ -36,7 +25,7 @@ ms.lasthandoff: 12/22/2017
   
  Hiçbir değer döndürmeyen olduğundan unutmayın `DisplayRandom` kullanan bir <xref:System.Action> yerine bir <xref:System.Func%602> kendi temsilci ve temsilci çağırmak için herhangi bir değer döndürür.  
   
- <xref:System.Activities.AsyncCodeActivity>Ayrıca sağlayan bir <xref:System.Activities.AsyncCodeActivity.Cancel%2A> geçersiz kılar. Sırada <xref:System.Activities.AsyncCodeActivity.BeginExecute%2A> ve <xref:System.Activities.AsyncCodeActivity.EndExecute%2A> gerekli geçersiz kılmalar olan <xref:System.Activities.AsyncCodeActivity.Cancel%2A> isteğe bağlıdır ve onu yüklenirken etkinliği bekleyen zaman uyumsuz durumuna temizleyebilirsiniz şekilde kılınabilir iptal edildi veya iptal edildi. Temizleme mümkün olup olmadığını ve `AsyncCodeActivity.ExecutingActivityInstance.IsCancellationRequested` olan `true`, etkinlik çağırmalıdır <xref:System.Activities.AsyncCodeActivityContext.MarkCanceled%2A>. Bu yöntemle karşılaşılan özel durumlar için iş akışı örneği önemli.  
+ <xref:System.Activities.AsyncCodeActivity> Ayrıca sağlayan bir <xref:System.Activities.AsyncCodeActivity.Cancel%2A> geçersiz kılar. Sırada <xref:System.Activities.AsyncCodeActivity.BeginExecute%2A> ve <xref:System.Activities.AsyncCodeActivity.EndExecute%2A> gerekli geçersiz kılmalar olan <xref:System.Activities.AsyncCodeActivity.Cancel%2A> isteğe bağlıdır ve onu yüklenirken etkinliği bekleyen zaman uyumsuz durumuna temizleyebilirsiniz şekilde kılınabilir iptal edildi veya iptal edildi. Temizleme mümkün olup olmadığını ve `AsyncCodeActivity.ExecutingActivityInstance.IsCancellationRequested` olan `true`, etkinlik çağırmalıdır <xref:System.Activities.AsyncCodeActivityContext.MarkCanceled%2A>. Bu yöntemle karşılaşılan özel durumlar için iş akışı örneği önemli.  
   
  [!code-csharp[CFX_ActivityExample#10](../../../samples/snippets/csharp/VS_Snippets_CFX/CFX_ActivityExample/cs/Program.cs#10)]  
   
@@ -54,7 +43,7 @@ ms.lasthandoff: 12/22/2017
  [!code-csharp[CFX_ActivityExample#9](../../../samples/snippets/csharp/VS_Snippets_CFX/CFX_ActivityExample/cs/Program.cs#9)]  
   
 ### <a name="scheduling-actions-or-child-activities-using-asynccodeactivity"></a>Zamanlama eylemler veya alt etkinlikleri AsyncCodeActivity kullanma  
- <xref:System.Activities.AsyncCodeActivity>türetilen özel etkinlikler iş akışı iş parçacığı açısından zaman uyumsuz olarak gerçekleştirmek için bir yöntem sağlar, ancak alt etkinlikler veya Eylemler zamanlama yeteneği sağlamaz. Ancak, zaman uyumsuz davranışı alt etkinliklerin birleşim aracılığıyla zamanlama ile birleştirilebilir. Zaman uyumsuz bir etkinlik oluşturulabilir ve ardından ile oluşan bir <xref:System.Activities.Activity> veya <xref:System.Activities.NativeActivity> zaman uyumsuz davranışı ve alt etkinlikler veya Eylemler zamanlama sağlamak üzere etkinlik türetilmiş. Örneğin, bir etkinlik öğesinden türetilen oluşturulamadı <xref:System.Activities.Activity>ve kendi uygulamanızda bir <xref:System.Activities.Statements.Sequence> etkinliğin mantığını uygulayan iyi diğer etkinlikler olarak zaman uyumsuz etkinliğini içeren. Kullanarak etkinlikleri oluşturma hakkında daha fazla örnekleri için <xref:System.Activities.Activity> ve <xref:System.Activities.NativeActivity>, bkz: [nasıl yapılır: bir etkinlik oluşturmak](../../../docs/framework/windows-workflow-foundation/how-to-create-an-activity.md), [etkinlik yazma seçenekleri](../../../docs/framework/windows-workflow-foundation/activity-authoring-options-in-wf.md)ve [bileşik](../../../docs/framework/windows-workflow-foundation/samples/composite.md) etkinlik örnekleri.  
+ <xref:System.Activities.AsyncCodeActivity> türetilen özel etkinlikler iş akışı iş parçacığı açısından zaman uyumsuz olarak gerçekleştirmek için bir yöntem sağlar, ancak alt etkinlikler veya Eylemler zamanlama yeteneği sağlamaz. Ancak, zaman uyumsuz davranışı alt etkinliklerin birleşim aracılığıyla zamanlama ile birleştirilebilir. Zaman uyumsuz bir etkinlik oluşturulabilir ve ardından ile oluşan bir <xref:System.Activities.Activity> veya <xref:System.Activities.NativeActivity> zaman uyumsuz davranışı ve alt etkinlikler veya Eylemler zamanlama sağlamak üzere etkinlik türetilmiş. Örneğin, bir etkinlik öğesinden türetilen oluşturulamadı <xref:System.Activities.Activity>ve kendi uygulamanızda bir <xref:System.Activities.Statements.Sequence> etkinliğin mantığını uygulayan iyi diğer etkinlikler olarak zaman uyumsuz etkinliğini içeren. Kullanarak etkinlikleri oluşturma hakkında daha fazla örnekleri için <xref:System.Activities.Activity> ve <xref:System.Activities.NativeActivity>, bkz: [nasıl yapılır: bir etkinlik oluşturmak](../../../docs/framework/windows-workflow-foundation/how-to-create-an-activity.md), [etkinlik yazma seçenekleri](../../../docs/framework/windows-workflow-foundation/activity-authoring-options-in-wf.md)ve [bileşik](../../../docs/framework/windows-workflow-foundation/samples/composite.md) etkinlik örnekleri.  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
  <xref:System.Action>  

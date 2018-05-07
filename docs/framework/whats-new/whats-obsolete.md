@@ -1,10 +1,7 @@
 ---
-title: "&#39; teki .NET Framework Sınıf Kitaplığı'te eski"
+title: Ne&#39;s .NET Framework Sınıf Kitaplığı'te eski
 ms.custom: updateeachrelease
-ms.date: 10/17/2017
-ms.prod: .net-framework
-ms.technology: dotnet-clr
-ms.topic: article
+ms.date: 04/10/2018
 helpviewer_keywords:
 - obsolete [.NET Framework]
 - what's obsolete [.NET Framework]
@@ -12,15 +9,13 @@ helpviewer_keywords:
 ms.assetid: d356a43a-73df-4ae2-a457-b9628074c7cd
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: d5fc41473c4a3ea812013ee7e5204c22d0a694d7
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 01969eff86e5b1e8e4e2bdc4950df9fb5291f5b6
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
-# <a name="what39s-obsolete-in-the-net-framework-class-library"></a>&#39; teki .NET Framework Sınıf Kitaplığı'te eski
+# <a name="what39s-obsolete-in-the-net-framework-class-library"></a>Ne&#39;s .NET Framework Sınıf Kitaplığı'te eski
 .NET Framework zaman içinde değişir. Her yeni sürümü yeni türleri ve yeni işlevsellik sağlar tür üyeleri ekler. Ayrıca varolan türleri ve üyeleri zamanla değiştirin. Örneğin, bazı türleri destekledikleri teknolojisi tarafından yeni bir teknoloji değiştirilir daha az önemli hale gelmiştir ve bazı yöntemler daha kullanışlı ya da daha tam özellikli yeni yöntemler tarafından değiştirilen.  
   
  Geriye dönük uyumluluk (.NET Framework'ün sonraki sürümünde çalıştırmak için .NET Framework'ün bir sürüm geliştirilen uygulamaların izin verecek şekilde) desteklemek .NET Framework ve ortak dil çalışma zamanı çalışmalar yapılmaktadır. Bu, yalnızca bir tür veya bir tür üyesi kaldırmak zorlaştırır. Bunun yerine, .NET Framework bir tür veya bir tür üyesi artık kullanılmayan veya kullanım dışı olarak işaretleyerek kullanılması gerektiğini gösterir. Bir tür veya üye onaysız kılınmadan, böylece geliştiriciler, azalttıktan ve onun kaldırma yanıt zamanınız kullanan işaretleme içerir. Ancak, tür veya üye kullanan var olan kod, .NET Framework'ün yeni sürümde çalışmaya devam eder.  
@@ -40,7 +35,7 @@ ms.lasthandoff: 12/22/2017
   
 -   Kodunuzu, tür veya üye, kullanımını mümkünse kaldırarak değiştirin.  
   
-     veya  
+     -veya-  
   
 -   İçin kullanımdan yanıt vereceğinizi belirlemek bu teknoloji alanı belgelerini gözden geçirin.  
   
@@ -60,9 +55,9 @@ ms.lasthandoff: 12/22/2017
   
  Aşağıdaki tabloda, atayabilirsiniz dize değerlerini listeler `version` belirli bir .NET Framework sürümünü hedefleyecek şekilde özniteliği.  
   
-|.NET Framework sürümü|`version`dize|
+|.NET Framework sürümü|`version` Dize|
 |-|-|  
-|4.7 (4.7.1 dahil)|v4.0|  
+|4.7 (4.7.1 ve 4.7.2 dahil)|v4.0|  
 |4.6 (4.6.1 ve 4.6.2 dahil)|v4.0|  
 |4.5 (4.5.1 ve 4.5.2 dahil)|v4.0|  
 |4|v4.0|  
@@ -71,7 +66,7 @@ ms.lasthandoff: 12/22/2017
 |1.1|V1.1.4322|  
 |1.0|V1.0.3705|  
   
-## <a name="obsolete-lists-for-the-net-framework-45-and-46"></a>.NET Framework 4.5 ve 4.6 için artık kullanılmayan listeleri  
+## <a name="obsolete-lists-for-the-net-framework-45-and-later-versions"></a>Listeler .NET Framework 4.5 ve sonraki sürümleri için Kullanımdan kalktı.  
  [Eski Türler](../../../docs/framework/whats-new/obsolete-types.md)  
   
  [Eski Üyeler](../../../docs/framework/whats-new/obsolete-members.md)  

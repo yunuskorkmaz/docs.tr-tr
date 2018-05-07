@@ -1,12 +1,6 @@
 ---
-title: "Parametreler ve Bağımsız Değişkenler Arasındaki Farklar (Visual Basic)"
-ms.custom: 
+title: Parametreler ve Bağımsız Değişkenler Arasındaki Farklar (Visual Basic)
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
-ms.topic: article
 helpviewer_keywords:
 - procedures [Visual Basic], arguments
 - procedures [Visual Basic], parameters
@@ -17,14 +11,11 @@ helpviewer_keywords:
 - procedure parameters
 - parameters [Visual Basic], definition
 ms.assetid: c237c056-74f4-4749-9f2c-15864f139a31
-caps.latest.revision: "18"
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: b6613c64a24ef18239422b69f8b5320eadc95b92
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: a5075c218371b754ac883b97475ab941811966b5
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="differences-between-parameters-and-arguments-visual-basic"></a>Parametreler ve Bağımsız Değişkenler Arasındaki Farklar (Visual Basic)
 Çoğu durumda, bir yordam, onu çağrıldı koşullar hakkında bazı bilgileri olması gerekir. Yinelenen veya paylaşılan görevleri gerçekleştiren bir yordam her çağrı için farklı bilgileri kullanır. Bu bilgiler değişkenlerinin, sabitleri ve onu çağırdığınızda, yordama geçirdiğiniz ifadeler oluşur.  
@@ -46,13 +37,13 @@ ms.lasthandoff: 11/21/2017
  Parametre tanımına aksine, bağımsız değişken adları yok. Her bir bağımsız değişkeni sıfır veya daha fazla değişkenlerinin, sabitleri ve değişmez değerleri içeren bir ifade değil. Değerlendirilmiş ifadeyi veri türüne karşılık gelen bir parametre için tanımlanan veri türü genellikle eşleşmelidir ve her durumda parametre türüne dönüştürülebilir olmalıdır.  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [Yordamları](./index.md)  
- [Alt yordamlar](./sub-procedures.md)  
- [İşlev yordamları](./function-procedures.md)  
- [Özellik yordamları](./property-procedures.md)  
- [İşleç yordamları](./operator-procedures.md)  
- [Nasıl yapılır: bir yordamın parametresini tanımlama](./how-to-define-a-parameter-for-a-procedure.md)  
- [Nasıl yapılır: bir yordama bağımsız değişkenler geçirme](./how-to-pass-arguments-to-a-procedure.md)  
- [Bağımsız değişkenleri değere ve başvuruya göre geçirme](./passing-arguments-by-value-and-by-reference.md)  
- [Özyinelemeli yordamlar](./recursive-procedures.md)  
- [Yordam aşırı yüklemesi](./procedure-overloading.md)
+ [Yordamlar](./index.md)  
+ [Alt Yordamlar](./sub-procedures.md)  
+ [İşlev Yordamları](./function-procedures.md)  
+ [Özellik Yordamları](./property-procedures.md)  
+ [İşleç Yordamları](./operator-procedures.md)  
+ [Nasıl yapılır: Bir Yordamın Parametresini Tanımlama](./how-to-define-a-parameter-for-a-procedure.md)  
+ [Nasıl yapılır: Bir Yordama Bağımsız Değişkenler Geçirme](./how-to-pass-arguments-to-a-procedure.md)  
+ [Bağımsız Değişkenleri Değere ve Başvuruya Göre Geçirme](./passing-arguments-by-value-and-by-reference.md)  
+ [Özyinelemeli Yordamlar](./recursive-procedures.md)  
+ [Yordam Aşırı Yüklemesi](./procedure-overloading.md)

@@ -1,12 +1,6 @@
 ---
-title: "Nasıl yapılır: Bir Değişkenin Kapsamını Denetleme (Visual Basic)"
-ms.custom: 
+title: 'Nasıl yapılır: Bir Değişkenin Kapsamını Denetleme (Visual Basic)'
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
-ms.topic: article
 helpviewer_keywords:
 - variables [Visual Basic], scope
 - declared elements [Visual Basic], scope
@@ -18,14 +12,11 @@ helpviewer_keywords:
 - declared elements [Visual Basic], visibility
 - visibility [Visual Basic], variables
 ms.assetid: 44b7f62a-cb5c-4d50-bce9-60ae68f87072
-caps.latest.revision: "12"
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: 7284d344e3bf0fdd0f900f2a820d6c8db4a4bf74
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 6e8d1178398711226b88fee7e6defd5162b91fcb
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-control-the-scope-of-a-variable-visual-basic"></a>Nasıl yapılır: Bir Değişkenin Kapsamını Denetleme (Visual Basic)
 Bir değişken olarak normalde *kapsam*, veya içinde bildirdiğiniz, bölge boyunca, başvuru için görünür. Bazı durumlarda, değişkeni 's *erişim düzeyine* kapsamını etkileyebilir.  
@@ -98,6 +89,6 @@ Public strMsg As String
  [Visual Basic'de kapsam](../../../../visual-basic/programming-guide/language-features/declared-elements/scope.md)  
  [Visual Basic'de ömür](../../../../visual-basic/programming-guide/language-features/declared-elements/lifetime.md)  
  [Visual Basic'de erişim düzeyleri](../../../../visual-basic/programming-guide/language-features/declared-elements/access-levels.md)  
- [Değişkenleri](../../../../visual-basic/programming-guide/language-features/variables/index.md)  
- [Değişken bildirimi](../../../../visual-basic/programming-guide/language-features/variables/variable-declaration.md)  
- [Dim deyimi](../../../../visual-basic/language-reference/statements/dim-statement.md)
+ [Değişkenler](../../../../visual-basic/programming-guide/language-features/variables/index.md)  
+ [Değişken Bildirimi](../../../../visual-basic/programming-guide/language-features/variables/variable-declaration.md)  
+ [Dim Deyimi](../../../../visual-basic/language-reference/statements/dim-statement.md)

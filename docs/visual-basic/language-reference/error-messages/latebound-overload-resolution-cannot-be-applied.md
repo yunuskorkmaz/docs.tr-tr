@@ -1,11 +1,6 @@
 ---
-title: "Bağlanan aşırı yükleme çözünürlüğü uygulanamaz &#39; &lt;procedurename&gt;&#39; çünkü erişen örnek bir arabirim türü"
+title: Bağlanan aşırı yükleme çözünürlüğü uygulanamaz &#39; &lt;procedurename&gt; &#39; çünkü erişen örnek bir arabirim türü
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
-ms.topic: article
 f1_keywords:
 - vbc30933
 - bc30933
@@ -13,16 +8,13 @@ helpviewer_keywords:
 - overload resolution [Visual Basic], with late-bound argument
 - BC30933
 ms.assetid: 8182eea0-dd34-4d6e-9ca0-41d8713e9dc4
-caps.latest.revision: "11"
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: fb7f8a9f6eadfc9fd856ea57d362b43d25ff81a1
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: e41cbf30f06547ef39553e31542e4e8b6df49a3b
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
-# <a name="latebound-overload-resolution-cannot-be-applied-to-39ltprocedurenamegt39-because-the-accessing-instance-is-an-interface-type"></a>Bağlanan aşırı yükleme çözünürlüğü uygulanamaz &#39; &lt;procedurename&gt;&#39; çünkü erişen örnek bir arabirim türü
+# <a name="latebound-overload-resolution-cannot-be-applied-to-39ltprocedurenamegt39-because-the-accessing-instance-is-an-interface-type"></a>Bağlanan aşırı yükleme çözünürlüğü uygulanamaz &#39; &lt;procedurename&gt; &#39; çünkü erişen örnek bir arabirim türü
 Derleyici aşırı yüklenmiş özelliği ya da yordamı başvuru çözümlemeye çalışıyor, ancak başvuru türünde bir bağımsız değişken olduğu için başarısız `Object` ve başvuran nesne bir arabirim veri türüne sahip. `Object` Bağımsız değişkeni referans geç bağlama olarak çözmek için derleme zorlar.  
   
  Bu durumlarda, derleyici yerine uygulayan sınıfa temel arabirimi aracılığıyla aracılığıyla aşırı çözümler. Sınıfı aşırı yüklenmiş sürümlerinden birini adlandırdığında derleyici adından farklı olduğundan bir aşırı olması için bu sürümü dikkate almaz. Bu sırayla başvuruyu çözümlemek için doğru seçim olabilir, yeniden adlandırılmış sürüm yoksay derleyici neden olur.  
@@ -72,6 +64,6 @@ refer.s1(CType(o1, Double))
  Her bir önceki kod satırları açıkça bıraktığı `Object` değişkeni `o1` aşırı yüklemeleri için tanımlanan parametre türleri birine.  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [Yordam aşırı yüklemesi](../../../visual-basic/programming-guide/language-features/procedures/procedure-overloading.md)  
- [Aşırı yükleme çözümü](../../../visual-basic/programming-guide/language-features/procedures/overload-resolution.md)  
- [CType işlevi](../../../visual-basic/language-reference/functions/ctype-function.md)
+ [Yordam Aşırı Yüklemesi](../../../visual-basic/programming-guide/language-features/procedures/procedure-overloading.md)  
+ [Aşırı Yükleme Çözümü](../../../visual-basic/programming-guide/language-features/procedures/overload-resolution.md)  
+ [CType İşlevi](../../../visual-basic/language-reference/functions/ctype-function.md)

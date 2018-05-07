@@ -1,10 +1,6 @@
 ---
-title: "Aşırı Yüklemeler (Visual Basic)"
+title: Aşırı Yüklemeler (Visual Basic)
 ms.date: 07/20/2015
-ms.prod: .net
-ms.suite: 
-ms.technology: devlang-visual-basic
-ms.topic: article
 f1_keywords:
 - vb.Overloads
 - Overloads
@@ -14,14 +10,11 @@ helpviewer_keywords:
 - Shadows keyword [Visual Basic]
 - signature, hiding by
 ms.assetid: 0c6820b8-25b2-4664-bc59-5ca93c99c042
-caps.latest.revision: "15"
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: a23a6b91681cbd814ac96464e1c340be99a0ecf0
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: b68c13d192845fc4bedf1b34a40165ccc1a5ff75
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="overloads-visual-basic"></a>Aşırı Yüklemeler (Visual Basic)
 Bir özellik veya yordam bir veya daha fazla var olan özellikleri ya da aynı ada sahip yordamlar redeclares belirtir.  
@@ -65,23 +58,23 @@ Bir özellik veya yordam bir veya daha fazla var olan özellikleri ya da aynı a
   
 -   **İsteğe bağlı değiştiricisi.** Kullanmak zorunda değil `Overloads` aynı sınıfta birden fazla aşırı yüklenmiş özellikler ya da yordamlar tanımlarken değiştiricisi. Ancak, kullanırsanız `Overloads` bildirimleri her birinde, bunların tümünde kullanmanız gerekir.  
   
--   **Gölgeleme ve aşırı yüklemesi.** `Overloads`Ayrıca gölge var olan bir üye ya da bir taban sınıf içinde aşırı yüklenmiş üyeler kümesi kullanılabilir. Kullandığınızda `Overloads` bu şekilde, özellik veya yöntem aynı adı ve temel sınıf üyesi ile aynı parametre listesine bildirme ve sağladığınız değil `Shadows` anahtar sözcüğü.  
+-   **Gölgeleme ve aşırı yüklemesi.** `Overloads` Ayrıca gölge var olan bir üye ya da bir taban sınıf içinde aşırı yüklenmiş üyeler kümesi kullanılabilir. Kullandığınızda `Overloads` bu şekilde, özellik veya yöntem aynı adı ve temel sınıf üyesi ile aynı parametre listesine bildirme ve sağladığınız değil `Shadows` anahtar sözcüğü.  
   
  Kullanırsanız `Overrides`, derleyici örtük olarak ekler `Overloads` kitaplığınızın API'leri iş böylece C# ile daha kolay.  
   
  `Overloads` Değiştiricisi bu bağlamlarında kullanılabilir:  
   
- [Function deyimi](../../../visual-basic/language-reference/statements/function-statement.md)  
+ [Function Deyimi](../../../visual-basic/language-reference/statements/function-statement.md)  
   
- [Operator deyimi](../../../visual-basic/language-reference/statements/operator-statement.md)  
+ [Operator Deyimi](../../../visual-basic/language-reference/statements/operator-statement.md)  
   
- [Property deyimi](../../../visual-basic/language-reference/statements/property-statement.md)  
+ [Property Deyimi](../../../visual-basic/language-reference/statements/property-statement.md)  
   
- [Sub deyimi](../../../visual-basic/language-reference/statements/sub-statement.md)  
+ [Sub Deyimi](../../../visual-basic/language-reference/statements/sub-statement.md)  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [Gölgeleri](../../../visual-basic/language-reference/modifiers/shadows.md)  
- [Yordam aşırı yüklemesi](../../../visual-basic/programming-guide/language-features/procedures/procedure-overloading.md)  
+ [Shadows](../../../visual-basic/language-reference/modifiers/shadows.md)  
+ [Yordam Aşırı Yüklemesi](../../../visual-basic/programming-guide/language-features/procedures/procedure-overloading.md)  
  [Visual Basic'de genel türler](../../../visual-basic/programming-guide/language-features/data-types/generic-types.md)  
- [İşleç yordamları](../../../visual-basic/programming-guide/language-features/procedures/operator-procedures.md)  
- [Nasıl yapılır: bir dönüşüm işleci tanımlama](../../../visual-basic/programming-guide/language-features/procedures/how-to-define-a-conversion-operator.md)
+ [İşleç Yordamları](../../../visual-basic/programming-guide/language-features/procedures/operator-procedures.md)  
+ [Nasıl yapılır: Dönüştürme İşleci Tanımlama](../../../visual-basic/programming-guide/language-features/procedures/how-to-define-a-conversion-operator.md)

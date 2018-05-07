@@ -2,11 +2,11 @@
 title: '&lt;NET.pipe&gt;'
 ms.date: 03/30/2017
 ms.assetid: 6a0f0318-f8f6-466c-9fae-199d7274a82e
-ms.openlocfilehash: c054cf0e4110051bb4a9ce49003fd0099b111c21
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
-ms.translationtype: HT
+ms.openlocfilehash: 71291b1163ffb4e5fe13ff18d88d47f7d2193497
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="ltnetpipegt"></a>&lt;NET.pipe&gt;
 Adlandırılmış kanal etkinleştirme adlandırılmış kanal bağlantısı ömrü yöneten ve Adlandırılmış Kanallar üzerinden gelmesini etkinleştirme isteklerini yürüten hizmeti, yapılandırma ayarlarını belirtir.  
@@ -57,7 +57,7 @@ Adlandırılmış kanal etkinleştirme adlandırılmış kanal bağlantısı öm
   
 |Öğe|Açıklama|  
 |-------------|-----------------|  
-|[\<allowAccounts >](../../../../../docs/framework/configure-apps/file-schema/wcf/allowaccounts.md)|İçeren yapılandırma öğelerinin koleksiyonu bir `securityIdentifier` kullanıcı hesapları için işlemleri barındıran belirtmek için özniteliği [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)] Hizmetleri ve Paylaşım Hizmeti bağlantı erişim verilir.|  
+|[\<allowAccounts >](../../../../../docs/framework/configure-apps/file-schema/wcf/allowaccounts.md)|Bir koleksiyon içeren yapılandırma öğelerinin bir `securityIdentifier` özniteliği barındıran WCF hizmetleri ve Paylaşım Hizmeti bağlantı erişim izni verilen işlemler için kullanıcı hesaplarını belirtin.|  
   
 ### <a name="parent-elements"></a>Üst Öğeler  
   

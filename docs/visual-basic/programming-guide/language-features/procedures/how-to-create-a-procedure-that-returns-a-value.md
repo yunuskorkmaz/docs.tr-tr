@@ -1,25 +1,16 @@
 ---
-title: "Nasıl yapılır: Değer Döndüren Bir Yordam Oluşturma (Visual Basic)"
-ms.custom: 
+title: 'Nasıl yapılır: Değer Döndüren Bir Yordam Oluşturma (Visual Basic)'
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
-ms.topic: article
 helpviewer_keywords:
 - procedures [Visual Basic], defining
 - Visual Basic code, procedures
 - procedures [Visual Basic], returning a value
 ms.assetid: 8ee19f95-a9ef-4033-963b-d224dca207c4
-caps.latest.revision: "16"
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: 787eddc1fd1cdb9dd6b655a8556b75044b2a49dc
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 472f55173a4897a23a82812a2b24bf1646c1a6ed
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-create-a-procedure-that-returns-a-value-visual-basic"></a>Nasıl yapılır: Değer Döndüren Bir Yordam Oluşturma (Visual Basic)
 Kullandığınız bir `Function` yordamı çağıran kodu için bir değer döndürür.  
@@ -45,11 +36,11 @@ Kullandığınız bir `Function` yordamı çağıran kodu için bir değer dönd
      [!code-vb[VbVbcnProcedures#6](./codesnippet/VisualBasic/how-to-create-a-procedure-that-returns-a-value_2.vb)]  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [Yordamları](./index.md)  
- [Alt yordamlar](./sub-procedures.md)  
- [Özellik yordamları](./property-procedures.md)  
- [İşleç yordamları](./operator-procedures.md)  
- [Parametreler ve bağımsız değişkenler](./procedure-parameters-and-arguments.md)  
- [Function deyimi](../../../../visual-basic/language-reference/statements/function-statement.md)  
- [Nasıl yapılır: bir yordamdan değer döndürme](./how-to-return-a-value-from-a-procedure.md)  
- [Nasıl yapılır: değer döndüren bir yordam çağırma](./how-to-call-a-procedure-that-returns-a-value.md)
+ [Yordamlar](./index.md)  
+ [Alt Yordamlar](./sub-procedures.md)  
+ [Özellik Yordamları](./property-procedures.md)  
+ [İşleç Yordamları](./operator-procedures.md)  
+ [Yordam Parametreleri ve Bağımsız Değişkenleri](./procedure-parameters-and-arguments.md)  
+ [Function Deyimi](../../../../visual-basic/language-reference/statements/function-statement.md)  
+ [Nasıl yapılır: Bir Yordamdan Değer Döndürme](./how-to-return-a-value-from-a-procedure.md)  
+ [Nasıl yapılır: Değer Döndüren Bir Yordam Çağırma](./how-to-call-a-procedure-that-returns-a-value.md)

@@ -1,14 +1,6 @@
 ---
 title: ICLRGCManager::GetStats Metodu
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: reference
 api_name:
 - ICLRGCManager.GetStats
 api_location:
@@ -23,17 +15,13 @@ helpviewer_keywords:
 ms.assetid: ce259d1d-cd81-4490-a7a1-0d0ea0804872
 topic_type:
 - apiref
-caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: c6ba88eebb963749247b318f14ef52bb116e3f0c
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 96673049d37034781dff9f206db86a1d5d953d52
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="iclrgcmanagergetstats-method"></a>ICLRGCManager::GetStats Metodu
 Ortak dil çalışma zamanı 's çöp toplama sistemi hakkında geçerli istatistiklerini kümesini alır.  
@@ -54,7 +42,7 @@ HRESULT GetStats (
   
 |HRESULT|Açıklama|  
 |-------------|-----------------|  
-|S_OK|`GetStats`başarıyla döndürüldü.|  
+|S_OK|`GetStats` başarıyla döndürüldü.|  
 |HOST_E_CLRNOTAVAILABLE|Ortak dil çalışma zamanı (CLR) süreç içine yüklü değil veya CLR içinde yönetilen kod çalıştıramaz veya çağrı başarılı bir şekilde işlemek bir durumda.|  
 |HOST_E_TIMEOUT|Arama zaman aşımına uğradı.|  
 |HOST_E_NOT_OWNER|Arayan kilidi kendisine ait değil.|  
@@ -81,7 +69,7 @@ pCLRGCManager->GetStats(&GCStats);
   
  **Kitaplığı:** bir kaynak olarak MSCorEE.dll dahil  
   
- **.NET framework sürümleri:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET framework sürümleri:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
  [Otomatik Bellek Yönetimi](../../../../docs/standard/automatic-memory-management.md)  

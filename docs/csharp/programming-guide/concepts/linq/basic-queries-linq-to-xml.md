@@ -1,21 +1,12 @@
 ---
 title: Temel sorgu (LINQ-XML) (C#)
-ms.custom: 
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-csharp
-ms.topic: article
 ms.assetid: d333bb7d-20c1-448a-95b7-e5ba07915744
-caps.latest.revision: "3"
-author: BillWagner
-ms.author: wiwagn
-ms.openlocfilehash: 0374cdf35a1c617e390b9e270fbb00932727c2ea
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.openlocfilehash: b96fc6f2af7754d2403c2ccdf862e976463838a3
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="basic-queries-linq-to-xml-c"></a>Temel sorgu (LINQ-XML) (C#)
 Bu bölümde temel örnekleri [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] sorgular.  
@@ -26,7 +17,7 @@ Bu bölümde temel örnekleri [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.m
 |-----------|-----------------|  
 |[Nasıl yapılır: belirli bir özniteliği (C#) olan bir öğe bulunamadı](../../../../csharp/programming-guide/concepts/linq/how-to-find-an-element-with-a-specific-attribute.md)|Belirli bir değere sahip bir özniteliği olan belirli bir öğeyi bulmak gösterilmiştir.|  
 |[Nasıl yapılır: belirli alt öğesi (C#) olan bir öğe bulunamadı](../../../../csharp/programming-guide/concepts/linq/how-to-find-an-element-with-a-specific-child-element.md)|Belirli bir değere sahip bir alt öğesi olan belirli bir öğeyi bulmak gösterilmiştir.|  
-|[XDocument vs sorgulama. Bir XElement (C#) sorgulama](../../../../csharp/programming-guide/concepts/linq/querying-an-xdocument-vs-querying-an-xelement.md)|Sorgu içinde kökü belirtilmiş bir XML ağacı üzerinde yazma arasındaki farklar açıklanmaktadır <xref:System.Xml.Linq.XElement> ve kökü belirtilmiş bir XML ağaç sorguları yazma <xref:System.Xml.Linq.XDocument>.|  
+|[XDocument Sorgulama ve Bir XElement (C#) sorgulama](../../../../csharp/programming-guide/concepts/linq/querying-an-xdocument-vs-querying-an-xelement.md)|Sorgu içinde kökü belirtilmiş bir XML ağacı üzerinde yazma arasındaki farklar açıklanmaktadır <xref:System.Xml.Linq.XElement> ve kökü belirtilmiş bir XML ağaç sorguları yazma <xref:System.Xml.Linq.XDocument>.|  
 |[Nasıl yapılır: Bul Descendants belirli öğe adına (C#)](../../../../csharp/programming-guide/concepts/linq/how-to-find-descendants-with-a-specific-element-name.md)|Belirli bir ada sahip tüm alt öğeleri öğenin bulmak gösterilmiştir. Bu örnekte <xref:System.Xml.Linq.XContainer.Descendants%2A> ekseni.|  
 |[Nasıl yapılır: alt öğeleri yöntemi (C#) kullanarak tek bir alt öğesi bulunamıyor](../../../../csharp/programming-guide/concepts/linq/how-to-find-a-single-descendant-using-the-descendants-method.md)|Nasıl kullanılacağını gösterir <xref:System.Xml.Linq.XContainer.Descendants%2A> tek bir benzersiz olarak bulmak için eksen yöntemi adlı öğesi.|  
 |[Nasıl yapılır: karmaşık (C#) filtreleme ile sorguları yazma](../../../../csharp/programming-guide/concepts/linq/how-to-write-queries-with-complex-filtering.md)|Bir sorgu ile daha karmaşık bir filtre yazma gösterilmektedir.|  

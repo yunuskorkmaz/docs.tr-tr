@@ -1,21 +1,12 @@
 ---
-title: "Standart sorgu işleçlerine genel bakış (C#)"
-ms.custom: 
+title: Standart sorgu işleçlerine genel bakış (C#)
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-csharp
-ms.topic: article
 ms.assetid: 812fa119-5f65-4139-b4fa-55dccd8dc3ac
-caps.latest.revision: "3"
-author: BillWagner
-ms.author: wiwagn
-ms.openlocfilehash: bcf64b87eb7fa1cba863f809dc11ab0ccb68ea9b
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 36bd5927e64ffacb97beac28b8e7790204e08c5c
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="standard-query-operators-overview-c"></a>Standart sorgu işleçlerine genel bakış (C#)
 *Standart sorgu işleçleri* LINQ düzeni form yöntemleridir. Bu yöntemlerin çoğu bir dizi türü uygulayan bir nesne olduğu sıraları üzerinde çalışması <xref:System.Collections.Generic.IEnumerable%601> arabirimi veya <xref:System.Linq.IQueryable%601> arabirimi. Standart sorgu işleçleri filtreleme, yansıtma, toplama, sıralama ve daha fazlası dahil olmak üzere sorgu özellikleri sağlar.  
@@ -117,4 +108,4 @@ foreach (var obj in query)
  [Giriş LINQ sorgularını (C#)](../../../../csharp/programming-guide/concepts/linq/introduction-to-linq-queries.md)  
  [Standart sorgu işleçleri (C#) için sorgu ifade sözdizimi](../../../../csharp/programming-guide/concepts/linq/query-expression-syntax-for-standard-query-operators.md)  
  [Standart sorgu işleçleri yürütme (C#) yöntemine göre sınıflandırılması](../../../../csharp/programming-guide/concepts/linq/classification-of-standard-query-operators-by-manner-of-execution.md)  
- [Genişletme yöntemleri](../../../../csharp/programming-guide/classes-and-structs/extension-methods.md)
+ [Genişletme Yöntemleri](../../../../csharp/programming-guide/classes-and-structs/extension-methods.md)

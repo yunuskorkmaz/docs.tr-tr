@@ -1,13 +1,6 @@
 ---
 title: 'Nasıl yapılır: Bir Yordam Bağımsız Değişkeninin Değerini Değiştirme (Visual Basic)'
-ms.custom: ''
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- devlang-visual-basic
-ms.topic: article
 helpviewer_keywords:
 - procedures [Visual Basic], arguments
 - procedures [Visual Basic], parameters
@@ -20,14 +13,11 @@ helpviewer_keywords:
 - arguments [Visual Basic], ByRef
 - arguments [Visual Basic], changing value
 ms.assetid: 6fad2368-5da7-4c07-8bf8-0f4e65a1be67
-caps.latest.revision: 16
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: 93d9cc11e919e45fdd3b48dd2731b165f3466640
-ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
+ms.openlocfilehash: 118dd3389804794801d39e7d67b68ab195bbad3a
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-change-the-value-of-a-procedure-argument-visual-basic"></a>Nasıl yapılır: Bir Yordam Bağımsız Değişkeninin Değerini Değiştirme (Visual Basic)
 Bir yordam çağrısı, sağladığınız her bağımsız değişkeni yordamda tanımlanan parametrelerin birine karşılık gelir. Bazı durumlarda, yordam kodunu çağıran kodu bir bağımsız değişken temel değeri değiştirebilirsiniz. Diğer durumlarda, yordam bir bağımsız değişken yalnızca kendi yerel kopyasını değiştirebilirsiniz.  

@@ -1,26 +1,15 @@
 ---
-title: "Örtük bir işlem kapsamı kullanarak işlem uygulama"
-ms.custom: 
+title: Örtük bir işlem kapsamı kullanarak işlem uygulama
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
 ms.assetid: 49d1706a-1e0c-4c85-9704-75c908372eb9
-caps.latest.revision: "4"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 0b75091739b0ea97b63b35830f4946a78e49ff8f
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: f3184801ed6a81d65727c638ef733bc93a87c1e8
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="implementing-an-implicit-transaction-using-transaction-scope"></a>Örtük bir işlem kapsamı kullanarak işlem uygulama
 <xref:System.Transactions.TransactionScope> Sınıfı bir işlem ile etkileşim kurmak gerek kalmadan bir işlem içinde katılan olarak kod bloğu işaretlemek için basit bir yol sağlar. Bir işlem kapsamı seçin ve ortam işlem otomatik olarak yönetir. Kullanım kolaylığı ve verimlilik nedeniyle, kullanmanız önerilir <xref:System.Transactions.TransactionScope> hareket uygulaması geliştirilirken sınıfı.  
@@ -51,7 +40,7 @@ ms.lasthandoff: 12/22/2017
 ## <a name="rolling-back-a-transaction"></a>Bir işlemi geri alınıyor  
  Bir işlemi geri almak istiyorsanız, değil çağırmalısınız <xref:System.Transactions.TransactionScope.Complete%2A> işlem kapsamı içinde yöntemi. Örneğin, kapsam içinde bir özel durum. İçinde yer aldığı işlem geri alınacak.  
   
-##  <a name="ManageTxFlow"></a>İşlem akışını TransactionScopeOption kullanarak yönetme  
+##  <a name="ManageTxFlow"></a> İşlem akışını TransactionScopeOption kullanarak yönetme  
  İşlem kapsamı kullanan bir yöntem çağırarak iç içe geçirilemez bir <xref:System.Transactions.TransactionScope> kendi kapsamı kullanan bir yöntem içinde olarak arasındadır talebiyle `RootMethod` aşağıdaki örnekte, yöntemi  
   
 ```csharp  
@@ -135,7 +124,7 @@ using(TransactionScope scope1 = new TransactionScope())
   
  Değerini varsayılan ve en sık kullanılan olsa da <xref:System.Transactions.TransactionScopeOption> olan <xref:System.Transactions.TransactionScopeOption.Required>, her diğer değerlerinin benzersiz amacı vardır.  
   
- <xref:System.Transactions.TransactionScopeOption.Suppress>kod bölümü tarafından gerçekleştirilen işlemler, korumak istediğiniz ve işlemler başarısız oluyorsa ortam hareketi iptal etmek istiyor musunuz durumlarda faydalıdır. Örneğin, günlük gerçekleştirin veya operations denetlemek istediğinizde ya da bakılmaksızın abonelere olayları yayımlamak istediğiniz ortam işleminiz tamamlandıktan olup durdurur. Bu değer, işlemsel olmayan kod bölümünde bir işlem kapsamı içinde sağlamak aşağıdaki örnekte gösterildiği gibi sağlar.  
+ <xref:System.Transactions.TransactionScopeOption.Suppress> kod bölümü tarafından gerçekleştirilen işlemler, korumak istediğiniz ve işlemler başarısız oluyorsa ortam hareketi iptal etmek istiyor musunuz durumlarda faydalıdır. Örneğin, günlük gerçekleştirin veya operations denetlemek istediğinizde ya da bakılmaksızın abonelere olayları yayımlamak istediğiniz ortam işleminiz tamamlandıktan olup durdurur. Bu değer, işlemsel olmayan kod bölümünde bir işlem kapsamı içinde sağlamak aşağıdaki örnekte gösterildiği gibi sağlar.  
   
 ```csharp  
 using(TransactionScope scope1 = new TransactionScope())  

@@ -1,11 +1,6 @@
 ---
 title: ReDim Deyimi (Visual Basic)
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
-ms.topic: article
 f1_keywords:
 - vb.ReDim
 - vb.Preserve
@@ -31,14 +26,11 @@ helpviewer_keywords:
 - declaration statements [Visual Basic]
 - scalar variables [Visual Basic]
 ms.assetid: ad1c5e07-dcd7-4ae1-a79e-ad3f2dcc2083
-caps.latest.revision: "25"
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: 8cec66ee33bfd82b3abd623a0130f5635aa3d1d9
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 9536ea8a6274e0b4a2589caf5aefa271a3567d32
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="redim-statement-visual-basic"></a>ReDim Deyimi (Visual Basic)
 Depolama alanı için bir dizi değişkeni yeniden ayırır.  
@@ -74,7 +66,7 @@ ReDim [ Preserve ] name(boundlist) [ ,  name(boundlist) [, ... ] ]
   
 -   **Veri türleri.** `ReDim` Deyimi, bir dizi değişkeni veya öğelerini veri türünü değiştiremiyor.  
   
--   **Başlatma.** `ReDim` Deyimi dizi öğeleri için yeni başlatma değerleri sağlayamazsınız.  
+-   **başlatma.** `ReDim` Deyimi dizi öğeleri için yeni başlatma değerleri sağlayamazsınız.  
   
 -   **RANK.** `ReDim` Deyimi dizi (dimensions sayısı) derecesini değiştiremiyor.  
   
@@ -86,7 +78,7 @@ ReDim [ Preserve ] name(boundlist) [ ,  name(boundlist) [, ... ] ]
   
 ## <a name="behavior"></a>Davranış  
   
--   **Dizi değiştirme.** `ReDim`Mevcut dizisini serbest bırakır ve aynı dereceye yeni bir dizi oluşturur. Yeni bir dizi dizi değişkeni yayımlanan dizisinde değiştirir.  
+-   **Dizi değiştirme.** `ReDim` Mevcut dizisini serbest bırakır ve aynı dereceye yeni bir dizi oluşturur. Yeni bir dizi dizi değişkeni yayımlanan dizisinde değiştirir.  
   
 -   **Koruma olmadan başlatma.** Belirtmezseniz, `Preserve`, `ReDim` kendi veri türü için varsayılan değer kullanarak yeni bir dizi öğelerini başlatır.  
   
@@ -99,7 +91,7 @@ ReDim [ Preserve ] name(boundlist) [ ,  name(boundlist) [, ... ] ]
   
  `Dim` Deyim üç boyutlarla yeni bir dizi oluşturur. Dizi dizini her boyut için 0 ile 10 arası değişebilir şekilde her boyut sınır 10 değeri ile bildirildi. Aşağıdaki tartışmada boyutların için katman, satır ve sütun adlandırılır.  
   
- İlk `ReDim` değişkeninde varolan dizi yerini alacak yeni bir dizi oluşturur `intArray`. `ReDim`tüm öğeleri varolan diziden yeni diziye kopyalar. Ayrıca her katmandaki her satırın sonuna 10 daha fazla sütun ekler ve bu yeni sütunlar 0 öğelerinde başlatır (varsayılan değeri `Integer`, dizi öğesi türü olduğu).  
+ İlk `ReDim` değişkeninde varolan dizi yerini alacak yeni bir dizi oluşturur `intArray`. `ReDim` tüm öğeleri varolan diziden yeni diziye kopyalar. Ayrıca her katmandaki her satırın sonuna 10 daha fazla sütun ekler ve bu yeni sütunlar 0 öğelerinde başlatır (varsayılan değeri `Integer`, dizi öğesi türü olduğu).  
   
  İkinci `ReDim` başka bir yeni bir dizi oluşturur ve uyan tüm öğeler kopyalar. Ancak, beş sütun her katmandaki her satır sonundan kaybolur. Bu sütunları kullanarak tamamladığınızda bu bir sorun değildir. Uzun bir diziye boyutunun azaltılması, artık gereken belleği boşaltmak.  
   
@@ -109,8 +101,8 @@ ReDim [ Preserve ] name(boundlist) [ ,  name(boundlist) [, ... ] ]
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
  <xref:System.IndexOutOfRangeException>  
- [Const deyimi](../../../visual-basic/language-reference/statements/const-statement.md)  
- [Dim deyimi](../../../visual-basic/language-reference/statements/dim-statement.md)  
- [Erase deyimi](../../../visual-basic/language-reference/statements/erase-statement.md)  
- [Hiçbir şey](../../../visual-basic/language-reference/nothing.md)  
+ [Const Deyimi](../../../visual-basic/language-reference/statements/const-statement.md)  
+ [Dim Deyimi](../../../visual-basic/language-reference/statements/dim-statement.md)  
+ [Erase Deyimi](../../../visual-basic/language-reference/statements/erase-statement.md)  
+ [Nothing](../../../visual-basic/language-reference/nothing.md)  
  [Diziler](../../../visual-basic/programming-guide/language-features/arrays/index.md)

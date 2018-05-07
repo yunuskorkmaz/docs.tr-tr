@@ -1,13 +1,6 @@
 ---
-title: "Nasıl yapılır: Tasarımcıyı Kullanarak Resim Yükleme (Windows Formları)"
-ms.custom: 
+title: 'Nasıl yapılır: Tasarımcıyı Kullanarak Resim Yükleme (Windows Formları)'
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-winforms
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - picture formats
 - images [Windows Forms], displaying on Windows Forms
@@ -15,23 +8,18 @@ helpviewer_keywords:
 - forms [Windows Forms], displaying images
 - PictureBox control [Windows Forms], adding pictures
 ms.assetid: 4dc7b973-afb1-4276-8322-20825af96655
-caps.latest.revision: "9"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 1dec3c71c0c93ce580925744fe55f05cd2e5f383
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.openlocfilehash: 5eb85c6f3ca232f8b53ac01d57ee71f73415cf83
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-load-a-picture-using-the-designer-windows-forms"></a>Nasıl yapılır: Tasarımcıyı Kullanarak Resim Yükleme (Windows Formları)
 Windows Forms ile <xref:System.Windows.Forms.PictureBox> denetim, yüklemek ve bir resim, ayarlayarak tasarım zamanında bir formda görüntülemek <xref:System.Windows.Forms.PictureBox.Image%2A> özelliği için geçerli bir resim. Aşağıdaki tabloda, kabul edilebilir dosya türleri gösterilmektedir.  
   
 |Tür|Dosya adı uzantısı|  
 |----------|-------------------------|  
-|Bitmap|.bmp|  
+|Bit eşlem|.bmp|  
 |Simge|.ico|  
 |GIF|.gif|  
 |Meta dosyası|.wmf|  

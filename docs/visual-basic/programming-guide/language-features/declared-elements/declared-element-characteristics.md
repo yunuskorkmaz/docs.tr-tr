@@ -1,12 +1,6 @@
 ---
-title: "Bildirilen Öğe Özellikleri (Visual Basic)"
-ms.custom: 
+title: Bildirilen Öğe Özellikleri (Visual Basic)
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
-ms.topic: article
 helpviewer_keywords:
 - declared elements [Visual Basic], lifetime
 - access levels, declared elements
@@ -19,14 +13,11 @@ helpviewer_keywords:
 - data types [Visual Basic], declared elements
 - declared elements [Visual Basic], visibility
 ms.assetid: 1bc40fb8-b67c-4428-90a4-76b630ae2583
-caps.latest.revision: "16"
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: 26ee27d3a1d085c6ab45ae850dbdac700aa208a9
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 26c9ec247a0b848d46df063bc7b85ceec30d81c3
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="declared-element-characteristics-visual-basic"></a>Bildirilen Öğe Özellikleri (Visual Basic)
 A *karakteristiğini* bir bildirilen bir durum kodu ile nasıl etkileşim etkiler o öğenin öğesidir. Bildirilen her öğe bir veya daha fazla ile ilişkili aşağıdaki özelliklere sahiptir:  
@@ -62,11 +53,11 @@ A *karakteristiğini* bir bildirilen bir durum kodu ile nasıl etkileşim etkile
  <sup>1</sup> kapsam bazen olarak adlandırılır *görünürlük*.  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [Bildirilen öğeler](../../../../visual-basic/programming-guide/language-features/declared-elements/index.md)  
- [Bildirilen öğe adları](../../../../visual-basic/programming-guide/language-features/declared-elements/declared-element-names.md)  
- [Bildirilmiş öğelere başvurular](../../../../visual-basic/programming-guide/language-features/declared-elements/references-to-declared-elements.md)  
+ [Bildirilen Öğeler](../../../../visual-basic/programming-guide/language-features/declared-elements/index.md)  
+ [Bildirilen Öğe Adları](../../../../visual-basic/programming-guide/language-features/declared-elements/declared-element-names.md)  
+ [Bildirilmiş Öğelere Başvurular](../../../../visual-basic/programming-guide/language-features/declared-elements/references-to-declared-elements.md)  
  [Visual Basic'de ömür](../../../../visual-basic/programming-guide/language-features/declared-elements/lifetime.md)  
  [Visual Basic'de kapsam](../../../../visual-basic/programming-guide/language-features/declared-elements/scope.md)  
  [Visual Basic'de erişim düzeyleri](../../../../visual-basic/programming-guide/language-features/declared-elements/access-levels.md)  
- [Veri türleri](../../../../visual-basic/programming-guide/language-features/data-types/index.md)  
- [Değişken bildirimi](../../../../visual-basic/programming-guide/language-features/variables/variable-declaration.md)
+ [Veri Türleri](../../../../visual-basic/programming-guide/language-features/data-types/index.md)  
+ [Değişken Bildirimi](../../../../visual-basic/programming-guide/language-features/variables/variable-declaration.md)

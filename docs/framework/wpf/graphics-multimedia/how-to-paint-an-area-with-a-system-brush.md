@@ -1,47 +1,35 @@
 ---
-title: "Nasıl yapılır: Sistem Fırçası ile bir Alanı Boyama"
-ms.custom: 
+title: 'Nasıl yapılır: Sistem Fırçası ile bir Alanı Boyama'
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-wpf
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - system brushes [WPF], painting with
 - painting [WPF], with system brushes
 - brushes [WPF], painting with system brushes [WPF]
 ms.assetid: 5141a763-9235-42cb-a6bb-afc75513eac7
-caps.latest.revision: "9"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 87979c16d52262c665e2fb37fdf6d7550c5930c9
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: f8a66ffc283016d65a17b33e98ce28fe4cd1c242
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-paint-an-area-with-a-system-brush"></a>Nasıl yapılır: Sistem Fırçası ile bir Alanı Boyama
 <xref:System.Windows.SystemColors> Sınıfı sistem fırçaları ve renkler, erişim gibi sağlar <xref:System.Windows.SystemColors.ControlBrush%2A>, <xref:System.Windows.SystemColors.ControlBrushKey%2A>, ve <xref:System.Windows.SystemColors.DesktopBrush%2A>. Sistem Fırçası olan bir <xref:System.Windows.Media.SolidColorBrush> belirtilen sistem renk ile alanı boyar nesnesi. Sistem Fırçası her zaman bir düz dolgu üretir; gradyan oluşturmak için kullanılamaz.  
   
  Sistem fırçaları statik veya dinamik bir kaynak kullanabilirsiniz. Uygulama çalışırken kullanıcı sistem fırçası değiştirirse otomatik olarak güncelleştirmek için fırça istiyorsanız, dinamik kaynak kullanın; Aksi halde, bir statik kaynak kullanın. SystemColors sınıfı çeşitli sıkı bir adlandırma kuralı izleyin statik özellikler içerir:  
   
--   *\<SystemColor >*fırça  
+-   *\<SystemColor >* fırça  
   
      Statik başvuru alır bir <xref:System.Windows.Media.SolidColorBrush> belirtilen sistem renginin.  
   
--   *\<SystemColor >*BrushKey  
+-   *\<SystemColor >* BrushKey  
   
      Dinamik bir başvuru edinir bir <xref:System.Windows.Media.SolidColorBrush> belirtilen sistem renginin.  
   
--   *\<SystemColor >*rengi  
+-   *\<SystemColor >* rengi  
   
      Statik başvuru alır bir <xref:System.Windows.Media.Color> belirtilen sistem renginin yapısını.  
   
--   *\<SystemColor >*ColorKey  
+-   *\<SystemColor >* ColorKey  
   
      Dinamik bir başvuru edinir <xref:System.Windows.Media.Color> belirtilen sistem renginin yapısını.  
   

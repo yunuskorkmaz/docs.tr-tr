@@ -1,12 +1,6 @@
 ---
-title: "Nasıl yapılır: Bir İşleci Tanımlama (Visual Basic)"
-ms.custom: 
+title: 'Nasıl yapılır: Bir İşleci Tanımlama (Visual Basic)'
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
-ms.topic: article
 helpviewer_keywords:
 - procedures [Visual Basic], defining
 - Visual Basic code, procedures
@@ -19,14 +13,11 @@ helpviewer_keywords:
 - return values [Visual Basic], Operator procedures
 - operator overloading
 ms.assetid: d4b0e253-092a-4e6e-9fe2-01f562140a29
-caps.latest.revision: "15"
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: 51921ee38204fd528ed19436806fc9433abbdc5e
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: c759ebf38ab0727aeada218d288b5ac01e3ecd03
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-define-an-operator-visual-basic"></a>Nasıl yapılır: Bir İşleci Tanımlama (Visual Basic)
 Bir sınıf veya yapı tanımladıysanız, standart bir işleç davranışını tanımlayabilirsiniz (gibi `*`, `<>`, veya `And`) birine veya ikisine de işlenenler olduğunda sınıf veya yapı türünü.  
@@ -47,11 +38,11 @@ Bir sınıf veya yapı tanımladıysanız, standart bir işleç davranışını 
  Daha fazla bilgi ve örnekler için bkz: [İşleç aşırı yüklemesi Visual Basic 2005](http://go.microsoft.com/fwlink/?LinkId=101703).  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [İşleç yordamları](./operator-procedures.md)  
- [Nasıl yapılır: bir dönüşüm işleci tanımlama](./how-to-define-a-conversion-operator.md)  
- [Nasıl yapılır: bir işleç yordamı çağırma](./how-to-call-an-operator-procedure.md)  
- [Nasıl yapılır: işleçleri tanımlayan bir sınıf kullanma](./how-to-use-a-class-that-defines-operators.md)  
- [Operator deyimi](../../../../visual-basic/language-reference/statements/operator-statement.md)  
- [Structure deyimi](../../../../visual-basic/language-reference/statements/structure-statement.md)  
- [Nasıl yapılır: bir yapıyı bildirme](../../../../visual-basic/programming-guide/language-features/data-types/how-to-declare-a-structure.md)  
- [Mod işleci](../../../../visual-basic/language-reference/operators/mod-operator.md)
+ [İşleç Yordamları](./operator-procedures.md)  
+ [Nasıl yapılır: Dönüştürme İşleci Tanımlama](./how-to-define-a-conversion-operator.md)  
+ [Nasıl yapılır: Bir İşleç Yordamı Çağırma](./how-to-call-an-operator-procedure.md)  
+ [Nasıl yapılır: İşleçleri Tanımlayan Bir Sınıf Kullanma](./how-to-use-a-class-that-defines-operators.md)  
+ [Operator Deyimi](../../../../visual-basic/language-reference/statements/operator-statement.md)  
+ [Structure Deyimi](../../../../visual-basic/language-reference/statements/structure-statement.md)  
+ [Nasıl yapılır: Bir Yapıyı Bildirme](../../../../visual-basic/programming-guide/language-features/data-types/how-to-declare-a-structure.md)  
+ [Mod İşleci](../../../../visual-basic/language-reference/operators/mod-operator.md)

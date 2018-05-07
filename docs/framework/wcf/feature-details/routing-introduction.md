@@ -1,26 +1,12 @@
 ---
-title: "Yönlendirme Tanıtımı"
-ms.custom: 
+title: Yönlendirme Tanıtımı
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: bf6ceb38-6622-433b-9ee7-f79bc93497a1
-caps.latest.revision: 
-author: wadepickett
-ms.author: wpickett
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: e0fe14f096ae0914235ea1d23b874f0aea906d9d
-ms.sourcegitcommit: 15316053918995cc1380163a7d7e7edd5c44e6d7
+ms.openlocfilehash: 3ee7ea8271df47354a0897434bf8f203eaf09a51
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/19/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="routing-introduction"></a>Yönlendirme Tanıtımı
 Yönlendirme hizmeti, ileti içeriğine göre yönlendirme iletilerinin özelliğine sahip bir genel takılabilir SOAP aracı sağlar. Yönlendirme hizmeti ile hizmet toplama, hizmet sürümü oluşturma, öncelik Yönlendirme ve çok noktaya yayın yönlendirme gibi senaryolar uygulamak olanak tanıyan karmaşık bir yönlendirme mantık oluşturabilirsiniz. Yönlendirme hizmeti, işleme hatası, birincil hedef uç noktasına gönderilirken bir hata oluşursa, iletileri gönderildiği yedekleme uç noktaları listelerini ayarlamanıza olanak tanır de sağlar.  
@@ -111,7 +97,7 @@ serviceHost.Description.Behaviors.Add(
      new RoutingBehavior(rc));  
 ```  
   
- Bu örnekte "8000/routingservice/yönlendirilecek iletileri almak için kullanılan yönlendiricinin" adresi olan tek bir uç noktası kullanıma sunmak için yönlendirme hizmeti yapılandırır. Hizmet uç noktası kullanır, iletiler istek-yanıt Uç noktalara yönlendirilir çünkü <xref:System.ServiceModel.Routing.IRequestReplyRouter> sözleşme. Bu yapılandırma ayrıca bir tek istemci uç noktası "8000/servicemodelsample/iletileri yönlendirilir hizmetinin" tanımlar. "RoutingTable1" adlı (gösterilmez) filtre tablo iletileri yönlendirmek için kullanılan yönlendirme mantığı içerir ve kullanarak hizmet uç noktası ile ilişkili **RoutingBehavior** (için bir yapılandırma dosyası) veya  **RoutingConfiguration** (için program yapılandırması).  
+ Bu örnek bir adresi olan tek bir uç noktası kullanıma sunmak için yönlendirme hizmeti yapılandırır "http://localhost:8000/routingservice/router", yönlendirilecek iletileri almak için kullanılır. Hizmet uç noktası kullanır, iletiler istek-yanıt Uç noktalara yönlendirilir çünkü <xref:System.ServiceModel.Routing.IRequestReplyRouter> sözleşme. Bu yapılandırma ayrıca bir tek istemci uç noktasını tanımlıyor "http://localhost:8000/servicemodelsample/service" iletileri için yönlendirilir. "RoutingTable1" adlı (gösterilmez) filtre tablo iletileri yönlendirmek için kullanılan yönlendirme mantığı içerir ve kullanarak hizmet uç noktası ile ilişkili **RoutingBehavior** (için bir yapılandırma dosyası) veya  **RoutingConfiguration** (için program yapılandırması).  
   
 ### <a name="routing-logic"></a>Yönlendirme mantığı  
  İletileri yönlendirmek için kullanılan yönlendirme mantığını tanımlamak için ne gelen iletileri içinde bulunan verileri olabilir belirlemeniz gerekir benzersiz olarak sayısı. İyi bir gösterge aynı SOAP Eylemler, iletinin içinde yer alan eylem değerini paylaşmak için yönlendirme tüm hedef uç noktaları değilse, örneğin, belirli hangi uç noktasını ileti için yönlendirileceğini. Benzersiz olarak belirli bir uç noktasına iletileri yönlendirmek gerekir varsa, ileti yönlendirilir hedef uç nokta benzersiz olarak tanımlayan veri üzerine filtre.  
@@ -173,7 +159,7 @@ rc.FilterTable.Add(new MatchAllMessageFilter(), endpointList);
   
 -   Birden çok filtre döndürmelidir `true` ileti değerlendirirken.  
   
- Bu koşullar karşılanıyorsa, ileti tüm uç noktaları için değerlendirin tüm filtreleri yönlendirilir `true`. Aşağıdaki örnek, uç nokta adresi iletisi 8000/routingservice/yönlendirici/yuvarlama ise her iki uç noktalara yönlendirilen iletilerinde sonuçları bir yönlendirme yapılandırması tanımlar.  
+ Bu koşullar karşılanıyorsa, ileti tüm uç noktaları için değerlendirin tüm filtreleri yönlendirilir `true`. Aşağıdaki örnek, uç nokta adresi iletisi ise, her iki uç noktalara yönlendirilen iletilerinde sonuçları bir yönlendirme yapılandırması tanımlar http://localhost:8000/routingservice/router/rounding.  
   
 ```xml  
 <!--ROUTING SECTION -->  

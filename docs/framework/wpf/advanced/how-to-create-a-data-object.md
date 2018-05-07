@@ -1,13 +1,6 @@
 ---
-title: "Nasıl yapılır: Veri Nesnesi Oluşturma"
-ms.custom: 
+title: 'Nasıl yapılır: Veri Nesnesi Oluşturma'
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-wpf
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -16,16 +9,11 @@ helpviewer_keywords:
 - data objects [WPF], creating
 - drag-and-drop [WPF], creating data objects
 ms.assetid: 022fa142-717d-4fea-a53c-3b52e9d91aff
-caps.latest.revision: "7"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 014d5229026a6fdaab203c82932742c7b2c7639e
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: d10b9ce70ce98e5fcbf8b08e4f22cea4c22d1df0
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-create-a-data-object"></a>Nasıl yapılır: Veri Nesnesi Oluşturma
 Aşağıdaki örnekler tarafından sağlanan oluşturucuları kullanarak bir veri nesnesi oluşturmak için çeşitli şekillerde <xref:System.Windows.DataObject> sınıfı.  

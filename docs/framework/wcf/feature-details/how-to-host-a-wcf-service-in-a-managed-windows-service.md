@@ -1,36 +1,22 @@
 ---
 title: 'Nasıl yapılır: Yönetilen Bir Windows Hizmetinde Bir WCF Hizmeti Barındırma'
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 dev_langs:
 - csharp
 - vb
 ms.assetid: 8e37363b-4dad-4fb6-907f-73c30fac1d9a
-caps.latest.revision: 21
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: aab9780a0d40ab71710d454deb3144219557450f
-ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
+ms.openlocfilehash: c6c3e057fd07569d462f1bf25d1c283e42024a8b
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/30/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-host-a-wcf-service-in-a-managed-windows-service"></a>Nasıl yapılır: Yönetilen Bir Windows Hizmetinde Bir WCF Hizmeti Barındırma
-Bu konu oluşturmak için gereken temel adımlarda özetler bir [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] bir Windows hizmeti tarafından barındırılan hizmet. Senaryo barındırma uzun süreli olduğundan seçeneği yönetilen Windows hizmeti tarafından etkin [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] etkinleştirildi, değil ileti güvenli bir ortamda Internet Information Services (IIS) dışında barındırılan hizmeti. Hizmet ömrü, bunun yerine işletim sistemi tarafından denetlenir. Barındırma bu seçenek, tüm Windows sürümlerinde kullanılabilir.  
+Bu konu, bir Windows hizmeti tarafından barındırılan bir Windows Communication Foundation (WCF) hizmetini oluşturmak için gereken temel adımlarda özetler. Senaryo ileti etkin değil güvenli bir ortamda Internet Information Services (IIS) dışında barındırılan uzun süre çalışan WCF Hizmeti seçeneği barındırma yönetilen Windows hizmet etkinleştirilir. Hizmet ömrü, bunun yerine işletim sistemi tarafından denetlenir. Barındırma bu seçenek, tüm Windows sürümlerinde kullanılabilir.  
   
- Windows Hizmetleri Microsoft.ManagementConsole.SnapIn Microsoft Yönetim Konsolu (MMC) ile yönetilebilir ve sistem önyüklendiğinde otomatik olarak başlatılmasını yapılandırılabilir. Bu barındırma seçeneği barındıran uygulama etki alanı (AppDomain) kaydetme oluşan bir [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] hizmet yönetilen bir Windows hizmet böylece hizmeti işlem ömrü Windows Hizmetleri için Hizmet Denetim Yöneticisi (SCM) tarafından denetlenir.  
+ Windows Hizmetleri Microsoft.ManagementConsole.SnapIn Microsoft Yönetim Konsolu (MMC) ile yönetilebilir ve sistem önyüklendiğinde otomatik olarak başlatılmasını yapılandırılabilir. Bu barındırma seçeneği, yönetilen bir Windows hizmet olarak bir WCF hizmetini barındıran ve böylece hizmeti işlem ömrü Windows Hizmetleri için Hizmet Denetim Yöneticisi (SCM) tarafından denetlenen uygulama etki alanı (AppDomain) kaydetme oluşur.  
   
- Hizmet koduna bir hizmet uygulaması hizmet sözleşmesi, bir Windows hizmet sınıfı ve bir yükleyici sınıfı içerir. Hizmet uygulaması sınıfı `CalculatorService`, olan bir [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] hizmet. `CalculatorWindowsService` Bir Windows hizmetidir. Bir Windows hizmeti olarak nitelemek için sınıfının devraldığı `ServiceBase` ve uygulayan `OnStart` ve `OnStop` yöntemleri. İçinde `OnStart`, <xref:System.ServiceModel.ServiceHost> için oluşturulan `CalculatorService` yazın ve açılır. İçinde `OnStop`, hizmeti durdurulur ve atıldı. Konak, uygulama ayarları'nda yapılandırılmış hizmet ana bilgisayarı için bir taban adresi sağlamaktan sorumludur. Öğesinden devralınan Yükleyici sınıfı <xref:System.Configuration.Install.Installer>, programın bir Windows hizmeti olarak Installutil.exe aracı tarafından yüklenmesine izin verir.  
+ Hizmet koduna bir hizmet uygulaması hizmet sözleşmesi, bir Windows hizmet sınıfı ve bir yükleyici sınıfı içerir. Hizmet uygulaması sınıfı `CalculatorService`, bir WCF hizmeti. `CalculatorWindowsService` Bir Windows hizmetidir. Bir Windows hizmeti olarak nitelemek için sınıfının devraldığı `ServiceBase` ve uygulayan `OnStart` ve `OnStop` yöntemleri. İçinde `OnStart`, <xref:System.ServiceModel.ServiceHost> için oluşturulan `CalculatorService` yazın ve açılır. İçinde `OnStop`, hizmeti durdurulur ve atıldı. Konak, uygulama ayarları'nda yapılandırılmış hizmet ana bilgisayarı için bir taban adresi sağlamaktan sorumludur. Öğesinden devralınan Yükleyici sınıfı <xref:System.Configuration.Install.Installer>, programın bir Windows hizmeti olarak Installutil.exe aracı tarafından yüklenmesine izin verir.  
   
 ### <a name="construct-the-service-and-provide-the-hosting-code"></a>Hizmet oluşturmak ve barındırma kodu sağlayın  
   
@@ -135,7 +121,7 @@ Bu konu oluşturmak için gereken temel adımlarda özetler bir [!INCLUDE[indigo
     > [!NOTE]
     >  Kullanmıyorsanız, [!INCLUDE[vs_current_long](../../../../includes/vs-current-long-md.md)] komut isteminde, olduğundan emin olun `%WinDir%\Microsoft.NET\Framework\v4.0.<current version>` sistem yolunda dizindir.  
   
-     Tür `services.msc` Hizmet Denetim Yöneticisi (SCM) erişmek için komut isteminde. Windows hizmeti Hizmetleri'nde "WCFWindowsServiceSample" görünmelidir. [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] Hizmeti yalnızca yanıt verebilmesini istemcilere Windows Hizmeti çalışıyorsa. Hizmeti başlatmak için SCM ve "Başlat" veya türü sağ **net Başlat WCFWindowsServiceSample** komut isteminde.  
+     Tür `services.msc` Hizmet Denetim Yöneticisi (SCM) erişmek için komut isteminde. Windows hizmeti Hizmetleri'nde "WCFWindowsServiceSample" görünmelidir. Windows Hizmeti çalışıyorsa, WCF hizmeti yalnızca istemcilerine yanıt verebilir. Hizmeti başlatmak için SCM ve "Başlat" veya türü sağ **net Başlat WCFWindowsServiceSample** komut isteminde.  
   
 3.  Hizmete değişiklik yaparsanız, öncelikle durdurmak ve bunu kaldırın. Hizmeti durdurmak, SCM hizmetinde sağ tıklatın ve "Durdur" seçin veya **türü net stop WCFWindowsServiceSample** komut isteminde. Windows hizmetini durdurun ve sonra bir istemci çalıştırırsanız unutmayın bir <xref:System.ServiceModel.EndpointNotFoundException> istemci hizmete erişmeye çalıştığında özel durum oluştu. Windows hizmet türünü kaldırmak için **InstallUtil /u bin\service.exe** komut isteminde.  
   

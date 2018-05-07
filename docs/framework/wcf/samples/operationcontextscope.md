@@ -1,27 +1,15 @@
 ---
 title: OperationContextScope
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 11c11108-8eb4-4d49-95a0-83285a812262
-caps.latest.revision: "14"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 29dab29e6f2e8317d0403ab384fceb2b44b972c8
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: f3dd9c8e83b0840ff68b060889421d60b734d964
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="operationcontextscope"></a>OperationContextScope
-OperationContextScope örnek ek bilgi gönderme yapmayı gösteren bir [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] üstbilgilerini kullanma çağırın. Bu örnekte, sunucu ve istemci, konsol uygulamalardır.  
+OperationContextScope örnek nasıl üstbilgileri kullanarak bir Windows Communication Foundation (WCF) çağrısı hakkında ek bilgi göndereceğinizi gösterir. Bu örnekte, sunucu ve istemci, konsol uygulamalardır.  
   
 > [!NOTE]
 >  Kurulum yordamı ve yapı yönergeleri Bu örnek için bu konunun sonunda yer alır.  
@@ -137,7 +125,7 @@ Press <ENTER> to terminate client.
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  Bu dizin mevcut değilse, Git [Windows Communication Foundation (WCF) ve .NET Framework 4 için Windows Workflow Foundation (WF) örnek](http://go.microsoft.com/fwlink/?LinkId=150780) tüm indirmek için [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] ve [!INCLUDE[wf1](../../../../includes/wf1-md.md)] örnekleri. Bu örnek aşağıdaki dizinde bulunur.  
+>  Bu dizin mevcut değilse, Git [Windows Communication Foundation (WCF) ve .NET Framework 4 için Windows Workflow Foundation (WF) örnek](http://go.microsoft.com/fwlink/?LinkId=150780) tüm Windows Communication Foundation (WCF) indirmek için ve [!INCLUDE[wf1](../../../../includes/wf1-md.md)] örnekleri. Bu örnek aşağıdaki dizinde bulunur.  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Services\OperationContextScope`  
   

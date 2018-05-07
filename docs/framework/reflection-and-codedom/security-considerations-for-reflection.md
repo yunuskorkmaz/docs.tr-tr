@@ -1,13 +1,6 @@
 ---
-title: "Yansımayla İlgili Güvenlik Konuları"
-ms.custom: 
+title: Yansımayla İlgili Güvenlik Konuları
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - permissions [.NET Framework], reflection
 - MethodInfo parameters
@@ -17,16 +10,13 @@ helpviewer_keywords:
 - reflection,partial trust
 - link demands
 ms.assetid: 42d9dc2a-8fcc-4ff3-b002-4ff260ef3dc5
-caps.latest.revision: "21"
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: ef0f9aac9222badb43e19c2901ff705485d5cf3a
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 9dc7bec2023e3ee0db9987e053dd54647ab2e94f
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="security-considerations-for-reflection"></a>Yansımayla İlgili Güvenlik Konuları
 Yansıma erişim üyeleri ve bu türleri ve üyeleri hakkında bilgi alma özelliği sağlar (diğer bir deyişle, yöntemleri ve almak ve özelliği ayarlamak için oluşturucular çağırmak için değerleri, ekleme ve olay işleyicileri kaldırın ve benzeri). Türleri ve üyeleri hakkında bilgi edinmek için yansıma kullanımını sınırlı değildir. Tüm kod yansıma aşağıdaki görevleri gerçekleştirmek için kullanabilirsiniz:  
@@ -45,7 +35,7 @@ Yansıma erişim üyeleri ve bu türleri ve üyeleri hakkında bilgi alma özell
   
     -   Arama kodun temel sınıflarının üyelerini korumalı. (Yansıma, bu için ailesi düzeyinde erişim adlandırılır.)  
   
-    -   `internal`Üyeler (`Friend` üyeleri Visual Basic'te) arama kodun derlemesindeki. (Yansıma, bu için derleme düzeyinde erişim adlandırılır.)  
+    -   `internal` Üyeler (`Friend` üyeleri Visual Basic'te) arama kodun derlemesindeki. (Yansıma, bu için derleme düzeyinde erişim adlandırılır.)  
   
     -   Özel üyelerin diğer örneklerinin çağıran kodu içeren sınıf.  
   

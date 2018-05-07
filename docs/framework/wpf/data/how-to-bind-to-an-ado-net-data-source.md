@@ -1,13 +1,6 @@
 ---
-title: "Nasıl yapılır: ADO.NET Veri Kaynağına Bağlama"
-ms.custom: 
+title: 'Nasıl yapılır: ADO.NET Veri Kaynağına Bağlama'
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-wpf
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -16,16 +9,11 @@ helpviewer_keywords:
 - ADO.NET data sources [WPF], binding to
 - binding [WPF], to ADO.NET data sources
 ms.assetid: a70c6d7b-7b38-4fdf-b655-4804db7c8315
-caps.latest.revision: "15"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 760b59bfa0d556974109ccc0211c021ee76df5dc
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: c9e16b9fd100eb9aec7bee2f94307aa80371d5ec
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-bind-to-an-adonet-data-source"></a>Nasıl yapılır: ADO.NET Veri Kaynağına Bağlama
 Bu örnek nasıl bağlanacağını gösterir bir [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] <xref:System.Windows.Controls.ListBox> denetimini bir [!INCLUDE[TLA#tla_adonet](../../../../includes/tlasharptla-adonet-md.md)] `DataSet`.  
@@ -40,7 +28,7 @@ Bu örnek nasıl bağlanacağını gösterir bir [!INCLUDE[TLA#tla_winclient](..
   
  [!code-xaml[ADODataSet#2](../../../../samples/snippets/csharp/VS_Snippets_Wpf/ADODataSet/CSharp/Window1.xaml#2)]  
   
- `BookItemTemplate`olan <xref:System.Windows.DataTemplate> verinin nasıl göründüğünü tanımlar:  
+ `BookItemTemplate` olan <xref:System.Windows.DataTemplate> verinin nasıl göründüğünü tanımlar:  
   
  [!code-xaml[ADODataSet#3](../../../../samples/snippets/csharp/VS_Snippets_Wpf/ADODataSet/CSharp/Window1.xaml#3)]  
   

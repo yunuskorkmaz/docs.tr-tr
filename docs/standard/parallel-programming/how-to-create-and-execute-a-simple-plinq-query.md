@@ -1,31 +1,20 @@
 ---
-title: "Nasıl yapılır: Basit bir PLINQ Sorgusu Oluşturma ve Yürütme"
-ms.custom: 
+title: 'Nasıl yapılır: Basit bir PLINQ Sorgusu Oluşturma ve Yürütme'
 ms.date: 03/30/2017
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
 ms.technology: dotnet-standard
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
 helpviewer_keywords:
 - PLINQ queries, how to create
 ms.assetid: 983b4213-bddd-4a44-9262-cbe59186df4c
-caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-- dotnetcore
-ms.openlocfilehash: 20b1be451e53a81dd0631a89310a5b884aa83166
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: 2e5bd27dda4bacc50672cca2db38a6eda746d79b
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-create-and-execute-a-simple-plinq-query"></a>Nasıl yapılır: Basit bir PLINQ Sorgusu Oluşturma ve Yürütme
 Aşağıdaki örnek kullanarak basit bir paralel LINQ sorgu oluşturmak nasıl gösterir <xref:System.Linq.ParallelEnumerable.AsParallel%2A> genişletme yöntemi kaynak sıradaki ve kullanarak sorgu yürütülürken <xref:System.Linq.ParallelEnumerable.ForAll%2A> yöntemi.  

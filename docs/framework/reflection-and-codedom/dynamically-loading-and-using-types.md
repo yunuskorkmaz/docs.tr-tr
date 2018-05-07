@@ -1,13 +1,6 @@
 ---
-title: "Dinamik Olarak Yükleme ve Türleri Kullanma"
-ms.custom: 
+title: Dinamik Olarak Yükleme ve Türleri Kullanma
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -19,19 +12,16 @@ helpviewer_keywords:
 - implicit late binding
 - reflection, dynamically using types
 ms.assetid: db985bec-5942-40ec-b13a-771ae98623dc
-caps.latest.revision: "15"
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 0b924f1c1b46eb132070b6d582cf065f38a8a600
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 9795fa411d3b81f9092ddab183c6978ee701ef67
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="dynamically-loading-and-using-types"></a>Dinamik Olarak Yükleme ve Türleri Kullanma
-Yansıma gibi dil derleyicileri tarafından kullanılan altyapı sağlar [!INCLUDE[vbprvbext](../../../includes/vbprvbext-md.md)] ve örtük geç bağlama uygulamak için JScript. Bağlama benzersiz olarak belirtilen türüne karşılık gelen bildirim (uygulama) bulma işlemidir. Bu işlem çalışma zamanında yerine derleme zamanında oluştuğunda geç bağlama adı verilir. [!INCLUDE[vbprvblong](../../../includes/vbprvblong-md.md)]örtük geç bağlama kodunuzda kullanmanıza olanak sağlar; Visual Basic derleyici yansıma nesne türü almak için kullandığı bir yardımcı yöntemini çağırır. Yardımcı yönteme geçirilen bağımsız değişkenler çalışma zamanında çağrılacak uygun yöntemi neden olur. Bu bağımsız değişkenler, yöntem, çağrılan yöntemi (dize) ve (nesnelerinin bir dizisi) çağrılan yönteme geçirilen bağımsız değişken adını çağırmak (nesne) örneği bulunur.  
+Yansıma gibi dil derleyicileri tarafından kullanılan altyapı sağlar [!INCLUDE[vbprvbext](../../../includes/vbprvbext-md.md)] ve örtük geç bağlama uygulamak için JScript. Bağlama benzersiz olarak belirtilen türüne karşılık gelen bildirim (uygulama) bulma işlemidir. Bu işlem çalışma zamanında yerine derleme zamanında oluştuğunda geç bağlama adı verilir. [!INCLUDE[vbprvblong](../../../includes/vbprvblong-md.md)] örtük geç bağlama kodunuzda kullanmanıza olanak sağlar; Visual Basic derleyici yansıma nesne türü almak için kullandığı bir yardımcı yöntemini çağırır. Yardımcı yönteme geçirilen bağımsız değişkenler çalışma zamanında çağrılacak uygun yöntemi neden olur. Bu bağımsız değişkenler, yöntem, çağrılan yöntemi (dize) ve (nesnelerinin bir dizisi) çağrılan yönteme geçirilen bağımsız değişken adını çağırmak (nesne) örneği bulunur.  
   
  Aşağıdaki örnekte, Visual Basic derleyici yansıma örtük olarak türü derleme zamanında bilinmiyor bir nesne üzerinde bir yöntemi çağırmak için kullanır. A **HelloWorld** sınıfına sahip bir **PrintHello** "Merhaba geçirilir belirli bir metin ile birleştirilmiş World" out yazdırır yöntemi **PrintHello** yöntemi. **PrintHello** Bu örnekte adlı yöntemdir gerçekte bir <xref:System.Type.InvokeMember%2A?displayProperty=nameWithType>; Visual Basic kodu sağlar **PrintHello** (helloObj) nesnesinin türü derleme bilinirdi sanki çağrılacak yöntemi (erken bağlama) zaman yerine, çalışma zamanı (geç bağlama).  
   
@@ -84,7 +74,7 @@ End Module
   
  Kullanılabilir kümesinde birden fazla üye ise, tüm bu yöntemleri geçirilecek **BindToMethod**, uygun yöntemi seçer ve döndürür. Kod örneği, servis talebi 2'de adlı iki yöntem vardır **PrintValue**. Uygun yöntemi çağrısı tarafından seçilen **BindToMethod**.  
   
- <xref:System.Reflection.Binder.ChangeType%2A>Seçilen yöntemin biçimsel bağımsız değişkenler türüne gerçek bağımsız değişkenler dönüştüren bağımsız değişkeni zorlama (tür dönüştürme) gerçekleştirir. **ChangeType** türlerinin tam olarak eşleşmesi olsa bile her bağımsız değişkeni için çağrılır.  
+ <xref:System.Reflection.Binder.ChangeType%2A> Seçilen yöntemin biçimsel bağımsız değişkenler türüne gerçek bağımsız değişkenler dönüştüren bağımsız değişkeni zorlama (tür dönüştürme) gerçekleştirir. **ChangeType** türlerinin tam olarak eşleşmesi olsa bile her bağımsız değişkeni için çağrılır.  
   
  Kod örneği, gerçek bağımsız değişken türü, servis talebi 3'te **dize** "5.5" değerine sahip bir yapısal bağımsız değişken türü olan bir yönteme geçirilen **çift**. Çağrı başarılı olması "5.5" dize değerini bir çift değere dönüştürülmesi gerekir. **ChangeType** bu dönüştürme gerçekleştirir.  
   
@@ -106,7 +96,7 @@ End Module
 |Tek|Çift|  
 |Nonreference türü|Başvuru türü|  
   
- <xref:System.Type> Sınıfına sahip **almak** türünde parametre kullanan yöntemleri **bağlayıcı** belirli bir üye başvuruları çözümlenemedi. <xref:System.Type.GetConstructor%2A?displayProperty=nameWithType>, <xref:System.Type.GetMethod%2A?displayProperty=nameWithType>, ve <xref:System.Type.GetProperty%2A?displayProperty=nameWithType> bu üye için imza bilgilerini sağlayarak geçerli türünün belirli bir üyesi arayın. <xref:System.Reflection.Binder.SelectMethod%2A?displayProperty=nameWithType>ve <xref:System.Reflection.Binder.SelectProperty%2A?displayProperty=nameWithType> uygun yöntemleri verilen imza bilgilerinin seçin açın geri çağrıldı.  
+ <xref:System.Type> Sınıfına sahip **almak** türünde parametre kullanan yöntemleri **bağlayıcı** belirli bir üye başvuruları çözümlenemedi. <xref:System.Type.GetConstructor%2A?displayProperty=nameWithType>, <xref:System.Type.GetMethod%2A?displayProperty=nameWithType>, ve <xref:System.Type.GetProperty%2A?displayProperty=nameWithType> bu üye için imza bilgilerini sağlayarak geçerli türünün belirli bir üyesi arayın. <xref:System.Reflection.Binder.SelectMethod%2A?displayProperty=nameWithType> ve <xref:System.Reflection.Binder.SelectProperty%2A?displayProperty=nameWithType> uygun yöntemleri verilen imza bilgilerinin seçin açın geri çağrıldı.  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
  <xref:System.Type.InvokeMember%2A?displayProperty=nameWithType>  

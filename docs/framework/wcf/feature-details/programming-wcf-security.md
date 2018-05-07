@@ -1,42 +1,30 @@
 ---
 title: WCF Güvenliğini Programlama
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 dev_langs:
 - csharp
 - vb
 helpviewer_keywords:
 - message security [WCF], programming overview
 ms.assetid: 739ec222-4eda-4cc9-a470-67e64a7a3f10
-caps.latest.revision: 25
 author: BrucePerlerMS
-ms.author: bruceper
 manager: mbaldwin
-ms.workload:
-- dotnet
-ms.openlocfilehash: 63f5c2c61a374b92b018419c83c9429e6ad796d8
-ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
+ms.openlocfilehash: 3eb645dcc5b8cc1c52818e290699ebadcd0943c6
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/30/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="programming-wcf-security"></a>WCF Güvenliğini Programlama
-Bu konu güvenli oluşturmak için kullanılan temel programlama görevleri açıklar [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] uygulama. Bu konu, yalnızca kimlik doğrulaması, gizliliği ve bütünlük, topluca olarak bilinen kapsar *Aktarım güvenlik*. Bu konuda yetkilendirme (kaynaklarına veya hizmetlerine erişim denetimi); kapsamaz Yetkilendirme hakkında daha fazla bilgi için bkz: [yetkilendirme](../../../../docs/framework/wcf/feature-details/authorization-in-wcf.md).  
+Bu konu, güvenli bir Windows Communication Foundation (WCF) uygulaması oluşturmak için kullanılan temel programlama görevleri açıklar. Bu konu, yalnızca kimlik doğrulaması, gizliliği ve bütünlük, topluca olarak bilinen kapsar *Aktarım güvenlik*. Bu konuda yetkilendirme (kaynaklarına veya hizmetlerine erişim denetimi); kapsamaz Yetkilendirme hakkında daha fazla bilgi için bkz: [yetkilendirme](../../../../docs/framework/wcf/feature-details/authorization-in-wcf.md).  
   
 > [!NOTE]
->  Özellikle de hesaba için güvenlik kavramları değerli bir giriş için [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)], MSDN'de bulunan desenleri ve uygulamalar öğreticileri kümesini görmek [senaryoları, desenleri ve uygulama kılavuzunu Web Services Enhancements (WSE) 3.0](http://go.microsoft.com/fwlink/?LinkID=88250).  
+>  WCF, özellikle in regard to güvenlik kavramları değerli bir giriş için MSDN'de desenleri ve uygulamalar öğreticileri kümesini görmek [senaryoları, desenleri ve uygulama kılavuzunu Web Services Enhancements (WSE) 3.0](http://go.microsoft.com/fwlink/?LinkID=88250).  
   
- Programlama [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] aşağıdaki üç adımı üzerinde tabanlı güvenlik: güvenlik modu, bir istemci kimlik bilgisi türü ve kimlik bilgisi değerleri. Kod veya yapılandırma yoluyla bu adımları gerçekleştirebilir.  
+ WCF güvenliğini programlama aşağıdaki üç adımı üzerinde temel: güvenlik modu, bir istemci kimlik bilgisi türü ve kimlik bilgisi değerleri. Kod veya yapılandırma yoluyla bu adımları gerçekleştirebilir.  
   
 ## <a name="setting-the-security-mode"></a>Güvenlik modunu ayarlama  
- Aşağıdaki güvenlik modunda'yla programlama için genel adımlar açıklanmaktadır [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]:  
+ WCF'de güvenlik moduyla programlama için genel adımlar açıklanmaktadır:  
   
 1.  Uygulama gereksinimlerinize uygun önceden tanımlanmış bağlamaları birini seçin. Bağlama tercih listesi için bkz: [System-Provided bağlamaları](../../../../docs/framework/wcf/system-provided-bindings.md). Varsayılan olarak etkin güvenlik neredeyse her bağlama yok. Bir özel durum <xref:System.ServiceModel.BasicHttpBinding> sınıfı (yapılandırmayı kullanarak [ \<basicHttpBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/basichttpbinding.md)).  
   

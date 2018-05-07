@@ -1,30 +1,20 @@
 ---
-title: "Yükleyici ETW Olayları"
-ms.custom: 
+title: Yükleyici ETW Olayları
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - loader events [.NET Framework]
 - ETW, loader events (CLR)
 ms.assetid: cb403cc6-56f8-4609-b467-cdfa09f07909
-caps.latest.revision: "18"
 author: mairaw
 ms.author: mairaw
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: ebdee4427bd0848e75e58443fefd439acaa27f64
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: d4746e9e7c8c83caf09ccf51749e9e3cbe69ec52
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="loader-etw-events"></a>Yükleyici ETW Olayları
-<a name="top"></a>Bu olaylar, yükleme ve kaldırma uygulama etki alanları, derlemeler ve modüller işlemeyle ilgili bilgi toplayın.  
+<a name="top"></a> Bu olaylar, yükleme ve kaldırma uygulama etki alanları, derlemeler ve modüller işlemeyle ilgili bilgi toplayın.  
   
  Tüm yükleyici olayları altında oluşturulan `LoaderKeyword` (0x8) anahtar sözcüğü. `DCStart` Ve `DCEnd` olayları yükseltilmiş altında `LoaderRundownKeyword` (0x8) ile `StartRundown` / `EndRundown` etkin. (Daha fazla bilgi için bkz: [CLR ETW anahtar sözcükleri ve Düzeyler](../../../docs/framework/performance/clr-etw-keywords-and-levels.md).)  
   
@@ -46,15 +36,15 @@ ms.lasthandoff: 12/22/2017
   
 |Olay oluşturma için anahtar sözcüğü|Olay|Düzey|  
 |-----------------------------------|-----------|-----------|  
-|`LoaderKeyword`(0x8)|`AppDomainLoad_V1`ve`AppDomainUnLoad_V1`|Bilgilendirici (4)|  
-|`LoaderRundownKeyword`(0x8) +<br /><br /> `StartRundownKeyword`|`AppDomainDCStart_V1`|Bilgilendirici (4)|  
-|`LoaderRundownKeyword`(0x8) +<br /><br /> `EndRundownKeyword`|`AppDomainDCEnd_V1`|Bilgilendirici (4)|  
+|`LoaderKeyword` (0x8)|`AppDomainLoad_V1` Ve `AppDomainUnLoad_V1`|Bilgilendirici (4)|  
+|`LoaderRundownKeyword` (0x8) +<br /><br /> `StartRundownKeyword`|`AppDomainDCStart_V1`|Bilgilendirici (4)|  
+|`LoaderRundownKeyword` (0x8) +<br /><br /> `EndRundownKeyword`|`AppDomainDCEnd_V1`|Bilgilendirici (4)|  
   
  Aşağıdaki tabloda olay bilgilerini gösterir.  
   
 |Olay|Olay Kimliği|Açıklama|  
 |-----------|--------------|-----------------|  
-|`AppDomainLoad_V1`(tüm uygulama etki alanları için oturum açmış)|156|Uygulama etki alanı bir işlem ömrü boyunca oluşturulduğunda oluşturulur.|  
+|`AppDomainLoad_V1` (tüm uygulama etki alanları için oturum açmış)|156|Uygulama etki alanı bir işlem ömrü boyunca oluşturulduğunda oluşturulur.|  
 |`AppDomainUnLoad_V1`|157|Uygulama etki alanı bir işlem ömrü boyunca yok edildiğinde oluşturulur.|  
 |`AppDomainDCStart_V1`|157|Uygulama etki alanları başlangıç özeti sırasında numaralandırır.|  
 |`AppDomainDCEnd_V1`|158|Uygulama etki alanları son özeti sırasında numaralandırır.|  
@@ -77,9 +67,9 @@ ms.lasthandoff: 12/22/2017
   
 |Olay oluşturma için anahtar sözcüğü|Olay|Düzey|  
 |-----------------------------------|-----------|-----------|  
-|`LoaderKeyword`(0x8)|`AssemblyLoad`ve`AssemblyUnload`|Bilgilendirici (4)|  
-|`LoaderRundownKeyword`(0x8) +<br /><br /> `StartRundownKeyword`|`AssemblyDCStart`|Bilgilendirici (4)|  
-|`LoaderRundownKeyword`(0x8) +<br /><br /> `EndRundownKeyword`|`AssemblyDCEnd`|Bilgilendirici (4)|  
+|`LoaderKeyword` (0x8)|`AssemblyLoad` Ve `AssemblyUnload`|Bilgilendirici (4)|  
+|`LoaderRundownKeyword` (0x8) +<br /><br /> `StartRundownKeyword`|`AssemblyDCStart`|Bilgilendirici (4)|  
+|`LoaderRundownKeyword` (0x8) +<br /><br /> `EndRundownKeyword`|`AssemblyDCEnd`|Bilgilendirici (4)|  
   
  Aşağıdaki tabloda olay bilgilerini gösterir.  
   
@@ -109,9 +99,9 @@ ms.lasthandoff: 12/22/2017
   
 |Olay oluşturma için anahtar sözcüğü|Olay|Düzey|  
 |-----------------------------------|-----------|-----------|  
-|`LoaderKeyword`(0x8)|`ModuleLoad_V2`ve`ModuleUnload_V2`|Bilgilendirici (4)|  
-|`LoaderRundownKeyword`(0x8) +<br /><br /> `StartRundownKeyword`|`ModuleDCStart_V2`|Bilgilendirici (4)|  
-|`LoaderRundownKeyword`(0x8) +<br /><br /> `EndRundownKeyword`|`ModuleDCEnd_V2`|Bilgilendirici (4)|  
+|`LoaderKeyword` (0x8)|`ModuleLoad_V2` Ve `ModuleUnload_V2`|Bilgilendirici (4)|  
+|`LoaderRundownKeyword` (0x8) +<br /><br /> `StartRundownKeyword`|`ModuleDCStart_V2`|Bilgilendirici (4)|  
+|`LoaderRundownKeyword` (0x8) +<br /><br /> `EndRundownKeyword`|`ModuleDCEnd_V2`|Bilgilendirici (4)|  
 ||||  
   
  Aşağıdaki tabloda olay bilgilerini gösterir.  
@@ -157,9 +147,9 @@ ms.lasthandoff: 12/22/2017
   
 |Olay oluşturma için anahtar sözcüğü|Olay|Düzey|  
 |-----------------------------------|-----------|-----------|  
-|`LoaderKeyword`(0x8)|`DomainModuleLoad_V1`|Bilgilendirici (4)|  
-|`LoaderRundownKeyword`(0x8) +<br /><br /> `StartRundownKeyword`|`DomainModuleDCStart_V1`|Bilgilendirici (4)|  
-|`LoaderRundownKeyword`(0x8) +<br /><br /> `EndRundownKeyword`|`DomainModuleDCEnd_V1`|Bilgilendirici (4)|  
+|`LoaderKeyword` (0x8)|`DomainModuleLoad_V1`|Bilgilendirici (4)|  
+|`LoaderRundownKeyword` (0x8) +<br /><br /> `StartRundownKeyword`|`DomainModuleDCStart_V1`|Bilgilendirici (4)|  
+|`LoaderRundownKeyword` (0x8) +<br /><br /> `EndRundownKeyword`|`DomainModuleDCEnd_V1`|Bilgilendirici (4)|  
   
  Aşağıdaki tabloda olay bilgilerini gösterir.  
   

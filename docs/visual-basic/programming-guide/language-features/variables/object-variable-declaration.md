@@ -1,13 +1,6 @@
 ---
-title: "Nesne Değişken Bildirimi (Visual Basic)"
-ms.custom: 
+title: Nesne Değişken Bildirimi (Visual Basic)
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - early binding [Visual Basic]
 - declarations [Visual Basic], class
@@ -19,14 +12,11 @@ helpviewer_keywords:
 - declaring classes [Visual Basic]
 - late binding [Visual Basic]
 ms.assetid: 2a5a41a3-1aa8-4236-b1f0-2382af7bf715
-caps.latest.revision: "33"
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: cdca188d778e9884f918d97eba492a29c64af826
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: f5f77b81380d997e078a9f52ac4aae6f6e975575
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="object-variable-declaration-visual-basic"></a>Nesne Değişken Bildirimi (Visual Basic)
 Bir nesne değişkeni bildirme için normal bildirimi deyimini kullanın. Veri türü için ya da belirttiğiniz `Object` (diğer bir deyişle, [nesne veri türü](../../../../visual-basic/language-reference/data-types/object-data-type.md)) ya da nesne olduğu oluşturulacak daha belirli bir sınıf.  
@@ -135,11 +125,11 @@ Dim anyForm As System.Windows.Forms.Form
  Bir taban sınıfın tüm üyeleri için türetilen sınıflar kullanılabilir, ancak ek türetilmiş bir sınıf üyeleri için temel sınıf kullanılamaz.  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [Nesne değişkenleri](../../../../visual-basic/programming-guide/language-features/variables/object-variables.md)  
- [Nesne değişkeni ataması](../../../../visual-basic/programming-guide/language-features/variables/object-variable-assignment.md)  
- [Nesne değişkeni değerleri](../../../../visual-basic/programming-guide/language-features/variables/object-variable-values.md)  
+ [Nesne Değişkenleri](../../../../visual-basic/programming-guide/language-features/variables/object-variables.md)  
+ [Nesne Değişkeni Ataması](../../../../visual-basic/programming-guide/language-features/variables/object-variable-assignment.md)  
+ [Nesne Değişkeni Değerleri](../../../../visual-basic/programming-guide/language-features/variables/object-variable-values.md)  
  [Nasıl yapılır: bir nesne değişkeni bildirme ve Visual Basic'te bir nesneyi atayın](../../../../visual-basic/programming-guide/language-features/variables/how-to-declare-an-object-variable-and-assign-an-object-to-it.md)  
- [Nasıl yapılır: bir nesnenin üyelerine erişme](../../../../visual-basic/programming-guide/language-features/variables/how-to-access-members-of-an-object.md)  
- [New işleci](../../../../visual-basic/language-reference/operators/new-operator.md)  
- [Option Strict deyimi](../../../../visual-basic/language-reference/statements/option-strict-statement.md)  
- [Yerel tür çıkarımı](../../../../visual-basic/programming-guide/language-features/variables/local-type-inference.md)
+ [Nasıl yapılır: Bir Nesnenin Üyelerine Erişme](../../../../visual-basic/programming-guide/language-features/variables/how-to-access-members-of-an-object.md)  
+ [New İşleci](../../../../visual-basic/language-reference/operators/new-operator.md)  
+ [Option Strict Deyimi](../../../../visual-basic/language-reference/statements/option-strict-statement.md)  
+ [Yerel Çıkarım](../../../../visual-basic/programming-guide/language-features/variables/local-type-inference.md)

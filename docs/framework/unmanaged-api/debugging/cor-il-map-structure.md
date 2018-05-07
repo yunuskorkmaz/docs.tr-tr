@@ -1,14 +1,6 @@
 ---
-title: "COR_IL_MAP Yapısı"
-ms.custom: 
+title: COR_IL_MAP Yapısı
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: reference
 api_name:
 - COR_IL_MAP
 api_location:
@@ -22,17 +14,13 @@ helpviewer_keywords:
 ms.assetid: 534ebc17-963d-4b26-8375-8cd940281db3
 topic_type:
 - apiref
-caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 2e2772833d75ced2209896ca37cf6cf37fb965f1
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 9676730a4f11ed77996b7a4aab4e538aba9b53c4
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="corilmap-structure"></a>COR_IL_MAP Yapısı
 Değişiklikler bir işlev göreli uzaklığı belirtir.  
@@ -53,7 +41,7 @@ typedef struct _COR_IL_MAP {
 |------------|-----------------|  
 |`oldOffset`|İşlev başına göreli uzaklığı eski Microsoft Ara dili (MSIL).|  
 |`newOffset`|İşlev başlangıcını göre yeni MSIL uzaklığı.|  
-|`fAccurate`|`true`doğru olması için eşleme biliniyorsa; Aksi takdirde `false`.|  
+|`fAccurate`|`true` doğru olması için eşleme biliniyorsa; Aksi takdirde `false`.|  
   
 ## <a name="remarks"></a>Açıklamalar  
  Harita biçimi aşağıdaki gibidir: hata ayıklayıcı varsayar `oldOffset` özgün, değiştirilmemiş MSIL kodundaki MSIL uzaklığı ifade eder. `newOffset` Yeni, Araçlı kod içinde karşılık gelen MSIL uzaklık parametresi başvurur.  
@@ -99,7 +87,7 @@ typedef struct _COR_IL_MAP {
   
  **Kitaplığı:** CorGuids.lib  
   
- **.NET framework sürümleri:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET framework sürümleri:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
  [Hata Ayıklama Yapıları](../../../../docs/framework/unmanaged-api/debugging/debugging-structures.md)  

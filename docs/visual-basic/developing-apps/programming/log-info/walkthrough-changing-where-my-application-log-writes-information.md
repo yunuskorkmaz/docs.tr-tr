@@ -1,24 +1,15 @@
 ---
-title: "My.Application.Log (Visual Basic) bilgileri yazdığı yeri değiştirme"
-ms.custom: 
+title: My.Application.Log (Visual Basic) bilgileri yazdığı yeri değiştirme
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
-ms.topic: article
 helpviewer_keywords:
 - My.Application.Log object, walkthroughs
 - event logs, changing output location
 ms.assetid: ecc74f95-743c-450d-93f6-09a30db0fe4a
-caps.latest.revision: "20"
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: c4cd2e675bf1be4f065ee116795a95dae64d13d9
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: ab46f192f2e9549d0568737236742a366ce7b3a0
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="walkthrough-changing-where-myapplicationlog-writes-information-visual-basic"></a>İzlenecek Yol: My.Application.Log Günlüğünün Bilgileri Yazdığı Yeri Değiştirme (Visual Basic)
 Kullanabileceğiniz `My.Application.Log` ve `My.Log` uygulamanızda oluşan olaylarla ilgili bilgileri günlüğe kaydetmek için nesneleri. Bu kılavuz varsayılan ayarları geçersiz kılar ve neden gösterilmektedir `Log` diğer günlük dinleyicileri yazılacak nesne.  
@@ -32,7 +23,7 @@ Kullanabileceğiniz `My.Application.Log` ve `My.Log` uygulamanızda oluşan olay
   
 1.  App.config dosyasında sağ **Çözüm Gezgini** ve **açık**.  
   
-     \-veya -  
+     \- veya -  
   
      Herhangi bir app.config dosyası ise:  
   
@@ -179,7 +170,7 @@ Kullanabileceğiniz `My.Application.Log` ve `My.Log` uygulamanızda oluşan olay
   
 1.  Doğru türde günlük dinleyici için kullanıldığından emin olmak için tam olarak nitelenmiş tür adını ve kesin adlandırılmış derleme adı kullandığınızdan emin olun. Türü kesin adlandırılmış bir türün söz dizimi aşağıdaki gibidir:  
   
-     \<*tür adı*>, \< *derleme adı*>, \< *sürüm numarası*>, \< *kültür*>, \< *kesin adı*>  
+     \<*tür adı*>, \< *derleme adı*>, \< *sürüm numarası*>, \< *kültür*>, \< *tanımlayıcı adı*>  
   
 2.  Bu kod örneği için tam type—"System.Diagnostics.FileLogTraceListener kesin adlandırılmış tür adını belirlemek bu durumda gösterilmiştir".  
   
@@ -194,5 +185,5 @@ Kullanabileceğiniz `My.Application.Log` ve `My.Log` uygulamanızda oluşan olay
  <xref:System.Diagnostics.TraceListener>  
  <xref:Microsoft.VisualBasic.Logging.FileLogTraceListener?displayProperty=nameWithType>  
  <xref:System.Diagnostics.EventLogTraceListener?displayProperty=nameWithType>  
- [Nasıl yapılır: olay bilgilerini metin dosyasına yazma](../../../../visual-basic/developing-apps/programming/log-info/how-to-write-event-information-to-a-text-file.md)  
- [Nasıl yapılır: uygulama olay günlüğüne yazma](../../../../visual-basic/developing-apps/programming/log-info/how-to-write-to-an-application-event-log.md)
+ [Nasıl Yapılır: Olay Bilgilerini Metin Dosyasına Yazma](../../../../visual-basic/developing-apps/programming/log-info/how-to-write-event-information-to-a-text-file.md)  
+ [Nasıl Yapılır: Uygulama Olay Günlüğüne Yazma](../../../../visual-basic/developing-apps/programming/log-info/how-to-write-to-an-application-event-log.md)

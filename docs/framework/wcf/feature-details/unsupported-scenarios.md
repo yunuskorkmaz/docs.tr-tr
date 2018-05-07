@@ -1,29 +1,15 @@
 ---
 title: Desteklenmeyen Senaryolar
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 ms.assetid: 72027d0f-146d-40c5-9d72-e94392c8bb40
-caps.latest.revision: 43
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: cfeca11f7d78e8aa2d201238e3a485576b3e0c82
-ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
+ms.openlocfilehash: 5cc4e65ce4f93a352b651203757a484a9d90a85d
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/30/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="unsupported-scenarios"></a>Desteklenmeyen Senaryolar
-Çeşitli nedenlerle [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] bazı belirli güvenlik senaryoları desteklemez. Örneğin, [!INCLUDE[wxp](../../../../includes/wxp-md.md)] Home Edition SSPI veya Kerberos kimlik doğrulama protokolleri uygulamaz ve bu nedenle [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] bu platformda Windows kimlik doğrulaması ile bir hizmeti çalıştıran desteklemiyor. Kullanıcı adı/parola ve HTTP/HTTPS ile tümleşik kimlik doğrulaması gibi diğer kimlik doğrulama mekanizmaları çalıştırırken desteklenen [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] Windows XP Home Edition altında.  
+Çeşitli nedenlerle Windows Communication Foundation (WCF) bazı belirli güvenlik senaryoları desteklemez. Örneğin, [!INCLUDE[wxp](../../../../includes/wxp-md.md)] Home Edition SSPI veya Kerberos kimlik doğrulama protokolleri uygulamaz ve bu nedenle WCF hizmet Windows kimlik doğrulaması ile platform üzerinde çalıştırılmasını desteklemez. Kullanıcı adı/parola ve HTTP/HTTPS ile tümleşik kimlik doğrulaması gibi diğer kimlik doğrulama mekanizmaları WCF Windows XP Home Edition altında çalışırken desteklenir.  
   
 ## <a name="impersonation-scenarios"></a>Kimliğe bürünme senaryoları  
   
@@ -31,7 +17,7 @@ ms.lasthandoff: 04/30/2018
  Bir WCF istemcisi kimliğe bürünme altında Windows kimlik doğrulaması kullanan bir WCF hizmetini zaman uyumsuz çağrılar, kimlik doğrulama Kimliğine bürünülen kimlik yerine istemci işlemin kimliğini ortaya çıkabilir.  
   
 ### <a name="windows-xp-and-secure-context-token-cookie-enabled"></a>Windows XP ve etkin güvenli bağlam belirteci tanımlama bilgisi  
- [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] Kimliğe bürünme desteklemez ve bir <xref:System.InvalidOperationException> aşağıdaki koşulların zaman oluşturulur:  
+ WCF kimliğe bürünme desteklemez ve bir <xref:System.InvalidOperationException> aşağıdaki koşulların zaman oluşturulur:  
   
 -   İşletim sistemi [!INCLUDE[wxp](../../../../includes/wxp-md.md)].  
   
@@ -49,7 +35,7 @@ ms.lasthandoff: 04/30/2018
 >  Yukarıdaki gereksinimleri özgüdür. Örneğin, <xref:System.ServiceModel.Channels.SecurityBindingElement.CreateKerberosBindingElement%2A> sonuçları bir Windows kimliği, ancak bir SCT oluşturmaz bir bağlama öğesi oluşturur. Bu nedenle, kendisiyle kullanabilirsiniz `Required` seçeneği [!INCLUDE[wxp](../../../../includes/wxp-md.md)].  
   
 ### <a name="possible-aspnet-conflict"></a>Olası bir ASP.NET çakışma  
- [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] ve [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] her ikisi de etkinleştirebilir veya kimliğe bürünme devre dışı bırakın. Zaman [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] konakları bir [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] uygulama, bir çakışma arasında bulunabilir [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] ve [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] yapılandırma ayarları. Çakışma, durumunda [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] ayarı önceliklidir, sürece <xref:System.ServiceModel.OperationBehaviorAttribute.Impersonation%2A> özelliği ayarlanmış <xref:System.ServiceModel.ImpersonationOption.NotAllowed>, bu durumda [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] kimliğe bürünme ayarı öncelik alır.  
+ WCF ve [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] her ikisi de etkinleştirebilir veya kimliğe bürünme devre dışı bırakın. Zaman [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] bir WCF uygulamayı barındıran WCF arasında bir çakışma olabilir ve [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] yapılandırma ayarları. Çakışma durumunda WCF ayarı, sürece önceliklidir <xref:System.ServiceModel.OperationBehaviorAttribute.Impersonation%2A> özelliği ayarlanmış <xref:System.ServiceModel.ImpersonationOption.NotAllowed>, bu durumda [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] kimliğe bürünme ayarı öncelik alır.  
   
 ### <a name="assembly-loads-may-fail-under-impersonation"></a>Derleme yüklerini altında kimliğe bürünme başarısız olabilir  
  Kimliğine bürünülen bağlamı bir derlemeyi yüklemeye erişim haklarına sahip değil ve ilk kez kullanıyorsanız ortak dil çalışma zamanı (CLR) o AppDomain için derleme yüklenmeye çalışılıyor <xref:System.AppDomain> hata önbelleğe alır. Bu derleme (veya derlemeler) yüklemek için sonraki denemeleri başarısız, kimliğe bürünme ve olsa bile döndürme sonra bile döndürülen bağlam derlemeyi yüklemek için erişim haklarına sahip. Kullanıcı bağlamı değiştirildikten sonra CLR yük yeniden denemez olmasıdır. Hatadan kurtarmak için uygulama etki alanı yeniden başlatmanız gerekir.  
@@ -63,13 +49,13 @@ ms.lasthandoff: 04/30/2018
 ## <a name="cryptography"></a>Belirttiğiniz Bu, bir WSDL içe aktarma sırasında  doğrudan  veya  talep türü koleksiyonları doğrudan kullanmak yerine.  
   
 ### <a name="sha-256-supported-only-for-symmetric-key-usages"></a>Öznitelikleri alma kaybederse olduğundan, bağlama değil WSDL gidiş dönüş düzgün bir şekilde yapar ve bu nedenle istemci tarafında doğru değil.  
- [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] Düzeltme alma yaptıktan sonra bağlama doğrudan istemcide değiştirmektir. Gelişmiş güvenlik için [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] imza Özet karmaları oluşturmak için güvenli karma algoritması (SHA) 2 algoritmalarını, özellikle SHA-256 destekler. Bu sürüm yalnızca Kerberos anahtarları gibi simetrik anahtar kullanımlar için SHA-256 destekler ve burada bir X.509 sertifikası değil iletiyi imzalamak için kullanılır. [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] RSA imzalar (X.509 sertifikaları kullanılır) desteklemiyor RSA-SHA256 için SHA-256 karma desteği geçerli olmaması nedeniyle kullanarak [!INCLUDE[vstecwinfx](../../../../includes/vstecwinfx-md.md)].  
+ WCF çeşitli şifreleme ve sistem tarafından sağlanan bağlamalar algoritma paketini kullanarak belirtebilirsiniz imza Özet oluşturma algoritmaları destekler. Gelişmiş güvenlik için imza Özet karmaları oluşturmak için güvenli karma algoritması (SHA) 2 algoritmalar, özellikle SHA-256, WCF destekler. Bu sürüm yalnızca Kerberos anahtarları gibi simetrik anahtar kullanımlar için SHA-256 destekler ve burada bir X.509 sertifikası değil iletiyi imzalamak için kullanılır. WCF RSA imzalar (X.509 sertifikaları kullanılır) desteklemediği RSA-SHA256 için SHA-256 karma desteği geçerli olmaması nedeniyle kullanarak [!INCLUDE[vstecwinfx](../../../../includes/vstecwinfx-md.md)].  
   
 ### <a name="fips-compliant-sha-256-hashes-not-supported"></a>FIPS uyumlu SHA-256 karma desteklenmiyor  
- [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] SHA-256 kullanmasını algoritması paketleri tarafından desteklenmeyen şekilde desteklemediğinden SHA-256 FIPS uyumlu karmaları mu [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] sistemlerde FIPS uyumlu algoritmaları kullanımını burada gereklidir.  
+ SHA-256 kullanmasını algoritması paketleri FIPS uyumlu algoritmaları kullanımını gerekli olduğu sistemlerde WCF tarafından desteklenmez şekilde WCF SHA-256 FIPS uyumlu karmaları desteklemez.  
   
 ### <a name="fips-compliant-algorithms-may-fail-if-registry-is-edited"></a>Kayıt defteri düzenlenirse FIPS uyumlu algoritmaları başarısız olabilir  
- Etkinleştirin ve Federal Bilgi işleme standartları (FIPS) - yerel güvenlik ayarları Microsoft Yönetim Konsolu (MMC) ek kullanarak uyumlu algoritmaları - devre dışı bırak. Kayıt defterindeki ayar da erişebilirsiniz. Ancak, unutmayın, [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] kayıt defteri ayarını sıfırlamak için kullanılmasını desteklemez. Değer için herhangi bir şey 1 veya 0 dışında ayarlanırsa, CLR ve işletim sistemi arasında tutarsız sonuçlar oluşabilir.  
+ Etkinleştirin ve Federal Bilgi işleme standartları (FIPS) - yerel güvenlik ayarları Microsoft Yönetim Konsolu (MMC) ek kullanarak uyumlu algoritmaları - devre dışı bırak. Kayıt defterindeki ayar da erişebilirsiniz. Ancak, WCF ayarını sıfırlamak için kayıt defterini kullanarak desteklemiyor unutmayın. Değer için herhangi bir şey 1 veya 0 dışında ayarlanırsa, CLR ve işletim sistemi arasında tutarsız sonuçlar oluşabilir.  
   
 ### <a name="fips-compliant-aes-encryption-limitation"></a>FIPS uyumlu AES şifreleme sınırlama  
  FIPS uyumlu AES şifreleme düzeyi kimliğe bürünme kimlik altında çift yönlü geri aramalar çalışmaz.  
@@ -86,7 +72,7 @@ ms.lasthandoff: 04/30/2018
 -   Kullanım `certutil` sertifikaları sorgulamak için komut satırından komutu. Daha fazla bilgi için bkz: [sertifikaları sorunlarını gidermeye yönelik Certutil görevleri](http://go.microsoft.com/fwlink/?LinkId=120056).  
   
 ## <a name="message-security-fails-if-using-aspnet-impersonation-and-aspnet-compatibility-is-required"></a>ASP.NET kimliğe bürünme ve ASP.NET uyumluluğu kullanarak gerekliyse ileti güvenlik başarısız  
- [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] istemci kimlik doğrulaması oluşmasını engellediğinden ayarları aşağıdaki bileşimi desteklemez:  
+ İstemci kimlik doğrulaması oluşmasını engellediğinden WCF ayarları aşağıdaki bileşimi desteklemez:  
   
 -   [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] Kimliğe bürünme etkinleştirilir. Bu Web.config dosyasında ayarlayarak yapılır `impersonate` özniteliği <`identity`> öğesine `true`.  
   
@@ -94,7 +80,7 @@ ms.lasthandoff: 04/30/2018
   
 -   İleti mod güvenliği kullanılır.  
   
- Devre dışı bırakmak için geçici çözüm olan [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] uyumluluk modunda. Veya, eğer [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] uyumluluk modu gereklidir, devre dışı bırakma [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] kimliğe bürünme özelliğini ve kullanım [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]-kimliğe bürünme yerine sağlanan. Daha fazla bilgi için bkz: [temsilcilik ve kimliğe bürünme](../../../../docs/framework/wcf/feature-details/delegation-and-impersonation-with-wcf.md).  
+ Devre dışı bırakmak için geçici çözüm olan [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] uyumluluk modunda. Veya, eğer [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] uyumluluk modu gereklidir, devre dışı bırakma [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] kimliğe bürünme özelliğini ve WCF tarafından sağlanan kimliğe bürünme özelliğini kullanın. Daha fazla bilgi için bkz: [temsilcilik ve kimliğe bürünme](../../../../docs/framework/wcf/feature-details/delegation-and-impersonation-with-wcf.md).  
   
 ## <a name="ipv6-literal-address-failure"></a>IPv6 değişmez değer adresi hatası  
  Güvenlik istekleri istemci ve hizmet aynı makinede IPv6 değişmez adreslerini hizmeti için kullanılan olduğunda ve başarısız.  
@@ -102,7 +88,7 @@ ms.lasthandoff: 04/30/2018
  İstemci ve hizmet farklı makinelerde olması durumunda iş değişmez değer IPv6 adresleri.  
   
 ## <a name="wsdl-retrieval-failures-with-federated-trust"></a>Federe güven ile WSDL alma hataları  
- [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] federe güven zincirinde her düğüm için tam olarak bir WSDL belge gerektirir. Döngü uç noktaları belirtirken ayarlanmadı dikkat edin. Döngüler ortaya çıkabilecek bir yolu, aynı WSDL belgesinde iki veya daha fazla bağlantılarla federe güven zincirleri WSDL yüklenmesini kullanıyor. Bu sorunu üretebilir yaygın bir senaryo güvenlik belirteci sunucusu ve hizmeti aynı ServiceHost içinde bulunduğu federe bir hizmettir.  
+ WCF federe güven zincirinde her düğüm için tam olarak bir WSDL belge gerektirir. Döngü uç noktaları belirtirken ayarlanmadı dikkat edin. Döngüler ortaya çıkabilecek bir yolu, aynı WSDL belgesinde iki veya daha fazla bağlantılarla federe güven zincirleri WSDL yüklenmesini kullanıyor. Bu sorunu üretebilir yaygın bir senaryo güvenlik belirteci sunucusu ve hizmeti aynı ServiceHost içinde bulunduğu federe bir hizmettir.  
   
  Bu durum aşağıdaki üç uç nokta adresleri hizmetiyle örneğidir:  
   

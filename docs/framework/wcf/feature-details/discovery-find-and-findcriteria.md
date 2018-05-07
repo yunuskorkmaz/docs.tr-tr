@@ -1,26 +1,12 @@
 ---
 title: Keşif Bulma ve FindCriteria
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 ms.assetid: 99016fa4-1778-495b-b4cc-0e22fbec42c6
-caps.latest.revision: 6
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 17ca5e12390e33525f0223917e4c72556a2a2ec7
-ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
+ms.openlocfilehash: 70739647ac5904159b71121e86aa98e92981d4ab
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/30/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="discovery-find-and-findcriteria"></a>Keşif Bulma ve FindCriteria
 Bir bulma bulma işlemi bir veya daha fazla Hizmetleri bulmak için bir istemci tarafından başlatılan ve bulma ana Eylemler biridir. Bir bulma gerçekleştirme WS-bulma araştırma ileti ağ üzerinden gönderir. Ölçütlere uyan Hizmetleri yanıt WS-bulma ProbeMatch iletileriyle belirtilen. Bulma iletileri hakkında daha fazla bilgi için bkz: [WS-bulma belirtimi](http://go.microsoft.com/fwlink/?LinkID=122347).  
@@ -33,7 +19,7 @@ Bir bulma bulma işlemi bir veya daha fazla Hizmetleri bulmak için bir istemci 
   
  Arama ölçütlerini şunları içerir:  
   
--   <xref:System.ServiceModel.Discovery.Configuration.ContractTypeNameElement> -İsteğe bağlı. Aranan hizmeti ve genellikle bir hizmet için arama yaparken kullanılan ölçütleri sözleşme adı. Birden fazla sözleşme adı belirtilirse, yalnızca hizmet uç noktaları tüm sözleşmeleri eşleşen yanıtlayın. İçinde unutmayın [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] bir uç nokta yalnızca bir sözleşme destekleyebilir.  
+-   <xref:System.ServiceModel.Discovery.Configuration.ContractTypeNameElement> -İsteğe bağlı. Aranan hizmeti ve genellikle bir hizmet için arama yaparken kullanılan ölçütleri sözleşme adı. Birden fazla sözleşme adı belirtilirse, yalnızca hizmet uç noktaları tüm sözleşmeleri eşleşen yanıtlayın. WCF'de bir uç nokta yalnızca bir sözleşme destekleyebileceği unutmayın.  
   
 -   <xref:System.ServiceModel.Discovery.Configuration.ScopeElement> -İsteğe bağlı. Tek tek hizmet uç noktaları kategorilere ayırmak için kullanılan mutlak URI kapsamlardır. Bu burada aynı sözleşme birden çok uç noktalarını kullanıma sunar ve uç noktaları kısmı için bir şekilde aramak istediğiniz senaryolarda kullanmak isteyebilirsiniz. Birden çok kapsam belirtilmezse, yalnızca tüm kapsamlar eşleşen hizmet uç yanıtlayın.  
   

@@ -1,10 +1,6 @@
 ---
 title: '!= İşleci (C# Başvurusu)'
 ms.date: 07/20/2015
-ms.prod: .net
-ms.technology:
-- devlang-csharp
-ms.topic: article
 f1_keywords:
 - '!=_CSharpKeyword'
 helpviewer_keywords:
@@ -12,14 +8,11 @@ helpviewer_keywords:
 - not equals operator (!=) [C#]
 - '!= operator [C#]'
 ms.assetid: eeff7a4e-ad6f-462d-9f8d-49e9b91c6c97
-caps.latest.revision: 14
-author: BillWagner
-ms.author: wiwagn
-ms.openlocfilehash: b69d0b12734e690f0ba0209ccbbc7627ff92fe8a
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: e409e2a80886fd5f7f4cdbeaa9b4e3325f8a967b
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="-operator-c-reference"></a>!= İşleci (C# Başvurusu)
 Eşitsizlik işleci (`!=`) işlenenleri true tersi durumda, eşitse, false değerini döndürür. Eşitsizlik işleçleri dize ve nesne dahil olmak üzere tüm türleri için önceden tanımlanmıştır. Kullanıcı tanımlı türler aşırı yükleme `!=` işleci.  
@@ -34,5 +27,5 @@ Eşitsizlik işleci (`!=`) işlenenleri true tersi durumda, eşitse, false değe
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
  [C# başvurusu](../../../csharp/language-reference/index.md)  
- [C# programlama kılavuzu](../../../csharp/programming-guide/index.md)  
- [C# işleçleri](../../../csharp/language-reference/operators/index.md)
+ [C# Programlama Kılavuzu](../../../csharp/programming-guide/index.md)  
+ [C# İşleçleri](../../../csharp/language-reference/operators/index.md)

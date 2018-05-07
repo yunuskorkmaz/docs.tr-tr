@@ -1,34 +1,22 @@
 ---
 title: 'Nasıl yapılır: Taşıma Güveniği ve İleti Kimlik Bilgilerini Kullanma'
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 dev_langs:
 - csharp
 - vb
 helpviewer_keywords:
 - TransportWithMessageCredentials
 ms.assetid: 6cc35346-c37a-4859-b82b-946c0ba6e68f
-caps.latest.revision: 11
 author: BrucePerlerMS
-ms.author: bruceper
 manager: mbaldwin
-ms.workload:
-- dotnet
-ms.openlocfilehash: d30769c854dad04a333509f64169a257fc461ad0
-ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
+ms.openlocfilehash: b94c6fd4761a5b0383c21d36a6d717f78a8825de
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/30/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-use-transport-security-and-message-credentials"></a>Nasıl yapılır: Taşıma Güveniği ve İleti Kimlik Bilgilerini Kullanma
-Taşıma ve ileti kimlik bilgileri olan bir hizmeti güvenli hale getirme kullanan taşıma ve ileti güvenlik modlarında iyi [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)]. İleti Katmanı Güvenliği katı taşıma güvenlik mekanizmaları ile mümkün olmayan kimlik bilgilerini, çeşitli sağlarken, toplamda bütünlüğü ve gizliliği, Aktarım Katmanı Güvenliği sağlar. Bu konuda, ileti kimlik bilgilerini kullanarak aktarım uygulamak için temel adımlar açıklanmıştır <xref:System.ServiceModel.WSHttpBinding> ve <xref:System.ServiceModel.NetTcpBinding> bağlar. Güvenlik modunu ayarlama hakkında daha fazla bilgi için bkz: [nasıl yapılır: güvenlik modunu ayarlama](../../../../docs/framework/wcf/how-to-set-the-security-mode.md).  
+Taşıma ve ileti kimlik bilgileri olan bir hizmeti güvenli hale getirme en iyi bir aktarım ve ileti güvenlik modu Windows Communication Foundation (WCF) kullanır. İleti Katmanı Güvenliği katı taşıma güvenlik mekanizmaları ile mümkün olmayan kimlik bilgilerini, çeşitli sağlarken, toplamda bütünlüğü ve gizliliği, Aktarım Katmanı Güvenliği sağlar. Bu konuda, ileti kimlik bilgilerini kullanarak aktarım uygulamak için temel adımlar açıklanmıştır <xref:System.ServiceModel.WSHttpBinding> ve <xref:System.ServiceModel.NetTcpBinding> bağlar. Güvenlik modunu ayarlama hakkında daha fazla bilgi için bkz: [nasıl yapılır: güvenlik modunu ayarlama](../../../../docs/framework/wcf/how-to-set-the-security-mode.md).  
   
  Güvenlik modu ayarlarken `TransportWithMessageCredential`, aktarım düzeyinde güvenlik sağlayan gerçek mekanizması taşıma belirler. HTTP için Güvenli Yuva Katmanı (SSL) HTTP (HTTPS) üzerinden mekanizmasıdır; TCP için bu SSL TCP veya Windows üzerinde değil.  
   

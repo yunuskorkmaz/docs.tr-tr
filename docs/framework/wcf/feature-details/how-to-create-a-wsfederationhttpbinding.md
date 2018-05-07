@@ -1,14 +1,6 @@
 ---
 title: 'Nasıl yapılır: WSFederationHttpBinding Oluşturma'
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -16,20 +8,14 @@ helpviewer_keywords:
 - WCF, federation
 - federation
 ms.assetid: e54897d7-aa6c-46ec-a278-b2430c8c2e10
-caps.latest.revision: 16
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: f43b95df73b35b7dc7c34c2e16364dfa7bbdbee4
-ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
+ms.openlocfilehash: 41fa1e7c0430f4723123b03f04d4fc74f9bfc589
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/30/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-create-a-wsfederationhttpbinding"></a>Nasıl yapılır: WSFederationHttpBinding Oluşturma
-İçinde [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)], <xref:System.ServiceModel.WSFederationHttpBinding> sınıfı ([\<wsFederationHttpBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/wsfederationhttpbinding.md) yapılandırmasında) Federasyon Hizmeti gösterme için bir mekanizma sağlar. Diğer bir deyişle, istemcilerin bir güvenlik belirteci hizmeti tarafından verilen bir güvenlik belirteci kullanarak kimlik doğrulaması gerektiren bir hizmeti. Bu konu nasıl ayarlanacağını gösterir bir <xref:System.ServiceModel.WSFederationHttpBinding> kod ve yapılandırma. Bağlama oluşturulduktan sonra bu bağlamayı kullanmak için uç nokta ayarlamayı ayarlayabilirsiniz.  
+Windows Communication Foundation (WCF) <xref:System.ServiceModel.WSFederationHttpBinding> sınıfı ([\<wsFederationHttpBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/wsfederationhttpbinding.md) yapılandırmasında) Federasyon Hizmeti gösterme için bir mekanizma sağlar. Diğer bir deyişle, istemcilerin bir güvenlik belirteci hizmeti tarafından verilen bir güvenlik belirteci kullanarak kimlik doğrulaması gerektiren bir hizmeti. Bu konu nasıl ayarlanacağını gösterir bir <xref:System.ServiceModel.WSFederationHttpBinding> kod ve yapılandırma. Bağlama oluşturulduktan sonra bu bağlamayı kullanmak için uç nokta ayarlamayı ayarlayabilirsiniz.  
   
  Temel adımlar aşağıda belirtilen:  
   
@@ -38,7 +24,7 @@ ms.lasthandoff: 04/30/2018
     > [!NOTE]
     >  <xref:System.ServiceModel.WSFederationHttpBinding> De destekler `None` güvenlik modu. Bu mod, güvenli olmayan ve hata ayıklama amacıyla yalnızca sağlanır. Hizmet uç noktası ile dağıtılırsa bir <xref:System.ServiceModel.WSFederationHttpBinding> ayarlamak, güvenlik modu ile `None`, bağlama elde edilen istemci (tarafından oluşturulan [ServiceModel meta veri yardımcı Programracı (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md)) olan bir <<!--zz xref:System.ServiceModel.WsHttpBinding --> `xref:System.ServiceModel.WsHttpBinding`> bir güvenlik modu ile `None`.  
   
-     Diğer sistem tarafından sağlanan bağlamalar kullanırken bir istemci kimlik bilgisi türü seçmek ise gerekli değildir `WSFederationHttpBinding`. İstemci kimlik bilgisi türü her zaman verilen bir belirteç olmasıdır. [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] Belirtilen vereni uygulamasından bir belirteç alır ve istemci kimlik doğrulaması için hizmet belirtecini gösterir.  
+     Diğer sistem tarafından sağlanan bağlamalar kullanırken bir istemci kimlik bilgisi türü seçmek ise gerekli değildir `WSFederationHttpBinding`. İstemci kimlik bilgisi türü her zaman verilen bir belirteç olmasıdır. WCF belirtilen vereni uygulamasından bir belirteç alır ve istemci kimlik doğrulaması için hizmet belirtecini sunar.  
   
 2.  Federasyon istemcilerde ayarlamak <xref:System.ServiceModel.FederatedMessageSecurityOverHttp.IssuerAddress%2A> güvenlik belirteci hizmeti URL'sini özelliği. Ayarlama <xref:System.ServiceModel.FederatedMessageSecurityOverHttp.IssuerBinding%2A> güvenlik belirteci hizmeti ile iletişim kurmak için kullanılacak bağlama için.  
   
@@ -65,7 +51,7 @@ ms.lasthandoff: 04/30/2018
   
 4.  Ayarlama <xref:System.ServiceModel.FederatedMessageSecurityOverHttp.IssuedKeyType%2A> özelliğine <xref:System.IdentityModel.Tokens.SecurityKeyType> `SymmetricKey` veya.`AsymmetricKey` gerektiği şekilde.  
   
-5.  Ayarlama <xref:System.ServiceModel.FederatedMessageSecurityOverHttp.IssuedTokenType%2A> uygun değere özelliği. Herhangi bir değer ayarlarsanız, [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] varsayılan olarak "http://docs.oasis-open.org/wss/oasis-wss-saml-token-profile-1.1#SAMLV1.1", SAML 1.1 belirteçleri gösterir.  
+5.  Ayarlama <xref:System.ServiceModel.FederatedMessageSecurityOverHttp.IssuedTokenType%2A> uygun değere özelliği. Herhangi bir değer ayarlarsanız, WCF varsayılan olarak "http://docs.oasis-open.org/wss/oasis-wss-saml-token-profile-1.1#SAMLV1.1", SAML 1.1 belirteçleri gösterir.  
   
 6.  Hiçbir yerel yayımlayan belirtilmişse, istemcide gerekli; hizmet üzerinde isteğe bağlı. Oluşturma bir <xref:System.ServiceModel.EndpointAddress> güvenlik belirteci hizmeti ve ata adresi ve kimlik bilgilerini içeren <xref:System.ServiceModel.EndpointAddress> için örnek <xref:System.ServiceModel.FederatedMessageSecurityOverHttp.IssuerAddress%2A> özelliği.  
   

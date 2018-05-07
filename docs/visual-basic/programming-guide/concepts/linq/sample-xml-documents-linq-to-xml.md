@@ -1,23 +1,12 @@
 ---
-title: "Örnek XML belgeleri (LINQ-XML)"
-ms.custom: 
+title: Örnek XML belgeleri (LINQ-XML)
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- devlang-visual-basic
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: a734cc4e-d95d-4631-91a2-81618c8ad894
-caps.latest.revision: 
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: 0442869576e9f9e7f4fe52cecd8b911fa70c9352
-ms.sourcegitcommit: cf22b29db780e532e1090c6e755aa52d28273fa6
+ms.openlocfilehash: 1110a4b89158e0230401c449aa95d74be72eccc7
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/01/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="sample-xml-documents-linq-to-xml"></a>Örnek XML belgeleri (LINQ-XML)
 Aşağıdaki örnek dosyaları kod örnekleri ve kod parçacıkları genelinde kullanılan [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] belgeleri.  

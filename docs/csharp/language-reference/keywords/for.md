@@ -1,24 +1,17 @@
 ---
 title: for (C# Başvurusu)
 ms.date: 07/20/2015
-ms.prod: .net
-ms.technology:
-- devlang-csharp
-ms.topic: article
 f1_keywords:
 - for
 - for_CSharpKeyword
 helpviewer_keywords:
 - for keyword [C#]
 ms.assetid: 34041a40-2c87-467a-9ffb-a0417d8f67a8
-caps.latest.revision: 39
-author: BillWagner
-ms.author: wiwagn
-ms.openlocfilehash: cb7e83733fe026658f502b430975a0f8a27e9df3
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 9d7ab9e37be61384c33833381f44257169c81c31
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="for-c-reference"></a>for (C# Başvurusu)
 Kullanarak bir `for` döngü, çalıştırabileceğiniz bir deyim veya deyimleri bloğu art arda için belirtilen ifadeyi değerlendirir kadar `false`. Bu tür bir döngü hem de önceden yinelemek için döngü istediğiniz kaç kez bilmeniz diğer uygulamalar diziler yineleme için yararlıdır.  
@@ -65,9 +58,9 @@ for (initializer; condition; iterator)
   
         -   bir yöntemi çağrıldı  
   
-        -   önek veya sonek [artırma](../../../csharp/language-reference/operators/increment-operator.md) ifadesi gibi `++i` veya`i++`  
+        -   önek veya sonek [artırma](../../../csharp/language-reference/operators/increment-operator.md) ifadesi gibi `++i` veya `i++`  
   
-        -   önek veya sonek [azaltma](../../../csharp/language-reference/operators/decrement-operator.md) ifadesi gibi `--i` veya`i--`  
+        -   önek veya sonek [azaltma](../../../csharp/language-reference/operators/decrement-operator.md) ifadesi gibi `--i` veya `i--`  
   
         -   kullanarak bir nesne oluşturulmasını [yeni](../../../csharp/language-reference/keywords/new-operator.md)  
   
@@ -81,9 +74,9 @@ for (initializer; condition; iterator)
   
     -   bir yöntemi çağrıldı  
   
-    -   önek veya sonek [artırma](../../../csharp/language-reference/operators/increment-operator.md) ifadesi gibi `++i` veya`i++`  
+    -   önek veya sonek [artırma](../../../csharp/language-reference/operators/increment-operator.md) ifadesi gibi `++i` veya `i++`  
   
-    -   önek veya sonek [azaltma](../../../csharp/language-reference/operators/decrement-operator.md) ifadesi gibi `--i` veya`i--`  
+    -   önek veya sonek [azaltma](../../../csharp/language-reference/operators/decrement-operator.md) ifadesi gibi `--i` veya `i--`  
   
     -   kullanarak bir nesne oluşturulmasını [yeni](../../../csharp/language-reference/keywords/new-operator.md)  
   
@@ -114,8 +107,8 @@ for (initializer; condition; iterator)
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
  [C# başvurusu](../../../csharp/language-reference/index.md)  
- [C# programlama kılavuzu](../../../csharp/programming-guide/index.md)  
- [C# anahtar sözcükleri](../../../csharp/language-reference/keywords/index.md)  
- [foreach,](../../../csharp/language-reference/keywords/foreach-in.md)  
- [for deyimi (C++)](/cpp/cpp/for-statement-cpp)  
- [Yineleme deyimleri](../../../csharp/language-reference/keywords/iteration-statements.md)
+ [C# Programlama Kılavuzu](../../../csharp/programming-guide/index.md)  
+ [C# Anahtar Sözcükleri](../../../csharp/language-reference/keywords/index.md)  
+ [foreach, in](../../../csharp/language-reference/keywords/foreach-in.md)  
+ [for Deyimi (C++)](/cpp/cpp/for-statement-cpp)  
+ [Yineleme Deyimleri](../../../csharp/language-reference/keywords/iteration-statements.md)

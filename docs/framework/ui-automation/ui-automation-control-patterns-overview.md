@@ -1,27 +1,18 @@
 ---
-title: "UI Otomasyon Denetim Düzenlerine Genel Bakış"
-ms.custom: 
+title: UI Otomasyon Denetim Düzenlerine Genel Bakış
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-bcl
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - control patterns
 - UI Automation, control patterns
 ms.assetid: cc229b33-234b-469b-ad60-f0254f32d45d
-caps.latest.revision: "34"
 author: Xansky
 ms.author: mhopkins
 manager: markl
-ms.workload: dotnet
-ms.openlocfilehash: e675681d1de3aa46645047da61ae8aac2ea0ba31
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 1b02618676a1162681c67d34a2c6f43def07893c
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="ui-automation-control-patterns-overview"></a>UI Otomasyon Denetim Düzenlerine Genel Bakış
 > [!NOTE]
@@ -29,7 +20,7 @@ ms.lasthandoff: 12/22/2017
   
  Bu genel bakış sunar [!INCLUDE[TLA#tla_uiautomation](../../../includes/tlasharptla-uiautomation-md.md)] denetim düzenleri. Denetim desenleri kategorilere ayırmak ve Denetim türü veya denetiminin görünümünü bağımsız bir denetimin işlevselliği kullanıma sunmak için bir yol sağlar.  
   
- [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]Ortak denetim davranışları temsil etmek için düzenleri kullanır denetler. Örneğin, (düğme gibi) çağrılabilir denetimleri ve kaydırma çubukları (örneğin, liste kutuları, liste görünümleri veya birleşik giriş kutuları) sahip denetimleri için kaydırma denetim düzeni için Çağır denetim düzeni kullanın. Her denetim düzeni ayrı bir işlevi temsil ettiğinden belirli bir denetim tarafından desteklenen işlevleri kümesini tanımlamak için birleştirilebilir.  
+ [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] Ortak denetim davranışları temsil etmek için düzenleri kullanır denetler. Örneğin, (düğme gibi) çağrılabilir denetimleri ve kaydırma çubukları (örneğin, liste kutuları, liste görünümleri veya birleşik giriş kutuları) sahip denetimleri için kaydırma denetim düzeni için Çağır denetim düzeni kullanın. Her denetim düzeni ayrı bir işlevi temsil ettiğinden belirli bir denetim tarafından desteklenen işlevleri kümesini tanımlamak için birleştirilebilir.  
   
 > [!NOTE]
 >  Denetimleri bir araya — sağlamak alt denetimleri ile oluşturulmuş [!INCLUDE[TLA#tla_ui](../../../includes/tlasharptla-ui-md.md)] üst tarafından kullanıma sunulan işlevsellikten için — normalde her alt denetimi ile ilişkilendirilmiş tüm denetim düzenleri uygulamalıdır. Buna karşılık, bu aynı denetim düzenleri alt denetimlerin uygulanması için gerekli değildir.  

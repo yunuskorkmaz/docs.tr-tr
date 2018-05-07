@@ -1,22 +1,12 @@
 ---
-title: "Programlama Kılavuzu (LINQ-XML) (Visual Basic)"
-ms.custom: 
+title: Programlama Kılavuzu (LINQ-XML) (Visual Basic)
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: f1f942bf-3404-4354-b4c5-4fe35e37a02b
-caps.latest.revision: "3"
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: a68c72dd30059063c86dc79be0dfd5a470b9d72c
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 70c169cecc8ca4ede30216bc832a8518766cd1a5
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="programming-guide-linq-to-xml-visual-basic"></a>Programlama Kılavuzu (LINQ-XML) (Visual Basic)
 Bu bölümde ile programlama hakkında kavramsal bilgiler ve nasıl yapılır bilgileri [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)].  
@@ -24,9 +14,9 @@ Bu bölümde ile programlama hakkında kavramsal bilgiler ve nasıl yapılır bi
 ## <a name="who-should-read-this-documentation"></a>Bu belge kimler içindir  
  Visual Basic ve temel bazı yönlerini zaten anlamak geliştiriciler bu belgeleri hedefler [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)].  
   
- Bu belgenin amacı yapmaktır [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] kullanımı kolay her türlü geliştiriciler için. [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)]XML programlama kolaylaştırır. Kullanmak için bir uzman geliştirici olmanız gerekmez.  
+ Bu belgenin amacı yapmaktır [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] kullanımı kolay her türlü geliştiriciler için. [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] XML programlama kolaylaştırır. Kullanmak için bir uzman geliştirici olmanız gerekmez.  
   
- [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)]Genel sınıflar üzerinde yoğun olarak kullanır. Bu nedenle, genel türler ve sınıfları kullanımını anlamak çok önemlidir. Daha fazla bilgi için bkz: [Visual Basic'de genel türler](../../../../visual-basic/programming-guide/language-features/data-types/generic-types.md).  
+ [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] Genel sınıflar üzerinde yoğun olarak kullanır. Bu nedenle, genel türler ve sınıfları kullanımını anlamak çok önemlidir. Daha fazla bilgi için bkz: [Visual Basic'de genel türler](../../../../visual-basic/programming-guide/language-features/data-types/generic-types.md).  
   
 ## <a name="in-this-section"></a>Bu Bölümde  
   
@@ -41,8 +31,8 @@ Bu bölümde ile programlama hakkında kavramsal bilgiler ve nasıl yapılır bi
 |[XML ağaçları (LINQ-XML) değiştirme (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/modifying-xml-trees-linq-to-xml.md)|Belge nesne modeli (DOM) gibi [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] yerinde bir XML ağacı değiştirmenizi sağlar.|  
 |[Gelişmiş LINQ-XML programlama (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/advanced-linq-to-xml-programming.md)|Ek açıklamalar, olaylar, akış ve diğer gelişmiş senaryoları hakkında bilgi sağlar.|  
 |[LINQ-XML güvenlik (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-to-xml-security.md)|LINQ-XML ile ilgili güvenlik sorunları açıklar ve güvenlik açıklarını Azaltıcı bazı ilişkin yönergeler sağlar.|  
-|[Örnek XML belgeleri (LINQ-XML)](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-documents-linq-to-xml.md)|Bu belgede birçok örnek tarafından kullanılan örnek XML belgelerini içerir.|  
+|[Örnek XML Belgeleri (LINQ to XML)](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-documents-linq-to-xml.md)|Bu belgede birçok örnek tarafından kullanılan örnek XML belgelerini içerir.|  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [Başlarken (LINQ-XML)](../../../../visual-basic/programming-guide/concepts/linq/getting-started-linq-to-xml.md)  
+ [Başlarken (LINQ to XML)](../../../../visual-basic/programming-guide/concepts/linq/getting-started-linq-to-xml.md)  
  [LINQ-XML (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-to-xml.md)

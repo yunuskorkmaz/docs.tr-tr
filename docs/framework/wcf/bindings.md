@@ -1,31 +1,17 @@
 ---
-title: "Windows Communication Foundation Bağlamaları"
-ms.custom: 
+title: Windows Communication Foundation Bağlamaları
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - bindings [WCF]
 ms.assetid: 845df323-be53-4848-92ef-ba67a406484d
-caps.latest.revision: 
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: e878aadf1c7df6042323c008ff52a4be8a9d817f
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
-ms.translationtype: MT
+ms.openlocfilehash: d40faff2734095af42f94c60c630dde8494e5975
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="windows-communication-foundation-bindings"></a>Windows Communication Foundation Bağlamaları
-Bağlamaları belirtin nasıl bir [!INCLUDE[indigo1](../../../includes/indigo1-md.md)] Hizmeti uç noktası diğer uç ile iletişim kurar. Kendi en temel sırasında bir bağlama kullanılacak Aktarım (örneğin, HTTP veya TCP) belirtmeniz gerekir. Güvenlik ve işlem, bağlamaları desteği gibi diğer özellikleri de ayarlayabilirsiniz.  
+Bağlamaları bir Windows Communication Foundation (WCF) hizmeti bitiş noktası diğer uç nokta ile nasıl iletişim kuracağını belirtin. Kendi en temel sırasında bir bağlama kullanılacak Aktarım (örneğin, HTTP veya TCP) belirtmeniz gerekir. Güvenlik ve işlem, bağlamaları desteği gibi diğer özellikleri de ayarlayabilirsiniz.  
   
 ## <a name="in-this-section"></a>Bu Bölümde  
  [WCF Bağlamalarına Genel Bakış](../../../docs/framework/wcf/bindings-overview.md)  

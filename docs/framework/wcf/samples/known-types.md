@@ -1,24 +1,12 @@
 ---
-title: "Bilinen Türler"
-ms.custom: 
+title: Bilinen Türler
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 88d83720-ca38-4b2c-86a6-f149ed1d89ec
-caps.latest.revision: "20"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: e0359e3094b86e3433cebee7c835c7eecec16fe0
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 003f2e39804bb393c9d8c54a6fc208fdd1b22e97
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="known-types"></a>Bilinen Türler
 Bu örnek, bir veri sözleşmesi türetilmiş türler hakkında bilgi belirtmek gösterilmiştir. Veri sözleşmeleri için ve Hizmetleri'nden yapılandırılmış veri iletmek sağlar. Nesne odaklı programlama içinde başka bir türünden devralan bir tür özgün türü yerine kullanılabilir. Hizmet odaklı programlamada türleri yerine şemaları bildirilmesi ve bu nedenle, türleri arasındaki ilişkiyi korunmaz. <xref:System.Runtime.Serialization.KnownTypeAttribute> Özniteliği veri sözleşmede dahil edilecek türetilmiş türler hakkında bilgi sağlar. Bu mekanizma kullanılmazsa, türetilmiş bir tür gönderilen veya değiştirilemez bir taban türü beklenirken aldı.  
@@ -178,7 +166,7 @@ No magnitude was sent from the service
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  Bu dizin mevcut değilse, Git [Windows Communication Foundation (WCF) ve .NET Framework 4 için Windows Workflow Foundation (WF) örnek](http://go.microsoft.com/fwlink/?LinkId=150780) tüm indirmek için [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] ve [!INCLUDE[wf1](../../../../includes/wf1-md.md)] örnekleri. Bu örnek aşağıdaki dizinde bulunur.  
+>  Bu dizin mevcut değilse, Git [Windows Communication Foundation (WCF) ve .NET Framework 4 için Windows Workflow Foundation (WF) örnek](http://go.microsoft.com/fwlink/?LinkId=150780) tüm Windows Communication Foundation (WCF) indirmek için ve [!INCLUDE[wf1](../../../../includes/wf1-md.md)] örnekleri. Bu örnek aşağıdaki dizinde bulunur.  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Contract\Data\KnownTypes`  
   

@@ -1,31 +1,19 @@
 ---
 title: WCF'de Kullanılan Güvenlik Kavramları
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 ms.assetid: 3b9dfcf5-4bf1-4f35-9070-723171c823a1
-caps.latest.revision: 15
 author: BrucePerlerMS
-ms.author: bruceper
 manager: mbaldwin
-ms.workload:
-- dotnet
-ms.openlocfilehash: 74b16698d40747937a89f84f0d958178b42d2e44
-ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
+ms.openlocfilehash: ac76f1742ab72de9f5180d1ea2fcbc668ec2140c
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/30/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="security-concepts-used-in-wcf"></a>WCF'de Kullanılan Güvenlik Kavramları
-[!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] Güvenlik temel kavramları kullanılmakta olan yerleşik ve çeşitli güvenlik altyapılar içinde dağıtılır.  
+Windows Communication Foundation (WCF) güvenlik kavramları zaten kullanımda üzerine kurulu ve çeşitli güvenlik altyapılar içinde dağıtılır.  
   
- [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] Bazı Bu altyapılar gibi Güvenli Yuva Katmanı (SSL) üzerinden HTTP (HTTPS) destekler. Ancak, [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] yeni birlikte çalışabilir güvenliği standartları'nı (örneğin, WS-güvenlik) uygulayarak mevcut güvenlik altyapıları destekleme ötesinde SOAP kodlanmış iletileri üzerinden gider. Yeni birlikte çalışabilir standartlar veya varolan mekanizmaları kullanıp kullanmadığınızı güvenlik kavramları her ikisi de aynıdır. Varolan altyapıları kavramları ve daha yeni standartları anlama, uygulama için en iyi güvenlik modeli uygulamak için taşımaktadır.  
+ WCF bazı Bu altyapılar gibi Güvenli Yuva Katmanı (SSL) üzerinden HTTP (HTTPS) destekler. Ancak, WCF yeni birlikte çalışabilir güvenliği standartları'nı (örneğin, WS-güvenlik) uygulayarak mevcut güvenlik altyapıları destekleme ötesinde SOAP kodlanmış iletileri üzerinden gider. Yeni birlikte çalışabilir standartlar veya varolan mekanizmaları kullanıp kullanmadığınızı güvenlik kavramları her ikisi de aynıdır. Varolan altyapıları kavramları ve daha yeni standartları anlama, uygulama için en iyi güvenlik modeli uygulamak için taşımaktadır.  
   
 ## <a name="introduction-to-security-for-wcf-web-services"></a>WCF Web Hizmetleri için güvenlik giriş  
  Microsoft Patterns and Practices grubu buraya indirme için kullanılabilir olan WCF güvenlik kılavuzu üzerinde ayrıntılı teknik incelemesi yazdı: [WCF Güvenlik Kılavuzu'nu](http://go.microsoft.com/fwlink/?LinkId=210210). Web Hizmetleri, anahtar WCF güvenlik kavramları, intranet uygulama senaryoları ve Internet uygulama senaryoları için ilgili olarak bu teknik temel güvenlik kavramları açıklar.  

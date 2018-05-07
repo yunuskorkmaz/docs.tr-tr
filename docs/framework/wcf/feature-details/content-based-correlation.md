@@ -1,26 +1,12 @@
 ---
 title: İçeriğe Dayalı Bağıntı
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 ms.assetid: f46a2b68-8d24-4122-bbee-9573fc3f9fb4
-caps.latest.revision: 17
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 4b4ebd49fbed12f1e8120e67f32496cd782531da
-ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
+ms.openlocfilehash: 48009420788b8678f842c4368926e04f8a745a52
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/30/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="content-based-correlation"></a>İçeriğe Dayalı Bağıntı
 İş akışı Hizmetleri istemcileri ve diğer hizmetleri ile iletişim kurarken, genellikle var. benzersiz bir ileti belirli bir örneği ile ilişkilendirir bazı veri alışverişi iletilerindeki İçeriğe dayalı bağıntı iletide, müşteri numarası veya sipariş kimliği iletileri yönlendirmek için uygun iş akışı örneği gibi bu verileri kullanır. Bu konuda, iş akışlarında içerik tabanlı bağıntı kullanımı açıklanmaktadır.  

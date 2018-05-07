@@ -1,29 +1,15 @@
 ---
 title: İleti Bağıntısı
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 ms.assetid: 3f62babd-c991-421f-bcd8-391655c82a1f
-caps.latest.revision: 26
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 52dd8d66a4a28b515ebfaee88c4383889839fff0
-ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
-ms.translationtype: MT
+ms.openlocfilehash: 1573cdafafb5861099b275caa888c79d23cafeb1
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/27/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="message-correlation"></a>İleti Bağıntısı
-Bu örnek bir Message Queuing (MSMQ) uygulaması bir MSMQ iletisi nasıl gönderebilirsiniz gösteren bir [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] hizmeti ve nasıl iletileri bir istek/yanıt senaryosunda göndereni ve alıcısı uygulamalar arasında ilişkili olabilir. Bu örnek MsmqIntegrationBinding bağlama kullanır. Bu durumda, alan hizmetini sıraya alınan iletileri gözlemleyin olanak tanımak için bir kendi kendini barındıran konsol uygulaması hizmetidir. K  
+Bu örnek, bir Message Queuing (MSMQ) uygulamasını bir Windows Communication Foundation (WCF) hizmetine bir MSMQ iletisi nasıl gönderebilir ve nasıl iletileri bir istek/yanıt senaryosunda göndereni ve alıcısı uygulamalar arasında ilişkili olabilir gösterir. Bu örnek MsmqIntegrationBinding bağlama kullanır. Bu durumda, alan hizmetini sıraya alınan iletileri gözlemleyin olanak tanımak için bir kendi kendini barındıran konsol uygulaması hizmetidir. K  
   
  Hizmet gönderenden alınan ileti işler ve gönderene bir yanıt iletisi gönderir. Gönderenin karşılık gelen yanıtı başlangıçta gönderilen isteği alındı. `MessageID` Ve `CorrelationID` ileti özelliklerini istek ve yanıt iletileri ilişkilendirmek için kullanılır.  
   
@@ -321,7 +307,7 @@ static void DisplayOrderStatus()
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  Bu dizin mevcut değilse, Git [Windows Communication Foundation (WCF) ve .NET Framework 4 için Windows Workflow Foundation (WF) örnek](http://go.microsoft.com/fwlink/?LinkId=150780) tüm indirmek için [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] ve [!INCLUDE[wf1](../../../../includes/wf1-md.md)] örnekleri. Bu örnek aşağıdaki dizinde bulunur.  
+>  Bu dizin mevcut değilse, Git [Windows Communication Foundation (WCF) ve .NET Framework 4 için Windows Workflow Foundation (WF) örnek](http://go.microsoft.com/fwlink/?LinkId=150780) tüm Windows Communication Foundation (WCF) indirmek için ve [!INCLUDE[wf1](../../../../includes/wf1-md.md)] örnekleri. Bu örnek aşağıdaki dizinde bulunur.  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Binding\MSMQIntegration\MessageCorrelation`  
   

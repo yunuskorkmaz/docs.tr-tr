@@ -1,13 +1,6 @@
 ---
-title: "Nasıl yapılır: Windows Forms Düğme Tıklamalarına Yanıt Verme"
-ms.custom: 
+title: 'Nasıl yapılır: Windows Forms Düğme Tıklamalarına Yanıt Verme'
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-winforms
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -22,16 +15,11 @@ helpviewer_keywords:
 - examples [Windows Forms], controls
 - Click event [Windows Forms], responding to
 ms.assetid: 7a4951bd-369c-4662-b246-28ad83eda484
-caps.latest.revision: "14"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 28b0467c8b589882fe5afd7e884d0de55d8ca564
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 14a880c34f163dc6fece44c24d377822a741b0f2
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-respond-to-windows-forms-button-clicks"></a>Nasıl yapılır: Windows Forms Düğme Tıklamalarına Yanıt Verme
 Windows Forms en temel kullanımını <xref:System.Windows.Forms.Button> denetimidir düğmesine tıklandığında bazı kodlar çalıştırmak için.  
@@ -42,7 +30,7 @@ Windows Forms en temel kullanımını <xref:System.Windows.Forms.Button> denetim
   
 ### <a name="to-respond-to-a-button-click"></a>Yanıt için bir düğmeye tıklayın.  
   
--   Düğmenin içinde `Click` <xref:System.EventHandler> çalıştırmak için kod yazma. `Button1_Click`denetime bağlı olmalıdır. Daha fazla bilgi için bkz: [nasıl yapılır: olay işleyicileri oluşturma çalıştırma süresi için Windows Forms](../../../../docs/framework/winforms/how-to-create-event-handlers-at-run-time-for-windows-forms.md).  
+-   Düğmenin içinde `Click` <xref:System.EventHandler> çalıştırmak için kod yazma. `Button1_Click` denetime bağlı olmalıdır. Daha fazla bilgi için bkz: [nasıl yapılır: olay işleyicileri oluşturma çalıştırma süresi için Windows Forms](../../../../docs/framework/winforms/how-to-create-event-handlers-at-run-time-for-windows-forms.md).  
   
     ```vb  
     Private Sub Button1_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Button1.Click  

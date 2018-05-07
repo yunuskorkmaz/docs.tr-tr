@@ -1,13 +1,6 @@
 ---
 title: Çevrim Yapıları (Visual Basic)
-ms.custom: ''
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- devlang-visual-basic
-ms.topic: article
 helpviewer_keywords:
 - control flow [Visual Basic], loops
 - For keyword [Visual Basic], loop structures
@@ -17,14 +10,11 @@ helpviewer_keywords:
 - Do statement [Visual Basic], Do loops
 - conditional statements [Visual Basic], loop structures
 ms.assetid: ecacb09b-a4c9-42be-98b2-a15d368b5db8
-caps.latest.revision: 18
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: 8c13f2cc6546a652f0967bd83369d8af5998f7e2
-ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
+ms.openlocfilehash: 8138609f06d82b53ef5b5afb480e8609461ffc33
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="loop-structures-visual-basic"></a>Çevrim Yapıları (Visual Basic)
 Visual Basic döngü yapıları, bir veya daha fazla satır kod art arda çalıştırmanızı sağlar. Bir koşul kadar döngü yapısı deyimlerinde yineleyebilirsiniz `True`, bir koşul kadar `False`, bir sayı çok kez veya bir kez her öğe için bir koleksiyondaki belirtilen.  

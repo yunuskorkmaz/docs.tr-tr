@@ -1,22 +1,15 @@
 ---
-title: "Değer Türü Parametrelerini Geçirme (C# Programlama Kılavuzu)"
+title: Değer Türü Parametrelerini Geçirme (C# Programlama Kılavuzu)
 ms.date: 07/20/2015
-ms.prod: .net
-ms.technology:
-- devlang-csharp
-ms.topic: article
 helpviewer_keywords:
 - method parameters [C#], value types
 - parameters [C#], value
 ms.assetid: 193ab86f-5f9b-4359-ac29-7cdf8afad3a6
-caps.latest.revision: 
-author: BillWagner
-ms.author: wiwagn
-ms.openlocfilehash: c33ef23040ec6adaae97a440796e7c6a491c2d8c
-ms.sourcegitcommit: 83dd5ec003e788ccb3e33f3412a7af39ae347646
+ms.openlocfilehash: b64968a89f010f3f904d3a281d346d2ddf999e2f
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/15/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="passing-value-type-parameters-c-programming-guide"></a>Değer Türü Parametrelerini Geçirme (C# Programlama Kılavuzu)
 A [değer türü](../../../csharp/language-reference/keywords/value-types.md) değişkenini içeren kendi verileri doğrudan olarak tersine bir [başvuru türü](../../../csharp/language-reference/keywords/reference-types.md) değişkeni verilerine bir başvuru içeriyor. Değer türü değişkeni için bir yöntem değere göre geçirme yöntemine değişkeni bir kopyasını ileterek anlamına gelir. Yöntemi içinde gerçekleşmesi değişiklikleri parametre bağımsız değişkeninde depolanan özgün veriler herhangi bir etkisi vardır. Çağrılan yöntemi parametresinin değerini değiştirmek istiyorsanız, başvuruya göre geçmesi gereken kullanarak [ref](../../../csharp/language-reference/keywords/ref.md) veya [çıkışı](../../../csharp/language-reference/keywords/out-parameter-modifier.md) anahtar sözcüğü. De kullanabilirsiniz [içinde](../../../csharp/language-reference/keywords/out-parameter-modifier.md) değeri değiştirilmeyecektir güvence altına almak sırasında kopyalama önlemek için başvuruya göre bir değer parametresini geçirmek için anahtar sözcüğü. Kolaylık olması için aşağıdaki örneklerde `ref`.  

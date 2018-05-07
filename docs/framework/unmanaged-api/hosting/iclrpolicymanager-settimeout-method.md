@@ -1,14 +1,6 @@
 ---
-title: "ICLRPolicyManager::SetTimeout Yöntemi"
-ms.custom: 
+title: ICLRPolicyManager::SetTimeout Yöntemi
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: reference
 api_name:
 - ICLRPolicyManager.SetTimeout
 api_location:
@@ -23,17 +15,13 @@ helpviewer_keywords:
 ms.assetid: 954404fd-d52d-4e68-b582-8692f3a5f608
 topic_type:
 - apiref
-caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: b5042d2f06d25b2cccc81239367362313210d3c9
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 5b5a389af718322d1e0fffebae046bf28731877b
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="iclrpolicymanagersettimeout-method"></a>ICLRPolicyManager::SetTimeout Yöntemi
 Belirtilen işlem için bir zaman aşımı değeri ayarlar.  
@@ -66,7 +54,7 @@ HRESULT SetTimeout (
   
 |HRESULT|Açıklama|  
 |-------------|-----------------|  
-|S_OK|`SetTimeout`başarıyla döndürüldü.|  
+|S_OK|`SetTimeout` başarıyla döndürüldü.|  
 |HOST_E_CLRNOTAVAILABLE|CLR süreç içine yüklü değil veya CLR içinde yönetilen kod çalıştıramaz veya çağrı başarılı bir şekilde işlemek bir durumda.|  
 |HOST_E_TIMEOUT|Arama zaman aşımına uğradı.|  
 |HOST_E_NOT_OWNER|Arayan kilidi kendisine ait değil.|  
@@ -81,7 +69,7 @@ HRESULT SetTimeout (
   
  **Kitaplığı:** bir kaynak olarak MSCorEE.dll dahil  
   
- **.NET framework sürümleri:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET framework sürümleri:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
  [EClrOperation Sabit Listesi](../../../../docs/framework/unmanaged-api/hosting/eclroperation-enumeration.md)  

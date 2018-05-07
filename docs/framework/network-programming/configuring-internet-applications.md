@@ -1,12 +1,6 @@
 ---
-title: "Internet uygulamaları yapılandırma"
-ms.custom: 
+title: Internet uygulamaları yapılandırma
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - downloading Internet resources, default proxy
 - sending data, default proxy
@@ -27,16 +21,14 @@ helpviewer_keywords:
 - network resources, configuring Internet applications
 - Internet, default proxy
 ms.assetid: bb707c72-eed2-4a82-8800-c9e68df2fd4f
-caps.latest.revision: "15"
 author: mcleblanc
 ms.author: markl
 manager: markl
-ms.workload: dotnet
-ms.openlocfilehash: 6891f6e8081862fdbf0e9423a6b74fbea0d6e149
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 7c4755e13202f60df5704f6faefb3b279a30ce58
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="configuring-internet-applications"></a>Internet uygulamaları yapılandırma
 [ \<System.Net > öğesi (ağ ayarları)](../../../docs/framework/configure-apps/file-schema/network/system-net-element-network-settings.md) yapılandırma öğesi uygulamalar için ağ yapılandırma bilgileri içerir. Kullanarak [ \<system.Net > öğesi (ağ ayarları)](../../../docs/framework/configure-apps/file-schema/network/system-net-element-network-settings.md) öğesini ayarlayın proxy sunucuları, bağlantı yönetimi parametrelerini ayarlamak ve uygulamanızda özel kimlik doğrulama ve istek modülleri içerir.  
@@ -45,7 +37,7 @@ ms.lasthandoff: 12/22/2017
   
  Microsoft Internet Explorer ayarlarını yapılandırma ayarlarıyla ikinci alma önceliğiyle birleştirildiğini dikkate almak önemlidir.  
   
- Aşağıdaki örnek, varsayılan proxy sunucusu adresi için http://proxyserver ayarlar, proxy yerel adresler için kullanılmamalıdır ve contoso.com etki alanında bulunan sunucular için tüm istekleri proxy atlama belirten gösterir.  
+ Aşağıdaki örnek varsayılan proxy sunucusu adresi ayarlar http://proxyserver, proxy yerel adresler için kullanılmamalıdır ve contoso.com etki alanında bulunan sunucular için tüm istekleri proxy atlama belirten gösterir.  
   
 ```xml  
 <configuration>  

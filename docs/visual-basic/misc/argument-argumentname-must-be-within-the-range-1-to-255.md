@@ -1,23 +1,16 @@
 ---
-title: Bağımsız değişken &#39; &lt;argumentname&gt;&#39; içinde 1 ile 255 arasında olmalıdır
+title: Bağımsız değişken &#39; &lt;argumentname&gt; &#39; içinde 1 ile 255 arasında olmalıdır
 ms.date: 07/20/2015
-ms.prod: .net
-ms.technology:
-- devlang-visual-basic
-ms.topic: article
 f1_keywords:
 - vbrArgument_Range1toFF1
 ms.assetid: a447f9a6-1c90-4c71-abff-81170331e4c5
-caps.latest.revision: 6
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: 468e25afba26475d30f0b3d61f123b2e17bc99dd
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.openlocfilehash: fe2080b998c846bd4defb7d73c8959d89a4ed951
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 05/04/2018
 ---
-# <a name="argument-39ltargumentnamegt39-must-be-within-the-range-1-to-255"></a>Bağımsız değişken &#39; &lt;argumentname&gt;&#39; içinde 1 ile 255 arasında olmalıdır
+# <a name="argument-39ltargumentnamegt39-must-be-within-the-range-1-to-255"></a>Bağımsız değişken &#39; &lt;argumentname&gt; &#39; içinde 1 ile 255 arasında olmalıdır
 0-255 aralığın dışında olduğundan bağımsız değişken geçerli değil.  
   
 ## <a name="to-correct-this-error"></a>Bu hatayı düzeltmek için  
@@ -27,4 +20,4 @@ ms.lasthandoff: 10/18/2017
 2.  Özellikle yordama diğer yordamlardan bağımsız değişken olarak geçirilen değişkenleri ifadesinde önceki işlemleri denetleyin.  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [Bağımsız değişkenleri değere ve başvuruya göre geçirme](../../visual-basic/programming-guide/language-features/procedures/passing-arguments-by-value-and-by-reference.md)
+ [Bağımsız Değişkenleri Değere ve Başvuruya Göre Geçirme](../../visual-basic/programming-guide/language-features/procedures/passing-arguments-by-value-and-by-reference.md)

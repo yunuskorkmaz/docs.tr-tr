@@ -1,26 +1,19 @@
 ---
 title: '#satır (C# Başvurusu)'
 ms.date: 07/20/2015
-ms.prod: .net
-ms.technology:
-- devlang-csharp
-ms.topic: article
 f1_keywords:
 - '#line'
 helpviewer_keywords:
 - '#line directive [C#]'
 ms.assetid: 6439e525-5dd5-4acb-b8ea-efabb32ff95b
-caps.latest.revision: 13
-author: BillWagner
-ms.author: wiwagn
-ms.openlocfilehash: 3d2f42915d214349eebff40949482d7f603c0c2c
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 08ba94ec3f1799f858e098bd2c0e059b7f45af2e
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="line-c-reference"></a>#line (C# Başvurusu)
-`#line`Derleyicinin satır numarasını ve (isteğe bağlı) hataları ve uyarıları için dosya adı çıktı değiştirmenize olanak tanır. Bu örnekte, iki uyarıları satır numaralarını ile ilişkili rapor gösterilmektedir. `#line 200` Yönergesi zorlar (varsayılan #7 olmasına rağmen) 200 satır numarasını ve sonraki #line yönergesi kadar dosya adı "Özel" olarak raporlanır. #Line varsayılan yönergesi önceki yönergesi tarafından yeniden numaralandırılır satırları sayar kendi varsayılan numaralandırma için numaralandırma satır döndürür.  
+`#line` Derleyicinin satır numarasını ve (isteğe bağlı) hataları ve uyarıları için dosya adı çıktı değiştirmenize olanak tanır. Bu örnekte, iki uyarıları satır numaralarını ile ilişkili rapor gösterilmektedir. `#line 200` Yönergesi zorlar (varsayılan #7 olmasına rağmen) 200 satır numarasını ve sonraki #line yönergesi kadar dosya adı "Özel" olarak raporlanır. #Line varsayılan yönergesi önceki yönergesi tarafından yeniden numaralandırılır satırları sayar kendi varsayılan numaralandırma için numaralandırma satır döndürür.  
   
 ```csharp
 class MainClass  
@@ -72,5 +65,5 @@ class MainClass
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
  [C# başvurusu](../../../csharp/language-reference/index.md)  
- [C# programlama kılavuzu](../../../csharp/programming-guide/index.md)  
- [C# önişlemci yönergeleri](../../../csharp/language-reference/preprocessor-directives/index.md)
+ [C# Programlama Kılavuzu](../../../csharp/programming-guide/index.md)  
+ [C# Ön İşlemci Yönergeleri](../../../csharp/language-reference/preprocessor-directives/index.md)

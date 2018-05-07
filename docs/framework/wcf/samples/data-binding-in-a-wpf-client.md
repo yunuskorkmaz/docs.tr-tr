@@ -1,29 +1,15 @@
 ---
 title: Windows Presentation Foundation İstemcisinde Veri Bağlama
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 ms.assetid: bb8c8293-5973-4aef-9b07-afeff5d3293c
-caps.latest.revision: 21
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: d10591866e11bd9e5ae707a0c17c3e293d7f4f71
-ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
+ms.openlocfilehash: 225bdedb67e218092ff3369d4fe742c4fc897fc6
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="data-binding-in-a-windows-presentation-foundation-client"></a>Windows Presentation Foundation İstemcisinde Veri Bağlama
-Bu örnek bir Windows Presentation Foundation (WPF) istemcisinde veri bağlama kullanımını göstermektedir. Örnek kullanan bir [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] rasgele bir dizi istemciye döndürülecek albümleri oluşturur hizmet. Her albüm bir ad, bir fiyat ve albüm parçaları listesini içerir. Albüm parçaları bir ad ve süresi vardır. Hizmet tarafından döndürülen bilgilerin otomatik olarak Windows Presentation Foundation (WPF) istemci tarafından sağlanan kullanıcı arabirimi (UI) bağlıdır.  
+Bu örnek bir Windows Presentation Foundation (WPF) istemcisinde veri bağlama kullanımını göstermektedir. Örnek rasgele bir dizi istemciye döndürülecek albümleri oluşturur bir Windows Communication Foundation (WCF) hizmetini kullanır. Her albüm bir ad, bir fiyat ve albüm parçaları listesini içerir. Albüm parçaları bir ad ve süresi vardır. Hizmet tarafından döndürülen bilgilerin otomatik olarak Windows Presentation Foundation (WPF) istemci tarafından sağlanan kullanıcı arabirimi (UI) bağlıdır.  
   
 > [!NOTE]
 >  Kurulum yordamı ve yapı yönergeleri Bu örnek için bu konunun sonunda yer alır.  
@@ -91,7 +77,7 @@ void client_GetAlbumListCompleted(object sender, GetAlbumListCompletedEventArgs 
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  Bu dizin mevcut değilse, Git [Windows Communication Foundation (WCF) ve .NET Framework 4 için Windows Workflow Foundation (WF) örnek](http://go.microsoft.com/fwlink/?LinkId=150780) tüm indirmek için [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] ve [!INCLUDE[wf1](../../../../includes/wf1-md.md)] örnekleri. Bu örnek aşağıdaki dizinde bulunur.  
+>  Bu dizin mevcut değilse, Git [Windows Communication Foundation (WCF) ve .NET Framework 4 için Windows Workflow Foundation (WF) örnek](http://go.microsoft.com/fwlink/?LinkId=150780) tüm Windows Communication Foundation (WCF) indirmek için ve [!INCLUDE[wf1](../../../../includes/wf1-md.md)] örnekleri. Bu örnek aşağıdaki dizinde bulunur.  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Scenario\DataBinding\WPFDataBinding`  
   

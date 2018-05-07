@@ -1,22 +1,12 @@
 ---
-title: "Tam (Visual Basic) biridir sonra geri kalan zaman uyumsuz görevleri iptal etme"
-ms.custom: 
+title: Tam (Visual Basic) biridir sonra geri kalan zaman uyumsuz görevleri iptal etme
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: c928b5a1-622f-4441-8baf-adca1dde197f
-caps.latest.revision: "3"
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: 698ccf5901a77438368b9bf768b88ca6f90fdcbe
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 86fb56d9a6d6a6c491b35797c7459c701a339341
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="cancel-remaining-async-tasks-after-one-is-complete-visual-basic"></a>Tam (Visual Basic) biridir sonra geri kalan zaman uyumsuz görevleri iptal etme
 Kullanarak <xref:System.Threading.Tasks.Task.WhenAny%2A?displayProperty=nameWithType> yöntemi ile birlikte bir <xref:System.Threading.CancellationToken>, bir görev tamamlandığında, kalan tüm görevler iptal edebilirsiniz. `WhenAny` Yöntemi görevleri koleksiyonu olmayan bir bağımsız değişken alır. Bu yöntem, tüm görevleri başlatır ve tek bir görev döndürür. Koleksiyondaki herhangi bir görev tamamlandığında, tek bir görev tamamlanır.  
@@ -87,7 +77,7 @@ End Function
     Dim downloadTasks As Task(Of Integer)() = downloadTasksQuery.ToArray()  
     ```  
   
-4.  Çağrı `WhenAny` görevleri koleksiyonu. `WhenAny`döndüren bir `Task(Of Task(Of Integer))` veya `Task<Task<int>>`.  Diğer bir deyişle, `WhenAny` tek bir değerlendiren bir görev döndürür `Task(Of Integer)` veya `Task<int>` zaman beklemenin. Bu tek ilk görevi tamamlamak için koleksiyondaki bir görevdir. İlk tamamlandı görev atandığı `firstFinishedTask`. Türü `firstFinishedTask` olan <xref:System.Threading.Tasks.Task%601> nerede `TResult` , dönüş türü tamsayı olmadığından `ProcessURLAsync`.  
+4.  Çağrı `WhenAny` görevleri koleksiyonu. `WhenAny` döndüren bir `Task(Of Task(Of Integer))` veya `Task<Task<int>>`.  Diğer bir deyişle, `WhenAny` tek bir değerlendiren bir görev döndürür `Task(Of Integer)` veya `Task<int>` zaman beklemenin. Bu tek ilk görevi tamamlamak için koleksiyondaki bir görevdir. İlk tamamlandı görev atandığı `firstFinishedTask`. Türü `firstFinishedTask` olan <xref:System.Threading.Tasks.Task%601> nerede `TResult` , dönüş türü tamsayı olmadığından `ProcessURLAsync`.  
   
 ```vb  
 ' ***Call WhenAny and then await the result. The task that finishes   

@@ -1,31 +1,17 @@
 ---
 title: Kimlik Doğrulama ile Hizmet Kimliği
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 dev_langs:
 - csharp
 - vb
 helpviewer_keywords:
 - authentication [WCF], specifying the identity of a service
 ms.assetid: a4c8f52c-5b30-45c4-a545-63244aba82be
-caps.latest.revision: 32
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 5bd550b7408e9db00daf7793cd0a7f1261e21ccf
-ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
+ms.openlocfilehash: 21184098f90be3b64cfccd5ab98a1824cee50e48
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/30/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="service-identity-and-authentication"></a>Kimlik Doğrulama ile Hizmet Kimliği
 Bir hizmetin *uç noktası kimlik*hizmeti Web Hizmetleri Açıklama Dili (WSDL) oluşturulan bir değerdir. Herhangi bir istemciye yayılan, bu değer, hizmetin kimliğini doğrulamak için kullanılır. İstemci iletişimi için bir bitiş noktasına başlatır ve hizmeti kendisi için istemci kimlik doğrulaması sonra istemci uç noktası kimlik doğrulama işlemi döndürdü gerçek değer uç noktası kimlik değerle karşılaştırır. Eşleşirlerse, istemci beklenen hizmet uç noktası başvurduğunu emin olur. Bu karşı bir koruma görür *kimlik avı* kötü amaçlı bir hizmet tarafından barındırılan bir uç nokta yönlendiren bir istemci engelleyerek.  
@@ -35,7 +21,7 @@ Bir hizmetin *uç noktası kimlik*hizmeti Web Hizmetleri Açıklama Dili (WSDL) 
 > [!NOTE]
 >  NT LanMan (NTLM) kimlik doğrulaması için kullandığınızda, NTLM altında istemci sunucu kimlik doğrulaması yapamadı olduğundan, hizmet kimliği işaretlenmemiştir. NTLM Windows Çalışma Grubu'nun bir parçası olduğunda, bilgisayarları veya Kerberos kimlik doğrulamasını desteklemez Windows daha eski bir sürümü çalıştıran olduğunda kullanılır.  
   
- İstemci bir hizmete onun üzerinden ileti göndermek için güvenli bir kanal başlattığında [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] Altyapısı hizmeti kimlik doğrulaması ve istemcinin kullandığı uç noktası adresi belirtilen kimlik hizmet kimliği eşleşiyorsa, yalnızca ileti gönderir.  
+ İstemci bir hizmet üzerinde bir ileti göndermek için güvenli bir kanal başlattığında, Windows Communication Foundation (WCF) altyapısı hizmeti kimlik doğrulaması ve hizmet kimliği uç belirtilen kimlik eşleşiyorsa, yalnızca ileti gönderir istemcinin kullandığı adres.  
   
  Kimlik işleme aşağıdaki aşamalardan oluşur:  
   
@@ -45,7 +31,7 @@ Bir hizmetin *uç noktası kimlik*hizmeti Web Hizmetleri Açıklama Dili (WSDL) 
   
  İstemci üzerinde işlem kimliği, istemci kimlik doğrulama hizmetine benzerdir. İstemci kimlik doğrulaması kadar güvenli bir hizmet kodu yürütmez. Benzer şekilde, istemci ne önceden hizmetin meta verilerini bilinen üzerinde hizmetin kimlik doğrulaması kadar hizmete ileti tabanlı göndermez.  
   
- <xref:System.ServiceModel.EndpointAddress.Identity%2A> Özelliği <xref:System.ServiceModel.EndpointAddress> sınıfı, istemci tarafından adlı hizmeti kimliğini temsil eder. Hizmet yayımlar <xref:System.ServiceModel.EndpointAddress.Identity%2A> meta verilerinde. İstemci Geliştirici çalıştığında [ServiceModel meta veri yardımcı Programracı (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md) Hizmeti uç noktası karşı üretilen yapılandırma hizmetin değerini içeren <xref:System.ServiceModel.EndpointAddress.Identity%2A> özelliği. [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] (Güvenliği ile yapılandırılmışsa) altyapısı hizmeti belirtilen kimlik sahip olduğunu doğrular.  
+ <xref:System.ServiceModel.EndpointAddress.Identity%2A> Özelliği <xref:System.ServiceModel.EndpointAddress> sınıfı, istemci tarafından adlı hizmeti kimliğini temsil eder. Hizmet yayımlar <xref:System.ServiceModel.EndpointAddress.Identity%2A> meta verilerinde. İstemci Geliştirici çalıştığında [ServiceModel meta veri yardımcı Programracı (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md) Hizmeti uç noktası karşı üretilen yapılandırma hizmetin değerini içeren <xref:System.ServiceModel.EndpointAddress.Identity%2A> özelliği. WCF altyapıyı (güvenlik ile yapılandırılmışsa) hizmeti belirtilen kimlik sahip olduğunu doğrular.  
   
 > [!IMPORTANT]
 >  Meta veri hizmeti beklenen kimliğini içerdiğinden, hizmeti meta verileri güvenli araçlarla, örneğin, hizmet için bir HTTPS uç noktası oluşturarak ortaya önerilir. Daha fazla bilgi için bkz: [nasıl yapılır: meta veri uç noktalarını güvenli](../../../../docs/framework/wcf/feature-details/how-to-secure-metadata-endpoints.md).  
@@ -75,7 +61,7 @@ Bir hizmetin *uç noktası kimlik*hizmeti Web Hizmetleri Açıklama Dili (WSDL) 
   
   
 ## <a name="setting-identity-programmatically"></a>Kimlik programlı olarak ayarlama  
- Çünkü, bir kimlik açıkça belirtmek, hizmet yok. [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] otomatik olarak belirler. Ancak, [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] gerekli olursa bir uç nokta üzerinde bir kimlik belirtmenize olanak tanır. Aşağıdaki kod, belirli bir DNS kimlik ile yeni bir hizmet uç noktası ekler.  
+ WCF formu otomatik olarak belirlediğinden hizmetiniz bir kimlik açıkça belirtmek yok. Ancak, WCF bir noktadaki bir kimlik belirtmek gerekirse sağlar. Aşağıdaki kod, belirli bir DNS kimlik ile yeni bir hizmet uç noktası ekler.  
   
  [!code-csharp[C_Identity#5](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_identity/cs/source.cs#5)]
  [!code-vb[C_Identity#5](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_identity/vb/source.vb#5)]  
@@ -99,13 +85,13 @@ Bir hizmetin *uç noktası kimlik*hizmeti Web Hizmetleri Açıklama Dili (WSDL) 
   
  Kanal, ileti veya aktarım düzeyi Güvenli Yuva Katmanı (SSL) X.509 sertifikalarıyla için kimlik doğrulaması kullanarak kimlik doğrulaması için yapılandırılmışsa, aşağıdaki kimlik değerler geçerlidir:  
   
--   DNS. [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] SSL el sıkışması sırasında sağlanan sertifikanın DNS içerdiğini garantiler veya `CommonName` (CN) öznitelik istemci DNS kimliğini belirtilen değere eşit. Sunucu sertifikasının geçerliliğini belirlemek için bu denetimleri ayrıca yapıldığını unutmayın. Varsayılan olarak, [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] sunucu sertifikasının güvenilen kök yetkilisi tarafından verilen olduğunu doğrular.  
+-   DNS. WCF sağlar SSL el sıkışması sırasında sağlanan sertifikanın DNS içerir veya `CommonName` (CN) öznitelik istemci DNS kimliğini belirtilen değere eşit. Sunucu sertifikasının geçerliliğini belirlemek için bu denetimleri ayrıca yapıldığını unutmayın. Varsayılan olarak, sunucu sertifikasının güvenilen kök yetkilisi tarafından verilen WCF doğrular.  
   
--   Sertifika. SSL el sıkışması sırasında [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] uzak uç nokta kimlik belirtilen tam sertifika değer sağlar sağlar.  
+-   Sertifika. SSL el sıkışması sırasında uzak uç nokta kimlik belirtilen tam sertifika değer sağlar WCF sağlar.  
   
 -   Sertifika başvurusu. Sertifika ile aynıdır.  
   
--   RSA. SSL el sıkışması sırasında [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] uzak uç nokta kimlik belirtilen RSA anahtarı tam sağlar sağlar.  
+-   RSA. SSL el sıkışması sırasında uzak uç nokta kimlik belirtilen RSA anahtarı tam sağlar WCF sağlar.  
   
  Hizmet, ileti veya aktarım düzeyi SSL kimlik doğrulaması için Windows kimlik bilgileri ile kullanarak kimliğini doğrular ve kimlik bilgisi görüşür, aşağıdaki kimlik değerler geçerlidir:  
   

@@ -1,18 +1,12 @@
 ---
-title: "Kaynak klasörü yok."
+title: Kaynak klasörü yok.
 ms.date: 07/20/2015
-ms.prod: .net
-ms.technology: devlang-visual-basic
-ms.topic: article
 ms.assetid: c891d006-b721-4d93-b57d-ce51d91fca00
-caps.latest.revision: "9"
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: e8e831817dea857b3647b851f188a62f0a3a58c4
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: fd124ed7a03fe0fd33b39424b3e40fe56b09326e
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="the-source-folder-does-not-exist"></a>Kaynak klasörü yok.
 Var olmayan bir kaynak klasörü başvuruda bulunan bir işlem denendi. Bu, hatalı dosya yolu sağladığını sonucu olabilir.  
@@ -22,6 +16,6 @@ Var olmayan bir kaynak klasörü başvuruda bulunan bir işlem denendi. Bu, hata
 -   Göreli yollar özellikle kullanıyorsanız, doğru yolu kullandığınızdan emin olun.  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [Nasıl yapılır: dosya yollarını ayrıştırma](../../visual-basic/developing-apps/programming/drives-directories-files/how-to-parse-file-paths.md)  
- [Dosyaları okuma](../../visual-basic/developing-apps/programming/drives-directories-files/reading-from-files.md)  
- [Oluşturma, silme ve dosyaları ve dizinleri taşıma](../../visual-basic/developing-apps/programming/drives-directories-files/creating-deleting-and-moving-files-and-directories.md)
+ [Nasıl Yapılır: Dosya Yollarını Ayrıştırma](../../visual-basic/developing-apps/programming/drives-directories-files/how-to-parse-file-paths.md)  
+ [Dosyalardan Okuma](../../visual-basic/developing-apps/programming/drives-directories-files/reading-from-files.md)  
+ [Dosya ve Dizin Oluşturma, Silme ve Taşıma](../../visual-basic/developing-apps/programming/drives-directories-files/creating-deleting-and-moving-files-and-directories.md)

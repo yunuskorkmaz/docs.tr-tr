@@ -1,22 +1,12 @@
 ---
 title: Temel sorgu (LINQ-XML) (Visual Basic)
-ms.custom: 
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: aec6ef60-f6f4-4548-b3db-cf6c94bb0008
-caps.latest.revision: "3"
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: a6611d4aeba39dd96ea7ea92bbaef9630bb6d870
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.openlocfilehash: 25f0e49e57f03cbde190125ca2d24a01f208fda6
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="basic-queries-linq-to-xml-visual-basic"></a>Temel sorgu (LINQ-XML) (Visual Basic)
 Bu bölümde temel örnekleri [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] sorgular.  
@@ -27,7 +17,7 @@ Bu bölümde temel örnekleri [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.m
 |-----------|-----------------|  
 |[Nasıl yapılır: belirli bir özniteliği (Visual Basic) sahip bir öğe bulunamadı](../../../../visual-basic/programming-guide/concepts/linq/how-to-find-an-element-with-a-specific-attribute.md)|Belirli bir değere sahip bir özniteliği olan belirli bir öğeyi bulmak gösterilmiştir.|  
 |[Nasıl yapılır: belirli alt öğesi (Visual Basic) olan bir öğe bulunamadı](../../../../visual-basic/programming-guide/concepts/linq/how-to-find-an-element-with-a-specific-child-element.md)|Belirli bir değere sahip bir alt öğesi olan belirli bir öğeyi bulmak gösterilmiştir.|  
-|[XDocument vs sorgulama. Sorgulama XElement (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/querying-an-xdocument-vs-querying-an-xelement.md)|Sorgu içinde kökü belirtilmiş bir XML ağacı üzerinde yazma arasındaki farklar açıklanmaktadır <xref:System.Xml.Linq.XElement> ve kökü belirtilmiş bir XML ağaç sorguları yazma <xref:System.Xml.Linq.XDocument>.|  
+|[XDocument Sorgulama ve Sorgulama XElement (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/querying-an-xdocument-vs-querying-an-xelement.md)|Sorgu içinde kökü belirtilmiş bir XML ağacı üzerinde yazma arasındaki farklar açıklanmaktadır <xref:System.Xml.Linq.XElement> ve kökü belirtilmiş bir XML ağaç sorguları yazma <xref:System.Xml.Linq.XDocument>.|  
 |[Nasıl yapılır: Bul Descendants belirli öğe adına (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/how-to-find-descendants-with-a-specific-element-name.md)|Belirli bir ada sahip tüm alt öğeleri öğenin bulmak gösterilmiştir. Bu örnekte <xref:System.Xml.Linq.XContainer.Descendants%2A> ekseni.|  
 |[Nasıl yapılır: alt öğeleri yöntemi (Visual Basic) kullanılarak tek bir alt öğesi bulunamıyor](../../../../visual-basic/programming-guide/concepts/linq/how-to-find-a-single-descendant-using-the-descendants-method.md)|Nasıl kullanılacağını gösterir <xref:System.Xml.Linq.XContainer.Descendants%2A> tek bir benzersiz olarak bulmak için eksen yöntemi adlı öğesi.|  
 |[Nasıl yapılır: karmaşık (Visual Basic) filtresiyle sorguları yazma](../../../../visual-basic/programming-guide/concepts/linq/how-to-write-queries-with-complex-filtering.md)|Bir sorgu ile daha karmaşık bir filtre yazma gösterilmektedir.|  

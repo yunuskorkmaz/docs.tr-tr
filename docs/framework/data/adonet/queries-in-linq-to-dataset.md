@@ -1,30 +1,18 @@
 ---
-title: "LINQ-DataSet sorguları"
-ms.custom: 
+title: LINQ-DataSet sorguları
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-ado
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
 ms.assetid: c1a78fa8-9f0c-40bc-a372-5575a48708fe
-caps.latest.revision: "3"
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
-ms.workload: dotnet
-ms.openlocfilehash: 7e07da38f7a75226d48ef84cc8d2dafd48f6e795
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.openlocfilehash: ef9334eec92ef06e5be07dae4391cdac43fed778
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="queries-in-linq-to-dataset"></a>LINQ-DataSet sorguları
-Bir sorgu veri kaynağından verileri alan bir ifadedir. Sorguları genellikle ilişkisel veritabanları için SQL ve XML için XQuery gibi bir özel sorgu dili ifade edilir. Bu nedenle, geliştiricilerin her veri kaynağı veya bunlar sorgu veri biçimi türü için yeni bir sorgu dili öğrenin gerekirdi. [!INCLUDE[vbteclinqext](../../../../includes/vbteclinqext-md.md)]çeşitli veri kaynakları ve biçimleri arasında verilerle çalışmak için daha basit ve tutarlı bir modeli sunar. İçinde bir [!INCLUDE[vbteclinq](../../../../includes/vbteclinq-md.md)] sorgu, çalışma her zaman nesneleri programlama ile.  
+Bir sorgu veri kaynağından verileri alan bir ifadedir. Sorguları genellikle ilişkisel veritabanları için SQL ve XML için XQuery gibi bir özel sorgu dili ifade edilir. Bu nedenle, geliştiricilerin her veri kaynağı veya bunlar sorgu veri biçimi türü için yeni bir sorgu dili öğrenin gerekirdi. [!INCLUDE[vbteclinqext](../../../../includes/vbteclinqext-md.md)] çeşitli veri kaynakları ve biçimleri arasında verilerle çalışmak için daha basit ve tutarlı bir modeli sunar. İçinde bir [!INCLUDE[vbteclinq](../../../../includes/vbteclinq-md.md)] sorgu, çalışma her zaman nesneleri programlama ile.  
   
  A [!INCLUDE[vbteclinq](../../../../includes/vbteclinq-md.md)] sorgu işlemi üç eylemlerini oluşur: veri kaynağı veya kaynakları edinme, sorguyu oluşturmak ve sorgu yürütün.  
   
@@ -37,7 +25,7 @@ Bir sorgu veri kaynağından verileri alan bir ifadedir. Sorguları genellikle i
  Değerleri bir dizi döndürmesi ertelenmiş sorguları aksine, bir tek değer döndüren sorgular hemen çalıştırılır. Singleton sorguları bazı örnekleri şunlardır <xref:System.Linq.Enumerable.Count%2A>, <xref:System.Linq.Enumerable.Max%2A>, <xref:System.Linq.Enumerable.Average%2A>, ve <xref:System.Linq.Enumerable.First%2A>. Sorgu sonuçları singleton sonucu hesaplamak için gerekli olduğundan bu hemen yürütün. Ortalama işlevi çalışmak için giriş, örneğin, sorgu sonuçları ortalamasını bulmak için sorgu yürütülmelidir. Aynı zamanda <xref:System.Linq.Enumerable.ToList%2A> veya <xref:System.Linq.Enumerable.ToArray%2A> bir tek değer üretmez bir sorgu hemen yürütülmesi zorlamak için bir sorgu yöntemleri. Bir sorgunun sonuçlarını önbelleğe almak istediğiniz zaman hemen yürütme zorlamak için bu teknikler yararlı olabilir. Ertelenmiş ve hemen sorgu yürütme hakkında daha fazla bilgi için bkz: [LINQ ile çalışmaya başlama](http://msdn.microsoft.com/library/6cc9af04-950a-4cc3-83d4-2aeb4abe4de9).  
   
 ## <a name="queries"></a>Sorgular  
- [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)]sorgu içinde iki farklı sözdizimi şeklide: Sorgu ifade sözdizimi ve yöntem temelli sorgu sözdizimi.  
+ [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)] sorgu içinde iki farklı sözdizimi şeklide: Sorgu ifade sözdizimi ve yöntem temelli sorgu sözdizimi.  
   
 ### <a name="query-expression-syntax"></a>Sorgu ifade sözdizimi  
  Sorgu ifadeleri bildirim temelli sorgu söz dizimi ' dir. Bu sözdiziminin sorguları SQL benzer bir biçimde C# veya Visual Basic yazmak bir geliştirici sağlar. Sorgu ifade sözdizimini kullanarak, daha karmaşık filtreleme, sıralama ve veri kaynaklarında çok az kod ile gruplandırma işlemleri gerçekleştirebilir. Daha fazla bilgi için bkz: [LINQ Sorgu ifadeleri](http://msdn.microsoft.com/library/40638f19-fb46-4d26-a2d9-a383b48f5ed4) ve [temel sorgu işlemleri (Visual Basic)](~/docs/visual-basic/programming-guide/concepts/linq/basic-query-operations.md).  

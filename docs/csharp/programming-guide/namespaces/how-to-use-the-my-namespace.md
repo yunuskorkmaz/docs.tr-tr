@@ -1,21 +1,14 @@
 ---
 title: "Nasıl yapılır: Ad Alanım'ı Kullanma (C# Programlama Kılavuzu)"
 ms.date: 07/20/2015
-ms.prod: .net
-ms.technology:
-- devlang-csharp
-ms.topic: article
 helpviewer_keywords:
 - C# language, My namespace access
 ms.assetid: e7152414-0ea5-4c8e-bf02-c8d5bbe45ff4
-caps.latest.revision: 
-author: BillWagner
-ms.author: wiwagn
-ms.openlocfilehash: f3564c594a5fbb9bd05a956e5c12bbb173d2db51
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: ceab0dbb2ded070fc7de4f5a59d778be2a54f9cb
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-use-the-my-namespace-c-programming-guide"></a>Nasıl yapılır: Ad Alanım'ı Kullanma (C# Programlama Kılavuzu)
 <xref:Microsoft.VisualBasic.MyServices> Ad alanı (`My` Visual Basic'te) .NET Framework sınıfları, bilgisayar, uygulama, ayarları, kaynaklar vb. ile etkileşime giren kod yazmayı sağlayan bir dizi kolay ve sezgisel erişim sağlar. İlk olarak Visual Basic ile kullanılmak üzere tasarlanmış olsa da `MyServices` ad alanı, C# uygulamalarda kullanılabilir.  
@@ -45,6 +38,6 @@ ms.lasthandoff: 11/21/2017
  [!code-csharp[csProgGuideNamespaces#20](../../../csharp/programming-guide/namespaces/codesnippet/CSharp/how-to-use-the-my-namespace_3.cs)]  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [C# programlama kılavuzu](../../../csharp/programming-guide/index.md)  
- [Ad alanları](../../../csharp/programming-guide/namespaces/index.md)  
- [Ad alanlarını kullanma](../../../csharp/programming-guide/namespaces/using-namespaces.md)
+ [C# Programlama Kılavuzu](../../../csharp/programming-guide/index.md)  
+ [Ad Alanları](../../../csharp/programming-guide/namespaces/index.md)  
+ [Ad Alanlarını Kullanma](../../../csharp/programming-guide/namespaces/using-namespaces.md)

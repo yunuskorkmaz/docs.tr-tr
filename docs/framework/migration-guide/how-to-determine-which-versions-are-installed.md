@@ -1,10 +1,6 @@
 ---
 title: 'Nasıl yapılır: hangi .NET Framework sürümlerinin yüklü olduğunu belirleme'
-ms.date: 01/24/2018
-ms.prod: .net-framework
-ms.technology:
-- dotnet-clr
-ms.topic: article
+ms.date: 04/10/2018
 dev_langs:
 - csharp
 - vb
@@ -15,14 +11,11 @@ helpviewer_keywords:
 ms.assetid: 40a67826-e4df-4f59-a651-d9eb0fdc755d
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: edf1e5a53f6f578f943cf8775a798b5681d2d9dd
-ms.sourcegitcommit: b750a8e3979749b214e7e10c82efb0a0524dfcb1
+ms.openlocfilehash: 3677ff7cc27847d56802206c793a574d61b1464c
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/09/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-determine-which-net-framework-versions-are-installed"></a>Nasıl yapılır: hangi .NET Framework sürümlerinin yüklü olduğunu belirleme
 
@@ -98,11 +91,12 @@ Kullanıcılar, yükleyin ve bilgisayarlarında birden çok .NET Framework sür�
     |378675|.NET framework 4.5.1 Windows 8.1 veya Windows Server 2012 R2 ile yüklenen|
     |378758|.NET framework 4.5.1 Windows 8, Windows 7 SP1 veya Windows Vista SP2 yüklü|
     |379893|.NET Framework 4.5.2|
-    |Windows 10 sistemlerde: 393295<br /><br /> Diğer tüm işletim sistemi sürümlerinde: 393297|[!INCLUDE[net_v46](../../../includes/net-v46-md.md)]|
-    |Windows 10 Kasım güncelleştirme sistemlerde: 394254<br /><br /> Diğer tüm işletim sistemi sürümlerinde: 394271|[!INCLUDE[net_v461](../../../includes/net-v461-md.md)]|
-    |Windows 10 Anniversary Update: 394802<br /><br /> Diğer tüm işletim sistemi sürümlerinde: 394806|[!INCLUDE[net_v462](../../../includes/net-v462-md.md)]| 
-    |Üzerinde Windows 10 oluşturucuları güncelleştirme: 460798<br/><br/> Diğer tüm işletim sistemi sürümlerinde: 460805 | .NET framework 4.7 |
-    |Windows 10 kalan oluşturucuları güncelleştirme: 461308<br/><br/> Diğer tüm işletim sistemi sürümlerinde: 461310 | .NET framework 4.7.1 |
+    |Yalnızca Windows 10 sistemlerde: 393295<br /><br /> Diğer tüm işletim sistemi sürümlerinde: 393297|[!INCLUDE[net_v46](../../../includes/net-v46-md.md)]|
+    |Yalnızca Windows 10 Kasım güncelleştirme sistemlerde: 394254<br /><br /> Diğer tüm işletim sistemi sürümlerinde: 394271|[!INCLUDE[net_v461](../../../includes/net-v461-md.md)]|
+    |Windows 10 Anniversary üzerinde güncelleştirme yalnızca: 394802<br /><br /> Diğer tüm işletim sistemi sürümlerinde: 394806|[!INCLUDE[net_v462](../../../includes/net-v462-md.md)]| 
+    |Windows 10 oluşturucuları üzerinde güncelleştirme yalnızca: 460798<br/><br/> Diğer tüm işletim sistemi sürümlerinde: 460805 | .NET framework 4.7 |
+    |Windows 10 sonbaharda oluşturucuları güncelleştirmesi yalnızca: 461308<br/><br/> Diğer tüm işletim sistemi sürümlerinde: 461310 | .NET framework 4.7.1 |
+    |Yalnızca Windows 10 Nisan 2018 Update: 461808<br/><br/> Diğer tüm işletim sistemi sürümlerinde: 461814| .NET framework 4.7.2 |
     
 <a name="net_c"></a> 
 ## <a name="to-find-net-framework-versions-by-querying-the-registry-in-code-net-framework-1-4"></a>.NET Framework sürümleri kod (.NET Framework 1-4) kayıt defterinde sorgulayarak bulmak için
@@ -153,7 +147,9 @@ Kullanıcılar, yükleyin ve bilgisayarlarında birden çok .NET Framework sür�
     |.NET framework tüm diğer Windows işletim sistemi sürümleri yüklü 4.7|460805|
     |.NET framework Windows 10 sonbaharda oluşturucuları Update'te yüklü 4.7.1|461308|
     |.NET framework tüm diğer Windows işletim sistemi sürümleri yüklü 4.7.1|461310|
-
+    |.NET framework Windows yüklenen 4.7.2 10 Nisan 2018 güncelleştir|461808|
+    |.NET framework tüm diğer Windows işletim sistemi sürümleri yüklü 4.7.2|461814|
+    
      Aşağıdaki örnek denetimleri `Release` belirlemek için kayıt defteri değerinde olup olmadığını [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] veya .NET Framework'ün daha yeni bir sürümü yüklü.
 
      [!code-csharp[ListVersions#5](../../../samples/snippets/csharp/framework/migration-guide/versions-installed3.cs)]
@@ -186,7 +182,8 @@ Kullanıcılar, yükleyin ve bilgisayarlarında birden çok .NET Framework sür�
     |[!INCLUDE[net_v462](../../../includes/net-v462-md.md)]|394802|
     |.NET framework 4.7|460798|
     |.NET framework 4.7.1|461308|
-    
+    |.NET framework 4.7.2|461808|
+
 <a name="clr_a"></a> 
 ## <a name="to-find-the-current-runtime-version-by-using-the-clrver-tool"></a>Geçerli çalışma zamanı sürümü Clrver Aracı'nı kullanarak bulma
 

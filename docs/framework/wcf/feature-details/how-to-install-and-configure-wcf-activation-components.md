@@ -1,37 +1,23 @@
 ---
-title: "Nasıl yapılır: WCF Etkinleştirme Bileşenlerini Yükleme ve Yapılandırma"
-ms.custom: 
+title: 'Nasıl yapılır: WCF Etkinleştirme Bileşenlerini Yükleme ve Yapılandırma'
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - HTTP activation [WCF]
 ms.assetid: 33a7054a-73ec-464d-83e5-b203aeded658
-caps.latest.revision: 
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 78c63fe58872097058292a8b100b376959a2a0b2
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: f362bd1e4a644488e85cdeca674d46ca340bde05
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-install-and-configure-wcf-activation-components"></a>Nasıl yapılır: WCF Etkinleştirme Bileşenlerini Yükleme ve Yapılandırma
-Bu konu Windows İşlem Etkinleştirme Hizmeti (WAS olarak da bilinir) ayarlamak için gereken adımları açıklar [!INCLUDE[wv](../../../../includes/wv-md.md)] ana bilgisayara [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] ağ protokolleri HTTP üzerinden iletişim kurmazlar Hizmetleri. Aşağıdaki bölümlerde bu yapılandırma için adımlar verilmiştir:  
+Bu konu Windows İşlem Etkinleştirme Hizmeti (WAS olarak da bilinir) ayarlamak için gereken adımları açıklar [!INCLUDE[wv](../../../../includes/wv-md.md)] Windows Communication Foundation (WCF) barındırmak için HTTP üzerinden iletişim kurmazlar Hizmetleri protokolleri ağ. Aşağıdaki bölümlerde bu yapılandırma için adımlar verilmiştir:  
   
--   Yükleme (veya yüklemesini onaylamak) [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] etkinleştirme bileşenleri.  
+-   Yükleme (veya yüklemesini onaylamak) WCF etkinleştirme bileşenlerini.  
   
 -   Bir HTTP olmayan protokolünü destekleyen WAS yapılandırın. Aşağıdaki yordamda [!INCLUDE[wv](../../../../includes/wv-md.md)] TCP etkinleştirme için.  
   
- Yükleme ve WAS yapılandırma gördükten sonra [nasıl yapılır: bir WCF Hizmeti barındırma](../../../../docs/framework/wcf/feature-details/how-to-host-a-wcf-service-in-was.md) oluşturmak için yordamlar için bir [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] hizmet WAS kullanan bir HTTP olmayan uç noktasını kullanıma sunar.  
+ Yükleme ve WAS yapılandırma gördükten sonra [nasıl yapılır: bir WCF Hizmeti barındırma](../../../../docs/framework/wcf/feature-details/how-to-host-a-wcf-service-in-was.md) WAS kullanan bir HTTP olmayan uç noktasını kullanıma sunar bir WCF hizmeti oluşturma yordamlar.  
   
 ### <a name="to-install-the-wcf-non-http-activation-components"></a>WCF HTTP olmayan etkinleştirme bileşenlerini yüklemek için  
   
@@ -64,7 +50,7 @@ Bu konu Windows İşlem Etkinleştirme Hizmeti (WAS olarak da bilinir) ayarlamak
     ```  
   
     > [!NOTE]
-    >  Bu komut, metnin tek bir satırdır. Bu komut etkinleştirir /\<*WCF uygulaması*> hem http://localhost kullanılarak erişilmesi için uygulama*/\<WCF uygulaması >* ve net.tcp:// localhost /*\<WCF uygulaması >*.  
+    >  Bu komut, metnin tek bir satırdır. Bu komut etkinleştirir /\<*WCF uygulaması*> her ikisini de kullanarak erişilebilmesi için uygulama http://localhost  */ \<WCF uygulaması >* ve net.tcp:// localhost /*\<WCF uygulaması >*.  
   
      Eklediğiniz net.tcp site bağlaması Bu örnek için kaldırın.  
   

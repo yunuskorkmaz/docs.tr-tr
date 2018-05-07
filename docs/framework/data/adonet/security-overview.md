@@ -1,24 +1,12 @@
 ---
-title: "Güvenlik genel bakış 2"
-ms.custom: 
+title: Güvenlik genel bakış 2
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-ado
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 33e09965-61d5-48cc-9e8c-3b047cc4f194
-caps.latest.revision: "4"
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
-ms.workload: dotnet
-ms.openlocfilehash: c952a79b70314ff9de195da322efd78d54176201
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.openlocfilehash: 4e8d1502096dc452d21158e4fb3684298be9b982
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="security-overview"></a>Güvenlik Genel Bakış
 Bir uygulama güvenliğini sağlamaya devam eden bir işlemdir. Hiçbir zaman bir geliştirici gelecekteki saldırıları yeni teknolojileri tür ortaya çıkarır tahmin etmek mümkün olduğundan, bir uygulamanın tüm saldırılarına karşı güvenli olduğu garanti edebilir noktası olacaktır. Buna karşılık, yalnızca hiç kimse olduğundan henüz bulunan (veya yayımlanmış) güvenlik açıkları sistemindeki gelmez hiçbiri mevcut veya mevcut. Yanı sıra güvenlik için proje tasarım aşamasında planlama güvenlik uygulama ömrü boyunca nasıl sürdürüleceği planlamak gerekir.  

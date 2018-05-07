@@ -1,19 +1,15 @@
 ---
-title: "Windows XP'de .NET Framework'ü yüklemek"
-description: "Windows XP'de .NET Framework'ü yüklemek öğrenin."
+title: Windows XP'de .NET Framework'ü yüklemek
+description: Windows XP'de .NET Framework'ü yüklemek öğrenin.
+ms.custom: updateeachrelease
 author: rlander
 ms.author: mairaw
-keywords: ".NET framework, yükleme"
-ms.date: 08/03/2017
-ms.topic: article
-ms.prod: .net-framework
-ms.devlang: dotnet
-ms.workload: dotnet
-ms.openlocfilehash: 83def2091cf1fdc7d3d359c98aa3116a009d465d
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.date: 04/10/2018
+ms.openlocfilehash: 8ac695353e36466f05bae129ff1c37ba3d8cbb69
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="install-the-net-framework-on-windows-xp-and-windows-server-2003"></a>.NET Framework Windows XP ve Windows Server 2003 üzerinde yükleme
 
@@ -24,7 +20,7 @@ ms.lasthandoff: 12/22/2017
 
 ![Bu uygulama başlatılamadı](./media/this-application-could-not-be-started.png)
 
-Bu yönergeleri, ihtiyacınız olan .NET Framework sürümlerini yüklemenize yardımcı olur. [.NET Framework 4.7.1](https://www.microsoft.com/en-us/download/details.aspx?id=56115&desc=dotnet47) en son sürümüdür. Windows XP ve Windows Server 2003'te desteklenmiyor. Dahil olan [Windows 10 sonbaharda oluşturucuları güncelleştirme](https://www.microsoft.com/software-download/windows10) ve [Windows Server 2016 sürüm 1709](https://docs.microsoft.com/windows-server/get-started/get-started-with-1709).
+Bu yönergeleri, ihtiyacınız olan .NET Framework sürümlerini yüklemenize yardımcı olur. [.NET Framework 4.7.2](http://go.microsoft.com/fwlink/?LinkID=863255) en son sürümüdür. Windows XP ve Windows Server 2003'te desteklenmiyor. Dahil olan [10 Nisan 2018 Windows Update](https://www.microsoft.com/software-download/windows10).
 
 ## <a name="net-framework-403"></a>.NET framework 4.0.3
 

@@ -1,31 +1,17 @@
 ---
-title: "Windows Forms'ta Kullanıcı Girdisi Doğrulama"
-ms.custom: 
+title: Windows Forms'ta Kullanıcı Girdisi Doğrulama
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-winforms
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - Windows Forms, validating user input
 - validation [Windows Forms], Windows Forms user input
 - user input [Windows Forms], validating in Windows Forms
 - validating user input [Windows Forms], Windows Forms
 ms.assetid: 4ec07681-1dee-4bf9-be5e-718f635a33a1
-caps.latest.revision: 
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 1d0e3ec867e44c4f01b239e8e243259d7c951d96
-ms.sourcegitcommit: cf22b29db780e532e1090c6e755aa52d28273fa6
+ms.openlocfilehash: adc138ad1e277f69f27f9f86fc5c3ea28a8d5cce
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/01/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="user-input-validation-in-windows-forms"></a>Windows Forms'ta Kullanıcı Girdisi Doğrulama
 Kullanıcılar uygulamanıza veri girdiğinizde, uygulamanızın kullandığı önce verilerin geçerli olduğunu doğrulamak isteyebilirsiniz. Belirli metin alanları olmaması, sıfır uzunluk, alan bir telefon numarası veya diğer iyi biçimlendirilmiş bir veri türü olarak biçimlendirilmiş olması ya da bir dizeyi bir veritabanı güvenliğinizi aşmaya kullanılabilecek herhangi güvenli olmayan karakterleri içeremez gerektirebilir. Windows Forms, uygulamanızdaki giriş doğrulamak çeşitli yöntemler sağlar.  
@@ -56,7 +42,7 @@ Kullanıcılar uygulamanıza veri girdiğinizde, uygulamanızın kullandığı �
  Veri bağlama kullandığınızda, Denetim verilerinde yürütülmesi sırasında veri kaynağıyla eşitlenir <xref:System.Windows.Forms.Control.Validating> olay. İptal ederseniz <xref:System.Windows.Forms.Control.Validating> olay verileri veri kaynağı ile senkronize edilmeyecek.  
   
 > [!IMPORTANT]
->  Gerçekleştikten sonra özel doğrulama varsa <xref:System.Windows.Forms.Control.Validating> olay, onu etkilemez veri bağlama. Örneğin, kod varsa bir <xref:System.Windows.Forms.Control.Validated> veri bağlama iptal etmeyi dener olay, veri bağlama hala oluşur. Doğrulama gerçekleştirmek için bu durumda <xref:System.Windows.Forms.Control.Validated> olay, denetimin değiştirme **veri kaynağı güncelleme modu** özelliği (**(veri bağlamaları) altında**\\**(Gelişmiş)** ) gelen **OnValidation'ı** için **hiçbir zaman**ve ekleme *denetim*`.DataBindings["`*\<YOURFIELD >*  `"].WriteValue()` doğrulama kodunuzu için.  
+>  Gerçekleştikten sonra özel doğrulama varsa <xref:System.Windows.Forms.Control.Validating> olay, onu etkilemez veri bağlama. Örneğin, kod varsa bir <xref:System.Windows.Forms.Control.Validated> veri bağlama iptal etmeyi dener olay, veri bağlama hala oluşur. Doğrulama gerçekleştirmek için bu durumda <xref:System.Windows.Forms.Control.Validated> olay, denetimin değiştirme **veri kaynağı güncelleme modu** özelliği (**(veri bağlamaları) altında**\\ **(Gelişmiş)** ) gelen **OnValidation'ı** için **hiçbir zaman**ve ekleme *denetim*`.DataBindings["`*\<YOURFIELD >*  `"].WriteValue()` doğrulama kodunuzu için.  
   
 ### <a name="implicit-and-explicit-validation"></a>Örtük ve açık doğrulama  
  Bu nedenle ne zaman bir denetimin veri doğrulanmış? Bu size, geliştirici bağlıdır. Uygulamanızın gereksinimlerine bağlı olarak örtük veya açık doğrulama kullanabilirsiniz.  

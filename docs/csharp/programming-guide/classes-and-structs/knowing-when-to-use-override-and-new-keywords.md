@@ -1,27 +1,21 @@
 ---
-title: "Geçersiz Kılmanın ve Yeni Anahtar Sözcüklerin Ne Zaman Kullanılacağını Bilme (C# Programlama Kılavuzu)"
+title: Geçersiz Kılmanın ve Yeni Anahtar Sözcüklerin Ne Zaman Kullanılacağını Bilme (C# Programlama Kılavuzu)
 ms.date: 07/20/2015
-ms.prod: .net
-ms.technology: devlang-csharp
-ms.topic: article
 helpviewer_keywords:
 - override keyword [C#]
 - new keyword [C#]
 - polymorphism [C#], using override and new [C#]
 ms.assetid: 323db184-b136-46fc-8839-007886e7e8b0
-caps.latest.revision: "16"
-author: BillWagner
-ms.author: wiwagn
-ms.openlocfilehash: b4d53f16f046839d56bc1dc37f7b2d8816c5956f
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 61bfa87b7aaa7c17d4ba67c69fa1e57ee7415dc0
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="knowing-when-to-use-override-and-new-keywords-c-programming-guide"></a>Geçersiz Kılmanın ve Yeni Anahtar Sözcüklerin Ne Zaman Kullanılacağını Bilme (C# Programlama Kılavuzu)
 C# ' ta türetilmiş bir sınıf yönteminde taban sınıf içinde aynı adı taşıyan bir yöntem olabilir. Yöntemleri kullanarak nasıl etkileşim belirtebilirsiniz [yeni](../../../csharp/language-reference/keywords/new.md) ve [geçersiz kılma](../../../csharp/language-reference/keywords/override.md) anahtar sözcükler. `override` Değiştiricisi *genişletir* temel sınıf yöntemi ve `new` değiştiricisi *gizler* onu. Bu konudaki örnekler fark gösterilmiştir.  
   
- Bir konsol uygulamasında aşağıdaki iki sınıf bildirme `BaseClass` ve `DerivedClass`. `DerivedClass`öğesinden devralınan `BaseClass`.  
+ Bir konsol uygulamasında aşağıdaki iki sınıf bildirme `BaseClass` ve `DerivedClass`. `DerivedClass` öğesinden devralınan `BaseClass`.  
   
 ```csharp  
 class BaseClass  
@@ -43,11 +37,11 @@ class DerivedClass : BaseClass
   
  İçinde `Main` yöntemi, değişkenleri bildirin `bc`, `dc`, ve `bcdc`.  
   
--   `bc`tür `BaseClass`, ve türü değeri olduğu `BaseClass`.  
+-   `bc` tür `BaseClass`, ve türü değeri olduğu `BaseClass`.  
   
--   `dc`tür `DerivedClass`, ve türü değeri olduğu `DerivedClass`.  
+-   `dc` tür `DerivedClass`, ve türü değeri olduğu `DerivedClass`.  
   
--   `bcdc`tür `BaseClass`, ve türü değeri olduğu `DerivedClass`. Bu dikkat edilmesi gereken değişkenidir.  
+-   `bcdc` tür `BaseClass`, ve türü değeri olduğu `DerivedClass`. Bu dikkat edilmesi gereken değişkenidir.  
   
  Çünkü `bc` ve `bcdc` türüne sahip `BaseClass`, yalnızca doğrudan erişebilirsiniz `Method1`sürece atama kullanın. Değişken `dc` her ikisi de erişebilir `Method1` ve `Method2`. Bu ilişkileri aşağıdaki kodda gösterilir.  
   
@@ -292,7 +286,7 @@ public static void TestCars1()
 }  
 ```  
   
- `TestCars1`şu çıkışı üretir. Sonuçları özellikle dikkat edin `car2`, büyük olasılıkla olduğu beklediğinize değil. Nesne türü `ConvertibleCar`, ancak `DescribeCar` sürümü erişmez `ShowDetails` içinde tanımlanan `ConvertibleCar` bu yöntem ile bildirildiğinden sınıf `new` değiştiricisi, değil `override` değiştiricisi. Sonuç olarak, bir `ConvertibleCar` nesne görüntüler aynı açıklama olarak bir `Car` nesnesi. Sonuçlar için Karşıtlık `car3`, olduğu bir `Minivan` nesnesi. Bu durumda, `ShowDetails` içinde bildirilen yöntemi `Minivan` geçersiz kılmaları sınıf `ShowDetails` içinde bildirilen yöntemi `Car` sınıfı ve görüntülenen açıklama bir minivan açıklar.  
+ `TestCars1` şu çıkışı üretir. Sonuçları özellikle dikkat edin `car2`, büyük olasılıkla olduğu beklediğinize değil. Nesne türü `ConvertibleCar`, ancak `DescribeCar` sürümü erişmez `ShowDetails` içinde tanımlanan `ConvertibleCar` bu yöntem ile bildirildiğinden sınıf `new` değiştiricisi, değil `override` değiştiricisi. Sonuç olarak, bir `ConvertibleCar` nesne görüntüler aynı açıklama olarak bir `Car` nesnesi. Sonuçlar için Karşıtlık `car3`, olduğu bir `Minivan` nesnesi. Bu durumda, `ShowDetails` içinde bildirilen yöntemi `Minivan` geçersiz kılmaları sınıf `ShowDetails` içinde bildirilen yöntemi `Car` sınıfı ve görüntülenen açıklama bir minivan açıklar.  
   
 ```csharp  
 // TestCars1  
@@ -308,7 +302,7 @@ public static void TestCars1()
 // ----------  
 ```  
   
- `TestCars2`türüne sahip nesnelerin bir listesini oluşturur `Car`. Değerlerin nesnelerin örneği oluşturulmadan `Car`, `ConvertibleCar`, ve `Minivan` sınıfları. `DescribeCar`Listenin her öğesinin adı verilir. Aşağıdaki kod tanımını gösterir `TestCars2`.  
+ `TestCars2` türüne sahip nesnelerin bir listesini oluşturur `Car`. Değerlerin nesnelerin örneği oluşturulmadan `Car`, `ConvertibleCar`, ve `Minivan` sınıfları. `DescribeCar` Listenin her öğesinin adı verilir. Aşağıdaki kod tanımını gösterir `TestCars2`.  
   
 ```csharp  
 public static void TestCars2()  
@@ -547,8 +541,8 @@ namespace OverrideAndNew2
 ```  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [C# programlama kılavuzu](../../../csharp/programming-guide/index.md)  
- [Sınıflar ve yapılar](../../../csharp/programming-guide/classes-and-structs/index.md)  
- [Geçersiz kılma ve yeni anahtar sözcüklerle sürüm oluşturma](../../../csharp/programming-guide/classes-and-structs/versioning-with-the-override-and-new-keywords.md)  
- [temel](../../../csharp/language-reference/keywords/base.md)  
- [Özet](../../../csharp/language-reference/keywords/abstract.md)
+ [C# Programlama Kılavuzu](../../../csharp/programming-guide/index.md)  
+ [Sınıflar ve Yapılar](../../../csharp/programming-guide/classes-and-structs/index.md)  
+ [Geçersiz Kılma ve Yeni Anahtar Sözcüklerle Sürüm Oluşturma](../../../csharp/programming-guide/classes-and-structs/versioning-with-the-override-and-new-keywords.md)  
+ [base](../../../csharp/language-reference/keywords/base.md)  
+ [abstract](../../../csharp/language-reference/keywords/abstract.md)

@@ -1,12 +1,6 @@
 ---
-title: "Visual Basic'de Özellikler ve Değişkenler Arasındaki Farklar"
-ms.custom: 
+title: Visual Basic'de Özellikler ve Değişkenler Arasındaki Farklar
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
-ms.topic: article
 helpviewer_keywords:
 - property values [Visual Basic]
 - variables [Visual Basic]
@@ -20,14 +14,11 @@ helpviewer_keywords:
 - variables [Visual Basic], and properties
 - properties [Visual Basic], and variables
 ms.assetid: 7a03a8be-5381-431f-bd7c-16e887e4e07b
-caps.latest.revision: "14"
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: cb30972e2b49a7005749f57c0223b9fa493cde52
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 126e4baa2752ba7ccb5e8ff7b06a44839c1d0af2
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="differences-between-properties-and-variables-in-visual-basic"></a>Visual Basic'de Özellikler ve Değişkenler Arasındaki Farklar
 Değişkenlerin ve özelliklerin erişebilmeniz için değerleri temsil eder. Ancak, depolama ve uygulama farklılıklar vardır.  
@@ -53,13 +44,13 @@ Değişkenlerin ve özelliklerin erişebilmeniz için değerleri temsil eder. An
  <sup>1</sup> bir değişken depolama doğrudan tek bir öğe için bir özelliğin değerini gelmeyebilir. Depolama kolaylık veya güvenlik için parçalara bölmek veya değeri şifreli biçimde depolanabilir. Bu gibi durumlarda `Get` yordamı parçaları bir araya getirmek mi depolanan değer şifresini çözmek ve `Set` yordam yeni değer şifrelemek veya bağlı depolama alanına bölme. Bir özellik değeri, bu durumda kısa ömürlü, gün, saat gibi olabilir `Get` yordamı hesaplamak, anında özelliği her eriştiğinizde.  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [Özellik yordamları](./property-procedures.md)  
- [Parametreler ve bağımsız değişkenler](./procedure-parameters-and-arguments.md)  
- [Property deyimi](../../../../visual-basic/language-reference/statements/property-statement.md)  
- [Dim deyimi](../../../../visual-basic/language-reference/statements/dim-statement.md)  
- [Nasıl yapılır: özellik oluşturma](./how-to-create-a-property.md)  
- [Nasıl yapılır: bir özelliği karışık erişim düzeyleriyle bildirme](./how-to-declare-a-property-with-mixed-access-levels.md)  
- [Nasıl yapılır: bir özellik yordamı çağırma](./how-to-call-a-property-procedure.md)  
+ [Özellik Yordamları](./property-procedures.md)  
+ [Yordam Parametreleri ve Bağımsız Değişkenleri](./procedure-parameters-and-arguments.md)  
+ [Property Deyimi](../../../../visual-basic/language-reference/statements/property-statement.md)  
+ [Dim Deyimi](../../../../visual-basic/language-reference/statements/dim-statement.md)  
+ [Nasıl yapılır: Özellik Oluşturma](./how-to-create-a-property.md)  
+ [Nasıl yapılır: Bir Özelliği Karışık Erişim Düzeyleriyle Bildirme](./how-to-declare-a-property-with-mixed-access-levels.md)  
+ [Nasıl yapılır: Bir Özellik Yordamı Çağırma](./how-to-call-a-property-procedure.md)  
  [Nasıl yapılır: bildirme ve Visual Basic'te varsayılan özelliğini çağırın](./how-to-declare-and-call-a-default-property.md)  
- [Nasıl yapılır: bir özelliğe değer ekleme](./how-to-put-a-value-in-a-property.md)  
- [Nasıl yapılır: bir özellikten değer alma](./how-to-get-a-value-from-a-property.md)
+ [Nasıl yapılır: Bir Özelliğe Değer Ekleme](./how-to-put-a-value-in-a-property.md)  
+ [Nasıl yapılır: Bir Özellikten Değer Alma](./how-to-get-a-value-from-a-property.md)

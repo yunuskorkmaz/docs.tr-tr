@@ -1,33 +1,19 @@
 ---
-title: "Nasıl yapılır: Windows Communication Foundation Hizmeti Bilinen Adını Kaydolmadan Kullanma"
-ms.custom: 
+title: 'Nasıl yapılır: Windows Communication Foundation Hizmeti Bilinen Adını Kaydolmadan Kullanma'
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - COM [WCF], service monikers without registration
 ms.assetid: ee3cf5c0-24f0-4ae7-81da-73a60de4a1a8
-caps.latest.revision: 
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 18f575e9bae37b66526d7b61a641374266ba627b
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: fd61528770b16b13430be3691aef19c1cc743e9c
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-use-the-windows-communication-foundation-service-moniker-without-registration"></a>Nasıl yapılır: Windows Communication Foundation Hizmeti Bilinen Adını Kaydolmadan Kullanma
-Bağlanmak ve ile iletişim kurmak için bir [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] hizmeti, bir [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] istemci uygulaması hizmeti adresi, bağlama yapılandırma ve hizmet sözleşmesi ayrıntılarını olması gerekir.  
+Bağlanmak ve bir Windows Communication Foundation (WCF) hizmetiyle iletişim kurmak için bir WCF istemci uygulaması hizmeti adresi, bağlama yapılandırma ve hizmet sözleşmesi ayrıntılarını olması gerekir.  
   
- [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] Hizmet bilinen adı genellikle gerekli öznitelik türlerini önceki kaydı aracılığıyla gerekli sözleşme alır, ancak bu olduğu uygun durumlar olabilir. Kayıt yerine, kullanım yoluyla, bir Web Hizmetleri tanım dili (WSDL) belge biçiminde sözleşme tanımı ad edinebilirsiniz `wsdl` parametresi veya kullanımı aracılığıyla meta veri değişimi üzerinden `mexAddress` parametre.  
+ WCF hizmet bilinen adı genellikle gerekli öznitelik türlerini önceki kaydı aracılığıyla gerekli sözleşme alır, ancak burada bu uygun olmadığı durumlar olabilir. Kayıt yerine, kullanım yoluyla, bir Web Hizmetleri tanım dili (WSDL) belge biçiminde sözleşme tanımı ad edinebilirsiniz `wsdl` parametresi veya kullanımı aracılığıyla meta veri değişimi üzerinden `mexAddress` parametre.  
   
  Bu, bazı hücre değerleri Web hizmeti etkileşimleri burada hesaplanan bir Excel elektronik tablosuna dağıtımı gibi senaryolara olanak sağlar. Bu senaryoda, belgeyi açabilir tüm istemcilere hizmet sözleşmesi derlemesi kaydetmek için uygun olmayabilir. `wsdl` Parametresi veya `mexAddress` parametresi kendi başına bir çözüm sağlar.  
   
@@ -56,7 +42,7 @@ public interface IAffiliate
 }  
 ```  
   
- Oluşturmak için bir [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] istemcisi aşağıdaki örnek ad dizesini kullanılabilir uzak hizmeti.  
+ Aşağıdaki örnek ad dizesini uzak hizmet için bir WCF istemcisi oluşturmak için kullanılabilir.  
   
 ```  
 service4:mexAddress="http://servername/Affiliates/service.svc/mex",  
@@ -65,7 +51,7 @@ contract=IAffiliate, contractNamespace=http://Microsoft.ServiceModel.Demo,
 binding=WSHttpBinding_IAffiliate, bindingNamespace=http://tempuri.org/  
 ```  
   
- İstemci uygulaması yürütülmesi sırasında istemci gerçekleştiren bir `WS-MetadataExchange` sağlanan ile `mexAddress`. Bu adresi, bağlama ve hizmetlerin sayısı sözleşme ayrıntılarını döndürebilir. `address`, `contract`, `contractNamespace`, `binding` Ve `bindingNamespace` parametreleri hedeflenen hizmet tanımlamak için kullanılır. Bu parametreler eşleşen sonra ad yapıları bir [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] çağrıları ve uygun sözleşme tanımı istemcisiyle sonra yapılabilir kullanarak [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] istemci, yazılı sözleşme ile.  
+ İstemci uygulaması yürütülmesi sırasında istemci gerçekleştiren bir `WS-MetadataExchange` sağlanan ile `mexAddress`. Bu adresi, bağlama ve hizmetlerin sayısı sözleşme ayrıntılarını döndürebilir. `address`, `contract`, `contractNamespace`, `binding` Ve `bindingNamespace` parametreleri hedeflenen hizmet tanımlamak için kullanılır. Bu parametreler eşleşen sonra ad uygun sözleşme tanımına sahip bir WCF istemcisi oluşturur ve çağrıları sonra WCF istemcisi kullanarak gibi yazılı sözleşme ile yapılabilir.  
   
 > [!NOTE]
 >  Ad hatalı veya hizmet kullanılamıyor çağrısı `GetObject` "Geçersiz sözdizimi" bildiren bir hata döndürür. Bu hatayı alırsanız, kullanmakta olduğunuz adının doğru olduğundan ve hizmet kullanılabilir olduğundan emin olun.  

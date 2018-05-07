@@ -1,13 +1,6 @@
 ---
-title: "ScrollViewer Stilleri ve Şablonları"
-ms.custom: 
+title: ScrollViewer Stilleri ve Şablonları
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-wpf
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - parts [WPF], ScrollViewer
 - states [WPF], ScrollViewer
@@ -16,16 +9,11 @@ helpviewer_keywords:
 - ControlTemplate [WPF], ScrollViewer
 - ScrollViewer [WPF], styles and templates
 ms.assetid: dffdd822-ae69-4946-abaf-710860cd65b2
-caps.latest.revision: "12"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 74f8a693a143e1c6788dd79a1c1bbd1954f8cfd0
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 2182390b47508833b8535864f2d670c194d66088
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="scrollviewer-styles-and-templates"></a>ScrollViewer Stilleri ve Şablonları
 Stilleri ve şablonları için bu konuda açıklanmaktadır <xref:System.Windows.Controls.ScrollViewer> denetim. Varsayılan değiştirebileceğiniz <xref:System.Windows.Controls.ControlTemplate> denetimi benzersiz bir görünüm vermek için. Daha fazla bilgi için bkz: [ControlTemplate oluşturarak varolan denetiminin görünümünü özelleştirme](../../../../docs/framework/wpf/controls/customizing-the-appearance-of-an-existing-control.md).  

@@ -1,21 +1,14 @@
 ---
-title: "Etki alanı modeli katmanda doğrulamaları tasarlama"
-description: "Kapsayıcılı .NET uygulamaları için .NET mikro mimarisi | Etki alanı modeli katmanda doğrulamaları tasarlama"
-keywords: "Docker, mikro, ASP.NET, kapsayıcı"
+title: Etki alanı modeli katmanda doğrulamaları tasarlama
+description: Kapsayıcılı .NET uygulamaları için .NET mikro mimarisi | Etki alanı modeli katmanda doğrulamaları tasarlama
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 05/26/2017
-ms.prod: .net-core
-ms.technology: dotnet-docker
-ms.topic: article
-ms.workload:
-- dotnet
-- dotnetcore
-ms.openlocfilehash: e7a111ce20039f8c87d3c3d63efdeaf38a4e1e96
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: ce3cb0c79cbd492224ce1d4ecb25cd02062f11cd
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="designing-validations-in-the-domain-model-layer"></a>Etki alanı modeli katmanda doğrulamaları tasarlama
 
@@ -115,7 +108,7 @@ Alan doğrulama ile veri ek açıklamaları kullanılarak, örneğin, doğrulama
 
 ## <a name="additional-resources"></a>Ek kaynaklar
 
--   **Rachel Appel. ASP.NET Core MVC model doğrulama giriş**
+-   **Rachel Appel. Model doğrulama ASP.NET Core mvc'de giriş**
     [*https://docs.microsoft.com/aspnet/core/mvc/models/validation*](https://docs.microsoft.com/aspnet/core/mvc/models/validation)
 
 -   **Rick Anderson. Doğrulama ekleme**
@@ -133,7 +126,7 @@ Alan doğrulama ile veri ek açıklamaları kullanılarak, örneğin, doğrulama
 -   **Colin prizine. Etki alanı Model doğrulama**
     [*http://colinjack.blogspot.com/2008/03/domain-model-validation.html*](http://colinjack.blogspot.com/2008/03/domain-model-validation.html)
 
--   **Jimmy Bogard. Doğrulama DDD dünyada**
+-   **Jimmy Bogard. DDD dünyada doğrulama**
     [*https://lostechies.com/jimmybogard/2009/02/15/validation-in-a-ddd-world/*](https://lostechies.com/jimmybogard/2009/02/15/validation-in-a-ddd-world/)
 
 

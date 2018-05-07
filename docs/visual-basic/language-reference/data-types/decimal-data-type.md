@@ -1,11 +1,6 @@
 ---
-title: "Onluk Veri Türü (Visual Basic)"
+title: Onluk Veri Türü (Visual Basic)
 ms.date: 07/20/2015
-ms.prod: .net
-ms.suite: 
-ms.technology:
-- devlang-visual-basic
-ms.topic: article
 f1_keywords:
 - vb.Decimal
 helpviewer_keywords:
@@ -25,14 +20,11 @@ helpviewer_keywords:
 - '@ identifier type character'
 - identifier type characters [Visual Basic], @
 ms.assetid: 1d855b45-afe2-45b0-a623-96b6f63a43d5
-caps.latest.revision: 
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: 55a9293fa680a7a04cff4099654d4d66790e8d3d
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 9e256e93d7857c8674a1d711fa9cafd3ed9a29f5
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="decimal-data-type-visual-basic"></a>Onluk Veri Türü (Visual Basic)
 Ayrı tutma 128-bit (16 bayt) değerleri değişken gücünü 10 tarafından ölçeklendirilmiş 96-bit (12-bayt) tamsayı numaraları temsil eden imzalı. Ölçeklendirme faktörü ondalık basamak sayısını belirtir; 0 ile 28 arasında çeşitlilik gösterir. Ölçeği 0 (hiçbir ondalık basamak) ile en büyük olası 79,228,162,514,264,337,593,543,950,335 +/-değerdir (7 +/-.9228162514264337593543950335E + 28). 28 ondalık basamak, en büyük değeri +/-7.9228162514264337593543950335, ve sıfır olmayan en küçük değeri +/-0.0000000000000000000000000001 (+/-1E-28).  
@@ -44,7 +36,7 @@ Ayrı tutma 128-bit (16 bayt) değerleri değişken gücünü 10 tarafından öl
   
 ## <a name="programming-tips"></a>Programlama İpuçları  
   
--   **Hassasiyet.** `Decimal`kayan nokta veri türü değil. `Decimal` Yapısı tutan bir oturum bit ve ölçeklendirme hangi değer bir ondalık kesir bölümüdür belirtir çarpanı bir tamsayı ile birlikte bir ikili tamsayı değeri. Bu nedenle, `Decimal` numaraları kayan nokta türleri daha bellekte daha kesin bir gösterimi olan (`Single` ve `Double`).  
+-   **Hassasiyet.** `Decimal` kayan nokta veri türü değil. `Decimal` Yapısı tutan bir oturum bit ve ölçeklendirme hangi değer bir ondalık kesir bölümüdür belirtir çarpanı bir tamsayı ile birlikte bir ikili tamsayı değeri. Bu nedenle, `Decimal` numaraları kayan nokta türleri daha bellekte daha kesin bir gösterimi olan (`Single` ve `Double`).  
   
 -   **Performans.** `Decimal` Veri türü olan tüm sayısal türler en yavaş. Bir veri türü işaretlemeden önce performans karşı duyarlılığı önemini tartmanız gerekir.  
   
@@ -89,9 +81,9 @@ Dim bigDec3 As Decimal = 9223372036854775808D  ' No overflow.
  <xref:System.Decimal?displayProperty=nameWithType>  
  <xref:System.Decimal.%23ctor%2A?displayProperty=nameWithType>  
  <xref:System.Math.Round%2A?displayProperty=nameWithType>  
- [Veri türleri](../../../visual-basic/language-reference/data-types/data-type-summary.md)  
- [Single veri türü](../../../visual-basic/language-reference/data-types/single-data-type.md)  
- [Double veri türü](../../../visual-basic/language-reference/data-types/double-data-type.md)  
- [Tür dönüşüm işlevleri](../../../visual-basic/language-reference/functions/type-conversion-functions.md)  
- [Dönüştürme özeti](../../../visual-basic/language-reference/keywords/conversion-summary.md)  
- [Veri türlerinin etkili kullanımı](../../../visual-basic/programming-guide/language-features/data-types/efficient-use-of-data-types.md)
+ [Veri Türleri](../../../visual-basic/language-reference/data-types/data-type-summary.md)  
+ [Single Veri Türü](../../../visual-basic/language-reference/data-types/single-data-type.md)  
+ [Double Veri Türü](../../../visual-basic/language-reference/data-types/double-data-type.md)  
+ [Tür Dönüştürme İşlevleri](../../../visual-basic/language-reference/functions/type-conversion-functions.md)  
+ [Dönüştürme Özeti](../../../visual-basic/language-reference/keywords/conversion-summary.md)  
+ [Veri Türlerinin Etkili Kullanımı](../../../visual-basic/programming-guide/language-features/data-types/efficient-use-of-data-types.md)

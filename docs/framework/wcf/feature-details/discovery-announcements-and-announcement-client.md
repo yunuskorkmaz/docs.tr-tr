@@ -1,27 +1,15 @@
 ---
-title: "Keşif Duyuruları ve Duyuru İstemcisi"
-ms.custom: 
+title: Keşif Duyuruları ve Duyuru İstemcisi
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 426c6437-f8d2-4968-b23a-18afd671aa4b
-caps.latest.revision: "6"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 67eab6a5b35e29fe3df09ab286090433d25e8ca3
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: c32aca5e6deab01423d61c516ee924d00bc041ee
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="discovery-announcements-and-announcement-client"></a>Keşif Duyuruları ve Duyuru İstemcisi
-[!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] Bulma özelliği kendi kullanıma sunulduğunu duyurmaktan bileşenleri sağlar. Bunu yapmak için yapılandırılmışsa, bir hizmet Hello ve Bye Duyurular gönderir. İstemcileri veya diğer bileşenleri, bu tür duyuru iletiler için dinleme ve bunlar üzerinde hareket. Bu, istemcilerin hizmetlerin farkında olması alternatif bir yöntem sağlar. Duyuru işlevselliği birkaç kullanımı vardır, örneğin, hizmetleri girin ve bir ağ sık bırakırsanız duyuruları arama hizmetleri için daha iyi bir alternatif olabilir. Bu yaklaşım ağ trafiği azaltılır ve duyuruları alınan hemen istemci varlığının veya hizmetin ayrılma hakkında bilgi edinebilirsiniz.  
+WCF keşif özelliği kendi kullanıma sunulduğunu duyurmaktan bileşenleri sağlar. Bunu yapmak için yapılandırılmışsa, bir hizmet Hello ve Bye Duyurular gönderir. İstemcileri veya diğer bileşenleri, bu tür duyuru iletiler için dinleme ve bunlar üzerinde hareket. Bu, istemcilerin hizmetlerin farkında olması alternatif bir yöntem sağlar. Duyuru işlevselliği birkaç kullanımı vardır, örneğin, hizmetleri girin ve bir ağ sık bırakırsanız duyuruları arama hizmetleri için daha iyi bir alternatif olabilir. Bu yaklaşım ağ trafiği azaltılır ve duyuruları alınan hemen istemci varlığının veya hizmetin ayrılma hakkında bilgi edinebilirsiniz.  
   
 ## <a name="discovery-announcements"></a>Keşif duyuruları  
  Duyuruları için yapılandırılmış bir hizmeti bir ağ birleştirir ve bulunabilirlik olur, kendi kullanılabilirlik dinleme istemcilere Duyurusu Hello ileti gönderir. İleti içerir bulma ilgili hizmet sözleşmesi, uç nokta adresi gibi ilgili bilgileri ve kapsamları. Duyuru iletisi ile gönderilen burada belirtebilirsiniz <xref:System.ServiceModel.Discovery.AnnouncementEndpoint> sınıfı. Duyuru uç nokta ise bir <xref:System.ServiceModel.Discovery.UdpAnnouncementEndpoint> Hello ve Bye uygun şekilde çok noktaya yayın veya tek noktaya yayın duyuruyu uç nokta ise, belirtilen uç noktası doğrudan iletileri gönderilir.  
@@ -32,7 +20,7 @@ ms.lasthandoff: 12/22/2017
 > [!TIP]
 >  Seçtiğiniz her duyuruları göndermenizi sağlayan duyuru işlevselliği özelleştirebilirsiniz.  
   
- [!INCLUDE[netfx_current_long](../../../../includes/netfx-current-long-md.md)]tanımlar <xref:System.ServiceModel.Discovery.AnnouncementEndpoint> ve <xref:System.ServiceModel.Discovery.UdpAnnouncementEndpoint> hizmetler ve kolayca Hello ve Bye duyuruları göndermek için istemcileri izin vermek için standart uç noktaları olarak.  
+ [!INCLUDE[netfx_current_long](../../../../includes/netfx-current-long-md.md)] tanımlar <xref:System.ServiceModel.Discovery.AnnouncementEndpoint> ve <xref:System.ServiceModel.Discovery.UdpAnnouncementEndpoint> hizmetler ve kolayca Hello ve Bye duyuruları göndermek için istemcileri izin vermek için standart uç noktaları olarak.  
   
 ### <a name="announcements-on-the-service"></a>Hizmette duyuruları  
  Duyurular göndermek üzere hizmetini yapılandırmak için ekleyin bir <xref:System.ServiceModel.Discovery.ServiceDiscoveryBehavior> bir duyuru uç noktası ile. Aşağıdaki örnek programlı olarak bu davranış hizmet ana bilgisayara nasıl ekleneceğini gösterir. Bu örnekte `UdpAnnouncementEndpoint`, duyuruları standart bu bitiş noktası tarafından belirtilen bir konuma çok noktaya yayın anlamına gelir.  

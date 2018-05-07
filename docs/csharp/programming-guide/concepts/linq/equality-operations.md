@@ -1,28 +1,19 @@
 ---
-title: "Eşitlik işlemleri (C#)"
-ms.custom: 
+title: Eşitlik işlemleri (C#)
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-csharp
-ms.topic: article
 ms.assetid: 9d9a5bf2-f211-4865-bd19-c59ffa004615
-caps.latest.revision: "3"
-author: BillWagner
-ms.author: wiwagn
-ms.openlocfilehash: 257bbc5e7785cfd7881702bda81c099bb2a94377
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: a3223fc7f0de04dac9730a2272000156861692d8
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="equality-operations-c"></a>Eşitlik işlemleri (C#)
 Karşılık gelen öğeleri eşit ve aynı sayıda öğe olan iki sıraları eşit olarak kabul edilir.  
   
 ## <a name="methods"></a>Yöntemler  
   
-|Yöntem adı|Açıklama|C# sorgu ifade sözdizimi|Daha Fazla Bilgi|  
+|Yöntem adı|Açıklama|C# sorgu ifade sözdizimi|Daha fazla bilgi|  
 |-----------------|-----------------|---------------------------------|----------------------|  
 |SequenceEqual|Pair-wise bir biçimde öğeleri karşılaştırarak, iki sıraları eşit olup olmadığını belirler.|Yok.|<xref:System.Linq.Enumerable.SequenceEqual%2A?displayProperty=nameWithType><br /><br /> <xref:System.Linq.Queryable.SequenceEqual%2A?displayProperty=nameWithType>|  
   

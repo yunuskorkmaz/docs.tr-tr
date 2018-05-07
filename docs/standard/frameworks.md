@@ -3,19 +3,14 @@ title: Hedef Çerçeve
 description: .NET Core uygulamaları ve kitaplıklar için bir hedef çerçeveyi hakkında bilgi edinin.
 author: richlander
 ms.author: mairaw
-ms.date: 09/22/2017
-ms.topic: article
+ms.date: 04/16/2018
 ms.custom: updateeachrelease
-ms.prod: .net
 ms.technology: dotnet-standard
-ms.workload:
-- dotnet
-- dotnetcore
-ms.openlocfilehash: e9f47647a1d4dc82b2df2ea8905f8d0a1e705b96
-ms.sourcegitcommit: 2e8acae16ae802f2d6d04e3ce0a6dbf04e476513
+ms.openlocfilehash: fa8049c9e33f0f6b2f16fd8572d6500ba1860c2e
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="target-frameworks"></a>Hedef Çerçeve
 
@@ -31,13 +26,13 @@ Paket tabanlı bir hedef çerçeve için (örneğin, .NET standart ve .NET Core)
 
 ## <a name="latest-target-framework-versions"></a>Son hedef framework sürümleri
 
-Aşağıdaki tabloda en yaygın hedef çerçeve, nasıl başvurulan ve hangi sürümü tanımlar [.NET standart](~/docs/standard/net-standard.md) uyguladıkları. Bu hedef framework sürümleri en son kararlı sürümleridir. Yayın öncesi sürümleri gösterilmeyen. Bir hedef Framework bilinen ad (TFM) .NET uygulaması veya kitaplık hedef çerçevesini belirtmek için standartlaştırılmış bir belirteci biçimi ' dir. 
+Aşağıdaki tabloda en yaygın hedef çerçeve, nasıl başvurulan ve hangi sürümü tanımlar [.NET standart](~/docs/standard/net-standard.md) uyguladıkları. Bu hedef framework sürümleri en son kararlı sürümleridir. Yayın öncesi sürümleri gösterilmeyen. Bir hedef Framework bilinen ad (TFM) .NET uygulaması veya kitaplık hedef çerçevesini belirtmek için standartlaştırılmış bir belirteci biçimi ' dir.
 
-| Hedef çerçevesi      | En son sürümü | Hedef Framework ad (TFM) | Uygulanmadı <br/> .NET standart sürüm |
-| :-------------------: | :------------: | :----------------------------: | :-------------------------------------: |
-| .NET standart         | 2,0            | netstandard2.0                 | Yok                                     |
-| .NET core uygulama | 2,0            | netcoreapp2.0                  | 2,0                                     |
-| .NET Framework        | 4.7.1          | net471                         | 2,0                                     |
+| Hedef çerçevesi      | En son <br/> Kararlı sürümü | Hedef Framework ad (TFM) | Uygulanmadı <br/> .NET standart sürüm |
+| :-------------------: | :-------------------------: | :----------------------------: | :-------------------------------------: |
+| .NET standart         | 2,0                         | netstandard2.0                 | Yok                                     |
+| .NET core uygulama | 2,0                         | netcoreapp2.0                  | 2,0                                     |
+| .NET Framework        | 4.7.2                       | net472                         | 2,0                                     |
 
 ## <a name="supported-target-framework-versions"></a>Desteklenen hedef framework sürümleri
 
@@ -46,8 +41,8 @@ Bir hedef framework genellikle TFM tarafından başvuruluyor. Aşağıdaki tablo
 | Hedef çerçevesi           | TFM |
 | -------------------------- | --- |
 | .NET standart              | netstandard1.0<br>netstandard1.1<br>netstandard1.2<br>netstandard1.3<br>netstandard1.4<br>netstandard1.5<br>netstandard1.6<br>netstandard2.0 |
-| .NET Core                  | netcoreapp1.0<br>netcoreapp1.1<br>netcoreapp2.0 |
-| .NET Framework             | net11<br>net20<br>Net35<br>net40<br>net403<br>net45<br>net451<br>net452<br>net46<br>net461<br>net462<br>net47<br>net471 |
+| .NET Core                  | netcoreapp1.0<br>netcoreapp1.1<br>netcoreapp2.0<br>netcoreapp2.1 |
+| .NET Framework             | net11<br>net20<br>Net35<br>net40<br>net403<br>net45<br>net451<br>net452<br>net46<br>net461<br>net462<br>net47<br>net471<br>net472 |
 | Windows Mağazası              | netcore [netcore45]<br>netcore45 [win] [olduğu win8]<br>netcore451 [win81] |
 | Mikro .NET Framework       | netmf |
 | Silverlight                | sl4<br>sl5 |
@@ -135,10 +130,10 @@ Aşağıdaki hedef çerçeveyi kullanım dışı bırakılmıştır. Bu bir hede
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-[Paketler, Meta Paketler ve Çerçeveler](~/docs/core/packages.md)  
-[Platformlar Arası Araçlarla Kitaplık Geliştirme](~/docs/core/tutorials/libraries.md)  
-[.NET Standard](~/docs/standard/net-standard.md)  
-[.NET core sürüm oluşturma](~/docs/core/versions/index.md)  
+[Paketler, Meta Paketler ve Çerçeveler](../core/packages.md)  
+[Platformlar Arası Araçlarla Kitaplık Geliştirme](../core/tutorials/libraries.md)  
+[.NET Standard](net-standard.md)  
+[.NET core sürüm oluşturma](../core/versions/index.md)  
 [DotNet/standart GitHub deposunu](https://github.com/dotnet/standard)  
 [GitHub depo NuGet araçları](https://github.com/joelverhagen/NuGetTools)  
 [.NET Framework profilleri](https://blog.stephencleary.com/2012/05/framework-profiles-in-net.html)

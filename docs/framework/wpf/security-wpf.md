@@ -1,14 +1,6 @@
 ---
 title: Güvenlik (WPF)
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-wpf
-ms.tgt_pltfrm: ''
-ms.topic: article
 helpviewer_keywords:
 - XAML files [WPF], sandbox behavior
 - browser-hosted application security [WPF]
@@ -21,17 +13,11 @@ helpviewer_keywords:
 - XBAP security [WPF]
 - Internet Explorer security settings [WPF]
 ms.assetid: ee1baea0-3611-4e36-9ad6-fcd5205376fb
-caps.latest.revision: 38
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 51b940d4a2463be7aaea9d0ff8e48e2b9f47363a
-ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
+ms.openlocfilehash: 7b58368539ed1e41c1367e0cd1da7e4181a8af7e
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/30/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="security-wpf"></a>Güvenlik (WPF)
 <a name="introduction"></a> Windows Presentation Foundation (WPF) tek başına ve tarayıcıda barındırılan uygulamalar geliştirirken, güvenlik modeli dikkate almanız gerekir. [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] tek başına uygulamalarını yürütmek Kısıtlanmamış izinlerle ( [!INCLUDE[TLA2#tla_cas](../../../includes/tla2sharptla-cas-md.md)] **FullTrust** izin kümesi), Windows Installer (.msi), XCopy, kullanılarak dağıtılan olup olmadığını veya [!INCLUDE[TLA2#tla_clickonce](../../../includes/tla2sharptla-clickonce-md.md)]. Kısmi güven, tek başına WPF uygulamaları ClickOnce ile dağıtma desteklenmiyor. Ancak, bir tam güven ana bilgisayar uygulaması kısmi güven oluşturabilirsiniz <xref:System.AppDomain> kullanarak .NET Framework eklenti modeli. Daha fazla bilgi için bkz: [WPF eklentileri genel bakış](../../../docs/framework/wpf/app-development/wpf-add-ins-overview.md).  

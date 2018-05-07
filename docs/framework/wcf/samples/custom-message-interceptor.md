@@ -1,24 +1,12 @@
 ---
-title: "Özel İleti Kesici"
-ms.custom: 
+title: Özel İleti Kesici
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 73f20972-53f8-475a-8bfe-c133bfa225b0
-caps.latest.revision: "24"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: acac4baa5be68d042dd1b0a11d7acfe609169e10
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
-ms.translationtype: MT
+ms.openlocfilehash: 0ed34823251dcc010fc438bda1e746549b97f0f3
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="custom-message-interceptor"></a>Özel İleti Kesici
 Bu örnek kanal genişletilebilirlik modeli kullanımını göstermektedir. Özellikle, kanal fabrikaları ve çalışma zamanı yığınında belirli bir noktada tüm gelen ve giden iletileri izlemesine kanal dinleyicileri oluşturur özel bağlama öğesi uygulamak nasıl gösterir. Örnek, bir istemci ve bu özel oluşturucuları kullanımını gösteren sunucu de içerir.  
@@ -33,11 +21,11 @@ Bu örnek kanal genişletilebilirlik modeli kullanımını göstermektedir. Öze
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  Bu dizin mevcut değilse, Git [Windows Communication Foundation (WCF) ve .NET Framework 4 için Windows Workflow Foundation (WF) örnek](http://go.microsoft.com/fwlink/?LinkId=150780) tüm indirmek için [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] ve [!INCLUDE[wf1](../../../../includes/wf1-md.md)] örnekleri. Bu örnek aşağıdaki dizinde bulunur.  
+>  Bu dizin mevcut değilse, Git [Windows Communication Foundation (WCF) ve .NET Framework 4 için Windows Workflow Foundation (WF) örnek](http://go.microsoft.com/fwlink/?LinkId=150780) tüm Windows Communication Foundation (WCF) indirmek için ve [!INCLUDE[wf1](../../../../includes/wf1-md.md)] örnekleri. Bu örnek aşağıdaki dizinde bulunur.  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Extensibility\Channels\MessageInterceptor`  
   
- Örnek özel bir katmanlı kanalı oluşturmak için önerilen yordamı açıklar [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)], kanal çerçevesi kullanarak ve aşağıdaki [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] en iyi uygulamalar. Özel bir katmanlı kanal oluşturmak için adımlar aşağıdaki gibidir:  
+ Örnek kanal Çerçevesi'ni kullanıp aşağıdaki Windows Communication Foundation (WCF) özel bir katmanlı kanal oluşturmak için önerilen yordamı açıklar [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] en iyi uygulamalar. Özel bir katmanlı kanal oluşturmak için adımlar aşağıdaki gibidir:  
   
 1.  Kanal şekillerin kanal fabrikası ve kanal dinleyicisi destekleyecek karar verebilirsiniz.  
   
@@ -63,7 +51,7 @@ class InterceptingChannelListener<TChannel> : ListenerFactoryBase<TChannel>
 ```  
   
 ## <a name="adding-a-binding-element"></a>Bir bağlama öğesi ekleme  
- Özel bağlama öğesi örneği tanımlar: `InterceptingBindingElement`. `InterceptingBindingElement`alan bir `ChannelMessageInterceptor` bir girdi olarak ve bu kullanır `ChannelMessageInterceptor` üzerinden geçirmek iletileri işlemek için. Genel tek sınıftır. Fabrika, dinleyiciyi ve kanallar tüm ortak çalışma zamanı arabirimlerin dahili uygulamalardan olabilir.  
+ Özel bağlama öğesi örneği tanımlar: `InterceptingBindingElement`. `InterceptingBindingElement` alan bir `ChannelMessageInterceptor` bir girdi olarak ve bu kullanır `ChannelMessageInterceptor` üzerinden geçirmek iletileri işlemek için. Genel tek sınıftır. Fabrika, dinleyiciyi ve kanallar tüm ortak çalışma zamanı arabirimlerin dahili uygulamalardan olabilir.  
   
 ```  
 public class InterceptingBindingElement : BindingElement  

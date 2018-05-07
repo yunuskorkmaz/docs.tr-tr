@@ -1,12 +1,6 @@
 ---
-title: "Boolean İfadeleri (Visual Basic)"
-ms.custom: 
+title: Boolean İfadeleri (Visual Basic)
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
-ms.topic: article
 helpviewer_keywords:
 - short-circuiting
 - Boolean expressions
@@ -20,17 +14,14 @@ helpviewer_keywords:
 - operators [Visual Basic], Boolean
 - Visual Basic code, expressions
 ms.assetid: d3d90406-55c8-4404-8143-50fd7f0d0d1a
-caps.latest.revision: "19"
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: 48071c6833f9841fa42311dda59d6959c0645ff4
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: ff5843c815658468ac69fe5d62a9ea4cac2be830
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="boolean-expressions-visual-basic"></a>Boolean İfadeleri (Visual Basic)
-A *Boole ifadesi* değeri veren ifade [Boole veri türü](../../../../visual-basic/language-reference/data-types/boolean-data-type.md): `True` veya `False`. `Boolean`ifadeler çeşitli biçimlerde olabilir. Değerini doğrudan karşılaştırması kolayıdır bir `Boolean` için değişken bir `Boolean` değişmez değeri, aşağıdaki örnekte gösterildiği gibi.  
+A *Boole ifadesi* değeri veren ifade [Boole veri türü](../../../../visual-basic/language-reference/data-types/boolean-data-type.md): `True` veya `False`. `Boolean` ifadeler çeşitli biçimlerde olabilir. Değerini doğrudan karşılaştırması kolayıdır bir `Boolean` için değişken bir `Boolean` değişmez değeri, aşağıdaki örnekte gösterildiği gibi.  
   
  [!code-vb[VbVbalrOperators#87](../../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/boolean-expressions_1.vb)]  
   
@@ -76,9 +67,9 @@ A *Boole ifadesi* değeri veren ifade [Boole veri türü](../../../../visual-bas
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
  [Visual Basic'de mantıksal ve bit düzeyinde işleçler](../../../../visual-basic/programming-guide/language-features/operators-and-expressions/logical-and-bitwise-operators.md)  
- [Değer karşılaştırmaları](../../../../visual-basic/programming-guide/language-features/operators-and-expressions/value-comparisons.md)  
- [Deyimleri](../../../../visual-basic/programming-guide/language-features/statements.md)  
- [Karşılaştırma işleçleri](../../../../visual-basic/language-reference/operators/comparison-operators.md)  
- [İşleçlerin etkili bileşimi](../../../../visual-basic/programming-guide/language-features/operators-and-expressions/efficient-combination-of-operators.md)  
+ [Değer Karşılaştırmaları](../../../../visual-basic/programming-guide/language-features/operators-and-expressions/value-comparisons.md)  
+ [Deyimler](../../../../visual-basic/programming-guide/language-features/statements.md)  
+ [Karşılaştırma İşleçleri](../../../../visual-basic/language-reference/operators/comparison-operators.md)  
+ [İşleçlerin Etkili Bileşimi](../../../../visual-basic/programming-guide/language-features/operators-and-expressions/efficient-combination-of-operators.md)  
  [Visual Basic'de İşleç önceliği](../../../../visual-basic/language-reference/operators/operator-precedence.md)  
- [Boole veri türü](../../../../visual-basic/language-reference/data-types/boolean-data-type.md)
+ [Boolean Veri Türü](../../../../visual-basic/language-reference/data-types/boolean-data-type.md)

@@ -1,11 +1,6 @@
 ---
 title: -LIBPATH
 ms.date: 03/10/2018
-ms.prod: .net
-ms.suite: ''
-ms.technology:
-- devlang-visual-basic
-ms.topic: article
 helpviewer_keywords:
 - libpath compiler option [Visual Basic]
 - /libpath compiler option [Visual Basic]
@@ -13,11 +8,11 @@ helpviewer_keywords:
 ms.assetid: 5f1c26c9-3455-4e89-bdf3-b12d6c2e655b
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: cff59d9b406045b4522d3a7d6e85528513214635
-ms.sourcegitcommit: 498799639937c89de777361aab74261efe7b79ea
+ms.openlocfilehash: a5044bc0093960fdf6b063450d8d3a57575ff07c
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/22/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="-libpath"></a>-LIBPATH
 Başvurulan derlemelerin konumunu belirtir.  
@@ -53,7 +48,7 @@ Başvurulan derlemelerin konumunu belirtir.
   
 |Tümleşik geliştirme ortamı/Libpath Visual Studio'da ayarlamak için|  
 |---|  
-|1.  Seçili bir projeyi **Çözüm Gezgini**. Üzerinde **proje** menüsünde tıklatın **özellikleri**. <br />2.  Tıklatın **başvuruları** sekmesi.<br />3.  Tıklatın **başvuru yolları...** düğmesi.<br />4.  İçinde **başvuru yollarını** iletişim kutusunda, dizin adı girin **klasörü:** kutusu.<br />5.  Tıklatın **klasörü Ekle**.|  
+|1.  Seçili bir projeyi **Çözüm Gezgini**. Üzerinde **proje** menüsünde tıklatın **özellikleri**. <br />2.  Tıklatın **başvuruları** sekmesi.<br />3.  Tıklatın **başvuru yolları...**  düğmesi.<br />4.  İçinde **başvuru yollarını** iletişim kutusunda, dizin adı girin **klasörü:** kutusu.<br />5.  Tıklatın **klasörü Ekle**.|  
   
 ## <a name="example"></a>Örnek  
  Aşağıdaki kod derlerken `T2.vb` bir .exe dosyası oluşturmak için. Derleyici derleme başvuruları için çalışma dizini, C: sürücüsünün kök dizinindeki ve C: sürücüsüne yeni derlemeleri dizinini arar.  

@@ -1,14 +1,6 @@
 ---
 title: IHostAssemblyStore Arabirimi
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: reference
 api_name:
 - IHostAssemblyStore
 api_location:
@@ -22,17 +14,13 @@ helpviewer_keywords:
 ms.assetid: cccb650f-abe0-41e2-9fd1-b383788eb1f6
 topic_type:
 - apiref
-caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: c795d4baa3030817299f23c3dadf4caf7a5edc5a
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 5620df2ab2b2530332df02cf3f11a00d6b6c8fb4
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="ihostassemblystore-interface"></a>IHostAssemblyStore Arabirimi
 Derlemeler ve modüller ortak dil çalışma zamanı (CLR) bağımsız olarak yüklemek bir konak izin yöntemleri sağlar.  
@@ -45,7 +33,7 @@ Derlemeler ve modüller ortak dil çalışma zamanı (CLR) bağımsız olarak y�
 |[ProvideModule Yöntemi](../../../../docs/framework/unmanaged-api/hosting/ihostassemblystore-providemodule-method.md)|Bir derlemeyi ya da bağlantılı (katıştırılmış değil) kaynak dosyası içinde bir modüle giderir.|  
   
 ## <a name="remarks"></a>Açıklamalar  
- `IHostAssemblyStore`derleme kimliğine verimli bir şekilde bağlı derlemeler yüklemek bir konak için bir yol sağlar. Konak döndürerek derlemelerini yükleyen `IStream` baytları doğrudan noktası örnekleri.  
+ `IHostAssemblyStore` derleme kimliğine verimli bir şekilde bağlı derlemeler yüklemek bir konak için bir yol sağlar. Konak döndürerek derlemelerini yükleyen `IStream` baytları doğrudan noktası örnekleri.  
   
  CLR bir ana bilgisayar uyguladı olup olmadığını belirler `IHostAssemblyStore` çağırarak `IHostAssemblyManager::GetNonHostAssemblyStores` başlatma bağlıdır. Bu konak, örneğin, kullanıcı derlemeleri bağlama denetlemek için ancak çalışma zamanı için .NET Framework derlemeleri bağlamak için kullanır sağlar.  
   
@@ -62,7 +50,7 @@ Derlemeler ve modüller ortak dil çalışma zamanı (CLR) bağımsız olarak y�
   
  **Kitaplığı:** bir kaynak olarak MSCorEE.dll dahil  
   
- **.NET framework sürümleri:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET framework sürümleri:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
  [ICLRAssemblyReferenceList Arabirimi](../../../../docs/framework/unmanaged-api/hosting/iclrassemblyreferencelist-interface.md)  

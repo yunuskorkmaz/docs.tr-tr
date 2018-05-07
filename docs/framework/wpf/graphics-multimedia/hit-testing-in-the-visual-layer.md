@@ -1,13 +1,6 @@
 ---
-title: "Görsel Katmanda Tıklama Testi"
-ms.custom: 
+title: Görsel Katmanda Tıklama Testi
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-wpf
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -15,16 +8,11 @@ helpviewer_keywords:
 - hit testing functionality [WPF]
 - visual layer [WPF], hit testing functionality
 ms.assetid: b1a64b61-14be-4d75-b89a-5c67bebb2c7b
-caps.latest.revision: "42"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: f1bdecedece4581eaf8a010eddc0974e44fe88ab
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 60da11af51722e86a61c5e3298fafba2221f000b
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="hit-testing-in-the-visual-layer"></a>Görsel Katmanda Tıklama Testi
 Bu konu görsel katman tarafından sağlanan isabet sınama işlevselliğine genel bir bakış sağlar. İsabet testi desteği sağlar, geometri veya nokta değerinin işlenmiş içeriği içinde olup olmadığını belirlemek bir <xref:System.Windows.Media.Visual>, birden çok nesne seçmek için seçim dikdörtgeninin gibi kullanıcı arabirimi davranışı uygulamak olanak sağlar.  
@@ -61,7 +49,7 @@ Geçerli isabet testi bölgesinin diyagramı
   
  Aşağıdaki çizimde, kare ve üçgen nesneler üzerinde daire nesnesidir. Yalnızca z düzeni değeri olan en üstteki visual nesne ilgileniyorsanız, döndürülecek visual isabet testi numaralandırması ayarlayabilirsiniz <xref:System.Windows.Media.HitTestResultBehavior.Stop> gelen <xref:System.Windows.Media.HitTestResultCallback> ilk öğeden sonra isabet testi geçişi durdurmak için.  
   
- ![Z &#45;diyagramı; görsel ağaç sırasını](../../../../docs/framework/wpf/graphics-multimedia/media/wcpsdk-mmgraphics-visuals-hittest-2.png "wcpsdk_mmgraphics_visuals_hittest_2")  
+ ![Z diyagramı&#45;görsel ağaç sırasını](../../../../docs/framework/wpf/graphics-multimedia/media/wcpsdk-mmgraphics-visuals-hittest-2.png "wcpsdk_mmgraphics_visuals_hittest_2")  
 Görsel ağacın z düzeni diyagramı  
   
  Belirli bir nokta veya geometri altındaki tüm görsel nesneleri listeleme istiyorsanız, dönüş <xref:System.Windows.Media.HitTestResultBehavior.Continue> gelen <xref:System.Windows.Media.HitTestResultCallback>. Bu, tamamen yapılabileceği olsa bile diğer nesnelerin altında olan görsel nesneler için test isabet anlamına gelir. Daha fazla bilgi için "Kullanarak bir isabet testi sonuçları geri çağırma" bölümündeki örnek koduna bakın.  

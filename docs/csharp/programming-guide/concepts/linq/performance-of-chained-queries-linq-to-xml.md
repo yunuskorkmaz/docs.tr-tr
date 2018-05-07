@@ -1,21 +1,12 @@
 ---
 title: Performans zincirleme sorgu (LINQ-XML) (C#)
-ms.custom: 
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-csharp
-ms.topic: article
 ms.assetid: b2f1d715-8946-4dc0-8d56-fb3d1bba54a6
-caps.latest.revision: "3"
-author: BillWagner
-ms.author: wiwagn
-ms.openlocfilehash: 1014b7790f0ea465e10cf8fc03e59ca4d3f2d55c
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.openlocfilehash: dca2fa37a18209c5970172cb084151a58ea4ebc9
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="performance-of-chained-queries-linq-to-xml-c"></a>Performans zincirleme sorgu (LINQ-XML) (C#)
 LINQ (ve LINQ-XML) en önemli avantajları zincirleme sorguları yanı sıra tek bir büyük, daha karmaşık sorgu gerçekleştirebilirsiniz biridir.  
@@ -50,7 +41,7 @@ foreach (var i in query2)
   
  Bu zincirleme sorgu bağlantılı listesini yineleme olarak aynı performans profili sağlar.  
   
--   <xref:System.Xml.Linq.XContainer.Elements%2A> Eksen bağlantılı listesini yineleme olarak temelde aynı performansa sahiptir. <xref:System.Xml.Linq.XContainer.Elements%2A>Ertelenmiş yürütme ile yineleyici olarak uygulanır. Bu, bazı iş Ayrıca bağlantılı liste yineleme yapma gibi yineleyici nesne ayırma ve yürütme durumu izlemek için yaptığı anlamına gelir. Bu iş iki kategoriye ayrılabilir: yineleyici ayarlandığından saat ve her yinelemede yapılır iş yapılan iş. Kurulum çalışması küçük, sabit bir tutar iş ve her yinelemede çalışmanın kaynak koleksiyondaki öğe sayısını doğru orantılıdır.  
+-   <xref:System.Xml.Linq.XContainer.Elements%2A> Eksen bağlantılı listesini yineleme olarak temelde aynı performansa sahiptir. <xref:System.Xml.Linq.XContainer.Elements%2A> Ertelenmiş yürütme ile yineleyici olarak uygulanır. Bu, bazı iş Ayrıca bağlantılı liste yineleme yapma gibi yineleyici nesne ayırma ve yürütme durumu izlemek için yaptığı anlamına gelir. Bu iş iki kategoriye ayrılabilir: yineleyici ayarlandığından saat ve her yinelemede yapılır iş yapılan iş. Kurulum çalışması küçük, sabit bir tutar iş ve her yinelemede çalışmanın kaynak koleksiyondaki öğe sayısını doğru orantılıdır.  
   
 -   İçinde `query1`, `where` yan tümcesi neden çağırmak sorgu <xref:System.Linq.Enumerable.Where%2A> yöntemi. Bu yöntem aynı zamanda yineleyici uygulanır. Kurulum çalışması için bir yineleyici lambda ifadesi yanı sıra, normal kurulum başvurur temsilci başlatmasını oluşur. Her bir yineleme, koşul yürütmek için temsilci çağrılır. Kurulum çalışması ve her yinelemede çalışmanın benzer çalışmanın eksen yineleme oluştu.  
   

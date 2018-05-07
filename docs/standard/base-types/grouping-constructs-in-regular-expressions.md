@@ -1,13 +1,7 @@
 ---
-title: "Normal İfadelerdeki Gruplandırma Yapıları"
-ms.custom: 
+title: Normal İfadelerdeki Gruplandırma Yapıları
 ms.date: 03/30/2017
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
 ms.technology: dotnet-standard
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -19,18 +13,13 @@ helpviewer_keywords:
 - constructs, grouping
 - grouping constructs
 ms.assetid: 0fc18634-f590-4062-8d5c-f0b71abe405b
-caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-- dotnetcore
-ms.openlocfilehash: 766f20f92cd4ac2d987137f86616a69df9f53600
-ms.sourcegitcommit: 83dd5ec003e788ccb3e33f3412a7af39ae347646
+ms.openlocfilehash: 0830ec4022ca789d9aac0d1ae2c10ae6f76cc75e
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/15/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="grouping-constructs-in-regular-expressions"></a>Normal İfadelerdeki Gruplandırma Yapıları
 Gruplandırma yapıları normal ifadenin alt ifadelerin tanımlamak ve bir Giriş dizesinin alt dizeler yakalayın. Aşağıdakileri yapmak için gruplandırma yapıları kullanabilirsiniz:  
@@ -64,7 +53,7 @@ Gruplandırma yapıları normal ifadenin alt ifadelerin tanımlamak ve bir Giri�
 ## <a name="matched-subexpressions"></a>Eşleşen Alt İfadeler  
  Aşağıdaki gruplama yapısı eşleşen alt yakalar:  
   
- `(` *subexpression* `)`  
+ `(` *alt* `)`  
   
  Burada *alt* herhangi geçerli bir normal ifade deseni. Ayraç kullanın otomatik olarak soldan sağa normal ifadede bir başlangıç açılış parantez terabayt dayalı numaralandırılır olduğunu yakalar. Numaralı sıfır yakalama tüm normal ifade deseni ile eşleşen metindir.  
   
@@ -292,7 +281,7 @@ Gruplandırma yapıları normal ifadenin alt ifadelerin tanımlamak ve bir Giri�
 ## <a name="group-options"></a>Grup Seçenekleri  
  Aşağıdaki gruplama yapısı uygular veya bir alt içinde belirtilen seçeneklerini devre dışı bırakır:  
   
- `(?imnsx-imnsx:` *subexpression* `)`  
+ `(?imnsx-imnsx:` *alt* `)`  
   
  Burada *alt* herhangi geçerli bir normal ifade deseni. Örneğin, `(?i-s:)` büyük/küçük harfe üzerinde kapatır ve tek satırlı modunu devre dışı bırakır. Belirtebilirsiniz satır içi seçenekleri hakkında daha fazla bilgi için bkz: [normal ifade seçenekleri](../../../docs/standard/base-types/regular-expression-options.md).  
   
@@ -316,7 +305,7 @@ Gruplandırma yapıları normal ifadenin alt ifadelerin tanımlamak ve bir Giri�
 ## <a name="zero-width-positive-lookahead-assertions"></a>Sıfır Genişlik Pozitif İleriye Yönelik Onaylar  
  Aşağıdaki gruplama yapısı Sıfır Genişlik pozitif ileri yönlü onaylama tanımlar:  
   
- `(?=` *subexpression* `)`  
+ `(?=` *alt* `)`  
   
  Burada *alt* herhangi normal ifade deseni. Bir eşleşme başarılı olması normal ifade deseni giriş dizesi eşleşmelidir *alt*, eşleşen alt dizeyi eşleştir sonucunda almamakla. Sıfır Genişlik pozitif ileri yönlü onaylama geri izlemeyi değil.  
   
@@ -339,7 +328,7 @@ Gruplandırma yapıları normal ifadenin alt ifadelerin tanımlamak ve bir Giri�
 ## <a name="zero-width-negative-lookahead-assertions"></a>Sıfır Genişlik Negatif İleriye Yönelik Onaylar  
  Aşağıdaki gruplama yapısı Sıfır Genişlik negatif ileri yönlü onaylama tanımlar:  
   
- `(?!` *subexpression* `)`  
+ `(?!` *alt* `)`  
   
  Burada *alt* herhangi normal ifade deseni. Eşleşme başarılı olması giriş dizesi normal ifade deseni eşleşmemelidir *alt*, eşleşen dize eşleştirme sonucunda almamakla.  
   
@@ -377,7 +366,7 @@ Gruplandırma yapıları normal ifadenin alt ifadelerin tanımlamak ve bir Giri�
 ## <a name="zero-width-positive-lookbehind-assertions"></a>Sıfır Genişlik Pozitif Geriye Yönelik Onaylar  
  Aşağıdaki gruplama yapısı Sıfır Genişlik pozitif geriye ilerleme onaylama tanımlar:  
   
- `(?<=` *subexpression* `)`  
+ `(?<=` *alt* `)`  
   
  Burada *alt* herhangi normal ifade deseni. Başarılı olması bir eşleşme *alt* giriş dizesi geçerli konumlarından sola rağmen ortaya `subexpression` eşleşme sonucunda dahil edilmez. Sıfır Genişlik pozitif geriye ilerleme onaylama geri izlemeyi değil.  
   
@@ -402,7 +391,7 @@ Gruplandırma yapıları normal ifadenin alt ifadelerin tanımlamak ve bir Giri�
 ## <a name="zero-width-negative-lookbehind-assertions"></a>Sıfır Genişlik Negatif Geriye Yönelik Onaylar  
  Aşağıdaki gruplama yapısı Sıfır Genişlik negatif geriye ilerleme onaylama tanımlar:  
   
- `(?<!` *subexpression* `)`  
+ `(?<!` *alt* `)`  
   
  Burada *alt* herhangi normal ifade deseni. Başarılı olması bir eşleşme *alt* giriş dizesi geçerli konumlarından sola oluşamaz. Ancak, herhangi bir eşleşmeyen substring `subexpression` eşleşme sonucunda dahil edilmez.  
   
@@ -427,7 +416,7 @@ Gruplandırma yapıları normal ifadenin alt ifadelerin tanımlamak ve bir Giri�
 ## <a name="nonbacktracking-subexpressions"></a>Geri Dönüşlü Olmayan Alt İfadeler  
  Aşağıdaki gruplama yapısı nonbacktracking alt ("Hızlı" alt olarak da bilinir) temsil eder:  
   
- `(?>` *subexpression* `)`  
+ `(?>` *alt* `)`  
   
  Burada *alt* herhangi normal ifade deseni.  
   

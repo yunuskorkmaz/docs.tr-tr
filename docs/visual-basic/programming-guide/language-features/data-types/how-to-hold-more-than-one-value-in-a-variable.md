@@ -1,12 +1,6 @@
 ---
-title: "Nasıl yapılır: Değişkende Birden Fazla Değer Tutma (Visual Basic)"
-ms.custom: 
+title: 'Nasıl yapılır: Değişkende Birden Fazla Değer Tutma (Visual Basic)'
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
-ms.topic: article
 helpviewer_keywords:
 - classes [Visual Basic], composite data types
 - composite types [Visual Basic]
@@ -17,14 +11,11 @@ helpviewer_keywords:
 - arrays [Visual Basic], compilation errors
 - types [Visual Basic], composite
 ms.assetid: 5fe0e558-aac2-4a40-b7f2-7cfea7336917
-caps.latest.revision: "16"
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: c8c567ec2ba01d094819c98a2937af75cd105956
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 783c75ed4577831b7ca444870c97063e8a057346
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-hold-more-than-one-value-in-a-variable-visual-basic"></a>Nasıl yapılır: Değişkende Birden Fazla Değer Tutma (Visual Basic)
 Olması bildirirseniz bir değişkeni birden fazla değer tutan bir *bileşik veri türü*.  
@@ -50,10 +41,10 @@ Olması bildirirseniz bir değişkeni birden fazla değer tutan bir *bileşik ve
 5.  İzleyin `As` anahtar sözcüğüyle uygun bileşik veri türünün adı.  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [Veri türleri](../../../../visual-basic/language-reference/data-types/data-type-summary.md)  
- [Tür karakterleri](../../../../visual-basic/programming-guide/language-features/data-types/type-characters.md)  
- [Bileşik veri türleri](../../../../visual-basic/programming-guide/language-features/data-types/composite-data-types.md)  
- [Yapıları](../../../../visual-basic/programming-guide/language-features/data-types/structures.md)  
+ [Veri Türleri](../../../../visual-basic/language-reference/data-types/data-type-summary.md)  
+ [Tür Karakterleri](../../../../visual-basic/programming-guide/language-features/data-types/type-characters.md)  
+ [Bileşik Veri Türleri](../../../../visual-basic/programming-guide/language-features/data-types/composite-data-types.md)  
+ [Yapılar](../../../../visual-basic/programming-guide/language-features/data-types/structures.md)  
  [Diziler](../../../../visual-basic/programming-guide/language-features/arrays/index.md)  
- [Nesneler ve sınıflar](../../../../visual-basic/programming-guide/language-features/objects-and-classes/index.md)  
- [Değer türleri ve başvuru türleri](../../../../visual-basic/programming-guide/language-features/data-types/value-types-and-reference-types.md)
+ [Nesneler ve Sınıflar](../../../../visual-basic/programming-guide/language-features/objects-and-classes/index.md)  
+ [Değer Türleri ve Başvuru Türleri](../../../../visual-basic/programming-guide/language-features/data-types/value-types-and-reference-types.md)

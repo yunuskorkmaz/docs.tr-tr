@@ -1,13 +1,6 @@
 ---
-title: "Windows Forms Denetimlerinde Özellik Tanımlama"
-ms.custom: 
+title: Windows Forms Denetimlerinde Özellik Tanımlama
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-winforms
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -15,23 +8,18 @@ helpviewer_keywords:
 - properties [Windows Forms], defining in code
 - custom controls [Windows Forms], defining properties in code
 ms.assetid: c2eb8277-a842-4d99-89a9-647b901a0434
-caps.latest.revision: "13"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 47b56a4112dc39adb12bb8f7c6db7656352ae930
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: dc47d7152419d55b3e52aec70257e2b39e9aaca0
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="defining-a-property-in-windows-forms-controls"></a>Windows Forms Denetimlerinde Özellik Tanımlama
 Özellikler genel bakış için bkz: [özelliklerine genel bakış](http://msdn.microsoft.com/library/8f1a1ff1-0f05-40e0-bfdf-80de8fff7d52). Bir özellik tanımlarken birkaç önemli noktalar şunlardır:  
   
 -   Tanımladığınız özellikleri öznitelikleri uygulamanız gerekir. Tasarımcı bir özelliğin nasıl görüntülenmelidir öznitelikleri belirtin. Ayrıntılar için bkz [bileşenleri için tasarım zamanı öznitelikleri](http://msdn.microsoft.com/library/12050fe3-9327-4509-9e21-4ee2494b95c3).  
   
--   Özellik değiştirme denetiminin görünümünü etkiliyorsa, çağrı <xref:System.Windows.Forms.Control.Invalidate%2A> yöntemi (denetiminizi devralan <xref:System.Windows.Forms.Control>) gelen `set` erişimcisi. <xref:System.Windows.Forms.Control.Invalidate%2A>sırayla çağırır <xref:System.Windows.Forms.Control.OnPaint%2A> denetimi yeniden çizer yöntemi. Birden çok çağrılar <xref:System.Windows.Forms.Control.Invalidate%2A> tek bir çağrı sonucunu <xref:System.Windows.Forms.Control.OnPaint%2A> verimlilik.  
+-   Özellik değiştirme denetiminin görünümünü etkiliyorsa, çağrı <xref:System.Windows.Forms.Control.Invalidate%2A> yöntemi (denetiminizi devralan <xref:System.Windows.Forms.Control>) gelen `set` erişimcisi. <xref:System.Windows.Forms.Control.Invalidate%2A> sırayla çağırır <xref:System.Windows.Forms.Control.OnPaint%2A> denetimi yeniden çizer yöntemi. Birden çok çağrılar <xref:System.Windows.Forms.Control.Invalidate%2A> tek bir çağrı sonucunu <xref:System.Windows.Forms.Control.OnPaint%2A> verimlilik.  
   
 -   .NET Framework sınıf kitaplığı, tamsayı, ondalık sayılar, Boole değerleri ve diğerleri gibi ortak veri türleri için tür dönüştürücüleri sağlar. Genellikle amacı tür dönüştürücüsü, dize değeri bir dönüştürme (dize verilerini diğer veri türleri için) sağlamaktır. Ortak veri türleri değerleri dizeler ve uygun veri türlerini dizelere dönüştürme varsayılan türü dönüştürücü ile ilişkilendirilmiş. Özel bir özellik tanımlarsanız (diğer bir deyişle, standart olmayan) veri türü olacaktır bu özellik ile ilişkilendirmek için tür dönüştürücüsünü belirten bir özniteliği uygulamak. Öznitelik, bir Özel UI türü Düzenleyici özelliği ile ilişkilendirmek için de kullanabilirsiniz. UI türü Düzenleyici bir özellik ya da veri türü düzenlemek için bir kullanıcı arabirimi sağlar. Bir renk seçici UI türü Düzenleyici örneğidir. Öznitelikleri örnekleri, bu konunun sonunda verilir.  
   

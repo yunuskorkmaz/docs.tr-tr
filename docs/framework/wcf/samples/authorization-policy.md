@@ -1,24 +1,12 @@
 ---
-title: "Yetkilendirme İlkesi"
-ms.custom: 
+title: Yetkilendirme İlkesi
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 1db325ec-85be-47d0-8b6e-3ba2fdf3dda0
-caps.latest.revision: "38"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 4ba4548e6ea62f408fddf3629eca1318c482f728
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
-ms.translationtype: MT
+ms.openlocfilehash: fc0c147f2f9a57c80edda6144a14f208bde835eb
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="authorization-policy"></a>Yetkilendirme İlkesi
 Bu örnek, bir özel talep yetkilendirme ilkesini ve ilişkili özel hizmet Yetkilendirme Yöneticisi uygulama gösterilmiştir. Bu, belirli hakları çağıran hizmet işlemlerine ve erişim denetimleri öncesinde talep tabanlı erişim denetimlerini hizmeti yapar verir durumunda faydalı olur. Bu örnek talep sonlandırılmış kümesini karşı bir erişim denetimi yapmak için işlem yanı sıra talep ekleme işlemini gösterir. İstemci ve sunucu arasındaki tüm uygulama iletileri imzalanır ve şifrelenir. Varsayılan olarak `wsHttpBinding` bağlama, bir kullanıcı adı ve istemci tarafından sağlanan parola kullanılan oturum açmak için geçerli bir Windows NT hesabı. Bu örnek, bir özel kullanmaya gösterilmiştir <!--zz <xref:System.IdentityModel.Selectors.UsernamePasswordValidator>--> `System.IdentityModel.Selectors.UsernamePasswordValidator` istemci kimlik doğrulaması için. Ayrıca bu örnek, bir X.509 sertifikası kullanarak hizmet kimlik doğrulaması istemci göstermektedir. Bu örnek uygulaması gösterir <xref:System.IdentityModel.Policy.IAuthorizationPolicy> ve <xref:System.ServiceModel.ServiceAuthorizationManager>, bunları aralarında hizmetinin belirli kullanıcılar için belirli yöntemler için erişim verin. Bu örnek dayanır [ileti güvenliği kullanıcı adı](../../../../docs/framework/wcf/samples/message-security-user-name.md), ancak talep dönüştürmeyi öncesinde gerçekleştirmek nasıl gösteren <xref:System.ServiceModel.ServiceAuthorizationManager> çağrılan.  
@@ -292,9 +280,9 @@ serviceHost.Credentials.UserNameAuthentication.CustomUserNamePasswordValidator =
 </behavior>  
 ```  
   
- [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)]erişim denetimleri gerçekleştirmek için zengin talep tabanlı modeli sağlar. <xref:System.ServiceModel.ServiceAuthorizationManager> Nesne erişim denetimi gerçekleştirebilir ve istemciyle ilişkili talep hizmet yöntemi erişimi için gereken koşulları karşılamak olup olmadığını belirlemek için kullanılır.  
+ Windows Communication Foundation (WCF) erişim denetimleri gerçekleştirmek için zengin talep tabanlı modeli sağlar. <xref:System.ServiceModel.ServiceAuthorizationManager> Nesne erişim denetimi gerçekleştirebilir ve istemciyle ilişkili talep hizmet yöntemi erişimi için gereken koşulları karşılamak olup olmadığını belirlemek için kullanılır.  
   
- Tanıtım amacıyla, bu örnek uygulaması gösterir <xref:System.ServiceModel.ServiceAuthorizationManager> uygulayan <xref:System.ServiceModel.ServiceAuthorizationManager.CheckAccessCore%2A> yöntemleri kullanıcının erişmesine izin vermek için yöntemine temel değeri olan eylemi türü http://example.com/claims/allowedoperation talep üzerinde Çağrılacak izin işlemi URI'si.  
+ Tanıtım amacıyla, bu örnek uygulaması gösterir <xref:System.ServiceModel.ServiceAuthorizationManager> uygulayan <xref:System.ServiceModel.ServiceAuthorizationManager.CheckAccessCore%2A> türü talep tabanlı yöntemleri kullanıcının erişmesine izin vermek için yöntemini http://example.com/claims/allowedoperation değeri olan olan işlem eylem URI'sini çağrılacak izin verilir.  
   
 ```  
 public class MyServiceAuthorizationManager : ServiceAuthorizationManager  
@@ -469,7 +457,7 @@ public class MyAuthorizationPolicy : IAuthorizationPolicy
   
 3.  Service.exe service\bin başlatın.  
   
-4.  Launch Client.exe from \client\bin. İstemci etkinliği istemci konsol uygulaması görüntülenir.  
+4.  Client.exe \client\bin başlatın. İstemci etkinliği istemci konsol uygulaması görüntülenir.  
   
 5.  İstemci ve hizmet iletişim kurabildiğinden değilseniz bkz [sorun giderme ipuçları](http://msdn.microsoft.com/library/8787c877-5e96-42da-8214-fa737a38f10b).  
   

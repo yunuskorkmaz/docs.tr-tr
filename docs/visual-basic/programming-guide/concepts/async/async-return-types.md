@@ -1,22 +1,12 @@
 ---
-title: "Zaman uyumsuz dönüş türleri (Visual Basic)"
-ms.custom: 
+title: Zaman uyumsuz dönüş türleri (Visual Basic)
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 07890291-ee72-42d3-932a-fa4d312f2c60
-caps.latest.revision: "3"
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: 1a62556fb93a3d8547d880e4ea6770b206ead900
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 0c6c02efd282f8581f3dc85905149acf7b3ea6ac
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="async-return-types-visual-basic"></a>Zaman uyumsuz dönüş türleri (Visual Basic)
 Zaman uyumsuz yöntemleri sahip üç olası dönüş türleri: <xref:System.Threading.Tasks.Task%601>, <xref:System.Threading.Tasks.Task>ve void. Visual Basic'te, dönüş türü void olarak yazılmış bir [alt](../../../../visual-basic/programming-guide/language-features/procedures/sub-procedures.md) yordamı. Zaman uyumsuz yöntemleri hakkında daha fazla bilgi için bkz: [zaman uyumsuz programlama uyumsuz ve bekleme (Visual Basic) ile](../../../../visual-basic/programming-guide/concepts/async/index.md).  
@@ -26,7 +16,7 @@ Zaman uyumsuz yöntemleri sahip üç olası dönüş türleri: <xref:System.Thre
 > [!NOTE]
 >  Örneği çalıştırmak için Visual Studio 2012 veya daha yeni ve .NET Framework 4.5 veya daha yeni bilgisayarınızda yüklü olmalıdır.  
   
-##  <a name="BKMK_TaskTReturnType"></a>Task(T) dönüş türü  
+##  <a name="BKMK_TaskTReturnType"></a> Task(T) dönüş türü  
  <xref:System.Threading.Tasks.Task%601> Dönüş türü içeren bir zaman uyumsuz yöntem için kullanılan bir [dönmek](../../../../visual-basic/language-reference/statements/return-statement.md) işleneni türüne sahip deyimi `TResult`.  
   
  Aşağıdaki örnekte, `TaskOfT_MethodAsync` async yöntemi bir tamsayı döndürür bir dönüş ifadesi içeriyor. Bu nedenle, yöntem bildirimi dönüş türünü belirtmeniz gerekir `Task(Of Integer)`.  
@@ -88,7 +78,7 @@ textBox1.Text &= String.Format("Value of result2 variable:   {0}" & vbCrLf, resu
 textBox1.Text &= String.Format("Value of resultTask.Result:  {0}" & vbCrLf, integerTask.Result)  
 ```  
   
-##  <a name="BKMK_TaskReturnType"></a>Görev dönüş türü  
+##  <a name="BKMK_TaskReturnType"></a> Görev dönüş türü  
  Return deyimi içeren yok veya işleneni genellikle döndürmez bir return deyimi içeren zaman uyumsuz yöntemleri dönüş türüne sahip <xref:System.Threading.Tasks.Task>. Bu tür yöntemleri olur [alt](../../../../visual-basic/programming-guide/language-features/procedures/sub-procedures.md) eşzamanlı olarak çalışmasına yazılmışsa yordamlar. Kullanırsanız, bir `Task` dönüş türü için bir zaman uyumsuz yöntemi, bir arama yöntemi kullanabilirsiniz bir `Await` çağrılan zaman uyumsuz yöntem tamamlanana kadar arayanın tamamlama askıya almak için işleci.  
   
  Aşağıdaki örnekte, zaman uyumsuz yöntem `Task_MethodAsync` bir dönüş ifadesi içermiyor. Bu nedenle, dönüş türü belirtmek `Task` yönteminde sağlayan `Task_MethodAsync` beklemenin için. Tanımını `Task` türü içermez bir `Result` dönüş değeri depolamak için özellik.  
@@ -107,7 +97,7 @@ Async Function Task_MethodAsync() As Task
 End Function  
 ```  
   
- `Task_MethodAsync`çağrılan ve arama deyim için bir zaman uyumlu benzer bir bekleme deyim yerine bir bekleme deyimi kullanarak beklemenin `Sub` veya void döndüren yöntemi. Uygulamasının bir `Await` işleci bu durumda bir değer üretmek değil.  
+ `Task_MethodAsync` çağrılan ve arama deyim için bir zaman uyumlu benzer bir bekleme deyim yerine bir bekleme deyimi kullanarak beklemenin `Sub` veya void döndüren yöntemi. Uygulamasının bir `Await` işleci bu durumda bir değer üretmek değil.  
   
  Aşağıdaki kod çağırır ve yöntem bekler `Task_MethodAsync`.  
   
@@ -130,7 +120,7 @@ textBox1.Text &= String.Format(vbCrLf & "Application can continue working while 
 Await simpleTask  
 ```  
   
-##  <a name="BKMK_VoidReturnType"></a>Dönüş türü void  
+##  <a name="BKMK_VoidReturnType"></a> Dönüş türü void  
  Birincil kullanımını `Sub` yordamları olan olay işleyicileri ile söz konusu olduğunda (diğer dillerdeki dönüş türü void olarak adlandırılır) bir dönüş türü. Void dönüş void döndüren yöntemleri geçersiz kılmak için de kullanılabilir veya kategorilere ayrılabilir etkinliklerini gerçekleştiren yöntemleri için farklı "yangın ve unuttunuz." Ancak, döndürmelidir bir `Task` mümkün olduğunda, bir geçersiz kılma döndüren zaman uyumsuz yöntem beklemenin olduğundan. Böyle bir yöntemin herhangi bir çağırıcı tamamlanması için çağrılan zaman uyumsuz yöntemi beklemeden tamamlanıncaya kadar devam edebilirsiniz ve çağıranın tüm değerleri veya zaman uyumsuz yöntem oluşturur özel durumlar bağımsız olması gerekir.  
   
  Bir geçersiz kılma döndüren zaman uyumsuz yöntem arayan yönteminden oluşturulan özel durumları yakalamak olamaz ve böyle işlenmeyen özel durumlar, uygulamanızın başarısız olmasına yol açabilir. Bir özel durum döndüren bir zaman uyumsuz yöntem oluşursa bir <xref:System.Threading.Tasks.Task> veya <xref:System.Threading.Tasks.Task%601>, özel durum döndürülen görevde depolanır ve görev beklemenin zaman işlenemezse. Bu nedenle, bir özel durum oluşturmak üzere herhangi bir zaman uyumsuz yöntemi dönüş türüne sahip olduğundan emin olun <xref:System.Threading.Tasks.Task> veya <xref:System.Threading.Tasks.Task%601> ve yöntemine yönelik çağrılar beklemenin.  
@@ -154,7 +144,7 @@ Async Sub button1_Click(sender As Object, e As RoutedEventArgs) Handles button1.
 End Sub  
 ```  
   
-##  <a name="BKMK_Example"></a>Tam örnek  
+##  <a name="BKMK_Example"></a> Tam örnek  
  Aşağıdaki Windows Presentation Foundation (WPF) projesi, bu konudaki kod örnekleri içerir.  
   
  Projeyi çalıştırmak için aşağıdaki adımları gerçekleştirin:  
@@ -305,5 +295,5 @@ End Sub
  <xref:System.Threading.Tasks.Task.FromResult%2A>  
  [İzlenecek yol: Async kullanarak Web'e erişme ve bekleme (Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/walkthrough-accessing-the-web-by-using-async-and-await.md)  
  [(Visual Basic) zaman uyumsuz programlarda denetim akışı](../../../../visual-basic/programming-guide/concepts/async/control-flow-in-async-programs.md)  
- [Zaman uyumsuz](../../../../visual-basic/language-reference/modifiers/async.md)  
- [Await işleci](../../../../visual-basic/language-reference/operators/await-operator.md)
+ [Async](../../../../visual-basic/language-reference/modifiers/async.md)  
+ [Await İşleci](../../../../visual-basic/language-reference/operators/await-operator.md)

@@ -1,21 +1,12 @@
 ---
-title: "Parametreler ve dönüş değerleri birden çok iş parçacıklı yordamlar (C#)"
-ms.custom: 
+title: Parametreler ve dönüş değerleri birden çok iş parçacıklı yordamlar (C#)
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-csharp
-ms.topic: article
 ms.assetid: ba63c30c-d9f0-4962-b5c7-9d83ba851e6a
-caps.latest.revision: "3"
-author: BillWagner
-ms.author: wiwagn
-ms.openlocfilehash: fec0ad955439f0cd683ad56c8d6433eed2417304
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: e27f8e67ff03260e1d13fa633064efc2059e6bdf
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="parameters-and-return-values-for-multithreaded-procedures-c"></a>Parametreler ve dönüş değerleri birden çok iş parçacıklı yordamlar (C#)
 İş parçacığı sınıfı oluşturucusu bağımsız değişken almayan ve herhangi bir değer döndüren bir yordam için bir başvuru geçirilmelidir sağlayarak ve birden çok iş parçacıklı uygulamada değerler döndüren karmaşık olmasıdır. Aşağıdaki bölümlerde, parametrelerini ve dönüş değerleri yordamlardan ayrı iş parçacıklarına basit bazı yollarını gösterir.  
@@ -129,7 +120,7 @@ private void BackgroundWorker1_RunWorkerCompleted(
  [İzlenecek yol: BackgroundWorker bileşeni (C#) ile çoklu iş parçacığı kullanımı](../../../../csharp/programming-guide/concepts/threading/walkthrough-multithreading-with-the-backgroundworker-component.md)  
  [İş parçacığı havuzu (C#)](../../../../csharp/programming-guide/concepts/threading/thread-pooling.md)  
  [İş parçacığı eşitleme (C#)](../../../../csharp/programming-guide/concepts/threading/thread-synchronization.md)  
- [Olayları](../../../../csharp/programming-guide/events/index.md)  
+ [Olaylar](../../../../csharp/programming-guide/events/index.md)  
  [Birden çok iş parçacıklı uygulamalar (C#)](../../../../csharp/programming-guide/concepts/threading/multithreaded-applications.md)  
  [Temsilciler](../../../../csharp/programming-guide/delegates/index.md)  
  [Bileşenleri çoklu iş parçacığı kullanımı](http://msdn.microsoft.com/library/2fc31e68-fb71-4544-b654-0ce720478779)

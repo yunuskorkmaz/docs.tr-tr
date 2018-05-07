@@ -1,13 +1,7 @@
 ---
-title: "Kültüre Duyarsız Dize İşlemleri"
-ms.custom: 
+title: Kültüre Duyarsız Dize İşlemleri
 ms.date: 03/30/2017
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
 ms.technology: dotnet-standard
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - culture, culture-insensitive string operations
 - case-sensitive comparisons
@@ -18,18 +12,13 @@ helpviewer_keywords:
 - culture-sensitive string operations
 - culture-insensitive string operations
 ms.assetid: e6e2bb94-a95d-44e2-b68c-cfdd1db77784
-caps.latest.revision: "13"
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-- dotnetcore
-ms.openlocfilehash: 697d3ec32af6b704fbb1787bbb9ba1de57a0632e
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: 212aa3f00967c04631b80305289c46d818106c44
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="culture-insensitive-string-operations"></a>Kültüre Duyarsız Dize İşlemleri
 Kültüre özel dize işlemleri, kullanıcılara sonuçları kültüre göre görüntülemek üzere tasarlanmış uygulamalar oluşturuyorsanız bir avantaj olabilir. Varsayılan olarak, aşağıdakiler arasından kullanılacak kültürü kültüre duyarlı yöntemleri elde <xref:System.Globalization.CultureInfo.CurrentCulture%2A> özelliği için geçerli iş parçacığının.  

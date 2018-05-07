@@ -1,12 +1,6 @@
 ---
 title: '&amp;= İşleci (Visual Basic)'
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- devlang-visual-basic
-ms.topic: article
 f1_keywords:
 - vb.&=
 helpviewer_keywords:
@@ -16,14 +10,11 @@ helpviewer_keywords:
 - '&= operator [Visual Basic]'
 - compound assignment statements [Visual Basic]
 ms.assetid: 0cf262fc-1a05-419a-a503-60013f111c8a
-caps.latest.revision: 15
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: 929a9e8c3384451679fc52ad478eb03219d67192
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: c3db2d4095600f32af92d1a4ce1f806a3f032af0
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="amp-operator-visual-basic"></a>&amp;= İşleci (Visual Basic)
 Art arda ekler bir `String` ifade bir `String` değişken veya özellik ve değişken ya da özelliği için sonuç atar.  
@@ -56,7 +47,7 @@ variableorproperty &= expression
  [& İşleci](../../../visual-basic/language-reference/operators/concatenation-operator.md)  
  [+= İşleci](../../../visual-basic/language-reference/operators/addition-assignment-operator.md)  
  [Atama İşleçleri](../../../visual-basic/language-reference/operators/assignment-operators.md)  
- [Birleştirme işleçleri](../../../visual-basic/language-reference/operators/concatenation-operators.md)  
+ [Birleştirme İşleçleri](../../../visual-basic/language-reference/operators/concatenation-operators.md)  
  [Visual Basic'de İşleç önceliği](../../../visual-basic/language-reference/operators/operator-precedence.md)  
- [İşlevselliğe göre listelenmiş işleçler](../../../visual-basic/language-reference/operators/operators-listed-by-functionality.md)  
- [Deyimleri](../../../visual-basic/programming-guide/language-features/statements.md)
+ [İşlevselliğe Göre Listelenmiş İşleçler](../../../visual-basic/language-reference/operators/operators-listed-by-functionality.md)  
+ [Deyimler](../../../visual-basic/programming-guide/language-features/statements.md)

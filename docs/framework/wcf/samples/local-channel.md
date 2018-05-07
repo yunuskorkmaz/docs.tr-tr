@@ -1,27 +1,15 @@
 ---
 title: Yerel Kanal
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: fa1917a4-f701-4e82-a439-14a16282c7cc
-caps.latest.revision: "6"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 1298b4b96006837f0634040c5c615adfa3a1a11b
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 2473704c751ad0ea2d2a00bf7f3ea43d6e39498f
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="local-channel"></a>Yerel Kanal
-Yerel kanal bir [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] aynı uygulama etki alanı içinde iletişim için kullanılan taşıma kanalı. Burada istemci ve hizmet aynı uygulama etki alanında çalışan ve tipik WCF kanalı yığınının (seri hale getirme ve seri durumdan çıkarma iletilerinin) ek yükünü kaçınılmalıdır senaryoları için kullanışlıdır.  
+Yerel kanal aynı uygulama etki alanı içinde iletişim için kullanılan bir Windows Communication Foundation (WCF) aktarım kanalıdır. Burada istemci ve hizmet aynı uygulama etki alanında çalışan ve tipik WCF kanalı yığınının (seri hale getirme ve seri durumdan çıkarma iletilerinin) ek yükünü kaçınılmalıdır senaryoları için kullanışlıdır.  
   
 ## <a name="demonstrates"></a>Gösteriler  
  Yerel Kanal  
@@ -46,6 +34,6 @@ Yerel kanal bir [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] aynı uy
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  Bu dizin mevcut değilse, Git [Windows Communication Foundation (WCF) ve .NET Framework 4 için Windows Workflow Foundation (WF) örnek](http://go.microsoft.com/fwlink/?LinkId=150780) tüm indirmek için [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] ve [!INCLUDE[wf1](../../../../includes/wf1-md.md)] örnekleri. Bu örnek aşağıdaki dizinde bulunur.  
+>  Bu dizin mevcut değilse, Git [Windows Communication Foundation (WCF) ve .NET Framework 4 için Windows Workflow Foundation (WF) örnek](http://go.microsoft.com/fwlink/?LinkId=150780) tüm Windows Communication Foundation (WCF) indirmek için ve [!INCLUDE[wf1](../../../../includes/wf1-md.md)] örnekleri. Bu örnek aşağıdaki dizinde bulunur.  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Extensibility\Channels\LocalChannel`

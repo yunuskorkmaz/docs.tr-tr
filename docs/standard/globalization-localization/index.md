@@ -1,13 +1,7 @@
 ---
 title: .NET Framework Uygulamalarını Genelleştirme ve Yerelleştirme
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net
-ms.reviewer: ''
-ms.suite: ''
 ms.technology: dotnet-standard
-ms.tgt_pltfrm: ''
-ms.topic: article
 helpviewer_keywords:
 - international applications [.NET Framework]
 - globalization [.NET Framework], encoding
@@ -17,18 +11,13 @@ helpviewer_keywords:
 - application development [.NET Framework], globalization
 - multilingual application development
 ms.assetid: 9a59696b-d89b-45bd-946d-c75da4732d02
-caps.latest.revision: 42
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-- dotnetcore
-ms.openlocfilehash: 63f0e001280773c55f18f0604ca93986acbb9674
-ms.sourcegitcommit: 91691981897cf8451033cb01071d8f5d94017f97
+ms.openlocfilehash: 26c237d082a56d17b2d8493bff52dbac6faca8b2
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/09/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="globalizing-and-localizing-net-framework-applications"></a>.NET Framework Uygulamalarını Genelleştirme ve Yerelleştirme
 Geliştirme bir [dünya çapında kullanılmaya hazır uygulama](http://msdn.microsoft.com/goglobal/bb978433.aspx), bir veya daha fazla dillere yerelleştirilmiş bir uygulama da dahil olmak üzere, üç adımdan oluşur: yerelleştirilebilirlik gözden geçirin Genelleştirme ve Yerelleştirme.  
@@ -69,13 +58,13 @@ Geliştirme bir [dünya çapında kullanılmaya hazır uygulama](http://msdn.mic
  Genelleştirme, yerelleştirme ve dünya çapında kullanılmaya hazır ASP.NET uygulamaları geliştirmek için izlenebilecek en iyi uygulamaları açıklar.  
   
 ## <a name="reference"></a>Başvuru  
- <xref:System.Globalization?displayProperty=nameWithType>ad alanı  
+ <xref:System.Globalization?displayProperty=nameWithType> Namespace  
  Bu ad alanındaki, dil, ülke/bölge, kullanılan takvimler, tarihler için biçim desenleri, para birimi, sayılar ve dizeler için sıralama düzeni gibi kültürle ilişkili bilgileri tanımlayan sınıflar içerir  
   
- <xref:System.Resources>ad alanı  
+ <xref:System.Resources> Namespace  
  Kaynaklar oluşturmak, düzenlemek ve kullanmak için sınıflar sağlar.  
   
- <xref:System.Text>ad alanı  
+ <xref:System.Text> Namespace  
  ASCII, ANSI, Unicode ve diğer karakter kodlamalarını temsil eden sınıfları içerir.  
   
  [Resgen.exe (Kaynak Dosya Oluşturucu)](../../../docs/framework/tools/resgen-exe-resource-file-generator.md)  

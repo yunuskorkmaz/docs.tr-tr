@@ -1,24 +1,15 @@
 ---
 title: "Nasıl Yapılır: Visual Basic'te Dosyayı Yeniden Adlandırma"
-ms.custom: 
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
-ms.topic: article
 helpviewer_keywords:
 - I/O [Visual Basic], renaming files
 - files [Visual Basic], renaming
 ms.assetid: 0ea7e0c8-2cb2-4bf5-a00d-7b6e3c08a3bc
-caps.latest.revision: "21"
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: 34316fabf63959389eee498a6063ac7c9a7b320a
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: ef024f90567d8d69bdd432499db96e4f67578ce5
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-rename-a-file-in-visual-basic"></a>Nasıl Yapılır: Visual Basic'te Dosyayı Yeniden Adlandırma
 Kullanım `RenameFile` yöntemi `My.Computer.FileSystem` geçerli konumu, dosya adı ve yeni dosya adını belirterek bir dosyayı yeniden adlandırmak için nesne. Bu yöntem, bir dosyayı taşımak için kullanılamaz; kullanmak `MoveFile` yöntemi taşımak ve dosyayı yeniden adlandırın.  
@@ -36,11 +27,11 @@ Kullanım `RenameFile` yöntemi `My.Computer.FileSystem` geçerli konumu, dosya 
   
 -   Yolu şu nedenlerden biri için geçerli değil: sıfır uzunlukta bir dize değil, yalnızca boşluk içeriyor, geçersiz karakterler içeriyor veya bir aygıt yol olduğundan (ile başlayan \\ \\.\\) (<xref:System.ArgumentException>).  
   
--   `newName`yol bilgisi içerir (<xref:System.ArgumentException>).  
+-   `newName` yol bilgisi içerir (<xref:System.ArgumentException>).  
   
 -   Çünkü yolu geçerli değil `Nothing` (<xref:System.ArgumentNullException>).  
   
--   `newName`olan `Nothing` ya da boş bir dize (<xref:System.ArgumentNullException>).  
+-   `newName` olan `Nothing` ya da boş bir dize (<xref:System.ArgumentNullException>).  
   
 -   Kaynak dosyası geçerli değil veya yok (<xref:System.IO.FileNotFoundException>).  
   
@@ -56,7 +47,7 @@ Kullanım `RenameFile` yöntemi `My.Computer.FileSystem` geçerli konumu, dosya 
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
  <xref:Microsoft.VisualBasic.FileIO.FileSystem.RenameFile%2A>  
- [Nasıl yapılır: dosya taşıma](../../../../visual-basic/developing-apps/programming/drives-directories-files/how-to-move-a-file.md)  
- [Oluşturma, silme ve dosyaları ve dizinleri taşıma](../../../../visual-basic/developing-apps/programming/drives-directories-files/creating-deleting-and-moving-files-and-directories.md)  
- [Nasıl yapılır: aynı dizinde dosya kopyası oluşturma](../../../../visual-basic/developing-apps/programming/drives-directories-files/how-to-create-a-copy-of-a-file-in-the-same-directory.md)  
- [Nasıl yapılır: farklı dizinde dosya kopyası oluşturma](../../../../visual-basic/developing-apps/programming/drives-directories-files/how-to-create-a-copy-of-a-file-in-a-different-directory.md)
+ [Nasıl Yapılır: Dosya Taşıma](../../../../visual-basic/developing-apps/programming/drives-directories-files/how-to-move-a-file.md)  
+ [Dosya ve Dizin Oluşturma, Silme ve Taşıma](../../../../visual-basic/developing-apps/programming/drives-directories-files/creating-deleting-and-moving-files-and-directories.md)  
+ [Nasıl Yapılır: Aynı Dizinde Dosya Kopyası Oluşturma](../../../../visual-basic/developing-apps/programming/drives-directories-files/how-to-create-a-copy-of-a-file-in-the-same-directory.md)  
+ [Nasıl Yapılır: Farklı Dizinde Dosya Kopyası Oluşturma](../../../../visual-basic/developing-apps/programming/drives-directories-files/how-to-create-a-copy-of-a-file-in-a-different-directory.md)

@@ -1,9 +1,7 @@
 ---
 title: 'Nasıl yapılır: Veri Akışı Bloğu Veri Aldığında İşlem Gerçekleştirme'
 ms.date: 03/30/2017
-ms.prod: .net
 ms.technology: dotnet-standard
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -13,15 +11,11 @@ helpviewer_keywords:
 ms.assetid: fc2585dc-965e-4632-ace7-73dd02684ed3
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-- dotnetcore
-ms.openlocfilehash: 99f2f7184f869902f89eb0ac0fc8427533978cc3
-ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
+ms.openlocfilehash: a348a83ef0b05ce44b3b3adf8e0031ce350cd37b
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-perform-action-when-a-dataflow-block-receives-data"></a>Nasıl yapılır: Veri Akışı Bloğu Veri Aldığında İşlem Gerçekleştirme
 *Yürütme veri akışı bloğunda* türleri veri aldıklarında bir kullanıcı tarafından sağlanan temsilci çağırma. <xref:System.Threading.Tasks.Dataflow.ActionBlock%601?displayProperty=nameWithType>, <xref:System.Threading.Tasks.Dataflow.TransformBlock%602?displayProperty=nameWithType>, Ve <xref:System.Threading.Tasks.Dataflow.TransformManyBlock%602?displayProperty=nameWithType> sınıflardır yürütme veri akışı blok türü. Kullanabileceğiniz `delegate` anahtar sözcüğü (`Sub` Visual Basic'te), <xref:System.Action%601>, <xref:System.Func%602>, veya bir çalışma işlevi bir yürütme veri akışı bloğuna sağladığınızda lambda ifadesi. Bu belge nasıl kullanılacağını açıklar <xref:System.Func%602> ve yürütme bloklarında eylemi gerçekleştirmek için lambda ifadesi.  

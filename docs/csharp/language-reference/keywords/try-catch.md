@@ -1,9 +1,6 @@
 ---
-title: "try-catch (C# Başvurusu)"
+title: try-catch (C# Başvurusu)
 ms.date: 07/20/2015
-ms.prod: .net
-ms.technology: devlang-csharp
-ms.topic: article
 f1_keywords:
 - try
 - try_CSharpKeyword
@@ -13,14 +10,11 @@ helpviewer_keywords:
 - catch keyword [C#]
 - try-catch statement [C#]
 ms.assetid: cb5503c7-bfa1-4610-8fc2-ddcd2e84c438
-caps.latest.revision: "45"
-author: BillWagner
-ms.author: wiwagn
-ms.openlocfilehash: 753beb554796ad0aa2c5e15c715240453de9a3e1
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: f917d662366dc8ff540cdee6222199fe8f5606c9
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="try-catch-c-reference"></a>try-catch (C# Başvurusu)
 Try-catch deyimi oluşan bir `try` blok izlenen bir veya daha fazla tarafından `catch` yan tümceleri farklı özel durumlar için işleyiciler belirleyin.  
@@ -168,10 +162,10 @@ static void Main()
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
  [C# başvurusu](../../../csharp/language-reference/index.md)  
- [C# programlama kılavuzu](../../../csharp/programming-guide/index.md)  
- [C# anahtar sözcükleri](../../../csharp/language-reference/keywords/index.md)  
- [deneyin, throw ve catch deyimleri (C++)](/cpp/cpp/try-throw-and-catch-statements-cpp)  
- [Özel durum işleme deyimleri](../../../csharp/language-reference/keywords/exception-handling-statements.md)  
+ [C# Programlama Kılavuzu](../../../csharp/programming-guide/index.md)  
+ [C# Anahtar Sözcükleri](../../../csharp/language-reference/keywords/index.md)  
+ [try, throw ve catch Deyimleri (C++)](/cpp/cpp/try-throw-and-catch-statements-cpp)  
+ [Özel Durum İşleme Deyimleri](../../../csharp/language-reference/keywords/exception-handling-statements.md)  
  [throw](../../../csharp/language-reference/keywords/throw.md)  
  [try-finally](../../../csharp/language-reference/keywords/try-finally.md)  
- [Nasıl yapılır: açıkça özel durumlar oluşturma](../../../standard/exceptions/how-to-explicitly-throw-exceptions.md)
+ [Nasıl yapılır: Açıkça Özel Durumlar Oluşturma](../../../standard/exceptions/how-to-explicitly-throw-exceptions.md)

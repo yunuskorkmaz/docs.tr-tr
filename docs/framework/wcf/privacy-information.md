@@ -1,34 +1,22 @@
 ---
 title: Windows Communication Foundation Gizlilik Bilgileri
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - Windows Communication Foundation, privacy information
 - WCF, privacy information
 - privacy information [WCF]
 ms.assetid: c9553724-f3e7-45cb-9ea5-450a22d309d9
-caps.latest.revision: "34"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 2d0172b91393e4e9e373a247c33be938a3160e14
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
-ms.translationtype: MT
+ms.openlocfilehash: e9c4130cd4680d4cd68ca8c6ba36c38b5d065f58
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="windows-communication-foundation-privacy-information"></a>Windows Communication Foundation Gizlilik Bilgileri
-Microsoft, son kullanıcılar gizliliğinizi korumayı taahhüt eder. Kullanarak bir uygulama oluşturduğunuzda [!INCLUDE[indigo1](../../../includes/indigo1-md.md)], sürüm 3.0, uygulamanızın, son kullanıcılarınızın gizlilik etkileyebilir. Örneğin, uygulamanızın açıkça kullanıcı bilgilerini toplayabilir veya istek veya Web sitenize Internet üzerinden bilgi gönderme olabilir. Bu teknoloji, uygulamanızda Microsoft teknolojisi katıştırılmış içerirse, gizlilik etkileyebilecek kendi davranışa sahip olabilir. [!INCLUDE[indigo2](../../../includes/indigo2-md.md)]Siz veya son kullanıcı seçmediğiniz sürece, bize göndermek herhangi bir bilgi uygulamanızdan Microsoft göndermez.  
+Microsoft, son kullanıcılar gizliliğinizi korumayı taahhüt eder. Sürüm 3.0, Windows Communication Foundation (WCF) kullanarak bir uygulama oluşturduğunuzda, uygulama, son kullanıcılarınızın gizlilik etkileyebilir. Örneğin, uygulamanızın açıkça kullanıcı bilgilerini toplayabilir veya istek veya Web sitenize Internet üzerinden bilgi gönderme olabilir. Bu teknoloji, uygulamanızda Microsoft teknolojisi katıştırılmış içerirse, gizlilik etkileyebilecek kendi davranışa sahip olabilir. [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] Siz veya son kullanıcı seçmediğiniz sürece, bize göndermek herhangi bir bilgi uygulamanızdan Microsoft göndermez.  
   
 ## <a name="wcf-in-brief"></a>Kısa WCF'de  
- [!INCLUDE[indigo2](../../../includes/indigo2-md.md)]Dağıtılmış ileti çerçevesi, geliştiricilerin dağıtılmış uygulamalar oluşturmalarını sağlayan Microsoft .NET Framework kullanıyor. İki uygulama iletileri üstbilgi ve gövde bilgileri içerir.  
+ [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] Dağıtılmış ileti çerçevesi, geliştiricilerin dağıtılmış uygulamalar oluşturmalarını sağlayan Microsoft .NET Framework kullanıyor. İki uygulama iletileri üstbilgi ve gövde bilgileri içerir.  
   
  Üstbilgiler, ileti yönlendirme, güvenlik bilgileri, işlemleri ve uygulama tarafından kullanılan hizmetler bağlı olarak daha fazla bilgi içerebilir. İletiler genellikle varsayılan olarak şifrelenir. Kullanıldığında bir özel durum `BasicHttpBinding`, güvenli olmayan, eski Web Hizmetleri ile kullanılmak üzere tasarlanmış. Uygulama Tasarımcısı, nihai tasarımı için sorumludur. SOAP gövdesi iletilerinde uygulamaya özgü verileri içerir; Ancak, uygulama tanımlı kişisel bilgiler gibi bu verileri kullanarak güvenli hale getirilebilir [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] şifreleme veya gizlilik özellikleri. Aşağıdaki bölümlerde olası gizliliği etkileyen özellikleri açıklanmaktadır.  
   
@@ -45,7 +33,7 @@ Microsoft, son kullanıcılar gizliliğinizi korumayı taahhüt eder. Kullanarak
  Barındırma ağdaki belirli bir bilgi kullanıma sunmuyor ve veri makinede korumaz.  
   
 ## <a name="message-security"></a>İleti Güvenliği  
- [!INCLUDE[indigo2](../../../includes/indigo2-md.md)]Güvenlik Mesajlaşma uygulamalar için güvenlik özellikleri sağlar. Kimlik doğrulama ve yetkilendirme sağlanan güvenlik işlevlerini içerir.  
+ [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] Güvenlik Mesajlaşma uygulamalar için güvenlik özellikleri sağlar. Kimlik doğrulama ve yetkilendirme sağlanan güvenlik işlevlerini içerir.  
   
  Kimlik doğrulaması istemcileri ve hizmetleri arasında kimlik bilgilerini geçirerek gerçekleştirilir. Kimlik doğrulama aktarım düzeyinde güvenlik yoluyla bulunabilir veya SOAP ileti güvenliği gibi düzeyi:  
   
@@ -58,7 +46,7 @@ Microsoft, son kullanıcılar gizliliğinizi korumayı taahhüt eder. Kullanarak
 |Veri|Depolama|  
 |----------|-------------|  
 |Kullanıcı adı, X.509 sertifikaları, Kerberos belirteçleri ve kimlik bilgilerini başvurular gibi sunu kimlik.|Windows kimlik bilgileri yönetim mekanizmalarını Windows sertifika deposunda gibi.|  
-|Kullanıcı adları ve parolalar gibi kullanıcı üyelik bilgileri.|[!INCLUDE[vstecasp](../../../includes/vstecasp-md.md)]Üyelik sağlayıcısı.|  
+|Kullanıcı adları ve parolalar gibi kullanıcı üyelik bilgileri.|[!INCLUDE[vstecasp](../../../includes/vstecasp-md.md)] Üyelik sağlayıcısı.|  
 |İstemci hizmetinin kimliğini doğrulamak için kullanılan hizmet kimlik bilgilerini.|Hizmet uç noktası adresi.|  
 |Arayan bilgileri.|Denetim günlükleri.|  
   
@@ -84,7 +72,7 @@ Microsoft, son kullanıcılar gizliliğinizi korumayı taahhüt eder. Kullanarak
  Herhangi bir kişisel bilgi son kullanıcının makinede korunur.  
   
 ## <a name="queued-channels"></a>Sıraya alınan kanalları  
- Kuyruklar alıcı uygulamanın adına gönderen bir uygulamadan gelen iletileri depolamak ve daha sonra alıcı uygulamaya bu iletileri iletebilir. Bunlar, örneğin, alıcı uygulamanın geçici olduğunda, ileti aktarımını alıcı uygulamalar için Gönderen uygulamalardan sağlamaya yardımcı olur. [!INCLUDE[indigo2](../../../includes/indigo2-md.md)]bir taşıma olarak Microsoft Message Queuing (MSMQ) kullanarak queuing için destek sağlar.  
+ Kuyruklar alıcı uygulamanın adına gönderen bir uygulamadan gelen iletileri depolamak ve daha sonra alıcı uygulamaya bu iletileri iletebilir. Bunlar, örneğin, alıcı uygulamanın geçici olduğunda, ileti aktarımını alıcı uygulamalar için Gönderen uygulamalardan sağlamaya yardımcı olur. [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] bir taşıma olarak Microsoft Message Queuing (MSMQ) kullanarak queuing için destek sağlar.  
   
  Sıraya alınan kanalları özellik üstbilgi iletiye eklemez. Bunun yerine, uygun Message Queuing iletisi özellikler kümesi ile Message Queuing iletisi oluşturur ve ileti Message Queuing sırasına koymak için Message Queuing yöntemleri çağırır. Message Queuing, Windows ile birlikte gelen bir isteğe bağlı bir bileşenidir.  
   
@@ -93,7 +81,7 @@ Microsoft, son kullanıcılar gizliliğinizi korumayı taahhüt eder. Kullanarak
 ## <a name="com-integration"></a>COM+ Tümleştirme  
  Bu özellik ile uyumlu olan hizmetleri oluşturmak için varolan COM ve COM + işlevi sarmalar [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] Hizmetleri. Bu özellik belirli üstbilgileri kullanmaz ve son kullanıcının makinedeki verileri korumaz.  
   
-## <a name="com-service-moniker"></a>COM Service Moniker  
+## <a name="com-service-moniker"></a>COM hizmet bilinen adı  
  Bu, standart bir yönetilmeyen bir sarmalayıcı sağlar [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] istemci. Bu özellik belirli üstbilgileri kablo yok veya makinedeki verileri devam etmez.  
   
 ## <a name="peer-channel"></a>Eş Kanal  
@@ -138,13 +126,13 @@ Microsoft, son kullanıcılar gizliliğinizi korumayı taahhüt eder. Kullanarak
   
  Kaldırılan anahtarları:  
   
- \- For xmlns:wst="http://schemas.xmlsoap.org/ws/2004/04/trust" and xmlns:wst="http://schemas.xmlsoap.org/ws/2005/02/trust"  
+ \- İçin xmlns:WST = "http://schemas.xmlsoap.org/ws/2004/04/trust" ve xmlns:wst = "http://schemas.xmlsoap.org/ws/2005/02/trust"  
   
  wst:BinarySecret  
   
- wst:Entropy  
+ WST:Entropy  
   
- \- For xmlns:wsse="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-secext-1.1.xsd" and xmlns:wsse="http://docs.oasis-open.org/wss/2005/xx/oasis-2005xx-wss-wssecurity-secext-1.1.xsd"  
+ \- İçin xmlns:wsse = "http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-secext-1.1.xsd" ve xmlns:wsse = "http://docs.oasis-open.org/wss/2005/xx/oasis-2005xx-wss-wssecurity-secext-1.1.xsd"  
   
  wsse:Password  
   
@@ -152,37 +140,37 @@ Microsoft, son kullanıcılar gizliliğinizi korumayı taahhüt eder. Kullanarak
   
  Kaldırılır potansiyel olarak kişisel bilgi:  
   
- \- For xmlns:wsse="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-secext-1.1.xsd" and xmlns:wsse="http://docs.oasis-open.org/wss/2005/xx/oasis-2005xx-wss-wssecurity-secext-1.1.xsd"  
+ \- İçin xmlns:wsse = "http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-secext-1.1.xsd" ve xmlns:wsse = "http://docs.oasis-open.org/wss/2005/xx/oasis-2005xx-wss-wssecurity-secext-1.1.xsd"  
   
- wsse:Username  
+ wsse:username  
   
  wsse:BinarySecurityToken  
   
  \- For xmlns:saml="urn:oasis:names:tc:SAML:1.0:assertion" the items in bold (below) are removed:  
   
- \<Onaylama işlemi  
+ \<onaylama işlemi  
   
  MajorVersion="1"  
   
  MinorVersion="1"  
   
- AssertionId="[ID]"  
+ Onaylama kimliği = "[ID]"  
   
  Veren = "[dize]"  
   
- IssueInstant="[dateTime]"  
+ IssueInstant = "[dateTime]"  
   
  >  
   
- \<Conditions NotBefore="[dateTime]" NotOnOrAfter="[dateTime]">  
+ \<NotBefore koşulları "[dateTime]" NotOnOrAfter = "[dateTime]" = >  
   
- \<AudienceRestrictionCondition>  
+ \<AudienceRestrictionCondition >  
   
  \<Hedef kitle > [URI]\</Audience > +  
   
- \</AudienceRestrictionCondition>*  
+ \</ AudienceRestrictionCondition > *  
   
- \<DoNotCacheCondition />*  
+ \<DoNotCacheCondition / > *  
   
  <\!--soyut taban türü  
   
@@ -206,7 +194,7 @@ Microsoft, son kullanıcılar gizliliğinizi korumayı taahhüt eder. Kullanarak
   
  \<Deyimi / > *  
   
- \<SubjectStatement>  
+ \<SubjectStatement >  
   
  \<Konu >  
   
@@ -222,19 +210,19 @@ Microsoft, son kullanıcılar gizliliğinizi korumayı taahhüt eder. Kullanarak
   
  `</NameIdentifier>?`  
   
- \<SubjectConfirmation>  
+ \<SubjectConfirmation >  
   
  \<ConfirmationMethod > [anyURI]\</ConfirmationMethod > +  
   
  \<SubjectConfirmationData > [herhangi bir]\</SubjectConfirmationData >?  
   
- \<ds:KeyInfo>...\</ds:KeyInfo>?  
+ \<DS:KeyInfo >... \</ds:KeyInfo >?  
   
- \</SubjectConfirmation>?  
+ \</ SubjectConfirmation >?  
   
  \</ Konu >  
   
- \</SubjectStatement>*  
+ \</ SubjectStatement > *  
   
  -->  
   
@@ -242,7 +230,7 @@ Microsoft, son kullanıcılar gizliliğinizi korumayı taahhüt eder. Kullanarak
   
  AuthenticationMethod = "[URI]"  
   
- AuthenticationInstant="[dateTime]"  
+ AuthenticationInstant = "[dateTime]"  
   
  >  
   
@@ -258,9 +246,9 @@ Microsoft, son kullanıcılar gizliliğinizi korumayı taahhüt eder. Kullanarak
   
  < AuthorityBinding  
   
- AuthorityKind="[QName]"  
+ AuthorityKind = "[QName]"  
   
- Location="[uri]"  
+ Konumu = "[URI]"  
   
  Binding="[uri]"  
   
@@ -276,7 +264,7 @@ Microsoft, son kullanıcılar gizliliğinizi korumayı taahhüt eder. Kullanarak
   
  AttributeName = "[dize]"  
   
- AttributeNamespace="[uri]"  
+ AttributeNamespace = "[URI]"  
   
  >  
   
@@ -288,9 +276,9 @@ Microsoft, son kullanıcılar gizliliğinizi korumayı taahhüt eder. Kullanarak
   
  \<AuthorizationDecisionStatement  
   
- Resource="[uri]"  
+ Kaynak = "[URI]"  
   
- Decision="[Permit&#124;Deny&#124;Indeterminate]"  
+ Karar = "[izin&#124;Reddet&#124;belirsiz]"  
   
  >  
   
@@ -315,7 +303,7 @@ Microsoft, son kullanıcılar gizliliğinizi korumayı taahhüt eder. Kullanarak
   
  Aşağıdaki ad alanları için:  
   
- xmlns:wst="http://schemas.xmlsoap.org/ws/2004/04/trust" and xmlns:wst="http://schemas.xmlsoap.org/ws/2005/02/trust" (for example, if no action available)  
+ xmlns:WST = "http://schemas.xmlsoap.org/ws/2004/04/trust" ve xmlns:wst = "http://schemas.xmlsoap.org/ws/2005/02/trust" (örneğin, hiçbir eylem varsa kullanılabilir)  
   
  Bilgiler, anahtar değişimi içeren bu gövdesi öğelerini için kaldırılır:  
   
@@ -368,7 +356,7 @@ Microsoft, son kullanıcılar gizliliğinizi korumayı taahhüt eder. Kullanarak
  http://schemas.xmlsoap.org/ws/2004/04/security/trust/RSTR/SCT-Amend  
   
 #### <a name="no-information-is-removed-from-application-specific-headers-and-body-data"></a>Hiçbir bilgi uygulamaya özgü üstbilgi ve gövde verileri kaldırılır.  
- [!INCLUDE[indigo2](../../../includes/indigo2-md.md)]uygulamaya özgü üstbilgileri (örneğin, sorgu dizeleri) veya gövde verileri (örneğin, kredi kartı numarası) kişisel bilgilerin izlemez.  
+ [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] uygulamaya özgü üstbilgileri (örneğin, sorgu dizeleri) veya gövde verileri (örneğin, kredi kartı numarası) kişisel bilgilerin izlemez.  
   
  İleti günlüğe kaydetme açık olduğunda, uygulamaya özgü üstbilgilerindeki kişisel bilgileri ve gövde bilgileri günlüklerde görülebilir. Yeniden uygulama dağıtıcı ACL'leri yapılandırma ve günlük dosyalarını ayarlanmasından sorumludur. Kendisi ayrıca kendisinin görünür olması için bu bilgileri istemez veya günlüğe kaydedilir sonra ki bu günlük dosyalarındaki bilgileri filtrelemenize oturum kapatma etkinleştirebilirsiniz.  
   
@@ -383,14 +371,14 @@ Microsoft, son kullanıcılar gizliliğinizi korumayı taahhüt eder. Kullanarak
  Günlüğe kaydetme ve izleme her iki ileti için özel İzleme dinleyicisi, hangi izlemeleri ve iletileri kablo (örneğin, bir uzak veritabanına) gönderebilir yapılandırılabilir. Uygulama dağıtıcı özel dinleyicileri yapılandırma veya bunu yapmak kullanıcıları etkinleştirme için sorumludur. Kendisi Ayrıca uzak konumda kullanıma sunulan herhangi bir kişisel bilgi ve bu konuma ACL'ler düzgün bir şekilde uygulamak için sorumlu değildir.  
   
 ### <a name="other-features-for-it-professionals"></a>BT uzmanları için diğer özellikleri  
- [!INCLUDE[indigo2](../../../includes/indigo2-md.md)]kullanıma sunan bir WMI sağlayıcısı sahip [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] altyapı yapılandırma bilgileri (Windows ile birlikte gelen) WMI üzerinden. Varsayılan olarak, WMI arabirimi yöneticiler tarafından kullanılabilir.  
+ [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] kullanıma sunan bir WMI sağlayıcısı sahip [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] altyapı yapılandırma bilgileri (Windows ile birlikte gelen) WMI üzerinden. Varsayılan olarak, WMI arabirimi yöneticiler tarafından kullanılabilir.  
   
- [!INCLUDE[indigo2](../../../includes/indigo2-md.md)]yapılandırması, .NET Framework yapılandırma mekanizması kullanır. Yapılandırma dosyaları makinede depolanır. Uygulama geliştiricisi ve yönetici yapılandırma dosyalarını ve ACL her uygulamanın gereksinimleri için oluşturun. Bir yapılandırma dosyası, uç nokta adresleri ve sertifika deposundaki sertifikalar bağlantılar içerebilir. Sertifikalar, uygulama tarafından kullanılan özellikler çeşitli özelliklerini yapılandırmak için uygulama verilerini sağlamak için kullanılabilir.  
+ [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] yapılandırması, .NET Framework yapılandırma mekanizması kullanır. Yapılandırma dosyaları makinede depolanır. Uygulama geliştiricisi ve yönetici yapılandırma dosyalarını ve ACL her uygulamanın gereksinimleri için oluşturun. Bir yapılandırma dosyası, uç nokta adresleri ve sertifika deposundaki sertifikalar bağlantılar içerebilir. Sertifikalar, uygulama tarafından kullanılan özellikler çeşitli özelliklerini yapılandırmak için uygulama verilerini sağlamak için kullanılabilir.  
   
- [!INCLUDE[indigo2](../../../includes/indigo2-md.md)]Ayrıca çağırarak .NET Framework işlem dökümü işlevi kullanır <xref:System.Environment.FailFast%2A> yöntemi.  
+ [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] Ayrıca çağırarak .NET Framework işlem dökümü işlevi kullanır <xref:System.Environment.FailFast%2A> yöntemi.  
   
 ### <a name="it-pro-tools"></a>BT Uzmanı araçlarını  
- [!INCLUDE[indigo2](../../../includes/indigo2-md.md)]Ayrıca Windows SDK'ın sevk aşağıdaki BT uzmanları araçları sağlar.  
+ [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] Ayrıca Windows SDK'ın sevk aşağıdaki BT uzmanları araçları sağlar.  
   
 #### <a name="svctraceviewerexe"></a>SvcTraceViewer.exe  
  Görüntüleyici görüntüler [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] izleme dosyaları. Görüntüleyici ne olursa olsun bilgileri izlemeleri bulunan gösterir.  
@@ -401,7 +389,7 @@ Microsoft, son kullanıcılar gizliliğinizi korumayı taahhüt eder. Kullanarak
 #### <a name="servicemodelreg"></a>ServiceModel_Reg  
  Bu aracı bir makinede ServiceModel yükler yönetmesine olanak tanır. Aracı çalıştırır ve bu süreçte yapılandırması hakkında bilgi görüntüleyebilir, durum iletilerini konsol penceresinde görüntüler. [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] yükleme.  
   
-#### <a name="wsatconfigexe-and-wsatuidll"></a>WSATConfig.exe and WSATUI.dll  
+#### <a name="wsatconfigexe-and-wsatuidll"></a>WSATConfig.exe ve WSATUI.dll  
  BT uzmanları, birlikte çalışabilen WS-AtomicTransaction ağ desteğini yapılandırmak bu araçları izin [!INCLUDE[indigo2](../../../includes/indigo2-md.md)]. Araçları görüntülemek ve kayıt defterinde depolanan en yaygın kullanılan WS-AtomicTransaction ayarlarının değerleri değiştirmek izin verin.  
   
 ## <a name="cross-cutting-features"></a>Çapraz kesme özellikleri  

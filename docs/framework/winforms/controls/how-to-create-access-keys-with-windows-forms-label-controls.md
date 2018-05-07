@@ -1,13 +1,6 @@
 ---
-title: "Nasıl yapılır: Windows Forms Etiket Denetimleri ile Erişim Tuşları Oluşturma"
-ms.custom: 
+title: 'Nasıl yapılır: Windows Forms Etiket Denetimleri ile Erişim Tuşları Oluşturma'
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-winforms
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -24,16 +17,11 @@ helpviewer_keywords:
 - keyboard shortcuts [Windows Forms], creating for controls
 - access keys [Windows Forms], Windows Forms
 ms.assetid: 5ee8f823-80be-4a4f-96a4-412671e2e306
-caps.latest.revision: "11"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 6a856090a76f484c21c1d9982d67e9fdf21e8451
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: fc9592981f3d926b2b5b85b6869da13dc644e7a0
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-create-access-keys-with-windows-forms-label-controls"></a>Nasıl yapılır: Windows Forms Etiket Denetimleri ile Erişim Tuşları Oluşturma
 Windows Forms <xref:System.Windows.Forms.Label> denetimleri, diğer denetimler için erişim anahtarları tanımlamak için kullanılabilir. Bir etiket denetiminde bir erişim anahtarı tanımladığınızda, kullanıcı ALT tuşuyla birlikte odağını sekme sırasında izleyen denetime taşıma için belirttiğiniz karakter tuşlarına basabilirsiniz. Etiketleri odak alamaz olduğundan odağını sekme sırasında bir sonraki denetime otomatik olarak taşır. Metin kutuları, birleşik giriş kutuları, liste kutuları ile veri kılavuzları erişim tuşları atamak için bu tekniği kullanabilirsiniz.  
@@ -42,7 +30,7 @@ Windows Forms <xref:System.Windows.Forms.Label> denetimleri, diğer denetimler i
   
 1.  Etiketin ilk çizim ve diğer denetim çizin.  
   
-     veya  
+     -veya-  
   
      Herhangi bir sırada denetimleri çizme ve ayarlayın <xref:System.Windows.Forms.Control.TabIndex%2A> bir diğer denetim değerinden etiketinin özelliği.  
   

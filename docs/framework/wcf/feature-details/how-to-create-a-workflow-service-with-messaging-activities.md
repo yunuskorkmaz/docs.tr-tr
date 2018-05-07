@@ -1,24 +1,12 @@
 ---
-title: "Nasıl yapılır: Mesajlaşma Etkinlikleriyle İş Akışı Hizmeti Oluşturma"
-ms.custom: 
+title: 'Nasıl yapılır: Mesajlaşma Etkinlikleriyle İş Akışı Hizmeti Oluşturma'
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 53d094e2-6901-4aa1-88b8-024b27ccf78b
-caps.latest.revision: "11"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 24456bbbefe305a3e9620e5396c8d300163e00d4
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: b646d1e242d570ec758865b48ab3720033ea9302
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-create-a-workflow-service-with-messaging-activities"></a>Nasıl yapılır: Mesajlaşma Etkinlikleriyle İş Akışı Hizmeti Oluşturma
 Bu konu, Mesajlaşma etkinlikleri kullanarak basit bir iş akışı hizmeti oluşturmayı açıklar. Bu konu, burada yalnızca Mesajlaşma etkinlikleri servis oluşur bir iş akışı hizmeti oluşturma mekanizması odaklanır. Gerçek dünya hizmetinde, iş akışı diğer birçok etkinlik içerir. Hizmet bir dize alır ve çağırana dize verir Yankı adlı bir işlemi uygular. İlk iki Konular'a dizi konudur. Sonraki konuyu [nasıl yapılır: bir hizmet bir iş akışı uygulamanın erişim](../../../../docs/framework/wcf/feature-details/how-to-access-a-service-from-a-workflow-application.md) bu konuda oluşturulan hizmet çağırabilirsiniz bir iş akışı uygulamasının nasıl oluşturulacağını açıklar.  

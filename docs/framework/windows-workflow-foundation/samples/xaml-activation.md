@@ -1,23 +1,12 @@
 ---
-title: "XAML etkinleştirme"
-ms.custom: 
+title: XAML etkinleştirme
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 486760e2-bb10-4ed5-8c02-fe7472498d2d
-caps.latest.revision: "11"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 53665f39c6c0c7e5c7956912b05e3fd80659ddcb
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 8621b0ea7b390c81e76ac7eeedb0b547b44320d7
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="xaml-activation"></a>XAML etkinleştirme
 Bu örnek, IIS'de bildirim temelli bir iş akışı barındırma gösterilmiştir. Örnek olarak adlandırılan bir temel iş akışıdır `EchoService` bir işleme sahip.  
@@ -27,7 +16,7 @@ Bu örnek, IIS'de bildirim temelli bir iş akışı barındırma gösterilmişti
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  Bu dizin mevcut değilse (indirme) gidin tüm indirmek için [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] ve [!INCLUDE[wf1](../../../../includes/wf1-md.md)] örnekleri. Bu örnek aşağıdaki dizinde bulunur.  
+>  Bu dizin mevcut değilse (indirme) gidin tüm Windows Communication Foundation (WCF) indirmek için ve [!INCLUDE[wf1](../../../../includes/wf1-md.md)] örnekleri. Bu örnek aşağıdaki dizinde bulunur.  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WF\Basic\Services\XAMLActivation`  
   
@@ -43,10 +32,10 @@ Bu örnek, IIS'de bildirim temelli bir iş akışı barındırma gösterilmişti
   
     2.  WcfTestClient.exe çalıştırın.  
   
-4.  Hizmetinin adresini üzerinde WcfTestClient.exe CTRL + SHIFT + A basarak ve http://localhost:56133/Service.xamlx için hizmeti adresi ayarlayarak ayarlayın.  
+4.  CTRL + SHIFT + A tuşuna basarak ve hizmeti adresi ayarını üzerinde WcfTestClient.exe hizmetinin adresini ayarlamak http://localhost:56133/Service.xamlx.  
   
 5.  Hizmeti sınamak için Yankı işlemi gerçekleştirin.  
   
 6.  Hizmeti IIS DeployToIIS.Bat yönetici ayrıcalıklarıyla bir komut istemi kullanarak dağıtın.  
   
-7.  Http://localhost/XAMLActivation/Service.xamlx için istemci hizmeti adresi güncelleştirmek ve hizmeti yeniden WcfTestClient.exe kullanarak test edin.
+7.  İstemciye hizmet adresi güncelleştirme http://localhost/XAMLActivation/Service.xamlx ve hizmeti yeniden WcfTestClient.exe kullanarak test.

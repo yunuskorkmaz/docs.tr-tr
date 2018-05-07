@@ -1,26 +1,17 @@
 ---
-title: "Yapı Değişkenleri (Visual Basic)"
-ms.custom: 
+title: Yapı Değişkenleri (Visual Basic)
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
-ms.topic: article
 helpviewer_keywords:
 - structures [Visual Basic], variables
 - structures [Visual Basic], structure variables
 - variables [Visual Basic], structure variables
 - structure variables [Visual Basic]
 ms.assetid: 156872f8-aabc-4454-8e2d-f2253c3c13c9
-caps.latest.revision: "11"
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: ef42c44de84caffde909eb2b3e9361016a6abb97
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 0dad7bdcac5428753e252f3b26ca0a127c293a7f
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="structure-variables-visual-basic"></a>Yapı Değişkenleri (Visual Basic)
 Bir yapı oluşturduktan sonra bu tür olarak yordamı ve modül düzeyi değişkenleri bildirebilirsiniz. Örneğin, bir bilgisayar sistemi ilgili bilgileri kaydeden bir yapı oluşturabilirsiniz. Aşağıdaki örnekte bu gösterir.  
@@ -61,13 +52,13 @@ yourSystem = mySystem
  Yapı öğesi bir başvuru türü gibi ise bir `String`, `Object`, veya dizi, verileri işaretçisine kopyalanır. Önceki örnekte, `systemInfo` önceki örnekte işaretçi kopyaladığınız sonra bir nesne değişkeni dahil `mySystem` için `yourSystem`, ve bir yapı nesnenin verilerine bir değişiklik erişildiğinde etkili olacaktır diğer yapısı.  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [Veri türleri](../../../../visual-basic/programming-guide/language-features/data-types/index.md)  
- [Başlangıç veri türleri](../../../../visual-basic/programming-guide/language-features/data-types/elementary-data-types.md)  
- [Bileşik veri türleri](../../../../visual-basic/programming-guide/language-features/data-types/composite-data-types.md)  
- [Değer türleri ve başvuru türleri](../../../../visual-basic/programming-guide/language-features/data-types/value-types-and-reference-types.md)  
- [Yapıları](../../../../visual-basic/programming-guide/language-features/data-types/structures.md)  
- [Veri türleri sorunlarını giderme](../../../../visual-basic/programming-guide/language-features/data-types/troubleshooting-data-types.md)  
- [Nasıl yapılır: bir yapıyı bildirme](../../../../visual-basic/programming-guide/language-features/data-types/how-to-declare-a-structure.md)  
- [Yapılar ve diğer programlama öğeleri](../../../../visual-basic/programming-guide/language-features/data-types/structures-and-other-programming-elements.md)  
- [Yapılar ve sınıflar](../../../../visual-basic/programming-guide/language-features/data-types/structures-and-classes.md)  
- [Structure deyimi](../../../../visual-basic/language-reference/statements/structure-statement.md)
+ [Veri Türleri](../../../../visual-basic/programming-guide/language-features/data-types/index.md)  
+ [Başlangıç Veri Türleri](../../../../visual-basic/programming-guide/language-features/data-types/elementary-data-types.md)  
+ [Bileşik Veri Türleri](../../../../visual-basic/programming-guide/language-features/data-types/composite-data-types.md)  
+ [Değer Türleri ve Başvuru Türleri](../../../../visual-basic/programming-guide/language-features/data-types/value-types-and-reference-types.md)  
+ [Yapılar](../../../../visual-basic/programming-guide/language-features/data-types/structures.md)  
+ [Veri Türü Sorunlarını Giderme](../../../../visual-basic/programming-guide/language-features/data-types/troubleshooting-data-types.md)  
+ [Nasıl yapılır: Bir Yapıyı Bildirme](../../../../visual-basic/programming-guide/language-features/data-types/how-to-declare-a-structure.md)  
+ [Yapılar ve Diğer Programlama Öğeleri](../../../../visual-basic/programming-guide/language-features/data-types/structures-and-other-programming-elements.md)  
+ [Yapılar ve Sınıflar](../../../../visual-basic/programming-guide/language-features/data-types/structures-and-classes.md)  
+ [Structure Deyimi](../../../../visual-basic/language-reference/statements/structure-statement.md)

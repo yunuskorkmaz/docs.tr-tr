@@ -1,13 +1,6 @@
 ---
-title: "İzlenecek yol: Kullanıcı Denetiminde Sürükleme ve Bırakmayı Etkinleştirme"
-ms.custom: 
+title: 'İzlenecek yol: Kullanıcı Denetiminde Sürükleme ve Bırakmayı Etkinleştirme'
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-wpf
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -15,16 +8,11 @@ helpviewer_keywords:
 - walkthrough [WPF], drag-and-drop
 - drag-and-drop [WPF], walkthrough
 ms.assetid: cc844419-1a77-4906-95d9-060d79107fc7
-caps.latest.revision: "7"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: d87872d3009b46878b7b614c1aef728d5b1d511d
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.openlocfilehash: e4dba856b973f1210f2d088de3ed8ae5df2c6988
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="walkthrough-enabling-drag-and-drop-on-a-user-control"></a>İzlenecek yol: Kullanıcı Denetiminde Sürükleme ve Bırakmayı Etkinleştirme
 Bu anlatımda sürükle ve bırak veri aktarımı katılabilmesi için özel bir kullanıcı denetimi oluşturmak nasıl gösterilir [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)].  
@@ -129,11 +117,11 @@ Bu anlatımda sürükle ve bırak veri aktarımı katılabilmesi için özel bir
   
     -   Statik çağırır <xref:System.Windows.DragDrop.DoDragDrop%2A?displayProperty=nameWithType> sürükle ve bırak işlemi başlatmak için yöntem. Aşağıdaki üç parametre geçirdiğiniz <xref:System.Windows.DragDrop.DoDragDrop%2A> yöntemi:  
   
-        -   `dragSource`– Bu denetimi bir başvuru.  
+        -   `dragSource` – Bu denetimi bir başvuru.  
   
-        -   `data`– <xref:System.Windows.DataObject> Önceki kodda oluşturuldu.  
+        -   `data` – <xref:System.Windows.DataObject> Önceki kodda oluşturuldu.  
   
-        -   `allowedEffects`– Olan izin verilen sürükle ve bırak işlemleri <xref:System.Windows.DragDropEffects.Copy> veya <xref:System.Windows.DragDropEffects.Move>.  
+        -   `allowedEffects` – Olan izin verilen sürükle ve bırak işlemleri <xref:System.Windows.DragDropEffects.Copy> veya <xref:System.Windows.DragDropEffects.Move>.  
   
 3.  Derleme ve uygulamayı çalıştırmak için F5 tuşuna basın.  
   
@@ -288,7 +276,7 @@ Bu anlatımda sürükle ve bırak veri aktarımı katılabilmesi için özel bir
   
 7.  Metnin bırakmadan olmadan bir daire denetime sürükleyin. Mavi yeşil daire değişiklikler.  
   
-     ![Bir Sürükle &#45; etkilerini önizleme ve &#45; bırakma işlemi](../../../../docs/framework/wpf/advanced/media/dragdrop-previeweffects.png "DragDrop_PreviewEffects")  
+     ![Bir Sürükle etkilerini önizleme&#45;ve&#45;bırakma işlemi](../../../../docs/framework/wpf/advanced/media/dragdrop-previeweffects.png "DragDrop_PreviewEffects")  
   
 8.  Metnin daire denetim uzağa doğru sürükleyin. Daireye mavi için yeşil geri değiştirir.  
   

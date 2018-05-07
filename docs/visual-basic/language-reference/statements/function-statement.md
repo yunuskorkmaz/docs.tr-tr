@@ -1,12 +1,6 @@
 ---
 title: Function Deyimi (Visual Basic)
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- devlang-visual-basic
-ms.topic: article
 f1_keywords:
 - vb.Function
 helpviewer_keywords:
@@ -34,14 +28,11 @@ helpviewer_keywords:
 - End keyword [Visual Basic], Function statements
 - Handles keyword [Visual Basic], Function statements
 ms.assetid: a4497077-0f46-4ede-a27f-9e8670df52b9
-caps.latest.revision: 
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: 52e9210f9e715b6055e6ed199ef1aa4b919c6dd6
-ms.sourcegitcommit: 34ec7753acf76f90a0fa845235ef06663dc9e36e
+ms.openlocfilehash: b4a0c33d6d466975ca5dde1bd20ad2e1a9f560e4
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="function-statement-visual-basic"></a>Function Deyimi (Visual Basic)
 Ad, parametreleri ve tanımlama kodu bildiren bir `Function` yordamı.  
@@ -183,7 +174,7 @@ End Function
 ## <a name="defining-a-function"></a>Bir işlev tanımlama  
  Tanımlayabileceğiniz bir `Function` yordamı yalnızca modülü düzeyinde. Bu nedenle, bir işlev bildirimi bağlamının bir sınıf, bir yapı, bir modül veya bir arabirim olmalıdır ve bir kaynak dosyası, bir ad alanı, bir yordam veya bir blok olamaz. Daha fazla bilgi için bkz: [bildirim bağlamları ve varsayılan erişim düzeyleri](declaration-contexts-and-default-access-levels.md).  
   
- `Function`Genel erişim varsayılan yordamlar. Erişim değiştiricileri ile erişim düzeylerine göre ayarlayabilirsiniz.  
+ `Function` Genel erişim varsayılan yordamlar. Erişim değiştiricileri ile erişim düzeylerine göre ayarlayabilirsiniz.  
   
  A `Function` yordamı yordamın döndürdüğü değerin veri türü bildirebilirsiniz. Herhangi bir veri türü veya numaralandırma, bir yapı, bir sınıf veya arabirim adını belirtebilirsiniz. Belirtmediyseniz `returntype` parametresi yordamın döndürdüğü `Object`.  
   
@@ -254,7 +245,7 @@ End Function
  [!code-vb[VbVbalrStatements#26](../../../visual-basic/language-reference/error-messages/codesnippet/VisualBasic/function-statement_4.vb)]  
   
 ## <a name="example"></a>Örnek  
- Aşağıdaki örnekte, `DelayAsync` olan bir `Async``Function` dönüş türüne sahip <xref:System.Threading.Tasks.Task%601>. `DelayAsync`sahip bir `Return` deyimi bir tamsayı döndürür. Bu nedenle işlev bildirimi `DelayAsync` dönüş türüne sahip olması `Task(Of Integer)`. Dönüş türü olduğundan `Task(Of Integer)`, değerlendirmesi `Await` ifadesinde `DoSomethingAsync` tamsayı üretir. Bu bu deyim içinde gösterilmiştir: `Dim result As Integer = Await delayTask`.  
+ Aşağıdaki örnekte, `DelayAsync` olan bir `Async``Function` dönüş türüne sahip <xref:System.Threading.Tasks.Task%601>. `DelayAsync` sahip bir `Return` deyimi bir tamsayı döndürür. Bu nedenle işlev bildirimi `DelayAsync` dönüş türüne sahip olması `Task(Of Integer)`. Dönüş türü olduğundan `Task(Of Integer)`, değerlendirmesi `Await` ifadesinde `DoSomethingAsync` tamsayı üretir. Bu bu deyim içinde gösterilmiştir: `Dim result As Integer = Await delayTask`.  
   
  `startButton_Click` Yordamdır örneği bir `Async Sub` yordamı. Çünkü `DoSomethingAsync` olan bir `Async` işlevi, görev çağrısı için `DoSomethingAsync` aşağıdaki ifadeyi gösterdiği gibi beklemenin gerekir: `Await DoSomethingAsync()`. `startButton_Click``Sub` Yordamı tanımlı, ile `Async` değiştiricisi içerdiğinden bir `Await` ifade.  
   

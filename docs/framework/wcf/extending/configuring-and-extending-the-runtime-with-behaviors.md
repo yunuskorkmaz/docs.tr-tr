@@ -1,34 +1,20 @@
 ---
-title: "Çalışma Zamanını Davranışlarla Yapılandırma ve Genişletme"
-ms.custom: 
+title: Çalışma Zamanını Davranışlarla Yapılandırma ve Genişletme
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - attaching extensions using behaviors [WCF]
 ms.assetid: 149b99b6-6eb6-4f45-be22-c967279677d9
-caps.latest.revision: 
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 2ea157ea1ac73a287ba39c1468e7e9a5781d40a0
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
-ms.translationtype: MT
+ms.openlocfilehash: 05fd96574f072f8e349f83d11aca20bc5269dfc7
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="configuring-and-extending-the-runtime-with-behaviors"></a>Çalışma Zamanını Davranışlarla Yapılandırma ve Genişletme
-Davranışları etkinleştirmek, hizmet yapılandırması veya çalışma zamanı davranışını denetlemek ve doğrulamak özel uzantıları ekleyin ve varsayılan davranışı değiştirmek [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] istemci ve hizmet uygulamaları. Bu konu, davranış arabirimleri, bunların nasıl uygulanacağını ve bunları hizmet açıklamasında (bir hizmet uygulaması) veya uç noktası (istemci uygulamasında) programlı olarak veya bir yapılandırma dosyasında nasıl ekleneceğini açıklar. Sistem tarafından sağlanan davranışları kullanma hakkında daha fazla bilgi için bkz: [hizmet çalışma zamanı davranışını belirtme](../../../../docs/framework/wcf/specifying-service-run-time-behavior.md) ve [istemci çalışma zamanı davranışını belirtme](../../../../docs/framework/wcf/specifying-client-run-time-behavior.md).  
+Davranışları inceleme ve hizmet yapılandırmasını doğrulamak veya Windows Communication Foundation (WCF) istemci ve hizmet uygulamalarının çalışma zamanı davranışını değiştirme özel uzantıları ekleyin ve varsayılan davranışı değiştirmek etkinleştirin. Bu konu, davranış arabirimleri, bunların nasıl uygulanacağını ve bunları hizmet açıklamasında (bir hizmet uygulaması) veya uç noktası (istemci uygulamasında) programlı olarak veya bir yapılandırma dosyasında nasıl ekleneceğini açıklar. Sistem tarafından sağlanan davranışları kullanma hakkında daha fazla bilgi için bkz: [hizmet çalışma zamanı davranışını belirtme](../../../../docs/framework/wcf/specifying-service-run-time-behavior.md) ve [istemci çalışma zamanı davranışını belirtme](../../../../docs/framework/wcf/specifying-client-run-time-behavior.md).  
   
 ## <a name="behaviors"></a>Davranışlar  
- Davranış türleri hizmet veya hizmet uç noktası açıklama nesneleri eklenir (hizmet veya istemci, sırasıyla) bu nesneler tarafından kullanılmadan önce [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] yürüten bir çalışma zamanı oluşturmak için bir [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] hizmeti veya bir [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] istemci. Ardından çalışma zamanı özellikleri ve Sözleşme, bağlamaları ve adresler tarafından oluşturulan çalışma zamanı değiştirme yöntemleri erişebilir çalışma zamanı oluşturma işlemi sırasında bu davranışların çağrıldığında.  
+ Davranış türleri hizmet veya hizmet uç noktası açıklama nesneleri eklenir (hizmet veya istemci, sırasıyla) bu nesneler yürüten bir çalışma zamanı oluşturmak için Windows Communication Foundation (WCF) tarafından kullanılmadan önce bir [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] hizmeti veya bir [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] istemci. Ardından çalışma zamanı özellikleri ve Sözleşme, bağlamaları ve adresler tarafından oluşturulan çalışma zamanı değiştirme yöntemleri erişebilir çalışma zamanı oluşturma işlemi sırasında bu davranışların çağrıldığında.  
   
 ### <a name="behavior-methods"></a>Davranış yöntemleri  
  Tüm davranışları sahip bir `AddBindingParameters` yöntemi, bir `ApplyDispatchBehavior` yöntemi, bir `Validate` yöntemi ve bir `ApplyClientBehavior` yöntemi bir özel durum ile: çünkü <xref:System.ServiceModel.Description.IServiceBehavior> yürütülemiyor bir istemcinin, onu uygulamayan `ApplyClientBehavior`.  

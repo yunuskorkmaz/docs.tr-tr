@@ -1,24 +1,14 @@
 ---
-title: "Büyük, Yanıt Veren .NET Framework Uygulamaları Yazma"
-ms.custom: 
+title: Büyük, Yanıt Veren .NET Framework Uygulamaları Yazma
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 123457ac-4223-4273-bb58-3bc0e4957e9d
-caps.latest.revision: "25"
 author: BillWagner
 ms.author: wiwagn
-manager: wpickett
-ms.workload: wiwagn
-ms.openlocfilehash: a33e065d9daa886c27cde31c8f16f9b9eaa45938
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.openlocfilehash: 51b4758690257b999cce51f3e80fd263a6d5e275
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="writing-large-responsive-net-framework-apps"></a>Büyük, Yanıt Veren .NET Framework Uygulamaları Yazma
 Bu makalede, büyük miktarda veri dosyaları veya veritabanları gibi işlem uygulamaları büyük .NET Framework uygulamaları veya performansını iyileştirmek için ipuçları verilmektedir. C# ve Visual Basic derleyicileri yönetilen kod yeniden yazma bu ipuçlarını gelir ve bu makale, C# Derleyici birkaç gerçek örneklerinden içermektedir.  
@@ -94,7 +84,7 @@ public class BoxingExample
 var s = id.ToString() + ':' + size.ToString();  
 ```  
   
- Ancak, bu kod satırı kutulama ayırma tanıtır için derler olduğundan <xref:System.String.Concat%28System.Object%2CSystem.Object%2CSystem.Object%29>.  .NET Framework çağırmak için değişmez değer karakter kutusunda gerekir`Concat`  
+ Ancak, bu kod satırı kutulama ayırma tanıtır için derler olduğundan <xref:System.String.Concat%28System.Object%2CSystem.Object%2CSystem.Object%29>.  .NET Framework çağırmak için değişmez değer karakter kutusunda gerekir `Concat`  
   
  **Örneğin 1 Düzelt**  
   
@@ -175,7 +165,7 @@ public void WriteFormattedDocComment(string text)
   
  İçinde ilk satırda `WriteFormattedDocComment`, `text.Split` çağrısı her çağrıldığında bu yeni üç öğeli bir dizi bağımsız değişken olarak ayırır.  Bu dizinin her zaman ayırmak için kod yaymak üzere derleyici sahiptir.  Derleyici, bilmiyor çünkü <xref:System.String.Split%2A> yere Burada dizi değiştirilmesi daha sonraki çağrıları etkileyecek diğer kodu tarafından dizi depolar `WriteFormattedDocComment`.  Çağrı <xref:System.String.Split%2A> ayrıca her satır için bir dize ayırır `text` ve işlemi gerçekleştirmek için başka bir bellek ayırır.  
   
- `WriteFormattedDocComment`üç çağrı sahip <xref:System.String.TrimStart%2A> yöntemi.  İş ve ayırmaları yinelenen iç Döngülerde ikisidir.  Önemlidir daha da kötüsü, arama yapmak için <xref:System.String.TrimStart%2A> yöntemi bağımsız değişken içermeyen boş bir dizi ayırır (için `params` parametresi) dize sonucu yanı sıra.  
+ `WriteFormattedDocComment` üç çağrı sahip <xref:System.String.TrimStart%2A> yöntemi.  İş ve ayırmaları yinelenen iç Döngülerde ikisidir.  Önemlidir daha da kötüsü, arama yapmak için <xref:System.String.TrimStart%2A> yöntemi bağımsız değişken içermeyen boş bir dizi ayırır (için `params` parametresi) dize sonucu yanı sıra.  
   
  Son olarak, bir arama var. <xref:System.String.Substring%2A> genellikle yeni bir dize ayırır yöntemi.  
   
@@ -279,7 +269,7 @@ private static string GetStringAndReleaseBuilder(StringBuilder sb)
   
  Yeni derleyicileri iş parçacığı oluşturma kullandığından, bu uygulamaların bir iş parçacığı statik alanı kullanın (<xref:System.ThreadStaticAttribute> özniteliği) önbelleğe <xref:System.Text.StringBuilder>, ve büyük olasılıkla atlayabilirsiniz `ThreadStatic` bildirimi.  İş parçacığı statik alan bu kodu yürütür her iş parçacığı için benzersiz bir değere sahiptir.  
   
- `AcquireBuilder()`önbelleğe alınan döndürür <xref:System.Text.StringBuilder> varsa, temizlemeden ve alan veya önbellek null değerine ayarlayarak sonra örneği.  Aksi takdirde `AcquireBuilder()` yeni bir örnek oluşturur ve alan veya önbellek kümesi null bırakarak döndürür.  
+ `AcquireBuilder()` önbelleğe alınan döndürür <xref:System.Text.StringBuilder> varsa, temizlemeden ve alan veya önbellek null değerine ayarlayarak sonra örneği.  Aksi takdirde `AcquireBuilder()` yeni bir örnek oluşturur ve alan veya önbellek kümesi null bırakarak döndürür.  
   
  İle bitirdiğinizde <xref:System.Text.StringBuilder> , çağırmanız `GetStringAndReleaseBuilder()` dize sonucu elde etmek için Kaydet <xref:System.Text.StringBuilder> örnek alan veya önbellek ve sonucu döndürür.  Bu kod yeniden girin ve birden çok oluşturmak için yürütme için mümkündür <xref:System.Text.StringBuilder> (, nadiren gerçekleşir rağmen) nesneleri.  Yalnızca son yayımlanan kod kaydeder <xref:System.Text.StringBuilder> örnek daha sonra kullanmak için.  Bu basit önbelleğe alma stratejisi yeni derleyicileri ayırma önemli ölçüde azalır.  MSBuild ("MSBuild") ve .NET Framework bölümleri, performansı artırmak için benzer bir teknik kullanın.  
   
@@ -417,7 +407,7 @@ class Compilation { /*...*/
 }  
 ```  
   
- Önbelleğe alma ile yeni koduna sahip olduğunu gördüğünüz bir `SyntaxTree` adlı alanı `cachedResult`.  Bu alan boş olduğunda `GetSyntaxTreeAsync()` işi yapar ve sonuç önbelleğine kaydeder.  `GetSyntaxTreeAsync()`döndürür `SyntaxTree` nesnesi.  Varsa olan sorunu bir `async` türündeki işlevi `Task<SyntaxTree>`, ve türünde bir değer döndürmesi `SyntaxTree`, sonuç tutmak için bir görev ayırmak için kod derleyicisi yayar (kullanarak `Task<SyntaxTree>.FromResult()`).  Görev tamamlandı olarak işaretlenir ve sonucu hemen kullanılabilir.  Yeni derleyicileri kodunda <xref:System.Threading.Tasks.Task> zaten tamamlandığından nesneleri oluştu nedenle genellikle bu düzeltmeyle Bu ayırmaları yanıtlama hızı önemli ölçüde geliştirildi.  
+ Önbelleğe alma ile yeni koduna sahip olduğunu gördüğünüz bir `SyntaxTree` adlı alanı `cachedResult`.  Bu alan boş olduğunda `GetSyntaxTreeAsync()` işi yapar ve sonuç önbelleğine kaydeder.  `GetSyntaxTreeAsync()` döndürür `SyntaxTree` nesnesi.  Varsa olan sorunu bir `async` türündeki işlevi `Task<SyntaxTree>`, ve türünde bir değer döndürmesi `SyntaxTree`, sonuç tutmak için bir görev ayırmak için kod derleyicisi yayar (kullanarak `Task<SyntaxTree>.FromResult()`).  Görev tamamlandı olarak işaretlenir ve sonucu hemen kullanılabilir.  Yeni derleyicileri kodunda <xref:System.Threading.Tasks.Task> zaten tamamlandığından nesneleri oluştu nedenle genellikle bu düzeltmeyle Bu ayırmaları yanıtlama hızı önemli ölçüde geliştirildi.  
   
  **Örneğin 6 Düzelt**  
   
@@ -443,7 +433,7 @@ class Compilation { /*...*/
 }  
 ```  
   
- Bu kod türünü değiştirir `cachedResult` için `Task<SyntaxTree>` ve kullanan bir `async` özgün kod tutan yardımcı işlevini `GetSyntaxTreeAsync()`.  `GetSyntaxTreeAsync()`Şimdi kullanan [null birleştirmesi işleci](~/docs/csharp/language-reference/operators/null-conditional-operator.md) dönmek için `cachedResult` null değilse.  Varsa `cachedResult` null ise `GetSyntaxTreeAsync()` çağrıları `GetSyntaxTreeUncachedAsync()` ve sonucu önbelleğe alır.  Dikkat `GetSyntaxTreeAsync()` çağrısı await değil `GetSyntaxTreeUncachedAsync()` kodu normal olarak.  Await anlamına gelir kullanmıyor olduğunda `GetSyntaxTreeUncachedAsync()` döndürür kendi <xref:System.Threading.Tasks.Task> nesnesi, `GetSyntaxTreeAsync()` hemen döndürür <xref:System.Threading.Tasks.Task>.  Şimdi, önbelleğe alınan sonucu olan bir <xref:System.Threading.Tasks.Task>, bu nedenle hiçbir ayırmaları önbelleğe alınmış bir sonuç yok.  
+ Bu kod türünü değiştirir `cachedResult` için `Task<SyntaxTree>` ve kullanan bir `async` özgün kod tutan yardımcı işlevini `GetSyntaxTreeAsync()`.  `GetSyntaxTreeAsync()` Şimdi kullanan [null birleştirmesi işleci](~/docs/csharp/language-reference/operators/null-conditional-operator.md) dönmek için `cachedResult` null değilse.  Varsa `cachedResult` null ise `GetSyntaxTreeAsync()` çağrıları `GetSyntaxTreeUncachedAsync()` ve sonucu önbelleğe alır.  Dikkat `GetSyntaxTreeAsync()` çağrısı await değil `GetSyntaxTreeUncachedAsync()` kodu normal olarak.  Await anlamına gelir kullanmıyor olduğunda `GetSyntaxTreeUncachedAsync()` döndürür kendi <xref:System.Threading.Tasks.Task> nesnesi, `GetSyntaxTreeAsync()` hemen döndürür <xref:System.Threading.Tasks.Task>.  Şimdi, önbelleğe alınan sonucu olan bir <xref:System.Threading.Tasks.Task>, bu nedenle hiçbir ayırmaları önbelleğe alınmış bir sonuç yok.  
   
 ### <a name="additional-considerations"></a>Ek hususlar  
  Büyük uygulamalar ya da çok miktarda veri işleyen uygulamalar olası sorunlar hakkında daha fazla birkaç noktalar şunlardır.  

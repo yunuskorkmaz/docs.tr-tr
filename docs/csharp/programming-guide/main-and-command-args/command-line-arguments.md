@@ -1,21 +1,14 @@
 ---
-title: "Komut Satırı Bağımsız Değişkenleri (C# Programlama Kılavuzu)"
+title: Komut Satırı Bağımsız Değişkenleri (C# Programlama Kılavuzu)
 ms.date: 07/20/2015
-ms.prod: .net
-ms.technology:
-- devlang-csharp
-ms.topic: article
 helpviewer_keywords:
 - command-line arguments [C#]
 ms.assetid: 0e597e0d-ea7a-41ba-a38a-0198122f3c26
-caps.latest.revision: 
-author: BillWagner
-ms.author: wiwagn
-ms.openlocfilehash: 025ed2c451c0a657ce71db56df603302097fc7ee
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 92b3f916b58f72ab2f2f542d3a611d35861afebe
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="command-line-arguments-c-programming-guide"></a>Komut Satırı Bağımsız Değişkenleri (C# Programlama Kılavuzu)
 Bağımsız değişkenleri gönderebilirsiniz `Main` yöntemi aşağıdaki yollardan biriyle tanımlayarak yöntemi:  
@@ -72,7 +65,7 @@ long num = Convert.ToInt64(s);
   
      `Factorial 3`  
   
-5.  Komutu, bu çıktı üretir:`The factorial of 3 is 6.`  
+5.  Komutu, bu çıktı üretir: `The factorial of 3 is 6.`  
   
 > [!NOTE]
 >  Bir uygulamayı Visual Studio'da çalıştırırken, komut satırı bağımsız değişkenleri belirtebilirsiniz [hata ayıklama sayfası, Proje Tasarımcısı](/visualstudio/ide/reference/debug-page-project-designer).  
@@ -81,9 +74,9 @@ long num = Convert.ToInt64(s);
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
  <xref:System.Environment?displayProperty=nameWithType>  
- [C# programlama kılavuzu](../../../csharp/programming-guide/index.md)  
- [Ana() ve komut satırı bağımsız değişkenleri](../../../csharp/programming-guide/main-and-command-args/index.md)  
- [Nasıl yapılır: komut satırı bağımsız değişkenlerini görüntüleme](../../../csharp/programming-guide/main-and-command-args/how-to-display-command-line-arguments.md)  
- [Nasıl yapılır: foreach kullanarak komut satırı bağımsız değişkenlerine erişme](../../../csharp/programming-guide/main-and-command-args/how-to-access-command-line-arguments-using-foreach.md)  
- [Ana() dönüş değerleri](../../../csharp/programming-guide/main-and-command-args/main-return-values.md)  
- [Sınıfları](../../../csharp/programming-guide/classes-and-structs/classes.md)
+ [C# Programlama Kılavuzu](../../../csharp/programming-guide/index.md)  
+ [Ana() ve Komut Satırı Bağımsız Değişkenleri](../../../csharp/programming-guide/main-and-command-args/index.md)  
+ [Nasıl yapılır: Komut Satırı Bağımsız Değişkenlerini Görüntüleme](../../../csharp/programming-guide/main-and-command-args/how-to-display-command-line-arguments.md)  
+ [Nasıl yapılır: foreach Kullanarak Komut Satırı Bağımsız Değişkenlerine Erişme](../../../csharp/programming-guide/main-and-command-args/how-to-access-command-line-arguments-using-foreach.md)  
+ [Ana() Dönüş Değerleri](../../../csharp/programming-guide/main-and-command-args/main-return-values.md)  
+ [Sınıflar](../../../csharp/programming-guide/classes-and-structs/classes.md)

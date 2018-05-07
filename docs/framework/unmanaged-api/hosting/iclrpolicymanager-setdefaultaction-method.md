@@ -1,14 +1,6 @@
 ---
-title: "ICLRPolicyManager::SetDefaultAction Yöntemi"
-ms.custom: 
+title: ICLRPolicyManager::SetDefaultAction Yöntemi
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: reference
 api_name:
 - ICLRPolicyManager.SetDefaultAction
 api_location:
@@ -23,17 +15,13 @@ helpviewer_keywords:
 ms.assetid: f9411e7a-27df-451f-9f6c-d643d6a7a7ce
 topic_type:
 - apiref
-caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 751853aaf4322c15b44bb9b912d293a081c24ba8
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 9a183c7491ad5d67bc2c68edba3ef2d54839da12
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="iclrpolicymanagersetdefaultaction-method"></a>ICLRPolicyManager::SetDefaultAction Yöntemi
 Ortak dil çalışma zamanı (CLR) belirtilen işlem oluştuğunda gerçekleştirmesi gereken ilke eylemi belirtir.  
@@ -58,7 +46,7 @@ HRESULT SetDefaultAction (
   
 |HRESULT|Açıklama|  
 |-------------|-----------------|  
-|S_OK|`SetDefaultAction`başarıyla döndürüldü.|  
+|S_OK|`SetDefaultAction` başarıyla döndürüldü.|  
 |HOST_E_CLRNOTAVAILABLE|CLR süreç içine yüklü değil veya CLR içinde yönetilen kod çalıştıramaz veya çağrı başarılı bir şekilde işlemek bir durumda.|  
 |HOST_E_TIMEOUT|Arama zaman aşımına uğradı.|  
 |HOST_E_NOT_OWNER|Arayan kilidi kendisine ait değil.|  
@@ -67,9 +55,9 @@ HRESULT SetDefaultAction (
 |E_INVALIDARG|Geçersiz bir `action` için belirtilen `operation`, ya da geçersiz bir değer için sağlanan `operation`.|  
   
 ## <a name="remarks"></a>Açıklamalar  
- Tüm ilke eylem değerlerini CLR işlemleri için varsayılan davranış olarak belirtilebilir. `SetDefaultAction`genellikle yalnızca davranışı ilerletmek için kullanılabilir. Örneğin, bir ana iş parçacığı iptalleri içine utangaç açılması belirtebilirsiniz iş parçacığı iptalleri ancak karşıtı belirtemezsiniz. Aşağıdaki tabloda geçerli açıklanmaktadır `action` her olası değerlerini `operation` değeri.  
+ Tüm ilke eylem değerlerini CLR işlemleri için varsayılan davranış olarak belirtilebilir. `SetDefaultAction` genellikle yalnızca davranışı ilerletmek için kullanılabilir. Örneğin, bir ana iş parçacığı iptalleri içine utangaç açılması belirtebilirsiniz iş parçacığı iptalleri ancak karşıtı belirtemezsiniz. Aşağıdaki tabloda geçerli açıklanmaktadır `action` her olası değerlerini `operation` değeri.  
   
-|Değeri`operation`|İçin geçerli değerler`action`|  
+|Değeri `operation`|İçin geçerli değerler `action`|  
 |---------------------------|-------------------------------|  
 |OPR_ThreadAbort|-eAbortThread<br />-eRudeAbortThread<br />-eUnloadAppDomain<br />-eRudeUnloadAppDomain<br />-eExitProcess<br />-eFastExitProcess<br />-eRudeExitProcess<br />-eDisableRuntime|  
 |OPR_ThreadRudeAbortInNonCriticalRegion<br /><br /> OPR_ThreadRudeAbortInCriticalRegion|-eRudeAbortThread<br />-eUnloadAppDomain<br />-eRudeUnloadAppDomain<br />-eExitProcess<br />-eFastExitProcess<br />-eRudeExitProcess<br />-eDisableRuntime|  
@@ -85,7 +73,7 @@ HRESULT SetDefaultAction (
   
  **Kitaplığı:** bir kaynak olarak MSCorEE.dll dahil  
   
- **.NET framework sürümleri:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET framework sürümleri:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
  [EClrOperation Sabit Listesi](../../../../docs/framework/unmanaged-api/hosting/eclroperation-enumeration.md)  

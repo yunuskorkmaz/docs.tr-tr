@@ -1,26 +1,12 @@
 ---
 title: Özel Bağlama Üzerinden Meta Veri Yayımlama ve Alma
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 ms.assetid: 904e11b4-d90e-45c6-9ee5-c3472c90008c
-caps.latest.revision: 7
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: f6226f01a284a9a24593c1be4fed2f96f3eae730
-ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
-ms.translationtype: MT
+ms.openlocfilehash: 607cf70e8e226e6c97a785f2478ad3a655b21a7c
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/28/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="publishing-and-retrieving-metadata-over-a-custom-binding"></a>Özel Bağlama Üzerinden Meta Veri Yayımlama ve Alma
 <xref:System.ServiceModel.Description.ServiceMetadataBehavior?displayProperty=nameWithType> Bir hizmet için meta veri uç noktası eklemek için destek sağlar. Bu meta veri uç noktalarını bir URL HTTP GET isteklerine yanıt vermesini sağlayabilirsiniz bir `?wsdl` querystring ve WS-MetadataExchange (MEX) belirtiminde tanımlanan WS aktarma GET istekleri. MEX uç noktaları uygulamak <xref:System.ServiceModel.Description.IMetadataExchange?displayProperty=nameWithType> sözleşme.  
@@ -28,7 +14,7 @@ ms.lasthandoff: 04/28/2018
 ## <a name="publishing-metadata-over-a-custom-binding"></a>Özel bağlama üzerinden meta verileri yayımlama  
  Meta veri uç noktalarını alma HTTPS ve HTTP GET meta veri uç noktaları ayarlanarak etkinleştirilir <xref:System.ServiceModel.Description.ServiceMetadataBehavior.HttpGetEnabled%2A?displayProperty=nameWithType> veya <xref:System.ServiceModel.Description.ServiceMetadataBehavior.HttpsGetEnabled%2A?displayProperty=nameWithType> özelliklerine `true`. Bu uç noktalar için olan bağlamaları yapılandırılamaz.  
   
- <xref:System.ServiceModel.Description.IMetadataExchange> Sözleşme, ancak kullanılabilir özel bağlamalar kullanan çünkü dahil olmak üzere herhangi bir uç nokta ile <xref:System.ServiceModel.Description.IMetadataExchange> noktalarıdır diğer aynı [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] Hizmeti uç noktası. Sistem tarafından sağlanan bir bağlamayı yapılandırmasını değiştirmek nasıl bilmiyorsanız veya nasıl yapılandırılacağı bildiğiniz bir <xref:System.ServiceModel.Channels.CustomBinding?displayProperty=nameWithType>, bağlama ile kullanmak için yapılandırabilirsiniz sonra bir <xref:System.ServiceModel.Description.IMetadataExchange> uç noktası.  
+ <xref:System.ServiceModel.Description.IMetadataExchange> Sözleşme, ancak kullanılabilir özel bağlamalar kullanan çünkü dahil olmak üzere herhangi bir uç nokta ile <xref:System.ServiceModel.Description.IMetadataExchange> uç noktaları için başka bir Windows Communication Foundation (WCF) hizmetini endpoint aynıdır. Sistem tarafından sağlanan bir bağlamayı yapılandırmasını değiştirmek nasıl bilmiyorsanız veya nasıl yapılandırılacağı bildiğiniz bir <xref:System.ServiceModel.Channels.CustomBinding?displayProperty=nameWithType>, bağlama ile kullanmak için yapılandırabilirsiniz sonra bir <xref:System.ServiceModel.Description.IMetadataExchange> uç noktası.  
   
 ## <a name="retrieving-metadata-over-a-custom-binding"></a>Özel bağlama üzerinden meta verileri alma  
  Standart HTTP veya HTTPS GET isteklerini kullanarak HTTP Get hem de HTTPS alma meta veri uç noktalarından meta verileri alınabilir.  

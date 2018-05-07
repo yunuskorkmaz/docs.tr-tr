@@ -1,27 +1,15 @@
 ---
-title: "Sorgu ifade sözdizimi örnekleri: Projeksiyon (LINQ-DataSet)"
-ms.custom: 
+title: 'Sorgu ifade sözdizimi örnekleri: Projeksiyon (LINQ-DataSet)'
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-ado
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
 ms.assetid: 48c9f5ed-76bf-4228-ab10-5217bbb295a3
-caps.latest.revision: "2"
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
-ms.workload: dotnet
-ms.openlocfilehash: 92682c2a9f449f3fdcd5582e0034b42662d8ce1d
-ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
+ms.openlocfilehash: d84396a15f8122df38bd10781ab7351bdbf685eb
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="query-expression-syntax-examples-projection--linq-to-dataset"></a>Sorgu ifade sözdizimi örnekleri: Projeksiyon (LINQ-DataSet)
 Bu konudaki örnekler nasıl kullanılacağını gösteren <xref:System.Linq.Enumerable.Select%2A> ve <xref:System.Linq.Enumerable.SelectMany%2A> sorgulamak için yöntemleri bir <xref:System.Data.DataSet> sorgu ifade sözdizimi kullanarak.  

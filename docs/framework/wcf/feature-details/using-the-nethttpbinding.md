@@ -1,27 +1,15 @@
 ---
 title: NetHttpBinding Kullanma
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: fe134acf-ceca-49de-84a9-05a37e3841f1
-caps.latest.revision: "5"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: ca19446d286395a744496fa300ad1a72e504e738
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: a753cca008c7eb9b500afa7f3f3b55b5410522a9
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="using-the-nethttpbinding"></a>NetHttpBinding Kullanma
-<xref:System.ServiceModel.NetHttpBinding>HTTP veya WebSocket Hizmetleri kullanma için tasarlanmış bir bağlama ve ikili kodlama varsayılan olarak kullanır. <xref:System.ServiceModel.NetHttpBinding>İstek-yanıt sözleşmesi ya da çift yönlü sözleşme ile kullanılan olup olmadığını algılar ve eşleşecek şekilde davranışını değiştirme - Bunu HTTP istek-yanıt sözleşmeleri ve WebSockets için çift yönlü sözleşmeler için kullanır. Bu davranış kullanılarak geçersiz kılınabilir <!--zz <xref:System.ServiceModel.NetHttpBinding.WebSocketTransportUsage%2A> --> `WebSocketTransportUsage` ayarı:  
+<xref:System.ServiceModel.NetHttpBinding> HTTP veya WebSocket Hizmetleri kullanma için tasarlanmış bir bağlama ve ikili kodlama varsayılan olarak kullanır. <xref:System.ServiceModel.NetHttpBinding> İstek-yanıt sözleşmesi ya da çift yönlü sözleşme ile kullanılan olup olmadığını algılar ve eşleşecek şekilde davranışını değiştirme - Bunu HTTP istek-yanıt sözleşmeleri ve WebSockets için çift yönlü sözleşmeler için kullanır. Bu davranış kullanılarak geçersiz kılınabilir <!--zz <xref:System.ServiceModel.NetHttpBinding.WebSocketTransportUsage%2A> --> `WebSocketTransportUsage` ayarı:  
   
 1.  Her zaman - bu bile istek-yanıt sözleşmeleri için kullanılacak WebSockets zorlar.  
   
@@ -29,7 +17,7 @@ ms.lasthandoff: 12/22/2017
   
 3.  WhenDuplex - bu varsayılan değerdir ve yukarıda açıklandığı gibi davranır.  
   
- <xref:System.ServiceModel.NetHttpBinding>güvenilir oturumlar, hem HTTP modu hem de WebSocket modu destekler. WebSocket içinde modu oturumları taşıma tarafından sağlanır.  
+ <xref:System.ServiceModel.NetHttpBinding> güvenilir oturumlar, hem HTTP modu hem de WebSocket modu destekler. WebSocket içinde modu oturumları taşıma tarafından sağlanır.  
   
 > [!WARNING]
 >  Kullanırken <xref:System.ServiceModel.NetHttpBinding> ve bağlamanın TransferMode TransferMode.Streamed için ayarlandığında, kilitlenme ve çağrı zaman aşımı geniş akışlar neden olabilir. Bu sorunu gönderme küçük ileti çalışma veya TransferMode.Buffered kullanmak için.  

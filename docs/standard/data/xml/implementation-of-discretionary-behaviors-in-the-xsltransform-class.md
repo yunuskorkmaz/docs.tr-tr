@@ -1,26 +1,15 @@
 ---
-title: "İsteğe bağlı davranışları çok sınıfında uygulaması"
-ms.custom: 
+title: İsteğe bağlı davranışları çok sınıfında uygulaması
 ms.date: 03/30/2017
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
 ms.technology: dotnet-standard
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: d2758ea1-03f6-47bd-88d2-0fb7ccdb2fab
-caps.latest.revision: "4"
 author: mairaw
 ms.author: mairaw
-manager: wpickett
-ms.workload:
-- dotnet
-- dotnetcore
-ms.openlocfilehash: 98ad31039b5351a7dc4aa3cf033ae8cd0f896b7b
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: 3c2ffa755c642b2a3c7dd47d7007bff7239f500f
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="implementation-of-discretionary-behaviors-in-the-xsltransform-class"></a>İsteğe bağlı davranışları çok sınıfında uygulaması
 > [!NOTE]
@@ -40,7 +29,7 @@ ms.lasthandoff: 12/23/2017
 |Öznitelik, bir öğe düğümü dışında her şey ekleme.|Kurtarma|7.1.3|  
 |Örnek oluşturma içeriğinin `xsl:attribute` öğesi bir metin düğümü değil.|Kurtarma|7.1.3|  
 |İki öznitelik kümesi aynı alma öncelik ve genişletilmiş ada sahip. Her ikisi de aynı özniteliğine sahip ve aynı ada sahip sık kullanılan öznitelik daha yüksek öncelikli olarak içeren başka bir öznitelik kümesi yok.|Kurtarma|7.1.4|  
-|`xsl:processing-instruction`ad özniteliği yok iki nokta üst üste adı (NCName) ve bir işleme yönergesi hedefi vermez.|Kurtarma|7.3|  
+|`xsl:processing-instruction` ad özniteliği yok iki nokta üst üste adı (NCName) ve bir işleme yönergesi hedefi vermez.|Kurtarma|7.3|  
 |İçeriği başlatmasını `xsl:processing-instruction` metin düğümleri dışında düğümleri oluşturur.|Kurtarma|7.3|  
 |İçeriği başlatmasını sonuçlarını `xsl:processing-instruction` dizesini içeren "`?>`".|Kurtarma|7.3|  
 |İçeriği başlatmasını sonuçlarını `xsl:comment` dizesini içeren "--", veya ile biten "-".|Kurtarma|7.4|  
@@ -50,11 +39,11 @@ ms.lasthandoff: 12/23/2017
 |Parça tanımlayıcısı işlenirken bir hata oluştu ve bir parça tanımlayıcı belge işlevinde URI başvuru içeriyor.|Özel durum oluştu|12.1|  
 |Adlandırılmamış aynı ada sahip birden çok öznitelik `cdata-section-elements` içinde `xls:output`, ve bu öznitelikler aynı alma önceliklidir.|Kurtarma|16|  
 |İşlemci verilen değer kodlama karakter desteklemiyor `encoding` özniteliği `xsl:output` öğesi.|Kurtarma|16.1|  
-|`disable-output-escaping`bir metin düğümü için kullanılır ve bu metin düğümü, bir metin düğümü dışında bir şey sonuç ağacında oluşturmak için kullanılır.|`disable-output-escaping`öznitelik göz ardı edilir|16.4|  
+|`disable-output-escaping` bir metin düğümü için kullanılır ve bu metin düğümü, bir metin düğümü dışında bir şey sonuç ağacında oluşturmak için kullanılır.|`disable-output-escaping` öznitelik göz ardı edilir|16.4|  
 |Sonuç ağacı parçası etkin çıkış kaçış ile bir metin düğümü içeriyorsa sonuç ağacı parçası bir sayı veya dize dönüştürme.|Yoksayıldı|16.4|  
 |Çıktı kaçış XSLT işlemci çıktı için kullandığını kodlama temsil edilemeyen karakterler için devre dışı bırakılır.|Yoksayıldı|16.4|  
 |Alt ona veya öznitelikleri eklendikten sonra eklendikten sonra bir öğe için bir ad alanı düğüm ekleme|Kurtarma|Ayrıntıyla açıklayan hata bilgilerini e25|  
-|`xsl:number`NaN, sonsuz veya 0,5'den daha az olur.|Kurtarma|Ayrıntıyla açıklayan hata bilgilerini e24|  
+|`xsl:number` NaN, sonsuz veya 0,5'den daha az olur.|Kurtarma|Ayrıntıyla açıklayan hata bilgilerini e24|  
 |Düğüm kümesi belge işlevi ikinci bağımsız değişkeni boş ve göreli URI başvurusu|Kurtarma|Ayrıntıyla açıklayan hata bilgilerini e14|  
   
  Ayrıntıyla açıklayan hata bilgilerini bölümlerinden www.w3.org/1999/11/REC-xslt-19991116-errata bulunan World Wide Web Konsorsiyumu (W3C) XSL Dönüşümleri (XSLT) sürüm 1.0 belirtimi ayrıntıyla açıklayan hata bilgilerini, bulunabilir.  
@@ -69,7 +58,7 @@ ms.lasthandoff: 12/23/2017
   
 -   Tüm XSLT işlemcileri dillerini destekler.  
   
--   Dilleri göre sıralama kendi üzerinde belirtilmemiş belirli bir dil farklı işlemcilere değişebilir`xsl:sort.`  
+-   Dilleri göre sıralama kendi üzerinde belirtilmemiş belirli bir dil farklı işlemcilere değişebilir `xsl:sort.`  
   
  Aşağıdaki tabloda her bir veri türü dönüşümü kullanarak .NET Framework uygulamasında için uygulanan sıralama davranışı gösterilmektedir <xref:System.Xml.Xsl.XslTransform>.  
   
@@ -83,7 +72,7 @@ ms.lasthandoff: 12/23/2017
   
 |Özellik|Başvuru konumu|Notlar|  
 |-------------|------------------------|-----------|  
-|`disable-output-escaping`özniteliği `<xsl:text...>` ve `<xsl:value-of...>` etiketler.|W3C XSLT 1.0 öneri,<br /><br /> Bölüm 16.4|`disable-output-escaping` Özniteliği göz ardı edilir zaman `xsl:text` veya `xsl:value-of` öğeleri kullanıldığı bir `xsl:comment`, `xsl:processing-instruction`, veya `xsl:attribute` öğesi.<br /><br /> Metin ve atlanan metin çıktısı içeren sonuç ağaç parçaları desteklenmez.<br /><br /> Devre dışı bırak çıkış kaçış öznitelik için dönüştürülürken yoksayılır bir <xref:System.Xml.XmlReader> veya <xref:System.Xml.XmlWriter> nesnesi.|  
+|`disable-output-escaping` özniteliği `<xsl:text...>` ve `<xsl:value-of...>` etiketler.|W3C XSLT 1.0 öneri,<br /><br /> Bölüm 16.4|`disable-output-escaping` Özniteliği göz ardı edilir zaman `xsl:text` veya `xsl:value-of` öğeleri kullanıldığı bir `xsl:comment`, `xsl:processing-instruction`, veya `xsl:attribute` öğesi.<br /><br /> Metin ve atlanan metin çıktısı içeren sonuç ağaç parçaları desteklenmez.<br /><br /> Devre dışı bırak çıkış kaçış öznitelik için dönüştürülürken yoksayılır bir <xref:System.Xml.XmlReader> veya <xref:System.Xml.XmlWriter> nesnesi.|  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
  <xref:System.Xml.Xsl.XslTransform>  

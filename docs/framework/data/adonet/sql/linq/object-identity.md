@@ -1,27 +1,15 @@
 ---
-title: "Nesne Kimliği"
-ms.custom: 
+title: Nesne Kimliği
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-ado
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
 ms.assetid: c788f2f9-65cc-4455-9907-e8388a268e00
-caps.latest.revision: "2"
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
-ms.workload: dotnet
-ms.openlocfilehash: 21b8dbb934b778d792ff55d54f60fca92cac8e88
-ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
+ms.openlocfilehash: 930295073f9f75cf4101bf6fa3834561a4db8f58
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="object-identity"></a>Nesne Kimliği
 Çalışma zamanında nesneleri benzersiz kimlikler sahiptir. Aynı nesneye başvurmak iki değişken aslında aynı nesne örneğine bakın. Bu olgu nedeniyle bir değişken yolundan yapmamanız yaptığınız değişiklikler diğer hemen görünür değildir.  
@@ -34,7 +22,7 @@ ms.lasthandoff: 01/17/2018
   
  İçinde [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)], <xref:System.Data.Linq.DataContext> nesne kimliğini yönetir. Veritabanından yeni bir satır her satırın birincil anahtarı tarafından bir kimlik tablosunda kaydedilir ve yeni bir nesne oluşturulur. Aynı satır almak olduğunda, orijinal nesne örneğini geri uygulamaya karmalayan. Bu şekilde <xref:System.Data.Linq.DataContext> kimlik kavramını (diğer bir deyişle, birincil anahtarlar) veritabanı tarafından görülen (örnekler) dil tarafından görülen kimlik kavramını çevirir. Uygulama, yalnızca ilk alınmış durumdaki nesne görür. Yeni veriler farklı olması durumunda, göz ardı edilir. Daha fazla bilgi için bkz: [kimlik önbelleğe alma nesnelerden](../../../../../../docs/framework/data/adonet/sql/linq/retrieving-objects-from-the-identity-cache.md).  
   
- [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]İyimser güncelleştirmeleri desteklemek için yerel nesneleri bütünlüğünü yönetmek için bu yaklaşımı kullanır. İlk bakışta nesne oluşturulduktan sonra oluşan yalnızca değişiklikler uygulama tarafından yapılan olduğundan, uygulama amacı işaretlenmemiştir. Bir dış taraf değişikliklerden arada oluşmuş olursa zamanında tanımlanır `SubmitChanges()` olarak adlandırılır.  
+ [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] İyimser güncelleştirmeleri desteklemek için yerel nesneleri bütünlüğünü yönetmek için bu yaklaşımı kullanır. İlk bakışta nesne oluşturulduktan sonra oluşan yalnızca değişiklikler uygulama tarafından yapılan olduğundan, uygulama amacı işaretlenmemiştir. Bir dış taraf değişikliklerden arada oluşmuş olursa zamanında tanımlanır `SubmitChanges()` olarak adlandırılır.  
   
 > [!NOTE]
 >  Sorgu tarafından istenen nesne zaten alınan biri kolayca tanımlanabilen ise, hiçbir sorgu yürütülür. Bir önbellek tüm nesneleri daha önce listelene gibi kimlik tablo yapar.  

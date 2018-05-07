@@ -1,29 +1,15 @@
 ---
 title: Tarih ve saat verilerini
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-ado
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
 ms.assetid: 6f5ff56a-a57e-49d7-8ae9-bbed697e42e3
-caps.latest.revision: 
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
-ms.workload:
-- dotnet
-ms.openlocfilehash: 904b941a274cdd31485d35cf2d025f869638d448
-ms.sourcegitcommit: c3957fdb990060559d73cca44ab3e2c7b4d049c0
+ms.openlocfilehash: 2130c79ba79ce7e327a2a1b3adccd92e52153d85
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/05/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="date-and-time-data"></a>Tarih ve saat verilerini
 SQL Server 2008, tarih ve saat bilgilerini işleme yeni veri türleri tanıtır. Yeni veri türleri, tarih ve saat için ayrı türleri ve büyük aralık, duyarlık ve saat dilimi tanıma ile genişletilmiş veri türleri içerir. İle .NET Framework sürüm 3.5 hizmet paketi (SP) 1, SQL Server için .NET Framework veri sağlayıcısı başlatılıyor (<xref:System.Data.SqlClient>) SQL Server 2008 veritabanı altyapısı için yeni özellikler hakkında tam destek sağlar. .NET Framework 3.5 SP1'i yüklemeniz gerekir (veya üstü) bu yeni özellikleri ile SqlClient kullanılacak.  
@@ -32,7 +18,7 @@ SQL Server 2008, tarih ve saat bilgilerini işleme yeni veri türleri tanıtır.
   
  SQL Server veri türleri için kapsamlı belgeler SQL Server Books Online içinde kullanılabilir. Aşağıdaki tabloda, tarih ve saat verilerini için sürüme özgü giriş seviyesi konuları listeler.  
   
- **SQL Server Books Online**  
+ **SQL Server Çevrimiçi Kitapları**  
   
 1.  [Tarih ve saat verilerini kullanma](http://go.microsoft.com/fwlink/?LinkID=98361)  
   
@@ -44,7 +30,7 @@ SQL Server 2008, tarih ve saat bilgilerini işleme yeni veri türleri tanıtır.
 |`date`|`date` Veri türüne sahip bir aralığı 1 Ocak-31 Aralık 01 bir doğruluğu, 1 gün ile 9999. Varsayılan değer 1 Ocak 1900 ' dir. Depolama boyutu 3 bayttır.|  
 |`time`|`time` Veri türü, 24 saatlik dayalı yalnızca saat değerleri depolar. `time` Aralığıyla 100 nanosaniye bir doğruluğunu 00:00:00.0000000 23:59:59.9999999 aracılığıyla veri türüne sahip. 00:00:00.0000000 (gece yarısı) varsayılan değerdir. `time` Veri türü kullanıcı tanımlı kesirli ikinci duyarlık destekler ve depolama boyutu 3 ile 6 bayt cinsinden belirtilen duyarlılık göre farklılık gösterir.|  
 |`datetime2`|`datetime2` Veri türü, aralık ve kesinliğini birleştirir `date` ve `time` tek bir veri türüne içine veri türleri.<br /><br /> Dize değişmez değer biçimleri ve varsayılan değerleri tanımlanan aynıdır `date` ve `time` veri türleri.|  
-|`datetimeoffset`|`datetimeoffset` Veri türüne sahip tüm özelliklerini `datetime2` ek saat dilimi konumu ile. Saat dilimi konumu olarak temsil edilir [+ &#124;-] hh: mm. HH 00-saat dilimi kaymasını saat sayısını temsil eden 14 arasında değişen 2 basamaktan oluşur. AA 00-saat dilimi kaymasını ek dakika sayısını temsil eden 59 arasında değişen 2 basamaktan oluşur. Saat biçimleri 100 nanosaniye desteklenir. Zorunlu + veya - saat dilimi kaymasını eklendiğinde veya (Evrensel Saat eşgüdümü veya Greenwich saati) yerel zamanını elde etmek için UTC çıkarılır işareti gösterir.|  
+|`datetimeoffset`|`datetimeoffset` Veri türüne sahip tüm özelliklerini `datetime2` ek saat dilimi konumu ile. Saat dilimi konumu olarak temsil edilir [+&#124;-] hh: mm. HH 00-saat dilimi kaymasını saat sayısını temsil eden 14 arasında değişen 2 basamaktan oluşur. AA 00-saat dilimi kaymasını ek dakika sayısını temsil eden 59 arasında değişen 2 basamaktan oluşur. Saat biçimleri 100 nanosaniye desteklenir. Zorunlu + veya - saat dilimi kaymasını eklendiğinde veya (Evrensel Saat eşgüdümü veya Greenwich saati) yerel zamanını elde etmek için UTC çıkarılır işareti gösterir.|  
   
 > [!NOTE]
 >  Kullanma hakkında daha fazla bilgi için `Type System Version` anahtar sözcüğü, bkz: <xref:System.Data.SqlClient.SqlConnection.ConnectionString%2A>.  
@@ -167,7 +153,7 @@ parameter.SqlDbType = SqlDbType.DateTime2
 parameter.Value = DateTime.Parse("1666-09-02 1:00:00");  
 ```  
   
-### <a name="datetimeoffset-example"></a>DateTimeOffSet Example  
+### <a name="datetimeoffset-example"></a>DateTimeOffSet örneği  
  Aşağıdaki kod parçası nasıl belirleneceğini göstermektedir bir `DateTimeOffSet` parametresi bir tarih, bir saat ve saat dilimi uzaklığı 0 ile.  
   
 ```csharp  
@@ -201,7 +187,7 @@ command.Parameters.AddWithValue( _
   
  Aşağıdaki tabloda gösterir `SqlDbTypes` hangi CLR türlerinden sonuçlandı:  
   
-|CLR türü|Inferred SqlDbType|  
+|CLR türü|Çıkarsanan SqlDbType|  
 |--------------|------------------------|  
 |DateTime|SqlDbType.DateTime|  
 |TimeSpan|SqlDbType.Time|  

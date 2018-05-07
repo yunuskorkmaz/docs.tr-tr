@@ -1,24 +1,12 @@
 ---
-title: "Özel WSDL Yayımı"
-ms.custom: 
+title: Özel WSDL Yayımı
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 3b3e8103-2c95-4db3-a05b-46aa8e9d4d29
-caps.latest.revision: "21"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: ba62c44ecf72df7faaed77f54f07ecd88157c6d8
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
-ms.translationtype: MT
+ms.openlocfilehash: e475a37b5c8e868cf06d7764d561755112ed943e
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="custom-wsdl-publication"></a>Özel WSDL Yayımı
 Bu örnek gösterilmektedir nasıl yapılır:  
@@ -29,7 +17,7 @@ Bu örnek gösterilmektedir nasıl yapılır:
   
 -   Uygulama <xref:System.ServiceModel.Description.IServiceContractGenerationExtension?displayProperty=nameWithType> ve <xref:System.ServiceModel.Description.IOperationContractGenerationExtension?displayProperty=nameWithType> üzerinde özel ve bir özel işlem davranışlarını sırasıyla alınan sözleşme ve işlem için CodeDom açıklamaları olarak içeri aktarılan ek açıklamaları yazmak için sözleşme.  
   
--   Kullanım <xref:System.ServiceModel.Description.MetadataExchangeClient?displayProperty=nameWithType> WSDL indirmek için bir <xref:System.ServiceModel.Description.WsdlImporter?displayProperty=nameWithType> özel WSDL içeri Aktarıcı kullanarak WSDL içe aktarmak için ve <xref:System.ServiceModel.Description.ServiceContractGenerator?displayProperty=nameWithType> oluşturmak için [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] / / / olarak istemci kodu WSDL ek açıklamalar ile ve ''' C# ve Visual Basic açıklamaları.  
+-   Kullanım <xref:System.ServiceModel.Description.MetadataExchangeClient?displayProperty=nameWithType> WSDL indirmek için bir <xref:System.ServiceModel.Description.WsdlImporter?displayProperty=nameWithType> özel WSDL içeri Aktarıcı kullanarak WSDL içe aktarmak için ve <xref:System.ServiceModel.Description.ServiceContractGenerator?displayProperty=nameWithType> olarak / / / WSDL ek açıklamalar ile Windows Communication Foundation (WCF) istemci kodu oluşturmak üzere ve ''' C# ve Visual açıklamaları Temel.  
   
 > [!NOTE]
 >  Kurulum yordamı ve yapı yönergeleri Bu örnek için bu konunun sonunda yer alır.  
@@ -311,7 +299,7 @@ public interface ICalculator
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  Bu dizin mevcut değilse, Git [Windows Communication Foundation (WCF) ve .NET Framework 4 için Windows Workflow Foundation (WF) örnek](http://go.microsoft.com/fwlink/?LinkId=150780) tüm indirmek için [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] ve [!INCLUDE[wf1](../../../../includes/wf1-md.md)] örnekleri. Bu örnek aşağıdaki dizinde bulunur.  
+>  Bu dizin mevcut değilse, Git [Windows Communication Foundation (WCF) ve .NET Framework 4 için Windows Workflow Foundation (WF) örnek](http://go.microsoft.com/fwlink/?LinkId=150780) tüm Windows Communication Foundation (WCF) indirmek için ve [!INCLUDE[wf1](../../../../includes/wf1-md.md)] örnekleri. Bu örnek aşağıdaki dizinde bulunur.  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Extensibility\Metadata\WsdlDocumentation`  
   

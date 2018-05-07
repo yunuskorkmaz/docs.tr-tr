@@ -1,24 +1,12 @@
 ---
-title: "Destek Belirteçleri"
-ms.custom: 
+title: Destek Belirteçleri
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 65a8905d-92cc-4ab0-b6ed-1f710e40784e
-caps.latest.revision: "29"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 8b6838f6914ed7430fc420705af2ff461ccde8e4
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
-ms.translationtype: MT
+ms.openlocfilehash: 4f8cf62220955bef3f341c43b3c615f873387b2e
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="supporting-tokens"></a>Destek Belirteçleri
 Destek belirteçleri örnek WS güvenliği kullanan bir ileti için ek belirteçler ekleneceği gösterilmektedir. Örnek, bir kullanıcı adı güvenlik belirteci yanı sıra bir X.509 ikili güvenlik belirteci ekler. Belirtecin bir WS-güvenlik ileti üstbilgisinde istemciden hizmete geçirilir ve iletisinin bir parçası alıcısı X.509 sertifikası elinde kanıtlamak için X.509 güvenlik belirteci ile ilişkili özel anahtara sahip imzalanır. Kimlik doğrulaması veya gönderen yetkilendirmek için bir ileti ile ilişkili birden fazla talep olan bir gereksinimi olduğunda bu durumda yararlıdır. Hizmet bir istek-yanıt iletişim deseni tanımlayan bir sözleşme uygular.  
@@ -294,7 +282,7 @@ public class EchoService : IEchoService
 ```  
   
 ## <a name="displaying-callers-information"></a>Arayanlar bilgileri görüntüleme  
- Arayanın bilgileri görüntülemek için kullanabileceğiniz `ServiceSecurityContext.Current.AuthorizationContext.ClaimSets` aşağıdaki kodda gösterildiği gibi. `ServiceSecurityContext.Current.AuthorizationContext.ClaimSets` Geçerli arayanla ilişkili yetkilendirme talepleri içerir. Bu talep tarafından otomatik olarak sağlanan [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] iletide alınan her belirteci.  
+ Arayanın bilgileri görüntülemek için kullanabileceğiniz `ServiceSecurityContext.Current.AuthorizationContext.ClaimSets` aşağıdaki kodda gösterildiği gibi. `ServiceSecurityContext.Current.AuthorizationContext.ClaimSets` Geçerli arayanla ilişkili yetkilendirme talepleri içerir. Bu talep iletide alınan her belirteci için Windows Communication Foundation (WCF) tarafından otomatik olarak sağlanır.  
   
 ```  
 bool TryGetClaimValue<TClaimResource>(ClaimSet claimSet, string   
@@ -439,7 +427,7 @@ iisreset
     > [!NOTE]
     >  Setup.bat toplu iş dosyası çalıştırılmak üzere tasarlanmış bir [!INCLUDE[vs_current_long](../../../../includes/vs-current-long-md.md)] komut istemi. İçinde PATH ortam değişkeni ayarlamak [!INCLUDE[vs_current_long](../../../../includes/vs-current-long-md.md)] komut istemi Setup.bat komut dosyası için gereken yürütülebilir dosyalar içeren dizine işaret eder. Örnekle bittiğinde Cleanup.bat çalıştırarak sertifikaları kaldırdığınızdan emin olun. Diğer güvenlik örnekleri aynı sertifikaları kullanır.  
   
-2.  Launch Client.exe from \client\bin. İstemci etkinliği istemci konsol uygulaması görüntülenir.  
+2.  Client.exe \client\bin başlatın. İstemci etkinliği istemci konsol uygulaması görüntülenir.  
   
 3.  İstemci ve hizmet iletişim kurabildiğinden değilseniz bkz [sorun giderme ipuçları](http://msdn.microsoft.com/library/8787c877-5e96-42da-8214-fa737a38f10b).  
   

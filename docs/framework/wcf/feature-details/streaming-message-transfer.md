@@ -1,29 +1,15 @@
 ---
 title: İleti Aktarma Akışı
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 ms.assetid: 72a47a51-e5e7-4b76-b24a-299d51e0ae5a
-caps.latest.revision: 13
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: ed2aa57e044910ab9fd9c60dfd47eb7aaa0ce75e
-ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
+ms.openlocfilehash: 340c903e2cb34373514ea2f739cab57dc620df5d
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/30/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="streaming-message-transfer"></a>İleti Aktarma Akışı
-[!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] taşımalar iletileri aktarmak için iki modunu destekler:  
+Windows Communication Foundation (WCF) aktarımlar, iletiler aktarmak için iki modunu destekler:  
   
 -   Aktarım işlemi tamamlanana kadar arabelleğe alınan aktarımları tüm ileti bir bellek arabelleği basılı tutun. Bir alıcı okumadan önce arabelleğe alınan ileti tamamen teslim gerekir.  
   
@@ -52,7 +38,7 @@ ms.lasthandoff: 04/30/2018
   
  Akışlı bir aktarım gerçekleşen işlem giriş veya çıkış en fazla bir parametre ile bir sözleşme olabilir. Bu parametrenin tüm ileti gövdesi için karşılık gelen ve olmalıdır bir <xref:System.ServiceModel.Channels.Message>, bir tür türetilmiş <xref:System.IO.Stream>, veya bir <xref:System.Xml.Serialization.IXmlSerializable> uygulaması. Bir işlemin dönüş değeri bir output parametresi zorunda eşdeğerdir.  
   
- Bazı [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] güvenilir Mesajlaşma, işlemleri ve SOAP iletisi düzeyi güvenliği gibi özellikleri kullanan iletileri aktarımları için arabelleğe. Bu özellikleri kullanarak azaltın veya akış kullanılarak elde performans avantajı ortadan kaldırmak. Bir akış taşıma güvenliğini sağlamak için yalnızca aktarım düzeyinde güvenlik kullanın veya aktarım düzeyinde güvenlik artı yalnızca kimlik doğrulama ileti güvenliği kullanın.  
+ İşlemler ve SOAP iletisi düzeyi güvenlik için güvenilir Mesajlaşma gibi bazı WCF özellikleri iletileri aktarımları için arabelleğe kullanır. Bu özellikleri kullanarak azaltın veya akış kullanılarak elde performans avantajı ortadan kaldırmak. Bir akış taşıma güvenliğini sağlamak için yalnızca aktarım düzeyinde güvenlik kullanın veya aktarım düzeyinde güvenlik artı yalnızca kimlik doğrulama ileti güvenliği kullanın.  
   
  Bile aktarım modu akış ayarlandığında SOAP üstbilgileri her zaman, arabelleğe alınmamış. Bir ileti için üstbilgiler boyutunu aşmamalıdır `MaxBufferSize` aktarım kotası. Bu ayar hakkında daha fazla bilgi için bkz: [taşıma kotaları](../../../../docs/framework/wcf/feature-details/transport-quotas.md).  
   

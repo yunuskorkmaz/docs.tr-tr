@@ -1,28 +1,16 @@
 ---
-title: "Nasıl Yapılır: Çalışma Zamanında C# ile Ayarları Okuma"
-ms.custom: 
+title: 'Nasıl Yapılır: Çalışma Zamanında C# ile Ayarları Okuma'
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-winforms
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - application settings [Windows Forms], reading
 - application settings [Windows Forms], run time
 - application settings [Windows Forms], C#
 ms.assetid: dbe8bf09-5e1c-49da-9192-154033d7240b
-caps.latest.revision: "10"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 85dc3a2c97b8fe5003c6026874dbdcaa9af89d77
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 8259e2f429718793c01868855651d1000620fae5
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-read-settings-at-run-time-with-c"></a>Nasıl Yapılır: Çalışma Zamanında C# ile Ayarları Okuma #
 Özellikleri nesnesi aracılığıyla çalışma zamanında uygulama kapsamlı hem de kullanıcı kapsamlı ayarlarını okuyabilirsiniz. Özellikleri nesnesi Properties.Settings.Default üye aracılığıyla proje için varsayılan ayarlar kullanıma sunar.  

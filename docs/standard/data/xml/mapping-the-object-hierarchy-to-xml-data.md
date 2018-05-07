@@ -1,29 +1,18 @@
 ---
-title: "XML verilerine nesne hiyerarşisi eşleme"
-ms.custom: 
+title: XML verilerine nesne hiyerarşisi eşleme
 ms.date: 03/30/2017
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
 ms.technology: dotnet-standard
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
 ms.assetid: 450e350b-6a68-4634-a2a5-33f4dc33baf0
-caps.latest.revision: "5"
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-- dotnetcore
-ms.openlocfilehash: 2191cb15a85e9b16ff0a21084668e80d3c197bfa
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: 45f39701d409ba76e3c3f428f484b6fd5e538fbe
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="mapping-the-object-hierarchy-to-xml-data"></a>XML verilerine nesne hiyerarşisi eşleme
 Bir XML belgesi bellekte kavramsal temsili bir ağaç olur. Programlama için ağaç düğümleri erişmek için bir nesne hiyerarşisi vardır. Aşağıdaki örnekte nasıl XML içeriği düğümleri duruma gösterir.  
@@ -203,7 +192,7 @@ public class Sample
 |\<! DOCTYPE öğeleri [\<! Varlık numarası "123" >] >|\<! DOCTYPE öğeleri [\<! Varlık numarası "123" >]|XmlNodeType.DocumentType|  
 |\<Öğeleri >|\<Öğeleri >|XmlNodeType.Element|  
 |\<Öğe >|\<Öğe >|XmlNodeType.Element|  
-|Bir varlık ile test edin:&number;|Bir varlığı olan test: 123|XmlNodeType.Text|  
+|Bir varlık ile test edin: &number;|Bir varlığı olan test: 123|XmlNodeType.Text|  
 |\</ Öğesi >|\</ Öğesi >|XmlNodeType.EndElement|  
 |\<Öğe >|\<Öğe >|XmNodeType.Element|  
 |bir alt öğesi ile test|bir alt öğesi ile test|XmlNodeType.Text|  
@@ -212,7 +201,7 @@ public class Sample
 |\</ Öğesi >|\</ Öğesi >|XmlNodeType.EndElement|  
 |\<Öğe >|\<Öğe >|XmlNodeType.Element|  
 |CDATA bölümü ile test|CDATA bölümü ile test|XmlTest.Text|  
-|<! [CDATA [\<456 >]]\>|<! [CDATA [\<456 >]]\>|XmlTest.CDATA|  
+|&LT;! [CDATA [\<456 &GT;]]\>|&LT;! [CDATA [\<456 &GT;]]\>|XmlTest.CDATA|  
 |def|def|XmlNodeType.Text|  
 |\</ Öğesi >|\</ Öğesi >|XmlNodeType.EndElement|  
 |\<Öğe >|\<Öğe >|XmlNodeType.Element|  

@@ -1,31 +1,20 @@
 ---
-title: "Uygulama Etki Alanı Kaynak İzleme"
-ms.custom: 
+title: Uygulama Etki Alanı Kaynak İzleme
 ms.date: 03/30/2017
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
 ms.technology: dotnet-standard
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - monitoring managed memory use by application domain
 - application domains, memory use
 - memory use, monitoring
 - application domains, resource monitoring
 ms.assetid: 318bedf8-7f35-4f00-b34a-2b7b8e3fa315
-caps.latest.revision: "8"
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-- dotnetcore
-ms.openlocfilehash: 648f8b86ecf73a7da5f3f33d71fb8617bacccee1
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: 45b0f8293b41d42114b189c3ebe917a4f64c4f27
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="application-domain-resource-monitoring"></a>Uygulama Etki Alanı Kaynak İzleme
 Uygulama etki alanı kaynak izleme (ARM) uygulama etki alanı tarafından CPU ve bellek kullanımını izlemek ana bilgisayarları sağlar. Bu, ASP.NET gibi bir uzun süre çalışan işlemde birden çok uygulama etki alanı kullanan konakları için kullanışlıdır. Ana bilgisayar sorunlu uygulamayı belirleyebiliyorsanız, ancak yalnızca bütün işlem performansını olumsuz yönde etkileyen bir uygulamanın uygulama etki alanını boşaltma. ARM böyle kararları vermekte yol yardımcı olmak için kullanılan bilgileri sağlar.  

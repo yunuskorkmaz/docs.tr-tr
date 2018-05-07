@@ -1,13 +1,6 @@
 ---
 title: Kaynaklar ve Kod
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-wpf
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -18,16 +11,11 @@ helpviewer_keywords:
 - procedural code [WPF], accessing resources from
 - resources [WPF], creating with procedural code
 ms.assetid: c1cfcddb-e39c-41c8-a7f3-60984914dfae
-caps.latest.revision: "14"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 772c44b63627204da7056a5707f2840a82053f11
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 27b72d4be9012caf388c90d52a61d9837713c71f
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="resources-and-code"></a>Kaynaklar ve Kod
 Bu genel bakışta nasıl yoğunlaşır [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] kaynakları erişilen veya kod kullanılarak oluşturulan yerine [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)] sözdizimi. Genel kaynak kullanımı ve kaynaklardan hakkında daha fazla bilgi için bir [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] sözdizimi açısından bkz [XAML kaynakları](../../../../docs/framework/wpf/advanced/xaml-resources.md).  
@@ -36,7 +24,7 @@ Bu genel bakışta nasıl yoğunlaşır [!INCLUDE[TLA#tla_winclient](../../../..
   
 <a name="accessing"></a>   
 ## <a name="accessing-resources-from-code"></a>Koddan kaynaklara erişim  
- Üzerinden tanımlanmışsa kaynakları tanımlayan anahtarlarını [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] kaynak kodda istenmişse belirli kaynakları almak için de kullanılır. Koddan bir kaynağı almanın en basit yolu çağırmaktır <xref:System.Windows.FrameworkElement.FindResource%2A> veya <xref:System.Windows.FrameworkElement.TryFindResource%2A> uygulamanızdaki çerçeve düzeyi nesnelerinden yöntemi. Bu yöntemleri arasındaki davranış farkı İstenen anahtar bulunamazsa olur. <xref:System.Windows.FrameworkElement.FindResource%2A>bir özel durum oluşturur; <xref:System.Windows.FrameworkElement.TryFindResource%2A> verir ancak bir özel durum oluşturmaz `null`. Her yöntem giriş parametresi olarak kaynak anahtarını alır ve gevşek yazılmış bir nesne döndürür. Genellikle, bir kaynak anahtarı bir dizedir, ancak bazen dize olmayan kullanımları vardır; bkz: [nesneleri anahtar olarak kullanma](#objectaskey) ayrıntıları bölümü. Genellikle, kaynak isterken ayarlıyorsanız özelliği tarafından gerekli olan türü döndürülen nesneyi dönüştürürsünüz. Kod kaynağı çözünürlüğü için arama mantığı dinamik kaynak başvurusu ile aynıdır [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] durumda. Kaynaklar için arama arama öğeden başlar, sonra mantıksal ağacındaki art arda üst öğeler devam eder. Arama ve sonraki sürümleri uygulama kaynakları, temalar ve sistem kaynaklarını gerekirse devam eder. Bir kaynak için bir kod istek düzgün gelen yüklenen kaynak sözlüğünden sonra yapılmış kaynak sözlüklerindeki çalışma zamanı değişiklikleri hesaba katmayacak [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)], için ve ayrıca gerçek zamanlı sistem kaynak değişiklikleri.  
+ Üzerinden tanımlanmışsa kaynakları tanımlayan anahtarlarını [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] kaynak kodda istenmişse belirli kaynakları almak için de kullanılır. Koddan bir kaynağı almanın en basit yolu çağırmaktır <xref:System.Windows.FrameworkElement.FindResource%2A> veya <xref:System.Windows.FrameworkElement.TryFindResource%2A> uygulamanızdaki çerçeve düzeyi nesnelerinden yöntemi. Bu yöntemleri arasındaki davranış farkı İstenen anahtar bulunamazsa olur. <xref:System.Windows.FrameworkElement.FindResource%2A> bir özel durum oluşturur; <xref:System.Windows.FrameworkElement.TryFindResource%2A> verir ancak bir özel durum oluşturmaz `null`. Her yöntem giriş parametresi olarak kaynak anahtarını alır ve gevşek yazılmış bir nesne döndürür. Genellikle, bir kaynak anahtarı bir dizedir, ancak bazen dize olmayan kullanımları vardır; bkz: [nesneleri anahtar olarak kullanma](#objectaskey) ayrıntıları bölümü. Genellikle, kaynak isterken ayarlıyorsanız özelliği tarafından gerekli olan türü döndürülen nesneyi dönüştürürsünüz. Kod kaynağı çözünürlüğü için arama mantığı dinamik kaynak başvurusu ile aynıdır [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] durumda. Kaynaklar için arama arama öğeden başlar, sonra mantıksal ağacındaki art arda üst öğeler devam eder. Arama ve sonraki sürümleri uygulama kaynakları, temalar ve sistem kaynaklarını gerekirse devam eder. Bir kaynak için bir kod istek düzgün gelen yüklenen kaynak sözlüğünden sonra yapılmış kaynak sözlüklerindeki çalışma zamanı değişiklikleri hesaba katmayacak [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)], için ve ayrıca gerçek zamanlı sistem kaynak değişiklikleri.  
   
  Aşağıdaki bir kaynak anahtarını bulan ve döndürülen değer olarak uygulanan bir özellik ayarlamak için kullandığı bir kısa bir kod örneğidir bir <xref:System.Windows.Controls.Primitives.ButtonBase.Click> olay işleyicisi.  
   

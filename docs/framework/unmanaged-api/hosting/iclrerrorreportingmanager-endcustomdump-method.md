@@ -1,14 +1,6 @@
 ---
-title: "ICLRErrorReportingManager::EndCustomDump Yöntemi"
-ms.custom: 
+title: ICLRErrorReportingManager::EndCustomDump Yöntemi
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: reference
 api_name:
 - ICLRErrorReportingManager.EndCustomDump
 api_location:
@@ -23,17 +15,13 @@ helpviewer_keywords:
 ms.assetid: 88a5da04-8729-4108-82c4-af206a7d483e
 topic_type:
 - apiref
-caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 709ef121294a92353b21363ae12919e8e147efab
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 2e5e5a594743c5770d4b9f93d4b0949cce24592a
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="iclrerrorreportingmanagerendcustomdump-method"></a>ICLRErrorReportingManager::EndCustomDump Yöntemi
 Önceki bir çağrıda belirtilen özel yığın dökümü yapılandırmasını kaldırır [Iclrerrorreportingmanager::begincustomdump](../../../../docs/framework/unmanaged-api/hosting/iclrerrorreportingmanager-begincustomdump-method.md) yöntemi.  
@@ -48,7 +36,7 @@ HRESULT EndCustomDump ();
   
 |HRESULT|Açıklama|  
 |-------------|-----------------|  
-|S_OK|`EndCustomDump`başarıyla döndürüldü.|  
+|S_OK|`EndCustomDump` başarıyla döndürüldü.|  
 |HOST_E_CLRNOTAVAILABLE|Ortak dil çalışma zamanı (CLR) süreç içine yüklü değil veya CLR içinde yönetilen kod çalıştıramaz veya çağrı başarılı bir şekilde işlemek bir durumda.|  
 |HOST_E_TIMEOUT|Arama zaman aşımına uğradı.|  
 |HOST_E_NOT_OWNER|Arayan kilidi kendisine ait değil.|  
@@ -68,7 +56,7 @@ HRESULT EndCustomDump ();
   
  **Kitaplığı:** bir kaynak olarak MSCorEE.dll dahil  
   
- **.NET framework sürümleri:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET framework sürümleri:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
  [CustomDumpItem Yapısı](../../../../docs/framework/unmanaged-api/hosting/customdumpitem-structure.md)  

@@ -1,27 +1,15 @@
 ---
-title: "DataContract Yedeği"
-ms.custom: 
+title: DataContract Yedeği
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: b0188f3c-00a9-4cf0-a887-a2284c8fb014
-caps.latest.revision: "21"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: f14b69cba50839f3c4105b286af4de0523385b38
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 3fd2bf028ccb2f75210d5e3fc039bdad7e1e065a
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="datacontract-surrogate"></a>DataContract Yedeği
-Bu örnek nasıl seri hale getirme ve seri durumdan çıkarma, şema verme ve şema alma veri sözleşmesi kullanılarak özelleştirilebilir gibi işlemleri sınıfı vekil gösterir. Bu örnek senaryoda burada veri seri hale getirilmiş ve arasında aktarılan bir istemci ve sunucu bir yedek kullanmayı gösterir bir [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] istemci ve hizmet.  
+Bu örnek nasıl seri hale getirme ve seri durumdan çıkarma, şema verme ve şema alma veri sözleşmesi kullanılarak özelleştirilebilir gibi işlemleri sınıfı vekil gösterir. Bu örnek senaryoda burada veri seri hale getirilmiş ve bir Windows Communication Foundation (WCF) istemci ile hizmet arasında aktarılan bir istemci ve sunucu bir yedek kullanmayı gösterir.  
   
 > [!NOTE]
 >  Kurulum yordamı ve yapı yönergeleri Bu örnek için bu konunun sonunda yer alır.  
@@ -276,7 +264,7 @@ public void ExportContract(WsdlExporter exporter, WsdlContractConversionContext 
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  Bu dizin mevcut değilse, Git [Windows Communication Foundation (WCF) ve .NET Framework 4 için Windows Workflow Foundation (WF) örnek](http://go.microsoft.com/fwlink/?LinkId=150780) tüm indirmek için [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] ve [!INCLUDE[wf1](../../../../includes/wf1-md.md)] örnekleri. Bu örnek aşağıdaki dizinde bulunur.  
+>  Bu dizin mevcut değilse, Git [Windows Communication Foundation (WCF) ve .NET Framework 4 için Windows Workflow Foundation (WF) örnek](http://go.microsoft.com/fwlink/?LinkId=150780) tüm Windows Communication Foundation (WCF) indirmek için ve [!INCLUDE[wf1](../../../../includes/wf1-md.md)] örnekleri. Bu örnek aşağıdaki dizinde bulunur.  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Extensibility\DataContract`  
   

@@ -1,13 +1,6 @@
 ---
-title: "Nasıl yapılır: Çizgileri Birleştirme"
-ms.custom: 
+title: 'Nasıl yapılır: Çizgileri Birleştirme'
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-winforms
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -21,19 +14,14 @@ helpviewer_keywords:
 - lines [Windows Forms], joining
 - graphics [Windows Forms], joining lines
 ms.assetid: 9fc480c2-3c75-4fd1-8ab5-296a99e820e2
-caps.latest.revision: "14"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: d12cc7b4b4c878ec812190fd56a1face64118ab4
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: cecced7b32af7187cb1ef072921f0ff28f04adad
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-join-lines"></a>Nasıl yapılır: Çizgileri Birleştirme
-Satır birleştirme, uçları karşıladığında veya üst üste iki çizgiyle biçimlendirilmiş ortak alandır. [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)]üç çizgi birleştirme stili sağlar: gönye, eğim ve yuvarlar. Çizgisi birleştirme stili bir özelliğidir <xref:System.Drawing.Pen> sınıfı. Çizgisi birleştirme stili için belirttiğinizde bir <xref:System.Drawing.Pen> nesnesi, birleştirme stili herhangi bir bağlı olan tüm satırları uygulanacak <xref:System.Drawing.Drawing2D.GraphicsPath> nesne bu kalem kullanarak çizilir.  
+Satır birleştirme, uçları karşıladığında veya üst üste iki çizgiyle biçimlendirilmiş ortak alandır. [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] üç çizgi birleştirme stili sağlar: gönye, eğim ve yuvarlar. Çizgisi birleştirme stili bir özelliğidir <xref:System.Drawing.Pen> sınıfı. Çizgisi birleştirme stili için belirttiğinizde bir <xref:System.Drawing.Pen> nesnesi, birleştirme stili herhangi bir bağlı olan tüm satırları uygulanacak <xref:System.Drawing.Drawing2D.GraphicsPath> nesne bu kalem kullanarak çizilir.  
   
  Aşağıdaki çizimde eğik çizgi birleştirme örneğin sonuçlarını gösterir.  
   

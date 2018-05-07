@@ -1,27 +1,15 @@
 ---
-title: "Genişletilebilirlik"
-ms.custom: 
+title: Genişletilebilirlik
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: cd7ddffc-a261-44aa-bd50-33c1c74f0df0
-caps.latest.revision: "6"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: d1d8ea4987d918da79dcf1f69b842f19901e63a5
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
-ms.translationtype: MT
+ms.openlocfilehash: 7cba21715a6a0347e910300de46c1e47fd6e30bf
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="extensibility"></a>Genişletilebilirlik
-Bu bölümde özel genişletilebilirlik ve diğer özellikleri ile ilgilenir örnekleri içeren [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)].  
+Bu bölüm, özel genişletilebilirlik ve diğer özellikleri Windows Communication Foundation (WCF) örnekleri içerir.  
   
 ## <a name="in-this-section"></a>Bu Bölümde  
  [Kanal Genişletilebilirliği](../../../../docs/framework/wcf/samples/channels-extensibility.md)  
@@ -58,7 +46,7 @@ Bu bölümde özel genişletilebilirlik ve diğer özellikleri ile ilgilenir ör
  Özel ileti veri biçimleri genişletilebilirlik noktaları nasıl tüketebileceği gösterir.  
   
  [Özel İleti Filtresi](../../../../docs/framework/wcf/samples/custom-message-filter.md)  
- gösteren ileti değiştirme filtreler [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] Uç noktalara iletileri gönderme kullanır.  
+ uç noktaları iletileri gönderme Windows Communication Foundation (WCF) kullanan ileti filtreleri değiştirmek gösterilmiştir.  
   
  [Özel Hizmet Konağı](../../../../docs/framework/wcf/samples/custom-service-host.md)  
  Özel bir türevi kullanımı gösterilmiştir <xref:System.ServiceModel.ServiceHost> hizmet çalışma zamanı davranışını değiştirmek için sınıf.  

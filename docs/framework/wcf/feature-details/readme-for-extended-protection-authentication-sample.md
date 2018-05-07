@@ -1,24 +1,14 @@
 ---
-title: "Genişletilmiş Koruma Kimlik Doğrulama için Beni Oku Örnek"
-ms.custom: 
+title: Genişletilmiş Koruma Kimlik Doğrulama için Beni Oku Örnek
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 80bf2e97-398d-4db5-9040-d96478a2ccab
-caps.latest.revision: "3"
 author: BrucePerlerMS
-ms.author: bruceper
 manager: mbaldwin
-ms.workload: dotnet
-ms.openlocfilehash: 78e787c129c0161e8730472124ee4162e2d1ba9d
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: d45271180b7f00ba78d106f2a93d5860375da5f1
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="readme-for-extended-protection-authentication-sample"></a>Genişletilmiş Koruma Kimlik Doğrulama için Beni Oku Örnek
 Genişletilmiş koruma, bir saldırgan ("man-in--middle") istemci kimlik bilgilerini yakalar ve bunları istemcinin hedeflenen sunucuda güvenlikli kaynaklara erişmek için kullandığı man-in--middle (MITM) saldırılarına karşı korumak için bir güvenlik girişimidir.  

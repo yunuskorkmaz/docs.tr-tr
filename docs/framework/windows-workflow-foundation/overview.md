@@ -1,24 +1,12 @@
 ---
 title: Windows iş akışı genel bakış
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.tgt_pltfrm: ''
-ms.topic: article
 ms.assetid: fc44adbe-1412-49ae-81af-0298be44aae6
-caps.latest.revision: 17
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: bc1aa65b413b87b27c05e7a12ce607d1cd30b89b
-ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
+ms.openlocfilehash: 568797259087129ab4fc87a1f3523b0cce88eb4b
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/30/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="windows-workflow-overview"></a>Windows iş akışı genel bakış
 Bir iş akışı olarak adlandırılan elemental birimler kümesidir *etkinlikleri* gerçek işlem açıklayan model olarak depolanır. İş akışı yürütme ve kısa veya uzun süre çalışan iş parçalarını bağımlı ilişkiler sırasını açıklayan bir yol sağlar. Bu iş modeli aracılığıyla baştan geçirir ve etkinlikleri, kişiler veya sistem işlevleri tarafından yürütülen.  
@@ -34,7 +22,7 @@ Bir iş akışı olarak adlandırılan elemental birimler kümesidir *etkinlikle
   
  Bu sınıfların her biri olarak gösterilen çekirdek etkinlik çalışma zamanı saran bir <xref:System.Activities.ActivityInstance> Etkinlik yürütme sorumlu. Birkaç da olabilir <xref:System.Activities.ActivityInstance> eşzamanlı olarak çalışan bir uygulama etki alanı içindeki nesneleri.  
   
- Yukarıdaki üç ana etkileşim nesnelerin her biri için bir iş akışı program olarak adlandırılan etkinliklerin ağacından oluşturulur. Bu tür veya sarmalar özel bir ana bilgisayar kullanarak <xref:System.Activities.ActivityInstance>, konsol uygulamaları dahil olmak üzere herhangi bir Windows işlemi içinde iş akışları yürütülebilir form tabanlı uygulamalar, Windows Hizmetleri [!INCLUDE[vstecasp](../../../includes/vstecasp-md.md)] Web siteleri ve [!INCLUDE[indigo1](../../../includes/indigo1-md.md)]Hizmetleri.  
+ Yukarıdaki üç ana etkileşim nesnelerin her biri için bir iş akışı program olarak adlandırılan etkinliklerin ağacından oluşturulur. Bu tür veya sarmalar özel bir ana bilgisayar kullanarak <xref:System.Activities.ActivityInstance>, konsol uygulamaları dahil olmak üzere herhangi bir Windows işlemi içinde iş akışları yürütülebilir form tabanlı uygulamalar, Windows Hizmetleri [!INCLUDE[vstecasp](../../../includes/vstecasp-md.md)] Web siteleri ve Windows Communication Foundation () WCF) hizmetlerini.  
   
  ![Ana bilgisayar işlemi iş akışı bileşenlerinde](../../../docs/framework/windows-workflow-foundation/media/44c79d1d-178b-4487-87ed-3e33015a3842.gif "44c79d1d-178b-4487-87ed-3e33015a3842")  
 Ana bilgisayar işlemi iş akışı bileşenleri  

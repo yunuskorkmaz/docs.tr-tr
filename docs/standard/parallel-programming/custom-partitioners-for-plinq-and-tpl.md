@@ -1,31 +1,20 @@
 ---
-title: "PLINQ ve TPL için Özel Bölümleyiciler"
-ms.custom: 
+title: PLINQ ve TPL için Özel Bölümleyiciler
 ms.date: 03/30/2017
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
 ms.technology: dotnet-standard
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
 helpviewer_keywords:
 - tasks, partitioners
 ms.assetid: 96153688-9a01-47c4-8430-909cee9a2887
-caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-- dotnetcore
-ms.openlocfilehash: bc409a528dd095d3defb0026a48430b10a3ba6f3
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: 0868ce76f82ed0575154744d9ab02814a0bd990a
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="custom-partitioners-for-plinq-and-tpl"></a>PLINQ ve TPL için Özel Bölümleyiciler
 Bir veri kaynağı üzerinde bir işlemi paralel hale için gerekli adımları için biri *bölüm* birden çok iş parçacığı tarafından eşzamanlı olarak erişilebilir birden çok bölümlere kaynak. PLINQ ve görev paralel kitaplığı (TPL) saydam bir paralel sorgu yazma ne zaman çalışması varsayılan bölümleyiciler sağlayın veya <xref:System.Threading.Tasks.Parallel.ForEach%2A> döngü. Daha Gelişmiş senaryolar için kendi bölümleyici ekleyebilirsiniz.  
@@ -97,10 +86,10 @@ Bir veri kaynağı üzerinde bir işlemi paralel hale için gerekli adımları i
 |----------------------|-------------------------------------------|----------------------------------------|-----------------|  
 |<xref:System.Collections.Concurrent.OrderablePartitioner%601.GetOrderablePartitions%2A>|Aralık bölümleme kullanır|Belirtilen bölüm sayısı için listeler için en iyi duruma getirilmiş öbek kullanır bölümlendirme|Kullanır, statik bir bölüm sayısı oluşturarak öbek bölümleme.|  
 |<xref:System.Collections.Concurrent.OrderablePartitioner%601.GetOrderableDynamicPartitions%2A?displayProperty=nameWithType>|Desteklenmeyen atar özel durumu|Listeler için en iyi duruma getirilmiş öbek kullanır bölümlendirme ve dinamik bölümleri|Kullanır, dinamik bir bölüm sayısı oluşturarak öbek bölümleme.|  
-|<xref:System.Collections.Concurrent.OrderablePartitioner%601.KeysOrderedInEachPartition%2A>|Döndürür`true`|Döndürür`true`|Döndürür`true`|  
-|<xref:System.Collections.Concurrent.OrderablePartitioner%601.KeysOrderedAcrossPartitions%2A>|Döndürür`true`|Döndürür`false`|Döndürür`false`|  
-|<xref:System.Collections.Concurrent.OrderablePartitioner%601.KeysNormalized%2A>|Döndürür`true`|Döndürür`true`|Döndürür`true`|  
-|<xref:System.Collections.Concurrent.Partitioner%601.SupportsDynamicPartitions%2A>|Döndürür`false`|Döndürür`true`|Döndürür`true`|  
+|<xref:System.Collections.Concurrent.OrderablePartitioner%601.KeysOrderedInEachPartition%2A>|döndürür `true`|döndürür `true`|döndürür `true`|  
+|<xref:System.Collections.Concurrent.OrderablePartitioner%601.KeysOrderedAcrossPartitions%2A>|döndürür `true`|döndürür `false`|döndürür `false`|  
+|<xref:System.Collections.Concurrent.OrderablePartitioner%601.KeysNormalized%2A>|döndürür `true`|döndürür `true`|döndürür `true`|  
+|<xref:System.Collections.Concurrent.Partitioner%601.SupportsDynamicPartitions%2A>|döndürür `false`|döndürür `true`|döndürür `true`|  
   
 ### <a name="dynamic-partitions"></a>Dinamik bölümleri  
  Kullanılacak bölümleyici düşünüyorsanız bir <xref:System.Threading.Tasks.Parallel.ForEach%2A> yöntemi, sağlayabilmelidir bölümleri dinamik sayısını döndürür. Başka bir deyişle, döngü yürütme sırasında herhangi bir zamanda bölümleyici bir yeni bölümü isteğe bağlı için bir numaralandırıcı sağlayabilir. Temel olarak, yeni bir paralel görev döngü ekler her görev için yeni bir bölüm ister. Verilerin orderable gerekiyorsa, ardından öğesinden türetilen <xref:System.Collections.Concurrent.OrderablePartitioner%601?displayProperty=nameWithType> böylece her bölüm her öğe benzersiz bir dizin atanır.  
@@ -112,7 +101,7 @@ Bir veri kaynağı üzerinde bir işlemi paralel hale için gerekli adımları i
   
 -   Varsa <xref:System.Collections.Concurrent.Partitioner%601.GetPartitions%2A> çağrılan bağımsız değişkeni sıfır veya daha az `partitionsCount`, throw <xref:System.ArgumentOutOfRangeException>. PLINQ ve TPL hiçbir zaman içinde geçecek rağmen bir `partitionCount` 0 değerine eşit, ancak yine de olasılığını karşı koruma öneririz.  
   
--   <xref:System.Collections.Concurrent.Partitioner%601.GetPartitions%2A>ve <xref:System.Collections.Concurrent.OrderablePartitioner%601.GetOrderablePartitions%2A> her zaman döndürmelidir `partitionsCount` bölüm sayısı. Bölümleyici veri dışında çalışır ve istendiği gibi birçok bölüm oluşturulamıyor, yöntem her kalan bölümleri için boş bir numaralandırıcı döndürmelidir. PLINQ ve TPL Aksi takdirde, özel durum oluşturacak bir <xref:System.InvalidOperationException>.  
+-   <xref:System.Collections.Concurrent.Partitioner%601.GetPartitions%2A> ve <xref:System.Collections.Concurrent.OrderablePartitioner%601.GetOrderablePartitions%2A> her zaman döndürmelidir `partitionsCount` bölüm sayısı. Bölümleyici veri dışında çalışır ve istendiği gibi birçok bölüm oluşturulamıyor, yöntem her kalan bölümleri için boş bir numaralandırıcı döndürmelidir. PLINQ ve TPL Aksi takdirde, özel durum oluşturacak bir <xref:System.InvalidOperationException>.  
   
 -   <xref:System.Collections.Concurrent.Partitioner%601.GetPartitions%2A>, <xref:System.Collections.Concurrent.OrderablePartitioner%601.GetOrderablePartitions%2A>, <xref:System.Collections.Concurrent.Partitioner%601.GetDynamicPartitions%2A>, ve <xref:System.Collections.Concurrent.OrderablePartitioner%601.GetOrderableDynamicPartitions%2A> hiçbir zaman döndürmelidir `null` (`Nothing` Visual Basic'te). İçermiyorlarsa PLINQ / TPL throw bir <xref:System.InvalidOperationException>.  
   

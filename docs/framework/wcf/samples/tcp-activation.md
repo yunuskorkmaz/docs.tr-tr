@@ -1,24 +1,12 @@
 ---
-title: "TCP Etkinleştirme"
-ms.custom: 
+title: TCP Etkinleştirme
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: bf8c215c-0228-4f4f-85c2-e33794ec09a7
-caps.latest.revision: "34"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: e12f6df86e5ee24152fe0ec7835301c100e4ba19
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
-ms.translationtype: MT
+ms.openlocfilehash: 3627307c74604f30c77927067d302baf41b1c536
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="tcp-activation"></a>TCP Etkinleştirme
 Bu örnek net.tcp protokolü üzerinden iletişim kuran bir hizmeti etkinleştirmek için Windows İşlem Etkinleştirme Hizmetleri (WAS) kullanan bir hizmet barındırma gösterir. Bu örnek dayanır [Başlarken](../../../../docs/framework/wcf/samples/getting-started-sample.md).  
@@ -31,7 +19,7 @@ Bu örnek net.tcp protokolü üzerinden iletişim kuran bir hizmeti etkinleştir
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  Bu dizin mevcut değilse, Git [Windows Communication Foundation (WCF) ve .NET Framework 4 için Windows Workflow Foundation (WF) örnek](http://go.microsoft.com/fwlink/?LinkId=150780) tüm indirmek için [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] ve [!INCLUDE[wf1](../../../../includes/wf1-md.md)] örnekleri. Bu örnek aşağıdaki dizinde bulunur.  
+>  Bu dizin mevcut değilse, Git [Windows Communication Foundation (WCF) ve .NET Framework 4 için Windows Workflow Foundation (WF) örnek](http://go.microsoft.com/fwlink/?LinkId=150780) tüm Windows Communication Foundation (WCF) indirmek için ve [!INCLUDE[wf1](../../../../includes/wf1-md.md)] örnekleri. Bu örnek aşağıdaki dizinde bulunur.  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Services\Hosting\WASHost\TCPActivation`  
   
@@ -151,7 +139,7 @@ Press <ENTER> to terminate client.
   
 ### <a name="to-set-up-build-and-run-the-sample"></a>Ayarlamak için derleme ve örnek çalıştırın  
   
-1.  Emin [!INCLUDE[iisver](../../../../includes/iisver-md.md)] yüklenir. [!INCLUDE[iisver](../../../../includes/iisver-md.md)]WAS etkinleştirme için gereklidir.  
+1.  Emin [!INCLUDE[iisver](../../../../includes/iisver-md.md)] yüklenir. [!INCLUDE[iisver](../../../../includes/iisver-md.md)] WAS etkinleştirme için gereklidir.  
   
 2.  Gerçekleştirilen mutlaka [kerelik Kurulum prosedürü Windows Communication Foundation örnekleri için](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md).  
   
@@ -186,7 +174,7 @@ Press <ENTER> to terminate client.
         ```  
   
         > [!NOTE]
-        >  Bu komut, metnin tek bir satırdır. Bu komut /servicemodelsamples uygulama tarafından http://localhost/servicemodelsamples ve net.tcp://localhost/servicemodelsamples kullanarak erişilmesini sağlar.  
+        >  Bu komut, metnin tek bir satırdır. Bu komut her ikisini de kullanarak erişilecek /servicemodelsamples uygulamayı etkinleştirir http://localhost/servicemodelsamples ve net.tcp://localhost/servicemodelsamples.  
   
 4.  Çözüm C# veya Visual Basic .NET sürümünü oluşturmak için'ndaki yönergeleri izleyin [Windows Communication Foundation örnekleri derleme](../../../../docs/framework/wcf/samples/building-the-samples.md).  
   

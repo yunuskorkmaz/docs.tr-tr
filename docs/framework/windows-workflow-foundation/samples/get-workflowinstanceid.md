@@ -1,23 +1,12 @@
 ---
 title: WorkflowInstanceID Al
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: bd7eea3b-1c28-4b84-9a67-003bc553aa81
-caps.latest.revision: "6"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: d8fc0edc1e128e03a18c512fc0be03a02537ba71
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: fbfaf52931345571e5125200fe467dcc098b9dc3
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="get-workflowinstanceid"></a>WorkflowInstanceID Al
 Bu örnek özel etkinlik kullanımı gösterilmiştir `GetWorkflowInstanceId` iş akışı örneği kimliğine döndürmek için  
@@ -28,7 +17,7 @@ Bu örnek özel etkinlik kullanımı gösterilmiştir `GetWorkflowInstanceId` i�
 ## <a name="discussion"></a>Tartışma  
  Çalışan bir iş akışı örneği kimliği alma kod yazma gerektirir. Tam bildirim temelli bir iş akışını yazmak istiyorsanız, iş akışı örneği kimliği yazma deneyimini tam bildirim temelli bir iş akışı sağlamak için iş akışı içinde döndürebilir ve böylece etkinliğin başvurulamıyor aktivite gerekir. Birçok senaryo örneği kimliği erişmesi: günlüğü veya denetim amacıyla ya da bir istemcisine geri gelecekteki ilişkilendirme için örnek kimliği sağlayarak uygulama düzeyi bağıntı yapmak için birkaç örnek verilmiştir (Bu etkinliği içinde kullanarak örneğin, bir SendReply etkinliği).  
   
- `GetWorkflowInstanceId`olarak uygulanan bir <xref:System.Activities.CodeActivity%601> türünde bir değer döndürmesi gerekir çünkü <xref:System.Guid>, ve erişimi olmalıdır <xref:System.Activities.CodeActivityContext> iş akışının almak için örnek kimliği Uygulaması oldukça basittir.  
+ `GetWorkflowInstanceId` olarak uygulanan bir <xref:System.Activities.CodeActivity%601> türünde bir değer döndürmesi gerekir çünkü <xref:System.Guid>, ve erişimi olmalıdır <xref:System.Activities.CodeActivityContext> iş akışının almak için örnek kimliği Uygulaması oldukça basittir.  
   
 ```  
 public sealed class GetWorkflowInstanceId : CodeActivity<Guid>  
@@ -45,6 +34,6 @@ protected override Guid Execute(CodeActivityContext context)
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  Bu dizin mevcut değilse, Git [Windows Communication Foundation (WCF) ve .NET Framework 4 için Windows Workflow Foundation (WF) örnek](http://go.microsoft.com/fwlink/?LinkId=150780) tüm indirmek için [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] ve [!INCLUDE[wf1](../../../../includes/wf1-md.md)] örnekleri. Bu örnek aşağıdaki dizinde bulunur.  
+>  Bu dizin mevcut değilse, Git [Windows Communication Foundation (WCF) ve .NET Framework 4 için Windows Workflow Foundation (WF) örnek](http://go.microsoft.com/fwlink/?LinkId=150780) tüm Windows Communication Foundation (WCF) indirmek için ve [!INCLUDE[wf1](../../../../includes/wf1-md.md)] örnekleri. Bu örnek aşağıdaki dizinde bulunur.  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WF\Scenario\ActivityLibrary\GetWorkflowInstanceId`

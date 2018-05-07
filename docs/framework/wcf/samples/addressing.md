@@ -1,24 +1,12 @@
 ---
 title: Adres Ayarlama
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: d438e6f2-d0f3-43aa-b259-b51b5bda2e64
-caps.latest.revision: "21"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 21339d071ac26f073d0495814744535bd84f3a22
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 94ac903afb27f1b87f0ca8bf05cb891d0d9ee34c
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="addressing"></a>Adres Ayarlama
 Adresleme örnek çeşitli yönleri ve uç nokta adresleri özelliklerini gösterir. Örnek dayanır [Başlarken](../../../../docs/framework/wcf/samples/getting-started-sample.md). Bu örnekte hizmet kendiliğinden barındırılır. Hem hizmet hem de istemci konsol uygulamalardır. Hizmet mutlak bitiş noktası adreslerini birleşimini kullanarak birden çok uç nokta tanımlar.  
@@ -51,7 +39,7 @@ Adresleme örnek çeşitli yönleri ve uç nokta adresleri özelliklerini göste
           contract="Microsoft.ServiceModel.Samples.ICalculator" />  
 ```  
   
- Bu durumda, göreli adresi boştur (""), uç nokta adresi taban adresi ile aynıdır. Gerçek bitiş adresini 8000/servicemodelsamples/hizmetidir.  
+ Bu durumda, göreli adresi boştur (""), uç nokta adresi taban adresi ile aynıdır. Gerçek bitiş adresi http://localhost:8000/servicemodelsamples/service.  
   
  İkinci uç nokta tanımı, ayrıca aşağıdaki örnek yapılandırmada gösterildiği gibi bir göreli adresini belirtir.  
   
@@ -64,7 +52,7 @@ Adresleme örnek çeşitli yönleri ve uç nokta adresleri özelliklerini göste
           contract="Microsoft.ServiceModel.Samples.ICalculator" />  
 ```  
   
- Göreli adresi "test", taban adresi eklenir. Gerçek bitiş noktası 8000/servicemodelsamples/service/test adresidir.  
+ Göreli adresi "test", taban adresi eklenir. Gerçek bitiş adresi http://localhost:8000/servicemodelsamples/service/test.  
   
  Aşağıdaki örnek yapılandırmada gösterildiği gibi üçüncü uç nokta tanımı mutlak bir adres belirtir.  
   
@@ -74,7 +62,7 @@ Adresleme örnek çeşitli yönleri ve uç nokta adresleri özelliklerini göste
           contract="Microsoft.ServiceModel.Samples.ICalculator" />  
 ```  
   
- Temel adres adresi herhangi bir rol oynar. Gerçek bitiş noktası hello/http://localhost:8001/servicemodelsamples adresidir.  
+ Temel adres adresi herhangi bir rol oynar. Gerçek bitiş adresi http://localhost:8001/hello/servicemodelsamples.  
   
  Mutlak bir adres ve farklı bir aktarım dördüncü uç noktası adresi belirtir — TCP. Temel adres adresi herhangi bir rol oynar. Gerçek bitiş adresini net.tcp://localhost olan: servicemodelsamples/9000/hizmet.  
   
@@ -143,7 +131,7 @@ Press <ENTER> to terminate client.
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  Bu dizin mevcut değilse, Git [Windows Communication Foundation (WCF) ve .NET Framework 4 için Windows Workflow Foundation (WF) örnek](http://go.microsoft.com/fwlink/?LinkId=150780) tüm indirmek için [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] ve [!INCLUDE[wf1](../../../../includes/wf1-md.md)] örnekleri. Bu örnek aşağıdaki dizinde bulunur.  
+>  Bu dizin mevcut değilse, Git [Windows Communication Foundation (WCF) ve .NET Framework 4 için Windows Workflow Foundation (WF) örnek](http://go.microsoft.com/fwlink/?LinkId=150780) tüm Windows Communication Foundation (WCF) indirmek için ve [!INCLUDE[wf1](../../../../includes/wf1-md.md)] örnekleri. Bu örnek aşağıdaki dizinde bulunur.  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Services\Addressing`  
   

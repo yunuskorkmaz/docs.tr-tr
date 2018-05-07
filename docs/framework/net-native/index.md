@@ -1,14 +1,6 @@
 ---
 title: .NET Yerel ile Uygulama Derleme
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 helpviewer_keywords:
 - native compilation
 - .NET and native code
@@ -16,20 +8,16 @@ helpviewer_keywords:
 - .NET Native
 - C# and native compilation
 ms.assetid: 47cd5648-9469-4b1d-804c-43cc04384045
-caps.latest.revision: 27
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: dec4d465b53f939f8fa711950ba6a000bd304e13
-ms.sourcegitcommit: 2142a4732bb4ff519b9817db4c24a237b9810d4b
+ms.openlocfilehash: 1ecc707bb07d6d17ae4115b483cc8f52083f3933
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/05/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="compiling-apps-with-net-native"></a>.NET Yerel ile Uygulama Derleme
-[!INCLUDE[net_native](../../../includes/net-native-md.md)]Visual Studio 2015 ve sonraki sürümleri ile birlikte oluşturmak ve Windows uygulamalarını dağıtmak için bir ön derleme teknolojisidir. Ayrıca yönetilen kod (C# veya Visual Basic) ve bu hedef .NET Framework ve Windows 10 yerel koda yazılan uygulamaları sürümünü otomatik olarak derler.  
+[!INCLUDE[net_native](../../../includes/net-native-md.md)] Visual Studio 2015 ve sonraki sürümleri ile birlikte oluşturmak ve Windows uygulamalarını dağıtmak için bir ön derleme teknolojisidir. Ayrıca yönetilen kod (C# veya Visual Basic) ve bu hedef .NET Framework ve Windows 10 yerel koda yazılan uygulamaları sürümünü otomatik olarak derler.  
   
  Genellikle, .NET Framework hedefleyen uygulamalar Ara dile (IL) derlenir. Çalışma zamanında tam zamanında (JIT) Derleyici IL yerel koda çevirir. Buna karşılık, [!INCLUDE[net_native](../../../includes/net-native-md.md)] Windows uygulamaları doğrudan yerel kod derler. Geliştiriciler için bu anlamına gelir:  
   
@@ -58,9 +46,9 @@ Ancak [!INCLUDE[net_native](../../../includes/net-native-md.md)] birden çok der
   
 -   [!INCLUDE[net_native](../../../includes/net-native-md.md)] Çalışma zamanı statik ön derlemesi için en iyi duruma getirilmiş ve çoğunluğu durumlarda üstün performans sunar. Aynı anda geliştiricilere kadar üretken Bul çekirdek yansıma özellikleri korur.  
   
--   [!INCLUDE[net_native](../../../includes/net-native-md.md)]kullandığı aynı geri statik ön derleme senaryoları için en iyi duruma getirilmiş C++ derleyicisi olarak sonlandırın.  
+-   [!INCLUDE[net_native](../../../includes/net-native-md.md)] kullandığı aynı geri statik ön derleme senaryoları için en iyi duruma getirilmiş C++ derleyicisi olarak sonlandırın.  
   
- [!INCLUDE[net_native](../../../includes/net-native-md.md)]başlık altında C++ aynı veya benzer araçları kullandığından C++ performans yararlarını yönetilen kod geliştiricilerin bu tabloda gösterildiği gibi Getir yapabiliyor.  
+ [!INCLUDE[net_native](../../../includes/net-native-md.md)] başlık altında C++ aynı veya benzer araçları kullandığından C++ performans yararlarını yönetilen kod geliştiricilerin bu tabloda gösterildiği gibi Getir yapabiliyor.  
   
 ||[!INCLUDE[net_native](../../../includes/net-native-md.md)]|C++|  
 |-|----------------------------------------------------------------|-----------|  

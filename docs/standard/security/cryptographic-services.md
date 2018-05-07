@@ -1,13 +1,7 @@
 ---
 title: Şifreleme Hizmetleri
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net
-ms.reviewer: ''
-ms.suite: ''
 ms.technology: dotnet-standard
-ms.tgt_pltfrm: ''
-ms.topic: article
 helpviewer_keywords:
 - cryptography [.NET Framework]
 - pattern of derived class inheritance
@@ -30,18 +24,13 @@ helpviewer_keywords:
 - cryptography [.NET Framework], about
 - random number generation
 ms.assetid: f96284bc-7b73-44b5-ac59-fac613ad09f8
-caps.latest.revision: 34
 author: mairaw
 ms.author: mairaw
-manager: wpickett
-ms.workload:
-- dotnet
-- dotnetcore
-ms.openlocfilehash: 02d399d85c53cd296fc5f49ca0ec4b51b14ad677
-ms.sourcegitcommit: 2e8acae16ae802f2d6d04e3ce0a6dbf04e476513
+ms.openlocfilehash: f8193932deac3854b07085cba9faac76e68c4da8
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="cryptographic-services"></a>Şifreleme Hizmetleri
 <a name="top"></a> Internet gibi ortak ağlara varlıklar arasında güvenli iletişim için bir araç sağlamaz. Böyle ağlar üzerinden iletişimi okumak veya hatta yetkisiz üçüncü taraflar tarafından değiştirilebilir açıktır. Şifreleme görüntülenmesini verilerin korunmasına yardımcı olur, veri değiştirildi ve aksi durumda güvenli kanal iletişimi için güvenli bir yol sağlanır olup olmadığını algılamak için yöntemler sağlar. Örneğin, veri bir şifreleme algoritması kullanılarak şifrelenmiş, şifrelenmiş bir duruma gönderilmesini ve daha sonra hedeflenen taraf tarafından şifresi. Bir üçüncü taraf şifrelenmiş veriler kesişirse geçirilirse zor olacaktır.  

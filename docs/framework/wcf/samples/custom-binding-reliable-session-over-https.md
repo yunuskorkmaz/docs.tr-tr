@@ -1,26 +1,12 @@
 ---
 title: HTTPS Üzerinden Özel Bağlama Güvenli Oturum
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 ms.assetid: 16aaa80d-3ffe-47c4-8b16-ec65c4d25f8d
-caps.latest.revision: 13
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 716970f87d52a7535b9d42abd333d22685fdafc4
-ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
+ms.openlocfilehash: d470a4e0af655a8a7895c1db6c2699796f3db933
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/27/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="custom-binding-reliable-session-over-https"></a>HTTPS Üzerinden Özel Bağlama Güvenli Oturum
 Bu örnek güvenilir oturumlar ile taşıma güvenliği SSL kullanımını göstermektedir. Güvenilir oturumlar WS güvenilir Mesajlaşma Protokolü uygular. WS güvenliği güvenilir oturumlar oluşturma tarafından güvenli bir güvenilir oturum olabilir. Ancak bazı durumlarda, HTTP taşıma güvenliği SSL ile kullanmayı tercih edebilirsiniz.  
@@ -30,7 +16,7 @@ Bu örnek güvenilir oturumlar ile taşıma güvenliği SSL kullanımını göst
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  Bu dizin mevcut değilse, Git [Windows Communication Foundation (WCF) ve .NET Framework 4 için Windows Workflow Foundation (WF) örnek](http://go.microsoft.com/fwlink/?LinkId=150780) tüm indirmek için [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] ve [!INCLUDE[wf1](../../../../includes/wf1-md.md)] örnekleri. Bu örnek aşağıdaki dizinde bulunur.  
+>  Bu dizin mevcut değilse, Git [Windows Communication Foundation (WCF) ve .NET Framework 4 için Windows Workflow Foundation (WF) örnek](http://go.microsoft.com/fwlink/?LinkId=150780) tüm Windows Communication Foundation (WCF) indirmek için ve [!INCLUDE[wf1](../../../../includes/wf1-md.md)] örnekleri. Bu örnek aşağıdaki dizinde bulunur.  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Binding\Custom\ReliableSessionOverHttps`  
   
@@ -115,7 +101,7 @@ Bu örnek güvenilir oturumlar ile taşıma güvenliği SSL kullanımını göst
   
  Belirtilen adres https:// düzenini kullanır.  
   
- Bu örnekte kullanılan sertifikanın Makecert.exe ile oluşturulan bir test sertifikası olduğundan, bir https erişmeye çalıştığınızda bir güvenlik uyarısı görünür: gibi adres https://localhost/servicemodelsamples/service.svc, tarayıcınızdan. İzin vermek için [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] istemci, yerinde bir test sertifikası ile çalışmak için bazı ek kod güvenlik uyarıyı gizlemek için istemciye eklendi. Bu kod, eşlik eden sınıfı değil ve gerekli üretim sertifikalar kullanıldığında.  
+ Bu örnekte kullanılan sertifikanın Makecert.exe ile oluşturulan bir test sertifikası olduğundan, bir https erişmeye çalıştığınızda bir güvenlik uyarısı görünür: gibi adres https://localhost/servicemodelsamples/service.svc, tarayıcınızdan. Bir test sertifikası yerinde çalışmak Windows Communication Foundation (WCF) istemcinin sağlamak için bazı ek kod güvenlik uyarıyı gizlemek için istemciye eklendi. Bu kod, eşlik eden sınıfı değil ve gerekli üretim sertifikalar kullanıldığında.  
 
 ```csharp
 // This code is required only for test certificates like those created by Makecert.exe.  

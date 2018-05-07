@@ -1,23 +1,15 @@
 ---
-title: "Eş Adı Çözümleme Protokolü"
-ms.custom: 
+title: Eş Adı Çözümleme Protokolü
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 11940511-c124-4d91-ae31-d4ed6e81ee58
-caps.latest.revision: "14"
 author: mcleblanc
 ms.author: markl
 manager: markl
-ms.workload: dotnet
-ms.openlocfilehash: ba38c7e42126bb70161dcb72ffdd6965e8def044
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 01e0bd36b35319c90fc46d8f5f97161147852c7f
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="peer-name-resolution-protocol"></a>Eş Adı Çözümleme Protokolü
 Eşler arası ortamlarda, eş belirli ad çözümleme sistemleri birbirlerinin ağ konumlarını (adresler, protokoller ve bağlantı noktaları) gidermek için adlarını veya diğer türlerinden birini kullanın. Geçmişte, diğer etki alanı adı sistemi (DNS) içinde eksiklikleri yanı sıra doğası gereği geçici bir bağlantı tarafından eş adı çözümleme karmaşık.  

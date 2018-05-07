@@ -1,29 +1,15 @@
 ---
 title: Gelişmiş Biçim Seçimi
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 ms.assetid: e02d9082-4d55-41d8-9329-98f6d1c77f06
-caps.latest.revision: 9
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 93d7fe0742e16abd92682094ca20d51488516e6e
-ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
-ms.translationtype: MT
+ms.openlocfilehash: 2d0e78bc1ec1dcd7e4a22b246f5cc35356f5f986
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/30/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="advanced-format-selection"></a>Gelişmiş Biçim Seçimi
-Bu örnek nasıl genişletileceğini gösterir [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] yeni giden yanıt formatları desteklemek için REST programlama modeli. Ayrıca, örnek bir görünüm stili programlama modeli nasıl uygulanabilir gösteren bir XHTML sayfası olarak yanıt dönmesini T4 şablon kullanır.  
+Bu örnek, yeni giden yanıt formatları desteklemek için Windows Communication Foundation (WCF) REST programlama modelini gösterilmiştir. Ayrıca, örnek bir görünüm stili programlama modeli nasıl uygulanabilir gösteren bir XHTML sayfası olarak yanıt dönmesini T4 şablon kullanır.  
   
 ## <a name="sample-details"></a>Örnek Ayrıntıları  
  Örnek hizmete istek yaptığında istemci kodu ile birlikte basit bir servis oluşur.  Hizmeti, aşağıdaki yöntemi imzası olan tek bir [WebGet] işlemi destekler: `Message EchoListWithGet(string list);`  
@@ -55,7 +41,7 @@ Bu örnek nasıl genişletileceğini gösterir [!INCLUDE[indigo1](../../../../in
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  Bu dizin mevcut değilse, Git [Windows Communication Foundation (WCF) ve .NET Framework 4 için Windows Workflow Foundation (WF) örnek](http://go.microsoft.com/fwlink/?LinkId=150780) tüm indirmek için [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] ve [!INCLUDE[wf1](../../../../includes/wf1-md.md)] örnekleri. Bu örnek aşağıdaki dizinde bulunur.  
+>  Bu dizin mevcut değilse, Git [Windows Communication Foundation (WCF) ve .NET Framework 4 için Windows Workflow Foundation (WF) örnek](http://go.microsoft.com/fwlink/?LinkId=150780) tüm Windows Communication Foundation (WCF) indirmek için ve [!INCLUDE[wf1](../../../../includes/wf1-md.md)] örnekleri. Bu örnek aşağıdaki dizinde bulunur.  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Web\AdvancedFormatSelection`  
   

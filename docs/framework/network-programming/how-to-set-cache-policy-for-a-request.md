@@ -1,32 +1,23 @@
 ---
-title: "Nasıl yapılır: bir istek için önbellek İlkesi ayarlama"
-ms.custom: 
+title: 'Nasıl yapılır: bir istek için önbellek İlkesi ayarlama'
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
 helpviewer_keywords:
 - request cache policies
 ms.assetid: 39c15e40-586b-4ac9-9cce-146f74b7e545
-caps.latest.revision: 
 author: mcleblanc
 ms.author: markl
 manager: markl
-ms.workload:
-- dotnet
-ms.openlocfilehash: 3ff59bab2963d78425f9b7f4b41bdb679ed8e6f6
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 98cd64aaab66d69c29c022d770b34bb0efdb4bef
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-set-cache-policy-for-a-request"></a>Nasıl yapılır: bir istek için önbellek İlkesi ayarlama
-Aşağıdaki örnek, bir istek için bir önbellek İlkesi ayarlanarak gösterir. Örnek giriş http://www.contoso.com/ gibi bir URI değil.  
+Aşağıdaki örnek, bir istek için bir önbellek İlkesi ayarlanarak gösterir. Örnek Giriş bir URI gibi http://www.contoso.com/.  
   
 ## <a name="example"></a>Örnek  
  Aşağıdaki kod örneğinde bir günden uzun önbelleğindeki olmadıysa önbellekten kullanılacak istenen kaynağa izin veren bir önbellek ilkesi oluşturur. Örnek kaynak önbellekten kullanılıp kullanılmadığını belirten bir ileti görüntüler — örneğin, `"The response was retrieved from the cache : False."`— ve ardından kaynak görüntüler. İstemci ve sunucu arasındaki tüm önbelleği tarafından bir istek yerine getirilmesi.  

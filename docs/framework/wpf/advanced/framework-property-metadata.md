@@ -1,27 +1,15 @@
 ---
-title: "Çerçeve Özelliği Meta Verileri"
-ms.custom: 
+title: Çerçeve Özelliği Meta Verileri
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-wpf
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - metadata [WPF], framework properties
 - framework property metadata [WPF]
 ms.assetid: 9962f380-b885-4b61-a62e-457397083fea
-caps.latest.revision: "19"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 4fec11a973572dce9e8d6f77bf65ce31ee77eb41
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: d968bc7a3033bd994590520c5cd5062d3c212b4f
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="framework-property-metadata"></a>Çerçeve Özelliği Meta Verileri
 Framework özellik meta veri seçenekleri WPF framework düzeyde olarak kabul nesne öğelerin özellikleri için bildirilen [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] mimarisi. Genel olarak, işleme, veri bağlama gibi bu özellikleri WPF çerçeve düzeyi ataması kapsar ve özellik sistem iyileştirmelerini tarafından işlenmesini [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] sunu [!INCLUDE[TLA2#tla_api#plural](../../../../includes/tla2sharptla-apisharpplural-md.md)] ve yürütülebilir. Çerçeve özellik meta verileri, belirli öğe özelliklerinin özelliğe özgü özellikleri belirlemek için bu sistemler tarafından sorgulanır.  
@@ -40,7 +28,7 @@ Framework özellik meta veri seçenekleri WPF framework düzeyde olarak kabul ne
   
 -   Bir öğenin üst öğesinin etkileyen yerleşim özelliklerini raporlama (<xref:System.Windows.FrameworkPropertyMetadata.AffectsParentArrange%2A>, <xref:System.Windows.FrameworkPropertyMetadata.AffectsParentMeasure%2A>). Bu bayrak varsayılan olarak ayarlanmış olduğu bazı örnekler <xref:System.Windows.Documents.FixedPage.Left%2A?displayProperty=nameWithType> ve <xref:System.Windows.Documents.Paragraph.KeepWithNext%2A?displayProperty=nameWithType>.  
   
--   <xref:System.Windows.FrameworkPropertyMetadata.Inherits%2A>. Varsayılan olarak, bağımlılık özellikleri değerlerini devralmaz. <xref:System.Windows.FrameworkPropertyMetadata.OverridesInheritanceBehavior%2A>Ayrıca bazı denetim birleştirme senaryolar için gerekli olan bir görsel ağaç içine seyahat devralma izlediğiniz sağlar.  
+-   <xref:System.Windows.FrameworkPropertyMetadata.Inherits%2A>. Varsayılan olarak, bağımlılık özellikleri değerlerini devralmaz. <xref:System.Windows.FrameworkPropertyMetadata.OverridesInheritanceBehavior%2A> Ayrıca bazı denetim birleştirme senaryolar için gerekli olan bir görsel ağaç içine seyahat devralma izlediğiniz sağlar.  
   
     > [!NOTE]
     >  Terim "özellik değerleri anlamına gelir bağımlılık özellikleri için belirli bir şey bağlamında devralır"; alt öğeler bir WPF çerçeve düzeyi yeteneğini nedeniyle üst öğelerden fiili bağımlılık özelliği değerinin devrettiği anlamına gelir [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] özellik sistemi. Yönetilen kod türü ve üyeler devralma türetilmiş türler yoluyla ile doğrudan ilgisi vardır. Ayrıntılar için bkz [özellik değeri devralma](../../../../docs/framework/wpf/advanced/property-value-inheritance.md).  
@@ -69,13 +57,13 @@ Framework özellik meta veri seçenekleri WPF framework düzeyde olarak kabul ne
 ## <a name="framework-property-metadata-merge-behavior"></a>Framework özellik meta verileri birleştirme davranışı  
  Çerçeve özellik meta verileri geçersiz kıldığınızda, farklı meta verilerin özellikleri birleştirilmiş değiştirildi ya.  
   
--   <xref:System.Windows.PropertyMetadata.PropertyChangedCallback%2A>birleştirilir. Yeni bir eklerseniz <xref:System.Windows.PropertyMetadata.PropertyChangedCallback%2A>, bu geri çağırma meta verilerinde depolanır. Belirtmezseniz, bir <xref:System.Windows.PropertyMetadata.PropertyChangedCallback%2A> değerini geçersiz kılar <xref:System.Windows.PropertyMetadata.PropertyChangedCallback%2A> meta verilerde belirtilen en yakın üst içinden bir başvuru olarak yükseltilir.  
+-   <xref:System.Windows.PropertyMetadata.PropertyChangedCallback%2A> birleştirilir. Yeni bir eklerseniz <xref:System.Windows.PropertyMetadata.PropertyChangedCallback%2A>, bu geri çağırma meta verilerinde depolanır. Belirtmezseniz, bir <xref:System.Windows.PropertyMetadata.PropertyChangedCallback%2A> değerini geçersiz kılar <xref:System.Windows.PropertyMetadata.PropertyChangedCallback%2A> meta verilerde belirtilen en yakın üst içinden bir başvuru olarak yükseltilir.  
   
 -   Gerçek özellik sistem davranışı <xref:System.Windows.PropertyMetadata.PropertyChangedCallback%2A> uygulamaları hiyerarşideki tüm meta veri sahipleri korunur ve bir tabloya eklenen için geri çağırmaları en derinde türetilmiş sınıf olan özellik sistemi tarafından yürütme sırasını sahip değildir önce çağrılır. Devralınan geri çağırmalar yalnızca bir kez, meta verilerde yerleştiren sınıfı tarafından sahip olunan olarak sayım çalıştırın.  
   
--   <xref:System.Windows.PropertyMetadata.DefaultValue%2A>değiştirilir. Belirtmezseniz, bir <xref:System.Windows.PropertyMetadata.PropertyChangedCallback%2A> değerini geçersiz kılar <xref:System.Windows.PropertyMetadata.DefaultValue%2A> meta verilerde belirtilen en yakın üst öğesinden gelir.  
+-   <xref:System.Windows.PropertyMetadata.DefaultValue%2A> değiştirilir. Belirtmezseniz, bir <xref:System.Windows.PropertyMetadata.PropertyChangedCallback%2A> değerini geçersiz kılar <xref:System.Windows.PropertyMetadata.DefaultValue%2A> meta verilerde belirtilen en yakın üst öğesinden gelir.  
   
--   <xref:System.Windows.PropertyMetadata.CoerceValueCallback%2A>uygulamaları değiştirilir. Yeni bir eklerseniz <xref:System.Windows.PropertyMetadata.CoerceValueCallback%2A>, bu geri çağırma meta verilerinde depolanır. Belirtmezseniz, bir <xref:System.Windows.PropertyMetadata.CoerceValueCallback%2A> değerini geçersiz kılar <xref:System.Windows.PropertyMetadata.CoerceValueCallback%2A> meta verilerde belirtilen en yakın üst içinden bir başvuru olarak yükseltilir.  
+-   <xref:System.Windows.PropertyMetadata.CoerceValueCallback%2A> uygulamaları değiştirilir. Yeni bir eklerseniz <xref:System.Windows.PropertyMetadata.CoerceValueCallback%2A>, bu geri çağırma meta verilerinde depolanır. Belirtmezseniz, bir <xref:System.Windows.PropertyMetadata.CoerceValueCallback%2A> değerini geçersiz kılar <xref:System.Windows.PropertyMetadata.CoerceValueCallback%2A> meta verilerde belirtilen en yakın üst içinden bir başvuru olarak yükseltilir.  
   
 -   Özellik sistem yalnızca davranıştır <xref:System.Windows.PropertyMetadata.CoerceValueCallback%2A> hemen meta verilerde çağrılır. Başvuru diğer <xref:System.Windows.PropertyMetadata.CoerceValueCallback%2A> hiyerarşi uygulamalarında korunur.  
   

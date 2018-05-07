@@ -1,22 +1,12 @@
 ---
-title: "Nasıl yapılır: ilgili öğeleri (XPath-LINQ-XML) bulma (Visual Basic)"
-ms.custom: 
+title: 'Nasıl yapılır: ilgili öğeleri (XPath-LINQ-XML) bulma (Visual Basic)'
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 6b0ef058-d704-48a5-98cd-33f00d088af9
-caps.latest.revision: "3"
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: 6153db1e77b957d35160d1de75f18e163817ba6b
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.openlocfilehash: 24a8f252d0c703cc7883ae1408120b8cae018331
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-find-related-elements-xpath-linq-to-xml-visual-basic"></a>Nasıl yapılır: ilgili öğeleri (XPath-LINQ-XML) bulma (Visual Basic)
 Bu konu, bir öğe başka bir öğe değeri tarafından başvurulan bir öznitelik seçme alma gösterir.  

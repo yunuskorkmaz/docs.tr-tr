@@ -1,11 +1,6 @@
 ---
 title: Daraltma (Visual Basic)
 ms.date: 07/20/2015
-ms.prod: .net
-ms.suite: 
-ms.technology:
-- devlang-visual-basic
-ms.topic: article
 f1_keywords:
 - vb.narrowing
 helpviewer_keywords:
@@ -15,14 +10,11 @@ helpviewer_keywords:
 - Narrowing keyword [Visual Basic]
 - data type conversion [Visual Basic]
 ms.assetid: a207ee91-aca4-4771-b4e2-713f029bf2bb
-caps.latest.revision: 
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: 50116c6212e919d4b9b35fc933d80dee14bd4ecf
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 54a18d0cc10e42829b48b0ef75bb77ab0d47b45f
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="narrowing-visual-basic"></a>Daraltma (Visual Basic)
 Belirten bir dönüşüm işleci (`CType`) bir sınıf veya yapı bazı özgün sınıf veya yapı olası değerlerini tutabilecek özellikte olmayabilecek türüne dönüştürür.  
@@ -36,12 +28,12 @@ Belirten bir dönüşüm işleci (`CType`) bir sınıf veya yapı bazı özgün 
   
  `Narrowing` Anahtar sözcüğü bu bağlamda kullanılabilir:  
   
- [Operator deyimi](../../../visual-basic/language-reference/statements/operator-statement.md)  
+ [Operator Deyimi](../../../visual-basic/language-reference/statements/operator-statement.md)  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [Operator deyimi](../../../visual-basic/language-reference/statements/operator-statement.md)  
- [Genişletme](../../../visual-basic/language-reference/modifiers/widening.md)  
- [Genişletme ve daraltma dönüşümleri](../../../visual-basic/programming-guide/language-features/data-types/widening-and-narrowing-conversions.md)  
- [Nasıl yapılır: bir işleci tanımlama](../../../visual-basic/programming-guide/language-features/procedures/how-to-define-an-operator.md)  
- [CType işlevi](../../../visual-basic/language-reference/functions/ctype-function.md)  
- [Option Strict deyimi](../../../visual-basic/language-reference/statements/option-strict-statement.md)
+ [Operator Deyimi](../../../visual-basic/language-reference/statements/operator-statement.md)  
+ [Widening](../../../visual-basic/language-reference/modifiers/widening.md)  
+ [Genişletme ve Daraltma Dönüştürmeleri](../../../visual-basic/programming-guide/language-features/data-types/widening-and-narrowing-conversions.md)  
+ [Nasıl yapılır: İşleç Tanımlama](../../../visual-basic/programming-guide/language-features/procedures/how-to-define-an-operator.md)  
+ [CType İşlevi](../../../visual-basic/language-reference/functions/ctype-function.md)  
+ [Option Strict Deyimi](../../../visual-basic/language-reference/statements/option-strict-statement.md)

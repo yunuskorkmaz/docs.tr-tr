@@ -1,28 +1,16 @@
 ---
 title: .NET Framework Geliştirme Kılavuzu
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 helpviewer_keywords:
 - .NET Framework, development guide
 ms.assetid: 26e3d285-24c3-435c-a797-9fe5affb8525
-caps.latest.revision: 13
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 3432ac629a6c754cf7f863b6444dc81b6f9919ef
-ms.sourcegitcommit: 9a4fe1a1c37b26532654b4bbe22d702237950009
+ms.openlocfilehash: 2ee74c0f2ae316c7dd36dd943dc5c8636ee53fb2
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="net-framework-development-guide"></a>.NET Framework Geliştirme Kılavuzu
 Bu bölümde, oluşturmak, yapılandırmak, hata ayıklama, güvenli ve .NET Framework uygulamalarınızı dağıtma açıklanmaktadır. Ayrıca bu bölüm dinamik programlama, birlikte çalışabilirlik, genişletilebilirlik, bellek yönetimi ve iş parçacığı oluşturma gibi teknoloji alanları hakkında bilgi sağlar.  

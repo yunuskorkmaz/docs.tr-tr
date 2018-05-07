@@ -1,13 +1,7 @@
 ---
 title: Özel Durumları İşleme ve Atma
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net
-ms.reviewer: ''
-ms.suite: ''
 ms.technology: dotnet-standard
-ms.tgt_pltfrm: ''
-ms.topic: article
 helpviewer_keywords:
 - exceptions [.NET Framework], handling
 - runtime, exceptions
@@ -17,18 +11,13 @@ helpviewer_keywords:
 - exceptions [.NET Framework]
 - common language runtime, exceptions
 ms.assetid: f99a1d29-a2a8-47af-9707-9909f9010735
-caps.latest.revision: 16
 author: mairaw
 ms.author: mairaw
-manager: wpickett
-ms.workload:
-- dotnet
-- dotnetcore
-ms.openlocfilehash: 82e314dacc9fb2657a3a7088a928b59d00282a5d
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: b71ffd9bfcfcb048f148ac1a3a418c03b9834ea2
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="handling-and-throwing-exceptions-in-net"></a>İşleme ve .NET özel durumları atma
 
@@ -61,7 +50,7 @@ Aşağıdaki tabloda ortak bazı özel durumlar ne bunlara neden olabilecek örn
 | Özel durum türü | Temel tür | Açıklama | Örnek |
 | -------------- | --------- | ----------- | ------- |
 | <xref:System.Exception> | <xref:System.Object> | Tüm özel durumlar için temel sınıf. | Hiçbiri (Bu özel durumun türetilmiş bir sınıf kullanın). |
-| <xref:System.IndexOutOfRangeException> | <xref:System.Exception> | Çalışma zamanı tarafından yalnızca bir dizi yanlış sıralandığında oluşturulur. | Geçerli aralığın dışında bir dizi dizin oluşturma:`arr[arr.Length+1]` |
+| <xref:System.IndexOutOfRangeException> | <xref:System.Exception> | Çalışma zamanı tarafından yalnızca bir dizi yanlış sıralandığında oluşturulur. | Geçerli aralığın dışında bir dizi dizin oluşturma: `arr[arr.Length+1]` |
 | <xref:System.NullReferenceException> | <xref:System.Exception> | Çalışma zamanı tarafından yalnızca null bir nesne başvurulduğunda oluşturulur. | `object o = null; o.ToString();` |
 | <xref:System.InvalidOperationException> | <xref:System.Exception> | Geçersiz bir durumda olduğunda yöntemler tarafından oluşturulur. | Çağırma `Enumerator.GetNext()` bir öğe temel alınan koleksiyonundan kaldırdıktan sonra. |
 | <xref:System.ArgumentException> | <xref:System.Exception> | Tüm bağımsız değişken özel durumlar için temel sınıf. | Hiçbiri (Bu özel durumun türetilmiş bir sınıf kullanın). |

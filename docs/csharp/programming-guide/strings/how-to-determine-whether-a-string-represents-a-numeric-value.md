@@ -1,22 +1,16 @@
 ---
-title: "Nasıl yapılır: Bir Dizenin Sayısal bir Değeri Temsil Edip Etmediğini Belirleme (C# Programlama Kılavuzu)"
+title: 'Nasıl yapılır: Bir Dizenin Sayısal bir Değeri Temsil Edip Etmediğini Belirleme (C# Programlama Kılavuzu)'
 ms.date: 07/20/2015
-ms.prod: .net
-ms.technology: devlang-csharp
-ms.topic: article
 helpviewer_keywords:
 - numeric strings [C#]
 - validating numeric input [C#]
 - strings [C#], numeric
 ms.assetid: a4e84e10-ea0a-489f-a868-503dded9d85f
-caps.latest.revision: "9"
-author: BillWagner
-ms.author: wiwagn
-ms.openlocfilehash: 850c5d0e7a246b2319ba841dae9884c90390d38c
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: f1e5efca7fb3088064b3f252675b8cae965717f0
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-determine-whether-a-string-represents-a-numeric-value-c-programming-guide"></a>Nasıl yapılır: Bir Dizenin Sayısal bir Değeri Temsil Edip Etmediğini Belirleme (C# Programlama Kılavuzu)
 Bir dizeyi belirtilen bir sayısal tür geçerli bir gösterimini olup olmadığını belirlemek için statik kullanmak `TryParse` tüm basit sayısal türler ve ayrıca türleri tarafından gibi uygulanır yöntemi <xref:System.DateTime> ve <xref:System.Net.IPAddress>. Aşağıdaki örnekte, "108" bir geçerli olup olmadığını belirlemek gösterilmiştir [int](../../../csharp/language-reference/keywords/int.md).  
@@ -38,14 +32,14 @@ bool result = int.TryParse(s, out i); //i now = 108
  [!code-csharp[csProgGuideStrings#14](../../../csharp/programming-guide/strings/codesnippet/CSharp/how-to-determine-whether-a-string-represents-a-numeric-value_1.cs)]  
   
 ## <a name="robust-programming"></a>Güçlü Programlama  
- İlkel sayısal türleri de uygulama `Parse` statik yöntemi dizesi geçerli bir sayı değilse, bir özel durum oluşturur. `TryParse`yalnızca sayı geçerli değilse false döndürür çünkü genellikle daha verimli olur.  
+ İlkel sayısal türleri de uygulama `Parse` statik yöntemi dizesi geçerli bir sayı değilse, bir özel durum oluşturur. `TryParse` yalnızca sayı geçerli değilse false döndürür çünkü genellikle daha verimli olur.  
   
 ## <a name="net-framework-security"></a>.NET Framework Güvenliği  
  Her zaman kullanmak `TryParse` veya `Parse` kullanıcı girişi metin kutuları ve birleşik giriş kutuları gibi denetimlerinden doğrulamak için yöntem.  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [Nasıl yapılır: byte dizisini int'e dönüştürme](../../../csharp/programming-guide/types/how-to-convert-a-byte-array-to-an-int.md)  
- [Nasıl yapılır: bir dizeyi sayıya dönüştürme](../../../csharp/programming-guide/types/how-to-convert-a-string-to-a-number.md)  
- [Nasıl yapılır: onaltılık dizeler ve sayısal türler arasında dönüştürme](../../../csharp/programming-guide/types/how-to-convert-between-hexadecimal-strings-and-numeric-types.md)  
- [Sayısal dizeleri ayrıştırma](../../../standard/base-types/parsing-numeric.md)  
- [Biçimlendirme türleri](../../../standard/base-types/formatting-types.md)
+ [Nasıl yapılır: byte Dizisini int'e Dönüştürme](../../../csharp/programming-guide/types/how-to-convert-a-byte-array-to-an-int.md)  
+ [Nasıl yapılır: Bir Dizeyi Sayıya Dönüştürme](../../../csharp/programming-guide/types/how-to-convert-a-string-to-a-number.md)  
+ [Nasıl yapılır: Onaltılık Dizeler ve Sayısal Türler Arasında Dönüştürme](../../../csharp/programming-guide/types/how-to-convert-between-hexadecimal-strings-and-numeric-types.md)  
+ [Sayısal Dizeleri Ayrıştırma](../../../standard/base-types/parsing-numeric.md)  
+ [Biçimlendirme Türleri](../../../standard/base-types/formatting-types.md)

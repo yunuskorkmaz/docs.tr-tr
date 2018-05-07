@@ -1,13 +1,6 @@
 ---
-title: "Freezable Nesnelerine Genel Bakış"
-ms.custom: 
+title: Freezable Nesnelerine Genel Bakış
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-wpf
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -16,16 +9,11 @@ helpviewer_keywords:
 - unfreezing Freezable objects [WPF]
 - classes [WPF], Freezable
 ms.assetid: 89c71692-4f43-4057-b611-67c6a8a863a2
-caps.latest.revision: "30"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 7390181570c6deeea77e5e76493a62e84107286b
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: d3b9f6f7af22b2a846f4ee34e8d4d00bb032fd69
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="freezable-objects-overview"></a>Freezable Nesnelerine Genel Bakış
 Bu konu, etkili bir şekilde kullanmak ve oluşturmak açıklar <xref:System.Windows.Freezable> uygulama performansının artırılmasına yardımcı olan özel özellikleri sağlayan nesne. Fırçalar, kalemler, dönüşümleri, geometri ve animasyonları freezable nesneleri örneklerindendir.  
@@ -101,7 +89,7 @@ Bu konu, etkili bir şekilde kullanmak ve oluşturmak açıklar <xref:System.Win
   
  [!code-xaml[FreezableSample#FreezeFromMarkupWholePage](../../../../samples/snippets/csharp/VS_Snippets_Wpf/FreezableSample/CS/FreezeFromMarkupExample.xaml#freezefrommarkupwholepage)]  
   
- Kullanılacak `Freeze` özniteliği, sunu seçenekleri ad alanına eşlemeniz gerekir: `http://schemas.microsoft.com/winfx/2006/xaml/presentation/options`. `PresentationOptions`Bu ad alanı eşlemesi için önerilen önekidir:  
+ Kullanılacak `Freeze` özniteliği, sunu seçenekleri ad alanına eşlemeniz gerekir: `http://schemas.microsoft.com/winfx/2006/xaml/presentation/options`. `PresentationOptions` Bu ad alanı eşlemesi için önerilen önekidir:  
   
 ```  
 xmlns:PresentationOptions="http://schemas.microsoft.com/winfx/2006/xaml/presentation/options"   

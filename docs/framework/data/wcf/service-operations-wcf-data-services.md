@@ -1,13 +1,6 @@
 ---
-title: "Hizmet işlemleri (WCF Veri Hizmetleri)"
-ms.custom: 
+title: Hizmet işlemleri (WCF Veri Hizmetleri)
 ms.date: 03/30/2017
-ms.prod: .net-framework-oob
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -15,19 +8,14 @@ helpviewer_keywords:
 - service operations [WCF Data Services]
 - WCF Data Services, service operations
 ms.assetid: 583a690a-e60f-4990-8991-d6efce069d76
-caps.latest.revision: "3"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 72af11330bc9190ea0c07e23f2e87e5f4840b677
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: da8d482fbf506749f9805edcbbaad3c893ad56b3
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="service-operations-wcf-data-services"></a>Hizmet işlemleri (WCF Veri Hizmetleri)
-[!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)]Sunucu üzerindeki yöntemleri kullanıma sunmak için veri hizmeti hizmet işlemleri tanımlamanızı sağlar. Veri Hizmeti kaynaklar gibi hizmet işlemleri URI tarafından ele alınmıştır. Hizmet işlemleri, bir veri hizmeti iş mantığı gibi rol tabanlı güvenlik, uygulamak için doğrulama mantığını uygulamak için kullanıma sunmak etkinleştirin veya özellikleri sorgulama kullanıma sunmak için özelleştirilmiş. Hizmet işlemleri yöntemlerdir türetilen veri hizmet sınıfı eklenen <xref:System.Data.Services.DataService%601>. Tüm veri hizmeti kaynaklar gibi hizmet işlemi yöntemi için parametreler sağlayabilir. Örneğin, aşağıdaki işlemi URI hizmet (temel [Hızlı Başlangıç](../../../../docs/framework/data/wcf/quickstart-wcf-data-services.md) veri hizmeti) değeri geçirir `London` için `city` parametre:  
+[!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] Sunucu üzerindeki yöntemleri kullanıma sunmak için veri hizmeti hizmet işlemleri tanımlamanızı sağlar. Veri Hizmeti kaynaklar gibi hizmet işlemleri URI tarafından ele alınmıştır. Hizmet işlemleri, bir veri hizmeti iş mantığı gibi rol tabanlı güvenlik, uygulamak için doğrulama mantığını uygulamak için kullanıma sunmak etkinleştirin veya özellikleri sorgulama kullanıma sunmak için özelleştirilmiş. Hizmet işlemleri yöntemlerdir türetilen veri hizmet sınıfı eklenen <xref:System.Data.Services.DataService%601>. Tüm veri hizmeti kaynaklar gibi hizmet işlemi yöntemi için parametreler sağlayabilir. Örneğin, aşağıdaki işlemi URI hizmet (temel [Hızlı Başlangıç](../../../../docs/framework/data/wcf/quickstart-wcf-data-services.md) veri hizmeti) değeri geçirir `London` için `city` parametre:  
   
 ```  
 http://localhost:12345/Northwind.svc/GetOrdersByCity?city='London'  
@@ -53,7 +41,7 @@ http://localhost:12345/Northwind.svc/GetOrdersByCity?city='London'
   
 -   Yöntem aşağıdakilerden birini döndürmesi gerekir:  
   
-    -   `void`(`Nothing` Visual Basic)  
+    -   `void` (`Nothing` Visual Basic)  
   
     -   <xref:System.Collections.Generic.IEnumerable%601>  
   
@@ -69,9 +57,9 @@ http://localhost:12345/Northwind.svc/GetOrdersByCity?city='London'
   
 -   Yöntem ile Açıklama eklenmelidir `[WebGet]` veya `[WebInvoke]` özniteliği.  
   
-    -   `[WebGet]`GET isteği kullanarak çağrılacak yöntem sağlar.  
+    -   `[WebGet]` GET isteği kullanarak çağrılacak yöntem sağlar.  
   
-    -   `[WebInvoke(Method = "POST")]`Bir POST isteği kullanarak çağrılacak yöntem sağlar. Diğer <xref:System.ServiceModel.Web.WebInvokeAttribute> yöntemleri desteklenmiyor.  
+    -   `[WebInvoke(Method = "POST")]` Bir POST isteği kullanarak çağrılacak yöntem sağlar. Diğer <xref:System.ServiceModel.Web.WebInvokeAttribute> yöntemleri desteklenmiyor.  
   
 -   Bir hizmet işlemi ile Açıklama <xref:System.Data.Services.SingleResultAttribute> yöntemden dönüş değeri bir varlıklar koleksiyonu yerine tek bir varlık olduğunu belirtir. Bu ayrım yanıt ve ek gezinti özelliği çapraz geçişlerine URI'de temsil edilir şekilde elde edilen serileştirmek belirler. Örneğin, AtomPub serileştirme kullanırken, tek bir kaynak türü örneği olarak bir giriş öğesini ve bir örnek kümesini akış öğesi olarak temsil edilir.  
   
@@ -88,7 +76,7 @@ http://localhost:12345/Northwind.svc/GetOrdersByState?state='CA'&includeItems=tr
   
 |Geçerli dönüş türleri|URI kuralları|  
 |------------------------|---------------|  
-|`void`(`Nothing` Visual Basic)<br /><br /> veya<br /><br /> Varlık türleri<br /><br /> veya<br /><br /> İlkel türler|Hizmet işlemini adı tek bir yol kesimi URI olmalıdır. Sorgu seçeneklerine izin verilmiyor.|  
+|`void` (`Nothing` Visual Basic)<br /><br /> -veya-<br /><br /> Varlık türleri<br /><br /> -veya-<br /><br /> İlkel türler|Hizmet işlemini adı tek bir yol kesimi URI olmalıdır. Sorgu seçeneklerine izin verilmiyor.|  
 |<xref:System.Collections.Generic.IEnumerable%601>|Hizmet işlemini adı tek bir yol kesimi URI olmalıdır. Sonuç türü olmadığından bir <xref:System.Linq.IQueryable%601> türü, sorgu seçeneklerine izin verilmez.|  
 |<xref:System.Linq.IQueryable%601>|Sorgu yol kesimleri hizmet işlemi adını yolu ek olarak izin verilir. Sorgu seçenekleri de izin verilir.|  
   

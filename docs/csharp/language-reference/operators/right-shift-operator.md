@@ -1,26 +1,19 @@
 ---
-title: '&gt;&gt;İşleci (C# Başvurusu)'
+title: '&gt;&gt; İşleci (C# Başvurusu)'
 ms.date: 07/20/2015
-ms.prod: .net
-ms.technology:
-- devlang-csharp
-ms.topic: article
 f1_keywords:
 - '>>_CSharpKeyword'
 helpviewer_keywords:
 - '>> operator [C#]'
 - right shift operator (>>) [C#]
 ms.assetid: a07f8679-d318-4ef8-b38b-65903efb8056
-caps.latest.revision: 15
-author: BillWagner
-ms.author: wiwagn
-ms.openlocfilehash: 7c2eddf06d7b8417c9fcb0fed395b2bf51e07144
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 061a69250ef5524fa6b5f7bb4b9527057dd86e05
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
-# <a name="gtgt-operator-c-reference"></a>&gt;&gt;İşleci (C# Başvurusu)
+# <a name="gtgt-operator-c-reference"></a>&gt;&gt; İşleci (C# Başvurusu)
 Sağa kaydırma işleci (`>>`) ilk işlenen kendi ikinci işlenen tarafından belirtilen BITS sayısına göre sağa kaydırır.  
   
 ## <a name="remarks"></a>Açıklamalar  
@@ -37,5 +30,5 @@ Sağa kaydırma işleci (`>>`) ilk işlenen kendi ikinci işlenen tarafından be
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
  [C# başvurusu](../../../csharp/language-reference/index.md)  
- [C# programlama kılavuzu](../../../csharp/programming-guide/index.md)  
- [C# işleçleri](../../../csharp/language-reference/operators/index.md)
+ [C# Programlama Kılavuzu](../../../csharp/programming-guide/index.md)  
+ [C# İşleçleri](../../../csharp/language-reference/operators/index.md)

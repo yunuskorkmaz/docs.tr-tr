@@ -1,24 +1,12 @@
 ---
-title: "Özel Akış Yükseltmeleri"
-ms.custom: 
+title: Özel Akış Yükseltmeleri
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: e3da85c8-57f3-4e32-a4cb-50123f30fea6
-caps.latest.revision: "10"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 73359c293f7d29c16702e826ed6caa61149935bd
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
-ms.translationtype: MT
+ms.openlocfilehash: 4bcd59cb5e420c551c611c8e676289f20d4354d0
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="custom-stream-upgrades"></a>Özel Akış Yükseltmeleri
 İstemci ve sunucu arasındaki bayt sürekli bir akış üzerinde akış odaklı taşımaları TCP ve adlandırılmış kanallar gibi çalışır. Bu akış tarafından gerçekleştirilen bir <xref:System.IO.Stream> nesnesi. Bir akış yükseltme istemci kanal yığına bir isteğe bağlı Protokolü katmanı eklemek ister ve bunu yapmak için iletişim kanalının diğer ucundaki sorar. Özgün değiştirme akış yükseltme oluşur <xref:System.IO.Stream> yükseltilmiş bir nesne.  
@@ -41,7 +29,7 @@ ms.lasthandoff: 12/22/2017
  Birden fazla yükseltme söz konusu olduğunda, hangi yükseltme geçişleri her başlatma için geçerli zorlamak için Durum makineleri Acceptor ve Başlatıcı kapsülleyen unutmayın.  
   
 ## <a name="how-to-implement-a-stream-upgrade"></a>Bir akış yükseltme gerçekleştirme  
- [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)]dört sağlar `abstract` , uygulayabileceğiniz sınıfları:  
+ Windows Communication Foundation (WCF) dört sağlar `abstract` , uygulayabileceğiniz sınıfları:  
   
 -   <xref:System.ServiceModel.Channels.StreamUpgradeInitiator?displayProperty=nameWithType>  
   
@@ -78,7 +66,7 @@ ms.lasthandoff: 12/22/2017
 ## <a name="security-upgrades"></a>Güvenlik yükseltmeleri  
  Bir güvenlik yükseltmesi ekleme, genel akış yükseltme işlemi özelleştirilmiş bir sürümüdür.  
   
- [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]zaten Akış Güvenliği yükseltmek için iki bağlama öğeleri sağlar. Aktarım düzeyinde güvenlik yapılandırmasını yalıtılan <xref:System.ServiceModel.Channels.WindowsStreamSecurityBindingElement> ve <xref:System.ServiceModel.Channels.SslStreamSecurityBindingElement> hangi yapılandırılabilir ve özel bağlama için eklendi. Bu bağlama öğelerini genişletmek <xref:System.ServiceModel.Channels.StreamUpgradeBindingElement> yükseltme sağlayıcıları istemci ve sunucu akış derlemeler sınıfı. Bu bağlama öğeleri Uzman güvenlik akış olmayan yükseltme sağlayıcısı sınıfları oluşturma yöntemleri sahip `public`, bu iki için tüm yapmanız gereken durumda bağlamaya bağlama öğesi eklemek için.  
+ [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] zaten Akış Güvenliği yükseltmek için iki bağlama öğeleri sağlar. Aktarım düzeyinde güvenlik yapılandırmasını yalıtılan <xref:System.ServiceModel.Channels.WindowsStreamSecurityBindingElement> ve <xref:System.ServiceModel.Channels.SslStreamSecurityBindingElement> hangi yapılandırılabilir ve özel bağlama için eklendi. Bu bağlama öğelerini genişletmek <xref:System.ServiceModel.Channels.StreamUpgradeBindingElement> yükseltme sağlayıcıları istemci ve sunucu akış derlemeler sınıfı. Bu bağlama öğeleri Uzman güvenlik akış olmayan yükseltme sağlayıcısı sınıfları oluşturma yöntemleri sahip `public`, bu iki için tüm yapmanız gereken durumda bağlamaya bağlama öğesi eklemek için.  
   
  Yukarıdaki iki bağlama öğeleri tarafından üç güvenlikle ilgili karşılanmadı güvenlik senaryoları için `abstract` sınıfları yukarıdaki Başlatıcı, acceptor ve sağlayıcı temel sınıflardan türetilmiş:  
   

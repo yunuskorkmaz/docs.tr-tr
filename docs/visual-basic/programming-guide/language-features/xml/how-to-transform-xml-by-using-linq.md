@@ -1,25 +1,15 @@
 ---
 title: "Nasıl yapılır: XML'i LINQ Kullanarak Dönüştürme (Visual Basic)"
-ms.custom: 
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - XML [Visual Basic], transforming
 - LINQ to XML [Visual Basic], transforming XML
 ms.assetid: 815687f4-0bc2-4c0b-adc6-d78744aa356f
-caps.latest.revision: "14"
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: cf7c44598558b2c631ff3ef4c2ae0986a49ca2bd
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 94ad5180c7921a5ace09f9161de5f275475e46d4
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-transform-xml-by-using-linq-visual-basic"></a>Nasıl yapılır: XML'i LINQ Kullanarak Dönüştürme (Visual Basic)
 [XML değişmez değerleri](../../../../visual-basic/language-reference/xml-literals/index.md) XML bir kaynaktan okunan ve yeni bir XML biçimine dönüştürmek kolaylaştırır. LINQ sorgularını dönüştürmek için içerik almak için yararlanmak veya var olan bir belgeyi içeriği yeni bir XML biçimine değiştirin.  
@@ -165,9 +155,9 @@ ms.lasthandoff: 11/21/2017
     ```  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [XML değişmez değerleri](../../../../visual-basic/language-reference/xml-literals/index.md)  
+ [XML Değişmez Değerleri](../../../../visual-basic/language-reference/xml-literals/index.md)  
  [Visual Basic'te XML düzenleme](../../../../visual-basic/programming-guide/language-features/xml/manipulating-xml.md)  
  [XML](../../../../visual-basic/programming-guide/language-features/xml/index.md)  
- [Nasıl yapılır: dosya, dize veya akıştan XML yükleme](../../../../visual-basic/programming-guide/language-features/xml/how-to-load-xml-from-a-file-string-or-stream.md)  
+ [Nasıl yapılır: Dosya, Dize veya Akıştan XML Yükleme](../../../../visual-basic/programming-guide/language-features/xml/how-to-load-xml-from-a-file-string-or-stream.md)  
  [LINQ](../../../../visual-basic/programming-guide/language-features/linq/index.md)  
  [Visual Basic'de LINQ'e giriş](../../../../visual-basic/programming-guide/language-features/linq/introduction-to-linq.md)

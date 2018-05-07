@@ -1,9 +1,6 @@
 ---
-title: "Visual Basic'de Genel Türler (Visual Basic)"
+title: Visual Basic'de Genel Türler (Visual Basic)
 ms.date: 07/20/2015
-ms.prod: .net
-ms.technology: devlang-visual-basic
-ms.topic: article
 helpviewer_keywords:
 - generic interfaces
 - data type arguments [Visual Basic], defining
@@ -39,14 +36,11 @@ helpviewer_keywords:
 - type arguments [Visual Basic], defining
 - arguments [Visual Basic], type
 ms.assetid: 89f771d9-ecbb-4737-88b8-116b63c6cf4d
-caps.latest.revision: "45"
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: 463391da61cbafe1f50a246307994cfa134dba38
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: f86819f9bd3cbcceb4be696852655018868f4a56
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="generic-types-in-visual-basic-visual-basic"></a>Visual Basic'de Genel Türler (Visual Basic)
 A *genel tür* çeşitli veri türleri için aynı işlevleri gerçekleştirmek için uyum tek bir programlama öğesidir. Genel sınıfı veya yordam tanımladığınızda, bu işlevi gerçekleştirmek isteyebileceğiniz her bir veri türü için ayrı bir sürüm tanımlamak yok.  
@@ -153,14 +147,14 @@ Tornavida genel bir araç olarak ayarlayın
 -   *Türü oluşturulan*. Sınıfı, yapısı, arabirim, yordam veya temsilci genel bir türden tür bağımsız değişkeni tür parametreleri için sağlayarak bildirildi.  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [Veri türleri](../../../../visual-basic/programming-guide/language-features/data-types/index.md)  
- [Tür karakterleri](../../../../visual-basic/programming-guide/language-features/data-types/type-characters.md)  
- [Değer türleri ve başvuru türleri](../../../../visual-basic/programming-guide/language-features/data-types/value-types-and-reference-types.md)  
+ [Veri Türleri](../../../../visual-basic/programming-guide/language-features/data-types/index.md)  
+ [Tür Karakterleri](../../../../visual-basic/programming-guide/language-features/data-types/type-characters.md)  
+ [Değer Türleri ve Başvuru Türleri](../../../../visual-basic/programming-guide/language-features/data-types/value-types-and-reference-types.md)  
  [Visual Basic'de tür dönüştürmeleri](../../../../visual-basic/programming-guide/language-features/data-types/type-conversions.md)  
- [Veri türleri sorunlarını giderme](../../../../visual-basic/programming-guide/language-features/data-types/troubleshooting-data-types.md)  
- [Veri türleri](../../../../visual-basic/language-reference/data-types/data-type-summary.md)  
+ [Veri Türü Sorunlarını Giderme](../../../../visual-basic/programming-guide/language-features/data-types/troubleshooting-data-types.md)  
+ [Veri Türleri](../../../../visual-basic/language-reference/data-types/data-type-summary.md)  
  [,](../../../../visual-basic/language-reference/statements/of-clause.md)  
- [Olarak](../../../../visual-basic/language-reference/statements/as-clause.md)  
- [Nesne veri türü](../../../../visual-basic/language-reference/data-types/object-data-type.md)  
- [Kovaryans ve kontravaryans](../../concepts/covariance-contravariance/index.md)  
+ [olarak](../../../../visual-basic/language-reference/statements/as-clause.md)  
+ [Object Veri Türü](../../../../visual-basic/language-reference/data-types/object-data-type.md)  
+ [Kovaryans ve Kontravaryans](../../concepts/covariance-contravariance/index.md)  
  [Yineleyiciler](http://msdn.microsoft.com/library/f45331db-d595-46ec-9142-551d3d1eb1a7)

@@ -1,12 +1,6 @@
 ---
-title: "^= İşleci (Visual Basic)"
+title: ^= İşleci (Visual Basic)
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- devlang-visual-basic
-ms.topic: article
 f1_keywords:
 - vb.^=
 helpviewer_keywords:
@@ -15,14 +9,11 @@ helpviewer_keywords:
 - ^= operator [Visual Basic]
 - compound assignment statements [Visual Basic]
 ms.assetid: 397da132-2d96-4a85-a7bc-f7c730a608c9
-caps.latest.revision: 
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: fa9d87d2f090a8c18aaab742e73878c7b80f55c0
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 571ef26eb188d9044ec8f6c8e6e4b490780f17a0
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="-operator-visual-basic"></a>^= İşleci (Visual Basic)
 Bir değişken ya da ifade gücüne özellik değerini başlatır ve değişken veya özelliği için sonuç atar.  
@@ -60,7 +51,7 @@ variableorproperty ^= expression
 ## <a name="see-also"></a>Ayrıca Bkz.  
  [^ İşleci](../../../visual-basic/language-reference/operators/exponentiation-operator.md)  
  [Atama İşleçleri](../../../visual-basic/language-reference/operators/assignment-operators.md)  
- [Aritmetik işleçler](../../../visual-basic/language-reference/operators/arithmetic-operators.md)  
+ [Aritmetik İşleçler](../../../visual-basic/language-reference/operators/arithmetic-operators.md)  
  [Visual Basic'de İşleç önceliği](../../../visual-basic/language-reference/operators/operator-precedence.md)  
- [İşlevselliğe göre listelenmiş işleçler](../../../visual-basic/language-reference/operators/operators-listed-by-functionality.md)  
- [Deyimleri](../../../visual-basic/programming-guide/language-features/statements.md)
+ [İşlevselliğe Göre Listelenmiş İşleçler](../../../visual-basic/language-reference/operators/operators-listed-by-functionality.md)  
+ [Deyimler](../../../visual-basic/programming-guide/language-features/statements.md)

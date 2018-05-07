@@ -1,47 +1,37 @@
 ---
-title: "Güvenlik Protokolleri sürüm 1.0"
-ms.custom: 
+title: Güvenlik Protokolleri sürüm 1.0
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: ee3402d2-1076-410b-a3cb-fae0372bd7af
-caps.latest.revision: "4"
 author: BrucePerlerMS
-ms.author: bruceper
 manager: mbaldwin
-ms.workload: dotnet
-ms.openlocfilehash: ba5ce91f4cb3edd93698f7c0ba028186afdb8111
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 1b1e911b20ac8974dbc8cfa79e03fbd14f9beb17
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="security-protocols-version-10"></a>Güvenlik Protokolleri sürüm 1.0
-Web Hizmetleri Güvenlik protokolleri, tüm mevcut Kurumsal güvenlik gereksinimlerini Mesajlaşma kapak Web Hizmetleri güvenlik mekanizmaları sağlar. Bu bölümde açıklanmıştır [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] sürüm 1.0 ayrıntıları (uygulanan <xref:System.ServiceModel.Channels.SecurityBindingElement>) güvenlik protokolleri aşağıdaki Web Hizmetleri için.  
+Web Hizmetleri Güvenlik protokolleri, tüm mevcut Kurumsal güvenlik gereksinimlerini Mesajlaşma kapak Web Hizmetleri güvenlik mekanizmaları sağlar. Bu bölümde Windows Communication Foundation (WCF) sürümü 1.0 ayrıntıları açıklanmaktadır (uygulanan <xref:System.ServiceModel.Channels.SecurityBindingElement>) güvenlik protokolleri aşağıdaki Web Hizmetleri için.  
   
 |Belirtim/belgesi|Bağlantı|  
 |-|-|  
-|WSS: SOAP iletisi güvenlik 1.0|http://docs.oasis-Open.org/WSS/2004/01/oasis-200401-WSS-SOAP-Message-Security-1.0.PDF|  
-|WSS: Kullanıcı belirteci profili 1.0|http://docs.oasis-Open.org/WSS/2004/01/oasis-200401-WSS-username-Token-Profile-1.0.PDF|  
-|WSS: X509 profili 1.0 belirteci.|http://docs.oasis-Open.org/WSS/2004/01/oasis-200401-WSS-x509-Token-Profile-1.0.PDF|  
-|WSS: SAML 1.1 belirteci profili 1.0|http://docs.oasis-Open.org/WSS/oasis-WSS-SAML-Token-Profile-1.0.PDF|  
-|WSS: SOAP iletisi güvenlik 1.1|http://www.oasis-Open.org/committees/download.php/16790/WSS-V1.1-spec-OS-SOAPMessageSecurity.PDF|  
-|WSS kullanıcıadı belirteci Profil 1.1|http://docs.oasis-Open.org/WSS/2004/01/oasis-200401-WSS-username-Token-Profile-1.0.PDF|  
-|WSS: X.509 belirteci Profil 1.1|http://www.oasis-Open.org/committees/download.php/16785/WSS-V1.1-spec-OS-x509TokenProfile.PDF|  
-|WSS: Kerberos belirteci Profil 1.1|http://www.oasis-Open.org/committees/download.php/16788/WSS-V1.1-spec-OS-KerberosTokenProfile.PDF|  
-|WSS: SAML 1.1 belirteci Profil 1.1|http://www.oasis-Open.org/committees/download.php/16768/WSS-V1.1-spec-OS-SAMLTokenProfile.PDF|  
-|WS-güvenli konuşma|http://msdn.microsoft.com/ws/2005/02/ws-Secure-Conversation/|  
-|WS-Trust|http://msdn.microsoft.com/ws/2005/02/WS-Trust/|  
+|WSS: SOAP iletisi güvenlik 1.0|http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-soap-message-security-1.0.pdf|  
+|WSS: Kullanıcı belirteci profili 1.0|http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-username-token-profile-1.0.pdf|  
+|WSS: X509 profili 1.0 belirteci.|http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-x509-token-profile-1.0.pdf|  
+|WSS: SAML 1.1 belirteci profili 1.0|http://docs.oasis-open.org/wss/oasis-wss-saml-token-profile-1.0.pdf|  
+|WSS: SOAP iletisi güvenlik 1.1|http://www.oasis-open.org/committees/download.php/16790/wss-v1.1-spec-os-SOAPMessageSecurity.pdf|  
+|WSS kullanıcıadı belirteci Profil 1.1|http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-username-token-profile-1.0.pdf|  
+|WSS: X.509 belirteci Profil 1.1|http://www.oasis-open.org/committees/download.php/16785/wss-v1.1-spec-os-x509TokenProfile.pdf|  
+|WSS: Kerberos belirteci Profil 1.1|http://www.oasis-open.org/committees/download.php/16788/wss-v1.1-spec-os-KerberosTokenProfile.pdf|  
+|WSS: SAML 1.1 belirteci Profil 1.1|http://www.oasis-open.org/committees/download.php/16768/wss-v1.1-spec-os-SAMLTokenProfile.pdf|  
+|WS-güvenli konuşma|http://msdn.microsoft.com/ws/2005/02/ws-secure-conversation/|  
+|WS-Trust|http://msdn.microsoft.com/ws/2005/02/ws-trust/|  
 |Uygulama Not:<br /><br /> WS-Trust TLS el sıkışma için kullanma|Yayımlanacak|  
 |Uygulama Not:<br /><br /> WS-Trust SPNEGO için kullanma|Yayımlanacak|  
 |Uygulama Not:<br /><br /> Web Hizmetleri uç nokta başvuruları adresleme ve kimlik|Yayımlanacak|  
-|WS-SecurityPolicy 1.1<br /><br /> (2005/07)|http://msdn.microsoft.com/ws/2005/07/ws-Security-Policy/<br /><br /> OASIS WS-SX teknik komitesi http://www.oasis-open.org/archives/ws-sx/200512/msg00017.html gönderilen ayrıntıyla açıklayan hata bilgilerini tarafından dayanıklıdır gibi|  
+|WS-SecurityPolicy 1.1<br /><br /> (2005/07)|http://msdn.microsoft.com/ws/2005/07/ws-security-policy/<br /><br /> OASIS WS-SX teknik komitesi gönderilen ayrıntıyla açıklayan hata bilgilerini tarafından dayanıklıdır gibi http://www.oasis-open.org/archives/ws-sx/200512/msg00017.html|  
   
- [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)], sürüm 1, Web Hizmetleri güvenlik yapılandırması için temel olarak kullanılabilecek 17 kimlik doğrulama modları sağlar. Her iki modda gibi dağıtım gereksinimleri, ortak bir dizi için optimize edilmiştir:  
+ WCF, sürüm 1, Web Hizmetleri güvenlik yapılandırması için temel olarak kullanılabilecek 17 kimlik doğrulama modları sağlar. Her iki modda gibi dağıtım gereksinimleri, ortak bir dizi için optimize edilmiştir:  
   
 -   Hizmet ve istemci kimlik doğrulaması için kullanılan kimlik bilgileri.  
   
@@ -71,17 +61,17 @@ Web Hizmetleri Güvenlik protokolleri, tüm mevcut Kurumsal güvenlik gereksinim
   
  Bu tür kimlik doğrulama modları kullanarak uç noktaları WS-SecurityPolicy (WS-SP) kullanarak kendi güvenlik gereksinimlerini hızlı. Bu belgede güvenlik üstbilgi ve her kimlik doğrulama modu için altyapı iletileri yapısını açıklar ve ilkeleri ve iletileri örnekleri sağlar.  
   
- [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]uygulamalar arasında çok ileti iletişimlerini korumak için güvenli oturumlar desteği sağlamak için WS-SecureConversation yararlanır.  "Güvenli oturumlar" aşağıdaki uygulama ayrıntıları için bkz.  
+ WCF uygulamalar arasında çok ileti iletişimlerini korumak için güvenli oturumlar desteği sağlamak için WS-SecureConversation yararlanır.  "Güvenli oturumlar" aşağıdaki uygulama ayrıntıları için bkz.  
   
- Kimlik doğrulama modları yanı sıra [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] çoğu ileti güvenlik tabanlı kimlik doğrulama modları, örneğin geçerli ortak koruma mekanizmalarını denetleyen ayarları sağlar: İmza karşılık şifreleme işlemleri, algoritma paketleri sırasını anahtar türetme ve imza onayı.  
+ Kimlik doğrulama modları yanı sıra WCF çoğu ileti güvenlik tabanlı kimlik doğrulama modları, örneğin geçerli ortak koruma mekanizmalarını denetleyen ayarları sağlar: şifreleme işlemleri, algoritma paketleri, anahtar türetme karşı imza sırası ve imza onayı.  
   
  Bu belgede, aşağıdaki ön ekleri ve ad alanları kullanılır.  
   
 |önek|Ad Alanı|  
 |------------|---------------|  
-|s|http://www.w3.org/2003/05/SOAP-Envelope|  
-|SP|http://schemas.xmlsoap.org/ws/2005/07/securityPolicy|  
-|bir|http://www.w3.org/2005/08/Addressing|  
+|s|http://www.w3.org/2003/05/soap-envelope|  
+|SP|http://schemas.xmlsoap.org/ws/2005/07/securitypolicy|  
+|a|http://www.w3.org/2005/08/addressing|  
 |wsse|HENÜZ BELİRLENMEDİ – OASIS WSS 1.0 URI|  
 |wsse11|HENÜZ BELİRLENMEDİ – OASIS WSS 1.1 URI|  
 |wsu|Henüz Belirlenmedi – OASIS WSS 1.0 yardımcı programı URI|  
@@ -89,22 +79,22 @@ Web Hizmetleri Güvenlik protokolleri, tüm mevcut Kurumsal güvenlik gereksinim
 |WST|Henüz Belirlenmedi – WS-Trust 2005/02 URI|  
 |wssc|Henüz Belirlenmedi – WS-SecureConversation 2005/02 URI|  
 |wsaw|Henüz Belirlenmedi - WS adresleme İlkesi ad alanı|  
-|WSP|http://schemas.xmlsoap.org/ws/2004/09/Policy|  
-|mssp|http://schemas.microsoft.com/ws/2005/07/securityPolicy|  
+|WSP|http://schemas.xmlsoap.org/ws/2004/09/policy|  
+|mssp|http://schemas.microsoft.com/ws/2005/07/securitypolicy|  
   
 ## <a name="1-token-profiles"></a>1. Belirteç profilleri  
- Web Hizmetleri Güvenlik belirtimleri kimlik bilgisi güvenlik belirteçlerini temsil eder. [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]Aşağıdaki belirteç türlerini destekler:  
+ Web Hizmetleri Güvenlik belirtimleri kimlik bilgisi güvenlik belirteçlerini temsil eder. WCF aşağıdaki belirteç türlerini destekler:  
   
 ### <a name="11-usernametoken"></a>1.1 UsernameToken  
- [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]Aşağıdaki kısıtlamalar UsernameToken10 ve UsernameToken11 profilleriyle aşağıdaki gibidir:  
+ WCF aşağıdaki kısıtlamalar UsernameToken10 ve UsernameToken11 profilleriyle aşağıdaki gibidir:  
   
  UsernameToken\Password öğede R1101 PasswordType özniteliği atlanmış gerekir veya #PasswordText (varsayılan) değerine sahip.  
   
- Bir genişletilebilirlik kullanarak #PasswordDigest uygulayabilirsiniz. Yeterli güvenli parola koruma mekanizması olarak #PasswordDigest genellikle mistaken olduğunu gözlenmiştir. Ancak #PasswordDigest UsernameToken şifrelenmesi için bir alternatif olarak sunulamıyor. Birincil #PasswordDigest yeniden yürütme saldırılarına karşı koruma hedefidir. İçinde [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] kimlik doğrulama modları, yeniden yürütme saldırı tehditleri azaltıldığından ileti imzalarını kullanarak.  
+ Bir genişletilebilirlik kullanarak #PasswordDigest uygulayabilirsiniz. Yeterli güvenli parola koruma mekanizması olarak #PasswordDigest genellikle mistaken olduğunu gözlenmiştir. Ancak #PasswordDigest UsernameToken şifrelenmesi için bir alternatif olarak sunulamıyor. Birincil #PasswordDigest yeniden yürütme saldırılarına karşı koruma hedefidir. WCF kimlik doğrulama modu, ileti imzalarını kullanarak yeniden yürütme saldırı tehditleri azalır.  
   
- B1102 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] hiçbir zaman UsernameToken Nonce ve oluşturulan alt öğeleri yayar.  
+ B1102 WCF hiçbir zaman UsernameToken Nonce ve oluşturulan alt öğeleri yayar.  
   
- Bu alt öğeleri yeniden yürütme algılaması yardımcı olmak üzere tasarlanmıştır. [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]Bunun yerine ileti imzalarını kullanır.  
+ Bu alt öğeleri yeniden yürütme algılaması yardımcı olmak üzere tasarlanmıştır. WCF yerine ileti imzalarını kullanır.  
   
  OASIS WSS SOAP iletisi güvenlik UsernameToken Profil 1.1 (UsernameToken11) anahtar türetme parola özelliğini kullanıma sunmuştur.  
   
@@ -113,11 +103,11 @@ Web Hizmetleri Güvenlik protokolleri, tüm mevcut Kurumsal güvenlik gereksinim
  Stratejinin: parolalar genellikle şifreleme işlemleri için kullanılacak zayıf olarak kabul edilir.  
   
 ### <a name="12-x509-token"></a>x 509 belirteci 1.2  
- [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]bir kimlik bilgisi türü X509v3 sertifika destekler ve X509TokenProfile1.0 ve X509TokenProfile1.1 aşağıdaki kısıtlamalarla izler:  
+ WCF X509v3 sertifika bir kimlik bilgisi türü destekler ve X509TokenProfile1.0 ve X509TokenProfile1.1 aşağıdaki kısıtlamalarla izler:  
   
  Bir X509v3 sertifika içerdiğinde BinarySecurityToken öğesindeki R1201 ValueType özniteliği değeri #X509v3 olması gerekir.  
   
- WSS belirteci profili 1.0 ve 1.&#1;X509PKIPathv1 ve #PKCS7 olarak da tanımlayın X509 türleri değeri. [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]Bu tür desteklemez.  
+ WSS belirteci profili 1.0 ve 1.1 #X509PKIPathv1 ve #PKCS7 olarak da tanımlayın X509 türleri değeri. WCF bu türleri desteklemez.  
   
  R1202 SubjectKeyIdentifier (SKI) uzantısı ise bir X509 mevcut sertifika wsse:KeyIdentifier olmalıdır dış başvurular belirteci için kullanılan, ValueType ile #X509SubjectKeyIdentifier ve içeriğini base64 ile kodlanmış değeri özniteliği Sertifikanın SKI uzantısı.  
   
@@ -127,37 +117,37 @@ Web Hizmetleri Güvenlik protokolleri, tüm mevcut Kurumsal güvenlik gereksinim
   
  R1204 varsa X509TokenProfile1.1, bir dış başvuru X509 güvenlik belirteci kullanmalıdır WS güvenliği 1.1 tarafından sunulan parmak izi için kullanılıyor.  
   
- [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]X509IssuerSerial destekler. Bununla birlikte çalışabilirlik sorunları vardır X509IssuerSerial: [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] bir dizeyi X509IssuerSerial iki değerleri karşılaştırmak için kullanılır. Bu nedenle bir konu adı bileşenleri yeniden sıralar ve gönderir bir [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] bir sertifika için bir başvuru hizmet, bulunan olmayabilir.  
+ WCF X509IssuerSerial destekler. Bununla birlikte çalışabilirlik sorunları vardır X509IssuerSerial: WCF X509IssuerSerial iki değerleri karşılaştırmak için bir dize kullanır. Bir konu adı bileşenleri yeniden sıralar ve bir WCF hizmeti için bir sertifika için bir başvuru gönderir, bu nedenle onu bulunamayabilir.  
   
 ### <a name="13-kerberos-token"></a>1.3 Kerberos belirteci  
- [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]aşağıdaki kısıtlamaları olan Windows kimlik doğrulaması amacıyla KerberosTokenProfile1.1 destekler:  
+ WCF KerberosTokenProfile1.1 amacıyla Windows kimlik doğrulaması aşağıdaki kısıtlamalar ile destekler:  
   
  R1301 A Kerberos belirteci gerekir taşıyan bir GSS değerini GSS_API ve Kerberos belirtimi tanımlandığı gibi Kerberos v4 AP_REQ Sarmalanan ve değer #GSS_Kerberosv5_AP_REQ ValueType özniteliğiyle olması gerekir.  
   
- [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]Kerberos AP-REQ, olmayan bir tam AP-talep kullanan GSS Sarmalanan Bu bir güvenlik en iyi uygulamadır.  
+ WCF kullanır GSS Kerberos AP-REQ, olmayan bir tam AP-talep Sarmalanan Bu bir güvenlik en iyi uygulamadır.  
   
 ### <a name="14-saml-v11-token"></a>1.4 SAML v1.1 belirteci  
- [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]WSS SAML belirteci profillerini 1.0 ve 1.1 için SAML v1.1 belirteçleri destekler. SAML belirteci biçimleri diğer sürümleri uygulamak mümkündür.  
+ WCF WSS SAML belirteci profillerini 1.0 ve 1.1 için SAML v1.1 belirteçleri destekler. SAML belirteci biçimleri diğer sürümleri uygulamak mümkündür.  
   
 ### <a name="15-security-context-token"></a>1.5 güvenlik bağlamı belirteci  
- [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]Güvenlik bağlamı belirteci (WS-SecureCoversation sunulan SCT) destekler. SCT SecureConversation içinde de kurulmuş bir güvenlik bağlamı belirtmek için kullanılan TLS ve SSPI ikili anlaşma protokolleri gibi aşağıda açıklanmıştır.  
+ WCF güvenlik bağlamı belirteci (WS-SecureCoversation sunulan SCT) destekler. SCT SecureConversation içinde de kurulmuş bir güvenlik bağlamı belirtmek için kullanılan TLS ve SSPI ikili anlaşma protokolleri gibi aşağıda açıklanmıştır.  
   
 ## <a name="2-common-message-security-parameters"></a>2. Ortak ileti güvenlik parametreleri  
   
 ### <a name="21-timestamp"></a>2.1 zaman damgası  
- Zaman damgası varlığı kullanılarak denetlenir <xref:System.ServiceModel.Channels.SecurityBindingElement.IncludeTimestamp%2A> özelliği <xref:System.ServiceModel.Channels.SecurityBindingElement> sınıfı. [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]her zaman wsse:TimeStamp wsse ile serileştiren: oluşturulan ve wsse: alanları süresi dolar. İmzalama kullanıldığında wsse:TimeStamp her zaman imzalanır.  
+ Zaman damgası varlığı kullanılarak denetlenir <xref:System.ServiceModel.Channels.SecurityBindingElement.IncludeTimestamp%2A> özelliği <xref:System.ServiceModel.Channels.SecurityBindingElement> sınıfı. WCF her zaman wsse:TimeStamp wsse ile serileştiren: oluşturulan ve wsse: alanları süresi dolar. İmzalama kullanıldığında wsse:TimeStamp her zaman imzalanır.  
   
 ### <a name="22-protection-order"></a>2.2 protection sırası  
- [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]ileti koruma sırasını "Önce oturum şifrelemek" ve "Şifrelemek önce oturum" (Güvenlik İlkesi 1.1) destekler. "Şifrele önce oturum" nedenlere için önerilir: WS-güvenlik 1.1 SignatureConfirmation mekanizması kullanılır ve imza şifrelenmiş içerik üzerinde yapar sürece iletileri şifrelemek önce oturum ile korunan imza değiştirme saldırılara açık daha zor denetleme.  
+ WCF ileti koruma sırasını "Önce oturum şifrelemek" ve "Şifrelemek önce oturum" (Güvenlik İlkesi 1.1) destekler. "Şifrele önce oturum" nedenlere için önerilir: WS-güvenlik 1.1 SignatureConfirmation mekanizması kullanılır ve imza şifrelenmiş içerik üzerinde yapar sürece iletileri şifrelemek önce oturum ile korunan imza değiştirme saldırılara açık daha zor denetleme.  
   
 ### <a name="23-signature-protection"></a>2.3 imza koruma  
  Önce oturum şifrelemek kullanıldığında (özellikle özel belirteç zayıf anahtar malzemesi ile kullanıldığında) şifrelenmiş içeriği veya imzalama anahtarı tahmin için deneme yanılma saldırıları önlemek için imza korumak için önerilir.  
   
 ### <a name="24-algorithm-suite"></a>2.4 algoritması paketi  
- [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]Güvenlik İlkesi 1.1 içinde listelenen tüm algoritması paketlerini destekler.  
+ WCF güvenlik ilkesi 1.1 içinde listelenen tüm algoritması paketlerini destekler.  
   
 ### <a name="25-key-derivation"></a>2.5 anahtar türetme  
- [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]"Simetrik anahtarları için anahtar türetme" WS-SecureConversation açıklandığı gibi kullanır.  
+ WCF "Simetrik anahtarları için anahtar türetme" WS-SecureConversation açıklandığı gibi kullanır.  
   
 ### <a name="26-signature-confirmation"></a>2.6 imza onayı  
  İmza onayı imzaları kümesini korumak için ortadaki adam saldırılarına karşı koruma olarak olabilir.  
@@ -172,13 +162,13 @@ Web Hizmetleri Güvenlik protokolleri, tüm mevcut Kurumsal güvenlik gereksinim
 |LaxTimestampFirst|İlk öğe dışında güvenlik üstbilgisinde Lax bir wsse:Timestamp aynı olmalıdır|  
 |LaxTimestampLast|Bir wsse:Timestamp son öğe dışında güvenlik üstbilgisinde belirsiz olarak aynı olmalıdır|  
   
- [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]tüm dört modları için güvenlik üstbilgi düzenini destekler. Aşağıdaki kimlik doğrulama modları için güvenlik üstbilgi yapısı ve ileti örnekler "Strict" modu izleyin.  
+ WCF güvenlik üstbilgi düzeni için tüm dört modlarını destekler. Aşağıdaki kimlik doğrulama modları için güvenlik üstbilgi yapısı ve ileti örnekler "Strict" modu izleyin.  
   
 ## <a name="2-common-message-security-parameters"></a>2. Ortak ileti güvenlik parametreleri  
  Bu bölüm, istemci ve hizmet tarafından alınıp iletilerindeki güvenlik üst bilgisi yapısı gösteren örnekler yanı sıra her kimlik doğrulama modu için örnek ilkeleri sağlar.  
   
 ### <a name="61-transport-protection"></a>6.1 taşıma koruma  
- [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]güvenli aktarım iletileri korumak için kullanmak beş kimlik doğrulama modları sağlar; UserNameOverTransport, CertificateOverTransport, KerberosOverTransport, IssuedTokenOverTransport ve SspiNegotiatedOverTransport.  
+ WCF iletileri korumak için güvenli aktarım kullanmak beş kimlik doğrulama modları sağlar; UserNameOverTransport, CertificateOverTransport, KerberosOverTransport, IssuedTokenOverTransport ve SspiNegotiatedOverTransport.  
   
  Bu kimlik doğrulama modları SecurityPolicy içinde açıklanan aktarım bağlama kullanılarak oluşturulur. UserNameOverTransport için kimlik doğrulama modu UsernameToken imzalı destekleme belirteci ' dir. Kimlik doğrulama modları belirteç imzalı onaylama belirteç olarak görünür. Ek C.1.2 ve C.1.3, SecurityPolicy ayrıntı güvenlik üstbilgisi yerleşiminde açıklanmaktadır. Aşağıdaki örnek güvenlik üstbilgileri bir belirli kimlik doğrulama modu katı düzenini gösterir.  
   
@@ -560,7 +550,7 @@ Namespace='http://www.w3.org/2005/08/addressing' />
 ```  
   
 #### <a name="615-sspinegotiatedovertransport"></a>6.1.5 SspiNegotiatedOverTransport  
- Bu modda, istemci ve sunucu kimlik doğrulaması gerçekleştirmek için anlaşması protokolü kullanılır. Kerberos Mümkünse, kullanılan aksi NTLM. Sonuçta elde edilen SCT SOAP katmanında başlatıcıdan alıcıya gönderilen her zaman bir onaylama destekleme belirteci olarak görünür. Hizmet, ayrıca aktarım katmanında bir X.509 sertifikası tarafından doğrulanır. Kullanılan bağlama aktarım bağlama ' dir. "SPNEGO" (anlaşma) açıklar nasıl [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] WS-Trust ile SSPI ikili anlaşma protokolünü kullanır. SCT SPNEGO el sıkışma kurulduktan sonra bu bölümde güvenlik üstbilgi örnek verilmiştir.  
+ Bu modda, istemci ve sunucu kimlik doğrulaması gerçekleştirmek için anlaşması protokolü kullanılır. Kerberos Mümkünse, kullanılan aksi NTLM. Sonuçta elde edilen SCT SOAP katmanında başlatıcıdan alıcıya gönderilen her zaman bir onaylama destekleme belirteci olarak görünür. Hizmet, ayrıca aktarım katmanında bir X.509 sertifikası tarafından doğrulanır. Kullanılan bağlama aktarım bağlama ' dir. "SPNEGO" (anlaşma) WCF SSPI ikili anlaşma protokolü WS-Trust ile nasıl kullandığını açıklar. SCT SPNEGO el sıkışma kurulduktan sonra bu bölümde güvenlik üstbilgi örnek verilmiştir.  
   
  İlke  
   

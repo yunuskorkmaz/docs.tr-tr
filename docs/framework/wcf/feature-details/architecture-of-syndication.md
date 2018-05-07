@@ -1,26 +1,12 @@
 ---
 title: Dağıtım Mimarisi
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 ms.assetid: ed4ca86e-e3d8-4acb-87aa-1921fbc353be
-caps.latest.revision: 25
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 2516a80f8d92b4e64372be140d2ee3d5db4c7b54
-ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
+ms.openlocfilehash: f0a6b288860c343157f31f74d5a461fad1784e0a
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/30/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="architecture-of-syndication"></a>Dağıtım Mimarisi
 Dağıtım API, çeşitli biçimlerde hat açın yazılacak dağıtılmış içerik sağlayan bir biçimi Tarafsız programlama modeli sağlamak için tasarlanmıştır. Soyut veri modeli şu sınıflardan oluşur:  
@@ -37,16 +23,16 @@ Dağıtım API, çeşitli biçimlerde hat açın yazılacak dağıtılmış içe
   
  Adlarından bazıları farklı olmasına rağmen bu sınıfların Atom 1.0 belirtiminde tanımlanan yapıları yakından eşlenir.  
   
- İçinde [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)], dağıtım akışlarını başka türde bir hizmet işlemi Modellenen, dönüş girildiği biridir türetilmiş sınıfları birini <xref:System.ServiceModel.Syndication.SyndicationFeedFormatter>. Bir akış alınmasını istek-yanıt iletisi exchange modellenir. Bir istemci, hizmet ve hizmet isteğine yanıt gönderir. İstek iletisi bir altyapı Protokolü (örneğin, ham HTTP) üzerinden ayarlanır ve anlaşılır dağıtım biçimlerinin (RSS 2.0 veya Atom 1.0) oluşan bir yükü yanıt iletisi içerir. Bu ileti alışverişlerinde uygulama Hizmetleri Dağıtım Hizmetleri olarak adlandırılır.  
+ Başka türde bir hizmet işlemi, bir dönüş türü olduğu türetilmiş sınıfları biri Modellenen Windows Communication Foundation (WCF), dağıtım akışlarını <xref:System.ServiceModel.Syndication.SyndicationFeedFormatter>. Bir akış alınmasını istek-yanıt iletisi exchange modellenir. Bir istemci, hizmet ve hizmet isteğine yanıt gönderir. İstek iletisi bir altyapı Protokolü (örneğin, ham HTTP) üzerinden ayarlanır ve anlaşılır dağıtım biçimlerinin (RSS 2.0 veya Atom 1.0) oluşan bir yükü yanıt iletisi içerir. Bu ileti alışverişlerinde uygulama Hizmetleri Dağıtım Hizmetleri olarak adlandırılır.  
   
  Bir dağıtım hizmet sözleşmesi örneğini döndürür işlemlerinin bir dizi oluşur <xref:System.ServiceModel.Syndication.SyndicationFeedFormatter> sınıfı. Aşağıdaki örnek, bir dağıtım hizmeti için bir arabirim bildiriminde gösterir.  
   
  [!code-csharp[S_UE_SyndicationBoth#0](../../../../samples/snippets/csharp/VS_Snippets_CFX/s_ue_syndicationboth/cs/service.cs#0)]  
   
- Dağıtım desteği üstünde oluşturulan [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] REST programlama modeli tanımlar <xref:System.ServiceModel.WebHttpBinding> ile birlikte kullanılan bağlama <xref:System.ServiceModel.Description.WebHttpBehavior> akışları Hizmetleri olarak kullanılabilir duruma getirilecek. Hakkında daha fazla bilgi için [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] REST programlama modeli, bkz: [WCF Web HTTP programlama modeline genel bakış](../../../../docs/framework/wcf/feature-details/wcf-web-http-programming-model-overview.md).  
+ Dağıtım desteği WCF REST programlama tanımlayan bir Model temelinde oluşturulmuştur <xref:System.ServiceModel.WebHttpBinding> ile birlikte kullanılan bağlama <xref:System.ServiceModel.Description.WebHttpBehavior> akışları Hizmetleri olarak kullanılabilir duruma getirilecek. WCF REST programlama modeli hakkında daha fazla bilgi için bkz: [WCF Web HTTP programlama modeline genel bakış](../../../../docs/framework/wcf/feature-details/wcf-web-http-programming-model-overview.md).  
   
 > [!NOTE]
->  Atom 1.0 belirtimi tarih yapıları hiçbirinde belirtilmesini Kesirli saniye sağlar. Biçimlendiricisi ve seri durumdan çıkarmak [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] uygulama Kesirli saniye yok sayar.  
+>  Atom 1.0 belirtimi tarih yapıları hiçbirinde belirtilmesini Kesirli saniye sağlar. Ne zaman seri hale getirme ve seri durumdan WCF uygulaması Kesirli saniye yoksayar.  
   
 ## <a name="object-model"></a>Nesne modeli  
  Aşağıdaki tablolarda sınıfların gruplarının dağıtım için nesne modeli oluşur.  
@@ -88,7 +74,7 @@ Dağıtım API, çeşitli biçimlerde hat açın yazılacak dağıtılmış içe
   
 ## <a name="extensibility"></a>Genişletilebilirlik  
   
--   Bir anahtar dağıtım protokolleri genişletilebilirlik özelliğidir. Atom 1.0 ve RSS 2.0 teknik özelliklerine tanımlanmamış dağıtım akışlarını için öznitelikler ve öğeler eklemenize izin verir. [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] Dağıtım programlama modeli özel özniteliklere ve uzantıları ile çalışmaya ilişkin iki yolla sağlar: yeni bir sınıf ve geniş yazılmış erişim türetme. Daha fazla bilgi için bkz: [dağıtım genişletilebilirliği](../../../../docs/framework/wcf/feature-details/syndication-extensibility.md).  
+-   Bir anahtar dağıtım protokolleri genişletilebilirlik özelliğidir. Atom 1.0 ve RSS 2.0 teknik özelliklerine tanımlanmamış dağıtım akışlarını için öznitelikler ve öğeler eklemenize izin verir. Özel öznitelikler ve uzantıları ile çalışmaya ilişkin iki yolla WCF dağıtım programlama modeli sağlar: yeni bir sınıf ve geniş yazılmış erişim türetme. Daha fazla bilgi için bkz: [dağıtım genişletilebilirliği](../../../../docs/framework/wcf/feature-details/syndication-extensibility.md).  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
  [WCF Dağıtımı Genel Bakış](../../../../docs/framework/wcf/feature-details/wcf-syndication-overview.md)  

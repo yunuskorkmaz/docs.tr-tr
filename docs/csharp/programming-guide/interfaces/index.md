@@ -1,22 +1,15 @@
 ---
 title: Arabirimler (C# Programlama Kılavuzu)
 ms.date: 07/20/2015
-ms.prod: .net
-ms.technology:
-- devlang-csharp
-ms.topic: article
 helpviewer_keywords:
 - interfaces [C#]
 - C# language, interfaces
 ms.assetid: 2feda177-ce11-432d-81b4-d50f5f35fd37
-caps.latest.revision: 45
-author: BillWagner
-ms.author: wiwagn
-ms.openlocfilehash: f14d4bf48d117558a4019a8f016e194af27a9ebf
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 6ef872876e800674a58b440e0e4001b86b0f8244
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="interfaces-c-programming-guide"></a>Arabirimler (C# Programlama Kılavuzu)
 Bir arabirim ilgili işlevlerin bir grup için tanımları içerir, bir [sınıfı](../../../csharp/language-reference/keywords/class.md) veya [yapısı](../../../csharp/language-reference/keywords/struct.md) uygulayabilirsiniz.  
@@ -63,42 +56,42 @@ Bir arabirim ilgili işlevlerin bir grup için tanımları içerir, bir [sınıf
 -   Sınıfta veya yapı birden çok arabirimi uygulayabilirsiniz. Bir sınıf bir taban sınıf ve ayrıca bir veya daha fazla arabirimin uygulayın.  
   
 ## <a name="in-this-section"></a>Bu Bölümde  
- [Açık arabirim uygulaması](../../../csharp/programming-guide/interfaces/explicit-interface-implementation.md)  
+ [Belirtik Arabirim Kullanma](../../../csharp/programming-guide/interfaces/explicit-interface-implementation.md)  
  Arabirime belirli bir sınıf üyesi oluşturma açıklanmaktadır.  
   
- [Nasıl yapılır: arabirim üyelerini açıkça uygulama](../../../csharp/programming-guide/interfaces/how-to-explicitly-implement-interface-members.md)  
+ [Nasıl yapılır: Arabirim Üyelerini Açıkça Uygulama](../../../csharp/programming-guide/interfaces/how-to-explicitly-implement-interface-members.md)  
  Arabirimin üyelerini açıkça uygulama konusunda bir örnek sağlar.  
   
- [Nasıl yapılır: iki arabirimin üyelerini açıkça uygulama](../../../csharp/programming-guide/interfaces/how-to-explicitly-implement-members-of-two-interfaces.md)  
+ [Nasıl yapılır: İki Arabirimin Üyelerini Açıkça Uygulama](../../../csharp/programming-guide/interfaces/how-to-explicitly-implement-members-of-two-interfaces.md)  
  Devralma ile arabirimin üyelerini açıkça uygulama konusunda bir örnek sağlar.  
   
-##  <a name="BKMK_RelatedSections"></a>İlgili bölümler  
+##  <a name="BKMK_RelatedSections"></a> İlgili bölümler  
   
 -   [Arabirim Özellikleri](../../../csharp/programming-guide/classes-and-structs/interface-properties.md)  
   
--   [Arabirimlerdeki dizin oluşturucular](../../../csharp/programming-guide/indexers/indexers-in-interfaces.md)  
+-   [Arabirimlerdeki Dizin Oluşturucular](../../../csharp/programming-guide/indexers/indexers-in-interfaces.md)  
   
 -   [Nasıl yapılır: arabirim olaylarını uygulama](../../../csharp/programming-guide/events/how-to-implement-interface-events.md)  
   
--   [Sınıflar ve yapılar](../../../csharp/programming-guide/classes-and-structs/index.md)  
+-   [Sınıflar ve Yapılar](../../../csharp/programming-guide/classes-and-structs/index.md)  
   
 -   [Devralma](../../../csharp/programming-guide/classes-and-structs/inheritance.md)  
   
--   [Yöntemleri](../../../csharp/programming-guide/classes-and-structs/methods.md)  
+-   [Yöntemler](../../../csharp/programming-guide/classes-and-structs/methods.md)  
   
 -   [Çok biçimlilik](../../../csharp/programming-guide/classes-and-structs/polymorphism.md)  
   
--   [Soyut ve korumalı sınıflar ve sınıf üyeleri](../../../csharp/programming-guide/classes-and-structs/abstract-and-sealed-classes-and-class-members.md)  
+-   [Soyut ve Korumalı Sınıflar ve Sınıf Üyeleri](../../../csharp/programming-guide/classes-and-structs/abstract-and-sealed-classes-and-class-members.md)  
   
--   [Özellikleri](../../../csharp/programming-guide/classes-and-structs/properties.md)  
+-   [Özellikler](../../../csharp/programming-guide/classes-and-structs/properties.md)  
   
--   [Olayları](../../../csharp/programming-guide/events/index.md)  
+-   [Olaylar](../../../csharp/programming-guide/events/index.md)  
   
--   [Dizin oluşturucular](../../../csharp/programming-guide/indexers/index.md)  
+-   [Dizin Oluşturucular](../../../csharp/programming-guide/indexers/index.md)  
   
 ## <a name="featured-book-chapter"></a>Özel Kitap Bölümü  
  [Arabirimleri](http://msdn.microsoft.com/library/orm-9780596521066-01-13.aspx) içinde [C# 3.0 öğrenme: C# 3.0 temelleri Yöneticisi](http://msdn.microsoft.com/library/orm-9780596521066-01.aspx)  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [C# programlama kılavuzu](../../../csharp/programming-guide/index.md)  
+ [C# Programlama Kılavuzu](../../../csharp/programming-guide/index.md)  
  [Devralma](../../../csharp/programming-guide/classes-and-structs/inheritance.md)

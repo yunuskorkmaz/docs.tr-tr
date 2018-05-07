@@ -1,25 +1,16 @@
 ---
-title: "Nasıl yapılır: Dize İçinde Arama (Visual Basic)"
-ms.custom: 
+title: 'Nasıl yapılır: Dize İçinde Arama (Visual Basic)'
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
-ms.topic: article
 helpviewer_keywords:
 - strings [Visual Basic], finding
 - strings [Visual Basic], searching
 - examples [Visual Basic], strings
 ms.assetid: ae4c79e0-08ea-489f-bdb2-5eb6d355f284
-caps.latest.revision: "16"
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: 2c828d0b32fdf90e121e9d5da0bb60ab11c212f4
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 08a005f2927a76c9b29c1ff0092ea8282188b2b2
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-search-within-a-string-visual-basic"></a>Nasıl yapılır: Dize İçinde Arama (Visual Basic)
 Bu örnek çağırır <xref:System.String.IndexOf%2A> yöntemi bir <xref:System.String> bir alt dizenin ilk örneğinin dizinini bildirmek için nesne.  
@@ -43,6 +34,6 @@ Bu örnek çağırır <xref:System.String.IndexOf%2A> yöntemi bir <xref:System.
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
  <xref:System.String.IndexOf%2A>  
- [Try... Catch... Finally ifadesi](../../../../visual-basic/language-reference/statements/try-catch-finally-statement.md)  
+ [Try...Catch...Finally Deyimi](../../../../visual-basic/language-reference/statements/try-catch-finally-statement.md)  
  [Visual Basic'de dizelere giriş](../../../../visual-basic/programming-guide/language-features/strings/introduction-to-strings.md)  
- [Dizeleri](../../../../visual-basic/programming-guide/language-features/strings/index.md)
+ [Dizeler](../../../../visual-basic/programming-guide/language-features/strings/index.md)

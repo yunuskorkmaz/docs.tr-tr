@@ -1,33 +1,19 @@
 ---
-title: "Nasıl yapılır: Bir Windows Communication Foundation İstemcisi Kullanma"
-ms.custom: 
+title: 'Nasıl yapılır: Bir Windows Communication Foundation İstemcisi Kullanma'
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - WCF clients [WCF], using
 ms.assetid: 190349fc-0573-49c7-bb85-8e316df7f31f
-caps.latest.revision: 
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 0330c386730c6b0436196bb5b85162bc4621c214
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
-ms.translationtype: MT
+ms.openlocfilehash: 6667a8e9862054d7d8d5b20e70dfbe699de02eab
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-use-a-windows-communication-foundation-client"></a>Nasıl yapılır: Bir Windows Communication Foundation İstemcisi Kullanma
-Son altı görevlerin bir temel oluşturmak için gereken budur [!INCLUDE[indigo1](../../../includes/indigo1-md.md)] uygulama. Tüm altı görevlerinin genel bakış için bkz: [başlangıç Öğreticisi](../../../docs/framework/wcf/getting-started-tutorial.md) konu.  
+Son altı görevlerin temel bir Windows Communication Foundation (WCF) uygulaması oluşturmak için gereken budur. Tüm altı görevlerinin genel bakış için bkz: [başlangıç Öğreticisi](../../../docs/framework/wcf/getting-started-tutorial.md) konu.  
   
- Bir kez bir [!INCLUDE[indigo1](../../../includes/indigo1-md.md)] proxy oluşturulur ve yapılandırılmış bir istemci örneği oluşturulabilir ve istemci uygulaması derlenmiş ve iletişim için kullanılan [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] hizmet. Bu konuda, örnek oluşturma ve kullanma ile ilgili yordamlar açıklanmaktadır bir [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] istemci. Bu yordam üç şey yapar:  
+ Windows Communication Foundation (WCF) proxy oluşturuldu ve yapılandırıldı sonra istemci örneği oluşturulabilir ve istemci uygulaması derlenmiş ve iletişim için kullanılan [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] hizmet. Bu konuda, örnek oluşturma ve kullanma ile ilgili yordamlar açıklanmaktadır bir [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] istemci. Bu yordam üç şey yapar:  
   
 1.  Başlatır bir [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] istemci.  
   

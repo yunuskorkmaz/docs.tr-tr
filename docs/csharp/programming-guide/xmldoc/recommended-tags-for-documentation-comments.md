@@ -1,21 +1,15 @@
 ---
-title: "Belge Açıklamaları için Önerilen Etiketler (C# Programlama Kılavuzu)"
+title: Belge Açıklamaları için Önerilen Etiketler (C# Programlama Kılavuzu)
 ms.date: 07/20/2015
-ms.prod: .net
-ms.technology: devlang-csharp
-ms.topic: article
 helpviewer_keywords:
 - XML [C#], tags
 - XML documentation [C#], tags
 ms.assetid: 6e98f7a9-38f4-4d74-b644-1ff1b23320fd
-caps.latest.revision: "20"
-author: BillWagner
-ms.author: wiwagn
-ms.openlocfilehash: 4d558bbe58d1f4a1c290b4f36718293d5ba1c734
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 54047746db672efbf626eb2d3fc301b341cc49f5
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="recommended-tags-for-documentation-comments-c-programming-guide"></a>Belge Açıklamaları için Önerilen Etiketler (C# Programlama Kılavuzu)
 C# Derleyici, kodundaki belge açıklamaları işler ve bunları adı belirttiğiniz bir dosyada XML olarak biçimlendirir **/doc** komut satırı seçeneği. Derleyicinin ürettiği dosyasını temel alarak son belgeleri oluşturmak için özel bir araç oluşturabilir, veya gibi bir araç kullanın [Sandcastle](https://github.com/EWSoftware/SHFB).  
@@ -48,6 +42,6 @@ C# Derleyici, kodundaki belge açıklamaları işler ve bunları adı belirttiğ
 ```  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [C# programlama kılavuzu](../../../csharp/programming-guide/index.md)  
+ [C# Programlama Kılavuzu](../../../csharp/programming-guide/index.md)  
  [/ doc (C# Derleyici Seçenekleri)](../../../csharp/language-reference/compiler-options/doc-compiler-option.md)  
- [XML belgeleri yorumları](../../../csharp/programming-guide/xmldoc/xml-documentation-comments.md)
+ [XML Belge Açıklamaları](../../../csharp/programming-guide/xmldoc/xml-documentation-comments.md)

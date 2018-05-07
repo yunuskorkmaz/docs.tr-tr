@@ -1,26 +1,17 @@
 ---
-title: "Handles Tümcesi (Visual Basic)"
+title: Handles Tümcesi (Visual Basic)
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- devlang-visual-basic
-ms.topic: article
 f1_keywords:
 - Handles
 - vb.Handles
 helpviewer_keywords:
 - Handles keyword [Visual Basic]
 ms.assetid: 1b051c0e-f499-42f6-acb5-6f4f27824b40
-caps.latest.revision: 
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: a23b3d96052ad179ea25150bb570461a9e764977
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 15ce6a25aa5f403a2e55beb57b3693095743e52f
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="handles-clause-visual-basic"></a>Handles Tümcesi (Visual Basic)
 Bir yordam belirtilen bir olay işleme bildirir.  
@@ -64,8 +55,8 @@ proceduredeclaration Handles eventlist
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
  [WithEvents](../../../visual-basic/language-reference/modifiers/withevents.md)  
- [AddHandler deyimi](../../../visual-basic/language-reference/statements/addhandler-statement.md)  
- [RemoveHandler deyimi](../../../visual-basic/language-reference/statements/removehandler-statement.md)  
- [Event deyimi](../../../visual-basic/language-reference/statements/event-statement.md)  
- [RaiseEvent deyimi](../../../visual-basic/language-reference/statements/raiseevent-statement.md)  
- [Olayları](../../../visual-basic/programming-guide/language-features/events/index.md)
+ [AddHandler Deyimi](../../../visual-basic/language-reference/statements/addhandler-statement.md)  
+ [RemoveHandler Deyimi](../../../visual-basic/language-reference/statements/removehandler-statement.md)  
+ [Event Deyimi](../../../visual-basic/language-reference/statements/event-statement.md)  
+ [RaiseEvent Deyimi](../../../visual-basic/language-reference/statements/raiseevent-statement.md)  
+ [Olaylar](../../../visual-basic/programming-guide/language-features/events/index.md)

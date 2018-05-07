@@ -1,12 +1,6 @@
 ---
-title: "Nasıl yapılır: Devralınmış Değişkeni Gizleme (Visual Basic)"
-ms.custom: 
+title: 'Nasıl yapılır: Devralınmış Değişkeni Gizleme (Visual Basic)'
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
-ms.topic: article
 helpviewer_keywords:
 - qualification [Visual Basic], of element names
 - element names [Visual Basic], qualification
@@ -17,14 +11,11 @@ helpviewer_keywords:
 - declared elements [Visual Basic], about declared elements
 - variables [Visual Basic], hiding inherited
 ms.assetid: 765728d9-7351-4a30-999d-b5f34f024412
-caps.latest.revision: "17"
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: d2059da873f8b9ec9ea51191139c652a9e01d92b
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: c59fdd8c6c6d2444b8d687c78c61f4e0d4bf9a52
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-hide-an-inherited-variable-visual-basic"></a>Nasıl yapılır: Devralınmış Değişkeni Gizleme (Visual Basic)
 Türetilmiş bir sınıf kendi temel sınıfının tüm tanımları devralır. Bir temel sınıf öğesi olarak aynı adı taşıyan bir değişkeni tanımlamak istiyorsanız, gizleyebilirsiniz, veya *gölge*, türetilen sınıfta değişkeniniz tanımladığınızda, temel sınıf öğesi. Bunu yaparsanız, türetilmiş sınıf kodda açıkça gölgeleme mekanizması atlar sürece değişkeniniz erişir.  
@@ -64,11 +55,11 @@ Türetilmiş bir sınıf kendi temel sınıfının tüm tanımları devralır. B
  Gölgeleme aynı ada sahip bir değişken birden fazla sürümünü getirmektedir. Kod açıklaması değişken adına başvurduğunda, derleyici Başvurusu Güvenlik giderir sürüm kod açıklaması konumunu ve uygun bir dize varlığını gibi etkenlere bağlıdır. Bu gölgeli bir değişken istenmeyen bir sürümüne başvuran riskini artırabilir. Bu riski tam olarak gölgeli bir değişken yapılan tüm başvuruları niteleme tarafından düşürebilirsiniz.  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [Bildirilmiş öğelere başvurular](../../../../visual-basic/programming-guide/language-features/declared-elements/references-to-declared-elements.md)  
+ [Bildirilmiş Öğelere Başvurular](../../../../visual-basic/programming-guide/language-features/declared-elements/references-to-declared-elements.md)  
  [Visual Basic'de gölgeleme](../../../../visual-basic/programming-guide/language-features/declared-elements/shadowing.md)  
- [Gölgeleme ve geçersiz kılma arasındaki farklar](../../../../visual-basic/programming-guide/language-features/declared-elements/differences-between-shadowing-and-overriding.md)  
- [Nasıl yapılır: değişkeninizle aynı ada sahip bir değişkeni gizleme](../../../../visual-basic/programming-guide/language-features/declared-elements/how-to-hide-a-variable-with-the-same-name-as-your-variable.md)  
- [Nasıl yapılır: türetilmiş sınıf tarafından gizlenen bir değişkene erişme](../../../../visual-basic/programming-guide/language-features/declared-elements/how-to-access-a-variable-hidden-by-a-derived-class.md)  
- [Geçersiz kılmaları](../../../../visual-basic/language-reference/modifiers/overrides.md)  
+ [Gölgeleme ve Geçersiz Kılma Arasındaki Farklar](../../../../visual-basic/programming-guide/language-features/declared-elements/differences-between-shadowing-and-overriding.md)  
+ [Nasıl yapılır: Değişkeninizle Aynı Adı Taşıyan Bir Değişkeni Gizleme](../../../../visual-basic/programming-guide/language-features/declared-elements/how-to-hide-a-variable-with-the-same-name-as-your-variable.md)  
+ [Nasıl yapılır: Türetilmiş Sınıf Tarafından Gizlenen Bir Değişkene Erişme](../../../../visual-basic/programming-guide/language-features/declared-elements/how-to-access-a-variable-hidden-by-a-derived-class.md)  
+ [Overrides](../../../../visual-basic/language-reference/modifiers/overrides.md)  
  [Me, My, MyBase ve MyClass](../../../../visual-basic/programming-guide/program-structure/me-my-mybase-and-myclass.md)  
- [Devralma temelleri](../../../../visual-basic/programming-guide/language-features/objects-and-classes/inheritance-basics.md)
+ [Devralma Temelleri](../../../../visual-basic/programming-guide/language-features/objects-and-classes/inheritance-basics.md)

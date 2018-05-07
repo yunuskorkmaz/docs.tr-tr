@@ -1,10 +1,6 @@
 ---
 title: Birlikte Çalışma Uygulamasını Dağıtma
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.technology:
-- dotnet-clr
-ms.topic: article
 helpviewer_keywords:
 - deploying applications [.NET Framework], interop
 - strong-named assemblies, interop applications
@@ -20,14 +16,11 @@ helpviewer_keywords:
 ms.assetid: ea8a403e-ae03-4faa-9d9b-02179ec72992
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 8271a30d2258214defd5a15816813875cf594c8b
-ms.sourcegitcommit: 9a4fe1a1c37b26532654b4bbe22d702237950009
+ms.openlocfilehash: d4689c52dee84e2a310f0ddb39d0874c273081bb
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="deploying-an-interop-application"></a>Birlikte Çalışma Uygulamasını Dağıtma
 Birlikte çalışma uygulamasını genellikle bir .NET istemci derlemesi içerir, ayrı COM temsil eden bir veya daha fazla birlikte çalışma derlemeleri tür kitaplıkları ve COM bileşenlerini bir veya daha fazla kayıtlı. Visual Studio ve [!INCLUDE[winsdklong](../../../includes/winsdklong-md.md)] almak ve birlikte çalışabilirlik bütünleştirilmiş bir tür kitaplığı dönüştürmek için Araçlar'da anlatıldığı gibi sağlamak [tür kitaplığını derleme olarak içeri aktarma](importing-a-type-library-as-an-assembly.md). Birlikte çalışma uygulamasını dağıtmak için iki yol vardır:  
@@ -52,7 +45,7 @@ Birlikte çalışma uygulamasını genellikle bir .NET istemci derlemesi içerir
 ### <a name="shared-assemblies"></a>Paylaşılan derlemeler  
  Birden çok uygulama tarafından paylaşılan derlemeleri genel derleme önbelleğine merkezi bir depoda yüklü olmalıdır. .NET istemcileri imzalanmış ve genel derleme önbelleğinde yüklü birlikte çalışma derlemesi'nın aynı kopyasını erişebilir. Oluşturan ve birincil birlikte çalışma derlemeleri kullanma hakkında daha fazla bilgi için bkz: [birincil birlikte çalışma derlemeleri](https://msdn.microsoft.com/library/b977a8be-59a0-40a0-a806-b11ffba5c080(v=vs.100)).  
   
-## <a name="see-also"></a>Ayrıca bkz.  
+## <a name="see-also"></a>Ayrıca Bkz.  
  [COM Bileşenlerini .NET Framework'te Gösterme](exposing-com-components.md)  
  [Tür Kitaplığını Bütünleştirilmiş Kod Olarak İçeri Aktarma](importing-a-type-library-as-an-assembly.md)  
  [Yönetilen kodda COM türlerini kullanma](https://msdn.microsoft.com/library/1a95a8ca-c8b8-4464-90b0-5ee1a1135b66(v=vs.100))  

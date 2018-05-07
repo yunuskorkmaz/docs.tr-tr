@@ -1,37 +1,25 @@
 ---
-title: "HTTPS, TCP üzerinden SSL ve SOAP Güvenliği Arasındaki Sertifika Doğrulama Farkları"
-ms.custom: 
+title: HTTPS, TCP üzerinden SSL ve SOAP Güvenliği Arasındaki Sertifika Doğrulama Farkları
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
 helpviewer_keywords:
 - certificates [WCF], validation differences
 ms.assetid: 953a219f-4745-4019-9894-c70704f352e6
-caps.latest.revision: 
 author: BrucePerlerMS
-ms.author: bruceper
 manager: mbaldwin
-ms.workload:
-- dotnet
-ms.openlocfilehash: 34be2fbc5b8148d7bfdeb5e5d07e5b73ac89a97e
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 744d9208f6be47965b89ddd9555b99feab9e18b7
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="certificate-validation-differences-between-https-ssl-over-tcp-and-soap-security"></a>HTTPS, TCP üzerinden SSL ve SOAP Güvenliği Arasındaki Sertifika Doğrulama Farkları
-Sertifikaları kullanabilirsiniz [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] HTTP (HTTPS) veya TCP üzerinden Aktarım Katmanı Güvenliği (TLS) yanı sıra ileti katmanlı (SOAP) güvenlik ile. Bu konuda bu tür sertifikalar doğrulanır farklılıklar açıklanmaktadır.  
+Sertifikaları Windows Communication Foundation (WCF) ileti katmanlı (SOAP) güvenlik Aktarım Katmanı Güvenliği (TLS) yanı sıra ile HTTP (HTTPS) veya TCP üzerinden kullanabilirsiniz. Bu konuda bu tür sertifikalar doğrulanır farklılıklar açıklanmaktadır.  
   
 ## <a name="validation-of-https-client-certificates"></a>HTTPS istemci sertifikalarının doğrulama  
- Bir istemci ve hizmet arasında iletişim kurmak için HTTPS kullanırken, bir hizmetin kimliğini istemcinin kullandığı sertifika zinciri güven desteklemesi gerekir. Diğer bir deyişle, güvenilen kök sertifika yetkilisine zincirleme gerekir. Değilse, HTTP katman geçirirse bir <xref:System.Net.WebException> iletiyle "uzak sunucusu bir hata döndürdü: (403) Yasak." [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]Bu özel durum olarak ortaya çıkarır bir <xref:System.ServiceModel.Security.MessageSecurityException>.  
+ Bir istemci ve hizmet arasında iletişim kurmak için HTTPS kullanırken, bir hizmetin kimliğini istemcinin kullandığı sertifika zinciri güven desteklemesi gerekir. Diğer bir deyişle, güvenilen kök sertifika yetkilisine zincirleme gerekir. Değilse, HTTP katman geçirirse bir <xref:System.Net.WebException> iletiyle "uzak sunucusu bir hata döndürdü: (403) Yasak." WCF özel olarak bu durum ortaya çıkarır bir <xref:System.ServiceModel.Security.MessageSecurityException>.  
   
 ## <a name="validation-of-https-service-certificates"></a>HTTPS hizmet sertifika doğrulama  
  Bir istemci ve hizmet arasında iletişim kurmak için HTTPS kullanırken, sunucu kimlik doğrulamasını sertifika zinciri güven varsayılan olarak desteklemesi gerekir. Diğer bir deyişle, güvenilen kök sertifika yetkilisine zincirleme gerekir. Çevrimiçi Denetimsiz sertifikanın iptal edilmediğini görmek için gerçekleştirilir. Kaydederek bu davranışı geçersiz kılabilirsiniz bir <xref:System.Net.Security.RemoteCertificateValidationCallback> aşağıdaki kodda gösterildiği gibi geri çağırma.  

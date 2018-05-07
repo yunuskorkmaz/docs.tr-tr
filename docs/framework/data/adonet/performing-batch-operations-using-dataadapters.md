@@ -1,27 +1,15 @@
 ---
-title: "DataAdapters kullanarak toplu işlemleri gerçekleştirme"
-ms.custom: 
+title: DataAdapters kullanarak toplu işlemleri gerçekleştirme
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-ado
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
 ms.assetid: e72ed5af-b24f-486c-8429-c8fd2208f844
-caps.latest.revision: "3"
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
-ms.workload: dotnet
-ms.openlocfilehash: e5c584bcd825e390b24da6c95ecb159a8280c639
-ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
+ms.openlocfilehash: e585d8a3c21f4a256a2e706389fc9f8adc7900da
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="performing-batch-operations-using-dataadapters"></a>DataAdapters kullanarak toplu işlemleri gerçekleştirme
 ADO.NET toplu desteği sağlayan bir <xref:System.Data.Common.DataAdapter> INSERT, UPDATE ve DELETE işlemlerinden gruplandırmak için bir <xref:System.Data.DataSet> veya <xref:System.Data.DataTable> bir defada bir işlem göndermek yerine bu sunucuya. Sunucuya gidiş dönüş sayısı azalma genellikle önemli performans artışları sonuçlanır. Toplu güncelleştirmeler, SQL Server için .NET veri sağlayıcıları için desteklenir (<xref:System.Data.SqlClient>) ve Oracle (<xref:System.Data.OracleClient>).  
@@ -145,7 +133,7 @@ public static void BatchUpdate(DataTable dataTable,Int32 batchSize)
 ### <a name="accessing-updated-rows"></a>Güncelleştirilmiş satırları erişme  
  Toplu işleme devre dışı bırakıldığında, güncelleştirilen satır kullanılarak erişilebilir <xref:System.Data.Common.RowUpdatedEventArgs.Row%2A> özelliği <xref:System.Data.Common.RowUpdatedEventArgs> sınıfı.  
   
- Toplu işleme etkin olduğunda, tek bir `RowUpdated` olay birden çok satır için oluşturulur. Bu nedenle, değeri `Row` her satır için özellik NULL'dur. `RowUpdating`olayları yine her satır için oluşturulur. <xref:System.Data.Common.RowUpdatedEventArgs.CopyToRows%2A> Yöntemi <xref:System.Data.Common.RowUpdatedEventArgs> sınıfı bir diziye satırlara yapılan başvurular kopyalayarak işlenen satır erişmenize olanak verir. Hiçbir satır işlenmekte olan, `CopyToRows` oluşturur bir <xref:System.ArgumentNullException>. Kullanım <xref:System.Data.Common.RowUpdatedEventArgs.RowCount%2A> çağırmadan önce işlenen satır sayısını döndürmek için özellik <xref:System.Data.Common.RowUpdatedEventArgs.CopyToRows%2A> yöntemi.  
+ Toplu işleme etkin olduğunda, tek bir `RowUpdated` olay birden çok satır için oluşturulur. Bu nedenle, değeri `Row` her satır için özellik NULL'dur. `RowUpdating` olayları yine her satır için oluşturulur. <xref:System.Data.Common.RowUpdatedEventArgs.CopyToRows%2A> Yöntemi <xref:System.Data.Common.RowUpdatedEventArgs> sınıfı bir diziye satırlara yapılan başvurular kopyalayarak işlenen satır erişmenize olanak verir. Hiçbir satır işlenmekte olan, `CopyToRows` oluşturur bir <xref:System.ArgumentNullException>. Kullanım <xref:System.Data.Common.RowUpdatedEventArgs.RowCount%2A> çağırmadan önce işlenen satır sayısını döndürmek için özellik <xref:System.Data.Common.RowUpdatedEventArgs.CopyToRows%2A> yöntemi.  
   
 ### <a name="handling-data-errors"></a>Veri hataları işleme  
  Toplu iş yürütme her tek tek bir deyimi yürütme aynı etkiye sahiptir. Deyimleri deyimleri toplu eklenen sırada yürütülür. Toplu iş modunda devre dışı bırakıldığında oldukları gibi hatalar toplu iş modunda aynı şekilde ele alınır. Her satır ayrı ayrı işlenir. Veritabanında başarıyla işlenen satır ilgili güncelleştirilmeyecek <xref:System.Data.DataRow> içinde <xref:System.Data.DataTable>.  

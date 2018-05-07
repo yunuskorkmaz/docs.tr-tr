@@ -1,20 +1,13 @@
 ---
-title: "Temsilciler için ortak desenler"
-description: "Temsilciler kodunuzda güçlü bileşeniniz arasında Kaçın kullanmayı için ortak desenler hakkında bilgi edinin."
-keywords: .NET, .NET core
-author: BillWagner
-ms.author: wiwagn
+title: Temsilciler için ortak desenler
+description: Temsilciler kodunuzda güçlü bileşeniniz arasında Kaçın kullanmayı için ortak desenler hakkında bilgi edinin.
 ms.date: 06/20/2016
-ms.topic: article
-ms.prod: .net
-ms.technology: devlang-csharp
-ms.devlang: csharp
 ms.assetid: 0ff8fdfd-6a11-4327-b061-0f2526f35b43
-ms.openlocfilehash: 83214800fb997e9274cacfd1bae85ab07c4515a2
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.openlocfilehash: fceab2b9c6bbd1d687566820366459ec57ae7a2d
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="common-patterns-for-delegates"></a>Temsilciler için ortak desenler
 
@@ -242,4 +235,4 @@ Genişletilemiyor günlük bileşeni beginnings diğer yazarlar ve diğer özell
 
 Günlükçü sınıfı, önemli değişiklikler oluşturmaksızın herhangi bir sayıda yenilikleri veya değişiklikleri yapabilirsiniz. Herhangi bir sınıf gibi önemli değişiklikler riski olmadan ortak API değiştiremezsiniz. Ancak, Günlükçü ve herhangi bir çıktı motorları arasında bağ yalnızca temsilci olduğundan (arabirimleri veya temel sınıflar gibi) diğer türü yok ilgilidir. Bağ olabildiğince küçük.
 
-[Sonraki](events-overview.md)
+[Next](events-overview.md)

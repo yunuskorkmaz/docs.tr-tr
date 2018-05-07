@@ -1,11 +1,6 @@
 ---
-title: "Modül &lt;anahtar sözcüğü&gt; (Visual Basic)"
+title: Modül &lt;anahtar sözcüğü&gt; (Visual Basic)
 ms.date: 07/20/2015
-ms.prod: .net
-ms.suite: 
-ms.technology:
-- devlang-visual-basic
-ms.topic: article
 f1_keywords:
 - vb.ModuleAttribute
 helpviewer_keywords:
@@ -13,14 +8,11 @@ helpviewer_keywords:
 - Module modifier
 - attribute blocks, Module keyword
 ms.assetid: d971b940-05ab-4d56-8485-e3b8a661906b
-caps.latest.revision: 
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: 1d35ad332229785f8cac76bd8099bccc85c3d3cb
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: b412655695c49d1e12a02e005fccfd37d2956787
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="module-ltkeywordgt-visual-basic"></a>Modül &lt;anahtar sözcüğü&gt; (Visual Basic)
 Bir kaynak dosyasının başında bir öznitelik geçerli derleme modülü uygulanacağını belirtir.  
@@ -33,7 +25,7 @@ Bir kaynak dosyasının başında bir öznitelik geçerli derleme modülü uygul
  `Module` Değiştiricisi aynı değil [Module deyimi](../../../visual-basic/language-reference/statements/module-statement.md).  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [Derleme](../../../visual-basic/language-reference/modifiers/assembly.md)  
- [Module deyimi](../../../visual-basic/language-reference/statements/module-statement.md)  
+ [Assembly](../../../visual-basic/language-reference/modifiers/assembly.md)  
+ [Module Deyimi](../../../visual-basic/language-reference/statements/module-statement.md)  
  [Öznitelikler genel bakış](../../../visual-basic/programming-guide/concepts/attributes/index.md)
 

@@ -1,26 +1,12 @@
 ---
 title: İş Akışı Hizmeti Konağı Dahili Bileşenleri
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 ms.assetid: af44596f-bf6a-4149-9f04-08d8e8f45250
-caps.latest.revision: 5
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 84bd0c5b93984e126019699caf64a61183c08f13
-ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
+ms.openlocfilehash: 55458dce498ac2630b7c69b743e0c0df1d5c4e92
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/30/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="workflow-service-host-internals"></a>İş Akışı Hizmeti Konağı Dahili Bileşenleri
 <xref:System.ServiceModel.WorkflowServiceHost> bir ana bilgisayar için iş akışı hizmetleri sağlar. Gelen iletiler için dinleme sorumludur ve bunları uygun iş akışı hizmeti örneğine yönlendirme, onu kaldırılması ve boşta iş akışları ve daha pek çok kalıcı denetler. Bu konuda, gelen iletileri WorkflowServiceHost nasıl işlediği açıklanmıştır.  

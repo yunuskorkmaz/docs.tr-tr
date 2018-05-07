@@ -1,21 +1,12 @@
 ---
-title: "Nasıl yapılır: tek bir alt öğe (LINQ-XML) alma (C#)"
-ms.custom: 
+title: 'Nasıl yapılır: tek bir alt öğe (LINQ-XML) alma (C#)'
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-csharp
-ms.topic: article
 ms.assetid: ce37db9e-76fa-46eb-b4cc-e8f32d22ad90
-caps.latest.revision: "3"
-author: BillWagner
-ms.author: wiwagn
-ms.openlocfilehash: 722a6b6630fd08a328a26dcef4d72a8cdd817924
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.openlocfilehash: 664b9496c8411055fcd09a1ea0709cdfdae79524
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-retrieve-a-single-child-element-linq-to-xml-c"></a>Nasıl yapılır: tek bir alt öğe (LINQ-XML) alma (C#)
 Bu konuda, tek bir alt öğe, alt öğe adı verilen almak açıklanmaktadır. Adı alt öğe ve bu ada sahip olan yalnızca bir öğe olduğunu bildiğiniz durumlarda bir koleksiyon yerine yalnızca tek bir öğede almak kullanışlı olabilir.  

@@ -1,25 +1,16 @@
 ---
 title: Const Deyimi (Visual Basic)
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- devlang-visual-basic
-ms.topic: article
 f1_keywords:
 - vb.Const
 helpviewer_keywords:
 - Const statement [Visual Basic]
 ms.assetid: 495b318d-b7c5-4198-94f8-0790a541b07a
-caps.latest.revision: 
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: 720a465f1459b663a1fca2a48856f51762328459
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: bb4c524fa5c29efbcbe485fb5e86c8cf0fa432e8
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="const-statement-visual-basic"></a>Const Deyimi (Visual Basic)
 Bildirir ve bir veya daha fazla sabitleri tanımlar.  
@@ -44,7 +35,7 @@ Const constantlist
  `constantlist`  
  Gerekli. Bu deyim içinde bildirilen sabitleri listesi.  
   
- `constant``[ ,``constant``... ]`  
+ `constant` `[ ,` `constant` `... ]`  
   
  Her `constant` aşağıdaki söz dizimini ve bölümleri vardır:  
   
@@ -85,7 +76,7 @@ Const constantlist
   
 -   **Farklı türler.** Ayrı bir kullanarak farklı veri türleri için farklı sabitleri belirtebilirsiniz `As` yan tümcesi bildirdiğiniz her değişken için. Ancak, ortak bir kullanarak aynı türde olması için birkaç sabitleri bildiremezsiniz `As` yan tümcesi.  
   
--   **Başlatma.** Her sabit değeri başlatmalıdır `constantlist`. Kullandığınız `initializer` sabite atanacak bir ifade sağlamak için. İfade değişmez değerleri, önceden tanımlanmış diğer sabitleri ve önceden tanımlanmış numaralandırma üyeleri herhangi bir bileşimi olabilir. Bu öğeler birleştirmek için aritmetik ve mantıksal işleçleri kullanabilirsiniz.  
+-   **başlatma.** Her sabit değeri başlatmalıdır `constantlist`. Kullandığınız `initializer` sabite atanacak bir ifade sağlamak için. İfade değişmez değerleri, önceden tanımlanmış diğer sabitleri ve önceden tanımlanmış numaralandırma üyeleri herhangi bir bileşimi olabilir. Bu öğeler birleştirmek için aritmetik ve mantıksal işleçleri kullanabilirsiniz.  
   
      Değişkenleri veya işlevleri kullanamazsınız `initializer`. Ancak, dönüşüm anahtar sözcükleri gibi kullanabilir `CByte` ve `CShort`. Aynı zamanda `AscW` bir sabit ile çağırırsanız `String` veya `Char` derleme zamanında değerlendirilebilir beri bağımsız değişkeni.  
   
@@ -110,11 +101,11 @@ Const constantlist
 ## <a name="see-also"></a>Ayrıca Bkz.  
  <xref:Microsoft.VisualBasic.Strings.Asc%2A>  
  <xref:Microsoft.VisualBasic.Strings.AscW%2A>  
- [Enum deyimi](../../../visual-basic/language-reference/statements/enum-statement.md)  
- [#Const yönergesi](../../../visual-basic/language-reference/directives/const-directive.md)  
- [Dim deyimi](../../../visual-basic/language-reference/statements/dim-statement.md)  
- [ReDim deyimi](../../../visual-basic/language-reference/statements/redim-statement.md)  
- [Örtük ve açık dönüştürmeler](../../../visual-basic/programming-guide/language-features/data-types/implicit-and-explicit-conversions.md)  
- [Sabitler ve numaralandırmalar](../../../visual-basic/programming-guide/language-features/constants-enums/index.md)  
- [Sabitler ve numaralandırmalar](../../../visual-basic/language-reference/constants-and-enumerations.md)  
- [Tür dönüşüm işlevleri](../../../visual-basic/language-reference/functions/type-conversion-functions.md)
+ [Enum Deyimi](../../../visual-basic/language-reference/statements/enum-statement.md)  
+ [#Const Yönergesi](../../../visual-basic/language-reference/directives/const-directive.md)  
+ [Dim Deyimi](../../../visual-basic/language-reference/statements/dim-statement.md)  
+ [ReDim Deyimi](../../../visual-basic/language-reference/statements/redim-statement.md)  
+ [Örtük ve Açık Dönüştürmeler](../../../visual-basic/programming-guide/language-features/data-types/implicit-and-explicit-conversions.md)  
+ [Sabitler ve Sabit Listeleri](../../../visual-basic/programming-guide/language-features/constants-enums/index.md)  
+ [Sabitler ve Sabit Listeleri](../../../visual-basic/language-reference/constants-and-enumerations.md)  
+ [Tür Dönüştürme İşlevleri](../../../visual-basic/language-reference/functions/type-conversion-functions.md)

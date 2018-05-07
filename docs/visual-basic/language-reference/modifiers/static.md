@@ -1,25 +1,17 @@
 ---
 title: Statik (Visual Basic)
 ms.date: 07/20/2015
-ms.prod: .net
-ms.suite: ''
-ms.technology:
-- devlang-visual-basic
-ms.topic: article
 f1_keywords:
 - vb.Static
 helpviewer_keywords:
 - static modifier
 - Static keyword [Visual Basic]
 ms.assetid: 19013910-4658-47b6-a22e-1744b527979e
-caps.latest.revision: 22
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: e08f46076281e766a5bc0b99cd61fee9cd41ece5
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 2cbd99a026a5ebf0e215ee5732d62ccf639d3836
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="static-visual-basic"></a>Statik (Visual Basic)
 Bir veya daha fazla bildirilen yerel değişkenler var ve bunlar bildirilir yordamı sonlandırma sonra en son değerleri korumak devam etmek için olduğunu belirtir.  
@@ -51,13 +43,13 @@ Bir veya daha fazla bildirilen yerel değişkenler var ve bunlar bildirilir yord
   
  `Static` Bu bağlamda değiştirici kullanılabilir:  
   
- [Dim deyimi](../../../visual-basic/language-reference/statements/dim-statement.md)  
+ [Dim Deyimi](../../../visual-basic/language-reference/statements/dim-statement.md)  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [Gölgeleri](../../../visual-basic/language-reference/modifiers/shadows.md)  
- [Paylaşılan](../../../visual-basic/language-reference/modifiers/shared.md)  
+ [Shadows](../../../visual-basic/language-reference/modifiers/shadows.md)  
+ [Shared](../../../visual-basic/language-reference/modifiers/shared.md)  
  [Visual Basic'de ömür](../../../visual-basic/programming-guide/language-features/declared-elements/lifetime.md)  
- [Değişken bildirimi](../../../visual-basic/programming-guide/language-features/variables/variable-declaration.md)  
- [Yapıları](../../../visual-basic/programming-guide/language-features/data-types/structures.md)  
- [Yerel tür çıkarımı](../../../visual-basic/programming-guide/language-features/variables/local-type-inference.md)  
- [Nesneler ve sınıflar](../../../visual-basic/programming-guide/language-features/objects-and-classes/index.md)
+ [Değişken Bildirimi](../../../visual-basic/programming-guide/language-features/variables/variable-declaration.md)  
+ [Yapılar](../../../visual-basic/programming-guide/language-features/data-types/structures.md)  
+ [Yerel Çıkarım](../../../visual-basic/programming-guide/language-features/variables/local-type-inference.md)  
+ [Nesneler ve Sınıflar](../../../visual-basic/programming-guide/language-features/objects-and-classes/index.md)

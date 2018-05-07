@@ -1,26 +1,19 @@
 ---
-title: -&gt;İşleci (C# Başvurusu)
+title: -&gt; İşleci (C# Başvurusu)
 ms.date: 07/20/2015
-ms.prod: .net
-ms.technology:
-- devlang-csharp
-ms.topic: article
 f1_keywords:
 - ->_CSharpKeyword
 helpviewer_keywords:
 - member access operator (->) [C#]
 - -> operator [C#]
 ms.assetid: e39ccdc1-f1ff-4a92-bf1d-ac2c8c11316a
-caps.latest.revision: 19
-author: BillWagner
-ms.author: wiwagn
-ms.openlocfilehash: 4c5918f56257feb29d2624ba29b8cebaaa4f4ebe
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 09d67b8386da371f7d98a8171f60298b316091ea
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
-# <a name="-gt-operator-c-reference"></a>-&gt;İşleci (C# Başvurusu)
+# <a name="-gt-operator-c-reference"></a>-&gt; İşleci (C# Başvurusu)
 `->` İşleci, birleştirir işaretçi başvurusunun kaldırılmasının ve üye erişimi.  
   
 ## <a name="remarks"></a>Açıklamalar  
@@ -45,5 +38,5 @@ x->y
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
  [C# başvurusu](../../../csharp/language-reference/index.md)  
- [C# programlama kılavuzu](../../../csharp/programming-guide/index.md)  
- [C# işleçleri](../../../csharp/language-reference/operators/index.md)
+ [C# Programlama Kılavuzu](../../../csharp/programming-guide/index.md)  
+ [C# İşleçleri](../../../csharp/language-reference/operators/index.md)

@@ -1,37 +1,23 @@
 ---
 title: Hizmet Sözleşmeleri Tasarlama
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 dev_langs:
 - csharp
 - vb
 helpviewer_keywords:
 - service contracts [WCF]
 ms.assetid: 8e89cbb9-ac84-4f0d-85ef-0eb6be0022fd
-caps.latest.revision: 34
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 14973d3612eb5739e0dfcd7b50409904ab5d6844
-ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
-ms.translationtype: MT
+ms.openlocfilehash: 6d1e9ba7f5546923b222f2d495aacdb2c1caaf96
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/30/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="designing-service-contracts"></a>Hizmet Sözleşmeleri Tasarlama
 Bu konuda açıklanmaktadır olan, nasıl tanımlanır, hangi işlemleri kullanılabilir (ve temel alınan ileti alışverişlerinde etkilerini) hangi hizmetin sözleşme, hangi veri türleri olan yardımcı kullanılan ve diğer tasarım sorunları karşılamak işlemleri Senaryonuz gereksinimleri.  
   
 ## <a name="creating-a-service-contract"></a>Hizmet sözleşmesi oluşturma  
- Hizmetleri işlemleri sayısını kullanıma sunar. İçinde [!INCLUDE[indigo1](../../../includes/indigo1-md.md)] uygulamalar, bir yöntem oluşturarak ve onunla işaretleme işlemleri tanımlamak <xref:System.ServiceModel.OperationContractAttribute> özniteliği. Ardından, bir hizmet sözleşmesini oluşturmak için işlemleri, bunları ile işaretli bir arabirim içinde bildirme ya da gruplamak <xref:System.ServiceModel.ServiceContractAttribute> özniteliği ya da göre tanımlama bunları aynı özniteliğiyle işaretlenmiş bir sınıf. (Temel bir örnek için bkz: [nasıl yapılır: bir hizmet sözleşmesini tanımlama](../../../docs/framework/wcf/how-to-define-a-wcf-service-contract.md).)  
+ Hizmetleri işlemleri sayısını kullanıma sunar. Windows Communication Foundation (WCF) uygulamalarında bir yöntem oluşturarak ve onunla işaretleme işlemleri tanımlayan <xref:System.ServiceModel.OperationContractAttribute> özniteliği. Ardından, bir hizmet sözleşmesini oluşturmak için işlemleri, bunları ile işaretli bir arabirim içinde bildirme ya da gruplamak <xref:System.ServiceModel.ServiceContractAttribute> özniteliği ya da göre tanımlama bunları aynı özniteliğiyle işaretlenmiş bir sınıf. (Temel bir örnek için bkz: [nasıl yapılır: bir hizmet sözleşmesini tanımlama](../../../docs/framework/wcf/how-to-define-a-wcf-service-contract.md).)  
   
  Olmayan herhangi bir yöntem bir <xref:System.ServiceModel.OperationContractAttribute> özniteliği hizmet işlemleri değildir ve tarafından sunulmaz [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] Hizmetleri.  
   
@@ -82,7 +68,7 @@ Bu konuda açıklanmaktadır olan, nasıl tanımlanır, hangi işlemleri kullan�
 >  İşlemi imza parametre adlarında değerini sözleşmenin parçası olan ve büyük/küçük harfe duyarlıdır. İstiyorsanız, yerel olarak aynı parametre adı kullanın, ancak yayımlanan meta verilerde adını değiştirebilir, bakın <xref:System.ServiceModel.MessageParameterAttribute?displayProperty=nameWithType>.  
   
 #### <a name="data-contracts"></a>Veri Sözleşmeleri  
- Gibi hizmet odaklı uygulamalar [!INCLUDE[indigo1](../../../includes/indigo1-md.md)] uygulamaları, hem Microsoft hem de Microsoft olmayan platformlara istemci uygulamaları geniş olası sayısı ile birlikte çalışmak üzere tasarlanmıştır. Geniş olası birlikte çalışabilirlik için türleri ile işaretle önerilir <xref:System.Runtime.Serialization.DataContractAttribute> ve <xref:System.Runtime.Serialization.DataMemberAttribute> verileri tanımlayan hizmet sözleşmesi kısmı bir veri sözleşmesi oluşturmak için öznitelikleri, hizmet işlemleri Exchange.  
+ Hizmet odaklı uygulamalar Windows Communication Foundation (WCF) uygulamaları gibi istemci uygulamalarını hem Microsoft hem de Microsoft olmayan platformları geniş olası sayısı ile birlikte çalışmak üzere tasarlanmıştır. Geniş olası birlikte çalışabilirlik için türleri ile işaretle önerilir <xref:System.Runtime.Serialization.DataContractAttribute> ve <xref:System.Runtime.Serialization.DataMemberAttribute> verileri tanımlayan hizmet sözleşmesi kısmı bir veri sözleşmesi oluşturmak için öznitelikleri, hizmet işlemleri Exchange.  
   
  Veri sözleşmeleri olan katılımı stili sözleşmeleri: açıkça veri sözleşmesi özniteliği uyguladığınız sürece hiçbir tür veya veri üyesi seri değildir. Veri sözleşmeleri yönetilen kod erişim kapsamını ilgisiz: özel veri üyeleri serileştirilmiş ve genel olarak erişilebilmesi için başka bir gönderilir. (Bir veri sözleşmesi temel bir örnek için bkz: [nasıl yapılır: bir sınıf veya yapı için temel veri sözleşmesi oluşturma](../../../docs/framework/wcf/feature-details/how-to-create-a-basic-data-contract-for-a-class-or-structure.md).) [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] içine ve dışına ileti gövdesini serileştirme, veri türlerinin yanı sıra, işlem işlevselliğini etkinleştirmek temel alınan SOAP iletilerine tanımını işler. Veri türleri seri hale getirilebilir sürece işlemlerinizin tasarlarken, temel alınan ileti exchange altyapı hakkında düşünmek gerekmez.  
   

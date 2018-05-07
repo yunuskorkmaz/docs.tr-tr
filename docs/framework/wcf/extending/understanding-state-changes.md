@@ -1,24 +1,12 @@
 ---
-title: "Durum Değişikliklerini Anlama"
-ms.custom: 
+title: Durum Değişikliklerini Anlama
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: a79ed2aa-e49a-47a8-845a-c9f436ec9987
-caps.latest.revision: "13"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: ce0d3be43b8e50367d1cdd9b4e486a4154001624
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 5bfee392053d9f3fd529d68b533a046e53f20dd1
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="understanding-state-changes"></a>Durum Değişikliklerini Anlama
 Bu konuda durumları ve kanallar sahip geçişler, yapısı kanal durumları ve bunların nasıl uygulanacağını kullanılan türleri açıklanmaktadır.  
@@ -42,13 +30,13 @@ Bu konuda durumları ve kanallar sahip geçişler, yapısı kanal durumları ve 
  ![Kanal durumu transitition](../../../../docs/framework/wcf/extending/media/channelstatetranitionshighleveldiagram.gif "ChannelStateTranitionsHighLevelDiagram")  
 Şekil 1 '. ICommunicationObject durum makinesinin.  
   
- [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)]adlı bir Özet temel sınıf sağlar <xref:System.ServiceModel.Channels.CommunicationObject> uygulayan <xref:System.ServiceModel.ICommunicationObject> ve kanal durum makinesinin. Aşağıdaki grafikte özgü bir değiştirilmiş durumu diyagramıdır <xref:System.ServiceModel.Channels.CommunicationObject>. Ek olarak <xref:System.ServiceModel.ICommunicationObject> Durum makinesi ek zaman zamanlama gösterir <xref:System.ServiceModel.Channels.CommunicationObject> yöntemleri çağrılır.  
+ Windows Communication Foundation (WCF) adlı bir Özet temel sınıf sağlar <xref:System.ServiceModel.Channels.CommunicationObject> uygulayan <xref:System.ServiceModel.ICommunicationObject> ve kanal durum makinesinin. Aşağıdaki grafikte özgü bir değiştirilmiş durumu diyagramıdır <xref:System.ServiceModel.Channels.CommunicationObject>. Ek olarak <xref:System.ServiceModel.ICommunicationObject> Durum makinesi ek zaman zamanlama gösterir <xref:System.ServiceModel.Channels.CommunicationObject> yöntemleri çağrılır.  
   
  ![Durum değişiklikleri](../../../../docs/framework/wcf/extending/media/wcfc-wcfchannelsigure5statetransitionsdetailsc.gif "wcfc_WCFChannelsigure5StateTransitionsDetailsc")  
 Şekil 2 '. Olayları ve korumalı yöntemler çağrıları dahil olmak üzere ICommunicationObject durum makinesinin CommunicationObject uygulanması.  
   
 ### <a name="icommunicationobject-events"></a>ICommunicationObject olayları  
- <xref:System.ServiceModel.Channels.CommunicationObject>tarafından tanımlanan beş olayları gösterir <xref:System.ServiceModel.ICommunicationObject>. Bu olaylar durumu geçişleri bildirim almak için iletişim nesnesi kullanarak kod için tasarlanmıştır. Nesnenin durumu olayı tarafından adlı durumu geçişleri sonra yukarıdaki Şekil 2'de gösterildiği gibi her olay bir kez tetiklenir. Tüm beş olayları çeken `EventHandler` olarak tanımlanan türü:  
+ <xref:System.ServiceModel.Channels.CommunicationObject> tarafından tanımlanan beş olayları gösterir <xref:System.ServiceModel.ICommunicationObject>. Bu olaylar durumu geçişleri bildirim almak için iletişim nesnesi kullanarak kod için tasarlanmıştır. Nesnenin durumu olayı tarafından adlı durumu geçişleri sonra yukarıdaki Şekil 2'de gösterildiği gibi her olay bir kez tetiklenir. Tüm beş olayları çeken `EventHandler` olarak tanımlanan türü:  
   
  `public delegate void EventHandler(object sender, EventArgs e);`  
   
@@ -63,17 +51,17 @@ Bu konuda durumları ve kanallar sahip geçişler, yapısı kanal durumları ve 
   
  Sırada <xref:System.ServiceModel.Channels.CommunicationObject.OnOpen%2A?displayProperty=nameWithType>, <xref:System.ServiceModel.Channels.CommunicationObject.OnClose%2A?displayProperty=nameWithType>, ve <xref:System.ServiceModel.Channels.CommunicationObject.OnAbort%2A?displayProperty=nameWithType> varsayılan uygulaması varsa, diğer geri çağırmaları durumu makine doğruluk için gerekli olan varsayılan uygulama vardır. Bu yöntemi geçersiz kılarsanız temel uygulamayı çağırması veya doğru şekilde değiştirmek emin olun.  
   
- <xref:System.ServiceModel.Channels.CommunicationObject.OnOpening%2A?displayProperty=nameWithType>, <xref:System.ServiceModel.Channels.CommunicationObject.OnClosing%2A?displayProperty=nameWithType> ve <xref:System.ServiceModel.Channels.CommunicationObject.OnFaulted%2A?displayProperty=nameWithType> ilgili harekete <xref:System.ServiceModel.Channels.CommunicationObject.Opening?displayProperty=nameWithType>, <xref:System.ServiceModel.Channels.CommunicationObject.Closing?displayProperty=nameWithType> ve <xref:System.ServiceModel.Channels.CommunicationObject.Faulted?displayProperty=nameWithType> olaylar. <xref:System.ServiceModel.Channels.CommunicationObject.OnOpened%2A?displayProperty=nameWithType>ve <xref:System.ServiceModel.Channels.CommunicationObject.OnClosed%2A?displayProperty=nameWithType> nesne durumu açık ve kapalı sırasıyla ayarlayın, sonra da ilgili harekete <xref:System.ServiceModel.Channels.CommunicationObject.Opened?displayProperty=nameWithType> ve <xref:System.ServiceModel.Channels.CommunicationObject.Closed?displayProperty=nameWithType> olaylar.  
+ <xref:System.ServiceModel.Channels.CommunicationObject.OnOpening%2A?displayProperty=nameWithType>, <xref:System.ServiceModel.Channels.CommunicationObject.OnClosing%2A?displayProperty=nameWithType> ve <xref:System.ServiceModel.Channels.CommunicationObject.OnFaulted%2A?displayProperty=nameWithType> ilgili harekete <xref:System.ServiceModel.Channels.CommunicationObject.Opening?displayProperty=nameWithType>, <xref:System.ServiceModel.Channels.CommunicationObject.Closing?displayProperty=nameWithType> ve <xref:System.ServiceModel.Channels.CommunicationObject.Faulted?displayProperty=nameWithType> olaylar. <xref:System.ServiceModel.Channels.CommunicationObject.OnOpened%2A?displayProperty=nameWithType> ve <xref:System.ServiceModel.Channels.CommunicationObject.OnClosed%2A?displayProperty=nameWithType> nesne durumu açık ve kapalı sırasıyla ayarlayın, sonra da ilgili harekete <xref:System.ServiceModel.Channels.CommunicationObject.Opened?displayProperty=nameWithType> ve <xref:System.ServiceModel.Channels.CommunicationObject.Closed?displayProperty=nameWithType> olaylar.  
   
 ### <a name="state-transition-methods"></a>Durum geçişi yöntemleri  
- <xref:System.ServiceModel.Channels.CommunicationObject>Durdurma, kapatma ve açık uygulamaları sağlar. Ayrıca, bir durum geçişi Faulted duruma neden olan bir arıza yöntemi sağlar. Şekil 2 gösterir <xref:System.ServiceModel.ICommunicationObject> (son etiketli geçiş neden yöntemin kullanımı içinde durum etiketlenmemiş geçişleri) neden yöntemi tarafından etiketli her geçiş durumu makineyle.  
+ <xref:System.ServiceModel.Channels.CommunicationObject> Durdurma, kapatma ve açık uygulamaları sağlar. Ayrıca, bir durum geçişi Faulted duruma neden olan bir arıza yöntemi sağlar. Şekil 2 gösterir <xref:System.ServiceModel.ICommunicationObject> (son etiketli geçiş neden yöntemin kullanımı içinde durum etiketlenmemiş geçişleri) neden yöntemi tarafından etiketli her geçiş durumu makineyle.  
   
 > [!NOTE]
 >  Tüm <xref:System.ServiceModel.Channels.CommunicationObject> iletişimin uygulamaları durum alır/ayarlar iş parçacığı eşitlenir.  
   
  Oluşturucu  
   
- <xref:System.ServiceModel.Channels.CommunicationObject>üç sağlar Oluşturucular, oluşturulan durumunda her biri bırakın nesne. Oluşturucular olarak tanımlanır:  
+ <xref:System.ServiceModel.Channels.CommunicationObject> üç sağlar Oluşturucular, oluşturulan durumunda her biri bırakın nesne. Oluşturucular olarak tanımlanır:  
   
  İlk Oluşturucusu nesneyi alır Oluşturucusu aşırı temsilciler varsayılan bir oluşturucu şöyledir:  
   
@@ -138,11 +126,11 @@ Geçersiz kılma OnAbort yöntemini özel uygulamak üzere bir iç iletişim nes
 ### <a name="throwifxxx-methods"></a>ThrowIfXxx yöntemleri  
  CommunicationObject nesne belirli bir durumda ise özel durumlar oluşturma için kullanılan üç korumalı yöntemlerine sahiptir.  
   
- <xref:System.ServiceModel.Channels.CommunicationObject.ThrowIfDisposed%2A>Durum kapanış, kapalı veya Faulted ise özel durum oluşturur.  
+ <xref:System.ServiceModel.Channels.CommunicationObject.ThrowIfDisposed%2A> Durum kapanış, kapalı veya Faulted ise özel durum oluşturur.  
   
- <xref:System.ServiceModel.Channels.CommunicationObject.ThrowIfDisposedOrImmutable%2A>durumu olmayan oluşturulursa, bir özel durum oluşturur.  
+ <xref:System.ServiceModel.Channels.CommunicationObject.ThrowIfDisposedOrImmutable%2A> durumu olmayan oluşturulursa, bir özel durum oluşturur.  
   
- <xref:System.ServiceModel.Channels.CommunicationObject.ThrowIfDisposedOrNotOpen%2A>durumu olmayan açılırsa bir özel durum oluşturur.  
+ <xref:System.ServiceModel.Channels.CommunicationObject.ThrowIfDisposedOrNotOpen%2A> durumu olmayan açılırsa bir özel durum oluşturur.  
   
  Oluşturulan özel durumları durumuna bağlıdır. Aşağıdaki tabloda farklı durumları ve bu durumda oluşturur ThrowIfXxx çağrılarak oluşturulan karşılık gelen özel durum türünü gösterir.  
   
@@ -153,14 +141,14 @@ Geçersiz kılma OnAbort yöntemini özel uygulamak üzere bir iç iletişim nes
 |Açılan|Yok|<xref:System.InvalidOperationException?displayProperty=nameWithType>|  
 |Kapatma|Evet|<xref:System.ServiceModel.CommunicationObjectAbortedException?displayProperty=nameWithType>|  
 |Kapatma|Hayır|<xref:System.ObjectDisposedException?displayProperty=nameWithType>|  
-|Closed|Evet|<xref:System.ServiceModel.CommunicationObjectAbortedException?displayProperty=nameWithType>bir nesne bir iptal önceki ve açık çağrısı tarafından kapatıldı durumda. Bir nesne üzerinde Kapat çağırırsanız sonra bir <xref:System.ObjectDisposedException?displayProperty=nameWithType> oluşturulur.|  
+|Closed|Evet|<xref:System.ServiceModel.CommunicationObjectAbortedException?displayProperty=nameWithType> bir nesne bir iptal önceki ve açık çağrısı tarafından kapatıldı durumda. Bir nesne üzerinde Kapat çağırırsanız sonra bir <xref:System.ObjectDisposedException?displayProperty=nameWithType> oluşturulur.|  
 |Closed|Hayır|<xref:System.ObjectDisposedException?displayProperty=nameWithType>|  
 |Hatalı|Yok|<xref:System.ServiceModel.CommunicationObjectFaultedException?displayProperty=nameWithType>|  
   
 ### <a name="timeouts"></a>Zaman aşımları  
  Biz bahsedilen yöntemler çeşitli zaman aşımı parametre alır. Bunlar, Kapat, açık (belirli aşırı yüklemeleri ve zaman uyumsuz sürümlere), OnClose ve açıldığında olan. Bu yöntemleri, uzun işlemleri (örneğin, düzgün biçimde bağlantı kapatma sırasında giriş/çıkış engelleme) izin verecek şekilde tasarlanmıştır zaman aşımı parametresi ne kadar süreyle gösterir şekilde gibi işlemleri kesintiye önce alabilir. Bu yöntemlerin herhangi biriyle uygulamaları sağlanan zaman aşımı değeri bu zaman aşımı süresi içinde çağırana döndürür sağlamak için kullanmalısınız. Zaman aşımı almayan diğer yöntemleri, uygulamalarını uzun işlemleri için tasarlanmamıştır ve giriş/çıkış üzerinde Engellemiyor tamamı.  
   
- Özel bir zaman aşımı almayan Open() ve çağrısının aşırı durumdur. Bu türetilmiş sınıf tarafından sağlanan varsayılan zaman aşımı değerini kullanın. <xref:System.ServiceModel.Channels.CommunicationObject>çıkarır, iki korumalı adlı soyut özellikleri <xref:System.ServiceModel.Channels.CommunicationObject.DefaultCloseTimeout%2A> ve <xref:System.ServiceModel.Channels.CommunicationObject.DefaultOpenTimeout%2A> olarak tanımlanır:  
+ Özel bir zaman aşımı almayan Open() ve çağrısının aşırı durumdur. Bu türetilmiş sınıf tarafından sağlanan varsayılan zaman aşımı değerini kullanın. <xref:System.ServiceModel.Channels.CommunicationObject> çıkarır, iki korumalı adlı soyut özellikleri <xref:System.ServiceModel.Channels.CommunicationObject.DefaultCloseTimeout%2A> ve <xref:System.ServiceModel.Channels.CommunicationObject.DefaultOpenTimeout%2A> olarak tanımlanır:  
   
  `protected abstract TimeSpan DefaultCloseTimeout { get; }`  
   

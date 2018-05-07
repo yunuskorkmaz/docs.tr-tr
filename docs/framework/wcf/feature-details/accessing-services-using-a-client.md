@@ -1,32 +1,18 @@
 ---
 title: İstemci Kullanarak Hizmetlere Erişme
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 dev_langs:
 - csharp
 - vb
 ms.assetid: c8329832-bf66-4064-9034-bf39f153fc2d
-caps.latest.revision: 15
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 209d10f9545be65870f584fa79444f7fab90211a
-ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
+ms.openlocfilehash: 1369403b493683f58640047fe042708afc5d5b46
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/30/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="accessing-services-using-a-client"></a>İstemci Kullanarak Hizmetlere Erişme
-İstemci uygulamaları oluşturmak gerekir, yapılandırmak ve kullanmak [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] Hizmetleri ile iletişim kurmak için istemci veya kanal nesne. [WCF istemcisi genel bakış](../../../../docs/framework/wcf/wcf-client-overview.md) konu, nesneleri ve temel istemci ve kanal nesneleri oluşturmak ve bunları kullanarak söz konusu adımlar genel bakış sağlar.  
+İstemci uygulamaları oluşturmak gerekir, yapılandırmak ve Hizmetleri ile iletişim için WCF istemcisi veya kanal nesneleri kullanın. [WCF istemcisi genel bakış](../../../../docs/framework/wcf/wcf-client-overview.md) konu, nesneleri ve temel istemci ve kanal nesneleri oluşturmak ve bunları kullanarak söz konusu adımlar genel bakış sağlar.  
   
  Bu konu, uygulamaları ve senaryonuza bağlı olarak yararlı olabilir istemci ve kanal nesneleri istemci ile bazı sorunlar hakkında ayrıntılı bilgi sağlar.  
   
@@ -42,7 +28,7 @@ ms.lasthandoff: 04/30/2018
 -   Kanallar etkileşimli olarak başlatılıyor.  
   
 ### <a name="channel-and-session-lifetimes"></a>Kanal ve oturum süreleri  
- [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] Uygulama kanalları, veri birimi ve sessionful iki kategorisi içerir.  
+ Windows Communication Foundation (WCF) uygulamaları kanalları, veri birimi ve sessionful iki kategorisi içerir.  
   
  A *veri birimi* kanalıdır tüm iletileri olduğu uncorrelated bir kanal. Bir veri birimi kanalına sahip bir giriş veya çıkış işlemi başarısız olursa, sonraki işlemi genellikle etkilenmez ve aynı kanalı yeniden kullanılabilir. Bu nedenle, veri birimi kanalları genellikle hata değil.  
   
@@ -79,11 +65,11 @@ ms.lasthandoff: 04/30/2018
  Uygulama düzeyinde hata bilgileri ile çalışma hakkında daha ayrıntılı bilgi için bkz: [belirtme ve işleme hataları sözleşme ve hizmetlerde](../../../../docs/framework/wcf/specifying-and-handling-faults-in-contracts-and-services.md). [Özel durumlar beklenen](../../../../docs/framework/wcf/samples/expected-exceptions.md) beklenen özel durumlar açıklar ve bunları nasıl ele alınacağını gösterir. Kanalları geliştirirken hataları işlemek nasıl hakkında daha fazla bilgi için bkz: [özel durum işleme ve hataları](../../../../docs/framework/wcf/extending/handling-exceptions-and-faults.md).  
   
 ### <a name="client-blocking-and-performance"></a>İstemci engelleme ve performans  
- Bir uygulama zaman uyumlu olarak çağırdığında bir istek-yanıt işlemi, dönüş değeri alınana kadar istemci blokları veya bir özel durum (gibi bir <xref:System.TimeoutException?displayProperty=nameWithType>) oluşturulur. Bu davranış, yerel davranışına benzer. Ne zaman bir uygulamayı eşzamanlı olarak çağıran bir işlem üzerinde bir [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] istemci nesnesi veya kanal, istemci döndürmez kadar kanal katmanını ağa veya bir özel durum kadar veri yazabilirsiniz. Tek yönlü ileti değişim deseni ederken (bir işlemle işaretleyerek belirtilen <xref:System.ServiceModel.OperationContractAttribute.IsOneWay%2A?displayProperty=nameWithType> kümesine `true`) bağlama ve ne ileti zaten silinmiş bağlı olarak daha iyi yanıt, tek yönlü işlemleri da engeller, bazı istemciler yapabilirsiniz gönderdi. Yalnızca ileti exchange hakkında daha fazla ve az tek yönlü işlemleridir. Daha fazla bilgi için bkz: [One-Way Hizmetleri](../../../../docs/framework/wcf/feature-details/one-way-services.md).  
+ Bir uygulama zaman uyumlu olarak çağırdığında bir istek-yanıt işlemi, dönüş değeri alınana kadar istemci blokları veya bir özel durum (gibi bir <xref:System.TimeoutException?displayProperty=nameWithType>) oluşturulur. Bu davranış, yerel davranışına benzer. Bir uygulamayı eşzamanlı olarak bir WCF istemcisi nesnesi ya da kanal üzerinde bir işlemi çalıştırdığında, kanal katmanını ağa veya bir özel durum kadar veri yazabilirsiniz kadar istemci döndürmez. Tek yönlü ileti değişim deseni ederken (bir işlemle işaretleyerek belirtilen <xref:System.ServiceModel.OperationContractAttribute.IsOneWay%2A?displayProperty=nameWithType> kümesine `true`) bağlama ve ne ileti zaten silinmiş bağlı olarak daha iyi yanıt, tek yönlü işlemleri da engeller, bazı istemciler yapabilirsiniz gönderdi. Yalnızca ileti exchange hakkında daha fazla ve az tek yönlü işlemleridir. Daha fazla bilgi için bkz: [One-Way Hizmetleri](../../../../docs/framework/wcf/feature-details/one-way-services.md).  
   
  Büyük veri öbekleri hangi ileti değişim deseni olsun işleme istemci yavaşlatabilir. Bu sorunların nasıl ele alınacağını anlamak için bkz: [büyük veriler ve akış](../../../../docs/framework/wcf/feature-details/large-data-and-streaming.md).  
   
- Bir işlem tamamlanırken uygulamanız daha fazla iş yapmanız gerekir, bir zaman uyumsuz yöntem çifti hizmet sözleşmesi arabirimi, oluşturmanız gerekir, [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] istemci uygular. Bunu yapmanın en kolay yolu kullanmaktır `/async` anahtarının [ServiceModel meta veri yardımcı Programracı (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md). Bir örnek için bkz: [nasıl yapılır: hizmet işlemlerini zaman uyumsuz çağrı](../../../../docs/framework/wcf/feature-details/how-to-call-wcf-service-operations-asynchronously.md).  
+ Bir işlem tamamlanırken uygulamanız daha fazla iş yapmanız gerekir, WCF istemci uygulayan hizmet sözleşme arabirimi bir zaman uyumsuz yöntem çiftinin oluşturmanız gerekir. Bunu yapmanın en kolay yolu kullanmaktır `/async` anahtarının [ServiceModel meta veri yardımcı Programracı (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md). Bir örnek için bkz: [nasıl yapılır: hizmet işlemlerini zaman uyumsuz çağrı](../../../../docs/framework/wcf/feature-details/how-to-call-wcf-service-operations-asynchronously.md).  
   
  Artan istemci performansı hakkında daha fazla bilgi için bkz: [orta katman istemci uygulamaları](../../../../docs/framework/wcf/feature-details/middle-tier-client-applications.md).  
   

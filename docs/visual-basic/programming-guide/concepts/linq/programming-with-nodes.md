@@ -1,25 +1,15 @@
 ---
-title: "Düğümler (Visual Basic) ile programlama"
-ms.custom: 
+title: Düğümler (Visual Basic) ile programlama
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: d8422a9b-dd37-44a3-8aac-2237ed9561e0
-caps.latest.revision: "3"
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: 5f56e98d4a732b6cc69dde87d0efe8e87506b48b
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.openlocfilehash: 871755ef0293513f07c60b1d5735c47692163b78
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="programming-with-nodes-visual-basic"></a>Düğümler (Visual Basic) ile programlama
-[!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)]bir XML Düzenleyicisi, dönüştürme sistem ya da bir rapor yazıcı gibi programlar genellikle yazmak için isteyen geliştiriciler daha hassas bir ayrıntı düzeyinde öğeleri ve özniteliklerinin daha çalışan programlar yazmanız gerekir. Bunlar genellikle metin düğümleri, işleme yönergeleri ve açıklamalar düzenleme düğüm düzeyinde çalışması gerekir. Bu konu, düğüm düzeyinde programlama hakkında bazı ayrıntılar sağlar.  
+[!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] bir XML Düzenleyicisi, dönüştürme sistem ya da bir rapor yazıcı gibi programlar genellikle yazmak için isteyen geliştiriciler daha hassas bir ayrıntı düzeyinde öğeleri ve özniteliklerinin daha çalışan programlar yazmanız gerekir. Bunlar genellikle metin düğümleri, işleme yönergeleri ve açıklamalar düzenleme düğüm düzeyinde çalışması gerekir. Bu konu, düğüm düzeyinde programlama hakkında bazı ayrıntılar sağlar.  
   
 ## <a name="node-details"></a>Düğüm ayrıntıları  
  Düğüm düzeyinde çalışma Programcı bilmeniz gereken programlama ayrıntılarını mevcuttur.  
@@ -43,7 +33,7 @@ True
 ```  
   
 ### <a name="adjacent-text-nodes-are-possible"></a>Bitişik metin düğümleri mümkündür.  
- XML programlama modelleri sayısında bitişik metin düğümleri her zaman birleştirilir. Buna bazen metin düğümleri normalleştirme denir. [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)]metin düğümleri normalleştirin değil. İki metin düğümleri aynı öğeye eklerseniz, bitişiğindeki metin düğümleri neden olur. Ancak, bir dize olarak yerine olarak belirtilen içeriği eklerseniz, bir <xref:System.Xml.Linq.XText> düğümü [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] bitişik metin düğümü dizeyle birleştirmek.  
+ XML programlama modelleri sayısında bitişik metin düğümleri her zaman birleştirilir. Buna bazen metin düğümleri normalleştirme denir. [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] metin düğümleri normalleştirin değil. İki metin düğümleri aynı öğeye eklerseniz, bitişiğindeki metin düğümleri neden olur. Ancak, bir dize olarak yerine olarak belirtilen içeriği eklerseniz, bir <xref:System.Xml.Linq.XText> düğümü [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] bitişik metin düğümü dizeyle birleştirmek.  
   
  Aşağıdaki örnekte bu gösterir:  
   
@@ -133,7 +123,7 @@ AnAttribute="abc"  IsNamespaceDeclaration:False
 ```  
   
 ### <a name="xpath-axis-methods-do-not-return-child-white-space-of-xdocument"></a>XPath eksen yöntemleri alt boşluklardan-XDocument döndürmüyor  
- [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)]için alt metin düğümleri sağlayan bir <xref:System.Xml.Linq.XDocument>, metin düğümleri yalnızca boşluk içeremez sürece. Ancak, XPath nesne modeli beyaz alanı bir belgenin alt düğümleri olarak şekilde içermez alt yineleme ne zaman bir <xref:System.Xml.Linq.XDocument> kullanarak <xref:System.Xml.Linq.XContainer.Nodes%2A> eksen, boşluk metin düğümleri döndürülecek. Ancak, ne zaman, yineleme alt bir <xref:System.Xml.Linq.XDocument> XPath eksen yöntemleri kullanarak, boşluk metin düğümleri olmayan döndürülür.  
+ [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] için alt metin düğümleri sağlayan bir <xref:System.Xml.Linq.XDocument>, metin düğümleri yalnızca boşluk içeremez sürece. Ancak, XPath nesne modeli beyaz alanı bir belgenin alt düğümleri olarak şekilde içermez alt yineleme ne zaman bir <xref:System.Xml.Linq.XDocument> kullanarak <xref:System.Xml.Linq.XContainer.Nodes%2A> eksen, boşluk metin düğümleri döndürülecek. Ancak, ne zaman, yineleme alt bir <xref:System.Xml.Linq.XDocument> XPath eksen yöntemleri kullanarak, boşluk metin düğümleri olmayan döndürülür.  
   
 ```vb  
 ' Create a document with some white space child nodes of the document.  

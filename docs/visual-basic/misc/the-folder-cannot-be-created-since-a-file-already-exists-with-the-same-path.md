@@ -1,18 +1,12 @@
 ---
-title: "Bir dosya ile aynı yol zaten var. bu yana klasörü oluşturulamıyor"
+title: Bir dosya ile aynı yol zaten var. bu yana klasörü oluşturulamıyor
 ms.date: 07/20/2015
-ms.prod: .net
-ms.technology: devlang-visual-basic
-ms.topic: article
 ms.assetid: 1085c60d-4d38-4d67-a149-d3923eef0cfd
-caps.latest.revision: "9"
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: db89d63236e4f350ceb0dd1c13d8f304ba4155c2
-ms.sourcegitcommit: 34ec7753acf76f90a0fa845235ef06663dc9e36e
+ms.openlocfilehash: b3e9c9c409ed5e1e26e18b557a17e82e4c9cbb94
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="the-folder-cannot-be-created-since-a-file-already-exists-with-the-same-path"></a>Bir dosya ile aynı yol zaten var. bu yana klasörü oluşturulamıyor
 Bir dizin oluşturmak için bir girişimde bulunuldu, ancak bir dosya zaten var. Bu yoluna sahip. Bu yolları, özellikle göreli yollar ile çalışırken, yanlış ayrıştırma sonucunu olabilir.  

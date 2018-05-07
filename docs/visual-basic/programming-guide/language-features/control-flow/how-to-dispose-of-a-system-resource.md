@@ -1,12 +1,6 @@
 ---
-title: "Nasıl yapılır: Bir Sistem Kaynağını Atma (Visual Basic)"
-ms.custom: 
+title: 'Nasıl yapılır: Bir Sistem Kaynağını Atma (Visual Basic)'
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
-ms.topic: article
 helpviewer_keywords:
 - Using statement [Visual Basic], disposing of system resources
 - Visual Basic code, control flow
@@ -16,14 +10,11 @@ helpviewer_keywords:
 - Using statement [Visual Basic], Using...End Using
 - Using block
 ms.assetid: 8be2b239-8090-419b-8e7e-bcaa75b0ecc8
-caps.latest.revision: "15"
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: 5b5c65c9d123c6f481852eb249cb4d479a180c5b
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: cbb66934833da2bd6f0b797944dbb9c4df267cfc
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-dispose-of-a-system-resource-visual-basic"></a>Nasıl yapılır: Bir Sistem Kaynağını Atma (Visual Basic)
 Kullanabileceğiniz bir `Using` kodunuzu blok çıktığında sistemin bir kaynağın siler güvence altına almak için blok. Bu, büyük miktarda bellek tüketir veya diğer bileşenleri de kullanmak istediğiniz bir sistem kaynağı kullanıyorsanız yararlı olur.  
@@ -54,9 +45,9 @@ Kullanabileceğiniz bir `Using` kodunuzu blok çıktığında sistemin bir kayna
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
  <xref:System.Data.SqlClient.SqlConnection>  
- [Denetim akışı](../../../../visual-basic/programming-guide/language-features/control-flow/index.md)  
- [Karar yapıları](../../../../visual-basic/programming-guide/language-features/control-flow/decision-structures.md)  
- [Döngü yapıları](../../../../visual-basic/programming-guide/language-features/control-flow/loop-structures.md)  
- [Diğer denetim yapıları](../../../../visual-basic/programming-guide/language-features/control-flow/other-control-structures.md)  
- [İç içe geçmiş denetim yapıları](../../../../visual-basic/programming-guide/language-features/control-flow/nested-control-structures.md)  
- [Using deyimi](../../../../visual-basic/language-reference/statements/using-statement.md)
+ [Denetim Akışı](../../../../visual-basic/programming-guide/language-features/control-flow/index.md)  
+ [Karar Yapıları](../../../../visual-basic/programming-guide/language-features/control-flow/decision-structures.md)  
+ [Döngü Yapıları](../../../../visual-basic/programming-guide/language-features/control-flow/loop-structures.md)  
+ [Diğer Denetim Yapıları](../../../../visual-basic/programming-guide/language-features/control-flow/other-control-structures.md)  
+ [İç İçe Geçmiş Denetim Yapıları](../../../../visual-basic/programming-guide/language-features/control-flow/nested-control-structures.md)  
+ [Using Deyimi](../../../../visual-basic/language-reference/statements/using-statement.md)

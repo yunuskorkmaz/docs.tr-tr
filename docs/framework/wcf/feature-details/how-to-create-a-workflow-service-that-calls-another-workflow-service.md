@@ -1,24 +1,12 @@
 ---
-title: "Nasıl yapılır: Başka Bir İş Akışı Hizmetine Çağrı Yapan Bir İş Akışı Hizmeti Oluşturma"
-ms.custom: 
+title: 'Nasıl yapılır: Başka Bir İş Akışı Hizmetine Çağrı Yapan Bir İş Akışı Hizmeti Oluşturma'
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 99b3ee3e-aeb7-4e6f-8321-60fe6140eb67
-caps.latest.revision: "7"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: c99748e77f1fccd9512c8915d0f4068d0da51a41
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: fda5a7286c3d20c7cdc2093e58bfe3fbdcf1d1c1
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-create-a-workflow-service-that-calls-another-workflow-service"></a>Nasıl yapılır: Başka Bir İş Akışı Hizmetine Çağrı Yapan Bir İş Akışı Hizmeti Oluşturma
 Başka bir iş akışı hizmetinden bilgi almak bir iş akışı hizmeti için bazen gereklidir.  Bu konuda, bir iş akışı hizmeti başka bir çağrı gösterilmektedir. Bu konuda, iki iş akışı hizmetleri oluşturacağız; bir giriş dizesi ilk hizmetin kullandığı dizesini ters kaydedildikten sonra büyük harfe dönüştürür giriş dizesi ve başka bir tersine çevirir bir yöntemi vardır.  
@@ -113,7 +101,7 @@ Başka bir iş akışı hizmetinden bilgi almak bir iş akışı hizmeti için b
   
     4.  **TargetType**: NestedServices.StringLibrary  
   
-8.  Artık ilk hizmet üzerinde değiştirilmiş dizesini arayacağız. Projeye sağ tıklayın ve seçin **hizmet Başvurusu Ekle**. Http://localhost/NestedServices/StringReverserService.xamlx hizmetine hizmet başvurusu ekleyin ve ilk Web hizmetine erişmek için özel bir etkinlik oluşturmak için projeyi oluşturun.  
+8.  Artık ilk hizmet üzerinde değiştirilmiş dizesini arayacağız. Projeye sağ tıklayın ve seçin **hizmet Başvurusu Ekle**. Hizmeti için hizmet Başvurusu Ekle http://localhost/NestedServices/StringReverserService.xamlx ve ilk Web hizmetine erişmek için özel bir etkinlik oluşturmak için projeyi oluşturun.  
   
 9. Yeni Etkinlik örneği arasında iş akışı sürükleyin **InvokeMethod** etkinlik ve **SendReplyToReceive** etkinlikler. Değişken StringToReverse yeni etkinliği ve değişken StringToReturn StringToReturn özelliğine InputString özelliğinin atayın.  
   

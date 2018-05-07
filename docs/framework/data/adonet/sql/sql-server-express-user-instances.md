@@ -1,27 +1,15 @@
 ---
-title: "SQL Server Express kullanıcı örnekleri"
-ms.custom: 
+title: SQL Server Express kullanıcı örnekleri
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-ado
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
 ms.assetid: 00c12376-cb26-4317-86ad-e6e9c089be57
-caps.latest.revision: "5"
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
-ms.workload: dotnet
-ms.openlocfilehash: 4b8b795454ab038b9e992c5e1187a0c4dcb46c76
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.openlocfilehash: 0af929de17a29d497ce6cf6c8cb055d416ab8761
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="sql-server-express-user-instances"></a>SQL Server Express kullanıcı örnekleri
 Microsoft SQL Server Express Edition (SQL Server Express) yalnızca SQL Server için .NET Framework veri sağlayıcısı kullanarak olduğunda kullanıcı örneği özelliğini destekler (`SqlClient`). Bir kullanıcı örneği, SQL Server Express Veritabanı Altyapısı'nın üst örneği tarafından oluşturulan ayrı bir örneğidir. Kullanıcı örnekleri ekleyin ve SQL Server Express veritabanlarına bağlanmak için yerel bilgisayarlarında yönetici olmayan kullanıcıların verin. Her bir örnek tek kullanıcı, kullanıcı başına tek örnek olarak, güvenlik bağlamı altında çalışır.  
@@ -54,11 +42,11 @@ sp_configure 'user instances enabled','0'
   
 -   `Data Source` Anahtar sözcüğü'nın kullanıcı örneği oluşturma SQL Server Express'in üst örneğine başvurur. Varsayılan örneğidir. \sqlexpress.  
   
--   `Integrated Security`ayarlanmış `true`. Bir kullanıcı örneğine bağlanmak için Windows kimlik doğrulaması gereklidir; SQL Server oturumları desteklenmez.  
+-   `Integrated Security` ayarlanmış `true`. Bir kullanıcı örneğine bağlanmak için Windows kimlik doğrulaması gereklidir; SQL Server oturumları desteklenmez.  
   
 -   `User Instance` Ayarlanır `true`, bir kullanıcı örneği çağırır. (Varsayılan `false`.)  
   
--   `AttachDbFileName` Bağlantı dizesi anahtar sözcüğü tam yol adını içermelidir birincil veritabanı dosyası (.mdf) eklemek için kullanılır. `AttachDbFileName`Ayrıca "genişletilmiş özellikler" ve "ilk dosya adı" anahtarları içinde karşılık gelen bir <xref:System.Data.SqlClient.SqlConnection> bağlantı dizesi.  
+-   `AttachDbFileName` Bağlantı dizesi anahtar sözcüğü tam yol adını içermelidir birincil veritabanı dosyası (.mdf) eklemek için kullanılır. `AttachDbFileName` Ayrıca "genişletilmiş özellikler" ve "ilk dosya adı" anahtarları içinde karşılık gelen bir <xref:System.Data.SqlClient.SqlConnection> bağlantı dizesi.  
   
 -   `|DataDirectory|` Değiştirme dizesi kanal sembolleri arasına bağlantı açarak uygulamayı veri dizinine gösterir ve .mdf ve .ldf veritabanı ve günlük dosyalarının konumunu belirten göreli bir yol sağlar. Bu dosyaları başka bir yerde bulmak isterseniz, dosyalara tam yolunu belirtmeniz gerekir.  
   
@@ -71,8 +59,8 @@ Initial Catalog=InstanceDB;
 > [!NOTE]
 >  Aynı zamanda <xref:System.Data.SqlClient.SqlConnectionStringBuilder> <xref:System.Data.SqlClient.SqlConnectionStringBuilder.UserInstance%2A> ve <xref:System.Data.SqlClient.SqlConnectionStringBuilder.AttachDBFilename%2A> özellikleri bir bağlantı dizesi, yapı çalışma zamanında.  
   
-### <a name="using-the-124datadirectory124-substitution-string"></a>Kullanarak &#124; DataDirectory &#124; Değiştirme dizesi  
- `AttachDbFileName`ADO.NET 2.0 başlanmasıyla Genişletilmiş `|DataDirectory|` (kanal sembolleri alınmış) değiştirme dizesi. `DataDirectory`ile birlikte kullanılan `AttachDbFileName` bir veri dosyası için göreli bir yol belirtmek için göreli bir yol olmak yerine veri kaynağına dayalı bağlantı dizesi oluşturmak geliştiriciler izin vererek tam yolunu belirtmeniz gerekir.  
+### <a name="using-the-124datadirectory124-substitution-string"></a>Kullanarak &#124;DataDirectory&#124; değiştirme dizesi  
+ `AttachDbFileName` ADO.NET 2.0 başlanmasıyla Genişletilmiş `|DataDirectory|` (kanal sembolleri alınmış) değiştirme dizesi. `DataDirectory` ile birlikte kullanılan `AttachDbFileName` bir veri dosyası için göreli bir yol belirtmek için göreli bir yol olmak yerine veri kaynağına dayalı bağlantı dizesi oluşturmak geliştiriciler izin vererek tam yolunu belirtmeniz gerekir.  
   
  Fiziksel konum, `DataDirectory` bağımlı olan uygulama türüne işaret eder. Bu örnekte, eklenecek Northwind.mdf dosyası uygulamanın \app_data klasöründe bulunur.  
   
@@ -88,7 +76,7 @@ Initial Catalog=Northwind;
  Bağlantı dizesi bir düzgün biçimlendirilmemiş değiştirme dizesi varsa bir <xref:System.ArgumentException> oluşturulur.  
   
 > [!NOTE]
->  <xref:System.Data.SqlClient>Yerel bilgisayar dosya sistemine karşı tam yollarını içine değiştirme dizelerini çözümler. Bu nedenle, uzak sunucu, HTTP ve UNC yolu adları desteklenmez. Sunucu yerel bilgisayarda bulunmuyorsa, bağlantı açıldığında bir özel durum oluşur.  
+>  <xref:System.Data.SqlClient> Yerel bilgisayar dosya sistemine karşı tam yollarını içine değiştirme dizelerini çözümler. Bu nedenle, uzak sunucu, HTTP ve UNC yolu adları desteklenmez. Sunucu yerel bilgisayarda bulunmuyorsa, bağlantı açıldığında bir özel durum oluşur.  
   
  Zaman <xref:System.Data.SqlClient.SqlConnection> olan açıldı, onu varsayılan SQL Server Express örneğinden Arayanın hesabı altında çalışan bir çalışma zamanı başlatılan örneği yeniden yönlendirilir.  
   

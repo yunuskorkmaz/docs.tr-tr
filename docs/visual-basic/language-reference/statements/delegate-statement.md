@@ -1,24 +1,17 @@
 ---
 title: Delegate Deyimi
 ms.date: 07/20/2015
-ms.prod: .net
-ms.technology:
-- devlang-visual-basic
-ms.topic: article
 f1_keywords:
 - vb.Delegate
 helpviewer_keywords:
 - delegate keyword [Visual Basic]
 - Delegate statement [Visual Basic]
 ms.assetid: f799c518-0817-40cc-ad0b-4da846fdba57
-caps.latest.revision: 
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: 7e79a261f74cbc7aa067af63629e31bedf65d163
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: fb9d8b2c2647ba8fd3b7cee4781f1574b6679b0f
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="delegate-statement"></a>Delegate Deyimi
 Bir temsilci bildirmek için kullanılır. Bir temsilci başvurduğu bir başvuru türü olan bir `Shared` yöntemi türü veya örnek yöntemi nesnenin. Parametre ve dönüş türleri eşleşen herhangi bir yordam, bu temsilci sınıfının bir örneğini oluşturmak için kullanılabilir. Yordam sonra yoluyla temsilci örnek daha sonra çağrılabilir.  
@@ -59,7 +52,7 @@ Bir temsilci bildirmek için kullanılır. Bir temsilci başvurduğu bir başvur
   
  Lambda ifadesi belirtmek için aşağıdaki sözdizimini kullanın:  
   
- `Function`([`parm` Olarak `type`, `parm2` olarak `type2`,...])`expression`  
+ `Function` ([`parm` Olarak `type`, `parm2` olarak `type2`,...]) `expression`  
   
  İşlev imzası temsilci türüyle eşleşmelidir. Lambda ifadeleri hakkında daha fazla bilgi için bkz: [Lambda ifadeleri](../../../visual-basic/programming-guide/language-features/procedures/lambda-expressions.md).  
   
@@ -71,11 +64,11 @@ Bir temsilci bildirmek için kullanılır. Bir temsilci başvurduğu bir başvur
  [!code-vb[VbVbalrDelegates#14](../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/delegate-statement_1.vb)]  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [AddressOf işleci](../../../visual-basic/language-reference/operators/addressof-operator.md)  
+ [AddressOf İşleci](../../../visual-basic/language-reference/operators/addressof-operator.md)  
  [,](../../../visual-basic/language-reference/statements/of-clause.md)  
  [Temsilciler](../../../visual-basic/programming-guide/language-features/delegates/index.md)  
- [Nasıl yapılır: genel bir sınıf kullanma](../../../visual-basic/programming-guide/language-features/data-types/how-to-use-a-generic-class.md)  
+ [Nasıl yapılır: Genel Bir Sınıf Kullanma](../../../visual-basic/programming-guide/language-features/data-types/how-to-use-a-generic-class.md)  
  [Visual Basic'de genel türler](../../../visual-basic/programming-guide/language-features/data-types/generic-types.md)  
- [Kovaryans ve kontravaryans](../../programming-guide/concepts/covariance-contravariance/index.md)  
+ [Kovaryans ve Kontravaryans](../../programming-guide/concepts/covariance-contravariance/index.md)  
  [İçinde](../../../visual-basic/language-reference/modifiers/in-generic-modifier.md)  
  [Çıkışı](../../../visual-basic/language-reference/modifiers/out-generic-modifier.md)

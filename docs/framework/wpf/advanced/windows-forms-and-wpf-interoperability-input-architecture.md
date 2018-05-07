@@ -1,13 +1,6 @@
 ---
-title: "Windows Forms ve WPF Birlikte Çalışabilirlik Giriş Mimarisi"
-ms.custom: 
+title: Windows Forms ve WPF Birlikte Çalışabilirlik Giriş Mimarisi
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-wpf
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - input architecture [WPF interoperability]
 - messages [WPF]
@@ -20,16 +13,11 @@ helpviewer_keywords:
 - WindowsFormsHost keyboard and messages [WPF]
 - modeless dialog boxes [WPF]
 ms.assetid: 0eb6f137-f088-4c5e-9e37-f96afd28f235
-caps.latest.revision: "20"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: a246a3297d212eabc31bf2ac9d000aeb56329d09
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 250f34e3e5420a613bc7b1035c62af90665e71ee
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="windows-forms-and-wpf-interoperability-input-architecture"></a>Windows Forms ve WPF Birlikte Çalışabilirlik Giriş Mimarisi
 Arasındaki birlikte çalışabilirlik [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] ve [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] her iki teknolojinin uygun klavye giriş işlemesine sahip olmasını gerektirir. Bu konu, klavye ve ileti karma uygulamalarında sorunsuz birlikte çalışabilirliği sağlamak için işleme bu teknolojilerin nasıl uygulamak açıklar.  
@@ -105,7 +93,7 @@ Arasındaki birlikte çalışabilirlik [!INCLUDE[TLA2#tla_winclient](../../../..
   
 -   Komut tuşları ve iletişim kutusunu anahtarları.  
   
--   [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)]hızlandırıcı işleme.  
+-   [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] hızlandırıcı işleme.  
   
  Aşağıdaki bölümlerde bu bölümleri daha ayrıntılı açıklanmıştır.  
   
@@ -131,7 +119,7 @@ Arasındaki birlikte çalışabilirlik [!INCLUDE[TLA2#tla_winclient](../../../..
   
 -   <xref:System.Windows.Forms.Control.IsInputChar%2A?displayProperty=nameWithType> Tüm WM_CHAR iletileri barındırılan öğeleri iletilen emin olmak için yöntem geçersiz.  
   
--   ALT tuşuna basılana, ileti WM_SYSCHAR'dır. [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)]Bu iletiyi üzerinden önişle değil <xref:System.Windows.Forms.Control.IsInputChar%2A> yöntemi. Bu nedenle, <xref:System.Windows.Forms.Control.ProcessMnemonic%2A> yöntemi geçersiz kılınmıştır sorguya [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] <xref:System.Windows.Input.AccessKeyManager> kayıtlı Hızlandırıcı için. Kayıtlı Hızlandırıcı bulunursa, <xref:System.Windows.Input.AccessKeyManager> işler.  
+-   ALT tuşuna basılana, ileti WM_SYSCHAR'dır. [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] Bu iletiyi üzerinden önişle değil <xref:System.Windows.Forms.Control.IsInputChar%2A> yöntemi. Bu nedenle, <xref:System.Windows.Forms.Control.ProcessMnemonic%2A> yöntemi geçersiz kılınmıştır sorguya [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] <xref:System.Windows.Input.AccessKeyManager> kayıtlı Hızlandırıcı için. Kayıtlı Hızlandırıcı bulunursa, <xref:System.Windows.Input.AccessKeyManager> işler.  
   
 -   ALT tuşuna basılı değilse, [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] <xref:System.Windows.Input.InputManager> sınıfı işlenmeyen girişi işler. Giriş bir kısayol tuşu ise <xref:System.Windows.Input.AccessKeyManager> işler. <xref:System.Windows.Input.InputManager.PostProcessInput> Olayı işlenmemiş olan WM_CHAR iletileri için işlenir.  
   

@@ -1,28 +1,19 @@
 ---
-title: "UI Otomasyon Kılavuz Denetim Düzenini Uygulama"
-ms.custom: 
+title: UI Otomasyon Kılavuz Denetim Düzenini Uygulama
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-bcl
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - control patterns, grid
 - grid control pattern
 - UI Automation, grid control pattern
 ms.assetid: 234d11a0-7ce7-4309-8989-2f4720e02f78
-caps.latest.revision: "27"
 author: Xansky
 ms.author: mhopkins
 manager: markl
-ms.workload: dotnet
-ms.openlocfilehash: 4667cd149940310e2422686b9e9fdf6e7e99ca9e
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 0038202fb7c7f1a6e0b4f21592d7a1056c4dfa2b
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="implementing-the-ui-automation-grid-control-pattern"></a>UI Otomasyon Kılavuz Denetim Düzenini Uygulama
 > [!NOTE]
@@ -47,7 +38,7 @@ Kılavuz Denetim boş koordinatları ile örneği
   
 -   Gizli satırları ve sütunları sağlayıcıyı uygulama bağlı yüklenmesi de [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] ağacı ve bu nedenle yansıtılır <xref:System.Windows.Automation.GridPattern.GridPatternInformation.RowCount%2A> ve <xref:System.Windows.Automation.GridPattern.GridPatternInformation.ColumnCount%2A> özellikleri. Gizli satırları ve sütunları henüz yüklenmedi, bunlar alınmalıdır değil.  
   
--   <xref:System.Windows.Automation.Provider.IGridProvider>etkin bir kılavuz işlenmesini etkinleştirmez; <xref:System.Windows.Automation.Provider.ITransformProvider> bu işlevselliği etkinleştirmek için uygulanması gerekir.  
+-   <xref:System.Windows.Automation.Provider.IGridProvider> etkin bir kılavuz işlenmesini etkinleştirmez; <xref:System.Windows.Automation.Provider.ITransformProvider> bu işlevselliği etkinleştirmek için uygulanması gerekir.  
   
 -   Kullanım bir <xref:System.Windows.Automation.StructureChangedEventHandler> kılavuz eklenmiş, kaldırılmış, birleştirilmiş veya hücreleri gibi yapısal veya düzen değişiklikleri dinlemek için.  
   

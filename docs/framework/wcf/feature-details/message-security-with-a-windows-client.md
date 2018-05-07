@@ -1,37 +1,27 @@
 ---
-title: "Windows İstemcisi ile İleti Güvenliği"
-ms.custom: 
+title: Windows İstemcisi ile İleti Güvenliği
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
 ms.assetid: 01e7d0b8-10f9-45c3-a4c5-53d44dc61eb8
-caps.latest.revision: "13"
 author: BrucePerlerMS
-ms.author: bruceper
 manager: mbaldwin
-ms.workload: dotnet
-ms.openlocfilehash: c480706fee27e7023eae5b493b0ca007b4757e97
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 185edce5bd8a4772545ec966a6b3f74b204aa2b0
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="message-security-with-a-windows-client"></a>Windows İstemcisi ile İleti Güvenliği
-Bu senaryo gösterilmektedir bir [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] istemci ve sunucu ileti güvenlik modu tarafından güvenli hale getirilmiş. İstemci ve hizmet Windows kimlik bilgileri kullanılarak kimlik doğrulaması yapılır.  
+Bu senaryo, bir Windows Communication Foundation (WCF) istemci ve sunucu ileti güvenlik modu tarafından güvenli hale getirilmiş gösterir. İstemci ve hizmet Windows kimlik bilgileri kullanılarak kimlik doğrulaması yapılır.  
   
  ![İleti güvenliği Windows İstemcisi ile](../../../../docs/framework/wcf/feature-details/media/1c8618d4-0005-4022-beb6-32fd087a8c3c.gif "1c8618d4-0005-4022-beb6-32fd087a8c3c")  
   
 |Özelliği|Açıklama|  
 |--------------------|-----------------|  
 |Güvenlik modu|İleti|  
-|Birlikte Çalışabilirlik|[!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]Yalnızca|  
+|Birlikte Çalışabilirlik|WCF yalnızca|  
 |Kimlik doğrulaması (sunucu)|İstemci ve sunucu, karşılıklı kimlik doğrulaması|  
 |Kimlik doğrulaması (istemci)|İstemci ve sunucu, karşılıklı kimlik doğrulaması|  
 |Bütünlük|Evet, paylaşılan güvenlik bağlamını kullanarak|  

@@ -1,16 +1,12 @@
 ---
-title: "korumalı iç (C# Başvurusu)"
+title: korumalı iç (C# Başvurusu)
 ms.date: 11/15/2017
-ms.prod: .net
-ms.technology: devlang-csharp
-ms.topic: article
 author: sputier
-ms.author: wiwagn
-ms.openlocfilehash: f9004a5e8d65179c9ff2e30688e63c14c95ab431
-ms.sourcegitcommit: 7e99f66ef09d2903e22c789c67ff5a10aa953b2f
+ms.openlocfilehash: a2a649f0fdb924c26380e7261bd935be736f0665
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/18/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="protected-internal-c-reference"></a>korumalı iç (C# Başvurusu)
 `protected internal` Anahtar sözcüğü birleşimi olan bir üye erişim değiştiricisi. Korumalı bir iç üye geçerli derlemesinden veya içeren sınıfından türetilen türlerden erişilebilir. Bir karşılaştırması `protected internal` diğer erişim değiştiricileri ile bkz [erişilebilirlik düzeyleri](../../../csharp/language-reference/keywords/accessibility-levels.md). 
@@ -55,7 +51,7 @@ class DerivedClass : BaseClass
     }
 } 
 ```  
- Bu örnek iki dosya içerir `Assembly1.cs` ve `Assembly2.cs`. İlk dosya ortak bir taban sınıf içeren `BaseClass`ve başka bir sınıf `TestAccess`. `BaseClass`korumalı bir iç üye sahibi `myValue`, tarafından erişilen `TestAccess` türü. İkinci dosyasında, erişme denemesi `myValue` örneği üzerinden `BaseClass` türetilmiş bir sınıf örneği üzerinden bu üye için bir erişim sırasında bir hata üretecektir `DerivedClass` başarılı olur. 
+ Bu örnek iki dosya içerir `Assembly1.cs` ve `Assembly2.cs`. İlk dosya ortak bir taban sınıf içeren `BaseClass`ve başka bir sınıf `TestAccess`. `BaseClass` korumalı bir iç üye sahibi `myValue`, tarafından erişilen `TestAccess` türü. İkinci dosyasında, erişme denemesi `myValue` örneği üzerinden `BaseClass` türetilmiş bir sınıf örneği üzerinden bu üye için bir erişim sırasında bir hata üretecektir `DerivedClass` başarılı olur. 
 
  Yapı üyeleri olamaz `protected internal` yapısı devraldığından.  
   

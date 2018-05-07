@@ -1,43 +1,31 @@
 ---
 title: WCF'de Güvenlik için En İyi Uygulamalar
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 dev_langs:
 - csharp
 - vb
 helpviewer_keywords:
 - best practices [WCF], security
 ms.assetid: 3639de41-1fa7-4875-a1d7-f393e4c8bd69
-caps.latest.revision: 19
 author: BrucePerlerMS
-ms.author: bruceper
 manager: mbaldwin
-ms.workload:
-- dotnet
-ms.openlocfilehash: 0545ff40247b7ff86cb6227fa8cf4af8666c3629
-ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
+ms.openlocfilehash: 62675bc5cca2eccfcd4f210f96e5eeec93341399
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/30/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="best-practices-for-security-in-wcf"></a>WCF'de Güvenlik için En İyi Uygulamalar
-Aşağıdaki bölümlerde kullanarak güvenli uygulamaları oluştururken dikkate alınması gereken en iyi uygulamalar listesinde [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)]. Güvenlik hakkında daha fazla bilgi için bkz: [güvenlik konuları](../../../../docs/framework/wcf/feature-details/security-considerations-in-wcf.md), [veriler için güvenlik konuları](../../../../docs/framework/wcf/feature-details/security-considerations-for-data.md), ve [meta veriler hakkında güvenlik konuları](../../../../docs/framework/wcf/feature-details/security-considerations-with-metadata.md).  
+Aşağıdaki bölümlerde Windows Communication Foundation (WCF) kullanarak güvenli uygulamaları oluştururken dikkate alınması gereken en iyi uygulamaları listeleyin. Güvenlik hakkında daha fazla bilgi için bkz: [güvenlik konuları](../../../../docs/framework/wcf/feature-details/security-considerations-in-wcf.md), [veriler için güvenlik konuları](../../../../docs/framework/wcf/feature-details/security-considerations-for-data.md), ve [meta veriler hakkında güvenlik konuları](../../../../docs/framework/wcf/feature-details/security-considerations-with-metadata.md).  
   
 ## <a name="identify-services-performing-windows-authentication-with-spns"></a>Windows kimlik doğrulaması ile SPN'ler gerçekleştirme Services belirle  
  Hizmetleri, kullanıcı asıl adları (UPN'ler) veya hizmet asıl adları (SPN) ile tanımlanabilir. Ağ hizmeti gibi makine hesabı altında çalışan hizmetleri çalıştırdıkları makineye karşılık gelen bir SPN kimliğe sahip. Kullanıcı hesapları altında çalışan hizmetleri sahip çalışıyor, kullanıcı ancak karşılık gelen bir UPN kimliği `setspn` aracı, kullanıcı hesabı için bir SPN atamak için kullanılabilir. Bir hizmeti SPN tanımlanabilir ve hizmete bağlanmada istemcilerini bu SPN kullanacak şekilde yapılandırma belirli yapabilirsiniz yapılandırma daha zor saldırıları. Bu kılavuz, Kerberos veya SSPI anlaşması kullanarak bağlamaları için geçerlidir.  İstemciler, burada SSPI NTLM'ye geri döner durumda bir SPN hala belirtmeniz gerekir.  
   
 ## <a name="verify-service-identities-in-wsdl"></a>WSDL hizmet kimliklerini doğrulama  
- WS-SecurityPolicy meta verilerde kendi kimlikleri hakkında bilgi yayımlamak hizmetler sağlar. Aracılığıyla alınırken `svcutil` veya gibi diğer yöntemleri <xref:System.ServiceModel.Description.WsdlImporter>, bu kimlik bilgileri için kimlik özelliklerinin çevrilir [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] hizmet uç noktası adresleri. Bu hizmet kimlikleri etkili bir şekilde doğru ve geçerli olduğundan emin olun olmayan istemcilerin hizmeti kimlik doğrulama atlama. Kötü amaçlı bir hizmete kimlik bilgisi iletme ve diğer "ortadaki adam" saldırılarına kendi WSDL içinde istenen kimlik değiştirerek yürütmek için bu tür istemciler yararlanabilir.  
+ WS-SecurityPolicy meta verilerde kendi kimlikleri hakkında bilgi yayımlamak hizmetler sağlar. Aracılığıyla alınırken `svcutil` veya gibi diğer yöntemleri <xref:System.ServiceModel.Description.WsdlImporter>, bu kimlik bilgileri WCF Hizmeti uç nokta adresleri kimlik özelliklerinin çevrilir. Bu hizmet kimlikleri etkili bir şekilde doğru ve geçerli olduğundan emin olun olmayan istemcilerin hizmeti kimlik doğrulama atlama. Kötü amaçlı bir hizmete kimlik bilgisi iletme ve diğer "ortadaki adam" saldırılarına kendi WSDL içinde istenen kimlik değiştirerek yürütmek için bu tür istemciler yararlanabilir.  
   
 ## <a name="use-x509-certificates-instead-of-ntlm"></a>NTLM yerine sertifikaları X509 kullan  
- [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] eşler arası kimlik doğrulaması için iki mekanizma sunar: X509 (eş kanal tarafından kullanılan) sertifikaları ve burada SSPI anlaşması daha aşağı düşürmeden Kerberos'tan için NTLM Windows kimlik doğrulaması.  Sertifika tabanlı kimlik doğrulaması 1024 bit veya daha fazla anahtar boyutları kullanarak çeşitli nedenlerle NTLM için tercih edilir:  
+ WCF eşler arası kimlik doğrulaması için iki mekanizma sunar: X509 (eş kanal tarafından kullanılan) sertifikaları ve burada SSPI anlaşması daha aşağı düşürmeden Kerberos'tan için NTLM Windows kimlik doğrulaması.  Sertifika tabanlı kimlik doğrulaması 1024 bit veya daha fazla anahtar boyutları kullanarak çeşitli nedenlerle NTLM için tercih edilir:  
   
 -   Karşılıklı kimlik doğrulaması kullanılabilirliği,  
   

@@ -1,13 +1,6 @@
 ---
-title: "İçerik (WCF Veri Hizmetleri) yükleme ertelenmiş"
-ms.custom: 
+title: İçerik (WCF Veri Hizmetleri) yükleme ertelenmiş
 ms.date: 03/30/2017
-ms.prod: .net-framework-oob
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -16,16 +9,11 @@ helpviewer_keywords:
 - WCF Data Services, deferred content
 - WCF Data Services, loading data
 ms.assetid: 32f9b588-c832-44c4-a7e0-fcce635df59a
-caps.latest.revision: "2"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 11b796b5b2abaff00c6d0f20894056f5863942b2
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 8ab4dea9e4f687f9548bb2b46a8f6baf428e29af
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="loading-deferred-content-wcf-data-services"></a>İçerik (WCF Veri Hizmetleri) yükleme ertelenmiş
 Varsayılan olarak, [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] bir sorgunun döndürdüğü veri miktarını sınırlar. Ancak, ilişkili varlıklar, disk belleğine alınan yanıt verilerini ve gerektiğinde veri hizmetinden ikili veri akışlarını gibi ek veriler açıkça yükleyebilirsiniz. Bu konu, uygulamanıza ertelenmiş tür içeriği yüklemek açıklar.  
@@ -38,7 +26,7 @@ Varsayılan olarak, [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] 
      [!code-csharp[Astoria Northwind Client#ExpandOrderDetailsSpecific](../../../../samples/snippets/csharp/VS_Snippets_Misc/astoria northwind client/cs/source.cs#expandorderdetailsspecific)]
      [!code-vb[Astoria Northwind Client#ExpandOrderDetailsSpecific](../../../../samples/snippets/visualbasic/VS_Snippets_Misc/astoria northwind client/vb/source.vb#expandorderdetailsspecific)]  
   
-     [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)]12 için tek bir sorgu kullanarak eklenebilir varlık kümeleri sayısını sınırlar `$expand` sorgu seçeneği.  
+     [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] 12 için tek bir sorgu kullanarak eklenebilir varlık kümeleri sayısını sınırlar `$expand` sorgu seçeneği.  
   
 -   **Açık yükleme**: çağırabilirsiniz <xref:System.Data.Services.Client.DataServiceContext.LoadProperty%2A> yöntemi <xref:System.Data.Services.Client.DataServiceContext> açıkça ilgili varlıklar yüklemek için örnek. Her çağrı <xref:System.Data.Services.Client.DataServiceContext.LoadProperty%2A> yöntemi, veri hizmeti için ayrı bir istek oluşturur. Aşağıdaki örnek açıkça yükler `Order_Details` için bir `Orders` varlık:  
   
@@ -66,7 +54,7 @@ Varsayılan olarak, [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] 
  Daha fazla bilgi için bkz: [nasıl yapılır: yük disk belleğine alınan sonuçları](../../../../docs/framework/data/wcf/how-to-load-paged-results-wcf-data-services.md).  
   
 ## <a name="binary-data-streams"></a>İkili veri akışları  
- [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)]bir veri akışı olarak ikili büyük nesne (BLOB) veri erişim sağlar. Akış ikili veri yüklenmesi gerekli değildir ve istemci bu verileri daha verimli bir şekilde işleyebilir kadar erteler. Bu işlevsellikten yararlanmak için veri hizmeti uygulanması gereken <xref:System.Data.Services.Providers.IDataServiceStreamProvider> sağlayıcısı. Daha fazla bilgi için bkz: [Akış sağlayıcısı](../../../../docs/framework/data/wcf/streaming-provider-wcf-data-services.md). Akış etkinleştirildiğinde, varlık türleri ilgili ikili veriler döndürülür. Bu durumda, kullanmalısınız <xref:System.Data.Services.Client.DataServiceContext.GetReadStream%2A> yöntemi <xref:System.Data.Services.Client.DataServiceContext> ikili veriler için veri akışı hizmetinden erişmek için sınıf. Benzer şekilde, kullanın <xref:System.Data.Services.Client.DataServiceContext.SetSaveStream%2A> ekleyin veya ikili veri akışı olarak bir varlık için değiştirmek için bir yöntem. Daha fazla bilgi için bkz: [ikili verileri ile çalışma](../../../../docs/framework/data/wcf/working-with-binary-data-wcf-data-services.md).  
+ [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] bir veri akışı olarak ikili büyük nesne (BLOB) veri erişim sağlar. Akış ikili veri yüklenmesi gerekli değildir ve istemci bu verileri daha verimli bir şekilde işleyebilir kadar erteler. Bu işlevsellikten yararlanmak için veri hizmeti uygulanması gereken <xref:System.Data.Services.Providers.IDataServiceStreamProvider> sağlayıcısı. Daha fazla bilgi için bkz: [Akış sağlayıcısı](../../../../docs/framework/data/wcf/streaming-provider-wcf-data-services.md). Akış etkinleştirildiğinde, varlık türleri ilgili ikili veriler döndürülür. Bu durumda, kullanmalısınız <xref:System.Data.Services.Client.DataServiceContext.GetReadStream%2A> yöntemi <xref:System.Data.Services.Client.DataServiceContext> ikili veriler için veri akışı hizmetinden erişmek için sınıf. Benzer şekilde, kullanın <xref:System.Data.Services.Client.DataServiceContext.SetSaveStream%2A> ekleyin veya ikili veri akışı olarak bir varlık için değiştirmek için bir yöntem. Daha fazla bilgi için bkz: [ikili verileri ile çalışma](../../../../docs/framework/data/wcf/working-with-binary-data-wcf-data-services.md).  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
  [WCF Veri Hizmetleri İstemci Kitaplığı](../../../../docs/framework/data/wcf/wcf-data-services-client-library.md)  

@@ -1,24 +1,14 @@
 ---
-title: "WIF oturum yönetimi"
-ms.custom: 
+title: WIF oturum yönetimi
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 98bce126-18a9-401b-b20d-67ee462a5f8a
-caps.latest.revision: "7"
 author: BrucePerlerMS
-ms.author: bruceper
 manager: mbaldwin
-ms.workload: dotnet
-ms.openlocfilehash: 7703d9fb612ead13140d010b1670abb209c5acb7
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: f97406ccf826bfa5b7c3ed87bdb58478b272a216
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="wif-session-management"></a>WIF oturum yönetimi
 Bir istemci ilk bağlı olan taraf tarafından barındırılan korunan bir kaynağa erişmeyi denediğinde, istemci önce kendisi için bağlı olan taraf tarafından güvenilen bir güvenlik belirteci hizmeti (STS) doğrulaması gerekir. STS istemciye daha sonra bir güvenlik belirteci verir. İstemci, korumalı kaynak için istemci erişim verir bağlı olan taraf için bu belirteci sunar. Ancak, özellikle bu bile aynı bilgisayarda veya bağlı olan taraf aynı etki alanında olmayabilir olmadığından STS her istek için yeniden kimlik doğrulaması sahip istemci istemezsiniz. Bunun yerine, Windows Identity Foundation (WIF) bağlı olan taraf bir oturumu, istemci oturum güvenlik belirteci kendisini tüm istekler için bağlı olan tarafa sonra ilk istek kimliğini doğrulamak için kullanır ve istemci vardır. Bağlı olan taraf istemcinin yeniden oluşturmak için bir tanımlama bilgisi içinde depolanır, bu oturum güvenlik belirteci kullanabilirsiniz <xref:System.Security.Claims.ClaimsPrincipal?displayProperty=nameWithType>.  
@@ -37,6 +27,6 @@ Bir istemci ilk bağlı olan taraf tarafından barındırılan korunan bir kayna
  İçin bir işleyici sağlayan Microsoft önerir başvuru modunda çalışmak üzere <xref:System.IdentityModel.Services.WSFederationAuthenticationModule.SessionSecurityTokenCreated> olayında **global.asax.cs** dosya ve ayar **IsReferenceMode** geçirilen belirteç özelliği <xref:System.IdentityModel.Services.SessionSecurityTokenCreatedEventArgs.SessionToken%2A> özelliği. Bu güncelleştirmeler Oturum belirteci her istek için referans modunda çalışır ve yalnızca ayarı üzerinden avantajlı sağlayacak <xref:System.IdentityModel.Services.SessionAuthenticationModule.IsReferenceMode%2A> oturum kimlik doğrulama modülü özelliği.  
   
 ## <a name="extensibility"></a>Genişletilebilirlik  
- Oturum yönetimi mekanizması genişletebilirsiniz. Bunun bir nedeni, performansı artırmak için olacaktır. Örneğin, dönüştürür veya oturum güvenlik belirteci, bellek içi durumunu ve tanımlama bilgisine unsurları arasında en iyi duruma getirir özel tanımlama bilgisi işleyici oluşturabilirsiniz. Bunu yapmak için yapılandırabileceğiniz <xref:System.IdentityModel.Services.SessionAuthenticationModule.CookieHandler%2A?displayProperty=nameWithType> özelliği <xref:System.IdentityModel.Services.SessionAuthenticationModule?displayProperty=nameWithType> türeyen bir özel tanımlama bilgisi işleyicisi kullanmak için <xref:System.IdentityModel.Services.CookieHandler?displayProperty=nameWithType>. <xref:System.IdentityModel.Services.ChunkedCookieHandler?displayProperty=nameWithType>tanımlama bilgilerini Köprü Metni Aktarım Protokolü (HTTP) için izin verilen boyutunu aştığından varsayılan tanımlama bilgisi işleyicisidir; Bunun yerine bir özel tanımlama bilgisi işleyicisi kullanırsanız, parçalama uygulamalıdır.  
+ Oturum yönetimi mekanizması genişletebilirsiniz. Bunun bir nedeni, performansı artırmak için olacaktır. Örneğin, dönüştürür veya oturum güvenlik belirteci, bellek içi durumunu ve tanımlama bilgisine unsurları arasında en iyi duruma getirir özel tanımlama bilgisi işleyici oluşturabilirsiniz. Bunu yapmak için yapılandırabileceğiniz <xref:System.IdentityModel.Services.SessionAuthenticationModule.CookieHandler%2A?displayProperty=nameWithType> özelliği <xref:System.IdentityModel.Services.SessionAuthenticationModule?displayProperty=nameWithType> türeyen bir özel tanımlama bilgisi işleyicisi kullanmak için <xref:System.IdentityModel.Services.CookieHandler?displayProperty=nameWithType>. <xref:System.IdentityModel.Services.ChunkedCookieHandler?displayProperty=nameWithType> tanımlama bilgilerini Köprü Metni Aktarım Protokolü (HTTP) için izin verilen boyutunu aştığından varsayılan tanımlama bilgisi işleyicisidir; Bunun yerine bir özel tanımlama bilgisi işleyicisi kullanırsanız, parçalama uygulamalıdır.  
   
  Daha fazla bilgi için bkz: [ClaimsAwareWebFarm](http://go.microsoft.com/fwlink/?LinkID=248408) (http://go.microsoft.com/fwlink/?LinkID=248408) örnek. Bu örnek, böylece büyük tanımlama bilgilerinin değişimi yerine başvuruya oturumları kullanabilirsiniz (aksine, bir tokenreplycache) bir grup hazır oturum önbelleğini göstermektedir; Bu örnek ayrıca tanımlama bilgilerini bir grupta güvenlik altına almanın daha kolay bir yolu gösterir. Oturum önbelleğini WCF dayalıdır. Güvenli hale getirme oturumu açısından örnek web.config dosyasında yalnızca uygun parçacığı yapıştırılarak etkinleştirilebilir MachineKey dayalı bir tanımlama bilgisi dönüşümün WIF 4.5 içinde yeni bir özellik gösterir. Örnek değil "nun gruplandırılmış", ancak uygulamanızı grubu kullanıma hazır hale getirmek için gereken gösterir.

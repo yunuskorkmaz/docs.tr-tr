@@ -1,44 +1,32 @@
 ---
 title: İleti Güveliği Kullanarak İletileri Güvenli Hale Getirme
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 ms.assetid: a17ebe67-836b-4c52-9a81-2c3d58e225ee
-caps.latest.revision: 16
 author: BrucePerlerMS
-ms.author: bruceper
 manager: mbaldwin
-ms.workload:
-- dotnet
-ms.openlocfilehash: 088b01151d0471527bbfc2ffa04b5b5064700081
-ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
+ms.openlocfilehash: 1ebe2526e564ef24d20f1602fd5824b44e2e2bbd
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/30/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="securing-messages-using-message-security"></a>İleti Güveliği Kullanarak İletileri Güvenli Hale Getirme
-Bu bölümde ele alınmaktadır [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] kullanırken güvenlik iletisi <xref:System.ServiceModel.NetMsmqBinding>.  
+Bu bölümde WCF ileti güvenliğini kullanırken ele alınmaktadır <xref:System.ServiceModel.NetMsmqBinding>.  
   
 > [!NOTE]
 >  Bu konuyu okumadan önce okumanız önerilir [güvenlik kavramları](../../../../docs/framework/wcf/feature-details/security-concepts.md).  
   
- Aşağıdaki çizimde kuyruğa alınan iletişim kullanmanın kavramsal model sağlar [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]. Bu çizim ve terminolojiyi açıklamak için kullanılır  
+ Aşağıdaki çizimde, kavramsal model WCF kullanarak kuyruğa alınan iletişim sağlar. Bu çizim ve terminolojiyi açıklamak için kullanılır  
   
  güvenlik kavramları taşıma.  
   
  ![Sıraya alınan uygulama diyagramı](../../../../docs/framework/wcf/feature-details/media/distributed-queue-figure.jpg "dağıtılmış-sıra-Şekil")  
   
- Ne zaman gönderme sıraya alınan iletileri kullanarak [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)], [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] ileti Message Queuing (MSMQ) ileti gövdesi olarak eklenmiş olmasıdır. Taşıma güvenliği tüm MSMQ iletiyi, ileti (veya SOAP) güvenliğini sağlar ancak güvenlik yalnızca MSMQ İleti gövdesini güvenliğini sağlar.  
+ Kuyruğa Alınan WCF kullanarak ileti gönderme, WCF ileti Message Queuing (MSMQ) ileti gövdesi olarak eklenir. Taşıma güvenliği tüm MSMQ iletiyi, ileti (veya SOAP) güvenliğini sağlar ancak güvenlik yalnızca MSMQ İleti gövdesini güvenliğini sağlar.  
   
- Anahtar ileti güvenlik istemci ileti alma işlemini yapan uygulamanın (hizmeti) için burada istemci ileti hedef sıra için güvenli hale getirdiği taşıma güvenliği aksine güvenliğini sağlama kavramdır. Bu nedenle, MSMQ güvenli hale getirirken hiçbir bölümü oynadığı [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] ileti güvenliği kullanarak ileti.  
+ Anahtar ileti güvenlik istemci ileti alma işlemini yapan uygulamanın (hizmeti) için burada istemci ileti hedef sıra için güvenli hale getirdiği taşıma güvenliği aksine güvenliğini sağlama kavramdır. Bu nedenle, MSMQ hiçbir bölümü ileti güvenliği kullanarak WCF ileti güvenliğini sağlama çalar.  
   
- [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] ileti güvenliği için güvenlik üstbilgileri ekler [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] bir sertifika veya Kerberos protokolü gibi mevcut güvenlik altyapısı ile tümleştirmek ileti.  
+ WCF ileti güvenliğini bir sertifika veya Kerberos protokolü gibi mevcut güvenlik altyapısı ile tümleşen WCF ileti güvenlik üstbilgileri ekler.  
   
 ## <a name="message-credential-type"></a>İleti kimlik bilgisi türü  
  İleti güvenliği kullanarak, hizmet ve istemci, her başka kimlik doğrulaması için kimlik sunabilir. İleti güvenliği ayarlayarak seçebileceğiniz <xref:System.ServiceModel.NetMsmqBinding.Security%2A> moduna `Message` veya `Both` (diğer bir deyişle, taşıma Güveniği ve ileti güvenliği kullanın).  

@@ -1,32 +1,18 @@
 ---
 title: 'Nasıl yapılır: Kod Kullanarak Bir Hizmet için Meta Verileri Yayımlama'
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 dev_langs:
 - csharp
 - vb
 ms.assetid: 51407e6d-4d87-42d5-be7c-9887b8652006
-caps.latest.revision: 19
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: c3d2fd1222539ec8017846069e7eda9a2c503f22
-ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
+ms.openlocfilehash: bef5421d377bcae6e8c56b0117ebbe22a861de86
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/30/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-publish-metadata-for-a-service-using-code"></a>Nasıl yapılır: Kod Kullanarak Bir Hizmet için Meta Verileri Yayımlama
-Bu meta veri yayımlama için ele iki nasıl yapılır konuları biridir bir [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] hizmet. Bir hizmeti bir yapılandırma dosyası kullanarak ve kod kullanarak meta verileri, nasıl yayınlamalıdır belirtmek için iki yolu vardır. Bu konuda, bir kod kullanarak bir hizmet için meta verileri yayımlama gösterilmektedir.  
+Bu, bir Windows Communication Foundation (WCF) hizmet için meta veri yayımlama ele iki nasıl yapılır konuları biridir. Bir hizmeti bir yapılandırma dosyası kullanarak ve kod kullanarak meta verileri, nasıl yayınlamalıdır belirtmek için iki yolu vardır. Bu konuda, bir kod kullanarak bir hizmet için meta verileri yayımlama gösterilmektedir.  
   
 > [!CAUTION]
 >  Bu konu, güvenli olmayan bir şekilde meta verileri yayımlama gösterilmektedir. Herhangi bir istemci hizmetinden meta verileri alabilir. Meta veriler güvenli bir şekilde yayımlamak için hizmetinizin gerekiyorsa. bkz: [özel güvenli meta veri uç noktasının](../../../../docs/framework/wcf/samples/custom-secure-metadata-endpoint.md).  
@@ -94,7 +80,7 @@ Bu meta veri yayımlama için ele iki nasıl yapılır konuları biridir bir [!I
 11. Hizmetin taban adresine göz atmak için Internet Explorer kullanın (http://localhost:8001/MetadataSample Bu örnekte) ve meta veri yayımlama açık olduğunu doğrulayın. En üstte ve hemen altında "Bir hizmet oluşturdunuz." bir Web görüntülenen "Basit hizmeti" diyen sayfasını görmeniz gerekir Değilse, sayfanın üst kısmındaki ortaya çıkan bir ileti görüntüler: "Bu hizmet için meta veri yayımlama şu anda devre dışı."  
   
 ## <a name="example"></a>Örnek  
- Aşağıdaki kod örneği temel bir gösterir [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] kod içinde hizmet için meta veriler yayımlar hizmet.  
+ Aşağıdaki kod örneğinde kod içinde hizmet için meta veriler yayımlar temel bir WCF Hizmeti uygulamasını gösterir.  
   
  [!code-csharp[htPublishMetadataCode#11](../../../../samples/snippets/csharp/VS_Snippets_CFX/htpublishmetadatacode/cs/program.cs#11)]
  [!code-vb[htPublishMetadataCode#11](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/htpublishmetadatacode/vb/program.vb#11)]  

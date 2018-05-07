@@ -1,13 +1,6 @@
 ---
-title: "Nasıl yapılır: CompositionTarget Kullanarak Çerçeve Aralığı Başına İşleme"
-ms.custom: 
+title: 'Nasıl yapılır: CompositionTarget Kullanarak Çerçeve Aralığı Başına İşleme'
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-wpf
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -15,21 +8,16 @@ helpviewer_keywords:
 - CompositionTarget objects [WPF], rendering per frame
 - rendering per frame using CompositionTarget objects [WPF]
 ms.assetid: 701246cd-66b7-4d69-ada9-17b3b433d95d
-caps.latest.revision: "12"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: eb7e917c59f11ed78f8d44fa4b674d8d572f3623
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 7c080c6deca63eacdf0e1123f4ca8bbb495ed9ca
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-render-on-a-per-frame-interval-using-compositiontarget"></a>Nasıl yapılır: CompositionTarget Kullanarak Çerçeve Aralığı Başına İşleme
 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] Animasyon altyapısı tabanlı çerçeve animasyon oluşturmak için birçok özellik sağlar. Ancak, uygulama senaryoları işleme çerçeve başına temelinde geçirmiş denetime ihtiyacınız vardır. <xref:System.Windows.Media.CompositionTarget> Nesne üzerinde bir çerçeve başına geri alarak özel animasyon oluşturma olanağı sağlar.  
   
- <xref:System.Windows.Media.CompositionTarget>Uygulamanızı çekilmeye çalışıldığı görüntü yüzeyini temsil eden bir statik bir sınıftır. <xref:System.Windows.Media.CompositionTarget.Rendering> Olayı uygulamanın görünümü çizildiği her zaman oluşturulur. İşleme kare hızı saniye başına Sahne çizilme sayısıdır.  
+ <xref:System.Windows.Media.CompositionTarget> Uygulamanızı çekilmeye çalışıldığı görüntü yüzeyini temsil eden bir statik bir sınıftır. <xref:System.Windows.Media.CompositionTarget.Rendering> Olayı uygulamanın görünümü çizildiği her zaman oluşturulur. İşleme kare hızı saniye başına Sahne çizilme sayısıdır.  
   
 > [!NOTE]
 >  Kullanarak eksiksiz kod örneği için <xref:System.Windows.Media.CompositionTarget>, bkz: [CompositionTarget örneği kullanarak](http://go.microsoft.com/fwlink/?LinkID=160045).  

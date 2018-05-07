@@ -1,22 +1,14 @@
 ---
 title: My.Application.Log Nesnesi
 ms.date: 07/20/2015
-ms.prod: .net
-ms.suite: 
-ms.technology:
-- devlang-visual-basic
-ms.topic: article
 helpviewer_keywords:
 - My.Application.Log object
 ms.assetid: 296147f9-1109-4a55-9b5e-047f1ab9466c
-caps.latest.revision: 
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: 9ba367f3d5f5cb5505300b7f4a54d9b3d7c4422e
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.openlocfilehash: 4a4fbb2b823436a16f9f0646632e66f66fe62fdd
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="myapplicationlog-object"></a>My.Application.Log Nesnesi
 Bir özellik ve olay ve özel durum bilgileri için uygulamanın günlük dinleyicileri yazmak için yöntemler sağlar.  
@@ -30,11 +22,11 @@ Bir özellik ve olay ve özel durum bilgileri için uygulamanın günlük dinley
 >  Uygulama içinden bilgileri günlüğe kaydetmek için .NET Framework sınıfları de kullanabilirsiniz. Daha fazla bilgi için bkz: [izleme ve düzenleme uygulamaları](../../../framework/debug-trace-profile/tracing-and-instrumenting-applications.md).  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Namespace:**<xref:Microsoft.VisualBasic.Logging>  
+ **Namespace:** <xref:Microsoft.VisualBasic.Logging>  
   
- **Sınıfı:**<xref:Microsoft.VisualBasic.Logging.Log>  
+ **Sınıfı:** <xref:Microsoft.VisualBasic.Logging.Log>  
   
- **Derleme:**[!INCLUDE[vbprvbruntime](~/includes/vbprvbruntime-md.md)]  
+ **Derleme:** [!INCLUDE[vbprvbruntime](~/includes/vbprvbruntime-md.md)]  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [My.Application nesnesi](../../../visual-basic/language-reference/objects/my-application-object.md)
+ [My.Application Nesnesi](../../../visual-basic/language-reference/objects/my-application-object.md)

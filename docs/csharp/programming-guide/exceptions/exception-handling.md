@@ -1,21 +1,15 @@
 ---
-title: "Özel Durum İşleme (C# Programlama Kılavuzu)"
+title: Özel Durum İşleme (C# Programlama Kılavuzu)
 ms.date: 07/20/2015
-ms.prod: .net
-ms.technology: devlang-csharp
-ms.topic: article
 helpviewer_keywords:
 - exception handling [C#], about exception handling
 - exceptions [C#], handling
 ms.assetid: b4e4ecf2-b907-4e58-891f-2563762258e9
-caps.latest.revision: "24"
-author: BillWagner
-ms.author: wiwagn
-ms.openlocfilehash: dfdd8b8bdd89e4253dfc1afebc1e78140b121dd6
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: bbe9db48ab5cc1313c18fce66312f4334b40b9c5
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="exception-handling-c-programming-guide"></a>Özel Durum İşleme (C# Programlama Kılavuzu)
 A [deneyin](../../../csharp/language-reference/keywords/try-catch.md) blok C# programcıları için bir özel durum tarafından etkilenebilir bölüm kod tarafından kullanılır. İlişkili [catch](../../../csharp/language-reference/keywords/try-catch.md) blokları, sonuçta elde edilen özel durumları işlemek için kullanılır. A [son](../../../csharp/language-reference/keywords/try-finally.md) blok olsun veya olmasın bir özel durum bağımsız olarak çalıştırma kodunu içerir `try` içinde ayrılan kaynakları serbest bırakma gibi blok `try` bloğu. A `try` blok gerektiren bir veya daha fazla ilişkili `catch` blokları, veya bir `finally` engelleme veya her ikisi de.  
@@ -61,9 +55,9 @@ A [deneyin](../../../csharp/language-reference/keywords/try-catch.md) blok C# pr
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
  [C# başvurusu](../../../csharp/language-reference/index.md)  
- [C# programlama kılavuzu](../../../csharp/programming-guide/index.md)  
- [Özel durumlar ve özel durum işleme](../../../csharp/programming-guide/exceptions/index.md)  
+ [C# Programlama Kılavuzu](../../../csharp/programming-guide/index.md)  
+ [Özel Durumlar ve Özel Durum İşleme](../../../csharp/programming-guide/exceptions/index.md)  
  [try-catch](../../../csharp/language-reference/keywords/try-catch.md)  
  [try-finally](../../../csharp/language-reference/keywords/try-finally.md)  
  [try-catch-finally](../../../csharp/language-reference/keywords/try-catch-finally.md)  
- [using deyimi](../../../csharp/language-reference/keywords/using-statement.md)
+ [using Deyimi](../../../csharp/language-reference/keywords/using-statement.md)

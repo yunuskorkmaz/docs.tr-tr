@@ -1,14 +1,6 @@
 ---
-title: "CorParamAttr Numaralandırması"
-ms.custom: 
+title: CorParamAttr Numaralandırması
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: reference
 api_name:
 - CorParamAttr
 api_location:
@@ -22,17 +14,13 @@ helpviewer_keywords:
 ms.assetid: a7ff90ad-dad8-48e8-917d-4aa9a118cbc8
 topic_type:
 - apiref
-caps.latest.revision: 
 author: mairaw
 ms.author: mairaw
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 87afe125536473f99053db7d2fd4ae61fa4017ba
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 6ba2103003e3976e51e82ad6b42315a881582f5a
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="corparamattr-enumeration"></a>CorParamAttr Numaralandırması
 Bir yöntemin parametre meta verilerini açıklayan değerlerini içerir.  
@@ -72,7 +60,7 @@ typedef enum CorParamAttr {
   
  **Başlık:** CorHdr.h  
   
- **.NET framework sürümleri:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET framework sürümleri:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
  [Meta Veri Sabit Listeleri](../../../../docs/framework/unmanaged-api/metadata/metadata-enumerations.md)

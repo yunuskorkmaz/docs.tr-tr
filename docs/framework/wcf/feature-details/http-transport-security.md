@@ -1,29 +1,17 @@
 ---
 title: HTTP Taşıma Güvenliği
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 ms.assetid: d3439262-c58e-4d30-9f2b-a160170582bb
-caps.latest.revision: 14
 author: BrucePerlerMS
-ms.author: bruceper
 manager: mbaldwin
-ms.workload:
-- dotnet
-ms.openlocfilehash: 2787c38603fd0f88878596a809d7e3c5cfdfb350
-ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
+ms.openlocfilehash: cc284f82f974d9b34ff1cf6732d2ee7b95528c44
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/30/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="http-transport-security"></a>HTTP Taşıma Güvenliği
-HTTP taşıma olarak kullanırken, güvenlik Güvenli Yuva Katmanı (SSL) uygulaması tarafından sağlanır. SSL yaygın olarak Internet'te bir hizmete bir istemci kimlik doğrulaması için kullanılır ve ardından kanal gizliliği (şifreleme) sağlamak için. Bu konuda SSL nasıl çalıştığı ve nasıl şu uygulanan açıklanmaktadır [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)].  
+HTTP taşıma olarak kullanırken, güvenlik Güvenli Yuva Katmanı (SSL) uygulaması tarafından sağlanır. SSL yaygın olarak Internet'te bir hizmete bir istemci kimlik doğrulaması için kullanılır ve ardından kanal gizliliği (şifreleme) sağlamak için. Bu konuda, SSL nasıl çalıştığını ve Windows Communication Foundation (WCF) nasıl uygulandığı açıklanmaktadır.  
   
 ## <a name="basic-ssl"></a>Temel SSL  
  Nasıl SSL works en iyi tipik bir senaryo, bu durumda, bir bankanın Web sitesi açıklanmıştır. Bir kullanıcı adı ve parola ile oturum açmak bir müşteri sitesi sağlar. Kimlik doğrulaması gerçekleştirilen sonra kullanıcı görünümü hesap bakiyelerini gibi işlemler gerçekleştirmek, fatura ödeme ve para bir hesaptan taşıyın.  
@@ -42,11 +30,11 @@ HTTP taşıma olarak kullanırken, güvenlik Güvenli Yuva Katmanı (SSL) uygula
  Her sertifika iki anahtarları, özel anahtarı ve bir ortak anahtar içerir ve iki olarak da bilinir bir *anahtar çifti exchange*. Kısaca, ortak anahtar sertifikası okunabilir durumdayken özel anahtar yalnızca sertifika sahibinin adı verilir. Her iki anahtarı şifreleme veya şifrelerini çözme bir Özet, karma değeri veya başka bir anahtar, ancak yalnızca olarak bulmadýðýný işlemleri için kullanılabilir. Örneğin, istemci ortak anahtarla şifreler, yalnızca site özel anahtarı kullanarak ileti şifresini çözebilir. Benzer şekilde, istemci site özel anahtarla şifreler, ortak anahtar ile şifresini çözebilir. Bu özel anahtar ile şifrelenmiş yalnızca iletileri ortak anahtarla şifresi çözülebilir olduğundan yalnızca özel anahtarı sahibi ile değiştirilen mesajları, istemciye güvence sağlar. Site, ortak anahtar kullanılarak şifrelenmiş sahip bir istemci iletilerle değiştiriyor emin olur. Bu exchange neden olan yalnızca bir ilk el sıkışma için ancak güvenli daha pek çok gerçek simetrik anahtar oluşturmak için yapılır. Bununla birlikte, tüm iletişimler geçerli bir SSL sertifikası sahip hizmetine bağlıdır.  
   
 ## <a name="implementing-ssl-with-wcf"></a>WCF ile SSL uygulama  
- HTTP taşıma güvenliği (veya SSL) sağlanan harici olarak [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]. SSL iki yoldan biriyle uygulayabilirsiniz; uygulamanızı nasıl barındırılan belirleyici faktör şöyledir:  
+ HTTP taşıma güvenliği (veya SSL) için WCF harici olarak sağlanır. SSL iki yoldan biriyle uygulayabilirsiniz; uygulamanızı nasıl barındırılan belirleyici faktör şöyledir:  
   
--   Internet Information Services (IIS) olarak kullanıyorsanız, [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] ana bilgisayar, bir SSL hizmetini kurma için IIS altyapısını kullanır.  
+-   WCF konağı olarak Internet Information Services (IIS) kullanıyorsanız, SSL hizmetini kurma için IIS altyapısını kullanır.  
   
--   Kendini barındıran oluşturuyorsanız [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] uygulama, bir SSL sertifikası HttpCfg.exe aracını kullanarak adresine bağlayabilirsiniz.  
+-   Kendini barındıran WCF uygulaması oluşturuyorsanız, bir SSL sertifikası HttpCfg.exe aracını kullanarak adresine bağlayabilirsiniz.  
   
 ### <a name="using-iis-for-transport-security"></a>Taşıma güvenliği için IIS kullanma  
   
@@ -61,7 +49,7 @@ HTTP taşıma olarak kullanırken, güvenlik Güvenli Yuva Katmanı (SSL) uygula
  Sertifikalar ile kullanılmak üzere yapılandırmak için [!INCLUDE[iis601](../../../../includes/iis601-md.md)], bkz: [Certificates_IIS_SP1_Ops](http://go.microsoft.com/fwlink/?LinkId=88602).  
   
 ### <a name="using-httpcfg-for-ssl"></a>SSL için HttpCfg kullanma  
- Kendini barındıran oluşturuyorsanız [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] uygulama adresinde HttpCfg.exe Aracı'nı indirme [Windows XP Service Pack 2 Destek Araçları site](http://go.microsoft.com/fwlink/?LinkId=29002).  
+ Kendini barındıran WCF uygulaması oluşturuyorsanız, adresinde HttpCfg.exe Aracı'nı indirme [Windows XP Service Pack 2 Destek Araçları site](http://go.microsoft.com/fwlink/?LinkId=29002).  
   
  X.509 sertifikası ile bir bağlantı ayarlamak için HttpCfg.exe aracını kullanma hakkında daha fazla bilgi için bkz: [nasıl yapılır: bir SSL sertifikası ile bir bağlantı noktası yapılandırın](../../../../docs/framework/wcf/feature-details/how-to-configure-a-port-with-an-ssl-certificate.md).  
   

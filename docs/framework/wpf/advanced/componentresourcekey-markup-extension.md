@@ -1,13 +1,6 @@
 ---
-title: "ComponentResourceKey Biçimlendirme Uzantısı"
-ms.custom: 
+title: ComponentResourceKey Biçimlendirme Uzantısı
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-wpf
-ms.tgt_pltfrm: 
-ms.topic: article
 f1_keywords:
 - ComponentResourceKey
 - ComponentResourceKeyExtension
@@ -15,16 +8,11 @@ helpviewer_keywords:
 - ComponentResourceKey markup extension [WPF]
 - XAML [WPF], ComponentResourceKey markup extension
 ms.assetid: d6bcdbe6-61b3-40a7-b381-4e02185b5a85
-caps.latest.revision: "14"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: f4bfaee35ba9f8cf60deb01c52a142433d08021c
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: d11c26add084165eaa9fd0b319a375c4b98c7fb9
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="componentresourcekey-markup-extension"></a>ComponentResourceKey Biçimlendirme Uzantısı
 Tanımlar ve dış derlemelerden yüklenen kaynaklar tuşları başvurur. Bu, bir derlemeyi ya da bir sınıf bir açık kaynak sözlüğü yerine bir derlemeyi hedef türünü belirtmek bir kaynak arama sağlar.  
@@ -67,7 +55,7 @@ Tanımlar ve dış derlemelerden yüklenen kaynaklar tuşları başvurur. Bu, bi
   
 -   Bir tema kaynak derlemeden erişme, ne zaman yeniden şablon oluşturma denetimi olan ancak denetimin temalar tarafından sağlanan kaynaklardan gelen özellik değerleri kullanmak istiyorsunuz.  
   
- Temalardan gelmesi bileşen kaynakları başvurmak için genellikle kullanmanız önerilir `{DynamicResource}` yerine `{StaticResource}`. Bu kullanımları gösterilir. `{DynamicResource}`kullanıcı tarafından tema değiştirilebildiğinden önerilir. Bir tema desteklemek için denetim yazarının hedefi en yakından eşleşen bileşen kaynak isterseniz, bileşeni kaynak başvuru dinamik de etkinleştirmeniz gerekir.  
+ Temalardan gelmesi bileşen kaynakları başvurmak için genellikle kullanmanız önerilir `{DynamicResource}` yerine `{StaticResource}`. Bu kullanımları gösterilir. `{DynamicResource}` kullanıcı tarafından tema değiştirilebildiğinden önerilir. Bir tema desteklemek için denetim yazarının hedefi en yakından eşleşen bileşen kaynak isterseniz, bileşeni kaynak başvuru dinamik de etkinleştirmeniz gerekir.  
   
  <xref:System.Windows.ComponentResourceKey.TypeInTargetAssembly%2A> Kaynak gerçekte tanımlandığı hedef derlemesinde varolan bir türü tanımlar. A `ComponentResourceKey` tanımlanan ve tam olarak bilmeden bağımsız olarak kullanılan nerede <xref:System.Windows.ComponentResourceKey.TypeInTargetAssembly%2A> tanımlandı ancak başvurulan derlemeler üzerinden türü çözümlemelidir.  
   
@@ -79,11 +67,11 @@ Tanımlar ve dış derlemelerden yüklenen kaynaklar tuşları başvurur. Bu, bi
   
  Teknik olarak, değeri `targetID` bir dize olması gerekmez, herhangi bir nesne olabilir. Ancak, en yaygın WPF'de hizalamak için kullanımdır `targetID` dizeleri olan ve olduğu gibi dizeleri geçerli forms değerle [XamlName Dilbilgisi](../../../../docs/framework/xaml-services/xamlname-grammar.md).  
   
- `ComponentResourceKey`nesne öğesi sözdiziminde kullanılabilir. Bu durumda, her ikisi de değerini belirten <xref:System.Windows.ComponentResourceKey.TypeInTargetAssembly%2A> ve <xref:System.Windows.ComponentResourceKey.ResourceId%2A> özellikleri uzantıyı düzgün başlatmak için gereklidir.  
+ `ComponentResourceKey` nesne öğesi sözdiziminde kullanılabilir. Bu durumda, her ikisi de değerini belirten <xref:System.Windows.ComponentResourceKey.TypeInTargetAssembly%2A> ve <xref:System.Windows.ComponentResourceKey.ResourceId%2A> özellikleri uzantıyı düzgün başlatmak için gereklidir.  
   
  İçinde [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] okuyucu uygulaması işleme için bu biçimlendirme uzantısı tarafından tanımlanan <xref:System.Windows.ComponentResourceKey> sınıfı.  
   
- `ComponentResourceKey`bir biçimlendirme uzantısıdır. Biçimlendirme uzantıları, genellikle öznitelik değerlerinin değişmez değerler veya işleyici isimleri dışına çıkma gereksinimi olduğunda ve bu gereksinim, belirli türler veya özellikler üzerine tür dönüştürücülerini koymaktan daha genel olduğunda uygulanır. İçindeki tüm biçimlendirme uzantıları [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] kullanmak {ve} kurala göre kendi öznitelik sözdiziminde karakterler bir [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] işlemci tanıdığı biçimlendirme uzantısı öznitelik işlemelidir. Daha fazla bilgi için bkz: [biçimlendirme uzantıları ve WPF XAML](../../../../docs/framework/wpf/advanced/markup-extensions-and-wpf-xaml.md).  
+ `ComponentResourceKey` bir biçimlendirme uzantısıdır. Biçimlendirme uzantıları, genellikle öznitelik değerlerinin değişmez değerler veya işleyici isimleri dışına çıkma gereksinimi olduğunda ve bu gereksinim, belirli türler veya özellikler üzerine tür dönüştürücülerini koymaktan daha genel olduğunda uygulanır. İçindeki tüm biçimlendirme uzantıları [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] kullanmak {ve} kurala göre kendi öznitelik sözdiziminde karakterler bir [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] işlemci tanıdığı biçimlendirme uzantısı öznitelik işlemelidir. Daha fazla bilgi için bkz: [biçimlendirme uzantıları ve WPF XAML](../../../../docs/framework/wpf/advanced/markup-extensions-and-wpf-xaml.md).  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
  <xref:System.Windows.ComponentResourceKey>  

@@ -1,13 +1,6 @@
 ---
-title: "Geometriye Genel Bakış"
-ms.custom: 
+title: Geometriye Genel Bakış
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-wpf
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -15,16 +8,11 @@ helpviewer_keywords:
 - geometry classes [WPF]
 - graphics [WPF], geometry classes
 ms.assetid: 9fba8934-98b7-4af6-82f6-f4ef887f963a
-caps.latest.revision: "23"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: e58e3ea00a00b24e476fd158beb3b0515e607f9d
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 01c460ae18c489a21c860c6d2b10f551e6e68242
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="geometry-overview"></a>Geometriye Genel Bakış
 Bu genel bakışta nasıl kullanılacağını açıklar [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] <xref:System.Windows.Media.Geometry> şekiller açıklamak için sınıflar. Bu konu ayrıca arasındaki farkları karşılaştırır <xref:System.Windows.Media.Geometry> nesneleri ve <xref:System.Windows.Shapes.Shape> öğeleri.  
@@ -34,7 +22,7 @@ Bu genel bakışta nasıl kullanılacağını açıklar [!INCLUDE[TLA#tla_wincli
 ## <a name="what-is-a-geometry"></a>Geometri nedir?  
  <xref:System.Windows.Media.Geometry> Sınıfı ve bu sınıftan gibi türetilen sınıflar <xref:System.Windows.Media.EllipseGeometry>, <xref:System.Windows.Media.PathGeometry>, ve <xref:System.Windows.Media.CombinedGeometry>, bir 2B şekli geometri açıklamak etkinleştir. Bu geometrik açıklamalar birçok kullanır, bu tür ekranı boyamak için bir şekil tanımlama veya isabet sınaması ve kırpma bölgeleri tanımlama sahip. Geometri bile animasyon yolunu tanımlamak için de kullanabilirsiniz.  
   
- <xref:System.Windows.Media.Geometry>dikdörtgenler ve daireler veya bileşik, iki veya daha fazla geometri nesnesinden oluşturulmuş gibi basit nesneler de olabilir.  Daha karmaşık geometri kullanarak oluşturulabilir <xref:System.Windows.Media.PathGeometry> ve <xref:System.Windows.Media.StreamGeometry> yaylar ve eğrileri açıklamanızı etkinleştirmek sınıfları.  
+ <xref:System.Windows.Media.Geometry> dikdörtgenler ve daireler veya bileşik, iki veya daha fazla geometri nesnesinden oluşturulmuş gibi basit nesneler de olabilir.  Daha karmaşık geometri kullanarak oluşturulabilir <xref:System.Windows.Media.PathGeometry> ve <xref:System.Windows.Media.StreamGeometry> yaylar ve eğrileri açıklamanızı etkinleştirmek sınıfları.  
   
  Çünkü bir <xref:System.Windows.Media.Geometry> bir tür <xref:System.Windows.Freezable>, <xref:System.Windows.Media.Geometry> nesneleri birkaç özel özellik sağlar: olarak bildirilebilir [kaynakları](../../../../docs/framework/wpf/advanced/xaml-resources.md)kopyalanması, performansı iyileştirmek için salt okunur yapılan birden fazla nesne arasında paylaşılan ve iş parçacığı açısından güvenli hale. Tarafından sağlanan farklı özellikler hakkında daha fazla bilgi için <xref:System.Windows.Freezable> nesneleri bkz [Freezable nesnelere genel bakış](../../../../docs/framework/wpf/advanced/freezable-objects-overview.md).  
   
@@ -187,7 +175,7 @@ Birden çok şekil ile PathGeometry
 ## <a name="composite-geometries"></a>Bileşik geometri  
  Bileşik geometri nesneleri kullanılarak oluşturulabilir bir <xref:System.Windows.Media.GeometryGroup>, <xref:System.Windows.Media.CombinedGeometry>, ya da statik çağırarak <xref:System.Windows.Media.Geometry> yöntemi <xref:System.Windows.Media.Geometry.Combine%2A>.  
   
--   <xref:System.Windows.Media.CombinedGeometry> Nesne ve <xref:System.Windows.Media.Geometry.Combine%2A> yöntemi iki geometri tarafından tanımlanan alanı birleştirmek için Boolean işlemi gerçekleştirir. <xref:System.Windows.Media.Geometry>Hiçbir alana sahip olmayan nesneler atılır. Yalnızca iki <xref:System.Windows.Media.Geometry> (Bu iki geometri de bileşik geometri olabilir ancak) nesneleri birleştirilebilir.  
+-   <xref:System.Windows.Media.CombinedGeometry> Nesne ve <xref:System.Windows.Media.Geometry.Combine%2A> yöntemi iki geometri tarafından tanımlanan alanı birleştirmek için Boolean işlemi gerçekleştirir. <xref:System.Windows.Media.Geometry> Hiçbir alana sahip olmayan nesneler atılır. Yalnızca iki <xref:System.Windows.Media.Geometry> (Bu iki geometri de bileşik geometri olabilir ancak) nesneleri birleştirilebilir.  
   
 -   <xref:System.Windows.Media.GeometryGroup> Sınıfı oluşturur bir birleştirmeden <xref:System.Windows.Media.Geometry> içeren kendi alanları birleştirme olmadan nesneleri. Herhangi bir sayıda <xref:System.Windows.Media.Geometry> nesneleri eklenebilir bir <xref:System.Windows.Media.GeometryGroup>. Bir örnek için bkz: [bileşik bir şekil oluşturmak](../../../../docs/framework/wpf/graphics-multimedia/how-to-create-a-composite-shape.md).  
   
@@ -219,11 +207,11 @@ Birden çok şekil ile PathGeometry
 ## <a name="other-geometry-features"></a>Diğer geometri özellikleri  
  <xref:System.Windows.Media.Geometry> Sınıfı aşağıdaki gibi yararlı yardımcı program yöntemleri sağlar:  
   
--   <xref:System.Windows.Media.Geometry.GetArea%2A>-Alanını alır <xref:System.Windows.Media.Geometry>.  
+-   <xref:System.Windows.Media.Geometry.GetArea%2A> -Alanını alır <xref:System.Windows.Media.Geometry>.  
   
--   <xref:System.Windows.Media.Geometry.FillContains%2A>-Geometri başka içerip içermediğini belirler <xref:System.Windows.Media.Geometry>.  
+-   <xref:System.Windows.Media.Geometry.FillContains%2A> -Geometri başka içerip içermediğini belirler <xref:System.Windows.Media.Geometry>.  
   
--   <xref:System.Windows.Media.Geometry.StrokeContains%2A>-Belirler olup olmadığını, vuruşun bir <xref:System.Windows.Media.Geometry> belirli bir noktaya içerir.  
+-   <xref:System.Windows.Media.Geometry.StrokeContains%2A> -Belirler olup olmadığını, vuruşun bir <xref:System.Windows.Media.Geometry> belirli bir noktaya içerir.  
   
  Bkz: <xref:System.Windows.Media.Geometry> sınıfı yöntemlerinin tam listesi için.  
   

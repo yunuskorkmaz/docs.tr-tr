@@ -1,9 +1,7 @@
 ---
 title: "İzlenecek yol: Verimliliği Artırmak için BatchBlock ve BatchedJoinBlock'u Kullanma"
 ms.date: 03/30/2017
-ms.prod: .net
 ms.technology: dotnet-standard
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -13,15 +11,11 @@ helpviewer_keywords:
 ms.assetid: 5beb4983-80c2-4f60-8c51-a07f9fd94cb3
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-- dotnetcore
-ms.openlocfilehash: e9305fd2a0e61a71f6875d6061f835e9cdae5dd1
-ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
+ms.openlocfilehash: bcd12d5c3cfe341b22a5421930a22c272878006b
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/27/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="walkthrough-using-batchblock-and-batchedjoinblock-to-improve-efficiency"></a>İzlenecek yol: Verimliliği Artırmak için BatchBlock ve BatchedJoinBlock'u Kullanma
 TPL veri akışı kitaplığı sağlar <xref:System.Threading.Tasks.Dataflow.BatchBlock%601?displayProperty=nameWithType> ve <xref:System.Threading.Tasks.Dataflow.BatchedJoinBlock%602?displayProperty=nameWithType> , alabilir ve arabellek bir veya daha fazla kaynaklardan veri ve o arabelleğe alınan verileri bir koleksiyon olarak kullanıma yayılması böylece sınıfları. Bu toplu mekanizması, bir veya daha çok kaynaktan veri toplamak ve ardından birden çok veri öğesi toplu iş olarak işlem durumlarda faydalıdır. Örneğin, bir veritabanına kayıtları eklemek için veri akışı kullanan bir uygulamayı göz önünde bulundurun. Bu işlem, birden çok öğe aynı zamanda bir kerede yerine sırayla eklenirse daha etkili olabilir. Bu belge nasıl kullanılacağını açıklar <xref:System.Threading.Tasks.Dataflow.BatchBlock%601> böyle bir veritabanını verimliliğini artırmak için sınıf ekleme işlemleri. Ayrıca nasıl kullanılacağını açıklar <xref:System.Threading.Tasks.Dataflow.BatchedJoinBlock%602> sonuçları ve programı bir veritabanından okuduğunda oluşan özel durumları yakalamak için sınıf.

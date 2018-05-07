@@ -1,13 +1,6 @@
 ---
-title: "Kimlik Modeliyle Beyanlar ve Yetkilendirmeyi Yönetme"
-ms.custom: 
+title: Kimlik Modeliyle Beyanlar ve Yetkilendirmeyi Yönetme
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - authorization [WCF]
 - WCF security
@@ -15,19 +8,14 @@ helpviewer_keywords:
 - claims [WCF]
 - authorization [WCF], managing with the Identity Model
 ms.assetid: 099defbb-5d35-434e-9336-1a49b9ec7663
-caps.latest.revision: "20"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: db0a304a908e906b635672eed1a84f0277284ad7
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 84f4485a85f83e910cc75b04282e1ad04aee72c1
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="managing-claims-and-authorization-with-the-identity-model"></a>Kimlik Modeliyle Beyanlar ve Yetkilendirmeyi Yönetme
-Yetkilendirme hangi varlıkların değiştirmek, görüntüleme veya aksi halde bir bilgisayar kaynağına erişmek için izne sahip belirleme işlemidir. Örneğin, bir iş ortamında, yalnızca Yöneticiler, çalışanlarına dosyalara erişmesine izin. [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)]Yetkilendirme işlemi gerçekleştirmek için iki mekanizma destekler. İlk mekanizma, varolan ortak dil çalışma zamanı (CLR) yapıları kullanarak yetkilendirmeyi denetlemenizi sağlar. İkinci olarak bilinen bir talep tabanlı modeldir *kimlik modeli*. [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]gelen iletilere talep oluşturmak üzere kimlik modelini kullanır; Kimlik modeli sınıfları için özel yetkilendirme düzenleri yeni talep türlerini desteklemek için genişletilebilir. Bu konuda özelliğini kullanıyor en önemli sınıfları listesini yanı sıra kimliği Model özelliğinin ana programlama kavramları hakkında genel bir bakış sunulmaktadır.  
+Yetkilendirme hangi varlıkların değiştirmek, görüntüleme veya aksi halde bir bilgisayar kaynağına erişmek için izne sahip belirleme işlemidir. Örneğin, bir iş ortamında, yalnızca Yöneticiler, çalışanlarına dosyalara erişmesine izin. Windows Communication Foundation (WCF), Yetkilendirme işlemi gerçekleştirmek için iki mekanizma destekler. İlk mekanizma, varolan ortak dil çalışma zamanı (CLR) yapıları kullanarak yetkilendirmeyi denetlemenizi sağlar. İkinci olarak bilinen bir talep tabanlı modeldir *kimlik modeli*. WCF gelen iletilere talepleri oluşturmak için kimlik modelini kullanır; Kimlik modeli sınıfları için özel yetkilendirme düzenleri yeni talep türlerini desteklemek için genişletilebilir. Bu konuda özelliğini kullanıyor en önemli sınıfları listesini yanı sıra kimliği Model özelliğinin ana programlama kavramları hakkında genel bir bakış sunulmaktadır.  
   
 ## <a name="identity-model-scenarios"></a>Kimlik modeli senaryoları  
  Aşağıdaki senaryolarda kimlik modelini kullanmak temsil eder.  
@@ -136,7 +124,7 @@ Yetkilendirme hangi varlıkların değiştirmek, görüntüleme veya aksi halde 
  ![Beyanlar ve yetkilendirmeyi yönetme](../../../../docs/framework/wcf/feature-details/media/xsi-recap.gif "xsi_recap")  
   
 ## <a name="wcf-and-identity-model"></a>WCF ve kimlik modeli  
- [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]Kimlik modeli altyapısı yetkilendirme gerçekleştirmek için temel olarak kullanır. İçinde [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)], <xref:System.ServiceModel.Description.ServiceAuthorizationBehavior> sınıfı belirtmenize olanak verir *yetkilendirme* ilkeleri bir hizmetin parçası olarak. Bu tür Yetkilendirme İlkeleri olarak da bilinir *dış Yetkilendirme İlkeleri*, ve yerel ilke veya bir uzak hizmetiyle etkileşim tarafından temel talep işleme gerçekleştirebilirsiniz. Tarafından temsil edilen Yetkilendirme Yöneticisi <xref:System.ServiceModel.ServiceAuthorizationManager> sınıf türleri (belirteçleri) çeşitli kimlik bilgisi tanıması Yetkilendirme İlkeleri ile birlikte dış yetkilendirme ilkelerini değerlendirir ve ne adlı doldurur bir  *kimlik doğrulama bağlamını* talepleri bir gelen iletiyi uygun. Kimlik doğrulama bağlamını tarafından temsil edilen <xref:System.IdentityModel.Policy.AuthorizationContext> sınıfı.  
+ WCF, yetkilendirme gerçekleştirmek için temel olarak kimlik modeli altyapısı kullanır. Wcf'de, <xref:System.ServiceModel.Description.ServiceAuthorizationBehavior> sınıfı belirtmenize olanak verir *yetkilendirme* ilkeleri bir hizmetin parçası olarak. Bu tür Yetkilendirme İlkeleri olarak da bilinir *dış Yetkilendirme İlkeleri*, ve yerel ilke veya bir uzak hizmetiyle etkileşim tarafından temel talep işleme gerçekleştirebilirsiniz. Tarafından temsil edilen Yetkilendirme Yöneticisi <xref:System.ServiceModel.ServiceAuthorizationManager> sınıf türleri (belirteçleri) çeşitli kimlik bilgisi tanıması Yetkilendirme İlkeleri ile birlikte dış yetkilendirme ilkelerini değerlendirir ve ne adlı doldurur bir  *kimlik doğrulama bağlamını* talepleri bir gelen iletiyi uygun. Kimlik doğrulama bağlamını tarafından temsil edilen <xref:System.IdentityModel.Policy.AuthorizationContext> sınıfı.  
   
 ## <a name="identity-model-programming"></a>Kimlik programlama modeli  
  Aşağıdaki tabloda, program kimliği Model uzantılarını için kullanılan nesne modeli açıklanmaktadır. Tüm bu sınıflar ya da mevcut <xref:System.IdentityModel.Policy> veya <xref:System.IdentityModel.Claims> ad alanları.  

@@ -1,33 +1,19 @@
 ---
 title: Tutorial1 Başlarken
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 helpviewer_keywords:
 - WCF [WCF], getting started
 - Windows Communication Foundation [WCF], getting started
 - getting started [WCF]
 ms.assetid: df939177-73cb-4440-bd95-092a421516a1
-caps.latest.revision: 47
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 2dbf3ddb903600df6094c8486fda7183eac2abe7
-ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
-ms.translationtype: MT
+ms.openlocfilehash: 4a095e5391f3b532211b82a190c7010f41283e31
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/30/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="getting-started-tutorial"></a>Başlangıç Öğreticisi
-Bu bölümdeki konularda hızlı maruz sağlamak için tasarlanmıştır [!INCLUDE[indigo1](../../../includes/indigo1-md.md)] programlama deneyimine. Bu konunun sonundaki listesi sırasına göre tamamlanması için tasarlanmıştır. Bu öğreticide, bir giriş anlayış oluşturmak için gerekli adımları verir [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] hizmet ve istemci uygulamaları. Bir hizmet bir veya daha fazla uç noktalar, her biri bir veya daha fazla hizmet işlemini kullanıma sunar, kullanıma sunar. *Endpoint* Hizmetin nerede hizmet bulunabilir, bir adresi nasıl bir istemci hizmeti ve işlevselliği tanımlayan bir sözleşme ile iletişim kurması gereken açıklayan bilgileri içeren bir bağlama belirtir hizmet tarafından istemcilerine sağlanan.  
+Bu bölümdeki konular, hızlı Etkilenme programlama deneyimine Windows Communication Foundation (WCF) için vermek üzere tasarlanmıştır. Bu konunun sonundaki listesi sırasına göre tamamlanması için tasarlanmıştır. Bu öğreticide, bir giriş anlayış oluşturmak için gerekli adımları verir [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] hizmet ve istemci uygulamaları. Bir hizmet bir veya daha fazla uç noktalar, her biri bir veya daha fazla hizmet işlemini kullanıma sunar, kullanıma sunar. *Endpoint* Hizmetin nerede hizmet bulunabilir, bir adresi nasıl bir istemci hizmeti ve işlevselliği tanımlayan bir sözleşme ile iletişim kurması gereken açıklayan bilgileri içeren bir bağlama belirtir hizmet tarafından istemcilerine sağlanan.  
   
  Bu öğreticideki konu başlıklarını sırasıyla çalıştıktan sonra çalışan bir hizmetiniz ve hizmetin çağıran bir istemci sahip olacaktır. İlk üç konularda bir hizmet sözleşmesini tanımlama, hizmet sözleşmesini uygulama ve hizmet barındırmak nasıl açıklanmaktadır. Oluşturulan hizmet bir konsol uygulaması içinde kendiliğinden barındırılır. Hizmetler, aynı zamanda Internet Information Services (IIS) altında barındırılabilir. Bunun nasıl yapılacağı hakkında daha fazla bilgi için bkz: [nasıl yapılır: IIS'de WCF Hizmeti barındırma](../../../docs/framework/wcf/feature-details/how-to-host-a-wcf-service-in-iis.md). Kod içinde hizmet yapılandırılan; Ancak, hizmetleri yapılandırma dosyasının içinde yapılandırılabilir. Bir yapılandırma dosyası kullanma hakkında daha fazla bilgi için bkz: [yapılandırma dosyalarını kullanarak Hizmetleri Yapılandırma](../../../docs/framework/wcf/configuring-services-using-configuration-files.md).  
   

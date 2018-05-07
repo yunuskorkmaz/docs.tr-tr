@@ -1,34 +1,20 @@
 ---
 title: WCF İstemcisi Genel Bakış
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 dev_langs:
 - csharp
 - vb
 helpviewer_keywords:
 - clients [WCF], architecture
 ms.assetid: f60d9bc5-8ade-4471-8ecf-5a07a936c82d
-caps.latest.revision: 17
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 7f083ea44b9bdbd9bf85d65c42d663d87af8d812
-ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
-ms.translationtype: MT
+ms.openlocfilehash: 1aa540d084e9b11cc7a355db02047705f55ea4be
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/30/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="wcf-client-overview"></a>WCF İstemcisi Genel Bakış
-Bu bölümde hangi istemci uygulamaları yapın, yapılandırma, oluşturma ve kullanma açıklanmaktadır bir [!INCLUDE[indigo1](../../../includes/indigo1-md.md)] istemci ve istemci uygulamalarının güvenliğini sağlama.  
+Bu bölümde, istemci uygulamalarının ne, yapılandırma, oluşturma ve bir Windows Communication Foundation (WCF) istemci kullanın ve istemci uygulamalarının güvenliğini sağlama açıklanmaktadır.  
   
 ## <a name="using-wcf-client-objects"></a>WCF istemci nesnelerini kullanma  
  Bir istemci uygulaması kullanan bir yönetilen uygulamayı olan bir [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] başka bir uygulamayla iletişim kurmak için istemci. İçin bir istemci uygulaması oluşturmak için bir [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] hizmeti aşağıdakileri gerektirir:  

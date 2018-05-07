@@ -1,11 +1,7 @@
 ---
-title: "QualifierSet_GetNames işlevi (yönetilmeyen API Başvurusu)"
-description: "QualifierSet_GetNames işlevi, bir nesneye veya özelliğe niteleyicileri adlarını alır."
+title: QualifierSet_GetNames işlevi (yönetilmeyen API Başvurusu)
+description: QualifierSet_GetNames işlevi, bir nesneye veya özelliğe niteleyicileri adlarını alır.
 ms.date: 11/06/2017
-ms.prod: .net-framework
-ms.technology:
-- dotnet-clr
-ms.topic: reference
 api_name:
 - QualifierSet_GetNames
 api_location:
@@ -20,14 +16,11 @@ topic_type:
 - Reference
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 6077b448c2644f68d12679cf208ee921c2af119a
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: b7c96439cf50c18e336baa70cf463b9463203290
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="qualifiersetgetnames-function"></a>QualifierSet_GetNames işlevi
 Tüm niteleyicileri veya geçerli nesne ya da özellik kullanılabilir belirli niteleyicileri adlarını alır. 
@@ -62,7 +55,7 @@ HRESULT QualifierSet_GetNames (
 | `WBEM_FLAG_LOCAL_ONLY` | 0x10 | Yalnızca niteleyicileri adlarını belirli geçerli özellik veya nesne döndürür. <br/> Bir özellik için: yalnızca niteleyicileri (geçersiz kılmaları dahil) özelliğine belirli dönün ve bu niteleyicileri sınıf tanımı yayılır. <br/> Bir örneği için: yalnızca örneğe özgü niteleyicisi adlarını döndürür. <br/> Bir sınıf için: yalnızca niteleyicileri türetilmiş sınıf beiong belirli döndürür.
 |`WBEM_FLAG_PROPAGATED_ONLY` | 0x20 | Başka bir nesne yalnızca niteleyicileri adlarını yayılan dönüş. <br/> Bir özellik için: sınıf tanımı ve özelliğinden olanlar geri dönmek için bu özelliği olarak yalnızca niteleyicileri yayılır. <br/> Bir örneği için: sınıf tanımını dönüş yalnızca bu niteleyicileri yayılır. <br/> Bir sınıf için: Return niteleyicisi adları yalnızca üst sınıflardan devralınır. |
 
-`pstrNames`[out] Yeni bir `SAFEARRAY` istenen adlarını içerir. Dizi 0 öğeler bulunabilir. Bir hata oluşursa, yeni bir `SAFEARRAY` döndürülmez.
+`pstrNames` [out] Yeni bir `SAFEARRAY` istenen adlarını içerir. Dizi 0 öğeler bulunabilir. Bir hata oluşursa, yeni bir `SAFEARRAY` döndürülmez.
 
 ## <a name="return-value"></a>Dönüş değeri
 
@@ -87,7 +80,7 @@ Sıfır niteleyicileri olması belirli bir nesne için bir hata değildir dizele
   
  **Başlık:** WMINet_Utils.idl  
   
- **.NET framework sürümleri:**[!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]  
+ **.NET framework sürümleri:** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.  
 [WMI ve performans sayaçları (yönetilmeyen API Başvurusu)](index.md)

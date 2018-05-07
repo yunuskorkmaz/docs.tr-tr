@@ -1,34 +1,20 @@
 ---
 title: Erişim Denetimi Mekanizmaları
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 helpviewer_keywords:
 - WCF security
 - access control [WCF]
 ms.assetid: 9d576122-3f55-4425-9acf-b23d0781e966
-caps.latest.revision: 13
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 89606d1e02b58f5f627d28b7354def848cd5a350
-ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
+ms.openlocfilehash: 57ead53dd9e6bc1b2e3624791c7cc0c7d437cd7d
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/30/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="access-control-mechanisms"></a>Erişim Denetimi Mekanizmaları
-Erişimi ile birkaç şekilde denetleyebilirsiniz [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)]. Bu konu, kısa bir süre çeşitli mekanizmalar açıklar ve zaman her kullanılacağı hakkında öneriler sağlar; kullanılacak doğru mekanizması seçmenize yardımcı olmak için tasarlanmıştır. Erişim teknolojileri karmaşıklık sırada listelenir. En kolayıdır <xref:System.Security.Permissions.PrincipalPermissionAttribute>; en karmaşık kimlik modelidir.  
+Windows Communication Foundation (WCF) ile birkaç yolla erişimi denetleyebilirsiniz. Bu konu, kısa bir süre çeşitli mekanizmalar açıklar ve zaman her kullanılacağı hakkında öneriler sağlar; kullanılacak doğru mekanizması seçmenize yardımcı olmak için tasarlanmıştır. Erişim teknolojileri karmaşıklık sırada listelenir. En kolayıdır <xref:System.Security.Permissions.PrincipalPermissionAttribute>; en karmaşık kimlik modelidir.  
   
- Bu mekanizmalar, kimliğe bürünme ve temsilci ile yanı sıra [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] içinde açıklanan [temsilcilik ve kimliğe bürünme](../../../../docs/framework/wcf/feature-details/delegation-and-impersonation-with-wcf.md).  
+ Bu mekanizmaların yanı sıra, kimliğe bürünme ve WCF ile temsilci içinde açıklanan [temsilcilik ve kimliğe bürünme](../../../../docs/framework/wcf/feature-details/delegation-and-impersonation-with-wcf.md).  
   
 ## <a name="principalpermissionattribute"></a>PrincipalPermissionAttribute  
  <xref:System.Security.Permissions.PrincipalPermissionAttribute> Bir hizmet yöntemi için erişimi kısıtlamak için kullanılır. Öznitelik bir yönteme uygulandığında, bu belirli arayanın kimliği veya bir Windows grubu üyeliği talep için kullanılabilir veya [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] rol. İstemci bir X.509 sertifikası kullanılarak kimlik doğrulaması gerekiyorsa, konu adı ve sertifikanın parmak izi karakterlerinden oluşur birincil bir kimlik verilir.  
@@ -41,16 +27,16 @@ Erişimi ile birkaç şekilde denetleyebilirsiniz [!INCLUDE[indigo1](../../../..
  Bir özellik olan [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] üyelik sağlayıcısı'dır. Üyelik sağlayıcısı teknik bir erişim denetimi mekanizması olmamasına karşın, hizmetin uç noktasına erişebildiğinden olası kimlikleri kümesi sınırlayarak hizmetine erişimi denetleme sağlar. Üyelik özelliği site hesaplarını oluşturmak üzere kullanıcıların bir Web sitesinin kullanıcı adı/parola birleşimleri ile doldurulan bir veritabanı içerir. Üyelik sağlayıcısı kullanan bir hizmete erişmek için bir kullanıcı kendi kullanıcı adı ve parola ile oturum açmalısınız.  
   
 > [!NOTE]
->  Veritabanını kullanan ilk doldurmanız gerekir [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] önce özelliği bir [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] hizmeti, yetkilendirme amacıyla da kullanabilirsiniz.  
+>  Veritabanını kullanan ilk doldurmanız gerekir [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] bir WCF Hizmeti yetkilendirme amacıyla kullanmadan önce özellik.  
   
  Varolan bir üyelik veritabanı zaten varsa üyelik özelliğini de kullanabilirsiniz [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] Web sitesi ve aynı kullanıcı adları ve parolalar yetkili hizmetinizi aynı kullanıcıların kullanmasını istediğinizde.  
   
- Üyelik özelliğini kullanma hakkında daha fazla bilgi için bir [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] hizmet için bkz: [nasıl yapılır: ASP.NET üyelik sağlayıcıyı kullanacak](../../../../docs/framework/wcf/feature-details/how-to-use-the-aspnet-membership-provider.md).  
+ Bir WCF Hizmeti üyeliği özelliğini kullanma hakkında daha fazla bilgi için bkz: [nasıl yapılır: ASP.NET üyelik sağlayıcıyı kullanacak](../../../../docs/framework/wcf/feature-details/how-to-use-the-aspnet-membership-provider.md).  
   
 ## <a name="aspnet-role-provider"></a>ASP.NET rol sağlayıcısı  
- Başka bir özelliği olan [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] rolleri kullanarak yetkilendirmeyi yönetme yeteneği. [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] Rol sağlayıcısı kullanıcıları için roller oluşturmak için ve her kullanıcının bir rol veya rolleri atamak için bir geliştirici sağlar. Üyelik sağlayıcısı ile rollerini ve atamalarını bir veritabanında depolanır ve belirli bir uygulama tarafından sağlanan araçları kullanarak doldurulabilir [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] rol sağlayıcısı. Üyelik özelliğiyle olduğu gibi [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] geliştiriciler bilgileri veritabanında rolleri tarafından service Kullanıcıları yetkilendirmek için kullanabilirsiniz. Örneğin, rol sağlayıcısı ile birlikte kullanabileceklerini `PrincipalPermissionAttribute` erişim denetimi mekanizmasını yukarıda açıklanan.  
+ Başka bir özelliği olan [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] rolleri kullanarak yetkilendirmeyi yönetme yeteneği. [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] Rol sağlayıcısı kullanıcıları için roller oluşturmak için ve her kullanıcının bir rol veya rolleri atamak için bir geliştirici sağlar. Üyelik sağlayıcısı ile rollerini ve atamalarını bir veritabanında depolanır ve belirli bir uygulama tarafından sağlanan araçları kullanarak doldurulabilir [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] rol sağlayıcısı. Olarak üyelik özelliğiyle WCF geliştiriciler bilgileri veritabanında rolleri tarafından service Kullanıcıları yetkilendirmek için kullanabilirsiniz. Örneğin, rol sağlayıcısı ile birlikte kullanabileceklerini `PrincipalPermissionAttribute` erişim denetimi mekanizmasını yukarıda açıklanan.  
   
- Aynı zamanda [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] varolan varsa rol sağlayıcısı [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] rol sağlayıcı veritabanı ve kuralları ve kullanıcı atamalarını aynı kümesini kullanmak istiyorsanız, [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] hizmet.  
+ Aynı zamanda [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] varolan varsa rol sağlayıcısı [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] rol sağlayıcı veritabanı ve aynı dizi kuralları ve kullanıcı atamaları, WCF hizmeti kullanmak istiyorsanız.  
   
  Rol sağlayıcı özelliğini kullanma hakkında daha fazla bilgi için bkz: [nasıl yapılır: ASP.NET rol sağlayıcısını bir hizmetle kullanma](../../../../docs/framework/wcf/feature-details/how-to-use-the-aspnet-role-provider-with-a-service.md).  
   
@@ -59,7 +45,7 @@ Erişimi ile birkaç şekilde denetleyebilirsiniz [!INCLUDE[indigo1](../../../..
   
  AzMan de kullanabilirsiniz ve [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] zaten var olan bir AzMan yüklemesi erişiminiz ve AzMan/rol sağlayıcısı birleşimi özelliklerini kullanarak hizmet kullanıcılarınızın yetkilendirmek istediğiniz rol sağlayıcısı.  
   
- AzMan hakkında daha fazla bilgi ve [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] rol sağlayıcısı bkz [nasıl yapılır: ASP.NET 2.0 ile kullanım Yetkilendirme Yöneticisi (AzMan)](http://go.microsoft.com/fwlink/?LinkId=88951). AzMan ve rol sağlayıcısı için kullanma hakkında daha fazla bilgi için [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] Hizmetleri, bkz: [nasıl yapılır: ASP.NET Yetkilendirme Yöneticisi Rol sağlayıcısını bir hizmetle kullanma](../../../../docs/framework/wcf/feature-details/how-to-use-the-aspnet-authorization-manager-role-provider-with-a-service.md).  
+ AzMan hakkında daha fazla bilgi ve [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] rol sağlayıcısı bkz [nasıl yapılır: ASP.NET 2.0 ile kullanım Yetkilendirme Yöneticisi (AzMan)](http://go.microsoft.com/fwlink/?LinkId=88951). AzMan ve rol sağlayıcısı için WCF hizmetleri kullanma hakkında daha fazla bilgi için bkz: [nasıl yapılır: ASP.NET Yetkilendirme Yöneticisi Rol sağlayıcısını bir hizmetle kullanma](../../../../docs/framework/wcf/feature-details/how-to-use-the-aspnet-authorization-manager-role-provider-with-a-service.md).  
   
 ## <a name="identity-model"></a>Kimlik modeli  
  Kimlik modelinde, talepler ve ilkeleri istemcileri yetkilendirmek için yönetmenize olanak tanıyan API kümesidir. Kimlik modeliyle hizmete kendi kimliğini doğrulamak, talepleri ilkeleri kümesine hizmet için karşılaştırın ve erişim vermek veya reddetmek için kullanılan çağıran karşılaştırma üzerine dayalı kimlik bilgilerini içinde yer alan her talep inceleyebilirsiniz.  

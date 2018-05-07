@@ -1,21 +1,12 @@
 ---
-title: "Yansıma (C#) kullanarak özniteliklere erişme"
-ms.custom: 
+title: Yansıma (C#) kullanarak özniteliklere erişme
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-csharp
-ms.topic: article
 ms.assetid: dce3a696-4ceb-489a-b5e4-322a83052f18
-caps.latest.revision: "3"
-author: BillWagner
-ms.author: wiwagn
-ms.openlocfilehash: 162bdd6b968def391a2f3413596ee8c2a8b01cc3
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 05c051490dab5265309fd067dfb67f0ef7822541
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="accessing-attributes-by-using-reflection-c"></a>Yansıma (C#) kullanarak özniteliklere erişme
 Özel öznitelikler tanımlayın ve bunları kaynak kodunda yerleştirmek olgu ve bu bilgileri alma üzerinde çalışan herhangi bir şekilde olmadan az değerinin olacaktır. Yansıma kullanarak özel öznitelikler içeren tanımlandı bilgi alabilirsiniz. Anahtar yöntemi `GetCustomAttributes`, kaynak kodu özniteliklerinin çalışma zamanı eşdeğerleri olan nesneler dizisi döndürür. Bu yöntem, birden fazla aşırı yüklenmiş sürümlerini içerir. Daha fazla bilgi için bkz. <xref:System.Attribute>.  
@@ -34,7 +25,7 @@ Author anonymousAuthorObject = new Author("P. Ackerman");
 anonymousAuthorObject.version = 1.1;  
 ```  
   
- Bununla birlikte, kod kadar yürütülmez `SampleClass` öznitelikler için sorgulanır. Çağırma `GetCustomAttributes` üzerinde `SampleClass` neden olan bir `Author` nesnesi oluşturulur ve yukarıdaki olarak başlatıldı. Sınıfın diğer öznitelikleri varsa, diğer öznitelik nesneleri benzer şekilde oluşturulur. `GetCustomAttributes`ardından döndürür `Author` nesne ve bir dizi diğer öznitelik nesneleri. Bu dizi yineleme öznitelikleri her dizi öğesi türüne bağlı olarak uygulanan belirlemek ve öznitelik nesnelerden bilgi ayıklamak.  
+ Bununla birlikte, kod kadar yürütülmez `SampleClass` öznitelikler için sorgulanır. Çağırma `GetCustomAttributes` üzerinde `SampleClass` neden olan bir `Author` nesnesi oluşturulur ve yukarıdaki olarak başlatıldı. Sınıfın diğer öznitelikleri varsa, diğer öznitelik nesneleri benzer şekilde oluşturulur. `GetCustomAttributes` ardından döndürür `Author` nesne ve bir dizi diğer öznitelik nesneleri. Bu dizi yineleme öznitelikleri her dizi öğesi türüne bağlı olarak uygulanan belirlemek ve öznitelik nesnelerden bilgi ayıklamak.  
   
 ## <a name="example"></a>Örnek  
  Burada, tam bir örnek verilmiştir. Özel bir öznitelik tanımlı, birkaç varlıklara uygulanan ve yansıma alınır.  
@@ -124,8 +115,8 @@ class TestAuthorAttribute
 ## <a name="see-also"></a>Ayrıca Bkz.  
  <xref:System.Reflection>  
  <xref:System.Attribute>  
- [C# programlama kılavuzu](../../../../csharp/programming-guide/index.md)  
- [Özniteliklerde depolanan bilgileri alma](../../../../standard/attributes/retrieving-information-stored-in-attributes.md)  
+ [C# Programlama Kılavuzu](../../../../csharp/programming-guide/index.md)  
+ [Özniteliklerde Depolanan Bilgileri Alma](../../../../standard/attributes/retrieving-information-stored-in-attributes.md)  
  [Yansıma (C#)](../../../../csharp/programming-guide/concepts/reflection.md)  
  [Öznitelikler (C#)](../../../../csharp/programming-guide/concepts/attributes/index.md)  
  [Özel öznitelikler (C#) oluşturma](../../../../csharp/programming-guide/concepts/attributes/creating-custom-attributes.md)

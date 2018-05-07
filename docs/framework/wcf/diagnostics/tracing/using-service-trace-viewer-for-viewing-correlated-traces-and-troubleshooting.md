@@ -1,30 +1,18 @@
 ---
-title: "İlişkilendirilmiş İzlemeleri Görüntülemek ve Sorun Gidermek için Hizmet İzleme Görüntüleyicisini Kullanma "
-ms.custom: 
+title: 'İlişkilendirilmiş İzlemeleri Görüntülemek ve Sorun Gidermek için Hizmet İzleme Görüntüleyicisini Kullanma '
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 05d2321c-8acb-49d7-a6cd-8ef2220c6775
-caps.latest.revision: "22"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 13c862c8191a9bc312de743fc3ed99396c600f8f
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
-ms.translationtype: MT
+ms.openlocfilehash: bfc0d2c10bfdca253f2ce410a4cd38218b3f5cfe
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="using-service-trace-viewer-for-viewing-correlated-traces-and-troubleshooting"></a>İlişkilendirilmiş İzlemeleri Görüntülemek ve Sorun Gidermek için Hizmet İzleme Görüntüleyicisini Kullanma 
 Bu konu, izleme verilerinin biçimi açıklar ve uygulamanızda sorun giderme için hizmet izleme görüntüleyicisini kullanma yaklaşımlar görüntüleme.  
   
 ## <a name="using-the-service-trace-viewer-tool"></a>Hizmet izleme Görüntüleyicisi Aracı'nı kullanma  
- [!INCLUDE[indigo1](../../../../../includes/indigo1-md.md)] Hizmet izleme Görüntüleyicisi aracı tarafından üretilen tanılama izlemeleri ilişkilendirmenize yardımcı olan [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)] kök bulmak için dinleyicileri neden bir hata oluştu. Aracı kolayca görüntülemek, grup için bir yöntem sunar ve filtre izlemeleri tanılamak böylece onarın ve sorunları doğrulayın [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)] Hizmetleri. Bu aracı kullanmayla ilgili daha fazla bilgi için bkz: [hizmet izleme Görüntüleyicisi aracı (SvcTraceViewer.exe)](../../../../../docs/framework/wcf/service-trace-viewer-tool-svctraceviewer-exe.md).  
+ Windows Communication Foundation (WCF) hizmet izleme Görüntüleyicisi aracı tarafından üretilen tanılama izlemeleri ilişkilendirmenize yardımcı olan [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)] kök bulmak için dinleyicileri neden bir hata oluştu. Aracı kolayca görüntülemek, grup için bir yöntem sunar ve filtre izlemeleri tanılamak böylece onarın ve sorunları doğrulayın [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)] Hizmetleri. Bu aracı kullanmayla ilgili daha fazla bilgi için bkz: [hizmet izleme Görüntüleyicisi aracı (SvcTraceViewer.exe)](../../../../../docs/framework/wcf/service-trace-viewer-tool-svctraceviewer-exe.md).  
   
  Bu konuda çalıştırarak oluşturulan izlemeleri ekran görüntüleri içeren [izleme ve ileti günlüğe kaydetme](../../../../../docs/framework/wcf/samples/tracing-and-message-logging.md) kullanarak görüntülendiğinde örnek [hizmet izleme Görüntüleyicisi aracı (SvcTraceViewer.exe)](../../../../../docs/framework/wcf/service-trace-viewer-tool-svctraceviewer-exe.md). Bu konuda izleme içerik, etkinlikler ve bunların bağıntı anlama ve sorunlarını giderirken izlemeleri çok sayıda analiz etme gösterilir.  
   
@@ -146,7 +134,7 @@ WCF istemcisi etkinliklerini oluşturma zamanı (sol paneli) ve iç içe etkinli
   
  Bir etkinlik sol panelde seçtiğinizde iç içe etkinlik ve izlemelere üst Sağdaki panelde görebiliriz. Bu nedenle, bu bir sınırlı olduğu etkinliklerin listesini hiyerarşik görünümünü solda, seçilen üst aktivitesini temel alarak. Seçili işlem Eylem Ekle yapılan ilk istek olduğu için bu etkinliği güvenli oturum yukarı ayarlamak etkinlik (aktarımı için Aktarım geri) içerir ve işlenmesini ekleme eylemi için izler.  
   
- Biz çift işlem eylemi sol panelinde Ekle etkinliği tıklatın, istemci grafik gösterimi görebiliriz [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)] ilgili etkinlikleri Ekle. Sol taraftaki ilk etkinlik kök (0000), varsayılan etkinlik olduğu etkinliktir. [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)]ortam etkinlik dışı aktarımları. Bu tanımlanmazsa [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)] aktarımları 0000 dışında. Burada, ikinci etkinlik işlem eylem eklemek, 0 dışında aktarır. Daha sonra Kurulum güvenli oturum bakın.  
+ Biz çift işlem eylemi sol panelinde Ekle etkinliği tıklatın, istemci grafik gösterimi görebiliriz [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)] ilgili etkinlikleri Ekle. Sol taraftaki ilk etkinlik kök (0000), varsayılan etkinlik olduğu etkinliktir. [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)] ortam etkinlik dışı aktarımları. Bu tanımlanmazsa [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)] aktarımları 0000 dışında. Burada, ikinci etkinlik işlem eylem eklemek, 0 dışında aktarır. Daha sonra Kurulum güvenli oturum bakın.  
   
  ![İzleme Görüntüleyicisi'ni kullanarak](../../../../../docs/framework/wcf/diagnostics/tracing/media/e2etrace5.gif "e2eTrace5")  
 Grafik görünümü WCF istemci etkinliklerin: ortam etkinlik (burada 0), işlem eylem ve güvenli oturum yukarı ayarlayın  

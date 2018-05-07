@@ -1,10 +1,6 @@
 ---
-title: "Varsayılan klavye ve fare Windows Forms DataGridView denetiminde işleme"
+title: Varsayılan klavye ve fare Windows Forms DataGridView denetiminde işleme
 ms.date: 02/13/2018
-ms.prod: .net-framework
-ms.technology:
-- dotnet-winforms
-ms.topic: article
 helpviewer_keywords:
 - data grids [Windows Forms], mouse handling
 - DataGridView control [Windows Forms], navigation keys
@@ -14,16 +10,11 @@ helpviewer_keywords:
 - DataGridView control [Windows Forms], mouse handling
 - navigation keys [Windows Forms], DataGridView control
 ms.assetid: 4519b928-bfc8-4e8b-bb9c-b1e76a0ca552
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 29e8afaefd35951288a4d8f5e5df2e3b5fbc4356
-ms.sourcegitcommit: 973a12d1e6962cd9a9c263fbfaad040ec8267fe9
+ms.openlocfilehash: b0ed468fe7d38fbeda90d5347338bce14059b730
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/22/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="default-keyboard-and-mouse-handling-in-the-windows-forms-datagridview-control"></a>Varsayılan klavye ve fare Windows Forms DataGridView denetiminde işleme
 
@@ -52,7 +43,7 @@ Aşağıdaki tablolar ile kullanıcıların nasıl etkileşim kurabileceğine a�
 |CTRL + SHIFT + SEKME|Varsa <xref:System.Windows.Forms.DataGridView.StandardTab%2A> özellik değeri `false`, üst öğe kapsayıcısı sekme sırasını, önceki denetimi odağı taşır.<br /><br /> Varsa <xref:System.Windows.Forms.DataGridView.StandardTab%2A> özellik değeri `true`, önceki hücrenin geçerli satırda odağı taşır. Odağı satırın ilk hücreye ise, önceki satırdaki son hücreye odağı taşır. Odağı denetimi ilk hücresinde ise, üst öğe kapsayıcısı sekme sırasını, önceki denetimi odağı taşır.|  
 |CTRL + OK|Ok yönünü en uzak hücreye odağı taşır.|  
 |CTRL + HOME|Odağı denetimi ilk hücreye taşır.|  
-|CTRL+END|Odağı denetimi son hücreye taşır.|  
+|CTRL + END|Odağı denetimi son hücreye taşır.|  
 |CTRL + PAGE DOWN/YUKARI|PAGE DOWN veya PAGE UP aynıdır.|  
 |F2|Geçerli hücreyi hücre düzenleme moduna koyar <xref:System.Windows.Forms.DataGridView.EditMode%2A> özellik değeri <xref:System.Windows.Forms.DataGridViewEditMode.EditOnF2> veya <xref:System.Windows.Forms.DataGridViewEditMode.EditOnKeystrokeOrF2>.|
 |F3|Varsa geçerli sütun sıralar <xref:System.Windows.Forms.DataGridViewColumn.SortMode%2A?displayProperty=nameWithType> özellik değeri <xref:System.Windows.Forms.DataGridViewColumnSortMode.Automatic>. Geçerli sütun başlığını tıklatarak ile aynıdır. .NET Framework 4.7.2 sürümünden itibaren kullanılabilir. Bu özelliği etkinleştirmek için uygulamaları .NET Framework 4.7.2 veya sonraki sürümlerini hedefleyen veya açıkça AppContext anahtarları kullanılarak erişilebilirlik artışlarını opt gerekir.|  
@@ -64,7 +55,7 @@ Aşağıdaki tablolar ile kullanıcıların nasıl etkileşim kurabileceğine a�
 |GERİ AL|Bir hücre düzenleme ekleme noktasını önceki karakteri siler.|  
 |DELETE|Karakter, bir hücre düzenleme yaparken sonra ekleme noktasını siler.|  
 |CTRL + ENTER|Herhangi bir değişiklik odağı taşımadan geçerli hücreyi kaydeder. Ayrıca ile denetimi düzenleme veya sanal modunu destekleyen bir veri kaynağına bağlıysa geçerli satır yapılan değişiklikler uygulandıktan işlemeleri satır yürütme kapsam düzeyi.|  
-|CTRL+0|Girer bir <xref:System.DBNull.Value?displayProperty=nameWithType> hücre düzenlenebiliyorsa geçerli hücreye değer. Varsayılan olarak, görüntüleme değeri için bir <xref:System.DBNull> hücre değerdir değerini <xref:System.Windows.Forms.DataGridViewCellStyle.NullValue%2A> özelliği <xref:System.Windows.Forms.DataGridViewCellStyle> geçerli hücreyi için etkin.|  
+|CTRL + 0|Girer bir <xref:System.DBNull.Value?displayProperty=nameWithType> hücre düzenlenebiliyorsa geçerli hücreye değer. Varsayılan olarak, görüntüleme değeri için bir <xref:System.DBNull> hücre değerdir değerini <xref:System.Windows.Forms.DataGridViewCellStyle.NullValue%2A> özelliği <xref:System.Windows.Forms.DataGridViewCellStyle> geçerli hücreyi için etkin.|  
   
 ### <a name="selection-keys"></a>Seçim anahtarları
 

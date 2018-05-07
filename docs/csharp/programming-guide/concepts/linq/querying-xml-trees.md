@@ -1,21 +1,12 @@
 ---
-title: "Sorgulama XML ağaçları (C#)"
-ms.custom: 
+title: Sorgulama XML ağaçları (C#)
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-csharp
-ms.topic: article
 ms.assetid: 0913d81b-541a-4fd4-9cbf-7ec89fd817ea
-caps.latest.revision: "4"
-author: BillWagner
-ms.author: wiwagn
-ms.openlocfilehash: 66028510b57981879412a1c2a161652adde340bd
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 5d2e40da26f30a0ece570acf2fd25684d1cba40f
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="querying-xml-trees-c"></a>Sorgulama XML ağaçları (C#)
 Bu bölümde örnekleri [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] sorgular.  
@@ -36,4 +27,4 @@ Bu bölümde örnekleri [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] so
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
  [Programlama Kılavuzu (LINQ-XML) (C#)](../../../../csharp/programming-guide/concepts/linq/programming-guide-linq-to-xml.md)  
- [C# üzerinde LINQ ile çalışmaya başlama](../../../../csharp/programming-guide/concepts/linq/getting-started-with-linq.md)
+ [C#'de LINQ Kullanmaya Başlama](../../../../csharp/programming-guide/concepts/linq/getting-started-with-linq.md)

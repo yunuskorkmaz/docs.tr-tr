@@ -1,38 +1,24 @@
 ---
-title: "İstemcileri Genişletme"
-ms.custom: 
+title: İstemcileri Genişletme
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - proxy extensions [WCF]
 ms.assetid: 1328c61c-06e5-455f-9ebd-ceefb59d3867
-caps.latest.revision: 
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 2444488418b7647111cf4b89db0c41a8e66470d4
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
-ms.translationtype: MT
+ms.openlocfilehash: 7eea247602d24c545e0de5fa9df50e83aae8ed7f
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="extending-clients"></a>İstemcileri Genişletme
 Bir arama uygulamasında hizmet modeli katmanını giden iletilere uygulama kodundaki yöntem çağrılarına çevirme, temel alınan kanalları Ftp'den, geri dönüş değerleri ve out Parametreleri sonuçları çevirme sorumludur uygulama kodu ve sonuçları döndüren çağırana yedekleyin. Hizmet modeli uzantıları değiştirebilir veya yürütme veya iletişim davranışı ve istemci veya dağıtıcısı işlevi, özel davranışları, ileti ve parametre kişiler tarafından ele ve diğer genişletilebilirlik işlevleri içeren özellikler uygular.  
   
- Bu konuda nasıl kullanılacağını açıklar <xref:System.ServiceModel.Dispatcher.ClientRuntime> ve <xref:System.ServiceModel.Dispatcher.ClientOperation> sınıfları bir [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] varsayılan yürütme davranışını değiştirmek için istemci uygulaması bir [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] istemci veya müdahale iletileri, parametreleri değiştirin veya dönüş değerleri öncesinde veya sonraki gönderme veya kanal katmandan alınıyor. Hizmet çalışma zamanı genişletme hakkında daha fazla bilgi için bkz: [dağıtıcıları genişletme](../../../../docs/framework/wcf/extending/extending-dispatchers.md). Değiştirebilir ve istemci çalışma zamanına özelleştirme nesneleri eklemek davranışları hakkında daha fazla bilgi için bkz: [yapılandırma ve çalışma zamanını davranışlarla genişletme](../../../../docs/framework/wcf/extending/configuring-and-extending-the-runtime-with-behaviors.md).  
+ Bu konuda nasıl kullanılacağını açıklar <xref:System.ServiceModel.Dispatcher.ClientRuntime> ve <xref:System.ServiceModel.Dispatcher.ClientOperation> sınıfları varsayılan yürütme davranışını değiştirmek için bir Windows Communication Foundation (WCF) istemci uygulamasındaki bir [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] istemci müdahale veya iletileri, parametreleri değiştirin veya dönüş değerleri önce veya sonra gönderme veya kanal katmandan alınıyor. Hizmet çalışma zamanı genişletme hakkında daha fazla bilgi için bkz: [dağıtıcıları genişletme](../../../../docs/framework/wcf/extending/extending-dispatchers.md). Değiştirebilir ve istemci çalışma zamanına özelleştirme nesneleri eklemek davranışları hakkında daha fazla bilgi için bkz: [yapılandırma ve çalışma zamanını davranışlarla genişletme](../../../../docs/framework/wcf/extending/configuring-and-extending-the-runtime-with-behaviors.md).  
   
 ## <a name="clients"></a>İstemciler  
  Bir istemcide bir [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] istemci nesnesi veya istemci kanal giden iletiler ve gelen iletileri çağrı yapan uygulamaya döndürülen işlem sonuçları için yöntem çağrılarına dönüştürür. (İstemci türleri hakkında daha fazla bilgi için bkz: [WCF istemci mimarisi](../../../../docs/framework/wcf/feature-details/client-architecture.md).)  
   
- [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]istemci türlerini Bu uç nokta ve işlem düzeyinde işlevselliği işlemek çalışma zamanı türlerine sahip. Bir uygulama, bir işlem çağırdığında <xref:System.ServiceModel.Dispatcher.ClientOperation> giden nesneler iletiye çevirir, dinleyiciler işler, giden çağrı hedef sözleşmenin uyan ve Giden iletiye aktarır onaylar <xref:System.ServiceModel.Dispatcher.ClientRuntime>, olduğu sorumlu oluşturmak ve giden kanal (ve gelen kanalları çift yönlü hizmetler söz konusu olduğunda), fazladan giden ileti (üstbilgi değişikliği gibi) işleme işleme yönetmek için gelen ileti dinleyiciler her iki yönde işleme ve yönlendirme uygun istemci-tarafı çift yönlü çağrıları <xref:System.ServiceModel.Dispatcher.DispatchRuntime> nesnesi. Hem <xref:System.ServiceModel.Dispatcher.ClientOperation> ve <xref:System.ServiceModel.Dispatcher.ClientRuntime> (hataları dahil olmak üzere) iletiler istemciye döndürüldüğünde benzer hizmetleri sağlar.  
+ [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] istemci türlerini Bu uç nokta ve işlem düzeyinde işlevselliği işlemek çalışma zamanı türlerine sahip. Bir uygulama, bir işlem çağırdığında <xref:System.ServiceModel.Dispatcher.ClientOperation> giden nesneler iletiye çevirir, dinleyiciler işler, giden çağrı hedef sözleşmenin uyan ve Giden iletiye aktarır onaylar <xref:System.ServiceModel.Dispatcher.ClientRuntime>, olduğu sorumlu oluşturmak ve giden kanal (ve gelen kanalları çift yönlü hizmetler söz konusu olduğunda), fazladan giden ileti (üstbilgi değişikliği gibi) işleme işleme yönetmek için gelen ileti dinleyiciler her iki yönde işleme ve yönlendirme uygun istemci-tarafı çift yönlü çağrıları <xref:System.ServiceModel.Dispatcher.DispatchRuntime> nesnesi. Hem <xref:System.ServiceModel.Dispatcher.ClientOperation> ve <xref:System.ServiceModel.Dispatcher.ClientRuntime> (hataları dahil olmak üzere) iletiler istemciye döndürüldüğünde benzer hizmetleri sağlar.  
   
  Bu iki çalışma zamanı işlenmesini özelleştirmek için ana uzantısı sınıflardır [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] istemci nesneleri ve kanallar. <xref:System.ServiceModel.Dispatcher.ClientRuntime> Sınıfı müdahale ve sözleşmenin tüm iletileri üzerinden istemci yürütme genişletmek kullanıcıların sağlar. <xref:System.ServiceModel.Dispatcher.ClientOperation> Sınıfı müdahale ve belirli bir işlemi tüm iletiler için istemci yürütme genişletmek kullanıcıların sağlar.  
   

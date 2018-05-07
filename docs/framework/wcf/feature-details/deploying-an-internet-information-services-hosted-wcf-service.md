@@ -1,48 +1,34 @@
 ---
 title: Internet Information Services Tarafından Barındırılan Bir WCF Hizmeti Dağıtma
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 ms.assetid: 04ebd329-3fbd-44c3-b3ab-1de3517e27d7
-caps.latest.revision: 30
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 49ee6091b18dfcf2a5b46c173490b317fe770554
-ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
+ms.openlocfilehash: 59f18d8487deb52f5ecb5b5c814ec9bdbc74e2cc
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/30/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="deploying-an-internet-information-services-hosted-wcf-service"></a>Internet Information Services Tarafından Barındırılan Bir WCF Hizmeti Dağıtma
-Geliştirme ve dağıtma bir [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] Internet Information Services (IIS) barındırılan hizmeti, aşağıdaki görevleri içerir:  
+Geliştirme ve Internet Information Services (IIS) barındırılan bir Windows Communication Foundation (WCF) hizmetini dağıtma, aşağıdaki görevleri içerir:  
   
--   Sağlamak bu IIS, ASP.NET, [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]ve [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] etkinleştirme bileşen doğru yüklendiğinden ve kayıtlı.  
+-   IIS, ASP.NET, WCF ve WCF etkinleştirme bileşeni düzgün yüklü ve kayıtlı olan emin olun.  
   
 -   Yeni bir IIS uygulaması oluşturun veya varolan bir yeniden [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] uygulama.  
   
--   İçin bir .svc dosyası oluşturmak [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] hizmet.  
+-   WCF hizmeti için .svc dosyası oluşturun.  
   
 -   Hizmet uygulaması için IIS uygulama dağıtın.  
   
--   Yapılandırma [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] hizmet.  
+-   WCF hizmetini yapılandırın.  
   
- Bir IIS tarafından barındırılan oluşturma ayrıntılı kılavuz [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] hizmet için bkz: [nasıl yapılır: IIS'de WCF Hizmeti barındırma](../../../../docs/framework/wcf/feature-details/how-to-host-a-wcf-service-in-iis.md).  
+ IIS barındırılan bir WCF hizmeti oluşturma ayrıntılı bilgi için bkz [nasıl yapılır: IIS'de WCF Hizmeti barındırma](../../../../docs/framework/wcf/feature-details/how-to-host-a-wcf-service-in-iis.md).  
   
 ## <a name="ensure-that-iis-aspnet-and-wcf-are-correctly-installed-and-registered"></a>IIS, ASP.NET ve WCF doğru olduğundan emin olun yüklü ve kayıtlı  
- [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)], IIS ve ASP.NET yüklü olmalıdır için IIS tarafından barındırılan [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] düzgün çalışması için hizmetleri. Yükleme yordamlarına [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] (bir parçası olarak [!INCLUDE[vstecwinfx](../../../../includes/vstecwinfx-md.md)]), ASP.NET ve IIS kullanılan işletim sistemi sürümüne bağlı olarak farklılık gösterir. Yükleme hakkında daha fazla bilgi için [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] ve [!INCLUDE[vstecwinfx](../../../../includes/vstecwinfx-md.md)], bkz: [Microsoft .NET Framework 4 Web yükleyicisi](http://go.microsoft.com/fwlink/?LinkId=201185). IIS yüklemek için yönergeleri bulunabilir [IIS yükleme](http://go.microsoft.com/fwlink/?LinkId=201188).  
+ IIS barındırılan WCF hizmetleri düzgün çalışması, WCF, IIS ve ASP.NET yüklü olmalıdır. WCF yüklemek için yordamları (bir parçası olarak [!INCLUDE[vstecwinfx](../../../../includes/vstecwinfx-md.md)]), ASP.NET ve IIS kullanılan işletim sistemi sürümüne bağlı olarak farklılık gösterir. WCF yükleme hakkında daha fazla bilgi için ve [!INCLUDE[vstecwinfx](../../../../includes/vstecwinfx-md.md)], bkz: [Microsoft .NET Framework 4 Web yükleyicisi](http://go.microsoft.com/fwlink/?LinkId=201185). IIS yüklemek için yönergeleri bulunabilir [IIS yükleme](http://go.microsoft.com/fwlink/?LinkId=201188).  
   
- Yükleme işlemi [!INCLUDE[vstecwinfx](../../../../includes/vstecwinfx-md.md)] otomatik olarak kaydeder [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] IIS makinede zaten varsa, IIS ile. Sonra IIS yüklü değilse [!INCLUDE[vstecwinfx](../../../../includes/vstecwinfx-md.md)], ek bir adım kaydetmek için gerekli [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] IIS ile ve [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)]. Aşağıdaki gibi işletim sistemine bağlı olarak bunu yapabilirsiniz:  
+ Yükleme işlemi [!INCLUDE[vstecwinfx](../../../../includes/vstecwinfx-md.md)] IIS makinede zaten varsa WCF IIS ile otomatik olarak kaydeder. Sonra IIS yüklü değilse [!INCLUDE[vstecwinfx](../../../../includes/vstecwinfx-md.md)], WCF IIS ile kaydetmek için ek bir adım gereklidir ve [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)]. Aşağıdaki gibi işletim sistemine bağlı olarak bunu yapabilirsiniz:  
   
--   [!INCLUDE[wxpsp2](../../../../includes/wxpsp2-md.md)], Windows 7 ve [!INCLUDE[ws2003](../../../../includes/ws2003-md.md)]: kullanmak [ServiceModel Kayıt Aracı (ServiceModelReg.exe)](../../../../docs/framework/wcf/servicemodelreg-exe.md) kaydetmek için aracı [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] IIS ile: Bu aracı kullanmak için yazın **ServiceModelReg.exe /i /x** içinde Visual Studio komut istemi. Bu komut istemi Başlat düğmesine tıkladığınızda, seçerek açabilirsiniz **tüm programlar**, **Microsoft Visual Studio 2012**, **Visual Studio Araçları**, ve  **Visual Studio komut istemi**  
+-   [!INCLUDE[wxpsp2](../../../../includes/wxpsp2-md.md)], Windows 7 ve [!INCLUDE[ws2003](../../../../includes/ws2003-md.md)]: kullanmak [ServiceModel Kayıt Aracı (ServiceModelReg.exe)](../../../../docs/framework/wcf/servicemodelreg-exe.md) aracı WCF IIS ile kaydetmek için: Bu aracı kullanmak için şunu yazın **ServiceModelReg.exe /i /x** Visual Studio'da Komut İstemi. Bu komut istemi Başlat düğmesine tıkladığınızda, seçerek açabilirsiniz **tüm programlar**, **Microsoft Visual Studio 2012**, **Visual Studio Araçları**, ve  **Visual Studio komut istemi**  
   
 -   [!INCLUDE[wv](../../../../includes/wv-md.md)]: Windows Communication Foundation etkinleştirme bileşenleri alt bileşeni yüklemek [!INCLUDE[vstecwinfx](../../../../includes/vstecwinfx-md.md)]. Bu, Denetim Masası'nda yapmak için **Program Ekle veya Kaldır** ve ardından **Ekle\/Windows bileşenleri Kaldır**. Bu etkinleştirir **Windows Bileşen Sihirbazı**.  
   
@@ -51,12 +37,12 @@ Geliştirme ve dağıtma bir [!INCLUDE[indigo1](../../../../includes/indigo1-md.
  Son olarak ASP.NET, .NET Framework sürüm 4 kullanmak için yapılandırıldığını doğrulamanız gerekir. – İ ASPNET_Regiis Aracı'nı çalıştırarak bunu seçeneği. Daha fazla bilgi için bkz: [ASP.NET IIS Kayıt Aracı](http://go.microsoft.com/fwlink/?LinkId=201186)  
   
 ## <a name="create-a-new-iis-application-or-reuse-an-existing-aspnet-application"></a>Yeni bir IIS uygulama oluşturmak veya mevcut bir ASP.NET uygulamasını kullanın  
- IIS barındırılan [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] Hizmetleri, bir IIS uygulamasının içinde bulunmalıdır. Ana bilgisayar için yeni bir IIS uygulama oluşturabileceğiniz [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] özel olarak Hizmetleri. Alternatif olarak, dağıtabileceğiniz bir [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] mevcut uygulamaya zaten barındırma hizmet [!INCLUDE[vstecasplong](../../../../includes/vstecasplong-md.md)] içerik (örneğin, .aspx sayfaları ve ASP.NET Web Hizmetleri [ASMX]). Bu seçenekler hakkında daha fazla bilgi için bkz: "barındırma WCF yan yana ASP.NET ile" ve "ASP.NET uyumluluk modunda barındırma WCF hizmetleri" bölümler [WCF hizmetleri ve ASP.NET](../../../../docs/framework/wcf/feature-details/wcf-services-and-aspnet.md).  
+ IIS barındırılan WCF hizmetleri bir IIS uygulamasının içinde bulunmalıdır. Yeni bir IIS uygulama WCF hizmetlerini barındırmak için özel olarak oluşturabilirsiniz. Alternatif olarak, bir WCF hizmeti zaten barındırma mevcut bir uygulamasına dağıtabilirsiniz [!INCLUDE[vstecasplong](../../../../includes/vstecasplong-md.md)] içerik (örneğin, .aspx sayfaları ve ASP.NET Web Hizmetleri [ASMX]). Bu seçenekler hakkında daha fazla bilgi için bkz: "barındırma WCF yan yana ASP.NET ile" ve "ASP.NET uyumluluk modunda barındırma WCF hizmetleri" bölümler [WCF hizmetleri ve ASP.NET](../../../../docs/framework/wcf/feature-details/wcf-services-and-aspnet.md).  
   
  Unutmayın [!INCLUDE[iis601](../../../../includes/iis601-md.md)] ve sonraki sürümleri düzenli aralıklarla yalıtılmış bir nesne odaklı programlama uygulamayı yeniden başlatın. Varsayılan değer 1740 dakikadır. Desteklenen en yüksek değer 71,582 dakikadır. Bu yeniden başlatma devre dışı bırakılabilir. Bu özellik hakkında daha fazla bilgi için bkz: [PeriodicRestartTime](http://go.microsoft.com/fwlink/?LinkId=109968).  
   
 ## <a name="create-an-svc-file-for-the-wcf-service"></a>Bir .svc dosyası için WCF hizmeti oluşturma  
- [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] IIS barındırılan hizmetleri özel içerik dosyalarını (.svc dosyalarını) IIS uygulama olarak temsil edilir. Bu model, ASMX sayfaları içinde bir IIS uygulama .asmx dosyalarını olarak temsil edilir şekilde benzerdir. .Svc dosyasını içeren bir [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]-özel işleme yönergesi ([@ServiceHost](../../../../docs/framework/configure-apps/file-schema/wcf-directive/servicehost.md)) izin veren [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] barındırılan hizmetler gelen iletilere yanıt olarak etkinleştirmek için barındırma altyapı. En yaygın sözdizimi .svc dosyası için aşağıdaki deyimi şeklindedir.  
+ IIS barındırılan WCF hizmetleri özel içerik dosyalarını (.svc dosyalarını) IIS uygulama olarak temsil edilir. Bu model, ASMX sayfaları içinde bir IIS uygulama .asmx dosyalarını olarak temsil edilir şekilde benzerdir. WCF özel işleme yönergesi .svc dosyasını içeren ([@ServiceHost](../../../../docs/framework/configure-apps/file-schema/wcf-directive/servicehost.md)) barındırılan hizmetler gelen iletilere yanıt olarak etkinleştirmek altyapı barındırma WCF sağlar. En yaygın sözdizimi .svc dosyası için aşağıdaki deyimi şeklindedir.  
   
 ```  
 <% @ServiceHost Service="MyNamespace.MyServiceImplementationTypeName" %>  
@@ -68,12 +54,12 @@ Geliştirme ve dağıtma bir [!INCLUDE[indigo1](../../../../includes/indigo1-md.
 new ServiceHost( typeof( MyNamespace.MyServiceImplementationTypeName ) );  
 ```  
   
- Hizmet için temel adres listesi oluşturma gibi ek barındırma yapılandırma de yapılabilir. Özel bir de kullanabilirsiniz <xref:System.ServiceModel.Activation.ServiceHostFactory> yönergesi barındırma özel çözümler ile kullanılmak üzere genişletmek için. Barındıran IIS uygulamalar [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] Hizmetleri oluşturulmasını ve yaşam süresini yönetmekten sorumlu olmayan <xref:System.ServiceModel.ServiceHost> örnekleri. Yönetilen [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] oluşturur gerekli altyapı barındırma <xref:System.ServiceModel.ServiceHost> .svc dosya için yapılan ilk istek alındığında dinamik olarak örneği. Ya da açıkça kod veya uygulamanın ne zaman dönüştürülmeden kapatılana kadar örnek serbest bırakılmaz.  
+ Hizmet için temel adres listesi oluşturma gibi ek barındırma yapılandırma de yapılabilir. Özel bir de kullanabilirsiniz <xref:System.ServiceModel.Activation.ServiceHostFactory> yönergesi barındırma özel çözümler ile kullanılmak üzere genişletmek için. WCF hizmetleri barındıran IIS uygulamaları oluşturulmasını ve yaşam süresini yönetmekten sorumlu olmayan <xref:System.ServiceModel.ServiceHost> örnekleri. Gerekli yönetilen WCF barındırma altyapıyı oluşturur <xref:System.ServiceModel.ServiceHost> .svc dosya için yapılan ilk istek alındığında dinamik olarak örneği. Ya da açıkça kod veya uygulamanın ne zaman dönüştürülmeden kapatılana kadar örnek serbest bırakılmaz.  
   
  .Svc dosyalarını sözdizimi hakkında daha fazla bilgi için bkz: [ @ServiceHost ](../../../../docs/framework/configure-apps/file-schema/wcf-directive/servicehost.md).  
   
 ## <a name="deploy-the-service-implementation-to-the-iis-application"></a>Hizmet uygulaması için IIS uygulama dağıtma  
- [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] IIS barındırılan hizmetleri aynı dinamik derleme model olarak kullanmak [!INCLUDE[vstecasplong](../../../../includes/vstecasplong-md.md)]. İle olarak yalnızca [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)], uygulama kodunu dağıtabilirsiniz IIS tarafından barındırılan [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] çeşitli konumlara çeşitli şekillerde gibi hizmetleri:  
+ IIS barındırılan WCF hizmetleri aynı dinamik derleme model olarak kullanmak [!INCLUDE[vstecasplong](../../../../includes/vstecasplong-md.md)]. İle olarak yalnızca [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)], IIS barındırılan WCF hizmetleri çeşitli konumlara çeşitli şekillerde uygulama kodunu gibi dağıtın:  
   
 -   Genel Derleme Önbelleği (GAC) veya uygulamanın \bin dizinine önceden derlenmiş .dll dosyasını yer gibi. Sınıf kitaplığı yeni bir sürümü dağıtılana kadar önceden derlenmiş ikili dosyaları güncelleştirilmez.  
   
@@ -84,14 +70,14 @@ new ServiceHost( typeof( MyNamespace.MyServiceImplementationTypeName ) );
  Hakkında daha fazla bilgi için [!INCLUDE[vstecasplong](../../../../includes/vstecasplong-md.md)] derleme modeli bkz [ASP.NET derleme genel bakış](http://go.microsoft.com/fwlink/?LinkId=94773).  
   
 ## <a name="configure-the-wcf-service"></a>WCF hizmetini yapılandırma  
- IIS barındırılan [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] Hizmetleri uygulamaları Web.config dosyasında yapılandırmalarını depolar. IIS barındırılan hizmetleri kullanmak aynı yapılandırma öğeleri ve söz dizimine [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] IIS dışında barındırılan hizmetleri. Ancak, aşağıdaki kısıtlamalar IIS barındırma ortamı benzersiz şunlardır:  
+ IIS barındırılan WCF hizmetleri uygulamaları Web.config dosyasında yapılandırmalarını depolar. IIS barındırılan hizmetleri dışında IIS barındırılan WCF hizmetleri olarak aynı yapılandırma öğeleri ve sözdizimini kullanın. Ancak, aşağıdaki kısıtlamalar IIS barındırma ortamı benzersiz şunlardır:  
   
 -   IIS barındırılan hizmetler için temel adres.  
   
--   Barındırma uygulamaları [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] IIS dışında hizmetlerini barındıran bir dizi temel adres için URI geçirerek services temel adresini denetleyebilir <xref:System.ServiceModel.ServiceHost> Oluşturucusu veya sağlayarak bir [ \<ana bilgisayar >](../../../../docs/framework/configure-apps/file-schema/wcf/host.md) hizmetin yapılandırma öğesi. IIS barındırılan hizmetleri, kendi taban adresi denetleme olanağı yoktur; IIS barındırılan hizmetin taban adresi .svc dosya adresidir.  
+-   IIS dışında barındırma WCF hizmetlerini barındırmak temel bir dizi geçirerek services temel adresini denetleyebilir uygulamalar için URI adresi <xref:System.ServiceModel.ServiceHost> Oluşturucusu veya sağlayarak bir [ \<ana bilgisayar >](../../../../docs/framework/configure-apps/file-schema/wcf/host.md) öğesinde hizmet yapılandırmasının. IIS barındırılan hizmetleri, kendi taban adresi denetleme olanağı yoktur; IIS barındırılan hizmetin taban adresi .svc dosya adresidir.  
   
 ### <a name="endpoint-addresses-for-iis-hosted-services"></a>IIS barındırılan hizmetleri için uç nokta adresleri  
- IIS içinde barındırıldığında, uç nokta adresleri her zaman hizmeti temsil .svc dosya adres göreli olarak kabul edilir. Örneğin, taban adresini bir [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] hizmeti http://localhost/Application1/MyService.svc şu uç nokta yapılandırması ile.  
+ IIS içinde barındırıldığında, uç nokta adresleri her zaman hizmeti temsil .svc dosya adres göreli olarak kabul edilir. Örneğin, bir WCF Hizmeti temel adresi ise http://localhost/Application1/MyService.svc şu uç nokta yapılandırması ile.  
   
 ```xml  
 <endpoint address="anotherEndpoint" .../>  
@@ -108,12 +94,12 @@ new ServiceHost( typeof( MyNamespace.MyServiceImplementationTypeName ) );
  Ayrıca, IIS tarafından barındırılan hizmet uç noktaları için her zaman göreli uç nokta adresleri kullanmanız gerekir. Tam uç noktası adresi (örneğin, http://localhost/MyService.svc) uç nokta adresi IIS bitiş noktası gösterme hizmeti barındıran uygulamasını işaret etmiyorsa biri hizmet dağıtımı hatalara yol açabilir. Barındırılan hizmetleri göreli uç nokta adresleri kullanarak, bu olası çakışmaları ortadan kaldırır.  
   
 ### <a name="available-transports"></a>Kullanılabilir taşımalar  
- [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] IIS 5.1, barındırılan hizmetleri ve [!INCLUDE[iis601](../../../../includes/iis601-md.md)] HTTP tabanlı iletişim kullanmak için kısıtlanır. Bu IIS platformlarda HTTP olmayan bağlama kullanmak için bir barındırılan hizmet yapılandırma hatayla hizmeti etkinleştirme sırasında sonuçlanır. İçin [!INCLUDE[iisver](../../../../includes/iisver-md.md)], desteklenen aktarmalar HTTP Net.TCP, Net.Pipe, Net.MSMQ ve msmq.formatname için geriye doğru uyumluluk mevcut MSMQ uygulamalarla yer alır.  
+ IIS 5.1, barındırılan WCF hizmetleri ve [!INCLUDE[iis601](../../../../includes/iis601-md.md)] HTTP tabanlı iletişim kullanmak için kısıtlanır. Bu IIS platformlarda HTTP olmayan bağlama kullanmak için bir barındırılan hizmet yapılandırma hatayla hizmeti etkinleştirme sırasında sonuçlanır. İçin [!INCLUDE[iisver](../../../../includes/iisver-md.md)], desteklenen aktarmalar HTTP Net.TCP, Net.Pipe, Net.MSMQ ve msmq.formatname için geriye doğru uyumluluk mevcut MSMQ uygulamalarla yer alır.  
   
 ### <a name="http-transport-security"></a>HTTP Taşıma Güvenliği  
- IIS barındırılan [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] Hizmetleri HTTP kullanan yapabilir hizmeti içeren IIS sanal dizininde desteklediği sürece aktarım güvenliği (örneğin, HTTPS ve HTTP kimlik doğrulama şemasını temel, Özet ve Windows tümleşik kimlik doğrulaması gibi) Bu ayarlar. HTTP taşıma güvenliği ayarları üzerinde barındırılan bir uç noktanın bağlama taşıma güvenlik ayarları içerdiği IIS sanal dizininde eşleşmelidir.  
+ IIS barındırılan WCF hizmetleri HTTP kullanmak yapabilir hizmeti içeren IIS sanal dizininde olanlar desteklediği sürece aktarım güvenliği (örneğin, HTTPS ve HTTP kimlik doğrulama şemasını temel, Özet ve Windows tümleşik kimlik doğrulaması gibi) Ayarlar. HTTP taşıma güvenliği ayarları üzerinde barındırılan bir uç noktanın bağlama taşıma güvenlik ayarları içerdiği IIS sanal dizininde eşleşmelidir.  
   
- Örneğin, bir [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] HTTP digest kimlik doğrulaması kullanmak üzere yapılandırılmış uç noktası, HTTP digest kimlik doğrulaması izin vermek için yapılandırılmış bir IIS sanal dizininde bulunmalıdır. IIS ayarları eşleşmeyen birleşimlerini ve [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] uç noktası ayarları hizmeti etkinleştirme sırasında bir hata sonuçlanır.  
+ Örneğin, HTTP digest kimlik doğrulaması kullanmak üzere yapılandırılmış bir WCF uç noktası, aynı zamanda HTTP digest kimlik doğrulaması izin vermek için yapılandırılmış bir IIS sanal dizininde bulunması gerekir. IIS ve WCF Bitiş noktası ayarlarını eşleşmeyen birleşimlerini hizmeti etkinleştirme sırasında hataya neden.  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
  [Internet Information Services'te Barındırma](../../../../docs/framework/wcf/feature-details/hosting-in-internet-information-services.md)  

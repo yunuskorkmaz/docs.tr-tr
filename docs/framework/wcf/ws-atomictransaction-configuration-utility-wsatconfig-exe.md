@@ -1,24 +1,12 @@
 ---
-title: "WS-AtomicTransaction Yapılandırma Yardımcı Programı (wsatConfig.exe)"
-ms.custom: 
+title: WS-AtomicTransaction Yapılandırma Yardımcı Programı (wsatConfig.exe)
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 1c56cf98-3963-46d5-a4e1-482deae58c58
-caps.latest.revision: "14"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: adb44bfee98d01594c9babcf19e19fbf11ba3878
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: ef2f34a6700d72c01977ea449041669a88c35e6f
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="ws-atomictransaction-configuration-utility-wsatconfigexe"></a>WS-AtomicTransaction Yapılandırma Yardımcı Programı (wsatConfig.exe)
 WS-AtomicTransaction yapılandırma yardımcı programı'nı temel WS-AtomicTransaction destek ayarlarını yapılandırmak için kullanılır.  
@@ -46,16 +34,16 @@ wsatConfig [Options]
 |Seçenekler|Açıklama|  
 |-------------|-----------------|  
 |-hesapları:\<hesabı >|WS-AtomicTransaction katılabilir hesapları virgülle ayrılmış listesini belirtir. Bu hesapları geçerliliğini işaretlenmemiştir.|  
-|-accountsCerts:\<Flash > &#124; " Issuer\SubjectName">|WS-AtomicTransaction katılabilir sertifikaları virgülle ayrılmış bir listesini belirtir. Sertifika parmak izi veya Issuer\SubjectName çifti tarafından belirtilir. Boş ise, konu adı için {EMPTY} kullanın.|  
-|-endpointCert: < makine &#124; \<Flash > &#124; " Issuer\SubjectName">|Makine sertifikası veya başka bir yerel uç nokta sertifika parmak izi ya da Issuer\SubjectName çifti tarafından belirtilen kullanır. Boşsa konu adı için {EMPTY} kullanır.|  
+|-accountsCerts:\<Flash >&#124;"Issuer\SubjectName" >|WS-AtomicTransaction katılabilir sertifikaları virgülle ayrılmış bir listesini belirtir. Sertifika parmak izi veya Issuer\SubjectName çifti tarafından belirtilir. Boş ise, konu adı için {EMPTY} kullanın.|  
+|-endpointCert: < makine&#124;\<Flash >&#124;"Issuer\SubjectName" >|Makine sertifikası veya başka bir yerel uç nokta sertifika parmak izi ya da Issuer\SubjectName çifti tarafından belirtilen kullanır. Boşsa konu adı için {EMPTY} kullanır.|  
 |-maxTimeout:\<sn >|En uzun zaman aşımı saniye cinsinden belirtir. Geçerli değerler 0 ile 3600 arasındadır.|  
-|-Ağ:\<etkinleştir &#124; devre dışı bırakma >|Etkinleştirir veya WS-AtomicTransaction ağ desteğini devre dışı bırakır.|  
+|-Ağ:\<etkinleştirmek&#124;devre dışı bırakma >|Etkinleştirir veya WS-AtomicTransaction ağ desteğini devre dışı bırakır.|  
 |-bağlantı noktası:\<portNum >|WS-AtomicTransaction için HTTPS bağlantı noktasını ayarlar.<br /><br /> Bu aracı çalıştırmadan önce güvenlik duvarı zaten etkinleştirdiyseniz, bağlantı noktası özel durum listesinde otomatik olarak kaydedilir. Bu aracı çalıştırmadan önce güvenlik duvarı devre dışıysa, ek bir şey Güvenlik Duvarı'nı ilgili olarak yapılandırılır.<br /><br /> WS-AT yapılandırdıktan sonra Güvenlik Duvarı'nı etkinleştirirseniz, bu aracı yeniden çalıştırın ve bu parametresini kullanarak bağlantı noktası numarası girmeniz gerekir. Yapılandırdıktan sonra Güvenlik Duvarı'nı devre dışı bırakırsanız, WS-AT ek girişi olmadan çalışmaya devam eder.|  
 |-zaman aşımı:\<sn >|Varsayılan zaman aşımı saniye cinsinden belirtir. Geçerli değerler 1 ile 3600 ' dir.|  
-|-traceActivity:\<etkinleştir &#124; devre dışı bırakma >|Etkinleştirir veya etkinlik olaylarını izlemeyi devre dışı bırakır.|  
-|-traceLevel:\<devre dışı &#124; Hata &#124; Kritik &#124; Uyarı &#124; bilgileri &#124; Ayrıntılı &#124; Tüm >}|İzleme düzeyini belirtir.|  
-|-TracePII:\<etkinleştir &#124; devre dışı bırakma >|Etkinleştirir veya kişisel olarak tanımlanabilen bilgilere izlemeyi devre dışı bırakır.|  
-|-traceProp:\<etkinleştir &#124; devre dışı bırakma >|Etkinleştirir veya yayma olaylarını izlemeyi devre dışı bırakır.|  
+|-traceActivity:\<etkinleştirmek&#124;devre dışı bırakma >|Etkinleştirir veya etkinlik olaylarını izlemeyi devre dışı bırakır.|  
+|-traceLevel:\<kapalı&#124;hata&#124;kritik&#124;uyarı&#124;bilgi&#124; ayrıntılı&#124;tüm >}|İzleme düzeyini belirtir.|  
+|-TracePII:\<etkinleştirmek&#124;devre dışı bırakma >|Etkinleştirir veya kişisel olarak tanımlanabilen bilgilere izlemeyi devre dışı bırakır.|  
+|-traceProp:\<etkinleştirmek&#124;devre dışı bırakma >|Etkinleştirir veya yayma olaylarını izlemeyi devre dışı bırakır.|  
 |-Yeniden Başlat|Değişiklikler hemen etkinleştirmeye MSDTC yeniden başlatır. Bu belirtilmezse MSDTC yeniden başlatıldığında değişiklikleri etkili olur.|  
 |-Göster|Geçerli WS-AtomicTransaction Protokolü ayarlarını görüntüler.|  
 |-virtualServer:\<virtualServer >|DTC kaynak küme adını belirtir.|  

@@ -1,28 +1,14 @@
 ---
 title: DataGridView Denetimi Mimarisi (Windows Forms)
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-winforms
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - DataGridView control [Windows Forms], architecture
 ms.assetid: 1c6cabf0-02ee-4bbc-9574-b54bb7f5b19e
-caps.latest.revision: 
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 3b3e51b87cdd766adcc10aa3f682647b28fbbe4d
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: a9fc1707b1691266d1844c411a08e7e8f35514ce
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="datagridview-control-architecture-windows-forms"></a>DataGridView Denetimi Mimarisi (Windows Forms)
 <xref:System.Windows.Forms.DataGridView> Denetim ve ilişkili sınıfları görüntüleme ve tablo veri düzenlemek için esnek ve Genişletilebilir bir sistem olacak şekilde tasarlanmıştır. Bu sınıfların tüm bulunan <xref:System.Windows.Forms?displayProperty=nameWithType> ad alanı ve tüm adlı "DataGridView" öneki.  
@@ -67,9 +53,9 @@ DataGridViewElement nesne modeli
  ![DataGridViewCell nesne modeli](../../../../docs/framework/winforms/controls/media/datagridviewcell.gif "DataGridViewCell")  
 DataGridViewCell nesne modeli  
   
- <xref:System.Windows.Forms.DataGridViewCell> Türüdür kendisinden türetilen tüm hücre türleri Özet temel sınıf. <xref:System.Windows.Forms.DataGridViewCell>ve türetilmiş türlerini Windows Forms denetimleri, ancak bazı ana bilgisayar Windows Forms denetimleri olup olmadığı. Bir hücre tarafından desteklenen herhangi bir düzenleme işlevsellik genellikle barındırılan denetim tarafından işlenir.  
+ <xref:System.Windows.Forms.DataGridViewCell> Türüdür kendisinden türetilen tüm hücre türleri Özet temel sınıf. <xref:System.Windows.Forms.DataGridViewCell> ve türetilmiş türlerini Windows Forms denetimleri, ancak bazı ana bilgisayar Windows Forms denetimleri olup olmadığı. Bir hücre tarafından desteklenen herhangi bir düzenleme işlevsellik genellikle barındırılan denetim tarafından işlenir.  
   
- <xref:System.Windows.Forms.DataGridViewCell>Windows Forms denetimleri gibi nesneleri kendi Görünüm ve boyama özellikleri aynı şekilde kontrol etmez. Bunun yerine, <xref:System.Windows.Forms.DataGridView> görünümünü için sorumlu kendi <xref:System.Windows.Forms.DataGridViewCell> nesneleri. İle etkileşim kurarak görünümünü ve davranışını hücrelerin önemli ölçüde etkileyebilir <xref:System.Windows.Forms.DataGridView> denetimin özellikleri ve olayları. Özellikleri dışında olan özelleştirmeler için özel gereksinimleri olduğunda <xref:System.Windows.Forms.DataGridView> denetim, türetilen kendi sınıfı uygulayabilirsiniz <xref:System.Windows.Forms.DataGridViewCell> ya da alt sınıflarından biri.  
+ <xref:System.Windows.Forms.DataGridViewCell> Windows Forms denetimleri gibi nesneleri kendi Görünüm ve boyama özellikleri aynı şekilde kontrol etmez. Bunun yerine, <xref:System.Windows.Forms.DataGridView> görünümünü için sorumlu kendi <xref:System.Windows.Forms.DataGridViewCell> nesneleri. İle etkileşim kurarak görünümünü ve davranışını hücrelerin önemli ölçüde etkileyebilir <xref:System.Windows.Forms.DataGridView> denetimin özellikleri ve olayları. Özellikleri dışında olan özelleştirmeler için özel gereksinimleri olduğunda <xref:System.Windows.Forms.DataGridView> denetim, türetilen kendi sınıfı uygulayabilirsiniz <xref:System.Windows.Forms.DataGridViewCell> ya da alt sınıflarından biri.  
   
  Aşağıdaki liste öğesinden türetilmiş sınıfları gösterir <xref:System.Windows.Forms.DataGridViewCell>:  
   

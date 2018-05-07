@@ -1,21 +1,14 @@
 ---
-title: "Temsilcileri Kullanma (C# Programlama Kılavuzu)"
+title: Temsilcileri Kullanma (C# Programlama Kılavuzu)
 ms.date: 07/20/2015
-ms.prod: .net
-ms.technology:
-- devlang-csharp
-ms.topic: article
 helpviewer_keywords:
 - delegates [C#], how to use
 ms.assetid: 99a2fc27-a32e-4a34-921c-e65497520eec
-caps.latest.revision: 
-author: BillWagner
-ms.author: wiwagn
-ms.openlocfilehash: cef62448388299f310fa26ecb632485b6538c032
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: b27c94570fdf76808e8a7df67b34466bde20de7f
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="using-delegates-c-programming-guide"></a>Temsilcileri Kullanma (C# Programlama Kılavuzu)
 A [temsilci](../../../csharp/language-reference/keywords/delegate.md) güvenli bir yöntem, benzer bir işlev işaretçisi C ve C++ için yalıtır türüdür. Aksine C işlev işaretçileri, nesne yönelimli Temsilciler, güvenli ve güvenli yazın. Bir temsilci türü temsilci adına göre tanımlanır. Aşağıdaki örnek, adlandırılmış bir temsilci bildirir `Del` geçen bir yöntem kapsülleyen bir [dize](../../../csharp/language-reference/keywords/string.md) bağımsız değişken ve döndürür [void](../../../csharp/language-reference/keywords/void.md):  
@@ -71,9 +64,9 @@ A [temsilci](../../../csharp/language-reference/keywords/delegate.md) güvenli b
  [!code-csharp[csProgGuideDelegates#30](../../../csharp/programming-guide/delegates/codesnippet/CSharp/using-delegates_10.cs)]  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [C# programlama kılavuzu](../../../csharp/programming-guide/index.md)  
+ [C# Programlama Kılavuzu](../../../csharp/programming-guide/index.md)  
  [Temsilciler](../../../csharp/programming-guide/delegates/index.md)  
- [Temsilcilerde varyans kullanma](http://msdn.microsoft.com/library/e6acad03-93e0-4efb-a158-8696d5eb4ecf)  
- [Temsilcilerde varyans](http://msdn.microsoft.com/library/e3b98197-6c5b-4e55-9c6e-9739b60645ca)  
- [İşlev ve eylem genel temsilcileri için varyans kullanma](http://msdn.microsoft.com/library/e69c4f39-09aa-4c6d-a752-08cc767d8290)  
- [Olayları](../../../csharp/programming-guide/events/index.md)
+ [Temsilcilerde Varyans Kullanma](http://msdn.microsoft.com/library/e6acad03-93e0-4efb-a158-8696d5eb4ecf)  
+ [Temsilcilerde Varyans](http://msdn.microsoft.com/library/e3b98197-6c5b-4e55-9c6e-9739b60645ca)  
+ [İşlev ve Eylem Genel Temsilcileri için Varyans Kullanma](http://msdn.microsoft.com/library/e69c4f39-09aa-4c6d-a752-08cc767d8290)  
+ [Olaylar](../../../csharp/programming-guide/events/index.md)

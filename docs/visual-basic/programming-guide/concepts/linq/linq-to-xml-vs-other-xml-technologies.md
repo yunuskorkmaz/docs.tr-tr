@@ -1,23 +1,12 @@
 ---
 title: LINQ-XML vs. Diğer XML Technologies2
-ms.custom: ''
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- devlang-visual-basic
-ms.tgt_pltfrm: ''
-ms.topic: article
 ms.assetid: 72ce3a82-ffc6-488c-98e7-b9b40f3591ec
-caps.latest.revision: 3
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: fdc9c950be0d0ec573b093a72b1e7f3b0da861b7
-ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
+ms.openlocfilehash: 926f1a1ab49a627331a614ef68790ea289b3dcff
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="linq-to-xml-vs-other-xml-technologies"></a>LINQ-XML vs. Diğer XML teknolojileri
 Bu konuda karşılaştırır [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] aşağıdaki XML teknolojiler: <xref:System.Xml.XmlReader>, XSLT, MSXML ve XmlLite. Bu bilgiler kullanmak için hangi teknoloji karar vermenize yardımcı olabilir.  

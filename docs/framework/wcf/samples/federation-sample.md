@@ -1,32 +1,18 @@
 ---
 title: Federasyon Örneği
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 ms.assetid: 7e9da0ca-e925-4644-aa96-8bfaf649d4bb
-caps.latest.revision: 26
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 58a8ab012682d5acb04b201c36d931276426ffe8
-ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
-ms.translationtype: MT
+ms.openlocfilehash: 38581c7003c30038ee1a3438caa96b7f2782a23e
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/30/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="federation-sample"></a>Federasyon Örneği
 Bu örnek federe güvenlik gösterir.  
   
 ## <a name="sample-details"></a>Örnek Ayrıntıları  
- [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] Federasyon güvenlik mimarileri üzerinden dağıtmak için destek sağlar `wsFederationHttpBinding`. `wsFederationHttpBinding` Kullanmayı HTTP temelindeki iletim mekanizması olarak istek/yanıt iletişimi ve Text/XML kodlama için kablo biçiminde içerir güvenli, güvenilir ve birlikte çalışabilir bağlama sağlar. İçinde Federasyon hakkında daha fazla bilgi için [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)], bkz: [Federasyon](../../../../docs/framework/wcf/feature-details/federation.md).  
+ Windows Communication Foundation (WCF) federe güvenlik mimarileri üzerinden dağıtmak için destek sağlar `wsFederationHttpBinding`. `wsFederationHttpBinding` Kullanmayı HTTP temelindeki iletim mekanizması olarak istek/yanıt iletişimi ve Text/XML kodlama için kablo biçiminde içerir güvenli, güvenilir ve birlikte çalışabilir bağlama sağlar. İçinde Federasyon hakkında daha fazla bilgi için [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)], bkz: [Federasyon](../../../../docs/framework/wcf/feature-details/federation.md).  
   
  Senaryo 4 parçalarını oluşur:  
   
@@ -126,7 +112,7 @@ Bu örnek federe güvenlik gösterir.
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  Bu dizin mevcut değilse, Git [Windows Communication Foundation (WCF) ve .NET Framework 4 için Windows Workflow Foundation (WF) örnek](http://go.microsoft.com/fwlink/?LinkId=150780) tüm indirmek için [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] ve [!INCLUDE[wf1](../../../../includes/wf1-md.md)] örnekleri. Bu örnek aşağıdaki dizinde bulunur.  
+>  Bu dizin mevcut değilse, Git [Windows Communication Foundation (WCF) ve .NET Framework 4 için Windows Workflow Foundation (WF) örnek](http://go.microsoft.com/fwlink/?LinkId=150780) tüm Windows Communication Foundation (WCF) indirmek için ve [!INCLUDE[wf1](../../../../includes/wf1-md.md)] örnekleri. Bu örnek aşağıdaki dizinde bulunur.  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Scenario\Federation`  
   

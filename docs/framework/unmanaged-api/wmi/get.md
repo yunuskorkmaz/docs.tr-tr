@@ -2,10 +2,6 @@
 title: Get işlevi (yönetilmeyen API Başvurusu)
 description: Get işlevi, belirtilen özellik değerini alır.
 ms.date: 11/06/2017
-ms.prod: .net-framework
-ms.technology:
-- dotnet-clr
-ms.topic: reference
 api_name:
 - Get
 api_location:
@@ -20,14 +16,11 @@ topic_type:
 - Reference
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 69312030689ab1b87e3aadd040395f06e1c94ac8
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 2f837a526879f80177bc9979e1d7671edfcd8d4f
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="get-function"></a>Get işlevi
 Varsa belirtilen özellik değerini alır.
@@ -59,13 +52,13 @@ HRESULT Get (
 `wszName`  
 [in] Özelliğin adı.
 
-`lFlags`[in] Ayrılmış. Bu parametre 0 olmalıdır.
+`lFlags` [in] Ayrılmış. Bu parametre 0 olmalıdır.
 
-`pVal`[out] İşlev başarıyla döndürürse, değerini içeren `wszName` özelliği. `pval` Bağımsız değişkeni doğru türü ve değerine Niteleyici için atanır.
+`pVal` [out] İşlev başarıyla döndürürse, değerini içeren `wszName` özelliği. `pval` Bağımsız değişkeni doğru türü ve değerine Niteleyici için atanır.
 
-`pvtType`[out] İşlev başarıyla döndürürse, içeren bir [CIM türü sabiti](https://msdn.microsoft.com/library/aa386309(v=vs.85).aspx) özellik türü gösterir. Değerini de olabilir `null`. 
+`pvtType` [out] İşlev başarıyla döndürürse, içeren bir [CIM türü sabiti](https://msdn.microsoft.com/library/aa386309(v=vs.85).aspx) özellik türü gösterir. Değerini de olabilir `null`. 
 
-`plFlavor`[out] İşlev başarıyla döndürürse, özelliğin kaynak hakkında bilgi alır. Değerini olabilir `null`, veya tanımlanan WBEM_FLAVOR_TYPE sabitlerden biri *WbemCli.h* üstbilgi dosyası: 
+`plFlavor` [out] İşlev başarıyla döndürürse, özelliğin kaynak hakkında bilgi alır. Değerini olabilir `null`, veya tanımlanan WBEM_FLAVOR_TYPE sabitlerden biri *WbemCli.h* üstbilgi dosyası: 
 
 |Sabit  |Değer  |Açıklama  |
 |---------|---------|---------|
@@ -98,7 +91,7 @@ Bu işlev çağrısı sarmalar [IWbemClassObject::Get](https://msdn.microsoft.co
   
  **Başlık:** WMINet_Utils.idl  
   
- **.NET framework sürümleri:**[!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]  
+ **.NET framework sürümleri:** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.  
 [WMI ve performans sayaçları (yönetilmeyen API Başvurusu)](index.md)

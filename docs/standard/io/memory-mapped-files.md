@@ -1,13 +1,7 @@
 ---
-title: "Bellek Eşlemeli Dosyalar"
-ms.custom: 
+title: Bellek Eşlemeli Dosyalar
 ms.date: 03/30/2017
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
 ms.technology: dotnet-standard
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -15,18 +9,13 @@ helpviewer_keywords:
 - memory-mapped files
 - inter-process communiation
 ms.assetid: a483d1b5-64aa-45b6-86ef-11b859f7f02e
-caps.latest.revision: 
 author: mairaw
 ms.author: mairaw
-manager: wpickett
-ms.workload:
-- dotnet
-- dotnetcore
-ms.openlocfilehash: 99aefdaf3d38dc5506bf785c8ba4a9b457cc7bf7
-ms.sourcegitcommit: ba765893e3efcece67d99fd6d5ce0074b050d1d9
+ms.openlocfilehash: ec4f3f8df0478c1fc881358ae8e220220fbedf17
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/02/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="memory-mapped-files"></a>Bellek Eşlemeli Dosyalar
 Bellek eşlemeli dosya sanal bellekte bir dosyanın içeriğini içerir. Bu eşleme dosyası ve bellek alanı arasında okuyarak ve belleğe doğrudan yazma dosyasını değiştirmek birden çok işlemler de dahil olmak üzere bir uygulama sağlar. İle başlayarak [!INCLUDE[net_v40_long](../../../includes/net-v40-long-md.md)], yönetilen kod açıklandığı gibi bellek eşlemeli dosyalar access bellek eşlemeli dosyalar, yerel Windows işlevlerine aynı şekilde erişmek için kullanabileceğiniz [Managing Memory-Mapped dosyaları](https://msdn.microsoft.com/library/ms810613.aspx).  
@@ -54,7 +43,7 @@ Bellek eşlemeli dosya sanal bellekte bir dosyanın içeriğini içerir. Bu eşl
   
  Çakışan aynı bellekle eşlenen dosyayı aynı anda görünümleri ve aşağıdaki çizimde nasıl birden çok işlem olabilir birden çok gösterir.  
   
- ![Bellek &#45;gösterir görünümlere; eşleşen dosya. ] (../../../docs/standard/io/media/memmappersisted.png "MemMapPersisted")  
+ ![Bellek görülür&#45;dosya eşlenmiş. ] (../../../docs/standard/io/media/memmappersisted.png "MemMapPersisted")  
 Birden çok ve görünümler bellekle eşlenen bir dosyaya çakışan  
   
 ## <a name="programming-with-memory-mapped-files"></a>Bellek eşlemeli dosyalar ile programlama  
@@ -155,4 +144,4 @@ Process C says: True
  [!code-vb[System.IO.MemoryMappedFiles_IPC_B#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR_System/system.io.memorymappedfiles_ipc_b/vb/program.vb#1)]  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [Dosya ve akış t-O](../../../docs/standard/io/index.md)
+ [Dosya ve Akış G/Ç'si](../../../docs/standard/io/index.md)

@@ -1,28 +1,17 @@
 ---
-title: "Örnek etkinleştirme"
-ms.custom: 
+title: Örnek etkinleştirme
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 134c3f70-5d4e-46d0-9d49-469a6643edd8
-caps.latest.revision: "6"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 41615618857c804c37f00e9d20a031a6d17bcab3
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: a1b78dc62fbdc6e5551addf400ceb14dc9e822f5
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="instance-activation"></a>Örnek etkinleştirme
 SQL iş akışı örneği deposuna düzenli aralıklarla uyanır ve runnable veya activatable iş akışı örnekleri Kalıcılık veritabanında algılar iç bir görev çalıştırır. Runnable iş akışı örneği bulursa örneği etkinleştirilirken özelliğine sahip iş akışı ana bildirir. Örnek deposuna activatable iş akışı örneği bulursa, sırayla iş akışı örneği çalıştıran bir iş akışı ana etkinleştirir genel bir ana bilgisayar bildirir. Bu konudaki aşağıdaki bölümlerde ayrıntılı örneği etkinleştirme işlemi açıklanmaktadır.  
   
-##  <a name="RunnableSection"></a>Algılama ve Runnable iş akışı örnekleri etkinleştirme  
+##  <a name="RunnableSection"></a> Algılama ve Runnable iş akışı örnekleri etkinleştirme  
  SQL iş akışı örneği deposuna bir iş akışı örneği göz önünde bulundurur *runnable* örneği askıya alınmış durumda veya tamamlanmış durumda değilse ve aşağıdaki koşulları karşılayan:  
   
 -   Örnek kilidi ve süresi dolmuş bekleyen bir süreölçeri vardır.  

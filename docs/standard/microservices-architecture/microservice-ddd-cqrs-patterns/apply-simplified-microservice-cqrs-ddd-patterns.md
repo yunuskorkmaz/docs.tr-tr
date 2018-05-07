@@ -1,21 +1,14 @@
 ---
-title: "Bir mikro hizmet Basitleştirilmiş CQRS ve DDD düzenleri uygulama"
-description: "Kapsayıcılı .NET uygulamaları için .NET mikro mimarisi | Bir mikro hizmet Basitleştirilmiş CQRS ve DDD düzenleri uygulama"
-keywords: "Docker, mikro, ASP.NET, kapsayıcı"
+title: Bir mikro hizmet Basitleştirilmiş CQRS ve DDD düzenleri uygulama
+description: Kapsayıcılı .NET uygulamaları için .NET mikro mimarisi | Bir mikro hizmet Basitleştirilmiş CQRS ve DDD düzenleri uygulama
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 05/26/2017
-ms.prod: .net-core
-ms.technology: dotnet-docker
-ms.topic: article
-ms.workload:
-- dotnet
-- dotnetcore
-ms.openlocfilehash: 5369ff73a0614170b220177f1e5d388483ca19f8
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: 4e30b4755af001f85649e611c9f1f976ed294cab
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="applying-simplified-cqrs-and-ddd-patterns-in-a-microservice"></a>Bir mikro hizmet Basitleştirilmiş CQRS ve DDD düzenleri uygulama
 

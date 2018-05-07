@@ -1,11 +1,6 @@
 ---
-title: "Karşılaştırma İşleçleri (Visual Basic)"
+title: Karşılaştırma İşleçleri (Visual Basic)
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
-ms.topic: article
 f1_keywords:
 - vb.<>
 - vb.>=
@@ -35,35 +30,32 @@ helpviewer_keywords:
 - Is operator [Visual Basic]
 - comparison operators [Visual Basic], Visual Basicl
 ms.assetid: d6cb12a8-e52e-46a7-8aaf-f804d634a825
-caps.latest.revision: "20"
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: aa450f7978f46196663c7534b31597b04d80482a
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 4e37f55b4c873c3dbea22a8edf0e5e2b58824720
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="comparison-operators-visual-basic"></a>Karşılaştırma İşleçleri (Visual Basic)
 Visual Basic'te tanımlanan Karşılaştırma işleçleri verilmiştir.  
   
- `<`işleci  
+ `<` işleci  
   
- `<=`işleci  
+ `<=` işleci  
   
- `>`işleci  
+ `>` işleci  
   
- `>=`işleci  
+ `>=` işleci  
   
- `=`işleci  
+ `=` işleci  
   
- `<>`işleci  
+ `<>` işleci  
   
- [Is işleci](../../../visual-basic/language-reference/operators/is-operator.md)  
+ [Is İşleci](../../../visual-basic/language-reference/operators/is-operator.md)  
   
- [IsNot işleci](../../../visual-basic/language-reference/operators/isnot-operator.md)  
+ [IsNot İşleci](../../../visual-basic/language-reference/operators/isnot-operator.md)  
   
- [Like işleci](../../../visual-basic/language-reference/operators/like-operator.md)  
+ [Like İşleci](../../../visual-basic/language-reference/operators/like-operator.md)  
   
  Bu işleçlere eşit değilse, bunların nasıl farklı olup olmadığını belirlemek için iki ifadeye karşılaştırın. `Is`, `IsNot`, ve `Like` ayrı Yardım sayfalarına ayrıntılı olarak ele alınmıştır. İlişkisel Karşılaştırma işleçleri bu sayfada ayrıntılı olarak ele alınmıştır.  
   
@@ -97,14 +89,14 @@ result = string Like pattern
 ## <a name="remarks"></a>Açıklamalar  
  Aşağıdaki tabloda ilişkisel Karşılaştırma işleçleri ve belirleyen koşulları listesini içeren olup olmadığını `result` olan `True` veya `False`.  
   
-|İşleç|`True`Eğer|`False`Eğer|  
+|İşleç|`True` Eğer|`False` Eğer|  
 |--------------|---------------|----------------|  
-|`<`(Küçüktür)|`expression1` < `expression2`|`expression1` >= `expression2`|  
-|`<=`(Küçük veya eşittir)|`expression1` <= `expression2`|`expression1` > `expression2`|  
-|`>`(Büyük)|`expression1` > `expression2`|`expression1` <= `expression2`|  
-|`>=`(Büyük veya eşittir)|`expression1` >= `expression2`|`expression1` < `expression2`|  
-|`=`(Eşit)|`expression1` = `expression2`|`expression1` <> `expression2`|  
-|`<>`(Eşit değildir)|`expression1` <> `expression2`|`expression1` = `expression2`|  
+|`<` (Küçüktür)|`expression1` < `expression2`|`expression1` >= `expression2`|  
+|`<=` (Küçük veya eşittir)|`expression1` <= `expression2`|`expression1` > `expression2`|  
+|`>` (Büyük)|`expression1` > `expression2`|`expression1` <= `expression2`|  
+|`>=` (Büyük veya eşittir)|`expression1` >= `expression2`|`expression1` < `expression2`|  
+|`=` (Eşit)|`expression1` = `expression2`|`expression1` <> `expression2`|  
+|`<>` (Eşit değildir)|`expression1` <> `expression2`|`expression1` = `expression2`|  
   
 > [!NOTE]
 >  [= İşleci](../../../visual-basic/language-reference/operators/assignment-operator.md) atama işleci da kullanılır.  
@@ -122,11 +114,11 @@ result = string Like pattern
 ## <a name="comparing-strings"></a>Dizeleri Karşılaştırma  
  Dizeleri karşılaştırmak, dize ifadeler bağlıdır alfabetik sıralama düzenlerine göre değerlendirilir `Option Compare` ayarı.  
   
- `Option Compare Binary`tabanları iç ikili gösterimlerini karakterleri türetilmiş bir sıralama düzeni üzerinde karşılaştırmalarına dize. Sıralama düzenini kod sayfası tarafından belirlenir. Aşağıdaki örnek, tipik bir ikili sıralama gösterir.  
+ `Option Compare Binary` tabanları iç ikili gösterimlerini karakterleri türetilmiş bir sıralama düzeni üzerinde karşılaştırmalarına dize. Sıralama düzenini kod sayfası tarafından belirlenir. Aşağıdaki örnek, tipik bir ikili sıralama gösterir.  
   
  `A < B < E < Z < a < b < e < z < À < Ê < Ø < à < ê < ø`  
   
- `Option Compare Text`tabanları uygulamanızın bölgeye göre belirlenir büyük küçük harf duyarsız, metinsel sıralama düzeni üzerinde karşılaştırmalarına dize. Ayarladığınızda `Option Compare Text` ve önceki örnekte karakterleri sıralamak için aşağıdaki metni sıralama düzeni uygular:  
+ `Option Compare Text` tabanları uygulamanızın bölgeye göre belirlenir büyük küçük harf duyarsız, metinsel sıralama düzeni üzerinde karşılaştırmalarına dize. Ayarladığınızda `Option Compare Text` ve önceki örnekte karakterleri sıralamak için aşağıdaki metni sıralama düzeni uygular:  
   
  `(A=a) < (À= à) < (B=b) < (E=e) < (Ê= ê) < (Ø = ø) < (Z=z)`  
   
@@ -138,10 +130,10 @@ result = string Like pattern
   
 |İşlenen olursa|Karşılaştırma|  
 |---------------------|-------------------|  
-|Her ikisi`String`|Özellikleri sıralama dizesine dayalı karşılaştırma sıralayın.|  
+|Her ikisi `String`|Özellikleri sıralama dizesine dayalı karşılaştırma sıralayın.|  
 |Her iki sayısal|Nesneleri dönüştürülür `Double`, sayısal karşılaştırma.|  
-|Bir sayısal ve bir`String`|`String` Dönüştürülür bir `Double` ve sayısal karşılaştırma gerçekleştirilir. Varsa `String` dönüştürülemiyor `Double`, bir <xref:System.InvalidCastException> oluşturulur.|  
-|Ya da her ikisini de dışında başvuru türleri:`String`|Bir <xref:System.InvalidCastException> oluşturulur.|  
+|Bir sayısal ve bir `String`|`String` Dönüştürülür bir `Double` ve sayısal karşılaştırma gerçekleştirilir. Varsa `String` dönüştürülemiyor `Double`, bir <xref:System.InvalidCastException> oluşturulur.|  
+|Ya da her ikisini de dışında başvuru türleri: `String`|Bir <xref:System.InvalidCastException> oluşturulur.|  
   
  Sayısal karşılaştırmaları kabul `Nothing` 0 olarak. Dize karşılaştırmaları kabul `Nothing` olarak `""` (boş bir dize).  
   
@@ -161,6 +153,6 @@ result = string Like pattern
  <xref:System.InvalidCastException>  
  [= İşleci](../../../visual-basic/language-reference/operators/assignment-operator.md)  
  [Visual Basic'de İşleç önceliği](../../../visual-basic/language-reference/operators/operator-precedence.md)  
- [İşlevselliğe göre listelenmiş işleçler](../../../visual-basic/language-reference/operators/operators-listed-by-functionality.md)  
- [Veri türleri sorunlarını giderme](../../../visual-basic/programming-guide/language-features/data-types/troubleshooting-data-types.md)  
+ [İşlevselliğe Göre Listelenmiş İşleçler](../../../visual-basic/language-reference/operators/operators-listed-by-functionality.md)  
+ [Veri Türü Sorunlarını Giderme](../../../visual-basic/programming-guide/language-features/data-types/troubleshooting-data-types.md)  
  [Visual Basic'de Karşılaştırma işleçleri](../../../visual-basic/programming-guide/language-features/operators-and-expressions/comparison-operators.md)

@@ -1,22 +1,12 @@
 ---
-title: "Nasıl yapılır: almak paragrafları Office Açık XML belgesinden (Visual Basic)"
-ms.custom: 
+title: 'Nasıl yapılır: almak paragrafları Office Açık XML belgesinden (Visual Basic)'
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 66053f21-9217-473c-a6f3-a0897be07756
-caps.latest.revision: "3"
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: ecce435601092e0025a977c797100e0b5ff74b86
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.openlocfilehash: 241971c65bb1569e4df98bc3580dea71428dbf2b
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-retrieve-paragraphs-from-an-office-open-xml-document-visual-basic"></a>Nasıl yapılır: almak paragrafları Office Açık XML belgesinden (Visual Basic)
 Bu konuda, bir Office Açık XML belge açılır ve belgedeki paragrafları bir koleksiyonunu alır bir örnek sunulmaktadır.  

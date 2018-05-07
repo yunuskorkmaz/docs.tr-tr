@@ -1,11 +1,6 @@
 ---
-title: "New İşleci (Visual Basic)"
+title: New İşleci (Visual Basic)
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
-ms.topic: article
 f1_keywords:
 - vb.new
 - vb.NewConstraint
@@ -16,14 +11,11 @@ helpviewer_keywords:
 - New constraint
 - New keyword [Visual Basic]
 ms.assetid: d7d566d7-fe0e-4336-91f7-641a542de4d0
-caps.latest.revision: "23"
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: 74f0352379e861ad135ea23d31ea07d638f9e6c1
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 0fe511b2c16681d7bab7eeda7c121fcbbaa2f5dd
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="new-operator-visual-basic"></a>New İşleci (Visual Basic)
 Tanıtır bir `New` yeni bir nesne örneğini oluşturmak için yan tümcesi bir tür parametresi bir oluşturucu kısıtlama belirtir veya tanımlayan bir `Sub` bir sınıf oluşturucu yordamı.  
@@ -48,15 +40,15 @@ Tanıtır bir `New` yeni bir nesne örneğini oluşturmak için yan tümcesi bir
   
  `New` Anahtar sözcüğü bu bağlamlarında kullanılabilir:  
   
- [Dim deyimi](../../../visual-basic/language-reference/statements/dim-statement.md)  
+ [Dim Deyimi](../../../visual-basic/language-reference/statements/dim-statement.md)  
   
  [,](../../../visual-basic/language-reference/statements/of-clause.md)  
   
- [Sub deyimi](../../../visual-basic/language-reference/statements/sub-statement.md)  
+ [Sub Deyimi](../../../visual-basic/language-reference/statements/sub-statement.md)  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
  <xref:System.OutOfMemoryException>  
- [Anahtar sözcükler](../../../visual-basic/language-reference/keywords/index.md)  
- [Tür listesi](../../../visual-basic/language-reference/statements/type-list.md)  
+ [Anahtar Sözcükler](../../../visual-basic/language-reference/keywords/index.md)  
+ [Tür Listesi](../../../visual-basic/language-reference/statements/type-list.md)  
  [Visual Basic'de genel türler](../../../visual-basic/programming-guide/language-features/data-types/generic-types.md)  
- [Nesne ömrü: Nesneleri oluşturma ve yok etme](../../../visual-basic/programming-guide/language-features/objects-and-classes/object-lifetime-how-objects-are-created-and-destroyed.md)
+ [Nesne Ömrü: Nesneleri Oluşturma ve Yok Etme](../../../visual-basic/programming-guide/language-features/objects-and-classes/object-lifetime-how-objects-are-created-and-destroyed.md)

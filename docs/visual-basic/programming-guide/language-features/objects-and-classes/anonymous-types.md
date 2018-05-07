@@ -1,13 +1,6 @@
 ---
 title: Anonim Türleri (Visual Basic)
-ms.custom: ''
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- devlang-visual-basic
-ms.topic: article
 f1_keywords:
 - vb.AnonymousType
 helpviewer_keywords:
@@ -15,14 +8,11 @@ helpviewer_keywords:
 - anonymous types [Visual Basic]
 - types [Visual Basic], anonymous
 ms.assetid: 7b87532c-4b3e-4398-8503-6ea9d67574a4
-caps.latest.revision: 46
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: 530e21e1595f9bbc3436280418287413e2a48111
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 451fe45c9b5efbeb64b1066d6ba8e5f9b27300c2
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="anonymous-types-visual-basic"></a>Anonim Türleri (Visual Basic)
 Visual Basic veri türü için bir sınıf tanımı yazmadan nesneleri oluşturmanıza olanak sağlaması anonim türler destekler. Bunun yerine, derleyici bir sınıf sizin için oluşturur. Sınıf kullanılabilir bir ada sahip değil, doğrudan öğesinden devralınan <xref:System.Object>ve nesne bildirme belirttiğiniz özellikler içerir. Veri türünün adı belirtilmediğinden, bu olarak adlandırılır bir *anonim tür*.  
@@ -95,11 +85,11 @@ Visual Basic veri türü için bir sınıf tanımı yazmadan nesneleri oluşturm
 ## <a name="anonymous-types-from-query-expressions"></a>Sorgu ifadeleri anonim türler  
  Sorgu ifadeleri anonim türler oluşturulmasını her zaman gerektirmez. Mümkün olduğunda, mevcut bir türle sütun veri tutmak için kullanırlar. Bu durum, veri kaynağına veya her kaydından tek alanından ya da tüm kayıtları sorgunun döndürdüğü oluşur. Aşağıdaki kod örnekleri, `customers` nesneleri koleksiyonudur bir `Customer` sınıfı. Pek çok özellik sınıfı vardır ve herhangi bir sırada sorgu sonucunda bir veya daha fazlası içerebilir. İlk iki örneklerde, sorguları adlandırılmış türler öğeleri belirlediğiniz için anonim tür gereklidir:  
   
--   `custs1`dizeleri koleksiyonu çünkü içeriyor `cust.Name` bir dizedir.  
+-   `custs1` dizeleri koleksiyonu çünkü içeriyor `cust.Name` bir dizedir.  
   
      [!code-vb[VbVbalrAnonymousTypes#30](../../../../visual-basic/language-reference/modifiers/codesnippet/VisualBasic/anonymous-types_9.vb)]  
   
--   `custs2`bir koleksiyonu içerir `Customer` , çünkü nesnelerini her öğeye `customers` olan bir `Customer` nesne ve tüm öğesi sorgu tarafından seçilen.  
+-   `custs2` bir koleksiyonu içerir `Customer` , çünkü nesnelerini her öğeye `customers` olan bir `Customer` nesne ve tüm öğesi sorgu tarafından seçilen.  
   
      [!code-vb[VbVbalrAnonymousTypes#31](../../../../visual-basic/language-reference/modifiers/codesnippet/VisualBasic/anonymous-types_10.vb)]  
   
@@ -136,9 +126,9 @@ Visual Basic veri türü için bir sınıf tanımı yazmadan nesneleri oluşturm
  Derleyici ve geçersiz kılınan yöntemleri işlevselliğini tarafından oluşturulan kodu hakkında daha fazla bilgi için bkz: [anonim tür tanımı](../../../../visual-basic/programming-guide/language-features/objects-and-classes/anonymous-type-definition.md).  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [Nesne başlatıcıları: Adlandırılmış ve anonim türler](../../../../visual-basic/programming-guide/language-features/objects-and-classes/object-initializers-named-and-anonymous-types.md)  
- [Yerel tür çıkarımı](../../../../visual-basic/programming-guide/language-features/variables/local-type-inference.md)  
+ [Nesne Başlatıcıları: Adlandırılmış ve Anonim Tipler](../../../../visual-basic/programming-guide/language-features/objects-and-classes/object-initializers-named-and-anonymous-types.md)  
+ [Yerel Çıkarım](../../../../visual-basic/programming-guide/language-features/variables/local-type-inference.md)  
  [Visual Basic'de LINQ'e giriş](../../../../visual-basic/programming-guide/language-features/linq/introduction-to-linq.md)  
- [Nasıl yapılır: özellik adları ve türlerini anonim türde bildirimlerden çıkarma](../../../../visual-basic/programming-guide/language-features/objects-and-classes/how-to-infer-property-names-and-types-in-anonymous-type-declarations.md)  
- [Anonim tür tanımı](../../../../visual-basic/programming-guide/language-features/objects-and-classes/anonymous-type-definition.md)  
- [Anahtarı](../../../../visual-basic/language-reference/modifiers/key.md)
+ [Nasıl yapılır: Anonim Tip Bildirimlerinden Özellik Adları ve Türlerini Çıkarma](../../../../visual-basic/programming-guide/language-features/objects-and-classes/how-to-infer-property-names-and-types-in-anonymous-type-declarations.md)  
+ [Anonim Tip Tanımı](../../../../visual-basic/programming-guide/language-features/objects-and-classes/anonymous-type-definition.md)  
+ [Key](../../../../visual-basic/language-reference/modifiers/key.md)

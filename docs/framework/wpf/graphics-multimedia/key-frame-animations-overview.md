@@ -1,28 +1,16 @@
 ---
-title: "Anahtar-Çerçeve Animasyonlara Genel Bakış"
-ms.custom: 
+title: Anahtar-Çerçeve Animasyonlara Genel Bakış
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-wpf
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - animation [WPF], key-frame
 - key frames [WPF], about key-frame animations
 - multiple animation target values [WPF]
 ms.assetid: 10028f97-bb63-41fc-b8ad-663dac7ea203
-caps.latest.revision: "29"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 38f0f6ac030af08039438b7e766c3f0f5bed7534
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 8a18e0637b0fea7a1a960b157123da10819b4687
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="key-frame-animations-overview"></a>Anahtar-Çerçeve Animasyonlara Genel Bakış
 Bu konu anahtarı çerçeve animasyonlarını tanıtır. Anahtar çerçeve animasyonları ikiden fazla hedef değerleri kullanarak animasyon olanak sağlar ve animasyonun ilişkilendirme metodunu denetleyebilirsiniz.  
@@ -57,11 +45,11 @@ Bu konu anahtarı çerçeve animasyonlarını tanıtır. Anahtar çerçeve anima
   
  Anahtar çerçeve animasyon sınıfları ait <xref:System.Windows.Media.Animation> ad alanı ve aşağıdaki adlandırma kuralını uyar:  
   
- *\<Tür >*`AnimationUsingKeyFrames`  
+ *\<türü >* `AnimationUsingKeyFrames`  
   
  Burada  *\<türü >* sınıfı canlandırır değer türüdür.  
   
- [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]Aşağıdaki anahtar çerçeve animasyon sınıfları sağlar.  
+ [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] Aşağıdaki anahtar çerçeve animasyon sınıfları sağlar.  
   
 |Özellik türü|Karşılık gelen from/to/by animasyon sınıfı|Desteklenen ilişkilendirme yöntemleri|  
 |-------------------|------------------------------------------------|-------------------------------------|  
@@ -90,7 +78,7 @@ Bu konu anahtarı çerçeve animasyonlarını tanıtır. Anahtar çerçeve anima
 ## <a name="target-values-key-frames-and-key-times"></a>Hedef değer (anahtar çerçeveler) ve anahtar zamanları  
  Yalnızca bulunduğundan farklı türdeki farklı özellik türleri animasyon için anahtar çerçeve animasyonları, ayrıca farklı tür vardır anahtar çerçeve nesneleri: her tür animasyonlu değeri ve desteklenen ilişkilendirme yöntemi için bir tane. Anahtar çerçeve türleri aşağıdaki adlandırma kuralını uyar:  
   
- *\<InterpolationMethod >\<türü >*`KeyFrame`  
+ *\<InterpolationMethod >\<türü >* `KeyFrame`  
   
  Burada  *\<InterpolationMethod >* anahtar çerçevesinin kullandığı ilişkilendirme yöntemidir ve  *\<türü >* sınıfı canlandırır değer türüdür. Tüm üç ilişkilendirme yöntemini destekleyen bir anahtar çerçeve animasyonu kullanabileceğiniz üç anahtar çerçeve türüne sahip olacaktır. Örneğin, üç anahtar çerçeve türleri ile kullanabileceğiniz bir <xref:System.Windows.Media.Animation.DoubleAnimationUsingKeyFrames>: <xref:System.Windows.Media.Animation.DiscreteDoubleKeyFrame>, <xref:System.Windows.Media.Animation.LinearDoubleKeyFrame>, ve <xref:System.Windows.Media.Animation.SplineDoubleKeyFrame>. (İlişkilendirme yöntemleri sonraki bölümünde ayrıntılı olarak açıklanmıştır.)  
   
@@ -290,7 +278,7 @@ Anahtar eğrisi denetim noktaları (0.25, 0,5) ve (0,75, 1.0)
   
 6.  Gidermek <xref:System.Windows.Media.Animation.KeyTime> anahtar çerçeveler ile değerlerini çözdükten anahtar çerçeveler bunları en yakın bildirilen kullanarak anahtar süreleri belirtilmeyen <xref:System.Windows.Media.Animation.KeyTime> değerleri.  
   
-7.  Kalan gidermek <xref:System.Windows.Media.Animation.KeyTime.Paced%2A> <xref:System.Windows.Media.Animation.KeyTime> değerleri. <xref:System.Windows.Media.Animation.KeyTime.Paced%2A><xref:System.Windows.Media.Animation.KeyTime> kullanmak <xref:System.Windows.Media.Animation.KeyTime> anahtar komşu değerleri kullanarak çözümlenmiş zamanı belirlemek için çerçeve.  Animasyon hızı bu anahtar çerçevesinin çözümlenmiş zamanı çevresinde sabit olduğundan emin olmak için hedeftir.  
+7.  Kalan gidermek <xref:System.Windows.Media.Animation.KeyTime.Paced%2A> <xref:System.Windows.Media.Animation.KeyTime> değerleri. <xref:System.Windows.Media.Animation.KeyTime.Paced%2A> <xref:System.Windows.Media.Animation.KeyTime> kullanmak <xref:System.Windows.Media.Animation.KeyTime> anahtar komşu değerleri kullanarak çözümlenmiş zamanı belirlemek için çerçeve.  Animasyon hızı bu anahtar çerçevesinin çözümlenmiş zamanı çevresinde sabit olduğundan emin olmak için hedeftir.  
   
 8.  Çözümlenmiş zamanı (birincil anahtar) sırasını ve bildirim (ikincil anahtar), sırasına göre ana kare yani sıralamak için tutarlı bir sıralama kullanım tabanlı çözümlenmiş anahtar çerçevesi <xref:System.Windows.Media.Animation.KeyTime> değerleri.  
   

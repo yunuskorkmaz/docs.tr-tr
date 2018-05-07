@@ -1,24 +1,17 @@
 ---
 title: class (C# Başvurusu)
 ms.date: 07/18/2017
-ms.prod: .net
-ms.technology:
-- devlang-csharp
-ms.topic: article
 f1_keywords:
 - class_CSharpKeyword
 - class
 helpviewer_keywords:
 - class keyword [C#]
 ms.assetid: b95d8815-de18-4c3f-a8cc-a0a53bdf8690
-caps.latest.revision: 30
-author: BillWagner
-ms.author: wiwagn
-ms.openlocfilehash: ae4b019ee88b6f331a76c750ab94fc76a3343adb
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 20968d2f72195db6d16de1b726c6e946b91ffcd5
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="class-c-reference"></a>class (C# Başvurusu)
 
@@ -54,27 +47,27 @@ Bir sınıf bildirimleri aşağıdaki üyeleri içerebilir:
 
 - [Oluşturucular](../../../csharp/programming-guide/classes-and-structs/constructors.md)
 
-- [Sabitleri](../../../csharp/programming-guide/classes-and-structs/constants.md)
+- [Sabitler](../../../csharp/programming-guide/classes-and-structs/constants.md)
 
-- [Alanları](../../../csharp/programming-guide/classes-and-structs/fields.md)
+- [Alanlar](../../../csharp/programming-guide/classes-and-structs/fields.md)
 
 - [Sonlandırıcılar](../../../csharp/programming-guide/classes-and-structs/destructors.md)
 
-- [Yöntemleri](../../../csharp/programming-guide/classes-and-structs/methods.md)
+- [Yöntemler](../../../csharp/programming-guide/classes-and-structs/methods.md)
 
-- [Özellikleri](../../../csharp/programming-guide/classes-and-structs/properties.md)
+- [Özellikler](../../../csharp/programming-guide/classes-and-structs/properties.md)
 
-- [Dizin oluşturucular](../../../csharp/programming-guide/indexers/index.md)
+- [Dizin Oluşturucular](../../../csharp/programming-guide/indexers/index.md)
 
 - [İşleçler](../../../csharp/programming-guide/statements-expressions-operators/operators.md)
 
-- [Olayları](../../../csharp/programming-guide/events/index.md)
+- [Olaylar](../../../csharp/programming-guide/events/index.md)
 
 - [Temsilciler](../../../csharp/programming-guide/delegates/index.md)
 
-- [Sınıfları](../../../csharp/programming-guide/classes-and-structs/classes.md)
+- [Sınıflar](../../../csharp/programming-guide/classes-and-structs/classes.md)
 
-- [Arabirimleri](../../../csharp/programming-guide/interfaces/index.md)
+- [Arabirimler](../../../csharp/programming-guide/interfaces/index.md)
 
 - [Yapılar](../../../csharp/programming-guide/classes-and-structs/structs.md)
 
@@ -101,6 +94,6 @@ Son olarak, varsayılan oluşturucu kullanılarak oluşturulan nesne için dikka
 
 ## <a name="see-also"></a>Ayrıca Bkz.
  [C# başvurusu](../../../csharp/language-reference/index.md)  
- [C# programlama kılavuzu](../../../csharp/programming-guide/index.md)  
- [C# anahtar sözcükleri](../../../csharp/language-reference/keywords/index.md)  
- [Başvuru türleri](../../../csharp/language-reference/keywords/reference-types.md)
+ [C# Programlama Kılavuzu](../../../csharp/programming-guide/index.md)  
+ [C# Anahtar Sözcükleri](../../../csharp/language-reference/keywords/index.md)  
+ [Başvuru Türleri](../../../csharp/language-reference/keywords/reference-types.md)

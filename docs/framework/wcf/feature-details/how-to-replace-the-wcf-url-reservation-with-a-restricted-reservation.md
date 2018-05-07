@@ -1,33 +1,19 @@
 ---
 title: 'Nasıl yapılır: WCF URL Ayırmayı Kısıtlı Ayırma ile Değiştirme'
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 ms.assetid: 2754d223-79fc-4e2b-a6ce-989889f2abfa
-caps.latest.revision: 6
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: b1f17a5c21888a9fc778d9649f62478d43ba0e86
-ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
+ms.openlocfilehash: 823a59f53823a2480655c4f8720504dd4199d0bc
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/30/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-replace-the-wcf-url-reservation-with-a-restricted-reservation"></a>Nasıl yapılır: WCF URL Ayırmayı Kısıtlı Ayırma ile Değiştirme
 Bir URL ayırmasını URL'yi veya URL'leri kümesini kimin ileti alabilir kısıtlamak sağlar. Bir ayırma bir URL şablonu, bir erişim denetimi listesi (ACL) ve bir dizi bayrakları oluşur. URL şablonu ayırma etkiler hangi URL'leri tanımlar. URL şablonları nasıl işlendiği hakkında daha fazla bilgi için bkz: [yönlendirme gelen istekleri](http://go.microsoft.com/fwlink/?LinkId=136764). Belirtilen URL'lerden iletileri almak için hangi kullanıcı veya kullanıcı grubuna izin ACL denetler. Bayrakları ayırma URL üzerinde doğrudan dinlemek veya başka bir işlem dinlemek için temsilci izni verme için bir kullanıcı veya grup izin vermek için olup olmadığını belirtin.  
   
- Varsayılan işletim sistemi yapılandırma, bir parçası olarak [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] çift yönlü iletişim için çift HTTP bağlama kullanan uygulamaları çalıştırmak tüm kullanıcıların sağlamak için 80 numaralı bağlantı noktası için genel olarak erişilebilir bir ayırma oluşturur. Bu ayırma ACL herkes için olduğundan, yöneticileri izin açıkça olamaz veya bir URL veya URL'ler kümesi dinlemek için izin vermeyin. Bu konuda bu ayırmayı silmek nasıl ve ayırma kısıtlı ACL ile yeniden oluşturma açıklanmaktadır.  
+ Varsayılan işletim sistemi yapılandırmasının bir parçası olarak, Windows Communication Foundation (WCF) çift yönlü iletişim için çift HTTP bağlama kullanan uygulamaları çalıştırmak tüm kullanıcıların sağlamak için 80 numaralı bağlantı noktası için genel olarak erişilebilir bir ayırma oluşturur. Bu ayırma ACL herkes için olduğundan, yöneticileri izin açıkça olamaz veya bir URL veya URL'ler kümesi dinlemek için izin vermeyin. Bu konuda bu ayırmayı silmek nasıl ve ayırma kısıtlı ACL ile yeniden oluşturma açıklanmaktadır.  
   
- Üzerinde [!INCLUDE[wv](../../../../includes/wv-md.md)] veya [!INCLUDE[lserver](../../../../includes/lserver-md.md)] tüm HTTP URL ayırmalarını yükseltilmiş bir komut isteminden yazarak görüntüle `netsh http show urlacl`.  Aşağıdaki örnek ne gösterir bir [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] URL ayırmasını benzer.  
+ Üzerinde [!INCLUDE[wv](../../../../includes/wv-md.md)] veya [!INCLUDE[lserver](../../../../includes/lserver-md.md)] tüm HTTP URL ayırmalarını yükseltilmiş bir komut isteminden yazarak görüntüle `netsh http show urlacl`.  Aşağıdaki örnek, ne WCF URL ayırmayı benzemelidir gösterir.  
   
 ```  
 Reserved URL : http://+:80/Temporary_Listen_Addresses/  
@@ -37,7 +23,7 @@ Reserved URL : http://+:80/Temporary_Listen_Addresses/
             SDDL: D:(A;;GX;;;WD)  
 ```  
   
- Bir URL ayırma oluşur şablonu kullanılan bir [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] uygulama çift yönlü iletişim için HTTP çift bağlama kullanıyor. Bu formun URL'ler için kullanılır bir [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] iletileri yeniden göndermek için hizmet [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] HTTP çift bağlama üzerinden iletişim kurarken istemci. Herkes URL üzerinde dinleme ancak başka bir işleme dinleme temsilci değil için izin verilir. Son olarak, ACL Güvenlik Tanımlayıcısı Tanım Dili (SSDL) açıklanmıştır. SSDL hakkında daha fazla bilgi için bkz: [SSDL](http://go.microsoft.com/fwlink/?LinkId=136789)  
+ WCF uygulaması çift yönlü iletişim için HTTP çift bağlama kullanılırken kullanılan URL şablonu ayırma oluşur. Bu form URL'lerini için bir WCF hizmeti iletileri WCF HTTP çift bağlama üzerinden iletişim kurarken istemciye göndermek için kullanılır. Herkes URL üzerinde dinleme ancak başka bir işleme dinleme temsilci değil için izin verilir. Son olarak, ACL Güvenlik Tanımlayıcısı Tanım Dili (SSDL) açıklanmıştır. SSDL hakkında daha fazla bilgi için bkz: [SSDL](http://go.microsoft.com/fwlink/?LinkId=136789)  
   
 ### <a name="to-delete-the-wcf-url-reservation"></a>WCF URL ayırmayı silmek için  
   
@@ -48,7 +34,7 @@ Reserved URL : http://+:80/Temporary_Listen_Addresses/
 3.  Ayırma başarıyla silinirse, aşağıdaki ileti görüntülenir. **URL ayırma başarıyla silindi**  
   
 ## <a name="creating-a-new-security-group-and-new-restricted-url-reservation"></a>Yeni güvenlik grubu ve yeni kısıtlı URL ayırma oluşturma  
- Değiştirmek için [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] URL ayırmayı kısıtlı ayırma ile yeni bir güvenlik grubu önce oluşturmanız gerekir. Bunu iki yoldan biriyle yapabilirsiniz: komut satırından veya Bilgisayar Yönetimi konsolu. Yalnızca birini yapmanız gerekir.  
+ WCF URL ayırmayı kısıtlı ayırma ile değiştirmek için yeni bir güvenlik grubu oluşturun. Bunu iki yoldan biriyle yapabilirsiniz: komut satırından veya Bilgisayar Yönetimi konsolu. Yalnızca birini yapmanız gerekir.  
   
 #### <a name="to-create-a-new-security-group-from-a-command-prompt"></a>Bir komut isteminden yeni bir güvenlik grubu oluşturmak için  
   

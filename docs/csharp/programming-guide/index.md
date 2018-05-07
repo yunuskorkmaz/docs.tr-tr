@@ -1,10 +1,6 @@
 ---
 title: C# Programlama Kılavuzu
 ms.date: 05/02/2017
-ms.prod: .net
-ms.technology:
-- devlang-csharp
-ms.topic: article
 f1_keywords:
 - cs.langref
 helpviewer_keywords:
@@ -13,14 +9,11 @@ helpviewer_keywords:
 - Visual C#, programming concepts
 - C# language, concepts
 ms.assetid: ac0f23a2-6bf3-4077-be99-538ae5fd3bc5
-caps.latest.revision: 45
-author: BillWagner
-ms.author: wiwagn
-ms.openlocfilehash: bd22abedc8fc43fd2bd0ea77e1506394400fbfbb
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.openlocfilehash: 62aacdafb5c257a8824bc8c8241ead7a274c2e2f
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="c-programming-guide"></a>C# programlama kılavuzu
 Bu bölüm, anahtar C# dili hakkında ayrıntılı bilgi özellikleri ve C# .NET çerçevesi aracılığıyla erişilebilir özellikleri sağlar.  
@@ -62,7 +55,7 @@ Bu bölüm, anahtar C# dili hakkında ayrıntılı bilgi özellikleri ve C# .NET
   
  [Yineleyiciler](../../csharp/programming-guide/concepts/iterators.md)
   
- [LINQ Query Expressions](../../csharp/programming-guide/linq-query-expressions/index.md)  
+ [LINQ Sorgu ifadeleri](../../csharp/programming-guide/linq-query-expressions/index.md)  
   
  [Lambda İfadeleri](../../csharp/programming-guide/statements-expressions-operators/lambda-expressions.md)  
   

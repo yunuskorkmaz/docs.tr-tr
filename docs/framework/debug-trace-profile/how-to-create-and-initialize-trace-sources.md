@@ -1,13 +1,6 @@
 ---
-title: "Nasıl yapılır: İz Kaynakları Oluşturma ve Başlatma"
-ms.custom: 
+title: 'Nasıl yapılır: İz Kaynakları Oluşturma ve Başlatma'
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -16,19 +9,16 @@ helpviewer_keywords:
 - initializing trace sources
 - configuration files [.NET Framework], trace sources
 ms.assetid: f88dda6f-5fda-45be-9b3c-745a9b708c4d
-caps.latest.revision: "10"
 author: mairaw
 ms.author: mairaw
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: a790ca50522adcffd5d8cd8433f1291102672430
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 07c4d65e3fb6d61ae5d1b766c70cbb25d54bdc7e
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-create-and-initialize-trace-sources"></a>Nasıl yapılır: İz Kaynakları Oluşturma ve Başlatma
-<xref:System.Diagnostics.TraceSource> Sınıfı, uygulama ile ilişkili olabilir izlemeleri üretmek için uygulamalar tarafından kullanılır. <xref:System.Diagnostics.TraceSource>kolayca izleme olayları, izleme verileri ve sorunu bilgilendirme izlemeleri için ver izleme yöntemleri sağlar. İzleme çıktısı <xref:System.Diagnostics.TraceSource> oluşturuldu ve ile veya yapılandırma dosyalarının kullanılması olmadan başlatıldı. Bu konu, her iki seçenek için yönergeler sağlar. Ancak, çalışma zamanında izleme kaynaklar tarafından üretilen izlemeleri yapılandırılmasına kolaylaştırmak amacıyla yapılandırma dosyalarını kullanmanızı öneririz.  
+<xref:System.Diagnostics.TraceSource> Sınıfı, uygulama ile ilişkili olabilir izlemeleri üretmek için uygulamalar tarafından kullanılır. <xref:System.Diagnostics.TraceSource> kolayca izleme olayları, izleme verileri ve sorunu bilgilendirme izlemeleri için ver izleme yöntemleri sağlar. İzleme çıktısı <xref:System.Diagnostics.TraceSource> oluşturuldu ve ile veya yapılandırma dosyalarının kullanılması olmadan başlatıldı. Bu konu, her iki seçenek için yönergeler sağlar. Ancak, çalışma zamanında izleme kaynaklar tarafından üretilen izlemeleri yapılandırılmasına kolaylaştırmak amacıyla yapılandırma dosyalarını kullanmanızı öneririz.  
   
 ### <a name="to-create-and-initialize-a-trace-source-using-a-configuration-file"></a>Oluşturma ve yapılandırma dosyası kullanarak bir izleme kaynağı başlatmak için  
   

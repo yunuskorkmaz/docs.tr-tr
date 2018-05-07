@@ -1,13 +1,6 @@
 ---
-title: "WPF XAML için XAML Ad Alanları ve Ad Alanı Eşlemesi"
-ms.custom: 
+title: WPF XAML için XAML Ad Alanları ve Ad Alanı Eşlemesi
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-wpf
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -21,16 +14,11 @@ helpviewer_keywords:
 - classes [WPF], mapping namespaces to
 - namespaces [WPF]
 ms.assetid: 5c0854e3-7470-435d-9fe2-93eec9d3634e
-caps.latest.revision: "23"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 80f152f8cdf459f920d723df66756af680b4bcea
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: dbf9c9c16488a58a07aa29d16b3d00dd83c7c232
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="xaml-namespaces-and-namespace-mapping-for-wpf-xaml"></a>WPF XAML için XAML Ad Alanları ve Ad Alanı Eşlemesi
 Bu konuda daha fazla varlığını ve sık bir WPF XAML dosyasının kök etiketinde bulunan iki XAML ad uzayı eşlemesinin amacını açıklanmaktadır. Ayrıca, benzer eşlemeleri kullanan kendi kodunuzda ve/veya ayrı derlemeler içinde tanımlanan öğeler için üretmek nasıl açıklanır.  
@@ -59,9 +47,9 @@ Bu konuda daha fazla varlığını ve sık bir WPF XAML dosyasının kök etiket
   
  Aşağıdaki olası adlandırılmış belirteçleri sözdizimi alır ve aşağıdaki değerleri:  
   
- `clr-namespace:`Öğeler olarak sunmak için ortak türleri içeren bütünleştirilmiş kodun içinde CLR ad alanı bildirimi.  
+ `clr-namespace:` Öğeler olarak sunmak için ortak türleri içeren bütünleştirilmiş kodun içinde CLR ad alanı bildirimi.  
   
- `assembly=`Bazılarını veya tümünü başvurulan içeren bütünleştirilmiş kodun [!INCLUDE[TLA2#tla_clr](../../../../includes/tla2sharptla-clr-md.md)] ad alanı. Bu değer genellikle yolu değil derleme adı ve uzantısı (örneğin, .dll veya .exe) içermez. Bu derleme yolu eşlemeye çalıştığınız XAML içeren proje dosyası proje başvuru olarak oluşturulmalıdır. Sürüm oluşturma ve güçlü ad imzalama, birleştirmek için `assembly` tarafından tanımlanan değeri bir dize olabilir <xref:System.Reflection.AssemblyName>, basit bir dize adı yerine.  
+ `assembly=` Bazılarını veya tümünü başvurulan içeren bütünleştirilmiş kodun [!INCLUDE[TLA2#tla_clr](../../../../includes/tla2sharptla-clr-md.md)] ad alanı. Bu değer genellikle yolu değil derleme adı ve uzantısı (örneğin, .dll veya .exe) içermez. Bu derleme yolu eşlemeye çalıştığınız XAML içeren proje dosyası proje başvuru olarak oluşturulmalıdır. Sürüm oluşturma ve güçlü ad imzalama, birleştirmek için `assembly` tarafından tanımlanan değeri bir dize olabilir <xref:System.Reflection.AssemblyName>, basit bir dize adı yerine.  
   
  Ayıran karakter unutmayın `clr-namespace` ancak iki nokta üst üste (:) değerinden belirteci ayıran karakter `assembly` bir eşittir işareti (=) değerinden belirteci. Bu iki belirteç arasında kullanmak için noktalı virgül karakteridir. Ayrıca, tüm boşluk bildiriminde herhangi bir yere içermez.  
   
@@ -111,7 +99,7 @@ End Namespace
 ```  
   
 ### <a name="mapping-to-current-assemblies"></a>Geçerli derlemelere eşleme  
- `assembly`atlanabilir `clr-namespace` başvurulan özel sınıflara başvuran uygulama kodu aynı bütünleştirilmiş içinde tanımlanan. Veya belirtmek için bu durum için eşdeğer bir sözdizimi şöyledir `assembly=`, eşittir işaretinden dize belirteci olmadan.  
+ `assembly` atlanabilir `clr-namespace` başvurulan özel sınıflara başvuran uygulama kodu aynı bütünleştirilmiş içinde tanımlanan. Veya belirtmek için bu durum için eşdeğer bir sözdizimi şöyledir `assembly=`, eşittir işaretinden dize belirteci olmadan.  
   
  Özel sınıflar aynı bütünleştirilmiş kodda tanımlanmış ise sayfanın kök öğesi olarak kullanılamaz. Kısmi sınıflar eşlenmesi gerekmez; yalnızca, uygulama bunları XAML öğeleri olarak başvurmak istiyorsanız eşlenmesi gerekir sayfasının parçalı sınıf olmayan sınıflar.  
   
@@ -124,9 +112,9 @@ End Namespace
 ## <a name="designer-namespaces-and-other-prefixes-from-xaml-templates"></a>Tasarımcı ad alanları ve XAML şablonlarından diğer önekler  
  WPF XAML için geliştirme ortamları ve/veya Tasarım araçları ile çalışıyorsanız, diğer tanımlı XAML ad uzayları olduğunu fark edebilirsiniz / önekleri içinde XAML biçimlendirme.  
   
- [!INCLUDE[wpfdesigner_current_long](../../../../includes/wpfdesigner-current-long-md.md)]genellikle önekine eşlenen Tasarımcı bir ad alanı kullanır `d:`. WPF için daha yeni proje şablonları arasında XAML değişim desteklemek için bu XAML ad uzayı önceden eşleme [!INCLUDE[wpfdesigner_current_long](../../../../includes/wpfdesigner-current-long-md.md)] ve diğer tasarım ortamları. Bu tasarım XAML ad uzayı arasında gidiş dönüş XAML tabanlı UI Tasarımcısı'nda gelirken tasarım durumunu aktarmak için kullanılır. Ayrıca özellikleri gibi kullanılır `d:IsDataSource`, çalışma zamanı veri kaynakları bir Tasarımcısı'nda etkinleştirin.  
+ [!INCLUDE[wpfdesigner_current_long](../../../../includes/wpfdesigner-current-long-md.md)] genellikle önekine eşlenen Tasarımcı bir ad alanı kullanır `d:`. WPF için daha yeni proje şablonları arasında XAML değişim desteklemek için bu XAML ad uzayı önceden eşleme [!INCLUDE[wpfdesigner_current_long](../../../../includes/wpfdesigner-current-long-md.md)] ve diğer tasarım ortamları. Bu tasarım XAML ad uzayı arasında gidiş dönüş XAML tabanlı UI Tasarımcısı'nda gelirken tasarım durumunu aktarmak için kullanılır. Ayrıca özellikleri gibi kullanılır `d:IsDataSource`, çalışma zamanı veri kaynakları bir Tasarımcısı'nda etkinleştirin.  
   
- Eşlenen başka bir önek görebilirsiniz `mc:`. `mc:`biçimlendirme uyumluluğu içindir ve mutlaka XAML özgü olmayan bir biçimlendirme uyumluluğu modeli kullanır. Bazı ölçüde özellikleri XAML çerçeveler arasında ya da diğer sınırları yedekleme uygulamasının, exchange için kullanılan biçimlendirme uyumluluğu XAML şema bağlamları arasında iş, sınırlı modlarında tasarımcıları için uyumluluk sağlamak ve benzeri. Biçimlendirme uyumluluğu kavramları ve WPF ile ilişkili nasıl oldukları hakkında daha fazla bilgi için bkz: [Uyumluluk Biçimlendirme (mc:) Dil özellikleri](../../../../docs/framework/wpf/advanced/markup-compatibility-mc-language-features.md).  
+ Eşlenen başka bir önek görebilirsiniz `mc:`. `mc:` biçimlendirme uyumluluğu içindir ve mutlaka XAML özgü olmayan bir biçimlendirme uyumluluğu modeli kullanır. Bazı ölçüde özellikleri XAML çerçeveler arasında ya da diğer sınırları yedekleme uygulamasının, exchange için kullanılan biçimlendirme uyumluluğu XAML şema bağlamları arasında iş, sınırlı modlarında tasarımcıları için uyumluluk sağlamak ve benzeri. Biçimlendirme uyumluluğu kavramları ve WPF ile ilişkili nasıl oldukları hakkında daha fazla bilgi için bkz: [Uyumluluk Biçimlendirme (mc:) Dil özellikleri](../../../../docs/framework/wpf/advanced/markup-compatibility-mc-language-features.md).  
   
 ## <a name="wpf-and-assembly-loading"></a>WPF ve derleme yükleme  
  WPF XAML şema bağlamının sırayla CLR tanımlı kavramı kullanan WPF uygulaması modelle tümleştirir <xref:System.AppDomain>. XAML şema içeriği nasıl derlemelerini yüklemek veya WPF kullanım dayanarak çalıştırma veya tasarım zamanı türlerini bulmak yorumlaması aşağıdaki sırayı açıklar <xref:System.AppDomain> ve diğer etkenlere bağlı.  

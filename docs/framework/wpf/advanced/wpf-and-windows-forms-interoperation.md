@@ -1,14 +1,6 @@
 ---
 title: WPF ve Windows Forms Birlikte Çalışması
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-wpf
-ms.tgt_pltfrm: ''
-ms.topic: article
 helpviewer_keywords:
 - Windows Forms [WPF], interoperability with
 - nester interoperation [WPF]
@@ -16,17 +8,11 @@ helpviewer_keywords:
 - interoperability [WPF], Windows Forms
 - hybrid control [WPF interoperability]
 ms.assetid: 9e8aa6b6-112c-4579-98d1-c974917df499
-caps.latest.revision: 23
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 315037c49e00e097eebd51e2a511aa7f01e468ae
-ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
+ms.openlocfilehash: 7090a557a0493825e44985b15e065803ee3d48a0
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/27/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="wpf-and-windows-forms-interoperation"></a>WPF ve Windows Forms Birlikte Çalışması
 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] ve [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] uygulama arayüzleri oluşturmak için iki farklı mimariyi sunar. <xref:System.Windows.Forms.Integration?displayProperty=nameWithType> Ad alanı, ortak birlikte çalışabilirlik senaryolarını etkinleştiren sınıfları sağlar. Birlikte çalışabilirlik özelliklerini uygulayan iki anahtar sınıf <xref:System.Windows.Forms.Integration.WindowsFormsHost> ve <xref:System.Windows.Forms.Integration.ElementHost>. Bu konuda, hangi birlikte çalışabilirlik senaryoları desteklenir ve hangi senaryoları desteklenmez açıklanmaktadır.  

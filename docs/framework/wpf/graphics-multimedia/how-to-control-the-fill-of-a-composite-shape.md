@@ -1,29 +1,17 @@
 ---
-title: "Nasıl yapılır: Bileşik Şeklin Dolgusunu Denetleme"
-ms.custom: 
+title: 'Nasıl yapılır: Bileşik Şeklin Dolgusunu Denetleme'
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-wpf
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - shapes [WPF], composite [WPF], controlling fill
 - composite shapes [WPF], controlling fill
 - graphics [WPF], composite shapes
 - fill [WPF], controlling
 ms.assetid: c1c94575-9eca-48a5-a49a-2ec65259f229
-caps.latest.revision: "11"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: bb7956ab70dc30c7d090b9616cc603df2dc0b4e1
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: a9a17434f11f432f6446e09bd853ed0d2f23fbe8
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-control-the-fill-of-a-composite-shape"></a>Nasıl yapılır: Bileşik Şeklin Dolgusunu Denetleme
 <xref:System.Windows.Media.GeometryGroup.FillRule%2A> Özelliği bir <xref:System.Windows.Media.GeometryGroup> veya <xref:System.Windows.Media.PathGeometry>, "bileşik şeklin verilen bir noktaya geometrinin parçası olup olmadığını belirlemek için kullandığı bir kuralı" belirtir. İki olası değerler için <xref:System.Windows.Media.FillRule>: <xref:System.Windows.Media.FillRule.EvenOdd> ve <xref:System.Windows.Media.FillRule.Nonzero>. Aşağıdaki bölümlerde bu iki kuralın nasıl kullanılacağı açıklanmıştır.  

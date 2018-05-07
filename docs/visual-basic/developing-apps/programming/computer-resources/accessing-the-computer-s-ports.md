@@ -1,26 +1,17 @@
 ---
-title: "Bilgisayar &#39; erişme (Visual Basic) s bağlantı noktaları"
-ms.custom: 
+title: Bilgisayarın erişim&#39;s bağlantı noktaları (Visual Basic)
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
-ms.topic: article
 helpviewer_keywords:
 - serial ports
 - My.Computer.Ports object [Visual Basic], tasks
 ms.assetid: b04a2f76-992a-4585-ab41-8bbbdbd554a1
-caps.latest.revision: "12"
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: e50a1e1e849052dbc5da62f434539fab478bd26d
-ms.sourcegitcommit: 34ec7753acf76f90a0fa845235ef06663dc9e36e
+ms.openlocfilehash: 1136bed5d329c5283b4e7b95a5085f3e0db46286
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
-# <a name="accessing-the-computer39s-ports-visual-basic"></a>Bilgisayar &#39; erişme (Visual Basic) s bağlantı noktaları
+# <a name="accessing-the-computer39s-ports-visual-basic"></a>Bilgisayarın erişim&#39;s bağlantı noktaları (Visual Basic)
 `My.Computer.Ports` Nesnesi, bir özellik ve bilgisayar seri bağlantı noktalarına erişmek için bir yöntem sağlar.  
   
 ## <a name="in-this-section"></a>Bu Bölümde  

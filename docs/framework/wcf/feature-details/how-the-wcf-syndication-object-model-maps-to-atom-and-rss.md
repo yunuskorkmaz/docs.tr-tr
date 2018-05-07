@@ -1,30 +1,18 @@
 ---
-title: "WCF Dağıtım Nesnesi Modeli Atom ve RSS Eşlemelerini Nasıl Yapar?"
-ms.custom: 
+title: WCF Dağıtım Nesnesi Modeli Atom ve RSS Eşlemelerini Nasıl Yapar?
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
 ms.assetid: 0365eb37-98cc-4b13-80fb-f1e78847a748
-caps.latest.revision: "18"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 01030ed226a5cdc384db56933325d7c4eeade989
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 7baf77b4923cff4320d657b3024ab2a286e40c2b
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-the-wcf-syndication-object-model-maps-to-atom-and-rss"></a>WCF Dağıtım Nesnesi Modeli Atom ve RSS Eşlemelerini Nasıl Yapar?
-Geliştirirken bir [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] dağıtım hizmeti, oluşturduğunuz akışları ve aşağıdaki sınıflar kullanarak öğeleri:  
+Bir Windows Communication Foundation (WCF) dağıtım hizmet geliştirirken akışları ve aşağıdaki sınıflar kullanarak öğeleri oluşturun:  
   
 -   <xref:System.ServiceModel.Syndication.SyndicationFeed>  
   
@@ -42,18 +30,18 @@ Geliştirirken bir [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] dağ�
   
 -   <xref:System.ServiceModel.Syndication.XmlSyndicationContent>  
   
- A <xref:System.ServiceModel.Syndication.SyndicationFeed> bir biçimlendirici tanımlanır tüm dağıtım biçiminde seri hale getirilebilir. [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]iki biçimlendiricileri ile birlikte gelir: <xref:System.ServiceModel.Syndication.Atom10FeedFormatter> ve <xref:System.ServiceModel.Syndication.Rss20FeedFormatter>.  
+ A <xref:System.ServiceModel.Syndication.SyndicationFeed> bir biçimlendirici tanımlanır tüm dağıtım biçiminde seri hale getirilebilir. WCF ile iki biçimlendiricileri gelir: <xref:System.ServiceModel.Syndication.Atom10FeedFormatter> ve <xref:System.ServiceModel.Syndication.Rss20FeedFormatter>.  
   
- Nesne modeli çevresinde <xref:System.ServiceModel.Syndication.SyndicationFeed> ve <xref:System.ServiceModel.Syndication.SyndicationItem> RSS 2.0 belirtimi daha Atom 1.0 belirtimiyle daha yakından hizalanır. Atom 1.0 belirsiz ya da RSS 2.0 belirtiminden belirtilmemişse öğeleri tanımlayan daha önemli bir belirtimi olmasıdır. Bu nedenle, birçok öğeleri [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] dağıtım nesnesi modeli sahip hiçbir doğrudan gösterimi RSS 2.0 belirtimi. Serileştirilirken <xref:System.ServiceModel.Syndication.SyndicationFeed> ve <xref:System.ServiceModel.Syndication.SyndicationItem> RSS 2.0 nesnelerine [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] Atom belirtimine uygun ad alanı tam genişletme öğeleri olarak Atom'a özgü veri öğeleri seri olanak tanır. Bunun için geçirilen parametre ile denetleyebilirsiniz <xref:System.ServiceModel.Syndication.Rss20FeedFormatter> Oluşturucusu.  
+ Nesne modeli çevresinde <xref:System.ServiceModel.Syndication.SyndicationFeed> ve <xref:System.ServiceModel.Syndication.SyndicationItem> RSS 2.0 belirtimi daha Atom 1.0 belirtimiyle daha yakından hizalanır. Atom 1.0 belirsiz ya da RSS 2.0 belirtiminden belirtilmemişse öğeleri tanımlayan daha önemli bir belirtimi olmasıdır. Bu nedenle, WCF dağıtım nesnesi modeli birçok öğeler hiçbir doğrudan gösterimi RSS 2.0 belirtiminde içerir. Serileştirilirken <xref:System.ServiceModel.Syndication.SyndicationFeed> ve <xref:System.ServiceModel.Syndication.SyndicationItem> nesneleri RSS 2.0 WCF Atom belirtimine uygun ad alanı tam genişletme öğeleri olarak Atom'a özgü veri öğeleri seri olanak tanır. Bunun için geçirilen parametre ile denetleyebilirsiniz <xref:System.ServiceModel.Syndication.Rss20FeedFormatter> Oluşturucusu.  
   
  Bu konuda kullanılan iki yöntemden birini kod örnekleri, burada fiili serileştirme yapmak için tanımlanan.  
   
- `SerializeFeed`Akış bir dağıtım serileştirir.  
+ `SerializeFeed` Akış bir dağıtım serileştirir.  
   
  [!code-csharp[SyndicationMapping#10](../../../../samples/snippets/csharp/VS_Snippets_CFX/syndicationmapping/cs/snippets.cs#10)]
  [!code-vb[SyndicationMapping#10](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/syndicationmapping/vb/snippets.vb#10)]  
   
- `SerializeItem`bir dağıtım öğesi serileştirir.  
+ `SerializeItem` bir dağıtım öğesi serileştirir.  
   
  [!code-csharp[SyndicationMapping#11](../../../../samples/snippets/csharp/VS_Snippets_CFX/syndicationmapping/cs/snippets.cs#11)]
  [!code-vb[SyndicationMapping#11](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/syndicationmapping/vb/snippets.vb#11)]  

@@ -1,30 +1,18 @@
 ---
-title: ".NET Framework'te Uygulama Uyumluluğu"
-ms.custom: 
+title: .NET Framework'te Uygulama Uyumluluğu
 ms.date: 05/19/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-- app-compat
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - application compatibility
 - .NET Framework application compatibility
 - .NET Framework changes
-caps.latest.revision: "19"
 ms.assetid: c4ba3ff2-fe59-4c5d-9e0b-86bba3cd865c
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 0144d75d7b158efb5ab205dfdd96884fb630eabc
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: b75429d0de69c60e7c24551bf1d9218e74d0c5ef
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="application-compatibility-in-the-net-framework"></a>.NET Framework'te Uygulama Uyumluluğu
 
@@ -39,7 +27,7 @@ Her uygulama belirli bir sürümü tarafından belirtilen .NET Framework'ün hed
 
 Ne hedeflenen daha yeni bir sürümü üzerinde çalışırken, .NET Framework hedeflenen sürümün taklit etmek üzere quirked davranışı kullanır. Diğer bir deyişle, uygulama Framework sürümü çalıştırın, ancak eski sürümünde çalışıyorsa gibi davranır. .NET Framework sürümleri arasındaki uyumluluk sorunları çoğunu bu quirking modeli aracılığıyla azalır.
 
-## <a name="runtime-changes"></a>Çalışma zamanı değişiklikleri
+## <a name="runtime-changes"></a>{1&gt;Çalışma zamanı değişiklikleri&lt;1}
 
 Çalışma zamanı sorunlarına yeni bir çalışma zamanı bir makinede yerleştirilir ve aynı ikili dosyaları çalıştırın, ancak farklı bir davranış görülen ortaya olanlardır. Bir ikili .NET Framework 4.0 için derlenmiş ise .NET Framework 4.0 uyumluluk modunda 4.5 veya sonraki sürümlerinde çalışır. 4.5 etkileyen değişiklikler çoğunu 4.0 için derlenmiş bir ikili etkilemez. Bu uygulama etki alanına özgü ve giriş derleme ayarlarına bağlıdır.
 

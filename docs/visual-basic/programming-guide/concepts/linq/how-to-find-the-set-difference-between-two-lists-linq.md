@@ -1,22 +1,12 @@
 ---
-title: "Nasıl yapılır: iki liste (LINQ) (Visual Basic) arasında ayarlanmış farkı bulma"
-ms.custom: 
+title: 'Nasıl yapılır: iki liste (LINQ) (Visual Basic) arasında ayarlanmış farkı bulma'
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: b5b25474-10a8-4df6-aab5-75621bb6b68e
-caps.latest.revision: "3"
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: 267e348ac528b210e25c5b8b6e01294a225bc48e
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.openlocfilehash: 77ff74788adddcd28e23028b034cd682f2d94233
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-find-the-set-difference-between-two-lists-linq-visual-basic"></a>Nasıl yapılır: iki liste (LINQ) (Visual Basic) arasında ayarlanmış farkı bulma
 Bu örnek LINQ listelerini dizeleri karşılaştırmak ve names1.txt ancak names2.txt olan satırlar çıkış için nasıl kullanılacağını gösterir.  

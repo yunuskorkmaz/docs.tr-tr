@@ -1,24 +1,14 @@
 ---
-title: "&lt;Namespace&gt; Öğesi (.NET Yerel)"
-ms.custom: 
+title: '&lt;Namespace&gt; Öğesi (.NET Yerel)'
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 57c614e5-18a9-4e87-bfd5-d0fe3396a192
-caps.latest.revision: "20"
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: ed448ea3af702706b45e27e923ebe540d83de868
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 108c27747e0b823f2315a914f8db3c8711fbb698
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="ltnamespacegt-element-net-native"></a>&lt;Namespace&gt; Öğesi (.NET Yerel)
 Belirtilen bir ad alanı içindeki tüm türler için çalışma zamanı yansıma ilke uygulanır.  
@@ -75,7 +65,7 @@ Belirtilen bir ad alanı içindeki tüm türler için çalışma zamanı yansım
 |Öğe|Açıklama|  
 |-------------|-----------------|  
 |`<Namespace>`|Bir üst ad alanı içindeki tüm türler için çalışma zamanı yansıma ilke uygulanır.|  
-|[\<Türü >](../../../docs/framework/net-native/type-element-net-native.md)|Yansıma ilke türü için geçerlidir.|  
+|[\<türü >](../../../docs/framework/net-native/type-element-net-native.md)|Yansıma ilke türü için geçerlidir.|  
 |[\<Typeınstantiation >](../../../docs/framework/net-native/typeinstantiation-element-net-native.md)|Yansıma ilke oluşturulan genel bir tür için geçerlidir.|  
   
 ### <a name="parent-elements"></a>Üst Öğeler  
@@ -83,7 +73,7 @@ Belirtilen bir ad alanı içindeki tüm türler için çalışma zamanı yansım
 |Öğe|Açıklama|  
 |-------------|-----------------|  
 |[\<Uygulama >](../../../docs/framework/net-native/application-element-net-native.md)|Uygulama çapında türleri ve tür üyeleri olan meta verilerini yansıma çalışma zamanında yüklenebilir için kapsayıcı görevi görür. [ \<Uygulama >](../../../docs/framework/net-native/application-element-net-native.md) öğesi sıfır, bir veya daha fazla olabilir [ \<derleme >](../../../docs/framework/net-native/assembly-element-net-native.md) öğeleri.|  
-|[\<Derleme >](../../../docs/framework/net-native/assembly-element-net-native.md)|Belirtilen derleme içindeki tüm türler için çalışma zamanı yansıma ilke uygulanır.|  
+|[\<derleme >](../../../docs/framework/net-native/assembly-element-net-native.md)|Belirtilen derleme içindeki tüm türler için çalışma zamanı yansıma ilke uygulanır.|  
 |[\<Kitaplık >](../../../docs/framework/net-native/library-element-net-native.md)|Türleri ve tür üyeleri olan meta verilerini yansıma çalışma zamanında yüklenebilir içeren derlemenin tanımlar. [ \<Kitaplığı >](../../../docs/framework/net-native/library-element-net-native.md) öğesi sıfır veya bir olabilir [ \<derleme >](../../../docs/framework/net-native/assembly-element-net-native.md) öğesi.|  
 |`<Namespace>`|Bir üst ad alanındaki tüm türleri yansıma ilke uygulanır.|  
   

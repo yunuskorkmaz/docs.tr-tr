@@ -1,28 +1,14 @@
 ---
 title: İzlemeyi Yapılandırma
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 helpviewer_keywords:
 - tracing [WCF]
 ms.assetid: 82922010-e8b3-40eb-98c4-10fc05c6d65d
-caps.latest.revision: 53
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 23dbf9808976496686dfe9d595487110da41730b
-ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
-ms.translationtype: MT
+ms.openlocfilehash: 2f84254a993df35ef999ee6cdd36c4f6b256a89f
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/30/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="configuring-tracing"></a>İzlemeyi Yapılandırma
 Bu konuda nasıl izlemeyi etkinleştirmek, izlemeleri ve kümesi izleme düzeyleri, kümesi Etkinlik izleme ve uçtan uca izleme bağıntı desteklemek için yayma yaymak üzere izleme kaynakları yapılandırabilir ve izlemeleri erişmek için izleme dinleyicileri ayarlama açıklanmaktadır.  
@@ -33,7 +19,7 @@ Bu konuda nasıl izlemeyi etkinleştirmek, izlemeleri ve kümesi izleme düzeyle
 >  Windows 8'de izleme günlükleri oluşturmak, uygulamanız için sırayla, uygulama yükseltilmiş (yönetici olarak çalıştır) çalıştırmanız gerekir.  
   
 ## <a name="enabling-tracing"></a>İzlemeyi etkinleştirme  
- [!INCLUDE[indigo1](../../../../../includes/indigo1-md.md)] Aşağıdaki Tanılama izleme verilerini çıkarır:  
+ Windows Communication Foundation (WCF) aşağıdaki tanılama izleme verilerini çıkarır:  
   
 -   Özel durumlar, uyarılar ve diğer önemli bir işleme olayları işlem kilometre taşları gibi işlem çağrıları uygulamalarının tüm bileşenleri arasında izlemelerini kodu.  
   

@@ -1,13 +1,6 @@
 ---
-title: "Özellik Animasyon Tekniklerine Genel Bakış"
-ms.custom: 
+title: Özellik Animasyon Tekniklerine Genel Bakış
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-wpf
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -16,16 +9,11 @@ helpviewer_keywords:
 - animation [WPF], properties [WPF], methods for
 - properties [WPF], methods for animating
 ms.assetid: 74f61413-f8c0-4e75-bf04-951886426c8b
-caps.latest.revision: "12"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 8ba7c580963214cdfede605f086b6b6c7ecb5657
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.openlocfilehash: 032a26788b9097461cb2270e251ca80c56c1c336
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="property-animation-techniques-overview"></a>Özellik Animasyon Tekniklerine Genel Bakış
 Bu konu özellikleri için farklı yaklaşımlara açıklar: film şeritleri, yerel animasyonları, saatler ve çerçeve başına animasyonları.  
@@ -42,7 +30,7 @@ Bu konu özellikleri için farklı yaklaşımlara açıklar: film şeritleri, ye
   
 |Animasyon tekniği|Senaryolar|XAML'i destekler|Etkileşimli olarak denetlenebilir|  
 |-------------------------|---------------|-------------------|--------------------------------|  
-|Film şeridi animasyon|Örnek başına, <xref:System.Windows.Style>, <xref:System.Windows.Controls.ControlTemplate>,<xref:System.Windows.DataTemplate>|Evet|Evet|  
+|Film şeridi animasyon|Örnek başına, <xref:System.Windows.Style>, <xref:System.Windows.Controls.ControlTemplate>, <xref:System.Windows.DataTemplate>|Evet|Evet|  
 |Yerel animasyon|Örnek başına|Hayır|Hayır|  
 |Saat animasyonu|Örnek başına|Hayır|Evet|  
 |Çerçeve başına animasyon|Örnek başına|Hayır|Yok|  
@@ -67,10 +55,10 @@ Bu konu özellikleri için farklı yaklaşımlara açıklar: film şeritleri, ye
   
 |Şeridi başlatılır kullanarak...|Örnek başına|Stil|Denetim şablonu|Veri şablonu|Örnek|  
 |--------------------------------|-------------------|-----------|----------------------|-------------------|-------------|  
-|<xref:System.Windows.Media.Animation.BeginStoryboard>ve bir<xref:System.Windows.EventTrigger>|Evet|Evet|Evet|Evet|[Görsel Taslak Kullanarak Özelliğe Animasyon Ekleme](../../../../docs/framework/wpf/graphics-multimedia/how-to-animate-a-property-by-using-a-storyboard.md)|  
-|<xref:System.Windows.Media.Animation.BeginStoryboard>ve bir özelliği<xref:System.Windows.Trigger>|Hayır|Evet|Evet|Evet|[Özellik Değeri Değiştiğinde bir Animasyonu Tetikleme](../../../../docs/framework/wpf/graphics-multimedia/how-to-trigger-an-animation-when-a-property-value-changes.md)|  
-|<xref:System.Windows.Media.Animation.BeginStoryboard>ve<xref:System.Windows.DataTrigger>|Hayır|Evet|Evet|Evet|[Nasıl yapılır: veriler değiştiğinde animasyon tetikleme](http://msdn.microsoft.com/library/a736bb3a-2ae5-479a-a33a-75a27055d863)|  
-|<xref:System.Windows.Media.Animation.Storyboard.Begin%2A>yöntemi|Evet|Hayır|Hayır|Hayır|[Görsel Taslak Kullanarak Özelliğe Animasyon Ekleme](../../../../docs/framework/wpf/graphics-multimedia/how-to-animate-a-property-by-using-a-storyboard.md)|  
+|<xref:System.Windows.Media.Animation.BeginStoryboard> ve bir <xref:System.Windows.EventTrigger>|Evet|Evet|Evet|Evet|[Görsel Taslak Kullanarak Özelliğe Animasyon Ekleme](../../../../docs/framework/wpf/graphics-multimedia/how-to-animate-a-property-by-using-a-storyboard.md)|  
+|<xref:System.Windows.Media.Animation.BeginStoryboard> ve bir özelliği <xref:System.Windows.Trigger>|Hayır|Evet|Evet|Evet|[Özellik Değeri Değiştiğinde bir Animasyonu Tetikleme](../../../../docs/framework/wpf/graphics-multimedia/how-to-trigger-an-animation-when-a-property-value-changes.md)|  
+|<xref:System.Windows.Media.Animation.BeginStoryboard> ve <xref:System.Windows.DataTrigger>|Hayır|Evet|Evet|Evet|[Nasıl yapılır: veriler değiştiğinde animasyon tetikleme](http://msdn.microsoft.com/library/a736bb3a-2ae5-479a-a33a-75a27055d863)|  
+|<xref:System.Windows.Media.Animation.Storyboard.Begin%2A> Yöntemi|Evet|Hayır|Hayır|Hayır|[Görsel Taslak Kullanarak Özelliğe Animasyon Ekleme](../../../../docs/framework/wpf/graphics-multimedia/how-to-animate-a-property-by-using-a-storyboard.md)|  
   
  Hakkında daha fazla bilgi için <xref:System.Windows.Media.Animation.Storyboard> nesneleri bkz [film şeritleri genel bakış](../../../../docs/framework/wpf/graphics-multimedia/storyboards-overview.md).  
   

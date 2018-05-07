@@ -1,31 +1,17 @@
 ---
 title: Meta Veriler
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - metadata [WCF]
 ms.assetid: 66a61bd0-18d3-4e7e-bf8b-177a10ac2f60
-caps.latest.revision: 
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 8e4b0a724653f5366d6da96f511fac9e62f64816
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 7ec0ba750a692d6f2c397fd565d855ac97b59073
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="metadata"></a>Meta Veriler
-[!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] Dışarı aktarma, yayımlama, alma ve hizmet meta verileri içe aktarma için bir altyapı sağlar. [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]Hizmetleri, böylece Svcutil.exe gibi araçları hizmete erişim için istemci kodu otomatik olarak oluşturabilir hizmetin uç ile etkileşim kurmak nasıl açıklamak için meta verileri kullanın.  
+Windows Communication Foundation (WCF) dışarı aktarma, yayımlama, alma ve hizmet meta verileri içe aktarma için bir altyapı sağlar. WCF hizmetleri meta verileri Svcutil.exe gibi araçları otomatik olarak hizmete erişim için istemci kodu oluşturabilmesi hizmetin uç ile etkileşim kurmayı açıklamak için kullanın.  
   
 ## <a name="in-this-section"></a>Bu Bölümde  
  [Meta Veri Mimarisine Genel Bakış](../../../../docs/framework/wcf/feature-details/metadata-architecture-overview.md)  
@@ -38,7 +24,7 @@ ms.lasthandoff: 12/22/2017
  Meta verileri içeri ve dışarı aktarmak açıklar.  
   
  [Meta Verileri Yayımlama](../../../../docs/framework/wcf/feature-details/publishing-metadata.md)  
- Açıklar nasıl [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] meta veriler yayımlar.  
+ WCF Meta verileri nasıl yayımlar açıklar.  
   
  [Meta Verileri Alma](../../../../docs/framework/wcf/feature-details/retrieving-metadata.md)  
  Meta verilerini almak için farklı yöntemler açıklanmaktadır.  

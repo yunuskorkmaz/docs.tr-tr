@@ -1,24 +1,12 @@
 ---
-title: "UDP Taşıma Kullanarak Çok Noktaya Yayın Yapan Uygulamalar Oluşturma"
-ms.custom: 
+title: UDP Taşıma Kullanarak Çok Noktaya Yayın Yapan Uygulamalar Oluşturma
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 7485154a-6e85-4a67-a9d4-9008e741d4df
-caps.latest.revision: "4"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 57c30c8b6b381be931789f3f64cbd26943bb2b34
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 84b36029416a66ef03768aed7d0c789a41eed8ef
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="creating-multicasting-applications-using-the-udp-transport"></a>UDP Taşıma Kullanarak Çok Noktaya Yayın Yapan Uygulamalar Oluşturma
 Çok noktaya yayın uygulamalar, noktadan noktaya bağlantılar kurmak zorunda kalmadan aynı anda çok sayıda alıcı küçük iletileri gönderir. Bu tür uygulamalar Vurgu güvenilirlik hızıdır. Diğer bir deyişle, belirli bir ileti gerçekte buluttaki sağlamak üzere daha güncel veri göndermek daha önemlidir. WCF artık destekliyor kullanarak çok noktaya yayın uygulamaları yazma <xref:System.ServiceModel.UdpBinding>. Bu aktarma, burada bir hizmet küçük iletilerini istemci sayısı için aynı anda göndermesi gerekir senaryolarda kullanışlıdır. Bu tür bir hizmet örneği bir borsa uygulamasıdır.  
@@ -102,7 +90,7 @@ while (true)
  Bu kod hisse bilgilerini oluşturur ve doğru UDP adresini dinlemesini Hizmetleri çağırmak için çok noktaya yayın iletileri göndermek için hizmet sözleşmesini IStockTicker kullanır.  
   
 ### <a name="udp-and-reliable-messaging"></a>UDP ve güvenilir Mesajlaşma  
- UDP bağlama UDP protokolünü basit gereği güvenilir Mesajlaşma desteklemez. İleti uzak uç noktası tarafından alındığında onaylamanız gerekir, örneğin HTTP veya TCP güvenilir Mesajlaşma destekleyen bir taşıma kullanın. Http://go.microsoft.com/fwlink/?LinkId=231830 güvenilir Mesajlaşma hakkında daha fazla bilgi için bkz:  
+ UDP bağlama UDP protokolünü basit gereği güvenilir Mesajlaşma desteklemez. İleti uzak uç noktası tarafından alındığında onaylamanız gerekir, örneğin HTTP veya TCP güvenilir Mesajlaşma destekleyen bir taşıma kullanın. Güvenilir Mesajlaşma bakın hakkında daha fazla bilgi için http://go.microsoft.com/fwlink/?LinkId=231830  
   
 ### <a name="two-way-multicast-messaging"></a>İki yönlü çok noktaya yayın iletileri  
  Çok noktaya yayın iletileri genellikle tek yönlü olsa da, UdpBinding istek/yanıt iletisi exchange desteklemiyor. UDP taşıma kullanarak gönderilen iletileri içeren iki From ve adresine. Kötü amaçlı olarak olabileceğinden KİMDEN adresini kullanarak tr yol değiştiğinde dikkatli olunması gerekir.  Aşağıdaki kodu kullanarak adresi denetlenebilir:  

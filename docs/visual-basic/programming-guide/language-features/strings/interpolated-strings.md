@@ -1,17 +1,13 @@
 ---
 title: Ara değerli dizeler (Visual Basic)
 ms.date: 10/31/2017
-ms.prod: .net
-ms.technology:
-- devlang-visual-basic
-ms.topic: article
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 9501c052f387a522226e957193a8866083aa4233
-ms.sourcegitcommit: 935d5267c44f9bce801468ef95f44572f1417e8c
+ms.openlocfilehash: 95f79c5cdff1a48da2bb0eaf92229570ced631b1
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/28/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="interpolated-strings-visual-basic-reference"></a>Ara değerli dizeler (Visual Basic Başvurusu)
 
@@ -61,7 +57,7 @@ Ara değerli bir dizeden üç örtük tür dönüşümleri vardır:
 
    Bu dize yorumlama son sonucudur. Çift süslü ayraçlar tüm oluşumlarını ("{{" ve "}}") için tek bir büyük ayraç dönüştürülür. 
 
-2. Ara değerli bir dizeye dönüştürme bir <xref:System.IFormattable> birden çok sonuç oluşturmanıza olanak değişkeni dizeleri tek bir kültüre özgü içerikle <xref:System.IFormattable> örneği. Bu, tek tek kültürler için doğru sayısal ve tarih biçimleri gibi şeyler dahil etmek için kullanışlıdır.  Çift süslü ayraçlar tüm oluşumlarını ("{{" ve "}}"), açıkça veya örtük çağırarak biçim dizesi kadar çift ayraç kalır <xref:System.Object.ToString> yöntemi.  {0}, {1} ve benzeri için tüm kapsanan ilişkilendirme ifadeleri dönüştürülür.  
+2. Ara değerli bir dizeye dönüştürme bir <xref:System.IFormattable> birden çok sonuç oluşturmanıza olanak değişkeni dizeleri tek bir kültüre özgü içerikle <xref:System.IFormattable> örneği. Bu, tek tek kültürler için doğru sayısal ve tarih biçimleri gibi şeyler dahil etmek için kullanışlıdır.  Çift süslü ayraçlar tüm oluşumlarını ("{{" ve "}}"), açıkça veya örtük çağırarak biçim dizesi kadar çift ayraç kalır <xref:System.Object.ToString> yöntemi.  Tüm kapsanan ilişkilendirme ifadeleri dönüştürülür {0}, {1}ve benzeri.  
 
    Aşağıdaki örnek, alan ve özellik değerlerini yanı sıra üyeleri görüntülemek için yansıma kullanır. bir <xref:System.IFormattable> Ara değerli bir dizeden oluşturulmuş değişkeni. Ayrıca geçirir <xref:System.IFormattable> değişkenini <xref:System.Console.WriteLine(System.String)?displayProperty=nameWithType> yöntemi.
 
@@ -77,7 +73,7 @@ Ara değerli bir dizeden üç örtük tür dönüşümleri vardır:
       
       - A <xref:System.FormattableString.ToString(System.IFormatProvider)> belirtilen kültür için bir sonuç dize üreten yöntem. 
   
-    Çift süslü ayraçlar tüm oluşumlarını ("{{" ve "}}"), format kadar çift ayraç kalır.  {0}, {1} ve benzeri için tüm kapsanan ilişkilendirme ifadeleri dönüştürülür.  
+    Çift süslü ayraçlar tüm oluşumlarını ("{{" ve "}}"), format kadar çift ayraç kalır.  Tüm kapsanan ilişkilendirme ifadeleri dönüştürülür {0}, {1}ve benzeri.  
 
    [!code-vb[interpolated-strings3](../../../../../samples/snippets/visualbasic/programming-guide/language-features/strings/interpolated-strings3.vb)]  
 

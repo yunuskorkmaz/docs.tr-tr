@@ -1,46 +1,32 @@
 ---
 title: AJAX Tümleştirme ve JSON Desteği
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 helpviewer_keywords:
 - AJAX integration and JSON support [WCF]
 ms.assetid: 3851a8fc-d861-4ac1-873c-96af0343d3a7
-caps.latest.revision: 17
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 0d62da8cf67fb8f996f341018c39146b51e308c3
-ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
+ms.openlocfilehash: 0b392044db3fbc926bf77ac305ece294880216d9
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/30/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="ajax-integration-and-json-support"></a>AJAX Tümleştirme ve JSON Desteği
-[!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] ASP.NET zaman uyumsuz JavaScript ve XML (AJAX) ve JavaScript nesne gösterimi (JSON) veri biçimi izin vermek için destek [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] AJAX istemcilere işlemlerinin açığa Hizmetleri. AJAX istemcileridir Web JavaScript kodunu çalıştıran ve bunlara erişme sayfaları [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] HTTP isteklerini kullanarak hizmetleri. Bu bölümdeki konular, bunu gerçekleştirme ve bu destek hakkında bilgi sağlar.  
+ASP.NET zaman uyumsuz JavaScript ve XML (AJAX) Windows Communication Foundation (WCF) desteği ve JavaScript nesne gösterimi (JSON) veri biçimi AJAX istemcilere işlemleri kullanıma sunmak WCF hizmetleri sağlar. AJAX, Web JavaScript kodunu çalıştıran ve HTTP isteklerini kullanarak bu WCF hizmetlerine erişme sayfaları istemcileridir. Bu bölümdeki konular, bunu gerçekleştirme ve bu destek hakkında bilgi sağlar.  
   
  ASP.NET AJAX hakkında daha fazla bilgi ve ASP.NET 2.0 ile tümleştirmesi için bkz: [ASP.NET AJAX genel bakış](http://go.microsoft.com/fwlink/?LinkId=96725).  
   
 ## <a name="in-this-section"></a>Bu Bölümde  
  [ASP.NET AJAX için WCF Hizmetleri Oluşturma](../../../../docs/framework/wcf/feature-details/creating-wcf-services-for-aspnet-ajax.md)  
- Açıklar nasıl bir [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] hizmet ortaya AJAX istemcilere hizmet ana bilgisayar üreteci kullanarak veya yapılandırma aracılığıyla özelleştirilmiş AJAX uç noktası otomatik olarak yapılandırır hizmet ana bilgisayarını oluşturmak için uygun AJAX uç noktası ekleyerek.  
+ Nasıl bir WCF Hizmeti AJAX istemcilerine uygun AJAX uç noktası ya da yapılandırma yoluyla ekleyerek veya AJAX uç noktası otomatik olarak yapılandırır hizmet ana bilgisayarını oluşturmak için özelleştirilmiş bir hizmet ana bilgisayar üreteci kullanarak verilebilen açıklar.  
   
  [ASP.NET Olmadan WCF AJAX Hizmetleri Oluşturma](../../../../docs/framework/wcf/feature-details/creating-wcf-ajax-services-without-aspnet.md)  
- Nasıl oluşturulacağını açıklar bir [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] ASP.NET kullanmadan hizmet.  
+ ASP.NET kullanmadan bir WCF Hizmeti oluşturmayı açıklar.  
   
  [JSON ve Diğer Veri Aktarma Biçimleri için Destek](../../../../docs/framework/wcf/feature-details/support-for-json-and-other-data-transfer-formats.md)  
  ASP.NET AJAX Hizmetleri ile ileti için genellikle kullanılan (XML yerine) JSON biçimine desteğini açıklar.  
   
  [Nasıl yapılır: AJAX Etkinleştirilmiş ASP.NET Web Hizmetlerini WCF'ye Taşıma](../../../../docs/framework/wcf/feature-details/how-to-migrate-ajax-enabled-aspnet-web-services-to-wcf.md)  
- Bir AJAX etkinleştirilmiş ASP.NET Web Service'e geçirme açıklanmaktadır bir [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] Web hizmeti.  
+ Bir WCF Web hizmeti için bir AJAX etkinleştirilmiş ASP.NET Web hizmeti geçirmeyi açıklar.  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
  <xref:System.ServiceModel.Activation.WebScriptServiceHostFactory>  

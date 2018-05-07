@@ -1,37 +1,23 @@
 ---
-title: "Nasıl yapılır: SystemParameters Kullanma"
-ms.custom: 
+title: 'Nasıl yapılır: SystemParameters Kullanma'
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-wpf
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
 helpviewer_keywords:
 - classes [WPF], SystemParameters
 ms.assetid: 02e7a5de-94eb-4953-b91c-52e6c872ad5b
-caps.latest.revision: 
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: ec333fbc30374ff6f8e2e7674ab332644ff7aad0
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 07b73d78a022e508f9ed8ca2e80b71bc2ab89910
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-use-systemparameters"></a>Nasıl yapılır: SystemParameters Kullanma
 Bu örnek erişmek ve özelliklerini kullanmak üzere nasıl gösterir <xref:System.Windows.SystemParameters> stil veya bir düğmeyi özelleştirmek için.  
   
 ## <a name="example"></a>Örnek  
- Kaynaklarınızı görselleri oluşturmanıza yardımcı olması için sistem ayarları ile tutarlı olarak sistem kaynaklarını birkaç sistem tabanlı ayarları kullanıma sunar. <xref:System.Windows.SystemParameters>hem sistem parametre değeri özelliklerini hem de değerlere bağlanan kaynak anahtarları içeren bir sınıftır. Örneğin, <xref:System.Windows.SystemParameters.FullPrimaryScreenHeight%2A> olan bir <xref:System.Windows.SystemParameters> özellik değeri ve <xref:System.Windows.SystemParameters.FullPrimaryScreenHeightKey%2A> karşılık gelen kaynak anahtarı.  
+ Kaynaklarınızı görselleri oluşturmanıza yardımcı olması için sistem ayarları ile tutarlı olarak sistem kaynaklarını birkaç sistem tabanlı ayarları kullanıma sunar. <xref:System.Windows.SystemParameters> hem sistem parametre değeri özelliklerini hem de değerlere bağlanan kaynak anahtarları içeren bir sınıftır. Örneğin, <xref:System.Windows.SystemParameters.FullPrimaryScreenHeight%2A> olan bir <xref:System.Windows.SystemParameters> özellik değeri ve <xref:System.Windows.SystemParameters.FullPrimaryScreenHeightKey%2A> karşılık gelen kaynak anahtarı.  
   
  İçinde [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)], üyeleri kullanabilir <xref:System.Windows.SystemParameters> olarak bir statik özellik kullanımı veya dinamik kaynak başvurular (statik özellik değeri ile anahtar olarak). Uygulama çalışırken otomatik olarak güncelleştirmek için temel sistem değeri isterseniz, dinamik kaynak başvurusu kullanmak çalışır; Aksi halde, statik başvuru kullanın. Kaynak anahtarlara sahip soneki `Key` özellik adı eklenir.  
   

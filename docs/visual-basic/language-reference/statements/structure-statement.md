@@ -1,11 +1,6 @@
 ---
-title: "Structure Yapısı"
+title: Structure Yapısı
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
-ms.topic: article
 f1_keywords:
 - vb.Structure
 - Structure
@@ -17,14 +12,11 @@ helpviewer_keywords:
 - UDT (user-defined types)
 - types [Visual Basic], user-defined
 ms.assetid: 9bd1deea-2a89-4cdc-812c-6dcbb947c391
-caps.latest.revision: "28"
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: 43211bb10793acf3bfe0c1d7a35791114170ee7d
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 6a3626706b226b0be253fd35fa60b33a71b86007
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="structure-statement"></a>Structure Yapısı
 Bir yapı adını bildirir ve tanımını değişkenleri, özellikleri, olayları ve yapısı oluşur yordamları sunar.  
@@ -74,7 +66,7 @@ End Structure
   
      Sıfır veya daha fazla paylaşılmayan değişkenleri ya da bir yapı paylaşılmayan de olaylar bildirebilirsiniz. Bunlardan bazıları paylaşılmayan olsa bile, yalnızca sabitleri, özellikleri ve yordamları, sahip olamaz.  
   
--   **Başlatma.** Herhangi bir yapı bildiriminden bir parçası olarak paylaşılmayan veri üyesi değerini başlatılamıyor. Parametreli Oluşturucusu yapısına yoluyla böyle bir veri üyesi başlatmak, veya yapısı örneği oluşturduktan sonra üyesine bir değere atayın.  
+-   **başlatma.** Herhangi bir yapı bildiriminden bir parçası olarak paylaşılmayan veri üyesi değerini başlatılamıyor. Parametreli Oluşturucusu yapısına yoluyla böyle bir veri üyesi başlatmak, veya yapısı örneği oluşturduktan sonra üyesine bir değere atayın.  
   
 -   **Devralma.** Bir yapı herhangi bir türünden dışında devral olamaz <xref:System.ValueType>, hangi tüm yapıları devral gelen. Özellikle, bir yapı başka bir devralma olamaz.  
   
@@ -112,13 +104,13 @@ End Structure
  [!code-vb[VbVbalrStatements#57](../../../visual-basic/language-reference/error-messages/codesnippet/VisualBasic/structure-statement_1.vb)]  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [Class deyimi](../../../visual-basic/language-reference/statements/class-statement.md)  
- [Interface deyimi](../../../visual-basic/language-reference/statements/interface-statement.md)  
- [Module deyimi](../../../visual-basic/language-reference/statements/module-statement.md)  
- [Dim deyimi](../../../visual-basic/language-reference/statements/dim-statement.md)  
- [Const deyimi](../../../visual-basic/language-reference/statements/const-statement.md)  
- [Enum deyimi](../../../visual-basic/language-reference/statements/enum-statement.md)  
- [Event deyimi](../../../visual-basic/language-reference/statements/event-statement.md)  
- [Operator deyimi](../../../visual-basic/language-reference/statements/operator-statement.md)  
- [Property deyimi](../../../visual-basic/language-reference/statements/property-statement.md)  
- [Yapılar ve sınıflar](../../../visual-basic/programming-guide/language-features/data-types/structures-and-classes.md)
+ [Class Deyimi](../../../visual-basic/language-reference/statements/class-statement.md)  
+ [Interface Deyimi](../../../visual-basic/language-reference/statements/interface-statement.md)  
+ [Module Deyimi](../../../visual-basic/language-reference/statements/module-statement.md)  
+ [Dim Deyimi](../../../visual-basic/language-reference/statements/dim-statement.md)  
+ [Const Deyimi](../../../visual-basic/language-reference/statements/const-statement.md)  
+ [Enum Deyimi](../../../visual-basic/language-reference/statements/enum-statement.md)  
+ [Event Deyimi](../../../visual-basic/language-reference/statements/event-statement.md)  
+ [Operator Deyimi](../../../visual-basic/language-reference/statements/operator-statement.md)  
+ [Property Deyimi](../../../visual-basic/language-reference/statements/property-statement.md)  
+ [Yapılar ve Sınıflar](../../../visual-basic/programming-guide/language-features/data-types/structures-and-classes.md)

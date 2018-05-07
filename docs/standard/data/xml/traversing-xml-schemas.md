@@ -1,30 +1,19 @@
 ---
-title: "XML şemaları çapraz geçiş yapma"
-ms.custom: 
+title: XML şemaları çapraz geçiş yapma
 ms.date: 03/30/2017
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
 ms.technology: dotnet-standard
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
 - cpp
 ms.assetid: cce69574-5861-4a30-b730-2e18d915d8ee
-caps.latest.revision: "2"
 author: mairaw
 ms.author: mairaw
-manager: wpickett
-ms.workload:
-- dotnet
-- dotnetcore
-ms.openlocfilehash: ceca36b5e988751dff34b5574978aa0ae2da1259
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: b02fd72c705d264394b83b89fc7ec802be7e502a
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="traversing-xml-schemas"></a>XML şemaları çapraz geçiş yapma
 Şema nesne modeli (SOM) API kullanarak bir XML Şeması geçiş öğeleri, öznitelikleri ve SOM. depolanan türleri erişim sağlar Bir XML çapraz geçiş yapan SOM yüklenen şema ayrıca SOM API kullanarak bir XML şeması düzenleme ilk adımdır.  
@@ -38,11 +27,11 @@ ms.lasthandoff: 12/23/2017
 |<xref:System.Xml.Schema.XmlSchema.Attributes%2A>|<xref:System.Xml.Schema.XmlSchemaAttribute>|  
 |<xref:System.Xml.Schema.XmlSchema.AttributeGroups%2A>|<xref:System.Xml.Schema.XmlSchemaAttributeGroup>|  
 |<xref:System.Xml.Schema.XmlSchema.Groups%2A>|<xref:System.Xml.Schema.XmlSchemaGroup>|  
-|<xref:System.Xml.Schema.XmlSchema.Includes%2A>|<xref:System.Xml.Schema.XmlSchemaExternal>, <xref:System.Xml.Schema.XmlSchemaInclude>, <xref:System.Xml.Schema.XmlSchemaImport>, veya<xref:System.Xml.Schema.XmlSchemaRedefine>|  
-|<xref:System.Xml.Schema.XmlSchema.Items%2A>|<xref:System.Xml.Schema.XmlSchemaObject>(tüm genel düzey öğeleri, öznitelikleri ve türleri erişim sağlar).|  
+|<xref:System.Xml.Schema.XmlSchema.Includes%2A>|<xref:System.Xml.Schema.XmlSchemaExternal>, <xref:System.Xml.Schema.XmlSchemaInclude>, <xref:System.Xml.Schema.XmlSchemaImport>, veya <xref:System.Xml.Schema.XmlSchemaRedefine>|  
+|<xref:System.Xml.Schema.XmlSchema.Items%2A>|<xref:System.Xml.Schema.XmlSchemaObject> (tüm genel düzey öğeleri, öznitelikleri ve türleri erişim sağlar).|  
 |<xref:System.Xml.Schema.XmlSchema.Notations%2A>|<xref:System.Xml.Schema.XmlSchemaNotation>|  
 |<xref:System.Xml.Schema.XmlSchema.SchemaTypes%2A>|<xref:System.Xml.Schema.XmlSchemaType>, <xref:System.Xml.Schema.XmlSchemaSimpleType>, <xref:System.Xml.Schema.XmlSchemaComplexType>|  
-|<xref:System.Xml.Schema.XmlSchema.UnhandledAttributes%2A>|<xref:System.Xml.XmlAttribute>(şema ad alanına ait olmayan öznitelikler için erişim sağlayan)|  
+|<xref:System.Xml.Schema.XmlSchema.UnhandledAttributes%2A>|<xref:System.Xml.XmlAttribute> (şema ad alanına ait olmayan öznitelikler için erişim sağlayan)|  
   
 > [!NOTE]
 >  Yukarıdaki tabloda listelenen tüm özellikleri dışında <xref:System.Xml.Schema.XmlSchema.Items%2A> özelliği, şema derlenmiş kadar bulunmayan sonrası-Schema-derleme-bilgi (PSCI) özelliklerdir. <xref:System.Xml.Schema.XmlSchema.Items%2A> Şema erişmek ve tüm genel düzey öğeleri, öznitelikleri ve türleri düzenlemek için derlenmiş önce kullanılabilir bir öncesi schema derleme özelliği bir özelliktir.  

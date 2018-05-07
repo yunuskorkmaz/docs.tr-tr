@@ -1,11 +1,6 @@
 ---
 title: SyncLock Deyimi
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
-ms.topic: article
 f1_keywords:
 - vb.SyncLock
 - SyncLock
@@ -14,14 +9,11 @@ helpviewer_keywords:
 - SyncLock statement [Visual Basic]
 - locks, threads
 ms.assetid: 14501703-298f-4d43-b139-c4b6366af176
-caps.latest.revision: "17"
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: c363b41bb7a409c490a6e07d4a1a4f1bb44c1438
-ms.sourcegitcommit: 34ec7753acf76f90a0fa845235ef06663dc9e36e
+ms.openlocfilehash: cf2aad9ec2ba67200d175fbcddfcb49afeac6efc
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="synclock-statement"></a>SyncLock Deyimi
 Özel bir kilit deyimi bloğu için blok yürütmeden önce devralır.  
@@ -45,7 +37,7 @@ End SyncLock
  Sonlandırır bir `SyncLock` bloğu.  
   
 ## <a name="remarks"></a>Açıklamalar  
- `SyncLock` Deyimi sağlar birden çok iş parçacığı aynı anda deyimi blok yürütülmez. `SyncLock`Her iş parçacığı, başka bir iş parçacığı, yürütülmekte olduğu kadar blok geçmesini engeller.  
+ `SyncLock` Deyimi sağlar birden çok iş parçacığı aynı anda deyimi blok yürütülmez. `SyncLock` Her iş parçacığı, başka bir iş parçacığı, yürütülmekte olduğu kadar blok geçmesini engeller.  
   
  En yaygın kullanımı `SyncLock` verileri birden çok iş parçacığı tarafından eşzamanlı olarak güncelleştirilmesini korumaktır. Verileri işlemek deyimleri kesintisiz tamamlama gerekir giderseniz, bunları içine yerleştirin bir `SyncLock` bloğu.  
   

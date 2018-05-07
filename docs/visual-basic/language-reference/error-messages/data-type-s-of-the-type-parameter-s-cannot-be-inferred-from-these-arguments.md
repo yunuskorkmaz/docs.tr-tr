@@ -1,11 +1,6 @@
 ---
-title: "Bu bağımsız değişkenlerden tür parametrelerinin veri türleri çıkarılamıyor"
+title: Bu bağımsız değişkenlerden tür parametrelerinin veri türleri çıkarılamıyor
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
-ms.topic: article
 f1_keywords:
 - bc36644
 - bc36647
@@ -15,14 +10,11 @@ helpviewer_keywords:
 - BC36644
 - BC36647
 ms.assetid: 0e0050f2-2039-4311-b260-f0ebfde84189
-caps.latest.revision: "6"
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: b290c25286dce2236823919e8287db9abefc0dd7
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 6f84df5c9388220e5ca817d95362753df0920534
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="data-types-of-the-type-parameters-cannot-be-inferred-from-these-arguments"></a>Bu bağımsız değişkenlerden tür parametrelerinin veri türleri çıkarılamıyor
 Bu bağımsız değişkenlerden tür parametrelerinin veri türleri çıkarılamıyor. Verileri belirten türlerini açıkça bu hatayı düzeltmek.  
@@ -65,6 +57,6 @@ End Interface
 -   Tür parametresi veya tür çıkarımı kalmak yerine parametreleri için bir veri türü belirtmek mümkün olabilir.  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [Gevşek temsilci dönüşümü](../../../visual-basic/programming-guide/language-features/delegates/relaxed-delegate-conversion.md)  
+ [Gevşek Temsilci Dönüştürme](../../../visual-basic/programming-guide/language-features/delegates/relaxed-delegate-conversion.md)  
  [Visual Basic'de genel yordamlar](../../../visual-basic/programming-guide/language-features/data-types/generic-procedures.md)  
  [Visual Basic'de tür dönüştürmeleri](../../../visual-basic/programming-guide/language-features/data-types/type-conversions.md)

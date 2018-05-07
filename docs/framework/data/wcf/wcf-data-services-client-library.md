@@ -1,31 +1,19 @@
 ---
-title: "WCF Veri Hizmetleri İstemci Kitaplığı"
-ms.custom: 
+title: WCF Veri Hizmetleri İstemci Kitaplığı
 ms.date: 03/30/2017
-ms.prod: .net-framework-oob
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - WCF Data Services, client library
 - DataServiceQuery class, about DataServiceQuery class
 - DataServiceContext class, about DataServiceContext class
 ms.assetid: 21075e50-8917-413e-a8ea-35a0f6e65aa5
-caps.latest.revision: "4"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 8e8f5626ab7439b34377ba0200fd232c41017652
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 95ca3ab8768b59b52640cfd17d230a544a8b2052
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="wcf-data-services-client-library"></a>WCF Veri Hizmetleri İstemci Kitaplığı
-Herhangi bir uygulama ile etkileşim kurabilen bir [!INCLUDE[ssODataFull](../../../../includes/ssodatafull-md.md)]-bir HTTP isteği ve işlem gönderirseniz, veri hizmeti temel [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] akış veri hizmeti döndürür. Bu birlikte çalışabilirlik erişmenizi sağlayan [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)]-geniş bir aralık, Web özellikli uygulamalar Hizmetleri'nden tabanlı. [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)]daha zengin bir programlama deneyimi, kullandığında sağlayan istemci kitaplıklarını içerir [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] akışları .NET Framework veya Silverlight tabanlı uygulamalar.  
+Herhangi bir uygulama ile etkileşim kurabilen bir [!INCLUDE[ssODataFull](../../../../includes/ssodatafull-md.md)]-bir HTTP isteği ve işlem gönderirseniz, veri hizmeti temel [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] akış veri hizmeti döndürür. Bu birlikte çalışabilirlik erişmenizi sağlayan [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)]-geniş bir aralık, Web özellikli uygulamalar Hizmetleri'nden tabanlı. [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] daha zengin bir programlama deneyimi, kullandığında sağlayan istemci kitaplıklarını içerir [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] akışları .NET Framework veya Silverlight tabanlı uygulamalar.  
   
  İki ana sınıflardır istemci kitaplığının <xref:System.Data.Services.Client.DataServiceContext> sınıfı ve <xref:System.Data.Services.Client.DataServiceQuery%601> sınıfı. <xref:System.Data.Services.Client.DataServiceContext> Sınıfı karşı belirtilen veri hizmeti desteklenen işlemler yalıtır. Ancak [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] Hizmetleri durum bilgisiz, içeriği değil. Bu nedenle, kullanabileceğiniz <xref:System.Data.Services.Client.DataServiceContext> değişiklik yönetimi gibi özellikleri desteklemek için veri hizmeti ile etkileşim arasında istemci durumunu korumak üzere sınıfı. Bu sınıf ayrıca kimlikleri yöneten ve değişiklikleri izler. <xref:System.Data.Services.Client.DataServiceQuery%601> Sınıfı, bir sorgu belirli varlık kümesini temsil eder.  
   

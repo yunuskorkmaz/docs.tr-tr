@@ -1,18 +1,12 @@
 ---
-title: "Dil özellikleri ve kitaplık türleri arasındaki ilişkiyi | Microsoft Docs"
-description: "Dil özellikleri genellikle uygulama kitaplığı türlerinde kullanır. Bu ilişki anlayın."
-keywords: "C# dil tasarımında, standart kitaplığı"
-author: billwagner
-ms.author: wiwagn
+title: Dil özellikleri ve kitaplık türleri arasındaki ilişkiyi | Microsoft Docs
+description: Dil özellikleri genellikle uygulama kitaplığı türlerinde kullanır. Bu ilişki anlayın.
 ms.date: 07/20/2017
-ms.topic: article
-ms.prod: .net
-ms.devlang: devlang-csharp
-ms.openlocfilehash: b7de4fdb4356e8822dba6aaaf67d615980ff09cd
-ms.sourcegitcommit: 2142a4732bb4ff519b9817db4c24a237b9810d4b
+ms.openlocfilehash: dfae7972af0a251a92700d7d33bd6f971eb1870e
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/05/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="relationships-between-language-features-and-library-types"></a>Dil özellikleri ve kitaplık türleri arasındaki ilişkileri
 
@@ -20,9 +14,9 @@ C# dili tanımı belirli türleri ve belirli erişilebilir üyeleri bu türlerin
 
 Bu bağımlılık standart kitaplığı işlevselliği, ilk sürümünden bu yana C# dili parçası olmuştur. Bu sürümde, dahil edilen örnekler:
 
-* <xref:System.Exception>-Tüm derleyici oluşturulan özel durumlar için kullanılır.
-* <xref:System.String>-C# `string` türüdür eşanlamlısı <xref:System.String>.
-* <xref:System.Int32>-, eş anlamlı `int`.
+* <xref:System.Exception> -Tüm derleyici oluşturulan özel durumlar için kullanılır.
+* <xref:System.String> -C# `string` türüdür eşanlamlısı <xref:System.String>.
+* <xref:System.Int32> -, eş anlamlı `int`.
 
 Bu ilk sürüm basit: derleyicisi ve standart kitaplığı sevk birlikte ve her yalnızca bir sürümü vardı.
 

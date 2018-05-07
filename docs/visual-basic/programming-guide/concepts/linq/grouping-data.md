@@ -1,22 +1,12 @@
 ---
-title: "Gruplandırma veri (Visual Basic)"
-ms.custom: 
+title: Gruplandırma veri (Visual Basic)
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 8f3a0871-6958-4aef-8f6f-493e189fd57d
-caps.latest.revision: "3"
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: 5f2e5c4c4713f1056f1eb2243f27e5acf0494542
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: e2732c91dfff65ebb86ef45296ba369c3073a8f1
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="grouping-data-visual-basic"></a>Gruplandırma veri (Visual Basic)
 Gruplandırma, böylece her grup içindeki öğeleri ortak bir özniteliği paylaşan gruplar halinde veri koyma işlemi için ifade eder.  
@@ -29,7 +19,7 @@ Gruplandırma, böylece her grup içindeki öğeleri ortak bir özniteliği payl
   
 ## <a name="methods"></a>Yöntemler  
   
-|Yöntem adı|Açıklama|Visual Basic sorgu ifade sözdizimi|Daha Fazla Bilgi|  
+|Yöntem adı|Açıklama|Visual Basic sorgu ifade sözdizimi|Daha fazla bilgi|  
 |-----------------|-----------------|------------------------------------------|----------------------|  
 |GroupBy|Ortak bir özniteliği paylaşan grupları öğeleri. Her grubu tarafından temsil edilen bir <xref:System.Linq.IGrouping%602> nesnesi.|`Group … By … Into …`|<xref:System.Linq.Enumerable.GroupBy%2A?displayProperty=nameWithType><br /><br /> <xref:System.Linq.Queryable.GroupBy%2A?displayProperty=nameWithType>|  
 |ToLookup|Elemanlara ekler bir <xref:System.Linq.Lookup%602> (bir-çok sözlük) dayalı bir anahtar Seçici işlevdir.|Yok.|<xref:System.Linq.Enumerable.ToLookup%2A?displayProperty=nameWithType>|  
@@ -75,6 +65,6 @@ MsgBox(sb.ToString())
 ## <a name="see-also"></a>Ayrıca Bkz.  
  <xref:System.Linq>  
  [Standart sorgu işleçlerine genel bakış (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/standard-query-operators-overview.md)  
- [Group By tümcesi](../../../../visual-basic/language-reference/queries/group-by-clause.md)  
+ [Group By Yan Tümcesi](../../../../visual-basic/language-reference/queries/group-by-clause.md)  
  [Nasıl yapılır: dosyaları uzantıya (LINQ) (Visual Basic) göre gruplama](../../../../visual-basic/programming-guide/concepts/linq/how-to-group-files-by-extension-linq.md)  
  [Nasıl yapılır: bir dosya grupları (LINQ) (Visual Basic) kullanarak birden çok dosyaya bölme](../../../../visual-basic/programming-guide/concepts/linq/how-to-split-a-file-into-many-files-by-using-groups-linq.md)

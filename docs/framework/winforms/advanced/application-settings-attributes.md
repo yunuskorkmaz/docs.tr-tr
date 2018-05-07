@@ -1,28 +1,16 @@
 ---
-title: "Uygulama Ayarları Öznitelikleri"
-ms.custom: 
+title: Uygulama Ayarları Öznitelikleri
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-winforms
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - application settings [Windows Forms], attributes
 - attributes [Windows Forms], application settings
 - wrapper classes [Windows Forms], application settings
 ms.assetid: 53caa66c-a9fb-43a5-953c-ad092590098d
-caps.latest.revision: "7"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: b2ed0a0393f505d0126508e574b1cd9abe138866
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.openlocfilehash: d52549546bc838d8d38da33b9bb9931488795064
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="application-settings-attributes"></a>Uygulama Ayarları Öznitelikleri
 Uygulama ayarları mimarisi uygulamaları ayarları sarmalayıcı sınıfı veya tek tek özellikleri uygulanabilir birçok öznitelikleri sağlar. Bu öznitelikler çalışma zamanında uygulama ayarları altyapısı tarafından genellikle özellikle ayarları sağlayıcısı çalışan kendi özel sarmalayıcı belirtilen gereksinimlerine uyarlamak için incelenir.  

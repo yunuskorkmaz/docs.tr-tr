@@ -1,18 +1,12 @@
 ---
-title: "Yansıma (C#)"
+title: Yansıma (C#)
 ms.date: 07/20/2015
-ms.prod: .net
-ms.technology: devlang-csharp
-ms.topic: article
 ms.assetid: f80a2362-953b-4e8e-9759-cd5f334190d4
-caps.latest.revision: "3"
-author: BillWagner
-ms.author: wiwagn
-ms.openlocfilehash: 68a586fd8a8a8fbe6e351efa3e51c5ba1d2ff4d7
-ms.sourcegitcommit: 685143b62385500f59bc36274b8adb191f573a16
+ms.openlocfilehash: fc5c3f6af1a089d824289a55f6781e887b7cfc56
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/09/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="reflection-c"></a>Yansıma (C#)
 Yansıma nesneleri sağlar (tür <xref:System.Type>) derlemeler, modüller ve türleri açıklanmaktadır. Yansıma dinamik olarak bir türünün bir örneği oluşturmak, var olan bir nesne için bağ türü veya varolan bir nesneden türünü almak ve onun yöntemleri çağırma veya özellikleri ve alanları erişim için kullanabilirsiniz. Kodunuzda öznitelikleri kullanıyorsanız, yansıma erişmesine olanak sağlar. Daha fazla bilgi için bkz: [öznitelikleri](../../../../docs/standard/attributes/index.md).  
@@ -61,14 +55,14 @@ System.Console.WriteLine(info);
   
 -   [Yansıma](../../../framework/reflection-and-codedom/reflection.md)  
   
--   [Tür bilgilerini görüntüleme](../../../framework/reflection-and-codedom/viewing-type-information.md)  
+-   [Tür Bilgilerini Görüntüleme](../../../framework/reflection-and-codedom/viewing-type-information.md)  
   
--   [Yansıma ve genel türler](../../../framework/reflection-and-codedom/reflection-and-generic-types.md)  
+-   [Yansıma ve Genel Türler](../../../framework/reflection-and-codedom/reflection-and-generic-types.md)  
   
 -   <xref:System.Reflection.Emit>  
   
--   [Özniteliklerde depolanan bilgileri alma](../../../standard/attributes/retrieving-information-stored-in-attributes.md)  
+-   [Özniteliklerde Depolanan Bilgileri Alma](../../../standard/attributes/retrieving-information-stored-in-attributes.md)  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [C# programlama kılavuzu](../../../csharp/programming-guide/index.md)  
- [Ortak dil çalışma zamanı derlemeleri](../../../../docs/framework/app-domains/assemblies-in-the-common-language-runtime.md)
+ [C# Programlama Kılavuzu](../../../csharp/programming-guide/index.md)  
+ [Ortak Dil Çalışma Zamanı Modülündeki Bütünleştirilmiş Kodlar](../../../../docs/framework/app-domains/assemblies-in-the-common-language-runtime.md)

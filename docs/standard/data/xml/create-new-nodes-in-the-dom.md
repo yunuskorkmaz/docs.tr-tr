@@ -1,26 +1,15 @@
 ---
-title: "Yeni düğümler DOM'da oluşturma"
-ms.custom: 
+title: Yeni düğümler DOM'da oluşturma
 ms.date: 03/30/2017
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
 ms.technology: dotnet-standard
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 6c2b9789-b61a-49f9-b33f-db01a945edf2
-caps.latest.revision: "4"
 author: mairaw
 ms.author: mairaw
-manager: wpickett
-ms.workload:
-- dotnet
-- dotnetcore
-ms.openlocfilehash: 195c0f8184bbbd84826def87ce74daa49965cb93
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: bbc8d6c1055afc1a0799522f341551d04bab4ace
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="create-new-nodes-in-the-dom"></a>Yeni düğümler DOM'da oluşturma
 <xref:System.Xml.XmlDocument> Tüm düğüm türü için create yöntemi vardır. Gerekli olduğunda bir adla yöntemi sağlayın ve içerik veya içeriğe (örneğin, bir metin düğümü) sahip düğümleri ve düğüm için başka parametre oluşturulur. Aşağıdaki yöntemler, bir ada ihtiyacınız olanları ve uygun bir düğüm oluşturmak için doldurulmuş birkaç diğer parametreleri yöneliktir.  

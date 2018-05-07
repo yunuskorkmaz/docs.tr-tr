@@ -1,32 +1,18 @@
 ---
 title: İşlemsel Uygulamaları Tanılama
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 ms.assetid: 4a993492-1088-4d10-871b-0c09916af05f
-caps.latest.revision: 8
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 5b8171f382812480078b76588089871233bdf9ca
-ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
+ms.openlocfilehash: 4fa85fea0651d7a31c5a50bbc9c1226421b976b7
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/30/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="diagnosing-transactional-applications"></a>İşlemsel Uygulamaları Tanılama
-Bu konuda nasıl kullanılacağını açıklar [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] işlem uygulamada sorun gidermek için yönetim ve tanılama özelliği.  
+Bu konu Windows Communication Foundation (WCF) yönetim ve Tanılama özelliğini işlem uygulamada sorun gidermek için nasıl kullanılacağını açıklar.  
   
 ## <a name="performance-counters"></a>Performans Sayaçları  
- [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] performans sayaçları, işlem uygulamanızın performansını ölçmek standart bir dizi sağlar. Daha fazla bilgi için bkz: [performans sayaçları](../../../../docs/framework/wcf/diagnostics/performance-counters/index.md).  
+ WCF performans sayaçları, işlem uygulamanızın performansını ölçmek standart bir dizi sağlar. Daha fazla bilgi için bkz: [performans sayaçları](../../../../docs/framework/wcf/diagnostics/performance-counters/index.md).  
   
  Performans sayaçları üç farklı düzeylere kapsamlı: Hizmet, uç nokta ve işlem, aşağıdaki tabloda açıklandığı gibi.  
   
@@ -58,7 +44,7 @@ Bu konuda nasıl kullanılacağını açıklar [!INCLUDE[indigo1](../../../../in
 |Saniyede Akışı Yapılan İşlem|Bu uç noktada işlemlerine içinde saniyede akışı yapılan işlem işlem sayısı. Bu sayaç, bir işlem bitiş noktasına gönderilen ileti bulunur dilediğiniz zaman artırılır.|  
   
 ## <a name="windows-management-instrumentation"></a>Windows Yönetim Araçları  
- [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] İnceleme, bir hizmetin aracılığıyla çalışma zamanında kullanıma sunan bir [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] Windows Yönetim Araçları (WMI) sağlayıcısı. WMI veri erişimi hakkında daha fazla bilgi için bkz: [tanılama için Windows Yönetim araçları kullanarak](../../../../docs/framework/wcf/diagnostics/wmi/index.md).  
+ WCF WCF Windows Yönetim Araçları (WMI) sağlayıcısı üzerinden çalışma zamanında bir hizmetin denetleme veri kullanıma sunar. WMI veri erişimi hakkında daha fazla bilgi için bkz: [tanılama için Windows Yönetim araçları kullanarak](../../../../docs/framework/wcf/diagnostics/wmi/index.md).  
   
  Salt okunur WMI özellikleri sayısı bir hizmeti için uygulanan işlem ayarlarını belirtin. Aşağıdaki tablolarda tüm bu ayarlar listelenmektedir.  
   
@@ -100,13 +86,13 @@ Bu konuda nasıl kullanılacağını açıklar [!INCLUDE[indigo1](../../../../in
 ## <a name="tracing"></a>İzleme  
  İzlemeler izlemek ve işlem uygulamalarınızda hatalarını çözümlemek etkinleştirin. Aşağıdaki yöntemlerle kullanarak izlemeyi etkinleştirebilirsiniz:  
   
--   Standart [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] izleme  
+-   Standart WCF izleme  
   
-     Bu izleme türünü herhangi izleme aynıdır [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] uygulama. Daha fazla bilgi için bkz: [yapılandırma izleme](../../../../docs/framework/wcf/diagnostics/tracing/configuring-tracing.md).  
+     Bu izleme türünü herhangi bir WCF uygulaması izleme ile aynı değil. Daha fazla bilgi için bkz: [yapılandırma izleme](../../../../docs/framework/wcf/diagnostics/tracing/configuring-tracing.md).  
   
 -   WS-AtomicTransaction izleme  
   
-     WS-AtomicTransaction izleme kullanılarak etkinleştirilebilir [WS-AtomicTransaction yapılandırma yardımcı programı (wsatConfig.exe)](../../../../docs/framework/wcf/ws-atomictransaction-configuration-utility-wsatconfig-exe.md). Bu tür izleme işlemleri ve katılımcıları sistemi içindeki durumu hakkında bilgi sağlar. Ayrıca iç hizmet modeli izlemeyi etkinleştirmek için ayarlayabileceğiniz `HKLM\SOFTWARE\Microsoft\WSAT\3.0\ServiceModelDiagnosticTracing` kayıt defteri anahtarı geçerli bir değere <xref:System.Diagnostics.SourceLevels> numaralandırması. Aynı şekilde diğer günlük iletisi etkinleştirebilirsiniz [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] uygulamalar.  
+     WS-AtomicTransaction izleme kullanılarak etkinleştirilebilir [WS-AtomicTransaction yapılandırma yardımcı programı (wsatConfig.exe)](../../../../docs/framework/wcf/ws-atomictransaction-configuration-utility-wsatconfig-exe.md). Bu tür izleme işlemleri ve katılımcıları sistemi içindeki durumu hakkında bilgi sağlar. Ayrıca iç hizmet modeli izlemeyi etkinleştirmek için ayarlayabileceğiniz `HKLM\SOFTWARE\Microsoft\WSAT\3.0\ServiceModelDiagnosticTracing` kayıt defteri anahtarı geçerli bir değere <xref:System.Diagnostics.SourceLevels> numaralandırması. İleti günlüğe kaydetme diğer WCF uygulamaları aynı şekilde etkinleştirebilirsiniz.  
   
 -   `System.Transactions` İzleme  
   
@@ -131,7 +117,7 @@ Bu konuda nasıl kullanılacağını açıklar [!INCLUDE[indigo1](../../../../in
     </configuration>  
     ```  
   
-     Bu özellik ayrıca sağlar [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] izleme, olarak [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] de yararlanan <xref:System.Transactions> altyapı.  
+     WCF de kullanır gibi bu aynı zamanda WCF izlemeyi etkinleştirir <xref:System.Transactions> altyapı.  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
  [Yönetim ve Tanılama](../../../../docs/framework/wcf/diagnostics/index.md)  

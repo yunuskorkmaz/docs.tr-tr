@@ -1,29 +1,15 @@
 ---
 title: Kuyruklar ve Güvenilir Oturumlar
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 ms.assetid: 7e794d03-141c-45ed-b6b1-6c0e104c1464
-caps.latest.revision: 10
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: dbbaa432f7f1e137fc6cbd47ecd8e24d9eab97c3
-ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
+ms.openlocfilehash: a60f409a0f5c237c372fe3303d67ef979950eab4
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/30/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="queues-and-reliable-sessions"></a>Kuyruklar ve Güvenilir Oturumlar
-Kuyruklar ve güvenilir oturumlar [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] güvenilir Mesajlaşma uygulamak özellikleri. Bu bölümde yer alan konuları ele [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] güvenilir Mesajlaşma özellikleri.  
+Kuyruklar ve güvenilir oturumlar güvenilir Mesajlaşma uygulayan Windows Communication Foundation (WCF) özellikleridir. Bu bölümdeki konular, WCF güvenilir Mesajlaşma ele alınmaktadır.  
   
  Güvenilir Mesajlaşma nasıl (kaynak olarak adlandırılır) güvenilir bir Mesajlaşma kaynağı iletileri güvenilir bir şekilde (hedef olarak adlandırılır) bir güvenilir Mesajlaşma hedefine aktarır olur.  
   
@@ -33,7 +19,7 @@ Kuyruklar ve güvenilir oturumlar [!INCLUDE[indigo1](../../../../includes/indigo
   
 -   Kaynak veya hedef kullanılamaz olmasına rağmen bağımsız hatası ve kaynak ve hedef kurtarma iyi olarak güvenilir aktarımı ve sağlayan iletileri teslimini ayrımı kaynak ve hedef her diğer.  
   
- Güvenilir Mesajlaşma, yüksek gecikme sık gelir. Gecikme iletisinin kaynaktan hedefe ulaşmak gereken süre anlamına gelmektedir. [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)], bu nedenle, güvenilir Mesajlaşma aşağıdaki türleri sağlar:  
+ Güvenilir Mesajlaşma, yüksek gecikme sık gelir. Gecikme iletisinin kaynaktan hedefe ulaşmak gereken süre anlamına gelmektedir. WCF, bu nedenle, güvenilir Mesajlaşma aşağıdaki türleri sağlar:  
   
 -   [Güvenilir oturumlar](../../../../docs/framework/wcf/feature-details/reliable-sessions.md), güvenilir aktarımı maliyeti yüksek gecikme olmadan sunma  
   
@@ -45,7 +31,7 @@ Kuyruklar ve güvenilir oturumlar [!INCLUDE[indigo1](../../../../includes/indigo
  Güvenilir oturumlar, düşük gecikme süreli güvenilir ileti aktarımları sağlar. SOAP iletilerine için herhangi bir ara sunucuları veya aracılar sağladıkları, hangi TCP eşdeğer IP köprüleri paketler için sağlar. Güvenilir oturumlar hakkında daha fazla bilgi için bkz: [güvenilir oturumlar](../../../../docs/framework/wcf/feature-details/reliable-sessions.md).  
   
 ### <a name="queues"></a>Kuyruklar  
- İçinde kuyruklar [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] iletileri ve ayırma kaynakları ve yüksek gecikme, hedefler arasında güvenilir hem aktarımlarını sağlayın. [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] Message Queuing üstünde (MSMQ olarak da bilinir) kuyruğa alınan iletişim kurulur.  
+ Wcf'de kuyruklar hem güvenilir aktarımlarını iletileri ve ayırma kaynakları ve yüksek gecikme, hedefler arasında sağlar. WCF kuyruğa alınan iletişim, Message Queuing üstünde (MSMQ olarak da bilinir) oluşturulur.  
   
  MSMQ bir NT hizmeti olarak çalışan Windows ile bir seçenek olarak geliyordu. İletim sırasındaki kaynak adına iletim iletileri yakalar ve bir hedef sıra sunar. Hedef iletileri istediğinde hedef sıra daha sonra gönderim için hedef adına iletileri kabul eder. Böylece iletiler iletim kayboluyor değil MSMQ sırası yöneticilerini güvenilir ileti aktarma protokolü kullanır. Protokol, yerel veya SOAP tabanlı gibi Soap güvenilir Mesajlaşma Protokolü (SRMP) olabilir.  
   

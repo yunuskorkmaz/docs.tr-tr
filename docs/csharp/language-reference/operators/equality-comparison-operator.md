@@ -1,24 +1,17 @@
 ---
 title: == İşleci (C# Başvurusu)
 ms.date: 07/20/2015
-ms.prod: .net
-ms.technology:
-- devlang-csharp
-ms.topic: article
 f1_keywords:
 - ==_CSharpKeyword
 helpviewer_keywords:
 - == operator [C#]
 - equality operator [C#]
 ms.assetid: 34c6b597-caa2-4855-a7cd-38ecdd11bd07
-caps.latest.revision: 14
-author: BillWagner
-ms.author: wiwagn
-ms.openlocfilehash: ca22846325968519a1f7625461867c0d83a1a9f5
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: f8356320817771cb559192c1ce720a80bf33bbf9
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="-operator-c-reference"></a>== İşleci (C# Başvurusu)
 İçin önceden tanımlanmış değer türleri, eşitlik işleci (`==`) işlenenleri değer eşitse, true döndürür `false` Aksi takdirde. Başvuru türleri dışında [dize](../../../csharp/language-reference/keywords/string.md), `==` döndürür `true` iki işlenenleri de aynı nesneye başvuruda bulunuyorsa. İçin `string` türü, `==` dize değerlerini karşılaştırır.  
@@ -31,5 +24,5 @@ ms.lasthandoff: 11/21/2017
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
  [C# başvurusu](../../../csharp/language-reference/index.md)  
- [C# programlama kılavuzu](../../../csharp/programming-guide/index.md)  
- [C# işleçleri](../../../csharp/language-reference/operators/index.md)
+ [C# Programlama Kılavuzu](../../../csharp/programming-guide/index.md)  
+ [C# İşleçleri](../../../csharp/language-reference/operators/index.md)

@@ -1,24 +1,15 @@
 ---
-title: "Özel günlük dinleyicileri (Visual Basic) oluşturma"
-ms.custom: 
+title: Özel günlük dinleyicileri (Visual Basic) oluşturma
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
-ms.topic: article
 helpviewer_keywords:
 - custom log listeners
 - My.Application.Log object, custom log listeners
 ms.assetid: 0e019115-4b25-4820-afb1-af8c6e391698
-caps.latest.revision: "19"
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: f141421350b0ad7b8287e43b676a9439eae1f24c
-ms.sourcegitcommit: 34ec7753acf76f90a0fa845235ef06663dc9e36e
+ms.openlocfilehash: 6139a1fef2b2c37bc2c8a6167febd060d8d01fb1
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="walkthrough-creating-custom-log-listeners-visual-basic"></a>İzlenecek Yol: Özel Günlük Dinleyicileri Oluşturma (Visual Basic)
 Bu kılavuz, özel günlük bir dinleyici oluşturun ve bunu çıkışına dinlemek için yapılandırmak üzere gösterilmiştir `My.Application.Log` nesnesi.  
@@ -84,7 +75,7 @@ Bu kılavuz, özel günlük bir dinleyici oluşturun ve bunu çıkışına dinle
   
 1.  App.config dosyasında sağ **Çözüm Gezgini** ve **açık**.  
   
-     veya  
+     -veya-  
   
      Bir app.config dosyası ise:  
   

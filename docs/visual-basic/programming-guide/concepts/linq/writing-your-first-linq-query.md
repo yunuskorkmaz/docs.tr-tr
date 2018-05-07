@@ -1,34 +1,24 @@
 ---
-title: "İlk LINQ Sorgunuzu Yazma (Visual Basic)"
-ms.custom: 
+title: İlk LINQ Sorgunuzu Yazma (Visual Basic)
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - queries [LINQ in Visual Basic], writing
 - LINQ queries [Visual Basic]
 - LINQ [Visual Basic], writing queries
 ms.assetid: 4affb732-3e9b-4479-aa31-1f9bd8183cbe
-caps.latest.revision: "56"
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: c16bb28189d5525654328da2dc80d868bbe61bf5
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: f426aac5358837563081d2bf9783f6d4fe04d853
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="writing-your-first-linq-query-visual-basic"></a>İlk LINQ Sorgunuzu Yazma (Visual Basic)
 A *sorgu* bir veri kaynağından veri alır bir ifadedir. Sorguları bir adanmış sorgu dili ifade edilir. Zamanla, farklı diller farklı türlerde veri kaynakları için örneğin, ilişkisel veritabanları için SQL ve XQuery XML için geliştirilmiştir. Bu, her veri kaynağı veya desteklenen veri biçimi türü için yeni bir sorgu dili öğrenmek uygulama geliştiricisi için gerekli kılar.  
   
- [!INCLUDE[vbteclinqext](~/includes/vbteclinqext-md.md)]durum, çeşitli veri kaynakları ve biçimleri arasında verilerle çalışmak için tutarlı bir model sunarak basitleştirir. İçinde bir [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] sorgu nesneler her zaman çalıştığınız. Sorgu ve veri XML belgelerindeki, SQL veritabanları, ADO.NET veri kümeleri ve varlıklar, .NET Framework koleksiyonları ve herhangi diğer kaynak veya biçimi için dönüştürmek için aynı temel kodlama modelleri kullanmanıza bir [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] sağlayıcısı kullanılabilir. Bu belge oluşturma üç aşamaya ve temel kullanımını açıklar [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] sorgular.  
+ [!INCLUDE[vbteclinqext](~/includes/vbteclinqext-md.md)] durum, çeşitli veri kaynakları ve biçimleri arasında verilerle çalışmak için tutarlı bir model sunarak basitleştirir. İçinde bir [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] sorgu nesneler her zaman çalıştığınız. Sorgu ve veri XML belgelerindeki, SQL veritabanları, ADO.NET veri kümeleri ve varlıklar, .NET Framework koleksiyonları ve herhangi diğer kaynak veya biçimi için dönüştürmek için aynı temel kodlama modelleri kullanmanıza bir [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] sağlayıcısı kullanılabilir. Bu belge oluşturma üç aşamaya ve temel kullanımını açıklar [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] sorgular.  
   
 ## <a name="three-stages-of-a-query-operation"></a>Bir Sorgu İşleminin Üç Aşaması  
- [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)]sorgu işlemleri üç eylemlerini oluşur:  
+ [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] sorgu işlemleri üç eylemlerini oluşur:  
   
 1.  Veri kaynağı veya kaynakları edinin.  
   
@@ -129,8 +119,8 @@ Dim customers As Table(Of Customer) = db.GetTable(Of Customer)
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
  [Visual Basic'te Lınq'e Başlarken](getting-started-with-linq.md)  
- [Yerel tür çıkarımı](../../../../visual-basic/programming-guide/language-features/variables/local-type-inference.md)  
+ [Yerel Çıkarım](../../../../visual-basic/programming-guide/language-features/variables/local-type-inference.md)  
  [Standart sorgu işleçlerine genel bakış (Visual Basic)](standard-query-operators-overview.md)  
  [Visual Basic'de LINQ'e giriş](../../../../visual-basic/programming-guide/language-features/linq/introduction-to-linq.md)  
  [LINQ](../../../../visual-basic/programming-guide/language-features/linq/index.md)  
- [Sorguları](../../../../visual-basic/language-reference/queries/queries.md)
+ [Sorgular](../../../../visual-basic/language-reference/queries/queries.md)

@@ -1,35 +1,23 @@
 ---
-title: "JSON ve XML Arasında Eşleme"
-ms.custom: 
+title: JSON ve XML Arasında Eşleme
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 22ee1f52-c708-4024-bbf0-572e0dae64af
-caps.latest.revision: "10"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 770be9ea5327b32286de64207a3cf07bca7449c6
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: db34161ad3e2f7d2c9737e6a456b27bd70c5ebfb
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="mapping-between-json-and-xml"></a>JSON ve XML Arasında Eşleme
-Yazarları ve okuyucular üretilen <xref:System.Runtime.Serialization.Json.JsonReaderWriterFactory> XML API'si JavaScript nesne gösterimi (JSON) içeriği sağlar. JSON, JavaScript nesne değişmez değerler kümesini kullanarak verileri kodlar. JSON içeriği yüklenirken okuyucular ve bu fabrikası tarafından üretilen yazarları aynı zamanda kullanılan gönderilen veya alınan [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] kullanan uygulamalar <xref:System.ServiceModel.Channels.WebMessageEncodingBindingElement> veya <xref:System.ServiceModel.WebHttpBinding>.  
+Yazarları ve okuyucular üretilen <xref:System.Runtime.Serialization.Json.JsonReaderWriterFactory> XML API'si JavaScript nesne gösterimi (JSON) içeriği sağlar. JSON, JavaScript nesne değişmez değerler kümesini kullanarak verileri kodlar. JSON içeriği yüklenirken okuyucular ve bu fabrikası tarafından üretilen yazarları aynı zamanda kullanılan gönderilen veya alınan kullanarak Windows Communication Foundation (WCF) uygulamaları tarafından <xref:System.ServiceModel.Channels.WebMessageEncodingBindingElement> veya <xref:System.ServiceModel.WebHttpBinding>.  
   
  JSON içeriği ile hazırlarken, JSON okuyucu XML örneği üzerinde bir metinsel XML okuyucusu mu aynı şekilde davranır. Üreten bir metinsel XML okuyucusu üzerinde bir belirli XML örneği, bir dizi çağrıları verildiğinde JSON yazan JSON içeriği teslim yazar. Bu örnek XML ve JSON içeriği arasında eşleme Gelişmiş senaryolarda kullanım için bu konudaki açıklanmıştır.  
   
- Dahili olarak, JSON tarafından işlendiğinde bir XML bilgi olarak temsil edilir [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]. Normalde eşleme mantıksal bir tane olduğundan iç bu gösterim ile ilgili gerekmez: JSON normalde fiziksel bellekte XML biçimine dönüştürülen veya XML'den JSON biçiminde seri hale dönüştürülür. Eşleme XML API'leri JSON içeriğe erişmek için kullanıldığı anlamına gelir.  
+ Dahili olarak, JSON WCF tarafından işlendiğinde bir XML bilgi olarak temsil edilir. Normalde eşleme mantıksal bir tane olduğundan iç bu gösterim ile ilgili gerekmez: JSON normalde fiziksel bellekte XML biçimine dönüştürülen veya XML'den JSON biçiminde seri hale dönüştürülür. Eşleme XML API'leri JSON içeriğe erişmek için kullanıldığı anlamına gelir.  
   
- Zaman [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] JSON, Normal senaryo kullanımdır, <xref:System.Runtime.Serialization.Json.DataContractJsonSerializer> otomatik olarak tarafından prize takılı <xref:System.ServiceModel.Description.WebScriptEnablingBehavior> davranışı ya da <xref:System.ServiceModel.Description.WebHttpBehavior> davranışı uygun olduğunda. <xref:System.Runtime.Serialization.Json.DataContractJsonSerializer> JSON ve XML bilgi arasında eşleme anlar ve JSON ile doğrudan ilgili sanki gibi davranır. (Kullanmak da mümkündür <xref:System.Runtime.Serialization.Json.DataContractJsonSerializer> XML okuyucusu ya da XML aşağıdaki eşleme uyan anlama ile yazan.)  
+ WCF JSON kullandığında olan Normal senaryo <xref:System.Runtime.Serialization.Json.DataContractJsonSerializer> otomatik olarak tarafından prize takılı <xref:System.ServiceModel.Description.WebScriptEnablingBehavior> davranışı ya da <xref:System.ServiceModel.Description.WebHttpBehavior> davranışı uygun olduğunda. <xref:System.Runtime.Serialization.Json.DataContractJsonSerializer> JSON ve XML bilgi arasında eşleme anlar ve JSON ile doğrudan ilgili sanki gibi davranır. (Kullanmak da mümkündür <xref:System.Runtime.Serialization.Json.DataContractJsonSerializer> XML okuyucusu ya da XML aşağıdaki eşleme uyan anlama ile yazan.)  
   
- Gelişmiş senaryolar aşağıdaki eşlemesini doğrudan erişmek gerekli olabilir. Seri hale getirmek ve öğesine bağlı kalmadan özel yollarla JSON serisini kaldırmak istediğinizde bu senaryolar ortaya <xref:System.Runtime.Serialization.Json.DataContractJsonSerializer>, veya ile ilgilenirken <xref:System.ServiceModel.Channels.Message> doğrudan JSON içeren iletileri için türü. JSON XML eşleme ileti günlüğe kaydetme için de kullanılır. İleti günlüğe kaydetme özelliği kullanırken [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)], JSON iletileri, sonraki bölümde açıklanan eşlemeyi göre XML olarak kaydedilir.  
+ Gelişmiş senaryolar aşağıdaki eşlemesini doğrudan erişmek gerekli olabilir. Seri hale getirmek ve öğesine bağlı kalmadan özel yollarla JSON serisini kaldırmak istediğinizde bu senaryolar ortaya <xref:System.Runtime.Serialization.Json.DataContractJsonSerializer>, veya ile ilgilenirken <xref:System.ServiceModel.Channels.Message> doğrudan JSON içeren iletileri için türü. JSON XML eşleme ileti günlüğe kaydetme için de kullanılır. WCF'de ileti günlüğe kaydetme özelliğini kullanırken, JSON iletileri günlüğe kaydedilir XML olarak sonraki bölümde açıklanan eşlemeyi göre.  
   
  Bir eşleme kavramı açıklamak için aşağıdaki örnek bir JSON belgesinin ' dir.  
   
@@ -46,7 +34,7 @@ Yazarları ve okuyucular üretilen <xref:System.Runtime.Serialization.Json.JsonR
 </root>  
 ```  
   
- JSON içinde olursa Ayrıca, bu örnek tarafından alınan [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] ve oturum, önceki günlük XML parçadaki görür.  
+ Ayrıca, örnek JSON iletisinde ise ve WCF tarafından alınan oturum XML parçası önceki günlüğüne bakın.  
   
 ## <a name="mapping-between-json-and-the-xml-infoset"></a>JSON ve XML bilgi arasında eşleme  
  Resmi olarak, JSON arasında açıklandığı gibi eşlemedir [RFC 4627](http://go.microsoft.com/fwlink/?LinkId=98808) (gevşek ve belirli bazı kısıtlamalar ile eklenen diğer kısıtlamalar hariç) ve XML bilgi (ve metinsel olmayan XML) olarak açıklanan [XML bilgileri Ayarlama](http://go.microsoft.com/fwlink/?LinkId=98809) . Bu konuda tanımları için bkz: *bilgisi öğeleri* ve [köşeli] alanlarında.  
@@ -105,7 +93,7 @@ Yazarları ve okuyucular üretilen <xref:System.Runtime.Serialization.Json.JsonR
   
 -   Veri sözleşmesi Name özniteliği ("ayrıntılarıyla açıklandığı gibi __type"). Bu öznitelik yalnızca JSON türü özniteliği de varsa ve [normalleştirilmiş değeri] "nesne" olduğu mevcut olabilir. Bu öznitelik tarafından kullanılan `DataContractJsonSerializer` korumak için veri türü bilgileri - Örneğin, çok biçimli durumlarda türetilmiş bir tür serileştirilmiş ve bir taban türü beklenen konumda sözleşme. İle çalışmıyorsanız `DataContractJsonSerializer`, çoğu durumda, bu öznitelik dikkate alınmaz.  
   
--   [kapsam içinde ad alanları] bağlaması "xml", "http://www.w3.org/XML/1998/namespace" bilgi belirtimine göre zorunlu olarak içerir.  
+-   [kapsam içinde ad alanları] için "xml" bağlama içeren "http://www.w3.org/XML/1998/namespace" bilgi belirtimine göre zorunlu olarak.  
   
 -   [alt], [öznitelikler] ve [kapsam içinde ad alanları] değil olmalıdır dışındaki tüm öğeleri belirtildiği gibi daha önce ve [ad alanı öznitelikler] hiç üyesi olması gerekir, ancak bu olgulara XML JSON öğesinden eşlenmiş okunurken güvenmeyin.  
   
@@ -157,7 +145,7 @@ Yazarları ve okuyucular üretilen <xref:System.Runtime.Serialization.Json.JsonR
   
 |[normalleştirilmiş değeri], `JSON Type Attribute`'s AII|İzin verilen [alt] karşılık gelen EII|JSON eşleme|  
 |---------------------------------------------------------|---------------------------------------------------|---------------------|  
-|`string`(veya JSON türü AII yokluğu)<br /><br /> A `string` ve JSON türü AII olmayışı aynı yapar `string` varsayılan.<br /><br /> Bu nedenle, `<root> string1</root>` eşler için JSON `string` "Dize1".|0 veya daha fazla CIIs|JSON `string` (JSON RFC, bölüm 2.5). Her `char` [karakter koduna] CII karşılık gelen bir karakterdir. Hiçbir CIIs varsa, boş bir JSON değerine eşleyen `string`.<br /><br /> Örnek: Bir JSON parça öğesi eşler:<br /><br /> `<root type="string">42</root>`<br /><br /> JSON parça "42" dir.<br /><br /> XML JSON eşlemesi olmalıdır karakter eşlemesi Atlanan karakterle kaçışlı, diğerlerini değil kaçış karakterleri harita. "/" Karakterini özel – olmasını yok olsa bile kaçışlı (olarak kullanıma yazılı "\\/").<br /><br /> Örnek: Bir JSON parça öğesi eşler.<br /><br /> `<root type="string">the "da/ta"</root>`<br /><br /> JSON parçası olan " \\" da\\/ta\\"".<br /><br /> XML eşleme için JSON üzerinde karşılık gelen [karakter kodu] için harita doğru herhangi Atlanan ve olmayan karakterler kaçışlı.<br /><br /> Örnek: "\u0041BC" JSON parça aşağıdaki XML öğesi eşler.<br /><br /> `<root type="string">ABC</root>`<br /><br /> Dize, XML eşlenmedi boşluk (JSON RFC 2 bölümünde ' ws') tarafından arasında olmalıdır.<br /><br /> Örnek: JSON "ABC" parçalara, (ilk tırnak önce alanları olan), aşağıdaki XML öğesi eşler.<br /><br /> `<root type="string">ABC</root>`<br /><br /> Hiçbir boşluk XML boşluk JSON içinde eşler.<br /><br /> Örnek: Bir JSON parça aşağıdaki XML öğesi eşler.<br /><br /> `<root type="string">  A BC      </root>`<br /><br /> JSON parça "BC" dir.|  
+|`string` (veya JSON türü AII yokluğu)<br /><br /> A `string` ve JSON türü AII olmayışı aynı yapar `string` varsayılan.<br /><br /> Bu nedenle, `<root> string1</root>` eşler için JSON `string` "Dize1".|0 veya daha fazla CIIs|JSON `string` (JSON RFC, bölüm 2.5). Her `char` [karakter koduna] CII karşılık gelen bir karakterdir. Hiçbir CIIs varsa, boş bir JSON değerine eşleyen `string`.<br /><br /> Örnek: Bir JSON parça öğesi eşler:<br /><br /> `<root type="string">42</root>`<br /><br /> JSON parça "42" dir.<br /><br /> XML JSON eşlemesi olmalıdır karakter eşlemesi Atlanan karakterle kaçışlı, diğerlerini değil kaçış karakterleri harita. "/" Karakterini özel – olmasını yok olsa bile kaçışlı (olarak kullanıma yazılı "\\/").<br /><br /> Örnek: Bir JSON parça öğesi eşler.<br /><br /> `<root type="string">the "da/ta"</root>`<br /><br /> JSON parçası olan " \\" da\\/ta\\"".<br /><br /> XML eşleme için JSON üzerinde karşılık gelen [karakter kodu] için harita doğru herhangi Atlanan ve olmayan karakterler kaçışlı.<br /><br /> Örnek: "\u0041BC" JSON parça aşağıdaki XML öğesi eşler.<br /><br /> `<root type="string">ABC</root>`<br /><br /> Dize, XML eşlenmedi boşluk (JSON RFC 2 bölümünde ' ws') tarafından arasında olmalıdır.<br /><br /> Örnek: JSON "ABC" parçalara, (ilk tırnak önce alanları olan), aşağıdaki XML öğesi eşler.<br /><br /> `<root type="string">ABC</root>`<br /><br /> Hiçbir boşluk XML boşluk JSON içinde eşler.<br /><br /> Örnek: Bir JSON parça aşağıdaki XML öğesi eşler.<br /><br /> `<root type="string">  A BC      </root>`<br /><br /> JSON parça "BC" dir.|  
 |`number`|1 veya daha fazla CIIs|JSON `number` (JSON RFC, bölüm 2.4), büyük olasılıkla çevrelenen tarafından boşluk. Her karakteri sayı/boşluk birlikte CII [karakter kodu] için karşılık gelen bir karakterdir.<br /><br /> Örnek: Bir JSON parça öğesi eşler.<br /><br /> `<root type="number">    42</root>`<br /><br /> JSON parça 42 olduğu<br /><br /> (Boşluk korunur).|  
 |`boolean`|4 veya 5 CIIs (için karşılık geldiği `true` veya `false`), büyük olasılıkla çevrelenen ek boşluk CIIs tarafından.|Sabit değer için "true" dizesine karşılık gelen bir CII sırası eşlenen `true`, ve "false" dizesine karşılık gelen bir CII dizisi için sabit eşlendi `false`. Boşluk çevresindeki korunur.<br /><br /> Örnek: Bir JSON parça öğesi eşler.<br /><br /> `<root type="boolean"> false</root>`<br /><br /> JSON parçası olan `false`.|  
 |`null`|Hiçbirine izin verilmiyor.|Sabit `null`. XML eşleme için JSON üzerinde `null` XML eşlenmedi boşluk (2 bölümde ' ws') tarafından çevrelenen.<br /><br /> Örnek: Bir JSON parça öğesi eşler.<br /><br /> `<root type="null"/>`<br /><br /> veya<br /><br /> `<root type="null"></root>`<br /><br /> :<br /><br /> Her iki durumda JSON parçasında olduğu `Null`.|  
@@ -209,7 +197,7 @@ Ray'|0 veya daha fazla EIIs|Bir başlangıç ayrıntılarıyla açıklandığı 
  `{"myLocalName1":"myValue1","myLocalName2":2,"myLocalName3":{"myNestedName1":true,"myNestedName2":null}}`  
   
 > [!NOTE]
->  Önceki eşlemesinde yok XML kodlama adım yoktur. Bu nedenle, [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] yalnızca anahtar adları içindeki tüm karakterleri XML öğe adları geçerli karakterler nerede JSON belgelerini destekler. Örneğin, JSON belgesi {"<": "a"} desteklenmiyor < bir XML öğesi için geçerli bir ad değil.  
+>  Önceki eşlemesinde yok XML kodlama adım yoktur. Bu nedenle, WCF, yalnızca anahtar adları içindeki tüm karakterleri XML öğe adları geçerli karakterler nerede JSON belgelerini destekler. Örneğin, JSON belgesi {"<": "a"} desteklenmiyor < bir XML öğesi için geçerli bir ad değil.  
   
  Önceki eşleme JSON kaçış/unescaping adımları içerdiğinden ters durum (XML ancak içinde değil JSON geçerli karakterler) herhangi bir sorun neden olmaz.  
   

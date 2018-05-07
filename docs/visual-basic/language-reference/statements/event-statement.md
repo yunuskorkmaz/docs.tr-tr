@@ -1,11 +1,6 @@
 ---
 title: Event Deyimi
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
-ms.topic: article
 f1_keywords:
 - vb.Event
 - vb.Custom
@@ -23,14 +18,11 @@ helpviewer_keywords:
 - ByRef keyword [Visual Basic], Event statements
 - declaring user-defined events
 ms.assetid: 306ff8ed-74dd-4b6a-bd2f-e91b17474042
-caps.latest.revision: "33"
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: 4ba49d6582eb2ecac4846eaee570a4d92439a5d9
-ms.sourcegitcommit: 34ec7753acf76f90a0fa845235ef06663dc9e36e
+ms.openlocfilehash: 967eedcf1f4d0c9a19775f294167b915cca25a9c
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="event-statement"></a>Event Deyimi
 Kullanıcı tanımlı bir olay bildirir.  
@@ -72,7 +64,7 @@ End Event
 |`eventname`|Gerekli. Olayın adı; Standart değişken adlandırma kuralları izler.|  
 |`parameterlist`|İsteğe bağlı. Bu olay parametrelerinin temsil eden yerel değişkenler listesi. İçine almalısınız [parametre listesi](../../../visual-basic/language-reference/statements/parameter-list.md) parantez içinde.|  
 |`Implements`|İsteğe bağlı. Bu olay bir olay, bir arabirimi uygulayan gösterir.|  
-|`implementslist`|Gerekli olursa `Implements` sağlanır. Listesi `Sub` uygulanan yordamlar. Birden çok yordam virgülle ayrılır:<br /><br /> *implementedprocedure* [, *implementedprocedure* ...]<br /><br /> Her `implementedprocedure` aşağıdaki söz dizimini ve bölümleri vardır:<br /><br /> `interface`.`definedname`<br /><br /> -   `interface`-Gerekli. Bu yordam, sınıf veya yapı içeren kullanıcının bir arabirim adı uygulama.<br />-   `Definedname`-Gerekli. Adı olarak yordamı tanımlanmış `interface`. Bu aynı olması gerekmez `name`, tanımlanmış yordamı uygulamak için bu yordamı kullanarak ad.|  
+|`implementslist`|Gerekli olursa `Implements` sağlanır. Listesi `Sub` uygulanan yordamlar. Birden çok yordam virgülle ayrılır:<br /><br /> *implementedprocedure* [, *implementedprocedure* ...]<br /><br /> Her `implementedprocedure` aşağıdaki söz dizimini ve bölümleri vardır:<br /><br /> `interface`.`definedname`<br /><br /> -   `interface` -Gerekli. Bu yordam, sınıf veya yapı içeren kullanıcının bir arabirim adı uygulama.<br />-   `Definedname` -Gerekli. Adı olarak yordamı tanımlanmış `interface`. Bu aynı olması gerekmez `name`, tanımlanmış yordamı uygulamak için bu yordamı kullanarak ad.|  
 |`Custom`|Gerekli. Olayları bildirilen `Custom` özel tanımlamalısınız `AddHandler`, `RemoveHandler`, ve `RaiseEvent` erişimciler.|  
 |`delegatename`|İsteğe bağlı. Olay işleyici imzası belirten bir temsilci adı.|  
 |`AddHandler`|Gerekli. Bildiren bir `AddHandler` olay işleyicisi eklendiğinde yürütmek için ifadeleri belirtir, ya da açıkça kullanarak erişimcisi `AddHandler` deyimi kullanarak örtük veya `Handles` yan tümcesi.|  

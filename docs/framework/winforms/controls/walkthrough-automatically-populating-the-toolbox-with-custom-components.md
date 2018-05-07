@@ -1,28 +1,16 @@
 ---
-title: "İzlenecek yol: Araç Kutusunu Otomatik Olarak Özel Bileşenlerle Doldurma"
-ms.custom: 
+title: 'İzlenecek yol: Araç Kutusunu Otomatik Olarak Özel Bileşenlerle Doldurma'
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-winforms
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - IToolboxService interface
 - Toolbox [Windows Forms], populating
 - custom components [Windows Forms], adding to Toolbox
 ms.assetid: 2fa1e3e8-6b9f-42b2-97c0-2be57444dba4
-caps.latest.revision: "22"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 6b60d4ee7908a5ed9dcb3393132ba7d0bd0a6cb5
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.openlocfilehash: d446ab84cfe135e56483b8b309b696f7f15044fa
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="walkthrough-automatically-populating-the-toolbox-with-custom-components"></a>İzlenecek yol: Araç Kutusunu Otomatik Olarak Özel Bileşenlerle Doldurma
 Bileşenlerinizi açık çözümdeki bir proje ile tanımlanır, bunlar otomatik olarak görünür **araç**, hiçbir eylem yapmanız gerekmez. El ile de doldurabilirsiniz **araç** kullanarak, özel bileşenlerle [seçin araç kutusu öğelerini iletişim kutusu (Visual Studio)](http://msdn.microsoft.com/library/bd07835f-18a8-433e-bccc-7141f65263bb), ancak **araç** hesap alır çözümünüzün öğelerinin aşağıdaki özelliklere sahip çıkışları oluşturun:  

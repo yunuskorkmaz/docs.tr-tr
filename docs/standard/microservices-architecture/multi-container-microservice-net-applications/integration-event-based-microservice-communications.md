@@ -1,21 +1,14 @@
 ---
-title: "Olay tabanlı mikro (tümleştirme olayları) arasındaki iletişimi uygulama"
-description: "Kapsayıcılı .NET uygulamaları için .NET mikro mimarisi | Olay tabanlı mikro (tümleştirme olayları) arasındaki iletişimi uygulama"
-keywords: Docker, Microservices, ASP.NET, Container
+title: Olay tabanlı mikro (tümleştirme olayları) arasındaki iletişimi uygulama
+description: Kapsayıcılı .NET uygulamaları için .NET mikro mimarisi | Olay tabanlı mikro (tümleştirme olayları) arasındaki iletişimi uygulama
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 12/11/2017
-ms.prod: .net-core
-ms.technology: dotnet-docker
-ms.topic: article
-ms.workload:
-- dotnet
-- dotnetcore
-ms.openlocfilehash: 50ab0be6b92304eee4bc46643c867ee2827fc805
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.openlocfilehash: 5d7037f91cb338721f91d35567246ebbca018a3c
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="implementing-event-based-communication-between-microservices-integration-events"></a>Olay tabanlı mikro (tümleştirme olayları) arasındaki iletişimi uygulama
 

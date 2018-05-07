@@ -1,23 +1,12 @@
 ---
-title: "Nasıl yapılır: özel Kalıcılık katılımcı oluşturma"
-ms.custom: 
+title: 'Nasıl yapılır: özel Kalıcılık katılımcı oluşturma'
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 1d9cc47a-8966-4286-94d5-4221403d9c06
-caps.latest.revision: "6"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: ebc83f100b4303b73ba2e6d3dc41d0f82e8f2c22
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: fcd96e41d8fc7b36f9dff5f10e9bc2d9034d79b2
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-create-a-custom-persistence-participant"></a>Nasıl yapılır: özel Kalıcılık katılımcı oluşturma
 Aşağıdaki yordam Kalıcılık katılımcı oluşturmak için adım vardır. Bkz: [kalıcı katılan](http://go.microsoft.com/fwlink/?LinkID=177735) örnek ve [deposu genişletilebilirlik](../../../docs/framework/windows-workflow-foundation/store-extensibility.md) konu Kalıcılık katılımcılarının örnek uygulamaları için.  
@@ -46,13 +35,13 @@ Aşağıdaki yordam Kalıcılık katılımcı oluşturmak için adım vardır. B
     protected virtual void PublishValues (IDictionary<XName,Object> readWriteValues)  
     ```  
   
-5.  Uygulama **BeginOnSave** katılımcı Kalıcılık GÇ katılımcı ise yöntemi. Bu yöntem bir kaydetme işlemi sırasında çağrılır. Bu yöntemde, iş akışı örnekleri (kaydetme) sürdürmek için g/ç sunduğunuz gerçekleştirmeniz gerekir.  Konak bir işlem için karşılık gelen Kalıcılık komutu kullanıyorsanız, aynı işlem içinde Transaction.Current sağlanır.  Ayrıca, PersistenceIOParticipants bir Aksi durumda kullanılmıyorsa, çalışması konak Kalıcılık bölüm için bir işlem oluşturur. bir işlemsel tutarlılık gereksinim tanıtırsınız.  
+5.  Uygulama **BeginOnSave** katılımcı Kalıcılık g/ç katılımcı ise yöntemi. Bu yöntem bir kaydetme işlemi sırasında çağrılır. Bu yöntemde, iş akışı örnekleri (kaydetme) sürdürmek için g/ç sunduğunuz gerçekleştirmeniz gerekir.  Konak bir işlem için karşılık gelen Kalıcılık komutu kullanıyorsanız, aynı işlem içinde Transaction.Current sağlanır.  Ayrıca, PersistenceIOParticipants bir Aksi durumda kullanılmıyorsa, çalışması konak Kalıcılık bölüm için bir işlem oluşturur. bir işlemsel tutarlılık gereksinim tanıtırsınız.  
   
     ```  
     protected virtual IAsyncResult BeginOnSave (IDictionary<XName,Object> readWriteValues, IDictionary<XName,Object> writeOnlyValues, TimeSpan timeout, AsyncCallback callback, Object state)  
     ```  
   
-6.  Uygulama **BeginOnLoad** katılımcı Kalıcılık GÇ katılımcı ise yöntemi. Bu yöntem, bir yükleme işlemi sırasında çağrılır. Bu yöntemde, iş akışı örnekleri yüklenmesini GÇ sunduğunuz gerçekleştirmeniz gerekir. Konak bir işlem için karşılık gelen Kalıcılık komutu kullanıyorsanız, aynı işlem içinde Transaction.Current sağlanır. Ek olarak, Kalıcılık GÇ katılımcıları bir Aksi durumda kullanılmıyorsa, çalışması konak Kalıcılık bölüm için bir işlem oluşturur. bir işlemsel tutarlılık gereksinim tanıtırsınız.  
+6.  Uygulama **BeginOnLoad** katılımcı Kalıcılık g/ç katılımcı ise yöntemi. Bu yöntem, bir yükleme işlemi sırasında çağrılır. Bu yöntemde, iş akışı örnekleri yüklenmesini g/ç sunduğunuz gerçekleştirmeniz gerekir. Konak bir işlem için karşılık gelen Kalıcılık komutu kullanıyorsanız, aynı işlem içinde Transaction.Current sağlanır. Ek olarak, Kalıcılık g/ç katılımcıları bir Aksi durumda kullanılmıyorsa, çalışması konak Kalıcılık bölüm için bir işlem oluşturur. bir işlemsel tutarlılık gereksinim tanıtırsınız.  
   
     ```  
     protected virtual IAsyncResult BeginOnLoad (IDictionary<XName,Object> readWriteValues, TimeSpan timeout, AsyncCallback callback, Object state)  

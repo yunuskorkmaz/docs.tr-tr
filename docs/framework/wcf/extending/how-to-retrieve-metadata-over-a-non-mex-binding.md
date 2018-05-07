@@ -1,33 +1,19 @@
 ---
 title: 'Nasıl yapılır: MEX Olmayan Bağlama Üzerinden Meta Verileri Alma'
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 ms.assetid: 2292e124-81b2-4317-b881-ce9c1ec66ecb
-caps.latest.revision: 10
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: b469a08ad9759a2d5213f13256ec2def96107acc
-ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
+ms.openlocfilehash: 198c343aa6f25d55e518990dc1dbd2667a8c17ad
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/30/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-retrieve-metadata-over-a-non-mex-binding"></a>Nasıl yapılır: MEX Olmayan Bağlama Üzerinden Meta Verileri Alma
 Bu konuda, bir MEX uç noktasından MEX olmayan bağlama üzerinden meta verilerini almak açıklar. Bu örnek kodda dayanır [özel güvenli meta veri uç noktasının](../../../../docs/framework/wcf/samples/custom-secure-metadata-endpoint.md) örnek.  
   
 ### <a name="to-retrieve-metadata-over-a-non-mex-binding"></a>MEX olmayan bağlama üzerinden meta verilerini almak için  
   
-1.  MEX bitiş noktası tarafından kullanılan bağlama belirler. İçin [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] Hizmetleri, hizmetin yapılandırma dosyası erişerek MEX bağlama belirleyebilir. Bu durumda, MEX bağlama aşağıdaki hizmet yapılandırmasında tanımlanır.  
+1.  MEX bitiş noktası tarafından kullanılan bağlama belirler. Windows Communication Foundation (WCF) hizmetlerini için hizmetin yapılandırma dosyası erişerek MEX bağlama belirleyebilirsiniz. Bu durumda, MEX bağlama aşağıdaki hizmet yapılandırmasında tanımlanır.  
   
     ```xml  
     <services>  

@@ -1,24 +1,12 @@
 ---
-title: "WAS Etkinleştirme Mimarisi"
-ms.custom: 
+title: WAS Etkinleştirme Mimarisi
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 58aeffb0-8f3f-4b40-80c8-15f3f1652fd3
-caps.latest.revision: "16"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 7563510fdd44336cb5f8c50705edefd732082347
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 0c91ebd605fbe503dd11da7167512648afd86449
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="was-activation-architecture"></a>WAS Etkinleştirme Mimarisi
 Bu konuda maddeler halinde listelemektedir ve Windows İşlem Etkinleştirme Hizmeti (WAS olarak da bilinir) bileşenlerinin açıklanır.  
@@ -41,14 +29,14 @@ Bu konuda maddeler halinde listelemektedir ve Windows İşlem Etkinleştirme Hiz
  ![MİMARİSİDİR](../../../../docs/framework/wcf/feature-details/media/wasarchitecture.gif "WASArchitecture")  
   
 ### <a name="listener-adapters"></a>Dinleyici Bağdaştırıcısı  
- Dinleyici Bağdaştırıcısı üzerinde dinleme ağ protokolünü kullanarak ileti almak için kullanılan ağ iletişimi mantığını uygulayan ayrı Windows hizmetleridir. Dinleyici Bağdaştırıcısı için aşağıdaki tabloda listelenmektedir [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] protokoller.  
+ Dinleyici Bağdaştırıcısı üzerinde dinleme ağ protokolünü kullanarak ileti almak için kullanılan ağ iletişimi mantığını uygulayan ayrı Windows hizmetleridir. Aşağıdaki tabloda, Windows Communication Foundation (WCF) protokoller için Dinleyici Bağdaştırıcısı listeler.  
   
 |Dinleyici Bağdaştırıcısı hizmet adı|Protokol|Notlar|  
 |-----------------------------------|--------------|-----------|  
-|W3SVC|http|HTTP etkinleştirmesi hem IIS 7.0 sağlayan ortak bileşeni ve [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)].|  
+|W3SVC|http|IIS 7.0 ve WCF HTTP etkinleştirmesi sağlayan ortak bileşeni.|  
 |NetTcpActivator|net.tcp|NetTcpPortSharing hizmete bağlı.|  
 |NetPipeActivator|net.pipe||  
-|NetMsmqActivator|NET.MSMQ|İle kullanılmak üzere [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]-tabanlı Message Queuing uygulamaları.|  
+|NetMsmqActivator|NET.MSMQ|Message Queuing WCF tabanlı uygulamaları ile kullanım için.|  
 |NetMsmqActivator|MSMQ.FormatName|Geriye dönük uyumluluk varolan Message Queuing uygulamaları ile sağlar.|  
   
  Dinleyici Bağdaştırıcısı belirli protokoller için aşağıdaki XML örnekte gösterildiği gibi applicationHost.config dosyasında, yükleme sırasında kaydedilir.  

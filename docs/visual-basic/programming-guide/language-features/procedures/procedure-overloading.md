@@ -1,12 +1,6 @@
 ---
-title: "Yordam Aşırı Yüklemesi (Visual Basic)"
-ms.custom: 
+title: Yordam Aşırı Yüklemesi (Visual Basic)
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
-ms.topic: article
 helpviewer_keywords:
 - signatures
 - Overloads keyword [Visual Basic]
@@ -23,14 +17,11 @@ helpviewer_keywords:
 - procedure overloading
 - procedures [Visual Basic], parameter lists
 ms.assetid: fbc7fb18-e3b2-48b6-b554-64c00ed09d2a
-caps.latest.revision: "24"
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: 65fd5a6763752c616f13891bfa5acabff6115d7c
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 0d1f2c4d8c88922659b3d91ed41d5e760e6e5233
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="procedure-overloading-visual-basic"></a>Yordam Aşırı Yüklemesi (Visual Basic)
 *Aşırı yükleme* bir yordam, aynı adlı ancak farklı parametre listeleri kullanarak birden çok sürümlerde tanımlama anlamına gelir. Aşırı yükleme amacı, ada göre ayırt zorunda kalmadan bir yordamın birden fazla yakından ilgili sürümünü tanımlamaktır. Parametre listesi değiştirerek bunu yapabilirsiniz.  
@@ -56,13 +47,13 @@ ms.lasthandoff: 11/21/2017
   
 -   **İmza parçası olmayan öğeler**. İmza değişen olmadan bir yordamı aşırı yükleme yapılamıyor. Özellikle, yalnızca bir veya daha fazla aşağıdaki öğelerden birini değiştirerek bir yordamı aşırı olamaz:  
   
-    -   Yordam değiştiricisi anahtar sözcükler gibi `Public`, `Shared`, ve`Static`  
+    -   Yordam değiştiricisi anahtar sözcükler gibi `Public`, `Shared`, ve `Static`  
   
     -   Parametresi veya parametre adlarını yazın  
   
     -   Tür parametresi kısıtlamaları (için genel bir yordam)  
   
-    -   Parametresi değiştiricisi anahtar sözcükler gibi `ByRef` ve`Optional`  
+    -   Parametresi değiştiricisi anahtar sözcükler gibi `ByRef` ve `Optional`  
   
     -   Olup bir değer döndürür  
   
@@ -93,12 +84,12 @@ ms.lasthandoff: 11/21/2017
  [!code-vb[VbVbcnProcedures#57](./codesnippet/VisualBasic/procedure-overloading_4.vb)]  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [Yordamları](./index.md)  
- [Nasıl yapılır: bir yordamın birden fazla sürümünü tanımlama](./how-to-define-multiple-versions-of-a-procedure.md)  
- [Nasıl yapılır: aşırı yüklenmiş bir yordamı çağırma](./how-to-call-an-overloaded-procedure.md)  
- [Nasıl yapılır: isteğe bağlı parametreler isteyen bir yordamı aşırı yükleme](./how-to-overload-a-procedure-that-takes-optional-parameters.md)  
- [Nasıl yapılır: belirsiz sayıda parametre isteyen bir yordamı aşırı yükleme](./how-to-overload-a-procedure-that-takes-an-indefinite-number-of-parameters.md)  
- [Yordamları aşırı yüklemeye ilişkin düşünceler](./considerations-in-overloading-procedures.md)  
- [Aşırı yükleme çözümü](./overload-resolution.md)  
- [Aşırı yüklemeler](../../../../visual-basic/language-reference/modifiers/overloads.md)  
+ [Yordamlar](./index.md)  
+ [Nasıl yapılır: Bir Yordamın Birden Fazla Sürümünü Tanımlama](./how-to-define-multiple-versions-of-a-procedure.md)  
+ [Nasıl yapılır: Aşırı Yüklenmiş Bir Yordamı Çağırma](./how-to-call-an-overloaded-procedure.md)  
+ [Nasıl yapılır: İsteğe Bağlı Parametreler İsteyen Bir Yordamı Aşırı Yükleme](./how-to-overload-a-procedure-that-takes-optional-parameters.md)  
+ [Nasıl yapılır: Belirsiz Sayıda Parametre İsteyen Bir Yordamı Aşırı Yükleme](./how-to-overload-a-procedure-that-takes-an-indefinite-number-of-parameters.md)  
+ [Yordamları Aşırı Yüklemeye İlişkin Düşünceler](./considerations-in-overloading-procedures.md)  
+ [Aşırı Yükleme Çözümü](./overload-resolution.md)  
+ [Overloads](../../../../visual-basic/language-reference/modifiers/overloads.md)  
  [Visual Basic'de genel türler](../../../../visual-basic/programming-guide/language-features/data-types/generic-types.md)

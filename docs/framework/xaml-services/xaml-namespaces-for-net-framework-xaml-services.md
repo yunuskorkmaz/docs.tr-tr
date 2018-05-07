@@ -1,24 +1,12 @@
 ---
-title: ".NET Framework XAML Hizmetleri İçin XAML Ad Uzayları"
-ms.custom: 
+title: .NET Framework XAML Hizmetleri İçin XAML Ad Uzayları
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-wpf
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: e4f15f13-c420-4c1e-aeab-9b6f50212047
-caps.latest.revision: "3"
-author: wadepickett
-ms.author: wpickett
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: e4e94f116fa820d80e5e23833c20382591c5d479
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 842cfb31e21c59bb886ccd266d19c40c64557519
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="xaml-namespaces-for-net-framework-xaml-services"></a>.NET Framework XAML Hizmetleri İçin XAML Ad Uzayları
 XAML ad uzayı bir XML ad alanı tanımını genişleten bir kavramdır. Benzer şekilde bir XML ad alanı, XAML ad alanını kullanarak tanımlayabileceğiniz bir `xmlns` biçimlendirme özniteliği. XAML ad uzayları, XAML düğümü akışı ve diğer XAML Hizmetleri API'lerini de temsil edilir. Bu konuda XAML ad alanı kavram tanımlar ve XAML ad uzayları tanımlanabilir ve XAML şema bağlamları ve .NET Framework XAML hizmetlerinde diğer yönlerini tarafından kullanılan nasıl açıklanmaktadır.  
@@ -41,9 +29,9 @@ XAML ad uzayı bir XML ad alanı tanımını genişleten bir kavramdır. Benzer 
   
  En basit biçimiyle CLR ad alanı ve derleme kuralı kullanan bir tanımlayıcı aşağıdaki gibidir:  
   
- `clr-namespace:`*clrnsName* `; assembly=` *assemblyShortName*  
+ `clr-namespace:` *clrnsName* `; assembly=` *assemblyShortName*  
   
- `clr-namespace:`ve `; assembly=` sözdizimi değişmez değer bileşenleridir.  
+ `clr-namespace:` ve `; assembly=` sözdizimi değişmez değer bileşenleridir.  
   
  *clrnsName* bir CLR ad alanını tanımlayan dize adı. Bu dize adı CLR ad alanı ve diğer CLR ad ilişkisi konusunda ipuçları sağlayan herhangi iç nokta karakteri (.) içerir.  
   
@@ -51,7 +39,7 @@ XAML ad uzayı bir XML ad alanı tanımını genişleten bir kavramdır. Benzer 
   
  Daha eksiksiz bir CLR ad alanı ve derleme kuralı tanımını aşağıdaki gibidir:  
   
- `clr-namespace:`*clrnsName* `; assembly=` *assemblyName*  
+ `clr-namespace:` *clrnsName* `; assembly=` *assemblyName*  
   
  *assemblyName* yasal olarak herhangi bir dize temsil eden bir <xref:System.Reflection.Assembly.Load%28System.String%29?displayProperty=nameWithType> giriş. Bu dize kültür, ortak anahtar veya sürüm bilgileri içerebilir (Bu kavramlar tanımları için başvuru konusunun tanımlanmış <xref:System.Reflection.Assembly>). COFF biçimi ve kanıt (diğer aşırı tarafından kullanılan <xref:System.Reflection.Assembly.Load%2A>) amacıyla; yüklenirken XAML derleme için ilgili olmayan tüm yük bilgileri bir dize olarak sunulmalıdır.  
   
@@ -72,7 +60,7 @@ XAML ad uzayı bir XML ad alanı tanımını genişleten bir kavramdır. Benzer 
   
  XAML ad alanı bilgilerini burada kullanmak için XAML şema içeriği düşündüğünüz XAML ad uzayı tanımlı değil biçimlendirmede durumlarda önceden gerekiyorsa kullanabileceğiniz bir XML ad alanı bildirimleri bildirmek için tekniktir <xref:System.Xml.XmlParserContext> bir için<xref:System.Xml.XmlReader>. Ardından, kullanan <xref:System.Xml.XmlReader> XAML okuyucu oluşturucusu için giriş olarak veya <xref:System.Xaml.XamlServices.Load%28System.Xml.XmlReader%29?displayProperty=nameWithType>.  
   
- XAML ad alanı .NET Framework XAML hizmetlerinde işleme için uygun olan diğer iki API olan öznitelikleri <xref:System.Windows.Markup.XmlnsDefinitionAttribute> ve <xref:System.Windows.Markup.XmlnsPrefixAttribute>. Bu öznitelikler derlemeler için geçerlidir. <xref:System.Windows.Markup.XmlnsDefinitionAttribute>XAML şema içeriği tarafından bir URI içeren XAML ad alanı bildiriminin yorumlamak için kullanılır. <xref:System.Windows.Markup.XmlnsPrefixAttribute>XAML yayma ve böylece belirli XAML ad uzayı tahmin edilebilir bir önek ile seri hale araçları tarafından kullanılır. Daha fazla bilgi için bkz: [özel türler ve Kitaplıkar için XAML-Related CLR öznitelikleri](../../../docs/framework/xaml-services/xaml-related-clr-attributes-for-custom-types-and-libraries.md).  
+ XAML ad alanı .NET Framework XAML hizmetlerinde işleme için uygun olan diğer iki API olan öznitelikleri <xref:System.Windows.Markup.XmlnsDefinitionAttribute> ve <xref:System.Windows.Markup.XmlnsPrefixAttribute>. Bu öznitelikler derlemeler için geçerlidir. <xref:System.Windows.Markup.XmlnsDefinitionAttribute> XAML şema içeriği tarafından bir URI içeren XAML ad alanı bildiriminin yorumlamak için kullanılır. <xref:System.Windows.Markup.XmlnsPrefixAttribute> XAML yayma ve böylece belirli XAML ad uzayı tahmin edilebilir bir önek ile seri hale araçları tarafından kullanılır. Daha fazla bilgi için bkz: [özel türler ve Kitaplıkar için XAML-Related CLR öznitelikleri](../../../docs/framework/xaml-services/xaml-related-clr-attributes-for-custom-types-and-libraries.md).  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
  [XAML Düğüm Akış Yapılarını ve Kavramlarını Anlama](../../../docs/framework/xaml-services/understanding-xaml-node-stream-structures-and-concepts.md)

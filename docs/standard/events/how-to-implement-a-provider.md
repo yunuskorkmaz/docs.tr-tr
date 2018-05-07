@@ -1,13 +1,7 @@
 ---
-title: "Nasıl yapılır: Sağlayıcıyı Uygulama"
-ms.custom: 
+title: 'Nasıl yapılır: Sağlayıcıyı Uygulama'
 ms.date: 03/30/2017
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
 ms.technology: dotnet-standard
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -16,18 +10,13 @@ helpviewer_keywords:
 - providers [.NET Framework], in observer design pattern
 - observables [.NET Framework], in observer design pattern
 ms.assetid: 790b5d8b-d546-40a6-beeb-151b574e5ee5
-caps.latest.revision: "8"
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-- dotnetcore
-ms.openlocfilehash: 0f99a611de4bc344a0fd35130a59d496126e3af5
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: e702233c90155957d1de1a5a306d44d8faa41929
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-implement-a-provider"></a>Nasıl yapılır: Sağlayıcıyı Uygulama
 Gözlemci tasarım deseni, verileri izler ve bildirimleri gönderen bir sağlayıcısı ve bildirimleri (geri aramalar) sağlayıcıdan almak, bir veya daha fazla gözlemcilerin arasında bölme gerektirir. Bu konuda bir sağlayıcı oluşturma açıklanmaktadır. İlgili konu [nasıl yapılır: gözlemci uygulama](../../../docs/standard/events/how-to-implement-an-observer.md), bir gözlemci oluşturulacağını anlatır.  

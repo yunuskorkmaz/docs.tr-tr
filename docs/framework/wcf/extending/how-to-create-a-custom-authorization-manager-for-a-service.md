@@ -1,13 +1,6 @@
 ---
-title: "Nasıl yapılır: Bir Hizmet için Özel Yetkilendirme Yöneticisi Oluşturma"
-ms.custom: 
+title: 'Nasıl yapılır: Bir Hizmet için Özel Yetkilendirme Yöneticisi Oluşturma'
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -15,19 +8,14 @@ helpviewer_keywords:
 - Windows Communication Foundation, extending
 - OperationRequirement class
 ms.assetid: 6214afde-44c1-4bf5-ba07-5ad6493620ea
-caps.latest.revision: "15"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 1977a26f3185ad1ef85584b0da7d63826b7f93ea
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 7fe392b2fcd2f8ccb00bfd6ffd7e917649f8280c
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-create-a-custom-authorization-manager-for-a-service"></a>Nasıl yapılır: Bir Hizmet için Özel Yetkilendirme Yöneticisi Oluşturma
-Kimlik modeli altyapısında [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] Genişletilebilir talep tabanlı yetkilendirme modelini destekler. Talep belirteçlerinden ayıklanan ve isteğe bağlı olarak özel yetkilendirme ilkeleri tarafından işlenir ve içine yerleştirilen bir <xref:System.IdentityModel.Policy.AuthorizationContext>. Bir Yetkilendirme Yöneticisi'ni Taleplerde inceler <xref:System.IdentityModel.Policy.AuthorizationContext> yetkilendirme kararları vermek için.  
+Windows Communication Foundation (WCF) kimlik modeli altyapı Genişletilebilir talep tabanlı yetkilendirme modelini destekler. Talep belirteçlerinden ayıklanan ve isteğe bağlı olarak özel yetkilendirme ilkeleri tarafından işlenir ve içine yerleştirilen bir <xref:System.IdentityModel.Policy.AuthorizationContext>. Bir Yetkilendirme Yöneticisi'ni Taleplerde inceler <xref:System.IdentityModel.Policy.AuthorizationContext> yetkilendirme kararları vermek için.  
   
  Varsayılan olarak, yetkilendirme kararları yapılan <xref:System.ServiceModel.ServiceAuthorizationManager> sınıfı; ancak bu kararlar özel Yetkilendirme Yöneticisi oluşturma tarafından geçersiz kılınabilir. Özel Yetkilendirme Yöneticisi oluşturma için türeyen bir sınıf oluşturun <xref:System.ServiceModel.ServiceAuthorizationManager> ve uygulamanıza <xref:System.ServiceModel.ServiceAuthorizationManager.CheckAccessCore%2A> yöntemi. Yetkilendirme kararları yapılma <xref:System.ServiceModel.ServiceAuthorizationManager.CheckAccessCore%2A> döndürür yöntemi `true` zaman erişimi verilir ve `false` zaman erişim reddedildi.  
   

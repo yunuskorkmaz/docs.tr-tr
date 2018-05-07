@@ -1,29 +1,17 @@
 ---
-title: "Keşif Proxy Örneği"
-ms.custom: 
+title: Keşif Proxy Örneği
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 1dfa02df-15b1-4e97-9c8e-f5f2772711b0
-caps.latest.revision: "14"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 4b6e24c72002c7eef0e03af18f43992cc93b1d5c
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: e9cbfcb717f502a849d4d508d13df6c00b95db58
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="discovery-proxy-sample"></a>Keşif Proxy Örneği
 Bu örnek, mevcut hizmetler hakkında bilgi depolamak için bir keşif proxy'si uygulaması oluşturma ve istemciler için bilgi proxy nasıl sorgulayabilir gösterir. Bu örnek üç projelerin oluşur:  
   
--   **Hizmet**: basit bir [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] kendisini keşif proxy'sine kayıtlı hesaplayıcı hizmet.  
+-   **Hizmet**: kendisini keşif proxy'sine kayıtlı basit bir Windows Communication Foundation (WCF) hesaplayıcı hizmeti.  
   
 -   **Keşif proxy'si**: keşif proxy hizmeti uygulamasıdır.  
   
@@ -37,7 +25,7 @@ Bu örnek, mevcut hizmetler hakkında bilgi depolamak için bir keşif proxy'si 
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  Bu dizin mevcut değilse, Git [Windows Communication Foundation (WCF) ve .NET Framework 4 için Windows Workflow Foundation (WF) örnek](http://go.microsoft.com/fwlink/?LinkId=150780) tüm indirmek için [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] ve [!INCLUDE[wf1](../../../../includes/wf1-md.md)] örnekleri. Bu örnek aşağıdaki dizinde bulunur.  
+>  Bu dizin mevcut değilse, Git [Windows Communication Foundation (WCF) ve .NET Framework 4 için Windows Workflow Foundation (WF) örnek](http://go.microsoft.com/fwlink/?LinkId=150780) tüm Windows Communication Foundation (WCF) indirmek için ve [!INCLUDE[wf1](../../../../includes/wf1-md.md)] örnekleri. Bu örnek aşağıdaki dizinde bulunur.  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Discovery\DiscoveryProxy`  
   

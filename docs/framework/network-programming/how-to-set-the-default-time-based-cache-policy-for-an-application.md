@@ -1,12 +1,6 @@
 ---
-title: "Nasıl yapılır: bir uygulama için varsayılan zaman tabanlı önbellek İlkesi ayarlama"
-ms.custom: 
+title: 'Nasıl yapılır: bir uygulama için varsayılan zaman tabanlı önbellek İlkesi ayarlama'
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -15,19 +9,17 @@ helpviewer_keywords:
 - cache [.NET Framework], time-based policies
 - default time-based cache policy
 ms.assetid: 6bfce066-a2e7-4add-a05e-85c12ec9f07f
-caps.latest.revision: "9"
 author: mcleblanc
 ms.author: markl
 manager: markl
-ms.workload: dotnet
-ms.openlocfilehash: 1d5166090a0682b71f74565e666c96ddadb7c6c1
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 021a13b9124cf54712643e33cbf0ca77ec828b27
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-set-the-default-time-based-cache-policy-for-an-application"></a>Nasıl yapılır: bir uygulama için varsayılan zaman tabanlı önbellek İlkesi ayarlama
-Önbelleğe alınan kaynakla gönderilen üstbilgiler ve 13 ve RFC 2616, adresinde 14 bölümlerde tanımlanan önbellek davranışını tarafından tanımlanan önbellek davranışını sağlamak bir uygulamanın varsayılan zamana dayalı önbellek İlkesi sağlayan [http://www.ietf.org](http://www.ietf.org/). Çoğu uygulama için uygun önbellek davranış budur.  
+Önbelleğe alınan kaynakla gönderilen üstbilgiler ve 13 ve RFC 2616, adresinde 14 bölümlerde tanımlanan önbellek davranışını tarafından tanımlanan önbellek davranışını sağlamak bir uygulamanın varsayılan zamana dayalı önbellek İlkesi sağlayan [ http://www.ietf.org ](http://www.ietf.org/). Çoğu uygulama için uygun önbellek davranış budur.  
   
 ### <a name="to-set-the-default-automatic-policy-for-an-application"></a>Bir uygulama için varsayılan otomatik ilkesini ayarlamak için  
   

@@ -1,31 +1,19 @@
 ---
-title: "Güvenliği Genişletme"
-ms.custom: 
+title: Güvenliği Genişletme
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - security [WCF], extending
 ms.assetid: a015a040-9fdf-4147-9ea9-f83b570be1d4
-caps.latest.revision: 
 author: BrucePerlerMS
-ms.author: bruceper
 manager: mbaldwin
-ms.workload:
-- dotnet
-ms.openlocfilehash: cdd9b91ba7ff9b1e431f7d9107e72df084ba8af3
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
-ms.translationtype: MT
+ms.openlocfilehash: 6ba6df24163064ee65c563253fa56a1ec574cffc
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="extending-security"></a>Güvenliği Genişletme
-Yeni talep türlerini ve özel belirteçler uyum sağlamak için güvenlik altyapısı genişletebilirsiniz [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)]. Bu bölümdeki konular, bunun nasıl yapılacağı gösterilmektedir.  
+Yeni talep türlerini ve özel belirteçler uyum sağlamak için Windows Communication Foundation (WCF) güvenlik altyapısı genişletebilirsiniz. Bu bölümdeki konular, bunun nasıl yapılacağı gösterilmektedir.  
   
 ## <a name="in-this-section"></a>Bu Bölümde  
  [Güvenlik mimarisi](http://msdn.microsoft.com/library/16593476-d36a-408d-808c-ae6fd483e28f)  
@@ -50,7 +38,7 @@ Yeni talep türlerini ve özel belirteçler uyum sağlamak için güvenlik altya
  İletiler genellikle imzalı ve tek bir sertifika ile şifrelenir. Bu konu nasıl iki sertifika açıklar, gerekli olduğunda kullanılabilir.  
   
  [Nasıl yapılır: Bir X.509 Sertifikasının Şifreleme Sağlayıcısını Değiştirme](../../../../docs/framework/wcf/extending/change-cryptographic-provider-x509-certificate-private-key.md)  
- Bir X.509 sertifikasının özel anahtarı sağlamak için kullanılan şifreleme sağlayıcısını değiştirme ve sağlayıcısını tümleştirme açıklanmaktadır [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] framework.  
+ Bir X.509 sertifikasının özel anahtarı sağlamak için kullanılan şifreleme sağlayıcısını değiştirme ve Windows Communication Foundation (WCF) Framework'e sağlayıcı tümleştirme açıklanmaktadır.  
   
 ## <a name="reference"></a>Başvuru  
  <xref:System.ServiceModel.ServiceAuthorizationManager>  

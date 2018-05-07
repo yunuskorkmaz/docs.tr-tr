@@ -1,29 +1,17 @@
 ---
 title: İş akışı güvenlik
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.tgt_pltfrm: ''
-ms.topic: article
 helpviewer_keywords:
 - programming [WF], workflow security
 ms.assetid: d712a566-f435-44c0-b8c0-49298e84b114
-caps.latest.revision: 13
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: bfd7c3e36bf28c364adf3cd230522cfc40a9503b
-ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
+ms.openlocfilehash: 8acfd0640478cf67309fe53a99707c7d96c5a635
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/28/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="workflow-security"></a>İş akışı güvenlik
-Windows Workflow Foundation (WF), Microsoft SQL Server gibi birçok farklı teknolojiler ile tümleşiktir ve [!INCLUDE[indigo1](../../../includes/indigo1-md.md)]. Bu teknolojiler ile etkileşim yanlış yapıldığında iş akışınıza güvenlik sorunlar çıkarabilir.  
+Windows Workflow Foundation (WF) Microsoft SQL Server ve Windows Communication Foundation (WCF) gibi birkaç farklı teknolojiden tümleşiktir. Bu teknolojiler ile etkileşim yanlış yapıldığında iş akışınıza güvenlik sorunlar çıkarabilir.  
   
 ## <a name="persistence-security-concerns"></a>Kalıcı güvenlik sorunları  
   
@@ -49,7 +37,7 @@ Windows Workflow Foundation (WF), Microsoft SQL Server gibi birçok farklı tekn
   
 ## <a name="considerations-for-workflowservicehost"></a>WorkflowServiceHost için ilgili önemli noktalar  
   
--   [!INCLUDE[indigo1](../../../includes/indigo1-md.md)] iş akışlarında kullanılan uç noktalarını güvenli hale getirilmelidir. Daha fazla bilgi için bkz: [WCF güvenliğine genel bakış](http://go.microsoft.com/fwlink/?LinkID=164975).  
+-   İş akışlarında kullanılan Windows Communication Foundation (WCF) uç noktalarını güvenli hale getirilmelidir. Daha fazla bilgi için bkz: [WCF güvenliğine genel bakış](http://go.microsoft.com/fwlink/?LinkID=164975).  
   
 -   Ana bilgisayar düzeyinde yetkilendirme kullanarak uygulanabilir <xref:System.ServiceModel.ServiceAuthorizationManager>. Bkz: [nasıl yapılır: Özel Yetkilendirme Yöneticisi için bir hizmet oluşturma](http://go.microsoft.com/fwlink/?LinkId=192228) Ayrıntılar için. Bu ayrıca aşağıdaki örnekte gösterilmiştir: [güvenli hale getirme iş akışı Hizmetleri](../../../docs/framework/windows-workflow-foundation/samples/securing-workflow-services.md).  
   

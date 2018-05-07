@@ -1,31 +1,19 @@
 ---
-title: "Federasyon ve Verilen Belirteçler"
-ms.custom: 
+title: Federasyon ve Verilen Belirteçler
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - WCF, federation
 - issued tokens [WCF]
 - federation [WCF], issued tokens
 ms.assetid: 4c31ee7d-a820-4067-8b84-a83049021bb6
-caps.latest.revision: "16"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 017d3e51022ad9980dc8f058415697c80a2a6b35
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: b6a5411b74b53cb5e3b18cced7fd8fc09e9a9676
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="federation-and-issued-tokens"></a>Federasyon ve Verilen Belirteçler
-İle [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)], WS-Federasyon ve WS-Trust belirtimleri uygulayan Hizmetleri ile güvenli bir şekilde iletişim kuran istemciler oluşturabilirsiniz. Belirtimleri, kimlik doğrulama ve yetkilendirme farklı güven bölgelerinde etkinleştirmek mekanizmalar için XML, SOAP ve Web Hizmetleri Açıklama Dili (WSDL) kullanın.  
+Windows Communication Foundation (WCF) ile güvenli bir şekilde WS-Federasyon ve WS-Trust belirtimleri uygulayan Hizmetleri ile iletişim kuran istemciler oluşturabilirsiniz. Belirtimleri, kimlik doğrulama ve yetkilendirme farklı güven bölgelerinde etkinleştirmek mekanizmalar için XML, SOAP ve Web Hizmetleri Açıklama Dili (WSDL) kullanın.  
   
 ## <a name="in-this-section"></a>Bu Bölümde  
  [Federasyon](../../../../docs/framework/wcf/feature-details/federation.md)  
@@ -35,7 +23,7 @@ ms.lasthandoff: 12/22/2017
  Ne zaman oluşturma hizmetleri veya istemciler Federasyon in farkında olması için tasarım konuları listeler.  
   
  [Nasıl yapılır: Federe İstemci Oluşturma](../../../../docs/framework/wcf/feature-details/how-to-create-a-federated-client.md)  
- İle federe istemci oluşturma temelleri açıklanır [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)].  
+ WCF ile federe istemci oluşturma temelleri açıklanır.  
   
  [Nasıl yapılır: Federe Bir Hizmette Kimlik Bilgilerini Yapılandırma](../../../../docs/framework/wcf/feature-details/how-to-configure-credentials-on-a-federation-service.md)  
  Bir Federasyon Hizmeti oluşturma adımları açıklanmaktadır.  

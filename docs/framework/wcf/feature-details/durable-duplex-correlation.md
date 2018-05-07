@@ -1,26 +1,12 @@
 ---
 title: Dayanıklı Çift Yönlü Bağıntı
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 ms.assetid: 8eb0e49a-6d3b-4f7e-a054-0d4febee2ffb
-caps.latest.revision: ''
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: ceb5cbedf30c8ec53bc815f9cd52f7bcb8a6e327
-ms.sourcegitcommit: c883637b41ee028786edceece4fa872939d2e64c
+ms.openlocfilehash: 5bef3e243afc0ea9a51f474bfed98320134ec043
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/23/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="durable-duplex-correlation"></a>Dayanıklı Çift Yönlü Bağıntı
 Dayanıklı çift yönlü bağıntı, geri çağırma bağıntı olarak da bilinen bir iş akışı hizmeti ilk çağıran için bir geri çağırma göndermek için bir gereksinim olduğunda yararlıdır. WCF çift yönlü aksine geri çağırma herhangi bir zamanda gelecekte oluşabilir ve aynı kanalı veya kanal ömrü bağlı değildir; tek gereksinim çağıran bir etkin uç nokta için geri çağırma iletisi dinleme olmasıdır. Bu, uzun süre çalışan konuşmada iletişim kurmak iki iş akışı hizmetleri sağlar. Bu konu, dayanıklı çift yönlü bağıntı genel bir bakış sağlar.  

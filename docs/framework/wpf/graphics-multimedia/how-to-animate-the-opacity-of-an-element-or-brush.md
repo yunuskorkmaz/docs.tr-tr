@@ -1,27 +1,15 @@
 ---
-title: "Nasıl yapılır: Bir Öğe veya Fırça Opaklığına Animasyon Ekleme"
-ms.custom: 
+title: 'Nasıl yapılır: Bir Öğe veya Fırça Opaklığına Animasyon Ekleme'
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-wpf
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - opacity [WPF], animating
 - animation [WPF], Opacity property
 ms.assetid: 572af23b-39dd-48d1-9db5-4bca56a4b3d3
-caps.latest.revision: "8"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: c3b750e6ee21c8347d3896ec290f0ff564cc0a2c
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: a45bf0344c10e1214aa5218e25e9bd9a87d5ea60
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-animate-the-opacity-of-an-element-or-brush"></a>Nasıl yapılır: Bir Öğe veya Fırça Opaklığına Animasyon Ekleme
 Görünüm ve bu moddan silinerek çerçeve öğesi yapmak için animasyon uygulayabilirsiniz kendi <xref:System.Windows.UIElement.Opacity%2A> özellik veya animasyon <xref:System.Windows.Media.Brush.Opacity%2A> özelliği <xref:System.Windows.Media.Brush> (veya Fırçalar) onu boyamak için kullanılan. Kolaylaştırır öğenin opaklık animasyon ve alt görünümü ve bu moddan silinerek, ancak öğe boyamak için kullanılan fırça animasyon öğesi hangi kısmının belirerek hakkında daha fazla seçmeli olarak sağlar. Örneğin, bir düğmenin arka planını boyamak için kullanılan fırça geçirgenliğini animasyon. Bu, içeri ve dışarı görünümünün metnini tamamıyla opak bırakarak sırasında silinerek için düğmenin arka plan neden olur.  

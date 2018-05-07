@@ -1,24 +1,12 @@
 ---
 title: .NET Framework 4.5 ilke etkinlik
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.tgt_pltfrm: ''
-ms.topic: article
 ms.assetid: 8e375e0c-d7c1-4d69-88ab-36d52db0aa7e
-caps.latest.revision: 15
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 5ff750942a2d05310669361e83a10a5acefbcbd4
-ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
+ms.openlocfilehash: 52f0cdd3714367598c83f72e2a8203c2ae27eb4e
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/30/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="policy-activity-in-net-framework-45"></a>.NET Framework 4.5 ilke etkinlik
 Windows Workflow Foundation Policy4 etkinlik verir [!INCLUDE[netfx35_long](../../../../includes/netfx35-long-md.md)] (WF 3.5) <xref:System.Workflow.Activities.Rules.RuleSet> Windows Workflow Foundation kullanılacak nesneleri [!INCLUDE[netfx_current_long](../../../../includes/netfx-current-long-md.md)] (WF 4.5) WF 3. 5 ' sevk kurallar altyapısı kullanarak doğrudan. Bu etkinlik kullanarak oluşturma ve WF 3.5 yürütme <xref:System.Workflow.Activities.Rules.RuleSet>. Windows Workflow Foundation bir parçası olarak dahil edilen WF 3.5 kurallar altyapısı hakkında daha fazla bilgi için Windows Workflow Foundation kurallar altyapısı giriş okuyun. Geçiş hakkında daha fazla bilgi için WF kuralları [!INCLUDE[netfx_current_long](../../../../includes/netfx-current-long-md.md)], Lütfen okuyun [Geçiş Kılavuzu](../../../../docs/framework/windows-workflow-foundation/migration-guidance.md).  
@@ -28,7 +16,7 @@ Windows Workflow Foundation Policy4 etkinlik verir [!INCLUDE[netfx35_long](../..
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  Bu dizin mevcut değilse, Git [Windows Communication Foundation (WCF) ve .NET Framework 4 için Windows Workflow Foundation (WF) örnek](http://go.microsoft.com/fwlink/?LinkId=150780) tüm indirmek için [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] ve [!INCLUDE[wf1](../../../../includes/wf1-md.md)] örnekleri. Bu örnek aşağıdaki dizinde bulunur.  
+>  Bu dizin mevcut değilse, Git [Windows Communication Foundation (WCF) ve .NET Framework 4 için Windows Workflow Foundation (WF) örnek](http://go.microsoft.com/fwlink/?LinkId=150780) tüm Windows Communication Foundation (WCF) indirmek için ve [!INCLUDE[wf1](../../../../includes/wf1-md.md)] örnekleri. Bu örnek aşağıdaki dizinde bulunur.  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WF\Scenario\ActivityLibrary\Rules-Policy4`  
   

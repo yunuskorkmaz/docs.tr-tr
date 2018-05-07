@@ -1,13 +1,6 @@
 ---
-title: "Nasıl yapılır: Windows Forms ColorDialog Bileşeninin Görünüşünü Değiştirme"
-ms.custom: 
+title: 'Nasıl yapılır: Windows Forms ColorDialog Bileşeninin Görünüşünü Değiştirme'
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-winforms
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -17,16 +10,11 @@ helpviewer_keywords:
 - ColorDialog component [Windows Forms], formatting appearance
 - color dialog box [Windows Forms], configuring appearance
 ms.assetid: bba4e262-1cd7-4f63-89cf-330a36f7b539
-caps.latest.revision: "13"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: af3a9ec6ba301a27a7940bc752ffaf12f345abec
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 816850fa61de97b5f4c251571a74da7e0a70cba8
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-change-the-appearance-of-the-windows-forms-colordialog-component"></a>Nasıl yapılır: Windows Forms ColorDialog Bileşeninin Görünüşünü Değiştirme
 Windows formlarının görünüşünü yapılandırabilirsiniz <xref:System.Windows.Forms.ColorDialog> özelliklerini sayısıyla bileşen. İletişim kutusu iki bölümü vardır: bir temel renkleri ve özel renk tanımla kullanıcıya veren gösterir.  

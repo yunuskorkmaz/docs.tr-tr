@@ -1,13 +1,7 @@
 ---
-title: "Normal İfadelerdeki Yeniden Başvuru Yapıları"
-ms.custom: 
+title: Normal İfadelerdeki Yeniden Başvuru Yapıları
 ms.date: 03/30/2017
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
 ms.technology: dotnet-standard
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -17,18 +11,13 @@ helpviewer_keywords:
 - .NET Framework regular expressions, backreference constructs
 - regular expressions, backreference constructs
 ms.assetid: 567a4b8d-0e79-49dc-8df9-f4b1aa376a2a
-caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-- dotnetcore
-ms.openlocfilehash: b4cecc44ff740dd99d10131341c6a6056ce3aab3
-ms.sourcegitcommit: 3a96c706e4dbb4667bf3bf37edac9e1666646f93
+ms.openlocfilehash: 5b16cfeda88b8e700c4d473962155a8510ce7df2
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="backreference-constructs-in-regular-expressions"></a>Normal İfadelerdeki Yeniden Başvuru Yapıları
 Yeniden başvurular yinelenen karakter veya bir dize içindeki alt dizenin tanımlamak için kolay bir yol sağlamak. Örneğin, giriş dizesi birden çok tekrarı rastgele bir alt dizeyi içeriyorsa, birinci yakalama grubu ile eşleşen ve ardından sonraki oluşumlarını alt dizeyi eşleştirmek için bir yeniden başvuru kullanın.  
@@ -41,7 +30,7 @@ Yeniden başvurular yinelenen karakter veya bir dize içindeki alt dizenin tanı
 ## <a name="numbered-backreferences"></a>Numaralı yeniden başvurular  
  Numaralı yeniden başvuru aşağıdaki söz dizimini kullanır:  
   
- `\` *number*  
+ `\` *Sayı*  
   
  Burada *numarası* sıralı yakalama grubunu normal ifadede konumudur. Örneğin, `\4` dördüncü yakalama Grup içeriğini eşleştirir. Varsa *numarası* normal ifade deseni içinde tanımlı değil, bir ayrıştırma hatası ortaya çıkar ve normal ifade altyapısı oluşturur bir <xref:System.ArgumentException>. Örneğin, normal ifade `\b(\w+)\s\1` geçerlidir, çünkü `(\w+)` ilk ve yalnızca ifade grubunda yakalıyor. Diğer taraftan, `\b(\w+)\s\2` geçersiz ve numaralı yakalama Grup olduğundan bir bağımsız değişken özel durum oluşturur `\2`. Ayrıca, varsa *numarası* belirli bir sıra konuma yakalama grubunda tanımlar, Grup yakalama sayısal atandı, ancak sıra konumunu farklı adı, normal ifade ayrıştırıcısının ayrıca bir oluşturur<xref:System.ArgumentException>. 
   

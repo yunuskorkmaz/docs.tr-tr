@@ -1,22 +1,12 @@
 ---
-title: "Değişken genel arabirimler oluşturma (Visual Basic)"
-ms.custom: 
+title: Değişken genel arabirimler oluşturma (Visual Basic)
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: d4037dd2-dfe9-4811-9150-93d4e8b20113
-caps.latest.revision: "3"
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: 380af3b29172b1fa13d42d33e574201607cb804b
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 9e79183cd75e3e222cfa82c6b8ca651eb99ffc02
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="creating-variant-generic-interfaces-visual-basic"></a>Değişken genel arabirimler oluşturma (Visual Basic)
 Genel tür parametreleri eşdeğişken olarak arabirimlerdeki bildirebilir veya karşıtı. *Kovaryans* dönüş türleri genel tür parametreleri tarafından tanımlanan daha fazla türetilmiş arabirim yöntemleri sağlar. *Değişken karşıtı* genel parametreler tarafından belirtilenden daha az türetilmiş bağımsız değişken türleri arabirim yöntemleri sağlar. Eşdeğişken sahip genel arabirim veya karşıtı genel tür parametreleri çağrılır *değişken*.  
@@ -28,7 +18,7 @@ Genel tür parametreleri eşdeğişken olarak arabirimlerdeki bildirebilir veya 
  Değişken genel arabirimler kullanarak bildirebilirsiniz `in` ve `out` genel tür parametreleri için anahtar sözcükler.  
   
 > [!IMPORTANT]
->  `ByRef`Visual Basic'de değişken olamaz. Türlerin varyans da desteklemez.  
+>  `ByRef` Visual Basic'de değişken olamaz. Türlerin varyans da desteklemez.  
   
  Genel tür parametresi eşdeğişken kullanarak bildirebilirsiniz `out` anahtar sözcüğü. Eşdeğişken türü aşağıdaki koşulları karşılaması gerekir:  
   

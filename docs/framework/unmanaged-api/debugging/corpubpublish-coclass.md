@@ -1,14 +1,6 @@
 ---
-title: "CorpubPublish Ortak Sınıfı"
-ms.custom: 
+title: CorpubPublish Ortak Sınıfı
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: reference
 api_name:
 - CorpubPublish Coclass
 api_location:
@@ -22,17 +14,13 @@ helpviewer_keywords:
 ms.assetid: 191015da-f54a-4bac-a28a-1de7ab3c3428
 topic_type:
 - apiref
-caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: f3dec1175715bdbddc3c975924e91e238fa6d5f3
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 9941a9be7d9f68255636b405db29a623be8d37e8
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="corpubpublish-coclass"></a>CorpubPublish Coclass’ı
 Uygulama etki alanları ve işlemler hakkında bilgi yayımlamak için arabirimi sağlar.  

@@ -1,11 +1,6 @@
 ---
 title: -target (Visual Basic)
 ms.date: 03/13/2018
-ms.prod: .net
-ms.suite: ''
-ms.technology:
-- devlang-visual-basic
-ms.topic: article
 helpviewer_keywords:
 - target compiler options [Visual Basic]
 - -target compiler options [Visual Basic]
@@ -13,11 +8,11 @@ helpviewer_keywords:
 ms.assetid: e0954147-548b-461f-9c4b-a8f88845616c
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 8596cb7d43b2c54b46dedc40488ed1b4e2c31b69
-ms.sourcegitcommit: 498799639937c89de777361aab74261efe7b79ea
+ms.openlocfilehash: acf47b24446656a539400c825f3332a70d211dad
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/22/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="-target-visual-basic"></a>-target (Visual Basic)
 Derleyici çıktı biçimi belirtir.  
@@ -31,7 +26,7 @@ Derleyici çıktı biçimi belirtir.
 ## <a name="remarks"></a>Açıklamalar  
  Aşağıdaki tabloda özetlenmiştir etkisini `-target` seçeneği.  
   
-|**Seçeneği**|**Behavior**|  
+|**Seçeneği**|**Davranışı**|  
 |----------------|------------------|  
 |`-target:exe`|Bir yürütülebilir konsol uygulaması oluşturmak derleyici neden olur.<br /><br /> Bu durumlarda varsayılan seçenektir; `-target` seçeneği belirtildi. Yürütülebilir dosyanın .exe uzantısı ile oluşturulur.<br /><br /> İle aksi belirtilmediği sürece `/out` seçeneği, çıktı dosyası adını içeren giriş dosyası adını alır `Sub Main` yordamı.<br /><br /> Yalnızca bir `Sub Main` yordamı bir .exe dosyasına derlenen kaynak kodu dosyaları gereklidir. Kullanım `-main` hangi sınıfı içeren belirtmek için derleyici seçeneği `Sub Main` yordamı.|  
 |`-target:library`|Bir dinamik bağlantı kitaplığı (DLL) oluşturmak derleyici neden olur.<br /><br /> Dinamik bağlantı kitaplığı dosya bir .dll uzantısına sahip bir oluşturulur.<br /><br /> İle aksi belirtilmediği sürece `-out` seçeneği, çıktı dosyası adı ilk giriş dosyasının adını alır.<br /><br /> Bir DLL oluştururken bir `Sub Main` yordam gerekli değildir.|  

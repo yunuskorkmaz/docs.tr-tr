@@ -1,10 +1,6 @@
 ---
-title: "Tür Dönüştürme İşlevleri (Visual Basic)"
+title: Tür Dönüştürme İşlevleri (Visual Basic)
 ms.date: 07/20/2015
-ms.prod: .net
-ms.suite: 
-ms.technology: devlang-visual-basic
-ms.topic: article
 f1_keywords:
 - vb.CUShort
 - vb.csng
@@ -85,14 +81,11 @@ helpviewer_keywords:
 - rounding numbers [Visual Basic], banker's rounding
 - type conversion [Visual Basic], Visual Basic vs. .NET Framework
 ms.assetid: d9d8d165-f967-44ff-a6cd-598e4740a99e
-caps.latest.revision: "22"
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: 117cd4ce038a533715bbc86558545f0f223dd149
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: c9222bdb31f4fd7c792d5a50c100067e29e9d537
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="type-conversion-functions-visual-basic"></a>Tür Dönüştürme İşlevleri (Visual Basic)
 Bu işlevlerdir derlenmiş satır içi dönüştürme kodu ifadeyi hesaplar kod parçası olan anlamına gelir. Bazen performansı artırır dönüştürme gerçekleştirmek için bir yordam hiçbir çağrı yoktur. Her işlev belirli bir veri türüne bir ifadeyi olacak şekilde zorlar.  
@@ -127,22 +120,22 @@ CUShort(expression)
   
 |İşlev adı|Dönüş veri türü|İçin aralığı `expression` bağımsız değişken|  
 |-------------------|----------------------|-------------------------------------|  
-|`CBool`|[Boole veri türü](../../../visual-basic/language-reference/data-types/boolean-data-type.md)|Tüm geçerli `Char` veya `String` veya sayısal ifade.|  
-|`CByte`|[Byte veri türü](../../../visual-basic/language-reference/data-types/byte-data-type.md)|0 ile 255 (imzalanmamış); kesirli bölümleri yuvarlanır. <sup>1</sup>|  
-|`CChar`|[Char veri türü](../../../visual-basic/language-reference/data-types/char-data-type.md)|Tüm geçerli `Char` veya `String` ifade; yalnızca ilk karakteri bir `String` dönüştürülür; değeri, 0-65535 (imzalanmamış) olabilir.|  
-|`CDate`|[Tarih veri türü](../../../visual-basic/language-reference/data-types/date-data-type.md)|Tüm geçerli temsili bir tarih ve saat.|  
-|`CDbl`|[Double veri türü](../../../visual-basic/language-reference/data-types/double-data-type.md)|-1.79769313486231570E + 308 ile - 4.94065645841246544E-324 negatif değerler; 4.94065645841246544E-324 1.79769313486231570E + 308 pozitif değerler için aracılığıyla.|  
-|`CDec`|[Ondalık veri türü](../../../visual-basic/language-reference/data-types/decimal-data-type.md)|sıfır ölçeklendirilmiş numaraları için diğer bir deyişle, ondalık konumu olmayan sayılar 79,228,162,514,264,337,593,543,950,335 +/-. İle 28 ondalık sayılar için 7.9228162514264337593543950335 +/-aralığıdır. En küçük olası sıfır 0.0000000000000000000000000001 (+/-1E-28) sayısıdır.|  
-|`CInt`|[Integer veri türü](../../../visual-basic/language-reference/data-types/integer-data-type.md)|-2.147.483.648 2.147.483.647 aracılığıyla; kesirli bölümleri yuvarlanır. <sup>1</sup>|  
-|`CLng`|[Long veri türü](../../../visual-basic/language-reference/data-types/long-data-type.md)|-9,223,372,036,854,775,808 9,223,372,036,854,775,807 aracılığıyla; kesirli bölümleri yuvarlanır. <sup>1</sup>|  
-|`CObj`|[Nesne veri türü](../../../visual-basic/language-reference/data-types/object-data-type.md)|Herhangi bir geçerli ifade.|  
-|`CSByte`|[SByte veri türü](../../../visual-basic/language-reference/data-types/sbyte-data-type.md)|-128 127 aracılığıyla; kesirli bölümleri yuvarlanır. <sup>1</sup>|  
-|`CShort`|[Short veri türü](../../../visual-basic/language-reference/data-types/short-data-type.md)|-32.768 32.767 aracılığıyla; kesirli bölümleri yuvarlanır. <sup>1</sup>|  
-|`CSng`|[Single veri türü](../../../visual-basic/language-reference/data-types/single-data-type.md)|-3.402823E + 38 ile - 1.401298E-45 negatif değerler; 1.401298E-45 3.402823E + 38 pozitif değerler için aracılığıyla.|  
-|`CStr`|[Dize veri türü](../../../visual-basic/language-reference/data-types/string-data-type.md)|İçin döndürür `CStr` bağımlı `expression` bağımsız değişkeni. Bkz: [CStr işlevinin dönüş değerleri](../../../visual-basic/language-reference/functions/return-values-for-the-cstr-function.md).|  
-|`CUInt`|[Uınteger veri türü](../../../visual-basic/language-reference/data-types/uinteger-data-type.md)|0 ile 4.294.967.295 (imzalanmamış); kesirli bölümleri yuvarlanır. <sup>1</sup>|  
-|`CULng`|[ULong veri türü](../../../visual-basic/language-reference/data-types/ulong-data-type.md)|0 ile 18,446,744,073,709,551,615 (imzalanmamış); kesirli bölümleri yuvarlanır. <sup>1</sup>|  
-|`CUShort`|[UShort veri türü](../../../visual-basic/language-reference/data-types/ushort-data-type.md)|0 ile 65.535 (imzalanmamış); kesirli bölümleri yuvarlanır. <sup>1</sup>|  
+|`CBool`|[Boolean Veri Türü](../../../visual-basic/language-reference/data-types/boolean-data-type.md)|Tüm geçerli `Char` veya `String` veya sayısal ifade.|  
+|`CByte`|[Byte Veri Türü](../../../visual-basic/language-reference/data-types/byte-data-type.md)|0 ile 255 (imzalanmamış); kesirli bölümleri yuvarlanır. <sup>1</sup>|  
+|`CChar`|[Char Veri Türü](../../../visual-basic/language-reference/data-types/char-data-type.md)|Tüm geçerli `Char` veya `String` ifade; yalnızca ilk karakteri bir `String` dönüştürülür; değeri, 0-65535 (imzalanmamış) olabilir.|  
+|`CDate`|[Date Veri Türü](../../../visual-basic/language-reference/data-types/date-data-type.md)|Tüm geçerli temsili bir tarih ve saat.|  
+|`CDbl`|[Double Veri Türü](../../../visual-basic/language-reference/data-types/double-data-type.md)|-1.79769313486231570E + 308 ile - 4.94065645841246544E-324 negatif değerler; 4.94065645841246544E-324 1.79769313486231570E + 308 pozitif değerler için aracılığıyla.|  
+|`CDec`|[Decimal Veri Türü](../../../visual-basic/language-reference/data-types/decimal-data-type.md)|sıfır ölçeklendirilmiş numaraları için diğer bir deyişle, ondalık konumu olmayan sayılar 79,228,162,514,264,337,593,543,950,335 +/-. İle 28 ondalık sayılar için 7.9228162514264337593543950335 +/-aralığıdır. En küçük olası sıfır 0.0000000000000000000000000001 (+/-1E-28) sayısıdır.|  
+|`CInt`|[Integer Veri Türü](../../../visual-basic/language-reference/data-types/integer-data-type.md)|-2.147.483.648 2.147.483.647 aracılığıyla; kesirli bölümleri yuvarlanır. <sup>1</sup>|  
+|`CLng`|[Long Veri Türü](../../../visual-basic/language-reference/data-types/long-data-type.md)|-9,223,372,036,854,775,808 9,223,372,036,854,775,807 aracılığıyla; kesirli bölümleri yuvarlanır. <sup>1</sup>|  
+|`CObj`|[Object Veri Türü](../../../visual-basic/language-reference/data-types/object-data-type.md)|Herhangi bir geçerli ifade.|  
+|`CSByte`|[SByte Veri Türü](../../../visual-basic/language-reference/data-types/sbyte-data-type.md)|-128 127 aracılığıyla; kesirli bölümleri yuvarlanır. <sup>1</sup>|  
+|`CShort`|[Short Veri Türü](../../../visual-basic/language-reference/data-types/short-data-type.md)|-32.768 32.767 aracılığıyla; kesirli bölümleri yuvarlanır. <sup>1</sup>|  
+|`CSng`|[Single Veri Türü](../../../visual-basic/language-reference/data-types/single-data-type.md)|-3.402823E + 38 ile - 1.401298E-45 negatif değerler; 1.401298E-45 3.402823E + 38 pozitif değerler için aracılığıyla.|  
+|`CStr`|[String Veri Türü](../../../visual-basic/language-reference/data-types/string-data-type.md)|İçin döndürür `CStr` bağımlı `expression` bağımsız değişkeni. Bkz: [CStr işlevinin dönüş değerleri](../../../visual-basic/language-reference/functions/return-values-for-the-cstr-function.md).|  
+|`CUInt`|[UInteger Veri Türü](../../../visual-basic/language-reference/data-types/uinteger-data-type.md)|0 ile 4.294.967.295 (imzalanmamış); kesirli bölümleri yuvarlanır. <sup>1</sup>|  
+|`CULng`|[ULong Veri Türü](../../../visual-basic/language-reference/data-types/ulong-data-type.md)|0 ile 18,446,744,073,709,551,615 (imzalanmamış); kesirli bölümleri yuvarlanır. <sup>1</sup>|  
+|`CUShort`|[UShort Veri Türü](../../../visual-basic/language-reference/data-types/ushort-data-type.md)|0 ile 65.535 (imzalanmamış); kesirli bölümleri yuvarlanır. <sup>1</sup>|  
   
  <sup>1</sup> kesirli bölümleri çağrılan yuvarlama bir özel tür tabi olabilir *banker yuvarlaması*. "Açıklamalar" daha fazla bilgi için bkz.  
   
@@ -159,9 +152,9 @@ CUShort(expression)
   
      Kesirli tam olarak bir parçasıysa 0,5, tamsayı dönüştürme işlevleri yuvarlamak kendisine en yakın çift tam sayı. Örneğin, 0, 1.5 ve her ikisi de 2 yuvarlamak 2.5 0,5 yuvarlar. Buna bazen denir *banker yuvarlaması*, ve amacı gibi birçok numaraları birlikte eklerken birikebilir sapması dengelemek için.  
   
-     `CInt`ve `CLng` farklı <xref:Microsoft.VisualBasic.Conversion.Int%2A> ve <xref:Microsoft.VisualBasic.Conversion.Fix%2A> hangi round, bir sayının kesirli kısmını yerine truncate işlevleri. Ayrıca, `Fix` ve `Int` , geçirdiğiniz olarak her zaman aynı veri türünde bir değer döndürür.  
+     `CInt` ve `CLng` farklı <xref:Microsoft.VisualBasic.Conversion.Int%2A> ve <xref:Microsoft.VisualBasic.Conversion.Fix%2A> hangi round, bir sayının kesirli kısmını yerine truncate işlevleri. Ayrıca, `Fix` ve `Int` , geçirdiğiniz olarak her zaman aynı veri türünde bir değer döndürür.  
   
--   **Dönüşümler tarih veya saat.** Kullanım <xref:Microsoft.VisualBasic.Information.IsDate%2A> bir tarih ve saat için bir değer dönüştürülüp dönüştürülemeyeceğini belirlemek için işlev. `CDate`Tarih değişmez değerleri ve Saat rakamları ancak sayısal değerleri algılar. Visual Basic 6.0 dönüştürmek için `Date` değeri bir `Date` değeri Visual Basic 2005 veya sonraki sürümler, kullanabileceğiniz <xref:System.DateTime.FromOADate%2A?displayProperty=nameWithType> yöntemi.  
+-   **Dönüşümler tarih veya saat.** Kullanım <xref:Microsoft.VisualBasic.Information.IsDate%2A> bir tarih ve saat için bir değer dönüştürülüp dönüştürülemeyeceğini belirlemek için işlev. `CDate` Tarih değişmez değerleri ve Saat rakamları ancak sayısal değerleri algılar. Visual Basic 6.0 dönüştürmek için `Date` değeri bir `Date` değeri Visual Basic 2005 veya sonraki sürümler, kullanabileceğiniz <xref:System.DateTime.FromOADate%2A?displayProperty=nameWithType> yöntemi.  
   
 -   **Nötr tarih/saat değerleri.** [Tarih veri türü](../../../visual-basic/language-reference/data-types/date-data-type.md) her zaman tarih ve saat bilgilerini içerir. Tür dönüşümü amaçları doğrultusunda, Visual Basic 1/1/0001 (Ocak 1 yılının 1) olarak göz önünde bulundurur bir *nötr değeri* tarihini ve 00:00:00 (gece yarısı) süresi dilden bağımsız bir değer olmalıdır. Dönüştürürseniz, bir `Date` değerini bir dizeyle `CStr` nötr değerleri sonuç dizesinde içermez. Örneğin, dönüştürmek, `#January 1, 0001 9:30:00#` bir dizeye sonucu "9:30:00 AM"; tarih bilgisini engellenir. Ancak, tarih bilgisini özgün hala mevcut olduğu `Date` değer ve işlevleriyle gibi kurtarılabilir <xref:Microsoft.VisualBasic.DateAndTime.DatePart%2A> işlevi.  
   
@@ -194,7 +187,7 @@ CUShort(expression)
  [!code-vb[VbVbalrFunctions#4](../../../visual-basic/language-reference/functions/codesnippet/VisualBasic/type-conversion-functions_4.vb)]  
   
 ## <a name="cdate-example"></a>CDate örneği  
- Aşağıdaki örnek kullanır `CDate` dizeye dönüştürmek için işlevi `Date` değerleri. Genel olarak, kodlama sabit tarihler ve saatler (Bu örnekte gösterildiği gibi) dizesi olarak önerilmez. Tarih değişmez değerleri ve #Feb 12 &#1969; gibi saat değişmez değerleri kullanın ve # 4:45:23 PM #, bunun yerine.  
+ Aşağıdaki örnek kullanır `CDate` dizeye dönüştürmek için işlevi `Date` değerleri. Genel olarak, kodlama sabit tarihler ve saatler (Bu örnekte gösterildiği gibi) dizesi olarak önerilmez. Tarih değişmez değerleri ve #Feb 12 1969 # gibi saat değişmez değerleri kullanın ve # 4:45:23 PM #, bunun yerine.  
   
  [!code-vb[VbVbalrFunctions#5](../../../visual-basic/language-reference/functions/codesnippet/VisualBasic/type-conversion-functions_5.vb)]  
   
@@ -245,7 +238,7 @@ CUShort(expression)
   
  [!code-vb[VbVbalrFunctions#15](../../../visual-basic/language-reference/functions/codesnippet/VisualBasic/type-conversion-functions_15.vb)]  
   
- `CStr`her zaman işleyen bir `Date` geçerli yerel ayar için örneğin, standart kısa biçimindeki değerini "15/6/2003 4:35:47 PM". Ancak, `CStr` bastırır *nötr değerleri* 1/1/0001 için tarih ve saat için 00:00:00.  
+ `CStr` her zaman işleyen bir `Date` geçerli yerel ayar için örneğin, standart kısa biçimindeki değerini "15/6/2003 4:35:47 PM". Ancak, `CStr` bastırır *nötr değerleri* 1/1/0001 için tarih ve saat için 00:00:00.  
   
  Tarafından döndürülen değerleri hakkında daha fazla ayrıntı için `CStr`, bkz: [CStr işlevinin dönüş değerleri](../../../visual-basic/language-reference/functions/return-values-for-the-cstr-function.md).  
   
@@ -276,5 +269,5 @@ CUShort(expression)
  <xref:Microsoft.VisualBasic.Conversion.Oct%2A>  
  <xref:Microsoft.VisualBasic.Conversion.Str%2A>  
  <xref:Microsoft.VisualBasic.Conversion.Val%2A>  
- [Dönüşüm işlevleri](../../../visual-basic/language-reference/functions/conversion-functions.md)  
+ [Dönüştürme İşlevleri](../../../visual-basic/language-reference/functions/conversion-functions.md)  
  [Visual Basic'de tür dönüştürmeleri](../../../visual-basic/programming-guide/language-features/data-types/type-conversions.md)

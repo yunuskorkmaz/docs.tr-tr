@@ -1,12 +1,6 @@
 ---
 title: And İşleci (Visual Basic)
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- devlang-visual-basic
-ms.topic: article
 f1_keywords:
 - vb.And
 helpviewer_keywords:
@@ -19,14 +13,11 @@ helpviewer_keywords:
 - operators [Visual Basic], conjunction
 - bitwise comparison [Visual Basic]
 ms.assetid: 2ea711f3-439a-4c7c-9e3a-1ffe3b0d6046
-caps.latest.revision: 12
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: 83e1f9df11152f88ef0db24a794026d6f5888a2e
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: e14dfd8ba200598084cad04d1faa05f3561f8dab
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="and-operator-visual-basic"></a>And İşleci (Visual Basic)
 Mantıksal ve işlecini iki gerçekleştirir `Boolean` ifadeler veya iki sayısal ifadeye bit tabanlı birlikte.  
@@ -97,6 +88,6 @@ result = expression1 And expression2
 ## <a name="see-also"></a>Ayrıca Bkz.  
  [Mantıksal ve bit düzeyinde işleçler (Visual Basic)](../../../visual-basic/language-reference/operators/logical-bitwise-operators.md)  
  [Visual Basic'de İşleç önceliği](../../../visual-basic/language-reference/operators/operator-precedence.md)  
- [İşlevselliğe göre listelenmiş işleçler](../../../visual-basic/language-reference/operators/operators-listed-by-functionality.md)  
- [AndAlso işleci](../../../visual-basic/language-reference/operators/andalso-operator.md)  
+ [İşlevselliğe Göre Listelenmiş İşleçler](../../../visual-basic/language-reference/operators/operators-listed-by-functionality.md)  
+ [AndAlso İşleci](../../../visual-basic/language-reference/operators/andalso-operator.md)  
  [Visual Basic'de mantıksal ve bit düzeyinde işleçler](../../../visual-basic/programming-guide/language-features/operators-and-expressions/logical-and-bitwise-operators.md)

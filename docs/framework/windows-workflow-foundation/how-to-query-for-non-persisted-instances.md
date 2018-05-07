@@ -1,23 +1,12 @@
 ---
-title: "Nasıl yapılır: Sorgu kalıcı olmayan örnekleri için"
-ms.custom: 
+title: 'Nasıl yapılır: Sorgu kalıcı olmayan örnekleri için'
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 294019b1-c1a7-4b81-a14f-b47c106cd723
-caps.latest.revision: "5"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: bde3ab1049edf6cb52a221225321f1e505a2491b
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 000342013be4380e1a038fb8233050523f6bc758
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-query-for-non-persisted-instances"></a>Nasıl yapılır: Sorgu kalıcı olmayan örnekleri için
 Bir hizmetin yeni bir örneğini oluşturulur ve hizmet tanımlı SQL iş akışı örneği deposuna davranışı vardır, hizmet ana bilgisayarı ilk giriş o hizmet örneği için örnek deposunda oluşturur. Hizmet örneği ilk kez ediyorsa, daha sonra etkinleştirme, kurtarma ve denetim için gerekli olan ek veri birlikte geçerli örneğin durumu SQL iş akışı örneği deposuna davranışı depolar.  

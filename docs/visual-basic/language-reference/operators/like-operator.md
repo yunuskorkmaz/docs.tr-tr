@@ -1,11 +1,6 @@
 ---
-title: "Like İşleci (Visual Basic)"
+title: Like İşleci (Visual Basic)
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
-ms.topic: article
 f1_keywords:
 - Like
 - vb.Like
@@ -27,14 +22,11 @@ helpviewer_keywords:
 - data [Visual Basic], string comparisons
 - string comparison [Visual Basic], Like operators
 ms.assetid: 966283ec-80e2-4294-baa8-c75baff804f9
-caps.latest.revision: "18"
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: ad5729515362bfd52b0c3b401f218a49f569726e
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: a9c672a397510c69c9ee67358689feff80d8831a
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="like-operator-visual-basic"></a>Like İşleci (Visual Basic)
 Bir dizeyi belirli bir desene göre karşılaştırır.  
@@ -64,13 +56,13 @@ result = string Like pattern
 ## <a name="pattern-options"></a>Desen seçenekleri  
  Yerleşik desen eşleştirme dize karşılaştırmaları için çok yönlü bir araç sağlar. Desen eşleştirme özellikleri her karakteri eşleştirmek izin `string` karşı belirli bir karakter, bir joker karakter, karakter listesini veya bir karakter aralığı. Aşağıdaki tabloda, izin verilen karakter gösterilmektedir `pattern` ve bunların eşleşmesi.  
   
-|Karakter`pattern`|İçinde eşleşir`string`|  
+|Karakter `pattern`|İçinde eşleşir `string`|  
 |-----------------------------|-------------------------|  
 |`?`|Herhangi bir tek karakteri|  
 |`*`|Sıfır veya daha fazla karakter|  
 |`#`|Tek bir rakam (0-9)|  
-|`[charlist]`|Herhangi bir tek karakteri`charlist`|  
-|`[!charlist]`|Herhangi bir tek karakteri değil`charlist`|  
+|`[charlist]`|Herhangi bir tek karakteri `charlist`|  
+|`[!charlist]`|Herhangi bir tek karakteri değil `charlist`|  
   
 ## <a name="character-lists"></a>Karakter listeler  
  Bir veya daha fazla karakter grubu (`charlist`) ayraç (`[ ]`) herhangi bir tek karakteri eşleştirmek için kullanılan `string` ve basamak dahil olmak üzere, neredeyse her bir karakter kodu içerebilir.  
@@ -112,9 +104,9 @@ result = string Like pattern
 ## <a name="see-also"></a>Ayrıca Bkz.  
  <xref:Microsoft.VisualBasic.Strings.InStr%2A>  
  <xref:Microsoft.VisualBasic.Strings.StrComp%2A>  
- [Karşılaştırma işleçleri](../../../visual-basic/language-reference/operators/comparison-operators.md)  
+ [Karşılaştırma İşleçleri](../../../visual-basic/language-reference/operators/comparison-operators.md)  
  [Visual Basic'de İşleç önceliği](../../../visual-basic/language-reference/operators/operator-precedence.md)  
- [İşlevselliğe göre listelenmiş işleçler](../../../visual-basic/language-reference/operators/operators-listed-by-functionality.md)  
- [Option Compare deyimi](../../../visual-basic/language-reference/statements/option-compare-statement.md)  
- [İşleçler ve ifadeler](../../../visual-basic/programming-guide/language-features/operators-and-expressions/index.md)  
- [Nasıl yapılır: bir dizeyi belirli bir desene göre eşleştirme](../../../visual-basic/programming-guide/language-features/operators-and-expressions/how-to-match-a-string-against-a-pattern.md)
+ [İşlevselliğe Göre Listelenmiş İşleçler](../../../visual-basic/language-reference/operators/operators-listed-by-functionality.md)  
+ [Option Compare Deyimi](../../../visual-basic/language-reference/statements/option-compare-statement.md)  
+ [İşleçler ve İfadeler](../../../visual-basic/programming-guide/language-features/operators-and-expressions/index.md)  
+ [Nasıl yapılır: Bir Dizeyi Belirli Bir Desene Göre Eşleştirme](../../../visual-basic/programming-guide/language-features/operators-and-expressions/how-to-match-a-string-against-a-pattern.md)

@@ -2,16 +2,12 @@
 title: F# Kılavuzu
 description: 'Bu kılavuz çeşitli öğrenim malzemelerini F #, .NET çalıştıran işlevsel bir programlama dili için genel bir bakış sağlar.'
 author: jackfoxy
-ms.author: phcart
 ms.date: 03/19/2018
-ms.topic: conceptual
-ms.prod: dotnet-fsharp
-ms.devlang: fsharp
-ms.openlocfilehash: 9c03148d42f3cf8731580e36990aa21c68f705f6
-ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
+ms.openlocfilehash: 393214a5da7445d8ee3dced844da8592f4ca6d31
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/28/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="f-guide"></a>F# Kılavuzu
 

@@ -1,17 +1,12 @@
 ---
 title: Do...Loop Deyimi (Visual Basic)
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
-ms.topic: article
 f1_keywords:
 - vb.Do
 - vb.Loop
 - vb.Until
 helpviewer_keywords:
-- "conditional statements [Visual Basic], Do�Loop"
+- conditional statements [Visual Basic], Do�Loop
 - while statement [Visual Basic], Do...Loop
 - execution [Visual Basic], conditional
 - Do loops
@@ -20,19 +15,16 @@ helpviewer_keywords:
 - instructions, repeating
 - Do statement [Visual Basic]
 - Exit statement [Visual Basic], in Do...Loop statements
-- "loop structures [Visual Basic], Do�Loop statements"
+- loop structures [Visual Basic], Do�Loop statements
 - do-while statements [Visual Basic]
 - loops, exiting
 - Loop keyword [Visual Basic], Do...Loop statement
 ms.assetid: 892f9096-b3e2-4aee-834d-83bc4e2c379d
-caps.latest.revision: "37"
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: 79d25dce963f383a84b56ce2c9b600fc2d5a7937
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: e12cdc1ae405b877d4d27d1947c98dcb51938ba7
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="doloop-statement-visual-basic"></a>Do...Loop Deyimi (Visual Basic)
 While deyimleri bloğunu yinelenen bir `Boolean` koşul `True` veya koşul olana kadar `True`.  
@@ -64,7 +56,7 @@ Loop { While | Until } condition
 |`Do`|Gerekli. Tanımını başlatır `Do` döngü.|  
 |`While`|Sürece gerekli `Until` kullanılır. Döngüyü kadar `condition` olan `False`.|  
 |`Until`|Sürece gerekli `While` kullanılır. Döngüyü kadar `condition` olan `True`.|  
-|`condition`|İsteğe bağlı. `Boolean`ifade. Varsa `condition` olan `Nothing`, Visual Basic da işler `False`.|  
+|`condition`|İsteğe bağlı. `Boolean` İfade. Varsa `condition` olan `Nothing`, Visual Basic da işler `False`.|  
 |`statements`|İsteğe bağlı. Sırasında veya kadar yinelenen bir veya daha fazla deyimleri `condition` olan `True`.|  
 |`Continue Do`|İsteğe bağlı. Sonraki yinelemesini denetim aktarır `Do` döngü.|  
 |`Exit Do`|İsteğe bağlı. Denetimin dışarı aktarır `Do` döngü.|  
@@ -85,9 +77,9 @@ Loop { While | Until } condition
 >  `Do...Loop` Yapısı size daha fazla esneklik [sırada... End While deyimi](../../../visual-basic/language-reference/statements/while-end-while-statement.md) , döngü sona erdirmek karar vermek sağladığından, `condition` olan durdurur `True` veya zaman ilk olacağını `True`. Ayrıca, test etmek sağlar `condition` başlangıç veya döngüsü sonu.  
   
 ## <a name="exit-do"></a>Çık  
- [Çıkış yapmak](../../../visual-basic/language-reference/statements/exit-statement.md) deyimi, çıkmak için alternatif bir yol sağlayabilir bir `Do…Loop`. `Exit Do`aşağıdaki deyim denetimi hemen aktarır `Loop` deyimi.  
+ [Çıkış yapmak](../../../visual-basic/language-reference/statements/exit-statement.md) deyimi, çıkmak için alternatif bir yol sağlayabilir bir `Do…Loop`. `Exit Do` aşağıdaki deyim denetimi hemen aktarır `Loop` deyimi.  
   
- `Exit Do`Bazı koşul örnekte değerlendirildikten sonra sık kullanılan bir `If...Then...Else` yapısı. Gereksiz veya hatalı bir değer veya bir sonlandırma isteği gibi yineleme devam mümkün kılan bir koşul algılama döngü çıkmak isteyebilirsiniz. Bir kullanımını `Exit Do` neden olabilecek bir koşulu sınamak için bir *sonsuz bir döngüde*, bir büyük veya hatta sonsuz sayıda çalışacak bir döngü değil. Kullanabileceğiniz `Exit Do` döngü kaçınmak için.  
+ `Exit Do` Bazı koşul örnekte değerlendirildikten sonra sık kullanılan bir `If...Then...Else` yapısı. Gereksiz veya hatalı bir değer veya bir sonlandırma isteği gibi yineleme devam mümkün kılan bir koşul algılama döngü çıkmak isteyebilirsiniz. Bir kullanımını `Exit Do` neden olabilecek bir koşulu sınamak için bir *sonsuz bir döngüde*, bir büyük veya hatta sonsuz sayıda çalışacak bir döngü değil. Kullanabileceğiniz `Exit Do` döngü kaçınmak için.  
   
  Herhangi bir sayıda içerebilir `Exit Do` deyimlerinde herhangi bir yerden bir `Do…Loop`.  
   
@@ -114,9 +106,9 @@ Loop { While | Until } condition
  [!code-vb[VbVbalrStatements#134](../../../visual-basic/language-reference/error-messages/codesnippet/VisualBasic/do-loop-statement_4.vb)]  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [Döngü yapıları](../../../visual-basic/programming-guide/language-features/control-flow/loop-structures.md)  
- [İçin... Sonraki deyim](../../../visual-basic/language-reference/statements/for-next-statement.md)  
- [Boole veri türü](../../../visual-basic/language-reference/data-types/boolean-data-type.md)  
- [İç içe geçmiş denetim yapıları](../../../visual-basic/programming-guide/language-features/control-flow/nested-control-structures.md)  
- [Exit deyimi](../../../visual-basic/language-reference/statements/exit-statement.md)  
- [While... End While deyimi](../../../visual-basic/language-reference/statements/while-end-while-statement.md)
+ [Döngü Yapıları](../../../visual-basic/programming-guide/language-features/control-flow/loop-structures.md)  
+ [For...Next Deyimi](../../../visual-basic/language-reference/statements/for-next-statement.md)  
+ [Boolean Veri Türü](../../../visual-basic/language-reference/data-types/boolean-data-type.md)  
+ [İç İçe Geçmiş Denetim Yapıları](../../../visual-basic/programming-guide/language-features/control-flow/nested-control-structures.md)  
+ [Exit Deyimi](../../../visual-basic/language-reference/statements/exit-statement.md)  
+ [While...End While Deyimi](../../../visual-basic/language-reference/statements/while-end-while-statement.md)

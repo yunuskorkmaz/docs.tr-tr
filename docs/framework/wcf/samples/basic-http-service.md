@@ -1,27 +1,15 @@
 ---
 title: Temel HTTP Hizmeti
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 27048b43-8a54-4f2a-9952-594bbfab10ad
-caps.latest.revision: "9"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 687eba2a346b3f554c8a7618bebe2e9c04f4d5b5
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
-ms.translationtype: MT
+ms.openlocfilehash: 0d00ee21fa328c32549f89d8d5fc4c767f64582c
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="basic-http-service"></a>Temel HTTP Hizmeti
-Bu örnek, özellik "POX" (düz eski XML) hizmet vermek için başvurulan – kullanarak bir HTTP tabanlı, RPC tabanlı hizmeti - uygulama gösterilmiştir [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] REST programlama modeli. Bu örnek iki bileşenden oluşur: kendini barındıran [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] HTTP hizmet (adını da) ve hizmet oluşturur ve bunu çağrılar bir konsol uygulaması (Program.cs).  
+Bu örnek, özellik için Windows Communication Foundation (WCF) REST programlama modeli kullanarak "POX" (düz eski XML) hizmet olarak – başvurulan bir HTTP tabanlı, RPC tabanlı hizmeti - uygulama gösterilmiştir. Bu örnek iki bileşenden oluşur: kendini barındıran [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] HTTP hizmet (adını da) ve hizmet oluşturur ve bunu çağrılar bir konsol uygulaması (Program.cs).  
   
 ## <a name="sample-details"></a>Örnek Ayrıntıları  
  [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] Hizmet sunan 2 işlemleri `EchoWithGet` ve `EchoWithPost`, girdi olarak geçirilen dize döndürür.  
@@ -49,7 +37,7 @@ Bu örnek, özellik "POX" (düz eski XML) hizmet vermek için başvurulan – ku
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  Bu dizin mevcut değilse, Git [Windows Communication Foundation (WCF) ve .NET Framework 4 için Windows Workflow Foundation (WF) örnek](http://go.microsoft.com/fwlink/?LinkId=150780) tüm indirmek için [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] ve [!INCLUDE[wf1](../../../../includes/wf1-md.md)] örnekleri. Bu örnek aşağıdaki dizinde bulunur.  
+>  Bu dizin mevcut değilse, Git [Windows Communication Foundation (WCF) ve .NET Framework 4 için Windows Workflow Foundation (WF) örnek](http://go.microsoft.com/fwlink/?LinkId=150780) tüm Windows Communication Foundation (WCF) indirmek için ve [!INCLUDE[wf1](../../../../includes/wf1-md.md)] örnekleri. Bu örnek aşağıdaki dizinde bulunur.  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Web\BasicHttpService`  
   

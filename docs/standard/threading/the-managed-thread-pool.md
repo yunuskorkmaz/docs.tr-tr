@@ -1,13 +1,7 @@
 ---
-title: "Yönetilen İş Parçacığı Havuzu"
-ms.custom: 
+title: Yönetilen İş Parçacığı Havuzu
 ms.date: 03/30/2017
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
 ms.technology: dotnet-standard
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -18,18 +12,13 @@ helpviewer_keywords:
 - threading [.NET Framework], thread pool
 - threading [.NET Framework], pooling
 ms.assetid: 2be05b06-a42e-4c9d-a739-96c21d673927
-caps.latest.revision: "24"
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-- dotnetcore
-ms.openlocfilehash: e50fd66096d6bd58fb7db692449e7f8654b5ca76
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: 3894229ff5561e50d42a36f576a89ee7bf01c067
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="the-managed-thread-pool"></a>Yönetilen İş Parçacığı Havuzu
 <xref:System.Threading.ThreadPool> Sınıfı yerine uygulama görevlerde yoğunlaşabilirsiniz yönetim iş parçacığı sağlayan sistem tarafından yönetilen çalışan iş parçacığı havuzu ile uygulamanızı sağlar. Arka plan işlemleri gerektiren kısa görevleri varsa, yönetilen iş parçacığı havuzu birden çok iş parçacığı yararlanmak için kolay bir yoludur. Örneğin, başlayarak [!INCLUDE[net_v40_long](../../../includes/net-v40-long-md.md)] oluşturabileceğiniz <xref:System.Threading.Tasks.Task> ve <xref:System.Threading.Tasks.Task%601> iş parçacığı havuzu iş parçacıkları üzerinden zaman uyumsuz görevleri nesneleri.  
@@ -93,7 +82,7 @@ ms.lasthandoff: 12/23/2017
 >  Kullanabileceğiniz <xref:System.Threading.ThreadPool.SetMinThreads%2A> minimum boş iş parçacığı sayısını artırmak için yöntem. Ancak, bu değerleri gereksiz yere artan performans sorunlarına neden olabilir. Çok fazla görev aynı anda başlatırsanız, bunların tümünün yavaş görünebilir. Çoğu durumda iş parçacığı havuzu iş parçacıkları ayırma için kendi algoritması ile daha iyi gerçekleştirir.  
   
 ## <a name="skipping-security-checks"></a>Güvenlik denetimlerini atlanıyor  
- İş parçacığı havuzu de sağlar <xref:System.Threading.ThreadPool.UnsafeQueueUserWorkItem%2A?displayProperty=nameWithType> ve <xref:System.Threading.ThreadPool.UnsafeRegisterWaitForSingleObject%2A?displayProperty=nameWithType> yöntemleri. Bu yöntemleri yalnızca, çağıranın yığını kuyruğa alınmış görev yürütme sırasında gerçekleştirilen tüm güvenlik denetimleri için önemli olduğundan emin olduğunuzda kullanın. <xref:System.Threading.ThreadPool.QueueUserWorkItem%2A>ve <xref:System.Threading.ThreadPool.RegisterWaitForSingleObject%2A> hem de iş parçacığının görevi yürütmek başladığında, iş parçacığı havuzu iş parçacığı yığına birleştirilmiş arayanın yığını yakalama. Güvenlik denetimi gereklidir, tüm yığın denetlenmesi gerekir. Onay güvenliğini sağlasa da, bir performans maliyetiyle da sahiptir.  
+ İş parçacığı havuzu de sağlar <xref:System.Threading.ThreadPool.UnsafeQueueUserWorkItem%2A?displayProperty=nameWithType> ve <xref:System.Threading.ThreadPool.UnsafeRegisterWaitForSingleObject%2A?displayProperty=nameWithType> yöntemleri. Bu yöntemleri yalnızca, çağıranın yığını kuyruğa alınmış görev yürütme sırasında gerçekleştirilen tüm güvenlik denetimleri için önemli olduğundan emin olduğunuzda kullanın. <xref:System.Threading.ThreadPool.QueueUserWorkItem%2A> ve <xref:System.Threading.ThreadPool.RegisterWaitForSingleObject%2A> hem de iş parçacığının görevi yürütmek başladığında, iş parçacığı havuzu iş parçacığı yığına birleştirilmiş arayanın yığını yakalama. Güvenlik denetimi gereklidir, tüm yığın denetlenmesi gerekir. Onay güvenliğini sağlasa da, bir performans maliyetiyle da sahiptir.  
   
 ## <a name="using-the-thread-pool"></a>İş parçacığı havuzu kullanma  
  İle başlayarak [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)], iş parçacığı havuzu kullanmak için en kolay yolu kullanmaktır [görev paralel kitaplığı (TPL)](../../../docs/standard/parallel-programming/task-parallel-library-tpl.md). Varsayılan olarak, paralel kitaplık türleri ister <xref:System.Threading.Tasks.Task> ve <xref:System.Threading.Tasks.Task%601> iş parçacığı havuzu iş parçacıkları görevleri çalıştırmak için kullanın. İş parçacığı havuzu çağırarak kullanabilirsiniz <xref:System.Threading.ThreadPool.QueueUserWorkItem%2A?displayProperty=nameWithType> yönetilen koddan (veya `CorQueueUserWorkItem` yönetilmeyen koddan) ve geçirme bir <xref:System.Threading.WaitCallback> görevi gerçekleştiren yöntemi temsil eden temsilci. İş parçacığı havuzu kullanmak üzere başka bir bekleme işlemini kullanarak ilişkili iş öğeleri sıraya almak için yoludur <xref:System.Threading.ThreadPool.RegisterWaitForSingleObject%2A?displayProperty=nameWithType> yöntemi ve geçirerek bir <xref:System.Threading.WaitHandle> , işaret veya ne zaman, zaman aşımına uğradı tarafından temsil edilen yöntemini çağırır <xref:System.Threading.WaitOrTimerCallback> temsilci. İş parçacığı havuzu iş parçacıkları geri arama yöntemleri çağırmak için kullanılır.  

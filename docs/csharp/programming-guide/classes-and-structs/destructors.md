@@ -1,22 +1,16 @@
 ---
-title: "Sonlandırıcılar (C# programlama Kılavuzu)"
+title: Sonlandırıcılar (C# programlama Kılavuzu)
 ms.date: 05/10/2017
-ms.prod: .net
-ms.technology: devlang-csharp
-ms.topic: article
 helpviewer_keywords:
 - ~ [C#], in finalizers
 - C# language, finalizers
 - finalizers [C#]
 ms.assetid: 1ae6e46d-a4b1-4a49-abe5-b97f53d9e049
-caps.latest.revision: "24"
-author: BillWagner
-ms.author: wiwagn
-ms.openlocfilehash: b1efe92c371e44eb2d650eb07facc3e7030e9766
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: fc15818883736015419f8599d482185bbab5120a
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="finalizers-c-programming-guide"></a>Sonlandırıcılar (C# programlama Kılavuzu)
 Sonlandırıcılar sınıfların örneklerini destruct için kullanılır.  
@@ -74,11 +68,11 @@ protected override void Finalize()
   
  Kaynakları temizleme hakkında daha fazla ayrıntı için aşağıdaki konulara bakın:  
   
--   [Yönetilmeyen kaynakları temizleme](../../../standard/garbage-collection/unmanaged.md)  
+-   [Yönetilmeyen Kaynakları Temizleme](../../../standard/garbage-collection/unmanaged.md)  
   
--   [Dispose yöntemi uygulama](../../../standard/garbage-collection/implementing-dispose.md)  
+-   [Dispose Yöntemi Uygulama](../../../standard/garbage-collection/implementing-dispose.md)  
   
--   [using deyimi](../../../csharp/language-reference/keywords/using-statement.md)  
+-   [using Deyimi](../../../csharp/language-reference/keywords/using-statement.md)  
   
 ## <a name="example"></a>Örnek  
  Aşağıdaki örnek, devralma zinciri olun üç sınıfları oluşturur. Sınıf `First` taban sınıf `Second` türetildiği `First`, ve `Third` türetildiği `Second`. Üç sonlandırıcılar vardır. İçinde `Main`, çoğu türetilmiş sınıf örneği oluşturdu. Program çalıştırıldığında sonlandırıcılar üç sınıfları için otomatik olarak ve sırasıyla çoğu türetilmiş en az türetilen için gelen olarak adlandırılır, dikkat edin.  
@@ -90,6 +84,6 @@ protected override void Finalize()
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
  <xref:System.IDisposable>  
- [C# programlama kılavuzu](../../../csharp/programming-guide/index.md)  
+ [C# Programlama Kılavuzu](../../../csharp/programming-guide/index.md)  
  [Oluşturucular](../../../csharp/programming-guide/classes-and-structs/constructors.md)  
- [Çöp toplama](../../../standard/garbage-collection/index.md)
+ [Atık Toplama](../../../standard/garbage-collection/index.md)

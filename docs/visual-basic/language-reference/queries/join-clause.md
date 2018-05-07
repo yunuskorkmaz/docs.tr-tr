@@ -1,11 +1,6 @@
 ---
-title: "Join Tümcesi (Visual Basic)"
+title: Join Tümcesi (Visual Basic)
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
-ms.topic: article
 f1_keywords:
 - vb.QueryJoinIn
 - vb.QueryJoin
@@ -15,14 +10,11 @@ helpviewer_keywords:
 - Join statement [Visual Basic]
 - Join clause [Visual Basic]
 ms.assetid: 6dd37936-b27c-4e00-98ad-154b23f4de64
-caps.latest.revision: "19"
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: 2bb25c9dac8994e7f975539c1d036f0f0d9d239e
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 2186954ab6536988271629c4feba0a40563bfc3f
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="join-clause-visual-basic"></a>Join Tümcesi (Visual Basic)
 Tek bir koleksiyon iki koleksiyonlara birleştirir. Birleştirme işlemi anahtarları eşleşmesini temel alan ve kullandığı `Equals` işleci.  
@@ -50,7 +42,7 @@ On key1 Equals key2 [ And key3 Equals key4 [... ]
  İsteğe bağlı. Bir veya daha fazla ek `Group Join` daha da fazla yan tümceleri sorgu daraltın.  
   
  `key1` `Equals` `key2`  
- Gerekli. Birleştirilen koleksiyonları tuşları tanımlar. Kullanmalısınız `Equals` birleştirilen koleksiyonları anahtarlarından Karşılaştırılacak işleci. Kullanarak birleştirme koşulları birleştirebilirsiniz `And` birden çok anahtar tanımlamak için işleci. `key1`sol tarafındaki koleksiyonundan olmalıdır `Join` işleci. `key2`sağ tarafında koleksiyonundan olmalıdır `Join` işleci.  
+ Gerekli. Birleştirilen koleksiyonları tuşları tanımlar. Kullanmalısınız `Equals` birleştirilen koleksiyonları anahtarlarından Karşılaştırılacak işleci. Kullanarak birleştirme koşulları birleştirebilirsiniz `And` birden çok anahtar tanımlamak için işleci. `key1` sol tarafındaki koleksiyonundan olmalıdır `Join` işleci. `key2` sağ tarafında koleksiyonundan olmalıdır `Join` işleci.  
   
  Birleşim koşulu kullanılan anahtarları koleksiyonundan birden çok öğe içeren bir ifade olabilir. Bununla birlikte, her anahtar ifadesi yalnızca kendi ilgili koleksiyonundan öğeleri içerebilir.  
   
@@ -96,8 +88,8 @@ On key1 Equals key2 [ And key3 Equals key4 [... ]
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
  [Visual Basic'de LINQ'e giriş](../../../visual-basic/programming-guide/language-features/linq/introduction-to-linq.md)  
- [Sorguları](../../../visual-basic/language-reference/queries/queries.md)  
- [Select tümcesi](../../../visual-basic/language-reference/queries/select-clause.md)  
- [From yan tümcesi](../../../visual-basic/language-reference/queries/from-clause.md)  
- [Group Join tümcesi](../../../visual-basic/language-reference/queries/group-join-clause.md)  
- [Burada yan tümcesi](../../../visual-basic/language-reference/queries/where-clause.md)
+ [Sorgular](../../../visual-basic/language-reference/queries/queries.md)  
+ [Select Yan Tümcesi](../../../visual-basic/language-reference/queries/select-clause.md)  
+ [From Yan Tümcesi](../../../visual-basic/language-reference/queries/from-clause.md)  
+ [Group Join Yan Tümcesi](../../../visual-basic/language-reference/queries/group-join-clause.md)  
+ [Where Yan Tümcesi](../../../visual-basic/language-reference/queries/where-clause.md)

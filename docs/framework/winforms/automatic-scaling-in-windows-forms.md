@@ -1,23 +1,15 @@
 ---
-title: "Windows Forms'ta Otomatik Ölçeklendirme"
+title: Windows Forms'ta Otomatik Ölçeklendirme
 ms.date: 06/15/2017
-ms.prod: .net-framework
-ms.technology: dotnet-winforms
-ms.topic: article
 helpviewer_keywords:
 - scalability [Windows Forms], automatic in Windows Forms
 - Windows Forms, automatic scaling
 ms.assetid: 68fad25b-afbc-44bd-8e1b-966fc43507a4
-caps.latest.revision: "9"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 519053576aac0f55dfbfa4c87dbed6096f45abca
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: e27c56d9a6d745c7d1ff83986e7996aa1bebc879
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="automatic-scaling-in-windows-forms"></a>Windows Forms'ta otomatik ölçeklendirme
 Otomatik ölçeklendirme etkinleştirir bir form ve diğer denetimler ile belirli bir ekran çözünürlüğü veya sistem yazı tipi, tek bir makinede başka bir makinede farklı ekran çözünürlüğü veya sistem yazı tipi ile uygun şekilde görüntülenmesi için tasarlanmış. Formun sağlar ve denetimlerinden akıllıca yerel windows ve diğer uygulamaların hem kullanıcıların hem de diğer geliştiricilerinin makinelerde ile tutarlı olacak şekilde yeniden boyutlandırılır. Desteği [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] otomatik ölçeklendirme ve görsel stiller sağlayan [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] bir tutarlı yerel Windows uygulamaları her bir kullanıcının makineye karşılaştırıldığında görünüm korumak için uygulamalar.
@@ -92,7 +84,7 @@ Windows Forms aşağıdaki mantık formlar ve içeriklerini otomatik ölçeklend
 
 3. Form yüklediğinde, varsa değerlerini <xref:System.Windows.Forms.ContainerControl.CurrentAutoScaleDimensions%2A> ve <xref:System.Windows.Forms.ContainerControl.AutoScaleDimensions%2A> farklıysa, sonra <xref:System.Windows.Forms.ContainerControl.PerformAutoScale%2A> yöntemi denetimi ve alt öğelerini ölçeklendirmek için çağrılır. Bu yöntem düzeni ve çağrıları askıya <xref:System.Windows.Forms.Control.Scale%2A> gerçek ölçeklendirme yapmak için yöntemi. Daha sonra değerini <xref:System.Windows.Forms.ContainerControl.AutoScaleDimensions%2A> aşamalı ölçeklendirme önlemek amacıyla güncelleştirilir.
 
-4. <xref:System.Windows.Forms.ContainerControl.PerformAutoScale%2A>Aşağıdaki durumlarda da otomatik olarak çağrılır:
+4. <xref:System.Windows.Forms.ContainerControl.PerformAutoScale%2A> Aşağıdaki durumlarda da otomatik olarak çağrılır:
 
     - Yanıt olarak <xref:System.Windows.Forms.Control.OnFontChanged%2A> ölçeklendirme modu ise olay <xref:System.Windows.Forms.AutoScaleMode.Font>.
   

@@ -1,34 +1,20 @@
 ---
-title: "Başlarken Örneği"
-ms.custom: 
+title: Başlarken Örneği
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
 helpviewer_keywords:
 - basic samples [WCF], getting started
 ms.assetid: 967a3d94-0261-49ff-b85a-20bb07f1af20
-caps.latest.revision: 
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 2f97ad418f3d5ed197e8c35edf9e897eb393ef18
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: dfba7062d4226f3644aa6c4cc0efcd7c5fb9eab8
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="getting-started-sample"></a>Başlarken Örneği
-Başlarken örneği tipik bir hizmet ve kullanarak tipik bir istemci uygulama gösterilmiştir [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)]. Bu örnek diğer tüm temel teknoloji örnekleri temelini oluşturur.  
+Başlarken örneği tipik bir hizmet ve Windows Communication Foundation (WCF) kullanan tipik bir istemciye uygulamak üzere nasıl gösterir. Bu örnek diğer tüm temel teknoloji örnekleri temelini oluşturur.  
   
 > [!NOTE]
 >  Kurulum yordamı ve yapı yönergeleri Bu örnek için bu konunun sonunda yer alır.  
@@ -38,7 +24,7 @@ Başlarken örneği tipik bir hizmet ve kullanarak tipik bir istemci uygulama g�
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  Bu dizin mevcut değilse, Git [Windows Communication Foundation (WCF) ve .NET Framework 4 için Windows Workflow Foundation (WF) örnek](http://go.microsoft.com/fwlink/?LinkId=150780) tüm indirmek için [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] ve [!INCLUDE[wf1](../../../../includes/wf1-md.md)] örnekleri. Bu örnek aşağıdaki dizinde bulunur.  
+>  Bu dizin mevcut değilse, Git [Windows Communication Foundation (WCF) ve .NET Framework 4 için Windows Workflow Foundation (WF) örnek](http://go.microsoft.com/fwlink/?LinkId=150780) tüm Windows Communication Foundation (WCF) indirmek için ve [!INCLUDE[wf1](../../../../includes/wf1-md.md)] örnekleri. Bu örnek aşağıdaki dizinde bulunur.  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\GettingStarted\GettingStarted`  
   
@@ -154,9 +140,9 @@ public class CalculatorService : ICalculator
   
  Hizmet IIS ya da WAS ana bilgisayarı tarafından sağlanan temel adresindeki uç noktasını kullanıma sunar. Bağlama ile standart bir yapılandırılmış <xref:System.ServiceModel.WSHttpBinding>, hangi HTTP iletişimi ve standart Web hizmeti protokolleri adresleme ve güvenlik için sağlar. Sözleşme `ICalculator` hizmeti tarafından uygulanır.  
   
- Yapılandırıldığı şekilde hizmet http://localhost/servicemodelsamples/service.svc aynı bilgisayara bir istemci tarafından erişilebilir. Uzak computersto erişim hizmet istemciler için localhost yerine bir tam etki alanı adı belirtilmelidir.  
+ Konumundaki yapılandırıldığı şekilde hizmet erişilebilir http://localhost/servicemodelsamples/service.svc aynı bilgisayara bir istemci tarafından. Uzak computersto erişim hizmet istemciler için localhost yerine bir tam etki alanı adı belirtilmelidir.  
   
- Framework meta verileri varsayılan olarak kullanıma sunmuyor. Bu nedenle, hizmetin açar <xref:System.ServiceModel.Description.ServiceMetadataBehavior> ve http://localhost/servicemodelsamples/service.svc/mex konumunda bir meta veri değişimi (MEX) uç noktasını kullanıma sunar. Aşağıdaki yapılandırma bu gösterir.  
+ Framework meta verileri varsayılan olarak kullanıma sunmuyor. Bu nedenle, hizmetin açar <xref:System.ServiceModel.Description.ServiceMetadataBehavior> ve meta veri değişimi (MEX) uç noktada ortaya çıkaran http://localhost/servicemodelsamples/service.svc/mex. Aşağıdaki yapılandırma bu gösterir.  
   
 ```xaml  
 <system.serviceModel>  

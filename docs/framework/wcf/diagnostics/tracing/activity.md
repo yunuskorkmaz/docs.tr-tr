@@ -1,30 +1,18 @@
 ---
 title: Etkinlik
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 70471705-f55f-4da1-919f-4b580f172665
-caps.latest.revision: "10"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: cbcf33aa734cde1d2458e46cd161f9ea5197a827
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
-ms.translationtype: MT
+ms.openlocfilehash: 34281647f65157484c1e732bc67a6a4b2cf58db6
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="activity"></a>Etkinlik
-Bu konu, etkinlik izlemeleri açıklar [!INCLUDE[indigo1](../../../../../includes/indigo1-md.md)] izleme modeli. Etkinlikler hata kapsamını daraltmak kullanıcı Yardımı birimleri işliyor. Aynı etkinlik içindeki oluşan hataları doğrudan ilişkilidir. Örneğin, ileti şifre çözme başarısız olduğundan bir işlem başarısız olur. Şifre çözme hatası ve istek hatası arasında doğrudan bağıntı gösteren aynı etkinliğinde izlemeleri hem işlem hem de ileti şifre çözme hatası görünür.  
+Bu konu Windows Communication Foundation (WCF) izleme modelindeki etkinlik izlemeleri açıklar. Etkinlikler hata kapsamını daraltmak kullanıcı Yardımı birimleri işliyor. Aynı etkinlik içindeki oluşan hataları doğrudan ilişkilidir. Örneğin, ileti şifre çözme başarısız olduğundan bir işlem başarısız olur. Şifre çözme hatası ve istek hatası arasında doğrudan bağıntı gösteren aynı etkinliğinde izlemeleri hem işlem hem de ileti şifre çözme hatası görünür.  
   
 ## <a name="configuring-activity-tracing"></a>Etkinlik izlemeyi yapılandırma  
- [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)]uygulamaları işlemek için önceden tanımlanmış etkinlikleri sağlar (bkz [etkinlik listesi](../../../../../docs/framework/wcf/diagnostics/tracing/activity-list.md)). Etkinlikler de program aracılığıyla ve grup kullanıcı izlemeleri tanımlayabilirsiniz. Daha fazla bilgi için bkz: [kullanıcı kodu izleri yayma](../../../../../docs/framework/wcf/diagnostics/tracing/emitting-user-code-traces.md).  
+ [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)] uygulamaları işlemek için önceden tanımlanmış etkinlikleri sağlar (bkz [etkinlik listesi](../../../../../docs/framework/wcf/diagnostics/tracing/activity-list.md)). Etkinlikler de program aracılığıyla ve grup kullanıcı izlemeleri tanımlayabilirsiniz. Daha fazla bilgi için bkz: [kullanıcı kodu izleri yayma](../../../../../docs/framework/wcf/diagnostics/tracing/emitting-user-code-traces.md).  
   
  Çalışma zamanında etkinlik izlemeleri yaymak üzere kullanmak `ActivityTracing` ayarını `System.ServiceModel` izleme kaynağı veya diğer [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)] ya da aşağıdaki yapılandırma kodda gösterildiği gibi özel izleme kaynakları.  
   
@@ -49,9 +37,9 @@ Bu konu, etkinlik izlemeleri açıklar [!INCLUDE[indigo1](../../../../../include
 ## <a name="defining-the-scope-of-an-activity"></a>Bir etkinlik kapsamını tanımlama  
  Bir etkinlik tasarım zamanında tanımlanır ve iş mantıksal birimini temsil eder. Aynı etkinlik tanımlayıcıyla verilmiş izlemeleri doğrudan ilgili, aynı etkinlik parçasıdır. Etkinlik bitiş noktası sınırları (bir istek) aşabileceğinden iki kapsamları bir etkinlik için tanımlanır.  
   
--   `Global`uygulama başına kapsamı. Bu kapsamda etkinlik 128-bit genel benzersiz etkinlik tanımlayıcısıyla, gAId tanımlanır. GAid ne uç noktalar arasında yayılır ' dir.  
+-   `Global` uygulama başına kapsamı. Bu kapsamda etkinlik 128-bit genel benzersiz etkinlik tanımlayıcısıyla, gAId tanımlanır. GAid ne uç noktalar arasında yayılır ' dir.  
   
--   `Local`uç nokta başına kapsamı. Bu kapsamda etkinliğin etkinlik izlemeleri ve işlem kimliği yayma izleme kaynağı adı yanı sıra kendi gAId tarafından tanımlanır Bu Üçlü yerleştirilmiş yerel etkinlik kimliği oluşturur. Yerleştirilmiş bir etkinlik (yerel) sınırlarını tanımlamak için kullanılır.  
+-   `Local` uç nokta başına kapsamı. Bu kapsamda etkinliğin etkinlik izlemeleri ve işlem kimliği yayma izleme kaynağı adı yanı sıra kendi gAId tarafından tanımlanır Bu Üçlü yerleştirilmiş yerel etkinlik kimliği oluşturur. Yerleştirilmiş bir etkinlik (yerel) sınırlarını tanımlamak için kullanılır.  
   
 ## <a name="trace-schema"></a>Şema izleme  
  İzlemeler gösterilen herhangi bir şema kullanarak ve Microsoft platformlarda. "e2e" ("uçtan uca" için) yaygın olarak kullanılan bir şema ' dir. Bu şemayı 128 bit tanımlayıcısı (gAId), izleme kaynak adı ve işlem kimliğini içerir Yönetilen kodda <xref:System.Diagnostics.XmlWriterTraceListener> E2E şemasında izlemeleri yayar.  

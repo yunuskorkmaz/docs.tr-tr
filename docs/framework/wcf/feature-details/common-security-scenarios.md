@@ -1,28 +1,16 @@
 ---
-title: "Ortak Güvenlik Senaryoları"
-ms.custom: 
+title: Ortak Güvenlik Senaryoları
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - security [WCF], scenarios
 ms.assetid: 201923b5-5162-4a8a-8d4c-e7bd242748d5
-caps.latest.revision: 
 author: BrucePerlerMS
-ms.author: bruceper
 manager: mbaldwin
-ms.workload:
-- dotnet
-ms.openlocfilehash: d8881768d66e95ce1391ce1be1663bdc3107a347
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 0fb51ea0624c4fa686e4e99ffb9c30decedfea10
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="common-security-scenarios"></a>Ortak Güvenlik Senaryoları
 Bu bölümdeki konular, bir dizi olası istemci ve hizmet güvenlik yapılandırması katalog. Yapılandırmalarını bir dizi etkene göre farklılık gösterir. Örneğin, bir hizmet veya istemci intranet üzerinde olup ya da güvenlik olup Windows veya taşıma (Örneğin HTTPS) tarafından sağlanır.  
@@ -32,7 +20,7 @@ Bu bölümdeki konular, bir dizi olası istemci ve hizmet güvenlik yapılandır
  Bir ortak, güvenli olmayan bir istemci ve hizmet örneği.  
   
  [İntranet Güvenli Olmayan Hizmet ve İstemci](../../../../docs/framework/wcf/feature-details/intranet-unsecured-client-and-service.md)  
- Temel bir [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] hizmet geliştirilen özel bir ağda güvenli için bilgi sağlamak için bir [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] uygulama.  
+ Özel bir ağda güvenli bir WCF uygulaması için bilgi sağlamak için temel bir Windows Communication Foundation (WCF) hizmet geliştirmiştir.  
   
  [Temel Kimlik Doğrulama ile Aktarım Güvenliği](../../../../docs/framework/wcf/feature-details/transport-security-with-basic-authentication.md)  
  Uygulama istemcilerinin özel kimlik doğrulaması kullanarak oturum olanak tanır.  
@@ -47,7 +35,7 @@ Bu bölümdeki konular, bir dizi olası istemci ve hizmet güvenlik yapılandır
  Bir istemci ve hizmet sertifikası ile güvenli gösterir.  
   
  [Anonim İstemci ile İleti Güvenliği](../../../../docs/framework/wcf/feature-details/message-security-with-an-anonymous-client.md)  
- Bir istemci ve hizmet tarafından güvenli hale getirilmiş gösterir [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] ileti güvenlik.  
+ Bir istemci ve hizmet WCF ileti security tarafından korunan gösterir.  
   
  [Kullanıcı Adı İstemcisi ile İleti Güvenliği](../../../../docs/framework/wcf/feature-details/message-security-with-a-user-name-client.md)  
  İstemci, bir etki alanı kullanıcı adı ve parola kullanarak oturum istemcilerin bir Windows Forms uygulamasıdır.  

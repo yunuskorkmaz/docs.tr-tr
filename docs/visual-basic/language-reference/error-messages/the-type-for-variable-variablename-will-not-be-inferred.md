@@ -1,28 +1,19 @@
 ---
-title: "Değişken &#39;türü; &lt;variablename&gt;&#39; kapsayan bir kapsama alanına bağlı olduğundan, çıkarılabilir olacaktır değil"
+title: Değişken için tür &#39; &lt;variablename&gt; &#39; kapsayan bir kapsama alanına bağlı olduğundan, çıkarılabilir olacaktır değil
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- devlang-visual-basic
-ms.topic: article
 f1_keywords:
 - vbc42110
 - bc42110
 helpviewer_keywords:
 - BC42110
 ms.assetid: ef4442eb-08d1-434f-a03b-4aa2ed4e4414
-caps.latest.revision: 
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: 39968407f4de5436df324320c99dede4d72e2808
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: cb423e8dcced6956eb86d484607915030c91412b
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
-# <a name="the-type-for-variable-39ltvariablenamegt39-will-not-be-inferred-because-it-is-bound-to-a-field-in-an-enclosing-scope"></a>Değişken &#39;türü; &lt;variablename&gt;&#39; kapsayan bir kapsama alanına bağlı olduğundan, çıkarılabilir olacaktır değil
+# <a name="the-type-for-variable-39ltvariablenamegt39-will-not-be-inferred-because-it-is-bound-to-a-field-in-an-enclosing-scope"></a>Değişken için tür &#39; &lt;variablename&gt; &#39; kapsayan bir kapsama alanına bağlı olduğundan, çıkarılabilir olacaktır değil
 Değişken türü '\<variablename >' kapsayan bir kapsama alanına bağlı olduğundan, çıkarılabilir olacaktır değil. Adını değiştirmek '\<variablename >', veya tam adı (örneğin, 'Me.variablename' veya 'MyBase.variablename') kullanın.  
   
  For döngüsü denetim değişkeni kodunuzda sınıfı ya da diğer çevreleyen kapsamdaki bir alan olarak aynı ada sahip. Denetim değişkeni olmadan kullanıldığından bir `As` yan tümcesi, çevreleyen kapsamdaki alanına bağlı ve derleyici yeni bir değişken için oluşturamadı veya türünü Infer.  
@@ -90,9 +81,9 @@ End Class
 ```  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [Option Infer deyimi](../../../visual-basic/language-reference/statements/option-infer-statement.md)  
- [For Each... Sonraki deyim](../../../visual-basic/language-reference/statements/for-each-next-statement.md)  
- [İçin... Sonraki deyim](../../../visual-basic/language-reference/statements/for-next-statement.md)  
- [Nasıl yapılır: bir nesnenin geçerli örneğine başvurma](../../../visual-basic/programming-guide/language-features/variables/how-to-refer-to-the-current-instance-of-an-object.md)  
- [Yerel tür çıkarımı](../../../visual-basic/programming-guide/language-features/variables/local-type-inference.md)  
+ [Option Infer Deyimi](../../../visual-basic/language-reference/statements/option-infer-statement.md)  
+ [For Each...Next Deyimi](../../../visual-basic/language-reference/statements/for-each-next-statement.md)  
+ [For...Next Deyimi](../../../visual-basic/language-reference/statements/for-next-statement.md)  
+ [Nasıl yapılır: Bir Nesnenin Geçerli Örneğine Başvurma](../../../visual-basic/programming-guide/language-features/variables/how-to-refer-to-the-current-instance-of-an-object.md)  
+ [Yerel Çıkarım](../../../visual-basic/programming-guide/language-features/variables/local-type-inference.md)  
  [Me, My, MyBase ve MyClass](../../../visual-basic/programming-guide/program-structure/me-my-mybase-and-myclass.md)

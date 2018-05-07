@@ -1,21 +1,14 @@
 ---
-title: "Yapıları Kullanma (C# Programlama Kılavuzu)"
+title: Yapıları Kullanma (C# Programlama Kılavuzu)
 ms.date: 07/20/2015
-ms.prod: .net
-ms.technology:
-- devlang-csharp
-ms.topic: article
 helpviewer_keywords:
 - structs [C#], using
 ms.assetid: cea4a459-9eb9-442b-8d08-490e0797ba38
-caps.latest.revision: 
-author: BillWagner
-ms.author: wiwagn
-ms.openlocfilehash: 94181c42ce913dc76c9a074e4bcbb8240764c896
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 553a6d1d2e922d1683cb5dbe2fa0b525c9b1e37a
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="using-structs-c-programming-guide"></a>Yapıları Kullanma (C# Programlama Kılavuzu)
 `struct` Türüdür Hafif nesneler gibi temsil etmek için uygun `Point`, `Rectangle`, ve `Color`. Bir noktası olarak temsil eden yalnızca olarak uygun olmasına rağmen bir [sınıfı](../../../csharp/language-reference/keywords/class.md) ile [Auto-Implemented özellikleri](../../../csharp/programming-guide/classes-and-structs/auto-implemented-properties.md), [yapısı](../../../csharp/language-reference/keywords/struct.md) bazı senaryolarda daha etkili olabilir. Örneğin, bir dizi 1000 bildirirseniz `Point` nesneleri, ek bellek ayırır her nesneye başvuran; bu durumda, yapı daha ucuz olabilir. Çünkü [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] adlı bir nesne içeren <xref:System.Drawing.Point>, yapı Bu örnekte bunun yerine "CoOrds" adlı.  
@@ -57,6 +50,6 @@ ms.lasthandoff: 11/21/2017
  [!code-csharp[csProgGuideObjects#3](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/using-structs_3.cs)]  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [C# programlama kılavuzu](../../../csharp/programming-guide/index.md)  
- [Sınıflar ve yapılar](../../../csharp/programming-guide/classes-and-structs/index.md)  
+ [C# Programlama Kılavuzu](../../../csharp/programming-guide/index.md)  
+ [Sınıflar ve Yapılar](../../../csharp/programming-guide/classes-and-structs/index.md)  
  [Yapılar](../../../csharp/programming-guide/classes-and-structs/structs.md)

@@ -1,29 +1,17 @@
 ---
-title: "Bağımlılık Özelliği Meta Verisi"
-ms.custom: 
+title: Bağımlılık Özelliği Meta Verisi
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-wpf
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - APIs [WPF], metadata
 - dependency properties [WPF], metadata
 - metadata [WPF], for dependency properties
 - overriding metadata [WPF]
 ms.assetid: d01ed009-b722-41bf-b82f-fe1a8cdc50dd
-caps.latest.revision: "24"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 5b5c4ee554e8a0148c7d8d8044735f66778e7117
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: f0aa1d2962b0bccea7a0901877b29550319aaa3f
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="dependency-property-metadata"></a>Bağımlılık Özelliği Meta Verisi
 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] Özellik sistemi ne bildirilen bir özellik yansıma aracılığıyla hakkında veya genel olabilir ötesine gider sistem raporlama meta verileri içeren [!INCLUDE[TLA#tla_clr](../../../../includes/tlasharptla-clr-md.md)] özellikleri. Meta veri bağımlılık özelliği bir bağımlılık özelliği tanımlayan bir sınıf tarafından da bir benzersiz olarak atanabilir için bağımlılık özelliği için farklı bir sınıf eklendiğinde değiştirilebilir ve özellikle devralan tüm türetilmiş sınıfları tarafından geçersiz kılınabilir bağımlılık özelliği tanımlayıcı temel sınıfından.  
@@ -48,7 +36,7 @@ ms.lasthandoff: 12/22/2017
 ## <a name="metadata-apis"></a>Meta veri API'leri  
  Özellik sistemi tarafından kullanılan meta veri bilgilerinin çoğunu raporları türü <xref:System.Windows.PropertyMetadata> sınıfı. Bağımlılık özellikleri özellik sistemi ile kaydedilen ve yeniden kendilerini sahipleri olarak ekleme veya temel sınıf bağımlılık devralınan meta veriyi geçersiz kılmak ek türleri için belirtilebilir meta veri örnekleri isteğe bağlı olarak belirtilmiş özellik tanımı. (Burada özelliği kayıt belirtmiyor meta verileri, varsayılan durumlarda <xref:System.Windows.PropertyMetadata> Bu sınıf için varsayılan değerlerle oluşturulur.) Kayıtlı meta veri olarak döndürülür <xref:System.Windows.PropertyMetadata> çağırdığınızda çeşitli <xref:System.Windows.DependencyProperty.GetMetadata%2A> bir bağımlılık özellikten meta verileri alma üzerinde aşırı bir <xref:System.Windows.DependencyObject> örneği.  
   
- <xref:System.Windows.PropertyMetadata> Sınıfı sonra türetilen WPF çerçeve düzeyi sınıflar gibi mimari bölümler için daha özel meta verilerini sağlamak için. <xref:System.Windows.UIPropertyMetadata>animasyon raporlama, ekler ve <xref:System.Windows.FrameworkPropertyMetadata> önceki bölümde belirtildiği WPF çerçeve düzeyi özellikleri sağlar. Bağımlılık özellikleri kayıtlı olduğunda bunlar bunlarla kaydedilebilir <xref:System.Windows.PropertyMetadata> türetilmiş sınıfları. Meta veriler ne zaman incelenir, temel <xref:System.Windows.PropertyMetadata> türü olası dönüştürülür türetilen sınıflar, böylece daha belirli özellikler inceleyebilirsiniz.  
+ <xref:System.Windows.PropertyMetadata> Sınıfı sonra türetilen WPF çerçeve düzeyi sınıflar gibi mimari bölümler için daha özel meta verilerini sağlamak için. <xref:System.Windows.UIPropertyMetadata> animasyon raporlama, ekler ve <xref:System.Windows.FrameworkPropertyMetadata> önceki bölümde belirtildiği WPF çerçeve düzeyi özellikleri sağlar. Bağımlılık özellikleri kayıtlı olduğunda bunlar bunlarla kaydedilebilir <xref:System.Windows.PropertyMetadata> türetilmiş sınıfları. Meta veriler ne zaman incelenir, temel <xref:System.Windows.PropertyMetadata> türü olası dönüştürülür türetilen sınıflar, böylece daha belirli özellikler inceleyebilirsiniz.  
   
 > [!NOTE]
 >  İçinde belirtilen özellik özelliklere <xref:System.Windows.FrameworkPropertyMetadata> bu belgede "bayrakları" olarak adlandırılır. Özellik kayıtlar bağımlılık olarak kullanmak için yeni meta veri örnekleri oluşturduğunuzda ya da meta verileri geçersiz kılar flagwise numaralandırma kullanarak bu değerleri belirtin <xref:System.Windows.FrameworkPropertyMetadataOptions> ve sonra büyük olasılıkla Birleştirilmiş numaralandırmadeğerlerinisağlayın<xref:System.Windows.FrameworkPropertyMetadata> Oluşturucusu. Ancak, oluşturulan sonra bu seçenek özelliklere içinde sunulan bir <xref:System.Windows.FrameworkPropertyMetadata> oluşturma numaralandırma değeri yerine Boole özellikleri dizisi olarak. Her koşullu denetlemek Boolean özellikler etkinleştirmeniz yerine bir maskesi bilgi almak için bir flagwise numaralandırma değeri uygulama gerek ilgilendiğiniz. Oluşturucusu birleştirilmiş kullanan <xref:System.Windows.FrameworkPropertyMetadataOptions> gerçek oluşturulan meta verileri daha sezgisel meta verileri Sorgulama olmak için ayrık özellikleri sunar ancak Oluşturucusu imza uzunluğu makul, korumak için.  
@@ -75,13 +63,13 @@ ms.lasthandoff: 12/22/2017
   
  Meta veriler geçersiz kıldığınızda, farklı meta verilerin özellikleri birleştirilmiş değiştirildi ya.  
   
--   <xref:System.Windows.PropertyMetadata.PropertyChangedCallback%2A>birleştirilir. Yeni bir eklerseniz <xref:System.Windows.PropertyMetadata.PropertyChangedCallback%2A>, bu geri çağırma meta verilerinde depolanır. Belirtmezseniz, bir <xref:System.Windows.PropertyMetadata.PropertyChangedCallback%2A> değerini geçersiz kılar <xref:System.Windows.PropertyMetadata.PropertyChangedCallback%2A> meta verilerde belirtilen en yakın üst içinden bir başvuru olarak yükseltilir.  
+-   <xref:System.Windows.PropertyMetadata.PropertyChangedCallback%2A> birleştirilir. Yeni bir eklerseniz <xref:System.Windows.PropertyMetadata.PropertyChangedCallback%2A>, bu geri çağırma meta verilerinde depolanır. Belirtmezseniz, bir <xref:System.Windows.PropertyMetadata.PropertyChangedCallback%2A> değerini geçersiz kılar <xref:System.Windows.PropertyMetadata.PropertyChangedCallback%2A> meta verilerde belirtilen en yakın üst içinden bir başvuru olarak yükseltilir.  
   
 -   Gerçek özellik sistem davranışı <xref:System.Windows.PropertyMetadata.PropertyChangedCallback%2A> hiyerarşideki tüm meta veri sahipleri için uygulamaları korunur ve en çok türetilen sınıfın geri aramalar önce çağrılır olmasına, özellik sistemi tarafından yürütme sırasını içeren bir tablo eklenir.  
   
--   <xref:System.Windows.PropertyMetadata.DefaultValue%2A>değiştirilir. Belirtmezseniz, bir <xref:System.Windows.PropertyMetadata.DefaultValue%2A> değerini geçersiz kılar <xref:System.Windows.PropertyMetadata.DefaultValue%2A> meta verilerde belirtilen en yakın üst öğesinden gelir.  
+-   <xref:System.Windows.PropertyMetadata.DefaultValue%2A> değiştirilir. Belirtmezseniz, bir <xref:System.Windows.PropertyMetadata.DefaultValue%2A> değerini geçersiz kılar <xref:System.Windows.PropertyMetadata.DefaultValue%2A> meta verilerde belirtilen en yakın üst öğesinden gelir.  
   
--   <xref:System.Windows.PropertyMetadata.CoerceValueCallback%2A>uygulamaları değiştirilir. Yeni bir eklerseniz <xref:System.Windows.PropertyMetadata.CoerceValueCallback%2A>, bu geri çağırma meta verilerinde depolanır. Belirtmezseniz, bir <xref:System.Windows.PropertyMetadata.CoerceValueCallback%2A> değerini geçersiz kılar <xref:System.Windows.PropertyMetadata.CoerceValueCallback%2A> meta verilerde belirtilen en yakın üst içinden bir başvuru olarak yükseltilir.  
+-   <xref:System.Windows.PropertyMetadata.CoerceValueCallback%2A> uygulamaları değiştirilir. Yeni bir eklerseniz <xref:System.Windows.PropertyMetadata.CoerceValueCallback%2A>, bu geri çağırma meta verilerinde depolanır. Belirtmezseniz, bir <xref:System.Windows.PropertyMetadata.CoerceValueCallback%2A> değerini geçersiz kılar <xref:System.Windows.PropertyMetadata.CoerceValueCallback%2A> meta verilerde belirtilen en yakın üst içinden bir başvuru olarak yükseltilir.  
   
 -   Özellik sistem yalnızca davranıştır <xref:System.Windows.PropertyMetadata.CoerceValueCallback%2A> hemen meta verilerde çağrılır. Başvuru diğer <xref:System.Windows.PropertyMetadata.CoerceValueCallback%2A> hiyerarşi uygulamalarında korunur.  
   

@@ -1,23 +1,12 @@
 ---
-title: "İşlem Convoy kapsamı"
-ms.custom: 
+title: İşlem Convoy kapsamı
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 37141708-a29f-4b6a-81fe-f8a11f825061
-caps.latest.revision: "8"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 854e04c53bf438c3356072d762f129b7f21b7dd5
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 4b053c15768a20ade4a469c9a40af797f49c268b
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="transaction-convoy-scope"></a>İşlem Convoy kapsamı
 Bu örnek nasıl paralel etkinlik düzeni ile birlikte Mesajlaşma Convoy oluşturulduğunu gösteren bir <xref:System.ServiceModel.Activities.TransactedReceiveScope> burada birkaç işlem oluşabilir tüm aynı işlem altında herhangi bir sırada bir protokol modellemek için. Bu örnek ayrıca gösterir nasıl bir <xref:System.ServiceModel.Activities.TransactedReceiveScope> istemci kullanmayan şekilde bir sunucuya akıtılan değil, yeni bir işlem otomatik olarak oluşturur işlemler kullanın.  
@@ -49,6 +38,6 @@ Bu örnek nasıl paralel etkinlik düzeni ile birlikte Mesajlaşma Convoy oluşt
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  Bu dizin mevcut değilse, Git [Windows Communication Foundation (WCF) ve .NET Framework 4 için Windows Workflow Foundation (WF) örnek](http://go.microsoft.com/fwlink/?LinkId=150780) tüm indirmek için [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] ve [!INCLUDE[wf1](../../../../includes/wf1-md.md)] örnekleri. Bu örnek aşağıdaki dizinde bulunur.  
+>  Bu dizin mevcut değilse, Git [Windows Communication Foundation (WCF) ve .NET Framework 4 için Windows Workflow Foundation (WF) örnek](http://go.microsoft.com/fwlink/?LinkId=150780) tüm Windows Communication Foundation (WCF) indirmek için ve [!INCLUDE[wf1](../../../../includes/wf1-md.md)] örnekleri. Bu örnek aşağıdaki dizinde bulunur.  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WF\Scenario\Transactions\TransactedConvoyScope`

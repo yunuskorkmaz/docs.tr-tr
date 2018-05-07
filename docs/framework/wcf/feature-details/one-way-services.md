@@ -1,30 +1,16 @@
 ---
 title: Tek Yönlü Hizmetler
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 helpviewer_keywords:
 - Windows Communication Foundation [WCF], one-way service contracts
 - WCF [WCF], one-way service contracts
 - service contracts [WCF], defining one-way
 ms.assetid: 19053a36-4492-45a3-bfe6-0365ee0205a3
-caps.latest.revision: 18
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 380f6a10994c7eb69f4a59b222aa2d422151f247
-ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
+ms.openlocfilehash: 03efc27f2ba54ca22f03e3ece84770fe0dcadbb3
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/30/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="one-way-services"></a>Tek Yönlü Hizmetler
 İstek-yanıt desen bir hizmet işlemi, varsayılan davranıştır. Hizmet işlemini kodu olarak temsil edilir olsa bile bir istek-yanıt desende istemci yanıt iletisi için bekler. bir `void` yöntemi. Tek yönlü bir işlemle tek bir ileti iletilir. Alıcı bir yanıt iletisi göndermek veya gönderen bir beklediğiniz yapar.  
@@ -57,7 +43,7 @@ public interface IOneWayCalculator
  Tam bir örnek için bkz: [tek yönlü](../../../../docs/framework/wcf/samples/one-way.md) örnek.  
   
 ## <a name="clients-blocking-with-one-way-operations"></a>Tek yönlü işlemleriyle engelleme istemcileri  
- Ağ bağlantısı için giden veriler yazılır hemen tek yönlü bazı uygulamalar döndürürken, çeşitli senaryolarda bağlaması veya bir hizmet uygulaması neden olabilir hayata geçirmek önemli bir [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] tek yönlü kullanarak engellemek için istemci işlemler. İçinde [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] istemci uygulamaları [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] giden veri ağ bağlantısı yazılmış kadar istemci nesnesi döndürmez. Bu, tek yönlü işlemler de dahil olmak üzere tüm ileti exchange düzenleri için geçerlidir; Bu veri taşıma istemci döndürmesini önler yazma herhangi bir sorun anlamına gelir. Sorun bağlı olarak, sonuç bir özel durum veya hizmete gönderme bir gecikme olabilir.  
+ Giden veri bağlaması veya bir hizmet uygulaması çeşitli senaryolarda ağ bağlantısı için yazılmış hemen tek yönlü bazı uygulamalar döndürürken, tek yönlü işlemleri kullanarak engellemek bir WCF istemcisi neden olabilir hayata geçirmek önemlidir. Giden veri ağ bağlantısı yazılmış kadar WCF istemci uygulamalarında WCF istemci nesnesi döndürmez. Bu, tek yönlü işlemler de dahil olmak üzere tüm ileti exchange düzenleri için geçerlidir; Bu veri taşıma istemci döndürmesini önler yazma herhangi bir sorun anlamına gelir. Sorun bağlı olarak, sonuç bir özel durum veya hizmete gönderme bir gecikme olabilir.  
   
  Örneğin, taşıma uç noktası bulamazsa, bir <xref:System.ServiceModel.EndpointNotFoundException?displayProperty=nameWithType> özel durumu kadar gecikme olmadan oluşur. Ancak, aynı zamanda hizmet döndürmesini işlemi istemci taşıması önleyen herhangi bir nedenle, kablo verileri gönder okuyamıyor mümkündür. Bu durumda, <xref:System.ServiceModel.Channels.Binding.SendTimeout%2A?displayProperty=nameWithType> istemci taşıması üzerinde dönem bağlama aşıldı, bir <xref:System.TimeoutException?displayProperty=nameWithType> atılır — ancak zaman aşımı süresi aşıldı kadar değil. Bir hizmeti çok fazla sayıda iletileri hizmeti bunları belirli bir noktaya işlemi işleyemiyor tetiklenecek mümkündür. Bu durumda, çok, tek yönlü istemci blokları hizmet iletileri işleyebilir kadar veya kadar bir özel durum oluşur.  
   

@@ -1,29 +1,17 @@
 ---
-title: "Nasıl yapılır: UserControl Sınıfından Devralma"
-ms.custom: 
+title: 'Nasıl yapılır: UserControl Sınıfından Devralma'
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-winforms
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - inheritance [Windows Forms], Windows Forms custom controls
 - UserControl class [Windows Forms], inheriting from
 - user controls [Windows Forms], creating
 - composite controls [Windows Forms], creating
 ms.assetid: 67713625-e2e4-4f6a-bce7-0855ee5043d9
-caps.latest.revision: "15"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 5eec04e6122f32321c34efe030bfca943baed5bf
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.openlocfilehash: 2c8ef38abb5abc76e7d21e06ab7b76de2dda4885
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-inherit-from-the-usercontrol-class"></a>Nasıl yapılır: UserControl Sınıfından Devralma
 Özel kod ile bir veya daha fazla Windows Forms denetimleri işlevselliğini birleştirmek için oluşturabileceğiniz bir *kullanıcı denetimi*. Kullanıcı denetimleri hızlı denetimi geliştirme birleştirmek, işlevsellik ve özel özellikler ve yöntemler yönlülük standart Windows Forms denetimi. Bir kullanıcı denetimi oluşturma başladığınızda,, standart Windows Forms denetimleri yerleştirebileceğiniz görünür tasarımcı ile birlikte sunulur. Bu denetimler tüm devralınmış işlevselliklerini yanı sıra görünümünü ve standart denetimler (Görünüm) davranışını korur. Bu denetimleri içinde kullanıcı denetimini yerleşiktir sonra ancak bunlar artık kod üzerinden kullanılabilir. Kullanıcı denetimi kendi boyama yapar ve ayrıca tüm denetimleriyle ilişkili temel işlevleri yürütür.  

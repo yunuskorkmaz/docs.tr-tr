@@ -1,24 +1,12 @@
 ---
-title: "İş Akışı Hizmetlerine İşlemlerin Giriş ve Çıkış Akışını Gerçekleştirme"
-ms.custom: 
+title: İş Akışı Hizmetlerine İşlemlerin Giriş ve Çıkış Akışını Gerçekleştirme
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 03ced70e-b540-4dd9-86c8-87f7bd61f609
-caps.latest.revision: "11"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: a38c0c224c93941efa767d142aa7738296a62f15
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 8b3d3e85b626d033c9ab50e93e3ceb3b86058a2f
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="flowing-transactions-into-and-out-of-workflow-services"></a>İş Akışı Hizmetlerine İşlemlerin Giriş ve Çıkış Akışını Gerçekleştirme
 İş akışı hizmetleri ve istemciler işlemlerde yer alabilir.  Bir hizmet işlemi ortam bir işlemin parçası olmaya yerleştirin bir <xref:System.ServiceModel.Activities.Receive> içinde etkinlik bir <xref:System.ServiceModel.Activities.TransactedReceiveScope> etkinlik. Tarafından yapılan çağrılar bir <xref:System.ServiceModel.Activities.Send> veya <xref:System.ServiceModel.Activities.SendReply> içinde etkinlik <xref:System.ServiceModel.Activities.TransactedReceiveScope> ortam işlem içinde da yapılır. Bir iş akışı istemci uygulamasını kullanarak bir ortam işlem oluşturabilirsiniz <xref:System.Activities.Statements.TransactionScope> ortam hareket kullanarak etkinliği ve çağrı hizmet işlemleri. Bu konu bir iş akışı hizmeti ve katılmak iş akışı istemci işlemleri oluşturmada size yol gösterir.  
@@ -87,7 +75,7 @@ ms.lasthandoff: 12/22/2017
   
 ### <a name="implement-the-workflow-service"></a>İş akışı hizmeti uygulama  
   
-1.  Yeni bir ekleme [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] adlı iş akışı hizmeti `WorkflowService` için `Common` projesi. Bu sağ tıklatma yapmak için `Common` proje, select **Ekle**, **yeni öğe...** Seçin **iş akışı** altında **yüklü şablonlar** seçip **WCF iş akışı hizmeti**.  
+1.  Yeni bir WCF iş akışı olarak adlandırılan hizmeti, ekleme `WorkflowService` için `Common` projesi. Bu sağ tıklatma yapmak için `Common` proje, select **Ekle**, **yeni öğe...** Seçin **iş akışı** altında **yüklü şablonlar** seçip **WCF iş akışı hizmeti**.  
   
      ![Bir iş akışı hizmeti ekleme](../../../../docs/framework/wcf/feature-details/media/addwfservice.JPG "AddWFService")  
   
@@ -182,7 +170,7 @@ ms.lasthandoff: 12/22/2017
   
 5.  Sürükleme ve bırakma bir <xref:System.Activities.Statements.Sequence> gövdesine etkinlik <xref:System.Activities.Statements.TransactionScope> etkinlik.  
   
-6.  Sürükleme ve bırakma bir `PrintTransactionInfo` içinde etkinlik<xref:System.Activities.Statements.Sequence>  
+6.  Sürükleme ve bırakma bir `PrintTransactionInfo` içinde etkinlik <xref:System.Activities.Statements.Sequence>  
   
 7.  Sürükleme ve bırakma bir <xref:System.Activities.Statements.WriteLine> etkinlikten sonra `PrintTransactionInfo` etkinliği ve kümesi kendi <xref:System.Activities.Statements.WriteLine.Text%2A> "İstemci başına: Gönder" özelliğine. İş akışı gibi görünmelidir:  
   

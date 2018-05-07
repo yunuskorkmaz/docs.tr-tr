@@ -1,30 +1,20 @@
 ---
-title: "Kullaıcı Adı İstemcisi ile İleti Güvenliği"
-ms.custom: 
+title: Kullaıcı Adı İstemcisi ile İleti Güvenliği
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
 ms.assetid: 36335cb9-76b8-4443-92c7-44f081eabb21
-caps.latest.revision: "15"
 author: BrucePerlerMS
-ms.author: bruceper
 manager: mbaldwin
-ms.workload: dotnet
-ms.openlocfilehash: dfda34c6bf165ebcecfd6d9a3710e785586d6cb1
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 7bda1bc18e2b5af1365c799c6f2be9d8d220e9ed
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="message-security-with-a-user-name-client"></a>Kullaıcı Adı İstemcisi ile İleti Güvenliği
-Aşağıdaki çizimde gösterildiği bir [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] hizmet ve istemci ileti düzeyi güvenlik kullanarak güvenliği. Hizmet bir X.509 sertifikası ile doğrulanır. İstemci, bir kullanıcı adı ve parola kullanarak kimliğini doğrular.  
+Aşağıdaki çizimde, bir Windows Communication Foundation (WCF) hizmetini ve ileti düzeyi güvenlik kullanılarak güvenli istemci gösterir. Hizmet bir X.509 sertifikası ile doğrulanır. İstemci, bir kullanıcı adı ve parola kullanarak kimliğini doğrular.  
   
  Örnek bir uygulama için bkz: [ileti güvenliği kullanıcı adı](../../../../docs/framework/wcf/samples/message-security-user-name.md).  
   
@@ -33,7 +23,7 @@ Aşağıdaki çizimde gösterildiği bir [!INCLUDE[indigo1](../../../../includes
 |Özelliği|Açıklama|  
 |--------------------|-----------------|  
 |Güvenlik modu|İleti|  
-|Birlikte Çalışabilirlik|[!INCLUDE[indigo1](../../../../includes/indigo1-md.md)]yalnızca|  
+|Birlikte Çalışabilirlik|Windows Communication Foundation (WCF) yalnızca|  
 |Kimlik doğrulaması (sunucu)|İlk anlaşma sunucu kimlik doğrulaması gerektirir|  
 |Kimlik doğrulaması (istemci)|Kullanıcı adı/parola|  
 |Bütünlük|Evet, paylaşılan güvenlik bağlamını kullanarak|  

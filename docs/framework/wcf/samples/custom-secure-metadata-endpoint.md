@@ -1,24 +1,14 @@
 ---
-title: "Özel Güvenli Meta Veri Uç Noktaları"
-ms.custom: 
+title: Özel Güvenli Meta Veri Uç Noktaları
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 9e369e99-ea4a-49ff-aed2-9fdf61091a48
-caps.latest.revision: "19"
 author: BrucePerlerMS
-ms.author: bruceper
 manager: mbaldwin
-ms.workload: dotnet
-ms.openlocfilehash: b4ec6efa2a2b0993f7088e4424de86b3d3ad6c8b
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.openlocfilehash: 2baa99ddaf5de60407b233b5a6ea013ad87401f3
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="custom-secure-metadata-endpoint"></a>Özel Güvenli Meta Veri Uç Noktaları
 Bu örnek bir hizmeti meta veri olmayan exchange bağlamaları birini kullanan bir güvenli meta veri uç noktası ile uygulama ve nasıl yapılandırılacağı gösterilmektedir [ServiceModel meta veri yardımcı Programracı (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md) veya fetch istemcileri Bu tür bir meta veri uç noktasından meta veriler. İki sistem tarafından sağlanan bağlamalar meta veri uç noktalarını gösterme için kullanılabilir: mexHttpBinding ve mexHttpsBinding. mexHttpBinding meta veri uç noktasına HTTP üzerinden güvenli olmayan bir biçimde göstermek için kullanılır. mexHttpsBinding meta veri uç noktasına HTTPS üzerinden güvenli bir şekilde kullanıma sunmak için kullanılır. Bu örnek, güvenli meta veri kullanan uç noktasını kullanıma sunmak verilmektedir <xref:System.ServiceModel.WSHttpBinding>. Bağlama üzerinde güvenlik ayarlarını değiştirmek istediğiniz ancak HTTPS kullanmak istemediğiniz durumlarda yapmak istiyor. MexHttpsBinding kullanırsanız, meta veri uç noktası güvenli olacaktır, ancak bağlama ayarlarını değiştirmek için bir yolu yoktur.  
@@ -92,7 +82,7 @@ svcutil http://localhost/servicemodelsamples/service.svc/mex
 svcutil http://localhost/servicemodelsamples/service.svc/mex  
 ```  
   
- "http" ve sözleşme adlı uç noktası için görünüyor `IMetadataExchange` meta veri uç noktası ile bağlama ve iletişim exchange davranışını yapılandırmak için. The rest of the Svcutil.exe.config file in the sample specifies the binding configuration and behavior credentials to match the server's configuration of the metadata endpoint.  
+ "http" ve sözleşme adlı uç noktası için görünüyor `IMetadataExchange` meta veri uç noktası ile bağlama ve iletişim exchange davranışını yapılandırmak için. Örnek Svcutil.exe.config dosyasında kalan bağlama yapılandırması ve meta veri uç noktasının sunucunun yapılandırma ile eşleşmesi için davranış kimlik bilgilerini belirtir.  
   
  Sırayla Svcutil.exe Svcutil.exe.config yapılandırmasında alması için Svcutil.exe yapılandırma dosyası ile aynı dizinde olmalıdır. Sonuç olarak, yükleme konumundan Svcutil.exe Svcutil.exe.config dosyasını içeren dizine kopyalamalısınız. Ardından bu dizininden aşağıdaki komutu çalıştırın:  
   
@@ -186,14 +176,14 @@ ChannelFactory<ICalculator> cf = new    ChannelFactory<ICalculator>(endpoint.Bin
 -   Örnek çalıştıran tamamladıktan sonra Cleanup.bat samples klasöründen çalıştırın.  
   
     > [!NOTE]
-    >  Bu komut dosyası, bu örnek makine genelinde çalıştırırken bir istemcide hizmet sertifikaları kaldırmaz. Çalıştırırsanız [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] makine genelinde sertifikaları kullanma örnekleri Currentuser'a - TrustedPeople deposu yüklü hizmet sertifikalarını temizlemek emin olun. Bunu yapmak için aşağıdaki komutu kullanın: `certmgr -del -r CurrentUser -s TrustedPeople -c -n <Fully Qualified Server Machine Name>`. Örneğin: `certmgr -del -r CurrentUser -s TrustedPeople -c -n server1.contoso.com`.  
+    >  Bu komut dosyası, bu örnek makine genelinde çalıştırırken bir istemcide hizmet sertifikaları kaldırmaz. Makine genelinde sertifikaları kullanan Windows Communication Foundation (WCF) örnekleri çalıştırırsanız, Currentuser'a - TrustedPeople deposu yüklü hizmet sertifikalarını temizlemek emin olun. Bunu yapmak için aşağıdaki komutu kullanın: `certmgr -del -r CurrentUser -s TrustedPeople -c -n <Fully Qualified Server Machine Name>`. Örneğin: `certmgr -del -r CurrentUser -s TrustedPeople -c -n server1.contoso.com`.  
   
 > [!IMPORTANT]
 >  Örnekler, makinenizde zaten yüklü olabilir. Devam etmeden önce aşağıdaki (varsayılan) dizin denetleyin.  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  Bu dizin mevcut değilse, Git [Windows Communication Foundation (WCF) ve .NET Framework 4 için Windows Workflow Foundation (WF) örnek](http://go.microsoft.com/fwlink/?LinkId=150780) tüm indirmek için [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] ve [!INCLUDE[wf1](../../../../includes/wf1-md.md)] örnekleri. Bu örnek aşağıdaki dizinde bulunur.  
+>  Bu dizin mevcut değilse, Git [Windows Communication Foundation (WCF) ve .NET Framework 4 için Windows Workflow Foundation (WF) örnek](http://go.microsoft.com/fwlink/?LinkId=150780) tüm Windows Communication Foundation (WCF) indirmek için ve [!INCLUDE[wf1](../../../../includes/wf1-md.md)] örnekleri. Bu örnek aşağıdaki dizinde bulunur.  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Extensibility\Metadata\CustomMexEndpoint`  
   

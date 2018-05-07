@@ -1,27 +1,17 @@
 ---
-title: "Uzantı Metotları (Visual Basic)"
-ms.custom: 
+title: Uzantı Metotları (Visual Basic)
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- devlang-visual-basic
-ms.topic: article
 f1_keywords:
 - vb.ExtensionMethods
 helpviewer_keywords:
 - extending data types [Visual Basic]
 - extension methods [Visual Basic]
 ms.assetid: b8020aae-374d-46a9-bcb7-8cc2390b93b6
-caps.latest.revision: 
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: d3db3bc2b213b78ef2dceebcf56c9d5fbfa3016e
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 1cc2ccef09dd027c6f1e82f60ed4ac5f50db6ebe
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="extension-methods-visual-basic"></a>Uzantı Metotları (Visual Basic)
 Genişletme yöntemleri yeni türetilmiş bir tür oluşturmadan önceden tanımlanmış veri türlerine özel işlevsellik eklemek için geliştiricilere etkinleştirin. Genişletme yöntemleri varolan türünün bir örneği yöntemi değilmiş gibi çağrılabilir bir yöntem yazmak mümkün kılar.  
@@ -38,7 +28,7 @@ Genişletme yöntemleri yeni türetilmiş bir tür oluşturmadan önceden tanım
   
  [!code-vb[VbVbalrExtensionMethods#1](./codesnippet/VisualBasic/extension-methods_1.vb)]  
   
- Uzantı yöntemi tanımı uzantısı özniteliğiyle işaretlenmiş fark `<Extension()>`. Yöntem tanımlandığı modülü işaretleme isteğe bağlıdır, ancak her bir genişletme yöntemi işaretlenmesi gerekir. <xref:System.Runtime.CompilerServices>Uzantı özniteliği erişmek için içeri aktarılmalıdır.  
+ Uzantı yöntemi tanımı uzantısı özniteliğiyle işaretlenmiş fark `<Extension()>`. Yöntem tanımlandığı modülü işaretleme isteğe bağlıdır, ancak her bir genişletme yöntemi işaretlenmesi gerekir. <xref:System.Runtime.CompilerServices> Uzantı özniteliği erişmek için içeri aktarılmalıdır.  
   
  Genişletme yöntemleri yalnızca modülleri içinde bildirilebilir. Genellikle, bir genişletme yöntemi tanımlandığı modül adı verilir olarak aynı modül değil. Bu kapsam içine duruma getirmek üzere olması gerekiyorsa bunun yerine, genişletme yöntemi içeren modülü, içeri aktarılır. İçeren modülü sonra `Print` olduğu gibi hiç bağımsız değişken alan sıradan örnek yöntemi değilmiş gibi kapsamda yöntemi çağrılabilir `ToUpper`:  
   
@@ -48,9 +38,9 @@ Genişletme yöntemleri yeni türetilmiş bir tür oluşturmadan önceden tanım
   
  [!code-vb[VbVbalrExtensionMethods#3](./codesnippet/VisualBasic/extension-methods_3.vb)]  
   
- Dize bağımsız değişkeni için göndererek çağrılan yöntemi `punc`:`example.PrintAndPunctuate(".")`  
+ Dize bağımsız değişkeni için göndererek çağrılan yöntemi `punc`: `example.PrintAndPunctuate(".")`  
   
- Aşağıdaki örnekte gösterildiği `Print` ve `PrintAndPunctuate` tanımlanan ve çağrılır. <xref:System.Runtime.CompilerServices>tanımı modülünde extension özniteliği erişimi etkinleştirmek için alınır.  
+ Aşağıdaki örnekte gösterildiği `Print` ve `PrintAndPunctuate` tanımlanan ve çağrılır. <xref:System.Runtime.CompilerServices> tanımı modülünde extension özniteliği erişimi etkinleştirmek için alınır.  
   
 ### <a name="code"></a>Kod  
   
@@ -186,10 +176,10 @@ End Module
 ## <a name="see-also"></a>Ayrıca Bkz.  
  <xref:System.Runtime.CompilerServices>  
  <xref:System.Runtime.CompilerServices.ExtensionAttribute>  
- [Genişletme yöntemleri](../../../../csharp/programming-guide/classes-and-structs/extension-methods.md)  
- [Module deyimi](../../../../visual-basic/language-reference/statements/module-statement.md)  
- [Parametreler ve bağımsız değişkenler](./procedure-parameters-and-arguments.md)  
- [İsteğe bağlı parametreler](./optional-parameters.md)  
- [Parametre dizileri](./parameter-arrays.md)  
+ [Genişletme Yöntemleri](../../../../csharp/programming-guide/classes-and-structs/extension-methods.md)  
+ [Module Deyimi](../../../../visual-basic/language-reference/statements/module-statement.md)  
+ [Yordam Parametreleri ve Bağımsız Değişkenleri](./procedure-parameters-and-arguments.md)  
+ [İsteğe Bağlı Parametreler](./optional-parameters.md)  
+ [Parametre Dizileri](./parameter-arrays.md)  
  [Öznitelikler genel bakış](../../../../visual-basic/programming-guide/concepts/attributes/index.md)  
  [Visual Basic'de kapsam](../../../../visual-basic/programming-guide/language-features/declared-elements/scope.md)

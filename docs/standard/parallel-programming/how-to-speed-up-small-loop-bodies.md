@@ -1,31 +1,20 @@
 ---
 title: 'Nasıl yapılır: Küçük Döngü Gövdelerini Hızlandırma'
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net
-ms.reviewer: ''
-ms.suite: ''
 ms.technology: dotnet-standard
-ms.tgt_pltfrm: ''
-ms.topic: article
 dev_langs:
 - csharp
 - vb
 helpviewer_keywords:
 - parallel loops, how to speed up
 ms.assetid: c7a66677-cb59-4cbf-969a-d2e8fc61a6ce
-caps.latest.revision: 18
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-- dotnetcore
-ms.openlocfilehash: 856c2a60150cb7a376afb291e6806d7fc91f3d2b
-ms.sourcegitcommit: 2e8acae16ae802f2d6d04e3ce0a6dbf04e476513
+ms.openlocfilehash: bff41416dd2263c185cc94de045b2c8a26ea194d
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-speed-up-small-loop-bodies"></a>Nasıl yapılır: Küçük Döngü Gövdelerini Hızlandırma
 Zaman bir <xref:System.Threading.Tasks.Parallel.For%2A?displayProperty=nameWithType> döngü sahip küçük bir gövde, eşdeğer sıralı döngü daha yavaş onu gibi gerçekleştirebileceğiniz [için](~/docs/csharp/language-reference/keywords/for.md) döngü C# ve [için](http://msdn.microsoft.com/library/c470a263-9b49-4308-8fd6-8592b84a7980) Visual Basic'te döngü. Performans verileri ve temsilci her döngü tekrarında üzerinde çağırma maliyet bölümlendirme söz konusu yükünü kaynaklanır. Bu tür senaryosu için <xref:System.Collections.Concurrent.Partitioner> sınıfı sağlar <xref:System.Collections.Concurrent.Partitioner.Create%2A?displayProperty=nameWithType> temsilci gövdesi için sıralı döngü vermenizi sağlar ve böylece temsilci yineleme başına bir kez yerine bölüm başına yalnızca bir kez çağrılır yöntemi. Daha fazla bilgi için bkz: [PLINQ ve TPL için özel Bölümleyiciler](../../../docs/standard/parallel-programming/custom-partitioners-for-plinq-and-tpl.md).  

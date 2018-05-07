@@ -1,14 +1,6 @@
 ---
 title: Veri Sözleşmelerinde Koleksiyon Türleri
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -17,17 +9,11 @@ helpviewer_keywords:
 - data contracts [WCF], collection types
 - collection types [WCF]
 ms.assetid: 9b45b28e-0a82-4ea3-8c33-ec0094aff9d5
-caps.latest.revision: 19
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: c771d78c5e78feabcfe883934ed7ea3589c938d2
-ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
+ms.openlocfilehash: dccc53f13889e2073579af19e86459fe56b069e7
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/30/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="collection-types-in-data-contracts"></a>Veri Sözleşmelerinde Koleksiyon Türleri
 A *koleksiyonu* belirli bir türdeki öğeleri listesini içerir. İçinde [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)], böyle listeleri dizileri veya diğer türleri çeşitli kullanarak temsil edilebilir (genel listesi, genel <xref:System.ComponentModel.BindingList%601>, <xref:System.Collections.Specialized.StringCollection>, veya <xref:System.Collections.ArrayList>). Örneğin, bir koleksiyon için belirli bir müşteri adresleri listesi tutabilir. Bu koleksiyon adı verilen *listesinde koleksiyonları*kendi gerçek türü ne olursa olsun.  
@@ -86,7 +72,7 @@ A *koleksiyonu* belirli bir türdeki öğeleri listesini içerir. İçinde [!INC
   
  Bildirilen türü bir arabirim olduğunda seri hale getirme sırasında kullanılan gerçek örneği türü arabirimi uygulayan herhangi bir türü olabilir. Kısıtlamaları daha önce ele alınan (varsayılan bir oluşturucu sahip ve bir `Add` yöntemi) geçerli değildir. Örneğin, genel bir örneğine Customer2 içinde adresleri ayarlayabilirsiniz <xref:System.Collections.ObjectModel.ReadOnlyCollection%601> doğrudan veri üyesi bildiremezsiniz olsa bile, adresini genel yazın <xref:System.Collections.ObjectModel.ReadOnlyCollection%601>.  
   
- Arabirim türü olduğunda, serileştirme motoruna bildirilen arabirimini uygulayan bir türünü seçer ve türü örneği seri durumdan çıkarma sırasında. Bilinen türleri mekanizması (açıklanan [veri sözleşmesi bilinen türleri](../../../../docs/framework/wcf/feature-details/data-contract-known-types.md)) etkisizdir içinde türü seçimi burada; yerleşik [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)].  
+ Arabirim türü olduğunda, serileştirme motoruna bildirilen arabirimini uygulayan bir türünü seçer ve türü örneği seri durumdan çıkarma sırasında. Bilinen türleri mekanizması (açıklanan [veri sözleşmesi bilinen türleri](../../../../docs/framework/wcf/feature-details/data-contract-known-types.md)) etkisizdir burada; seçim türü WCF yerleşik olarak bulunur.  
   
 ## <a name="customizing-collection-types"></a>Koleksiyon türleri özelleştirme  
  Koleksiyon türleri kullanarak özelleştirebileceğiniz <xref:System.Runtime.Serialization.CollectionDataContractAttribute> birkaç kullanımı vardır özniteliği.  
@@ -235,7 +221,7 @@ A *koleksiyonu* belirli bir türdeki öğeleri listesini içerir. İçinde [!INC
 ## <a name="collections-and-schema"></a>Koleksiyonlar ve şema  
  Tüm eşdeğer koleksiyonları aynı gösterimi XML Şeması Tanım Dili (XSD) şemasında sahiptir. Bu nedenle, normalde aynı koleksiyon türü oluşturulan istemci kodu sunucuda olarak aldığınız değil. Örneğin, bir veri sözleşmesi ile genel sunucu kullanabilir <xref:System.Collections.Generic.List%601> tamsayı veri üyesi, ancak oluşturulan istemci kodu aynı veri üyesi dizisi duruma gelebilir.  
   
- Sözlük koleksiyonları ile işaretlenmiş bir [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]-belirtmek belirli Şeması ek açıklama sözlükler oldukları; Aksi halde, bir anahtar ve değer girişleri basit listelerinden ayırt. Veri sözleşmesi şema içinde koleksiyonları nasıl temsil edildiğini bir tam açıklama için bkz: [veri sözleşmesi şema başvurusu](../../../../docs/framework/wcf/feature-details/data-contract-schema-reference.md).  
+ Sözlük koleksiyonları sözlükler olduğunu belirten bir WCF özgü Şeması ek açıklama ile işaretlenmiş; Aksi takdirde, bunlar bir anahtar ve değer girişleri basit listelerinden ayırt edilemez. Veri sözleşmesi şema içinde koleksiyonları nasıl temsil edildiğini bir tam açıklama için bkz: [veri sözleşmesi şema başvurusu](../../../../docs/framework/wcf/feature-details/data-contract-schema-reference.md).  
   
  Varsayılan olarak, özelleştirilmiş olmayan koleksiyonları içeri aktarılan kodda türleri oluşturulmaz. Veri üyeleri liste koleksiyon türleri dizileri olarak içe aktarılır ve sözlük koleksiyon türleri veri üyeleri genel bir sözlük aktarılır.  
   

@@ -1,31 +1,17 @@
 ---
-title: "Windows Forms için Uygulama Ayarları"
-ms.custom: 
+title: Windows Forms için Uygulama Ayarları
 ms.date: 04/07/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-winforms
-ms.tgt_pltfrm: 
-ms.topic: article
 f1_keywords:
 - ClientApplicationSettings
 helpviewer_keywords:
 - application settings [Windows Forms]
 - Windows Forms, application settings
 ms.assetid: 64090a34-8556-4904-8ea0-20efe9f8c886
-caps.latest.revision: 
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 63248009497152a41a6313a50ed6e7544ac62cbe
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 2c707d9ab2fd2be611fe0872501b45665d0a349e
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="application-settings-for-windows-forms"></a>Windows Forms için Uygulama Ayarları
 Windows Forms uygulamaları ayarlarını özelliğidir oluşturmak, depolamak ve özel uygulama ve istemci üzerindeki kullanıcı tercihlerini korumak daha kolay hale getirir. Uygulama ayarları, yalnızca veritabanı bağlantı dizelerini gibi uygulama verilerini, aynı zamanda araç çubuğu konumları gibi kullanıcıya özgü verileri depolamak ve en son listeleri kullanılır.  

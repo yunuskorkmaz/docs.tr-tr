@@ -1,31 +1,19 @@
 ---
 title: WIF 4.5 WIF 3.5 kullanılarak oluşturulan bir uygulamayı geçirmek için yönergeler
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 ms.assetid: 7a32fe6e-5f68-4693-9371-19411fa8063c
-caps.latest.revision: ''
 author: BrucePerlerMS
-ms.author: bruceper
 manager: mbaldwin
-ms.workload:
-- dotnet
-ms.openlocfilehash: 87443a83b80440a30e942b30bd98cce09816f25f
-ms.sourcegitcommit: c883637b41ee028786edceece4fa872939d2e64c
+ms.openlocfilehash: 60e9dd96824b2c9bef81d236bab8f577f9fb2062
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/26/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="guidelines-for-migrating-an-application-built-using-wif-35-to-wif-45"></a>WIF 4.5 WIF 3.5 kullanılarak oluşturulan bir uygulamayı geçirmek için yönergeler
 ## <a name="applies-to"></a>Uygulandığı öğe:  
   
--   Microsoft® Windows® Identity Foundation (WIF) 3.5 and 4.5.  
+-   Microsoft® Windows® Identity Foundation (WIF) 3.5 ve 4.5.  
   
 ## <a name="overview"></a>Genel Bakış  
  Windows Identity Foundation (WIF) .NET 3.5 SP1 zaman çerçevesinde ilk olarak yayımlanmıştır. WIF sürümünün WIF 3.5 adlandırılır. Ayrı çalışma zamanı ve SDK'sı, ama WIF etkin bir uygulama çalıştırıldığı her bilgisayarda yüklü WIF çalışma zamanı olması gerekiyordu ve geliştiriciler Visual Studio şablonları ve etkinleştirilmiş tooling almak için WIF SDK'sını yükleyip gerekiyordu amacı yayımlanan WIF kullanan uygulamaları geliştirme. .NET 4. 5'ile başlayan, WIF tam olarak .NET Framework'e tümleştirilmiştir. Ayrı bir çalışma zamanı artık gerekli değildir ve WIF araçları Visual Studio 2012'de Visual Studio uzantıları Yöneticisi kullanılarak yüklenebilir. Bu sürümü WIF WIF 4.5 adlandırılır.  

@@ -1,13 +1,6 @@
 ---
-title: "Nasıl yapılır: Görüntü Dosyası İçine Bir Görseli Kodlama"
-ms.custom: 
+title: 'Nasıl yapılır: Görüntü Dosyası İçine Bir Görseli Kodlama'
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-wpf
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -16,16 +9,11 @@ helpviewer_keywords:
 - encoding image formats [WPF]
 - visuals [WPF], encoding to an image file
 ms.assetid: 2036385b-ea47-4d54-8027-5797f52c8149
-caps.latest.revision: "4"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 88a5d93c9c4726d1f6493df28d0a2a559394ef74
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: a9e847a46941c37efb735d5bfd13bde2dd74271c
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-encode-a-visual-to-an-image-file"></a>Nasıl yapılır: Görüntü Dosyası İçine Bir Görseli Kodlama
 Bu örnek nasıl kodlanacağını gösterir bir <xref:System.Windows.Media.Visual> kullanarak bir görüntü dosyası içine nesne bir <xref:System.Windows.Media.Imaging.RenderTargetBitmap> ve <xref:System.Windows.Media.Imaging.PngBitmapEncoder>.  

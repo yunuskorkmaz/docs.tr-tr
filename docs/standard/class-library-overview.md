@@ -1,13 +1,7 @@
 ---
-title: ".NET sınıf kitaplığına genel bakış"
-ms.custom: 
+title: .NET sınıf kitaplığına genel bakış
 ms.date: 02/08/2018
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
 ms.technology: dotnet-standard
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - classes [.NET Framework], library overview
 - classes [.NET Core], library overview
@@ -45,15 +39,11 @@ helpviewer_keywords:
 ms.assetid: 7e4c5921-955d-4b06-8709-101873acf157
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-- dotnetcore
-ms.openlocfilehash: ffa64d3a1f9ade7a97b15edfdecbad566c871c12
-ms.sourcegitcommit: cec0525b2121c36198379525e69aa5388266db5b
+ms.openlocfilehash: c6c61e4721e6daa548db2fffccc75606e98f71cc
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="net-class-library-overview"></a>.NET sınıf kitaplığına genel bakış
 .NET uygulamaları, sınıflar, arabirimler, temsilciler ve hızlandırmak ve geliştirme sürecinin en iyi duruma getirme ve sistem işlevlere erişim sağlayan değer türleri içerir. Diller arasında birlikte çalışabilirlik kolaylaştırmak için çoğu .NET türleri CLS ile uyumlu olan ve bu nedenle, derleyici ortak dil belirtimi (CLS) uyan herhangi bir programlama dili kullanılabilir.  
@@ -64,7 +54,7 @@ ms.lasthandoff: 02/23/2018
   
 -   Veri yapıları kapsüller.  
   
--   Perform I/O.  
+-   G/ç gerçekleştirin.  
   
 -   Yüklenen türler hakkında bilgi erişim.  
   
@@ -95,21 +85,21 @@ ms.lasthandoff: 02/23/2018
 |Kategori|Sınıf adı|Açıklama|Visual Basic veri türü|C# veri türü|C + +/ CLI veri türü|F # veri türü|  
 |--------------|----------------|-----------------|----------------------------|-------------------|---------------------|-----------------------|  
 |Tamsayı|<xref:System.Byte>|Bir 8 bit işaretsiz tamsayıyı.|**Bayt**|**byte**|**İmzasız char**|**byte**|  
-||<xref:System.SByte>|Bir 8 bit işaretli tamsayıyı.<br /><br /> Değil CLS ile uyumlu.|**SByte**|**sbyte**|**char**<br /> veya<br /> **İmzalı** **char**|**sbyte**|  
-||<xref:System.Int16>|Bir 16 bit işaretli tamsayıyı.|**kısa**|**short**|**short**|**int16**|  
-||<xref:System.Int32>|32 bit imzalı bir tamsayı.|**Integer**|**int**|**int**<br /><br /> veya<br /><br /> **long**|**int**|  
+||<xref:System.SByte>|Bir 8 bit işaretli tamsayıyı.<br /><br /> Değil CLS ile uyumlu.|**SByte**|**sbyte**|**char**<br /> -veya-<br /> **İmzalı** **char**|**sbyte**|  
+||<xref:System.Int16>|Bir 16 bit işaretli tamsayıyı.|**kısa**|**short**|**short**|**Int16**|  
+||<xref:System.Int32>|32 bit imzalı bir tamsayı.|**tamsayı**|**int**|**int**<br /><br /> -veya-<br /><br /> **long**|**int**|  
 ||<xref:System.Int64>|64-bit imzalı bir tamsayı.|**uzun**|**long**|**__int64**|**int64**|  
 ||<xref:System.UInt16>|Bir 16 bit işaretsiz tamsayı.<br /><br /> Değil CLS ile uyumlu.|**UShort**|**ushort**|**İmzasız short**|**uint16**|  
-||<xref:System.UInt32>|Bir 32 bit işaretsiz tamsayı.<br /><br /> Değil CLS ile uyumlu.|**UInteger**|**uint**|**İmzasız int**<br /> veya<br /> **İmzasız long**|**uint32**|  
+||<xref:System.UInt32>|Bir 32 bit işaretsiz tamsayı.<br /><br /> Değil CLS ile uyumlu.|**Uınteger**|**uint**|**İmzasız int**<br /> -veya-<br /> **İmzasız long**|**uint32**|  
 ||<xref:System.UInt64>|Bir 64-bit işaretsiz tamsayı.<br /><br /> Değil CLS ile uyumlu.|**ULong**|**ulong**|**İmzasız __int64**|**uint64**|  
-|Kayan nokta|<xref:System.Single>|Bir tek duyarlıklı (32 bit) kayan noktalı sayı.|**Tek**|**float**|**float**|**float32**</br> veya</br>**single**|  
+|Kayan nokta|<xref:System.Single>|Bir tek duyarlıklı (32 bit) kayan noktalı sayı.|**Tek**|**float**|**float**|**Float32**</br> veya</br>**single**|  
 ||<xref:System.Double>|Bir çift duyarlıklı (64 bit) kayan noktalı sayı.|**Çift**|**double**|**double**|**float**</br> veya </br> **double**|  
 |Mantıksal|<xref:System.Boolean>|Bir Boole değeri (true veya false).|**Boole değeri**|**bool**|**bool**|**bool**|  
 |Diğer|<xref:System.Char>|Unicode (16-bit) karakter.|**char**|**char**|**wchar_t**|**char**|  
 ||<xref:System.Decimal>|Ondalık (128-bit) bir değer.|**Ondalık**|**decimal**|**Ondalık**|**decimal**|  
 ||<xref:System.IntPtr>|Temel alınan bir platform (32-bit değer 32-bit platformu üzerinde) ve bir 64-bit platformu üzerinde 64-bit değeri büyüklüğü bağlıdır imzalı bir tamsayı.|**IntPtr**<br /><br /> Yerleşik tür yok.|**IntPtr**<br /><br /> Yerleşik tür yok.|**IntPtr**<br /><br /> Yerleşik tür yok.|**unativeint**|  
 ||<xref:System.UIntPtr>|İmzalanmamış tamsayı temel platform (32-bit değer 32-bit platformu üzerinde) ve bir 64-bit platformu üzerinde 64-bit değeri büyüklüğü bağlıdır.<br /><br /> Değil CLS ile uyumlu.|**UIntPtr**<br /><br /> Yerleşik tür yok.|**UIntPtr**<br /><br /> Yerleşik tür yok.|**UIntPtr**<br /><br /> Yerleşik tür yok.|**unativeint**|  
-||<xref:System.Object>|Nesne hiyerarşisinin kökü.|**Object**|**object**|**Object^**|**obj**|  
+||<xref:System.Object>|Nesne hiyerarşisinin kökü.|**Nesne**|**object**|**Nesne ^**|**obj**|  
 ||<xref:System.String>|Unicode karakterden oluşan bir değişmez, sabit uzunluklu dize.|**Dize**|**string**|**Dize ^**|**string**|  
   
  Temel veri türlerini yanı sıra <xref:System> ad alanı, uygulama etki alanları ve atık toplayıcı gibi temel çalışma zamanı kavramlar uğraşmanız sınıfları için özel durumları işleme sınıflar arasında değişen 100'den sınıfları içerir. <xref:System> Ad alanı da birçok ikinci düzey ad alanları içerir.  

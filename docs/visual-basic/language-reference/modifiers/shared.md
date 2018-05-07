@@ -1,11 +1,6 @@
 ---
 title: Shared (Visual Basic)
 ms.date: 07/20/2015
-ms.prod: .net
-ms.suite: 
-ms.technology:
-- devlang-visual-basic
-ms.topic: article
 f1_keywords:
 - vb.Shared
 helpviewer_keywords:
@@ -16,14 +11,11 @@ helpviewer_keywords:
 - shared [elements VB]
 - elements [Visual Basic], shared
 ms.assetid: 2bf7cf2c-b0dd-485e-8749-b5d674dab4cd
-caps.latest.revision: 
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: fce13c308a449e63eacc2bc4c94c274c7e25506a
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: b15dd08d69f372317b9140001e8072eeb66d44ab
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="shared-visual-basic"></a>Shared (Visual Basic)
 Bir veya daha fazla bildirilen programlama öğeleri ile bir sınıf veya yapı büyük ve değil sınıf veya yapı belirli bir örneği ile ilişkili olduğunu belirtir.  
@@ -51,7 +43,7 @@ Bir veya daha fazla bildirilen programlama öğeleri ile bir sınıf veya yapı 
   
 ## <a name="behavior"></a>Davranış  
   
--   **Depolama alanı.** Yalnızca kaç veya birkaç örneği olsun, kendi sınıf veya yapı oluşturduktan sonra bir paylaşılan değişken veya olay bellekte depolanır. Benzer şekilde, bir paylaşılan bir yordam veya özellik, yerel değişkenleri yalnızca bir kümesi tutar.  
+-   **depolama alanı.** Yalnızca kaç veya birkaç örneği olsun, kendi sınıf veya yapı oluşturduktan sonra bir paylaşılan değişken veya olay bellekte depolanır. Benzer şekilde, bir paylaşılan bir yordam veya özellik, yerel değişkenleri yalnızca bir kümesi tutar.  
   
 -   **Bir örnek değişkeni erişme.** Belirli bir sınıf ya da yapısı örneği içeren bir değişkeni adı ile niteleme tarafından paylaşılan bir öğesine erişmek mümkündür. Bu genellikle beklendiği gibi çalışır, ancak derleyici bir uyarı iletisi oluşturur ve sınıf veya yapı adı değişkeni yerine üzerinden erişim sağlar.  
   
@@ -87,22 +79,22 @@ Bir veya daha fazla bildirilen programlama öğeleri ile bir sınıf veya yapı 
   
  `Shared` Değiştiricisi bu bağlamlarında kullanılabilir:  
   
- [Dim deyimi](../../../visual-basic/language-reference/statements/dim-statement.md)  
+ [Dim Deyimi](../../../visual-basic/language-reference/statements/dim-statement.md)  
   
- [Event deyimi](../../../visual-basic/language-reference/statements/event-statement.md)  
+ [Event Deyimi](../../../visual-basic/language-reference/statements/event-statement.md)  
   
- [Function deyimi](../../../visual-basic/language-reference/statements/function-statement.md)  
+ [Function Deyimi](../../../visual-basic/language-reference/statements/function-statement.md)  
   
- [Operator deyimi](../../../visual-basic/language-reference/statements/operator-statement.md)  
+ [Operator Deyimi](../../../visual-basic/language-reference/statements/operator-statement.md)  
   
- [Property deyimi](../../../visual-basic/language-reference/statements/property-statement.md)  
+ [Property Deyimi](../../../visual-basic/language-reference/statements/property-statement.md)  
   
- [Sub deyimi](../../../visual-basic/language-reference/statements/sub-statement.md)  
+ [Sub Deyimi](../../../visual-basic/language-reference/statements/sub-statement.md)  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [Gölgeleri](../../../visual-basic/language-reference/modifiers/shadows.md)  
- [Statik](../../../visual-basic/language-reference/modifiers/static.md)  
+ [Shadows](../../../visual-basic/language-reference/modifiers/shadows.md)  
+ [Static](../../../visual-basic/language-reference/modifiers/static.md)  
  [Visual Basic'de ömür](../../../visual-basic/programming-guide/language-features/declared-elements/lifetime.md)  
- [Yordamları](../../../visual-basic/programming-guide/language-features/procedures/index.md)  
- [Yapıları](../../../visual-basic/programming-guide/language-features/data-types/structures.md)  
- [Nesneler ve sınıflar](../../../visual-basic/programming-guide/language-features/objects-and-classes/index.md)
+ [Yordamlar](../../../visual-basic/programming-guide/language-features/procedures/index.md)  
+ [Yapılar](../../../visual-basic/programming-guide/language-features/data-types/structures.md)  
+ [Nesneler ve Sınıflar](../../../visual-basic/programming-guide/language-features/objects-and-classes/index.md)

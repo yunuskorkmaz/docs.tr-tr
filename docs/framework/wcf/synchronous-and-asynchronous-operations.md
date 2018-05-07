@@ -1,14 +1,6 @@
 ---
 title: Zaman Uyumlu ve Zaman Uyumsuz İşlemler
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -16,22 +8,16 @@ helpviewer_keywords:
 - service contracts [WCF], synchronous operations
 - service contracts [WCF], asynchronous operations
 ms.assetid: db8a51cb-67e6-411b-9035-e5821ed350c9
-caps.latest.revision: 24
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: c626699dc5291f4d4f6d432e89708661b233f16d
-ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
-ms.translationtype: MT
+ms.openlocfilehash: 0b64d45797babff2da1649fb7469684342e65d47
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/30/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="synchronous-and-asynchronous-operations"></a>Zaman Uyumlu ve Zaman Uyumsuz İşlemler
 Bu konuda, uygulama ve zaman uyumsuz hizmet işlemlerini çağırma anlatılmaktadır.  
   
- Yöntem çağrısının çalışırken yararlı iş yapmadan devam etmek uygulama sağladığından birçok uygulamaları yöntemleri zaman uyumsuz olarak çağırır. [!INCLUDE[indigo1](../../../includes/indigo1-md.md)] Hizmetler ve istemcileri katılmak düzeylerinde sağlayan iki ayrı uygulama zaman uyumsuz işlem çağrılarında [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] uygulamaları bile karşı etkileşim dengeli verimliliği en üst düzeye çıkarmak için daha fazla esneklik.  
+ Yöntem çağrısının çalışırken yararlı iş yapmadan devam etmek uygulama sağladığından birçok uygulamaları yöntemleri zaman uyumsuz olarak çağırır. Windows Communication Foundation (WCF) hizmetlerini ve istemciler katılmak düzeylerinde sağlayan iki ayrı uygulama zaman uyumsuz işlem çağrılarında [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] verimliliği en üst düzeye çıkarmak için daha fazla esneklik dengeli karşı uygulamalar Etkileşim.  
   
 ## <a name="types-of-asynchronous-operations"></a>Zaman uyumsuz işlemleri türleri  
  Tüm hizmet sözleşmelerinde [!INCLUDE[indigo2](../../../includes/indigo2-md.md)], Hayır parametre türleri önemli ve dönüş değerleri, kullanma [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] hizmeti ile istemci arasında belirli ileti değişim deseni belirtmek için öznitelikler. [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] otomatik olarak uygun hizmet işlemi için gelen ve giden iletileri yönlendiren veya istemci kodu çalıştırıyor.  

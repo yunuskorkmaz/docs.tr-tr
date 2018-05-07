@@ -1,24 +1,12 @@
 ---
-title: "Nasıl yapılır: IIS Tarafından Barındırılan Bir WCF Hizmetini SSL ile Yapılandırma"
-ms.custom: 
+title: 'Nasıl yapılır: IIS Tarafından Barındırılan Bir WCF Hizmetini SSL ile Yapılandırma'
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: df2fe31f-a4bb-4024-92ca-b74ba055e038
-caps.latest.revision: "3"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: b16ca5b4cfe615eedd9e532b12f61394806829bd
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: e739eb47611e5b73e7f1d62191a5aa61ad77abe2
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-configure-an-iis-hosted-wcf-service-with-ssl"></a>Nasıl yapılır: IIS Tarafından Barındırılan Bir WCF Hizmetini SSL ile Yapılandırma
 Bu konu, HTTP taşıma güvenliği kullanılacak bir IIS tarafından barındırılan bir WCF hizmeti kurmak açıklar. HTTP taşıma güvenliği ile IIS kaydedilmesi için bir SSL sertifikası gerektirir. Bir SSL sertifikası yoksa, bir test sertifikası oluşturmak için IIS kullanabilirsiniz. Sonraki web sitesi için SSL bağlaması eklemek ve web sitesinin kimlik doğrulama özelliklerini yapılandırmanız gerekir. Son olarak, WCF hizmetini HTTPS kullanacak şekilde yapılandırmanız gerekir.  
@@ -31,11 +19,11 @@ Bu konu, HTTP taşıma güvenliği kullanılacak bir IIS tarafından barındır�
   
 2.  Sunucu sertifikaları penceresinde tıklatın **otomatik olarak imzalanan sertifika oluştur...** Bağlantı.  
   
-     ![Kendi &#45; oluşturma IIS sertifikayla imzalanmış](../../../../docs/framework/wcf/feature-details/media/mg-createselfsignedcert.jpg "mg_CreateSelfSignedCert")  
+     ![Kendi oluşturma&#45;IIS sertifikayla imzalanmış](../../../../docs/framework/wcf/feature-details/media/mg-createselfsignedcert.jpg "mg_CreateSelfSignedCert")  
   
 3.  Otomatik olarak imzalanan sertifika için bir kolay ad girin ve tıklayın **Tamam**.  
   
-     ![Kendi kendini &#45;oluşturun; Sertifika iletişim kutusu imzalı](../../../../docs/framework/wcf/feature-details/media/mg-mycert.jpg "mg_MyCert")  
+     ![Kendi kendini oluşturma&#45;imzalı sertifika iletişim kutusu](../../../../docs/framework/wcf/feature-details/media/mg-mycert.jpg "mg_MyCert")  
   
      Yeni oluşturulan otomatik olarak imzalanan sertifika ayrıntılarını şimdi'nda gösterilen **sunucu sertifikaları** penceresi.  
   

@@ -1,22 +1,12 @@
 ---
-title: "Arkadaş derlemeler (Visual Basic)"
-ms.custom: 
+title: Arkadaş derlemeler (Visual Basic)
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 9b3d5716-e6e4-47a7-a3e9-084d7fba5c28
-caps.latest.revision: "6"
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: d3a37629582e4fc2606afaf606735464c0d247a4
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 91bc33f33c4fc34c6e0f3ae197ecd2b876161de3
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="friend-assemblies-visual-basic"></a>Arkadaş derlemeler (Visual Basic)
 A *derlemeyi* başka bir derlemenin erişebileceği bir derleme [arkadaş](../../../../visual-basic/language-reference/modifiers/friend.md) türleri ve üyeleri. Derleme bir derlemeyi olarak belirlerseniz, artık işareti türleri ve bunları sırayla genel olarak üyeleri diğer derlemelerden tarafından erişilecek yok. Bu özellikle aşağıdaki senaryolarda kullanışlıdır:  
@@ -29,7 +19,7 @@ A *derlemeyi* başka bir derlemenin erişebileceği bir derleme [arkadaş](../..
  Kullanabileceğiniz <xref:System.Runtime.CompilerServices.InternalsVisibleToAttribute> verilen derleme için bir veya daha fazla arkadaş derlemeleri tanımlamak için öznitelik. Aşağıdaki örnek kullanır <xref:System.Runtime.CompilerServices.InternalsVisibleToAttribute> özniteliği bir derlemede ve derleme belirten `AssemblyB` Arkadaş derlemesi olarak. Bu derleme verir `AssemblyB` tüm türleri ve üyeleri bir olarak işaretlenmiş derlemede erişim `Friend`.  
   
 > [!NOTE]
->  Derleme zaman derleme (derleme `AssemblyB`) iç türleri veya başka bir derleme iç üyeleri erişecek (derleme *A*), kullanarakaçıkça(.exeveya.dll)çıkışdosyasınınadıbelirtmelisiniz**/out** derleyici seçeneği. Derleyici henüz dış başvuruları bağlama zamanında oluşturma derleme adı üretti değil çünkü bu gereklidir. Daha fazla bilgi için bkz: [/out (Visual Basic)](../../../../visual-basic/reference/command-line-compiler/out.md).  
+>  Derleme zaman derleme (derleme `AssemblyB`) iç türleri veya başka bir derleme iç üyeleri erişecek (derleme *A*), kullanarakaçıkça(.exeveya.dll)çıkışdosyasınınadıbelirtmelisiniz **/out** derleyici seçeneği. Derleyici henüz dış başvuruları bağlama zamanında oluşturma derleme adı üretti değil çünkü bu gereklidir. Daha fazla bilgi için bkz: [/out (Visual Basic)](../../../../visual-basic/reference/command-line-compiler/out.md).  
   
 ```vb  
 Imports System.Runtime.CompilerServices  
@@ -65,7 +55,7 @@ End Class
   
  <xref:System.Security.Permissions.StrongNameIdentityPermission> Sınıfı türleri, aşağıdaki farklarla paylaşma olanağı sağlar:  
   
--   <xref:System.Security.Permissions.StrongNameIdentityPermission>bir derlemeyi tüm derlemeye uygularken tek tek bir türü için geçerlidir.  
+-   <xref:System.Security.Permissions.StrongNameIdentityPermission> bir derlemeyi tüm derlemeye uygularken tek tek bir türü için geçerlidir.  
   
 -   Derlemedeki türleri yüzlerce varsa *A* derleme paylaşmak istediğiniz *B*, eklemek zorunda <xref:System.Security.Permissions.StrongNameIdentityPermission> bunların tümüne. Bir derlemeyi kullanırsanız, yalnızca arkadaş ilişki kez bildirme gerekir.  
   

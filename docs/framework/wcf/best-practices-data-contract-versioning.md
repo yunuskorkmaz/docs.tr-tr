@@ -1,37 +1,23 @@
 ---
 title: 'En İyi Uygulamalar: Veri Sözleşmesi Sürümü Oluşturma'
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 helpviewer_keywords:
 - data contracts
 - service contracts
 - best practices [WCF], data contract versioning
 - Windows Communication Foundation, data contracts
 ms.assetid: bf0ab338-4d36-4e12-8002-8ebfdeb346cb
-caps.latest.revision: 24
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 6ea139f6b854a299760df4c7cb8c315b58701ab8
-ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
-ms.translationtype: MT
+ms.openlocfilehash: a578235a0db0ba769cae0b2ade93edbfd72b5508
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/30/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="best-practices-data-contract-versioning"></a>En İyi Uygulamalar: Veri Sözleşmesi Sürümü Oluşturma
 Bu konu, zaman içinde kolayca gelişmesi veri sözleşmeleri oluşturmak için en iyi uygulamaları listeler. Veri sözleşmeleri hakkında daha fazla bilgi için konulara bakın [kullanarak veri sözleşmeleri](../../../docs/framework/wcf/feature-details/using-data-contracts.md).  
   
 ## <a name="note-on-schema-validation"></a>Şema doğrulaması göz önünde bulundurun  
- Veri sözleşmesi sürümü oluşturma ele içinde bu verileri tarafından verilen şema sözleşme dikkate almak önemlidir [!INCLUDE[indigo1](../../../includes/indigo1-md.md)] öğeleri varsayılan olarak isteğe bağlı olarak işaretlenmiş olgu dışındaki herhangi bir sürüm oluşturma desteğine sahip değil.  
+ Veri sözleşmesi sürümü oluşturma ele de, Windows Communication Foundation (WCF) tarafından verilen veri sözleşmesi şema öğeleri varsayılan olarak isteğe bağlı olarak işaretlenmiş olgu dışındaki herhangi bir sürüm destek yok dikkate almak önemlidir.  
   
  Bu, yeni bir veri üye ekleme gibi bile en yaygın sürüm senaryo, belirli bir şema ile sorunsuz bir şekilde uygulanamayacağını anlamına gelir. Bir veri sözleşmesine (yeni bir veri üyesi, örneğin) daha yeni sürümleri eski Şeması'nı kullanarak doğrulamaz.  
   

@@ -1,14 +1,6 @@
 ---
-title: "IHostAssemblyStore::ProvideModule Yöntemi"
-ms.custom: 
+title: IHostAssemblyStore::ProvideModule Yöntemi
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: reference
 api_name:
 - IHostAssemblyStore.ProvideModule
 api_location:
@@ -23,17 +15,13 @@ helpviewer_keywords:
 ms.assetid: f42e3dd0-c88e-4748-b6c0-4c515a633180
 topic_type:
 - apiref
-caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 8b29f19933ae985d15627d1eba2622f350a52e72
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 8b604e1d7fc3d3c8adf7d95bd95843bc0110dbc9
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="ihostassemblystoreprovidemodule-method"></a>IHostAssemblyStore::ProvideModule Yöntemi
 Modül bir derlemeyi ya da bağlı (ancak olmayan bir katıştırılmış) içinde kaynak dosyası çözümler.  
@@ -66,14 +54,14 @@ HRESULT ProvideModule (
   
 |HRESULT|Açıklama|  
 |-------------|-----------------|  
-|S_OK|`ProvideModule`başarıyla döndürüldü.|  
+|S_OK|`ProvideModule` başarıyla döndürüldü.|  
 |HOST_E_CLRNOTAVAILABLE|Ortak dil çalışma zamanı (CLR) süreç içine yüklü değil veya CLR içinde yönetilen kod çalıştıramaz veya çağrı başarılı bir şekilde işlemek bir durumda.|  
 |HOST_E_TIMEOUT|Arama zaman aşımına uğradı.|  
 |HOST_E_NOT_OWNER|Arayan kilidi kendisine ait değil.|  
 |HOST_E_ABANDONED|Bir olay engellenmiş iş parçacığı sırasında iptal edildi veya fiber üzerinde beklediği.|  
 |E_FAIL|Bilinmeyen yıkıcı bir hata oluştu. Bir yöntem E_FAIL döndüğünde, CLR artık işlemi içinde kullanılamaz. Yöntemleri barındırma sonraki çağrılar HOST_E_CLRNOTAVAILABLE döndürür.|  
 |COR_E_FILENOTFOUND (0X80070002)|İstenen derlemeyi ya da bağlı kaynak bulunamadı.|  
-|E_NOT_SUFFICIENT_BUFFER|`pdwModuleId`döndürülecek konak istediği tanımlayıcı içerecek kadar büyük değil.|  
+|E_NOT_SUFFICIENT_BUFFER|`pdwModuleId` döndürülecek konak istediği tanımlayıcı içerecek kadar büyük değil.|  
   
 ## <a name="remarks"></a>Açıklamalar  
  İçin kimlik değeri döndürülen `pdwModuleId` ana bilgisayar tarafından belirtilir. Tanımlayıcıları bir işlem yaşam süresi içinde benzersiz olmalıdır. CLR ilişkili akışı için benzersiz tanımlayıcı olarak bu değeri kullanır. Her değer için değerleri karşı denetler `pAssemblyId` çağrı tarafından döndürülen [ProvideAssembly](../../../../docs/framework/unmanaged-api/hosting/ihostassemblystore-provideassembly-method.md) ve değerlerini karşı `pdwModuleId` diğer çağrı tarafından döndürülen `ProvideModule`. Ana bilgisayar aynı tanımlayıcısı değeri için başka bir döndürürse `IStream`, CLR, akış içeriğini zaten eşlenmiş olup olmadığını denetler. Bu durumda, CLR var olan kopyasını yeni bir eşleme yerine görüntüsü yükler. Bu nedenle, tanımlayıcı ayrıca döndürülen derleme tanımlayıcıları ile çakışmaması gerekir `ProvideAssembly`.  
@@ -85,7 +73,7 @@ HRESULT ProvideModule (
   
  **Kitaplığı:** bir kaynak olarak MSCorEE.dll dahil  
   
- **.NET framework sürümleri:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET framework sürümleri:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
  [ICLRAssemblyReferenceList Arabirimi](../../../../docs/framework/unmanaged-api/hosting/iclrassemblyreferencelist-interface.md)  

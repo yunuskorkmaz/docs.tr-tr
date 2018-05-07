@@ -1,14 +1,6 @@
 ---
 title: Gelişmiş Metin Biçimlendirme
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-wpf
-ms.tgt_pltfrm: ''
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -17,17 +9,11 @@ helpviewer_keywords:
 - text [WPF]
 - typography [WPF], text formatting
 ms.assetid: f0a7986e-f5b2-485c-a27d-f8e922022212
-caps.latest.revision: 16
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 15b5d74c7607c59f7a4b568774e3d870138e56a4
-ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
+ms.openlocfilehash: 59ae3173eaeda6681f76ca28ef060dd963a4e1a9
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/30/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="advanced-text-formatting"></a>Gelişmiş Metin Biçimlendirme
 Windows Presentation Foundation (WPF) sağlayan bir dizi sağlam [!INCLUDE[TLA#tla_api#plural](../../../../includes/tlasharptla-apisharpplural-md.md)] uygulamanızda metin dahil etmek için. Düzen ve [!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)] [!INCLUDE[TLA2#tla_api#plural](../../../../includes/tla2sharptla-apisharpplural-md.md)], gibi <xref:System.Windows.Controls.TextBlock>, en yaygın sağlamak ve genel öğeleri metin sunumu için kullanın. Çizim [!INCLUDE[TLA2#tla_api#plural](../../../../includes/tla2sharptla-apisharpplural-md.md)], gibi <xref:System.Windows.Media.GlyphRunDrawing> ve <xref:System.Windows.Media.FormattedText>, biçimlendirilmiş metin çizimlerini dahil etmek için bir yol sağlar. En gelişmiş düzeyde [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] genişletilebilir bir metin metin Depolama Yönetimi, çalıştırmak metin biçimlendirme yönetimi ve katıştırılmış nesne yönetimi gibi metin sunu her yönüyle denetlemek için altyapısı biçimlendirme sağlar.  

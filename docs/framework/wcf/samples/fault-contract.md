@@ -1,24 +1,12 @@
 ---
-title: "Hatalı Sözleşme"
-ms.custom: 
+title: Hatalı Sözleşme
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: b31b140e-dc3b-408b-b3c7-10b6fe769725
-caps.latest.revision: "16"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 9bf0f615ae338d9ad52cc8c40096e7130fb111ea
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 37b9d7e3ec2135d60215232fae114baef1b54f36
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="fault-contract"></a>Hatalı Sözleşme
 Hatalı sözleşme örnek, bir istemciye bir hizmetten hata bilgileri iletişim gösterilmiştir. Örnek dayanır [Başlarken](../../../../docs/framework/wcf/samples/getting-started-sample.md), dahili bir özel durum bir hataya dönüştürmek için hizmetine eklenen bazı ek kod. İstemci bir hata koşulu hizmette zorla sıfıra bölme gerçekleştirmeye çalışır.  
@@ -109,7 +97,7 @@ catch (FaultException<MathFault> e)
 }  
 ```  
   
- Varsayılan olarak, beklenmeyen özel durum ayrıntıları istemciye hizmetinin güvenli sınır kaçış gelen hizmet uygulaması ayrıntılarını önlemek için gönderilmez. `FaultContract`Bir sözleşmede hataları tanımlamak ve belirli türde bir özel durum iletilmesi istemci için uygun olarak işaretlemek için bir yol sağlar. `FaultException<T>`tüketicilere hataları göndermek için çalışma zamanı mekanizma sağlar.  
+ Varsayılan olarak, beklenmeyen özel durum ayrıntıları istemciye hizmetinin güvenli sınır kaçış gelen hizmet uygulaması ayrıntılarını önlemek için gönderilmez. `FaultContract` Bir sözleşmede hataları tanımlamak ve belirli türde bir özel durum iletilmesi istemci için uygun olarak işaretlemek için bir yol sağlar. `FaultException<T>` tüketicilere hataları göndermek için çalışma zamanı mekanizma sağlar.  
   
  Ancak, hata ayıklama sırasında iç hizmet hatası ayrıntılarını görmek kullanışlıdır. Daha önce açıklanan güvenli davranışı devre dışı bırakmak için her sunucuda işlenmeyen bir özel durum ayrıntıları istemciye gönderilen hata bulunması belirtebilirsiniz. Bu ayar gerçekleştirilir <xref:System.ServiceModel.ServiceBehaviorAttribute.IncludeExceptionDetailInFaults%2A> için `true`. Bu kod veya aşağıdaki örnekte gösterildiği gibi yapılandırmasında ya da ayarlayabilirsiniz.  
   
@@ -143,7 +131,7 @@ catch (FaultException<MathFault> e)
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  Bu dizin mevcut değilse, Git [Windows Communication Foundation (WCF) ve .NET Framework 4 için Windows Workflow Foundation (WF) örnek](http://go.microsoft.com/fwlink/?LinkId=150780) tüm indirmek için [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] ve [!INCLUDE[wf1](../../../../includes/wf1-md.md)] örnekleri. Bu örnek aşağıdaki dizinde bulunur.  
+>  Bu dizin mevcut değilse, Git [Windows Communication Foundation (WCF) ve .NET Framework 4 için Windows Workflow Foundation (WF) örnek](http://go.microsoft.com/fwlink/?LinkId=150780) tüm Windows Communication Foundation (WCF) indirmek için ve [!INCLUDE[wf1](../../../../includes/wf1-md.md)] örnekleri. Bu örnek aşağıdaki dizinde bulunur.  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Contract\Service\Faults`  
   

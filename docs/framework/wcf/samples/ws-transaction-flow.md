@@ -1,28 +1,14 @@
 ---
 title: WS İşlem Akışı
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 helpviewer_keywords:
 - Transactions
 ms.assetid: f8eecbcf-990a-4dbb-b29b-c3f9e3b396bd
-caps.latest.revision: 43
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: f79ffdfe624674074f2e9cadeaccb7f2ab3ba0d7
-ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
-ms.translationtype: MT
+ms.openlocfilehash: 699ba3efad0c8b98aacfc4b64f2fdf03270478b0
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/27/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="ws-transaction-flow"></a>WS İşlem Akışı
 Bu örnek bir istemci Eşgüdümlü işlem kullanımını gösterir ve işlem için istemci ve sunucu seçenekleri WS-Atomic işlem veya OleTransactions protokolü kullanarak akış. Bu örnek dayanır [Başlarken](../../../../docs/framework/wcf/samples/getting-started-sample.md) hesap makinesi hizmetinin uygulayan ancak kullanımını göstermek için işlemleri öznitelikli `TransactionFlowAttribute` ile **TransactionFlowOption** ne derece işlem akışı etkin belirlemek için numaralandırması. Akışlı işlem kapsamı içinde istenen işlem günlüğünü veritabanına yazılır ve Eşgüdümlü istemci işlemi tamamlanana kadar - istemci işlemi tamamlanmazsa devam ederse Web hizmeti işlemi sağlar veritabanı için uygun güncelleştirmeleri iletilmez.  
@@ -77,7 +63,7 @@ public interface ICalculator
 ```  
   
 > [!NOTE]
->  Sistem tarafından sağlanan netTcpBinding transactionProtocol belirtimi sağlarken sistem tarafından sağlanan wsHttpBinding yalnızca daha birlikte çalışabilir WSAtomicTransactionOctober2004 protokolünü kullanır. OleTransactions protokolü tarafından kullanılmak üzere yalnızca kullanılabilir [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] istemciler.  
+>  Sistem tarafından sağlanan netTcpBinding transactionProtocol belirtimi sağlarken sistem tarafından sağlanan wsHttpBinding yalnızca daha birlikte çalışabilir WSAtomicTransactionOctober2004 protokolünü kullanır. Protokol yalnızca için kullanılabilir OleTransactions Windows Communication Foundation (WCF) istemcileri tarafından kullanırlar.  
   
  Uygulayan sınıfa için `ICalculator` arabirimi, tüm yöntemleri öznitelikli ile <xref:System.ServiceModel.OperationBehaviorAttribute.TransactionScopeRequired%2A> özelliğini `true`. Bu ayar yöntemi içinde yapılan tüm eylemler bir işlem kapsamı içinde ortaya bildirir. Bu durumda, veritabanı günlük kaydı gerçekleştirilen eylemleri içerir. İşlem isteğini akışlı bir işlem içeriyorsa eylemleri gelen işlem kapsamında meydana gelen veya yeni bir işlem kapsamı otomatik olarak oluşturulur.  
   
@@ -298,6 +284,6 @@ Press <ENTER> to terminate the service.
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  Bu dizin mevcut değilse, Git [Windows Communication Foundation (WCF) ve .NET Framework 4 için Windows Workflow Foundation (WF) örnek](http://go.microsoft.com/fwlink/?LinkId=150780) tüm indirmek için [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] ve [!INCLUDE[wf1](../../../../includes/wf1-md.md)] örnekleri. Bu örnek aşağıdaki dizinde bulunur.  
+>  Bu dizin mevcut değilse, Git [Windows Communication Foundation (WCF) ve .NET Framework 4 için Windows Workflow Foundation (WF) örnek](http://go.microsoft.com/fwlink/?LinkId=150780) tüm Windows Communication Foundation (WCF) indirmek için ve [!INCLUDE[wf1](../../../../includes/wf1-md.md)] örnekleri. Bu örnek aşağıdaki dizinde bulunur.  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Binding\WS\TransactionFlow`

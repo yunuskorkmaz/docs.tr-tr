@@ -1,12 +1,6 @@
 ---
 title: Parametre Dizileri (Visual Basic)
-ms.custom: 
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
-ms.topic: article
 helpviewer_keywords:
 - parameter arrays [Visual Basic], about parameter arrays
 - ParamArray keyword [Visual Basic], parameter arrays
@@ -16,14 +10,11 @@ helpviewer_keywords:
 - procedures [Visual Basic], indefinite number of argument values
 - arrays [Visual Basic], parameter arrays
 ms.assetid: c43edfae-9114-4096-9ebc-8c5c957a1067
-caps.latest.revision: "26"
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: 8ca2b5f02ac4fb3eb613488c8a9852eb2aa4ce5d
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: a91da0d9e16ff11fdd4980588fee64b3e4a603c1
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="parameter-arrays-visual-basic"></a>Parametre Dizileri (Visual Basic)
 Genellikle, bir yordam yordamı bildirimi belirtilenden daha fazla bağımsız değişkenlerle çağrılamaz. Sonsuz sayıda bağımsız değişken gerektiğinde bildirebilir bir *parametre dizisi*, bir parametre için değer bir dizi kabul etmek bir yordam sağlar. Yordam tanımlarsanız parametre dizisindeki öğelerin sayısı bilmeniz gerekmez. Dizi boyutu, tek tek her yordam çağrısına tarafından belirlenir.  
@@ -66,11 +57,11 @@ Genellikle, bir yordam yordamı bildirimi belirtilenden daha fazla bağımsız d
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
  <xref:Microsoft.VisualBasic.Information.UBound%2A>  
- [Yordamları](./index.md)  
- [Parametreler ve bağımsız değişkenler](./procedure-parameters-and-arguments.md)  
- [Bağımsız değişkenleri değere ve başvuruya göre geçirme](./passing-arguments-by-value-and-by-reference.md)  
- [Bağımsız değişkenleri konuma göre ve ada göre geçirme](./passing-arguments-by-position-and-by-name.md)  
- [İsteğe bağlı parametreler](./optional-parameters.md)  
- [Yordam aşırı yüklemesi](./procedure-overloading.md)  
+ [Yordamlar](./index.md)  
+ [Yordam Parametreleri ve Bağımsız Değişkenleri](./procedure-parameters-and-arguments.md)  
+ [Bağımsız Değişkenleri Değere ve Başvuruya Göre Geçirme](./passing-arguments-by-value-and-by-reference.md)  
+ [Bağımsız Değişkenleri Konuma ve Ada Göre Geçirme](./passing-arguments-by-position-and-by-name.md)  
+ [İsteğe Bağlı Parametreler](./optional-parameters.md)  
+ [Yordam Aşırı Yüklemesi](./procedure-overloading.md)  
  [Diziler](../../../../visual-basic/programming-guide/language-features/arrays/index.md)  
- [İsteğe bağlı](../../../../visual-basic/language-reference/modifiers/optional.md)
+ [Optional](../../../../visual-basic/language-reference/modifiers/optional.md)

@@ -1,12 +1,6 @@
 ---
 title: Uygulama protokolleri kullanma
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - application protocols, types
 - protocols, application
@@ -19,16 +13,14 @@ helpviewer_keywords:
 - receiving data, application protocols
 - requesting data from Internet, application protocols
 ms.assetid: 3aab4bcc-8397-4e1a-a1b6-bbd837a21430
-caps.latest.revision: "11"
 author: mcleblanc
 ms.author: markl
 manager: markl
-ms.workload: dotnet
-ms.openlocfilehash: b8e87e800e9f1b3a2627716d5e2116e5ba08b837
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 7a6b52509899431907a432ba7b620603dcb65aca
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="using-application-protocols"></a>Uygulama protokolleri kullanma
 .NET Framework yaygın olarak kullanılan Internet uygulama protokollerini destekler. Bu bölümde kullanma hakkında bilgi içeren [HTTP](../../../docs/framework/network-programming/http.md), "TCP" ve "UDP" protokollerini kullanarak bilgilerinin yanı sıra [Windows Sockets](../../../docs/framework/network-programming/sockets.md) özel protokoller uygulamak için arabirim.  

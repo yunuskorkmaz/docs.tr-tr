@@ -1,24 +1,17 @@
 ---
 title: '- İşleci (C# Başvurusu)'
 ms.date: 07/20/2015
-ms.prod: .net
-ms.technology:
-- devlang-csharp
-ms.topic: article
 f1_keywords:
 - -_CSharpKeyword
 helpviewer_keywords:
 - '- operator [C#]'
 - subtraction operator (-) [C#]
 ms.assetid: 4de7a4fa-c69d-48e6-aff1-3130af970b2d
-caps.latest.revision: 19
-author: BillWagner
-ms.author: wiwagn
-ms.openlocfilehash: 315d8cf47cc0819e124c1c08546ede580918f328
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: ed4c46d21be41762f875ff38ceded8919112b6d0
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="--operator-c-reference"></a>- İşleci (C# Başvuru)
 `-` İşleci bir birli ya da bir ikili işleç olarak işlev görebilir.  
@@ -37,5 +30,5 @@ ms.lasthandoff: 11/21/2017
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
  [C# başvurusu](../../../csharp/language-reference/index.md)  
- [C# programlama kılavuzu](../../../csharp/programming-guide/index.md)  
- [C# işleçleri](../../../csharp/language-reference/operators/index.md)
+ [C# Programlama Kılavuzu](../../../csharp/programming-guide/index.md)  
+ [C# İşleçleri](../../../csharp/language-reference/operators/index.md)

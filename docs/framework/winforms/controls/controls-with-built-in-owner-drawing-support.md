@@ -1,13 +1,6 @@
 ---
-title: "Yerleşik Sahip Çizimi Destekli Denetimler"
-ms.custom: 
+title: Yerleşik Sahip Çizimi Destekli Denetimler
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-winforms
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - drawing [Windows Forms], owner
 - drawing [Windows Forms], custom
@@ -15,16 +8,11 @@ helpviewer_keywords:
 - custom drawing
 - owner drawing
 ms.assetid: 3823d01e-9610-43e6-864d-99f9b7c2b351
-caps.latest.revision: "15"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: efd297dcc11005d6b6d47bb9ce3853a757046e8f
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: a5cbdc733a2f1cda3e708ceaae8604297f8da58a
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="controls-with-built-in-owner-drawing-support"></a>Yerleşik Sahip Çizimi Destekli Denetimler
 Sahip çizimi olarak da bilinen özel çizim olduğundan, Windows Forms içinde belirli denetimleri görsel görünümünü değiştirmek için bir tekniktir.  
@@ -53,7 +41,7 @@ Sahip çizimi olarak da bilinen özel çizim olduğundan, Windows Forms içinde 
   
 -   <xref:System.Windows.Forms.ComboBox>  
   
--   <xref:System.Windows.Forms.MenuItem>(tarafından kullanılan <xref:System.Windows.Forms.MainMenu> ve <xref:System.Windows.Forms.ContextMenu>)  
+-   <xref:System.Windows.Forms.MenuItem> (tarafından kullanılan <xref:System.Windows.Forms.MainMenu> ve <xref:System.Windows.Forms.ContextMenu>)  
   
 -   <xref:System.Windows.Forms.TabControl>  
   
@@ -188,7 +176,7 @@ Sahip çizimi olarak da bilinen özel çizim olduğundan, Windows Forms içinde 
 -   [Nasıl yapılır: Windows Forms DataGridView Denetiminde Satırların Görünüşünü Özelleştirme](../../../../docs/framework/winforms/controls/customize-the-appearance-of-rows-in-the-datagrid.md)  
   
 ### <a name="toolstrip-control"></a>ToolStrip Denetimi  
- <xref:System.Windows.Forms.ToolStrip>ve türetilen denetimler herhangi bir değişiklik görünümlerini, özelleştirmenize olanak sağlar.  
+ <xref:System.Windows.Forms.ToolStrip> ve türetilen denetimler herhangi bir değişiklik görünümlerini, özelleştirmenize olanak sağlar.  
   
  Özel işleme için sağlamak için <xref:System.Windows.Forms.ToolStrip> denetimler, ayarlayın `Renderer` özelliği bir <xref:System.Windows.Forms.ToolStrip>, <xref:System.Windows.Forms.ToolStripManager>, <xref:System.Windows.Forms.ToolStripPanel>, veya <xref:System.Windows.Forms.ToolStripContentPanel> için bir `ToolStripRenderer` nesne ve bir veya daha fazla tarafından sağlanan birçok çizim olay işleme `ToolStripRenderer` sınıfı. Alternatif olarak, kümesinin bir `Renderer` kendi sınıfının bir örneği özelliğine türetilen `ToolStripRenderer`, <xref:System.Windows.Forms.ToolStripProfessionalRenderer>, veya <xref:System.Windows.Forms.ToolStripSystemRenderer> uygulayan veya belirli geçersiz kılmaları `On` *EventName* yöntemleri.  
   

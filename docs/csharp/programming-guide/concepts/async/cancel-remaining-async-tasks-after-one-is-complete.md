@@ -1,22 +1,12 @@
 ---
-title: "Tam (C#) biridir sonra geri kalan zaman uyumsuz görevleri iptal etme"
-ms.custom: 
+title: Tam (C#) biridir sonra geri kalan zaman uyumsuz görevleri iptal etme
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- devlang-csharp
-ms.topic: article
 ms.assetid: d3cebc74-c392-497b-b1e6-62a262eabe05
-caps.latest.revision: 
-author: BillWagner
-ms.author: wiwagn
-ms.openlocfilehash: 5e1a899223d0f6d15e6851c9320275bafe876118
-ms.sourcegitcommit: cec0525b2121c36198379525e69aa5388266db5b
+ms.openlocfilehash: 22a29dec90dcbbd24ff1a6081fd7bf1d56d6ac0e
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="cancel-remaining-async-tasks-after-one-is-complete-c"></a>Tam (C#) biridir sonra geri kalan zaman uyumsuz görevleri iptal etme
 Kullanarak <xref:System.Threading.Tasks.Task.WhenAny%2A?displayProperty=nameWithType> yöntemi ile birlikte bir <xref:System.Threading.CancellationToken>, bir görev tamamlandığında, kalan tüm görevler iptal edebilirsiniz. `WhenAny` Yöntemi görevleri koleksiyonu olmayan bir bağımsız değişken alır. Bu yöntem, tüm görevleri başlatır ve tek bir görev döndürür. Koleksiyondaki herhangi bir görev tamamlandığında, tek bir görev tamamlanır.  

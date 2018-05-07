@@ -1,28 +1,19 @@
 ---
-title: "Varsayılan özellik erişimi devralınan arabirim üyeleri &#39;arasında belirsiz; &lt;defaultpropertyname&gt;&#39; arabirimi &#39;&lt; interfacename1&gt;&#39; ve &#39;&lt; defaultpropertyname&gt;&#39; arabirimi &#39;&lt; interfacename2&gt;&#39;"
+title: Varsayılan özellik erişimi devralınan arabirimi üyeleri arasında belirsiz &#39; &lt;defaultpropertyname&gt; &#39; arabiriminin &#39; &lt;interfacename1&gt; &#39; ve &#39; &lt;defaultpropertyname&gt; &#39; arabiriminin &#39; &lt;interfacename2&gt;&#39;
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- devlang-visual-basic
-ms.topic: article
 f1_keywords:
 - vbc30686
 - bc30686
 helpviewer_keywords:
 - BC30686
 ms.assetid: 784fefec-ef57-48cf-b960-957df419b439
-caps.latest.revision: 
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: 23d613668ee2d92484117759dd614ed2cad4bcb2
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.openlocfilehash: 65a10067284cad3bf56ecdc441ebefa0a740ef53
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 05/04/2018
 ---
-# <a name="default-property-access-is-ambiguous-between-the-inherited-interface-members-39ltdefaultpropertynamegt39-of-interface-39ltinterfacename1gt39-and-39ltdefaultpropertynamegt39-of-interface-39ltinterfacename2gt39"></a>Varsayılan özellik erişimi devralınan arabirim üyeleri &#39;arasında belirsiz; &lt;defaultpropertyname&gt;&#39; arabirimi &#39;&lt; interfacename1&gt;&#39; ve &#39;&lt; defaultpropertyname&gt;&#39; arabirimi &#39;&lt; interfacename2&gt;&#39;
+# <a name="default-property-access-is-ambiguous-between-the-inherited-interface-members-39ltdefaultpropertynamegt39-of-interface-39ltinterfacename1gt39-and-39ltdefaultpropertynamegt39-of-interface-39ltinterfacename2gt39"></a>Varsayılan özellik erişimi devralınan arabirimi üyeleri arasında belirsiz &#39; &lt;defaultpropertyname&gt; &#39; arabiriminin &#39; &lt;interfacename1&gt; &#39; ve &#39; &lt;defaultpropertyname&gt; &#39; arabiriminin &#39; &lt;interfacename2&gt;&#39;
 İki arabirim, her biri aynı ada sahip varsayılan bir özellik bildiren bir arabirim devralır. Derleyici niteliğe olmadan bu varsayılan özellik için bir erişim çözümlenemiyor. Aşağıdaki örnek bunu göstermektedir.  
   
 ```  
@@ -55,7 +46,7 @@ End Class
     Dim testObj As Iface1  
     ```  
   
-     veya  
+     -veya-  
   
 -   Türetilen arabirimi bir sınıfta uygulayın. Daha sonra farklı adlara sahip devralınan özelliklerin her biri uygulayabilirsiniz. Ancak, yalnızca biri uygulayan sınıfa varsayılan özelliği olabilir. Aşağıdaki örnek bunu göstermektedir.  
   
@@ -72,4 +63,4 @@ End Class
     ```  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [Arabirimleri](../../../visual-basic/programming-guide/language-features/interfaces/index.md)
+ [Arabirimler](../../../visual-basic/programming-guide/language-features/interfaces/index.md)

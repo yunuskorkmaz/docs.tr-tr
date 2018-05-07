@@ -1,39 +1,27 @@
 ---
-title: "DataAdapter kümesinden doldurma"
-ms.custom: 
+title: DataAdapter kümesinden doldurma
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-ado
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
 ms.assetid: 3fa0ac7d-e266-4954-bfac-3fbe2f913153
-caps.latest.revision: "6"
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
-ms.workload: dotnet
-ms.openlocfilehash: c0991398a28e491d381d10dea8a14ed463c67c89
-ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
+ms.openlocfilehash: ced280be0fa14077be893c59596ed65b424172c3
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="populating-a-dataset-from-a-dataadapter"></a>DataAdapter kümesinden doldurma
 [!INCLUDE[vstecado](../../../../includes/vstecado-md.md)] <xref:System.Data.DataSet> Bir tutarlı ilişkisel programlama modeli bağımsız veri kaynağının sağlayan veri bellekte gösterimidir. `DataSet` Tabloları, kısıtlamalar ve tablolar arasında ilişkiler içeren verileri eksiksiz bir kümesini temsil eder. Çünkü `DataSet` veri kaynağı, bağımsız bir `DataSet` verileri uygulamaya yerel ve birden çok veri kaynaklarından verileri içerebilir. Mevcut veri kaynakları ile etkileşim aracılığıyla denetlenir `DataAdapter`.  
   
  `SelectCommand` Özelliği `DataAdapter` olan bir `Command` veri kaynağından veri alır nesnesi. `InsertCommand`, `UpdateCommand`, Ve `DeleteCommand` özelliklerini `DataAdapter` olan `Command` verilerde yapılan değişikliklere göre veri kaynağındaki verileri yapılan güncelleştirmeleri yönetebilirsiniz nesneleri `DataSet`. Bu özellikleri daha ayrıntılı olarak ele alınmaktadır [veri kaynaklarıyla güncelleştirme DataAdapters](../../../../docs/framework/data/adonet/updating-data-sources-with-dataadapters.md).  
   
- `Fill` Yöntemi `DataAdapter` doldurmak için kullanılan bir `DataSet` sonuçlarını içeren `SelectCommand` , `DataAdapter`. `Fill`kendi bağımsız değişkenleri olarak alır bir `DataSet` doldurulması için ve bir `DataTable` nesne veya adını `DataTable` döndürülen satır ile doldurulacak `SelectCommand`.  
+ `Fill` Yöntemi `DataAdapter` doldurmak için kullanılan bir `DataSet` sonuçlarını içeren `SelectCommand` , `DataAdapter`. `Fill` kendi bağımsız değişkenleri olarak alır bir `DataSet` doldurulması için ve bir `DataTable` nesne veya adını `DataTable` döndürülen satır ile doldurulacak `SelectCommand`.  
   
 > [!NOTE]
 >  Kullanarak `DataAdapter` özellikle tablodaki satır sayısını varsa tüm bir tabloyu alır süreyi almak için. Bulma ve verileri işlerken veritabanına erişirken çünkü ve sonra istemci için verileri aktarma zaman alır. Tüm tablonun istemciye çekme sunucusunda tüm satırların kilitler. Performansı artırmak için kullanabileceğiniz `WHERE` istemciye döndürülen satır sayısını önemli ölçüde azaltan yan tümcesi. Yalnızca açıkça gerekli sütunlarda listeleyerek istemciye döndürülen veri miktarını da azaltabilir `SELECT` deyimi. Gruplar halinde (örneğin, bir seferde birkaç yüz satırlar) satırları alma ve istemci ile geçerli toplu işlem tamamlandığında sonraki yalnızca almak için başka bir iyi geçici bir çözüm değildir.  
   
- `Fill` Yöntemi kullanan `DataReader` sütun adlarının ve tablo oluşturmak için kullanılan türler örtük olarak döndürülecek nesne `DataSet`ve tablo satırları doldurmak için veri `DataSet`. Zaten mevcut değilse tablolar ve sütunlar yalnızca oluşturulur; Aksi takdirde `Fill` varolan kullanan `DataSet` şema. Sütun türleri olarak oluşturulan [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] tablolarda göre türleri [ADO.NET veri türü eşlemeleri](../../../../docs/framework/data/adonet/data-type-mappings-in-ado-net.md). Birincil anahtarları veri kaynağında mevcut sürece oluşturulmaz ve `DataAdapter` **.**`MissingSchemaAction` ayarlanmış `MissingSchemaAction` **.** `AddWithKey`. Varsa `Fill` bulur bir tablo için birincil anahtar varsa, veri üzerine yazar `DataSet` veri kaynağından döndürülen birincil anahtar sütun değerleri eşleştiği bu satırın satırlar için veri kaynağı ile. Birincil anahtar bulunursa, veri tablolarında eklenir `DataSet`. `Fill`doldurma sırasında oluşabilecek tüm eşlemeleri kullanan `DataSet` (bkz [DataAdapter DataTable ve DataColumn eşlemeleri](../../../../docs/framework/data/adonet/dataadapter-datatable-and-datacolumn-mappings.md)).  
+ `Fill` Yöntemi kullanan `DataReader` sütun adlarının ve tablo oluşturmak için kullanılan türler örtük olarak döndürülecek nesne `DataSet`ve tablo satırları doldurmak için veri `DataSet`. Zaten mevcut değilse tablolar ve sütunlar yalnızca oluşturulur; Aksi takdirde `Fill` varolan kullanan `DataSet` şema. Sütun türleri olarak oluşturulan [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] tablolarda göre türleri [ADO.NET veri türü eşlemeleri](../../../../docs/framework/data/adonet/data-type-mappings-in-ado-net.md). Birincil anahtarları veri kaynağında mevcut sürece oluşturulmaz ve `DataAdapter` **.**`MissingSchemaAction` ayarlanmış `MissingSchemaAction` **.** `AddWithKey`. Varsa `Fill` bulur bir tablo için birincil anahtar varsa, veri üzerine yazar `DataSet` veri kaynağından döndürülen birincil anahtar sütun değerleri eşleştiği bu satırın satırlar için veri kaynağı ile. Birincil anahtar bulunursa, veri tablolarında eklenir `DataSet`. `Fill` doldurma sırasında oluşabilecek tüm eşlemeleri kullanan `DataSet` (bkz [DataAdapter DataTable ve DataColumn eşlemeleri](../../../../docs/framework/data/adonet/dataadapter-datatable-and-datacolumn-mappings.md)).  
   
 > [!NOTE]
 >  Varsa `SelectCommand` bir dış birleşim, sonuçlarını döndürür `DataAdapter` ayarlı değil bir `PrimaryKey` elde edilen değer `DataTable`. Tanımlamanız gerekir `PrimaryKey` kendinize yinelenen satırları düzgün olarak çözülen emin olun. Daha fazla bilgi için bkz: [tanımlama birincil anahtarlar](../../../../docs/framework/data/adonet/dataset-datatable-dataview/defining-primary-keys.md).  
@@ -70,7 +58,7 @@ adapter.Fill(customers, "Customers");
  Varsa `DataAdapter` karşılaştığı birden çok sonuç kümeleri, birden fazla tabloya oluşturur `DataSet`. Tabloları tablosunun bir artımlı varsayılan adı verilen*N*Table0 için "Tablo" ile başlayan. Bağımsız değişken olarak bir tablo adı geçip geçmediğini `Fill` yöntemi, tablolar TableName artımlı varsayılan adını verilmiştir*N*TableName0 için "TableName" ile başlayan.  
   
 ## <a name="populating-a-dataset-from-multiple-dataadapters"></a>Birden çok DataAdapters kümesinden doldurma  
- Herhangi bir sayıda `DataAdapter` nesneleri ile kullanılabilir bir `DataSet`. Her `DataAdapter` bir veya daha fazla doldurmak için kullanılan `DataTable` nesneleri ve çözümleme güncelleştirmeleri ilgili veri kaynağına yedekleyin. `DataRelation`ve `Constraint` nesneleri eklenebilir `DataSet` yerel olarak, farklı veri kaynaklarından veri ilişkili olanak sağlar. Örneğin, bir `DataSet` bir Microsoft SQL Server veritabanı, OLE DB ve XML akışları bir veri kaynağı kullanıma sunulan IBM DB2 veritabanına verileri içerebilir. Bir veya daha fazla `DataAdapter` nesneleri, her veri kaynağı iletişimi işleyebilir.  
+ Herhangi bir sayıda `DataAdapter` nesneleri ile kullanılabilir bir `DataSet`. Her `DataAdapter` bir veya daha fazla doldurmak için kullanılan `DataTable` nesneleri ve çözümleme güncelleştirmeleri ilgili veri kaynağına yedekleyin. `DataRelation` ve `Constraint` nesneleri eklenebilir `DataSet` yerel olarak, farklı veri kaynaklarından veri ilişkili olanak sağlar. Örneğin, bir `DataSet` bir Microsoft SQL Server veritabanı, OLE DB ve XML akışları bir veri kaynağı kullanıma sunulan IBM DB2 veritabanına verileri içerebilir. Bir veya daha fazla `DataAdapter` nesneleri, her veri kaynağı iletişimi işleyebilir.  
   
 ### <a name="example"></a>Örnek  
  Aşağıdaki kod örneğinde müşterilerden listesini doldurur `Northwind` Microsoft SQL Server veritabanı ve siparişleri listesini `Northwind` Microsoft Access 2000'de depolanan veritabanı. Doldurulmuş tablolar ile ilişkili bir `DataRelation`, müşterilerin listesini sonra o müşteri için siparişleri ile birlikte görüntülenir. Hakkında daha fazla bilgi için `DataRelation` nesneleri bkz [ekleme DataRelations](../../../../docs/framework/data/adonet/dataset-datatable-dataview/adding-datarelations.md) ve [gezinme DataRelations](../../../../docs/framework/data/adonet/dataset-datatable-dataview/navigating-datarelations.md).  
@@ -131,7 +119,7 @@ foreach (DataRow pRow in customerOrders.Tables["Customers"].Rows)
 ## <a name="sql-server-decimal-type"></a>SQL Server Decimal türü  
  Varsayılan olarak, `DataSet` kullanarak verileri depolayan [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] veri türleri. Çoğu uygulama için bu veri kaynağı bilgileri kullanışlı bir gösterimini sağlar. Ancak, veri kaynağındaki veri türü bir SQL Server ondalık veya sayısal veri türü olduğunda bu gösterim bir soruna neden olabilir. [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] `decimal` Veri türü verir en fazla 28 önemli basamak, ancak SQL Server `decimal` veri türü 38 basamak sağlar. Varsa `SqlDataAdapter` sırasında belirler bir `Fill` işlemi, bir SQL Server'ın duyarlık `decimal` alandır 28 karakterden uzun, geçerli satır eklenmez `DataTable`. Bunun yerine `FillError` olayı oluşur, duyarlık kaybı oluşur ve uygun şekilde yanıt olup olmadığını belirlemenizi sağlar. Hakkında daha fazla bilgi için `FillError` olayı bkz [olaylarını işleme](../../../../docs/framework/data/adonet/handling-dataadapter-events.md). SQL sunucusu `decimal` değeri, ayrıca kullanabileceğiniz bir <xref:System.Data.SqlClient.SqlDataReader> nesne ve arama <xref:System.Data.SqlClient.SqlDataReader.GetSqlDecimal%2A> yöntemi.  
   
- [!INCLUDE[vstecado](../../../../includes/vstecado-md.md)]sunulan 2.0 için gelişmiş destek <xref:System.Data.SqlTypes> içinde `DataSet`. Daha fazla bilgi için bkz: [SqlTypes ve veri kümesini](../../../../docs/framework/data/adonet/sql/sqltypes-and-the-dataset.md).  
+ [!INCLUDE[vstecado](../../../../includes/vstecado-md.md)] sunulan 2.0 için gelişmiş destek <xref:System.Data.SqlTypes> içinde `DataSet`. Daha fazla bilgi için bkz: [SqlTypes ve veri kümesini](../../../../docs/framework/data/adonet/sql/sqltypes-and-the-dataset.md).  
   
 ## <a name="ole-db-chapters"></a>OLE DB bölümler  
  Hiyerarşik satır kümeleri veya bölümlerle (OLE DB türü `DBTYPE_HCHAPTER`, ADO türü `adChapter`) içeriğini doldurmak için kullanılan bir `DataSet`. Zaman <xref:System.Data.OleDb.OleDbDataAdapter> bölümlere sütun sırasında karşılaştığı bir `Fill` işlemi, bir `DataTable` bölümlere sütunu için oluşturulur ve bu tablo, bölüm satırları ve sütunları ile doldurulur. Üst tablo adı ve bölümlere sütun adı biçiminde kullanarak bölümlere sütun adlı için oluşturulan tablo "*ParentTableNameChapteredColumnName*". Bir tablo zaten varsa `DataSet` bölümlere sütunun adı ile eşleşen, geçerli tabloda bölüm verilerle doldurulur. Bölümde bulunan bir sütun eşleşen varolan bir tabloda sütun yok ise, yeni bir sütun eklenir.  

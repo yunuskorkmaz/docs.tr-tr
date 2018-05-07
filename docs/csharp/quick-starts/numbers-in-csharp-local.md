@@ -1,19 +1,13 @@
 ---
 title: C# Öğreticisi - C# yerel quickstarts numaraları
 description: C# sayısal türler, özellikleri ve yöntemleri keşfetme öğrenin.
-author: billwagner
-ms.author: wiwagn
 ms.date: 10/31/2017
-ms.topic: get-started-article
-ms.prod: .net
-ms.technology: devlang-csharp
-ms.devlang: csharp
 ms.custom: mvc
-ms.openlocfilehash: 6570693ea09ca2b548615291ba4f2b69f6d92482
-ms.sourcegitcommit: b750a8e3979749b214e7e10c82efb0a0524dfcb1
+ms.openlocfilehash: cf8f00193b4fa66ff444fe8e40942c39e99d10b1
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/09/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="numbers-in-c-quickstart"></a>C# hızlı başlangıç numaraları
 
@@ -278,7 +272,7 @@ Console.WriteLine(third);
 
 Bunu biliyor `0.3` yinelenen tam olarak aynı olup `1/3`.
 
-***Challenge***
+***sınama***
 
 Büyük sayılar, küçük sayılar, çarpma ve bölme kullanarak diğer hesaplamalarla deneyin `double` türü.  Daha karmaşık hesaplamalar deneyin.
 
@@ -310,7 +304,7 @@ Console.WriteLine(c / d);
 
 Decimal türü kullanarak matematik ondalık konumun sağında daha fazla basamağa sahip olmadığına dikkat edin. 
 
-***Challenge***
+***sınama***
 
 Farklı sayısal türler gördüğünüze göre 2.50 santimetreden, RADIUS olduğu dairenin alanı hesaplar kod yazın. Unutmayın PI ile çarpılmış dairenin alanı kare RADIUS olduğunu. Bir ipucu: .NET PI için bir sabit içeriyor <xref:System.Math.PI?displayProperty=nameWithType> , bu değer için kullanabilirsiniz. 
 

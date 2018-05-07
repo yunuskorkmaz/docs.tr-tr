@@ -1,28 +1,16 @@
 ---
-title: "COR_PRF_ASSEMBLY_REFERENCE_INFO Yapısı"
-ms.custom: 
+title: COR_PRF_ASSEMBLY_REFERENCE_INFO Yapısı
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: reference
 dev_langs:
 - cpp
 ms.assetid: c8c1d916-8d1a-4f82-8128-9fd3732383fc
-caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 4b5889f8e0b0dc8faab76f637e2fcf03853709bf
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: be32718ca392ce1712b8ce9f2e33a8f602ccb242
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="corprfassemblyreferenceinfo-structure"></a>COR_PRF_ASSEMBLY_REFERENCE_INFO Yapısı
 [.NET Framework 4.5.2 ve sonraki sürümlerinde desteklenen]  
@@ -67,7 +55,7 @@ typedef struct _COR_PRF_ASSEMBLY_REFERENCE_INFO {
   
  **Kitaplığı:** CorGuids.lib  
   
- **.NET framework sürümleri:**[!INCLUDE[net_current_v452plus](../../../../includes/net-current-v452plus-md.md)]  
+ **.NET framework sürümleri:** [!INCLUDE[net_current_v452plus](../../../../includes/net-current-v452plus-md.md)]  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
  [Profil Oluşturma Yapıları](../../../../docs/framework/unmanaged-api/profiling/profiling-structures.md)  

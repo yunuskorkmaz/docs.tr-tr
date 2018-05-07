@@ -1,24 +1,12 @@
 ---
 title: Ne&#39;s .NET 4.5, Windows Workflow Foundation'deki yenilikler
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.tgt_pltfrm: ''
-ms.topic: article
 ms.assetid: 195c43a8-e0a8-43d9-aead-d65a9e6751ec
-caps.latest.revision: 32
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: d862865057f9978a0b815f3026f2ba67c87eac7d
-ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
+ms.openlocfilehash: bf5da78e55912750b95752c79119fe00e9ae0c78
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/30/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="what39s-new-in-windows-workflow-foundation-in-net-45"></a>Ne&#39;s .NET 4.5, Windows Workflow Foundation'deki yenilikler
 Windows Workflow Foundation (WF) [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] yeni etkinlikler, Tasarımcısı özellikleri ve iş akışı geliştirme modeli gibi birçok yeni özellik sunar. Birçok, ancak tüm, sunulan yeni iş akışı özellikleri [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] yeniden barındırılan iş akışı Tasarımcısı'nda desteklenir. Desteklenen yeni özellikler hakkında daha fazla bilgi için bkz: [Rehosted iş akışı Tasarımcısı'nda yeni iş akışı Foundation 4.5 özellikleri için destek](../../../docs/framework/windows-workflow-foundation/wf-features-in-the-rehosted-workflow-designer.md). En son sürümü kullanmak için .NET 3.0 ve .NET 3.5 iş akışı uygulamalarını geçirme hakkında daha fazla bilgi için bkz: [Geçiş Kılavuzu](../../../docs/framework/windows-workflow-foundation/migration-guidance.md). Bu konuda sunulan yeni iş akışı özelliklerine genel bakış sağlayan [!INCLUDE[net_v45](../../../includes/net-v45-md.md)].  

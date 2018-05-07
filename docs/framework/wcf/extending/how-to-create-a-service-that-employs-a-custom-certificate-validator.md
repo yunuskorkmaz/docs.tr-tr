@@ -1,36 +1,22 @@
 ---
-title: "Nasıl yapılır: Özel Bir Sertifika Doğrulayıcı Kullanan Bir Hizmet Oluşturma"
-ms.custom: 
+title: 'Nasıl yapılır: Özel Bir Sertifika Doğrulayıcı Kullanan Bir Hizmet Oluşturma'
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
 helpviewer_keywords:
 - WCF, authentication
 ms.assetid: bb0190ff-0738-4e54-8d22-c97d343708bf
-caps.latest.revision: 
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: e0a48801b1d4674b81a0e4b54a80b69d026ce2af
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
-ms.translationtype: MT
+ms.openlocfilehash: d4a1532ed91b17cf5bed909026ace695aeba8cd9
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-create-a-service-that-employs-a-custom-certificate-validator"></a>Nasıl yapılır: Özel Bir Sertifika Doğrulayıcı Kullanan Bir Hizmet Oluşturma
 Bu konu, nasıl özel bir sertifika Doğrulayıcı uygulanacağını ve varsayılan sertifika doğrulama mantığı ile özel bir sertifika Doğrulayıcı değiştirmek için istemci veya hizmet kimlik bilgilerini yapılandırmak nasıl gösterir.  
   
- X.509 sertifikası bir istemci veya hizmetin kimliğini doğrulamak için kullanılıyorsa, [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] varsayılan olarak Windows sertifika deposunda ve Crypto API sertifikayı doğrulamak için ve güvenilir olduğundan emin olmak için kullanır. Bazen yerleşik sertifika doğrulama işlevi yeterli değildir ve değiştirilmesi gerekir. [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]özel bir sertifika Doğrulayıcı eklemek kullanıcıların sağlayarak doğrulama mantığını değiştirmek için kolay bir yol sağlar. Özel bir sertifika Doğrulayıcı belirtilirse, [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] yerleşik sertifika doğrulama mantığını kullanmaz, ancak bunun yerine özel doğrulayıcısındaki kullanır.  
+ X.509 sertifikası, bir istemci veya hizmetin kimliğini doğrulamak için kullanılırsa, varsayılan olarak Windows Communication Foundation (WCF) Crypto API ve Windows sertifika deposunda sertifikayı doğrulamak için ve güvenilir olduğundan emin olmak için kullanır. Bazen yerleşik sertifika doğrulama işlevi yeterli değildir ve değiştirilmesi gerekir. [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] özel bir sertifika Doğrulayıcı eklemek kullanıcıların sağlayarak doğrulama mantığını değiştirmek için kolay bir yol sağlar. Özel bir sertifika Doğrulayıcı belirtilirse, [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] yerleşik sertifika doğrulama mantığını kullanmaz, ancak bunun yerine özel doğrulayıcısındaki kullanır.  
   
 ## <a name="procedures"></a>Yordamlar  
   

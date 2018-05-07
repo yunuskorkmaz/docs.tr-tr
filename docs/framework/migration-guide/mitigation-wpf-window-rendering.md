@@ -1,24 +1,14 @@
 ---
-title: "Azaltma: WPF Penceresi İşleme"
-ms.custom: 
+title: 'Azaltma: WPF Penceresi İşleme'
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 28ed6bf8-141b-4b73-a4e3-44a99fae5084
-caps.latest.revision: "3"
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 032d07b75b96809ff71c7735a267a7351ad25dda
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 8a91839ff12109b84c563dcd3fabd078f75dad9f
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="mitigation-wpf-window-rendering"></a>Azaltma: WPF Penceresi İşleme
 İçinde [!INCLUDE[net_v46](../../../includes/net-v46-md.md)] çok İzleyici senaryosunda tek görüntüleme dışında genişletir, Windows 8 çalıştıran ve üzeri, tüm pencereyi kırpma olmadan oluşturulur.  

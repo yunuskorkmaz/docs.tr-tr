@@ -1,33 +1,19 @@
 ---
 title: Sistem Tarafından Sağlanan Birlikte Kullanılabilirlik Bağlamaları ile Desteklenen Web Hizmeti Protokolleri
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 helpviewer_keywords:
 - WS-protocols
 - Web services protocols
 - Windows Communication Foundation, Web service protocols
 ms.assetid: 1f7fc4ff-30fe-4e46-adda-91caad3b06c6
-caps.latest.revision: 39
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 998920e4c1d7e0524da1c9843378e92517f4ee96
-ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
+ms.openlocfilehash: 728dba65a99d71a52551b16e5f1822104ed40ea7
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/30/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="web-services-protocols-supported-by-system-provided-interoperability-bindings"></a>Sistem Tarafından Sağlanan Birlikte Kullanılabilirlik Bağlamaları ile Desteklenen Web Hizmeti Protokolleri
-[!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] Web hizmetleri belirtimleri bilinen belirtim kümesi desteği Web Hizmetleri ile birlikte çalışmak için yerleşik olarak bulunur. Birlikte çalışabilirlik en iyi yöntemler, hizmet yapılandırmasını basitleştirmek için [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] üç birlikte çalışabilir sistem tarafından sağlanan bağlamalar sunar: <xref:System.ServiceModel.BasicHttpBinding?displayProperty=nameWithType>, <xref:System.ServiceModel.WSHttpBinding?displayProperty=nameWithType>, ve <xref:System.ServiceModel.WSDualHttpBinding?displayProperty=nameWithType>. Terfi, yapılandırılmış bilgi standartları (OASIS) standartları için kuruluş ile birlikte çalışabilirlik [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] bir birlikte çalışabilen sistem tarafından sağlanan bir bağlamayı içerir: <xref:System.ServiceModel.WS2007HttpBinding?displayProperty=nameWithType>. Meta veri yayımlama için [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] iki birlikte çalışabilir sistem tarafından sağlanan bağlamaları içerir: [ \<mexHttpBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/mexhttpbinding.md) ve [ \<mexHttpsBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/mexhttpsbinding.md). Bu konu, sistem tarafından sağlanan birlikte çalışabilir bağlamalar destek özellikleri listeler.  
+Windows Communication Foundation (WCF) Web hizmetleri belirtimleri bilinen belirtim kümesi desteği Web Hizmetleri ile birlikte çalışmak için yerleşik olarak bulunur. Birlikte çalışabilirlik en iyi uygulamalar için hizmet yapılandırmasını basitleştirmek için üç birlikte çalışabilir sistem tarafından sağlanan bağlamalar WCF sunar: <xref:System.ServiceModel.BasicHttpBinding?displayProperty=nameWithType>, <xref:System.ServiceModel.WSHttpBinding?displayProperty=nameWithType>, ve <xref:System.ServiceModel.WSDualHttpBinding?displayProperty=nameWithType>. Terfi, yapılandırılmış bilgi standartları (OASIS) standartları ile kuruluş birlikte çalışabilirlik için bir birlikte çalışabilen sistem tarafından sağlanan bir bağlamayı WCF içerir: <xref:System.ServiceModel.WS2007HttpBinding?displayProperty=nameWithType>. Meta veri yayımlama için WCF iki birlikte çalışabilir sistem tarafından sağlanan bağlamaları içerir: [ \<mexHttpBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/mexhttpbinding.md) ve [ \<mexHttpsBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/mexhttpsbinding.md). Bu konu, sistem tarafından sağlanan birlikte çalışabilir bağlamalar destek özellikleri listeler.  
   
 ## <a name="web-services-protocols-supported-by-basichttpbinding-wshttpbinding-ws2007httpbinding-and-wsdualhttpbinding-bindings"></a>Web Hizmetleri protokolleri desteklenen basicHttpBinding, wsHttpBinding, ws2007HttpBinding ve wsDualHttpBinding bağlamaları tarafından  
   
@@ -41,11 +27,11 @@ ms.lasthandoff: 04/30/2018
 |--------------|--------------|-----------------------------|  
 |Taşıma|HTTP 1.1|[HTTP 1.1](http://go.microsoft.com/fwlink/?LinkId=84048)<br /><br /> `BasicHttpBinding`, `WSHttpBinding`, ve `WS2007HttpBinding` HTTP ve HTTPS aktarımları kullanın.|  
 |İleti|MTOM|[MTOM](http://go.microsoft.com/fwlink/?LinkId=95326)<br /><br /> `basicHttpBinding`, `wsHttpBinding`, ve `ws2007HttpBinding` ileti iletim en iyi duruma getirme mekanizmasını (MTOM) destekler. Varsayılan olarak kullanılmaz. MTOM kullanmak üzere ayarlanmış `messageEncoding` özniteliğini `"Mtom"`.<br /><br /> Örnek:<br /><br /> `<wsHttpBinding> <binding messageEncoding="Mtom"/> </wsHttpBinding>`|  
-|Meta Veriler|WSDL 1.1|[WSDL 1.1](http://go.microsoft.com/fwlink/?LinkId=94859)<br /><br /> [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] Web Hizmetleri Açıklama Dili (WSDL) hizmetleri tanımlamak için kullanır.|  
-|Meta Veriler|WS-ilke|[WS-ilke](http://go.microsoft.com/fwlink/?LinkId=94864)<br /><br /> [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] etki alanına özgü onaylar birlikte WS-Policy belirtimi hizmet gereksinimlerini ve özelliklerini tanımlamak için kullanır.|  
-|Meta Veriler|WS-Policy 1.5|[WS-Policy 1.5](http://go.microsoft.com/fwlink/?LinkId=95327)<br /><br /> [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] etki alanına özgü onaylar birlikte WS-Policy belirtimi hizmet gereksinimlerini ve özelliklerini tanımlamak için kullanır.|  
-|Meta Veriler|WS-PolicyAttachment|[WS-PolicyAttachment](http://go.microsoft.com/fwlink/?LinkId=95328)<br /><br /> [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] çeşitli kapsamlar Web Hizmetleri Açıklama Dili (WSDL) ilke ifadeleri eklemek için WS-PolicyAttachment uygular.|  
-|Meta Veriler|WS-MetadataExchange|[WS-MetadataExchange](http://go.microsoft.com/fwlink/?LinkId=94868)<br /><br /> [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] XML Şeması, WSDL ve WS-Policy almak için WS-MetadataExchange uygular.|  
+|Meta Veriler|WSDL 1.1|[WSDL 1.1](http://go.microsoft.com/fwlink/?LinkId=94859)<br /><br /> WCF Web Hizmetleri Açıklama Dili (WSDL) hizmetleri tanımlamak için kullanır.|  
+|Meta Veriler|WS-ilke|[WS-ilke](http://go.microsoft.com/fwlink/?LinkId=94864)<br /><br /> WCF etki alanına özgü onaylar birlikte WS-Policy belirtimi hizmet gereksinimlerini ve özelliklerini tanımlamak için kullanır.|  
+|Meta Veriler|WS-Policy 1.5|[WS-Policy 1.5](http://go.microsoft.com/fwlink/?LinkId=95327)<br /><br /> WCF etki alanına özgü onaylar birlikte WS-Policy belirtimi hizmet gereksinimlerini ve özelliklerini tanımlamak için kullanır.|  
+|Meta Veriler|WS-PolicyAttachment|[WS-PolicyAttachment](http://go.microsoft.com/fwlink/?LinkId=95328)<br /><br /> WCF Web Hizmetleri Açıklama Dili (WSDL) çeşitli kapsamlar ilke ifadeleri eklemek için WS-PolicyAttachment uygular.|  
+|Meta Veriler|WS-MetadataExchange|[WS-MetadataExchange](http://go.microsoft.com/fwlink/?LinkId=94868)<br /><br /> WCF XML Şeması, WSDL ve WS-Policy almak için WS-MetadataExchange uygular.|  
   
 ### <a name="basichttpbinding"></a>basicHttpBinding  
   
@@ -70,7 +56,7 @@ ms.lasthandoff: 04/30/2018
 |Güvenlik|WS-SecureConversation|[WS-SecureConversation](http://go.microsoft.com/fwlink/?LinkId=95317)<br /><br /> Güvenli bir oturum sağlamak için kullanın, `security/@mode` özniteliği "İletiye" olarak ayarlanmış ve `message/@establishSecurityContext` özniteliği "true" (varsayılan)'olarak ayarlayın.|  
 |Güvenlik|WS-Trust|[WS-Trust](http://go.microsoft.com/fwlink/?LinkId=95318)<br /><br /> WS-SecureConversation (yukarıya bakın) tarafından kullanılır.|  
 |Güvenilir Mesajlaşma|WS-ReliableMessaging|[WS-ReliableMessaging](http://go.microsoft.com/fwlink/?LinkId=95322)<br /><br /> Bağlama kullanmak üzere yapılandırıldığında kullanın `reliableSession`.<br /><br /> `<wsHttpBinding>  <binding name="myBinding">    <reliableSession/>   </binding> </wsHttpBinding>`|  
-|İşlemler|WS-AtomicTransaction|[WS-AtomicTransaction](http://go.microsoft.com/fwlink/?LinkId=95323)<br /><br /> İşlem yöneticileri arasındaki iletişim için kullanın. [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] istemcileri ve Hizmetleri her zaman yerel işlem yöneticileri kullanın.|  
+|İşlemler|WS-AtomicTransaction|[WS-AtomicTransaction](http://go.microsoft.com/fwlink/?LinkId=95323)<br /><br /> İşlem yöneticileri arasındaki iletişim için kullanın. WCF istemcileri ve Hizmetleri her zaman yerel işlem yöneticileri kullanır.|  
 |İşlemler|WS-düzenleme|[WS-düzenleme](http://go.microsoft.com/fwlink/?LinkId=95324)<br /><br /> İşlem bağlamı akış kullanmasını zaman `flowTransactions` özniteliği "İzin verilen" veya "Gerekli" olarak ayarlanmış.<br /><br /> `<wsHttpBinding>   <binding transactionFlow="true"/> </wsHttpBinding>`|  
   
 ## <a name="wsfederationhttpbinding-and-ws2007federationhttpbinding"></a>wsFederationHttpBinding ve ws2007FederationHttpBinding  
@@ -109,7 +95,7 @@ ms.lasthandoff: 04/30/2018
 |Taşıma|HTTP 1.1|[HTTP 1.1](http://go.microsoft.com/fwlink/?LinkId=84048)|  
 |İleti|SOAP 1.2|[Primer](http://go.microsoft.com/fwlink/?LinkId=48282)<br /><br /> [İleti framework](http://go.microsoft.com/fwlink/?LinkId=94664)<br /><br /> [Adjuncts (HTTP bağlama dahil)](http://go.microsoft.com/fwlink/?LinkId=95329)|  
 |İleti|WS-adresleme 2005/08|[Adresleme 1.0 - çekirdek Web Hizmetleri](http://go.microsoft.com/fwlink/?LinkId=90574)<br /><br /> [Adresleme 1.0 - SOAP Web Hizmetleri](http://go.microsoft.com/fwlink/?LinkId=95330)|  
-|Meta Veriler|WS-MetadataExchange|[WS-MetadataExchange](http://go.microsoft.com/fwlink/?LinkId=94868)<br /><br /> [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] XML Şeması, WSDL ve WS-Policy almak için WS-MetadataExchange uygular.|  
+|Meta Veriler|WS-MetadataExchange|[WS-MetadataExchange](http://go.microsoft.com/fwlink/?LinkId=94868)<br /><br /> WCF XML Şeması, WSDL ve WS-Policy almak için WS-MetadataExchange uygular.|  
   
 ### <a name="mexhttpsbinding"></a>mexHttpsBinding  
  [\<mexHttpsBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/mexhttpsbinding.md) aşağıdaki protokollerini destekler. Bu bağlama işlemini kullanma hakkında daha fazla bilgi için bkz: [meta veri yayımlama](../../../../docs/framework/wcf/feature-details/publishing-metadata.md).  
@@ -119,7 +105,7 @@ ms.lasthandoff: 04/30/2018
 |Taşıma|HTTP 1.1|[HTTP 1.1](http://go.microsoft.com/fwlink/?LinkId=84048)<br /><br /> Taşıma güvenliği etkin.|  
 |İleti|SOAP 1.2|[Primer](http://go.microsoft.com/fwlink/?LinkId=48282)<br /><br /> [İleti framework](http://go.microsoft.com/fwlink/?LinkId=94664)<br /><br /> [Adjuncts (HTTP bağlama dahil)](http://go.microsoft.com/fwlink/?LinkId=95329)|  
 |İleti|WS-adresleme 2005/08|[Adresleme 1.0 - çekirdek Web Hizmetleri](http://go.microsoft.com/fwlink/?LinkId=90574)<br /><br /> [Adresleme 1.0 - SOAP Web Hizmetleri](http://go.microsoft.com/fwlink/?LinkId=95330)|  
-|Meta Veriler|WS-MetadataExchange|[WS-MetadataExchange](http://go.microsoft.com/fwlink/?LinkId=94868)<br /><br /> [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] XML Şeması, WSDL ve WS-Policy almak için WS-MetadataExchange uygular.|  
+|Meta Veriler|WS-MetadataExchange|[WS-MetadataExchange](http://go.microsoft.com/fwlink/?LinkId=94868)<br /><br /> WCF XML Şeması, WSDL ve WS-Policy almak için WS-MetadataExchange uygular.|  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
  [Sistem Tarafından Sağlanan Bağlamalar](../../../../docs/framework/wcf/system-provided-bindings.md)  

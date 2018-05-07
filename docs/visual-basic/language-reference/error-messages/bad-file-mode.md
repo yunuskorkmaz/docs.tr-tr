@@ -1,23 +1,14 @@
 ---
 title: Hatalı dosya modu
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- devlang-visual-basic
-ms.topic: article
 f1_keywords:
 - vbrID54
 ms.assetid: 74891e96-884b-4c8d-872d-cd11ae272372
-caps.latest.revision: 10
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: a540135727eb97f4df5027e2ded7271e21bb4648
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: bccbbbeb79f38790a4664b0152ca3378fb55448d
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="bad-file-mode"></a>Hatalı dosya modu
 Dosya içerikleri düzenleme kullanılan ifadeleri dosyanın açılmış olduğu moduna uygun olmalıdır. Olası nedenler şunlardır:  
@@ -26,7 +17,7 @@ Dosya içerikleri düzenleme kullanılan ifadeleri dosyanın açılmış olduğu
   
 -   A `Print` deyimi dışında bir erişim modu için açık bir dosyayı belirtir `Output` veya `Append`.  
   
--   Bir `Input` deyimi dışında bir erişim modu için açık bir dosyayı belirtir`Input`  
+-   Bir `Input` deyimi dışında bir erişim modu için açık bir dosyayı belirtir `Input`  
   
 -   Bir salt okunur dosyaya yazma girişimi.  
   
@@ -44,4 +35,4 @@ Dosya içerikleri düzenleme kullanılan ifadeleri dosyanın açılmış olduğu
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
  <xref:Microsoft.VisualBasic.FileSystem>  
- [Sorun giderme: Okuma ve dosyalara metin yazma](../../../visual-basic/developing-apps/programming/drives-directories-files/troubleshooting-reading-from-and-writing-to-text-files.md)
+ [Sorun Giderme: Metin Dosyalarını Okuma ve Yazma](../../../visual-basic/developing-apps/programming/drives-directories-files/troubleshooting-reading-from-and-writing-to-text-files.md)

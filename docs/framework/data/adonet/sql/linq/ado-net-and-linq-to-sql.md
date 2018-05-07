@@ -1,30 +1,18 @@
 ---
 title: ADO.NET ve LINQ-SQL
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-ado
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
 ms.assetid: 49ac6da0-f2e1-46fa-963e-1b6dcb63fef7
-caps.latest.revision: "3"
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
-ms.workload: dotnet
-ms.openlocfilehash: c95a84bafcb32861e299135feb0b89b931d11165
-ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
+ms.openlocfilehash: b2be963862b6bd7a0cd5643245606763907a5b72
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="adonet-and-linq-to-sql"></a>ADO.NET ve LINQ-SQL
-[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]parçası olan [!INCLUDE[vstecado](../../../../../../includes/vstecado-md.md)] teknoloji ailesi. Tarafından sağlanan hizmetlerin dayanır [!INCLUDE[vstecado](../../../../../../includes/vstecado-md.md)] sağlayıcı modeli. Bu nedenle karıştırabilirsiniz [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] varolan kod [!INCLUDE[vstecado](../../../../../../includes/vstecado-md.md)] uygulamaları ve geçerli geçirmek [!INCLUDE[vstecado](../../../../../../includes/vstecado-md.md)] çözümleri [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]. Aşağıdaki çizimde ilişki üst düzey bir görünümünü sağlar.  
+[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] parçası olan [!INCLUDE[vstecado](../../../../../../includes/vstecado-md.md)] teknoloji ailesi. Tarafından sağlanan hizmetlerin dayanır [!INCLUDE[vstecado](../../../../../../includes/vstecado-md.md)] sağlayıcı modeli. Bu nedenle karıştırabilirsiniz [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] varolan kod [!INCLUDE[vstecado](../../../../../../includes/vstecado-md.md)] uygulamaları ve geçerli geçirmek [!INCLUDE[vstecado](../../../../../../includes/vstecado-md.md)] çözümleri [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]. Aşağıdaki çizimde ilişki üst düzey bir görünümünü sağlar.  
   
  ![LINQ-SQL ve ADO.NET](../../../../../../docs/framework/data/adonet/sql/linq/media/dlinq-3.png "DLinq_3")  
   
@@ -66,7 +54,7 @@ ms.lasthandoff: 01/17/2018
  [!code-vb[DlinqAdoNet#4](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DLinqAdoNet/vb/Module1.vb#4)]  
   
 > [!NOTE]
->  Parametreleri ifade edilir sorgu metni tarafından kullanılan aynı süslü gösterimini kullanarak `Console.WriteLine()` ve `String.Format()`. `String.Format()`sorgu dizesini sağlar ve oluşturulan parametre adları braced süslü parametrelerle gibi değiştirir alan `@p0`, `@p1` ... `@p(n)`.  
+>  Parametreleri ifade edilir sorgu metni tarafından kullanılan aynı süslü gösterimini kullanarak `Console.WriteLine()` ve `String.Format()`. `String.Format()` sorgu dizesini sağlar ve oluşturulan parametre adları braced süslü parametrelerle gibi değiştirir alan `@p0`, `@p1` ... `@p(n)`.  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
  [Arka Plan Bilgileri](../../../../../../docs/framework/data/adonet/sql/linq/background-information.md)  

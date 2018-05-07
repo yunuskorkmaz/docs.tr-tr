@@ -1,26 +1,12 @@
 ---
 title: Çift Yönlü İletişim
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 ms.assetid: fb64192d-b3ea-4e02-9fb3-46a508d26c60
-caps.latest.revision: 24
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 9eb37e7e307bc9748113e5580ee96c8863d3ef89
-ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
+ms.openlocfilehash: dfc332533b714083d149b2c1c4892626d2990fb0
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/27/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="two-way-communication"></a>Çift Yönlü İletişim
 Bu örnek üzerinde MSMQ hizmetteki iki yönlü kuyruğa alınan iletişim gerçekleştirme gösterir. Bu örnekte `netMsmqBinding` bağlama. Bu durumda, sıraya alınan iletileri alma hizmeti izlemek izin veren bir kendi kendini barındıran konsol uygulaması hizmetidir.  
@@ -86,7 +72,7 @@ public void SubmitPurchaseOrder(PurchaseOrder po, string reportOrderStatusTo)
  MSMQ kuyruk adı bir yapılandırma dosyasının appSettings bölümünde belirtilmiştir. Hizmeti için uç noktaya yapılandırma dosyası System.ServiceModel bölümünde tanımlanır.  
   
 > [!NOTE]
->  MSMQ sırası ad ve uç nokta adresi biraz farklı adresleme yöntemini kullanın. MSMQ sırası adı yerel makine ve eğik çizgi ayırıcıları yolundaki bir nokta (.) kullanır. [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] Uç noktası adresi bir net.msmq belirtir: şeması, "localhost" için yerel makineyi ve eğik kendi yolunu kullanır. Uzak makinede barındırılan bir kuyruktan okumak için Değiştir "." ve "localhost" ile uzak makine adı.  
+>  MSMQ sırası ad ve uç nokta adresi biraz farklı adresleme yöntemini kullanın. MSMQ sırası adı yerel makine ve eğik çizgi ayırıcıları yolundaki bir nokta (.) kullanır. Windows Communication Foundation (WCF) uç noktası adresi bir net.msmq belirtir: şeması, "localhost" için yerel makineyi ve eğik kendi yolunu kullanır. Uzak makinede barındırılan bir kuyruktan okumak için Değiştir "." ve "localhost" ile uzak makine adı.  
   
  Kendi kendini barındırılan hizmetidir. MSMQ taşıma kullanırken, sıranın kullanılan önceden oluşturulmuş olması gerekir. Bu, el ile veya kod aracılığıyla yapılabilir. Bu örnek, hizmet sıranın varlığını denetler ve, gerekirse oluşturur. Kuyruk adı yapılandırma dosyasından okunur. Temel adres tarafından kullanılan [ServiceModel meta veri yardımcı Programracı (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md) proxy hizmeti oluşturmak için.  
 
@@ -340,7 +326,7 @@ Status of order 124a1f69-3699-4b16-9bcc-43147a8756fc:Pending
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  Bu dizin mevcut değilse, Git [Windows Communication Foundation (WCF) ve .NET Framework 4 için Windows Workflow Foundation (WF) örnek](http://go.microsoft.com/fwlink/?LinkId=150780) tüm indirmek için [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] ve [!INCLUDE[wf1](../../../../includes/wf1-md.md)] örnekleri. Bu örnek aşağıdaki dizinde bulunur.  
+>  Bu dizin mevcut değilse, Git [Windows Communication Foundation (WCF) ve .NET Framework 4 için Windows Workflow Foundation (WF) örnek](http://go.microsoft.com/fwlink/?LinkId=150780) tüm Windows Communication Foundation (WCF) indirmek için ve [!INCLUDE[wf1](../../../../includes/wf1-md.md)] örnekleri. Bu örnek aşağıdaki dizinde bulunur.  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WF\Basic\Binding\Net\MSMQ\Two-Way`  
   

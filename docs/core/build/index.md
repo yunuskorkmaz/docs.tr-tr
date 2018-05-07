@@ -4,16 +4,11 @@ description: .NET Core ve kaynak kodu .NET Core CLI oluşturmayı öğrenin.
 author: bleroy
 ms.author: mairaw
 ms.date: 06/28/2017
-ms.topic: conceptual
-ms.prod: dotnet-core
-ms.devlang: dotnet
-ms.workload:
-- dotnetcore
-ms.openlocfilehash: 36939da689a1db06a6d9f1b7e816e6e5cabcf59d
-ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
+ms.openlocfilehash: 55a35223a4bc11156e056cceb7f86365c4906222
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/28/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="build-net-core-from-source"></a>.NET Core kaynağından derleme
 

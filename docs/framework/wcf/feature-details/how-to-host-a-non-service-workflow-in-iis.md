@@ -1,24 +1,12 @@
 ---
 title: "Nasıl yapılır: IIS'de hizmet olmayan iş akışı barındırma"
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: f362562c-767d-401b-8257-916616568fd4
-caps.latest.revision: "7"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 4b7ffdc00a7723fd6b514fbb5577c48da15d719c
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 70fd6aca94f2addd7ee568e897171ae1da86db67
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-host-a-non-service-workflow-in-iis"></a>Nasıl yapılır: IIS'de hizmet olmayan iş akışı barındırma
 İş akışı hizmetleri iş akışları IIS altında barındırılan / OLUŞTU. Başkası tarafından yazılmış bir iş akışı barındırma gerektiğinde kullanışlıdır. Örneğin, iş akışı Tasarımcısı'nı yeniden barındırma ve kullanıcılar kendi iş akışları oluşturmak izin verirseniz.  IIS'de hizmet olmayan iş akışı barındırma işlem geri dönüştürme, boşta kapatma, sistem durumu izleme işlemi ve ileti tabanlı etkinleştirme gibi özellikleri için destek sağlar. IIS barındırılan iş akışı hizmetleri içeren <xref:System.ServiceModel.Activities.Receive> etkinlikleri ve bu IIS tarafından bir ileti alındığında etkinleştirildi. Hizmet olmayan iş akışları Mesajlaşma etkinlikleri içermez ve bir ileti göndererek varsayılan olarak devre dışı bırakılamaz.  Öğesinden bir sınıf türetin <xref:System.ServiceModel.Activities.WorkflowHostingEndpoint> ve iş akışı örneği oluşturmak için işlemleri içeren bir hizmet sözleşmesini tanımlama. Bu konu basit bir iş akışı oluşturma, bir istemci, iş akışını etkinleştirmek için kullanabileceğiniz bir hizmet sözleşmesini tanımlama ve öğesinden bir sınıf türetme size yol gösterecektir <xref:System.ServiceModel.Activities.WorkflowHostingEndpoint> istekleri oluşturma iş akışı için dinlemek için hizmet sözleşmesi kullanır.  
@@ -332,7 +320,7 @@ ms.lasthandoff: 12/22/2017
   
 8.  Web.config, IIS uygulama dizinine kopyalayın.  
   
-9. Oluşturma bitiş noktası tarafından Internet Explorer'ı başlatıp http://localhost/MyCreationEndpoint/Workflow1.xamlx için gözatma çalışıp çalışmadığını test edin. Internet Explorer, aşağıdaki ekran görüntülenmelidir:  
+9. Oluşturma bitiş noktası tarafından Internet Explorer'ı başlatıp göz çalışıp çalışmadığını test http://localhost/MyCreationEndpoint/Workflow1.xamlx. Internet Explorer, aşağıdaki ekran görüntülenmelidir:  
   
      ![Hizmet sınama](../../../../docs/framework/wcf/feature-details/media/testservice.gif "TestService")  
   

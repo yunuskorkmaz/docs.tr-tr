@@ -1,26 +1,17 @@
 ---
 title: "Nasıl yapılır: Visual Basic'te Dizi Değişkeni Başlatma"
-ms.custom: 
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
-ms.topic: article
 helpviewer_keywords:
 - variables [Visual Basic], initializing
 - arrays [Visual Basic], variables
 - arrays [Visual Basic], initializing
 - arrays [Visual Basic], declaring
 ms.assetid: aadd7a60-7ca4-4608-b986-091f19e7fc10
-caps.latest.revision: "42"
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: 3ccdbed601d3fa87acb0833bc153c199b17a4eba
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: ee8cb91fd2fae9637a0d0e33fca63a4cdb9d2fce
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-initialize-an-array-variable-in-visual-basic"></a>Nasıl yapılır: Visual Basic'te Dizi Değişkeni Başlatma
 Dizi değişmez değer de dahil olmak üzere bir dizi değişkeni başlatma bir `New` yan tümcesi ve dizinin ilk değerleri belirtme. Türünü belirtin veya değişmez değer dizideki olayla izin verin. Ne tür çıkarımı yapılan hakkında daha fazla bilgi için "Doldurma bir dizi ile ilk değerleri" bölümüne bakın. [diziler](../../../../visual-basic/programming-guide/language-features/arrays/index.md).  
@@ -41,7 +32,7 @@ Dizi değişmez değer de dahil olmak üzere bir dizi değişkeni başlatma bir 
   
      [!code-vb[VbVbalrArrays#17](../../../../visual-basic/programming-guide/language-features/arrays/codesnippet/VisualBasic/how-to-initialize-an-array-variable_2.vb)]  
   
--   Açıkça dizi sınırları belirtin ya da bunları dışlamayı ve değişmez değer dizideki değerlere göre dizi sınırları Infer derleyici sahip. Üst sınırları ve değerlerini sağlarsanız, her boyut üst sınırı aracılığıyla 0 dizinden her öğe için bir değer içermelidir. Aşağıdaki örnek, bildirme, oluşturma ve türündeki öğeler sahip iki boyutlu bir dizi içeren bir değişkeni başlatmak için çeşitli yollar gösterir.`Short`  
+-   Açıkça dizi sınırları belirtin ya da bunları dışlamayı ve değişmez değer dizideki değerlere göre dizi sınırları Infer derleyici sahip. Üst sınırları ve değerlerini sağlarsanız, her boyut üst sınırı aracılığıyla 0 dizinden her öğe için bir değer içermelidir. Aşağıdaki örnek, bildirme, oluşturma ve türündeki öğeler sahip iki boyutlu bir dizi içeren bir değişkeni başlatmak için çeşitli yollar gösterir. `Short`  
   
      [!code-vb[VbVbalrArrays#18](../../../../visual-basic/programming-guide/language-features/arrays/codesnippet/VisualBasic/how-to-initialize-an-array-variable_3.vb)]  
   
@@ -63,4 +54,4 @@ Dizi değişmez değer de dahil olmak üzere bir dizi değişkeni başlatma bir 
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
  [Diziler](../../../../visual-basic/programming-guide/language-features/arrays/index.md)  
- [Dizilerle ilgili sorun giderme](../../../../visual-basic/programming-guide/language-features/arrays/troubleshooting-arrays.md)
+ [Dizilerle İlgili Sorun Giderme](../../../../visual-basic/programming-guide/language-features/arrays/troubleshooting-arrays.md)

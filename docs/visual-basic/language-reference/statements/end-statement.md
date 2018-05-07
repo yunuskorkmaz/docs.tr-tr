@@ -1,11 +1,6 @@
 ---
 title: End Deyimi
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
-ms.topic: article
 f1_keywords:
 - vb.End
 - End
@@ -19,14 +14,11 @@ helpviewer_keywords:
 - End statement [Visual Basic]
 - execution [Visual Basic], stopping
 ms.assetid: 0e64467c-0f34-4aab-9ddd-43f8b9d55d90
-caps.latest.revision: "19"
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: b692409f2895f5e9b713c57fc35ff2def40bce75
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 864ac5ef1713f8ffa93c18accede8ecd5b3b7a8c
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="end-statement"></a>End Deyimi
 Yürütme hemen sonlandırır.  
@@ -38,7 +30,7 @@ End
 ```  
   
 ## <a name="remarks"></a>Açıklamalar  
- Yerleştireceğiniz `End` çalışmayı durdurmasına tüm uygulama zorlamak için bir yordam herhangi bir yere deyiminde. `End`ile açılan dosyaları kapatır bir `Open` deyimi ve uygulamanın tüm değişkenleri temizler. Uygulama nesnelerine başvurular bulunduran diğer program yok ve kendi kod hiçbiri çalışıyorsa hemen kapatılır.  
+ Yerleştireceğiniz `End` çalışmayı durdurmasına tüm uygulama zorlamak için bir yordam herhangi bir yere deyiminde. `End` ile açılan dosyaları kapatır bir `Open` deyimi ve uygulamanın tüm değişkenleri temizler. Uygulama nesnelerine başvurular bulunduran diğer program yok ve kendi kod hiçbiri çalışıyorsa hemen kapatılır.  
   
 > [!NOTE]
 >  `End` Deyimi kod yürütmeyi aniden durdurur ve çağrılamadı `Dispose` veya `Finalize` yöntemi veya başka bir Visual Basic kodu. Nesne başvuruları diğer programlar tarafından tutulan geçersiz kılınır. Varsa bir `End` deyimi karşılaştı içinde bir `Try` veya `Catch` denetim bloğu değil geçirmek karşılık gelen `Finally` bloğu.  
@@ -50,7 +42,7 @@ End
  Kullanmanız gereken `End` gerektiğinde ve yalnızca zaman hemen durdurmanız gerekir. Bir yordam sonlandırmak için normal şekilde ([dönüş deyimi](../../../visual-basic/language-reference/statements/return-statement.md) ve [çıkış deyimi](../../../visual-basic/language-reference/statements/exit-statement.md)) yalnızca yordamı düzgün bir şekilde kapatın, ancak ayrıca çağıran kodu Kapat düzgün bir şekilde aşağı fırsatı sunmak. Örneğin, bir konsol uygulaması kolayca kaldırabilirsiniz `Return` gelen `Main` yordamı.  
   
 > [!IMPORTANT]
->  `End` Deyimi çağrıları <xref:System.Environment.Exit%2A> yöntemi <xref:System.Environment> sınıfını <xref:System> ad alanı. <xref:System.Environment.Exit%2A>sahip olmasını gerektiren `UnmanagedCode` izni. Aksi halde bir <xref:System.Security.SecurityException> hata oluşur.  
+>  `End` Deyimi çağrıları <xref:System.Environment.Exit%2A> yöntemi <xref:System.Environment> sınıfını <xref:System> ad alanı. <xref:System.Environment.Exit%2A> sahip olmasını gerektiren `UnmanagedCode` izni. Aksi halde bir <xref:System.Security.SecurityException> hata oluşur.  
   
  Bir ek anahtar tarafından izlendiğinde [son \<anahtar sözcüğü > deyimi](../../../visual-basic/language-reference/statements/end-keyword-statement.md) uygun yordamı veya blok tanımını sonuna betimleyen. Örneğin, `End Function` tanımını sonlandırır bir `Function` yordamı.  
   
@@ -64,5 +56,5 @@ End
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
  <xref:System.Security.Permissions.SecurityPermissionFlag>  
- [Stop deyimi](../../../visual-basic/language-reference/statements/stop-statement.md)  
+ [Stop Deyimi](../../../visual-basic/language-reference/statements/stop-statement.md)  
  [Son \<anahtar sözcüğü > deyimi](../../../visual-basic/language-reference/statements/end-keyword-statement.md)

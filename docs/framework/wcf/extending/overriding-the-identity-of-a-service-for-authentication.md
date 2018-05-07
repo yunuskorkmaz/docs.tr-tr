@@ -1,29 +1,15 @@
 ---
 title: Bir Hizmetin Kimliğini Kimlik Doğrulama için Geçersiz Kılma
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 dev_langs:
 - csharp
 - vb
 ms.assetid: d613a22b-07d7-41a4-bada-1adc653b9b5d
-caps.latest.revision: 9
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: f5383a1d241134318ce48c8c0c9f39f831396730
-ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
-ms.translationtype: MT
+ms.openlocfilehash: 6fbdd7f09c7ae15368972afbce896c5ecb39ccbe
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/30/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="overriding-the-identity-of-a-service-for-authentication"></a>Bir Hizmetin Kimliğini Kimlik Doğrulama için Geçersiz Kılma
 Genellikle, bir istemci kimlik bilgisi türü seçimi hizmet metaveri kimliği türü belirler olduğu bir hizmette kimlik Ayarla gerekmez. Örneğin, aşağıdaki yapılandırma kodunu kullanan [ \<wsHttpBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/wshttpbinding.md) öğesi ve kümelerini `clientCredentialType` özniteliği Windows.  
@@ -37,7 +23,7 @@ Genellikle, bir istemci kimlik bilgisi türü seçimi hizmet metaveri kimliği t
  Kimlik ayarı gösteren örnek bir uygulama için bkz: [hizmet kimliği örneği](../../../../docs/framework/wcf/samples/service-identity-sample.md). Hizmet kimliği hakkında daha fazla bilgi için bkz: [hizmet kimliği ve kimlik doğrulama](../../../../docs/framework/wcf/feature-details/service-identity-and-authentication.md).  
   
 ## <a name="kerberos-authentication-and-identity"></a>Kerberos kimlik doğrulaması ve kimlik  
- Bir hizmeti bir Windows kimlik bilgisi kullanmak için yapılandırıldığında varsayılan olarak, bir [ \<kimliği >](../../../../docs/framework/configure-apps/file-schema/wcf/identity.md) içeren öğe bir [ \<userPrincipalName >](../../../../docs/framework/configure-apps/file-schema/wcf/userprincipalname.md) veya [ \<servicePrincipalName >](../../../../docs/framework/configure-apps/file-schema/wcf/serviceprincipalname.md) öğesi WSDL içinde oluşturulur. Hizmet altında çalışıyorsa, `LocalSystem`, `LocalService`, veya `NetworkService` hesabı, bir hizmet asıl adı (SPN) biçiminde varsayılan oluşturulur `host/` \< *ana bilgisayar adı*> için Bu hesaplar bilgisayarın SPN veri erişimi. Hizmet başka bir hesap altında çalışıyorsa, [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] UPN biçiminde üretir \< *kullanıcıadı*>@<*domainName*`>`. Bu durum, UPN veya SPN bir hizmetin kimliğini istemciye sağlanması Kerberos kimlik doğrulaması gerektiren kaynaklanır.  
+ Bir hizmeti bir Windows kimlik bilgisi kullanmak için yapılandırıldığında varsayılan olarak, bir [ \<kimliği >](../../../../docs/framework/configure-apps/file-schema/wcf/identity.md) içeren öğe bir [ \<userPrincipalName >](../../../../docs/framework/configure-apps/file-schema/wcf/userprincipalname.md) veya [ \<servicePrincipalName >](../../../../docs/framework/configure-apps/file-schema/wcf/serviceprincipalname.md) öğesi WSDL içinde oluşturulur. Hizmet altında çalışıyorsa, `LocalSystem`, `LocalService`, veya `NetworkService` hesabı, bir hizmet asıl adı (SPN) biçiminde varsayılan oluşturulur `host/` \< *ana bilgisayar adı*> için Bu hesaplar bilgisayarın SPN veri erişimi. Windows Communication Foundation (WCF) hizmetini başka bir hesap altında çalışıyorsa, UPN biçiminde oluşturur. \< *kullanıcıadı*>@<*domainName* `>` . Bu durum, UPN veya SPN bir hizmetin kimliğini istemciye sağlanması Kerberos kimlik doğrulaması gerektiren kaynaklanır.  
   
  Bir hizmetin hesabının bir etki alanındaki ek bir SPN kaydolmak için Setspn.exe Aracı'nı da kullanabilirsiniz. Bu gibi durumlarda, SPN sonra hizmet kimliği olarak kullanabilirsiniz. Aracı indirmek için bkz: [Windows 2000 Kaynak Seti aracı: Setspn.exe](http://go.microsoft.com/fwlink/?LinkId=91752). Aracı hakkında daha fazla bilgi için bkz: [setspn aracına genel bakış](http://go.microsoft.com/fwlink/?LinkId=61374).  
   

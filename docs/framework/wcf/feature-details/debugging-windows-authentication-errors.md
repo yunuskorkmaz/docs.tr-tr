@@ -1,14 +1,6 @@
 ---
 title: Windows Kimlik Doğrulama Hatalarını Ayıklama
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -16,31 +8,25 @@ helpviewer_keywords:
 - WCF, authentication
 - WCF, Windows authentication
 ms.assetid: 181be4bd-79b1-4a66-aee2-931887a6d7cc
-caps.latest.revision: 21
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 39c033d45488b827a4aee7439904db8094795db4
-ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
+ms.openlocfilehash: d9226324b69e5c27738abb35bb155a43964b9127
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/30/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="debugging-windows-authentication-errors"></a>Windows Kimlik Doğrulama Hatalarını Ayıklama
-Windows kimlik doğrulaması bir güvenlik mekanizması olarak kullanırken, Güvenlik Desteği Sağlayıcısı Arabirimi (SSPI) güvenlik işlemleri işler. SSPI katmanında güvenlik hatası meydana geldiğinde, bunlar tarafından çıkmış [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)]. Bu konu, hataları tanılamak için sorularını kümesi ve bir çerçeve sağlar.  
+Windows kimlik doğrulaması bir güvenlik mekanizması olarak kullanırken, Güvenlik Desteği Sağlayıcısı Arabirimi (SSPI) güvenlik işlemleri işler. SSPI katmanında güvenlik hatası meydana geldiğinde, bunlar Windows Communication Foundation (WCF) tarafından çıkmış. Bu konu, hataları tanılamak için sorularını kümesi ve bir çerçeve sağlar.  
   
  Kerberos protokolü genel bakış için bkz: [Kerberos açıklandığı](http://go.microsoft.com/fwlink/?LinkID=86946); SSPI, genel bir bakış için bkz [SSPI](http://go.microsoft.com/fwlink/?LinkId=88941).  
   
- Windows kimlik doğrulaması [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] genellikle kullandığı *anlaş* Kerberos hizmet ve istemci arasında karşılıklı kimlik doğrulaması gerçekleştiren Güvenlik Desteği Sağlayıcısı'ne (SSP). Kerberos protokolü varsayılan olarak kullanılabilir değilse, [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] NT LAN Yöneticisi (NTLM) geri döner. Ancak, yapılandırabileceğiniz [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] yalnızca Kerberos protokolünü kullanır (ve Kerberos kullanılabilir değilse, bir özel durum). Ayrıca yapılandırabilirsiniz [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] Kerberos protokolünün Kısıtlanmış formlar kullanılacak.  
+ Windows kimlik doğrulaması için WCF genellikle kullandığı *anlaş* Kerberos hizmet ve istemci arasında karşılıklı kimlik doğrulaması gerçekleştiren Güvenlik Desteği Sağlayıcısı'ne (SSP). Kerberos protokolü kullanılabilir durumda değilse, varsayılan olarak WCF NT LAN Yöneticisi (NTLM) geri döner. Ancak, WCF yalnızca Kerberos protokolünü kullanır (ve Kerberos kullanılabilir değilse, bir özel durum) yapılandırabilirsiniz. Kerberos protokolünün Kısıtlanmış formlar kullanmak için WCF da yapılandırabilirsiniz.  
   
 ## <a name="debugging-methodology"></a>Hata ayıklama yöntemi  
  Temel yöntemi aşağıdaki gibidir:  
   
 1.  Windows kimlik doğrulaması kullanarak olup olmadığını belirler. Başka bir düzen kullanıyorsanız, bu konuda geçerli değildir.  
   
-2.  Windows kimlik doğrulaması kullandığınızdan emin olup olmadıklarını belirlemek olup olmadığını, [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] Kerberos doğrudan veya anlaşma yapılandırmasını kullanır.  
+2.  Windows kimlik doğrulaması kullanıyorsanız eminseniz, WCF yapılandırmanızı Kerberos doğrudan veya anlaşma kullanıp kullanmadığını belirleyin.  
   
 3.  Yapılandırmanızı NTLM ve Kerberos protokolünü kullanarak belirledikten sonra hata iletileri doğru bağlamında anlayabilirsiniz.  
   
@@ -75,7 +61,7 @@ Windows kimlik doğrulaması bir güvenlik mekanizması olarak kullanırken, Gü
 ### <a name="kerberos-protocol"></a>Kerberos protokolü  
   
 #### <a name="spnupn-problems-with-the-kerberos-protocol"></a>Kerberos protokolü SPN/UPN sorunları  
- Windows kimlik doğrulaması ve Kerberos protokolü kullanılan veya SSPI tarafından anlaşılan kullanırken, istemci uç nokta kullandığı URL'yi hizmetin konak hizmeti URL'si içinde tam olarak nitelenmiş etki alanı adını içermelidir. Bu hizmetinin altında çalıştığı hesabın en yaygın olarak hizmetin altında çalıştırılarak yapılır Active Directory etki alanına bilgisayar eklendiğinde oluşturduğunuz makine (varsayılan) hizmet asıl adı (SPN) anahtarı erişimi olduğunu varsayar. Ağ hizmeti hesabı. Hizmet makine SPN anahtarına erişimi yoksa, istemcinin uç noktası kimlik hizmetin çalıştığı hesabın doğru SPN veya kullanıcı asıl adı (UPN) sağlamanız gerekir. Hakkında daha fazla bilgi için [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] SPN ve UPN, çalışır bkz [hizmet kimliği ve kimlik doğrulama](../../../../docs/framework/wcf/feature-details/service-identity-and-authentication.md).  
+ Windows kimlik doğrulaması ve Kerberos protokolü kullanılan veya SSPI tarafından anlaşılan kullanırken, istemci uç nokta kullandığı URL'yi hizmetin konak hizmeti URL'si içinde tam olarak nitelenmiş etki alanı adını içermelidir. Bu hizmetinin altında çalıştığı hesabın en yaygın olarak hizmetin altında çalıştırılarak yapılır Active Directory etki alanına bilgisayar eklendiğinde oluşturduğunuz makine (varsayılan) hizmet asıl adı (SPN) anahtarı erişimi olduğunu varsayar. Ağ hizmeti hesabı. Hizmet makine SPN anahtarına erişimi yoksa, istemcinin uç noktası kimlik hizmetin çalıştığı hesabın doğru SPN veya kullanıcı asıl adı (UPN) sağlamanız gerekir. WCF SPN ve UPN ile nasıl çalıştığı hakkında daha fazla bilgi için bkz: [hizmet kimliği ve kimlik doğrulama](../../../../docs/framework/wcf/feature-details/service-identity-and-authentication.md).  
   
  Yük Dengeleme içindeki Web grupları veya Web bahçelerinde gibi senaryolara yaygın bir uygulamadır her uygulama için benzersiz bir hesap tanımlayın, bu hesap için bir SPN atayın ve bu hesabın tüm uygulama hizmetleri çalıştırdığınızdan emin olun.  
   
@@ -111,7 +97,7 @@ Windows kimlik doğrulaması bir güvenlik mekanizması olarak kullanırken, Gü
 ### <a name="ntlm-protocol"></a>NTLM protokolü  
   
 #### <a name="negotiate-ssp-falls-back-to-ntlm-but-ntlm-is-disabled"></a>Geri NTLM SSP döner anlaşma ancak NTLM devre dışı  
- <xref:System.ServiceModel.Security.WindowsClientCredential.AllowNtlm%2A> Özelliği ayarlanmış `false`, hangi nedenler [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] NTLM kullanılırsa, bir özel durum için bir en iyi çaba yapma. Bu özelliği ayarlamak Not `false` NTLM kimlik bilgileri kablo üzerinden gönderilen engelleyebilir değil.  
+ <xref:System.ServiceModel.Security.WindowsClientCredential.AllowNtlm%2A> Özelliği ayarlanmış `false`, NTLM kullanılırsa, bir özel durum için bir en iyi çaba yapmak için Windows Communication Foundation (WCF) neden olur. Bu özelliği ayarlamak Not `false` NTLM kimlik bilgileri kablo üzerinden gönderilen engelleyebilir değil.  
   
  Geri dönüş için NTLM devre dışı bırakma gösterir.  
   

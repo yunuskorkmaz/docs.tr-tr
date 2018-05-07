@@ -1,36 +1,25 @@
 ---
 title: "Nasıl yapılır: Öğeleri Ekleme ve Bir ConcurrentDictionary'dan Alma"
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
 ms.technology: dotnet-standard
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
 helpviewer_keywords:
 - thread-safe collections, concurrent dictionary
 ms.assetid: 81b64b95-13f7-4532-9249-ab532f629598
-caps.latest.revision: 
 author: mairaw
 ms.author: mairaw
-manager: wpickett
-ms.workload:
-- dotnet
-- dotnetcore
-ms.openlocfilehash: 4ef7c8050b26cffeed03cc394193116f8f6797a9
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: 6aa309f2c6c44934f491229ac43003a05301bacb
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-add-and-remove-items-from-a-concurrentdictionary"></a>Nasıl yapılır: Öğeleri Ekleme ve Bir ConcurrentDictionary'dan Alma
 Bu örnek eklemek, alma, güncelleştirme ve öğeleri kaldırmak nasıl gösterir bir <xref:System.Collections.Concurrent.ConcurrentDictionary%602?displayProperty=nameWithType>. Bu koleksiyon sınıfı bir iş parçacığı uygulamasıdır. Birden çok iş parçacığı öğeleri aynı anda erişmeye çalışıyor olabilir her bunu kullanmanızı öneririz.  
   
- <xref:System.Collections.Concurrent.ConcurrentDictionary%602>ilk veri ekleme veya kaldırma çalışmadan önce bir anahtarı var olup olmadığını denetlemek kod için gereksiz olun birkaç kullanışlı yöntemler sağlar. Aşağıdaki tabloda bu kullanışlı yöntemler listelenmekte ve bunların ne zaman kullanılacağı açıklanmaktadır.  
+ <xref:System.Collections.Concurrent.ConcurrentDictionary%602> ilk veri ekleme veya kaldırma çalışmadan önce bir anahtarı var olup olmadığını denetlemek kod için gereksiz olun birkaç kullanışlı yöntemler sağlar. Aşağıdaki tabloda bu kullanışlı yöntemler listelenmekte ve bunların ne zaman kullanılacağı açıklanmaktadır.  
   
 |Yöntem|Şu durumlarda kullanın...|  
 |------------|---------------|  
@@ -44,7 +33,7 @@ Bu örnek eklemek, alma, güncelleştirme ve öğeleri kaldırmak nasıl göster
  [!code-csharp[CDS#16](../../../../samples/snippets/csharp/VS_Snippets_Misc/cds/cs/cds_dictionaryhowto.cs#16)]
  [!code-vb[CDS#16](../../../../samples/snippets/visualbasic/VS_Snippets_Misc/cds/vb/cds_concdict.vb#16)]  
   
- <xref:System.Collections.Concurrent.ConcurrentDictionary%602>birden çok iş parçacıklı senaryoları için tasarlanmıştır. Öğe eklemek veya koleksiyondan kaldırmak için kodunuzda kilitleri kullanmak zorunda değil. Bununla birlikte, her zaman bir değer almak için bir iş parçacığı ve yeni bir değer aynı anahtarı vererek koleksiyonu hemen güncelleştirmek için başka bir iş parçacığı mümkündür.  
+ <xref:System.Collections.Concurrent.ConcurrentDictionary%602> birden çok iş parçacıklı senaryoları için tasarlanmıştır. Öğe eklemek veya koleksiyondan kaldırmak için kodunuzda kilitleri kullanmak zorunda değil. Bununla birlikte, her zaman bir değer almak için bir iş parçacığı ve yeni bir değer aynı anahtarı vererek koleksiyonu hemen güncelleştirmek için başka bir iş parçacığı mümkündür.  
   
  Ayrıca, ancak tüm yöntemleri <xref:System.Collections.Concurrent.ConcurrentDictionary%602> olan tüm yöntemleri atomik, özellikle iş parçacığı, <xref:System.Collections.Concurrent.ConcurrentDictionary%602.GetOrAdd%2A> ve <xref:System.Collections.Concurrent.ConcurrentDictionary%602.AddOrUpdate%2A>. Bu yönteme geçirilen kullanıcı temsilci sözlüğün iç kilit dışında çağrılır. (Bu bilinmeyen kod tüm iş parçacığı engellemelerini önlemek için yapılır.) Bu nedenle bu gerçekleşecek olaylar dizisi için mümkündür:  
   

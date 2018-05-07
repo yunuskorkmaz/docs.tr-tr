@@ -1,22 +1,12 @@
 ---
-title: "Nasıl yapılır: özel yöntemler ekleme LINQ sorgularını (Visual Basic)"
-ms.custom: 
+title: 'Nasıl yapılır: özel yöntemler ekleme LINQ sorgularını (Visual Basic)'
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 099b2e2a-83cd-45c6-aa4d-01b398b5faaf
-caps.latest.revision: "3"
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: c94973bf9eae0feb2f7690dcc10e839b6b7c060c
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 6fa212ff05547e8edd3964a6e1c9f76c11cdbe08
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-add-custom-methods-for-linq-queries-visual-basic"></a>Nasıl yapılır: özel yöntemler ekleme LINQ sorgularını (Visual Basic)
 İçin genişletme yöntemleri ekleyerek LINQ sorguları için kullanabileceğiniz yöntemler kümesi genişletebilirsiniz <xref:System.Collections.Generic.IEnumerable%601> arabirimi. Örneğin, standart ortalama veya en fazla işlemlerinin yanı sıra, değerlerin bir sırasından tek bir değeri hesaplamak için özel bir toplama yöntemi oluşturabilirsiniz. Özel filtre veya değerleri dizisi için belirli veri dönüştürme olarak çalışır ve yeni sırası döndüren bir yöntem de oluşturabilirsiniz. Bu tür yöntemler örnekleridir <xref:System.Linq.Enumerable.Distinct%2A>, <xref:System.Linq.Enumerable.Skip%2A>, ve <xref:System.Linq.Enumerable.Reverse%2A>.  
@@ -208,4 +198,4 @@ Next
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
  <xref:System.Collections.Generic.IEnumerable%601>  
- [Genişletme yöntemleri](../../../../visual-basic/programming-guide/language-features/procedures/extension-methods.md)
+ [Genişletme Yöntemleri](../../../../visual-basic/programming-guide/language-features/procedures/extension-methods.md)

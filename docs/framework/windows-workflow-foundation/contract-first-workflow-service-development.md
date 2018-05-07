@@ -1,24 +1,12 @@
 ---
 title: Sözleşme ilk iş akışı hizmeti geliştirme
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.tgt_pltfrm: ''
-ms.topic: article
 ms.assetid: e5dbaa7b-005f-4330-848d-58ac4f42f093
-caps.latest.revision: 2
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 4bc0c8fafd80651114d85d2d6b06c57dec6199b5
-ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
+ms.openlocfilehash: 10129fcb40d86d1ca7e42bce68b072e9118bcc88
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/27/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="contract-first-workflow-service-development"></a>Sözleşme ilk iş akışı hizmeti geliştirme
 İle başlayarak [!INCLUDE[net_v45](../../../includes/net-v45-md.md)], Windows Workflow Foundation (WF) özellikleri daha iyi web hizmetleri ve iş akışları sözleşme ilk iş akışı geliştirme biçiminde arasında tümleştirme. Sözleşme ilk iş akışı geliştirme aracı kod sözleşmede ilk tasarlamanızı sağlar. Araç ardından otomatik olarak bir etkinlik şablonu sözleşmesindeki işlemleri için araç kutusu oluşturur. Bu konu nasıl etkinlikleri ve iş akışı hizmeti özelliklerinde harita hizmet sözleşmesini öznitelikleri için genel bir bakış sağlar. Bir sözleşme ilk iş akışı hizmeti oluşturma adım adım örnek için bkz: [nasıl yapılır: varolan bir hizmet sözleşmesini tüketen bir iş akışı hizmeti oluşturma](../../../docs/framework/windows-workflow-foundation/how-to-create-a-workflow-service-that-consumes-an-existing-service-contract.md).  

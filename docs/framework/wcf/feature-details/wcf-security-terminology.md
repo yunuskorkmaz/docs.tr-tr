@@ -1,35 +1,23 @@
 ---
 title: WCF Güvenlik Terimleri
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 helpviewer_keywords:
 - security [WCF], terminology
 - security glossary [WCF]
 - security terms [WCF]
 ms.assetid: 68dde024-8e51-40ba-804f-ec52d85e9ca9
-caps.latest.revision: 14
 author: BrucePerlerMS
-ms.author: bruceper
 manager: mbaldwin
-ms.workload:
-- dotnet
-ms.openlocfilehash: 46f70ad623d852e051ff69fb68690114f8c39381
-ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
+ms.openlocfilehash: 8024abdab01b2df151a6c0c2f5760e85ae119fd4
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/30/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="wcf-security-terminology"></a>WCF Güvenlik Terimleri
 Bazı güvenlik ele alırken kullanılan terminolojiyi bilinmiyor olabilir. Bu konu, bazı güvenlik koşulları kısa açıklamaları sağlar, ancak her öğe için kapsamlı belgeler sağlamak üzere tasarlanmamıştır.  
   
- Kullanılan terimler hakkında daha fazla bilgi için [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] belgelerine bakın [temel Windows Communication Foundation kavramları](../../../../docs/framework/wcf/fundamental-concepts.md).  
+ Windows Communication Foundation (WCF) belgelerde kullanılan terimler hakkında daha fazla bilgi için bkz: [temel Windows Communication Foundation kavramları](../../../../docs/framework/wcf/fundamental-concepts.md).  
   
  erişim denetimi listesi (ACL)  
  Bir nesne için geçerli bir güvenlik korumaları listesi. (Bir nesne bir dosya, işlem, olay veya başka bir güvenlik açıklayıcısı sahip herhangi bir şey olabilir.) ACL içindeki bir erişim denetim girdisi (ACE) giriştir. ACL'ler iki tür vardır: isteğe bağlı ve sistem.  
@@ -189,7 +177,7 @@ Bazı güvenlik ele alırken kullanılan terminolojiyi bilinmiyor olabilir. Bu k
  Bir kullanıcı hesabı adı (bazen denir *kullanıcı oturum açma adı*) ve kullanıcı hesabının bulunduğu etki alanını tanıtan bir etki alanı adı. Bu bir Windows etki alanında oturum açmak için standart kullanımdır. Biçim: someone@example.com (olduğu gibi bir e-posta adresi).  
   
 > [!NOTE]
->  Standart UPN form yanı sıra [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] UPN'ler alt düzey biçiminde, örneğin, cohowinery.com\someone kabul eder.  
+>  Standart UPN form ek olarak, WCF, alt düzey biçiminde, örneğin, cohowinery.com\someone UPN'ler kabul eder.  
   
  X.509  
  Kendi gerekli bölümleri tanımlayan bir Uluslararası tanınan standart sertifikalar için.  

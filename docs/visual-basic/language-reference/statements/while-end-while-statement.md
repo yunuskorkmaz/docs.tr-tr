@@ -1,11 +1,6 @@
 ---
 title: While...End While Deyimi (Visual Basic)
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
-ms.topic: article
 f1_keywords:
 - vb.While
 - vb.While...EndWhile
@@ -14,14 +9,11 @@ helpviewer_keywords:
 - While statement [Visual Basic]
 - While...End While statements [Visual Basic]
 ms.assetid: b931d1ce-e8ed-44d8-a13d-92a4f5458a1e
-caps.latest.revision: "22"
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: 5f831f233eaa4f1c38d56f3a89bda9b0cf1bccaa
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 9f46a6ec65faef4448bdd25e30a6cc0c605cd0f2
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="whileend-while-statement-visual-basic"></a>While...End While Deyimi (Visual Basic)
 Verilen bir koşul olduğu sürece bir dizi ifadeleri çalıştırır `True`.  
@@ -42,7 +34,7 @@ End While
   
 |Terim|Tanım|  
 |---|---|  
-|`condition`|Gerekli. `Boolean`ifade. Varsa `condition` olan `Nothing`, Visual Basic da işler `False`.|  
+|`condition`|Gerekli. `Boolean` İfade. Varsa `condition` olan `Nothing`, Visual Basic da işler `False`.|  
 |`statements`|İsteğe bağlı. Bir veya daha fazla deyimleri aşağıdaki `While`, her çalıştırma `condition` olan `True`.|  
 |`Continue While`|İsteğe bağlı. Sonraki yinelemesini denetim aktarır `While` bloğu.|  
 |`Exit While`|İsteğe bağlı. Denetimin dışarı aktarır `While` bloğu.|  
@@ -63,7 +55,7 @@ End While
  Geçirebilmenize `While` içinde başka bir döngü yerleştirerek döngüler. Ayrıca, değişik içinde bir diğer denetim yapıları yerleştirebilirsiniz. Daha fazla bilgi için bkz: [iç içe geçmiş denetim yapıları](../../../visual-basic/programming-guide/language-features/control-flow/nested-control-structures.md).  
   
 ## <a name="exit-while"></a>Çıkış sırasında  
- [Çıkmak sırada](../../../visual-basic/language-reference/statements/exit-statement.md) deyimi, çıkmak için başka bir yol sağlayabilir bir `While` döngü. `Exit While`aşağıdaki deyim denetim hemen aktarır `End While` deyimi.  
+ [Çıkmak sırada](../../../visual-basic/language-reference/statements/exit-statement.md) deyimi, çıkmak için başka bir yol sağlayabilir bir `While` döngü. `Exit While` aşağıdaki deyim denetim hemen aktarır `End While` deyimi.  
   
  Tipik olarak kullandığınız `Exit While` bazı koşul değerlendirildikten sonra (örneğin, bir `If...Then...Else` yapısı). Gereksiz veya hatalı bir değer veya bir sonlandırma isteği gibi yineleme devam mümkün kılan bir koşul algılama döngü çıkmak isteyebilirsiniz. Kullanabileceğiniz `Exit While` test zaman neden olabilecek bir koşul için bir *sonsuz bir döngüde*, bir son derece büyük ya da hatta sonsuz sayıda çalışacak bir döngü değil. Daha sonra kullanabilirsiniz `Exit While` döngü kaçınmak için.  
   
@@ -89,10 +81,10 @@ End While
  [!code-vb[VbVbalrStatements#173](../../../visual-basic/language-reference/error-messages/codesnippet/VisualBasic/while-end-while-statement_3.vb)]  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [Döngü yapıları](../../../visual-basic/programming-guide/language-features/control-flow/loop-structures.md)  
- [Yapın... Loop deyimi](../../../visual-basic/language-reference/statements/do-loop-statement.md)  
- [İçin... Sonraki deyim](../../../visual-basic/language-reference/statements/for-next-statement.md)  
- [Boole veri türü](../../../visual-basic/language-reference/data-types/boolean-data-type.md)  
- [İç içe geçmiş denetim yapıları](../../../visual-basic/programming-guide/language-features/control-flow/nested-control-structures.md)  
- [Exit deyimi](../../../visual-basic/language-reference/statements/exit-statement.md)  
- [Continue deyimi](../../../visual-basic/language-reference/statements/continue-statement.md)
+ [Döngü Yapıları](../../../visual-basic/programming-guide/language-features/control-flow/loop-structures.md)  
+ [Do...Loop Deyimi](../../../visual-basic/language-reference/statements/do-loop-statement.md)  
+ [For...Next Deyimi](../../../visual-basic/language-reference/statements/for-next-statement.md)  
+ [Boolean Veri Türü](../../../visual-basic/language-reference/data-types/boolean-data-type.md)  
+ [İç İçe Geçmiş Denetim Yapıları](../../../visual-basic/programming-guide/language-features/control-flow/nested-control-structures.md)  
+ [Exit Deyimi](../../../visual-basic/language-reference/statements/exit-statement.md)  
+ [Continue Deyimi](../../../visual-basic/language-reference/statements/continue-statement.md)

@@ -1,28 +1,19 @@
 ---
-title: "DataItem Denetim Türü için UI Otomasyon Desteği"
-ms.custom: 
+title: DataItem Denetim Türü için UI Otomasyon Desteği
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-bcl
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - UI Automation, Data Item control type
 - Data Item control type
 - control types, Data Item
 ms.assetid: 181708fd-2595-4c43-9abd-75811627d64c
-caps.latest.revision: "36"
 author: Xansky
 ms.author: mhopkins
 manager: markl
-ms.workload: dotnet
-ms.openlocfilehash: be826cce87d428a156bb7a10d858e5848b2f1143
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: bef3393cda31e546afdb7b720cb08a2d45cb45bd
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="ui-automation-support-for-the-dataitem-control-type"></a>DataItem Denetim Türü için UI Otomasyon Desteği
 > [!NOTE]
@@ -38,7 +29,7 @@ ms.lasthandoff: 12/22/2017
 ## <a name="required-ui-automation-tree-structure"></a>Gerekli UI Otomasyon ağaç yapısı  
  Denetim Görünüm ve içerik görünümünü aşağıdaki tabloda gösterilmektedir [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] veri öğesi için ilgili ağaç denetler ve her bir görünümde bulunabilir açıklar. Hakkında daha fazla bilgi için [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] ağaç bkz [UI Otomasyon ağacına genel bakış](../../../docs/framework/ui-automation/ui-automation-tree-overview.md).  
   
-|[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]Ağaç - denetim görünümü|[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]Ağaç - içerik görünümü|  
+|[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] Ağaç - denetim görünümü|[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] Ağaç - içerik görünümü|  
 |------------------------------------------------------------------------------------------------|------------------------------------------------------------------------------------------------|  
 |DataItem<br /><br /> -Değişir (0 veya daha çok; hiyerarşisinde yapılandırılmış)|DataItem<br /><br /> -Değişir (0 veya daha çok; hiyerarşisinde yapılandırılmış)|  
   
@@ -87,21 +78,21 @@ ms.lasthandoff: 12/22/2017
 ## <a name="required-ui-automation-events"></a>Gerekli UI Otomasyon olayları  
  Aşağıdaki tabloda [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] olayları tüm veri öğesi denetimleri tarafından desteklenmesi gerekir. Olaylar hakkında daha fazla bilgi için bkz: [UI Otomasyonu olaylarına genel bakış](../../../docs/framework/ui-automation/ui-automation-events-overview.md).  
   
-|[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]Olay|Destek|Notlar|  
+|[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] Olay|Destek|Notlar|  
 |---------------------------------------------------------------------------------|-------------|-----------|  
 |<xref:System.Windows.Automation.AutomationElementIdentifiers.AutomationFocusChangedEvent>|Gerekli|Yok.|  
-|<xref:System.Windows.Automation.AutomationElementIdentifiers.BoundingRectangleProperty>özellik değişti olayı.|Gerekli|Yok.|  
-|<xref:System.Windows.Automation.AutomationElementIdentifiers.IsEnabledProperty>özellik değişti olayı.|Gerekli|Yok.|  
-|<xref:System.Windows.Automation.AutomationElementIdentifiers.IsOffscreenProperty>özellik değişti olayı.|Gerekli|Yok.|  
-|<xref:System.Windows.Automation.AutomationElementIdentifiers.NameProperty>özellik değişti olayı.|Gerekli|Yok.|  
+|<xref:System.Windows.Automation.AutomationElementIdentifiers.BoundingRectangleProperty> özellik değişti olayı.|Gerekli|Yok.|  
+|<xref:System.Windows.Automation.AutomationElementIdentifiers.IsEnabledProperty> özellik değişti olayı.|Gerekli|Yok.|  
+|<xref:System.Windows.Automation.AutomationElementIdentifiers.IsOffscreenProperty> özellik değişti olayı.|Gerekli|Yok.|  
+|<xref:System.Windows.Automation.AutomationElementIdentifiers.NameProperty> özellik değişti olayı.|Gerekli|Yok.|  
 |<xref:System.Windows.Automation.AutomationElementIdentifiers.StructureChangedEvent>|Gerekli|Yok.|  
 |<xref:System.Windows.Automation.InvokePatternIdentifiers.InvokedEvent>|Bağlıdır|Yok.|  
-|<xref:System.Windows.Automation.ExpandCollapsePatternIdentifiers.ExpandCollapseStateProperty>özellik değişti olayı.|Bağlıdır|Yok.|  
+|<xref:System.Windows.Automation.ExpandCollapsePatternIdentifiers.ExpandCollapseStateProperty> özellik değişti olayı.|Bağlıdır|Yok.|  
 |<xref:System.Windows.Automation.SelectionItemPatternIdentifiers.ElementAddedToSelectionEvent>|Gerekli|Yok.|  
 |<xref:System.Windows.Automation.SelectionItemPatternIdentifiers.ElementRemovedFromSelectionEvent>|Gerekli|Yok.|  
 |<xref:System.Windows.Automation.SelectionItemPatternIdentifiers.ElementSelectedEvent>|Gerekli|Yok.|  
-|<xref:System.Windows.Automation.TogglePatternIdentifiers.ToggleStateProperty>özellik değişti olayı.|Bağlıdır|Yok.|  
-|<xref:System.Windows.Automation.ValuePatternIdentifiers.ValueProperty>özellik değişti olayı.|Bağlıdır|Yok.|  
+|<xref:System.Windows.Automation.TogglePatternIdentifiers.ToggleStateProperty> özellik değişti olayı.|Bağlıdır|Yok.|  
+|<xref:System.Windows.Automation.ValuePatternIdentifiers.ValueProperty> özellik değişti olayı.|Bağlıdır|Yok.|  
   
 <a name="Data_Item_Control_Type_Example"></a>   
 ## <a name="dataitem-control-type-example"></a>DataItem denetim türü örneği  
@@ -111,7 +102,7 @@ ms.lasthandoff: 12/22/2017
   
  Denetim ve içerik görünümünde [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] veri öğesi denetimine ilgilidir ağacı altında görüntülenir. Her Otomasyon öğesi için Denetim desenleri parantez içinde görüntülenir. "Contoso" grubu ayrıca veri kılavuzu konak kontrolü kılavuzunun parçasıdır.  
   
-|[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]Ağaç - denetim görünümü|[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]Ağaç - içerik görünümü|  
+|[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] Ağaç - denetim görünümü|[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] Ağaç - içerik görünümü|  
 |------------------------------------------------------------------------------------------------|------------------------------------------------------------------------------------------------|  
 |-Grup "Contoso" (tablo, Kılavuzu)<br />-DataItem "Receivable.doc hesapları" (Tableıtem, GridItem, SelectionItem, çağırma)<br />-İmage "Hesapları Receivable.doc"<br />-"Name" (Tableıtem, GridItem, değer "Hesapları Receivable.doc") Düzenle<br />-Düzenle "Değiştirilme tarihi" (Tableıtem, GridItem, değer "25/8/2006 3:29 PM")<br />-"Boyutu" (GridItem, Tableıtem, değer "11.0 KB) Düzenle<br />-DataItem "Payable.doc hesapları" (Tableıtem, GridItem, SelectionItem, çağırma)<br />-   ...|-Grup "Contoso" (tablo, Kılavuzu)<br />-DataItem "Receivable.doc hesapları" (Tableıtem, GridItem, SelectionItem, çağırma)<br />-İmage "Hesapları Receivable.doc"<br />-"Name" (Tableıtem, GridItem, değer "Hesapları Receivable.doc") Düzenle<br />-Düzenle "Değiştirilme tarihi" (Tableıtem, GridItem, değer "25/8/2006 3:29 PM")<br />-"Boyutu" (GridItem, Tableıtem, değer "11.0 KB) Düzenle<br />-DataItem "Payable.doc hesapları" (Tableıtem, GridItem, SelectionItem, çağırma)<br />-   …|  
   

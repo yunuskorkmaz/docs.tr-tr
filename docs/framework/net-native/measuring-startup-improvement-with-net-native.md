@@ -1,27 +1,17 @@
 ---
-title: ".NET Yerel ile Başlangıç İyileştirmesini Hesaplama"
-ms.custom: 
+title: .NET Yerel ile Başlangıç İyileştirmesini Hesaplama
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: c4d25b24-9c1a-4b3e-9705-97ba0d6c0289
-caps.latest.revision: "7"
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 03324850fbcb0264816b71cf8a8c6ad6a9688058
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: b010307baa8634a4bb62310318d1d718a2525d4a
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="measuring-startup-improvement-with-net-native"></a>.NET Yerel ile Başlangıç İyileştirmesini Hesaplama
-[!INCLUDE[net_native](../../../includes/net-native-md.md)]uygulamaları başlatma süresini önemli ölçüde iyileştirir. Bu geliştirme, taşınabilir, düşük güç cihazlarda ve karmaşık uygulamaları ile özellikle fark edilebilir. Bu konuda bu başlangıç geliştirme ölçmek için gereken temel izleme ile çalışmaya başlamanıza yardımcı olur.  
+[!INCLUDE[net_native](../../../includes/net-native-md.md)] uygulamaları başlatma süresini önemli ölçüde iyileştirir. Bu geliştirme, taşınabilir, düşük güç cihazlarda ve karmaşık uygulamaları ile özellikle fark edilebilir. Bu konuda bu başlangıç geliştirme ölçmek için gereken temel izleme ile çalışmaya başlamanıza yardımcı olur.  
   
  Performans araştırmalar kolaylaştırmak için olay izleme için Windows (olaylar gerçekleştiğinde tooling bildirmek uygulamanızı sağlayan ETW) adlı bir olay çerçevesi .NET Framework ve Windows kullanın. Ardından PerfView adlı bir aracı kolayca görüntülemek ve ETW olayları çözümlemek için de kullanabilirsiniz. Bu konuda açıklanmaktadır nasıl yapılır:  
   
@@ -32,7 +22,7 @@ ms.lasthandoff: 12/22/2017
 -   Bu olayları görüntülemek için PerfView kullanın.  
   
 ## <a name="using-eventsource-to-emit-events"></a>EventSource olaylarını yaymak üzere kullanma  
- <xref:System.Diagnostics.Tracing.EventSource>özel olay sağlayıcısı oluşturulacağı bir temel sınıf sağlar. Öğesinin bir alt genel olarak, oluşturduğunuz <xref:System.Diagnostics.Tracing.EventSource> ve sarmalayın `Write*` kendi olay yöntemleriyle yöntemleri. Bir singleton deseni genellikle her biri için kullanılan <xref:System.Diagnostics.Tracing.EventSource>.  
+ <xref:System.Diagnostics.Tracing.EventSource> özel olay sağlayıcısı oluşturulacağı bir temel sınıf sağlar. Öğesinin bir alt genel olarak, oluşturduğunuz <xref:System.Diagnostics.Tracing.EventSource> ve sarmalayın `Write*` kendi olay yöntemleriyle yöntemleri. Bir singleton deseni genellikle her biri için kullanılan <xref:System.Diagnostics.Tracing.EventSource>.  
   
  Örneğin, aşağıdaki örnekte sınıfında iki performans özellikleri ölçmek için kullanılabilir:  
   
@@ -104,7 +94,7 @@ perfview -KernelEvents:Process -OnlyProviders:*MyCompany-MyApp collect outputFil
   
  Sol bölmede listelenen tüm olayları seçin (Ctrl-A) ve **Enter** anahtarı. Şimdi, zaman damgaları her olaydan görüyor olmalısınız. Bu zaman damgaları izleme başlangıç göreli olduğundan, başlangıçtan itibaren geçen zamanı tanımlamak için işleminin başlangıç zamanından itibaren her olay sırada çıkartılacak sahip. İki zaman damgaları seçmek için Ctrl + Click kullanırsanız, sayfanın sonundaki durum çubuğunda görüntülenen aralarındaki fark görürsünüz. Bu, (işlem başlangıç dahil) görüntüsündeki herhangi iki olay arasında geçen süre görmeyi kolaylaştırır. Görünüm için kısayol menüsünü açın ve CSV dosyasına dışarı aktarma veya kaydetmek veya verileri işlemek için Microsoft Excel açılırken gibi yararlı seçenekleri sayısını seçin.  
   
- Özgün uygulamanızı ve sürüm için yordamı tekrarlayarak kullanılarak oluşturulan [!INCLUDE[net_native](../../../includes/net-native-md.md)] araç zinciri, performans farkı karşılaştırabilirsiniz.   [!INCLUDE[net_native](../../../includes/net-native-md.md)]uygulamalar genellikle Başlat olmayan daha hızlı[!INCLUDE[net_native](../../../includes/net-native-md.md)] uygulamalar. Sorunda daha derin düşünüyorsanız PerfView en zaman ayırdığınız kodunuzu bölümlerini de tanımlayabilirsiniz. Daha fazla bilgi için izleme [PerfView öğreticileri](http://channel9.msdn.com/Series/PerfView-Tutorial) veya okuma [Vance Morrison'ın blog girdisi](http://blogs.msdn.com/b/vancem/archive/2011/12/28/publication-of-the-perfview-performance-analysis-tool.aspx).  
+ Özgün uygulamanızı ve sürüm için yordamı tekrarlayarak kullanılarak oluşturulan [!INCLUDE[net_native](../../../includes/net-native-md.md)] araç zinciri, performans farkı karşılaştırabilirsiniz.   [!INCLUDE[net_native](../../../includes/net-native-md.md)] uygulamalar genellikle Başlat olmayan daha hızlı[!INCLUDE[net_native](../../../includes/net-native-md.md)] uygulamalar. Sorunda daha derin düşünüyorsanız PerfView en zaman ayırdığınız kodunuzu bölümlerini de tanımlayabilirsiniz. Daha fazla bilgi için izleme [PerfView öğreticileri](http://channel9.msdn.com/Series/PerfView-Tutorial) veya okuma [Vance Morrison'ın blog girdisi](http://blogs.msdn.com/b/vancem/archive/2011/12/28/publication-of-the-perfview-performance-analysis-tool.aspx).  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
  <xref:System.Diagnostics.Tracing.EventSource>

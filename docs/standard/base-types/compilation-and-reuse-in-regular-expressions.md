@@ -1,13 +1,7 @@
 ---
-title: "Normal İfadelerde Derleme ve Yeniden Kullanma"
-ms.custom: 
+title: Normal İfadelerde Derleme ve Yeniden Kullanma
 ms.date: 03/30/2017
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
 ms.technology: dotnet-standard
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - parsing text with regular expressions, compilation
 - searching with regular expressions, compilation
@@ -18,18 +12,13 @@ helpviewer_keywords:
 - pattern-matching with regular expressions, compilation
 - regular expressions, engines
 ms.assetid: 182ec76d-5a01-4d73-996c-0b0d14fcea18
-caps.latest.revision: "11"
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-- dotnetcore
-ms.openlocfilehash: 230a1b8b083362c149b5b7e64f708bd09ab21788
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: 8a9adb5d39eb420496030d85dacd95a1cccd6fd2
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="compilation-and-reuse-in-regular-expressions"></a>Normal İfadelerde Derleme ve Yeniden Kullanma
 Normal ifadeler kapsamlı kullanımını nasıl normal ifade altyapı ifadeleri derler anlama ve nasıl normal ifadeler önbelleğe alınan anlama olun uygulamaların performansını en iyi duruma getirebilirsiniz. Bu konuda, hem derleme hem de önbelleğe alma anlatılmaktadır.  

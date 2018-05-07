@@ -1,11 +1,6 @@
 ---
-title: "SByte Veri Türü (Visual Basic)"
+title: SByte Veri Türü (Visual Basic)
 ms.date: 04/20/2017
-ms.prod: .net
-ms.suite: 
-ms.technology:
-- devlang-visual-basic
-ms.topic: article
 f1_keywords:
 - vb.sbyte
 helpviewer_keywords:
@@ -19,14 +14,13 @@ helpviewer_keywords:
 - data types [Visual Basic], integral
 - SByte data type
 ms.assetid: 5c38374a-18a1-4cc2-b493-299e3dcaa60f
-caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: d391d7eea27ec7696dbb4c28da8916c744712f32
-ms.sourcegitcommit: d2da0142247ef42a219a5d2907f153e62dc6ea0d
+ms.openlocfilehash: 20a5a9182da50345f97331e6f01e0e3665a2a61c
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/01/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="sbyte-data-type-visual-basic"></a>SByte veri türü (Visual Basic)
 
@@ -75,7 +69,7 @@ Değişmez değer tamsayı aralığı dışında ise `SByte` (diğer bir deyişl
 
 -   **Genişletme.** `SByte` Veri türü widens için `Short`, `Integer`, `Long`, `Decimal`, `Single`, ve `Double`. Bu dönüştürebilirsiniz anlamına gelir `SByte` karşılaşmadan olmadan bu türdeki herhangi bir <xref:System.OverflowException?displayProperty=nameWithType> hata.
   
--   **Karakterleri yazın.** `SByte`değişmez değer türü karakteri ya da tanımlayıcı türü karakteri içeriyor.  
+-   **Karakterleri yazın.** `SByte` değişmez değer türü karakteri ya da tanımlayıcı türü karakteri içeriyor.  
   
 -   **Framework türü.** .NET Framework'teki karşılık gelen tür <xref:System.SByte?displayProperty=nameWithType> yapısı.
   

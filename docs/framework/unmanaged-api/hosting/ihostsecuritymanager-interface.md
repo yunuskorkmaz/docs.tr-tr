@@ -1,14 +1,6 @@
 ---
 title: IHostSecurityManager Arabirimi
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: reference
 api_name:
 - IHostSecurityManager
 api_location:
@@ -22,17 +14,13 @@ helpviewer_keywords:
 ms.assetid: c3be2cbd-2d93-438b-9888-9a0251b63c03
 topic_type:
 - apiref
-caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 44f2272c0f4e1423c222a004559d7bbd58237d82
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 13f60730fedef4876f81f078f811104777050175
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="ihostsecuritymanager-interface"></a>IHostSecurityManager Arabirimi
 Erişim ve güvenlik bağlamı şu anda yürütülen iş parçacığı üzerinde denetime izin veren yöntemler sağlar.  
@@ -49,7 +37,7 @@ Erişim ve güvenlik bağlamı şu anda yürütülen iş parçacığı üzerinde
 |[SetThreadToken Yöntemi](../../../../docs/framework/unmanaged-api/hosting/ihostsecuritymanager-setthreadtoken-method.md)|Şu anda yürütülen iş parçacığı için bir tanıtıcı ayarlar.|  
   
 ## <a name="remarks"></a>Açıklamalar  
- Bir ana iş parçacığı belirteçleri tüm kod erişimi ortak dil çalışma zamanı (CLR) ve kullanıcı kodu tarafından kontrol edebilirsiniz. Bu tam güvenlik sağlayabilirsiniz bağlam bilgilerini zaman uyumsuz işlemleri veya kısıtlı kod erişimi olan kod noktaları üzerinden geçirilir. `IHostSecurityContext`CLR opak bu güvenlik bağlamı bilgileri yalıtır.  
+ Bir ana iş parçacığı belirteçleri tüm kod erişimi ortak dil çalışma zamanı (CLR) ve kullanıcı kodu tarafından kontrol edebilirsiniz. Bu tam güvenlik sağlayabilirsiniz bağlam bilgilerini zaman uyumsuz işlemleri veya kısıtlı kod erişimi olan kod noktaları üzerinden geçirilir. `IHostSecurityContext` CLR opak bu güvenlik bağlamı bilgileri yalıtır.  
   
  CLR yönetilen iş parçacığı içeriği dahili olarak işler. İşlem özel sorgular `IHostSecurityManager` aşağıdaki durumlarda:  
   
@@ -68,7 +56,7 @@ Erişim ve güvenlik bağlamı şu anda yürütülen iş parçacığı üzerinde
   
  **Kitaplığı:** bir kaynak olarak MSCorEE.dll dahil  
   
- **.NET framework sürümleri:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET framework sürümleri:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
  [IHostSecurityContext Arabirimi](../../../../docs/framework/unmanaged-api/hosting/ihostsecuritycontext-interface.md)  

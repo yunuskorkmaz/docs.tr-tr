@@ -1,33 +1,19 @@
 ---
 title: 'Uç Noktalar: Adresler, Bağlamalar ve Sözleşmeler'
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 helpviewer_keywords:
 - endpoints [WCF]
 - Windows Communication Foundation [WCF], endpoints
 - WCF [WCF], endpoints
 ms.assetid: 9ddc46ee-1883-4291-9926-28848c57e858
-caps.latest.revision: 14
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 477c23facd846580bac698ce6e61d02e11afe430
-ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
+ms.openlocfilehash: 0909d1d10ab8932f27f7ca6cba6207d57fa4f4cc
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/28/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="endpoints-addresses-bindings-and-contracts"></a>Uç Noktalar: Adresler, Bağlamalar ve Sözleşmeler
-İle tüm iletişimin bir [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] servis oluşur aracılığıyla *uç noktaları* hizmetinin. Uç noktaları tarafından sunulan işlevselliği erişim istemcileri sağlar bir [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] hizmet.  
+Tüm Windows Communication Foundation (WCF) hizmetiyle aracılığıyla iletişimin *uç noktaları* hizmetinin. Uç noktaları, istemcilerin bir WCF hizmeti tarafından sunulan işlevselliği erişim sağlar.  
   
  Her uç nokta dört özelliklerini oluşur:  
   
@@ -39,12 +25,12 @@ ms.lasthandoff: 04/28/2018
   
 -   Yerel uygulama uç nokta ayrıntılarını belirtin davranışları kümesi.  
   
- Bu konu Bu uç nokta yapısını açıklar ve nasıl içinde gösterilir açıklar [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] nesne modeli.  
+ Bu konu, bu uç nokta yapı açıklar ve nasıl WCF nesne modelinde temsil açıklar.  
   
 ## <a name="the-structure-of-an-endpoint"></a>Bir uç nokta yapısı  
  Her uç nokta aşağıdakilerden oluşur:  
   
--   Adresi: Adresi benzersiz olarak uç noktayı tanımlar ve olası söyler bulunduğu olduğu hizmet tüketicileri. ' De temsil [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] nesne modeli tarafından <xref:System.ServiceModel.EndpointAddress> sınıfı. Bir <xref:System.ServiceModel.EndpointAddress> sınıfı içerir:  
+-   Adresi: Adresi benzersiz olarak uç noktayı tanımlar ve olası söyler bulunduğu olduğu hizmet tüketicileri. WCF nesne modeli tarafından temsil edilen <xref:System.ServiceModel.EndpointAddress> sınıfı. Bir <xref:System.ServiceModel.EndpointAddress> sınıfı içerir:  
   
     -   A <xref:System.ServiceModel.EndpointAddress.Uri%2A> hizmetinin adresini gösteren özelliği.  
   
@@ -60,7 +46,7 @@ ms.lasthandoff: 04/28/2018
   
     -   Gerekli güvenlik gereksinimleri (örneğin, SSL veya SOAP iletisi güvenlik).  
   
-     Daha fazla bilgi için bkz: [WCF bağlamaları genel bakış](../../../../docs/framework/wcf/bindings-overview.md). İçinde bir bağlaması temsil [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] nesne modeli Özet temel sınıf tarafından <xref:System.ServiceModel.Channels.Binding>. Çoğu senaryoda, kullanıcılar sistem tarafından sağlanan bağlamalar birini kullanabilirsiniz. Daha fazla bilgi için bkz: [System-Provided bağlamaları](../../../../docs/framework/wcf/system-provided-bindings.md).  
+     Daha fazla bilgi için bkz: [WCF bağlamaları genel bakış](../../../../docs/framework/wcf/bindings-overview.md). Bir bağlama WCF nesne modelinde Özet temel sınıf tarafından temsil edilen <xref:System.ServiceModel.Channels.Binding>. Çoğu senaryoda, kullanıcılar sistem tarafından sağlanan bağlamalar birini kullanabilirsiniz. Daha fazla bilgi için bkz: [System-Provided bağlamaları](../../../../docs/framework/wcf/system-provided-bindings.md).  
   
 -   Sözleşmeleri: Sözleşme istemciye uç noktasını kullanıma sunar hangi işlevsellikler özetlenmektedir. Bir sözleşme belirtir:  
   
@@ -74,7 +60,7 @@ ms.lasthandoff: 04/28/2018
   
      Bir sözleşme tanımlama hakkında daha fazla bilgi için bkz: [Hizmet sözleşmeleri tasarlama](../../../../docs/framework/wcf/designing-service-contracts.md).  
   
--   Davranışları: Hizmet uç noktası yerel davranışını özelleştirmek için uç nokta davranışları kullanabilirsiniz. Uç nokta davranışları elde bu oluşturma sürecinde katılarak bir [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]çalışma zamanı. Bir uç noktası davranışı örneği <xref:System.ServiceModel.Description.ServiceEndpoint.ListenUri%2A> SOAP ve Web Hizmetleri Açıklama Dili (WSDL) adresinden farklı bir dinleme adresi belirtmenize olanak tanır özelliği. Daha fazla bilgi için bkz: [ClientViaBehavior](../../../../docs/framework/wcf/diagnostics/wmi/clientviabehavior.md).  
+-   Davranışları: Hizmet uç noktası yerel davranışını özelleştirmek için uç nokta davranışları kullanabilirsiniz. Uç nokta davranışları bir WCFruntime oluşturma sürecinde katılarak elde edin. Bir uç noktası davranışı örneği <xref:System.ServiceModel.Description.ServiceEndpoint.ListenUri%2A> SOAP ve Web Hizmetleri Açıklama Dili (WSDL) adresinden farklı bir dinleme adresi belirtmenize olanak tanır özelliği. Daha fazla bilgi için bkz: [ClientViaBehavior](../../../../docs/framework/wcf/diagnostics/wmi/clientviabehavior.md).  
   
 ## <a name="defining-endpoints"></a>Uç noktaları tanımlama  
  Uç nokta ya da imperatively kod kullanarak bir hizmet için veya yapılandırma yoluyla bildirimli olarak belirtebilirsiniz. Daha fazla bilgi için bkz: [nasıl yapılır: yapılandırmada hizmet uç noktası oluşturma](../../../../docs/framework/wcf/feature-details/how-to-create-a-service-endpoint-in-configuration.md) ve [nasıl yapılır: kod içinde hizmet uç noktası oluşturma](../../../../docs/framework/wcf/feature-details/how-to-create-a-service-endpoint-in-code.md).  
@@ -83,7 +69,7 @@ ms.lasthandoff: 04/28/2018
  Bu bölümde bağlamaları, uç noktaları ve adresleri amacını açıklayan; bağlama ve bir uç nokta nasıl yapılandırılacağını gösterir; ve nasıl kullanılacağını göstermektedir `ClientVia` davranışı ve `ListenUri` özelliği.  
   
  [Adresler](../../../../docs/framework/wcf/feature-details/endpoint-addresses.md)  
- Uç noktaları nasıl değinilen açıklar [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)].  
+ Uç noktaları WCF'de nasıl ele alınan açıklar.  
   
  [Bağlamalar](../../../../docs/framework/wcf/feature-details/bindings.md)  
  Taşıma, kodlama ve istemcileri ve Hizmetleri birbirleri ile iletişim kurması gereken protokol ayrıntılarını belirtmek için bağlamaları nasıl kullanıldığını açıklar.  

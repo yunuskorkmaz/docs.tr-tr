@@ -1,10 +1,6 @@
 ---
-title: "-errorreport (C# Derleyici Seçenekleri)"
+title: -errorreport (C# Derleyici Seçenekleri)
 ms.date: 07/20/2015
-ms.prod: .net
-ms.technology:
-- devlang-csharp
-ms.topic: article
 f1_keywords:
 - /errorreport
 helpviewer_keywords:
@@ -12,14 +8,11 @@ helpviewer_keywords:
 - errorreport compiler option [C#]
 - /errorreport compiler option [C#]
 ms.assetid: bd0e7493-b79d-4369-9c3f-ba26ebdfbedf
-caps.latest.revision: 
-author: BillWagner
-ms.author: wiwagn
-ms.openlocfilehash: 6d2fcb3f0bf4491de23b70c8beebf7ae495b2aa0
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.openlocfilehash: d7e001834d670e7c88488c6db887d1d8e671beef
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="-errorreport-c-compiler-options"></a>-errorreport (C# Derleyici Seçenekleri)
 Bu seçenek, bir C# derleyici iç hatası Microsoft'a bildirmek için kolay bir yol sağlar.  
@@ -34,13 +27,13 @@ Bu seçenek, bir C# derleyici iç hatası Microsoft'a bildirmek için kolay bir 
 ```  
   
 ## <a name="arguments"></a>Arguments  
- **yok**  
+ **Yok**  
  İç derleyici hataları hakkında raporlar değil toplanmayacak veya Microsoft'a gönderilir.  
   
- **prompt**  
+ **istemi**  
  Derleyici iç hatası aldığınızda, bir raporu göndermek isteyip istemediğinizi sorar. **İstemi** geliştirme ortamında bir uygulamayı derlediğinizde varsayılandır.  
   
- **queue**  
+ **Sırası**  
  Hata raporu sıralar. Yönetici kimlik bilgileriyle oturum açtığınızda, günlüğe kaydedilmiş en son ne zaman bu yana hataları bildirebilirsiniz. Üç günde birden çok kez hata raporu göndermek için istenmez. **sıra** komut satırında bir uygulamayı derlediğinizde varsayılandır.  
   
  **Gönder**  

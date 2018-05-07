@@ -1,10 +1,6 @@
 ---
 title: MustInherit (Visual Basic)
 ms.date: 07/20/2015
-ms.prod: .net
-ms.suite: 
-ms.technology: devlang-visual-basic
-ms.topic: article
 f1_keywords:
 - MustInherit
 - vb.MustInherit
@@ -14,14 +10,11 @@ helpviewer_keywords:
 - abstract classes [Visual Basic], MustInherit class
 - MustInherit keyword [Visual Basic]
 ms.assetid: b8f05185-90e3-4dd7-adc2-90d852fab5b4
-caps.latest.revision: "15"
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: 9d384986e42ee69a0f425c1590599aa2c82bc856
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 5d622c1cff77a45c8de7772af7efbb73586f4400
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="mustinherit-visual-basic"></a>MustInherit (Visual Basic)
 Bir sınıf yalnızca bir temel sınıf olarak kullanılabilir ve doğrudan bir nesne oluşturamazsınız belirtir.  
@@ -31,7 +24,7 @@ Bir sınıf yalnızca bir temel sınıf olarak kullanılabilir ve doğrudan bir 
   
  Başka bir kullanımını bir `MustInherit` sınıfı, bir dizi ilgili sınıflar için bir değişken kısıtlamak için. Bu ilgili sınıfları bu sınıftan türetilen ve bir taban sınıf tanımlayın. Türetilen sınıflar için ortak olan herhangi bir işlevsellik sağlamak temel sınıf gerekmez, ancak değişkenlere değerler atama için bir filtre olarak hizmet verebilir. Süren kodunuzu bir değişken temel sınıf olarak bildirirse, Visual Basic, yalnızca bir nesne türetilmiş sınıflarından biri için bu değişkeni atamanıza olanak sağlar.  
   
- .NET Framework birkaç tanımlar `MustInherit` sınıfları, aralarında <xref:System.Array>, <xref:System.Enum>, ve <xref:System.ValueType>. <xref:System.ValueType>bir değişken kısıtlayan bir taban sınıf örnektir. Tüm değer türlerini türetmek <xref:System.ValueType>. Bir değişken olarak bildirirseniz <xref:System.ValueType>, bu değişken yalnızca değer türleri atayabilirsiniz.  
+ .NET Framework birkaç tanımlar `MustInherit` sınıfları, aralarında <xref:System.Array>, <xref:System.Enum>, ve <xref:System.ValueType>. <xref:System.ValueType> bir değişken kısıtlayan bir taban sınıf örnektir. Tüm değer türlerini türetmek <xref:System.ValueType>. Bir değişken olarak bildirirseniz <xref:System.ValueType>, bu değişken yalnızca değer türleri atayabilirsiniz.  
   
 ## <a name="rules"></a>Kurallar  
   
@@ -51,10 +44,10 @@ Bir sınıf yalnızca bir temel sınıf olarak kullanılabilir ve doğrudan bir 
 ## <a name="usage"></a>Kullanım  
  `MustInherit` Bu bağlamda değiştirici kullanılabilir:  
   
- [Class deyimi](../../../visual-basic/language-reference/statements/class-statement.md)  
+ [Class Deyimi](../../../visual-basic/language-reference/statements/class-statement.md)  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [Inherits deyimi](../../../visual-basic/language-reference/statements/inherits-statement.md)  
+ [Inherits Deyimi](../../../visual-basic/language-reference/statements/inherits-statement.md)  
  [NotInheritable](../../../visual-basic/language-reference/modifiers/notinheritable.md)  
- [Anahtar sözcükler](../../../visual-basic/language-reference/keywords/index.md)  
- [Devralma temelleri](../../../visual-basic/programming-guide/language-features/objects-and-classes/inheritance-basics.md)
+ [Anahtar Sözcükler](../../../visual-basic/language-reference/keywords/index.md)  
+ [Devralma Temelleri](../../../visual-basic/programming-guide/language-features/objects-and-classes/inheritance-basics.md)

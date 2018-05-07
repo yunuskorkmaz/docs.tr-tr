@@ -1,51 +1,42 @@
 ---
 title: İşleçler (Visual Basic)
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- devlang-visual-basic
-ms.topic: article
 helpviewer_keywords:
 - operators [Visual Basic]
 ms.assetid: 3d3421df-fcc5-4888-9249-d78f16774ce6
-caps.latest.revision: 10
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: 928bd5165c36fbd9fe082539f154a6f32ada8fcc
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.openlocfilehash: b6f590d81242d14e808e49c42bce8a4bfdc66f44
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="operators-visual-basic"></a>İşleçler (Visual Basic)
 ## <a name="in-this-section"></a>Bu Bölümde  
  [Visual Basic'de İşleç önceliği](../../../visual-basic/language-reference/operators/operator-precedence.md)  
   
- [İşlevselliğe göre listelenmiş işleçler](../../../visual-basic/language-reference/operators/operators-listed-by-functionality.md)  
+ [İşlevselliğe Göre Listelenmiş İşleçler](../../../visual-basic/language-reference/operators/operators-listed-by-functionality.md)  
   
- [İşleç sonuçlarının veri türleri](../../../visual-basic/language-reference/operators/data-types-of-operator-results.md)  
+ [İşleç Sonuçlarının Veri Türleri](../../../visual-basic/language-reference/operators/data-types-of-operator-results.md)  
   
- [DirectCast işleci](../../../visual-basic/language-reference/operators/directcast-operator.md)  
+ [DirectCast İşleci](../../../visual-basic/language-reference/operators/directcast-operator.md)  
   
- [TryCast işleci](../../../visual-basic/language-reference/operators/trycast-operator.md)  
+ [TryCast İşleci](../../../visual-basic/language-reference/operators/trycast-operator.md)  
   
- [New işleci](../../../visual-basic/language-reference/operators/new-operator.md)  
+ [New İşleci](../../../visual-basic/language-reference/operators/new-operator.md)  
   
- [Aritmetik işleçler](../../../visual-basic/language-reference/operators/arithmetic-operators.md)  
+ [Aritmetik İşleçler](../../../visual-basic/language-reference/operators/arithmetic-operators.md)  
   
  [Atama İşleçleri](../../../visual-basic/language-reference/operators/assignment-operators.md)  
   
- [Bit kaydırma işleçleri](../../../visual-basic/language-reference/operators/bit-shift-operators.md)  
+ [Bit Kaydırma İşleçleri](../../../visual-basic/language-reference/operators/bit-shift-operators.md)  
   
- [Karşılaştırma işleçleri](../../../visual-basic/language-reference/operators/comparison-operators.md)  
+ [Karşılaştırma İşleçleri](../../../visual-basic/language-reference/operators/comparison-operators.md)  
   
- [Birleştirme işleçleri](../../../visual-basic/language-reference/operators/concatenation-operators.md)  
+ [Birleştirme İşleçleri](../../../visual-basic/language-reference/operators/concatenation-operators.md)  
   
  [Mantıksal ve bit düzeyinde işleçler](../../../visual-basic/language-reference/operators/logical-bitwise-operators.md)  
   
- [Çeşitli işleçler](../../../visual-basic/language-reference/operators/miscellaneous-operators.md)  
+ [Çeşitli İşleçler](../../../visual-basic/language-reference/operators/miscellaneous-operators.md)  
   
 ## <a name="related-sections"></a>İlgili Bölümler  
  [Visual Basic Dil Başvurusu](../../../visual-basic/language-reference/index.md)  

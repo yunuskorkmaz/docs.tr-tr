@@ -1,22 +1,12 @@
 ---
-title: "Nasıl yapılır: dosya sistemi (Visual Basic) XML ağacından doldurma"
-ms.custom: 
+title: 'Nasıl yapılır: dosya sistemi (Visual Basic) XML ağacından doldurma'
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 34eec79e-7945-4ba8-9f74-d05bb8ec67f6
-caps.latest.revision: "3"
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: 6046cf5837aa033f2efb72c7b45f9526bedf871c
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.openlocfilehash: 158a6c5c6734f0aa11e22b5cbea35c960c7a1c40
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-populate-an-xml-tree-from-the-file-system-visual-basic"></a>Nasıl yapılır: dosya sistemi (Visual Basic) XML ağacından doldurma
 Bir ortak ve kullanışlı XML ağaçları hiyerarşik ad/değer veri deposu olarak uygulamasıdır. Bir XML ağacı hiyerarşik verilerle doldurmak ve ardından onu sorgulama yapabilir, dönüştürmek ve gerekirse, seri. Bu kullanım senaryosunda ad alanları ve boşluk davranışı gibi XML belirli semantiğini çoğunu önemli değildir. Bunun yerine, bellek, tek bir kullanıcı hiyerarşik veritabanı küçük bir olarak XML ağaç kullanıyor.  

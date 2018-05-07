@@ -1,13 +1,6 @@
 ---
-title: "Yansıma Yaymadaki Güvenlik Sorunları"
-ms.custom: 
+title: Yansıma Yaymadaki Güvenlik Sorunları
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - partially trusted code
 - emitting dynamic assemblies, security
@@ -18,16 +11,13 @@ helpviewer_keywords:
 - emitting dynamic assemblies,partial trust scenarios
 - dynamic assemblies, security
 ms.assetid: 0f8bf8fa-b993-478f-87ab-1a1a7976d298
-caps.latest.revision: "18"
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 2319ab244b2c2a296966692342df1f4967b85729
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 57db77b64ddcbe282fed035b52bb122901383ca4
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="security-issues-in-reflection-emit"></a>Yansıma Yaymadaki Güvenlik Sorunları
 [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] Microsoft yayma için üç yol dili (MSIL), her biri kendi güvenlik sorunları Ara sağlar:  
@@ -153,7 +143,7 @@ ms.lasthandoff: 12/22/2017
  İle başlayarak [!INCLUDE[net_v20SP1_long](../../../includes/net-v20sp1-long-md.md)], <xref:System.Security.Permissions.ReflectionPermission> ile <xref:System.Security.Permissions.ReflectionPermissionFlag.ReflectionEmit?displayProperty=nameWithType> bayrağı gereklidir artık dinamik derlemeler ve dinamik yöntemleri yayma. Bu bayrak tüm önceki sürümlerde gerekli [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)].  
   
 > [!NOTE]
->  <xref:System.Security.Permissions.ReflectionPermission>ile <xref:System.Security.Permissions.ReflectionPermissionFlag.ReflectionEmit?displayProperty=nameWithType> bayrak varsayılan olarak dahil `FullTrust` ve `LocalIntranet` adlandırılmış izin ayarlar, ancak içinde değil `Internet` izin kümesi. Bu nedenle,'ın önceki sürümlerinde [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)], yalnızca yürütür varsa, Internet izinleri olan bir kitaplık kullanılabilir bir <xref:System.Security.PermissionSet.Assert%2A> için <xref:System.Security.Permissions.ReflectionPermissionFlag.ReflectionEmit>. Kodlama hataları güvenlik açıklarını neden olabilir çünkü böyle kitaplıklarının dikkatli güvenlik incelemesi gerektirir. [!INCLUDE[net_v20SP1_short](../../../includes/net-v20sp1-short-md.md)] Kısmi güven senaryolarında kod oluşturma için tüm güvenlik taleplerini veren kendiliğinden ayrıcalıklı bir işlem değil olmadan yayınlaması için kod sağlar. Diğer bir deyişle, oluşturulan kod bunu yayar derleme'den daha fazla hiçbir izni yoktur. Güvenliği saydam kod yayma ve assert ihtiyacını ortadan kaldırır kitaplıkları böylece <xref:System.Security.Permissions.ReflectionPermissionFlag.ReflectionEmit>, güvenli bir kitaplık yazma görevini basitleştirir.  
+>  <xref:System.Security.Permissions.ReflectionPermission> ile <xref:System.Security.Permissions.ReflectionPermissionFlag.ReflectionEmit?displayProperty=nameWithType> bayrak varsayılan olarak dahil `FullTrust` ve `LocalIntranet` adlandırılmış izin ayarlar, ancak içinde değil `Internet` izin kümesi. Bu nedenle,'ın önceki sürümlerinde [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)], yalnızca yürütür varsa, Internet izinleri olan bir kitaplık kullanılabilir bir <xref:System.Security.PermissionSet.Assert%2A> için <xref:System.Security.Permissions.ReflectionPermissionFlag.ReflectionEmit>. Kodlama hataları güvenlik açıklarını neden olabilir çünkü böyle kitaplıklarının dikkatli güvenlik incelemesi gerektirir. [!INCLUDE[net_v20SP1_short](../../../includes/net-v20sp1-short-md.md)] Kısmi güven senaryolarında kod oluşturma için tüm güvenlik taleplerini veren kendiliğinden ayrıcalıklı bir işlem değil olmadan yayınlaması için kod sağlar. Diğer bir deyişle, oluşturulan kod bunu yayar derleme'den daha fazla hiçbir izni yoktur. Güvenliği saydam kod yayma ve assert ihtiyacını ortadan kaldırır kitaplıkları böylece <xref:System.Security.Permissions.ReflectionPermissionFlag.ReflectionEmit>, güvenli bir kitaplık yazma görevini basitleştirir.  
   
  Ayrıca, [!INCLUDE[net_v20SP1_short](../../../includes/net-v20sp1-short-md.md)] tanıtır <xref:System.Security.Permissions.ReflectionPermissionFlag.RestrictedMemberAccess?displayProperty=nameWithType> ortak olmayan türleri ve üye kısmen güvenilen dinamik yöntemleri erişmek için bayrak. ' In önceki sürümlerini [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] gerektiren <xref:System.Security.Permissions.ReflectionPermissionFlag.MemberAccess?displayProperty=nameWithType> bayrak ortak olmayan türleri ve üyeleri erişmek için dinamik yöntemleri; Bu kısmen güvenilen kod hiçbir zaman verilmelidir izni.  
   

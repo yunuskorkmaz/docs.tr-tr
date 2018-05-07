@@ -1,22 +1,12 @@
 ---
-title: "Nasıl yapılır: gruplandırma (Visual Basic) kullanarak hiyerarşi oluşturma"
-ms.custom: 
+title: 'Nasıl yapılır: gruplandırma (Visual Basic) kullanarak hiyerarşi oluşturma'
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 4eb3ca6b-1aed-43de-b8b9-41c769c993f8
-caps.latest.revision: "3"
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: 67019e2ab3d9057567969b34e276abba15174321
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.openlocfilehash: 9df85a52d63c4d7dbffb99a47378d3a1efc10cca
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-create-hierarchy-using-grouping-visual-basic"></a>Nasıl yapılır: gruplandırma (Visual Basic) kullanarak hiyerarşi oluşturma
 Bu örnek, verileri gruplandırmak ve XML gruplandırılması tabanlı oluşturmak gösterilmektedir.  

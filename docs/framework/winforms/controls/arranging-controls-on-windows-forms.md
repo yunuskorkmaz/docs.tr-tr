@@ -1,31 +1,17 @@
 ---
-title: "Windows Formlarında Denetimleri Düzenleme"
-ms.custom: 
+title: Windows Formlarında Denetimleri Düzenleme
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-winforms
-ms.tgt_pltfrm: 
-ms.topic: article
 f1_keywords:
 - VisualSelection
 helpviewer_keywords:
 - controls [Windows Forms], positioning
 - Windows Forms controls, positioning on form
 ms.assetid: b2d62ed8-c391-4a7e-b72e-6bbabfca73dc
-caps.latest.revision: 
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 6f590080d1a3898e84df30f0fb690c3d18905f8e
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 9e63392ad4f057f39f271ee7963b635c9bc2bd73
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="arranging-controls-on-windows-forms"></a>Windows Formlarında Denetimleri Düzenleme
 Yerleştirme ve farklı şekillerde formlarında denetimleri düzenleme, hem sezgisel hem de işlevsel kullanıcılar için kullanıcı arabirimleri oluşturabilirsiniz.  

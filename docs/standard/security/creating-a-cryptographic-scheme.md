@@ -1,29 +1,18 @@
 ---
-title: "Şifreleme Düzeni Oluşturma"
-ms.custom: 
+title: Şifreleme Düzeni Oluşturma
 ms.date: 03/30/2017
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
 ms.technology: dotnet-standard
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - encryption [.NET Framework], creating cryptographic schemes
 - cryptography [.NET Framework], creating cryptographic schemes
 ms.assetid: d40c509f-5a5e-46cc-94cb-a951e9ab6843
-caps.latest.revision: "8"
 author: mairaw
 ms.author: mairaw
-manager: wpickett
-ms.workload:
-- dotnet
-- dotnetcore
-ms.openlocfilehash: b0aabdc9150aea73ad9078b0e9ee92b2abd03e17
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: b1635276465dd58028c8a5e4b7e69a307664a4c3
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="creating-a-cryptographic-scheme"></a>Şifreleme Düzeni Oluşturma
 .NET Framework şifreleme bileşenlerinin şifrelemek ve verilerin şifresini çözmek için farklı düzenleri oluşturmak için birleştirilebilir.  
@@ -40,7 +29,7 @@ ms.lasthandoff: 12/23/2017
   
 5.  Taraflar ardından simetrik şifreleme kullanarak bir konuşma başlatın.  
   
- Şifreleme düzeni oluşturma, karmaşık bir görev değil. Şifreleme kullanma hakkında daha fazla bilgi için Platform SDK belgelerine http://msdn.microsoft.com/library şifreleme konusuna bakın.  
+ Şifreleme düzeni oluşturma, karmaşık bir görev değil. Şifreleme kullanma hakkında daha fazla bilgi için Platform SDK belgelerine şifreleme konusuna bakın http://msdn.microsoft.com/library.  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
  [Şifreleme Hizmetleri](../../../docs/standard/security/cryptographic-services.md)

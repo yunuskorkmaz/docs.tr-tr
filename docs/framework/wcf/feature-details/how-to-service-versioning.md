@@ -1,24 +1,12 @@
 ---
-title: "Nasıl yapılır: Hizmet Sürümü Oluşturma"
-ms.custom: 
+title: 'Nasıl yapılır: Hizmet Sürümü Oluşturma'
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 4287b6b3-b207-41cf-aebe-3b1d4363b098
-caps.latest.revision: "6"
-author: wadepickett
-ms.author: wpickett
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: a4da80d264b05f9c7a1461a7298e521623a97f31
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: a745a35f72722003fc98ecf14d5f39027dc141f6
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-service-versioning"></a>Nasıl yapılır: Hizmet Sürümü Oluşturma
 Bu konu aynı hizmetin farklı sürümlerini iletileri yönlendiren bir yönlendirme yapılandırması oluşturmak için gereken temel adımlarda özetler. Bu örnekte, bir hesap makinesi hizmetinin iki farklı sürümü için iletiler yönlendirilir `roundingCalc` (v1) ve `regularCalc` (v2). Her iki uygulamaları aynı işlemleri destekler; ancak eski hizmetini `roundingCalc`, döndürmeden önce hesaplamalarının yakın tamsayı değere yuvarlar. Bir istemci uygulaması yeni kullanılıp kullanılmayacağını belirtmek için `regularCalc` hizmet.  
@@ -105,7 +93,7 @@ messageHeadersElement.Add(MessageHeader.CreateHeader("CalcVer", "http://my.custo
     ```  
   
     > [!NOTE]
-    >  S12 ad alanı öneki varsayılan ad alanı tablo olarak tanımlanır ve "http://www.w3.org/2003/05/soap-envelope" ad alanı temsil eder.  
+    >  S12 ad alanı öneki varsayılan ad alanı tablo olarak tanımlanır ve ad alanını temsil "http://www.w3.org/2003/05/soap-envelope".  
   
 3.  Her filtre bir istemci uç noktası ile ilişkilendirir Filtresi tablosu tanımlayın. İleti 1 değerini içeren "CalcVer" üst bilgisi içeriyorsa regularCalc hizmetine gönderilir. Başlığı 2 değerini içeriyorsa, roundingCalc hizmetine gönderilir. Üst bilgi varsa, ileti regularCalc yönlendirilir.  
   

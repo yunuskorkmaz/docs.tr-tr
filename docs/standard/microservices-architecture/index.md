@@ -1,25 +1,18 @@
 ---
-title: .NET Microservices. Kapsayıcılı .NET uygulamaları için mimarisi
+title: .NET mikro. Kapsayıcılı .NET uygulamaları için mimarisi
 description: Kapsayıcılı .NET uygulamaları için .NET mikro mimarisi | Ön konular
-keywords: Docker, Microservices, ASP.NET, Container
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 05/26/2017
-ms.prod: .net-core
-ms.technology: dotnet-docker
-ms.topic: article
-ms.workload:
-- dotnet
-- dotnetcore
-ms.openlocfilehash: 289f34b12cc0278212ceb737c2b9cb3f2ff986c1
-ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
+ms.openlocfilehash: d4499384d63f11a1d78d0aa84749aed8ea554794
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 05/04/2018
 ---
 ![](./media/cover.png)
 
-# <a name="net-microservices-architecture-for-containerized-net-applications"></a>.NET Microservices. Kapsayıcılı .NET uygulamaları için mimarisi
+# <a name="net-microservices-architecture-for-containerized-net-applications"></a>.NET mikro. Kapsayıcılı .NET uygulamaları için mimarisi
 
 İNDİRME bulunabilir: <https://aka.ms/microservicesebook>
 
@@ -41,7 +34,7 @@ Bu kitap sağlanan "olarak-olan" ve yazar görünümler ve görüşlerini ifade 
 
 Burada açıklanan bazı örnekler yalnızca çizim için sağlanmıştır ve kurgusaldır. Gerçek bir ilişki veya bağlantı amaçlanmamıştır veya çıkarılmamalıdır.
 
-Microsoft ve http://www.microsoft.com "Ticari" Web sayfasında listelenen ticari Microsoft şirketler grubunun ticari markalarıdır.
+Microsoft ve adresinde listelenmiş ticari http://www.microsoft.com "Ticari" Web sayfasında Microsoft şirketler grubunun ticari markalarıdır.
 
 Mac ve macOS Apple Inc.'in ticari markalarıdır.
 
@@ -53,7 +46,7 @@ Ortak yazarlar:
 
 > **Cesar de la Torre**, Sr. PM .NET ürün ekibi, Microsoft Corp.
 >
-> **Fatura Wagner**, Sr. Content Developer, C+E, Microsoft Corp.
+> **Fatura Wagner**, Sr. Geliştirici, C + E, Microsoft Corp. içerik
 >
 > **Can Rousos**, asıl yazılım mühendisi, DevDiv CAT ekibi, Microsoft
 
@@ -65,7 +58,7 @@ Düzenleyiciler:
 
 Katılımcıların ve gözden geçirenler:
 
-> **Jeffrey Richter**, Partner Software Eng, Azure team, Microsoft
+> **Gamze Richter**, iş ortağı yazılım Eng, Azure ekibi, Microsoft
 >
 > **Jimmy Bogard**, Headspring adresindeki Baş Mimarı
 >
@@ -81,7 +74,7 @@ Katılımcıların ve gözden geçirenler:
 >
 > **Hakan Dorrans**, Sr. Güvenlik Program Yöneticisi
 >
-> **Rowan Miller**, Sr. Program Yöneticisi, Microsoft
+> **Rowan Mert**, Sr. Program Yöneticisi, Microsoft
 >
 > **Ankit Asthana**, asıl PM Yöneticisi, .NET ekibi, Microsoft
 >
@@ -103,7 +96,7 @@ Katılımcıların ve gözden geçirenler:
 >
 > **Javier Valero**, baş Müdürü Grupo çözümleri adresindeki işletim
 >
-> **Pierre Millet**, Sr. Consultant, Microsoft
+> **Pierre Millet**, Sr. Danışman, Microsoft
 >
 > **Michael Friis**, ürün Yöneticisi, Docker Inc
 >
@@ -131,7 +124,7 @@ Bu kılavuz uygulama yaşam döngüsü DevOps, CI/CD ardışık odaklanan değil
 
 ### <a name="additional-resources"></a>Ek kaynaklar
 
--   **Microsoft Platformu ve araçları ile Docker uygulama yaşam döngüsü kapsayıcılı** (indirilebilir e-kitap) [ *https://aka.ms/dockerlifecycleebook*](https://aka.ms/dockerlifecycleebook)
+-   **Microsoft Platformu ve araçları ile Docker uygulama yaşam döngüsü kapsayıcılı** (indirilebilir e-kitap) [*https://aka.ms/dockerlifecycleebook*](https://aka.ms/dockerlifecycleebook)
 
 ## <a name="who-should-use-this-guide"></a>Bu kılavuz kullanan
 

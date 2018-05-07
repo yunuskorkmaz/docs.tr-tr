@@ -1,29 +1,15 @@
 ---
 title: WCF Hizmet Yayımlama
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 ms.assetid: c806b253-cd47-4b96-b831-e73cbf08808f
-caps.latest.revision: ''
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 823edadf7d387d1a509edbdf839ac6eeece5d41f
-ms.sourcegitcommit: c883637b41ee028786edceece4fa872939d2e64c
-ms.translationtype: MT
+ms.openlocfilehash: 9f76ab11e9697fc5af5c507d4dc9d944c433c918
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/26/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="wcf-service-publishing"></a>WCF Hizmet Yayımlama
-[!INCLUDE[indigo1](../../../includes/indigo1-md.md)] Hizmet yayımlama yardımcı olur, İleri aşamalara tarafından sağlanan erken geliştirme ortamı'ndan [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] hizmet ana bilgisayarı ve [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] gerçekten uygulamayı test amacıyla bir üretim ortamında dağıtmak için Test istemcisi. Son dağıtım plana yürütme önce kullanabileceğiniz [!INCLUDE[indigo1](../../../includes/indigo1-md.md)] doğrulamak için Yayımlama hizmeti, [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] hizmet doğru şekilde gerçekleştirir ve yayımlanmaya hazır. Ayrıca dağıtmayı seçebilirsiniz, [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] hizmet test etmek için çeşitli hedef konumlara kitaplıkları.  
+Windows Communication Foundation (WCF) hizmetini yayımlama yardımcı olur, İleri aşamalara tarafından sağlanan erken geliştirme ortamı'ndan [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] hizmet ana bilgisayarı ve [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] Test istemciye, aslında bir üretim uygulamasını dağıtma Test amacıyla ortamı. Son dağıtım plana kullanmadan önce Windows Communication Foundation (WCF) hizmetini yayımlama doğrulamak için kullanabileceğiniz, [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] hizmet doğru şekilde gerçekleştirir ve yayımlanmaya hazır. Ayrıca dağıtmayı seçebilirsiniz, [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] hizmet test etmek için çeşitli hedef konumlara kitaplıkları.  
   
 ## <a name="supported-services-and-target-locations"></a>Desteklenen hizmetler ve hedef konumları  
  [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] Hizmet yayımlama destekleyen yayımlama [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] kümesinden oluşturulan Hizmetleri [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] hizmet kitaplık şablonları ve aşağıdakiler dahil, karşılık gelen öğe şablonları:  
@@ -51,13 +37,13 @@ ms.lasthandoff: 03/26/2018
   
 3.  **Yayımla** penceresi görüntülenir. Tıklatın **...** . hizmetin dağıtılması hedef konumu belirtmek için düğmesi. Yerel IIS, dosya sistemi veya FTP sitesi için uygulama dağıtmak için seçebilirsiniz. Yerel IIS uygulama dağıtımı, Web sitenizi seçin ve tıklayarak, altında web uygulamanızı oluşturun **yeni Web uygulaması oluştur** sağ üst köşedeki simgesine tıklayın.  
   
-4.  Tıklattıktan sonra **Yayımla** ana penceresinde, Visual Studio, belirtilen hedef konuma uygulama dağıtır ve Web.config, .svc ve derleme dosyalarını hedef dizine kopyalar. biçimindeki telefon numarasıdır. .Svc adı "ProjectName.ServiceName.svc" olacaktır. Hizmet başarıyla yayımlandıktan sonra "..."http://localhost/WebApplicationFolderName"http://localhost/WebApplicationFolderName köprü bağlanma" benzer Visual Studio çıktı penceresinde bir etkin bağlantı bulabilirsiniz. CTRL tuşunu BASILI tutun ve hizmet dizin yapısını görüntülemek için Visual Studio içinde tarayıcı sayfasını açmak için bağlantıya tıklayın.  
+4.  Tıklattıktan sonra **Yayımla** ana penceresinde, Visual Studio, belirtilen hedef konuma uygulama dağıtır ve Web.config, .svc ve derleme dosyalarını hedef dizine kopyalar. biçimindeki telefon numarasıdır. .Svc adı "ProjectName.ServiceName.svc" olacaktır. Hizmet başarıyla yayımlandıktan sonra "Köprü bağlanma" benzer Visual Studio çıktı penceresinde bir etkin bağlantı bulabilirsinizhttp://localhost/WebApplicationFolderName" http://localhost/WebApplicationFolderName ...". CTRL tuşunu BASILI tutun ve hizmet dizin yapısını görüntülemek için Visual Studio içinde tarayıcı sayfasını açmak için bağlantıya tıklayın.  
   
-     Siteye göz atın, dizin tarayıcısı IIS'de etkinleştirilmediğinden olabilir. Lütfen etkinleştirmek için "Şeyler deneyebilirsiniz" bölümünde ipuçlarını izleyin. Alternatif olarak, doğrudan yazabileceğiniz"Köprü"http://localhost/WebApplicationFolderName"http://localhost/WebApplicationFolderName/ProjectName.ServiceName.svc" hizmet sayfasını görüntülemek için.  
+     Siteye göz atın, dizin tarayıcısı IIS'de etkinleştirilmediğinden olabilir. Lütfen etkinleştirmek için "Şeyler deneyebilirsiniz" bölümünde ipuçlarını izleyin. Alternatif olarak, doğrudan yazabileceğiniz"Köprü"http://localhost/WebApplicationFolderName" http://localhost/WebApplicationFolderName/ProjectName.ServiceName.svc"hizmet sayfanızı görüntülemek için.  
   
  Kullanabileceğiniz **Yayımla** derleme, yapılandırma ve hedef konumuna proje tanımlanan tüm hizmetler için .svc dosyasını kopyalamak isteyip istemediğinizi belirtin ve hedef konumda mevcut dosyaların üzerine yazabilirsiniz.  
   
- Uygulamanızı yerel IIS dağıtmak isterseniz IIS kurulumu için ilgili hatalarla karşılaşabilirsiniz. IIS düzgün yüklendiğinden emin olun. Tarayıcınızda "Köprü"http://localhost"http://localhost" yazın ve IIS varsayılan sayfasını gösteren olup olmadığını denetleyin.  Bazı durumlarda, sorunları da ASP.NET tarafından kaynaklanıyor olabilir veya [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] IIS'de hatalı kayıt. Visual Studio komut istemi açın ve ASP.NET kayıt sorunlarını gidermek için "aspnet_regiis.exe - ir" komutunu çalıştırın veya düzeltme WCF kayıt sorunları için "ServiceModelReg.exe – ia" komutunu çalıştırın.  
+ Uygulamanızı yerel IIS dağıtmak isterseniz IIS kurulumu için ilgili hatalarla karşılaşabilirsiniz. IIS düzgün yüklendiğinden emin olun. "Köprü" yazabilirsinizhttp://localhost" http://localhost", tarayıcı ve onay mi IIS varsayılan sayfa başlanan bir uyarıdır.  Bazı durumlarda, sorunları da ASP.NET tarafından kaynaklanıyor olabilir veya [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] IIS'de hatalı kayıt. Visual Studio komut istemi açın ve ASP.NET kayıt sorunlarını gidermek için "aspnet_regiis.exe - ir" komutunu çalıştırın veya düzeltme WCF kayıt sorunları için "ServiceModelReg.exe – ia" komutunu çalıştırın.  
   
 ## <a name="files-generated-for-publishing"></a>Yayımlama için oluşturulan dosyalar  
  Önce bir [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] hizmet Kitaplığı Web barındırılan olabilir, aracı tarafından oluşturulan aşağıdaki dosyaları: derleme dosyalarını, Web.config dosyasında ve .svc dosya. Tüm dosyalar, hedef konuma kopyalanır. Hizmet sonra yayımlanır.  

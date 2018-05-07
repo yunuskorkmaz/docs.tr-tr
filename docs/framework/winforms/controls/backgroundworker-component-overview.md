@@ -1,14 +1,6 @@
 ---
-title: "BackgroundWorker Bileşenine Genel Bakış"
-ms.custom: 
+title: BackgroundWorker Bileşenine Genel Bakış
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-winforms
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -25,17 +17,11 @@ helpviewer_keywords:
 - threading [Windows Forms], background operations
 - background operations
 ms.assetid: 64e9b3ab-7443-4a77-ab17-b8b8c0cb3f62
-caps.latest.revision: 
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 96fc5e1929589321872ba30d8c3821b4fd47ca8b
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.openlocfilehash: 32d9bc19e9112fc9b518a68060f9f84e0e04fa16
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="backgroundworker-component-overview"></a>BackgroundWorker Bileşenine Genel Bakış
 Yürütmek için uzun zaman alabilir pek çok sık gerçekleştirilen işlemler vardır. Örneğin:  
@@ -58,7 +44,7 @@ Yürütmek için uzun zaman alabilir pek çok sık gerçekleştirilen işlemler 
   
  <xref:System.ComponentModel.BackgroundWorker> Bileşen edinilebilir **araç**, **bileşenleri** sekmesi. Eklemek için bir <xref:System.ComponentModel.BackgroundWorker> formunuza sürükleyin <xref:System.ComponentModel.BackgroundWorker> formunuza bileşen. Bileşen tepsisinde görünür ve özelliklerini görüntülenmesini **özellikleri** penceresi.  
   
- Zaman uyumsuz işlemi başlatmak için kullanmak <xref:System.ComponentModel.BackgroundWorker.RunWorkerAsync%2A> yöntemi. <xref:System.ComponentModel.BackgroundWorker.RunWorkerAsync%2A>İsteğe bağlı bir alan `object` çalışan yönteminizi bağımsız değişkenleri geçirmek için kullanılan parametre. <xref:System.ComponentModel.BackgroundWorker> Sınıf çıkarır <xref:System.ComponentModel.BackgroundWorker.DoWork> için çalışan iş parçacığı kullanıma açılmış üzerinden olay, bir <xref:System.ComponentModel.BackgroundWorker.DoWork> olay işleyicisi.  
+ Zaman uyumsuz işlemi başlatmak için kullanmak <xref:System.ComponentModel.BackgroundWorker.RunWorkerAsync%2A> yöntemi. <xref:System.ComponentModel.BackgroundWorker.RunWorkerAsync%2A> İsteğe bağlı bir alan `object` çalışan yönteminizi bağımsız değişkenleri geçirmek için kullanılan parametre. <xref:System.ComponentModel.BackgroundWorker> Sınıf çıkarır <xref:System.ComponentModel.BackgroundWorker.DoWork> için çalışan iş parçacığı kullanıma açılmış üzerinden olay, bir <xref:System.ComponentModel.BackgroundWorker.DoWork> olay işleyicisi.  
   
  <xref:System.ComponentModel.BackgroundWorker.DoWork> Olay işleyicisi geçen bir <xref:System.ComponentModel.DoWorkEventArgs> sahip parametresi bir <xref:System.ComponentModel.DoWorkEventArgs.Argument%2A> özelliği. Bu özellik parametreyi alır <xref:System.ComponentModel.BackgroundWorker.RunWorkerAsync%2A> ve çağrılacağı içinde çalışan yönteminize iletilen <xref:System.ComponentModel.BackgroundWorker.DoWork> olay işleyicisi. Aşağıdaki örnek, bir sonucu olarak adlandırılan bir alt yöntemden atamak gösterilmiştir `ComputeFibonacci`. Konumunda bulabilirsiniz daha büyük bir örneğin parçasıdır [nasıl yapılır: bir arka plan işlemi kullanan bir Form uygulama](../../../../docs/framework/winforms/controls/how-to-implement-a-form-that-uses-a-background-operation.md).  
   

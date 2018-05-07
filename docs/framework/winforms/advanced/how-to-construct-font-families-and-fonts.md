@@ -1,13 +1,6 @@
 ---
-title: "Nasıl yapılır: Yazı Tipi Aileleri ve Yazı Tipleri Oluşturma"
-ms.custom: 
+title: 'Nasıl yapılır: Yazı Tipi Aileleri ve Yazı Tipleri Oluşturma'
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-winforms
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -15,19 +8,14 @@ helpviewer_keywords:
 - font families [Windows Forms], constructing
 - fonts [Windows Forms], constructing
 ms.assetid: d3a4a223-9492-4b54-9afd-db1c31c3cefd
-caps.latest.revision: "15"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: e152c525550554082d7d6c38a972ccc150adabb9
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: ceace5950ec135ea4d52081da7d1de7a820583ee
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-construct-font-families-and-fonts"></a>Nasıl yapılır: Yazı Tipi Aileleri ve Yazı Tipleri Oluşturma
-[!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)]yazı tipleri aynı yazı tipi ancak farklı stillerde yazı tipi aileleri gruplandırır. Örneğin, aşağıdaki yazı tipleri Arial yazı tipi ailesinin içerir:  
+[!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] yazı tipleri aynı yazı tipi ancak farklı stillerde yazı tipi aileleri gruplandırır. Örneğin, aşağıdaki yazı tipleri Arial yazı tipi ailesinin içerir:  
   
 -   Arial normal  
   
@@ -37,7 +25,7 @@ ms.lasthandoff: 12/22/2017
   
 -   Arial Kalın İtalik  
   
- [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)]form aileleri için dört stillerini kullanır: normal, kalın, italik ve kalın italik. Sıfatları gibi *daraltmak* ve *yuvarlanmasını* stilleri; dikkate alınmaz yerine bunların, aile adı bir parçasıdır. Örneğin, Arial dar bir yazı tipi ailesi aşağıdaki üyeleri ile şöyledir:  
+ [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] form aileleri için dört stillerini kullanır: normal, kalın, italik ve kalın italik. Sıfatları gibi *daraltmak* ve *yuvarlanmasını* stilleri; dikkate alınmaz yerine bunların, aile adı bir parçasıdır. Örneğin, Arial dar bir yazı tipi ailesi aşağıdaki üyeleri ile şöyledir:  
   
 -   Arial dar normal  
   
@@ -52,7 +40,7 @@ ms.lasthandoff: 12/22/2017
 ## <a name="example"></a>Örnek  
  Aşağıdaki örnek, Normal stili Arial yazı tipi boyutu 16 piksel olarak oluşturur. Aşağıdaki kodda için ilk bağımsız değişken geçirildi <xref:System.Drawing.Font.%23ctor%2A> Oluşturucusu olan <xref:System.Drawing.FontFamily> nesnesi. İkinci bağımsız değişken dördüncü bağımsız değişkeni tarafından tanımlanan birimler cinsinden yazı tipi boyutunu belirtir. Üçüncü bağımsız değişken stilini tanımlar.  
   
- <xref:System.Drawing.GraphicsUnit.Pixel>üye <xref:System.Drawing.GraphicsUnit> numaralandırma, ve <xref:System.Drawing.FontStyle.Regular> üyesi <xref:System.Drawing.FontStyle> numaralandırması.  
+ <xref:System.Drawing.GraphicsUnit.Pixel> üye <xref:System.Drawing.GraphicsUnit> numaralandırma, ve <xref:System.Drawing.FontStyle.Regular> üyesi <xref:System.Drawing.FontStyle> numaralandırması.  
   
  [!code-csharp[System.Drawing.FontsAndText#61](../../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.FontsAndText/CS/Class1.cs#61)]
  [!code-vb[System.Drawing.FontsAndText#61](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.FontsAndText/VB/Class1.vb#61)]  

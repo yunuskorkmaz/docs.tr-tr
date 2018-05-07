@@ -1,23 +1,16 @@
 ---
-title: "Paketleme ve özel My Uzantıları (Visual Basic) dağıtma"
+title: Paketleme ve özel My Uzantıları (Visual Basic) dağıtma
 ms.date: 07/20/2015
-ms.prod: .net
-ms.suite: 
-ms.technology: devlang-visual-basic
-ms.topic: article
 helpviewer_keywords:
 - My namespace [Visual Basic], customizing
 - My namespace
 - My namespace [Visual Basic], extending
 ms.assetid: fd89c54b-0290-4c50-95a3-ff17d4487a21
-caps.latest.revision: "10"
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: 94a9ea977d0add14ae9f0c9a889b008b94610ee0
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 901d0b80a18d2f4d262cc65eb485dcc628bc6a08
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="packaging-and-deploying-custom-my-extensions-visual-basic"></a>Paketleme ve özel My Uzantıları (Visual Basic) dağıtma
 Visual Basic, kendi özel dağıtmak kolay bir yol sağlar `My` Visual Studio şablonları kullanarak ad alanı uzantıları. Kendisi için bir proje şablonu oluşturuyorsanız, `My` uzantıları yeni proje türü ayrılmaz bir parçası, yalnızca kendi özel içerebilir `My` proje şablonu dışarı aktardığınızda uzantı kodu. Proje şablonları dışarı aktarma hakkında daha fazla bilgi için bkz: [nasıl yapılır: Proje şablonları oluşturma](/visualstudio/ide/how-to-create-project-templates).  
@@ -102,6 +95,6 @@ Visual Basic, kendi özel dağıtmak kolay bir yol sağlar `My` Visual Studio ş
   
 ## <a name="see-also"></a>Ayrıca bkz.  
  [Genişletme Visual Basic'te My Namespace](../../../visual-basic/developing-apps/customizing-extending-my/extending-the-my-namespace.md)  
- [Visual Basic uygulama modelini genişletme](../../../visual-basic/developing-apps/customizing-extending-my/extending-the-visual-basic-application-model.md)  
- [Özelleştirme hangi nesnelerin kullanılabilir olduğunu My](../../../visual-basic/developing-apps/customizing-extending-my/customizing-which-objects-are-available-in-my.md)  
+ [Visual Basic Uygulama Modelini Genişletme](../../../visual-basic/developing-apps/customizing-extending-my/extending-the-visual-basic-application-model.md)  
+ [My Özelliklerinde Hangi Nesnelerin Kullanılabilir Olduğunu Özelleştirme](../../../visual-basic/developing-apps/customizing-extending-my/customizing-which-objects-are-available-in-my.md)  
  [My Extensions sayfası, Proje Tasarımcısı](/visualstudio/ide/reference/my-extensions-page-project-designer-visual-basic)

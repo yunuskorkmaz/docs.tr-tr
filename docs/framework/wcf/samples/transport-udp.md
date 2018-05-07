@@ -1,27 +1,15 @@
 ---
-title: "Taşıma: UDP"
-ms.custom: 
+title: 'Taşıma: UDP'
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 738705de-ad3e-40e0-b363-90305bddb140
-caps.latest.revision: "48"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: b7bb9f60340915f27c451d05bfbc28e1670c9d83
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
-ms.translationtype: MT
+ms.openlocfilehash: 51f445d7f53f70fa206c53835b107da68749e3c2
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="transport-udp"></a>Taşıma: UDP
-UDP taşıma örnek UDP tek noktaya yayın ve çok noktaya yayın özel olarak uygulamak gösterilmiştir [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] taşıma. Örnek olarak özel bir taşıma oluşturmak için önerilen yordamı açıklar [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)], kanal çerçevesi kullanarak ve aşağıdaki [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] en iyi uygulamalar. Özel bir taşıma oluşturmaya yönelik adımlar aşağıdaki gibidir:  
+UDP taşıma örnek nasıl uygulanacağı UDP tek noktaya yayın ve çok noktaya yayın özel bir Windows Communication Foundation (WCF) taşıma olarak gösterir. Örnek olarak özel bir taşıma oluşturmak için önerilen yordamı açıklar [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)], kanal çerçevesi kullanarak ve aşağıdaki [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] en iyi uygulamalar. Özel bir taşıma oluşturmaya yönelik adımlar aşağıdaki gibidir:  
   
 1.  Kanal karar [ileti Exchange desenleri](#MessageExchangePatterns) (IOutputChannel, IInputChannel, IDuplexChannel, IRequestChannel veya IReplyChannel) ChannelFactory ve ChannelListener destekleyecektir. Daha sonra bu arabirimleri süre sonuyla varyasyonları destekleyecek olup olmadığını karar verin.  
   
@@ -61,7 +49,7 @@ UDP taşıma örnek UDP tek noktaya yayın ve çok noktaya yayın özel olarak u
 >  UDP kendiliğinden "yangın ve unut" protokol UDP taşıma için desteklenen tek MEP Datagram, olduğundan.  
   
 ### <a name="the-icommunicationobject-and-the-wcf-object-lifecycle"></a>ICommunicationObject ve WCF nesne yaşam döngüsü  
- [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]yaşam döngüsü gibi nesneleri yönetmek için kullanılan yaygın bir durum makinesinin sahip <xref:System.ServiceModel.Channels.IChannel>, <xref:System.ServiceModel.Channels.IChannelFactory>, ve <xref:System.ServiceModel.Channels.IChannelListener> iletişimi için kullanılır. Bu iletişimi nesneleri var olabilir beş durumlar vardır. Bu durumu tarafından temsil edilen <xref:System.ServiceModel.CommunicationState> numaralandırma ve aşağıdaki gibi şunlardır:  
+ [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] yaşam döngüsü gibi nesneleri yönetmek için kullanılan yaygın bir durum makinesinin sahip <xref:System.ServiceModel.Channels.IChannel>, <xref:System.ServiceModel.Channels.IChannelFactory>, ve <xref:System.ServiceModel.Channels.IChannelListener> iletişimi için kullanılır. Bu iletişimi nesneleri var olabilir beş durumlar vardır. Bu durumu tarafından temsil edilen <xref:System.ServiceModel.CommunicationState> numaralandırma ve aşağıdaki gibi şunlardır:  
   
 -   Oluşturulan: Bu durumda bir <xref:System.ServiceModel.ICommunicationObject> olduğunda, ilk örneği. Bu durumda hiçbir giriş/çıkış (g/ç) oluşur.  
   
@@ -79,7 +67,7 @@ UDP taşıma örnek UDP tek noktaya yayın ve çok noktaya yayın özel olarak u
   
 <a name="ChannelAndChannelListener"></a>   
 ## <a name="channel-factory-and-channel-listener"></a>Kanal fabrikası ve kanal dinleyicisi  
- Özel bir taşıma yazma sonraki adım uygulaması oluşturmaktır <xref:System.ServiceModel.Channels.IChannelFactory> ve istemci kanallar için <xref:System.ServiceModel.Channels.IChannelListener> hizmet kanalları. Kanal katmanını kanallar oluşturmak için bir Fabrika desen kullanır. [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]Bu işlem için temel sınıfı Yardımcıları sağlar.  
+ Özel bir taşıma yazma sonraki adım uygulaması oluşturmaktır <xref:System.ServiceModel.Channels.IChannelFactory> ve istemci kanallar için <xref:System.ServiceModel.Channels.IChannelListener> hizmet kanalları. Kanal katmanını kanallar oluşturmak için bir Fabrika desen kullanır. [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] Bu işlem için temel sınıfı Yardımcıları sağlar.  
   
 -   <xref:System.ServiceModel.Channels.CommunicationObject> Uygulayan sınıf <xref:System.ServiceModel.ICommunicationObject> ve 2. adımda daha önce açıklanan durum makinesinin uygular. 
 
@@ -119,7 +107,7 @@ ArraySegment<byte> messageBuffer = EncodeMessage(message);
 this.socket.SendTo(messageBuffer.Array, messageBuffer.Offset, messageBuffer.Count, SocketFlags.None, this.remoteEndPoint);  
 ```  
   
-### <a name="the-udpchannellistener"></a>The UdpChannelListener  
+### <a name="the-udpchannellistener"></a>UdpChannelListener  
  '' Örnek uygulayan UdpChannelListener türer <xref:System.ServiceModel.Channels.ChannelListenerBase> sınıfı. Veri birimleri almak için tek bir UDP yuva kullanır. `OnOpen` Yöntemi zaman uyumsuz bir döngü UDP yuvaya kullanarak verileri alır. Veri kodlaması ileti Framework kullanarak iletilere sonra dönüştürülür.  
   
 ```csharp
@@ -268,7 +256,7 @@ AddWSAddressingAssertion(context, encodingBindingElement.MessageVersion.Addressi
   
 -   Özel bağlama üzerinden: özel bağlama bağlama öğelerinin bir rastgele kümesini temel alan kendi bağlama oluşturmasına olanak tanır.  
   
--   Sistem tarafından sağlanan bir bağlamayı kullanarak, bizim bağlama öğesi içerir. [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]Bu sistem tarafından tanımlanan bağlama sayısı gibi sağlar `BasicHttpBinding`, `NetTcpBinding`, ve `WsHttpBinding`. Bu bağlamaların her iyi tanımlanmış bir profili ile ilişkilendirilmiş.  
+-   Sistem tarafından sağlanan bir bağlamayı kullanarak, bizim bağlama öğesi içerir. [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] Bu sistem tarafından tanımlanan bağlama sayısı gibi sağlar `BasicHttpBinding`, `NetTcpBinding`, ve `WsHttpBinding`. Bu bağlamaların her iyi tanımlanmış bir profili ile ilişkilendirilmiş.  
   
  Örnek profil bağlamasında uygulayan `SampleProfileUdpBinding`, den türetilen <xref:System.ServiceModel.Channels.Binding>. `SampleProfileUdpBinding` İçindeki en fazla dört bağlama öğeleri içerir: `UdpTransportBindingElement`, `TextMessageEncodingBindingElement CompositeDuplexBindingElement`, ve `ReliableSessionBindingElement`.  
   
@@ -488,6 +476,6 @@ svcutil http://localhost:8000/udpsample/ /reference:UdpTranport\bin\UdpTransport
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  Bu dizin mevcut değilse, Git [Windows Communication Foundation (WCF) ve .NET Framework 4 için Windows Workflow Foundation (WF) örnek](http://go.microsoft.com/fwlink/?LinkId=150780) tüm indirmek için [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] ve [!INCLUDE[wf1](../../../../includes/wf1-md.md)] örnekleri. Bu örnek aşağıdaki dizinde bulunur.  
+>  Bu dizin mevcut değilse, Git [Windows Communication Foundation (WCF) ve .NET Framework 4 için Windows Workflow Foundation (WF) örnek](http://go.microsoft.com/fwlink/?LinkId=150780) tüm Windows Communication Foundation (WCF) indirmek için ve [!INCLUDE[wf1](../../../../includes/wf1-md.md)] örnekleri. Bu örnek aşağıdaki dizinde bulunur.  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Extensibility\Transport\Udp`

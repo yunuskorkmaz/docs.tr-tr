@@ -1,30 +1,18 @@
 ---
-title: "Hizmet Kanal Düzeyi Programlama"
-ms.custom: 
+title: Hizmet Kanal Düzeyi Programlama
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
 ms.assetid: 8d8dcd85-0a05-4c44-8861-4a0b3b90cca9
-caps.latest.revision: "9"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 0a1a6ef03b3ee0cc68809ec6ba80a7eadbc44cb1
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
-ms.translationtype: MT
+ms.openlocfilehash: e48c519f6e10be4521d75345845eb5c019ec342c
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="service-channel-level-programming"></a>Hizmet Kanal Düzeyi Programlama
-Bu konuda nasıl yazılacağını açıklar bir [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] hizmet uygulaması kullanmadan <xref:System.ServiceModel.ServiceHost?displayProperty=nameWithType> ve onun ilişkili nesne modeli.  
+Bu konu, bir Windows Communication Foundation (WCF) hizmet uygulaması kullanmadan yazmak açıklar <xref:System.ServiceModel.ServiceHost?displayProperty=nameWithType> ve onun ilişkili nesne modeli.  
   
 ## <a name="receiving-messages"></a>İleti alma  
  İletileri almak ve işlemek için hazır olması için aşağıdaki adımlar gereklidir:  
@@ -40,14 +28,14 @@ Bu konuda nasıl yazılacağını açıklar bir [!INCLUDE[indigo1](../../../../i
 5.  Tüm kanal nesneleri kapatın.  
   
 #### <a name="creating-a-binding"></a>Bağlama oluşturma  
- İleti alma ve dinleme ilk adımı, bir bağlama oluşturuyor. [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]doğrudan bunlardan birini örneği tarafından kullanılan birkaç yerleşik veya sistem tarafından sağlanan bağlamaları birlikte verilir. Ayrıca, kendi özel bağlama 1 kod yaptığı bir CustomBinding sınıfı örneği tarafından da oluşturabilirsiniz.  
+ İleti alma ve dinleme ilk adımı, bir bağlama oluşturuyor. [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] doğrudan bunlardan birini örneği tarafından kullanılan birkaç yerleşik veya sistem tarafından sağlanan bağlamaları birlikte verilir. Ayrıca, kendi özel bağlama 1 kod yaptığı bir CustomBinding sınıfı örneği tarafından da oluşturabilirsiniz.  
   
  Aşağıdaki kod örneği bir örneğini oluşturur <xref:System.ServiceModel.Channels.CustomBinding?displayProperty=nameWithType> ve ekleyen bir <xref:System.ServiceModel.Channels.HttpTransportBindingElement?displayProperty=nameWithType> bağlama kanal yığını oluşturmak için kullanılan öğelerinin bir koleksiyonu olan, öğeler koleksiyonuna. Bu örnekte, yalnızca öğe koleksiyonunu sahip olduğundan <xref:System.ServiceModel.Channels.HttpTransportBindingElement>, yalnızca HTTP taşıma kanalı elde edilen kanal yığınına sahiptir.  
   
 #### <a name="building-a-channellistener"></a>Bir ChannelListener oluşturma  
  Bir bağlama oluşturduktan sonra sizi arayarak <!--zz<xref:System.ServiceModel.Channels.Binding.BuildChannelListener%601%2A?displayProperty=nameWithType>--> `System.ServiceModel.Channels.Binding.BuildChannelListener` tür parametresi oluşturmak için kanal şekli olduğu kanal dinleyicisi oluşturmak için. Bu örnekte kullanıyoruz <xref:System.ServiceModel.Channels.IReplyChannel?displayProperty=nameWithType> çünkü bir istek/yanıt ileti değişim deseni gelen iletiler için dinleme istiyoruz.  
   
- <xref:System.ServiceModel.Channels.IReplyChannel>istek iletileri ve geri göndererek iletileri yanıt almak için kullanılır. Çağırma <xref:System.ServiceModel.Channels.IReplyChannel.ReceiveRequest%2A?displayProperty=nameWithType> döndüren bir <xref:System.ServiceModel.Channels.IRequestChannel?displayProperty=nameWithType>, kullanılabilecek istek iletisi almak ve bir yanıt iletisi geri gönderilecek.  
+ <xref:System.ServiceModel.Channels.IReplyChannel> istek iletileri ve geri göndererek iletileri yanıt almak için kullanılır. Çağırma <xref:System.ServiceModel.Channels.IReplyChannel.ReceiveRequest%2A?displayProperty=nameWithType> döndüren bir <xref:System.ServiceModel.Channels.IRequestChannel?displayProperty=nameWithType>, kullanılabilecek istek iletisi almak ve bir yanıt iletisi geri gönderilecek.  
   
  Dinleyici oluştururken, biz bunu dinlediği, bu durumda ağ adresi geçirmek `http://localhost:8080/channelapp`. Genel olarak, bir veya büyük olasılıkla birden fazla adres düzenleri her taşıma kanalını destekleyen, örneğin, http ve https şemasını HTTP aktarımı destekler.  
   

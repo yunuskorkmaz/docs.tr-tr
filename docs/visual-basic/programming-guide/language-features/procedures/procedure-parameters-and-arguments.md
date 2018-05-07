@@ -1,12 +1,6 @@
 ---
-title: "Yordam Parametreleri ve Bağımsız Değişkenler (Visual Basic)"
-ms.custom: 
+title: Yordam Parametreleri ve Bağımsız Değişkenler (Visual Basic)
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
-ms.topic: article
 helpviewer_keywords:
 - procedures [Visual Basic], arguments
 - procedures [Visual Basic], argument lists
@@ -24,14 +18,11 @@ helpviewer_keywords:
 - argument lists [Visual Basic]
 - procedures [Visual Basic], parameter lists
 ms.assetid: ff275aff-aa13-40df-bd4c-63486db8c1e9
-caps.latest.revision: "21"
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: 726667950cfb227a0359bd6238c202883561749c
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: b0ab186945b456d7fb4dde3f52724b08a99e2827
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="procedure-parameters-and-arguments-visual-basic"></a>Yordam Parametreleri ve Bağımsız Değişkenler (Visual Basic)
 Çoğu durumda, bir yordam, onu çağrıldı koşullar hakkında bazı bilgiler gerekir. Yinelenen veya paylaşılan görevleri gerçekleştiren bir yordam her çağrı için farklı bilgileri kullanır. Bu bilgiler değişkenlerinin, sabitleri ve onu çağırdığınızda, yordama geçirdiğiniz ifadeler oluşur.  
@@ -64,17 +55,17 @@ Bir parametre bağımsız değişken geçirme
   
 -   Dönüştürme anahtar sözcüğü açıkça veri türüne dönüştürmek için kullanın.  
   
-### <a name="type-parameters"></a>Tür Parametreleri  
+### <a name="type-parameters"></a>Tür ParameTReleri  
  A *genel yordam* de bir veya daha fazla tanımlar *tür parametrelerindeki* normal parametrelerinin yanı sıra. Veri türleri farklı veri türleri tek tek her çağrı gereksinimlerini uyarlayabilirsiniz şekilde yordam çağrıları her zaman geçmesi için çağıran kodu genel bir yordam sağlar. Bkz: [Visual Basic'de genel yordamlar](../../../../visual-basic/programming-guide/language-features/data-types/generic-procedures.md).  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [Yordamları](./index.md)  
- [Alt yordamlar](./sub-procedures.md)  
- [İşlev yordamları](./function-procedures.md)  
- [Özellik yordamları](./property-procedures.md)  
- [İşleç yordamları](./operator-procedures.md)  
- [Nasıl yapılır: bir yordamın parametresini tanımlama](./how-to-define-a-parameter-for-a-procedure.md)  
- [Nasıl yapılır: bir yordama bağımsız değişkenler geçirme](./how-to-pass-arguments-to-a-procedure.md)  
- [Bağımsız değişkenleri değere ve başvuruya göre geçirme](./passing-arguments-by-value-and-by-reference.md)  
- [Yordam aşırı yüklemesi](./procedure-overloading.md)  
+ [Yordamlar](./index.md)  
+ [Alt Yordamlar](./sub-procedures.md)  
+ [İşlev Yordamları](./function-procedures.md)  
+ [Özellik Yordamları](./property-procedures.md)  
+ [İşleç Yordamları](./operator-procedures.md)  
+ [Nasıl yapılır: Bir Yordamın Parametresini Tanımlama](./how-to-define-a-parameter-for-a-procedure.md)  
+ [Nasıl yapılır: Bir Yordama Bağımsız Değişkenler Geçirme](./how-to-pass-arguments-to-a-procedure.md)  
+ [Bağımsız Değişkenleri Değere ve Başvuruya Göre Geçirme](./passing-arguments-by-value-and-by-reference.md)  
+ [Yordam Aşırı Yüklemesi](./procedure-overloading.md)  
  [Visual Basic'de tür dönüştürmeleri](../../../../visual-basic/programming-guide/language-features/data-types/type-conversions.md)

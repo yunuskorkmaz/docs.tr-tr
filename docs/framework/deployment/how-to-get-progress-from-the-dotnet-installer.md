@@ -1,31 +1,19 @@
 ---
-title: "Nasıl Yapılır: .NET Framework 4.5 Yükleyicisinden İlerleme Durumunu Alma"
-ms.custom: 
+title: 'Nasıl Yapılır: .NET Framework 4.5 Yükleyicisinden İlerleme Durumunu Alma'
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - cpp
 helpviewer_keywords:
 - progress information, .NET Framework installer
 - .NET Framework, installing
 ms.assetid: 0a1a3ba3-7e46-4df2-afd3-f3a8237e1c4f
-caps.latest.revision: 
 author: mairaw
 ms.author: mairaw
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: c11d1c3469100b8bd0eb530a59bb3a01b152f3f1
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 84bd96f27e8276546bef0dd9994163ccd843ac20
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-get-progress-from-the-net-framework-45-installer"></a>Nasıl Yapılır: .NET Framework 4.5 Yükleyicisinden İlerleme Durumunu Alma
 [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] Yeniden dağıtılabilir çalışma zamanı. .NET Framework'ün bu sürümü için uygulamalar geliştirirseniz, uygulamanızın kurulumunun bir önkoşulu olarak [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] kurulumunu dahil edebilirsiniz (bağlayabilirsiniz). Özelleştirilmiş veya birleştirilmiş kurulum deneyimi sunmak için sessizce başlatma isteyebilirsiniz [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] Kurulum ve uygulamanızın Kurulum ilerleme gösterirken ilerleme durumunu izleyebilirsiniz. Sessiz izlemeyi etkinleştirmek için [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] (hangi izlenebilir) ayarı kurulumunuzu (İzleyici veya bağlayıcı) ile iletişim kurmak için bir bellek eşlemeli g/ç (olması) kesimini kullanarak bir protokol tanımlar. Bu protokol ilerleme durumu bilgileri elde etmek için ayrıntılı sonuçları almak, iletileri yanıtlayın ve iptal etmek bir bağlayıcı için bir yol tanımlar [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] kurulumu.  

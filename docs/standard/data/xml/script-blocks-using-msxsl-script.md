@@ -1,29 +1,18 @@
 ---
-title: "Komut dosyası blokları kullanarak msxsl: Script"
-ms.custom: 
+title: 'Komut dosyası blokları kullanarak msxsl: Script'
 ms.date: 03/30/2017
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
 ms.technology: dotnet-standard
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
 ms.assetid: fde6f43f-c594-486f-abcb-2211197fae20
-caps.latest.revision: "4"
 author: mairaw
 ms.author: mairaw
-manager: wpickett
-ms.workload:
-- dotnet
-- dotnetcore
-ms.openlocfilehash: badf5511c5638d98d25997f31a3aff8dc11144d6
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: 23961caa7b307df46b20b3811d0883d4c702a357
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="script-blocks-using-msxslscript"></a>Komut dosyası blokları kullanarak msxsl: Script
 <xref:System.Xml.Xsl.XslCompiledTransform> Sınıfı kullanarak katıştırılmış komut dosyalarını destekler `msxsl:script` öğesi. Stil sayfası yüklendiğinde, tanımlı hiçbir işlev Microsoft Ara dili (MSIL) kod belge nesne modeli (CodeDOM) tarafından derlenir ve çalışma zamanı sırasında yürütülür. Katıştırılmış betik bloğundan oluşturulan derleme için stil sayfası oluşturulan derleme daha ayrıdır.  
@@ -71,7 +60,7 @@ ms.lasthandoff: 12/23/2017
 |`Result Tree Fragment`|<xref:System.Xml.XPath.XPathNavigator>|  
 |`Node Set`|<xref:System.Xml.XPath.XPathNodeIterator>|  
   
- CLR sayısal türler dönüştürülür <xref:System.Double>. <xref:System.DateTime> Türü için dönüştürülür <xref:System.String>. <xref:System.Xml.XPath.IXPathNavigable>türlerine dönüştürülür <xref:System.Xml.XPath.XPathNavigator>. **XPathNavigator []** dönüştürülür <xref:System.Xml.XPath.XPathNodeIterator>.  
+ CLR sayısal türler dönüştürülür <xref:System.Double>. <xref:System.DateTime> Türü için dönüştürülür <xref:System.String>. <xref:System.Xml.XPath.IXPathNavigable> türlerine dönüştürülür <xref:System.Xml.XPath.XPathNavigator>. **XPathNavigator []** dönüştürülür <xref:System.Xml.XPath.XPathNodeIterator>.  
   
  Tüm diğer türleri hata atar.  
   

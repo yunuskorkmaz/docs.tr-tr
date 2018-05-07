@@ -1,22 +1,12 @@
 ---
-title: "Sıralama veri (Visual Basic)"
-ms.custom: 
+title: Sıralama veri (Visual Basic)
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 6f81065c-0c89-4bf3-a6d8-442273f8810e
-caps.latest.revision: "3"
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: 8f17c6ecad721dd3a48a01c09693b0a1cf723a5b
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: f52000d37df45c97754463de1e81cd523806e9c4
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="sorting-data-visual-basic"></a>Sıralama veri (Visual Basic)
 Sıralama işlemi bir veya daha fazla özniteliklerini temel alarak bir sıradaki sıralar. İlk sıralama ölçütü birincil sıralama öğeleri gerçekleştirir. İkinci bir sıralama ölçütü belirterek, her birincil sıralama grup içindeki öğeleri sıralama yapabilirsiniz.  
@@ -29,7 +19,7 @@ Sıralama işlemi bir veya daha fazla özniteliklerini temel alarak bir sıradak
   
 ## <a name="methods"></a>Yöntemler  
   
-|Yöntem adı|Açıklama|Visual Basic sorgu ifade sözdizimi|Daha Fazla Bilgi|  
+|Yöntem adı|Açıklama|Visual Basic sorgu ifade sözdizimi|Daha fazla bilgi|  
 |-----------------|-----------------|------------------------------------------|----------------------|  
 |OrderBy|Artan düzende değerlerini sıralar.|`Order By`|<xref:System.Linq.Enumerable.OrderBy%2A?displayProperty=nameWithType><br /><br /> <xref:System.Linq.Queryable.OrderBy%2A?displayProperty=nameWithType>|  
 |OrderByDescending|Azalan düzende değerlerini sıralar.|`Order By … Descending`|<xref:System.Linq.Enumerable.OrderByDescending%2A?displayProperty=nameWithType><br /><br /> <xref:System.Linq.Queryable.OrderByDescending%2A?displayProperty=nameWithType>|  
@@ -154,6 +144,6 @@ MsgBox(sb.ToString())
 ## <a name="see-also"></a>Ayrıca Bkz.  
  <xref:System.Linq>  
  [Standart sorgu işleçlerine genel bakış (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/standard-query-operators-overview.md)  
- [Order By tümcesi](../../../../visual-basic/language-reference/queries/order-by-clause.md)  
+ [Order By Yan Tümcesi](../../../../visual-basic/language-reference/queries/order-by-clause.md)  
  [Nasıl yapılır: sorgu sonuçlarını sıralama](../../../../visual-basic/programming-guide/language-features/linq/how-to-sort-query-results-by-using-linq.md)  
  [Nasıl yapılır: sıralama veya filtre metni verilerle herhangi bir sözcük veya alana (LINQ) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/how-to-sort-or-filter-text-data-by-any-word-or-field-linq.md)

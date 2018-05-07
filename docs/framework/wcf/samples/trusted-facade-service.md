@@ -1,27 +1,15 @@
 ---
-title: "Güvenilir Görünüm Hizmeti"
-ms.custom: 
+title: Güvenilir Görünüm Hizmeti
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: c34d1a8f-e45e-440b-a201-d143abdbac38
-caps.latest.revision: "14"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 8c0d1d0473a821510ee70e386058a2b3249221dd
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
-ms.translationtype: MT
+ms.openlocfilehash: 08e115d297439910c16601051539a23a5a6bebc9
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="trusted-facade-service"></a>Güvenilir Görünüm Hizmeti
-Bu senaryo örnek bir hizmetinden Arayanın kimlik bilgilerini kullanarak başka bir akış yapmayı gösteren [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] güvenlik altyapısı.  
+Bu senaryo örneği başka bir Windows Communication Foundation (WCF) kullanarak bir hizmetten Arayanın kimlik bilgileri akış yapmayı gösteren güvenlik altyapısı.  
   
  Cephesi hizmetini kullanan bir ortak ağa hizmeti tarafından sağlanan işlevselliği kullanıma sunmak için ortak bir tasarım deseni değil. Cephesi hizmeti genellikle çevre ağındaki (DMZ, sivil bölge ve denetimli alt ağ olarak da bilinir) bulunur ve iş mantığını uygular ve iç verilere erişimi olan bir arka uç hizmeti ile iletişim kurar. Cephesi hizmeti ve arka uç hizmeti arasındaki iletişim kanalını bir güvenlik duvarı üzerinden gider ve yalnızca tek bir amaç için genellikle sınırlıdır.  
   
@@ -137,7 +125,7 @@ public string GetCallerIdentity()
 }  
 ```  
   
- Önceki kodda gösterildiği gibi parola ayarlanmamış `ClientCredentials` özelliği, yalnızca kullanıcı adı olarak ayarlanmış. [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]güvenlik altyapısı tam olarak bu senaryoda gerekli olduğu bir kullanıcı adı güvenlik belirteci parolasız bu durumda, oluşturur.  
+ Önceki kodda gösterildiği gibi parola ayarlanmamış `ClientCredentials` özelliği, yalnızca kullanıcı adı olarak ayarlanmış. [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] güvenlik altyapısı tam olarak bu senaryoda gerekli olduğu bir kullanıcı adı güvenlik belirteci parolasız bu durumda, oluşturur.  
   
  Arka uç hizmeti kullanıcıadı güvenlik belirtecinde yer alan bilgileri kimliğinin doğrulanması gerekir. Varsayılan olarak, [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] belirtilen parola kullanılarak bir Windows hesabı kullanıcı eşlemek girişimlerini güvenlik. Bu durumda, sağlanan parola yoktur ve arka uç hizmetine kimlik doğrulaması cephesi hizmeti tarafından zaten gerçekleştirildiği için kullanıcı kimlik doğrulaması için gerekli değildir. Bu işlev uygulamak için [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)], özel bir `UserNamePasswordValidator` , yalnızca bir kullanıcı adı belirteç belirtilir ve herhangi bir ek kimlik doğrulaması gerçekleştirmez zorlayan sağlanır.  
   
@@ -285,7 +273,7 @@ Press <ENTER> to terminate client.
   
 4.  Ayrı konsol penceresinde \FacadeService\bin dizininden FacadeService.exe başlatma  
   
-5.  Launch Client.exe from \client\bin. İstemci etkinliği istemci konsol uygulaması görüntülenir.  
+5.  Client.exe \client\bin başlatın. İstemci etkinliği istemci konsol uygulaması görüntülenir.  
   
 6.  İstemci ve hizmet iletişim kurabildiğinden değilseniz bkz [sorun giderme ipuçları](http://msdn.microsoft.com/library/8787c877-5e96-42da-8214-fa737a38f10b).  
   
@@ -298,7 +286,7 @@ Press <ENTER> to terminate client.
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  Bu dizin mevcut değilse, Git [Windows Communication Foundation (WCF) ve .NET Framework 4 için Windows Workflow Foundation (WF) örnek](http://go.microsoft.com/fwlink/?LinkId=150780) tüm indirmek için [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] ve [!INCLUDE[wf1](../../../../includes/wf1-md.md)] örnekleri. Bu örnek aşağıdaki dizinde bulunur.  
+>  Bu dizin mevcut değilse, Git [Windows Communication Foundation (WCF) ve .NET Framework 4 için Windows Workflow Foundation (WF) örnek](http://go.microsoft.com/fwlink/?LinkId=150780) tüm Windows Communication Foundation (WCF) indirmek için ve [!INCLUDE[wf1](../../../../includes/wf1-md.md)] örnekleri. Bu örnek aşağıdaki dizinde bulunur.  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Scenario\TrustedFacade`  
   

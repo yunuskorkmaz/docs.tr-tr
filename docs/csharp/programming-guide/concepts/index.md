@@ -1,19 +1,12 @@
 ---
 title: Programlama Kavramları (C#)
 ms.date: 07/20/2015
-ms.prod: .net
-ms.technology:
-- devlang-csharp
-ms.topic: article
 ms.assetid: 3227afd5-4794-484b-b83b-0f1f94a0476b
-caps.latest.revision: 4
-author: BillWagner
-ms.author: wiwagn
-ms.openlocfilehash: 9c82430ec58b81f37a33f4c246ea40f6da465af8
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.openlocfilehash: a557812ff99f09f20d3eb17ea7ff4dd80483a4a4
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="programming-concepts-c"></a>Programlama Kavramları (C#)
 Bu bölümde, C# dilinde programlama kavramları açıklanmaktadır.  
@@ -33,7 +26,7 @@ Bu bölümde, C# dilinde programlama kavramları açıklanmaktadır.
 |[Dil ile tümleşik sorgu (LINQ) (C#)](../../../csharp/programming-guide/concepts/linq/index.md)|C# dili sözdizimi ve ilişkisel veritabanları, XML belgeleri, veri kümeleri ve bellek içi koleksiyonları sorgulamak için model güçlü sorgu özellikleri açıklanmaktadır.|  
 |[Nesne odaklı programlama (C#)](../../../csharp/programming-guide/concepts/object-oriented-programming.md)|Kapsülleme, devralma ve çok biçimlilik gibi ortak nesne yönelimli kavramlarını açıklar.|  
 |[Yansıma (C#)](../../../csharp/programming-guide/concepts/reflection.md)|Yansıma dinamik olarak bir türünün bir örneği oluşturmak, var olan bir nesne için bağ türü veya varolan bir nesneden türünü almak ve onun yöntemleri çağırma veya özellikleri ve alanları erişim için nasıl kullanılacağını açıklar.|  
-|[Seri hale getirme (C#)](../../../csharp/programming-guide/concepts/serialization/index.md)|İkili dosya, XML, anahtar kavramlarını açıklar ve SOAP seri hale getirme.|  
+|[Serileştirme (C# )](../../../csharp/programming-guide/concepts/serialization/index.md)|İkili dosya, XML, anahtar kavramlarını açıklar ve SOAP seri hale getirme.|  
 |[İş parçacığı (C#)](../../../csharp/programming-guide/concepts/threading/index.md)|.NET iş parçacığı modeline genel bakış sağlar ve uygulamalarınızın yanıtlama hızı ve performansı artırmak için aynı anda birden çok görevleri gerçekleştirir kodunun nasıl yazılacağını gösterir.|  
   
 ## <a name="related-sections"></a>İlgili Bölümler  

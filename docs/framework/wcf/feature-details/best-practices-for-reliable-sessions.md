@@ -1,24 +1,12 @@
 ---
-title: "Güvenli Oturumlar için En İyi Uygulamalar"
-ms.custom: 
+title: Güvenli Oturumlar için En İyi Uygulamalar
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: b94f6e01-8070-40b6-aac7-a2cb7b4cb4f2
-caps.latest.revision: "6"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: c022db62103826aa89e9035fd36c050d1f7c0f84
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 1d9671e7e3124d535b66de8cd8468f76dcb32b10
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="best-practices-for-reliable-sessions"></a>Güvenli Oturumlar için En İyi Uygulamalar
 
@@ -26,7 +14,7 @@ Bu konu, güvenilir oturumlar için en iyi uygulamaları açıklar.
 
 ## <a name="setting-maxtransferwindowsize"></a>MaxTransferWindowSize ayarlama
 
-Güvenilir oturumlar [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] aktarımı pencere iletileri istemci ve hizmet tutmak için kullanın. Yapılandırılabilir özellik <xref:System.ServiceModel.Channels.ReliableSessionBindingElement.MaxTransferWindowSize%2A> aktarımı penceresi tutun kaç iletileri gösterir.
+Güvenilir oturumlar Windows Communication Foundation (WCF) aktarımı pencere iletileri istemci ve hizmet tutmak için kullanın. Yapılandırılabilir özellik <xref:System.ServiceModel.Channels.ReliableSessionBindingElement.MaxTransferWindowSize%2A> aktarımı penceresi tutun kaç iletileri gösterir.
 
 Gönderenin, bu aktarım penceresi için onay beklenirken tutabilir kaç iletileri gösterir; Alıcı, hizmet için arabelleğe alınacak kaç iletileri gösterir.
 
@@ -56,7 +44,7 @@ Aynı kullanmanız önerilir `MaxTransferWindowSize` gönderici ve alıcı.
 
 *Akış denetimi* sağlar göndereni ve alıcısı ayak birbirleri ile tutmak, diğer bir deyişle, iletiler tüketilen ve üzerinde işlem mekanizmasıdır üretilen kadar hızlı. İstemci ve hizmet aktarımı pencere boyutu göndereni ve alıcısı makul bir eşitleme pencere içinde olmasını sağlar.
 
-Özellik set önerilen <xref:System.ServiceModel.Channels.ReliableSessionBindingElement.FlowControlEnabled%2A> için `true` arasındaki güvenilir bir oturumda kullanırken bir [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] istemci ve [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] hizmet.
+Özellik set önerilen <xref:System.ServiceModel.Channels.ReliableSessionBindingElement.FlowControlEnabled%2A> için `true` bir WCF istemcisi ve bir WCF hizmeti arasında güvenli bir oturum kullanırken.
 
 ## <a name="setting-maxpendingchannels"></a>MaxPendingChannels ayarlama
 

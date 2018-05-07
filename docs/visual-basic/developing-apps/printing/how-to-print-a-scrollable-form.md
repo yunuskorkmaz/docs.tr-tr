@@ -1,22 +1,15 @@
 ---
-title: "Nasıl Yapılır: Kaydırılabilir Form Yazdırma (Visual Basic)"
+title: 'Nasıl Yapılır: Kaydırılabilir Form Yazdırma (Visual Basic)'
 ms.date: 07/20/2015
-ms.prod: .net
-ms.suite: 
-ms.technology: devlang-visual-basic
-ms.topic: article
 helpviewer_keywords:
 - entire form [Visual Basic], printing
 - scrollable form [Visual Basic], printing
 ms.assetid: 1196e1cf-b77f-4928-a3e4-85b51ba3787d
-caps.latest.revision: "15"
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: 380e0f833dc69718142809c99ed7615256dd2e73
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: d43c2e0e564f6f0c37831cd3105a16c4bc4aaea0
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-print-a-scrollable-form-visual-basic"></a>Nasıl Yapılır: Kaydırılabilir Form Yazdırma (Visual Basic)
 <xref:Microsoft.VisualBasic.PowerPacks.Printing.PrintForm> Bileşen sağlar, hızlı bir form görüntüsü kullanmadan yazdırmak bir <xref:System.Drawing.Printing.PrintDocument> bileşeni. Varsayılan olarak, yalnızca form görüntülenmekte kısmını yazdırılır; Kullanıcı formu çalışma zamanında yeniden boyutlandırılabilir değilse, görüntüyü tasarlandığı gibi yazdırabilir değil. Formu yeniden boyutlandırılmış bile, aşağıdaki yordamı kaydırılabilir form tam istemci alanını yazdırma gösterilmektedir.  
@@ -43,6 +36,6 @@ ms.lasthandoff: 11/21/2017
 ## <a name="see-also"></a>Ayrıca Bkz.  
  <xref:Microsoft.VisualBasic.PowerPacks.Printing.PrintForm.PrintAction%2A>  
  <xref:Microsoft.VisualBasic.PowerPacks.Printing.PrintForm.Print%2A>  
- [PrintForm bileşeni](../../../visual-basic/developing-apps/printing/printform-component.md)  
- [Nasıl yapılır: formun istemci alanını yazdırma](../../../visual-basic/developing-apps/printing/how-to-print-the-client-area-of-a-form.md)  
- [Nasıl yapılır: formun istemci alanlarını ve yazdırma](../../../visual-basic/developing-apps/printing/how-to-print-client-and-non-client-areas-of-a-form.md)
+ [PrintForm Bileşeni](../../../visual-basic/developing-apps/printing/printform-component.md)  
+ [Nasıl Yapılır: Formun İstemci Alanını Yazdırma](../../../visual-basic/developing-apps/printing/how-to-print-the-client-area-of-a-form.md)  
+ [Nasıl Yapılır: Formun İstemci Alanlarını ve Diğerlerini Yazdırma](../../../visual-basic/developing-apps/printing/how-to-print-client-and-non-client-areas-of-a-form.md)

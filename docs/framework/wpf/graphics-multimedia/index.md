@@ -1,14 +1,6 @@
 ---
 title: Grafikler ve Multimedya
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-wpf
-ms.tgt_pltfrm: ''
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -20,21 +12,15 @@ helpviewer_keywords:
 - graphics features [WPF]
 - transition effects [WPF]
 ms.assetid: 1817d9dc-3d6c-46cb-afc8-63b0bae35e37
-caps.latest.revision: 30
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 013ae46e2d90a9eda42d33e95e590812489fa04b
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.openlocfilehash: 74375c468170d58cfa79031ab0030477c29bd445
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="graphics-and-multimedia"></a>Grafikler ve Multimedya
 <a name="introduction"></a>
-[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]multimedya, vektör grafikleri, animasyon ve ilginç kullanıcı arabirimleri ve içerik oluşturmada geliştiricilere kolaylaşır içerik oluşturma için destek sağlar. Kullanarak [!INCLUDE[TLA#tla_visualstu](../../../../includes/tlasharptla-visualstu-md.md)], vektör grafikleri veya karmaşık bir animasyon oluşturabilir ve ortam uygulamalarınıza tümleştirebilirsiniz.  
+[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] multimedya, vektör grafikleri, animasyon ve ilginç kullanıcı arabirimleri ve içerik oluşturmada geliştiricilere kolaylaşır içerik oluşturma için destek sağlar. Kullanarak [!INCLUDE[TLA#tla_visualstu](../../../../includes/tlasharptla-visualstu-md.md)], vektör grafikleri veya karmaşık bir animasyon oluşturabilir ve ortam uygulamalarınıza tümleştirebilirsiniz.  
   
  Bu konu, grafik, animasyon ve ortam özelliklerini tanıtır [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)], grafik, geçiş efektleri, ses ve video uygulamalarınıza eklemek etkinleştirin.  
   
@@ -66,7 +52,7 @@ ms.lasthandoff: 01/19/2018
  WPF yüksek kaliteli 2B grafik için destek içerir. İşlev Fırçalar, geometri, görüntüler, şekiller ve dönüşümler içerir. Daha fazla bilgi için bkz: [grafik](../../../../docs/framework/wpf/graphics-multimedia/graphics.md). Grafik öğelerin işlenmesi dayanır <xref:System.Windows.Media.Visual> sınıfı. Ekranında visual nesnelerin yapısı görsel ağaç tarafından tanımlanır. Daha fazla bilgi için bkz: [WPF Grafik işleme genel bakış](../../../../docs/framework/wpf/graphics-multimedia/wpf-graphics-rendering-overview.md).  
   
 ### <a name="2-d-shapes"></a>2B şekiller  
- [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]yaygın olarak kullanılan, vektör çizilmiş kitaplığını sağlar [!INCLUDE[TLA2#tla_2d](../../../../includes/tla2sharptla-2d-md.md)] dikdörtgenler ve aşağıda gösterilmiştir elipsler gibi şekiller.  
+ [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] yaygın olarak kullanılan, vektör çizilmiş kitaplığını sağlar [!INCLUDE[TLA2#tla_2d](../../../../includes/tla2sharptla-2d-md.md)] dikdörtgenler ve aşağıda gösterilmiştir elipsler gibi şekiller.  
   
  ![Elipsler ve dikdörtgenler](../../../../docs/framework/wpf/graphics-multimedia/media/wpfintrofigure4.PNG "WPFIntroFigure4")  
   
@@ -102,7 +88,7 @@ End Class
   
  Aşağıdaki şekilde önceki çıktı gösterilmiştir [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] biçimlendirme ve arka plan kodu.  
   
- ![Metinle "elips &#33; tıkladığınız" penceresi ] (../../../../docs/framework/wpf/graphics-multimedia/media/wpfintrofigure12.png "WPFIntroFigure12")  
+ ![Metin içeren bir pencere "elips tıklattığınız&#33;"](../../../../docs/framework/wpf/graphics-multimedia/media/wpfintrofigure12.png "WPFIntroFigure12")  
   
  Daha fazla bilgi için bkz: [şekilleri ve WPF genel bakış temel çizim](../../../../docs/framework/wpf/graphics-multimedia/shapes-and-basic-drawing-in-wpf-overview.md). Tanıtıcı bir örnek için bkz: [şekil öğeleri örneği](http://go.microsoft.com/fwlink/?LinkID=160037).  
   
@@ -114,7 +100,7 @@ End Class
  Daha fazla bilgi için bkz: [geometrisi](../../../../docs/framework/wpf/graphics-multimedia/geometry-overview.md). Tanıtıcı bir örnek için bkz: [geometri örneği](http://go.microsoft.com/fwlink/?LinkID=159989).  
   
 ### <a name="2-d-effects"></a>2B efektler  
- [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]kitaplığını sağlar [!INCLUDE[TLA2#tla_2d](../../../../includes/tla2sharptla-2d-md.md)] çeşitli efektler oluşturmak için kullanabileceğiniz sınıfları. [!INCLUDE[TLA2#tla_2d](../../../../includes/tla2sharptla-2d-md.md)] İşleme yeteneğini [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] boyamak olanağı sağlar [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] gradyan, bit eşlemler, çizimler ve videolar; olan öğenin ve döndürme, kullanarak işlemek için ölçekleme ve eğriltme. Aşağıdaki çizim bir örnek kullanarak elde edebileceğiniz birçok etkileri verir [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] Fırçalar.  
+ [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] kitaplığını sağlar [!INCLUDE[TLA2#tla_2d](../../../../includes/tla2sharptla-2d-md.md)] çeşitli efektler oluşturmak için kullanabileceğiniz sınıfları. [!INCLUDE[TLA2#tla_2d](../../../../includes/tla2sharptla-2d-md.md)] İşleme yeteneğini [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] boyamak olanağı sağlar [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] gradyan, bit eşlemler, çizimler ve videolar; olan öğenin ve döndürme, kullanarak işlemek için ölçekleme ve eğriltme. Aşağıdaki çizim bir örnek kullanarak elde edebileceğiniz birçok etkileri verir [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] Fırçalar.  
   
  ![Farklı fırçalar çizimi](../../../../docs/framework/wpf/graphics-multimedia/media/wpfintrofigure6.PNG "WPFIntroFigure6")  
   
@@ -122,7 +108,7 @@ End Class
   
 <a name="rendering"></a>   
 ## <a name="3-d-rendering"></a>3B işleme  
- [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]bir dizi sağlar [!INCLUDE[TLA2#tla_3d](../../../../includes/tla2sharptla-3d-md.md)] tümleştirileceğini işleme yeteneklerini [!INCLUDE[TLA2#tla_2d](../../../../includes/tla2sharptla-2d-md.md)] grafik desteği [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] daha heyecan verici bir düzen oluşturmak için sırayla [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)]ve veri görselleştirme. Spektrumun bir ucunda [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] işlenecek sağlar [!INCLUDE[TLA2#tla_2d](../../../../includes/tla2sharptla-2d-md.md)] yüzeyleriyle görüntüleri [!INCLUDE[TLA2#tla_3d](../../../../includes/tla2sharptla-3d-md.md)] şekiller, aşağıdaki çizimde gösterilmektedir.  
+ [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] bir dizi sağlar [!INCLUDE[TLA2#tla_3d](../../../../includes/tla2sharptla-3d-md.md)] tümleştirileceğini işleme yeteneklerini [!INCLUDE[TLA2#tla_2d](../../../../includes/tla2sharptla-2d-md.md)] grafik desteği [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] daha heyecan verici bir düzen oluşturmak için sırayla [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)]ve veri görselleştirme. Spektrumun bir ucunda [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] işlenecek sağlar [!INCLUDE[TLA2#tla_2d](../../../../includes/tla2sharptla-2d-md.md)] yüzeyleriyle görüntüleri [!INCLUDE[TLA2#tla_3d](../../../../includes/tla2sharptla-3d-md.md)] şekiller, aşağıdaki çizimde gösterilmektedir.  
   
  ![Visual3D örnek ekran görüntüsü](../../../../docs/framework/wpf/graphics-multimedia/media/wpfintrofigure13.png "WPFIntroFigure13")  
   
@@ -154,7 +140,7 @@ End Class
 <MediaElement Source="media\numbers.wmv" Width="450" Height="250" />  
 ```  
   
- <xref:System.Windows.Controls.MediaElement>video ve ses çalma yeteneğine sahiptir ve özel kolay oluşturulmasına izin için Genişletilebilir [!INCLUDE[TLA2#tla_ui#plural](../../../../includes/tla2sharptla-uisharpplural-md.md)].  
+ <xref:System.Windows.Controls.MediaElement> video ve ses çalma yeteneğine sahiptir ve özel kolay oluşturulmasına izin için Genişletilebilir [!INCLUDE[TLA2#tla_ui#plural](../../../../includes/tla2sharptla-uisharpplural-md.md)].  
   
  Daha fazla bilgi için bkz: [multimedya genel bakış](../../../../docs/framework/wpf/graphics-multimedia/multimedia-overview.md).  
   

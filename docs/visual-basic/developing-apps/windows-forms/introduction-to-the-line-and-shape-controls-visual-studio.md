@@ -1,24 +1,17 @@
 ---
-title: "Çizgi ve Şekil Denetimlerine Giriş (Visual Studio)"
+title: Çizgi ve Şekil Denetimlerine Giriş (Visual Studio)
 ms.date: 07/20/2015
-ms.prod: .net
-ms.suite: 
-ms.technology: devlang-visual-basic
-ms.topic: article
 helpviewer_keywords:
 - Line control [Visual Basic], overview
 - Shape control [Visual Basic], overview
 - lines, drawing
 - shapes, drawing
 ms.assetid: 5c4e8b1a-0733-4020-af6c-f582f4026728
-caps.latest.revision: "6"
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: e691d57c6de640c83556937eeddedf89e79b6846
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 3ad740f7dd15194830959a5493970b4ba54ce142
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="introduction-to-the-line-and-shape-controls-visual-studio"></a>Çizgi ve Şekil Denetimlerine Giriş (Visual Studio)
 Visual Basic Power Packs çizgi ve Şekil denetimleri, formlar ve kapsayıcıları çizgiler ve şekiller çizme sağlayan üç grafik denetimleri kümesidir. <xref:Microsoft.VisualBasic.PowerPacks.LineShape> Denetimi yatay, dikey ve çapraz çizgi çizmek için kullanılır. <xref:Microsoft.VisualBasic.PowerPacks.OvalShape> Denetimi daire ve Oval, çizmek için kullanılır ve <xref:Microsoft.VisualBasic.PowerPacks.RectangleShape> denetimi dikdörtgenler ve kareler çizmek için kullanılır.  
@@ -55,6 +48,6 @@ Visual Basic Power Packs çizgi ve Şekil denetimleri, formlar ve kapsayıcılar
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
  <xref:Microsoft.VisualBasic.PowerPacks>  
- [Nasıl yapılır: LineShape denetimiyle](../../../visual-basic/developing-apps/windows-forms/how-to-draw-lines-with-the-lineshape-control-visual-studio.md)  
- [Nasıl yapılır: OvalShape ve RectangleShape denetimleriyle şekil çizme](../../../visual-basic/developing-apps/windows-forms/how-to-draw-shapes-with-the-ovalshape-and-rectangleshape-controls.md)  
- [Nasıl yapılır: şekiller arasında sekmeyle gitmeyi etkinleştirme](../../../visual-basic/developing-apps/windows-forms/how-to-enable-tabbing-between-shapes-visual-studio.md)
+ [Nasıl Yapılır: LineShape Denetimiyle Çizgi Çizme](../../../visual-basic/developing-apps/windows-forms/how-to-draw-lines-with-the-lineshape-control-visual-studio.md)  
+ [Nasıl Yapılır: OvalShape ve RectangleShape Denetimleriyle Şekil Çizme](../../../visual-basic/developing-apps/windows-forms/how-to-draw-shapes-with-the-ovalshape-and-rectangleshape-controls.md)  
+ [Nasıl Yapılır: Şekiller Arasında Sekmeyle Gitmeyi Etkinleştirme](../../../visual-basic/developing-apps/windows-forms/how-to-enable-tabbing-between-shapes-visual-studio.md)

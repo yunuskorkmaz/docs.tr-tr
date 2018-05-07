@@ -1,30 +1,21 @@
 ---
-title: "Nasıl yapılır: Numaralandırmaları Bildirme (Visual Basic)"
-ms.custom: 
+title: 'Nasıl yapılır: Numaralandırmaları Bildirme (Visual Basic)'
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
-ms.topic: article
 helpviewer_keywords:
 - declarations [Visual Basic], enumerations
 - enumerations [Visual Basic], declaring
 - declaring enumerations [Visual Basic]
 ms.assetid: db4ca1c3-f429-4c81-ae81-29e0157b29fd
-caps.latest.revision: "24"
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: 938550ebbfcf099729db3de96b809549cb234d81
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: e2dbdbbf6bf7fe3e4b71cbe7edc7a19b18f96ef2
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-declare-enumerations-visual-basic"></a>Nasıl yapılır: Numaralandırmaları Bildirme (Visual Basic)
 Bir numaralandırma ile oluşturduğunuz `Enum` deyiminin bildirimleri bölümünde bir sınıf veya modülü. Bir yöntem içinde bir numaralandırmayı bildiremezsiniz. Uygun erişim düzeyini belirtmek için kullanın `Private`, `Protected`, `Friend`, veya `Public`.  
   
- Bir `Enum` türüne sahip bir ad, bir temel alınan türü ve bir dizi alanları, her bir sabiti temsil eden. Ad geçerli bir Visual Basic .NET niteleyici olmalıdır. Temel alınan tür tamsayı türlerden biri olmalıdır:`Byte`, `Short`, `Long` veya `Integer`. `Integer`varsayılandır. Numaralandırmalar her zaman kesin türü belirtilmiş ve tamsayı türle birbirinin yerine geçemez.  
+ Bir `Enum` türüne sahip bir ad, bir temel alınan türü ve bir dizi alanları, her bir sabiti temsil eden. Ad geçerli bir Visual Basic .NET niteleyici olmalıdır. Temel alınan tür tamsayı türlerden biri olmalıdır:`Byte`, `Short`, `Long` veya `Integer`. `Integer` varsayılandır. Numaralandırmalar her zaman kesin türü belirtilmiş ve tamsayı türle birbirinin yerine geçemez.  
   
  Numaralandırmalar kayan nokta değerlerine sahip olamaz. Kayan nokta değeri olan bir numaralandırma atanmışsa `Option Strict On`, derleyici hatası sonuçları. Varsa `Option Strict` olan `Off`, değer otomatik olarak dönüştürülür `Enum` türü.  
   
@@ -51,11 +42,11 @@ Bir numaralandırma ile oluşturduğunuz `Enum` deyiminin bildirimleri bölümü
      [!code-vb[VbEnumsTask#6](../../../../visual-basic/language-reference/statements/codesnippet/VisualBasic/how-to-declare-enumerations_4.vb)]  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [Numaralandırmalar ve ad niteliği](../../../../visual-basic/programming-guide/language-features/constants-enums/enumerations-and-name-qualification.md)  
- [Nasıl yapılır: bir numaralandırma üyesine başvurma](../../../../visual-basic/programming-guide/language-features/constants-enums/how-to-refer-to-an-enumeration-member.md)  
+ [Sabit Listeleri ve Ad Niteliği](../../../../visual-basic/programming-guide/language-features/constants-enums/enumerations-and-name-qualification.md)  
+ [Nasıl yapılır: Bir Sabit Listesi Üyesine Başvurma](../../../../visual-basic/programming-guide/language-features/constants-enums/how-to-refer-to-an-enumeration-member.md)  
  [Nasıl yapılır: Visual Basic'de numaralandırma yoluyla yineleme](../../../../visual-basic/programming-guide/language-features/constants-enums/how-to-iterate-through-an-enumeration.md)  
- [Nasıl yapılır: bir numaralandırma değeriyle ilişkili dizeyi belirleme](../../../../visual-basic/programming-guide/language-features/constants-enums/how-to-determine-the-string-associated-with-an-enumeration-value.md)  
- [Bir numaralandırmanın ne zaman kullanılacağı](../../../../visual-basic/programming-guide/language-features/constants-enums/when-to-use-an-enumeration.md)  
- [Sabitlere genel bakış](../../../../visual-basic/programming-guide/language-features/constants-enums/constants-overview.md)  
- [Sabit ve değişmez değerli veri türleri](../../../../visual-basic/programming-guide/language-features/constants-enums/constant-and-literal-data-types.md)  
- [Sabitler ve numaralandırmalar](../../../../visual-basic/language-reference/constants-and-enumerations.md)
+ [Nasıl yapılır: Bir Sabit Listesi Değeriyle İlişkili Dizeyi Belirleme](../../../../visual-basic/programming-guide/language-features/constants-enums/how-to-determine-the-string-associated-with-an-enumeration-value.md)  
+ [Sabit Listesi Ne Zaman Kullanılır?](../../../../visual-basic/programming-guide/language-features/constants-enums/when-to-use-an-enumeration.md)  
+ [Sabitlere Genel Bakış](../../../../visual-basic/programming-guide/language-features/constants-enums/constants-overview.md)  
+ [Sabit ve Değişmez Değerli Veri Türleri](../../../../visual-basic/programming-guide/language-features/constants-enums/constant-and-literal-data-types.md)  
+ [Sabitler ve Sabit Listeleri](../../../../visual-basic/language-reference/constants-and-enumerations.md)

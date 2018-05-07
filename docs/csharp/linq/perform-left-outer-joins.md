@@ -1,20 +1,13 @@
 ---
-title: "Sol dış birleştirmeler gerçekleştirme"
-description: "Sol dış birleştirmeler gerçekleştirme."
-keywords: .NET, .NET core, C#
-author: BillWagner
-manager: wpickett
-ms.author: wiwagn
+title: Sol dış birleştirmeler gerçekleştirme
+description: Sol dış birleştirmeler gerçekleştirme.
 ms.date: 12/1/2016
-ms.topic: article
-ms.prod: .net
-ms.technology: devlang-csharp
 ms.assetid: f542cee6-3169-4dcf-a631-3a6a79ccd473
-ms.openlocfilehash: 0c28c85bf933a411403aefcb91801d28fe1c268e
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: aacab1ac6f4ab2c10b393cf0b2c578a13d9b9306
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="perform-left-outer-joins"></a>Sol dış birleştirmeler gerçekleştirme
 Sol dış birleşim bir birleşim değil de, ilk koleksiyonun her öğesine, bunu herhangi bir ilişkili öğe ikinci koleksiyonda olup bağımsız olarak döndürülür. LINQ çağırarak bir sol dış birleşim gerçekleştirmek için kullanabileceğiniz <xref:System.Linq.Enumerable.DefaultIfEmpty%2A> group JOIN sonuçlarını yöntemi.  
@@ -34,7 +27,7 @@ Sol dış birleşim bir birleşim değil de, ilk koleksiyonun her öğesine, bun
 ## <a name="see-also"></a>Ayrıca bkz.  
  <xref:System.Linq.Enumerable.Join%2A>  
  <xref:System.Linq.Enumerable.GroupJoin%2A>  
- [İç birleştirmeler gerçekleştirme](perform-inner-joins.md)  
- [Gruplandırılmış birleştirmeler gerçekleştirme](perform-grouped-joins.md)  
+ [İç birleşimler gerçekleştirme](perform-inner-joins.md)  
+ [Gruplanmış birleşimler gerçekleştirme](perform-grouped-joins.md)  
  [Anonim türler](../programming-guide/classes-and-structs/anonymous-types.md)  
  

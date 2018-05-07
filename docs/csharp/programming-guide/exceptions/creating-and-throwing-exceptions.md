@@ -1,23 +1,17 @@
 ---
-title: "Özel Durumlar Oluşturma ve Atma (C# Programlama Kılavuzu)"
+title: Özel Durumlar Oluşturma ve Atma (C# Programlama Kılavuzu)
 ms.date: 07/20/2015
-ms.prod: .net
-ms.technology: devlang-csharp
-ms.topic: article
 helpviewer_keywords:
 - catching exceptions [C#]
 - throwing exceptions [C#]
 - exceptions [C#], creating
 - exceptions [C#], throwing
 ms.assetid: 6bbba495-a115-4c6d-90cc-1f4d7b5f39e2
-caps.latest.revision: "28"
-author: BillWagner
-ms.author: wiwagn
-ms.openlocfilehash: a4008323d264c02e0417e775077958f857ceed31
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 91676830d88ddee79c72211ab43b7be32fa8724e
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="creating-and-throwing-exceptions-c-programming-guide"></a>Özel Durumlar Oluşturma ve Atma (C# Programlama Kılavuzu)
 Özel durumlar programı çalıştırılırken bir hata oluştu belirtmek için kullanılır. Bir hata açıklayan özel durum nesneleri oluşturulur ve ardından *durum* ile [throw](../../../csharp/language-reference/keywords/throw.md) anahtar sözcüğü. Çalışma zamanı sonra en uyumlu özel durum işleyici arar.  
@@ -70,7 +64,7 @@ ms.lasthandoff: 11/21/2017
  [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [C# programlama kılavuzu](../../../csharp/programming-guide/index.md)  
- [Özel durumlar ve özel durum işleme](../../../csharp/programming-guide/exceptions/index.md)  
+ [C# Programlama Kılavuzu](../../../csharp/programming-guide/index.md)  
+ [Özel Durumlar ve Özel Durum İşleme](../../../csharp/programming-guide/exceptions/index.md)  
  [Özel durum hiyerarşisi](http://msdn.microsoft.com/library/f7d68675-be06-40fb-a555-05f0c5a6f66b)  
- [Özel durum işleme](../../../csharp/programming-guide/exceptions/exception-handling.md)
+ [Özel Durum İşleme](../../../csharp/programming-guide/exceptions/exception-handling.md)

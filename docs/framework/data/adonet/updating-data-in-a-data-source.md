@@ -1,27 +1,15 @@
 ---
-title: "Bir veri kaynağındaki verileri güncelleştirme"
-ms.custom: 
+title: Bir veri kaynağındaki verileri güncelleştirme
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-ado
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
 ms.assetid: 55c545e5-dcd5-4323-a5b9-3825c2157462
-caps.latest.revision: "4"
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
-ms.workload: dotnet
-ms.openlocfilehash: 3c611e2d7c4c1de17588ba5220124db55bca2764
-ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
+ms.openlocfilehash: 11c3faa85d6d0b77c4e606815aa8252188b6f67d
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="updating-data-in-a-data-source"></a>Bir veri kaynağındaki verileri güncelleştirme
 Verileri (örneğin, INSERT, UPDATE veya DELETE) değiştirme SQL deyimlerini satırları döndürmeyin. Benzer şekilde, birçok saklı yordamlar bir eylem gerçekleştirmek ancak satırları döndürmüyor. Satır döndürmeyen komutları yürütmek için Oluştur bir **komutu** uygun SQL komutu nesnesiyle ve **bağlantı**, gerekli dahil olmak üzere **parametreleri**. Komutu yürütmek **ExecuteNonQuery** yöntemi **komutu** nesnesi.  

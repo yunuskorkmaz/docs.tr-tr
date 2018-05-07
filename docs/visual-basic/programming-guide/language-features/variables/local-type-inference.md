@@ -1,13 +1,6 @@
 ---
-title: "Yerel Türü Arabirimi (Visual Basic Başvurusu)"
-ms.custom: 
+title: Yerel Türü Arabirimi (Visual Basic Başvurusu)
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
-ms.tgt_pltfrm: 
-ms.topic: article
 f1_keywords:
 - local type inference
 - vb.TypeInfer
@@ -19,14 +12,11 @@ helpviewer_keywords:
 - inference [Visual Basic]
 - type inference [Visual Basic]
 ms.assetid: b8307f18-2e56-4ab3-a45a-826873f400f6
-caps.latest.revision: "43"
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: d753d1fbdc60f70dcf0513d809f28a112243c111
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: b33b8b2d17c240e380377528d4f5d2f511381a7d
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="local-type-inference-visual-basic"></a>Yerel Türü Arabirimi (Visual Basic Başvurusu)
 Visual Basic derleyici kullanan *türü çıkarımı* olmadan bildirilen yerel değişkenleri veri türlerini belirlemek için bir `As` yan tümcesi. Derleyici başlatma ifade türü değişkeninden türü oluşturur. Bu, açıkça bir türü bildirmeden aşağıdaki örnekte gösterildiği gibi değişkenleri olanak sağlar. Bildirimleri sonucunda her ikisi de `num1` ve `num2` tamsayı olarak kesin türü belirtilmiş.  
@@ -68,7 +58,7 @@ Visual Basic derleyici kullanan *türü çıkarımı* olmadan bildirilen yerel d
  [!code-vb[VbVbalrTypeInference#5](../../../../visual-basic/language-reference/statements/codesnippet/VisualBasic/local-type-inference_6.vb)]  
   
 ## <a name="option-infer"></a>Option Infer  
- `Option Infer`Yerel türü çıkarımı belli bir dosyada izin verilip verilmeyeceğini belirtin etkinleştirir. Etkinleştirmek veya seçeneği engellemek için aşağıdaki ifadeleri birini dosya başlangıcında yazın.  
+ `Option Infer` Yerel türü çıkarımı belli bir dosyada izin verilip verilmeyeceğini belirtin etkinleştirir. Etkinleştirmek veya seçeneği engellemek için aşağıdaki ifadeleri birini dosya başlangıcında yazın.  
   
  `Option Infer On`  
   
@@ -81,10 +71,10 @@ Visual Basic derleyici kullanan *türü çıkarımı* olmadan bildirilen yerel d
  Daha fazla bilgi için bkz: [Option Infer deyimi](../../../../visual-basic/language-reference/statements/option-infer-statement.md) ve [derleme sayfası, Proje Tasarımcısı (Visual Basic)](/visualstudio/ide/reference/compile-page-project-designer-visual-basic).  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [Anonim türler](../../../../visual-basic/programming-guide/language-features/objects-and-classes/anonymous-types.md)  
- [Erken ve geç bağlama](../../../../visual-basic/programming-guide/language-features/early-late-binding/index.md)  
- [For Each... Sonraki deyim](../../../../visual-basic/language-reference/statements/for-each-next-statement.md)  
- [İçin... Sonraki deyim](../../../../visual-basic/language-reference/statements/for-next-statement.md)  
- [Option Infer deyimi](../../../../visual-basic/language-reference/statements/option-infer-statement.md)  
- [/ optioninfer](../../../../visual-basic/reference/command-line-compiler/optioninfer.md)  
+ [Anonim Tipler](../../../../visual-basic/programming-guide/language-features/objects-and-classes/anonymous-types.md)  
+ [Erken ve Geç Bağlama](../../../../visual-basic/programming-guide/language-features/early-late-binding/index.md)  
+ [For Each...Next Deyimi](../../../../visual-basic/language-reference/statements/for-each-next-statement.md)  
+ [For...Next Deyimi](../../../../visual-basic/language-reference/statements/for-next-statement.md)  
+ [Option Infer Deyimi](../../../../visual-basic/language-reference/statements/option-infer-statement.md)  
+ [/optioninfer](../../../../visual-basic/reference/command-line-compiler/optioninfer.md)  
  [Visual Basic'de LINQ'e giriş](../../../../visual-basic/programming-guide/language-features/linq/introduction-to-linq.md)

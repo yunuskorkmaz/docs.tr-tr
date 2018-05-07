@@ -1,13 +1,6 @@
 ---
-title: "Nasıl yapılır: TileBrush Yatay ve Dikey Hizalamasını Ayarlama"
-ms.custom: 
+title: 'Nasıl yapılır: TileBrush Yatay ve Dikey Hizalamasını Ayarlama'
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-wpf
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -17,16 +10,11 @@ helpviewer_keywords:
 - aligning [WPF], TileBrushes
 - horizontal alignment of Tilebrushes [WPF]
 ms.assetid: 65ae89bd-9246-4c9e-bde4-2fb991d4060d
-caps.latest.revision: "14"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 3dcbf4715c80f72178295c0b6abdc1272a055a8a
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 4352067f149a1af25cd0a04a12596693188445fe
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-set-the-horizontal-and-vertical-alignment-of-a-tilebrush"></a>Nasıl yapılır: TileBrush Yatay ve Dikey Hizalamasını Ayarlama
 Bu örnek, döşeme içinde içeriğin yatay ve dikey hizalamasını denetlemek gösterilmiştir. Yatay ve dikey hizalamasını denetlemek için bir <xref:System.Windows.Media.TileBrush>, kullanma, <xref:System.Windows.Media.TileBrush.AlignmentX%2A> ve <xref:System.Windows.Media.TileBrush.AlignmentY%2A> özellikleri.  
@@ -40,7 +28,7 @@ Bu örnek, döşeme içinde içeriğin yatay ve dikey hizalamasını denetlemek 
 ## <a name="example"></a>Örnek  
  Aşağıdaki örnek içeriği hizalanır bir <xref:System.Windows.Media.DrawingBrush>, bir tür olduğu <xref:System.Windows.Media.TileBrush>, döşemesinin sol üst köşesindeki için. Örnek içeriği hizalamak için <xref:System.Windows.Media.TileBrush.AlignmentX%2A> özelliği <xref:System.Windows.Media.DrawingBrush> için <xref:System.Windows.Media.AlignmentX.Left> ve <xref:System.Windows.Media.TileBrush.AlignmentY%2A> özelliğine <xref:System.Windows.Media.AlignmentY.Top>. Bu örnek şu çıkışı üretir.  
   
- ![Üst &#45;TileBrush; sol hizalama](../../../../docs/framework/wpf/graphics-multimedia/media/graphicsmm-tilebrushalignmentexampletopleft.png "graphicsmm_TileBrushAlignmentExampleTopLeft")  
+ ![Üst TileBrush&#45;hizalama sol](../../../../docs/framework/wpf/graphics-multimedia/media/graphicsmm-tilebrushalignmentexampletopleft.png "graphicsmm_TileBrushAlignmentExampleTopLeft")  
 Sol üst köşesindeki hizalanan TileBrush içeriği  
   
  [!code-csharp[brushoverviewexamples_snip#TileBrushTopLeftAlignmentInline](../../../../samples/snippets/csharp/VS_Snippets_Wpf/BrushOverviewExamples_snip/CSharp/TileBrushAlignmentExample.cs#tilebrushtopleftalignmentinline)]
@@ -50,7 +38,7 @@ Sol üst köşesindeki hizalanan TileBrush içeriği
 ## <a name="example"></a>Örnek  
  Sonraki örnekte içeriğini hizalanır bir <xref:System.Windows.Media.DrawingBrush> ayarlayarak döşemesinin sağ alt köşesine <xref:System.Windows.Media.TileBrush.AlignmentX%2A> özelliğine <xref:System.Windows.Media.AlignmentX.Right> ve <xref:System.Windows.Media.TileBrush.AlignmentY%2A> özelliğine <xref:System.Windows.Media.AlignmentY.Bottom>. Örneğin şu çıkışı üretir.  
   
- ![Alt &#45;TileBrush; sağa hizalama](../../../../docs/framework/wpf/graphics-multimedia/media/graphicsmm-tilebrushalignmentexamplebottomright.png "graphicsmm_TileBrushAlignmentExampleBottomRight")  
+ ![Alt TileBrush&#45;sağa hizalama](../../../../docs/framework/wpf/graphics-multimedia/media/graphicsmm-tilebrushalignmentexamplebottomright.png "graphicsmm_TileBrushAlignmentExampleBottomRight")  
 Sağ alt köşedeki hizalanan TileBrush içeriği  
   
  [!code-csharp[brushoverviewexamples_snip#TileBrushBottomRightAlignmentInline](../../../../samples/snippets/csharp/VS_Snippets_Wpf/BrushOverviewExamples_snip/CSharp/TileBrushAlignmentExample.cs#tilebrushbottomrightalignmentinline)]
@@ -60,7 +48,7 @@ Sağ alt köşedeki hizalanan TileBrush içeriği
 ## <a name="example"></a>Örnek  
  Sonraki örnekte içeriğini hizalanır bir <xref:System.Windows.Media.DrawingBrush> ayarlayarak döşemesinin sol üst köşesine <xref:System.Windows.Media.TileBrush.AlignmentX%2A> özelliğine <xref:System.Windows.Media.AlignmentX.Left> ve <xref:System.Windows.Media.TileBrush.AlignmentY%2A> özelliğine <xref:System.Windows.Media.AlignmentY.Top>. Ayrıca ayarlar <xref:System.Windows.Media.TileBrush.Viewport%2A> ve <xref:System.Windows.Media.TileBrush.TileMode%2A> , <xref:System.Windows.Media.DrawingBrush> döşeme deseni oluşturmak için. Örneğin şu çıkışı üretir.  
   
- ![Üst &#45;döşeli bir TileBrush; sol hizalama](../../../../docs/framework/wpf/graphics-multimedia/media/graphicsmm-tilebrushalignmentexampletoplefttiled.png "graphicsmm_TileBrushAlignmentExampleTopLeftTiled")  
+ ![A döşenir TileBrush top&#45;hizalama sol](../../../../docs/framework/wpf/graphics-multimedia/media/graphicsmm-tilebrushalignmentexampletoplefttiled.png "graphicsmm_TileBrushAlignmentExampleTopLeftTiled")  
 Döşeme deseni içeriği hizalanan sol üst köşede temel döşeme  
   
  İçeriğinin nasıl hizalandığını görebilmeniz için çizim vurgular döşeme abase. Dikkat <xref:System.Windows.Media.TileBrush.AlignmentX%2A> ayarı etkisi yoktur çünkü içeriğini <xref:System.Windows.Media.DrawingBrush> tamamen temel döşeme yatay olarak doldurur.  
@@ -72,7 +60,7 @@ Döşeme deseni içeriği hizalanan sol üst köşede temel döşeme
 ## <a name="example"></a>Örnek  
  Son örnek bir döşeli içeriğini hizalar <xref:System.Windows.Media.DrawingBrush> ayarlayarak temel döşemesinin sağ alt köşesindeki için <xref:System.Windows.Media.TileBrush.AlignmentX%2A> özelliğine <xref:System.Windows.Media.AlignmentX.Right> ve <xref:System.Windows.Media.TileBrush.AlignmentY%2A> özelliğine <xref:System.Windows.Media.AlignmentY.Bottom>. Örneğin şu çıkışı üretir.  
   
- ![Bir alt &#45;TileBrush döşenir; sağa hizalama](../../../../docs/framework/wpf/graphics-multimedia/media/graphicsmm-tilebrushalignmentexamplebottomrighttiled.png "graphicsmm_TileBrushAlignmentExampleBottomRightTiled")  
+ ![Bir alt ile TileBrush döşenir&#45;sağa hizalama](../../../../docs/framework/wpf/graphics-multimedia/media/graphicsmm-tilebrushalignmentexamplebottomrighttiled.png "graphicsmm_TileBrushAlignmentExampleBottomRightTiled")  
 Döşeme deseni içeriği hizalanan taban döşemesinin sağ alt  
   
  Yeniden <xref:System.Windows.Media.TileBrush.AlignmentX%2A> ayarı etkisi yoktur çünkü içeriğini <xref:System.Windows.Media.DrawingBrush> tamamen temel döşeme yatay olarak doldurur.  

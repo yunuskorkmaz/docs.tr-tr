@@ -1,10 +1,6 @@
 ---
-title: "Kısmi (Visual Basic)"
+title: Kısmi (Visual Basic)
 ms.date: 07/20/2015
-ms.prod: .net
-ms.suite: 
-ms.technology: devlang-visual-basic
-ms.topic: article
 f1_keywords:
 - vb.Partial
 - partial
@@ -18,14 +14,11 @@ helpviewer_keywords:
 - Partial keyword [Visual Basic]
 - type promotion
 ms.assetid: 7adaef80-f435-46e1-970a-269fff63b448
-caps.latest.revision: "36"
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: 5129ef7737b1b07317d47f8d18e9aceb668bf05a
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: c94c3bf1a1e3e4c724f90690f52e97e8216cb9a7
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="partial-visual-basic"></a>Kısmi (Visual Basic)
 Tür bildirimi kısmi tanım türü olduğunu gösterir.  
@@ -65,7 +58,7 @@ Partial { Class | Structure | Interface | Module } name [ (Of typelist) ]
 |`interfacenames`|Kullanırsanız, gerekli `Implements`. Bu tür uygulayan arabirimleri adları.|  
 |`variabledeclarations`|İsteğe bağlı. Ek değişkenleri ve tür için olaylar declare deyimlerini.|  
 |`proceduredeclarations`|İsteğe bağlı. Bildirme ve türü için ek yordamlar tanımlama deyimleri.|  
-|`End Class`veya`End Structure`|Bu kısmi sona `Class` veya `Structure` tanımı.|  
+|`End Class` Veya `End Structure`|Bu kısmi sona `Class` veya `Structure` tanımı.|  
   
 ## <a name="remarks"></a>Açıklamalar  
  Visual Basic parçalı sınıf tanımları oluşturulan kod kullanıcı tarafından yazılan kodu ayrı kaynak dosyalarında ayırmak için kullanır. Örneğin, **Windows Form Tasarımcısı** denetimleri için kısmi sınıflar gibi tanımlar <xref:System.Windows.Forms.Form>. Bu denetimler oluşturulan kodda değiştirmemeniz gerekir.  
@@ -88,9 +81,9 @@ Partial { Class | Structure | Interface | Module } name [ (Of typelist) ]
   
  `Partial` Anahtar sözcüğü bu bağlamlarında kullanılabilir:  
   
- [Class deyimi](../../../visual-basic/language-reference/statements/class-statement.md)  
+ [Class Deyimi](../../../visual-basic/language-reference/statements/class-statement.md)  
   
- [Structure deyimi](../../../visual-basic/language-reference/statements/structure-statement.md)  
+ [Structure Deyimi](../../../visual-basic/language-reference/statements/structure-statement.md)  
   
 ## <a name="example"></a>Örnek  
  Aşağıdaki örnek sınıfının tanımını böler `sampleClass` iki bildirimleri her biri farklı bir tanımlar `Sub` yordamı.  
@@ -100,9 +93,9 @@ Partial { Class | Structure | Interface | Module } name [ (Of typelist) ]
  Önceki örnekte iki kısmi tanımları, aynı kaynak dosyasında veya iki farklı kaynak dosyalar olabilir.  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [Class deyimi](../../../visual-basic/language-reference/statements/class-statement.md)  
- [Structure deyimi](../../../visual-basic/language-reference/statements/structure-statement.md)  
- [Tür promosyonu](../../../visual-basic/programming-guide/language-features/declared-elements/type-promotion.md)  
- [Gölgeleri](../../../visual-basic/language-reference/modifiers/shadows.md)  
+ [Class Deyimi](../../../visual-basic/language-reference/statements/class-statement.md)  
+ [Structure Deyimi](../../../visual-basic/language-reference/statements/structure-statement.md)  
+ [Tür Yükseltme](../../../visual-basic/programming-guide/language-features/declared-elements/type-promotion.md)  
+ [Shadows](../../../visual-basic/language-reference/modifiers/shadows.md)  
  [Visual Basic'de genel türler](../../../visual-basic/programming-guide/language-features/data-types/generic-types.md)  
- [Kısmi yöntemler](../../../visual-basic/programming-guide/language-features/procedures/partial-methods.md)
+ [Kısmi Yöntemler](../../../visual-basic/programming-guide/language-features/procedures/partial-methods.md)

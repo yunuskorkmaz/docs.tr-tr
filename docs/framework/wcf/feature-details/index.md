@@ -1,33 +1,19 @@
 ---
 title: WCF Özellik Ayrıntıları
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 helpviewer_keywords:
 - features [WCF]
 - WCF, features
 - Windows Communication Foundation, features
 ms.assetid: 9b4368ca-0bd3-40dc-a539-bcd5779cee5f
-caps.latest.revision: 22
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 91b22cbcabba95d8cc91ffbc0b74b51e61dae393
-ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
+ms.openlocfilehash: c97bd891f0bbb58f8b267296b9b53e00a5486622
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/30/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="wcf-feature-details"></a>WCF Özellik Ayrıntıları
-[!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] bir uygulama Mesajlaşma işlevlerini üzerinde kapsamlı denetim sağlar. Bu bölümdeki konular, kullanılabilir özellikleri hakkında ayrıntılı bilgi uygulamasına gidin. Temel programlama hakkında daha fazla bilgi için bkz: [temel WCF programlama](../../../../docs/framework/wcf/basic-wcf-programming.md).  
+Windows Communication Foundation (WCF) ileti işlevleri bir uygulamanın üzerinde kapsamlı denetim sağlar. Bu bölümdeki konular, kullanılabilir özellikleri hakkında ayrıntılı bilgi uygulamasına gidin. Temel programlama hakkında daha fazla bilgi için bkz: [temel WCF programlama](../../../../docs/framework/wcf/basic-wcf-programming.md).  
   
 ## <a name="in-this-section"></a>Bu Bölümde  
  [İş Akışı Hizmetleri](../../../../docs/framework/wcf/feature-details/workflow-services.md)  
@@ -40,7 +26,7 @@ ms.lasthandoff: 04/30/2018
  Birlikte çalışabilirlik veya gelecekteki uyumluluk için seri hale getirme verilerinin nasıl uyarlanabilir açıklar.  
   
  [Oturumlar, Örnek Oluşturma ve Eşzamanlılık](../../../../docs/framework/wcf/feature-details/sessions-instancing-and-concurrency.md)  
- Örnek oluşturma ve oturum modlarını açıklar [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] ve uygulamanız için doğru modu seçin.  
+ WCF ve uygulamanız için doğru modunu seçmek nasıl depolamasına ve oturum modlarını açıklar.  
   
  [Taşımalar](../../../../docs/framework/wcf/feature-details/transports.md)  
  Aktarım katmanı, kanal yığının en düşük düzeyde yapılandırılması açıklanmaktadır.  
@@ -52,7 +38,7 @@ ms.lasthandoff: 04/30/2018
  Gerekirse geri alınabilir hizmetteki işlem oluşturma açıklanmaktadır.  
   
  [Güvenlik](../../../../docs/framework/wcf/feature-details/security.md)  
- Açıklar nasıl [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] güvenlik gizliliği ve bütünlük sahip uygulamalar oluşturmanıza yardımcı olur. Ayrıca kimlik doğrulaması ve yetkilendirme özellikleri denetim olarak kullanılabilir.  
+ WCF güvenlik gizliliği ve bütünlük sahip uygulamalar oluşturmak için nasıl yardımcı olduğunu açıklar. Ayrıca kimlik doğrulaması ve yetkilendirme özellikleri denetim olarak kullanılabilir.  
   
  [Eşler Arası Ağ](../../../../docs/framework/wcf/feature-details/peer-to-peer-networking.md)  
  Hizmetler ve istemcileri eş oluşturma ayrıntıları verilmektedir.  
@@ -67,16 +53,16 @@ ms.lasthandoff: 04/30/2018
  Barındırma açıklar. Bir hizmet başka bir uygulama tarafından barındırılabilen veya kendi kendini barındıran olabilir.  
   
  [Birlikte Çalışabilirlik ve Tümleştirme](../../../../docs/framework/wcf/feature-details/interoperability-and-integration.md)  
- Nasıl kullanılacağını açıklar [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] COM + barındırılan bir bileşen tabanlı uygulama mantığı önemli ölçüde yatırımınız varsa yeniden yazmaya gerek yerine mevcut mantığınızı genişletmek için.  
+ COM + barındırılan bir bileşen tabanlı uygulama mantığı önemli ölçüde yatırımınız varsa yeniden yazmaya gerek yerine mevcut mantığınızı genişletmek için WCF kullanmayı açıklar.  
   
  [WCF Web HTTP Programlama Modeli](../../../../docs/framework/wcf/feature-details/wcf-web-http-programming-model.md)  
- Açıklar [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] Web programlama modeli kullanıma sunmak geliştiricilerin sağlar [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] hizmet dışı SOAP uç noktası işlemleri.  
+ WCF Hizmeti işlemlerini olmayan SOAP uç noktalara kullanıma sunmak geliştiricilerin sağlar WCF Web programlama modeli açıklar.  
   
  [WCF Dağıtımı](../../../../docs/framework/wcf/feature-details/wcf-syndication.md)  
- Gelen dağıtım akışlarını kolayca kullanıma sunmak için destek açıklanır bir [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] hizmet.  
+ Bir WCF hizmetinden dağıtım akışlarını kolayca kullanıma sunmak için destek açıklanır.  
   
  [AJAX Tümleştirme ve JSON Desteği](../../../../docs/framework/wcf/feature-details/ajax-integration-and-json-support.md)  
- ASP.NET zaman uyumsuz JavaScript ve XML (AJAX) ve JavaScript nesne gösterimi (JSON) veri biçimi izin vermek için destek açıklanır [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] AJAX istemcilere işlemlerinin açığa Hizmetleri.  
+ ASP.NET zaman uyumsuz JavaScript ve XML (AJAX) JavaScript nesne gösterimi (JSON) veri biçimi WCF hizmetleri izin veren ve AJAX istemcilere işlemleri kullanıma sunmak destek açıklanır.  
   
  [WCF Bulma](../../../../docs/framework/wcf/feature-details/wcf-discovery.md)  
  WS bulma protokolünü kullanarak bir birlikte çalışabilen şekilde çalışma zamanında bulunabilir olması hizmetleri etkinleştirmek için destek açıklanır.  

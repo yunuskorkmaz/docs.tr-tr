@@ -1,13 +1,6 @@
 ---
-title: "Temel Sorgu İşlemleri (Visual Basic)"
-ms.custom: 
+title: Temel Sorgu İşlemleri (Visual Basic)
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - data sources [LINQ in Visual Basic]
 - Join clause [LINQ in Visual Basic]
@@ -22,21 +15,18 @@ helpviewer_keywords:
 - grouping data [LINQ in Visual Basic]
 - Select clause [LINQ in Visual Basic]
 ms.assetid: 1146f6d0-fcb8-4f4d-8223-c9db52620d21
-caps.latest.revision: "37"
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: 794d77a18b50cc1667fddbad17c46735ae91be26
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 5587a60e97464324659b325e38a18ac25488d30d
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="basic-query-operations-visual-basic"></a>Temel Sorgu İşlemleri (Visual Basic)
 Bu konu kısa bir giriş sağlar [!INCLUDE[vbteclinqext](~/includes/vbteclinqext-md.md)] ifadeleri Visual Basic'te ve bazı tipik türleri sorguda gerçekleştirdiğiniz işlem. Daha fazla bilgi için aşağıdaki konulara bakın:  
   
  [Visual Basic'de LINQ'e giriş](../../../../visual-basic/programming-guide/language-features/linq/introduction-to-linq.md)  
   
- [Sorguları](../../../../visual-basic/language-reference/queries/queries.md)  
+ [Sorgular](../../../../visual-basic/language-reference/queries/queries.md)  
   
  [İzlenecek yol: Visual Basic'de sorgu yazma](../../../../visual-basic/programming-guide/concepts/linq/walkthrough-writing-queries.md)  
   
@@ -96,7 +86,7 @@ Where cust.City = "London" Or cust.City = "Paris"
   
      [!code-vb[VbLINQBasicOps#6](../../../../visual-basic/programming-guide/concepts/linq/codesnippet/VisualBasic/basic-query-operations_6.vb)]  
   
-     veya  
+     -veya-  
   
 -   Sonucunda dahil oluşturmak ve türünün örneklerini başlatmak istediğiniz belirli alanları içeren adlandırılmış bir tür tanımlama `Select` yan tümcesi. Döndürülen koleksiyon dışındaki tek tek sonuç kullanmanız gerektiğinde veya bunları yöntem çağrılarını parametre olarak geçirmek varsa bu seçeneği kullanın. Türü `londonCusts5` IEnumerable (Of NamePhone) aşağıdaki örnekte olduğu.  
   
@@ -118,7 +108,7 @@ Where cust.City = "London" Or cust.City = "Paris"
   
  [!code-vb[VbLINQBasicOps#10](../../../../visual-basic/programming-guide/concepts/linq/codesnippet/VisualBasic/basic-query-operations_10.vb)]  
   
- `Group Join`tek bir hiyerarşik koleksiyon koleksiyonlara tıpkı birleştiren bir `LEFT JOIN` SQL. Daha fazla bilgi için bkz: [JOIN yan tümcesi](../../../../visual-basic/language-reference/queries/join-clause.md) ve [Grup JOIN yan tümcesi](../../../../visual-basic/language-reference/queries/group-join-clause.md).  
+ `Group Join` tek bir hiyerarşik koleksiyon koleksiyonlara tıpkı birleştiren bir `LEFT JOIN` SQL. Daha fazla bilgi için bkz: [JOIN yan tümcesi](../../../../visual-basic/language-reference/queries/join-clause.md) ve [Grup JOIN yan tümcesi](../../../../visual-basic/language-reference/queries/group-join-clause.md).  
   
 ## <a name="grouping-data-group-by"></a>Verileri Gruplandırma (Gruplandırma Ölçütü)  
  Ekleyebileceğiniz bir `Group By` sorgu sonucu öğe bir veya daha fazla alanlara göre öğeleri gruplandırmak için yan tümcesi. Örneğin, aşağıdaki kodu Öğrenciler sınıfı yıla göre gruplandırır.  
@@ -164,6 +154,6 @@ Where cust.City = "London" Or cust.City = "Paris"
 ## <a name="see-also"></a>Ayrıca Bkz.  
  <xref:System.Collections.Generic.IEnumerable%601>  
  [Visual Basic'te Lınq'e Başlarken](../../../../visual-basic/programming-guide/concepts/linq/getting-started-with-linq.md)  
- [Sorguları](../../../../visual-basic/language-reference/queries/queries.md)  
+ [Sorgular](../../../../visual-basic/language-reference/queries/queries.md)  
  [Standart sorgu işleçlerine genel bakış (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/standard-query-operators-overview.md)  
  [LINQ](../../../../visual-basic/programming-guide/language-features/linq/index.md)

@@ -1,13 +1,6 @@
 ---
-title: "Görsel Taslaklara Genel Bakış"
-ms.custom: 
+title: Görsel Taslaklara Genel Bakış
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-wpf
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -16,16 +9,11 @@ helpviewer_keywords:
 - syntax [WPF], Storyboard
 - timelines [WPF]
 ms.assetid: 1a698c3c-30f1-4b30-ae56-57e8a39811bd
-caps.latest.revision: "31"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 614b5cc4843dbb886fa9cb02c56b28452e9fae8a
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.openlocfilehash: 36922dce795443a4c1136f6442eff1c297f3c641
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="storyboards-overview"></a>Görsel Taslaklara Genel Bakış
 Bu konuda nasıl kullanılacağını gösterir <xref:System.Windows.Media.Animation.Storyboard> Animasyonların düzenlenmesi ve nesnelere. Etkileşimli olarak nasıl işleneceğini açıklayan <xref:System.Windows.Media.Animation.Storyboard> nesneleri ve dolaylı özellik hedeflemesi sözdizimini açıklar.  
@@ -38,7 +26,7 @@ Bu konuda nasıl kullanılacağını gösterir <xref:System.Windows.Media.Animat
 ## <a name="what-is-a-storyboard"></a>Film şeridi nedir?  
  Animasyon zaman çizelgesi yalnızca yararlı bir tür değildir. Diğer zaman çizelgesi sınıfları zaman çizelgeleri kümelerinin düzenlenmesine yardımcı olmak ve zaman çizelgelerini özelliklerine uygulamak için sağlanır. Kapsayıcı zaman çizelgeleri türetilen <xref:System.Windows.Media.Animation.TimelineGroup> sınıfı ve dahil <xref:System.Windows.Media.Animation.ParallelTimeline> ve <xref:System.Windows.Media.Animation.Storyboard>.  
   
- A <xref:System.Windows.Media.Animation.Storyboard> içerdiği zaman çizelgeleri için hedefleme bilgisini sağlayan kapsayıcı zaman çizelgesi türüdür. Film şeridi herhangi bir türde içerebilir <xref:System.Windows.Media.Animation.Timeline>diğer kapsayıcı zaman çizelgeleri ve animasyonları dahil olmak üzere. <xref:System.Windows.Media.Animation.Storyboard>nesneleri, düzenlemek ve karmaşık zamanlama davranışlarını denetlemek kolaylaşır tek bir zaman çizelgesi ağacında, çeşitli nesneleri ve özellikleri etkileyen zaman çizelgelerini birleştirmenize olanak sağlar. Örneğin, bu üç şeyi yapan bir düğme istediğinizi varsayalım.  
+ A <xref:System.Windows.Media.Animation.Storyboard> içerdiği zaman çizelgeleri için hedefleme bilgisini sağlayan kapsayıcı zaman çizelgesi türüdür. Film şeridi herhangi bir türde içerebilir <xref:System.Windows.Media.Animation.Timeline>diğer kapsayıcı zaman çizelgeleri ve animasyonları dahil olmak üzere. <xref:System.Windows.Media.Animation.Storyboard> nesneleri, düzenlemek ve karmaşık zamanlama davranışlarını denetlemek kolaylaşır tek bir zaman çizelgesi ağacında, çeşitli nesneleri ve özellikleri etkileyen zaman çizelgelerini birleştirmenize olanak sağlar. Örneğin, bu üç şeyi yapan bir düğme istediğinizi varsayalım.  
   
 -   Büyüme ve kullanıcı düğmesini seçtiğinde rengini değiştirin.  
   
@@ -46,7 +34,7 @@ Bu konuda nasıl kullanılacağını gösterir <xref:System.Windows.Media.Animat
   
 -   Daraltma ve devre dışı kalır, yüzde 50 opaklık silinerek.  
   
- Bu durumda, aynı nesneye uygulanan bir animasyon birden çok kümelerine sahip ve farklı zamanlarda düğmenin durumunu bağımlı yürütmek istediğiniz. <xref:System.Windows.Media.Animation.Storyboard>nesneleri, animasyonları düzenlemenizi ve gruplar halinde bir veya daha fazla nesneye uygulamanızı sağlar.  
+ Bu durumda, aynı nesneye uygulanan bir animasyon birden çok kümelerine sahip ve farklı zamanlarda düğmenin durumunu bağımlı yürütmek istediğiniz. <xref:System.Windows.Media.Animation.Storyboard> nesneleri, animasyonları düzenlemenizi ve gruplar halinde bir veya daha fazla nesneye uygulamanızı sağlar.  
   
 <a name="wherecanyouuseastoryboard"></a>   
 ## <a name="where-can-you-use-a-storyboard"></a>Burada bir film şeridi kullanabilir miyim?  
@@ -72,10 +60,10 @@ Bu konuda nasıl kullanılacağını gösterir <xref:System.Windows.Media.Animat
   
 |Şeridi başlatılır kullanarak...|Örnek başına|Stil|Denetim şablonu|Veri şablonu|Örnek|  
 |--------------------------------|-------------------|-----------|----------------------|-------------------|-------------|  
-|<xref:System.Windows.Media.Animation.BeginStoryboard>ve bir<xref:System.Windows.EventTrigger>|Evet|Evet|Evet|Evet|[Görsel Taslak Kullanarak Özelliğe Animasyon Ekleme](../../../../docs/framework/wpf/graphics-multimedia/how-to-animate-a-property-by-using-a-storyboard.md)|  
-|<xref:System.Windows.Media.Animation.BeginStoryboard>ve bir özelliği<xref:System.Windows.Trigger>|Hayır|Evet|Evet|Evet|[Özellik Değeri Değiştiğinde bir Animasyonu Tetikleme](../../../../docs/framework/wpf/graphics-multimedia/how-to-trigger-an-animation-when-a-property-value-changes.md)|  
-|<xref:System.Windows.Media.Animation.BeginStoryboard>ve<xref:System.Windows.DataTrigger>|Hayır|Evet|Evet|Evet|[Nasıl yapılır: veriler değiştiğinde animasyon tetikleme](http://msdn.microsoft.com/library/a736bb3a-2ae5-479a-a33a-75a27055d863)|  
-|<xref:System.Windows.Media.Animation.Storyboard.Begin%2A>yöntemi|Evet|Hayır|Hayır|Hayır|[Görsel Taslak Kullanarak Özelliğe Animasyon Ekleme](../../../../docs/framework/wpf/graphics-multimedia/how-to-animate-a-property-by-using-a-storyboard.md)|  
+|<xref:System.Windows.Media.Animation.BeginStoryboard> ve bir <xref:System.Windows.EventTrigger>|Evet|Evet|Evet|Evet|[Görsel Taslak Kullanarak Özelliğe Animasyon Ekleme](../../../../docs/framework/wpf/graphics-multimedia/how-to-animate-a-property-by-using-a-storyboard.md)|  
+|<xref:System.Windows.Media.Animation.BeginStoryboard> ve bir özelliği <xref:System.Windows.Trigger>|Hayır|Evet|Evet|Evet|[Özellik Değeri Değiştiğinde bir Animasyonu Tetikleme](../../../../docs/framework/wpf/graphics-multimedia/how-to-trigger-an-animation-when-a-property-value-changes.md)|  
+|<xref:System.Windows.Media.Animation.BeginStoryboard> ve <xref:System.Windows.DataTrigger>|Hayır|Evet|Evet|Evet|[Nasıl yapılır: veriler değiştiğinde animasyon tetikleme](http://msdn.microsoft.com/library/a736bb3a-2ae5-479a-a33a-75a27055d863)|  
+|<xref:System.Windows.Media.Animation.Storyboard.Begin%2A> Yöntemi|Evet|Hayır|Hayır|Hayır|[Görsel Taslak Kullanarak Özelliğe Animasyon Ekleme](../../../../docs/framework/wpf/graphics-multimedia/how-to-animate-a-property-by-using-a-storyboard.md)|  
   
  Aşağıdaki örnek kullanan bir <xref:System.Windows.Media.Animation.Storyboard> animasyon için <xref:System.Windows.FrameworkElement.Width%2A> , bir <xref:System.Windows.Shapes.Rectangle> öğesi ve <xref:System.Windows.Media.SolidColorBrush.Color%2A> , bir <xref:System.Windows.Media.SolidColorBrush> , boyamak için kullanılan <xref:System.Windows.Shapes.Rectangle>.  
   
@@ -107,7 +95,7 @@ Bu konuda nasıl kullanılacağını gösterir <xref:System.Windows.Media.Animat
   
  [!code-csharp[storyboards_ovw_snip#105](../../../../samples/snippets/csharp/VS_Snippets_Wpf/storyboards_ovw_snip/CSharp/StoryboardsExample.cs#105)]  
   
- <xref:System.Windows.Freezable>türleri devralınan bu sınıflardır <xref:System.Windows.Freezable> sınıfı. Örnekleri <xref:System.Windows.Freezable> dahil <xref:System.Windows.Media.SolidColorBrush>, <xref:System.Windows.Media.RotateTransform>, ve <xref:System.Windows.Media.GradientStop>.  
+ <xref:System.Windows.Freezable> türleri devralınan bu sınıflardır <xref:System.Windows.Freezable> sınıfı. Örnekleri <xref:System.Windows.Freezable> dahil <xref:System.Windows.Media.SolidColorBrush>, <xref:System.Windows.Media.RotateTransform>, ve <xref:System.Windows.Media.GradientStop>.  
   
  Hedefleme etkinleştirmek için bir <xref:System.Windows.Freezable> animasyonda tarafından [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)], kullandığınız [x: Name yönergesi](../../../../docs/framework/xaml-services/x-name-directive.md) bir ad atamak için. Kodda, kullandığınız <xref:System.Windows.NameScope.RegisterName%2A> yöntemi, oluşturduğunuz öğeyle adını kaydetmek için bir <xref:System.Windows.NameScope>.  
   
@@ -123,7 +111,7 @@ Bu konuda nasıl kullanılacağını gösterir <xref:System.Windows.Media.Animat
   
  [!code-csharp[storyboards_ovw_snip#107](../../../../samples/snippets/csharp/VS_Snippets_Wpf/storyboards_ovw_snip/CSharp/StoryboardsExample.cs#107)]  
   
- <xref:System.Windows.Media.Animation.Storyboard>nesneleri çözmek için ad kapsamları kullanın <xref:System.Windows.Media.Animation.Storyboard.TargetName%2A> özelliği. WPF ad kapsamları hakkında daha fazla bilgi için bkz: [WPF XAML ad kapsamları](../../../../docs/framework/wpf/advanced/wpf-xaml-namescopes.md). Varsa <xref:System.Windows.Media.Animation.Storyboard.TargetName%2A> özelliği atlanırsa, animasyon tanımlandığı veya, stiller, stilde öğe söz konusu olduğunda öğe hedefler.  
+ <xref:System.Windows.Media.Animation.Storyboard> nesneleri çözmek için ad kapsamları kullanın <xref:System.Windows.Media.Animation.Storyboard.TargetName%2A> özelliği. WPF ad kapsamları hakkında daha fazla bilgi için bkz: [WPF XAML ad kapsamları](../../../../docs/framework/wpf/advanced/wpf-xaml-namescopes.md). Varsa <xref:System.Windows.Media.Animation.Storyboard.TargetName%2A> özelliği atlanırsa, animasyon tanımlandığı veya, stiller, stilde öğe söz konusu olduğunda öğe hedefler.  
   
  Bir ad bazen atanamaz bir <xref:System.Windows.Freezable> nesnesi. Örneğin, bir <xref:System.Windows.Freezable> bir kaynak olarak bildirilen veya stil içinde bir özellik değerini ayarlamak için kullanılan bir adı verilemez. Bir ad olmadığından, doğrudan hedefleyemez — ancak dolaylı olarak hedeflenebilir. Aşağıdaki bölümlerde dolaylı hedeflemenin nasıl kullanılacağı açıklanmaktadır.  
   
@@ -157,7 +145,7 @@ Bu konuda nasıl kullanılacağını gösterir <xref:System.Windows.Media.Animat
   
  Aşağıdaki kod animasyon gösterilmektedir <xref:System.Windows.Media.SolidColorBrush.Color%2A> , bir <xref:System.Windows.Media.SolidColorBrush> ayarlamak için kullanılır.  
   
- <xref:System.Windows.Shapes.Shape.Fill%2A>bir dikdörtgen öğesi.  
+ <xref:System.Windows.Shapes.Shape.Fill%2A> bir dikdörtgen öğesi.  
   
  [!code-xaml[storyboards_ovw_snip_XAML#32](../../../../samples/snippets/csharp/VS_Snippets_Wpf/storyboards_ovw_snip_XAML/CS/IndirectTargetingExample.xaml#32)]  
   
@@ -234,7 +222,7 @@ Bu konuda nasıl kullanılacağını gösterir <xref:System.Windows.Media.Animat
   
 <a name="controllable_storyboards"></a>   
 ## <a name="interactively-controlling-a-storyboard-in-xaml"></a>XAML'de film şeridi etkileşimli olarak denetleme  
- Film şeridi başlatmak için [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)], kullandığınız bir <xref:System.Windows.Media.Animation.BeginStoryboard> eylemi tetikler. <xref:System.Windows.Media.Animation.BeginStoryboard>nesneleri ve hareketli hale getirmeyi ve film şeridi başlatır özellikleri animasyonları dağıtır. (Bu işlem hakkında daha fazla ayrıntı için bkz: [animasyon ve zamanlama sistem genel bakış](../../../../docs/framework/wpf/graphics-multimedia/animation-and-timing-system-overview.md).) Size, <xref:System.Windows.Media.Animation.BeginStoryboard> belirterek bir isim kendi <xref:System.Windows.Media.Animation.BeginStoryboard.Name%2A> özelliği, onu bir denetlenebilir film şeridi yapın. Başlatıldıktan sonra film şeridi etkileşimli olarak denetleyebilirsiniz. Film şeridi denetlemek için olay tetikleyicileri ile kullanın denetlenebilir film şeridi eylemlerinin bir listesi verilmiştir.  
+ Film şeridi başlatmak için [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)], kullandığınız bir <xref:System.Windows.Media.Animation.BeginStoryboard> eylemi tetikler. <xref:System.Windows.Media.Animation.BeginStoryboard> nesneleri ve hareketli hale getirmeyi ve film şeridi başlatır özellikleri animasyonları dağıtır. (Bu işlem hakkında daha fazla ayrıntı için bkz: [animasyon ve zamanlama sistem genel bakış](../../../../docs/framework/wpf/graphics-multimedia/animation-and-timing-system-overview.md).) Size, <xref:System.Windows.Media.Animation.BeginStoryboard> belirterek bir isim kendi <xref:System.Windows.Media.Animation.BeginStoryboard.Name%2A> özelliği, onu bir denetlenebilir film şeridi yapın. Başlatıldıktan sonra film şeridi etkileşimli olarak denetleyebilirsiniz. Film şeridi denetlemek için olay tetikleyicileri ile kullanın denetlenebilir film şeridi eylemlerinin bir listesi verilmiştir.  
   
 -   <xref:System.Windows.Media.Animation.PauseStoryboard>: Film şeridi duraklatır.  
   

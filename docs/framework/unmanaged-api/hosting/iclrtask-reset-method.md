@@ -1,14 +1,6 @@
 ---
-title: "ICLRTask::Reset Yöntemi"
-ms.custom: 
+title: ICLRTask::Reset Yöntemi
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: reference
 api_name:
 - ICLRTask.Reset
 api_location:
@@ -23,17 +15,13 @@ helpviewer_keywords:
 ms.assetid: 1bfb5d3a-0ffd-4bb4-9bf6-aec00cb675b7
 topic_type:
 - apiref
-caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 8dc37f47fc01d73ff499ef974a2e11345a95286a
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 29267d032f5e38e352592edc50dbded68aaa9f61
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="iclrtaskreset-method"></a>ICLRTask::Reset Yöntemi
 Konak bir görev tamamlandıktan ve CLR geçerli yeniden kullanmanıza olanak sağlayan ortak dil çalışma zamanı (CLR) bildiren [Iclrtask](../../../../docs/framework/unmanaged-api/hosting/iclrtask-interface.md) örneği başka bir görev temsil eder.  
@@ -56,7 +44,7 @@ HRESULT Reset (
   
 |HRESULT|Açıklama|  
 |-------------|-----------------|  
-|S_OK|`Reset`başarıyla döndürüldü.|  
+|S_OK|`Reset` başarıyla döndürüldü.|  
 |HOST_E_CLRNOTAVAILABLE|CLR süreç içine yüklü değil veya CLR içinde yönetilen kod çalıştıramaz veya çağrısı bir durumda. başarıyla|  
 |HOST_E_TIMEOUT|Arama zaman aşımına uğradı.|  
 |HOST_E_NOT_OWNER|Arayan kilidi kendisine ait değil.|  
@@ -76,7 +64,7 @@ HRESULT Reset (
   
 5.  Konak çağırarak görev bozar `ICLRTask::ExitTask`.  
   
- `Reset`Bu senaryo iki yolla değiştirir. Konak çağrıları yukarıdaki 5. adımda `Reset` görev temiz bir duruma sıfırlanır ve sonra ayrıştırır `ICLRTask` , ilişkili örneğinden [Ihosttask](../../../../docs/framework/unmanaged-api/hosting/ihosttask-interface.md) örneği. İsterseniz, konak de önbelleğe alabilir `IHostTask` örneği yeniden kullanım için. Yukarıdaki 1. adımda, çalışma zamanı bir geri çeker `ICLRTask` yeni bir örneğini oluşturmak yerine önbelleğinden.  
+ `Reset` Bu senaryo iki yolla değiştirir. Konak çağrıları yukarıdaki 5. adımda `Reset` görev temiz bir duruma sıfırlanır ve sonra ayrıştırır `ICLRTask` , ilişkili örneğinden [Ihosttask](../../../../docs/framework/unmanaged-api/hosting/ihosttask-interface.md) örneği. İsterseniz, konak de önbelleğe alabilir `IHostTask` örneği yeniden kullanım için. Yukarıdaki 1. adımda, çalışma zamanı bir geri çeker `ICLRTask` yeni bir örneğini oluşturmak yerine önbelleğinden.  
   
  Bu yaklaşım, iyi konak yeniden kullanılabilir çalışan görevleri havuzu de sahip olduğunda çalışır. Ne zaman konak bozar birini kendi `IHostTask` örnekleri, karşılık gelen bozar `ICLRTask` çağırarak `ExitTask`.  
   
@@ -87,7 +75,7 @@ HRESULT Reset (
   
  **Kitaplığı:** bir kaynak olarak MSCorEE.dll dahil  
   
- **.NET framework sürümleri:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET framework sürümleri:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
  [ICLRTask Arabirimi](../../../../docs/framework/unmanaged-api/hosting/iclrtask-interface.md)  

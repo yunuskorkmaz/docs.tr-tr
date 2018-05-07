@@ -1,29 +1,15 @@
 ---
 title: TextBox Genel Bakışı
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-wpf
-ms.tgt_pltfrm: ''
-ms.topic: article
 helpviewer_keywords:
 - controls [WPF], TextBox
 - TextBox control [WPF], about TextBox control
 ms.assetid: 1ba6dc5b-11a7-4247-9213-36c6729ee35f
-caps.latest.revision: 10
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 02e7a5046dec689b1088585d58e4e424751ac512
-ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
+ms.openlocfilehash: bb03d09b1730f4a8d607773f9024eee4f125e2c7
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="textbox-overview"></a>TextBox Genel Bakışı
 <xref:System.Windows.Controls.TextBox> Sınıfı, biçimlendirilmemiş metni görüntülemenizi ve düzenlemenizi sağlar. Yaygın kullanımı bir <xref:System.Windows.Controls.TextBox> form biçimlendirilmemiş metin düzenleme. Örneğin, kullanıcının adını, telefon numarasını soran bir form vb. kullanırsınız <xref:System.Windows.Controls.TextBox> metin giriş için denetimler. Bu konu tanıtır <xref:System.Windows.Controls.TextBox> sınıfı ve ikisi de kullanma örnekleri sağlar [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)] ve C#.  

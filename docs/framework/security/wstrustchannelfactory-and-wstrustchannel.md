@@ -1,24 +1,14 @@
 ---
 title: WSTrustChannelFactory ve WSTrustChannel
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 96cec467-e963-4132-b18b-7d0b3a2e979f
-caps.latest.revision: "9"
 author: BrucePerlerMS
-ms.author: bruceper
 manager: mbaldwin
-ms.workload: dotnet
-ms.openlocfilehash: 35f4449f7a826ea49be750cd750cb989c8c455fb
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 3fabd7e3cad76e17061751d0fe0bb4ae06bf6fb6
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="wstrustchannelfactory-and-wstrustchannel"></a>WSTrustChannelFactory ve WSTrustChannel
 Windows Communication Foundation (WCF) bilginiz varsa, bir WCF istemcisi zaten Federasyon uyumlu olduğunu biliyor. Bir WCF istemcisi ile yapılandırarak bir <xref:System.ServiceModel.WSFederationHttpBinding> veya benzer özel bağlama, bir hizmete federe kimlik doğrulamasını etkinleştirebilirsiniz.  
@@ -107,7 +97,7 @@ IHelloService serviceChannel = channelFactory.CreateChannelWithIssuedToken<IHell
   
 -   Önbellek ve sunucudan döndürülen belirteç yeniden sağlar <xref:System.ServiceModel.Security.WSTrustChannel.Issue%2A> yöntemi.  
   
--   <xref:System.ServiceModel.Security.WSTrustChannelFactory>ve <xref:System.ServiceModel.Security.WSTrustChannel> kanal önbelleğe alma, hata ve kurtarma semantiği WCF en iyi yöntemler göre denetimi için izin.  
+-   <xref:System.ServiceModel.Security.WSTrustChannelFactory> ve <xref:System.ServiceModel.Security.WSTrustChannel> kanal önbelleğe alma, hata ve kurtarma semantiği WCF en iyi yöntemler göre denetimi için izin.  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
  [WIF Özellikleri](../../../docs/framework/security/wif-features.md)

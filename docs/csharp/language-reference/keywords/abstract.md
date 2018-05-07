@@ -1,24 +1,17 @@
 ---
-title: "abstract (C# Başvurusu)"
+title: abstract (C# Başvurusu)
 ms.date: 07/20/2015
-ms.prod: .net
-ms.technology:
-- devlang-csharp
-ms.topic: article
 f1_keywords:
 - abstract
 - abstract_CSharpKeyword
 helpviewer_keywords:
 - abstract keyword [C#]
 ms.assetid: b0797770-c1f3-4b4d-9441-b9122602a6bb
-caps.latest.revision: 
-author: BillWagner
-ms.author: wiwagn
-ms.openlocfilehash: 9c6dbb03a05ff1c86752983d130691ce23e341d7
-ms.sourcegitcommit: be1fb5d9447ad459bef22b91a91c72e3e0b2d916
+ms.openlocfilehash: 40b374bff392cfebc6a9d889e3859d912aa9fb69
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="abstract-c-reference"></a>abstract (C# Başvurusu)
 `abstract` Değiştiricisi değiştirilen bir şey yok veya eksik bir uygulaması olduğunu gösterir. Soyut değiştiricisi sınıfları, yöntemleri, özellikleri, dizin oluşturucular ve olayları ile kullanılabilir. Kullanım `abstract` bir sınıfı diğer sınıfların temel sınıf yalnızca olması amaçlanmıştır belirtmek için bir sınıf bildirimindeki değiştiricisi. Özet olarak işaretlenmiş ya da bir Özet sınıfta dahil üyeleri soyut sınıftan türeyen sınıflar tarafından uygulanmalıdır.  

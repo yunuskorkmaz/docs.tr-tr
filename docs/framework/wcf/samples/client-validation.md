@@ -1,31 +1,19 @@
 ---
-title: "İstemci Doğrulaması"
-ms.custom: 
+title: İstemci Doğrulaması
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: f0c1f805-1a81-4d0d-a112-bf5e2e87a631
-caps.latest.revision: "15"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: bd9c698962bbca04ac05473265d95fc00517b039
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
-ms.translationtype: MT
+ms.openlocfilehash: a5c1c5f907a797bff3dff490cbc953879ab69718
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="client-validation"></a>İstemci Doğrulaması
 Hizmetleri sık otomatik oluşturma ve istemci proxy türlerinin yapılandırılmasını etkinleştirmek için meta veri yayımlama. Hizmet güvenilir olmadığı durumlarda, istemci uygulamaları meta verileri istemci uygulama ilkesi güvenlik işlemleri, hizmet sözleşmesini türü ile ilgili vb. uyduğunu doğrulamalıdır. Aşağıdaki örnek, bir istemci bu hizmet uç noktası güvenli olduğundan emin olmak için hizmet uç noktası doğrulama uç noktası davranışı yazma gösterilmiştir.  
   
  Hizmet dört Hizmeti uç noktalarını kullanıma sunar. İlk uç nokta WSDualHttpBinding kullanır, ikinci uç nokta NTLM kimlik doğrulaması kullanır, üçüncü endpoint işlem akışını sağlar ve dördüncü uç nokta sertifika tabanlı kimlik doğrulaması kullanır.  
   
- İstemcinin kullandığı <xref:System.ServiceModel.Description.MetadataResolver> hizmet için meta verileri almak için sınıf. İstemci, çift yönlü bağlamaları, NTLM kimlik doğrulaması ve doğrulama davranışını kullanarak işlem akışı yasaklanması bir ilke zorlar. Her <xref:System.ServiceModel.Description.ServiceEndpoint> hizmetin meta verilerini, istemci uygulaması içeri örneği ekler örneği `InternetClientValidatorBehavior` uç noktası davranışı <xref:System.ServiceModel.Description.ServiceEndpoint> kullanmayı denemeden önce bir [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] istemci uç noktasına bağlanılamadı. Davranışın `Validate` yöntemi hizmette herhangi bir işlem çağrılmadan önce çalışır ve istemci ilkesini atma tarafından zorlar `InvalidOperationExceptions`.  
+ İstemcinin kullandığı <xref:System.ServiceModel.Description.MetadataResolver> hizmet için meta verileri almak için sınıf. İstemci, çift yönlü bağlamaları, NTLM kimlik doğrulaması ve doğrulama davranışını kullanarak işlem akışı yasaklanması bir ilke zorlar. Her <xref:System.ServiceModel.Description.ServiceEndpoint> hizmetin meta verilerini, istemci uygulaması içeri örneği ekler örneği `InternetClientValidatorBehavior` uç noktası davranışı <xref:System.ServiceModel.Description.ServiceEndpoint> bağlanmak için bir Windows Communication Foundation (WCF) istemcisi kullanmayı denemeden önce uç noktası. Davranışın `Validate` yöntemi hizmette herhangi bir işlem çağrılmadan önce çalışır ve istemci ilkesini atma tarafından zorlar `InvalidOperationExceptions`.  
   
 ### <a name="to-build-the-sample"></a>Örneği oluşturmak için  
   

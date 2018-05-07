@@ -1,13 +1,6 @@
 ---
-title: "Erişen veri hizmeti kaynakları (WCF Veri Hizmetleri)"
-ms.custom: 
+title: Erişen veri hizmeti kaynakları (WCF Veri Hizmetleri)
 ms.date: 03/30/2017
-ms.prod: .net-framework-oob
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - WCF Data Services, querying
 - getting started, WCF Data Services
@@ -15,19 +8,14 @@ helpviewer_keywords:
 - WCF Data Services, getting started
 - WCF Data Services, accessing data
 ms.assetid: 9665ff5b-3e3a-495d-bf83-d531d5d060ed
-caps.latest.revision: "3"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: dddbd9cf8e11f09cf1c2dc36db49281d00e97aac
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: f1af991d7db9bfeeb0737e65a0517629f359f4a1
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="accessing-data-service-resources-wcf-data-services"></a>Erişen veri hizmeti kaynakları (WCF Veri Hizmetleri)
-[!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)]destekleyen [!INCLUDE[ssODataFull](../../../../includes/ssodatafull-md.md)] verilerinizi URI tarafından adreslenebilir kaynaklarla akışı olarak kullanıma sunmak için. Bu kaynaklar varlık ilişkisi kurallarına göre temsil [varlık veri modeli](../../../../docs/framework/data/adonet/entity-data-model.md). Bu modelde, varlık veri türleridir müşteriler, siparişler, öğeleri ve ürünler gibi bir uygulama etki alanındaki verilerin işletimsel birimleri temsil eder. Varlık veri erişilen ve temsili durum aktarımı (REST), özellikle de, GET, standart HTTP fiilleri semantiği kullanarak değiştirilen, PUT, POST ve SİLİN.  
+[!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] destekleyen [!INCLUDE[ssODataFull](../../../../includes/ssodatafull-md.md)] verilerinizi URI tarafından adreslenebilir kaynaklarla akışı olarak kullanıma sunmak için. Bu kaynaklar varlık ilişkisi kurallarına göre temsil [varlık veri modeli](../../../../docs/framework/data/adonet/entity-data-model.md). Bu modelde, varlık veri türleridir müşteriler, siparişler, öğeleri ve ürünler gibi bir uygulama etki alanındaki verilerin işletimsel birimleri temsil eder. Varlık veri erişilen ve temsili durum aktarımı (REST), özellikle de, GET, standart HTTP fiilleri semantiği kullanarak değiştirilen, PUT, POST ve SİLİN.  
   
 ## <a name="addressing-resources"></a>Kaynakları adresleme  
  İçinde [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)], bir URI'yı kullanarak veri modeli tarafından kullanıma sunulan herhangi bir veri adres. Örneğin, aşağıdaki URI müşteri varlık türünün tüm örneklerini girişleri içerir müşteriler varlık kümesi bir akış döndürür:  
@@ -66,7 +54,7 @@ http://services.odata.org/Northwind/Northwind.svc/Customers('ALFKI')/Orders
 http://services.odata.org/Northwind/Northwind.svc/Orders(10643)/Customer  
 ```  
   
- [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)]Ayrıca, sorgu ifadeleri sonuçlarına dayalı adresi kaynakları sağlar. Bu ayarlar üzerinde hesaplanan bir ifade tabanlı kaynakların filtrelemek mümkün kılar. Örneğin, aşağıdaki URI yalnızca 22 Eylül 1997 beri gönderilen siparişler belirtilen müşteri için döndürülecek kaynakların filtreler:  
+ [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] Ayrıca, sorgu ifadeleri sonuçlarına dayalı adresi kaynakları sağlar. Bu ayarlar üzerinde hesaplanan bir ifade tabanlı kaynakların filtrelemek mümkün kılar. Örneğin, aşağıdaki URI yalnızca 22 Eylül 1997 beri gönderilen siparişler belirtilen müşteri için döndürülecek kaynakların filtreler:  
   
 ```  
 http://services.odata.org/Northwind/Northwind.svc/Customers('ALFKI')/Orders?$filter=ShippedDate gt datetime'1997-09-22T00:00:00'  
@@ -75,7 +63,7 @@ http://services.odata.org/Northwind/Northwind.svc/Customers('ALFKI')/Orders?$fil
  Daha fazla bilgi için bkz: [OData: URI kuralları](http://go.microsoft.com/fwlink/?LinkId=185564).  
   
 ## <a name="system-query-options"></a>Sistem sorgu seçenekleri  
- [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)]filtreleme, sıralama ve disk belleği gibi kaynaklara karşı geleneksel sorgu işlemleri gerçekleştirmek için kullanabileceğiniz sistem sorgu seçenekleri kümesini tanımlar. Örneğin, aşağıdaki URI tüm kümesini döndürür; `Order` ilgili birlikte varlıklar `Order_Detail` posta kodlarının bitemez, varlıklar, `100`:  
+ [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] filtreleme, sıralama ve disk belleği gibi kaynaklara karşı geleneksel sorgu işlemleri gerçekleştirmek için kullanabileceğiniz sistem sorgu seçenekleri kümesini tanımlar. Örneğin, aşağıdaki URI tüm kümesini döndürür; `Order` ilgili birlikte varlıklar `Order_Detail` posta kodlarının bitemez, varlıklar, `100`:  
   
 ```  
 http://services.odata.org/Northwind/Northwind.svc/Orders?$filter=not endswith(ShipPostalCode,'100')&$expand=Order_Details&$orderby=ShipCity  
@@ -83,7 +71,7 @@ http://services.odata.org/Northwind/Northwind.svc/Orders?$filter=not endswith(Sh
   
  Döndürülen akışa girdileri de siparişleri Sevk Şehri özelliğinin değeri olarak sıralanır.  
   
- [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)]Aşağıdaki destekleyen [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] sistem sorgu seçenekleri:  
+ [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] Aşağıdaki destekleyen [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] sistem sorgu seçenekleri:  
   
 |Sorgu seçeneği|Açıklama|  
 |------------------|-----------------|  
@@ -96,7 +84,7 @@ http://services.odata.org/Northwind/Northwind.svc/Orders?$filter=not endswith(Sh
 |`$inlinecount`|Akışta döndürülen varlıkları sayısını akış ile birlikte bir istek sayısı. Daha fazla bilgi için bkz: [OData: Inlinecount sistem sorgusu seçeneği ($inlinecount)](http://go.microsoft.com/fwlink/?LinkId=186975).|  
   
 ## <a name="addressing-relationships"></a>İlişkileri adresleme  
- Varlık kümeleri ve varlık örneklerini adresleme yanı sıra [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] varlıklar arasındaki ilişkiler temsil ilişkilendirmeleri adres olanak tanır. Bu işlev oluşturma veya değiştirme Northwind örnek veritabanı belirli bir sırada ilgili taşıyıcı gibi iki varlık örnekleri arasında bir ilişki kurabilmesi için gereklidir. [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)]destekleyen bir `$link` özellikle varlıklar arasında ilişkilendirmeler adres işleci. Örneğin, aşağıdaki URI için yeni bir taşıyıcı belirtilen sırayla taşıyıcı değiştirmek için bir HTTP PUT İsteği iletisi belirtildi.  
+ Varlık kümeleri ve varlık örneklerini adresleme yanı sıra [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] varlıklar arasındaki ilişkiler temsil ilişkilendirmeleri adres olanak tanır. Bu işlev oluşturma veya değiştirme Northwind örnek veritabanı belirli bir sırada ilgili taşıyıcı gibi iki varlık örnekleri arasında bir ilişki kurabilmesi için gereklidir. [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] destekleyen bir `$link` özellikle varlıklar arasında ilişkilendirmeler adres işleci. Örneğin, aşağıdaki URI için yeni bir taşıyıcı belirtilen sırayla taşıyıcı değiştirmek için bir HTTP PUT İsteği iletisi belirtildi.  
   
 ```  
 http://services.odata.org/Northwind/Northwind.svc/Orders(10643)/$links/Shipper  

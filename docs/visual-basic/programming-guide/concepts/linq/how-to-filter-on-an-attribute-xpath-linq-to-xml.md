@@ -1,22 +1,12 @@
 ---
-title: "Nasıl yapılır: bir öznitelik (XPath-LINQ-XML) üzerinde filtre (Visual Basic)"
-ms.custom: 
+title: 'Nasıl yapılır: bir öznitelik (XPath-LINQ-XML) üzerinde filtre (Visual Basic)'
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: ffefb9d6-45ec-4677-a396-dd9c2b36298f
-caps.latest.revision: "3"
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: c4bd1482b535035c9cae329c774e952e54d8c681
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.openlocfilehash: ed9869045270cdc51388b192e8d6ab38005eba8e
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-filter-on-an-attribute-xpath-linq-to-xml-visual-basic"></a>Nasıl yapılır: bir öznitelik (XPath-LINQ-XML) üzerinde filtre (Visual Basic)
 Bu konu, alt öğelerini belirtilen ada sahip ve belirtilen değerli özniteliği ile alma gösterilmektedir.  

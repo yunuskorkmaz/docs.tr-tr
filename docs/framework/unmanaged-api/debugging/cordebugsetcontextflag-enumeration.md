@@ -1,14 +1,6 @@
 ---
-title: "CorDebugSetContextFlag Numaralandırması"
-ms.custom: 
+title: CorDebugSetContextFlag Numaralandırması
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: reference
 api_name:
 - CorDebugSetContextFlag
 api_location:
@@ -22,17 +14,13 @@ helpviewer_keywords:
 ms.assetid: b30280bb-fe75-44ed-8589-bcff081fae44
 topic_type:
 - apiref
-caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 27e9fd561da74a3b88015e7820c2cbbd56ab2a7a
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: badd79926e8f039cf6b947dd6655e2cd679e3000
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="cordebugsetcontextflag-enumeration"></a>CorDebugSetContextFlag Numaralandırması
 Bağlam etkin olup olmadığını gösterir (veya yaprak) çerçeve yığında veya başka bir çerçevesinden geriye doğru izleme tarafından hesaplanır.  
@@ -55,7 +43,7 @@ typedef enum CorDebugSetContextFlag
 |SET_CONTEXT_FLAG_UNWIND_FRAME|Başka bir çerçevesinden geriye doğru izleme bağlamı hesaplandığı.|  
   
 ## <a name="remarks"></a>Açıklamalar  
- `CorDebugSetContextFlag`tarafından kullanılan değerleri sağlayan [Icordebugstackwalk::setcontext](../../../../docs/framework/unmanaged-api/debugging/icordebugstackwalk-setcontext-method.md) yöntemi.  
+ `CorDebugSetContextFlag` tarafından kullanılan değerleri sağlayan [Icordebugstackwalk::setcontext](../../../../docs/framework/unmanaged-api/debugging/icordebugstackwalk-setcontext-method.md) yöntemi.  
   
 ## <a name="requirements"></a>Gereksinimler  
  **Platformlar:** bkz [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
@@ -64,7 +52,7 @@ typedef enum CorDebugSetContextFlag
   
  **Kitaplığı:** CorGuids.lib  
   
- **.NET framework sürümleri:**[!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
+ **.NET framework sürümleri:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
  [Hata Ayıklama Sabit Listeleri](../../../../docs/framework/unmanaged-api/debugging/debugging-enumerations.md)  

@@ -1,27 +1,15 @@
 ---
-title: "LINQ-SQL N katmanlı Web Hizmetleri"
-ms.custom: 
+title: LINQ-SQL N katmanlı Web Hizmetleri
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-ado
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 9cb10eb8-957f-4beb-a271-5f682016fed2
-caps.latest.revision: "3"
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
-ms.workload: dotnet
-ms.openlocfilehash: 79b9b1270f99720dec6b6369706f8a2f601d249e
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.openlocfilehash: 94b00c5b9a433aa53fecef10d865db76d5577c84
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="linq-to-sql-n-tier-with-web-services"></a>LINQ-SQL N katmanlı Web Hizmetleri
-[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]özellikle orta katman bir Web hizmeti gibi birbirine sıkı şekilde bağlı veri erişim katmanı (DAL) olarak kullanılmak üzere tasarlanmıştır. Sunu katmanı bir ASP.NET Web sayfasıdır sonra kullandığınız <xref:System.Web.UI.WebControls.LinqDataSource> Web kullanıcı arabirimi arasında veri aktarımını yönetmek için sunucu denetimi ve [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] Orta katmanda. Sunu katmanı ASP.NET sayfası değilse, seri hale getirme ve seri durumundan çıkarılması veri yönetmek için bazı ek iş Orta katmanda ve sunu katmanı yapmalısınız.  
+[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] özellikle orta katman bir Web hizmeti gibi birbirine sıkı şekilde bağlı veri erişim katmanı (DAL) olarak kullanılmak üzere tasarlanmıştır. Sunu katmanı bir ASP.NET Web sayfasıdır sonra kullandığınız <xref:System.Web.UI.WebControls.LinqDataSource> Web kullanıcı arabirimi arasında veri aktarımını yönetmek için sunucu denetimi ve [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] Orta katmanda. Sunu katmanı ASP.NET sayfası değilse, seri hale getirme ve seri durumundan çıkarılması veri yönetmek için bazı ek iş Orta katmanda ve sunu katmanı yapmalısınız.  
   
 ## <a name="setting-up-linq-to-sql-on-the-middle-tier"></a>LINQ-SQL orta katman ayarlama  
  Web hizmeti veya n katmanlı uygulama, orta katman veri bağlamı ve sınıflar içerir. El ile veya her iki SQLMetal.exe kullanarak bu sınıfları oluşturabilirsiniz veya [!INCLUDE[vs_ordesigner_long](../../../../../../includes/vs-ordesigner-long-md.md)] başka bir yerde belgelerinde açıklandığı gibi. Tasarım zamanında varlık sınıflarının seri hale getirilebilir seçeneğiniz vardır. Daha fazla bilgi için bkz: [nasıl yapılır: varlıklar serileştirilebilir olun](../../../../../../docs/framework/data/adonet/sql/linq/how-to-make-entities-serializable.md). Verileri geri döndüğünüzde verilerin serileştirilmesi için kapsülleyen sınıfları ve proje ayrı bir dizi bu seri hale getirilebilir türler oluşturmak için başka bir seçenektir, [!INCLUDE[vbteclinq](../../../../../../includes/vbteclinq-md.md)] sorgular.  
@@ -41,7 +29,7 @@ ms.lasthandoff: 01/19/2018
  Veri eklerken, sunu katmanı yeni bir nesne oluşturmak ve orta katman iletebilirsiniz veya sağladığı değerlerine göre bir nesne oluşturmak orta katman sağlayabilirsiniz. Genel olarak, alma ve n katmanlı uygulamalarda veri ekleme çok 2 katmanlı uygulamalarda işleminden farklı. Daha fazla bilgi için bkz: [veritabanını sorgulama](../../../../../../docs/framework/data/adonet/sql/linq/querying-the-database.md) ve [alma ve gönderme veri değişikliklerini](../../../../../../docs/framework/data/adonet/sql/linq/making-and-submitting-data-changes.md).  
   
 ## <a name="tracking-changes-for-updates-and-deletes"></a>Güncelleştirmeleri ve silme için değişiklikleri izleme  
- [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]zaman damgaları (RowVersions olarak da adlandırılır) ve özgün değerlerine dayalı iyimser eşzamanlılık destekler. Ardından veritabanı tablolarını zaman damgaları varsa, güncelleştirmeleri ve silme işlemleri orta katman veya sunu katmanı üzerinde çok az ek iş gerektirir. İyimser eşzamanlılık denetimleri için özgün değerleri kullanmanız gerekiyorsa, ancak ardından sunu katmanı bu değerleri izleme ve geri güncelleştirmeleri yaptığında göndererek sorumludur. Sunu katmanı üzerinde varlıklar için yapılan değişiklikler Orta katmanda izlenmez olmasıdır. Aslında, bir varlık ve üzerinde yapılan son güncelleştirme özgün alınmasını genellikle gerçekleştirilir iki tamamen ayrı ayrı örnekleri tarafından <xref:System.Data.Linq.DataContext>.  
+ [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] zaman damgaları (RowVersions olarak da adlandırılır) ve özgün değerlerine dayalı iyimser eşzamanlılık destekler. Ardından veritabanı tablolarını zaman damgaları varsa, güncelleştirmeleri ve silme işlemleri orta katman veya sunu katmanı üzerinde çok az ek iş gerektirir. İyimser eşzamanlılık denetimleri için özgün değerleri kullanmanız gerekiyorsa, ancak ardından sunu katmanı bu değerleri izleme ve geri güncelleştirmeleri yaptığında göndererek sorumludur. Sunu katmanı üzerinde varlıklar için yapılan değişiklikler Orta katmanda izlenmez olmasıdır. Aslında, bir varlık ve üzerinde yapılan son güncelleştirme özgün alınmasını genellikle gerçekleştirilir iki tamamen ayrı ayrı örnekleri tarafından <xref:System.Data.Linq.DataContext>.  
   
  Sayısı arttıkça sunu katmanı yaptığı değişiklikler bu değişiklikler ve orta katman geri paket izlemek için hale karmaşık. İletişim kuran değişiklikleri için bir mekanizma tamamen kadar uygulama uygulamasıdır. Tek gereksinim olan [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] iyimser eşzamanlılık denetimleri için gerekli olan özgün değerlere verilmelidir.  
   

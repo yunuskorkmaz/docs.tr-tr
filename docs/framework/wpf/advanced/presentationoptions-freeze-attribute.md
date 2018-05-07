@@ -1,28 +1,16 @@
 ---
-title: "PresentationOptions:Freeze Özniteliği"
-ms.custom: 
+title: PresentationOptions:Freeze Özniteliği
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-wpf
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - Freeze attribute [WPF]
 - Freezable elements [WPF]
 - PresentationOptions prefix [WPF]
 ms.assetid: 391032dd-2fba-4804-bb8a-3b071797a9f4
-caps.latest.revision: "9"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: cb305c69cec7c4e4766153ae64d37b19ab0bccea
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 896f7b24599b68f178d2a006e5ddc07278564bde
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="presentationoptionsfreeze-attribute"></a>PresentationOptions:Freeze Özniteliği
 Ayarlar <xref:System.Windows.Freezable.IsFrozen%2A> durumunu `true` çağırılarak <xref:System.Windows.Freezable> öğesi. Varsayılan davranışı bir <xref:System.Windows.Freezable> olmadan `PresentationOptions:Freeze` belirtilen özniteliği olan <xref:System.Windows.Freezable.IsFrozen%2A> olan `false` yükleme süresini ve genel bağımlı <xref:System.Windows.Freezable> çalışma zamanında davranışı.  

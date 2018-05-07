@@ -1,24 +1,17 @@
 ---
-title: "In (Genel Değiştirici) (Visual Basic)"
+title: In (Genel Değiştirici) (Visual Basic)
 ms.date: 07/20/2015
-ms.prod: .net
-ms.technology:
-- devlang-visual-basic
-ms.topic: article
 f1_keywords:
 - vb.VarianceIn
 helpviewer_keywords:
 - contravariance, In keyword [Visual Basic]
 - In keyword [Visual Basic]
 ms.assetid: 59bb13c5-fe96-42b8-8286-86293d1661c5
-caps.latest.revision: 
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: 83e9aab4fc361754cfd750ae68f04b36dce13d0a
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: d1d9209cd583ac96ece59660ad29c76a66d3395a
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="in-generic-modifier-visual-basic"></a>In (Genel Değiştirici) (Visual Basic)
 Genel tür parametreleri için `In` anahtar sözcüğü tür parametre değişken karşıtıdır olduğunu belirtir.  
@@ -31,7 +24,7 @@ Genel tür parametreleri için `In` anahtar sözcüğü tür parametre değişke
 ## <a name="rules"></a>Kurallar  
  Kullanabileceğiniz `In` anahtar sözcüğü genel arabirimler ve temsilciler.  
   
- Yalnızca bir tür yöntemi bağımsız değişken olarak kullanılan ve yöntemin dönüş türü olarak kullanılmayan bir tür parametresi bir genel arabirim ya da temsilci karşıtı bildirilebilir. `ByRef`parametreleri eşdeğişken olamaz veya karşıtı.  
+ Yalnızca bir tür yöntemi bağımsız değişken olarak kullanılan ve yöntemin dönüş türü olarak kullanılmayan bir tür parametresi bir genel arabirim ya da temsilci karşıtı bildirilebilir. `ByRef` parametreleri eşdeğişken olamaz veya karşıtı.  
   
  Kovaryans ve kontravaryans başvuru türleri için desteklenir ve değer türleri için desteklenmiyor.  
   
@@ -53,5 +46,5 @@ Genel tür parametreleri için `In` anahtar sözcüğü tür parametre değişke
  [!code-vb[vbVarianceKeywords#2](../../../visual-basic/language-reference/modifiers/codesnippet/VisualBasic/in-generic-modifier_2.vb)]  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [Genel arabirimlerde varyans](../../programming-guide/concepts/covariance-contravariance/variance-in-generic-interfaces.md)  
+ [Genel Arabirimlerde Varyans](../../programming-guide/concepts/covariance-contravariance/variance-in-generic-interfaces.md)  
  [Çıkışı](../../../visual-basic/language-reference/modifiers/out-generic-modifier.md)

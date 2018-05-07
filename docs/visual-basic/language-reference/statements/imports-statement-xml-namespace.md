@@ -1,12 +1,6 @@
 ---
-title: "Imports Deyimi (XML Ad Alanı)"
+title: Imports Deyimi (XML Ad Alanı)
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- devlang-visual-basic
-ms.topic: article
 f1_keywords:
 - vb.ImportsXmlns
 helpviewer_keywords:
@@ -15,14 +9,11 @@ helpviewer_keywords:
 - Imports statement [Visual Basic]
 - namespaces [Visual Basic], importing
 ms.assetid: 1f4d50a6-08c7-4c2e-8206-ccae35fcd1b4
-caps.latest.revision: 
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: a0fe6d37c58ead94f2c03736318209abb67cd6dc
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: ba7475416d8a4e2eb3c892d457c03eeb695045eb
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="imports-statement-xml-namespace"></a>Imports Deyimi (XML Ad Alanı)
 XML değişmez değerleri ve XML eksen özellikleri kullanılmak üzere XML ad alanı öneklerini alır.  
@@ -97,7 +88,7 @@ Imports <xmlns:xmlNamespacePrefix = "xmlNamespaceName">
  `Patrick Hines`  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [XML öğesi değişmez değeri](../../../visual-basic/language-reference/xml-literals/xml-element-literal.md)  
- [XML eksen özellikleri](../../../visual-basic/language-reference/xml-axis/xml-axis-properties.md)  
- [Bildirilmiş XML öğeleri ve özniteliklerinin adları](../../../visual-basic/programming-guide/language-features/xml/names-of-declared-xml-elements-and-attributes.md)  
- [GetXmlNamespace işleci](../../../visual-basic/language-reference/operators/getxmlnamespace-operator.md)
+ [XML Öğesi Değişmez Değeri](../../../visual-basic/language-reference/xml-literals/xml-element-literal.md)  
+ [XML Eksen Özellikleri](../../../visual-basic/language-reference/xml-axis/xml-axis-properties.md)  
+ [Bildirilmiş XML Öğeleri ve Özniteliklerinin Adları](../../../visual-basic/programming-guide/language-features/xml/names-of-declared-xml-elements-and-attributes.md)  
+ [GetXmlNamespace İşleci](../../../visual-basic/language-reference/operators/getxmlnamespace-operator.md)

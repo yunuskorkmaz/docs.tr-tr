@@ -2,11 +2,11 @@
 title: '&lt;ws2007HttpBinding&gt; &lt;iletisi&gt;'
 ms.date: 03/30/2017
 ms.assetid: 9ffd8db6-84a8-4b38-a9fe-2cb1a87a1c97
-ms.openlocfilehash: d3449735222d02857ee11ef6d20914c1e9a018a7
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
-ms.translationtype: HT
+ms.openlocfilehash: 39d5ce66537fd6c94895205ccc855d7fb631284e
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="ltmessagegt-of-ltws2007httpbindinggt"></a>&lt;ws2007HttpBinding&gt; &lt;iletisi&gt;
 İleti düzeyi güvenliği ayarlarını tanımlar [ \<ws2007HttpBinding >](../../../../../docs/framework/configure-apps/file-schema/wcf/ws2007httpbinding.md) öğesi.  
@@ -78,7 +78,7 @@ ms.lasthandoff: 05/03/2018
 |`None`|Bu hizmetin anonim istemcilerle etkileşime girmesine izin verir. Hizmette bu hizmeti istemci kimlik gerektirmez gösterir. İstemcide, bu istemciyi istemci kimlik sağlamaz gösterir.|  
 |`Certificate`|Hizmetinin gerektiren izin verir, istemci kimlik doğrulaması kullanarak bir sertifika. Varsa `message` güvenlik modu kullanılır ve `negotiateServiceCredential` özniteliği `false`, istemci ile hizmet sertifikası sağlanmalıdır.|  
 |`IssuedToken`|Genellikle bir güvenlik belirteci hizmeti (STS) tarafından verilen özel bir belirteç belirtir.|  
-|`UserName`|Hizmetinin gerektiren izin verir, istemci kimlik doğrulaması kullanarak bir `UserName` kimlik bilgisi. [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)] bir parola Özet gönderirken ya da parola kullanarak ve böyle anahtarların ileti güvenliği için kullanarak anahtarları türetme desteklemez. Bu nedenle, [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)] taşıma kullanırken güvenli zorlar `UserName` kimlik bilgileri. Bu kimlik bilgisi modu birlikte çalışabilir exchange veya temel çalışabilen olmayan bir anlaşma sonuçlanır `negotiateServiceCredential` özniteliği.|  
+|`UserName`|Hizmetinin gerektiren izin verir, istemci kimlik doğrulaması kullanarak bir `UserName` kimlik bilgisi. WCF parola Özet gönderirken ya da parola kullanarak ve böyle anahtarların ileti güvenliği için kullanarak anahtarları türetme desteklemez. Bu nedenle, WCF taşıma kullanırken güvenli zorlar `UserName` kimlik bilgileri. Bu kimlik bilgisi modu birlikte çalışabilir exchange veya temel çalışabilen olmayan bir anlaşma sonuçlanır `negotiateServiceCredential` özniteliği.|  
 |`Windows`|Kimliği doğrulanmış bağlamı altında olacak şekilde SOAP alışverişleri sağlayan bir `Windows` kimlik bilgisi. Varsa `negotiateServiceCredential` özniteliği `true`, bu bir SSPI anlaşması veya Kerberos (birlikte çalışabilen standart) ya da gerçekleştirir.|  
   
 ### <a name="child-elements"></a>Alt Öğeler  

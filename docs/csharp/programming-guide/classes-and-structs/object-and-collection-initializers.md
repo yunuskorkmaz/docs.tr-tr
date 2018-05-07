@@ -1,21 +1,15 @@
 ---
-title: "Nesne ve Koleksiyon Başlatıcıları (C# Programlama Kılavuzu)"
+title: Nesne ve Koleksiyon Başlatıcıları (C# Programlama Kılavuzu)
 ms.date: 07/20/2015
-ms.prod: .net
-ms.technology: devlang-csharp
-ms.topic: article
 helpviewer_keywords:
 - object initializers [C#]
 - collection initializers [C#]
 ms.assetid: c58f3db5-d7d4-4651-bd2d-5a3a97357f61
-caps.latest.revision: "27"
-author: BillWagner
-ms.author: wiwagn
-ms.openlocfilehash: 628f08aaebfa209fc9cb7cfb2b506fc67d5424f9
-ms.sourcegitcommit: 6a9030eb5bd0f00e1d144f81958adb195cfb1f6f
+ms.openlocfilehash: ad8127bfdd7178051077e6f3fe75c777acf5d345
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/10/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="object-and-collection-initializers-c-programming-guide"></a>Nesne ve Koleksiyon Başlatıcıları (C# Programlama Kılavuzu)
 Nesne başlatıcıları, oluşturma zamanında ardından atama deyimleri satırları gelecek şekilde bir oluşturucu çağırmak zorunda kalmadan, bir nesnenin istediğiniz erişilebilir alanlarına veya özelliklerine değerler atamanıza olanak tanır. Nesne başlatıcı sözdizimi, bir oluşturucu için bağımsız değişkenler belirtmenize veya bağımsız değişkenleri (ve parantez sözdizimini) atmanıza olanak tanır.  Aşağıdaki örnekte bir adlandırılmış türüyle nesne Başlatıcı kullanmayı gösterir `Cat` ve varsayılan oluşturucu çağırmak nasıl. Otomatik uygulanan özellikler kullanımına dikkat edin `Cat` sınıfı. Daha fazla bilgi için bkz: [Auto-Implemented özellikleri](../../../csharp/programming-guide/classes-and-structs/auto-implemented-properties.md).  
@@ -90,7 +84,7 @@ var numbers = new Dictionary<int, string> {
  
  [!code-csharp[csProgGuideLINQ#84](../../../csharp/programming-guide/arrays/codesnippet/CSharp/object-and-collection-initializers_7.cs)]
  
- `Add`yöntemleri kullanabilir `params` değişken sayıda bağımsız değişken aşağıdaki örnekte gösterildiği gibi olabilmesi için anahtar sözcüğü. Bu örnek özel uygulama dizinler kullanılarak bir koleksiyonu başlatmak için bir dizin oluşturucu de ortaya koyar.
+ `Add` yöntemleri kullanabilir `params` değişken sayıda bağımsız değişken aşağıdaki örnekte gösterildiği gibi olabilmesi için anahtar sözcüğü. Bu örnek özel uygulama dizinler kullanılarak bir koleksiyonu başlatmak için bir dizin oluşturucu de ortaya koyar.
  
  [!code-csharp[csProgGuideLINQ#85](../../../csharp/programming-guide/arrays/codesnippet/CSharp/object-and-collection-initializers_8.cs)]
  

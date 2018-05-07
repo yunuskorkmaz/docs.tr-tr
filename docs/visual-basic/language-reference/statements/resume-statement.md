@@ -1,11 +1,6 @@
 ---
 title: Resume Deyimi
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
-ms.topic: article
 f1_keywords:
 - vb.Resume
 - vb.ResumeNext
@@ -20,14 +15,11 @@ helpviewer_keywords:
 - execution
 - Resume statement [Visual Basic]
 ms.assetid: e24d058b-1a5c-4274-acb9-7d295d3ea537
-caps.latest.revision: "16"
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: 3cb4334f302c07c81b6b8a7d0626be08cc69b1ed
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 1d03f631893be51529f29af824de0d684bf43804
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="resume-statement"></a>Resume Deyimi
 Hata işleme yordamı tamamladıktan sonra yürütme devam ettirir.  
@@ -70,6 +62,6 @@ Resume [ Next | line ]
  **Derleme:** Visual Basic çalışma zamanı kitaplığı (Microsoft.VisualBasic.dll içinde)  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [Try... Catch... Finally ifadesi](../../../visual-basic/language-reference/statements/try-catch-finally-statement.md)  
- [Error deyimi](../../../visual-basic/language-reference/statements/error-statement.md)  
- [On Error deyimi](../../../visual-basic/language-reference/statements/on-error-statement.md)
+ [Try...Catch...Finally Deyimi](../../../visual-basic/language-reference/statements/try-catch-finally-statement.md)  
+ [Error Deyimi](../../../visual-basic/language-reference/statements/error-statement.md)  
+ [On Error Deyimi](../../../visual-basic/language-reference/statements/on-error-statement.md)

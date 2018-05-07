@@ -1,37 +1,23 @@
 ---
-title: "Oturumda Kuyruğa Alınmış İletileri Gruplandırma"
-ms.custom: 
+title: Oturumda Kuyruğa Alınmış İletileri Gruplandırma
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
 helpviewer_keywords:
 - queues [WCF]. grouping messages
 ms.assetid: 63b23b36-261f-4c37-99a2-cc323cd72a1a
-caps.latest.revision: 
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: aba045456d61b5ad687f1030dca3c26b083cdb58
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 62aa269d138d436824d3c825de9f722490d3b5bd
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="grouping-queued-messages-in-a-session"></a>Oturumda Kuyruğa Alınmış İletileri Gruplandırma
-[!INCLUDE[indigo1](../../../../includes/indigo1-md.md)]tek bir alıcı uygulama tarafından bir dizi ilgili ileti işleme için bir arada gruplandırmak izin veren bir oturum sağlar. Oturumun bir parçası olan iletiler aynı işlemin parçası olmalıdır. Tüm oturum işlenmek üzere bir ileti başarısız olursa tüm iletileri aynı işlemin bir parçası olduğundan geri alınır. Oturumu sıralarındaki ve zararlı sıraları açısından benzer davranışları yok. Oturumları için yapılandırılmış bir sıralı bağlama üzerinde ayarlanan yaşam süresi (TTL) özelliği için zaman oturum bir bütün olarak uygulanır. Yalnızca TTL süresi dolmadan önce bazı iletiler oturumunda gönderilen tüm oturum sahipsiz sıraya konur. Benzer şekilde, bir uygulama için uygulama sırasından gönderilmek üzere bir oturumdaki iletilerin başarısız olduğunda, tüm oturum zararlı sırasına (varsa) yerleştirilir.  
+Windows Communication Foundation (WCF) tek bir alıcı uygulama tarafından bir dizi ilgili ileti işleme için bir arada gruplandırmak izin veren bir oturum sağlar. Oturumun bir parçası olan iletiler aynı işlemin parçası olmalıdır. Tüm oturum işlenmek üzere bir ileti başarısız olursa tüm iletileri aynı işlemin bir parçası olduğundan geri alınır. Oturumu sıralarındaki ve zararlı sıraları açısından benzer davranışları yok. Oturumları için yapılandırılmış bir sıralı bağlama üzerinde ayarlanan yaşam süresi (TTL) özelliği için zaman oturum bir bütün olarak uygulanır. Yalnızca TTL süresi dolmadan önce bazı iletiler oturumunda gönderilen tüm oturum sahipsiz sıraya konur. Benzer şekilde, bir uygulama için uygulama sırasından gönderilmek üzere bir oturumdaki iletilerin başarısız olduğunda, tüm oturum zararlı sırasına (varsa) yerleştirilir.  
   
 ## <a name="message-grouping-example"></a>İleti gruplama örneği  
- İletileri gruplandırma olduğu yararlı bir örnektir bir sipariş işleme uygulama olarak uygularken bir [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] hizmet. Örneğin, bir istemci bir öğe sayısı içeren bu uygulamaya yönelik bir sipariş gönderir. Her öğe için istemci gönderilmekte olan ayrı bir iletide sonuçları hizmetine yapılan bir çağrı yapar. Hizmet vermemesini A ilk öğe ve ikinci öğe almak için Sunucu B almaya mümkündür. Uygun sırayla bulmak ve kendisine, öğeyi eklemek bu öğeyi işleyen sunucu sahip bir öğe eklenir her zaman son derece verimsiz olduğu. Hala sunucu şu anda işlenmekte olan tüm siparişleri izlemek ve yeni öğe ait hangisinin belirlemek için tüm istekleri işleme yalnızca tek bir sunucuyla böyle verimsiz çalıştırın. Tüm istekler için tek bir sıralamayı büyük ölçüde gruplandırma bu tür bir uygulama, uygulanmasını basitleştirir. İstemci uygulaması için tek bir sıralamayı tüm öğeleri bir oturumda gönderir hizmet sırası işlediğinde, tek seferde tüm oturum işler şekilde. \  
+ İletileri gruplandırma yararlı olduğu bir sipariş işleme uygulamanın bir WCF hizmeti olarak uygularken örnektir. Örneğin, bir istemci bir öğe sayısı içeren bu uygulamaya yönelik bir sipariş gönderir. Her öğe için istemci gönderilmekte olan ayrı bir iletide sonuçları hizmetine yapılan bir çağrı yapar. Hizmet vermemesini A ilk öğe ve ikinci öğe almak için Sunucu B almaya mümkündür. Uygun sırayla bulmak ve kendisine, öğeyi eklemek bu öğeyi işleyen sunucu sahip bir öğe eklenir her zaman son derece verimsiz olduğu. Hala sunucu şu anda işlenmekte olan tüm siparişleri izlemek ve yeni öğe ait hangisinin belirlemek için tüm istekleri işleme yalnızca tek bir sunucuyla böyle verimsiz çalıştırın. Tüm istekler için tek bir sıralamayı büyük ölçüde gruplandırma bu tür bir uygulama, uygulanmasını basitleştirir. İstemci uygulaması için tek bir sıralamayı tüm öğeleri bir oturumda gönderir hizmet sırası işlediğinde, tek seferde tüm oturum işler şekilde. \  
   
 ## <a name="procedures"></a>Yordamlar  
   
@@ -75,16 +61,16 @@ ms.lasthandoff: 12/22/2017
   
 1.  İşlem sırası yazmak için bir işlem kapsamı oluşturun.  
   
-2.  Oluşturma [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] kullanan istemci [ServiceModel meta veri yardımcı Programracı (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md) aracı.  
+2.  Kullanarak WCF istemcisi oluşturma [ServiceModel meta veri yardımcı Programracı (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md) aracı.  
   
 3.  Sipariş verin.  
   
-4.  Kapat [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] istemci.  
+4.  WCF istemcisini kapatın.  
   
 ## <a name="example"></a>Örnek  
   
 ### <a name="description"></a>Açıklama  
- Aşağıdaki örnek kodunu sağlar `IProcessOrder` hizmet ve bir istemci için bu hizmeti kullanır. Bunu gösterir nasıl [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] kullanan kuyruğa alınan oturumları gruplandırma davranışı sağlamak için.  
+ Aşağıdaki örnek kodunu sağlar `IProcessOrder` hizmet ve bir istemci için bu hizmeti kullanır. Bu, sıraya alınan oturumları WCF gruplandırma davranışını sağlamak için nasıl kullandığını gösterir.  
   
 ### <a name="code-for-the-service"></a>Hizmet için kodu  
  [!code-csharp[S_Msmq_Session#1](../../../../samples/snippets/csharp/VS_Snippets_CFX/s_msmq_session/cs/service.cs#1)]

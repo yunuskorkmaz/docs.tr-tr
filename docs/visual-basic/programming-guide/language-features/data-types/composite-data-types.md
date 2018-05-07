@@ -1,13 +1,6 @@
 ---
 title: Bileşik Veri Türleri (Visual Basic)
-ms.custom: ''
 ms.date: 04/25/2017
-ms.prod: .net
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- devlang-visual-basic
-ms.topic: article
 helpviewer_keywords:
 - classes [Visual Basic], composite data types
 - composite types [Visual Basic]
@@ -18,14 +11,11 @@ helpviewer_keywords:
 - classes [Visual Basic], composite types
 - types [Visual Basic], composite
 ms.assetid: 62970f2e-52c0-4369-8963-613820f1f434
-caps.latest.revision: 19
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: caa832fc191ad925674e21b1237ac98328ce0bd7
-ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
+ms.openlocfilehash: 73867a5881db7c94d258e8716c4ff4c5b1119e71
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="composite-data-types-visual-basic"></a>Bileşik Veri Türleri (Visual Basic)
 Başlangıç veri türleri Visual Basic kaynakları ek olarak, öğeleri oluşturmak için farklı türlerde de toplayabilir *bileşik veri türleri* yapıları, dizileri ve sınıflar gibi. Bileşik veri türleri başlangıç türleri ve diğer bileşik türler oluşturabilirsiniz. Örneğin, dizi üyeleriyle yapı öğeleri dizisi veya bir yapı tanımlayabilirsiniz.  

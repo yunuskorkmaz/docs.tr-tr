@@ -1,13 +1,7 @@
 ---
-title: "Nasıl yapılır: Yalıtılmış Depolama için Depoları Alma"
-ms.custom: 
+title: 'Nasıl yapılır: Yalıtılmış Depolama için Depoları Alma'
 ms.date: 03/30/2017
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
 ms.technology: dotnet-standard
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -19,25 +13,20 @@ helpviewer_keywords:
 - data stores, obtaining
 - data storage using isolated storage, obtaining stores
 ms.assetid: fcb6b178-d526-47c4-b029-e946f880f9db
-caps.latest.revision: "19"
 author: mairaw
 ms.author: mairaw
-manager: wpickett
-ms.workload:
-- dotnet
-- dotnetcore
-ms.openlocfilehash: 61f183398c3f8c93ead965036e1edeb200dd8cb1
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: 604aabbff8554416d6794ff0b87188fb5bcc3185
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-obtain-stores-for-isolated-storage"></a>Nasıl yapılır: Yalıtılmış Depolama için Depoları Alma
 Yalıtılmış depolamada sanal dosya sistemi veri bölme içinde kullanıma sunar. <xref:System.IO.IsolatedStorage.IsolatedStorageFile> Sınıf, çeşitli bir yalıtılmış depolamada ile etkileşim için yöntemler sağlar. Oluşturmak ve depolar, almak için <xref:System.IO.IsolatedStorage.IsolatedStorageFile> üç statik yöntemler sağlar:  
   
--   <xref:System.IO.IsolatedStorage.IsolatedStorageFile.GetUserStoreForAssembly%2A>Kullanıcı ve derlemeye göre yalıtılmış depolama döndürür.  
+-   <xref:System.IO.IsolatedStorage.IsolatedStorageFile.GetUserStoreForAssembly%2A> Kullanıcı ve derlemeye göre yalıtılmış depolama döndürür.  
   
--   <xref:System.IO.IsolatedStorage.IsolatedStorageFile.GetUserStoreForDomain%2A>etki alanı ve derleme tarafından yalıtılır depolama döndürür.  
+-   <xref:System.IO.IsolatedStorage.IsolatedStorageFile.GetUserStoreForDomain%2A> etki alanı ve derleme tarafından yalıtılır depolama döndürür.  
   
      Her iki yöntem, bunlar adlandırılır koduna ait bir depolama alın.  
   

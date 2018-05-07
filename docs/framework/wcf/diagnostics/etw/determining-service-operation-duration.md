@@ -1,27 +1,15 @@
 ---
-title: "Hizmet işlemi süresini belirleme"
-ms.custom: 
+title: Hizmet işlemi süresini belirleme
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: e8a93a2c-2c20-48b3-8986-57e90e9aa908
-caps.latest.revision: "5"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 2c96aa6752feca637f89ed309d1a5c87cea4a3a9
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
-ms.translationtype: MT
+ms.openlocfilehash: a7615a4574210ad6e9b5eee2e5d5855365768854
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="determining-service-operation-duration"></a>Hizmet işlemi süresini belirleme
-Çözümleme izleme de etkinse, bir [!INCLUDE[indigo1](../../../../../includes/indigo1-md.md)] uygulama, bir hizmet işlemi için yürütme süresini kolayca belirlenebilir olay günlüğünü inceleyerek.  Bu konuda, bir hizmet işlemi tamamlamak için geçen süreyi belirlemek gösterilmiştir.  
+Bir Windows Communication Foundation (WCF) uygulamasında çözümleme izleme etkinleştirilirse, yürütme süresi bir hizmet işlemi için olay günlüğünü inceleyerek kolayca belirlenebilir.  Bu konuda, bir hizmet işlemi tamamlamak için geçen süreyi belirlemek gösterilmiştir.  
   
 ### <a name="determining-service-operation-execution-duration"></a>Hizmet işlemi yürütme süresini belirleme  
   

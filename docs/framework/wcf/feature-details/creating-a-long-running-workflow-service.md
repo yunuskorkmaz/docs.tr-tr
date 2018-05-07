@@ -1,26 +1,12 @@
 ---
 title: Uzun Süre Çalışan Bir İş Akışı Hizmeti Oluşturma
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 ms.assetid: 4c39bd04-5b8a-4562-a343-2c63c2821345
-caps.latest.revision: 9
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 1cd7cc70c50ac2aa56d8cca55037769aa0b6a64a
-ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
+ms.openlocfilehash: 1ddb995b849a15451c36d5d11c95a4904a3e0496
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/30/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="creating-a-long-running-workflow-service"></a>Uzun Süre Çalışan Bir İş Akışı Hizmeti Oluşturma
 Bu konu, uzun süre çalışan iş akışı hizmeti oluşturmayı açıklar. İş akışı hizmetleri uzun süre çalışan uzun bir süre için çalıştırabilirsiniz. Belirli bir noktada iş akışı için bazı ek bilgiler bekleyen boşta gidebilir. Bu meydana geldiğinde iş akışını bir SQL veritabanına kalıcı ve bellekten kaldırılır. Ek bilgi kullanılabilir hale geldiğinde iş akışı örneği belleğe geri yüklenir ve yürütmeye devam eder.  Bu senaryoda, oldukça basitleştirilmiş bir sıralama sistem uyguluyorsanız.  İstemci sırasını başlatmak için iş akışı hizmeti için bir Başlangıç iletisi gönderir. Bu, istemciye bir sipariş Kimliğini döndürür. Bu noktada iş akışı hizmeti istemciden başka bir ileti bekliyor ve boşta durumuna geçtiğinde ve SQL Server veritabanına kalıcı.  İstemci öğeyi sıralamak için sonraki ileti gönderdiğinde, iş akışı hizmeti belleğe geri yüklenmez ve sipariş işleme tamamlanır. Kod örneğinde öğe siparişe eklenmiş belirten bir dize döndürür. Kod örneği teknolojisi, ancak bunun yerine bir uzun süre çalışan iş akışı hizmetleri gösterilmektedir basit örnek gerçek dünya uygulamasının olması düşünülmemiştir. Bu konu nasıl oluşturulacağını bilmeniz varsayar [!INCLUDE[vs_current_long](../../../../includes/vs-current-long-md.md)] projeler ve çözümler.  
@@ -52,7 +38,7 @@ Bu konu, uzun süre çalışan iş akışı hizmeti oluşturmayı açıklar. İ�
   
 1.  Boş bir oluşturma [!INCLUDE[vs_current_long](../../../../includes/vs-current-long-md.md)] çözümü adlandırın `OrderProcessing`.  
   
-2.  Yeni bir ekleme [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] adlı iş akışı hizmeti uygulaması projesi `OrderService` çözüme.  
+2.  Adlı yeni bir WCF iş akışı hizmeti uygulaması projesi eklemek `OrderService` çözüme.  
   
 3.  Proje Özellikleri iletişim kutusunda seçin **Web** sekmesi.  
   

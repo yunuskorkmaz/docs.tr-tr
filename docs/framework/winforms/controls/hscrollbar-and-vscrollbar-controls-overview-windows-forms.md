@@ -1,13 +1,6 @@
 ---
-title: "HScrollBar ve VScrollBar Denetimlerine Genel Bakış (Windows Forms)"
-ms.custom: 
+title: HScrollBar ve VScrollBar Denetimlerine Genel Bakış (Windows Forms)
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-winforms
-ms.tgt_pltfrm: 
-ms.topic: article
 f1_keywords:
 - HScrollBar
 - VScrollBar
@@ -18,21 +11,16 @@ helpviewer_keywords:
 - ScrollBar control [Windows Forms], about ScrollBar control
 - scroll bars [Windows Forms], about scroll bars
 ms.assetid: 8b307679-1cae-41d8-99aa-3d1efd207cd6
-caps.latest.revision: "13"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 8fbdb3778959d1691200cde49e485d8a63c6e645
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.openlocfilehash: 572ba9f16d1c78e1825d0c9db7530c6c78175d27
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="hscrollbar-and-vscrollbar-controls-overview-windows-forms"></a>HScrollBar ve VScrollBar Denetimlerine Genel Bakış (Windows Forms)
 Windows Forms <xref:System.Windows.Forms.ScrollBar> denetimleri kaydırarak ya da yatay veya dikey olarak bir uygulama veya denetim içinde uzun bir listesi ile kolay gezinme öğeleri veya büyük miktarda bilgi sağlamak için kullanılır. Kaydırma çubukları Windows arabiriminin ortak bir öğesi olan böylece <xref:System.Windows.Forms.ScrollBar> denetim öğesinden türetilen değil denetimleri ile kullanılan genellikle <xref:System.Windows.Forms.ScrollableControl> sınıfı. Benzer şekilde, içerecek şekilde Çoğu geliştirici seçin <xref:System.Windows.Forms.ScrollBar> denetim kendi kullanıcı denetimleri yazarken.  
   
- <xref:System.Windows.Forms.HScrollBar> (Yatay) ve <xref:System.Windows.Forms.VScrollBar> (dikey) denetimleri diğer denetimlerden bağımsız olarak çalışır ve olaylar, özellikleri ve yöntemleri kendi kümesine sahip. <xref:System.Windows.Forms.ScrollBar>denetimleri metin kutuları, liste kutuları, birleşik giriş kutuları veya MDI formları bağlı yerleşik kaydırma çubukları ile aynı değildir ( <xref:System.Windows.Forms.TextBox> denetimi sahip bir <xref:System.Windows.Forms.TextBox.ScrollBars%2A> özelliğini denetime bağlı kaydırma çubuklarını gösterme veya gizleme).  
+ <xref:System.Windows.Forms.HScrollBar> (Yatay) ve <xref:System.Windows.Forms.VScrollBar> (dikey) denetimleri diğer denetimlerden bağımsız olarak çalışır ve olaylar, özellikleri ve yöntemleri kendi kümesine sahip. <xref:System.Windows.Forms.ScrollBar> denetimleri metin kutuları, liste kutuları, birleşik giriş kutuları veya MDI formları bağlı yerleşik kaydırma çubukları ile aynı değildir ( <xref:System.Windows.Forms.TextBox> denetimi sahip bir <xref:System.Windows.Forms.TextBox.ScrollBars%2A> özelliğini denetime bağlı kaydırma çubuklarını gösterme veya gizleme).  
   
  <xref:System.Windows.Forms.ScrollBar> Denetimleri kullanın <xref:System.Windows.Forms.ScrollBar.Scroll> kaydırma çubuğu taşıma (bazen Flash adlandırılır) kaydırma kutusunun izlemek için olay. Kullanarak <xref:System.Windows.Forms.ScrollBar.Scroll> olay sürüklenen gibi kaydırma çubuğu değeri erişim sağlar.  
   

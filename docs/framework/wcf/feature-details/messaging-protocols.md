@@ -1,31 +1,17 @@
 ---
-title: "Mesajlaşma Protokolleri"
-ms.custom: 
+title: Mesajlaşma Protokolleri
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 5b20bca7-87b3-4c8f-811b-f215b5987104
-caps.latest.revision: 
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 75a39fa1d0301a48cec7ad61c968ee3fc82d189c
-ms.sourcegitcommit: 15316053918995cc1380163a7d7e7edd5c44e6d7
+ms.openlocfilehash: c900c8fde8b13b4766fb245de2bab46b5601f135
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/19/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="messaging-protocols"></a>Mesajlaşma Protokolleri
-[!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] Kanal yığını iç ileti gösterimi kablo biçimine dönüştürme ve belirli bir kullanarak göndermek için kodlama ve taşıma kanalları kullanır. HTTP Web Hizmetleri birlikte çalışabilirlik için kullanılan en yaygın aktarım olduğunu ve Web Hizmetleri tarafından kullanılan en yaygın Kodlamalar XML tabanlı SOAP 1.1 ve SOAP 1.2 ileti iletim en iyi duruma getirme mekanizmasını (MTOM).  
+Windows Communication Foundation (WCF) kanal yığını iç ileti gösterimi kablo biçimine dönüştürme ve belirli bir kullanarak göndermek için kodlama ve taşıma kanalları kullanır. HTTP Web Hizmetleri birlikte çalışabilirlik için kullanılan en yaygın aktarım olduğunu ve Web Hizmetleri tarafından kullanılan en yaygın Kodlamalar XML tabanlı SOAP 1.1 ve SOAP 1.2 ileti iletim en iyi duruma getirme mekanizmasını (MTOM).  
   
- Bu konuda ele alınmaktadır [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] tarafından işe aşağıdaki protokolleri için uygulama ayrıntılarını <xref:System.ServiceModel.Channels.HttpTransportBindingElement>.  
+ Bu konu, WCF uygulaması tarafından işe aşağıdaki protokolleri ayrıntılarını kapsar <xref:System.ServiceModel.Channels.HttpTransportBindingElement>.  
   
 |Belirtim/belgesi|Bağlantı|  
 |-----------------------------|----------|  
@@ -33,7 +19,7 @@ ms.lasthandoff: 03/19/2018
 |SOAP 1.1 HTTP bağlama|http://www.w3.org/TR/2000/NOTE-SOAP-20000508/, Bölüm 7|  
 |SOAP 1.2 HTTP bağlama|http://www.w3.org/TR/soap12-part2/, Bölüm 7|  
   
- Bu konuda ele alınmaktadır [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] uygulama ayrıntıları aşağıdaki protokoller için <xref:System.ServiceModel.Channels.TextMessageEncodingBindingElement> ve <xref:System.ServiceModel.Channels.MtomMessageEncodingBindingElement> kullanın.  
+ Bu konuda aşağıdaki protokolleri WCF uygulama ayrıntılarını kapsar <xref:System.ServiceModel.Channels.TextMessageEncodingBindingElement> ve <xref:System.ServiceModel.Channels.MtomMessageEncodingBindingElement> kullanın.  
   
 |Belirtim/belgesi|Bağlantı|  
 |-----------------------------|----------|  
@@ -48,7 +34,7 @@ W3C Web adresleme 1.0 - meta veri Hizmetleri|http://www.w3.org/TR/ws-addr-metada
 |WSDL SOAP1.1 bağlama|http://www.w3.org/TR/wsdl/|  
 |WSDL SOAP1.2 bağlama|http://www.w3.org/Submission/wsdl11soap12/|  
   
- Bu konuda ele alınmaktadır [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] uygulama ayrıntıları aşağıdaki protokoller için <xref:System.ServiceModel.Channels.MtomMessageEncodingBindingElement> kullanır.  
+ Bu konuda aşağıdaki protokolleri WCF uygulama ayrıntılarını kapsar <xref:System.ServiceModel.Channels.MtomMessageEncodingBindingElement> kullanır.  
   
 |Belirtim/belgesi|Bağlantı|  
 |-----------------------------|----------|  
@@ -75,41 +61,41 @@ dp|http://schemas.microsoft.com/net/2006/06/duplex|
 ## <a name="soap-11-and-soap-12"></a>SOAP 1.1 ve SOAP 1.2  
   
 ### <a name="envelope-and-processing-model"></a>Zarf ve Model işleme  
- [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] Temel Profil 1.1 (BP11) ve temel Profil 1.0 (SSBP10) aşağıdaki SOAP 1.1 Zarf işleme uygular. SOAP 1.2 Zarf SOAP12 bölüm 1 aşağıdaki işlem uygulanır.  
+ WCF SOAP 1.1 Zarf işleme temel Profil 1.1 (BP11) ve temel Profil 1.0 (SSBP10) aşağıdaki uygular. SOAP 1.2 Zarf SOAP12 bölüm 1 aşağıdaki işlem uygulanır.  
   
- Bu bölümde tarafından gerçekleştirilecek belirli uygulama seçimler açıklanmaktadır [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] BP11 ve SOAP12 bölüm 1 sabittir.  
+ Bu bölümde BP11 ve SOAP12 bölüm 1 açısından WCF tarafından yapılan belirli uygulama seçenekleri açıklanmaktadır.  
   
 #### <a name="mandatory-header-processing"></a>Zorunlu üstbilgiyi işleme  
- [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] üstbilgiler işleniyor işaretlenmiş için kurallara `mustUnderstand` SOAP 1.1 ve SOAP 1.2 belirtimlere, aşağıdaki farklılıkları açıklanan.  
+ WCF üstbilgileri işleme işaretlenmiş için kuralları aşağıdaki `mustUnderstand` SOAP 1.1 ve SOAP 1.2 belirtimlere, aşağıdaki farklılıkları açıklanan.  
   
- Girer bir ileti [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] kanal yığını ilişkili bağlama öğeleri tarafından örneğin yapılandırılmış tek tek kanalları, ileti metin kodlaması, güvenlik, güvenilir Mesajlaşma ve işlemler tarafından işlenir. Her bir kanala ilişkili ad alanından üstbilgileri tanır ve anladım olarak işaretler. Bir ileti dağıtıcısı girdikten sonra karşılık gelen ileti işlem başına Sözleşme ve bunları anladım işaretleri tarafından beklenen üstbilgileri işlemini biçimlendiricisi okur. Dağıtıcı kalan tüm üstbilgileri değil anladı ancak olarak işaretlenmiş olup olmadığını doğrular sonra `mustUnderstand` ve bir özel durum oluşturur. İçeren iletileri `mustUnderstand` recipient öğesinde hedeflenen üstbilgileri alıcı uygulama kodu tarafından işlenmedi.  
+ WCF kanalı yığın girer bir ileti ilişkili bağlama öğeleri tarafından örneğin yapılandırılmış tek tek kanalları, ileti metin kodlaması, güvenlik, güvenilir Mesajlaşma ve işlemler tarafından işlenir. Her bir kanala ilişkili ad alanından üstbilgileri tanır ve anladım olarak işaretler. Bir ileti dağıtıcısı girdikten sonra karşılık gelen ileti işlem başına Sözleşme ve bunları anladım işaretleri tarafından beklenen üstbilgileri işlemini biçimlendiricisi okur. Dağıtıcı kalan tüm üstbilgileri değil anladı ancak olarak işaretlenmiş olup olmadığını doğrular sonra `mustUnderstand` ve bir özel durum oluşturur. İçeren iletileri `mustUnderstand` recipient öğesinde hedeflenen üstbilgileri alıcı uygulama kodu tarafından işlenmedi.  
   
  Gibi katmanlı işleme altyapısı katmanları ve SOAP düğümünün uygulama katmanları arasında ayrım sağlar:  
   
--   B1111: değil anlaşılır üstbilgileri tarafından işlenen iletisi sonra algılanan [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] altyapı kanal yığını, ancak uygulama tarafından işlenmeden önce  
+-   B1111: değil anlaşılır üstbilgileri ileti WCF altyapı kanal yığını tarafından işlendikten sonra ancak uygulama tarafından işlenmeden önce algılandı  
   
      `mustUnderstand` Üstbilgi değeri SOAP 1.1 ve SOAP 1.2 arasında farklılık gösterir. Temel Profil 1.1 gerektirir `mustUnderstand` değer 0 veya 1 SOAP 1.1 iletileri için olabilir. SOAP 1.2 sağlar 0, 1, `false`, ve `true` olarak değerleri ancak kurallı gösterimi yayma önerir `xs:boolean` değerleri (`false`, `true`).  
   
--   B1112: [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] yayar `mustUnderstand` SOAP zarfının değerleri 0 ile 1 SOAP 1.1 ve SOAP 1.2 sürümleri için. [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] tüm değer alan kabul `xs:boolean` için `mustUnderstand` üstbilgi (0, 1, `false`, `true`)  
+-   B1112: WCF yayar `mustUnderstand` SOAP zarfının değerleri 0 ile 1 SOAP 1.1 ve SOAP 1.2 sürümleri için. WCF kabul eder tüm değer alanının `xs:boolean` için `mustUnderstand` üstbilgi (0, 1, `false`, `true`)  
   
 #### <a name="soap-faults"></a>SOAP hataları  
- Bir listesi aşağıda verilmiştir [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]-belirli bir SOAP hatası uygulamaları.  
+ WCF özel SOAP hataya uygulamaları listesi verilmiştir.  
   
--   B2121: [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] aşağıdaki SOAP 1.1 hata kodlarını döndürür: `s11:mustUnderstand`, `s11:Client`, ve `s11:Server`.  
+-   B2121: WCF aşağıdaki SOAP 1.1 hata kodlarını döndürür: `s11:mustUnderstand`, `s11:Client`, ve `s11:Server`.  
   
--   B2122: [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] aşağıdaki SOAP 1.2 hata kodlarını döndürür: `s12:MustUnderstand`, `s12:Sender`, ve `s12:Receiver`.  
+-   B2122: WCF aşağıdaki SOAP 1.2 hata kodlarını döndürür: `s12:MustUnderstand`, `s12:Sender`, ve `s12:Receiver`.  
   
 ### <a name="http-binding"></a>HTTP bağlama  
   
 #### <a name="soap-11-http-binding"></a>SOAP 1.1 HTTP bağlama  
- [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] Temel Profil 1.1 belirtimini aşağıdaki açıklamalar 3.4 bölümle aşağıdaki SOAP1.1 HTTP bağlaması uygular:  
+ WCF temel Profil 1.1 belirtimini aşağıdaki açıklamalar 3.4 bölümle aşağıdaki SOAP1.1 HTTP bağlaması uygular:  
   
--   B2211: [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] hizmeti, HTTP POST isteklerini yeniden yönlendirilmesini uygulamıyor.  
+-   B2211: WCF Hizmeti HTTP POST isteklerini yeniden yönlendirilmesini uygulamıyor.  
   
--   B2212: [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] istemcileri 3.4.8 uygun olarak HTTP tanımlama bilgilerini destekleyen.  
+-   B2212: WCF istemcileri HTTP tanımlama bilgilerini 3.4.8 uygun olarak destekler.  
   
 #### <a name="soap-12-http-binding"></a>SOAP 1.2 HTTP bağlama  
- [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] SOAP 1.2 HTTP bağlaması SOAP 1.2 bölümü 2 (SOAP12Part2) belirtimiyle aşağıdaki açıklamalar bölümünde açıklandığı gibi uygular.  
+ WCF SOAP 1.2 HTTP bağlaması SOAP 1.2 bölümü 2 (SOAP12Part2) belirtimiyle aşağıdaki açıklamalar bölümünde açıklandığı gibi uygular.  
   
  SOAP 1.2 sunulan bir isteğe bağlı eylem parametresi için `application/soap+xml` medya türü. Bu parametre WS adresleme kullanılmadığı SOAP ileti gövdesini ayrıştırılması gerek kalmadan ileti gönderme en iyi duruma getirmek kullanışlıdır.  
   
@@ -120,7 +106,7 @@ dp|http://schemas.microsoft.com/net/2006/06/duplex|
  WS-adresleme devre dışıdır ve gelen istek bir eylem parametresinin içermediğinden, ileti `Action` belirtilen olarak sayılmaz.  
   
 ## <a name="ws-addressing"></a>WS-adresleme  
- [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] WS-adresleme 3 sürümlerini uygular:  
+ WCF WS adresleme 3 sürümlerini uygular:  
   
 -   WS-adresleme 2004/08  
   
@@ -129,21 +115,21 @@ dp|http://schemas.microsoft.com/net/2006/06/duplex|
 -   WS-adresleme 1.0 - meta verileri  
   
 ### <a name="endpoint-references"></a>Uç nokta başvuruları  
- WS-adresleme'nin tüm sürümleri, [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] uygulayan uç noktaları tanımlamak için uç nokta başvuruları kullanın.  
+ WCF uygulayan WS-adresleme'nin tüm sürümleri uç nokta başvuruları uç noktaları tanımlamak için kullanın.  
   
 #### <a name="endpoint-references-and-ws-addressing-versions"></a>Uç nokta başvuruları ve WS adresleme sürümleri  
- [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] WS-adresleme kullanan altyapı protokolleri ve belirli bir sayı uygulayan `EndpointReference` öğesi ve `W3C.WsAddressing.EndpointReferenceType` sınıfı (örneğin, WS-ReliableMessaging, WS-SecureConversation ve WS-Trust). [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] Her iki sürümü WS-adresleme diğer altyapı protokollerle kullanımını destekler. [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] uç noktaları bir sürümü WS adresleme uç nokta başına destekler.  
+ WCF uygulayan WS adresleme kullanan altyapı protokolleri ve belirli bir sayı `EndpointReference` öğesi ve `W3C.WsAddressing.EndpointReferenceType` sınıfı (örneğin, WS-ReliableMessaging, WS-SecureConversation ve WS-Trust). WCF her iki sürümü WS-adresleme diğer altyapı protokollerle kullanımını destekler. WCF uç noktaları bir sürümü WS adresleme uç nokta başına destekler.  
   
- R3111, ad alanı için `EndpointReference` öğesi veya türü ile değiştirilen iletilerin kullanılan bir [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] uç nokta WS adresleme-bu bitiş noktası tarafından uygulanan sürümü aynı olmalıdır.  
+ R3111, ad alanı için `EndpointReference` öğesi veya türü WCF Bitiş noktası ile değiştirilen iletilerin kullanılan WS adresleme-bu bitiş noktası tarafından uygulanan sürümü aynı olmalıdır.  
   
- Örneğin, varsa bir [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] endpoint uygulayan WS-ReliableMessaging `AcksTo` gibi bir uç nokta içinde tarafından döndürülen üstbilgi `CreateSequenceResponse` WS adresleme sürümünü kullanır, `EncodingBinding` öğesi için bu uç nokta belirtir.  
+ Örneğin, bir WCF uç noktası WS-ReliableMessaging uyguluyorsa `AcksTo` gibi bir uç nokta içinde tarafından döndürülen üstbilgi `CreateSequenceResponse` WS adresleme sürümünü kullanır, `EncodingBinding` öğesi için bu uç nokta belirtir.  
   
 #### <a name="endpoint-references-and-metadata"></a>Uç nokta başvuruları ve meta veriler  
  Çeşitli senaryoları meta veriler veya belirli bir uç nokta için meta veriler için bir başvuru iletişim kurmasını gerektirir.  
   
- B3121: [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] WS-MetadataExchange (MEX) belirtimi değere veya başvuruya göre meta veri uç noktası başvurular eklemek için Bölüm 6 açıklanan mekanizmaları uygular.  
+ B3121: WCF WS-MetadataExchange (MEX) belirtimi değere veya başvuruya göre meta veri uç noktası başvurular eklemek için Bölüm 6 açıklanan mekanizmaları kullanır.  
   
- Bir senaryo düşünün burada bir [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] hizmeti belirteci veren tarafından verilmiş bir güvenlik onaylar biçimlendirme dili (SAML) belirteç kullanarak kimlik doğrulaması gerektirir http://sts.fabrikam123.com. [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] Endpoint kullanarak bu kimlik doğrulama gereksinimini açıklar `sp:IssuedToken` onaylama işlemi bir iç içe `sp:Issuer` Belirteç Verenin işaret eden onaylama. Erişim istemci uygulamaları `sp:Issuer` onaylama Belirteç Verenin bitiş noktası ile iletişim kurma bilmeniz gerekir. İstemcinin meta verileri Belirteç Verenin hakkında bilmek ister. MEX içinde tanımlanmış uç nokta başvuru meta veri uzantılarını kullanarak [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] Belirteç Verenin meta veriler için bir başvuru sağlar.  
+ Burada bir WCF Hizmeti gerektirir Belirteç Verenin tarafından verilen bir güvenlik onaylar biçimlendirme dili (SAML) belirteci kullanarak kimlik doğrulaması bir senaryo düşünün http://sts.fabrikam123.com. WCF Bitiş noktası kullanarak bu kimlik doğrulama gereksinimini açıklar `sp:IssuedToken` onaylama işlemi bir iç içe `sp:Issuer` Belirteç Verenin işaret eden onaylama. Erişim istemci uygulamaları `sp:Issuer` onaylama Belirteç Verenin bitiş noktası ile iletişim kurma bilmeniz gerekir. İstemcinin meta verileri Belirteç Verenin hakkında bilmek ister. MEX içinde tanımlanmış uç nokta başvuru meta verileri uzantıları kullanarak, WCF Belirteç Verenin meta veriler için bir başvuru sağlar.  
   
 ```xml  
 <sp:IssuedToken>  
@@ -169,26 +155,26 @@ dp|http://schemas.microsoft.com/net/2006/06/duplex|
 ### <a name="message-addressing-headers"></a>İleti adresleme üstbilgileri  
   
 #### <a name="message-headers"></a>İleti üstbilgileri  
- Her iki WS adresleme sürümleri için [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] aşağıdaki ileti üstbilgilerini belirtimleri tarafından belirlenen şekilde kullanır `wsa:To`, `wsa:ReplyTo`, `wsa:Action`, `wsa:MessageID`, ve `wsa:RelatesTo`.  
+ Belirtimleri tarafından belirlenen şekilde WCF hem WS adresleme sürümleri için aşağıdaki ileti üstbilgilerini kullandığı `wsa:To`, `wsa:ReplyTo`, `wsa:Action`, `wsa:MessageID`, ve `wsa:RelatesTo`.  
   
- B3211: WS adresleme tüm sürümleri için [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] korur, ancak ileti üstbilgilerini WS adresleme kutudan çıktığı oluşturmadığı `wsa:FaultTo` ve `wsa:From`.  
+ B3211: WS adresleme tüm sürümleri için WCF korur, ancak ileti üstbilgilerini WS adresleme kutudan çıktığı oluşturmadığı `wsa:FaultTo` ve `wsa:From`.  
   
- Etkileşim uygulamaları [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] uygulamalar, bu ileti üstbilgilerini ekleyebilir ve [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] buna uygun olarak işleyecek.  
+ Bu ileti üstbilgilerini ve WCF buna uygun olarak işleyecek etkileşim WCF uygulamaları uygulamalarla ekleyebilirsiniz.  
   
 #### <a name="reference-parameters-and-properties"></a>Başvuru parametreleri ve özellikleri  
- [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] uç nokta başvuru parametreleri ve başvuru p Implements işlenmesini  
+ WCF Bitiş noktası başvuru parametreleri ve başvuru p işlenmesini uygular  
   
  ilgili belirtimlerine uygun olarak özellikleri.  
   
- B3221: WS adresleme 2004/08 kullanmak üzere yapılandırıldığında [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] uç noktalar değil ayırt başvuru özellikleri ve başvuru parametreleri işleme arasında.  
+ B3221: WS adresleme 2004/08 kullanmak üzere yapılandırıldığında, WCF uç noktaları başvuru özellikleri ve başvuru parametreleri işleme arasında ayrım yapmaz.  
   
 ### <a name="message-exchange-patterns"></a>İleti Exchange desenleri  
- Web hizmeti işlemi çağırma yer alan iletileri dizisi olarak adlandırılır *ileti değişim deseni*. [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] tek yönlü destekler, istek-yanıt ve çift yönlü iletisi desenleri exchange. Bu bölümde kullanılan ileti değişim deseni bağlı olarak işleme iletideki WS adreslendirme gereksinimleri açıklar.  
+ Web hizmeti işlemi çağırma yer alan iletileri dizisi olarak adlandırılır *ileti değişim deseni*. WCF destekleyen tek yönlü ve istek-yanıt çift yönlü ileti desenleri exchange. Bu bölümde kullanılan ileti değişim deseni bağlı olarak işleme iletideki WS adreslendirme gereksinimleri açıklar.  
   
  Bu bölümde genelinde istek sahibinin ilk ileti gönderir ve Yanıtlayıcı ilk iletiyi alır.  
   
 #### <a name="one-way-message"></a>Tek yönlü iletisi  
- Zaman bir [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] endpoint iletilerle desteklemek üzere yapılandırılmış bir belirli `Action` tek yönlü bir deseni izlemesini [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] uç noktası aşağıdaki aşağıdaki davranışları ve gereksinimleri. WS-adresleme her iki sürümü de desteklenen aksi belirtilmediği sürece, davranışları ve kuralları uygula [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]:  
+ Ne zaman bir WCF uç noktası iletilerle desteklemek üzere yapılandırılmış bir belirli `Action` tek yönlü bir yol izler, WCF uç noktası aşağıdaki davranışları ve gereksinimleri aşağıda verilmiştir. Aksi belirtilmediği sürece, hem WS adresleme-WCF'de desteklenen sürümleri için davranışları ve kurallar geçerlidir:  
   
 -   R3311: İstek sahibinin içermelidir `wsa:To`, `wsa:Action`ve uç nokta başvuru tarafından belirtilen tüm başvuru parametreleri için üstbilgiler. Ne zaman WS adresleme 2004/08 kullanılır ve karşılık gelen üstbilgileri iletiye çok eklenmelidir [başvuru Özellikleri] uç nokta başvuruya göre belirtilir.  
   
@@ -198,10 +184,10 @@ dp|http://schemas.microsoft.com/net/2006/06/duplex|
   
      HTTP taşıma kullanımda ve işlem sözleşmesi bir ileti tek yönlü bildirir, HTTP yanıtı hala altyapı ileti göndermek için kullanılabilir — örneğin, güvenilir Mesajlaşma gönderebilirsiniz bir `SequenceAcknowledgement` bir HTTP yanıt iletisi.  
   
--   B3314: [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] Yanıtlayıcı göndermez bir hata iletisi tek yönlü iletisine yanıt olarak.  
+-   B3314: WCF Yanıtlayıcı bir hata iletisi tek yönlü iletisine yanıt olarak göndermez.  
   
 #### <a name="request-reply"></a>İstek-Yanıt  
- Zaman bir [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] bitiş noktası içeren bir ileti için yapılandırılmış bir belirli `Action` istek-yanıt deseni izlemesini [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] uç noktası aşağıdaki davranışları ve aşağıdaki gereksinimleri. WS-adresleme her iki sürümü de desteklenen aksi belirtilmediği sürece, davranışları ve kuralları uygula [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]:  
+ Bir ileti için bir WCF uç noktası yapılandırıldığında bir verilen `Action` istek-yanıt modeli izleyen WCF uç noktası davranışları ve aşağıdaki gereksinimleri aşağıda verilmiştir. Aksi belirtilmediği sürece, hem WS adresleme-WCF'de desteklenen sürümleri için davranışları ve kurallar geçerlidir:  
   
 -   R3321: İstek sahibinin istekte içermelidir `wsa:To`, `wsa:Action`, `wsa:MessageID`ve tüm başvuru parametreleri başvuru özellikler (veya her ikisi) uç noktası başvuru tarafından belirtilen için üstbilgiler.  
   
@@ -212,14 +198,14 @@ dp|http://schemas.microsoft.com/net/2006/06/duplex|
 -   R3324: İstek sahibinin içermelidir `wsa:To`, `wsa:Action`, ve `wsa:RelatesTo` yanıt iletisi üstbilgilerinde yanı sıra tüm başvuru parametreleri başvuru özellikler (veya her ikisi) tarafından belirtilen üstbilgilerini `ReplyTo` bitiş noktası başvurusu İstek.  
   
 ### <a name="web-services-addressing-faults"></a>Adresleme hataları Web Hizmetleri  
- R3411: [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] WS adresleme 2004/08 tarafından tanımlanan aşağıdaki hataları üretir.  
+ R3411: WCF WS adresleme 2004/08 tarafından tanımlanan aşağıdaki hataları oluşturur.  
   
 |Kod|Sebep|  
 |----------|-----------|  
 |wsa:DestinationUnreachable|İleti ile ulaştığında bir `ReplyTo` bu kanal için kurulmuş yanıt adresinden farklı; Kime üstbilgisinde belirtilen adresten dinleme bitiş noktası yoktur.|  
 |wsa:ActionNotSupported|Altyapı kanalları ya da uç noktasıyla ilişkili dağıtıcısı belirtilen eylem algılamaz `Action` üstbilgi.|  
   
- R3412: [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] WS adresleme 1.0 tarafından tanımlanan aşağıdaki hataları üretir.  
+ R3412: WCF WS adresleme 1.0 tarafından tanımlanan aşağıdaki hataları oluşturur.  
   
 |Kod|Sebep|  
 |----------|-----------|  
@@ -234,7 +220,7 @@ dp|http://schemas.microsoft.com/net/2006/06/duplex|
 ### <a name="wsdl-11-binding-and-ws-policy-assertions"></a>WSDL 1.1 bağlama ve WS-ilke onaylamalarını  
   
 #### <a name="indicating-use-of-ws-addressing"></a>WS-adresleme kullanımını gösteren  
- [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] özel bir WS adresleme sürüm için uç nokta destek belirtmek için ilke onaylamalarını kullanır.  
+ WCF ilke onaylamalarını WS adresleme belirli bir sürüm için uç nokta destek göstermek için kullanır.  
   
  Aşağıdaki ilke onaylama uç nokta İlkesi konu [WS-PA] ve gönderilen ve uç noktasından alınan iletileri WS adresleme 2004/08 kullanmalısınız gösterir.  
   
@@ -278,7 +264,7 @@ dp|http://schemas.microsoft.com/net/2006/06/duplex|
   
  Ancak, istek sahibinin ve Yanıtlayıcı Yanıtlayıcı tarafından gönderilen Örneğin, istenmeyen tek yönlü iletileri arasında kurulan iki bağımsız ters HTTP bağlantılarını kalmaktan fayda ileti exchange desenleri vardır.  
   
- [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] iki temel taşıma kanalları burada bir kanal giriş iletileri için kullanılır ve çıktı iletiler için kullanılan başka bir bileşik çift yönlü kanal kurabilir bir özellik sunar. HTTP taşıma söz konusu olduğunda, bileşik çift yönlü iki ters HTTP bağlantılarını sağlar. Yanıtlayıcı iletileri göndermek için bir bağlantı istek sahibinin kullanır ve Yanıtlayıcı diğer iletiler istemciye geri gönderilecek kullanır.  
+ WCF iki temel taşıma kanalları burada bir kanal giriş iletileri için kullanılır ve çıktı iletiler için kullanılan başka bir bileşik çift yönlü kanal kurabilir bir özellik sunar. HTTP taşıma söz konusu olduğunda, bileşik çift yönlü iki ters HTTP bağlantılarını sağlar. Yanıtlayıcı iletileri göndermek için bir bağlantı istek sahibinin kullanır ve Yanıtlayıcı diğer iletiler istemciye geri gönderilecek kullanır.  
   
  Ayrı http istekleri üzerinden gönderilen yanıtlar için ws-am onayı ifade eder  
   
@@ -317,14 +303,14 @@ dp|http://schemas.microsoft.com/net/2006/06/duplex|
   
  İkisi arasındaki tek fark sırasıyla Bölüm WS-ADDR 3.3.2 ve WS-ADDR10-WSDL 4.4.4 bölümünde açıklanan varsayılan eylem düzeni semantiği ' dir.  
   
- Aynı paylaşan iki uç nokta uygun olan `portType` (veya sözleşme, içinde [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] terminolojisi) ancak WS adresleme farklı sürümlerini kullanan. Ancak eylem tarafından tanımlanan o `portType` ve uygulayan uç noktalar arasında değiştirmemelisiniz `portType`, her iki varsayılan eylem desenleri desteklemesini mümkün olur.  
+ Aynı paylaşan iki uç nokta uygun olan `portType` (veya sözleşmede WCF terminolojisi) ancak WS adresleme farklı sürümlerini kullanan. Ancak eylem tarafından tanımlanan o `portType` ve uygulayan uç noktalar arasında değiştirmemelisiniz `portType`, her iki varsayılan eylem desenleri desteklemesini mümkün olur.  
   
- Bu controversy gidermek için [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] tek bir sürümünü destekleyen `Action` özniteliği.  
+ WCF bu controversy gidermek için tek bir sürümünü destekleyen `Action` özniteliği.  
   
- B3521: [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] kullanan `wsaw10:Action` özniteliği `wsdl:portType/wsdl:operation/[wsdl:input | wsdl:output | wsdl:fault]` WS-ADDR10-belirlemek için WSDL içinde tanımlanan öğeleri `Action` bitiş noktası tarafından kullanılan WS adresleme sürümü yedeklemiş karşılık gelen iletiler için URI.  
+ B3521: WCF kullanan `wsaw10:Action` özniteliği `wsdl:portType/wsdl:operation/[wsdl:input | wsdl:output | wsdl:fault]` WS-ADDR10-belirlemek için WSDL içinde tanımlanan öğeleri `Action` bitiş noktası tarafından kullanılan WS adresleme sürümü yedeklemiş karşılık gelen iletiler için URI.  
   
 #### <a name="use-endpoint-reference-inside-wsdl-port"></a>Kullanım uç noktası başvuru iç WSDL bağlantı noktası  
- WS ADDR10 WSDL bölüm 4.1 genişletir `wsdl:port` eklenecek öğe `<wsa10:EndpointReference…/>` uç nokta WS adresleme koşullarını tanımlamak için alt öğesi. [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] Bu yardımcı program WS adresleme 2004/08 üzerinde genişletir izin vererek `<wsa:EndpointReference…/>` bir alt öğesi görüntülenmesini `wsdl:port`.  
+ WS ADDR10 WSDL bölüm 4.1 genişletir `wsdl:port` eklenecek öğe `<wsa10:EndpointReference…/>` uç nokta WS adresleme koşullarını tanımlamak için alt öğesi. WCF genişletir. Bu yardımcı program WS adresleme 2004/08 üzerinde izin verme `<wsa:EndpointReference…/>` bir alt öğesi görüntülenmesini `wsdl:port`.  
   
 -   R3531: iliştirilmiş ilke alternatif bir uç nokta varsa, bir `<wsaw10:UsingAddressing/>` ilgili ilke onaylama `wsdl:port` öğesi bir alt öğesi içerebilir `<wsa10:EndpointReference …/>`.  
   
@@ -389,7 +375,7 @@ Content-Length: 0
 ```  
   
 ## <a name="soap-message-transmission-optimization-mechanism"></a>SOAP iletisi iletim iyileştirme mekanizması  
- Bu bölümde açıklanmıştır [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] HTTP SOAP MTOM uygulama ayrıntıları. MTOM teknolojidir SOAP iletisi kodlama mekanizması geleneksel text/XML kodlama olarak aynı sınıfın veya [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] ikili kodlama. MTOM aşağıdakileri içerir:  
+ Bu bölümde, HTTP SOAP MTOM için WCF uygulama ayrıntıları açıklanmaktadır. MTOM, SOAP iletisi kodlama mekanizması geleneksel text/XML kodlama veya WCF ikili kodlama aynı sınıfta teknolojisidir. MTOM aşağıdakileri içerir:  
   
 -   Bir XML kodlama ve [XOP] tarafından açıklanan paketleme mekanizması ayrı ikili parçalara base64 ile kodlanmış ikili veri içeren XML bilgi öğeleri iyileştirir.  
   
@@ -399,7 +385,7 @@ Content-Length: 0
   
 -   Bir HTTP aktarım bağlama.  
   
- MTOM olmayan HTTP taşımaları ile birlikte kullanmak da mümkündür [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]. Ancak, bu konudaki şu HTTP odaklanır.  
+ WCF ile HTTP olmayan taşımalar ile MTOM kullanmak da mümkündür. Ancak, bu konudaki şu HTTP odaklanır.  
   
  MTOM biçim belirtim MTOM kendisi, XOP ve MIME kapsayan büyük kümesi yararlanır. Bu belirtimi kümesinin modülerlik biçimi ve işleme semantiğini tam gereksinimlerine yeniden oluşturmak biraz zor hale getirir. Bu bölümde MTOM HTTP bağlaması için biçimi ve işleme gereksinimleri açıklanmaktadır.  
   
@@ -457,7 +443,7 @@ Content-Length: 0
     3.  Değiştir `xop:Include` görünür öğe bilgi öğe `children` kurallı base64 kodlaması temsil karakter bilgi öğelerinin bulunduğu her öğesinin özelliği (XSD-2, 3.2.16 bkz base64Binary) MIME bölümü varlık gövdesinin Adım 3b'de tanımlanan (etkili bir şekilde yerine `xop:Include` öğe bilgi öğe paket bölümünden yeniden verilerle).  
   
 #### <a name="http-content-type-header"></a>HTTP Content-Type üstbilgisi  
- Bir listesi aşağıda verilmiştir [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] SOAP 1.x MTOM olarak kodlanmış bir ileti HTTP Content-Type üstbilgisinin biçimi için açıklamalar MTOM belirtimi kendisini belirtilen gereksinimleri türetilmiş ve MTOM ve RFC 2387 türetilir.  
+ Aşağıdaki biçimi için WCF açıklamalar MTOM belirtimi kendisini belirtilen gereksinimleri türetilmiş SOAP 1.x MTOM kodlu bir iletinin HTTP Content-Type üstbilgisinin listesidir ve MTOM ve RFC 2387 türetilir.  
   
 -   R4131: Bir HTTP Content-Type üstbilgisi değeri multipart/related (büyük küçük harf duyarsız) ve parametrelerini olmalıdır. Parametre adları büyük/küçük harfe duyarsızdır. Parametre sırası önemli değildir.  
   
@@ -525,7 +511,7 @@ msg-id    =       [CFWS] "<" id-left "@" id-right ">" [CFWS]
   
  R4143: Bilgi MIME bölümü Content-ID üstbilgisinin değerini izlemelisiniz `msg-id` ile RFC 2822 üretimden `[CFWS]` atlanmış önek ve sonek bölümleri.  
   
- MIME uygulamaları sayısı rahat gereksinimleri içine alınmış bir değer için "\<" ve ">" bir e-posta adresi ve kullanılan `absoluteURI` içine "\<", ">" e-posta adresi yanı sıra. Bu sürümü [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] formun Content-ID MIME üstbilgi değerleri kullanır:  
+ MIME uygulamaları sayısı rahat gereksinimleri içine alınmış bir değer için "\<" ve ">" bir e-posta adresi ve kullanılan `absoluteURI` içine "\<", ">" e-posta adresi yanı sıra. Bu sürüm WCF formun Content-ID MIME üstbilgisinin değerini kullanır:  
   
 ```  
 Content-ID: <http://tempuri.org/0>   
@@ -571,12 +557,12 @@ mail-address   =     id-left "@" id-right
   
 -   R4151: base64 ile kodlanmış verileri içeren herhangi bir öğe bilgi öğesini en iyi duruma.  
   
--   B4152: [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] base64 ile kodlanmış verileri içeren ve uzunluğu 1024 bayt aşan öğesi bilgi öğeleri en iyi duruma getirir.  
+-   B4152: WCF base64 ile kodlanmış verileri içeren ve uzunluğu 1024 bayt aşan öğesi bilgi öğeleri en iyi duruma getirir.  
   
- A [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] MTOM kullanmak üzere yapılandırılmış uç nokta her zaman MTOM olarak kodlanmış iletileri gönder. Hiçbir bölümleri gereken ölçütleri karşılayan olsa bile, ileti (SOAP Zarfı içeren tek bir MIME bölümü ile bir MIME paketi olarak serileştirilmiş) hala MTOM kodlanır.  
+ MTOM kullanmak üzere yapılandırılmış bir WCF uç noktası her zaman MTOM olarak kodlanmış iletileri gönderir. Hiçbir bölümleri gereken ölçütleri karşılayan olsa bile, ileti (SOAP Zarfı içeren tek bir MIME bölümü ile bir MIME paketi olarak serileştirilmiş) hala MTOM kodlanır.  
   
 ### <a name="ws-policy-assertion-for-mtom"></a>MTOM WS-Policy onaylama  
- [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] MTOM kullanım bitiş noktası tarafından belirtmek için aşağıdaki ilke onaylama kullanır:  
+ WCF MTOM kullanım bitiş noktası tarafından belirtmek için aşağıdaki ilke onaylama kullanır:  
   
 ```xml  
 <wsoma:OptimizedMimeSerialization ... />  
@@ -584,10 +570,10 @@ mail-address   =     id-left "@" id-right
   
 -   R4211: Önceki ilke onaylama bir uç nokta İlkesi konu ve gönderilen ve uç noktasından alınan tüm iletileri MTOM kullanılarak iyileştirilmiş gerekir belirtir.  
   
--   B4212: MTOM iyileştirme'yi kullanmak üzere yapılandırıldığında bir [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] endpoint karşılık gelen iliştirilmiş ilke MTOM İlkesi onaylama ekler `wsdl:binding`.  
+-   B4212: MTOM iyileştirme kullanmak üzere yapılandırıldığında, bir WCF uç nokta MTOM İlkesi onaylama karşılık gelen iliştirilmiş ilke ekler `wsdl:binding`.  
   
 ### <a name="composition-with-ws-security"></a>WS güvenliği ile oluşturma  
- MTOM mekanizmasıdır benzer bir kodlama `text/xml` ve [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] ikili XML. MTOM sunar doğal birleşim WS güvenliği ve diğer WS-* protokolleri: WS güvenliği kullanarak güvenli bir ileti MTOM kullanılarak iyileştirilebilir.  
+ MTOM mekanizmasıdır benzer bir kodlama `text/xml` ve WCF ikili XML. MTOM sunar doğal birleşim WS güvenliği ve diğer WS-* protokolleri: WS güvenliği kullanarak güvenli bir ileti MTOM kullanılarak iyileştirilebilir.  
   
 ### <a name="examples"></a>Örnekler  
   
@@ -625,7 +611,7 @@ Content-Type: application/octet-stream
 ```  
   
 #### <a name="wcf-secure-soap-12-message-encoded-using-mtom"></a>MTOM kullanılarak ileti WCF güvenli SOAP 1.2 kodlanmış  
- Bu örnekte, bir ileti MTOM ve WS-Security tarafından korunan SOAP 1.2 kullanılarak kodlanır. Kodlama içeriğini için tanımlanan ikili parçaları `BinarySecurityToken`, `CipherValue` , `EncryptedData` karşılık gelen şifrelenmiş imza ve şifrelenmiş gövde. Unutmayın `CipherValue` , `EncryptedKey` en iyi duruma getirme tarafından tanımlanmadı [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)], uzunluğu sonra daha az 1024 bayt olduğundan.  
+ Bu örnekte, bir ileti MTOM ve WS-Security tarafından korunan SOAP 1.2 kullanılarak kodlanır. Kodlama içeriğini için tanımlanan ikili parçaları `BinarySecurityToken`, `CipherValue` , `EncryptedData` karşılık gelen şifrelenmiş imza ve şifrelenmiş gövde. Unutmayın `CipherValue` , `EncryptedKey` uzunluğu sonra daha az 1024 bayt olduğundan iyileştirme için WCF tarafından tanımlanmadı.  
   
 ```  
 POST http://131.107.72.15/Mtom/service.svc/Soap12MtomSecureSignEncrypt HTTP/1.1  

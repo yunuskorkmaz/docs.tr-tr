@@ -1,13 +1,6 @@
 ---
-title: "Performansı İyileştirme: 2B Grafikleri ve Görüntüleme"
-ms.custom: 
+title: 'Performansı İyileştirme: 2B Grafikleri ve Görüntüleme'
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-wpf
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -19,40 +12,35 @@ helpviewer_keywords:
 - 2-D graphics [WPF]
 - images [WPF], optimizing performance
 ms.assetid: e335601e-28c8-4d64-ba27-778fffd55f72
-caps.latest.revision: "8"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 99fc5e179fe7652868d47d93fbdcabd47bc8cab9
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 4e6b72dae863e89d70ec70c2cb99a5874581e9ea
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="optimizing-performance-2d-graphics-and-imaging"></a>Performansı İyileştirme: 2B Grafikleri ve Görüntüleme
-[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]Uygulamanızın gereksinimleri için çok çeşitli 2B grafik ve iyileştirilebilir görüntü işlevselliği sağlar. Bu konuda bu alanlarda performansı en iyi duruma getirme hakkında bilgi sağlar.  
+[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] Uygulamanızın gereksinimleri için çok çeşitli 2B grafik ve iyileştirilebilir görüntü işlevselliği sağlar. Bu konuda bu alanlarda performansı en iyi duruma getirme hakkında bilgi sağlar.  
   
   
 <a name="Drawing_and_Shapes"></a>   
 ## <a name="drawing-and-shapes"></a>Çizim ve şekiller  
- [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]her ikisi de sağlar <xref:System.Windows.Media.Drawing> ve <xref:System.Windows.Shapes.Shape> nesneleri grafik çizim içeriğini temsil eder. Ancak, <xref:System.Windows.Media.Drawing> nesneleridir daha basit yapıları <xref:System.Windows.Shapes.Shape> nesneleri ve daha iyi performans özellikleri sağlar.  
+ [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] her ikisi de sağlar <xref:System.Windows.Media.Drawing> ve <xref:System.Windows.Shapes.Shape> nesneleri grafik çizim içeriğini temsil eder. Ancak, <xref:System.Windows.Media.Drawing> nesneleridir daha basit yapıları <xref:System.Windows.Shapes.Shape> nesneleri ve daha iyi performans özellikleri sağlar.  
   
  A <xref:System.Windows.Shapes.Shape> ekrana bir grafik şekil çizme olanak tanır. Öğesinden türetilen çünkü <xref:System.Windows.FrameworkElement> sınıfı, <xref:System.Windows.Shapes.Shape> nesneleri paneller ve çoğu denetim içinde kullanılabilir.  
   
- [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]birkaç grafik ve işleme hizmetlerine erişim katmanı sunar. En üst katmanında <xref:System.Windows.Shapes.Shape> nesneleri kolay kullanın ve düzeni ve olay işleme gibi birçok yararlı özellik sağlar. [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]kullanıma hazır şekil nesneleri sayısını sağlar. Tüm şekil nesneleri devralınmalıdır <xref:System.Windows.Shapes.Shape> sınıfı. Kullanılabilir şekil nesneleri dahil <xref:System.Windows.Shapes.Ellipse>, <xref:System.Windows.Shapes.Line>, <xref:System.Windows.Shapes.Path>, <xref:System.Windows.Shapes.Polygon>, <xref:System.Windows.Shapes.Polyline>, ve <xref:System.Windows.Shapes.Rectangle>.  
+ [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] birkaç grafik ve işleme hizmetlerine erişim katmanı sunar. En üst katmanında <xref:System.Windows.Shapes.Shape> nesneleri kolay kullanın ve düzeni ve olay işleme gibi birçok yararlı özellik sağlar. [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] kullanıma hazır şekil nesneleri sayısını sağlar. Tüm şekil nesneleri devralınmalıdır <xref:System.Windows.Shapes.Shape> sınıfı. Kullanılabilir şekil nesneleri dahil <xref:System.Windows.Shapes.Ellipse>, <xref:System.Windows.Shapes.Line>, <xref:System.Windows.Shapes.Path>, <xref:System.Windows.Shapes.Polygon>, <xref:System.Windows.Shapes.Polyline>, ve <xref:System.Windows.Shapes.Rectangle>.  
   
- <xref:System.Windows.Media.Drawing>nesneleri, diğer yandan değil türetilen <xref:System.Windows.FrameworkElement> sınıfı ve işleme şekiller, görüntüler ve metin hafifletilmiş uygulama sağlama.  
+ <xref:System.Windows.Media.Drawing> nesneleri, diğer yandan değil türetilen <xref:System.Windows.FrameworkElement> sınıfı ve işleme şekiller, görüntüler ve metin hafifletilmiş uygulama sağlama.  
   
  Dört tür vardır <xref:System.Windows.Media.Drawing> nesneler:  
   
--   <xref:System.Windows.Media.GeometryDrawing>Bir şekli çizer.  
+-   <xref:System.Windows.Media.GeometryDrawing> Bir şekli çizer.  
   
--   <xref:System.Windows.Media.ImageDrawing>Bir resim çizer.  
+-   <xref:System.Windows.Media.ImageDrawing> Bir resim çizer.  
   
--   <xref:System.Windows.Media.GlyphRunDrawing>Metin çizer.  
+-   <xref:System.Windows.Media.GlyphRunDrawing> Metin çizer.  
   
--   <xref:System.Windows.Media.DrawingGroup>Diğer çizimleri çizer. Diğer tek bileşik çizim çizimlerini birleştirmek için bir çizim grubu kullanın.  
+-   <xref:System.Windows.Media.DrawingGroup> Diğer çizimleri çizer. Diğer tek bileşik çizim çizimlerini birleştirmek için bir çizim grubu kullanın.  
   
  <xref:System.Windows.Media.GeometryDrawing> Nesnesi geometri içeriğini işlemek için kullanılır. <xref:System.Windows.Media.Geometry> Sınıfı ve bu sınıftan gibi türetilen somut sınıflar <xref:System.Windows.Media.CombinedGeometry>, <xref:System.Windows.Media.EllipseGeometry>, ve <xref:System.Windows.Media.PathGeometry>, 2B grafikleri işlemek için bir yol sağlar, yanı sıra vuruş sınaması ve kırpma desteği sağlar. Geometri nesneleri, bir denetim, örneğin, bölge tanımlamak için veya bir görüntüye uygulanacak kırpma bölgesinin tanımlamak için kullanılabilir. Geometri nesneleri dikdörtgenler ve daireler ya da iki veya daha fazla geometri nesnesinden oluşturulmuş bileşik bölgeler gibi basit bölgeler olabilir. Daha karmaşık geometrik bölgeler birleştirerek oluşturulabilir <xref:System.Windows.Media.PathSegment>-nesneleri gibi türetilen <xref:System.Windows.Media.ArcSegment>, <xref:System.Windows.Media.BezierSegment>, ve <xref:System.Windows.Media.QuadraticBezierSegment>.  
   
@@ -64,7 +52,7 @@ ms.lasthandoff: 12/22/2017
   
 <a name="StreamGeometry_Objects"></a>   
 ## <a name="streamgeometry-objects"></a>StreamGeometry nesneleri  
- <xref:System.Windows.Media.StreamGeometry> Nesnesidir alternatifidir için <xref:System.Windows.Media.PathGeometry> geometrik şekiller oluşturma. Kullanım bir <xref:System.Windows.Media.StreamGeometry> karmaşık geometri açıklamak gerektiğinde. <xref:System.Windows.Media.StreamGeometry>birçok işlemek için optimize edilmiştir <xref:System.Windows.Media.PathGeometry> nesneleri ve birçok kişi kullanmaya karşılaştırıldığında daha iyi gerçekleştirir <xref:System.Windows.Media.PathGeometry> nesneleri.  
+ <xref:System.Windows.Media.StreamGeometry> Nesnesidir alternatifidir için <xref:System.Windows.Media.PathGeometry> geometrik şekiller oluşturma. Kullanım bir <xref:System.Windows.Media.StreamGeometry> karmaşık geometri açıklamak gerektiğinde. <xref:System.Windows.Media.StreamGeometry> birçok işlemek için optimize edilmiştir <xref:System.Windows.Media.PathGeometry> nesneleri ve birçok kişi kullanmaya karşılaştırıldığında daha iyi gerçekleştirir <xref:System.Windows.Media.PathGeometry> nesneleri.  
   
  Aşağıdaki örnek, bir üçgen oluşturmak için öznitelik sözdizimini kullanır. <xref:System.Windows.Media.StreamGeometry> içinde [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)].  
   
@@ -78,7 +66,7 @@ ms.lasthandoff: 12/22/2017
   
 <a name="Images"></a>   
 ## <a name="images"></a>Görüntüler  
- [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]Görüntü önceki sürümlerindeki görüntüleme yetenekleri üzerine önemli bir iyileştirme sağlar [!INCLUDE[TLA#tla_mswin](../../../../includes/tlasharptla-mswin-md.md)]. Bir bit eşlem görüntüleme veya ortak bir denetimde bir resim kullanma gibi özellikleri Imaging öncelikle işlendi Microsoft Windows grafik cihaz arabirimi (GDI) veya Microsoft Windows GDI + uygulama programlama arabirimi tarafından (API). Bu API, taban çizgisi görüntüleme işlevselliği sağlanan ancak codec genişletilebilirliği ve yüksek doğruluk resim desteği gibi özellikleri olmadığı. WPF görüntüleme API yeniden tasarlanmıştır GDI ve GDI + eksikliklerini aşmak ve API görüntülemek ve uygulamalarınızdaki resimleri kullanmak için yeni bir dizi sağlar.  
+ [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] Görüntü önceki sürümlerindeki görüntüleme yetenekleri üzerine önemli bir iyileştirme sağlar [!INCLUDE[TLA#tla_mswin](../../../../includes/tlasharptla-mswin-md.md)]. Bir bit eşlem görüntüleme veya ortak bir denetimde bir resim kullanma gibi özellikleri Imaging öncelikle işlendi Microsoft Windows grafik cihaz arabirimi (GDI) veya Microsoft Windows GDI + uygulama programlama arabirimi tarafından (API). Bu API, taban çizgisi görüntüleme işlevselliği sağlanan ancak codec genişletilebilirliği ve yüksek doğruluk resim desteği gibi özellikleri olmadığı. WPF görüntüleme API yeniden tasarlanmıştır GDI ve GDI + eksikliklerini aşmak ve API görüntülemek ve uygulamalarınızdaki resimleri kullanmak için yeni bir dizi sağlar.  
   
  Görüntüleri kullanırken daha iyi performans elde için aşağıdaki önerileri göz önünde bulundurun:  
   
@@ -91,7 +79,7 @@ ms.lasthandoff: 12/22/2017
 -   Daha fazla bilgi için bkz: [Imaging genel bakış](../../../../docs/framework/wpf/graphics-multimedia/imaging-overview.md).  
   
 ### <a name="bitmapscalingmode"></a>BitmapScalingMode  
- Herhangi bir bit eşlem ölçeğini animasyon eklerken, algoritma yeniden örnekleme varsayılan yüksek kaliteli görüntü bazen etkin şekilde animasyonların titremesine neden kare hızı düşüşüne neden için yeterli sistem kaynakları kullanabilir. Ayarlayarak <xref:System.Windows.Media.RenderOptions.BitmapScalingMode%2A> özelliği <xref:System.Windows.Media.RenderOptions> nesnesine <xref:System.Windows.Media.BitmapScalingMode.LowQuality> bir bit eşlemi ölçeklendirdiğinizde daha yumuşak bir animasyon oluşturabilirsiniz. <xref:System.Windows.Media.BitmapScalingMode.LowQuality>mod söyler [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] resimler işlenirken bir kalite optimize algoritmadan hızı iyileştirilmiş bir algoritma geçmek için işleme altyapısı.  
+ Herhangi bir bit eşlem ölçeğini animasyon eklerken, algoritma yeniden örnekleme varsayılan yüksek kaliteli görüntü bazen etkin şekilde animasyonların titremesine neden kare hızı düşüşüne neden için yeterli sistem kaynakları kullanabilir. Ayarlayarak <xref:System.Windows.Media.RenderOptions.BitmapScalingMode%2A> özelliği <xref:System.Windows.Media.RenderOptions> nesnesine <xref:System.Windows.Media.BitmapScalingMode.LowQuality> bir bit eşlemi ölçeklendirdiğinizde daha yumuşak bir animasyon oluşturabilirsiniz. <xref:System.Windows.Media.BitmapScalingMode.LowQuality> mod söyler [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] resimler işlenirken bir kalite optimize algoritmadan hızı iyileştirilmiş bir algoritma geçmek için işleme altyapısı.  
   
  Aşağıdaki örnekte nasıl ayarlanacağını gösterir <xref:System.Windows.Media.BitmapScalingMode> için bir resim nesnesi.  
   

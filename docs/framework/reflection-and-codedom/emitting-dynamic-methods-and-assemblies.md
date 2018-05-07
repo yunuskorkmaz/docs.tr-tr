@@ -1,13 +1,6 @@
 ---
-title: "Dinamik Yöntemleri ve Derlemeleri Yayma"
-ms.custom: 
+title: Dinamik Yöntemleri ve Derlemeleri Yayma
 ms.date: 08/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - reflection emit
 - dynamic assemblies
@@ -16,13 +9,11 @@ helpviewer_keywords:
 - assemblies [.NET Framework], emitting dynamic assemblies
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: c724620c987b2ee871dc282bca0dd3da1a5031bf
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: f6d5085b846a10fe86a87e19738e1b159e300c5d
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="emitting-dynamic-methods-and-assemblies"></a>Dinamik Yöntemleri ve Derlemeleri Yayma
 Bu bölümde bir yönetilen türlerinde açıklar <xref:System.Reflection.Emit> derleyici veya meta veri ve Microsoft Ara dili (MSIL çalışma zamanında ve isteğe bağlı olarak) yaymak üzere aracı izin ad alanı oluşturmak disk üzerinde bir taşınabilir yürütülebilir (PE) dosyası. Komut dosyası motorları ve derleyicileri bu ad alanı birincil kullanıcıları olan. Bu bölümde, işlev tarafından sağlanan <xref:System.Reflection.Emit> ad alanı yansıma yayma adlandırılır.  

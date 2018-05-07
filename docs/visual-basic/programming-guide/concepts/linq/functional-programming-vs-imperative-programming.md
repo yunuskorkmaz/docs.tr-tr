@@ -1,22 +1,12 @@
 ---
-title: "İşlevsel Programlama vs. Kesinlik temelli programlama (Visual Basic)"
-ms.custom: 
+title: İşlevsel Programlama vs. Kesinlik temelli programlama (Visual Basic)
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 6a1f3b57-00e6-447d-9906-74c7c4d5d85c
-caps.latest.revision: "3"
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: 8519ca7fcda63e73e29d33a768c589829aafa0b1
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 63d3801a393b242bce8b497e2c983534a6996c6f
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="functional-programming-vs-imperative-programming-visual-basic"></a>İşlevsel Programlama vs. Kesinlik temelli programlama (Visual Basic)
 Bu konuda karşılaştırır ve işlevsel programlama daha geleneksel kesinlik temelli (yordam) programlama ile karşılaştırır.  
@@ -61,5 +51,5 @@ Bu konuda karşılaştırır ve işlevsel programlama daha geleneksel kesinlik t
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
  [Giriş saf işlevsel Dönüşümleri (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/introduction-to-pure-functional-transformations.md)  
- [XSLT dönüştürmeleri](../../../../standard/data/xml/xslt-transformations.md)  
+ [XSLT Dönüşümleri](../../../../standard/data/xml/xslt-transformations.md)  
  [Saf işlevleri (Visual Basic) yeniden düzenleme](../../../../visual-basic/programming-guide/concepts/linq/refactoring-into-pure-functions.md)

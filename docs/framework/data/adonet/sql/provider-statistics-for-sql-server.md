@@ -1,29 +1,15 @@
 ---
 title: SQL Server için sağlayıcı istatistikleri
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-ado
-ms.tgt_pltfrm: ''
-ms.topic: article
 dev_langs:
 - csharp
 - vb
 ms.assetid: 429c9d09-92ac-46ec-829a-fbff0a9575a2
-caps.latest.revision: 6
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
-ms.workload:
-- dotnet
-ms.openlocfilehash: 27346f483251231f16abfa1d0fc5001e156ca8ea
-ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
+ms.openlocfilehash: f32b1c9f800a1ec2d80511cbbf46aba9840075d9
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="provider-statistics-for-sql-server"></a>SQL Server için sağlayıcı istatistikleri
 .NET Framework sürüm 2.0 ile başlayarak, SQL Server için .NET Framework veri sağlayıcısı çalışma zamanı istatistikleri destekler. Ayarlayarak istatistikleri etkinleştirmelisiniz <xref:System.Data.SqlClient.SqlConnection.StatisticsEnabled%2A> özelliği <xref:System.Data.SqlClient.SqlConnection> nesnesine `True` oluşturulan geçerli bir bağlantı nesnesi sonra. İstatistikleri etkinleştirildikten sonra bunları "anlık görüntü olarak zaman içinde" alarak gözden geçirebilirsiniz bir <xref:System.Collections.IDictionary> aracılığıyla başvuru <xref:System.Data.SqlClient.SqlConnection.RetrieveStatistics%2A> yöntemi <xref:System.Data.SqlClient.SqlConnection> nesnesi. Ad/değer çifti dictionary girişlerinin bir dizi listesini numaralandırır. Bu ad/değer çiftleri sırasız şunlardır. Herhangi bir zamanda çağırabilirsiniz <xref:System.Data.SqlClient.SqlConnection.ResetStatistics%2A> yöntemi <xref:System.Data.SqlClient.SqlConnection> sayaçları sıfırlamak için nesne. Toplama istatistiği etkin değil, bir özel durum oluşturulmaz. Ayrıca, varsa <xref:System.Data.SqlClient.SqlConnection.RetrieveStatistics%2A> olmadan adlı <xref:System.Data.SqlClient.SqlConnection.StatisticsEnabled%2A> ilk çağrılmış alınan her giriş için başlangıç değerlerini değerlerdir. İstatistikleri etkinleştirirseniz, bir süre için uygulamanızı çalıştırın ve istatistikleri devre dışı bırakmak, alınan değerleri nerede istatistikleri devre dışı bırakılan noktaya kadar toplanan değerleri yansıtır. Toplanan tüm istatistiksel bir bağlantı başına temelinde değerlerdir.  
