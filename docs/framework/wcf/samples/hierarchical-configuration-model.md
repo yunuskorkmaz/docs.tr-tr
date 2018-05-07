@@ -1,24 +1,12 @@
 ---
-title: "Hiyerarşik Yapılandırma Modeli"
-ms.custom: 
+title: Hiyerarşik Yapılandırma Modeli
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 28dcc698-226c-4b77-9e51-8bf45a36216c
-caps.latest.revision: "12"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: cf8e7b37b6430be1eed9bc037bfa06aeb825b866
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
-ms.translationtype: MT
+ms.openlocfilehash: 4debeaf0bfd2558552a7943f3767a4f9b53ce550
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="hierarchical-configuration-model"></a>Hiyerarşik Yapılandırma Modeli
 Bu örnek, hizmetler için yapılandırma dosyalarını hiyerarşisini uygulamak gösterilmiştir. Aynı zamanda, nasıl bağlamaları, hizmet davranışları ve uç nokta davranışları hiyerarşide daha yüksek bir düzeyinden devralınan gösterir.  
@@ -26,7 +14,7 @@ Bu örnek, hizmetler için yapılandırma dosyalarını hiyerarşisini uygulamak
 ## <a name="sample-details"></a>Örnek Ayrıntıları  
  Özellikler geliştirilen için [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] içinde [!INCLUDE[netfx40_long](../../../../includes/netfx40-long-md.md)] hiyerarşik yapılandırma modeli iyileştirme. Hiyerarşik yapılandırma modeli örneği olacaktır Machine.config tarafından tanımlanan bir Rootweb.config -> Web.config ->. İçinde [!INCLUDE[netfx40_short](../../../../includes/netfx40-short-md.md)], bu bağlamalar ve yapılandırma hiyerarşideki üst düzey tanımlanan davranışları hizmetlerinize hiçbir açık yapılandırmasıyla eklenir. Bu örnek nasıl bilgisayar veya uygulama düzeyinde tanımlanan yapılandırma öğeleri güvenmek, hizmet yapılandırmasını basitleştirmek olası olduğunu gösterir.  
   
- Bu örnek dokuz Hizmetleri, üç düzeyde hiyerarşi içinde tanımlı oluşur. `Service1`kök dizininde ' dir. `Service2`ve `Service3` varsayılan öğelerinden devralır `Service1`. `Service4`, `Service5`, `Service6` ve `Service7` varsayılan öğeleri devralma hiyerarşisi, üçüncü bir düzeyde tanımlanan `Service3`. Son olarak `Service10` ve `Service11` dördüncü hiyerarşisini düzeyi şunlardır.  
+ Bu örnek dokuz Hizmetleri, üç düzeyde hiyerarşi içinde tanımlı oluşur. `Service1` kök dizininde ' dir. `Service2` ve `Service3` varsayılan öğelerinden devralır `Service1`. `Service4`, `Service5`, `Service6` ve `Service7` varsayılan öğeleri devralma hiyerarşisi, üçüncü bir düzeyde tanımlanan `Service3`. Son olarak `Service10` ve `Service11` dördüncü hiyerarşisini düzeyi şunlardır.  
   
  Tüm hizmetler uygulamak `IDesc` sözleşme. Aşağıdaki tanımıdır `IDesc` arabirimi bu arabirimde kullanıma sunulan yöntemleri gösterir. `IDesc` Arabirimi service1.cs dosyasını tanımlanır.  
   
@@ -44,7 +32,7 @@ public interface IDesc
 }  
 ```  
   
- Uygulama Hizmetleri tarafından bu yöntemlerin basittir. `ListEndpoints`tüm hizmet uç noktaları yoluyla ilerler ve hizmetin tüm uç noktaları listesini döndürür. `ListServiceBehaviors`hizmetine eklediğiniz tüm davranışları dolaşır ve hizmetle ilişkilendirilmiş tüm hizmet davranışları listesini döndürür. `ListEndpointBehaviors`benzer şekilde davranır `ListServiceBehaviors`, ancak bunun yerine uç nokta davranışları listesini döndürür.  
+ Uygulama Hizmetleri tarafından bu yöntemlerin basittir. `ListEndpoints` tüm hizmet uç noktaları yoluyla ilerler ve hizmetin tüm uç noktaları listesini döndürür. `ListServiceBehaviors` hizmetine eklediğiniz tüm davranışları dolaşır ve hizmetle ilişkilendirilmiş tüm hizmet davranışları listesini döndürür. `ListEndpointBehaviors` benzer şekilde davranır `ListServiceBehaviors`, ancak bunun yerine uç nokta davranışları listesini döndürür.  
   
  Bu uygulama, hizmet kaç tane uç noktaları bilmeniz istemci gösterme ve hangi hizmet davranışları ve uç nokta davranışları hizmete eklenmiştir sağlar. Örnek bir parçası olarak uygulanan istemci Çözümdeki tüm Hizmetleri hizmeti başvuru ekler ve hizmetlerinin her biri için bu öğeler gösterilir.  
   
@@ -80,7 +68,7 @@ public interface IDesc
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  Bu dizin mevcut değilse, Git [Windows Communication Foundation (WCF) ve .NET Framework 4 için Windows Workflow Foundation (WF) örnek](http://go.microsoft.com/fwlink/?LinkId=150780) tüm indirmek için [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] ve [!INCLUDE[wf1](../../../../includes/wf1-md.md)] örnekleri. Bu örnek aşağıdaki dizinde bulunur.  
+>  Bu dizin mevcut değilse, Git [Windows Communication Foundation (WCF) ve .NET Framework 4 için Windows Workflow Foundation (WF) örnek](http://go.microsoft.com/fwlink/?LinkId=150780) tüm Windows Communication Foundation (WCF) indirmek için ve [!INCLUDE[wf1](../../../../includes/wf1-md.md)] örnekleri. Bu örnek aşağıdaki dizinde bulunur.  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Services\ConfigHierarchicalModel`  
   

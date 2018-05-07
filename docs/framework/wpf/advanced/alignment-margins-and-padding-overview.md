@@ -1,13 +1,6 @@
 ---
-title: "Hizalama, Kenar Boşlukları ve Doldurmaya Genel Bakış"
-ms.custom: 
+title: Hizalama, Kenar Boşlukları ve Doldurmaya Genel Bakış
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-wpf
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -17,16 +10,11 @@ helpviewer_keywords:
 - padding [WPF]
 - aligning [WPF]
 ms.assetid: 9c6a2009-9b86-4e40-8605-0a2664dc3973
-caps.latest.revision: "22"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 9d53ec57bdd6126aa1b82e3fa34d01b8907ca169
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 70eff35db638c5bfbc9c164dc381e3f58e18957b
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="alignment-margins-and-padding-overview"></a>Hizalama, Kenar Boşlukları ve Doldurmaya Genel Bakış
 <xref:System.Windows.FrameworkElement> Sınıfı tam olarak alt öğeleri konumlandırmak için kullanılan çeşitli özellikler sunar. Bu konuda en önemli özelliklerinin dördünü ele alınmıştır: <xref:System.Windows.FrameworkElement.HorizontalAlignment%2A>, <xref:System.Windows.FrameworkElement.Margin%2A>, <xref:System.Windows.Controls.Border.Padding%2A>, ve <xref:System.Windows.FrameworkElement.VerticalAlignment%2A>. Öğelerin konumlarını denetlemek için temel sağladıkları için bu özelliklerin etkilerini anlamak önemli olan [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] uygulamalar.  
@@ -49,7 +37,7 @@ ms.lasthandoff: 12/22/2017
   
  Aşağıdaki diyagramda önceki örnekte kullanılan çeşitli konumlandırma özellikleri yakından görüntülemenizi sağlar. Bu konunun sonraki bölümlerinde daha ayrıntılı biçimde her konumlandırma özelliğinin nasıl kullanılacağını açıklar.  
   
- ![Ekran çağrı &#45; özelliklerle konumlandırma aşımı ayarlarına](../../../../docs/framework/wpf/advanced/media/layout-margins-padding-alignment-graphic2.PNG "layout_margins_padding_alignment_graphic2")  
+ ![Ekran çağrı özelliklerle konumlandırma&#45;aşımı ayarlarına](../../../../docs/framework/wpf/advanced/media/layout-margins-padding-alignment-graphic2.PNG "layout_margins_padding_alignment_graphic2")  
   
 <a name="wcpsdk_layout_amp_alignment_properties"></a>   
 ## <a name="understanding-alignment-properties"></a>Hizalama özelliklerini anlama  
@@ -67,7 +55,7 @@ ms.lasthandoff: 12/22/2017
 |<xref:System.Windows.HorizontalAlignment.Left>|Alt öğeler, üst öğenin ayrılmış düzenindeki alanın soluna hizalanır.|  
 |<xref:System.Windows.HorizontalAlignment.Center>|Alt öğeler, üst öğenin ayrılmış düzenindeki alanın merkezine hizalanır.|  
 |<xref:System.Windows.HorizontalAlignment.Right>|Alt öğeler, üst öğenin ayrılmış düzen alanı sağa hizalanır.|  
-|<xref:System.Windows.HorizontalAlignment.Stretch>(Varsayılan)|Alt öğeler, üst öğenin ayrılmış düzen alanı dolduracak şekilde uzatılır. Açık <xref:System.Windows.FrameworkElement.Width%2A> ve <xref:System.Windows.FrameworkElement.Height%2A> değerleri öncelik alır.|  
+|<xref:System.Windows.HorizontalAlignment.Stretch> (Varsayılan)|Alt öğeler, üst öğenin ayrılmış düzen alanı dolduracak şekilde uzatılır. Açık <xref:System.Windows.FrameworkElement.Width%2A> ve <xref:System.Windows.FrameworkElement.Height%2A> değerleri öncelik alır.|  
   
  Aşağıdaki örnekte nasıl uygulanacağını gösterir <xref:System.Windows.FrameworkElement.HorizontalAlignment%2A> özelliğine <xref:System.Windows.Controls.Button> öğeleri. Çeşitli işleme davranışlarını daha iyi anlamak için her bir öznitelik değeri gösterilir.  
   
@@ -87,7 +75,7 @@ ms.lasthandoff: 12/22/2017
 |<xref:System.Windows.VerticalAlignment.Top>|Alt öğeler, üst öğenin ayrılmış düzenindeki alanın üstüne hizalanır.|  
 |<xref:System.Windows.VerticalAlignment.Center>|Alt öğeler, üst öğenin ayrılmış düzenindeki alanın merkezine hizalanır.|  
 |<xref:System.Windows.VerticalAlignment.Bottom>|Alt öğeler, üst öğenin ayrılmış düzenindeki alanın altına hizalanır.|  
-|<xref:System.Windows.VerticalAlignment.Stretch>(Varsayılan)|Alt öğeler, üst öğenin ayrılmış düzen alanı dolduracak şekilde uzatılır. Açık <xref:System.Windows.FrameworkElement.Width%2A> ve <xref:System.Windows.FrameworkElement.Height%2A> değerleri öncelik alır.|  
+|<xref:System.Windows.VerticalAlignment.Stretch> (Varsayılan)|Alt öğeler, üst öğenin ayrılmış düzen alanı dolduracak şekilde uzatılır. Açık <xref:System.Windows.FrameworkElement.Width%2A> ve <xref:System.Windows.FrameworkElement.Height%2A> değerleri öncelik alır.|  
   
  Aşağıdaki örnekte nasıl uygulanacağını gösterir <xref:System.Windows.FrameworkElement.VerticalAlignment%2A> özelliğine <xref:System.Windows.Controls.Button> öğeleri. Çeşitli işleme davranışlarını daha iyi anlamak için her bir öznitelik değeri gösterilir. Bu örnek amacıyla bir <xref:System.Windows.Controls.Grid> , her özellik değerinin düzen davranışını daha iyi anlamak için üst öğe olarak görünür kılavuz ile öğe kullanılır.  
   
@@ -101,7 +89,7 @@ ms.lasthandoff: 12/22/2017
   
 <a name="wcpsdk_layout_amp_margin_properties"></a>   
 ## <a name="understanding-margin-properties"></a>Dış boşlukların özelliklerini anlama  
- <xref:System.Windows.FrameworkElement.Margin%2A> Özelliği bir öğeyi ve alt öğeleri veya eşleri arasındaki uzaklığı açıklar. <xref:System.Windows.FrameworkElement.Margin%2A>değerleri olabilir Tekdüzen, benzer bir sözdizimi kullanarak `Margin="20"`. Bir Tekdüzen bu sözdizimine sahip <xref:System.Windows.FrameworkElement.Margin%2A> öğesine 20 aygıtı bağımsız piksel uygulanması. <xref:System.Windows.FrameworkElement.Margin%2A>değerleri de alabilir dört farklı değerleri, form sol, üst, sağ ve alt (bu sırayla) uygulamak için ayrı bir kenar boşluğu açıklayan her değeri gibi `Margin="0,10,5,25"`. Uygun kullanımı <xref:System.Windows.FrameworkElement.Margin%2A> özelliği, bir öğenin işleme konumu ve komşu öğeleri ve alt işleme konumunu ve çok daha iyi denetim sağlar.  
+ <xref:System.Windows.FrameworkElement.Margin%2A> Özelliği bir öğeyi ve alt öğeleri veya eşleri arasındaki uzaklığı açıklar. <xref:System.Windows.FrameworkElement.Margin%2A> değerleri olabilir Tekdüzen, benzer bir sözdizimi kullanarak `Margin="20"`. Bir Tekdüzen bu sözdizimine sahip <xref:System.Windows.FrameworkElement.Margin%2A> öğesine 20 aygıtı bağımsız piksel uygulanması. <xref:System.Windows.FrameworkElement.Margin%2A> değerleri de alabilir dört farklı değerleri, form sol, üst, sağ ve alt (bu sırayla) uygulamak için ayrı bir kenar boşluğu açıklayan her değeri gibi `Margin="0,10,5,25"`. Uygun kullanımı <xref:System.Windows.FrameworkElement.Margin%2A> özelliği, bir öğenin işleme konumu ve komşu öğeleri ve alt işleme konumunu ve çok daha iyi denetim sağlar.  
   
 > [!NOTE]
 >  Öğenin dışında alanı sıfır olmayan kenar boşluğu uygular <xref:System.Windows.FrameworkElement.ActualWidth%2A> ve <xref:System.Windows.FrameworkElement.ActualHeight%2A>.  
@@ -135,7 +123,7 @@ ms.lasthandoff: 12/22/2017
 ## <a name="using-alignment-margins-and-padding-in-an-application"></a>Bir uygulamada doldurma ve hizalama, kenar boşluklarını kullanma  
  <xref:System.Windows.FrameworkElement.HorizontalAlignment%2A>, <xref:System.Windows.FrameworkElement.Margin%2A>, <xref:System.Windows.Controls.Border.Padding%2A>, ve <xref:System.Windows.FrameworkElement.VerticalAlignment%2A> karmaşık oluşturmak gerekli olan konumlandırma denetimini sağlamak [!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)]. Her bir özellik etkilerini alt öğeli konumlandırma, dinamik uygulama ve kullanıcı deneyimleri oluşturma esneklik etkinleştirme değiştirmek için kullanabilirsiniz.  
   
- Aşağıdaki örnek, bu konudaki ayrıntılı kavramlar her gösterir. İlk örnekte bu konuda bulunan altyapı oluşturan, bu örnek, bir <xref:System.Windows.Controls.Grid> öğesi bir alt öğesi olarak <xref:System.Windows.Controls.Border> ilk örnekteki. <xref:System.Windows.Controls.Border.Padding%2A>üst öğeye uygulanan <xref:System.Windows.Controls.Border> öğesi. <xref:System.Windows.Controls.Grid> Üç alt arasındaki boşluğu bölümlemek için kullanılan <xref:System.Windows.Controls.StackPanel> öğeleri. <xref:System.Windows.Controls.Button>öğeleri çeşitli etkilerini göstermek için kullanılan yeniden <xref:System.Windows.FrameworkElement.Margin%2A> ve <xref:System.Windows.FrameworkElement.HorizontalAlignment%2A>. <xref:System.Windows.Controls.TextBlock>öğelerin her birini eklenir <xref:System.Windows.Controls.ColumnDefinition> uygulanan çeşitli özellikleri daha iyi tanımlamak için <xref:System.Windows.Controls.Button> her sütunda öğeleri.  
+ Aşağıdaki örnek, bu konudaki ayrıntılı kavramlar her gösterir. İlk örnekte bu konuda bulunan altyapı oluşturan, bu örnek, bir <xref:System.Windows.Controls.Grid> öğesi bir alt öğesi olarak <xref:System.Windows.Controls.Border> ilk örnekteki. <xref:System.Windows.Controls.Border.Padding%2A> üst öğeye uygulanan <xref:System.Windows.Controls.Border> öğesi. <xref:System.Windows.Controls.Grid> Üç alt arasındaki boşluğu bölümlemek için kullanılan <xref:System.Windows.Controls.StackPanel> öğeleri. <xref:System.Windows.Controls.Button> öğeleri çeşitli etkilerini göstermek için kullanılan yeniden <xref:System.Windows.FrameworkElement.Margin%2A> ve <xref:System.Windows.FrameworkElement.HorizontalAlignment%2A>. <xref:System.Windows.Controls.TextBlock> öğelerin her birini eklenir <xref:System.Windows.Controls.ColumnDefinition> uygulanan çeşitli özellikleri daha iyi tanımlamak için <xref:System.Windows.Controls.Button> her sütunda öğeleri.  
   
  [!code-cpp[MarginPaddingAlignmentSample#4](../../../../samples/snippets/cpp/VS_Snippets_Wpf/MarginPaddingAlignmentSample/CPP/Margin_Padding_Alignment_Sample.cpp#4)]
  [!code-csharp[MarginPaddingAlignmentSample#4](../../../../samples/snippets/csharp/VS_Snippets_Wpf/MarginPaddingAlignmentSample/CSharp/Margin_Padding_Alignment_Sample.cs#4)]

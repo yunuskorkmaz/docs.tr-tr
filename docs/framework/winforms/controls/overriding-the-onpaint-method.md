@@ -1,13 +1,6 @@
 ---
-title: "OnPaint Yöntemini Geçersiz Kılma"
-ms.custom: 
+title: OnPaint Yöntemini Geçersiz Kılma
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-winforms
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -15,16 +8,11 @@ helpviewer_keywords:
 - Paint event [Windows Forms], handling in Windows Forms custom control
 - OnPaint method [Windows Forms], overriding in Windows Forms custom controls
 ms.assetid: e9ca2723-0107-4540-bb21-4f5ffb4a9906
-caps.latest.revision: "12"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 7d9012d1a31eeaf50560b6166d32ac58662c5aa4
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: fc41158e9a3d5d331b391f0f28701612012becf7
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="overriding-the-onpaint-method"></a>OnPaint Yöntemini Geçersiz Kılma
 Tanımlanan herhangi bir olay geçersiz kılma için temel adımlar [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] aynıdır ve aşağıdaki listede özetlenmiştir.  
@@ -93,7 +81,7 @@ public class PaintEventArgs : EventArgs {
 }  
 ```  
   
- <xref:System.Windows.Forms.PaintEventArgs.ClipRectangle%2A>tanımlanabilir için dikdörtgen ve <xref:System.Windows.Forms.PaintEventArgs.Graphics%2A> özelliği başvurduğu bir <xref:System.Drawing.Graphics> nesnesi. Sınıflarda <xref:System.Drawing?displayProperty=nameWithType> ad alanı yönetilen işlevselliğini erişebilmesi sınıflar [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)], yeni Windows grafik kitaplığı. <xref:System.Drawing.Graphics> Nesnenin noktaları, dizeleri, çizgi, yaylar, üç nokta ve diğer birçok şekiller çizmek için yöntemleri vardır.  
+ <xref:System.Windows.Forms.PaintEventArgs.ClipRectangle%2A> tanımlanabilir için dikdörtgen ve <xref:System.Windows.Forms.PaintEventArgs.Graphics%2A> özelliği başvurduğu bir <xref:System.Drawing.Graphics> nesnesi. Sınıflarda <xref:System.Drawing?displayProperty=nameWithType> ad alanı yönetilen işlevselliğini erişebilmesi sınıflar [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)], yeni Windows grafik kitaplığı. <xref:System.Drawing.Graphics> Nesnenin noktaları, dizeleri, çizgi, yaylar, üç nokta ve diğer birçok şekiller çizmek için yöntemleri vardır.  
   
  Bir denetim çağırır kendi <xref:System.Windows.Forms.Control.OnPaint%2A> görsel görünümünü değiştirmeye ihtiyaç duyduğunda yöntemi. Bu yöntem sırayla başlatır <xref:System.Windows.Forms.Control.Paint> olay.  
   

@@ -1,27 +1,15 @@
 ---
-title: "XAML 2009 Dil Özellikleri"
-ms.custom: 
+title: XAML 2009 Dil Özellikleri
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-wpf
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - XAML 2009 [XAML Services]
 - XAML [XAML Services], XAML 2009
 ms.assetid: f6bb18d8-c86a-4549-8862-323e6b32a8dd
-caps.latest.revision: "11"
-author: wadepickett
-ms.author: wpickett
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 447ba37330e8027d86fd24239a8aca2461dce8d0
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 5014891b4edfa062f16d2c4b97c4d162d014fcd4
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="xaml-2009-language-features"></a>XAML 2009 Dil Özellikleri
 XAML 2009 varolan XAML dil belirtimi genişleten yeni XAML dil özellikleri için toplu terimdir. XAML 2009 birkaç yeni yönergeleri ve yapıları tanıtır. Bunlar[x: Arguments yönergesi](../../../docs/framework/xaml-services/x-arguments-directive.md); [x: FactoryMethod yönergesi](../../../docs/framework/xaml-services/x-factorymethod-directive.md); [x: Reference işaretleme uzantısı](../../../docs/framework/xaml-services/x-reference-markup-extension.md); [x: TypeArguments yönergesi ](../../../docs/framework/xaml-services/x-typearguments-directive.md); ve ortak dil temelleri için yerleşik türleri (örneğin `x:Char`).  

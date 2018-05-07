@@ -1,27 +1,15 @@
 ---
-title: "Nasıl yapılır: WCF Web HTTP Programlama Modeli Kullanarak Rastgele Veriler Döndüren Bir Hizmet Oluşturma"
-ms.custom: 
+title: 'Nasıl yapılır: WCF Web HTTP Programlama Modeli Kullanarak Rastgele Veriler Döndüren Bir Hizmet Oluşturma'
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 0283955a-b4ae-458d-ad9e-6fbb6f529e3d
-caps.latest.revision: "11"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 829e9f2bcf909bee41f53b4b7cabbb0803e77963
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 763d62750380f025ae369e1e917b46d4e51874e8
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-create-a-service-that-returns-arbitrary-data-using-the-wcf-web-http-programming-model"></a>Nasıl yapılır: WCF Web HTTP Programlama Modeli Kullanarak Rastgele Veriler Döndüren Bir Hizmet Oluşturma
-Bazen geliştiriciler, veriler bir hizmeti işleminin nasıl döndürülür, tam denetimi olmalıdır. Bir hizmet işlemi tarafından desteklenmeyen bir biçimde veri döndürmesi gerekir, bu durumda [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]. Bu konuda ele alınmıştır kullanarak [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] WEB HTTP programlama gibi bir hizmet oluşturmak için modeli. Bu hizmet bir akış döndüren bir işlemi var.  
+Bazen geliştiriciler, veriler bir hizmeti işleminin nasıl döndürülür, tam denetimi olmalıdır. Bir hizmet işlemi WCF tarafından desteklenmeyen bir biçimde veri döndürmelidir bu durumdur. Bu konuda, bu tür bir hizmet oluşturmak için WCF WEB HTTP programlama modeli kullanarak anlatılmaktadır. Bu hizmet bir akış döndüren bir işlemi var.  
   
 ### <a name="to-implement-the-service-contract"></a>Hizmet sözleşmesini uygulama  
   
@@ -36,7 +24,7 @@ Bazen geliştiriciler, veriler bir hizmeti işleminin nasıl döndürülür, tam
         }  
     ```  
   
-     Yöntemin döndürdüğü için bir <xref:System.IO.Stream>, [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] varsayar işlemi hizmet işleminden döndürülen bayt tam denetime sahiptir ve hiçbir geri döndürülen verileri biçimlendirme uygular.  
+     Yöntemin döndürdüğü için bir <xref:System.IO.Stream>, WCF işlemi hizmet işleminden döndürülen bayt üzerinde tam denetimi olduğunu varsayar ve hiçbir geri döndürülen verileri biçimlendirme uygular.  
   
 2.  Hizmet sözleşmesini uygulama. Sözleşme yalnızca bir işlem var (`GetImage`). Bu yöntem bir bit eşlem oluşturur ve ardından kaydetmesi bir <xref:System.IO.MemoryStream> .jpg biçiminde. İşlemi daha sonra bu akış çağırana döndürür.  
   
@@ -62,7 +50,7 @@ Bazen geliştiriciler, veriler bir hizmeti işleminin nasıl döndürülür, tam
        }  
     ```  
   
-     Kodu son satırının ikinci dikkat edin:`WebOperationContext.Current.OutgoingResponse.ContentType = "image/jpeg";`  
+     Kodu son satırının ikinci dikkat edin: `WebOperationContext.Current.OutgoingResponse.ContentType = "image/jpeg";`  
   
      Bu içerik türü üstbilgisini ayarlar `"image/jpeg"`. Bu örnek nasıl bir .jpg dosyası döndürüleceğini gösterir, ancak herhangi bir türde, herhangi bir biçimde gerekli olan verileri döndürmek için değiştirilebilir. İşlemi almalı veya verileri oluşturmak ve ardından bir akışa yazın.  
   

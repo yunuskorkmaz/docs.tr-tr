@@ -1,13 +1,6 @@
 ---
-title: "Lambda İfadeleri (Visual Basic)"
-ms.custom: 
+title: Lambda İfadeleri (Visual Basic)
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- devlang-visual-basic
-ms.topic: article
 f1_keywords:
 - vb.LambdaFunction
 helpviewer_keywords:
@@ -16,14 +9,11 @@ helpviewer_keywords:
 - expressions [Visual Basic], lambda
 - inline functions [Visual Basic]
 ms.assetid: 137064b0-3928-4bfa-ba71-c3f9cbd951e2
-caps.latest.revision: 
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: 69ac88d295420277e99058d0f80a5ae1c2ce2e39
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: c45500dc7a1e59a7ac83d43b826ca4cbfca6efb3
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="lambda-expressions-visual-basic"></a>Lambda İfadeleri (Visual Basic)
 A *lambda ifadesi* bir işlevi veya alt yordama bir temsilci geçerli olduğu yerlerde, kullanılabilecek bir ad olmadan. Lambda ifadeleri işlevleri veya alt yordamlar olabilir ve tek satırlı veya çok satırlı olabilir. Değerleri bir lambda ifadesi geçerli kapsamdan geçirebilirsiniz.  
@@ -70,7 +60,7 @@ A *lambda ifadesi* bir işlevi veya alt yordama bir temsilci geçerli olduğu ye
   
 -   Kullanarak bir lambda ifadesi parametresinin veri türü belirtebilirsiniz `As` anahtar sözcüğü ya da parametresinin veri türü sonuçlandı. Veri türleri veya tüm olayla gerekir ya da tüm parametreleri belirledikten gerekir.  
   
--   `Optional`ve `Paramarray` parametreleri izin verilmez.  
+-   `Optional` ve `Paramarray` parametreleri izin verilmez.  
   
 -   Genel Parametreler izin verilmez.  
   
@@ -118,7 +108,7 @@ End Class
   
  Oluşturma ve zaman uyumsuz yöntemler kullanma hakkında daha fazla bilgi için bkz: [uyumsuz ve bekleme ile zaman uyumsuz programlama](../../../../visual-basic/programming-guide/concepts/async/index.md).  
   
-##  <a name="context"></a>Bağlam  
+##  <a name="context"></a> bağlam  
  Lambda ifadesi ile bağlamı içinde tanımlanan kapsamıyla paylaşır. İçeren kapsamı içinde yazılmış herhangi bir kod aynı erişim haklarına sahiptir. Üye değişkenleri, işlevleri ve alt öğeler, erişim dahildir `Me`, parametreleri ve içeren kapsamdaki yerel değişkenleri ve.  
   
  Yerel değişkenleri ve parametreleri içeren kapsamında erişim, kapsamı ömür genişletebilirsiniz. Lambda ifadesi olarak başvuran bir temsilci çöp toplama kullanılamaz olduğu sürece, özgün ortam değişkenlerine erişim korunur. Aşağıdaki örnekte, değişken `target` için yerel olan `makeTheGame`, yönteminde lambda ifadesi `playTheGame` tanımlanır. Döndürülen lambda ifadesi atanan Not `takeAGuess` içinde `Main`, hala yerel değişken erişimi `target`.  
@@ -127,15 +117,15 @@ End Class
   
  Aşağıdaki örnek, çeşitli iç içe geçmiş lambda ifadesi erişim haklarını gösterir. Ne zaman döndürülen lambda ifadesi yürütüldüğünde gelen `Main` olarak `aDel`, bu öğeler erişen:  
   
--   İçinde tanımlandığı sınıfının bir alanı:`aField`  
+-   İçinde tanımlandığı sınıfının bir alanı: `aField`  
   
--   İçinde tanımlandığı sınıfın özelliği:`aProp`  
+-   İçinde tanımlandığı sınıfın özelliği: `aProp`  
   
--   Yönteminin bir parametresi `functionWithNestedLambda`, tanımlandığı içinde:`level1`  
+-   Yönteminin bir parametresi `functionWithNestedLambda`, tanımlandığı içinde: `level1`  
   
--   Yerel bir değişken `functionWithNestedLambda`:`localVar`  
+-   Yerel bir değişken `functionWithNestedLambda`: `localVar`  
   
--   Yer alan lambda ifadesi parametresinin:`level2`  
+-   Yer alan lambda ifadesi parametresinin: `level2`  
   
  [!code-vb[VbVbalrLambdas#9](../../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/lambda-expressions_6.vb)]  
   
@@ -161,12 +151,12 @@ End Class
      [!code-vb[VbVbalrLambdas#5](../../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/lambda-expressions_10.vb)]  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [Yordamları](./index.md)  
+ [Yordamlar](./index.md)  
  [Visual Basic'de LINQ'e giriş](../../../../visual-basic/programming-guide/language-features/linq/introduction-to-linq.md)  
  [Temsilciler](../../../../visual-basic/programming-guide/language-features/delegates/index.md)  
- [Function deyimi](../../../../visual-basic/language-reference/statements/function-statement.md)  
- [Sub deyimi](../../../../visual-basic/language-reference/statements/sub-statement.md)  
- [Boş değer atanabilen değer türleri](../../../../visual-basic/programming-guide/language-features/data-types/nullable-value-types.md)  
+ [Function Deyimi](../../../../visual-basic/language-reference/statements/function-statement.md)  
+ [Sub Deyimi](../../../../visual-basic/language-reference/statements/sub-statement.md)  
+ [Boş Değer Atanabilen Değer Türleri](../../../../visual-basic/programming-guide/language-features/data-types/nullable-value-types.md)  
  [Nasıl yapılır: Visual Basic'de başka bir yordama yordam geçirme](../../../../visual-basic/programming-guide/language-features/delegates/how-to-pass-procedures-to-another-procedure.md)  
- [Nasıl yapılır: Lambda ifadesi oluşturma](./how-to-create-a-lambda-expression.md)  
- [Gevşek temsilci dönüşümü](../../../../visual-basic/programming-guide/language-features/delegates/relaxed-delegate-conversion.md)
+ [Nasıl yapılır: Lambda İfadesi Oluşturma](./how-to-create-a-lambda-expression.md)  
+ [Gevşek Temsilci Dönüştürme](../../../../visual-basic/programming-guide/language-features/delegates/relaxed-delegate-conversion.md)

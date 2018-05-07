@@ -1,29 +1,18 @@
 ---
-title: "Dönüşümleri XPathNavigator"
-ms.custom: 
+title: Dönüşümleri XPathNavigator
 ms.date: 03/30/2017
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
 ms.technology: dotnet-standard
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
 ms.assetid: 118f97d1-7110-4d1b-b0bd-4143252c0bb0
-caps.latest.revision: "3"
 author: mairaw
 ms.author: mairaw
-manager: wpickett
-ms.workload:
-- dotnet
-- dotnetcore
-ms.openlocfilehash: c492d470fe29041f32039d98ecb854e18f40423c
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: 76cfa51c7d434a6dfdcdc1e6852779decaa601e4
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="xpathnavigator-in-transformations"></a>Dönüşümleri XPathNavigator
 <xref:System.Xml.XPath.XPathNavigator> Sınıfı verilerine salt okunur rastgele erişim sağlar ve Genişletilebilir Stil sayfası dili için bir giriş olarak kullanmak için Dönüşümleri (XSLT) için tasarlanmıştır. Üzerinde uygulanan <xref:System.Xml.XPath.XPathDocument>, <xref:System.Xml.XmlDataDocument>, ve <xref:System.Xml.XmlDocument>. <xref:System.Xml.XPath.XPathNavigator> XML Path dili (XPath) öneri 5 bölümünde açıklandığı gibi World Wide Web Konsorsiyumu (W3C) veri modeline dayanır.  

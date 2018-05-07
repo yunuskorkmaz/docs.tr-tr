@@ -1,25 +1,17 @@
 ---
 title: Özel (Visual Basic)
 ms.date: 07/20/2015
-ms.prod: .net
-ms.suite: ''
-ms.technology:
-- devlang-visual-basic
-ms.topic: article
 f1_keywords:
 - vb.Private
 helpviewer_keywords:
 - Private keyword [Visual Basic]
 - Private keyword [Visual Basic], syntax
 ms.assetid: aba74a2e-5824-4613-bf63-b9ec7787f4e6
-caps.latest.revision: 13
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: 07450c2a5443bf6bc147cad2cfc779072bfc363b
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: d7935cf691d961591ff5e3d2a290afb88de9165a
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="private-visual-basic"></a>Özel (Visual Basic)
 Bir veya daha fazla bildirilen programlama öğeleri dahil tüm kapsanan türleri içinde bildirim bağlamları içinde yalnızca erişilebilir olduğunu belirtir.  
@@ -39,35 +31,35 @@ Bir veya daha fazla bildirilen programlama öğeleri dahil tüm kapsanan türler
   
  `Private` Değiştiricisi bu bağlamlarında kullanılabilir:  
   
- [Class deyimi](../../../visual-basic/language-reference/statements/class-statement.md)  
+ [Class Deyimi](../../../visual-basic/language-reference/statements/class-statement.md)  
   
- [Const deyimi](../../../visual-basic/language-reference/statements/const-statement.md)  
+ [Const Deyimi](../../../visual-basic/language-reference/statements/const-statement.md)  
   
- [Declare deyimi](../../../visual-basic/language-reference/statements/declare-statement.md)  
+ [Declare Deyimi](../../../visual-basic/language-reference/statements/declare-statement.md)  
   
- [Delegate deyimi](../../../visual-basic/language-reference/statements/delegate-statement.md)  
+ [Delegate Deyimi](../../../visual-basic/language-reference/statements/delegate-statement.md)  
   
- [Dim deyimi](../../../visual-basic/language-reference/statements/dim-statement.md)  
+ [Dim Deyimi](../../../visual-basic/language-reference/statements/dim-statement.md)  
   
- [Enum deyimi](../../../visual-basic/language-reference/statements/enum-statement.md)  
+ [Enum Deyimi](../../../visual-basic/language-reference/statements/enum-statement.md)  
   
- [Event deyimi](../../../visual-basic/language-reference/statements/event-statement.md)  
+ [Event Deyimi](../../../visual-basic/language-reference/statements/event-statement.md)  
   
- [Function deyimi](../../../visual-basic/language-reference/statements/function-statement.md)  
+ [Function Deyimi](../../../visual-basic/language-reference/statements/function-statement.md)  
   
- [Interface deyimi](../../../visual-basic/language-reference/statements/interface-statement.md)  
+ [Interface Deyimi](../../../visual-basic/language-reference/statements/interface-statement.md)  
   
- [Property deyimi](../../../visual-basic/language-reference/statements/property-statement.md)  
+ [Property Deyimi](../../../visual-basic/language-reference/statements/property-statement.md)  
   
- [Structure deyimi](../../../visual-basic/language-reference/statements/structure-statement.md)  
+ [Structure Deyimi](../../../visual-basic/language-reference/statements/structure-statement.md)  
   
- [Sub deyimi](../../../visual-basic/language-reference/statements/sub-statement.md)  
+ [Sub Deyimi](../../../visual-basic/language-reference/statements/sub-statement.md)  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [Ortak](../../../visual-basic/language-reference/modifiers/public.md)  
- [Korumalı](../../../visual-basic/language-reference/modifiers/protected.md)  
- [Arkadaş](../../../visual-basic/language-reference/modifiers/friend.md)  
+ [Public](../../../visual-basic/language-reference/modifiers/public.md)  
+ [Protected](../../../visual-basic/language-reference/modifiers/protected.md)  
+ [Friend](../../../visual-basic/language-reference/modifiers/friend.md)  
  [Visual Basic'de erişim düzeyleri](../../../visual-basic/programming-guide/language-features/declared-elements/access-levels.md)  
- [Yordamları](../../../visual-basic/programming-guide/language-features/procedures/index.md)  
- [Yapıları](../../../visual-basic/programming-guide/language-features/data-types/structures.md)  
- [Nesneler ve sınıflar](../../../visual-basic/programming-guide/language-features/objects-and-classes/index.md)
+ [Yordamlar](../../../visual-basic/programming-guide/language-features/procedures/index.md)  
+ [Yapılar](../../../visual-basic/programming-guide/language-features/data-types/structures.md)  
+ [Nesneler ve Sınıflar](../../../visual-basic/programming-guide/language-features/objects-and-classes/index.md)

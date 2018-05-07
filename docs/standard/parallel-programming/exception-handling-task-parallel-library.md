@@ -1,31 +1,20 @@
 ---
-title: "Özel Durum İşleme (Görev Paralel Kitaplığı)"
-ms.custom: 
+title: Özel Durum İşleme (Görev Paralel Kitaplığı)
 ms.date: 03/30/2017
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
 ms.technology: dotnet-standard
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
 helpviewer_keywords:
 - tasks, exceptions
 ms.assetid: beb51e50-9061-4d3d-908c-56a4f7c2e8c1
-caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-- dotnetcore
-ms.openlocfilehash: 86b4d105b7d79abbd25b342774705866119ada68
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: 16ab0b8967ac394540f201fcc9098024faaccaa7
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="exception-handling-task-parallel-library"></a>Özel Durum İşleme (Görev Paralel Kitaplığı)
 İçinde bir görevin çalıştığı kullanıcı kodu tarafından oluşturulan işlenmemiş özel durumlardan geri çağırma akışa dışında bu konunun ilerleyen bölümlerinde açıklanan belirli senaryolarda yayılır. Özel durumlar statik birini kullandığınızda yayılır veya örnek <xref:System.Threading.Tasks.Task.Wait%2A?displayProperty=nameWithType> veya <!--zz <xref:System.Threading.Tasks.Task%601.Wait%2A?displayProperty=nameWithType>  --> `Wait` yöntemleri ve işlemek bunları çağrısında kapsayan tarafından bir `try` / `catch` deyimi. Ekli alt görevler üst bir görevdir ya da birden çok görevlerde bekleyen varsa, birden çok özel durum.  

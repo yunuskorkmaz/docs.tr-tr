@@ -1,24 +1,12 @@
 ---
-title: "Kanal Fabrikası ve Önbelleğe Alma"
-ms.custom: 
+title: Kanal Fabrikası ve Önbelleğe Alma
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 954f030e-091c-4c0e-a7a2-10f9a6b1f529
-caps.latest.revision: "3"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: b92c94c6ae15684a087af07edd5801aa4bb9f671
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 1bf8e3fe4833b662f16bd6311056fda8609dd9d3
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="channel-factory-and-caching"></a>Kanal Fabrikası ve Önbelleğe Alma
 WCF istemci uygulamalarını kullanan <xref:System.ServiceModel.ChannelFactory%601> bir WCF Hizmeti ile bir iletişim kanalı oluşturmak için sınıfı.  Oluşturma <xref:System.ServiceModel.ChannelFactory%601> örnekleri aşağıdaki işlemleri içerdiğinden bazı ek yük doğurur:  
@@ -36,7 +24,7 @@ WCF istemci uygulamalarını kullanan <xref:System.ServiceModel.ChannelFactory%6
 > [!TIP]
 >  Kullandığınızda kanal fabrikası oluşturma doğrudan denetime sahip <xref:System.ServiceModel.ChannelFactory%601> doğrudan sınıfı.  
   
- WCF istemci proxy'leri ile oluşturulan [ServiceModel meta veri yardımcı Programracı (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md) türetilmiş <xref:System.ServiceModel.ClientBase%601>. <xref:System.ServiceModel.ClientBase%601>statik tanımlar <xref:System.ServiceModel.ClientBase%601.CacheSetting%2A> kanal fabrikası önbelleğe alma davranışını tanımlayan özelliği. Önbellek ayarları, belirli bir türü için yapılır. Örneğin, ayarlama `ClientBase<ITest>.CacheSettings` aşağıda tanımlanan değerlerden biri için yalnızca bu proxy/ClientBase türü etkiler `ITest`. Belirli bir önbellek ayarını <xref:System.ServiceModel.ClientBase%601> ilk proxy/ClientBase örneği oluşturulduktan hemen sabittir.  
+ WCF istemci proxy'leri ile oluşturulan [ServiceModel meta veri yardımcı Programracı (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md) türetilmiş <xref:System.ServiceModel.ClientBase%601>. <xref:System.ServiceModel.ClientBase%601> statik tanımlar <xref:System.ServiceModel.ClientBase%601.CacheSetting%2A> kanal fabrikası önbelleğe alma davranışını tanımlayan özelliği. Önbellek ayarları, belirli bir türü için yapılır. Örneğin, ayarlama `ClientBase<ITest>.CacheSettings` aşağıda tanımlanan değerlerden biri için yalnızca bu proxy/ClientBase türü etkiler `ITest`. Belirli bir önbellek ayarını <xref:System.ServiceModel.ClientBase%601> ilk proxy/ClientBase örneği oluşturulduktan hemen sabittir.  
   
 ## <a name="specifying-caching-behavior"></a>Önbelleğe alma davranışını belirtme  
  Önbelleğe alma davranışı belirtilen ayarlayarak <xref:System.ServiceModel.ClientBase%601.CacheSetting> özelliğini aşağıdaki değerlerden birine.  

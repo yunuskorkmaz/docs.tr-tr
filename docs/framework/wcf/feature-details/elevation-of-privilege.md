@@ -1,29 +1,15 @@
 ---
 title: Ayrıcalık Yükseltme
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 helpviewer_keywords:
 - elevation of privilege [WCF]
 - security [WCF], elevation of privilege
 ms.assetid: 146e1c66-2a76-4ed3-98a5-fd77851a06d9
-caps.latest.revision: 16
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 6d93a8ae074e4016d7d8ec4b8734f0d14ead938f
-ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
+ms.openlocfilehash: c71936d087ef046848c75d1fa0638aaafbe43c9a
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/28/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="elevation-of-privilege"></a>Ayrıcalık Yükseltme
 *Ayrıcalık yükseltme* izinleri bu başlangıçta verilen ötesinde bir saldırganın yetkilendirme vermesine neden olur. Örneğin, bir saldırganın bir ayrıcalık kümesi "salt okunur" izinleri ile "okuma ve yazma" içerecek şekilde kümesi şekilde yükseltir  
@@ -36,7 +22,7 @@ ms.lasthandoff: 04/28/2018
 ## <a name="switching-identity-without-a-security-context"></a>Bir güvenlik bağlamı olmadan kimliğini değiştirme  
  Aşağıdaki yalnızca geçerli [!INCLUDE[vstecwinfx](../../../../includes/vstecwinfx-md.md)].  
   
- Bir istemci ve sunucu, istemci kimliğini arasında bir bağlantı kuran zaman değiştirmez, dışındaki bir durumda: sonra [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] istemci açıldığında, aşağıdaki koşulların tümü doğruysa:  
+ Bir istemci ve sunucu, istemci kimliğini arasında bir bağlantı kuran zaman değiştirmez, dışındaki bir durumda: aşağıdaki koşulların tümü doğruysa, WCF istemcisini açtıktan sonra:  
   
 -   (Aktarım güvenlik oturumu veya ileti güvenlik oturumu kullanarak) bir güvenlik bağlamı kurmak için yordamları işlev kapalı (<xref:System.ServiceModel.NonDualMessageSecurityOverHttp.EstablishSecurityContext%2A> özelliği ayarlanmış `false` ileti güvenliği veya güvenlik değil kurabilen aktarım durumunda oturumları Aktarım güvenlik durumda kullanılır. HTTPS bir tür taşıma örnektir).  
   
@@ -46,7 +32,7 @@ ms.lasthandoff: 04/28/2018
   
 -   Hizmetin Kimliğine bürünülen güvenlik bağlamı altında aradığınız.  
   
- Bu koşullar geçerli olduğunda, istemci hizmeti için kimlik doğrulaması için kullanılan kimlik olabilir (bunu olabilir Kimliğine bürünülen kimlik ancak işlem kimliği yerine) değişiklikten sonra [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] istemci açılır. Bu, istemci hizmeti için kimlik doğrulaması için kullanılan Windows kimlik bilgileri ile her ileti iletilir ve kimlik doğrulaması için kullanılan kimlik bilgileri geçerli iş parçacığının Windows kimlik elde nedeniyle oluşur. Geçerli iş parçacığının Windows kimliğini (örneğin, farklı çağıran kimliğine bürünerek) değişirse iletisine ve hizmet için istemci kimlik doğrulaması için kullanılan kimlik bilgisini de değişebilir.  
+ Bu koşullar doğru olduğunda, istemci hizmeti için kimlik doğrulaması için kullanılan kimlik değiştirebilirsiniz (bunu Kimliğine bürünülen kimlik ancak işlem kimliği yerine olmayabilir) WCF istemcisini açıldıktan sonra. Bu, istemci hizmeti için kimlik doğrulaması için kullanılan Windows kimlik bilgileri ile her ileti iletilir ve kimlik doğrulaması için kullanılan kimlik bilgileri geçerli iş parçacığının Windows kimlik elde nedeniyle oluşur. Geçerli iş parçacığının Windows kimliğini (örneğin, farklı çağıran kimliğine bürünerek) değişirse iletisine ve hizmet için istemci kimlik doğrulaması için kullanılan kimlik bilgisini de değişebilir.  
   
  Kimliğe bürünme ile birlikte Windows kimlik doğrulamasını kullanırken belirleyici davranışı sahip olmak istiyorsanız açıkça Windows kimlik bilgilerini ayarlamanız gerekir veya bir güvenlik bağlamı hizmetiyle oluşturmanız gerekir. Bunu yapmak için bir ileti güvenlik oturumu veya bir aktarım güvenlik oturumu kullanın. Örneğin, net.tcp aktarım taşıma güvenlik oturumu sağlayabilir. Ayrıca, hizmeti çağrılırken istemci işlemleri zaman uyumlu bir sürümünü kullanmanız gerekir. Bir ileti güvenlik bağlamı kurmak, kimliğini de oturum yenileme işlemi sırasında değişebildiğinden, hizmeti bağlantısı yapılandırılmış oturum yenileme süresini daha uzun açık tutmalısınız değil.  
   
@@ -59,9 +45,9 @@ ms.lasthandoff: 04/28/2018
 >  Kullanırken `BeginOpen` yöntemi, yakalanan kimlik bilgilerini garanti edilemediği yöntemini çağırır işlem kimlik bilgileri olmalıdır.  
   
 ## <a name="token-caches-allow-replay-using-obsolete-data"></a>Belirteç önbellekleri kullanarak eski verileri yeniden yürütme izin ver  
- [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] Yerel güvenlik yetkilisi (LSA) kullanan `LogonUser` kullanıcı adı ve parola ile kullanıcıların kimliklerini doğrulamak için işlev. Oturum açma işlevini pahalı bir işlem olduğundan [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] performansını artırmak için kimliği doğrulanmış kullanıcılar temsil eden önbellek belirteçleri sağlar. Önbelleğe alma mekanizması sonuçlarından kaydeder `LogonUser` sonraki kullanımlar için. Bu düzenek, varsayılan olarak devre dışıdır; etkinleştirmek için ayarlanmış <xref:System.ServiceModel.Security.UserNamePasswordServiceCredential.CacheLogonTokens%2A> özelliğine `true`, veya `cacheLogonTokens` özniteliği [ \<userNameAuthentication >](../../../../docs/framework/configure-apps/file-schema/wcf/usernameauthentication.md).  
+ WCF yerel güvenlik yetkilisi (LSA) kullanan `LogonUser` kullanıcı adı ve parola ile kullanıcıların kimliklerini doğrulamak için işlev. Oturum açma işlevini pahalı bir işlem olduğundan, WCF temsil eden önbellek belirteçleri için performansı artırmak için kullanıcıların kimlik doğrulaması sağlar. Önbelleğe alma mekanizması sonuçlarından kaydeder `LogonUser` sonraki kullanımlar için. Bu düzenek, varsayılan olarak devre dışıdır; etkinleştirmek için ayarlanmış <xref:System.ServiceModel.Security.UserNamePasswordServiceCredential.CacheLogonTokens%2A> özelliğine `true`, veya `cacheLogonTokens` özniteliği [ \<userNameAuthentication >](../../../../docs/framework/configure-apps/file-schema/wcf/usernameauthentication.md).  
   
- Ayarlayarak için önbelleğe alınmış belirteçleri Live (TTL) bir süresini ayarlayabilirsiniz <xref:System.ServiceModel.Security.UserNamePasswordServiceCredential.CachedLogonTokenLifetime%2A> özelliğine bir <xref:System.TimeSpan>, veya `cachedLogonTokenLifetime` özniteliği `userNameAuthentication` öğesi; varsayılan değer 15 dakikadır. Bir belirteç önbelleğe olsa da, aynı kullanıcı adı ve parola sunan herhangi bir istemci bir belirteç kullanıcı hesabı Windows'dan silinse bile veya parolasını değiştirdiyseniz kullanabileceğinizi unutmayın. TTL süresi ve belirteç önbellekten kaldırılır kadar [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] (büyük olasılıkla kötü amaçlı) kullanıcının kimlik doğrulamasını sağlar.  
+ Ayarlayarak için önbelleğe alınmış belirteçleri Live (TTL) bir süresini ayarlayabilirsiniz <xref:System.ServiceModel.Security.UserNamePasswordServiceCredential.CachedLogonTokenLifetime%2A> özelliğine bir <xref:System.TimeSpan>, veya `cachedLogonTokenLifetime` özniteliği `userNameAuthentication` öğesi; varsayılan değer 15 dakikadır. Bir belirteç önbelleğe olsa da, aynı kullanıcı adı ve parola sunan herhangi bir istemci bir belirteç kullanıcı hesabı Windows'dan silinse bile veya parolasını değiştirdiyseniz kullanabileceğinizi unutmayın. TTL süresi ve belirteç önbellekten kaldırıldı kadar WCF (büyük olasılıkla kötü amaçlı) kullanıcının kimlik doğrulamasını sağlar.  
   
  Bunu azaltmak için: ayarlayarak saldırı penceresini azaltmak `cachedLogonTokenLifetime` en kısa süre değerine span kullanıcılar gereksiniminizi.  
   
@@ -91,7 +77,7 @@ ms.lasthandoff: 04/28/2018
   
 -   Hizmetin bilgisayar aynı ortak anahtara sahip iki veya daha fazla sertifikaları içerir, ancak farklı bilgiler içerir.  
   
--   Konu anahtarı tanımlayıcısı eşleşen bir sertifika hizmet alır, ancak istemci kullanmak için amaçlanan bir değil. Zaman [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] iletiyi alır ve imzayı doğrular [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] ne istemcisi beklenenden farklı ve büyük olasılıkla yükseltilmiş talepler kümesi için istenmeyen X.509 sertifikası bilgileri eşler.  
+-   Konu anahtarı tanımlayıcısı eşleşen bir sertifika hizmet alır, ancak istemci kullanmak için amaçlanan bir değil. WCF ileti alır ve imzayı doğrular, WCF istenmeyen X.509 sertifikası bilgileri ne istemcisi beklenenden farklı ve büyük olasılıkla yükseltilmiş talepler kümesi eşler.  
   
  Başvuru X.509 Sertifika kullanarak gibi başka bir yolu, bunu azaltmak için <xref:System.ServiceModel.Security.Tokens.X509KeyIdentifierClauseType.IssuerSerial>.  
   

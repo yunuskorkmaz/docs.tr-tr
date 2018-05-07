@@ -1,36 +1,22 @@
 ---
 title: Zehirli İleti İşleme
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 ms.assetid: 8d1c5e5a-7928-4a80-95ed-d8da211b8595
-caps.latest.revision: 29
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 6fa35209b2dafc088605848a0dc96a53a2813dfd
-ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
+ms.openlocfilehash: b860e239d001a03da191d73de2f7b53e7073c7a6
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/30/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="poison-message-handling"></a>Zehirli İleti İşleme
 A *zehir iletisi* uygulama Teslim girişimleri üst sınırını aştı iletisidir. Sıra tabanlı bir uygulama hataları nedeniyle bir ileti işleyemediğinde bu durum ortaya çıkabilir. Güvenilirlik taleplerini karşılamak üzere kuyruğa alınan bir uygulamayı bir işlem altında iletilerini alır. İleti altında yeni bir işlem denenir kuyruğa alınan iletinin alındığı işlem durduruluyor iletinin kuyrukta bırakır, böylece. İptal etmek işlem neden olan sorunu düzeltilmezse alma işlemini yapan uygulamanın alma ve teslim deneme sayısı aşıldı kadar aynı iletiyi durduruluyor döngü ve zehir iletisi sonuçları takılı.  
   
  Bir ileti zararlı bir ileti için birçok nedeni olabilir. Uygulamaya özel en yaygın nedenleri. Örneğin, bir uygulama bir iletiyi kuyruktan okur ve bazı veritabanı işlemleri yapar, uygulamanın işlem iptal için neden veritabanı üzerinde bir kilit almak başarısız olabilir. Veritabanı işlem durduruldu çünkü uygulamanın iletiyi ikinci kez yeniden okuyun ve veritabanı üzerinde bir kilit edinmeye başka bir çabayı neden sırasındaki ileti kalır. İletileri geçersiz bilgiler içeriyorsa zararlı olabilir. Örneğin, bir satın alma siparişi geçersiz müşteri numarası içerebilir. Bu durumlarda, uygulamanın gönüllü hareketi iptal ve zararlı bir ileti olmasını ileti zorlayabilirsiniz.  
   
- Nadir durumlarda, iletileri uygulamaya gönderilen başarısız olabilir. [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] Katmanı bulmak ileti ile ilgili bir sorun gibi ileti yanlış çerçeve sahipse, geçersiz bir ileti kimlik bilgileri bağlı veya geçersiz action üstbilgisi için. Bu durumlarda, uygulama hiçbir zaman iletiyi alır; Ancak, ileti zararlı bir ileti hala olabilir ve el ile işlenmesi.  
+ Nadir durumlarda, iletileri uygulamaya gönderilen başarısız olabilir. Windows Communication Foundation (WCF) katman ileti ile ilgili bir sorun da bulabilirsiniz ileti yanlış çerçeve sahipse, geçersiz bir ileti kimlik bilgileri bağlı veya geçersiz action üstbilgisi için. Bu durumlarda, uygulama hiçbir zaman iletiyi alır; Ancak, ileti zararlı bir ileti hala olabilir ve el ile işlenmesi.  
   
 ## <a name="handling-poison-messages"></a>Zehirli ileti işleme  
- İçinde [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)], zehirli ileti işleme uygulamaya gönderilen iletileri veya uygulamaya gönderilir ancak nedeniyle işlenecek başarısız iletileri uğraşmanız alıcı uygulamanın bir mekanizma sağlar uygulamaya özgü nedenleri. Zehirli ileti işleme her kullanılabilir sıraya alınan bağlamaları aşağıdaki özellikleri tarafından yapılandırılır:  
+ WCF'de, zehirli ileti işleme uygulamaya gönderilen iletileri veya uygulamaya gönderilir ancak, uygulamaya özgü nedeniyle işlenmesi başarısız iletileri uğraşmanız alıcı uygulama için bir mekanizma sağlar. nedenleri. Zehirli ileti işleme her kullanılabilir sıraya alınan bağlamaları aşağıdaki özellikleri tarafından yapılandırılır:  
   
 -   `ReceiveRetryCount`. Bir iletinin teslimini uygulama sırasından uygulamaya yeniden deneneceğini maksimum sayısını gösterir. bir tamsayı değeri. Varsayılan değer 5'tir. Bu, burada hemen bir yeniden deneme sorun gibi bir veritabanı üzerinde geçici bir kilitlenme ile giderir durumda yeterlidir.  
   
@@ -46,7 +32,7 @@ A *zehir iletisi* uygulama Teslim girişimleri üst sınırını aştı iletisid
   
 -   Reddeder. Bu seçenek yalnızca kullanılabilir [!INCLUDE[wv](../../../../includes/wv-md.md)]. Bu, Message Queuing (uygulama ileti alamıyor gönderme sıra yöneticisi olumsuz bildirim göndermek için MSMQ) bildirir. İleti gönderme sırası yöneticisinin sahipsiz sıraya konur.  
   
--   Taşıyın. Bu seçenek yalnızca kullanılabilir [!INCLUDE[wv](../../../../includes/wv-md.md)]. Bu, daha sonra bir poison ileti işleme uygulaması tarafından işlenmek poison ileti kuyruğuna zehir iletisi taşır. Uygulama sırasındaki sırasına poison ileti sırasıdır. Poison ileti işleme uygulaması olabilir bir [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] zararlı sıradaki iletileri okur hizmet. Zararlı sıranın uygulama sırasındaki sırasına olan ve net.msmq:// çözülebilir\<*makine adı*>/*applicationQueue*; zehirleme, burada  *makine adı* sıranın bulunduğu bilgisayarın adıdır ve *applicationQueue* uygulamaya özgü sıranın adıdır.  
+-   Taşıyın. Bu seçenek yalnızca kullanılabilir [!INCLUDE[wv](../../../../includes/wv-md.md)]. Bu, daha sonra bir poison ileti işleme uygulaması tarafından işlenmek poison ileti kuyruğuna zehir iletisi taşır. Uygulama sırasındaki sırasına poison ileti sırasıdır. Poison ileti işleme uygulama zararlı sıradaki iletileri okuyan bir WCF Hizmeti olabilir. Zararlı sıranın uygulama sırasındaki sırasına olan ve net.msmq:// çözülebilir\<*makine adı*>/*applicationQueue*; zehirleme, burada  *makine adı* sıranın bulunduğu bilgisayarın adıdır ve *applicationQueue* uygulamaya özgü sıranın adıdır.  
   
  Bir ileti için gerçekleştirilen teslim denemelerin sayısı şunlardır:  
   
@@ -57,20 +43,20 @@ A *zehir iletisi* uygulama Teslim girişimleri üst sınırını aştı iletisid
 > [!NOTE]
 >  Yeniden deneme yok başarıyla teslim bir ileti için yapılır.  
   
- Bir ileti okundu denemesi sayısı izlemek için [!INCLUDE[wv](../../../../includes/wv-md.md)] ileti sayısını sayar taşıma count özelliğini iptalleri ve sayar dayanıklı ileti özelliği uygulama sıranın arasında taşır korur ve Alt sıralar. [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] Kanal alma yeniden deneme sayısı ve yeniden deneme döngüsü sayısı işlem için bunları kullanır. Üzerinde [!INCLUDE[ws2003](../../../../includes/ws2003-md.md)] ve [!INCLUDE[wxp](../../../../includes/wxp-md.md)], durdurma sayısı bellek tarafından korunur [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] kanal ve uygulama başarısız olursa sıfırlanır. Ayrıca, [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] kanal durdurma sayar belleği en fazla 256 iletiler için herhangi bir zamanda tutun. 257th ileti salt okunur ise, en eski ileti durdurma sayısı sıfırlanır.  
+ Bir ileti okundu denemesi sayısı izlemek için [!INCLUDE[wv](../../../../includes/wv-md.md)] ileti sayısını sayar taşıma count özelliğini iptalleri ve sayar dayanıklı ileti özelliği uygulama sıranın arasında taşır korur ve Alt sıralar. WCF kanalı bu işlem alma yeniden deneme sayısı ve yeniden deneme döngüsü sayısı için kullanır. Üzerinde [!INCLUDE[ws2003](../../../../includes/ws2003-md.md)] ve [!INCLUDE[wxp](../../../../includes/wxp-md.md)], durdurma sayısı bellekte WCF kanalı tarafından korunur ve uygulama başarısız olursa sıfırlanır. Ayrıca, WCF kanalı durdurma belleği en fazla 256 iletiler için herhangi bir zamanda sayar basılı tutabilirsiniz. 257th ileti salt okunur ise, en eski ileti durdurma sayısı sıfırlanır.  
   
  Durdurma sayısı ve count özelliklerini, hizmet işlemi işlemi bağlam aracılığıyla kullanılabilir taşıyın. Aşağıdaki kod örneğinde, bunlara erişmek gösterilmiştir.  
   
  [!code-csharp[S_UE_MSMQ_Poison#1](../../../../samples/snippets/csharp/VS_Snippets_CFX/s_ue_msmq_poison/cs/service.cs#1)]  
   
- [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] iki standart sıraya alınan bağlamaları sağlar:  
+ WCF iki standart sıraya alınan bağlamaları sağlar:  
   
--   <xref:System.ServiceModel.NetMsmqBinding>. A [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] bağlama sırası tabanlı iletişim diğer gerçekleştirmek için uygun [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] uç noktaları.  
+-   <xref:System.ServiceModel.NetMsmqBinding>. A [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] diğer WCF uç noktaları ile iletişim sıra tabanlı gerçekleştirmek için uygun bağlama.  
   
 -   <xref:System.ServiceModel.MsmqIntegration.MsmqIntegrationBinding>. Var olan Message Queuing uygulamaları ile iletişim kurmak için uygun bir bağlama.  
   
 > [!NOTE]
->  Gereksinimlerine göre bu bağlamaların özelliklerinde değiştirebilir, [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] hizmeti. İşleme mekanizması tüm zehirli ileti alıcı uygulamaya yereldir. Alma işlemini yapan uygulamanın sonuçta durdurur ve gönderene olumsuz bildirim gönderir sürece gönderen uygulama görünmeyen bir işlemdir. Bu durumda, iletiyi gönderenin sahipsiz sıraya taşınır.  
+>  WCF hizmet gereksinimlerine bağlı olarak bu bağlamaların özelliklerini değiştirebilirsiniz. İşleme mekanizması tüm zehirli ileti alıcı uygulamaya yereldir. Alma işlemini yapan uygulamanın sonuçta durdurur ve gönderene olumsuz bildirim gönderir sürece gönderen uygulama görünmeyen bir işlemdir. Bu durumda, iletiyi gönderenin sahipsiz sıraya taşınır.  
   
 ## <a name="best-practice-handling-msmqpoisonmessageexception"></a>En iyi yöntem: MsmqPoisonMessageException işleme  
  Hizmet bir ileti zararlı olduğunu belirlediğinde, sıraya alınan aktarım oluşturur bir <xref:System.ServiceModel.MsmqPoisonMessageException> içeren `LookupId` zehirli ileti.  
@@ -116,7 +102,7 @@ A *zehir iletisi* uygulama Teslim girişimleri üst sınırını aştı iletisid
   
 -   Message Queuing [!INCLUDE[wv](../../../../includes/wv-md.md)] destekler negatif bildirim, sırada [!INCLUDE[ws2003](../../../../includes/ws2003-md.md)] ve [!INCLUDE[wxp](../../../../includes/wxp-md.md)] desteklemez. Olumsuz bildirim alma sıra Yöneticisi'nden sahipsiz sıraya reddedilen ileti yerleştirmek gönderme sıra Yöneticisi neden olur. Bu nedenle, `ReceiveErrorHandling.Reject` ile izin verilmiyor [!INCLUDE[ws2003](../../../../includes/ws2003-md.md)] ve [!INCLUDE[wxp](../../../../includes/wxp-md.md)].  
   
--   Message Queuing [!INCLUDE[wv](../../../../includes/wv-md.md)] ileti teslimi kaç kez sayısını tutar bir ileti özelliği denemesi destekler. Bu iptal sayısı özelliği kullanılabilir değil [!INCLUDE[ws2003](../../../../includes/ws2003-md.md)] ve [!INCLUDE[wxp](../../../../includes/wxp-md.md)]. [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] aynı iletiyi birden fazla tarafından okunduğunda bu özelliği doğru bir değer içeremez mümkün olacak şekilde durdurma sayısı bellekte saklar [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] grubunda hizmet.  
+-   Message Queuing [!INCLUDE[wv](../../../../includes/wv-md.md)] ileti teslimi kaç kez sayısını tutar bir ileti özelliği denemesi destekler. Bu iptal sayısı özelliği kullanılabilir değil [!INCLUDE[ws2003](../../../../includes/ws2003-md.md)] ve [!INCLUDE[wxp](../../../../includes/wxp-md.md)]. Aynı iletiyi birden fazla WCF hizmeti bir grupta tarafından okunduğunda bu özelliği doğru bir değer içeremez mümkün olması için WCF durdurma sayısı bellekte saklar.  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
  [Kuyruklara Genel Bakış](../../../../docs/framework/wcf/feature-details/queues-overview.md)  

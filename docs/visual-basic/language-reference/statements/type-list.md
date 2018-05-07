@@ -1,9 +1,6 @@
 ---
-title: "Tür Listesi (Visual Basic)"
+title: Tür Listesi (Visual Basic)
 ms.date: 07/20/2015
-ms.prod: .net
-ms.technology: devlang-visual-basic
-ms.topic: article
 f1_keywords:
 - StructureConstraint
 - vb.StructureConstraint
@@ -27,14 +24,11 @@ helpviewer_keywords:
 - type parameters
 - constraints, Class keyword
 ms.assetid: 56db947a-2ae8-40f2-a70a-960764e9d0db
-caps.latest.revision: "33"
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: 35e72414b236615dc230b654ccfeed290841fb31
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 5fbb07154fce27feb257b431c1726446b42fbfe0
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="type-list-visual-basic"></a>Tür Listesi (Visual Basic)
 Belirtir *tür parametrelerindeki* için bir *genel* programlama öğesidir. Birden çok parametre virgülle ayrılır. Aşağıdaki bir tür parametresi sözdizimi aşağıdaki gibidir.  
@@ -99,13 +93,13 @@ Belirtir *tür parametrelerindeki* için bir *genel* programlama öğesidir. Bir
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
  [,](../../../visual-basic/language-reference/statements/of-clause.md)  
- [New işleci](../../../visual-basic/language-reference/operators/new-operator.md)  
+ [New İşleci](../../../visual-basic/language-reference/operators/new-operator.md)  
  [Visual Basic'de erişim düzeyleri](../../../visual-basic/programming-guide/language-features/declared-elements/access-levels.md)  
- [Nesne veri türü](../../../visual-basic/language-reference/data-types/object-data-type.md)  
- [Function deyimi](../../../visual-basic/language-reference/statements/function-statement.md)  
- [Structure deyimi](../../../visual-basic/language-reference/statements/structure-statement.md)  
- [Sub deyimi](../../../visual-basic/language-reference/statements/sub-statement.md)  
- [Nasıl yapılır: genel bir sınıf kullanma](../../../visual-basic/programming-guide/language-features/data-types/how-to-use-a-generic-class.md)  
- [Kovaryans ve kontravaryans](../../programming-guide/concepts/covariance-contravariance/index.md)  
+ [Object Veri Türü](../../../visual-basic/language-reference/data-types/object-data-type.md)  
+ [Function Deyimi](../../../visual-basic/language-reference/statements/function-statement.md)  
+ [Structure Deyimi](../../../visual-basic/language-reference/statements/structure-statement.md)  
+ [Sub Deyimi](../../../visual-basic/language-reference/statements/sub-statement.md)  
+ [Nasıl yapılır: Genel Bir Sınıf Kullanma](../../../visual-basic/programming-guide/language-features/data-types/how-to-use-a-generic-class.md)  
+ [Kovaryans ve Kontravaryans](../../programming-guide/concepts/covariance-contravariance/index.md)  
  [İçinde](../../../visual-basic/language-reference/modifiers/in-generic-modifier.md)  
  [Çıkışı](../../../visual-basic/language-reference/modifiers/out-generic-modifier.md)

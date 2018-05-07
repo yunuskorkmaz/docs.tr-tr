@@ -1,34 +1,20 @@
 ---
-title: "Nasıl yapılır: Windows Communication Foundation Hizmet Sözleşmesini Uygulama"
-ms.custom: 
+title: 'Nasıl yapılır: Windows Communication Foundation Hizmet Sözleşmesini Uygulama'
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
 helpviewer_keywords:
 - service contracts [WCF], implementing
 ms.assetid: d5ab51ba-61ae-403e-b3c8-e2669e326806
-caps.latest.revision: 
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 4bf590b2f508cc6661b5acb045a7d66b38ed169c
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: d8d1712e6fcc844a3606403efc3c2648ddcc9c65
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-implement-a-windows-communication-foundation-service-contract"></a>Nasıl yapılır: Windows Communication Foundation Hizmet Sözleşmesini Uygulama
-Bu temel bir oluşturmak için gereken altı görevlerin ikincisinin [!INCLUDE[indigo1](../../../includes/indigo1-md.md)] hizmet ve hizmet çağırabilirsiniz bir istemci. Tüm altı görevler genel bakış için bkz: [başlangıç Öğreticisi](../../../docs/framework/wcf/getting-started-tutorial.md) konu.  
+Temel bir Windows Communication Foundation (WCF) hizmet ve hizmet çağırabilirsiniz bir istemci oluşturmak için gereken altı görevlerin saniyedir. Tüm altı görevler genel bakış için bkz: [başlangıç Öğreticisi](../../../docs/framework/wcf/getting-started-tutorial.md) konu.  
   
  WCF uygulaması oluşturma sonraki adım, hizmet arabirimi uygulamaktır. Bu adlı bir sınıf oluşturursunuz `CalculatorService` kullanıcı tanımlı uygulayan `ICalculator` arabirimi...  
   

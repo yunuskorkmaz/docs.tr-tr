@@ -1,31 +1,17 @@
 ---
-title: "WebBrowser Denetimine Genel Bakış"
-ms.custom: 
+title: WebBrowser Denetimine Genel Bakış
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-winforms
-ms.tgt_pltfrm: 
-ms.topic: article
 f1_keywords:
 - WebBrowser
 helpviewer_keywords:
 - WebBrowser control [Windows Forms], about
 - Web pages [Windows Forms], displaying in applications
 ms.assetid: 6e3e1cc2-9c48-4136-9659-e99e4e60b7e9
-caps.latest.revision: 
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: d2c1ed93769cc91d9622a86ea2d894cea57f5bcd
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 2e69b71b3e354101d950d6f7011b13fc7c0de030
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="webbrowser-control-overview"></a>WebBrowser Denetimine Genel Bakış
 <xref:System.Windows.Forms.WebBrowser> Denetimi WebBrowser ActiveX denetimi için yönetilen sarmalayıcı sağlar. Yönetilen sarmalayıcı Windows Forms istemci uygulamalarınızda Web sayfaları görüntülemenizi sağlar. Kullanabileceğiniz <xref:System.Windows.Forms.WebBrowser> Internet Explorer Web uygulamanızı veya gözatma işlevselliği çoğaltmak için denetim varsayılan Internet Explorer işlevselliği devre dışı bırakabilir ve basit bir HTML belge görüntüleyici olarak denetimi kullanın. DHTML tabanlı kullanıcı arabirimi öğeleri formunuza eklemek ve içinde barındırılan olgu gizlemek için denetimi de kullanabilirsiniz <xref:System.Windows.Forms.WebBrowser> denetim. Bu yaklaşım, tek bir uygulamada Windows Forms denetimleri ile Web denetimleri sorunsuzca birleştirin olanak tanır.  
@@ -39,19 +25,19 @@ ms.lasthandoff: 12/22/2017
   
 |Ad|Açıklama|  
 |----------|-----------------|  
-|<xref:System.Windows.Forms.WebBrowser.Document%2A>özelliği|Geçerli Web sayfasının HTML belge nesne modeli (DOM) yönetilen erişim sağlayan bir nesne alır.|  
-|<xref:System.Windows.Forms.WebBrowser.DocumentCompleted>Olay|Bir Web sayfası yüklenmesi tamamlandığında oluşur.|  
-|<xref:System.Windows.Forms.WebBrowser.DocumentText%2A>özelliği|Alır veya HTML geçerli Web sayfasının içeriği ayarlar.|  
-|<xref:System.Windows.Forms.WebBrowser.DocumentTitle%2A>özelliği|Geçerli Web sayfasının başlığını alır.|  
-|<xref:System.Windows.Forms.WebBrowser.GoBack%2A>yöntemi|Geçmiş önceki sayfasına götürür.|  
-|<xref:System.Windows.Forms.WebBrowser.GoForward%2A>yöntemi|Geçmiş sonraki sayfaya gider.|  
-|<xref:System.Windows.Forms.WebBrowser.Navigate%2A>yöntemi|Belirtilen URL'ye gider.|  
-|<xref:System.Windows.Forms.WebBrowser.Navigating>Olay|İptal edilecek eylem etkinleştirme Gezinti başlangıcından önceye denk geliyor.|  
-|<xref:System.Windows.Forms.WebBrowser.ObjectForScripting%2A>özelliği|Nesneyi alır veya Web sayfası betiği yazma kodu, uygulamayla iletişim kurmak için kullanabileceğiniz bir ayarlar.|  
-|<xref:System.Windows.Forms.WebBrowser.Print%2A>yöntemi|Geçerli Web sayfasını yazdırır.|  
-|<xref:System.Windows.Forms.WebBrowser.Refresh%2A>yöntemi|Geçerli Web sayfasını yeniden yükler.|  
-|<xref:System.Windows.Forms.WebBrowser.Stop%2A>yöntemi|Geçerli Gezinti durdurur ve dinamik sayfası öğeleri ses ve animasyon gibi durur.|  
-|<xref:System.Windows.Forms.WebBrowser.Url%2A>özelliği|Alır veya geçerli Web sayfasının URL'sini ayarlar. Bu özelliği ayarlamak yeni URL denetime gider.|  
+|<xref:System.Windows.Forms.WebBrowser.Document%2A> Özelliği|Geçerli Web sayfasının HTML belge nesne modeli (DOM) yönetilen erişim sağlayan bir nesne alır.|  
+|<xref:System.Windows.Forms.WebBrowser.DocumentCompleted> Olay|Bir Web sayfası yüklenmesi tamamlandığında oluşur.|  
+|<xref:System.Windows.Forms.WebBrowser.DocumentText%2A> Özelliği|Alır veya HTML geçerli Web sayfasının içeriği ayarlar.|  
+|<xref:System.Windows.Forms.WebBrowser.DocumentTitle%2A> Özelliği|Geçerli Web sayfasının başlığını alır.|  
+|<xref:System.Windows.Forms.WebBrowser.GoBack%2A> Yöntemi|Geçmiş önceki sayfasına götürür.|  
+|<xref:System.Windows.Forms.WebBrowser.GoForward%2A> Yöntemi|Geçmiş sonraki sayfaya gider.|  
+|<xref:System.Windows.Forms.WebBrowser.Navigate%2A> Yöntemi|Belirtilen URL'ye gider.|  
+|<xref:System.Windows.Forms.WebBrowser.Navigating> Olay|İptal edilecek eylem etkinleştirme Gezinti başlangıcından önceye denk geliyor.|  
+|<xref:System.Windows.Forms.WebBrowser.ObjectForScripting%2A> Özelliği|Nesneyi alır veya Web sayfası betiği yazma kodu, uygulamayla iletişim kurmak için kullanabileceğiniz bir ayarlar.|  
+|<xref:System.Windows.Forms.WebBrowser.Print%2A> Yöntemi|Geçerli Web sayfasını yazdırır.|  
+|<xref:System.Windows.Forms.WebBrowser.Refresh%2A> Yöntemi|Geçerli Web sayfasını yeniden yükler.|  
+|<xref:System.Windows.Forms.WebBrowser.Stop%2A> Yöntemi|Geçerli Gezinti durdurur ve dinamik sayfası öğeleri ses ve animasyon gibi durur.|  
+|<xref:System.Windows.Forms.WebBrowser.Url%2A> Özelliği|Alır veya geçerli Web sayfasının URL'sini ayarlar. Bu özelliği ayarlamak yeni URL denetime gider.|  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
  <xref:System.Windows.Forms.WebBrowser>  

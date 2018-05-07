@@ -1,26 +1,12 @@
 ---
 title: Net.TCP Bağlantı Noktası Paylaşımı Örneği
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 ms.assetid: 03da5959-0574-4e91-8a53-05854b6c55dc
-caps.latest.revision: 18
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 0db4148f9be6db97dec2b8b680dad56171106b2c
-ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
+ms.openlocfilehash: cfd87868a5ecc557ccca1003f54f3a896b2f9fcc
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/27/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="nettcp-port-sharing-sample"></a>Net.TCP Bağlantı Noktası Paylaşımı Örneği
 TCP/IP protokolü, aynı makinede çalışan birden çok ağ uygulamalarına bağlantıları ayırt etmek için bir bağlantı noktası adı verilen bir 16 bit numara kullanır. Uygulamaya bir bağlantı noktasında dinleme, tüm TCP trafiği, bağlantı noktası için bu uygulamaya gider. Diğer uygulamalar aynı zamanda bu bağlantı noktasında dinleme yapamaz.  
@@ -30,13 +16,13 @@ TCP/IP protokolü, aynı makinede çalışan birden çok ağ uygulamalarına ba�
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  Bu dizin mevcut değilse, Git [Windows Communication Foundation (WCF) ve .NET Framework 4 için Windows Workflow Foundation (WF) örnek](http://go.microsoft.com/fwlink/?LinkId=150780) tüm indirmek için [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] ve [!INCLUDE[wf1](../../../../includes/wf1-md.md)] örnekleri. Bu örnek aşağıdaki dizinde bulunur.  
+>  Bu dizin mevcut değilse, Git [Windows Communication Foundation (WCF) ve .NET Framework 4 için Windows Workflow Foundation (WF) örnek](http://go.microsoft.com/fwlink/?LinkId=150780) tüm Windows Communication Foundation (WCF) indirmek için ve [!INCLUDE[wf1](../../../../includes/wf1-md.md)] örnekleri. Bu örnek aşağıdaki dizinde bulunur.  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Binding\Net\TCP\PortSharing`  
   
  Birçok iletişim kuralı kullandıkları bir standart ya da varsayılan bağlantı noktası numarası yok. Örneğin, HTTP protokolünü genellikle 80 numaralı TCP bağlantı noktasını kullanır. Internet Information Services (IIS) birden çok HTTP uygulamalar arasında bir bağlantı noktası paylaşmak için bir dinleyici sahiptir. IIS doğrudan bağlantı noktasını dinler ve ileti akışı içindeki bilgileri temel alarak uygun uygulama iletileri iletir. Bu ileti almak için bağlantı noktası ayırmak için rekabet gerek kalmadan aynı bağlantı noktası numarasını kullanmak üzere birden çok HTTP uygulamaları sağlar.  
   
- NetTcp bağlantı noktası paylaşımı bir [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)]benzer şekilde tek bir bağlantı noktası paylaşmak birden çok ağ uygulamaları sağlayan özelliği. NetTcp bağlantı noktası Paylaşımı hizmeti net.tcp protokolünü kullanarak bağlantıları kabul eder ve bunların hedef adresine göre iletileri iletir.  
+ NetTcp bağlantı noktası paylaşımı benzer şekilde tek bir bağlantı noktasını paylaşmak için birden çok ağ uygulamalarına izin veren bir Windows Communication Foundation (WCF) özelliğidir. NetTcp bağlantı noktası Paylaşımı hizmeti net.tcp protokolünü kullanarak bağlantıları kabul eder ve bunların hedef adresine göre iletileri iletir.  
   
  NetTcp bağlantı noktası Paylaşımı hizmeti varsayılan olarak etkin değildir. Bu örneği çalıştırmadan önce hizmetini el ile etkinleştirmeniz gerekir. Daha fazla bilgi için bkz: [nasıl yapılır: Net.TCP bağlantı noktası Paylaşımı hizmeti etkinleştirmek](../../../../docs/framework/wcf/feature-details/how-to-enable-the-net-tcp-port-sharing-service.md). Hizmet devre dışıysa sunucu uygulaması başlatıldığında bir özel durum oluşturulur.  
   

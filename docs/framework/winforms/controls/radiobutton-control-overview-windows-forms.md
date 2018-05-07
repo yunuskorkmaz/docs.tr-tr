@@ -1,14 +1,6 @@
 ---
-title: "RadioButton Denetimine Genel Bakış (Windows Forms)"
-ms.custom: 
+title: RadioButton Denetimine Genel Bakış (Windows Forms)
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-winforms
-ms.tgt_pltfrm: 
-ms.topic: article
 f1_keywords:
 - RadioButton
 helpviewer_keywords:
@@ -17,17 +9,11 @@ helpviewer_keywords:
 - radio buttons [Windows Forms], determining state
 - radio buttons [Windows Forms], about radio buttons
 ms.assetid: cd11f0c2-d098-4022-adf9-1455bc166a13
-caps.latest.revision: 
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 67befd973dec38628f97a0d3153c399d48c18305
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 397808c055fd5ba5e8a73d47dfc7fee6c0cf2975
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="radiobutton-control-overview-windows-forms"></a>RadioButton Denetimine Genel Bakış (Windows Forms)
 Windows Forms <xref:System.Windows.Forms.RadioButton> denetimleri iki veya daha fazla dışlayan bir dizi kullanıcıya sunar. Radyo düğmeleri ve onay kutuları benzer şekilde çalışması için görünebilir, ancak önemli bir fark yoktur: kullanıcı radyo düğmesini seçtiğinde aynı gruptaki diğer radyo düğmeleri de seçilemez. Buna karşılık, herhangi bir sayıda onay kutularını seçilebilir. Radyo düğmesi grubunda tanımlama kullanıcı söyler, ", yalnızca tek seçim yapabileceğiniz bir seçenek kümesi İşte."  

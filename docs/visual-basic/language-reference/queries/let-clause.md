@@ -1,12 +1,6 @@
 ---
-title: "Let Tümcesi (Visual Basic)"
+title: Let Tümcesi (Visual Basic)
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- devlang-visual-basic
-ms.topic: article
 f1_keywords:
 - vb.QueryLet
 helpviewer_keywords:
@@ -14,14 +8,11 @@ helpviewer_keywords:
 - Let clause [Visual Basic]
 - Let statement [Visual Basic]
 ms.assetid: 981aa516-16eb-4c53-b1f1-5aa3e82f316e
-caps.latest.revision: 
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: 70e47517a62f58dcababd31c26277417b62eab66
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 6484da5329c8240735b7c35f506637dd01cbeda4
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="let-clause-visual-basic"></a>Let Tümcesi (Visual Basic)
 Bir değeri hesaplar ve sorgu içinde yeni bir değişkene atar.  
@@ -51,7 +42,7 @@ Let variable = expression [, ...]
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
  [Visual Basic'de LINQ'e giriş](../../../visual-basic/programming-guide/language-features/linq/introduction-to-linq.md)  
- [Sorguları](../../../visual-basic/language-reference/queries/queries.md)  
- [Select tümcesi](../../../visual-basic/language-reference/queries/select-clause.md)  
- [From yan tümcesi](../../../visual-basic/language-reference/queries/from-clause.md)  
- [Burada yan tümcesi](../../../visual-basic/language-reference/queries/where-clause.md)
+ [Sorgular](../../../visual-basic/language-reference/queries/queries.md)  
+ [Select Yan Tümcesi](../../../visual-basic/language-reference/queries/select-clause.md)  
+ [From Yan Tümcesi](../../../visual-basic/language-reference/queries/from-clause.md)  
+ [Where Yan Tümcesi](../../../visual-basic/language-reference/queries/where-clause.md)

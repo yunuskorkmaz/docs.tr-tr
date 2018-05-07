@@ -1,13 +1,6 @@
 ---
-title: "Kullanıcı Çizimli Denetimler"
-ms.custom: 
+title: Kullanıcı Çizimli Denetimler
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-winforms
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -16,25 +9,20 @@ helpviewer_keywords:
 - OnPaint method [Windows Forms]
 - user-drawn controls [Windows Forms]
 ms.assetid: 034af4b5-457f-4160-a937-22891817faa8
-caps.latest.revision: "14"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: e9e486058850616c2304ce0032c35baa855fdf2f
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 26b4f062c120bf543a5e597fc8c734e8cc336bd8
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="user-drawn-controls"></a>Kullanıcı Çizimli Denetimler
 .NET Framework kolayca kendi denetimleri geliştirme olanağı sağlar. Standart denetimler birbirine bağlı kod kümesidir, bir kullanıcı denetimi oluşturabilirsiniz veya yukarı sıfırdan denetiminizi tasarlayabilirsiniz. Devralma bile varolan denetimden devralan bir denetim oluşturmak ve devralınan işlevselliğini eklemek için de kullanabilirsiniz. Hangi yaklaşımın kullanın, .NET Framework oluşturduğunuz herhangi bir denetim için özel bir grafik arabirim çizmek için işlevsellik sağlar.  
   
  Bir denetimin boyama denetimin kodda yürütülmesi tarafından gerçekleştirilir <xref:System.Windows.Forms.Control.OnPaint%2A> yöntemi. Tek bağımsız değişkeni <xref:System.Windows.Forms.Control.OnPaint%2A> yöntemi bir <xref:System.Windows.Forms.PaintEventArgs> tüm bilgi ve denetim işlemek için gerekli işlevselliği sağlayan nesne. <xref:System.Windows.Forms.PaintEventArgs> Denetiminizi işlemede kullanılan iki asıl nesneler özellikleri sağlar:  
   
--   <xref:System.Windows.Forms.PaintEventArgs.ClipRectangle%2A>Nesne - dikdörtgenin çizileceğini denetim bölümünü temsil eder. Bu tüm olabilir denetim ya da Denetim nasıl çizilir bağlı olarak denetim parçası.  
+-   <xref:System.Windows.Forms.PaintEventArgs.ClipRectangle%2A> Nesne - dikdörtgenin çizileceğini denetim bölümünü temsil eder. Bu tüm olabilir denetim ya da Denetim nasıl çizilir bağlı olarak denetim parçası.  
   
--   <xref:System.Drawing.Graphics>Object - çeşitli grafik odaklı nesneleri ve denetiminizin çizmek gerekli işlevselliği sağlamak yöntemleri yalıtır.  
+-   <xref:System.Drawing.Graphics> Object - çeşitli grafik odaklı nesneleri ve denetiminizin çizmek gerekli işlevselliği sağlamak yöntemleri yalıtır.  
   
  Daha fazla bilgi için <xref:System.Drawing.Graphics> nesne ve kullanmak için bkz: nasıl [nasıl yapılır: çizim için grafik nesneleri oluşturma](../../../../docs/framework/winforms/advanced/how-to-create-graphics-objects-for-drawing.md).  
   

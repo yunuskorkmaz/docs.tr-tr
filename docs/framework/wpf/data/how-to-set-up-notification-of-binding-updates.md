@@ -1,34 +1,22 @@
 ---
-title: "Nasıl yapılır: Bağlama Güncelleştirmeleri Bildirimini Ayarlama"
-ms.custom: 
+title: 'Nasıl yapılır: Bağlama Güncelleştirmeleri Bildirimini Ayarlama'
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-wpf
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - notifications [WPF], binding updates
 - data binding [WPF], notification of binding updates
 - binding [WPF], updates [WPF], notifications of
 ms.assetid: 5673073e-dbe1-49da-980a-484a88f9595a
-caps.latest.revision: "15"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: a07337e99e985bfbc0a5dbc5f2d231ee36cf1422
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 896ce103361590dceecccf8534fd330aabe18086
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-set-up-notification-of-binding-updates"></a>Nasıl yapılır: Bağlama Güncelleştirmeleri Bildirimini Ayarlama
 Bu örnek, bağlama hedefinin (hedef) veya bir bağlama bağlama source (kaynak) özelliğini güncelleştirildiğinde bildirim almak için nasıl ayarlanacağını gösterir.  
   
 ## <a name="example"></a>Örnek  
- [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]Veri güncelleştirme her zaman bağlama kaynak veya hedef güncelleştirildi olayını oluşturur. Bu olay bildirmek için dahili olarak kullanılan [!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)] ilişkili veri değiştiğinden, bu, güncelleştirmeniz gerekir. Bu olayların çalışmak ve ayrıca düzgün çalışması için tek veya çift yönlü bağlama, sınıf kullanarak verilerinizi uygulamak gerektiğini unutmayın <xref:System.ComponentModel.INotifyPropertyChanged> arabirimi. Daha fazla bilgi için bkz: [uygulama özellik değişikliği bildirimi](../../../../docs/framework/wpf/data/how-to-implement-property-change-notification.md).  
+ [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] Veri güncelleştirme her zaman bağlama kaynak veya hedef güncelleştirildi olayını oluşturur. Bu olay bildirmek için dahili olarak kullanılan [!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)] ilişkili veri değiştiğinden, bu, güncelleştirmeniz gerekir. Bu olayların çalışmak ve ayrıca düzgün çalışması için tek veya çift yönlü bağlama, sınıf kullanarak verilerinizi uygulamak gerektiğini unutmayın <xref:System.ComponentModel.INotifyPropertyChanged> arabirimi. Daha fazla bilgi için bkz: [uygulama özellik değişikliği bildirimi](../../../../docs/framework/wpf/data/how-to-implement-property-change-notification.md).  
   
  Ayarlama <xref:System.Windows.Data.Binding.NotifyOnTargetUpdated%2A> veya <xref:System.Windows.Data.Binding.NotifyOnSourceUpdated%2A> özelliği (veya her ikisi de) `true` bağlamada. Bağlamda herhangi bir şey değiştiğini unutmayın istiyorsanız, bu olay için dinleme sağlamak işleyicisine doğrudan değişikliklerden haberdar olmak istediğiniz öğe veya genel veri bağlamı bağlı olması gerekir.  
   

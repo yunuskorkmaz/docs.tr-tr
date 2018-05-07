@@ -1,37 +1,23 @@
 ---
 title: Windows Süreç Etkinleştirme Hizmetini Windows Communication Foundation ile Kullanmak için Yapılandırma
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 ms.assetid: 1d50712e-53cd-4773-b8bc-a1e1aad66b78
-caps.latest.revision: 12
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 727ad032482829350b5cf88175c34d8ccc7b98b9
-ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
+ms.openlocfilehash: 3a4d771c3f2d5e7e6ec4fd6a1e229548e063a6d1
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/28/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="configuring-the-windows-process-activation-service-for-use-with-windows-communication-foundation"></a>Windows Süreç Etkinleştirme Hizmetini Windows Communication Foundation ile Kullanmak için Yapılandırma
-Bu konuda, Windows İşlem Etkinleştirme Hizmeti (WAS olarak da bilinir) için gerekli adımlar açıklanmaktadır [!INCLUDE[wv](../../../../includes/wv-md.md)] ana bilgisayara [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] ağ protokolleri HTTP üzerinden iletişim kurmazlar Hizmetleri. Aşağıdaki bölümlerde bu yapılandırma için adımlar verilmiştir:  
+Bu konuda, Windows İşlem Etkinleştirme Hizmeti (WAS olarak da bilinir) için gerekli adımlar açıklanmaktadır [!INCLUDE[wv](../../../../includes/wv-md.md)] Windows Communication Foundation (WCF) barındırmak için HTTP üzerinden iletişim kurmazlar Hizmetleri protokolleri ağ. Aşağıdaki bölümlerde bu yapılandırma için adımlar verilmiştir:  
   
--   Yükleme (veya yüklemesini onaylamak) [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] etkinleştirme bileşenleri gereklidir.  
+-   Yükleme (veya yüklemesini onaylamak) gerekli WCF etkinleştirme bileşenlerini.  
   
 -   Kullanmak istediğiniz ağ protokolü bağlamaları ile WAS site oluşturun veya varolan bir site için yeni bir protokol bağlama ekleyin.  
   
 -   Hizmetlerinizin barındırmak ve gerekli ağ protokolleri kullanmak bu uygulamayı etkinleştirmek için bir uygulama oluşturun.  
   
--   Derleme bir [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] hizmeti bir HTTP olmayan uç noktasını kullanıma sunar.  
+-   Bir HTTP olmayan uç noktasını kullanıma sunar bir WCF Hizmeti oluşturun.  
   
 ## <a name="configuring-a-site-with-non-http-bindings"></a>Bir Site ile HTTP olmayan bağlamaları yapılandırma  
  Bir HTTP olmayan bağlama WAS ile kullanmak için site bağlaması için WAS yapılandırma eklenmesi gerekir. WAS yapılandırma deposu %windir%\system32\inetsrv\config dizininde bulunan applicationHost.config dosyasıdır. Bu yapılandırma deposu WAS ve IIS 7.0 tarafından paylaşılır.  
@@ -107,7 +93,7 @@ appcmd.exe set app "Default Web Site/appOne" /enabledProtocols:net.tcp
 ## <a name="building-a-wcf-service-that-uses-was-for-non-http-activation"></a>Bir WCF Hizmeti o kullanır, HTTP olmayan etkinleştirme için oluşturma  
  Yükleme ve WAS yapılandırma adımlarını gerçekleştirdikten sonra (bkz [nasıl yapılır: yükleme ve yapılandırma WCF etkinleştirme bileşenlerini](../../../../docs/framework/wcf/feature-details/how-to-install-and-configure-wcf-activation-components.md)), bir hizmetin WAS etkinleştirme IIS'de barındırılan bir hizmet yapılandırmaya benzer için yapılandırma.  
   
- WAS etkinleştirilmiş oluşturma hakkında ayrıntılı yönergeler için [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] hizmet için bkz: [nasıl yapılır: bir WCF Hizmeti barındırma](../../../../docs/framework/wcf/feature-details/how-to-host-a-wcf-service-in-was.md).  
+ WAS etkinleştirilmiş WCF hizmeti oluşturma hakkında ayrıntılı yönergeler için bkz: [nasıl yapılır: bir WCF Hizmeti barındırma](../../../../docs/framework/wcf/feature-details/how-to-host-a-wcf-service-in-was.md).  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
  [Windows İşlem Etkinleştirme Hizmetinde Barındırma](../../../../docs/framework/wcf/feature-details/hosting-in-windows-process-activation-service.md)  

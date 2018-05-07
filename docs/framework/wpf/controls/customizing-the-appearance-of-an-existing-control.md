@@ -1,13 +1,6 @@
 ---
-title: "ControlTemplate Oluşturarak Varolan Denetimin Görünümünü Özelleştirme"
-ms.custom: 
+title: ControlTemplate Oluşturarak Varolan Denetimin Görünümünü Özelleştirme
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-wpf
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -19,19 +12,14 @@ helpviewer_keywords:
 - controls [WPF], appearance specified by state
 - templates [WPF], custom for existing controls
 ms.assetid: 678dd116-43a2-4b8c-82b5-6b826f126e31
-caps.latest.revision: "12"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 0019b739c794cbffa62b49749371c2a19f752267
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: bbdc79fabf8dbe344baae66d718d79ac6375db7e
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="customizing-the-appearance-of-an-existing-control-by-creating-a-controltemplate"></a>ControlTemplate Oluşturarak Varolan Denetimin Görünümünü Özelleştirme
-<a name="introduction"></a>A <xref:System.Windows.Controls.ControlTemplate> görsel yapı ve bir denetim görsel davranışını belirtir. Yeni bir BT vererek, denetimin görünümünü özelleştirebilirsiniz <xref:System.Windows.Controls.ControlTemplate>. Oluştururken bir <xref:System.Windows.Controls.ControlTemplate>, işlevselliğini değiştirmeden varolan bir denetim görünümünü değiştirin. Örneğin, düğmeleri uygulamanızda yerine varsayılan kare şekli yuvarlak yapabileceğiniz ancak düğmesi hala oluşturacağı <xref:System.Windows.Controls.Primitives.ButtonBase.Click> olay.  
+<a name="introduction"></a> A <xref:System.Windows.Controls.ControlTemplate> görsel yapı ve bir denetim görsel davranışını belirtir. Yeni bir BT vererek, denetimin görünümünü özelleştirebilirsiniz <xref:System.Windows.Controls.ControlTemplate>. Oluştururken bir <xref:System.Windows.Controls.ControlTemplate>, işlevselliğini değiştirmeden varolan bir denetim görünümünü değiştirin. Örneğin, düğmeleri uygulamanızda yerine varsayılan kare şekli yuvarlak yapabileceğiniz ancak düğmesi hala oluşturacağı <xref:System.Windows.Controls.Primitives.ButtonBase.Click> olay.  
   
  Bu konu çeşitli bölümlerini açıklamaktadır bir <xref:System.Windows.Controls.ControlTemplate>, basit bir oluşturmayı gösterir <xref:System.Windows.Controls.ControlTemplate> için bir <xref:System.Windows.Controls.Button>ve böylece görünümünü özelleştirebilirsiniz denetimi denetim sözleşme anlamak açıklanmaktadır. Oluşturduğunuz çünkü bir <xref:System.Windows.Controls.ControlTemplate> içinde [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)], herhangi bir kod yazmak zorunda kalmadan bir denetimin görünümünü değiştirebilirsiniz. Özel denetim şablonları oluşturmak için Microsoft Expression Blend gibi bir tasarımcı de kullanabilirsiniz. Bu konuda örnekler gösterilmektedir [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] görünümünü özelleştirme bir <xref:System.Windows.Controls.Button> ve tam bir örnek konunun sonunda listeler. Expression Blend kullanma hakkında daha fazla bilgi için bkz: [bir denetime stil şablonlarını destekler](http://go.microsoft.com/fwlink/?LinkId=161153).  
   
@@ -93,7 +81,7 @@ Bir özel denetim şablonu kullanan bir onay kutusu
   
  Bu örnekte, <xref:System.Windows.Controls.Grid> sahip kendi <xref:System.Windows.Controls.Panel.Background%2A?displayProperty=nameWithType> özelliği şablon bağlı <xref:System.Windows.Controls.Control.Background%2A?displayProperty=nameWithType>. Çünkü <xref:System.Windows.Controls.Panel.Background%2A?displayProperty=nameWithType> olan bağlı şablon aynı birden çok düğmeleri oluşturabilirsiniz <xref:System.Windows.Controls.ControlTemplate> ve ayarlayın <xref:System.Windows.Controls.Control.Background%2A?displayProperty=nameWithType> her düğmesine farklı değerlere. Varsa <xref:System.Windows.Controls.Control.Background%2A?displayProperty=nameWithType> şablonunu değil, bir öğenin bir özelliğe bağlı değildi <xref:System.Windows.Controls.ControlTemplate>, ayar <xref:System.Windows.Controls.Control.Background%2A?displayProperty=nameWithType> bir düğmesine düğmenin görünümünü hiçbir etkisi yoktur.  
   
- Not iki özellik adlarını aynı olması gerekmez. Önceki örnekte <xref:System.Windows.Controls.Control.HorizontalContentAlignment%2A?displayProperty=nameWithType> özelliği <xref:System.Windows.Controls.Button> şablonu bağlı <xref:System.Windows.FrameworkElement.HorizontalAlignment%2A?displayProperty=nameWithType> özelliği <xref:System.Windows.Controls.ContentPresenter>. Bu, yatay olarak konumlandırılmış için düğmesini içeriği sağlar. <xref:System.Windows.Controls.ContentPresenter>adlı bir özellik yok `HorizontalContentAlignment`, ancak <xref:System.Windows.Controls.Control.HorizontalContentAlignment%2A?displayProperty=nameWithType> bağlanabilir <xref:System.Windows.FrameworkElement.HorizontalAlignment%2A?displayProperty=nameWithType>. Bir özellik, şablon bağladığınızda, hedef ve kaynak özellikleri aynı türde olduğundan emin olun.  
+ Not iki özellik adlarını aynı olması gerekmez. Önceki örnekte <xref:System.Windows.Controls.Control.HorizontalContentAlignment%2A?displayProperty=nameWithType> özelliği <xref:System.Windows.Controls.Button> şablonu bağlı <xref:System.Windows.FrameworkElement.HorizontalAlignment%2A?displayProperty=nameWithType> özelliği <xref:System.Windows.Controls.ContentPresenter>. Bu, yatay olarak konumlandırılmış için düğmesini içeriği sağlar. <xref:System.Windows.Controls.ContentPresenter> adlı bir özellik yok `HorizontalContentAlignment`, ancak <xref:System.Windows.Controls.Control.HorizontalContentAlignment%2A?displayProperty=nameWithType> bağlanabilir <xref:System.Windows.FrameworkElement.HorizontalAlignment%2A?displayProperty=nameWithType>. Bir özellik, şablon bağladığınızda, hedef ve kaynak özellikleri aynı türde olduğundan emin olun.  
   
  <xref:System.Windows.Controls.Control> Sınıfı tarafından denetim şablonu ayarlanırken denetimi üzerinde bir etkisi yoktur için kullanılması gereken çeşitli özellikleri tanımlar. Nasıl <xref:System.Windows.Controls.ControlTemplate> özelliği bağlıdır özelliği kullanır. <xref:System.Windows.Controls.ControlTemplate> Özelliği aşağıdaki yollardan birini kullanmanız gerekir:  
   
@@ -200,9 +188,9 @@ Bir özel denetim şablonu basılı durumda kullanan bir düğme
   
 |Kısıtlama türü|Gelen değeri|İçin değeri|  
 |-------------------------|-------------------|-----------------|  
-|Belirtilen bir durumdan başka bir belirtilen durumuna|Adı bir<xref:System.Windows.VisualState>|Adı bir<xref:System.Windows.VisualState>|  
-|Belirli bir duruma herhangi durumundan|Ayarlı değil|Adı bir<xref:System.Windows.VisualState>|  
-|Belirtilen bir durumdan herhangi bir durum için|Adı bir<xref:System.Windows.VisualState>|Ayarlı değil|  
+|Belirtilen bir durumdan başka bir belirtilen durumuna|Adı bir <xref:System.Windows.VisualState>|Adı bir <xref:System.Windows.VisualState>|  
+|Belirli bir duruma herhangi durumundan|Ayarlı değil|Adı bir <xref:System.Windows.VisualState>|  
+|Belirtilen bir durumdan herhangi bir durum için|Adı bir <xref:System.Windows.VisualState>|Ayarlı değil|  
 |Başka bir duruma herhangi durumundan|Ayarlı değil|Ayarlı değil|  
   
  Birden çok olabilir <xref:System.Windows.VisualTransition> nesnelerini bir <xref:System.Windows.VisualStateGroup> aynı duruma bakın, ancak önceki tabloda sırayla kullanılacak. Aşağıdaki örnekte, var olan iki <xref:System.Windows.VisualTransition> nesneleri. Denetim zaman geçiş `Pressed` durumunu `MouseOver` durumu, <xref:System.Windows.VisualTransition> her ikisi de sahip <xref:System.Windows.VisualTransition.From%2A> ve <xref:System.Windows.VisualTransition.To%2A> kümesi kullanılır. Ne zaman denetim geçişleri olmayan bir durumdan `Pressed` için `MouseOver` durumunda, başka bir duruma kullanılır.  

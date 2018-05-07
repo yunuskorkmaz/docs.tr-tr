@@ -1,13 +1,7 @@
 ---
-title: "Normal İfade Seçenekleri"
-ms.custom: 
+title: Normal İfade Seçenekleri
 ms.date: 03/30/2017
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
 ms.technology: dotnet-standard
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -18,18 +12,13 @@ helpviewer_keywords:
 - inline option constructs
 - options parameter
 ms.assetid: c82dc689-7e82-4767-a18d-cd24ce5f05e9
-caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-- dotnetcore
-ms.openlocfilehash: cc32a98930c4c1243f53fc9c5d2a10f339b4de11
-ms.sourcegitcommit: 83dd5ec003e788ccb3e33f3412a7af39ae347646
+ms.openlocfilehash: f3c229b0fc463863b7113c7ba73890b84e86553b
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/15/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="regular-expression-options"></a>Normal İfade Seçenekleri
 <a name="Top"></a> Varsayılan olarak, herhangi bir normal ifade deseni değişmez değer karakter ile giriş dizesi karşılaştırması büyük küçük harfe duyarlı olduğundan, normal ifade deseni boşluk değişmez değer boşluk karakterleri ve yakalama gruplarında normal bir ifade olarak yorumlanır açıkça örtük olarak da adlandırılır. Normal ifade seçenekleri belirterek bu ve diğer birkaç varsayılan normal ifade davranışının yönlerini değiştirebilirsiniz. Aşağıdaki tabloda listelenen, bu seçenekleri normal ifade deseni bir parçası olarak dahil edilen satır içi olabilir ya da için sağlanabilir bir <xref:System.Text.RegularExpressions.Regex?displayProperty=nameWithType> sınıfı oluşturucusu veya statik desen eşleştirme yöntemi olarak bir <xref:System.Text.RegularExpressions.RegexOptions?displayProperty=nameWithType> numaralandırma değeri.  
@@ -367,10 +356,10 @@ ms.lasthandoff: 03/15/2018
   
     |Desen|Açıklama|  
     |-------------|-----------------|  
-    |(a+)|Harf "a" bir veya birden çok kez eşleşir. Bu ikinci yakalama grubudur.|  
+    |(bir +)|Harf "a" bir veya birden çok kez eşleşir. Bu ikinci yakalama grubudur.|  
     |(\1)|İlk yakalama grubu tarafından yakalanan alt dize eşleşiyor. Bu, üçüncü yakalama grubudur.|  
     |?|Sıfır veya bir boşluk karakterleri eşleşmesi.|  
-    |((a+)(\1) ?)+|Sıfır veya bir boşluk bırakarak ilk yakalama grubuyla eşleşen bir dize tarafından izlenen bir veya daha fazla "a" karakter desen eşleştirme bir veya birden çok kez karakter. Bu ilk yakalama grubudur.|  
+    |((a+)(\1)?) +|Sıfır veya bir boşluk bırakarak ilk yakalama grubuyla eşleşen bir dize tarafından izlenen bir veya daha fazla "a" karakter desen eşleştirme bir veya birden çok kez karakter. Bu ilk yakalama grubudur.|  
   
 -   Yeniden başvurular sekizli çıkışları arasındaki belirsizlikleri çözünürlüğü. Aşağıdaki tabloda farklar özetlenmektedir kurallı tarafından yeniden başvuru yorumunu ve ECMAScript normal ifadeler karşı sekizli.  
   

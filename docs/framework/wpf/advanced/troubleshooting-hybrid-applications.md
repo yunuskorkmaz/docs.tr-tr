@@ -1,13 +1,6 @@
 ---
-title: "Karma Uygulama Sorunlarını Giderme"
-ms.custom: 
+title: Karma Uygulama Sorunlarını Giderme
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-wpf
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - overlapping controls [WPF]
 - Windows Forms [WPF], interoperability with
@@ -16,29 +9,24 @@ helpviewer_keywords:
 - hybrid applications [WPF interoperability]
 - message loops [WPF]
 ms.assetid: f440c23f-fa5d-4d5a-852f-ba61150e6405
-caps.latest.revision: "26"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 0a23f439b9b14d16a5440fa3b757b972304fdfa3
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.openlocfilehash: 878761c030d4950e53ee24b76f7e29101584143a
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="troubleshooting-hybrid-applications"></a>Karma Uygulama Sorunlarını Giderme
-<a name="introduction"></a>Bu konuda, hem kullanan karma uygulamalar yazarken oluşabilecek bazı yaygın sorunlar listelenmiştir [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] ve [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] teknolojileri.  
+<a name="introduction"></a> Bu konuda, hem kullanan karma uygulamalar yazarken oluşabilecek bazı yaygın sorunlar listelenmiştir [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] ve [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] teknolojileri.  
   
 
   
 <a name="overlapping_controls"></a>   
 ## <a name="overlapping-controls"></a>Çakışma denetimleri  
- Beklediğiniz gibi denetimleri çakışmaması. [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)]Her denetim için ayrı bir HWND kullanır. [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]bir sayfadaki tüm içerik için bir HWND kullanır. Bu uygulama farkı beklenmeyen çakışan davranışlarına neden olur.  
+ Beklediğiniz gibi denetimleri çakışmaması. [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] Her denetim için ayrı bir HWND kullanır. [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] bir sayfadaki tüm içerik için bir HWND kullanır. Bu uygulama farkı beklenmeyen çakışan davranışlarına neden olur.  
   
  A [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] denetiminde barındırılan [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] her zaman üstünde görünür [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] içeriği.  
   
- [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]İçerik barındırılan bir <xref:System.Windows.Forms.Integration.ElementHost> denetimi görünür z-sıralamasını <xref:System.Windows.Forms.Integration.ElementHost> denetim. Üst üste mümkündür <xref:System.Windows.Forms.Integration.ElementHost> denetimleri ancak barındırılan [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] içerik bırakmaz birleştirin veya etkileşim.  
+ [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] İçerik barındırılan bir <xref:System.Windows.Forms.Integration.ElementHost> denetimi görünür z-sıralamasını <xref:System.Windows.Forms.Integration.ElementHost> denetim. Üst üste mümkündür <xref:System.Windows.Forms.Integration.ElementHost> denetimleri ancak barındırılan [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] içerik bırakmaz birleştirin veya etkileşim.  
   
 <a name="child_property"></a>   
 ## <a name="child-property"></a>Alt özelliği  
@@ -46,7 +34,7 @@ ms.lasthandoff: 01/19/2018
   
 <a name="scaling"></a>   
 ## <a name="scaling"></a>ölçeklendirme  
- [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]ve [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] farklı ölçekleme modelleri vardır. Bazı [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] ölçekleme dönüşümleri için anlamlı [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] denetimleri ancak diğerleri değildir. Örneğin, ölçekleme bir [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] denetimini 0 çalışır, ancak aynı denetimi sıfır olmayan bir değer geri ölçeklendirmeye çalışırsanız, denetimin boyutu 0 olarak kalır. Daha fazla bilgi için bkz: [yerleşim konuları WindowsFormsHost Öğesi için](../../../../docs/framework/wpf/advanced/layout-considerations-for-the-windowsformshost-element.md).  
+ [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] ve [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] farklı ölçekleme modelleri vardır. Bazı [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] ölçekleme dönüşümleri için anlamlı [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] denetimleri ancak diğerleri değildir. Örneğin, ölçekleme bir [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] denetimini 0 çalışır, ancak aynı denetimi sıfır olmayan bir değer geri ölçeklendirmeye çalışırsanız, denetimin boyutu 0 olarak kalır. Daha fazla bilgi için bkz: [yerleşim konuları WindowsFormsHost Öğesi için](../../../../docs/framework/wpf/advanced/layout-considerations-for-the-windowsformshost-element.md).  
   
 <a name="adapter"></a>   
 ## <a name="adapter"></a>Bağdaştırıcı  
@@ -95,11 +83,11 @@ ms.lasthandoff: 01/19/2018
   
 <a name="dispose"></a>   
 ## <a name="dispose"></a>Dispose  
- Sınıfları düzgün atma değil, kaynakları sızıntısı. Karma uygulamalarınızı olduğundan emin olun <xref:System.Windows.Forms.Integration.WindowsFormsHost> ve <xref:System.Windows.Forms.Integration.ElementHost> sınıfları atıldı veya kaynakları sızıntısı. [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)]siler <xref:System.Windows.Forms.Integration.ElementHost> ne zaman denetimleri kalıcı olmayan <xref:System.Windows.Forms.Form> üst kapanır. [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]siler <xref:System.Windows.Forms.Integration.WindowsFormsHost> uygulamanız kapandığında. Göstermek olası bir <xref:System.Windows.Forms.Integration.WindowsFormsHost> öğesinde bir <xref:System.Windows.Window> içinde bir [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] ileti döngüsü. Bu durumda, kodunuzu uygulamanızı kapatılıyor uyarı almayabilir.  
+ Sınıfları düzgün atma değil, kaynakları sızıntısı. Karma uygulamalarınızı olduğundan emin olun <xref:System.Windows.Forms.Integration.WindowsFormsHost> ve <xref:System.Windows.Forms.Integration.ElementHost> sınıfları atıldı veya kaynakları sızıntısı. [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] siler <xref:System.Windows.Forms.Integration.ElementHost> ne zaman denetimleri kalıcı olmayan <xref:System.Windows.Forms.Form> üst kapanır. [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] siler <xref:System.Windows.Forms.Integration.WindowsFormsHost> uygulamanız kapandığında. Göstermek olası bir <xref:System.Windows.Forms.Integration.WindowsFormsHost> öğesinde bir <xref:System.Windows.Window> içinde bir [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] ileti döngüsü. Bu durumda, kodunuzu uygulamanızı kapatılıyor uyarı almayabilir.  
   
 <a name="enabling_visual_styles"></a>   
 ## <a name="enabling-visual-styles"></a>Görsel stiller etkinleştirme  
- [!INCLUDE[TLA#tla_winxp](../../../../includes/tlasharptla-winxp-md.md)]görsel stilleri bir [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] denetimi etkinleştirilmemiş olabilir. <xref:System.Windows.Forms.Application.EnableVisualStyles%2A?displayProperty=nameWithType> Yöntemi için şablon olarak adlandırılan bir [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] uygulama. Bu yöntemi kullanırsanız, varsayılan olarak, çağrılmaz rağmen [!INCLUDE[TLA2#tla_visualstu](../../../../includes/tla2sharptla-visualstu-md.md)] bir proje oluşturmak için hatalarla [!INCLUDE[TLA#tla_winxp](../../../../includes/tlasharptla-winxp-md.md)] görsel stilleri denetimleri için sürüm 6.0 Comctl32.dll varsa. Çağırmalısınız <xref:System.Windows.Forms.Application.EnableVisualStyles%2A> yöntemi işleyiciler iş parçacığı üzerinde oluşturulmadan önce. Daha fazla bilgi için bkz: [nasıl yapılır: görsel stiller etkinleştirmek karma uygulamada](../../../../docs/framework/wpf/advanced/how-to-enable-visual-styles-in-a-hybrid-application.md).  
+ [!INCLUDE[TLA#tla_winxp](../../../../includes/tlasharptla-winxp-md.md)] görsel stilleri bir [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] denetimi etkinleştirilmemiş olabilir. <xref:System.Windows.Forms.Application.EnableVisualStyles%2A?displayProperty=nameWithType> Yöntemi için şablon olarak adlandırılan bir [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] uygulama. Bu yöntemi kullanırsanız, varsayılan olarak, çağrılmaz rağmen [!INCLUDE[TLA2#tla_visualstu](../../../../includes/tla2sharptla-visualstu-md.md)] bir proje oluşturmak için hatalarla [!INCLUDE[TLA#tla_winxp](../../../../includes/tlasharptla-winxp-md.md)] görsel stilleri denetimleri için sürüm 6.0 Comctl32.dll varsa. Çağırmalısınız <xref:System.Windows.Forms.Application.EnableVisualStyles%2A> yöntemi işleyiciler iş parçacığı üzerinde oluşturulmadan önce. Daha fazla bilgi için bkz: [nasıl yapılır: görsel stiller etkinleştirmek karma uygulamada](../../../../docs/framework/wpf/advanced/how-to-enable-visual-styles-in-a-hybrid-application.md).  
   
 <a name="licensed_controls"></a>   
 ## <a name="licensed-controls"></a>Lisanslı Denetimler  

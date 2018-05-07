@@ -1,13 +1,6 @@
 ---
-title: "Nasıl yapılır: Çizim için Grafik Nesneleri Oluşturma"
-ms.custom: 
+title: 'Nasıl yapılır: Çizim için Grafik Nesneleri Oluşturma'
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-winforms
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -17,16 +10,11 @@ helpviewer_keywords:
 - images [Windows Forms], creating
 - GDI+, creating images
 ms.assetid: 162861f9-f050-445e-8abb-b2c43a918b8b
-caps.latest.revision: "17"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: d4b626d3d87c6537b74b6d28e086303474ea2c3e
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 3c25ddcfb3a566055afd5e233c2a69b3b7a8c66e
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-create-graphics-objects-for-drawing"></a>Nasıl yapılır: Çizim için Grafik Nesneleri Oluşturma
 Çizgiler ve şekiller çizme önce metin oluşturmak veya görüntülemek ve görüntülerle işlemek [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)], oluşturmak gereken bir <xref:System.Drawing.Graphics> nesnesi. <xref:System.Drawing.Graphics> Nesne gösteren bir [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] çizim yüzeyi ve grafik görüntüleri oluşturmak için kullanılan nesne.  
@@ -44,11 +32,11 @@ ms.lasthandoff: 12/22/2017
   
 -   Bir parçası olarak bir grafik nesnesine başvuru almak <xref:System.Windows.Forms.PaintEventArgs> içinde <xref:System.Windows.Forms.Control.Paint> bir form veya denetim olayı. Bu, genellikle bir denetim için boyama kod oluşturulurken bir grafik nesnesine başvuru nasıl elde olur. Benzer şekilde, bir grafik nesnesinin özelliği olarak edinebilirsiniz <xref:System.Drawing.Printing.PrintPageEventArgs> işlerken <xref:System.Drawing.Printing.PrintDocument.PrintPage> olayı için bir <xref:System.Drawing.Printing.PrintDocument>.  
   
-     veya  
+     -veya-  
   
 -   Çağrı <xref:System.Windows.Forms.Control.CreateGraphics%2A> yöntemi denetim veya formun bir başvuru almak için bir <xref:System.Drawing.Graphics> çizim yüzeyini bu denetim veya formun temsil eden nesne. Bir form veya zaten denetim çizmek istiyorsanız bu yöntemi kullanın.  
   
-     veya  
+     -veya-  
   
 -   Oluşturma bir <xref:System.Drawing.Graphics> nesne öğesinden devralınan herhangi bir nesneden <xref:System.Drawing.Image>. Bu yaklaşım, zaten varolan bir görüntü alter istediğinizde yararlıdır.  
   

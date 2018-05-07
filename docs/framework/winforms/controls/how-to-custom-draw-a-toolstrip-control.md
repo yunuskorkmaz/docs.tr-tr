@@ -1,13 +1,6 @@
 ---
-title: "Nasıl yapılır: Bir ToolStrip Denetimini Özel Olarak Çizme"
-ms.custom: 
+title: 'Nasıl yapılır: Bir ToolStrip Denetimini Özel Olarak Çizme'
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-winforms
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -23,25 +16,20 @@ helpviewer_keywords:
 - custom drawing
 - owner drawing
 ms.assetid: 94e7d7bd-a752-441c-b5b3-7acf98881163
-caps.latest.revision: "11"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 40a0d683a6b9b91233cf9a5c1d133540e47192cd
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 09d9654bf1a2670c77a4a3db2eae2ed7ab6dbfec
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-custom-draw-a-toolstrip-control"></a>Nasıl yapılır: Bir ToolStrip Denetimini Özel Olarak Çizme
 <xref:System.Windows.Forms.ToolStrip> Denetimleriniz aşağıdaki sınıfları (boyama) işleme ilişkili:  
   
--   <xref:System.Windows.Forms.ToolStripSystemRenderer>işletim sisteminizi stili ve görünümünü sağlar.  
+-   <xref:System.Windows.Forms.ToolStripSystemRenderer> işletim sisteminizi stili ve görünümünü sağlar.  
   
--   <xref:System.Windows.Forms.ToolStripProfessionalRenderer>Microsoft Office stili ve görünümünü sağlar.  
+-   <xref:System.Windows.Forms.ToolStripProfessionalRenderer> Microsoft Office stili ve görünümünü sağlar.  
   
--   <xref:System.Windows.Forms.ToolStripRenderer>diğer iki işleme sınıfları için Özet temel sınıftır.  
+-   <xref:System.Windows.Forms.ToolStripRenderer> diğer iki işleme sınıfları için Özet temel sınıftır.  
   
  Özel çizim (sahibi çizim da bilinir) için bir <xref:System.Windows.Forms.ToolStrip>, oluşturucu sınıflarından biri geçersiz kılma ve bir işleme mantığı yönünü değiştirin.  
   

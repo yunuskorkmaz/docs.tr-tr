@@ -1,24 +1,12 @@
 ---
-title: "Gönderme İşlemleri için Önbellek Paylaşımı Düzeylerini Değiştirme"
-ms.custom: 
+title: Gönderme İşlemleri için Önbellek Paylaşımı Düzeylerini Değiştirme
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 03926a64-753d-460e-ac06-2a4ff8e1bbf5
-caps.latest.revision: "12"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 59c6ae1ae31a5aa256844e6efca158e4702b6aba
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 359a9189cee34eeb814a2303be3d2da725456e39
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="changing-the-cache-sharing-levels-for-send-activities"></a>Gönderme İşlemleri için Önbellek Paylaşımı Düzeylerini Değiştirme
 <xref:System.ServiceModel.Activities.SendMessageChannelCache> Uzantısı düzeyleri, kanal fabrikası önbellek ayarlarını paylaşımı önbellek özelleştirmenize olanak sağlar ve kanal ayarlarını önbelleğe kullanarak hizmet uç noktaları için ileti gönderme iş akışları için <xref:System.ServiceModel.Activities.Send> Mesajlaşma etkinlikleri. Bu iş akışları genellikle istemci iş akışlarıdır ancak içinde barındırılan iş akışı Hizmetleri ayrıca olabilir bir <xref:System.ServiceModel.WorkflowServiceHost>. Kanal fabrikası önbellek içeren önbelleğe alınmış <xref:System.ServiceModel.ChannelFactory%601> nesneleri. Kanal önbelleği önbelleğe alınmış kanalları içerir.  

@@ -1,28 +1,19 @@
 ---
-title: "Özellik &#39; &lt;propertyname&gt;&#39; belirlemeden #39; tüm kod yolları bir değer döndürmesi t"
+title: Özellik &#39; &lt;propertyname&gt; &#39; mevcut değil&#39;t tüm kod yolları bir değer döndürür
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- devlang-visual-basic
-ms.topic: article
 f1_keywords:
 - bc42107
 - vbc42107
 helpviewer_keywords:
 - BC42107
 ms.assetid: 06800966-9c3b-4844-9f13-83ac95607d32
-caps.latest.revision: 
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: c9ef5b2ac62412f5684cbc78ab6bebf6bc7b6752
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 72bc7e45cadd2528f29c88bf6e80ee5f381052dd
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
-# <a name="property-39ltpropertynamegt39-doesn39t-return-a-value-on-all-code-paths"></a>Özellik &#39; &lt;propertyname&gt;&#39; belirlemeden #39; tüm kod yolları bir değer döndürmesi t
+# <a name="property-39ltpropertynamegt39-doesn39t-return-a-value-on-all-code-paths"></a>Özellik &#39; &lt;propertyname&gt; &#39; mevcut değil&#39;t tüm kod yolları bir değer döndürür
 Özellik '\<propertyname >' tüm kod yolları bir değer döndürmüyor. Sonuç kullanıldığında çalışma zamanında bir null başvuru özel durumu oluşabilir.  
   
  Bir özellik `Get` yordamının bir değer döndürmüyor kendi kod aracılığıyla en az bir olası yolu vardır.  
@@ -48,6 +39,6 @@ ms.lasthandoff: 11/21/2017
      Her zaman kullanıyorsanız her return yordamdan bir değer döndürür güvence altına almak daha kolay `Return` deyimi. Bu, son deyim önce yaparsanız `End Get` olması gereken bir `Return` deyimi.  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [Özellik yordamları](../../../visual-basic/programming-guide/language-features/procedures/property-procedures.md)  
- [Property deyimi](../../../visual-basic/language-reference/statements/property-statement.md)  
- [Get deyimi](../../../visual-basic/language-reference/statements/get-statement.md)
+ [Özellik Yordamları](../../../visual-basic/programming-guide/language-features/procedures/property-procedures.md)  
+ [Property Deyimi](../../../visual-basic/language-reference/statements/property-statement.md)  
+ [Get Deyimi](../../../visual-basic/language-reference/statements/get-statement.md)

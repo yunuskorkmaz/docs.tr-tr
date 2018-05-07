@@ -1,42 +1,30 @@
 ---
 title: Güvenlik Etkinliklerini Denetleme
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 helpviewer_keywords:
 - auditing security events [WCF]
 ms.assetid: 5633f61c-a3c9-40dd-8070-1c373b66a716
-caps.latest.revision: 27
 author: BrucePerlerMS
-ms.author: bruceper
 manager: mbaldwin
-ms.workload:
-- dotnet
-ms.openlocfilehash: 69b013389511ac2cfb31e22f7a39e98eb22fb977
-ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
+ms.openlocfilehash: e4219553f97f272577e8efdeb106b43e5f76ee59
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/30/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="auditing-security-events"></a>Güvenlik Etkinliklerini Denetleme
-İle oluşturulan uygulamaların [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] (başarı, hata veya her ikisi de) güvenlik olaylarını denetleme özelliği ile oturum açabilir. Olaylar için Windows sistem olay günlüğüne yazılır ve Olay Görüntüleyicisi'ni kullanarak incelenebilir.  
+Windows Communication Foundation (WCF) ile oluşturulan uygulamaların (başarı, hata veya her ikisi de) güvenlik olaylarını denetleme özelliği ile oturum açabilir. Olaylar için Windows sistem olay günlüğüne yazılır ve Olay Görüntüleyicisi'ni kullanarak incelenebilir.  
   
  Denetim bir yöneticinin zaten oluştu veya devam ediyor saldırının algılamak bir yol sağlar. Buna ek olarak, Denetim güvenlikle ilgili sorunların hatalarını ayıklamak için bir geliştirici yardımcı olabilir. Örneğin, yetkilendirme veya denetimi İlkesi yapılandırmasında bir hata için yetkili bir kullanıcı yanlışlıkla erişimini engellediği, bir geliştirici hızlı bir şekilde bulmak ve olay günlüğünü inceleyerek bu hatanın nedenini ortadan kaldırmak.  
   
- Hakkında daha fazla bilgi için [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] güvenlik, bkz: [güvenliğine genel bakış](../../../../docs/framework/wcf/feature-details/security-overview.md). Programlama hakkında daha fazla bilgi için [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)], bkz: [temel WCF programlama](../../../../docs/framework/wcf/basic-wcf-programming.md).  
+ WCF güvenlik hakkında daha fazla bilgi için bkz: [güvenliğine genel bakış](../../../../docs/framework/wcf/feature-details/security-overview.md). Programlama WCF hakkında daha fazla bilgi için bkz: [temel WCF programlama](../../../../docs/framework/wcf/basic-wcf-programming.md).  
   
 ## <a name="audit-level-and-behavior"></a>Denetim düzeyi ve davranışı  
  İki düzeyde güvenlik denetimleri mevcuttur:  
   
 -   Çağıran yetkili hizmet kimlik doğrulama düzeyi.  
   
--   İleti, düzey [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] ileti geçerliliğini denetler ve arayanın kimliğini doğrular.  
+-   İleti düzeyi, WCF ileti geçerliliğini denetler ve arayanın kimliğini doğrular.  
   
  Her ikisi de denetim başarılı veya başarısız olarak bilinen düzeyleri denetleyebilirsiniz *denetleme davranışı*.  
   

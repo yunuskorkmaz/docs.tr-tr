@@ -1,11 +1,6 @@
 ---
 title: ReadOnly (Visual Basic)
 ms.date: 07/20/2015
-ms.prod: .net
-ms.suite: 
-ms.technology:
-- devlang-visual-basic
-ms.topic: article
 f1_keywords:
 - vb.ReadOnly
 helpviewer_keywords:
@@ -15,14 +10,11 @@ helpviewer_keywords:
 - properties [Visual Basic], read-only
 - read-only variables
 ms.assetid: e868185d-6142-4359-a2fd-a7965cadfce8
-caps.latest.revision: 
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: 9ca1d2e4eddb3b88073d6fcd46b0de5c627ba809
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: e2957bf49292dfcafab8e78f4b997247c34ad279
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="readonly-visual-basic"></a>ReadOnly (Visual Basic)
 Bir değişkenin veya özelliğin okuma ancak yazılmadı belirtir.  
@@ -64,10 +56,10 @@ Bir değişkenin veya özelliğin okuma ancak yazılmadı belirtir.
   
  `ReadOnly` Değiştiricisi bu bağlamlarında kullanılabilir:  
   
- [Dim deyimi](../../../visual-basic/language-reference/statements/dim-statement.md)  
+ [Dim Deyimi](../../../visual-basic/language-reference/statements/dim-statement.md)  
   
- [Property deyimi](../../../visual-basic/language-reference/statements/property-statement.md)  
+ [Property Deyimi](../../../visual-basic/language-reference/statements/property-statement.md)  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
  [WriteOnly](../../../visual-basic/language-reference/modifiers/writeonly.md)  
- [Anahtar sözcükler](../../../visual-basic/language-reference/keywords/index.md)
+ [Anahtar Sözcükler](../../../visual-basic/language-reference/keywords/index.md)

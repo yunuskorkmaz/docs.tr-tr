@@ -1,12 +1,6 @@
 ---
 title: Enum Deyimi (Visual Basic)
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- devlang-visual-basic
-ms.topic: article
 f1_keywords:
 - vb.Enum
 helpviewer_keywords:
@@ -17,14 +11,11 @@ helpviewer_keywords:
 - variables [Visual Basic], enumeration
 - constants [Visual Basic], enumerated
 ms.assetid: a45e51f1-65ff-48e1-bf32-79130f137377
-caps.latest.revision: 
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: 7a8244318e0be8e50f3384b56cf63e59182b6cda
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 89de51f2551437d102ccdc5a0f1ff5f23b53e47f
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="enum-statement-visual-basic"></a>Enum Deyimi (Visual Basic)
 Numaralandırma bildirir ve üyeleri değerleri tanımlar.  
@@ -50,13 +41,13 @@ End Enum
   
      İsteğe bağlı. Bu numaralandırma hangi kod erişip belirtir. Aşağıdakilerden biri olabilir:  
   
-    -   [Ortak](../../../visual-basic/language-reference/modifiers/public.md)  
+    -   [Public](../../../visual-basic/language-reference/modifiers/public.md)  
   
-    -   [Korumalı](../../../visual-basic/language-reference/modifiers/protected.md)  
+    -   [Protected](../../../visual-basic/language-reference/modifiers/protected.md)  
   
-    -   [Arkadaş](../../../visual-basic/language-reference/modifiers/friend.md)  
+    -   [Friend](../../../visual-basic/language-reference/modifiers/friend.md)  
   
-    -   [Özel](../../../visual-basic/language-reference/modifiers/private.md)  
+    -   [Private](../../../visual-basic/language-reference/modifiers/private.md)  
   
      Belirleyebileceğiniz `Protected``Friend` numaralandırmanın sınıfı, türetilmiş bir sınıf ya da aynı bütünleştirilmiş koddan erişime izin vermek için.  
   
@@ -76,7 +67,7 @@ End Enum
   
      Gerekli. Bu deyim içinde bildirilen üye sabitleri listesi. Birden çok üye bağımsız kaynak kodu satırlarda görünür.  
   
-     Her `member` aşağıdaki söz dizimini ve bölümleri vardır:`[<attribute list>] member name [ = initializer ]`  
+     Her `member` aşağıdaki söz dizimini ve bölümleri vardır: `[<attribute list>] member name [ = initializer ]`  
   
     |Bölümü|Açıklama|  
     |---|---|  
@@ -180,8 +171,8 @@ End Enum
 ## <a name="see-also"></a>Ayrıca Bkz.  
  <xref:System.Enum>  
  <xref:Microsoft.VisualBasic.Strings.AscW%2A>  
- [Const deyimi](../../../visual-basic/language-reference/statements/const-statement.md)  
- [Dim deyimi](../../../visual-basic/language-reference/statements/dim-statement.md)  
- [Örtük ve açık dönüştürmeler](../../../visual-basic/programming-guide/language-features/data-types/implicit-and-explicit-conversions.md)  
- [Tür dönüşüm işlevleri](../../../visual-basic/language-reference/functions/type-conversion-functions.md)  
- [Sabitler ve numaralandırmalar](../../../visual-basic/language-reference/constants-and-enumerations.md)
+ [Const Deyimi](../../../visual-basic/language-reference/statements/const-statement.md)  
+ [Dim Deyimi](../../../visual-basic/language-reference/statements/dim-statement.md)  
+ [Örtük ve Açık Dönüştürmeler](../../../visual-basic/programming-guide/language-features/data-types/implicit-and-explicit-conversions.md)  
+ [Tür Dönüştürme İşlevleri](../../../visual-basic/language-reference/functions/type-conversion-functions.md)  
+ [Sabitler ve Sabit Listeleri](../../../visual-basic/language-reference/constants-and-enumerations.md)

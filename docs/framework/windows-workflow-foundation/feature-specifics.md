@@ -1,29 +1,18 @@
 ---
-title: "Windows Workflow Foundation özelliğini özellikleri"
-ms.custom: 
+title: Windows Workflow Foundation özelliğini özellikleri
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: e84d12da-a055-45f6-b4d1-878d127b46b6
-caps.latest.revision: "6"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 6943a7eaeaecf8f11de7c10237979067c83c24d8
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
-ms.translationtype: MT
+ms.openlocfilehash: dc3ff5669d23e57685c89937f7c2171053f938ca
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="windows-workflow-foundation-feature-specifics"></a>Windows Workflow Foundation özelliğini özellikleri
-[!INCLUDE[netfx40_long](../../../includes/netfx40-long-md.md)]bir dizi özellik Windows Workflow Foundation ekler. Bu belge yeni özelliklerini açıklar ve içinde bunlar yararlı olabilecek senaryoları hakkında ayrıntılar sağlar.  
+[!INCLUDE[netfx40_long](../../../includes/netfx40-long-md.md)] bir dizi özellik Windows Workflow Foundation ekler. Bu belge yeni özelliklerini açıklar ve içinde bunlar yararlı olabilecek senaryoları hakkında ayrıntılar sağlar.  
   
 ## <a name="messaging-activities"></a>Mesajlaşma Etkinlikleri  
- Mesajlaşma etkinlikleri (<xref:System.ServiceModel.Activities.Receive>, <xref:System.ServiceModel.Activities.SendReply>, <xref:System.ServiceModel.Activities.Send>, <xref:System.ServiceModel.Activities.ReceiveReply>) göndermek ve almak için kullanılan [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] akışınızı gelen iletileri.  <xref:System.ServiceModel.Activities.Receive>ve <xref:System.ServiceModel.Activities.SendReply> etkinlikler form için kullanılan bir [!INCLUDE[indigo1](../../../includes/indigo1-md.md)] hizmet WSDL yalnızca gibi standart sunulan işlemi [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] web hizmetleri.  <xref:System.ServiceModel.Activities.Send>ve <xref:System.ServiceModel.Activities.ReceiveReply> WCF için benzer bir web hizmeti kullanmak için kullanılan <xref:System.ServiceModel.ChannelFactory>; bir **hizmet Başvurusu Ekle** deneyimi mevcut da Workflow Foundation için önceden yapılandırılmış etkinliklerini oluşturur.  
+ Mesajlaşma etkinlikleri (<xref:System.ServiceModel.Activities.Receive>, <xref:System.ServiceModel.Activities.SendReply>, <xref:System.ServiceModel.Activities.Send>, <xref:System.ServiceModel.Activities.ReceiveReply>) göndermek ve almak için kullanılan [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] akışınızı gelen iletileri.  <xref:System.ServiceModel.Activities.Receive> ve <xref:System.ServiceModel.Activities.SendReply> etkinlikler WSDL yalnızca standart gibi açık bir Windows Communication Foundation (WCF) hizmet işlemi oluşturmak için kullanılan [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] web hizmetleri.  <xref:System.ServiceModel.Activities.Send> ve <xref:System.ServiceModel.Activities.ReceiveReply> WCF için benzer bir web hizmeti kullanmak için kullanılan <xref:System.ServiceModel.ChannelFactory>; bir **hizmet Başvurusu Ekle** deneyimi mevcut da Workflow Foundation için önceden yapılandırılmış etkinliklerini oluşturur.  
   
 ### <a name="getting-started-with-messaging-activities"></a>Mesajlaşma etkinlikleri ile çalışmaya başlama  
   
@@ -251,7 +240,7 @@ ms.lasthandoff: 12/22/2017
 -   Eski bir CLR nesnesi üzerinde çağrılacak bir yöntem gerekir. İş akışı yürütme sırasında kapsamları dahilinde olması durumunda bu eski sınıfı çağrısı sarmalamak için özel bir etkinlik oluşturmak yerine <xref:System.Activities.Statements.InvokeMethod> kullanılabilir.  
   
 ## <a name="error-handling-activities"></a>Hata işleme etkinlikleri  
- <xref:System.Activities.Statements.TryCatch> Etkinlik içerilen etkinlikleri (C# /VB Try/Catch yapı benzer) kümesi yürütülmesi sırasında oluşan özel durumları yakalama için bir mekanizma sağlar. <xref:System.Activities.Statements.TryCatch>özel durum işleme iş akışı düzeyinde sağlar. İşlenmeyen bir özel durum, iş akışı iptal edilir ve son blok yürütülen olmaz. Bu davranış, C# ile tutarlıdır.  
+ <xref:System.Activities.Statements.TryCatch> Etkinlik içerilen etkinlikleri (C# /VB Try/Catch yapı benzer) kümesi yürütülmesi sırasında oluşan özel durumları yakalama için bir mekanizma sağlar. <xref:System.Activities.Statements.TryCatch> özel durum işleme iş akışı düzeyinde sağlar. İşlenmeyen bir özel durum, iş akışı iptal edilir ve son blok yürütülen olmaz. Bu davranış, C# ile tutarlıdır.  
   
 ### <a name="getting-started"></a>Başlarken  
   
@@ -269,7 +258,7 @@ ms.lasthandoff: 12/22/2017
  Etkinlikleri kümesi yürütülmesi gerekiyor ve belirli mantığı hata oluştuğunda yürütülmesi gerekiyor. Bu hata mantığı işleme sırasında hata kurtarılamaz bulunursa, özel durum işlenemezse ve üst etkinlik (veya konak) sorun ilgilenecektir.  
   
 ## <a name="pick-activity"></a>Etkinlik seçin  
- <xref:System.Activities.Statements.Pick> İçinde WF modelleme olay tabanlı denetim akışı etkinliği sağlar. <xref:System.Activities.Statements.Pick>Burada her dal çalıştırmadan önce gerçekleşmesi belirli bir olay bekler birçok dal içerir. Bu kurulum içinde bir <xref:System.Activities.Statements.Pick> benzer şekilde davranır bir <xref:System.Activities.Statements.Switch%601> için hangi etkinlik dinleme olay kümesini yalnızca birini çalıştırır. Her dal güdümlü olayıdır ve ortaya çıkan olayın karşılık gelen şube ilk çalıştırır. Diğer tüm dalları iptal etmek ve olayları dinleme durdurun.  
+ <xref:System.Activities.Statements.Pick> İçinde WF modelleme olay tabanlı denetim akışı etkinliği sağlar. <xref:System.Activities.Statements.Pick> Burada her dal çalıştırmadan önce gerçekleşmesi belirli bir olay bekler birçok dal içerir. Bu kurulum içinde bir <xref:System.Activities.Statements.Pick> benzer şekilde davranır bir <xref:System.Activities.Statements.Switch%601> için hangi etkinlik dinleme olay kümesini yalnızca birini çalıştırır. Her dal güdümlü olayıdır ve ortaya çıkan olayın karşılık gelen şube ilk çalıştırır. Diğer tüm dalları iptal etmek ve olayları dinleme durdurun.  
   
 ### <a name="getting-started"></a>Başlarken  
   
@@ -305,7 +294,7 @@ ms.lasthandoff: 12/22/2017
   
 1.  Belgeler: [yönlendirme](../../../docs/framework/wcf/feature-details/routing.md)  
   
-2.  Örnekler: [yönlendirme hizmetleri &#91; WCF örnekleri &#93;](../../../docs/framework/wcf/samples/routing-services.md)  
+2.  Örnekler: [yönlendirme hizmetleri &#91;WCF örnekleri&#93;](../../../docs/framework/wcf/samples/routing-services.md)  
   
 3.  Blog: [yönlendirme kuralları!](http://go.microsoft.com/fwlink/?LinkId=204956)  
   
@@ -323,7 +312,7 @@ ms.lasthandoff: 12/22/2017
 -   İstemci hatası veya hizmetleri kullanılamama karşı daha sağlam olması için etkinleştirilebilir.  
   
 ## <a name="wcf-discovery"></a>WCF Keşfetme  
- [!INCLUDE[indigo2](../../../includes/indigo2-md.md)]Bulma, bulma mekanizmasından uygulama altyapınıza eklemenizi sağlayan bir framework teknolojisidir. Hizmetinizi bulunabilmesini sağlamak için bunu kullanın ve Hizmetleri aramak için istemcileri yapılandırın. İstemciler artık sabit olması bitiş noktası ile kodlanmış, uygulama daha sağlam ve hataya dayanıklı hale gerekir. Bulma, uygulamanıza otomatik yapılandırma özellikleri oluşturmak için mükemmel bir platformdur.  
+ [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] Bulma, bulma mekanizmasından uygulama altyapınıza eklemenizi sağlayan bir framework teknolojisidir. Hizmetinizi bulunabilmesini sağlamak için bunu kullanın ve Hizmetleri aramak için istemcileri yapılandırın. İstemciler artık sabit olması bitiş noktası ile kodlanmış, uygulama daha sağlam ve hataya dayanıklı hale gerekir. Bulma, uygulamanıza otomatik yapılandırma özellikleri oluşturmak için mükemmel bir platformdur.  
   
  Ürün üstünde WS-bulma standart yerleşik olarak bulunur. Birlikte çalışabilir, genişletilebilir ve genel olarak tasarlanmıştır. Ürün iki çalışma modunu destekler:  
   

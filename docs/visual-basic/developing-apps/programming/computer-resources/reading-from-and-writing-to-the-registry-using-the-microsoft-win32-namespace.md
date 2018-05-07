@@ -1,24 +1,14 @@
 ---
-title: "Microsoft.Win32 Ad Alanını Kullanarak Kayıt Defterini Okuma ve Yazma (Visual Basic)"
-ms.custom: 
+title: Microsoft.Win32 Ad Alanını Kullanarak Kayıt Defterini Okuma ve Yazma (Visual Basic)
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- devlang-visual-basic
-ms.topic: article
 helpviewer_keywords:
 - registry [Visual Basic]
 ms.assetid: 4a0dcce0-c27b-4199-baa8-ee4528da6a56
-caps.latest.revision: 
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: 462cc5c3854035cfc04c7c5df6905c2cfbd486ed
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 6309f312ed05f48e65b19d8827322071cad1f6de
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="reading-from-and-writing-to-the-registry-using-the-microsoftwin32-namespace-visual-basic"></a>Microsoft.Win32 Ad Alanını Kullanarak Kayıt Defterini Okuma ve Yazma (Visual Basic)
 Ancak `My.Computer.Registry` temel gereksinimlerinizi kayıt defteri karşı programlama zaman kapsaması gereken, aynı zamanda <xref:Microsoft.Win32.Registry> ve <xref:Microsoft.Win32.RegistryKey> sınıfları <xref:Microsoft.Win32> ad alanı [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)].  
@@ -26,7 +16,7 @@ Ancak `My.Computer.Registry` temel gereksinimlerinizi kayıt defteri karşı pro
 ## <a name="keys-in-the-registry-class"></a>Kayıt defteri sınıfı anahtarları  
  <xref:Microsoft.Win32.Registry> Sınıfı alt anahtarları ve değerleri erişmek için kullanılan temel kayıt defteri anahtarlarını sağlar. Temel anahtarları salt okunurdur. Aşağıdaki tabloda listelenmekte ve tarafından sunulan yedi anahtarları açıklanmaktadır <xref:Microsoft.Win32.Registry> sınıfı.  
   
-|**Anahtarı**|**Açıklama**|  
+|**Key**|**Açıklama**|  
 |-------------|---------------------|  
 |<xref:Microsoft.Win32.Registry.ClassesRoot>|Belgeler ve bu türleriyle ilişkili özellikleri türlerini tanımlar.|  
 |<xref:Microsoft.Win32.Registry.CurrentConfig>|Kullanıcıya özgü olmayan donanım yapılandırma bilgilerini içerir.|  
@@ -52,6 +42,6 @@ Ancak `My.Computer.Registry` temel gereksinimlerinizi kayıt defteri karşı pro
  <xref:System.SystemException>  
  <xref:System.ApplicationException>  
  <xref:Microsoft.VisualBasic.MyServices.RegistryProxy>  
- [Try... Catch... Finally ifadesi](../../../../visual-basic/language-reference/statements/try-catch-finally-statement.md)  
- [Okuma ve kayıt defterine yazma](../../../../visual-basic/developing-apps/programming/computer-resources/reading-from-and-writing-to-the-registry.md)  
- [Güvenlik ve kayıt defteri](../../../../visual-basic/developing-apps/programming/computer-resources/security-and-the-registry.md)
+ [Try...Catch...Finally Deyimi](../../../../visual-basic/language-reference/statements/try-catch-finally-statement.md)  
+ [Kayıt Defterinden Okuma ve Kayıt Defterine Yazma](../../../../visual-basic/developing-apps/programming/computer-resources/reading-from-and-writing-to-the-registry.md)  
+ [Güvenlik ve Kayıt Defteri](../../../../visual-basic/developing-apps/programming/computer-resources/security-and-the-registry.md)

@@ -1,27 +1,15 @@
 ---
-title: "Nasıl yapılır: Bir Stile Animasyon Ekleme"
-ms.custom: 
+title: 'Nasıl yapılır: Bir Stile Animasyon Ekleme'
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-wpf
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - animation [WPF], properties [WPF], within styles
 - styles [WPF], animating properties within
 ms.assetid: 6a791f3d-6b1f-4972-a2f9-35880bcfd954
-caps.latest.revision: "9"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 2aabe24b77a9016b5b8119646c80ea84eb73acb9
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: e0741a869ab81875aaa25340de851ef939e11a6f
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-animate-in-a-style"></a>Nasıl yapılır: Bir Stile Animasyon Ekleme
 Bu örnek, stil içindeki özelliklere animasyon gösterilmektedir. Stil içinde animasyon eklerken, yalnızca stili tanımlandığı çerçeve öğesi doğrudan hedeflenebilir. Freezable nesne hedeflemek için "aşağı stilde öğe özelliğinden nokta gerekir".  

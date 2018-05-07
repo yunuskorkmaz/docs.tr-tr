@@ -1,14 +1,6 @@
 ---
-title: "ICLRStrongName::StrongNameKeyInstall Yöntemi"
-ms.custom: 
+title: ICLRStrongName::StrongNameKeyInstall Yöntemi
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: reference
 api_name:
 - ICLRStrongName.StrongNameKeyInstall
 api_location:
@@ -23,17 +15,13 @@ helpviewer_keywords:
 ms.assetid: 5c15cf3b-164c-49d1-8e57-e42949d55acf
 topic_type:
 - apiref
-caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: df1bdb5d6d6018855cb76b48d58e557a61288a51
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 572afc5eb9ec3cf52199e5ad74406c876485461c
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="iclrstrongnamestrongnamekeyinstall-method"></a>ICLRStrongName::StrongNameKeyInstall Yöntemi
 Bir ortak/özel anahtar çifti bir kapsayıcıya alır.  
@@ -50,7 +38,7 @@ HRESULT StrongNameKeyInstall (
   
 #### <a name="parameters"></a>Parametreler  
  `wszKeyContainer`  
- [in] Anahtar kapsayıcı adı. `wszKeyContainer`boş olmayan bir dize olmalıdır.  
+ [in] Anahtar kapsayıcı adı. `wszKeyContainer` boş olmayan bir dize olmalıdır.  
   
  `pbKeyBlob`  
  [in] İkili anahtar çifti.  
@@ -59,7 +47,7 @@ HRESULT StrongNameKeyInstall (
  [in] Bayt olarak boyutu, `pbKeyBlob`.  
   
 ## <a name="return-value"></a>Dönüş Değeri  
- `S_OK`Yöntem başarıyla tamamlandı Aksi takdirde hata belirten bir HRESULT değeri (bkz [ortak HRESULT değerleri](http://go.microsoft.com/fwlink/?LinkId=213878) bir listesi için).  
+ `S_OK` Yöntem başarıyla tamamlandı Aksi takdirde hata belirten bir HRESULT değeri (bkz [ortak HRESULT değerleri](http://go.microsoft.com/fwlink/?LinkId=213878) bir listesi için).  
   
 ## <a name="remarks"></a>Açıklamalar  
  Kullanım [Iclrstrongname::strongnamekeydelete](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-strongnamekeydelete-method.md) anahtar kapsayıcısını silmek için yöntem.  
@@ -71,7 +59,7 @@ HRESULT StrongNameKeyInstall (
   
  **Kitaplığı:** bir kaynak olarak MSCorEE.dll dahil  
   
- **.NET framework sürümleri:**[!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
+ **.NET framework sürümleri:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
  [StrongNameKeyDelete Yöntemi](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-strongnamekeydelete-method.md)  

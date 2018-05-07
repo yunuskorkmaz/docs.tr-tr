@@ -1,13 +1,6 @@
 ---
-title: "Animasyona Genel bakış"
-ms.custom: 
+title: Animasyona Genel bakış
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-wpf
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -15,20 +8,15 @@ helpviewer_keywords:
 - Storyboards [WPF], animations
 - animations [WPF], overview
 ms.assetid: bd9ce563-725d-4385-87c9-d7ee38cf79ea
-caps.latest.revision: "73"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 118d63bbbcd0cbb52d092af7002df2538df7790b
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 5fb9550ddce4ead900206c2ece2f976ab8b42c4b
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="animation-overview"></a>Animasyona Genel bakış
 <a name="introduction"></a>
-[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]güçlü bir etkileyici kullanıcı arabirimleri ve çekici belgeler oluşturmanıza olanak sağlayan grafikleri ve düzeni özellikler kümesi sağlar. Animasyon daha da muhteşem ve kullanışlı bir çekici kullanıcı arabirimi yapabilirsiniz. Yalnızca bir arka plan rengi animasyonu veya animasyonlu bir uygulama tarafından <xref:System.Windows.Media.Transform>, etkileyici ekran geçişleri oluşturabilir veya yararlı görsel yardımlar sağlayabilirsiniz.  
+[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] güçlü bir etkileyici kullanıcı arabirimleri ve çekici belgeler oluşturmanıza olanak sağlayan grafikleri ve düzeni özellikler kümesi sağlar. Animasyon daha da muhteşem ve kullanışlı bir çekici kullanıcı arabirimi yapabilirsiniz. Yalnızca bir arka plan rengi animasyonu veya animasyonlu bir uygulama tarafından <xref:System.Windows.Media.Transform>, etkileyici ekran geçişleri oluşturabilir veya yararlı görsel yardımlar sağlayabilirsiniz.  
   
  Bu genel bakışta tanıtılmaktadır [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] animasyon ve zamanlama sistemi. Animasyonu üzerinde odaklanır [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] film şeritleri kullanarak nesneleri.  
 
@@ -46,9 +34,9 @@ ms.lasthandoff: 12/22/2017
   
 -   Program dikdörtgen yeni değerle güncelleştirir ve onu yeniden çizer.  
   
- Öncesinde [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)], [!INCLUDE[TLA#tla_win](../../../../includes/tlasharptla-win-md.md)] geliştiriciler gerekiyordu oluşturabilir ve kendi zamanlama sistemlerini yönetmek veya özel kitaplıkları kullanabilirsiniz. [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]yönetilen kod üzerinden kullanıma sunulan bir verimli zamanlama sistemi içerir ve [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)] ve, son derece tümleşiktir içine [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] framework. [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]animasyon denetimleri ve diğer grafik nesneleri hale getirmeyi daha kolay hale getirir.  
+ Öncesinde [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)], [!INCLUDE[TLA#tla_win](../../../../includes/tlasharptla-win-md.md)] geliştiriciler gerekiyordu oluşturabilir ve kendi zamanlama sistemlerini yönetmek veya özel kitaplıkları kullanabilirsiniz. [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] yönetilen kod üzerinden kullanıma sunulan bir verimli zamanlama sistemi içerir ve [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)] ve, son derece tümleşiktir içine [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] framework. [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] animasyon denetimleri ve diğer grafik nesneleri hale getirmeyi daha kolay hale getirir.  
   
- [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]zamanlama sistemi yönetme ve ekran verimli bir şekilde yeniden Perde Arkası tüm iş işler. Bu efektler elde mekanizması yerine oluşturmak istediğiniz etkileri odaklanmanıza olanak tanıyan zamanlama sınıfları sağlar. [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]Ayrıca, kendi animasyonları içinden devrettiği temel animasyon sınıflarını göstererek oluşturmak için özelleştirilmiş animasyonları üretmek için kolaylaştırır. Özel animasyonlarına birçok performans avantajı standart animasyon sınıfların elde edilir.  
+ [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] zamanlama sistemi yönetme ve ekran verimli bir şekilde yeniden Perde Arkası tüm iş işler. Bu efektler elde mekanizması yerine oluşturmak istediğiniz etkileri odaklanmanıza olanak tanıyan zamanlama sınıfları sağlar. [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] Ayrıca, kendi animasyonları içinden devrettiği temel animasyon sınıflarını göstererek oluşturmak için özelleştirilmiş animasyonları üretmek için kolaylaştırır. Özel animasyonlarına birçok performans avantajı standart animasyon sınıfların elde edilir.  
   
 <a name="thewpftimingsystem"></a>   
 ## <a name="wpf-property-animation-system"></a>WPF özelliği animasyon sistemi  
@@ -62,7 +50,7 @@ ms.lasthandoff: 12/22/2017
   
 -   Kullanılabilir uyumlu bir animasyon türü olmalıdır. (Varsa [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] biri sağlamaz kendi oluşturabilirsiniz. Bkz: [özel animasyon genel bakış](../../../../docs/framework/wpf/graphics-multimedia/custom-animations-overview.md).)  
   
- [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]sahip çok sayıda nesne içeren <xref:System.Windows.Media.Animation.IAnimatable> özellikleri. Gibi denetimler <xref:System.Windows.Controls.Button> ve <xref:System.Windows.Controls.TabControl>hem de <xref:System.Windows.Controls.Panel> ve <xref:System.Windows.Shapes.Shape> nesneleri devralır <xref:System.Windows.DependencyObject>. Bunların özelliklerinin çoğu bağımlılık özelliklerdir.  
+ [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] sahip çok sayıda nesne içeren <xref:System.Windows.Media.Animation.IAnimatable> özellikleri. Gibi denetimler <xref:System.Windows.Controls.Button> ve <xref:System.Windows.Controls.TabControl>hem de <xref:System.Windows.Controls.Panel> ve <xref:System.Windows.Shapes.Shape> nesneleri devralır <xref:System.Windows.DependencyObject>. Bunların özelliklerinin çoğu bağımlılık özelliklerdir.  
   
  Animasyon neredeyse her yerden, stilleri ve denetim şablonları içeren kullanabilirsiniz. Animasyon görsel olması gerekmez; Bu bölümde açıklanan ölçütlerini karşılıyorsa kullanıcı arabiriminin parçası olmayan nesneler animasyon ekleyebilirsiniz.  
   
@@ -268,7 +256,7 @@ ms.lasthandoff: 12/22/2017
   
 <a name="applyanimationstoproperty"></a>   
 ## <a name="applying-an-animation-to-a-property"></a>Animasyonun bir özelliğe uygulama  
- Önceki bölümlerde animasyonları ve zamanlama özelliklerini farklı türleri açıklanmaktadır. Bu bölümde, animasyon eklemek istediğiniz özelliğe animasyon uygulamanın gösterilmektedir. <xref:System.Windows.Media.Animation.Storyboard>nesneleri özelliklere animasyonları uygulamak için bir yol sağlar. A <xref:System.Windows.Media.Animation.Storyboard> olan bir *kapsayıcı zaman çizelgesi* içerdiği animasyonları için hedefleme bilgileri sağlar.  
+ Önceki bölümlerde animasyonları ve zamanlama özelliklerini farklı türleri açıklanmaktadır. Bu bölümde, animasyon eklemek istediğiniz özelliğe animasyon uygulamanın gösterilmektedir. <xref:System.Windows.Media.Animation.Storyboard> nesneleri özelliklere animasyonları uygulamak için bir yol sağlar. A <xref:System.Windows.Media.Animation.Storyboard> olan bir *kapsayıcı zaman çizelgesi* içerdiği animasyonları için hedefleme bilgileri sağlar.  
   
 ### <a name="targeting-objects-and-properties"></a>Hedefleme nesneleri ve özellikleri  
  <xref:System.Windows.Media.Animation.Storyboard> SAX <xref:System.Windows.Media.Animation.Storyboard.TargetName%2A> ve <xref:System.Windows.Media.Animation.Storyboard.TargetProperty%2A> ekli özellikler. Bir animasyon üzerindeki şu özellikleri ayarlayarak, animasyonun animasyon gerekenler söyleyin. Ancak, bir animasyon nesneyi hedefleyebilir önce nesne genellikle bir ad verilmelidir.  

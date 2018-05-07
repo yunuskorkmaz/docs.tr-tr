@@ -1,12 +1,6 @@
 ---
 title: Get Deyimi
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- devlang-visual-basic
-ms.topic: article
 f1_keywords:
 - vb.Get
 helpviewer_keywords:
@@ -17,14 +11,11 @@ helpviewer_keywords:
 - Get keyword [Visual Basic]
 - property procedures [Visual Basic], Get statements
 ms.assetid: 56b05cdc-bd64-4dfd-bb12-824eacec6f94
-caps.latest.revision: 
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: c1ff062a5e3bf41794bd5b4c90f1e188d6d97480
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: d6a6fdfd191de76871619dea3bd1794b487698aa
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="get-statement"></a>Get Deyimi
 Bildiren bir `Get` özellik yordamı bir özelliğin değerini almak için kullanılır.  
@@ -69,7 +60,7 @@ End Get
   
 -   **Bir yordam döndürülüyor.** Zaman `Get` yordamı çağıran kodu döndürür, özellik değeri istenen deyimi içinde yürütme devam eder.  
   
-     `Get`özellik yordamları kullanarak bir değer dönebilirsiniz [dönüş deyimi](../../../visual-basic/language-reference/statements/return-statement.md) veya dönüş değeri özellik adına atayarak. Daha fazla bilgi için bkz: "Dönüş değeri" [Function deyimi](../../../visual-basic/language-reference/statements/function-statement.md).  
+     `Get` özellik yordamları kullanarak bir değer dönebilirsiniz [dönüş deyimi](../../../visual-basic/language-reference/statements/return-statement.md) veya dönüş değeri özellik adına atayarak. Daha fazla bilgi için bkz: "Dönüş değeri" [Function deyimi](../../../visual-basic/language-reference/statements/function-statement.md).  
   
      `Exit Property` Ve `Return` deyimleri neden hemen bir çıkış bir özellik yordam. Herhangi bir sayıda `Exit Property` ve `Return` deyimleri yordamda herhangi bir yerinde görünebilir ve karıştırabilir miyim `Exit Property` ve `Return` deyimleri.  
   
@@ -91,8 +82,8 @@ End Get
  [!code-vb[VbVbalrStatements#30](../../../visual-basic/language-reference/error-messages/codesnippet/VisualBasic/get-statement_4.vb)]  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [Set deyimi](../../../visual-basic/language-reference/statements/set-statement.md)  
- [Property deyimi](../../../visual-basic/language-reference/statements/property-statement.md)  
- [Exit deyimi](../../../visual-basic/language-reference/statements/exit-statement.md)  
- [Nesneler ve sınıflar](../../../visual-basic/programming-guide/language-features/objects-and-classes/index.md)  
- [İzlenecek yol: Sınıfları tanımlama](../../../visual-basic/programming-guide/language-features/objects-and-classes/walkthrough-defining-classes.md)
+ [Set Deyimi](../../../visual-basic/language-reference/statements/set-statement.md)  
+ [Property Deyimi](../../../visual-basic/language-reference/statements/property-statement.md)  
+ [Exit Deyimi](../../../visual-basic/language-reference/statements/exit-statement.md)  
+ [Nesneler ve Sınıflar](../../../visual-basic/programming-guide/language-features/objects-and-classes/index.md)  
+ [İzlenecek Yol: Sınıfları Tanımlama](../../../visual-basic/programming-guide/language-features/objects-and-classes/walkthrough-defining-classes.md)

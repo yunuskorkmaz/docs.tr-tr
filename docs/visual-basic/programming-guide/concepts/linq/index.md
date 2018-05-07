@@ -1,23 +1,12 @@
 ---
 title: Dil ile tümleşik sorgu (LINQ) (Visual Basic)
-ms.custom: ''
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- devlang-visual-basic
-ms.tgt_pltfrm: ''
-ms.topic: article
 ms.assetid: a99371f7-097c-49a0-b62b-0e31c34aad0e
-caps.latest.revision: 4
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: 4c465d18ec8b728b9b06d3de70e55b1275d1a565
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.openlocfilehash: 7f16f8f8b806466fb7c73689731094c106e68c9f
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="language-integrated-query-linq-visual-basic"></a>Dil ile tümleşik sorgu (LINQ) (Visual Basic)
 LINQ Visual Basic dili sözdizimi güçlü sorgu özelliklerini genişleten bir özellik kümesidir. Verileri güncelleştirme ve sorgulama için standart, kolayca öğrenilen desenleri LINQ tanıtır ve teknoloji büyük olasılıkla herhangi bir veri deposu türünü desteklemek için genişletilebilir.  .NET Framework ile .NET Framework koleksiyonları, SQL Server veritabanlarını, ADO.NET veri kümeleri ve XML belgelerini LINQ kullanımını etkinleştirmek LINQ sağlayıcı derlemelerini içerir.  
@@ -41,8 +30,8 @@ LINQ Visual Basic dili sözdizimi güçlü sorgu özelliklerini genişleten bir 
  [LINQ-XML (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-to-xml.md)  
  LINQ-XML belge nesne modeli (DOM) bellek içi belge değişikliği yetenekleri sağlayan ve LINQ Sorgu ifadeleri destekler kullanmayı açıklayan konulara bağlantılar içerir.  
   
- [ADO.NET'e LINQ (Portal sayfası)](../../../../visual-basic/programming-guide/concepts/linq/linq-to-adonet-portal-page.md)  
+ [LINQ to ADO.NET (Portal Sayfası)](../../../../visual-basic/programming-guide/concepts/linq/linq-to-adonet-portal-page.md)  
  Veri kümesi, LINQ-SQL ve LINQ to Entities LINQ ile ilgili belgeler için bir giriş noktası sağlar. LINQ-DataSet içine daha zengin sorgu özellikleri oluşturmanıza olanak sağlayan <xref:System.Data.DataSet> diğer veri kaynakları için kullanılabilir aynı sorgu işlevini kullanarak. LINQ-SQL, ilişkisel veri nesneleri olarak yönetmek için bir çalışma zamanı altyapısı sağlar. LINQ to Entities geliştiriciler C# kullanarak Entity Framework kavramsal model sorguları yazma sağlar.  
   
- [LINQ sorgusu için veri kaynağı etkinleştirme](../../../../visual-basic/programming-guide/concepts/linq/enabling-a-data-source-for-linq-querying.md)  
+ [LINQ Sorgusu için Veri Kaynağı Etkinleştirme](../../../../visual-basic/programming-guide/concepts/linq/enabling-a-data-source-for-linq-querying.md)  
  LINQ sağlayıcılar, LINQ ifade ağaçları ve LINQ genişletmek için diğer yolları tanıtılmaktadır.

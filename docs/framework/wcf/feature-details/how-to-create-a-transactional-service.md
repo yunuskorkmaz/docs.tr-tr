@@ -1,26 +1,12 @@
 ---
 title: 'Nasıl yapılır: İşlemsel Hizmet Oluşturma'
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 ms.assetid: 1bd2e4ed-a557-43f9-ba98-4c70cb75c154
-caps.latest.revision: 12
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 9e39ecd346b5d5fb4113fd17abe9bde715a12aa4
-ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
+ms.openlocfilehash: d59c0b96b766f0692c7b84a02deed55e32dc655a
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/28/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-create-a-transactional-service"></a>Nasıl yapılır: İşlemsel Hizmet Oluşturma
 Bu örnek, çeşitli yönlerini oluşturma işlemsel hizmet ve hizmet işlemleri koordine etmek için bir istemci tarafından başlatılan işlem kullanımını gösterir.  
@@ -104,7 +90,7 @@ Bu örnek, çeşitli yönlerini oluşturma işlemsel hizmet ve hizmet işlemleri
   
 ### <a name="supporting-multiple-transaction-protocols"></a>Birden çok işlem protokolleri destekleme  
   
-1.  En iyi performans için bir istemci ve hizmet kullanılarak yazılmış içeren senaryoları için OleTransactions Protokolü kullanması gereken [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)]. Ancak, üçüncü taraf protokol yığını ile birlikte çalışabilirlik gerekli olduğunda WS-AtomicTransaction (WS-AT) protokolü senaryoları için kullanışlıdır. Yapılandırabileceğiniz [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] iki protokolü de uygun protokole özgü bağlamalarla birden çok uç nokta sağlayarak aşağıdaki örnek yapılandırmada gösterildiği gibi kabul etmek üzere Hizmetleri.  
+1.  En iyi performans için bir istemci ve Windows Communication Foundation (WCF) kullanılarak yazılmış hizmetini içeren senaryoları için OleTransactions Protokolü kullanmanız gerekir. Ancak, üçüncü taraf protokol yığını ile birlikte çalışabilirlik gerekli olduğunda WS-AtomicTransaction (WS-AT) protokolü senaryoları için kullanışlıdır. WCF hizmetleri her iki protokole uygun protokole özgü bağlamalarla birden çok uç nokta sağlayarak aşağıdaki örnek yapılandırmada gösterildiği gibi kabul edecek şekilde yapılandırabilirsiniz.  
   
     ```xml  
     <service name="CalculatorService">  
@@ -139,7 +125,7 @@ Bu örnek, çeşitli yönlerini oluşturma işlemsel hizmet ve hizmet işlemleri
   
 ### <a name="controlling-the-completion-of-a-transaction"></a>Bir işlemin tamamlanmasından denetleme  
   
-1.  Varsayılan olarak, [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] işlemleri hiçbir işlenmeyen özel durumlar varsa işlemleri otomatik olarak tamamlar. Kullanarak bu davranışı değiştirebilirsiniz <xref:System.ServiceModel.OperationBehaviorAttribute.TransactionAutoComplete%2A> özelliği ve <xref:System.ServiceModel.OperationContext.SetTransactionComplete%2A> yöntemi. Bir işlem başka bir işlem (örneğin, Borç ve alacak işlemi) olarak aynı işlem içinde gerçekleşmesi için gerekli olduğunda, otomatik tamamlama davranışı ayarlayarak devre dışı bırakabilirsiniz <xref:System.ServiceModel.OperationBehaviorAttribute.TransactionAutoComplete%2A> özelliğine `false` aşağıda gösterildiği gibi `Debit` işlemi örnek. İşlem `Debit` işlemi kullanan bir yöntemle kadar tamamlanmaz <xref:System.ServiceModel.OperationBehaviorAttribute.TransactionAutoComplete%2A> özelliğini `true` işlemde gösterildiği gibi denir `Credit1`, veya ne zaman <xref:System.ServiceModel.OperationContext.SetTransactionComplete%2A> yöntemi açık olarak işaretlemek için çağrılır işlem işlemde gösterildiği gibi tam `Credit2`. İki kredi işlemleri gösterim amacıyla gösterilir ve tek bir işlem kredi daha tipik olacaktır unutmayın.  
+1.  Hiçbir işlenmeyen özel durumlar, varsayılan olarak, WCF işlem işlemleri otomatik olarak tamamlar. Kullanarak bu davranışı değiştirebilirsiniz <xref:System.ServiceModel.OperationBehaviorAttribute.TransactionAutoComplete%2A> özelliği ve <xref:System.ServiceModel.OperationContext.SetTransactionComplete%2A> yöntemi. Bir işlem başka bir işlem (örneğin, Borç ve alacak işlemi) olarak aynı işlem içinde gerçekleşmesi için gerekli olduğunda, otomatik tamamlama davranışı ayarlayarak devre dışı bırakabilirsiniz <xref:System.ServiceModel.OperationBehaviorAttribute.TransactionAutoComplete%2A> özelliğine `false` aşağıda gösterildiği gibi `Debit` işlemi örnek. İşlem `Debit` işlemi kullanan bir yöntemle kadar tamamlanmaz <xref:System.ServiceModel.OperationBehaviorAttribute.TransactionAutoComplete%2A> özelliğini `true` işlemde gösterildiği gibi denir `Credit1`, veya ne zaman <xref:System.ServiceModel.OperationContext.SetTransactionComplete%2A> yöntemi açık olarak işaretlemek için çağrılır işlem işlemde gösterildiği gibi tam `Credit2`. İki kredi işlemleri gösterim amacıyla gösterilir ve tek bir işlem kredi daha tipik olacaktır unutmayın.  
   
     ```  
     [ServiceBehavior]  
@@ -195,7 +181,7 @@ Bu örnek, çeşitli yönlerini oluşturma işlemsel hizmet ve hizmet işlemleri
   
 ### <a name="controlling-the-lifetime-of-a-transactional-service-instance"></a>Bir işlem hizmet örneği ömrü denetleme  
   
-1.  [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] kullanan <xref:System.ServiceModel.ServiceBehaviorAttribute.ReleaseServiceInstanceOnTransactionComplete%2A> özelliği bir işlem tamamlandığında, temel alınan hizmet örneği yayımlanan olup olmadığını belirtin. Bu varsayılan olarak bu yana `true`, aksi takdirde yapılandırılmadıkça [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] verimli ve öngörülebilir "tam zamanında" etkinleştirme davranışı sergiler. Bir hizmete bir sonraki işlem üzerinde yapılan çağrı hiçbir kalanları önceki işlemdeki durumu ile yeni bir hizmet örneği garanti. Bazen bu genellikle yararlı olsa da, işlem tamamlandığında ötesinde hizmet örneği içinde durumunu korumak isteyebilirsiniz. Gerekli durumu veya kaynakları işleyicilerine alınamıyor veya yeniden oluşturma pahalı olduğunda bu örnekleri olacaktır. Bunu ayarlayarak yapabilirsiniz <xref:System.ServiceModel.ServiceBehaviorAttribute.ReleaseServiceInstanceOnTransactionComplete%2A> özelliğine `false`. Bu ayar, örneği ve herhangi bir ilişkili durum sonraki çağrılar kullanılabilir. Bu kullanırken için ne zaman etkinleştirildiğine ve nasıl durumu ve işlemleri temizlenmiş tamamlandı ve. Aşağıdaki örnek bu örnekle tutarak bunu nasıl yapacağınızı gösterir `runningTotal` değişkeni.  
+1.  WCF kullanan <xref:System.ServiceModel.ServiceBehaviorAttribute.ReleaseServiceInstanceOnTransactionComplete%2A> özelliği bir işlem tamamlandığında, temel alınan hizmet örneği yayımlanan olup olmadığını belirtin. Bu varsayılan olarak bu yana `true`, aksi takdirde, WCF sergiler bir verimli ve öngörülebilir "tam zamanında" etkinleştirme davranışı yapılandırılmadıkça. Bir hizmete bir sonraki işlem üzerinde yapılan çağrı hiçbir kalanları önceki işlemdeki durumu ile yeni bir hizmet örneği garanti. Bazen bu genellikle yararlı olsa da, işlem tamamlandığında ötesinde hizmet örneği içinde durumunu korumak isteyebilirsiniz. Gerekli durumu veya kaynakları işleyicilerine alınamıyor veya yeniden oluşturma pahalı olduğunda bu örnekleri olacaktır. Bunu ayarlayarak yapabilirsiniz <xref:System.ServiceModel.ServiceBehaviorAttribute.ReleaseServiceInstanceOnTransactionComplete%2A> özelliğine `false`. Bu ayar, örneği ve herhangi bir ilişkili durum sonraki çağrılar kullanılabilir. Bu kullanırken için ne zaman etkinleştirildiğine ve nasıl durumu ve işlemleri temizlenmiş tamamlandı ve. Aşağıdaki örnek bu örnekle tutarak bunu nasıl yapacağınızı gösterir `runningTotal` değişkeni.  
   
     ```  
     [ServiceBehavior(TransactionIsolationLevel = [ServiceBehavior(  

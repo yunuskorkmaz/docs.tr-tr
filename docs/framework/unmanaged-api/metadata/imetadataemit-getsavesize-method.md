@@ -1,14 +1,6 @@
 ---
 title: IMetaDataEmit::GetSaveSize Metodu
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: reference
 api_name:
 - IMetaDataEmit.GetSaveSize
 api_location:
@@ -23,17 +15,13 @@ helpviewer_keywords:
 ms.assetid: 8aea2e2c-23a3-4cda-9a06-e19f97383830
 topic_type:
 - apiref
-caps.latest.revision: 
 author: mairaw
 ms.author: mairaw
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 7585f6adbca97b252fdad90276b0cd422d32c04a
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: d9a65f76aed00e2b848f8603f1fee4d6acc91f99
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="imetadataemitgetsavesize-method"></a>IMetaDataEmit::GetSaveSize Metodu
 Derleme ve meta verilerini tahmini ikili boyutunu geçerli kapsamda alır.  
@@ -61,7 +49,7 @@ HRESULT GetSaveSize (
  [out] Dosyayı kaydetmek için gereken boyutu için bir işaretçi.  
   
 ## <a name="remarks"></a>Açıklamalar  
- `GetSaveSize`, derleme ve tüm meta veriler geçerli kapsamda kaydetmek için bayt cinsinden gerekli alanı hesaplar. (Çağrı [Imetadataemit::savetostream](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-savetostream-method.md) yöntemi bu bayt sayısını yayması.)  
+ `GetSaveSize` , derleme ve tüm meta veriler geçerli kapsamda kaydetmek için bayt cinsinden gerekli alanı hesaplar. (Çağrı [Imetadataemit::savetostream](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-savetostream-method.md) yöntemi bu bayt sayısını yayması.)  
   
  Arayan uyguluyorsa [Imaptoken](../../../../docs/framework/unmanaged-api/metadata/imaptoken-interface.md) arabirimi (aracılığıyla [Imetadataemit::sethandler](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-sethandler-method.md) veya [Imetadataemit::Merge](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-merge-method.md)), `GetSaveSize` iki geçişleri gerçekleştirecek en iyi duruma getirme ve onu sıkıştırmak için meta veriler üzerinde. Aksi takdirde, herhangi bir iyileştirme gerçekleştirilir.  
   
@@ -74,7 +62,7 @@ HRESULT GetSaveSize (
   
  **Kitaplığı:** MSCorEE.dll kaynak olarak kullanılır  
   
- **.NET framework sürümleri:**[!INCLUDE[net_current_v11plus](../../../../includes/net-current-v11plus-md.md)]  
+ **.NET framework sürümleri:** [!INCLUDE[net_current_v11plus](../../../../includes/net-current-v11plus-md.md)]  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
  [IMetaDataEmit Arabirimi](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-interface.md)  

@@ -1,29 +1,17 @@
 ---
-title: "XAML Kaynakları"
-ms.custom: 
+title: XAML Kaynakları
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-wpf
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - reusing resources [WPF]
 - resources [WPF], reusing
 - reusing commonly defined objects [WPF]
 - XAML [WPF], reusing resources
 ms.assetid: 91580b89-a0a8-4889-aecb-fddf8e63175f
-caps.latest.revision: "33"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: a2d58802bcdfa57bb7689e7406651fcc9829a7e5
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 7b917b13909c463cd9d518d79bf8ce2683591dda
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="xaml-resources"></a>XAML Kaynakları
 Uygulamanız farklı yerde yeniden kullanılabilir bir nesne bir kaynaktır. Fırçalar ve stiller kaynakları örneklerindendir. Bu genel bakışta, kaynakları kullanmayı açıklar [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]. Ayrıca oluşturabilir ve kod kullanarak veya birbirinin yerine kodu arasında kaynaklarına erişim ve [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)]. Daha fazla bilgi için bkz: [kaynaklar ve kod](../../../../docs/framework/wpf/advanced/resources-and-code.md).  
@@ -162,7 +150,7 @@ Uygulamanız farklı yerde yeniden kullanılabilir bir nesne bir kaynaktır. Fı
   
  Örtük anahtarları stilleri için geçerli olmayan bir denetim varsa <xref:System.Windows.FrameworkElement.OverridesDefaultStyle%2A> olan `true` (Ayrıca <xref:System.Windows.FrameworkElement.OverridesDefaultStyle%2A> yerel davranışı control sınıfı için yerine açıkça denetim örneği üzerinde bir parçası olarak ayarlanmış olabilir). Ayrıca, türetilmiş sınıf senaryolarının örtülü anahtarlarını desteklemek için denetim geçersiz kılmanız gerekir <xref:System.Windows.FrameworkElement.DefaultStyleKey%2A> (parçası olarak sağlanan tüm var olan denetimleri [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] bunu). Stiller, temalar ve tasarım denetimi hakkında daha fazla bilgi için bkz: [tasarlama Stillenebilir Denetimleri için yönergeleri](../../../../docs/framework/wpf/controls/guidelines-for-designing-stylable-controls.md).  
   
- <xref:System.Windows.DataTemplate>Ayrıca bir örtük anahtar içeriyor. Örtük anahtar için bir <xref:System.Windows.DataTemplate> olan <xref:System.Windows.DataTemplate.DataType%2A> özellik değeri. <xref:System.Windows.DataTemplate.DataType%2A>açıkça kullanmak yerine türünün adı da belirtilebilir [{x: Type...} ](../../../../docs/framework/xaml-services/x-type-markup-extension.md). Ayrıntılar için bkz [veri şablonu özeti](../../../../docs/framework/wpf/data/data-templating-overview.md).  
+ <xref:System.Windows.DataTemplate> Ayrıca bir örtük anahtar içeriyor. Örtük anahtar için bir <xref:System.Windows.DataTemplate> olan <xref:System.Windows.DataTemplate.DataType%2A> özellik değeri. <xref:System.Windows.DataTemplate.DataType%2A> açıkça kullanmak yerine türünün adı da belirtilebilir [{x: Type...} ](../../../../docs/framework/xaml-services/x-type-markup-extension.md). Ayrıntılar için bkz [veri şablonu özeti](../../../../docs/framework/wpf/data/data-templating-overview.md).  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
  <xref:System.Windows.ResourceDictionary>  

@@ -1,22 +1,12 @@
 ---
-title: "İş parçacığı eşitleme (Visual Basic)"
-ms.custom: 
+title: İş parçacığı eşitleme (Visual Basic)
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 04f485d1-8333-4510-9e72-c334e7427e7e
-caps.latest.revision: "3"
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: 643dbb6fdceb4e1cfd074d3a532787562dbfd03b
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 9922230e1c7f2bd30c575bd66387feb4850a298b
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="thread-synchronization-visual-basic"></a>İş parçacığı eşitleme (Visual Basic)
 Aşağıdaki bölümlerde, özellikleri ve kaynakları birden çok iş parçacıklı uygulamalarda erişimi eşitlemek için kullanılan sınıflar açıklanmaktadır.  
@@ -29,11 +19,11 @@ Aşağıdaki bölümlerde, özellikleri ve kaynakları birden çok iş parçacı
   
  Birden çok iş parçacıklı programlama hakkında arka plan bilgileri için bkz:  
   
--   [Yönetilen iş parçacığı oluşturma temelleri](../../../../standard/threading/managed-threading-basics.md)  
+-   [Yönetilen İş Parçacığı Oluşturma Temelleri](../../../../standard/threading/managed-threading-basics.md)  
   
--   [İş parçacığı kullanma ve iş parçacığı oluşturma](../../../../standard/threading/using-threads-and-threading.md)  
+-   [İş Parçacıkları ve İş Parçacığı Oluşturmayı Kullanma](../../../../standard/threading/using-threads-and-threading.md)  
   
--   [Yönetilen iş parçacığı oluşturma en iyi uygulamalar](../../../../standard/threading/managed-threading-best-practices.md)  
+-   [Yönetilen İş Parçacığı Oluşturma En İyi Yöntemleri](../../../../standard/threading/managed-threading-best-practices.md)  
   
 ## <a name="the-lock-and-synclock-keywords"></a>Kilit ve SyncLock anahtar sözcükler  
  Visual Basic `SyncLock` deyimi bir kod bloğu kesintisiz tamamlama çalıştığından emin olmak için kullanılabilir diğer iş parçacıkları tarafından. Bu kod bloğu boyunca belirli bir nesne için karşılıklı dışlama kilidi elde ederek gerçekleştirilir.  
@@ -58,7 +48,7 @@ End Class
   
  Hakkında daha fazla bilgi için `SyncLock` deyimi, aşağıdaki konulara bakın:  
   
--   [SyncLock deyimi](../../../../visual-basic/language-reference/statements/synclock-statement.md)  
+-   [SyncLock Deyimi](../../../../visual-basic/language-reference/statements/synclock-statement.md)  
   
 -   <xref:System.Threading.Monitor>  
   
@@ -90,7 +80,7 @@ End Try
   
  Eşitleme olayları iki tür vardır: <xref:System.Threading.AutoResetEvent>, ve <xref:System.Threading.ManualResetEvent>. Bunlar yalnızca, farklı <xref:System.Threading.AutoResetEvent> değişikliklerden işaret çok unsignaled otomatik olarak herhangi bir zaman, bir iş parçacığı etkinleştirir. Buna karşılık, bir <xref:System.Threading.ManualResetEvent> herhangi bir sayıda iş durumuna göre etkinleştirilmesi için iş parçacığı sağlar ve yalnızca bir unsignaled döner duruma kendi <xref:System.Threading.EventWaitHandle.Reset%2A> yöntemi çağrılır.  
   
- İş parçacığı arama bekleme yöntemlerden biri tarafından olaylarına gibi beklenecek yapılabilir <xref:System.Threading.WaitHandle.WaitOne%2A>, <xref:System.Threading.WaitHandle.WaitAny%2A>, veya <xref:System.Threading.WaitHandle.WaitAll%2A>. <xref:System.Threading.WaitHandle.WaitOne%2A?displayProperty=nameWithType>tek bir olay işaret hale beklemek için iş parçacığı neden <xref:System.Threading.WaitHandle.WaitAny%2A?displayProperty=nameWithType> bir veya daha fazla belirtilen olayları işaret hale kadar bir iş parçacığı engeller ve <xref:System.Threading.WaitHandle.WaitAll%2A?displayProperty=nameWithType> tüm belirtilen olaylar işaret hale kadar iş parçacığı engeller. Bir olay işaret olur, kendi <xref:System.Threading.EventWaitHandle.Set%2A> yöntemi çağrılır.  
+ İş parçacığı arama bekleme yöntemlerden biri tarafından olaylarına gibi beklenecek yapılabilir <xref:System.Threading.WaitHandle.WaitOne%2A>, <xref:System.Threading.WaitHandle.WaitAny%2A>, veya <xref:System.Threading.WaitHandle.WaitAll%2A>. <xref:System.Threading.WaitHandle.WaitOne%2A?displayProperty=nameWithType> tek bir olay işaret hale beklemek için iş parçacığı neden <xref:System.Threading.WaitHandle.WaitAny%2A?displayProperty=nameWithType> bir veya daha fazla belirtilen olayları işaret hale kadar bir iş parçacığı engeller ve <xref:System.Threading.WaitHandle.WaitAll%2A?displayProperty=nameWithType> tüm belirtilen olaylar işaret hale kadar iş parçacığı engeller. Bir olay işaret olur, kendi <xref:System.Threading.EventWaitHandle.Set%2A> yöntemi çağrılır.  
   
  Aşağıdaki örnekte, bir iş parçacığı oluşturulur ve başlatan `Main` işlevi. Bir olay kullanarak yeni bir iş parçacığı bekler <xref:System.Threading.WaitHandle.WaitOne%2A> yöntemi. Olay yürütüyor birincil iş parçacığı tarafından işaret hale kadar iş parçacığı askıya `Main` işlevi. Olay işaret hale sonra yardımcı iş parçacığı döndürür. Bu durumda, olay yalnızca bir iş parçacığı etkinleştirme için ya da kullanıldığından <xref:System.Threading.AutoResetEvent> veya <xref:System.Threading.ManualResetEvent> sınıfları kullanılabilirdi.  
   
@@ -157,8 +147,8 @@ End Module
  <xref:System.Threading.EventWaitHandle.Set%2A>  
  <xref:System.Threading.Monitor>  
  [Birden çok iş parçacıklı uygulamalar (Visual Basic)](../../../../visual-basic/programming-guide/concepts/threading/multithreaded-applications.md)  
- [SyncLock deyimi](../../../../visual-basic/language-reference/statements/synclock-statement.md)  
- [Zaman uyumu sağlayıcılar](../../../../standard/threading/mutexes.md)  
- [Birbirine kenetlenmiş işlemler](../../../../standard/threading/interlocked-operations.md)  
+ [SyncLock Deyimi](../../../../visual-basic/language-reference/statements/synclock-statement.md)  
+ [Karşılıklı dışlamalar](../../../../standard/threading/mutexes.md)  
+ [Birbirine Kenetlenmiş İşlemler](../../../../standard/threading/interlocked-operations.md)  
  [AutoResetEvent](../../../../standard/threading/autoresetevent.md)  
- [İçin Veri Eşitleme çoklu iş parçacığı kullanımı](../../../../standard/threading/synchronizing-data-for-multithreading.md)
+ [Çoklu İş Parçacığı Kullanımı için Veri Eşitleme](../../../../standard/threading/synchronizing-data-for-multithreading.md)

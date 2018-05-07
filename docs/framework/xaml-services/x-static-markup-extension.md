@@ -1,13 +1,6 @@
 ---
-title: "x:Static İşaretleme Uzantısı"
-ms.custom: 
+title: x:Static İşaretleme Uzantısı
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-wpf
-ms.tgt_pltfrm: 
-ms.topic: article
 f1_keywords:
 - StaticExtension
 - xStatic
@@ -17,16 +10,11 @@ helpviewer_keywords:
 - Static markup extension in XAML [XAML Services]
 - XAML [XAML Services], x:Static markup extension
 ms.assetid: 056aee79-7cdd-434f-8174-dfc856cad343
-caps.latest.revision: "25"
-author: wadepickett
-ms.author: wpickett
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 647bfed7b321a949090f6da047f9b8105d335101
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 980bf6a1bdb19afd5c8d3c798d31037ab8cd7086
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="xstatic-markup-extension"></a>x:Static İşaretleme Uzantısı
 Tanımlanan herhangi bir statik değer tarafından kod varlığa başvuruda bulunan bir [!INCLUDE[TLA#tla_cls](../../../includes/tlasharptla-cls-md.md)]– uyumlu yolu. Başvurulan statik özellik XAML'de özelliğinin değeri sağlamak için kullanılabilir.  
@@ -41,7 +29,7 @@ Tanımlanan herhangi bir statik değer tarafından kod varlığa başvuruda bulu
   
 |||  
 |-|-|  
-|`prefix`|İsteğe bağlı. Eşlenen, varsayılan olmayan XAML ad alanına başvuruyor öneki. `prefix`Varsayılan XAML ad alanından gelen statik özellikler nadiren aldığından açıkça kullanımı gösterilmiştir. Açıklamalar bakın.|  
+|`prefix`|İsteğe bağlı. Eşlenen, varsayılan olmayan XAML ad alanına başvuruyor öneki. `prefix` Varsayılan XAML ad alanından gelen statik özellikler nadiren aldığından açıkça kullanımı gösterilmiştir. Açıklamalar bakın.|  
 |`typeName`|Gerekli. İstenen statik üyenin tanımlayan tür adı.|  
 |`staticMemberName`|Gerekli. İstenen statik değere üyesi (sabit bir değer, bir statik özellik, bir alan veya bir numaralandırma değeri) adı.|  
   
@@ -68,13 +56,13 @@ Tanımlanan herhangi bir statik değer tarafından kod varlığa başvuruda bulu
   
  Teknik olarak mümkün başka iki XAML kullanımı vardır. Ancak, gereksiz yere ayrıntılı olduğundan bu kullanımları daha az yaygın olan:  
   
- **Nesne öğesi sözdizimi:** `<x:Static Member="` `prefix` `:` `typeName` `.` `staticMemberName``" .../>`  
+ **Nesne öğesi sözdizimi:** `<x:Static Member="` `prefix` `:` `typeName` `.` `staticMemberName` `" .../>`  
   
- **Öznitelik başlatma dizesi için açık üye özelliğiyle sözdizimi:** `<` `object`  ``  `property` `="{x:Static Member=` `prefix` `:` `typeName` `.` `staticMemberName``}" .../>`  
+ **Başlatma dizesinin açık üye özelliğiyle öznitelik sözdizimi:** `<` `object` `` `property` `="{x:Static Member=` `prefix` `:` `typeName` `.` `staticMemberName` `}" .../>`  
   
  .NET Framework XAML hizmetlerinde uygulamasında bu biçimlendirme uzantısı işlenmesi tarafından tanımlanan <xref:System.Windows.Markup.StaticExtension> sınıfı.  
   
- `x:Static`bir biçimlendirme uzantısıdır. XAML Kullanımdaki tüm biçimlendirme uzantıları `{` ve `}` olarak XAML işlemci tanıdığı biçimlendirme uzantısı bir değer girmelisiniz kuralı kendi öznitelik sözdiziminde karakterler. Biçimlendirme uzantıları hakkında daha fazla bilgi için bkz: [işaretleme uzantılarına genel bakış XAML](../../../docs/framework/xaml-services/markup-extensions-for-xaml-overview.md).  
+ `x:Static` bir biçimlendirme uzantısıdır. XAML Kullanımdaki tüm biçimlendirme uzantıları `{` ve `}` olarak XAML işlemci tanıdığı biçimlendirme uzantısı bir değer girmelisiniz kuralı kendi öznitelik sözdiziminde karakterler. Biçimlendirme uzantıları hakkında daha fazla bilgi için bkz: [işaretleme uzantılarına genel bakış XAML](../../../docs/framework/xaml-services/markup-extensions-for-xaml-overview.md).  
   
 ## <a name="wpf-usage-notes"></a>WPF kullanım notları  
  WPF programlama için kullandığınız varsayılan XAML ad uzayı pek çok yararlı statik özellikleri içermiyor ve yararlı statik özelliklerinin çoğu sahip gerek kalmadan kullanım kolaylaştırmak tür dönüştürücüleri gibi destek `{x:Static}` . Statik özellikler için aşağıdakilerden biri doğruysa bir XAML ad alanı için bir önek eşlemeniz gerekir:  

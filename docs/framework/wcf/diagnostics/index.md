@@ -1,14 +1,6 @@
 ---
 title: Yönetim ve Tanılama
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 helpviewer_keywords:
 - Windows Communication Foundation, diagnostics
 - Windows Communication Foundation, administration
@@ -17,20 +9,14 @@ helpviewer_keywords:
 - administration [WCF]
 - WCF, administration
 ms.assetid: 34c81c08-0e0f-4fbc-9ae8-91948640ee43
-caps.latest.revision: 19
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: fa5256f543a99618e00dc88e085dfee4ac76ebab
-ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
-ms.translationtype: MT
+ms.openlocfilehash: 552ddb842e0a922493feccee1e48e7d5e74291ad
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/28/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="administration-and-diagnostics"></a>Yönetim ve Tanılama
-[!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] zengin bir uygulamanın yaşam farklı aşamalarını izlemenize yardımcı olabilir işlevler sağlar. Örneğin, hizmetleri ve dağıtım istemcilerinde ayarlamak için yapılandırma kullanabilirsiniz. [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] çok sayıda uygulamanızın performansını ölçmek yardımcı olması için performans sayaçları içerir. [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] Ayrıca İnceleme çalışma zamanında bir hizmetin kullanıma sunan bir [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] Windows Yönetim Araçları (WMI) sağlayıcısı. Uygulama arızalanması veya hatalı davranan başlatıldığında, önemli bir şey gerçekleşip gerçekleşmediğini görmek için olay günlüğünü kullanabilirsiniz. Hangi olayların oluşmasını uçtan uca uygulamanızda olduğunu görmek için ileti günlüğe kaydetme ve izleme de kullanabilirsiniz. Bu özellikler geliştiriciler ve BT uzmanları sorun giderme için yardımcı bir [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] düzgün çalışmıyorsa, uygulama.  
+Windows Communication Foundation (WCF) zengin bir uygulamanın yaşam farklı aşamalarını izlemenize yardımcı olabilir işlevler sağlar. Örneğin, hizmetleri ve dağıtım istemcilerinde ayarlamak için yapılandırma kullanabilirsiniz. [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] çok sayıda uygulamanızın performansını ölçmek yardımcı olması için performans sayaçları içerir. [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] Ayrıca İnceleme çalışma zamanında bir hizmetin kullanıma sunan bir [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] Windows Yönetim Araçları (WMI) sağlayıcısı. Uygulama arızalanması veya hatalı davranan başlatıldığında, önemli bir şey gerçekleşip gerçekleşmediğini görmek için olay günlüğünü kullanabilirsiniz. Hangi olayların oluşmasını uçtan uca uygulamanızda olduğunu görmek için ileti günlüğe kaydetme ve izleme de kullanabilirsiniz. Bu özellikler geliştiriciler ve BT uzmanları sorun giderme için yardımcı bir [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] düzgün çalışmıyorsa, uygulama.  
   
 > [!NOTE]
 >  Ayrıntılı bilgi yok hataları alıyorsanız, etkinleştirmelisiniz `includeExceptionDetailInFaults` özniteliği [ \<serviceDebug >](../../../../docs/framework/configure-apps/file-schema/wcf/servicedebug.md) yapılandırma öğesi. Bu bildirir [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] özel durum ayrıntısı, daha gelişmiş tanılama gerek kalmadan birçok ortak sorunları belirlemenize olanak tanıyan istemcilere göndermek için. Daha fazla bilgi için bkz: [gönderme ve alma hataları](../../../../docs/framework/wcf/sending-and-receiving-faults.md).  

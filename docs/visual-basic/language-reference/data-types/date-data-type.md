@@ -1,11 +1,6 @@
 ---
-title: "Date Veri Türü (Visual Basic)"
+title: Date Veri Türü (Visual Basic)
 ms.date: 07/20/2015
-ms.prod: .net
-ms.suite: 
-ms.technology:
-- devlang-visual-basic
-ms.topic: article
 f1_keywords:
 - vb.Date
 helpviewer_keywords:
@@ -20,14 +15,11 @@ helpviewer_keywords:
 - literals [Visual Basic], Date
 - '# specifier for Date literals'
 ms.assetid: d9edf5b0-e85e-438b-a1cf-1f321e7c831b
-caps.latest.revision: 
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: 190b40888dc4a42075b7b6b27bdb1bd403a7efb5
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: b7827206d6e145b559d9716df5ec4a98ac4ea0b5
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="date-data-type-visual-basic"></a>Date Veri Türü (Visual Basic)
 1 Ocak 0001-31 Aralık 9999 yılın yılın arasında değişen tarih ve saat 12:00: 00'da (gece yarısı) temsil eden IEEE 64-bit (8-bayt) değerleri PM 11:59:59.9999999 tutar. Her artış başlayarak Gregoryen takvim 1 yılının 1 Ocak 100 nanosaniye geçen süreyi temsil eder. En yüksek değer 100 nanosaniye başlangıcından 10000 yılın 1 Ocak önce temsil eder.  
@@ -70,7 +62,7 @@ Dim dateInMay As New System.DateTime(1993, 5, 31, 12, 14, 0)
   
 -   **Birlikte çalışma hakkında dikkat edilecek noktalar** Örnek otomasyon veya COM nesneleri için .NET Framework için yazılmaz bileşenleriyle arabirim, diğer ortamlarda türleri tarih unutmayın Visual Basic ile uyumlu olmadığında `Date` türü. Bu tür bir bileşen için bir tarih/saat değişkeni geçirilirse olarak bildirme `Double` yerine `Date` yeni Visual Basic kod ve dönüştürme yöntemleri kullanma <xref:System.DateTime.FromOADate%2A?displayProperty=nameWithType> ve <xref:System.DateTime.ToOADate%2A?displayProperty=nameWithType>.  
   
--   **Karakterleri yazın.** `Date`değişmez değer türü karakteri ya da tanımlayıcı türü karakteri içeriyor. Ancak, derleyici içinde sayı işaretleri arasına değişmez değerleri kabul eder (`# #`) olarak `Date`.  
+-   **Karakterleri yazın.** `Date` değişmez değer türü karakteri ya da tanımlayıcı türü karakteri içeriyor. Ancak, derleyici içinde sayı işaretleri arasına değişmez değerleri kabul eder (`# #`) olarak `Date`.  
   
 -   **Framework türü.** .NET Framework'teki karşılık gelen tür <xref:System.DateTime?displayProperty=nameWithType> yapısı.  
   
@@ -83,9 +75,9 @@ Dim someDateAndTime As Date = #8/13/2002 12:14 PM#
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
  <xref:System.DateTime?displayProperty=nameWithType>  
- [Veri türleri](../../../visual-basic/language-reference/data-types/data-type-summary.md)  
- [Standart tarih ve saat biçim dizeleri](../../../standard/base-types/standard-date-and-time-format-strings.md)  
- [Özel tarih ve saat biçim dizeleri](../../../standard/base-types/custom-date-and-time-format-strings.md)  
- [Tür dönüşüm işlevleri](../../../visual-basic/language-reference/functions/type-conversion-functions.md)  
- [Dönüştürme özeti](../../../visual-basic/language-reference/keywords/conversion-summary.md)  
- [Veri türlerinin etkili kullanımı](../../../visual-basic/programming-guide/language-features/data-types/efficient-use-of-data-types.md)
+ [Veri Türleri](../../../visual-basic/language-reference/data-types/data-type-summary.md)  
+ [Standart Tarih ve Saat Biçim Dizeleri](../../../standard/base-types/standard-date-and-time-format-strings.md)  
+ [Özel Tarih ve Saat Biçim Dizeleri](../../../standard/base-types/custom-date-and-time-format-strings.md)  
+ [Tür Dönüştürme İşlevleri](../../../visual-basic/language-reference/functions/type-conversion-functions.md)  
+ [Dönüştürme Özeti](../../../visual-basic/language-reference/keywords/conversion-summary.md)  
+ [Veri Türlerinin Etkili Kullanımı](../../../visual-basic/programming-guide/language-features/data-types/efficient-use-of-data-types.md)

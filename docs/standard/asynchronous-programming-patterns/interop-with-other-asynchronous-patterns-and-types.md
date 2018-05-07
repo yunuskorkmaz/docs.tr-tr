@@ -1,13 +1,7 @@
 ---
-title: "Diğer Zaman Uyumsuz Desen ve Türlerle Birlikte Çalışma"
-ms.custom: 
+title: Diğer Zaman Uyumsuz Desen ve Türlerle Birlikte Çalışma
 ms.date: 03/30/2017
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
 ms.technology: dotnet-standard
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -18,18 +12,13 @@ helpviewer_keywords:
 - Task-based Asynchronous Pattern, .NET Framework support for
 - .NET Framework, asynchronous design patterns
 ms.assetid: f120a5d9-933b-4d1d-acb6-f034a57c3749
-caps.latest.revision: "11"
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-- dotnetcore
-ms.openlocfilehash: a46358052eb93662408f9c01592f917eee4540b9
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: c92725a43e43877488ff9ba93007530c794dd290
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="interop-with-other-asynchronous-patterns-and-types"></a>Diğer Zaman Uyumsuz Desen ve Türlerle Birlikte Çalışma
 .NET Framework 1.0 sunulan <xref:System.IAsyncResult> düzeni, aksi takdirde olarak bilinen [zaman uyumsuz programlama modeli (APM)](../../../docs/standard/asynchronous-programming-patterns/asynchronous-programming-model-apm.md), veya `Begin/End` düzeni.  .NET Framework 2.0 eklenen [olay tabanlı zaman uyumsuz desen (EAP)](../../../docs/standard/asynchronous-programming-patterns/event-based-asynchronous-pattern-eap.md).  .NET Framework 4'ile başlayan [görev tabanlı zaman uyumsuz desen (TAP)](../../../docs/standard/asynchronous-programming-patterns/task-based-asynchronous-pattern-tap.md) APM ve EAP yerini alır, ancak kolayca geçiş yordamları önceki model oluşturma yeteneği sağlar.  
@@ -94,7 +83,7 @@ ms.lasthandoff: 12/23/2017
   
 <a name="EAP"></a>   
 ## <a name="tasks-and-the-event-based-asynchronous-pattern-eap"></a>Görevleri ve olay tabanlı zaman uyumsuz desen (EAP)  
- Kaydırma bir [olay tabanlı zaman uyumsuz desen (EAP)](../../../docs/standard/asynchronous-programming-patterns/event-based-asynchronous-pattern-eap.md) uygulamasıdır bir APM desen kaydırma değerinden daha karmaşık olduğu EAP düzeni daha fazla değişim ve APM düzeni daha az yapısı.  Göstermek için aşağıdaki kodu sarmalar `DownloadStringAsync` yöntemi.  `DownloadStringAsync`bir URI kabul eder, başlatır `DownloadProgressChanged` ilerleme ve başlatır birden çok istatistikleri rapor için indirilirken olay `DownloadStringCompleted` doldurduktan olay.  Nihai sonucu belirtilen URI sayfanın içeriğini içeren bir dizedir.  
+ Kaydırma bir [olay tabanlı zaman uyumsuz desen (EAP)](../../../docs/standard/asynchronous-programming-patterns/event-based-asynchronous-pattern-eap.md) uygulamasıdır bir APM desen kaydırma değerinden daha karmaşık olduğu EAP düzeni daha fazla değişim ve APM düzeni daha az yapısı.  Göstermek için aşağıdaki kodu sarmalar `DownloadStringAsync` yöntemi.  `DownloadStringAsync` bir URI kabul eder, başlatır `DownloadProgressChanged` ilerleme ve başlatır birden çok istatistikleri rapor için indirilirken olay `DownloadStringCompleted` doldurduktan olay.  Nihai sonucu belirtilen URI sayfanın içeriğini içeren bir dizedir.  
   
  [!code-csharp[Conceptual.AsyncInterop#11](../../../samples/snippets/csharp/VS_Snippets_CLR/Conceptual.AsyncInterop/cs/EAP1.cs#11)]
  [!code-vb[Conceptual.AsyncInterop#11](../../../samples/snippets/visualbasic/VS_Snippets_CLR/Conceptual.AsyncInterop/vb/EAP1.vb#11)]  

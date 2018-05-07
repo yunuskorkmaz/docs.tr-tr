@@ -1,22 +1,12 @@
 ---
 title: Temsilcilerde varyans (Visual Basic)
-ms.custom: 
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 38e9353f-74f8-4211-a8f0-7a495414df4a
-caps.latest.revision: "3"
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: 9fe76a32f76f760497021289ec1c6ce673cec1b8
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: d857f120be0fe810489ba69edb55af9cc0dd6940
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="variance-in-delegates-visual-basic"></a>Temsilcilerde varyans (Visual Basic)
 .NET framework 3.5 yöntem imzaları bulunan tüm temsilcileri C# ve Visual Basic temsilci türleriyle eşleşen farkı desteği sunmuştur. Yalnızca imzalar eşleşen yöntemleri, aynı zamanda daha fazla türetilmiş tür (kovaryans) veya temsilci türü tarafından belirtilenden daha az türetilmiş türler (kontravaryans) sahip parametreleri kabul döndüren yöntemler için atayabilirsiniz Bunun anlamı temsilciler . Bu, hem genel hem de genel olmayan temsilciler içerir.  
@@ -129,9 +119,9 @@ End Sub
 ### <a name="generic-delegates-that-have-variant-type-parameters-in-the-net-framework"></a>.NET Framework değişken sahip genel temsilciler tür parametreleri  
  .NET framework 4 birkaç mevcut genel temsilciler genel tür parametreleri sapma desteği sunulur:  
   
--   `Action`gelen Temsilciler <xref:System> ad alanı, örneğin, <xref:System.Action%601> ve<xref:System.Action%602>  
+-   `Action` gelen Temsilciler <xref:System> ad alanı, örneğin, <xref:System.Action%601> ve <xref:System.Action%602>  
   
--   `Func`gelen Temsilciler <xref:System> ad alanı, örneğin, <xref:System.Func%601> ve<xref:System.Func%602>  
+-   `Func` gelen Temsilciler <xref:System> ad alanı, örneğin, <xref:System.Func%601> ve <xref:System.Func%602>  
   
 -   <xref:System.Predicate%601> Temsilci seçme  
   
@@ -157,7 +147,7 @@ Public Delegate Sub DContravariant(Of In A)(ByVal a As A)
 ```  
   
 > [!IMPORTANT]
->  `ByRef`Visual Basic'te parametreleri değişken işaretlenemez.  
+>  `ByRef` Visual Basic'te parametreleri değişken işaretlenemez.  
   
  Aynı temsilci, ancak farklı tür parametreleri için sapması ve Kovaryans desteklemek mümkündür. Bu, aşağıdaki örnekte gösterilir.  
   
@@ -213,5 +203,5 @@ End Sub
  Gevşek temsilci dönüşümü yöntem imzaları temsilci türleri ile eşleşen daha fazla esneklik sağlar. Örneğin, bir temsilci için bir yöntem atadığınızda işlevi dönüş değerleri atlayın ve parametre belirtimleri atlarsanız olanak sağlar. Daha fazla bilgi için bkz: [gevşek temsilci dönüşümü](../../../../visual-basic/programming-guide/language-features/delegates/relaxed-delegate-conversion.md).  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [Genel türler](~/docs/standard/generics/index.md)  
+ [Genel Türler](~/docs/standard/generics/index.md)  
  [İşlev ve eylem genel temsilciler (Visual Basic) için varyans kullanma](../../../../visual-basic/programming-guide/concepts/covariance-contravariance/using-variance-for-func-and-action-generic-delegates.md)

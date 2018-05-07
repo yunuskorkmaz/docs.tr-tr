@@ -1,22 +1,12 @@
 ---
-title: "Ortak öznitelikler (Visual Basic)"
-ms.custom: 
+title: Ortak öznitelikler (Visual Basic)
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 11fe4894-1bf9-4525-a36b-cddcd3a5d22b
-caps.latest.revision: "3"
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: 9528b7dcfa52c30954929d714bd098eb51886ebd
-ms.sourcegitcommit: 34ec7753acf76f90a0fa845235ef06663dc9e36e
+ms.openlocfilehash: 5a91b0aa48a22db4ea7fb56a9c632ff0cb44dce5
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="common-attributes-visual-basic"></a>Ortak öznitelikler (Visual Basic)
 Bu konuda, Visual Basic programlarında en yaygın olarak kullanılan öznitelikler açıklanmaktadır.  
@@ -31,7 +21,7 @@ Bu konuda, Visual Basic programlarında en yaygın olarak kullanılan öznitelik
   
 -   [Visual Basic öznitelikleri](#VB)  
   
-##  <a name="Global"></a>Genel Öznitelikler  
+##  <a name="Global"></a> Genel Öznitelikler  
  Çoğu öznitelik sınıfları veya yöntemleri gibi belirli bir dil öğeleri uygulanır; Ancak, bazı öznitelikler genel — tüm derleme veya modülü için geçerlidir. Örneğin, <xref:System.Reflection.AssemblyVersionAttribute> özniteliği, böyle bir bütünleştirilmiş sürüm bilgilerini eklemek için kullanılabilir:  
   
 ```vb  
@@ -83,7 +73,7 @@ Bu konuda, Visual Basic programlarında en yaygın olarak kullanılan öznitelik
 |<xref:System.Reflection.AssemblyConfigurationAttribute>|Bir derleme yapılandırmasını (örneğin, tekil veya hata ayıklama) belirten özel bir öznitelik için bir derleme bildirimi tanımlar.|  
 |<xref:System.Reflection.AssemblyDefaultAliasAttribute>|Derleme bildirimi için bir kolay varsayılan diğer adı tanımlar|  
   
-##  <a name="Obsolete"></a>Artık kullanılmayan özniteliği  
+##  <a name="Obsolete"></a> Artık kullanılmayan özniteliği  
  `Obsolete` Özniteliği bir program varlık artık kullanım için önerilen biri olarak işaretler. Artık kullanılmayan olarak işaretlenmiş bir varlığın her kullanın, daha sonra bir uyarı veya öznitelik nasıl yapılandırıldığına bağlı olarak bir hata oluşturur. Örneğin:  
   
 ```vb  
@@ -123,9 +113,9 @@ b.NewMethod()
   
  `Obsolete` Öznitelik bağımsız değişkenler olmadan kullanılabilir, ancak neden bir açıklaması da dahil olmak üzere öğe kullanılmıyor ve ne kullanmanız önerilir.  
   
- `Obsolete` Özniteliği bir tek kullanımlık özniteliği ve öznitelikleri veren herhangi bir varlık için uygulanabilir. `Obsolete`bir diğer adı için <xref:System.ObsoleteAttribute>.  
+ `Obsolete` Özniteliği bir tek kullanımlık özniteliği ve öznitelikleri veren herhangi bir varlık için uygulanabilir. `Obsolete` bir diğer adı için <xref:System.ObsoleteAttribute>.  
   
-##  <a name="Conditional"></a>Koşul özniteliği  
+##  <a name="Conditional"></a> Koşul özniteliği  
  `Conditional` Özniteliği bir yönteminin yürütülmesi üzerinde önişlem tanımlayıcısını bağımlı yapar. `Conditional` Özniteliktir için diğer ad <xref:System.Diagnostics.ConditionalAttribute>ve bir yöntem veya öznitelik sınıfı için uygulanabilir.  
   
  Bu örnekte, `Conditional` etkinleştirmek veya programa özgü tanı bilgilerini görüntülemeyi devre dışı bırakmak için bir yönteme uygulanır:  
@@ -218,7 +208,7 @@ Class SampleClass
 End Class  
 ```  
   
-##  <a name="CallerInfo"></a>Arayan bilgileri öznitelikleri  
+##  <a name="CallerInfo"></a> Arayan bilgileri öznitelikleri  
  Arayan Bilgisi özniteliklerini kullanarak bir yöntemin arayanı hakkında bilgi edinebilirsiniz. Kaynak kodu dosya yolu, kaynak kodu ve arayan üye adı satır numarasını edinebilirsiniz.  
   
  Üye arayan bilgileri almak için isteğe bağlı parametreler uygulanan öznitelikleri kullanın. Her isteğe bağlı bir parametre varsayılan bir değer belirtir. Aşağıdaki tabloda tanımlanan arayan bilgileri öznitelikleri listeler <xref:System.Runtime.CompilerServices?displayProperty=nameWithType> ad alanı:  
@@ -231,7 +221,7 @@ End Class
   
  Arayan bilgileri öznitelikleri hakkında daha fazla bilgi için bkz: [arayan bilgileri (Visual Basic)](../../../../visual-basic/programming-guide/concepts/caller-information.md).  
   
-##  <a name="VB"></a>Visual Basic öznitelikleri  
+##  <a name="VB"></a> Visual Basic öznitelikleri  
  Aşağıdaki tabloda Visual Basic'e özel öznitelikleri listeler.  
   
 |Öznitelik|Amaç|  

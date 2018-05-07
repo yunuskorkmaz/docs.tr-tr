@@ -1,12 +1,6 @@
 ---
-title: "XML serileştirme özniteliklerini kullanarak denetleme"
-ms.custom: 
+title: XML serileştirme özniteliklerini kullanarak denetleme
 ms.date: 03/30/2017
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -21,18 +15,11 @@ helpviewer_keywords:
 - serialization, examples
 - serialization, attributes
 ms.assetid: 47d4c39d-30e1-4c7b-8a2e-301325390647
-caps.latest.revision: "4"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-- dotnetcore
-ms.openlocfilehash: 36df7286bad0d26108b726d2499bbeb0b2caa198
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: 84e1734a18a464ab28a75176a507168a7ba029d0
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="controlling-xml-serialization-using-attributes"></a>XML serileştirme özniteliklerini kullanarak denetleme
 Öznitelikler, nesnenin XML serileştirme kontrol etmek veya alternatif bir XML akışı sınıfları aynı kümesinden oluşturmak için kullanılabilir. Alternatif bir XML akışı oluşturma hakkında daha fazla bilgi için bkz: [nasıl yapılır: bir diğer öğe adı için bir XML akışı belirtin](../../../docs/standard/serialization/how-to-specify-an-alternate-element-name-for-an-xml-stream.md).  

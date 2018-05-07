@@ -1,13 +1,6 @@
 ---
-title: "Performansı İyileştirme: Donanımdan Yararlanma"
-ms.custom: 
+title: 'Performansı İyileştirme: Donanımdan Yararlanma'
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-wpf
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - graphics [WPF], performance
 - hardware rendering pipeline [WPF]
@@ -16,16 +9,11 @@ helpviewer_keywords:
 - graphics [WPF], rendering tiers
 - software rendering pipeline [WPF]
 ms.assetid: bfb89bae-7aab-4cac-a26c-a956eda8fce2
-caps.latest.revision: "6"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 55c9482ecb540baab3ddd57ca9350fd7265ac251
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: eb790da63b4636e3dd6c25ea118075304702acc0
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="optimizing-performance-taking-advantage-of-hardware"></a>Performansı İyileştirme: Donanımdan Yararlanma
 İç mimarisi [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] ardışık düzen iki işleme, donanım ve yazılıma sahip. Bu konu, uygulamalarınızın performansını en iyi duruma getirme hakkında kararlar almanıza yardımcı olmak için bu ardışık düzen işleme hakkında bilgi sağlar.  
@@ -34,14 +22,14 @@ ms.lasthandoff: 12/22/2017
  Aşağıdakilerden birini belirlemede en önemli etkenlerden [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] performans olan işleme bağlı olduğunu — daha fazla piksel işlemek zorunda kalırsanız maliyeti daha yüksek performans. Ancak, daha fazla bilgi işleme için boşaltılabilecek [!INCLUDE[TLA#tla_gpu](../../../../includes/tlasharptla-gpu-md.md)], daha fazla performans faydaları elde. [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] Uygulaması donanım işleme ardışık tam avantajlarından yararlanır [!INCLUDE[TLA#tla_dx](../../../../includes/tlasharptla-dx-md.md)] en az destekleyen donanım özellikleri [!INCLUDE[TLA#tla_dx](../../../../includes/tlasharptla-dx-md.md)] sürüm 7.0. İyileştirmelerin destekleyen donanım tarafından kazanılabilir [!INCLUDE[TLA#tla_dx](../../../../includes/tlasharptla-dx-md.md)] sürüm 7.0 ve PixelShader 2.0 + özelliklerini.  
   
 ## <a name="software-rendering-pipeline"></a>Yazılım işleme ardışık düzeni  
- [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] Yazılım işleme ardışık düzeni olan tamamen CPU'ya bağlıdır. [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]bir en iyi duruma getirilmiş, tam özellikli yazılım tarayıcısını uygulamak için CPU içindeki SSE ve SSE2 yönerge yararlanır ayarlar. Geri dönüş yazılım için uygulama işlevselliği kullanılarak donanım işleme ardışık düzeni işlenemiyor. istediğiniz zaman sorunsuz olarak gerçekleştirilir.  
+ [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] Yazılım işleme ardışık düzeni olan tamamen CPU'ya bağlıdır. [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] bir en iyi duruma getirilmiş, tam özellikli yazılım tarayıcısını uygulamak için CPU içindeki SSE ve SSE2 yönerge yararlanır ayarlar. Geri dönüş yazılım için uygulama işlevselliği kullanılarak donanım işleme ardışık düzeni işlenemiyor. istediğiniz zaman sorunsuz olarak gerçekleştirilir.  
   
  En büyük performans sorunu işlediğiniz piksel sayısı tanımlanan oranı doldurmak için yazılım modunda işleme işlerken karşılaşırsınız. Bir piksel çizilme sayısını en aza indirmek yazılım işleme modunu performansı hakkında endişeleriniz varsa deneyin. Örneğin, ardından biraz saydam bir görüntü üzerinde işleyen, mavi arka plan ile bir uygulamanız varsa, tüm pikselleri iki kez uygulamada işlemez. Sonuç olarak, bu iki kez uygulama, yalnızca mavi arka plana sahip daha görüntü ile işlemek için zaman alacaktır.  
   
 ### <a name="graphics-rendering-tiers"></a>Grafik İşleme Katmanları  
  Uygulamanızın üzerinde çalışacağı donanım yapılandırmasını tahmin etmek oldukça zor olabilir. Ancak, böylece her farklı donanım yapılandırması tam anlamıyla yararlanabilmek sorunsuz bir şekilde özellikleri farklı donanım üzerinde çalışırken geçiş yapmak, uygulamanızın izin veren bir tasarım düşünmek isteyebilirsiniz.  
   
- Bunu başarmak için [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] zamanında sistemin grafik yeteneğini belirlemek için işlevsellik sağlar. Grafik yeteneği, video kartı üç işleme yeteneği katmanından biri olarak sınıflandırarak belirlenir. [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]kullanıma sunan bir [!INCLUDE[TLA#tla_api](../../../../includes/tlasharptla-api-md.md)] işleme yeteneği katmanını sorgulamak için bir uygulama sağlar. Uygulamanız, daha sonra donanım tarafından desteklenen işleme katmanına bağlı olarak çalışma zamanında farklı kod yollarını alabilir.  
+ Bunu başarmak için [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] zamanında sistemin grafik yeteneğini belirlemek için işlevsellik sağlar. Grafik yeteneği, video kartı üç işleme yeteneği katmanından biri olarak sınıflandırarak belirlenir. [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] kullanıma sunan bir [!INCLUDE[TLA#tla_api](../../../../includes/tlasharptla-api-md.md)] işleme yeteneği katmanını sorgulamak için bir uygulama sağlar. Uygulamanız, daha sonra donanım tarafından desteklenen işleme katmanına bağlı olarak çalışma zamanında farklı kod yollarını alabilir.  
   
  Çoğu işleme katmanı düzeylerini etkileyen grafik donanım özellikleri şunlardır:  
   

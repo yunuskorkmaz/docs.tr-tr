@@ -1,34 +1,20 @@
 ---
 title: 'Nasıl yapılır: Özel Bir Kullanıcı Adı ve Parola Doğrulayıcı Kullanma'
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 dev_langs:
 - csharp
 - vb
 helpviewer_keywords:
 - WCF, username and password
 ms.assetid: 8e08b74b-fa44-4018-b63d-0d0805f85e3f
-caps.latest.revision: 14
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 4ea4f4d7021f02d239b9e2e93a85b5baaf5a0317
-ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
+ms.openlocfilehash: 8580219181af8fd28bcc99c60bd1e681ffbdad54
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/30/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-use-a-custom-user-name-and-password-validator"></a>Nasıl yapılır: Özel Bir Kullanıcı Adı ve Parola Doğrulayıcı Kullanma
-Bir kullanıcı adı ve parola kullanıldığında kimlik doğrulaması için varsayılan olarak, [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] Windows kullanıcı adı ve parolayı doğrulamak için kullanır. Ancak, [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] özel kullanıcı adı ve parola kimlik doğrulaması düzeni için olarak da bilinen sağlar *doğrulayıcıları*. Özel kullanıcı adı ve parola Doğrulayıcı içerecek şekilde türeyen bir sınıf oluşturun <xref:System.IdentityModel.Selectors.UserNamePasswordValidator> ve ardından yapılandırın.  
+Bir kullanıcı adı ve parola kullanılan kimlik doğrulama için varsayılan olarak, Windows Communication Foundation (WCF) Windows kullanıcı adı ve parolayı doğrulamak için kullanır. Ancak, WCF özel kullanıcı adı ve parola kimlik doğrulaması düzeni için olarak da bilinen sağlar *doğrulayıcıları*. Özel kullanıcı adı ve parola Doğrulayıcı içerecek şekilde türeyen bir sınıf oluşturun <xref:System.IdentityModel.Selectors.UserNamePasswordValidator> ve ardından yapılandırın.  
   
  Örnek bir uygulama için bkz: [kullanıcı Adıparola Doğrulayıcı](../../../../docs/framework/wcf/samples/user-name-password-validator.md).  
   
@@ -64,7 +50,7 @@ Bir kullanıcı adı ve parola kullanıldığında kimlik doğrulaması için va
   
     1.  Yapılandırma dosyasında altında [ \<system.serviceModel >](../../../../docs/framework/configure-apps/file-schema/wcf/system-servicemodel.md) öğesi ekleme bir [ \<bağlamaları >](../../../../docs/framework/configure-apps/file-schema/wcf/bindings.md) öğesi.  
   
-    2.  Ekleme bir [ \<wsHttpBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/wshttpbinding.md) veya [ \<basicHttpBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/basichttpbinding.md) bağlamaları bölümüne öğesi. Oluşturma hakkında daha fazla bilgi için bir [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] bağlama öğesi, bkz: [nasıl yapılır: yapılandırmada hizmet bağlama belirtme](../../../../docs/framework/wcf/how-to-specify-a-service-binding-in-configuration.md).  
+    2.  Ekleme bir [ \<wsHttpBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/wshttpbinding.md) veya [ \<basicHttpBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/basichttpbinding.md) bağlamaları bölümüne öğesi. Bir WCF bağlama öğesi oluşturma hakkında daha fazla bilgi için bkz: [nasıl yapılır: yapılandırmada hizmet bağlama belirtme](../../../../docs/framework/wcf/how-to-specify-a-service-binding-in-configuration.md).  
   
     3.  Ayarlama `mode` özniteliği [ \<Güvenlik >](../../../../docs/framework/configure-apps/file-schema/wcf/security-of-wshttpbinding.md) veya [ \<Güvenlik >](../../../../docs/framework/configure-apps/file-schema/wcf/security-of-basichttpbinding.md) için `Message`, `Transport`, `or``TransportWithMessageCredential`.  
   
@@ -75,9 +61,9 @@ Bir kullanıcı adı ve parola kullanıldığında kimlik doğrulaması için va
          HTTP (S) üzerinden aktarım düzeyinde güvenlik kullanırken, ayarlayın `clientCredentialType` özniteliği [ \<aktarım >](../../../../docs/framework/configure-apps/file-schema/wcf/transport-of-wshttpbinding.md) veya [ \<aktarım >](../../../../docs/framework/configure-apps/file-schema/wcf/transport-of-basichttpbinding.md) için `Basic`.  
   
         > [!NOTE]
-        >  Zaman bir [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] Internet Information Services (aktarım düzeyi güvenlik kullanarak IIS içinde) barındırılan hizmetin ve <xref:System.ServiceModel.Security.UserNamePasswordServiceCredential.UserNamePasswordValidationMode%2A> özelliği ayarlanmış <xref:System.ServiceModel.Security.UserNamePasswordValidationMode.Custom>, özel kimlik doğrulama şeması bir alt kümesini Windows kimlik doğrulaması kullanır. Bu senaryoda, IIS Windows kimlik doğrulaması öncesinde gerçekleştirdiğinden olan [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] özel Doğrulayıcı çağırma.  
+        >  Bir WCF hizmeti Internet Information Services (aktarım düzeyi güvenlik kullanarak IIS içinde) barındırılan ne zaman ve <xref:System.ServiceModel.Security.UserNamePasswordServiceCredential.UserNamePasswordValidationMode%2A> özelliği ayarlanmış <xref:System.ServiceModel.Security.UserNamePasswordValidationMode.Custom>, özel kimlik doğrulama şeması bir alt kümesini Windows kimlik doğrulaması kullanır. Bu senaryoda, IIS WCF özel Doğrulayıcı çağırmadan önce Windows kimlik doğrulaması gerçekleştirir olmasıdır.  
   
-     Oluşturma hakkında daha fazla bilgi için bir [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] bağlama öğesi, bkz: [nasıl yapılır: yapılandırmada hizmet bağlama belirtme](../../../../docs/framework/wcf/how-to-specify-a-service-binding-in-configuration.md).  
+     Bir WCF bağlama öğesi oluşturma hakkında daha fazla bilgi için bkz: [nasıl yapılır: yapılandırmada hizmet bağlama belirtme](../../../../docs/framework/wcf/how-to-specify-a-service-binding-in-configuration.md).  
   
      Aşağıdaki örnek, bağlama için yapılandırma kodu gösterir.  
   
@@ -110,7 +96,7 @@ Bir kullanıcı adı ve parola kullanıldığında kimlik doğrulaması için va
     6.  Ayarlama `userNamePasswordValidationMode` için `Custom`.  
   
         > [!IMPORTANT]
-        >  Varsa `userNamePasswordValidationMode` değeri ayarlanmazsa, [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] yerine özel bir kullanıcı adı ve parola Doğrulayıcı Windows kimlik doğrulaması kullanır.  
+        >  Varsa `userNamePasswordValidationMode` değeri ayarlanmazsa, WCF yerine özel bir kullanıcı adı ve parola Doğrulayıcı Windows kimlik doğrulaması kullanır.  
   
     7.  Ayarlama `customUserNamePasswordValidatorType` için özel bir kullanıcı adı ve parola Doğrulayıcı temsil eden tür.  
   

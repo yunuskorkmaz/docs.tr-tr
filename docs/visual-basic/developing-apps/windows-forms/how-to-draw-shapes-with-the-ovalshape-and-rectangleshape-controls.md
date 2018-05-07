@@ -1,10 +1,6 @@
 ---
-title: "Nasıl Yapılır: OvalShape ve RectangleShape Denetimleriyle Şekil Çizme (Visual Studio)"
+title: 'Nasıl Yapılır: OvalShape ve RectangleShape Denetimleriyle Şekil Çizme (Visual Studio)'
 ms.date: 07/20/2015
-ms.prod: .net
-ms.suite: 
-ms.technology: devlang-visual-basic
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -13,14 +9,11 @@ helpviewer_keywords:
 - shapes, drawing
 - RectangleShape control [Visual Basic]
 ms.assetid: 0275b4c6-7a13-46c8-90f3-61db308c6b5d
-caps.latest.revision: "15"
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: 53d91d10cc4735bbae521d17d05045cc7ea75fbc
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: f87865ba3aebe5739b87d6ae6bfeaa957af726d8
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-draw-shapes-with-the-ovalshape-and-rectangleshape-controls-visual-studio"></a>Nasıl Yapılır: OvalShape ve RectangleShape Denetimleriyle Şekil Çizme (Visual Studio)
 Kullanabileceğiniz <xref:Microsoft.VisualBasic.PowerPacks.OvalShape> daireler veya Oval bir form veya kapsayıcı, hem tasarım zamanında hem de çalışma zamanında çizmek için denetim. Kullanabileceğiniz <xref:Microsoft.VisualBasic.PowerPacks.RectangleShape> kareler, dikdörtgenler veya bir form veya kapsayıcı yuvarlak köşeli dikdörtgen çizmek için denetim. Bu denetim, hem tasarım zamanında hem de çalışma zamanında şekiller çizmek için de kullanabilirsiniz.  
@@ -138,5 +131,5 @@ using Microsoft.VisualBasic.PowerPacks;
 ## <a name="see-also"></a>Ayrıca Bkz.  
  <xref:Microsoft.VisualBasic.PowerPacks.OvalShape>  
  <xref:Microsoft.VisualBasic.PowerPacks.RectangleShape>  
- [Çizgi ve Şekil denetimlerine giriş](../../../visual-basic/developing-apps/windows-forms/introduction-to-the-line-and-shape-controls-visual-studio.md)  
- [Nasıl yapılır: LineShape denetimiyle](../../../visual-basic/developing-apps/windows-forms/how-to-draw-lines-with-the-lineshape-control-visual-studio.md)
+ [Çizgi ve Şekil Denetimlerine Giriş](../../../visual-basic/developing-apps/windows-forms/introduction-to-the-line-and-shape-controls-visual-studio.md)  
+ [Nasıl Yapılır: LineShape Denetimiyle Çizgi Çizme](../../../visual-basic/developing-apps/windows-forms/how-to-draw-lines-with-the-lineshape-control-visual-studio.md)

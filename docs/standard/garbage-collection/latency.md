@@ -1,38 +1,27 @@
 ---
-title: "Gecikme Modları"
-ms.custom: 
+title: Gecikme Modları
 ms.date: 03/30/2017
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
 ms.technology: dotnet-standard
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - garbage collection, intrusiveness
 - garbage collection, latency modes
 ms.assetid: 96278bb7-6eab-4612-8594-ceebfc887d81
-caps.latest.revision: "41"
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-- dotnetcore
-ms.openlocfilehash: d0ac0db376ad7cd4aa139ed0eb065a5ba33836c8
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: 913a5d6ab28d375dbfdd99dec6fd153bc94efee5
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="latency-modes"></a>Gecikme Modları
 Nesneleri geri kazanmak için atık toplayıcı tüm yürütme iş parçacığı bir uygulamada durdurmanız gerekir. Uygulama verileri alır veya içeriği, görüntüler gibi bazı durumlarda, tam atık toplama kritik bir zamanda meydana ve performansı olumsuz yönde. Ayarlayarak Atık toplayıcısının zorla girme ayarlayabilirsiniz <xref:System.Runtime.GCSettings.LatencyMode%2A?displayProperty=nameWithType> özelliğini birine <xref:System.Runtime.GCLatencyMode?displayProperty=nameWithType> değerleri.  
   
  Gecikme atık toplayıcı uygulamanızda intrudes süreyi ifade eder. Düşük gecikme süreleri sırasında atık toplayıcısı daha pasif ve nesneleri geri kazanma içinde daha az müdahale. <xref:System.Runtime.GCLatencyMode?displayProperty=nameWithType> Numaralandırma iki düşük gecikme süresi ayarları sağlar:  
   
--   <xref:System.Runtime.GCLatencyMode.LowLatency>2. nesil koleksiyonları önler ve yalnızca 0 ve 1. nesil koleksiyonları gerçekleştirir. Yalnızca kısa sürelerle için kullanılabilir. Sistem bellek Basıncı altında ise uzun süreler boyunca kısaca uygulama durdurabilir ve zaman açısından kritik işlemi kesintiye bir koleksiyon atık toplayıcı tetikler. Bu ayar yalnızca iş istasyonu çöp toplama için kullanılabilir.  
+-   <xref:System.Runtime.GCLatencyMode.LowLatency> 2. nesil koleksiyonları önler ve yalnızca 0 ve 1. nesil koleksiyonları gerçekleştirir. Yalnızca kısa sürelerle için kullanılabilir. Sistem bellek Basıncı altında ise uzun süreler boyunca kısaca uygulama durdurabilir ve zaman açısından kritik işlemi kesintiye bir koleksiyon atık toplayıcı tetikler. Bu ayar yalnızca iş istasyonu çöp toplama için kullanılabilir.  
   
--   <xref:System.Runtime.GCLatencyMode.SustainedLowLatency>ön plan 2. nesil koleksiyonları önler ve yalnızca oluşturmayı gerçekleştiren 0, 1 ve arka plan 2. nesil koleksiyonları. Uzun süreler için kullanılabilir ve iş istasyonu ve sunucu atık toplama için kullanılabilir. Bu ayar, kullanılamaz [eşzamanlı atık toplama](../../../docs/framework/configure-apps/file-schema/runtime/gcconcurrent-element.md) devre dışı bırakılır.  
+-   <xref:System.Runtime.GCLatencyMode.SustainedLowLatency> ön plan 2. nesil koleksiyonları önler ve yalnızca oluşturmayı gerçekleştiren 0, 1 ve arka plan 2. nesil koleksiyonları. Uzun süreler için kullanılabilir ve iş istasyonu ve sunucu atık toplama için kullanılabilir. Bu ayar, kullanılamaz [eşzamanlı atık toplama](../../../docs/framework/configure-apps/file-schema/runtime/gcconcurrent-element.md) devre dışı bırakılır.  
   
  Aşağıdaki oluşmadığı sürece, düşük gecikme süreleri sırasında 2. nesil koleksiyonları bastırılan:  
   

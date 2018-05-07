@@ -1,13 +1,7 @@
 ---
-title: "Yönetilen İş Parçacığı Oluşturma En İyi Yöntemleri"
-ms.custom: 
+title: Yönetilen İş Parçacığı Oluşturma En İyi Yöntemleri
 ms.date: 11/30/2017
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
 ms.technology: dotnet-standard
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -16,18 +10,13 @@ helpviewer_keywords:
 - threading [.NET Framework], best practices
 - managed threading
 ms.assetid: e51988e7-7f4b-4646-a06d-1416cee8d557
-caps.latest.revision: "19"
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-- dotnetcore
-ms.openlocfilehash: c23ef17e2bf2bec389368d1b9d88d11723ef531e
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: 15261291f40b6a41e0d6033fb92e1b23b4042019
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="managed-threading-best-practices"></a>Yönetilen İş Parçacığı Oluşturma En İyi Yöntemleri
 Çoklu iş parçacığı kullanımı dikkatli programlama gerektirir. Çoğu görevlerde, karmaşıklık yürütme için sıraya alma istekleri iş parçacığı havuzu iş parçacıkları tarafından azaltabilir. Bu konuda, birden çok iş parçacığı iş Eşgüdümleme veya iş parçacığı, blok işleme gibi daha zor durumlarda giderir.  
@@ -119,7 +108,7 @@ else {
   
 -   Kullanmayan <xref:System.Threading.Thread.Suspend%2A?displayProperty=nameWithType> ve <xref:System.Threading.Thread.Resume%2A?displayProperty=nameWithType> birden çok iş parçacığı etkinliklerini eşitlenecek. Kullanmak <xref:System.Threading.Mutex>, <xref:System.Threading.ManualResetEvent>, <xref:System.Threading.AutoResetEvent>, ve <xref:System.Threading.Monitor>.  
   
--   Çalışan iş parçacıkları (olaylar, örneğin kullanarak), ana programdan yürütülmesi denetim yok. Bunun yerine, çalışan iş parçacığı iş kullanılabilir hale gelene kadar bekleyen, yürütülmekte ve diğer bölümleri bittiğinde programınızın bildiren sorumlu; böylece programınızı tasarlayın. Çalışan iş parçacığı engellemez, iş parçacığı havuzu iş parçacıkları kullanmayı düşünün. <xref:System.Threading.Monitor.PulseAll%2A?displayProperty=nameWithType>Burada blok çalışan iş parçacıkları durumlarda faydalıdır.  
+-   Çalışan iş parçacıkları (olaylar, örneğin kullanarak), ana programdan yürütülmesi denetim yok. Bunun yerine, çalışan iş parçacığı iş kullanılabilir hale gelene kadar bekleyen, yürütülmekte ve diğer bölümleri bittiğinde programınızın bildiren sorumlu; böylece programınızı tasarlayın. Çalışan iş parçacığı engellemez, iş parçacığı havuzu iş parçacıkları kullanmayı düşünün. <xref:System.Threading.Monitor.PulseAll%2A?displayProperty=nameWithType> Burada blok çalışan iş parçacıkları durumlarda faydalıdır.  
   
 -   Türleri kilit nesneler olarak kullanmayın. Diğer bir deyişle, kod gibi kaçının `lock(typeof(X))` C# veya `SyncLock(GetType(X))` Visual Basic veya kullanımını <xref:System.Threading.Monitor.Enter%2A?displayProperty=nameWithType> ile <xref:System.Type> nesneleri. Belirli bir türde için yalnızca bir örneği var. <xref:System.Type?displayProperty=nameWithType> uygulama etki alanı başına. Bir kilit etkinleştirilir türü ortak ise, kendi dışındaki kod kilitleri üzerinde kilitlenmeye baştaki alabilir. Ek sorunlar için bkz: [güvenilirlik en iyi yöntemleri](../../../docs/framework/performance/reliability-best-practices.md).  
   

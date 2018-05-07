@@ -1,11 +1,6 @@
 ---
 title: My.Resources Nesnesi
 ms.date: 07/20/2015
-ms.prod: .net
-ms.suite: 
-ms.technology:
-- devlang-visual-basic
-ms.topic: article
 f1_keywords:
 - My.Resources
 - My.Resources.MyResources.ResourceManager
@@ -13,14 +8,11 @@ f1_keywords:
 helpviewer_keywords:
 - My.Resources object
 ms.assetid: 34c3f2dc-7b87-432c-9d5f-17ea666bb266
-caps.latest.revision: 
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: 96e5b909d9945ed631cebe07e4cfc7d5dc2e019f
-ms.sourcegitcommit: 34ec7753acf76f90a0fa845235ef06663dc9e36e
+ms.openlocfilehash: 9fd23cb119ff9148a45d32ec70ccc4dad08ab876
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="myresources-object"></a>My.Resources Nesnesi
 Uygulamanın kaynaklarına erişmek için özellikler ve sınıfları sağlar.  
@@ -51,7 +43,7 @@ Uygulamanın kaynaklarına erişmek için özellikler ve sınıfları sağlar.
 |**Görüntüler**|<xref:System.Drawing.Bitmap>|  
 |**Simgeler**|<xref:System.Drawing.Icon>|  
 |**Ses**|<xref:System.IO.UnmanagedMemoryStream><br /><br /> <xref:System.IO.UnmanagedMemoryStream> Sınıfı türer <xref:System.IO.Stream> akışlar, gibi ele yöntemleriyle kullanılabilmesi için sınıf <xref:Microsoft.VisualBasic.Devices.Audio.Play%2A> yöntemi.|  
-|**Dosyaları**|-   [Dize](../../../visual-basic/language-reference/data-types/string-data-type.md) metin dosyaları için.<br />-   <xref:System.Drawing.Bitmap>resim dosyaları.<br />-   <xref:System.Drawing.Icon>simge dosyaları.<br />-   <xref:System.IO.UnmanagedMemoryStream>ses dosyaları.|  
+|**Dosyalar**|-   [Dize](../../../visual-basic/language-reference/data-types/string-data-type.md) metin dosyaları için.<br />-   <xref:System.Drawing.Bitmap> resim dosyaları.<br />-   <xref:System.Drawing.Icon> simge dosyaları.<br />-   <xref:System.IO.UnmanagedMemoryStream> ses dosyaları.|  
 |**Diğer**|Tasarımcının bilgileri tarafından belirlenen **türü** sütun.|  
   
 ## <a name="classes"></a>Sınıflar  

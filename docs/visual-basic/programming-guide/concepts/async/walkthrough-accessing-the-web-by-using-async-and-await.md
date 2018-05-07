@@ -1,22 +1,12 @@
 ---
 title: "İzlenecek yol: Async kullanarak Web'e erişme ve bekleme (Visual Basic)"
-ms.custom: 
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
-ms.tgt_pltfrm: 
-ms.topic: get-started-article
 ms.assetid: 84fd047f-fab8-4d89-8ced-104fb7310a91
-caps.latest.revision: "3"
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: de1219de72be5ddc022d898c904663bf92ca5ab6
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 7154ea12f2660074e3ad8251b9baaa3eeb3d453c
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="walkthrough-accessing-the-web-by-using-async-and-await-visual-basic"></a>İzlenecek yol: Async kullanarak Web'e erişme ve bekleme (Visual Basic)
 Zaman uyumsuz ve bekleme özelliklerini kullanarak zaman uyumsuz programlar daha kolay ve sezgisel yazabilirsiniz. Zaman uyumlu kod gibi görünüyor zaman uyumsuz kod yazın ve daha zor geri arama işlevleri ve zaman uyumsuz kod genellikle kapsar devamlılıklar işlemek derleyici sağlayabilirsiniz.  
@@ -56,7 +46,7 @@ Zaman uyumsuz ve bekleme özelliklerini kullanarak zaman uyumsuz programlar daha
 ## <a name="prerequisites"></a>Önkoşullar  
  Visual Studio 2012 veya sonraki sürümünü bilgisayarınızda yüklü olmalıdır. Daha fazla bilgi için bkz: [Microsoft Web sitesi](http://go.microsoft.com/fwlink/?LinkId=235233).  
   
-###  <a name="CreateWPFApp"></a>Bir WPF uygulaması oluşturmak için  
+###  <a name="CreateWPFApp"></a> Bir WPF uygulaması oluşturmak için  
   
 1.  Visual Studio'yu başlatın.  
   
@@ -71,7 +61,7 @@ Zaman uyumsuz ve bekleme özelliklerini kullanarak zaman uyumsuz programlar daha
      Yeni Proje görünür **Çözüm Gezgini**.  
   
 ##  <a name="BKMK_DesignWPFMainWin"></a>   
-###  <a name="MainWindow"></a>Basit bir WPF MainWindow tasarlamak için  
+###  <a name="MainWindow"></a> Basit bir WPF MainWindow tasarlamak için  
   
 1.  Visual Studio Kod Düzenleyicisi'nde seçin **MainWindow.xaml** sekmesi.  
   
@@ -100,7 +90,7 @@ Zaman uyumsuz ve bekleme özelliklerini kullanarak zaman uyumsuz programlar daha
      WPF XAML Tasarımcısı hakkında daha fazla bilgi için bkz: [XAML Tasarımcısını kullanarak bir kullanıcı Arabirimi oluşturma](/visualstudio/designers/creating-a-ui-by-using-xaml-designer-in-visual-studio).  
   
 ##  <a name="BKMK_AddReference"></a>   
-###  <a name="AddRef"></a>Bir başvuru eklemek için  
+###  <a name="AddRef"></a> Bir başvuru eklemek için  
   
 1.  İçinde **Çözüm Gezgini**, projenizin adını vurgulayın.  
   
@@ -117,7 +107,7 @@ Zaman uyumsuz ve bekleme özelliklerini kullanarak zaman uyumsuz programlar daha
 6.  Seçin **Tamam** düğmesi iletişim kutusunu kapatın.  
   
 ##  <a name="BKMK_AddStatesandDirs"></a>   
-###  <a name="ImportsState"></a>Gerekli içeri aktarmaları deyimleri eklemek için  
+###  <a name="ImportsState"></a> Gerekli içeri aktarmaları deyimleri eklemek için  
   
 1.  İçinde **Çözüm Gezgini**MainWindow.xaml.vb için kısayol menüsünü açın ve ardından **görünümü kodu**.  
   
@@ -130,7 +120,7 @@ Zaman uyumsuz ve bekleme özelliklerini kullanarak zaman uyumsuz programlar daha
     ```  
   
 ##  <a name="BKMK_CreatSynchApp"></a>   
-###  <a name="synchronous"></a>Zaman uyumlu bir uygulama oluşturmak için  
+###  <a name="synchronous"></a> Zaman uyumlu bir uygulama oluşturmak için  
   
 1.  Tasarım penceresinde MainWindow.xaml, çift **Başlat** oluşturmak için düğmesini `startButton_Click` MainWindow.xaml.vb olay işleyicisi.  
   
@@ -231,7 +221,7 @@ Zaman uyumsuz ve bekleme özelliklerini kullanarak zaman uyumsuz programlar daha
     ```  
   
 ##  <a name="BKMK_TestSynchSol"></a>   
-###  <a name="testSynch"></a>Zaman uyumlu çözümü test etmek için  
+###  <a name="testSynch"></a> Zaman uyumlu çözümü test etmek için  
   
 1.  Programını çalıştırın ve ardından için F5 tuşuna seçin **Başlat** düğmesi.  
   
@@ -257,7 +247,7 @@ Zaman uyumsuz ve bekleme özelliklerini kullanarak zaman uyumsuz programlar daha
      Sayıları görüntülemek için birkaç saniye sürer dikkat edin. İstenen kaynaklar indirmek beklerken bu süre içinde kullanıcı Arabirimi iş parçacığı engellendi. Sonuç olarak, taşıyamazsınız, en üst düzeye çıkarmak, simge durumuna küçült veya seçtiğiniz sonra bile görüntü penceresini kapatın **Başlat** düğmesi. Görüntülenecek bayt sayıları başlatana kadar bu çaba başarısız. Bir Web sitesi yanıt vermiyor gösterge olmadan başarısız hangi sitenin varsa. Hatta bekleme durdurmak ve program kapatmak zordur.  
   
 ##  <a name="BKMK_ConvertGtBtArr"></a>   
-###  <a name="GetURLContents"></a>Zaman uyumsuz bir yöntem GetURLContents dönüştürmek için  
+###  <a name="GetURLContents"></a> Zaman uyumsuz bir yöntem GetURLContents dönüştürmek için  
   
 1.  Zaman uyumsuz bir çözüme zaman uyumlu çözüm dönüştürmek için başlatmak için en iyi yerdir bulunduğu `GetURLContents` çünkü çağrıları <xref:System.Net.HttpWebRequest> yöntemi <xref:System.Net.HttpWebRequest.GetResponse%2A> ve <xref:System.IO.Stream> yöntemi <xref:System.IO.Stream.CopyTo%2A> burada web uygulama erişen olan . .NET Framework dönüştürme her iki yöntem zaman uyumsuz sürümlerini sağlayarak kolaylaştırır.  
   
@@ -272,7 +262,7 @@ Zaman uyumsuz ve bekleme özelliklerini kullanarak zaman uyumsuz programlar daha
     Using response As WebResponse = webReq.GetResponseAsync()  
     ```  
   
-2.  `GetResponseAsync`döndüren bir <xref:System.Threading.Tasks.Task%601>. Bu durumda, *görev dönüş değişkeni*, `TResult`, türüne sahip <xref:System.Net.WebResponse>. Gerçek bir üretmek için promise görevdir `WebResponse` istenen veri indirilir ve görevin tamamlanması çalıştıktan sonra nesnesi.  
+2.  `GetResponseAsync` döndüren bir <xref:System.Threading.Tasks.Task%601>. Bu durumda, *görev dönüş değişkeni*, `TResult`, türüne sahip <xref:System.Net.WebResponse>. Gerçek bir üretmek için promise görevdir `WebResponse` istenen veri indirilir ve görevin tamamlanması çalıştıktan sonra nesnesi.  
   
      Alınacak `WebResponse` görevden değer, geçerli bir [bekleme](../../../../visual-basic/language-reference/operators/await-operator.md) çağrısına işleci `GetResponseAsync`, aşağıdaki kodda gösterildiği gibi.  
   
@@ -339,7 +329,7 @@ Zaman uyumsuz ve bekleme özelliklerini kullanarak zaman uyumsuz programlar daha
      Dönüştürme işlemi birkaç bu değişikliklerle `GetURLContents` zaman uyumsuz bir yöntem tamamlandığında.  
   
 ##  <a name="BKMK_ConvertSumPagSzs"></a>   
-###  <a name="SumPageSizes"></a>Zaman uyumsuz bir yöntem SumPageSizes dönüştürmek için  
+###  <a name="SumPageSizes"></a> Zaman uyumsuz bir yöntem SumPageSizes dönüştürmek için  
   
 1.  İçin önceki yordamdaki adımları yineleyin `SumPageSizes`. İlk olarak, araması olarak değiştirmelerine `GetURLContents` zaman uyumsuz bir çağrı için.  
   
@@ -379,7 +369,7 @@ Zaman uyumsuz ve bekleme özelliklerini kullanarak zaman uyumsuz programlar daha
      Dönüştürülmesi `SumPageSizes` için `SumPageSizesAsync` tamamlandı.  
   
 ##  <a name="BKMK_Cnvrtbttn1"></a>   
-###  <a name="startButton"></a>Zaman uyumsuz bir yöntem startButton_Click dönüştürmek için  
+###  <a name="startButton"></a> Zaman uyumsuz bir yöntem startButton_Click dönüştürmek için  
   
 1.  Olay işleyicisinin çağrılan yöntemin adını değiştirmek `SumPageSizes` için `SumPageSizesAsync`, zaten yapmadıysanız.  
   
@@ -425,7 +415,7 @@ Zaman uyumsuz ve bekleme özelliklerini kullanarak zaman uyumsuz programlar daha
      Proje dönüştürme için zaman uyumsuz zaman uyumlu işleme işlemi tamamlanır.  
   
 ##  <a name="BKMK_testAsynchSolution"></a>   
-###  <a name="testAsynch"></a>Zaman uyumsuz çözümü test etmek için  
+###  <a name="testAsynch"></a> Zaman uyumsuz çözümü test etmek için  
   
 1.  Programını çalıştırın ve ardından için F5 tuşuna seçin **Başlat** düğmesi.  
   
@@ -436,7 +426,7 @@ Zaman uyumsuz ve bekleme özelliklerini kullanarak zaman uyumsuz programlar daha
     -   En önemlisi, kullanıcı Arabirimi iş parçacığı yüklemeleri sırasında engellenmiş değil. Taşıma veya web kaynakları karşıdan yüklenirken pencereyi yeniden boyutlandırmak sayılan ve görüntülenir. Web sitelerinden birini yavaş veya yanıt vermiyor işlemi seçerek iptal edebilir **Kapat** düğmesi (sağ üst köşesinde kırmızı alanında x).  
   
 ##  <a name="BKMK_ReplaceGetByteArrayAsync"></a>   
-###  <a name="GetURLContentsAsync"></a>.NET Framework yöntemiyle yöntemi GetURLContentsAsync değiştirmek için  
+###  <a name="GetURLContentsAsync"></a> .NET Framework yöntemiyle yöntemi GetURLContentsAsync değiştirmek için  
   
 1.  .NET Framework 4.5 kullanabileceğiniz birçok zaman uyumsuz yöntemleri sağlar. Bunlardan biri <xref:System.Net.Http.HttpClient> yöntemi <xref:System.Net.Http.HttpClient.GetByteArrayAsync%28System.String%29>, bu kılavuz için gerekenler yalnızca yapar. Bunun yerine kullanabileceğiniz `GetURLContentsAsync` bir önceki yordamda oluşturduğunuz yöntemi.  
   
@@ -461,7 +451,7 @@ Zaman uyumsuz ve bekleme özelliklerini kullanarak zaman uyumsuz programlar daha
   
      Bu projenin sürümü davranışını "zaman uyumsuz çözümü test etmek için" yordamı açıklanan davranışı eşleşen ancak sizden daha az çaba ile bile gerekir.  
   
-##  <a name="BKMK_CompleteCodeExamples"></a>Örnek  
+##  <a name="BKMK_CompleteCodeExamples"></a> Örnek  
  Aşağıdaki kod dönüştürme eş zamanlı işlemini zaman uyumsuz bir çözüm için tam örnek içeriyor zaman uyumsuz kullanarak `GetURLContentsAsync` yazdığınız yöntemi. Bunu kesinlikle özgün, zaman uyumlu çözüm benzer dikkat edin.  
   
 ```vb  
@@ -684,8 +674,8 @@ End Class
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
  [Zaman uyumsuz örnek: Web gözden geçirme (C# ve Visual Basic) erişme](http://go.microsoft.com/fwlink/?LinkId=255191)  
- [Await işleci](../../../../visual-basic/language-reference/operators/await-operator.md)  
- [Zaman uyumsuz](../../../../visual-basic/language-reference/modifiers/async.md)  
+ [Await İşleci](../../../../visual-basic/language-reference/operators/await-operator.md)  
+ [Async](../../../../visual-basic/language-reference/modifiers/async.md)  
  [Zaman uyumsuz programlama ile Async ve Await (Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/index.md)  
  [Zaman uyumsuz dönüş türleri (Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/async-return-types.md)  
  [Görev tabanlı zaman uyumsuz programlama (TAP)](http://go.microsoft.com/fwlink/?LinkId=204847)  

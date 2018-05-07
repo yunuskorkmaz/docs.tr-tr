@@ -1,27 +1,15 @@
 ---
-title: "Windows için WCF Hizmetleri ve Etkinlik İzleme"
-ms.custom: 
+title: Windows için WCF Hizmetleri ve Etkinlik İzleme
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: eda4355d-0bd0-4dc9-80a2-d2c832152272
-caps.latest.revision: "15"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: cb8924cc04442e3b9eda5e251e6dcdc57f5660c5
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
-ms.translationtype: MT
+ms.openlocfilehash: ef98cb14b5f1ee6a2ce11c35627456459d3215b5
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="wcf-services-and-event-tracing-for-windows"></a>Windows için WCF Hizmetleri ve Etkinlik İzleme
-Bu örnek analitik izlemede kullanmak gösterilmiştir [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] olayları, olay izleme için Windows (ETW) verebilmelidir. Analitik izlemeleri anahtar noktalarında yayılan olaylardır [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] , sorun giderme izin yığın [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] üretim ortamında Hizmetleri.  
+Bu örnek çözümleme izleme Windows Communication Foundation (WCF) olayları, olay izleme için Windows (ETW) yayma için nasıl kullanılacağını gösterir. Analitik izlemeleri anahtar noktalarında yayılan olaylardır [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] , sorun giderme izin yığın [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] üretim ortamında Hizmetleri.  
   
  Analitik izlemede [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] Hizmetleri, izleme açılabilir bir üretim ortamında performansı üzerinde en az etkiyle. Bu izlemeler olayları ETW oturumuna olarak gösterilen.  
   
@@ -37,7 +25,7 @@ Bu örnek analitik izlemede kullanmak gösterilmiştir [!INCLUDE[indigo1](../../
   
      Web tarayıcısında tıklatın **Calculator.svc**. Hizmet için WSDL belgenin URI tarayıcıda görüntülenmesi gerekir. Bu URI kopyalayın.  
   
-     Varsayılan olarak, bağlantı noktası 1378 (http://localhost:1378/Calculator.svc) isteklerini dinleme hizmetini başlatır.  
+     Varsayılan olarak, hizmet başlatır bağlantı 1378 isteklerini dinleme (http://localhost:1378/Calculator.svc).  
   
 4.  Çalıştırma [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] test istemcisi (WcfTestClient.exe).  
   
@@ -45,7 +33,7 @@ Bu örnek analitik izlemede kullanmak gösterilmiştir [!INCLUDE[indigo1](../../
   
 5.  İçinde [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] test istemci, hizmet seçerek eklemek **dosya**ve ardından **Hizmet Ekle**.  
   
-     Uç nokta adresi giriş kutusuna ekleyin. Http://localhost:1378/Calculator.svc varsayılandır.  
+     Uç nokta adresi giriş kutusuna ekleyin. Varsayılan, http://localhost:1378/Calculator.svc değeridir.  
   
 6.  Olay Görüntüleyicisi'ni uygulamasını açın.  
   
@@ -94,7 +82,7 @@ Bu örnek analitik izlemede kullanmak gösterilmiştir [!INCLUDE[indigo1](../../
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  Bu dizin mevcut değilse, Git [Windows Communication Foundation (WCF) ve .NET Framework 4 için Windows Workflow Foundation (WF) örnek](http://go.microsoft.com/fwlink/?LinkId=150780) tüm indirmek için [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] ve [!INCLUDE[wf1](../../../../includes/wf1-md.md)] örnekleri. Bu örnek aşağıdaki dizinde bulunur.  
+>  Bu dizin mevcut değilse, Git [Windows Communication Foundation (WCF) ve .NET Framework 4 için Windows Workflow Foundation (WF) örnek](http://go.microsoft.com/fwlink/?LinkId=150780) tüm Windows Communication Foundation (WCF) indirmek için ve [!INCLUDE[wf1](../../../../includes/wf1-md.md)] örnekleri. Bu örnek aşağıdaki dizinde bulunur.  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Management\ETWTracing`  
   

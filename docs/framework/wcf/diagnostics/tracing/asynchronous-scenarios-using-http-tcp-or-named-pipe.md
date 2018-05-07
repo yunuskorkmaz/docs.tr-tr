@@ -1,24 +1,12 @@
 ---
 title: HTTP, TCP veya Named-Pipe Kullanan Zaman Uyumsuz Senaryolar
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: a4d62402-43a4-48a4-9ced-220633ebc4ce
-caps.latest.revision: "12"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 76c4c225b333af6d376fa409a05ea5727ede6e8f
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: d08f70186a59b8717c4441167ee720ba1c20b9dc
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="asynchronous-scenarios-using-http-tcp-or-named-pipe"></a>HTTP, TCP veya Named-Pipe Kullanan Zaman Uyumsuz Senaryolar
 Bu konuda veya adlandırılmış etkinlikleri ve aktarımlar farklı zaman uyumsuz istek/yanıt senaryoları için HTTP, TCP, kullanarak birden çok iş parçacıklı isteklerle açıklanır.  
@@ -44,7 +32,7 @@ Bu konuda veya adlandırılmış etkinlikleri ve aktarımlar farklı zaman uyums
 #### <a name="propagation-is-disabled-on-either-sides-using-http"></a>Yayma ya da HTTP kullanarak tarafta, devre dışı bırakıldı  
  Varsa `propagateActivity` = `false` iki tarafında aktarmak için hangi ProcessAction etkinlik ProcessMessage göstermez. Bu nedenle, yeni bir kimliği ile yeni bir geçici ProcessAction etkinlik çağrılır. ServiceModel kod istek için zaman uyumsuz yanıt eşleştiğinde, etkinlik kimliği yerel bağlamdan alınabilir. Gerçek ProcessAction etkinlik için bu kimliğe sahip aktarılabilir  
   
- ![HTTP &#47;kullanarak zaman uyumsuz senaryolar; TCP &#47; Adlandırılmış kanal](../../../../../docs/framework/wcf/diagnostics/tracing/media/async2.gif "Async2")  
+ ![HTTP kullanarak zaman uyumsuz senaryolar&#47;TCP&#47;adlandırılmış kanal](../../../../../docs/framework/wcf/diagnostics/tracing/media/async2.gif "Async2")  
   
  Şekil 2 '. Zaman uyumsuz istemcisi, bir geri çağırma `propagateActivity` = `false` her iki tarafında, HTTP  
   
@@ -53,7 +41,7 @@ Bu konuda veya adlandırılmış etkinlikleri ve aktarımlar farklı zaman uyums
  Bir işlem eylem etkinlik zaman uyumsuz bir istemcide oluşturulan zaman `propagateActivity` = `false` çağıran ve çağrılan ve yanıt iletisi bir eylem üstbilgisi içermez.  
   
 #### <a name="propagation-is-enabled-on-both-sides-using-tcp-or-named-pipe"></a>Yayma hem TCP veya adlandırılmış kanal kullanarak tarafta etkin  
- ![HTTP &#47;kullanarak zaman uyumsuz senaryolar; TCP &#47; Adlandırılmış kanal](../../../../../docs/framework/wcf/diagnostics/tracing/media/async3.gif "Async3")  
+ ![HTTP kullanarak zaman uyumsuz senaryolar&#47;TCP&#47;adlandırılmış kanal](../../../../../docs/framework/wcf/diagnostics/tracing/media/async3.gif "Async3")  
   
  Şekil 3 '. Zaman uyumsuz istemcisi, bir geri çağırma `propagateActivity` = `true` her iki tarafında Named-Pipe/TCP  
   
@@ -66,7 +54,7 @@ Bu konuda veya adlandırılmış etkinlikleri ve aktarımlar farklı zaman uyums
   
  Benzer şekilde Fig.2, varsa `propagateActivity` = `false` iki tarafında aktarmak için hangi ProcessAction etkinlik ProcessMessage göstermez. Bu nedenle, yeni bir kimliği ile yeni bir geçici ProcessAction etkinlik çağrılır. ServiceModel kod istek için zaman uyumsuz yanıt eşleştiğinde, etkinlik kimliği yerel bağlamdan alınabilir. Gerçek ProcessAction etkinlik için bu kimliğe sahip aktarılabilir  
   
- ![HTTP &#47;kullanarak zaman uyumsuz senaryolar; TCP &#47; Adlandırılmış Kanallar](../../../../../docs/framework/wcf/diagnostics/tracing/media/async4.gif "Async4")  
+ ![HTTP kullanarak zaman uyumsuz senaryolar&#47;TCP&#47; adlandırılmış kanallar](../../../../../docs/framework/wcf/diagnostics/tracing/media/async4.gif "Async4")  
   
  Şekil 4 '. Zaman uyumsuz istemcisi, bir geri çağırma `propagateActivity` = `false` her iki tarafında Named-Pipe/TCP  
   
@@ -86,7 +74,7 @@ Bu konuda veya adlandırılmış etkinlikleri ve aktarımlar farklı zaman uyums
  Şekil 6. Zaman uyumsuz geri çağırma, istemciyle `endCall` geri çağırma dışında  
   
 ### <a name="asynchronous-server-with-callback"></a>Zaman uyumsuz geri çağırma sunucusuyla  
- ![HTTP &#47;kullanarak zaman uyumsuz senaryolar; TCP &#47; Adlı &#45; Kanal](../../../../../docs/framework/wcf/diagnostics/tracing/media/aynchserver.gif "AynchServer")  
+ ![HTTP kullanarak zaman uyumsuz senaryolar&#47;TCP&#47; adlandırılmış&#45;kanal](../../../../../docs/framework/wcf/diagnostics/tracing/media/aynchserver.gif "AynchServer")  
   
  Şekil 7. Zaman uyumsuz sunucusuyla, geri çağırma  
   

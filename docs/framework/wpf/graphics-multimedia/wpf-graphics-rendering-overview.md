@@ -1,13 +1,6 @@
 ---
-title: "WPF Grafik İşlemeye Genel Bakış"
-ms.custom: 
+title: WPF Grafik İşlemeye Genel Bakış
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-wpf
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -15,16 +8,11 @@ helpviewer_keywords:
 - graphics [WPF], rendering
 - rendering graphics [WPF]
 ms.assetid: 6dec9657-4d8c-4e46-8c54-40fb80008265
-caps.latest.revision: "51"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: cfb9a546ca33b848fbbcbd114951eddc5b000663
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 305af1025abb98950d90f46e75a9f261704a8ebe
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="wpf-graphics-rendering-overview"></a>WPF Grafik İşlemeye Genel Bakış
 Bu konu genel bir bakış sağlar [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] görsel katmanı. Rolü üzerinde odaklanır <xref:System.Windows.Media.Visual> desteği işlemeye sınıfı [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] modeli.  
@@ -58,7 +46,7 @@ Bu konu genel bir bakış sağlar [!INCLUDE[TLA2#tla_winclient](../../../../incl
   
 -   Genelleştirme  
   
- <xref:System.Windows.Media.Visual>alt sınıfların türetilmesi gerekir ortak soyut bir sınıf sunulur. Aşağıda sunulan visual nesne gösterilmiştir [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)].  
+ <xref:System.Windows.Media.Visual> alt sınıfların türetilmesi gerekir ortak soyut bir sınıf sunulur. Aşağıda sunulan visual nesne gösterilmiştir [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)].  
   
  ![Sınıfları diyagramı Visual nesnesinden türetilmiş](../../../../docs/framework/wpf/graphics-multimedia/media/visualclass01.png "VisualClass01")  
 Görsel sınıf hiyerarşisi  
@@ -86,7 +74,7 @@ Görsel sınıf hiyerarşisi
   
  Oluştururken bir [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] denetlemek, gibi bir <xref:System.Windows.Controls.Button>, Denetim dolaylı olarak kendisi çizim için işleme veriler üretir. Örneğin, ayarlama <xref:System.Windows.Controls.ContentControl.Content%2A> özelliği <xref:System.Windows.Controls.Button> karaktere işleme gösterimini depolamak denetimi neden olur.  
   
- A <xref:System.Windows.Media.Visual> bir veya daha fazla olarak içeriği açıklar <xref:System.Windows.Media.Drawing> içinde yer alan nesneleri bir <xref:System.Windows.Media.DrawingGroup>. A <xref:System.Windows.Media.DrawingGroup> ayrıca geçirgenlik maskeleri, dönüşümler, bit eşlem efektleri ve içeriğini uygulanan diğer işlemleri açıklanır. <xref:System.Windows.Media.DrawingGroup>işlem, şu sırayla uygulanır, içerik işlendiğinde: <xref:System.Windows.Media.DrawingGroup.OpacityMask%2A>, <xref:System.Windows.Media.DrawingGroup.Opacity%2A>, <xref:System.Windows.Media.DrawingGroup.BitmapEffect%2A>, <xref:System.Windows.Media.DrawingGroup.ClipGeometry%2A>, <xref:System.Windows.Media.DrawingGroup.GuidelineSet%2A>ve ardından <xref:System.Windows.Media.DrawingGroup.Transform%2A>.  
+ A <xref:System.Windows.Media.Visual> bir veya daha fazla olarak içeriği açıklar <xref:System.Windows.Media.Drawing> içinde yer alan nesneleri bir <xref:System.Windows.Media.DrawingGroup>. A <xref:System.Windows.Media.DrawingGroup> ayrıca geçirgenlik maskeleri, dönüşümler, bit eşlem efektleri ve içeriğini uygulanan diğer işlemleri açıklanır. <xref:System.Windows.Media.DrawingGroup> işlem, şu sırayla uygulanır, içerik işlendiğinde: <xref:System.Windows.Media.DrawingGroup.OpacityMask%2A>, <xref:System.Windows.Media.DrawingGroup.Opacity%2A>, <xref:System.Windows.Media.DrawingGroup.BitmapEffect%2A>, <xref:System.Windows.Media.DrawingGroup.ClipGeometry%2A>, <xref:System.Windows.Media.DrawingGroup.GuidelineSet%2A>ve ardından <xref:System.Windows.Media.DrawingGroup.Transform%2A>.  
   
  Aşağıdaki çizimde sırayı gösterir <xref:System.Windows.Media.DrawingGroup> işlemleri sırasında işleme sırası uygulanır.  
   
@@ -195,14 +183,14 @@ XamlPad'de Görsel Ağaç Gezgini paneli
  Bildirim nasıl <xref:System.Windows.Controls.Label>, <xref:System.Windows.Controls.TextBox>, ve <xref:System.Windows.Controls.Button> denetimlerini her bir ayrı görsel nesne hiyerarşide görüntülemek **görsel ağaç Gezgini** XamlPad panelini. Bunun nedeni, [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] denetimleriniz bir <xref:System.Windows.Controls.ControlTemplate> bu denetimin görsel ağaç içerir. Bir denetim açıkça başvurduğunuzda, visual hiyerarşisi örtük olarak başvuru.  
   
 ### <a name="profiling-visual-performance"></a>Görsel performans profili oluşturma  
- [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]bir profil uygulamanızın çalışma zamanı davranışını çözümlemek ve türde uygulayabileceğiniz performans iyileştirmelerini belirlemenize olanak sağlayan araçları performans sağlar. Visual profil oluşturucu araç eşleyerek doğrudan uygulamanın görsel ağaç performans verilerini zengin, grafik bir görünümünü sağlar. Bu ekran görüntüsü **CPU kullanımı** Visual Profil Oluşturucu bölümünde, bir nesnenin kullanımını kesin bir dökümünü verir [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] işleme ve düzen gibi hizmetleri.  
+ [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] bir profil uygulamanızın çalışma zamanı davranışını çözümlemek ve türde uygulayabileceğiniz performans iyileştirmelerini belirlemenize olanak sağlayan araçları performans sağlar. Visual profil oluşturucu araç eşleyerek doğrudan uygulamanın görsel ağaç performans verilerini zengin, grafik bir görünümünü sağlar. Bu ekran görüntüsü **CPU kullanımı** Visual Profil Oluşturucu bölümünde, bir nesnenin kullanımını kesin bir dökümünü verir [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] işleme ve düzen gibi hizmetleri.  
   
  ![Visual profil oluşturucu çıktı görüntülemek](../../../../docs/framework/wpf/graphics-multimedia/media/wpfperf-visualprofiler-04.png "WPFPerf_VisualProfiler_04")  
 Visual profil oluşturucu görüntüsü çıkışı  
   
 <a name="visual_rendering_behavior"></a>   
 ## <a name="visual-rendering-behavior"></a>Görsel işleme davranışı  
- [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]görsel nesneler işleme davranışını etkileyen çeşitli özellikler sunar: modu grafikleri, vektör grafikleri ve cihaz bağımsız grafikler korunur.  
+ [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] görsel nesneler işleme davranışını etkileyen çeşitli özellikler sunar: modu grafikleri, vektör grafikleri ve cihaz bağımsız grafikler korunur.  
   
 ### <a name="retained-mode-graphics"></a>Elde tutulmuş modu grafikleri  
  Görsel nesne rolü anlama anahtarları biri arasındaki farkı anlamak için **anlık mod** ve **modu korunur** grafik sistemleri. GDI veya GDI + göre standart bir Win32 uygulaması anlık kip grafik sistemi kullanır. Uygulamanın yeniden boyutlandırılan, bir pencere gibi bir eylemi nedeniyle geçersiz istemci alanını bölümünü yeniden çizerken için sorumlu olduğu anlamına gelir veya görünümünü değiştirme bir nesne.  
@@ -219,7 +207,7 @@ WPF işleme sırası diyagramı
  Saklama modu grafik kullanmanın en büyük avantajlarından biri, [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] verimli bir şekilde ne uygulamada çizilmesi gerektiğinde en iyi duruma getirebilirsiniz. Karmaşık Sahne opaklık değişen düzeylerine sahip olsa bile, genellikle yeniden en iyi duruma getirmek için özel amaçlı kod yazmanız gerekmez. Bu oldukça fazla güncelleştirme bölgede yeniden miktarını en aza indirerek, uygulamanızın en iyi duruma getirme içinde çaba harcamanızı Win32 programlama ile karşılaştırın. Bkz: [güncelleştirme bölgede yeniden](https://msdn.microsoft.com/library/dd162909.aspx) karmaşıklık türünün bir örneği için söz konusu Win32 uygulamalarında yeniden iyileştirme.  
   
 ### <a name="vector-graphics"></a>Vektör grafikleri  
- [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]kullanan **vektör grafikleri** olarak, işleme veri biçimi. Vektör grafikleri — ölçeklenebilir vektör grafikleri (SVG), Windows meta dosyaları (.wmf) ve TrueType yazı tiplerini içerir — işleme verileri depolamak ve grafik temelleri kullanarak görüntü yeniden oluşturmak nasıl açıklayan yönergeler oluşan bir liste olarak iletme. Örneğin, TrueType yazı tipleri çizgiler, eğriler ve komutlar kümesi yerine piksel dizisi açıklamak anahat yazı tipleridir. Vektör grafikleri kilit yararları de herhangi boyutunu ve çözünürlüğü ölçeklendirin yeteneğidir.  
+ [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] kullanan **vektör grafikleri** olarak, işleme veri biçimi. Vektör grafikleri — ölçeklenebilir vektör grafikleri (SVG), Windows meta dosyaları (.wmf) ve TrueType yazı tiplerini içerir — işleme verileri depolamak ve grafik temelleri kullanarak görüntü yeniden oluşturmak nasıl açıklayan yönergeler oluşan bir liste olarak iletme. Örneğin, TrueType yazı tipleri çizgiler, eğriler ve komutlar kümesi yerine piksel dizisi açıklamak anahat yazı tipleridir. Vektör grafikleri kilit yararları de herhangi boyutunu ve çözünürlüğü ölçeklendirin yeteneğidir.  
   
  Vektör grafikleri, bit eşlem grafik belirli bir çözüm için önceden oluşturulan bir görüntü piksel piksel gösterimi olarak işleme verileri depolar. Bit eşlem ve vektör grafik biçimleri arasındaki temel farklılıklar orijinal kaynak görüntü kalitesini biridir. Örneğin, bir kaynak görüntü boyutu değiştirildiğinde, görüntü kalitesini koruma görüntünün vektör grafik sistemleri ölçeklendirme ancak bit eşlem grafik sistemleri görüntü uzatma.  
   
@@ -239,7 +227,7 @@ Izgara ve vektör grafikleri arasındaki farklar
   
  Tüm uygulamalar DPI şunlardır: bazı donanım piksel birincil ölçü; kullanın DPI sistem değiştirme bu uygulamalar üzerinde etkisi yoktur. Diğer birçok uygulama DPI birimleri yazı tipi boyutlarını açıklamaktadır, ancak şey açıklamak için piksel kullanmak için kullanın. Çok küçük ya da çok büyük DPI yapma sistemin DPI ayarı ile uygulamaları metin ölçekler, ancak uygulamalar UI yok olduğundan bu uygulamalar için düzeni sorunlara neden olabilir. Bu sorunu kullanılarak geliştirilen uygulamaları için ortadan [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)].  
   
- [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]kendi birincil ölçü, donanım piksel yerine olarak aygıttan bağımsız piksel kullanarak otomatik ölçeklendirmeyi destekler; grafikler ve metin uygulama geliştiriciden ek iş olmadan düzgün şekilde ölçeklendirilir. Nasıl bir örneği aşağıda gösterilmiştir [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] metin ve grafikler farklı DPI ayarları görünür olan.  
+ [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] kendi birincil ölçü, donanım piksel yerine olarak aygıttan bağımsız piksel kullanarak otomatik ölçeklendirmeyi destekler; grafikler ve metin uygulama geliştiriciden ek iş olmadan düzgün şekilde ölçeklendirilir. Nasıl bir örneği aşağıda gösterilmiştir [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] metin ve grafikler farklı DPI ayarları görünür olan.  
   
  ![Grafikler ve metin farklı DPI ayarlarıyla](../../../../docs/framework/wpf/graphics-multimedia/media/graphicsmm-dpi-setting-examples.png "graphicsmm_dpi_setting_examples")  
 Grafikler ve farklı DPI ayarlarıyla metin  

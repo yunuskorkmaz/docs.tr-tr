@@ -1,25 +1,16 @@
 ---
-title: "Nasıl yapılır: Uzantı Metodu Yazma (Visual Basic)"
-ms.custom: 
+title: 'Nasıl yapılır: Uzantı Metodu Yazma (Visual Basic)'
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
-ms.topic: article
 helpviewer_keywords:
 - extending data types [Visual Basic]
 - writing extension methods [Visual Basic]
 - extension methods [Visual Basic]
 ms.assetid: fb2739cc-958d-4ef4-a38b-214a74c93413
-caps.latest.revision: "11"
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: 65cdabf59886e7457a327ee9cde968a6a73f2280
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: e220a025c39757b492be033caeb8924523515804
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-write-an-extension-method-visual-basic"></a>Nasıl yapılır: Uzantı Metodu Yazma (Visual Basic)
 Genişletme yöntemleri, varolan bir sınıfa yöntemleri eklemenize olanak tanır. Bu sınıfın örneğini değilmiş gibi genişletme yöntemi çağrılabilir.  
@@ -91,7 +82,7 @@ End Module
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
  <xref:System.Runtime.CompilerServices.ExtensionAttribute>  
- [Genişletme yöntemleri](./extension-methods.md)  
- [Module deyimi](../../../../visual-basic/language-reference/statements/module-statement.md)  
- [Parametreler ve bağımsız değişkenler](./procedure-parameters-and-arguments.md)  
+ [Genişletme Yöntemleri](./extension-methods.md)  
+ [Module Deyimi](../../../../visual-basic/language-reference/statements/module-statement.md)  
+ [Yordam Parametreleri ve Bağımsız Değişkenleri](./procedure-parameters-and-arguments.md)  
  [Visual Basic'de kapsam](../../../../visual-basic/programming-guide/language-features/declared-elements/scope.md)

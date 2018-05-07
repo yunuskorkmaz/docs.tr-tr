@@ -1,14 +1,6 @@
 ---
 title: Windows Forms DataGridView Denetiminde Sütun Doldurma Modu
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-winforms
-ms.tgt_pltfrm: ''
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -17,17 +9,11 @@ helpviewer_keywords:
 - DataGridView control [Windows Forms], column fill mode
 - data grids [Windows Forms], column fill mode
 ms.assetid: b4ef7411-ebf4-4e26-bb33-aecec90de80c
-caps.latest.revision: 16
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: c791de28ef6547766fb51ff528870f377ec339e8
-ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
+ms.openlocfilehash: 372ee5b0eb0101a13e7eb458ee8a8bcc06d3baff
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/27/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="column-fill-mode-in-the-windows-forms-datagridview-control"></a>Windows Forms DataGridView Denetiminde Sütun Doldurma Modu
 Sütun doldurma modu içinde <xref:System.Windows.Forms.DataGridView> denetim, böylece bunlar kullanılabilir ekran alanının genişliğini kaplayacak sütunlarını otomatik olarak yeniden boyutlandırır. Her sütunun genişliği eşit tutmak gerekli veya daha büyük olduğu durumların dışında yatay kaydırma çubuğu denetimi görüntülemez kendi <xref:System.Windows.Forms.DataGridViewColumn.MinimumWidth%2A> özellik değeri.  

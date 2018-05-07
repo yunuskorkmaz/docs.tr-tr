@@ -1,13 +1,6 @@
 ---
-title: "XAML Dili Ortak Temelleri İçin Yerleşik Türler"
-ms.custom: 
+title: XAML Dili Ortak Temelleri İçin Yerleşik Türler
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-wpf
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - XAML language primitives [XAML Services]
 - XAML [XAML Services], built-in types
@@ -22,19 +15,14 @@ helpviewer_keywords:
 - x:Single [XAML Services]
 - x:Int32 [XAML Services]
 ms.assetid: 11de2f08-5b95-4989-b5ec-5178eb968184
-caps.latest.revision: "11"
-author: wadepickett
-ms.author: wpickett
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 6052e575b62994b54799cc1af88584f433b06ff8
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 15c359a9a7f9797fc03ce20c453905af01f925d7
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="built-in-types-for-common-xaml-language-primitives"></a>XAML Dili Ortak Temelleri İçin Yerleşik Türler
-XAML 2009 sık kullanılan temelleri ortak dil çalışma zamanı (CLR) ve diğer programlama dilleri olan çeşitli veri türleri için XAML dil düzeyi destek sunar. XAML 2009 bu temelleri için destek ekler: `x:Object`, `x:Boolean`, `x:Char`, `x:String`, `x:Decimal`, `x:Single`, `x:Double`, `x:Int16`, `x:Int32`, `x:Int64`, `x:TimeSpan`, `x:Uri`, `x:Byte`, ve`x:Array`  
+XAML 2009 sık kullanılan temelleri ortak dil çalışma zamanı (CLR) ve diğer programlama dilleri olan çeşitli veri türleri için XAML dil düzeyi destek sunar. XAML 2009 bu temelleri için destek ekler: `x:Object`, `x:Boolean`, `x:Char`, `x:String`, `x:Decimal`, `x:Single`, `x:Double`, `x:Int16`, `x:Int32`, `x:Int64`, `x:TimeSpan`, `x:Uri`, `x:Byte`, ve `x:Array`  
   
 <a name="previous_techniques_for_language_primitives_in_xaml_markup"></a>   
 ## <a name="previous-techniques-for-language-primitives-in-xaml-markup"></a>XAML biçimlendirme dil temelleri için önceki teknikleri  
@@ -86,7 +74,7 @@ xmlns:sys="clr-namespace:System;assembly=mscorlib">
   
  Sayısal değerler için metin sözdizimi yanı sıra `x:Single` ayrıca belirteçleri verir `Infinity`, `-Infinity`, ve `NaN`. Bu belirteçler olarak büyük küçük harfe duyarlı kabul edilir.  
   
- `x:Single`ilk karakter, metin sözdizimi ise değerleri bilimsel gösterim biçiminde destekleyebilir `e` veya `E`.  
+ `x:Single` ilk karakter, metin sözdizimi ise değerleri bilimsel gösterim biçiminde destekleyebilir `e` veya `E`.  
   
  XAML dil belirtimi, bkz. [ \[MS XAML\] 5.2.8 ve 5.4.2 bölümlerine](http://go.microsoft.com/fwlink/?LinkId=114525).  
   
@@ -95,7 +83,7 @@ xmlns:sys="clr-namespace:System;assembly=mscorlib">
   
  Sayısal değerler için metin sözdizimi yanı sıra `x:Double` belirteçleri verir `Infinity`, `-Infinity`, ve `NaN`. Bu belirteçler olarak büyük küçük harfe duyarlı kabul edilir.  
   
- `x:Double`değerleri bilimsel gösterim biçiminde destekleyebilir. Karakter kullanın `e` veya `E` üs bölümü tanıtmak için.  
+ `x:Double` değerleri bilimsel gösterim biçiminde destekleyebilir. Karakter kullanın `e` veya `E` üs bölümü tanıtmak için.  
   
  XAML dil belirtimi, bkz. [ \[MS XAML\] 5.2.9 ve 5.4.3 bölümlerine](http://go.microsoft.com/fwlink/?LinkId=114525).  
   
@@ -105,12 +93,12 @@ xmlns:sys="clr-namespace:System;assembly=mscorlib">
  XAML dil belirtimi, bkz. [ \[MS XAML\] 5.2.11 ve 5.4.5 bölümlerine](http://go.microsoft.com/fwlink/?LinkId=114525).  
   
 ### <a name="xint32"></a>x: Int32  
- CLR yedekleme için `x:Int32` ilkel karşılık gelen <xref:System.Int32>. `x:Int32`imzalanmış olarak kabul edilir. XAML'de artı yokluğu (`+`) metin sözdiziminde oturum olarak imzalanmış pozitif kapsanan.  
+ CLR yedekleme için `x:Int32` ilkel karşılık gelen <xref:System.Int32>. `x:Int32` imzalanmış olarak kabul edilir. XAML'de artı yokluğu (`+`) metin sözdiziminde oturum olarak imzalanmış pozitif kapsanan.  
   
  XAML dil belirtimi, bkz. [ \[MS XAML\] 5.2.12 ve 5.4.6 bölümlerine](http://go.microsoft.com/fwlink/?LinkId=114525).  
   
 ### <a name="xint64"></a>x: Int64  
- CLR yedekleme için `x:Int64` ilkel karşılık gelen <xref:System.Int64>. `x:Int64`imzalanmış olarak kabul edilir. XAML'de artı yokluğu (`+`) metin sözdiziminde oturum olarak imzalanmış pozitif kapsanan.  
+ CLR yedekleme için `x:Int64` ilkel karşılık gelen <xref:System.Int64>. `x:Int64` imzalanmış olarak kabul edilir. XAML'de artı yokluğu (`+`) metin sözdiziminde oturum olarak imzalanmış pozitif kapsanan.  
   
  XAML dil belirtimi, bkz. [ \[MS XAML\] 5.2.13 ve 5.4.7 bölümlerine](http://go.microsoft.com/fwlink/?LinkId=114525).  
   

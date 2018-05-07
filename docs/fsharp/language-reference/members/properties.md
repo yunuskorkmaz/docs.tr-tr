@@ -1,17 +1,12 @@
 ---
 title: Özellikler (F#)
 description: 'Bir nesneyle ilişkilendirilmiş değerlerini temsil eden üyeleri olan F # özellikleri hakkında bilgi edinin.'
-author: cartermp
-ms.author: phcart
 ms.date: 05/16/2016
-ms.topic: language-reference
-ms.prod: dotnet-fsharp
-ms.devlang: fsharp
-ms.openlocfilehash: 6cad5d0e32958374e080f9b8046f7eb73b6bf615
-ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
+ms.openlocfilehash: 7aa71b1801b44fedcb420b824078004c6c240dc2
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/28/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="properties"></a>Özellikler
 

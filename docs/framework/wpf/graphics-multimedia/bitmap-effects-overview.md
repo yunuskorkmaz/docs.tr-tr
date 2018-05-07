@@ -1,28 +1,14 @@
 ---
 title: Bit Eşlem Efektlerine Genel Bakış
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-wpf
-ms.tgt_pltfrm: ''
-ms.topic: article
 helpviewer_keywords:
 - bitmap effects [WPF]
 ms.assetid: 23cb338e-4b59-4b52-b294-96431f9c9568
-caps.latest.revision: 34
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 841c854b7bbe2042d3a7aebd74dfe9421e71be2b
-ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
+ms.openlocfilehash: 7a93c5e247af7c9a54799721553ba486164a12e9
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/30/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="bitmap-effects-overview"></a>Bit Eşlem Efektlerine Genel Bakış
 Bit eşlem efektleri tasarımcıları etkinleştirin ve görsel efektler uygulamak için geliştiricilere Windows Presentation Foundation (WPF) içerik çizilir. Örneğin, bit eşlem efektleri kolayca uygulamanıza izin bir <xref:System.Windows.Media.Effects.DropShadowBitmapEffect> efekti veya Bulanıklaştırma etkili bir görüntü veya bir düğme.  

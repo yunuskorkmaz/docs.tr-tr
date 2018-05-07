@@ -1,12 +1,6 @@
 ---
-title: "Visual Basic'de Birleştirme İşleçleri"
-ms.custom: 
+title: Visual Basic'de Birleştirme İşleçleri
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
-ms.topic: article
 helpviewer_keywords:
 - '& operator [Visual Basic], concatenation'
 - concatenation operators [Visual Basic]
@@ -15,14 +9,11 @@ helpviewer_keywords:
 - + operator [Visual Basic], concatenation
 - concatenation operators [Visual Basic]
 ms.assetid: e59908c3-89e0-41ae-933d-3e8826c16a04
-caps.latest.revision: "18"
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: 3a444cca76fbc41807b0c8b69bcbaedbd75c36eb
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: ab268e513e6f019ed651c94deb5e423cfcca7587
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="concatenation-operators-in-visual-basic"></a>Visual Basic'de Birleştirme İşleçleri
 Birleştirme işleçleri, tek bir dize halinde birden çok dizenin katılın. İki birleştirme işleçleri vardır `+` ve `&`. Her ikisi de, aşağıdaki örnekte gösterildiği gibi temel birleştirme işlemi gerçekleştiremeyen.  
@@ -46,7 +37,7 @@ Dim y As String = "Mic" + "ro" + "soft"
  Çok sayıda birleştirmeler, silme ve değişiklik, gibi bir dizesini işlemeleri yaparsanız performansınızı gelen kar <xref:System.Text.StringBuilder> sınıfını <xref:System.Text> ad alanı. Oluşturma ve başlatma için fazladan bir yönerge sürdüğünü bir <xref:System.Text.StringBuilder> nesnesi ve son değerine dönüştürmek için başka bir yönerge bir `String`, ancak bu kez kurtarmak <xref:System.Text.StringBuilder> daha hızlı gerçekleştirebilirsiniz.  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [Option Strict deyimi](../../../../visual-basic/language-reference/statements/option-strict-statement.md)  
+ [Option Strict Deyimi](../../../../visual-basic/language-reference/statements/option-strict-statement.md)  
  [Visual Basic'de dize düzenleme yöntemlerinin türleri](../../../../visual-basic/programming-guide/language-features/strings/types-of-string-manipulation-methods.md)  
  [Visual Basic'de aritmetik işleçler](../../../../visual-basic/programming-guide/language-features/operators-and-expressions/arithmetic-operators.md)  
  [Visual Basic'de Karşılaştırma işleçleri](../../../../visual-basic/programming-guide/language-features/operators-and-expressions/comparison-operators.md)  

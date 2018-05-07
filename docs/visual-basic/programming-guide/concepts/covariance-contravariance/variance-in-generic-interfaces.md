@@ -1,39 +1,29 @@
 ---
 title: Genel arabirimler (Visual Basic) varyans
-ms.custom: 
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: cf4096d0-4bb3-45a9-9a6b-f01e29a60333
-caps.latest.revision: "3"
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: d05ccdc97efd5dd193bbbe0d15dd227ec71910d8
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: c18f014897ace71e437bd733ff6fcd1d4d8810dd
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="variance-in-generic-interfaces-visual-basic"></a>Genel arabirimler (Visual Basic) varyans
 .NET framework 4 birkaç mevcut genel arabirimler sapma desteği sunmuştur. Bu arabirimleri uygulayan sınıflar örtük dönüştürme sapma desteği sağlar. Aşağıdaki arabirimleri şimdi değişken şunlardır:  
   
--   <xref:System.Collections.Generic.IEnumerable%601>(T değişkendir)  
+-   <xref:System.Collections.Generic.IEnumerable%601> (T değişkendir)  
   
--   <xref:System.Collections.Generic.IEnumerator%601>(T değişkendir)  
+-   <xref:System.Collections.Generic.IEnumerator%601> (T değişkendir)  
   
--   <xref:System.Linq.IQueryable%601>(T değişkendir)  
+-   <xref:System.Linq.IQueryable%601> (T değişkendir)  
   
--   <xref:System.Linq.IGrouping%602>(`TKey` ve `TElement` eşdeğişken olan)  
+-   <xref:System.Linq.IGrouping%602> (`TKey` ve `TElement` eşdeğişken olan)  
   
--   <xref:System.Collections.Generic.IComparer%601>(T karşıtıdır)  
+-   <xref:System.Collections.Generic.IComparer%601> (T karşıtıdır)  
   
--   <xref:System.Collections.Generic.IEqualityComparer%601>(T karşıtıdır)  
+-   <xref:System.Collections.Generic.IEqualityComparer%601> (T karşıtıdır)  
   
--   <xref:System.IComparable%601>(T karşıtıdır)  
+-   <xref:System.IComparable%601> (T karşıtıdır)  
   
  Kovaryans arabirimi genel tür parametresi tarafından tanımlanan daha fazla türetilmiş bir dönüş türüne sahip bir yöntem izin verir. Kovaryans özelliği göstermek için bu genel arabirimler göz önünde bulundurun: `IEnumerable(Of Object)` ve `IEnumerable(Of String)`. `IEnumerable(Of String)` Arabirimi devralmaz `IEnumerable(Of Object)` arabirimi. Ancak, `String` türü devral `Object` türü ve bazı durumlarda bu arabirimleri nesnelerin birbirlerine atamak isteyebilirsiniz. Bu, aşağıdaki kod örneğinde gösterilir.  
   
@@ -103,5 +93,5 @@ Dim listObjects As IEnumerable(Of Object) = New List(Of String)
 ## <a name="see-also"></a>Ayrıca Bkz.  
  [(Visual Basic) genel koleksiyonlar için arabirimlerde varyans kullanma](../../../../visual-basic/programming-guide/concepts/covariance-contravariance/using-variance-in-interfaces-for-generic-collections.md)  
  [Değişken genel arabirimler oluşturma (Visual Basic)](../../../../visual-basic/programming-guide/concepts/covariance-contravariance/creating-variant-generic-interfaces.md)  
- [Genel arabirimler](../../../../standard/generics/interfaces.md)  
+ [Genel Arabirimler](../../../../standard/generics/interfaces.md)  
  [Temsilcilerde varyans (Visual Basic)](../../../../visual-basic/programming-guide/concepts/covariance-contravariance/variance-in-delegates.md)

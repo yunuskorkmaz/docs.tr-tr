@@ -1,28 +1,16 @@
 ---
-title: "DependencyObjects için Güvenli Oluşturucu Desenleri"
-ms.custom: 
+title: DependencyObjects için Güvenli Oluşturucu Desenleri
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-wpf
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - constructor patterns for dependency objects [WPF]
 - dependency objects [WPF], constructor patterns
 - FXCop tool [WPF]
 ms.assetid: f704b81c-449a-47a4-ace1-9332e3cc6d60
-caps.latest.revision: "12"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: db1b7f47ef135b1a174eecef7e53b41e6996256d
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 03615c1c49f2acf2a7c7f0910860f36de0a4f2d3
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="safe-constructor-patterns-for-dependencyobjects"></a>DependencyObjects için Güvenli Oluşturucu Desenleri
 Genellikle, sınıf oluşturucular oluşturucular türetilmiş bir sınıf için temel oluşturucular başlatma çağrılabilir olduğundan sanal yöntemler veya temsilciler gibi geri çağırmaları çağırmalıdır değil. Sanal girme verilen herhangi bir nesnenin bir tamamlanmamış başlatma durumu yapılabilir. Ancak, özellik sistemi çağırır ve geri çağırmaları dahili olarak, bağımlılık özelliği sisteminin bir parçası kullanıma sunar. Bir bağımlılık özelliği değerle ayarlamakla kadar basit bir işlem <xref:System.Windows.DependencyObject.SetValue%2A> çağrısı potansiyel olarak içeren bir geri çağırma yere belirleme. Bu nedenle, bağımlılık türünüz temel sınıf olarak kullanılıyorsa, sorunlu olabilecek bir oluşturucu gövdesi içinde özellik değerlerini ayarlarken dikkatli olmanız gerekir. Uygulama için belirli bir desene yoktur <xref:System.Windows.DependencyObject> oluşturucular ve burada belgelenen bağımlılık özelliği durumlar ve devralınmış geri çağırmalar ile belirli sorunları önler.  

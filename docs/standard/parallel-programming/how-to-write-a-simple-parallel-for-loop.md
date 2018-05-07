@@ -1,13 +1,7 @@
 ---
-title: "Nasıl yapılır: Basit bir Parallel.For Döngüsü Yazma"
-ms.custom: 
+title: 'Nasıl yapılır: Basit bir Parallel.For Döngüsü Yazma'
 ms.date: 03/30/2017
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
 ms.technology: dotnet-standard
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -16,18 +10,13 @@ helpviewer_keywords:
 - for loop, parallel construction in .NET
 - parallel for loops, how to use
 ms.assetid: 9029ba7f-a9d1-4526-8c84-c88716dba5d4
-caps.latest.revision: "18"
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-- dotnetcore
-ms.openlocfilehash: 3a70dcb5e3811a18e23aeb2ebf0940d2c52f49a9
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: 6a601c8f1fed04c839c2a413e4b0e44a75f4195b
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-write-a-simple-parallelfor-loop"></a>Nasıl yapılır: Basit bir Parallel.For Döngüsü Yazma
 Bu konu, gösteren iki örnek içerir <xref:System.Threading.Tasks.Parallel.For%2A?displayProperty=nameWithType> yöntemi. İlk kullandığı <xref:System.Threading.Tasks.Parallel.For%28System.Int64%2CSystem.Int64%2CSystem.Action%7BSystem.Int64%7D%29?displayProperty=nameWithType> yöntemi aşırı yüklemesini ve ikinci kullandığı <xref:System.Threading.Tasks.Parallel.For%28System.Int32%2CSystem.Int32%2CSystem.Action%7BSystem.Int32%7D%29?displayProperty=nameWithType> aşırı yüklemesi, iki basit aşırı <xref:System.Threading.Tasks.Parallel.For%2A?displayProperty=nameWithType> yöntemi. Bu iki aşırı kullanabilirsiniz <xref:System.Threading.Tasks.Parallel.For%2A?displayProperty=nameWithType> döngüsünü iptal etmek gerekmediğinde yöntemi bölün döngüsü yinelemeleri dışında ya da herhangi bir iş parçacığı yerel durumu korumak.  
@@ -60,7 +49,7 @@ Bu konu, gösteren iki örnek içerir <xref:System.Threading.Tasks.Parallel.For%
  Eşzamanlılık düzeyi hakkında daha fazla denetime ihtiyacınız varsa, alan aşırı birini kullanın bir <xref:System.Threading.Tasks.ParallelOptions?displayProperty=nameWithType> gibi giriş parametresi: <xref:System.Threading.Tasks.Parallel.For%28System.Int32%2CSystem.Int32%2CSystem.Threading.Tasks.ParallelOptions%2CSystem.Action%7BSystem.Int32%2CSystem.Threading.Tasks.ParallelLoopState%7D%29?displayProperty=nameWithType>.  
   
 ## <a name="return-value-and-exception-handling"></a>Dönüş değeri ve özel durum işleme  
- <xref:System.Threading.Tasks.Parallel.For%2A>döndüren bir <xref:System.Threading.Tasks.ParallelLoopResult?displayProperty=nameWithType> tüm iş parçacıklarının tamamlandığında nesne. Bu dönüş değeri: yararlı, durdurma veya kesme döngü yineleme el ile çünkü <xref:System.Threading.Tasks.ParallelLoopResult> tamamlanıncaya kadar çalıştırılan son yineleme gibi bilgileri depolar. Bir veya daha fazla özel durumları iş parçacıkları birinde oluşursa bir <xref:System.AggregateException?displayProperty=nameWithType> oluşturulur.  
+ <xref:System.Threading.Tasks.Parallel.For%2A> döndüren bir <xref:System.Threading.Tasks.ParallelLoopResult?displayProperty=nameWithType> tüm iş parçacıklarının tamamlandığında nesne. Bu dönüş değeri: yararlı, durdurma veya kesme döngü yineleme el ile çünkü <xref:System.Threading.Tasks.ParallelLoopResult> tamamlanıncaya kadar çalıştırılan son yineleme gibi bilgileri depolar. Bir veya daha fazla özel durumları iş parçacıkları birinde oluşursa bir <xref:System.AggregateException?displayProperty=nameWithType> oluşturulur.  
   
  Bu örnekte, dönüş değerini kodda <xref:System.Threading.Tasks.Parallel.For%2A> kullanılmaz.  
   

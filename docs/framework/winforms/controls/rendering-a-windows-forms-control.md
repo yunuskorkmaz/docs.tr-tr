@@ -1,13 +1,6 @@
 ---
-title: "Windows Forms Denetimini İşleme"
-ms.custom: 
+title: Windows Forms Denetimini İşleme
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-winforms
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -17,16 +10,11 @@ helpviewer_keywords:
 - custom controls [Windows Forms], graphics resources
 - custom controls [Windows Forms], invalidation and painting
 ms.assetid: aae8e1e6-4786-432b-a15e-f4c44760d302
-caps.latest.revision: "12"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 587c9c8fb0bf634a2491acb1ae0b2f60979fa899
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: a2d7a02e725e3f8065b80a6b30ea21158be43ea8
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="rendering-a-windows-forms-control"></a>Windows Forms Denetimini İşleme
 İşleme görsel bir kullanıcının ekranda oluşturma işleminin ifade eder. Windows Forms kullanan [!INCLUDE[ndptecgdi](../../../../includes/ndptecgdi-md.md)] (yeni Windows grafik kitaplığına) işleme için. Erişim sağlayan yönetilen sınıflar [!INCLUDE[ndptecgdi](../../../../includes/ndptecgdi-md.md)] bulunan <xref:System.Drawing?displayProperty=nameWithType> ad alanı ve onun alt ad boşlukları.  
@@ -72,9 +60,9 @@ public System.Drawing.Graphics Graphics {get;}
 }  
 ```  
   
- <xref:System.Drawing.Graphics>Çizim işlevselliğini kapsülleyen bir yönetilen tartışması içinde açıklandığı gibi sınıftır [!INCLUDE[ndptecgdi](../../../../includes/ndptecgdi-md.md)] bu konuda daha sonra. <xref:System.Windows.Forms.PaintEventArgs.ClipRectangle%2A> Örneği <xref:System.Drawing.Rectangle> yapısı ve denetim çizebilir kullanılabilir alanı tanımlar. Bir denetim Geliştirici hesaplayabilirsiniz <xref:System.Windows.Forms.PaintEventArgs.ClipRectangle%2A> kullanarak <xref:System.Windows.Forms.PaintEventArgs.ClipRectangle%2A> tartışma geometrinin bu konunun ilerleyen bölümlerinde açıklandığı gibi bir denetimin özelliği.  
+ <xref:System.Drawing.Graphics> Çizim işlevselliğini kapsülleyen bir yönetilen tartışması içinde açıklandığı gibi sınıftır [!INCLUDE[ndptecgdi](../../../../includes/ndptecgdi-md.md)] bu konuda daha sonra. <xref:System.Windows.Forms.PaintEventArgs.ClipRectangle%2A> Örneği <xref:System.Drawing.Rectangle> yapısı ve denetim çizebilir kullanılabilir alanı tanımlar. Bir denetim Geliştirici hesaplayabilirsiniz <xref:System.Windows.Forms.PaintEventArgs.ClipRectangle%2A> kullanarak <xref:System.Windows.Forms.PaintEventArgs.ClipRectangle%2A> tartışma geometrinin bu konunun ilerleyen bölümlerinde açıklandığı gibi bir denetimin özelliği.  
   
- Bir denetim işleme mantığı kılarak sağlamalısınız <xref:System.Windows.Forms.Control.OnPaint%2A> öğesinden devralınan yöntemi <xref:System.Windows.Forms.Control>. <xref:System.Windows.Forms.Control.OnPaint%2A>bir grafik nesnesi ve aracılığıyla çizmek için dikdörtgen erişim alır <xref:System.Drawing.Design.PaintValueEventArgs.Graphics%2A> ve <xref:System.Windows.Forms.PaintEventArgs.ClipRectangle%2A> özelliklerini <xref:System.Windows.Forms.PaintEventArgs> örneği kendisine geçirilen.  
+ Bir denetim işleme mantığı kılarak sağlamalısınız <xref:System.Windows.Forms.Control.OnPaint%2A> öğesinden devralınan yöntemi <xref:System.Windows.Forms.Control>. <xref:System.Windows.Forms.Control.OnPaint%2A> bir grafik nesnesi ve aracılığıyla çizmek için dikdörtgen erişim alır <xref:System.Drawing.Design.PaintValueEventArgs.Graphics%2A> ve <xref:System.Windows.Forms.PaintEventArgs.ClipRectangle%2A> özelliklerini <xref:System.Windows.Forms.PaintEventArgs> örneği kendisine geçirilen.  
   
 ```vb  
 Protected Overridable Sub OnPaint(pe As PaintEventArgs)  
@@ -99,7 +87,7 @@ Protected Overridable Sub OnPaintBackground(pevent As PaintEventArgs)
 protected virtual void OnPaintBackground(PaintEventArgs pevent);  
 ```  
   
- <xref:System.Windows.Forms.Control.OnPaintBackground%2A>arka plan boyar (ve dolayısıyla şekli) penceresinin ve sırasında hızlı olması garanti <xref:System.Windows.Forms.Control.OnPaint%2A> ayrıntıları boyar ve tek tek boyama istekleri birine birleştirilir olduğundan daha yavaş olabilir <xref:System.Windows.Forms.Control.Paint> olmak zorunda tüm alanları kapsamaktadır olay yeniden çizilir. Çağrılacak isteyebilirsiniz <xref:System.Windows.Forms.Control.OnPaintBackground%2A> örneği için denetim için bir gradyan renkli arka plan çizmek istiyorsanız.  
+ <xref:System.Windows.Forms.Control.OnPaintBackground%2A> arka plan boyar (ve dolayısıyla şekli) penceresinin ve sırasında hızlı olması garanti <xref:System.Windows.Forms.Control.OnPaint%2A> ayrıntıları boyar ve tek tek boyama istekleri birine birleştirilir olduğundan daha yavaş olabilir <xref:System.Windows.Forms.Control.Paint> olmak zorunda tüm alanları kapsamaktadır olay yeniden çizilir. Çağrılacak isteyebilirsiniz <xref:System.Windows.Forms.Control.OnPaintBackground%2A> örneği için denetim için bir gradyan renkli arka plan çizmek istiyorsanız.  
   
  Sırada <xref:System.Windows.Forms.Control.OnPaintBackground%2A> bir olay benzeri terminolojisi varsa ve aynı bağımsız değişken olarak `OnPaint` yöntemi, <xref:System.Windows.Forms.Control.OnPaintBackground%2A> true olay yöntemi değildir. Var olan hiçbir `PaintBackground` olay ve <xref:System.Windows.Forms.Control.OnPaintBackground%2A> olay temsilcileri çağrılmaz. Geçersiz kılarken <xref:System.Windows.Forms.Control.OnPaintBackground%2A> yöntemi, türetilmiş bir sınıf çağırmak için gerekli değildir <xref:System.Windows.Forms.Control.OnPaintBackground%2A> olduğu temel sınıfın yöntemi.  
   

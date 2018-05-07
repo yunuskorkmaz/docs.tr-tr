@@ -1,13 +1,6 @@
 ---
-title: "Nesne Değişkeni Ataması (Visual Basic)"
-ms.custom: 
+title: Nesne Değişkeni Ataması (Visual Basic)
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - Nothing keyword [Visual Basic], object variable assignment
 - object variables [Visual Basic], initializing
@@ -20,14 +13,11 @@ helpviewer_keywords:
 - assignment statements [Visual Basic], object variable assignment
 - Me keyword [Visual Basic], as object variable
 ms.assetid: 3706811d-fd40-44fe-8727-d692e8e55d6d
-caps.latest.revision: "19"
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: eb6b53bebddc1c9cf1b9088e96ded36a5e1c5242
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: f20a03c4d9a0e33203629ae066686f4c9f25c105
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="object-variable-assignment-visual-basic"></a>Nesne Değişkeni Ataması (Visual Basic)
 Bir nesne bir nesne değişkenine atamak için normal atama deyimini kullanın. Bir nesne ifadesi atayabilir veya [hiçbir şey](../../../../visual-basic/language-reference/nothing.md) anahtar sözcüğü, aşağıdaki örnek olarak gösterilmiştir.  
@@ -40,7 +30,7 @@ thisObject = Form1
 thisObject = Nothing  
 ```  
   
- `Nothing`şu anda değişkenine atanan nesnesi yok anlamına gelir.  
+ `Nothing` şu anda değişkenine atanan nesnesi yok anlamına gelir.  
   
 ## <a name="initialization"></a>Başlatma  
  Kodunuzu başladığı çalıştıran, değişkenleri için başlatılır nesnenizin `Nothing`. Bu, bildirimleri başlatma dahil bildirim deyimleri çalıştırıldığında belirttiğiniz değerleri yeniden başlatılır.  
@@ -85,9 +75,9 @@ addStandardText(Me)
 ```  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [Nesne değişkenleri](../../../../visual-basic/programming-guide/language-features/variables/object-variables.md)  
- [Nesne değişken bildirimi](../../../../visual-basic/programming-guide/language-features/variables/object-variable-declaration.md)  
- [Nesne değişkeni değerleri](../../../../visual-basic/programming-guide/language-features/variables/object-variable-values.md)  
+ [Nesne Değişkenleri](../../../../visual-basic/programming-guide/language-features/variables/object-variables.md)  
+ [Nesne Değişken Bildirimi](../../../../visual-basic/programming-guide/language-features/variables/object-variable-declaration.md)  
+ [Nesne Değişkeni Değerleri](../../../../visual-basic/programming-guide/language-features/variables/object-variable-values.md)  
  [Nasıl yapılır: bir nesne değişkeni bildirme ve Visual Basic'te bir nesneyi atayın](../../../../visual-basic/programming-guide/language-features/variables/how-to-declare-an-object-variable-and-assign-an-object-to-it.md)  
- [Nasıl yapılır: bir nesne değişkeni olun herhangi bir örneğine Başvurmamasını sağlama](../../../../visual-basic/programming-guide/language-features/variables/how-to-make-an-object-variable-not-refer-to-any-instance.md)  
+ [Nasıl yapılır: Bir Nesne Değişkeninin Bir Örneğine Başvurmamasını Sağlama](../../../../visual-basic/programming-guide/language-features/variables/how-to-make-an-object-variable-not-refer-to-any-instance.md)  
  [Me, My, MyBase ve MyClass](../../../../visual-basic/programming-guide/program-structure/me-my-mybase-and-myclass.md)

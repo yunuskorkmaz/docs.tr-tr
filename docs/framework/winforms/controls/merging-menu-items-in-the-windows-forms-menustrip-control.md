@@ -1,27 +1,15 @@
 ---
-title: "Windows Forms MenuStrip Denetiminde Menü Öğelerini Birleştirme"
-ms.custom: 
+title: Windows Forms MenuStrip Denetiminde Menü Öğelerini Birleştirme
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-winforms
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - MenuStrip [Windows Forms], merging
 - merging [Windows Forms], general concepts
 ms.assetid: 95e113ba-f362-4dda-8a76-6d95ddc45cee
-caps.latest.revision: "7"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: cd54855f7ee618915fea4fcb8f465cc8c1a68164
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 2782ae483d673f8f1eccab10876aca858737260a
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="merging-menu-items-in-the-windows-forms-menustrip-control"></a>Windows Forms MenuStrip Denetiminde Menü Öğelerini Birleştirme
 Bir Çoklu belge arabirimi (MDI) uygulaması varsa, üst formu menüleri menü öğeleri veya alt formun tüm menülerden birleştirebilirsiniz.  
@@ -41,7 +29,7 @@ Bir Çoklu belge arabirimi (MDI) uygulaması varsa, üst formu menüleri menü �
   
  Menü öğelerini el ile veya otomatik olarak birleştirebilirsiniz. Her iki yöntem için aynı şekilde menü öğelerini birleştirme, ancak birleştirme bu konunun devamındaki "El ile birleştirme" ve "Otomatik birleştirme" bölümlerde açıklandığı gibi farklı şekilde etkinleştirilir. Otomatik ve el ile birleştirme her birleştirme eylemini İleri birleştirme eylemini etkiler.  
   
- <xref:System.Windows.Forms.MenuStrip>Birleştirme taşır menü öğeleri birinden <xref:System.Windows.Forms.ToolStrip> başka bir durum haliyle yerine bunları kopyalama <xref:System.Windows.Forms.MainMenu>.  
+ <xref:System.Windows.Forms.MenuStrip> Birleştirme taşır menü öğeleri birinden <xref:System.Windows.Forms.ToolStrip> başka bir durum haliyle yerine bunları kopyalama <xref:System.Windows.Forms.MainMenu>.  
   
 ## <a name="mergeaction-values"></a>MergeAction değerleri  
  Kaynak menü öğelerini birleştirme eylemini ayarlayın <xref:System.Windows.Forms.MenuStrip> kullanarak <xref:System.Windows.Forms.MergeAction> özelliği.  
@@ -53,7 +41,7 @@ Bir Çoklu belge arabirimi (MDI) uygulaması varsa, üst formu menüleri menü �
 |<xref:System.Windows.Forms.MergeAction.Append>|(Varsayılan) Kaynak öğe hedef öğesi'nin koleksiyonun sonuna ekler.|Program bir bölümü etkinleştirildiğinde menü öğeleri menü sonuna ekleniyor.|  
 |<xref:System.Windows.Forms.MergeAction.Insert>|Kaynak öğesi tarafından belirtilen konumda hedef öğesi'nin koleksiyonuna ekler <xref:System.Windows.Forms.ToolStripItem.MergeIndex%2A> kaynak öğede ayarlanan özelliği.|Program bir bölümü etkinleştirildiğinde, Orta veya menü başlangıcını menü öğeleri ekleme.<br /><br /> Varsa değerini <xref:System.Windows.Forms.ToolStripItem.MergeIndex%2A> aynı olan iki menü öğeleri için bunlar ters sırada eklenir. Ayarlama <xref:System.Windows.Forms.ToolStripItem.MergeIndex%2A> uygun şekilde özgün sırasını korumak için.|  
 |<xref:System.Windows.Forms.MergeAction.Replace>|Bir metin eşleşme bulur veya kullanan <xref:System.Windows.Forms.ToolStripItem.MergeIndex%2A> değeri metin eşleşme bulundu ve kaynak menü öğesi ile eşleşen hedef menü öğesi yerini alır.|Bir hedef menü öğesini farklı bir şey yapan aynı ada bir kaynak menü öğesi değiştiriliyor.|  
-|<xref:System.Windows.Forms.MergeAction.MatchOnly>|Bir metin eşleşme bulur veya kullanan <xref:System.Windows.Forms.ToolStripItem.MergeIndex%2A> değeri metin eşleşme bulundu ve ardından tüm açılan öğeleri kaynaktan hedefe ekler.|Menü yapısı oluşturmaya ekler veya bir alt menü öğelerini ekler veya bir menüden menü öğeleri kaldırır. Örneğin, bir menü öğesi bir MDI alt bir ana ekleyebileceğiniz <xref:System.Windows.Forms.MenuStrip> **Kaydet** menüsü.<br /><br /> <xref:System.Windows.Forms.MergeAction.MatchOnly>herhangi bir eylemde bulunmadan menü yapısında gezinmeniz olanak tanır. Sonraki öğeleri değerlendirmek için bir yol sağlar.|  
+|<xref:System.Windows.Forms.MergeAction.MatchOnly>|Bir metin eşleşme bulur veya kullanan <xref:System.Windows.Forms.ToolStripItem.MergeIndex%2A> değeri metin eşleşme bulundu ve ardından tüm açılan öğeleri kaynaktan hedefe ekler.|Menü yapısı oluşturmaya ekler veya bir alt menü öğelerini ekler veya bir menüden menü öğeleri kaldırır. Örneğin, bir menü öğesi bir MDI alt bir ana ekleyebileceğiniz <xref:System.Windows.Forms.MenuStrip> **Kaydet** menüsü.<br /><br /> <xref:System.Windows.Forms.MergeAction.MatchOnly> herhangi bir eylemde bulunmadan menü yapısında gezinmeniz olanak tanır. Sonraki öğeleri değerlendirmek için bir yol sağlar.|  
 |<xref:System.Windows.Forms.MergeAction.Remove>|Bir metin eşleşme bulur veya kullanan <xref:System.Windows.Forms.ToolStripItem.MergeIndex%2A> değeri metin eşleşme bulundu ve ardından hedef öğeyi kaldırır.|Menü öğesi hedef kaldırma <xref:System.Windows.Forms.MenuStrip>.|  
   
 ## <a name="manual-merging"></a>El ile birleştirme  

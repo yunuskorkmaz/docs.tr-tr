@@ -1,26 +1,12 @@
 ---
 title: İleti Dağıtımını Sınırlandırma
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 ms.assetid: 8b5ec4b8-1ce9-45ef-bb90-2c840456bcc1
-caps.latest.revision: ''
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: b4d81583a8dfc2c48fb9b7533f071495b562615e
-ms.sourcegitcommit: c883637b41ee028786edceece4fa872939d2e64c
+ms.openlocfilehash: 006cfaffe02752bb91e9f7d780477aecbaeb9c9e
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/26/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="limiting-message-distribution"></a>İleti Dağıtımını Sınırlandırma
 Eş kanal yayın kafes tasarım gereğidir. Bu ağ, diğer tüm üyelerine kafes herhangi bir üyesi tarafından gönderilen her ileti dağıtma kendi temel flooding modelini içerir. Bu, her ileti bir üyesi tarafından oluşturulan tüm diğer üyeler için (örneğin, sohbet odası) ilgili ve faydalı olduğu durumlarda idealdir. Bununla birlikte, birçok uygulamanın ileti dağıtımını sınırlandırma bir nadiren ihtiyaç vardır. Yeni bir üye kafes birleştirir ve ağ gönderilen son ileti almak istiyorsa, örneğin, bu istek kafes her üyesine taşan olması gerekmez. Yerel olarak oluşturulmuş iletileri filtrelenebilen veya istek Komşuları yakınında sınırlı olabilir. İletileri kafes tek tek bir düğümde yeniden gönderilebilir. Bu konu, iletileri kafes nasıl iletilen denetlemek için atlama sayısı, bir ileti yayma filtresi, yerel bir filtre veya doğrudan bir bağlantı kullanarak açıklar ve bir yaklaşım seçimi için genel yönergeler sağlar.  

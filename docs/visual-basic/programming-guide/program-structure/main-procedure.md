@@ -1,13 +1,6 @@
 ---
 title: Visual Basic'de Ana Yordam
-ms.custom: 
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- devlang-visual-basic
-ms.topic: article
 f1_keywords:
 - vb.Main
 helpviewer_keywords:
@@ -15,19 +8,16 @@ helpviewer_keywords:
 - Main method [Visual Basic]
 - main function
 ms.assetid: f0db283e-f283-4464-b521-b90858cc1b44
-caps.latest.revision: 
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: 6de98ad4e470cd0becaf25f5a9a00c8095e44b15
-ms.sourcegitcommit: 34ec7753acf76f90a0fa845235ef06663dc9e36e
+ms.openlocfilehash: 109bf94eb91292cfca700a9e456c8ab53e83d68f
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="main-procedure-in-visual-basic"></a>Visual Basic'de Ana Yordam
 Her Visual Basic uygulama çağrılan bir yordam içermelidir `Main`. Bu yordam görevi görür, başlangıç noktası ve genel olarak, uygulamanız için Denetim aynıdır. .NET Framework çağrıları, `Main` uygulamanızı yükledi ve denetim geçirmeye hazır olduğunda yordamı. Bir Windows Forms uygulaması oluşturmakta olduğunuz sürece yazmalısınız `Main` yordamı kendi çalışan uygulamalar için.  
   
- `Main`ilk çalışan bir kod içerir. İçinde `Main`, hangi formda bir program başlatıldığında önce yüklenmesi gereken belirlemek, uygulamanızı bir kopyası zaten sistemde çalışıp çalışmadığını öğrenmek, uygulamanız için değişkenleri kümesinin kurmak veya uygulama gerektiren bir veritabanını açın.  
+ `Main` ilk çalışan bir kod içerir. İçinde `Main`, hangi formda bir program başlatıldığında önce yüklenmesi gereken belirlemek, uygulamanızı bir kopyası zaten sistemde çalışıp çalışmadığını öğrenmek, uygulamanız için değişkenleri kümesinin kurmak veya uygulama gerektiren bir veritabanını açın.  
   
 ## <a name="requirements-for-the-main-procedure"></a>Main yordamı için gereksinimleri  
  (Genellikle ile .exe uzantılı) kendi üzerinde çalıştığı bir dosyanın içermesi gereken bir `Main` yordamı. Bir kitaplıkla (örneğin uzantısı .dll) kendi çalıştırılmaz ve gerekli olmadığı bir `Main` yordamı. Oluşturabileceğiniz farklı proje türleri için gereksinimleri aşağıdaki gibidir:  
@@ -56,7 +46,7 @@ Her Visual Basic uygulama çağrılan bir yordam içermelidir `Main`. Bu yordam 
     End Module  
     ```  
   
--   `Main`Ayrıca dönebilirsiniz bir `Integer` işletim sistemi çıkış kodu programınızın kullanır. değer. Diğer programları Windows ERRORLEVEL değerini inceleyerek bu kodu test edebilirsiniz. Bir çıkış kodu döndürülecek bildirmelisiniz `Main` olarak bir `Function` yordamı yerine bir `Sub` yordamı.  
+-   `Main` Ayrıca dönebilirsiniz bir `Integer` işletim sistemi çıkış kodu programınızın kullanır. değer. Diğer programları Windows ERRORLEVEL değerini inceleyerek bu kodu test edebilirsiniz. Bir çıkış kodu döndürülecek bildirmelisiniz `Main` olarak bir `Function` yordamı yerine bir `Sub` yordamı.  
   
     ```  
     Module mainModule  
@@ -73,7 +63,7 @@ Her Visual Basic uygulama çağrılan bir yordam içermelidir `Main`. Bu yordam 
     End Module  
     ```  
   
--   `Main`Ayrıca gerçekleştirebileceğiniz bir `String` bağımsız değişken olarak bir dizi. Dizideki her dize programınızı çağırmak için kullanılan komut satırı bağımsız değişkenleri birini içerir. Değerlerine bağlı olarak farklı işlemler yapabilirsiniz.  
+-   `Main` Ayrıca gerçekleştirebileceğiniz bir `String` bağımsız değişken olarak bir dizi. Dizideki her dize programınızı çağırmak için kullanılan komut satırı bağımsız değişkenleri birini içerir. Değerlerine bağlı olarak farklı işlemler yapabilirsiniz.  
   
     ```  
     Module mainModule  

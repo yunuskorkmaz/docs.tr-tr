@@ -1,22 +1,16 @@
 ---
 title: Kategoriye Göre Listelenmiş Visual Basic Derleyici Seçenekleri
 ms.date: 04/12/2018
-ms.prod: .net
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- devlang-visual-basic
-ms.topic: article
 helpviewer_keywords:
 - Visual Basic compiler, options
 ms.assetid: fbe36f7a-7cfa-4f77-a8d4-2be5958568e3
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: a90c54ae1bb4d89b2fbe0df62730bc55c0ceb64f
-ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
+ms.openlocfilehash: 13aeab52cfd43aa8dfd7fda69e2eb9be798473e1
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/27/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="visual-basic-compiler-options-listed-by-category"></a>Kategoriye göre listelenmiş Visual Basic derleyici seçenekleri
 Visual Basic komut satırı derleyicisi programlardan Visual Studio tümleşik geliştirme ortamı (IDE) içinde derleme alternatif olarak sağlanır. İşlev kategoriye göre sıralanmış Visual Basic komut satırı derleyicisi seçeneklerinin listesi verilmiştir.  
@@ -45,7 +39,7 @@ Visual Basic komut satırı derleyicisi programlardan Visual Studio tümleşik g
 |Seçenek|Amaç|  
 |---|---|  
 |[-doc](../../../visual-basic/reference/command-line-compiler/doc.md)|Bir XML dosyasına işlem belgeleri açıklamaları.|  
-|[-belirleyici](../../../visual-basic/reference/command-line-compiler/deterministic.md)|Derleyicinin girişleri özdeş ise ikili içerikleri derlemeleri arasında aynı olan bir derleme çıktı neden olur.|
+|[-deterministic](../../../visual-basic/reference/command-line-compiler/deterministic.md)|Derleyicinin girişleri özdeş ise ikili içerikleri derlemeleri arasında aynı olan bir derleme çıktı neden olur.|
 |[-netcf](../../../visual-basic/reference/command-line-compiler/netcf.md)|Hedefe derleyici ayarlar [!INCLUDE[Compact](~/includes/compact-md.md)].|  
 |[-out](../../../visual-basic/reference/command-line-compiler/out.md)|Bir çıkış dosyasını belirtir.|  
 |[-refonly](refonly-compiler-option.md)|Yalnızca bir referans derlemesini çıkarır.|

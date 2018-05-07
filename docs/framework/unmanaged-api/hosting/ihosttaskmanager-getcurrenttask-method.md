@@ -1,14 +1,6 @@
 ---
 title: IHostTaskManager::GetCurrentTask Metodu
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: reference
 api_name:
 - IHostTaskManager.GetCurrentTask
 api_location:
@@ -23,17 +15,13 @@ helpviewer_keywords:
 ms.assetid: f17bca49-90bd-4dee-a5e1-b9a57ea46f85
 topic_type:
 - apiref
-caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: b3ba8cbaac28df49a2df70492c1a292ee8cd287e
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 2420ddb5cf9be2cfb08f89d27d9aa277305e7ffb
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="ihosttaskmanagergetcurrenttask-method"></a>IHostTaskManager::GetCurrentTask Metodu
 Bu çağrı yapılır işletim sistemi iş parçacığı üzerinde şu anda yürütülmekte görev için bir arabirim işaretçisi alır.  
@@ -54,13 +42,13 @@ HRESULT GetCurrentTask (
   
 |HRESULT|Açıklama|  
 |-------------|-----------------|  
-|S_OK|`GetCurrentTask`başarıyla döndürüldü.|  
+|S_OK|`GetCurrentTask` başarıyla döndürüldü.|  
 |HOST_E_CLRNOTAVAILABLE|Ortak dil çalışma zamanı (CLR) süreç içine yüklü değil veya CLR içinde yönetilen kod çalıştıramaz veya çağrı başarılı bir şekilde işlemek bir durumda.|  
 |HOST_E_TIMEOUT|Arama zaman aşımına uğradı.|  
 |HOST_E_NOT_OWNER|Arayan kilidi kendisine ait değil.|  
 |HOST_E_ABANDONED|Bir olay engellenmiş iş parçacığı sırasında iptal edildi veya fiber üzerinde beklediği.|  
 |E_FAIL|Bilinmeyen yıkıcı bir hata oluştu. Bir yöntem E_FAIL döndüğünde, CLR artık işlemi içinde kullanılamaz. Yöntemleri barındırma sonraki çağrılar HOST_E_CLRNOTAVAILABLE döndürür.|  
-|HOST_E_INVALIDOPERATION|`GetCurrentTask`ana bilgisayar denetimi dışında kalan bir işletim sistemi parçacığında çağrıldı.|  
+|HOST_E_INVALIDOPERATION|`GetCurrentTask` ana bilgisayar denetimi dışında kalan bir işletim sistemi parçacığında çağrıldı.|  
   
 ## <a name="remarks"></a>Açıklamalar  
  Ana bilgisayar de ayarlayabilirsiniz `pTask` parametresi olmayan başlatmak bir görev CLR girmesini engellemek için null.  
@@ -72,7 +60,7 @@ HRESULT GetCurrentTask (
   
  **Kitaplığı:** bir kaynak olarak MSCorEE.dll dahil  
   
- **.NET framework sürümleri:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET framework sürümleri:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
  [ICLRTask Arabirimi](../../../../docs/framework/unmanaged-api/hosting/iclrtask-interface.md)  

@@ -1,11 +1,6 @@
 ---
-title: "UInteger Veri Türü"
+title: UInteger Veri Türü
 ms.date: 01/31/2018
-ms.prod: .net
-ms.suite: 
-ms.technology:
-- devlang-visual-basic
-ms.topic: article
 f1_keywords:
 - vb.uinteger
 helpviewer_keywords:
@@ -23,11 +18,11 @@ helpviewer_keywords:
 ms.assetid: db7ddd34-4f23-46f5-84dd-8b0f83bb8729
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: ea6d42a604e5a50fab62644034afc82e089792c7
-ms.sourcegitcommit: d2da0142247ef42a219a5d2907f153e62dc6ea0d
+ms.openlocfilehash: a1c734578abd55270dd6feb9060d02691a6aaf8d
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/01/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="uinteger-data-type"></a>UInteger veri türü
 
@@ -80,7 +75,7 @@ Dim number = &H_0FAC_14D7ui
   
 -   **Genişletme.** `UInteger` Veri türü widens için `Long`, `ULong`, `Decimal`, `Single`, ve `Double`. Bu dönüştürebilirsiniz anlamına gelir `UInteger` karşılaşmadan olmadan bu türdeki herhangi bir <xref:System.OverflowException?displayProperty=nameWithType> hata.  
   
--   **Karakterleri yazın.** Değişmez değer türü karakterleri ekleme `UI` bir hazır değer zorlar `UInteger` veri türü. `UInteger`hiçbir tanımlayıcı türü karakteri var.  
+-   **Karakterleri yazın.** Değişmez değer türü karakterleri ekleme `UI` bir hazır değer zorlar `UInteger` veri türü. `UInteger` hiçbir tanımlayıcı türü karakteri var.  
   
 -   **Framework türü.** .NET Framework'teki karşılık gelen tür <xref:System.UInt32?displayProperty=nameWithType> yapısı.  
   

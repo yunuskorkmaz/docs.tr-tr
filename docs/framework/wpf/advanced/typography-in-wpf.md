@@ -1,28 +1,14 @@
 ---
 title: WPF'de Tipografi
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-wpf
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - typography [WPF], about typography
 ms.assetid: 06cbf17b-6eff-4fe5-949d-2dd533e4e1f4
-caps.latest.revision: 
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 7cd424dfd936427edb855a92e54921c064c8a8fe
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 45f74a4dd2164f332314ad79a18eab49efb520d6
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="typography-in-wpf"></a>WPF'de Tipografi
 Bu konu ana tipografik özelliklerini tanıtır [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]. Geliştirilmiş kalitesini ve metin işleme performansını bu özellikleri [!INCLUDE[TLA#tla_opentype](../../../../includes/tlasharptla-opentype-md.md)] Gelişmiş tipografi destek, Gelişmiş uluslararası metin yazı tipi desteği ve yeni metin uygulama programlama arabirimleri (API).  
@@ -31,9 +17,9 @@ Bu konu ana tipografik özelliklerini tanıtır [!INCLUDE[TLA2#tla_winclient](..
   
 <a name="Improved_Quality_and_Performance_of_Text"></a>   
 ## <a name="improved-quality-and-performance-of-text"></a>Kalitesinin, metin performansı  
- Metin [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] kullanılarak oluşturulması [!INCLUDE[TLA#tla_ct](../../../../includes/tlasharptla-ct-md.md)], metnin okunabilirliğini ve netlik geliştirir. [!INCLUDE[TLA2#tla_ct](../../../../includes/tla2sharptla-ct-md.md)]bir yazılım teknoloji tarafından geliştirilen [!INCLUDE[TLA#tla_ms](../../../../includes/tlasharptla-ms-md.md)] dizüstü ekranları, Pocket PC ekranları ve düz panel monitörler gibi varolan LCDler (Sıvı Crystal görüntüler) üzerinde metnin okunabilirliğini artırır. [!INCLUDE[TLA2#tla_ct](../../../../includes/tla2sharptla-ct-md.md)]büyük bir doğruluk, doğru şekilde ile bir piksel kesirli kısmını hizalama karakterleri tarafından görüntülenecek metni veren alt piksel işleme kullanır. Ek çözümleme uzun süreler çok okunmasını kolaylaştırmak metin görüntüsündeki küçük ayrıntıların netlik artırır. Başka bir geliştirilmesini [!INCLUDE[TLA2#tla_ct](../../../../includes/tla2sharptla-ct-md.md)] içinde [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] y yönünde düzgünleştirme, hangi düzgünleştirir dows masaüstleri ve alta metin karakterlerinin yüzeysel eğrilerinin değil. Daha fazla ayrıntı için [!INCLUDE[TLA2#tla_ct](../../../../includes/tla2sharptla-ct-md.md)] özellikleri, bkz. [ClearType genel bakış](../../../../docs/framework/wpf/advanced/cleartype-overview.md).  
+ Metin [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] kullanılarak oluşturulması [!INCLUDE[TLA#tla_ct](../../../../includes/tlasharptla-ct-md.md)], metnin okunabilirliğini ve netlik geliştirir. [!INCLUDE[TLA2#tla_ct](../../../../includes/tla2sharptla-ct-md.md)] bir yazılım teknoloji tarafından geliştirilen [!INCLUDE[TLA#tla_ms](../../../../includes/tlasharptla-ms-md.md)] dizüstü ekranları, Pocket PC ekranları ve düz panel monitörler gibi varolan LCDler (Sıvı Crystal görüntüler) üzerinde metnin okunabilirliğini artırır. [!INCLUDE[TLA2#tla_ct](../../../../includes/tla2sharptla-ct-md.md)] büyük bir doğruluk, doğru şekilde ile bir piksel kesirli kısmını hizalama karakterleri tarafından görüntülenecek metni veren alt piksel işleme kullanır. Ek çözümleme uzun süreler çok okunmasını kolaylaştırmak metin görüntüsündeki küçük ayrıntıların netlik artırır. Başka bir geliştirilmesini [!INCLUDE[TLA2#tla_ct](../../../../includes/tla2sharptla-ct-md.md)] içinde [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] y yönünde düzgünleştirme, hangi düzgünleştirir dows masaüstleri ve alta metin karakterlerinin yüzeysel eğrilerinin değil. Daha fazla ayrıntı için [!INCLUDE[TLA2#tla_ct](../../../../includes/tla2sharptla-ct-md.md)] özellikleri, bkz. [ClearType genel bakış](../../../../docs/framework/wpf/advanced/cleartype-overview.md).  
   
- ![ClearType y &#45; anti yön &#45;metinle; yumuşatma](../../../../docs/framework/wpf/advanced/media/typographyinwpf02.gif "TypographyInWPF02")  
+ ![ClearType y metinle&#45;yönü anti&#45;yumuşatma](../../../../docs/framework/wpf/advanced/media/typographyinwpf02.gif "TypographyInWPF02")  
 ClearType y yönünde düzgünleştirme metinle  
   
  Tüm metin işleme ardışık olarak donanım hızlandırılmış [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] gerekli donanım en düşük düzeyde makinenizi karşılaması koşuluyla. İşleme, yazılım işleme geri donanım döner kullanarak gerçekleştirilemiyor. Donanım hızlandırma etkiler tüm metin işleme ardışık düzen aşamaları — tek tek karakter, karakter çalıştığında, içine birleştirme karakterlerin depolamasını efektleri, uygulama için uygulama [!INCLUDE[TLA2#tla_ct](../../../../includes/tla2sharptla-ct-md.md)] son görüntülenen çıktının algoritmasına karıştırma. Donanım hızlandırma hakkında daha fazla bilgi için bkz: [grafik işleme katmanları](../../../../docs/framework/wpf/advanced/graphics-rendering-tiers.md).  
@@ -61,7 +47,7 @@ OpenType standart ve süslü karakterleri kullanarak metin
   
 <a name="Enhanced_International_Text_Support"></a>   
 ## <a name="enhanced-international-text-support"></a>Gelişmiş uluslararası metin desteği  
- [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]Aşağıdaki özellikleri sağlayarak Gelişmiş uluslararası metin desteği sağlar:  
+ [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] Aşağıdaki özellikleri sağlayarak Gelişmiş uluslararası metin desteği sağlar:  
   
 -   Otomatik satır aralığını Uyarlamalı ölçüm kullanarak tüm yazı sistemlerinde.  
   
@@ -71,7 +57,7 @@ OpenType standart ve süslü karakterleri kullanarak metin
   
 <a name="Enhanced_Font_Support"></a>   
 ## <a name="enhanced-font-support"></a>Gelişmiş yazı tipi desteği  
- [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]Aşağıdaki özellikleri sağlayarak gelişmiş yazı tipi desteği sağlar:  
+ [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] Aşağıdaki özellikleri sağlayarak gelişmiş yazı tipi desteği sağlar:  
   
 -   Unicode tüm metnin. Yazı tipi davranışı ve artık seçimi charset veya codepage gerektirir.  
   
@@ -89,7 +75,7 @@ OpenType standart ve süslü karakterleri kullanarak metin
   
 <a name="New_Text_APIs"></a>   
 ## <a name="new-text-application-programming-interfaces-apis"></a>Yeni metin uygulama programlama arabirimleri (API)  
- [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]birkaç metin sağlar [!INCLUDE[TLA2#tla_api#plural](../../../../includes/tla2sharptla-apisharpplural-md.md)] geliştiricilerin uygulamalarında metin dahil olmak üzere kullanın. Bunlar [!INCLUDE[TLA2#tla_api#plural](../../../../includes/tla2sharptla-apisharpplural-md.md)] üç kategoriye ayrılır:  
+ [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] birkaç metin sağlar [!INCLUDE[TLA2#tla_api#plural](../../../../includes/tla2sharptla-apisharpplural-md.md)] geliştiricilerin uygulamalarında metin dahil olmak üzere kullanın. Bunlar [!INCLUDE[TLA2#tla_api#plural](../../../../includes/tla2sharptla-apisharpplural-md.md)] üç kategoriye ayrılır:  
   
 -   **Düzen ve kullanıcı arabirimini**. Genel metin denetimleri için [!INCLUDE[TLA#tla_gui](../../../../includes/tlasharptla-gui-md.md)].  
   
@@ -101,9 +87,9 @@ OpenType standart ve süslü karakterleri kullanarak metin
  En üst düzeyde işlevselliği, metin [!INCLUDE[TLA2#tla_api#plural](../../../../includes/tla2sharptla-apisharpplural-md.md)] ortak sağlamak [!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)] gibi denetimler <xref:System.Windows.Controls.Label>, <xref:System.Windows.Controls.TextBlock>, ve <xref:System.Windows.Controls.TextBox>. Bu denetimler temel sağlamak [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] bir uygulama ve teklif sunmak ve metin ile etkileşim kurmak için kolay bir yol içinde öğelerin. Gibi denetimler <xref:System.Windows.Controls.RichTextBox> ve <xref:System.Windows.Controls.PasswordBox> etkinleştir daha gelişmiş veya metin işleme özelleştirilmiş. Gibi sınıfları <xref:System.Windows.Documents.TextRange>, <xref:System.Windows.Documents.TextSelection>, ve <xref:System.Windows.Documents.TextPointer> yararlı metin düzenleme etkinleştirin. Bunlar [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] denetimleri sağlayan özellikler gibi <xref:System.Windows.Controls.Control.FontFamily%2A>, <xref:System.Windows.Controls.Control.FontSize%2A>, ve <xref:System.Windows.Controls.Control.FontStyle%2A>, metin işlemek için kullanılan yazı tipi kontrol etkinleştirin.  
   
 #### <a name="using-bitmap-effects-transforms-and-text-effects"></a>Bit eşlem efektleri, dönüşümler ve metin efektleri kullanma  
- [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]bit eşlem efektleri, dönüşümler ve metin efektleri gibi özellikleri kullanıyor tarafından metnin görsel olarak ilginç kullanımlarını oluşturmanıza olanak sağlar. Aşağıdaki örnek, tipik bir metne uygulanan bir gölge efekti türünü gösterir.  
+ [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] bit eşlem efektleri, dönüşümler ve metin efektleri gibi özellikleri kullanıyor tarafından metnin görsel olarak ilginç kullanımlarını oluşturmanıza olanak sağlar. Aşağıdaki örnek, tipik bir metne uygulanan bir gölge efekti türünü gösterir.  
   
- ![Metin gölgesinin Yumuşaklık &#61; 0,25](../../../../docs/framework/wpf/advanced/media/shadowtext01.jpg "ShadowText01")  
+ ![Metin gölgesinin Yumuşaklık ile &#61; 0,25](../../../../docs/framework/wpf/advanced/media/shadowtext01.jpg "ShadowText01")  
 Gölge metinle  
   
  Aşağıdaki örnek, bir gölge efekti ve metne uygulanan gürültü gösterir.  

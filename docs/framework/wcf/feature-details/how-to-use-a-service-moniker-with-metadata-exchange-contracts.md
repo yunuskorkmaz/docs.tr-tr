@@ -1,34 +1,22 @@
 ---
-title: "Nasıl yapılır: Meta Veri Değişimi Sözleşmeleriyle Hizmet Bilinen Adı Kullanma"
-ms.custom: 
+title: 'Nasıl yapılır: Meta Veri Değişimi Sözleşmeleriyle Hizmet Bilinen Adı Kullanma'
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: c41a07e5-cb9d-45d6-9ea4-34511e227faf
-caps.latest.revision: "11"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 7d2b5b6d4a671a3eb281f49dd60fd3c00ee76f8a
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 6265860c2e1efb2f74a0243157a223a33889629a
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-use-a-service-moniker-with-metadata-exchange-contracts"></a>Nasıl yapılır: Meta Veri Değişimi Sözleşmeleriyle Hizmet Bilinen Adı Kullanma
-Bazı yeni geliştirme sonra [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] Hizmetleri karar bir komut dosyası veya Visual Basic 6.0 uygulamadan bu hizmetleri çağıran kullanabilmek ister. Bir yöntem oluşturmak için olacak bir [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] istemci derleme derlemesini COM ile kaydetme, derlemeyi GAC'ye yükleyin ve ardından Visual Basic kodunuzdan COM türlerini başvuru. Uygulamayı dağıttığınızda, dağıtmanız gerekecek [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] istemci derleme. Ardından, kullanıcı WCF istemcisi derlemesini COM ile kaydetme ve GAC'ye yerleştirmek sahip olur. [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]COM birlikte çalışma de aynı hizmet çağrıları öğesine bağlı kalmadan almanıza imkan tanır bir [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] istemci derleme. [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] Ad herhangi bir çağrıda olanak tanır [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] hizmet herhangi bir dilden bir meta veri exchange (Mex) uç noktası kullanan hizmet adının URI belirterek COM uyumlu (Visual Basic, VBScript, Visual Basic for Applications (VBA) ve benzeri) hizmeti hakkında türü bilgi ayıklamak için. Bu konu, Başlarken çağrılacağını açıklar [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] kullanarak örnek bir [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] Mex uç nokta belirtir ad.  
+Bazı yeni WCF hizmetleri geliştirme sonra bir komut dosyası veya Visual Basic 6.0 uygulamadan bu hizmetleri çağıran kullanabilmek ister karar verebilirsiniz. Bir yöntemin bir WCF istemcisi derlemesini oluşturmak, derlemesini COM ile kaydetme, derlemeyi GAC'ye yükleyin ve ardından Visual Basic kodunuzdan COM türlerini başvuru olacaktır. Uygulamayı dağıttığınızda, WCF istemcisi derleme de dağıtmak gerekecektir. Ardından, kullanıcı WCF istemcisi derlemesini COM ile kaydetme ve GAC'ye yerleştirmek sahip olur. WCF COM birlikte çalışma bir WCF istemcisi derlemeye bağlı olmadan aynı hizmeti çağrıları yapma sağlar. WCF bilinen adını herhangi bir WCF Hizmeti herhangi bir COM uyumlu dili (Visual Basic, VBScript, Visual Basic for Applications (VBA) ve benzeri) bir meta veri değişimi (Mex) uç noktası türü ayıklamak için hizmet adının kullanır URI belirterek çağırmanıza olanak tanır hizmeti hakkında bilgi. Bu konu, Mex uç nokta belirtir WCF bilinen adını kullanarak alma başlatıldı WCF örnek çağrı açıklar.  
   
 > [!NOTE]
->  Tanımlanan türlerden [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] istemci derleme aslında hiç örneği. Derleme yalnızca meta veriler için kullanılır.  
+>  WCF istemci derlemesi tarafından tanımlanan türleri aslında hiç örneği. Derleme yalnızca meta veriler için kullanılır.  
   
 ### <a name="using-the-service-moniker-with-a-mex-address"></a>Mex adresi ile hizmet bilinen adı kullanma  
   
-1.  Başlarken örneği oluşturmak ve hizmetin çalıştığından emin olmak için URL'ye (http://localhost/ServiceModelSamples/Service.svc) göz atmak için Internet Explorer'ı kullanın.  
+1.  Başlarken örneği oluşturmak ve kendi URL'ye göz atmak için Internet Explorer kullanın (http://localhost/ServiceModelSamples/Service.svc) hizmetinin çalıştığından emin olmak için.  
   
 2.  Visual Basic komut dosyası veya aşağıdaki kodu içeren bir Visual Basic uygulama oluşturun:  
   

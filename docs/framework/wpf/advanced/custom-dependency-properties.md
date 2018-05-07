@@ -1,13 +1,6 @@
 ---
-title: "Özel Bağımlılık Özellikleri"
-ms.custom: 
+title: Özel Bağımlılık Özellikleri
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-wpf
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -21,16 +14,11 @@ helpviewer_keywords:
 - wrappers [WPF], implementing
 - dependency properties [WPF], custom
 ms.assetid: e6bfcfac-b10d-4f58-9f77-a864c2a2938f
-caps.latest.revision: "25"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 588ab00d61a701dc43e2af5978a6023a93f367f4
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 2623f34418aad7a0b29c52d1310fdc79afced790
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="custom-dependency-properties"></a>Özel Bağımlılık Özellikleri
 Bu konuda nedenleri açıklanmaktadır, [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] uygulama geliştiricileri ve bileşen yazarlar özel bağımlılık özelliği oluşturmak isteyebilirsiniz ve performansı iyileştirmek bazı uygulama seçenekleri yanı sıra uygulama adımlarını açıklar Kullanılabilirlik veya çok yönlülük özelliğinin.  
@@ -134,11 +122,11 @@ Bu konuda nedenleri açıklanmaktadır, [!INCLUDE[TLA#tla_winclient](../../../..
   
 -   Özellik (veya değişiklikleri değeri) etkileyip etkilemediğini [!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)], düzen sistemi boyutu veya bir sayfasında, öğe işleme nasıl özellikle etkiler bir veya daha fazla aşağıdaki bayraklar ayarlayın: <xref:System.Windows.FrameworkPropertyMetadataOptions.AffectsMeasure>, <xref:System.Windows.FrameworkPropertyMetadataOptions.AffectsArrange>, <xref:System.Windows.FrameworkPropertyMetadataOptions.AffectsRender>.  
   
-    -   <xref:System.Windows.FrameworkPropertyMetadataOptions.AffectsMeasure>Bu özellik için bir değişiklik değişiklik gerektirdiğini gösterir [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] burada içeren nesne gerektirebilecek fazla veya az alanı üst içinde işleme. Örneğin, "Genişliği" özelliği bu bayrağı ayarlanmış olmalıdır.  
+    -   <xref:System.Windows.FrameworkPropertyMetadataOptions.AffectsMeasure> Bu özellik için bir değişiklik değişiklik gerektirdiğini gösterir [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] burada içeren nesne gerektirebilecek fazla veya az alanı üst içinde işleme. Örneğin, "Genişliği" özelliği bu bayrağı ayarlanmış olmalıdır.  
   
-    -   <xref:System.Windows.FrameworkPropertyMetadataOptions.AffectsArrange>Bu özellik için bir değişiklik değişiklik gerektirdiğini gösterir [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] genellikle işleme ayrılmış alanı bir değişiklik gerektirmez, ancak alanı içinde konumlandırma değiştiğini anlamına gelmez. Örneğin, bir "Hizalama" özelliği bu bayrağı ayarlanmış olmalıdır.  
+    -   <xref:System.Windows.FrameworkPropertyMetadataOptions.AffectsArrange> Bu özellik için bir değişiklik değişiklik gerektirdiğini gösterir [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] genellikle işleme ayrılmış alanı bir değişiklik gerektirmez, ancak alanı içinde konumlandırma değiştiğini anlamına gelmez. Örneğin, bir "Hizalama" özelliği bu bayrağı ayarlanmış olmalıdır.  
   
-    -   <xref:System.Windows.FrameworkPropertyMetadataOptions.AffectsRender>gösteren başka bir değişiklik oluştuğunu düzeni ve ölçü etkilemez, ancak başka bir işleme gerektirir. Bir örnek, "Arka plan" gibi varolan bir öğenin rengi değişir bir özellik olabilir.  
+    -   <xref:System.Windows.FrameworkPropertyMetadataOptions.AffectsRender> gösteren başka bir değişiklik oluştuğunu düzeni ve ölçü etkilemez, ancak başka bir işleme gerektirir. Bir örnek, "Arka plan" gibi varolan bir öğenin rengi değişir bir özellik olabilir.  
   
     -   Bu bayrakların genellikle meta verilerindeki bir protokol olarak özelliği sistem veya düzenini geri aramalar kendi geçersiz kılma uygulamalar için kullanılır. Örneğin, olabilir bir <xref:System.Windows.DependencyObject.OnPropertyChanged%2A> çağıracak geri çağırma <xref:System.Windows.UIElement.InvalidateArrange%2A> örneğinin herhangi bir özelliği bir değer değişiklik raporları ve sahip <xref:System.Windows.FrameworkPropertyMetadata.AffectsArrange%2A> olarak `true` meta.  
   
@@ -148,7 +136,7 @@ Bu konuda nedenleri açıklanmaktadır, [!INCLUDE[TLA#tla_winclient](../../../..
   
 -   Varsayılan olarak, veri bağlama <xref:System.Windows.Data.Binding.Mode%2A> bağımlılık özellikleri varsayılanlara için <xref:System.Windows.Data.BindingMode.OneWay>. Bağlamanın olması için her zaman değiştirebilirsiniz <xref:System.Windows.Data.BindingMode.TwoWay> bağlama örneği başına; Ayrıntılar için bkz: [bağlama yönünü belirtmek](../../../../docs/framework/wpf/data/how-to-specify-the-direction-of-the-binding.md). Ancak Kullan özelliği yapmayı seçebilirsiniz bağımlılık özelliği yazarı olarak <xref:System.Windows.Data.BindingMode.TwoWay> varsayılan bağlama modu. Varolan bir bağımlılık özelliğinin örneğidir <xref:System.Windows.Controls.MenuItem.IsSubmenuOpen%2A?displayProperty=nameWithType>; bu özellik için bir senaryodur <xref:System.Windows.Controls.MenuItem.IsSubmenuOpen%2A> mantığı ve birleştirme, ayarı <xref:System.Windows.Controls.MenuItem> varsayılan tema stili ile etkileşim. <xref:System.Windows.Controls.MenuItem.IsSubmenuOpen%2A> Özelliği mantığı kullanan veri bağlama yerel diğer durumu özellikleri ve yöntem çağrıları için uygun özelliği durumunu korumak için. Bağlar başka bir örnek özellik <xref:System.Windows.Data.BindingMode.TwoWay> varsayılan olarak <xref:System.Windows.Controls.TextBox.Text%2A?displayProperty=nameWithType>.  
   
--   Özellik devralma özel bir bağımlılık özelliği olarak ayarlayarak etkinleştirebilirsiniz <xref:System.Windows.FrameworkPropertyMetadataOptions.Inherits> bayrağı. Özellik devralma burada üst öğeler ve alt öğelerini bir özellik genelde sahip ve için alt öğeler üst ayarlarken aynı değere ayarlar, belirli özellik değerine sahip olacak şekilde mantıklıdır bir senaryo için yararlıdır. Bir örnek devralınabilir özelliği <xref:System.Windows.FrameworkElement.DataContext%2A>, hangi veri sunum önemli ana-ayrıntı senaryosu etkinleştirme işlemleri bağlama için kullanılır. Yaparak <xref:System.Windows.FrameworkElement.DataContext%2A> devralınabilir, herhangi bir alt öğe, veri bağlamı da devralır. Özellik değeri devralma nedeniyle sayfa veya uygulama kökünde bir veri bağlamı belirtebilirsiniz ve tüm olası alt öğelerindeki bağlamaları için belirtmek gerekmez. <xref:System.Windows.FrameworkElement.DataContext%2A>Ayrıca devralma varsayılan değerini geçersiz kılar, ancak bu her zaman yerel olarak herhangi bir belirli alt öğede ayarlanabilir göstermek için iyi bir örnektir; Ayrıntılar için bkz [hiyerarşik veriler ile ana-ayrıntı desenini kullanma](../../../../docs/framework/wpf/data/how-to-use-the-master-detail-pattern-with-hierarchical-data.md). Özellik değeri devralma olası bir performans maliyetiyle sahip ve bu nedenle kullanılmamalıdır; Ayrıntılar için bkz [özellik değeri devralma](../../../../docs/framework/wpf/advanced/property-value-inheritance.md).  
+-   Özellik devralma özel bir bağımlılık özelliği olarak ayarlayarak etkinleştirebilirsiniz <xref:System.Windows.FrameworkPropertyMetadataOptions.Inherits> bayrağı. Özellik devralma burada üst öğeler ve alt öğelerini bir özellik genelde sahip ve için alt öğeler üst ayarlarken aynı değere ayarlar, belirli özellik değerine sahip olacak şekilde mantıklıdır bir senaryo için yararlıdır. Bir örnek devralınabilir özelliği <xref:System.Windows.FrameworkElement.DataContext%2A>, hangi veri sunum önemli ana-ayrıntı senaryosu etkinleştirme işlemleri bağlama için kullanılır. Yaparak <xref:System.Windows.FrameworkElement.DataContext%2A> devralınabilir, herhangi bir alt öğe, veri bağlamı da devralır. Özellik değeri devralma nedeniyle sayfa veya uygulama kökünde bir veri bağlamı belirtebilirsiniz ve tüm olası alt öğelerindeki bağlamaları için belirtmek gerekmez. <xref:System.Windows.FrameworkElement.DataContext%2A> Ayrıca devralma varsayılan değerini geçersiz kılar, ancak bu her zaman yerel olarak herhangi bir belirli alt öğede ayarlanabilir göstermek için iyi bir örnektir; Ayrıntılar için bkz [hiyerarşik veriler ile ana-ayrıntı desenini kullanma](../../../../docs/framework/wpf/data/how-to-use-the-master-detail-pattern-with-hierarchical-data.md). Özellik değeri devralma olası bir performans maliyetiyle sahip ve bu nedenle kullanılmamalıdır; Ayrıntılar için bkz [özellik değeri devralma](../../../../docs/framework/wpf/advanced/property-value-inheritance.md).  
   
 -   Ayarlama <xref:System.Windows.FrameworkPropertyMetadataOptions.Journal> bağımlılık özelliği algılandı veya gezinti günlük kaydı hizmetleri tarafından kullanılan olmadığını göstermek için bayrak. Örnek <xref:System.Windows.Controls.Primitives.Selector.SelectedIndex%2A> özellik; bir seçimi seçili herhangi bir öğeyi denetim kalıcı hale günlük kaydı geçmiş gittiğinizde olduğunda.  
   

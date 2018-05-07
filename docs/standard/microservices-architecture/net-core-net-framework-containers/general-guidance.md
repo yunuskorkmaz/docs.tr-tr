@@ -1,21 +1,14 @@
 ---
-title: "Genel yönergeler"
-description: "Kapsayıcılı .NET uygulamaları için .NET mikro mimarisi | Genel yönergeler"
-keywords: "Docker, mikro, ASP.NET, kapsayıcı"
+title: Genel yönergeler
+description: Kapsayıcılı .NET uygulamaları için .NET mikro mimarisi | Genel yönergeler
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 10/18/2017
-ms.prod: .net-core
-ms.technology: dotnet-docker
-ms.topic: article
-ms.workload:
-- dotnet
-- dotnetcore
-ms.openlocfilehash: fa58d1d81b2d1523baf123d4963db2ca00fee15d
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: ccaae99f4c46fe739041f9b9e907a702303e62f6
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="general-guidance"></a>Genel yönergeler
 
@@ -48,7 +41,7 @@ Kısacası, yeni kapsayıcılı .NET uygulamaları oluşturduğunuzda varsayıla
 -   **e-kitap: Azure ve Windows kapsayıcıları ile var olan .NET Framework uygulamaları Modernize**
     [*https://aka.ms/liftandshiftwithcontainersebook*](https://aka.ms/liftandshiftwithcontainersebook)
 
--   **Örnek uygulamalar: Windows kapsayıcıları kullanarak eski ASP.NET web uygulamalarının Modernization**
+-   **Örnek uygulamalar: Modernization Windows kapsayıcıları kullanarak eski ASP.NET web uygulamaları**
     [*https://aka.ms/eshopmodernizing*](https://aka.ms/eshopmodernizing)
 
 

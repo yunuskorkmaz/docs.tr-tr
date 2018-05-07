@@ -1,12 +1,6 @@
 ---
-title: "^ İşleci (Visual Basic)"
+title: ^ İşleci (Visual Basic)
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- devlang-visual-basic
-ms.topic: article
 f1_keywords:
 - vb.^
 helpviewer_keywords:
@@ -20,14 +14,11 @@ helpviewer_keywords:
 - powers
 - arithmetic operators [Visual Basic], exponentiation
 ms.assetid: d89a1ca8-83da-4784-a87b-a9d7dceb3f62
-caps.latest.revision: 
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: 9e7159f289b687055c7d75cc8da58d6f76607a83
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 426c3e9913dadda1091f4ba53c66c6b65e40e768
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="-operator-visual-basic"></a>^ İşleci (Visual Basic)
 Bir sayıyı diğer bir sayının kuvvetine yükseltir.  
@@ -68,27 +59,27 @@ number ^ exponent
   
  Önceki örnekte aşağıdaki sonuçları verir:  
   
- `exp1`(2 kare) 4'e ayarlanır.  
+ `exp1` (2 kare) 4'e ayarlanır.  
   
- `exp2`19683 (3 küpünü, ardından küpünü bu değere) ayarlayın.  
+ `exp2` 19683 (3 küpünü, ardından küpünü bu değere) ayarlayın.  
   
- `exp3`-125 (küpünü -5) olarak ayarlanır.  
+ `exp3` -125 (küpünü -5) olarak ayarlanır.  
   
- `exp4`625'in (Dördüncü gücüne -5) ayarlanır.  
+ `exp4` 625'in (Dördüncü gücüne -5) ayarlanır.  
   
- `exp5`2 (8 kökündeki küpü)'ye ayarlanır.  
+ `exp5` 2 (8 kökündeki küpü)'ye ayarlanır.  
   
- `exp6`0,5 (8 küp kök tarafından bölünmüş 1.0) ayarlanır.  
+ `exp6` 0,5 (8 küp kök tarafından bölünmüş 1.0) ayarlanır.  
   
  Önceki örnekte ifadelerde parantez önemini unutmayın. Nedeniyle *İşleç önceliği*, Visual Basic normalde gerçekleştirir `^` herhangi diğer önce işleci birli bile `–` işleci. Varsa `exp4` ve `exp6` hesaplanan parantez olmadan, bunlar üretilen aşağıdaki sonuçları:  
   
- `exp4 = -5 ^ 4`(5 olarak – dördüncü güç), hesaplanan-625 içinde sonuçlanacak.  
+ `exp4 = -5 ^ 4` (5 olarak – dördüncü güç), hesaplanan-625 içinde sonuçlanacak.  
   
- `exp6 = 8 ^ -1.0 / 3.0`(8 – 1 güç veya 0,125) olarak hesaplanır 0.041666666666666666666666666666667 içinde oluşturacağı 3.0 bölü.  
+ `exp6 = 8 ^ -1.0 / 3.0` (8 – 1 güç veya 0,125) olarak hesaplanır 0.041666666666666666666666666666667 içinde oluşturacağı 3.0 bölü.  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [^ = İşleci](../../../visual-basic/language-reference/operators/exponentiation-assignment-operator.md)  
- [Aritmetik işleçler](../../../visual-basic/language-reference/operators/arithmetic-operators.md)  
+ [^= İşleci](../../../visual-basic/language-reference/operators/exponentiation-assignment-operator.md)  
+ [Aritmetik İşleçler](../../../visual-basic/language-reference/operators/arithmetic-operators.md)  
  [Visual Basic'de İşleç önceliği](../../../visual-basic/language-reference/operators/operator-precedence.md)  
- [İşlevselliğe göre listelenmiş işleçler](../../../visual-basic/language-reference/operators/operators-listed-by-functionality.md)  
+ [İşlevselliğe Göre Listelenmiş İşleçler](../../../visual-basic/language-reference/operators/operators-listed-by-functionality.md)  
  [Visual Basic'de aritmetik işleçler](../../../visual-basic/programming-guide/language-features/operators-and-expressions/arithmetic-operators.md)

@@ -1,26 +1,15 @@
 ---
-title: "Görünüm durumu Tasarımcı kaldırma bir XAML dosyasına ekler"
-ms.custom: 
+title: Görünüm durumu Tasarımcı kaldırma bir XAML dosyasına ekler
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: a801ce22-8699-483c-a392-7bb3834aae4f
-caps.latest.revision: "8"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 5da4423b5f6106bde106de739a8a33e351d17c3d
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: f63723c29c76854602308ba3e8d7e6dd65d9fb94
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="removing-the-view-state-the-designer-adds-to-an-xaml-file"></a>Görünüm durumu Tasarımcı kaldırma bir XAML dosyasına ekler
-Bu örnek türeyen bir sınıf oluşturmak nasıl gösterir <xref:System.Windows.Markup.XamlWriter> ve kaldırır XAML dosyası durumunu görüntüleyin. [!INCLUDE[wfd1](../../../../includes/wfd1-md.md)]Görünüm durumu bilinen XAML belgesine bilgi yazar. Görünüm durumu, çalışma zamanında gerekli olmayan düzen konumlandırma gibi tasarım zamanında, gerekli olan bilgileri ifade eder. [!INCLUDE[wfd2](../../../../includes/wfd2-md.md)]Bu bilgiler, düzenlenebilir XAML belgeye ekler. [!INCLUDE[wfd2](../../../../includes/wfd2-md.md)]Görünüm durumu ile XAML dosyası Yazar `mc:Ignorable` XAML dosyası çalışma zamanı yüklediğinde, bu bilgileri yüklenmedi şekilde özniteliği. Bu örnek XAML düğümleri işlerken, Görünüm durumu bilgisini kaldırır bir sınıfın nasıl oluşturulacağı gösterilmektedir.  
+Bu örnek türeyen bir sınıf oluşturmak nasıl gösterir <xref:System.Windows.Markup.XamlWriter> ve kaldırır XAML dosyası durumunu görüntüleyin. [!INCLUDE[wfd1](../../../../includes/wfd1-md.md)] Görünüm durumu bilinen XAML belgesine bilgi yazar. Görünüm durumu, çalışma zamanında gerekli olmayan düzen konumlandırma gibi tasarım zamanında, gerekli olan bilgileri ifade eder. [!INCLUDE[wfd2](../../../../includes/wfd2-md.md)] Bu bilgiler, düzenlenebilir XAML belgeye ekler. [!INCLUDE[wfd2](../../../../includes/wfd2-md.md)] Görünüm durumu ile XAML dosyası Yazar `mc:Ignorable` XAML dosyası çalışma zamanı yüklediğinde, bu bilgileri yüklenmedi şekilde özniteliği. Bu örnek XAML düğümleri işlerken, Görünüm durumu bilgisini kaldırır bir sınıfın nasıl oluşturulacağı gösterilmektedir.  
   
 ## <a name="discussion"></a>Tartışma  
  Bu örnek nasıl özel bir yazıcı oluşturulacağını gösterir.  
@@ -129,6 +118,6 @@ XamlServices.Save(new ViewStateCleaningWriter(ActivityXamlServices.CreateBuilder
 >   
 > `<InstallDrive>:\WF_WCF_Samples`  
 >   
-> Bu dizin mevcut değilse, Git [Windows Communication Foundation (WCF) ve .NET Framework 4 için Windows Workflow Foundation (WF) örnek](http://go.microsoft.com/fwlink/?LinkId=150780) tüm indirmek için [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] ve [!INCLUDE[wf1](../../../../includes/wf1-md.md)] örnekleri. Bu örnek aşağıdaki dizinde bulunur.  
+> Bu dizin mevcut değilse, Git [Windows Communication Foundation (WCF) ve .NET Framework 4 için Windows Workflow Foundation (WF) örnek](http://go.microsoft.com/fwlink/?LinkId=150780) tüm Windows Communication Foundation (WCF) indirmek için ve [!INCLUDE[wf1](../../../../includes/wf1-md.md)] örnekleri. Bu örnek aşağıdaki dizinde bulunur.  
 >   
 > `<InstallDrive>:\WF_WCF_Samples\WF\Basic\Designer\ViewStateCleaningWriter`

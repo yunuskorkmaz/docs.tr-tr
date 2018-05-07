@@ -1,24 +1,12 @@
 ---
-title: "Nasıl yapılır: WSDL Sözleşmeleriyle Hizmet Bilinen Adı Kullanma"
-ms.custom: 
+title: 'Nasıl yapılır: WSDL Sözleşmeleriyle Hizmet Bilinen Adı Kullanma'
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: a88d9650-bb50-4f48-8c85-12f5ce98a83a
-caps.latest.revision: "8"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 7c36ac73ced510c1ba3b7e16c71f764c46d6c8f9
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 838e7affcf47742c8f372879fcb33946d53ba43f
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-use-a-service-moniker-with-wsdl-contracts"></a>Nasıl yapılır: WSDL Sözleşmeleriyle Hizmet Bilinen Adı Kullanma
 Tamamen kendi içinde bulunan bir COM birlikte çalışma istemciniz isteyebileceğiniz durumlar vardır. Aramak istediğiniz hizmet MEX bitiş noktası ve DLL COM birlikte çalışma için kaydettirilmemiş olabilir WCF istemcisi getirebilir değil. Bu durumlarda, hizmet açıklayan bir WSDL dosyası oluşturun ve WCF hizmet bilinen adı geçirin. Bu konuda, bir WCF WSDL ad kullanarak alma başlatıldı WCF örnek çağrı açıklar.  
@@ -27,7 +15,7 @@ Tamamen kendi içinde bulunan bir COM birlikte çalışma istemciniz isteyebilec
   
 1.  Açın ve GettingStarted örnek çözümü oluşturun.  
   
-2.  Internet Explorer'ı açın ve hizmetin çalıştığından emin olmak için http://localhost/ServiceModelSamples/Service.svc göz atın.  
+2.  Internet Explorer'ı açın ve http://localhost/ServiceModelSamples/Service.svc hizmetinin çalıştığından emin olmak için.  
   
 3.  Adını da dosyasında CalculatorService sınıfında şu özniteliği ekleyin:  
   
@@ -37,7 +25,7 @@ Tamamen kendi içinde bulunan bir COM birlikte çalışma istemciniz isteyebilec
   
   
   
-5.  WSDL dosyası okumak üzere bir uygulama oluşturun. Ad alanları 3 ve 4. adımlarda eklenmiş olduğundan, hizmetin tüm WSDL açıklaması için http://localhost/ServiceModelSamples/Service.svc?wsdl göz atarak sorgulamak için IE kullanabilirsiniz. Dosyayı serviceWSDL.xml Internet Explorer'dan kaydedin. Adım 3 ve 4 ad belirtmezseniz, yukarıdaki URL sorgulama döndürülen WSDL belge tam WSDL olmaz. Döndürülen WSDL belge diğer WSDL belgeleri içe birkaç içeri aktarma deyimlerini içerir. Her alma deyimi aracılığıyla gidin ve tam WSDL belgesi oluşturmak, hizmetten içeri WSDL ile döndürülen WSDL birleştirme gerekir.  
+5.  WSDL dosyası okumak üzere bir uygulama oluşturun. Ad alanları 3 ve 4. adımlarda eklenmiş olduğundan göz atarak hizmetin tüm WSDL açıklamasını sorgulamak için IE kullanabilirsiniz http://localhost/ServiceModelSamples/Service.svc?wsdl. Dosyayı serviceWSDL.xml Internet Explorer'dan kaydedin. Adım 3 ve 4 ad belirtmezseniz, yukarıdaki URL sorgulama döndürülen WSDL belge tam WSDL olmaz. Döndürülen WSDL belge diğer WSDL belgeleri içe birkaç içeri aktarma deyimlerini içerir. Her alma deyimi aracılığıyla gidin ve tam WSDL belgesi oluşturmak, hizmetten içeri WSDL ile döndürülen WSDL birleştirme gerekir.  
   
 6.  Visual Basic 6.0 açın ve yeni bir standart .exe dosyası oluşturun. Aşağıdaki kod tıklatın işleyicisine eklemek için düğmesini çift tıklayın ve forma düğme ekleme:  
   

@@ -1,25 +1,16 @@
 ---
-title: "Nasıl yapılır: Bir Diziyi Başka Diziye Atama (Visual Basic)"
-ms.custom: 
+title: 'Nasıl yapılır: Bir Diziyi Başka Diziye Atama (Visual Basic)'
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
-ms.topic: article
 helpviewer_keywords:
 - covariance, arrays
 - arrays [Visual Basic], assigning
 - arrays [Visual Basic], covariance
 ms.assetid: 1ae89ea5-f292-4282-bcfc-e9b06b37fbd5
-caps.latest.revision: "18"
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: 0dd2d678bbfdeaa6b12b5b5a4f69d0fbca8c1944
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 63c7d187152fcb5ea84378c677aa687f334f63de
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-assign-one-array-to-another-array-visual-basic"></a>Nasıl yapılır: Bir Diziyi Başka Diziye Atama (Visual Basic)
 Diziler nesneler olduğundan, diğer nesne türleri gibi atama deyimleri kullanabilirsiniz. Dizi öğeleri ve derece ve uzunluğu bilgileri oluşturan veri bir işaretçi bir dizi değişkeni tutar ve yalnızca bu işaretçinin atama kopyalar.  
@@ -52,6 +43,6 @@ Diziler nesneler olduğundan, diğer nesne türleri gibi atama deyimleri kullana
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
  [Diziler](../../../../visual-basic/programming-guide/language-features/arrays/index.md)  
- [Dizilerle ilgili sorun giderme](../../../../visual-basic/programming-guide/language-features/arrays/troubleshooting-arrays.md)  
- [Enum deyimi](../../../../visual-basic/language-reference/statements/enum-statement.md)  
- [Dizi dönüştürmeleri](../../../../visual-basic/programming-guide/language-features/data-types/array-conversions.md)
+ [Dizilerle İlgili Sorun Giderme](../../../../visual-basic/programming-guide/language-features/arrays/troubleshooting-arrays.md)  
+ [Enum Deyimi](../../../../visual-basic/language-reference/statements/enum-statement.md)  
+ [Dizi Dönüştürmeler](../../../../visual-basic/programming-guide/language-features/data-types/array-conversions.md)

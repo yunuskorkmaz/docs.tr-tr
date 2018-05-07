@@ -1,13 +1,6 @@
 ---
-title: "Nasıl yapılır: Uygulama Kapsamı Kaynak Sözlüğü Kullanma"
-ms.custom: 
+title: 'Nasıl yapılır: Uygulama Kapsamı Kaynak Sözlüğü Kullanma'
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-wpf
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -16,22 +9,17 @@ helpviewer_keywords:
 - resource dictionaries [WPF], application-scope
 - application-scope resource dictionaries
 ms.assetid: 53857682-bd2c-4f2c-8f25-1307d0b451a2
-caps.latest.revision: "11"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 04dbcfb0fa16ceb4d6778ef611e926894d7840e9
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.openlocfilehash: a42fee8ad31dcc02459711fc51e8611e0e8cd012
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-use-an-application-scope-resource-dictionary"></a>Nasıl yapılır: Uygulama Kapsamı Kaynak Sözlüğü Kullanma
 Bu örnek bir uygulama kapsamlı özel kaynak sözlüğü tanımlayın ve nasıl kullanılacağını gösterir.  
   
 ## <a name="example"></a>Örnek  
- <xref:System.Windows.Application>Paylaşılan kaynaklar için bir uygulama kapsamı deposu gösterir: <xref:System.Windows.Application.Resources%2A>. Varsayılan olarak, <xref:System.Windows.Application.Resources%2A> özelliği olan bir örneğine ilk <xref:System.Windows.ResourceDictionary> türü. Alma ve ayarlama kullanarak uygulama kapsamı özelliklerini olduğunda bu örneği kullanmak <xref:System.Windows.Application.Resources%2A>. Daha fazla bilgi için bkz: [nasıl yapılır: almak ve bir uygulama kapsamı kaynak ayarlamak](http://msdn.microsoft.com/library/39e0420c-c9fc-47dc-8956-fdd95b214095).
+ <xref:System.Windows.Application> Paylaşılan kaynaklar için bir uygulama kapsamı deposu gösterir: <xref:System.Windows.Application.Resources%2A>. Varsayılan olarak, <xref:System.Windows.Application.Resources%2A> özelliği olan bir örneğine ilk <xref:System.Windows.ResourceDictionary> türü. Alma ve ayarlama kullanarak uygulama kapsamı özelliklerini olduğunda bu örneği kullanmak <xref:System.Windows.Application.Resources%2A>. Daha fazla bilgi için bkz: [nasıl yapılır: almak ve bir uygulama kapsamı kaynak ayarlamak](http://msdn.microsoft.com/library/39e0420c-c9fc-47dc-8956-fdd95b214095).
   
  Kullanılarak ayarlanan birden çok kaynaklarınız varsa <xref:System.Windows.Application.Resources%2A>, bunun yerine özel bir kaynak sözlüğü bu kaynakları depolamak ve ayarlamak için kullanabileceğiniz <xref:System.Windows.Application.Resources%2A> onunla yerine. XAML kullanarak özel bir kaynak sözlüğü bildirme nasıl gösterir.
   

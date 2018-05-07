@@ -1,27 +1,15 @@
 ---
-title: "Sınıf Kitaplığı (WPF)"
-ms.custom: 
+title: Sınıf Kitaplığı (WPF)
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-wpf
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - WPF class library [WPF]
 - Windows Presentation Foundation class library [WPF]
 ms.assetid: dcb35927-00ad-4141-a1ab-a7a524dd3f10
-caps.latest.revision: "10"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 259aeca19f1b5865cee2749e76398e3e7f30aa51
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 1d6f23c253a081bf454606a222ee4deed6c52e81
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="class-library-wpf"></a>Sınıf Kitaplığı (WPF)
 Aşağıdaki bağlantılar içeren ad alanlarına başvuruda [!INCLUDE[TLA#tla_winclient](../../../includes/tlasharptla-winclient-md.md)] [!INCLUDE[TLA#tla_api#plural](../../../includes/tlasharptla-apisharpplural-md.md)].  
@@ -32,19 +20,19 @@ Aşağıdaki bağlantılar içeren ad alanlarına başvuruda [!INCLUDE[TLA#tla_w
   
 -   <xref:Microsoft.Build.Tasks.Windows>  
   
--   <xref:Microsoft.Win32>(paylaşılan)  
+-   <xref:Microsoft.Win32> (paylaşılan)  
   
 -   <xref:Microsoft.Windows.Themes>  
   
--   <xref:System.Collections.ObjectModel>(paylaşılan)  
+-   <xref:System.Collections.ObjectModel> (paylaşılan)  
   
--   <xref:System.Collections.Specialized>(paylaşılan)  
+-   <xref:System.Collections.Specialized> (paylaşılan)  
   
--   <xref:System.ComponentModel>(paylaşılan)  
+-   <xref:System.ComponentModel> (paylaşılan)  
   
--   <xref:System.Diagnostics>(paylaşılan)  
+-   <xref:System.Diagnostics> (paylaşılan)  
   
--   <xref:System.IO>(paylaşılan)  
+-   <xref:System.IO> (paylaşılan)  
   
 -   <xref:System.IO.Packaging>  
   
@@ -54,7 +42,7 @@ Aşağıdaki bağlantılar içeren ad alanlarına başvuruda [!INCLUDE[TLA#tla_w
   
 -   <xref:System.Printing.Interop>  
   
--   <xref:System.Security.Permissions>(paylaşılan)  
+-   <xref:System.Security.Permissions> (paylaşılan)  
   
 -   <xref:System.Security.RightsManagement>  
   
@@ -96,7 +84,7 @@ Aşağıdaki bağlantılar içeren ad alanlarına başvuruda [!INCLUDE[TLA#tla_w
   
 -   <xref:System.Windows.Interop>  
   
--   <xref:System.Windows.Markup>(paylaşılan)  
+-   <xref:System.Windows.Markup> (paylaşılan)  
   
 -   <xref:System.Windows.Markup.Localizer>  
   
@@ -137,7 +125,7 @@ Aşağıdaki bağlantılar içeren ad alanlarına başvuruda [!INCLUDE[TLA#tla_w
 ## <a name="xaml-support-in-net-4"></a>.NET 4'te XAML desteği  
  Şu ad alanlarından System.Xaml derlemesinden türler içerir. System.Xaml çerçeveleri üzerinde oluşturulan WPF gibi ortak XAML dil desteği sağlayan [!INCLUDE[net_v40_long](../../../includes/net-v40-long-md.md)].  
   
--   <xref:System.Windows.Markup>(paylaşılan)  
+-   <xref:System.Windows.Markup> (paylaşılan)  
   
 -   <xref:System.Xaml>  
   

@@ -1,12 +1,6 @@
 ---
-title: "İsteğe Bağlı Parametreler (Visual Basic)"
-ms.custom: 
+title: İsteğe Bağlı Parametreler (Visual Basic)
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
-ms.topic: article
 helpviewer_keywords:
 - parameters [Visual Basic], optional
 - Visual Basic code, procedures
@@ -18,14 +12,11 @@ helpviewer_keywords:
 - arguments [Visual Basic], optional
 - optional arguments [Visual Basic], and named arguments
 ms.assetid: 398d2845-1069-4e94-b934-a73b545c8b87
-caps.latest.revision: "18"
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: e57023f594cfe4cd79d59cc8541fcf18018de0ee
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: a438455668310769c5267a6d42a2e694bb7b01dc
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="optional-parameters-visual-basic"></a>İsteğe Bağlı Parametreler (Visual Basic)
 Bir yordam parametresinin isteğe bağlı olduğunu ve yordam çağrıldığında bu parametre için hiçbir bağımsız değişken sağlanmaması gerektiğini belirtebilirsiniz. *İsteğe bağlı parametreler* tarafından belirtilen `Optional` yordamı tanımı bir anahtar sözcük. Aşağıdaki kurallar geçerlidir:  
@@ -51,7 +42,7 @@ Sub name(ByVal parameter1 As datatype1, Optional ByVal parameter2 As datatype2 =
 Sub name(argument 1, , , argument 4)  
 ```  
   
- Aşağıdaki örnek birkaç çağrılar `MsgBox` işlevi. `MsgBox`bir parametre ve iki isteğe bağlı parametreler gereklidir.  
+ Aşağıdaki örnek birkaç çağrılar `MsgBox` işlevi. `MsgBox` bir parametre ve iki isteğe bağlı parametreler gereklidir.  
   
  İlk çağrıda `MsgBox` sırada üç bağımsız değişken sağlar, `MsgBox` bunları tanımlar. İkinci çağrı yalnızca gerekli bağımsız değişkeni sağlar. Üçüncü ve dördüncü çağrılar, birinci ve üçüncü bağımsız değişkenleri sağlar. Üçüncü çağrı bunu konuma göre ve dördüncü çağrı ise ada göre yapar.  
   
@@ -68,11 +59,11 @@ Sub name(argument 1, , , argument 4)
  İsteğe bağlı parametreler içeren bir yordam tanımlamanın bir başka yolu aşırı yüklemeyi kullanmaktır. İsteğe bağlı tek bir parametreniz varsa, prosedürün iki aşırı yüklenmiş sürümünü (biri parametreyi kabul eden, diğeri ise parametresiz olmak üzere) tanımlayabilirsiniz. Bu yaklaşım, isteğe bağlı parametrelerin sayısı arttıkça daha karmaşık hale gelir. Ancak avantajı, çağırma programının her bir isteğe bağlı bağımsız değişkeni sağlayıp sağlamadığından kesin emin olabilmenizdir.  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [Yordamları](./index.md)  
- [Parametreler ve bağımsız değişkenler](./procedure-parameters-and-arguments.md)  
- [Bağımsız değişkenleri değere ve başvuruya göre geçirme](./passing-arguments-by-value-and-by-reference.md)  
- [Bağımsız değişkenleri konuma göre ve ada göre geçirme](./passing-arguments-by-position-and-by-name.md)  
- [Parametre dizileri](./parameter-arrays.md)  
- [Yordam aşırı yüklemesi](./procedure-overloading.md)  
- [İsteğe bağlı](../../../../visual-basic/language-reference/modifiers/optional.md)  
+ [Yordamlar](./index.md)  
+ [Yordam Parametreleri ve Bağımsız Değişkenleri](./procedure-parameters-and-arguments.md)  
+ [Bağımsız Değişkenleri Değere ve Başvuruya Göre Geçirme](./passing-arguments-by-value-and-by-reference.md)  
+ [Bağımsız Değişkenleri Konuma ve Ada Göre Geçirme](./passing-arguments-by-position-and-by-name.md)  
+ [Parametre Dizileri](./parameter-arrays.md)  
+ [Yordam Aşırı Yüklemesi](./procedure-overloading.md)  
+ [Optional](../../../../visual-basic/language-reference/modifiers/optional.md)  
  [ParamArray](../../../../visual-basic/language-reference/modifiers/paramarray.md)

@@ -1,26 +1,17 @@
 ---
-title: "İsteğe bağlı parametre türleri olarak kullanılan genel parametreler üzerinde sınıf kısıtlaması olmalıdır"
+title: İsteğe bağlı parametre türleri olarak kullanılan genel parametreler üzerinde sınıf kısıtlaması olmalıdır
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- devlang-visual-basic
-ms.topic: article
 f1_keywords:
 - vbc32124
 - bc32124
 helpviewer_keywords:
 - BC32124
 ms.assetid: 55aa8b2a-9ce3-4620-a710-2f9b0feb6143
-caps.latest.revision: 
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: a13ea66f12e54db4e585577e20e1f5396669f1a8
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 7e2b59f758ef236717a912694576b514e2ae8a60
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="generic-parameters-used-as-optional-parameter-types-must-be-class-constrained"></a>İsteğe bağlı parametre türleri olarak kullanılan genel parametreler üzerinde sınıf kısıtlaması olmalıdır
 Bir yordam bir başvuru türü kısıtlı olmayan bir tür parametresi kullanan isteğe bağlı bir parametre ile bildirilir.  
@@ -37,8 +28,8 @@ Bir yordam bir başvuru türü kısıtlı olmayan bir tür parametresi kullanan 
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
  [Visual Basic'de genel türler](../../../visual-basic/programming-guide/language-features/data-types/generic-types.md)  
- [Tür listesi](../../../visual-basic/language-reference/statements/type-list.md)  
- [Class deyimi](../../../visual-basic/language-reference/statements/class-statement.md)  
- [İsteğe bağlı parametreler](../../../visual-basic/programming-guide/language-features/procedures/optional-parameters.md)  
- [Yapıları](../../../visual-basic/programming-guide/language-features/data-types/structures.md)  
- [Hiçbir şey](../../../visual-basic/language-reference/nothing.md)
+ [Tür Listesi](../../../visual-basic/language-reference/statements/type-list.md)  
+ [Class Deyimi](../../../visual-basic/language-reference/statements/class-statement.md)  
+ [İsteğe Bağlı Parametreler](../../../visual-basic/programming-guide/language-features/procedures/optional-parameters.md)  
+ [Yapılar](../../../visual-basic/programming-guide/language-features/data-types/structures.md)  
+ [Nothing](../../../visual-basic/language-reference/nothing.md)

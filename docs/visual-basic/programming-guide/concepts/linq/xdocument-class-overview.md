@@ -1,22 +1,12 @@
 ---
-title: "XDocument sınıfına genel bakış (Visual Basic)"
-ms.custom: 
+title: XDocument sınıfına genel bakış (Visual Basic)
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 45cb7e71-196a-47da-bfe9-7a5589db1eed
-caps.latest.revision: "3"
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: 41b09335ae124ac290d8cd51afda71dfd935b7ff
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.openlocfilehash: 98ab095d67add2375eaf912ade71114c022b2ebb
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="xdocument-class-overview-visual-basic"></a>XDocument sınıfına genel bakış (Visual Basic)
 Bu konu tanıtır <xref:System.Xml.Linq.XDocument> sınıfı.  
@@ -26,12 +16,12 @@ Bu konu tanıtır <xref:System.Xml.Linq.XDocument> sınıfı.
   
  Yalnızca oluşturmak zorunda Not <xref:System.Xml.Linq.XDocument> tarafından sağlanan belirli işlevleri gerektirip gerektirmediğini nesneleri <xref:System.Xml.Linq.XDocument> sınıfı. Çoğu durumda, doğrudan çalışabileceğiniz <xref:System.Xml.Linq.XElement>. Doğrudan çalışma <xref:System.Xml.Linq.XElement> daha basit bir programlama modelidir.  
   
- <xref:System.Xml.Linq.XDocument>türetilen <xref:System.Xml.Linq.XContainer>. Bu nedenle, alt düğümler içerebilir. Ancak, <xref:System.Xml.Linq.XDocument> nesneleri, yalnızca bir alt olabilir <xref:System.Xml.Linq.XElement> düğümü. Bu bir XML belgesinde yalnızca bir kök öğe olabileceğini XML standart yansıtır.  
+ <xref:System.Xml.Linq.XDocument> türetilen <xref:System.Xml.Linq.XContainer>. Bu nedenle, alt düğümler içerebilir. Ancak, <xref:System.Xml.Linq.XDocument> nesneleri, yalnızca bir alt olabilir <xref:System.Xml.Linq.XElement> düğümü. Bu bir XML belgesinde yalnızca bir kök öğe olabileceğini XML standart yansıtır.  
   
 ## <a name="components-of-xdocument"></a>XDocument bileşenleri  
  Bir <xref:System.Xml.Linq.XDocument> aşağıdaki öğeleri içerebilir:  
   
--   Bir <xref:System.Xml.Linq.XDeclaration> nesnesi. <xref:System.Xml.Linq.XDeclaration>bir XML bildirimi ilgili bölümleri belirtmenize olanak sağlar: belgenin kodlama XML sürümü ve XML belgesi tek başına olup.  
+-   Bir <xref:System.Xml.Linq.XDeclaration> nesnesi. <xref:System.Xml.Linq.XDeclaration> bir XML bildirimi ilgili bölümleri belirtmenize olanak sağlar: belgenin kodlama XML sürümü ve XML belgesi tek başına olup.  
   
 -   Bir <xref:System.Xml.Linq.XElement> nesnesi. XML belgesinin kök düğümü budur.  
   

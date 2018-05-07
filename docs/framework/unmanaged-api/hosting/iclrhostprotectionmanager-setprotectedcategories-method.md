@@ -1,14 +1,6 @@
 ---
-title: "ICLRHostProtectionManager::SetProtectedCategories Yöntemi"
-ms.custom: 
+title: ICLRHostProtectionManager::SetProtectedCategories Yöntemi
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: reference
 api_name:
 - ICLRHostProtectionManager.SetProtectedCategories
 api_location:
@@ -23,17 +15,13 @@ helpviewer_keywords:
 ms.assetid: fa21dc7b-5da7-440b-b59e-9180e5181f9d
 topic_type:
 - apiref
-caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 0971e93f02420966d6561c5b7d4dce8b75e222fb
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: c6c93566d0909f1dbef46862760d47ede478d51a
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="iclrhostprotectionmanagersetprotectedcategories-method"></a>ICLRHostProtectionManager::SetProtectedCategories Yöntemi
 Yönetilen türler ve üyeleri kategorilerini kısmen güvenilen kodu çalıştırma engelleneceğini belirtir.  
@@ -54,7 +42,7 @@ HRESULT SetProtectedCategories (
   
 |HRESULT|Açıklama|  
 |-------------|-----------------|  
-|S_OK|`SetProtectedCategories`başarıyla döndürüldü.|  
+|S_OK|`SetProtectedCategories` başarıyla döndürüldü.|  
 |HOST_E_CLRNOTAVAILABLE|Ortak dil çalışma zamanı (CLR) süreç içine yüklü değil veya CLR içinde yönetilen kod çalıştıramaz veya çağrı başarılı bir şekilde işlemek bir durumda.|  
 |HOST_E_TIMEOUT|Arama zaman aşımına uğradı.|  
 |HOST_E_NOT_OWNER|Arayan kilidi kendisine ait değil.|  
@@ -71,7 +59,7 @@ HRESULT SetProtectedCategories (
   
  **Kitaplığı:** bir kaynak olarak MSCorEE.dll dahil  
   
- **.NET framework sürümleri:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET framework sürümleri:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
  <xref:System.Security.Permissions.HostProtectionAttribute>  

@@ -1,31 +1,19 @@
 ---
-title: "GridView Genel Bakışı"
-ms.custom: 
+title: GridView Genel Bakışı
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-wpf
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - GridView view mode [WPF]
 - ListView controls [WPF], GridView view mode
 - controls [WPF], ListView
 ms.assetid: b2d02267-32b3-40ce-8e9f-06972d8749d9
-caps.latest.revision: "26"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 099584ff5149891f406d5ad24a28a6b3e3faafb4
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 776897d490b2748e240cf7b9a4ea21364284c4c4
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="gridview-overview"></a>GridView Genel Bakışı
-<xref:System.Windows.Controls.GridView>Görünüm modu için görüntüleme modlarından biridir bir <xref:System.Windows.Controls.ListView> denetim. <xref:System.Windows.Controls.GridView> Sınıfı ve bunun destekleyici sınıfları siz ve kullanıcılarınız öğesi, genellikle düğmeleri etkileşimli sütun üst bilgileri olarak kullanan bir tabloda koleksiyonları görüntülemek etkinleştirin. Bu konu tanıtır <xref:System.Windows.Controls.GridView> sınıfı ve kullanımını özetler.  
+<xref:System.Windows.Controls.GridView> Görünüm modu için görüntüleme modlarından biridir bir <xref:System.Windows.Controls.ListView> denetim. <xref:System.Windows.Controls.GridView> Sınıfı ve bunun destekleyici sınıfları siz ve kullanıcılarınız öğesi, genellikle düğmeleri etkileşimli sütun üst bilgileri olarak kullanan bir tabloda koleksiyonları görüntülemek etkinleştirin. Bu konu tanıtır <xref:System.Windows.Controls.GridView> sınıfı ve kullanımını özetler.  
   
   
   
@@ -42,7 +30,7 @@ ms.lasthandoff: 12/22/2017
   
  ![ListView stilde](../../../../docs/framework/wpf/controls/media/styledlistview.PNG "StyledListView")  
   
- <xref:System.Windows.Controls.GridView>sütunları temsil ettiği <xref:System.Windows.Controls.GridViewColumn> kendi içeriğinin boyutunu otomatik olarak nesneleri. İsteğe bağlı olarak, açıkça ayarlayabileceğiniz bir <xref:System.Windows.Controls.GridViewColumn> belirli bir genişliğe. Sütun üstbilgileri arasında kavrayıcının sürükleyerek sütunları yeniden boyutlandırabilirsiniz. Ayrıca dinamik olarak ekleyebilir, Kaldır, Değiştir ve bu işlev yerleşik olduğundan sütunları yeniden sıralama <xref:System.Windows.Controls.GridView>. Ancak, <xref:System.Windows.Controls.GridView> görüntülediği veriyi doğrudan güncelleştiremez.  
+ <xref:System.Windows.Controls.GridView> sütunları temsil ettiği <xref:System.Windows.Controls.GridViewColumn> kendi içeriğinin boyutunu otomatik olarak nesneleri. İsteğe bağlı olarak, açıkça ayarlayabileceğiniz bir <xref:System.Windows.Controls.GridViewColumn> belirli bir genişliğe. Sütun üstbilgileri arasında kavrayıcının sürükleyerek sütunları yeniden boyutlandırabilirsiniz. Ayrıca dinamik olarak ekleyebilir, Kaldır, Değiştir ve bu işlev yerleşik olduğundan sütunları yeniden sıralama <xref:System.Windows.Controls.GridView>. Ancak, <xref:System.Windows.Controls.GridView> görüntülediği veriyi doğrudan güncelleştiremez.  
   
  Aşağıdaki örnekte nasıl tanımlanacağı gösterilmektedir bir <xref:System.Windows.Controls.GridView> çalışan verilerini görüntüler. Bu örnekte, <xref:System.Windows.Controls.ListView> tanımlar `EmployeeInfoDataSource` olarak <xref:System.Windows.Controls.ItemsControl.ItemsSource%2A>. Özellik tanımları <xref:System.Windows.Controls.GridViewColumn.DisplayMemberBinding%2A> bağlamak <xref:System.Windows.Controls.GridViewColumn> içerik `EmployeeInfoDataSource` veri kategorilerini.  
   

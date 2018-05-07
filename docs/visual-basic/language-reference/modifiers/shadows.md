@@ -1,10 +1,6 @@
 ---
 title: Shadows (Visual Basic)
 ms.date: 07/20/2015
-ms.prod: .net
-ms.suite: 
-ms.technology: devlang-visual-basic
-ms.topic: article
 f1_keywords:
 - vb.Shadows
 - shadows
@@ -15,14 +11,11 @@ helpviewer_keywords:
 - Shadows keyword [Visual Basic]
 - names [Visual Basic], shadowing
 ms.assetid: 6bf687cd-0544-4797-b51b-911125ec57c6
-caps.latest.revision: "16"
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: bb767c372cc05d61d569227af8eef0dc3c67489b
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 4ca4ec48ee63b71447056a2c5cb68e8948f27ad0
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="shadows-visual-basic"></a>Shadows (Visual Basic)
 Bildirilen bir programlama öğesi redeclares ve bir aynı adlı öğesi ya da bir taban sınıf içinde aşırı yüklenmiş öğelerin gizler belirtir.  
@@ -50,39 +43,39 @@ Bildirilen bir programlama öğesi redeclares ve bir aynı adlı öğesi ya da b
   
  `Shadows` Değiştiricisi bu bağlamlarında kullanılabilir:  
   
- [Class deyimi](../../../visual-basic/language-reference/statements/class-statement.md)  
+ [Class Deyimi](../../../visual-basic/language-reference/statements/class-statement.md)  
   
- [Const deyimi](../../../visual-basic/language-reference/statements/const-statement.md)  
+ [Const Deyimi](../../../visual-basic/language-reference/statements/const-statement.md)  
   
- [Declare deyimi](../../../visual-basic/language-reference/statements/declare-statement.md)  
+ [Declare Deyimi](../../../visual-basic/language-reference/statements/declare-statement.md)  
   
- [Delegate deyimi](../../../visual-basic/language-reference/statements/delegate-statement.md)  
+ [Delegate Deyimi](../../../visual-basic/language-reference/statements/delegate-statement.md)  
   
- [Dim deyimi](../../../visual-basic/language-reference/statements/dim-statement.md)  
+ [Dim Deyimi](../../../visual-basic/language-reference/statements/dim-statement.md)  
   
- [Enum deyimi](../../../visual-basic/language-reference/statements/enum-statement.md)  
+ [Enum Deyimi](../../../visual-basic/language-reference/statements/enum-statement.md)  
   
- [Event deyimi](../../../visual-basic/language-reference/statements/event-statement.md)  
+ [Event Deyimi](../../../visual-basic/language-reference/statements/event-statement.md)  
   
- [Function deyimi](../../../visual-basic/language-reference/statements/function-statement.md)  
+ [Function Deyimi](../../../visual-basic/language-reference/statements/function-statement.md)  
   
- [Interface deyimi](../../../visual-basic/language-reference/statements/interface-statement.md)  
+ [Interface Deyimi](../../../visual-basic/language-reference/statements/interface-statement.md)  
   
- [Property deyimi](../../../visual-basic/language-reference/statements/property-statement.md)  
+ [Property Deyimi](../../../visual-basic/language-reference/statements/property-statement.md)  
   
- [Structure deyimi](../../../visual-basic/language-reference/statements/structure-statement.md)  
+ [Structure Deyimi](../../../visual-basic/language-reference/statements/structure-statement.md)  
   
- [Sub deyimi](../../../visual-basic/language-reference/statements/sub-statement.md)  
+ [Sub Deyimi](../../../visual-basic/language-reference/statements/sub-statement.md)  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [Paylaşılan](../../../visual-basic/language-reference/modifiers/shared.md)  
- [Statik](../../../visual-basic/language-reference/modifiers/static.md)  
- [Özel](../../../visual-basic/language-reference/modifiers/private.md)  
+ [Shared](../../../visual-basic/language-reference/modifiers/shared.md)  
+ [Static](../../../visual-basic/language-reference/modifiers/static.md)  
+ [Private](../../../visual-basic/language-reference/modifiers/private.md)  
  [Me, My, MyBase ve MyClass](../../../visual-basic/programming-guide/program-structure/me-my-mybase-and-myclass.md)  
- [Devralma temelleri](../../../visual-basic/programming-guide/language-features/objects-and-classes/inheritance-basics.md)  
+ [Devralma Temelleri](../../../visual-basic/programming-guide/language-features/objects-and-classes/inheritance-basics.md)  
  [MustOverride](../../../visual-basic/language-reference/modifiers/mustoverride.md)  
  [NotOverridable](../../../visual-basic/language-reference/modifiers/notoverridable.md)  
- [Aşırı yüklemeler](../../../visual-basic/language-reference/modifiers/overloads.md)  
- [Geçersiz kılınabilir](../../../visual-basic/language-reference/modifiers/overridable.md)  
- [Geçersiz kılmaları](../../../visual-basic/language-reference/modifiers/overrides.md)  
+ [Overloads](../../../visual-basic/language-reference/modifiers/overloads.md)  
+ [Overridable](../../../visual-basic/language-reference/modifiers/overridable.md)  
+ [Overrides](../../../visual-basic/language-reference/modifiers/overrides.md)  
  [Visual Basic'de gölgeleme](../../../visual-basic/programming-guide/language-features/declared-elements/shadowing.md)

@@ -1,21 +1,14 @@
 ---
 title: Mikro hizmet odaklı bir uygulama tasarlama
 description: Kapsayıcılı .NET uygulamaları için .NET mikro mimarisi | Mikro hizmet odaklı bir uygulama tasarlama
-keywords: Docker, Microservices, ASP.NET, Container
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 05/26/2017
-ms.prod: .net-core
-ms.technology: dotnet-docker
-ms.topic: article
-ms.workload:
-- dotnet
-- dotnetcore
-ms.openlocfilehash: 116ddb44655f0a9708a6496cbe7fb4fbc608300b
-ms.sourcegitcommit: c883637b41ee028786edceece4fa872939d2e64c
+ms.openlocfilehash: a5107e979dc2101380cf848dc574033caf750fd9
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/26/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="designing-a-microservice-oriented-application"></a>Mikro hizmet odaklı bir uygulama tasarlama
 
@@ -85,7 +78,7 @@ Uygulamayı birkaç deposu UI ön uçlar (bir Web uygulaması ve yerel bir mobil
 
 -   Zaman uyumsuz olay tabanlı iletişim. Mikro arasında güncelleştirmeleri yayılmasına veya dış uygulamalarla tümleştirmek için bir olay veri yolu üzerinden gerçekleşir. Olay veri yolu RabbitMQ veya Azure Service Bus, NServiceBus, MassTransit veya Brighter gibi daha üst düzey hizmet yollarına kullanarak gibi tüm Mesajlaşma Aracısı altyapı teknolojilerde uygulanabilir.
 
-Uygulama kapsayıcıları biçiminde mikro kümesi olarak dağıtılır. İstemci uygulamaları Bu kapsayıcılar ile iletişim yanı sıra mikro iletişim. Bu ilk mimarisi belirtildiği gibi bir istemci uygulaması istekleri her mikro doğrudan yapabileceğini anlamına gelir bir doğrudan istemci mikro hizmet iletişim mimarisi kullanıyor. Her mikro hizmet https://servicename.applicationname.companyname gibi genel bir uç nokta vardır. Gerekirse, her mikro hizmet farklı bir TCP bağlantı noktası kullanabilirsiniz. URL mikro yük dengeleyici ile eşleyin üretim, hangi isteklerini kullanılabilir mikro hizmet örnekleri arasında dağıtır.
+Uygulama kapsayıcıları biçiminde mikro kümesi olarak dağıtılır. İstemci uygulamaları Bu kapsayıcılar ile iletişim yanı sıra mikro iletişim. Bu ilk mimarisi belirtildiği gibi bir istemci uygulaması istekleri her mikro doğrudan yapabileceğini anlamına gelir bir doğrudan istemci mikro hizmet iletişim mimarisi kullanıyor. Genel bir uç nokta gibi her mikro hizmet sahip https://servicename.applicationname.companyname. Gerekirse, her mikro hizmet farklı bir TCP bağlantı noktası kullanabilirsiniz. URL mikro yük dengeleyici ile eşleyin üretim, hangi isteklerini kullanılabilir mikro hizmet örnekleri arasında dağıtır.
 
 **Önemli Not API ağ geçidi vs üzerinde. EShopOnContainers doğrudan iletişime.** Büyük ve karmaşık mikro hizmet tabanlı bir uygulama oluştururken bu kılavuzu mimarisi bölümünde açıklandığı gibi doğrudan istemci mikro hizmet iletişim mimarisi dezavantajları olabilir. Ancak eShopOnContainers olduğu hedef bir basit odaklanın uygulama, Docker kapsayıcısı tabanlı uygulama başlatıldı ve bir tek tek yapılı API etkileyebilir ağ geçidi oluşturmak istemediğinize gibi küçük bir uygulama için yeterince iyi olabilir mikro geliştirme otonomisi.
 

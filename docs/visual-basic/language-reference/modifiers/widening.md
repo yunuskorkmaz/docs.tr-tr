@@ -1,11 +1,6 @@
 ---
-title: "Genişletme (Visual Basic)"
+title: Genişletme (Visual Basic)
 ms.date: 07/20/2015
-ms.prod: .net
-ms.suite: 
-ms.technology:
-- devlang-visual-basic
-ms.topic: article
 f1_keywords:
 - vb.widening
 helpviewer_keywords:
@@ -15,14 +10,11 @@ helpviewer_keywords:
 - Widening keyword [Visual Basic]
 - data type conversion [Visual Basic]
 ms.assetid: 646ae263-94d3-40a2-b0cc-64f619292f56
-caps.latest.revision: 
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: 034099397c1d296a42712b8c202e2ac99a0fb43b
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 2323aa38c81ce4e027f256d0e29c069f7ec77c00
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="widening-visual-basic"></a>Genişletme (Visual Basic)
 Belirten bir dönüşüm işleci (`CType`) bir sınıf veya yapı özgün sınıf veya yapı tüm olası değerlerini tutan bir türe dönüştürür.  
@@ -36,15 +28,15 @@ Belirten bir dönüşüm işleci (`CType`) bir sınıf veya yapı özgün sını
   
  `Widening` Anahtar sözcüğü bu bağlamda kullanılabilir:  
   
- [Operator deyimi](../../../visual-basic/language-reference/statements/operator-statement.md)  
+ [Operator Deyimi](../../../visual-basic/language-reference/statements/operator-statement.md)  
   
  Örneğin genişletme ve daraltma dönüşüm işleçleri tanımları bkz [nasıl yapılır: bir dönüşüm işleci tanımlama](../../../visual-basic/programming-guide/language-features/procedures/how-to-define-a-conversion-operator.md).  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [Operator deyimi](../../../visual-basic/language-reference/statements/operator-statement.md)  
- [Daraltma](../../../visual-basic/language-reference/modifiers/narrowing.md)  
- [Genişletme ve daraltma dönüşümleri](../../../visual-basic/programming-guide/language-features/data-types/widening-and-narrowing-conversions.md)  
- [Nasıl yapılır: bir işleci tanımlama](../../../visual-basic/programming-guide/language-features/procedures/how-to-define-an-operator.md)  
- [CType işlevi](../../../visual-basic/language-reference/functions/ctype-function.md)  
- [Option Strict deyimi](../../../visual-basic/language-reference/statements/option-strict-statement.md)  
- [Nasıl yapılır: bir dönüşüm işleci tanımlama](../../../visual-basic/programming-guide/language-features/procedures/how-to-define-a-conversion-operator.md)
+ [Operator Deyimi](../../../visual-basic/language-reference/statements/operator-statement.md)  
+ [Narrowing](../../../visual-basic/language-reference/modifiers/narrowing.md)  
+ [Genişletme ve Daraltma Dönüştürmeleri](../../../visual-basic/programming-guide/language-features/data-types/widening-and-narrowing-conversions.md)  
+ [Nasıl yapılır: İşleç Tanımlama](../../../visual-basic/programming-guide/language-features/procedures/how-to-define-an-operator.md)  
+ [CType İşlevi](../../../visual-basic/language-reference/functions/ctype-function.md)  
+ [Option Strict Deyimi](../../../visual-basic/language-reference/statements/option-strict-statement.md)  
+ [Nasıl yapılır: Dönüştürme İşleci Tanımlama](../../../visual-basic/programming-guide/language-features/procedures/how-to-define-a-conversion-operator.md)

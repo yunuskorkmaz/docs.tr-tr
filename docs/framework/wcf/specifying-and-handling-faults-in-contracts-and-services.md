@@ -1,31 +1,17 @@
 ---
 title: Sözleşme ve Hizmetlerde Hataları Belirtme ve İşleme
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 helpviewer_keywords:
 - handling faults [WCF]
 ms.assetid: a9696563-d404-4905-942d-1e0834c26dea
-caps.latest.revision: 22
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 00b3687169aa2e5521a3e3348be2a45738e97093
-ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
-ms.translationtype: MT
+ms.openlocfilehash: fc5fa03b723a35c4748fc16db8946277266e3b0e
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/30/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="specifying-and-handling-faults-in-contracts-and-services"></a>Sözleşme ve Hizmetlerde Hataları Belirtme ve İşleme
-[!INCLUDE[indigo1](../../../includes/indigo1-md.md)] uygulamaları, SOAP hataya ve SOAP hataya nesneleri yönetilen özel durum nesneleri için yönetilen özel durum nesneleri eşleme tarafından hata durumları işler. Bu bölümdeki konular, koşul olarak özel SOAP hataları, hizmet uygulaması'nın bir parçası olarak bu tür hataları döndürmek nasıl ve nasıl böyle hatası istemciler catch hata kullanıma sunmak için sözleşmeleri tasarlamak nasıl tartışın.  
+Windows Communication Foundation (WCF) uygulamaları, SOAP hataya ve SOAP hataya nesneleri yönetilen özel durum nesneleri için yönetilen özel durum nesneleri eşleme tarafından hata durumları işler. Bu bölümdeki konular, koşul olarak özel SOAP hataları, hizmet uygulaması'nın bir parçası olarak bu tür hataları döndürmek nasıl ve nasıl böyle hatası istemciler catch hata kullanıma sunmak için sözleşmeleri tasarlamak nasıl tartışın.  
   
 ## <a name="error-handling-overview"></a>Hata işleme genel bakış  
  Tüm yönetilen uygulamalarda işleme hataları tarafından temsil edilen <xref:System.Exception> nesneleri. SOAP tabanlı uygulamalarda olduğu gibi [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] uygulamalar, hizmet yöntemleri iletişim SOAP hata iletileri kullanarak hata bilgilerini işleme. SOAP, bir hizmet işlemi için meta verileri içinde yer alan ve bu nedenle istemciler daha sağlam veya etkileşimli kendi işlemi yapmak için kullanabileceğiniz bir arıza sözleşmesi oluşturma ileti türlerini hatalarıdır. SOAP hataları XML formundaki istemcilere ifade edilir çünkü ek olarak, ulaşabileceği artırma herhangi bir SOAP platformda istemcilerin kullanabileceği bir yüksek oranda birlikte çalışabilir türü sistemdir, [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] uygulama.  

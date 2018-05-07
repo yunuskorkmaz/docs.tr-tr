@@ -1,23 +1,14 @@
 ---
-title: "Dizeler için ayrılan alan doldu (Visual Basic)"
+title: Dizeler için ayrılan alan doldu (Visual Basic)
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- devlang-visual-basic
-ms.topic: article
 f1_keywords:
 - vbrID14
 ms.assetid: 16681c75-a400-422d-9351-c691d3c7614e
-caps.latest.revision: 
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: d820bdfd7c66ecbe81f8cb75ada2374045257598
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 8f71d192e843adc1432c0c60c32437814486a39e
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="out-of-string-space-visual-basic"></a>Dizeler için ayrılan alan doldu (Visual Basic)
 Visual Basic ile çok büyük dizelerini kullanabilirsiniz. Ancak, diğer programları ve dizelerinizi ile çalışma biçimini gereksinimlerini hala bu hataya neden olabilir.  
@@ -29,5 +20,5 @@ Visual Basic ile çok büyük dizelerini kullanabilirsiniz. Ancak, diğer progra
 2.  Tüm gereksiz uygulamalar daha fazla alan oluşturmak bellekten kaldırın.  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [Hata türleri](../../../visual-basic/programming-guide/language-features/error-types.md)  
- [Dize düzenleme özeti](../../../visual-basic/language-reference/keywords/string-manipulation-summary.md)
+ [Hata Türleri](../../../visual-basic/programming-guide/language-features/error-types.md)  
+ [Dize Düzenleme Özeti](../../../visual-basic/language-reference/keywords/string-manipulation-summary.md)

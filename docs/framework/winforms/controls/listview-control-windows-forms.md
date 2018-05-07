@@ -1,13 +1,6 @@
 ---
 title: ListView Denetimi (Windows Forms)
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-winforms
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - lists
 - checked list items [Windows Forms], Windows Forms controls
@@ -18,16 +11,11 @@ helpviewer_keywords:
 - ListView control [Windows Forms]
 - list controls [Windows Forms], List view
 ms.assetid: 9f71cf5c-82da-488a-a04e-ef52c0817187
-caps.latest.revision: "15"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 8328bc705349ffeaa78d95e95ed0955ac6faa5c3
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.openlocfilehash: 396553ce72e34a6af40f54fa45035a218b7fdb17
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="listview-control-windows-forms"></a>ListView Denetimi (Windows Forms)
 Windows Forms `ListView` denetim simgeler ile öğeler listesini görüntüler. Sağ bölmede Windows Explorer gibi bir kullanıcı arabirimi oluşturmak için bir liste görünümü kullanabilirsiniz.  
@@ -80,7 +68,7 @@ Windows Forms `ListView` denetim simgeler ile öğeler listesini görüntüler. 
 -   [İzlenecek yol: Tasarımcıyı Kullanarak ListView ve TreeView Denetimleri ile Gezgin Stilinde bir Arabirim Oluşturma](http://msdn.microsoft.com/library/ms171645\(v=vs.110\))  
   
 ## <a name="reference"></a>Başvuru  
- <xref:System.Windows.Forms.ListView>sınıfı  
+ <xref:System.Windows.Forms.ListView> sınıfı  
  Bu sınıf tanımlar ve tüm üyeleri bağlantılar içerir.  
   
 ## <a name="related-sections"></a>İlgili Bölümler  

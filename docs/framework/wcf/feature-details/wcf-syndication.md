@@ -1,35 +1,21 @@
 ---
-title: "WCF Dağıtımı"
-ms.custom: 
+title: WCF Dağıtımı
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - syndication [WCF]
 ms.assetid: ebf80384-0fc9-4919-a1e8-23ca2a13e300
-caps.latest.revision: 
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 1f7f5fd65fc298107a66e2049c059f3cc58b3d44
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 627de6431c641e48367a97e3f80f3d05d185ab45
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="wcf-syndication"></a>WCF Dağıtımı
-[!INCLUDE[indigo1](../../../../includes/indigo1-md.md)]Okuma ve bunları oluşturmak yanı sıra bir hizmet uç noktasında kullanıma olanak tanıyan Atom, RSS veya diğer özel biçimler dağıtım akışlarını kolayca çalışmak için destek sağlar. Bu bölümdeki konularda ayrıntılı dağıtım için bu programlama modeli açıklanmaktadır.  
+Windows Communication Foundation (WCF) okuma ve bunları oluşturmak yanı sıra bir hizmet uç noktasında kullanıma olanak tanıyan Atom, RSS veya diğer özel biçimler dağıtım akışlarını kolayca çalışmak için destek sağlar. Bu bölümdeki konularda ayrıntılı dağıtım için bu programlama modeli açıklanmaktadır.  
   
 ## <a name="in-this-section"></a>Bu Bölümde  
  [WCF Dağıtımı Genel Bakış](../../../../docs/framework/wcf/feature-details/wcf-syndication-overview.md)  
- Tarafından sağlanan dağıtım desteği'ne genel bakış sağlar [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)].  
+ WCF tarafından sağlanan dağıtım desteği'ne genel bakış sağlar.  
   
  [Dağıtım Mimarisi](../../../../docs/framework/wcf/feature-details/architecture-of-syndication.md)  
  Nesne modeli ve dağıtım genişletilebilirliği sınıflarda açıklar.  

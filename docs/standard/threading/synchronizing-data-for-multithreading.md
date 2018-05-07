@@ -1,30 +1,19 @@
 ---
-title: "Çoklu İş Parçacığı Kullanımı için Veri Eşitleme"
-ms.custom: 
+title: Çoklu İş Parçacığı Kullanımı için Veri Eşitleme
 ms.date: 03/30/2017
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
 ms.technology: dotnet-standard
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - synchronization, threads
 - threading [.NET Framework], synchronizing threads
 - managed threading
 ms.assetid: b980eb4c-71d5-4860-864a-6dfe3692430a
-caps.latest.revision: "16"
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-- dotnetcore
-ms.openlocfilehash: 4e1e123b8c8440b766e5b8903170c8cb392f154a
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: 998e159cceded6da2e9c3068680c45bc1c9345a6
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="synchronizing-data-for-multithreading"></a>Çoklu İş Parçacığı Kullanımı için Veri Eşitleme
 Birden çok iş parçacığı özellikleri ve yöntemleri tek bir nesnenin çağrıları yaptığınızda bu çağrıları eşitlenmiş önemlidir. Aksi halde bir iş parçacığı başka bir iş parçacığı yaptıklarını yarıda kesebilecek ve Nesne geçersiz bir durumda kalabilir. Üyeleri böyle kesintilerden korunan bir sınıf, iş parçacığı denir.  
@@ -64,7 +53,7 @@ Birden çok iş parçacığı özellikleri ve yöntemleri tek bir nesnenin çağ
   
  Bir yöntemle tasarlamanız bir **MethodImplAttribute** ve **MethodImplOptions.Synchronized**, kullanarak aynı etkiye sahip **İzleyici** veya derleyici yöntemin tüm gövdesi kilitlemek için anahtar sözcükler.  
   
- <xref:System.Threading.Thread.Interrupt%2A?displayProperty=nameWithType>Eşitlenen bölge kodu erişimi için beklenirken gibi engelleme işlemleri dışında bir iş parçacığı ayırmak için kullanılabilir. **Thread.Interrupt** ayrıca iş parçacıkları gibi işlemleri dışında ayırmak için kullanılan <xref:System.Threading.Thread.Sleep%2A?displayProperty=nameWithType>.  
+ <xref:System.Threading.Thread.Interrupt%2A?displayProperty=nameWithType> Eşitlenen bölge kodu erişimi için beklenirken gibi engelleme işlemleri dışında bir iş parçacığı ayırmak için kullanılabilir. **Thread.Interrupt** ayrıca iş parçacıkları gibi işlemleri dışında ayırmak için kullanılan <xref:System.Threading.Thread.Sleep%2A?displayProperty=nameWithType>.  
   
 > [!IMPORTANT]
 >  Türü kilitlemeyin — diğer bir deyişle, `typeof(MyType)` C# ' ta, `GetType(MyType)` Visual Basic'te veya `MyType::typeid` c++ — korumak için `static` yöntemleri (`Shared` yöntemleri Visual Basic'te). Bunun yerine özel bir statik nesnesi kullanın. Benzer şekilde, kullanmayın `this` C# (`Me` Visual Basic'te) kilit örneği yöntemleri. Bunun yerine özel bir nesne kullanın. Bir sınıf veya örnek kod, kendi olası neden kilitlenmeleri veya performans sorunları dışındaki tarafından kilitlenmiş.  

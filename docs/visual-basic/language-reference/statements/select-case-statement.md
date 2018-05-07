@@ -1,11 +1,6 @@
 ---
 title: Select...Case Deyimi (Visual Basic)
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
-ms.topic: article
 f1_keywords:
 - vb.Select
 - vb.Case
@@ -26,14 +21,11 @@ helpviewer_keywords:
 - End keyword [Visual Basic], Select Case statements
 - Case statement [Visual Basic], Select...Case
 ms.assetid: 68877b65-5419-4bf0-a465-20cd0e4c7d44
-caps.latest.revision: "15"
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: a7527763a05ec32af88c6ba66ef717d839c33154
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 9d24b455d92cbd00b268df26283aab082b7703a1
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="selectcase-statement-visual-basic"></a>Select...Case Deyimi (Visual Basic)
 İfadenin değerine bağlı olarak deyimlerinin birkaç gruplarından birini çalıştırır.  
@@ -82,7 +74,7 @@ End Select
   
  Varsa içindeki kod bir `Case` veya `Case Else` deyimi blok bloğunda bilgilerinin başka çalışması gerekmez, blok kullanarak çıkabilirsiniz `Exit Select` deyimi. Bu denetim deyimi aşağıdaki hemen aktarır `End Select`.  
   
- `Select Case`kurulumlarını iç içe. Her iç içe geçmiş `Select Case` yapım eşleşen olması gerekir `End Select` deyimi ve tek tamamen bulunmalıdır `Case` veya `Case Else` dış deyimi bloğunu `Select Case` yapı içinde bu iç içe geçmiş.  
+ `Select Case` kurulumlarını iç içe. Her iç içe geçmiş `Select Case` yapım eşleşen olması gerekir `End Select` deyimi ve tek tamamen bulunmalıdır `Case` veya `Case Else` dış deyimi bloğunu `Select Case` yapı içinde bu iç içe geçmiş.  
   
 ## <a name="example"></a>Örnek  
  Aşağıdaki örnek kullanan bir `Select Case` değişkenin değerine karşılık gelen bir satır yazmak için yapım `number`. İkinci `Case` deyimi geçerli değeri ile eşleşen değerini içerdiği `number`, "6 ve 8 (bunlar dahil) arasında" Yazar deyim şekilde çalışır.  
@@ -91,7 +83,7 @@ End Select
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
  <xref:Microsoft.VisualBasic.Interaction.Choose%2A>  
- [End deyimi](../../../visual-basic/language-reference/statements/end-statement.md)  
- [If... Then... Else deyimi](../../../visual-basic/language-reference/statements/if-then-else-statement.md)  
- [Option Compare deyimi](../../../visual-basic/language-reference/statements/option-compare-statement.md)  
- [Exit deyimi](../../../visual-basic/language-reference/statements/exit-statement.md)
+ [End Deyimi](../../../visual-basic/language-reference/statements/end-statement.md)  
+ [If...Then...Else Deyimi](../../../visual-basic/language-reference/statements/if-then-else-statement.md)  
+ [Option Compare Deyimi](../../../visual-basic/language-reference/statements/option-compare-statement.md)  
+ [Exit Deyimi](../../../visual-basic/language-reference/statements/exit-statement.md)

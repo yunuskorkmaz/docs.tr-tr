@@ -1,23 +1,12 @@
 ---
-title: "Nasıl yapılır: bir iş akışı oluşturma"
-ms.custom: 
+title: 'Nasıl yapılır: bir iş akışı oluşturma'
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 87234108-8e21-4cb3-9340-4a1a13f3f98c
-caps.latest.revision: "34"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 8e619fa7fa6437b60b1d3cd6b50a2a68229899f5
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 98235eac9309ecb0229281160f210079e712b755
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-create-a-workflow"></a>Nasıl yapılır: bir iş akışı oluşturma
 İş akışları yerleşik etkinliklerden yanı sıra özel etkinliklerden oluşturulabilir. Bu konular hem yerleşik etkinlikler gibi kullanan bir iş akışı oluşturma aracılığıyla bu bölümde adımda <xref:System.Activities.Statements.Flowchart> etkinliği ve önceki özel etkinlikler [nasıl yapılır: bir etkinlik oluşturmak](../../../docs/framework/windows-workflow-foundation/how-to-create-an-activity.md) konu. Sayı tahmin eden oyun iş akışını modeller. Bu bölümdeki konular, yalnızca biri, öğreticiyi tamamlamak için gereklidir; ilginizi çeken stil seçin ve bu adımı izleyin. Ancak, isterseniz tüm konuları tamamlanabilir.  

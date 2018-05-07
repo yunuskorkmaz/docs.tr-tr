@@ -1,12 +1,6 @@
 ---
-title: "Visual Basic'de Mantıksal ve Bit Düzeyinde İşleçler"
-ms.custom: 
+title: Visual Basic'de Mantıksal ve Bit Düzeyinde İşleçler
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
-ms.topic: article
 helpviewer_keywords:
 - short-circuiting
 - Boolean expressions
@@ -27,14 +21,11 @@ helpviewer_keywords:
 - OrElse operator [Visual Basic]
 - logical operators [Visual Basic], unary
 ms.assetid: ca474e13-567d-4b1d-a18b-301433705e57
-caps.latest.revision: "22"
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: ba48f722a11e93f82ae99aa407c3096a964e5ddd
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 371d28629b39fb2808ca018ea69da3306a31f50c
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="logical-and-bitwise-operators-in-visual-basic"></a>Visual Basic'de Mantıksal ve Bit Düzeyinde İşleçler
 Mantıksal işleçler karşılaştırmak `Boolean` ifadeleri ve return bir `Boolean` sonucu. `And`, `Or`, `AndAlso`, `OrElse`, Ve `Xor` işleçler *ikili* iki işlenen alır çünkü while `Not` işlecidir *birli* tek bir işlenen aldığından. Bu işleçlere bazıları tam sayı değerleri üzerinde bit tabanlı mantıksal işlemlerini de gerçekleştirebilirsiniz.  
@@ -96,7 +87,7 @@ Mantıksal işleçler karşılaştırmak `Boolean` ifadeleri ve return bir `Bool
   
 -   Sonuç ondalık olarak kabul edilir. Değerin 001 ikili 1, bu nedenle gösterimidir `x` = 1.  
   
- Bit düzeyinde `Or` işlem olduğunu benzer, birini veya ikisini karşılaştırılan BITS 1 ise 1 sonuç bit atanan dışında. `Xor`Karşılaştırılan BITS (ikisini) tam olarak birine 1 ise 1 sonuç bit atar. `Not`tek bir işlenen alır ve oturum bit dahil olmak üzere tüm BITS tersine çevirir ve bu değeri sonuca atar. Bu için pozitif sayılar imzalı anlamına gelir `Not` her zaman negatif bir değer döndürür ve negatif sayıları için `Not` her zaman bir pozitif veya sıfır değerini döndürür.  
+ Bit düzeyinde `Or` işlem olduğunu benzer, birini veya ikisini karşılaştırılan BITS 1 ise 1 sonuç bit atanan dışında. `Xor` Karşılaştırılan BITS (ikisini) tam olarak birine 1 ise 1 sonuç bit atar. `Not` tek bir işlenen alır ve oturum bit dahil olmak üzere tüm BITS tersine çevirir ve bu değeri sonuca atar. Bu için pozitif sayılar imzalı anlamına gelir `Not` her zaman negatif bir değer döndürür ve negatif sayıları için `Not` her zaman bir pozitif veya sıfır değerini döndürür.  
   
  `AndAlso` Ve `OrElse` işleçler bit düzeyinde işlemler desteklemez.  
   
@@ -105,8 +96,8 @@ Mantıksal işleçler karşılaştırmak `Boolean` ifadeleri ve return bir `Bool
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
  [Mantıksal ve bit düzeyinde işleçler (Visual Basic)](../../../../visual-basic/language-reference/operators/logical-bitwise-operators.md)  
- [Boole ifadeleri](../../../../visual-basic/programming-guide/language-features/operators-and-expressions/boolean-expressions.md)  
+ [Boole İfadeleri](../../../../visual-basic/programming-guide/language-features/operators-and-expressions/boolean-expressions.md)  
  [Visual Basic'de aritmetik işleçler](../../../../visual-basic/programming-guide/language-features/operators-and-expressions/arithmetic-operators.md)  
  [Visual Basic'de Karşılaştırma işleçleri](../../../../visual-basic/programming-guide/language-features/operators-and-expressions/comparison-operators.md)  
  [Visual Basic'de birleştirme işleçleri](../../../../visual-basic/programming-guide/language-features/operators-and-expressions/concatenation-operators.md)  
- [İşleçlerin etkili bileşimi](../../../../visual-basic/programming-guide/language-features/operators-and-expressions/efficient-combination-of-operators.md)
+ [İşleçlerin Etkili Bileşimi](../../../../visual-basic/programming-guide/language-features/operators-and-expressions/efficient-combination-of-operators.md)

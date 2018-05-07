@@ -1,14 +1,6 @@
 ---
-title: "ListView Denetimine Genel Bakış (Windows Forms)"
-ms.custom: 
+title: ListView Denetimine Genel Bakış (Windows Forms)
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-winforms
-ms.tgt_pltfrm: 
-ms.topic: article
 f1_keywords:
 - ListView
 helpviewer_keywords:
@@ -16,17 +8,11 @@ helpviewer_keywords:
 - ListView control [Windows Forms], about ListView control
 - list views
 ms.assetid: c9ef56c1-3bb1-4101-9f4e-e95e720f2756
-caps.latest.revision: 
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: b79fecb0a537f4c568b4a57e9ce2bfab8d8e1005
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.openlocfilehash: f92b5f5ae40287c95da10ef96aad0fa764fa00e2
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="listview-control-overview-windows-forms"></a>ListView Denetimine Genel Bakış (Windows Forms)
 Windows Forms <xref:System.Windows.Forms.ListView> denetim simgeler ile öğeler listesini görüntüler. Sağ bölmede Windows Explorer gibi bir kullanıcı arabirimi oluşturmak için bir liste görünümü kullanabilirsiniz. Denetim dört görünüm modu vardır: LargeIcon, SmallIcon, liste ve ayrıntıları.  
@@ -42,21 +28,21 @@ Windows Forms <xref:System.Windows.Forms.ListView> denetim simgeler ile öğeler
   
 |ListView üye|Görüntüle|  
 |---------------------|----------|  
-|<xref:System.Windows.Forms.ListView.Alignment%2A>özelliği|<xref:System.Windows.Forms.View.SmallIcon>veya<xref:System.Windows.Forms.View.LargeIcon>|  
-|<xref:System.Windows.Forms.ListView.AutoArrange%2A>özelliği|<xref:System.Windows.Forms.View.SmallIcon>veya<xref:System.Windows.Forms.View.LargeIcon>|  
-|<xref:System.Windows.Forms.ListView.AutoResizeColumn%2A>yöntemi|<xref:System.Windows.Forms.View.Details>|  
-|<xref:System.Windows.Forms.ListView.Columns%2A>özelliği|<xref:System.Windows.Forms.View.Details>veya<xref:System.Windows.Forms.View.Tile>|  
-|<xref:System.Windows.Forms.ListView.DrawSubItem>Olay|<xref:System.Windows.Forms.View.Details>|  
-|<xref:System.Windows.Forms.ListView.FindItemWithText%2A>yöntemi|<xref:System.Windows.Forms.View.Details>, <xref:System.Windows.Forms.View.List>, veya<xref:System.Windows.Forms.View.Tile>|  
-|<xref:System.Windows.Forms.ListView.FindNearestItem%2A>yöntemi|<xref:System.Windows.Forms.View.SmallIcon>veya<xref:System.Windows.Forms.View.LargeIcon>|  
-|<xref:System.Windows.Forms.ListView.GetItemAt%2A>yöntemi|<xref:System.Windows.Forms.View.Details>veya<xref:System.Windows.Forms.View.Tile>|  
-|<xref:System.Windows.Forms.ListView.Groups%2A>özelliği|Dışındaki tüm görünümleri<xref:System.Windows.Forms.View.List>|  
-|<xref:System.Windows.Forms.ListView.HeaderStyle%2A>özelliği|<xref:System.Windows.Forms.View.Details>.|  
-|<xref:System.Windows.Forms.ListView.InsertionMark%2A>özelliği|<xref:System.Windows.Forms.View.LargeIcon>, <xref:System.Windows.Forms.View.SmallIcon>, veya<xref:System.Windows.Forms.View.Tile>|  
+|<xref:System.Windows.Forms.ListView.Alignment%2A> Özelliği|<xref:System.Windows.Forms.View.SmallIcon> Veya <xref:System.Windows.Forms.View.LargeIcon>|  
+|<xref:System.Windows.Forms.ListView.AutoArrange%2A> Özelliği|<xref:System.Windows.Forms.View.SmallIcon> Veya <xref:System.Windows.Forms.View.LargeIcon>|  
+|<xref:System.Windows.Forms.ListView.AutoResizeColumn%2A> Yöntemi|<xref:System.Windows.Forms.View.Details>|  
+|<xref:System.Windows.Forms.ListView.Columns%2A> Özelliği|<xref:System.Windows.Forms.View.Details> Veya <xref:System.Windows.Forms.View.Tile>|  
+|<xref:System.Windows.Forms.ListView.DrawSubItem> Olay|<xref:System.Windows.Forms.View.Details>|  
+|<xref:System.Windows.Forms.ListView.FindItemWithText%2A> Yöntemi|<xref:System.Windows.Forms.View.Details>, <xref:System.Windows.Forms.View.List>, veya <xref:System.Windows.Forms.View.Tile>|  
+|<xref:System.Windows.Forms.ListView.FindNearestItem%2A> Yöntemi|<xref:System.Windows.Forms.View.SmallIcon> Veya <xref:System.Windows.Forms.View.LargeIcon>|  
+|<xref:System.Windows.Forms.ListView.GetItemAt%2A> Yöntemi|<xref:System.Windows.Forms.View.Details> Veya <xref:System.Windows.Forms.View.Tile>|  
+|<xref:System.Windows.Forms.ListView.Groups%2A> Özelliği|Dışındaki tüm görünümleri <xref:System.Windows.Forms.View.List>|  
+|<xref:System.Windows.Forms.ListView.HeaderStyle%2A> Özelliği|<xref:System.Windows.Forms.View.Details>.|  
+|<xref:System.Windows.Forms.ListView.InsertionMark%2A> Özelliği|<xref:System.Windows.Forms.View.LargeIcon>, <xref:System.Windows.Forms.View.SmallIcon>, veya <xref:System.Windows.Forms.View.Tile>|  
   
  Anahtar özelliği <xref:System.Windows.Forms.ListView> denetimi <xref:System.Windows.Forms.ListView.Items%2A>, denetimi tarafından görüntülenen öğeler içerir. <xref:System.Windows.Forms.ListView.SelectedItems%2A> Özelliği şu anda denetim içinde seçilen öğeleri koleksiyonu içerir. Kullanıcı sürükleyip birden çok öğe aynı anda başka bir denetime, örneğin birden çok öğe seçebilirsiniz <xref:System.Windows.Forms.ListView.MultiSelect%2A> özelliği ayarlanmış `true`. <xref:System.Windows.Forms.ListView> Denetim, öğeleri yanındaki onay kutularını görüntüleyebilir, varsa <xref:System.Windows.Forms.ListView.CheckBoxes%2A> özelliği ayarlanmış `true`.  
   
- <xref:System.Windows.Forms.ListView.Activation%2A> Özelliği, ne tür eylemi kullanıcı listesindeki bir öğeyi etkinleştirmek için gerçekleştirmeniz gereken belirler: seçenekler <xref:System.Windows.Forms.ItemActivation.Standard>, <xref:System.Windows.Forms.ItemActivation.OneClick>, ve <xref:System.Windows.Forms.ItemActivation.TwoClick>. <xref:System.Windows.Forms.ItemActivation.OneClick>etkinleştirme öğesini etkinleştirmek için tek bir tıklamayla gerektirir. <xref:System.Windows.Forms.ItemActivation.TwoClick>etkinleştirme öğesini etkinleştirmek için çift tıklayın kullanıcının gerektiren; tek bir tıklamayla öğesi metnin rengini değiştirir. <xref:System.Windows.Forms.ItemActivation.Standard>etkinleştirme öğeyi etkinleştirmek için çift tıklayın kullanıcının gerektiren, ancak öğe görünümünü değiştirmez.  
+ <xref:System.Windows.Forms.ListView.Activation%2A> Özelliği, ne tür eylemi kullanıcı listesindeki bir öğeyi etkinleştirmek için gerçekleştirmeniz gereken belirler: seçenekler <xref:System.Windows.Forms.ItemActivation.Standard>, <xref:System.Windows.Forms.ItemActivation.OneClick>, ve <xref:System.Windows.Forms.ItemActivation.TwoClick>. <xref:System.Windows.Forms.ItemActivation.OneClick> etkinleştirme öğesini etkinleştirmek için tek bir tıklamayla gerektirir. <xref:System.Windows.Forms.ItemActivation.TwoClick> etkinleştirme öğesini etkinleştirmek için çift tıklayın kullanıcının gerektiren; tek bir tıklamayla öğesi metnin rengini değiştirir. <xref:System.Windows.Forms.ItemActivation.Standard> etkinleştirme öğeyi etkinleştirmek için çift tıklayın kullanıcının gerektiren, ancak öğe görünümünü değiştirmez.  
   
  <xref:System.Windows.Forms.ListView> Denetimi de görsel stiller ve kullanılabilen diğer özellikler gruplandırma, döşeme görünümünü ve ekleme işaretleri dahil olmak üzere Windows XP platformunda destekler. Daha fazla bilgi için bkz: [Windows XP özellikleri ve Windows Forms denetimleri](http://msdn.microsoft.com/library/bc7fab94-fce9-4bf1-a8ad-a5837c91c3c0).  
   

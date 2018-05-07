@@ -1,13 +1,6 @@
 ---
-title: "Nasıl yapılır: Tek Bir Rengi Dönüştürmek için Renk Matrisi Kullanma"
-ms.custom: 
+title: 'Nasıl yapılır: Tek Bir Rengi Dönüştürmek için Renk Matrisi Kullanma'
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-winforms
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -15,23 +8,18 @@ helpviewer_keywords:
 - image colors [Windows Forms], transforming
 - color matrices [Windows Forms], using
 ms.assetid: 44df4556-a433-49c0-ac0f-9a12063a5860
-caps.latest.revision: "17"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: d6c9273102dc8e8f0fe6be3e31d0f0b6e570c7af
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 741259fcf853c82dfd13b43edc92e50d8767887b
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-use-a-color-matrix-to-transform-a-single-color"></a>Nasıl yapılır: Tek Bir Rengi Dönüştürmek için Renk Matrisi Kullanma
-[!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)]sağlar <xref:System.Drawing.Image> ve <xref:System.Drawing.Bitmap> depolamak ve görüntüleri düzenleme için sınıflar. <xref:System.Drawing.Image>ve <xref:System.Drawing.Bitmap> 32 bitlik bir sayı nesneleri depolamak her piksel rengi: 8 bit her kırmızı, yeşil, mavi ve alfa için. Dört bileşenlerinden her biri, 0-hiçbir yoğunluğu ve tam yoğunluğu temsil eden 255 temsil eden 0 ile 255 arasında bir sayıdır. Renk saydam alfa bileşeni belirtir: 0 tamamen saydamdır ve 255'tir tamamıyla opak.  
+[!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] sağlar <xref:System.Drawing.Image> ve <xref:System.Drawing.Bitmap> depolamak ve görüntüleri düzenleme için sınıflar. <xref:System.Drawing.Image> ve <xref:System.Drawing.Bitmap> 32 bitlik bir sayı nesneleri depolamak her piksel rengi: 8 bit her kırmızı, yeşil, mavi ve alfa için. Dört bileşenlerinden her biri, 0-hiçbir yoğunluğu ve tam yoğunluğu temsil eden 255 temsil eden 0 ile 255 arasında bir sayıdır. Renk saydam alfa bileşeni belirtir: 0 tamamen saydamdır ve 255'tir tamamıyla opak.  
   
  Bir renk vektör 4 bölütlü (kırmızı, yeşil, mavi, alfa) biçiminde olur. Örneğin, renk vektör (0, 255, 0, 255) hiçbir kırmızı veya mavi sahiptir, ancak tam yoğunlukta yeşil sahip bir opak rengi temsil eder.  
   
- Renkleri temsil etmek için başka bir kuralı 1 numaralı tam yoğunluğu için kullanılır. Bu kuralı kullanarak, önceki paragrafta açıklanan rengi (0, 1, 0, 1) vektörü ile gösterilir. [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)]renk dönüştürmeleri gerçekleştirdiğinde kuralı 1 tam yoğunluğu kullanılır.  
+ Renkleri temsil etmek için başka bir kuralı 1 numaralı tam yoğunluğu için kullanılır. Bu kuralı kullanarak, önceki paragrafta açıklanan rengi (0, 1, 0, 1) vektörü ile gösterilir. [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] renk dönüştürmeleri gerçekleştirdiğinde kuralı 1 tam yoğunluğu kullanılır.  
   
  Doğrusal Dönüşümler (döndürme, ölçeklendirme ve benzeri) 4 × 4 matris tarafından renk vektörlerinin çarparak renk vektörlerinin uygulayabilirsiniz. Ancak, bir çeviri (doğrusal) gerçekleştirmek için 4 × 4 matris kullanamazsınız. Her renk vektörlerinin kukla beşinci koordinat (örneğin, 1 sayı) eklerseniz, doğrusal dönüşümler ve çevirileri herhangi bir bileşimini uygulamak için 5 × 5 matris kullanabilirsiniz. Bir çeviri tarafından izlenen bir doğrusal dönüştürmesi oluşan bir dönüşüm afin dönüştürme adı verilir.  
   

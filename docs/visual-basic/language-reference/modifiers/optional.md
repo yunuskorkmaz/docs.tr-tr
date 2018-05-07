@@ -1,10 +1,6 @@
 ---
-title: "İsteğe Bağlı (Visual Basic)"
+title: İsteğe Bağlı (Visual Basic)
 ms.date: 07/20/2015
-ms.prod: .net
-ms.suite: 
-ms.technology: devlang-visual-basic
-ms.topic: article
 f1_keywords:
 - vb.Optional
 - vb.optional
@@ -12,14 +8,11 @@ helpviewer_keywords:
 - Optional keyword [Visual Basic], contexts
 - Optional keyword [Visual Basic]
 ms.assetid: 4571ce88-a539-4115-b230-54eb277c6aa7
-caps.latest.revision: "14"
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: 3aa01c2c1ae731c8fe00fdee24521760db69e624
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: f88020c7407fb9c91e06bc2ee177773171e344fe
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="optional-visual-basic"></a>İsteğe Bağlı (Visual Basic)
 Yordam çağrıldığında bir yordam bağımsız değişkenini atlanabilir belirtir.  
@@ -31,13 +24,13 @@ Yordam çağrıldığında bir yordam bağımsız değişkenini atlanabilir beli
   
  `Optional` Değiştiricisi bu bağlamlarında kullanılabilir:  
   
--   [Declare deyimi](../../../visual-basic/language-reference/statements/declare-statement.md)  
+-   [Declare Deyimi](../../../visual-basic/language-reference/statements/declare-statement.md)  
   
--   [Function deyimi](../../../visual-basic/language-reference/statements/function-statement.md)  
+-   [Function Deyimi](../../../visual-basic/language-reference/statements/function-statement.md)  
   
--   [Property deyimi](../../../visual-basic/language-reference/statements/property-statement.md)  
+-   [Property Deyimi](../../../visual-basic/language-reference/statements/property-statement.md)  
   
--   [Sub deyimi](../../../visual-basic/language-reference/statements/sub-statement.md)  
+-   [Sub Deyimi](../../../visual-basic/language-reference/statements/sub-statement.md)  
   
 > [!NOTE]
 >  İle veya isteğe bağlı parametreler olmadan bir yordamı çağrılırken, konuma göre veya ada göre bağımsız değişkenler geçirebilirsiniz. Daha fazla bilgi için bkz: [geçirme bağımsız değişkenleri konuma ve ada göre](../../../visual-basic/programming-guide/language-features/procedures/passing-arguments-by-position-and-by-name.md).  
@@ -73,6 +66,6 @@ End Function
  [!code-vb[VbVbalrKeywords#21](../../../visual-basic/language-reference/codesnippet/VisualBasic/optional_1.vb)]  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [Parametre listesi](../../../visual-basic/language-reference/statements/parameter-list.md)  
- [İsteğe bağlı parametreler](../../../visual-basic/programming-guide/language-features/procedures/optional-parameters.md)  
- [Anahtar sözcükler](../../../visual-basic/language-reference/keywords/index.md)
+ [Parametre Listesi](../../../visual-basic/language-reference/statements/parameter-list.md)  
+ [İsteğe Bağlı Parametreler](../../../visual-basic/programming-guide/language-features/procedures/optional-parameters.md)  
+ [Anahtar Sözcükler](../../../visual-basic/language-reference/keywords/index.md)

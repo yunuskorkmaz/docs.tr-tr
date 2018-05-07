@@ -1,21 +1,14 @@
 ---
-title: "Bir kapsayıcı olarak çalışan bir veritabanı sunucusu kullanma"
-description: "Kapsayıcılı .NET uygulamaları için .NET mikro mimarisi | Bir kapsayıcı olarak çalışan bir veritabanı sunucusu kullanma"
-keywords: "Docker, mikro, ASP.NET, kapsayıcı"
+title: Bir kapsayıcı olarak çalışan bir veritabanı sunucusu kullanma
+description: Kapsayıcılı .NET uygulamaları için .NET mikro mimarisi | Bir kapsayıcı olarak çalışan bir veritabanı sunucusu kullanma
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 10/30/2017
-ms.prod: .net-core
-ms.technology: dotnet-docker
-ms.topic: article
-ms.workload:
-- dotnet
-- dotnetcore
-ms.openlocfilehash: 70dd3686519fc38ae35910284948ccf95e743ef7
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: 8ff6afbe9618df918e0a965fa1202bbb999eee5c
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="using-a-database-server-running-as-a-container"></a>Bir kapsayıcı olarak çalışan bir veritabanı sunucusu kullanma
 
@@ -54,7 +47,7 @@ Bir kapsayıcı olarak çalışan SQL Server sahip olduğu SQL Server'ın bir ö
 
 #### <a name="additional-resources"></a>Ek kaynaklar
 
--   **Linux, Mac veya Windows üzerinde SQL Server Docker görüntüyü çalıştırmadan**
+-   **Linux, Mac veya Windows üzerinde SQL Server Docker görüntü çalıştırın**
     [*https://docs.microsoft.com/sql/linux/sql-server-linux-setup-docker*](https://docs.microsoft.com/sql/linux/sql-server-linux-setup-docker)
 
 -   **Bağlanma ve sqlcmd ile SQL Server Linux üzerinde sorgulama**
@@ -172,7 +165,7 @@ Ancak, Redis üretimde çalıştırdığınızda, Redis Microsoft PaaS (hizmet o
 
 Redis, Redis Docker görüntüsüyle sağlar. Bu görüntü, Docker hub'a bu URL'de edinilebilir:
 
-<https://Hub.docker.com/_/redis/>
+<https://hub.docker.com/_/redis/>
 
 Docker Redis bir kapsayıcı, komut isteminde aşağıdaki Docker CLI komutunu yürüterek doğrudan çalıştırabilirsiniz:
 

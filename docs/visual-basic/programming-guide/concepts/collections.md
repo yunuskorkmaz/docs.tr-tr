@@ -1,21 +1,12 @@
 ---
 title: Koleksiyonlar (Visual Basic)
-ms.custom: 
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
-ms.topic: get-started-article
 ms.assetid: 5f7749f3-aaf2-4319-b63c-bfa72e1e2b7a
-caps.latest.revision: "6"
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: d0ea3b45803bc37f35d516260a57db422827f1e1
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.openlocfilehash: 563cef59c0e52d41dcdeaa51b5bc4d7b8f9554f9
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="collections-visual-basic"></a>Koleksiyonlar (Visual Basic)
 Birçok uygulama için ilgili nesneleri, grupları oluşturmak ve yönetmek istediğiniz. Grup nesnelerine iki yolu vardır: nesne dizileri oluşturarak ve nesne koleksiyonları oluşturma.  
@@ -184,11 +175,11 @@ End Class
   
  Genel koleksiyon sınıfları bazıları, bu bölümde açıklanmaktadır:  
   
--   <xref:System.Collections.Generic>sınıfları  
+-   <xref:System.Collections.Generic> Sınıfları  
   
--   <xref:System.Collections.Concurrent>sınıfları  
+-   <xref:System.Collections.Concurrent> Sınıfları  
   
--   <xref:System.Collections>sınıfları  
+-   <xref:System.Collections> Sınıfları  
   
 -   Visual Basic `Collection` sınıfı  
   
@@ -476,7 +467,7 @@ End Class
   
  Aşağıdaki örnek adlı özel koleksiyon sınıfı tanımlar `AllColors`. Bu sınıf uygulayan <xref:System.Collections.IEnumerable> gerektiren arabirimi <xref:System.Collections.IEnumerable.GetEnumerator%2A> uygulanan yöntemi.  
   
- `GetEnumerator` Yöntem örneği `ColorEnumerator` sınıfı. `ColorEnumerator`uygulayan <xref:System.Collections.IEnumerator> gerektiren arabirimi <xref:System.Collections.IEnumerator.Current%2A> özelliği, <xref:System.Collections.IEnumerator.MoveNext%2A> yöntemi ve <xref:System.Collections.IEnumerator.Reset%2A> uygulanan yöntemi.  
+ `GetEnumerator` Yöntem örneği `ColorEnumerator` sınıfı. `ColorEnumerator` uygulayan <xref:System.Collections.IEnumerator> gerektiren arabirimi <xref:System.Collections.IEnumerator.Current%2A> özelliği, <xref:System.Collections.IEnumerator.MoveNext%2A> yöntemi ve <xref:System.Collections.IEnumerator.Reset%2A> uygulanan yöntemi.  
   
 ```vb  
 Public Sub ListColors()  

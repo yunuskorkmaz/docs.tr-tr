@@ -1,27 +1,15 @@
 ---
-title: "İleti Akışı İzlemeyi Yapılandırma"
-ms.custom: 
+title: İleti Akışı İzlemeyi Yapılandırma
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 15571ca2-bee2-47fb-ba10-fcbc09152ad0
-caps.latest.revision: "8"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 8df32a64c07db8a45dfb41a46e7a65a92fbef434
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
-ms.translationtype: MT
+ms.openlocfilehash: 7bfba8ababc6ddc0b2ddd78e879058cfa9e8ebb1
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="configuring-message-flow-tracing"></a>İleti Akışı İzlemeyi Yapılandırma
-Zaman [!INCLUDE[indigo1](../../../../../includes/indigo1-md.md)] Etkinlik izleme etkin olduğunda, uçtan uca etkinlik kimlikleri, mantıksal etkinlikleri atanır [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)] yığını. İçinde [!INCLUDE[netfx_current_short](../../../../../includes/netfx-current-short-md.md)], izleme için Windows olay (ileti akışı izlemeyi adlı ETW ile) çalışır bu özellik daha yüksek bir performans sürümünün artık yoktur. Etkinleştirildiğinde, uçtan uca etkinlik kimlikleri alınan (veya boş ise atanan) gelen iletileri ve bu yayılan ileti kanal tarafından kodunu çözdü sonra gösterilen tüm izleme olayları. Müşteriler, ileti akışları farklı Hizmetleri'nden izleme günlükleri ile kodunu çözdükten sonra yeniden oluşturmak için bu özelliği kullanabilirsiniz.  
+Windows Communication Foundation (WCF) Etkinlik izleme etkin olduğunda, uçtan uca etkinlik kimlikleri mantıksal etkinlikleri atanan [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)] yığını. İçinde [!INCLUDE[netfx_current_short](../../../../../includes/netfx-current-short-md.md)], izleme için Windows olay (ileti akışı izlemeyi adlı ETW ile) çalışır bu özellik daha yüksek bir performans sürümünün artık yoktur. Etkinleştirildiğinde, uçtan uca etkinlik kimlikleri alınan (veya boş ise atanan) gelen iletileri ve bu yayılan ileti kanal tarafından kodunu çözdü sonra gösterilen tüm izleme olayları. Müşteriler, ileti akışları farklı Hizmetleri'nden izleme günlükleri ile kodunu çözdükten sonra yeniden oluşturmak için bu özelliği kullanabilirsiniz.  
   
  İzleme uygulama ile ilgili bir sorun algıladı sonra etkin ve sorun çözüldükten sonra sonra devre dışı.  
   

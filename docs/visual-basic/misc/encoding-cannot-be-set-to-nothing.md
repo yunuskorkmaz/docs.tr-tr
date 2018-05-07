@@ -1,23 +1,17 @@
 ---
-title: "Kodlama için hiçbir şey ayarlanamaz"
+title: Kodlama için hiçbir şey ayarlanamaz
 ms.date: 07/20/2015
-ms.prod: .net
-ms.technology: devlang-visual-basic
-ms.topic: article
 ms.assetid: 59f7c731-8291-4a85-bf51-c225e48cdc84
-caps.latest.revision: "8"
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: 42baef6e0634849004290dce3db32e47f103282d
-ms.sourcegitcommit: 34ec7753acf76f90a0fa845235ef06663dc9e36e
+ms.openlocfilehash: 05f64dfe9610f679986040ec87e6287caac9bd08
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="encoding-cannot-be-set-to-nothing"></a>Kodlama için hiçbir şey ayarlanamaz
 Okuma veya bir dosyaya yazma girişimi başarısız oldu parametresi `encoding` ayarlandığından `Nothing` ancak geçerli bir değer gerektirir.  
   
- <xref:System.Text.Encoding>hangi bir dosyaya yazılırken kullanılacak kodlama belirlemek için kullanılır. Varsayılan değer UTF-8'dir.  
+ <xref:System.Text.Encoding> hangi bir dosyaya yazılırken kullanılacak kodlama belirlemek için kullanılır. Varsayılan değer UTF-8'dir.  
   
 ## <a name="to-correct-this-error"></a>Bu hatayı düzeltmek için  
   

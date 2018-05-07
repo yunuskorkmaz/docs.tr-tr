@@ -1,22 +1,12 @@
 ---
-title: "Nasıl yapılır: sorgu (LINQ) (Visual Basic) bir dizedeki karakter için"
-ms.custom: 
+title: 'Nasıl yapılır: sorgu (LINQ) (Visual Basic) bir dizedeki karakter için'
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 499ebbe0-746c-4235-9dba-ce722c12b50e
-caps.latest.revision: "4"
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: ebc832763e271cc53e9c95827c301f82e9a7578a
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 0953ff9152a4af1aa40379e15b2279d23ad0aac1
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-query-for-characters-in-a-string-linq-visual-basic"></a>Nasıl yapılır: sorgu (LINQ) (Visual Basic) bir dizedeki karakter için
 Çünkü <xref:System.String> sınıfı uygulayan genel <xref:System.Collections.Generic.IEnumerable%601> arabirimi, herhangi bir dize bir karakter dizisi sorgulanabilir. Ancak, bu yaygın bir kullanımdır LINQ değildir. İşlem eşleştirme karmaşık desen için kullanmak <xref:System.Text.RegularExpressions.Regex> sınıfı.  

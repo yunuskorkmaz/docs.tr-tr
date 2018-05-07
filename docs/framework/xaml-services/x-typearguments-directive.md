@@ -1,13 +1,6 @@
 ---
-title: "x:TypeArguments Yönergesi"
-ms.custom: 
+title: x:TypeArguments Yönergesi
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-wpf
-ms.tgt_pltfrm: 
-ms.topic: article
 f1_keywords:
 - x:TypeArguments
 - xTypeArguments
@@ -17,16 +10,11 @@ helpviewer_keywords:
 - TypeArguments attribute in XAML [XAML Services]
 - XAML [XAML Services], x:TypeArguments attribute
 ms.assetid: 86561058-d393-4a44-b5c3-993a4513ea74
-caps.latest.revision: "18"
-author: wadepickett
-ms.author: wpickett
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: e601fb5895460e52aa21836c542d0b1367527f09
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 94f09bdd3b6ee0b180e30bab0993f0b4e41730ac
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="xtypearguments-directive"></a>x:TypeArguments Yönergesi
 Sınırlama geçişleri genel tür oluşturucuya genel bağımsız değişkenlerini yazın.  
@@ -62,13 +50,13 @@ xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib"
 ```  
   
 ### <a name="liststring"></a>Liste\<dize >  
- `<scg:List x:TypeArguments="sys:String" ...>`Yeni bir örneğini oluşturur <xref:System.Collections.Generic.List%601> ile bir <xref:System.String> bağımsız değişkeni yazın.  
+ `<scg:List x:TypeArguments="sys:String" ...>` Yeni bir örneğini oluşturur <xref:System.Collections.Generic.List%601> ile bir <xref:System.String> bağımsız değişkeni yazın.  
   
 ### <a name="dictionarystringstring"></a>Sözlük\<dize, dize >  
- `<scg:Dictionary x:TypeArguments="sys:String,sys:String" ...>`Yeni bir örneğini oluşturur <xref:System.Collections.Generic.Dictionary%602> iki <xref:System.String> tür bağımsız değişkenleri.  
+ `<scg:Dictionary x:TypeArguments="sys:String,sys:String" ...>` Yeni bir örneğini oluşturur <xref:System.Collections.Generic.Dictionary%602> iki <xref:System.String> tür bağımsız değişkenleri.  
   
 ### <a name="queuekeyvaluepairstringstring"></a>Sıra < KeyValuePair\<dize, dize >>  
- `<scg:Queue x:TypeArguments="scg:KeyValuePair(sys:String,sys:String)" ...>`Yeni bir örneğini oluşturur <xref:System.Collections.Generic.Queue%601> bir kısıtlaması olan <xref:System.Collections.Generic.KeyValuePair%602> iç kısıtlama tür bağımsız değişkenleri ile <xref:System.String> ve <xref:System.String>.  
+ `<scg:Queue x:TypeArguments="scg:KeyValuePair(sys:String,sys:String)" ...>` Yeni bir örneğini oluşturur <xref:System.Collections.Generic.Queue%601> bir kısıtlaması olan <xref:System.Collections.Generic.KeyValuePair%602> iç kısıtlama tür bağımsız değişkenleri ile <xref:System.String> ve <xref:System.String>.  
   
 ## <a name="xaml-2006-and-wpf-generic-xaml-usages"></a>XAML 2006 ve WPF XAML genel kullanımları  
  XAML 2006 kullanım ve WPF uygulamaları için kullanılan XAML için aşağıdaki kısıtlamalar mevcut `x:TypeArguments` ve genel olarak genel tür kullanımları XAML gelen:  
@@ -79,7 +67,7 @@ xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib"
   
 -   Genel için kök öğesi XAML object öğesi, ayrıca kullanarak bir parçalı sınıf bildirmelidir `x:Class`. Bir WPF tanımlama yapı eylemi bile bu geçerlidir.  
   
--   `x:TypeArguments`iç içe geçmiş genel kısıtlamalar başvuramaz.  
+-   `x:TypeArguments` iç içe geçmiş genel kısıtlamalar başvuramaz.  
   
 ## <a name="xaml-2009-or-xaml-2006-with-no-wpf-30-or-wpf-35-dependency"></a>XAML 2009 veya herhangi bir WPF 3.0 veya 3.5 WPF XAML 2006 bağımlılık  
  .NET Framework XAML Hizmetleri XAML 2006 ya da XAML 2009, genel XAML kullanımı WPF ile ilgili kısıtlamalar rahat. Yedekleme türü sistem ve nesne modeli destekleyebilir XAML işaretleme herhangi bir konumda bir genel nesne öğesi örneğini oluşturabilirsiniz.  

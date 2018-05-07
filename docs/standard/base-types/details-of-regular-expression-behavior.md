@@ -1,13 +1,7 @@
 ---
-title: "Normal İfade Davranışının Ayrıntıları"
-ms.custom: 
+title: Normal İfade Davranışının Ayrıntıları
 ms.date: 03/30/2017
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
 ms.technology: dotnet-standard
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -15,18 +9,13 @@ helpviewer_keywords:
 - regular expressions, behavior
 - .NET Framework regular expressions, behavior
 ms.assetid: 0ee1a6b8-caac-41d2-917f-d35570021b10
-caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-- dotnetcore
-ms.openlocfilehash: 5b471cd8e934880fc8095fbad68b460174ec338c
-ms.sourcegitcommit: 3a96c706e4dbb4667bf3bf37edac9e1666646f93
+ms.openlocfilehash: bc4d8fdc39153f227e8344ea1da52a0dba2688d0
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="details-of-regular-expression-behavior"></a>Normal İfade Davranışının Ayrıntıları
 .NET Framework normal ifade Perl, Python, Emacs ve Tcl tarafından kullanılan gibi geleneksel bir belirleyici sınırlı Automaton (NFA) altyapısı içerir kırıntıları oluşturma bir normal ifade Eşleştirici altyapısıdır. Bu ondan daha hızlı ve daha kısıtlı, saf normal ifade belirleyici sınırlı Automaton (DFA) altyapılarını awk, egrep veya lex bulunanlar gibi ancak ayırır. Bu ayrıca, standartlaştırılmış, ancak daha yavaş, ayırt POSIX NFAs. Aşağıdaki bölümde normal ifade motorları üç tür ve geleneksel NFA altyapısını kullanarak .NET Framework normal ifadelerinde neden uygulanan açıklanmaktadır.  
@@ -48,7 +37,7 @@ ms.lasthandoff: 02/27/2018
   
  .NET Framework normal ifade Altyapısı'nın diğer özellikleri şunlardır:  
   
--   Yavaş miktar belirleyiciler: `??`, `*?`, `+?`, `{`  *n*  `,` *m*`}?`. Bu yapıları tekrarları en az sayıda ilk aramak için kırıntıları oluşturma altyapısı söyleyin. Buna karşılık, yinelemeleri sayısını ilk eşleşecek şekilde sıradan doyumsuz nicelik deneyin. Aşağıdaki örnek, ikisi arasındaki farkı gösterilmektedir. Bir sayı ile biten bir cümle normal bir ifadeyle eşleşen ve bir yakalama grubunu bu sayıyı ayıklamak için tasarlanmıştır. Normal ifade `.+(\d+)\.` doyumsuz niceleyici içeren `.+`, yalnızca son basamaklı sayının yakalamak normal ifade altyapısı neden olur. Buna karşılık, normal ifade `.+?(\d+)\.` yavaş niceleyici içeren `.+?`, tüm sayıyı yakalamak normal ifade altyapısı neden olur.  
+-   Yavaş miktar belirleyiciler: `??`, `*?`, `+?`, `{` *n*`,`*m*`}?`. Bu yapıları tekrarları en az sayıda ilk aramak için kırıntıları oluşturma altyapısı söyleyin. Buna karşılık, yinelemeleri sayısını ilk eşleşecek şekilde sıradan doyumsuz nicelik deneyin. Aşağıdaki örnek, ikisi arasındaki farkı gösterilmektedir. Bir sayı ile biten bir cümle normal bir ifadeyle eşleşen ve bir yakalama grubunu bu sayıyı ayıklamak için tasarlanmıştır. Normal ifade `.+(\d+)\.` doyumsuz niceleyici içeren `.+`, yalnızca son basamaklı sayının yakalamak normal ifade altyapısı neden olur. Buna karşılık, normal ifade `.+?(\d+)\.` yavaş niceleyici içeren `.+?`, tüm sayıyı yakalamak normal ifade altyapısı neden olur.  
   
      [!code-csharp[Conceptual.RegularExpressions.Design#1](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.regularexpressions.design/cs/lazy1.cs#1)]
      [!code-vb[Conceptual.RegularExpressions.Design#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.regularexpressions.design/vb/lazy1.vb#1)]  
@@ -139,13 +128,13 @@ ms.lasthandoff: 02/27/2018
      [!code-csharp[Conceptual.RegularExpressions.Design#5](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.regularexpressions.design/cs/lookbehind1.cs#5)]
      [!code-vb[Conceptual.RegularExpressions.Design#5](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.regularexpressions.design/vb/lookbehind1.vb#5)]  
   
-     Normal ifade `^[A-Z0-9]([-!#$%&'.*+/=?^`{} | ~ \w])* (? < = [A-Z0-9]) $' aşağıdaki tabloda gösterildiği gibi tanımlanır.  
+     Normal ifade `^[A-Z0-9]([-!#$%&'.*+/=?^` {}| ~ \w])* (? < = [A-Z0-9]) $' aşağıdaki tabloda gösterildiği gibi tanımlanır.  
   
     |Desen|Açıklama|  
     |-------------|-----------------|  
     |`^`|Eşleşme dizenin başında başlar.|  
     |`[A-Z0-9]`|Sayısal veya alfasayısal bir karakterle eşleşmesi. (Karşılaştırma büyük küçük harfe duyarlıdır.)|  
-    |<code>([-!#$%&'.*+/=?^\`{}&#124;~\w])*<code>|Sıfır veya daha çok tekrarı herhangi bir sözcük karakteri veya şu karakterlerden herhangi birini eşleşen:-,!, #, $, % &, ',., *, +, /, =,?, ^, \`, {,}, &#124; veya ~.|  
+    |<code>([-!#$%&'.*+/=?^\`{}&#124;~\w])*<code>|Sıfır veya daha çok tekrarı herhangi bir sözcük karakteri veya şu karakterlerden herhangi birini eşleşen:-,!, #, $, % &, ',., *, +, /, =,?, ^, \`, {,} &#124;, veya ~.|  
     |`(?<=[A-Z0-9])`|Arkasında sayısal veya alfasayısal olmalıdır bir önceki karakteri arayın. (Karşılaştırma büyük küçük harfe duyarlıdır.)|  
     |`$`|Son dizenin sonunda eşleşmiyor.|  
   

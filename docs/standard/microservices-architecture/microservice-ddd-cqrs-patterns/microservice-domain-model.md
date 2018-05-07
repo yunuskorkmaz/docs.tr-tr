@@ -1,21 +1,14 @@
 ---
 title: Mikro hizmet etki alanı model tasarlama
 description: Kapsayıcılı .NET uygulamaları için .NET mikro mimarisi | Mikro hizmet etki alanı model tasarlama
-keywords: Docker, Microservices, ASP.NET, Container
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 11/09/2017
-ms.prod: .net-core
-ms.technology: dotnet-docker
-ms.topic: article
-ms.workload:
-- dotnet
-- dotnetcore
-ms.openlocfilehash: 752c4cceada2bf0649facbfd46c36c26dc666d29
-ms.sourcegitcommit: c883637b41ee028786edceece4fa872939d2e64c
+ms.openlocfilehash: 2776412b96d4ed141f48814d19d2deaa1a71520d
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/26/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="designing-a-microservice-domain-model"></a>Mikro hizmet etki alanı model tasarlama
 
@@ -151,7 +144,7 @@ Tanımlama ve toplamalar ile çalışma araştırma ve deneyimi gerektirir. Daha
 -   **Sergey Grybniak. DDD Taktik tasarım desenleri**
     [*https://www.codeproject.com/Articles/1164363/Domain-Driven-Design-Tactical-Design-Patterns-Part*](https://www.codeproject.com/Articles/1164363/Domain-Driven-Design-Tactical-Design-Patterns-Part)
 
--   **Chris Richardson. İşlem mikro toplamalar kullanarak geliştirme**
+-   **Chris Uludağ. İşlem mikro toplamalar kullanarak geliştirme**
     [*https://www.infoq.com/articles/microservices-aggregates-events-cqrs-part-1-richardson*](https://www.infoq.com/articles/microservices-aggregates-events-cqrs-part-1-richardson)
 
 -   **DevIQ. Toplama düzeni**

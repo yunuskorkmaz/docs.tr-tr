@@ -1,31 +1,19 @@
 ---
-title: "Denetimlerde Odak için Stil Oluşturma ve FocusVisualStyle"
-ms.custom: 
+title: Denetimlerde Odak için Stil Oluşturma ve FocusVisualStyle
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-wpf
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - keyboard focus [WPF]
 - focus [WPF], visual styling
 - styles [WPF], focus visual style
 ms.assetid: 786ac576-011b-4d72-913b-558deccb9b35
-caps.latest.revision: "10"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 4d29fda788aa4ec79ad4278beefa16ee14208832
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 6c73c8bbfcf7631094ddf89641de9af38f86f88e
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="styling-for-focus-in-controls-and-focusvisualstyle"></a>Denetimlerde Odak için Stil Oluşturma ve FocusVisualStyle
-[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]klavye odağı aldığında bir denetim görsel görünümünü değiştirmek için iki paralel mekanizma sağlar. Özellik ayarlayıcıları gibi özellikleri kullanmak için ilk mekanizmasıdır <xref:System.Windows.UIElement.IsKeyboardFocused%2A> stil veya denetime uygulanan şablon içinde. İkinci mekanizma değeri olarak ayrı bir stil sağlamaktır <xref:System.Windows.FrameworkElement.FocusVisualStyle%2A> özellik; "odak görsel stili" denetimi yerine üzerinde denetim ya da diğer UI görsel ağaç değiştirme çizer donatıcı için ayrı bir görsel ağaç oluşturur Bunu değiştirerek öğesi. Bu konuda, bu mekanizmaların her biri uygun olduğu senaryolar açıklanmaktadır.  
+[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] klavye odağı aldığında bir denetim görsel görünümünü değiştirmek için iki paralel mekanizma sağlar. Özellik ayarlayıcıları gibi özellikleri kullanmak için ilk mekanizmasıdır <xref:System.Windows.UIElement.IsKeyboardFocused%2A> stil veya denetime uygulanan şablon içinde. İkinci mekanizma değeri olarak ayrı bir stil sağlamaktır <xref:System.Windows.FrameworkElement.FocusVisualStyle%2A> özellik; "odak görsel stili" denetimi yerine üzerinde denetim ya da diğer UI görsel ağaç değiştirme çizer donatıcı için ayrı bir görsel ağaç oluşturur Bunu değiştirerek öğesi. Bu konuda, bu mekanizmaların her biri uygun olduğu senaryolar açıklanmaktadır.  
    
   
 <a name="Purpose"></a>   
