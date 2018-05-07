@@ -1,29 +1,15 @@
 ---
 title: WPF Genelleştirmesi ve Yerelleştirmesine Genel Bakış
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-wpf
-ms.tgt_pltfrm: ''
-ms.topic: article
 helpviewer_keywords:
 - globalization [WPF], about globalization
 - localization [WPF], about localization
 ms.assetid: 56e5a5c8-6c96-4d19-b8e1-a5be1dc564af
-caps.latest.revision: ''
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 6f2bc9021ca376b7b27f74efed6866a907b480ad
-ms.sourcegitcommit: c883637b41ee028786edceece4fa872939d2e64c
+ms.openlocfilehash: 957ba16886669acdfa5501ffe02501cbe6e57198
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/26/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="wpf-globalization-and-localization-overview"></a>WPF Genelleştirmesi ve Yerelleştirmesine Genel Bakış
 Yalnızca bir dil için ürününüzün kullanılabilirlik sınırladığınızda, potansiyel müşteri bizim dünyanın 6.5 milyar popülasyondaki kesir için temel sınırlayın. Düşük maliyetli yerelleştirme ürününüzün global çapta kullanıcılar ulaşması uygulamalarınızı istiyorsanız, daha fazla müşterilere ulaşmak için en iyi ve en ekonomik yollarından biridir.  
@@ -150,7 +136,7 @@ Yalnızca bir dil için ürününüzün kullanılabilirlik sınırladığınızd
   
  Paylaşılan boyutlandırma özelliğini kullanır, örneğin Not <xref:System.Windows.Controls.Grid>. Son üç sütun bu kendilerini aynı koyarak yararlanmak <xref:System.Windows.Controls.DefinitionBase.SharedSizeGroup%2A>. Bir özellik adından beklediğiniz gibi bu sütunların aynı boyutta paylaşmak sağlar. Böyle olduğunda "Gözat..." yerelleştirilmiş uzun dizeye "Durchsuchen..." küçük "Tamam" düğmesini ve bir orantısız büyük "Durchsuchen..." sahip olmak yerine genişliği tüm düğmeleri büyütün. düğme.  
   
- **Xml:lang**  
+ **XML: lang**  
   
  `Xml:lang="en-US"`  
   
@@ -198,7 +184,7 @@ Yalnızca bir dil için ürününüzün kullanılabilirlik sınırladığınızd
 |-|-|-| 
 |Button_1:System.Windows.Controls.Button.$Content|Düğme|Tamam|  
 |Button_2:System.Windows.Controls.Button.$Content|Düğme|Abbrechen|  
-|Button_3:System.Windows.Controls.Button.$Content|Düğme|Durchsuchen…|  
+|Button_3:System.Windows.Controls.Button.$Content|Düğme|Durchsuchen...|  
 |ComboBox_1:System.Windows.Controls.ComboBox.$Content|ComboBox||  
 |TextBlock_1:System.Windows.Controls.TextBlock.$Content|Metin|Geben SIE bey Namen eines Programms, Ordners, Dokuments sıralanan einer Internetresource bir.|  
 |TextBlock_2:System.Windows.Controls.TextBlock.$Content|Metin|Öffnen:|  

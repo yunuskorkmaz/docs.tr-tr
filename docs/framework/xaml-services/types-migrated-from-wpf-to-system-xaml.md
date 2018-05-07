@@ -1,30 +1,16 @@
 ---
 title: WPF'den System.Xaml'e Geçirilen Türler
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-wpf
-ms.tgt_pltfrm: ''
-ms.topic: article
 helpviewer_keywords:
 - WPF XAML [XAML Services], migration to System.Xaml
 - XAML [XAML Services], System.Xaml and WPF
 - System.Xaml [XAML Services], types migrated from WPF
 ms.assetid: d79dabf5-a2ec-4e8d-a37a-67c4ba8a2b91
-caps.latest.revision: 14
-author: wadepickett
-ms.author: wpickett
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: f4d4bc0b21770e5ac0c138c140334198d30a740a
-ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
+ms.openlocfilehash: d59ff8657f7750db8908aac15936f12838b27eaf
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="types-migrated-from-wpf-to-systemxaml"></a>WPF'den System.Xaml'e Geçirilen Türler
 İçinde [!INCLUDE[net_v35_long](../../../includes/net-v35-long-md.md)] ve [!INCLUDE[net_v30_long](../../../includes/net-v30-long-md.md)], her iki [!INCLUDE[TLA#tla_winclient](../../../includes/tlasharptla-winclient-md.md)] ve Windows Workflow Foundation dahil XAML dil uygulama. WPF XAML uygulamasını genişletilebilirlik sağlanan genel türleri çoğunu WindowsBase, PresentationCore ve PresentationFramework derlemelerde vardı. Benzer şekilde, Windows Workflow Foundation XAML için genişletilebilirlik sağlanan genel türleri System.Workflow.ComponentModel derlemede vardı. İçinde [!INCLUDE[net_v40_long](../../../includes/net-v40-long-md.md)], bazı XAML ilgili türleri System.Xaml derlemeye geçirilir. Bir ortak XAML dil Hizmetleri .NET Framework uygulamasını ilk olarak belirli bir framework'ün XAML uygulama tarafından tanımlanan ancak artık genel parçası olan birçok XAML genişletilebilirlik senaryoları mümkün kılar [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)] XAML dil desteği. Bu konu, geçişle ilgili sorunlar açıklanır ve geçirilir türleri listelenmektedir.  

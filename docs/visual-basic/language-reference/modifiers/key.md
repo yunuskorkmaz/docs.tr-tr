@@ -1,11 +1,6 @@
 ---
 title: Anahtar (Visual Basic)
 ms.date: 07/20/2015
-ms.prod: .net
-ms.suite: 
-ms.technology:
-- devlang-visual-basic
-ms.topic: article
 f1_keywords:
 - vb.AnonymousKey
 helpviewer_keywords:
@@ -13,14 +8,11 @@ helpviewer_keywords:
 - Key [Visual Basic]
 - Key keyword [Visual Basic]
 ms.assetid: 7697a928-7d14-4430-a72a-c9e96e8d6c11
-caps.latest.revision: 
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: 20dbe4e67fb3e415ba0202555ace7fd5afed68d2
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 92d54e3135142bc02a17f3ce5ac078a356c139be
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="key-visual-basic"></a>Anahtar (Visual Basic)
 `Key` Anahtar sözcüğü anonim türdeki özellikleri davranışını belirtmenize olanak sağlar. Anonim tür örneği veya karma kodu değerleri hesaplama arasında eşitlik testleri anahtar özellikleri katılan gibi yalnızca özellikleri, belirleyin. Anahtar özellikleri değerleri değiştirilemez.  
@@ -61,6 +53,6 @@ ms.lasthandoff: 11/21/2017
  [!code-vb[VbVbalrAnonymousTypes#28](../../../visual-basic/language-reference/modifiers/codesnippet/VisualBasic/key_6.vb)]  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [Anonim tür tanımı](../../../visual-basic/programming-guide/language-features/objects-and-classes/anonymous-type-definition.md)  
- [Nasıl yapılır: özellik adları ve türlerini anonim türde bildirimlerden çıkarma](../../../visual-basic/programming-guide/language-features/objects-and-classes/how-to-infer-property-names-and-types-in-anonymous-type-declarations.md)  
- [Anonim türler](../../../visual-basic/programming-guide/language-features/objects-and-classes/anonymous-types.md)
+ [Anonim Tip Tanımı](../../../visual-basic/programming-guide/language-features/objects-and-classes/anonymous-type-definition.md)  
+ [Nasıl yapılır: Anonim Tip Bildirimlerinden Özellik Adları ve Türlerini Çıkarma](../../../visual-basic/programming-guide/language-features/objects-and-classes/how-to-infer-property-names-and-types-in-anonymous-type-declarations.md)  
+ [Anonim Tipler](../../../visual-basic/programming-guide/language-features/objects-and-classes/anonymous-types.md)

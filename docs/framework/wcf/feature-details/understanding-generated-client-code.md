@@ -1,41 +1,27 @@
 ---
 title: Oluşturulmuş İstemci Kodlarını Anlama
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 dev_langs:
 - csharp
 - vb
 ms.assetid: c3f6e4b0-1131-4c94-aa39-a197c5c2f2ca
-caps.latest.revision: 9
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 8cd3e7f5ac8f129e29ed080cbf510dfe106edfb7
-ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
+ms.openlocfilehash: 8a28b52d786793308d8609704b564b75f23d95d8
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/30/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="understanding-generated-client-code"></a>Oluşturulmuş İstemci Kodlarını Anlama
 [ServiceModel meta veri yardımcı Programracı (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md) istemci uygulamaları oluşturmak istemci kodu ve kullanmak için bir istemci uygulama yapılandırma dosyası oluşturur. Bu konu, standart hizmet sözleşmesi senaryoları için oluşturulan kod örnekleri turu sağlar. Oluşturulan kod kullanarak bir istemci uygulaması oluşturma hakkında daha fazla bilgi için bkz: [WCF istemcisi genel bakış](../../../../docs/framework/wcf/wcf-client-overview.md).  
   
 ## <a name="overview"></a>Genel Bakış  
- Oluşturmak için Visual Studio kullanıyorsanız [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] , istemci türlerinin projeniz için genellikle gerekmez oluşturulan istemci kodunu inceleyin. Aynı hizmetleri gerçekleştiren bir geliştirme ortamı kullanmıyorsanız, istemci kodu oluşturmak ve ardından bu kodu istemci uygulamanızı geliştirmek için Svcutil.exe gibi bir araç kullanabilirsiniz.  
+ Projeniz için Windows Communication Foundation (WCF) istemci türleri oluşturmak için Visual Studio kullanıyorsanız, genellikle oluşturulan istemci kodu incelemek gerekmez. Aynı hizmetleri gerçekleştiren bir geliştirme ortamı kullanmıyorsanız, istemci kodu oluşturmak ve ardından bu kodu istemci uygulamanızı geliştirmek için Svcutil.exe gibi bir araç kullanabilirsiniz.  
   
  Oluşturulan tür bilgileri değiştirmek seçenekleri sayısı svcutil.exe sahip olduğundan, bu konuda tüm senaryoları açıklanmamıştır. Ancak, aşağıdaki standart görevler oluşturulan kod bulma içerir:  
   
 -   Hizmet sözleşmesi arabirimleri tanımlama.  
   
--   Tanımlayan [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] istemci sınıfı.  
+-   WCF istemci sınıfı tanımlama.  
   
 -   Veri türleri tanımlama.  
   
@@ -52,14 +38,14 @@ ms.lasthandoff: 04/30/2018
   
  [!code-csharp[C_GeneratedCodeFiles#12](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_generatedcodefiles/cs/proxycode.cs#12)]  
   
- Oluşturulan hizmet sözleşme arabirimi ile birlikte kullanabileceğiniz <xref:System.ServiceModel.ChannelFactory?displayProperty=nameWithType> sınıfı oluşturmak için bir [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] hangi hizmet işlemleri çağırmak kanal nesnesi. Daha fazla bilgi için bkz: [nasıl yapılır: ChannelFactory kullanma](../../../../docs/framework/wcf/feature-details/how-to-use-the-channelfactory.md).  
+ Oluşturulan hizmet sözleşme arabirimi ile birlikte kullanabileceğiniz <xref:System.ServiceModel.ChannelFactory?displayProperty=nameWithType> hangi hizmet işlemleri çağırmak WCF kanalı nesnesi oluşturmak için sınıfı. Daha fazla bilgi için bkz: [nasıl yapılır: ChannelFactory kullanma](../../../../docs/framework/wcf/feature-details/how-to-use-the-channelfactory.md).  
   
 ### <a name="finding-wcf-client-classes"></a>WCF istemci sınıfları bulma  
- Bulunacak [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] istediğiniz kullanmak için arama uzantı için hizmet sözleşmesini uygulayan istemci sınıfı <xref:System.ServiceModel.ClientBase%601?displayProperty=nameWithType>, burada tür parametresi hizmet sözleşmesi arabirim, daha önce bulunan ve bu arabirim genişletir. Aşağıdaki örnekte gösterildiği kod <xref:System.ServiceModel.ClientBase%601> sınıf türü `ISampleService`.  
+ Kullanmak istediğiniz hizmet sözleşmesini uygulayan WCF istemci sınıfı bulmak için uzantı için arama <xref:System.ServiceModel.ClientBase%601?displayProperty=nameWithType>, burada tür parametresi hizmet sözleşmesi arabirim, daha önce bulunan ve bu arabirim genişletir. Aşağıdaki örnekte gösterildiği kod <xref:System.ServiceModel.ClientBase%601> sınıf türü `ISampleService`.  
   
  [!code-csharp[C_GeneratedCodeFiles#14](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_generatedcodefiles/cs/proxycode.cs#14)]  
   
- Bu kullanabilirsiniz [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] yeni bir örneğini oluşturarak ve bunu uygulayan yöntemleri çağırma istemci sınıfı. Bu yöntemler, onu tasarlanmış ve etkileşim kurmak için yapılandırılmış hizmet işlemini çağırır. Daha fazla bilgi için bkz: [WCF istemcisi genel bakış](../../../../docs/framework/wcf/wcf-client-overview.md).  
+ Bu WCF istemci sınıfın yeni bir örneğini oluşturmak ve bunu uygulayan yöntemleri çağırma kullanabilirsiniz. Bu yöntemler, onu tasarlanmış ve etkileşim kurmak için yapılandırılmış hizmet işlemini çağırır. Daha fazla bilgi için bkz: [WCF istemcisi genel bakış](../../../../docs/framework/wcf/wcf-client-overview.md).  
   
 > [!NOTE]
 >  SvcUtil.exe WCF istemci sınıfı oluşturduğunda ekler bir <xref:System.Diagnostics.DebuggerStepThroughAttribute> istemci sınıfına WCF istemci sınıfı aracılığıyla atlama gelen hata ayıklayıcıları engeller.  

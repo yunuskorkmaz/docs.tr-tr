@@ -1,21 +1,14 @@
 ---
-title: "Devre kesici düzeni uygulama"
-description: "Kapsayıcılı .NET uygulamaları için .NET mikro mimarisi | Devre kesici düzeni uygulama"
-keywords: "Docker, mikro, ASP.NET, kapsayıcı"
+title: Devre kesici düzeni uygulama
+description: Kapsayıcılı .NET uygulamaları için .NET mikro mimarisi | Devre kesici düzeni uygulama
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 11/12/2017
-ms.prod: .net-core
-ms.technology: dotnet-docker
-ms.topic: article
-ms.workload:
-- dotnet
-- dotnetcore
-ms.openlocfilehash: 5d7db6899068f84f9165022cfbf17767a75e7db9
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: dea94d8eda3341cca5e3aaf6b3c8369c27381135
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="implementing-the-circuit-breaker-pattern"></a>Devre kesici düzeni uygulama
 
@@ -147,7 +140,7 @@ Buluta Uygulama dağıtırken, bu tür hatalara başlangıçta görebilirsiniz. 
 
 EShopOnContainers bu sorunu çözer daha önce gösterilen yeniden deneme modeli kullanarak bir yoludur. Neden, çözüm başlatılırken, günlük izlemelerini veya aşağıdaki gibi uyarılar alabilirsiniz şöyledir:
 
-> "**Polly'nın RetryPolicy ile uygulanan 1 yeniden deneme**, nedeni: System.Net.Http.HttpRequestException: isteği gönderilirken bir hata oluştu. ---&gt;System.Net.Http.CurlException: sunucusuna bağlanamadı\\System.Net.Http.CurlHandler.ThrowIfCURLEError (CURLcode hatası), n\\adresindeki n \[... \].
+> "**Polly'nın RetryPolicy ile uygulanan 1 yeniden deneme**, nedeni: System.Net.Http.HttpRequestException: isteği gönderilirken bir hata oluştu. ---&gt; System.Net.Http.CurlException: sunucusuna bağlanamadı\\System.Net.Http.CurlHandler.ThrowIfCURLEError (CURLcode hatası), n\\adresindeki n \[... \].
 
 ## <a name="testing-the-circuit-breaker-in-eshoponcontainers"></a>Devre kesici eShopOnContainers içinde test etme
 
@@ -171,9 +164,9 @@ Bu istek Ara devre dışı bırakır.
 
 Örneğin, uygulama çalışmaya başladıktan sonra aşağıdaki URI herhangi bir tarayıcı kullanarak bir istek yaparak ara yazılım etkinleştirebilirsiniz. Sıralama mikro hizmet bağlantı noktası 5103 oluşturun kullandığına dikkat edin.
 
-http://localhost:5103 / başarısız? etkinleştir
+http://localhost:5103/failing?enable
 
-Ardından URI kullanılarak durumunu denetleyebilirsiniz [http://localhost:5103 / başarısız](http://localhost:5103/failing), Şekil 10-4'te gösterildiği gibi.
+Ardından URI kullanılarak durumunu denetleyebilirsiniz [ http://localhost:5103/failing ](http://localhost:5103/failing), Şekil 10-4'te gösterildiği gibi.
 
 ![](./media/image4.png)
 
@@ -235,12 +228,12 @@ Policy.Handle<HttpResponseException>() // etc
 
 ## <a name="additional-resources"></a>Ek kaynaklar
 
--   **Desen yeniden deneme**
+-   **Desen yeniden deneyin**
     [*https://docs.microsoft.com/azure/architecture/patterns/retry*](https://docs.microsoft.com/azure/architecture/patterns/retry)
 
--   **Bağlantı dayanıklılığı** (Entity Framework Çekirdek) [ *https://docs.microsoft.com/ef/core/miscellaneous/connection-resiliency*](https://docs.microsoft.com/ef/core/miscellaneous/connection-resiliency)
+-   **Bağlantı dayanıklılığı** (Entity Framework Çekirdek) [*https://docs.microsoft.com/ef/core/miscellaneous/connection-resiliency*](https://docs.microsoft.com/ef/core/miscellaneous/connection-resiliency)
 
--   **Polly** (.NET esnekliği ve geçici hata işleme kitaplık) [ *https://github.com/App-vNext/Polly*](https://github.com/App-vNext/Polly)
+-   **Polly** (.NET esnekliği ve geçici hata işleme kitaplığı) [*https://github.com/App-vNext/Polly*](https://github.com/App-vNext/Polly)
 
 -   **Devre kesici düzeni**
     [*https://docs.microsoft.com/azure/architecture/patterns/circuit-breaker*](https://docs.microsoft.com/azure/architecture/patterns/circuit-breaker)

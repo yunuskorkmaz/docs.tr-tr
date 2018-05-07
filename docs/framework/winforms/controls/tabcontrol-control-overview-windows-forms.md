@@ -1,14 +1,6 @@
 ---
-title: "TabControl Denetimine Genel Bakış (Windows Forms)"
-ms.custom: 
+title: TabControl Denetimine Genel Bakış (Windows Forms)
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-winforms
-ms.tgt_pltfrm: 
-ms.topic: article
 f1_keywords:
 - TabControl
 helpviewer_keywords:
@@ -17,17 +9,11 @@ helpviewer_keywords:
 - property pages [Windows Forms], Windows Forms
 - Windows Forms dialog boxes [Windows Forms], tabs
 ms.assetid: 2b4ea784-a39d-463c-81d8-af74ce068476
-caps.latest.revision: 
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 04407ca8ddb51658ffd9cc4078d8f545c08e9312
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: f2662e7dd693a92456dc31ca7deda3ea5312e904
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="tabcontrol-control-overview-windows-forms"></a>TabControl Denetimine Genel Bakış (Windows Forms)
 Windows Forms <xref:System.Windows.Forms.TabControl> etiketler, bir dosya dolabı klasörlerde kümesi ya da bir not defteri Bölücü gibi birden fazla sekme görüntüler. Sekmeleri resimleri ve diğer denetimlerin içerebilir. Tür bir Windows işletim sisteminde, Denetim Masası görüntü özellikleri gibi birçok yerde görünür birden çok sayfa iletişim kutusu üretmek için sekme denetimi kullanabilirsiniz. Ayrıca, <xref:System.Windows.Forms.TabControl> bir grup ilgili özellik ayarlamak için kullanılan özellik sayfaları oluşturmak için kullanılabilir.  

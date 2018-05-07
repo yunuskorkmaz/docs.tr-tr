@@ -1,27 +1,15 @@
 ---
 title: "Nasıl yapılır: Hizmet Bulmak için Keşif Proxy'si Kullanan Bir İstemci Uygulaması Kullanma"
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 62b41a75-cf40-4c52-a842-a5f1c70e247f
-caps.latest.revision: "12"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 920f2f85333f23d1b07b6a8ddf2a05279ee477ce
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 82b38d684d6a8de66d569c6fe09813f8ee1bea6a
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-implement-a-client-application-that-uses-the-discovery-proxy-to-find-a-service"></a>Nasıl yapılır: Hizmet Bulmak için Keşif Proxy'si Kullanan Bir İstemci Uygulaması Kullanma
-Keşif proxy'si uygulama nasıl ele üçüncü üç konuların konudur. Önceki konusunda [nasıl yapılır:, Keşif proxy'sine kayıtlı bir bulunabilir hizmet ekleme](../../../../docs/framework/wcf/feature-details/discoverable-service-that-registers-with-the-discovery-proxy.md), uygulanan bir [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] kendisini keşif proxy'sine kayıtlı hizmet. Bu konuda, oluşturduğunuz bir [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] bulmak için keşif proxy'si kullanan istemci [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] hizmet.  
+Keşif proxy'si uygulama nasıl ele üçüncü üç konuların konudur. Önceki konusunda [nasıl yapılır:, Keşif proxy'sine kayıtlı bir bulunabilir hizmet ekleme](../../../../docs/framework/wcf/feature-details/discoverable-service-that-registers-with-the-discovery-proxy.md), kendisini keşif proxy'sine kayıtlı bir WCF Hizmeti uygulanmadı. Bu konudaki WCF hizmeti bulmak için keşif proxy'si kullanan bir WCF istemcisi oluşturun.  
   
 ### <a name="implement-the-client"></a>İstemcisini uygulama  
   

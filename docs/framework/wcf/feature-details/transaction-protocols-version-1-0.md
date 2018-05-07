@@ -1,29 +1,15 @@
 ---
 title: İşlem Protokolleri sürüm 1.0
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 ms.assetid: 034679af-0002-402e-98a8-ef73dcd71bb6
-caps.latest.revision: 3
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 60867daa7b8519f745c37371604807c51aa1cbb9
-ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
+ms.openlocfilehash: d510a74560369a132822e980e7812ca4deff55a3
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/30/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="transaction-protocols-version-10"></a>İşlem Protokolleri sürüm 1.0
-[!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] Sürüm 1, sürüm 1.0 WS-Atomic işlemleri ve Web Hizmetleri koordinasyonu kurallarının uygular. Sürüm 1.1 hakkında daha fazla bilgi için bkz: [işlem protokolleri](../../../../docs/framework/wcf/feature-details/transaction-protocols.md).  
+Windows Communication Foundation (WCF) sürüm 1, sürüm 1.0 WS-Atomic işlemleri ve Web Hizmetleri koordinasyonu kurallarının uygular. Sürüm 1.1 hakkında daha fazla bilgi için bkz: [işlem protokolleri](../../../../docs/framework/wcf/feature-details/transaction-protocols.md).  
   
 |Belirtim/belgesi|Bağlantı|  
 |-----------------------------|----------|  
@@ -66,7 +52,7 @@ ms.lasthandoff: 04/30/2018
   
 -   Uygulama iletileri.  
   
- İlk üç ileti sınıfları işlem yöneticisi iletileri kabul edilir ve bağlama yapılandırmalarını "Uygulama ileti değişimi" Bu konunun ilerleyen bölümlerinde açıklanmıştır. İletinin dördüncü sınıfını uygulamaya iletileri ve bu konunun devamındaki "İletisi örnekler" bölümünde açıklanan. Bu bölümde tarafından bu sınıfların her biri için kullanılan protokolü bağlamaları açıklanmaktadır [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)].  
+ İlk üç ileti sınıfları işlem yöneticisi iletileri kabul edilir ve bağlama yapılandırmalarını "Uygulama ileti değişimi" Bu konunun ilerleyen bölümlerinde açıklanmıştır. İletinin dördüncü sınıfını uygulamaya iletileri ve bu konunun devamındaki "İletisi örnekler" bölümünde açıklanan. Bu bölümde bu sınıfların her biri için WCF tarafından kullanılan protokolü bağlamaları açıklanmaktadır.  
   
  Aşağıdaki XML ad alanları ve ilişkili önekleri bu belge boyunca kullanılır.  
   
@@ -96,12 +82,12 @@ ms.lasthandoff: 04/30/2018
 -   B1112: DNS başarılı olması için her gönderenin alıcı çifti arasında X.509 konu adı denetimleri için sistemdeki işlevsel olması gerekir.  
   
 #### <a name="activation-and-registration-binding-configuration"></a>Etkinleştirme ve yapılandırma bağlama kayıt  
- [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] İstek/yanıt çift yönlü bağıntı bağlamayla HTTPS üzerinden gerektirir. (WS-Atomic işlemleri, Bölüm 8 bağıntı ve istek/yanıt iletisi exchange desenleri açıklamalarını hakkında daha fazla bilgi için bkz.)  
+ WCF istek/yanıt çift yönlü bağıntı bağlamayla HTTPS üzerinden gerektirir. (WS-Atomic işlemleri, Bölüm 8 bağıntı ve istek/yanıt iletisi exchange desenleri açıklamalarını hakkında daha fazla bilgi için bkz.)  
   
 #### <a name="2pc-protocol-binding-configuration"></a>2PC Protokolü bağlama yapılandırması  
- [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] tek yönlü (datagram) iletileri HTTPS üzerinden destekler. Bağıntı iletileri arasında bir uygulama ayrıntı olarak kalır.  
+ WCF HTTPS üzerinden tek yönlü (datagram) iletileri destekler. Bağıntı iletileri arasında bir uygulama ayrıntı olarak kalır.  
   
- B2131: Uygulamaları desteklemelidir `wsa:ReferenceParameters` WS-bağıntı elde etmek için adresleme içinde açıklandığı gibi [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]'s 2PC iletileri.  
+ B2131: Uygulamaları desteklemelidir `wsa:ReferenceParameters` WS-WCF'ın 2PC iletilerinin bağıntı elde etmek için adresleme içinde açıklandığı gibi.  
   
 ### <a name="transaction-manager-mixed-security-binding"></a>İşlem Yöneticisi güvenlik bağlama karma  
  Bu kimlik kurulması amacıyla Web Hizmetleri koordinasyonu verilen belirteç modeli ile birlikte bu kullanımları taşıma güvenliği bağlama bir alternatif (karma mod) olur.  Etkinleştirme ve kayıt arasında iki bağlamaları farklı yalnızca öğelerdir.  
@@ -112,7 +98,7 @@ ms.lasthandoff: 04/30/2018
 #### <a name="activation-message-binding-configuration"></a>Etkinleştirme ileti bağlama yapılandırması  
  Genellikle bir uygulama ve onun yerel işlem yöneticisi arasında gerçekleştirildiği için etkinleştirme iletiler birlikte çalışabilirlik genellikle katılma.  
   
- B1221: [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] çift yönlü HTTPS bağlamasını kullanır (açıklanan [Mesajlaşma protokolleri](../../../../docs/framework/wcf/feature-details/messaging-protocols.md)) etkinleştirme iletileri için. İstek ve yanıt iletileri WS adresleme 2004/08 kullanılarak bağıntılı olan.  
+ B1221: Çift yönlü HTTPS bağlamasını WCF kullanır (açıklanan [Mesajlaşma protokolleri](../../../../docs/framework/wcf/feature-details/messaging-protocols.md)) etkinleştirme iletileri için. İstek ve yanıt iletileri WS adresleme 2004/08 kullanılarak bağıntılı olan.  
   
  WS-Atomic işlem belirtimi, Bölüm 8, Ayrıntılar bağıntı ve ileti exchange desenleri hakkında daha fazla açıklar.  
   
@@ -123,7 +109,7 @@ ms.lasthandoff: 04/30/2018
  Yeni bir `t:IssuedTokens` giden eklemek için üstbilgi oluşturulacağı `wscoor:CreateCoordinationContextResponse` ileti.  
   
 #### <a name="registration-message-binding-configuration"></a>Kayıt iletisi bağlama yapılandırması  
- B1231: [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] çift yönlü HTTPS bağlamasını kullanır (açıklanan [Mesajlaşma protokolleri](../../../../docs/framework/wcf/feature-details/messaging-protocols.md)). İstek ve yanıt iletileri WS adresleme 2004/08 kullanılarak bağıntılı olan.  
+ B1231: Çift yönlü HTTPS bağlamasını WCF kullanır (açıklanan [Mesajlaşma protokolleri](../../../../docs/framework/wcf/feature-details/messaging-protocols.md)). İstek ve yanıt iletileri WS adresleme 2004/08 kullanılarak bağıntılı olan.  
   
  WS-AtomicTransaction, Bölüm 8, açıklar daha fazla ayrıntı bağıntı ve ileti exchange desenleri açıklamalarını hakkında.  
   
@@ -132,9 +118,9 @@ ms.lasthandoff: 04/30/2018
  `wsse:Timestamp` Öğesi kullanılarak imzalanmalıdır `SecurityContextToken``STx` verilmiş. Bu imza belirli işlemle ilişkili belirtecinin kanıtını olup işlemde kaydetme katılımcı kimliğini doğrulamak için kullanılır. RegistrationResponse ileti HTTPS üzerinden gönderilir.  
   
 #### <a name="2pc-protocol-binding-configuration"></a>2PC Protokolü bağlama yapılandırması  
- [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] tek yönlü (datagram) iletileri HTTPS üzerinden destekler. Bağıntı iletileri arasında bir uygulama ayrıntı olarak kalır.  
+ WCF HTTPS üzerinden tek yönlü (datagram) iletileri destekler. Bağıntı iletileri arasında bir uygulama ayrıntı olarak kalır.  
   
- B2131: Uygulamaları desteklemelidir `wsa:ReferenceParameters` WS-bağıntı elde etmek için adresleme içinde açıklandığı gibi [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]'s 2PC iletileri.  
+ B2131: Uygulamaları desteklemelidir `wsa:ReferenceParameters` WS-WCF'ın 2PC iletilerinin bağıntı elde etmek için adresleme içinde açıklandığı gibi.  
   
 ## <a name="application-message-exchange"></a>Uygulama ileti değişimi  
  Uygulamaları bağlama aşağıdaki güvenlik gereksinimlerini karşılayan sürece herhangi belirli uygulama uygulaması iletileri için bu bağlamayı kullanmak boş şunlardır:  
@@ -143,9 +129,9 @@ ms.lasthandoff: 04/30/2018
   
 -   R2002: Bütünlüğü ve gizliliği `t:IssuedToken` sağlanmalıdır.  
   
- `CoordinationContext` Üst bilgiyi içeren `wscoor:Identifier`. While tanımını `xsd:AnyURI` mutlak veya göreli URI, kullanılmasına [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] yalnızca destekler `wscoor:Identifiers`, mutlak URI olduğu.  
+ `CoordinationContext` Üst bilgiyi içeren `wscoor:Identifier`. While tanımını `xsd:AnyURI` mutlak ve göreli URI'ler kullanılmasına WCF yalnızca destekler `wscoor:Identifiers`, mutlak URI olduğu.  
   
- Varsa `wscoor:Identifier` , `wscoor:CoordinationContext` göreli bir URI hataları döndürülecek gelen işlem [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] Hizmetleri.  
+ Varsa `wscoor:Identifier` , `wscoor:CoordinationContext` göreli bir URI hataları işlem WCF hizmetlerini döndürülecek.  
   
 ## <a name="message-examples"></a>İleti örnekleri  
   

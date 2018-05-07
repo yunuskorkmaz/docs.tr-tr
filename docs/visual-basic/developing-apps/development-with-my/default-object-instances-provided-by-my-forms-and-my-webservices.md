@@ -1,24 +1,17 @@
 ---
-title: "My.Forms ve My.WebServices ile Sağlanan Varsayılan Nesne Örnekleri (Visual Basic)"
+title: My.Forms ve My.WebServices ile Sağlanan Varsayılan Nesne Örnekleri (Visual Basic)
 ms.date: 07/20/2015
-ms.prod: .net
-ms.suite: 
-ms.technology: devlang-visual-basic
-ms.topic: article
 helpviewer_keywords:
 - My.WebServices object [Visual Basic], developing applications
 - My.Forms object [Visual Basic], developing applications
 - rapid application development (RAD), My.Forms
 - rapid application development (RAD), My.WebServices
 ms.assetid: de930027-9108-4f0c-b97c-5e7db4d6ef79
-caps.latest.revision: "5"
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: 44265c3f6f38a001192a8d92f2fbb6edeaca21cb
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 421995684201ec48d5e8aff9b0ed7640efd1e4b9
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="default-object-instances-provided-by-myforms-and-mywebservices-visual-basic"></a>My.Forms ve My.WebServices ile Sağlanan Varsayılan Nesne Örnekleri (Visual Basic)
 [My.Forms](../../../visual-basic/language-reference/objects/my-forms-object.md) ve [My.WebServices](../../../visual-basic/language-reference/objects/my-webservices-object.md) nesneleri formlar, veri kaynakları ve uygulamanız tarafından kullanılan XML Web Hizmetleri için erişim sağlar. Koleksiyonları sağlayarak bunu *varsayılan örnekleri* , bu nesnelerin her biri.  
@@ -33,6 +26,6 @@ ms.lasthandoff: 11/21/2017
  `My.Forms` Nesne için varsayılan örneklerinin bir koleksiyonunu döndürür her `Form` projenizde var. sınıfı. Benzer şekilde, `My.WebServices` uygulamanızda oluşturulan bir başvuru için her Web hizmeti proxy sınıfı varsayılan örneği sağlar.  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [My.Forms nesnesi](../../../visual-basic/language-reference/objects/my-forms-object.md)  
- [My.WebServices nesnesi](../../../visual-basic/language-reference/objects/my-webservices-object.md)  
- [Nasıl My proje türüne göre değişir](../../../visual-basic/developing-apps/development-with-my/how-my-depends-on-project-type.md)
+ [My.Forms Nesnesi](../../../visual-basic/language-reference/objects/my-forms-object.md)  
+ [My.WebServices Nesnesi](../../../visual-basic/language-reference/objects/my-webservices-object.md)  
+ [My Özellikleri Proje Türüne Nasıl Bağımlıdır](../../../visual-basic/developing-apps/development-with-my/how-my-depends-on-project-type.md)

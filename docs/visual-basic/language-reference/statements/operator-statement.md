@@ -1,12 +1,6 @@
 ---
 title: Operator Deyimi
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- devlang-visual-basic
-ms.topic: article
 f1_keywords:
 - vb.operator
 helpviewer_keywords:
@@ -23,14 +17,11 @@ helpviewer_keywords:
 - Operator statement [Visual Basic]
 - CType function [Visual Basic], Operator statement
 ms.assetid: b12ec4af-1ad7-4a17-865b-c5ee96320ae5
-caps.latest.revision: 
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: 1b6be45fd0a606f43c14d57f3f8ae0955f256ba6
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: cb7fe7929e4b6e61ca3b39be5615e09182f2fe0f
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="operator-statement"></a>Operator Deyimi
 İşleç simgesi, işlenen ve bir işleç yordamı tanımlayan bir sınıf veya yapı kodu bildirir.  
@@ -78,7 +69,7 @@ End Operator
  `operand2`  
  İkili işleçler için gereklidir. Ad ve sağ işleneni, ikili işleç türü.  
   
- `operand1`ve `operand2` aşağıdaki söz dizimini ve bölümleri vardır:  
+ `operand1` ve `operand2` aşağıdaki söz dizimini ve bölümleri vardır:  
   
  `[ ByVal ] operandname [ As operandtype ]`  
   
@@ -122,13 +113,13 @@ End Operator
 ## <a name="matched-pairs"></a>Eşleşen çiftleri  
  Belirli işleçleri eşleşen çiftleri tanımlamanız gerekir. Bu tür bir çifti ya da işleç tanımlarsanız, diğeri de tanımlamanız gerekir. Eşleşen çiftleri şunlardır:  
   
--   `=`ve`<>`  
+-   `=` Ve `<>`  
   
--   `>`ve`<`  
+-   `>` Ve `<`  
   
--   `>=`ve`<=`  
+-   `>=` Ve `<=`  
   
--   `IsTrue`ve`IsFalse`  
+-   `IsTrue` Ve `IsFalse`  
   
 ## <a name="data-type-restrictions"></a>Veri türü kısıtlamaları  
  Tanımladığınız her işleci üzerinde tanımladığınız sınıf veya yapı kapsaması gerekir. Bu sınıf veya yapı için aşağıdakilerin veri türü olarak görüntülenirler anlamına gelir:  
@@ -174,18 +165,18 @@ End Operator
  Bir dönüştürme yordamı başarısız olabilir olasılığı yok veya onun işlenmeyen bir özel duruma neden olabilir, olmasını bildirmelidir `Narrowing`.  
   
 ## <a name="example"></a>Örnek  
- Aşağıdaki kod örneğinde `Operator` işleç yordamları için içeren bir yapı özetini tanımlamak için deyimi `And`, `Or`, `IsFalse`, ve `IsTrue` işleçler. `And`ve `Or` türünde iki işlenen herbiri `abc` ve dönüş türü `abc`. `IsFalse`ve `IsTrue` türü tek bir işlenen herbiri `abc` ve geri dönüp `Boolean`. Bu tanımları kullanılacak çağıran kodu izin `And`, `AndAlso`, `Or`, ve `OrElse` türündeki işlenenler ile `abc`.  
+ Aşağıdaki kod örneğinde `Operator` işleç yordamları için içeren bir yapı özetini tanımlamak için deyimi `And`, `Or`, `IsFalse`, ve `IsTrue` işleçler. `And` ve `Or` türünde iki işlenen herbiri `abc` ve dönüş türü `abc`. `IsFalse` ve `IsTrue` türü tek bir işlenen herbiri `abc` ve geri dönüp `Boolean`. Bu tanımları kullanılacak çağıran kodu izin `And`, `AndAlso`, `Or`, ve `OrElse` türündeki işlenenler ile `abc`.  
   
  [!code-vb[VbVbalrStatements#44](../../../visual-basic/language-reference/error-messages/codesnippet/VisualBasic/operator-statement_1.vb)]  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [IsFalse işleci](../../../visual-basic/language-reference/operators/isfalse-operator.md)  
- [IsTrue işleci](../../../visual-basic/language-reference/operators/istrue-operator.md)  
- [Genişletme](../../../visual-basic/language-reference/modifiers/widening.md)  
- [Daraltma](../../../visual-basic/language-reference/modifiers/narrowing.md)  
- [Genişletme ve daraltma dönüşümleri](../../../visual-basic/programming-guide/language-features/data-types/widening-and-narrowing-conversions.md)  
- [İşleç yordamları](../../../visual-basic/programming-guide/language-features/procedures/operator-procedures.md)  
- [Nasıl yapılır: bir işleci tanımlama](../../../visual-basic/programming-guide/language-features/procedures/how-to-define-an-operator.md)  
- [Nasıl yapılır: bir dönüşüm işleci tanımlama](../../../visual-basic/programming-guide/language-features/procedures/how-to-define-a-conversion-operator.md)  
- [Nasıl yapılır: bir işleç yordamı çağırma](../../../visual-basic/programming-guide/language-features/procedures/how-to-call-an-operator-procedure.md)  
- [Nasıl yapılır: işleçleri tanımlayan bir sınıf kullanma](../../../visual-basic/programming-guide/language-features/procedures/how-to-use-a-class-that-defines-operators.md)
+ [IsFalse İşleci](../../../visual-basic/language-reference/operators/isfalse-operator.md)  
+ [IsTrue İşleci](../../../visual-basic/language-reference/operators/istrue-operator.md)  
+ [Widening](../../../visual-basic/language-reference/modifiers/widening.md)  
+ [Narrowing](../../../visual-basic/language-reference/modifiers/narrowing.md)  
+ [Genişletme ve Daraltma Dönüştürmeleri](../../../visual-basic/programming-guide/language-features/data-types/widening-and-narrowing-conversions.md)  
+ [İşleç Yordamları](../../../visual-basic/programming-guide/language-features/procedures/operator-procedures.md)  
+ [Nasıl yapılır: İşleç Tanımlama](../../../visual-basic/programming-guide/language-features/procedures/how-to-define-an-operator.md)  
+ [Nasıl yapılır: Dönüştürme İşleci Tanımlama](../../../visual-basic/programming-guide/language-features/procedures/how-to-define-a-conversion-operator.md)  
+ [Nasıl yapılır: Bir İşleç Yordamı Çağırma](../../../visual-basic/programming-guide/language-features/procedures/how-to-call-an-operator-procedure.md)  
+ [Nasıl yapılır: İşleçleri Tanımlayan Bir Sınıf Kullanma](../../../visual-basic/programming-guide/language-features/procedures/how-to-use-a-class-that-defines-operators.md)

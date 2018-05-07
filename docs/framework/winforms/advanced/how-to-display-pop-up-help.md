@@ -1,13 +1,6 @@
 ---
-title: "Nasıl yapılır: Açılır Yardımı Görüntüleme"
-ms.custom: 
+title: 'Nasıl yapılır: Açılır Yardımı Görüntüleme'
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-winforms
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - pop-up Help
 - Help [Windows Forms], pop-up Help
@@ -18,16 +11,11 @@ helpviewer_keywords:
 - HelpProvider component [Windows Forms]
 - Help [Windows Forms], adding to dialog boxes
 ms.assetid: 218aa81e-e87e-4d67-af05-11627bbdce3b
-caps.latest.revision: "16"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 3ec4401bb3465f72e4ef732e7554dc64603d700c
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.openlocfilehash: 5751bcdb9fe7a16138680f34a4fcc1760f85a1d6
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-display-pop-up-help"></a>Nasıl yapılır: Açılır Yardımı Görüntüleme
 Windows Forms'ta Yardım görüntülemek için bir yol olduğu aracılığıyla **yardımcı** üzerinden erişilebilir başlık çubuğunu sağ tarafında bulunan düğmesini <xref:System.Windows.Forms.Form.HelpButton%2A> özelliği. Bu Yardım görüntüleme iletişim kutuları ile kullanmak için oldukça uygun türüdür. Kalıcı olarak gösterilen iletişim kutuları (ile <xref:System.Windows.Forms.Form.ShowDialog%2A> yöntemi) kalıcı iletişim kutuları için başka bir pencere odak kaydırabilirsiniz önce kapatılması gerektiğinden dış yardım sistemleri hale getirme konusunda sorun yaşıyor. Ayrıca, kullanarak **yardımcı** düğmesi gerektiren olduğunu hiçbir **simge durumuna küçült** düğmesini veya **Ekranı Kapla** başlık çubuğunda gösterilen düğmesi. Formlar genellikle sahip bir standart iletişim kutusu kuralı ise **simge durumuna küçült** ve **Ekranı Kapla** düğmeler.  

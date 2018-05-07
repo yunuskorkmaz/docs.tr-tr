@@ -1,13 +1,6 @@
 ---
-title: "From-To-By animasyonları genel bakış"
-ms.custom: 
+title: From-To-By animasyonları genel bakış
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-wpf
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -15,16 +8,11 @@ helpviewer_keywords:
 - animation [WPF], From/to/by
 - From/to/by animation
 ms.assetid: 516fce0a-e7f8-49b8-b018-53b3d409a8a3
-caps.latest.revision: "17"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 4c4c2c3b9cabb630b5762fdc49f6cb62eef28f71
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 3095ec2c6307faaaa8049f23fffb5909cb3042d8
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="fromtoby-animations-overview"></a>Gelen/İçin/Göre Animasyonlarına Genel Bakış
 Bu konuda From/To/By animasyonları bağımlılık özellikleri animasyon için nasıl kullanılacağını açıklar. From/To/By animasyon iki değer arasında bir geçiş oluşturur.  
@@ -47,11 +35,11 @@ Bu konuda From/To/By animasyonları bağımlılık özellikleri animasyon için 
   
  From/To/By animasyon sınıfları ait <xref:System.Windows.Media.Animation> ad alanı ve aşağıdaki adlandırma kuralını kullanın:  
   
- *\<Tür >*`Animation`  
+ *\<türü >* `Animation`  
   
  Burada  *\<türü >* sınıfı canlandırır değer türüdür.  
   
- [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]Aşağıdaki From/To/By animasyon sınıfları sağlar.  
+ [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] Aşağıdaki From/To/By animasyon sınıfları sağlar.  
   
 |Özellik türü|Karşılık gelen From/To/By animasyon sınıfı|  
 |-------------------|------------------------------------------------|  
@@ -149,7 +137,7 @@ Bu konuda From/To/By animasyonları bağımlılık özellikleri animasyon için 
   
 -   Yol animasyonu çıkış değerleri oluşturur bir <xref:System.Windows.Media.PathGeometry>. Daha fazla bilgi için bkz: [yol animasyonlarına genel bakış](../../../../docs/framework/wpf/graphics-multimedia/path-animations-overview.md).  
   
- [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]Ayrıca, kendi özel animasyon türleri oluşturmanıza olanak sağlar. Daha fazla bilgi için bkz: [özel animasyon genel bakış](../../../../docs/framework/wpf/graphics-multimedia/custom-animations-overview.md).  
+ [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] Ayrıca, kendi özel animasyon türleri oluşturmanıza olanak sağlar. Daha fazla bilgi için bkz: [özel animasyon genel bakış](../../../../docs/framework/wpf/graphics-multimedia/custom-animations-overview.md).  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
  <xref:System.Windows.Media.Animation.Timeline>  

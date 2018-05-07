@@ -1,13 +1,7 @@
 ---
-title: "Normal İfadelerdeki Değişimler"
-ms.custom: 
+title: Normal İfadelerdeki Değişimler
 ms.date: 03/30/2017
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
 ms.technology: dotnet-standard
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -19,28 +13,23 @@ helpviewer_keywords:
 - constructs, substitutions
 - substitutions
 ms.assetid: d1f52431-1c7d-4dc6-8792-6b988256892e
-caps.latest.revision: "20"
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-- dotnetcore
-ms.openlocfilehash: f93584b9dff721c8521d8cb58aaf5eab2c1fc931
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: 53fd4ee63d49b3943fa0b1164591aaddaa764abc
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="substitutions-in-regular-expressions"></a>Normal İfadelerdeki Değişimler
-<a name="Top"></a>Değişimler yalnızca değiştirme desenleri içinde tanınan dil öğelerdir. Giriş dizesinde eşleşen metnin yerini alacak metnin tümünü veya bir kısmını tanımlamak için normal bir ifade deseni kullanırlar. Değiştirme deseni, değişmez karakterlerin yanı sıra bir veya birden çok değiştirmeden oluşabilir. Değiştirme desenleri aşırı için sağlanan <xref:System.Text.RegularExpressions.Regex.Replace%2A?displayProperty=nameWithType> sahip yöntemi bir `replacement` parametre ve <xref:System.Text.RegularExpressions.Match.Result%2A?displayProperty=nameWithType> yöntemi. Yöntemleri tarafından tanımlanan düzeni eşleşen düzeni yerine `replacement` parametresi.  
+<a name="Top"></a> Değişimler yalnızca değiştirme desenleri içinde tanınan dil öğelerdir. Giriş dizesinde eşleşen metnin yerini alacak metnin tümünü veya bir kısmını tanımlamak için normal bir ifade deseni kullanırlar. Değiştirme deseni, değişmez karakterlerin yanı sıra bir veya birden çok değiştirmeden oluşabilir. Değiştirme desenleri aşırı için sağlanan <xref:System.Text.RegularExpressions.Regex.Replace%2A?displayProperty=nameWithType> sahip yöntemi bir `replacement` parametre ve <xref:System.Text.RegularExpressions.Match.Result%2A?displayProperty=nameWithType> yöntemi. Yöntemleri tarafından tanımlanan düzeni eşleşen düzeni yerine `replacement` parametresi.  
   
  .NET Framework, aşağıdaki tabloda listelenen değişim öğelerini tanımlar.  
   
 |Değiştirme|Açıklama|  
 |------------------|-----------------|  
-|`$`*numarası*|Tarafından tanımlanan yakalama grubuna göre eşleşen son alt dizeyi içeren *numarası*, burada *numarası* değiştirme dizesi içinde ondalık bir değer. Daha fazla bilgi için bkz: [numaralı grup değiştirerek](#Numbered).|  
-|`${`*adı*`}`|Tarafından belirlenen adlı gruba göre eşleşen son alt dizeyi içeren `(?<` *adı* `> )` değiştirme dizesi içinde. Daha fazla bilgi için bkz: [adlandırılmış Grup değiştirerek](#Named).|  
+|`$` *Sayı*|Tarafından tanımlanan yakalama grubuna göre eşleşen son alt dizeyi içeren *numarası*, burada *numarası* değiştirme dizesi içinde ondalık bir değer. Daha fazla bilgi için bkz: [numaralı grup değiştirerek](#Numbered).|  
+|`${` *Adı* `}`|Tarafından belirlenen adlı gruba göre eşleşen son alt dizeyi içeren `(?<` *adı* `> )` değiştirme dizesi içinde. Daha fazla bilgi için bkz: [adlandırılmış Grup değiştirerek](#Named).|  
 |`$$`|Değiştirme dizesinde tek bir "$" değişmez değerini içerir. Daha fazla bilgi için bkz: ["$" simgesi değiştirerek](#DollarSign).|  
 |`$&`|Değiştirme dizesinde tüm eşleşmenin bir kopyasını içerir. Daha fazla bilgi için bkz: [tüm eşleşme değiştirerek](#EntireMatch).|  
 |<code>$\`</code>|Giriş dizesinin tüm metini, değiştirme dizininde eşleşmenin önüne ekler. Daha fazla bilgi için bkz: [metinden önce eşleşme değiştirerek](#BeforeMatch).|  

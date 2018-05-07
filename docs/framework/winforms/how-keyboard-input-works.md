@@ -1,28 +1,16 @@
 ---
-title: "Klavye Girdisi Nasıl Çalışır"
-ms.custom: 
+title: Klavye Girdisi Nasıl Çalışır
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-winforms
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - keyboard input [Windows Forms], about keyboard input
 - keyboards [Windows Forms], keyboard input
 - Windows Forms, keyboard input
 ms.assetid: 9a29433c-a180-49bb-b74c-d187786584c8
-caps.latest.revision: "20"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 43b92051b6524a730735fea98d64ee64578b4e06
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: a0b814a18f4a8b25fba9fa0b36da44954590f056
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-keyboard-input-works"></a>Klavye Girdisi Nasıl Çalışır
 Windows Forms klavye olayları Windows iletilere yanıt olarak yükselterek klavye girişi işler. Çoğu Windows Forms uygulamaları klavye olayları işleme tarafından özel olarak klavye girişi işleyin. Ancak, bir denetim düşmeden önce anahtarları kesintiye uğratan gibi daha gelişmiş klavye girişi senaryolar uygulayabilirsiniz şekilde klavye iletileri nasıl çalıştığını anlamanız gerekir. Bu konuda Windows Forms tanır ve klavye iletileri nasıl yönlendirildiği genel bir bakış sağlar anahtar veri türleri açıklanmaktadır. Klavye olayları hakkında daha fazla bilgi için bkz: [kullanan klavye olayları](../../../docs/framework/winforms/using-keyboard-events.md).  
@@ -74,9 +62,9 @@ Windows Forms klavye olayları Windows iletilere yanıt olarak yükselterek klav
 |Görev|Yöntem|  
 |----------|------------|  
 |Bir gezinme anahtar kesecek ve yükseltmek bir <xref:System.Windows.Forms.Control.KeyDown> olay. Örneğin, sekme ve Return bir metin kutusunda işlenecek istersiniz.|Geçersiz kılma <xref:System.Windows.Forms.Control.IsInputKey%2A>. **Not:** alternatif olarak, işleyebilir <xref:System.Windows.Forms.Control.PreviewKeyDown> olay ve kümesi <xref:System.Windows.Forms.PreviewKeyDownEventArgs.IsInputKey%2A> , <xref:System.Windows.Forms.PreviewKeyDownEventArgs> için `true` anahtarı veya istediğiniz anahtarları için.|  
-|Özel giriş ya da gezinti işleme bir denetimi gerçekleştirin. Örneğin, seçili öğe değiştirmek için liste denetiminde ok tuşlarını kullanın istiyorsunuz.|Geçersiz kılma<xref:System.Windows.Forms.Control.ProcessDialogKey%2A>|  
+|Özel giriş ya da gezinti işleme bir denetimi gerçekleştirin. Örneğin, seçili öğe değiştirmek için liste denetiminde ok tuşlarını kullanın istiyorsunuz.|geçersiz kılma <xref:System.Windows.Forms.Control.ProcessDialogKey%2A>|  
 |Bir gezinme anahtar kesecek ve yükseltmek bir <xref:System.Windows.Forms.Control.KeyPress> olay. Örneğin bir döndürme kutusunu denetiminde öğeler arasında progression hızlandırmak için birden çok ok tuşuna bastığında istiyorsunuz.|Geçersiz kılma <xref:System.Windows.Forms.Control.IsInputChar%2A>.|  
-|Özel giriş ya da gezinti işleme sırasında gerçekleştirmek bir <xref:System.Windows.Forms.Control.KeyPress> olay. Örneğin, bir liste r harfle başlayan öğeleri arasında "r" tuşunu basılı tutarak denetimi atlar.|Geçersiz kılma<xref:System.Windows.Forms.Control.ProcessDialogChar%2A>|  
+|Özel giriş ya da gezinti işleme sırasında gerçekleştirmek bir <xref:System.Windows.Forms.Control.KeyPress> olay. Örneğin, bir liste r harfle başlayan öğeleri arasında "r" tuşunu basılı tutarak denetimi atlar.|geçersiz kılma <xref:System.Windows.Forms.Control.ProcessDialogChar%2A>|  
 |İşleme özel anımsatıcı gerçekleştirir; Örneğin, araç çubuğunda yer alan sahip tarafından çizilmiş düğmeleri anımsatıcıları işlemek istersiniz.|Geçersiz kılma <xref:System.Windows.Forms.Control.ProcessMnemonic%2A>.|  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  

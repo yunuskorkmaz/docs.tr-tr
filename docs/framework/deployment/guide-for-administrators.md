@@ -1,29 +1,17 @@
 ---
 title: Yöneticiler için .NET Framework Dağıtım Kılavuzu
-ms.custom: ''
 ms.date: 04/10/2018
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 helpviewer_keywords:
 - administrator's guide, deploying .NET Framework
 - deployment [.NET Framework], administrator's guide
 ms.assetid: bee14036-0436-44e8-89f5-4bc61317977a
-caps.latest.revision: 40
 author: mairaw
 ms.author: mairaw
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 67efb04fc0d86a20fdf10c0e84bb00ae57383bb1
-ms.sourcegitcommit: 9a4fe1a1c37b26532654b4bbe22d702237950009
+ms.openlocfilehash: 9b4c2d4205e87d8be21f82eaf74b17e316d9057e
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="net-framework-deployment-guide-for-administrators"></a>Yöneticiler için .NET Framework Dağıtım Kılavuzu
 Bu adım adım makalede bir sistem yöneticisi nasıl dağıtabileceğini açıklar [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] ve Microsoft System Center Configuration Manager kullanarak ağ üzerinden sistem bağımlılıklarını. Bu makalede tüm istemci bilgisayarların .NET Framework için gerekli olan minimum sistem gereksinimlerini karşıladığı varsayılmıştır. Yüklemek için yazılım ve donanım gereksinimlerinin listesi için [!INCLUDE[net_v45](../../../includes/net-v45-md.md)], bkz: [sistem gereksinimleri](../../../docs/framework/get-started/system-requirements.md).  
@@ -33,7 +21,7 @@ Bu adım adım makalede bir sistem yöneticisi nasıl dağıtabileceğini açık
 >   
 >  .NET Framework desteği hakkında daha fazla bilgi için bkz: [Microsoft .NET Framework destek yaşam döngüsü ilkesi](http://go.microsoft.com/fwlink/?LinkId=196607) Microsoft Support Web sitesinde.  
   
- Bu konu aşağıdaki bölümleri içerir:  
+ Bu konu aşağıdaki bölümleri içermektedir:  
   
  [Dağıtım işlemi](#the_deployment_process)  
  [.NET Framework'ü dağıtma](#deploying_in_a_test_environment)  
@@ -227,7 +215,7 @@ Bu adım adım makalede bir sistem yöneticisi nasıl dağıtabileceğini açık
 -   [System Center 2012 Configuration Manager için istemci dağıtma](http://technet.microsoft.com/library/gg699391.aspx)  
   
 <a name="troubleshooting"></a>   
-## <a name="troubleshooting"></a>Sorun Giderme  
+## <a name="troubleshooting"></a>Sorun giderme  
   
 ### <a name="log-file-locations"></a>Günlük dosyası konumları  
  Aşağıdaki günlük dosyalarına .NET Framework Kurulum sırasında oluşturulur:  
@@ -271,6 +259,6 @@ Bu adım adım makalede bir sistem yöneticisi nasıl dağıtabileceğini açık
   
 -   [Windows Update Aracısı sonuç kodları](http://technet.microsoft.com/library/cc720442.aspx)  
   
-## <a name="see-also"></a>Ayrıca bkz.  
+## <a name="see-also"></a>Ayrıca Bkz.  
  [Geliştiriciler için Dağıtım Kılavuzu](../../../docs/framework/deployment/deployment-guide-for-developers.md)  
  [Sistem Gereksinimleri](../../../docs/framework/get-started/system-requirements.md)

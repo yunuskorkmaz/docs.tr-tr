@@ -1,28 +1,17 @@
 ---
-title: "Bir İş Parçacığı Koleksiyonunun Ne Zaman Kullanılacağı"
-ms.custom: 
+title: Bir İş Parçacığı Koleksiyonunun Ne Zaman Kullanılacağı
 ms.date: 03/30/2017
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
 ms.technology: dotnet-standard
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - thread-safe collections, when to upgrade
 ms.assetid: a9babe97-e457-4ff3-b528-a1bc940d5320
-caps.latest.revision: 
 author: mairaw
 ms.author: mairaw
-manager: wpickett
-ms.workload:
-- dotnet
-- dotnetcore
-ms.openlocfilehash: 61444afd5afe52cbcb0f64074ec4479bd6252358
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: b224e758eb5b0e07c76f055f22bfe827789f07ab
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="when-to-use-a-thread-safe-collection"></a>Bir İş Parçacığı Koleksiyonunun Ne Zaman Kullanılacağı
 [!INCLUDE[net_v40_long](../../../../includes/net-v40-long-md.md)] Desteklemek için özellikle tasarlanmış beş yeni koleksiyon türleri tanıtır çok iş parçacıklı ekleme ve kaldırma işlemleri. İş parçacığı güvenliği elde etmek için bu yeni tür verimli kilitleme ve kilidi serbest eşitleme mekanizmaları çeşitli kullanın. Eşitleme için bir işlem yükü ekler. Ek yük miktarı kullanılan eşitleme türü, gerçekleştirilen işlemleri türünü ve koleksiyon eşzamanlı olarak erişmeye çalıştığınız iş parçacığı sayısı gibi diğer faktörlere bağlıdır.  
@@ -46,7 +35,7 @@ ms.lasthandoff: 12/23/2017
 ## <a name="concurrentqueuet-vs-queuet"></a>ConcurrentQueue(T) vs. Queue(T)  
  Her öğe için işleme süresini olduğu çok küçük saf üretici-tüketici senaryolarda, (birkaç yönergeler), ardından <xref:System.Collections.Concurrent.ConcurrentQueue%601?displayProperty=nameWithType> uygun performans avantajı üzerinden sunabileceği bir <xref:System.Collections.Generic.Queue%601?displayProperty=nameWithType> bir dış kilit sahip. Bu senaryoda, <xref:System.Collections.Concurrent.ConcurrentQueue%601> tek bir adanmış iş parçacığı queuing ve tek bir adanmış iş parçacığı çıkarılması olduğunda en iyi şekilde çalışır. Bu kural, ardından zorlamaz varsa <xref:System.Collections.Generic.Queue%601> bile gerçekleştirebileceğiniz biraz daha hızlı <xref:System.Collections.Concurrent.ConcurrentQueue%601> birden çok çekirdeğe sahip bilgisayarlarda.  
   
- İşleme zamanı yaklaşık 500 FLOPS (kayan nokta işlemleri) veya daha sonra iki iş parçacığı kural uygulanmaz olduğunda <xref:System.Collections.Concurrent.ConcurrentQueue%601>, çok iyi ölçeklenebilirlik, daha sonra sahiptir. <xref:System.Collections.Generic.Queue%601>Bu senaryoda iyi ölçeklenmez.  
+ İşleme zamanı yaklaşık 500 FLOPS (kayan nokta işlemleri) veya daha sonra iki iş parçacığı kural uygulanmaz olduğunda <xref:System.Collections.Concurrent.ConcurrentQueue%601>, çok iyi ölçeklenebilirlik, daha sonra sahiptir. <xref:System.Collections.Generic.Queue%601> Bu senaryoda iyi ölçeklenmez.  
   
  İşlem süresi çok az olduğunda, üretici-tüketici senaryoları, karma bir <xref:System.Collections.Generic.Queue%601> bir dış olan kilit daha iyi ölçeklenir <xref:System.Collections.Concurrent.ConcurrentQueue%601> yapar. Ancak, işlem süresi olduğunda yaklaşık 500 FLOPS veya daha fazla sonra <xref:System.Collections.Concurrent.ConcurrentQueue%601> daha iyi ölçeklenir.  
   

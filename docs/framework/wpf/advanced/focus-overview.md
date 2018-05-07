@@ -1,13 +1,6 @@
 ---
-title: "Odağa Genel Bakış"
-ms.custom: 
+title: Odağa Genel Bakış
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-wpf
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -15,16 +8,11 @@ helpviewer_keywords:
 - applications [WPF], focus
 - focus in applications [WPF]
 ms.assetid: 0230c4eb-0c8a-462b-ac4b-ae3e511659f4
-caps.latest.revision: "19"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: d35b65f88452085e601569b9dcfc62a541a1655f
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 620839a0060469604d0affa6637c3cafac0f62c2
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="focus-overview"></a>Odağa Genel Bakış
 İçinde [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] odakla ilgili iki ana kavram vardır: klavye odağı ve mantıksal odak.  Klavye odağı klavye girişi alan öğesiyle ve mantıksal odak odaklanmış bir odak kapsamında öğesine başvuruyor.  Bu kavramlar bu genel bakış içindeki ayrıntısı ele alınmıştır.  Bu kavramlar farkı anlama odak burada alınabilir birden çok bölgeye sahip karmaşık uygulamalar oluşturmak için önemlidir.  
@@ -69,11 +57,11 @@ ms.lasthandoff: 12/22/2017
  [!code-csharp[FocusSnippets#FocusSetIsFocusScope](../../../../samples/snippets/csharp/VS_Snippets_Wpf/FocusSnippets/CSharp/Window1.xaml.cs#focussetisfocusscope)]
  [!code-vb[FocusSnippets#FocusSetIsFocusScope](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/FocusSnippets/visualbasic/window1.xaml.vb#focussetisfocusscope)]  
   
- <xref:System.Windows.Input.FocusManager.GetFocusScope%2A>Belirtilen öğenin odak kapsamını döndürür.  
+ <xref:System.Windows.Input.FocusManager.GetFocusScope%2A> Belirtilen öğenin odak kapsamını döndürür.  
   
  Sınıfları [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] varsayılan olarak odak kapsamı olan olan <xref:System.Windows.Window>, <xref:System.Windows.Controls.MenuItem>, <xref:System.Windows.Controls.ToolBar>, ve <xref:System.Windows.Controls.ContextMenu>.  
   
- <xref:System.Windows.Input.FocusManager.GetFocusedElement%2A>Belirtilen odak kapsamındaki odaklanan öğeyi alır.  <xref:System.Windows.Input.FocusManager.SetFocusedElement%2A>Belirtilen odak kapsamındaki odaklanan öğeyi ayarlar.  <xref:System.Windows.Input.FocusManager.SetFocusedElement%2A>genellikle ilk odaklanan öğeyi ayarlamak için kullanılır.  
+ <xref:System.Windows.Input.FocusManager.GetFocusedElement%2A> Belirtilen odak kapsamındaki odaklanan öğeyi alır.  <xref:System.Windows.Input.FocusManager.SetFocusedElement%2A> Belirtilen odak kapsamındaki odaklanan öğeyi ayarlar.  <xref:System.Windows.Input.FocusManager.SetFocusedElement%2A> genellikle ilk odaklanan öğeyi ayarlamak için kullanılır.  
   
  Aşağıdaki örnek, bir odak kapsamında odaklanan öğeyi ayarlar ve odak kapsamından odaklanılan öğeyi alır.  
   
@@ -97,20 +85,20 @@ ms.lasthandoff: 12/22/2017
 ## <a name="navigating-focus-programmatically"></a>Odak gezinme  
  Ek [!INCLUDE[TLA#tla_api](../../../../includes/tlasharptla-api-md.md)] çalışmak için odak olan <xref:System.Windows.UIElement.MoveFocus%2A> ve <xref:System.Windows.UIElement.PredictFocus%2A>.  
   
- <xref:System.Windows.FrameworkElement.MoveFocus%2A>uygulamadaki sonraki öğeye odak değiştirir.  A <xref:System.Windows.Input.TraversalRequest> yönünü belirtmek için kullanılır.   <xref:System.Windows.Input.FocusNavigationDirection> Geçirilen <xref:System.Windows.UIElement.MoveFocus%2A> farklı yönleri odak değiştirilebileceği gibi belirtir <xref:System.Windows.Input.FocusNavigationDirection.First>, <xref:System.Windows.Input.FocusNavigationDirection.Last>, <xref:System.Windows.Input.FocusNavigationDirection.Up> ve <xref:System.Windows.Input.FocusNavigationDirection.Down>.  
+ <xref:System.Windows.FrameworkElement.MoveFocus%2A> uygulamadaki sonraki öğeye odak değiştirir.  A <xref:System.Windows.Input.TraversalRequest> yönünü belirtmek için kullanılır.   <xref:System.Windows.Input.FocusNavigationDirection> Geçirilen <xref:System.Windows.UIElement.MoveFocus%2A> farklı yönleri odak değiştirilebileceği gibi belirtir <xref:System.Windows.Input.FocusNavigationDirection.First>, <xref:System.Windows.Input.FocusNavigationDirection.Last>, <xref:System.Windows.Input.FocusNavigationDirection.Up> ve <xref:System.Windows.Input.FocusNavigationDirection.Down>.  
   
  Aşağıdaki örnek kullanır <xref:System.Windows.FrameworkElement.MoveFocus%2A> odaklanılan öğeyi değiştirmek için.  
   
  [!code-csharp[focussample#FocusSampleMoveFocus](../../../../samples/snippets/csharp/VS_Snippets_Wpf/FocusSample/CSharp/Window1.xaml.cs#focussamplemovefocus)]
  [!code-vb[focussample#FocusSampleMoveFocus](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/FocusSample/visualbasic/window1.xaml.vb#focussamplemovefocus)]  
   
- <xref:System.Windows.FrameworkElement.PredictFocus%2A>Odak değiştirilmesi gerekiyorsa, odak alacak nesneyi döndürür.  Şu anda yalnızca <xref:System.Windows.Input.FocusNavigationDirection.Up>, <xref:System.Windows.Input.FocusNavigationDirection.Down>, <xref:System.Windows.Input.FocusNavigationDirection.Left>, ve <xref:System.Windows.Input.FocusNavigationDirection.Right> tarafından desteklenen <xref:System.Windows.FrameworkElement.PredictFocus%2A>.  
+ <xref:System.Windows.FrameworkElement.PredictFocus%2A> Odak değiştirilmesi gerekiyorsa, odak alacak nesneyi döndürür.  Şu anda yalnızca <xref:System.Windows.Input.FocusNavigationDirection.Up>, <xref:System.Windows.Input.FocusNavigationDirection.Down>, <xref:System.Windows.Input.FocusNavigationDirection.Left>, ve <xref:System.Windows.Input.FocusNavigationDirection.Right> tarafından desteklenen <xref:System.Windows.FrameworkElement.PredictFocus%2A>.  
   
 <a name="Focus_Events"></a>   
 ## <a name="focus-events"></a>Odak olayları  
  Klavye odağı ile ilgili olaylar <xref:System.Windows.Input.Keyboard.PreviewGotKeyboardFocus>, <xref:System.Windows.Input.Keyboard.GotKeyboardFocus> ve <xref:System.Windows.Input.Keyboard.PreviewLostKeyboardFocus>, <xref:System.Windows.Input.Keyboard.LostKeyboardFocus>.  Ekli olaylar tanımlanır olayları <xref:System.Windows.Input.Keyboard> sınıfı, ancak temel öğe sınıfları üzerindeki eşdeğer yönlendirilmiş olaylar daha kolay erişilebilir.  Olaylar hakkında daha fazla bilgi için bkz: [yönlendirilmiş olaylara genel bakış](../../../../docs/framework/wpf/advanced/routed-events-overview.md).  
   
- <xref:System.Windows.Input.Keyboard.GotKeyboardFocus>öğe klavye odağını aldığında oluşur.  <xref:System.Windows.Input.Keyboard.LostKeyboardFocus>öğe klavye odağı kaybettiğinde oluşur.  Varsa <xref:System.Windows.Input.Keyboard.PreviewGotKeyboardFocus> olay veya <xref:System.Windows.Input.Keyboard.PreviewLostKeyboardFocusEvent> olayı işlenir ve <xref:System.Windows.RoutedEventArgs.Handled%2A> ayarlanır `true`, odak değişmez.  
+ <xref:System.Windows.Input.Keyboard.GotKeyboardFocus> öğe klavye odağını aldığında oluşur.  <xref:System.Windows.Input.Keyboard.LostKeyboardFocus> öğe klavye odağı kaybettiğinde oluşur.  Varsa <xref:System.Windows.Input.Keyboard.PreviewGotKeyboardFocus> olay veya <xref:System.Windows.Input.Keyboard.PreviewLostKeyboardFocusEvent> olayı işlenir ve <xref:System.Windows.RoutedEventArgs.Handled%2A> ayarlanır `true`, odak değişmez.  
   
  Aşağıdaki örnek iliştirir <xref:System.Windows.UIElement.GotKeyboardFocus> ve <xref:System.Windows.UIElement.LostKeyboardFocus> olay işleyicilerine bir <xref:System.Windows.Controls.TextBox>.  
   
@@ -126,7 +114,7 @@ ms.lasthandoff: 12/22/2017
  [!code-csharp[keyboardsample#KeyboardSampleLostFocus](../../../../samples/snippets/csharp/VS_Snippets_Wpf/KeyboardSample/CSharp/Window1.xaml.cs#keyboardsamplelostfocus)]
  [!code-vb[keyboardsample#KeyboardSampleLostFocus](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/KeyboardSample/visualbasic/window1.xaml.vb#keyboardsamplelostfocus)]  
   
- Mantıksal odak ile ilgili olaylar <xref:System.Windows.UIElement.GotFocus> ve <xref:System.Windows.UIElement.LostFocus>.  Bu olaylar üzerinde tanımlanan <xref:System.Windows.Input.FocusManager> ekli olaylar olarak ancak <xref:System.Windows.Input.FocusManager> CLR olay sarmalayıcılarını göstermez.  <xref:System.Windows.UIElement>ve <xref:System.Windows.ContentElement> bu olayları daha rahat gösterir.  
+ Mantıksal odak ile ilgili olaylar <xref:System.Windows.UIElement.GotFocus> ve <xref:System.Windows.UIElement.LostFocus>.  Bu olaylar üzerinde tanımlanan <xref:System.Windows.Input.FocusManager> ekli olaylar olarak ancak <xref:System.Windows.Input.FocusManager> CLR olay sarmalayıcılarını göstermez.  <xref:System.Windows.UIElement> ve <xref:System.Windows.ContentElement> bu olayları daha rahat gösterir.  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
  <xref:System.Windows.Input.FocusManager>  

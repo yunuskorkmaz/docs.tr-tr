@@ -1,13 +1,6 @@
 ---
-title: "Grafik İşleme Katmanları"
-ms.custom: 
+title: Grafik İşleme Katmanları
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-wpf
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - graphics [WPF], performance
 - rendering graphics [WPF]
@@ -15,16 +8,11 @@ helpviewer_keywords:
 - graphics rendering tiers [WPF]
 - graphics [WPF], rendering tiers
 ms.assetid: 08dd1606-02a2-4122-9351-c0afd2ec3a70
-caps.latest.revision: "44"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 457b7e76b16e42c71d1e2d1986d58b2708396e22
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 4f9de7736851027c9f6b851984953e37b96d456a
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="graphics-rendering-tiers"></a>Grafik İşleme Katmanları
 Bir işleme katmanı grafik donanım yeteneğini ve çalışan bir aygıt için performans düzeyini tanımlayan bir [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] uygulama.  
@@ -69,7 +57,7 @@ Bir işleme katmanı grafik donanım yeteneğini ve çalışan bir aygıt için 
   
 |Özellik|Katman 1|Katman 2|  
 |-------------|------------|------------|  
-|[!INCLUDE[TLA2#tla_dx](../../../../includes/tla2sharptla-dx-md.md)]Sürüm|9.0 eşit veya daha büyük olmalıdır.|9.0 eşit veya daha büyük olmalıdır.|  
+|[!INCLUDE[TLA2#tla_dx](../../../../includes/tla2sharptla-dx-md.md)] Sürüm|9.0 eşit veya daha büyük olmalıdır.|9.0 eşit veya daha büyük olmalıdır.|  
 |Video RAM|60 MB eşit veya daha büyük olmalıdır.|120 MB eşit veya daha büyük olmalıdır.|  
 |Piksel gölgelendirici|Sürüm düzeyi 2.0 eşit veya daha büyük olmalıdır.|Sürüm düzeyi 2.0 eşit veya daha büyük olmalıdır.|  
 |Köşe gölgelendirici|Gereksinim yok.|Sürüm düzeyi 2.0 eşit veya daha büyük olmalıdır.|  
@@ -81,10 +69,10 @@ Bir işleme katmanı grafik donanım yeteneğini ve çalışan bir aygıt için 
 |-------------|-----------|  
 |2B işleme|En 2B işleme desteklenir.|  
 |3B tarama|Çoğu 3B tarama desteklenir.|  
-|3B Eşyönsüz filtreleme|[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]3B içerik işlenirken Eşyönsüz filtreleme kullanmayı dener. Eşyönsüz filtreleme uzakta ve steeply göre kamera açılı yüzeyleri doku görüntü kalitesini arttırma için ifade eder.|  
-|3B MIP eşleme|[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]3B içerik işlenirken MIP eşleme kullanmayı dener. MIP eşleme daha küçük bir alan of görünümünde bir doku kapladığı zaman doku işleme kalitesini iyileştirir bir <xref:System.Windows.Controls.Viewport3D>.|  
+|3B Eşyönsüz filtreleme|[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 3B içerik işlenirken Eşyönsüz filtreleme kullanmayı dener. Eşyönsüz filtreleme uzakta ve steeply göre kamera açılı yüzeyleri doku görüntü kalitesini arttırma için ifade eder.|  
+|3B MIP eşleme|[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 3B içerik işlenirken MIP eşleme kullanmayı dener. MIP eşleme daha küçük bir alan of görünümünde bir doku kapladığı zaman doku işleme kalitesini iyileştirir bir <xref:System.Windows.Controls.Viewport3D>.|  
 |Radyal gradyanlar|Destekleniyorsa kullanmaktan kaçının <xref:System.Windows.Media.RadialGradientBrush> büyük nesneler üzerinde.|  
-|3B aydınlatma hesaplamaları|[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]ışık yoğunluğunu her köşe için Kafes uygulanan her malzemeler için adresindeki hesaplanmalıdır anlamına gelir köşe başına aydınlatma gerçekleştirir.|  
+|3B aydınlatma hesaplamaları|[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] ışık yoğunluğunu her köşe için Kafes uygulanan her malzemeler için adresindeki hesaplanmalıdır anlamına gelir köşe başına aydınlatma gerçekleştirir.|  
 |Metin oluşturma|Alt piksel yazı tipi işleme grafik donanımındaki kullanılabilir piksel gölgelendiriciler kullanır.|  
   
  Aşağıdaki özellikler ve yetenekler donanım yalnızca işleme katmanı için 2 hızlandırılmış şunlardır:  
@@ -98,8 +86,8 @@ Bir işleme katmanı grafik donanım yeteneğini ve çalışan bir aygıt için 
 |Özellik|Notlar|  
 |-------------|-----------|  
 |Yazdırılan içerik|Yazdırılan tüm içerik kullanılarak oluşturulması [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] yazılım ardışık düzeni.|  
-|Kullanan taranmış içerik<xref:System.Windows.Media.Imaging.RenderTargetBitmap>|Kullanarak işlenen herhangi bir içerik <xref:System.Windows.Media.Imaging.RenderTargetBitmap.Render%2A> yöntemi <xref:System.Windows.Media.Imaging.RenderTargetBitmap>.|  
-|Kullanan döşeli içerik<xref:System.Windows.Media.TileBrush>|Herhangi bir içerik döşenir <xref:System.Windows.Media.TileBrush.TileMode%2A> özelliği <xref:System.Windows.Media.TileBrush> ayarlanır <xref:System.Windows.Media.TileMode.Tile>.|  
+|Kullanan taranmış içerik <xref:System.Windows.Media.Imaging.RenderTargetBitmap>|Kullanarak işlenen herhangi bir içerik <xref:System.Windows.Media.Imaging.RenderTargetBitmap.Render%2A> yöntemi <xref:System.Windows.Media.Imaging.RenderTargetBitmap>.|  
+|Kullanan döşeli içerik <xref:System.Windows.Media.TileBrush>|Herhangi bir içerik döşenir <xref:System.Windows.Media.TileBrush.TileMode%2A> özelliği <xref:System.Windows.Media.TileBrush> ayarlanır <xref:System.Windows.Media.TileMode.Tile>.|  
 |Grafik donanım yüksek doku boyutunu aşan yüzeyleri|Grafik donanımlarının çoğu için 2048 x 2048 veya 4096 x 4096 piksel boyutundan büyük yüzeyleri var.|  
 |Video RAM gerektiren grafik donanım belleği aşıyor herhangi bir işlem|Uygulama video RAM kullanımı dahil Perforator aracını kullanarak izleyebilirsiniz [WPF Performance Suite](http://msdn.microsoft.com/library/67cafaad-57ad-4ecb-9c08-57fac144393e) Windows SDK'sındaki.|  
 |Katmanlı pencereler|Katmanlı windows izin [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] dikdörtgen olmayan penceresinde ekran içeriğini işlemek için uygulamalar. Windows görüntü sürücüsü modeli (WDDM) gibi destekleyen işletim sistemleri üzerinde [!INCLUDE[TLA2#tla_winvista](../../../../includes/tla2sharptla-winvista-md.md)] ve [!INCLUDE[win7](../../../../includes/win7-md.md)]katmanlı windows donanım hızlandırılmış şunlardır. Diğer sistemlerde gibi [!INCLUDE[winxp](../../../../includes/winxp-md.md)]katmanlı windows donanım hızlandırmasını yazılım tarafından işlenir.<br /><br /> Katmanlı pencereleri etkinleştirebilirsiniz [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] aşağıdaki ayarlayarak <xref:System.Windows.Window> özellikleri:<br /><br /> -   <xref:System.Windows.Window.WindowStyle%2A> = <xref:System.Windows.WindowStyle.None><br />-   <xref:System.Windows.Window.AllowsTransparency%2A> = `true`<br />-   <xref:System.Windows.Controls.Control.Background%2A> = <xref:System.Windows.Media.Brushes.Transparent%2A>|  
@@ -109,7 +97,7 @@ Bir işleme katmanı grafik donanım yeteneğini ve çalışan bir aygıt için 
  Aşağıdaki kaynaklar performans özellikleri analiz etmenize yardımcı olabilir, [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] uygulama.  
   
 ### <a name="graphics-rendering-registry-settings"></a>Grafik İşleme Kayıt Defteri Ayarları  
- [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]dört kayıt defteri ayarlarını denetlemek için sağlar [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] işleme:  
+ [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] dört kayıt defteri ayarlarını denetlemek için sağlar [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] işleme:  
   
 |Ayar|Açıklama|  
 |-------------|-----------------|  
@@ -121,7 +109,7 @@ Bir işleme katmanı grafik donanım yeteneğini ve çalışan bir aygıt için 
  Bu ayarların nasıl başvurulacağını bildiği bir dış yapılandırma yardımcı programı tarafından erişilebilen [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] kayıt defteri ayarları. Bu ayarları da oluşturulabilir veya değerleri kullanarak doğrudan erişerek [!INCLUDE[TLA#tla_mswin](../../../../includes/tlasharptla-mswin-md.md)] Kayıt Defteri Düzenleyicisi'ni. Daha fazla bilgi için bkz: [grafik işleme kayıt defteri ayarları](../../../../docs/framework/wpf/graphics-multimedia/graphics-rendering-registry-settings.md).  
   
 ### <a name="wpf-performance-profiling-tools"></a>WPF Performans Profil Araçları  
- [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]bir profil uygulamanızın çalışma zamanı davranışını çözümlemek ve türde uygulayabileceğiniz performans iyileştirmelerini belirlemenize olanak sağlayan araçları performans sağlar. Profil içinde yer alan araçları performans aşağıdaki tabloda listelenmektedir [!INCLUDE[TLA2#tla_lhsdk](../../../../includes/tla2sharptla-lhsdk-md.md)] aracı, WPF Performans paketi:  
+ [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] bir profil uygulamanızın çalışma zamanı davranışını çözümlemek ve türde uygulayabileceğiniz performans iyileştirmelerini belirlemenize olanak sağlayan araçları performans sağlar. Profil içinde yer alan araçları performans aşağıdaki tabloda listelenmektedir [!INCLUDE[TLA2#tla_lhsdk](../../../../includes/tla2sharptla-lhsdk-md.md)] aracı, WPF Performans paketi:  
   
 |Aracı|Açıklama|  
 |----------|-----------------|  

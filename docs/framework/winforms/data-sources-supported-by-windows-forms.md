@@ -1,13 +1,6 @@
 ---
-title: "Windows Forms Tarafından Desteklenen Veri Kaynakları"
-ms.custom: 
+title: Windows Forms Tarafından Desteklenen Veri Kaynakları
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-winforms
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - collections [Windows Forms], binding to
 - OLE DB providers [Windows Forms], Windows Forms
@@ -22,16 +15,11 @@ helpviewer_keywords:
 - DataSet class [Windows Forms], binding and Windows Forms
 - data [Windows Forms], data providers
 ms.assetid: 3d2c43f6-462b-4d35-9c86-13e9afe012e1
-caps.latest.revision: "15"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 5a0a4c2bca136377b9c6812008189dae009e195f
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.openlocfilehash: 4705c8a7153e94fa1cd23cf6c2f622d5cd66ec77
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="data-sources-supported-by-windows-forms"></a>Windows Forms Tarafından Desteklenen Veri Kaynakları
 Geleneksel olarak, veri bağlama uygulamalardan veritabanlarında depolanan verileri yararlanmak için kullanılmış. Belirli en düşük gereksinimleri karşıladığınızdan sürece Windows Forms veri bağlama ile veritabanları ve bunun yanı sıra diziler ve koleksiyonlar, gibi diğer yapıları verilerde verilere erişebilir.  
@@ -50,13 +38,13 @@ Geleneksel olarak, veri bağlama uygulamalardan veritabanlarında depolanan veri
  dizi ya da koleksiyonu  
  Bir veri kaynağı olarak görev yapması için bir liste uygulamalıdır <xref:System.Collections.IList> arabirimi; bir örnek örneği olan bir dizi olacaktır <xref:System.Array> sınıfı. Dizileri hakkında daha fazla bilgi için bkz: [nasıl yapılır: bir dizi nesnelerin (Visual Basic) oluşturma](http://msdn.microsoft.com/library/6b64e069-0387-400c-9081-3bdc581020c3).  
   
- Genel olarak, kullanmanız gereken <xref:System.ComponentModel.BindingList%601> veri bağlama için nesneleri listesi oluşturduğunuzda. <xref:System.ComponentModel.BindingList%601>Genel bir sürümü <xref:System.ComponentModel.IBindingList> arabirimi. <xref:System.ComponentModel.IBindingList> Arabirimi genişletiyor <xref:System.Collections.IList> özellikleri, yöntemleri ve iki yönlü veri bağlaması için gerekli olayları ekleyerek arabirimi.  
+ Genel olarak, kullanmanız gereken <xref:System.ComponentModel.BindingList%601> veri bağlama için nesneleri listesi oluşturduğunuzda. <xref:System.ComponentModel.BindingList%601> Genel bir sürümü <xref:System.ComponentModel.IBindingList> arabirimi. <xref:System.ComponentModel.IBindingList> Arabirimi genişletiyor <xref:System.Collections.IList> özellikleri, yöntemleri ve iki yönlü veri bağlaması için gerekli olayları ekleyerek arabirimi.  
   
  <xref:System.Collections.IEnumerable>  
  Windows Forms denetimleri yalnızca destekleyen veri kaynakları için bağlanabilir <xref:System.Collections.IEnumerable> aracılığıyla bağlıysa arabirim bir <xref:System.Windows.Forms.BindingSource> bileşeni.  
   
- [!INCLUDE[vstecado](../../../includes/vstecado-md.md)]veri nesneleri  
- [!INCLUDE[vstecado](../../../includes/vstecado-md.md)]bağlama için uygun veri yapılarını sayısını sağlar. Her kendi açıdan çok yönlülük ve karmaşıklık düzeyi değişir.  
+ [!INCLUDE[vstecado](../../../includes/vstecado-md.md)] veri nesneleri  
+ [!INCLUDE[vstecado](../../../includes/vstecado-md.md)] bağlama için uygun veri yapılarını sayısını sağlar. Her kendi açıdan çok yönlülük ve karmaşıklık düzeyi değişir.  
   
 -   <xref:System.Data.DataColumn>. A <xref:System.Data.DataColumn> temel yapı bloğu olduğu bir <xref:System.Data.DataTable>, içeren bir tablo sütun sayısı oluşturan. Her <xref:System.Data.DataColumn> sahip bir <xref:System.Data.DataColumn.DataType%2A> özelliği veri sütunu ayrı tutma (örneğin, otomobiller açıklayan bir tablodaki bir otomobil olun) türünü belirler. Basit bir denetim bağ (gibi bir <xref:System.Windows.Forms.TextBox> denetimin <xref:System.Windows.Forms.Control.Text%2A> özelliği) bir veri tablosunda bulunan bir sütuna.  
   

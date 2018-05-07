@@ -1,31 +1,17 @@
 ---
 title: HTTP Kimlik Doğrulamasını Anlama
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 ms.assetid: 9376309a-39e3-4819-b47b-a73982b57620
-caps.latest.revision: 11
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 0fe72ad1aab35a8cb384248e90500cf5410c0774
-ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
+ms.openlocfilehash: fa9af58f08fc54126bd055216d377a4e2b24c84c
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/28/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="understanding-http-authentication"></a>HTTP Kimlik Doğrulamasını Anlama
 Kimlik doğrulaması bir istemci bir kaynağa erişmek uygun olup olmadığını belirleme işlemidir. Güvenli bir kaynağa erişim anlaşmak için bir araç olarak kimlik doğrulaması HTTP protokolünü destekler.  
   
- İstemciden gelen ilk istek, herhangi bir kimlik doğrulama bilgi içermeyen bir anonim istek genellikle değildir. HTTP sunucu uygulamaları belirten bu kimlik doğrulama sırasında anonim istek gereklidir reddedebilirsiniz. Sunucu uygulaması desteklenen kimlik doğrulama şemasını belirtmek için WWW-kimlik doğrulama üstbilgileri gönderir. Bu belge çeşitli kimlik doğrulama şemasını için HTTP ve bunların desteği anlatılmaktadır [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)].  
+ İstemciden gelen ilk istek, herhangi bir kimlik doğrulama bilgi içermeyen bir anonim istek genellikle değildir. HTTP sunucu uygulamaları belirten bu kimlik doğrulama sırasında anonim istek gereklidir reddedebilirsiniz. Sunucu uygulaması desteklenen kimlik doğrulama şemasını belirtmek için WWW-kimlik doğrulama üstbilgileri gönderir. Bu belge, HTTP için birden fazla kimlik doğrulama şemasını açıklar ve Windows Communication Foundation (WCF) destek açıklanır.  
   
 ## <a name="http-authentication-schemes"></a>HTTP kimlik doğrulaması düzeni  
  Sunucu aralarından seçim yapabileceğiniz istemci için birden çok kimlik doğrulama düzeni belirtebilirsiniz. Aşağıdaki tabloda Windows uygulamalarında yaygın olarak bulunan kimlik doğrulama şemasını bazıları açıklanmaktadır.  
@@ -37,7 +23,7 @@ Kimlik doğrulaması bir istemci bir kaynağa erişmek uygun olup olmadığını
 |Özet|Özet kimlik doğrulaması temel kimlik doğrulaması değiştirmeye yönelik bir sınama yanıtı düzenidir. Sunucu adı verilen rastgele veri dizesi gönderir bir *nonce* istemciye bir karşılıklı olarak. İstemci kullanıcı adı, parola ve ek bilgiler arasında nonce içeren bir karma ile yanıt verir. Bu exchange tanıtır karmaşıklığı ve veri karma çalabilir ve bu kimlik doğrulama düzeni ile kullanıcının kimlik bilgilerini yeniden daha zor hale.<br /><br /> Özet kimlik doğrulaması Windows etki alanı hesapları kullanılmasını gerektirir. Özet *bölge* Windows etki alanı adıdır. Bu nedenle, Windows etki alanlarında, Windows XP Home Edition gibi Özet kimlik doğrulaması ile desteklemeyen bir işletim sistemi çalıştıran bir sunucuya kullanamazsınız. Buna karşılık, istemci, Windows etki alanlarında desteklemeyen bir işletim sisteminde çalıştığında, bir etki alanı hesabı açıkça kimlik doğrulaması sırasında belirtilmelidir.|  
 |NTLM|NT LAN Yöneticisi (NTLM) kimlik doğrulaması Özet kimlik doğrulaması securer çeşididir bir sınama yanıtı düzenidir. NTLM kodlanmamış kullanıcı adı ve parola yerine Çekişme verileri dönüştürmek için Windows kimlik bilgilerini kullanır. NTLM kimlik doğrulaması istemci ve sunucu arasında birden çok alışverişleri gerektirir. Sunucu ve müdahalede bulunan proxy'ler başarıyla kimlik doğrulamasını tamamlamak için kalıcı bağlantılar desteklemesi gerekir.|  
 |Anlaşma|Anlaşma kimlik doğrulaması kullanılabilirlik bağlı olarak NTLM kimlik doğrulaması ve Kerberos protokolü arasında otomatik olarak seçer. Varsa Kerberos protokolü kullanılır; Aksi takdirde, NTLM denenir. Kerberos kimlik doğrulaması, NTLM üzerinde önemli ölçüde iyileştirir. Kerberos kimlik doğrulaması hem NTLM daha hızlıdır ve karşılıklı kimlik doğrulaması kullanımını ve uzak makineleri kimlik bilgilerinin Devredilmesine izin verir.|  
-|Windows Live ID|Temel alınan Windows HTTP hizmeti, federe protokollerini kullanarak kimlik doğrulaması içerir. Ancak, standart HTTP taşımaları [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] Microsoft Windows Live ID gibi federe kimlik doğrulama şemasını kullanımını desteklemez Bu özellik için destek kullanımı ile ileti güvenliği şu anda kullanılamıyor. Daha fazla bilgi için bkz: [Federasyon ve verilen belirteçleri](../../../../docs/framework/wcf/feature-details/federation-and-issued-tokens.md).|  
+|Windows Live ID|Temel alınan Windows HTTP hizmeti, federe protokollerini kullanarak kimlik doğrulaması içerir. Ancak, standart HTTP taşımaları WCF'de Microsoft Windows Live ID gibi federe kimlik doğrulama şemasını kullanımını desteklemez Bu özellik için destek kullanımı ile ileti güvenliği şu anda kullanılamıyor. Daha fazla bilgi için bkz: [Federasyon ve verilen belirteçleri](../../../../docs/framework/wcf/feature-details/federation-and-issued-tokens.md).|  
   
 ## <a name="choosing-an-authentication-scheme"></a>Bir kimlik doğrulama düzeni seçme  
  Bir HTTP sunucusu için olası kimlik doğrulama şemasını seçerken, dikkate alınması gereken birkaç öğeler aşağıdakileri içerir:  

@@ -1,26 +1,17 @@
 ---
-title: "Nasıl yapılır: Bir Yapıyı Bildirme (Visual Basic)"
-ms.custom: 
+title: 'Nasıl yapılır: Bir Yapıyı Bildirme (Visual Basic)'
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
-ms.topic: article
 helpviewer_keywords:
 - declarations [Visual Basic], structures
 - structure statements [Visual Basic]
 - statements [Visual Basic], structure
 - structures [Visual Basic], declaring
 ms.assetid: d5e98381-eb81-47d4-af83-48cc534a2572
-caps.latest.revision: "15"
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: 8203327e189d095c9f7ceeb3b68ea24efe9ba882
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 6128addd60609bfc88a1409648fb320bc7089974
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-declare-a-structure-visual-basic"></a>Nasıl yapılır: Bir Yapıyı Bildirme (Visual Basic)
 Yapı bildirimleri ile başlayan [Structure deyimi](../../../../visual-basic/language-reference/statements/structure-statement.md), ve onunla bitiş `End` `Structure` deyimi. Bu iki ifade arasında en az bir bildirmelisiniz *öğesi*. Öğeleri herhangi bir veri türü olabilir, ancak en az bir paylaşılmayan bir değişken ya da paylaşılmayan, de olay olması gerekir.  
@@ -64,13 +55,13 @@ Yapı bildirimleri ile başlayan [Structure deyimi](../../../../visual-basic/lan
      Değişkenlerinin yanı sıra `Sub` yordamları ve olaylar, sabitleri, ayrıca tanımlayabilirsiniz `Function` yordamları ve yapı özellikleri. En çok bir özellik olarak belirleyebilirsiniz *varsayılan özellik*, sağlanan en az bir değişken alır. Bir olay işleyebilir bir [paylaşılan](../../../../visual-basic/language-reference/modifiers/shared.md) `Sub` yordamı. Daha fazla bilgi için bkz: [nasıl yapılır: bildirme ve Visual Basic'te bir varsayılan özellik çağrı](../../../../visual-basic/programming-guide/language-features/procedures/how-to-declare-and-call-a-default-property.md).  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [Veri türleri](../../../../visual-basic/programming-guide/language-features/data-types/index.md)  
- [Başlangıç veri türleri](../../../../visual-basic/programming-guide/language-features/data-types/elementary-data-types.md)  
- [Bileşik veri türleri](../../../../visual-basic/programming-guide/language-features/data-types/composite-data-types.md)  
- [Değer türleri ve başvuru türleri](../../../../visual-basic/programming-guide/language-features/data-types/value-types-and-reference-types.md)  
- [Yapıları](../../../../visual-basic/programming-guide/language-features/data-types/structures.md)  
- [Veri türleri sorunlarını giderme](../../../../visual-basic/programming-guide/language-features/data-types/troubleshooting-data-types.md)  
- [Yapı değişkenleri](../../../../visual-basic/programming-guide/language-features/data-types/structure-variables.md)  
- [Yapılar ve diğer programlama öğeleri](../../../../visual-basic/programming-guide/language-features/data-types/structures-and-other-programming-elements.md)  
- [Yapılar ve sınıflar](../../../../visual-basic/programming-guide/language-features/data-types/structures-and-classes.md)  
- [Kullanıcı tanımlı veri türü](../../../../visual-basic/language-reference/data-types/user-defined-data-type.md)
+ [Veri Türleri](../../../../visual-basic/programming-guide/language-features/data-types/index.md)  
+ [Başlangıç Veri Türleri](../../../../visual-basic/programming-guide/language-features/data-types/elementary-data-types.md)  
+ [Bileşik Veri Türleri](../../../../visual-basic/programming-guide/language-features/data-types/composite-data-types.md)  
+ [Değer Türleri ve Başvuru Türleri](../../../../visual-basic/programming-guide/language-features/data-types/value-types-and-reference-types.md)  
+ [Yapılar](../../../../visual-basic/programming-guide/language-features/data-types/structures.md)  
+ [Veri Türü Sorunlarını Giderme](../../../../visual-basic/programming-guide/language-features/data-types/troubleshooting-data-types.md)  
+ [Yapı Değişkenleri](../../../../visual-basic/programming-guide/language-features/data-types/structure-variables.md)  
+ [Yapılar ve Diğer Programlama Öğeleri](../../../../visual-basic/programming-guide/language-features/data-types/structures-and-other-programming-elements.md)  
+ [Yapılar ve Sınıflar](../../../../visual-basic/programming-guide/language-features/data-types/structures-and-classes.md)  
+ [User-Defined Veri Türü](../../../../visual-basic/language-reference/data-types/user-defined-data-type.md)

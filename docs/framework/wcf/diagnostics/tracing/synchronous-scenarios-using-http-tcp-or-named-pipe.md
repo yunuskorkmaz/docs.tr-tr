@@ -1,24 +1,12 @@
 ---
-title: "HTTP, TCP veya Named-Pipe Kullanan Eşzamanlı Senaryolar"
-ms.custom: 
+title: HTTP, TCP veya Named-Pipe Kullanan Eşzamanlı Senaryolar
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 7e90af1b-f8f6-41b9-a63a-8490ada502b1
-caps.latest.revision: "9"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 428e8852c9b1706e88b1688b4a1f2e36c167fe28
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
-ms.translationtype: MT
+ms.openlocfilehash: 03f4fdcaa5fc59efe7e92d2cb900212ed5ebae77
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="synchronous-scenarios-using-http-tcp-or-named-pipe"></a>HTTP, TCP veya Named-Pipe Kullanan Eşzamanlı Senaryolar
 Bu konuda veya adlandırılmış etkinlikleri ve aktarımlar farklı eşzamanlı istek/yanıt senaryoları için HTTP, TCP kullanan bir tek iş parçacıklı istemci ile açıklanır. Bkz: [zaman uyumsuz HTTP, TCP veya Named-Pipe kullanan senaryolar](../../../../../docs/framework/wcf/diagnostics/tracing/asynchronous-scenarios-using-http-tcp-or-named-pipe.md) çok iş parçacıklı istekleri hakkında daha fazla bilgi için.  
@@ -56,9 +44,9 @@ Bu konuda veya adlandırılmış etkinlikleri ve aktarımlar farklı eşzamanlı
 #### <a name="closing-a-service-host"></a>Hizmet ana bilgisayarını kapatma  
  ServiceHost'ın Kapat etkinlik (Z) ortam etkinliğinden oluşturulur.  
   
- ![HTTP &#47;kullanan eşzamanlı senaryolar; TCP &#47; Adlandırılmış Kanallar](../../../../../docs/framework/wcf/diagnostics/tracing/media/sync.gif "eşitleme")  
+ ![HTTP kullanan eşzamanlı senaryolar&#47;TCP&#47; adlandırılmış kanallar](../../../../../docs/framework/wcf/diagnostics/tracing/media/sync.gif "eşitleme")  
   
- İçinde \<A: adı >, `A` önceki metin ve Tablo 3 etkinliği açıklayan bir kısayol simge. `Name`Etkinliğin kısaltılmış bir addır.  
+ İçinde \<A: adı >, `A` önceki metin ve Tablo 3 etkinliği açıklayan bir kısayol simge. `Name` Etkinliğin kısaltılmış bir addır.  
   
  Varsa `propagateActivity` = `true`, hem istemci hem de hizmet işlemi eylem sahip aynı etkinlik kimliği  
   

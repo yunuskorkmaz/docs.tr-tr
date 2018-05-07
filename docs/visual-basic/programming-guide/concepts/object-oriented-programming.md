@@ -1,21 +1,12 @@
 ---
-title: "Nesne odaklı programlama (Visual Basic)"
-ms.custom: 
+title: Nesne odaklı programlama (Visual Basic)
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
-ms.topic: article
 ms.assetid: 49794de4-64c3-473c-b8ed-fe98835df69c
-caps.latest.revision: "4"
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: 950f080949dce0fc1a2834825d2f7c945007fb7b
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.openlocfilehash: e8936eb9031ef68ea333835d8433e1ba1a45990f
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="object-oriented-programming-visual-basic"></a>Nesne odaklı programlama (Visual Basic)
 Visual Basic kapsülleme, devralma ve çok biçimlilik dahil nesne odaklı programlama için tam destek sağlar.  
@@ -34,13 +25,13 @@ Visual Basic kapsülleme, devralma ve çok biçimlilik dahil nesne odaklı progr
   
          [Özellikleri ve alanları](#properties-and-fields)  
   
-         [Yöntemleri](#methods)  
+         [Yöntemler](#methods)  
   
          [Oluşturucular](#constructors)  
   
          [Yıkıcılar](#destructors)  
   
-         [Olayları](#events)  
+         [Olaylar](#events)  
   
          [İç içe geçmiş sınıflar](#nested-classes)  
   
@@ -56,9 +47,9 @@ Visual Basic kapsülleme, devralma ve çok biçimlilik dahil nesne odaklı progr
   
     -   [Üyeleri geçersiz kılma](#overriding-members)  
   
--   [Arabirimleri](#interfaces)  
+-   [Arabirimler](#interfaces)  
   
--   [Genel türler](#generics)  
+-   [Genel Türler](#generics)  
   
 -   [Temsilciler](#delegates)  
   
@@ -83,9 +74,9 @@ End Structure
 
 Daha fazla bilgi için bkz.:
 
-- [Class deyimi](../../../visual-basic/language-reference/statements/class-statement.md)
+- [Class Deyimi](../../../visual-basic/language-reference/statements/class-statement.md)
 
-- [Structure deyimi](../../../visual-basic/language-reference/statements/structure-statement.md)
+- [Structure Deyimi](../../../visual-basic/language-reference/statements/structure-statement.md)
 
 ### <a name="class-members"></a>Sınıf üyeleri
 Her sınıf farklı olabilir *sınıfı üyeleri* sınıfı verileri, sınıf davranışını tanımlayan yöntemleri ve farklı sınıflar ve nesneler arasındaki iletişimi sağlamak olayları tanımlayan özelliği içerir.
@@ -135,13 +126,13 @@ End Class
 
 Daha fazla bilgi için bkz.:
   
--   [Property deyimi](../../../visual-basic/language-reference/statements/property-statement.md)  
+-   [Property Deyimi](../../../visual-basic/language-reference/statements/property-statement.md)  
   
--   [Get deyimi](../../../visual-basic/language-reference/statements/get-statement.md)  
+-   [Get Deyimi](../../../visual-basic/language-reference/statements/get-statement.md)  
   
--   [Set deyimi](../../../visual-basic/language-reference/statements/set-statement.md)  
+-   [Set Deyimi](../../../visual-basic/language-reference/statements/set-statement.md)  
   
--   [Salt okunur](../../../visual-basic/language-reference/modifiers/readonly.md)  
+-   [ReadOnly](../../../visual-basic/language-reference/modifiers/readonly.md)  
   
 -   [WriteOnly](../../../visual-basic/language-reference/modifiers/writeonly.md)  
   
@@ -178,13 +169,13 @@ End Sub
 
 Daha fazla bilgi için bkz.:
 
-- [Function deyimi](../../../visual-basic/language-reference/statements/function-statement.md)  
+- [Function Deyimi](../../../visual-basic/language-reference/statements/function-statement.md)  
 
-- [Sub deyimi](../../../visual-basic/language-reference/statements/sub-statement.md)  
+- [Sub Deyimi](../../../visual-basic/language-reference/statements/sub-statement.md)  
 
-- [Aşırı yüklemeler](../../../visual-basic/language-reference/modifiers/overloads.md)  
+- [Overloads](../../../visual-basic/language-reference/modifiers/overloads.md)  
 
-- [Genişletme yöntemleri](../../../visual-basic/programming-guide/language-features/procedures/extension-methods.md)  
+- [Genişletme Yöntemleri](../../../visual-basic/programming-guide/language-features/procedures/extension-methods.md)  
 
 #### <a name="constructors"></a>Oluşturucular  
 Oluşturucular belirli bir türde bir nesne oluşturulduğunda, otomatik olarak yürütülen sınıfı yöntemleridir. Oluşturucular genellikle yeni nesnenin veri üyeleri başlatır. Yalnızca bir sınıf oluşturulduğunda sonra bir oluşturucu çalıştırabilirsiniz. Ayrıca, Oluşturucusu kodda, başka bir kod sınıfında önce her zaman çalışır. Ancak, başka bir yöntem için olduğu gibi aynı şekilde, birden çok Oluşturucusu aşırı oluşturabilirsiniz.
@@ -241,10 +232,10 @@ Aşağıdaki erişim değiştiricileri kullanılabilir:
 
 |Visual Basic değiştiricisi|Tanım|
 |---------------------------|----------------|
-|[Ortak](../../../visual-basic/language-reference/modifiers/public.md)|Tür veya üye, başka bir kod aynı bütünleştirilmiş kodda ya da başvurduğu başka bir derleme tarafından erişilebilir.|
-|[Özel](../../../visual-basic/language-reference/modifiers/private.md)|Tür veya üye yalnızca aynı sınıfta kodu tarafından erişilebilir.|
-|[Korumalı](../../../visual-basic/language-reference/modifiers/protected.md)|Tür veya üye yalnızca kodu aynı sınıfın veya türetilmiş bir sınıf tarafından erişilebilir.|
-|[Arkadaş](../../../visual-basic/language-reference/modifiers/friend.md)|Tür veya üye, herhangi bir kod aynı bütünleştirilmiş kodda değiştirebilir, ancak başka bir derleme tarafından erişilebilir.|
+|[Public](../../../visual-basic/language-reference/modifiers/public.md)|Tür veya üye, başka bir kod aynı bütünleştirilmiş kodda ya da başvurduğu başka bir derleme tarafından erişilebilir.|
+|[Private](../../../visual-basic/language-reference/modifiers/private.md)|Tür veya üye yalnızca aynı sınıfta kodu tarafından erişilebilir.|
+|[Protected](../../../visual-basic/language-reference/modifiers/protected.md)|Tür veya üye yalnızca kodu aynı sınıfın veya türetilmiş bir sınıf tarafından erişilebilir.|
+|[Friend](../../../visual-basic/language-reference/modifiers/friend.md)|Tür veya üye, herhangi bir kod aynı bütünleştirilmiş kodda değiştirebilir, ancak başka bir derleme tarafından erişilebilir.|
 |`Protected Friend`|Tür veya üye aynı bütünleştirilmiş kod veya başka bir derlemede herhangi bir türetilmiş sınıf tarafından erişilebilir.|
 
 Daha fazla bilgi için bkz: [erişim düzeyini Visual Basic'te](../../../visual-basic/programming-guide/language-features/declared-elements/access-levels.md).
@@ -274,11 +265,11 @@ Dim sampleObject = New SampleClass With
 
 Daha fazla bilgi için bkz.:
 
-- [New işleci](../../../visual-basic/language-reference/operators/new-operator.md)
+- [New İşleci](../../../visual-basic/language-reference/operators/new-operator.md)
 
-- [Nesne başlatıcıları: Adlandırılmış ve anonim türler](../../../visual-basic/programming-guide/language-features/objects-and-classes/object-initializers-named-and-anonymous-types.md)
+- [Nesne Başlatıcıları: Adlandırılmış ve Anonim Tipler](../../../visual-basic/programming-guide/language-features/objects-and-classes/object-initializers-named-and-anonymous-types.md)
 
-###  <a name="Static"></a>Paylaşılan sınıflar ve üyeleri  
+###  <a name="Static"></a> Paylaşılan sınıflar ve üyeleri  
  Bir paylaşılan sınıfı bir özellik, yordam veya bir sınıfın tüm örnekleri tarafından paylaşılan alan üyesidir.  
   
  Paylaşılan bir üyeye tanımlamak için:  
@@ -299,9 +290,9 @@ MsgBox(SampleClass.SampleString)
   
  Daha fazla bilgi için bkz.:  
   
--   [Paylaşılan](../../../visual-basic/language-reference/modifiers/shared.md)  
+-   [Shared](../../../visual-basic/language-reference/modifiers/shared.md)  
   
--   [Module deyimi](../../../visual-basic/language-reference/statements/module-statement.md)  
+-   [Module Deyimi](../../../visual-basic/language-reference/statements/module-statement.md)  
   
 ### <a name="anonymous-types"></a>Anonim türler  
 Anonim türler veri türü için bir sınıf tanımı yazmadan nesneleri oluşturmak etkinleştirin. Bunun yerine, derleyici bir sınıf sizin için oluşturur. Sınıf kullanılabilir adı yok ve nesne bildirme belirttiğiniz özellikler içerir.
@@ -348,7 +339,7 @@ End Class
 
 Daha fazla bilgi için bkz.:
 
-- [Inherits deyimi](../../../visual-basic/language-reference/statements/inherits-statement.md)
+- [Inherits Deyimi](../../../visual-basic/language-reference/statements/inherits-statement.md)
 
 - [NotInheritable](../../../visual-basic/language-reference/modifiers/notinheritable.md)
 
@@ -361,11 +352,11 @@ Aşağıdaki değiştiricileri özellikleri ve yöntemleri nasıl geçersiz kıl
 
 |Visual Basic değiştiricisi|Tanım|
 |---------------------------|----------------|
-|[Geçersiz kılınabilir](../../../visual-basic/language-reference/modifiers/overridable.md)|Türetilen bir sınıfta geçersiz kılınmak üzere sınıf üyesine sağlar.|
-|[Geçersiz kılmaları](../../../visual-basic/language-reference/modifiers/overrides.md)|Taban sınıf içinde tanımlı sanal (geçersiz kılınabilir) üyesi geçersiz kılar.|
+|[Overridable](../../../visual-basic/language-reference/modifiers/overridable.md)|Türetilen bir sınıfta geçersiz kılınmak üzere sınıf üyesine sağlar.|
+|[Overrides](../../../visual-basic/language-reference/modifiers/overrides.md)|Taban sınıf içinde tanımlı sanal (geçersiz kılınabilir) üyesi geçersiz kılar.|
 |[NotOverridable](../../../visual-basic/language-reference/modifiers/notoverridable.md)|Türetilen bir sınıfta geçersiz üye engeller.|
 |[MustOverride](../../../visual-basic/language-reference/modifiers/mustoverride.md)|Gerektiren türetilen bir sınıfta geçersiz kılınmak üzere bir sınıf üyesi.|
-|[Gölgeleri](../../../visual-basic/language-reference/modifiers/shadows.md)|Bir taban sınıftan devralınan üye gizler|
+|[Shadows](../../../visual-basic/language-reference/modifiers/shadows.md)|Bir taban sınıftan devralınan üye gizler|
 
 ## <a name="interfaces"></a>Arabirimler
 Sınıfları gibi arabirimler özellikleri, yöntemleri ve olayları kümesini tanımlar. Ancak sınıflarından farklı olarak, uygulama arabirimleri sağlamaz. Bunlar sınıfları tarafından uygulanan ve sınıflardan ayrı varlıklar olarak tanımlanır. Tam olarak tanımlandığı şekilde bir arabirimini uygulayan bir sınıf her açıdan bu arabirimi uygulamalıdır içeren bir sözleşme bir arabirimi temsil eder.
@@ -391,11 +382,11 @@ End Class
 
 Daha fazla bilgi için bkz.:
 
-- [Arabirimleri](../../../visual-basic/programming-guide/language-features/interfaces/index.md)  
+- [Arabirimler](../../../visual-basic/programming-guide/language-features/interfaces/index.md)  
 
-- [Interface deyimi](../../../visual-basic/language-reference/statements/interface-statement.md)  
+- [Interface Deyimi](../../../visual-basic/language-reference/statements/interface-statement.md)  
 
-- [Implements deyimi](../../../visual-basic/language-reference/statements/implements-statement.md)  
+- [Implements Deyimi](../../../visual-basic/language-reference/statements/implements-statement.md)  
 
 ## <a name="generics"></a>Genel Türler
 Sınıflar, yapılar, arabirimler ve .NET yöntemleri dahil edebileceğiniz *tür parametrelerindeki* kullanan depolamak veya nesne türlerini tanımlar. Genel türler en yaygın örneği, bir koleksiyonda depolanan nesnelerin türü belirtebileceğiniz koleksiyonudur.  
@@ -417,7 +408,7 @@ sampleObject.Field = "Sample string"
 
 Daha fazla bilgi için bkz.:
 
-- [Genel türler](~/docs/standard/generics/index.md)
+- [Genel Türler](~/docs/standard/generics/index.md)
 
 - [Visual Basic'de genel türler](../../../visual-basic/programming-guide/language-features/data-types/generic-types.md)
 
@@ -453,9 +444,9 @@ Daha fazla bilgi için bkz.:
 
 - [Temsilciler](../../../visual-basic/programming-guide/language-features/delegates/index.md)
 
-- [Delegate deyimi](../../../visual-basic/language-reference/statements/delegate-statement.md)
+- [Delegate Deyimi](../../../visual-basic/language-reference/statements/delegate-statement.md)
 
-- [AddressOf işleci](../../../visual-basic/language-reference/operators/addressof-operator.md)
+- [AddressOf İşleci](../../../visual-basic/language-reference/operators/addressof-operator.md)
 
 ## <a name="see-also"></a>Ayrıca bkz.
  [Visual Basic programlama kılavuzu](../../../visual-basic/programming-guide/index.md)

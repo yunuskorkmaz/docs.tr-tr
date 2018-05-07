@@ -1,13 +1,6 @@
 ---
-title: "WPF Özel Denetiminin UI Otomasyonu"
-ms.custom: 
+title: WPF Özel Denetiminin UI Otomasyonu
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-wpf
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -17,19 +10,14 @@ helpviewer_keywords:
 - custom controls [WPF], improving accessibility
 - UI Automation [WPF], using with custom controls
 ms.assetid: 47b310fc-fbd5-4ce2-a606-22d04c6d4911
-caps.latest.revision: "34"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 1a9d17408d6fa03b267c2a22890d2e17c0441389
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: fbd19591c260b0ad160339b45fd762e7a87bbc74
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="ui-automation-of-a-wpf-custom-control"></a>WPF Özel Denetiminin UI Otomasyonu
-[!INCLUDE[TLA#tla_uiautomation](../../../../includes/tlasharptla-uiautomation-md.md)]istemciler inceleyin ya da platformlar ve altyapıları çeşitli kullanıcı arabirimleri çalışmasına kullanabilir, Otomasyon tek, genelleştirilmiş bir arabirim sağlar. [!INCLUDE[TLA2#tla_uiautomation](../../../../includes/tla2sharptla-uiautomation-md.md)]Kalite güvence (test) kod ve kullanıcı arabirimi öğeleri inceleyin ve diğer kodundan kullanıcı etkileşimi onlarla benzetimini yapmak ekran okuyucular gibi erişilebilirlik uygulamaları etkinleştirir. Hakkında bilgi için [!INCLUDE[TLA2#tla_uiautomation](../../../../includes/tla2sharptla-uiautomation-md.md)] tüm platformlarda erişilebilirlik bakın.  
+[!INCLUDE[TLA#tla_uiautomation](../../../../includes/tlasharptla-uiautomation-md.md)] istemciler inceleyin ya da platformlar ve altyapıları çeşitli kullanıcı arabirimleri çalışmasına kullanabilir, Otomasyon tek, genelleştirilmiş bir arabirim sağlar. [!INCLUDE[TLA2#tla_uiautomation](../../../../includes/tla2sharptla-uiautomation-md.md)] Kalite güvence (test) kod ve kullanıcı arabirimi öğeleri inceleyin ve diğer kodundan kullanıcı etkileşimi onlarla benzetimini yapmak ekran okuyucular gibi erişilebilirlik uygulamaları etkinleştirir. Hakkında bilgi için [!INCLUDE[TLA2#tla_uiautomation](../../../../includes/tla2sharptla-uiautomation-md.md)] tüm platformlarda erişilebilirlik bakın.  
   
  Bu konuda, bir WPF uygulamasında çalışan özel bir denetim için sunucu tarafı UI Otomasyonu sağlayıcıyı uygulama açıklar. WPF destekleyen [!INCLUDE[TLA2#tla_uiautomation](../../../../includes/tla2sharptla-uiautomation-md.md)] kullanıcı arabirimi öğeleri ağacının parallels eş Otomasyon nesne ağacının aracılığıyla. Sınama kodu ve erişilebilirlik özellikleri (işlemdeki kodunu) doğrudan Otomasyon eş nesneleri kullanabilir sağlayan uygulamalar tarafından sağlanan genelleştirilmiş arabirimi aracılığıyla veya [!INCLUDE[TLA2#tla_uiautomation](../../../../includes/tla2sharptla-uiautomation-md.md)].  
   
@@ -63,7 +51,7 @@ ms.lasthandoff: 12/22/2017
  Geçersiz kılma <xref:System.Windows.UIElement.OnCreateAutomationPeer%2A> onun doğrudan veya dolaylı olarak öğesinden türetilmelidir, sağlayıcı nesnesi döndürecek şekilde özel denetim için yöntem <xref:System.Windows.Automation.Peers.AutomationPeer>.  
   
 ### <a name="override-getpattern"></a>GetPattern geçersiz kıl  
- Otomasyon eş basitleştirmek bazı sunucu-tarafı uygulaması yönlerini [!INCLUDE[TLA2#tla_uiautomation](../../../../includes/tla2sharptla-uiautomation-md.md)] sağlayıcılar, ancak özel denetim Otomasyon eş gerekir hala işlemek düzeni arabirimleri. WPF olmayan sağlayıcıları gibi eş arabirimlerde uygulamaları sağlayarak denetim düzenleri desteği <xref:System.Windows.Automation.Provider?displayProperty=nameWithType> ad alanı, gibi <xref:System.Windows.Automation.Provider.IInvokeProvider>. Denetim düzeni arabirimleri eş veya başka bir nesne tarafından uygulanabilir. Eşin uyarlamasını <xref:System.Windows.Automation.Peers.AutomationPeer.GetPattern%2A> belirtilen deseni destekleyen bir nesne döndürür. [!INCLUDE[TLA2#tla_uiautomation](../../../../includes/tla2sharptla-uiautomation-md.md)]kod çağrıları <xref:System.Windows.Automation.Peers.UIElementAutomationPeer.GetPattern%2A> yöntemi ve belirten bir <xref:System.Windows.Automation.Peers.PatternInterface> numaralandırma değeri. Geçersiz kılma, <xref:System.Windows.Automation.Peers.UIElementAutomationPeer.GetPattern%2A> belirtilen desenle uygulayan nesnenin döndürmelidir. Denetiminizi desenin özel bir uygulama yoksa temel türün uyarlamasını çağırabilirsiniz <xref:System.Windows.Automation.Peers.AutomationPeer.GetPattern%2A> düzeni bu denetim türü için desteklenmiyorsa, uygulama veya null alınamadı. Örneğin, Özel NumericUpDown denetimi bir aralık içinde bir değere ayarlanabilir şekilde kendi [!INCLUDE[TLA2#tla_uiautomation](../../../../includes/tla2sharptla-uiautomation-md.md)] eş uygulamak <xref:System.Windows.Automation.Provider.IRangeValueProvider> arabirimi. Aşağıdaki örnekte gösterildiği nasıl eşin <xref:System.Windows.Automation.Peers.UIElementAutomationPeer.GetPattern%2A> yanıtlamak için yöntem geçersiz bir <xref:System.Windows.Automation.Peers.PatternInterface.RangeValue?displayProperty=nameWithType> değeri.  
+ Otomasyon eş basitleştirmek bazı sunucu-tarafı uygulaması yönlerini [!INCLUDE[TLA2#tla_uiautomation](../../../../includes/tla2sharptla-uiautomation-md.md)] sağlayıcılar, ancak özel denetim Otomasyon eş gerekir hala işlemek düzeni arabirimleri. WPF olmayan sağlayıcıları gibi eş arabirimlerde uygulamaları sağlayarak denetim düzenleri desteği <xref:System.Windows.Automation.Provider?displayProperty=nameWithType> ad alanı, gibi <xref:System.Windows.Automation.Provider.IInvokeProvider>. Denetim düzeni arabirimleri eş veya başka bir nesne tarafından uygulanabilir. Eşin uyarlamasını <xref:System.Windows.Automation.Peers.AutomationPeer.GetPattern%2A> belirtilen deseni destekleyen bir nesne döndürür. [!INCLUDE[TLA2#tla_uiautomation](../../../../includes/tla2sharptla-uiautomation-md.md)] kod çağrıları <xref:System.Windows.Automation.Peers.UIElementAutomationPeer.GetPattern%2A> yöntemi ve belirten bir <xref:System.Windows.Automation.Peers.PatternInterface> numaralandırma değeri. Geçersiz kılma, <xref:System.Windows.Automation.Peers.UIElementAutomationPeer.GetPattern%2A> belirtilen desenle uygulayan nesnenin döndürmelidir. Denetiminizi desenin özel bir uygulama yoksa temel türün uyarlamasını çağırabilirsiniz <xref:System.Windows.Automation.Peers.AutomationPeer.GetPattern%2A> düzeni bu denetim türü için desteklenmiyorsa, uygulama veya null alınamadı. Örneğin, Özel NumericUpDown denetimi bir aralık içinde bir değere ayarlanabilir şekilde kendi [!INCLUDE[TLA2#tla_uiautomation](../../../../includes/tla2sharptla-uiautomation-md.md)] eş uygulamak <xref:System.Windows.Automation.Provider.IRangeValueProvider> arabirimi. Aşağıdaki örnekte gösterildiği nasıl eşin <xref:System.Windows.Automation.Peers.UIElementAutomationPeer.GetPattern%2A> yanıtlamak için yöntem geçersiz bir <xref:System.Windows.Automation.Peers.PatternInterface.RangeValue?displayProperty=nameWithType> değeri.  
   
  [!code-csharp[CustomControlNumericUpDown#GetPattern](../../../../samples/snippets/csharp/VS_Snippets_Wpf/CustomControlNumericUpDown/CSharp/CustomControlLibrary/NumericUpDown.cs#getpattern)]
  [!code-vb[CustomControlNumericUpDown#GetPattern](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/CustomControlNumericUpDown/visualbasic/customcontrollibrary/numericupdown.vb#getpattern)]  

@@ -1,28 +1,14 @@
 ---
-title: ".NET Framework XAML Hizmetlerinde Kullanılacak Özel Türleri Tanımlama"
-ms.custom: 
+title: .NET Framework XAML Hizmetlerinde Kullanılacak Özel Türleri Tanımlama
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-wpf
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - defining custom types [XAML Services]
 ms.assetid: c2667cbd-2f46-4a7f-9dfc-53696e35e8e4
-caps.latest.revision: 
-author: wadepickett
-ms.author: wpickett
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: c7cce479c7c7a5f6c7112f08f1e15f3bc7e4d366
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 9edc7baa1a540a71997cf5b1ed010ad5c7960d17
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="defining-custom-types-for-use-with-net-framework-xaml-services"></a>.NET Framework XAML Hizmetlerinde Kullanılacak Özel Türleri Tanımlama
 İş nesneleri özel türler tanımlamak ya da bir bağımlılık belirli çerçevesinde yok türleri, izleyebilirsiniz XAML için bazı en iyi yöntemler vardır. Bu yöntemler, .NET Framework XAML hizmetlerinde izleyin ve kendi XAML okuyucuları ve XAML yazıcıları türünüz XAML özelliklerini bulmak ve XAML tür sistemi kullanarak bir XAML düğüm akış uygun gösterimi vermek istiyorsanız. Bu konu için tür tanımları, üye tanımları ve CLR türleri veya üyeleri öznitelik atanıyor en iyi uygulamaları açıklar.  
@@ -83,7 +69,7 @@ ms.lasthandoff: 12/22/2017
 #### <a name="the-getpropertyname-accessor"></a>GetPropertyName erişimcisi  
  İmza için `Get` *PropertyName* erişimci olması gerekir:  
   
- `public static object Get`*PropertyName* `(object` `target`  `)`  
+ `public static object Get` *PropertyName* `(object`  `target` `)`  
   
 -   `target` Nesnesi, uygulamanızda daha belirli bir tür olarak belirtilebilir. Bu, takılabilir üye kullanımını kapsamını belirlemek için kullanabilirsiniz; hedeflenen kapsamı dışında kullanımları sonra bir XAML ayrıştırma hatası ortaya çıkmış geçersiz yayın özel durum atar. Parametre adı `target` zorunlu değildir, ancak adlı `target` çoğu uygulamalarında kural tarafından.  
   
@@ -94,7 +80,7 @@ ms.lasthandoff: 12/22/2017
 #### <a name="the-setpropertyname-accessor"></a>SetPropertyName erişimcisi  
  İmza kümesi için*PropertyName* erişimci olması gerekir:  
   
- `public static void Set`*PropertyName* `(object` `target` `, object` `value`    `)`  
+ `public static void Set` *PropertyName* `(object`  `target` `, object`  `value` `)`  
   
 -   `target` Nesnesi olarak belirtilebilir aynı mantığı ve sonuçları ile uygulamanızda daha belirli bir tür önceki bölümde açıklandığı gibi.  
   
@@ -103,7 +89,7 @@ ms.lasthandoff: 12/22/2017
  Bu yöntem için değerinin XAML kullanımdan özniteliği formunda genellikle gelen giriş olduğunu unutmayın. Öznitelik formundan olmalıdır değer dönüştürücüsü metin sözdizimi desteği ve üzerinde öznitelik `Get` *PropertyName* erişimcisi.  
   
 ### <a name="attachable-member-stores"></a>Takılabilir üye depolar  
- Erişimci yöntemleri genellikle takılabilir üye değerlerinin bir nesne grafiğinin yerleştirin veya nesne grafiğinin dışında değerleri almak ve düzgün şekilde serileştirmek için bir yol sağlamak yeterli değildir. Bu işlevselliği sağlayacak şekilde `target` önceki erişimcisi imzaları nesneleri değerlerini depolama yeteneğine sahip olmalıdır. Depolama mekanizmasını tutarlı takılabilir üye Üyeler listesinde olduğu hedefleri takılabilir bir üyesidir takılabilir üye ilkesine sahip olmalıdır. .NET framework XAML hizmetleri sağlar. bir uygulama teknik takılabilir üye API'leri aracılığıyla depolar <xref:System.Xaml.IAttachedPropertyStore> ve <xref:System.Xaml.AttachablePropertyServices>. <xref:System.Xaml.IAttachedPropertyStore>XAML yazarlar tarafından deposu uygulaması bulmak için kullanılır ve türü üzerinde uygulanmadı `target` erişimciler. Statik <xref:System.Xaml.AttachablePropertyServices> API'leri erişimciler gövdesi içinde kullanılır ve takılabilir üyesi tarafından başvurmak kendi <xref:System.Xaml.AttachableMemberIdentifier>.  
+ Erişimci yöntemleri genellikle takılabilir üye değerlerinin bir nesne grafiğinin yerleştirin veya nesne grafiğinin dışında değerleri almak ve düzgün şekilde serileştirmek için bir yol sağlamak yeterli değildir. Bu işlevselliği sağlayacak şekilde `target` önceki erişimcisi imzaları nesneleri değerlerini depolama yeteneğine sahip olmalıdır. Depolama mekanizmasını tutarlı takılabilir üye Üyeler listesinde olduğu hedefleri takılabilir bir üyesidir takılabilir üye ilkesine sahip olmalıdır. .NET framework XAML hizmetleri sağlar. bir uygulama teknik takılabilir üye API'leri aracılığıyla depolar <xref:System.Xaml.IAttachedPropertyStore> ve <xref:System.Xaml.AttachablePropertyServices>. <xref:System.Xaml.IAttachedPropertyStore> XAML yazarlar tarafından deposu uygulaması bulmak için kullanılır ve türü üzerinde uygulanmadı `target` erişimciler. Statik <xref:System.Xaml.AttachablePropertyServices> API'leri erişimciler gövdesi içinde kullanılır ve takılabilir üyesi tarafından başvurmak kendi <xref:System.Xaml.AttachableMemberIdentifier>.  
   
 ## <a name="xaml-related-clr-attributes"></a>XAML ilişkili CLR öznitelikleri  
  Doğru türleri, üyeleri ve derlemeler öznitelik atanıyor rapor .NET Framework XAML Hizmetleri için XAML tür sistem bilgileri sırada önemlidir. Bu, .NET Framework XAML Hizmetleri XAML okuyucuları ve XAML yazıcılarının doğrudan bağlı XAML sistemleri ile kullanmak için türlerinizi düşünüyorsanız veya tanımlayın veya bu XAML okuyucuları ve XAML yazıcılarının temel XAML kullanılarak bir Framework'te kullanıyorsanız geçerlidir.  

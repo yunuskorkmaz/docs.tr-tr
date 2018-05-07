@@ -1,27 +1,15 @@
 ---
 title: 'Nasıl yapılır: bir iş akışını çalıştırma'
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.tgt_pltfrm: ''
-ms.topic: article
 dev_langs:
 - csharp
 - vb
 ms.assetid: f814ff82-fe2b-4614-aebb-b768c3e61179
-caps.latest.revision: 33
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 88c8adc74b707891a93e34aa135db82715da968e
-ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
+ms.openlocfilehash: 704527bde2ac6bf555d40db836baf938c0c5cd96
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/28/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-run-a-workflow"></a>Nasıl yapılır: bir iş akışını çalıştırma
 Bu konu, Windows Workflow Foundation Başlarken Öğreticisi devamıdır ve bir iş akışı ana bilgisayarı oluşturmak ve önceki tanımlanan iş akışını çalıştırmak nasıl ele [nasıl yapılır: bir iş akışı oluşturmak](../../../docs/framework/windows-workflow-foundation/how-to-create-a-workflow.md) konu.  

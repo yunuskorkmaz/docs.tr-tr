@@ -1,22 +1,12 @@
 ---
-title: "XAttribute sınıfına genel bakış (Visual Basic)"
-ms.custom: 
+title: XAttribute sınıfına genel bakış (Visual Basic)
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 7781580a-9583-4a1b-ae1e-91c5936eb0b1
-caps.latest.revision: "3"
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: 900f047ec0db8ed1e2399345d2d4c3fba34afd5b
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.openlocfilehash: 08b8ebf31a39325c98023d4bb333f8e06bbdeb3f
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="xattribute-class-overview-visual-basic"></a>XAttribute sınıfına genel bakış (Visual Basic)
 Öznitelikleri bir öğesiyle ilişkilendirilmiş olan ad/değer çiftleridir. <xref:System.Xml.Linq.XAttribute> Sınıfı, XML öznitelikleri temsil eder.  
@@ -79,7 +69,7 @@ Console.WriteLine(c)
 ```  
   
 ### <a name="attributes-are-not-nodes"></a>Öznitelikleri düğümleri olmayan  
- Öznitelikler ve öğeler arasındaki bazı farklar vardır. <xref:System.Xml.Linq.XAttribute>nesneler düğüm XML ağacında değildir. Bunlar bir XML öğesi ile ilişkili ad/değer çiftleridir. Belge nesne modeli (DOM) aksine bu daha yakından XML yapısını yansıtır. Ancak <xref:System.Xml.Linq.XAttribute> nesneleri gerçekten çalışmaya XML Ağaçtaki düğümler olmayan <xref:System.Xml.Linq.XAttribute> nesneleri ile çalışmaya çok benzer <xref:System.Xml.Linq.XElement> nesneleri.  
+ Öznitelikler ve öğeler arasındaki bazı farklar vardır. <xref:System.Xml.Linq.XAttribute> nesneler düğüm XML ağacında değildir. Bunlar bir XML öğesi ile ilişkili ad/değer çiftleridir. Belge nesne modeli (DOM) aksine bu daha yakından XML yapısını yansıtır. Ancak <xref:System.Xml.Linq.XAttribute> nesneleri gerçekten çalışmaya XML Ağaçtaki düğümler olmayan <xref:System.Xml.Linq.XAttribute> nesneleri ile çalışmaya çok benzer <xref:System.Xml.Linq.XElement> nesneleri.  
   
  Bu ayrım, yalnızca XML ağaçlar olan düğüm düzeyinde çalışır kod yazma geliştiriciler öncelikle önemlidir. Geliştiricilerin çoğu Bu ayrım ile ilgilenen olmaz.  
   

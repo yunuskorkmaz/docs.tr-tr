@@ -1,23 +1,16 @@
 ---
-title: "DataRepeater Denetimine Giriş (Visual Studio)"
+title: DataRepeater Denetimine Giriş (Visual Studio)
 ms.date: 07/20/2015
-ms.prod: .net
-ms.suite: 
-ms.technology: devlang-visual-basic
-ms.topic: article
 helpviewer_keywords:
 - repeating data
 - DataRepeater, overview
 - DataRepeater
 ms.assetid: 78a52a1d-65f0-4ecb-97ff-53bc114300c5
-caps.latest.revision: "8"
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: 699876cc568b22114e5ed8741c2fd0c053a137af
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: fc0cf9c358faf3e738eb3b24ec61577b88dbce4a
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="introduction-to-the-datarepeater-control-visual-studio"></a>DataRepeater Denetimine Giriş (Visual Studio)
 Visual Basic Power Packs <xref:Microsoft.VisualBasic.PowerPacks.DataRepeater> denetimidir kaydırılabilir bir kapsayıcı verileri, örneğin, bir veritabanı tablosundaki satırları görüntüleyen denetimler yinelenen için. Alternatif olarak kullanılabilir <xref:System.Windows.Forms.DataGridView> veri düzeni üzerinde daha fazla denetim gerektiğinde denetim. <xref:Microsoft.VisualBasic.PowerPacks.DataRepeater> "İlgili denetimleri bir grup kayan bir görünümde birden çok örneği oluşturarak yineler". Bu, aynı anda birden fazla kayıtları görüntülemek kullanıcılar sağlar.  
@@ -51,6 +44,6 @@ Visual Basic Power Packs <xref:Microsoft.VisualBasic.PowerPacks.DataRepeater> de
  Diğer özelleştirmeleri ekleme veya kayıt silme olanağı denetleme, arama yetenekleri ekleme ve bir ana ve ayrıntı biçiminde ilgili verileri görüntüleme içerir. Daha fazla bilgi için bkz: [nasıl yapılır: devre dışı ekleme ve silme DataRepeater öğelerini](../../../visual-basic/developing-apps/windows-forms/how-to-disable-adding-and-deleting-datarepeater-items-visual-studio.md), [nasıl yapılır: DataRepeater denetiminde veri arama](../../../visual-basic/developing-apps/windows-forms/how-to-search-data-in-a-datarepeater-control-visual-studio.md), ve [nasıl yapılır: kullanarak iki tarafından ana/ayrıntı formu oluşturma DataRepeater denetimi (Visual Studio)](../../../visual-basic/developing-apps/windows-forms/how-to-create-a-master-detail-form-by-using-two-datarepeater-controls.md).  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [DataRepeater denetimi](../../../visual-basic/developing-apps/windows-forms/datarepeater-control-visual-studio.md)  
- [İzlenecek yol: DataRepeater denetimindeki verileri görüntüleme](../../../visual-basic/developing-apps/windows-forms/walkthrough-displaying-data-in-a-datarepeater-control-visual-studio.md)  
- [DataRepeater denetiminde sorun giderme](../../../visual-basic/developing-apps/windows-forms/troubleshooting-the-datarepeater-control-visual-studio.md)
+ [DataRepeater Denetimi](../../../visual-basic/developing-apps/windows-forms/datarepeater-control-visual-studio.md)  
+ [İzlenecek Yol: DataRepeater Denetimindeki Verileri Görüntüleme](../../../visual-basic/developing-apps/windows-forms/walkthrough-displaying-data-in-a-datarepeater-control-visual-studio.md)  
+ [DataRepeater Denetiminde Sorun Giderme](../../../visual-basic/developing-apps/windows-forms/troubleshooting-the-datarepeater-control-visual-studio.md)

@@ -1,45 +1,33 @@
 ---
 title: Bağlamalar ve Güvenlik
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 helpviewer_keywords:
 - bindings [WCF], security
 - WCF security
 - Windows Communication Foundation, security
 - bindings [WCF]
 ms.assetid: 4de03dd3-968a-4e65-af43-516e903d7f95
-caps.latest.revision: 42
 author: BrucePerlerMS
-ms.author: bruceper
 manager: mbaldwin
-ms.workload:
-- dotnet
-ms.openlocfilehash: 440bbcf03eef8f32a28073bfc9f5aeeb824a50fd
-ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
+ms.openlocfilehash: 938b04f6c612f38be41d278273aa18d41677f84c
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/30/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="bindings-and-security"></a>Bağlamalar ve Güvenlik
-İle birlikte gelen sistem tarafından sağlanan bağlamalar [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] program hızlı bir şekilde sunma [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] uygulamalar. Bunun tek istisnası etkin bir varsayılan güvenlik düzeni tüm bağlamaları vardır. Bu konuda, güvenlik ihtiyaçlarınızı için doğru bağlama seçmenize yardımcı olur.  
+Windows Communication Foundation (WCF) dahil sistem tarafından sağlanan bağlamalar program WCF uygulamaları için hızlı bir yol sunar. Bunun tek istisnası etkin bir varsayılan güvenlik düzeni tüm bağlamaları vardır. Bu konuda, güvenlik ihtiyaçlarınızı için doğru bağlama seçmenize yardımcı olur.  
   
- Genel Bakış [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] güvenlik, bkz: [güvenliğine genel bakış](../../../../docs/framework/wcf/feature-details/security-overview.md). Programlama hakkında daha fazla bilgi için [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] bağlamalar kullanılarak, bkz: [WCF güvenliğini programlama](../../../../docs/framework/wcf/feature-details/programming-wcf-security.md).  
+ WCF güvenlik genel bakış için bkz: [güvenliğine genel bakış](../../../../docs/framework/wcf/feature-details/security-overview.md). Bağlamalar kullanılarak WCF programlama hakkında daha fazla bilgi için bkz: [WCF güvenliğini programlama](../../../../docs/framework/wcf/feature-details/programming-wcf-security.md).  
   
  Bir bağlama seçtiyseniz, güvenlik ile ilişkili çalışma zamanı davranışı hakkında daha fazla bilgi bulabilirsiniz [güvenlik davranışları](../../../../docs/framework/wcf/feature-details/security-behaviors-in-wcf.md).  
   
  Bazı güvenlik işlevleri sistem tarafından sağlanan bağlamalar kullanılarak programlanabilir değildir. Özel bağlama kullanma daha fazla denetim için bkz: [özel bağlamalarla güvenlik özellikleri](../../../../docs/framework/wcf/feature-details/security-capabilities-with-custom-bindings.md).  
   
 ## <a name="security-functions-of-bindings"></a>Güvenlik işlevlerini bağlamaları  
- [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] Çoğu gereksinimlerini karşılayacak sistem tarafından sağlanan bağlamalar sayısını içerir. Belirli bir bağlama yeterli değil, özel bağlama de oluşturabilirsiniz. Sistem tarafından sağlanan bağlamalar listesi için bkz: [System-Provided bağlamaları](../../../../docs/framework/wcf/system-provided-bindings.md). Özel bağlama hakkında daha fazla bilgi için bkz: [özel bağlamalar](../../../../docs/framework/wcf/extending/custom-bindings.md).  
+ WCF çoğu gereksinimlerini karşılayacak sistem tarafından sağlanan bağlamalar sayısını içerir. Belirli bir bağlama yeterli değil, özel bağlama de oluşturabilirsiniz. Sistem tarafından sağlanan bağlamalar listesi için bkz: [System-Provided bağlamaları](../../../../docs/framework/wcf/system-provided-bindings.md). Özel bağlama hakkında daha fazla bilgi için bkz: [özel bağlamalar](../../../../docs/framework/wcf/extending/custom-bindings.md).  
   
- Her bağlama [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] iki tür vardır: bir API ve bir yapılandırma dosyasında kullanılan bir XML öğesi olarak. Örneğin, `WSHttpBinding` (API) sahip bir karşılık gelen [ \<wsHttpBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/wshttpbinding.md).  
+ Her bağlama WCF'de iki tür vardır: bir API ve bir yapılandırma dosyasında kullanılan bir XML öğesi olarak. Örneğin, `WSHttpBinding` (API) sahip bir karşılık gelen [ \<wsHttpBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/wshttpbinding.md).  
   
  Aşağıdaki bölümde her bağlama için her iki formları listeler ve güvenlik özellikleri özetlenmektedir.  
   
@@ -149,7 +137,7 @@ ms.lasthandoff: 04/30/2018
 ### <a name="msmqintegrationbinding"></a>MsmqIntegrationBinding  
  Kod içinde kullanma <xref:System.ServiceModel.MsmqIntegration.MsmqIntegrationBinding> sınıf; yapılandırmasında kullanmasına [ \<MsmqIntegrationBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/msmqintegrationbinding.md).  
   
- Bu bağlama oluşturmak için optimize edilmiştir [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] istemciler ve olmayan ile birlikte Hizmetler[!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] Microsoft Message Queuing (MSMQ) uç noktaları.  
+ Bu bağlama, WCF istemcileri ve çalışmanız Hizmetleri WCF Microsoft Message Queuing MSMQ olmayan uç ile oluşturmak için en iyi duruma getirilmiştir.  
   
  Varsayılan olarak, bu bağlama taşıma güvenliği kullanır ve aşağıdaki güvenlik özellikleri sağlar:  
   
@@ -162,7 +150,7 @@ ms.lasthandoff: 04/30/2018
 ### <a name="netmsmqbinding"></a>NetMsmqBinding  
  Kod içinde kullanma <xref:System.ServiceModel.NetMsmqBinding> sınıf; yapılandırmasında kullanmasına [ \<netMsmqBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/netmsmqbinding.md).  
   
- Bu bağlama oluştururken kullanılması amaçlanmıştır [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] MSMQ gerektiren hizmetleri kuyruğa ileti desteği.  
+ MSMQ gerektiren WCF hizmetleri oluşturma iletisi destek sıraya olduğunda bu bağlama için kullanılması amaçlanmıştır.  
   
  Varsayılan olarak, bu bağlama taşıma güvenliği kullanır ve aşağıdaki güvenlik özellikleri sağlar:  
   
@@ -232,7 +220,7 @@ ms.lasthandoff: 04/30/2018
 |----------|-----------------|  
 |Yok.|Hizmetin anonim istemcilerle etkileşime girmesine izin verir.|  
 |Windows|SOAP ileti alışverişlerinde Windows kimlik bilgisi kimliği doğrulanmış bağlamı altında yapılmasına izin verir.|  
-|UserName|Hizmetinin gerektiren izin verir, istemci kimlik doğrulaması kullanıcı adı kimlik bilgilerini kullanarak. Güvenlik modu ayarlandığında unutmayın `TransportWithMessageCredential`, [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] parola kullanarak ve böyle anahtarların ileti mod güvenliği için kullanarak Özet veya türetme anahtarları bir parola gönderme desteklemiyor. Bu nedenle, [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] taşıma kullanıcı adı kimlik bilgileri kullanırken güvenli zorlar.|  
+|UserName|Hizmetinin gerektiren izin verir, istemci kimlik doğrulaması kullanıcı adı kimlik bilgilerini kullanarak. Güvenlik modu ayarlandığında unutmayın `TransportWithMessageCredential`, WCF parola kullanarak ve böyle anahtarların ileti mod güvenliği için kullanarak Özet veya türetme anahtarları bir parola gönderme desteklemez. Bu nedenle, WCF taşıma kullanıcı adı kimlik bilgileri kullanırken güvenli zorlar.|  
 |Sertifika|Hizmetinin gerektiren izin verir, istemci kimlik doğrulaması kullanarak bir sertifika.|  
 |IssuedToken|Özel belirteç sağlamak için bir güvenlik belirteci hizmeti kullanmak hizmet sağlar.|  
   

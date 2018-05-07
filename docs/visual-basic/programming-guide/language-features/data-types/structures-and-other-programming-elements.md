@@ -1,12 +1,6 @@
 ---
-title: "Yapılar ve Diğer Programlama Öğeleri (Visual Basic)"
-ms.custom: 
+title: Yapılar ve Diğer Programlama Öğeleri (Visual Basic)
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
-ms.topic: article
 helpviewer_keywords:
 - structures [Visual Basic], arrays
 - procedures [Visual Basic], structures as arguments to
@@ -14,14 +8,11 @@ helpviewer_keywords:
 - arrays [Visual Basic], structure elements
 - nested structures [Visual Basic]
 ms.assetid: 0f849313-ccd2-4c9a-acb9-69de6751c088
-caps.latest.revision: "13"
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: de343c06ec255d6cb68aa25d733e85385e884769
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 7b375c5a45998fc0bd06f7c075f23a30dd377295
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="structures-and-other-programming-elements-visual-basic"></a>Yapılar ve Diğer Programlama Öğeleri (Visual Basic)
 Diziler, nesneleri ve yordamlarla yanı sıra birbirleri ile birlikte yapıları kullanabilirsiniz. Bu öğeleri tek tek kullandıkça etkileşimler aynı sözdizimini kullanır.  
@@ -131,13 +122,13 @@ allSystems(1).diskDrives(0).type = "Floppy"
  Yapıları rasgele derinliği diğer yapıları içerebilir.  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [Veri türleri](../../../../visual-basic/programming-guide/language-features/data-types/index.md)  
- [Başlangıç veri türleri](../../../../visual-basic/programming-guide/language-features/data-types/elementary-data-types.md)  
- [Bileşik veri türleri](../../../../visual-basic/programming-guide/language-features/data-types/composite-data-types.md)  
- [Değer türleri ve başvuru türleri](../../../../visual-basic/programming-guide/language-features/data-types/value-types-and-reference-types.md)  
- [Yapıları](../../../../visual-basic/programming-guide/language-features/data-types/structures.md)  
- [Veri türleri sorunlarını giderme](../../../../visual-basic/programming-guide/language-features/data-types/troubleshooting-data-types.md)  
- [Nasıl yapılır: bir yapıyı bildirme](../../../../visual-basic/programming-guide/language-features/data-types/how-to-declare-a-structure.md)  
- [Yapı değişkenleri](../../../../visual-basic/programming-guide/language-features/data-types/structure-variables.md)  
- [Yapılar ve sınıflar](../../../../visual-basic/programming-guide/language-features/data-types/structures-and-classes.md)  
- [Structure deyimi](../../../../visual-basic/language-reference/statements/structure-statement.md)
+ [Veri Türleri](../../../../visual-basic/programming-guide/language-features/data-types/index.md)  
+ [Başlangıç Veri Türleri](../../../../visual-basic/programming-guide/language-features/data-types/elementary-data-types.md)  
+ [Bileşik Veri Türleri](../../../../visual-basic/programming-guide/language-features/data-types/composite-data-types.md)  
+ [Değer Türleri ve Başvuru Türleri](../../../../visual-basic/programming-guide/language-features/data-types/value-types-and-reference-types.md)  
+ [Yapılar](../../../../visual-basic/programming-guide/language-features/data-types/structures.md)  
+ [Veri Türü Sorunlarını Giderme](../../../../visual-basic/programming-guide/language-features/data-types/troubleshooting-data-types.md)  
+ [Nasıl yapılır: Bir Yapıyı Bildirme](../../../../visual-basic/programming-guide/language-features/data-types/how-to-declare-a-structure.md)  
+ [Yapı Değişkenleri](../../../../visual-basic/programming-guide/language-features/data-types/structure-variables.md)  
+ [Yapılar ve Sınıflar](../../../../visual-basic/programming-guide/language-features/data-types/structures-and-classes.md)  
+ [Structure Deyimi](../../../../visual-basic/language-reference/statements/structure-statement.md)

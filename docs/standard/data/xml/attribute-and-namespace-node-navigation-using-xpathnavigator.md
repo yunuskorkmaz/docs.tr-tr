@@ -1,26 +1,15 @@
 ---
-title: "Özniteliği ve XPathNavigator kullanarak Namespace düğümü gezinme"
-ms.custom: 
+title: Özniteliği ve XPathNavigator kullanarak Namespace düğümü gezinme
 ms.date: 03/30/2017
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
 ms.technology: dotnet-standard
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 23975f88-e0af-4b88-93de-9e20e11880ad
-caps.latest.revision: "2"
 author: mairaw
 ms.author: mairaw
-manager: wpickett
-ms.workload:
-- dotnet
-- dotnetcore
-ms.openlocfilehash: 2f86abb7da5509a80cceede0f1092a75cef4d8da
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: 34ce6ec5a4cc5ddd4542474dc9ce55ff64a274ec
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="attribute-and-namespace-node-navigation-using-xpathnavigator"></a>Özniteliği ve XPathNavigator kullanarak Namespace düğümü gezinme
 <xref:System.Xml.XPath.XPathNavigator> İlk kümesi bulundu sınıfı iki Gezinti yöntemler kümesi sağlar, [düğüm kümesi Gezinti kullanarak XPathNavigator](../../../../docs/standard/data/xml/node-set-navigation-using-xpathnavigator.md) konu gezinmek için kullanılan *düğüm kümeleri* içinde bir <xref:System.Xml.XPath.XPathDocument> veya <xref:System.Xml.XmlDocument> nesnesi. Bu konuda açıklanan ikinci küme gitmek için kullanılan *özniteliği ve ad alanı düğümleri* içinde bir <xref:System.Xml.XPath.XPathDocument> veya <xref:System.Xml.XmlDocument> nesnesi.  
@@ -80,7 +69,7 @@ ms.lasthandoff: 12/23/2017
   
 -   Üzerine getirildiğinde `element1`: `xmlns:books="http://www.contoso.com/books"`, `xmlns="http://www.contoso.com"`, ve `xmlns:xml="http://www.w3.org/XML/1998/namespace"`.  
   
--   Üzerine getirildiğinde `root`:`xmlns:xml="http://www.w3.org/XML/1998/namespace".`  
+-   Üzerine getirildiğinde `root`: `xmlns:xml="http://www.w3.org/XML/1998/namespace".`  
   
 > [!NOTE]
 >  <xref:System.Xml.XPath.XPathNavigator> Sınıfı ad alanı düğümleri ters belge sırada döndürür. Bu nedenle, <xref:System.Xml.XPath.XPathNavigator.MoveToFirstNamespace%2A> temelde düğüm ad geçerli kapsamda son taşır.  

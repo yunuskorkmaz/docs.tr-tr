@@ -1,13 +1,6 @@
 ---
-title: "ThemeDictionary Biçimlendirme Uzantısı"
-ms.custom: 
+title: ThemeDictionary Biçimlendirme Uzantısı
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-wpf
-ms.tgt_pltfrm: 
-ms.topic: article
 f1_keywords:
 - ThemeDictionaryExtension
 - ThemeDictionary
@@ -15,16 +8,11 @@ helpviewer_keywords:
 - ThemeDictionary markup extension [WPF]
 - XAML [WPF], ThemeDictionary markup extension
 ms.assetid: aa75e10b-13dd-4989-972d-51bab63a05e2
-caps.latest.revision: "18"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 2372961cdc889528f13e13dd1f1760608030275e
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: ea7c630be3f6d208f5c62e8b9e24606ff0df8466
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="themedictionary-markup-extension"></a>ThemeDictionary Biçimlendirme Uzantısı
 Özel denetim yazarlar ya da üçüncü taraf denetimlerinin denetime stil kullanmak için özel tema kaynak sözlüklerindeki yüklemek için tümleştirme uygulamaları için bir yol sağlar.  
@@ -60,9 +48,9 @@ ms.lasthandoff: 12/22/2017
   
  Öznitelik sözdizimi, bu işaretleme uzantısı ile kullanılan en yaygın sözdizimidir. Sonra sağlanan dize belirteci `ThemeDictionary` kimlik dizesi olarak atandığı <xref:System.Windows.ThemeDictionaryExtension.AssemblyName%2A> temel değer <xref:System.Windows.ThemeDictionaryExtension> uzantısı sınıfı.  
   
- `ThemeDictionary`Ayrıca nesne öğesi sözdiziminde kullanılabilir. Bu durumda, değerini belirten <xref:System.Windows.ThemeDictionaryExtension.AssemblyName%2A> özelliği gereklidir.  
+ `ThemeDictionary` Ayrıca nesne öğesi sözdiziminde kullanılabilir. Bu durumda, değerini belirten <xref:System.Windows.ThemeDictionaryExtension.AssemblyName%2A> özelliği gereklidir.  
   
- `ThemeDictionary`belirten bir ayrıntılı öznitelik kullanımı da kullanılabilir <xref:System.Windows.Markup.StaticExtension.Member%2A> özelliği bir özellik olarak değer çifti =:  
+ `ThemeDictionary` belirten bir ayrıntılı öznitelik kullanımı da kullanılabilir <xref:System.Windows.Markup.StaticExtension.Member%2A> özelliği bir özellik olarak değer çifti =:  
   
 ```xml  
 <object property="{ThemeDictionary AssemblyName=assemblyUri}" .../>  
@@ -72,7 +60,7 @@ ms.lasthandoff: 12/22/2017
   
  İçinde [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] işlemci uygulamasında, bu biçimlendirme uzantısı işlenmesi tarafından tanımlanan <xref:System.Windows.ThemeDictionaryExtension> sınıfı.  
   
- `ThemeDictionary`bir biçimlendirme uzantısıdır. Biçimlendirme uzantıları, genellikle öznitelik değerlerinin değişmez değerler veya işleyici isimleri dışına çıkma gereksinimi olduğunda ve bu gereksinim, belirli türler veya özellikler üzerine tür dönüştürücülerini koymaktan daha genel olduğunda uygulanır. İçindeki tüm biçimlendirme uzantıları [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] kullanmak {ve} kurala göre kendi öznitelik sözdiziminde karakterler bir [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] işlemci tanıdığı biçimlendirme uzantısı öznitelik işlemelidir. Daha fazla bilgi için bkz: [biçimlendirme uzantıları ve WPF XAML](../../../../docs/framework/wpf/advanced/markup-extensions-and-wpf-xaml.md).  
+ `ThemeDictionary` bir biçimlendirme uzantısıdır. Biçimlendirme uzantıları, genellikle öznitelik değerlerinin değişmez değerler veya işleyici isimleri dışına çıkma gereksinimi olduğunda ve bu gereksinim, belirli türler veya özellikler üzerine tür dönüştürücülerini koymaktan daha genel olduğunda uygulanır. İçindeki tüm biçimlendirme uzantıları [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] kullanmak {ve} kurala göre kendi öznitelik sözdiziminde karakterler bir [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] işlemci tanıdığı biçimlendirme uzantısı öznitelik işlemelidir. Daha fazla bilgi için bkz: [biçimlendirme uzantıları ve WPF XAML](../../../../docs/framework/wpf/advanced/markup-extensions-and-wpf-xaml.md).  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
  [Stil ve Şablon Oluşturma](../../../../docs/framework/wpf/controls/styling-and-templating.md)  

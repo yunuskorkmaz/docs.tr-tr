@@ -1,14 +1,6 @@
 ---
 title: Hataları Tanımlama ve Belirtme
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -16,20 +8,14 @@ helpviewer_keywords:
 - handling faults [WCF], specifying
 - handling faults [WCF], defining
 ms.assetid: c00c84f1-962d-46a7-b07f-ebc4f80fbfc1
-caps.latest.revision: 13
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 6c200ad587d437875f510adc4f05b30bdb7ab089
-ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
-ms.translationtype: MT
+ms.openlocfilehash: b71aaf22c98c7f8e62b5c02449a45ec75567d064
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/30/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="defining-and-specifying-faults"></a>Hataları Tanımlama ve Belirtme
-SOAP hatalarının istemciye ve çift yönlü durumda, birlikte çalışabilen bir yolla bir hizmete bir istemciden hata koşulu bilgi hizmet aktarın. Bu konuda, özel hata içeriği tanımlamak ve hangi işlemleri geri dönebilirsiniz belirlemek nasıl ve ne zaman anlatılmaktadır. Bir hizmet veya çift yönlü istemci, bu hataları nasıl gönderebilir ve bir istemci veya hizmet uygulaması bu hatalarını nasıl işlediği hakkında daha fazla bilgi için bkz: [gönderme ve alma hataları](../../../docs/framework/wcf/sending-and-receiving-faults.md). Hata işleme, genel bir bakış için [!INCLUDE[indigo1](../../../includes/indigo1-md.md)] uygulamalar, bkz [belirtme ve işleme hataları sözleşme ve hizmetlerde](../../../docs/framework/wcf/specifying-and-handling-faults-in-contracts-and-services.md).  
+SOAP hatalarının istemciye ve çift yönlü durumda, birlikte çalışabilen bir yolla bir hizmete bir istemciden hata koşulu bilgi hizmet aktarın. Bu konuda, özel hata içeriği tanımlamak ve hangi işlemleri geri dönebilirsiniz belirlemek nasıl ve ne zaman anlatılmaktadır. Bir hizmet veya çift yönlü istemci, bu hataları nasıl gönderebilir ve bir istemci veya hizmet uygulaması bu hatalarını nasıl işlediği hakkında daha fazla bilgi için bkz: [gönderme ve alma hataları](../../../docs/framework/wcf/sending-and-receiving-faults.md). Windows Communication Foundation (WCF) uygulamalarında işleme hatası genel bakış için bkz: [belirtme ve işleme hataları sözleşme ve hizmetlerde](../../../docs/framework/wcf/specifying-and-handling-faults-in-contracts-and-services.md).  
   
 ## <a name="overview"></a>Genel Bakış  
  SOAP hataları olan bir işlem olduğu bildirildiğinde bir <xref:System.ServiceModel.FaultContractAttribute?displayProperty=nameWithType> özel bir SOAP hatası türü belirtir. Bildirilmemiş SOAP hatalarının bir işlem için bir sözleşmede belirtilen değil izinlerdir. Bu konuda bu hata koşullarını tanımlamak ve istemcilerin düzgün özel SOAP hataları bildirildiğinde bu hata koşullarını işlemek için kullanabileceği hizmetiniz için hatalı sözleşme oluşturmanıza yardımcı olur. Temel görevler, sırasıyla şunlardır:  

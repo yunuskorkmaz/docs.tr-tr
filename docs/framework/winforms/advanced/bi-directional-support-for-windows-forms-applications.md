@@ -1,10 +1,6 @@
 ---
 title: Windows Forms Uygulamalarında İki Yönlü Destek
 ms.date: 09/30/2017
-ms.prod: .net-framework
-ms.technology:
-- dotnet-winforms
-ms.topic: article
 helpviewer_keywords:
 - globalization [Windows Forms], bi-directional support in Windows
 - Windows Forms, international
@@ -13,14 +9,11 @@ helpviewer_keywords:
 - Windows Forms, bi-directional support
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: d670fedb2fe693a871de8f0147b81b97b4958853
-ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
+ms.openlocfilehash: fe1a15477e858a77ee7829f1d4a9d052457cd30f
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/27/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="bi-directional-support-for-windows-forms-applications"></a>Windows Forms Uygulamalarında İki Yönlü Destek
 Arapça ve İbranice gibi çift yönlü (sağdan sola) dilleri destekleyen Windows tabanlı uygulamalar oluşturmak için Visual Studio'yu kullanabilirsiniz. Bu standart formlar, iletişim kutuları, MDI formları ve birlikte çalışabilir tüm denetimler bu formlarda içerir — diğer bir deyişle, tüm nesneleri <xref:System.Windows.Forms.Control> ad alanı.  

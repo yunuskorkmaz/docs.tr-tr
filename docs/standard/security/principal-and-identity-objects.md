@@ -1,13 +1,7 @@
 ---
-title: "Asıl ve Kimlik Nesneleri"
-ms.custom: 
+title: Asıl ve Kimlik Nesneleri
 ms.date: 03/30/2017
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
 ms.technology: dotnet-standard
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - WindowsIdentity objects
 - GenericIdentity objects
@@ -18,18 +12,13 @@ helpviewer_keywords:
 - security [.NET Framework], principals
 - WindowsPrincipal objects
 ms.assetid: aa5930ad-f3d7-40aa-b6f6-c6edcd5c64f7
-caps.latest.revision: "9"
 author: mairaw
 ms.author: mairaw
-manager: wpickett
-ms.workload:
-- dotnet
-- dotnetcore
-ms.openlocfilehash: 02c8b4b9f46f051e42fb2ae85a39b6ff48ad2f1a
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: bfc9a08377a281f7325b120a873fc9b27b8ad856
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="principal-and-identity-objects"></a>Asıl ve Kimlik Nesneleri
 Yönetilen kod Bul kimliğini ya da rolü bir asıl bir <xref:System.Security.Principal.IPrincipal> bir başvuru içeren bir nesne, bir <xref:System.Security.Principal.IIdentity> nesnesi. Kullanıcı ve grup hesaplarını gibi bilinen kavramlarını kimlik ve asıl nesneleri karşılaştırmak faydalı olabilir. Kullanıcılar ve bunlar sahip olduğu haklar belirli kategorilerini grup hesaplarını temsil ederken çoğu ağ ortamlarında, kullanıcı hesapları kişiler veya programları temsil eder. Benzer şekilde, rol üyeliklerini ve güvenlik kapsamları temsil ederken .NET Framework kimlik nesneleri kullanıcılar, temsil eder. .NET Framework'teki asıl nesne bir rolü ve bir kimlik nesne yalıtır. .NET framework uygulamaları kimliğini veya daha çok rolü üyeliğine göre asıl hakları.  

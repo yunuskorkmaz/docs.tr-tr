@@ -1,24 +1,12 @@
 ---
-title: "Nasıl yapılır: Özel WSDL Dışarı Aktarma"
-ms.custom: 
+title: 'Nasıl yapılır: Özel WSDL Dışarı Aktarma'
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 5c1e4b58-b76b-472b-9635-2f80d42a0734
-caps.latest.revision: "13"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: d4b34cc564dea5f189de29c9425c840ec96c80fd
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 82f343d5e2637ff1330570a01b376e83567db4f4
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-export-custom-wsdl"></a>Nasıl yapılır: Özel WSDL Dışarı Aktarma
 Bu konuda, özel WSDL bilgilerini dışarı aktarmak açıklanmaktadır. Bunu yapmak için şu adlı yeni bir kod öznitelik tanımlayacaksınız `WsdlDocumentationAttribute` hizmeti tarafından oluşturulan WSDL özel bilgileri eklenir.  
@@ -27,7 +15,7 @@ Bu konuda, özel WSDL bilgilerini dışarı aktarmak açıklanmaktadır. Bunu ya
   
 1.  Uygulama <xref:System.ServiceModel.Description.IWsdlExportExtension> arabirimi. Bu arabirim aşağıdaki arabirimleri hiçbirini uygulayan bir sınıfa uygulanabilir: <xref:System.ServiceModel.Description.IOperationBehavior>, <xref:System.ServiceModel.Description.IContractBehavior>, veya <xref:System.ServiceModel.Description.IEndpointBehavior>. Türetilmiş bir sınıf da uygulanabilir <xref:System.ServiceModel.Channels.BindingElement>. Bu örnek uygulayan <xref:System.ServiceModel.Description.IWsdlExportExtension> uygulayan bir öznitelik sınıfı üzerinde <xref:System.ServiceModel.Description.IContractBehavior>.  
   
-2.  <xref:System.ServiceModel.Description.IWsdlExportExtension>iki yöntem tanımlar <xref:System.ServiceModel.Description.IWsdlExportExtension.ExportEndpoint%28System.ServiceModel.Description.WsdlExporter%2CSystem.ServiceModel.Description.WsdlEndpointConversionContext%29> ve <xref:System.ServiceModel.Description.IWsdlExportExtension.ExportContract%28System.ServiceModel.Description.WsdlExporter%2CSystem.ServiceModel.Description.WsdlContractConversionContext%29>. Bu yöntemler, değiştirme veya ekleme olanak sağlar (veya her ikisi de değiştirebilir ve ekleyebilirsiniz) ek bilgileri <xref:System.ServiceModel.Description.WsdlContractConversionContext>. İçinde bu örnek <xref:System.ServiceModel.Description.IWsdlExportExtension.ExportContract%28System.ServiceModel.Description.WsdlExporter%2CSystem.ServiceModel.Description.WsdlContractConversionContext%29> yöntemi, bir koleksiyonunu alır <xref:System.ServiceModel.Description.OperationDescription> nesneleri ve denetleme koleksiyonu aracılığıyla tekrarlanan bir `WsdlDocumentationAttribute`. Biri bulunursa, özniteliğiyle ilişkili metin ayıklanan summary öğesi oluşturulur ve summary öğesi eklenir `DocumentationElement` işlem.  
+2.  <xref:System.ServiceModel.Description.IWsdlExportExtension> iki yöntem tanımlar <xref:System.ServiceModel.Description.IWsdlExportExtension.ExportEndpoint%28System.ServiceModel.Description.WsdlExporter%2CSystem.ServiceModel.Description.WsdlEndpointConversionContext%29> ve <xref:System.ServiceModel.Description.IWsdlExportExtension.ExportContract%28System.ServiceModel.Description.WsdlExporter%2CSystem.ServiceModel.Description.WsdlContractConversionContext%29>. Bu yöntemler, değiştirme veya ekleme olanak sağlar (veya her ikisi de değiştirebilir ve ekleyebilirsiniz) ek bilgileri <xref:System.ServiceModel.Description.WsdlContractConversionContext>. İçinde bu örnek <xref:System.ServiceModel.Description.IWsdlExportExtension.ExportContract%28System.ServiceModel.Description.WsdlExporter%2CSystem.ServiceModel.Description.WsdlContractConversionContext%29> yöntemi, bir koleksiyonunu alır <xref:System.ServiceModel.Description.OperationDescription> nesneleri ve denetleme koleksiyonu aracılığıyla tekrarlanan bir `WsdlDocumentationAttribute`. Biri bulunursa, özniteliğiyle ilişkili metin ayıklanan summary öğesi oluşturulur ve summary öğesi eklenir `DocumentationElement` işlem.  
   
     ```  
             public void ExportContract(WsdlExporter exporter, WsdlContractConversionContext context)  

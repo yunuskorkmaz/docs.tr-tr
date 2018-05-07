@@ -1,21 +1,12 @@
 ---
-title: "Nasıl yapılır: imzalı arkadaş derlemeleri (C#) oluşturma"
-ms.custom: 
+title: 'Nasıl yapılır: imzalı arkadaş derlemeleri (C#) oluşturma'
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-csharp
-ms.topic: article
 ms.assetid: bab62063-61e6-453f-905f-77673df9534e
-caps.latest.revision: "3"
-author: BillWagner
-ms.author: wiwagn
-ms.openlocfilehash: d3d9d4c549654341c0739cc8132d953623482d62
-ms.sourcegitcommit: 685143b62385500f59bc36274b8adb191f573a16
+ms.openlocfilehash: 34243a65f57f41c358439baac82a1ce169233259
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/09/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-create-signed-friend-assemblies-c"></a>Nasıl yapılır: imzalı arkadaş derlemeleri (C#) oluşturma
 Bu örnek güçlü adlara sahip Derlemelerle arkadaş derlemeleri kullanmayı gösterir. Her iki derlemeleri strong adlandırılmalıdır. Bu örnekte her iki derlemeleri aynı anahtarlar kullansa da, anahtarları farklı iki derlemeler için kullanabilirsiniz.  
@@ -101,7 +92,7 @@ Bu örnek güçlü adlara sahip Derlemelerle arkadaş derlemeleri kullanmayı g�
  [Derlemeler ve Genel Derleme Önbelleği (C#)](../../../../csharp/programming-guide/concepts/assemblies-gac/index.md)  
  [Arkadaş derlemeler (C#)](../../../../csharp/programming-guide/concepts/assemblies-gac/friend-assemblies.md)  
  [Nasıl yapılır: İmzasız arkadaş derlemeleri (C#) oluşturma](../../../../csharp/programming-guide/concepts/assemblies-gac/how-to-create-unsigned-friend-assemblies.md)  
- [/ keyfile](../../../../visual-basic/reference/command-line-compiler/keyfile.md)  
- [Sn.exe (tanımlayıcı ad aracı)](https://msdn.microsoft.com/library/k5b5tt23)  
- [Oluşturma ve tanımlayıcı adlı derlemeler kullanma](../../../../../docs/framework/app-domains/create-and-use-strong-named-assemblies.md)  
- [C# programlama kılavuzu](../../../../csharp/programming-guide/index.md)
+ [/keyfile](../../../../visual-basic/reference/command-line-compiler/keyfile.md)  
+ [Sn.exe (Tanımlayıcı Ad Aracı)](https://msdn.microsoft.com/library/k5b5tt23)  
+ [Kesin Adlandırılmış Bütünleştirilmiş Kodlar Oluşturma ve Kullanma](../../../../../docs/framework/app-domains/create-and-use-strong-named-assemblies.md)  
+ [C# Programlama Kılavuzu](../../../../csharp/programming-guide/index.md)

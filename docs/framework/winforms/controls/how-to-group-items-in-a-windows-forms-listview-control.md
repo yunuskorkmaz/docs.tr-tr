@@ -1,13 +1,6 @@
 ---
-title: "Nasıl yapılır Windows Forms ListView Denetimindeki Öğeleri Gruplama"
-ms.custom: 
+title: Nasıl yapılır Windows Forms ListView Denetimindeki Öğeleri Gruplama
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-winforms
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -19,16 +12,11 @@ helpviewer_keywords:
 - groups
 - groups [Windows Forms], in Windows Forms controls
 ms.assetid: 610416a1-8da4-436c-af19-5f19e654769b
-caps.latest.revision: "18"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 0f9596d5a344b2e14ea73120a4d2412917eba365
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.openlocfilehash: d59ddae4b45da8611638bb26d98c73e263dff064
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-group-items-in-a-windows-forms-listview-control"></a>Nasıl yapılır Windows Forms ListView Denetimindeki Öğeleri Gruplama
 Gruplama özelliğiyle <xref:System.Windows.Forms.ListView> denetimi gruplarında ilgili öğeleri kümesi görüntüleyebilirsiniz. Bu gruplar ekranda grup başlıklarını içeren yatay grup üstbilgileri tarafından ayrılır. Kullanabileceğiniz <xref:System.Windows.Forms.ListView> öğeleri alfabetik olarak tarihe ya da diğer bir mantıksal gruplandırma göre gruplandırarak büyük listelerini daha kolay gezinme olmak için grupları. Aşağıdaki resimde gruplandırılmış bazı öğeler gösterilir.  
@@ -39,7 +27,7 @@ ListView gruplandırılmış öğeleri
  Gruplandırma etkinleştirmek için önce bir veya daha fazla grupları Tasarımcısı'nda veya programlı olarak oluşturmanız gerekir. Bir grup tanımlandıktan sonra atayabilirsiniz <xref:System.Windows.Forms.ListView> öğeleri gruplarına. Ayrıca öğeleri bir gruptan başka bir program aracılığıyla taşıyabilirsiniz.  
   
 > [!NOTE]
->  <xref:System.Windows.Forms.ListView>gruplar yalnızca [!INCLUDE[WinXpFamily](../../../../includes/winxpfamily-md.md)] uygulamanızı çağırdığında <xref:System.Windows.Forms.Application.EnableVisualStyles%2A?displayProperty=nameWithType> yöntemi. Önceki işletim sistemlerinde gruplarına ilgili herhangi bir kod hiçbir etkisi olmaz ve grupları görüntülenmez. Daha fazla bilgi için bkz. <xref:System.Windows.Forms.ListView.Groups%2A?displayProperty=nameWithType>.  
+>  <xref:System.Windows.Forms.ListView> gruplar yalnızca [!INCLUDE[WinXpFamily](../../../../includes/winxpfamily-md.md)] uygulamanızı çağırdığında <xref:System.Windows.Forms.Application.EnableVisualStyles%2A?displayProperty=nameWithType> yöntemi. Önceki işletim sistemlerinde gruplarına ilgili herhangi bir kod hiçbir etkisi olmaz ve grupları görüntülenmez. Daha fazla bilgi için bkz. <xref:System.Windows.Forms.ListView.Groups%2A?displayProperty=nameWithType>.  
   
 ### <a name="to-add-groups"></a>Grup eklemek için  
   

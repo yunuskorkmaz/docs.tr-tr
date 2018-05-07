@@ -1,24 +1,12 @@
 ---
-title: "ASP.NET Önbelleğe Alma Tümleştirmesi"
-ms.custom: 
+title: ASP.NET Önbelleğe Alma Tümleştirmesi
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: f581923a-8a72-42fc-bd6a-46de2aaeecc1
-caps.latest.revision: "8"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 0d56c435088be383821d17250e230cae848d2bab
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
-ms.translationtype: MT
+ms.openlocfilehash: 420ff192caf41a37b6229bf36e32124f3646d69c
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="aspnet-caching-integration"></a>ASP.NET Önbelleğe Alma Tümleştirmesi
 Bu örnek, ASP.NET çıktı önbelleğine WCF WEB HTTP programlama modeli kullanan gösterilmiştir. Lütfen bakın [temel kaynak hizmeti](../../../../docs/framework/wcf/samples/basic-resource-service.md) kendini barındıran sürümü derinliği hizmet uygulamasında ele bu senaryo için örnek. Bu konu ASP.NET çıktı önbelleği tümleştirme özelliğini odaklanır.  
@@ -31,12 +19,12 @@ Bu örnek, ASP.NET çıktı önbelleğine WCF WEB HTTP programlama modeli kullan
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  Bu dizin mevcut değilse, Git [Windows Communication Foundation (WCF) ve .NET Framework 4 için Windows Workflow Foundation (WF) örnek](http://go.microsoft.com/fwlink/?LinkId=150780) tüm indirmek için [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] ve [!INCLUDE[wf1](../../../../includes/wf1-md.md)] örnekleri. Bu örnek aşağıdaki dizinde bulunur.  
+>  Bu dizin mevcut değilse, Git [Windows Communication Foundation (WCF) ve .NET Framework 4 için Windows Workflow Foundation (WF) örnek](http://go.microsoft.com/fwlink/?LinkId=150780) tüm Windows Communication Foundation (WCF) indirmek için ve [!INCLUDE[wf1](../../../../includes/wf1-md.md)] örnekleri. Bu örnek aşağıdaki dizinde bulunur.  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Web\AspNetCachingIntegration`  
   
 ## <a name="discussion"></a>Tartışma  
- Örnek kullanır <xref:System.ServiceModel.Web.AspNetCacheProfileAttribute> ASP.NET faydalanmak için çıkış önbelleğe almayı [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] hizmet. <xref:System.ServiceModel.Web.AspNetCacheProfileAttribute> Hizmet işlemleri için uygulanır ve yanıtlarını verilen işlemi uygulanması gereken yapılandırma dosyasında bir önbellek profili adı sağlar.  
+ Örnek kullanır <xref:System.ServiceModel.Web.AspNetCacheProfileAttribute> ASP.NET faydalanmak için Windows Communication Foundation (WCF) hizmetiyle önbelleğe alma çıktı. <xref:System.ServiceModel.Web.AspNetCacheProfileAttribute> Hizmet işlemleri için uygulanır ve yanıtlarını verilen işlemi uygulanması gereken yapılandırma dosyasında bir önbellek profili adı sağlar.  
   
  Örnek hizmet projesinin adını da dosyasındaki hem `GetCustomer` ve `GetCustomers` işlemleri ile işaretlenmiş <xref:System.ServiceModel.Web.AspNetCacheProfileAttribute>, önbellek profili adı "CacheFor60Seconds" sağlar. Hizmet projesinin Web.config dosyasında önbellek profili "CacheFor60Seconds" altında sağlanır <`caching`> öğesi <`system.web`>. Bu önbellek profili değeri için `duration` özniteliktir "60", bu profil ile ilişkili ASP.NET çıktı önbelleği 60 saniye boyunca önbelleğe alınan yanıtları şekilde. Ayrıca, bu önbellek profili için `varmByParam` özniteliği ayarlanmış "için farklı değerler bunu istekleriyle biçim" `format` sorgu dizesi parametresi ayrı olarak önbelleğe yanıtlarını sahip. Son olarak, önbellek profilinin `varyByHeader` özniteliği, "Kabul et" ayarlanmışsa, farklı Accept üstbilgi değerlerini istekleriyle yanıtlarını ayrı olarak önbelleğe alacak şekilde.  
   

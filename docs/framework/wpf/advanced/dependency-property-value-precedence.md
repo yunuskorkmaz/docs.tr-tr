@@ -1,32 +1,20 @@
 ---
-title: "Bağımlılık Özelliği Değer Önceliği"
-ms.custom: 
+title: Bağımlılık Özelliği Değer Önceliği
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-wpf
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - dependency properties [WPF], classes as owners
 - dependency properties [WPF], metadata
 - classes [WPF], owners of dependency properties
 - metadata [WPF], dependency properties
 ms.assetid: 1fbada8e-4867-4ed1-8d97-62c07dad7ebc
-caps.latest.revision: "27"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: d95cd0545fa4800f159f4e5e0f661cf7bddc6548
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 7719c39c82b69421477cadf9ae5caf9f9f55b457
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="dependency-property-value-precedence"></a>Bağımlılık Özelliği Değer Önceliği
-<a name="introduction"></a>Bu konuda açıklanmaktadır nasıl işleyişini [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] özellik sistemi bir bağımlılık özelliğinin değeri etkileyebilir ve hangi yönlerini özelliği tarafından sistem geçerli bir özellik için geçerli değerini öncelik açıklar.  
+<a name="introduction"></a> Bu konuda açıklanmaktadır nasıl işleyişini [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] özellik sistemi bir bağımlılık özelliğinin değeri etkileyebilir ve hangi yönlerini özelliği tarafından sistem geçerli bir özellik için geçerli değerini öncelik açıklar.  
     
   
 <a name="prerequisites"></a>   
@@ -117,7 +105,7 @@ ms.lasthandoff: 12/22/2017
   
 <a name="setcurrentvalue"></a>   
 ## <a name="setcurrentvalue"></a>SetCurrentValue  
- <xref:System.Windows.DependencyObject.SetCurrentValue%2A> Yöntemi bir özelliği ayarlamak için başka bir yolu, ancak öncelik sırasına göre değil. Bunun yerine, <xref:System.Windows.DependencyObject.SetCurrentValue%2A> önceki değeri kaynağı geçersiz kılmadan bir özelliğin değerini değiştirmenize olanak tanır. Kullanabileceğiniz <xref:System.Windows.DependencyObject.SetCurrentValue%2A> yerel değerin öncelik değeri vermeden bir değer ayarlamak istediğiniz dilediğiniz zaman. Örneğin bir özellik tarafından bir tetikleyici kümesi ve başka bir değer aracılığıyla atanan <xref:System.Windows.DependencyObject.SetCurrentValue%2A>, özellik sistemi hala tetikleyici dikkate alır ve tetikleyici eylem oluşursa özelliğini değiştirir. <xref:System.Windows.DependencyObject.SetCurrentValue%2A>daha yüksek önceliğe sahip bir kaynak vermeden özelliğin değerini değiştirmenize olanak tanır. Benzer şekilde, kullanabileceğiniz <xref:System.Windows.DependencyObject.SetCurrentValue%2A> bağlama geçersiz kılmadan bir özelliğin değerini değiştirmek için.  
+ <xref:System.Windows.DependencyObject.SetCurrentValue%2A> Yöntemi bir özelliği ayarlamak için başka bir yolu, ancak öncelik sırasına göre değil. Bunun yerine, <xref:System.Windows.DependencyObject.SetCurrentValue%2A> önceki değeri kaynağı geçersiz kılmadan bir özelliğin değerini değiştirmenize olanak tanır. Kullanabileceğiniz <xref:System.Windows.DependencyObject.SetCurrentValue%2A> yerel değerin öncelik değeri vermeden bir değer ayarlamak istediğiniz dilediğiniz zaman. Örneğin bir özellik tarafından bir tetikleyici kümesi ve başka bir değer aracılığıyla atanan <xref:System.Windows.DependencyObject.SetCurrentValue%2A>, özellik sistemi hala tetikleyici dikkate alır ve tetikleyici eylem oluşursa özelliğini değiştirir. <xref:System.Windows.DependencyObject.SetCurrentValue%2A> daha yüksek önceliğe sahip bir kaynak vermeden özelliğin değerini değiştirmenize olanak tanır. Benzer şekilde, kullanabileceğiniz <xref:System.Windows.DependencyObject.SetCurrentValue%2A> bağlama geçersiz kılmadan bir özelliğin değerini değiştirmek için.  
   
 <a name="animations"></a>   
 ## <a name="coercion-animations-and-base-value"></a>Zorlama, animasyonları ve taban değeri  

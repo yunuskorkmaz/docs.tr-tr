@@ -1,24 +1,14 @@
 ---
-title: "Güvenilir Güvenlik Profili"
-ms.custom: 
+title: Güvenilir Güvenlik Profili
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 921edc41-e91b-40f9-bde9-b6148b633e61
-caps.latest.revision: "8"
 author: BrucePerlerMS
-ms.author: bruceper
 manager: mbaldwin
-ms.workload: dotnet
-ms.openlocfilehash: 89a6d5c2e485699a55c77797c34eaca2c9848c40
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
-ms.translationtype: MT
+ms.openlocfilehash: b8faa7a3f92be25b1c1ae700c92e5d2a0828a5a5
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="reliable-secure-profile"></a>Güvenilir Güvenlik Profili
 Bu örnek oluşturmak nasıl gösterir [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] ve [güvenilir güvenli profili](http://go.microsoft.com/fwlink/?LinkId=178140) (RSP). Bu örnek uygulama ortaya koyar bir [bağlantı yap](http://go.microsoft.com/fwlink/?LinkId=178141) güvenilir Mesajlaşma ile birlikte ve isteğe bağlı olarak oluşan kanal güvenilir güvenli bağlama oluşturmak için güvenli bir kanal tabanlı RSP belirtimi.  
@@ -28,7 +18,7 @@ Bu örnek oluşturmak nasıl gösterir [!INCLUDE[indigo2](../../../../includes/i
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  Bu dizin mevcut değilse, Git [Windows Communication Foundation (WCF) ve .NET Framework 4 için Windows Workflow Foundation (WF) örnek](http://go.microsoft.com/fwlink/?LinkId=150780) tüm indirmek için [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] ve [!INCLUDE[wf1](../../../../includes/wf1-md.md)] örnekleri. Bu örnek aşağıdaki dizinde bulunur.  
+>  Bu dizin mevcut değilse, Git [Windows Communication Foundation (WCF) ve .NET Framework 4 için Windows Workflow Foundation (WF) örnek](http://go.microsoft.com/fwlink/?LinkId=150780) tüm Windows Communication Foundation (WCF) indirmek için ve [!INCLUDE[wf1](../../../../includes/wf1-md.md)] örnekleri. Bu örnek aşağıdaki dizinde bulunur.  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Extensibility\Channels\ReliableSecureProfile`  
   

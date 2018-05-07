@@ -1,36 +1,22 @@
 ---
 title: "Nasıl yapılır: WAS'ta WCF Hizmeti Barındırma"
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 ms.assetid: 9e3e213e-2dce-4f98-81a3-f62f44caeb54
-caps.latest.revision: 25
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: c4613587d829b082ee7182cc32e34d2d2d563241
-ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
+ms.openlocfilehash: 7050d866233b248c7c8f9f41337ce451b5510c30
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/30/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-host-a-wcf-service-in-was"></a>Nasıl yapılır: WAS'ta WCF Hizmeti Barındırma
-Bir Windows İşlem Etkinleştirme barındırılan Hizmetleri'nı (WAS olarak da bilinir) oluşturmak için gereken temel adımlarda bu konuda özetlenir [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] hizmet. EDİLDİ Genelleştirme HTTP olmayan aktarım protokolleri ile iş Internet Information Services (IIS) özellikleri olan yeni işlem Etkinleştirme hizmeti. [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] Dinleyici Bağdaştırıcısı arabirimi tarafından desteklenen HTTP olmayan protokolleri üzerinden alınan etkinleştirme isteklerini iletişim kurmak için kullandığı [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]TCP, Adlandırılmış Kanallar ve Message Queuing gibi.  
+Bu konuda anahatları Windows İşlem Etkinleştirme Hizmetleri (WAS olarak da bilinir) oluşturmak için gereken temel adımlarda Windows Communication Foundation (WCF) hizmetini barındırılan. EDİLDİ Genelleştirme HTTP olmayan aktarım protokolleri ile iş Internet Information Services (IIS) özellikleri olan yeni işlem Etkinleştirme hizmeti. WCF TCP ve adlandırılmış kanallar ve Message Queuing gibi WCF tarafından desteklenen HTTP olmayan protokolleri üzerinden alınan etkinleştirme isteklerini iletmek için Dinleyici Bağdaştırıcısı arabirimini kullanır.  
   
  Bu barındırma seçeneği WAS etkinleştirme bileşenleri düzgün bir şekilde yüklenir ve yapılandırılır, ancak uygulamanın bir parçası yazılması için herhangi bir barındırma kod gerektirmeyen gerektirir. Yükleme ve WAS yapılandırma hakkında daha fazla bilgi için bkz: [nasıl yapılır: yükleme ve yapılandırma WCF etkinleştirme bileşenlerini](../../../../docs/framework/wcf/feature-details/how-to-install-and-configure-wcf-activation-components.md).  
   
 > [!WARNING]
 >  Web sunucunuzun istek işleme ardışık Klasik moda ayarladıysanız etkinleştirme desteklenmeyen OLUŞTU. WAS etkinleştirme kullanılacak ise web sunucusunun istek işleme ardışık tümleşik moduna ayarlamanız gerekir.  
   
- Zaman bir [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] WAS içinde barındırılan hizmetin, standart bağlamaları normal şekilde kullanılır. Ancak, kullanırken <xref:System.ServiceModel.NetTcpBinding> ve <xref:System.ServiceModel.NetNamedPipeBinding> WAS barındırılan hizmeti yapılandırmak için bir kısıtlama yerine getirilmesi gerekir. Farklı uç noktalar aynı aktarım kullandığınızda, aşağıdaki yedi özellikleri eşleştirilecek bağlama ayarları vardır:  
+ Bir WCF Hizmeti WAS içinde barındırıldığında, standart bağlamaları normal şekilde kullanılır. Ancak, kullanırken <xref:System.ServiceModel.NetTcpBinding> ve <xref:System.ServiceModel.NetNamedPipeBinding> WAS barındırılan hizmeti yapılandırmak için bir kısıtlama yerine getirilmesi gerekir. Farklı uç noktalar aynı aktarım kullandığınızda, aşağıdaki yedi özellikleri eşleştirilecek bağlama ayarları vardır:  
   
 -   ConnectionBufferSize  
   

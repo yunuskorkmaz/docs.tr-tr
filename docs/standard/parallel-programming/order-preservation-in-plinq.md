@@ -1,31 +1,20 @@
 ---
-title: "PLINQ'te Sıra Koruma"
-ms.custom: 
+title: PLINQ'te Sıra Koruma
 ms.date: 03/30/2017
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
 ms.technology: dotnet-standard
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
 helpviewer_keywords:
 - PLINQ queries, order preservation
 ms.assetid: 10d202bc-19e1-4b5c-bbf1-9a977322a9ca
-caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-- dotnetcore
-ms.openlocfilehash: 164dce7c58e1ce44972e0e390e4f0bf2be8de548
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: 0b98fdcd425ae62aca0149df5136c28edc023bf0
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="order-preservation-in-plinq"></a>PLINQ'te Sıra Koruma
 PLINQ'te, doğruluk koruyarak performansını en üst düzeye çıkarmak için belirtilir. Bir sorgu çalıştırmak mümkün olduğunca hızlı ancak hala doğru sonuçlar gerekir. Bazı durumlarda, doğruluk korunması için kaynak sıradaki sırasını gerektirir; Ancak, sıralama hesaplama açısından pahalı olabilir. Bu nedenle, varsayılan olarak, kaynak sıradaki sırasını PLINQ korumaz. Bu bağlamda PLINQ benzer [!INCLUDE[vbtecdlinq](../../../includes/vbtecdlinq-md.md)], hangi sıralama korumak LINQ, nesnelere değil.  
@@ -108,26 +97,26 @@ PLINQ'te, doğruluk koruyarak performansını en üst düzeye çıkarmak için b
 |<xref:System.Linq.ParallelEnumerable.Repeat%2A>|Uygulanamaz (aynı varsayılan olarak <xref:System.Linq.ParallelEnumerable.AsParallel%2A>)|Geçerli değil|  
 |<xref:System.Linq.ParallelEnumerable.Reverse%2A>|Tersine çevirir|Hiçbir şey yapılmaz|  
 |<xref:System.Linq.ParallelEnumerable.Select%2A>|Sıralı sonuçları|Sırasız sonuçları|  
-|<xref:System.Linq.ParallelEnumerable.Select%2A>(dizin)|Sıralı sonuçları|Sırasız sonuçları.|  
+|<xref:System.Linq.ParallelEnumerable.Select%2A> (dizin)|Sıralı sonuçları|Sırasız sonuçları.|  
 |<xref:System.Linq.ParallelEnumerable.SelectMany%2A>|Sıralı sonuçları.|Sırasız sonuçları|  
-|<xref:System.Linq.ParallelEnumerable.SelectMany%2A>(dizin)|Sıralı sonuçları.|Sırasız sonuçları.|  
+|<xref:System.Linq.ParallelEnumerable.SelectMany%2A> (dizin)|Sıralı sonuçları.|Sırasız sonuçları.|  
 |<xref:System.Linq.ParallelEnumerable.SequenceEqual%2A>|Sıralı karşılaştırma|Sırasız karşılaştırma|  
 |<xref:System.Linq.ParallelEnumerable.Single%2A>|Geçerli değil|Geçerli değil|  
 |<xref:System.Linq.ParallelEnumerable.SingleOrDefault%2A>|Geçerli değil|Geçerli değil|  
-|<xref:System.Linq.ParallelEnumerable.Skip%2A>|İlk atlar  *n*  öğeleri|Herhangi bir atlar  *n*  öğeleri|  
+|<xref:System.Linq.ParallelEnumerable.Skip%2A>|İlk atlar *n* öğeleri|Herhangi bir atlar *n* öğeleri|  
 |<xref:System.Linq.ParallelEnumerable.SkipWhile%2A>|Sıralı sonuçları.|Belirlenemez. SkipWhile geçerli rastgele siparişte gerçekleştirir|  
 |<xref:System.Linq.ParallelEnumerable.Sum%2A>|Belirleyici olmayan çıktı nonassociative veya noncommutative işlemleri için|Belirleyici olmayan çıktı nonassociative veya noncommutative işlemleri için|  
 |<xref:System.Linq.ParallelEnumerable.Take%2A>|İlk alır `n` öğeleri|Herhangi bir alan `n` öğeleri|  
 |<xref:System.Linq.ParallelEnumerable.TakeWhile%2A>|Sıralı sonuçları|Belirlenemez. TakeWhile geçerli rastgele siparişte gerçekleştirir|  
-|<xref:System.Linq.ParallelEnumerable.ThenBy%2A>|Eklerin`OrderBy`|Eklerin`OrderBy`|  
-|<xref:System.Linq.ParallelEnumerable.ThenByDescending%2A>|Eklerin`OrderBy`|Eklerin`OrderBy`|  
+|<xref:System.Linq.ParallelEnumerable.ThenBy%2A>|Eklerin `OrderBy`|Eklerin `OrderBy`|  
+|<xref:System.Linq.ParallelEnumerable.ThenByDescending%2A>|Eklerin `OrderBy`|Eklerin `OrderBy`|  
 |<xref:System.Linq.ParallelEnumerable.ToArray%2A>|Sıralı sonuçları|Sırasız sonuçları|  
 |<xref:System.Linq.ParallelEnumerable.ToDictionary%2A>|Geçerli değil|Geçerli değil|  
 |<xref:System.Linq.ParallelEnumerable.ToList%2A>|Sıralı sonuçları|Sırasız sonuçları|  
 |<xref:System.Linq.ParallelEnumerable.ToLookup%2A>|Sıralı sonuçları|Sırasız sonuçları|  
 |<xref:System.Linq.ParallelEnumerable.Union%2A>|Sıralı sonuçları|Sırasız sonuçları|  
 |<xref:System.Linq.ParallelEnumerable.Where%2A>|Sıralı sonuçları|Sırasız sonuçları|  
-|<xref:System.Linq.ParallelEnumerable.Where%2A>(dizin)|Sıralı sonuçları|Sırasız sonuçları|  
+|<xref:System.Linq.ParallelEnumerable.Where%2A> (dizin)|Sıralı sonuçları|Sırasız sonuçları|  
 |<xref:System.Linq.ParallelEnumerable.Zip%2A>|Sıralı sonuçları|Sırasız sonuçları|  
   
  Sırasız sonuçları etkin olarak karışık değil; Bunlar yalnızca uygulanmış herhangi özel bir sıralama mantık sahip değilsiniz. Bazı durumlarda, kaynak dizi sıralaması düzenlenmemiş sorguyu tutabilir. Dizinli Select işlecini kullanın sorgularında PLINQ çıktı öğeleri artan dizinlerini ancak garanti hangi dizinlerini hakkında hangi öğelerin atanacak yapar sırasına göre gelir olduğunu güvence altına alır.  

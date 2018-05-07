@@ -1,13 +1,7 @@
 ---
 title: Semafor ve SemaphoreSlim
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
 ms.technology: dotnet-standard
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - counting semaphores
 - semaphores
@@ -16,23 +10,18 @@ helpviewer_keywords:
 - SemaphoreSlim class, about SemaphoreSlim class
 - threading [.NET Framework], Semaphore class
 ms.assetid: 7722a333-b974-47a2-a7c0-f09097fb644e
-caps.latest.revision: "17"
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-- dotnetcore
-ms.openlocfilehash: 3c7d196b54a831c807b7181c1c810c3e78a463a2
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: 1f9c6df23ae1a142d208672a03ffeb74709a0a05
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="semaphore-and-semaphoreslim"></a>Semafor ve SemaphoreSlim
 <xref:System.Threading.Semaphore?displayProperty=nameWithType> Adlandırılmış (yükleyebilecek) veya yerel semafor sınıfı temsil eder. Win32 semafor nesne çevresinde ince bir sarmalayıcı değil. Win32 semafor, kaynak havuzu erişimi denetlemek için kullanılan semaforları sayma.  
   
- <xref:System.Threading.SemaphoreSlim> Sınıfı, bekleme süresini çok kısa olması beklenen zaman, tek bir işlem içinde bekleme için kullanılabilen bir basit, hızlı semafor temsil eder. <xref:System.Threading.SemaphoreSlim>Eşitleme temelleri ortak dil çalışma zamanı tarafından (CLR) sağlanan üzerinde mümkün olduğunca kullanır. Ancak, ayrıca gevşek başlatılmış, çekirdek tabanlı bekleme tanıtıcıları üzerinde birden fazla semafor bekleyen desteklemek için gereken sağlar. <xref:System.Threading.SemaphoreSlim>Semafor veya eşitleme bekleme tanıtıcısı kullanılmak adlı iptal belirteçlerini, ancak kullanımını desteklemediği de destekler.  
+ <xref:System.Threading.SemaphoreSlim> Sınıfı, bekleme süresini çok kısa olması beklenen zaman, tek bir işlem içinde bekleme için kullanılabilen bir basit, hızlı semafor temsil eder. <xref:System.Threading.SemaphoreSlim> Eşitleme temelleri ortak dil çalışma zamanı tarafından (CLR) sağlanan üzerinde mümkün olduğunca kullanır. Ancak, ayrıca gevşek başlatılmış, çekirdek tabanlı bekleme tanıtıcıları üzerinde birden fazla semafor bekleyen desteklemek için gereken sağlar. <xref:System.Threading.SemaphoreSlim> Semafor veya eşitleme bekleme tanıtıcısı kullanılmak adlı iptal belirteçlerini, ancak kullanımını desteklemediği de destekler.  
   
 ## <a name="managing-a-limited-resource"></a>Sınırlı kaynak yönetme  
  İş parçacığı çağırarak semafor girin <xref:System.Threading.WaitHandle.WaitOne%2A> kaynağından devralındı yöntemi <xref:System.Threading.WaitHandle> sınıfında durumunda bir <xref:System.Threading.Semaphore?displayProperty=nameWithType> nesnesi veya <xref:System.Threading.SemaphoreSlim.Wait%2A?displayProperty=nameWithType> veya <xref:System.Threading.SemaphoreSlim.WaitAsync%2A?displayProperty=nameWithType> durumunda yöntemi bir <xref:System.Threading.SemaphoreSlim> nesnesi... Semafor sayısına çağrısı döndürüldüğünde düşülür. Bir iş parçacığı sayısı ve girişi isteğinde bulunduğunda, iş parçacığı blokları sıfırdır. İş parçacığı semafor çağırarak çıkardıkça <xref:System.Threading.Semaphore.Release%2A?displayProperty=nameWithType> veya <xref:System.Threading.SemaphoreSlim.Release%2A?displayProperty=nameWithType> yöntemi, engellenmiş iş parçacığı girin izin verilir. Semafor girmek engellenmiş iş parçacığı için ilk çıkar (FIFO) veya son giren ilk çıkar (LIFO) gibi hiçbir garanti edilen sipariş yoktur.  

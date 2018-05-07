@@ -1,13 +1,7 @@
 ---
-title: "Genelleştirme"
-ms.custom: 
+title: Genelleştirme
 ms.date: 03/30/2017
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
 ms.technology: dotnet-standard
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -19,18 +13,13 @@ helpviewer_keywords:
 - application development [.NET Framework], globalization
 - culture, globalization
 ms.assetid: 4e919934-6b19-42f2-b770-275a4fae87c9
-caps.latest.revision: "15"
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-- dotnetcore
-ms.openlocfilehash: 357d18843af0af2869d0ec98def6c733e51f9a4c
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: 9eb57aa0d6645958691c0003b07db6e8bb844fc9
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="globalization"></a>Genelleştirme
 Genelleştirme tasarlama ve birden çok kültürü kullanıcılar için yerelleştirilmiş arabirimleri ve bölgesel veri destekleyen bir dünya çapında kullanılmaya hazır uygulaması geliştirme içerir. Tasarım aşaması başlamadan önce uygulamanızı destekleyecek hangi kültürler belirlemeniz gerekir. Bir uygulama bir tek kültür veya bölge varsayılan olarak hedefler rağmen tasarlayın ve böylece diğer kültürler veya bölgelerdeki kullanıcılar için kolayca genişletilebilir yazma.  
@@ -45,11 +34,11 @@ Genelleştirme tasarlama ve birden çok kültürü kullanıcılar için yerelle�
   
     -   [Kaynak dosyaları kullan](../../../docs/standard/globalization-localization/globalization.md#Strings_Resources)  
   
-    -   [Arama ve dizeleri karşılaştırma](../../../docs/standard/globalization-localization/globalization.md#Strings_Searching)  
+    -   [Arama ve dizeleri karşılaştırma ](../../../docs/standard/globalization-localization/globalization.md#Strings_Searching)  
   
     -   [Dizeleri eşitlik için test etme](../../../docs/standard/globalization-localization/globalization.md#Strings_Equality)  
   
-    -   [Sıralama ve dizeleri sıralama](../../../docs/standard/globalization-localization/globalization.md#Strings_Ordering)  
+    -   [Sıralama ve dizeleri sıralama ](../../../docs/standard/globalization-localization/globalization.md#Strings_Ordering)  
   
     -   [Dize birleştirme kaçının](../../../docs/standard/globalization-localization/globalization.md#Strings_Concat)  
   

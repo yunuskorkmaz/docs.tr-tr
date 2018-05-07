@@ -1,25 +1,16 @@
 ---
 title: "Nasıl Yapılır: Visual Basic'te Uygulama Ayarlarını Okuma"
-ms.custom: 
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
-ms.topic: article
 helpviewer_keywords:
 - reading application settings
 - My.Settings object [Visual Basic], reading application settings
 - application settings [Visual Basic], reading
 ms.assetid: eb3428ef-115e-49a8-a878-e0613183fee0
-caps.latest.revision: "12"
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: ea6cfc529262053daf7c8111271de2c51e9cab4e
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 3de6e59c2a69c430a0376ef36f8ce52e57f5f6f0
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-read-application-settings-in-visual-basic"></a>Nasıl Yapılır: Visual Basic'te Uygulama Ayarlarını Okuma
 Bir kullanıcı ayarı üzerinde ayarın özelliğine erişerek okuyabilirsiniz `My.Settings` nesnesi.  
@@ -34,8 +25,8 @@ Bir kullanıcı ayarı üzerinde ayarın özelliğine erişerek okuyabilirsiniz 
  Bu örnekte çalışması, uygulamanızın olmalıdır bir `Nickname` türü ayarı `String`. Daha fazla bilgi için bkz: [yönetme uygulama ayarları (.NET)](/visualstudio/ide/managing-application-settings-dotnet).  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [My.Settings nesnesi](../../../../visual-basic/language-reference/objects/my-settings-object.md)  
+ [My.Settings Nesnesi](../../../../visual-basic/language-reference/objects/my-settings-object.md)  
  [Nasıl yapılır: Visual Basic'te kullanıcı ayarlarını değiştirme](../../../../visual-basic/developing-apps/programming/app-settings/how-to-change-user-settings.md)  
  [Nasıl yapılır: Visual Basic'te kullanıcı ayarlarını sürdürmek](../../../../visual-basic/developing-apps/programming/app-settings/how-to-persist-user-settings.md)  
  [Nasıl yapılır: Visual Basic'te kullanıcı ayarları için özellik kılavuzları oluşturma](../../../../visual-basic/developing-apps/programming/app-settings/how-to-create-property-grids-for-user-settings.md)  
- [Uygulama ayarları (.NET) yönetme](/visualstudio/ide/managing-application-settings-dotnet)
+ [Uygulama Ayarlarını Yönetme](/visualstudio/ide/managing-application-settings-dotnet)

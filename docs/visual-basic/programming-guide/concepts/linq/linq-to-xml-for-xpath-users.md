@@ -1,18 +1,12 @@
 ---
-title: "LINQ-XML XPath kullanıcıların (Visual Basic)"
+title: LINQ-XML XPath kullanıcıların (Visual Basic)
 ms.date: 07/20/2015
-ms.prod: .net
-ms.technology: devlang-visual-basic
-ms.topic: article
 ms.assetid: 0e64911c-a7cc-4c20-b927-ca99078b5656
-caps.latest.revision: "3"
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: bb0666ee1ae5626a4721ea597a53889e1acf8b0f
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: e4a84c373a4b355297db130c64ca3a1df5726c5e
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="linq-to-xml-for-xpath-users-visual-basic"></a>LINQ-XML XPath kullanıcıların (Visual Basic)
 
@@ -24,7 +18,7 @@ Bu konular kümesini Göster XPath ifadeleri sayısı ve bunların [!INCLUDE[sql
   
 |Konu|Açıklama|  
 |-----------|-----------------|  
-|[XPath ve LINQ-XML karşılaştırması](../../../../visual-basic/programming-guide/concepts/linq/comparison-of-xpath-and-linq-to-xml.md)|XPath arasındaki farklar ve benzerlikler genel bakış sağlar ve [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)].|  
+|[XPath ile LINQ to XML Karşılaştırması](../../../../visual-basic/programming-guide/concepts/linq/comparison-of-xpath-and-linq-to-xml.md)|XPath arasındaki farklar ve benzerlikler genel bakış sağlar ve [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)].|  
 |[Nasıl yapılır: bir alt öğesi (XPath-LINQ-XML) bulunamadı (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/how-to-find-a-child-element-xpath-linq-to-xml.md)|XPath alt öğesi eksene karşılaştırır [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] <xref:System.Xml.Linq.XContainer.Element%2A> yöntemi.<br /><br /> İlgili XPath ifadesi:`"DeliveryNotes"`.|  
 |[Nasıl yapılır: bir alt öğe (XPath-LINQ-XML) listesi Bul (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/how-to-find-a-list-of-child-elements-xpath-linq-to-xml.md)|XPath alt öğeleri eksene karşılaştırır [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] <xref:System.Xml.Linq.XContainer.Elements%2A> ekseni.<br /><br /> İlgili XPath ifadesi şöyledir:`"./*"`|  
 |[Nasıl yapılır: kök öğe (XPath-LINQ-XML) bulunamadı (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/how-to-find-the-root-element-xpath-linq-to-xml.md)|XPath Kök öğeyle alma karşılaştırır ve [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)].<br /><br /> İlgili XPath ifadesi şöyledir:`"/PurchaseOrders"`|  
@@ -45,4 +39,4 @@ Bu konular kümesini Göster XPath ifadeleri sayısı ve bunların [!INCLUDE[sql
 ## <a name="see-also"></a>Ayrıca Bkz.  
  <xref:System.Xml.XPath?displayProperty=nameWithType>  
  [Sorgulama XML ağaçları (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/querying-xml-trees.md)  
- [XPath veri modelini kullanarak işlem XML verileri](../../../../standard/data/xml/process-xml-data-using-the-xpath-data-model.md)
+ [XPath Veri Modelini Kullanarak XML Verilerini İşleme](../../../../standard/data/xml/process-xml-data-using-the-xpath-data-model.md)

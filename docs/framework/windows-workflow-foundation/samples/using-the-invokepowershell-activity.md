@@ -1,23 +1,12 @@
 ---
-title: "InvokePowerShell etkinliğini kullanma"
-ms.custom: 
+title: InvokePowerShell etkinliğini kullanma
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 956251a0-31ca-4183-bf76-d277c08585df
-caps.latest.revision: "10"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 4cf7092d6eac4fc2d70c4606f4a76f3a83ed9dcf
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: c5609556af94ed3e372538047ff6309a105975ae
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="using-the-invokepowershell-activity"></a>InvokePowerShell etkinliğini kullanma
 InvokePowerShell örnek Windows PowerShell komutlarını kullanarak çağrılacak gösterilmiştir `InvokePowerShell` etkinlik.  
@@ -35,7 +24,7 @@ InvokePowerShell örnek Windows PowerShell komutlarını kullanarak çağrılaca
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  Bu dizin mevcut değilse, Git [Windows Communication Foundation (WCF) ve .NET Framework 4 için Windows Workflow Foundation (WF) örnek](http://go.microsoft.com/fwlink/?LinkId=150780) tüm indirmek için [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] ve [!INCLUDE[wf1](../../../../includes/wf1-md.md)] örnekleri. Bu örnek aşağıdaki dizinde bulunur.  
+>  Bu dizin mevcut değilse, Git [Windows Communication Foundation (WCF) ve .NET Framework 4 için Windows Workflow Foundation (WF) örnek](http://go.microsoft.com/fwlink/?LinkId=150780) tüm Windows Communication Foundation (WCF) indirmek için ve [!INCLUDE[wf1](../../../../includes/wf1-md.md)] örnekleri. Bu örnek aşağıdaki dizinde bulunur.  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WF\Scenario\ActivityLibrary\PowerShell`  
   
@@ -73,9 +62,9 @@ new InvokePowerShell<Process>()
 },  
 ```  
   
- `Output`değişkeni komutunun çıktısını depolamak için kullanılır.  
+ `Output` değişkeni komutunun çıktısını depolamak için kullanılır.  
   
- Sonraki çağrı, bir işlem sonrası adımı PowerShell çağırma tek tek her çıkışta çalıştırmak gösterilmiştir. `InitializationAction`Her işlem için dize gösterimi çıkarır işlevi ayarlanır. Bu dizeler koleksiyonu döndürülür `Output` tarafından değişken `InvokePowerShell<string>` etkinlik.  
+ Sonraki çağrı, bir işlem sonrası adımı PowerShell çağırma tek tek her çıkışta çalıştırmak gösterilmiştir. `InitializationAction` Her işlem için dize gösterimi çıkarır işlevi ayarlanır. Bu dizeler koleksiyonu döndürülür `Output` tarafından değişken `InvokePowerShell<string>` etkinlik.  
   
  Başarılı `InvokePowerShell` çağrıları etkinlik ve çıkış ve hataları alma veri geçirme göstermektedir.  
   
@@ -205,7 +194,7 @@ new ForEach<PSObject>
   
 1.  Başvuran varsa `InvokePowerShell` etkinlik derleme veya proje derleme hatası sonuçlarında başka bir projeden, ihtiyacınız olabilecek el ile eklemek `<SpecificVersion>True</SpecificVersion>` .csproj dosyasına başvuruda bulunan satırı altında yeni proje öğesi `InvokePowerShell`.  
   
-2.  Windows PowerShell yüklü değil, eklediğiniz hemen Visual Studio aşağıdaki hata iletisi görüntülenir bir `InvokePowerShell` etkinliğini bir iş akışı üzerine:`Workflow Designer encountered problems with your document. Could not load file or assembly ‘System.Management.Automation’ ... or one of its dependencies. The system cannot find the file specified.`  
+2.  Windows PowerShell yüklü değil, eklediğiniz hemen Visual Studio aşağıdaki hata iletisi görüntülenir bir `InvokePowerShell` etkinliğini bir iş akışı üzerine: `Workflow Designer encountered problems with your document. Could not load file or assembly ‘System.Management.Automation’ ... or one of its dependencies. The system cannot find the file specified.`  
   
 3.  Windows PowerShell 2. 0 ', program aracılığıyla arama `$input.MoveNext()` başarısız olur ve kullanan komut dosyaları `$input.MoveNext()` istenmeyen hataları ve sonuçlar üretir. Bu sorunu çözmek için PowerShell fiil kullanmayı düşünün `foreach` çağırmak yerine `MoveNext()` bir dizi dolaşırken.  
   
@@ -214,6 +203,6 @@ new ForEach<PSObject>
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  Bu dizin mevcut değilse, Git [Windows Communication Foundation (WCF) ve .NET Framework 4 için Windows Workflow Foundation (WF) örnek](http://go.microsoft.com/fwlink/?LinkId=150780) tüm indirmek için [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] ve [!INCLUDE[wf1](../../../../includes/wf1-md.md)] örnekleri. Bu örnek aşağıdaki dizinde bulunur.  
+>  Bu dizin mevcut değilse, Git [Windows Communication Foundation (WCF) ve .NET Framework 4 için Windows Workflow Foundation (WF) örnek](http://go.microsoft.com/fwlink/?LinkId=150780) tüm Windows Communication Foundation (WCF) indirmek için ve [!INCLUDE[wf1](../../../../includes/wf1-md.md)] örnekleri. Bu örnek aşağıdaki dizinde bulunur.  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WF\Scenario\ActivityLibrary\PowerShell`

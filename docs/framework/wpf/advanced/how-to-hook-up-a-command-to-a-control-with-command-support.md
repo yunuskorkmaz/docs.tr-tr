@@ -1,13 +1,6 @@
 ---
-title: "Nasıl yapılır: Komut Destekli Denetime Komut Bağlama"
-ms.custom: 
+title: 'Nasıl yapılır: Komut Destekli Denetime Komut Bağlama'
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-wpf
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -17,22 +10,17 @@ helpviewer_keywords:
 - RoutedCommand class [WPF], attaching to a Control
 - classes [WPF], RoutedCommand [WPF], attaching to a Control
 ms.assetid: 8d8592ae-0c91-469e-a1cd-d179c4544548
-caps.latest.revision: "9"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 8b190868b8718442966a22d7be14d976ec47f53b
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 47abd36558864116e5f5ed921419c374c064e2cc
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-hook-up-a-command-to-a-control-with-command-support"></a>Nasıl yapılır: Komut Destekli Denetime Komut Bağlama
 Aşağıdaki örnek e nasıl bağlanacağını gösterir bir <xref:System.Windows.Input.RoutedCommand> için bir <xref:System.Windows.Controls.Control> komutu desteği içinde yerleşik.  Birden çok kaynak komutları tam bir örnek için bkz: [özel bağlayan örneği oluşturma](http://go.microsoft.com/fwlink/?LinkID=159980) örnek.  
   
 ## <a name="example"></a>Örnek  
- [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]Uygulama programcıları düzenli olarak karşılaştığı yaygın komutları kitaplığını sağlar.  Komut kitaplığı oluşturan sınıfları şunlardır: <xref:System.Windows.Input.ApplicationCommands>, <xref:System.Windows.Input.ComponentCommands>, <xref:System.Windows.Input.NavigationCommands>, <xref:System.Windows.Input.MediaCommands>, ve <xref:System.Windows.Documents.EditingCommands>.  
+ [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] Uygulama programcıları düzenli olarak karşılaştığı yaygın komutları kitaplığını sağlar.  Komut kitaplığı oluşturan sınıfları şunlardır: <xref:System.Windows.Input.ApplicationCommands>, <xref:System.Windows.Input.ComponentCommands>, <xref:System.Windows.Input.NavigationCommands>, <xref:System.Windows.Input.MediaCommands>, ve <xref:System.Windows.Documents.EditingCommands>.  
   
  Statik <xref:System.Windows.Input.RoutedCommand> bu sınıfları yapan nesneleri komut mantığı sağlamaz.  Komutu için mantığı komutu ile ilişkilendirilmiş bir <xref:System.Windows.Input.CommandBinding>.  Bazı denetimler CommandBindings bazı komutlar için yerleşik sahiptir.  Bir komut gerçek uygulamayı olsa da aynı kalmasını semantiği değiştirebilirsiniz Bu mekanizma sağlar.  A <xref:System.Windows.Controls.TextBox>, örneğin, işleme <xref:System.Windows.Input.ApplicationCommands.Paste%2A> görüntüleri desteklemek için tasarlanmış bir denetim, ancak bir şeyi yapıştırmanın anlamı temel olarak aynı kalır daha farklı komutu.  Komut mantığı komutu tarafından sağlanan, ancak bunun yerine denetim veya uygulama tarafından sağlanmalıdır.  
   

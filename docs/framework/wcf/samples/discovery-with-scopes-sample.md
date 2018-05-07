@@ -1,24 +1,12 @@
 ---
-title: "Kapsam ile Keşif Örneği"
-ms.custom: 
+title: Kapsam ile Keşif Örneği
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 6a37a754-6b8c-4ebe-bdf2-d4f0520271d5
-caps.latest.revision: "15"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: aa762df1dbfe92102f8cd719613099b23986ed0c
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: ee6fdb69f6417e6c43d671c7c76bda8af067d5a1
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="discovery-with-scopes-sample"></a>Kapsam ile Keşif Örneği
 Bu örnek kapsamları bulunabilirlik uç noktaları iyi nasıl kullanılacağını olarak kategorilere ayırmak için nasıl kullanılacağını göstermektedir <xref:System.ServiceModel.Discovery.DiscoveryClient> uç noktalar için zaman uyumsuz bir arama yapmak üzere. Hizmette Bu örnek bulma her uç nokta için bir uç nokta bulma davranışını ekleme ve uç nokta için bir kapsam eklemek için kullanarak yanı sıra uç noktanın bulunabilirliği denetleme özelleştirme gösterilmektedir. İstemcilerin nasıl oluşturabileceğinizi üzerinden örnek istemcide, giden bir <xref:System.ServiceModel.Discovery.DiscoveryClient> ve kapsamları ekleyerek kapsamları eklenecek parametreleri arama ince ayar <xref:System.ServiceModel.Discovery.FindCriteria>. Bu örnek ayrıca bir sonlandırma ölçüt ekleyerek istemcileri yanıtları nasıl kısıtlayabilirsiniz gösterir.  
@@ -31,7 +19,7 @@ Bu örnek kapsamları bulunabilirlik uç noktaları iyi nasıl kullanılacağın
   
 #### <a name="to-use-this-sample"></a>Bu örneği kullanmak için  
   
-1.  Bu örnek HTTP uç noktaları kullanır ve bu örneği çalıştırmak için doğru URL ACL eklenmesi gerekir. Bkz: [yapılandırma HTTP ve HTTPS](http://go.microsoft.com/fwlink/?LinkId=70353) Ayrıntılar için. Aşağıdaki komutu yükseltilmiş ayrıcalık yürütme uygun ACL'ler eklemeniz gerekir. Komut olduğu gibi çalışmazsa, etki alanı ve kullanıcı adı şu bağımsız değişkenleri yerine isteyebilirsiniz:`netsh http add urlacl url=http://+:8000/ user=%DOMAIN%\%UserName%`  
+1.  Bu örnek HTTP uç noktaları kullanır ve bu örneği çalıştırmak için doğru URL ACL eklenmesi gerekir. Bkz: [yapılandırma HTTP ve HTTPS](http://go.microsoft.com/fwlink/?LinkId=70353) Ayrıntılar için. Aşağıdaki komutu yükseltilmiş ayrıcalık yürütme uygun ACL'ler eklemeniz gerekir. Komut olduğu gibi çalışmazsa, etki alanı ve kullanıcı adı şu bağımsız değişkenleri yerine isteyebilirsiniz: `netsh http add urlacl url=http://+:8000/ user=%DOMAIN%\%UserName%`  
   
 2.  Çözümü oluşturun.  
   
@@ -44,7 +32,7 @@ Bu örnek kapsamları bulunabilirlik uç noktaları iyi nasıl kullanılacağın
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  Bu dizin mevcut değilse, Git [Windows Communication Foundation (WCF) ve .NET Framework 4 için Windows Workflow Foundation (WF) örnek](http://go.microsoft.com/fwlink/?LinkId=150780) tüm indirmek için [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] ve [!INCLUDE[wf1](../../../../includes/wf1-md.md)] örnekleri. Bu örnek aşağıdaki dizinde bulunur.  
+>  Bu dizin mevcut değilse, Git [Windows Communication Foundation (WCF) ve .NET Framework 4 için Windows Workflow Foundation (WF) örnek](http://go.microsoft.com/fwlink/?LinkId=150780) tüm Windows Communication Foundation (WCF) indirmek için ve [!INCLUDE[wf1](../../../../includes/wf1-md.md)] örnekleri. Bu örnek aşağıdaki dizinde bulunur.  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Discovery\DiscoveryWithScopes`  
   

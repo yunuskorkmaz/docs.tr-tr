@@ -1,23 +1,14 @@
 ---
-title: "Nesne değişkeni veya With bloğu değişkeni ayarlanmamış"
+title: Nesne değişkeni veya With bloğu değişkeni ayarlanmamış
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- devlang-visual-basic
-ms.topic: article
 f1_keywords:
 - vbrID91
 ms.assetid: 2f03e611-f0ed-465c-99a2-a816e034faa3
-caps.latest.revision: 
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: 9e1f587e194acf744b6ec9b8f1bede3acef7b753
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: b2bd1be83f57dbdc7a64b407dc1052074e19c74b
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="object-variable-or-with-block-variable-not-set"></a>Nesne değişkeni veya With bloğu değişkeni ayarlanmamış
 Geçersiz nesne değişkeni başvuruluyor.   Bu hata, çeşitli nedenlerle oluşabilir:  
@@ -29,7 +20,7 @@ Geçersiz nesne değişkeni başvuruluyor.   Bu hata, çeşitli nedenlerle oluş
     > [!TIP]
     >  `Option Strict` Deyimi izin vermez sonuçlanır örtük yazarak bir `Object` türü. Türü atlarsanız, derleme zamanı hatası meydana gelir. Bkz: [Option Strict deyimi](../../../visual-basic/language-reference/statements/option-strict-statement.md).  
   
--   Ayarlanmış bir nesneye başvurmak çalışıyorsunuz`Nothing`  
+-   Ayarlanmış bir nesneye başvurmak çalışıyorsunuz `Nothing`  
   
      biçimindeki telefon numarasıdır.  
   
@@ -61,6 +52,6 @@ Option Strict On
 5.  Emin olun, `With` blok yürüterek başlatılır `With` deyimi giriş noktası.  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [Nesne değişken bildirimi](../../../visual-basic/programming-guide/language-features/variables/object-variable-declaration.md)  
- [ReDim deyimi](../../../visual-basic/language-reference/statements/redim-statement.md)  
- [İle... End With deyimi](../../../visual-basic/language-reference/statements/with-end-with-statement.md)
+ [Nesne Değişken Bildirimi](../../../visual-basic/programming-guide/language-features/variables/object-variable-declaration.md)  
+ [ReDim Deyimi](../../../visual-basic/language-reference/statements/redim-statement.md)  
+ [With...End With Deyimi](../../../visual-basic/language-reference/statements/with-end-with-statement.md)

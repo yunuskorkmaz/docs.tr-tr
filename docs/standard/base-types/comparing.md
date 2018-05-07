@@ -1,13 +1,7 @@
 ---
-title: ".NET dizeleri karşılaştırma"
-ms.custom: 
+title: .NET dizeleri karşılaştırma
 ms.date: 03/30/2017
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
 ms.technology: dotnet-standard
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -24,18 +18,13 @@ helpviewer_keywords:
 - Equals method
 - StartsWith method
 ms.assetid: 977dc094-fe19-4955-98ec-d2294d04a4ba
-caps.latest.revision: "15"
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-- dotnetcore
-ms.openlocfilehash: a9c2597ed2321c7494eaf44c3c43c2edc4df1952
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: c925b734c6d89bfa7240a7946c5bae4d8062a47a
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="comparing-strings-in-net"></a>.NET dizeleri karşılaştırma
 .NET dizeleri değerleri karşılaştırmak için çeşitli yöntemler sağlar. Aşağıdaki tabloda listelenmekte ve değer karşılaştırması yöntemleri açıklar.  
@@ -51,14 +40,14 @@ ms.lasthandoff: 12/23/2017
 |<xref:System.String.IndexOf%2A?displayProperty=nameWithType>|Bir karakter ya da dize, İncelemekte olduğunuz dize başından başlayarak dizin konumunu döndürür. Bir Integer değeri döndürür.|  
 |<xref:System.String.LastIndexOf%2A?displayProperty=nameWithType>|Bir karakter ya da dize, İncelemekte olduğunuz dizesinin sonundan başlayarak dizin konumunu döndürür. Bir Integer değeri döndürür.|  
   
-## <a name="compare"></a>Karşılaştırma  
+## <a name="compare"></a>{1&gt;Karşılaştır&lt;1}  
  Statik <xref:System.String.Compare%2A?displayProperty=nameWithType> yöntemi iki dizeleri karşılaştırma, tam bir yol sağlar. Bu yöntem culturally bilmez. İki dizeyi veya iki dizeleri alt dizeleri karşılaştırmak için bu işlevi kullanabilirsiniz. Buna ek olarak, aşırı bu şekilde sağlanır veya çalışması ve kültürel farkı dikkate. Aşağıdaki tabloda, bu yöntem döndürebilir üç tamsayı değerleri gösterir.  
   
 |Dönüş değeri|Koşul|  
 |------------------|---------------|  
-|Negatif bir tamsayı|İlk dizesi ikinci dize sıralama düzenini önce gelir.<br /><br /> veya<br /><br /> İlk dize `null`.|  
-|0|İlk dizesi ve ikinci dize eşit.<br /><br /> veya<br /><br /> Her iki dizelerdir `null`.|  
-|Pozitif bir tamsayı<br /><br /> veya<br /><br /> 1.|İlk dizesi ikinci dizenin sıralama düzenini izler.<br /><br /> veya<br /><br /> İkinci dize `null`.|  
+|Negatif bir tamsayı|İlk dizesi ikinci dize sıralama düzenini önce gelir.<br /><br /> -veya-<br /><br /> İlk dize `null`.|  
+|0|İlk dizesi ve ikinci dize eşit.<br /><br /> -veya-<br /><br /> Her iki dizelerdir `null`.|  
+|Pozitif bir tamsayı<br /><br /> -veya-<br /><br /> 1.|İlk dizesi ikinci dizenin sıralama düzenini izler.<br /><br /> -veya-<br /><br /> İkinci dize `null`.|  
   
 > [!IMPORTANT]
 >  <xref:System.String.Compare%2A?displayProperty=nameWithType> Yöntemi sıralama veya dizeleri sıralama kullanmak için öncelikle amaçlanmıştır. Kullanılamaz <xref:System.String.Compare%2A?displayProperty=nameWithType> eşitlik için test yöntemi (diğer bir deyişle, açıkça 0 ile hiçbir şekilde mi için dönüş değerini aramak için bir dizedir veya diğer değerinden daha küçük). İki dizeyi eşit olup olmadığını belirlemek için bunun yerine, kullanın <xref:System.String.Equals%28System.String%2CSystem.String%2CSystem.StringComparison%29?displayProperty=nameWithType> yöntemi.  

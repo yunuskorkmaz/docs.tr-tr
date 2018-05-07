@@ -1,22 +1,12 @@
 ---
-title: "Dönüştürme veri türleri (Visual Basic)"
-ms.custom: 
+title: Dönüştürme veri türleri (Visual Basic)
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 9b0cf1ab-de48-4c6e-9f00-05b40fade46e
-caps.latest.revision: "3"
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: 5fb0e9dfb0f1fb882116449757ed0f0bf9029b39
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 9821b2d6caad8feeac856185b92518c25de88da3
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="converting-data-types-visual-basic"></a>Dönüştürme veri türleri (Visual Basic)
 Dönüştürme yöntemleri giriş nesnelerin türünü değiştirin.  
@@ -34,7 +24,7 @@ Dönüştürme yöntemleri giriş nesnelerin türünü değiştirin.
   
  Bu tabloda, adları "As" başlayın dönüştürme yöntemleri kaynak koleksiyonu statik türünü değiştirme ancak bunu numaralandırmak değil. "Kaynak toplamasını ve öğeleri karşılık gelen koleksiyona koymak için" ile adları başlayan yöntemleri yazın.  
   
-|Yöntem adı|Açıklama|Visual Basic sorgu ifade sözdizimi|Daha Fazla Bilgi|  
+|Yöntem adı|Açıklama|Visual Basic sorgu ifade sözdizimi|Daha fazla bilgi|  
 |-----------------|-----------------|------------------------------------------|----------------------|  
 |AsEnumerable|Olarak yazılan giriş döndürür <xref:System.Collections.Generic.IEnumerable%601>.|Yok.|<xref:System.Linq.Enumerable.AsEnumerable%2A?displayProperty=nameWithType>|  
 |AsQueryable|(Genel) dönüştürür <xref:System.Collections.IEnumerable> (Genel) <xref:System.Linq.IQueryable>.|Yok.|<xref:System.Linq.Queryable.AsQueryable%2A?displayProperty=nameWithType>|  
@@ -89,5 +79,5 @@ End Sub
 ## <a name="see-also"></a>Ayrıca Bkz.  
  <xref:System.Linq>  
  [Standart sorgu işleçlerine genel bakış (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/standard-query-operators-overview.md)  
- [From yan tümcesi](../../../../visual-basic/language-reference/queries/from-clause.md)  
+ [From Yan Tümcesi](../../../../visual-basic/language-reference/queries/from-clause.md)  
  [Nasıl yapılır: LINQ (Visual Basic) ile ArrayList sorgulama](../../../../visual-basic/programming-guide/concepts/linq/how-to-query-an-arraylist-with-linq.md)

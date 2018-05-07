@@ -1,11 +1,6 @@
 ---
-title: "Dize Veri Türü (Visual Basic)"
+title: Dize Veri Türü (Visual Basic)
 ms.date: 07/20/2015
-ms.prod: .net
-ms.suite: 
-ms.technology:
-- devlang-visual-basic
-ms.topic: article
 f1_keywords:
 - vb.String
 helpviewer_keywords:
@@ -23,14 +18,11 @@ helpviewer_keywords:
 - String literals [Visual Basic]
 - identifier type characters [Visual Basic], $
 ms.assetid: 15ac03f5-cabd-42cc-a754-1df3893c25d9
-caps.latest.revision: 
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: 90f126a5cca36969617446e81a8d13434e39df75
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 894638bbe50dad2cae1f74a2f7b7fe006f029d1b
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="string-data-type-visual-basic"></a>Dize Veri Türü (Visual Basic)
 İmzasız 16-bit (2-bayt) kod noktaları dizilerini bu aralık 0 ile 65535 arasında bir değer olarak tutar. Her *kod noktası*, veya karakter kodu, tek bir Unicode karakteri temsil eder. Bir dize 0'dan yaklaşık iki milyardan içerebilir (2 ^ 31) Unicode karakterler.  
@@ -81,15 +73,15 @@ S = Microsoft.VisualBasic.Left(S, 4)
   
 -   **Birlikte çalışma hakkında dikkat edilecek noktalar** .NET Framework için yazılmaz bileşenleriyle arabirim örnek otomasyon veya COM nesneleri için karakter dize farklı veri genişliği (8 bit) sahip diğer ortamlarda unutmayın. Bu tür bir bileşen için 8 bit karakter dizesi bağımsız değişkeni geçirilirse olarak bildirme `Byte()`, bir dizi `Byte` öğeleri yerine `String` yeni Visual Basic kodunuzda.  
   
--   **Karakterleri yazın.** Tanımlayıcı türü karakteri ekleme `$` herhangi bir tanımlayıcı zorlar `String` veri türü. `String`değişmez değer türü karakteri var. Ancak, tırnak işaretleri içine değişmez değerleri derleyici değerlendirir (`" "`) olarak `String`.  
+-   **Karakterleri yazın.** Tanımlayıcı türü karakteri ekleme `$` herhangi bir tanımlayıcı zorlar `String` veri türü. `String` değişmez değer türü karakteri var. Ancak, tırnak işaretleri içine değişmez değerleri derleyici değerlendirir (`" "`) olarak `String`.  
   
 -   **Framework türü.** .NET Framework'teki karşılık gelen tür <xref:System.String?displayProperty=nameWithType> sınıfı.  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
  <xref:System.String?displayProperty=nameWithType>  
- [Veri türleri](../../../visual-basic/language-reference/data-types/data-type-summary.md)  
- [Char veri türü](../../../visual-basic/language-reference/data-types/char-data-type.md)  
- [Tür dönüşüm işlevleri](../../../visual-basic/language-reference/functions/type-conversion-functions.md)  
- [Dönüştürme özeti](../../../visual-basic/language-reference/keywords/conversion-summary.md)  
- [Nasıl yapılır: imzalanmamış türler isteyen bir Windows işlevi çağırma](../../../visual-basic/programming-guide/com-interop/how-to-call-a-windows-function-that-takes-unsigned-types.md)  
- [Veri türlerinin etkili kullanımı](../../../visual-basic/programming-guide/language-features/data-types/efficient-use-of-data-types.md)
+ [Veri Türleri](../../../visual-basic/language-reference/data-types/data-type-summary.md)  
+ [Char Veri Türü](../../../visual-basic/language-reference/data-types/char-data-type.md)  
+ [Tür Dönüştürme İşlevleri](../../../visual-basic/language-reference/functions/type-conversion-functions.md)  
+ [Dönüştürme Özeti](../../../visual-basic/language-reference/keywords/conversion-summary.md)  
+ [Nasıl yapılır: İmzalanmamış Türler İsteyen Bir Windows İşlevi Çağırma](../../../visual-basic/programming-guide/com-interop/how-to-call-a-windows-function-that-takes-unsigned-types.md)  
+ [Veri Türlerinin Etkili Kullanımı](../../../visual-basic/programming-guide/language-features/data-types/efficient-use-of-data-types.md)

@@ -1,11 +1,6 @@
 ---
 title: Inherits Deyimi
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
-ms.topic: article
 f1_keywords:
 - vb.Inherits
 - Inherits
@@ -13,14 +8,11 @@ helpviewer_keywords:
 - Inherits statement [Visual Basic]
 - Inherits statement [Visual Basic], syntax
 ms.assetid: 9e6fe042-9af3-4341-8093-fc3537770cf2
-caps.latest.revision: "16"
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: ae9ba54c3fd1ec3332c9f6260bc19a1293270ad8
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 43a8aa4e9e04ee035cb52e9f829de13e5c022217
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="inherits-statement"></a>Inherits Deyimi
 Geçerli sınıf veya başka bir sınıf veya arabirim kümesine öznitelikleri, değişkenleri, özellikleri, yordamlar ve olayları devralmak için arabirimi neden olur.  
@@ -35,7 +27,7 @@ Inherits basetypenames
   
 |Terim|Tanım|  
 |---|---|  
-|`basetypenames`|Gerekli. Bu sınıf türetilen sınıfın adı.<br /><br /> veya<br /><br /> Bu arabirim türetilen arabirimleri adları. Birden çok ad ayırmak için virgül kullanın.|  
+|`basetypenames`|Gerekli. Bu sınıf türetilen sınıfın adı.<br /><br /> -veya-<br /><br /> Bu arabirim türetilen arabirimleri adları. Birden çok ad ayırmak için virgül kullanın.|  
   
 ## <a name="remarks"></a>Açıklamalar  
  Kullandıysanız, `Inherits` deyimi bir sınıf veya arabirim tanımı ilk boş olmayan ve yorum olmayan satır olması gerekir. Hemen izlemeniz gereken `Class` veya `Interface` deyimi.  
@@ -73,6 +65,6 @@ Inherits basetypenames
 ## <a name="see-also"></a>Ayrıca Bkz.  
  [MustInherit](../../../visual-basic/language-reference/modifiers/mustinherit.md)  
  [NotInheritable](../../../visual-basic/language-reference/modifiers/notinheritable.md)  
- [Nesneler ve sınıflar](../../../visual-basic/programming-guide/language-features/objects-and-classes/index.md)  
- [Devralma temelleri](../../../visual-basic/programming-guide/language-features/objects-and-classes/inheritance-basics.md)  
- [Arabirimleri](../../../visual-basic/programming-guide/language-features/interfaces/index.md)
+ [Nesneler ve Sınıflar](../../../visual-basic/programming-guide/language-features/objects-and-classes/index.md)  
+ [Devralma Temelleri](../../../visual-basic/programming-guide/language-features/objects-and-classes/inheritance-basics.md)  
+ [Arabirimler](../../../visual-basic/programming-guide/language-features/interfaces/index.md)

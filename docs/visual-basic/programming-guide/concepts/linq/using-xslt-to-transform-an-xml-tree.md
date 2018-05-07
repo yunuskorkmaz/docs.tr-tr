@@ -1,22 +1,12 @@
 ---
-title: "Bir XML ağacı (Visual Basic) dönüştürmek için XSLT kullanarak"
-ms.custom: 
+title: Bir XML ağacı (Visual Basic) dönüştürmek için XSLT kullanarak
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 3390ca68-c270-4e1d-b64b-6a063a77017c
-caps.latest.revision: "3"
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: 18637ecf786c3e44e7a07b5a1ca48cf3c8a4ae35
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: bee661ea2a3261d25ed9f9d1aabdc656c898610f
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="using-xslt-to-transform-an-xml-tree-visual-basic"></a>Bir XML ağacı (Visual Basic) dönüştürmek için XSLT kullanarak
 Bir XML ağacı oluşturma, oluşturma bir <xref:System.Xml.XmlReader> XML ağacından bir yeni belge oluşturun ve oluşturma bir <xref:System.Xml.XmlWriter> yeni belgeye yazacak. Sonra geçirme XSLT dönüşümü çağırabileceği <xref:System.Xml.XmlReader> ve <xref:System.Xml.XmlWriter> dönüştürme için. Dönüştürme başarıyla tamamlandıktan sonra yeni bir XML ağacı dönüşüm sonuçları ile doldurulur.  

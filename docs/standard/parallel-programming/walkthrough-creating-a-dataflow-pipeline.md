@@ -1,9 +1,7 @@
 ---
 title: 'İzlenecek Yol: Veri Akışı Ardışık Düzeni Oluşturma'
 ms.date: 03/30/2017
-ms.prod: .net
 ms.technology: dotnet-standard
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -14,15 +12,11 @@ helpviewer_keywords:
 ms.assetid: 69308f82-aa22-4ac5-833d-e748533b58e8
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-- dotnetcore
-ms.openlocfilehash: ce5af6f31a10f23703b761e041b21f08b71952b9
-ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
+ms.openlocfilehash: e55d902971c5cea64cf14458f09e58fb47e2d0aa
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/27/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="walkthrough-creating-a-dataflow-pipeline"></a>İzlenecek Yol: Veri Akışı Ardışık Düzeni Oluşturma
 Kullanabilirsiniz ancak <xref:System.Threading.Tasks.Dataflow.DataflowBlock.Receive%2A?displayProperty=nameWithType>, <xref:System.Threading.Tasks.Dataflow.DataflowBlock.ReceiveAsync%2A?displayProperty=nameWithType>, ve <xref:System.Threading.Tasks.Dataflow.DataflowBlock.TryReceive%2A?displayProperty=nameWithType> ileti almak için yöntemleri kaynak blokları, ileti blokları forma bağlanabilir bir *veri akışı ardışık düzenleri*. Bir veri akışı ardışık düzeni bileşenleri dizisidir veya *veri akışı blokları*, her biri daha büyük bir hedefe katkıda bulunan belirli bir görevi gerçekleştirir. Başka bir veri akışı bloğundan bir ileti aldığında, her bir veri akışı ardışık düzen veri akışı bloğunda çalışma gerçekleştirir. Benzetme bu otomobil üretim için bir derleme satırdır. Her araç derleme satırın geçerken bir istasyon çerçeve derler, bir sonraki altyapısı vb. yükler. Bir derleme satırı aynı anda birleştirilen birden çok taşıtlardan sağladığından, aynı anda tam taşıtlardan bir birleştirme daha iyi verimlilik sağlar.

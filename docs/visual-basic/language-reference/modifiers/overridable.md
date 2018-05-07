@@ -1,10 +1,6 @@
 ---
-title: "Geçersiz Kılınabilir (Visual Basic)"
+title: Geçersiz Kılınabilir (Visual Basic)
 ms.date: 07/20/2015
-ms.prod: .net
-ms.suite: 
-ms.technology: devlang-visual-basic
-ms.topic: article
 f1_keywords:
 - Overridable
 - vb.Overridable
@@ -20,14 +16,11 @@ helpviewer_keywords:
 - Overridable keyword [Visual Basic]
 - properties [Visual Basic], overriding
 ms.assetid: 612581e7-8a4c-4a5d-beff-3402fffa6f35
-caps.latest.revision: "17"
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: f7d5dd33f8591be1b4305e954e55e035882626c6
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 4844bf7f3ecf23335715b950a96be15e54ebc601
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="overridable-visual-basic"></a>Geçersiz Kılınabilir (Visual Basic)
 Aynı adlı bir özellik veya türetilmiş bir sınıf yordamda bir özellik veya yordam kılınabilir belirtir.  
@@ -53,17 +46,17 @@ Aynı adlı bir özellik veya türetilmiş bir sınıf yordamda bir özellik vey
 ## <a name="usage"></a>Kullanım  
  `Overridable` Değiştiricisi bu bağlamlarında kullanılabilir:  
   
- [Function deyimi](../../../visual-basic/language-reference/statements/function-statement.md)  
+ [Function Deyimi](../../../visual-basic/language-reference/statements/function-statement.md)  
   
- [Property deyimi](../../../visual-basic/language-reference/statements/property-statement.md)  
+ [Property Deyimi](../../../visual-basic/language-reference/statements/property-statement.md)  
   
- [Sub deyimi](../../../visual-basic/language-reference/statements/sub-statement.md)  
+ [Sub Deyimi](../../../visual-basic/language-reference/statements/sub-statement.md)  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
  [Değiştiriciler](../../../visual-basic/language-reference/modifiers/index.md)  
- [Devralma temelleri](../../../visual-basic/programming-guide/language-features/objects-and-classes/inheritance-basics.md)  
+ [Devralma Temelleri](../../../visual-basic/programming-guide/language-features/objects-and-classes/inheritance-basics.md)  
  [MustOverride](../../../visual-basic/language-reference/modifiers/mustoverride.md)  
  [NotOverridable](../../../visual-basic/language-reference/modifiers/notoverridable.md)  
- [Geçersiz kılmaları](../../../visual-basic/language-reference/modifiers/overrides.md)  
- [Anahtar sözcükler](../../../visual-basic/language-reference/keywords/index.md)  
+ [Overrides](../../../visual-basic/language-reference/modifiers/overrides.md)  
+ [Anahtar Sözcükler](../../../visual-basic/language-reference/keywords/index.md)  
  [Visual Basic'de gölgeleme](../../../visual-basic/programming-guide/language-features/declared-elements/shadowing.md)

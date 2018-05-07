@@ -1,26 +1,12 @@
 ---
 title: .NET Uzaktan İletişimden WCF'ye Taşınma
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 ms.assetid: 16902a42-ef80-40e9-8c4c-90e61ddfdfe5
-caps.latest.revision: ''
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 6b387e100ff881c5394b6a77716a733b3928eae9
-ms.sourcegitcommit: c883637b41ee028786edceece4fa872939d2e64c
+ms.openlocfilehash: 6041cd9ac066d932811cc489222c8cbf03debb75
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/26/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="migrating-from-net-remoting-to-wcf"></a>.NET Uzaktan İletişimden WCF'ye Taşınma
 Bu makalede, Windows Communication Foundation (WCF) kullanmak için .NET uzaktan iletişim kullanan bir uygulamayı geçirmek üzere açıklar. Bu ürünler arasında benzer kavram karşılaştırır ve WCF birkaç ortak Remoting senaryolarda yüklemenin nasıl yapılacağını açıklar.  
@@ -34,7 +20,7 @@ Bu makalede, Windows Communication Foundation (WCF) kullanmak için .NET uzaktan
 |-|-------------------|---------|  
 |Sunucu türü|Subclass MarshalByRefObject|[ServiceContract] özniteliği ile işaretleme|  
 |Hizmet işlemleri|Sunucu türü üzerinde genel yöntemler|[OperationContract] özniteliği ile işaretleme|  
-|Serileştirme|ISerializable veya [Serializable]|DataContractSerializer or XmlSerializer|  
+|Serileştirme|ISerializable veya [Serializable]|DataContractSerializer veya XmlSerializer|  
 |Geçirilen nesneleri|Değer tarafından veya başvuru tarafından|Tarafından yalnızca değeri|  
 |Hataları/özel durumlar|Seri hale getirilebilir özel durumları|FaultContract\<TDetail >|  
 |İstemci proxy nesneleri|Kesin türü belirtilmiş saydam proxy'leri bulunan MarshalByRefObjects için otomatik olarak oluşturulur|Kesin türü belirtilmiş proxy'leri üretilen isteğe bağlı ChannelFactory kullanma\<TChannel >|  

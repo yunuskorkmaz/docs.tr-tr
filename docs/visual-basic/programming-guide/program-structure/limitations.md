@@ -1,13 +1,6 @@
 ---
 title: Visual Basic Sınırlamaları
-ms.custom: ''
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- devlang-visual-basic
-ms.topic: article
 helpviewer_keywords:
 - limits
 - limitations [Visual Basic]
@@ -15,14 +8,11 @@ helpviewer_keywords:
 - limits, Visual Basic code
 - Visual Basic code, limitations
 ms.assetid: cf1646b7-5d24-48c6-9616-bda8a4849d91
-caps.latest.revision: 14
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: d06b743996969dcd7fc022bbb8ab625f3a151137
-ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
+ms.openlocfilehash: 57378c3aa18a5cc108c10e8654e55803f3cf9052
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="visual-basic-limitations"></a>Visual Basic Sınırlamaları
 Önceki sürümleri, Visual Basic değişken adları, modüller ve modül boyutu izin verilen değişken sayısı uzunluğu gibi kodda sınırları zorunlu. Visual Basic .NET içinde bu kısıtlamalar, yazma ve düzenleme kodunuzu büyük özgürlüğünü rahat.  

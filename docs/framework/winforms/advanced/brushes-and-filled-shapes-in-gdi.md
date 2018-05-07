@@ -1,13 +1,6 @@
 ---
-title: "GDI+'da Fırçalar ve Dolgulu Şekiller"
-ms.custom: 
+title: GDI+'da Fırçalar ve Dolgulu Şekiller
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-winforms
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -20,19 +13,14 @@ helpviewer_keywords:
 - gradient brushes
 - brushes [Windows Forms], gradient
 ms.assetid: e863e2a7-0294-4130-99b6-f1ea3201e7cd
-caps.latest.revision: "15"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 89f0a7c86a83222030d9b50e20228f32e85ce730
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 9475518a5f0422e0eac1ec521088071bb4d1c885
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="brushes-and-filled-shapes-in-gdi"></a>GDI+'da Fırçalar ve Dolgulu Şekiller
-Dikdörtgene veya bir elips gibi kapalı bir şekil ana hattı ve bir iç oluşur. Anahat kalem ile çizilir ve iç fırça ile doldurulur. [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)]kapalı şekiller evin içindekiler doldurmak için birkaç fırça sınıflar sağlar: <xref:System.Drawing.SolidBrush>, <xref:System.Drawing.Drawing2D.HatchBrush>, <xref:System.Drawing.TextureBrush>, <xref:System.Drawing.Drawing2D.LinearGradientBrush>, ve <xref:System.Drawing.Drawing2D.PathGradientBrush>. Tüm bu sınıfların devralınmalıdır <xref:System.Drawing.Brush> sınıfı. Aşağıdaki çizimde bir dikdörtgen düz fırça ile doldurulur ve tarama fırça ile elips doldurulmuş gösterir.  
+Dikdörtgene veya bir elips gibi kapalı bir şekil ana hattı ve bir iç oluşur. Anahat kalem ile çizilir ve iç fırça ile doldurulur. [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] kapalı şekiller evin içindekiler doldurmak için birkaç fırça sınıflar sağlar: <xref:System.Drawing.SolidBrush>, <xref:System.Drawing.Drawing2D.HatchBrush>, <xref:System.Drawing.TextureBrush>, <xref:System.Drawing.Drawing2D.LinearGradientBrush>, ve <xref:System.Drawing.Drawing2D.PathGradientBrush>. Tüm bu sınıfların devralınmalıdır <xref:System.Drawing.Brush> sınıfı. Aşağıdaki çizimde bir dikdörtgen düz fırça ile doldurulur ve tarama fırça ile elips doldurulmuş gösterir.  
   
  ![Doldurulmuş şekiller](../../../../docs/framework/winforms/advanced/media/aboutgdip02-art17.gif "Aboutgdip02_art17")  
   
@@ -51,7 +39,7 @@ Dikdörtgene veya bir elips gibi kapalı bir şekil ana hattı ve bir iç oluşu
  [!code-csharp[LinesCurvesAndShapes#122](../../../../samples/snippets/csharp/VS_Snippets_Winforms/LinesCurvesAndShapes/CS/Class1.cs#122)]
  [!code-vb[LinesCurvesAndShapes#122](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/LinesCurvesAndShapes/VB/Class1.vb#122)]  
   
- [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)]50'den fazla tarama stili sağlar; Aşağıdaki çizimde gösterilen üç stillerdir <xref:System.Drawing.Drawing2D.HatchStyle.Horizontal>, <xref:System.Drawing.Drawing2D.HatchStyle.ForwardDiagonal>, ve <xref:System.Drawing.Drawing2D.HatchStyle.Cross>.  
+ [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] 50'den fazla tarama stili sağlar; Aşağıdaki çizimde gösterilen üç stillerdir <xref:System.Drawing.Drawing2D.HatchStyle.Horizontal>, <xref:System.Drawing.Drawing2D.HatchStyle.ForwardDiagonal>, ve <xref:System.Drawing.Drawing2D.HatchStyle.Cross>.  
   
  ![Doldurulmuş şekiller](../../../../docs/framework/winforms/advanced/media/aboutgdip02-art18.gif "Aboutgdip02_art18")  
   
@@ -70,7 +58,7 @@ Dikdörtgene veya bir elips gibi kapalı bir şekil ana hattı ve bir iç oluşu
  ![Doldurulmuş şekil](../../../../docs/framework/winforms/advanced/media/aboutgdip02-art20.gif "AboutGdip02_Art20")  
   
 ## <a name="gradient-brushes"></a>Gradyan Fırçalar  
- [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)]Gradyan Fırçalar iki tür sağlar: doğrusal ve yolu. Bir şekli kademeli olarak şekli arasında taşıdığınızda gibi yatay, dikey veya çapraz değişiklikler renkle doldurmak için doğrusal gradyan fırçası kullanabilirsiniz. Aşağıdaki kod örneğinde elips elips sol kenarından sağ kenarı hareket ederken, yeşil mavi değişiklikler yatay bir gradyan fırçası doldurmak nasıl gösterir.  
+ [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] Gradyan Fırçalar iki tür sağlar: doğrusal ve yolu. Bir şekli kademeli olarak şekli arasında taşıdığınızda gibi yatay, dikey veya çapraz değişiklikler renkle doldurmak için doğrusal gradyan fırçası kullanabilirsiniz. Aşağıdaki kod örneğinde elips elips sol kenarından sağ kenarı hareket ederken, yeşil mavi değişiklikler yatay bir gradyan fırçası doldurmak nasıl gösterir.  
   
  [!code-csharp[LinesCurvesAndShapes#124](../../../../samples/snippets/csharp/VS_Snippets_Winforms/LinesCurvesAndShapes/CS/Class1.cs#124)]
  [!code-vb[LinesCurvesAndShapes#124](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/LinesCurvesAndShapes/VB/Class1.vb#124)]  

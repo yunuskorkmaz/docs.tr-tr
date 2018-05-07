@@ -1,31 +1,19 @@
 ---
 title: İstemcileri Güvenli Hale Getirme
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 helpviewer_keywords:
 - clients [WCF], security considerations
 ms.assetid: 44c8578c-9a5b-4acd-8168-1c30a027c4c5
-caps.latest.revision: 22
 author: BrucePerlerMS
-ms.author: bruceper
 manager: mbaldwin
-ms.workload:
-- dotnet
-ms.openlocfilehash: 7d06df1a9c4ef5a7cb64f71d2f7afc77c41a0e6f
-ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
-ms.translationtype: MT
+ms.openlocfilehash: 34e7a3721fc70b5c418f0e473e09d9dacc8d9f15
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/30/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="securing-clients"></a>İstemcileri Güvenli Hale Getirme
-İçinde [!INCLUDE[indigo1](../../../includes/indigo1-md.md)], istemciler için güvenlik gereksinimlerini hizmet belirler. Diğer bir deyişle, hizmeti kullanmak için hangi güvenlik modunu belirtir ve istemci bir kimlik bilgisi olup olmadığına sağlamanız gerekir. Bir istemci, bu nedenle, güvenli hale getirme işlemi basittir: bir istemciyi derlemek ve (yayımlanırsa) hizmetinden alınan meta veriler kullanın. Meta veriler istemcisinin nasıl yapılandırılacağını belirtir. Hizmet istemci kimlik bilgileri sağlamanız gerektiriyorsa, gereksinime uyan bir kimlik bilgisi edinmeniz gerekir. Bu konuda daha ayrıntılı ele alınmaktadır. Güvenli bir hizmet oluşturma hakkında daha fazla bilgi için bkz: [Hizmetleri güvenli hale getirme](../../../docs/framework/wcf/securing-services.md).  
+Windows Communication Foundation (WCF) hizmetini istemcileri için güvenlik gereksinimlerini belirler. Diğer bir deyişle, hizmeti kullanmak için hangi güvenlik modunu belirtir ve istemci bir kimlik bilgisi olup olmadığına sağlamanız gerekir. Bir istemci, bu nedenle, güvenli hale getirme işlemi basittir: bir istemciyi derlemek ve (yayımlanırsa) hizmetinden alınan meta veriler kullanın. Meta veriler istemcisinin nasıl yapılandırılacağını belirtir. Hizmet istemci kimlik bilgileri sağlamanız gerektiriyorsa, gereksinime uyan bir kimlik bilgisi edinmeniz gerekir. Bu konuda daha ayrıntılı ele alınmaktadır. Güvenli bir hizmet oluşturma hakkında daha fazla bilgi için bkz: [Hizmetleri güvenli hale getirme](../../../docs/framework/wcf/securing-services.md).  
   
 ## <a name="the-service-specifies-security"></a>Güvenlik hizmeti belirtir  
  Varsayılan olarak, [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] bağlamaları etkin güvenlik özellikleri vardır. (Özel durum <xref:System.ServiceModel.BasicHttpBinding>.) Bu nedenle, hizmetin kullanarak oluşturduysanız [!INCLUDE[indigo2](../../../includes/indigo2-md.md)], kimlik doğrulaması, gizliliği ve bütünlük sağlamak için güvenlik uygulamak büyük bir olasılığı yüksektir. Bu durumda, hizmeti sağlayan meta verileri hangi güvenli bir iletişim kanalı kurulamadı gerektirdiğini gösterir. Hizmet meta verileri tüm güvenlik gereksinimleriniz içermiyorsa, güvenlik, bir düzeni gibi Güvenli Yuva Katmanı (SSL) HTTP üzerinden bir hizmete koymak için yolu yoktur. Ancak, hizmet bir kimlik bilgisi sağlamak istemci gerektiriyorsa, istemci hizmete kendi kimliğini doğrulamak için kullanacağınız gerçek kimlik bilgisi istemci geliştirici, dağıtıcı veya yönetici sağlamalısınız.  

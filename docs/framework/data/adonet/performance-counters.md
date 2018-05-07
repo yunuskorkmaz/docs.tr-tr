@@ -1,29 +1,15 @@
 ---
 title: ADO.NET performans sayaçları
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-ado
-ms.tgt_pltfrm: ''
-ms.topic: article
 dev_langs:
 - csharp
 - vb
 ms.assetid: 0b121b71-78f8-4ae2-9aa1-0b2e15778e57
-caps.latest.revision: 5
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
-ms.workload:
-- dotnet
-ms.openlocfilehash: a36e552392f887cd4e0f6dfac822c87f08a90af7
-ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
+ms.openlocfilehash: 8696bf567d8f32fc3bc3f78e127631f488c551aa
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="performance-counters-in-adonet"></a>ADO.NET performans sayaçları
 ADO.NET 2.0 sunulan her ikisi de desteği içeren performans sayaçları için Genişletilmiş Destek <xref:System.Data.SqlClient> ve <xref:System.Data.OracleClient>. <xref:System.Data.SqlClient> ADO.NET önceki sürümlerinde kullanılabilen performans sayaçlarının kullanım ve bu konuda tartışılan yeni performans sayaçları ile değiştirilir. ADO.NET performans sayaçları, uygulamanız ve kullandığı bağlantı kaynaklarını durumunu izlemek için kullanabilirsiniz. Performans sayaçlarını Windows Performans İzleyicisi'ni kullanarak izlenebilir veya program aracılığıyla kullanılarak erişilebilir <xref:System.Diagnostics.PerformanceCounter> sınıfını <xref:System.Diagnostics> ad alanı.  

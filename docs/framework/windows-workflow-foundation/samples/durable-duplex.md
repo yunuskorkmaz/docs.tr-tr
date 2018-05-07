@@ -1,30 +1,18 @@
 ---
 title: Dayanıklı Çift Yönlü
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.tgt_pltfrm: ''
-ms.topic: article
 ms.assetid: 4e76d1a1-f3d8-4a0f-8746-4a322cdff6eb
-caps.latest.revision: 10
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 50d0ac9efae8e6d795455a63d793b2e84407b987
-ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
-ms.translationtype: MT
+ms.openlocfilehash: 91490eb3ee6c11f29bb49d8343b807e74e8d3bc2
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/27/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="durable-duplex"></a>Dayanıklı Çift Yönlü
 Bu örnek, ayarlama ve mesajlaşma etkinlikleri Windows Workflow Foundation (WF) kullanan dayanıklı çift yönlü ileti alışverişi yapılandırma gösterilmektedir. Dayanıklı çift yönlü ileti değişimi gerçekleşir uzun bir süre boyunca bir iki yönlü ileti değişimi ' dir. İleti değişimi ömrü iletişim kanalını ömrü ve hizmet örnekleri bellek içi ömrü uzun olabilir.  
   
 ## <a name="sample-details"></a>Örnek Ayrıntıları  
- Bu örnekte, iki [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] Windows Workflow Foundation kullanılarak uygulanan Hizmetleri dayanıklı çift yönlü ileti değişimi için yapılandırılır. Dayanıklı çift yönlü ileti değişimi MSMQ gönderilir ve kullanılarak bağıntılı iki tek yönlü gelen iletileri oluşan [.NET bağlam değişimi](http://go.microsoft.com/fwlink/?LinkID=166059). İletileri kullanılarak gönderilen <xref:System.ServiceModel.Activities.Send> ve <xref:System.ServiceModel.Activities.Receive> Mesajlaşma etkinlikleri. .NET bağlam değişimi gönderilen iletileri geri çağırma adresini belirtmek için kullanın. Her iki hizmet Windows İşlem Etkinleştirme Hizmetleri (WAS) kullanılarak barındırılır ve Hizmetleri örneklerinin Kalıcılık etkinleştirmek için yapılandırılır.  
+ Bu örnekte, iki Windows Communication Foundation (WCF) hizmetlerini Windows Workflow Foundation kullanılarak uygulanan bir dayanıklı çift yönlü ileti alışverişi olacak şekilde yapılandırılmış. Dayanıklı çift yönlü ileti değişimi MSMQ gönderilir ve kullanılarak bağıntılı iki tek yönlü gelen iletileri oluşan [.NET bağlam değişimi](http://go.microsoft.com/fwlink/?LinkID=166059). İletileri kullanılarak gönderilen <xref:System.ServiceModel.Activities.Send> ve <xref:System.ServiceModel.Activities.Receive> Mesajlaşma etkinlikleri. .NET bağlam değişimi gönderilen iletileri geri çağırma adresini belirtmek için kullanın. Her iki hizmet Windows İşlem Etkinleştirme Hizmetleri (WAS) kullanılarak barındırılır ve Hizmetleri örneklerinin Kalıcılık etkinleştirmek için yapılandırılır.  
   
  İlk hizmet (Service1.xamlx) biraz çalışmanız gönderme hizmete (Service2.xamlx) bir isteği gönderir. İş tamamlandığında, Service2.xamlx iş tamamlanıp tamamlanmadığını göstermek için geri için Service1.xamlx bir bildirim gönderir. Bir iş akışı konsol uygulaması hizmetlerin dinlediği sıralarını ayarlar ve Service1.xamlx etkinleştirmek için ilk başlatma iletisi gönderir. İstenen iş tamamlandı Service2.xamlx bildirimden service1.xamlx aldıktan sonra Service1.xamlx sonucu bir XML dosyasına kaydeder. Geri çağırma ileti için beklenirken Service1.xamlx varsayılan kullanılarak örneği durumu devam <xref:System.ServiceModel.Activities.Description.WorkflowIdleBehavior>. Service2.xamlx örneği durumuna Service1.xamlx tarafından istenen çalışmayı tamamladıktan bir parçası olarak devam ettirir.  
   
@@ -190,6 +178,6 @@ Bu örnek, ayarlama ve mesajlaşma etkinlikleri Windows Workflow Foundation (WF)
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  Bu dizin mevcut değilse, Git [Windows Communication Foundation (WCF) ve .NET Framework 4 için Windows Workflow Foundation (WF) örnek](http://go.microsoft.com/fwlink/?LinkId=150780) tüm indirmek için [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] ve [!INCLUDE[wf1](../../../../includes/wf1-md.md)] örnekleri. Bu örnek aşağıdaki dizinde bulunur.  
+>  Bu dizin mevcut değilse, Git [Windows Communication Foundation (WCF) ve .NET Framework 4 için Windows Workflow Foundation (WF) örnek](http://go.microsoft.com/fwlink/?LinkId=150780) tüm Windows Communication Foundation (WCF) indirmek için ve [!INCLUDE[wf1](../../../../includes/wf1-md.md)] örnekleri. Bu örnek aşağıdaki dizinde bulunur.  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WF\Basic\Services\DurableDuplex`

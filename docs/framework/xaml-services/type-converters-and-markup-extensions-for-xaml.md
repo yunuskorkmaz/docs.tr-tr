@@ -1,14 +1,6 @@
 ---
 title: XAML İçin Tür Dönüştürücüleri ve İşaretleme Uzantıları
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-wpf
-ms.tgt_pltfrm: ''
-ms.topic: article
 helpviewer_keywords:
 - XAML [XAML Services], type converter services
 - XAML [XAML Services], value converters
@@ -16,17 +8,11 @@ helpviewer_keywords:
 - value converters for XAML [XAML Services]
 - XAML [XAML Services], service context
 ms.assetid: db07a952-05ce-4aa4-b6f9-aac7397d0326
-caps.latest.revision: 13
-author: wadepickett
-ms.author: wpickett
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: a6ab52105785dc1efbffe093cdafb12cdf8eac4d
-ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
+ms.openlocfilehash: 0c9cb7e87416860dda98df0da967ffbc070bc270
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/30/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="type-converters-and-markup-extensions-for-xaml"></a>XAML İçin Tür Dönüştürücüleri ve İşaretleme Uzantıları
 Tür dönüştürücüleri ve İşaretleme uzantıları Nesne grafiği bileşenleri oluşturmak için XAML türü sistemleri ve XAML yazıcılarının kullanan iki tekniklerle aynıdır. Bazı özellikleri paylaşır rağmen tür dönüştürücüleri ve İşaretleme uzantıları farklı bir XAML düğüm akış gösterilir. Bu belgede kümesi, tür dönüştürücüleri, biçimlendirme uzantıları ve benzer yapıları bazen topluca için değer dönüştürücüler bilinir.  
@@ -45,7 +31,7 @@ Tür dönüştürücüleri ve İşaretleme uzantıları Nesne grafiği bileşenl
   
 <a name="type_converters"></a>   
 ## <a name="type-converters"></a>Tür dönüştürücüleri  
- .NET Framework XAML hizmetlerinde tanımında tür dönüştürücüleri CLR türetilen sınıflardır <xref:System.ComponentModel.TypeConverter> sınıfı. <xref:System.ComponentModel.TypeConverter> içinde bir sınıf [!INCLUDE[TLA#tla_netframewk](../../../includes/tlasharptla-netframewk-md.md)] XAML yokken. Özellik windows ve metin tabanlı benzer düzenleme metaphors için destek için özgün amacı olan [!INCLUDE[TLA2#tla_ide](../../../includes/tla2sharptla-ide-md.md)] özellikleri. .NET Framework XAML giriş kullanan <xref:System.ComponentModel.TypeConverter> metin sözdizimini (olarak bir öznitelik değeri ya da XAML değer düğümü bulundu) bir nesnesine dönüştürmek için. <xref:System.ComponentModel.TypeConverter> Ayrıca bir nesne değeri metin sözdizimi için seri hale getirmek için kullanılabilir. <xref:System.ComponentModel.TypeConverter> Ayrıca Windows Presentation Foundation (WPF) ve Windows Communication Foundation (WCF) önceki çerçeveye özel XAML uygulamalarında kullanıldı. Hakkında daha fazla bilgi için <xref:System.ComponentModel.TypeConverter> XAML'de bkz [XAML genel bakış için tür dönüştürücüleri](../../../docs/framework/xaml-services/type-converters-for-xaml-overview.md).  
+ .NET Framework XAML hizmetlerinde tanımında tür dönüştürücüleri CLR türetilen sınıflardır <xref:System.ComponentModel.TypeConverter> sınıfı. <xref:System.ComponentModel.TypeConverter> Microsoft .NET Framework XAML yokken olan bir sınıftır. Özellik windows ve metin tabanlı benzer düzenleme metaphors için destek için özgün amacı olan [!INCLUDE[TLA2#tla_ide](../../../includes/tla2sharptla-ide-md.md)] özellikleri. .NET Framework XAML giriş kullanan <xref:System.ComponentModel.TypeConverter> metin sözdizimini (olarak bir öznitelik değeri ya da XAML değer düğümü bulundu) bir nesnesine dönüştürmek için. <xref:System.ComponentModel.TypeConverter> Ayrıca bir nesne değeri metin sözdizimi için seri hale getirmek için kullanılabilir. <xref:System.ComponentModel.TypeConverter> Ayrıca Windows Presentation Foundation (WPF) ve Windows Communication Foundation (WCF) önceki çerçeveye özel XAML uygulamalarında kullanıldı. Hakkında daha fazla bilgi için <xref:System.ComponentModel.TypeConverter> XAML'de bkz [XAML genel bakış için tür dönüştürücüleri](../../../docs/framework/xaml-services/type-converters-for-xaml-overview.md).  
   
 <a name="markup_extensions"></a>   
 ## <a name="markup-extensions"></a>İşaretleme uzantıları  

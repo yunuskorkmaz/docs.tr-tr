@@ -1,25 +1,15 @@
 ---
-title: "LINQ'i Destekleyen Visual Basic Özellikleri"
-ms.custom: 
+title: LINQ'i Destekleyen Visual Basic Özellikleri
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - Visual Basic, LINQ features
 - LINQ [Visual Basic], features supporting LINQ
 ms.assetid: c821bb50-b6f6-4cf9-8aba-2717e465bd3a
-caps.latest.revision: "51"
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: 42465dbb168b7961792aec6b3c2bb7ae8f0a3355
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: db2eff2f7c19a3c510e7b212f5bb406d7a885439
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="visual-basic-features-that-support-linq"></a>LINQ'i Destekleyen Visual Basic Özellikleri
 Adı [!INCLUDE[vbteclinqext](~/includes/vbteclinqext-md.md)] teknolojisi Visual Basic'de sorgu sözdizimi destekler ve doğrudan dilde başka bir dil yapıları başvuruyor. İle [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)], dış veri kaynağına karşı sorgu için yeni bir dil öğrenin gerekmez. İlişkisel veritabanları, XML depoları veya nesneler verileri karşı Visual Basic kullanarak sorgulayabilirsiniz. Bu tümleştirme dile sorgu özelliklerinin sözdizimi hataları ve tür güvenliği için derleme zamanı denetimini etkinleştirir. Bu tümleştirme, aynı zamanda Visual Basic'te zengin, çeşitli sorguları yazmaya bilmek zorunda çoğu zaten biliyor sağlar.  
@@ -106,5 +96,5 @@ Adı [!INCLUDE[vbteclinqext](~/includes/vbteclinqext-md.md)] teknolojisi Visual 
  [Dil ile tümleşik sorgu (LINQ) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/index.md)  
  [Visual Basic'te Lınq'e Başlarken](../../../../visual-basic/programming-guide/concepts/linq/getting-started-with-linq.md)  
  [LINQ ve dizeler (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-and-strings.md)  
- [Option Infer deyimi](../../../../visual-basic/language-reference/statements/option-infer-statement.md)  
- [Option Strict deyimi](../../../../visual-basic/language-reference/statements/option-strict-statement.md)
+ [Option Infer Deyimi](../../../../visual-basic/language-reference/statements/option-infer-statement.md)  
+ [Option Strict Deyimi](../../../../visual-basic/language-reference/statements/option-strict-statement.md)

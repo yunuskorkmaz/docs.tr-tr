@@ -1,28 +1,19 @@
 ---
-title: '&lt;type1&gt;&#39;&lt; TypeName&gt;&#39; zorunlu uygulama &#39;&lt; membername&gt;&#39; arabirimi &#39;&lt; InterfaceName&gt;&#39;'
+title: '&lt;type1&gt;&#39;&lt;typename&gt; &#39; uygulamalıdır &#39; &lt;membername&gt; &#39; arabirimi için &#39; &lt;InterfaceName&gt;&#39;'
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- devlang-visual-basic
-ms.topic: article
 f1_keywords:
 - vbc30154
 - bc30154
 helpviewer_keywords:
 - BC30154
 ms.assetid: 259afdfa-3608-4760-adcb-88ec0da5020d
-caps.latest.revision: 
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: 05e0229d0259c519d4db265c017a5040b425c79a
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 0f93bd137bdc21268cbca139ae739843561350ac
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
-# <a name="lttype1gt39lttypenamegt39-must-implement-39ltmembernamegt39-for-interface-39ltinterfacenamegt39"></a>&lt;type1&gt;&#39;&lt; TypeName&gt;&#39; zorunlu uygulama &#39;&lt; membername&gt;&#39; arabirimi &#39;&lt; InterfaceName&gt;&#39;
+# <a name="lttype1gt39lttypenamegt39-must-implement-39ltmembernamegt39-for-interface-39ltinterfacenamegt39"></a>&lt;type1&gt;&#39;&lt;typename&gt; &#39; uygulamalıdır &#39; &lt;membername&gt; &#39; arabirimi için &#39; &lt;InterfaceName&gt;&#39;
 '\<typename >' uygulamalıdır '\<membername >' arabirimi için '\<InterfaceName >'. Özellik uygulama olmalıdır eşleşen 'ReadOnly' / 'WriteOnly' tanımlayıcıları.  
   
  Bir sınıf veya yapı bir arabirim talep ancak yordamı, özelliği veya arabirim tarafından tanımlanan olay uygulamıyor. Her üye arabirimin uygulanması gerekir.  
@@ -44,5 +35,5 @@ ms.lasthandoff: 11/21/2017
 4.  Bir özellik uygularken bildirme `Get` ve `Set` uygun yordamlar.  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [Implements deyimi](../../../visual-basic/language-reference/statements/implements-statement.md)  
- [Arabirimleri](../../../visual-basic/programming-guide/language-features/interfaces/index.md)
+ [Implements Deyimi](../../../visual-basic/language-reference/statements/implements-statement.md)  
+ [Arabirimler](../../../visual-basic/programming-guide/language-features/interfaces/index.md)

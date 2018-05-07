@@ -1,21 +1,14 @@
 ---
-title: "Ne zaman Docker kapsayıcıları için .NET Framework seçin"
-description: "Kapsayıcılı .NET uygulamaları için .NET mikro mimarisi | Ne zaman Docker kapsayıcıları için .NET Framework seçin"
-keywords: Docker, Microservices, ASP.NET, Container
+title: Ne zaman Docker kapsayıcıları için .NET Framework seçin
+description: Kapsayıcılı .NET uygulamaları için .NET mikro mimarisi | Ne zaman Docker kapsayıcıları için .NET Framework seçin
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 10/18/2017
-ms.prod: .net-core
-ms.technology: dotnet-docker
-ms.topic: article
-ms.workload:
-- dotnet
-- dotnetcore
-ms.openlocfilehash: eec258ff01bcfeb834fa7a1138fdf822fd00c996
-ms.sourcegitcommit: c3957fdb990060559d73cca44ab3e2c7b4d049c0
+ms.openlocfilehash: e707c8f0e721915e829e41628891928594010b92
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/05/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="when-to-choose-net-framework-for-docker-containers"></a>Ne zaman Docker kapsayıcıları için .NET Framework seçin
 
@@ -58,10 +51,10 @@ Bu arada, herhangi bir platform veya Azure hizmetinde hala .NET Core kendi istem
 -   **.NET core Kılavuzu**
     [*https://docs.microsoft.com/dotnet/core/index*](../../../core/index.md)
 
--   **.NET Framework'teki .NET Core taşıma**
+-   **.NET Core için .NET Framework'bağlantı noktası oluşturma**
     [*https://docs.microsoft.com/dotnet/core/porting/index*](../../../core/porting/index.md)
 
--   **.NET framework Docker kılavuzu üzerinde**
+-   **.NET framework üzerine Docker Kılavuzu**
     [*https://docs.microsoft.com/dotnet/framework/docker/*](../../../framework/docker/index.md)
 
 -   **.NET bileşenleri'ne genel bakış**

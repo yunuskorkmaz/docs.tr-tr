@@ -1,12 +1,6 @@
 ---
 title: -= İşleci (Visual Basic)
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- devlang-visual-basic
-ms.topic: article
 f1_keywords:
 - vb.-=
 helpviewer_keywords:
@@ -16,14 +10,11 @@ helpviewer_keywords:
 - operator -=
 - compound assignment statements [Visual Basic]
 ms.assetid: 5ead0c37-ae50-48f7-8435-8e341d81cae1
-caps.latest.revision: 19
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: 753e3efca311da9e09c67131969626ff59c130f0
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 598fd9db4262d0a33bf0408ebe9455760d5e4506
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="--operator-visual-basic"></a>-= İşleci (Visual Basic)
 Değerinden ifade bir değişken veya özellik değeri çıkarır ve değişken ya da özelliği için sonuç atar.  
@@ -57,7 +48,7 @@ variableorproperty -= expression
 ## <a name="see-also"></a>Ayrıca Bkz.  
  [-İşleci (Visual Basic)](../../../visual-basic/language-reference/operators/subtraction-operator.md)  
  [Atama İşleçleri](../../../visual-basic/language-reference/operators/assignment-operators.md)  
- [Aritmetik işleçler](../../../visual-basic/language-reference/operators/arithmetic-operators.md)  
+ [Aritmetik İşleçler](../../../visual-basic/language-reference/operators/arithmetic-operators.md)  
  [Visual Basic'de İşleç önceliği](../../../visual-basic/language-reference/operators/operator-precedence.md)  
- [İşlevselliğe göre listelenmiş işleçler](../../../visual-basic/language-reference/operators/operators-listed-by-functionality.md)  
- [Deyimleri](../../../visual-basic/programming-guide/language-features/statements.md)
+ [İşlevselliğe Göre Listelenmiş İşleçler](../../../visual-basic/language-reference/operators/operators-listed-by-functionality.md)  
+ [Deyimler](../../../visual-basic/programming-guide/language-features/statements.md)

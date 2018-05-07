@@ -1,10 +1,6 @@
 ---
 title: 'Nasıl yapılır: Temel Bir Windows Communication Foundation Hizmeti Barındırma ve Çalıştırma'
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.technology:
-- dotnet-clr
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -12,21 +8,16 @@ helpviewer_keywords:
 - WCF services [WCF]
 - WCF services [WCF], running
 ms.assetid: 31774d36-923b-4e2d-812e-aa190127266f
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: d8c9fdefd286e32b169b96065e6164a236941133
-ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
+ms.openlocfilehash: 68e19d1decd4205f047c51456fe3f345e092a8ae
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/30/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-host-and-run-a-basic-windows-communication-foundation-service"></a>Nasıl yapılır: Temel Bir Windows Communication Foundation Hizmeti Barındırma ve Çalıştırma
-Bu üçüncü altı görev oluşturmak için gerekli olan bir [!INCLUDE[indigo1](../../../includes/indigo1-md.md)] uygulama. Tüm altı görevlerinin genel bakış için bkz: [başlangıç Öğreticisi](../../../docs/framework/wcf/getting-started-tutorial.md) konu.  
+Bir Windows Communication Foundation (WCF) uygulaması oluşturmak için gereken altı görevleri üçüncü budur. Tüm altı görevlerinin genel bakış için bkz: [başlangıç Öğreticisi](../../../docs/framework/wcf/getting-started-tutorial.md) konu.  
   
- Bu konu, barındırmak açıklar bir [!INCLUDE[indigo1](../../../includes/indigo1-md.md)] bir konsol uygulamasında hizmet. Bu yordam, aşağıdaki adımlardan oluşur:  
+ Bu konu, Windows Communication Foundation (WCF) hizmetini bir konsol uygulamasında barındırır açıklar. Bu yordam, aşağıdaki adımlardan oluşur:  
   
 -   Hizmet barındırmak için bir konsol uygulama projesi oluşturun.  
   

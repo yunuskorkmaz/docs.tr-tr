@@ -1,12 +1,6 @@
 ---
 title: On Error Deyimi (Visual Basic)
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- devlang-visual-basic
-ms.topic: article
 f1_keywords:
 - vb.OnError
 helpviewer_keywords:
@@ -28,14 +22,11 @@ helpviewer_keywords:
 - run-time errors [Visual Basic], handling
 - On Error statement [Visual Basic]
 ms.assetid: ff947930-fb84-40cf-bd66-1ea219561d5c
-caps.latest.revision: 
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: 96baa5d91d0a600b84ed832fb1e3b1ed71a9d89d
-ms.sourcegitcommit: 2142a4732bb4ff519b9817db4c24a237b9810d4b
+ms.openlocfilehash: b2e32dcca2e29a178af6dc985da536b47f0ebae6
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/05/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="on-error-statement-visual-basic"></a>On Error Deyimi (Visual Basic)
 Hata işleme yordamını etkinleştirir ve yordam bir yordam içindeki konumunu belirtir; Ayrıca bir hata işleme yordamı devre dışı bırakmak için kullanılabilir.  
@@ -89,16 +80,16 @@ On Error { GoTo [ line | 0 | -1 ] | Resume Next }
  Dikkat `On Error GoTo` deyimi özel durum sınıfı bağımsız olarak tüm hataları yakalar.  
   
 ## <a name="on-error-resume-next"></a>Hatada devam sonraki  
- `On Error Resume Next`hemen çalıştırma hatası nedeniyle deyimi aşağıdaki deyim ile devam etmek veya dışında içeren yordamı hemen en son aşağıdaki deyimiyle arama yürütme neden `On Error Resume Next` deyimi. Bu deyim bir çalışma zamanı hatası rağmen devam etmek yürütme sağlar. Yordam içinde başka bir konuma denetim aktarma yerine burada hata ortaya çıkabilecek hata işleme yordamı yerleştirebilirsiniz. Bir `On Error Resume Next` deyimi hale etkin olmayan başka bir yordam çağrıldığında, yürütülecek şekilde bir `On Error Resume Next` deyimi her satır içi hata içinde yordamında işleme istiyorsanız, yordamı çağrılır.  
+ `On Error Resume Next` hemen çalıştırma hatası nedeniyle deyimi aşağıdaki deyim ile devam etmek veya dışında içeren yordamı hemen en son aşağıdaki deyimiyle arama yürütme neden `On Error Resume Next` deyimi. Bu deyim bir çalışma zamanı hatası rağmen devam etmek yürütme sağlar. Yordam içinde başka bir konuma denetim aktarma yerine burada hata ortaya çıkabilecek hata işleme yordamı yerleştirebilirsiniz. Bir `On Error Resume Next` deyimi hale etkin olmayan başka bir yordam çağrıldığında, yürütülecek şekilde bir `On Error Resume Next` deyimi her satır içi hata içinde yordamında işleme istiyorsanız, yordamı çağrılır.  
   
 > [!NOTE]
 >  `On Error Resume Next` Yapı için tercih `On Error GoTo` diğer nesnelere erişimi sırasında oluşturulan hatalar işlerken. Denetimi `Err` her bir nesne etkileşim hakkında nesne erişilen kodla belirsizlik kaldırdıktan sonra. Hangi nesne hata kodunu yerleştirilen emin olabilirsiniz `Err.Number`, hangi nesne başlangıçta hatayı oluşturan yanı sıra (belirtilen nesne `Err.Source`).  
   
 ## <a name="on-error-goto-0"></a>Error GoTo 0  
- `On Error GoTo 0`hata işleme geçerli yordamda devre dışı bırakır. 0 numaralı bir satır yordamı içerse bile, satır 0 hata işleme kodu başlangıç belirtmiyor. Olmadan bir `On Error GoTo 0` deyimi, bir hata işleyicisi otomatik olarak devre dışı bir yordam çıkıldı olduğunda.  
+ `On Error GoTo 0` hata işleme geçerli yordamda devre dışı bırakır. 0 numaralı bir satır yordamı içerse bile, satır 0 hata işleme kodu başlangıç belirtmiyor. Olmadan bir `On Error GoTo 0` deyimi, bir hata işleyicisi otomatik olarak devre dışı bir yordam çıkıldı olduğunda.  
   
 ## <a name="on-error-goto--1"></a>Error GoTo -1  
- `On Error GoTo -1`Geçerli yordamdaki özel durumu devre dışı bırakır. Yordam -1 numaralı satırda varsa bile hata işleme kodu başlangıç -1 satır belirtmiyor. Olmadan bir `On Error GoTo -1` deyimi, bir özel durum otomatik olarak devre dışı olduğunda bir yordam çıkıldı.  
+ `On Error GoTo -1` Geçerli yordamdaki özel durumu devre dışı bırakır. Yordam -1 numaralı satırda varsa bile hata işleme kodu başlangıç -1 satır belirtmiyor. Olmadan bir `On Error GoTo -1` deyimi, bir özel durum otomatik olarak devre dışı olduğunda bir yordam çıkıldı.  
   
  Hata işleme kodu herhangi bir hata oluştuğunda çalıştırmasını engellemek için yerleştirin bir `Exit Sub`, `Exit Function`, veya `Exit Property` deyimi aşağıdaki parçası olduğu gibi hata işleme yordamı hemen önce:  
   

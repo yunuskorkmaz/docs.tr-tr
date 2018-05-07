@@ -1,32 +1,18 @@
 ---
 title: COM+ Uygulamaları ile Tümleştirme Genel Bakış
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 helpviewer_keywords:
 - Windows Communication Foundation, COM+ integration
 - WCF, COM+ integration
 ms.assetid: e481e48f-7096-40eb-9f20-7f0098412941
-caps.latest.revision: 29
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 3c723bda93feac3eef18f302ab0c8ec7c702eb7a
-ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
+ms.openlocfilehash: 155365c72fd3f5915db12104f45a500f3176f67b
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/30/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="integrating-with-com-applications-overview"></a>COM+ Uygulamaları ile Tümleştirme Genel Bakış
-[!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] dağıtılmış uygulamaları oluşturmak için zengin bir ortam sağlar. COM + barındırılan bir bileşen tabanlı uygulama mantığı zaten kullanıyorsanız, kullanabileceğiniz [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] yeniden yazmak zorunda yerine mevcut mantığınızı genişletmek için. Yaygın bir senaryo, varolan COM + ya da kuruluş Hizmetleri iş mantığı Web Hizmetleri aracılığıyla kullanıma sunmak istediğiniz durumdur.  
+Windows Communication Foundation (WCF) dağıtılmış uygulamaları oluşturmak için zengin bir ortam sağlar. COM + barındırılan bir bileşen tabanlı uygulama mantığı zaten kullanıyorsanız, bunu yeniden yazmaya gerek yerine var olan mantıksal genişletmek için WCF kullanabilirsiniz. Yaygın bir senaryo, varolan COM + ya da kuruluş Hizmetleri iş mantığı Web Hizmetleri aracılığıyla kullanıma sunmak istediğiniz durumdur.  
   
  Bir COM bileşeni arabirimdeki bir Web hizmeti olarak kullanıma sunulduğunda belirtim ve bu hizmetleri sözleşmesi uygulama başlatma zamanında gerçekleştirilen bir otomatik eşleme tarafından belirlenir. Aşağıdaki listede, bu eşleme için kavramsal model gösterilmektedir:  
   
@@ -84,7 +70,7 @@ ms.lasthandoff: 04/30/2018
  Bir istemci uygulaması, yöntemlere içinde <xref:System.ServiceModel.ComIntegration.PersistStreamTypeWrapper> nesne bir nesne bir hizmete geçirmek ve benzer şekilde bir nesne almak için kullanılabilir.  
   
 > [!NOTE]
->  Seri hale getirme yaklaşımın özel ve platforma özgü yapısı nedeniyle, bu arasında kullanım için uygundur [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] istemcileri ve [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] Hizmetleri.  
+>  Seri hale getirme yaklaşımın özel ve platforma özgü yapısı nedeniyle, bu WCF istemcileri ve WCF hizmetleri arasında kullanım için uygundur.  
   
 ## <a name="selecting-the-hosting-mode"></a>Barındırma modu seçme  
  COM + aşağıdaki barındırma modlarından birinde Web hizmetleri sunar:  
@@ -95,18 +81,18 @@ ms.lasthandoff: 04/30/2018
   
 -   Web barındırılan  
   
-     Web hizmeti bir Web sunucusu çalışan işlemi içinde barındırılır. Bu mod, ilk isteği alındığında etkin olmasını COM + gerektirmez. Bu istek alındığında uygulama etkin değilse, istek işleme önce otomatik olarak etkinleştirilir. Bu mod Ayrıca Web hizmeti ve sunucu uygulaması için DCOM erişim sağlar, ancak bir işlem atlama Web hizmeti isteklerinin neden olur. Bu genellikle, kimliğe bürünme özelliğini etkinleştirmek istemci gerektirir. İçinde [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)], bu, yapılabilir <xref:System.ServiceModel.Security.WindowsClientCredential.AllowedImpersonationLevel%2A> özelliği <xref:System.ServiceModel.Security.WindowsClientCredential> genel bir özellik olarak erişilen sınıfı <xref:System.ServiceModel.ChannelFactory%601> sınıfı, yanı sıra <xref:System.Security.Principal.TokenImpersonationLevel.Impersonation> numaralandırma değeri.  
+     Web hizmeti bir Web sunucusu çalışan işlemi içinde barındırılır. Bu mod, ilk isteği alındığında etkin olmasını COM + gerektirmez. Bu istek alındığında uygulama etkin değilse, istek işleme önce otomatik olarak etkinleştirilir. Bu mod Ayrıca Web hizmeti ve sunucu uygulaması için DCOM erişim sağlar, ancak bir işlem atlama Web hizmeti isteklerinin neden olur. Bu genellikle, kimliğe bürünme özelliğini etkinleştirmek istemci gerektirir. WCF'de, bu, yapılabilir <xref:System.ServiceModel.Security.WindowsClientCredential.AllowedImpersonationLevel%2A> özelliği <xref:System.ServiceModel.Security.WindowsClientCredential> genel bir özellik olarak erişilen sınıfı <xref:System.ServiceModel.ChannelFactory%601> sınıfı, yanı sıra <xref:System.Security.Principal.TokenImpersonationLevel.Impersonation> numaralandırma değeri.  
   
 -   Web barındırılan işlem içi  
   
      Web hizmeti ve COM + uygulama mantığını Web sunucusu çalışan işlemi içinde barındırılır. Bu, Web barındırılan modunun Otomatik etkinleştirme işlemi atlama Web hizmeti isteklerinin neden olmadan sağlar. Sunucu uygulaması DCOM erişilen olumsuz olur.  
   
 ### <a name="security-considerations"></a>Güvenlik Değerlendirmeleri  
- Gibi diğer [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] Hizmetleri, güvenlik ayarları için yapılandırma ayarları aracılığıyla sunulan hizmet yönetilen için [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] kanal. DCOM makineye özel izinleri ayarları gibi geleneksel DCOM güvenlik ayarları uygulanmaz. COM + uygulama rolleri zorlamak için "bileşen düzeyinde erişim denetimlerini" yetkilendirme bileşeni için etkinleştirilmesi gerekir.  
+ Diğer WCF hizmetleri gibi sunulan hizmeti için güvenlik ayarlarını yapılandırma ayarlarını WCF kanalı üzerinden yönetilir. DCOM makineye özel izinleri ayarları gibi geleneksel DCOM güvenlik ayarları uygulanmaz. COM + uygulama rolleri zorlamak için "bileşen düzeyinde erişim denetimlerini" yetkilendirme bileşeni için etkinleştirilmesi gerekir.  
   
  Güvenli olmayan bir bağlama kullanımını iletişimi değiştirilmesine veya bilgileri açığa açık bırakabilirsiniz. Bunu önlemek için güvenli bir bağlama kullanmanız önerilir.  
   
- COM +-barındırılan ve Web barındırılan modları, istemci uygulamaları gerekir izin istemci kullanıcı kimliğine bürünmek için sunucu işlemi. Bu yapılabilir [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] kimliğe bürünme düzeyini ayarlayarak istemcileri <xref:System.Security.Principal.TokenImpersonationLevel.Impersonation>.  
+ COM +-barındırılan ve Web barındırılan modları, istemci uygulamaları gerekir izin istemci kullanıcı kimliğine bürünmek için sunucu işlemi. WCF istemcileri bu yapılabilir kimliğe bürünme düzeyini ayarlayarak <xref:System.Security.Principal.TokenImpersonationLevel.Impersonation>.  
   
  Internet Information Services (IIS) veya Windows İşlem Etkinleştirme Hizmeti (WAS) HTTP aktarımı kullanarak ile Httpcfg.exe aracı aktarım uç noktası adresi ayırmak için kullanılabilir. Diğer yapılandırmalar, hedeflenen hizmet olarak hareket dolandırıcı Hizmetleri karşı korumak önemlidir. Bir yanlışlık hizmet istenen uç noktada başlatılmasını önlemek için yasal hizmeti bir NT hizmeti olarak çalıştırılmak için yapılandırılabilir. Bu uç nokta adresi yanlış hizmetlerin önce talep için yasal hizmetini sağlar.  
   

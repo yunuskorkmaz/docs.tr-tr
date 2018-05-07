@@ -1,22 +1,12 @@
 ---
-title: "LINQ-XML eksenleri genel bakış (Visual Basic)"
-ms.custom: 
+title: LINQ-XML eksenleri genel bakış (Visual Basic)
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 9161f151-cfa8-4408-94ba-08a9ba3a486d
-caps.latest.revision: "4"
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: ae01d8c7257eb03d091a9e249475ef46a67a1c44
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.openlocfilehash: 9164dcff118c5fa3d15a5fe673b2174a4002e9d6
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="linq-to-xml-axes-overview-visual-basic"></a>LINQ-XML eksenleri genel bakış (Visual Basic)
 Bir XML ağacı oluşturulamadı veya bir XML ağacına bir XML belgesi yüklenemedi sonra öğeleri ve özniteliklerinin bulmak ve bunların değerleri almak için sorgulayabilirsiniz. Koleksiyonlar üzerinden almak *eksen yöntemleri*, olarak da bilinir *eksenleri*. Bazı eksenleri yöntemlerdir <xref:System.Xml.Linq.XElement> ve <xref:System.Xml.Linq.XDocument> sınıfları bu iade <xref:System.Collections.Generic.IEnumerable%601> koleksiyonları. Eksenleri uzantı yöntemleri bazıları <xref:System.Xml.Linq.Extensions> sınıfı. Genişletme yöntemleri olarak uygulanan eksenleri koleksiyonlar üzerinde çalışır ve koleksiyon döndürür.  
@@ -25,7 +15,7 @@ Bir XML ağacı oluşturulamadı veya bir XML ağacına bir XML belgesi yüklene
   
  Koleksiyonları döndürmesi eksen yöntemlere ek olarak, yaygın olarak kullanır daha fazla iki yöntem vardır [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] sorgular. <xref:System.Xml.Linq.XContainer.Element%2A> Yöntem tek bir <xref:System.Xml.Linq.XElement>. <xref:System.Xml.Linq.XElement.Attribute%2A> Yöntem tek bir <xref:System.Xml.Linq.XAttribute>.  
   
- Birçok amacıyla [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] sorguları bir ağaç inceleyin, veri ayıklayın ve dönüştürmek için en güçlü yol sunar. [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)]sorguları uygulayan nesneler üzerinde çalışan <xref:System.Collections.Generic.IEnumerable%601>ve [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] eksen return <xref:System.Collections.Generic.IEnumerable%601> , <xref:System.Xml.Linq.XElement> koleksiyonları ve <xref:System.Collections.Generic.IEnumerable%601> , <xref:System.Xml.Linq.XAttribute> koleksiyonları. Sorgularınızın gerçekleştirmek için bu koleksiyonları gerekir.  
+ Birçok amacıyla [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] sorguları bir ağaç inceleyin, veri ayıklayın ve dönüştürmek için en güçlü yol sunar. [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] sorguları uygulayan nesneler üzerinde çalışan <xref:System.Collections.Generic.IEnumerable%601>ve [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] eksen return <xref:System.Collections.Generic.IEnumerable%601> , <xref:System.Xml.Linq.XElement> koleksiyonları ve <xref:System.Collections.Generic.IEnumerable%601> , <xref:System.Xml.Linq.XAttribute> koleksiyonları. Sorgularınızın gerçekleştirmek için bu koleksiyonları gerekir.  
   
  Öğeleri ve özniteliklerinin koleksiyonları almak eksen yöntemlere ek olarak, harika ayrıntı ağacında yinelemek izin eksen yöntemler vardır. Örneğin, öğeleri ve öznitelikleri ile ilgilenen yerine ağaç düğümleri ile çalışabilirsiniz. Düğümleri bir daha hassas ayrıntı öğeleri ve özniteliklerinin daha düzeyindedir. Düğümleri ile çalışırken, işleme yönergeleri ve daha fazla XML açıklamaları, metin düğümleri inceleyebilirsiniz. Bu işlevsellik, örneğin, sözcük işlemci yazma ve belgeleri XML olarak kaydetme istediği yapılandırabilecek önemlidir. Ancak, XML programcıları çoğunluğu öncelikle açısından öğeleri, öznitelikleri ve değerleri.  
   

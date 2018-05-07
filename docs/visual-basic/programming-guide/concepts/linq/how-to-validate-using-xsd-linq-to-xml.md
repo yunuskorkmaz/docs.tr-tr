@@ -1,22 +1,12 @@
 ---
-title: "Nasıl yapılır: XSD (LINQ-XML) kullanarak doğrulayabilirsiniz (Visual Basic)"
-ms.custom: 
+title: 'Nasıl yapılır: XSD (LINQ-XML) kullanarak doğrulayabilirsiniz (Visual Basic)'
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: a0fe88d4-4e77-49e7-90de-8953feeccc21
-caps.latest.revision: "4"
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: 53b4f96e4fe31588c948d8e860be2c3bd3fa372a
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: fa607cea999ec484ccdd47829d4b96b2d73b060a
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-validate-using-xsd-linq-to-xml-visual-basic"></a>Nasıl yapılır: XSD (LINQ-XML) kullanarak doğrulayabilirsiniz (Visual Basic)
 <xref:System.Xml.Schema> Ad alanı, kolaylaştıran bir XML Şeması Tanım Dili (XSD) dosyası karşı bir XML ağacı doğrulamak genişletme yöntemleri içerir. Daha fazla bilgi için bkz: <xref:System.Xml.Schema.Extensions.Validate%2A> yöntemi belgeleri.  

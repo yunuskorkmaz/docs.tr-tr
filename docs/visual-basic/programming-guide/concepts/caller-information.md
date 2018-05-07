@@ -1,21 +1,12 @@
 ---
 title: Arayan bilgileri (Visual Basic)
-ms.custom: 
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
-ms.topic: article
 ms.assetid: 15d556eb-4d0c-4497-98a3-7f60abb7d6a1
-caps.latest.revision: "3"
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: dfd9339e990b2a2a7c57acde3c91295a7154fdc0
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 0074ad5bfa5907fb1d02cc92b8b5717897a36b3e
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="caller-information-visual-basic"></a>Arayan bilgileri (Visual Basic)
 Arayan Bilgisi özniteliklerini kullanarak bir yöntemin arayanı hakkında bilgi edinebilirsiniz. Kaynak kodunun dosya yolunu, kaynak kodundaki satır numarasını ve arayanın üye adını alabilirsiniz. Bu bilgiler, tanılama araçlarının izlenmesine, oluşturulmasına ve bu araçlarda hata ayıklanmasına yardımcı olur.  
@@ -63,7 +54,7 @@ End Sub
   
  Arayan bilgisini denetlemek veya gizlemek için isteğe bağlı bağımsız değişkenleri açıkça sağlayabilirsiniz.  
   
-###  <a name="MEMBERNAMES"></a>Üye adlarının  
+###  <a name="MEMBERNAMES"></a> Üye adlarının  
  Kullanabileceğiniz `CallerMemberName` özniteliği üye adı olarak belirtmekten kaçının bir `String` çağrılan yöntemin bağımsız değişkeni. Bu yöntemi kullanarak, bir sorunu önlemenize, **yeniden adlandırma yeniden düzenleme** değiştirmez `String` değerleri. Bu, özellikle aşağıdaki görevler için yararlı olur:  
   
 -   İzleme ve tanılama yordamlarını kullanma.  
@@ -85,5 +76,5 @@ End Sub
 ## <a name="see-also"></a>Ayrıca Bkz.  
  [Öznitelikler (Visual Basic)](../../../visual-basic/language-reference/attributes.md)  
  [Ortak öznitelikler (Visual Basic)](../../../visual-basic/programming-guide/concepts/attributes/common-attributes.md)  
- [İsteğe bağlı parametreler](../../../visual-basic/programming-guide/language-features/procedures/optional-parameters.md)  
+ [İsteğe Bağlı Parametreler](../../../visual-basic/programming-guide/language-features/procedures/optional-parameters.md)  
  [Programlama Kavramları (Visual Basic)](../../../visual-basic/programming-guide/concepts/index.md)

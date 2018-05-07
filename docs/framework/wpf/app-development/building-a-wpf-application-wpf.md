@@ -1,31 +1,17 @@
 ---
 title: WPF Uygulaması Oluşturma (WPF)
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-wpf
-ms.tgt_pltfrm: ''
-ms.topic: article
 dev_langs:
 - csharp
 - vb
 helpviewer_keywords:
 - WPF application [WPF], building
 ms.assetid: a58696fd-bdad-4b55-9759-136dfdf8b91c
-caps.latest.revision: 45
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 46572bf2cf8cc52dbd4ba8949dddcd0f88651152
-ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
+ms.openlocfilehash: 1bb092ed74a2c4c67be9a52d9cab25dc98520a01
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/30/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="building-a-wpf-application-wpf"></a>WPF Uygulaması Oluşturma (WPF)
 Windows Presentation Foundation (WPF) uygulamaları olarak oluşturulabilen [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] yürütülebilir dosyalar (.exe) kitaplıkları (.dll) veya her iki tür derlemeleri birleşimi. Bu konu nasıl oluşturulacağını tanıtır [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] uygulamaları ve derleme işlemindeki anahtar adımları açıklar.  

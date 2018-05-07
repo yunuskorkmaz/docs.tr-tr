@@ -1,24 +1,12 @@
 ---
-title: "wsatConfig.exe Tarafından Döndürülen Hata Kodlarını Yorumlama"
-ms.custom: 
+title: wsatConfig.exe Tarafından Döndürülen Hata Kodlarını Yorumlama
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: ab65f22b-0d69-4c21-9aaf-74acef0ca102
-caps.latest.revision: "3"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 889a14d7d30c3c7750b38f55256ccc4ff004f10d
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 9df059618b45ae65ffb3e6e31a87d5531c79d947
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="interpreting-error-codes-returned-by-wsatconfigexe"></a>wsatConfig.exe Tarafından Döndürülen Hata Kodlarını Yorumlama
 Bu konuda tüm hata kodları WS-AtomicTransaction yapılandırma yardımcı programı tarafından (wsatConfig.exe) oluşturulur ve önerilen gerçekleştirilecek eylemleri listeler.  
@@ -32,7 +20,7 @@ Bu konuda tüm hata kodları WS-AtomicTransaction yapılandırma yardımcı prog
 |2|MSDTC Güvenlik ayarlarını almak için iletişim kurmaya çalışılırken beklenmeyen bir hata oluştu.|MSDTC hizmeti devre dışı ve döndürülen özel durum listelenen tüm sorunları çözün emin olun.|  
 |3|WsatConfig.exe altında çalıştırıldığı hesabı ağ güvenlik ayarlarını okumak için yeterli izinlere sahip değil.|WsatConfig.exe bir yönetici kullanıcı hesabı altında çalıştırın.|  
 |4|"Ağ DTC erişimi" WS-AT desteğini etkinleştirmek denemeden önce MSDTC için etkinleştirin.|"Ağ DTC erişimi" MSDTC için etkinleştirip yardımcı programı yeniden çalıştırın.|  
-|5|Girilen bağlantı noktası aralığının dışında oluştu. Değer 1 ile 65535 aralığında olmalıdır.|Düzeltin`-port:<portNum>`<br /><br /> hata iletisinde belirtildiği gibi komut satırı seçeneği.|  
+|5|Girilen bağlantı noktası aralığının dışında oluştu. Değer 1 ile 65535 aralığında olmalıdır.|Düzeltin `-port:<portNum>`<br /><br /> hata iletisinde belirtildiği gibi komut satırı seçeneği.|  
 |6|Geçersiz uç nokta sertifikası komut satırında belirtildi.  Sertifika bulunamadı veya doğrulamayı geçemedi.|Düzeltmek `-endpointCert` komut satırı seçeneği. Sertifika bir özel anahtara sahip, ClientAuthentication ve ServerAuthentication için kullanılmak üzere tasarlanmıştır, LocalMachine\MY sertifika deposunda yüklü ve tam güvenilir olduğundan emin olun.|  
 |7|Geçersiz hesap sertifikası komut satırında belirtildi.|Düzeltmek `-accountsCerts` komut satırı seçeneği. Belirtilen sertifika yanlış belirtildi ya da bulunamadı.|  
 |8|Varsayılan zaman aşımı 1-3600 saniye aralığın dışında belirtildi.|Belirtildiği gibi bir doğru varsayılan zaman aşımı değeri girin.|  
@@ -46,9 +34,9 @@ Bu konuda tüm hata kodları WS-AtomicTransaction yapılandırma yardımcı prog
 |17|Http.sys yapılandırması başarısız oldu. Önceki bağlantı noktasından SSL sertifikası ile olan bağlantı kesilemiyor.|Hata iletisinde döndürülen hata kodu için uygun sistem hatası eşlemek için kullanın. Gerekirse, httpcfg.exe veya netsh.exe hatalı bağlantı noktası ayırmaları kaldırmak için kullanın.|  
 |18|Http.sys yapılandırması başarısız oldu. Belirtilen sertifika çünkü bağlantı noktasına bağlanılamıyor önceki bir SSL bağlaması zaten mevcut.|Başka bir uygulama zaten belirli bağlantı noktası sahipliğini sürdü. Farklı bir bağlantı noktasına değiştirin veya kaldırın veya geçerli uygulama yeniden yapılandırın.|  
 |19|MSDTC yeniden başlatma başarısız oldu|Gerekirse MSDTC el ile yeniden başlatın. Sorun devam ederse, Microsoft ile iletişime geçin.|  
-|20|[!INCLUDE[vstecwinfx](../../../includes/vstecwinfx-md.md)]uzak makinede yüklü değil veya düzgün şekilde yüklenmemiş.|Yükleme [!INCLUDE[vstecwinfx](../../../includes/vstecwinfx-md.md)] makinedeki.|  
+|20|[!INCLUDE[vstecwinfx](../../../includes/vstecwinfx-md.md)] uzak makinede yüklü değil veya düzgün şekilde yüklenmemiş.|Yükleme [!INCLUDE[vstecwinfx](../../../includes/vstecwinfx-md.md)] makinedeki.|  
 |21|Uzaktan yapılandırma işlemi zaman aşımına uğramadan nedeniyle başarısız oldu.|WS-AT uzak makinede yapılandırmak için çağrı 90 saniyeden daha uzun sürer.|  
-|22|[!INCLUDE[vstecwinfx](../../../includes/vstecwinfx-md.md)]uzak makinede yüklü değil veya düzgün şekilde yüklenmemiş.|Yükleme [!INCLUDE[vstecwinfx](../../../includes/vstecwinfx-md.md)] makinedeki.|  
+|22|[!INCLUDE[vstecwinfx](../../../includes/vstecwinfx-md.md)] uzak makinede yüklü değil veya düzgün şekilde yüklenmemiş.|Yükleme [!INCLUDE[vstecwinfx](../../../includes/vstecwinfx-md.md)] makinedeki.|  
 |23|Uzaktan yapılandırma uzak makinede bir özel durum nedeniyle başarısız oldu.|Kullanılabilir öğeleri için hata iletisini kontrol edin|  
 |26|WsatConfig.exe için geçersiz bağımsız değişken geçirildi.|Komut satırı hataları denetleyin.|  
 |27|`-accounts` Komut satırı seçeneği geçersiz.|Düzeltmek`accounts` doğru bir kullanıcı hesabı belirtmek için komut satırı seçeneği.|  

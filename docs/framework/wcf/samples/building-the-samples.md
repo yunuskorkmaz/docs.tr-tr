@@ -1,29 +1,15 @@
 ---
 title: Windows Communication Foundation Örnekleri Derleme
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 ms.assetid: 2899e7a5-9cb2-4e8d-b8d2-f31391549198
-caps.latest.revision: 33
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: fcc57d28c109801cc5f995bebd31c49fcbdbe19c
-ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
-ms.translationtype: MT
+ms.openlocfilehash: 5493972306092fc3309b0993d595f22c74c8603a
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/30/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="building-the-windows-communication-foundation-samples"></a>Windows Communication Foundation Örnekleri Derleme
-[!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] Örnekleri, Visual Studio 2010 veya kullanarak oluşturulabilen **msbuild** komut satırından komutu. Bu konuda iki yordam açıklanmaktadır.  
+Windows Communication Foundation (WCF) örnekleri Visual Studio 2010 veya kullanarak yerleşik **msbuild** komut satırından komutu. Bu konuda iki yordam açıklanmaktadır.  
   
 > [!NOTE]
 >  Derleme veya herhangi birini çalıştıran önce [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] örnekleri, olun gerçekleştirilen [kerelik Kurulum prosedürü Windows Communication Foundation örnekleri için](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md).  
@@ -52,7 +38,7 @@ ms.lasthandoff: 04/30/2018
  Setup.exe ve Cleanup.exe toplu iş dosyaları ve komut dosyaları için bir Visual Studio komut isteminden çalıştırılması gerekir. Yukarı ve dosyaları temizlenmesi birkaç kümesi yönetici ayrıcalıkları gerektiren ve yönetici ayrıcalıklarına sahip başlatılması gereken görevleri gerçekleştirir.  
   
 ## <a name="important-security-information-about-metadata-endpoints"></a>Meta veri uç noktalarını hakkında önemli güvenlik bilgileri  
- Olası hassas hizmeti meta verileri, için varsayılan yapılandırma, yanlışlıkla açığa çıkmasını önlemek amacıyla [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] Hizmetleri, meta veri yayımlama devre dışı bırakır. Bu davranışı varsayılan olarak güvenlidir, ancak ayrıca bir meta veri kullanamayacağı anlamına gelir (örneğin, Svcutil.exe) aracı hizmetin meta veri yayımlama davranışı açıkça yapılandırmasında etkinleştirilmediği sürece hizmetini çağırmak için gerekli istemci kodu oluşturmak üzere, içe. Daha kolay örnekleriyle denemeler yapmak için güvenli olmayan meta veri yayımlama uç noktası neredeyse tüm örneklerini kullanıma sunar. Bu tür uç noktaları anonim kimlik doğrulamasız tüketicilere potansiyel olarak kullanılabilir ve bakım gibi uç noktaları dağıtmadan önce genel olarak disclosing bir hizmetin meta veri uygun olduğundan emin olmak için izlenmelidir. Hizmet meta veri yayımlama hakkında daha fazla bilgi için bkz: [meta veri yayımlama davranışı](../../../../docs/framework/wcf/samples/metadata-publishing-behavior.md) örnek. Bkz: [özel güvenli meta veri uç noktasının](../../../../docs/framework/wcf/samples/custom-secure-metadata-endpoint.md) örnek bir meta veri uç noktası güvenli hale getirme örneği.  
+ Olası hassas hizmeti meta verilerin yanlışlıkla açığa çıkmasını önlemek için meta veri yayımlama Windows Communication Foundation (WCF) hizmetlerini için varsayılan yapılandırmayı devre dışı bırakır. Bu davranışı varsayılan olarak güvenlidir, ancak ayrıca bir meta veri kullanamayacağı anlamına gelir (örneğin, Svcutil.exe) aracı hizmetin meta veri yayımlama davranışı açıkça yapılandırmasında etkinleştirilmediği sürece hizmetini çağırmak için gerekli istemci kodu oluşturmak üzere, içe. Daha kolay örnekleriyle denemeler yapmak için güvenli olmayan meta veri yayımlama uç noktası neredeyse tüm örneklerini kullanıma sunar. Bu tür uç noktaları anonim kimlik doğrulamasız tüketicilere potansiyel olarak kullanılabilir ve bakım gibi uç noktaları dağıtmadan önce genel olarak disclosing bir hizmetin meta veri uygun olduğundan emin olmak için izlenmelidir. Hizmet meta veri yayımlama hakkında daha fazla bilgi için bkz: [meta veri yayımlama davranışı](../../../../docs/framework/wcf/samples/metadata-publishing-behavior.md) örnek. Bkz: [özel güvenli meta veri uç noktasının](../../../../docs/framework/wcf/samples/custom-secure-metadata-endpoint.md) örnek bir meta veri uç noktası güvenli hale getirme örneği.  
   
 ## <a name="exception-handling"></a>Özel Durum İşleme  
  Genel olarak bakıldığında bu örnekleri özel durum örnek konu üzerinde odaklanmış kod tutmak için işleme dahil etmeyin. Özel durum işleme hakkında daha fazla bilgi için bkz: [beklenen özel durumlar](../../../../docs/framework/wcf/samples/expected-exceptions.md) örnek.  

@@ -1,14 +1,6 @@
 ---
-title: "ICorProfilerCallback5::ConditionalWeakTableElementReferences Yöntemi"
-ms.custom: 
+title: ICorProfilerCallback5::ConditionalWeakTableElementReferences Yöntemi
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: reference
 api_name:
 - ICorProfilerCallback5.ConditionalWeakTableReferences
 api_location:
@@ -23,17 +15,13 @@ helpviewer_keywords:
 ms.assetid: 532c7a02-a9de-4cea-bb2b-7f470da594de
 topic_type:
 - apiref
-caps.latest.revision: 
 author: mairaw
 ms.author: mairaw
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 8cfe86ac7d0cd5b4a5c6adb9f12ffe9577b6e611
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 4ee3c3302d77bcc7b807c01ccb5bab172153ddda
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="icorprofilercallback5conditionalweaktableelementreferences-method"></a>ICorProfilerCallback5::ConditionalWeakTableElementReferences Yöntemi
 Geçişli kapatma hem doğrudan üyesi alan başvuruları aracılığıyla ve aracılığıyla bu kökleri tarafından başvurulan nesne tanımlayan `ConditionalWeakTable` bağımlılıkları.  
@@ -84,14 +72,14 @@ HRESULT Callback5Impl::ConditionalWeakTableElementReferences(
 ```  
   
 ## <a name="remarks"></a>Açıklamalar  
- Profil Oluşturucu için [!INCLUDE[net_v45](../../../../includes/net-v45-md.md)] veya sonraki sürümleri uygulayan [Icorprofilercallback5](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback5-interface.md) arabirimi ve kayıtları tarafından belirtilen bağımlılıkları `ConditionalWeakTableElementReferences` yöntemi. `ICorProfilerCallback5`tarafından temsil edilen Canlı nesneleri arasındaki bağımlılıkları tamamını sağlar `ConditionalWeakTable` girişleri. Bu bağımlılıklar ve üye başvurular tarafından belirtilen alan [Icorprofilercallback::objectreferences](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-objectreferences-method.md) yöntemini etkinleştirmek Canlı nesnelerin tam nesne grafiği oluşturmak yönetilen bir profil oluşturucu.  
+ Profil Oluşturucu için [!INCLUDE[net_v45](../../../../includes/net-v45-md.md)] veya sonraki sürümleri uygulayan [Icorprofilercallback5](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback5-interface.md) arabirimi ve kayıtları tarafından belirtilen bağımlılıkları `ConditionalWeakTableElementReferences` yöntemi. `ICorProfilerCallback5` tarafından temsil edilen Canlı nesneleri arasındaki bağımlılıkları tamamını sağlar `ConditionalWeakTable` girişleri. Bu bağımlılıklar ve üye başvurular tarafından belirtilen alan [Icorprofilercallback::objectreferences](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-objectreferences-method.md) yöntemini etkinleştirmek Canlı nesnelerin tam nesne grafiği oluşturmak yönetilen bir profil oluşturucu.  
   
 ## <a name="requirements"></a>Gereksinimler  
  **Platformlar:** bkz [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Başlık:** CorProf.idl, CorProf.h  
   
- **.NET framework sürümleri:**[!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]  
+ **.NET framework sürümleri:** [!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
  [ICorProfilerCallback5 Arabirimi](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback5-interface.md)

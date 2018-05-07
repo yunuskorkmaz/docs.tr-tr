@@ -1,34 +1,20 @@
 ---
-title: "Hataları Gönderme ve Alma"
-ms.custom: 
+title: Hataları Gönderme ve Alma
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
 helpviewer_keywords:
 - handling faults [WCF], sending
 ms.assetid: 7be6fb96-ce2a-450b-aebe-f932c6a4bc5d
-caps.latest.revision: 
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 248202e07d3b74f5d71b40155ae8f617f7ed15ce
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
-ms.translationtype: MT
+ms.openlocfilehash: 76fb07a6c9a5e0efdbf21f153f5fc2aea7f1880e
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="sending-and-receiving-faults"></a>Hataları Gönderme ve Alma
-SOAP hatalarının istemciye ve durumda çift yönlü bir istemciden bir hizmete hata koşulu bilgi hizmet birlikte çalışabilir bir şekilde aktarın. Genellikle bir hizmet özel hata içeriği tanımlar ve hangi işlemleri geri dönebilirsiniz belirtir. (Daha fazla bilgi için bkz: [tanımlama ve belirtme hataları](../../../docs/framework/wcf/defining-and-specifying-faults.md).) Bu konuda ele alınmıştır nasıl bir hizmet ya da çift yönlü istemci bu hataları karşılık gelen hata koşulu oluştu ne zaman ve bir istemci nasıl gönderebilir veya hizmet uygulaması bu hataları işleme. Hata işleme, genel bir bakış için [!INCLUDE[indigo1](../../../includes/indigo1-md.md)] uygulamalar, bkz [belirtme ve işleme hataları sözleşme ve hizmetlerde](../../../docs/framework/wcf/specifying-and-handling-faults-in-contracts-and-services.md).  
+SOAP hatalarının istemciye ve durumda çift yönlü bir istemciden bir hizmete hata koşulu bilgi hizmet birlikte çalışabilir bir şekilde aktarın. Genellikle bir hizmet özel hata içeriği tanımlar ve hangi işlemleri geri dönebilirsiniz belirtir. (Daha fazla bilgi için bkz: [tanımlama ve belirtme hataları](../../../docs/framework/wcf/defining-and-specifying-faults.md).) Bu konuda ele alınmıştır nasıl bir hizmet ya da çift yönlü istemci bu hataları karşılık gelen hata koşulu oluştu ne zaman ve bir istemci nasıl gönderebilir veya hizmet uygulaması bu hataları işleme. Windows Communication Foundation (WCF) uygulamalarında işleme hatası genel bakış için bkz: [belirtme ve işleme hataları sözleşme ve hizmetlerde](../../../docs/framework/wcf/specifying-and-handling-faults-in-contracts-and-services.md).  
   
 ## <a name="sending-soap-faults"></a>SOAP hataları gönderme  
  SOAP hataları olan bir işlem olduğu bildirildiğinde bir <xref:System.ServiceModel.FaultContractAttribute?displayProperty=nameWithType> özel bir SOAP hatası türü belirtir. Bildirilmemiş SOAP hatalarının bir işlem için bir sözleşmede belirtilen değil izinlerdir.  
@@ -64,15 +50,15 @@ SOAP hatalarının istemciye ve durumda çift yönlü bir istemciden bir hizmete
   
 -   <xref:System.ServiceModel.CommunicationException>  
   
- <xref:System.TimeoutException>bir işlemi belirtilen zaman aşımı süresi aştığında nesneleri atılır.  
+ <xref:System.TimeoutException> bir işlemi belirtilen zaman aşımı süresi aştığında nesneleri atılır.  
   
- <xref:System.ServiceModel.CommunicationException>Bazı hizmet veya istemci kurtarılabilir iletişimi hata koşulu olduğunda nesneleri atılır.  
+ <xref:System.ServiceModel.CommunicationException> Bazı hizmet veya istemci kurtarılabilir iletişimi hata koşulu olduğunda nesneleri atılır.  
   
  <xref:System.ServiceModel.CommunicationException> Sınıfına sahip iki önemli türetilen türlerin, <xref:System.ServiceModel.FaultException> ve genel <xref:System.ServiceModel.FaultException%601> türü.  
   
- <xref:System.ServiceModel.FaultException>Dinleyici değil beklenmeyen veya işlemi sözleşmede belirtilen bir arıza aldığında özel durumlar; Genellikle bu uygulamanın hata ayıklaması ve hizmet bulunduğunda oluşur <xref:System.ServiceModel.Description.ServiceDebugBehavior.IncludeExceptionDetailInFaults%2A?displayProperty=nameWithType> özelliğini `true`.  
+ <xref:System.ServiceModel.FaultException> Dinleyici değil beklenmeyen veya işlemi sözleşmede belirtilen bir arıza aldığında özel durumlar; Genellikle bu uygulamanın hata ayıklaması ve hizmet bulunduğunda oluşur <xref:System.ServiceModel.Description.ServiceDebugBehavior.IncludeExceptionDetailInFaults%2A?displayProperty=nameWithType> özelliğini `true`.  
   
- <xref:System.ServiceModel.FaultException%601>özel durumlar istemcide işlemi sözleşmede belirtilen bir arıza yanıt iki yönlü bir işlem olarak alındığında (diğer bir deyişle, bir yöntemle bir <xref:System.ServiceModel.OperationContractAttribute> ile öznitelik <xref:System.ServiceModel.OperationContractAttribute.IsOneWay%2A> kümesine `false`).  
+ <xref:System.ServiceModel.FaultException%601> özel durumlar istemcide işlemi sözleşmede belirtilen bir arıza yanıt iki yönlü bir işlem olarak alındığında (diğer bir deyişle, bir yöntemle bir <xref:System.ServiceModel.OperationContractAttribute> ile öznitelik <xref:System.ServiceModel.OperationContractAttribute.IsOneWay%2A> kümesine `false`).  
   
 > [!NOTE]
 >  Zaman bir [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] hizmet <xref:System.ServiceModel.ServiceBehaviorAttribute.IncludeExceptionDetailInFaults%2A?displayProperty=nameWithType> veya <xref:System.ServiceModel.Description.ServiceDebugBehavior.IncludeExceptionDetailInFaults%2A?displayProperty=nameWithType> özelliğini `true` istemci bu bildirilmemiş karşılaştığında <xref:System.ServiceModel.FaultException%601> türü <xref:System.ServiceModel.ExceptionDetail>. İstemciler bu belirli bir arıza catch veya işlemek için catch bloğu içinde hata <xref:System.ServiceModel.FaultException>.  

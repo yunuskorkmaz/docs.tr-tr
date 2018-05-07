@@ -1,40 +1,28 @@
 ---
-title: "Nasıl yapılır: WCF Uç Noktaları ve İleti Kuyruğa Alma Uygulamaları ile İleti Alma ve Gönderme"
-ms.custom: 
+title: 'Nasıl yapılır: WCF Uç Noktaları ve İleti Kuyruğa Alma Uygulamaları ile İleti Alma ve Gönderme'
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
 ms.assetid: 62210fd8-a372-4d55-ab9b-c99827d1885e
-caps.latest.revision: "18"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: fa6f9d0b9631420013593cb44903b5451549e8c6
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 807a34ac50ea317ace42ec12eddcd9ec7cf3736b
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-exchange-messages-with-wcf-endpoints-and-message-queuing-applications"></a>Nasıl yapılır: WCF Uç Noktaları ve İleti Kuyruğa Alma Uygulamaları ile İleti Alma ve Gönderme
-Message Queuing (MSMQ) uygulamalarınız ile tümleştirebilirsiniz [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] gelen ve giden MSMQ iletileri dönüştürmek için MSMQ tümleştirme bağlama kullanarak uygulamaları [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] iletileri. Bu sayede MSMQ alıcı uygulamalardan çağırmak [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] çağrısına yanı sıra istemcilerin [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] MSMQ Gönderen uygulamalardan Hizmetleri.  
+WCF iletileri gelen ve giden MSMQ iletileri dönüştürmek için MSMQ tümleştirme bağlama kullanarak Windows Communication Foundation (WCF) uygulamaları ile Message Queuing (MSMQ) uygulamalarınız tümleştirebilirsiniz. Bu, yanı sıra WCF istemcileri MSMQ alıcı uygulamalardan çağırmak WCF hizmetleri içine MSMQ gönderen uygulamalarından çağırmaları sağlar.  
   
- Bu bölümde, biz nasıl kullanılacağını açıklayan <xref:System.ServiceModel.MsmqIntegration.MsmqIntegrationBinding> arasında kuyruğa alınan iletişim için (1) bir [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] System.Messaging ve (2) bir MSMQ uygulama istemcisi kullanılarak yazılmış bir MSMQ uygulama hizmet ve istemci ve [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] hizmet.  
+ Bu bölümde, biz nasıl kullanılacağını açıklayan <xref:System.ServiceModel.MsmqIntegration.MsmqIntegrationBinding> (1) bir WCF istemcisi System.Messaging ve (2) bir MSMQ uygulama istemci ile bir WCF Hizmeti kullanılarak yazılmış bir MSMQ uygulama hizmeti arasındaki kuyruğa alınan iletişim için.  
   
- Bir MSMQ alıcı uygulamasından nasıl çağırılacağını tam bir örnek için bir [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] istemci, bkz: [Message Queuing için Windows Communication Foundation](../../../../docs/framework/wcf/samples/wcf-to-message-queuing.md) örnek.  
+ Bir WCF istemciden MSMQ alıcı uygulamanın nasıl çağırılacağını bir tam örnek için bkz: [Message Queuing için Windows Communication Foundation](../../../../docs/framework/wcf/samples/wcf-to-message-queuing.md) örnek.  
   
- Nasıl çağırılacağını tam bir örnek için bir [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] hizmet MSMQ istemciden bkz [Message Queuing için Windows Communication Foundation](../../../../docs/framework/wcf/samples/message-queuing-to-wcf.md) örnek.  
+ Bir WCF hizmeti bir MSMQ istemciden nasıl çağırılacağını bir tam örnek için bkz: [Message Queuing için Windows Communication Foundation](../../../../docs/framework/wcf/samples/message-queuing-to-wcf.md) örnek.  
   
 ### <a name="to-create-a-wcf-service-that-receives-messages-from-a-msmq-client"></a>MSMQ istemciden gelen iletileri alan bir WCF hizmeti oluşturmak için  
   
-1.  İçin hizmet sözleşmesini tanımlayan bir arabirim tanımlayın [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] , alan hizmetini sıraya alınan iletileri bir MSMQ gönderen uygulamasından aşağıdaki örnek kodda gösterildiği gibi.  
+1.  Aşağıdaki örnek kodda gösterildiği gibi bir MSMQ gönderen uygulamasından sıraya alınan iletileri alan WCF hizmeti için hizmet sözleşmesini tanımlayan bir arabirim tanımlayın.  
   
      [!code-csharp[S_MsmqToWcf#1](../../../../samples/snippets/csharp/VS_Snippets_CFX/s_msmqtowcf/cs/service.cs#1)]
      [!code-vb[S_MsmqToWcf#1](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/s_msmqtowcf/vb/service.vb#1)]  
@@ -54,12 +42,12 @@ Message Queuing (MSMQ) uygulamalarınız ile tümleştirebilirsiniz [!INCLUDE[in
   
 ### <a name="to-create-a-wcf-client-that-sends-messages-to-a-msmq-receiver-application"></a>MSMQ alıcı uygulamaya iletileri gönderen bir WCF istemcisi oluşturmak için  
   
-1.  İçin hizmet sözleşmesini tanımlayan bir arabirim tanımlayın [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] sıraya alınan gönderen istemci iletileri MSMQ alıcı için aşağıdaki örnek kodda gösterildiği gibi.  
+1.  Aşağıdaki örnek kodda gösterildiği gibi gönderir MSMQ alıcı iletileri kuyruğa WCF istemcisi için hizmet sözleşmesini tanımlayan bir arabirim tanımlayın.  
   
      [!code-csharp[S_WcfToMsmq#6](../../../../samples/snippets/csharp/VS_Snippets_CFX/s_wcftomsmq/cs/proxy.cs#6)]
      [!code-vb[S_WcfToMsmq#6](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/s_wcftomsmq/vb/proxy.vb#6)]  
   
-2.  Bir istemci tanımlamak, sınıf [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] istemcisi MSMQ alıcı çağırmak için kullanır.  
+2.  MSMQ alıcı çağırmak için WCF istemcisini kullanan bir istemci sınıfı tanımlar.  
   
      [!code-csharp[S_WcfToMsmq#2](../../../../samples/snippets/csharp/VS_Snippets_CFX/s_wcftomsmq/cs/snippets.cs#2)]
      [!code-vb[S_WcfToMsmq#2](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/s_wcftomsmq/vb/snippets.vb#2)]  

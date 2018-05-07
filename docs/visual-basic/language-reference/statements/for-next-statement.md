@@ -1,11 +1,6 @@
 ---
 title: For...Next Deyimi (Visual Basic)
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
-ms.topic: article
 f1_keywords:
 - vb.Step
 - vb.Next
@@ -28,14 +23,11 @@ helpviewer_keywords:
 - Exit statement [Visual Basic], For...Next statements
 - For statement [Visual Basic]
 ms.assetid: f5fc0d51-67ce-4c36-9f09-31c9a91c94e9
-caps.latest.revision: "64"
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: 8a50f44a167952c735c6ed2830ca87105413401b
-ms.sourcegitcommit: 34ec7753acf76f90a0fa845235ef06663dc9e36e
+ms.openlocfilehash: 8c54189499b7d5b52cf93b4a0ae6cc47356bf57e
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="fornext-statement-visual-basic"></a>For...Next Deyimi (Visual Basic)
 Bir grup ifadeleri, belirtilen sayıda yineler.  
@@ -103,7 +95,7 @@ Next [ counter ]
   
  Herhangi bir sayıda koyabilirsiniz `Exit For` deyimlerinde bir `For`...`Next` Döngü. Kullanıldığında içinde iç içe geçmiş `For`...`Next` Döngüler, `Exit For` en içteki döngüden çıkılıp ve iç içe geçme sonraki yüksek düzeyde denetim aktarır.  
   
- `Exit For`Bazı koşulunu sonra çoğunlukla kullanılır (örneğin, bir `If`... `Then`... `Else` yapısı). Kullanmak istediğiniz `Exit For` aşağıdaki koşulları için:  
+ `Exit For` Bazı koşulunu sonra çoğunlukla kullanılır (örneğin, bir `If`... `Then`... `Else` yapısı). Kullanmak istediğiniz `Exit For` aşağıdaki koşulları için:  
   
 -   Yinelemek etmeden gereksiz veya mümkün değil. Bu durum, hatalı bir değer veya bir sonlandırma isteği oluşturabilirsiniz.  
   
@@ -132,7 +124,7 @@ Next [ counter ]
   
  Varsayılan değer olan `step` 1'dir.  
   
-###  <a name="BKMK_Counter"></a>Sayaç bağımsız değişken  
+###  <a name="BKMK_Counter"></a> Sayaç bağımsız değişken  
  Aşağıdaki tablo gösterir olup olmadığını `counter` tüm kapsamlıdır yeni bir yerel değişken tanımlar `For…Next` döngü. Bu belirleme bağlıdır `datatype` mevcut olup `counter` zaten tanımlandı.  
   
 |Olan `datatype` var?|Olan `counter` önceden tanımlanmış?|Sonuç (olup olmadığını `counter` tüm kapsamlıdır yeni bir yerel değişken tanımlar `For...Next` döngü)|  

@@ -1,24 +1,12 @@
 ---
 title: Özel İzleme
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.tgt_pltfrm: ''
-ms.topic: article
 ms.assetid: 2d191c9f-62f4-4c63-92dd-cda917fcf254
-caps.latest.revision: 16
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 559557b34cf284b6dba5b300ef7270ec8d49ca84
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
-ms.translationtype: HT
+ms.openlocfilehash: a025c23f967b0a8f2c387aa581536233ddb70a76
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="custom-tracking"></a>Özel İzleme
 Bu örnek, özel izleme katılımcı oluşturmak ve izleme verilerini içeriğini konsola yazma gösterilmiştir. Ayrıca, örnek yayma gösterilmiştir <xref:System.Activities.Tracking.CustomTrackingRecord> kullanıcıyla doldurulmuş nesneleri tanımlanmış veri. Konsol tabanlı izleme katılımcı filtreleri <xref:System.Activities.Tracking.TrackingRecord> izleme profili kullanan iş akışı tarafından gösterilen nesneleri kodda oluşturulan nesne.  

@@ -1,11 +1,6 @@
 ---
 title: Mid Deyimi
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
-ms.topic: article
 f1_keywords:
 - vb.MidB
 - vb.Mid
@@ -15,14 +10,11 @@ helpviewer_keywords:
 - Mid statement [Visual Basic]
 - strings [Visual Basic], replacing
 ms.assetid: 2b82d7a8-9646-4cb0-bec5-80abc98297bf
-caps.latest.revision: "20"
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: 61d812ef91acc65728b04efc9aa99e3975e71d0c
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 90b805df902dcdfebe85421583dd54e9af04bec9
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="mid-statement"></a>Mid Deyimi
 Belirtilen sayıda karakteri değiştiren bir `String` başka bir dizeden karakterleri içeren değişken.  
@@ -42,19 +34,19 @@ Mid( _
  Gerekli. Adını `String` değiştirmek için değişken.  
   
  `Start`  
- Gerekli. `Integer`ifade. Karakter konumda `Target` metin değiştirme başladığı. `Start`bir tabanlı bir dizin kullanır.  
+ Gerekli. `Integer` İfade. Karakter konumda `Target` metin değiştirme başladığı. `Start` bir tabanlı bir dizin kullanır.  
   
  `Length`  
- İsteğe bağlı. `Integer`ifade. Değiştirilecek karakterler sayısı. Atlanırsa, tüm `String` kullanılır.  
+ İsteğe bağlı. `Integer` İfade. Değiştirilecek karakterler sayısı. Atlanırsa, tüm `String` kullanılır.  
   
  `StringExpression`  
- Gerekli. `String`bölümünü değiştirir ifade `Target`.  
+ Gerekli. `String` bölümünü değiştirir ifade `Target`.  
   
 ## <a name="exceptions"></a>Özel Durumlar  
   
 |Özel durum türü|Koşul|  
 |--------------------|---------------|  
-|<xref:System.ArgumentException>|`Start`< = 0 veya `Length` < 0.|  
+|<xref:System.ArgumentException>|`Start` < = 0 veya `Length` < 0.|  
   
 ## <a name="remarks"></a>Açıklamalar  
  Değiştirilen karakter sayısını her zaman karakter sayısı küçük veya buna eşit olan `Target`.  
@@ -72,11 +64,11 @@ Mid( _
 ## <a name="requirements"></a>Gereksinimler  
  **Namespace:** [Microsoft.VisualBasic](../../../visual-basic/language-reference/runtime-library-members.md)  
   
- **Modülü:**`Strings`  
+ **Modülü:** `Strings`  
   
- **Derleme:**[!INCLUDE[vbprvbruntime](~/includes/vbprvbruntime-md.md)]  
+ **Derleme:** [!INCLUDE[vbprvbruntime](~/includes/vbprvbruntime-md.md)]  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
  <xref:Microsoft.VisualBasic.Strings.Mid%2A>  
- [Dizeleri](../../../visual-basic/programming-guide/language-features/strings/index.md)  
+ [Dizeler](../../../visual-basic/programming-guide/language-features/strings/index.md)  
  [Visual Basic'de dizelere giriş](../../../visual-basic/programming-guide/language-features/strings/introduction-to-strings.md)

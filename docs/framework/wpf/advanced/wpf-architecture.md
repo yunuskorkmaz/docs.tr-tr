@@ -1,14 +1,6 @@
 ---
 title: WPF Mimarisi
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-wpf
-ms.tgt_pltfrm: ''
-ms.topic: article
 helpviewer_keywords:
 - properties [WPF], attached
 - attached properties [WPF]
@@ -24,17 +16,11 @@ helpviewer_keywords:
 - data templates [WPF]
 - thread [WPF], affinity
 ms.assetid: 8579c10b-76ab-4c52-9691-195ce02333c8
-caps.latest.revision: 17
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 29c8e2d632c37a299389b1bdc7f3f19f7df2f7e7
-ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
+ms.openlocfilehash: 70afa7e193832837650d72837b25e26e3b64c180
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/30/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="wpf-architecture"></a>WPF Mimarisi
 Bu konu Windows Presentation Foundation (WPF) sınıf hiyerarşisinin Kılavuzlu Tur sağlar. Ana alt çoğunu kapsar [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]ve nasıl etkileşim kurduklarını açıklar. Bu ayrıca mimarlar tarafından yapılan seçimleri bazıları ayrıntıları [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)].  
@@ -64,7 +50,7 @@ Bu konu Windows Presentation Foundation (WPF) sınıf hiyerarşisinin Kılavuzlu
 ## <a name="systemwindowsdependencyobject"></a>System.Windows.DependencyObject  
  Binada kullanılan birincil mimari felsefeleri birini [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] yöntemleri veya olayları üzerinden özellikleri için bir tercih edildi. Özellikler bildirim temelli ve izin daha kolayca eylem yerine hedefi belirtin. Bu da bir model güdümlü ya da veri tabanlı, sistem kullanıcı arabirimi içeriğinin görüntülenmesi için desteklenir. Bu felsefesi hedeflenen etkisini daha iyi bir uygulama davranışını denetlemek için için bağlama yapılamadı daha fazla özellik oluşturma vardı.  
   
- Daha fazla özellikleri, miktardan daha zengin bir özellik sistemi tarafından yönlendirilen sistem olması için [!INCLUDE[TLA2#tla_clr](../../../../includes/tla2sharptla-clr-md.md)] sağlar gerekiyordu. Bir basit bu zenginliğini değişiklik bildirimleri örneğidir. İki yolla bağlama etkinleştirmek için her iki tarafında bir değişiklik bildirimi desteklemek için bağ gerekir. Özellik değerlerine bağlı davranışa sahip için özellik değeri değiştiğinde bildirilmesi gerekir. [!INCLUDE[TLA#tla_netframewk](../../../../includes/tlasharptla-netframewk-md.md)] Bir arabirime sahip **INotifyPropertyChange**, isteğe bağlıdır ancak değişiklik bildirimleri yayımlamak bir nesne sağlar.  
+ Daha fazla özellikleri, miktardan daha zengin bir özellik sistemi tarafından yönlendirilen sistem olması için [!INCLUDE[TLA2#tla_clr](../../../../includes/tla2sharptla-clr-md.md)] sağlar gerekiyordu. Bir basit bu zenginliğini değişiklik bildirimleri örneğidir. İki yolla bağlama etkinleştirmek için her iki tarafında bir değişiklik bildirimi desteklemek için bağ gerekir. Özellik değerlerine bağlı davranışa sahip için özellik değeri değiştiğinde bildirilmesi gerekir. Microsoft .NET Framework bir arabirime sahip **INotifyPropertyChange**, isteğe bağlıdır ancak değişiklik bildirimleri yayımlamak bir nesne sağlar.  
   
  [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] türetilen daha zengin bir özellik sistemi sağlar <xref:System.Windows.DependencyObject> türü. Özellik ifadeleri bağımlılıkları izler ve bağımlılıkları değiştirdiğinizde özellik değerlerini otomatik olarak yeniden doğrular özellik sistemi gerçek anlamda bir "bağımlılık" özelliği sistemidir. Örneğin, devralınan bir özellik varsa (gibi <xref:System.Windows.Controls.Control.FontSize%2A>), özellik değeri devralan bir öğenin üst öğede değişirse sistem otomatik olarak güncelleştirilir.  
   

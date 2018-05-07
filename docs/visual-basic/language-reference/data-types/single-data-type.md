@@ -1,11 +1,6 @@
 ---
-title: "Single Veri Türü (Visual Basic)"
+title: Single Veri Türü (Visual Basic)
 ms.date: 07/20/2015
-ms.prod: .net
-ms.suite: 
-ms.technology:
-- devlang-visual-basic
-ms.topic: article
 f1_keywords:
 - vb.Single
 helpviewer_keywords:
@@ -25,14 +20,11 @@ helpviewer_keywords:
 - zeros, trailing
 - numbers [Visual Basic], floating point
 ms.assetid: 224a2795-4cd5-496c-8f7a-a4f05a06d45d
-caps.latest.revision: 
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: c91dbdf73ed1e26393518001ec8651557e5b780f
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 770961f225b139aaddf34b42327bca63638c725d
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="single-data-type-visual-basic"></a>Single Veri Türü (Visual Basic)
 Ayrı tutma imzalı IEEE 32-bit (4-bayt) tek duyarlıklı kayan nokta sayıları değerinden - 3.4028235E + 38 arasında değişen ile - 1.401298E-45 negatif değerler ve 1.401298E-45 3.4028235E + 38 pozitif değerler için aracılığıyla. Tek duyarlıklı sayılar yaklaşık gerçek bir sayı olarak depolar.  
@@ -56,10 +48,10 @@ Ayrı tutma imzalı IEEE 32-bit (4-bayt) tek duyarlıklı kayan nokta sayıları
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
  <xref:System.Single?displayProperty=nameWithType>  
- [Veri türleri](../../../visual-basic/language-reference/data-types/data-type-summary.md)  
- [Ondalık veri türü](../../../visual-basic/language-reference/data-types/decimal-data-type.md)  
- [Double veri türü](../../../visual-basic/language-reference/data-types/double-data-type.md)  
- [Tür dönüşüm işlevleri](../../../visual-basic/language-reference/functions/type-conversion-functions.md)  
- [Dönüştürme özeti](../../../visual-basic/language-reference/keywords/conversion-summary.md)  
- [Veri türlerinin etkili kullanımı](../../../visual-basic/programming-guide/language-features/data-types/efficient-use-of-data-types.md)  
- [Veri türleri sorunlarını giderme](../../../visual-basic/programming-guide/language-features/data-types/troubleshooting-data-types.md)
+ [Veri Türleri](../../../visual-basic/language-reference/data-types/data-type-summary.md)  
+ [Decimal Veri Türü](../../../visual-basic/language-reference/data-types/decimal-data-type.md)  
+ [Double Veri Türü](../../../visual-basic/language-reference/data-types/double-data-type.md)  
+ [Tür Dönüştürme İşlevleri](../../../visual-basic/language-reference/functions/type-conversion-functions.md)  
+ [Dönüştürme Özeti](../../../visual-basic/language-reference/keywords/conversion-summary.md)  
+ [Veri Türlerinin Etkili Kullanımı](../../../visual-basic/programming-guide/language-features/data-types/efficient-use-of-data-types.md)  
+ [Veri Türü Sorunlarını Giderme](../../../visual-basic/programming-guide/language-features/data-types/troubleshooting-data-types.md)

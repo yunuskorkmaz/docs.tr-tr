@@ -1,23 +1,14 @@
 ---
 title: Yol dosya erişim hatası
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- devlang-visual-basic
-ms.topic: article
 f1_keywords:
 - vbrID75
 ms.assetid: 6ce3a161-7316-46bd-a785-0d50e5414020
-caps.latest.revision: 8
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: bff3ec554a594e99bc65e5cd8df28a056dcc1ebd
-ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
+ms.openlocfilehash: 83ce8615b173a6f5835347ebc561a793655ec8f7
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="pathfile-access-error"></a>Yol/Dosya erişim hatası
 Bir dosya erişim veya disk erişimi işlemi sırasında işletim sistemi yolunu ve dosya adı arasında bir bağlantı yapılamıyor.  

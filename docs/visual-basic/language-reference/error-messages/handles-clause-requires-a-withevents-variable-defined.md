@@ -1,26 +1,17 @@
 ---
-title: "Handles tümcesi, içeren türde veya temel türlerinden birinde tanımlanan bir WithEvents değişkeni gerektirir."
+title: Handles tümcesi, içeren türde veya temel türlerinden birinde tanımlanan bir WithEvents değişkeni gerektirir.
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- devlang-visual-basic
-ms.topic: article
 f1_keywords:
 - vbc30506
 - bc30506
 helpviewer_keywords:
 - BC30506
 ms.assetid: 5b66f6a8-f050-4e03-a57f-a64e85f80cb5
-caps.latest.revision: 
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: e007b371886ab721df6f099e289ea860474c915b
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.openlocfilehash: 99901432375c02e6a0e500cb772f8fd029276b2d
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="handles-clause-requires-a-withevents-variable-defined-in-the-containing-type-or-one-of-its-base-types"></a>Handles tümcesi, içeren türde veya temel türlerinden birinde tanımlanan bir WithEvents değişkeni gerektirir.
 Değil sağladığınız bir `WithEvents` değişkeni, `Handles` yan tümcesi. `Handles` Bir yordam bildiriminin sonundaki anahtar sözcüğü kullanılarak bildirilen bir nesne değişkeni tarafından başlatılan olayları işlemek için neden `WithEvents` anahtar sözcüğü.  

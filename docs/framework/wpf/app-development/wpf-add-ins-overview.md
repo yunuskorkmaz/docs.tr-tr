@@ -1,13 +1,6 @@
 ---
-title: "WPF Eklentilerine Genel Bakış"
-ms.custom: 
+title: WPF Eklentilerine Genel Bakış
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-wpf
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - add-ins and XAML browser applications [WPF]
 - add-ins overview [WPF]
@@ -19,19 +12,14 @@ helpviewer_keywords:
 - add-ins [WPF], architecture
 - add-ins [WPF], limitations
 ms.assetid: 00b4c776-29a8-4dba-b603-280a0cdc2ade
-caps.latest.revision: "36"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: ffd45957b41cdfd8488aedd865aa70ef5b2634b2
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.openlocfilehash: 942f5706a83a9f9e9cd969701ed5625c57b76f83
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="wpf-add-ins-overview"></a>WPF Eklentilerine Genel Bakış
-<a name="Introduction"></a>[!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] Geliştiricilerin eklenti genişletilebilirliği destekleyen uygulamalar oluşturmak için kullanabileceği bir eklenti modeli içerir. Bu eklenti modeli ile tümleştirilebilen ve uygulama işlevselliğini genişleten eklentiler oluşturulmasına izin verir. Bazı senaryolarda uygulamalar da görüntülemeniz [!INCLUDE[TLA2#tla_ui#plural](../../../../includes/tla2sharptla-uisharpplural-md.md)] eklentileri tarafından sağlanır. Bu konuda gösterilmektedir nasıl [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] güçlendirir [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] bu senaryolar, arkasındaki mimariyi, faydalarını ve kısıtlamalarını sağlamak için eklenti modeli.  
+<a name="Introduction"></a> [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] Geliştiricilerin eklenti genişletilebilirliği destekleyen uygulamalar oluşturmak için kullanabileceği bir eklenti modeli içerir. Bu eklenti modeli ile tümleştirilebilen ve uygulama işlevselliğini genişleten eklentiler oluşturulmasına izin verir. Bazı senaryolarda uygulamalar da görüntülemeniz [!INCLUDE[TLA2#tla_ui#plural](../../../../includes/tla2sharptla-uisharpplural-md.md)] eklentileri tarafından sağlanır. Bu konuda gösterilmektedir nasıl [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] güçlendirir [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] bu senaryolar, arkasındaki mimariyi, faydalarını ve kısıtlamalarını sağlamak için eklenti modeli.  
   
 
   
@@ -115,7 +103,7 @@ ms.lasthandoff: 01/19/2018
   
  [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] Türleri Uzaktan erişilebilir değil. Sorunu çözmek için [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] genişletir [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] etkinleştirmek için eklenti modeli [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] konak uygulamadan görüntülenecek eklentileri tarafından oluşturulmuş. Bu destek tarafından sağlanan [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] iki tür tarafından: <xref:System.AddIn.Contract.INativeHandleContract> arabirimi ve tarafından uygulanan iki statik yöntemler <xref:System.AddIn.Pipeline.FrameworkElementAdapters> sınıfı: <xref:System.AddIn.Pipeline.FrameworkElementAdapters.ContractToViewAdapter%2A> ve <xref:System.AddIn.Pipeline.FrameworkElementAdapters.ViewToContractAdapter%2A>. Yüksek düzeyde, aşağıdaki şekilde bu türleri ve yöntemleri kullanılır:  
   
-1.  [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]gerektiren [!INCLUDE[TLA2#tla_ui#plural](../../../../includes/tla2sharptla-uisharpplural-md.md)] tarafından sağlanan eklentiler doğrudan veya dolaylı olarak türetilen sınıflardır <xref:System.Windows.FrameworkElement>şekiller, denetimler, kullanıcı denetimleri, Düzen panelleri ve sayfalar gibi.  
+1.  [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] gerektiren [!INCLUDE[TLA2#tla_ui#plural](../../../../includes/tla2sharptla-uisharpplural-md.md)] tarafından sağlanan eklentiler doğrudan veya dolaylı olarak türetilen sınıflardır <xref:System.Windows.FrameworkElement>şekiller, denetimler, kullanıcı denetimleri, Düzen panelleri ve sayfalar gibi.  
   
 2.  Bir kullanıcı Arabirimi eklentisi ve konak uygulama arasında geçirilir sözleşme bildirir olduğunda, onu olarak bildirilmelidir bir <xref:System.AddIn.Contract.INativeHandleContract> (olmayan bir <xref:System.Windows.FrameworkElement>); <xref:System.AddIn.Contract.INativeHandleContract> bir eklenti Uzaktan erişilebilir gösterimidir [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] yalıtım sınırlarında geçirilebilir.  
   
@@ -178,7 +166,7 @@ ms.lasthandoff: 01/19/2018
  Bu görevler, aşağıdaki alt bölümlerde ayrıntılı olarak açıklanmıştır.  
   
 ### <a name="configuring-the-pipeline-and-add-in-for-clickonce-deployment"></a>Ardışık Düzen ve eklenti ClickOnce dağıtım için yapılandırma  
- [!INCLUDE[TLA2#tla_xbap#plural](../../../../includes/tla2sharptla-xbapsharpplural-md.md)]için indirilir ve güvenli bir klasörde çalıştırma [!INCLUDE[TLA2#tla_clickonce](../../../../includes/tla2sharptla-clickonce-md.md)] dağıtım önbelleği. Sırayla bir [!INCLUDE[TLA2#tla_xbap](../../../../includes/tla2sharptla-xbap-md.md)] bir eklenti barındırmak için ardışık düzen ve eklenti derlemesi da güvenli klasöre karşıdan yüklenmesi gerekir. Bunun için uygulama bildirimini ardışık düzen ve eklenti derlemesini içerecek biçimde yapılandırmanız gerekir. Bu en kolay yapılır [!INCLUDE[TLA2#tla_visualstu](../../../../includes/tla2sharptla-visualstu-md.md)], ardışık düzen ve eklenti derlemesi ana bilgisayar olması gerekiyor ancak [!INCLUDE[TLA2#tla_xbap](../../../../includes/tla2sharptla-xbap-md.md)] projenin kök klasörü için sırayla [!INCLUDE[TLA2#tla_visualstu](../../../../includes/tla2sharptla-visualstu-md.md)] ardışık düzen derlemeleri algılamak için.  
+ [!INCLUDE[TLA2#tla_xbap#plural](../../../../includes/tla2sharptla-xbapsharpplural-md.md)] için indirilir ve güvenli bir klasörde çalıştırma [!INCLUDE[TLA2#tla_clickonce](../../../../includes/tla2sharptla-clickonce-md.md)] dağıtım önbelleği. Sırayla bir [!INCLUDE[TLA2#tla_xbap](../../../../includes/tla2sharptla-xbap-md.md)] bir eklenti barındırmak için ardışık düzen ve eklenti derlemesi da güvenli klasöre karşıdan yüklenmesi gerekir. Bunun için uygulama bildirimini ardışık düzen ve eklenti derlemesini içerecek biçimde yapılandırmanız gerekir. Bu en kolay yapılır [!INCLUDE[TLA2#tla_visualstu](../../../../includes/tla2sharptla-visualstu-md.md)], ardışık düzen ve eklenti derlemesi ana bilgisayar olması gerekiyor ancak [!INCLUDE[TLA2#tla_xbap](../../../../includes/tla2sharptla-xbap-md.md)] projenin kök klasörü için sırayla [!INCLUDE[TLA2#tla_visualstu](../../../../includes/tla2sharptla-visualstu-md.md)] ardışık düzen derlemeleri algılamak için.  
   
  Sonuç olarak, ilk adım ardışık düzen ve eklenti derlemesi için oluşturmaktır [!INCLUDE[TLA2#tla_xbap](../../../../includes/tla2sharptla-xbap-md.md)] derleme ve eklenti derleme projeleri her ardışık düzen derleme çıktısı ayarlayarak projenin kök. Aşağıdaki tabloda aynı klasörde çözüm ve kök konak ardışık düzen derleme projeleri ve eklenti derleme projesi derleme çıktı yolları gösterilmektedir [!INCLUDE[TLA2#tla_xbap](../../../../includes/tla2sharptla-xbap-md.md)] projesi.  
   
@@ -202,7 +190,7 @@ ms.lasthandoff: 01/19/2018
   
 1.  Sağ tıklatın [!INCLUDE[TLA2#tla_xbap](../../../../includes/tla2sharptla-xbap-md.md)] projesi,'ı tıklatın **özellikleri**, tıklatın **Yayımla**ve ardından **uygulama dosyalarını** düğmesi.  
   
-2.  İçinde **uygulama dosyalarını** iletişim, kümesi **yayımlama durumu** her kanal ve DLL eklentisi **Ekle (otomatik)**ve **indirme grubu** her ardışık düzen ve eklenti DLL'e **(gerekli)**.  
+2.  İçinde **uygulama dosyalarını** iletişim, kümesi **yayımlama durumu** her kanal ve DLL eklentisi **Ekle (otomatik)** ve **indirme grubu** her ardışık düzen ve eklenti DLL'e **(gerekli)**.  
   
 ### <a name="using-the-pipeline-and-add-in-from-the-application-base"></a>Ardışık Düzen ve kullanarak uygulama temel gelen  
  Ne zaman ardışık düzen ve için yapılandırıldığında [!INCLUDE[TLA2#tla_clickonce](../../../../includes/tla2sharptla-clickonce-md.md)] dağıtımı, bunlar aynı indirilir [!INCLUDE[TLA2#tla_clickonce](../../../../includes/tla2sharptla-clickonce-md.md)] Önbellek klasörü olarak [!INCLUDE[TLA2#tla_xbap](../../../../includes/tla2sharptla-xbap-md.md)]. İşlem hattını kullanma ve gelen eklentisi için [!INCLUDE[TLA2#tla_xbap](../../../../includes/tla2sharptla-xbap-md.md)], [!INCLUDE[TLA2#tla_xbap](../../../../includes/tla2sharptla-xbap-md.md)] kod gerekir alın bunları uygulamadan temel. Çeşitli türleri ve üyeleri [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] ardışık düzen ve eklentiler kullanmak için eklenti modeli, bu senaryo için özel destek sağlar. İlk olarak, yol tarafından tanımlanan <xref:System.AddIn.Hosting.PipelineStoreLocation.ApplicationBase> numaralandırma değeri. İle ilgili eklenti üyelerinin aşırı şunlardır ardışık düzen kullanmak için bu değeri kullanın:  
@@ -230,7 +218,7 @@ ms.lasthandoff: 01/19/2018
   
 -   Konak uygulama tarafında [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] tüketen <xref:System.Windows.Interop.HwndSource> bir iç [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] öğesinden türetilen sınıf <xref:System.Windows.Interop.HwndHost> ve <xref:System.AddIn.Contract.INativeHandleContract>. Bu sınıfın bir örneği tarafından döndürülen <xref:System.AddIn.Pipeline.FrameworkElementAdapters.ContractToViewAdapter%2A> konak uygulamaya.  
   
- <xref:System.Windows.Interop.HwndHost>Görüntülenecek var. [!INCLUDE[TLA2#tla_ui#plural](../../../../includes/tla2sharptla-uisharpplural-md.md)], gelen pencere işleyicileri tarafından tanımlanan [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] [!INCLUDE[TLA2#tla_ui#plural](../../../../includes/tla2sharptla-uisharpplural-md.md)]. Daha fazla bilgi için bkz: [WPF ve Win32 birlikte çalışabilirlik](../../../../docs/framework/wpf/advanced/wpf-and-win32-interoperation.md).  
+ <xref:System.Windows.Interop.HwndHost> Görüntülenecek var. [!INCLUDE[TLA2#tla_ui#plural](../../../../includes/tla2sharptla-uisharpplural-md.md)], gelen pencere işleyicileri tarafından tanımlanan [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] [!INCLUDE[TLA2#tla_ui#plural](../../../../includes/tla2sharptla-uisharpplural-md.md)]. Daha fazla bilgi için bkz: [WPF ve Win32 birlikte çalışabilirlik](../../../../docs/framework/wpf/advanced/wpf-and-win32-interoperation.md).  
   
  Özet olarak, <xref:System.AddIn.Contract.INativeHandleContract>, <xref:System.AddIn.Pipeline.FrameworkElementAdapters.ViewToContractAdapter%2A>, ve <xref:System.AddIn.Pipeline.FrameworkElementAdapters.ContractToViewAdapter%2A> pencere tanıtıcısını izin vermek için mevcut bir [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] bir eklentiyi kapsüllenip tarafından bir ana bilgisayar uygulaması geçirilecek bir <xref:System.Windows.Interop.HwndHost> ve ana bilgisayar görüntülenir uygulamanın [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)].  
   

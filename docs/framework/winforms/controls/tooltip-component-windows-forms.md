@@ -1,27 +1,15 @@
 ---
-title: "ToolTip Bileşeni (Windows Forms)"
-ms.custom: 
+title: ToolTip Bileşeni (Windows Forms)
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-winforms
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - tooltips [Windows Forms]
 - ToolTip component [Windows Forms]
 ms.assetid: 82e71dc3-0159-4f91-9f22-499224f004a0
-caps.latest.revision: "8"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 2e051fa13eee9a9110654d8791d83b2ff51cbdb8
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 2c8175e4a3d2ddf08bcfc603b5d0fe40917bc37e
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="tooltip-component-windows-forms"></a>ToolTip Bileşeni (Windows Forms)
 Windows Forms <xref:System.Windows.Forms.ToolTip> bileşen kullanıcı denetimleri işaret ettiğinde metin görüntüler. Bir araç ipucu herhangi bir denetimle ilişkili olabilir. Bu denetim örnek kullanımını: bir form üzerinde alanı kaydetmek için küçük bir simge bir düğme görüntüleyebilir ve düğmenin işlevi açıklamak için bir araç ipucunu kullanın.  
@@ -37,7 +25,7 @@ Windows Forms <xref:System.Windows.Forms.ToolTip> bileşen kullanıcı denetimle
  Bir araç ipucu görünmesi gereken süreyi kontrol değerlerin nasıl ayarlanacağını ve için görüntülendiği süre açıklanmaktadır.  
   
 ## <a name="reference"></a>Başvuru  
- <xref:System.Windows.Forms.ToolTip>sınıfı  
+ <xref:System.Windows.Forms.ToolTip> sınıfı  
  Sınıf ve üyelerine başvuru bilgileri sağlar.  
   
 ## <a name="related-sections"></a>İlgili Bölümler  

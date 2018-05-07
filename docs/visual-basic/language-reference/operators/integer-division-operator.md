@@ -1,11 +1,6 @@
 ---
-title: "\\ İşleci (Visual Basic)"
+title: '\ İşleci (Visual Basic)'
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
-ms.topic: article
 f1_keywords:
 - vb.\
 - '\'
@@ -22,14 +17,11 @@ helpviewer_keywords:
 - quotients, integer
 - truncation [Visual Basic], integer division
 ms.assetid: 4b0ee347-950c-45c9-8e23-54bc85df208e
-caps.latest.revision: "17"
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: 38718b109b4b3865238267039908ea1d51d06229
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: ef3946e871e1dc248b54932e16f6cae6026da08e
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="-operator-visual-basic"></a>\ İşleci (Visual Basic)
 İki sayıyı böler ve tamsayı sonuç döndürür.  
@@ -78,8 +70,8 @@ expression1 \ expression2
 ## <a name="see-also"></a>Ayrıca Bkz.  
  [\\= İşleci](../../../visual-basic/language-reference/operators/integer-division-assignment-operator.md)  
  [/ İşleci (Visual Basic)](../../../visual-basic/language-reference/operators/floating-point-division-operator.md)  
- [Option Strict deyimi](../../../visual-basic/language-reference/statements/option-strict-statement.md)  
- [Aritmetik işleçler](../../../visual-basic/language-reference/operators/arithmetic-operators.md)  
+ [Option Strict Deyimi](../../../visual-basic/language-reference/statements/option-strict-statement.md)  
+ [Aritmetik İşleçler](../../../visual-basic/language-reference/operators/arithmetic-operators.md)  
  [Visual Basic'de İşleç önceliği](../../../visual-basic/language-reference/operators/operator-precedence.md)  
- [İşlevselliğe göre listelenmiş işleçler](../../../visual-basic/language-reference/operators/operators-listed-by-functionality.md)  
+ [İşlevselliğe Göre Listelenmiş İşleçler](../../../visual-basic/language-reference/operators/operators-listed-by-functionality.md)  
  [Visual Basic'de aritmetik işleçler](../../../visual-basic/programming-guide/language-features/operators-and-expressions/arithmetic-operators.md)

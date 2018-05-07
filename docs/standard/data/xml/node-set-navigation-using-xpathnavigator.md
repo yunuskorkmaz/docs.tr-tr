@@ -1,26 +1,15 @@
 ---
-title: "Düğüm kümesi Gezinti XPathNavigator kullanma"
-ms.custom: 
+title: Düğüm kümesi Gezinti XPathNavigator kullanma
 ms.date: 03/30/2017
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
 ms.technology: dotnet-standard
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 1a954b41-7173-40bc-8544-d430f209b1e5
-caps.latest.revision: "2"
 author: mairaw
 ms.author: mairaw
-manager: wpickett
-ms.workload:
-- dotnet
-- dotnetcore
-ms.openlocfilehash: d1bca725d20ec35ef7d6f60fce131f9d9c951650
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: b6dfba9bb6cd253f4bc866f445a324a046c8cad2
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="node-set-navigation-using-xpathnavigator"></a>Düğüm kümesi Gezinti XPathNavigator kullanma
 Düğümler üzerinden gidebilirsiniz bir <xref:System.Xml.XPath.XPathDocument> veya <xref:System.Xml.XmlDocument> düğüm kümesi gezinti yöntemlerini kullanarak nesne <xref:System.Xml.XPath.XPathNavigator> sınıfı. Tüm düğümleri veya seçili bir seçim yöntemlerini biri tarafından döndürülen düğümleri kümesi üzerinden gidebilirsiniz <xref:System.Xml.XPath.XPathNavigator> sınıfı.  

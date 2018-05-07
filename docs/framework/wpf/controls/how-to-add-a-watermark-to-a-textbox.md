@@ -1,13 +1,6 @@
 ---
 title: "Nasıl yapılır: TextBox'a Filigran Ekleme"
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-wpf
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -15,16 +8,11 @@ helpviewer_keywords:
 - displaying a background image inside a text box to aid user input [WPF]
 - aid usability of a TextBox using a background image [WPF]
 ms.assetid: df89bdd8-a0fb-45e0-b312-dd53332d01a8
-caps.latest.revision: "5"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 92d619cb713e22d49e5c62bf7545d946b418dbda
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 962d6958de0811863393f930d8672769a50e8265
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-add-a-watermark-to-a-textbox"></a>Nasıl yapılır: TextBox'a Filigran Ekleme
 Aşağıdaki örnek, kullanılabilirliğini yardımcı olmak gösterilmiştir bir <xref:System.Windows.Controls.TextBox> içinde açıklayıcı arka plan görüntüsü görüntüleyerek <xref:System.Windows.Controls.TextBox> metin kullanıcı girdi kadar bu noktada görüntü kaldırılır. Ayrıca, kullanıcının kendi giriş kaldırırsa arka plan resmini yeniden geri yüklendi. Aşağıdaki şekle bakın.  

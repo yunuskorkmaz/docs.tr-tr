@@ -1,22 +1,12 @@
 ---
-title: "Nasıl yapılır: alt öğeleri yöntemi (Visual Basic) kullanılarak tek bir alt öğesi bulunamıyor"
-ms.custom: 
+title: 'Nasıl yapılır: alt öğeleri yöntemi (Visual Basic) kullanılarak tek bir alt öğesi bulunamıyor'
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 0c03468c-efc8-4140-98f3-fb67acd9e8e1
-caps.latest.revision: "3"
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: 0647dee5ced1e986fcb3fac7915437dfb37b0796
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.openlocfilehash: 5c4e857d28ab4660638198c054cf93bf94a621a7
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-find-a-single-descendant-using-the-descendants-method-visual-basic"></a>Nasıl yapılır: alt öğeleri yöntemi (Visual Basic) kullanılarak tek bir alt öğesi bulunamıyor
 Kullanabileceğiniz <xref:System.Xml.Linq.XContainer.Descendants%2A> hızlı bir şekilde tek bir benzersiz olarak bulmak için kod yazma eksen yöntemi adlı öğesi. Belirli bir ada sahip belirli bir alt öğesi bulmak istediğiniz durumlarda bu kullanışlı bir tekniktir. İstenen öğesine gitmek için kod yazma, ancak daha hızlı ve kolay kullanılarak kod yazmaya görülür <xref:System.Xml.Linq.XContainer.Descendants%2A> ekseni.  

@@ -1,21 +1,14 @@
 ---
-title: "Nasıl yapılır: Boş Değer Atanabilir bir Tür Belirleme (C# Programlama Kılavuzu)"
+title: 'Nasıl yapılır: Boş Değer Atanabilir bir Tür Belirleme (C# Programlama Kılavuzu)'
 ms.date: 07/20/2015
-ms.prod: .net
-ms.technology:
-- devlang-csharp
-ms.topic: article
 helpviewer_keywords:
 - nullable types [C#], identifying
 ms.assetid: d4b67ee2-66e8-40c1-ae9d-545d32c71387
-caps.latest.revision: 
-author: BillWagner
-ms.author: wiwagn
-ms.openlocfilehash: 610ed18308df02c5632361cd09ef94330dea598b
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: f3ac4ebd77fc92a133eb326919d5ba55264ced97
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-identify-a-nullable-type-c-programming-guide"></a>Nasıl yapılır: Boş Değer Atanabilir bir Tür Belirleme (C# Programlama Kılavuzu)
 C# kullanabilirsiniz [typeof](../../../csharp/language-reference/keywords/typeof.md) oluşturmak için işleç bir <xref:System.Type> null atanabilir bir tür temsil eden nesnesi:  
@@ -53,5 +46,5 @@ if (type.IsGenericType && type.GetGenericTypeDefinition() == typeof(Nullable<>))
 ```  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [Boş değer atanabilir türler](../../../csharp/programming-guide/nullable-types/index.md)  
- [Boş değer atanabilir türleri kutulama](../../../csharp/programming-guide/nullable-types/boxing-nullable-types.md)
+ [Boş Değer Atanabilir Tipler](../../../csharp/programming-guide/nullable-types/index.md)  
+ [Boş Değer Atanabilir Tipleri Kutulama](../../../csharp/programming-guide/nullable-types/boxing-nullable-types.md)

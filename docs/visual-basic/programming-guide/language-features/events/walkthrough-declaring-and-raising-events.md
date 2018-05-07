@@ -1,13 +1,6 @@
 ---
 title: Olay (Visual Basic) bildirme ve oluşturma
-ms.custom: ''
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- devlang-visual-basic
-ms.topic: article
 helpviewer_keywords:
 - declarations [Visual Basic], events
 - events [Visual Basic], walkthroughs
@@ -16,14 +9,11 @@ helpviewer_keywords:
 - events [Visual Basic], raising
 - raising events [Visual Basic], walkthroughs
 ms.assetid: 8ffb3be8-097d-4d3c-b71e-04555ebda2a2
-caps.latest.revision: 16
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: 27db585084703607a7389f5a0aa3eba6f70dd793
-ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
+ms.openlocfilehash: 67bbf7bc95a0fe1ee8e9c2a6cf07d850d30bb028
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="walkthrough-declaring-and-raising-events-visual-basic"></a>İzlenecek yol: Olay Bildirme ve Oluşturma (Visual Basic)
 Bu kılavuz, bildirme ve olayları adlı bir sınıf için yükseltmek gösterilmiştir `Widget`. Adımları tamamladıktan sonra Yardımcısı konuyu okumak isteyebilirsiniz [izlenecek yol: olayları işleme](../../../../visual-basic/programming-guide/language-features/events/walkthrough-handling-events.md), olayları kullanmayı gösterir `Widget` bir uygulamada durum bilgilerini sağlamak için nesneleri.  

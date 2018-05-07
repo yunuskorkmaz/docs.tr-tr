@@ -1,13 +1,6 @@
 ---
-title: "İzlenecek yol: Windows Forms DataGridView Denetiminde Verileri Doğrulama"
-ms.custom: 
+title: 'İzlenecek yol: Windows Forms DataGridView Denetiminde Verileri Doğrulama'
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-winforms
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -19,16 +12,11 @@ helpviewer_keywords:
 - data validation [Windows Forms], Windows Forms
 - walkthroughs [Windows Forms], DataGridView control
 ms.assetid: a4f1d015-2969-430c-8ea2-b612d179c290
-caps.latest.revision: "22"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: b2ede616b311119d174534e53cb3aaf9e366c7c4
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 8ad8caef5db13b1f917a6c27da523d3ded915d84
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="walkthrough-validating-data-in-the-windows-forms-datagridview-control"></a>İzlenecek yol: Windows Forms DataGridView Denetiminde Verileri Doğrulama
 Kullanıcılara veri girişi işlevlerini görüntülediğinizde, sık formunuza girilen veri doğrulama gerekir. <xref:System.Windows.Forms.DataGridView> Sınıfı verileri veri deposuna yürütülmeden önce doğrulama gerçekleştirmek için kullanışlı bir yöntem sağlar. İşleyerek veri doğrulama <xref:System.Windows.Forms.DataGridView.CellValidating> tarafından gerçekleştirilen olay <xref:System.Windows.Forms.DataGridView> geçerli hücreyi değiştiğinde.  

@@ -1,22 +1,15 @@
 ---
 title: My.Computer.Clipboard Nesnesi
 ms.date: 07/20/2015
-ms.prod: .net
-ms.suite: 
-ms.technology: devlang-visual-basic
-ms.topic: article
 helpviewer_keywords:
 - Clipboard
 - My.Computer.Clipboard object
 ms.assetid: 05d4ede9-1f9a-4495-87f0-77350b8d2e5d
-caps.latest.revision: "29"
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: 7da023c342498375daf1723a22b4e4969656cf52
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 484f676070a1447067304dba1795d799c046dec6
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="mycomputerclipboard-object"></a>My.Computer.Clipboard Nesnesi
 Pano düzenleme için yöntemleri sağlar.  
@@ -30,12 +23,12 @@ Pano düzenleme için yöntemleri sağlar.
 >  Yöntemlerinden birini de kullanabilirsiniz <xref:System.Windows.Forms.Clipboard?displayProperty=nameWithType> Pano işlemek için sınıf.  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Namespace:**<xref:Microsoft.VisualBasic.MyServices>  
+ **Namespace:** <xref:Microsoft.VisualBasic.MyServices>  
   
  **Sınıfı:** <xref:Microsoft.VisualBasic.MyServices.ClipboardProxy> (erişim sağlayan <xref:System.Windows.Forms.Clipboard>)  
   
- **Derleme:**[!INCLUDE[vbprvbruntime](~/includes/vbprvbruntime-md.md)]  
+ **Derleme:** [!INCLUDE[vbprvbruntime](~/includes/vbprvbruntime-md.md)]  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
  <xref:Microsoft.VisualBasic.Devices.Computer.Clipboard%2A>  
- [My.Computer nesnesi](../../../visual-basic/language-reference/objects/my-computer-object.md)
+ [My.Computer Nesnesi](../../../visual-basic/language-reference/objects/my-computer-object.md)

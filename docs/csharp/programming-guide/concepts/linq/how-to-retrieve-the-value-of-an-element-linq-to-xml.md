@@ -1,21 +1,12 @@
 ---
-title: "Nasıl yapılır: bir öğenin (LINQ-XML) değerini alma (C#)"
-ms.custom: 
+title: 'Nasıl yapılır: bir öğenin (LINQ-XML) değerini alma (C#)'
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-csharp
-ms.topic: article
 ms.assetid: 4228c007-07c9-4cf2-a45b-e7074c109581
-caps.latest.revision: "3"
-author: BillWagner
-ms.author: wiwagn
-ms.openlocfilehash: ceb803eff68f72378ca195120ed96990d62d3593
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.openlocfilehash: 5eb75ea3dddbc90141ec875f87a988157ddf0362
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-retrieve-the-value-of-an-element-linq-to-xml-c"></a>Nasıl yapılır: bir öğenin (LINQ-XML) değerini alma (C#)
 Bu konu, öğelerin değerini alma gösterir. Bunu yapmak için başlıca iki yolu vardır. Dönüştürülecek bir yolu olan bir <xref:System.Xml.Linq.XElement> veya bir <xref:System.Xml.Linq.XAttribute> istenen türe. Açık dönüşüm işleci öğe veya öznitelik içeriğini belirtilen türe dönüştürür ve sizin değişkenine atar. Alternatif olarak, kullanabileceğiniz <xref:System.Xml.Linq.XElement.Value%2A?displayProperty=nameWithType> özelliği veya <xref:System.Xml.Linq.XAttribute.Value%2A?displayProperty=nameWithType> özelliği.  
@@ -54,9 +45,9 @@ Console.WriteLine("Value of e:" + (int)e);
 Value of e:44  
 ```  
   
- [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)]Aşağıdaki veri türleri için açık atama işleçleri sağlar: `string`, `bool`, `bool?`, `int`, `int?`, `uint`, `uint?`, `long`, `long?`, `ulong`, `ulong?`, `float`, `float?`, `double`, `double?`, `decimal`, `decimal?`, `DateTime`, `DateTime?`, `TimeSpan`, `TimeSpan?`, `GUID`ve `GUID?`.  
+ [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] Aşağıdaki veri türleri için açık atama işleçleri sağlar: `string`, `bool`, `bool?`, `int`, `int?`, `uint`, `uint?`, `long`, `long?`, `ulong`, `ulong?` , `float`, `float?`, `double`, `double?`, `decimal`, `decimal?`, `DateTime`, `DateTime?`, `TimeSpan`, `TimeSpan?`, `GUID`, ve `GUID?`.  
   
- [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)]için aynı atama işleçleri sağlar <xref:System.Xml.Linq.XAttribute> nesneleri.  
+ [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] için aynı atama işleçleri sağlar <xref:System.Xml.Linq.XAttribute> nesneleri.  
   
 ## <a name="example"></a>Örnek  
  Kullanabileceğiniz <xref:System.Xml.Linq.XElement.Value%2A> özelliği, bir öğenin içeriğini almak için:  

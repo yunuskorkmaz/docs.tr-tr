@@ -1,13 +1,6 @@
 ---
-title: "Komut Vermeye Genel Bakış"
-ms.custom: 
+title: Komut Vermeye Genel Bakış
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-wpf
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -20,19 +13,14 @@ helpviewer_keywords:
 - commanding [WPF]
 - CommandManager [WPF]
 ms.assetid: bc208dfe-367d-426a-99de-52b7e7511e81
-caps.latest.revision: "35"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 3eb7d05cdf5f6a80a0a247a5f429052cc9a8368b
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.openlocfilehash: 0d426d8cf174a61c724e97b5e7af5c1428679716
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="commanding-overview"></a>Komut Vermeye Genel Bakış
-<a name="introduction"></a>Kumanda bir giriş mekanizmasıdır içinde [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] giriş cihaz giriş'den fazla anlamsal düzeyde işlenmesini sağlar. Komut örneklerindendir **kopya**, **Kes**, ve **Yapıştır** işlemleri birçok uygulama üzerinde bulunamadı.  
+<a name="introduction"></a> Kumanda bir giriş mekanizmasıdır içinde [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] giriş cihaz giriş'den fazla anlamsal düzeyde işlenmesini sağlar. Komut örneklerindendir **kopya**, **Kes**, ve **Yapıştır** işlemleri birçok uygulama üzerinde bulunamadı.  
   
  Bu genel bakışta komutları bulunan tanımlar [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)], hangi sınıfların komut verme modelinin bir parçası olduğunu ve uygulamalarınızda kullanın ve oluşturmak nasıl komutları.  
   
@@ -83,13 +71,13 @@ ms.lasthandoff: 01/19/2018
   
 <a name="Commands"></a>   
 ### <a name="commands"></a>Komutlar  
- İçindeki komutlar [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] uygulama tarafından oluşturulan <xref:System.Windows.Input.ICommand> arabirimi.  <xref:System.Windows.Input.ICommand>iki yöntem sunar <xref:System.Windows.Input.ICommand.Execute%2A>, ve <xref:System.Windows.Input.ICommand.CanExecute%2A>ve bir olay <xref:System.Windows.Input.ICommand.CanExecuteChanged>. <xref:System.Windows.Input.ICommand.Execute%2A>komut ile ilişkili eylemleri gerçekleştirir. <xref:System.Windows.Input.ICommand.CanExecute%2A>Geçerli komut hedefinde komutun yürütülüp yürütülmeyeceğini belirler. <xref:System.Windows.Input.ICommand.CanExecuteChanged>komut verme işlemlerini merkezi hale getirir komutu Yöneticisi oluşturuldu, ancak henüz komut bağlama tarafından yürütülen komutu kılmak komut kaynağı bir değişiklik algılarsa tetiklenir.  [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] Uyarlamasını <xref:System.Windows.Input.ICommand> olan <xref:System.Windows.Input.RoutedCommand> sınıfı ve odak noktası, bu genel bakış.  
+ İçindeki komutlar [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] uygulama tarafından oluşturulan <xref:System.Windows.Input.ICommand> arabirimi.  <xref:System.Windows.Input.ICommand> iki yöntem sunar <xref:System.Windows.Input.ICommand.Execute%2A>, ve <xref:System.Windows.Input.ICommand.CanExecute%2A>ve bir olay <xref:System.Windows.Input.ICommand.CanExecuteChanged>. <xref:System.Windows.Input.ICommand.Execute%2A> komut ile ilişkili eylemleri gerçekleştirir. <xref:System.Windows.Input.ICommand.CanExecute%2A> Geçerli komut hedefinde komutun yürütülüp yürütülmeyeceğini belirler. <xref:System.Windows.Input.ICommand.CanExecuteChanged> komut verme işlemlerini merkezi hale getirir komutu Yöneticisi oluşturuldu, ancak henüz komut bağlama tarafından yürütülen komutu kılmak komut kaynağı bir değişiklik algılarsa tetiklenir.  [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] Uyarlamasını <xref:System.Windows.Input.ICommand> olan <xref:System.Windows.Input.RoutedCommand> sınıfı ve odak noktası, bu genel bakış.  
   
  Giriş ana kaynakları [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] fare, klavye, mürekkep ve yönlendirilen komutlardır.  Daha fazla aygıt odaklı girişleri kullanın bir <xref:System.Windows.RoutedEvent> giriş olayı oluştu bir uygulama sayfasını nesneleri bildirir.  A <xref:System.Windows.Input.RoutedCommand> farklı değildir.  <xref:System.Windows.Input.RoutedCommand.Execute%2A> Ve <xref:System.Windows.Input.RoutedCommand.CanExecute%2A> yöntemlerinin bir <xref:System.Windows.Input.RoutedCommand> komutu için uygulama mantığını içermesi gerekmez, ancak yerine tünel yönlendirilmiş olaylar yükseltmek ve bir nesneyle karşılaştıkları kadar öğe ağacı üzerinden Kabarcık bir <xref:System.Windows.Input.CommandBinding>.  <xref:System.Windows.Input.CommandBinding> Bu olayları için işleyiciler içerir ve komut gerçekleştiren işleyicileri olur.  İçindeki olay yönlendirme hakkında daha fazla bilgi için [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)], bkz: [yönlendirilmiş olaylara genel bakış](../../../../docs/framework/wpf/advanced/routed-events-overview.md).  
   
  <xref:System.Windows.Input.RoutedCommand.Execute%2A> Yöntemi bir <xref:System.Windows.Input.RoutedCommand> başlatır <xref:System.Windows.Input.CommandManager.PreviewExecuted> ve <xref:System.Windows.Input.CommandManager.Executed> komut hedefi olaylarına.  <xref:System.Windows.Input.RoutedCommand.CanExecute%2A> Yöntemi bir <xref:System.Windows.Input.RoutedCommand> başlatır <xref:System.Windows.Input.CommandManager.CanExecute> ve <xref:System.Windows.Input.CommandManager.PreviewCanExecute> komut hedefi olaylarına.  Bu olaylar tünel ve kabarcık sahip olan bir nesne karşılaştıkları kadar öğe ağacı üzerinden bir <xref:System.Windows.Input.CommandBinding> o belirli komut için.  
   
- [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]ortak yönlendirilmiş komutlar kümesi birkaç sınıf arasında yayılan kaynakları: <xref:System.Windows.Input.MediaCommands>, <xref:System.Windows.Input.ApplicationCommands>, <xref:System.Windows.Input.NavigationCommands>, <xref:System.Windows.Input.ComponentCommands>, ve <xref:System.Windows.Documents.EditingCommands>.  Bu sınıfların yalnızca oluşur <xref:System.Windows.Input.RoutedCommand> nesneleri ve değil uygulama mantığı komutu.  Uygulama mantığı üzerinde komut üzerinde yürütülmekte olan nesne sorumluluğundadır.  
+ [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] ortak yönlendirilmiş komutlar kümesi birkaç sınıf arasında yayılan kaynakları: <xref:System.Windows.Input.MediaCommands>, <xref:System.Windows.Input.ApplicationCommands>, <xref:System.Windows.Input.NavigationCommands>, <xref:System.Windows.Input.ComponentCommands>, ve <xref:System.Windows.Documents.EditingCommands>.  Bu sınıfların yalnızca oluşur <xref:System.Windows.Input.RoutedCommand> nesneleri ve değil uygulama mantığı komutu.  Uygulama mantığı üzerinde komut üzerinde yürütülmekte olan nesne sorumluluğundadır.  
   
 <a name="Command_Sources"></a>   
 ### <a name="command-sources"></a>Komut kaynakları  
@@ -97,13 +85,13 @@ ms.lasthandoff: 01/19/2018
   
  İçindeki komut kaynakları [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] genellikle uygulama <xref:System.Windows.Input.ICommandSource> arabirimi.  
   
- <xref:System.Windows.Input.ICommandSource>üç özellik sunar: <xref:System.Windows.Input.ICommandSource.Command%2A>, <xref:System.Windows.Input.ICommandSource.CommandTarget%2A>, ve <xref:System.Windows.Input.ICommandSource.CommandParameter%2A>:  
+ <xref:System.Windows.Input.ICommandSource> üç özellik sunar: <xref:System.Windows.Input.ICommandSource.Command%2A>, <xref:System.Windows.Input.ICommandSource.CommandTarget%2A>, ve <xref:System.Windows.Input.ICommandSource.CommandParameter%2A>:  
   
--   <xref:System.Windows.Input.ICommandSource.Command%2A>komut kaynağı çağrıldığında çalıştırılacak komuttur.  
+-   <xref:System.Windows.Input.ICommandSource.Command%2A> komut kaynağı çağrıldığında çalıştırılacak komuttur.  
   
--   <xref:System.Windows.Input.ICommandSource.CommandTarget%2A>komutu yürütmek üzerinde nesnedir.  Uygulamasında dikkate değerdir [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] <xref:System.Windows.Input.ICommandSource.CommandTarget%2A> özelliği <xref:System.Windows.Input.ICommandSource> yalnızca uygun olduğunda <xref:System.Windows.Input.ICommand> olan bir <xref:System.Windows.Input.RoutedCommand>.  Varsa <xref:System.Windows.Input.ICommandSource.CommandTarget%2A> üzerinde ayarlanmış bir <xref:System.Windows.Input.ICommandSource> ve karşılık gelen komutunu değil bir <xref:System.Windows.Input.RoutedCommand>, komut hedefi göz ardı edilir. Varsa <xref:System.Windows.Input.ICommandSource.CommandTarget%2A> ayarlanmazsa klavye odağını öğeyle komut hedefi olacaktır.  
+-   <xref:System.Windows.Input.ICommandSource.CommandTarget%2A> komutu yürütmek üzerinde nesnedir.  Uygulamasında dikkate değerdir [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] <xref:System.Windows.Input.ICommandSource.CommandTarget%2A> özelliği <xref:System.Windows.Input.ICommandSource> yalnızca uygun olduğunda <xref:System.Windows.Input.ICommand> olan bir <xref:System.Windows.Input.RoutedCommand>.  Varsa <xref:System.Windows.Input.ICommandSource.CommandTarget%2A> üzerinde ayarlanmış bir <xref:System.Windows.Input.ICommandSource> ve karşılık gelen komutunu değil bir <xref:System.Windows.Input.RoutedCommand>, komut hedefi göz ardı edilir. Varsa <xref:System.Windows.Input.ICommandSource.CommandTarget%2A> ayarlanmazsa klavye odağını öğeyle komut hedefi olacaktır.  
   
--   <xref:System.Windows.Input.ICommandSource.CommandParameter%2A>işleyicilere bilgi geçirmek için kullanılan kullanıcı tanımlı veri türü komutu uygular.  
+-   <xref:System.Windows.Input.ICommandSource.CommandParameter%2A> işleyicilere bilgi geçirmek için kullanılan kullanıcı tanımlı veri türü komutu uygular.  
   
  [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] Sınıfları uygulayan <xref:System.Windows.Input.ICommandSource> olan <xref:System.Windows.Controls.Primitives.ButtonBase>, <xref:System.Windows.Controls.MenuItem>, <xref:System.Windows.Documents.Hyperlink>, ve <xref:System.Windows.Input.InputBinding>.  <xref:System.Windows.Controls.Primitives.ButtonBase>, <xref:System.Windows.Controls.MenuItem>, ve <xref:System.Windows.Documents.Hyperlink> bunlar tıklatıldığında ve bir komut çağırma <xref:System.Windows.Input.InputBinding> bir komutu çalıştırır, <xref:System.Windows.Input.InputGesture> ilişkili ile bu gerçekleştirilir.  
   
@@ -140,7 +128,7 @@ ms.lasthandoff: 01/19/2018
   
  <xref:System.Windows.Input.CommandBinding> Sınıfı içeren bir <xref:System.Windows.Input.CommandBinding.Command%2A> özelliği ve <xref:System.Windows.Input.CommandBinding.PreviewExecuted>, <xref:System.Windows.Input.CommandBinding.Executed>, <xref:System.Windows.Input.CommandBinding.PreviewCanExecute>, ve <xref:System.Windows.Input.CommandBinding.CanExecute> olaylar.  
   
- <xref:System.Windows.Input.CommandBinding.Command%2A>Bu komut, <xref:System.Windows.Input.CommandBinding> ile ilişkili.  Bağlı olan olay işleyicileri <xref:System.Windows.Input.CommandBinding.PreviewExecuted> ve <xref:System.Windows.Input.CommandBinding.Executed> olayları komut mantığını uygular.  Olay işleyicileri bağlı <xref:System.Windows.Input.CommandBinding.PreviewCanExecute> ve <xref:System.Windows.Input.CommandBinding.CanExecute> olayları belirlemek komutu geçerli komut hedefinde yürütülüp yürütülmeyeceğini.  
+ <xref:System.Windows.Input.CommandBinding.Command%2A> Bu komut, <xref:System.Windows.Input.CommandBinding> ile ilişkili.  Bağlı olan olay işleyicileri <xref:System.Windows.Input.CommandBinding.PreviewExecuted> ve <xref:System.Windows.Input.CommandBinding.Executed> olayları komut mantığını uygular.  Olay işleyicileri bağlı <xref:System.Windows.Input.CommandBinding.PreviewCanExecute> ve <xref:System.Windows.Input.CommandBinding.CanExecute> olayları belirlemek komutu geçerli komut hedefinde yürütülüp yürütülmeyeceğini.  
   
  Aşağıdaki örnekte nasıl oluşturulacağını gösterir bir <xref:System.Windows.Input.CommandBinding> kökündeki <xref:System.Windows.Window> bir uygulama.  <xref:System.Windows.Input.CommandBinding> İlişkilendirir <xref:System.Windows.Input.ApplicationCommands.Open%2A> komutunu <xref:System.Windows.Input.CommandManager.Executed> ve <xref:System.Windows.Input.CommandBinding.CanExecute> işleyicileri.  
   
@@ -182,7 +170,7 @@ ms.lasthandoff: 01/19/2018
   
 <a name="Command_Library"></a>   
 ## <a name="command-library"></a>Komut kitaplığı  
- [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]önceden tanımlanmış komut kümesini sağlar.  Komut kitaplığı aşağıdaki sınıflardan oluşur: <xref:System.Windows.Input.ApplicationCommands>, <xref:System.Windows.Input.NavigationCommands>, <xref:System.Windows.Input.MediaCommands>, <xref:System.Windows.Documents.EditingCommands>ve <xref:System.Windows.Input.ComponentCommands>.  Bu sınıfların gibi komutları sağlar <xref:System.Windows.Input.ApplicationCommands.Cut%2A>, <xref:System.Windows.Input.NavigationCommands.BrowseBack%2A> ve <xref:System.Windows.Input.NavigationCommands.BrowseForward%2A>, <xref:System.Windows.Input.MediaCommands.Play%2A>, <xref:System.Windows.Input.MediaCommands.Stop%2A>, ve <xref:System.Windows.Input.MediaCommands.Pause%2A>.  
+ [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] önceden tanımlanmış komut kümesini sağlar.  Komut kitaplığı aşağıdaki sınıflardan oluşur: <xref:System.Windows.Input.ApplicationCommands>, <xref:System.Windows.Input.NavigationCommands>, <xref:System.Windows.Input.MediaCommands>, <xref:System.Windows.Documents.EditingCommands>ve <xref:System.Windows.Input.ComponentCommands>.  Bu sınıfların gibi komutları sağlar <xref:System.Windows.Input.ApplicationCommands.Cut%2A>, <xref:System.Windows.Input.NavigationCommands.BrowseBack%2A> ve <xref:System.Windows.Input.NavigationCommands.BrowseForward%2A>, <xref:System.Windows.Input.MediaCommands.Play%2A>, <xref:System.Windows.Input.MediaCommands.Stop%2A>, ve <xref:System.Windows.Input.MediaCommands.Pause%2A>.  
   
  Bu komutların çoğu, varsayılan giriş bağlamaları kümesi içerir.  Belirtirseniz, uygulamanızın copy komutu işlediğinde, otomatik olarak "CTRL + C" bağlama klavye alın örneğin, ayrıca diğer giriş aygıtları için bağlamaları gibi elde edersiniz [!INCLUDE[TLA2#tla_tpc](../../../../includes/tla2sharptla-tpc-md.md)] kalem hareketleri ve konuşma bilgi.  
   

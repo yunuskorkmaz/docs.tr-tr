@@ -1,13 +1,6 @@
 ---
-title: "Veri Hizmeti (WCF Veri Hizmetleri) güncelleştirme"
-ms.custom: 
+title: Veri Hizmeti (WCF Veri Hizmetleri) güncelleştirme
 ms.date: 03/30/2017
-ms.prod: .net-framework-oob
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -15,16 +8,11 @@ helpviewer_keywords:
 - WCF Data Services, changing data
 - WCF Data Services, client library
 ms.assetid: 00d993be-ffed-4dea-baf7-6eea982cdb54
-caps.latest.revision: "6"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: bc8041dee12c8300e18e6321c717cbd80b93d650
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 58bbe74fdeb0af5d7095b0b1a57fb8bd475032ad
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="updating-the-data-service-wcf-data-services"></a>Veri Hizmeti (WCF Veri Hizmetleri) güncelleştirme
 Kullandığınızda [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] kullanmak için istemci kitaplığı bir [!INCLUDE[ssODataFull](../../../../includes/ssodatafull-md.md)] akış, kitaplık istemci veri hizmeti sınıfların örneklerini akışa girdileri çevirir. Bu veri hizmeti sınıflarını kullanarak izlenen <xref:System.Data.Services.Client.DataServiceContext> hangi <xref:System.Data.Services.Client.DataServiceQuery%601> ait. İstemci üzerinde yöntemleri kullanarak rapor varlıklara değişiklikleri izleyen <xref:System.Data.Services.Client.DataServiceContext>. Bu yöntemler, eklenen ve Silinen varlıkları ve ayrıca özellik değerleri veya varlık örnekleri arasında ilişkiler için yaptığınız değişiklikleri izlemek istemci etkinleştirin. Çağırdığınızda bu izlenen değişiklikleri REST tabanlı işlemler veri hizmetine gönderilen <xref:System.Data.Services.Client.DataServiceContext.SaveChanges%2A> yöntemi.  
@@ -78,13 +66,13 @@ Kullandığınızda [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] 
 ## <a name="creating-and-modifying-relationship-links"></a>Oluşturma ve ilişki bağlantıları değiştirme  
  Kullanarak yeni bir varlık eklediğinizde <xref:System.Data.Services.Client.DataServiceContext.AddObject%2A> yöntemi veya uygun *AddTo* yöntemi <xref:System.Data.Services.Client.DataServiceContext> , sınıf **hizmet Başvurusu Ekle** iletişim oluşturur, herhangi bir ilişki Yeni varlık ile ilgili varlıklar arasında otomatik olarak tanımlanmamış.  
   
- Oluşturma ve varlık örnekleri arasındaki ilişkileri değiştirmek ve veri hizmeti bu değişiklikleri yansıtmak için istemci kitaplığı sahiptir. Varlıklar arasındaki ilişkiler modelinde ilişkileri olarak tanımlanmış ve <xref:System.Data.Services.Client.DataServiceContext> her ilişki bağlamında bir bağlantı nesnesi olarak izler. [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)]Aşağıdaki yöntemleri sağlar <xref:System.Data.Services.Client.DataServiceContext> sınıfı oluşturmak, değiştirmek ve bu bağlantıları silmek için:  
+ Oluşturma ve varlık örnekleri arasındaki ilişkileri değiştirmek ve veri hizmeti bu değişiklikleri yansıtmak için istemci kitaplığı sahiptir. Varlıklar arasındaki ilişkiler modelinde ilişkileri olarak tanımlanmış ve <xref:System.Data.Services.Client.DataServiceContext> her ilişki bağlamında bir bağlantı nesnesi olarak izler. [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] Aşağıdaki yöntemleri sağlar <xref:System.Data.Services.Client.DataServiceContext> sınıfı oluşturmak, değiştirmek ve bu bağlantıları silmek için:  
   
 |Yöntem|Açıklama|  
 |------------|-----------------|  
 |<xref:System.Data.Services.Client.DataServiceContext.AddRelatedObject%2A>|İki ilgili varlık nesneler arasındaki yeni bir bağlantı oluşturur. Bu yöntemin çağrılması için arama eşdeğer <xref:System.Data.Services.Client.DataServiceContext.AddObject%2A> ve <xref:System.Data.Services.Client.DataServiceContext.AddLink%2A> hem yeni nesnesi oluşturmanız ve varolan bir nesneye ilişki tanımlamak için.|  
 |<xref:System.Data.Services.Client.DataServiceContext.AddLink%2A>|İki ilgili varlık nesneler arasındaki yeni bir bağlantı oluşturur.|  
-|<xref:System.Data.Services.Client.DataServiceContext.SetLink%2A>|Varolan bir bağlantıyı iki ilgili varlık nesneler arasındaki güncelleştirir. <xref:System.Data.Services.Client.DataServiceContext.SetLink%2A>Ayrıca bağlantıları sıfır-veya---bire bir önem düzeyi ile silmek için kullanılır (`0..1:1`) ve bire (`1:1`). İlgili nesne ayarlayarak bunu yapabilirsiniz `null`.|  
+|<xref:System.Data.Services.Client.DataServiceContext.SetLink%2A>|Varolan bir bağlantıyı iki ilgili varlık nesneler arasındaki güncelleştirir. <xref:System.Data.Services.Client.DataServiceContext.SetLink%2A> Ayrıca bağlantıları sıfır-veya---bire bir önem düzeyi ile silmek için kullanılır (`0..1:1`) ve bire (`1:1`). İlgili nesne ayarlayarak bunu yapabilirsiniz `null`.|  
 |<xref:System.Data.Services.Client.DataServiceContext.DeleteLink%2A>|Bağlam silme işlemi için izleme bir bağlantı işaretler zaman <xref:System.Data.Services.Client.DataServiceContext.SaveChanges%2A> yöntemi çağrılır. Bir ilişkili nesne silme veya önce var olan bir nesne bağlantısını silme ve ardından yeni ilgili nesne için bir bağlantı ekleyerek bir ilişki değiştirdiğinizde, bu yöntemi kullanın.|  
 |<xref:System.Data.Services.Client.DataServiceContext.AttachLink%2A>|İki varlık nesnesi arasındaki varolan bağlantıyı bağlamını uyarır. Bu ilişki zaten veri hizmeti var ve çağırdığınızda bağlantıyı oluşturmak denemez bağlam varsayar <xref:System.Data.Services.Client.DataServiceContext.SaveChanges%2A> yöntemi. Bir bağlam nesneleri eklemek ve de iki arasındaki bağlantı ekleyebilirsiniz gerektiğinde bu yöntemi kullanın. Yeni bir ilişki tanımlıyorsanız, kullanmanız <xref:System.Data.Services.Client.DataServiceContext.AddLink%2A>.|  
 |<xref:System.Data.Services.Client.DataServiceContext.DetachLink%2A>|Belirtilen bağlantı bağlamında izlemeyi durdurur. Bu yöntem bir çok silmek için kullanılır (`*:*`) ilişkiler. Bir önem düzeyi ile ilişki bağlantıları için bunun yerine kullanmanız gerekir <xref:System.Data.Services.Client.DataServiceContext.SetLink%2A>.|  

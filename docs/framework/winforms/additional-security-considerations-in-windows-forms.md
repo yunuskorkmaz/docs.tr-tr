@@ -1,32 +1,20 @@
 ---
-title: "Windows Forms'ta Ek Güvenlik Konuları"
-ms.custom: 
+title: Windows Forms'ta Ek Güvenlik Konuları
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-winforms
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - Windows Forms, secure calls to Windows API
 - security [Windows Forms]
 - security [Windows Forms], calling APIs
 - Clipboard [Windows Forms], securing access
 ms.assetid: 15abda8b-0527-47c7-aedb-77ab595f2bf1
-caps.latest.revision: "14"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 5c86374066cea2926b0ac4510afbc17749182fea
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.openlocfilehash: a1d8606eb972a6e3bea52f6230cb893a4bbb5aac
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="additional-security-considerations-in-windows-forms"></a>Windows Forms'ta Ek Güvenlik Konuları
-[!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)]güvenlik ayarları uygulamanız farklı bir kısmi güven ortamında yerel bilgisayarınızda çalışmasına neden olabilir. [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] Dosya sistemi, ağ ve başka şeylerin yönetilmeyen API'ler kritik gibi yerel kaynaklara erişimi kısıtlar. Güvenlik ayarları Microsoft Win32 API veya diğer güvenlik sistemi tarafından doğrulanıp doğrulanamadığını API'larını çağırma yeteneği etkiler. Güvenlik, dosya ve veri erişim dahil olmak üzere ve yazdırma uygulamanızın diğer yönlerini de etkiler. Kısmi güven ortamında dosya ve veri erişim hakkında daha fazla bilgi için bkz: [daha fazla güvenli dosya ve Windows Forms veri erişimi](../../../docs/framework/winforms/more-secure-file-and-data-access-in-windows-forms.md). Kısmi güven ortamında yazdırma hakkında daha fazla bilgi için bkz: [daha fazla Güvenli Yazdırma Windows Forms'ta](../../../docs/framework/winforms/more-secure-printing-in-windows-forms.md).  
+[!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] güvenlik ayarları uygulamanız farklı bir kısmi güven ortamında yerel bilgisayarınızda çalışmasına neden olabilir. [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] Dosya sistemi, ağ ve başka şeylerin yönetilmeyen API'ler kritik gibi yerel kaynaklara erişimi kısıtlar. Güvenlik ayarları Microsoft Win32 API veya diğer güvenlik sistemi tarafından doğrulanıp doğrulanamadığını API'larını çağırma yeteneği etkiler. Güvenlik, dosya ve veri erişim dahil olmak üzere ve yazdırma uygulamanızın diğer yönlerini de etkiler. Kısmi güven ortamında dosya ve veri erişim hakkında daha fazla bilgi için bkz: [daha fazla güvenli dosya ve Windows Forms veri erişimi](../../../docs/framework/winforms/more-secure-file-and-data-access-in-windows-forms.md). Kısmi güven ortamında yazdırma hakkında daha fazla bilgi için bkz: [daha fazla Güvenli Yazdırma Windows Forms'ta](../../../docs/framework/winforms/more-secure-printing-in-windows-forms.md).  
   
  Aşağıdaki bölümlerde nasıl Pano ile çalışır, pencere değişikliği gerçekleştiren ve bir kısmi güven ortamında çalışan uygulamalardan Win32 API çağrısı açıklanmaktadır.  
   
@@ -55,7 +43,7 @@ ms.lasthandoff: 01/19/2018
   
  Tarafından tanımlanan her izin düzeyi <xref:System.Security.Permissions.UIPermissionWindow> numaralandırma, yukarıdaki düzey daha az Eylemler sağlar. Aşağıdaki tablolarda tarafından kısıtlanan eylemleri gösteren <xref:System.Security.Permissions.UIPermissionWindow.SafeTopLevelWindows> ve <xref:System.Security.Permissions.UIPermissionWindow.SafeSubWindows> değerleri. Her üye için gerekli olan tam izinleri için bu üye .NET Framework sınıf kitaplığı belgeleri için bkz.  
   
- <xref:System.Security.Permissions.UIPermissionWindow.SafeTopLevelWindows>Aşağıdaki tabloda listelenen eylemler izni kısıtlar.  
+ <xref:System.Security.Permissions.UIPermissionWindow.SafeTopLevelWindows> Aşağıdaki tabloda listelenen eylemler izni kısıtlar.  
   
 |Bileşen|Kısıtlı Eylemler|  
 |---------------|------------------------|  
@@ -87,13 +75,13 @@ ms.lasthandoff: 01/19/2018
   
 |Bileşen|Üye|  
 |---------------|------------|  
-|<xref:System.Windows.Forms.Application>|-   <xref:System.Windows.Forms.Application.AddMessageFilter%2A>yöntemi<br />-   <xref:System.Windows.Forms.Application.CurrentInputLanguage%2A>özelliği<br />-   `Exit`yöntemi<br />-   <xref:System.Windows.Forms.Application.ExitThread%2A>yöntemi<br />-   <xref:System.Windows.Forms.Application.ThreadException>Olay|  
-|<xref:System.Windows.Forms.CommonDialog>|-   <xref:System.Windows.Forms.CommonDialog.HookProc%2A>yöntemi<br />-   <xref:System.Windows.Forms.CommonDialog.OwnerWndProc%2A>\ yöntemi<br />-   <xref:System.Windows.Forms.CommonDialog.Reset%2A>yöntemi<br />-   <xref:System.Windows.Forms.CommonDialog.RunDialog%2A>yöntemi|  
-|<xref:System.Windows.Forms.Control>|-   <xref:System.Windows.Forms.Control.CreateParams%2A>yöntemi<br />-   <xref:System.Windows.Forms.Control.DefWndProc%2A>yöntemi<br />-   <xref:System.Windows.Forms.Control.DestroyHandle%2A>yöntemi<br />-   <xref:System.Windows.Forms.Control.WndProc%2A>yöntemi|  
-|<xref:System.Windows.Forms.Help>|-   <xref:System.Windows.Forms.Help.ShowHelp%2A>yöntemleri<br />-   <xref:System.Windows.Forms.Help.ShowHelpIndex%2A>yöntemi|  
-|<xref:System.Windows.Forms.NativeWindow>|-   <xref:System.Windows.Forms.NativeWindow>sınıfı|  
-|<xref:System.Windows.Forms.Screen>|-   <xref:System.Windows.Forms.Screen.FromHandle%2A>yöntemi|  
-|<xref:System.Windows.Forms.SendKeys>|-   <xref:System.Windows.Forms.SendKeys.Send%2A>yöntemi<br />-   <xref:System.Windows.Forms.SendKeys.SendWait%2A>yöntemi|  
+|<xref:System.Windows.Forms.Application>|-   <xref:System.Windows.Forms.Application.AddMessageFilter%2A> Yöntemi<br />-   <xref:System.Windows.Forms.Application.CurrentInputLanguage%2A> Özelliği<br />-   `Exit` Yöntemi<br />-   <xref:System.Windows.Forms.Application.ExitThread%2A> Yöntemi<br />-   <xref:System.Windows.Forms.Application.ThreadException> Olay|  
+|<xref:System.Windows.Forms.CommonDialog>|-   <xref:System.Windows.Forms.CommonDialog.HookProc%2A> Yöntemi<br />-   <xref:System.Windows.Forms.CommonDialog.OwnerWndProc%2A>\ yöntemi<br />-   <xref:System.Windows.Forms.CommonDialog.Reset%2A> Yöntemi<br />-   <xref:System.Windows.Forms.CommonDialog.RunDialog%2A> Yöntemi|  
+|<xref:System.Windows.Forms.Control>|-   <xref:System.Windows.Forms.Control.CreateParams%2A> Yöntemi<br />-   <xref:System.Windows.Forms.Control.DefWndProc%2A> Yöntemi<br />-   <xref:System.Windows.Forms.Control.DestroyHandle%2A> Yöntemi<br />-   <xref:System.Windows.Forms.Control.WndProc%2A> Yöntemi|  
+|<xref:System.Windows.Forms.Help>|-   <xref:System.Windows.Forms.Help.ShowHelp%2A> Yöntemleri<br />-   <xref:System.Windows.Forms.Help.ShowHelpIndex%2A> Yöntemi|  
+|<xref:System.Windows.Forms.NativeWindow>|-   <xref:System.Windows.Forms.NativeWindow> sınıfı|  
+|<xref:System.Windows.Forms.Screen>|-   <xref:System.Windows.Forms.Screen.FromHandle%2A> Yöntemi|  
+|<xref:System.Windows.Forms.SendKeys>|-   <xref:System.Windows.Forms.SendKeys.Send%2A> Yöntemi<br />-   <xref:System.Windows.Forms.SendKeys.SendWait%2A> Yöntemi|  
   
  Uygulamanızı yönetilmeyen kodu çağırma izni yoksa, uygulamanız istemelidir <xref:System.Security.Permissions.SecurityPermissionFlag.UnmanagedCode> izni veya özelliklerini uygulama alternatif yöntemler düşünmeniz gerekir; çoğu durumda, Windows Forms Win32 API yönetilen bir alternatif sunar. İşlevler. Mevcut hiçbir alternatif anlamına gelir ve uygulama yönetilmeyen kod erişmeniz gerekiyorsa, uygulama izinlerini yükseltmesine gerekecektir.  
   

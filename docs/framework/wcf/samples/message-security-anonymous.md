@@ -1,31 +1,19 @@
 ---
 title: İleti Güvenliği Anonim
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 helpviewer_keywords:
 - WS Security
 ms.assetid: c321cbf9-8c05-4cce-b5a5-4bf7b230ee03
-caps.latest.revision: 52
 author: BrucePerlerMS
-ms.author: bruceper
 manager: mbaldwin
-ms.workload:
-- dotnet
-ms.openlocfilehash: c93aacbe5af47c9094dccdaa15828bfa9fda79c5
-ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
+ms.openlocfilehash: 4805b4f111e950c18a34822ebfb48eca4134b0da
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/27/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="message-security-anonymous"></a>İleti Güvenliği Anonim
-İleti güvenliği anonim örnek nasıl uygulandığını gösteren bir [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] ileti düzeyi güvenlik herhangi bir istemci kimlik doğrulaması kullanan ancak sunucunun X.509 sertifikası kullanılarak kimlik doğrulaması gerektiren uygulama. İstemci ve sunucu arasındaki tüm uygulama iletileri imzalanır ve şifrelenir. Bu örnek dayanır [WSHttpBinding](../../../../docs/framework/wcf/samples/wshttpbinding.md) örnek. Bu örnek, bir istemci konsol program (.exe) ve Internet Information Services (IIS) tarafından barındırılan bir hizmet kitaplığı (.dll) oluşur. Hizmet bir istek-yanıt iletişim deseni tanımlayan bir sözleşme uygular.  
+İleti güvenliği anonim örnek nasıl hiçbir istemci kimlik doğrulaması ile ileti düzeyi güvenlik kullanan bir Windows Communication Foundation (WCF) uygulaması uygulamak için ancak sunucunun X.509 kullanarak sunucu kimlik doğrulaması gerektiren gösterir Sertifika. İstemci ve sunucu arasındaki tüm uygulama iletileri imzalanır ve şifrelenir. Bu örnek dayanır [WSHttpBinding](../../../../docs/framework/wcf/samples/wshttpbinding.md) örnek. Bu örnek, bir istemci konsol program (.exe) ve Internet Information Services (IIS) tarafından barındırılan bir hizmet kitaplığı (.dll) oluşur. Hizmet bir istek-yanıt iletişim deseni tanımlayan bir sözleşme uygular.  
   
 > [!NOTE]
 >  Kurulum yordamı ve yapı yönergeleri Bu örnek için bu konunun sonunda yer alır.  
@@ -251,6 +239,6 @@ Press <ENTER> to terminate client.
 -   Örnek çalıştıran bitirdikten sonra Cleanup.bat samples klasöründen çalıştırın.  
   
 > [!NOTE]
->  Bu komut, bu örnek bilgisayarlar arasında çalıştırırken bir istemcide hizmet sertifikaları kaldırmaz. Çalıştırırsanız [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] bilgisayarlar arasında sertifikaları kullanma örnekleri Currentuser'a - TrustedPeople deposu yüklü hizmet sertifikalarını temizlemek emin olun. Bunu yapmak için aşağıdaki komutu kullanın: `certmgr -del -r CurrentUser -s TrustedPeople -c -n <Fully Qualified Server Machine Name>` örneğin: `certmgr -del -r CurrentUser -s TrustedPeople -c -n server1.contoso.com.`  
+>  Bu komut, bu örnek bilgisayarlar arasında çalıştırırken bir istemcide hizmet sertifikaları kaldırmaz. Bilgisayarlar arasında sertifikaları kullanan Windows Communication Foundation (WCF) örnekleri çalıştırırsanız, Currentuser'a - TrustedPeople deposu yüklü hizmet sertifikalarını temizlemek emin olun. Bunu yapmak için aşağıdaki komutu kullanın: `certmgr -del -r CurrentUser -s TrustedPeople -c -n <Fully Qualified Server Machine Name>` örneğin: `certmgr -del -r CurrentUser -s TrustedPeople -c -n server1.contoso.com.`  
   
 ## <a name="see-also"></a>Ayrıca Bkz.

@@ -1,38 +1,24 @@
 ---
 title: Kuyruğa Alınan İletilerde Sorun Giderme
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 ms.assetid: a5f2836f-018d-42f5-a571-1e97e64ea5b0
-caps.latest.revision: 19
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 1342f2383e7cf2aa15ea60be03c93044e4332612
-ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
+ms.openlocfilehash: 45a3bf82662fcc01b732428d1ca351e4ae8ddca0
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/30/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="troubleshooting-queued-messaging"></a>Kuyruğa Alınan İletilerde Sorun Giderme
-Bu bölüm yaygın sorular ve sorun giderme Yardımı kuyruklarda kullanma içerir [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)].  
+Bu bölüm yaygın sorular ve sorun giderme Yardımı için Windows Communication Foundation (WCF) kuyrukları kullanma içerir.  
   
 ## <a name="common-questions"></a>Sık sorulan sorular  
- **S:** kullandım [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] Beta 1 ve MSMQ düzeltmesinin yüklü. Düzeltmeyi kaldırmak gerekiyor mu?  
+ **S:** WCF Beta 1 kullanılan ve MSMQ düzeltme yüklü. Düzeltmeyi kaldırmak gerekiyor mu?  
   
- **Y:** Evet. Bu düzeltme artık desteklenmiyor. [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] Şimdi MSMQ üzerinde bir düzeltme gereksinimi çalışır.  
+ **Y:** Evet. Bu düzeltme artık desteklenmiyor. WCF MSMQ üzerinde bir düzeltme gereksinimi şimdi çalışıyor.  
   
  **S:** MSMQ için iki bağlamaları vardır: <xref:System.ServiceModel.NetMsmqBinding> ve <xref:System.ServiceModel.MsmqIntegration.MsmqIntegrationBinding>. Ne kullanmalıyım ve ne zaman?  
   
- **Y:** kullanmak <xref:System.ServiceModel.NetMsmqBinding> MSMQ iki arasında kuyruğa alınan iletişim için bir taşıma olarak kullanmak istediğiniz zaman [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] uygulamalar. Kullanmak <xref:System.ServiceModel.MsmqIntegration.MsmqIntegrationBinding> varolan MSMQ uygulamalarının yeni iletişim kurması için kullanmak istediğiniz zaman [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] uygulamalar.  
+ **Y:** kullanmak <xref:System.ServiceModel.NetMsmqBinding> MSMQ iki WCF uygulamalar arasında kuyruğa alınan iletişim için bir taşıma olarak kullanmak istediğiniz zaman. Kullanmak <xref:System.ServiceModel.MsmqIntegration.MsmqIntegrationBinding> varolan MSMQ uygulamalarının yeni WCF uygulamalarla iletişim kurmak için kullanmak istediğiniz zaman.  
   
  **S:** kullanmak için MSMQ yükseltme zorunda <xref:System.ServiceModel.NetMsmqBinding> ve `MsmqIntegration` bağlamaları?  
   
@@ -54,7 +40,7 @@ Bu bölüm yaygın sorular ve sorun giderme Yardımı kuyruklarda kullanma içer
   
  **Y:** Evet.  
   
- **S:** varolan MSMQ uygulamaları ile yeni tümleştirme istediğiniz [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] istemciler veya sunucular. İki tarafı da my MSMQ altyapı yükseltme gerekiyor mu?  
+ **S:** varolan MSMQ uygulamalarının yeni WCF istemciler veya sunucular ile tümleştirmek istediğiniz. İki tarafı da my MSMQ altyapı yükseltme gerekiyor mu?  
   
  **C:** Hayır. Her iki tarafında MSMQ 4. 0'için yükseltme gerekmez.  
   
@@ -145,9 +131,9 @@ System.ServiceModel.MsmqPoisonMessageException: The transport channel detected a
   
  **S:** ne zaman bir genel veya özel biçim adı kullanın ve hizmet ana bilgisayarı açmak [!INCLUDE[wv](../../../../includes/wv-md.md)], bir hata alıyorsunuz. Neden?  
   
- **Y:** [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] tümleştirme kanalda [!INCLUDE[wv](../../../../includes/wv-md.md)] zehirli ileti işleme için ana uygulama sıra için bir alt sırası açıldı durumunda olup olmadığını kontrol eder. Alt sıra adı URI dinleyiciye geçirilen msmq.formatname türetilir. MSMQ alt kuyruk adı yalnızca doğrudan biçim adını olabilir. Bu nedenle, hata görürsünüz. Sıranın URI için doğrudan biçim adını değiştirin.  
+ **Y:** WCF tümleştirmesi kanalda [!INCLUDE[wv](../../../../includes/wv-md.md)] zehirli ileti işleme için ana uygulama sıra için bir alt sırası açıldı durumunda olup olmadığını kontrol eder. Alt sıra adı URI dinleyiciye geçirilen msmq.formatname türetilir. MSMQ alt kuyruk adı yalnızca doğrudan biçim adını olabilir. Bu nedenle, hata görürsünüz. Sıranın URI için doğrudan biçim adını değiştirin.  
   
- **S:** bir ileti bir MSMQ uygulamasından alırken, ileti sıraya bulunur ve alıcı tarafından okunamaz [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] uygulama. Neden?  
+ **S:** bir ileti bir MSMQ uygulamasından alırken, iletinin kuyrukta bulunur ve alıcı WCF uygulama tarafından okunamaz. Neden?  
   
  **Y:** ileti Gövde sahip olup olmadığını denetleyin. İleti yok gövde sahipse, MSMQ tümleştirme kanalı iletisini yok sayıyor. Uygulama `IErrorHandler` özel durumları bildirilmesini ve izlemeleri denetleyin.  
   
@@ -193,7 +179,7 @@ System.ServiceModel.MsmqPoisonMessageException: The transport channel detected a
  **Y:** bağlama yapılandırmasını denetleyin. Varsayılan bağlama için açık MSMQ taşıma güvenliği iletiyi yok. Bilgisayarı kapatın.  
   
 ### <a name="remote-transacted-receives"></a>İşlem yapılan işlem uzaktan alır  
- **S:** bir sıra makine A'da olduğunda ve bir [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] makinede bir kuyruktan iletileri (işlem yapılan işlem uzaktan alma senaryosu) B, iletileri sıradan okunamıyor okur hizmet. Bilgi izleme iletisi "işlem aktarılamıyor ile." alma başarısız gösterir Bu sorunu gidermek için ne yapabilirim?  
+ **S:** ne zaman bir sıra makine A'da sahibim ve B (işlem yapılan işlem uzaktan alma senaryosu), iletileri makinede bir kuyruktan iletileri okuyan bir WCF Hizmeti sıradan okunamıyor. Bilgi izleme iletisi "işlem aktarılamıyor ile." alma başarısız gösterir Bu sorunu gidermek için ne yapabilirim?  
   
  **Y:** bu üç olası nedeni vardır:  
   

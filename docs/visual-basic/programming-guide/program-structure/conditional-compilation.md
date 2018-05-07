@@ -1,24 +1,15 @@
 ---
-title: "Visual Basic'de Koşullu Derleme"
-ms.custom: 
+title: Visual Basic'de Koşullu Derleme
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
-ms.topic: article
 helpviewer_keywords:
 - conditional compilation [Visual Basic], about conditional compilation
 - compilation [Visual Basic], conditional
 ms.assetid: 9c35e55e-7eee-44fb-a586-dad1f1884848
-caps.latest.revision: "15"
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: 559380dc9baceb2fba4dca782e83f335f1bcd92d
-ms.sourcegitcommit: c2e216692ef7576a213ae16af2377cd98d1a67fa
+ms.openlocfilehash: 496df36242c6b43e7e3ec94ce675d11177e8b466
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="conditional-compilation-in-visual-basic"></a>Visual Basic'de Koşullu Derleme
 İçinde *koşullu derleme*, belirli bir programı kod bloklarını diğerleri yoksayılır sırada seçmeli olarak derlenir.  
@@ -49,7 +40,7 @@ ms.lasthandoff: 10/22/2017
 |---|---|  
 |**Proje Tasarımcısı**|Projedeki tüm dosyalar için genel|  
 |Komut satırı|Komut satırı derleyicisi geçirilen tüm dosyalara genel|  
-|`#Const`kodda deyimi|İçinde bildirilmiş dosyasına özel|  
+|`#Const` kodda deyimi|İçinde bildirilmiş dosyasına özel|  
   
 |Proje Tasarımcısı'nda sabitleri ayarlamak için|  
 |---|  
@@ -67,11 +58,11 @@ ms.lasthandoff: 10/22/2017
   
 |Başlık|Açıklama|  
 |---|---|  
-|[Program yapısı ve kod kuralları](../../../visual-basic/programming-guide/program-structure/program-structure-and-code-conventions.md)|Kodunuzu okuyun ve sürdürmek daha kolay yapmak için öneriler sağlar.|  
+|[Program Yapısı ve Kod Kuralları](../../../visual-basic/programming-guide/program-structure/program-structure-and-code-conventions.md)|Kodunuzu okuyun ve sürdürmek daha kolay yapmak için öneriler sağlar.|  
   
 ## <a name="reference"></a>Başvuru  
- [#Const yönergesi](../../../visual-basic/language-reference/directives/const-directive.md)  
+ [#Const Yönergesi](../../../visual-basic/language-reference/directives/const-directive.md)  
   
- [#If... Then... #Else yönergeleri](../../../visual-basic/language-reference/directives/if-then-else-directives.md)  
+ [#If...Then...#Else Yönergesi](../../../visual-basic/language-reference/directives/if-then-else-directives.md)  
   
  [/ define (Visual Basic)](../../../visual-basic/reference/command-line-compiler/define.md)

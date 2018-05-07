@@ -1,26 +1,17 @@
 ---
 title: Continue Deyimi (Visual Basic)
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- devlang-visual-basic
-ms.topic: article
 f1_keywords:
 - vb.continue
 helpviewer_keywords:
 - Continue statement [Visual Basic]
 - loops, transferring to next iteration
 ms.assetid: 3ad00103-358b-4af3-a3a8-1b9ea0e995d3
-caps.latest.revision: 
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: 4a47819600a6c1d58f09c2f8ed3443632e9dab68
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: eb8596c43bf6232eec4bcb844e6202c5de373404
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="continue-statement-visual-basic"></a>Continue Deyimi (Visual Basic)
 Aktarımları denetimi hemen sonraki yineleme döngüsü.  
@@ -48,7 +39,7 @@ Continue { Do | For | While }
  [!code-vb[VbVbalrStatements#14](../../../visual-basic/language-reference/error-messages/codesnippet/VisualBasic/continue-statement_1.vb)]  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [Yapın... Loop deyimi](../../../visual-basic/language-reference/statements/do-loop-statement.md)  
- [İçin... Sonraki deyim](../../../visual-basic/language-reference/statements/for-next-statement.md)  
- [While... End While deyimi](../../../visual-basic/language-reference/statements/while-end-while-statement.md)  
- [Try... Catch... Finally ifadesi](../../../visual-basic/language-reference/statements/try-catch-finally-statement.md)
+ [Do...Loop Deyimi](../../../visual-basic/language-reference/statements/do-loop-statement.md)  
+ [For...Next Deyimi](../../../visual-basic/language-reference/statements/for-next-statement.md)  
+ [While...End While Deyimi](../../../visual-basic/language-reference/statements/while-end-while-statement.md)  
+ [Try...Catch...Finally Deyimi](../../../visual-basic/language-reference/statements/try-catch-finally-statement.md)

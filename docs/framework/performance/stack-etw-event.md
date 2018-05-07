@@ -1,27 +1,17 @@
 ---
-title: "Yığın ETW Olayı"
-ms.custom: 
+title: Yığın ETW Olayı
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - stack event [.NET Framework]
 - ETW, stack event (CLR)
 ms.assetid: f612fa5b-4b62-4593-a19e-85c9b1018dce
-caps.latest.revision: "5"
 author: mairaw
 ms.author: mairaw
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 1107c6608fe5136eb6159b1d4f0a438e95c4dabb
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 073622c22b957975ed799cf5b3bc3826473114b1
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="stack-etw-event"></a>Yığın ETW Olayı
 Yığın olayı diğer olaylar ile birlikte bir olay tetiklenir sonra Yığın izlemeleri oluşturmak için kullanılmalıdır. Çalışma zamanı sağlayıcısı etkinleştirildiğinde kaydedilir. Başka bir çalışma zamanı olay tetiklenir her tetiklenir çok sık olay olmasıdır. Bu nedenle, bu olay dikkatli bir şekilde kullanmanızı öneririz.  
@@ -30,7 +20,7 @@ Yığın olayı diğer olaylar ile birlikte bir olay tetiklenir sonra Yığın i
   
 |Olay oluşturma için anahtar sözcüğü|Düzey|  
 |-----------------------------------|-----------|  
-|`StackKeyword`(0x40000000)|LogAlways(0)|  
+|`StackKeyword` (0x40000000)|LogAlways(0)|  
   
  Aşağıdaki tabloda olay bilgilerini gösterir.  
   

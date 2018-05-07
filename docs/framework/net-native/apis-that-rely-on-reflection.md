@@ -1,26 +1,14 @@
 ---
 title: Yansıma kullanan API'ler
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 ms.assetid: f9532629-6594-4a41-909f-d083f30a42f3
-caps.latest.revision: ''
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 49ac12bcae3fd85744961a6e3b81129178c2c323
-ms.sourcegitcommit: c883637b41ee028786edceece4fa872939d2e64c
+ms.openlocfilehash: 98488a8e552940055a6ea06d360af1bd2c6b6079
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/26/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="apis-that-rely-on-reflection"></a>Yansıma kullanan API'ler
 Bazı durumlarda, kodda yansıma kullanımına açıktır, değil ve bu nedenle [!INCLUDE[net_native](../../../includes/net-native-md.md)] araç zinciri çalışma zamanında gereken meta verileri korumak değil. Bu konu, bazı ortak API'ler veya, API yansıma bir parçası olarak kabul değil ancak başarıyla yürütme yansıma kullanan ortak programlama desenleri kapsar. Bunları kaynak kodunda kullanırsanız, bunlar hakkında bilgi için çalışma zamanı yönergeleri ekleyebilirsiniz (. rd.xml) Bu API çağrıları değil throw dosyasını bir [MissingMetadataException](../../../docs/framework/net-native/missingmetadataexception-class-net-native.md) özel durumu veya çalışma zamanında diğer bazı bir özel durum.  

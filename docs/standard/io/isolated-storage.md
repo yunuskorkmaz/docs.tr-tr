@@ -1,13 +1,7 @@
 ---
-title: "Yalıtılmış Depolama"
-ms.custom: 
+title: Yalıtılmış Depolama
 ms.date: 03/30/2017
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
 ms.technology: dotnet-standard
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - data storage using isolated storage
 - stores
@@ -24,21 +18,16 @@ helpviewer_keywords:
 - data storage using isolated storage, options
 - isolation
 ms.assetid: aff939d7-9e49-46f2-a8cd-938d3020e94e
-caps.latest.revision: "32"
 author: mairaw
 ms.author: mairaw
-manager: wpickett
-ms.workload:
-- dotnet
-- dotnetcore
-ms.openlocfilehash: 0048c1946e5df59340bed211c5dbb81075047260
-ms.sourcegitcommit: 91691981897cf8451033cb01071d8f5d94017f97
+ms.openlocfilehash: 7ab12ac28728535c3bc984d6b37d82f5bf371ba2
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/09/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="isolated-storage"></a>Yalıtılmış Depolama
-<a name="top"></a>İçin [!INCLUDE[desktop_appname](../../../includes/desktop-appname-md.md)] uygulamalar, yalıtılmış depolama mekanizmasıdır kodu kaydedilmiş verilerle ilişkilendirme standartlaştırılmış yöntemler tanımlayarak yalıtım ve güvenlik sağlayan bir veri depolama. Standart hale getirme başka yararlar da sağlar. Yöneticiler yalıtılmış depolamayı değiştirecek araçları kullanarak dosya depolama alanını yapılandırabilir, güvenlik ilkelerini ayarlayabilir ve kullanılmayan verileri silebilir. Yalıtılmış depolama ile kodunuz dosya sistemindeki güvenli konumları belirtmek için benzersiz yollara ihtiyaç duymaz ve veriniz yalnızca yalıtılmış depolama erişimi olan diğer uygulamalardan korunur. Bir uygulamanın depo alanının nerede olduğunu belirten sabit kodlu bilgi gerekli değildir.  
+<a name="top"></a> İçin [!INCLUDE[desktop_appname](../../../includes/desktop-appname-md.md)] uygulamalar, yalıtılmış depolama mekanizmasıdır kodu kaydedilmiş verilerle ilişkilendirme standartlaştırılmış yöntemler tanımlayarak yalıtım ve güvenlik sağlayan bir veri depolama. Standart hale getirme başka yararlar da sağlar. Yöneticiler yalıtılmış depolamayı değiştirecek araçları kullanarak dosya depolama alanını yapılandırabilir, güvenlik ilkelerini ayarlayabilir ve kullanılmayan verileri silebilir. Yalıtılmış depolama ile kodunuz dosya sistemindeki güvenli konumları belirtmek için benzersiz yollara ihtiyaç duymaz ve veriniz yalnızca yalıtılmış depolama erişimi olan diğer uygulamalardan korunur. Bir uygulamanın depo alanının nerede olduğunu belirten sabit kodlu bilgi gerekli değildir.  
   
 > [!IMPORTANT]
 >  Yalıtılmış depolama için kullanılabilir olmadığından [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)] uygulamalar. Bunun yerine, uygulama veri sınıflarında kullanın `Windows.Storage` ad alanlarını dahil [!INCLUDE[wrt](../../../includes/wrt-md.md)] yerel verileri ve dosyaları depolamak için API. Daha fazla bilgi için bkz: [uygulama verilerini](/previous-versions/windows/apps/hh464917(v=win.10)) Windows geliştirme Merkezi'ndeki.  
@@ -131,9 +120,9 @@ ms.lasthandoff: 01/09/2018
   
 -   <xref:System.IO.IsolatedStorage.IsolatedStorageFile>, türetilen <xref:System.IO.IsolatedStorage.IsolatedStorage?displayProperty=nameWithType> ve saklı derleme ve uygulama dosyalarını'nın temel yönetimini sağlar. Örneği <xref:System.IO.IsolatedStorage.IsolatedStorageFile> sınıfı, dosya sisteminde bulunan tek bir depodaki temsil eder.  
   
--   <xref:System.IO.IsolatedStorage.IsolatedStorageFileStream>türetilen <xref:System.IO.FileStream?displayProperty=nameWithType> ve bir mağazadaki dosyalara erişim sağlar.  
+-   <xref:System.IO.IsolatedStorage.IsolatedStorageFileStream> türetilen <xref:System.IO.FileStream?displayProperty=nameWithType> ve bir mağazadaki dosyalara erişim sağlar.  
   
--   <xref:System.IO.IsolatedStorage.IsolatedStorageScope>oluşturma ve uygun yalıtım türü ile bir mağaza seçin olanak tanıyan numaralandırma olur.  
+-   <xref:System.IO.IsolatedStorage.IsolatedStorageScope> oluşturma ve uygun yalıtım türü ile bir mağaza seçin olanak tanıyan numaralandırma olur.  
   
  Yalıtılmış depolama sınıfları, yalıtılmış depoları oluşturmanızı, numaralandırmanızı ve silmenizi sağlar. Bu görevleri gerçekleştirmek için yöntemler aracılığıyla kullanılabilir <xref:System.IO.IsolatedStorage.IsolatedStorageFile> nesnesi. Bazı işlemler olmasını gerektiren <xref:System.Security.Permissions.IsolatedStorageFilePermission> izni yalıtılmış depolama yönetme hakkı temsil eder; dosya veya dizin erişmek için işletim sistemi haklarına sahip olmanız gerekebilir.  
   
@@ -177,7 +166,7 @@ ms.lasthandoff: 01/09/2018
 |[Nasıl yapılır: Yalıtılmış Depolamada Mevcut Dosya ve Dizinleri Bulma](../../../docs/standard/io/how-to-find-existing-files-and-directories-in-isolated-storage.md)|Yalıtılmış depolamada dizin yapısının ve dosyaların nasıl okunduğunu gösterir.|  
 |[Nasıl yapılır: Yalıtılmış Depolamadaki Dosyaları Okuma ve Yazma](../../../docs/standard/io/how-to-read-and-write-to-files-in-isolated-storage.md)|Bir yalıtılmış depolama dosyasına dize yazmak ve ardından geri okumak ile ilgili bir örnek sağlar.|  
 |[Nasıl yapılır: Yalıtılmış Depolamadaki Dosya ve Dizinleri Silme](../../../docs/standard/io/how-to-delete-files-and-directories-in-isolated-storage.md)|Yalıtılmış depolama dosyalarının ve dizinlerinin nasıl silindiğini gösterir.|  
-|[Dosya ve akış t-O](../../../docs/standard/io/index.md)|Zaman uyumlu ve zaman uyumsuz dosya ve veri akışı erişimini nasıl gerçekleştireceğinizi açıklar.|  
+|[Dosya ve Akış G/Ç'si](../../../docs/standard/io/index.md)|Zaman uyumlu ve zaman uyumsuz dosya ve veri akışı erişimini nasıl gerçekleştireceğinizi açıklar.|  
   
 <a name="reference"></a>   
 ## <a name="reference"></a>Başvuru  

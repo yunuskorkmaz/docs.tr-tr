@@ -1,27 +1,15 @@
 ---
-title: "Nasıl yapılır: WCF Hizmeti İşlemlerini Zaman Uyumsuz Olarak Çağırma"
-ms.custom: 
+title: 'Nasıl yapılır: WCF Hizmeti İşlemlerini Zaman Uyumsuz Olarak Çağırma'
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
 ms.assetid: 0face17f-43ca-417b-9b33-737c0fc360df
-caps.latest.revision: "18"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 9f8a22a5a5b9f388cdfb7b5e5edfa0a54b628aa0
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 8058f0fac8a0401f72f84e2d2e91c28c7e46d1e3
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-call-wcf-service-operations-asynchronously"></a>Nasıl yapılır: WCF Hizmeti İşlemlerini Zaman Uyumsuz Olarak Çağırma
 Bu konu, nasıl bir istemci bir hizmet işlemi zaman uyumsuz olarak erişebilir kapsar. Bu konuda hizmeti uygulayan `ICalculator` arabirimi. İstemci bu arabirimde işlemleri olay tabanlı zaman uyumsuz çağırma modelini kullanarak zaman uyumsuz olarak çağırabilirsiniz. (Olay tabanlı zaman uyumsuz çağırma modeli hakkında daha fazla bilgi için bkz: [birden çok iş parçacıklı programlama olay tabanlı zaman uyumsuz desen ile](http://go.microsoft.com/fwlink/?LinkId=248184)). Bir işlem zaman uyumsuz olarak bir hizmet olarak uygulamak gösteren örnek için bkz: [nasıl yapılır: zaman uyumsuz bir hizmet işlemi uygulama](../../../../docs/framework/wcf/how-to-implement-an-asynchronous-service-operation.md). Zaman uyumlu ve zaman uyumsuz işlemler hakkında daha fazla bilgi için bkz: [zaman uyumlu ve zaman uyumsuz işlemleri](../../../../docs/framework/wcf/synchronous-and-asynchronous-operations.md).  
@@ -39,7 +27,7 @@ Bu konu, nasıl bir istemci bir hizmet işlemi zaman uyumsuz olarak erişebilir 
     svcutil /n:http://Microsoft.ServiceModel.Samples,Microsoft.ServiceModel.Samples http://localhost:8000/servicemodelsamples/service/mex /a /tcv:Version35  
     ```  
   
-     Bu, zaman uyumlu ve standart temsilci tabanlı zaman uyumsuz işlemlerin yanı sıra, oluşturur bir [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] içeren istemci sınıfı:  
+     Bu, zaman uyumlu ve standart temsilci tabanlı zaman uyumsuz işlemlerin yanı sıra, içeren bir WCF istemcisi sınıf oluşturur:  
   
     -   İki <`operationName` > `Async` işlemleri için olay tabanlı zaman uyumsuz çağırma yaklaşımı kullanın. Örneğin:  
   
@@ -51,7 +39,7 @@ Bu konu, nasıl bir istemci bir hizmet işlemi zaman uyumsuz olarak erişebilir 
          [!code-csharp[EventAsync#2](../../../../samples/snippets/csharp/VS_Snippets_CFX/eventasync/cs/generatedclient.cs#2)]
          [!code-vb[EventAsync#2](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/eventasync/vb/generatedclient.vb#2)]  
   
-    -   <xref:System.EventArgs?displayProperty=nameWithType>Her bir işlemin türleri (form <`operationName`>`CompletedEventArgs`) olay tabanlı zaman uyumsuz çağırma yaklaşımı ile kullanım için. Örneğin:  
+    -   <xref:System.EventArgs?displayProperty=nameWithType> Her bir işlemin türleri (form <`operationName`>`CompletedEventArgs`) olay tabanlı zaman uyumsuz çağırma yaklaşımı ile kullanım için. Örneğin:  
   
          [!code-csharp[EventAsync#3](../../../../samples/snippets/csharp/VS_Snippets_CFX/eventasync/cs/generatedclient.cs#3)]
          [!code-vb[EventAsync#3](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/eventasync/vb/generatedclient.vb#3)]  

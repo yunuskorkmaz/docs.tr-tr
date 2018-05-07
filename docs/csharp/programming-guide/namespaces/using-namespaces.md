@@ -1,24 +1,17 @@
 ---
-title: "Ad Alanlarını Kullanma (C# Programlama Kılavuzu)"
+title: Ad Alanlarını Kullanma (C# Programlama Kılavuzu)
 ms.date: 07/20/2015
-ms.prod: .net
-ms.technology:
-- devlang-csharp
-ms.topic: article
 f1_keywords:
 - cs.names
 helpviewer_keywords:
 - fully qualified names [C#]
 - namespaces [C#], how to use
 ms.assetid: 1fe8bf39-addc-438a-bd9e-86410e32381d
-caps.latest.revision: 
-author: BillWagner
-ms.author: wiwagn
-ms.openlocfilehash: f485992f5d4b7bc16aaefeec8c7c76ce39f48ef0
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 773add221317a2154ac620acf766607ec22c629d
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="using-namespaces-c-programming-guide"></a>Ad Alanlarını Kullanma (C# Programlama Kılavuzu)
 Ad alanları, C# programları iki yolla içinde yoğun olarak kullanılır. İlk olarak, .NET Framework sınıfları birçok sınıflarından düzenlemek için ad alanları kullanın. İkincisi, kendi ad alanlarını bildirme sınıfı ve yöntemi kapsamını büyük programlama projelerinde adları denetimi yardımcı olabilir.  
@@ -94,9 +87,9 @@ Ad alanları, C# programları iki yolla içinde yoğun olarak kullanılır. İlk
  Konusuna [nasıl yapılır: Genel Namespace diğer adlarını kullanma](../../../csharp/programming-guide/namespaces/how-to-use-the-global-namespace-alias.md) daha fazla bilgi için ilgili `global` diğer adı.  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [C# programlama kılavuzu](../../../csharp/programming-guide/index.md)  
- [Ad alanları](../../../csharp/programming-guide/namespaces/index.md)  
- [Namespace anahtar sözcükler](../../../csharp/language-reference/keywords/namespace-keywords.md)  
- [. İşleci](../../../csharp/language-reference/operators/member-access-operator.md)  
+ [C# Programlama Kılavuzu](../../../csharp/programming-guide/index.md)  
+ [Ad Alanları](../../../csharp/programming-guide/namespaces/index.md)  
+ [Ad Alanı Anahtar Sözcükleri](../../../csharp/language-reference/keywords/namespace-keywords.md)  
+ [. İşleç](../../../csharp/language-reference/operators/member-access-operator.md)  
  [:: İşleci](../../../csharp/language-reference/operators/namespace-alias-qualifer.md)  
  [extern](../../../csharp/language-reference/keywords/extern.md)

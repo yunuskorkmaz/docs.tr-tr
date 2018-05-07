@@ -1,27 +1,15 @@
 ---
-title: "WorkflowServiceHost Yan Yana Sürüm Oluşturma"
-ms.custom: 
+title: WorkflowServiceHost Yan Yana Sürüm Oluşturma
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
 ms.assetid: 60887eed-df40-4412-b812-41e1dd329d15
-caps.latest.revision: "7"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: db8f79fcdc1398b891933f5fef9f07410e5de11e
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 6c2329fe69941341dff1536b213ca4f1b961889a
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="side-by-side-versioning-in-workflowservicehost"></a>WorkflowServiceHost Yan Yana Sürüm Oluşturma
 <xref:System.ServiceModel.Activities.WorkflowServiceHost> Yan yana sürüm oluşturma kullanıma sunulan [!INCLUDE[net_v45](../../../../includes/net-v45-md.md)] birden fazla sürümünü tek bir uç noktada bir iş akışı hizmeti ana bilgisayar yeteneği sağlar. Sağlanan yan yana işlevleri iş akışı hizmeti yeni örneklerini örnekleri tam varolan tanımı kullanılarak çalıştırılırken yeni iş akışı tanımı kullanılarak oluşturulan şekilde yapılandırılması bir iş akışı hizmeti sağlar. Bu konuda iş akışı hizmeti kullanılarak yan yana yürütme genel bir bakış sağlar <xref:System.ServiceModel.Activities.WorkflowServiceHost>.  
@@ -30,10 +18,10 @@ ms.lasthandoff: 12/22/2017
 >  Bir örnek yükleyip videosu iş akışı hizmeti yan yana sürüm oluşturma izlemek için bkz: [Web-Hosted Xamlx iş akışı hizmeti yan yana sürüm oluşturma](http://go.microsoft.com/fwlink/?LinkId=393746).  
   
 ## <a name="hosting-multiple-versions-in-a-workflow-service"></a>Birden çok iş akışı hizmeti sürümlerde barındırma  
- <xref:System.ServiceModel.Activities.WorkflowServiceHost>yan yana yürütme için bir iş akışı birden fazla sürümünü izin verecek şekilde yapılandırılmış iki özellikleri içerir: <xref:System.ServiceModel.Activities.WorkflowServiceHost.SupportedVersions%2A> ve <xref:System.ServiceModel.Activities.WorkflowService.DefinitionIdentity%2A>. <xref:System.ServiceModel.Activities.WorkflowServiceHost.SupportedVersions%2A>İş akışı hizmeti desteklenen sürümlerini içerir ve <xref:System.ServiceModel.Activities.WorkflowService.DefinitionIdentity%2A> her iş akışı hizmeti benzersiz şekilde tanımlamak için kullanılır. Bu ilişkilendirme tarafından yapılır bir <xref:System.Activities.WorkflowIdentity> iş akışı hizmeti ile. A <xref:System.Activities.WorkflowIdentity> tanımlayıcı üç parça bilgi içerir. <xref:System.Activities.WorkflowIdentity.Name%2A>ve <xref:System.Activities.WorkflowIdentity.Version%2A> içeren bir ad ve bir <xref:System.Version> ve gereklidir ve <xref:System.Activities.WorkflowIdentity.Package%2A> isteğe bağlıdır ve derleme adı veya diğer gibi bilgileri içeren ek bir dize istenen bilgileri belirtmek için kullanılır. İçinde yer alan her iş akışı hizmeti <xref:System.ServiceModel.Activities.WorkflowServiceHost.SupportedVersions%2A> koleksiyonu benzersiz olmalıdır <xref:System.Activities.WorkflowIdentity>. A <xref:System.Activities.WorkflowIdentity> üç özelliklerini birbirinden farklı olan benzersiz <xref:System.Activities.WorkflowIdentity>. A `null` <xref:System.Activities.WorkflowIdentity> için izin verilen bir değer <xref:System.ServiceModel.Activities.WorkflowService.DefinitionIdentity%2A>, ancak bir iş akışı hizmeti yalnızca bir önceki sürümü olabilir bir `null` <xref:System.Activities.WorkflowIdentity>.  
+ <xref:System.ServiceModel.Activities.WorkflowServiceHost> yan yana yürütme için bir iş akışı birden fazla sürümünü izin verecek şekilde yapılandırılmış iki özellikleri içerir: <xref:System.ServiceModel.Activities.WorkflowServiceHost.SupportedVersions%2A> ve <xref:System.ServiceModel.Activities.WorkflowService.DefinitionIdentity%2A>. <xref:System.ServiceModel.Activities.WorkflowServiceHost.SupportedVersions%2A> İş akışı hizmeti desteklenen sürümlerini içerir ve <xref:System.ServiceModel.Activities.WorkflowService.DefinitionIdentity%2A> her iş akışı hizmeti benzersiz şekilde tanımlamak için kullanılır. Bu ilişkilendirme tarafından yapılır bir <xref:System.Activities.WorkflowIdentity> iş akışı hizmeti ile. A <xref:System.Activities.WorkflowIdentity> tanımlayıcı üç parça bilgi içerir. <xref:System.Activities.WorkflowIdentity.Name%2A> ve <xref:System.Activities.WorkflowIdentity.Version%2A> içeren bir ad ve bir <xref:System.Version> ve gereklidir ve <xref:System.Activities.WorkflowIdentity.Package%2A> isteğe bağlıdır ve derleme adı veya diğer gibi bilgileri içeren ek bir dize istenen bilgileri belirtmek için kullanılır. İçinde yer alan her iş akışı hizmeti <xref:System.ServiceModel.Activities.WorkflowServiceHost.SupportedVersions%2A> koleksiyonu benzersiz olmalıdır <xref:System.Activities.WorkflowIdentity>. A <xref:System.Activities.WorkflowIdentity> üç özelliklerini birbirinden farklı olan benzersiz <xref:System.Activities.WorkflowIdentity>. A `null` <xref:System.Activities.WorkflowIdentity> için izin verilen bir değer <xref:System.ServiceModel.Activities.WorkflowService.DefinitionIdentity%2A>, ancak bir iş akışı hizmeti yalnızca bir önceki sürümü olabilir bir `null` <xref:System.Activities.WorkflowIdentity>.  
   
 > [!IMPORTANT]
->  A <xref:System.Activities.WorkflowIdentity> tüm kişisel bilgileri (PII) içermemesi gerekir. <xref:System.Activities.WorkflowIdentity>üç bölümden oluşur: bir <xref:System.Activities.WorkflowIdentity.Name%2A> (<xref:System.String>), bir <xref:System.Activities.WorkflowIdentity.Version%2A> (<xref:System.Version>) ve bir <xref:System.Activities.WorkflowIdentity.Package%2A> (<xref:System.String>). Hakkında bilgi <xref:System.Activities.WorkflowIdentity> oluşturmak için kullanılan örneğini etkinliğin birkaç farklı noktalarda Hizmetleri yaşam döngüsü yapılandırılmış tüm izleme için çalışma zamanı tarafından yayınlanır. İzleme WF PII (hassas kullanıcı verileri) gizlemek için herhangi bir mekanizma yok. Bu nedenle, bir <xref:System.Activities.WorkflowIdentity> örneği içeremez herhangi bir PII veri kayıtları izleme içinde çalışma zamanı tarafından gösterilen ve izleme kayıtları görüntülemek için erişimi olan herkes tarafından görülebilir.  
+>  A <xref:System.Activities.WorkflowIdentity> tüm kişisel bilgileri (PII) içermemesi gerekir. <xref:System.Activities.WorkflowIdentity> üç bölümden oluşur: bir <xref:System.Activities.WorkflowIdentity.Name%2A> (<xref:System.String>), bir <xref:System.Activities.WorkflowIdentity.Version%2A> (<xref:System.Version>) ve bir <xref:System.Activities.WorkflowIdentity.Package%2A> (<xref:System.String>). Hakkında bilgi <xref:System.Activities.WorkflowIdentity> oluşturmak için kullanılan örneğini etkinliğin birkaç farklı noktalarda Hizmetleri yaşam döngüsü yapılandırılmış tüm izleme için çalışma zamanı tarafından yayınlanır. İzleme WF PII (hassas kullanıcı verileri) gizlemek için herhangi bir mekanizma yok. Bu nedenle, bir <xref:System.Activities.WorkflowIdentity> örneği içeremez herhangi bir PII veri kayıtları izleme içinde çalışma zamanı tarafından gösterilen ve izleme kayıtları görüntülemek için erişimi olan herkes tarafından görülebilir.  
   
 ### <a name="rules-for-hosting-multiple-versions-of-a-workflow-service"></a>Birden çok iş akışı hizmeti sürümleri barındırmak için kurallar  
  Bir kullanıcı, ek bir sürüme eklediğinde <xref:System.ServiceModel.Activities.WorkflowServiceHost>, bir iş akışı Hizmeti uç noktaları ve açıklama aynı kümesiyle barındırılması karşılanması gereken birkaç koşullar vardır. Ek sürümlerinin herhangi birinin bu koşulları başarısız olursa <xref:System.ServiceModel.Activities.WorkflowServiceHost> aykırı zaman `Open` olarak adlandırılır. Ek bir sürüm olarak barındırmak için sağlanan her bir iş akışı tanımı (birincil sürüm konak oluşturucuya sunulan iş akışı hizmeti tanımı olduğu) aşağıdaki gereksinimleri karşılaması gerekir. Ek iş akışı sürümü gerekir:  
@@ -55,7 +43,7 @@ ms.lasthandoff: 12/22/2017
 -   <xref:System.ServiceModel.Activities.WorkflowService.ImplementedContracts%2A> Birincil sürümünden farklı olabilir.  
   
 ### <a name="configuring-the-definitionidentity"></a>DefinitionIdentity yapılandırma  
- İş Akışı Tasarımcısı'nı kullanarak bir iş akışı hizmeti oluşturulduğunda <xref:System.ServiceModel.Activities.WorkflowService.DefinitionIdentity%2A> kullanılarak ayarlanan **özellikleri** penceresi. ' I tıklatın hizmetin Kök etkinlik iş akışı hizmeti seçin ve için Tasarımcısı'nda dışında **Özellikler penceresini** gelen **Görünüm** menüsü. Seçin **WorkflowIdentity** yanında görüntülenen aşağı açılan listeden **DefinitionIdentity** özelliği'ni genişletin ve istenen belirtin <xref:System.Activities.WorkflowIdentity> özellikleri. Aşağıdaki örnekte <xref:System.ServiceModel.Activities.WorkflowService.DefinitionIdentity%2A> ile yapılandırılmış <xref:System.Activities.WorkflowIdentity.Name%2A> `MortgageWorkflow` ve <xref:System.Activities.WorkflowIdentity.Version%2A> , `1.0.0.0`. <xref:System.Activities.WorkflowIdentity.Package%2A>Bu örnekte isteğe bağlıdır ve `null`.  
+ İş Akışı Tasarımcısı'nı kullanarak bir iş akışı hizmeti oluşturulduğunda <xref:System.ServiceModel.Activities.WorkflowService.DefinitionIdentity%2A> kullanılarak ayarlanan **özellikleri** penceresi. ' I tıklatın hizmetin Kök etkinlik iş akışı hizmeti seçin ve için Tasarımcısı'nda dışında **Özellikler penceresini** gelen **Görünüm** menüsü. Seçin **WorkflowIdentity** yanında görüntülenen aşağı açılan listeden **DefinitionIdentity** özelliği'ni genişletin ve istenen belirtin <xref:System.Activities.WorkflowIdentity> özellikleri. Aşağıdaki örnekte <xref:System.ServiceModel.Activities.WorkflowService.DefinitionIdentity%2A> ile yapılandırılmış <xref:System.Activities.WorkflowIdentity.Name%2A> `MortgageWorkflow` ve <xref:System.Activities.WorkflowIdentity.Version%2A> , `1.0.0.0`. <xref:System.Activities.WorkflowIdentity.Package%2A> Bu örnekte isteğe bağlıdır ve `null`.  
   
  ![DefinitionIdentity](../../../../docs/framework/wcf/feature-details/media/workflowservicedefinitionidentityv1.bmp "WorkflowServiceDefinitionIdentityv1")  
   

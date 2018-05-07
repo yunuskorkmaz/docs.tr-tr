@@ -1,12 +1,6 @@
 ---
 title: Visual Basic'de Kapsam
-ms.custom: 
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
-ms.topic: article
 helpviewer_keywords:
 - module scope [Visual Basic]
 - scope [Visual Basic], levels
@@ -21,14 +15,11 @@ helpviewer_keywords:
 - scope [Visual Basic], Visual Basic
 - procedure scope [Visual Basic]
 ms.assetid: 208106fe-79c9-4eec-93c6-55f08548895f
-caps.latest.revision: "17"
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: a9bfda19b9f5ee96d45a0322541b35dfab7635d7
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: d6692379626d787b728d6e92bd447c4a96e6680e
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="scope-in-visual-basic"></a>Visual Basic'de Kapsam
 *Kapsam* bildirilen öğesinin adını niteleme veya yoluyla kullanılabilir hale getirme olmadan başvurduğu tüm kod kümesidir bir [Imports deyimi (.NET Namespace ve türü)](../../../../visual-basic/language-reference/statements/imports-statement-net-namespace-and-type.md). Bir öğe kapsamı aşağıdaki düzeyden birine sahip olabilir:  
@@ -59,21 +50,21 @@ ms.lasthandoff: 11/21/2017
 ### <a name="block-scope"></a>Blok kapsamı  
  Bir blok başlatma ve sonlandırma aşağıdaki gibi bildirim deyimleri içine alınmış deyimleri kümesidir:  
   
--   `Do`ve`Loop`  
+-   `Do` Ve `Loop`  
   
--   `For`[`Each`] ve`Next`  
+-   `For` [`Each`] ve `Next`  
   
--   `If`ve`End If`  
+-   `If` Ve `End If`  
   
--   `Select`ve`End Select`  
+-   `Select` Ve `End Select`  
   
--   `SyncLock`ve`End SyncLock`  
+-   `SyncLock` Ve `End SyncLock`  
   
--   `Try`ve`End Try`  
+-   `Try` Ve `End Try`  
   
--   `While`ve`End While`  
+-   `While` Ve `End While`  
   
--   `With`ve`End With`  
+-   `With` Ve `End With`  
   
  Bir bloğu içinde bir değişken bildirirseniz bu blokta yalnızca kullanabilirsiniz. Aşağıdaki örnekte, tamsayı değişkenin kapsamını `cube` arasında blok `If` ve `End If`, ve artık başvurabilirsiniz `cube` yürütme dışında blok zaman geçirir.  
   
@@ -127,7 +118,7 @@ Public strMsg As String
   
  Namespace kapsam iç içe geçmiş ad alanları içerir. Bir ad alanında bulunan bir öğeyi de bu ad alanı içinde iç içe geçmiş herhangi bir ad alanı içinde kullanılabilir.  
   
- Projenizi herhangi içermiyorsa [Namespace deyimi](../../../../visual-basic/language-reference/statements/namespace-statement.md)projesinde her şeyi durumda aynı ad. Bu durumda, ad alanı kapsamı, proje kapsamı olarak düşünülebilir. `Public`bir modül, sınıf veya yapı öğeleri de kendi projeye başvuruda bulunan herhangi bir projesine kullanılabilir.  
+ Projenizi herhangi içermiyorsa [Namespace deyimi](../../../../visual-basic/language-reference/statements/namespace-statement.md)projesinde her şeyi durumda aynı ad. Bu durumda, ad alanı kapsamı, proje kapsamı olarak düşünülebilir. `Public` bir modül, sınıf veya yapı öğeleri de kendi projeye başvuruda bulunan herhangi bir projesine kullanılabilir.  
   
 ## <a name="choice-of-scope"></a>Kapsam seçeneği  
  Bir değişken bildirin, aşağıdaki noktaları kapsamı seçerken göz önünde bulundurmalıdır.  
@@ -143,9 +134,9 @@ Public strMsg As String
  Genel olarak, herhangi bir değişken veya sabit bildirme kapsamı olarak dar yapmak için uygulama programlama iyi olur (blok kapsamı olan dar). Bu bellek korunmasına yardımcı olur ve yanlışlıkla yanlış değişkenine başvurarak kodunuzu olasılığını en aza indirir. Benzer şekilde, olması için bir değişken bildirmelidir [statik](../../../../visual-basic/language-reference/modifiers/static.md) yalnızca bu yordam çağrıları arasında değeri korumak gerekli olduğunda.  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [Bildirilen öğe özellikleri](../../../../visual-basic/programming-guide/language-features/declared-elements/declared-element-characteristics.md)  
- [Nasıl yapılır: bir değişkenin kapsamını denetleme](../../../../visual-basic/programming-guide/language-features/declared-elements/how-to-control-the-scope-of-a-variable.md)  
+ [Bildirilen Öğe Özellikleri](../../../../visual-basic/programming-guide/language-features/declared-elements/declared-element-characteristics.md)  
+ [Nasıl yapılır: Bir Değişkenin Kapsamını Denetleme](../../../../visual-basic/programming-guide/language-features/declared-elements/how-to-control-the-scope-of-a-variable.md)  
  [Visual Basic'de ömür](../../../../visual-basic/programming-guide/language-features/declared-elements/lifetime.md)  
  [Visual Basic'de erişim düzeyleri](../../../../visual-basic/programming-guide/language-features/declared-elements/access-levels.md)  
- [Bildirilmiş öğelere başvurular](../../../../visual-basic/programming-guide/language-features/declared-elements/references-to-declared-elements.md)  
- [Değişken bildirimi](../../../../visual-basic/programming-guide/language-features/variables/variable-declaration.md)
+ [Bildirilmiş Öğelere Başvurular](../../../../visual-basic/programming-guide/language-features/declared-elements/references-to-declared-elements.md)  
+ [Değişken Bildirimi](../../../../visual-basic/programming-guide/language-features/variables/variable-declaration.md)

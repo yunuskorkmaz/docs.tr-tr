@@ -1,30 +1,16 @@
 ---
-title: "TreeView Denetimine Genel Bakış (Windows Forms)"
-ms.custom: 
+title: TreeView Denetimine Genel Bakış (Windows Forms)
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-winforms
-ms.tgt_pltfrm: 
-ms.topic: article
 f1_keywords:
 - TreeView
 helpviewer_keywords:
 - TreeView control [Windows Forms], about TreeView control
 ms.assetid: 0ece823a-9508-478a-bbdb-7d7c3bae51d5
-caps.latest.revision: 
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 9bbe8549268c2b67b67184966e938f7d62b766a1
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 6326f8976e20b5b72e1b6690ab323c8581411156
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="treeview-control-overview-windows-forms"></a>TreeView Denetimine Genel Bakış (Windows Forms)
 Windows Forms ile <xref:System.Windows.Forms.TreeView> denetim, kullanıcılara, yol dosyaları ve klasörleri Windows işletim sisteminin Windows Explorer özelliği sol bölmesinde görüntülenen gibi bir hiyerarşi düğümlerinin görüntüleyebilir. Ağaç görünümünde her düğüm olarak adlandırılan, diğer düğümler içerebilir *alt düğümleri*. Üst düğüm görüntüleyebilir veya alt düğümleri olarak içeren düğümler genişletilen veya daraltılmış. Ağaç görünümün ayarlayarak düğümleri yanındaki onay kutularını bulunduğu ağaç görünümü görüntüleyebilirsiniz <xref:System.Windows.Forms.TreeView.CheckBoxes%2A> özelliğine `true`. Ardından program aracılığıyla seçin veya temizleyin düğümleri düğümün ayarlayarak yapabilirsiniz <xref:System.Windows.Forms.TreeNode.Checked%2A> özelliğine `true` veya `false`.  

@@ -1,13 +1,6 @@
 ---
-title: "Çizgi ve Dolgularda Alfa Karışım Kullanma"
-ms.custom: 
+title: Çizgi ve Dolgularda Alfa Karışım Kullanma
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-winforms
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - lines [Windows Forms], adding transparency
 - examples [Windows Forms], alpha blending
@@ -18,16 +11,11 @@ helpviewer_keywords:
 - alpha blending [Windows Forms], using with fills
 - shapes [Windows Forms], adding transparency
 ms.assetid: 5440f48c-3ac9-44c3-b170-c1c110bdbab8
-caps.latest.revision: "13"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 2a46efeccf9ab343ca0da07fad07138bd72e4e44
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: f58fa2d105492c6c72d3d6906c3c35f89130fe91
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="alpha-blending-lines-and-fills"></a>Çizgi ve Dolgularda Alfa Karışım Kullanma
 İçinde [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)], bir renk 32-bit 8 bit her alfa, kırmızı, yeşil ve mavi ile değerdir. Renk saydam alfa değeri gösterir — için renk karıştırılan arka plan rengiyle uzantı. Alfa değerleri aralık 0 ile 255, 0 tamamen saydam rengi temsil ettiği ile 255 arasında bir tam olarak donuk rengi temsil eder.  

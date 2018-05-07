@@ -1,29 +1,15 @@
 ---
 title: AspNetRouteIntegration
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 ms.assetid: 0638ce0e-d053-47df-a447-688e447a03fb
-caps.latest.revision: 8
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 93d248030c4b32bd7725cf9c6fbbb829a19f7845
-ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
-ms.translationtype: MT
+ms.openlocfilehash: c2b2a47a0c817e23a06c39d622bca9c649cbadb4
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/30/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="aspnetrouteintegration"></a>AspNetRouteIntegration
-Bu örnek barındırmak gösterilmiştir bir [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] ASP.NET kullanarak REST hizmeti yönlendirir. [Temel kaynak hizmeti](../../../../docs/framework/wcf/samples/basic-resource-service.md) örnek bu senaryo kendini barındıran bir sürümünü gösterir ve hizmet uygulaması derinlemesine anlatılmaktadır. Bu konu ASP.NET tümleştirme özelliğini odaklanır. ASP.NET yönlendirme hakkında daha fazla bilgi için bkz: <xref:System.Web.Routing>.  
+Bu örnek, ASP.NET yollar kullanılarak bir Windows Communication Foundation (WCF) REST hizmeti barındırma gösterilmiştir. [Temel kaynak hizmeti](../../../../docs/framework/wcf/samples/basic-resource-service.md) örnek bu senaryo kendini barındıran bir sürümünü gösterir ve hizmet uygulaması derinlemesine anlatılmaktadır. Bu konu ASP.NET tümleştirme özelliğini odaklanır. ASP.NET yönlendirme hakkında daha fazla bilgi için bkz: <xref:System.Web.Routing>.  
   
 ## <a name="sample-details"></a>Örnek Ayrıntıları  
  [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] Hizmeti bir kaynak-yönelimli/REST şekilde müşteriler koleksiyonu kullanıma sunar. Olduğu gibi SOAP tabanlı [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] hizmet, hizmet .svc dosyasını kullanarak ASP.NET barındırılan. Hizmeti için URL .svc bulundurmak gerektirdiğinden ancak, bu HTTP senaryoları için tercih edilen çoğunlukla değildir. Ayrıca, hizmet kitaplığı birlikte .svc dosya dağıtılması gerekir. Bu örnekte gösterildiği gibi ASP.NET yolları kullanarak hizmet barındırma tarafından sınırlamalara önlenebilir.  
@@ -70,7 +56,7 @@ Bu örnek barındırmak gösterilmiştir bir [!INCLUDE[indigo1](../../../../incl
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  Bu dizin mevcut değilse, Git [Windows Communication Foundation (WCF) ve .NET Framework 4 için Windows Workflow Foundation (WF) örnek](http://go.microsoft.com/fwlink/?LinkId=150780) tüm indirmek için [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] ve [!INCLUDE[wf1](../../../../includes/wf1-md.md)] örnekleri. Bu örnek aşağıdaki dizinde bulunur.  
+>  Bu dizin mevcut değilse, Git [Windows Communication Foundation (WCF) ve .NET Framework 4 için Windows Workflow Foundation (WF) örnek](http://go.microsoft.com/fwlink/?LinkId=150780) tüm Windows Communication Foundation (WCF) indirmek için ve [!INCLUDE[wf1](../../../../includes/wf1-md.md)] örnekleri. Bu örnek aşağıdaki dizinde bulunur.  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Web\AspNetRouteIntegration`  
   

@@ -1,13 +1,6 @@
 ---
-title: "İç İçe Grafik Kapsayıcılarını Kullanma"
-ms.custom: 
+title: İç İçe Grafik Kapsayıcılarını Kullanma
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-winforms
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -16,19 +9,14 @@ helpviewer_keywords:
 - graphics [Windows Forms], clipping
 - graphics [Windows Forms], transformations in nested objects
 ms.assetid: a0d9f178-43a4-4323-bb5a-d3e3f77ae6c1
-caps.latest.revision: "13"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 512c8903611f025364a1af2cb6cbaaffc8d759eb
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: ba6bba84100a0ddcc87894710a6d3099ab0ccff5
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="using-nested-graphics-containers"></a>İç İçe Grafik Kapsayıcılarını Kullanma
-[!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)]geçici olarak değiştirin veya durumda parçası büyütmek için kullanabileceğiniz kapsayıcıları sağlayan bir <xref:System.Drawing.Graphics> nesnesi. Bir kapsayıcı oluşturmanız <xref:System.Drawing.Graphics.BeginContainer%2A> yöntemi bir <xref:System.Drawing.Graphics> nesnesi. Çağırabilirsiniz <xref:System.Drawing.Graphics.BeginContainer%2A> art arda iç içe geçmiş kapsayıcılar oluşturmak için. Her çağrı <xref:System.Drawing.Graphics.BeginContainer%2A> çağrısıyla eşleştirilmelidir <xref:System.Drawing.Graphics.EndContainer%2A>.  
+[!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] geçici olarak değiştirin veya durumda parçası büyütmek için kullanabileceğiniz kapsayıcıları sağlayan bir <xref:System.Drawing.Graphics> nesnesi. Bir kapsayıcı oluşturmanız <xref:System.Drawing.Graphics.BeginContainer%2A> yöntemi bir <xref:System.Drawing.Graphics> nesnesi. Çağırabilirsiniz <xref:System.Drawing.Graphics.BeginContainer%2A> art arda iç içe geçmiş kapsayıcılar oluşturmak için. Her çağrı <xref:System.Drawing.Graphics.BeginContainer%2A> çağrısıyla eşleştirilmelidir <xref:System.Drawing.Graphics.EndContainer%2A>.  
   
 ## <a name="transformations-in-nested-containers"></a>İç içe geçmiş kapsayıcılar dönüşümler  
  Aşağıdaki örnekte bir <xref:System.Drawing.Graphics> nesne ve içindeki bir kapsayıcı <xref:System.Drawing.Graphics> nesnesi. Dünya dönüşümü <xref:System.Drawing.Graphics> nesnesidir x yönünde 100 çeviri birimleri ve y yönünde 80 birimlerinde. Dünya dönüşümü kapsayıcısının 30 derecelik döndürme ' dir. Kod arama yapar `DrawRectangle(pen, -60, -30, 120, 60)` iki kez. İlk çağrıda <xref:System.Drawing.Graphics.DrawRectangle%2A> içinde kapsayıcı; diğer bir deyişle, çağrıları Between çağrıdır <xref:System.Drawing.Graphics.BeginContainer%2A> ve <xref:System.Drawing.Graphics.EndContainer%2A>. İkinci çağrı <xref:System.Drawing.Graphics.DrawRectangle%2A> çağrısından sonra olan <xref:System.Drawing.Graphics.EndContainer%2A>.  

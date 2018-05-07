@@ -1,29 +1,18 @@
 ---
 title: Kaydetme ve bir belgeyi yazma
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
 ms.technology: dotnet-standard
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
 ms.assetid: 097b0cb1-5743-4c3a-86ef-caf5cbe6750d
-caps.latest.revision: "3"
 author: mairaw
 ms.author: mairaw
-manager: wpickett
-ms.workload:
-- dotnet
-- dotnetcore
-ms.openlocfilehash: 2138b9c47c6e41cd94e775eaed005d8a6fd976c9
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: 389ae0d95f3d612ca9c81ce69b74f8b58534d679
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="saving-and-writing-a-document"></a>Kaydetme ve bir belgeyi yazma
 Ne zaman yükle ve Kaydet bir <xref:System.Xml.XmlDocument>, aşağıdaki yollarla kaydedilmiş belge orijinal olandan farklı olabilir:  
@@ -68,7 +57,7 @@ doc.Save(tw);
  İçin <xref:System.Xml.XmlDeclaration> üyeleri <xref:System.Xml.XmlNode.OuterXml%2A>, <xref:System.Xml.XmlDeclaration.WriteTo%2A>, ve <xref:System.Xml.XmlNode.InnerXml%2A>, <xref:System.Xml.XmlDeclaration.Encoding%2A> özelliği ayarlı değil, hiçbir kodlama yazılır. Kodlama bulunan Aksi halde, XML bildiriminde yazılan kodlama aynıdır <xref:System.Xml.XmlDeclaration.Encoding%2A> özelliği.  
   
 ## <a name="writing-document-content-using-the-outerxml-property"></a>Yazma belgesinin içeriği OuterXml özelliğini kullanma  
- <xref:System.Xml.XmlNode.OuterXml%2A> World Wide Web Konsorsiyumu (W3C) XML belge nesne modeli (DOM) standartları için bir Microsoft uzantısı bir özelliktir. <xref:System.Xml.XmlNode.OuterXml%2A> Özelliği tüm XML belgenin biçimlendirme veya işaretleme yalnızca tek bir düğüme ve alt düğümleri almak için kullanılır. <xref:System.Xml.XmlNode.OuterXml%2A>Verilen düğüm ve tüm alt düğümlerini temsil eden biçimlendirme döndürür.  
+ <xref:System.Xml.XmlNode.OuterXml%2A> World Wide Web Konsorsiyumu (W3C) XML belge nesne modeli (DOM) standartları için bir Microsoft uzantısı bir özelliktir. <xref:System.Xml.XmlNode.OuterXml%2A> Özelliği tüm XML belgenin biçimlendirme veya işaretleme yalnızca tek bir düğüme ve alt düğümleri almak için kullanılır. <xref:System.Xml.XmlNode.OuterXml%2A> Verilen düğüm ve tüm alt düğümlerini temsil eden biçimlendirme döndürür.  
   
  Aşağıdaki kod örneği, bir belgeyi tamamının bir dize olarak kaydetmek gösterilmiştir.  
   

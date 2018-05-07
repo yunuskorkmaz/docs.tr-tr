@@ -1,27 +1,15 @@
 ---
-title: "Zamanlama Davranışlarına Genel Bakış"
-ms.custom: 
+title: Zamanlama Davranışlarına Genel Bakış
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-wpf
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - timing behaviors [WPF]
 - behaviors [WPF], timing
 ms.assetid: 5b714d46-bd46-48b8-b467-b4be89ba3091
-caps.latest.revision: "20"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 9305b69927a1ed0ad4f154ab972316f3dee951e9
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 31a6b7d3b92e886d9c90fc39d69f31cf72b99666
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="timing-behaviors-overview"></a>Zamanlama Davranışlarına Genel Bakış
 Bu konu animasyonların ve diğer zamanlama davranışlarını anlatır <xref:System.Windows.Media.Animation.Timeline> nesneleri.  
@@ -34,7 +22,7 @@ Bu konu animasyonların ve diğer zamanlama davranışlarını anlatır <xref:Sy
 ## <a name="timeline-types"></a>Zaman Çizelgesi türleri  
  A <xref:System.Windows.Media.Animation.Timeline> zaman kesimini temsil eder. Bu kesimin uzunluğu, kaç kez yineleneceğini, ne kadar hızlı kesiminin ve daha fazla zaman ilerledikçe başlatırken belirtmenizi sağlayan özellikleri sağlar.  
   
- Zaman Çizelgesi sınıfından devralınan sınıflar animasyon ve ortam kayıttan yürütme gibi ek işlevsellik sağlar. [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]Aşağıdaki sağlar <xref:System.Windows.Media.Animation.Timeline> türleri.  
+ Zaman Çizelgesi sınıfından devralınan sınıflar animasyon ve ortam kayıttan yürütme gibi ek işlevsellik sağlar. [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] Aşağıdaki sağlar <xref:System.Windows.Media.Animation.Timeline> türleri.  
   
 |Zaman çizelgesi türü|Açıklama|  
 |-------------------|-----------------|  
@@ -127,11 +115,11 @@ Bu konu animasyonların ve diğer zamanlama davranışlarını anlatır <xref:Sy
 ## <a name="properties-that-control-the-speed-of-a-timeline"></a>Bir zaman çizelgesi hızına denetleyen özellikler  
  <xref:System.Windows.Media.Animation.Timeline> Sınıf kendi hızını belirtmek için üç özellik sağlar:  
   
--   <xref:System.Windows.Media.Animation.Timeline.SpeedRatio%2A>– Zaman ilerledikçe için üst göre hızı belirten bir <xref:System.Windows.Media.Animation.Timeline>. Birden büyük değerler hızını artırır <xref:System.Windows.Media.Animation.Timeline> ve alt <xref:System.Windows.Media.Animation.Timeline> nesneleri; sıfır ve bir arasındaki değerleri yavaşlaması onu. Bir değeri gösterir <xref:System.Windows.Media.Animation.Timeline> , üst ile aynı hızda ilerler. <xref:System.Windows.Media.Animation.Timeline.SpeedRatio%2A> Ayar kapsayıcı zaman çizelgesinin tüm alt etkiler <xref:System.Windows.Media.Animation.Timeline> nesneler de.  
+-   <xref:System.Windows.Media.Animation.Timeline.SpeedRatio%2A> – Zaman ilerledikçe için üst göre hızı belirten bir <xref:System.Windows.Media.Animation.Timeline>. Birden büyük değerler hızını artırır <xref:System.Windows.Media.Animation.Timeline> ve alt <xref:System.Windows.Media.Animation.Timeline> nesneleri; sıfır ve bir arasındaki değerleri yavaşlaması onu. Bir değeri gösterir <xref:System.Windows.Media.Animation.Timeline> , üst ile aynı hızda ilerler. <xref:System.Windows.Media.Animation.Timeline.SpeedRatio%2A> Ayar kapsayıcı zaman çizelgesinin tüm alt etkiler <xref:System.Windows.Media.Animation.Timeline> nesneler de.  
   
--   <xref:System.Windows.Media.Animation.Timeline.AccelerationRatio%2A>– Yüzdesini belirtir <xref:System.Windows.Media.Animation.Timeline.Duration%2A> hızlandırmaya bir zaman çizelgesi harcanan. Bir örnek için bkz: [nasıl yapılır: hızlandırmak veya animasyonun hızını düşürün](../../../../docs/framework/wpf/graphics-multimedia/how-to-accelerate-or-decelerate-an-animation.md). 
+-   <xref:System.Windows.Media.Animation.Timeline.AccelerationRatio%2A> – Yüzdesini belirtir <xref:System.Windows.Media.Animation.Timeline.Duration%2A> hızlandırmaya bir zaman çizelgesi harcanan. Bir örnek için bkz: [nasıl yapılır: hızlandırmak veya animasyonun hızını düşürün](../../../../docs/framework/wpf/graphics-multimedia/how-to-accelerate-or-decelerate-an-animation.md). 
   
--   <xref:System.Windows.Media.Animation.Timeline.DecelerationRatio%2A>-Yüzdesini belirtir <xref:System.Windows.Media.Animation.Timeline.Duration%2A> bir zaman çizelgesi yavaşlatıcı. Bir örnek için bkz: [nasıl yapılır: hızlandırmak veya animasyonun hızını düşürün](../../../../docs/framework/wpf/graphics-multimedia/how-to-accelerate-or-decelerate-an-animation.md).  
+-   <xref:System.Windows.Media.Animation.Timeline.DecelerationRatio%2A> -Yüzdesini belirtir <xref:System.Windows.Media.Animation.Timeline.Duration%2A> bir zaman çizelgesi yavaşlatıcı. Bir örnek için bkz: [nasıl yapılır: hızlandırmak veya animasyonun hızını düşürün](../../../../docs/framework/wpf/graphics-multimedia/how-to-accelerate-or-decelerate-an-animation.md).  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
  [Animasyona Genel bakış](../../../../docs/framework/wpf/graphics-multimedia/animation-overview.md)  

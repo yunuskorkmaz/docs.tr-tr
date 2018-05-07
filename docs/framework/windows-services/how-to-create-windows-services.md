@@ -1,27 +1,17 @@
 ---
-title: "Nasıl Yapılır: Windows Hizmetleri Oluşturma"
-ms.custom: 
+title: 'Nasıl Yapılır: Windows Hizmetleri Oluşturma'
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - Windows Service applications, creating
 - templates, Windows Service
 ms.assetid: 0f5e2cbb-d95d-477c-b2b5-4b990e6b86ff
-caps.latest.revision: "18"
 author: ghogen
-ms.author: ghogen
 manager: douge
-ms.workload: dotnet
-ms.openlocfilehash: 7d93f8543b9e6e370827f5a666315d562e28ee76
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 7719af9393bee816665040d6e4ced191419d0855
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-create-windows-services"></a>Nasıl Yapılır: Windows Hizmetleri Oluşturma
 Bir hizmet oluşturduğunuzda adlı bir Visual Studio Proje şablonu kullanabilirsiniz **Windows hizmeti**. Bu şablon otomatik olarak işin çoğunu sizin için uygun sınıfları ve ad alanları, hizmetleri, temel sınıfından devralma ayarlama başvurarak yapar ve birkaç yöntemleri geçersiz kılma, büyük bir olasılıkla geçersiz kılmak istiyor.  
@@ -55,11 +45,11 @@ Bir hizmet oluşturduğunuzda adlı bir Visual Studio Proje şablonu kullanabili
   
     |Özellik|Ayar|  
     |--------------|-------------|  
-    |<xref:System.ServiceProcess.ServiceBase.CanStop%2A>|`True`hizmeti çalışmayı durdurmak için istekleri kabul ettiğinizi belirtmek için; `false` hizmetin durdurulmasını önlemek için.|  
-    |<xref:System.ServiceProcess.ServiceBase.CanShutdown%2A>|`True`hizmet üzerinde bulunduğu bilgisayar aşağı çağırmak etkinleştirmeden kapattığında bildirim almak istediği belirtmek için <xref:System.ServiceProcess.ServiceBase.OnShutdown%2A> yordamı.|  
-    |<xref:System.ServiceProcess.ServiceBase.CanPauseAndContinue%2A>|`True`Hizmeti duraklatmak veya sürdürmek için istekleri kabul ettiğinizi belirtmek için çalışan; `false` hizmetinin duraklatılmasını ve önlemek için.|  
-    |<xref:System.ServiceProcess.ServiceBase.CanHandlePowerEvent%2A>|`True`Hizmet bildirim bilgisayarın güç durumu değişiklikleri işleyebileceğini belirtmek için; `false` bu değişikliklerden haberdar hizmetin önlemek için.|  
-    |<xref:System.ServiceProcess.ServiceBase.AutoLog%2A>|`True`Hizmetiniz bir eylem gerçekleştirdiğinde bilgilendirici girdiler için uygulama olay günlüğüne yazmak için; `false` bu işlev devre dışı bırakmak için. Daha fazla bilgi için bkz: [nasıl yapılır: günlük Information Services'ı hakkında](../../../docs/framework/windows-services/how-to-log-information-about-services.md). **Not:** varsayılan olarak, <xref:System.ServiceProcess.ServiceBase.AutoLog%2A> ayarlanır `true`.|  
+    |<xref:System.ServiceProcess.ServiceBase.CanStop%2A>|`True` hizmeti çalışmayı durdurmak için istekleri kabul ettiğinizi belirtmek için; `false` hizmetin durdurulmasını önlemek için.|  
+    |<xref:System.ServiceProcess.ServiceBase.CanShutdown%2A>|`True` hizmet üzerinde bulunduğu bilgisayar aşağı çağırmak etkinleştirmeden kapattığında bildirim almak istediği belirtmek için <xref:System.ServiceProcess.ServiceBase.OnShutdown%2A> yordamı.|  
+    |<xref:System.ServiceProcess.ServiceBase.CanPauseAndContinue%2A>|`True` Hizmeti duraklatmak veya sürdürmek için istekleri kabul ettiğinizi belirtmek için çalışan; `false` hizmetinin duraklatılmasını ve önlemek için.|  
+    |<xref:System.ServiceProcess.ServiceBase.CanHandlePowerEvent%2A>|`True` Hizmet bildirim bilgisayarın güç durumu değişiklikleri işleyebileceğini belirtmek için; `false` bu değişikliklerden haberdar hizmetin önlemek için.|  
+    |<xref:System.ServiceProcess.ServiceBase.AutoLog%2A>|`True` Hizmetiniz bir eylem gerçekleştirdiğinde bilgilendirici girdiler için uygulama olay günlüğüne yazmak için; `false` bu işlev devre dışı bırakmak için. Daha fazla bilgi için bkz: [nasıl yapılır: günlük Information Services'ı hakkında](../../../docs/framework/windows-services/how-to-log-information-about-services.md). **Not:** varsayılan olarak, <xref:System.ServiceProcess.ServiceBase.AutoLog%2A> ayarlanır `true`.|  
   
     > [!NOTE]
     >  Zaman <xref:System.ServiceProcess.ServiceBase.CanStop%2A> veya <xref:System.ServiceProcess.ServiceBase.CanPauseAndContinue%2A> ayarlanır `false`, **Hizmet Denetim Yöneticisi** durdurmak, duraklatmak veya hizmet devam etmek için ilgili menü seçenekleri devre dışı bırakır.  

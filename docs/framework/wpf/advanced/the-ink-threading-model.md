@@ -1,13 +1,6 @@
 ---
-title: "Mürekkep İş Parçacığı Modeli"
-ms.custom: 
+title: Mürekkep İş Parçacığı Modeli
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-wpf
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - application user interface thread [WPF]
 - stylus plug-in
@@ -20,16 +13,11 @@ helpviewer_keywords:
 - ink collection plug-in
 - plug-ins [WPF], for ink
 ms.assetid: c85fcad1-cb50-4431-847c-ac4145a35c89
-caps.latest.revision: "9"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: c8eb0cf9f1cbb1be688f228b7bbd10a3a3ca6ed0
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: cc0ff8a2345bd945dd2fffdfda80f00e1ab99c67
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="the-ink-threading-model"></a>Mürekkep İş Parçacığı Modeli
 Tablet PC mürekkep avantajları, çok yazmak gibi bir normal Kalem ve kağıt hissi olduğunu biridir.  Bunu başarmak için tablet kalem fare yapar ve kullanıcının yazmasına mürekkep işler daha çok daha yüksek bir hızda giriş verilerini toplar.  Engellenmiş duruma olduğundan uygulamanın kullanıcı arabirimini (UI) iş parçacığı kalem verisi ve mürekkep işleme toplanması için yeterli değil.  Bunu çözmek için bir [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] uygulama kullanıcı mürekkep yazdığında iki ek iş parçacığı kullanır.  
@@ -72,11 +60,11 @@ Tablet PC mürekkep avantajları, çok yazmak gibi bir normal Kalem ve kağıt h
   
  Önceki diyagramda aşağıdaki davranış gerçekleşir:  
   
-1.  `StylusPlugin1`x değerlerini değiştirir ve y.  
+1.  `StylusPlugin1` x değerlerini değiştirir ve y.  
   
-2.  <xref:System.Windows.Input.StylusPlugIns.DynamicRenderer>Değiştirilen kalem noktalarını alır ve bunları dinamik işleme iş parçacığında işler.  
+2.  <xref:System.Windows.Input.StylusPlugIns.DynamicRenderer> Değiştirilen kalem noktalarını alır ve bunları dinamik işleme iş parçacığında işler.  
   
-3.  `StylusPlugin2`Değiştirilen kalem noktalarını alır ve daha fazla x değerlerini değiştirir ve y.  
+3.  `StylusPlugin2` Değiştirilen kalem noktalarını alır ve daha fazla x değerlerini değiştirir ve y.  
   
 4.  Uygulama kalem noktalarını toplar ve Kullanıcı vuruşu tamamlandığında Vuruşun statik olarak işler.  
   
@@ -87,7 +75,7 @@ Tablet PC mürekkep avantajları, çok yazmak gibi bir normal Kalem ve kağıt h
   
  Aşağıdaki diyagramda kalem iş parçacığı ve kullanıcı Arabirimi iş parçacığı kalem olaylarını göre arasındaki ilişkiyi göstermektedir bir <xref:System.Windows.Input.StylusPlugIns.StylusPlugIn>.  
   
- ![İş parçacığı oluşturma modelleri &#40;mürekkep; Kullanıcı Arabirimi ve Kalem &#41; ] (../../../../docs/framework/wpf/advanced/media/inkthreading-plugincallbacks.png "InkThreading_PluginCallbacks")  
+ ![İş parçacığı oluşturma modelleri mürekkep &#40;kullanıcı Arabirimi ve Kalem&#41;](../../../../docs/framework/wpf/advanced/media/inkthreading-plugincallbacks.png "InkThreading_PluginCallbacks")  
   
 ## <a name="rendering-ink"></a>Mürekkep işleme  
  Kullanıcı bir vuruş çizer gibi <xref:System.Windows.Input.StylusPlugIns.DynamicRenderer> mürekkep akış"kullanıcı Arabirimi iş parçacığı meşgul olduğunda bile kalem" görünmesi için ayrı bir iş parçacığı üzerinde mürekkep işler.  <xref:System.Windows.Input.StylusPlugIns.DynamicRenderer> Kalem noktalarını topladığı gibi bir görsel ağaç dinamik işleme iş parçacığında oluşturur.  Kullanıcı vuruşu tamamlandığında <xref:System.Windows.Input.StylusPlugIns.DynamicRenderer> uygulama sonraki işleme geçiş yaptığında uyarılmayı sorar.  Uygulama sonraki işleme geçişini tamamlandıktan sonra <xref:System.Windows.Input.StylusPlugIns.DynamicRenderer> kendi görsel ağacı temizler.  Aşağıdaki diyagram bu işlemi gösterilmektedir.  

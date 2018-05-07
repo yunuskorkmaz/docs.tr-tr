@@ -1,31 +1,17 @@
 ---
 title: İleti Kimlik Bilgileri ile WS Aktarma
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 ms.assetid: 0d092f3a-b309-439b-920b-66d8f46a0e3c
-caps.latest.revision: 7
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 7b954e2d19f601476876beef6482ca10eb3f113b
-ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
-ms.translationtype: MT
+ms.openlocfilehash: acb2960fe3d563a05b0bdeee70af0d4093aae6f0
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/27/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="ws-transport-with-message-credential"></a>İleti Kimlik Bilgileri ile WS Aktarma
 Bu örnek, iletide taşınmasına istemci kimlik bilgileri ile birlikte SSL taşıma güvenliği kullanımını göstermektedir. Bu örnekte `wsHttpBinding` bağlama.  
   
- Varsayılan olarak, `wsHttpBinding` bağlama HTTP iletişim sağlar. Taşıma güvenliği için yapılandırıldığında, bağlama HTTPS iletişimi destekler. HTTPS gizliliği ve bütünlük koruması kablo üzerinden gönderilen iletiler için sağlar. Ancak istemci hizmeti için kimlik doğrulaması için kullanılan kimlik doğrulama mekanizmaları HTTPS taşıma desteklediği için sınırlı kümesidir. [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] sunan bir `TransportWithMessageCredential` bu sınırlamanın üstesinden gelmek için tasarlanmış güvenlik modu. Bu güvenlik modu yapılandırıldığında, taşıma güvenliği için iletilen iletileri gizliliği ve bütünlük sağlamak ve hizmet kimlik doğrulaması yapmak için kullanılır. Ancak, istemci kimlik doğrulama ileti doğrudan istemci kimlik bilgileri koyarak gerçekleştirilir. Bu ileti güvenlik modu aktarım güvenlik modu performans avantajı korurken istemci kimlik doğrulaması için tarafından desteklenen herhangi bir kimlik bilgisi türü kullanmanıza olanak sağlar.  
+ Varsayılan olarak, `wsHttpBinding` bağlama HTTP iletişim sağlar. Taşıma güvenliği için yapılandırıldığında, bağlama HTTPS iletişimi destekler. HTTPS gizliliği ve bütünlük koruması kablo üzerinden gönderilen iletiler için sağlar. Ancak istemci hizmeti için kimlik doğrulaması için kullanılan kimlik doğrulama mekanizmaları HTTPS taşıma desteklediği için sınırlı kümesidir. Windows Communication Foundation (WCF) sunan bir `TransportWithMessageCredential` bu sınırlamanın üstesinden gelmek için tasarlanmış güvenlik modu. Bu güvenlik modu yapılandırıldığında, taşıma güvenliği için iletilen iletileri gizliliği ve bütünlük sağlamak ve hizmet kimlik doğrulaması yapmak için kullanılır. Ancak, istemci kimlik doğrulama ileti doğrudan istemci kimlik bilgileri koyarak gerçekleştirilir. Bu ileti güvenlik modu aktarım güvenlik modu performans avantajı korurken istemci kimlik doğrulaması için tarafından desteklenen herhangi bir kimlik bilgisi türü kullanmanıza olanak sağlar.  
   
  Bu örnekte, bir `UserName` kimlik bilgisi türü hizmeti için istemci kimlik doğrulaması için kullanılır.  
   

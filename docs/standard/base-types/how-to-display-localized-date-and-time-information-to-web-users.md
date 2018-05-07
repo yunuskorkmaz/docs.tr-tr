@@ -1,13 +1,7 @@
 ---
-title: "Nasıl yapılır: Web Kullanıcılarına Yerelleştirilmiş Tarih ve Saat Bilgilerini Görüntüleme"
-ms.custom: 
+title: 'Nasıl yapılır: Web Kullanıcılarına Yerelleştirilmiş Tarih ve Saat Bilgilerini Görüntüleme'
 ms.date: 03/30/2017
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
 ms.technology: dotnet-standard
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - formatting [.NET Framework], dates
 - parsing strings [.NET Framework], date and time strings
@@ -16,18 +10,13 @@ helpviewer_keywords:
 - displaying date and time data
 - localized date displays [.NET Framework]
 ms.assetid: 377fe93c-32be-421a-a30a-be639a46ede8
-caps.latest.revision: "8"
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-- dotnetcore
-ms.openlocfilehash: b6c68ddd29b8221a073b00ade87e3b9d3dc870b8
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: 63775d48ca2e11cfa121f3b7aeaff708d86e50de
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-display-localized-date-and-time-information-to-web-users"></a>Nasıl yapılır: Web Kullanıcılarına Yerelleştirilmiş Tarih ve Saat Bilgilerini Görüntüleme
 Bir Web sayfası dünyanın her yerden görüntülenebilir olduğundan, ayrıştırma ve tarih ve saat değerlerini biçimlendirmek işlemleri (genellikle Web sunucusunun yerel kültür biçimi) bir varsayılan biçimi üzerinde güvenmemelisiniz kullanıcıyla kullanılırken. Bunun yerine, işleyen tarih ve saat dizeleri giriş kullanıcı tarafından Web forms kullanıcının tercih edilen kültürü kullanarak dizeleri ayrıştırma. Benzer şekilde, tarih ve saat verilerini kullanıcıya kullanıcının kültürü için uyumlu bir biçimde görüntülenmesi gerekir. Bu konuda, bunun nasıl yapılacağı gösterilmektedir.  

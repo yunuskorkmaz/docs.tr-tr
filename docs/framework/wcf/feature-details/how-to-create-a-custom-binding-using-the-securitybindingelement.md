@@ -1,40 +1,28 @@
 ---
 title: 'Nasıl yapılır: SecurityBindingElement Kullanarak Özel Bağlama Oluşturma'
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 dev_langs:
 - csharp
 - vb
 helpviewer_keywords:
 - security [WCF], creating custom bindings
 ms.assetid: 203a9f9e-3a73-427c-87aa-721c56265b29
-caps.latest.revision: 19
 author: BrucePerlerMS
-ms.author: bruceper
 manager: mbaldwin
-ms.workload:
-- dotnet
-ms.openlocfilehash: 80fd6163db1b7b168be4e19b01c8eb9f15865f04
-ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
+ms.openlocfilehash: 1e288daeb717fa9fa041d552cac4ec5d0cd28808
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/30/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-create-a-custom-binding-using-the-securitybindingelement"></a>Nasıl yapılır: SecurityBindingElement Kullanarak Özel Bağlama Oluşturma
-[!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] yapılandırılabilir, ancak tüm güvenlik yapılandırma seçenekleri, tam esneklik sağlıyor mu birkaç sistem tarafından sağlanan bağlamaları içerir [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] destekler. Bu konuda doğrudan tek tek bağlama öğelerini özel bağlama oluşturma gösterir ve bu tür bir bağlama oluşturulurken belirtilen güvenlik ayarlarını bazılarını vurgular. Özel bağlama oluşturma hakkında daha fazla bilgi için bkz: [bağlamaları genişletme](../../../../docs/framework/wcf/extending/extending-bindings.md).  
+Windows Communication Foundation (WCF) yapılandırılabilir, ancak tam esneklik WCF destekleyen tüm güvenlik seçeneklerini yapılandırırken sağlamaz birkaç sistem tarafından sağlanan bağlamaları içerir. Bu konuda doğrudan tek tek bağlama öğelerini özel bağlama oluşturma gösterir ve bu tür bir bağlama oluşturulurken belirtilen güvenlik ayarlarını bazılarını vurgular. Özel bağlama oluşturma hakkında daha fazla bilgi için bkz: [bağlamaları genişletme](../../../../docs/framework/wcf/extending/extending-bindings.md).  
   
 > [!WARNING]
 >  <xref:System.ServiceModel.Channels.SecurityBindingElement> desteklemediği <xref:System.ServiceModel.Channels.IDuplexSessionChannel> kanal TCP tarafından varsayılan kanal şekli kullanımı şekli ne zaman aktarım <xref:System.ServiceModel.TransferMode> ayarlanır <xref:System.ServiceModel.TransferMode.Buffered>. Ayarlamalısınız <xref:System.ServiceModel.TransferMode> için <xref:System.ServiceModel.TransferMode.Streamed> kullanmak için <xref:System.ServiceModel.Channels.SecurityBindingElement> Bu senaryoda.  
   
 ## <a name="creating-a-custom-binding"></a>Özel bağlama oluşturma  
- İçinde [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] tüm bağlamaları, oluşur *bağlama öğeleri*. Her bağlama öğesi türetilen <xref:System.ServiceModel.Channels.BindingElement> sınıfı. Standart sistem tarafından sağlanan bağlamaları için bağlama öğeleri oluşturulur ve bazı özellik ayarları özelleştirebilirsiniz olsa da, sizin için yapılandırılmış.  
+ WCF'de tüm bağlamaları, oluşur *bağlama öğeleri*. Her bağlama öğesi türetilen <xref:System.ServiceModel.Channels.BindingElement> sınıfı. Standart sistem tarafından sağlanan bağlamaları için bağlama öğeleri oluşturulur ve bazı özellik ayarları özelleştirebilirsiniz olsa da, sizin için yapılandırılmış.  
   
  Buna karşılık, özel bağlama oluşturma için bağlama öğeleri oluşturulup yapılandırılıncaya ve <xref:System.ServiceModel.Channels.CustomBinding> bağlama öğelerini oluşturulur.  
   

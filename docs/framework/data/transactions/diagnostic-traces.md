@@ -1,23 +1,12 @@
 ---
-title: "Tanılama izleri"
-ms.custom: 
+title: Tanılama izleri
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 28e77a63-d20d-4b6a-9caf-ddad86550427
-caps.latest.revision: "3"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 2cb16bb2d492caca7957e6d58eadddf9bf1568b3
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 56f79fb9140785188996cc413eca4dd530037ccd
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="diagnostic-traces"></a>Tanılama izleri
 İzlemeler uygulama yürütmesi sırasında oluşturulan belirli iletileri yayımlanmasıyla ' dir. İzleme kullanırken, toplama ve gönderilen iletileri kaydetmek için bir mekanizma olması gerekir. İzleme iletileri dinleyicileri tarafından alınır. Toplamak, depolamak ve izleme iletilerini yönlendirmek için bir dinleyici amacı budur. Dinleyicileri İzleme çıktısı günlüğü, pencere veya metin dosyası gibi uygun bir hedefe yönlendirir.  
@@ -43,7 +32,7 @@ ms.lasthandoff: 12/22/2017
 </configuration>  
 ```  
   
- <xref:System.Transactions>izlemeler "System.Transactions" adlı kaynak yazılır. Kullanabileceğiniz `add` adını ve kullanmak istediğiniz İzleme dinleyicisi türünü belirtmek için. Bizim örnek yapılandırmada, biz dinleyicisi "tx" adlı ve standart .NET Framework İzleme dinleyicisi eklenen (<xref:System.Diagnostics.XmlWriterTraceListener>) istiyoruz kullanılacak türü. Kullanım `initializeData` günlük dosyasının adı için bu dinleyici ayarlamak için. Buna ek olarak, bir basit dosya adı için tam yol yerine kullanabilirsiniz.  
+ <xref:System.Transactions> izlemeler "System.Transactions" adlı kaynak yazılır. Kullanabileceğiniz `add` adını ve kullanmak istediğiniz İzleme dinleyicisi türünü belirtmek için. Bizim örnek yapılandırmada, biz dinleyicisi "tx" adlı ve standart .NET Framework İzleme dinleyicisi eklenen (<xref:System.Diagnostics.XmlWriterTraceListener>) istiyoruz kullanılacak türü. Kullanım `initializeData` günlük dosyasının adı için bu dinleyici ayarlamak için. Buna ek olarak, bir basit dosya adı için tam yol yerine kullanabilirsiniz.  
   
  Her izleme ileti türü önem derecesini belirtmek için bir düzeyi atanır. App-etki alanı izleme düzeyi eşit veya daha düşük bir olay türü düzeyini ise, bu mesajı oluşturulur. İzleme düzeyini tarafından denetlenen `switchValue` yapılandırma dosyasında ayarlama. Tanılama izleme iletilerini kaynaklarıyla ilişkili düzeyleri aşağıdaki tabloda tanımlanır.  
   

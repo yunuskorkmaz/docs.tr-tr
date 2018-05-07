@@ -1,12 +1,6 @@
 ---
-title: "Konum temelli önbellek ilkeleri"
-ms.custom: 
+title: Konum temelli önbellek ilkeleri
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - Cache If Available policy
 - reload policy
@@ -21,16 +15,14 @@ helpviewer_keywords:
 - Cache Or Next Cache Only policy
 - Refresh policy
 ms.assetid: e41d7f1a-0a6a-4dee-97d1-c6a8b6a07fc2
-caps.latest.revision: "12"
 author: mcleblanc
 ms.author: markl
 manager: markl
-ms.workload: dotnet
-ms.openlocfilehash: a09c8c47c91222d6292d46d2eea80a30ed786494
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: b4109cef8d527d397903854e05a2204a3e551938
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="location-based-cache-policies"></a>Konum temelli önbellek ilkeleri
 Konum temelli önbellek İlkesi, istenen kaynak gelen gerçekleştirilebilecek göre geçerli önbelleğe alınan girdileri yenilik tanımlar. Önbelleğe alınan bir kaynağın geçerli olduğu kullanmadan yoksa sunucu belirtilen COLLECTION gereksinimleri ihlal değil. Konum temelli önbellek İlkesi kullanılarak programlı olarak oluşturulan bir <xref:System.Net.Cache.RequestCachePolicy> veya <xref:System.Net.Cache.HttpRequestCachePolicy> sınıfı oluşturucusu. Konum tabanlı ilke türünü Oluşturucusu kullanmaya geçirilen bir <xref:System.Net.Cache.RequestCacheLevel> veya <xref:System.Net.Cache.HttpRequestCacheLevel> numaralandırma değeri. Konum temelli önbellek ilkeleri oluşturma kod örnekleri için bkz [nasıl yapılır: bir uygulama için bir konum temelli önbellek İlkesi ayarlamak](../../../docs/framework/network-programming/how-to-set-a-location-based-cache-policy-for-an-application.md). Aşağıdaki bölümlerde her Köprü Metni Aktarım Protokolü (http ve https) kaynaklar için önbellek konumu tabanlı ilke türü açıklanmaktadır.  

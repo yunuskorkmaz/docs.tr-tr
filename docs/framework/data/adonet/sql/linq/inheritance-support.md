@@ -1,26 +1,12 @@
 ---
 title: Devralma desteği
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-ado
-ms.tgt_pltfrm: ''
-ms.topic: article
 ms.assetid: 19bb2794-b4e7-402e-8307-1d1517381a08
-caps.latest.revision: 3
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
-ms.workload:
-- dotnet
-ms.openlocfilehash: 7633ba80d2657f2f0135ee702a6cc89a260fec68
-ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
+ms.openlocfilehash: 3d396632902b178eee34801a9716d8aa222a08d3
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="inheritance-support"></a>Devralma desteği
 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] destekleyen *tek tablo eşlemesi*. Diğer bir deyişle, bir tam devralma hiyerarşisi tek veritabanı tablosunda depolanır. Tablo tüm hiyerarşinin tüm olası veri sütunlarını düzleştirilmiş birleşimini içerir. (Bir birleşimi olan özgün tablolardan birini mevcut satırlar bir tabloya iki tablo birleştirme sonucudur.) Her satır satır tarafından temsil edilen örnek türü için geçerli olmayan sütun null değerlere sahiptir.  

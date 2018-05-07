@@ -1,13 +1,6 @@
 ---
-title: "Windows Forms DataGridView Denetimini Ölçeklendirme için En İyi Yöntemler"
-ms.custom: 
+title: Windows Forms DataGridView Denetimini Ölçeklendirme için En İyi Yöntemler
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-winforms
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - DataGridView control [Windows Forms], row sharing
 - data grids [Windows Forms], best practices
@@ -16,16 +9,11 @@ helpviewer_keywords:
 - best practices [Windows Forms], dataGridView control
 - DataGridView control [Windows Forms], scaling
 ms.assetid: 8321a8a6-6340-4fd1-b475-fa090b905aaf
-caps.latest.revision: "31"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: ecd629bd38e08c8d6909ee4ad771f17b1554fc80
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 91153df539871de571375d7bf6d49d712a0c43b2
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="best-practices-for-scaling-the-windows-forms-datagridview-control"></a>Windows Forms DataGridView Denetimini Ölçeklendirme için En İyi Yöntemler
 <xref:System.Windows.Forms.DataGridView> Denetimi en fazla ölçeklenebilirlik sağlamak için tasarlanmıştır. Büyük miktarda veri görüntülemek gerekiyorsa, büyük miktarlarda bellek tüketerek veya kullanıcı arabirimi (UI) yanıtlama düşürmesini önlemek için bu konuda açıklanan yönergeleri izlemelisiniz. Bu konuda aşağıdaki konular açıklanmaktadır:  
@@ -124,7 +112,7 @@ ms.lasthandoff: 12/22/2017
   
  Satır paylaşımı kaldırılabilir haline gelmesini engellemek için aşağıdaki kılavuzları kullanın:  
   
--   Dizin oluşturma kaçının <xref:System.Windows.Forms.DataGridView.Rows%2A> koleksiyonu veya onunla üzerinden yineleme bir `foreach` döngü. Genellikle satırları doğrudan erişimi gerekmez. <xref:System.Windows.Forms.DataGridView>satırlarda çalışması yöntemleri satır örnekleri yerine satır dizini bağımsız olur. Ayrıca, satır ile ilgili olayları için işleyiciler olay bağımsız değişkeni nesneleri paylaşılmayan hale gelmesine neden olmadan satırları değiştirmek için kullanabileceğiniz satır özellikleri alır.  
+-   Dizin oluşturma kaçının <xref:System.Windows.Forms.DataGridView.Rows%2A> koleksiyonu veya onunla üzerinden yineleme bir `foreach` döngü. Genellikle satırları doğrudan erişimi gerekmez. <xref:System.Windows.Forms.DataGridView> satırlarda çalışması yöntemleri satır örnekleri yerine satır dizini bağımsız olur. Ayrıca, satır ile ilgili olayları için işleyiciler olay bağımsız değişkeni nesneleri paylaşılmayan hale gelmesine neden olmadan satırları değiştirmek için kullanabileceğiniz satır özellikleri alır.  
   
 -   Satır nesnesi erişmeniz gerekiyorsa kullanın <xref:System.Windows.Forms.DataGridViewRowCollection.SharedRow%2A?displayProperty=nameWithType> yöntemi ve sıranın gerçek dizin geçirin. Ancak, bu yöntemle alınan paylaşılan satır nesnesi değiştirerek bu nesneyi paylaşmak tüm satırları değiştireceğini unutmayın. Herhangi bir satır değiştirdiğinizde, etkilenmez şekilde yeni kayıtlar için satır diğer satırlar, ancak paylaşılmaz. Ayrıca farklı satırlarla tarafından paylaşılan bir satır temsil farklı kısayol menüleri gerekebileceğini unutmayın. Bir paylaşılan satır örneğinden doğru kısayol menüsünün almak kullanın <xref:System.Windows.Forms.DataGridViewRow.GetContextMenuStrip%2A> yöntemi ve sıranın gerçek dizin geçirin. Paylaşılan sıranın erişim <xref:System.Windows.Forms.DataGridViewRow.ContextMenuStrip%2A> özelliği bunun yerine,-1 paylaşılan satır dizini kullanır ve doğru kısayol menüsünü almaz.  
   

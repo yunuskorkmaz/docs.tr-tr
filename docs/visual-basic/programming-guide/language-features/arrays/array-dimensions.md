@@ -1,12 +1,6 @@
 ---
-title: "Visual Basic'de Dizi Boyutları"
-ms.custom: 
+title: Visual Basic'de Dizi Boyutları
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
-ms.topic: article
 helpviewer_keywords:
 - dimensions, arrays
 - arrays [Visual Basic], dimensions
@@ -15,14 +9,11 @@ helpviewer_keywords:
 - rectangular arrays
 - ranking, arrays
 ms.assetid: 385e911b-18c1-4e98-9924-c6d279101dd9
-caps.latest.revision: "22"
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: 21e170ca5942862a26e05428fffaea7d1e875e19
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: cf295288dd034d744dceb71b5c58278be5cc2a2f
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="array-dimensions-in-visual-basic"></a>Visual Basic'de Dizi Boyutları
 A *boyut* içinde gösterebilir bir dizinin öğelerini belirtimi bir yönüdür. Satış her ay gün için toplam tutan bir dizi bir boyut (ayın günü) sahiptir. Satış toplam bölüm tarafından her ayın için tutan bir dizi (bölüm numarası ve ayın günü) iki boyutu vardır. Bir dizisi olduğundan dimensions sayısı adlı kendi *derece*.  
@@ -35,13 +26,13 @@ A *boyut* içinde gösterebilir bir dizinin öğelerini belirtimi bir yönüdür
   
  Aşağıdaki çizimler farklı sıralar dizilerle kavramsal yapısını göstermektedir. Her bir öğesinde çizimler erişim dizin değerleri gösterir. Örneğin, ikinci satırın iki boyutlu dizinin ilk öğesi dizinleri belirterek erişebileceğiniz `(1, 0)`.  
   
- ![Bir &#45;grafik diyagramı; boyutlu bir dizi](../../../../visual-basic/programming-guide/language-features/arrays/media/arrayexdimone.gif "ArrayExDimOne")  
+ ![Bir grafik diyagram&#45;boyutlu bir dizi](../../../../visual-basic/programming-guide/language-features/arrays/media/arrayexdimone.gif "ArrayExDimOne")  
 Tek boyutlu dizi  
   
- ![İki &#45;grafik diyagramı; boyutlu bir dizi](../../../../visual-basic/programming-guide/language-features/arrays/media/arrayexdimtwo.gif "ArrayExDimTwo")  
+ ![İki grafik diyagramı&#45;boyutlu bir dizi](../../../../visual-basic/programming-guide/language-features/arrays/media/arrayexdimtwo.gif "ArrayExDimTwo")  
 İki boyutlu dizi  
   
- ![Üç &#45;grafik diyagramı; boyutlu bir dizi](../../../../visual-basic/programming-guide/language-features/arrays/media/arrayexdimthree.gif "ArrayExDimThree")  
+ ![Üç grafik diyagramı&#45;boyutlu bir dizi](../../../../visual-basic/programming-guide/language-features/arrays/media/arrayexdimthree.gif "ArrayExDimThree")  
 Üç boyutlu dizi  
   
 ### <a name="one-dimension"></a>Bir boyut  
@@ -99,4 +90,4 @@ Dim salesAmounts(4, 11, 30) As Double
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
  [Diziler](../../../../visual-basic/programming-guide/language-features/arrays/index.md)  
- [Dizilerle ilgili sorun giderme](../../../../visual-basic/programming-guide/language-features/arrays/troubleshooting-arrays.md)
+ [Dizilerle İlgili Sorun Giderme](../../../../visual-basic/programming-guide/language-features/arrays/troubleshooting-arrays.md)

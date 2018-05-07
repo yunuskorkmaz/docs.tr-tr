@@ -1,13 +1,6 @@
 ---
-title: "Gönderilmiş Olayları İşlenmiş Olarak İşaretleme ve Sınıf İşlemesi"
-ms.custom: 
+title: Gönderilmiş Olayları İşlenmiş Olarak İşaretleme ve Sınıf İşlemesi
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-wpf
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - tunneling events [WPF]
 - class listeners [WPF]
@@ -24,16 +17,11 @@ helpviewer_keywords:
 - events [WPF], suppressing
 - bubbling events [WPF]
 ms.assetid: 5e745508-4861-4b48-b5f6-5fc7ce5289d2
-caps.latest.revision: "19"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: b2c9a550e1423acb37da9645d09cdb4ccefcea66
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 2d696c85be0f46c5f08e1770f0d695dbb4d50cb9
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="marking-routed-events-as-handled-and-class-handling"></a>Gönderilmiş Olayları İşlenmiş Olarak İşaretleme ve Sınıf İşlemesi
 Yönlendirilmiş olay işleyicileri içinde olay verilerini işlenen olay işaretleyebilirsiniz. Olay işleme rota etkili bir şekilde kısaltacak. Sınıf işleme yönlendirilmiş olaylar tarafından desteklenen programlama bir kavramdır. Sınıf işleyicisi sınıf düzeyinde sınıfının hiçbir örneği üzerinde herhangi bir örnek işleyicisini önce çağrılan bir işleyici ile belirli bir yönlendirilmiş olay işleme fırsatına sahip.  
@@ -62,7 +50,7 @@ Yönlendirilmiş olay işleyicileri içinde olay verilerini işlenen olay işare
   
 <a name="Class_Handlers_and_Instance_Handlers"></a>   
 ## <a name="class-handlers-and-instance-handlers"></a>Sınıf işleyicileri ve örnek işleyicileri  
- Yönlendirilmiş olaylar, iki farklı türde olay dinleyicileri göz önünde bulundurun: sınıf dinleyicileri ve örnek dinleyiciler. Sınıf dinleyicileri var türleri belirli bir adlı olduğundan <xref:System.Windows.EventManager> [!INCLUDE[TLA2#tla_api](../../../../includes/tla2sharptla-api-md.md)] ,<xref:System.Windows.EventManager.RegisterClassHandler%2A>, kendi statik oluşturucuda ya da bir sınıf işleyicisi sanal yönteminden öğesi ana sınıfı geçersiz. Örnek dinleyiciler öğeleridir belirli sınıf örnekleri/burada bir veya daha fazla işleyicileri, yönlendirilmiş olay için bir çağrı tarafından eklenmiş olan <xref:System.Windows.UIElement.AddHandler%2A>. Varolan [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] yönlendirilmiş olaylar olun çağrıları <xref:System.Windows.UIElement.AddHandler%2A> parçası olarak [!INCLUDE[TLA#tla_clr](../../../../includes/tlasharptla-clr-md.md)] olay sarmalayıcı ekleme {} ve {} uygulamaları nasıl olan olayın Kaldır basit [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] mekanizması bir öznitelik aracılığıyla olay işleyicileri ekleme sözdizimi etkinleştirilir. Bu nedenle basit bile [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] kullanım sonuçta karşılık gelir için bir <xref:System.Windows.UIElement.AddHandler%2A> çağırın.  
+ Yönlendirilmiş olaylar, iki farklı türde olay dinleyicileri göz önünde bulundurun: sınıf dinleyicileri ve örnek dinleyiciler. Sınıf dinleyicileri var türleri belirli bir adlı olduğundan <xref:System.Windows.EventManager> [!INCLUDE[TLA2#tla_api](../../../../includes/tla2sharptla-api-md.md)] ,<xref:System.Windows.EventManager.RegisterClassHandler%2A>, kendi statik oluşturucuda ya da bir sınıf işleyicisi sanal yönteminden öğesi ana sınıfı geçersiz. Örnek dinleyiciler öğeleridir belirli sınıf örnekleri/burada bir veya daha fazla işleyicileri, yönlendirilmiş olay için bir çağrı tarafından eklenmiş olan <xref:System.Windows.UIElement.AddHandler%2A>. Varolan [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] yönlendirilmiş olaylar olun çağrıları <xref:System.Windows.UIElement.AddHandler%2A> parçası olarak [!INCLUDE[TLA#tla_clr](../../../../includes/tlasharptla-clr-md.md)] olay sarmalayıcı eklemek{} kaldırıp{} uygulamaları nasıl olan olayın basit [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] ekleme mekanizması olay işleyicileri bir öznitelik sözdizimi aracılığıyla etkindir. Bu nedenle basit bile [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] kullanım sonuçta karşılık gelir için bir <xref:System.Windows.UIElement.AddHandler%2A> çağırın.  
   
  Görsel ağaç içinde öğelerin kayıtlı işleyici uygulamaları için denetlenir. Yönlendirilmiş olay yönlendirme stratejisi türünde devralınır sırada yol boyunca işleyicileri potansiyel olarak çağrılır. Örneğin, kabarcıklanma yönlendirilmiş olaylar ilk yönlendirilmiş olayı aynı öğeye bağlı bu işleyicilerini başlatacaktır. Ardından yönlendirilmiş olay vb. uygulama kök öğesi ulaşılana kadar sonraki üst öğeye "balonları".  
   
@@ -99,7 +87,7 @@ Yönlendirilmiş olay işleyicileri içinde olay verilerini işlenen olay işare
 ## <a name="deliberately-suppressing-input-events-for-control-compositing"></a>Giriş olayları denetim birleştirmesini için kasıtlı olarak gizleme  
  Giriş olayları ve bileşik denetimler yönlendirilmiş olayların sınıf işleme kullanıldığı ana senaryo içindir. Birden çok pratik denetimleri veya denetim temel sınıfları oluşan tanımına göre bir bileşik denetimdir. Denetim yazarı genellikle tüm olası giriş olaylar katıştırma istediği her alt bileşenler, tekil olay kaynağı olarak tüm denetim bildirmek üzere tetikleyebilir olduğunu. Bazı durumlarda denetim yazarı bileşenleri olayların tamamen gizlemek ya da daha fazla bilgi taşıyan veya daha fazla belirli bir davranışı olan bileşenle tanımlanan bir olayın yerine isteyebilir. Hiçbir bileşen yazarının hemen görülebilir kurallı örnek nasıl bir [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] <xref:System.Windows.Controls.Button> tüm düğmeleri olduğunu sezgisel olay sonunda çözümleyecek herhangi fare olayını işler: bir <xref:System.Windows.Controls.Primitives.ButtonBase.Click> olay.  
   
- <xref:System.Windows.Controls.Button> Temel sınıfı (<xref:System.Windows.Controls.Primitives.ButtonBase>) türetilen <xref:System.Windows.Controls.Control> hangi sırayla türetilen <xref:System.Windows.FrameworkElement> ve <xref:System.Windows.UIElement>ve denetim giriş işleme şu adresten edinilebilir için gereken olay altyapıyı çoğunu <xref:System.Windows.UIElement> düzeyi. Özellikle, <xref:System.Windows.UIElement> genel işler <xref:System.Windows.Input.Mouse> fare imleci sınırlarının içinde isabet testi işleyen ve en yaygın için ayrı olayları sağlar olayları düğmesini eylemler gibi <xref:System.Windows.UIElement.MouseLeftButtonDown>. <xref:System.Windows.UIElement>Ayrıca, boş bir sanal sağlar <xref:System.Windows.UIElement.OnMouseLeftButtonDown%2A> için preregistered sınıfı işleyici olarak <xref:System.Windows.UIElement.MouseLeftButtonDown>, ve <xref:System.Windows.Controls.Primitives.ButtonBase> bunu geçersiz kılar. Benzer şekilde, <xref:System.Windows.Controls.Primitives.ButtonBase> kullandığı sınıf için işleyiciler <xref:System.Windows.UIElement.MouseLeftButtonUp>. Olay verileri iletilen, bir geçersiz kılma, uygulamaları, işaretlemek <xref:System.Windows.RoutedEventArgs> örnek ayarlanarak işlenmiş olarak <xref:System.Windows.RoutedEventArgs.Handled%2A> için `true`, ve aynı olay verilerini ne diğer sınıf işleyicileri rotaya geri kalanı boyunca devam eder ve örnek işleyicileri ya da olay ayarlayıcıları için. Ayrıca, <xref:System.Windows.Controls.Primitives.ButtonBase.OnMouseLeftButtonUp%2A> geçersiz kılma sonraki yükseltme <xref:System.Windows.Controls.Primitives.ButtonBase.Click> olay. Çoğu dinleyiciler için sonuç olacaktır <xref:System.Windows.UIElement.MouseLeftButtonDown> ve <xref:System.Windows.UIElement.MouseLeftButtonUp> olayları "kayboluyor" ve bunun yerine değiştirilir <xref:System.Windows.Controls.Primitives.ButtonBase.Click>, onu bu olay geldiğini true düğmesi ve olmayan bazı bilindiğinden daha fazla anlamı tutan bir olay Bileşik parçası düğmesinin veya başka bir öğenin tamamen.  
+ <xref:System.Windows.Controls.Button> Temel sınıfı (<xref:System.Windows.Controls.Primitives.ButtonBase>) türetilen <xref:System.Windows.Controls.Control> hangi sırayla türetilen <xref:System.Windows.FrameworkElement> ve <xref:System.Windows.UIElement>ve denetim giriş işleme şu adresten edinilebilir için gereken olay altyapıyı çoğunu <xref:System.Windows.UIElement> düzeyi. Özellikle, <xref:System.Windows.UIElement> genel işler <xref:System.Windows.Input.Mouse> fare imleci sınırlarının içinde isabet testi işleyen ve en yaygın için ayrı olayları sağlar olayları düğmesini eylemler gibi <xref:System.Windows.UIElement.MouseLeftButtonDown>. <xref:System.Windows.UIElement> Ayrıca, boş bir sanal sağlar <xref:System.Windows.UIElement.OnMouseLeftButtonDown%2A> için preregistered sınıfı işleyici olarak <xref:System.Windows.UIElement.MouseLeftButtonDown>, ve <xref:System.Windows.Controls.Primitives.ButtonBase> bunu geçersiz kılar. Benzer şekilde, <xref:System.Windows.Controls.Primitives.ButtonBase> kullandığı sınıf için işleyiciler <xref:System.Windows.UIElement.MouseLeftButtonUp>. Olay verileri iletilen, bir geçersiz kılma, uygulamaları, işaretlemek <xref:System.Windows.RoutedEventArgs> örnek ayarlanarak işlenmiş olarak <xref:System.Windows.RoutedEventArgs.Handled%2A> için `true`, ve aynı olay verilerini ne diğer sınıf işleyicileri rotaya geri kalanı boyunca devam eder ve örnek işleyicileri ya da olay ayarlayıcıları için. Ayrıca, <xref:System.Windows.Controls.Primitives.ButtonBase.OnMouseLeftButtonUp%2A> geçersiz kılma sonraki yükseltme <xref:System.Windows.Controls.Primitives.ButtonBase.Click> olay. Çoğu dinleyiciler için sonuç olacaktır <xref:System.Windows.UIElement.MouseLeftButtonDown> ve <xref:System.Windows.UIElement.MouseLeftButtonUp> olayları "kayboluyor" ve bunun yerine değiştirilir <xref:System.Windows.Controls.Primitives.ButtonBase.Click>, onu bu olay geldiğini true düğmesi ve olmayan bazı bilindiğinden daha fazla anlamı tutan bir olay Bileşik parçası düğmesinin veya başka bir öğenin tamamen.  
   
 <a name="WorkingAroundEventSuppressionByControls"></a>   
 ### <a name="working-around-event-suppression-by-controls"></a>Denetimleri tarafından olay bastırma çevresinde çalışma  

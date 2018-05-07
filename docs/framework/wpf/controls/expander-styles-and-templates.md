@@ -1,13 +1,6 @@
 ---
-title: "Genişletici Stilleri ve Şablonları"
-ms.custom: 
+title: Genişletici Stilleri ve Şablonları
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-wpf
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - styles [WPF], Expander
 - ControlTemplate [WPF], Expander
@@ -16,16 +9,11 @@ helpviewer_keywords:
 - states [WPF], Expander
 - parts [WPF], Expander
 ms.assetid: da2e5a1c-5230-4c21-98a5-59c7895facd7
-caps.latest.revision: "16"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 999b081d80680069d4c6fdf908814889afa60870
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 9718261a9546f773ec00c1f685e2c3fdd35dc03b
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="expander-styles-and-templates"></a>Genişletici Stilleri ve Şablonları
 Stilleri ve şablonları için bu konuda açıklanmaktadır <xref:System.Windows.Controls.Expander> denetim. Varsayılan değiştirebileceğiniz <xref:System.Windows.Controls.ControlTemplate> denetimi benzersiz bir görünüm vermek için. Daha fazla bilgi için bkz: [ControlTemplate oluşturarak varolan denetiminin görünümünü özelleştirme](../../../../docs/framework/wpf/controls/customizing-the-appearance-of-an-existing-control.md).  

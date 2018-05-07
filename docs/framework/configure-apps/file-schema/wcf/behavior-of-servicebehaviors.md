@@ -2,11 +2,11 @@
 title: '&lt;serviceBehaviors&gt; &lt;davranışı&gt;'
 ms.date: 03/30/2017
 ms.assetid: 78fc0a08-55de-416a-ac12-a5e6ffc9a987
-ms.openlocfilehash: c8716b7de5b9901683a5c111f66f14f26f7f9923
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
-ms.translationtype: HT
+ms.openlocfilehash: 9cb5676897255d11b502080f4f7f3fb897027917
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="ltbehaviorgt-of-ltservicebehaviorsgt"></a>&lt;serviceBehaviors&gt; &lt;davranışı&gt;
 `behavior` Öğesi içeren bir koleksiyon için bir hizmet davranışını ayarlar. Her davranış tarafından dizine kendi `name`. Hizmetleri kullanarak bu ad aracılığıyla her davranış bağlanması `behaviorConfiguration` özniteliği [ \<uç noktası >](../../../../../docs/framework/configure-apps/file-schema/wcf/endpoint-element.md) öğesi. Bu ayarları yeniden tanımlama olmadan davranışı yapılandırmaların paylaşmak uç noktaları sağlar. İle başlayarak [!INCLUDE[netfx40_short](../../../../../includes/netfx40-short-md.md)], bağlamalar ve davranışları olmayan bir adı olması için gereklidir. Varsayılan yapılandırma ve adsız bağlamalar ve davranışları hakkında daha fazla bilgi için bkz: [Basitleştirilmiş yapılandırma](../../../../../docs/framework/wcf/simplified-configuration.md) ve [WCF hizmetleri için Basitleştirilmiş yapılandırma](../../../../../docs/framework/wcf/samples/simplified-configuration-for-wcf-services.md).  
@@ -54,9 +54,9 @@ ms.lasthandoff: 05/03/2018
 |[\<serviceDiscovery >](../../../../../docs/framework/configure-apps/file-schema/wcf/servicediscovery.md)|Hizmet uç noktaları bulunabilirliğini belirtir.|  
 |[\<serviceMetadata >](../../../../../docs/framework/configure-apps/file-schema/wcf/servicemetadata.md)|Hizmet meta verilerini ve ilişkili bilgileri yayımlanmasını belirtir.|  
 |[\<serviceSecurityAudit >](../../../../../docs/framework/configure-apps/file-schema/wcf/servicesecurityaudit.md)|Hizmet işlemleri sırasında güvenlik olaylarının denetlenmesini etkinleştirme ayarlarını belirtir.|  
-|[\<serviceThrottling >](../../../../../docs/framework/configure-apps/file-schema/wcf/servicethrottling.md)|Azaltma mekanizmasını belirten bir [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)] hizmet.|  
+|[\<serviceThrottling >](../../../../../docs/framework/configure-apps/file-schema/wcf/servicethrottling.md)|Bir WCF Hizmeti azaltma mekanizmasını belirtir.|  
 |[\<serviceTimeouts >](../../../../../docs/framework/configure-apps/file-schema/wcf/servicetimeouts.md)|Bir hizmet için zaman aşımını belirtir.|  
-|[\<İş akışı workflowRuntime >](../../../../../docs/framework/configure-apps/file-schema/wcf/workflowruntime.md)|İş akışı tabanlı barındırmak için WorkflowRuntime örneği ayarlarını belirtir. [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)] Hizmetleri.|  
+|[\<İş akışı workflowRuntime >](../../../../../docs/framework/configure-apps/file-schema/wcf/workflowruntime.md)|İş akışı tabanlı WCF hizmetlerini barındırmak için WorkflowRuntime örneği ayarlarını belirtir.|  
 |[\<useRequestHeadersForMetadataAddress >](../../../../../docs/framework/configure-apps/file-schema/wcf/userequestheadersformetadataaddress.md)|Meta veri adresi istek iletisi üst bilgilerinden alınmasını sağlar.|  
   
 ### <a name="parent-elements"></a>Üst Öğeler  

@@ -1,29 +1,15 @@
 ---
 title: Bağımsız JSON Seri Hale Getirme
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 ms.assetid: 312bd7b2-1300-4b12-801e-ebe742bd2287
-caps.latest.revision: 32
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 4d3c7234c25b0a968ca67b58a560e8c8b55bb73d
-ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
+ms.openlocfilehash: 5a157dfd55e722b3e7be967a26e8d2ff5fd54afe
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/30/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="stand-alone-json-serialization"></a>Bağımsız JSON Seri Hale Getirme
-JSON (JavaScript nesne gösterimi) özellikle Web sayfalarında tarayıcı içinde çalışan JavaScript kodu tarafından kullanılmak üzere tasarlanmış bir veri biçimidir. Oluşturulan ASP.NET AJAX Hizmetleri tarafından kullanılan varsayılan veri biçimi olan [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)].  
+JSON (JavaScript nesne gösterimi) özellikle Web sayfalarında tarayıcı içinde çalışan JavaScript kodu tarafından kullanılmak üzere tasarlanmış bir veri biçimidir. Bu, Windows Communication Foundation (WCF) oluşturulan ASP.NET AJAX Hizmetleri tarafından kullanılan varsayılan veri biçimidir.  
   
  Bu biçim, ASP.NET ile - bu durumda, tümleştirme olmadan AJAX hizmetleri oluşturma XML varsayılandır ancak JSON seçilebilir olduğunda kullanılabilir.  
   
@@ -87,7 +73,7 @@ JSON (JavaScript nesne gösterimi) özellikle Web sayfalarında tarayıcı için
   
 -   Kullanan herhangi bir özelleştirme <xref:System.Runtime.Serialization.CollectionDataContractAttribute> JSON gösterimi göz ardı edilir.  
   
--   Sözlük doğrudan JSON ile çözmenin bir yolu değildir. Sözlük\<dize, Nesne > aynı yolla da desteklenmeyebilir [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] diğer JSON teknolojileriyle çalışmasını beklendiği gibi. Örneğin, "abc", "xyz" eşleştirilir ve "def" 42 sözlükteki eşlendiği, JSON temsili olmadığından {"abc": "xyz", "def": 42} ancak [{"Anahtarı": "Abc", "Değeri": "xyz"}, {"Anahtarı": "def", "Değeri": 42}] yerine.  
+-   Sözlük doğrudan JSON ile çözmenin bir yolu değildir. Sözlük\<dize, Nesne > WCF aynı yolla diğer JSON teknolojileriyle çalışmasını beklendiği gibi desteklenmiyor olabilir. Örneğin, "abc", "xyz" eşleştirilir ve "def" 42 sözlükteki eşlendiği, JSON temsili olmadığından {"abc": "xyz", "def": 42} ancak [{"Anahtarı": "Abc", "Değeri": "xyz"}, {"Anahtarı": "def", "Değeri": 42}] yerine.  
   
 -   JSON ile doğrudan çalışmak isterseniz (anahtarlar ve değerler dinamik olarak katı sözleşme önceden tanımlamadan erişme), birkaç seçeneğiniz vardır:  
   
@@ -108,7 +94,7 @@ JSON (JavaScript nesne gösterimi) özellikle Web sayfalarında tarayıcı için
  JSON türü seri durumdan çıkarma önceki tabloda eşleşmesi gerekmez. Örneğin, bir `Int` bu dizesi geçerli bir sayı içerdiği sürece normalde bir JSON sayı, ancak eşlenir de bir JSON dizeden başarıyla Serisi kaldırılan olabilir. Diğer bir deyişle, her ikisini de {"q": 42} ve {"q": "42"} varsa geçerli bir `Int` "q" adlı veri üyesi.  
   
 ### <a name="polymorphism"></a>Çok Biçimlilik  
- Çok biçimli serileştirme temel türü beklenirken türetilmiş bir tür serileştirme yeteneğini oluşur. Bu JSON serileştirmesi tarafından desteklenen [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] XML serileştirme karşılaştırılabilir şekilde desteklenir. Örneğin, serileştirebilen `MyDerivedType` nerede `MyBaseType` beklenen veya seri `Int` burada `Object` beklenir.  
+ Çok biçimli serileştirme temel türü beklenirken türetilmiş bir tür serileştirme yeteneğini oluşur. Bu JSON serileştirmesi için WCF XML serileştirme desteklenen şekilde karşılaştırılabilir desteklenir. Örneğin, serileştirebilen `MyDerivedType` nerede `MyBaseType` beklenen veya seri `Int` burada `Object` beklenir.  
   
  Tür bilgilerini temel türü bekleniyorsa, bir karmaşık türü seri durumdan çıkarılırken sürece türetilmiş bir tür çıkarılırken kaybolmuş olabilir. Örneğin, varsa <xref:System.Uri> burada serileştirilmiş <xref:System.Object> beklenmektedir bir JSON dizesinde sonuçlanır. Bu dize sonra uygulamasına geri serisi varsa <xref:System.Object>, bir .NET <xref:System.String> döndürülür. Seri durumdan çıkarıcının dize başlangıçta türü olduğunu bilmez <xref:System.Uri>. Genellikle, bekleniyor zaman <xref:System.Object>, tüm JSON dizeler .NET dize olarak serisi ve .NET koleksiyonları, sözcüklerine serileştirmek için kullanılan tüm JSON dizileri ve diziler .NET seri durumdan <xref:System.Array> türü <xref:System.Object>ne olursa olsun, ne Gerçek özgün türü eklenmiştir. Bir .NET JSON boolean eşlemeleri <xref:System.Boolean>. Ancak beklediği zaman bir <xref:System.Object>, JSON sayılar ya da .NET seri durumdan <xref:System.Int32>, <xref:System.Decimal> veya <xref:System.Double>, burada en uygun türü otomatik olarak çekilir.  
   
@@ -151,7 +137,7 @@ http://example.com/myservice.svc/MyOperation?number=7&p={"name":"John","age":42}
   
  ASP.NET AJAX istemci JavaScript kodu gibi dizeleri JavaScript ile otomatik olarak dönüştürür. `DateTime` örnekleri. Türünde olmayan bir benzer bir form olan diğer dizeleri varsa <xref:System.DateTime> .NET, bunlar da dönüştürülür.  
   
- Yalnızca gerçekleşir "/" karakterler atlanır varsa dönüştürme (JSON benzer diğer bir deyişle, "\\/Date(700000+0500)\\/") ve bu nedenle [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]'s JSON Kodlayıcısı (tarafından etkinleştirilen <xref:System.ServiceModel.WebHttpBinding>) her zaman çıkışları "/" karakter.  
+ Yalnızca gerçekleşir "/" karakterler atlanır varsa dönüştürme (JSON benzer diğer bir deyişle, "\\/Date(700000+0500)\\/") ve bu nedenle WCF'ın JSON Kodlayıcısı için (tarafından etkinleştirilen <xref:System.ServiceModel.WebHttpBinding>) her zaman "/" karakter çıkışları.  
   
 ### <a name="xml-in-json-strings"></a>JSON dizeler XML'de  
   
@@ -209,7 +195,7 @@ http://example.com/myservice.svc/MyOperation?number=7&p={"name":"John","age":42}
 {"x":50,"y":70,"radius":10,"__type":"Circle:#MyApp.Shapes"}  
 ```  
   
- Her iki <xref:System.Runtime.Serialization.Json.DataContractJsonSerializer> tarafından kullanılan [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] ve ASP.NET AJAX istemci sayfaları her zaman yayma türü ipucu ilk.  
+ Her iki <xref:System.Runtime.Serialization.Json.DataContractJsonSerializer> WCF ve ASP.NET AJAX tarafından kullanılan istemci sayfaları her zaman türü ipucu ilk yayma.  
   
 #### <a name="type-hints-apply-only-to-complex-types"></a>Türü ipuçları yalnızca karmaşık türleri için geçerlidir  
  Karmaşık olmayan türleri için tür ipucu yaymak üzere yolu yoktur. Örneğin, bir işlem varsa bir <xref:System.Object> bir daire dönüş türü döndürür ancak, daha önce gösterildiği gibi JSON gösterimi olabilir ve tür bilgileri korunur. Ancak, URI döndürülürse, JSON temsili bir dize ve bir URI temsil etmek için kullanılan dize kaybolur olgu gerekir. Bu, yalnızca ilkel türler için aynı zamanda koleksiyonlar ve diziler için geçerlidir.  

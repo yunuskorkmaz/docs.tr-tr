@@ -1,31 +1,19 @@
 ---
-title: "GDI+ Yönetilen Kodu Hakkında"
-ms.custom: 
+title: GDI+ Yönetilen Kodu Hakkında
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-winforms
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - GDI+, about GDI+
 - GDI+
 - graphics [Windows Forms], GDI+
 ms.assetid: a98a76ab-e455-49c9-891c-0491ac932f2c
-caps.latest.revision: "21"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 817f90194d73bf6608cccde0ce3917717d0b4878
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 913654b98eb8bf72fe43b744886a28e0f675a5c4
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="about-gdi-managed-code"></a>GDI+ Yönetilen Kodu Hakkında
-[!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)]iki boyutlu vektör grafikleri, görüntüleme ve tipografi sağlayan Windows işletim sistemi bölümüdür. [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)]artırır [!INCLUDE[ndptecgdi](../../../../includes/ndptecgdi-md.md)] (grafik cihaz önceki Windows sürümlerinde bulunan arabirimi) yeni özellikler ekleyerek ve var olan özellikleri en iyi duruma getirme.  
+[!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] iki boyutlu vektör grafikleri, görüntüleme ve tipografi sağlayan Windows işletim sistemi bölümüdür. [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] artırır [!INCLUDE[ndptecgdi](../../../../includes/ndptecgdi-md.md)] (grafik cihaz önceki Windows sürümlerinde bulunan arabirimi) yeni özellikler ekleyerek ve var olan özellikleri en iyi duruma getirme.  
   
  [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] Yönetilen sınıf arabirimi (sarmalayıcılar kümesi) parçasıdır [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)], oluşturmak, dağıtmak ve XML Web Hizmetleri ve diğer uygulamaları çalıştırmak için bir ortam.  
   

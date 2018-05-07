@@ -1,22 +1,12 @@
 ---
-title: "Örnek XML dosyası: Bir Namespace1 sayısal verileri"
-ms.custom: 
+title: 'Örnek XML dosyası: Bir Namespace1 sayısal verileri'
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: f01cc0a1-fb55-4b42-8380-16f4be47d6f4
-caps.latest.revision: "3"
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: 8baded2fc58d9ad285623edfe13f2ddaebc1501b
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.openlocfilehash: 71ff5229d4f2342880bdf50f288355a676b78722
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="sample-xml-file-numerical-data-in-a-namespace"></a>Örnek XML dosyası: Bir Namespace sayısal verileri
 Aşağıdaki XML dosyasını çeşitli örneklerde kullanılan [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] belgeleri. Bu dosya, toplama, ortalama ve gruplandırma sayısal verileri içerir. XML ad alanında ' dir.  
@@ -65,4 +55,4 @@ Aşağıdaki XML dosyasını çeşitli örneklerde kullanılan [!INCLUDE[sqltecx
 ```  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [Örnek XML belgeleri (LINQ-XML)](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-documents-linq-to-xml.md)
+ [Örnek XML Belgeleri (LINQ to XML)](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-documents-linq-to-xml.md)

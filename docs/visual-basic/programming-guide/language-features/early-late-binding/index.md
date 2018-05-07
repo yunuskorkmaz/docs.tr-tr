@@ -1,13 +1,6 @@
 ---
 title: Erken ve Geç Bağlama (Visual Basic)
-ms.custom: ''
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- devlang-visual-basic
-ms.topic: article
 helpviewer_keywords:
 - early binding [Visual Basic]
 - objects [Visual Basic], late-bound
@@ -20,14 +13,11 @@ helpviewer_keywords:
 - late binding [Visual Basic]
 - late binding [Visual Basic], Visual Basic compiler
 ms.assetid: d6ff7f1e-b94f-4205-ab8d-5cfa91758724
-caps.latest.revision: 10
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: fa63a250ce6bdf4a8a34d9f1c0284a9d04e75f38
-ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
+ms.openlocfilehash: 8426899b0c0d3649f47cbd6ad5383dd3c95b9499
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/27/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="early-and-late-binding-visual-basic"></a>Erken ve Geç Bağlama (Visual Basic)
 Visual Basic derleyici adlı bir işlem gerçekleştirir `binding` bir nesne bir nesne değişkenine atanan zaman. Bir nesne *erken bağlama* bildirilen belirli nesne türünde olması için ne zaman bir değişkene atanır. Erken bağlama nesnelerine bellek ayırabilir ve bir uygulama yürütülmeden önce diğer en iyi duruma getirme gerçekleştirmek derleyici izin verin. Örneğin, aşağıdaki kod parçası türünde olması için bir değişken bildirir <xref:System.IO.FileStream>:  

@@ -1,27 +1,15 @@
 ---
-title: "Multimedyaya Genel Bakış"
-ms.custom: 
+title: Multimedyaya Genel Bakış
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-wpf
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - multimedia [WPF]
 - media [WPF]
 ms.assetid: feb25b15-d741-4ac3-818f-1b19f63a3562
-caps.latest.revision: "19"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 65553e18fc66825c9c0a991aba600b4b90d0d4c0
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 7a986125cff1ff4812528212fa3aee7689af1f16
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="multimedia-overview"></a>Multimedyaya Genel Bakış
 Multimedya özellikleri [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] ses ve video kullanıcı deneyimini geliştirmek için uygulamalarınıza tümleştirmenize olanak sağlar. Bu konu multimedya özelliklerini tanıtır [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)].  
@@ -32,7 +20,7 @@ Multimedya özellikleri [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasha
 ## <a name="media-api"></a>Ortam API  
  <xref:System.Windows.Controls.MediaElement> Ve <xref:System.Windows.Media.MediaPlayer> sınıfları, ses veya video içeriği sunmak için kullanılır. Bu sınıfları, etkileşimli olarak veya bir saat ile denetlenebilir. Bu sınıfların kullanabilirsiniz [!INCLUDE[TLA#tla_wmp](../../../../includes/tlasharptla-wmp-md.md)] medya kayıttan yürütme için 10 denetimi. Kullandığınız, hangi sınıfın senaryoya bağlıdır.  
   
- <xref:System.Windows.Controls.MediaElement>olan bir <xref:System.Windows.UIElement> tarafından desteklenen [düzeni](../../../../docs/framework/wpf/advanced/layout.md) ve birçok denetimleri içeriği olarak tüketilebilir. Ayrıca kullanılabilir [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)] yanı sıra kodu. <xref:System.Windows.Media.MediaPlayer>, diğer yandan için tasarlanmış <xref:System.Windows.Media.Drawing> nesneleri ve düzen desteğini azaltır. Kullanılarak yüklenen ortam bir <xref:System.Windows.Media.MediaPlayer> kullanarak yalnızca sunulabilen bir <xref:System.Windows.Media.VideoDrawing> veya doğrudan etkileşimde bir <xref:System.Windows.Media.DrawingContext>. <xref:System.Windows.Media.MediaPlayer>XAML'de kullanılamaz.  
+ <xref:System.Windows.Controls.MediaElement> olan bir <xref:System.Windows.UIElement> tarafından desteklenen [düzeni](../../../../docs/framework/wpf/advanced/layout.md) ve birçok denetimleri içeriği olarak tüketilebilir. Ayrıca kullanılabilir [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)] yanı sıra kodu. <xref:System.Windows.Media.MediaPlayer>, diğer yandan için tasarlanmış <xref:System.Windows.Media.Drawing> nesneleri ve düzen desteğini azaltır. Kullanılarak yüklenen ortam bir <xref:System.Windows.Media.MediaPlayer> kullanarak yalnızca sunulabilen bir <xref:System.Windows.Media.VideoDrawing> veya doğrudan etkileşimde bir <xref:System.Windows.Media.DrawingContext>. <xref:System.Windows.Media.MediaPlayer> XAML'de kullanılamaz.  
   
  Çizim nesneleri ve içeriği çizim hakkında daha fazla bilgi için bkz: [çizim nesnelere genel bakış](../../../../docs/framework/wpf/graphics-multimedia/drawing-objects-overview.md).  
   
@@ -88,7 +76,7 @@ Multimedya özellikleri [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasha
 ### <a name="controlling-a-mediaelement"></a>MediaElement'i denetleme  
  <xref:System.Windows.Controls.MediaElement.LoadedBehavior%2A> Ve <xref:System.Windows.Controls.MediaElement.UnloadedBehavior%2A> davranışını denetim özelliklerini <xref:System.Windows.Controls.MediaElement> zaman <xref:System.Windows.FrameworkElement.IsLoaded%2A> olan `true` veya `false`sırasıyla. <xref:System.Windows.Controls.MediaState> Özellikleri ortam kayıttan yürütme davranışını etkilemek için ayarlanır. Örneğin, varsayılan <xref:System.Windows.Controls.MediaElement.LoadedBehavior%2A> olan <xref:System.Windows.Controls.MediaState.Play> ve varsayılan <xref:System.Windows.Controls.MediaElement.UnloadedBehavior%2A> olan <xref:System.Windows.Controls.MediaState.Close>. Bunun anlamı hemen <xref:System.Windows.Controls.MediaElement> yüklenir ve önceden döndürülecek tamamlandığında, medya yürütülür. Kayıttan yürütme tamamlandığında ortam kapatılır ve tüm ortam kaynakları serbest bırakılır.  
   
- <xref:System.Windows.Controls.MediaElement.LoadedBehavior%2A> Ve <xref:System.Windows.Controls.MediaElement.UnloadedBehavior%2A> özellikleri medya kayıttan yürütmeyi denetlemek için tek yolu değil. Saat modunda saatini kontrol edebilirsiniz <xref:System.Windows.Controls.MediaElement> ve etkileşimli denetim yöntemleri sahip denetim <xref:System.Windows.Controls.MediaElement.LoadedBehavior%2A> olan <xref:System.Windows.Controls.MediaState.Manual>. <xref:System.Windows.Controls.MediaElement>aşağıdaki öncelikleri değerlendirerek denetim için bu rekabeti işler.  
+ <xref:System.Windows.Controls.MediaElement.LoadedBehavior%2A> Ve <xref:System.Windows.Controls.MediaElement.UnloadedBehavior%2A> özellikleri medya kayıttan yürütmeyi denetlemek için tek yolu değil. Saat modunda saatini kontrol edebilirsiniz <xref:System.Windows.Controls.MediaElement> ve etkileşimli denetim yöntemleri sahip denetim <xref:System.Windows.Controls.MediaElement.LoadedBehavior%2A> olan <xref:System.Windows.Controls.MediaState.Manual>. <xref:System.Windows.Controls.MediaElement> aşağıdaki öncelikleri değerlendirerek denetim için bu rekabeti işler.  
   
 1.  <xref:System.Windows.Controls.MediaElement.UnloadedBehavior%2A>. Ortam kaldırıldığında yerinde. Bu varsayılan olarak, tüm ortam kaynakları yayımlanan sağlar bile bir <xref:System.Windows.Media.MediaClock> ile ilişkili <xref:System.Windows.Controls.MediaElement>.  
   
@@ -107,7 +95,7 @@ Multimedya özellikleri [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasha
   
 <a name="mediaplayer"></a>   
 ## <a name="mediaplayer-class"></a>MediaPlayer sınıfı  
- Oysa <xref:System.Windows.Controls.MediaElement> sınıftır framework öğesi <xref:System.Windows.Media.MediaPlayer> sınıfı kullanılmak üzere tasarlanmıştır <xref:System.Windows.Media.Drawing> nesneleri. Çizim nesneleri kullanılan çerçeve düzeyi özelliklerinin performans avantajı kazanması için feda veya ne zaman gereksinim duyduğunuz <xref:System.Windows.Freezable> özellikleri. <xref:System.Windows.Media.MediaPlayer>medya içeriği uygulamalarınızda sağlarken bu özelliklerden yararlanmak etkinleştirir. Gibi <xref:System.Windows.Controls.MediaElement>, <xref:System.Windows.Media.MediaPlayer> mod ancak mu saat değil veya bağımsız kullanılabilir sahip <xref:System.Windows.Controls.MediaElement> nesne kaldırıldı ve yüklenen durumları. Bu in kayıttan çalma karmaşıklığını azaltır <xref:System.Windows.Media.MediaPlayer>.  
+ Oysa <xref:System.Windows.Controls.MediaElement> sınıftır framework öğesi <xref:System.Windows.Media.MediaPlayer> sınıfı kullanılmak üzere tasarlanmıştır <xref:System.Windows.Media.Drawing> nesneleri. Çizim nesneleri kullanılan çerçeve düzeyi özelliklerinin performans avantajı kazanması için feda veya ne zaman gereksinim duyduğunuz <xref:System.Windows.Freezable> özellikleri. <xref:System.Windows.Media.MediaPlayer> medya içeriği uygulamalarınızda sağlarken bu özelliklerden yararlanmak etkinleştirir. Gibi <xref:System.Windows.Controls.MediaElement>, <xref:System.Windows.Media.MediaPlayer> mod ancak mu saat değil veya bağımsız kullanılabilir sahip <xref:System.Windows.Controls.MediaElement> nesne kaldırıldı ve yüklenen durumları. Bu in kayıttan çalma karmaşıklığını azaltır <xref:System.Windows.Media.MediaPlayer>.  
   
 ### <a name="controlling-mediaplayer"></a>MediaPlayer denetleme  
  Çünkü <xref:System.Windows.Media.MediaPlayer> olduğu durum bilgisiz, yalnızca iki yolu vardır medya kayıttan yürütmeyi denetlemek için.  

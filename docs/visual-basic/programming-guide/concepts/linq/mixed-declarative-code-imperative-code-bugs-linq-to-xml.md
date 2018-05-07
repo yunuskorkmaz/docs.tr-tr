@@ -1,25 +1,15 @@
 ---
-title: "Bildirim temelli kod kesinliği kod hataları (LINQ-XML) karma (Visual Basic)"
-ms.custom: 
+title: Bildirim temelli kod kesinliği kod hataları (LINQ-XML) karma (Visual Basic)
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: f12b1ab4-bb92-4b92-a648-0525e45b3ce7
-caps.latest.revision: "3"
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: 2d5d50b5444a9aca429eb5ddb682cd23c468a1e3
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.openlocfilehash: 797866514a2f290a98d1a75e92f850e96d28dabd
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="mixed-declarative-codeimperative-code-bugs-linq-to-xml-visual-basic"></a>Bildirim temelli kod/kesinliği kod hataları (LINQ-XML) karma (Visual Basic)
-[!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)]bir XML ağacı doğrudan değiştirmenize izin çeşitli yöntemler içerir. Öğeler ekleme, öğeleri silin, bir öğenin içeriğini değiştirme, öznitelikler eklemek ve benzeri. Bu programlama arabirimi açıklanan [XML ağaçlarını değiştirme (LINQ-XML) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/modifying-xml-trees-linq-to-xml.md). Eksenleri, biri aracılığıyla gibi yineleme varsa <xref:System.Xml.Linq.XContainer.Elements%2A>ve eksen yineleme olarak XML ağaç değiştiriyorsunuz, bazı garip hatalarla düşebilir.  
+[!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] bir XML ağacı doğrudan değiştirmenize izin çeşitli yöntemler içerir. Öğeler ekleme, öğeleri silin, bir öğenin içeriğini değiştirme, öznitelikler eklemek ve benzeri. Bu programlama arabirimi açıklanan [XML ağaçlarını değiştirme (LINQ-XML) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/modifying-xml-trees-linq-to-xml.md). Eksenleri, biri aracılığıyla gibi yineleme varsa <xref:System.Xml.Linq.XContainer.Elements%2A>ve eksen yineleme olarak XML ağaç değiştiriyorsunuz, bazı garip hatalarla düşebilir.  
   
  Bu sorun, bazen "Cadılar sorunun" adı verilir.  
   

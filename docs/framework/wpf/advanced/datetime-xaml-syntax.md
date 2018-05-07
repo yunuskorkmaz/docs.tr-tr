@@ -1,13 +1,6 @@
 ---
-title: "DateTime XAML Sözdizimi"
-ms.custom: 
+title: DateTime XAML Sözdizimi
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-wpf
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - DateTime XAML syntax [WPF], strings for
 - DateTime XAML syntax [WPF], where used
@@ -16,16 +9,11 @@ helpviewer_keywords:
 - DateTime XAML text [WPF]
 - DateTime XAML syntax [WPF], format strings for
 ms.assetid: 5901710a-609b-40c8-9d65-f0016cd9090b
-caps.latest.revision: "10"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: f3010d3123e78a5e292c5ac78ef4894962fb8f9d
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 286117cc0cce9fb54ea2c372360b13865fba77ad
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="datetime-xaml-syntax"></a>DateTime XAML Sözdizimi
 Gibi bazı denetimleri <xref:System.Windows.Controls.Calendar> ve <xref:System.Windows.Controls.DatePicker>, kullanın özelliklere sahip <xref:System.DateTime> türü. Genellikle bir ilk tarih veya saat bu denetimleri için arka plan kodu çalışma zamanında belirttiğiniz karşın, bir başlangıç tarih veya saat XAML'de belirtebilirsiniz. WPF XAML ayrıştırıcısı ayrıştırılmasını işler <xref:System.DateTime> değerlerini yerleşik XAML metin sözdizimini kullanarak. Bu konuda, özelliklerini açıklanmaktadır <xref:System.DateTime> XAML metin sözdizimi.  
@@ -36,11 +24,11 @@ Gibi bazı denetimleri <xref:System.Windows.Controls.Calendar> ve <xref:System.W
  XAML'de tarihleri ayarlamak her zaman gerekli değildir ve hatta tercih edilebilir değil. Örneğin, kullanabilirsiniz <xref:System.DateTime.Now%2A?displayProperty=nameWithType> çalıştırma veya bir tarihte başlatmak için özellik yapmak tüm tarih ayarlamaları Takvim kullanıcı girişini temel alarak arka plan kod içinde. Ancak, burada isteyebilirsiniz kod sabit tarihler senaryolar vardır bir <xref:System.Windows.Controls.Calendar> ve <xref:System.Windows.Controls.DatePicker> bir denetim şablonu içinde. <xref:System.DateTime> XAML sözdizimi bu senaryoları için kullanılmalıdır.  
   
 ### <a name="datetime-xaml-syntax-is-a-native-behavior"></a>DateTime XAML sözdizimi yerel bir davranıştır  
- <xref:System.DateTime>CLR temel sınıf kitaplıklarında tanımlı bir sınıftır. Taban sınıf kitaplıkları CLR geri kalanı için ne ilişkili nedeniyle, bu uygulamak mümkün değildir <xref:System.ComponentModel.TypeConverterAttribute> sınıfı ve kullanımına XAML dizelerden işlemek ve bunlara dönüştürmek için tür dönüştürücüsünü <xref:System.DateTime> çalışma zamanı nesne modeli. Yoktur hiçbir `DateTimeConverter` sınıfı dönüştürme davranış sağlar; bu konuda açıklanan dönüştürme WPF XAML ayrıştırıcısı yerel bir davranıştır.  
+ <xref:System.DateTime> CLR temel sınıf kitaplıklarında tanımlı bir sınıftır. Taban sınıf kitaplıkları CLR geri kalanı için ne ilişkili nedeniyle, bu uygulamak mümkün değildir <xref:System.ComponentModel.TypeConverterAttribute> sınıfı ve kullanımına XAML dizelerden işlemek ve bunlara dönüştürmek için tür dönüştürücüsünü <xref:System.DateTime> çalışma zamanı nesne modeli. Yoktur hiçbir `DateTimeConverter` sınıfı dönüştürme davranış sağlar; bu konuda açıklanan dönüştürme WPF XAML ayrıştırıcısı yerel bir davranıştır.  
   
 <a name="format_strings_for_datetime_xaml_syntax"></a>   
 ## <a name="format-strings-for-datetime-xaml-syntax"></a>DateTime XAML için biçim dizeleri  
- Biçimi belirtebilirsiniz bir <xref:System.DateTime> ile bir biçim dizesi. Biçim dizeleri bir değer oluşturmak için kullanılan metin sözdizimini resmileştirin. <xref:System.DateTime>tarih bileşenlerini genellikle yalnızca varolan WPF denetimleri için değerleri <xref:System.DateTime> ve zaman bileşenlerini değil.  
+ Biçimi belirtebilirsiniz bir <xref:System.DateTime> ile bir biçim dizesi. Biçim dizeleri bir değer oluşturmak için kullanılan metin sözdizimini resmileştirin. <xref:System.DateTime> tarih bileşenlerini genellikle yalnızca varolan WPF denetimleri için değerleri <xref:System.DateTime> ve zaman bileşenlerini değil.  
   
  Belirtirken bir <xref:System.DateTime> XAML içinde herhangi bir biçim dizeleri birbirinin yerine kullanabilirsiniz.  
   

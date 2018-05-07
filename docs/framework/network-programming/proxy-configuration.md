@@ -1,12 +1,6 @@
 ---
-title: "Proxy yapılandırması"
-ms.custom: 
+title: Proxy yapılandırması
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - Networking
 - adaptive proxies
@@ -17,16 +11,14 @@ helpviewer_keywords:
 - network, proxy configuration
 - proxies, configuring
 ms.assetid: 353c0a8b-4cee-44f6-8e65-60e286743df9
-caps.latest.revision: "14"
 author: mcleblanc
 ms.author: markl
 manager: markl
-ms.workload: dotnet
-ms.openlocfilehash: 41f7cfe76acfb4b6bbf66207685935c190a51901
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 41e1dcee90531de605b6bddc1eedc1c44235d8eb
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="proxy-configuration"></a>Proxy yapılandırması
 Bir proxy sunucu kaynakları için istemci isteklerini işler. Bir proxy, istenen kaynak, önbellekten döndürür veya kaynağının bulunduğu sunucu isteği iletin. Proxy'leri uzak sunuculara gönderilen isteklerin sayısını azaltarak ağ performansını iyileştirebilir. Proxy'leri kaynaklara erişimi kısıtlamak için de kullanılabilir.  
@@ -54,7 +46,7 @@ Bir proxy sunucu kaynakları için istemci isteklerini işler. Bir proxy, istene
 |--------------------------------------------------------|-----------------|  
 |`scriptDownloadInterval`|Komut dosyası indirmeler arasındaki saniye cinsinden geçen süre.|  
 |`scriptDownloadTimeout`|(Saniye cinsinden) indirmek komut dosyası için beklenecek süre.|  
-|`useDefaultCredentials`veya<xref:System.Net.WebProxy.UseDefaultCredentials>|Sistem bir proxy sunucusuna erişmek için varsayılan ağ kimlik bilgilerini kullanıp kullanmadığını denetler.|  
+|`useDefaultCredentials` Veya <xref:System.Net.WebProxy.UseDefaultCredentials>|Sistem bir proxy sunucusuna erişmek için varsayılan ağ kimlik bilgilerini kullanıp kullanmadığını denetler.|  
 |`useDefaultCredentialForScriptDownload`|Sistem yapılandırma komut dosyasını indirmek için varsayılan ağ kimlik bilgilerini kullanıp kullanmadığını denetler.|  
 |`usesystemdefaults`|(Proxy adresi atlama listesine ve yerel atlama) statik proxy ayarlarını gerekip gerekmediğini kullanıcı için Internet Explorer proxy ayarlarını okunmasına denetler. Bu değer "true", sonra statik proxy ayarlarını Internet Explorer'dan ayarlanmışsa kullanılır.<br /><br /> Bu değer ise "false" veya değil kümesi ve statik proxy ayarlarını yapılandırmada belirtilen ve Internet Explorer proxy ayarları geçersiz kılar. Bu değer ayrıca "false" veya etkinleştirilecek Uyarlamalı proxy'leri için ayarlanmadı ayarlanması gerekir.|  
   
@@ -87,9 +79,9 @@ Bir proxy sunucu kaynakları için istemci isteklerini işler. Bir proxy, istene
   
 |Öznitelik, özellik veya yapılandırma dosyası ayarı|Açıklama|  
 |--------------------------------------------------------|-----------------|  
-|`proxyaddress`veya<xref:System.Net.WebProxy.Address>|Kullanılacak proxy adresi.|  
-|`bypassonlocal`veya<xref:System.Net.WebProxy.BypassProxyOnLocal>|Yerel adresler için proxy atlanır olup olmadığını denetler.|  
-|`bypasslist`veya<xref:System.Net.WebProxy.BypassArrayList>|, Normal ifadelerle bir proxy atlama adresi açıklar.|  
+|`proxyaddress` Veya <xref:System.Net.WebProxy.Address>|Kullanılacak proxy adresi.|  
+|`bypassonlocal` Veya <xref:System.Net.WebProxy.BypassProxyOnLocal>|Yerel adresler için proxy atlanır olup olmadığını denetler.|  
+|`bypasslist` Veya <xref:System.Net.WebProxy.BypassArrayList>|, Normal ifadelerle bir proxy atlama adresi açıklar.|  
 |`usesystemdefaults`|(Proxy adresi atlama listesine ve yerel atlama) statik proxy ayarlarını gerekip gerekmediğini kullanıcı için Internet Explorer proxy ayarlarını okunmasına denetler. Bu değer "true", sonra statik proxy ayarlarını Internet Explorer'dan ayarlanmışsa kullanılır. .NET Framework bu değer "true", Internet Explorer proxy ayarları diğer proxy ayarlarını yapılandırma dosyasındaki tarafından geçersiz kılınmaz ayarlandığında 2.0. .NET Framework 1.1, Internet Explorer proxy ayarlarını diğer proxy ayarlarını yapılandırma dosyasında geçersiz kılınabilir.<br /><br /> Bu değer ise "false" veya değil kümesi ve statik proxy ayarlarını yapılandırmada belirtilen ve Internet Explorer proxy ayarları geçersiz kılar. Bu değer ayrıca "false" veya etkinleştirilecek Uyarlamalı proxy'leri için ayarlanmadı ayarlanması gerekir.|  
   
  Aşağıdaki örnek bir genel statik proxy yapılandırmasını gösterir.  

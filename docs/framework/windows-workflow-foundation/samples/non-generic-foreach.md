@@ -1,28 +1,17 @@
 ---
 title: Genel olmayan ForEach
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 576cd07a-d58d-4536-b514-77bad60bff38
-caps.latest.revision: "12"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 090aeda13081dc87b37cf0a18955cbd239720870
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: c67f6e3c3afb893f7bb5713d64ce2f119eebc157
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="non-generic-foreach"></a>Genel olmayan ForEach
-[!INCLUDE[netfx_current_long](../../../../includes/netfx-current-long-md.md)]kendi araç kutusunda etkinlikleri, akış denetimi dahil olmak üzere bir dizi gelir <xref:System.Activities.Statements.ForEach%601>, böylece üzerinden yineleme <!--zz <xref:System.Collections.IEnumerable%601> --> `System.Collections.IEnumerable` koleksiyonları.  
+[!INCLUDE[netfx_current_long](../../../../includes/netfx-current-long-md.md)] kendi araç kutusunda etkinlikleri, akış denetimi dahil olmak üzere bir dizi gelir <xref:System.Activities.Statements.ForEach%601>, böylece üzerinden yineleme <!--zz <xref:System.Collections.IEnumerable%601> --> `System.Collections.IEnumerable` koleksiyonları.  
   
- <xref:System.Activities.Statements.ForEach%601>gerektirir, <xref:System.Activities.Statements.ForEach%601.Values%2A> türünde olması özelliği <!--zz <xref:System.Collections.IEnumerable%601> --> `System.Collections.IEnumerable`. Bu uygulama veri yapıları yineleme kullanıcılar önleyen <!--zz <xref:System.Collections.IEnumerable%601> --> `System.Collections.IEnumerable` arabirimi (örneğin, <xref:System.Collections.ArrayList>). Genel olmayan sürümü <xref:System.Activities.Statements.ForEach%601> koleksiyondaki değerlerin türleri uyumluluğu sağlamaya yönelik daha fazla çalışma zamanı karmaşıklık ödün verme pahasına bu gereksinimi ortadan kaldırır.  
+ <xref:System.Activities.Statements.ForEach%601> gerektirir, <xref:System.Activities.Statements.ForEach%601.Values%2A> türünde olması özelliği <!--zz <xref:System.Collections.IEnumerable%601> --> `System.Collections.IEnumerable`. Bu uygulama veri yapıları yineleme kullanıcılar önleyen <!--zz <xref:System.Collections.IEnumerable%601> --> `System.Collections.IEnumerable` arabirimi (örneğin, <xref:System.Collections.ArrayList>). Genel olmayan sürümü <xref:System.Activities.Statements.ForEach%601> koleksiyondaki değerlerin türleri uyumluluğu sağlamaya yönelik daha fazla çalışma zamanı karmaşıklık ödün verme pahasına bu gereksinimi ortadan kaldırır.  
   
  Bu örnek, genel olmayan uygulamak gösterilmiştir <xref:System.Activities.Statements.ForEach%601> etkinliği ve onun Tasarımcısı. Bu etkinlik yinelemek için kullanılabilecek <xref:System.Collections.ArrayList>.  
   
@@ -79,7 +68,7 @@ Activity sampleUsage =
   
 |Koşul|İleti|Önem Derecesi|Özel durum türü|  
 |---------------|-------------|--------------|--------------------|  
-|Değerler`null`|Gerekli etkinlik bağımsız değişkeni 'Değerleri' için değer girilmedi.|Hata|<xref:System.InvalidOperationException>|  
+|Değerler `null`|Gerekli etkinlik bağımsız değişkeni 'Değerleri' için değer girilmedi.|Hata|<xref:System.InvalidOperationException>|  
   
 ## <a name="foreach-designer"></a>ForEach Tasarımcısı  
  Örnek etkinlik Tasarımcısı için yerleşik sağlanan Tasarımcısı görünümüne benzer <xref:System.Activities.Statements.ForEach%601> etkinlik. Araç kutusunda Tasarımcı görünür **örnekleri**, **olmayan genel etkinlikleri** kategorisi. Tasarımcı adlı **ForEachWithBodyFactory** araç kutusunda etkinlik sunan çünkü bir <xref:System.Activities.Presentation.IActivityTemplateFactory> araç kutusunda oluşturan etkinliğin bir düzgün yapılandırılmış <xref:System.Activities.ActivityAction>.  
@@ -118,6 +107,6 @@ public sealed class ForEachWithBodyFactory : IActivityTemplateFactory
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  Bu dizin mevcut değilse, Git [Windows Communication Foundation (WCF) ve .NET Framework 4 için Windows Workflow Foundation (WF) örnek](http://go.microsoft.com/fwlink/?LinkId=150780) tüm indirmek için [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] ve [!INCLUDE[wf1](../../../../includes/wf1-md.md)] örnekleri. Bu örnek aşağıdaki dizinde bulunur.  
+>  Bu dizin mevcut değilse, Git [Windows Communication Foundation (WCF) ve .NET Framework 4 için Windows Workflow Foundation (WF) örnek](http://go.microsoft.com/fwlink/?LinkId=150780) tüm Windows Communication Foundation (WCF) indirmek için ve [!INCLUDE[wf1](../../../../includes/wf1-md.md)] örnekleri. Bu örnek aşağıdaki dizinde bulunur.  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WF\Scenario\ActivityLibrary\NonGenericForEach`

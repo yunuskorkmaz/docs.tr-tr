@@ -1,28 +1,16 @@
 ---
-title: "x:Shared Özniteliği"
-ms.custom: 
+title: x:Shared Özniteliği
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-wpf
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - XAML [XAML Services], x:Shared attribute
 - x:Shared attribute [XAML Services]
 - Shared attribute in XAML [XAML Services]
 ms.assetid: c8cff434-2785-405f-9f95-16deb34c9e64
-caps.latest.revision: "16"
-author: wadepickett
-ms.author: wpickett
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: c9cc5e2bff9cc2591c7a12630da5422dbf73713a
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: bee37735382249d2919ef870ca495e6096532352
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="xshared-attribute"></a>x:Shared Özniteliği
 Ayarlandığında `false`, böylece istekleri öznitelikli kaynak için tüm istekler için aynı örneği paylaşmak yerine her istek için yeni bir örnek oluşturmak WPF kaynak alma davranışını değiştirir.  
@@ -36,7 +24,7 @@ Ayarlandığında `false`, böylece istekleri öznitelikli kaynak için tüm ist
 ```  
   
 ## <a name="remarks"></a>Açıklamalar  
- `x:Shared`XAML dil XAML ad alanına eşlenir ve geçerli bir XAML dil öğesi .NET Framework XAML hizmetlerinde ve XAML okuyucuları tarafından tanınmıyor. Ancak, belirtilen özellikleri `x:Shared` yalnızca WPF XAML ayrıştırıcısı ve WPF uygulamalar için uygundur. WPF, `x:Shared` WPF içinde bulunan bir nesnenin uygulandığında yalnızca bir özniteliği olarak yararlıdır <xref:System.Windows.ResourceDictionary>. Diğer kullanımlar ayrıştırma özel durumları veya diğer hatalar throw değil, ancak herhangi bir etkisi yoktur.  
+ `x:Shared` XAML dil XAML ad alanına eşlenir ve geçerli bir XAML dil öğesi .NET Framework XAML hizmetlerinde ve XAML okuyucuları tarafından tanınmıyor. Ancak, belirtilen özellikleri `x:Shared` yalnızca WPF XAML ayrıştırıcısı ve WPF uygulamalar için uygundur. WPF, `x:Shared` WPF içinde bulunan bir nesnenin uygulandığında yalnızca bir özniteliği olarak yararlıdır <xref:System.Windows.ResourceDictionary>. Diğer kullanımlar ayrıştırma özel durumları veya diğer hatalar throw değil, ancak herhangi bir etkisi yoktur.  
   
  Anlamını `x:Shared` XAML dil belirtimi belirtilmedi. .NET Framework XAML hizmetlerinde yapı olanlar gibi diğer XAML uygulamaları kaynak paylaşma destek sağlamaz. Bu tür XAML uygulamaları da kullanılan destekleyen Framework'te benzer Davranış sağlayabilir `x:Shared` değerleri.  
   
@@ -48,7 +36,7 @@ Ayarlandığında `false`, böylece istekleri öznitelikli kaynak için tüm ist
   
  Açıkça belirtilmesi `x:Shared="true"` , varsayılan zaten olduğundan nadiren, yapılır. Doğrudan kod için eşdeğer `x:Shared` WPF içinde nesne modeli; yalnızca bir XAML kullanımı belirtilebilir ve varsayılan WPF davranışı tarafından veya bir ara XAML düğümü akışı yükleme yolunda .NET Framework XAML Se kullanarak işlenen işlenmesi gerekir rvices ve XAML okuyucuları.  
   
- Bir senaryo için `x:Shared="false"` tanımlarsanız, olan bir <xref:System.Windows.FrameworkElement> veya <xref:System.Windows.FrameworkContentElement> türetilmiş sınıf kaynak olarak ve ardından içerik modeline öğesi kaynak tanıtır. `x:Shared="false"`birden çok kez aynı koleksiyonunda sunulması öğesi kaynak sağlar (gibi bir <xref:System.Windows.Controls.UIElementCollection>). Olmadan `x:Shared="false"` koleksiyonu içeriğinin benzersizliğini zorladığından bu geçersizdir. Ancak, `x:Shared="false"` davranışı aynı örneğini döndüren yerine kaynak aynı başka bir örneğini oluşturur.  
+ Bir senaryo için `x:Shared="false"` tanımlarsanız, olan bir <xref:System.Windows.FrameworkElement> veya <xref:System.Windows.FrameworkContentElement> türetilmiş sınıf kaynak olarak ve ardından içerik modeline öğesi kaynak tanıtır. `x:Shared="false"` birden çok kez aynı koleksiyonunda sunulması öğesi kaynak sağlar (gibi bir <xref:System.Windows.Controls.UIElementCollection>). Olmadan `x:Shared="false"` koleksiyonu içeriğinin benzersizliğini zorladığından bu geçersizdir. Ancak, `x:Shared="false"` davranışı aynı örneğini döndüren yerine kaynak aynı başka bir örneğini oluşturur.  
   
  Başka bir senaryo için `x:Shared="false"` kullanıyorsanız olan bir <xref:System.Windows.Freezable> kaynak animasyon değerlerini ancak animasyon başına temelinde kaynak değiştirmek istiyorum.  
   

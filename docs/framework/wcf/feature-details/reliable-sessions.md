@@ -1,13 +1,6 @@
 ---
-title: "Güvenilir oturumlar"
-ms.custom: 
+title: Güvenilir oturumlar
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 f1_keywords:
 - Windows Communication Foundation, sessions and instances
 - WCF, sessions and instances
@@ -16,24 +9,19 @@ helpviewer_keywords:
 - instances [WCF]
 - sessions [WCF]
 ms.assetid: 143951b3-3aa0-4540-b4b7-d33e77e874a1
-caps.latest.revision: "15"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 16480996b96145873b1d1f84d56af6d1aa863710
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 396c76cbdb8eada881a5c87edfc2500dcdab3ad4
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="reliable-sessions"></a>Güvenilir oturumlar
 
-Bu bölümde açıklanmaktadır bir [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] güvenilir oturum olduğundan, ne, nasıl kullanıldığı ve ne zaman kullanmak için hangi bağlama yapılandırmaları destekliyorsa ve işaretçilerde en iyi uygulamalar. Önemli noktaları ve bu bölümdeki ilgili konular hakkında ayrıntılar aşağıdaki tabloda özetlenmiştir.
+Bu bölümde, hangi bir Windows Communication Foundation (güvenilir oturum WCF), ne, nasıl kullanıldığı ve ne zaman kullanmak için hangi bağlama yapılandırmaları destekliyorsa ve işaretçilerde en iyi uygulamalar açıklanmaktadır. Önemli noktaları ve bu bölümdeki ilgili konular hakkında ayrıntılar aşağıdaki tabloda özetlenmiştir.
 
-Güvenilir oturum [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] uç noktaları arasında gönderilen iletileri SOAP veya taşıma aracılar aktarılır ve yalnızca bir kez ve isteğe bağlı olarak, bunlar gönderildiği adres aynı sırayla teslim sağlayarak featrues sağlar.
+Güvenilir oturum WCF uç noktaları arasında gönderilen iletileri SOAP veya taşıma aracılar aktarılır ve yalnızca bir kez ve isteğe bağlı olarak, hangi gönderildikleri sırayla teslim edilir sağlayarak featrues sağlar.
 
-Güvenilir bir oturum ile kullanmak için bir [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] uygulamanın, aşağıdakilerden birini kullanın sistem tarafından sağlanan bağlamalar [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] , varsayılan olarak veya bir seçenek olarak güvenilir oturum desteklemek veya oturumu destekler, kendi özel bağlama oluşturma.
+Güvenilir oturum bir WCF uygulaması ile kullanmak için WCF'de varsayılan olarak veya bir seçenek olarak güvenilir oturum destekleyen sistem tarafından sağlanan bağlamaları birini kullanın veya oturumu destekler, kendi özel bağlama oluşturma.
 
 ## <a name="in-this-section"></a>Bu Bölümde
 

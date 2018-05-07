@@ -1,24 +1,12 @@
 ---
 title: .NET Framework 4.5 externalized ilke etkinlik
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.tgt_pltfrm: ''
-ms.topic: article
 ms.assetid: 92fd6f92-23a1-4adf-b96a-2754ea93ad3e
-caps.latest.revision: 11
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: f131d644d58359cec305b83c136e6fe7f68a1b93
-ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
+ms.openlocfilehash: 1d163659fa4b04694d9c97087f67fcd0713b56aa
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/30/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="externalized-policy-activity-in-net-framework-45"></a>.NET Framework 4.5 externalized ilke etkinlik
 Bu örnek varolan yürütme ExternalizedPolicy4 etkinlik nasıl sağladığını gösterir [!INCLUDE[netfx35_long](../../../../includes/netfx35-long-md.md)] Windows Workflow Foundation (WF 3.5) <xref:System.Workflow.Activities.Rules.RuleSet> nesnelerini [!INCLUDE[netfx_current_long](../../../../includes/netfx-current-long-md.md)] Windows Workflow kurallar altyapısı kullanarak doğrudan Foundation (WF 4.5) Bu WF 3. 5 ' gönderilmektedir. Bu etkinlik kullanarak açın ve varolan tüm WF 3.5 yürütme <xref:System.Workflow.Activities.Rules.RuleSet>. Windows Workflow Foundation bir parçası olarak dahil edilen WF 3.5 kurallar altyapısı hakkında daha fazla bilgi için lütfen okuyun [Windows Workflow Foundation kurallar altyapısı giriş](http://go.microsoft.com/fwlink/?LinkId=166079). Geçiş hakkında daha fazla bilgi için kurallar [!INCLUDE[wf1](../../../../includes/wf1-md.md)] içinde [!INCLUDE[netfx_current_short](../../../../includes/netfx-current-short-md.md)], lütfen adresindeki Geçiş Kılavuzu okuyun [Geçiş Kılavuzu](../../../../docs/framework/windows-workflow-foundation/migration-guidance.md).  
@@ -93,6 +81,6 @@ public class ExternalizedPolicy4Activity<TResult>: CodeActivity
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  Bu dizin mevcut değilse, Git [Windows Communication Foundation (WCF) ve .NET Framework 4 için Windows Workflow Foundation (WF) örnek](http://go.microsoft.com/fwlink/?LinkId=150780) tüm indirmek için [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] ve [!INCLUDE[wf1](../../../../includes/wf1-md.md)] örnekleri. Bu örnek aşağıdaki dizinde bulunur.  
+>  Bu dizin mevcut değilse, Git [Windows Communication Foundation (WCF) ve .NET Framework 4 için Windows Workflow Foundation (WF) örnek](http://go.microsoft.com/fwlink/?LinkId=150780) tüm Windows Communication Foundation (WCF) indirmek için ve [!INCLUDE[wf1](../../../../includes/wf1-md.md)] örnekleri. Bu örnek aşağıdaki dizinde bulunur.  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WF\Scenario\ActivityLibrary\Rules-ExternalizedPolicy4`

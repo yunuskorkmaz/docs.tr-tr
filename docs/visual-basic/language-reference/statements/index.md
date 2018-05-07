@@ -1,43 +1,34 @@
 ---
 title: Deyimler (Visual Basic)
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- devlang-visual-basic
-ms.topic: article
 helpviewer_keywords:
 - statements [Visual Basic]
 ms.assetid: 1cbd7703-8d3b-48fd-831e-14c9cc85675a
-caps.latest.revision: 12
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: 5619cb48907ce3d240b10a94c534c849a82fac2a
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.openlocfilehash: 6c77a0e921038aca6cd9d2ed28cc34e588d9079f
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="statements-visual-basic"></a>Deyimler (Visual Basic)
 Bu bölümdeki konular, tablolar executable deyimleri ve Visual Basic bildirimi ve birçok deyimleri uygulamak önemli listeleri içerir.  
   
 ## <a name="in-this-section"></a>Bu Bölümde  
- [A-E deyimleri](../../../visual-basic/language-reference/statements/a-e-statements.md)  
+ [A-E Deyimleri](../../../visual-basic/language-reference/statements/a-e-statements.md)  
   
- [F-P deyimleri](../../../visual-basic/language-reference/statements/f-p-statements.md)  
+ [F-P Deyimleri](../../../visual-basic/language-reference/statements/f-p-statements.md)  
   
- [Q-Z deyimleri](../../../visual-basic/language-reference/statements/q-z-statements.md)  
+ [Q-Z Deyimleri](../../../visual-basic/language-reference/statements/q-z-statements.md)  
   
- [Yan tümceleri](../../../visual-basic/language-reference/statements/clauses.md)  
+ [Yan Tümceler](../../../visual-basic/language-reference/statements/clauses.md)  
   
- [Bildirim bağlamları ve varsayılan erişim düzeyleri](../../../visual-basic/language-reference/statements/declaration-contexts-and-default-access-levels.md)  
+ [Bildirim Bağlamları ve Varsayılan Erişim Düzeyleri](../../../visual-basic/language-reference/statements/declaration-contexts-and-default-access-levels.md)  
   
- [Öznitelik listesi](../../../visual-basic/language-reference/statements/attribute-list.md)  
+ [Öznitelik Listesi](../../../visual-basic/language-reference/statements/attribute-list.md)  
   
- [Parametre listesi](../../../visual-basic/language-reference/statements/parameter-list.md)  
+ [Parametre Listesi](../../../visual-basic/language-reference/statements/parameter-list.md)  
   
- [Tür listesi](../../../visual-basic/language-reference/statements/type-list.md)  
+ [Tür Listesi](../../../visual-basic/language-reference/statements/type-list.md)  
   
 ## <a name="related-sections"></a>İlgili Bölümler  
  [Visual Basic Dil Başvurusu](../../../visual-basic/language-reference/index.md)  

@@ -1,13 +1,7 @@
 ---
 title: Bileşik Biçimlendirme
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net
-ms.reviewer: ''
-ms.suite: ''
 ms.technology: dotnet-standard
-ms.tgt_pltfrm: ''
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -19,18 +13,13 @@ helpviewer_keywords:
 - composite formatting
 - objects [.NET Framework], formatting multiple objects
 ms.assetid: 87b7d528-73f6-43c6-b71a-f23043039a49
-caps.latest.revision: 36
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-- dotnetcore
-ms.openlocfilehash: 473669b4aaa0782fec32fb0e2d89875c4ab7a838
-ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
+ms.openlocfilehash: 4922470633f3dec8e2e2f898bdf544f5aa4deded
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/30/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="composite-formatting"></a>Bileşik Biçimlendirme
 .NET bileşik biçimlendirme özelliği nesneleri ve bir bileşik biçim dizesi listesini girdi olarak alır. Bir bileşik biçimlendirme dizesi, sabit metinle karışık bir şekilde listedeki nesnelere karşılık gelen, biçim öğeleri adı verilen dizinli yer tutuculardan oluşur. Biçimlendirme işlemi sonuç olarak, orijinal sabit metin ve listedeki nesnelerin dize temsillerinin karışımından oluşan bir dize oluşturur.  
@@ -123,19 +112,19 @@ ms.lasthandoff: 04/30/2018
  [!code-vb[Formatting.Composite#2](../../../samples/snippets/visualbasic/VS_Snippets_CLR/Formatting.Composite/vb/Escaping1.vb#2)]  
   
 ### <a name="processing-order"></a>İşlem Sırası  
- Bileşik biçimlendirme yöntemi çağrısı içeriyorsa, bir <xref:System.IFormatProvider> bağımsız değişken değeri değil `null`, çalışma zamanı çağrıları kendi <xref:System.IFormatProvider.GetFormat%2A?displayProperty=nameWithType> istemek için yöntemi bir <xref:System.ICustomFormatter> uygulaması. Yöntemin dönüş mümkün ise bir <xref:System.ICustomFormatter> uygulama, daha sonra kullanmak üzere önbelleğe alınır.  
+ Bileşik biçimlendirme yöntemi çağrısı içeriyorsa, bir <xref:System.IFormatProvider> bağımsız değişken değeri değil `null`, çalışma zamanı çağrıları kendi <xref:System.IFormatProvider.GetFormat%2A?displayProperty=nameWithType> istemek için yöntemi bir <xref:System.ICustomFormatter> uygulaması. Yöntemin dönüş mümkün ise bir <xref:System.ICustomFormatter> uygulaması, bileşik yöntemi biçimlendirme çağrı boyunca önbelleğe alınır.
   
- Parametre listesinde bir biçim öğesine karşılık gelen her değer, aşağıdaki adımları gerçekleştirerek bir dizeye dönüştürülür. Eğer ilk üç adımdaki koşullardan herhangi biri doğru ise, değerin dize temsili o adımda döndürülür ve sonraki adımlar yürütülmez.  
+ Her değer bir biçim öğesine karşılık gelen parametre listesinde aşağıdaki gibi bir dizeye dönüştürülür:  
   
-1.  Biçimlendirilecek değer ise `null`, boş bir dize ("") döndürülür.  
+1.  Biçimlendirilecek değer ise `null`, boş bir dize <xref:System.String.Empty?displayProperty=nameWithType> döndürülür.  
   
-2.  Varsa bir <xref:System.ICustomFormatter> uygulamasıdır kullanılabilir, çalışma zamanı çağrıları kendi <xref:System.ICustomFormatter.Format%2A> yöntemi. Biçim öğesi'nin yöntemi geçirir *formatString* biri varsa, değer veya `null` , değilse ile birlikte <xref:System.IFormatProvider> uygulaması.  
+2.  Varsa bir <xref:System.ICustomFormatter> uygulamasıdır kullanılabilir, çalışma zamanı çağrıları kendi <xref:System.ICustomFormatter.Format%2A> yöntemi. Biçim öğesi'nin yöntemi geçirir *formatString* biri varsa, değer veya `null` , değilse ile birlikte <xref:System.IFormatProvider> uygulaması. Varsa çağrısı <xref:System.ICustomFormatter.Format%2A?displayProperty=nameWithType> yöntemi döndürür `null`, yürütme devam eder sonraki adıma; Aksi takdirde sonucu <xref:System.ICustomFormatter.Format%2A?displayProperty=nameWithType> çağrısı döndürülür.
   
 3.  Değer uyguluyorsa <xref:System.IFormattable> arabirimi, arabirimin <xref:System.IFormattable.ToString%28System.String%2CSystem.IFormatProvider%29> yöntemi çağrılır. Yöntemine geçirilen *formatString* biçimi öğesinde varsa, değer veya `null` değilse. <xref:System.IFormatProvider> Bağımsız değişkeni şu şekilde belirlenir:  
   
-    -   Null olmayan bir yöntemle biçimlendirme bileşik ise bir sayısal değer için <xref:System.IFormatProvider> bağımsız değişkeni çağrılır, çalışma zamanı isteklerini bir <xref:System.Globalization.NumberFormatInfo> nesnesinin kendi <xref:System.IFormatProvider.GetFormat%2A?displayProperty=nameWithType> yöntemi. Bağımsız değişkenin değeri ise, bir sağlamak kaydedemediği `null`, veya bileşik yöntemi biçimlendirme yoksa bir <xref:System.IFormatProvider> parametresi <xref:System.Globalization.NumberFormatInfo> geçerli iş parçacığı kültürünü kullanılan nesne.  
+    -   Null olmayan bir yöntemle biçimlendirme bileşik ise bir sayısal değer için <xref:System.IFormatProvider> bağımsız değişkeni çağrılır, çalışma zamanı isteklerini bir <xref:System.Globalization.NumberFormatInfo> nesnesinin kendi <xref:System.IFormatProvider.GetFormat%2A?displayProperty=nameWithType> yöntemi. Bağımsız değişkenin değeri ise, bir sağlamak kaydedemediği `null`, veya bileşik yöntemi biçimlendirme yoksa, bir <xref:System.IFormatProvider> parametresi <xref:System.Globalization.NumberFormatInfo> geçerli iş parçacığı kültürünü kullanılan nesne.  
   
-    -   Bir tarih ve saat değeri null olmayan bir yöntemle biçimlendirme bileşik varsa <xref:System.IFormatProvider> bağımsız değişkeni çağrılır, çalışma zamanı isteklerini bir <xref:System.Globalization.DateTimeFormatInfo> nesnesinin kendi <xref:System.IFormatProvider.GetFormat%2A?displayProperty=nameWithType> yöntemi. Bağımsız değişkenin değeri ise, bir sağlamak kaydedemediği `null`, veya bileşik yöntemi biçimlendirme yoksa bir <xref:System.IFormatProvider> parametresi <xref:System.Globalization.DateTimeFormatInfo> geçerli iş parçacığı kültürünü kullanılan nesne.  
+    -   Bir tarih ve saat değeri null olmayan bir yöntemle biçimlendirme bileşik varsa <xref:System.IFormatProvider> bağımsız değişkeni çağrılır, çalışma zamanı isteklerini bir <xref:System.Globalization.DateTimeFormatInfo> nesnesinin kendi <xref:System.IFormatProvider.GetFormat%2A?displayProperty=nameWithType> yöntemi. Bağımsız değişkenin değeri ise, bir sağlamak kaydedemediği `null`, veya bileşik yöntemi biçimlendirme yoksa, bir <xref:System.IFormatProvider> parametresi <xref:System.Globalization.DateTimeFormatInfo> geçerli iş parçacığı kültürünü kullanılan nesne.  
   
     -   Diğer türleri nesneler için bileşik biçimlendirme varsa yöntemi çağrılır bir <xref:System.IFormatProvider> bağımsız değişken değerini doğrudan geçirilir <xref:System.IFormattable.ToString%2A?displayProperty=nameWithType> uygulaması. Aksi takdirde, `null` geçirilir <xref:System.IFormattable.ToString%2A?displayProperty=nameWithType> uygulaması.  
   

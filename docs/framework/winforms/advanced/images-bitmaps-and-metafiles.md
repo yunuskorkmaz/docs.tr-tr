@@ -1,29 +1,17 @@
 ---
-title: "Görüntüler, Bit Eşlemler ve Meta Dosyaları"
-ms.custom: 
+title: Görüntüler, Bit Eşlemler ve Meta Dosyaları
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-winforms
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - metafiles [Windows Forms], about metafiles
 - bitmaps [Windows Forms], about bitmaps
 - images [Windows Forms], about images
 - Windows Forms, images
 ms.assetid: 7152b45b-a55c-49bc-8c78-ae002a844f71
-caps.latest.revision: "16"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 67f72847e5dca20acd623c566a882e0094e94f68
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 30887cd88bc8c08c78eb37c4fe8591ac528e6f01
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="images-bitmaps-and-metafiles"></a>Görüntüler, Bit Eşlemler ve Meta Dosyaları
 `Image` Sınıftır ızgara görüntüleri (bit eşlemler) ile çalışmak için yöntemler sağlayan bir soyut taban ve vektör (meta dosyaları) görüntüler. `Bitmap` Sınıfı ve <xref:System.Drawing.Imaging.Metafile> her ikisi devral sınıfı `Image` sınıfı. `Bitmap` Sınıfını genişletir yeteneklerine `Image` yükleme, kaydetme ve ızgara görüntüleri düzenleme için ek yöntemleri sağlayarak sınıfı. <xref:System.Drawing.Imaging.Metafile> Sınıfını genişletir yeteneklerine `Image` kaydetme ve vektör görüntüleri incelemek için ek yöntemleri sağlayarak sınıfı.  

@@ -1,10 +1,7 @@
 ---
-title: ".NET Framework'te Sürüm Uyumluluğu"
+title: .NET Framework'te Sürüm Uyumluluğu
 ms.custom: updateeachrelease
-ms.date: 10/17/2017
-ms.prod: .net-framework
-ms.technology: dotnet-clr
-ms.topic: article
+ms.date: 04/10/2018
 helpviewer_keywords:
 - .NET Framework, version compatibility
 - .NET Framework 4.5, compatibility with earlier versions
@@ -12,13 +9,11 @@ helpviewer_keywords:
 ms.assetid: 2f25e522-456a-48c3-8a53-e5f39275649f
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 45bb0174bd4c757b6e51621f36b25eb5f4354c94
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 15c5455bd604765ebcd78aa418d2f74f4141628d
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="version-compatibility-in-the-net-framework"></a>.NET Framework'te Sürüm Uyumluluğu
 Geriye dönük uyumluluk bir platform, belirli bir sürümü için geliştirilen bir uygulamayı, platform sonraki sürümlerinde çalıştırılacağı anlamına gelir. Geriye dönük uyumluluk en üst düzeye çıkarmak .NET Framework çalışır: kaynak için bir .NET Framework sürümünü, .NET Framework'ün sonraki sürümlerinde derleme ve .NET Framework bir sürümünü çalıştıran ikili dosyaları davranır aynı üzerinde yazılan kod .NET Framework'ın sonraki sürümleri.  
@@ -50,7 +45,7 @@ Geriye dönük uyumluluk bir platform, belirli bir sürümü için geliştirilen
   
  Uygulamada, bu uyumluluk teknikleri programlama değişiklikler ve .NET Framework içinde görünen göz önüne değişikliklerden ayrılabilir. Örneğin, .NET Framework 4. 5'deki performans iyileştirmeleri önceki sürümlerinde oluşmadı bir yarış durumu getirebilir. Benzer şekilde, .NET Framework derlemeleri sabit kodlanmış yolunu kullanarak, belirli bir .NET Framework sürümü ile bir eşitlik karşılaştırması gerçekleştirme ve yansıma kullanarak bir özel alanın değerini alma geriye dönük olarak uyumlu yöntemler değildir. Ayrıca, her .NET Framework sürümü hata düzeltmeleri ve bazı uygulamalar ve bileşenler uyumluluğunu etkileyebilecek güvenlikle ilgili değişiklikleri içerir.  
   
- Uygulama veya bileşen de .NET Framework 4.5 beklendiği gibi çalışmazsa (kendi noktası sürümleri de dahil olmak üzere [!INCLUDE[net_v451](../../../includes/net-v451-md.md)], 4.5.2, 4.6, 4.6.1, 4.6.2, 4.7 veya 4.7.1, aşağıdaki denetim listelerini kullanın:  
+ Uygulama veya bileşen de .NET Framework 4.5 beklendiği gibi çalışmazsa (kendi noktası sürümleri de dahil olmak üzere [!INCLUDE[net_v451](../../../includes/net-v451-md.md)], 4.5.2, 4.6, 4.6.1, 4.6.2, 4.7, 4.7.1 veya 4.7.2, aşağıdaki denetim listelerini kullanın:  
   
 -  Uygulamanızı geliştirilmiştir, .NET Framework 4. 0'ile başlayan .NET Framework'ün herhangi bir sürümünü çalıştırmak için bkz: [.NET Framework'te uygulama uyumluluğu](application-compatibility.md) hedeflenen .NET Framework sürüm arasındaki değişiklikleri listesini oluşturmak için ve uygulamanızın çalıştığı sürümü.  
 
@@ -64,7 +59,7 @@ Geriye dönük uyumluluk bir platform, belirli bir sürümü için geliştirilen
   
 -   Karar verirseniz bir değişiklik [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] onay uygulamanızı bozuk [çalışma zamanı Ayarları Şeması](../../../docs/framework/configure-apps/file-schema/runtime/index.md) bir çalışma zamanı ayar, uygulamanızın yapılandırma dosyasına önceki davranışını geri yüklemek için kullanabileceğiniz olup olmadığını belirlemek için.  
   
--   Belgelenmemiştir bir sorunla karşılaşırsanız, dosya bir [Microsoft Connect](http://go.microsoft.com/fwlink/?LinkID=154815) hata ve ilgili kişi [ netfxcf@microsoft.com ](mailto:netfxcf@microsoft.com) hata numarasına sahip.  
+-   Bir sorun belgelenmemiştir bir sorunla karşılaşırsanız, açmak [.NET Geliştirici topluluğu site](https://developercommunity.visualstudio.com/spaces/61/index.html) veya bir sorunu açın [Microsoft/dotnet GitHub deposuna](https://github.com/microsoft/dotnet/issues).
   
 ## <a name="compatibility-and-side-by-side-execution"></a>Uyumluluk ve yan yana yürütme  
  Sorununuz için uygun bir geçici çözüm bulamazsanız, .NET Framework 4.5 (veya kendi noktası sürümlerin) 1.1, 2.0 ve 3.5 sürümleri yan yana çalışır ve sürüm 4 değiştiren bir yerinde güncelleştirmesidir unutmayın. 1.1, 2.0 ve 3.5 sürümlerini hedefleyen uygulamalar için en iyi ortamında uygulamayı çalıştırmak için hedef makinede .NET Framework'ün uygun sürümüne yükleyebilirsiniz. Yan yana yürütme hakkında daha fazla bilgi için bkz: [yan yana yürütme](../../../docs/framework/deployment/side-by-side-execution.md).  

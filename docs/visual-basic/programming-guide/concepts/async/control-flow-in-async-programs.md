@@ -1,22 +1,12 @@
 ---
-title: "(Visual Basic) zaman uyumsuz programlarda denetim akışı"
-ms.custom: 
+title: (Visual Basic) zaman uyumsuz programlarda denetim akışı
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: b0443af7-c586-4cb0-b476-742ae4098a96
-caps.latest.revision: "3"
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: 28d5d087b48e4c816cbe3a84966346be6cda772e
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 2de9c00e5094a1c40e64bdf5215157867372be8c
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="control-flow-in-async-programs-visual-basic"></a>(Visual Basic) zaman uyumsuz programlarda denetim akışı
 Yazma ve kullanarak zaman uyumsuz programlar daha kolay korumak `Async` ve `Await` anahtar sözcükler. Programınızı nasıl çalıştığını anlamak yoktur, ancak, sonuçlar beklenmedik. Bu konu izlemeler her zaman bir yönteminden denetimi başka hangi bilgileri taşır göstermek için bir basit zaman uyumsuz program aracılığıyla denetim akışı aktarılır.  
@@ -30,7 +20,7 @@ Yazma ve kullanarak zaman uyumsuz programlar daha kolay korumak `Async` ve `Awai
   
 -   `startButton_Click`, hangi çağrıları `AccessTheWebAsync` ve sonucu görüntüler.  
   
--   `AccessTheWebAsync`, bir dize olarak bir Web sitesi içeriğini indirir ve dize uzunluğu döndürür. `AccessTheWebAsync`zaman uyumsuz bir kullanan <xref:System.Net.Http.HttpClient> yöntemi, <xref:System.Net.Http.HttpClient.GetStringAsync%28System.String%29>, içerik indirilemedi.  
+-   `AccessTheWebAsync`, bir dize olarak bir Web sitesi içeriğini indirir ve dize uzunluğu döndürür. `AccessTheWebAsync` zaman uyumsuz bir kullanan <xref:System.Net.Http.HttpClient> yöntemi, <xref:System.Net.Http.HttpClient.GetStringAsync%28System.String%29>, içerik indirilemedi.  
   
  Program nasıl çalışacağını anlamanıza yardımcı olması için ve işaretlenmiş her noktada ne olacağını açıklamak için program boyunca stratejik noktalarda çizgiler görünür görüntü numaralı. Görüntü satırları "Bir"ile "altı." etiketli Etiketlerin program bu kod satırları ulaştığında sipariş temsil eder.  
   
@@ -296,7 +286,7 @@ Dim urlContents As String = Await getStringTask
  Bekleme ifade askıya `AccessTheWebAsync` kadar `client.GetStringAsync` döndürür. Bu arada, Denetim çağırana döndürür `AccessTheWebAsync`, `startButton_Click`.  
   
 > [!NOTE]
->  Genellikle, zaman uyumsuz bir yöntem çağrısı hemen bekler. Örneğin, aşağıdaki atama oluşturur ve ardından bekler önceki kod değiştirme `getStringTask`:`Dim urlContents As String = Await client.GetStringAsync("http://msdn.microsoft.com")`  
+>  Genellikle, zaman uyumsuz bir yöntem çağrısı hemen bekler. Örneğin, aşağıdaki atama oluşturur ve ardından bekler önceki kod değiştirme `getStringTask`: `Dim urlContents As String = Await client.GetStringAsync("http://msdn.microsoft.com")`  
 >   
 >  Bu konuda, bekleme işleci programı aracılığıyla denetim akışı işaretlemek çıktı satırları uyum sağlamak için daha sonra uygulanır.  
   
@@ -343,7 +333,7 @@ FIVE:  Back in AccessTheWebAsync.
   
  ![BEŞ adım](../../../../csharp/programming-guide/concepts/async/media/asynctrace-five.png "AsyncTrace beş")  
   
- `AccessTheWebAsync`Tamamlama ve denetim çalışır döner `startButton_Click`, tamamlanması bekleniyor.  
+ `AccessTheWebAsync` Tamamlama ve denetim çalışır döner `startButton_Click`, tamamlanması bekleniyor.  
   
 ### <a name="step-six"></a>Adım 6  
  Zaman `AccessTheWebAsync` işleme tam sinyalleri bekleme deyiminde geçmiş devam edebilir `startButton_Async`. Aslında, programın başka bir şey yapmak için vardır.  

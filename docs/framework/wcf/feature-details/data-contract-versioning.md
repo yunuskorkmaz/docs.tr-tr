@@ -1,14 +1,6 @@
 ---
 title: Veri Sözleşmesi Sürümü Oluşturma
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -17,17 +9,11 @@ helpviewer_keywords:
 - versioning [WCF]
 - data contracts [WCF], versioning
 ms.assetid: 4a0700cb-5f5f-4137-8705-3a3ecf06461f
-caps.latest.revision: 35
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: fd1679bb50a0dc6ee4997f7ae427c1cbdc0948ef
-ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
+ms.openlocfilehash: 1ba51c51f30293e05dee17f9cf78cc049e1c751f
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/30/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="data-contract-versioning"></a>Veri Sözleşmesi Sürümü Oluşturma
 Uygulamaları geliştikçe, aynı zamanda değiştirmeniz gerekebilir Hizmetleri kullanım verileri sözleşme. Bu konuda açıklanmaktadır sürüm veri sözleşmeleri nasıl. Bu konuda veri sözleşmesi sürümü oluşturma mekanizmaları açıklanmaktadır. Tam genel bakış ve düzenleyici sürüm oluşturma yönergeleri için bkz: [en iyi uygulamalar: veri sözleşmesi sürümü oluşturma](../../../../docs/framework/wcf/best-practices-data-contract-versioning.md).  
@@ -110,7 +96,7 @@ Uygulamaları geliştikçe, aynı zamanda değiştirmeniz gerekebilir Hizmetleri
 ## <a name="schema-considerations"></a>Şema konuları  
  Veri sözleşmesi türleri için hangi şema üretilen açıklama için bkz: [veri sözleşmesi şema başvurusu](../../../../docs/framework/wcf/feature-details/data-contract-schema-reference.md).  
   
- Şema [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] üretir veri sözleşme türleri için sürüm oluşturma için hiç hükümleri yapar. Diğer bir deyişle, yalnızca bu sürümde mevcut veri üyeleri bir türü sürümünden dışa aktarılan bir şema içeriyor. Uygulama <xref:System.Runtime.Serialization.IExtensibleDataObject> arabirimi bir türüne ilişkin şema değiştirmez.  
+ Veri sözleşmesi türleri yapar için sürüm oluşturma için hiç hükümleri WCF şema üretir. Diğer bir deyişle, yalnızca bu sürümde mevcut veri üyeleri bir türü sürümünden dışa aktarılan bir şema içeriyor. Uygulama <xref:System.Runtime.Serialization.IExtensibleDataObject> arabirimi bir türüne ilişkin şema değiştirmez.  
   
  Veri üyeleri için şema varsayılan olarak isteğe bağlı öğeleri olarak dışarı aktarılır. Diğer bir deyişle, `minOccurs` (XML özniteliği) değerini 0 olarak ayarlayın. Gerekli veri üyeleri ile verilir `minOccurs` 1 olarak ayarlayın.  
   

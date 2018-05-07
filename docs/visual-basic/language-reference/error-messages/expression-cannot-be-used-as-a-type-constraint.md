@@ -1,28 +1,19 @@
 ---
-title: "&#39; &lt;ifade&gt;&#39; tür sınırlaması kullanılamaz"
+title: '&#39;&lt;ifade&gt; &#39; tür sınırlaması kullanılamaz'
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- devlang-visual-basic
-ms.topic: article
 f1_keywords:
 - bc32061
 - vbc32061
 helpviewer_keywords:
 - BC32061
 ms.assetid: b17821b7-fa14-4397-a211-6e2a14079f09
-caps.latest.revision: 
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: c7271018a93c97ed90dc272f7f5404c0f0a22d42
-ms.sourcegitcommit: 34ec7753acf76f90a0fa845235ef06663dc9e36e
+ms.openlocfilehash: 8e9aad2ec65e037b15e19ca2e624fdc8f28bc94e
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
-# <a name="39ltexpressiongt39-cannot-be-used-as-a-type-constraint"></a>&#39; &lt;ifade&gt;&#39; tür sınırlaması kullanılamaz
+# <a name="39ltexpressiongt39-cannot-be-used-as-a-type-constraint"></a>&#39;&lt;ifade&gt; &#39; tür sınırlaması kullanılamaz
 Bir kısıtlama listesi bir tür parametresi geçerli bir kısıtlaması göstermiyor bir ifade içerir.  
   
  Kısıtlama listesini türü parametresine geçirilen tür bağımsız değişkeni gereksinimlerine uygular. Aşağıdaki gereksinimleri herhangi bir bileşimini belirtebilirsiniz:  

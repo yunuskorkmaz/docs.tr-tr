@@ -1,24 +1,12 @@
 ---
-title: "Hizmet: Saniyede Başarısız Olan Çağrı"
-ms.custom: 
+title: 'Hizmet: Saniyede Başarısız Olan Çağrı'
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 5a2c7939-107d-4f0c-b43c-e02e079e8a9d
-caps.latest.revision: "11"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 632c81b6ffd84202b7609dccb89887af01ae706e
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 6af8f79d1fe163967a5c6e8220697aa11bee66c7
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="service-calls-failed-per-second"></a>Hizmet: Saniyede Başarısız Olan Çağrı
 Sayaç adı: Saniye başına çağrı başarısız oldu.  

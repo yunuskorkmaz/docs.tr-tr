@@ -1,11 +1,6 @@
 ---
 title: Declare Deyimi
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
-ms.topic: article
 f1_keywords:
 - vb.Declare
 - vb.Lib
@@ -32,14 +27,11 @@ helpviewer_keywords:
 - Visual Basic code, Sub procedures
 - Function procedures [Visual Basic], declaring
 ms.assetid: d3f21fb0-b804-4c99-97ed-583b23894cf1
-caps.latest.revision: "30"
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: 2560f34a5130ef7453b50ffb4495b67bf1dfa4c8
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: bc6949c7b52e87b7b39dd2690cac915a5f0d15aa
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="declare-statement"></a>Declare Deyimi
 Bir dış dosyada uygulanan bir yordam için bir başvuru bildirir.  
@@ -70,7 +62,7 @@ Declare [ charsetmodifier ] [ Function ] name Lib "libname" _
 |`Lib`|Gerekli. Tanıtır bir `Lib` dış bir yordam içeren dış dosyası (DLL ya da kod kaynak) tanımlayan yan tümcesi.|  
 |`libname`|Gerekli. Bildirilen yordamı içeren dosyanın adı.|  
 |`Alias`|İsteğe bağlı. Bildirilen yordamı, dosyanın içinde belirtilen ada göre tanımlanamıyor gösterir `name`. Kendi Kimliği'nde belirttiğiniz `aliasname`.|  
-|`aliasname`|Kullanırsanız, gerekli `Alias` anahtar sözcüğü. Yordamın iki yoldan biriyle tanımlayan dize:<br /><br /> Tırnak işareti içinde kendi dosya içinde yordam giriş noktası adı (`""`)<br /><br /> veya<br /><br /> Sayı işareti (`#`) dosya içinde yordam giriş noktası sıra sayısını belirten bir tamsayı ve ardından|  
+|`aliasname`|Kullanırsanız, gerekli `Alias` anahtar sözcüğü. Yordamın iki yoldan biriyle tanımlayan dize:<br /><br /> Tırnak işareti içinde kendi dosya içinde yordam giriş noktası adı (`""`)<br /><br /> -veya-<br /><br /> Sayı işareti (`#`) dosya içinde yordam giriş noktası sıra sayısını belirten bir tamsayı ve ardından|  
 |`parameterlist`|Yordamın kullandığı parametreler gereklidir. Bkz: [parametre listesi](../../../visual-basic/language-reference/statements/parameter-list.md).|  
 |`returntype`|Gerekli olursa `Function` belirtilir ve `Option Strict` olan `On`. Yordam tarafından döndürülen değerin veri türü.|  
   
@@ -125,7 +117,7 @@ Declare [ charsetmodifier ] [ Function ] name Lib "libname" _
   
 -   **Karakter kümeleri.** Belirleyebilirsiniz `charsetmodifier` dış yordamı çağırdığında Visual Basic dizeleri nasıl hazırlanacağını. `Ansi` Değiştiricisi Visual Basic ANSI değerleri, tüm dizeleri sıralama yönlendirir ve `Unicode` değiştiricisi Unicode değerleri tüm dizeleri sıralama için yönlendirir. `Auto` Değiştiricisi yönlendirir Visual Basic .NET Framework göre dizelerini sıralama kuralları dayalı üzerinde dış başvuru `name`, veya `aliasname` belirtilmişse. Varsayılan değer `Ansi` şeklindedir.  
   
-     `charsetmodifier`Ayrıca nasıl Visual Basic dış yordam dış dosya içinde arama belirtir. `Ansi`ve `Unicode` her ikisi de arama sırasında adını değiştirmeden aramak için Visual Basic doğrudan. `Auto`Visual Basic çalışma zamanı platform temel karakter belirlemek ve büyük olasılıkla dış yordam adı şu şekilde değiştirmek için yönlendirir:  
+     `charsetmodifier` Ayrıca nasıl Visual Basic dış yordam dış dosya içinde arama belirtir. `Ansi` ve `Unicode` her ikisi de arama sırasında adını değiştirmeden aramak için Visual Basic doğrudan. `Auto` Visual Basic çalışma zamanı platform temel karakter belirlemek ve büyük olasılıkla dış yordam adı şu şekilde değiştirmek için yönlendirir:  
   
     -   Windows 95, Windows 98 veya Windows Millennium Edition gibi bir ANSI platformunda ilk ad değişikliğe dış yordamını arayın. Başarısız olursa, "A" dış yordam adı sonuna ve arayın yeniden.  
   
@@ -150,10 +142,10 @@ Declare [ charsetmodifier ] [ Function ] name Lib "libname" _
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
  <xref:Microsoft.VisualBasic.ErrObject.LastDllError%2A>  
- [Imports deyimi (.NET Namespace ve türü)](../../../visual-basic/language-reference/statements/imports-statement-net-namespace-and-type.md)  
- [AddressOf işleci](../../../visual-basic/language-reference/operators/addressof-operator.md)  
- [Function deyimi](../../../visual-basic/language-reference/statements/function-statement.md)  
- [Sub deyimi](../../../visual-basic/language-reference/statements/sub-statement.md)  
- [Parametre listesi](../../../visual-basic/language-reference/statements/parameter-list.md)  
- [Call deyimi](../../../visual-basic/language-reference/statements/call-statement.md)  
- [İzlenecek yol: Windows API'larını çağırma](../../../visual-basic/programming-guide/com-interop/walkthrough-calling-windows-apis.md)
+ [Imports Deyimi (.NET Ad Alanı ve Türü)](../../../visual-basic/language-reference/statements/imports-statement-net-namespace-and-type.md)  
+ [AddressOf İşleci](../../../visual-basic/language-reference/operators/addressof-operator.md)  
+ [Function Deyimi](../../../visual-basic/language-reference/statements/function-statement.md)  
+ [Sub Deyimi](../../../visual-basic/language-reference/statements/sub-statement.md)  
+ [Parametre Listesi](../../../visual-basic/language-reference/statements/parameter-list.md)  
+ [Call Deyimi](../../../visual-basic/language-reference/statements/call-statement.md)  
+ [İzlenecek yol: Windows API'lerini Çağırma](../../../visual-basic/programming-guide/com-interop/walkthrough-calling-windows-apis.md)

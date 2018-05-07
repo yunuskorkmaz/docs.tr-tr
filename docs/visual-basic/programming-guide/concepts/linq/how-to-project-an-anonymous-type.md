@@ -1,22 +1,12 @@
 ---
-title: "Nasıl yapılır: Proje anonim bir türü (Visual Basic)"
-ms.custom: 
+title: 'Nasıl yapılır: Proje anonim bir türü (Visual Basic)'
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 30b42987-0e0e-4b2b-adb1-5255ddfbcd7b
-caps.latest.revision: "4"
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: b383b0a7e0fc0aa22bdcc8ed87628947858986da
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.openlocfilehash: 13500bc606cb99a4264e04657f4a0a8090f07174
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-project-an-anonymous-type-visual-basic"></a>Nasıl yapılır: Proje anonim bir türü (Visual Basic)
 Bazı durumlarda, yalnızca kısa bir süre bu tür kullanacağınız bilseniz bile bir sorgu yeni bir tür için proje isteyebilirsiniz. Yalnızca yansıtma kullanmak için yeni bir türü oluşturmak için ek iş çok karmaşıktır. Daha verimli bir yaklaşım için bu durumda olan anonim bir tür projeye. Anonim türler, bir sınıf tanımlama sonra bildirme ve bu sınıfın bir nesnesi sınıfı bir ad verip olmadan başlatma olanak tanır.  

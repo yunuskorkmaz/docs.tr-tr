@@ -1,12 +1,6 @@
 ---
 title: Set Deyimi (Visual Basic)
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- devlang-visual-basic
-ms.topic: article
 f1_keywords:
 - vb.Set
 helpviewer_keywords:
@@ -16,14 +10,11 @@ helpviewer_keywords:
 - write-only properties
 - properties [Visual Basic], write-only
 ms.assetid: 9ecc27b4-df84-420d-9075-db25455fb3cd
-caps.latest.revision: 
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: 3b18e6c858e64e78d7ab85fdaafd70e510f7a02f
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: dbc48d14bac54809e4ddd12c87429bf407169950
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="set-statement-visual-basic"></a>Set Deyimi (Visual Basic)
 Bildiren bir `Set` bir özellik için bir değer atamak için kullanılan özellik yordamı.  
@@ -43,11 +34,11 @@ End Set
  `accessmodifier`  
  İsteğe bağlı en `Get` ve `Set` bu özellik deyimlerinde. Aşağıdakilerden biri olabilir:  
   
--   [Korumalı](../../../visual-basic/language-reference/modifiers/protected.md)  
+-   [Protected](../../../visual-basic/language-reference/modifiers/protected.md)  
   
--   [Arkadaş](../../../visual-basic/language-reference/modifiers/friend.md)  
+-   [Friend](../../../visual-basic/language-reference/modifiers/friend.md)  
   
--   [Özel](../../../visual-basic/language-reference/modifiers/private.md)  
+-   [Private](../../../visual-basic/language-reference/modifiers/private.md)  
   
 -   `Protected Friend`  
   
@@ -86,7 +77,7 @@ End Set
   
 -   **Bir özellik yordamından döndürülüyor.** Zaman `Set` yordamı çağıran kodu döndürür, değerin depolanması için sağlanan deyimi yürütme devam eder.  
   
-     `Set`özellik yordamları kullanarak dönebilirsiniz [dönüş deyimi](../../../visual-basic/language-reference/statements/return-statement.md) veya [çıkış deyimi](../../../visual-basic/language-reference/statements/exit-statement.md).  
+     `Set` özellik yordamları kullanarak dönebilirsiniz [dönüş deyimi](../../../visual-basic/language-reference/statements/return-statement.md) veya [çıkış deyimi](../../../visual-basic/language-reference/statements/exit-statement.md).  
   
      `Exit Property` Ve `Return` deyimleri neden hemen bir çıkış bir özellik yordam. Herhangi bir sayıda `Exit Property` ve `Return` deyimleri yordamda herhangi bir yerinde görünebilir ve karıştırabilir miyim `Exit Property` ve `Return` deyimleri.  
   
@@ -96,7 +87,7 @@ End Set
  [!code-vb[VbVbalrStatements#55](../../../visual-basic/language-reference/error-messages/codesnippet/VisualBasic/set-statement_1.vb)]  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [Get deyimi](../../../visual-basic/language-reference/statements/get-statement.md)  
- [Property deyimi](../../../visual-basic/language-reference/statements/property-statement.md)  
- [Sub deyimi](../../../visual-basic/language-reference/statements/sub-statement.md)  
- [Özellik yordamları](../../../visual-basic/programming-guide/language-features/procedures/property-procedures.md)
+ [Get Deyimi](../../../visual-basic/language-reference/statements/get-statement.md)  
+ [Property Deyimi](../../../visual-basic/language-reference/statements/property-statement.md)  
+ [Sub Deyimi](../../../visual-basic/language-reference/statements/sub-statement.md)  
+ [Özellik Yordamları](../../../visual-basic/programming-guide/language-features/procedures/property-procedures.md)

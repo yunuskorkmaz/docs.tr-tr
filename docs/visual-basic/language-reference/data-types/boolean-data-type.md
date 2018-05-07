@@ -1,10 +1,6 @@
 ---
-title: "Boole Veri Türü (Visual Basic)"
+title: Boole Veri Türü (Visual Basic)
 ms.date: 07/20/2015
-ms.prod: .net
-ms.suite: 
-ms.technology: devlang-visual-basic
-ms.topic: article
 f1_keywords:
 - vb.FALSE
 - vb.TRUE
@@ -16,14 +12,11 @@ helpviewer_keywords:
 - True keyword [Visual Basic]
 - Boolean values [Visual Basic], True keyword
 ms.assetid: 4858e630-4813-4216-a55e-f4d0feb884e4
-caps.latest.revision: "18"
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: bdc106f1ec874c1a2165df069d5f3485fe5b2e43
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 00f77fe5e98099868e02d74fe1adc7690cb95cca
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="boolean-data-type-visual-basic"></a>Boole Veri Türü (Visual Basic)
 Yalnızca ayrı tutma değerleri `True` veya `False`. Anahtar sözcükler `True` ve `False` için iki durumlarını karşılık `Boolean` değişkenleri.  
@@ -33,7 +26,7 @@ Yalnızca ayrı tutma değerleri `True` veya `False`. Anahtar sözcükler `True`
   
  Varsayılan değer olan `Boolean` olan `False`.  
   
- `Boolean`değerleri sayı olarak depolanmaz ve depolanan değerlerin sayıya eşit olması amaçlanmamıştır. Hiçbir zaman eşdeğer sayısal değerler için güvenen kod yazmanız gerekir `True` ve `False`. Mümkün olduğunda, kullanımını kısıtlamalısınız `Boolean` , bunlar tasarlanan mantıksal değerleri değişkenleri.  
+ `Boolean` değerleri sayı olarak depolanmaz ve depolanan değerlerin sayıya eşit olması amaçlanmamıştır. Hiçbir zaman eşdeğer sayısal değerler için güvenen kod yazmanız gerekir `True` ve `False`. Mümkün olduğunda, kullanımını kısıtlamalısınız `Boolean` , bunlar tasarlanan mantıksal değerleri değişkenleri.  
   
 ## <a name="type-conversions"></a>Tür Dönüştürmeleri  
  Visual Basic sayısal veri türü değerleri için ne zaman dönüştürür `Boolean`, 0 olur `False` ve diğer tüm değerler duruma `True`. Visual Basic zaman dönüştürür `Boolean` sayısal türler değerlere `False` 0 olur ve `True` -1 olur.  
@@ -42,9 +35,9 @@ Yalnızca ayrı tutma değerleri `True` veya `False`. Anahtar sözcükler `True`
   
 ## <a name="programming-tips"></a>Programlama İpuçları  
   
--   **Negatif sayılar.** `Boolean`sayısal bir tür değil ve negatif bir değeri temsil edilemez. Her iki durumda da kullanılamaz `Boolean` sayısal değerleri tutmak için.  
+-   **Negatif sayılar.** `Boolean` sayısal bir tür değil ve negatif bir değeri temsil edilemez. Her iki durumda da kullanılamaz `Boolean` sayısal değerleri tutmak için.  
   
--   **Karakterleri yazın.** `Boolean`değişmez değer türü karakteri ya da tanımlayıcı türü karakteri içeriyor.  
+-   **Karakterleri yazın.** `Boolean` değişmez değer türü karakteri ya da tanımlayıcı türü karakteri içeriyor.  
   
 -   **Framework türü.** .NET Framework'teki karşılık gelen tür <xref:System.Boolean?displayProperty=nameWithType> yapısı.  
   
@@ -61,9 +54,9 @@ End If
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
  <xref:System.Boolean?displayProperty=nameWithType>  
- [Veri türleri](../../../visual-basic/language-reference/data-types/data-type-summary.md)  
- [Tür dönüşüm işlevleri](../../../visual-basic/language-reference/functions/type-conversion-functions.md)  
- [Dönüştürme özeti](../../../visual-basic/language-reference/keywords/conversion-summary.md)  
- [Veri türlerinin etkili kullanımı](../../../visual-basic/programming-guide/language-features/data-types/efficient-use-of-data-types.md)  
- [Veri türleri sorunlarını giderme](../../../visual-basic/programming-guide/language-features/data-types/troubleshooting-data-types.md)  
- [CType işlevi](../../../visual-basic/language-reference/functions/ctype-function.md)
+ [Veri Türleri](../../../visual-basic/language-reference/data-types/data-type-summary.md)  
+ [Tür Dönüştürme İşlevleri](../../../visual-basic/language-reference/functions/type-conversion-functions.md)  
+ [Dönüştürme Özeti](../../../visual-basic/language-reference/keywords/conversion-summary.md)  
+ [Veri Türlerinin Etkili Kullanımı](../../../visual-basic/programming-guide/language-features/data-types/efficient-use-of-data-types.md)  
+ [Veri Türü Sorunlarını Giderme](../../../visual-basic/programming-guide/language-features/data-types/troubleshooting-data-types.md)  
+ [CType İşlevi](../../../visual-basic/language-reference/functions/ctype-function.md)

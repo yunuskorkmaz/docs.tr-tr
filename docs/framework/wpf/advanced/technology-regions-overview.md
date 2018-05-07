@@ -1,13 +1,6 @@
 ---
-title: "Teknoloji Bölgelerine Genel Bakış"
-ms.custom: 
+title: Teknoloji Bölgelerine Genel Bakış
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-wpf
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - window regions [WPF]
 - Win32 code [WPF], WPF interoperation
@@ -16,16 +9,11 @@ helpviewer_keywords:
 - interoperability [WPF], airspace
 - Win32 code [WPF], window regions
 ms.assetid: b7cc350f-b9e2-48b1-be14-60f3d853222e
-caps.latest.revision: "12"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 142973793fd002925bbe2b4b09ce8e6d34553031
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 2fef7a0f3b4e01d7ce29baeb70fbdd7ea37f2c89
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="technology-regions-overview"></a>Teknoloji Bölgelerine Genel Bakış
 WPF, Win32 ya da DirectX gibi bir uygulama içinde birden çok sunu teknolojileri kullanılıyorsa, ortak bir üst düzey penceresi içinde işleme alanlarını paylaşması gerekir. Bu konu, sunu ve WPF birlikte çalışabilirlik uygulamanız için giriş etkileyebilir sorunları açıklar.  
@@ -55,19 +43,19 @@ WPF, Win32 ya da DirectX gibi bir uygulama içinde birden çok sunu teknolojiler
  ![Birlikte çalışabilirlik diyagramı](../../../../docs/framework/wpf/advanced/media/migrationinteroparchitectarticle05.png "MigrationInteropArchitectArticle05")  
   
 ## <a name="transparency-and-top-level-windows"></a>Saydamlık ve üst düzey Windows  
- Windows penceresi Manager'da yalnızca gerçekten işler [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)] Cwnd'lerden. Bu nedenle, her [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] <xref:System.Windows.Window> HWND değil. <xref:System.Windows.Window> HWND her HWND için genel kurallar tarafından uymanız gerekir. O HWND içinde [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] kodu ne olursa olsun bütün yapabilir [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] [!INCLUDE[TLA2#tla_api#plural](../../../../includes/tla2sharptla-apisharpplural-md.md)] destekler. Ancak masaüstünde diğer Cwnd'lerden ile etkileşim için [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] tarafından uymanız gerekir [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)] ve işleme kurallarına.  [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]Dikdörtgen olmayan windows kullanarak destekler [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)] [!INCLUDE[TLA2#tla_api#plural](../../../../includes/tla2sharptla-apisharpplural-md.md)]— dikdörtgen olmayan windows ve piksel başına alfa için katmanlı windows için HRGN'ler.  
+ Windows penceresi Manager'da yalnızca gerçekten işler [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)] Cwnd'lerden. Bu nedenle, her [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] <xref:System.Windows.Window> HWND değil. <xref:System.Windows.Window> HWND her HWND için genel kurallar tarafından uymanız gerekir. O HWND içinde [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] kodu ne olursa olsun bütün yapabilir [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] [!INCLUDE[TLA2#tla_api#plural](../../../../includes/tla2sharptla-apisharpplural-md.md)] destekler. Ancak masaüstünde diğer Cwnd'lerden ile etkileşim için [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] tarafından uymanız gerekir [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)] ve işleme kurallarına.  [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] Dikdörtgen olmayan windows kullanarak destekler [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)] [!INCLUDE[TLA2#tla_api#plural](../../../../includes/tla2sharptla-apisharpplural-md.md)]— dikdörtgen olmayan windows ve piksel başına alfa için katmanlı windows için HRGN'ler.  
   
- Sabit alfa ve renk anahtarları desteklenmez.  [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)]katmanlı pencere yetenekleri platforma göre değişir.  
+ Sabit alfa ve renk anahtarları desteklenmez.  [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)] katmanlı pencere yetenekleri platforma göre değişir.  
   
  Katmanlı windows yapabilir tüm pencereyi yarı saydam (yarı saydam) her piksel penceresinde uygulamak için alfa değeri belirterek.  ([!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)] aslında piksel başına alfa destekler, ancak bu bu modda, tüm alt çizmek gerekir çünkü pratik programlarda kullanmak oldukça zor HWND kendiniz iletişim kutuları ve bırakmalar dahil olmak üzere).  
   
- [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]HRGN'ler destekler; Ancak, yönetilmeyen [!INCLUDE[TLA2#tla_api#plural](../../../../includes/tla2sharptla-apisharpplural-md.md)] bu işlevsellik için. Platform kullanabilirsiniz çağırma ve <xref:System.Windows.Interop.HwndSource> ilgili çağırmak için [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)] [!INCLUDE[TLA2#tla_api#plural](../../../../includes/tla2sharptla-apisharpplural-md.md)]. Daha fazla bilgi için bkz: [yönetilen koddan yerel işlevleri çağırma](/cpp/dotnet/calling-native-functions-from-managed-code).  
+ [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] HRGN'ler destekler; Ancak, yönetilmeyen [!INCLUDE[TLA2#tla_api#plural](../../../../includes/tla2sharptla-apisharpplural-md.md)] bu işlevsellik için. Platform kullanabilirsiniz çağırma ve <xref:System.Windows.Interop.HwndSource> ilgili çağırmak için [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)] [!INCLUDE[TLA2#tla_api#plural](../../../../includes/tla2sharptla-apisharpplural-md.md)]. Daha fazla bilgi için bkz: [yönetilen koddan yerel işlevleri çağırma](/cpp/dotnet/calling-native-functions-from-managed-code).  
   
- [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]Katmanlı windows farklı işletim sistemleri üzerinde farklı özelliklere sahiptir. Bunun nedeni, [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] kullanan [!INCLUDE[TLA2#tla_dx](../../../../includes/tla2sharptla-dx-md.md)] işlemek için katmanlı windows öncelikle için tasarlanmış ve [!INCLUDE[TLA2#tla_gdi](../../../../includes/tla2sharptla-gdi-md.md)] işleme değil, [!INCLUDE[TLA2#tla_dx](../../../../includes/tla2sharptla-dx-md.md)] işleme.  
+ [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] Katmanlı windows farklı işletim sistemleri üzerinde farklı özelliklere sahiptir. Bunun nedeni, [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] kullanan [!INCLUDE[TLA2#tla_dx](../../../../includes/tla2sharptla-dx-md.md)] işlemek için katmanlı windows öncelikle için tasarlanmış ve [!INCLUDE[TLA2#tla_gdi](../../../../includes/tla2sharptla-gdi-md.md)] işleme değil, [!INCLUDE[TLA2#tla_dx](../../../../includes/tla2sharptla-dx-md.md)] işleme.  
   
--   [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]üzerinde destekleyen donanım hızlandırılmış katmanlı windows [!INCLUDE[TLA#tla_longhorn](../../../../includes/tlasharptla-longhorn-md.md)] ve daha sonra. Üzerinde donanım hızlandırılmış katmanlı windows [!INCLUDE[TLA2#tla_winxp](../../../../includes/tla2sharptla-winxp-md.md)] desteğine gereksiniminiz [!INCLUDE[TLA#tla_dx](../../../../includes/tlasharptla-dx-md.md)], bu yetenekleri sürümüne bağlıdır [!INCLUDE[TLA#tla_dx](../../../../includes/tlasharptla-dx-md.md)] bu makinede.  
+-   [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] üzerinde destekleyen donanım hızlandırılmış katmanlı windows [!INCLUDE[TLA#tla_longhorn](../../../../includes/tlasharptla-longhorn-md.md)] ve daha sonra. Üzerinde donanım hızlandırılmış katmanlı windows [!INCLUDE[TLA2#tla_winxp](../../../../includes/tla2sharptla-winxp-md.md)] desteğine gereksiniminiz [!INCLUDE[TLA#tla_dx](../../../../includes/tlasharptla-dx-md.md)], bu yetenekleri sürümüne bağlıdır [!INCLUDE[TLA#tla_dx](../../../../includes/tlasharptla-dx-md.md)] bu makinede.  
   
--   [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]saydamlık renk anahtarlarını desteklemez çünkü [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] istediğiniz, özellikle işleme donanım hızlandırılmış olduğu zaman tam renk işlemeyi garanti edemez.  
+-   [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] saydamlık renk anahtarlarını desteklemez çünkü [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] istediğiniz, özellikle işleme donanım hızlandırılmış olduğu zaman tam renk işlemeyi garanti edemez.  
   
 -   Uygulamanızı çalışıyorsa [!INCLUDE[TLA2#tla_winxp](../../../../includes/tla2sharptla-winxp-md.md)], windows üzerinde katmanlanmış [!INCLUDE[TLA2#tla_dx](../../../../includes/tla2sharptla-dx-md.md)] yüzeyleri Titreşim zaman [!INCLUDE[TLA2#tla_dx](../../../../includes/tla2sharptla-dx-md.md)] uygulama işler.  (Gerçek işleme dizisi [!INCLUDE[TLA#tla_gdi](../../../../includes/tlasharptla-gdi-md.md)] katmanlı pencere sonra gizler [!INCLUDE[TLA2#tla_dx](../../../../includes/tla2sharptla-dx-md.md)] çizer ve ardından [!INCLUDE[TLA#tla_gdi](../../../../includes/tlasharptla-gdi-md.md)] katmanlı pencereyi geri koyar).  Olmayan[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] katmanlı windows de bu sınırlamaya sahiptir.  
   

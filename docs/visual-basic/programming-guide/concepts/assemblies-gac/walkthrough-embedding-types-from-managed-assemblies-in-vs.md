@@ -1,22 +1,12 @@
 ---
 title: "İzlenecek yol: Visual Studio'da (Visual Basic) yönetilen derlemelerden türler katıştırma"
-ms.custom: 
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 56ed12ba-adff-4e9c-a668-7fcba80c4795
-caps.latest.revision: "3"
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: 4411b40d8ffbdf2b74c49152db675286d91b43ea
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 1f6176746b783d020c809fb0b5d55d741ce0148b
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="walkthrough-embedding-types-from-managed-assemblies-in-visual-studio-visual-basic"></a>İzlenecek yol: Visual Studio'da (Visual Basic) yönetilen derlemelerden türler katıştırma
 Tanımlayıcı adlı Yönetilen derleme tür bilgilerini katıştırma, geniş sürüm bağımsızlığı elde etmek için bir uygulamada türü eşleştiği. Diğer bir deyişle, her sürüm için derlenmesi gerek kalmadan yönetilen kitaplık birden fazla sürümünü türlerinden kullanmak için program yazılabilir.  
@@ -86,7 +76,7 @@ Tanımlayıcı adlı Yönetilen derleme tür bilgilerini katıştırma, geniş s
   
 7.  Üzerinde **Araçları** menüsünde tıklatın **Create GUID**. İçinde **Create GUID** iletişim kutusu, tıklatın **kayıt defteri biçimi** ve ardından **kopya**. **Çıkış**'a tıklayın.  
   
-8.  İçinde `Guid` özniteliği, örnek GUID silme ve kopyalama GUID yapıştırın **Create GUID** iletişim kutusu. Kaşlı ayraçlar adresinden kopyalanan GUID kaldırın.  
+8.  İçinde `Guid` özniteliği, örnek GUID silme ve kopyalama GUID yapıştırın **Create GUID** iletişim kutusu. Küme ayraçları Kaldır ({}) kopyalanan Guid'den.  
   
 9. Üzerinde **proje** menüsünde tıklatın **tüm dosyaları göster**.  
   
@@ -234,5 +224,5 @@ End Function
 ## <a name="see-also"></a>Ayrıca Bkz.  
  [/ Link (Visual Basic)](../../../../visual-basic/reference/command-line-compiler/link.md)  
  [Programlama Kavramları](../../../../visual-basic/programming-guide/concepts/index.md)  
- [Derlemelerle programlama](../../../../framework/app-domains/programming-with-assemblies.md)  
+ [Bütünleştirilmiş Kodlarla Programlama](../../../../framework/app-domains/programming-with-assemblies.md)  
  [Derlemeler ve Genel Derleme Önbelleği (Visual Basic)](../../../../visual-basic/programming-guide/concepts/assemblies-gac/index.md)

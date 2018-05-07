@@ -1,24 +1,12 @@
 ---
 title: Windows Workflow Foundation 4 performansı
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.tgt_pltfrm: ''
-ms.topic: article
 ms.assetid: 67d2b3e8-3777-49f8-9084-abbb33b5a766
-caps.latest.revision: 9
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 4db761d2e6ba0231cb83d4ef5d1ee663c99178c5
-ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
-ms.translationtype: MT
+ms.openlocfilehash: 793645c442e960c43f00c3ea3c9b636a4c539706
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/30/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="windows-workflow-foundation-4-performance"></a>Windows Workflow Foundation 4 performansı
 Dustin Metzgar  
@@ -29,12 +17,12 @@ Dustin Metzgar
   
  Microsoft [!INCLUDE[netfx40_long](../../../includes/netfx40-long-md.md)] büyük düzeltme ağır Yatırımlar ile Windows Workflow Foundation (WF), performans içerir.  Bu yeni bir düzeltme önemli tasarım değişiklikleri önceki sürümlerinden tanıtır [!INCLUDE[wf1](../../../includes/wf1-md.md)] .NET Framework 3.0 bir parçası olarak gönderilen ve [!INCLUDE[netfx35_short](../../../includes/netfx35-short-md.md)]. Programlama modeli, çalışma zamanı ve performansını ve kullanılabilirliğini önemli ölçüde artırmak için araç çekirdek yeniden tasarlanmış olmuştur. Bu konu, bu düzeltmeleri önemli performans özelliklerini gösterir ve bu önceki sürüm karşı karşılaştırır.  
   
- Büyüklük WF3 WF4 arasındaki tarafından ayrı ayrı iş akışı bileşen performansı artar.  Bu, elle kodlanmış arasında boşluk bırakır [!INCLUDE[indigo1](../../../includes/indigo1-md.md)] Hizmetleri ve [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] oldukça küçük olacak şekilde iş akışı hizmetleri.  İş akışı gecikme süresi içinde WF4 önemli ölçüde düşürdü.  2.5-3.0 faktörüyle Kalıcılık performans artar.  İş akışı izleme yoluyla sistem durumu izleme önemli ölçüde daha az yüke sahiptir.  Bu, geçiş veya WF4 uygulamalarınızda benimsemek için nedenleri çekici.  
+ Büyüklük WF3 WF4 arasındaki tarafından ayrı ayrı iş akışı bileşen performansı artar.  Bu elle kodlanmış Windows Communication Foundation (WCF) hizmetleri arasında boşluk bırakır ve [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] oldukça küçük olacak şekilde iş akışı hizmetleri.  İş akışı gecikme süresi içinde WF4 önemli ölçüde düşürdü.  2.5-3.0 faktörüyle Kalıcılık performans artar.  İş akışı izleme yoluyla sistem durumu izleme önemli ölçüde daha az yüke sahiptir.  Bu, geçiş veya WF4 uygulamalarınızda benimsemek için nedenleri çekici.  
   
 ## <a name="terminology"></a>Terminoloji  
  Sürümü [!INCLUDE[wf1](../../../includes/wf1-md.md)] sunulan [!INCLUDE[netfx40_short](../../../includes/netfx40-short-md.md)] için bu konunun geri kalanı için WF4 anılacaktır.  [!INCLUDE[wf1](../../../includes/wf1-md.md)] .NET 3.0 sunulmuştur ve birkaç küçük düzeltmeden vardı [!INCLUDE[netfx35_short](../../../includes/netfx35-short-md.md)] SP1. [!INCLUDE[netfx35_short](../../../includes/netfx35-short-md.md)] Workflow Foundation sürümü bulunulabilir için WF3 bu konunun geri kalanı için. WF3 gönderildiği [!INCLUDE[netfx40_short](../../../includes/netfx40-short-md.md)] yana birimi WF4 ile. WF4 geçirme WF3 yapılara hakkında daha fazla bilgi için bkz: [Windows Workflow Foundation 4 Geçiş Kılavuzu](http://go.microsoft.com/fwlink/?LinkID=153313)  
   
- [!INCLUDE[indigo1](../../../includes/indigo1-md.md)] Hizmet odaklı uygulamalar oluşturmak için Microsoft'un programlama modelidir. İlk .net 3.0 WF3 birlikte bir parçası olarak sunulmuştur ve şimdi anahtar bileşenlerinden biri olan [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)].  
+ Windows Communication Foundation (WCF) hizmet odaklı uygulamalar oluşturmak için Microsoft'un programlama modelidir. İlk .net 3.0 WF3 birlikte bir parçası olarak sunulmuştur ve şimdi anahtar bileşenlerinden biri olan [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)].  
   
  Windows Server AppFabric oluşturulmasını, ölçeklenmesini ve Web ve IIS'de çalışan bileşik uygulamaları yönetmek kolaylaştıran bir tümleşik teknoloji kümesidir. İzleme ve Hizmetleri ve iş akışlarını yönetmek için araçlar sağlar. Daha fazla bilgi için bkz: [Windows Server AppFabric](http://msdn.microsoft.com/windowsserver/ee695849.aspx)  
   

@@ -1,39 +1,25 @@
 ---
-title: "Nasıl yapılır: ICommandSource Uygulama"
-ms.custom: 
+title: 'Nasıl yapılır: ICommandSource Uygulama'
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-wpf
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
 helpviewer_keywords:
 - ICommandSource interfaces [WPF], implementing
 ms.assetid: 7452dd39-6e11-44bf-806a-31d87f3772ac
-caps.latest.revision: 
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: d82a211f59fbdecdc932b7e57b242274e91cd5b2
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 9308bfbbb7fff86ca5e93c1155cc29e4ee0d05f2
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-implement-icommandsource"></a>Nasıl yapılır: ICommandSource Uygulama
-Bu örnek uygulama tarafından bir komut kaynağı oluşturmak nasıl gösterir <xref:System.Windows.Input.ICommandSource>.  Komutu bir komut çağrılacak bildiği bir nesne kaynağıdır.  <xref:System.Windows.Input.ICommandSource> Bir arabirimi kullanıma sunan üç üye: <xref:System.Windows.Input.ICommandSource.Command%2A>, <xref:System.Windows.Input.ICommandSource.CommandParameter%2A>, ve <xref:System.Windows.Input.ICommandSource.CommandTarget%2A>.  <xref:System.Windows.Input.ICommandSource.Command%2A>çağrılacak komuttur. <xref:System.Windows.Input.ICommandSource.CommandParameter%2A> Komut kaynağından komutu işleyen yönteme geçirilen bir kullanıcı tanımlı veri türü. <xref:System.Windows.Input.ICommandSource.CommandTarget%2A> Komut üzerinde yürütülmekte olan nesnesidir.  
+Bu örnek uygulama tarafından bir komut kaynağı oluşturmak nasıl gösterir <xref:System.Windows.Input.ICommandSource>.  Komutu bir komut çağrılacak bildiği bir nesne kaynağıdır.  <xref:System.Windows.Input.ICommandSource> Bir arabirimi kullanıma sunan üç üye: <xref:System.Windows.Input.ICommandSource.Command%2A>, <xref:System.Windows.Input.ICommandSource.CommandParameter%2A>, ve <xref:System.Windows.Input.ICommandSource.CommandTarget%2A>.  <xref:System.Windows.Input.ICommandSource.Command%2A> çağrılacak komuttur. <xref:System.Windows.Input.ICommandSource.CommandParameter%2A> Komut kaynağından komutu işleyen yönteme geçirilen bir kullanıcı tanımlı veri türü. <xref:System.Windows.Input.ICommandSource.CommandTarget%2A> Komut üzerinde yürütülmekte olan nesnesidir.  
   
  Bu örnekte, bir sınıf alt oluşturulur <xref:System.Windows.Controls.Slider> denetimi ve uygulayan <xref:System.Windows.Input.ICommandSource>.  
   
 ## <a name="example"></a>Örnek  
- [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]arabirimini uygulayan sınıflar sayısını sağlar <xref:System.Windows.Input.ICommandSource>, gibi <xref:System.Windows.Controls.Button>, <xref:System.Windows.Controls.MenuItem>, ve <xref:System.Windows.Controls.ListBoxItem>.  Komut kaynak nasıl çalıştırılacağını tanımlar.   <xref:System.Windows.Controls.Button>ve <xref:System.Windows.Controls.MenuItem> bunlar tıklatıldığında bir komut çağırılır.  A <xref:System.Windows.Controls.ListBoxItem> çift tıklatıldığında bir komutu çalıştırır. Bu sınıfların yalnızca bir komut haline kaynağı kendi <xref:System.Windows.Input.ICommandSource.Command%2A> özelliği ayarlanmış.  
+ [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] arabirimini uygulayan sınıflar sayısını sağlar <xref:System.Windows.Input.ICommandSource>, gibi <xref:System.Windows.Controls.Button>, <xref:System.Windows.Controls.MenuItem>, ve <xref:System.Windows.Controls.ListBoxItem>.  Komut kaynak nasıl çalıştırılacağını tanımlar.   <xref:System.Windows.Controls.Button> ve <xref:System.Windows.Controls.MenuItem> bunlar tıklatıldığında bir komut çağırılır.  A <xref:System.Windows.Controls.ListBoxItem> çift tıklatıldığında bir komutu çalıştırır. Bu sınıfların yalnızca bir komut haline kaynağı kendi <xref:System.Windows.Input.ICommandSource.Command%2A> özelliği ayarlanmış.  
   
  Kaydırıcı taşındığında komutu çağırılır bu örneğin ya da daha doğru bir şekilde zaman <xref:System.Windows.Controls.Primitives.RangeBase.Value%2A> özelliği değiştirildi.  
   

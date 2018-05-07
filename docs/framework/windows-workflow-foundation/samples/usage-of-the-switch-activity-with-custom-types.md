@@ -1,23 +1,12 @@
 ---
-title: "Özel türler anahtar etkinlikle kullanımı"
-ms.custom: 
+title: Özel türler anahtar etkinlikle kullanımı
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 482a48c4-eb83-40c3-a4e2-2f9a8af88b75
-caps.latest.revision: "10"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 61485a59ae3af17bef58c0fccbe062c8b9171a34
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 2b6f3109324064cb5e746de9c61e5a70c4c4d60b
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="usage-of-the-switch-activity-with-custom-types"></a>Özel türler anahtar etkinlikle kullanımı
 Bu örnek nasıl etkinleştirileceğini açıklar bir <xref:System.Activities.Statements.Switch%601> çalışma zamanında kullanıcı tarafından tanımlanan karmaşık tür değerlendirmek için etkinlik. Çoğu geleneksel yordam programlama dillerinde, bir [geçiş](http://go.microsoft.com/fwlink/?LinkId=180521) deyimi bir değişkene koşullu değerlendirmeye dayanarak bir yürütme mantığını seçer. Geleneksel olarak, bir `switch` deyimi statik olarak değerlendirilen bir ifade üzerinde çalışır. Örneğin, C# gibi yalnızca basit türler yani <xref:System.Boolean>, <xref:System.Int32>, <xref:System.String>, ve Numaralandırma türleri desteklenir.  
@@ -136,7 +125,7 @@ Bu örnek nasıl etkinleştirileceğini açıklar bir <xref:System.Activities.St
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  Bu dizin mevcut değilse, Git [Windows Communication Foundation (WCF) ve .NET Framework 4 için Windows Workflow Foundation (WF) örnek](http://go.microsoft.com/fwlink/?LinkId=150780) tüm indirmek için [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] ve [!INCLUDE[wf1](../../../../includes/wf1-md.md)] örnekleri. Bu örnek aşağıdaki dizinde bulunur.  
+>  Bu dizin mevcut değilse, Git [Windows Communication Foundation (WCF) ve .NET Framework 4 için Windows Workflow Foundation (WF) örnek](http://go.microsoft.com/fwlink/?LinkId=150780) tüm Windows Communication Foundation (WCF) indirmek için ve [!INCLUDE[wf1](../../../../includes/wf1-md.md)] örnekleri. Bu örnek aşağıdaki dizinde bulunur.  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WF\Basic\Built-InActivities\Switch`  
   

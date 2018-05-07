@@ -1,28 +1,14 @@
 ---
-title: "Nasıl yapılır: ContextMenuOpening Olayını İşleme"
-ms.custom: 
+title: 'Nasıl yapılır: ContextMenuOpening Olayını İşleme'
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-wpf
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - ContextMenuOpening properties [WPF]
 ms.assetid: 789652fb-1951-4217-934a-7843e355adf4
-caps.latest.revision: 
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 5eec8646a48f94fb9ffdcad14849416732618a06
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: ab4c4867981cd318738b7404d76f2f5932bb9059
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-handle-the-contextmenuopening-event"></a>Nasıl yapılır: ContextMenuOpening Olayını İşleme
 <xref:System.Windows.FrameworkElement.ContextMenuOpening> Olay ya da varolan bağlam menüsü önceliğini görüntülemek veya ayarlayarak görüntülenen menüsünü bastırmak için ayarlamak için bir uygulamada işlenebilir <xref:System.Windows.RoutedEventArgs.Handled%2A> özelliğine `true` olay verisi içinde. Ayar tipik nedeni <xref:System.Windows.RoutedEventArgs.Handled%2A> için `true` olay verileri menü tamamen yeni bir ile değiştirmektir <xref:System.Windows.Controls.ContextMenu> nesnesi, bazen işlemi iptal ediliyor ve yeni bir açık başlatma gerektirir. İçin işleyiciler yazarsanız <xref:System.Windows.FrameworkElement.ContextMenuOpening> olayı olmanız gerekir arasında zamanlama sorunların farkında bir <xref:System.Windows.Controls.ContextMenu> denetimi ve açma ve denetimlerin bağlam menülerini genel konumlandırma sorumlu hizmet. Bu konu, çeşitli bağlam menüsü açma senaryolarının kod tekniklerini bazıları gösterir ve zamanlama sorunu oyuna nereden geldiğini durumunu gösterir.  

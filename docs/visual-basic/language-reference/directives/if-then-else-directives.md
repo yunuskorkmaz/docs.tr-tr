@@ -1,10 +1,6 @@
 ---
 title: '#If... Then... #Else yönergeleri'
 ms.date: 04/11/2018
-ms.prod: .net
-ms.technology:
-- devlang-visual-basic
-ms.topic: article
 f1_keywords:
 - vb.#EndIf
 - '#End If'
@@ -24,11 +20,11 @@ helpviewer_keywords:
 ms.assetid: 10bba104-e3fd-451b-b672-faa472530502
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 884c7ed6f0a346f2d35f01006cea23e47907d13f
-ms.sourcegitcommit: 9a4fe1a1c37b26532654b4bbe22d702237950009
+ms.openlocfilehash: 69ce56d770de5f004f204b1764fd51d948ba92c1
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="ifthenelse-directives"></a>#If...Then...#Else Yönergeleri
 Visual Basic kodu seçili bloklarını koşullu olarak derler.  
@@ -85,7 +81,7 @@ Koşullu derleme bloğundaki ifadeleri tam mantıksal deyimler olmalıdır. Örn
   
  [!code-vb[VbVbalrConditionalComp#1](../../../visual-basic/language-reference/directives/codesnippet/VisualBasic/if-then-else-directives_1.vb)]  
   
-## <a name="see-also"></a>Ayrıca bkz.  
+## <a name="see-also"></a>Ayrıca Bkz.  
 [#Const Yönergesi](../../../visual-basic/language-reference/directives/const-directive.md)  
 [If...Then...Else Deyimi](../../../visual-basic/language-reference/statements/if-then-else-statement.md)  
 [Koşullu derleme](../../../visual-basic/programming-guide/program-structure/conditional-compilation.md)   

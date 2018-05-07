@@ -1,24 +1,12 @@
 ---
 title: WorkflowIdentity ve sürüm oluşturma kullanma
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.tgt_pltfrm: ''
-ms.topic: article
 ms.assetid: b8451735-8046-478f-912b-40870a6c0c3a
-caps.latest.revision: 6
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: bc527fe59468544cf94256d100a1f90dd3cd44dd
-ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
+ms.openlocfilehash: 0d8c02dca67d24399972417f9d6485d668215742
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/28/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="using-workflowidentity-and-versioning"></a>WorkflowIdentity ve sürüm oluşturma kullanma
 <xref:System.Activities.WorkflowIdentity> İş akışı için bir ad ilişkilendirmek için uygulama geliştiricileri bir yol sağlar ve bir <xref:System.Version> bir iş akışı tanımıyla ve kalıcı iş akışı örneği ile ilişkili olması için bu bilgileri. Bu kimlik bilgileri, iş akışı uygulama geliştiriciler tarafından birden çok iş akışı tanımı sürümlerinin yan yana yürütme gibi senaryoları etkinleştirmek için kullanılabilir ve dinamik güncelleştirme gibi diğer işlevleri için dönüm sağlar. Bu konuda kullanmanın genel sağlanır <xref:System.Activities.WorkflowIdentity> ile <xref:System.Activities.WorkflowApplication> barındırma. Yan yana yürütme, bir iş akışı hizmetinde iş akışı tanımları hakkında daha fazla bilgi için bkz: [WorkflowServiceHost yan yana sürüm oluşturma](../../../docs/framework/wcf/feature-details/side-by-side-versioning-in-workflowservicehost.md). Dinamik güncelleştirme hakkında daha fazla bilgi için bkz: [dinamik güncelleştirme](../../../docs/framework/windows-workflow-foundation/dynamic-update.md).  

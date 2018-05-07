@@ -1,22 +1,12 @@
 ---
-title: "Standart sorgu işleçlerine genel bakış (Visual Basic)"
-ms.custom: 
+title: Standart sorgu işleçlerine genel bakış (Visual Basic)
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 302bd39e-2ec1-495b-94bf-37d370d6f05f
-caps.latest.revision: "3"
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: 3f9ad39b4890455f7d03f0b9bbfc51264d98d56b
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 27b144ae75054dbdc535b6ad894e4a5a0b8529e8
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="standard-query-operators-overview-visual-basic"></a>Standart sorgu işleçlerine genel bakış (Visual Basic)
 *Standart sorgu işleçleri* LINQ düzeni form yöntemleridir. Bu yöntemlerin çoğu bir dizi türü uygulayan bir nesne olduğu sıraları üzerinde çalışması <xref:System.Collections.Generic.IEnumerable%601> arabirimi veya <xref:System.Linq.IQueryable%601> arabirimi. Standart sorgu işleçleri filtreleme, yansıtma, toplama, sıralama ve daha fazlası dahil olmak üzere sorgu özellikleri sağlar.  
@@ -81,7 +71,7 @@ MsgBox(output.ToString())
 ## <a name="related-sections"></a>İlgili Bölümler  
  Aşağıdaki bağlantılar işlevselliğine bağlı çeşitli standart sorgu işleçleri hakkında ek bilgiler sağlayan konulara götürür.  
   
- [Verileri sıralama](../../../../visual-basic/programming-guide/concepts/linq/sorting-data.md)  
+ [Verileri Sıralama](../../../../visual-basic/programming-guide/concepts/linq/sorting-data.md)  
   
  [Ayarlama işlemleri (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/set-operations.md)  
   
@@ -115,4 +105,4 @@ MsgBox(output.ToString())
  [Lınq'ye giriş (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/introduction-to-linq.md)  
  [Standart sorgu işleçleri (Visual Basic) için sorgu ifade sözdizimi](../../../../visual-basic/programming-guide/concepts/linq/query-expression-syntax-for-standard-query-operators.md)  
  [Standart sorgu işleçleri (Visual Basic) yürütme yöntemine göre sınıflandırılması](../../../../visual-basic/programming-guide/concepts/linq/classification-of-standard-query-operators-by-manner-of-execution.md)  
- [Genişletme yöntemleri](../../../../visual-basic/programming-guide/language-features/procedures/extension-methods.md)
+ [Genişletme Yöntemleri](../../../../visual-basic/programming-guide/language-features/procedures/extension-methods.md)

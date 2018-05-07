@@ -1,13 +1,6 @@
 ---
-title: "Nasıl yapılır: Özel Kesikli Çizgi Çizme"
-ms.custom: 
+title: 'Nasıl yapılır: Özel Kesikli Çizgi Çizme'
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-winforms
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -16,19 +9,14 @@ helpviewer_keywords:
 - lines [Windows Forms], drawing
 - lines [Windows Forms], dashed
 ms.assetid: cd0ed96a-cce4-47b9-b58a-3bae2e3d1bee
-caps.latest.revision: "16"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 770ce290b21f7d0094a487c30079063b79a7c08d
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 39dde3bb45165783171326b79e98744807350952
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-draw-a-custom-dashed-line"></a>Nasıl yapılır: Özel Kesikli Çizgi Çizme
-[!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)]listelenen birkaç çizgi stili sağlar <xref:System.Drawing.Drawing2D.DashStyle> numaralandırması. Bu standart çizgi stillerini gereksinimlerinize göre değil, özel tire deseni oluşturabilirsiniz.  
+[!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] listelenen birkaç çizgi stili sağlar <xref:System.Drawing.Drawing2D.DashStyle> numaralandırması. Bu standart çizgi stillerini gereksinimlerinize göre değil, özel tire deseni oluşturabilirsiniz.  
   
 ## <a name="example"></a>Örnek  
  Özel kesikli çizgi çizmek için bir dizi çizgi ve boşluk uzunlukları koy ve dizi değeri olarak atamak <xref:System.Drawing.Pen.DashPattern%2A> özelliği bir <xref:System.Drawing.Pen> nesnesi. Aşağıdaki örnek dizisine göre özel kesikli çizgi çizer `{5, 2, 15, 4}`. Dizideki öğeler 5 kalem genişliği tarafından Çarp olursa, `{25, 10, 75, 20}`. 25 ve 75 arasındaki uzunluğu görüntülenen tireler alternatif ve uzunluğu 10 ile 20 arasında boşluk alternatif.  

@@ -1,27 +1,15 @@
 ---
-title: "Açılır Pencereye Genel Bakış"
-ms.custom: 
+title: Açılır Pencereye Genel Bakış
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-wpf
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - controls [WPF], Popup
 - Popup control [WPF], about Popup control
 ms.assetid: 774f53ca-bff8-470e-9ce9-3928b4cf3d4c
-caps.latest.revision: "34"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 0cb20895b5af35fec7274ca4c747740390104355
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: c9261e2151f116b46a0c25d8dc775bf41bf932b7
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="popup-overview"></a>Açılır Pencereye Genel Bakış
 <xref:System.Windows.Controls.Primitives.Popup> Denetimi atanmış bir öğe veya ekran koordinat göre geçerli uygulama penceresi üzerinde gezinen ayrı bir pencerede içeriği görüntülemek için bir yol sağlar. Bu konu tanıtır <xref:System.Windows.Controls.Primitives.Popup> denetlemek ve kullanımı hakkında bilgi sağlar.  
@@ -81,7 +69,7 @@ ms.lasthandoff: 12/22/2017
 ### <a name="popup-size"></a>Açılan pencere boyutu  
  Varsayılan olarak, bir <xref:System.Windows.Controls.Primitives.Popup> için içeriği otomatik olarak boyutlandırılır. Otomatik boyutlandırma oluştuğunda bazı bit eşlem efektleri çünkü gizlenebilir için tanımlanan ekran alanının varsayılan boyutu <xref:System.Windows.Controls.Primitives.Popup> içeriği görüntülemek bit eşlem efektleri için yeterli alan sağlamaz.  
   
- <xref:System.Windows.Controls.Primitives.Popup>içerik de ayarladığınızda görünmeyebilir bir <xref:System.Windows.UIElement.RenderTransform%2A> içerik üzerinde. Bu senaryoda, bazı içerikler gizlenmiş olabilir dönüştürülmüş içeriğini <xref:System.Windows.Controls.Primitives.Popup> özgün alanı genişleterek <xref:System.Windows.Controls.Primitives.Popup>. Bir bit eşlem efekti veya dönüşümü daha fazla alan gerektiriyorsa, çevresindeki kenar boşluğu tanımlayabilirsiniz <xref:System.Windows.Controls.Primitives.Popup> içerik denetimi için daha fazla alan sağlamak için.  
+ <xref:System.Windows.Controls.Primitives.Popup> içerik de ayarladığınızda görünmeyebilir bir <xref:System.Windows.UIElement.RenderTransform%2A> içerik üzerinde. Bu senaryoda, bazı içerikler gizlenmiş olabilir dönüştürülmüş içeriğini <xref:System.Windows.Controls.Primitives.Popup> özgün alanı genişleterek <xref:System.Windows.Controls.Primitives.Popup>. Bir bit eşlem efekti veya dönüşümü daha fazla alan gerektiriyorsa, çevresindeki kenar boşluğu tanımlayabilirsiniz <xref:System.Windows.Controls.Primitives.Popup> içerik denetimi için daha fazla alan sağlamak için.  
   
 <a name="DefiningPopupPosition"></a>   
 ## <a name="defining-the-popup-position"></a>Popup konumu tanımlama  

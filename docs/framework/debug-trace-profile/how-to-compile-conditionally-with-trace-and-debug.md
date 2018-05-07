@@ -1,14 +1,6 @@
 ---
 title: 'Nasıl yapılır: İzleme ve Hata Ayıklama ile Koşullu Derleme'
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 helpviewer_keywords:
 - trace compiler options
 - trace statements
@@ -18,17 +10,13 @@ helpviewer_keywords:
 - TRACE directive
 - conditional compilation, tracing code
 ms.assetid: 56d051c3-012c-42c1-9a58-7270edc624aa
-caps.latest.revision: ''
 author: mairaw
 ms.author: mairaw
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 5e590888a56ed4c325e89eb828349f4f289815cd
-ms.sourcegitcommit: 498799639937c89de777361aab74261efe7b79ea
+ms.openlocfilehash: 45e62fed53999636e23693ad7e61fedf21bc5423
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/22/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-compile-conditionally-with-trace-and-debug"></a>Nasıl yapılır: İzleme ve Hata Ayıklama ile Koşullu Derleme
 Uygulama geliştirme sırasında hata ayıklarken, Visual Studio çıktı penceresinde, izleme ve hata ayıklama çıkışını gidin. Ancak, dağıtılan bir uygulama izleme özellikleri içerecek şekilde, Araçlı uygulamalarınızla derleme gerekir **izleme** etkin derleyici yönergesi. Bu, uygulamanızın yayın sürümüne derlenecek izleme kodu sağlar. Değil etkinleştirirseniz, **izleme** yönerge, tüm izleme kodu derleme sırasında yok sayılır ve dağıtacağınız yürütülebilir kod dahil edilmez.  
@@ -91,8 +79,8 @@ Uygulama geliştirme sırasında hata ayıklarken, Visual Studio çıktı pencer
     ||**#CONST DEBUG = true**|Hata ayıklamayı etkinleştirir|  
     ||**#CONST DEBUG = false**|Hata ayıklama devre dışı bırakır|  
     |**C#**|**#define TRACE**|İzlemeyi etkinleştirir|  
-    ||**#undef TRACE**|İzleme devre dışı bırakır|  
-    ||**#define DEBUG**|Hata ayıklamayı etkinleştirir|  
+    ||**#undef izleme**|İzleme devre dışı bırakır|  
+    ||**# hata ayıklama define**|Hata ayıklamayı etkinleştirir|  
     ||**#undef hata ayıklama**|Hata ayıklama devre dışı bırakır|  
   
 ### <a name="to-disable-tracing-or-debugging"></a>İzleme veya hata ayıklama devre dışı bırakmak için  

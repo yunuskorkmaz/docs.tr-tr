@@ -1,13 +1,6 @@
 ---
 title: Veri ve Veri Nesneleri
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-wpf
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -16,16 +9,11 @@ helpviewer_keywords:
 - DataFormats class [WPF]
 - DataObject class [WPF]
 ms.assetid: 5967d557-1867-420f-a524-ae3af78402da
-caps.latest.revision: "5"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: cb2354b61a0433981675ba55978f31937212cabc
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: ff596dc7428c9d105a27999f216d33e735e35a22
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="data-and-data-objects"></a>Veri ve Veri Nesneleri
 Sürükle ve bırak işlemi bir parçası olarak aktarılan veriler bir veri nesnesinde depolanır.  Kavramsal olarak, bir veri nesnesi bir veya daha fazla aşağıdaki çiftleri oluşur:  
@@ -47,7 +35,7 @@ Sürükle ve bırak işlemi bir parçası olarak aktarılan veriler bir veri nes
 |<xref:System.Windows.IDataObject.GetFormats%2A>|Bu veri nesnesi verilerinde depolanır veya dönüştürülebilir biçimlerinin listesini döndürür.|  
 |<xref:System.Windows.IDataObject.SetData%2A>|Belirtilen verileri bu veri nesnesinde depolar.|  
   
- [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]temel bir uygulamasını sağlar <xref:System.Windows.IDataObject> içinde <xref:System.Windows.DataObject> sınıfı. Hisse senedi <xref:System.Windows.DataObject> sınıftır birçok ortak veri aktarımı senaryoları için yeterlidir.  
+ [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] temel bir uygulamasını sağlar <xref:System.Windows.IDataObject> içinde <xref:System.Windows.DataObject> sınıfı. Hisse senedi <xref:System.Windows.DataObject> sınıftır birçok ortak veri aktarımı senaryoları için yeterlidir.  
   
  Bit eşlem, CSV, dosya, HTML, RTF, dize, metin ve ses gibi çeşitli ön tanımlı biçimleri vardır. İle sağlanan önceden tanımlanmış veri biçimleri hakkında bilgi için [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)], bkz: <xref:System.Windows.DataFormats> sınıfı başvuru konusu.  
   
@@ -86,7 +74,7 @@ Sürükle ve bırak işlemi bir parçası olarak aktarılan veriler bir veri nes
  Daha fazla kullanılabilir veri biçimleri için bir veri nesnesi sorgular kod örnekleri için bkz: [bir veri nesnesinde veri biçimlerini listeleme](../../../../docs/framework/wpf/advanced/how-to-list-the-data-formats-in-a-data-object.md).  Belirli veri biçimi varlığı için veri nesnesi sorgulama örnekleri için bkz: [veri biçimi var olup olmadığını bir veri nesnesinde](../../../../docs/framework/wpf/advanced/how-to-determine-if-a-data-format-is-present-in-a-data-object.md).  
   
 ### <a name="retrieving-data-from-a-data-object"></a>Bir veri nesnesinden veriyi geri alma  
- Belirli bir biçimde veri nesnesinden verileri alma yalnızca içerir birini çağırma <xref:System.Windows.DataObject.GetData%2A> yöntemleri ve istenen veri biçimini belirleme.  Aşağıdakilerden birini <xref:System.Windows.DataObject.GetDataPresent%2A> yöntemleri, belirli veri biçimi olup olmadığını denetlemek için kullanılabilir.  <xref:System.Windows.DataObject.GetData%2A>veriler döndüren bir <xref:System.Object>; veri biçimine bağlı olarak bu nesne türüne özgü kapsayıcıya çevirebilirsiniz.  
+ Belirli bir biçimde veri nesnesinden verileri alma yalnızca içerir birini çağırma <xref:System.Windows.DataObject.GetData%2A> yöntemleri ve istenen veri biçimini belirleme.  Aşağıdakilerden birini <xref:System.Windows.DataObject.GetDataPresent%2A> yöntemleri, belirli veri biçimi olup olmadığını denetlemek için kullanılabilir.  <xref:System.Windows.DataObject.GetData%2A> veriler döndüren bir <xref:System.Object>; veri biçimine bağlı olarak bu nesne türüne özgü kapsayıcıya çevirebilirsiniz.  
   
  Aşağıdaki kod örneği kullanan <xref:System.Windows.DataObject.GetDataPresent%28System.String%29> belirtilen veri biçiminin kullanılabilir olup olmadığını denetlemek için aşırı yükleme (yerel veya otomatik dönüştürerek). Belirtilen biçim kullanılabilir durumdaysa, örnek verileri kullanarak alır <xref:System.Windows.DataObject.GetData%28System.String%29> yöntemi.  
   

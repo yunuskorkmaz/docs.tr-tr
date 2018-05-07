@@ -1,34 +1,20 @@
 ---
 title: Bir Uç Noktası Adresi Belirtme
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 dev_langs:
 - csharp
 - vb
 helpviewer_keywords:
 - endpoints [WCF], addressing
 ms.assetid: ac24f5ad-9558-4298-b168-c473c68e819b
-caps.latest.revision: 41
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 99fdfad6c06e74a92d7fffb7c7a5e14284757e12
-ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
-ms.translationtype: MT
+ms.openlocfilehash: 784b0fe3e2b23287d458f9aa4d8276e10dd6ed97
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/30/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="specifying-an-endpoint-address"></a>Bir Uç Noktası Adresi Belirtme
-İle tüm iletişimin bir [!INCLUDE[indigo1](../../../includes/indigo1-md.md)] hizmet kendi bitiş noktalarından oluşur. Her <xref:System.ServiceModel.Description.ServiceEndpoint> içeren bir <xref:System.ServiceModel.Description.ServiceEndpoint.Address%2A>, <xref:System.ServiceModel.Description.ServiceEndpoint.Binding%2A>ve bir <xref:System.ServiceModel.Description.ServiceEndpoint.Contract%2A>. Hangi işlemleri kullanılabilir sözleşme belirtir. Bağlama hizmetiyle iletişim kurma ve hizmet nerede bulacağını adresini belirtir. Her uç noktası benzersiz bir adres olmalıdır. Uç nokta adresi tarafından temsil edilen <xref:System.ServiceModel.EndpointAddress> hizmetinin adresini gösteren bir Tekdüzen Kaynak Tanımlayıcısı (URI) içeren sınıf bir <xref:System.ServiceModel.EndpointAddress.Identity%2A>, hizmet güvenlik kimliğini ve isteğe bağlı bir topluluğu gösterir <xref:System.ServiceModel.EndpointAddress.Headers%2A>. İsteğe bağlı üstbilgi tanımlamak veya uç noktasıyla etkileşim için adresleme daha ayrıntılı bilgi sağlar. Örneğin, üstbilgileri gelen iletiyi işlemeye nasıl, burada uç nokta bir yanıt iletisi göndermesi gerekir veya birden çok örneği kullanılamadığında belirli bir kullanıcıdan gelen iletiyi işlemek için kullanılacak bir hizmetin hangi örneğinin gösterebilir.  
+Windows Communication Foundation (WCF) hizmetiyle kurulan tüm iletişimlerde kendi bitiş noktalarından oluşur. Her <xref:System.ServiceModel.Description.ServiceEndpoint> içeren bir <xref:System.ServiceModel.Description.ServiceEndpoint.Address%2A>, <xref:System.ServiceModel.Description.ServiceEndpoint.Binding%2A>ve bir <xref:System.ServiceModel.Description.ServiceEndpoint.Contract%2A>. Hangi işlemleri kullanılabilir sözleşme belirtir. Bağlama hizmetiyle iletişim kurma ve hizmet nerede bulacağını adresini belirtir. Her uç noktası benzersiz bir adres olmalıdır. Uç nokta adresi tarafından temsil edilen <xref:System.ServiceModel.EndpointAddress> hizmetinin adresini gösteren bir Tekdüzen Kaynak Tanımlayıcısı (URI) içeren sınıf bir <xref:System.ServiceModel.EndpointAddress.Identity%2A>, hizmet güvenlik kimliğini ve isteğe bağlı bir topluluğu gösterir <xref:System.ServiceModel.EndpointAddress.Headers%2A>. İsteğe bağlı üstbilgi tanımlamak veya uç noktasıyla etkileşim için adresleme daha ayrıntılı bilgi sağlar. Örneğin, üstbilgileri gelen iletiyi işlemeye nasıl, burada uç nokta bir yanıt iletisi göndermesi gerekir veya birden çok örneği kullanılamadığında belirli bir kullanıcıdan gelen iletiyi işlemek için kullanılacak bir hizmetin hangi örneğinin gösterebilir.  
   
 ## <a name="definition-of-an-endpoint-address"></a>Bir uç nokta adresi tanımı  
  İçinde [!INCLUDE[indigo2](../../../includes/indigo2-md.md)], bir <xref:System.ServiceModel.EndpointAddress> bir uç nokta başvurusu (EPR) WS adresleme standardında tanımlanan modeller.  

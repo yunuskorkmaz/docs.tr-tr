@@ -1,31 +1,17 @@
 ---
-title: "Nasıl yapılır: Görsel Taslakla Özelliğe Animasyon Ekledikten Sonra Ayarlama"
-ms.custom: 
+title: 'Nasıl yapılır: Görsel Taslakla Özelliğe Animasyon Ekledikten Sonra Ayarlama'
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-wpf
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
 helpviewer_keywords:
 - animation [WPF], changing property values after
 ms.assetid: 79466556-4dbf-40bd-9c1e-a77613b07077
-caps.latest.revision: 
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 3ffc534549f5b114a07f09326be72c1968d178a8
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: b8e9c08075b13f8d6f701d5ac6ae4f8ea8949184
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-set-a-property-after-animating-it-with-a-storyboard"></a>Nasıl yapılır: Görsel Taslakla Özelliğe Animasyon Ekledikten Sonra Ayarlama
 Bazı durumlarda, animasyon sonra bir özelliğin değerini değiştiremezsiniz görünebilir.  
@@ -43,7 +29,7 @@ Bazı durumlarda, animasyon sonra bir özelliğin değerini değiştiremezsiniz 
   
  Önceki kod herhangi bir şey yapmanızı görünmüyor: değeri olan fırça sarı olarak kalır verdiği <xref:System.Windows.Media.Animation.ColorAnimation> fırça animasyonlu. Temel alınan özellik değeri (Temel) gerçekte mavi olarak değiştirilir. Ancak, etkin veya geçerli, değer sarı olarak kalır çünkü <xref:System.Windows.Media.Animation.ColorAnimation> hala temel değeri geçersiz kılma. Temel değerin yeniden etkili değer olmasını istiyorsanız, animasyonun özelliği etkilemesini durdurmanız gerekir. Film şeridi animasyonları ile bunun için üç yolu vardır:  
   
--   Animasyonun ayarlamak <xref:System.Windows.Media.Animation.Timeline.FillBehavior%2A> özelliği<xref:System.Windows.Media.Animation.FillBehavior.Stop>  
+-   Animasyonun ayarlamak <xref:System.Windows.Media.Animation.Timeline.FillBehavior%2A> özelliği <xref:System.Windows.Media.Animation.FillBehavior.Stop>  
   
 -   Tüm film şeridi kaldırın.  
   

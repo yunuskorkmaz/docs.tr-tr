@@ -1,26 +1,12 @@
 ---
 title: Bağıntı Sorunlarını Giderme
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 ms.assetid: 98003875-233d-4512-a688-4b2a1b0b5371
-caps.latest.revision: 11
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 2de3a8cac6e12d898173f8181b295c3e2e461cc7
-ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
+ms.openlocfilehash: c597012a5ff69ecb700c51e00ac7d1218962e9ad
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/30/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="troubleshooting-correlation"></a>Bağıntı Sorunlarını Giderme
 Bağıntı iş akışı hizmeti iletileri birbirine ve doğru iş akışı örneği ilişkilendirmek için kullanılır, ancak doğru yapılandırılmamışsa, ileti alınmadı ve uygulamaların düzgün çalışmaz. Bu konuda bağıntı sorunlarını gidermek için çeşitli yöntemler genel bir bakış sağlar ve ayrıca bağıntı kullandığınızda oluşabilecek bazı ortak sorunlar listelenmiştir.  
@@ -146,7 +132,7 @@ supports the context protocol and has a valid context initialized.
  Daha fazla bilgi için bkz: [bağlam değişimi](../../../../docs/framework/wcf/feature-details/context-exchange-correlation.md).  
   
 ## <a name="common-request-reply-correlation-issues"></a>İstek-yanıt bağıntısı ile ilgili genel sorunları  
- İstek-yanıt bağıntısı ile kullanılan bir <xref:System.ServiceModel.Activities.Receive> / <xref:System.ServiceModel.Activities.SendReply> çifti ile bir iş akışı hizmeti de iki yönlü bir işlem uygulamak için bir <xref:System.ServiceModel.Activities.Send> / <xref:System.ServiceModel.Activities.ReceiveReply> iki yönlü bir işlem başka bir Web çağırır çifti hizmet. Bir WCF hizmetindeki iki yönlü bir işlem çağrılırken, hizmet ya da bir geleneksel kesinliği kod tabanlı olabilir [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] hizmeti veya bir iş akışı hizmeti olabilir. İstek-yanıt bağıntısı iki yönlü bir bağlama kullanılmalıdır, gibi kullanmak için <xref:System.ServiceModel.BasicHttpBinding>, ve işlemler iki yönlü olması gerekir.  
+ İstek-yanıt bağıntısı ile kullanılan bir <xref:System.ServiceModel.Activities.Receive> / <xref:System.ServiceModel.Activities.SendReply> çifti ile bir iş akışı hizmeti de iki yönlü bir işlem uygulamak için bir <xref:System.ServiceModel.Activities.Send> / <xref:System.ServiceModel.Activities.ReceiveReply> iki yönlü bir işlem başka bir Web çağırır çifti hizmet. Bir WCF hizmetindeki iki yönlü bir işlem çağrılırken, hizmet ya da bir geleneksel olabilir kesinlik temelli kod tabanlı WCF hizmeti veya bir iş akışı hizmeti olabilir. İstek-yanıt bağıntısı iki yönlü bir bağlama kullanılmalıdır, gibi kullanmak için <xref:System.ServiceModel.BasicHttpBinding>, ve işlemler iki yönlü olması gerekir.  
   
  İş akışı hizmeti paralel veya örtüşen iki yönlü işlemlerinde varsa <xref:System.ServiceModel.Activities.Receive> / <xref:System.ServiceModel.Activities.SendReply> veya <xref:System.ServiceModel.Activities.Send> / <xref:System.ServiceModel.Activities.ReceiveReply> çiftleri sonra örtük bağıntı işlemek tarafındansağlananYönetim<xref:System.ServiceModel.Activities.WorkflowServiceHost>özellikle yüksek stres senaryolarda yeterli olmayabilir ve iletileri doğru biçimde yönlendirilemeyebilir. Bu sorunun oluşmasını önlemek için her zaman açıkça belirttiğiniz öneririz bir <xref:System.ServiceModel.Activities.CorrelationHandle> istek-yanıt bağıntısı kullanırken. Kullanırken **SendAndReceiveReply** ve **ReceiveAndSendReply** ileti bölümünden şablonları **araç** iş akışı Tasarımcısı'nda bir <xref:System.ServiceModel.Activities.CorrelationHandle> açıkça varsayılan olarak yapılandırılır. Bir iş akışı kodu kullanarak oluştururken <xref:System.ServiceModel.Activities.CorrelationHandle> belirtilen <xref:System.ServiceModel.Activities.Receive.CorrelationInitializers%2A> çiftindeki ilk etkinliğin. Aşağıdaki örnekte, bir <xref:System.ServiceModel.Activities.Receive> etkinliği açık bir yapılandırılmış <xref:System.ServiceModel.Activities.CorrelationInitializer.CorrelationHandle%2A> belirtilen <xref:System.ServiceModel.Activities.RequestReplyCorrelationInitializer>.  
   

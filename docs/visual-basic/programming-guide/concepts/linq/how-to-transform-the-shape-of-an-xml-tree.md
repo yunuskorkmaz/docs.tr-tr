@@ -1,22 +1,12 @@
 ---
-title: "Nasıl yapılır: bir XML ağacının (Visual Basic) şekil Dönüştür"
-ms.custom: 
+title: 'Nasıl yapılır: bir XML ağacının (Visual Basic) şekil Dönüştür'
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 84b60854-48b2-452c-87f2-77d53e1d653a
-caps.latest.revision: "3"
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: cad7e5fc53b59593cf0c367d65d5bd44564bb1c7
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.openlocfilehash: c1221fb3ad4017d7367493a3c6abef23b8c6b55b
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-transform-the-shape-of-an-xml-tree-visual-basic"></a>Nasıl yapılır: bir XML ağacının (Visual Basic) şekil Dönüştür
 *Şekli* bir XML belgesi öğe adları, öznitelik adları ve özellikleri, hiyerarşinin başvuruyor.  

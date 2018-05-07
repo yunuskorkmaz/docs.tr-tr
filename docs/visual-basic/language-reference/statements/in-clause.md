@@ -1,25 +1,16 @@
 ---
-title: "In Tümcesi (Visual Basic)"
+title: In Tümcesi (Visual Basic)
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- devlang-visual-basic
-ms.topic: article
 f1_keywords:
 - vb.In
 helpviewer_keywords:
 - In keyword [Visual Basic]
 ms.assetid: 2f003a85-8fb6-4280-822b-6ac12839b915
-caps.latest.revision: 
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: 347c1268ccb29238a0845b57d5d0f88f1ca27d59
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.openlocfilehash: 47eb90c9c89c7114c40b8a2caeb0e99f3ceccccb
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="in-clause-visual-basic"></a>In Tümcesi (Visual Basic)
 Döngü değişkeni içinde geçiş yapmak için grubu belirtir bir `For Each` döngü veya sorguda koleksiyona belirtir bir `From`, `Join`, veya `Group Join` yan tümcesi.  
@@ -27,13 +18,13 @@ Döngü değişkeni içinde geçiş yapmak için grubu belirtir bir `For Each` d
 ## <a name="remarks"></a>Açıklamalar  
  `In` Anahtar sözcüğünü aşağıdaki bağlamlarında kullanılabilir:  
   
- [For Each... Sonraki deyim](../../../visual-basic/language-reference/statements/for-each-next-statement.md)  
+ [For Each...Next Deyimi](../../../visual-basic/language-reference/statements/for-each-next-statement.md)  
   
- [From yan tümcesi](../../../visual-basic/language-reference/queries/from-clause.md)  
+ [From Yan Tümcesi](../../../visual-basic/language-reference/queries/from-clause.md)  
   
- [Join tümcesi](../../../visual-basic/language-reference/queries/join-clause.md)  
+ [Join Yan Tümcesi](../../../visual-basic/language-reference/queries/join-clause.md)  
   
- [Group Join tümcesi](../../../visual-basic/language-reference/queries/group-join-clause.md)  
+ [Group Join Yan Tümcesi](../../../visual-basic/language-reference/queries/group-join-clause.md)  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [Anahtar sözcükler](../../../visual-basic/language-reference/keywords/index.md)
+ [Anahtar Sözcükler](../../../visual-basic/language-reference/keywords/index.md)

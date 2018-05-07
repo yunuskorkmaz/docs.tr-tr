@@ -1,27 +1,17 @@
 ---
-title: "Nasıl yapılır: hatalar (Visual Basic) ayrıştırma Catch"
-ms.custom: 
+title: 'Nasıl yapılır: hatalar (Visual Basic) ayrıştırma Catch'
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 22e9068e-ea58-447b-816e-cd1852c11787
-caps.latest.revision: "3"
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: 82b7c51aa8d0f9f64094211c56875e6595607c00
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.openlocfilehash: aa72b914d4640410a4d47ba49e774dcee31a54c0
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-catch-parsing-errors-visual-basic"></a>Nasıl yapılır: hatalar (Visual Basic) ayrıştırma Catch
 Bu konu, hatalı biçimlendirilmiş veya geçersiz XML algılamak gösterilmektedir.  
   
- [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)]kullanılarak uygulanan <xref:System.Xml.XmlReader>. İçin hatalı biçimlendirilmiş veya geçersiz XML aktarılırsa [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)], arka plandaki <xref:System.Xml.XmlReader> sınıfı bir özel durum oluşturur. XML ayrıştırma gibi çeşitli yöntemler <xref:System.Xml.Linq.XElement.Parse%2A?displayProperty=nameWithType>, özel durum catch değil; özel durum sonra uygulamanız tarafından yakalanan.  
+ [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] kullanılarak uygulanan <xref:System.Xml.XmlReader>. İçin hatalı biçimlendirilmiş veya geçersiz XML aktarılırsa [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)], arka plandaki <xref:System.Xml.XmlReader> sınıfı bir özel durum oluşturur. XML ayrıştırma gibi çeşitli yöntemler <xref:System.Xml.Linq.XElement.Parse%2A?displayProperty=nameWithType>, özel durum catch değil; özel durum sonra uygulamanız tarafından yakalanan.  
   
  XML değişmez değerleri kullanıyorsanız elde edilemiyor Not ayrıştırma hataları. Visual Basic derleyici hataları hatalı biçimlendirilmiş veya geçersiz XML yakalar.  
   

@@ -1,11 +1,6 @@
 ---
-title: "\\=İşleci"
+title: '\= işleci'
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
-ms.topic: article
 f1_keywords:
 - '\='
 - vb.\=
@@ -16,14 +11,11 @@ helpviewer_keywords:
 - operator \= [Visual Basic]
 - compound assignment statements [Visual Basic]
 ms.assetid: 6f39915d-e398-4045-afcc-da6885e57b9c
-caps.latest.revision: "13"
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: 5ba74f7a433687b306e8b4273f3a2a6d60583396
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 4ebbf2eca7fb3cd208d979d7f3c77aa106569119
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="-operator"></a>\\= İşleci
 Bir değişken ya da özellik değeri bir ifadenin değerini tarafından böler ve tamsayı sonuç değişken ya da özelliğin atar.  
@@ -60,7 +52,7 @@ variableorproperty \= expression
  [\ İşleci (Visual Basic)](../../../visual-basic/language-reference/operators/integer-division-operator.md)  
  [/ = İşleci (Visual Basic)](../../../visual-basic/language-reference/operators/floating-point-division-assignment-operator.md)  
  [Atama İşleçleri](../../../visual-basic/language-reference/operators/assignment-operators.md)  
- [Aritmetik işleçler](../../../visual-basic/language-reference/operators/arithmetic-operators.md)  
+ [Aritmetik İşleçler](../../../visual-basic/language-reference/operators/arithmetic-operators.md)  
  [Visual Basic'de İşleç önceliği](../../../visual-basic/language-reference/operators/operator-precedence.md)  
- [İşlevselliğe göre listelenmiş işleçler](../../../visual-basic/language-reference/operators/operators-listed-by-functionality.md)  
- [Deyimleri](../../../visual-basic/programming-guide/language-features/statements.md)
+ [İşlevselliğe Göre Listelenmiş İşleçler](../../../visual-basic/language-reference/operators/operators-listed-by-functionality.md)  
+ [Deyimler](../../../visual-basic/programming-guide/language-features/statements.md)

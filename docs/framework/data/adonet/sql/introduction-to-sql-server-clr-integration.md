@@ -1,24 +1,12 @@
 ---
-title: "SQL Server CLR tümleştirmesine giriş"
-ms.custom: 
+title: SQL Server CLR tümleştirmesine giriş
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-ado
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 551d2290-ed80-49be-b377-44b32444da1c
-caps.latest.revision: "6"
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
-ms.workload: dotnet
-ms.openlocfilehash: b551ec612b6d1901640ca5f2f1d116a98a8131cd
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.openlocfilehash: dd0ef041db13aa842554c70533770bf99c369941
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="introduction-to-sql-server-clr-integration"></a>SQL Server CLR tümleştirmesine giriş
 Ortak dil çalışma zamanı (CLR) Microsoft .NET Framework'ün Kalp ve tüm .NET Framework kod yürütme ortamı sağlar. CLR çalışan kod yönetilen kodu olarak adlandırılır. CLR ayırma ve tür güvenliği, özel durum işleme, iş parçacığı yönetimi ve güvenlik zorlamayı bellek yönetme çeşitli işlevleri ve tam zamanında (JIT) derleme dahil olmak üzere, program yürütme için gerekli hizmetleri sağlar.  
@@ -29,7 +17,7 @@ Ortak dil çalışma zamanı (CLR) Microsoft .NET Framework'ün Kalp ve tüm .NE
   
  Bu bölümde, SQL Server CLR Tümleştirmesi ile programlamaya başlamak için yeterli bilgi yalnızca sağlamak için tasarlanmıştır ve kapsamlı olması düşünülmemiştir. Daha ayrıntılı bilgi için SQL Server Books Online'nın sürümü, kullanmakta olduğunuz SQL Server sürümü için bkz.  
   
- **SQL Server Books Online**  
+ **SQL Server Çevrimiçi Kitapları**  
   
 -   [Ortak dil çalışma zamanı (CLR) tümleştirme genel bakış](http://go.microsoft.com/fwlink/?LinkId=115242)  
   
@@ -47,14 +35,14 @@ GO
   
  Daha ayrıntılı bilgi için SQL Server Books Online'nın sürümü, kullanmakta olduğunuz SQL Server sürümü için bkz.  
   
- **SQL Server Books Online**  
+ **SQL Server Çevrimiçi Kitapları**  
   
 -   [CLR tümleştirmesini etkinleştirme](http://go.microsoft.com/fwlink/?LinkId=115230)  
   
 ## <a name="deploying-a-clr-assembly"></a>CLR derlemesinde dağıtma  
  CLR yöntemleri test ve test sunucusunda doğruladıktan sonra bir dağıtım komut dosyası kullanarak üretim sunucularına dağıtılabilir. Dağıtım betiği el ile veya SQL Server Management Studio'yu kullanarak oluşturulabilir. Daha ayrıntılı bilgi için SQL Server Books Online'nın sürümü, kullanmakta olduğunuz SQL Server sürümü için bkz.  
   
- **SQL Server Books Online**  
+ **SQL Server Çevrimiçi Kitapları**  
   
 1.  [CLR veritabanı nesnelerini dağıtma](http://go.microsoft.com/fwlink/?LinkId=115232)  
   
@@ -63,7 +51,7 @@ GO
   
  Daha ayrıntılı bilgi için SQL Server Books Online'nın sürümü, kullanmakta olduğunuz SQL Server sürümü için bkz.  
   
- **SQL Server Books Online**  
+ **SQL Server Çevrimiçi Kitapları**  
   
 -   [CLR tümleştirme güvenlik](http://go.microsoft.com/fwlink/?LinkId=115234)  
   
@@ -72,7 +60,7 @@ GO
   
  Daha ayrıntılı bilgi için SQL Server Books Online'nın sürümü, kullanmakta olduğunuz SQL Server sürümü için bkz.  
   
- **SQL Server Books Online**  
+ **SQL Server Çevrimiçi Kitapları**  
   
 -   [CLR veritabanı nesnelerini hata ayıklama](http://go.microsoft.com/fwlink/?LinkId=115236)  
   

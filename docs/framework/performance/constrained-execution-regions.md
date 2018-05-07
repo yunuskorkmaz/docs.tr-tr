@@ -1,27 +1,17 @@
 ---
-title: "Kısıtlı Yürütme Bölgeleri"
-ms.custom: 
+title: Kısıtlı Yürütme Bölgeleri
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - constrained execution regions
 - CERs
 ms.assetid: 99354547-39c1-4b0b-8553-938e8f8d1808
-caps.latest.revision: "9"
 author: mairaw
 ms.author: mairaw
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 4f046f26391d581bc1663e9a7041225ede99bd31
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: e7e653101faf9e0664f41e031c7bad05523825f3
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="constrained-execution-regions"></a>Kısıtlı Yürütme Bölgeleri
 Kısıtlı yürütme bölge (CER) güvenilir yönetilen kod yazma için bir mekanizma bir parçasıdır. Bir CER kodu alanının tamamının yürütülmesini önleyen bant dışı özel durumları atma ortak dil çalışma zamanı (CLR) kısıtlı bir alanı tanımlar. Bu bölge içinde kullanıcı kodu atma bant dışı özel durumları neden olan kod yürütülmesini sınırlı değildir. <xref:System.Runtime.CompilerServices.RuntimeHelpers.PrepareConstrainedRegions%2A> Yöntemi hemen gelmelidir bir `try` bloğu ve işaretleri `catch`, `finally`, ve `fault` kısıtlı yürütme bölgeleri olarak engeller. Kısıtlanmış bir bölge işaretlenmiş sonra kod güçlü güvenilirlik sözleşmeleri ile başka bir kod yalnızca çağırmanız gerekir ve kod ayırmak veya gerekir kod hataları işlemek için hazırlanan sürece hazırlıksız ya da güvenilir olmayan yöntemleri sanal çağrı yapmak. Bir CER yürütülen kod için CLR gecikmeler iş parçacığı durdurur.  
@@ -86,7 +76,7 @@ Kısıtlı yürütme bölge (CER) güvenilir yönetilen kod yazma için bir meka
 ## <a name="reliability-trycatchfinally"></a>Güvenilirlik try/catch/finally  
  Güvenilirlik `try/catch/finally` işleme mekanizması yönetilmeyen sürümü aynı düzeyde öngörülebilirlik garanti ile bir durum. `catch/finally` CER taşıdır. Blok yöntemlerinde ön hazırlık gerektirir ve noninterruptible olması gerekir.  
   
- .NET Framework sürüm 2. 0'da, kodu çalışma zamanı çağırarak, bir try güvenilir olduğunu bildirir <xref:System.Runtime.CompilerServices.RuntimeHelpers.PrepareConstrainedRegions%2A> hemen try bloğunun önceki. <xref:System.Runtime.CompilerServices.RuntimeHelpers.PrepareConstrainedRegions%2A>üye <xref:System.Runtime.CompilerServices.RuntimeHelpers>, derleyici desteği sınıfı. Çağrı <xref:System.Runtime.CompilerServices.RuntimeHelpers.PrepareConstrainedRegions%2A> doğrudan derleyicileri aracılığıyla, kullanılabilirlik bekliyor.  
+ .NET Framework sürüm 2. 0'da, kodu çalışma zamanı çağırarak, bir try güvenilir olduğunu bildirir <xref:System.Runtime.CompilerServices.RuntimeHelpers.PrepareConstrainedRegions%2A> hemen try bloğunun önceki. <xref:System.Runtime.CompilerServices.RuntimeHelpers.PrepareConstrainedRegions%2A> üye <xref:System.Runtime.CompilerServices.RuntimeHelpers>, derleyici desteği sınıfı. Çağrı <xref:System.Runtime.CompilerServices.RuntimeHelpers.PrepareConstrainedRegions%2A> doğrudan derleyicileri aracılığıyla, kullanılabilirlik bekliyor.  
   
 ## <a name="noninterruptible-regions"></a>Noninterruptible bölgeleri  
  Noninterruptible bölge bir CER içine yönergeler kümesini gruplandırır.  
@@ -111,11 +101,11 @@ Kısıtlı yürütme bölge (CER) güvenilir yönetilen kod yazma için bir meka
   
 -   Yansıma yoluyla yöntemini çağırır.  
   
--   <xref:System.Threading.Monitor.Enter%2A>veya <xref:System.IO.FileStream.Lock%2A>.  
+-   <xref:System.Threading.Monitor.Enter%2A> veya <xref:System.IO.FileStream.Lock%2A>.  
   
 -   Güvenlik denetimleri. Taleplerin gerçekleştirmek değil, yalnızca taleplerini bağlayın.  
   
--   <xref:System.Reflection.Emit.OpCodes.Isinst>ve <xref:System.Reflection.Emit.OpCodes.Castclass> COM nesneleri ve proxy'ler  
+-   <xref:System.Reflection.Emit.OpCodes.Isinst> ve <xref:System.Reflection.Emit.OpCodes.Castclass> COM nesneleri ve proxy'ler  
   
 -   Alma veya saydam bir proxy alanlarını ayarlama.  
   

@@ -1,31 +1,17 @@
 ---
 title: Veri Hizmeti (WCF Veri Hizmetleri) yapılandırma
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework-oob
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 dev_langs:
 - csharp
 - vb
 helpviewer_keywords:
 - WCF Data Services, configuring
 ms.assetid: 59efd4c8-cc7a-4800-a0a4-d3f8abe6c55c
-caps.latest.revision: 10
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 7c3c82e1e4460e82dd7e6bd88771eae96f132c8e
-ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
+ms.openlocfilehash: 4ee0f6c18551a996f4876fe7c7bc333b687f2e3f
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/28/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="configuring-the-data-service-wcf-data-services"></a>Veri Hizmeti (WCF Veri Hizmetleri) yapılandırma
 İle [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)], kullanıma Veri Hizmetleri oluşturabilirsiniz [!INCLUDE[ssODataFull](../../../../includes/ssodatafull-md.md)] akışları. Bu akışlardaki verileri çeşitli veri kaynaklarındaki gelebilir. [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] Bu verileri olarak kullanıma sunmak için veri sağlayıcıları kullanır bir [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] akış. Bu sağlayıcıları içeren bir [!INCLUDE[adonet_ef](../../../../includes/adonet-ef-md.md)] sağlayıcı, bir yansıma sağlayıcısı ve özel veri hizmeti sağlayıcısı arabirimleri kümesi. Sağlayıcı uygulaması hizmeti veri modelini tanımlar. Daha fazla bilgi için bkz: [Veri Hizmetleri sağlayıcıları](../../../../docs/framework/data/wcf/data-services-providers-wcf-data-services.md).  

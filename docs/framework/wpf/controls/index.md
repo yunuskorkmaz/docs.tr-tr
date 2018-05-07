@@ -1,35 +1,21 @@
 ---
 title: Denetimler
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-wpf
-ms.tgt_pltfrm: ''
-ms.topic: article
 dev_langs:
 - csharp
 - vb
 helpviewer_keywords:
 - controls [WPF], about WPF controls
 ms.assetid: 3f255a8a-35a8-4712-9065-472ff7d75599
-caps.latest.revision: 13
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 66c6cc58423a2af8d0fd6de93b8884918888fb48
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 11c9c2cdd9e485fb87f5d8ead7790ded0428f7dd
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="controls"></a>Denetimler
 <a name="introduction"></a>
-[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]birçok neredeyse her Windows uygulamasında gibi kullanılan ortak UI bileşenleri ile birlikte gelen <xref:System.Windows.Controls.Button>, <xref:System.Windows.Controls.Label>, <xref:System.Windows.Controls.TextBox>, <xref:System.Windows.Controls.Menu>, ve <xref:System.Windows.Controls.ListBox>. Tarihsel olarak, bu nesneler için denetimler olarak adlandırılmıştır. Sırada [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] SDK devam geniş bir uygulamada görünür nesneyi temsil eden herhangi bir sınıf anlamına gelir "Denetim" terimini kullanmak bir sınıf devralınmalıdır gerekmez dikkate almak önemlidir <xref:System.Windows.Controls.Control> görünür varlığı için sınıf. Sınıfından devralınan sınıflar <xref:System.Windows.Controls.Control> sınıfı içeren bir <xref:System.Windows.Controls.ControlTemplate>, yeni bir alt sınıf oluşturmak zorunda kalmadan denetimin görünümünü tüketicisinin değiştirmeye tüketici denetimi sağlar.  Bu konuda ele alınmıştır nasıl denetimleri (her iki olanlar devralınan <xref:System.Windows.Controls.Control> sınıfı ve değişmeyen) yaygın olarak kullanılan [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)].  
+[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] birçok neredeyse her Windows uygulamasında gibi kullanılan ortak UI bileşenleri ile birlikte gelen <xref:System.Windows.Controls.Button>, <xref:System.Windows.Controls.Label>, <xref:System.Windows.Controls.TextBox>, <xref:System.Windows.Controls.Menu>, ve <xref:System.Windows.Controls.ListBox>. Tarihsel olarak, bu nesneler için denetimler olarak adlandırılmıştır. Sırada [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] SDK devam geniş bir uygulamada görünür nesneyi temsil eden herhangi bir sınıf anlamına gelir "Denetim" terimini kullanmak bir sınıf devralınmalıdır gerekmez dikkate almak önemlidir <xref:System.Windows.Controls.Control> görünür varlığı için sınıf. Sınıfından devralınan sınıflar <xref:System.Windows.Controls.Control> sınıfı içeren bir <xref:System.Windows.Controls.ControlTemplate>, yeni bir alt sınıf oluşturmak zorunda kalmadan denetimin görünümünü tüketicisinin değiştirmeye tüketici denetimi sağlar.  Bu konuda ele alınmıştır nasıl denetimleri (her iki olanlar devralınan <xref:System.Windows.Controls.Control> sınıfı ve değişmeyen) yaygın olarak kullanılan [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)].  
 
 <a name="creating_an_instance_of_a_control"></a>   
 ## <a name="creating-an-instance-of-a-control"></a>Bir denetimin örneğini oluşturma  
@@ -37,7 +23,7 @@ ms.lasthandoff: 12/22/2017
   
  [!code-xaml[ControlsOverview#1](../../../../samples/snippets/csharp/VS_Snippets_Wpf/ControlsOverview/CSharp/Window1.xaml#1)]  
   
- Aşağıdaki örnek kodda aynı uygulama oluşturur. Kısaltma oluşturulmasını <xref:System.Windows.Controls.Grid>, `grid1`, örnekten çıkarılmıştır. `grid1`Önceki gösterildiği gibi aynı sütun ve satır tanımlarına sahip [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] örnek.  
+ Aşağıdaki örnek kodda aynı uygulama oluşturur. Kısaltma oluşturulmasını <xref:System.Windows.Controls.Grid>, `grid1`, örnekten çıkarılmıştır. `grid1` Önceki gösterildiği gibi aynı sütun ve satır tanımlarına sahip [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] örnek.  
   
  [!code-csharp[ControlsOverview#2](../../../../samples/snippets/csharp/VS_Snippets_Wpf/ControlsOverview/CSharp/AppInCode.xaml.cs#2)]
  [!code-vb[ControlsOverview#2](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/ControlsOverview/VisualBasic/AppInCode.xaml.vb#2)]  
@@ -63,7 +49,7 @@ ms.lasthandoff: 12/22/2017
  [!code-vb[ControlsOverview#4](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/ControlsOverview/VisualBasic/AppInCode.xaml.vb#4)]  
   
 ### <a name="creating-a-style-for-a-control"></a>Bir denetim için bir stil oluşturma  
- [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]denetimlerin görünümünü oluşturarak uygulamada her bir örnek üzerinde özellikleri ayarlamak yerine tümden belirtme olanağı verir bir <xref:System.Windows.Style>. Aşağıdaki örnekte bir <xref:System.Windows.Style> uygulanan her <xref:System.Windows.Controls.Button> uygulamadaki. <xref:System.Windows.Style>tanımları tanımlanmış genellikle [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] içinde bir <xref:System.Windows.ResourceDictionary>, gibi <xref:System.Windows.FrameworkElement.Resources%2A> özelliği <xref:System.Windows.FrameworkElement>.  
+ [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] denetimlerin görünümünü oluşturarak uygulamada her bir örnek üzerinde özellikleri ayarlamak yerine tümden belirtme olanağı verir bir <xref:System.Windows.Style>. Aşağıdaki örnekte bir <xref:System.Windows.Style> uygulanan her <xref:System.Windows.Controls.Button> uygulamadaki. <xref:System.Windows.Style> tanımları tanımlanmış genellikle [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] içinde bir <xref:System.Windows.ResourceDictionary>, gibi <xref:System.Windows.FrameworkElement.Resources%2A> özelliği <xref:System.Windows.FrameworkElement>.  
   
  [!code-xaml[ControlsOverview#5](../../../../samples/snippets/csharp/VS_Snippets_Wpf/ControlsOverview/CSharp/AppInCode.xaml#5)]  
   

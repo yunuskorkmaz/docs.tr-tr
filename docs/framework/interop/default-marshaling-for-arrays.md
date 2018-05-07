@@ -1,10 +1,6 @@
 ---
 title: Diziler için Varsayılan Sıralama
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.technology:
-- dotnet-clr
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -12,17 +8,13 @@ helpviewer_keywords:
 - interop marshaling, arrays
 - arrays, interop marshaling
 ms.assetid: 8a3cca8b-dd94-4e3d-ad9a-9ee7590654bc
-caps.latest.revision: 19
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 84f4015fd9bc5eb2de11b71530115d20c583d21d
-ms.sourcegitcommit: 9a4fe1a1c37b26532654b4bbe22d702237950009
+ms.openlocfilehash: b05ac1016710109110c3ff9d0d318a71fe0827f1
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="default-marshaling-for-arrays"></a>Diziler için Varsayılan Hazırlama
 Tamamen yönetilen kod oluşan bir uygulamada, ortak dil çalışma zamanı dizi türleri olarak In/Out parametreleri geçirir. Buna karşılık, birlikte çalışabilirlik Sıralayıcı parametreleri olduğu gibi bir dizi varsayılan olarak geçirir.  
@@ -64,7 +56,7 @@ Tamamen yönetilen kod oluşan bir uygulamada, ortak dil çalışma zamanı dizi
 |Yönetilmeyen tür|İçeri aktarılan türü|  
 |--------------------|-------------------|  
 |**SafeArray (** *türü* **)**|**ELEMENT_TYPE_SZARRAY** **\<** *ConvertedType* **>**<br /><br /> RANK = 1, alt sınır = 0. Boyutu, yalnızca yönetilen imzada sağladıysanız denir. Rank olmayan güvenli diziler = 1 ya da alt sınır = 0 olamaz sıralanmış olarak **SZARRAY**.|  
-|*Tür***]** |**ELEMENT_TYPE_SZARRAY** **\<** *ConvertedType* **>**<br /><br /> RANK = 1, alt sınır = 0. Boyutu, yalnızca yönetilen imzada sağladıysanız denir.|  
+|*Tür***]**|**ELEMENT_TYPE_SZARRAY** **\<** *ConvertedType* **>**<br /><br /> RANK = 1, alt sınır = 0. Boyutu, yalnızca yönetilen imzada sağladıysanız denir.|  
   
 ### <a name="safe-arrays"></a>Güvenli diziler  
  Bir .NET derlemesi için güvenli diziye bir tür kitaplığından içeri aktarıldığında dizi bilinen bir türde tek boyutlu bir diziye dönüştürülür (gibi **int**). Parametreleri uygulamak aynı tür dönüştürme kurallarını dizi öğeleri için de geçerlidir. Örneğin, güvenli bir dizi **BSTR** türleri yönetilen dizisini olur ve bir yönetilen nesneler dizisi güvenli dizisi olur. **SAFEARRAY** öğe türü tür kitaplığından yakalanan ve kaydedilen **SAFEARRAY** değerini <xref:System.Runtime.InteropServices.UnmanagedType> numaralandırması.  
@@ -379,7 +371,7 @@ public struct MyStruct {
 }  
 ```  
   
-## <a name="see-also"></a>Ayrıca bkz.  
+## <a name="see-also"></a>Ayrıca Bkz.  
  [Varsayılan Hazırlama Davranışı](default-marshaling-behavior.md)  
  [Blok Halinde Kopyalanabilir ve Kopyalanamaz Türler](blittable-and-non-blittable-types.md)  
  [Tek yönlü öznitelikleri](https://msdn.microsoft.com/library/241ac5b5-928e-4969-8f58-1dbc048f9ea2(v=vs.100))  

@@ -1,14 +1,6 @@
 ---
 title: SAML Belirteçleri ve Talepleri
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -18,20 +10,14 @@ helpviewer_keywords:
 - issued tokens
 - SAML token
 ms.assetid: 930b6e34-9eab-4e95-826c-4e06659bb977
-caps.latest.revision: 10
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 9bd10fe663ccb4c78af775baf3e76663ef9a91bd
-ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
+ms.openlocfilehash: 374fde23a1bf8df704f76500b4808c16d142ddd9
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/28/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="saml-tokens-and-claims"></a>SAML Belirteçleri ve Talepleri
-Güvenlik onaylar biçimlendirme dili (SAML) *belirteçleri* talep XML gösterimlerini şunlardır. Varsayılan olarak, SAML belirteçlerini [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] federe güvenlik senaryolarda kullanımları *verilen belirteçler*.  
+Güvenlik onaylar biçimlendirme dili (SAML) *belirteçleri* talep XML gösterimlerini şunlardır. Varsayılan olarak, Windows Communication Foundation (WCF) kullanan Federasyon güvenlik senaryolarda SAML belirteçleri olan *verilen belirteçler*.  
   
  SAML belirteçleri başka bir varlık hakkında bir varlık tarafından yapılan talepleri kümeleridir deyimleri taşır. Örneğin, Federasyon güvenlik senaryolarda, sistemde bir kullanıcıyla ilgili bir güvenlik belirteci hizmeti tarafından deyimleri yapılır. Güvenlik belirteci hizmeti belirtecinde yer alan deyimleri belki belirtmek için SAML belirteci imzalar. Ayrıca, SAML belirteci SAML belirteci kullanıcı bilgisi kanıtlar şifreleme anahtar malzemesi ile ilişkilidir. SAML belirteci olduğu, bağlı olan taraf aslında, o kullanıcıya verilen bu kanıt karşılar. Örneğin, tipik bir senaryoda:  
   
@@ -44,7 +30,7 @@ Güvenlik onaylar biçimlendirme dili (SAML) *belirteçleri* talep XML gösterim
 4.  SAML belirteci üzerinden imza, güvenlik belirteci hizmeti belirteç verilen bağlı olan taraf söyler. Kanıt anahtarı ile oluşturulan ileti imzası, belirteci istemciye verilmiş bağlı olan taraf söyler.  
   
 ## <a name="from-claims-to-samlattributes"></a>SamlAttributes talepleri  
- İçinde [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)], SAML belirteçlerini deyimlerinde olarak modellenir <xref:System.IdentityModel.Tokens.SamlAttribute> doğrudan doldurulmuş nesneleri <xref:System.IdentityModel.Claims.Claim> sağlanan nesnelerini <xref:System.IdentityModel.Claims.Claim> nesnesi bir <xref:System.IdentityModel.Claims.Claim.Right%2A> özelliği <xref:System.IdentityModel.Claims.Rights.PossessProperty%2A> ve <xref:System.IdentityModel.Claims.Claim.Resource%2A> özellik türüdür <xref:System.String>. Örneğin:  
+ WCF'de, SAML belirteçlerini deyimlerinde olarak Modellenen <xref:System.IdentityModel.Tokens.SamlAttribute> doğrudan doldurulmuş nesneleri <xref:System.IdentityModel.Claims.Claim> sağlanan nesnelerini <xref:System.IdentityModel.Claims.Claim> nesnesi bir <xref:System.IdentityModel.Claims.Claim.Right%2A> özelliği <xref:System.IdentityModel.Claims.Rights.PossessProperty%2A> ve <xref:System.IdentityModel.Claims.Claim.Resource%2A> özelliği olduğu türü <xref:System.String>. Örneğin:  
   
  [!code-csharp[c_CreateSTS#8](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_creatests/cs/source.cs#8)]
  [!code-vb[c_CreateSTS#8](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_creatests/vb/source.vb#8)]  

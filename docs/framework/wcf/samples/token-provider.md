@@ -1,27 +1,17 @@
 ---
-title: "Belirteç Sağlayıcı"
-ms.custom: 
+title: Belirteç Sağlayıcı
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 947986cf-9946-4987-84e5-a14678d96edb
-caps.latest.revision: "22"
 author: BrucePerlerMS
-ms.author: bruceper
 manager: mbaldwin
-ms.workload: dotnet
-ms.openlocfilehash: bd6b0983dcb4a0f7cdbabc5b391cca2000f9d16d
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
-ms.translationtype: MT
+ms.openlocfilehash: 97602a261f1e86cb70b38f21080c2a2e792605e8
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="token-provider"></a>Belirteç Sağlayıcı
-Bu örnek, özel bir belirteç sağlayıcısını uygulamak gösterilmiştir. Bir belirteç sağlayıcısı [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] güvenlik altyapısı için kimlik bilgileri sağladığını için kullanılır. Belirteç sağlayıcı genel hedef inceler ve böylece güvenlik altyapısı ileti güvenliğini sağlayabilirsiniz sorunları kimlik bilgileri gerekli. [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]Varsayılan kimlik bilgileri Yöneticisi belirteç sağlayıcısı birlikte verilir. [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]Ayrıca birlikte bir [!INCLUDE[infocard](../../../../includes/infocard-md.md)] belirteç sağlayıcısı. Özel belirteç sağlayıcılarını aşağıdaki durumlarda yararlı olur:  
+Bu örnek, özel bir belirteç sağlayıcısını uygulamak gösterilmiştir. Bir belirteç sağlayıcısı Windows Communication Foundation (WCF) güvenlik altyapısı için kimlik bilgileri sağladığını için kullanılır. Belirteç sağlayıcı genel hedef inceler ve böylece güvenlik altyapısı ileti güvenliğini sağlayabilirsiniz sorunları kimlik bilgileri gerekli. [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] Varsayılan kimlik bilgileri Yöneticisi belirteç sağlayıcısı birlikte verilir. [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] Ayrıca birlikte bir [!INCLUDE[infocard](../../../../includes/infocard-md.md)] belirteç sağlayıcısı. Özel belirteç sağlayıcılarını aşağıdaki durumlarda yararlı olur:  
   
 -   Bu belirteci sağlayıcıları ile çalışamaz bir kimlik bilgisi deposu varsa.  
   
@@ -270,7 +260,7 @@ static void DisplayIdentityInformation()
   
 2.  Service\bin gelen Service.exe başlatın.  
   
-3.  Launch Client.exe from \client\bin. İstemci etkinliği istemci konsol uygulaması görüntülenir.  
+3.  Client.exe \client\bin başlatın. İstemci etkinliği istemci konsol uygulaması görüntülenir.  
   
 4.  Kullanıcı adı isteminde bir kullanıcı adı yazın.  
   

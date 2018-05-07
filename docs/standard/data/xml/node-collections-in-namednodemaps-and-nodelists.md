@@ -1,26 +1,15 @@
 ---
-title: "Düğüm koleksiyonlarda NamedNodeMaps ve NodeLists"
-ms.custom: 
+title: Düğüm koleksiyonlarda NamedNodeMaps ve NodeLists
 ms.date: 03/30/2017
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
 ms.technology: dotnet-standard
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 025954b8-7aa8-47c5-a1c1-f81064fb4d65
-caps.latest.revision: "3"
 author: mairaw
 ms.author: mairaw
-manager: wpickett
-ms.workload:
-- dotnet
-- dotnetcore
-ms.openlocfilehash: ff327c1a450e9ce712d496bdca2cd2ebbff6adda
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: 6b1ffe5eb791decfd7d36f7e8ecd29fa80e8e983
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="node-collections-in-namednodemaps-and-nodelists"></a>Düğüm koleksiyonlarda NamedNodeMaps ve NodeLists
 Düğümleri kümesi almak ve bir sıralı veya sırasız koleksiyonunda yerleştirin. Bir dizi düğümler sırasız bir koleksiyona koyma zaman kümesi bir NamedNodeMap World Wide Web Konsorsiyumu (W3C); tarafından çağrılır adı veya dizin bu tür bir koleksiyon tarafından veri alabilir. Sıralı bir koleksiyonu düğümleri kümesi koyma bir listesi W3C tarafından denir ve verileri sıfır tabanlı dizini tarafından alınabilir. NamedNodeMaps ve NodeLists W3C tarafından açıklanmaktadır. Microsoft .NET Framework uygulamalarında NamedNodeMap için olan **XmlNamedNodeMap**, ve listesi tarafından uygulanan **XmlNodeList**.  

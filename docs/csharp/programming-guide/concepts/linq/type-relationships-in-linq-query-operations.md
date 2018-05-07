@@ -1,12 +1,6 @@
 ---
-title: "LINQ Sorgu İşlemlerinde Tür İlişkileri (C#)"
-ms.custom: 
+title: LINQ Sorgu İşlemlerinde Tür İlişkileri (C#)
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-csharp
-ms.topic: article
 helpviewer_keywords:
 - inferring type information [LINQ in C#]
 - data sources [LINQ in C#], type relationships
@@ -18,19 +12,16 @@ helpviewer_keywords:
 - data transformations [LINQ in C#]
 - LINQ [C#], type relationships
 ms.assetid: 99118938-d47c-4d7e-bb22-2657a9f95268
-caps.latest.revision: "25"
-author: BillWagner
-ms.author: wiwagn
-ms.openlocfilehash: a088a7f673a9f6aea7a0f50e18746259171bb7e2
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.openlocfilehash: 274c5eaee2b4bf0e1331fb7a4a1a89a432a567c2
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="type-relationships-in-linq-query-operations-c"></a>LINQ Sorgu İşlemlerinde Tür İlişkileri (C#)
 Sorguları etkili bir şekilde yazmak için tam bir sorgu işlemi tüm değişken türleri, birbirleriyle nasıl ilişkili olduğunu anlamanız gerekir. Bu ilişkileri anlarsanız, daha kolay kavrama [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] belgelerinde örnekleri ve kod. Ayrıca, değişkenleri kullanarak örtük olarak yazılan ne olacağı arka planda anlayabileceği `var`.  
   
- [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)]sorgu işlemleri, veri kaynağı, sorgu ve sorgu yürütmesi kesin türü belirtilmiş. Sorgu değişkenleri türünde veri kaynağındaki öğelerin türü ve yineleme değişkenin türü ile uyumlu olmalıdır `foreach` deyimi. Bu güçlü yazarak türü hataları kullanıcılar bunları karşılaşmadan önce zaman bunlar düzeltilebilir derleme zamanında yakalanır güvence altına alır.  
+ [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] sorgu işlemleri, veri kaynağı, sorgu ve sorgu yürütmesi kesin türü belirtilmiş. Sorgu değişkenleri türünde veri kaynağındaki öğelerin türü ve yineleme değişkenin türü ile uyumlu olmalıdır `foreach` deyimi. Bu güçlü yazarak türü hataları kullanıcılar bunları karşılaşmadan önce zaman bunlar düzeltilebilir derleme zamanında yakalanır güvence altına alır.  
   
  Bu tür ilişkileri göstermek için açık tüm değişkenleri yazarak izleyin örnekler çoğunu kullanın. Son örnek bile kullanarak örtük yazarak kullandığınızda, aynı ilkeleri nasıl uygulandığını gösterir [var](../../../../csharp/language-reference/keywords/var.md).  
   
@@ -74,4 +65,4 @@ Sorguları etkili bir şekilde yazmak için tam bir sorgu işlemi tüm değişke
  Hakkında daha fazla bilgi için `var`, bkz: [örtük olarak yazılan yerel değişkenler](../../../../csharp/programming-guide/classes-and-structs/implicitly-typed-local-variables.md).  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [C# üzerinde LINQ ile çalışmaya başlama](../../../../csharp/programming-guide/concepts/linq/getting-started-with-linq.md)
+ [C#'de LINQ Kullanmaya Başlama](../../../../csharp/programming-guide/concepts/linq/getting-started-with-linq.md)

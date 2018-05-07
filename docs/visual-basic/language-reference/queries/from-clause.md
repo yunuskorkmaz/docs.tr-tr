@@ -1,11 +1,6 @@
 ---
-title: "From Tümcesi (Visual Basic)"
+title: From Tümcesi (Visual Basic)
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
-ms.topic: article
 f1_keywords:
 - vb.QueryFrom
 - vb.QueryFromIn
@@ -15,14 +10,11 @@ helpviewer_keywords:
 - From clause [Visual Basic]
 - From statement [Visual Basic]
 ms.assetid: 83e3665e-68a0-4540-a3a3-3d777a0f95d5
-caps.latest.revision: "19"
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: 0ecdc8b70fb1ae164a6c78998ce11db9938fbb56
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 1f113444efae83de7d299db330593937c7800bb3
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="from-clause-visual-basic"></a>From Tümcesi (Visual Basic)
 Bir veya daha fazla aralık değişkeni ve sorgu bir koleksiyona belirtir.  
@@ -77,19 +69,19 @@ From element [ As type ] In collection [ _ ]
  [!code-vb[VbSimpleQuerySamples#23](../../../visual-basic/language-reference/queries/codesnippet/VisualBasic/from-clause_3.vb)]  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [Sorguları](../../../visual-basic/language-reference/queries/queries.md)  
+ [Sorgular](../../../visual-basic/language-reference/queries/queries.md)  
  [Visual Basic'de LINQ'e giriş](../../../visual-basic/programming-guide/language-features/linq/introduction-to-linq.md)  
- [For Each... Sonraki deyim](../../../visual-basic/language-reference/statements/for-each-next-statement.md)  
- [İçin... Sonraki deyim](../../../visual-basic/language-reference/statements/for-next-statement.md)  
- [Select tümcesi](../../../visual-basic/language-reference/queries/select-clause.md)  
- [Burada yan tümcesi](../../../visual-basic/language-reference/queries/where-clause.md)  
- [AGGREGATE tümcesi](../../../visual-basic/language-reference/queries/aggregate-clause.md)  
- [Distinct tümcesi](../../../visual-basic/language-reference/queries/distinct-clause.md)  
- [Join tümcesi](../../../visual-basic/language-reference/queries/join-clause.md)  
- [Group Join tümcesi](../../../visual-basic/language-reference/queries/group-join-clause.md)  
- [Order By tümcesi](../../../visual-basic/language-reference/queries/order-by-clause.md)  
- [Let tümcesi](../../../visual-basic/language-reference/queries/let-clause.md)  
- [Skip tümcesi](../../../visual-basic/language-reference/queries/skip-clause.md)  
- [Take tümcesi](../../../visual-basic/language-reference/queries/take-clause.md)  
- [Skip While tümcesi](../../../visual-basic/language-reference/queries/skip-while-clause.md)  
- [Take While tümcesi](../../../visual-basic/language-reference/queries/take-while-clause.md)
+ [For Each...Next Deyimi](../../../visual-basic/language-reference/statements/for-each-next-statement.md)  
+ [For...Next Deyimi](../../../visual-basic/language-reference/statements/for-next-statement.md)  
+ [Select Yan Tümcesi](../../../visual-basic/language-reference/queries/select-clause.md)  
+ [Where Yan Tümcesi](../../../visual-basic/language-reference/queries/where-clause.md)  
+ [Aggregate Yan Tümcesi](../../../visual-basic/language-reference/queries/aggregate-clause.md)  
+ [Distinct Yan Tümcesi](../../../visual-basic/language-reference/queries/distinct-clause.md)  
+ [Join Yan Tümcesi](../../../visual-basic/language-reference/queries/join-clause.md)  
+ [Group Join Yan Tümcesi](../../../visual-basic/language-reference/queries/group-join-clause.md)  
+ [Order By Yan Tümcesi](../../../visual-basic/language-reference/queries/order-by-clause.md)  
+ [Let Yan Tümcesi](../../../visual-basic/language-reference/queries/let-clause.md)  
+ [Skip Yan Tümcesi](../../../visual-basic/language-reference/queries/skip-clause.md)  
+ [Take Yan Tümcesi](../../../visual-basic/language-reference/queries/take-clause.md)  
+ [Skip While Yan Tümcesi](../../../visual-basic/language-reference/queries/skip-while-clause.md)  
+ [Take While Yan Tümcesi](../../../visual-basic/language-reference/queries/take-while-clause.md)

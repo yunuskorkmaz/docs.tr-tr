@@ -1,10 +1,6 @@
 ---
-title: "Nesne Veri Türü"
+title: Nesne Veri Türü
 ms.date: 07/20/2015
-ms.prod: .net
-ms.suite: 
-ms.technology: devlang-visual-basic
-ms.topic: article
 f1_keywords:
 - vb.Object
 - vb.Variant
@@ -14,14 +10,11 @@ helpviewer_keywords:
 - Object data type
 - Object data type [Visual Basic], reference
 ms.assetid: 61ea4a7c-3b3d-48d4-adc4-eacfa91779b2
-caps.latest.revision: "19"
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: 847f2b50296ad1a1ba6f0009d1d6afced27f9abe
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: e9b1da5a88c12e0d883c3afe63be98c3fa3e9173
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="object-data-type"></a>Nesne Veri Türü
 Nesnelere atıfta adresleri tutar. Herhangi bir başvuru türü (dize, dizi, sınıf veya arabirim) atayabileceğiniz bir `Object` değişkeni. Bir `Object` değişkeni ayrıca herhangi bir değer türde veri bakın (sayısal, `Boolean`, `Char`, `Date`, yapı veya sabit listesi).  
@@ -58,7 +51,7 @@ datTyp = Type.GetTypeCode(myObject.GetType())
   
      Ancak, değer türleri arasında dönüştürürseniz ve `Object`, Visual Basic adlı işlemler gerçekleştirdiğinde *kutulama* ve *kutudan çıkarma*, yürütme yavaş olun.  
   
--   **Karakterleri yazın.** `Object`değişmez değer türü karakteri ya da tanımlayıcı türü karakteri içeriyor.  
+-   **Karakterleri yazın.** `Object` değişmez değer türü karakteri ya da tanımlayıcı türü karakteri içeriyor.  
   
 -   **Framework türü.** .NET Framework'teki karşılık gelen tür <xref:System.Object?displayProperty=nameWithType> sınıfı.  
   
@@ -74,9 +67,9 @@ objDb = myCollection.Item(1)
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
  <xref:System.Object>  
- [Veri türleri](../../../visual-basic/language-reference/data-types/data-type-summary.md)  
- [Tür dönüşüm işlevleri](../../../visual-basic/language-reference/functions/type-conversion-functions.md)  
- [Dönüştürme özeti](../../../visual-basic/language-reference/keywords/conversion-summary.md)  
- [Veri türlerinin etkili kullanımı](../../../visual-basic/programming-guide/language-features/data-types/efficient-use-of-data-types.md)  
- [Nasıl yapılır: iki nesnenin ilgili olup olmadığını belirleme](../../../visual-basic/programming-guide/language-features/variables/how-to-determine-whether-two-objects-are-related.md)  
- [Nasıl yapılır: iki nesnenin aynı olup olmadığını belirleme](../../../visual-basic/programming-guide/language-features/variables/how-to-determine-whether-two-objects-are-identical.md)
+ [Veri Türleri](../../../visual-basic/language-reference/data-types/data-type-summary.md)  
+ [Tür Dönüştürme İşlevleri](../../../visual-basic/language-reference/functions/type-conversion-functions.md)  
+ [Dönüştürme Özeti](../../../visual-basic/language-reference/keywords/conversion-summary.md)  
+ [Veri Türlerinin Etkili Kullanımı](../../../visual-basic/programming-guide/language-features/data-types/efficient-use-of-data-types.md)  
+ [Nasıl yapılır: İki Nesnenin İlgili Olup Olmadığını Belirleme](../../../visual-basic/programming-guide/language-features/variables/how-to-determine-whether-two-objects-are-related.md)  
+ [Nasıl yapılır: İki Nesnenin Aynı Olup Olmadığını Belirleme](../../../visual-basic/programming-guide/language-features/variables/how-to-determine-whether-two-objects-are-identical.md)

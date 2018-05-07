@@ -1,29 +1,17 @@
 ---
-title: "Nasıl yapılır: Çokgen Öğe Kullanarak Kapalı Şekil Çizme"
-ms.custom: 
+title: 'Nasıl yapılır: Çokgen Öğe Kullanarak Kapalı Şekil Çizme'
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-wpf
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - graphics [WPF], Polygon elements
 - closed shapes [WPF], drawing with Polygon elements
 - Polygon elements [WPF]
 - drawing [WPF], closed shapes with Polygon elements
 ms.assetid: 4b0ca008-29ce-48dd-8bc3-f3a20ffca6a6
-caps.latest.revision: "7"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 0cf842c22238105510b13407d55c8c9773f84a70
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 4105139e159783cf0197f4e56c82001835077cbf
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-draw-a-closed-shape-by-using-the-polygon-element"></a>Nasıl yapılır: Çokgen Öğe Kullanarak Kapalı Şekil Çizme
 Bu örnek nasıl kullanarak kapalı bir şekil çizileceğini gösterir <xref:System.Windows.Shapes.Polygon> öğesi. Kapalı bir şekil çizmek için oluşturma bir <xref:System.Windows.Shapes.Polygon> öğesi ve kullanım kendi <xref:System.Windows.Shapes.Polygon.Points%2A> bir şekli köşeleri belirtmek için özellik. Bir çizgi ilk ve son noktaları bağlayan otomatik olarak çizilir. Son olarak, belirtin bir <xref:System.Windows.Shapes.Shape.Fill%2A>, <xref:System.Windows.Shapes.Shape.Stroke%2A>, veya her ikisini de.  

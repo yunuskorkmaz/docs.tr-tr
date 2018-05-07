@@ -1,32 +1,18 @@
 ---
 title: 'Nasıl yapılır: Zaman Uyumsuz Bir Hizmet İşlemi Uygulama'
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 dev_langs:
 - csharp
 - vb
 ms.assetid: 4e5d2ea5-d8f8-4712-bd18-ea3c5461702c
-caps.latest.revision: 14
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: fe823fc8b86dd20cfa344c9889eca9dff21514ec
-ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
+ms.openlocfilehash: b8e6ce386dc122ba059a18a448239cec7eaae222
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/30/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-implement-an-asynchronous-service-operation"></a>Nasıl yapılır: Zaman Uyumsuz Bir Hizmet İşlemi Uygulama
-İçinde [!INCLUDE[indigo1](../../../includes/indigo1-md.md)] uygulamalar, bir hizmet işlemi uygulanabilir zaman uyumsuz veya zaman uyumlu olarak bunu nasıl istemciyi dikte olmadan. Örneğin, zaman uyumsuz hizmet işlemlerini zaman uyumlu çağırma ve zaman uyumlu hizmet işlemlerini zaman uyumsuz olarak çağrılabilir. Bir istemci uygulamasında zaman uyumsuz bir işlem çağırma gösteren örnek için bkz: [nasıl yapılır: hizmet işlemlerini zaman uyumsuz çağrı](../../../docs/framework/wcf/feature-details/how-to-call-wcf-service-operations-asynchronously.md). Zaman uyumlu ve zaman uyumsuz işlemler hakkında daha fazla bilgi için bkz: [Hizmet sözleşmeleri tasarlama](../../../docs/framework/wcf/designing-service-contracts.md) ve [zaman uyumlu ve zaman uyumsuz işlemleri](../../../docs/framework/wcf/synchronous-and-asynchronous-operations.md). Bu konuda bir zaman uyumsuz hizmet işlemi temel yapısını tanımlar, kod tam değil. Hem hizmet hem de istemci tarafında tam bir örnek için bkz: [zaman uyumsuz](http://msdn.microsoft.com/library/833db946-f511-4f64-a26f-2759a11217c7).  
+Windows Communication Foundation (WCF) uygulamalarında bir hizmet işlemi zaman uyumsuz veya zaman uyumlu olarak bunu nasıl istemciyi dikte olmadan uygulanabilir. Örneğin, zaman uyumsuz hizmet işlemlerini zaman uyumlu çağırma ve zaman uyumlu hizmet işlemlerini zaman uyumsuz olarak çağrılabilir. Bir istemci uygulamasında zaman uyumsuz bir işlem çağırma gösteren örnek için bkz: [nasıl yapılır: hizmet işlemlerini zaman uyumsuz çağrı](../../../docs/framework/wcf/feature-details/how-to-call-wcf-service-operations-asynchronously.md). Zaman uyumlu ve zaman uyumsuz işlemler hakkında daha fazla bilgi için bkz: [Hizmet sözleşmeleri tasarlama](../../../docs/framework/wcf/designing-service-contracts.md) ve [zaman uyumlu ve zaman uyumsuz işlemleri](../../../docs/framework/wcf/synchronous-and-asynchronous-operations.md). Bu konuda bir zaman uyumsuz hizmet işlemi temel yapısını tanımlar, kod tam değil. Hem hizmet hem de istemci tarafında tam bir örnek için bkz: [zaman uyumsuz](http://msdn.microsoft.com/library/833db946-f511-4f64-a26f-2759a11217c7).  
   
 ### <a name="implement-a-service-operation-asynchronously"></a>Zaman uyumsuz olarak bir hizmet işlemi uygulama  
   

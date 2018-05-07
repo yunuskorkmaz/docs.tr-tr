@@ -1,28 +1,18 @@
 ---
-title: "Profil Oluşturma Arabirimleri"
-ms.custom: 
-ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: reference
+title: Profil Oluşturma Arabirimleri
+ms.date: 04/10/2018
 helpviewer_keywords:
 - unmanaged interfaces [.NET Framework], profiling
 - profiling interfaces [.NET Framework]
 - interfaces [.NET Framework profiling]
 ms.assetid: d9303db8-e881-4217-91b7-8c7573c8ef9e
-caps.latest.revision: "31"
-author: mairaw
-ms.author: mairaw
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 4f8c2a5ce5e1231c55f598e48d14bec896a4b5f4
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+author: rpetrusha
+ms.author: ronpet
+ms.openlocfilehash: 059fadc5607e76b871083682136fda542ae9bacf
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="profiling-interfaces"></a>Profil Oluşturma Arabirimleri
 Bu bölümde ortak dil çalışma zamanı tarafından (CLR) çalıştırılan bir program profil sağlayan yönetilmeyen arabirimler açıklanmaktadır.  
@@ -54,7 +44,13 @@ Bu bölümde ortak dil çalışma zamanı tarafından (CLR) çalıştırılan bi
   
  [ICorProfilerCallback7 Arabirimi](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback7-interface.md)  
  Profil Oluşturucu bir bellek içi modülü ile ilişkili simgesi akış güncelleştirilir bildirmek için ortak dil çalışma zamanı kullanan bir geri arama yöntemi sağlar.  
-  
+
+[ICorProfilerCallback8 arabirimi](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback8-interface.md)  
+Ortak dil çalışma zamanı dinamik yönteminin JIT derleme başlatıldı ve tamamlanmış olan profil oluşturucu bildirmek için kullandığı geri çağırma yöntemleri sağlar.
+
+[ICorProfilerCallback9 arabirimi](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback9-interface.md)  
+Toplanan ve daha sonra kaldırıldığında çöp dinamik yöntemidir profil oluşturucu bildirmek için ortak dil çalışma zamanı kullanan bir geri arama yöntemi sağlar.
+
  [ICorProfilerFunctionControl Arabirimi](../../../../docs/framework/unmanaged-api/profiling/icorprofilerfunctioncontrol-interface.md)  
  Kod profil oluşturucu nasıl JIT Derleyici kodu belirli bir yöntemi yeniden derlenmesi sırasında oluşturulmasına denetlemek için CLR ile iletişim kurmasına izin yöntemleri sağlar.  
   

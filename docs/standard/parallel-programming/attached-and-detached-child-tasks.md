@@ -1,31 +1,20 @@
 ---
 title: Eklenen ve Ayrılan Alt Görevler
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net
-ms.reviewer: ''
-ms.suite: ''
 ms.technology: dotnet-standard
-ms.tgt_pltfrm: ''
-ms.topic: article
 dev_langs:
 - csharp
 - vb
 helpviewer_keywords:
 - tasks, child tasks
 ms.assetid: c95788bf-90a6-4e96-b7bc-58e36a228cc5
-caps.latest.revision: 21
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-- dotnetcore
-ms.openlocfilehash: 298ccdc4628c840874d10832da29c10d6d496655
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: 53f31402e78a15289bb996c63e1e8e3cd98e6aac
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="attached-and-detached-child-tasks"></a>Eklenen ve Ayrılan Alt Görevler
 A *alt görev* (veya *iç içe geçmiş görev*) olan bir <xref:System.Threading.Tasks.Task?displayProperty=nameWithType> kullanıcı temsilci olarak bilinen başka bir görev oluşturulan örnek *üst görev*. Bir alt görev ya da iliştirilemez ya da. A *ayrılmış alt görev* üst bağımsız olarak yürüten bir görevdir. Bir *alt görev bağlı* ile oluşturulan iç içe geçmiş bir görevi <xref:System.Threading.Tasks.TaskCreationOptions.AttachedToParent?displayProperty=nameWithType> , üst değil açıkça veya varsayılan olarak engelliyor, bağlı olmak seçeneği. Bir görev herhangi bir sayıda eklenen ve ayrılan alt görevler, yalnızca sistem kaynaklarının yetersizliği sınırlı oluşturabilir.  

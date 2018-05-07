@@ -1,21 +1,15 @@
 ---
-title: "Nasıl yapılır: Soyut Özellikleri Tanımlama (C# Programlama Kılavuzu)"
+title: 'Nasıl yapılır: Soyut Özellikleri Tanımlama (C# Programlama Kılavuzu)'
 ms.date: 07/20/2015
-ms.prod: .net
-ms.technology: devlang-csharp
-ms.topic: article
 helpviewer_keywords:
 - properties [C#], abstract
 - abstract properties [C#]
 ms.assetid: 672a90eb-47b9-4ae0-9914-af53852fddcb
-caps.latest.revision: "13"
-author: BillWagner
-ms.author: wiwagn
-ms.openlocfilehash: cd8a42c1040180c19bc58627ab0c6a21ace77773
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: cf4295eea6a257fe053bf889f0c2f3d3fa5bb2a6
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-define-abstract-properties-c-programming-guide"></a>Nasıl yapılır: Soyut Özellikleri Tanımlama (C# Programlama Kılavuzu)
 Aşağıdaki örnekte nasıl tanımlanacağı gösterilmektedir [soyut](../../../csharp/language-reference/keywords/abstract.md) özellikleri. Bir Özet özellik bildirimi özellik erişimcisi uygulaması sağlamaz--sınıf özelliklerini destekler, ancak türetilmiş sınıflara erişimcisi uygulama bırakır bildirir. Aşağıdaki örnek, bir taban sınıftan devralınan soyut özellikleri uygulamak gösterilmiştir.  
@@ -58,8 +52,8 @@ Aşağıdaki örnekte nasıl tanımlanacağı gösterilmektedir [soyut](../../..
  [!code-csharp[csProgGuideInheritance#3](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/how-to-define-abstract-properties_3.cs)]  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [C# programlama kılavuzu](../../../csharp/programming-guide/index.md)  
- [Sınıflar ve yapılar](../../../csharp/programming-guide/classes-and-structs/index.md)  
- [Soyut ve korumalı sınıflar ve sınıf üyeleri](../../../csharp/programming-guide/classes-and-structs/abstract-and-sealed-classes-and-class-members.md)  
- [Özellikleri](../../../csharp/programming-guide/classes-and-structs/properties.md)  
- [Nasıl yapılır: komut satırını kullanarak derlemeler oluşturma ve kullanma](http://msdn.microsoft.com/library/70f65026-3687-4e9c-ab79-c18b97dd8be4)
+ [C# Programlama Kılavuzu](../../../csharp/programming-guide/index.md)  
+ [Sınıflar ve Yapılar](../../../csharp/programming-guide/classes-and-structs/index.md)  
+ [Soyut ve Korumalı Sınıflar ve Sınıf Üyeleri](../../../csharp/programming-guide/classes-and-structs/abstract-and-sealed-classes-and-class-members.md)  
+ [Özellikler](../../../csharp/programming-guide/classes-and-structs/properties.md)  
+ [Nasıl yapılır: Komut Satırını Kullanarak Bütünleştirilmiş Kodlar Oluşturma ve Kullanma](http://msdn.microsoft.com/library/70f65026-3687-4e9c-ab79-c18b97dd8be4)

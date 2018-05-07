@@ -1,22 +1,12 @@
 ---
 title: LINQ ve dosya dizinleri (Visual Basic)
-ms.custom: 
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 159fd5c3-3926-4071-ae78-d8e423287eb7
-caps.latest.revision: "3"
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: 470ad8e783eb05cc56949982b2d2d79d5aaefdc2
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.openlocfilehash: 4dbba3fcd6fde52975dd2411c80e662e3d2ffa4c
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="linq-and-file-directories-visual-basic"></a>LINQ ve dosya dizinleri (Visual Basic)
 Çok sayıda dosya sistemi işlemleri temelde sorgular ve bu nedenle LINQ yaklaşımı uymaktadır.  

@@ -1,29 +1,15 @@
 ---
 title: Windows Forms'ta Kullanılacak Denetimler
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-winforms
-ms.tgt_pltfrm: ''
-ms.topic: article
 helpviewer_keywords:
 - controls [Windows Forms]
 - Windows Forms controls, list of
 ms.assetid: dec51976-eae0-4398-a537-20bca7974722
-caps.latest.revision: 28
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 6454d7ead50c96ed4f92b2b9d53e7b9bbb4a84f8
-ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
+ms.openlocfilehash: 53474de53375546e2a7f416488cf7758b3f9cd22
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="controls-to-use-on-windows-forms"></a>Windows Forms'ta Kullanılacak Denetimler
 Denetimler ve Windows formlarında kullanılan bileşenler alfabetik bir listesi verilmiştir. Bu bölümde yer alan Windows Forms denetimleri yanı sıra Windows formlarına ActiveX ve özel denetimler ekleyebilirsiniz. Gereksinim duyduğunuz Denetim burada listelenen bulamazsanız, ayrıca kendi oluşturabilirsiniz. Ayrıntılar için bkz [tasarım zamanında Windows Forms denetimleri geliştirme](../../../../docs/framework/winforms/controls/developing-windows-forms-controls-at-design-time.md). Denetim seçme hakkında daha fazla bilgi için bkz: ihtiyaç [işleve göre Windows Forms denetimleri](../../../../docs/framework/winforms/controls/windows-forms-controls-by-function.md).  

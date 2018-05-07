@@ -1,24 +1,17 @@
 ---
 title: Interface Deyimi (Visual Basic)
 ms.date: 07/20/2015
-ms.prod: .net
-ms.technology:
-- devlang-visual-basic
-ms.topic: article
 f1_keywords:
 - vb.Interface
 helpviewer_keywords:
 - interface statement [Visual Basic]
 - interfaces [Visual Basic], interface definition
 ms.assetid: 8997af73-bda3-4f79-bd41-ca396b610260
-caps.latest.revision: 
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: 9418dc86ac6947ae951cb8fb757aed6e092a6668
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: f4282778db2d95f701cadb8bb98ec8ca982ba663
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="interface-statement-visual-basic"></a>Interface Deyimi (Visual Basic)
 Arabirim adını bildirir ve arabirim oluşur üyeleri tanımlarını sunar.  
@@ -119,14 +112,14 @@ End Interface
  Unutmayın `Property` ve `Function` deyimleri ile biten blokları tanıtmak değil `End Property` ve `End Function` arabiriminden. Arabirimi yalnızca üyeleri imzalarını tanımlar. Tam `Property` ve `Function` blokları görünür uygulayan bir sınıf `thisInterface`.  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [Arabirimleri](../../../visual-basic/programming-guide/language-features/interfaces/index.md)  
- [Class deyimi](../../../visual-basic/language-reference/statements/class-statement.md)  
- [Module deyimi](../../../visual-basic/language-reference/statements/module-statement.md)  
- [Structure deyimi](../../../visual-basic/language-reference/statements/structure-statement.md)  
- [Property deyimi](../../../visual-basic/language-reference/statements/property-statement.md)  
- [Function deyimi](../../../visual-basic/language-reference/statements/function-statement.md)  
- [Sub deyimi](../../../visual-basic/language-reference/statements/sub-statement.md)  
+ [Arabirimler](../../../visual-basic/programming-guide/language-features/interfaces/index.md)  
+ [Class Deyimi](../../../visual-basic/language-reference/statements/class-statement.md)  
+ [Module Deyimi](../../../visual-basic/language-reference/statements/module-statement.md)  
+ [Structure Deyimi](../../../visual-basic/language-reference/statements/structure-statement.md)  
+ [Property Deyimi](../../../visual-basic/language-reference/statements/property-statement.md)  
+ [Function Deyimi](../../../visual-basic/language-reference/statements/function-statement.md)  
+ [Sub Deyimi](../../../visual-basic/language-reference/statements/sub-statement.md)  
  [Visual Basic'de genel türler](../../../visual-basic/programming-guide/language-features/data-types/generic-types.md)  
- [Genel arabirimlerde varyans](../../programming-guide/concepts/covariance-contravariance/variance-in-generic-interfaces.md)  
+ [Genel Arabirimlerde Varyans](../../programming-guide/concepts/covariance-contravariance/variance-in-generic-interfaces.md)  
  [İçinde](../../../visual-basic/language-reference/modifiers/in-generic-modifier.md)  
  [Çıkışı](../../../visual-basic/language-reference/modifiers/out-generic-modifier.md)

@@ -1,27 +1,15 @@
 ---
-title: "İşlem Biçimlendirici ve İşlem Seçici"
-ms.custom: 
+title: İşlem Biçimlendirici ve İşlem Seçici
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 1c27e9fe-11f8-4377-8140-828207b98a0e
-caps.latest.revision: "19"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: a10be10687f03b5de45846faa9ca832ead193e19
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
-ms.translationtype: MT
+ms.openlocfilehash: 469b7f2c99652cb6fceb2e8f12f1c74f0140b5ec
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="operation-formatter-and-operation-selector"></a>İşlem Biçimlendirici ve İşlem Seçici
-Bu örnek gösterilmektedir nasıl [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] genişletilebilirlik noktaları, farklı bir biçimde ne gelen ileti veri sağlamak için kullanılabilir [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] bekliyor. Varsayılan olarak, [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] biçimlendiricileri beklediğiniz altında dahil edilecek yöntem parametreleri `soap:body` öğesi. Örnek, bunun yerine bir HTTP GET sorgu dizesi parametre verilerini ayrıştırır ve bu verileri kullanarak yöntemlerini çağıran bir özel işlem biçimlendirici uygulamak gösterilmiştir.  
+Bu örnek ileti verilerin ne öğesinden farklı bir biçimde izin vermek için Windows Communication Foundation (WCF) genişletilebilirlik noktaları'nın nasıl kullanılabileceğini gösteren [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] bekliyor. Varsayılan olarak, [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] biçimlendiricileri beklediğiniz altında dahil edilecek yöntem parametreleri `soap:body` öğesi. Örnek, bunun yerine bir HTTP GET sorgu dizesi parametre verilerini ayrıştırır ve bu verileri kullanarak yöntemlerini çağıran bir özel işlem biçimlendirici uygulamak gösterilmiştir.  
   
  Örnek dayanır [Başlarken](../../../../docs/framework/wcf/samples/getting-started-sample.md), hangi uygulayan `ICalculator` hizmet sözleşme. Bunu gösterir nasıl eklenir, çıkarma, Çarp, bölme iletileri, HTTP GET istemci-sunucu istekleri için kullanılacak değiştirilebilir ve POX ile HTTP POST için sunucudan istemciye yanıt iletileri.  
   
@@ -31,7 +19,7 @@ Bu örnek gösterilmektedir nasıl [!INCLUDE[indigo1](../../../../includes/indig
   
 -   `UriOperationSelector`, hangi uygulayan <xref:System.ServiceModel.Dispatcher.IDispatchOperationSelector> GET isteği işlemi adına dayalı gönderme işlemi gerçekleştirmek için sunucu üzerinde.  
   
--   `EnableHttpGetRequestsBehavior`uç noktası davranışı (ve karşılık gelen yapılandırma), çalışma zamanı için gerekli işlem Seçici ekler.  
+-   `EnableHttpGetRequestsBehavior` uç noktası davranışı (ve karşılık gelen yapılandırma), çalışma zamanı için gerekli işlem Seçici ekler.  
   
 -   Nasıl yeni bir işlem biçimlendirici çalışma zamanına ekleneceğini gösterir.  
   
@@ -41,7 +29,7 @@ Bu örnek gösterilmektedir nasıl [!INCLUDE[indigo1](../../../../includes/indig
 >  Kurulum yordamı ve yapı yönergeleri Bu örnek için bu konunun sonunda yer alır.  
   
 ## <a name="key-concepts"></a>Temel Kavramlar  
- `QueryStringFormatter`-İşlemini biçimlendiricisi bileşenidir [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] parametresi nesnelerinin bir dizisi ve bir iletisine parametre nesnelerinin bir dizisi için bir ileti dönüştürme sorumlu. Bu istemciyi kullanarak yapılır <xref:System.ServiceModel.Dispatcher.IClientMessageFormatter> arabirimi ve ile sunucuya <xref:System.ServiceModel.Dispatcher.IDispatchMessageFormatter> arabirimi. Gelen istek ve yanıt iletileri almak kullanıcıların bu arabirimleri sağlamak `Serialize` ve `Deserialize` yöntemleri.  
+ `QueryStringFormatter` -İşlemini biçimlendiricisi bileşenidir [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] parametresi nesnelerinin bir dizisi ve bir iletisine parametre nesnelerinin bir dizisi için bir ileti dönüştürme sorumlu. Bu istemciyi kullanarak yapılır <xref:System.ServiceModel.Dispatcher.IClientMessageFormatter> arabirimi ve ile sunucuya <xref:System.ServiceModel.Dispatcher.IDispatchMessageFormatter> arabirimi. Gelen istek ve yanıt iletileri almak kullanıcıların bu arabirimleri sağlamak `Serialize` ve `Deserialize` yöntemleri.  
   
  Bu örnekte `QueryStringFormatter` hem de bu arabirimlerini uygular ve istemci ve sunucu üzerinde uygulanır.  
   
@@ -49,7 +37,7 @@ Bu örnek gösterilmektedir nasıl [!INCLUDE[indigo1](../../../../includes/indig
   
 -   Örnek kullanır <xref:System.ComponentModel.TypeConverter> dizeleri gelen ve giden istek iletisindeki parametre veri dönüştürmek için sınıf. Varsa bir <xref:System.ComponentModel.TypeConverter> özel bir örnek biçimlendirici atar belirli bir türü için kullanılamaz.  
   
--   İçinde `IClientMessageFormatter.SerializeRequest` yöntemi istemcisinde, biçimlendirici uygun adresine sahip bir URI oluşturur ve işlem adı soneki olarak ekler. Bu ad, sunucudaki uygun işlemini gönderilmesi için kullanılır. Ardından parametre nesneler dizisi alır ve parametre adları ve dönüştürülen değerleri kullanarak URI sorgu dizesi parametresi verileri serileştirir <xref:System.ComponentModel.TypeConverter> sınıfı. <xref:System.ServiceModel.Channels.MessageHeaders.To%2A> Ve <xref:System.ServiceModel.Channels.MessageProperties.Via%2A> özellikleri daha sonra bu URI ayarlayın. <xref:System.ServiceModel.Channels.MessageProperties>üzerinden erişilen <xref:System.ServiceModel.Channels.Message.Properties%2A> özelliği.  
+-   İçinde `IClientMessageFormatter.SerializeRequest` yöntemi istemcisinde, biçimlendirici uygun adresine sahip bir URI oluşturur ve işlem adı soneki olarak ekler. Bu ad, sunucudaki uygun işlemini gönderilmesi için kullanılır. Ardından parametre nesneler dizisi alır ve parametre adları ve dönüştürülen değerleri kullanarak URI sorgu dizesi parametresi verileri serileştirir <xref:System.ComponentModel.TypeConverter> sınıfı. <xref:System.ServiceModel.Channels.MessageHeaders.To%2A> Ve <xref:System.ServiceModel.Channels.MessageProperties.Via%2A> özellikleri daha sonra bu URI ayarlayın. <xref:System.ServiceModel.Channels.MessageProperties> üzerinden erişilen <xref:System.ServiceModel.Channels.Message.Properties%2A> özelliği.  
   
 -   İçinde `IDispatchMessageFormatter.DeserializeRequest` yöntemi sunucuda biçimlendirici alır `Via` gelen istek ileti özelliklerinde URI. Ad-değer çiftleri URI sorgu dizesinde parametre adları ve değerlerine ayrıştırır ve yönteme geçirilen parametre dizisi doldurmak için parametre adları ve değerleri kullanır. Bu nedenle bu yöntemi, işlem adı soneki yoksayıldı işlemi gönderme zaten oluştu unutmayın.  
   
@@ -177,7 +165,7 @@ void ReplaceFormatterBehavior(OperationDescription operationDescription, Endpoin
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  Bu dizin mevcut değilse, Git [Windows Communication Foundation (WCF) ve .NET Framework 4 için Windows Workflow Foundation (WF) örnek](http://go.microsoft.com/fwlink/?LinkId=150780) tüm indirmek için [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] ve [!INCLUDE[wf1](../../../../includes/wf1-md.md)] örnekleri. Bu örnek aşağıdaki dizinde bulunur.  
+>  Bu dizin mevcut değilse, Git [Windows Communication Foundation (WCF) ve .NET Framework 4 için Windows Workflow Foundation (WF) örnek](http://go.microsoft.com/fwlink/?LinkId=150780) tüm Windows Communication Foundation (WCF) indirmek için ve [!INCLUDE[wf1](../../../../includes/wf1-md.md)] örnekleri. Bu örnek aşağıdaki dizinde bulunur.  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Extensibility\Formatters\QuieryStringFormatter`  
   

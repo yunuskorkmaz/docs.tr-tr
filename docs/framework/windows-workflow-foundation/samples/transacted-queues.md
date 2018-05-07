@@ -1,24 +1,12 @@
 ---
 title: İşlenen sıraları
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.tgt_pltfrm: ''
-ms.topic: article
 ms.assetid: b1b011dd-5e0b-482c-9bb0-9d8727038f14
-caps.latest.revision: 9
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 628e91589ad32a2646316401c7b2ddb31b13eace
-ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
+ms.openlocfilehash: b125158a113079d87eb6926393d5a2b5fe326824
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/27/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="transacted-queues"></a>İşlenen sıraları
 Bu örnek, kuyruklar ve işlemleri içinde Windows Workflow Foundation (güvenilir ve ölçeklenebilir hizmetler oluşturmak için WF) tümleştirme gösterilmektedir. A <!--zz <xref:System.Activities.TransactionScope>--> `System.Activities.TransactionScope` istemci iş akışında kullanarak bir işlem altında kuyruğa ileti göndermek için kullanılan <xref:System.ServiceModel.NetMsmqBinding>. A <xref:System.ServiceModel.Activities.TransactedReceiveScope> sunucuda kuyruktan ileti alma ve iş akışı aynı işlem altında durumunu güncelleştirmek için kullanılır.  
@@ -46,6 +34,6 @@ Bu örnek, kuyruklar ve işlemleri içinde Windows Workflow Foundation (güvenil
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  Bu dizin mevcut değilse, Git [Windows Communication Foundation (WCF) ve .NET Framework 4 için Windows Workflow Foundation (WF) örnek](http://go.microsoft.com/fwlink/?LinkId=150780) tüm indirmek için [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] ve [!INCLUDE[wf1](../../../../includes/wf1-md.md)] örnekleri. Bu örnek aşağıdaki dizinde bulunur.  
+>  Bu dizin mevcut değilse, Git [Windows Communication Foundation (WCF) ve .NET Framework 4 için Windows Workflow Foundation (WF) örnek](http://go.microsoft.com/fwlink/?LinkId=150780) tüm Windows Communication Foundation (WCF) indirmek için ve [!INCLUDE[wf1](../../../../includes/wf1-md.md)] örnekleri. Bu örnek aşağıdaki dizinde bulunur.  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WF\Scenario\Transactions\TransactedQueues`

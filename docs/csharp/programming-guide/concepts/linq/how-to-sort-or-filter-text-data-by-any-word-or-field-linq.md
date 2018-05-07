@@ -1,21 +1,12 @@
 ---
-title: "Nasıl yapılır: sıralama veya filtre metni verilerle herhangi bir sözcük veya alana (LINQ) (C#)"
-ms.custom: 
+title: 'Nasıl yapılır: sıralama veya filtre metni verilerle herhangi bir sözcük veya alana (LINQ) (C#)'
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-csharp
-ms.topic: article
 ms.assetid: 7c04d42f-4a78-42c8-9ec8-57ef18fe13a9
-caps.latest.revision: "3"
-author: BillWagner
-ms.author: wiwagn
-ms.openlocfilehash: ccc48745918081663317e746953be6e0f09cdd8a
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.openlocfilehash: dc541d7cc8a4fb5978fb2ed9cc43a548e8f8b253
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-sort-or-filter-text-data-by-any-word-or-field-linq-c"></a>Nasıl yapılır: sıralama veya filtre metni verilerle herhangi bir sözcük veya alana (LINQ) (C#)
 Aşağıdaki örnek, satırın herhangi bir alana göre virgülle ayrılmış değerler gibi yapılandırılmış metin satırı sıralama gösterilmektedir. Alan, çalışma zamanında dinamik olarak belirtilebilir. Scores.csv alanları dört test puanları bir dizi tarafından izlenen öğrencinin kimlik numarasını temsil ettiğini varsayalım.  

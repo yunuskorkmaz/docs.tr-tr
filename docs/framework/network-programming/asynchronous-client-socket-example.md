@@ -1,12 +1,6 @@
 ---
-title: "Zaman uyumsuz istemcisi yuva örneği"
-ms.custom: 
+title: Zaman uyumsuz istemcisi yuva örneği
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -15,16 +9,14 @@ helpviewer_keywords:
 - sockets, code examples
 - sockets, asynchronous client sockets
 ms.assetid: d4ac53a0-b50b-4232-9726-d47d25fcc38a
-caps.latest.revision: "8"
 author: mcleblanc
 ms.author: markl
 manager: markl
-ms.workload: dotnet
-ms.openlocfilehash: 323250f7aae44d07aed8e79654335f29e53438bd
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: d295841173ee2f3bf018a2058b4eac1629c4828f
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="asynchronous-client-socket-example"></a>Zaman uyumsuz istemcisi yuva örneği
 Aşağıdaki örnek program bir sunucuya bağlanan bir istemci oluşturur. İstemci zaman uyumsuz bir yuvası ile oluşturulmuştur, bu sunucunun bir yanıt döndürür ancak istemci uygulamanın yürütülmesini askıya alınmadı şekilde. Uygulama bir dize sunucusuna gönderir ve konsolda sunucu tarafından döndürülen dize görüntüler.  

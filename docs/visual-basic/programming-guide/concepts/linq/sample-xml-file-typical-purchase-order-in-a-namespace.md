@@ -1,22 +1,12 @@
 ---
-title: "Örnek XML dosyası: Bir Namespace3 tipik satınalma siparişi"
-ms.custom: 
+title: 'Örnek XML dosyası: Bir Namespace3 tipik satınalma siparişi'
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 38260901-c9f9-4240-9cbf-652c8b05021d
-caps.latest.revision: "3"
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: 689570221e4777eee0ecc7f30c8af8b46d99654a
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.openlocfilehash: 94aa8d39b351a55183b7164bd4ceca875742f17d
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="sample-xml-file-typical-purchase-order-in-a-namespace"></a>Örnek XML dosyası: Tipik satınalma siparişi bir Namespace
 Aşağıdaki XML dosyasını çeşitli örneklerde kullanılan [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] belgeleri. Tipik satın alma siparişi dosyasıdır. XML ad alanında ' dir.  
@@ -64,4 +54,4 @@ Aşağıdaki XML dosyasını çeşitli örneklerde kullanılan [!INCLUDE[sqltecx
 ```  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [Örnek XML belgeleri (LINQ-XML)](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-documents-linq-to-xml.md)
+ [Örnek XML Belgeleri (LINQ to XML)](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-documents-linq-to-xml.md)

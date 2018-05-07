@@ -1,22 +1,14 @@
 ---
 title: Tek örnek başlatmak için gerekli olan bir işletim sistemi kaynağı alınamadığından, beklenmeyen bir hata oluştu
 ms.date: 07/20/2015
-ms.prod: .net
-ms.suite: ''
-ms.technology:
-- devlang-visual-basic
-ms.topic: article
 f1_keywords:
 - vbrAppModel_CantGetMemoryMappedFile
 ms.assetid: 0d9f2a30-ff72-4355-8060-744f22339359
-caps.latest.revision: 10
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: 8969303d66e946d5579c6cca592b5701c4ebd632
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 313128d5511ddd0f3b75c58e2c10a74eb967d130
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="an-unexpected-error-has-occurred-because-an-operating-system-resource-required-for-single-instance-startup-cannot-be-acquired"></a>Tek örnek başlatmak için gerekli olan bir işletim sistemi kaynağı alınamadığından, beklenmeyen bir hata oluştu
 Uygulamayı gerekli işletim sistemi kaynağı alınamadı. Bu sorunun olası nedeni bazıları şunlardır:  
@@ -38,6 +30,6 @@ Uygulamayı gerekli işletim sistemi kaynağı alınamadı. Bu sorunun olası ne
 4.  Hata oluştuğu durumlarda dikkat edin ve Microsoft Ürün Destek Hizmetleri'ne çağırın  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [Uygulama sayfası, Proje Tasarımcısı (Visual Basic)](/visualstudio/ide/reference/application-page-project-designer-visual-basic)  
+ [Uygulama Sayfası, Proje Tasarımcısı (Visual Basic)](/visualstudio/ide/reference/application-page-project-designer-visual-basic)  
  [Hata ayıklayıcı temel bilgileri](/visualstudio/debugger/debugger-basics)  
- [Bizimle iletişime geçin](/visualstudio/ide/talk-to-us)
+ [Bizimle İletişime Geçin](/visualstudio/ide/talk-to-us)

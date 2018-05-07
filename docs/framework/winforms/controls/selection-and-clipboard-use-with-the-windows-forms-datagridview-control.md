@@ -1,13 +1,6 @@
 ---
-title: "Windows Forms DataGridView Denetimi ile Seçim ve Pano Kullanımı"
-ms.custom: 
+title: Windows Forms DataGridView Denetimi ile Seçim ve Pano Kullanımı
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-winforms
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - DataGridView control [Windows Forms], Clipboard use
 - cells [Windows Forms], selecting in grids
@@ -16,16 +9,11 @@ helpviewer_keywords:
 - data grids [Windows Forms], selecting cells
 - DataGridView control [Windows Forms], selecting cells
 ms.assetid: 82cffcad-8b30-4897-bddb-c3a79d751b83
-caps.latest.revision: "10"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: ceea4108f39619ccbcbf0286905a94b8236607cb
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: c777366124a3cc5f43df8efca54fc366245bcb75
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="selection-and-clipboard-use-with-the-windows-forms-datagridview-control"></a>Windows Forms DataGridView Denetimi ile Seçim ve Pano Kullanımı
 `DataGridView` Denetimi, çeşitli kullanıcılar hücrelerini, satırları ve sütunları nasıl seçebilir yapılandırma seçenekleri sağlar. Yalnızca kendi üst bilgiler, kullanıcılar'ı tıklatın, örneğin, tek veya birden çok seçim, tüm satırları veya kullanıcıların hücreleri tıkladığınızda sütun seçimi ya da tüm satır veya sütun seçimi hücre seçimi sağlayan etkinleştirebilirsiniz. Seçim için kendi kullanıcı arabirimi sağlamak istiyorsanız, sıradan seçimi devre dışı bırakabilir ve tüm seçimi programlı olarak işleme. Ayrıca, seçilen değerleri panoya kopyalamak kullanıcıların sağlayabilirsiniz.  

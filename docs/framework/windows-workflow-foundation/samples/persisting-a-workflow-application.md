@@ -1,31 +1,20 @@
 ---
-title: "Bir iş akışı uygulaması kalıcı yapma"
-ms.custom: 
+title: Bir iş akışı uygulaması kalıcı yapma
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: abcff14c-f047-4195-ba26-d27f4a82c24e
-caps.latest.revision: "15"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: cf23b8e33766ea7a15135418142082a0e7b715ad
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: e5c0cf23dd238c0c5a81519b5e6c415f4ef75f1d
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="persisting-a-workflow-application"></a>Bir iş akışı uygulaması kalıcı yapma
 Bu örnek nasıl çalıştırılacağını gösteren bir <xref:System.Activities.WorkflowApplication>boşta gittiğinde kaldırın ve sonra yürütülmeye devam etmek için yeniden yükleyin.  
   
 ## <a name="sample-details"></a>Örnek Ayrıntıları  
- <xref:System.Activities.WorkflowApplication>Basit bir arabirim sağlar ve daha yaygın barındırma senaryolarından sağlayan tek bir iş akışı örneği için bir ana bilgisayardır. Böyle bir senaryo uzun çalışan iş akışları tarafından Kalıcılık sayesinde kolaylaşır. Kalıcılık konak denetimini ya da göre sürdürme işlemi çağrılması gerçekleştirilir <xref:System.Activities.WorkflowApplication>, ya da işleme tarafından bir <xref:System.Activities.WorkflowApplication> olay ve belirten <xref:System.Activities.WorkflowApplication> kalıcı olması.  
+ <xref:System.Activities.WorkflowApplication> Basit bir arabirim sağlar ve daha yaygın barındırma senaryolarından sağlayan tek bir iş akışı örneği için bir ana bilgisayardır. Böyle bir senaryo uzun çalışan iş akışları tarafından Kalıcılık sayesinde kolaylaşır. Kalıcılık konak denetimini ya da göre sürdürme işlemi çağrılması gerçekleştirilir <xref:System.Activities.WorkflowApplication>, ya da işleme tarafından bir <xref:System.Activities.WorkflowApplication> olay ve belirten <xref:System.Activities.WorkflowApplication> kalıcı olması.  
   
- Örnek iş akışı bir <xref:System.Activities.Statements.WriteLine> etkinlik kendi adı için kullanıcıdan bir `ReadLine` sürdürme aracılığıyla giriş olarak ad alma etkinliği bir <xref:System.Activities.Bookmark>ve başka bir <xref:System.Activities.Statements.WriteLine> geri kullanıcıya Karşılama Yankı için. Bir iş akışı için giriş beklediği sırada bu kalıcılığını doğal noktası sağlar. Bu genellikle olarak adlandırılır bir <xref:System.Workflow.Runtime.Tracking.TrackingWorkflowEvent.Idle> gelin. <xref:System.Activities.WorkflowApplication>başlatır <xref:System.Workflow.Runtime.Tracking.TrackingWorkflowEvent.Idle> iş akışı programı kalıcı her olay bir yer işareti sürdürme bekleyen ve başka bir iş gerçekleştirilir. Hemen sonra noktası gelen, bu örneği ait iş akışında `ReadLine` etkinliği başlar yürütülüyor.  
+ Örnek iş akışı bir <xref:System.Activities.Statements.WriteLine> etkinlik kendi adı için kullanıcıdan bir `ReadLine` sürdürme aracılığıyla giriş olarak ad alma etkinliği bir <xref:System.Activities.Bookmark>ve başka bir <xref:System.Activities.Statements.WriteLine> geri kullanıcıya Karşılama Yankı için. Bir iş akışı için giriş beklediği sırada bu kalıcılığını doğal noktası sağlar. Bu genellikle olarak adlandırılır bir <xref:System.Workflow.Runtime.Tracking.TrackingWorkflowEvent.Idle> gelin. <xref:System.Activities.WorkflowApplication> başlatır <xref:System.Workflow.Runtime.Tracking.TrackingWorkflowEvent.Idle> iş akışı programı kalıcı her olay bir yer işareti sürdürme bekleyen ve başka bir iş gerçekleştirilir. Hemen sonra noktası gelen, bu örneği ait iş akışında `ReadLine` etkinliği başlar yürütülüyor.  
   
  A <xref:System.Activities.WorkflowApplication> Kalıcılık ile gerçekleştirmek için ayarlanmış bir <!--zz <xref:System.Runtime.Persistence.InstanceStore> --> `System.Runtime.Persistence.InstanceStore`. Bu örnekte <xref:System.Activities.DurableInstancing.SqlWorkflowInstanceStore>. <!--zz <xref:System.Runtime.Persistence.InstanceStore> --> `System.Runtime.Persistence.InstanceStore` Atanmalıdır <xref:System.Activities.WorkflowApplication.InstanceStore%2A> önce özelliği <xref:System.Activities.WorkflowApplication> çalıştırılır.  
   
@@ -62,7 +51,7 @@ Bu örnek nasıl çalıştırılacağını gösteren bir <xref:System.Activities
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  Bu dizin mevcut değilse, Git [Windows Communication Foundation (WCF) ve .NET Framework 4 için Windows Workflow Foundation (WF) örnek](http://go.microsoft.com/fwlink/?LinkId=150780) tüm indirmek için [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] ve [!INCLUDE[wf1](../../../../includes/wf1-md.md)] örnekleri. Bu örnek aşağıdaki dizinde bulunur.  
+>  Bu dizin mevcut değilse, Git [Windows Communication Foundation (WCF) ve .NET Framework 4 için Windows Workflow Foundation (WF) örnek](http://go.microsoft.com/fwlink/?LinkId=150780) tüm Windows Communication Foundation (WCF) indirmek için ve [!INCLUDE[wf1](../../../../includes/wf1-md.md)] örnekleri. Bu örnek aşağıdaki dizinde bulunur.  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WF\Basic\Persistence\InstancePersistence`  
   

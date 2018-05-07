@@ -1,28 +1,16 @@
 ---
-title: "Örnek OpenType Yazı Tipi Paketi"
-ms.custom: 
+title: Örnek OpenType Yazı Tipi Paketi
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-wpf
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - OpenType font pack [WPF]
 - fonts [WPF], OpenType font pack
 - typography [WPF], OpenType font pack
 ms.assetid: 56b46fa1-a44e-419b-8f14-25ad51c715c3
-caps.latest.revision: "23"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 7390c8c84caa17b984d5a16b7ac6b9704b8f3c6e
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: bec890f7937965c314ccf16b4142905c52ceff49
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="sample-opentype-font-pack"></a>Örnek OpenType Yazı Tipi Paketi
 Bu konu örnek bir bakış sunar [!INCLUDE[TLA#tla_opentype](../../../../includes/tlasharptla-opentype-md.md)] ile dağıtılmış yazı tiplerini [!INCLUDE[TLA2#tla_wcsdk](../../../../includes/tla2sharptla-wcsdk-md.md)]. Genişletilmiş örnek yazı tipi desteği [!INCLUDE[TLA#tla_opentype](../../../../includes/tlasharptla-opentype-md.md)] tarafından kullanılan özellikler [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] uygulamalar.  
@@ -57,7 +45,7 @@ OpenType yazı tipi paketi yazı tipleri
 ## <a name="installing-the-fonts"></a>Yazı tipleri yükleme  
  Örnek yükleme seçeneğiniz [!INCLUDE[TLA#tla_opentype](../../../../includes/tlasharptla-opentype-md.md)] yazı tiplerini varsayılan [!INCLUDE[TLA#tla_mswin](../../../../includes/tlasharptla-mswin-md.md)] yazı tipleri dizini **\WINDOWS\Fonts**. Yazı tiplerini yüklemek için yazı tipleri Denetim Masası'nı kullanın. Bu yazı tipleri bilgisayarınızda olduktan sonra varsayılan başvuran tüm uygulamalar için erişilebilir olduklarını [!INCLUDE[TLA#tla_mswin](../../../../includes/tlasharptla-mswin-md.md)] yazı tipi. Katlama-yazı tipi dosyası tıklayarak birkaç yazı tipi boyutlarında temsilci karakter kümesini görüntüleyebilirsiniz. Aşağıdaki ekran görüntüsünde Lindsey yazı tipi dosyası, Linds.ttf gösterir.  
   
- ![Lindsey yazı tipi &#40; OpenType &#41; ] (../../../../docs/framework/wpf/advanced/media/typographyinwpf-04.png "TypographyInWPF_04")  
+ ![Lindsey yazı tipi &#40;OpenType&#41;](../../../../docs/framework/wpf/advanced/media/typographyinwpf-04.png "TypographyInWPF_04")  
 Lindsey yazı tipi görüntüleme  
   
 <a name="using_the_fonts"></a>   

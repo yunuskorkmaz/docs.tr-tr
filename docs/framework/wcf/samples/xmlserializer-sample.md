@@ -1,29 +1,15 @@
 ---
 title: XMLSerializer Örneği
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 ms.assetid: 7d134453-9a35-4202-ba77-9ca3a65babc3
-caps.latest.revision: 23
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: af051dffa93aea6586adaea1e49081ddc357a210
-ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
-ms.translationtype: MT
+ms.openlocfilehash: 3d1df93ef0efb7da24a1478f87e10dd18aa10bf1
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/27/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="xmlserializer-sample"></a>XMLSerializer Örneği
-Bu örnek seri hale getirmek ve seri durumdan uyumlu türleri gösterilmiştir <xref:System.Xml.Serialization.XmlSerializer>. Varsayılan [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] biçimlendiricidir <xref:System.Runtime.Serialization.DataContractSerializer> sınıfı. <xref:System.Xml.Serialization.XmlSerializer> Sınıfı, serileştirme ve seri durumdan kullanılabilir olduğunda türleri <xref:System.Runtime.Serialization.DataContractSerializer> sınıfı kullanılamaz. XML denetleyebilmeniz Örneğin, - gerektiğinde bir XML özniteliği ve bir XML öğesi bir veri parçası olması gerekiyorsa bu genellikle durumdur. Ayrıca, <xref:System.Xml.Serialization.XmlSerializer> genellikle otomatik olarak istemciler için oluştururken seçilir olmayan[!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] Hizmetleri.  
+Bu örnek seri hale getirmek ve seri durumdan uyumlu türleri gösterilmiştir <xref:System.Xml.Serialization.XmlSerializer>. Varsayılan Windows Communication Foundation (WCF) biçimlendiricidir <xref:System.Runtime.Serialization.DataContractSerializer> sınıfı. <xref:System.Xml.Serialization.XmlSerializer> Sınıfı, serileştirme ve seri durumdan kullanılabilir olduğunda türleri <xref:System.Runtime.Serialization.DataContractSerializer> sınıfı kullanılamaz. XML denetleyebilmeniz Örneğin, - gerektiğinde bir XML özniteliği ve bir XML öğesi bir veri parçası olması gerekiyorsa bu genellikle durumdur. Ayrıca, <xref:System.Xml.Serialization.XmlSerializer> genellikle otomatik olarak istemciler için oluştururken seçilir olmayan[!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] Hizmetleri.  
   
  Bu örnekte, istemci bir konsol uygulaması (.exe) ve Internet Information Services (IIS) tarafından barındırılan hizmetindeki.  
   
@@ -143,7 +129,7 @@ Press <ENTER> to terminate client.
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  Bu dizin mevcut değilse, Git [Windows Communication Foundation (WCF) ve .NET Framework 4 için Windows Workflow Foundation (WF) örnek](http://go.microsoft.com/fwlink/?LinkId=150780) tüm indirmek için [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] ve [!INCLUDE[wf1](../../../../includes/wf1-md.md)] örnekleri. Bu örnek aşağıdaki dizinde bulunur.  
+>  Bu dizin mevcut değilse, Git [Windows Communication Foundation (WCF) ve .NET Framework 4 için Windows Workflow Foundation (WF) örnek](http://go.microsoft.com/fwlink/?LinkId=150780) tüm Windows Communication Foundation (WCF) indirmek için ve [!INCLUDE[wf1](../../../../includes/wf1-md.md)] örnekleri. Bu örnek aşağıdaki dizinde bulunur.  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Client\Interop\XmlSerializer`  
   

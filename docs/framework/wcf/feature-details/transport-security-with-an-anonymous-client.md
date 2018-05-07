@@ -1,32 +1,20 @@
 ---
 title: Anonim İstemci ile Taşıma Güvenliği
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 dev_langs:
 - csharp
 - vb
 ms.assetid: 056653a5-384e-4a02-ae3c-1b0157d2ccb4
-caps.latest.revision: 14
 author: BrucePerlerMS
-ms.author: bruceper
 manager: mbaldwin
-ms.workload:
-- dotnet
-ms.openlocfilehash: 2b52a32db1f1ac02f9204198a4cda5d4cb157486
-ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
+ms.openlocfilehash: ad22abe84289cac8f57bebb564ee129bcc2334c3
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/30/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="transport-security-with-an-anonymous-client"></a>Anonim İstemci ile Taşıma Güvenliği
-Bu [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] senaryosu, gizliliği ve bütünlük sağlamak için Aktarım güvenliği (HTTPS) kullanır. Sunucu ile Güvenli Yuva Katmanı (SSL) sertifikası kimlik doğrulaması gerekir ve istemcilerin sunucu sertifikasına güvenmesi gerekir. İstemci tarafından herhangi bir mekanizma doğrulanmaz ve, bu nedenle, anonim bir işlemdir.  
+Bu Windows Communication Foundation (WCF) senaryosu, gizliliği ve bütünlük sağlamak için Aktarım güvenliği (HTTPS) kullanır. Sunucu ile Güvenli Yuva Katmanı (SSL) sertifikası kimlik doğrulaması gerekir ve istemcilerin sunucu sertifikasına güvenmesi gerekir. İstemci tarafından herhangi bir mekanizma doğrulanmaz ve, bu nedenle, anonim bir işlemdir.  
   
  Örnek bir uygulama için bkz: [WS taşıma güvenliği](../../../../docs/framework/wcf/samples/ws-transport-security.md). Taşıma güvenliği hakkında daha fazla bilgi için bkz: [taşıma güvenliği genel bakış](../../../../docs/framework/wcf/feature-details/transport-security-overview.md).  
   
@@ -38,7 +26,7 @@ Bu [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] senaryosu, gizliliği
 |--------------------|-----------------|  
 |Güvenlik modu|Taşıma|  
 |Birlikte Çalışabilirlik|Mevcut Web Hizmetleri ve istemcileri ile|  
-|Kimlik doğrulaması (sunucu)<br /><br /> Kimlik doğrulaması (istemci)|Evet<br /><br /> Uygulama düzeyinde (hiçbir [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] destekler)|  
+|Kimlik doğrulaması (sunucu)<br /><br /> Kimlik doğrulaması (istemci)|Evet<br /><br /> Uygulama düzeyinde (WCF desteği yok)|  
 |Bütünlük|Evet|  
 |Gizliliği|Evet|  
 |Taşıma|HTTPS|  

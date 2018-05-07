@@ -1,13 +1,6 @@
 ---
-title: "UI Otomasyon ve Ekran Ölçeklendirme"
-ms.custom: 
+title: UI Otomasyon ve Ekran Ölçeklendirme
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-bcl
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -17,22 +10,20 @@ helpviewer_keywords:
 - UI (user interface), automation
 - UI Automation
 ms.assetid: 4380cad7-e509-448f-b9a5-6de042605fd4
-caps.latest.revision: "16"
 author: Xansky
 ms.author: mhopkins
 manager: markl
-ms.workload: dotnet
-ms.openlocfilehash: bb33d3175cf9e43797125b47c811042771e45782
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.openlocfilehash: c34c10ee1701adba2dfb64be8ef39d6bf9f203e2
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="ui-automation-and-screen-scaling"></a>UI Otomasyon ve Ekran Ölçeklendirme
 > [!NOTE]
 >  Bu belge yönetilen kullanmak isteyen .NET Framework için tasarlanan [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] tanımlanan sınıflar <xref:System.Windows.Automation> ad alanı. Hakkında en yeni bilgiler için [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)], bkz: [Windows Otomasyon API: UI Otomasyonu](http://go.microsoft.com/fwlink/?LinkID=156746).  
   
- [!INCLUDE[TLA#tla_longhorn](../../../includes/tlasharptla-longhorn-md.md)]Kullanıcıların değiştirmesine olanak tanır [!INCLUDE[TLA#tla_dpi](../../../includes/tlasharptla-dpi-md.md)] böylece çoğu ayarı [!INCLUDE[TLA#tla_ui](../../../includes/tlasharptla-ui-md.md)] daha büyük ekranda öğeleri görünür. Bu özellik uzun kullanılabilir olsa da [!INCLUDE[TLA#tla_win](../../../includes/tlasharptla-win-md.md)], önceki sürümlerde ölçeklendirme sahip uygulamalar tarafından uygulanacak. İçinde [!INCLUDE[TLA#tla_longhorn](../../../includes/tlasharptla-longhorn-md.md)], Masaüstü Pencere Yöneticisi kendi ölçeklendirme işlemez tüm uygulamalar için ölçeklendirme varsayılan gerçekleştirir. UI Otomasyonu istemci uygulamalarının bu özellik, dikkate almanız gerekir.  
+ [!INCLUDE[TLA#tla_longhorn](../../../includes/tlasharptla-longhorn-md.md)] Kullanıcıların değiştirmesine olanak tanır [!INCLUDE[TLA#tla_dpi](../../../includes/tlasharptla-dpi-md.md)] böylece çoğu ayarı [!INCLUDE[TLA#tla_ui](../../../includes/tlasharptla-ui-md.md)] daha büyük ekranda öğeleri görünür. Bu özellik uzun kullanılabilir olsa da [!INCLUDE[TLA#tla_win](../../../includes/tlasharptla-win-md.md)], önceki sürümlerde ölçeklendirme sahip uygulamalar tarafından uygulanacak. İçinde [!INCLUDE[TLA#tla_longhorn](../../../includes/tlasharptla-longhorn-md.md)], Masaüstü Pencere Yöneticisi kendi ölçeklendirme işlemez tüm uygulamalar için ölçeklendirme varsayılan gerçekleştirir. UI Otomasyonu istemci uygulamalarının bu özellik, dikkate almanız gerekir.  
   
 <a name="Scaling_in_Windows_Vista"></a>   
 ## <a name="scaling-in-windows-vista"></a>Windows Vista'da ölçeklendirme  

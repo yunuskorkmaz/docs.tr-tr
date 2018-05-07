@@ -1,27 +1,15 @@
 ---
-title: "Stillenebilir Denetimleri Tasarlama Yönergeleri"
-ms.custom: 
+title: Stillenebilir Denetimleri Tasarlama Yönergeleri
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-wpf
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - style design for controls [WPF]
 - controls [WPF], style design
 ms.assetid: c52dde45-a311-4531-af4c-853371c4d5f4
-caps.latest.revision: "18"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 6707a434f64838467033966c9093e1e415b1fb31
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 4e807a323f6b454b1f07c8e0a9f99b17c9723df7
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="guidelines-for-designing-stylable-controls"></a>Stillenebilir Denetimleri Tasarlama Yönergeleri
 Bu belge, kolayca Stillenebilir olmasını istediğiniz bir denetimi tasarlarken dikkate alınması gereken en iyi yöntemler ve şablonu bir dizi özetler. Biz bu çok sayıda deneme yanılma yoluyla en iyi yöntemler kümesi için yerleşik tema denetim stillerini üzerinde çalışırken gelen [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] denetim kümesi. Başarılı stil stili olduğu gibi kadar bir işlev iyi tasarlanmış nesne modeli olduğunu öğrendiniz. Bu belgenin hedef kitlesi stil yazarı değil denetim yazarı ' dir.  
@@ -53,7 +41,7 @@ Bu belge, kolayca Stillenebilir olmasını istediğiniz bir denetimi tasarlarken
   
     -   Sözleşmeleri mümkün olduğunca en aza indirin.  
   
-    -   Tasarım, tasarım sırasında (diğer bir deyişle, tasarım aracı kullanırken) zaman beklentiler çerçevesinde tamamlanmamış bir durumda bir denetim şablonu yaygındır. [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]Böyle bir durumda geçerli olabilir beklentisi ile oluşturulacak denetimleriniz şekilde "çıktısından" durumu altyapı sağlamaz.  
+    -   Tasarım, tasarım sırasında (diğer bir deyişle, tasarım aracı kullanırken) zaman beklentiler çerçevesinde tamamlanmamış bir durumda bir denetim şablonu yaygındır. [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] Böyle bir durumda geçerli olabilir beklentisi ile oluşturulacak denetimleriniz şekilde "çıktısından" durumu altyapı sağlamaz.  
   
     -   Herhangi bir değişiklik, şablon sözleşme etmeyen olduğunda özel durumlar oluşturmayın. Çok fazla sayıda veya çok az sayıda alt öğe varsa bu satırlar boyunca paneller özel durumlar oluşturmamalıdır.  
   
@@ -112,7 +100,7 @@ Bu belge, kolayca Stillenebilir olmasını istediğiniz bir denetimi tasarlarken
   
 -   **Varolan stil desenleri ile tutarlı olmalıdır.** Birçok kez bir sorunu çözmek için birden çok yolu vardır. Farkında olmanız ve olası, var olan tutarlı denetlemek stil desenleri. Bu özellikle aynı temel türden türetilmiş denetimler için önemlidir (örneğin, <xref:System.Windows.Controls.ContentControl>, <xref:System.Windows.Controls.ItemsControl>, <xref:System.Windows.Controls.Primitives.RangeBase>, vb.).  
   
--   **Oluşturmadan genel özelleştirme senaryolarını etkinleştirmek için özelliklerini ortaya**. [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]böylece bir denetimi kullanıcısı yalnızca iki özelleştirme yöntemi ile bırakılır takılabilir/özelleştirilebilir kısımları desteklemez: özellikler doğrudan ayarlama veya stilleri kullanarak özellikleri. Aklınızda özellikleri Aksi halde yeniden şablon oluşturmak gerektiren yaygın, yüksek öncelikli özelleştirme senaryolarında hedeflenen sınırlı sayıda yüzey uygundur. Ne zaman ve nasıl özelleştirme senaryolarını etkinleştirmek için en iyi yöntemler şunlardır:  
+-   **Oluşturmadan genel özelleştirme senaryolarını etkinleştirmek için özelliklerini ortaya**. [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] böylece bir denetimi kullanıcısı yalnızca iki özelleştirme yöntemi ile bırakılır takılabilir/özelleştirilebilir kısımları desteklemez: özellikler doğrudan ayarlama veya stilleri kullanarak özellikleri. Aklınızda özellikleri Aksi halde yeniden şablon oluşturmak gerektiren yaygın, yüksek öncelikli özelleştirme senaryolarında hedeflenen sınırlı sayıda yüzey uygundur. Ne zaman ve nasıl özelleştirme senaryolarını etkinleştirmek için en iyi yöntemler şunlardır:  
   
     -   Yaygın özelleştirmeler denetimi özellikleri olarak sunulur ve şablon tarafından tüketilen.  
   

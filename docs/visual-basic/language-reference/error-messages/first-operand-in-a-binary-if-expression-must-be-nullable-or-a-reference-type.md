@@ -1,28 +1,19 @@
 ---
-title: "Bir ikili &#39; ilk işlenen varsa &#39; ifade boş değer atanabilir veya bir başvuru türü"
+title: Bir ikili ilk işlenen &#39;varsa&#39; ifadesi null olmalı veya bir başvuru türü
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- devlang-visual-basic
-ms.topic: article
 f1_keywords:
 - bc33107
 - vbc33107
 helpviewer_keywords:
 - BC33107
 ms.assetid: 493c8899-3f6b-4471-8eb6-9284e8492768
-caps.latest.revision: 
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: f66b110c02076120c55a3bff28c3d7614bf8be26
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 76078d315b2c32a2a29aa652a65b463622afec36
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
-# <a name="first-operand-in-a-binary-39if39-expression-must-be-nullable-or-a-reference-type"></a>Bir ikili &#39; ilk işlenen varsa &#39; ifade boş değer atanabilir veya bir başvuru türü
+# <a name="first-operand-in-a-binary-39if39-expression-must-be-nullable-or-a-reference-type"></a>Bir ikili ilk işlenen &#39;varsa&#39; ifadesi null olmalı veya bir başvuru türü
 Bir `If` ifadesi, iki veya üç bağımsız değişken alabilir. Yalnızca iki bağımsız değişken gönderdiğinizde, ilk bağımsız değişkeni bir başvuru türü veya boş değer atanabilir bir tür olmalıdır. İlk bağımsız değişkeni için herhangi bir şey dışında değerlendirilirse `Nothing`, bu değer döndürülür. İlk bağımsız değişken değerlendirilirse `Nothing`, ikinci bağımsız değişkeni değerlendirilir ve döndürdü.  
   
  Örneğin, aşağıdaki kod iki içeren `If` ifadeleri, üç bağımsız değişkenlerle diğeri iki bağımsız değişkenlere sahip. İfadeleri hesaplamak ve aynı değeri döndürür.  
@@ -62,6 +53,6 @@ Console.WriteLine(If(booleanVar, "Test returns True.", "Test returns False."))
 ```  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [Varsa işleci](../../../visual-basic/language-reference/operators/if-operator.md)  
- [If... Then... Else deyimi](../../../visual-basic/language-reference/statements/if-then-else-statement.md)  
- [Boş değer atanabilen değer türleri](../../../visual-basic/programming-guide/language-features/data-types/nullable-value-types.md)
+ [If İşleci](../../../visual-basic/language-reference/operators/if-operator.md)  
+ [If...Then...Else Deyimi](../../../visual-basic/language-reference/statements/if-then-else-statement.md)  
+ [Boş Değer Atanabilen Değer Türleri](../../../visual-basic/programming-guide/language-features/data-types/nullable-value-types.md)

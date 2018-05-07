@@ -1,27 +1,15 @@
 ---
 title: "Nasıl yapılır: UIElement'i Yatay veya Dikey Olarak Çevirme"
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-wpf
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - flipping UIElements [WPF]
 - UIElements [WPF], flipping
 ms.assetid: 02c6730f-65c0-40d5-a553-4cb663721882
-caps.latest.revision: "4"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: d34aea4ea99bc03b328fb08582cac3e18a98df66
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 89dcf668f1fe361480dabdab227a35ea40c344a4
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-flip-a-uielement-horizontally-or-vertically"></a>Nasıl yapılır: UIElement'i Yatay veya Dikey Olarak Çevirme
 Bu örnek nasıl kullanılacağını gösteren bir <xref:System.Windows.Media.ScaleTransform> ters çevirmek için bir <xref:System.Windows.UIElement> yatay veya dikey olarak. Bu örnekte, bir <xref:System.Windows.Controls.Button> denetimi (bir tür <xref:System.Windows.UIElement>) uygulanarak çevrilmiş bir <xref:System.Windows.Media.ScaleTransform> için kendi <xref:System.Windows.UIElement.RenderTransform%2A> özelliği.  
@@ -41,7 +29,7 @@ Bu örnek nasıl kullanılacağını gösteren bir <xref:System.Windows.Media.Sc
   
  [!code-xaml[Transforms_snip#GraphicsMMFlipButtonExample1](../../../../samples/snippets/csharp/VS_Snippets_Wpf/Transforms_snip/CS/FlipExample.xaml#graphicsmmflipbuttonexample1)]  
   
- ![Yatay hakkında çevrilmiş bir düğme &#40; 0,0 &#41; ] (../../../../docs/framework/wpf/advanced/media/graphicsmm-buttonfliphorizontalflip-displaced.gif "graphicsmm_buttonfliphorizontalflip_displaced")  
+ ![İlgili yatay çevrilen düğme &#40;0,0&#41;](../../../../docs/framework/wpf/advanced/media/graphicsmm-buttonfliphorizontalflip-displaced.gif "graphicsmm_buttonfliphorizontalflip_displaced")  
 ScaleTransform uygulandıktan sonra düğmesi  
   
 ## <a name="example"></a>Örnek  

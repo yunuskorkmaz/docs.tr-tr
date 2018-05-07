@@ -1,10 +1,6 @@
 ---
 title: Kopyalama ve Sabitleme
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.technology:
-- dotnet-clr
-ms.topic: article
 helpviewer_keywords:
 - pinning, interop marshaling
 - copying, interop marshaling
@@ -13,14 +9,11 @@ helpviewer_keywords:
 ms.assetid: 0059f576-e460-4e70-b257-668870e420b8
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: c785c7bc9160cb252aad61fea00cce0d9a7eacdf
-ms.sourcegitcommit: 9a4fe1a1c37b26532654b4bbe22d702237950009
+ms.openlocfilehash: 503ef7066b5d66b05c1642512ab8d59a2b1d3f9a
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="copying-and-pinning"></a>Kopyalama ve Sabitleme
 Verileri hazırlama, birlikte çalışabilirlik Sıralayıcı kopyalayabilir veya sıralanmış veri sabitleyin. Veri kopyalama verilerin bir kopyasını tek bir yerden bellek başka bir bellek konuma yerleştirir. Bir değer türü kopyalama arasındaki farklar aşağıda gösterilmiştir ve bir tür kopyalama başvuruya göre yönetilmeyen bellek yönetilen geçirildi.  
@@ -83,7 +76,7 @@ Değer ve başvuru tarafından geçirilen başvuru türleri
   
  Zaman bir <xref:System.Text.StringBuilder?displayProperty=nameWithType> değeri, iç arabellek başvuru Sıralayıcı geçişleri tarafından geçirilen **StringBuilder** doğrudan çağırana. Çağıran ve çağrılan arabellek boyutunu kabul etmeniz gerekir. Arayan oluşturmaktan sorumlu bir **StringBuilder** yeterli uzunluğu. Aranan arabellek değil taşması emin olmak için gerekli önlemleri almalıdır. **StringBuilder** olduğu değeri tarafından geçirilen türler başvuru kural için bir özel parametreler olduğu gibi varsayılan olarak geçirilir. Bu her zaman geçirilen olarak giriş/çıkış.  
   
-## <a name="see-also"></a>Ayrıca bkz.  
+## <a name="see-also"></a>Ayrıca Bkz.  
  [Varsayılan Hazırlama Davranışı](default-marshaling-behavior.md)  
  [Bellek yönetimi ile birlikte çalışma Sıralayıcı](https://msdn.microsoft.com/library/417206ce-ee3e-4619-9529-0c0b686c7bee(v=vs.100))  
  [Tek yönlü öznitelikleri](https://msdn.microsoft.com/library/241ac5b5-928e-4969-8f58-1dbc048f9ea2(v=vs.100))  

@@ -1,26 +1,12 @@
 ---
 title: '&lt;userPrincipalName&gt;'
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 68032f69-149e-4613-bae4-18314d4fd294
-caps.latest.revision: 
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 23e2599920c0ef0ea35569ec9b0b16b0f8735f1a
-ms.sourcegitcommit: cf22b29db780e532e1090c6e755aa52d28273fa6
+ms.openlocfilehash: 1bb0c8ac4cbe11cdfa31beb16b00b3863acabf92
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/01/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="ltuserprincipalnamegt"></a>&lt;userPrincipalName&gt;
 Kullanıcı asıl adı (istemci tarafından doğrulanmasını UPN), bir hizmetin belirtir.  
@@ -28,7 +14,7 @@ Kullanıcı asıl adı (istemci tarafından doğrulanmasını UPN), bir hizmetin
  UPN ayarlama hakkında daha fazla bilgi için bkz: [hizmet kimliği ve kimlik doğrulama](../../../../../docs/framework/wcf/feature-details/service-identity-and-authentication.md).  
   
 \<Kimliği >  
-\<userPrincipalName>  
+\<userPrincipalName >  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -55,7 +41,7 @@ Kullanıcı asıl adı (istemci tarafından doğrulanmasını UPN), bir hizmetin
 |[\<Kimliği >](../../../../../docs/framework/configure-apps/file-schema/wcf/identity.md)|İstemci tarafından doğrulanmasını hizmetin kimliğini belirtir.|  
   
 ## <a name="remarks"></a>Açıklamalar  
- Güvenli [!INCLUDE[indigo1](../../../../../includes/indigo1-md.md)] Bu kimliğe sahip bir uç nokta bağlandığı istemcisi, SSPI kimlik doğrulama uç noktası ile gerçekleştirirken UPN kullanır.  
+ Bu kimliğe sahip bir uç nokta bağlandığı güvenli bir Windows Communication Foundation (WCF) istemci SSPI kimlik doğrulama uç noktası ile gerçekleştirirken kullanır.  
   
 ## <a name="example"></a>Örnek  
  Aşağıdaki yapılandırma kodunu istemci tarafından doğrulanmasını UPN hizmetinin belirtir.  

@@ -1,14 +1,6 @@
 ---
-title: "ICorDebugController::Continue Yöntemi"
-ms.custom: 
+title: ICorDebugController::Continue Yöntemi
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: reference
 api_name:
 - ICorDebugController.Continue
 api_location:
@@ -23,17 +15,13 @@ helpviewer_keywords:
 ms.assetid: 8684cd06-ad3e-48ef-832e-15320e1f43a2
 topic_type:
 - apiref
-caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: e6a96145801aa8ef6482e30e9c00b763d2501f36
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 529a65285203ac831e1bcab9dc1bea69ac28a282
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="icordebugcontrollercontinue-method"></a>ICorDebugController::Continue Yöntemi
 Yönetilen iş parçacığı yürütülmesi için bir çağrı sonra sürdürür [Stop yöntemi](../../../../docs/framework/unmanaged-api/debugging/icordebugcontroller-stop-method.md).  
@@ -51,7 +39,7 @@ HRESULT Continue (
  [in] Kümesine `true` bir bant dışı olayından; etmeden, aksi takdirde kümesine `false`.  
   
 ## <a name="remarks"></a>Açıklamalar  
- `Continue`Çağrı sonra işlemine devam `ICorDebugController::Stop` yöntemi.  
+ `Continue` Çağrı sonra işlemine devam `ICorDebugController::Stop` yöntemi.  
   
  Karışık mod hata ayıklaması yaparken çağırmayın `Continue` Win32'olay iş parçacığı sürece bir bant dışı olayından devam ediliyor.  
   
@@ -66,7 +54,7 @@ HRESULT Continue (
   
  **Kitaplığı:** CorGuids.lib  
   
- **.NET framework sürümleri:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET framework sürümleri:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
  

@@ -1,14 +1,6 @@
 ---
 title: 'İzlenecek yol: WPF Uygulamasında Uygulama Verilerini Önbelleğe Alma'
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-wpf
-ms.tgt_pltfrm: ''
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -17,17 +9,11 @@ helpviewer_keywords:
 - caching [.NET Framework]
 - caching [WPF]
 ms.assetid: dac2c9ce-042b-4d23-91eb-28f584415cef
-caps.latest.revision: 25
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: a8d3fe2dbfe0b4b5fb9081d71cec080dfa54add8
-ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
+ms.openlocfilehash: 7a4f84281da78068b5c6f7a505c8cb9225b31a39
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/27/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="walkthrough-caching-application-data-in-a-wpf-application"></a>İzlenecek yol: WPF Uygulamasında Uygulama Verilerini Önbelleğe Alma
 Önbelleğe alma, verileri hızlı erişim için bellekte depolamanızı sağlar. Verileri yeniden erişildiğinde uygulamalar yerine özgün kaynak alma önbellekten veri alabilirsiniz. Bu, performans ve ölçeklenebilirlik iyileştirebilir. Ayrıca, veri kaynağı geçici olarak devre dışı olduğunda kullanılabilir hale getirir verileri önbelleğe alma.  

@@ -1,30 +1,18 @@
 ---
 title: .NET Framework'teki eski türler
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 helpviewer_keywords:
 - .NET Framework 4.5, obsolete types
 - types, obsolete in .NET Framework 4.5
 - obsolete types [.NET Framework]
 ms.assetid: e636d024-0fac-45eb-b721-25a8c0ceca8f
-caps.latest.revision: ''
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: f30b9e245ad38b0e861590e9b2ca3658a2b5e967
-ms.sourcegitcommit: c883637b41ee028786edceece4fa872939d2e64c
+ms.openlocfilehash: a5668292eaae2b05bbc056196a35a9b8840b7177
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/26/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="obsolete-types-in-the-net-framework"></a>.NET Framework'teki eski türler
 <a name="introduction"></a> Bu makaledeki tablolar'te eski türler listesinde [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] ve [!INCLUDE[net_v46](../../../includes/net-v46-md.md)], derleme tarafından düzenlenir. Eski türler ve her derlemesindeki önerilen Alternatiflerle listesini görmek için aşağıdaki bağlantıları kullanın. Bu tür geçersiz olduğundan, tüm üyeleri aynı zamanda artık kullanılmıyor. .NET Framework Sınıf Kitaplığı'nda ek eski üyeler listesi için bkz: [eski üyeler](../../../docs/framework/whats-new/obsolete-members.md).  
@@ -86,7 +74,7 @@ ms.lasthandoff: 03/26/2018
  Aşağıdaki tablolarda sistem derlemelerde artık kullanılmayan bildirilen türleri listelenmektedir. Bu derlemeler için genel kullanılan\-amaçla .NET Framework hedefleyen uygulama geliştirme.  
   
 <a name="mscorlib"></a>   
-### <a name="assembly-mscorlibdll"></a>Assembly: mscorlib.dll  
+### <a name="assembly-mscorlibdll"></a>Derleme: mscorlib.dll  
   
 |Tür|İleti|  
 |----------|-------------|  
@@ -172,7 +160,7 @@ ms.lasthandoff: 03/26/2018
  [Başa dön](#introduction)  
   
 <a name="oracleclient"></a>   
-### <a name="assembly-systemdataoracleclientdll"></a>Assembly: System.Data.OracleClient.dll  
+### <a name="assembly-systemdataoracleclientdll"></a>Derleme: System.Data.OracleClient.dll  
   
 |Tür|İleti|  
 |----------|-------------|  
@@ -225,7 +213,7 @@ ms.lasthandoff: 03/26/2018
  [Başa dön](#introduction)  
   
 <a name="enterpriseservices"></a>   
-### <a name="assembly-systementerpriseservicesdll"></a>Assembly: System.EnterpriseServices.dll  
+### <a name="assembly-systementerpriseservicesdll"></a>Derleme: System.EnterpriseServices.dll  
   
 |Tür|İleti|  
 |----------|-------------|  
@@ -288,7 +276,7 @@ ms.lasthandoff: 03/26/2018
  [Başa dön](#introduction)  
   
 <a name="mobile"></a>   
-### <a name="assembly-systemwebmobiledll"></a>Assembly: System.Web.Mobile.dll  
+### <a name="assembly-systemwebmobiledll"></a>Derleme: System.Web.Mobile.dll  
   
 |Tür|İleti|  
 |----------|-------------|  
@@ -563,7 +551,7 @@ ms.lasthandoff: 03/26/2018
  [Başa dön](#introduction)  
   
 <a name="xaml"></a>   
-### <a name="assembly-systemxamldll"></a>Assembly: System.Xaml.dll  
+### <a name="assembly-systemxamldll"></a>Derleme: System.Xaml.dll  
   
 |Tür|İleti|  
 |----------|-------------|  
@@ -585,7 +573,7 @@ ms.lasthandoff: 03/26/2018
  [Başa dön](#introduction)  
   
 <a name="WindowsBase"></a>   
-### <a name="assembly-windowsbasedll"></a>Assembly: WindowsBase.dll  
+### <a name="assembly-windowsbasedll"></a>Derleme: WindowsBase.dll  
   
 |Tür|İleti|  
 |----------|-------------|  

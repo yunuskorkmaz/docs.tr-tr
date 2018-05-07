@@ -1,26 +1,12 @@
 ---
-title: "Bağlamada Zaman Aşımı Değerlerini Yapılandırma"
-ms.custom: 
+title: Bağlamada Zaman Aşımı Değerlerini Yapılandırma
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: b5c825a2-b48f-444a-8659-61751ff11d34
-caps.latest.revision: 
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: ce70b8bca923645ea1e00a55ec4d41903d828a99
-ms.sourcegitcommit: 973a12d1e6962cd9a9c263fbfaad040ec8267fe9
+ms.openlocfilehash: 21d99ad2ce092db738469f93e80c39380acabd00
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/22/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="configuring-timeout-values-on-a-binding"></a>Bağlamada Zaman Aşımı Değerlerini Yapılandırma
 WCF bağlamaları birtakım zaman aşımı ayarları yok. Bu zaman aşımı ayarını ayarları doğru değil yalnızca hizmetinizin performans aynı zamanda play bir rol kullanılabilirlik ve güvenlik hizmetinizin artırabilir. WCF bağlamaları üzerinde aşağıdaki zaman aşımları kullanılabilir:  
@@ -29,9 +15,9 @@ WCF bağlamaları birtakım zaman aşımı ayarları yok. Bu zaman aşımı ayar
   
 2.  closeTimeout  
   
-3.  SendTimeout  
+3.  sendTimeout  
   
-4.  ReceiveTimeout  
+4.  receiveTimeout  
   
 ## <a name="wcf-binding-timeouts"></a>WCF bağlama zaman aşımları  
  Bu konuda tartışılan ayarların her biri bağlama, kendisini, kod veya yapılandırma üzerinde yapılır. Aşağıdaki kod programlı olarak zaman aşımı kendini barındıran hizmet bağlamında WCF bağlamasında nasıl ayarlanacağını gösterir.  

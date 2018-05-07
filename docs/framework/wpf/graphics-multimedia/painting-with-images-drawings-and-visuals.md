@@ -1,13 +1,6 @@
 ---
-title: "Görüntüler, Çizimler ve Görsellerle Boyama"
-ms.custom: 
+title: Görüntüler, Çizimler ve Görsellerle Boyama
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-wpf
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -19,16 +12,11 @@ helpviewer_keywords:
 - brushes [WPF], painting with images
 - brushes [WPF], painting with visuals
 ms.assetid: 779aac3f-8d41-49d8-8130-768244aa2240
-caps.latest.revision: "28"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 01939eb8735e6764e0f0cba811091c7fdbd6797f
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: abb5733ed54ea430ba161db5ea2dcb33e99298ad
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="painting-with-images-drawings-and-visuals"></a>Görüntüler, Çizimler ve Görsellerle Boyama
 Bu konuda nasıl kullanılacağını açıklar <xref:System.Windows.Media.ImageBrush>, <xref:System.Windows.Media.DrawingBrush>, ve <xref:System.Windows.Media.VisualBrush> bir alanı bir görüntü ile boyamak için nesneleri bir <xref:System.Windows.Media.Drawing>, veya bir <xref:System.Windows.Media.Visual>.  
@@ -69,15 +57,15 @@ DrawingBrush tarafından boyandığında nesneleri
   
  A <xref:System.Windows.Media.DrawingBrush> sahip bir alan boyar bir <xref:System.Windows.Media.Drawing> nesnesi. A <xref:System.Windows.Media.Drawing> nesne gibi bir şekil, bit eşlem, görüntü veya metin satırının görünür içeriği açıklar. Farklı türde çizimler farklı içerik türlerini açıklar. Çizim nesneleri farklı türlerinin bir listesi verilmiştir.  
   
--   <xref:System.Windows.Media.GeometryDrawing>Şekil çizer.  
+-   <xref:System.Windows.Media.GeometryDrawing> Şekil çizer.  
   
--   <xref:System.Windows.Media.ImageDrawing>Resim çizer.  
+-   <xref:System.Windows.Media.ImageDrawing> Resim çizer.  
   
--   <xref:System.Windows.Media.GlyphRunDrawing>Metin çizer.  
+-   <xref:System.Windows.Media.GlyphRunDrawing> Metin çizer.  
   
--   <xref:System.Windows.Media.VideoDrawing>– Bir ses veya video dosyası çalar.  
+-   <xref:System.Windows.Media.VideoDrawing> – Bir ses veya video dosyası çalar.  
   
--   <xref:System.Windows.Media.DrawingGroup>Diğer çizimleri çizer. Diğer tek bileşik çizim çizimlerini birleştirmek için bir çizim grubu kullanın.  
+-   <xref:System.Windows.Media.DrawingGroup> Diğer çizimleri çizer. Diğer tek bileşik çizim çizimlerini birleştirmek için bir çizim grubu kullanın.  
   
  Hakkında daha fazla bilgi için <xref:System.Windows.Media.Drawing> nesneleri bkz [çizim nesnelere genel bakış](../../../../docs/framework/wpf/graphics-multimedia/drawing-objects-overview.md).  
   
@@ -133,7 +121,7 @@ Yansıtılan Visual nesnesi
   
 <a name="tilebrush"></a>   
 ## <a name="tilebrush-features"></a>TileBrush Özellikleri  
- <xref:System.Windows.Media.ImageBrush>, <xref:System.Windows.Media.DrawingBrush>, ve <xref:System.Windows.Media.VisualBrush> türleridir <xref:System.Windows.Media.TileBrush> nesneleri. <xref:System.Windows.Media.TileBrush>nesneleri, çok yüksek bir alanı bir görüntü, çizim veya visual nasıl boyanır üzerinde denetim sağlar. Örneğin, yalnızca tek bir esnetilen görüntü sahip bir alan boyama yerine, bir dizi deseni oluşturan görüntü döşeme sahip bir alan boyama yapabilirsiniz.  
+ <xref:System.Windows.Media.ImageBrush>, <xref:System.Windows.Media.DrawingBrush>, ve <xref:System.Windows.Media.VisualBrush> türleridir <xref:System.Windows.Media.TileBrush> nesneleri. <xref:System.Windows.Media.TileBrush> nesneleri, çok yüksek bir alanı bir görüntü, çizim veya visual nasıl boyanır üzerinde denetim sağlar. Örneğin, yalnızca tek bir esnetilen görüntü sahip bir alan boyama yerine, bir dizi deseni oluşturan görüntü döşeme sahip bir alan boyama yapabilirsiniz.  
   
  A <xref:System.Windows.Media.TileBrush> üç birincil bileşenden oluşur: içerik, döşeme ve çıktı alanı.  
   

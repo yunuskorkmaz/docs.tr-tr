@@ -1,39 +1,28 @@
 ---
 title: CountdownEvent
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
 ms.technology: dotnet-standard
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
 helpviewer_keywords:
 - synchronization primitives, CountdownEvent
 ms.assetid: eec3812a-e20f-4ecd-bfef-6921d508b708
-caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-- dotnetcore
-ms.openlocfilehash: 144bcde6c4c8fb227773fe613da8445f100ce66d
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: f98e2388cb31e62d974c8b0bae0bdf833f5963a5
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="countdownevent"></a>CountdownEvent
-<xref:System.Threading.CountdownEvent?displayProperty=nameWithType>belirli bir kaç kez eşitleme ilkel edildikten sonra bekleyen parçacıklarını engelini kaldırır işaret olur. <xref:System.Threading.CountdownEvent>Aksi takdirde sahip olduğunuz kullanılacak senaryoları için tasarlanan bir <xref:System.Threading.ManualResetEvent> veya <xref:System.Threading.ManualResetEventSlim> ve olay sinyal önce el ile bir değişken azaltma. Örneğin, bir çatalı/JOIN senaryosunda, yalnızca oluşturabileceğiniz bir <xref:System.Threading.CountdownEvent> 5 sinyal sayısını sahip ve ardından Başlat beş iş öğeleri iş parçacığı üzerinde havuz ve her iş öğesi çağrısı <xref:System.Threading.CountdownEvent.Signal%2A> tamamlandığında. Her çağrı <xref:System.Threading.CountdownEvent.Signal%2A> sinyal sayısı 1 ile azaltır. Çağrı ana iş parçacığı üzerinde <xref:System.Threading.CountdownEvent.Wait%2A> sinyal sayısı sıfır olana kadar engeller.  
+<xref:System.Threading.CountdownEvent?displayProperty=nameWithType> belirli bir kaç kez eşitleme ilkel edildikten sonra bekleyen parçacıklarını engelini kaldırır işaret olur. <xref:System.Threading.CountdownEvent> Aksi takdirde sahip olduğunuz kullanılacak senaryoları için tasarlanan bir <xref:System.Threading.ManualResetEvent> veya <xref:System.Threading.ManualResetEventSlim> ve olay sinyal önce el ile bir değişken azaltma. Örneğin, bir çatalı/JOIN senaryosunda, yalnızca oluşturabileceğiniz bir <xref:System.Threading.CountdownEvent> 5 sinyal sayısını sahip ve ardından Başlat beş iş öğeleri iş parçacığı üzerinde havuz ve her iş öğesi çağrısı <xref:System.Threading.CountdownEvent.Signal%2A> tamamlandığında. Her çağrı <xref:System.Threading.CountdownEvent.Signal%2A> sinyal sayısı 1 ile azaltır. Çağrı ana iş parçacığı üzerinde <xref:System.Threading.CountdownEvent.Wait%2A> sinyal sayısı sıfır olana kadar engeller.  
   
 > [!NOTE]
 >  Eski .NET Framework eşitleme API'leri ile etkileşim kurmak zorunda değildir kodu kullanmayı <xref:System.Threading.Tasks.Task?displayProperty=nameWithType> nesneleri veya <xref:System.Threading.Tasks.Parallel.Invoke%2A> çatalı birleştirme paralellik ifade etmek için daha kolay bir yaklaşım için yöntem.  
   
- <xref:System.Threading.CountdownEvent>Bu ek özellikler vardır:  
+ <xref:System.Threading.CountdownEvent> Bu ek özellikler vardır:  
   
 -   Bekleme işlemini iptal belirteçleri kullanarak iptal edilebilir.  
   

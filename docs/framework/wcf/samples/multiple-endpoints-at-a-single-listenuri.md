@@ -1,24 +1,12 @@
 ---
-title: "Bir ListenUri için Birden Fazla Belirteç"
-ms.custom: 
+title: Bir ListenUri için Birden Fazla Belirteç
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 911ffad4-4d47-4430-b7c2-79192ce6bcbd
-caps.latest.revision: "13"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 909fb35f9b8e4628df06918f207c3c86770a2d4e
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: f3eb2036ffbb7c5e8cae77ebc1a86e07d31626c9
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="multiple-endpoints-at-a-single-listenuri"></a>Bir ListenUri için Birden Fazla Belirteç
 Birden çok uç tek bir noktada barındıran bir hizmeti bu örnek gösteriyor `ListenUri`. Bu örnek dayanır [Başlarken](../../../../docs/framework/wcf/samples/getting-started-sample.md) hesap makinesi hizmetinin uygular.  
@@ -50,7 +38,7 @@ Birden çok uç tek bir noktada barındıran bir hizmeti bu örnek gösteriyor `
   
  Tüm üç bitiş noktaları aynı anda barındırılan `ListenUri` ve aynı `binding` -bitiş noktaları aynı `ListenUri` iletileri bu fiziksel adresindeki üzerinde dinleyen bir tek kanal yığını paylaşan olduğundan, aynı bağlama olması gerekir Makine. `address` Her uç noktasını URN; genellikle fiziksel konumlara adresleri temsil eden ancak adres eşleştirme ve bu örnekte gösterildiği gibi filtreleme amaçlı olarak kullanıldığından aslında adresi URI, her türlü olabilir.  
   
- Tüm üç bitiş noktaları aynı paylaştığından `ListenUri`, ileti, geldiğinde [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] ileti hedefleyen için hangi uç noktaya karar vermeniz gerekir. Her uç nokta iki bölümden oluşan bir ileti filtresi vardır: adresi filtresi ve sözleşme Filtresi. Adres filtre ile eşleşen `To` hizmet uç noktası adresine SOAP iletisi. Örneğin, yalnızca iletileri ele `To "Urn:OtherEcho"` bu hizmetin üçüncü uç noktası için bir aday değildir. Sözleşme filtresi belirli bir sözleşme işlemlerle ilişkili eylemler eşleşir. Örneğin, eylemiyle iletileri `IEcho`. `Echo`çünkü ikinci ve üçüncü uç noktalar için bu hizmetin sözleşme filtrelerle eşleşen Bu uç noktaları konak her ikisi de `IEcho` sözleşme.  
+ Tüm üç bitiş noktaları aynı paylaştığından `ListenUri`, ileti geldiğinde Windows Communication Foundation (WCF) ileti hedefleyen için hangi uç noktaya, karar vermeniz gerekir. Her uç nokta iki bölümden oluşan bir ileti filtresi vardır: adresi filtresi ve sözleşme Filtresi. Adres filtre ile eşleşen `To` hizmet uç noktası adresine SOAP iletisi. Örneğin, yalnızca iletileri ele `To "Urn:OtherEcho"` bu hizmetin üçüncü uç noktası için bir aday değildir. Sözleşme filtresi belirli bir sözleşme işlemlerle ilişkili eylemler eşleşir. Örneğin, eylemiyle iletileri `IEcho`. `Echo` çünkü ikinci ve üçüncü uç noktalar için bu hizmetin sözleşme filtrelerle eşleşen Bu uç noktaları konak her ikisi de `IEcho` sözleşme.  
   
  Bu nedenle adresi filtresi ve sözleşme filtresi birleşimi, bu hizmetin ulaşan her ileti yolu mümkün kılar `ListenUri` doğru uç noktası. Diğer uç noktalarından farklı bir adresine gönderilen iletileri kabul ettiğinden üçüncü uç noktası diğer iki Ayrıştırılan. Birinci ve ikinci uç noktaları birbirinden sözleşmelerine (gelen ileti eylem) göre ayrılır.  
   
@@ -86,7 +74,7 @@ calcClient.ChannelFactory.Endpoint.Behaviors.Add(
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  Bu dizin mevcut değilse, Git [Windows Communication Foundation (WCF) ve .NET Framework 4 için Windows Workflow Foundation (WF) örnek](http://go.microsoft.com/fwlink/?LinkId=150780) tüm indirmek için [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] ve [!INCLUDE[wf1](../../../../includes/wf1-md.md)] örnekleri. Bu örnek aşağıdaki dizinde bulunur.  
+>  Bu dizin mevcut değilse, Git [Windows Communication Foundation (WCF) ve .NET Framework 4 için Windows Workflow Foundation (WF) örnek](http://go.microsoft.com/fwlink/?LinkId=150780) tüm Windows Communication Foundation (WCF) indirmek için ve [!INCLUDE[wf1](../../../../includes/wf1-md.md)] örnekleri. Bu örnek aşağıdaki dizinde bulunur.  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Services\MultipleEndpointsSingleUri`  
   

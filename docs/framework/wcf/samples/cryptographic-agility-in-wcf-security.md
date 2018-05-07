@@ -1,27 +1,17 @@
 ---
-title: "WCF Güvenliğinde Şifreleme Çevikliği"
-ms.custom: 
+title: WCF Güvenliğinde Şifreleme Çevikliği
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: c2c549e5-ac19-40c5-b686-8f67f52b6dbf
-caps.latest.revision: "9"
 author: BrucePerlerMS
-ms.author: bruceper
 manager: mbaldwin
-ms.workload: dotnet
-ms.openlocfilehash: 7d99ada67255d0ced8bbabc2ab6fc645e6ba9e35
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
-ms.translationtype: MT
+ms.openlocfilehash: 5fa4c3cf45eb17822effaa9284864274923b2504
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="cryptographic-agility-in-wcf-security"></a>WCF Güvenliğinde Şifreleme Çevikliği
-Bu örnek, bir şifreleme Çevik uygulamasında sağlamak için bir standart/özel algoritması belirtmek üzere gösterilmiştir bir [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] istemci ve hizmet. Örnek aşağıdaki projeleri oluşur:  
+Bu örnek, bir şifreleme Çevik uygulamasında bir Windows Communication Foundation (WCF) istemci ve hizmet sağlamak için bir standart/özel algoritması belirtmek üzere gösterilmiştir. Örnek aşağıdaki projeleri oluşur:  
   
  Hizmet  
  Kendini barındıran budur [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] uygulayan hizmet `ICalculator` arabirim ve kullanarak uç nokta güvenliğini sağlama <<!--zz xref:System.ServiceModel.WsHttpBinding --> `xref:System.ServiceModel.WsHttpBinding`> güvenli oturum ve güvenilir oturum devre dışı. Özel bir hizmet tanımlar `SecurityAlgorithmSuite` ileti güvenliği için kullanılacak şifreleme algoritmalarını belirlemek için sınıf.  
@@ -44,7 +34,7 @@ Bu örnek, bir şifreleme Çevik uygulamasında sağlamak için bir standart/öz
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  Bu dizin mevcut değilse, Git [Windows Communication Foundation (WCF) ve .NET Framework 4 için Windows Workflow Foundation (WF) örnek](http://go.microsoft.com/fwlink/?LinkId=150780) tüm indirmek için [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] ve [!INCLUDE[wf1](../../../../includes/wf1-md.md)] örnekleri. Bu örnek aşağıdaki dizinde bulunur.  
+>  Bu dizin mevcut değilse, Git [Windows Communication Foundation (WCF) ve .NET Framework 4 için Windows Workflow Foundation (WF) örnek](http://go.microsoft.com/fwlink/?LinkId=150780) tüm Windows Communication Foundation (WCF) indirmek için ve [!INCLUDE[wf1](../../../../includes/wf1-md.md)] örnekleri. Bu örnek aşağıdaki dizinde bulunur.  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Security\CryptoAgility`  
   

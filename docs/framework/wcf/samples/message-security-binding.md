@@ -1,31 +1,21 @@
 ---
-title: "İleti Güvenliği Bağlama"
-ms.custom: 
+title: İleti Güvenliği Bağlama
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: a4570ce7-864e-461b-85d8-0f7bcc53c2c8
-caps.latest.revision: "4"
 author: BrucePerlerMS
-ms.author: bruceper
 manager: mbaldwin
-ms.workload: dotnet
-ms.openlocfilehash: f0c8b125d3fc313dca4140b871ccea8165329fda
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
-ms.translationtype: MT
+ms.openlocfilehash: 3bcc448b13a185065db1865c64d5ab3c498da1a6
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="message-security-binding"></a>İleti Güvenliği Bağlama
 Bu bölümde Windows Hizmetleri'ndeki ileti güvenliği bağlama gösteren örnekleri içeren [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)].  
   
 ## <a name="in-this-section"></a>Bu Bölümde  
  [İleti Güvenliği Anonim](../../../../docs/framework/wcf/samples/message-security-anonymous.md)  
- Bu örnek nasıl uygulandığını gösteren bir [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] ileti düzeyi güvenlik herhangi bir istemci kimlik doğrulaması kullanan ancak sunucunun X.509 sertifikası kullanılarak kimlik doğrulaması gerektiren uygulama.  
+ Bu örnek nasıl hiçbir istemci kimlik doğrulaması ile ileti düzeyi güvenlik kullanan bir Windows Communication Foundation (WCF) uygulaması uygulamak için ancak sunucunun X.509 sertifikası kullanılarak kimlik doğrulaması gerektiren gösterir.  
   
  [İleti Güvenliği Sertifikası](../../../../docs/framework/wcf/samples/message-security-certificate.md)  
  Bu örnek, istemci için X.509 v3 sertifikası kimlik doğrulaması ile WS güvenliği kullanan ve sunucunun X.509 v3 sertifikası kullanılarak kimlik doğrulaması gerektiren bir uygulama uygulamak gösterilmiştir.  

@@ -1,23 +1,16 @@
 ---
 title: Temsilciler ve lambdas
-description: "Nasıl doğrudan adlı veya başka bir yönteme geçirilen ve olarak adlandırılan belirli yöntem imzası belirtmek Temsilciler, tür tanımlama öğrenin."
-keywords: .NET, .NET core
+description: Nasıl doğrudan adlı veya başka bir yönteme geçirilen ve olarak adlandırılan belirli yöntem imzası belirtmek Temsilciler, tür tanımlama öğrenin.
 author: richlander
 ms.author: wiwagn
 ms.date: 06/20/2016
-ms.topic: article
-ms.prod: .net
 ms.technology: dotnet-standard
-ms.devlang: dotnet
 ms.assetid: fe2e4b4c-6483-4106-a4b4-a33e2e306591
-ms.workload:
-- dotnet
-- dotnetcore
-ms.openlocfilehash: d418733ada67a1cb751bbfa74afee2eeeee04976
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: f8184b87fc62f378fe72138733f87de924da60f6
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="delegates-and-lambdas"></a>Temsilciler ve lambdas
 
@@ -50,9 +43,9 @@ public class Program
 
 Geliştirme işlemini kolaylaştırmak için .NET programcıları yeniden kullanmak ve yeni türleri oluşturmak zorunda kalmazsınız temsilci türleri kümesi içerir. Bunlar `Func<>`, `Action<>` ve `Predicate<>`, ve bunlar içinde çeşitli yerlerde .NET API'lerini gerek kalmadan yeni temsilci türleri tanımlamak için kullanılabilir. Elbette, çoğunlukla kullanılacak demek yolu ile yapmak zorunda kendi imzaları de göreceğiniz gibi üç arasındaki bazı farklar vardır:
 
-*   `Action<>`Temsilci bağımsız değişkenleri kullanarak bir eylem gerçekleştirmek üzere gereksinimi olduğunda kullanılır.
-*   `Func<>`genellikle bir dönüşüm taraftan, varsa, kullanılan diğer bir deyişle, temsilci bağımsız farklı bir sonuç dönüştürme gerekir. Bu prime örneği projeksiyonlardır.
-*   `Predicate<>`bağımsız değişken temsilci koşulu karşılayan varsa belirlemek üzere gerektiğinde kullanılır. Olarak da yazılabilir bir `Func<T, bool>`.
+*   `Action<>` Temsilci bağımsız değişkenleri kullanarak bir eylem gerçekleştirmek üzere gereksinimi olduğunda kullanılır.
+*   `Func<>` genellikle bir dönüşüm taraftan, varsa, kullanılan diğer bir deyişle, temsilci bağımsız farklı bir sonuç dönüştürme gerekir. Bu prime örneği projeksiyonlardır.
+*   `Predicate<>` bağımsız değişken temsilci koşulu karşılayan varsa belirlemek üzere gerektiğinde kullanılır. Olarak da yazılabilir bir `Func<T, bool>`.
 
 Biz şimdi örneğimizde yukarıdaki alabilir ve kullanarak yeniden `Func<>` temsilci yerine özel bir tür. Program, tam olarak aynı çalışmaya devam edecek.
 

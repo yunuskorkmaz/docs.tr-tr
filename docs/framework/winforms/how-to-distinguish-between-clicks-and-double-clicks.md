@@ -1,14 +1,6 @@
 ---
 title: 'Nasıl yapılır: Tıklamalar ve Çift Tıklamaları Birbirinden Ayırma'
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-winforms
-ms.tgt_pltfrm: ''
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -18,17 +10,11 @@ helpviewer_keywords:
 - mouse [Windows Forms], double-click
 - mouse clicks [Windows Forms], single versus double
 ms.assetid: d836ac8c-85bc-4f3a-a761-8aee03dc682c
-caps.latest.revision: 13
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 0f6f92c225e7b3c745c5cf439c9094d72fa0cde0
-ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
+ms.openlocfilehash: 6c8603df5a844fb93db0555b605f16235b9dff54
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/27/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-distinguish-between-clicks-and-double-clicks"></a>Nasıl yapılır: Tıklamalar ve Çift Tıklamaları Birbirinden Ayırma
 Genellikle, bir tek *tıklatın* bir kullanıcı arabirimi (UI) eylemi başlatır ve *çift tıklatın* eylemi genişletir. Örneğin, tek bir tıklatmayla genellikle bir öğe seçer ve seçilen öğeyi çift tıklatma düzenler. Ancak, Windows Forms tıklama olayları bir eylem bağlı olduğundan kolayca burada bir tıklatma ve çift tıklatma gerçekleştirmek uyumsuz Eylemler, bir senaryoda çalışmak değil <xref:System.Windows.Forms.Control.Click> veya <xref:System.Windows.Forms.Control.MouseClick> olay, eyleminden önce bağlıgerçekleştirilir<xref:System.Windows.Forms.Control.DoubleClick>veya <xref:System.Windows.Forms.Control.MouseDoubleClick> olay. Bu konuda bu sorunun iki çözümü gösterilir. Bir çözüm, çift tıklatma olayını işlemek ve eylemleri click olayını işlemede geri almaktır. Nadir durumlarda, davranış işleyerek çift tıklayın ve tıklatın benzetimini gerekebilir <xref:System.Windows.Forms.Control.MouseDown> olay ve kullanarak <xref:System.Windows.Forms.SystemInformation.DoubleClickTime%2A> ve <xref:System.Windows.Forms.SystemInformation.DoubleClickSize%2A> özelliklerini <xref:System.Windows.Forms.SystemInformation> sınıfı. Tıklama ve ikinci bir tıklatma değeri önce oluşursa arasındaki süreyi ölçmek <xref:System.Windows.Forms.SystemInformation.DoubleClickTime%2A> ulaşıldığında ve tıklatın tarafından tanımlanan bir dikdörtgen içinde <xref:System.Windows.Forms.SystemInformation.DoubleClickSize%2A>, çift tıklatma eylemi gerçekleştirir; Aksi halde, tıklatma eylemi gerçekleştirin.  

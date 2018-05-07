@@ -1,29 +1,17 @@
 ---
 title: WCF'de Güvenlik Davranışları
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 ms.assetid: 513232c0-39fd-4409-bda6-5ebd5e0ea7b0
-caps.latest.revision: 23
 author: BrucePerlerMS
-ms.author: bruceper
 manager: mbaldwin
-ms.workload:
-- dotnet
-ms.openlocfilehash: bb10d98eb96213029ae43533935312c6f1cf09c7
-ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
+ms.openlocfilehash: 57bd34c72e98091c4a429d683a0da4ce2d3967c0
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/30/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="security-behaviors-in-wcf"></a>WCF'de Güvenlik Davranışları
-İçinde [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)], davranışlar çalışma zamanı davranışını hizmet düzeyinde veya uç nokta düzeyine değiştirin. (Genel olarak, davranışları hakkında daha fazla bilgi için bkz [hizmet çalışma zamanı davranışını belirtme](../../../../docs/framework/wcf/specifying-service-run-time-behavior.md).) *Güvenlik davranışları* kimlik bilgileri, kimlik doğrulama, yetkilendirme denetime izin vermek ve günlükleri denetleme. Programlama ile veya yapılandırma yoluyla davranışları kullanabilirsiniz. Bu konuda, güvenlik işlevleri ile ilgili aşağıdaki davranışları yapılandırma üzerinde durulmaktadır:  
+Windows Communication Foundation (WCF) davranışlar çalışma zamanı davranışını hizmet düzeyinde veya uç nokta düzeyine değiştirin. (Genel olarak, davranışları hakkında daha fazla bilgi için bkz [hizmet çalışma zamanı davranışını belirtme](../../../../docs/framework/wcf/specifying-service-run-time-behavior.md).) *Güvenlik davranışları* kimlik bilgileri, kimlik doğrulama, yetkilendirme denetime izin vermek ve günlükleri denetleme. Programlama ile veya yapılandırma yoluyla davranışları kullanabilirsiniz. Bu konuda, güvenlik işlevleri ile ilgili aşağıdaki davranışları yapılandırma üzerinde durulmaktadır:  
   
 -   [\<serviceCredentials >](../../../../docs/framework/configure-apps/file-schema/wcf/servicecredentials.md).  
   
@@ -140,7 +128,7 @@ ms.lasthandoff: 04/30/2018
  Varsayılan bir güvenlik belirteci hizmeti adresi belirtir. Bu kullanılan zaman <xref:System.ServiceModel.WSFederationHttpBinding> bir URL veya güvenlik belirteci hizmeti için Federasyon bağlaması veren adresi olduğunda sağlamıyor http://schemas.microsoft.com/2005/12/ServiceModel/Addressing/Anonymous veya `null`. Böyle durumlarda, <xref:System.ServiceModel.Description.ClientCredentials> adresi bu veren ile iletişim kurmak için kullanılacak yerel yayımlayan ve bağlama ile yapılandırılması gerekir.  
   
 #### <a name="issuerchannelbehaviors"></a>\<issuerChannelBehaviors >  
- Kullanım [ \<issuerChannelBehaviors >](../../../../docs/framework/configure-apps/file-schema/wcf/issuerchannelbehaviors-element.md) eklemek için [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] bir güvenlik belirteci hizmeti ile iletişim kurarken kullanılan istemci davranışlar. İstemci davranışlarını tanımlamak [ \<endpointBehaviors >](../../../../docs/framework/configure-apps/file-schema/wcf/endpointbehaviors.md) bölümü. Tanımlanan bir davranış kullanmak için ekleyin bir <`add`> öğesine `<issuerChannelBehaviors>` iki özniteliklerle öğesi. Ayarlama `issuerAddress` kümesi ve güvenlik belirteci hizmeti URL'sini `behaviorConfiguration` aşağıdaki örnekte gösterildiği gibi tanımlanmış uç noktası davranışı adına özniteliği.  
+ Kullanım [ \<issuerChannelBehaviors >](../../../../docs/framework/configure-apps/file-schema/wcf/issuerchannelbehaviors-element.md) bir güvenlik belirteci hizmeti ile iletişim kurarken kullanılan WCF istemci davranışlarını eklemek için. İstemci davranışlarını tanımlamak [ \<endpointBehaviors >](../../../../docs/framework/configure-apps/file-schema/wcf/endpointbehaviors.md) bölümü. Tanımlanan bir davranış kullanmak için ekleyin bir <`add`> öğesine `<issuerChannelBehaviors>` iki özniteliklerle öğesi. Ayarlama `issuerAddress` kümesi ve güvenlik belirteci hizmeti URL'sini `behaviorConfiguration` aşağıdaki örnekte gösterildiği gibi tanımlanmış uç noktası davranışı adına özniteliği.  
   
 ```xml  
 <clientCredentials>  

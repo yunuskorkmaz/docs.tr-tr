@@ -1,21 +1,14 @@
 ---
 title: Mikro çözümlenebilme ve hizmet kayıt defteri
 description: Kapsayıcılı .NET uygulamaları için .NET mikro mimarisi | Mikro çözümlenebilme ve hizmet kayıt defteri
-keywords: Docker, mikro, ASP.NET, kapsayıcı
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 05/26/2017
-ms.prod: .net-core
-ms.technology: dotnet-docker
-ms.topic: article
-ms.workload:
-- dotnet
-- dotnetcore
-ms.openlocfilehash: 5770be2a1a6284866dc768a14c7b6ec9525be487
-ms.sourcegitcommit: 2e8acae16ae802f2d6d04e3ce0a6dbf04e476513
+ms.openlocfilehash: cce0b11ca8cb4fe4d97e2f575888254f92543fc3
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="microservices-addressability-and-the-service-registry"></a>Mikro çözümlenebilme ve hizmet kayıt defteri
 

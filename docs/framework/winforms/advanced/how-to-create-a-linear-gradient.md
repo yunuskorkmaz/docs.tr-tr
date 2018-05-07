@@ -1,13 +1,6 @@
 ---
-title: "Nasıl yapılır: Doğrusal Gradyan Oluşturma"
-ms.custom: 
+title: 'Nasıl yapılır: Doğrusal Gradyan Oluşturma'
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-winforms
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -17,19 +10,14 @@ helpviewer_keywords:
 - colors [Windows Forms], creating linear gradients
 - gradients
 ms.assetid: 6c88e1cc-1217-4399-ac12-cb37592b9f01
-caps.latest.revision: "17"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 33979decf37e9adb29d94a6602a43f992d93aaa1
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 9eeedf1ef92bdf6e5e2724eeca5060765b0778f3
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-create-a-linear-gradient"></a>Nasıl yapılır: Doğrusal Gradyan Oluşturma
-[!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)]Yatay, dikey ve Çapraz doğrusal gradyanlar sağlar. Varsayılan olarak, doğrusal gradyan rengi aynı şekilde değiştirir. Bununla birlikte, böylece Tekdüzen olmayan biçimde rengi değişir doğrusal gradyan özelleştirebilirsiniz.  
+[!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] Yatay, dikey ve Çapraz doğrusal gradyanlar sağlar. Varsayılan olarak, doğrusal gradyan rengi aynı şekilde değiştirir. Bununla birlikte, böylece Tekdüzen olmayan biçimde rengi değişir doğrusal gradyan özelleştirebilirsiniz.  
   
  Aşağıdaki örnek, bir satırı, elips ve dikdörtgen Yatay doğrusal gradyan fırçası ile doldurur.  
   
@@ -50,7 +38,7 @@ ms.lasthandoff: 12/22/2017
   
  Yatay koordinatını 200 için yatay koordinatını 0 taşımak gibi önceki örnekte, renk bileşenleri doğrusal olarak değiştirin. Örneğin, ilk koordinat 0 ve 200 arasında ortasında yer alan bir noktası 0 ile 255 arasında ortasında yer alan mavi bir bileşen sahip olur.  
   
- [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)]bir renk bir gradyan kenarından değişir şekilde ayarlamanıza olanak sağlar. Kırmızı aşağıdaki tabloya göre siyah değişikliklerini bir gradyan fırçası oluşturmak istediğinizi varsayalım.  
+ [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] bir renk bir gradyan kenarından değişir şekilde ayarlamanıza olanak sağlar. Kırmızı aşağıdaki tabloya göre siyah değişikliklerini bir gradyan fırçası oluşturmak istediğinizi varsayalım.  
   
 |Yatay koordinat|RGB bileşenleri|  
 |---------------------------|--------------------|  

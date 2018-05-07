@@ -1,39 +1,27 @@
 ---
-title: "ToolBar Genel Bakışı"
-ms.custom: 
+title: ToolBar Genel Bakışı
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-wpf
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - controls [WPF], ToolBar
 - ToolBar control [WPF]
 ms.assetid: a8edb32c-118d-4f31-b6e6-8899082b504b
-caps.latest.revision: "28"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: f00597d48ff100325c1fb2884f64169164415a50
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 0c66867ce4d86a11424d7a7a859817d603b4227e
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="toolbar-overview"></a>ToolBar Genel Bakışı
-<xref:System.Windows.Controls.ToolBar>denetimleri, genellikle kendi işlevleriyle ilgili komutlar veya denetimler grubu için kapsayıcı görevi görür. A <xref:System.Windows.Controls.ToolBar> genellikle komutları çağıran düğmeler içerir.  
+<xref:System.Windows.Controls.ToolBar> denetimleri, genellikle kendi işlevleriyle ilgili komutlar veya denetimler grubu için kapsayıcı görevi görür. A <xref:System.Windows.Controls.ToolBar> genellikle komutları çağıran düğmeler içerir.  
   
   
 <a name="ToolBarControl"></a>   
 ## <a name="toolbar-control"></a>ToolBar Denetimi  
- <xref:System.Windows.Controls.ToolBar> Denetimini çubuk benzeri düzenlemeleri düğmeler veya diğer denetimlerin tek bir satır veya sütun adını alır. [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]<xref:System.Windows.Controls.ToolBar> denetimleri doğal kısıtlı boyutta içinde uymayan herhangi bir öğeyi yerleştiren taşma mekanizması sağlar <xref:System.Windows.Controls.ToolBar> özel taşma alanına. Ayrıca, [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] <xref:System.Windows.Controls.ToolBar> denetimleri genellikle kullanılan ile ilgili <xref:System.Windows.Controls.ToolBarTray> kullanıcı tarafından başlatılan boyutlandırma ve araç çubuklarını düzenleme için özel düzen davranışı ve bunun yanı sıra destek sağlayan denetim.  
+ <xref:System.Windows.Controls.ToolBar> Denetimini çubuk benzeri düzenlemeleri düğmeler veya diğer denetimlerin tek bir satır veya sütun adını alır. [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] <xref:System.Windows.Controls.ToolBar> denetimleri doğal kısıtlı boyutta içinde uymayan herhangi bir öğeyi yerleştiren taşma mekanizması sağlar <xref:System.Windows.Controls.ToolBar> özel taşma alanına. Ayrıca, [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] <xref:System.Windows.Controls.ToolBar> denetimleri genellikle kullanılan ile ilgili <xref:System.Windows.Controls.ToolBarTray> kullanıcı tarafından başlatılan boyutlandırma ve araç çubuklarını düzenleme için özel düzen davranışı ve bunun yanı sıra destek sağlayan denetim.  
   
 <a name="Creating_ToolBars"></a>   
 ## <a name="specifying-the-position-of-toolbars-in-a-toolbartray"></a>Araç çubukları konumunu ToolBarTray içindeki belirtme  
- Kullanım <xref:System.Windows.Controls.ToolBar.Band%2A> ve <xref:System.Windows.Controls.ToolBar.BandIndex%2A> konumlandırmak için Özellikler <xref:System.Windows.Controls.ToolBar> içinde <xref:System.Windows.Controls.ToolBarTray>. <xref:System.Windows.Controls.ToolBar.Band%2A>konumu gösterir <xref:System.Windows.Controls.ToolBar> üst içinde yerleştirilir <xref:System.Windows.Controls.ToolBarTray>. <xref:System.Windows.Controls.ToolBar.BandIndex%2A>bir sırayı gösterir <xref:System.Windows.Controls.ToolBar> kendi bandı içinde yerleştirilir. Aşağıdaki örnekte gösterildiği yerleştirmek için bu özelliği nasıl kullanmak <xref:System.Windows.Controls.ToolBar> içinde denetleyen bir <xref:System.Windows.Controls.ToolBarTray>.  
+ Kullanım <xref:System.Windows.Controls.ToolBar.Band%2A> ve <xref:System.Windows.Controls.ToolBar.BandIndex%2A> konumlandırmak için Özellikler <xref:System.Windows.Controls.ToolBar> içinde <xref:System.Windows.Controls.ToolBarTray>. <xref:System.Windows.Controls.ToolBar.Band%2A> konumu gösterir <xref:System.Windows.Controls.ToolBar> üst içinde yerleştirilir <xref:System.Windows.Controls.ToolBarTray>. <xref:System.Windows.Controls.ToolBar.BandIndex%2A> bir sırayı gösterir <xref:System.Windows.Controls.ToolBar> kendi bandı içinde yerleştirilir. Aşağıdaki örnekte gösterildiği yerleştirmek için bu özelliği nasıl kullanmak <xref:System.Windows.Controls.ToolBar> içinde denetleyen bir <xref:System.Windows.Controls.ToolBarTray>.  
   
  [!code-xaml[ToolBarExample#2](../../../../samples/snippets/csharp/VS_Snippets_Wpf/ToolBarExample/CS/Pane1.xaml#2)]  
   

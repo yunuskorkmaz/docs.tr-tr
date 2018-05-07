@@ -1,28 +1,14 @@
 ---
 title: Sistem Tarafından Sağlanan Bağlamalar
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 helpviewer_keywords:
 - bindings [WCF], system-provided
 ms.assetid: 2c243746-45ce-4588-995e-c17126a579a6
-caps.latest.revision: 60
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 4ccdab56a90f4114836dd9f0a56cc495657ee9c8
-ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
-ms.translationtype: MT
+ms.openlocfilehash: 12382b0886970bc48345107008ee449d9653ec4f
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/30/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="system-provided-bindings"></a>Sistem Tarafından Sağlanan Bağlamalar
 Bağlamalar ve bir bitiş noktasına bağlanmak nasıl belirtmek için bir uç nokta konuşurken kullanmak için iletişim mekanizması belirtin. Bir bağlama aşağıdaki öğeleri içerir:  
@@ -33,7 +19,7 @@ Bağlamalar ve bir bitiş noktasına bağlanmak nasıl belirtmek için bir uç n
   
 -   Kodlama uç noktasına örneğin gönderilen iletiler, text/XML, ikili veya ileti iletim en iyi duruma getirme mekanizmasını (MTOM) için kullanılacak kodlama kablo belirler.  
   
- Bu konuda tüm sistem tarafından sağlanan sunulmaktadır [!INCLUDE[indigo1](../../../includes/indigo1-md.md)] bağlar. Hiçbiri uygulamanızın tam ölçütlerini karşılıyorsa, özel bir bağlama oluşturabilirsiniz. Özel bağlama oluşturma hakkında daha fazla bilgi için bkz: [özel bağlamalar](../../../docs/framework/wcf/extending/custom-bindings.md).  
+ Bu konuda tüm sistem tarafından sağlanan Windows Communication Foundation (WCF) bağlamalar sunulmaktadır. Hiçbiri uygulamanızın tam ölçütlerini karşılıyorsa, özel bir bağlama oluşturabilirsiniz. Özel bağlama oluşturma hakkında daha fazla bilgi için bkz: [özel bağlamalar](../../../docs/framework/wcf/extending/custom-bindings.md).  
   
  WS-Federasyon protokolünü destekleyen bir güvenli ve birlikte çalışabilir bağlama verimli bir şekilde kimlik doğrulaması ve kullanıcılara yetki vermek için bir Federasyon kuruluşlar sağlar.  
   

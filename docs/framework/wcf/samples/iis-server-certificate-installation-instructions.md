@@ -1,24 +1,12 @@
 ---
-title: "Internet Information Services (IIS) Sunucu Sertifikası Yükleme Yönergeleri"
-ms.custom: 
+title: Internet Information Services (IIS) Sunucu Sertifikası Yükleme Yönergeleri
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 11281490-d2ac-4324-8f33-e7714611a34b
-caps.latest.revision: "18"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: cfb168ae60765a57017aaec6bdedaf796491f602
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 46d1acf758dd50b881527a16570a1e4a45933958
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="internet-information-services-iis-server-certificate-installation-instructions"></a>Internet Information Services (IIS) Sunucu Sertifikası Yükleme Yönergeleri
 Internet Information Services (IIS) güvenli iletişim örnekleri çalıştırmak için oluşturma ve sunucu sertifikasını yüklemeniz gerekir.  
@@ -47,7 +35,7 @@ makecert -sr LocalMachine -ss My -n CN=ServiceModelSamples-HTTPS-Server -sky exc
   
      ![IIS Sertifika Sihirbazı](../../../../docs/framework/wcf/samples/media/iiscertificate-wizard.GIF "IISCertificate_Wizard")  
   
-6.  Hizmete erişim HTTPS adresi https://localhost/servicemodelsamples/service.svc kullanarak bir tarayıcıda sınayın.  
+6.  Test hizmetine erişim bir tarayıcıda HTTPS adresi kullanarak https://localhost/servicemodelsamples/service.svc.  
   
 #### <a name="if-ssl-was-previously-configured-by-using-httpcfgexe"></a>SSL, daha önce Httpcfg.exe kullanılarak yapılandırıldıysa  
   
@@ -76,7 +64,7 @@ PermissiveCertificatePolicy.Enact("CN=ServiceModelSamples-HTTPS-Server");
   
 5.  Seçin **ServiceModelSamples HTTPS sunucusu** gelen **SSL sertifikası** aşağı açılan liste ve tıklatın **Tamam**.  
   
-6.  Hizmete erişim HTTPS adresi https://localhost/servicemodelsamples/service.svc kullanarak bir tarayıcıda sınayın.  
+6.  Test hizmetine erişim bir tarayıcıda HTTPS adresi kullanarak https://localhost/servicemodelsamples/service.svc.  
   
 > [!NOTE]
 >  Yeni yüklediğiniz test sertifikası güvenilen bir sertifika olduğundan, bu sertifikası ile güvenli yerel Web adresler gözatarken ek Internet Explorer güvenlik uyarılarını karşılaşabilirsiniz.  

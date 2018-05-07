@@ -1,31 +1,17 @@
 ---
-title: "Yapılandırılmış Gezintiye Genel Bakış"
-ms.custom: 
+title: Yapılandırılmış Gezintiye Genel Bakış
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-wpf
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
 helpviewer_keywords:
 - structured navigation [WPF]
 ms.assetid: 025d30ef-fec5-436d-ad7a-5d5483331c26
-caps.latest.revision: 
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: f9d20fb5b16fbf44bdf8431ae32afee105af7676
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 9be4e753a229d97f2caf1d74b3b9b8239b99c694
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="structured-navigation-overview"></a>Yapılandırılmış Gezintiye Genel Bakış
 Tarafından barındırılan içerik bir [!INCLUDE[TLA#tla_xbap](../../../../includes/tlasharptla-xbap-md.md)], <xref:System.Windows.Controls.Frame>, veya bir <xref:System.Windows.Navigation.NavigationWindow> paketi tarafından tanımlanan sayfaların oluşur [!INCLUDE[TLA#tla_uri#plural](../../../../includes/tlasharptla-urisharpplural-md.md)] ve için köprüler tarafından gittiğinizde. Sayfalar ve, bunlar, köprüler tarafından tanımlandığı şekilde gezinilebilir yolları yapısını gezinti topoloji olarak bilinir. Bu tür bir topoloji çeşitli uygulama türleri, özellikle, belgeler içinde gezinmek uygun. Bu tür uygulamalar için kullanıcı bir sayfadan başka bir sayfaya ya da sayfa ilgili diğer herhangi bir şey bilmenize gerek olmadan gidebilirsiniz.  
@@ -160,7 +146,7 @@ Tarafından barındırılan içerik bir [!INCLUDE[TLA#tla_xbap](../../../../incl
 [!code-csharp[StructuredNavigationSample#ReturnCODEBEHIND2](../../../../samples/snippets/csharp/VS_Snippets_Wpf/StructuredNavigationSample/CSharp/CalledPageFunction.xaml.cs#returncodebehind2)]
 [!code-vb[StructuredNavigationSample#ReturnCODEBEHIND2](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/StructuredNavigationSample/VisualBasic/CalledPageFunction.xaml.vb#returncodebehind2)]  
   
- Bu örnekte, kullanıcı değeri iptal düğmesine basarsa `null` arama sayfası döndürülür. Bunun yerine Tamam düğmesine basıldığında kullanıcı tarafından sağlanan dize değeri döndürülür. <xref:System.Windows.Navigation.PageFunction%601.OnReturn%2A>olan bir `protected``virtual` verilerinizi arama sayfasına geri dönmek için çağrı yöntemi. Verilerinizi genel bir örneğinde paketlenmesi gerekiyor <xref:System.Windows.Navigation.ReturnEventArgs%601> değer türü, tür bağımsız değişkeni türünü belirtir, <xref:System.Windows.Navigation.ReturnEventArgs%601.Result%2A> döndürür. Bu şekilde, bildirirken bir <xref:System.Windows.Navigation.PageFunction%601> belirli tür bağımsız değişkeni ile belirten bir <xref:System.Windows.Navigation.PageFunction%601> tür bağımsız değişkeni tarafından belirtilen türünün bir örneği döndürür. Bu örnekte, tür bağımsız değişkeni ve sonuç olarak, dönüş değeri türüdür <xref:System.String>.  
+ Bu örnekte, kullanıcı değeri iptal düğmesine basarsa `null` arama sayfası döndürülür. Bunun yerine Tamam düğmesine basıldığında kullanıcı tarafından sağlanan dize değeri döndürülür. <xref:System.Windows.Navigation.PageFunction%601.OnReturn%2A> olan bir `protected``virtual` verilerinizi arama sayfasına geri dönmek için çağrı yöntemi. Verilerinizi genel bir örneğinde paketlenmesi gerekiyor <xref:System.Windows.Navigation.ReturnEventArgs%601> değer türü, tür bağımsız değişkeni türünü belirtir, <xref:System.Windows.Navigation.ReturnEventArgs%601.Result%2A> döndürür. Bu şekilde, bildirirken bir <xref:System.Windows.Navigation.PageFunction%601> belirli tür bağımsız değişkeni ile belirten bir <xref:System.Windows.Navigation.PageFunction%601> tür bağımsız değişkeni tarafından belirtilen türünün bir örneği döndürür. Bu örnekte, tür bağımsız değişkeni ve sonuç olarak, dönüş değeri türüdür <xref:System.String>.  
   
  Zaman <xref:System.Windows.Navigation.PageFunction%601.OnReturn%2A> çağrılır, arama sayfası gereksinimlerini dönüş değerini alma herhangi bir şekilde <xref:System.Windows.Navigation.PageFunction%601>. Bu nedenle, <xref:System.Windows.Navigation.PageFunction%601> uygulayan <xref:System.Windows.Navigation.PageFunction%601.Return> sayfaları işlemek için çağırmak için olay. Zaman <xref:System.Windows.Navigation.PageFunction%601.OnReturn%2A> olarak adlandırılır, <xref:System.Windows.Navigation.PageFunction%601.Return> tetiklenir, arama sayfası ile kaydedebilirsiniz şekilde <xref:System.Windows.Navigation.PageFunction%601.Return> bildirim almak için.  
   

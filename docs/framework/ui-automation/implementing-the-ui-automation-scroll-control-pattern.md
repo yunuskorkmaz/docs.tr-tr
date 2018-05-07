@@ -1,28 +1,19 @@
 ---
-title: "UI Otomasyonu Kaydırma Denetim Düzenini Uygulama"
-ms.custom: 
+title: UI Otomasyonu Kaydırma Denetim Düzenini Uygulama
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-bcl
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - UI Automation, Scroll control pattern
 - control patterns, Scroll
 - Scroll control pattern
 ms.assetid: 73d64242-6cbb-424c-92dd-dc69530b7899
-caps.latest.revision: "23"
 author: Xansky
 ms.author: mhopkins
 manager: markl
-ms.workload: dotnet
-ms.openlocfilehash: 9ad069a4670cc7e4c2281109d8df6afa55ea6dea
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 8553bbf192a619ab5877e362b1642007432c8c64
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="implementing-the-ui-automation-scroll-control-pattern"></a>UI Otomasyonu Kaydırma Denetim Düzenini Uygulama
 > [!NOTE]
@@ -47,11 +38,11 @@ Kaydırma çubukları kullanmayan kaydırma denetimi örneği
   
 -   Kaydırma yüzde olarak ölçülür olduğunda tüm değerleri veya tutarlar Mezuniyet kaydırmak için 0 ile 100 arası bir aralığa normalleştirilmiş ilgili.  
   
--   <xref:System.Windows.Automation.ScrollPatternIdentifiers.HorizontallyScrollableProperty>ve <xref:System.Windows.Automation.ScrollPatternIdentifiers.VerticallyScrollableProperty> bağımsız <xref:System.Windows.Automation.AutomationElement.IsEnabledProperty>.  
+-   <xref:System.Windows.Automation.ScrollPatternIdentifiers.HorizontallyScrollableProperty> ve <xref:System.Windows.Automation.ScrollPatternIdentifiers.VerticallyScrollableProperty> bağımsız <xref:System.Windows.Automation.AutomationElement.IsEnabledProperty>.  
   
 -   Varsa <xref:System.Windows.Automation.ScrollPatternIdentifiers.HorizontallyScrollableProperty>  =  `false` sonra <xref:System.Windows.Automation.ScrollPatternIdentifiers.HorizontalViewSizeProperty> % 100'e ayarlanması gerekir ve <xref:System.Windows.Automation.ScrollPatternIdentifiers.HorizontalScrollPercentProperty> ayarlanmalı <xref:System.Windows.Automation.ScrollPatternIdentifiers.NoScroll>. Benzer şekilde, varsa <xref:System.Windows.Automation.ScrollPatternIdentifiers.VerticallyScrollableProperty>  =  `false` sonra <xref:System.Windows.Automation.ScrollPatternIdentifiers.VerticalViewSizeProperty> yüzde 100 olarak ayarlamanız gerekir ve <xref:System.Windows.Automation.ScrollPatternIdentifiers.VerticalScrollPercentProperty> ayarlanmalı <xref:System.Windows.Automation.ScrollPatternIdentifiers.NoScroll>. Bu özellik değerlerini içinde kullanmak UI otomasyon istemci böylece <xref:System.Windows.Automation.ScrollPattern.SetScrollPercent%2A> önleme sırasında yöntemi bir [durumunu koşulu](http://support.microsoft.com/default.aspx?scid=kb;en-us;317723) bir yön istemci ilginizi değilse, kaydırma etkin hale gelir.  
   
--   <xref:System.Windows.Automation.Provider.IScrollProvider.HorizontalScrollPercent%2A>yerel ayar özgüdür. HorizontalScrollPercent ayarı = 100.0 ayarlamanız gerekir denetimin kaydırma konumunu en sağdaki konumuna soldan sağa okuyun İngilizce gibi diller için eşdeğerine. Alternatif olarak, doğru okunan Arapça gibi diller için HorizontalScrollPercent ayarı sola = 100.0 soldaki konuma kaydırma konumunu ayarlamanız gerekir.  
+-   <xref:System.Windows.Automation.Provider.IScrollProvider.HorizontalScrollPercent%2A> yerel ayar özgüdür. HorizontalScrollPercent ayarı = 100.0 ayarlamanız gerekir denetimin kaydırma konumunu en sağdaki konumuna soldan sağa okuyun İngilizce gibi diller için eşdeğerine. Alternatif olarak, doğru okunan Arapça gibi diller için HorizontalScrollPercent ayarı sola = 100.0 soldaki konuma kaydırma konumunu ayarlamanız gerekir.  
   
 <a name="Required_Members_for_IScrollProvider"></a>   
 ## <a name="required-members-for-iscrollprovider"></a>Gerekli üyeleri IScrollProvider için  
@@ -76,9 +67,9 @@ Kaydırma çubukları kullanmayan kaydırma denetimi örneği
   
 |Özel durum türü|Koşul|  
 |--------------------|---------------|  
-|<xref:System.ArgumentException>|<xref:System.Windows.Automation.Provider.IScrollProvider.Scroll%2A>bir denetim destekliyorsa, bu özel durum oluşturur <xref:System.Windows.Automation.ScrollAmount.SmallIncrement> yatay veya dikey kaydırma için özel olarak değerleri ancak <xref:System.Windows.Automation.ScrollAmount.LargeIncrement> değeri geçirilir.|  
-|<xref:System.ArgumentException>|<xref:System.Windows.Automation.Provider.IScrollProvider.SetScrollPercent%2A>içinde bir double dönüştürülemeyecek bir değer geçirildiğinde bu özel durum oluşturur.|  
-|<xref:System.ArgumentOutOfRangeException>|<xref:System.Windows.Automation.Provider.IScrollProvider.SetScrollPercent%2A>içinde bir değer 100'den büyük veya 0'dan geçirildiğinde bu özel durum oluşturur (dışındaki eşdeğerdir -1 <xref:System.Windows.Automation.ScrollPatternIdentifiers.NoScroll>).|  
+|<xref:System.ArgumentException>|<xref:System.Windows.Automation.Provider.IScrollProvider.Scroll%2A> bir denetim destekliyorsa, bu özel durum oluşturur <xref:System.Windows.Automation.ScrollAmount.SmallIncrement> yatay veya dikey kaydırma için özel olarak değerleri ancak <xref:System.Windows.Automation.ScrollAmount.LargeIncrement> değeri geçirilir.|  
+|<xref:System.ArgumentException>|<xref:System.Windows.Automation.Provider.IScrollProvider.SetScrollPercent%2A> içinde bir double dönüştürülemeyecek bir değer geçirildiğinde bu özel durum oluşturur.|  
+|<xref:System.ArgumentOutOfRangeException>|<xref:System.Windows.Automation.Provider.IScrollProvider.SetScrollPercent%2A> içinde bir değer 100'den büyük veya 0'dan geçirildiğinde bu özel durum oluşturur (dışındaki eşdeğerdir -1 <xref:System.Windows.Automation.ScrollPatternIdentifiers.NoScroll>).|  
 |<xref:System.InvalidOperationException>|Her ikisi de <xref:System.Windows.Automation.Provider.IScrollProvider.Scroll%2A> ve <xref:System.Windows.Automation.Provider.IScrollProvider.SetScrollPercent%2A> desteklenmeyen bir yönde kaydırma girişiminde bulunulduğunda bu özel durum.|  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  

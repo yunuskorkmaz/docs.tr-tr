@@ -1,25 +1,18 @@
 ---
-title: .NET Standard
-description: ".NET standart, kendi sürümleri ve destekleyen .NET uygulamalar hakkında bilgi edinin."
-keywords: .NET Standard, PCL, .NET
+title: .NET standart
+description: .NET standart, kendi sürümleri ve destekleyen .NET uygulamalar hakkında bilgi edinin.
 author: mairaw
 ms.author: mairaw
 ms.date: 08/13/2017
-ms.topic: article
-ms.prod: .net
 ms.technology: dotnet-standard
-ms.devlang: dotnet
 ms.assetid: c044882c-af15-45f2-96d1-534557a5ee9b
-ms.workload:
-- dotnet
-- dotnetcore
-ms.openlocfilehash: f22405f4547edcc5034ed221fa144512a237b050
-ms.sourcegitcommit: 32172ca05d5dcce7ef3d327b9c8639c736e0fe2b
+ms.openlocfilehash: 832efe566aaab1e0add687cdb474bacdf5b5d829
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/20/2018
+ms.lasthandoff: 05/04/2018
 ---
-# <a name="net-standard"></a>.NET Standard
+# <a name="net-standard"></a>.NET standart
 
 [.NET standart](https://github.com/dotnet/standard) tüm .NET uygulamalarında kullanılabilir olacak şekilde tasarlanmıştır .NET API'lerini resmi belirtimidir. .NET standart arkasında motivasyon büyük bütünlüğünü .NET ekosistemi saptamaktır. [ECMA 335](https://github.com/dotnet/coreclr/blob/master/Documentation/project-docs/dotnet-standards.md) .NET uygulaması davranışı için bütünlüğünü kurmaya devam eder ancak hiçbir benzer spec .NET kitaplığı uygulamaları için .NET temel sınıf kitaplıkları (BCL) için. 
 
@@ -132,7 +125,7 @@ Profil tabanlı PCLs olarak paketlenmiş `netstandard` genellikle paketlenmiş p
 
 Standart .NET uyumlu PCL profilleri kümesine görebilirsiniz: 
 
-| PCL profili | .NET Standard | PCL platformları
+| PCL profili | .NET standart | PCL platformları
 |:-----------:|:-------------:|------------------------------------------------------------------------------
 | Profile7    | 1.1           | .NET framework 4.5, Windows 8
 | Profile31   | 1.0           | Windows 8.1, Windows Phone Silverlight 8.1

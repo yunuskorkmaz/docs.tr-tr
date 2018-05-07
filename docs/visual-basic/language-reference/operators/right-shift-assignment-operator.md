@@ -1,12 +1,6 @@
 ---
 title: '&gt;&gt;= İşleci (Visual Basic)'
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- devlang-visual-basic
-ms.topic: article
 f1_keywords:
 - vb.>>=
 helpviewer_keywords:
@@ -16,14 +10,11 @@ helpviewer_keywords:
 - compound assignment statements [Visual Basic]
 - '>>= operator [Visual Basic]'
 ms.assetid: 2bcd9abb-7a8c-4229-b75d-8816ff1dc700
-caps.latest.revision: 17
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: 0e7e388471b9adf424c55b1ad1042e5aed1ea8ce
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: d0c0ea819741f80e30e55a960b1187699898a3bb
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="gtgt-operator-visual-basic"></a>&gt;&gt;= İşleci (Visual Basic)
 Bir değişkenin veya özelliğin değerini aritmetik sağa kaydırma gerçekleştirir ve değişken veya özelliği için sonuç atar.  
@@ -59,7 +50,7 @@ variableorproperty >>= amount
 ## <a name="see-also"></a>Ayrıca Bkz.  
  [>> İşleci](../../../visual-basic/language-reference/operators/right-shift-operator.md)  
  [Atama İşleçleri](../../../visual-basic/language-reference/operators/assignment-operators.md)  
- [Bit kaydırma işleçleri](../../../visual-basic/language-reference/operators/bit-shift-operators.md)  
+ [Bit Kaydırma İşleçleri](../../../visual-basic/language-reference/operators/bit-shift-operators.md)  
  [Visual Basic'de İşleç önceliği](../../../visual-basic/language-reference/operators/operator-precedence.md)  
- [İşlevselliğe göre listelenmiş işleçler](../../../visual-basic/language-reference/operators/operators-listed-by-functionality.md)  
- [Deyimleri](../../../visual-basic/programming-guide/language-features/statements.md)
+ [İşlevselliğe Göre Listelenmiş İşleçler](../../../visual-basic/language-reference/operators/operators-listed-by-functionality.md)  
+ [Deyimler](../../../visual-basic/programming-guide/language-features/statements.md)

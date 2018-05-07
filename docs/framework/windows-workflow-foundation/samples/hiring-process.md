@@ -1,29 +1,17 @@
 ---
 title: İşe alma işlemi
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.tgt_pltfrm: ''
-ms.topic: article
 ms.assetid: d5fcacbb-c884-4b37-a5d6-02b1b8eec7b4
-caps.latest.revision: 13
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 8cfa23ab5f36b3a40de107a546dd4700a4523595
-ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
+ms.openlocfilehash: 87327692e35e9386dab4cf906ab33cbe08d73fdd
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="hiring-process"></a>İşe alma işlemi
 Bu örnek, Mesajlaşma etkinlikleri ve iş akışı Hizmetleri olarak barındırılan iki iş akışlarını kullanarak bir iş sürecini uygulamak gösterilmiştir. Bu iş akışları Contoso Ltd. adlı kurgusal bir şirkette BT altyapısının bir parçasıdır  
   
- `HiringRequest` İş akışı işlemi (olarak uygulanan bir <xref:System.Activities.Statements.Flowchart>) yetkilendirme için birkaç yöneticilerin kuruluştaki sorar. İş akışı bu hedefe ulaşmak için kuruluşunuzdaki diğer mevcut Hizmetleri kullanır (bizim durumda, bir gelen kutusu hizmeti ve düz uygulanan bir kurumsal veri hizmeti [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] Hizmetleri).  
+ `HiringRequest` İş akışı işlemi (olarak uygulanan bir <xref:System.Activities.Statements.Flowchart>) yetkilendirme için birkaç yöneticilerin kuruluştaki sorar. Bu hedefe ulaşmak için kuruluşunda (bizim durumda, bir gelen kutusu hizmeti ve düz Windows Communication Foundation (WCF) hizmetlerini uygulanan bir kurumsal veri hizmeti), var olan diğer hizmetler iş akışı kullanır.  
   
  `ResumeRequest` İş akışı (olarak uygulanan bir <xref:System.Activities.Statements.Sequence>) Contoso'nun dış gelişme alanları Web sitenizi gönderme iş yayımlar ve sürdürür alımını yönetir. Bir iş aktarımı dış Web sitesi (bir zaman aşımı süresi doluncaya kadar) saat veya contoso çalışana kadar sabit bir süre için kaldırmaya karar kullanılabilir.  
   
@@ -64,7 +52,7 @@ Bu örnek, Mesajlaşma etkinlikleri ve iş akışı Hizmetleri olarak barındır
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  Bu dizin mevcut değilse, Git [Windows Communication Foundation (WCF) ve .NET Framework 4 için Windows Workflow Foundation (WF) örnek](http://go.microsoft.com/fwlink/?LinkId=150780) tüm indirmek için [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] ve [!INCLUDE[wf1](../../../../includes/wf1-md.md)] örnekleri. Bu örnek aşağıdaki dizinde bulunur.  
+>  Bu dizin mevcut değilse, Git [Windows Communication Foundation (WCF) ve .NET Framework 4 için Windows Workflow Foundation (WF) örnek](http://go.microsoft.com/fwlink/?LinkId=150780) tüm Windows Communication Foundation (WCF) indirmek için ve [!INCLUDE[wf1](../../../../includes/wf1-md.md)] örnekleri. Bu örnek aşağıdaki dizinde bulunur.  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WF\Application\HiringProcess`  
   
@@ -111,7 +99,7 @@ Bu örnek, Mesajlaşma etkinlikleri ve iş akışı Hizmetleri olarak barındır
 |ContosoHR|Veri sözleşmeleri, iş nesneleri ve depo sınıflarını içerir.|  
 |HiringRequestService|İşe alma isteği işlemi iş akışı tanımını içerir.<br /><br /> Bu proje iş akışı (xaml dosyası) bir hizmet olarak kendi kendini barındıran bir konsol uygulaması olarak uygulanır.|  
 |ResumeRequestService|Bir zaman aşımı süresi doluncaya kadar adaylar veya birisi sürdürür toplayan bir iş akışı hizmeti işlemi durdurulacak olduğunu belirler.<br /><br /> Bu proje bir bildirim temelli iş akışı hizmeti (xamlx) uygulanır.|  
-|OrgService|Kuruluş bilgilerini (çalışanlar, konumları, PositionTypes ve Departmanlar) sunan bir hizmet. Bu hizmet şirket kuruluş modülü, bir kurumsal kaynak planlama (ERP) olarak düşünebilirsiniz.<br /><br /> Bu proje kullanıma sunan bir konsol uygulaması uygulanan bir [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] hizmet.|  
+|OrgService|Kuruluş bilgilerini (çalışanlar, konumları, PositionTypes ve Departmanlar) sunan bir hizmet. Bu hizmet şirket kuruluş modülü, bir kurumsal kaynak planlama (ERP) olarak düşünebilirsiniz.<br /><br /> Bu proje bir Windows Communication Foundation (WCF) hizmetini gösteren bir konsol uygulaması uygulanır.|  
 |InboxService|Çalışanlar için yapılabilir görevleri içeren bir gelen kutusu.<br /><br /> Bu proje bir WCF hizmeti sunan bir konsol uygulaması uygulanır.|  
 |InternalClient|İşlem ile etkileşim için bir Web uygulaması. Kullanıcıların Başlat katılır ve kendi HiringProcess iş akışları görüntüleyin. Bu uygulamayı kullanarak, bunlar da başlatabilir ResumeRequest işlemcilerini izler.<br /><br /> Bu site, Contoso'nun intranet için dahili olarak uygulanır. Bu proje bir ASP.NET Web sitesi olarak uygulanır.|  
 |CareersWebSite|Bir dış Web Contoso açık konumda gösteren sitesi. Olası tüm aday bu siteye gidin ve bir sürdürme gönderin.|  

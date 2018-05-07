@@ -1,11 +1,7 @@
 ---
-title: "GetMethodQualifierSet işlevi (yönetilmeyen API Başvurusu)"
-description: "GetMethodQualifierSet işlevi bir yöntemin niteleyicisi kümesini alır."
+title: GetMethodQualifierSet işlevi (yönetilmeyen API Başvurusu)
+description: GetMethodQualifierSet işlevi bir yöntemin niteleyicisi kümesini alır.
 ms.date: 11/06/2017
-ms.prod: .net-framework
-ms.technology:
-- dotnet-clr
-ms.topic: reference
 api_name:
 - GetMethodQualifierSet
 api_location:
@@ -20,14 +16,11 @@ topic_type:
 - Reference
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 2999bef31576cf2bc025868260c2b1782a9b69f9
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 2b1f73e999738fbb59342aeab391132ac454c8dd
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="getmethodqualifierset-function"></a>GetMethodQualifierSet işlevi
 Belirli bir yöntem için ayarlanmış niteleyicisi alır.
@@ -54,10 +47,10 @@ HRESULT GetMethodQualifierSet (
 [in] Bir işaretçi bir [IWbemClassObject](https://msdn.microsoft.com/library/aa391433%28v=vs.85%29.aspx) örneği.
 
 `wszMethod`  
-[in] Yöntem adı. `wszMethod`Geçerli bir işaret etmelidir `LPCWSTR`. 
+[in] Yöntem adı. `wszMethod` Geçerli bir işaret etmelidir `LPCWSTR`. 
 
 `ppQualSet`  
-[out] Yönteminin niteleyicileri erişmesini sağlayan arabirim işaretçisi alır. `ppQualSet`olamaz `null`. Bir hata oluştuğunda yeni bir nesne değil döndürülür ve işaretçi işaret edecek şekilde ayarlanır `null`. 
+[out] Yönteminin niteleyicileri erişmesini sağlayan arabirim işaretçisi alır. `ppQualSet` olamaz `null`. Bir hata oluştuğunda yeni bir nesne değil döndürülür ve işaretçi işaret edecek şekilde ayarlanır `null`. 
 
 ## <a name="return-value"></a>Dönüş değeri
 
@@ -82,7 +75,7 @@ Her yöntemin kendi niteleyicileri olabileceğinden [IWbemQualifierSet işaretç
   
  **Başlık:** WMINet_Utils.idl  
   
- **.NET framework sürümleri:**[!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]  
+ **.NET framework sürümleri:** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.  
 [WMI ve performans sayaçları (yönetilmeyen API Başvurusu)](index.md)

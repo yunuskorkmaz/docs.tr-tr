@@ -1,13 +1,6 @@
 ---
-title: "Koordinat Sistemi Türleri"
-ms.custom: 
+title: Koordinat Sistemi Türleri
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-winforms
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -22,19 +15,14 @@ helpviewer_keywords:
 - coordinate systems
 - transformations [Windows Forms], world
 ms.assetid: c61ff50a-eb1d-4e6c-83cd-f7e9764cfa9f
-caps.latest.revision: "15"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 287b1c9eddef882041d9e4eac44a06190f3585a4
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: ff53942cb90721d5411f99b261f90366d039e151
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="types-of-coordinate-systems"></a>Koordinat Sistemi Türleri
-[!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)]üç koordinat alanları kullanır: world, sayfa ve aygıt. Dünya koordinat belirli bir grafik world model oluşturmak için kullanılan koordinatları ve .NET Framework yöntemlere geçirmek koordinatları. Sayfa koordinat bir form veya denetim gibi bir çizim yüzeyini tarafından kullanılan koordinat sistemi bakın. Cihaz koordinat ekran veya kağıt gibi sonuna çizilen bir fiziksel aygıt tarafından kullanılan koordinatlar belirlenir. Arama yaptığınızda `myGraphics.DrawLine(myPen, 0, 0, 160, 80)`, geçişi için noktaları <xref:System.Drawing.Graphics.DrawLine%2A> yöntemi —`(0, 0)` ve `(160, 80)`— dünya koordinat alanındadır. Önce [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] çizgi ekranda çizebilirsiniz, bir dizi dönüştürmeyi koordinatları geçirin. Dünya dönüşümü adlı bir dönüşüm world koordinatları sayfa koordinatlara dönüştürür ve sayfa dönüşümü adlı başka bir dönüşüm sayfa koordinatları aygıt koordinatlara dönüştürür.  
+[!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] üç koordinat alanları kullanır: world, sayfa ve aygıt. Dünya koordinat belirli bir grafik world model oluşturmak için kullanılan koordinatları ve .NET Framework yöntemlere geçirmek koordinatları. Sayfa koordinat bir form veya denetim gibi bir çizim yüzeyini tarafından kullanılan koordinat sistemi bakın. Cihaz koordinat ekran veya kağıt gibi sonuna çizilen bir fiziksel aygıt tarafından kullanılan koordinatlar belirlenir. Arama yaptığınızda `myGraphics.DrawLine(myPen, 0, 0, 160, 80)`, geçişi için noktaları <xref:System.Drawing.Graphics.DrawLine%2A> yöntemi —`(0, 0)` ve `(160, 80)`— dünya koordinat alanındadır. Önce [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] çizgi ekranda çizebilirsiniz, bir dizi dönüştürmeyi koordinatları geçirin. Dünya dönüşümü adlı bir dönüşüm world koordinatları sayfa koordinatlara dönüştürür ve sayfa dönüşümü adlı başka bir dönüşüm sayfa koordinatları aygıt koordinatlara dönüştürür.  
   
 ## <a name="transforms-and-coordinate-systems"></a>Dönüşümler ve koordinat sistemleri  
  Sol üst köşe yerine istemci alanını gövdesinde kaynağına sahip bir koordinat sistemi çalışmak istediğinizi varsayalım. Örneğin, istemci alanını sol kenarından 100 piksel ve istemci alanını üstünden 50 piksel olması için kaynak istediğinizi varsayalım. Aşağıdaki çizimde, bu tür bir koordinat sistemi gösterir.  

@@ -1,13 +1,6 @@
 ---
-title: "Nasıl yapılır: Özel Yazı Tipi Koleksiyonu Oluşturma"
-ms.custom: 
+title: 'Nasıl yapılır: Özel Yazı Tipi Koleksiyonu Oluşturma'
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-winforms
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -15,16 +8,11 @@ helpviewer_keywords:
 - private font collections [Windows Forms], creating
 - fonts [Windows Forms], creating private collections
 ms.assetid: 6533d5e5-a8dc-4b76-9fc4-3bf75c8b9212
-caps.latest.revision: "16"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 8c0107b1ef1d5259835c6fb1666519d3fc06f4e5
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 824d42c40b07e8662395e7a1286b9a5a6112c415
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-create-a-private-font-collection"></a>Nasıl yapılır: Özel Yazı Tipi Koleksiyonu Oluşturma
 <xref:System.Drawing.Text.PrivateFontCollection> Sınıfının devraldığı <xref:System.Drawing.Text.FontCollection> soyut taban sınıfı. Kullanabileceğiniz bir <xref:System.Drawing.Text.PrivateFontCollection> uygulamanız için özellikle yazı tipleri kümesini korumak için nesne. Özel yazı tipi koleksiyonu yüklü yazı tipleri ve bunun yanı sıra bilgisayarda yüklü değil yazı tipleri içerebilir. Özel yazı tipi koleksiyonu için bir yazı tipi dosyası eklemek için arama <xref:System.Drawing.Text.PrivateFontCollection.AddFontFile%2A> yöntemi bir <xref:System.Drawing.Text.PrivateFontCollection> nesnesi.  
@@ -52,7 +40,7 @@ ms.lasthandoff: 12/22/2017
   
  ![Yazı tipleri metin](../../../../docs/framework/winforms/advanced/media/csfontstext7.png "csfontstext7")  
   
- (Bu, aşağıdaki kod örneğinde özel yazı tipi koleksiyonu eklendi) Arial.tff Arial Normal stili için yazı tipi dosyasıdır. Ancak, program çıktısı Arial yazı tipi ailesi için normal dışında birkaç kullanılabilir stiller gösterdiğine dikkat edin. Çünkü [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] kalın, italik ve kalın italik stilleri Normal stili benzetimini yapabilirsiniz. [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)]Ayrıca alt çizgiler ve Normal stili gelen da üst çizgi üretebilir.  
+ (Bu, aşağıdaki kod örneğinde özel yazı tipi koleksiyonu eklendi) Arial.tff Arial Normal stili için yazı tipi dosyasıdır. Ancak, program çıktısı Arial yazı tipi ailesi için normal dışında birkaç kullanılabilir stiller gösterdiğine dikkat edin. Çünkü [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] kalın, italik ve kalın italik stilleri Normal stili benzetimini yapabilirsiniz. [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] Ayrıca alt çizgiler ve Normal stili gelen da üst çizgi üretebilir.  
   
  Benzer şekilde, [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] kalın stil veya italik stilini kalın italik stili benzetimini yapabilirsiniz. Program çıktısı TimesBd.tff (kez yeni Roma, kalın) yalnızca olsa bile kalın italik stili kez ailesi için kullanılabilir olduğunu gösterir kez dosyasında koleksiyonu.  
   

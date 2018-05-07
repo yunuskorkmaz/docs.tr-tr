@@ -1,14 +1,6 @@
 ---
 title: ICorDebugCode3::GetReturnValueLiveOffset Metodu
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: reference
 dev_langs:
 - cpp
 api_name:
@@ -25,17 +17,13 @@ helpviewer_keywords:
 ms.assetid: 8c2ff5d8-8c04-4423-b1e1-e1c8764b36d3
 topic_type:
 - apiref
-caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 5d10d298a031e7146eaf6cf7988538e6f7020136
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 7c75db784a404298b86ed42692573a509ea56cf9
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="icordebugcode3getreturnvalueliveoffset-method"></a>ICorDebugCode3::GetReturnValueLiveOffset Metodu
 Belirtilen bir IL uzaklığı, hata ayıklayıcı dönüş değeri bir işleve alabilmesi adına, bir kesme noktası nereye yerleştirileceğini yerel uzaklıkları alır.  
@@ -72,7 +60,7 @@ HRESULT GetReturnValueLiveOffset(
   
  İşlevi döndürür `HRESULT` aşağıdaki tabloda gösterilen değerleri.  
   
-|`HRESULT`değer|Açıklama|  
+|`HRESULT` Değer|Açıklama|  
 |---------------------|-----------------|  
 |`S_OK`|Başarılı.|  
 |`CORDBG_E_INVALID_OPCODE`|Verilen IL uzaklığı sitesini bir çağrı yönergesi değil ya da işlevi döndürür `void`.|  
@@ -87,7 +75,7 @@ HRESULT GetReturnValueLiveOffset(
   
  **Kitaplığı:** CorGuids.lib  
   
- **.NET framework sürümleri:**[!INCLUDE[net_current_v451plus](../../../../includes/net-current-v451plus-md.md)]  
+ **.NET framework sürümleri:** [!INCLUDE[net_current_v451plus](../../../../includes/net-current-v451plus-md.md)]  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
  [GetReturnValueForILOffset Yöntemi](../../../../docs/framework/unmanaged-api/debugging/icordebugilframe3-getreturnvalueforiloffset-method.md)  

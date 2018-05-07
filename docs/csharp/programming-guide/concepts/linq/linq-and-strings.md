@@ -1,21 +1,12 @@
 ---
 title: LINQ ve dizeler (C#)
-ms.custom: 
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-csharp
-ms.topic: article
 ms.assetid: dbe2d657-b3f3-487e-b645-21fb2d71cd7b
-caps.latest.revision: "4"
-author: BillWagner
-ms.author: wiwagn
-ms.openlocfilehash: c7219c3b968f68d9a6c280749ffa6e8a1cb6938d
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: a297aec0a33893c643be337c356e304cdcd375ef
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="linq-and-strings-c"></a>LINQ ve dizeler (C#)
 LINQ Sorgu ve dizeler ve koleksiyonları dizeleri dönüştürmek için kullanılabilir. Metin dosyaları yarı yapılandırılmış veriyle özellikle yararlı olabilir. LINQ sorgularını geleneksel dize işlevleri ve normal ifadeler ile birleştirilebilir. Örneğin, kullanabileceğiniz <xref:System.String.Split%2A> veya <xref:System.Text.RegularExpressions.Regex.Split%2A> sonra sorgu veya LINQ kullanarak değiştirmek için bir dizeler dizisi oluşturmak için yöntemi. Kullanabileceğiniz <xref:System.Text.RegularExpressions.Regex.IsMatch%2A> yönteminde `where` bir LINQ sorgu yan tümcesi. LINQ Sorgu veya değiştirmek için kullanabileceğiniz <xref:System.Text.RegularExpressions.MatchCollection> normal bir ifade tarafından döndürülen sonuç.  
@@ -68,4 +59,4 @@ LINQ Sorgu ve dizeler ve koleksiyonları dizeleri dönüştürmek için kullanı
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
  [Dil ile tümleşik sorgu (LINQ) (C#)](../../../../csharp/programming-guide/concepts/linq/index.md)  
- [Nasıl yapılır: XML CSV dosyalarından oluştur](http://msdn.microsoft.com/library/dd7bab8c-96fa-4343-94d0-9739dd6a74fd)
+ [Nasıl yapılır: CSV Dosyalarından XML Oluşturma](http://msdn.microsoft.com/library/dd7bab8c-96fa-4343-94d0-9739dd6a74fd)

@@ -1,28 +1,16 @@
 ---
 title: İleti Güvenliği Sertifikası
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 helpviewer_keywords:
 - WS Security
 ms.assetid: 909333b3-35ec-48f0-baff-9a50161896f6
-caps.latest.revision: 51
 author: BrucePerlerMS
-ms.author: bruceper
 manager: mbaldwin
-ms.workload:
-- dotnet
-ms.openlocfilehash: 6ff680c9d85e4d395af550bf60de3b962d6a0c2a
-ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
+ms.openlocfilehash: 769827d10139a659971890a452227b650e89ba20
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/27/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="message-security-certificate"></a>İleti Güvenliği Sertifikası
 Bu örnek, istemci için X.509 v3 sertifikası kimlik doğrulaması ile WS güvenliği kullanan ve sunucunun X.509 v3 sertifikası kullanılarak kimlik doğrulaması gerektiren bir uygulama uygulamak gösterilmiştir. İstemci ve sunucu arasındaki tüm uygulama iletileri imzalanır ve şifrelenir, bu örnek varsayılan ayarları kullanır. Bu örnek dayanır [WSHttpBinding](../../../../docs/framework/wcf/samples/wshttpbinding.md) ve bir istemci konsol programı ve Internet Information Services (IIS) tarafından barındırılan bir hizmet kitaplığı oluşur. Hizmet bir istek-yanıt iletişim deseni tanımlayan bir sözleşme uygular.  
@@ -230,7 +218,7 @@ Press <ENTER> to terminate client.
   
 -   İstemci sertifikası, sunucu güvenilen sertifika deposuna yükleme.  
   
-     Toplu dosya kopyalarını aşağıdaki satırda sunucunun TrustedPeople içine istemci sertifikası sunucu ilgili güven veya no güven kararları yapabilmek depolar. Tarafından güvenilmesi sırada TrustedPeople deposunda yüklü bir sertifika için bir [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] hizmeti, istemci sertifikası doğrulama modunu ayarlanmalıdır `PeerOrChainTrust` veya `PeerTrust`. Önceki hizmet yapılandırma örneği nasıl bu yapılandırma dosyası kullanarak yapılabilir bilgi edinmek için bkz.  
+     Toplu dosya kopyalarını aşağıdaki satırda sunucunun TrustedPeople içine istemci sertifikası sunucu ilgili güven veya no güven kararları yapabilmek depolar. Bir Windows Communication Foundation (WCF) hizmeti tarafından güvenilmesi için sırayla TrustedPeople deposunda yüklü bir sertifika için istemci sertifikası doğrulama modu ayarlamak `PeerOrChainTrust` veya `PeerTrust`. Önceki hizmet yapılandırma örneği nasıl bu yapılandırma dosyası kullanarak yapılabilir bilgi edinmek için bkz.  
   
     ```bat
     echo ************  
@@ -289,7 +277,7 @@ Press <ENTER> to terminate client.
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  Bu dizin mevcut değilse, Git [Windows Communication Foundation (WCF) ve .NET Framework 4 için Windows Workflow Foundation (WF) örnek](http://go.microsoft.com/fwlink/?LinkId=150780) tüm indirmek için [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] ve [!INCLUDE[wf1](../../../../includes/wf1-md.md)] örnekleri. Bu örnek aşağıdaki dizinde bulunur:  
+>  Bu dizin mevcut değilse, Git [Windows Communication Foundation (WCF) ve .NET Framework 4 için Windows Workflow Foundation (WF) örnek](http://go.microsoft.com/fwlink/?LinkId=150780) tüm Windows Communication Foundation (WCF) indirmek için ve [!INCLUDE[wf1](../../../../includes/wf1-md.md)] örnekleri. Bu örnek aşağıdaki dizinde bulunur:  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Binding\WS\MessageSecurity`  
   
@@ -345,6 +333,6 @@ Press <ENTER> to terminate client.
 -   Örnek çalıştıran bitirdikten sonra Cleanup.bat samples klasöründen çalıştırın.  
   
     > [!NOTE]
-    >  Bu komut, bu örnek bilgisayarlar arasında çalıştırırken bir istemcide hizmet sertifikaları kaldırmaz. Çalıştırırsanız [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] bilgisayarlar arasında sertifikaları kullanma örnekleri Currentuser'a - TrustedPeople deposu yüklü hizmet sertifikalarını temizlemek emin olun. Bunu yapmak için aşağıdaki komutu kullanın: `certmgr -del -r CurrentUser -s TrustedPeople -c -n <Fully Qualified Server Machine Name>` örneğin: `certmgr -del -r CurrentUser -s TrustedPeople -c -n server1.contoso.com`.  
+    >  Bu komut, bu örnek bilgisayarlar arasında çalıştırırken bir istemcide hizmet sertifikaları kaldırmaz. Bilgisayarlar arasında sertifikaları kullanan Windows Communication Foundation (WCF) örnekleri çalıştırırsanız, Currentuser'a - TrustedPeople deposu yüklü hizmet sertifikalarını temizlemek emin olun. Bunu yapmak için aşağıdaki komutu kullanın: `certmgr -del -r CurrentUser -s TrustedPeople -c -n <Fully Qualified Server Machine Name>` örneğin: `certmgr -del -r CurrentUser -s TrustedPeople -c -n server1.contoso.com`.  
   
 ## <a name="see-also"></a>Ayrıca Bkz.

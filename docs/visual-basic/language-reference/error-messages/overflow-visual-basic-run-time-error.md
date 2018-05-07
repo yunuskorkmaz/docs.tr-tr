@@ -1,23 +1,14 @@
 ---
-title: "Taşma (Visual Basic Çalışma Süresi Hatası)"
+title: Taşma (Visual Basic Çalışma Süresi Hatası)
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- devlang-visual-basic
-ms.topic: article
 f1_keywords:
 - vbrERRID_Overflow
 ms.assetid: c6a23279-3086-412a-bcff-ff8ed2cb8c6f
-caps.latest.revision: 
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: d1908ad576a499e79102aff23e3e2f11d7d99d52
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 9db79071c4895d49680352bde2d0824a3756d941
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="overflow-visual-basic-run-time-error"></a>Taşma (Visual Basic Çalışma Süresi Hatası)
 Atamanın hedef sınırlarını aşıyor atama çalıştığınızda taşma sonuçlanır.  
@@ -33,5 +24,5 @@ Atamanın hedef sınırlarını aşıyor atama çalıştığınızda taşma sonu
 ## <a name="see-also"></a>Ayrıca Bkz.  
  <xref:System.Int32.MaxValue?displayProperty=nameWithType>  
  <xref:System.Double.MaxValue?displayProperty=nameWithType>  
- [Veri türleri](../../../visual-basic/language-reference/data-types/data-type-summary.md)  
- [Hata türleri](../../../visual-basic/programming-guide/language-features/error-types.md)
+ [Veri Türleri](../../../visual-basic/language-reference/data-types/data-type-summary.md)  
+ [Hata Türleri](../../../visual-basic/programming-guide/language-features/error-types.md)

@@ -1,13 +1,6 @@
 ---
-title: "İş Parçacığı Modeli"
-ms.custom: 
+title: İş Parçacığı Modeli
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-wpf
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -25,21 +18,16 @@ helpviewer_keywords:
 - nested message processing [WPF]
 - reentrancy [WPF]
 ms.assetid: 02d8fd00-8d7c-4604-874c-58e40786770b
-caps.latest.revision: "33"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: f598cecef2d0994692f197df09e9befc39a58723
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 15115cc0ed14cb5605100ebe47abd5cd4dc02ec0
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="threading-model"></a>İş Parçacığı Modeli
-[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]Geliştiriciler iş parçacığı kurtarmak için tasarlanmıştır. Sonuç olarak, çoğu [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] geliştiriciler birden çok iş parçacığı kullanan bir arabirim yazma zorunda kalmaz. Birden çok iş parçacıklı programlar karmaşık ve hata ayıklama zor olduğundan, bunlar tek iş parçacıklı çözümleri bulunduğunda kaçınılmalıdır.  
+[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] Geliştiriciler iş parçacığı kurtarmak için tasarlanmıştır. Sonuç olarak, çoğu [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] geliştiriciler birden çok iş parçacığı kullanan bir arabirim yazma zorunda kalmaz. Birden çok iş parçacıklı programlar karmaşık ve hata ayıklama zor olduğundan, bunlar tek iş parçacıklı çözümleri bulunduğunda kaçınılmalıdır.  
   
- Geçtiğinden bağımsız ne kadar iyi, ancak Hayır tasarlanmış [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] framework hiç kurulamayacak sorun her tür için tek iş parçacıklı bir çözüm sağlar. [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]Kapat gelir ancak hala burada birden çok iş parçacığı artırmak durumlarda [!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)] yanıtlama hızı veya uygulama performans. Bazı arka plan malzeme ele sonra bu kağıt bunlardan bazıları inceler ve bazı alt düzey ayrıntıların tartışması ile sonlanır.  
+ Geçtiğinden bağımsız ne kadar iyi, ancak Hayır tasarlanmış [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] framework hiç kurulamayacak sorun her tür için tek iş parçacıklı bir çözüm sağlar. [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] Kapat gelir ancak hala burada birden çok iş parçacığı artırmak durumlarda [!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)] yanıtlama hızı veya uygulama performans. Bazı arka plan malzeme ele sonra bu kağıt bunlardan bazıları inceler ve bazı alt düzey ayrıntıların tartışması ile sonlanır.  
   
 
   
@@ -56,11 +44,11 @@ ms.lasthandoff: 12/22/2017
   
  Nasıl daha sonra [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] uygulamaları olması büyük işlemlerini işlemek için? Ne kodunuz büyük hesaplama içerir veya bazı uzak sunucudaki veritabanını sorgulama gerekiyor? Genellikle, yanıt bırakarak ayrı bir iş parçacığı büyük işlemi yönetmektir [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] öğelerde eğilimindedir boş iş parçacığı <xref:System.Windows.Threading.Dispatcher> sırası. Büyük işlemi tamamlandıktan sonra sonuç raporlayabilirsiniz geri [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] görüntülemek için iş parçacığı.  
   
- Geçmişte, [!INCLUDE[TLA#tla_mswin](../../../../includes/tlasharptla-mswin-md.md)] sağlayan [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] yalnızca oluşturuldukları iş parçacığı tarafından erişilecek öğeleri. Bu tamamlandığında bir arka plan iş parçacığı bazı uzun süre çalışan görev sorumlu bir metin kutusu güncelleştirilemiyor anlamına gelir. [!INCLUDE[TLA#tla_mswin](../../../../includes/tlasharptla-mswin-md.md)]Bu bütünlüğünü sağlamak için [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] bileşenleri. Liste kutusu içeriğinin boyama sırasında bir arka plan iş parçacığı tarafından güncelleştirildiyse garip görünebilir.  
+ Geçmişte, [!INCLUDE[TLA#tla_mswin](../../../../includes/tlasharptla-mswin-md.md)] sağlayan [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] yalnızca oluşturuldukları iş parçacığı tarafından erişilecek öğeleri. Bu tamamlandığında bir arka plan iş parçacığı bazı uzun süre çalışan görev sorumlu bir metin kutusu güncelleştirilemiyor anlamına gelir. [!INCLUDE[TLA#tla_mswin](../../../../includes/tlasharptla-mswin-md.md)] Bu bütünlüğünü sağlamak için [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] bileşenleri. Liste kutusu içeriğinin boyama sırasında bir arka plan iş parçacığı tarafından güncelleştirildiyse garip görünebilir.  
   
- [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]Bu koordinasyonu zorlayan bir yerleşik karşılıklı dışlama mekanizması vardır. Çoğu sınıflarda [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] öğesinden türetilen <xref:System.Windows.Threading.DispatcherObject>. Yapım, adresindeki bir <xref:System.Windows.Threading.DispatcherObject> başvuru depolar <xref:System.Windows.Threading.Dispatcher> şu anda çalışan iş parçacığına bağlı. Uygulamada <xref:System.Windows.Threading.DispatcherObject> oluşturduğu iş parçacığı ile ilişkilendirir. Program yürütme sırasında bir <xref:System.Windows.Threading.DispatcherObject> kendi ortak çağırabilirsiniz <xref:System.Windows.Threading.DispatcherObject.VerifyAccess%2A> yöntemi. <xref:System.Windows.Threading.DispatcherObject.VerifyAccess%2A>inceler <xref:System.Windows.Threading.Dispatcher> geçerli iş parçacığı ile ilişkili olan ve kendisine karşılaştırır <xref:System.Windows.Threading.Dispatcher> oluşturma sırasında depolanan başvuru. Bunlar eşleşmiyorsa, <xref:System.Windows.Threading.DispatcherObject.VerifyAccess%2A> bir özel durum oluşturur. <xref:System.Windows.Threading.DispatcherObject.VerifyAccess%2A>ait her yöntemi başındaki çağrılmaya yönelik bir <xref:System.Windows.Threading.DispatcherObject>.  
+ [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] Bu koordinasyonu zorlayan bir yerleşik karşılıklı dışlama mekanizması vardır. Çoğu sınıflarda [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] öğesinden türetilen <xref:System.Windows.Threading.DispatcherObject>. Yapım, adresindeki bir <xref:System.Windows.Threading.DispatcherObject> başvuru depolar <xref:System.Windows.Threading.Dispatcher> şu anda çalışan iş parçacığına bağlı. Uygulamada <xref:System.Windows.Threading.DispatcherObject> oluşturduğu iş parçacığı ile ilişkilendirir. Program yürütme sırasında bir <xref:System.Windows.Threading.DispatcherObject> kendi ortak çağırabilirsiniz <xref:System.Windows.Threading.DispatcherObject.VerifyAccess%2A> yöntemi. <xref:System.Windows.Threading.DispatcherObject.VerifyAccess%2A> inceler <xref:System.Windows.Threading.Dispatcher> geçerli iş parçacığı ile ilişkili olan ve kendisine karşılaştırır <xref:System.Windows.Threading.Dispatcher> oluşturma sırasında depolanan başvuru. Bunlar eşleşmiyorsa, <xref:System.Windows.Threading.DispatcherObject.VerifyAccess%2A> bir özel durum oluşturur. <xref:System.Windows.Threading.DispatcherObject.VerifyAccess%2A> ait her yöntemi başındaki çağrılmaya yönelik bir <xref:System.Windows.Threading.DispatcherObject>.  
   
- Bir iş parçacığı değiştirebilirsiniz yalnızca [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)], nasıl arka plan iş parçacıkları etkileşim kullanıcıyla? Arka plan iş parçacığı sorabilirsiniz [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] adına üzerinde bir işlemi gerçekleştirmek için iş parçacığı. Bunu bir iş öğesi ile kaydederek yapar <xref:System.Windows.Threading.Dispatcher> , [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] iş parçacığı. <xref:System.Windows.Threading.Dispatcher> Sınıfı, iş öğelerini kaydetme için iki yöntem sağlar: <xref:System.Windows.Threading.Dispatcher.Invoke%2A> ve <xref:System.Windows.Threading.Dispatcher.BeginInvoke%2A>. Her iki yöntem yürütme için temsilci zamanlayın. <xref:System.Windows.Threading.Dispatcher.Invoke%2A>zaman uyumlu bir çağrı – başka bir deyişle, kadar döndürmez [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] iş parçacığı gerçekten bittikten temsilci yürütülüyor. <xref:System.Windows.Threading.Dispatcher.BeginInvoke%2A>zaman uyumsuz olarak çağrılır ve hemen döndürür.  
+ Bir iş parçacığı değiştirebilirsiniz yalnızca [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)], nasıl arka plan iş parçacıkları etkileşim kullanıcıyla? Arka plan iş parçacığı sorabilirsiniz [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] adına üzerinde bir işlemi gerçekleştirmek için iş parçacığı. Bunu bir iş öğesi ile kaydederek yapar <xref:System.Windows.Threading.Dispatcher> , [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] iş parçacığı. <xref:System.Windows.Threading.Dispatcher> Sınıfı, iş öğelerini kaydetme için iki yöntem sağlar: <xref:System.Windows.Threading.Dispatcher.Invoke%2A> ve <xref:System.Windows.Threading.Dispatcher.BeginInvoke%2A>. Her iki yöntem yürütme için temsilci zamanlayın. <xref:System.Windows.Threading.Dispatcher.Invoke%2A> zaman uyumlu bir çağrı – başka bir deyişle, kadar döndürmez [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] iş parçacığı gerçekten bittikten temsilci yürütülüyor. <xref:System.Windows.Threading.Dispatcher.BeginInvoke%2A> zaman uyumsuz olarak çağrılır ve hemen döndürür.  
   
  <xref:System.Windows.Threading.Dispatcher> Öğeleri sırasındaki önceliğe göre sıralar. Bir öğe olarak eklerken belirtilen on düzeyi vardır <xref:System.Windows.Threading.Dispatcher> sırası. Bu öncelikleri içinde korunur <xref:System.Windows.Threading.DispatcherPriority> numaralandırması. Hakkında ayrıntılı bilgi <xref:System.Windows.Threading.DispatcherPriority> düzeyleri bulunabilir [!INCLUDE[TLA2#tla_winfxsdk](../../../../includes/tla2sharptla-winfxsdk-md.md)] belgeleri.  
   
@@ -87,7 +75,7 @@ ms.lasthandoff: 12/22/2017
   
  ![Dağıtıcı sırası çizimi](../../../../docs/framework/wpf/advanced/media/threadingdispatcherqueue.PNG "ThreadingDispatcherQueue")  
   
- [!INCLUDE[TLA#tla_word](../../../../includes/tlasharptla-word-md.md)]Bu mekanizmayı kullanarak yazım denetimi gerçekleştirir. Yazım denetimi boşta kalma süresi kullanarak arka planda gerçekleştirilir [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] iş parçacığı. Kod bir göz atalım.  
+ [!INCLUDE[TLA#tla_word](../../../../includes/tlasharptla-word-md.md)] Bu mekanizmayı kullanarak yazım denetimi gerçekleştirir. Yazım denetimi boşta kalma süresi kullanarak arka planda gerçekleştirilir [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] iş parçacığı. Kod bir göz atalım.  
   
  Aşağıdaki örnekte kullanıcı arabirimi oluşturan XAML gösterir.  
   
@@ -105,7 +93,7 @@ ms.lasthandoff: 12/22/2017
   
  Üzerinde metnini güncelleştirme yanı sıra <xref:System.Windows.Controls.Button>, bu işleyici, bir temsilci ekleyerek ilk asal sayı onay zamanlama için sorumludur <xref:System.Windows.Threading.Dispatcher> sırası. Bu olay işleyicisi kendi iş tamamlandıktan sonra süre <xref:System.Windows.Threading.Dispatcher> yürütme için bu temsilciyi seçer.  
   
- Daha önce belirtildiği gibi <xref:System.Windows.Threading.Dispatcher.BeginInvoke%2A> olan <xref:System.Windows.Threading.Dispatcher> üye yürütme için temsilci zamanlamak için kullanılır. Bu durumda, biz seçin <xref:System.Windows.Threading.DispatcherPriority.SystemIdle> öncelik. <xref:System.Windows.Threading.Dispatcher> Yalnızca işlemek için hiçbir önemli olayları olduğunda bu temsilciyi çalıştırır. [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)]yanıt hızını numarası denetleniyor değerinden daha önemlidir. Biz de numarası denetleniyor yordamı temsil eden yeni bir temsilci geçirin.  
+ Daha önce belirtildiği gibi <xref:System.Windows.Threading.Dispatcher.BeginInvoke%2A> olan <xref:System.Windows.Threading.Dispatcher> üye yürütme için temsilci zamanlamak için kullanılır. Bu durumda, biz seçin <xref:System.Windows.Threading.DispatcherPriority.SystemIdle> öncelik. <xref:System.Windows.Threading.Dispatcher> Yalnızca işlemek için hiçbir önemli olayları olduğunda bu temsilciyi çalıştırır. [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] yanıt hızını numarası denetleniyor değerinden daha önemlidir. Biz de numarası denetleniyor yordamı temsil eden yeni bir temsilci geçirin.  
   
  [!code-csharp[ThreadingPrimeNumbers#ThreadingPrimeNumberCheckNextNumber](../../../../samples/snippets/csharp/VS_Snippets_Wpf/ThreadingPrimeNumbers/CSharp/Window1.xaml.cs#threadingprimenumberchecknextnumber)]
  [!code-vb[ThreadingPrimeNumbers#ThreadingPrimeNumberCheckNextNumber](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/ThreadingPrimeNumbers/visualbasic/mainwindow.xaml.vb#threadingprimenumberchecknextnumber)]  
@@ -143,7 +131,7 @@ ms.lasthandoff: 12/22/2017
   
  Gecikme tamamlandı ve biz rastgele bizim hava tahmini seçtiyseniz, yeniden rapor zamanı geldi [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] iş parçacığı. Çağrı zamanlayarak bunu `UpdateUserInterface` içinde [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] parçacığının kullanarak iş parçacığı <xref:System.Windows.Threading.Dispatcher>. Biz bu zamanlanmış yöntem çağrısının hava tanımlayan bir dize geçirin.  
   
--   Güncelleştirme[!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)]  
+-   Güncelleştirme [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)]  
   
      [!code-csharp[ThreadingWeatherForecast#ThreadingWeatherUpdateUI](../../../../samples/snippets/csharp/VS_Snippets_Wpf/ThreadingWeatherForecast/CSharp/Window1.xaml.cs#threadingweatherupdateui)]
      [!code-vb[ThreadingWeatherForecast#ThreadingWeatherUpdateUI](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/ThreadingWeatherForecast/visualbasic/window1.xaml.vb#threadingweatherupdateui)]  
@@ -154,7 +142,7 @@ ms.lasthandoff: 12/22/2017
 ### <a name="multiple-windows-multiple-threads"></a>Birden çok Windows, çoklu iş parçacıkları  
  Bazı [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] uygulamaları birden çok üst düzey windows gerektirir. Tek bir iş parçacığı edilebilir /<xref:System.Windows.Threading.Dispatcher> birleşimi birden çok windows ancak bazen birkaç iş parçacığı yönetmek için daha iyi iş yapın. Bu özellikle ihtimali varsa, Windows'un bir iş parçacığı kullanmasını geçerlidir.  
   
- [!INCLUDE[TLA#tla_mswin](../../../../includes/tlasharptla-mswin-md.md)]Explorer bu şekilde çalışır. Her yeni Explorer penceresi özgün işleme ait olduğu, ancak bağımsız bir iş parçacığı denetimi altında oluşturulur.  
+ [!INCLUDE[TLA#tla_mswin](../../../../includes/tlasharptla-mswin-md.md)] Explorer bu şekilde çalışır. Her yeni Explorer penceresi özgün işleme ait olduğu, ancak bağımsız bir iş parçacığı denetimi altında oluşturulur.  
   
  Kullanarak bir [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] <xref:System.Windows.Controls.Frame> denetim, biz Web sayfalarını görüntüleyebilirsiniz. Basit bir kolayca oluşturabilir [!INCLUDE[TLA2#tla_ie](../../../../includes/tla2sharptla-ie-md.md)] değiştirin. Biz önemli özellik ile Başlat: özelliği yeni bir explorer penceresi açın. Kullanıcı, "Yeni Pencere" tıkladığında düğmesi, size bir kopyasını ayrı bir iş parçacığı bizim penceresi başlatın. Bu şekilde, diğer tüm windows uzun süre çalışan veya engelleyici işlemlerinde windows birini kilit olmaz.  
   
@@ -177,18 +165,18 @@ ms.lasthandoff: 12/22/2017
  [!code-csharp[ThreadingMultipleBrowsers#ThreadingMultiBrowserThreadStart](../../../../samples/snippets/csharp/VS_Snippets_Wpf/ThreadingMultipleBrowsers/CSharp/Window1.xaml.cs#threadingmultibrowserthreadstart)]
  [!code-vb[ThreadingMultipleBrowsers#ThreadingMultiBrowserThreadStart](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/ThreadingMultipleBrowsers/VisualBasic/Window1.xaml.vb#threadingmultibrowserthreadstart)]  
   
- Bu yöntem, yeni bir iş parçacığı için başlangıç noktasıdır. Bu iş parçacığı denetimi altında yeni bir pencere oluşturuyoruz. [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]otomatik olarak yeni bir oluşturur <xref:System.Windows.Threading.Dispatcher> yeni bir iş parçacığı yönetmek için. Pencerenin işlevsel sağlamak için yapmanız sahip olduğumuz tümüdür başlatmak için <xref:System.Windows.Threading.Dispatcher>.  
+ Bu yöntem, yeni bir iş parçacığı için başlangıç noktasıdır. Bu iş parçacığı denetimi altında yeni bir pencere oluşturuyoruz. [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] otomatik olarak yeni bir oluşturur <xref:System.Windows.Threading.Dispatcher> yeni bir iş parçacığı yönetmek için. Pencerenin işlevsel sağlamak için yapmanız sahip olduğumuz tümüdür başlatmak için <xref:System.Windows.Threading.Dispatcher>.  
   
 <a name="stumbling_points"></a>   
 ## <a name="technical-details-and-stumbling-points"></a>Teknik Ayrıntılar ve bazı noktalar  
   
 ### <a name="writing-components-using-threading"></a>İş parçacığı kullanarak bileşen yazma  
- [!INCLUDE[TLA#tla_netframewk](../../../../includes/tlasharptla-netframewk-md.md)] Geliştirici Kılavuzu bir bileşen istemcilerine zaman uyumsuz davranışı nasıl getirebilir için bir desen açıklar (bkz [olay tabanlı zaman uyumsuz desene genel bakış](../../../../docs/standard/asynchronous-programming-patterns/event-based-asynchronous-pattern-overview.md)). Örneğin, biz istediğinizi paketlemek varsayın `FetchWeatherFromServer` yeniden kullanılabilir bir bileşenin yönteme. Standart aşağıdaki [!INCLUDE[TLA#tla_netframewk](../../../../includes/tlasharptla-netframewk-md.md)] düzeni, bu aşağıdakine benzer görünecektir.  
+ Microsoft .NET Framework Geliştirici Kılavuzu bir bileşen istemcilerine zaman uyumsuz davranışı nasıl getirebilir için bir deseni açıklar (bkz [olay tabanlı zaman uyumsuz desene genel bakış](../../../../docs/standard/asynchronous-programming-patterns/event-based-asynchronous-pattern-overview.md)). Örneğin, biz istediğinizi paketlemek varsayın `FetchWeatherFromServer` yeniden kullanılabilir bir bileşenin yönteme. Standart Microsoft .NET Framework desen bu aşağıdakine benzer görünecektir.  
   
  [!code-csharp[CommandingOverviewSnippets#ThreadingArticleWeatherComponent1](../../../../samples/snippets/csharp/VS_Snippets_Wpf/CommandingOverviewSnippets/CSharp/Window1.xaml.cs#threadingarticleweathercomponent1)]
  [!code-vb[CommandingOverviewSnippets#ThreadingArticleWeatherComponent1](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/CommandingOverviewSnippets/visualbasic/window1.xaml.vb#threadingarticleweathercomponent1)]  
   
- `GetWeatherAsync`bir arka plan iş parçacığı oluşturma gibi daha önce açıklanan teknikleri birini işi zaman uyumsuz olarak yapmak için çağıran iş parçacığı engellemediğini kullanırsınız.  
+ `GetWeatherAsync` bir arka plan iş parçacığı oluşturma gibi daha önce açıklanan teknikleri birini işi zaman uyumsuz olarak yapmak için çağıran iş parçacığı engellemediğini kullanırsınız.  
   
  Bu desenin en önemli parçalarından çağırma *MethodName* `Completed` yöntemini çağıran iş parçacığında *MethodName* `Async` yöntemi ile başlar. Kullanarak bunu yapabilirsiniz [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] depolayarak oldukça kolaylıkla <xref:System.Windows.Threading.Dispatcher.CurrentDispatcher%2A>— ancak ardından grafik olmayan bileşeni yalnızca kullanılabilen [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] uygulamaları değil, [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] veya [!INCLUDE[TLA#tla_aspnet](../../../../includes/tlasharptla-aspnet-md.md)] programlar.  
   
@@ -198,11 +186,11 @@ ms.lasthandoff: 12/22/2017
  [!code-vb[CommandingOverviewSnippets#ThreadingArticleWeatherComponent2](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/CommandingOverviewSnippets/visualbasic/window1.xaml.vb#threadingarticleweathercomponent2)]  
   
 ### <a name="nested-pumping"></a>Pompalama iç içe geçmiş  
- Bazen tamamen kilitlemek için uygun olmadığı [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] iş parçacığı. Şimdi göz önünde bulundurun <xref:System.Windows.MessageBox.Show%2A> yöntemi <xref:System.Windows.MessageBox> sınıfı. <xref:System.Windows.MessageBox.Show%2A>Kullanıcı Tamam düğmesine tıklar kadar döndürmez. Ancak, bir ileti döngüsü etkileşimli için sahip bir pencere oluşturmaz. Biz kullanıcının Tamam'ı beklerken, özgün uygulama penceresi kullanıcı girişine yanıt vermez. Boyama iletileri işlemek üzere ancak devam eder. Özgün pencere kendisini kapsamdaki ve ortaya yeniden çizer.  
+ Bazen tamamen kilitlemek için uygun olmadığı [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] iş parçacığı. Şimdi göz önünde bulundurun <xref:System.Windows.MessageBox.Show%2A> yöntemi <xref:System.Windows.MessageBox> sınıfı. <xref:System.Windows.MessageBox.Show%2A> Kullanıcı Tamam düğmesine tıklar kadar döndürmez. Ancak, bir ileti döngüsü etkileşimli için sahip bir pencere oluşturmaz. Biz kullanıcının Tamam'ı beklerken, özgün uygulama penceresi kullanıcı girişine yanıt vermez. Boyama iletileri işlemek üzere ancak devam eder. Özgün pencere kendisini kapsamdaki ve ortaya yeniden çizer.  
   
  !["Tamam" düğmesini kullanarak MessageBox](../../../../docs/framework/wpf/advanced/media/threadingnestedpumping.png "ThreadingNestedPumping")  
   
- Bazı iş parçacığı sorumlu ileti kutusu penceresi olması gerekir. [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]ileti kutusu penceresi yalnızca için yeni bir iş parçacığı oluşturabilir, ancak bu iş parçacığı devre dışı bırakılan öğeleri özgün penceresinde boyamak alamadı (karşılıklı dışlama önceki tartışmayı unutmayın). Bunun yerine, [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] iç içe geçmiş bir ileti sistemi işleme kullanır. <xref:System.Windows.Threading.Dispatcher> Sınıfı içerir adlı özel bir yöntem <xref:System.Windows.Threading.Dispatcher.PushFrame%2A>, yeni bir ileti döngüsü başlar, ardından uygulamanın geçerli yürütme noktası depolar. İç içe ileti döngüsü sona erdiğinde, yürütme sonra özgün sürdürür <xref:System.Windows.Threading.Dispatcher.PushFrame%2A> çağırın.  
+ Bazı iş parçacığı sorumlu ileti kutusu penceresi olması gerekir. [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] ileti kutusu penceresi yalnızca için yeni bir iş parçacığı oluşturabilir, ancak bu iş parçacığı devre dışı bırakılan öğeleri özgün penceresinde boyamak alamadı (karşılıklı dışlama önceki tartışmayı unutmayın). Bunun yerine, [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] iç içe geçmiş bir ileti sistemi işleme kullanır. <xref:System.Windows.Threading.Dispatcher> Sınıfı içerir adlı özel bir yöntem <xref:System.Windows.Threading.Dispatcher.PushFrame%2A>, yeni bir ileti döngüsü başlar, ardından uygulamanın geçerli yürütme noktası depolar. İç içe ileti döngüsü sona erdiğinde, yürütme sonra özgün sürdürür <xref:System.Windows.Threading.Dispatcher.PushFrame%2A> çağırın.  
   
  Bu durumda, <xref:System.Windows.Threading.Dispatcher.PushFrame%2A> çağrısı konumundaki program bağlamda tutar <xref:System.Windows.MessageBox>.<xref:System.Windows.MessageBox.Show%2A>, ve arka plan penceresi yeniden çizilmez ve ileti kutusu penceresine girişini işlemek için yeni bir ileti döngüsü başlatır. Kullanıcı Tamam tıklar ve açılır pencereyi temizlediğinde, iç içe döngü çıkar ve denetim sürdürür çağrısından sonra <xref:System.Windows.MessageBox.Show%2A>.  
   
@@ -213,7 +201,7 @@ ms.lasthandoff: 12/22/2017
   
  Sol fare düğmesini elips basıldığında `handler2` yürütülür. Sonra `handler2` sonlandığında olay iletilir boyunca <xref:System.Windows.Controls.Canvas> kullanan nesne `handler1` işlemesi için. Bu yalnızca olur `handler2` mu açıkça işareti olay nesnesini işlenmiş olarak.  
   
- Mümkünse, `handler2` bu olay işleme süresinin büyük bir bölümünü sürer. `handler2`kullanabilir <xref:System.Windows.Threading.Dispatcher.PushFrame%2A> saat döndürmez bir iç içe ileti döngüsü başlatmak için. Varsa `handler2` bu ileti döngüsü olduğunda işlenmiş olarak olay tamamlamak işareti yok, çok eski olsa da olay ağaca geçirilir.  
+ Mümkünse, `handler2` bu olay işleme süresinin büyük bir bölümünü sürer. `handler2` kullanabilir <xref:System.Windows.Threading.Dispatcher.PushFrame%2A> saat döndürmez bir iç içe ileti döngüsü başlatmak için. Varsa `handler2` bu ileti döngüsü olduğunda işlenmiş olarak olay tamamlamak işareti yok, çok eski olsa da olay ağaca geçirilir.  
   
 ### <a name="reentrancy-and-locking"></a>Yeniden giriş ve kilitleme  
  Kilitleme mekanizması [!INCLUDE[TLA#tla_clr](../../../../includes/tlasharptla-clr-md.md)] tam olarak davranır olmayan bir düşünün; bir işlemi tamamen kilit isterken sona için bir iş parçacığı beklediğiniz. Çünkü, yüksek öncelikli iletileri almak ve işlemek iş parçacığı devam eder. Bu kilitlenmeler önlemek ve arabirimleri en düşük düzeyde iyi yanıt vermesi yardımcı olur, ancak Zarif hataları olasılığını tanıtır.  Olmayan herhangi bir şey bu konuda, ancak nadir durumlarda bilmeniz gereken süre büyük çoğunluğu (genellikle içeren [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)] pencere iletileri veya COM STA bileşenleri) bu bilerek değer olabilir.  

@@ -1,32 +1,20 @@
 ---
-title: "Windows Forms DataGridView Denetiminde Sütun Sıralama Modları"
-ms.custom: 
+title: Windows Forms DataGridView Denetiminde Sütun Sıralama Modları
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-winforms
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - data grids [Windows Forms], sort modes
 - DataGridView control [Windows Forms], sort mode
 ms.assetid: 43715887-2df9-4da7-bcf1-b9c7c842b2bf
-caps.latest.revision: "18"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 088d9f1f76e88d8be838cbf7050601835eff216a
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 9ebcfc435fcc7d2b0dfbfe3004d958c73dd1347c
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="column-sort-modes-in-the-windows-forms-datagridview-control"></a>Windows Forms DataGridView Denetiminde Sütun Sıralama Modları
-<xref:System.Windows.Forms.DataGridView>üç sıralama modları sütuna sahip. Her sütun için sıralama modu aracılığıyla belirtilen <xref:System.Windows.Forms.DataGridViewColumn.SortMode%2A> aşağıdakilerden birini ayarlanabilir sütunun özelliği <xref:System.Windows.Forms.DataGridViewColumnSortMode> numaralandırma değerleri.  
+<xref:System.Windows.Forms.DataGridView> üç sıralama modları sütuna sahip. Her sütun için sıralama modu aracılığıyla belirtilen <xref:System.Windows.Forms.DataGridViewColumn.SortMode%2A> aşağıdakilerden birini ayarlanabilir sütunun özelliği <xref:System.Windows.Forms.DataGridViewColumnSortMode> numaralandırma değerleri.  
   
-|`DataGridViewColumnSortMode`değer|Açıklama|  
+|`DataGridViewColumnSortMode` Değer|Açıklama|  
 |----------------------------------------|-----------------|  
 |<xref:System.Windows.Forms.DataGridViewColumnSortMode.Automatic>|Metin kutusu sütunları için varsayılan değer. Sütun üstbilgileri seçimi için kullanılmadığı sürece, otomatik olarak sütun başlığını tıklatarak sıralar <xref:System.Windows.Forms.DataGridView> bu sütuna göre sıralama düzenini belirten bir simge görüntüler.|  
 |<xref:System.Windows.Forms.DataGridViewColumnSortMode.NotSortable>|Varsayılan olmayan – metin kutusu sütunlar için. Bu sütun programlamayla sıralama yapabilirsiniz; hiçbir alan sıralama karakter ayrılmış şekilde ancak, sıralama için tasarlanmamıştır.|  

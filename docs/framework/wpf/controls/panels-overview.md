@@ -1,14 +1,6 @@
 ---
 title: Panellere Genel Bakış
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-wpf
-ms.tgt_pltfrm: ''
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -17,17 +9,11 @@ helpviewer_keywords:
 - Panel control [WPF], about Panel control
 - controls [WPF], Panel
 ms.assetid: f73644af-9941-4611-8754-6d4cef03fc44
-caps.latest.revision: 48
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: dd04413636c7d6182ff01712eecedbbd4ed02761
-ms.sourcegitcommit: b750a8e3979749b214e7e10c82efb0a0524dfcb1
+ms.openlocfilehash: 65f5fa9eeffdeb6e7bc869d159b4b33d75fd7570
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/09/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="panels-overview"></a>Panellere Genel Bakış
 <xref:System.Windows.Controls.Panel> öğeleridir öğelerin işlenmesi kontrol bileşenleri — boyutlarına ve boyutları, konumlarına ve alt içeriklerini düzenleme. [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] Sağlayan bir dizi önceden tanımlanmış <xref:System.Windows.Controls.Panel> özel oluşturabilme olanağı yanı sıra öğeleri <xref:System.Windows.Controls.Panel> öğeleri.  

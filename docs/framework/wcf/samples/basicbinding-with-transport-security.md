@@ -1,26 +1,14 @@
 ---
 title: Taşıma Güvenliği ile BasicBinding
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 ms.assetid: f49b1de6-0254-4362-8ef2-fccd8ff9688b
-caps.latest.revision: 26
 author: BrucePerlerMS
-ms.author: bruceper
 manager: mbaldwin
-ms.workload:
-- dotnet
-ms.openlocfilehash: 4d06f7652f7366fc795cd157398bbb15ed78828c
-ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
+ms.openlocfilehash: 9591c3556bf38d1af288c2c3c4a465af2c0722eb
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/27/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="basicbinding-with-transport-security"></a>Taşıma Güvenliği ile BasicBinding
 Bu örnek temel bağlama ile taşıma güvenliği SSL kullanımını göstermektedir. Bu örnek dayanır [Başlarken](../../../../docs/framework/wcf/samples/getting-started-sample.md) hesap makinesi hizmetinin uygular.  
@@ -30,7 +18,7 @@ Bu örnek temel bağlama ile taşıma güvenliği SSL kullanımını göstermekt
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  Bu dizin mevcut değilse, Git [Windows Communication Foundation (WCF) ve .NET Framework 4 için Windows Workflow Foundation (WF) örnek](http://go.microsoft.com/fwlink/?LinkId=150780) tüm indirmek için [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] ve [!INCLUDE[wf1](../../../../includes/wf1-md.md)] örnekleri. Bu örnek aşağıdaki dizinde bulunur.  
+>  Bu dizin mevcut değilse, Git [Windows Communication Foundation (WCF) ve .NET Framework 4 için Windows Workflow Foundation (WF) örnek](http://go.microsoft.com/fwlink/?LinkId=150780) tüm Windows Communication Foundation (WCF) indirmek için ve [!INCLUDE[wf1](../../../../includes/wf1-md.md)] örnekleri. Bu örnek aşağıdaki dizinde bulunur.  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Binding\Basic\TransportSecurity`  
   
@@ -67,7 +55,7 @@ Bu örnek temel bağlama ile taşıma güvenliği SSL kullanımını göstermekt
 </system.serviceModel>  
 ```  
   
- Bu örnekte kullanılan sertifikanın Makecert.exe ile oluşturulan bir test sertifikası olduğundan, bir HTTPS erişmeye çalıştığınızda bir güvenlik uyarısı görünür: tarayıcınızda gibi adres https://localhost/servicemodelsamples/service.svc. İzin vermek için [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] istemci bir test sertifikası ile çalışmak için bazı ek kod güvenlik uyarıyı gizlemek için istemciye eklenir. Bu kod, eşlik eden sınıfı değil ve gerekli gerçek sertifikalar kullanıldığında.  
+ Bu örnekte kullanılan sertifikanın Makecert.exe ile oluşturulan bir test sertifikası olduğundan, bir HTTPS erişmeye çalıştığınızda bir güvenlik uyarısı görünür: tarayıcınızda gibi adres https://localhost/servicemodelsamples/service.svc. Bir test sertifikası ile çalışmak Windows Communication Foundation (WCF) istemcinin sağlamak için bazı ek kod güvenlik uyarıyı gizlemek için istemciye eklenir. Bu kod, eşlik eden sınıfı değil ve gerekli gerçek sertifikalar kullanıldığında.  
 
 ```csharp
 // This code is required only for test certificates such as those   

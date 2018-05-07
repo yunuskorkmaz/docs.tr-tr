@@ -1,14 +1,6 @@
 ---
-title: "ICorDebugProcess5::EnumerateHandles Yöntemi"
-ms.custom: 
+title: ICorDebugProcess5::EnumerateHandles Yöntemi
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: reference
 api_name:
 - ICorDebugProcess5.EnumerateHandles
 api_location:
@@ -23,17 +15,13 @@ helpviewer_keywords:
 ms.assetid: 7d7fa796-0dc6-4ee8-9d56-40166246d91d
 topic_type:
 - apiref
-caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: c9bf9f1a4d565e0af4f3ee34a2805116407027d8
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 2f2177702c6c5999033d0852a932e52c0725fb8a
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="icordebugprocess5enumeratehandles-method"></a>ICorDebugProcess5::EnumerateHandles Yöntemi
 Bir numaralandırıcı Nesne tanıtıcıları için bir işlem olarak alır.  
@@ -53,15 +41,15 @@ HRESULT EnumerateHandles(     [in] CorGCReferenceType types,
  [out] Adresine bir işaretçi bir [Icordebuggcreferenceenum](../../../../docs/framework/unmanaged-api/debugging/icordebuggcreferenceenum-interface.md) çöpünün toplanma için diğer bir deyişle bir numaralandırıcı nesneler için.  
   
 ## <a name="remarks"></a>Açıklamalar  
- `EnumerateHandles`tanıtıcı tablosunu incelenmesi destekleyen bir yardımcı işlevdir. Aşağıdakine benzer [Icordebugprocess5::enumerategcreferences](../../../../docs/framework/unmanaged-api/debugging/icordebugprocess5-enumerategcreferences-method.md) hariç yöntemi doldurma yerine bir [Icordebuggcreferenceenum](../../../../docs/framework/unmanaged-api/debugging/icordebuggcreferenceenum-interface.md) çöpünün toplanma olacak tüm nesneleri koleksiyonuyla, tanıtıcı tablosundan tanıtıcıları sahip nesneleri içerir.  
+ `EnumerateHandles` tanıtıcı tablosunu incelenmesi destekleyen bir yardımcı işlevdir. Aşağıdakine benzer [Icordebugprocess5::enumerategcreferences](../../../../docs/framework/unmanaged-api/debugging/icordebugprocess5-enumerategcreferences-method.md) hariç yöntemi doldurma yerine bir [Icordebuggcreferenceenum](../../../../docs/framework/unmanaged-api/debugging/icordebuggcreferenceenum-interface.md) çöpünün toplanma olacak tüm nesneleri koleksiyonuyla, tanıtıcı tablosundan tanıtıcıları sahip nesneleri içerir.  
   
- `types` Parametresi koleksiyonda eklenecek tanıtıcı türlerini belirtir. `types`Aşağıdaki üç üyeleri olabilir [CorGCReferenceType](../../../../docs/framework/unmanaged-api/debugging/corgcreferencetype-enumeration.md) numaralandırma:  
+ `types` Parametresi koleksiyonda eklenecek tanıtıcı türlerini belirtir. `types` Aşağıdaki üç üyeleri olabilir [CorGCReferenceType](../../../../docs/framework/unmanaged-api/debugging/corgcreferencetype-enumeration.md) numaralandırma:  
   
--   `CorHandleStrongOnly`(yalnızca güçlü başvuruları işleyicilerine).  
+-   `CorHandleStrongOnly` (yalnızca güçlü başvuruları işleyicilerine).  
   
--   `CorHandleWeakOnly`(yalnızca zayıf başvurular işleyicilerine).  
+-   `CorHandleWeakOnly` (yalnızca zayıf başvurular işleyicilerine).  
   
--   `CorHandleAll`(tüm tanıtıcı).  
+-   `CorHandleAll` (tüm tanıtıcı).  
   
 ## <a name="requirements"></a>Gereksinimler  
  **Platformlar:** bkz [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
@@ -70,7 +58,7 @@ HRESULT EnumerateHandles(     [in] CorGCReferenceType types,
   
  **Kitaplığı:** CorGuids.lib  
   
- **.NET framework sürümleri:**[!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]  
+ **.NET framework sürümleri:** [!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
  [Hata Ayıklama Yapıları](../../../../docs/framework/unmanaged-api/debugging/debugging-structures.md)  

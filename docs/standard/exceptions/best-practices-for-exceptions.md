@@ -1,13 +1,7 @@
 ---
-title: "Özel Durumlar için En İyi Yöntemler"
-ms.custom: 
+title: Özel Durumlar için En İyi Yöntemler
 ms.date: 03/30/2017
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
 ms.technology: dotnet-standard
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -15,18 +9,13 @@ dev_langs:
 helpviewer_keywords:
 - exceptions, best practices
 ms.assetid: f06da765-235b-427a-bfb6-47cd219af539
-caps.latest.revision: 
 author: mairaw
 ms.author: mairaw
-manager: wpickett
-ms.workload:
-- dotnet
-- dotnetcore
-ms.openlocfilehash: 4c5ea19077ff9ce8e36a33601b7e5e87c64afe60
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: dd38b59e39f938d6347457100243f09935444d88
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="best-practices-for-exceptions"></a>Özel durumlar için en iyi yöntemler
 
@@ -82,7 +71,7 @@ Veya bir özel durum çağrı yapmaktan kaçınmak olanak tanıyan özellikler t
 
 - Throw bir <xref:System.ArgumentException> özel durum ya da öğesinden türetilen önceden tanımlanmış sınıflarından <xref:System.ArgumentException> geçersiz parametreler aktarılırsa.
 
-## <a name="end-exception-class-names-with-the-word-exception"></a>Son özel durum sınıfı adları sözcüğü`Exception`
+## <a name="end-exception-class-names-with-the-word-exception"></a>Son özel durum sınıfı adları sözcüğü `Exception`
 
 Bir özel durum gerekli olduğunda, uygun şekilde adlandırın ve buradan türetebilir <xref:System.Exception> sınıfı. Örneğin:
 
@@ -110,7 +99,7 @@ Kullanıcı tanımlı özel durumları oluşturduğunuzda, uzaktan yürütme kod
 
 - Derlemeyi iki uygulama etki alanı tarafından paylaşılan ortak bir uygulama temel dizinine koyun.
 
-    \-veya -
+    \- veya -
 
 - Eğer etki alanları ortak bir uygulama temel dizini paylaşmıyorsa, özel durum bilgisi içeren derlemeyi bir tanımlayıcı ad ile imzalayıp derlemeyi genel bütünleştirilmiş kod önbelleğine dağıtarak.
 

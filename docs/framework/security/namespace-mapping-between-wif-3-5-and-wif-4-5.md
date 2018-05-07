@@ -1,24 +1,14 @@
 ---
-title: "WIF 3.5 ve WIF 4.5 arasında Namespace eşleme"
-ms.custom: 
+title: WIF 3.5 ve WIF 4.5 arasında Namespace eşleme
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: a092d98c-444d-4336-a644-63c2e11e96c8
-caps.latest.revision: "4"
 author: BrucePerlerMS
-ms.author: bruceper
 manager: mbaldwin
-ms.workload: dotnet
-ms.openlocfilehash: b8d27385a08c58c61983315da41f27f4dcb29368
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: a120347d20de5b881ccb60d03da482856d9e68a7
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="namespace-mapping-between-wif-35-and-wif-45"></a>WIF 3.5 ve WIF 4.5 arasında Namespace eşleme
 .NET 4. 5'ile başlayan, Windows Identity Foundation (WIF), tam olarak .NET Framework'e tümleştirilmiştir. Bu tümleştirme ad değişikliklerini ve bazı WIF ad alanları ve API yüzeyi birleştirilmesi oluşturmuştur. Bu konu, bazı yönergeler ve WIF 3.5 ad alanları ve WIF 4.5 ad alanları arasında genel bir eşleme sağlar. Kapsamlı, ancak yerine tanıdık WIF 3.5 sınıfları WIF 4.5 nerede bulacağını ilgili bazı genel bilgileri sağlamak üzere tasarlanmamıştır. WIF 3.5 ve WIF 4.5 arasındaki farklar hakkında daha ayrıntılı bilgi için bkz: [Windows Identity Foundation 4. 5'de](../../../docs/framework/security/whats-new-in-wif.md). WIF 4.5 WIF 3.5 kullanılarak oluşturulan bir uygulamalar geçirme hakkında yönergeler için bkz [bir uygulama yerleşik kullanarak WIF 3.5 WIF 4.5 sürümüne geçirmek için yönergeler](../../../docs/framework/security/guidelines-for-migrating-an-application-built-using-wif-3-5-to-wif-4-5.md).  
@@ -34,7 +24,7 @@ ms.lasthandoff: 12/22/2017
 |**WIF 3.5 Namespace**|**WIF 4.5 Namespace**|**Açıklamalar**|  
 |-|-|-|  
 |`Microsoft.IdentityModel`|<xref:System.IdentityModel?displayProperty=nameWithType>|-Sabitleri temsil eden sınıflar çoğunu uygulanmadı.<br />-Güvenlik belirteci hizmetleri oluşturmak için kullanılan sınıfları gelen taşınmış `Microsoft.IdentityModel.SecurityTokenService` için <xref:System.IdentityModel?displayProperty=nameWithType>.<br />-Sınıflarda `Microsoft.IdentityModel.Threading` taşınmıştır <xref:System.IdentityModel?displayProperty=nameWithType>.<br />- `ExceptionMapper` Ve `MruSecurityTokenCache` sınıfları uygulanmadı.|  
-|`Microsoft.IdentityModel.Claims`|<xref:System.Security.Claims?displayProperty=nameWithType>|- `IClaimsPrincipal` Ve `IClaimsIdentity` arabirimleri WIF 4.5 uygulanmadı. Bunun yerine <xref:System.Security.Claims.ClaimsPrincipal?displayProperty=nameWithType> ve <xref:System.Security.Claims.ClaimsIdentity?displayProperty=nameWithType> çoğu hangi .NET temel sınıflardan asıl sunulmuştur ve kimlik sınıflar türetilir. Bu asıl ve kimlik sınıflar gibi özelleştirilmiş talepler için gerekli olduğu anlamına gelir `Microsoft.IdentityModel.Claims.WindowsClaimsPrincipal` ve `Microsoft.IdentityModel.Claims.WindowsClaimsIdentity` WIF 4.5 içinde kullanmak <xref:System.Security.Principal.WindowsPrincipal?displayProperty=nameWithType> ve <xref:System.Security.Principal.WindowsIdentity?displayProperty=nameWithType> yerine. Aynı diğer WIF 3.5 var olan diğer özel talep asıl ve kimlik sınıflar için geçerlidir.<br />- `Microsoft.IdentityModel.Claims.ClaimsCollection` Sınıfı WIF 4.5 uygulanmadı. Bunun yerine, talep koleksiyonları numaralandırılabilir koleksiyon türü olarak sunulan <xref:System.Security.Claims.Claim?displayProperty=nameWithType>.<br />-   <xref:System.Security.Claims.ClaimsPrincipal?displayProperty=nameWithType>ve <xref:System.Security.Claims.ClaimsIdentity?displayProperty=nameWithType> şimdi LINQ tam destek yöntemleri sağlar.|  
+|`Microsoft.IdentityModel.Claims`|<xref:System.Security.Claims?displayProperty=nameWithType>|- `IClaimsPrincipal` Ve `IClaimsIdentity` arabirimleri WIF 4.5 uygulanmadı. Bunun yerine <xref:System.Security.Claims.ClaimsPrincipal?displayProperty=nameWithType> ve <xref:System.Security.Claims.ClaimsIdentity?displayProperty=nameWithType> çoğu hangi .NET temel sınıflardan asıl sunulmuştur ve kimlik sınıflar türetilir. Bu asıl ve kimlik sınıflar gibi özelleştirilmiş talepler için gerekli olduğu anlamına gelir `Microsoft.IdentityModel.Claims.WindowsClaimsPrincipal` ve `Microsoft.IdentityModel.Claims.WindowsClaimsIdentity` WIF 4.5 içinde kullanmak <xref:System.Security.Principal.WindowsPrincipal?displayProperty=nameWithType> ve <xref:System.Security.Principal.WindowsIdentity?displayProperty=nameWithType> yerine. Aynı diğer WIF 3.5 var olan diğer özel talep asıl ve kimlik sınıflar için geçerlidir.<br />- `Microsoft.IdentityModel.Claims.ClaimsCollection` Sınıfı WIF 4.5 uygulanmadı. Bunun yerine, talep koleksiyonları numaralandırılabilir koleksiyon türü olarak sunulan <xref:System.Security.Claims.Claim?displayProperty=nameWithType>.<br />-   <xref:System.Security.Claims.ClaimsPrincipal?displayProperty=nameWithType> ve <xref:System.Security.Claims.ClaimsIdentity?displayProperty=nameWithType> şimdi LINQ tam destek yöntemleri sağlar.|  
 |`Microsoft.IdentityModel.Configuration`|<xref:System.IdentityModel.Configuration?displayProperty=nameWithType>|Bazı öğeler ve sınıf adı değişiklikler yapılması ve bazı WIF 4.5 bırakıldı; Örneğin `Microsoft.IdentityModel.Configuraiton.ServiceConfiguration` artık <xref:System.IdentityModel.Configuration.IdentityConfiguration?displayProperty=nameWithType>.|  
 |`Microsoft.IdentityModel.Protocols`|<xref:System.IdentityModel.Services?displayProperty=nameWithType>|-|  
 |`Microsoft.IdentityModel.Protocols.WSFederation`|<xref:System.IdentityModel.Services?displayProperty=nameWithType>|-|  

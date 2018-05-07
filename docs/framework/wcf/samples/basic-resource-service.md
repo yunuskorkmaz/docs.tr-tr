@@ -1,27 +1,15 @@
 ---
 title: Temel Kaynak Hizmeti
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 4360063e-cc8c-4648-846e-c05a5af51a7a
-caps.latest.revision: "8"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 8bfcd632846510f8f62280bfb1620ba1f8c35ce3
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
-ms.translationtype: MT
+ms.openlocfilehash: 3ec743bbbb6d18d972701c3149179d6f615d1884
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="basic-resource-service"></a>Temel Kaynak Hizmeti
-Bu örnek, bir HTTP tabanlı hizmet kullanarak uygulamak gösterilmiştir [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] alma destekleyen müşteriler koleksiyonu sunan REST programlama modeli ekleme, silme ve değiştirme işlemlerini. Bu örnek 2 bileşenleri - kendini barındıran oluşur [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] HTTP hizmet (adını da) ve hizmet oluşturur ve bunu çağrılar bir konsol uygulaması (program.cs).  
+Bu örnek alma destekleyen müşteriler koleksiyonunu sunar Windows Communication Foundation (WCF) REST programlama modeli kullanarak bir HTTP tabanlı hizmet uygulamak, ekleme, silme ve değiştirme işlemlerini gösterir. Bu örnek 2 bileşenleri - kendini barındıran oluşur [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] HTTP hizmet (adını da) ve hizmet oluşturur ve bunu çağrılar bir konsol uygulaması (program.cs).  
   
 ## <a name="sample-details"></a>Örnek Ayrıntıları  
  [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] Hizmeti bir kaynak-yönelimli/REST şekilde müşteriler koleksiyonu kullanıma sunar. Kısacası, bu koleksiyonda koleksiyon müşteriler ve her müşteri için benzersiz URI'ler sahip içerir. Hizmet destekleyen bir HTTP gönderme `GET` koleksiyonunun tüm koleksiyon ve HTTP almak için URI `POST` koleksiyonunun yeni bir müşteri koleksiyona eklemek için URI. Ayrıca tek bir müşteri URI'de HTTP destekliyorsa `GET` Müşteri ayrıntıları, HTTP için `PUT` müşteri ve HTTP ayrıntılarını değiştirmek için `DELETE` müşteri Koleksiyondan kaldırılacak. Yeni bir müşteri koleksiyona eklendiğinde, hizmet benzersiz bir URI atar ve URI Müşteri'nin ayrıntılar bir parçası olarak depolar. Ayrıca, bu URI yanıt konum HTTP üstbilgisinin kullanan istemci iletişim kurar.  
@@ -45,7 +33,7 @@ Bu örnek, bir HTTP tabanlı hizmet kullanarak uygulamak gösterilmiştir [!INCL
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  Bu dizin mevcut değilse, Git [Windows Communication Foundation (WCF) ve .NET Framework 4 için Windows Workflow Foundation (WF) örnek](http://go.microsoft.com/fwlink/?LinkId=150780) tüm indirmek için [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] ve [!INCLUDE[wf1](../../../../includes/wf1-md.md)] örnekleri. Bu örnek aşağıdaki dizinde bulunur.  
+>  Bu dizin mevcut değilse, Git [Windows Communication Foundation (WCF) ve .NET Framework 4 için Windows Workflow Foundation (WF) örnek](http://go.microsoft.com/fwlink/?LinkId=150780) tüm Windows Communication Foundation (WCF) indirmek için ve [!INCLUDE[wf1](../../../../includes/wf1-md.md)] örnekleri. Bu örnek aşağıdaki dizinde bulunur.  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Web\BasicResourceService`  
   

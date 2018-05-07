@@ -1,25 +1,15 @@
 ---
-title: "Nasıl yapılır: Bir Değişkende Veri Ekleme Çıkarma (Visual Basic)"
-ms.custom: 
+title: 'Nasıl yapılır: Bir Değişkende Veri Ekleme Çıkarma (Visual Basic)'
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - variables [Visual Basic], retrieving values
 - variables [Visual Basic], storing data
 ms.assetid: 93744f46-bf78-4fa0-9640-1de01bc38d9a
-caps.latest.revision: "14"
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: fefb1979e35cd7b5fa1917f8f1a57af575e51234
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: bfda451cefff699561253910715d8450414b00ba
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-move-data-into-and-out-of-a-variable-visual-basic"></a>Nasıl yapılır: Bir Değişkende Veri Ekleme Çıkarma (Visual Basic)
 Atama ifadesinin sol tarafta değişken adını koyarak bir değer bir değişkende saklayın.  
@@ -45,7 +35,7 @@ Atama ifadesinin sol tarafta değişken adını koyarak bir değer bir değişke
   
 -   Değişken adı bir ifade kullanın. Bir değişken kullanabilirsiniz herhangi bir yerde bir sabit ya da bir hazır değer dışında bir sabit değer tanımlayan bir ifade kullanabilirsiniz.  
   
-     veya  
+     -veya-  
   
 -   Eşittir aşağıdaki değişken adını kullanın (`=`) bir atama deyiminde oturum açın.  
   
@@ -59,6 +49,6 @@ Atama ifadesinin sol tarafta değişken adını koyarak bir değer bir değişke
      Değişkenin değeri olarak yalnızca bir sabit gerekir ve ardından değişkeni veya özellikte Atama ifadesinin sol tarafında depolanır ifade katılır.  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [Değişkenleri](../../../../visual-basic/programming-guide/language-features/variables/index.md)  
- [Değişken bildirimi](../../../../visual-basic/programming-guide/language-features/variables/variable-declaration.md)  
- [Nesne değişkenleri](../../../../visual-basic/programming-guide/language-features/variables/object-variables.md)
+ [Değişkenler](../../../../visual-basic/programming-guide/language-features/variables/index.md)  
+ [Değişken Bildirimi](../../../../visual-basic/programming-guide/language-features/variables/variable-declaration.md)  
+ [Nesne Değişkenleri](../../../../visual-basic/programming-guide/language-features/variables/object-variables.md)

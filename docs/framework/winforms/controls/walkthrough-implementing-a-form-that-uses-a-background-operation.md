@@ -1,13 +1,6 @@
 ---
-title: "İzlenecek yol: Arka Plan İşlemi Kullanan Bir Form Uygulama"
-ms.custom: 
+title: 'İzlenecek yol: Arka Plan İşlemi Kullanan Bir Form Uygulama'
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-winforms
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -22,16 +15,11 @@ helpviewer_keywords:
 - threading [Windows Forms], background operations
 - background operations
 ms.assetid: 4691b796-9200-471a-89c3-ba4c7cc78c03
-caps.latest.revision: "25"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: aaee6f1d650e6af57ab05ad56b5578e094ee50ef
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.openlocfilehash: 28b1ac924fb9b6b8cbc09db62ee33c6780bee820
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="walkthrough-implementing-a-form-that-uses-a-background-operation"></a>İzlenecek yol: Arka Plan İşlemi Kullanan Bir Form Uygulama
 Tamamlanması uzun zaman yapacağı bir işlem varsa ve kullanıcı arabirimi (UI) yanıt vermemesine istediğiniz değil veya "askıda" kullanabileceğiniz <xref:System.ComponentModel.BackgroundWorker> başka bir iş parçacığı üzerindeki işlemi yürütmek için sınıf.  

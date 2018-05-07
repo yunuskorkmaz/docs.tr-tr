@@ -1,30 +1,19 @@
 ---
-title: "Normal İfade Örnekleri"
-ms.custom: 
+title: Normal İfade Örnekleri
 ms.date: 03/30/2017
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
 ms.technology: dotnet-standard
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - regular expressions [.NET Framework], examples
 - regular expressions [.NET Framework]
 - strings [.NET Framework], regular expressions
 ms.assetid: e9fd53f2-ed56-4b09-b2ea-e9bc9d65e6d6
-caps.latest.revision: "17"
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-- dotnetcore
-ms.openlocfilehash: 4d2d3aced78d2afed3f0d1396efe5e954ef84102
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: 8fb58f8e7a1fef711de28534fbe53dfc9d7084ac
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="regular-expression-examples"></a>Normal İfade Örnekleri
 Bu bölüm, sık kullanılan uygulamalar normal ifadelerde kullanımını gösteren kod örnekleri içerir.  
@@ -40,7 +29,7 @@ Bu bölüm, sık kullanılan uygulamalar normal ifadelerde kullanımını göste
  Form gg/aa/yy tarih gg-aa-yy formu tarihlerle değiştiren bir örnek sağlar.  
   
  [Nasıl yapılır: Bir URL'den Protokol ve Bağlantı Noktası Numarası Çıkarma](../../../docs/standard/base-types/how-to-extract-a-protocol-and-port-number-from-a-url.md)  
- Protokol ve bağlantı noktası numarası bir URL içeren bir dizeden ayıklar bir örnek sağlar. Örneğin, "http://www.contoso.com:8080/letters/readme.html", "http:8080" döndürür.  
+ Protokol ve bağlantı noktası numarası bir URL içeren bir dizeden ayıklar bir örnek sağlar. Örneğin, "http://www.contoso.com:8080/letters/readme.html" "http:8080" döndürür.  
   
  [Nasıl yapılır: Dizeden Geçersiz Karakterleri Çıkartma](../../../docs/standard/base-types/how-to-strip-invalid-characters-from-a-string.md)  
  Bir dizeden geçersiz alfasayısal olmayan karakterler şeritler bir örnek sağlar.  

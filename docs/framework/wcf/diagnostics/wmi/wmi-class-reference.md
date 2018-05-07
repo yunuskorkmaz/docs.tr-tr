@@ -1,27 +1,15 @@
 ---
-title: "WMI Sınıfı Başvurusu"
-ms.custom: 
+title: WMI Sınıfı Başvurusu
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: b95a51f5-8251-4619-ae05-7de88cb90f9a
-caps.latest.revision: "6"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 0e221c8197b9713dd5f4e35114ada3c63f4978ef
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 73b36bfc3df917982a2cc9071bdb31f42b3b2dff
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="wmi-class-reference"></a>WMI Sınıfı Başvurusu
-Bu bölüm tarafından sunulan tüm WMI sınıfları listeler [!INCLUDE[indigo1](../../../../../includes/indigo1-md.md)] WMI sağlayıcısı.  
+Bu bölüm Windows Communication Foundation (WCF) WMI sağlayıcısı tarafından sunulan tüm WMI sınıfları listeler.  
   
 ## <a name="accessing-wmi-instances"></a>WMI örnekleri erişme  
  WMI nesnesi Reference içinde listelenen tüm sınıflar doğrudan, hizmet, AppDomain, sözleşme, ServiceAppDomain, ServiceToEndpointAssociation ve uç nokta dışında başlatılamaz. Diğer örneklere erişmek için yukarıda açıklanan üst düzey sınıflar özelliklerini erişebilirsiniz. Örneğin, TransportBindingElement örneği erişebilir örneği -> uç noktasından bağlama BindingElements ->.  

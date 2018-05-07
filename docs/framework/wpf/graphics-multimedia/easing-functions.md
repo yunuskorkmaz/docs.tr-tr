@@ -1,13 +1,6 @@
 ---
-title: "Kolaylaştırıcı İşlevler"
-ms.custom: 
+title: Kolaylaştırıcı İşlevler
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-wpf
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -22,16 +15,11 @@ helpviewer_keywords:
 - easing functions [WPF], customizing
 - animations [WPF], applying
 ms.assetid: 075b9c2b-82c4-43fa-b3cd-de0b6236eb38
-caps.latest.revision: "10"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 570a065d3f28befe8db4887ff908c3bd60a639a1
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 3ce7c1824dc53c154ba1091ea62c1b8950b757c1
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="easing-functions"></a>Kolaylaştırıcı İşlevler
 Hareket hızı işlevleri, animasyonların özel matematiksel formüller olanak sağlar. Örneğin, bir nesnenin gerçekçi Sıçrama veya dizinindeymiş gibi yay üzerinde davranır isteyebilirsiniz. Bu etkilerle yaklaşık için anahtar çerçeve veya From/To/By bile animasyonları kullanabilirsiniz, ancak iş önemli miktarda götürecek ve animasyon matematiksel formül kullanmaktan daha az doğru olacaktır.  
@@ -50,7 +38,7 @@ Hareket hızı işlevleri, animasyonların özel matematiksel formüller olanak 
   
 -   <xref:System.Windows.Media.Animation.ExponentialEase>: Bir üstel formülü kullanarak hızlandırır/yavaşlayan bir animasyon oluşturur.  
   
--   <xref:System.Windows.Media.Animation.PowerEase>: Formülü kullanarak hızlandırır/yavaşlayan bir animasyon oluşturur *f*(*t*) = *t*<sup>p</sup> p olduğu içineşit<xref:System.Windows.Media.Animation.PowerEase.Power%2A> özelliği.  
+-   <xref:System.Windows.Media.Animation.PowerEase>: Formülü kullanarak hızlandırır/yavaşlayan bir animasyon oluşturur *f*(*t*) = *t*<sup>p</sup> p olduğu için eşit<xref:System.Windows.Media.Animation.PowerEase.Power%2A>özelliği.  
   
 -   <xref:System.Windows.Media.Animation.QuadraticEase>: Formülü kullanarak hızlandırır/yavaşlayan bir animasyon oluşturur *f*(*t*) = *t*<sup>2</sup>.  
   

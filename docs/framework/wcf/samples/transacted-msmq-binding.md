@@ -1,26 +1,12 @@
 ---
 title: İşlem Gerçekleştirilmiş MSMQ Bağlama
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 ms.assetid: 71f5cb8d-f1df-4e1e-b8a2-98e734a75c37
-caps.latest.revision: 50
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: e0529aa940c02ee79e25034e57f89d4b476861b8
-ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
+ms.openlocfilehash: 7c7be275dca35e30f5176518cfb4c1842af0210a
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/27/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="transacted-msmq-binding"></a>İşlem Gerçekleştirilmiş MSMQ Bağlama
 Bu örnek, Message Queuing (MSMQ) kullanarak hizmetteki kuyruğa alınan iletişim gerçekleştirmek gösterilmiştir.  
@@ -102,7 +88,7 @@ public static void Main()
 ```  
   
 > [!NOTE]
->  Kuyruk adı bir nokta (.) yolundaki ters eğik çizgi ayırıcılar ve yerel bilgisayar için sıra kullanarak oluştururken kullandığı <xref:System.Messaging>. [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] Uç nokta sıra adresini kullanır yerel bilgisayarı belirtmek için "localhost" net.msmq şeması ile kullanır ve kullandığı yolundaki eğik.  
+>  Kuyruk adı bir nokta (.) yolundaki ters eğik çizgi ayırıcılar ve yerel bilgisayar için sıra kullanarak oluştururken kullandığı <xref:System.Messaging>. Windows Communication Foundation (WCF) uç noktası net.msmq düzeniyle sıra adresini kullanır, yerel bilgisayarı belirtmek için "localhost" kullanır ve eğik kendi yolunu kullanır.  
   
  İstemci bir işlem kapsamı oluşturur. Sıra ile iletişim, bu sıraya gönderilen tüm iletileri veya hiçbiri iletileri kuyruğa gönderilen olduğu atomik bir birim olarak kabul edilmesi neden işlem kapsamı içinde gerçekleşir. İşlem çağırarak gerçekleştirilir <xref:System.Transactions.TransactionScope.Complete%2A> işlem kapsamında.  
 
@@ -247,7 +233,7 @@ Processing Purchase Order: 7b31ce51-ae7c-4def-9b8b-617e4288eafd
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  Bu dizin mevcut değilse, Git [Windows Communication Foundation (WCF) ve .NET Framework 4 için Windows Workflow Foundation (WF) örnek](http://go.microsoft.com/fwlink/?LinkId=150780) tüm indirmek için [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] ve [!INCLUDE[wf1](../../../../includes/wf1-md.md)] örnekleri. Bu örnek aşağıdaki dizinde bulunur.  
+>  Bu dizin mevcut değilse, Git [Windows Communication Foundation (WCF) ve .NET Framework 4 için Windows Workflow Foundation (WF) örnek](http://go.microsoft.com/fwlink/?LinkId=150780) tüm Windows Communication Foundation (WCF) indirmek için ve [!INCLUDE[wf1](../../../../includes/wf1-md.md)] örnekleri. Bu örnek aşağıdaki dizinde bulunur.  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Binding\Net\MSMQ\Transacted`  
   

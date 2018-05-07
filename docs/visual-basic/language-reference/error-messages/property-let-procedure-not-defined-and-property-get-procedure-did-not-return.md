@@ -1,23 +1,14 @@
 ---
-title: "Özelliğin Let yordamı tanımlı değil ve Get yordamı bir nesne döndürmedi"
+title: Özelliğin Let yordamı tanımlı değil ve Get yordamı bir nesne döndürmedi
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- devlang-visual-basic
-ms.topic: article
 f1_keywords:
 - vbrID451
 ms.assetid: 8542382a-689f-4e1b-abc0-c1e2dadb92f4
-caps.latest.revision: 
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: b043ca698a9c90afd41de90c7dbc5879ae7de623
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.openlocfilehash: ac0a7b7d409ca2273b9d56adbfe054afebb6ddda
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="property-let-procedure-not-defined-and-property-get-procedure-did-not-return-an-object"></a>Özelliğin Let yordamı tanımlı değil ve Get yordamı bir nesne döndürmedi
 Belirli özellikler, yöntemleri ve işlemleri yalnızca uygulayabilirsiniz `Collection` nesneleri. Bir işlem veya koleksiyonlar için özel özellik belirtildi ancak nesnesi koleksiyonu değil.  

@@ -1,14 +1,6 @@
 ---
 title: Stil ve Şablon Oluşturma
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-wpf
-ms.tgt_pltfrm: ''
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -23,17 +15,11 @@ helpviewer_keywords:
 - styles [WPF], triggers
 - styles [WPF], event triggers
 ms.assetid: 481765e5-5467-4a75-9f7b-e10e2ac410d9
-caps.latest.revision: 34
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 7aafd709bfc1da63d11a56ada59aedf0ada12f3a
-ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
+ms.openlocfilehash: e39afea9fe11cdab9e5a6623499a96468aa9d091
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/30/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="styling-and-templating"></a>Stil ve Şablon Oluşturma
 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] Stil ve şablon suite geliştiricilerin ve tasarımcıların görsel olarak ilgi çekici efektler oluşturmak ve kendi ürün için tutarlı bir görünüm oluşturmak için izin özellikleri (stiller, şablonlar, tetikleyiciler ve film şeritleri) bakın. Geliştiriciler ve/veya tasarımcıları bir uygulama tarafından uygulama temelinde yaygın görünümünü özelleştirebilirsiniz rağmen güçlü bir stil ve şablon modeli Bakım ve görünümü içinde ve uygulamalar arasında paylaşılmasını izin vermek gereklidir. [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] Bu modeli sağlar.  

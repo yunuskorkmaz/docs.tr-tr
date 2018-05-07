@@ -1,13 +1,6 @@
 ---
-title: "Nasıl yapılır: İzleme Anahtarları Oluşturma ve Başlatma"
-ms.custom: 
+title: 'Nasıl yapılır: İzleme Anahtarları Oluşturma ve Başlatma'
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -18,16 +11,13 @@ helpviewer_keywords:
 - tracing [.NET Framework], enabling or disabling
 - Web.config configuration file, trace switches
 ms.assetid: 5a0e41bf-f99c-4692-8799-f89617f5bcf9
-caps.latest.revision: "14"
 author: mairaw
 ms.author: mairaw
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 41e41f65b82061cebc52485ed08176633c45613d
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 4088c74d0ea8e9f2ad70aff37d99870d34b168ba
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-create-initialize-and-configure-trace-switches"></a>Nasıl yapılır: İzleme Anahtarları Oluşturma ve Başlatma
 İzleme anahtarları etkinleştir, devre dışı bırakın ve İzleme çıktısı filtrelemek etkinleştirin.  
@@ -86,7 +76,7 @@ ms.lasthandoff: 12/22/2017
   
     -   **Visual Basic:** içinde **Yeni Öğe Ekle** iletişim kutusunda, seçin **uygulama yapılandırma dosyası**.  
   
-         Uygulama yapılandırma dosyası oluşturulur ve açılır. Bu, kök öğe bir XML belgesi değil`<configuration>.`  
+         Uygulama yapılandırma dosyası oluşturulur ve açılır. Bu, kök öğe bir XML belgesi değil `<configuration>.`  
   
     -   **Visual C#:** içinde **Yeni Öğe Ekle** iletişim kutusunda, seçin **XML dosyası**. Bu dosya adı **app.config**. XML Düzenleyicisi'nde, XML bildirimi sonra aşağıdaki XML ekleyin:  
   

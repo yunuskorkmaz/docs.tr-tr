@@ -1,26 +1,12 @@
 ---
 title: MSMQ Etkinleştirme
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 ms.assetid: e3834149-7b8c-4a54-806b-b4296720f31d
-caps.latest.revision: 29
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: e0f8077e425464d5a9f33662366377d573719659
-ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
-ms.translationtype: MT
+ms.openlocfilehash: ab414cb5535ce2b9062520c9d82e139ebdfc04c4
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/27/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="msmq-activation"></a>MSMQ Etkinleştirme
 Bu örnek, bir iletiyi kuyruktan okunur uygulamaların Windows İşlem Etkinleştirme Hizmeti (WAS) barındırmak gösterilmiştir. Bu örnekte `netMsmqBinding` ve dayanır [iki yönlü iletişim](../../../../docs/framework/wcf/samples/two-way-communication.md) örnek. Bu durumda Web barındırdığı bir uygulama hizmetidir ve istemci kendiliğinden barındırılır ve gönderilen satınalma siparişi durumunu izlemek için konsola çıkarır.  
@@ -33,11 +19,11 @@ Bu örnek, bir iletiyi kuyruktan okunur uygulamaların Windows İşlem Etkinleş
 >   
 >  \<InstallDrive >: \WF_WCF_Samples  
 >   
->  Bu dizin mevcut değilse, Git [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] HYPERLINK "http://go.microsoft.com/fwlink/?LinkId=150780" \t "_blank" ve Windows Workflow Foundation (WF) örnekleri [!INCLUDE[netfx40_long](../../../../includes/netfx40-long-md.md)] tüm indirmek için [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] ve [!INCLUDE[wf1](../../../../includes/wf1-md.md)] örnekleri. Bu örnek aşağıdaki dizinde bulunur.  
+>  Bu dizin mevcut değilse, Windows Communication Foundation (WCF) köprü için Git "http://go.microsoft.com/fwlink/?LinkId=150780" \t "_blank" ve Windows Workflow Foundation (WF) örnekleri [!INCLUDE[netfx40_long](../../../../includes/netfx40-long-md.md)] tüm indirmek için [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] ve [!INCLUDE[wf1](../../../../includes/wf1-md.md)] örnekleri. Bu örnek aşağıdaki dizinde bulunur.  
 >   
 >  \<InstallDrive >: \Samples\WCFWFCardSpace\WCF\Basic\Services\Hosting\WASHost\MsmqActivation.  
   
- Windows İşlem Etkinleştirme Hizmeti (WAS), yeni bir işlem etkinleştirme mekanizmasıdır için [!INCLUDE[lserver](../../../../includes/lserver-md.md)], daha önce yalnızca HTTP tabanlı uygulamalara HTTP olmayan protokolleri kullanan uygulamalar için kullanılabilen IIS benzeri özellikleri sağlar. [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] Dinleyici Bağdaştırıcısı arabirimi tarafından desteklenen HTTP olmayan protokolleri üzerinden alınan etkinleştirme isteklerini iletişim kurmak için kullandığı [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]TCP, Adlandırılmış Kanallar ve MSMQ gibi. HTTP olmayan protokolleri isteklerini almak için işlevselliği SMSvcHost.exe içinde çalışan yönetilen Windows Hizmetleri tarafından barındırılır.  
+ Windows İşlem Etkinleştirme Hizmeti (WAS), yeni bir işlem etkinleştirme mekanizmasıdır için [!INCLUDE[lserver](../../../../includes/lserver-md.md)], daha önce yalnızca HTTP tabanlı uygulamalara HTTP olmayan protokolleri kullanan uygulamalar için kullanılabilen IIS benzeri özellikleri sağlar. Windows Communication Foundation (WCF) tarafından desteklenen HTTP olmayan protokolleri üzerinden alınan etkinleştirme isteklerini iletişim kurmak için Dinleyici Bağdaştırıcısı arabirimi kullanan [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]TCP, Adlandırılmış Kanallar ve MSMQ gibi. HTTP olmayan protokolleri isteklerini almak için işlevselliği SMSvcHost.exe içinde çalışan yönetilen Windows Hizmetleri tarafından barındırılır.  
   
  Sıradaki iletileri göre sıraya alınan uygulamaları Net.Msmq Dinleyici Bağdaştırıcısı hizmeti (NetMsmqActivator) etkinleştirir.  
   

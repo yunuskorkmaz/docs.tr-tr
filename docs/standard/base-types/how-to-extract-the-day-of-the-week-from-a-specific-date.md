@@ -1,13 +1,7 @@
 ---
-title: "Nasıl yapılır: Belirli bir Tarihten Haftanın Gününü Çıkarma"
-ms.custom: 
+title: 'Nasıl yapılır: Belirli bir Tarihten Haftanın Gününü Çıkarma'
 ms.date: 03/30/2017
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
 ms.technology: dotnet-standard
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -28,18 +22,13 @@ helpviewer_keywords:
 - DateTimeOffset.ToString method
 - full weekday names
 ms.assetid: 1c9bef76-5634-46cf-b91c-9b9eb72091d7
-caps.latest.revision: "12"
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-- dotnetcore
-ms.openlocfilehash: e0628dfefb8da5c11e9927ab5ec98c2feb3fe89f
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: 4bd4066fe0a2d9f26505976c13ac80e03554e0aa
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-extract-the-day-of-the-week-from-a-specific-date"></a>Nasıl yapılır: Belirli bir Tarihten Haftanın Gününü Çıkarma
 .NET Framework sıralı haftanın belirli bir tarih için belirlemek ve yerelleştirilmiş haftanın günü için belirli bir tarih görünen ad için kolaylaştırır. Belirli bir tarihe kadar karşılık gelen haftanın gününü gösteren bir Enum değeri kullanılabilir <xref:System.DateTime.DayOfWeek%2A> veya <xref:System.DateTimeOffset.DayOfWeek%2A> özelliği. Buna karşılık, haftanın günü adı alınırken tarih ve saat değerinin gibi bir biçimlendirme yöntemini çağırarak gerçekleştirilebilen bir biçimlendirme işlemdir `ToString` yöntemi veya <xref:System.String.Format%2A?displayProperty=nameWithType> yöntemi. Bu konu, bu biçimlendirme işlemlerini gerçekleştirme gösterir.  

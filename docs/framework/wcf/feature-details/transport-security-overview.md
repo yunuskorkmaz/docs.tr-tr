@@ -1,35 +1,23 @@
 ---
 title: Taşıma Güvenliği Genel Bakış
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 dev_langs:
 - csharp
 - vb
 ms.assetid: 00959326-aa9d-44d0-af61-54933d4adc7f
-caps.latest.revision: 23
 author: BrucePerlerMS
-ms.author: bruceper
 manager: mbaldwin
-ms.workload:
-- dotnet
-ms.openlocfilehash: b697dc6a227c3b2a5646f4fcb11a39fd9d6339ff
-ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
+ms.openlocfilehash: 12b491971a9f3faa57edb1ccf9fb59351ed45f3b
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/30/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="transport-security-overview"></a>Taşıma Güvenliği Genel Bakış
-Aktarım de güvenlik mekanizmaları [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] bağlamada değişir ve kullanılan taşıma. Örneğin, kullanırken <xref:System.ServiceModel.WSHttpBinding> sınıfı, aktarım HTTP ve taşıma güvenliğini sağlamak için birincil mekanizmayı Güvenli Yuva Katmanı (SSL) genellikle HTTPS adlı HTTP üzerinden şeklindedir. Bu konuda kullanılan ana taşıma güvenlik mekanizmaları ele alınmıştır [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] sistem tarafından sağlanan bağlamalar.  
+Bağlama ve kullanılan taşıma taşıma güvenlik mekanizmaları Windows Communication Foundation (WCF) bağlıdır. Örneğin, kullanırken <xref:System.ServiceModel.WSHttpBinding> sınıfı, aktarım HTTP ve taşıma güvenliğini sağlamak için birincil mekanizmayı Güvenli Yuva Katmanı (SSL) genellikle HTTPS adlı HTTP üzerinden şeklindedir. Bu konuda, WCF sistem tarafından sağlanan bağlamalar kullanılan ana Aktarım güvenlik mekanizmaları anlatılmaktadır.  
   
 > [!NOTE]
->  SSL güvenlik .NET Framework 3.5 ve sonraki sürümleriyle birlikte kullanıldığında bir [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] sertifika zinciri doğrulaması yapmak için istemcinin kullandığı hem kendi sertifika deposunda Ara sertifikaları ve SSL anlaşması sırasında alınan Ara sertifikaları Hizmet sertifikası. .NET framework 3.0 yalnızca yerel sertifika deposunda yüklü Ara sertifikaları kullanır.  
+>  SSL güvenlik .NET Framework 3.5 ve sonraki sürümleriyle birlikte kullanıldığında bir WCF istemcisi hem ara sertifika, sertifika deposunda kullanır ve hizmetin üzerinde sertifika zinciri doğrulaması gerçekleştirmek için SSL anlaşması sırasında Ara sertifikaların alınan Sertifika. .NET framework 3.0 yalnızca yerel sertifika deposunda yüklü Ara sertifikaları kullanır.  
   
 > [!WARNING]
 >  Taşıma güvenliği kullanıldığında, <!--zz <xref:System.Treading.Thread.CurrentPrincipal%2A> --> `CurrentPrincipal` özellik üzerine yazılır. Bunun gerçekleşmesini kümesinden önlemek için <!--zz <xref:System.ServiceModel.Description.ServiceAuthorizationBehavior.PrincipalPermission%2A> --> `PrincipalPermission` yok. <xref:System.ServiceModel.Description.ServiceAuthorizationBehavior> Hizmet açıklaması ayarlanabilir bir hizmet davranıştır.  
@@ -75,7 +63,7 @@ Aktarım de güvenlik mekanizmaları [!INCLUDE[indigo1](../../../../includes/ind
  Bu, Kerberos protokolü başarısız olursa NTLM kimlik doğrulaması için kullanılacak sunucuyu sağlar. IIS yapılandırma hakkında daha fazla bilgi için [!INCLUDE[iis601](../../../../includes/iis601-md.md)], bkz: [zorlama NTLM kimlik doğrulaması](http://go.microsoft.com/fwlink/?LinkId=88598). İçin [!INCLUDE[iisver](../../../../includes/iisver-md.md)], NTLM kimlik doğrulaması Windows kimlik doğrulaması içerir. Daha fazla bilgi için bkz: [IIS 7.0 Beta: IIS 7.0 sunucu sertifikalarını yapılandırma](http://go.microsoft.com/fwlink/?LinkID=88595).  
   
 ## <a name="wshttpbinding"></a>WsHttpBinding  
- <xref:System.ServiceModel.WSHttpBinding> Sınıfı, WS - uygulama hizmetleri ile birlikte çalışma için tasarlanmıştır * belirtimleri. Bu bağlama için taşıma güvenliği, HTTP veya HTTPS üzerinden Güvenli Yuva Katmanı (SSL) vardır. Oluşturmak için bir [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] SSL kullanan uygulamayı uygulamasını barındırmak için IIS kullanın. Alternatif olarak, bir kendi kendini barındıran uygulaması oluşturuyorsanız, bir bilgisayardaki belirli bir bağlantı noktası bir X.509 sertifikası bağlamak için HttpCfg.exe aracını kullanın. Bağlantı noktası numarasını parçası olarak belirtilen [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] uç noktası adresi olarak uygulama. Aktarım modu kullanırken, uç nokta adresi HTTPS protokolünü içermelidir veya çalışma zamanında bir özel durum oluşturulur. Daha fazla bilgi için bkz: [HTTP taşıma güvenliği](../../../../docs/framework/wcf/feature-details/http-transport-security.md).  
+ <xref:System.ServiceModel.WSHttpBinding> Sınıfı, WS - uygulama hizmetleri ile birlikte çalışma için tasarlanmıştır * belirtimleri. Bu bağlama için taşıma güvenliği, HTTP veya HTTPS üzerinden Güvenli Yuva Katmanı (SSL) vardır. SSL kullanan bir WCF uygulaması oluşturmak için uygulamayı barındırmak için IIS kullanın. Alternatif olarak, bir kendi kendini barındıran uygulaması oluşturuyorsanız, bir bilgisayardaki belirli bir bağlantı noktası bir X.509 sertifikası bağlamak için HttpCfg.exe aracını kullanın. Bağlantı noktası numarası, uç nokta adresi olarak WCF uygulaması bir parçası olarak belirtilir. Aktarım modu kullanırken, uç nokta adresi HTTPS protokolünü içermelidir veya çalışma zamanında bir özel durum oluşturulur. Daha fazla bilgi için bkz: [HTTP taşıma güvenliği](../../../../docs/framework/wcf/feature-details/http-transport-security.md).  
   
  İstemci kimlik doğrulaması için ayarlanmış <xref:System.ServiceModel.HttpTransportSecurity.ClientCredentialType%2A> özelliği <xref:System.ServiceModel.HttpTransportSecurity> birine sınıfı <xref:System.ServiceModel.HttpClientCredentialType> numaralandırma değerleri. Numaralandırma değerleri için istemci kimlik bilgisi türlerinin aynıdır <xref:System.ServiceModel.BasicHttpBinding> ve IIS hizmetleri ile barındırılacak şekilde tasarlanmıştır.  
   

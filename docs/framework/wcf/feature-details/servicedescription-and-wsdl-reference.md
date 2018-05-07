@@ -1,36 +1,22 @@
 ---
 title: ServiceDescription ve WSDL Başvurusu
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 ms.assetid: eedc025d-abd9-46b1-bf3b-61d2d5c95fd6
-caps.latest.revision: ''
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 7eadfaaae920071092f569fe2b8882875ed9497f
-ms.sourcegitcommit: c883637b41ee028786edceece4fa872939d2e64c
+ms.openlocfilehash: e70d653519c13d2f40fa2a579b674893e1b7ab02
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/26/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="servicedescription-and-wsdl-reference"></a>ServiceDescription ve WSDL Başvurusu
-Bu konuda açıklanmaktadır nasıl [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] Web Hizmetleri Açıklama Dili (WSDL) belgeleri ve ondan eşlemeleri <xref:System.ServiceModel.Description.ServiceDescription> örnekleri.  
+Bu konu ve ondan Windows Communication Foundation (WCF) Web Hizmetleri Açıklama Dili (WSDL) belgeleri nasıl eşlendiğini açıklar <xref:System.ServiceModel.Description.ServiceDescription> örnekleri.  
   
 ## <a name="how-servicedescription-maps-to-wsdl-11"></a>ServiceDescription WSDL 1.1 nasıl eşlendiğini  
- Kullanabileceğiniz [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] WSDL belgelerden dışarı aktarmak için bir <xref:System.ServiceModel.Description.ServiceDescription> hizmetiniz için örneği. Meta veri uç noktalarını yayımladığınızda WSDL belgeleri hizmetiniz için otomatik olarak oluşturulur.  
+ WCF WSDL belgelerden dışarı aktarmak için kullanabileceğiniz bir <xref:System.ServiceModel.Description.ServiceDescription> hizmetiniz için örneği. Meta veri uç noktalarını yayımladığınızda WSDL belgeleri hizmetiniz için otomatik olarak oluşturulur.  
   
  Ayrıca içeri aktarabilirsiniz <xref:System.ServiceModel.Description.ServiceEndpoint> örnekleri, <xref:System.ServiceModel.Description.ContractDescription> örnekleri ve <xref:System.ServiceModel.Channels.Binding> kullanarak WSDL belgeleri örneklerden `WsdlImporter` türü.  
   
- WSDL belgeler, dışa aktarılan [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)], dış XML Şeması belgelerden kullanılan tüm XML şema tanımını içeri aktarın. Veri türleri hizmetinde kullanmak her hedef ad alanı için ayrı bir XML Şeması belgesi aktarılır. Benzer şekilde, ayrı bir WSDL belge dışarı her hedef ad alanı için kullanım hizmeti sözleşme.  
+ WCF tarafından dışarı aktarılan WSDL belgeleri dış XML Şeması belgelerden kullanılan tüm XML şema tanımını içeri aktarın. Veri türleri hizmetinde kullanmak her hedef ad alanı için ayrı bir XML Şeması belgesi aktarılır. Benzer şekilde, ayrı bir WSDL belge dışarı her hedef ad alanı için kullanım hizmeti sözleşme.  
   
 ### <a name="servicedescription"></a>ServiceDescription  
  A <xref:System.ServiceModel.Description.ServiceDescription> örneği eşlendiğini bir `wsdl:service` öğesi. A <xref:System.ServiceModel.Description.ServiceDescription> örneğini içeren koleksiyonu <xref:System.ServiceModel.Description.ServiceEndpoint> örnekleri her eşleme, bağımsız `wsdl:port` öğeleri.  
@@ -49,13 +35,13 @@ Bu konuda açıklanmaktadır nasıl [!INCLUDE[indigo1](../../../../includes/indi
 |Özellikler|WSDL eşleme|  
 |----------------|------------------|  
 |`Name`|`wsdl:port` /@name Uç noktası için değer ve `wsdl:binding` /@name endpoint bağlama için değer.|  
-|`Address`|Adresini `wsdl:port` uç nokta tanımı.<br /><br /> Uç nokta için taşıma adresinin biçimi belirler. Örneğin, [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]-bunu olabilir bir SOAP adresi veya bir uç nokta başvuru taşımaları desteklenir.|  
-|`Binding`|`wsdl:binding` Uç nokta tanımı.<br /><br /> Farklı `wsdl:binding` tanımları, bağlama [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] herhangi bir sözleşmesine bağlı değil.|  
+|`Address`|Adresini `wsdl:port` uç nokta tanımı.<br /><br /> Uç nokta için taşıma adresinin biçimi belirler. Örneğin, WCF desteklenen aktarmalar için bir SOAP adresi veya bir uç nokta başvuru olabilir.|  
+|`Binding`|`wsdl:binding` Uç nokta tanımı.<br /><br /> Farklı `wsdl:binding` tanımları, WCF bağlamaları herhangi bir sözleşmesine bağlı değil.|  
 |`Contract`|`wsdl:portType` Uç nokta tanımı.|  
 |`Behaviors`|Uygulama uç noktası davranışları <xref:System.ServiceModel.Description.IWsdlExportExtension> arabirimi değiştirebilirsiniz `wsdl:port` uç noktası için.|  
   
 ### <a name="bindings"></a>Bağlamalar  
- Bağlama örneği için bir `ServiceEndpoint` örneği eşlendiğini bir `wsdl:binding` tanımı. Farklı `wsdl:binding` belirli bir ile ilişkilendirilmelidir tanımları `wsdl:portType` tanımı [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] bağlamaları herhangi bir sözleşme bağımsız.  
+ Bağlama örneği için bir `ServiceEndpoint` örneği eşlendiğini bir `wsdl:binding` tanımı. Farklı `wsdl:binding` belirli bir ile ilişkilendirilmelidir tanımları `wsdl:portType` tanımı, WCF bağlamaları herhangi bir sözleşme bağımsız.  
   
  Bir bağlama bağlama öğelerinin koleksiyonu yapılır. Her uç nokta istemcileri ile nasıl iletişim kurduğu, bazı yönlerinin açıklar. Ayrıca, bir bağlama sahip bir <xref:System.ServiceModel.Channels.MessageVersion> belirten <xref:System.ServiceModel.EnvelopeVersion> ve <xref:System.ServiceModel.Channels.AddressingVersion> uç noktası için.  
   
@@ -72,10 +58,10 @@ Bu konuda açıklanmaktadır nasıl [!INCLUDE[indigo1](../../../../includes/indi
  <xref:System.ServiceModel.Channels.TransportBindingElement> SOAP bağlama için Tekdüzen Kaynak Tanımlayıcısı (URI) aktarım bağlama belirler.  
   
 #### <a name="addressingversion"></a>AddressingVersion değerini  
- `AddressingVersion` Bağlamada eşler sürüme kullanılan adresleme `wsd:port`. [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] SOAP 1.1 ve SOAP 1.2 adresleri ve WS adresleme destekleyen 08/2004 ve WS adresleme 1.0 uç nokta başvuruları.  
+ `AddressingVersion` Bağlamada eşler sürüme kullanılan adresleme `wsd:port`. WCF SOAP 1.1 ve SOAP 1.2 adresleri ve WS adresleme destekler 08/2004 ve WS adresleme 1.0 uç nokta başvuruları.  
   
 #### <a name="envelopeversion"></a>EnvelopeVersion  
- `EnvelopeVersion` SOAP sürümünü eşlenir bağlamada kullanılan `wsdl:binding`. [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] SOAP 1.1 ve SOAP 1.2 bağlamaları destekler.  
+ `EnvelopeVersion` SOAP sürümünü eşlenir bağlamada kullanılan `wsdl:binding`. WCF SOAP 1.1 ve SOAP 1.2 bağlamaları destekler.  
   
 ### <a name="contracts"></a>Sözleşmeler  
  <xref:System.ServiceModel.Description.ContractDescription> İçin örnek bir `ServiceEndpoint` örneği eşlendiğini bir `wsdl:portType`. A `ContractDescription` örneği tüm verilen sözleşme işlemlerini açıklar.  
@@ -84,7 +70,7 @@ Bu konuda açıklanmaktadır nasıl [!INCLUDE[indigo1](../../../../includes/indi
 |----------------|------------------|  
 |`Name`|`wsdl:portType` /@name Sözleşme değeri.|  
 |`Namespace`|İçin hedefAdboşluğu `wsdl:portType` tanımı.|  
-|`SessionMode`|`wsdl:portType` /@msc:usingSession Sözleşme değeri. Bu öznitelik bir [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] WSDL 1.1 uzantısı.|  
+|`SessionMode`|`wsdl:portType` /@msc:usingSession Sözleşme değeri. WCF uzantısı için WSDL 1.1 özniteliğidir.|  
 |`Operations`|`wsdl:operation` Sözleşme tanımı.|  
   
 ### <a name="operations"></a>İşlemler  
@@ -96,13 +82,13 @@ Bu konuda açıklanmaktadır nasıl [!INCLUDE[indigo1](../../../../includes/indi
 |----------------|------------------|  
 |`Name`|`wsdl:portType` / `wsdl:operation` /@name İşlemi için değer.|  
 |`ProtectionLevel`|Güvenlik İlkesi'nde koruma onaylar iliştirilmiş `wsdl:binding/wsdl:operation` bu işlem için iletileri.|  
-|`IsInitiating`|`wsdl:portType` / `wsdl:operation` /@msc:isInitiating İşlemi için değer. Bu öznitelik bir [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] WSDL 1.1 uzantısı.|  
-|`IsTerminating`|`wsdl:portType` / `wsdl:operation` /@msc:isTerminating İşlemi için değer. Bu öznitelik bir [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] WSDL 1.1 uzantısı.|  
+|`IsInitiating`|`wsdl:portType` / `wsdl:operation` /@msc:isInitiating İşlemi için değer. WCF uzantısı için WSDL 1.1 özniteliğidir.|  
+|`IsTerminating`|`wsdl:portType` / `wsdl:operation` /@msc:isTerminating İşlemi için değer. WCF uzantısı için WSDL 1.1 özniteliğidir.|  
 |`Messages`|`wsdl:portType` / `wsdl:operation` / `wsdl:input` Ve `wsdl:portType` / `wsdl:operation` / `wsdl:output` iletileri işlemi için.|  
 |`Faults`|`wsdl:portType` / `wsdl:operation` / `wsdl:fault` İşlemi için tanımlar.|  
 |`Behaviors`|`DataContractSerializerOperationBehavior` Ve `XmlSerializerOperationBehavior` işlemi bağlama ve işlem iletileri ile ilgilidir.|  
   
-#### <a name="the-datacontractserializeroperationbehavior"></a>The DataContractSerializerOperationBehavior  
+#### <a name="the-datacontractserializeroperationbehavior"></a>DataContractSerializerOperationBehavior  
  `DataContractSerializerOperationBehavior` Bir işlem için bir `IWsdlExportExtension` WSDL iletileri ve bu işlem için bağlama aktarır uygulama. XML Şeması türleri kullanılarak verilmiş `XsdDataContractExporter`. `DataContractSerializerOperationBehavior` Kullanın, stil ve şema dışarı aktarma ve alma için bu işlemi kullanmak için de belirler.  
   
 |Özellikler|WSDL eşleme|  

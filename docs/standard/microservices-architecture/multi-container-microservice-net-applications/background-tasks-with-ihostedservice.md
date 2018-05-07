@@ -1,21 +1,14 @@
 ---
-title: "Mikro IHostedService ve BackgroundService sınıfı ile arka plan görevlerini uygulama"
-description: "Kapsayıcılı .NET uygulamaları için .NET mikro mimarisi | Mikro IHostedService ve BackgroundService sınıfı ile arka plan görevlerini uygulama"
-keywords: "Docker, mikro, ASP.NET, kapsayıcı"
+title: Mikro IHostedService ve BackgroundService sınıfı ile arka plan görevlerini uygulama
+description: Kapsayıcılı .NET uygulamaları için .NET mikro mimarisi | Mikro IHostedService ve BackgroundService sınıfı ile arka plan görevlerini uygulama
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 12/11/2017
-ms.prod: .net-core
-ms.technology: dotnet-docker
-ms.topic: article
-ms.workload:
-- dotnet
-- dotnetcore
-ms.openlocfilehash: d60a4590682b79a9f8ac57afee09884b7edd1f98
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: 083d2a8c6a0d1649f8bfb2c21a92fb43381fe9ad
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="implement-background-tasks-in-microservices-with-ihostedservice-and-the-backgroundservice-class"></a>Mikro IHostedService ve BackgroundService sınıfı ile arka plan görevlerini uygulama
 
@@ -253,15 +246,15 @@ Ancak için bile bir `WebHost` bir uygulama havuzu dağıtıldı, yeniden veya h
 
 -   **ASP.NET Core/standart 2.0 zamanlanmış bir görev oluşturma** 
 
-    [*https://blog.maartenballiauw.be/POST/2017/08/01/Building-a-Scheduled-Cache-Updater-in-ASPNET-Core-2.HTML*](https://blog.maartenballiauw.be/post/2017/08/01/building-a-scheduled-cache-updater-in-aspnet-core-2.html)
+    [*https://blog.maartenballiauw.be/post/2017/08/01/building-a-scheduled-cache-updater-in-aspnet-core-2.html*](https://blog.maartenballiauw.be/post/2017/08/01/building-a-scheduled-cache-updater-in-aspnet-core-2.html)
 
 -   **ASP.NET Core 2.0 IHostedService uygulama** 
 
-    [*https://www.stevejgordon.co.uk/ASP-NET-Core-2-ihostedservice*](https://www.stevejgordon.co.uk/asp-net-core-2-ihostedservice)
+    [*https://www.stevejgordon.co.uk/asp-net-core-2-ihostedservice*](https://www.stevejgordon.co.uk/asp-net-core-2-ihostedservice)
 
 -   **ASP.NET Core 2.1 barındırma örnekleri** 
 
-    [*https://github.com/ASPNET/Hosting/Tree/dev/Samples/GenericHostSample*](https://github.com/aspnet/Hosting/tree/dev/samples/GenericHostSample)
+    [*https://github.com/aspnet/Hosting/tree/dev/samples/GenericHostSample*](https://github.com/aspnet/Hosting/tree/dev/samples/GenericHostSample)
 
 
 

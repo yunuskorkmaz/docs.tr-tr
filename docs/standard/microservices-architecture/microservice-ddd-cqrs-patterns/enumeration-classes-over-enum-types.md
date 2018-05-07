@@ -1,21 +1,14 @@
 ---
 title: Numaralandırma türleri yerine numaralandırma sınıflarını kullanma
 description: Kapsayıcılı .NET uygulamaları için .NET mikro mimarisi | Numaralandırma türleri yerine numaralandırma sınıflarını kullanma
-keywords: Docker, mikro, ASP.NET, kapsayıcı
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 12/11/2017
-ms.prod: .net-core
-ms.technology: dotnet-docker
-ms.topic: article
-ms.workload:
-- dotnet
-- dotnetcore
-ms.openlocfilehash: 9df8dc3373930d38bf9f53e9c3a9e986156d3d89
-ms.sourcegitcommit: 2e8acae16ae802f2d6d04e3ce0a6dbf04e476513
+ms.openlocfilehash: 1cb8c6115602d80b61f1116cbb1a8df4fbcee028
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="using-enumeration-classes-instead-of-enum-types"></a>Numaralandırma türleri yerine numaralandırma sınıflarını kullanma
 

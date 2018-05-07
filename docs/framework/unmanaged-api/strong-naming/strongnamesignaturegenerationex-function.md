@@ -1,14 +1,6 @@
 ---
-title: "StrongNameSignatureGenerationEx İşlevi"
-ms.custom: 
+title: StrongNameSignatureGenerationEx İşlevi
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: reference
 api_name:
 - StrongNameSignatureGenerationEx
 api_location:
@@ -22,17 +14,13 @@ helpviewer_keywords:
 ms.assetid: 9a75469e-aa49-4e32-ad48-3bafd5202f09
 topic_type:
 - apiref
-caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 4f68befd145649e6d8921e160d302cdb81000a9a
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 8ac2dd50b26137ee4cf06f0545f1f8cf1bfabf80
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="strongnamesignaturegenerationex-function"></a>StrongNameSignatureGenerationEx İşlevi
 Belirtilen bayrakları göre belirtilen derleme için bir tanımlayıcı ad imzası oluşturur.  
@@ -81,12 +69,12 @@ BOOLEAN StrongNameSignatureGenerationEx (
  `dwFlags`  
  [in] Bir veya daha fazla aşağıdaki değerlerden biri:  
   
--   `SN_SIGN_ALL_FILES`(0x00000001) - bağlantılı modülleri için tüm karmaları yeniden hesaplamak.  
+-   `SN_SIGN_ALL_FILES` (0x00000001) - bağlantılı modülleri için tüm karmaları yeniden hesaplamak.  
   
--   `SN_TEST_SIGN`(0x00000002) - test-oturum derleme.  
+-   `SN_TEST_SIGN` (0x00000002) - test-oturum derleme.  
   
 ## <a name="return-value"></a>Dönüş Değeri  
- `true`başarılı tamamlanma; Aksi takdirde `false`.  
+ `true` başarılı tamamlanma; Aksi takdirde `false`.  
   
 ## <a name="remarks"></a>Açıklamalar  
  İçin null belirtin `wszFilePath` imza oluşturmadan imza boyutu hesaplanamadı.  
@@ -106,7 +94,7 @@ BOOLEAN StrongNameSignatureGenerationEx (
   
  **Kitaplığı:** bir kaynak olarak MsCorEE.dll dahil  
   
- **.NET framework sürümleri:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET framework sürümleri:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
  [StrongNameSignatureGenerationEx Yöntemi](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-strongnamesignaturegenerationex-method.md)  

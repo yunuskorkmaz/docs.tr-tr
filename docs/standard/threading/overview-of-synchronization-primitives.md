@@ -1,33 +1,22 @@
 ---
-title: "Eşitleme Temellerine Genel Bakış"
-ms.custom: 
+title: Eşitleme Temellerine Genel Bakış
 ms.date: 03/30/2017
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
 ms.technology: dotnet-standard
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - synchronization, threads
 - threading [.NET Framework],synchronizing threads
 - managed threading
 ms.assetid: b782bcb8-da6a-4c6a-805f-2eb46d504309
-caps.latest.revision: "17"
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-- dotnetcore
-ms.openlocfilehash: 79d6e384458e289c4da8587eae66486a054aad08
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: e35c2337ff7e416cb5f2c869f8ede160e05d369f
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="overview-of-synchronization-primitives"></a>Eşitleme Temellerine Genel Bakış
-<a name="top"></a>.NET Framework eşitleme temelleri çeşitli iş parçacığı etkileşimlerinin denetleme ve yarış durumları önleme sağlar. Bunlar kabaca üç kategoriye ayrılabilir: kilitleme, sinyal ve ınterlocked işlemleri.  
+<a name="top"></a> .NET Framework eşitleme temelleri çeşitli iş parçacığı etkileşimlerinin denetleme ve yarış durumları önleme sağlar. Bunlar kabaca üç kategoriye ayrılabilir: kilitleme, sinyal ve ınterlocked işlemleri.  
   
  Kategoriler derleyin veya açıkça tanımlanmış değildir: birden çok kategori; özelliklerini bazı eşitleme mekanizmaları sahip bir kerede tek bir iş parçacığı yayın işlevsel olarak kilitler gibi olaylardır; Tüm kilidi sürümü, bir sinyal düşünülebilir; ve birbirine kenetlenmiş işlemler kilitleri oluşturmak için kullanılabilir. Ancak, kategoriler hala faydalıdır.  
   
@@ -67,7 +56,7 @@ ms.lasthandoff: 12/23/2017
   
  <xref:System.Threading.Monitor> Sınıfı, kilitleme için kullanılan nesne türetilen durumunda birden çok uygulama etki alanlarında kilitleme sağlayabilir <xref:System.MarshalByRefObject>.  
   
- <xref:System.Threading.Monitor>iş parçacığı benzeşimini sahiptir. Diğer bir deyişle, İzleyici girilen bir iş parçacığı çağırarak çıkmalı <xref:System.Threading.Monitor.Exit%2A> veya <xref:System.Threading.Monitor.Wait%2A>.  
+ <xref:System.Threading.Monitor> iş parçacığı benzeşimini sahiptir. Diğer bir deyişle, İzleyici girilen bir iş parçacığı çağırarak çıkmalı <xref:System.Threading.Monitor.Exit%2A> veya <xref:System.Threading.Monitor.Wait%2A>.  
   
  <xref:System.Threading.Monitor> Sınıf instantiable değil. Yöntemlerinin statik (`Shared` Visual Basic'te) ve hareket instantiable kilit nesne.  
   
@@ -91,7 +80,7 @@ ms.lasthandoff: 12/23/2017
 #### <a name="readerwriterlock-class"></a>ReaderWriterLock Sınıfı  
  <xref:System.Threading.ReaderWriterLockSlim> Sınıfı adresleri verileri, yazıcı değiştiren bir iş parçacığı gerekir sahip olduğu bir kaynağa özel erişim durumu. Yazıcı etkin değilken, herhangi bir sayıda okuyucular kaynağa erişebilir (örneğin, çağıran tarafından <xref:System.Threading.ReaderWriterLockSlim.EnterReadLock%2A> yöntemi). Bir iş parçacığı özel erişim istediğinde (örneğin, çağıran tarafından <xref:System.Threading.ReaderWriterLockSlim.EnterWriteLock%2A> yöntemi), tüm mevcut okuyucular kilit çıkış ve yazıcı girilen ve kilidi çıkıldı kadar sonraki okuyucu istekleri bloğu.  
   
- <xref:System.Threading.ReaderWriterLockSlim>iş parçacığı benzeşimini sahiptir.  
+ <xref:System.Threading.ReaderWriterLockSlim> iş parçacığı benzeşimini sahiptir.  
   
  Kavramsal genel bakış için bkz: [Okuyucu-Yazıcı kilitleri](../../../docs/standard/threading/reader-writer-locks.md).  
   
@@ -104,13 +93,13 @@ ms.lasthandoff: 12/23/2017
   
  Kavramsal genel bakış için bkz: [semafor ve SemaphoreSlim](../../../docs/standard/threading/semaphore-and-semaphoreslim.md).  
   
- <xref:System.Threading.SemaphoreSlim?displayProperty=nameWithType>tek bir işlem sınırında eşitleme için basit bir semafor olur.  
+ <xref:System.Threading.SemaphoreSlim?displayProperty=nameWithType> tek bir işlem sınırında eşitleme için basit bir semafor olur.  
   
  [Başa dön](#top)  
   
 <a name="signaling"></a>   
 ## <a name="signaling"></a>Sinyal  
- Başka bir iş parçacığından sinyal çağırmak için beklenecek en basit yolu <xref:System.Threading.Thread.Join%2A> başka bir iş parçacığı tamamlanana kadar engeller yöntemi. <xref:System.Threading.Thread.Join%2A>Belirtilen bir zaman aralığı geçtikten sonra dışında bekleme bölüneceği engellenmiş iş parçacığı izin iki aşırı yüklemeye sahip.  
+ Başka bir iş parçacığından sinyal çağırmak için beklenecek en basit yolu <xref:System.Threading.Thread.Join%2A> başka bir iş parçacığı tamamlanana kadar engeller yöntemi. <xref:System.Threading.Thread.Join%2A> Belirtilen bir zaman aralığı geçtikten sonra dışında bekleme bölüneceği engellenmiş iş parçacığı izin iki aşırı yüklemeye sahip.  
   
  Bekleme tanıtıcıları bekleyen ve yetenekleri sinyal çok daha zengin kümesi sağlar.  
   
@@ -124,7 +113,7 @@ ms.lasthandoff: 12/23/2017
 #### <a name="event-wait-handles"></a>Olay bekleme tanıtıcıları  
  Olay bekleme tanıtıcıları içeren <xref:System.Threading.EventWaitHandle> sınıf ve türetilmiş sınıflarının, <xref:System.Threading.AutoResetEvent> ve <xref:System.Threading.ManualResetEvent>. İş parçacığı, bir olay bekleme tanıtıcısı yayımlandığında, olay bekleme tanıtıcısı çağırarak işaret zaman kendi <xref:System.Threading.EventWaitHandle.Set%2A> yöntemi kullanarak veya <xref:System.Threading.WaitHandle.SignalAndWait%2A> yöntemi.  
   
- Olay tanıtıcıları ya da kendilerini otomatik olarak yalnızca bir iş parçacığı aracılığıyla işareti veya el ile sıfırlama işaret ve birisi kapatana kadar açın kadar kapalı bir ağ geçidi gibi her zaman izin veren bir Turnike gibi Sıfırla bekleyin. Adları kapsıyor gibi <xref:System.Threading.AutoResetEvent> ve <xref:System.Threading.ManualResetEvent> önceki ve sonraki, sırasıyla temsil eder. <xref:System.Threading.ManualResetEventSlim?displayProperty=nameWithType>tek bir işlem sınırında eşitleme için basit bir olaydır.  
+ Olay tanıtıcıları ya da kendilerini otomatik olarak yalnızca bir iş parçacığı aracılığıyla işareti veya el ile sıfırlama işaret ve birisi kapatana kadar açın kadar kapalı bir ağ geçidi gibi her zaman izin veren bir Turnike gibi Sıfırla bekleyin. Adları kapsıyor gibi <xref:System.Threading.AutoResetEvent> ve <xref:System.Threading.ManualResetEvent> önceki ve sonraki, sırasıyla temsil eder. <xref:System.Threading.ManualResetEventSlim?displayProperty=nameWithType> tek bir işlem sınırında eşitleme için basit bir olaydır.  
   
  Bir <xref:System.Threading.EventWaitHandle> iki tür olay gösterebilir ve yerel veya genel olabilir. Türetilen sınıflar <xref:System.Threading.AutoResetEvent> ve <xref:System.Threading.ManualResetEvent> her zaman yerel olarak.  
   
@@ -146,13 +135,13 @@ ms.lasthandoff: 12/23/2017
 ## <a name="lightweight-synchronization-types"></a>Basit eşitleme türleri  
  İle başlayarak [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)], Win32 çekirdek pahalı bağımlılık önleme tarafından hızlı performans bekleme tanıtıcıları mümkün olduğunca gibi nesneleri sağlamak eşitleme temelleri kullanabilirsiniz. Genel olarak, bu tür bekleme süresini kısa olduğunda ve yalnızca özgün eşitleme türleri denedi ve yetersiz olduğu tespit ne zaman kullanmanız gerekir. Basit türler, işlem içi iletişimi gerektiren senaryolar içinde kullanılamaz.  
   
--   <xref:System.Threading.SemaphoreSlim?displayProperty=nameWithType>hafif bir sürümüdür <xref:System.Threading.Semaphore?displayProperty=nameWithType>.  
+-   <xref:System.Threading.SemaphoreSlim?displayProperty=nameWithType> hafif bir sürümüdür <xref:System.Threading.Semaphore?displayProperty=nameWithType>.  
   
--   <xref:System.Threading.ManualResetEventSlim?displayProperty=nameWithType>hafif bir sürümüdür <xref:System.Threading.ManualResetEvent?displayProperty=nameWithType>.  
+-   <xref:System.Threading.ManualResetEventSlim?displayProperty=nameWithType> hafif bir sürümüdür <xref:System.Threading.ManualResetEvent?displayProperty=nameWithType>.  
   
--   <xref:System.Threading.CountdownEvent?displayProperty=nameWithType>sayımına sıfır olduğunda işaret hale bir olayı temsil eder.  
+-   <xref:System.Threading.CountdownEvent?displayProperty=nameWithType> sayımına sıfır olduğunda işaret hale bir olayı temsil eder.  
   
--   <xref:System.Threading.Barrier?displayProperty=nameWithType>bir ana iş parçacığı tarafından denetim gerektirmeden birbirleriyle eşitlemek birden çok iş parçacığı sağlar. Tüm iş parçacıklarının belirli bir noktaya ulaştınız kadar bir engel her iş parçacığı devam etmesini engelliyor.  
+-   <xref:System.Threading.Barrier?displayProperty=nameWithType> bir ana iş parçacığı tarafından denetim gerektirmeden birbirleriyle eşitlemek birden çok iş parçacığı sağlar. Tüm iş parçacıklarının belirli bir noktaya ulaştınız kadar bir engel her iş parçacığı devam etmesini engelliyor.  
   
  [Başa dön](#top)  
   
